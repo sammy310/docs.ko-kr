@@ -12,55 +12,55 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: c46118a9b02df653844a0ca04f9e8f9952a957c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7c8fc11c8799912ea6340940ccd254ae82519591
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333602"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591688"
 ---
-# <a name="-doc-c-compiler-options"></a><span data-ttu-id="24b87-102">/doc(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="24b87-102">-doc (C# Compiler Options)</span></span>
-<span data-ttu-id="24b87-103">**-doc** 옵션을 사용하면 XML 파일에 문서 주석을 삽입할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="24b87-103">The **-doc** option allows you to place documentation comments in an XML file.</span></span>  
+# <a name="-doc-c-compiler-options"></a><span data-ttu-id="ebf2a-102">/doc(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="ebf2a-102">-doc (C# Compiler Options)</span></span>
+<span data-ttu-id="ebf2a-103">**-doc** 옵션을 사용하면 XML 파일에 문서 주석을 삽입할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ebf2a-103">The **-doc** option allows you to place documentation comments in an XML file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="24b87-104">구문</span><span class="sxs-lookup"><span data-stu-id="24b87-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ebf2a-104">구문</span><span class="sxs-lookup"><span data-stu-id="ebf2a-104">Syntax</span></span>  
   
 ```console  
 -doc:file  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="24b87-105">인수</span><span class="sxs-lookup"><span data-stu-id="24b87-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="ebf2a-105">인수</span><span class="sxs-lookup"><span data-stu-id="ebf2a-105">Arguments</span></span>  
  `file`  
- <span data-ttu-id="24b87-106">XML에 대한 출력 파일로, 컴파일의 소스 코드 파일에 있는 주석으로 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="24b87-106">The output file for XML, which is populated with the comments in the source code files of the compilation.</span></span>  
+ <span data-ttu-id="ebf2a-106">XML에 대한 출력 파일로, 컴파일의 소스 코드 파일에 있는 주석으로 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="ebf2a-106">The output file for XML, which is populated with the comments in the source code files of the compilation.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="24b87-107">주의</span><span class="sxs-lookup"><span data-stu-id="24b87-107">Remarks</span></span>  
- <span data-ttu-id="24b87-108">소스 코드 파일에서 다음 항목 앞에 나오는 문서 주석을 처리하여 XML 파일에 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="24b87-108">In source code files, documentation comments that precede the following can be processed and added to the XML file:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ebf2a-107">주의</span><span class="sxs-lookup"><span data-stu-id="ebf2a-107">Remarks</span></span>  
+ <span data-ttu-id="ebf2a-108">소스 코드 파일에서 다음 항목 앞에 나오는 문서 주석을 처리하여 XML 파일에 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ebf2a-108">In source code files, documentation comments that precede the following can be processed and added to the XML file:</span></span>  
   
--   <span data-ttu-id="24b87-109">[class](../../../csharp/language-reference/keywords/class.md), [delegate](../../../csharp/language-reference/keywords/delegate.md) 또는 [interface](../../../csharp/language-reference/keywords/interface.md) 같은 사용자 정의 형식</span><span class="sxs-lookup"><span data-stu-id="24b87-109">Such user-defined types as a [class](../../../csharp/language-reference/keywords/class.md), [delegate](../../../csharp/language-reference/keywords/delegate.md), or [interface](../../../csharp/language-reference/keywords/interface.md)</span></span>  
+- <span data-ttu-id="ebf2a-109">[class](../../../csharp/language-reference/keywords/class.md), [delegate](../../../csharp/language-reference/keywords/delegate.md) 또는 [interface](../../../csharp/language-reference/keywords/interface.md) 같은 사용자 정의 형식</span><span class="sxs-lookup"><span data-stu-id="ebf2a-109">Such user-defined types as a [class](../../../csharp/language-reference/keywords/class.md), [delegate](../../../csharp/language-reference/keywords/delegate.md), or [interface](../../../csharp/language-reference/keywords/interface.md)</span></span>  
   
--   <span data-ttu-id="24b87-110">필드, [이벤트](../../../csharp/language-reference/keywords/event.md), [속성](../../../csharp/programming-guide/classes-and-structs/using-properties.md) 또는 메서드 같은 멤버</span><span class="sxs-lookup"><span data-stu-id="24b87-110">Such members as a field, [event](../../../csharp/language-reference/keywords/event.md), [property](../../../csharp/programming-guide/classes-and-structs/using-properties.md), or method</span></span>  
+- <span data-ttu-id="ebf2a-110">필드, [이벤트](../../../csharp/language-reference/keywords/event.md), [속성](../../../csharp/programming-guide/classes-and-structs/using-properties.md) 또는 메서드 같은 멤버</span><span class="sxs-lookup"><span data-stu-id="ebf2a-110">Such members as a field, [event](../../../csharp/language-reference/keywords/event.md), [property](../../../csharp/programming-guide/classes-and-structs/using-properties.md), or method</span></span>  
   
- <span data-ttu-id="24b87-111">Main을 포함하는 소스 코드 파일이 먼저 XML로 출력됩니다.</span><span class="sxs-lookup"><span data-stu-id="24b87-111">The source code file that contains Main is output first into the XML.</span></span>  
+ <span data-ttu-id="ebf2a-111">Main을 포함하는 소스 코드 파일이 먼저 XML로 출력됩니다.</span><span class="sxs-lookup"><span data-stu-id="ebf2a-111">The source code file that contains Main is output first into the XML.</span></span>  
   
- <span data-ttu-id="24b87-112">[IntelliSense](/visualstudio/ide/using-intellisense) 기능에서 사용하기 위해 생성된 .xml 파일을 사용하려면 .xml 파일의 이름을 지원하려는 어셈블리와 동일하게 지정한 다음 .xml 파일이 어셈블리와 동일한 디렉터리에 있도록 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="24b87-112">To use the generated .xml file for use with the [IntelliSense](/visualstudio/ide/using-intellisense) feature, let the file name of the .xml file be the same as the assembly you want to support and then make sure the .xml file is in the same directory as the assembly.</span></span> <span data-ttu-id="24b87-113">따라서 어셈블리가 Visual Studio 프로젝트에서 참조되면 .xml 파일도 검색됩니다.</span><span class="sxs-lookup"><span data-stu-id="24b87-113">Thus, when the assembly is referenced in the Visual Studio project, the .xml file is found as well.</span></span> <span data-ttu-id="24b87-114">자세한 내용은 [코드 주석 제공](/visualstudio/ide/supplying-xml-code-comments)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="24b87-114">See [Supplying Code Comments](/visualstudio/ide/supplying-xml-code-comments) and for more information.</span></span>  
+ <span data-ttu-id="ebf2a-112">[IntelliSense](/visualstudio/ide/using-intellisense) 기능에서 사용하기 위해 생성된 .xml 파일을 사용하려면 .xml 파일의 이름을 지원하려는 어셈블리와 동일하게 지정한 다음 .xml 파일이 어셈블리와 동일한 디렉터리에 있도록 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ebf2a-112">To use the generated .xml file for use with the [IntelliSense](/visualstudio/ide/using-intellisense) feature, let the file name of the .xml file be the same as the assembly you want to support and then make sure the .xml file is in the same directory as the assembly.</span></span> <span data-ttu-id="ebf2a-113">따라서 어셈블리가 Visual Studio 프로젝트에서 참조되면 .xml 파일도 검색됩니다.</span><span class="sxs-lookup"><span data-stu-id="ebf2a-113">Thus, when the assembly is referenced in the Visual Studio project, the .xml file is found as well.</span></span> <span data-ttu-id="ebf2a-114">자세한 내용은 [코드 주석 제공](/visualstudio/ide/supplying-xml-code-comments)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ebf2a-114">See [Supplying Code Comments](/visualstudio/ide/supplying-xml-code-comments) and for more information.</span></span>  
   
- <span data-ttu-id="24b87-115">[-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)을 사용하여 컴파일하지 않으면 컴파일의 출력 파일에 대한 어셈블리 매니페스트를 포함하는 파일의 이름을 지정하는 \<assembly>\</assembly> 태그가 `file`에 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="24b87-115">Unless you compile with [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), `file` will contain \<assembly>\</assembly> tags specifying the name of the file containing the assembly manifest for the output file of the compilation.</span></span>  
+ <span data-ttu-id="ebf2a-115">[-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)을 사용하여 컴파일하지 않으면 컴파일의 출력 파일에 대한 어셈블리 매니페스트를 포함하는 파일의 이름을 지정하는 \<assembly>\</assembly> 태그가 `file`에 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="ebf2a-115">Unless you compile with [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), `file` will contain \<assembly>\</assembly> tags specifying the name of the file containing the assembly manifest for the output file of the compilation.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="24b87-116">-doc 옵션은 모든 입력 파일에 적용됩니다. 또는 Progect Settings에서 설정한 경우 프로젝트의 모든 파일에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="24b87-116">The -doc option applies to all input files; or, if set in the Project Settings, all files in the project.</span></span> <span data-ttu-id="24b87-117">특정 파일 또는 코드 섹션에 대한 문서 주석 관련 경고를 사용하지 않으려면 [#pragma warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)을 사용하세요.</span><span class="sxs-lookup"><span data-stu-id="24b87-117">To disable warnings related to documentation comments for a specific file or section of code, use [#pragma warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md).</span></span>  
+>  <span data-ttu-id="ebf2a-116">-doc 옵션은 모든 입력 파일에 적용됩니다. 또는 Progect Settings에서 설정한 경우 프로젝트의 모든 파일에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ebf2a-116">The -doc option applies to all input files; or, if set in the Project Settings, all files in the project.</span></span> <span data-ttu-id="ebf2a-117">특정 파일 또는 코드 섹션에 대한 문서 주석 관련 경고를 사용하지 않으려면 [#pragma warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)을 사용하세요.</span><span class="sxs-lookup"><span data-stu-id="ebf2a-117">To disable warnings related to documentation comments for a specific file or section of code, use [#pragma warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md).</span></span>  
   
- <span data-ttu-id="24b87-118">코드의 주석에서 문서를 생성하는 방법은 [문서 주석에 대한 권장 태그](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="24b87-118">See [Recommended Tags for Documentation Comments](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md) for ways to generate documentation from comments in your code.</span></span>  
+ <span data-ttu-id="ebf2a-118">코드의 주석에서 문서를 생성하는 방법은 [문서 주석에 대한 권장 태그](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ebf2a-118">See [Recommended Tags for Documentation Comments](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md) for ways to generate documentation from comments in your code.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="24b87-119">Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면</span><span class="sxs-lookup"><span data-stu-id="24b87-119">To set this compiler option in the Visual Studio development environment</span></span>  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="ebf2a-119">Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면</span><span class="sxs-lookup"><span data-stu-id="ebf2a-119">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1. <span data-ttu-id="24b87-120">프로젝트 **속성** 페이지를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="24b87-120">Open the project's **Properties** page.</span></span>  
+1. <span data-ttu-id="ebf2a-120">프로젝트 **속성** 페이지를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="ebf2a-120">Open the project's **Properties** page.</span></span>  
   
-2. <span data-ttu-id="24b87-121">**빌드** 탭을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="24b87-121">Click the **Build** tab.</span></span>  
+2. <span data-ttu-id="ebf2a-121">**빌드** 탭을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="ebf2a-121">Click the **Build** tab.</span></span>  
   
-3. <span data-ttu-id="24b87-122">**XML 문서 파일** 속성을 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="24b87-122">Modify the **XML documentation file** property.</span></span>  
+3. <span data-ttu-id="ebf2a-122">**XML 문서 파일** 속성을 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="ebf2a-122">Modify the **XML documentation file** property.</span></span>  
   
- <span data-ttu-id="24b87-123">이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="24b87-123">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>.</span></span>  
+ <span data-ttu-id="ebf2a-123">이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ebf2a-123">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="24b87-124">참고 항목</span><span class="sxs-lookup"><span data-stu-id="24b87-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ebf2a-124">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ebf2a-124">See also</span></span>
 
-- [<span data-ttu-id="24b87-125">C# 컴파일러 옵션</span><span class="sxs-lookup"><span data-stu-id="24b87-125">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
-- [<span data-ttu-id="24b87-126">프로젝트 및 솔루션 속성 관리</span><span class="sxs-lookup"><span data-stu-id="24b87-126">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="ebf2a-125">C# 컴파일러 옵션</span><span class="sxs-lookup"><span data-stu-id="ebf2a-125">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
+- [<span data-ttu-id="ebf2a-126">프로젝트 및 솔루션 속성 관리</span><span class="sxs-lookup"><span data-stu-id="ebf2a-126">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
