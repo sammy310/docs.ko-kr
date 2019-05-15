@@ -6,16 +6,16 @@ helpviewer_keywords:
 - COM interop [Visual Basic]
 - shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
-ms.openlocfilehash: 6e8b4eba40cc1872cb289ca120679bb951f2652a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e45f8eafa696c61f917e333c665380c454401e0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022386"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589005"
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>.NET Framework 애플리케이션의 COM 상호 운용성(Visual Basic)
 
-동일한 응용 프로그램에서 COM 개체 및.NET Framework 개체를 사용 하려는 경우에 개체가 메모리에 존재 하는 방법의 차이 해결 해야 합니다. .NET Framework 개체를 관리 되는 메모리에 위치한-공용 언어 런타임에 의해 제어 하는 메모리-필요에 따라 런타임에 의해 이동 될 수도 있습니다. COM 개체는 관리 되지 않는 메모리에 있으며 다른 메모리 위치로 이동 되지 않습니다. Visual Studio 및 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 이러한 상호 작용을 제어 하는 도구 관리 코드와 비관리 구성 요소를 제공 합니다. 관리 코드에 대 한 자세한 내용은 참조 하세요. [공용 언어 런타임](../../../standard/clr.md)합니다.
+동일한 응용 프로그램에서 COM 개체 및.NET Framework 개체를 사용 하려는 경우에 개체가 메모리에 존재 하는 방법의 차이 해결 해야 합니다. .NET Framework 개체를 관리 되는 메모리에 위치한-공용 언어 런타임에 의해 제어 하는 메모리-필요에 따라 런타임에 의해 이동 될 수도 있습니다. COM 개체는 관리 되지 않는 메모리에 있으며 다른 메모리 위치로 이동 되지 않습니다. Visual Studio 및.NET Framework의 이러한 관리 및 관리 되지 않는 구성 요소 상호 작용을 제어 하는 도구를 제공 합니다. 관리 코드에 대 한 자세한 내용은 참조 하세요. [공용 언어 런타임](../../../standard/clr.md)합니다.
 
 .NET 응용 프로그램에서 COM 개체를 사용 하는 것 외에도 수도 있습니다 Visual Basic COM. 통해 비관리 코드에서 액세스할 수 있는 개체를 개발 하는 데
 

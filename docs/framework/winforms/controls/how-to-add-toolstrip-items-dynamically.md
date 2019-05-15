@@ -9,12 +9,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding items dynamically
 - ToolStrip control [Windows Forms]
 ms.assetid: 0e8dea56-5f46-408b-914d-7e360341a234
-ms.openlocfilehash: 9426c7cb3251dbbd95727b78c57be7a0b71556e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 08d08a292995cc5e12fbab3e91a0962c3b895a02
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624024"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588882"
 ---
 # <a name="how-to-add-toolstrip-items-dynamically"></a>방법: 동적으로 ToolStrip 항목 추가
 메뉴가 열릴 때 <xref:System.Windows.Forms.ToolStrip> 컨트롤의 메뉴 항목 컬렉션을 동적으로 채울 수 있습니다.  
@@ -33,8 +33,6 @@ ms.locfileid: "64624024"
  이 예제에는 다음 사항이 필요합니다.  
   
 - System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조  
-  
- Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 내용은 [명령줄에서 빌드](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 하거나 [csc.exe를 사용한 명령줄 빌드](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. 또한 새 프로젝트에 코드를 붙여 넣어 Visual Studio에서이 예제를 빌드할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
 
