@@ -11,32 +11,32 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 9033a513-c255-4f31-b6d7-09b8d8c50e2d
-ms.openlocfilehash: ab71ab6aa2b0ed454b86388ba369204a2131cca5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad9bc0ecf4b7a8e5f3ef13fdff5aa59ca8915922
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706002"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634653"
 ---
-# <a name="sisdebuggercheckdisabledfortestpurposes-field"></a><span data-ttu-id="a4987-102">s_isDebuggerCheckDisabledForTestPurposes 필드</span><span class="sxs-lookup"><span data-stu-id="a4987-102">s_isDebuggerCheckDisabledForTestPurposes Field</span></span>
+# <a name="sisdebuggercheckdisabledfortestpurposes-field"></a><span data-ttu-id="0aa3a-102">s_isDebuggerCheckDisabledForTestPurposes 필드</span><span class="sxs-lookup"><span data-stu-id="0aa3a-102">s_isDebuggerCheckDisabledForTestPurposes Field</span></span>
 
-<span data-ttu-id="a4987-103">이 개인 필드에는 `System.Windows.Diagnostics.VisualDiagnostics` 클래스는 현재 디버거의 내부 검사를 수행할지 여부를 확인 하려면 Visual Studio에서 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a4987-103">This private field in the `System.Windows.Diagnostics.VisualDiagnostics` class is used by Visual Studio to determine whether an internal check for an active debugger will be performed.</span></span>
+<span data-ttu-id="0aa3a-103">이 개인 필드에는 `System.Windows.Diagnostics.VisualDiagnostics` 클래스는 현재 디버거의 내부 검사를 수행할지 여부를 확인 하려면 Visual Studio에서 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="0aa3a-103">This private field in the `System.Windows.Diagnostics.VisualDiagnostics` class is used by Visual Studio to determine whether an internal check for an active debugger will be performed.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="a4987-104">구문</span><span class="sxs-lookup"><span data-stu-id="a4987-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="0aa3a-104">구문</span><span class="sxs-lookup"><span data-stu-id="0aa3a-104">Syntax</span></span>
 
 ```csharp
 private static bool s_isDebuggerCheckDisabledForTestPurposes
 ```
 
 > [!WARNING]
-> <span data-ttu-id="a4987-105">Api는 `System.Windows.Diagnostics.VisualDiagnostics` 클래스 디버거에서 응용 프로그램이 실행 되는 경우에 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a4987-105">APIs in the `System.Windows.Diagnostics.VisualDiagnostics` class are only available when an application is running under a debugger.</span></span> <span data-ttu-id="a4987-106">설정할 `s_isDebuggerCheckDisabledForTestPurposes` 에 `true` 디버거 외부에서 Api에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a4987-106">Set `s_isDebuggerCheckDisabledForTestPurposes` to `true` to access the APIs outside of a debugger.</span></span>
+> <span data-ttu-id="0aa3a-105">Api는 `System.Windows.Diagnostics.VisualDiagnostics` 클래스 디버거에서 응용 프로그램이 실행 되는 경우에 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0aa3a-105">APIs in the `System.Windows.Diagnostics.VisualDiagnostics` class are only available when an application is running under a debugger.</span></span> <span data-ttu-id="0aa3a-106">설정할 `s_isDebuggerCheckDisabledForTestPurposes` 에 `true` 디버거 외부에서 Api에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0aa3a-106">Set `s_isDebuggerCheckDisabledForTestPurposes` to `true` to access the APIs outside of a debugger.</span></span>
 >
-> <span data-ttu-id="a4987-107">Microsoft는 어떤 상황에서 프로덕션 응용 프로그램에서이 필드의 사용을 지원 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a4987-107">Microsoft does not support the use of this field in a production application under any circumstance.</span></span>
+> <span data-ttu-id="0aa3a-107">Microsoft는 어떤 상황에서 프로덕션 응용 프로그램에서이 필드의 사용을 지원 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="0aa3a-107">Microsoft does not support the use of this field in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="a4987-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="a4987-108">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="0aa3a-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="0aa3a-108">Requirements</span></span>
 
-<span data-ttu-id="a4987-109">**네임스페이스:** <xref:System.Windows.Diagnostics></span><span class="sxs-lookup"><span data-stu-id="a4987-109">**Namespace:** <xref:System.Windows.Diagnostics></span></span>
+<span data-ttu-id="0aa3a-109">**네임스페이스:** <xref:System.Windows.Diagnostics></span><span class="sxs-lookup"><span data-stu-id="0aa3a-109">**Namespace:** <xref:System.Windows.Diagnostics></span></span>
 
-<span data-ttu-id="a4987-110">**어셈블리:** PresentationCore (presentationcore.dll)</span><span class="sxs-lookup"><span data-stu-id="a4987-110">**Assembly:** PresentationCore (in PresentationCore.dll)</span></span>
+<span data-ttu-id="0aa3a-110">**어셈블리:** PresentationCore (presentationcore.dll)</span><span class="sxs-lookup"><span data-stu-id="0aa3a-110">**Assembly:** PresentationCore (in PresentationCore.dll)</span></span>
 
-<span data-ttu-id="a4987-111">**.NET framework 버전:** 4.6부터 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a4987-111">**.NET Framework versions:** Available since 4.6.</span></span>
+<span data-ttu-id="0aa3a-111">**.NET framework 버전:** 4.6부터 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0aa3a-111">**.NET Framework versions:** Available since 4.6.</span></span>
