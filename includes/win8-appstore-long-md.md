@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 37f8007d4b7b30af9ebafda2b76b57acc5d7380f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f87a057c0be8d06fb659bdaf34b4dfd615dc2756
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909139"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65669717"
 ---
-<span data-ttu-id="277a5-101">Windows 스토어</span><span class="sxs-lookup"><span data-stu-id="277a5-101">Windows Store</span></span>
+<span data-ttu-id="7dae8-101">Windows 스토어</span><span class="sxs-lookup"><span data-stu-id="7dae8-101">Windows Store</span></span>
