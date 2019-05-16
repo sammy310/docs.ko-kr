@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, client library
 ms.assetid: b98cb1d6-956a-4e50-add6-67e4f2587346
-ms.openlocfilehash: 86cf9a622f244fd6ea13113310eb05f65da1463f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fdca85360e34d6854604103c9d0ac22c5b829cf5
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645608"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634024"
 ---
 # <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a>방법: 수동으로 클라이언트 데이터 서비스 클래스 (WCF Data Services)를 생성
 WCF Data Services를 사용 하는 경우 클라이언트 데이터 서비스 클래스를 자동으로 생성할 수 있도록 Visual Studio와 통합 된 **서비스 참조 추가** Visual Studio 프로젝트에서 데이터 서비스에 대 한 참조를 추가 하려면 대화 상자. 자세한 내용은 [방법: 데이터 서비스 참조 추가](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)합니다. 코드 생성 도구 `DataSvcUtil.exe`를 사용하여 동일한 클라이언트 데이터 서비스 클래스를 수동으로 생성할 수도 있습니다. WCF Data Services에 포함 된이 도구는 데이터 서비스 정의에서.NET Framework 클래스를 생성 합니다. 이 도구를 사용하여 개념적 모델 파일(.csdl) 및 Visual Studio 프로젝트의 Entity Framework 모델을 나타내는 .edmx 파일에서 데이터 서비스 클래스를 생성할 수도 있습니다.
