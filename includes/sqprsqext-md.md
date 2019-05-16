@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 7cb59a9dbfb043cdc51ec29fdc8fbe7bbcd10cbc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1bcf1347bf0b68ef4955ecf68d84e2bfd701c278
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876886"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65672732"
 ---
-<span data-ttu-id="950f9-101">Microsoft SQL Server 2005</span><span class="sxs-lookup"><span data-stu-id="950f9-101">Microsoft SQL Server 2005</span></span>
+<span data-ttu-id="b30d2-101">Microsoft SQL Server 2005</span><span class="sxs-lookup"><span data-stu-id="b30d2-101">Microsoft SQL Server 2005</span></span>

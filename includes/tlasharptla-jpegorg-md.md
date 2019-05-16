@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 3c7963b651a8d0389a2df7c714e9df0581877935
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 610d907db4dd4957958d4bf86720c85a2ebcccde
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "25705010"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65671983"
 ---
-<span data-ttu-id="a76f4-101">JPEG(Joint Photographics Experts Group)</span><span class="sxs-lookup"><span data-stu-id="a76f4-101">Joint Photographics Experts Group (JPEG)</span></span>
+<span data-ttu-id="cf311-101">JPEG(Joint Photographics Experts Group)</span><span class="sxs-lookup"><span data-stu-id="cf311-101">Joint Photographics Experts Group (JPEG)</span></span>

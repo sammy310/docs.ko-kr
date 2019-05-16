@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 7b653c1a1342f29b6e1ca16ef44b1d14c98a11e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe56e33143f210ab83ac5fa0eb6eb81b4bf97cc1
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669284"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65672718"
 ---
-<span data-ttu-id="14174-101">Win32</span><span class="sxs-lookup"><span data-stu-id="14174-101">Win32</span></span>
+<span data-ttu-id="36c16-101">Win32</span><span class="sxs-lookup"><span data-stu-id="36c16-101">Win32</span></span>

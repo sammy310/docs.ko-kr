@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 0db1a896c8c2be513abd4cc7c33619017cc2f9a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f74c3a26a35dbf5189744caf47763384e80456bf
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021064"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65672094"
 ---
-<span data-ttu-id="9869e-101">SQL(구조적 쿼리 언어)</span><span class="sxs-lookup"><span data-stu-id="9869e-101">Structured Query Language (SQL)</span></span>
+<span data-ttu-id="0c148-101">SQL(구조적 쿼리 언어)</span><span class="sxs-lookup"><span data-stu-id="0c148-101">Structured Query Language (SQL)</span></span>

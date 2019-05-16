@@ -1,1 +1,9 @@
-<span data-ttu-id="0dabc-101">GIF</span><span class="sxs-lookup"><span data-stu-id="0dabc-101">GIF</span></span>
+---
+ms.openlocfilehash: f148680da07a92c191a7952def707234e88c6093
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65672512"
+---
+<span data-ttu-id="8f92c-101">GIF</span><span class="sxs-lookup"><span data-stu-id="8f92c-101">GIF</span></span>

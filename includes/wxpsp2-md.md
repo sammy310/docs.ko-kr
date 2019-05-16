@@ -1,1 +1,9 @@
-<span data-ttu-id="8761b-101">Windows XP SP2</span><span class="sxs-lookup"><span data-stu-id="8761b-101">Windows XP SP2</span></span>
+---
+ms.openlocfilehash: fbf867b7d723a785cee507433087580354ed9fd2
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65671373"
+---
+<span data-ttu-id="ac8d6-101">Windows XP SP2</span><span class="sxs-lookup"><span data-stu-id="ac8d6-101">Windows XP SP2</span></span>

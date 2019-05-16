@@ -1,1 +1,9 @@
-<span data-ttu-id="cae08-101">SQL Server 2008</span><span class="sxs-lookup"><span data-stu-id="cae08-101">SQL Server 2008</span></span>
+---
+ms.openlocfilehash: 4f5a120316e9880c23719b103032ae474472c8ee
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65671686"
+---
+<span data-ttu-id="074cd-101">SQL Server 2008</span><span class="sxs-lookup"><span data-stu-id="074cd-101">SQL Server 2008</span></span>

@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 0e4abc18f9fb9d8d6d39f047dc20fbebd4a975bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8426100a3b129dc86553d9ac8952e35f911ec5b6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756569"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65672758"
 ---
-<span data-ttu-id="4546d-101">Visual C++</span><span class="sxs-lookup"><span data-stu-id="4546d-101">Visual C++</span></span>
+<span data-ttu-id="0c31e-101">Visual C++</span><span class="sxs-lookup"><span data-stu-id="0c31e-101">Visual C++</span></span>
