@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d08056780fe3042983ea021e5a4cd82a14d252a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2411b69dac6ef8945336a4c4e014cbf6687f702a
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113726"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469724"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>클래스, 구조체 및 공용 구조체 마샬링
 .NET Framework에서는 클래스와 구조체가 서로 비슷합니다. 둘 다 필드, 속성 및 이벤트를 포함할 수 있습니다. 또한 정적 및 비정적 메서드를 포함할 수 있습니다. 한 가지 주목할 만한 차이점은 구조체는 값 형식이고 클래스는 참조 형식이라는 것입니다.  
@@ -50,19 +50,19 @@ ms.locfileid: "59113726"
   
  Structs 샘플에서는 원래 함수 선언과 함께 표시되는 다음과 같은 관리되지 않는 함수를 사용합니다.  
   
--   PinvokeLib.dll에서 내보낸 **TestStructInStruct**.  
+- PinvokeLib.dll에서 내보낸 **TestStructInStruct**.  
   
     ```  
     int TestStructInStruct(MYPERSON2* pPerson2);  
     ```  
   
--   PinvokeLib.dll에서 내보낸 **TestStructInStruct3**.  
+- PinvokeLib.dll에서 내보낸 **TestStructInStruct3**.  
   
     ```  
     void TestStructInStruct3(MYPERSON3 person3);  
     ```  
   
--   PinvokeLib.dll에서 내보낸 **TestArrayInStruct**.  
+- PinvokeLib.dll에서 내보낸 **TestArrayInStruct**.  
   
     ```  
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
@@ -98,23 +98,23 @@ typedef struct _MYARRAYSTRUCT
   
  관리되는 `MyPerson`, `MyPerson2`, `MyPerson3` 및 `MyArrayStruct` 구조체는 다음과 같은 특성을 갖습니다.  
   
--   `MyPerson`에는 문자열 멤버만 포함됩니다. [CharSet](specifying-a-character-set.md) 필드는 관리되지 않는 함수에 전달되는 경우 문자열을 ANSI 형식으로 설정합니다.  
+- `MyPerson`에는 문자열 멤버만 포함됩니다. [CharSet](specifying-a-character-set.md) 필드는 관리되지 않는 함수에 전달되는 경우 문자열을 ANSI 형식으로 설정합니다.  
   
--   `MyPerson2`에는 `MyPerson` 구조체에 대한 **IntPtr**이 포함됩니다. .NET Framework 애플리케이션은 코드가 **안전하지 않은** 것으로 표시된 경우가 아니면 포인터를 사용하지 않으므로 **IntPtr** 형식이 관리되지 않는 구조체에 대한 원래 포인터를 대체합니다.  
+- `MyPerson2`에는 `MyPerson` 구조체에 대한 **IntPtr**이 포함됩니다. .NET Framework 애플리케이션은 코드가 **안전하지 않은** 것으로 표시된 경우가 아니면 포인터를 사용하지 않으므로 **IntPtr** 형식이 관리되지 않는 구조체에 대한 원래 포인터를 대체합니다.  
   
--   `MyPerson3`에는 `MyPerson`이 포함된 구조체로 포함됩니다. 포함된 구조체의 요소를 기본 구조에 직접 배치하여 다른 구조체 내에 포함된 구조체를 결합하거나 이 샘플과 같이 포함된 구조체로 그대로 둘 수 있습니다.  
+- `MyPerson3`에는 `MyPerson`이 포함된 구조체로 포함됩니다. 포함된 구조체의 요소를 기본 구조에 직접 배치하여 다른 구조체 내에 포함된 구조체를 결합하거나 이 샘플과 같이 포함된 구조체로 그대로 둘 수 있습니다.  
   
--   `MyArrayStruct`에는 정수 배열이 포함됩니다. <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성은 <xref:System.Runtime.InteropServices.UnmanagedType> 열거형 값을 배열의 요소 수를 나타내는 데 사용되는 **ByValArray**로 설정합니다.  
+- `MyArrayStruct`에는 정수 배열이 포함됩니다. <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성은 <xref:System.Runtime.InteropServices.UnmanagedType> 열거형 값을 배열의 요소 수를 나타내는 데 사용되는 **ByValArray**로 설정합니다.  
   
  이 샘플의 모든 구조체에는 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 특성이 적용되어 멤버가 표시되는 순서대로 순차적으로 메모리에 정렬되게 합니다.  
   
  `LibWrap` 클래스에는 `App` 클래스가 호출하는 `TestStructInStruct`, `TestStructInStruct3` 및 `TestArrayInStruct` 메서드에 대한 관리되는 프로토타입이 포함됩니다. 각 프로토타입은 다음과 같이 단일 매개 변수를 선언합니다.  
   
--   `TestStructInStruct`는 `MyPerson2` 형식에 대한 참조를 해당 매개 변수로 선언합니다.  
+- `TestStructInStruct`는 `MyPerson2` 형식에 대한 참조를 해당 매개 변수로 선언합니다.  
   
--   `TestStructInStruct3`은 `MyPerson3` 형식을 해당 매개 변수로 선언하고 매개 변수를 값으로 전달합니다.  
+- `TestStructInStruct3`은 `MyPerson3` 형식을 해당 매개 변수로 선언하고 매개 변수를 값으로 전달합니다.  
   
--   `TestArrayInStruct`는 `MyArrayStruct` 형식에 대한 참조를 해당 매개 변수로 선언합니다.  
+- `TestArrayInStruct`는 `MyArrayStruct` 형식에 대한 참조를 해당 매개 변수로 선언합니다.  
   
  메서드에 대한 인수로서의 구조체는 매개 변수에 **ref**(Visual Basic에서는 **ByRef**) 키워드가 포함되지 않은 경우 값으로 전달됩니다. 예를 들어 `TestStructInStruct` 메서드는 `MyPerson2` 형식의 개체에 대한 참조(주소 값)를 비관리 코드에 전달합니다. `MyPerson2`가 가리키는 구조체를 조작하기 위해 샘플에서는 지정된 크기의 버퍼를 만들고 <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A?displayProperty=nameWithType> 및 <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> 메서드를 결합하여 해당 주소를 반환합니다. 그런 다음 관리되는 구조체의 콘텐츠를 관리되지 않는 버퍼로 복사합니다. 끝으로, <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A?displayProperty=nameWithType> 메서드를 사용하여 관리되지 않는 버퍼의 데이터를 관리되는 개체로 마샬링하고 <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A?displayProperty=nameWithType> 메서드를 사용하여 관리되지 않는 메모리 블록을 해제합니다.  
   
@@ -133,7 +133,7 @@ typedef struct _MYARRAYSTRUCT
   
  FindFile 샘플에서는 원래 함수 선언과 함께 표시되는 다음과 같은 관리되지 않는 함수를 사용합니다.  
   
--   Kernel32.dll에서 내보낸 **FindFirstFile**.  
+- Kernel32.dll에서 내보낸 **FindFirstFile**.  
   
     ```  
     HANDLE FindFirstFile(LPCTSTR lpFileName, LPWIN32_FIND_DATA lpFindFileData);  
@@ -176,7 +176,7 @@ typedef struct _WIN32_FIND_DATA
   
  Unions 샘플에서는 원래 함수 선언과 함께 표시되는 다음과 같은 관리되지 않는 함수를 사용합니다.  
   
--   PinvokeLib.dll에서 내보낸 **TestUnion**.  
+- PinvokeLib.dll에서 내보낸 **TestUnion**.  
   
     ```  
     void TestUnion(MYUNION u, int type);  
@@ -219,7 +219,7 @@ union MYUNION2
   
  SysTime 샘플에서는 원래 함수 선언과 함께 표시되는 다음과 같은 관리되지 않는 함수를 사용합니다.  
   
--   Kernel32.dll에서 내보낸 **GetSystemTime**.  
+- Kernel32.dll에서 내보낸 **GetSystemTime**.  
   
     ```  
     VOID GetSystemTime(LPSYSTEMTIME lpSystemTime);  
@@ -266,17 +266,17 @@ typedef struct _MYSTRSTRUCT2
   
  `MyStruct` 클래스에는 ANSI 문자의 문자열 개체가 포함됩니다. <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> 필드는 ANSI 형식을 지정합니다. `MyUnsafeStruct`는 문자열 대신 <xref:System.IntPtr> 형식을 포함하는 구조체입니다.  
   
- `LibWrap` 클래스에는 오버로드된 `TestOutArrayOfStructs` 프로토타입 메서드가 포함됩니다. 메서드가 포인터를 매개 변수로 선언하는 경우 클래스에 `unsafe` 키워드를 표시해야 합니다. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]는 안전하지 않은 코드를 사용할 수 없으므로 오버로드된 메서드, 안전하지 않은 한정자 및 `MyUnsafeStruct` 구조체는 필요하지 않습니다.  
+ `LibWrap` 클래스에는 오버로드된 `TestOutArrayOfStructs` 프로토타입 메서드가 포함됩니다. 메서드가 포인터를 매개 변수로 선언하는 경우 클래스에 `unsafe` 키워드를 표시해야 합니다. Visual Basic은 안전하지 않은 코드를 사용할 수 없으므로 오버로드된 메서드, 안전하지 않은 한정자 및 `MyUnsafeStruct` 구조체는 필요하지 않습니다.  
   
  `App` 클래스는 배열을 전달하는 데 필요한 모든 작업을 수행하는 `UsingMarshaling` 메서드를 구현합니다. 배열에 `out`(Visual Basic에서는 `ByRef`) 키워드가 표시되어 데이터가 호출 수신자에서 호출자로 전달됨을 나타냅니다. 이 구현에서는 다음과 같은 <xref:System.Runtime.InteropServices.Marshal> 클래스 메서드를 사용합니다.  
   
--   <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> - 관리되지 않는 버퍼의 데이터를 관리되는 개체로 마샬링합니다.  
+- <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> - 관리되지 않는 버퍼의 데이터를 관리되는 개체로 마샬링합니다.  
   
--   <xref:System.Runtime.InteropServices.Marshal.DestroyStructure%2A> - 구조체의 문자열에 예약된 메모리를 해제합니다.  
+- <xref:System.Runtime.InteropServices.Marshal.DestroyStructure%2A> - 구조체의 문자열에 예약된 메모리를 해제합니다.  
   
--   <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> - 배열에 예약된 메모리를 해제합니다.  
+- <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> - 배열에 예약된 메모리를 해제합니다.  
   
- 앞서 설명한 것처럼, C#에서는 안전하지 않은 코드를 허용하고 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]에서는 허용하지 않습니다. C# 샘플에서 `UsingUnsafePointer`는 <xref:System.Runtime.InteropServices.Marshal> 클래스 대신 포인터를 사용하여 `MyUnsafeStruct` 구조체가 포함된 배열을 다시 전달하는 대체 구현입니다.  
+ 앞서 설명한 것처럼, C#에서는 안전하지 않은 코드를 허용하고 Visual Basic에서는 허용하지 않습니다. C# 샘플에서 `UsingUnsafePointer`는 <xref:System.Runtime.InteropServices.Marshal> 클래스 대신 포인터를 사용하여 `MyUnsafeStruct` 구조체가 포함된 배열을 다시 전달하는 대체 구현입니다.  
   
 ### <a name="declaring-prototypes"></a>프로토타입 선언  
  [!code-cpp[Conceptual.Interop.Marshaling#20](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/outarrayofstructs.cpp#20)]

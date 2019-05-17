@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b45b8ebe048a5917019349ea3a6a357b7e90a9c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32c76ae4556467759dad111b47e3ad8f6cf6df92
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565646"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589973"
 ---
 # <a name="script-blocks-using-msxslscript"></a>msxsl:script를 사용하는 스크립트 블록
 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스는 `msxsl:script` 요소를 사용하여 포함 스크립트를 지원합니다. 스타일시트가 로드될 때 정의된 모든 함수는 CodeDOM(코드 문서 개체 모델)에 의해 MSIL(Microsoft Intermediate Language)로 컴파일되며 런타임 동안 실행됩니다. 포함된 스크립트 블록에서 생성된 어셈블리는 스타일시트에 대해 생성된 어셈블리와는 다릅니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "54565646"
   
  `msxsl` 접두사는 `urn:schemas-microsoft-com:xslt` 네임스페이스 URI에 바인딩됩니다. 스타일시트는 `xmlns:msxsl=urn:schemas-microsoft-com:xslt` 네임스페이스 선언을 포함해야 합니다.  
   
- `language` 특성은 선택 사항이며 해당 값은 포함된 코드 블록의 코드 언어입니다. 이 언어는 <xref:System.CodeDom.Compiler.CodeDomProvider.CreateProvider%2A?displayProperty=nameWithType> 메서드를 사용하여 적합한 CodeDOM 컴파일러에 매핑됩니다. <xref:System.Xml.Xsl.XslCompiledTransform> 클래스는 모든 Microsoft .NET 언어를 지원할 수 있습니다. 이때 적합한 공급자가 컴퓨터에 설치되어 있으며 machine.config 파일의 system.codedom 섹션에 등록되어 있다고 가정합니다. `language` 특성을 지정하지 않을 경우 언어 기본값은 JScript입니다. 언어 이름은 대/소문자를 구분하지 않으므로 'JavaScript'와 'javascript'는 같습니다.  
+ `language` 특성은 선택 사항입니다. 해당 값은 포함된 코드 블록의 코드 언어입니다. 이 언어는 <xref:System.CodeDom.Compiler.CodeDomProvider.CreateProvider%2A?displayProperty=nameWithType> 메서드를 사용하여 적합한 CodeDOM 컴파일러에 매핑됩니다. <xref:System.Xml.Xsl.XslCompiledTransform> 클래스는 모든 Microsoft .NET 언어를 지원할 수 있습니다. 이때 적합한 공급자가 컴퓨터에 설치되어 있으며 machine.config 파일의 system.codedom 섹션에 등록되어 있다고 가정합니다. `language` 특성을 지정하지 않을 경우 언어 기본값은 JScript입니다. 언어 이름은 대/소문자를 구분하지 않으므로 'JavaScript'와 'javascript'는 같습니다.  
   
  `implements-prefix` 특성은 필수 항목입니다. 이 특성은 네임스페이스를 선언하고 스크립트 블록에 연결하는 데 사용됩니다. 이 특성 값은 네임스페이스를 나타내는 접두사입니다. 이 접두사는 스타일시트에서 정의할 수 있습니다.  
   
@@ -71,11 +71,11 @@ ms.locfileid: "54565646"
 #### <a name="assemblies"></a>어셈블리  
  기본적으로 다음 두 어셈블리가 참조됩니다.  
   
--   System.dll  
+- System.dll  
   
--   System.Xml.dll  
+- System.Xml.dll  
   
--   Microsoft.VisualBasic.dll(스크립트 언어가 VB인 경우)  
+- Microsoft.VisualBasic.dll(스크립트 언어가 VB인 경우)  
   
  `msxsl:assembly` 요소를 사용하여 추가 어셈블리를 가져올 수 있습니다. 여기에는 스타일시트를 컴파일할 때 어셈블리가 포함됩니다. `msxsl:assembly` 요소에는 다음 정의가 있습니다.  
   
@@ -94,21 +94,21 @@ ms.locfileid: "54565646"
 #### <a name="namespaces"></a>네임스페이스  
  기본적으로 다음 네임스페이스가 포함됩니다.  
   
--   시스템  
+- 시스템  
   
--   System.Collection  
+- System.Collection  
   
--   System.Text  
+- System.Text  
   
--   System.Text.RegularExpressions  
+- System.Text.RegularExpressions  
   
--   System.Xml  
+- System.Xml  
   
--   System.Xml.Xsl  
+- System.Xml.Xsl  
   
--   System.Xml.XPath  
+- System.Xml.XPath  
   
--   Microsoft.VisualBasic(스크립트 언어가 VB인 경우)  
+- Microsoft.VisualBasic(스크립트 언어가 VB인 경우)  
   
  `namespace` 특성을 사용하여 추가 네임스페이스에 대한 지원을 추가할 수 있습니다. 특성 값은 네임스페이스 이름입니다.  
   

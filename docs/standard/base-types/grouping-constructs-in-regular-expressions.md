@@ -1,5 +1,5 @@
 ---
-title: 정규식의 교체 그룹화 구문
+title: 정규식의 그룹화 구문
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2aa7c35ebc06fb67d9cf6216233d2bed65ae76ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16776e83c8bae6cc82329a8f709fd9d1d7cab145
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645901"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634337"
 ---
-# <a name="grouping-constructs-in-regular-expressions"></a>정규식의 교체 그룹화 구문
+# <a name="grouping-constructs-in-regular-expressions"></a>정규식의 그룹화 구문
 그룹화 구문은 정규식의 하위 식을 나타내며 입력 문자열의 부분 문자열을 캡처합니다. 그룹화 구문은 다음과 같은 경우에 사용할 수 있습니다.  
   
--   입력 문자열에서 반복되는 하위 식을 일치시킵니다.  
+- 입력 문자열에서 반복되는 하위 식을 일치시킵니다.  
   
--   여러 정규식 언어 요소가 있는 하위 식에 수량자를 적용합니다. 수량자에 대한 자세한 내용은 [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)를 참조하세요.  
+- 여러 정규식 언어 요소가 있는 하위 식에 수량자를 적용합니다. 수량자에 대한 자세한 내용은 [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)를 참조하세요.  
   
--   <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 및 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 메서드에 의해 반환되는 문자열에 하위 식을 포함시킵니다.  
+- <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 및 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 메서드에 의해 반환되는 문자열에 하위 식을 포함시킵니다.  
   
--   <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 속성에서 개별 하위 식을 검색하여 전체적으로 일치하는 텍스트와 별도로 처리합니다.  
+- <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 속성에서 개별 하위 식을 검색하여 전체적으로 일치하는 텍스트와 별도로 처리합니다.  
   
  다음 표에는 .NET 정규식 엔진에서 지원되는 그룹화 구문과 해당 그룹화 구문의 캡처링 또는 비 캡처링 여부가 표시되어 있습니다.  
   
@@ -63,13 +63,13 @@ ms.locfileid: "54645901"
   
  캡처된 그룹에는 다음과 같은 4가지 방법으로 액세스할 수 있습니다.  
   
--   정규식 내의 역참조 구문을 사용합니다. 일치하는 하위 식은 `\`*number*구문을 통해 동일한 정규식에서 참조됩니다. 여기서 *number* 는 캡처된 하위 식의 서수입니다.  
+- 정규식 내의 역참조 구문을 사용합니다. 일치하는 하위 식은 `\`*number*구문을 통해 동일한 정규식에서 참조됩니다. 여기서 *number* 는 캡처된 하위 식의 서수입니다.  
   
--   정규식 내의 명명된 역참조 구문을 사용합니다. 일치하는 하위 식은 `\k<`*name*`>`구문을 통해 동일한 정규식에서 참조됩니다. 여기서 *name* 은 캡처링 그룹의 이름) 또는 `\k<`*number*`>`구문을 통해 동일한 정규식에서 참조됩니다. 여기서 *number* 는 캡처링 그룹의 서수)을 통해 동일한 정규식에서 참조됩니다. 캡처링 그룹은 해당 서수와 같은 기본 이름을 갖고 있습니다. 자세한 내용은 이 항목 뒷부분의 [명명된 일치하는 하위 식](#named_matched_subexpression) 을 참조하세요.  
+- 정규식 내의 명명된 역참조 구문을 사용합니다. 일치하는 하위 식은 `\k<`*name*`>`구문을 통해 동일한 정규식에서 참조됩니다. 여기서 *name* 은 캡처링 그룹의 이름) 또는 `\k<`*number*`>`구문을 통해 동일한 정규식에서 참조됩니다. 여기서 *number* 는 캡처링 그룹의 서수)을 통해 동일한 정규식에서 참조됩니다. 캡처링 그룹은 해당 서수와 같은 기본 이름을 갖고 있습니다. 자세한 내용은 이 항목 뒷부분의 [명명된 일치하는 하위 식](#named_matched_subexpression) 을 참조하세요.  
   
--   <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 또는 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 메서드 호출에서 `$`*number* 바꾸기 시퀀스를 사용합니다. 여기서 *number*는 캡처된 하위 식의 서수입니다.  
+- <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 또는 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 메서드 호출에서 `$`*number* 바꾸기 시퀀스를 사용합니다. 여기서 *number*는 캡처된 하위 식의 서수입니다.  
   
--   프로그래밍 방식으로 <xref:System.Text.RegularExpressions.GroupCollection> 속성에서 반환하는 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 개체를 사용합니다. 컬렉션에서 위치 0에 있는 멤버는 전체 정규식 일치를 나타냅니다. 각 후속 멤버는 일치하는 하위 식을 나타냅니다. 자세한 내용은 [Grouping Constructs and Regular Expression Objects](#Objects) 섹션을 참조하세요.  
+- 프로그래밍 방식으로 <xref:System.Text.RegularExpressions.GroupCollection> 속성에서 반환하는 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 개체를 사용합니다. 컬렉션에서 위치 0에 있는 멤버는 전체 정규식 일치를 나타냅니다. 각 후속 멤버는 일치하는 하위 식을 나타냅니다. 자세한 내용은 [Grouping Constructs and Regular Expression Objects](#Objects) 섹션을 참조하세요.  
   
  다음 예제에서는 텍스트에서 중복된 단어를 식별하는 정규식을 보여 줍니다. 정규식 패턴의 두 캡처링 그룹은 중복된 단어의 두 인스턴스를 나타냅니다. 두 번째 인스턴스는 입력 문자열의 해당 시작 위치를 보고하기 위해 캡처됩니다.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "54645901"
   
  다음 테이블은 정규식 패턴이 해석되는 방법을 보여 줍니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`(\w+)`|하나 이상의 단어 문자를 찾습니다. 이 그룹은 첫 번째 캡처링 그룹입니다.|  
 |`\s`|공백 문자를 찾습니다.|  
@@ -112,17 +112,17 @@ ms.locfileid: "54645901"
   
  명명된 캡처된 그룹에는 다음과 같은 방법으로 액세스할 수 있습니다.  
   
--   정규식 내의 명명된 역참조 구문을 사용합니다. 일치하는 하위 식은 `\k<`*name*`>`구문을 통해 동일한 정규식에서 참조됩니다. 여기서 *name* 은 캡처된 하위 식의 이름입니다.  
+- 정규식 내의 명명된 역참조 구문을 사용합니다. 일치하는 하위 식은 `\k<`*name*`>`구문을 통해 동일한 정규식에서 참조됩니다. 여기서 *name* 은 캡처된 하위 식의 이름입니다.  
   
--   정규식 내의 역참조 구문을 사용합니다. 일치하는 하위 식은 `\`*number*구문을 통해 동일한 정규식에서 참조됩니다. 여기서 *number* 는 캡처된 하위 식의 서수입니다. 명명된 일치하는 하위 식은 하위 식을 일치시킨 후 왼쪽에서 오른쪽으로 연속적으로 번호가 매겨집니다.  
+- 정규식 내의 역참조 구문을 사용합니다. 일치하는 하위 식은 `\`*number*구문을 통해 동일한 정규식에서 참조됩니다. 여기서 *number* 는 캡처된 하위 식의 서수입니다. 명명된 일치하는 하위 식은 하위 식을 일치시킨 후 왼쪽에서 오른쪽으로 연속적으로 번호가 매겨집니다.  
   
--   <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 또는 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 메서드 호출에서 `${`*name*`}` 바꾸기 시퀀스를 사용합니다. 여기서 *name*은 캡처된 하위 식의 이름입니다.  
+- <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 또는 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 메서드 호출에서 `${`*name*`}` 바꾸기 시퀀스를 사용합니다. 여기서 *name*은 캡처된 하위 식의 이름입니다.  
   
--   <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 또는 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 메서드 호출에서 `$`*number* 바꾸기 시퀀스를 사용합니다. 여기서 *number*는 캡처된 하위 식의 서수입니다.  
+- <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 또는 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 메서드 호출에서 `$`*number* 바꾸기 시퀀스를 사용합니다. 여기서 *number*는 캡처된 하위 식의 서수입니다.  
   
--   프로그래밍 방식으로 <xref:System.Text.RegularExpressions.GroupCollection> 속성에서 반환하는 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 개체를 사용합니다. 컬렉션에서 위치 0에 있는 멤버는 전체 정규식 일치를 나타냅니다. 각 후속 멤버는 일치하는 하위 식을 나타냅니다. 명명된 캡처된 그룹은 캡처된 그룹의 번호를 매긴 후 컬렉션에 저장됩니다.  
+- 프로그래밍 방식으로 <xref:System.Text.RegularExpressions.GroupCollection> 속성에서 반환하는 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 개체를 사용합니다. 컬렉션에서 위치 0에 있는 멤버는 전체 정규식 일치를 나타냅니다. 각 후속 멤버는 일치하는 하위 식을 나타냅니다. 명명된 캡처된 그룹은 캡처된 그룹의 번호를 매긴 후 컬렉션에 저장됩니다.  
   
--   프로그래밍 방식으로 하위 식 이름을 <xref:System.Text.RegularExpressions.GroupCollection> 개체의 인덱서(C#의 경우) 또는 해당 <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> 속성(Visual Basic의 경우)에 제공합니다.  
+- 프로그래밍 방식으로 하위 식 이름을 <xref:System.Text.RegularExpressions.GroupCollection> 개체의 인덱서(C#의 경우) 또는 해당 <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> 속성(Visual Basic의 경우)에 제공합니다.  
   
  단순 정규식 패턴이 프로그래밍 방식으로 또는 정규식 언어 구문을 사용하여, 번호가 매겨진(명명되지 않은) 그룹 및 명명된 그룹을 참조할 수 있는 방법을 보여 줍니다. 정규식 `((?<One>abc)\d+)?(?<Two>xyz)(.*)` 는 번호 및 이름으로 다음 캡처링 그룹을 생성합니다. 첫 번째 캡처링 그룹(번호 0)은 항상 전체 패턴을 지칭합니다.  
   
@@ -233,7 +233,7 @@ ms.locfileid: "54645901"
 |6|`((?'Close-Open'>)`|“\<abc>”에서 오른쪽 꺾쇠괄호를 찾고 `Open` 그룹과 오른쪽 꺾쇠괄호 사이의 부분 문자열인 “abc”를 `Close` 그룹에 할당한 다음, `Open` 그룹의 현재 값(“<”)을 삭제하여 이 그룹을 비워 둡니다.|  
 |7|`[^<>]*`|오른쪽 꺾쇠괄호 뒤에서 꺾쇠괄호가 아닌 문자를 찾습니다. 일치 항목이 없습니다.|  
 |8|`)+`|캡처된 세 번째 그룹의 값은 ">"입니다.<br /><br /> 입력 문자열의 다음 문자가 오른쪽 꺾쇠괄호가 아니므로 정규식 엔진은 `((?'Close-Open'>)[^<>]*)` 하위 패턴으로 루프백하지 않습니다.|  
-|10|`)*`|캡처된 첫 번째 그룹의 값은 “\<abc>”입니다.<br /><br /> 입력 문자열의 다음 문자가 왼쪽 꺾쇠괄호이므로 정규식 엔진은 `(((?'Open'<)` 하위 패턴으로 루프백합니다.|  
+|9|`)*`|캡처된 첫 번째 그룹의 값은 “\<abc>”입니다.<br /><br /> 입력 문자열의 다음 문자가 왼쪽 꺾쇠괄호이므로 정규식 엔진은 `(((?'Open'<)` 하위 패턴으로 루프백합니다.|  
 |10|`(((?'Open'<)`|“\<mno>”에서 왼쪽 꺾쇠괄호를 찾아 `Open` 그룹에 할당합니다. 해당 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 컬렉션에는 이제 단일 값 "<"가 있습니다.|  
 |11|`[^<>]*`|"mno"를 찾습니다.|  
 |12|`)+`|"<mno"는 캡처된 두 번째 그룹의 값입니다.<br /><br /> 입력 문자열의 다음 문자가 왼쪽 꺾쇠괄호이므로 정규식 엔진은 `(?'Open'<)[^<>]*)` 하위 패턴으로 루프백합니다.|  
@@ -380,7 +380,7 @@ ms.locfileid: "54645901"
   
  정규식 패턴 `(?<=\b20)\d{2}\b` 는 다음 테이블과 같이 해석됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`\d{2}`|두 개의 10진수를 찾습니다.|  
 |`(?<=\b20)`|단어 경계에서 두 개의 10진수 앞에 10진수 "20"이 있는 경우 일치 항목 찾기를 계속합니다.|  
@@ -405,7 +405,7 @@ ms.locfileid: "54645901"
   
  정규식 패턴 `(?<!(Saturday|Sunday) )\b\w+ \d{1,2}, \d{4}\b` 는 다음 테이블과 같이 해석됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계에서 일치 항목 찾기를 시작합니다.|  
 |`\w+`|하나 이상의 단어 문자 다음에 공백 문자가 있는 일치 항목을 찾습니다.|  
@@ -446,11 +446,11 @@ ms.locfileid: "54645901"
 ## <a name="grouping-constructs-and-regular-expression-objects"></a>그룹화 구문 및 정규식 개체  
  정규식 캡처링 그룹과 일치하는 부분 문자열은 <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType> 개체로 표현됩니다. 이 개체는 <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType> 속성에서 반환하는 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 개체에서 검색할 수 있습니다. <xref:System.Text.RegularExpressions.GroupCollection> 개체는 다음과 같이 채워집니다.  
   
--   컬렉션의 첫 번째 <xref:System.Text.RegularExpressions.Group> 개체(인덱스 0에 있는 개체)는 전체 일치를 나타냅니다.  
+- 컬렉션의 첫 번째 <xref:System.Text.RegularExpressions.Group> 개체(인덱스 0에 있는 개체)는 전체 일치를 나타냅니다.  
   
--   다음 <xref:System.Text.RegularExpressions.Group> 개체 집합은 명명되지 않은(번호가 매겨진) 캡처링 그룹을 나타냅니다. 이러한 그룹은 정규식에서 정의된 순서로 왼쪽에서 오른쪽으로 나타납니다. 이러한 그룹의 인덱스 값 범위는 1에서 컬렉션에 있는 명명되지 않은 캡처링 그룹 수까지입니다. (특정 그룹의 인덱스는 번호가 매겨진 해당 역참조와 같습니다. 역참조에 대한 자세한 내용은 [Backreference Constructs](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)을 참조하세요.)  
+- 다음 <xref:System.Text.RegularExpressions.Group> 개체 집합은 명명되지 않은(번호가 매겨진) 캡처링 그룹을 나타냅니다. 이러한 그룹은 정규식에서 정의된 순서로 왼쪽에서 오른쪽으로 나타납니다. 이러한 그룹의 인덱스 값 범위는 1에서 컬렉션에 있는 명명되지 않은 캡처링 그룹 수까지입니다. (특정 그룹의 인덱스는 번호가 매겨진 해당 역참조와 같습니다. 역참조에 대한 자세한 내용은 [Backreference Constructs](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)을 참조하세요.)  
   
--   최종 <xref:System.Text.RegularExpressions.Group> 개체 집합은 명명된 캡처링 그룹을 나타냅니다. 이러한 그룹은 정규식에서 정의된 순서로 왼쪽에서 오른쪽으로 나타납니다. 명명된 첫 번째 캡처링 그룹의 인덱스 값은 명명되지 않은 마지막 캡처링 그룹의 인덱스보다 1 큽니다. 정규식에 명명되지 않은 캡처링 그룹이 없는 경우 명명된 첫 번째 캡처링 그룹의 인덱스 값은 1입니다.  
+- 최종 <xref:System.Text.RegularExpressions.Group> 개체 집합은 명명된 캡처링 그룹을 나타냅니다. 이러한 그룹은 정규식에서 정의된 순서로 왼쪽에서 오른쪽으로 나타납니다. 명명된 첫 번째 캡처링 그룹의 인덱스 값은 명명되지 않은 마지막 캡처링 그룹의 인덱스보다 1 큽니다. 정규식에 명명되지 않은 캡처링 그룹이 없는 경우 명명된 첫 번째 캡처링 그룹의 인덱스 값은 1입니다.  
   
  캡처링 그룹에 수량자를 적용하는 경우 해당 <xref:System.Text.RegularExpressions.Group> 개체의 <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType>, <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType>및 <xref:System.Text.RegularExpressions.Capture.Length%2A?displayProperty=nameWithType> 속성은 캡처링 그룹에 의해 캡처된 마지막 부분 문자열을 반영합니다. <xref:System.Text.RegularExpressions.CaptureCollection> 속성에서 반환하는 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 개체의 수량자를 포함하는 그룹에 의해 캡처된 부분 문자열의 전체 집합을 검색할 수 있습니다.  
   

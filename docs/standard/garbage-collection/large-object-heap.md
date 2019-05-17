@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff25d2cef52a8c690f895222d69591bc53b3765e
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ebe856b3ed904b13201c6d59752a8a00f4060d5d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677180"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753960"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows 시스템의 큰 개체 힙
 
@@ -156,7 +156,7 @@ LOH 성능에 대한 데이터를 수집하는 데 사용할 수 있는 도구�
 
 성능 카운터를 확인하는 일반적인 방법은 성능 모니터(perfmon.exe)를 사용하는 것입니다. "카운터 추가" 명령을 사용하여 관심 있는 프로세스에 대해 원하는 카운터를 추가합니다. 그림 4와 같이 성능 카운터 데이터를 로그 파일에 저장할 수 있습니다.
 
-![그림 4: 성능 카운터 추가](media/loh/perfcounter.png)\
+![성능 카운터 추가를 보여주는 스크린샷.](media/large-object-heap/add-performance-counter.png)
 그림 4: 2세대 GC 이후의 LOH
 
 또한 성능 카운터는 프로그래밍 방식으로 쿼리할 수도 있습니다. 많은 사람들이 일상적인 테스트 프로세스의 일환으로 이러한 방식으로 성능 데이터를 수집합니다. 정상적이지 않은 값이 있는 카운터가 검색되면 다른 방법을 사용하여 조사하는 데 유용한 더 자세한 정보를 얻을 수 있습니다.
@@ -184,7 +184,8 @@ perfview /GCCollectOnly /AcceptEULA /nogui collect
 
 결과는 다음과 같습니다.
 
-![그림 5: PerfView를 사용하여 ETW 이벤트 검사](media/loh/perfview.png) 그림 5: PerfView를 사용하여 표시된 ETW 이벤트
+![PerfView에서 ETW 이벤트를 보여주는 스크린샷.](media/large-object-heap/event-tracing-windows-perfview.png)
+그림 5: PerfView를 사용하여 표시된 ETW 이벤트
 
 여기서 알 수 있듯이, 모든 GC는 2세대 GC이며 AllocLarge를 통해 모두 트리거됩니다. 즉, 큰 개체를 할당하면 이 GC가 트리거됩니다. **LOH 잔존율 %** 열이 1%라고 표시되므로 이러한 할당은 일시적입니다.
 
@@ -196,7 +197,7 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 이 명령은 대략 100,000개의 할당마다 실행되는 AllocationTick 이벤트를 수집합니다. 즉, 큰 개체가 할당될 때마다 이벤트가 실행됩니다. 큰 개체를 할당한 호출 스택을 보여 주는 GC 힙 할당 보기 중 하나를 살펴볼 수 있습니다.
 
-![그림 6: GC 힙 할당 보기](media/loh/perfview2.png)\
+![가비지 수집기 힙 보기를 보여주는 스크린샷.](media/large-object-heap/garbage-collector-heap.png)
 그림 6: GC 힙 할당 보기
 
 여기서 알 수 있듯이, 이는 `Main` 메서드에서 큰 개체를 할당하는 매우 간단한 테스트입니다.

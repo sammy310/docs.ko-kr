@@ -1,24 +1,19 @@
 ---
-title: 클러스터링 학습자를 사용하여 아이리스 꽃 클러스터링 - ML.NET
+title: 클러스터링 모델을 사용하여 아이리스 꽃 분류
 description: 클러스터링 시나리오에서 ML.NET을 사용하는 방법 알아보기
 author: pkulikov
 ms.author: johalex
-ms.date: 04/08/2019
+ms.date: 05/02/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 86eba0c7a3eaeed008d41ff950bf2fd7e0e5fb57
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7070189e289e8e18ba0d122d2411a9064182e2b1
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481342"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063575"
 ---
-# <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>자습서: ML.NET을 통해 클러스터링 학습자를 사용하여 아이리스 꽃 클러스터링
-
-> [!NOTE]
-> 이 항목은 현재 미리 보기로 제공되는 ML.NET을 참조하며, 자료는 변경될 수 있습니다. 자세한 내용은 [ML.NET 소개](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)를 참조하세요.
-
-이 자습서와 관련 샘플에서는 현재 **ML.NET 1.0 RC(릴리스 후보)(버전 `1.0.0-preview`)** 를 사용하고 있습니다. 자세한 내용은 [dotnet/machinelearning GitHub 리포지토리](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)에서 릴리스 정보를 참조하세요.
+# <a name="tutorial-categorize-iris-flowers-using-a-clustering-model-with-mlnet"></a>자습서: ML.NET으로 클러스터링 모델을 사용하여 아이리스 꽃 분류
 
 이 자습서에서는 ML.NET을 사용하여 [아이리스 꽃 데이터 집합](https://en.wikipedia.org/wiki/Iris_flower_data_set)을 위해 [클러스터링 모델](../resources/tasks.md#clustering)을 빌드하는 방법을 보여줍니다.
 
@@ -46,7 +41,7 @@ ms.locfileid: "59481342"
 
 ## <a name="create-a-console-application"></a>콘솔 애플리케이션 만들기
 
-1. Visual Studio 2017을 엽니다. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트**를 선택합니다. **새 프로젝트** 대화 상자에서 **Visual C#** 노드와 **.NET Core** 노드를 차례로 선택합니다. 그런 다음 **콘솔 앱(.NET Core)** 프로젝트 템플릿을 선택합니다. **이름** 텍스트 상자에 "IrisFlowerClustering"을 입력한 다음, **확인** 단추를 선택합니다.
+1. Visual Studio를 엽니다. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트**를 선택합니다. **새 프로젝트** 대화 상자에서 **Visual C#** 노드와 **.NET Core** 노드를 차례로 선택합니다. 그런 다음 **콘솔 앱(.NET Core)** 프로젝트 템플릿을 선택합니다. **이름** 텍스트 상자에 "IrisFlowerClustering"을 입력한 다음, **확인** 단추를 선택합니다.
 
 1. 프로젝트에서 *Data* 디렉터리를 만들어 데이터 집합과 모델 파일을 저장합니다.
 
@@ -54,7 +49,7 @@ ms.locfileid: "59481342"
 
 1. **Microsoft.ML** NuGet 패키지를 설치합니다.
 
-    **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. “nuget.org”를 패키지 소스로 선택하고, **찾아보기** 탭을 선택하고, **Microsoft.ML**을 검색하고, 목록에서 해당 패키지를 선택하고, **설치** 단추를 선택합니다. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다.
+    **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. "nuget.org"를 패키지 소스로 선택하고, **찾아보기** 탭을 선택하고, **Microsoft.ML**을 검색하고, 목록에서 **v1.0.0** 패키지를 선택하고, **설치** 단추를 선택합니다. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다.
 
 ## <a name="prepare-the-data"></a>데이터 준비
 

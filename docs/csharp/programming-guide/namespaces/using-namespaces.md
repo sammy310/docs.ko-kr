@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 510a8dd2721e9c709444c065a8df25b0e5526c08
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c5bede7475fdbee3f3524984a9be97b95b44817d
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965555"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452675"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>네임스페이스 사용(C# 프로그래밍 가이드)
 네임스페이스는 C# 프로그램 내에서 두 가지 방법으로 많이 사용됩니다. 첫째, .NET Framework 클래스는 네임스페이스를 사용하여 많은 클래스를 구성합니다. 둘째, 고유한 네임스페이스를 선언하면 대규모 프로그래밍 프로젝트에서 클래스 및 메서드 이름의 범위를 제어할 수 있습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "56965555"
  [!code-csharp[csProgGuideNamespaces#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces2.cs#7)]  
   
 ## <a name="using-namespaces-to-control-scope"></a>네임스페이스를 사용하여 범위 제어  
- `namespace` 키워드는 범위를 선언하는 데 사용됩니다. 프로젝트 내에서 범위를 만드는 기능은 코드 구성에 도움이 되며, 전역적으로 고유한 형식을 만들 수 있게 해줍니다. 다음 예제에서 `SampleClass`라는 클래스는 서로 중첩된 두 개의 네임스페이스에 정의되어 있습니다. [ 연산자](../../../csharp/language-reference/operators/member-access-operator.md)는 호출되는 메서드를 구분하는 데 사용됩니다.  
+ `namespace` 키워드는 범위를 선언하는 데 사용됩니다. 프로젝트 내에서 범위를 만드는 기능은 코드 구성에 도움이 되며, 전역적으로 고유한 형식을 만들 수 있게 해줍니다. 다음 예제에서 `SampleClass`라는 클래스는 서로 중첩된 두 개의 네임스페이스에 정의되어 있습니다. [멤버 액세스 `.` 연산자](../../language-reference/operators/member-access-operators.md#member-access-operator-)는 호출되는 메서드를 구분하는 데 사용됩니다.  
   
  [!code-csharp[csProgGuideNamespaces#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#8)]  
   
@@ -52,13 +52,13 @@ ms.locfileid: "56965555"
   
  앞의 코드 세그먼트에서:  
   
--   `N1` 네임스페이스는 전역 네임스페이스의 멤버입니다. 정규화된 이름은 `N1`입니다.  
+- `N1` 네임스페이스는 전역 네임스페이스의 멤버입니다. 정규화된 이름은 `N1`입니다.  
   
--   `N2` 네임스페이스는 `N1`의 멤버입니다. 정규화된 이름은 `N1.N2`입니다.  
+- `N2` 네임스페이스는 `N1`의 멤버입니다. 정규화된 이름은 `N1.N2`입니다.  
   
--   `C1` 클래스는 `N1`의 멤버입니다. 정규화된 이름은 `N1.C1`입니다.  
+- `C1` 클래스는 `N1`의 멤버입니다. 정규화된 이름은 `N1.C1`입니다.  
   
--   이 코드에서는 클래스 이름 `C2`가 두 번 사용되었습니다. 그러나 정규화된 이름은 고유합니다. `C2`의 첫 번째 인스턴스는 `C1` 내에서 선언되었으므로 정규화된 이름이 `N1.C1.C2`입니다. `C2`의 두 번째 인스턴스는 `N2` 네임스페이스 내에서 선언되었으므로 정규화된 이름이 `N1.N2.C2`입니다.  
+- 이 코드에서는 클래스 이름 `C2`가 두 번 사용되었습니다. 그러나 정규화된 이름은 고유합니다. `C2`의 첫 번째 인스턴스는 `C1` 내에서 선언되었으므로 정규화된 이름이 `N1.C1.C2`입니다. `C2`의 두 번째 인스턴스는 `N2` 네임스페이스 내에서 선언되었으므로 정규화된 이름이 `N1.N2.C2`입니다.  
   
  앞의 코드 세그먼트를 사용하여 다음과 같이 `N1.N2` 네임스페이스에 새 클래스 멤버 `C3`를 추가할 수 있습니다.  
   
@@ -93,6 +93,6 @@ ms.locfileid: "56965555"
 - [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
 - [네임스페이스](../../../csharp/programming-guide/namespaces/index.md)
 - [네임스페이스 키워드](../../../csharp/language-reference/keywords/namespace-keywords.md)
-- [. 연산자](../../../csharp/language-reference/operators/member-access-operator.md)
+- [. 연산자](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
 - [:: 연산자](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
 - [extern](../../../csharp/language-reference/keywords/extern.md)

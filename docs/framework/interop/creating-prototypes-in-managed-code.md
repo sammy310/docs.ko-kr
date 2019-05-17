@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e642f6507016dd1d62b4889f8a8dbcf0470a2202
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5652c04dc506e802741ba803af8e50837d0d795c
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168170"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65064072"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>관리 코드에서 프로토타입 만들기
 이 항목에서는 관리되지 않는 함수에 액세스하는 방법을 설명하고 관리 코드에서 메서드 정의에 주석을 다는 여러 특성 필드를 소개합니다. 플랫폼 호출에서 사용되는 .NET 기반 선언을 생성하는 방법을 보여 주는 예제는 [플랫폼 호출을 사용하여 데이터 마샬링](marshaling-data-with-platform-invoke.md)을 참조하세요.  
@@ -38,10 +38,8 @@ ms.locfileid: "59168170"
  관리되지 않는 함수에 대한 관리되는 정의는 다음 예제와 같이 언어 종속적입니다. 전체 코드 예제를 보려면 [플랫폼 호출 예제](platform-invoke-examples.md)를 참조하세요.  
   
 ```vb
-Imports System
-
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Function MessageBox Lib "user32.dll" (
+Friend Class NativeMethods
+    Friend Declare Auto Function MessageBox Lib "user32.dll" (
         ByVal hWnd As IntPtr,
         ByVal lpText As String,
         ByVal lpCaption As String,
@@ -49,13 +47,12 @@ Friend Class WindowsAPI
 End Class
 ```
   
- <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>, <xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>, <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>, <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>, <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> 또는 <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar> 필드를 [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] 선언에 적용하려면 `Declare` 문 대신 <xref:System.Runtime.InteropServices.DllImportAttribute> 특성을 사용해야 합니다.  
+ <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping?displayProperty=nameWithtype>, <xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention?displayProperty=nameWithtype>, <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithtype>, <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig?displayProperty=nameWithtype>, <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError?displayProperty=nameWithtype> 또는 <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar?displayProperty=nameWithtype> 필드를 Visual Basic 선언에 적용하려면 `Declare` 문 대신 <xref:System.Runtime.InteropServices.DllImportAttribute> 특성을 사용해야 합니다.  
   
 ```vb
-Imports System
 Imports System.Runtime.InteropServices
 
-Friend Class WindowsAPI
+Friend Class NativeMethods
     <DllImport("user32.dll", CharSet:=CharSet.Auto)>
     Friend Shared Function MessageBox(
         ByVal hWnd As IntPtr,
@@ -70,7 +67,7 @@ End Class
 using System;
 using System.Runtime.InteropServices;
 
-internal static class WindowsAPI
+internal static class NativeMethods
 {
     [DllImport("user32.dll")]
     internal static extern int MessageBox(
@@ -111,9 +108,9 @@ extern "C" int MessageBox(
 ### <a name="platform-invoke-examples"></a>플랫폼 호출 예제  
  이 섹션의 플랫폼 호출 샘플에서는 스택 워크 한정자와 함께 `RegistryPermission` 특성을 사용하는 방법을 보여 줍니다.  
   
- 다음 코드 예제에서는 <xref:System.Security.Permissions.SecurityAction>`Assert`, `Deny` 및 `PermitOnly` 한정자가 무시됩니다.  
+ 다음 예제에서는 <xref:System.Security.Permissions.SecurityAction>`Assert`, `Deny` 및 `PermitOnly` 한정자가 무시됩니다.  
   
-```  
+```csharp  
 [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
 [RegistryPermission(SecurityAction.Assert, Unrestricted = true)]  
     private static extern bool CallRegistryPermissionAssert();  
@@ -129,7 +126,7 @@ extern "C" int MessageBox(
   
  그러나 다음 예제에서 `Demand` 한정자는 허용됩니다.  
   
-```  
+```csharp
 [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
 [RegistryPermission(SecurityAction.Demand, Unrestricted = true)]  
     private static extern bool CallRegistryPermissionDeny();  

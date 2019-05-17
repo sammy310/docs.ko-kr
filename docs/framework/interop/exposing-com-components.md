@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b7aa028afeaf4230ee079f0d4071a5cd6a21c65
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 20ec022f378feba3368ea79fdd5c6ee7ecccf1b9
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320914"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469651"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>.NET Framework에 COM 구성 요소 노출
 이 섹션에서는 프로세스를 기존 COM 구성 요소를 관리 코드에 노출하는 데 필요한 간략하게 설명합니다. .NET Framework와 강력하게 통합되는 COM 서버를 작성하는 방법에 대한 자세한 내용은 [상호 운용을 위한 디자인 고려 사항](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))을 참조하세요.
@@ -32,7 +32,7 @@ ms.locfileid: "59320914"
   
 3. [Interop 프로젝트를 컴파일합니다](compiling-an-interop-project.md).  
   
-     [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]에서는 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# 및 C++를 포함하여 CLS(공용 언어 사양)와 호환되는 여러 가지 언어용 컴파일러를 제공합니다.  
+     [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]에서는 Visual Basic, C# 및 C++를 포함하여 CLS(공용 언어 사양)와 호환되는 여러 언어용 컴파일러를 제공합니다.  
   
 4. [Interop 애플리케이션을 배포합니다](deploying-an-interop-application.md).  
   

@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: fc8c27c25fb6d07207586eb65d5ac9cc543bcc1a
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 6e39b0ce48e7caf755054eb558ab0c99b0ec76e8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613202"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755079"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>eShopOnContainers의 DDD 마이크로 서비스에서 CQRS 및 CQS 방법 적용
 
@@ -19,7 +19,7 @@ EShopOnContainers 참조 애플리케이션의 주문 마이크로 서비스 설
 
 따라서 주문 마이크로 서비스에서 동일한 데이터베이스를 사용하더라도 트랜잭션 논리 “쓰기” 도메인 모델과 다른 “읽기” 데이터 모델을 사용할 수 있습니다. 이런 이유로, 간소화된 CQRS 접근 방식입니다.
 
-반면에 트랜잭션과 데이터 업데이트를 트리거하는 명령은 시스템에서 상태를 바꿀 수 있습니다. 명령에서는 복잡성과 끊임없이 변화하는 비즈니스 규칙을 처리하는 데 중의가 필요합니다. 이것이 더 나은 모델링 시스템을 위해 DDD 기법을 적용하는 부분입니다.
+반면에 트랜잭션과 데이터 업데이트를 트리거하는 명령은 시스템에서 상태를 바꿀 수 있습니다. 명령에서는 복잡성과 끊임없이 변화하는 비즈니스 규칙을 처리하는 데 중의가 필요합니다. DDD 기법을 적용하여 더 나은 모델링 시스템을 갖출 수 있습니다.
 
 이 가이드에서 제시하는 DDD 패턴을 보편적으로 적용해서는 안 됩니다. 여기에는 설계에 제약이 따릅니다. 이러한 제약은 시간에 따른 품질 향상과 같은 장점도 있습니다. 특히 시스템 상태를 수정하는 명령 및 기타 코드에서 그렇습니다. 그러나 이러한 제약은 데이터 읽기 및 쿼리에서 장점보다는 복잡성을 더합니다.
 

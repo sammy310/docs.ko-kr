@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 874501ac6dc4ea0ea1c0c97cdd2b802dfdb6bbb0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6939efa608f4887dfdb00abe8292bec841929440
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532195"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664635"
 ---
 # <a name="standard-date-and-time-format-strings"></a>표준 날짜 및 시간 형식 문자열
 표준 날짜 및 시간 서식 문자열은 단일 서식 지정자를 사용하여 날짜 및 시간 값의 텍스트 표현을 정의합니다. 공백을 포함하여 문자가 두 개 이상 포함된 날짜 및 시간 서식 문자열은 사용자 지정 날짜 및 시간 서식 문자열로 해석됩니다. 자세한 내용은 [사용자 지정 날짜 및 시간 서식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)을 참조하세요. 표준 또는 사용자 지정 서식 문자열은 다음 두 가지 방법으로 사용할 수 있습니다.  
   
--   서식 지정 작업의 결과로 생성되는 문자열을 정의합니다.  
+- 서식 지정 작업의 결과로 생성되는 문자열을 정의합니다.  
   
--   구문 분석 작업을 통해 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 값으로 변환할 수 있는 날짜 및 시간 값의 텍스트 표현을 정의합니다.  
+- 구문 분석 작업을 통해 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 값으로 변환할 수 있는 날짜 및 시간 값의 텍스트 표현을 정의합니다.  
 
 > [!TIP]
 >  서식 문자열을 숫자 또는 날짜 및 시간 값에 적용할 수 있도록 지원하고 결과 문자열을 표시하는 애플리케이션인 [서식 유틸리티](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)를 다운로드할 수 있습니다.  
@@ -63,17 +63,17 @@ ms.locfileid: "54532195"
   
  서식 지정 작업에서 표준 서식 문자열이 특정 문화권의 사용자 지정 서식 문자열에 매핑되는 경우 애플리케이션에서는 다음 방법 중 하나로 사용할 사용자 지정 서식 문자열이 포함된 특정 문화권을 정의할 수 있습니다.  
   
--   기본 또는 현재 문화권을 사용할 수 있습니다. 다음 예제에서는 현재 문화권의 간단한 날짜 서식을 사용하여 날짜를 표시합니다. 이 예제의 경우 현재 문화권이 en-US입니다.  
+- 기본 또는 현재 문화권을 사용할 수 있습니다. 다음 예제에서는 현재 문화권의 간단한 날짜 서식을 사용하여 날짜를 표시합니다. 이 예제의 경우 현재 문화권이 en-US입니다.  
   
      [!code-csharp-interactive[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#1)]
      [!code-vb[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#1)]  
   
--   사용할 서식 지정과 관련된 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체를 <xref:System.IFormatProvider> 매개 변수가 있는 메서드에 전달할 수 있습니다. 다음 예제에서는 pt-BR 문화권의 간단한 날짜 서식을 사용하여 날짜를 표시합니다.  
+- 사용할 서식 지정과 관련된 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체를 <xref:System.IFormatProvider> 매개 변수가 있는 메서드에 전달할 수 있습니다. 다음 예제에서는 pt-BR 문화권의 간단한 날짜 서식을 사용하여 날짜를 표시합니다.  
   
      [!code-csharp[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#2)]
      [!code-vb[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#2)]  
   
--   서식 지정 정보를 제공하는 <xref:System.Globalization.DateTimeFormatInfo> 개체를 <xref:System.IFormatProvider> 매개 변수가 있는 메서드에 전달할 수 있습니다. 다음 예제에서는 hr-HR 문화권의 <xref:System.Globalization.DateTimeFormatInfo> 개체가 제공하는 간단한 날짜 서식을 사용하여 날짜를 표시합니다.  
+- 서식 지정 정보를 제공하는 <xref:System.Globalization.DateTimeFormatInfo> 개체를 <xref:System.IFormatProvider> 매개 변수가 있는 메서드에 전달할 수 있습니다. 다음 예제에서는 hr-HR 문화권의 <xref:System.Globalization.DateTimeFormatInfo> 개체가 제공하는 간단한 날짜 서식을 사용하여 날짜를 표시합니다.  
   
      [!code-csharp[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#3)]
      [!code-vb[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#3)]  
@@ -249,17 +249,17 @@ ms.locfileid: "54532195"
   
  “O” 또는 “o” 표준 형식 지정자(및 “yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffK” 사용자 지정 형식 문자열)는 ISO 8601에서 <xref:System.DateTime> 값의 <xref:System.DateTime.Kind%2A> 속성을 유지하기 위해 표준 시간대 정보를 나타내는 세 가지 방법을 이용합니다.  
   
--   <xref:System.DateTimeKind.Local?displayProperty=nameWithType> 날짜 및 시간 값의 표준 시간대 구성 요소는 UTC의 오프셋입니다(예: +01:00, -07:00). 모든 <xref:System.DateTimeOffset> 값은 이 형식으로도 표현됩니다.  
+- <xref:System.DateTimeKind.Local?displayProperty=nameWithType> 날짜 및 시간 값의 표준 시간대 구성 요소는 UTC의 오프셋입니다(예: +01:00, -07:00). 모든 <xref:System.DateTimeOffset> 값은 이 형식으로도 표현됩니다.  
   
--   <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> 날짜 및 시간 값의 표준 시간대 구성 요소는 "Z"(0 오프셋을 의미함)를 사용하여 UTC를 나타냅니다.  
+- <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> 날짜 및 시간 값의 표준 시간대 구성 요소는 "Z"(0 오프셋을 의미함)를 사용하여 UTC를 나타냅니다.  
   
--   <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> 날짜 및 시간 값은 표준 시간대 정보를 포함하지 않습니다.  
+- <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> 날짜 및 시간 값은 표준 시간대 정보를 포함하지 않습니다.  
   
  "O" 또는 "o" 표준 서식 지정자는 국제 표준을 준수하므로, 이 지정자를 사용하는 서식 지정 또는 구문 분석 작업에서는 항상 고정 문화권 및 양력을 사용합니다.  
   
  `Parse` 및 `TryParse`의 `ParseExact`, `TryParseExact`, <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 메서드에 전달되는 문자열은 이러한 형식 중 하나인 경우 "O" 또는 "o" 서식 지정자를 사용하여 구문 분석할 수 있습니다. <xref:System.DateTime> 개체의 경우 호출하는 구문 분석 오버로드는 값이 `styles`인 <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> 매개 변수도 포함해야 합니다. "O" 또는 "o" 서식 지정자에 해당하는 사용자 지정 서식 문자열로 구문 분석 메서드를 호출하는 경우 "O" 또는 "o"와 동일한 결과를 얻지 못합니다. 사용자 지정 서식 문자열을 사용하는 구문 분석 메서드는 표준 시간대 구성 요소가 없거나 "Z"를 사용하여 UTC를 나타내는 날짜 및 시간 값의 문자열 표현을 구문 분석할 수 없기 때문입니다.  
   
- 다음 예제에서는 "o" 서식 지정자를 사용하여 미국 태평양 표준 시간대에 있는 시스템의 일련의 <xref:System.DateTime> 값 및 <xref:System.DateTimeOffset> 값을 표시합니다.  
+ 다음 예제에서는 "o" 서식 지정자를 사용하여 미국 태평양 표준 시간대에 있는 시스템에 일련의 <xref:System.DateTime> 값과 <xref:System.DateTimeOffset> 값을 표시합니다.  
   
  [!code-csharp-interactive[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Standard#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/o1.vb#8)]  
@@ -403,7 +403,7 @@ ms.locfileid: "54532195"
  [표로 이동](#table)  
   
 <a name="Notes"></a>   
-## <a name="notes"></a>노트  
+## <a name="notes"></a>참고 사항  
   
 ### <a name="control-panel-settings"></a>제어판 설정  
  제어판에 있는 **국가 및 언어 옵션** 항목의 설정은 서식 지정 작업으로 생성되는 결과 문자열에 영향을 줍니다. 이러한 설정은 형식을 제어하는 데 사용되는 값을 제공하는 현재 스레드 문화권과 연결된 <xref:System.Globalization.DateTimeFormatInfo> 개체를 초기화하는 데 사용됩니다. 다른 설정을 사용하는 컴퓨터는 다른 결과 문자열을 생성합니다.  

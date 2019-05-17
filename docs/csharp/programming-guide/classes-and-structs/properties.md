@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: 473109100c14f26d0e31b9f57513997044c5b2f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7374b77526a31c2c508516d5a3cb7cc3e29339a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676824"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583056"
 ---
 # <a name="properties-c-programming-guide"></a>속성(C# 프로그래밍 가이드)
 
@@ -54,25 +54,25 @@ ms.locfileid: "54676824"
 
 경우에 따라 `get` 속성과 `set` 접근자에서 지원 필드에 값을 할당하거나 지원 필드에서 값을 검색하기만 하고 추가 논리를 포함하지 않을 수 있습니다. 자동 구현 속성을 사용하면 코드를 간소화할 수 있을 뿐 아니라 C# 컴파일러에서 지원 필드를 투명하게 제공하도록 할 수 있습니다. 
 
-속성에 `get` 및 `set` 접근자가 모두 포함된 경우 두 접근자를 모두 자동 구현해야 합니다. 구현을 제공하지 않고 `get` 및 `set` 키워드를 사용하여 자동 구현 속성을 정의합니다. 다음 예제에서는 `Name` 및 `Price`가 자동 구현 속성인 점만 제외하고 이전 예제와 동일합니다. 이 예제에서는 매개 변수화된 생성자도 제거하므로 `SaleItem` 개체가 [개체 이니셜라이저](object-and-collection-initializers.md) 및 기본 생성자에 대한 호출로 초기화됩니다.
+속성에 `get` 및 `set` 접근자가 모두 포함된 경우 두 접근자를 모두 자동 구현해야 합니다. 구현을 제공하지 않고 `get` 및 `set` 키워드를 사용하여 자동 구현 속성을 정의합니다. 다음 예제에서는 `Name` 및 `Price`가 자동 구현 속성인 점만 제외하고 이전 예제와 동일합니다. 이 예제에서는 매개 변수화된 생성자도 제거하므로 이제 `SaleItem` 개체가 매개 변수 없는 생성자 및 [개체 이니셜라이저](object-and-collection-initializers.md)에 대한 호출을 통해 초기화됩니다.
 
   [!code-csharp[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
 
 ## <a name="related-sections"></a>관련 단원  
   
--   [속성 사용](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+- [속성 사용](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
   
--   [인터페이스 속성](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
+- [인터페이스 속성](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
   
--   [속성 및 인덱서 비교](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [속성 및 인덱서 비교](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
   
--   [접근자 접근성 제한](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [접근자 접근성 제한](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
   
--   [자동으로 구현된 속성](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
+- [자동으로 구현된 속성](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
 
-자세한 내용은 [C# 언어 사양](../../language-reference/language-specification/index.md)의 [속성](~/_csharplang/spec/classes.md#properties)을 참조하세요. C# 언어 사양은 C# 구문 및 사용법에 대한 신뢰할 수 있는 소스입니다.
+자세한 내용은 [C# 언어 사양](../../language-reference/language-specification/index.md)의 [속성](~/_csharplang/spec/classes.md#properties)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
   
 ## <a name="see-also"></a>참고 항목
 

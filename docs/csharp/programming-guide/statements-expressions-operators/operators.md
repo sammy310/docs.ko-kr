@@ -1,18 +1,18 @@
 ---
 title: 연산자 - C# 프로그래밍 가이드
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 04/30/2019
 helpviewer_keywords:
 - operators [C#]
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 0b2af8c41bc6411d2665d2cf37bd48040fc8d8dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fd10999066f599d819ef188e09028c64c6a5e9e6
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307475"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65064048"
 ---
 # <a name="operators-c-programming-guide"></a>연산자(C# 프로그래밍 가이드)
 
@@ -26,108 +26,19 @@ C#에서 *연산자* 는 식 또는 문에서 하나 이상의 *피연산자* �
   
  [!code-csharp[csProgGuideStatements#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#6)]  
   
-## <a name="operators-evaluation-and-operator-precedence"></a>연산자, 평가 및 연산자 우선 순위
+피연산자는 모든 길이의 코드로 구성된 유효한 식이 될 수 있으며 모든 개수의 하위 식으로 구성될 수 있습니다. 여러 연산자를 포함하는 식에서 연산자가 적용되는 순서는 *operator precedence*, *associativity*및 괄호로 결정됩니다.  
 
- 피연산자는 모든 길이의 코드로 구성된 유효한 식이 될 수 있으며 모든 개수의 하위 식으로 구성될 수 있습니다. 여러 연산자를 포함하는 식에서 연산자가 적용되는 순서는 *operator precedence*, *associativity*및 괄호로 결정됩니다.  
+## <a name="operator-precedence"></a>연산자 우선 순위
   
- 각 연산자에는 정의된 우선 순위가 있습니다. 다른 우선 순위 수준을 가진 여러 연산자가 포함된 식에서 연산자의 우선 순위는 연산자가 평가되는 순서를 결정합니다. 예를 들어, 다음 문은 `n1`에 3을 할당합니다.  
-  
- `n1 = 11 - 2 * 4;`  
-  
- 곱셈은 뺄셈보다 우선하기 때문에 곱하기가 가장 먼저 실행됩니다.  
-  
- 다음 표에서는 연산자를 각각 수행하는 연산의 종류에 따라 범주별로 구분하여 보여 줍니다. 이 범주는 우선 순위에 따라 나열되어 있습니다.  
-  
- **기본 연산자**  
-  
-|식|설명|  
-|----------------|-----------------|  
-|x[.](../../../csharp/language-reference/operators/member-access-operator.md)y<br /><br /> x?.y|멤버 액세스<br /><br /> 조건부 멤버 액세스|  
-|f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)|메서드 및 대리자 호출|  
-|a[&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md)<br /><br /> a?[x]|배열 및 인덱서 액세스<br /><br /> 조건부 배열 및 인덱서 액세스|  
-|x[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)|후위 증가|  
-|x[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)|후위 감소|  
-|[new](../../../csharp/language-reference/keywords/new-operator.md) T(...)|개체 및 대리자 생성|  
-|`new` T(...){...}|이니셜라이저를 사용한 개체 생성. [개체 이니셜라이저 및 컬렉션 이니셜라이저](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)를 참조하세요.|  
-|`new` {...}|익명 개체 이니셜라이저. [무명 형식](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)을 참조하세요.|  
-|`new` T[...]|배열 생성. [배열](../../../csharp/programming-guide/arrays/index.md)을 참조하세요.|  
-|[typeof](../../../csharp/language-reference/keywords/typeof.md)(T)|T에 대한 System.Type 개체 가져오기|  
-|[checked](../../../csharp/language-reference/keywords/checked.md)(x)|checked 컨텍스트에서 식 계산|  
-|[unchecked](../../../csharp/language-reference/keywords/unchecked.md)(x)|unchecked 컨텍스트에서 식 계산|  
-|[default](../../../csharp/language-reference/keywords/default.md) (T)|T 형식의 기본값 가져오기|  
-|[delegate](../../../csharp/language-reference/keywords/delegate.md) {}|익명 함수(무명 메서드)|  
-  
- **단항 연산자**  
-  
-|식|설명|  
-|----------------|-----------------|  
-|[+](../../../csharp/language-reference/operators/addition-operator.md)x|클레임|  
-|[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|부정|  
-|[\!](../../../csharp/language-reference/operators/boolean-logical-operators.md#logical-negation-operator-)x|논리 부정|  
-|[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|비트 부정 연산|  
-|[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)x|전위 증가|  
-|[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)x|전위 감소|  
-|[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x|x를 T 형식으로 명시적 변환|  
-  
- **곱하기 연산자**  
-  
-|식|설명|  
-|----------------|-----------------|  
-|[*](../../../csharp/language-reference/operators/arithmetic-operators.md#multiplication-operator-)|곱하기|  
-|[/](../../../csharp/language-reference/operators/arithmetic-operators.md#division-operator-)|나눗셈 기호|  
-|[%](../../../csharp/language-reference/operators/arithmetic-operators.md#remainder-operator-)|나머지|  
-  
- **더하기 연산자**  
-  
-|식|설명|  
-|----------------|-----------------|  
-|x [+](../../../csharp/language-reference/operators/addition-operator.md) y|더하기, 문자열 연결, 대리자 결합|  
-|x [-](../../../csharp/language-reference/operators/subtraction-operator.md) y|빼기, 대리자 제거|  
-  
- **시프트 연산자**  
-  
-|식|설명|  
-|----------------|-----------------|  
-|x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y|왼쪽 시프트|  
-|x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y|오른쪽 시프트|  
-  
- **관계 및 형식 연산자**  
-  
-|식|설명|  
-|----------------|-----------------|  
-|x [\<](../../../csharp/language-reference/operators/less-than-operator.md) y|다음보다 적음|  
-|x [>](../../../csharp/language-reference/operators/greater-than-operator.md) y|보다 큼|  
-|x [\<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) y|작거나 같음|  
-|x [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) y|크거나 같음|  
-|x [is](../../../csharp/language-reference/keywords/is.md) T|x가 T이면 true를 반환하고, 그렇지 않으면 false를 반환합니다.|  
-|x [as](../../../csharp/language-reference/keywords/as.md) T|T로 형식화된 x 또는 null(x를 T로 형식화할 수 없는 경우)을 반환합니다.|  
-  
- **같음 연산자**  
-  
-|식|설명|  
-|----------------|-----------------|  
-|x [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) y|Equal|  
-|x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|같지 않음|  
-  
- **논리, 조건 및 null 연산자**  
-  
-|범주|식|설명|  
-|--------------|----------------|-----------------|  
-|논리적 AND|x [&](../../../csharp/language-reference/operators/and-operator.md) y|정수 비트 AND, 부울 논리곱 AND|  
-|논리 XOR|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|정수 비트 XOR, 부울 논리곱 XOR|  
-|논리적 OR|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|정수 비트 OR, 부울 논리곱 OR|  
-|조건부 AND|x [&&](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) y|x가 true인 경우에만 y를 계산합니다.|  
-|조건부 OR|x [&#124;&#124;](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) y|x가 false인 경우에만 y를 계산합니다.|  
-|Null 결합|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) y|x가 null인 경우 y로 계산하고, 그렇지 않으면 x로 계산합니다.|  
-|조건|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y : z|x가 true이면 y로 계산되고 false이면 z로 계산됩니다.|  
-  
- **할당 및 익명 연산자**  
-  
-|식|설명|  
-|----------------|-----------------|  
-|[=](../../../csharp/language-reference/operators/assignment-operator.md)|할당|  
-|x op= y|복합 할당. [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [/=](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [%=](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [^=](../../../csharp/language-reference/operators/xor-assignment-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md) 연산자를 지원합니다.|  
-|(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y|익명 함수(람다 식)|  
+각 연산자에는 정의된 우선 순위가 있습니다. 다른 우선 순위 수준을 가진 여러 연산자가 포함된 식에서 연산자의 우선 순위는 연산자가 평가되는 순서를 결정합니다. 예를 들어 다음 명령문은 `n1`에 3을 할당합니다.
+
+```csharp
+n1 = 11 - 2 * 4;
+```
+
+곱셈은 뺄셈보다 우선하기 때문에 곱하기가 가장 먼저 실행됩니다.
+
+우선 순위 수준에 따라 정렬된 전체 연산자 목록은 [C# 연산자](../../language-reference/operators/index.md)를 참조하세요.
   
 ## <a name="associativity"></a>associativity
 
@@ -169,13 +80,11 @@ a = (b = c);
   
 ## <a name="operator-overloading"></a>연산자 오버로드
 
- 사용자 지정 클래스 및 구조체에서 연산자의 동작을 변경할 수 있습니다. 이러한 과정을 *연산자 오버로드*라고 합니다. 자세한 내용은 [오버로드할 수 있는 연산자](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) 및 [연산자](../../../csharp/language-reference/keywords/operator.md) 키워드 문서를 참조하세요.  
-  
-## <a name="related-sections"></a>관련 단원
-
- 자세한 내용은 [연산자 키워드](../../../csharp/language-reference/keywords/operator-keywords.md) 및 [C# 연산자](../../../csharp/language-reference/operators/index.md)를 참조하세요.  
+사용자 지정 클래스 및 구조체에 대한 특정 연산자의 동작을 정의할 수 있습니다. 이러한 과정을 *연산자 오버로드*라고 합니다. 자세한 내용은 [오버로드할 수 있는 연산자](overloadable-operators.md) 및 [연산자](../../language-reference/keywords/operator.md) 키워드 문서를 참조하세요.
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [문, 식, 연산자](../../../csharp/programming-guide/statements-expressions-operators/index.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [문, 식, 연산자](index.md)
+- [C# 연산자](../../language-reference/operators/index.md)
+- [연산자 키워드](../../language-reference/keywords/operator-keywords.md)

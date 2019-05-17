@@ -1,18 +1,18 @@
 ---
-title: XslTransform 출력
+title: XslTransform의 출력
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 8e149d32-4b2f-493f-9e4b-d0d93475acde
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b299f09f3dc47b5d136284d4d1d285f2e5aad5f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f51a657135d9e22d960743b428057e13c1b23804
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45970749"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590358"
 ---
-# <a name="outputs-from-an-xsltransform"></a>XslTransform 출력
+# <a name="outputs-from-an-xsltransform"></a>XslTransform의 출력
 스타일시트는 `<xsl:output>` 특성과 `method` 문을 함께 사용하여 출력 형식을 결정할 수 있기 때문에 다음 표에서는 출력을 쓸 때 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드를 사용하고 출력 형식이 <xref:System.IO.Stream>이나 <xref:System.IO.TextWriter>로 선언된 경우의 출력 형식을 보여 줍니다.  
   
 > [!NOTE]
@@ -27,35 +27,35 @@ ms.locfileid: "45970749"
 |method="text"|텍스트|  
   
 > [!NOTE]
->  참고: `<xsl:output>` 메서드의 출력이 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 또는 <xref:System.Xml.XmlReader>이면 <xref:System.Xml.XmlWriter> 문은 무시됩니다.  
+>  참고: <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드의 출력이 <xref:System.Xml.XmlReader> 또는 <xref:System.Xml.XmlWriter>이면 `<xsl:output>` 문은 무시됩니다.  
   
  다음 특성은 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드 출력이 <xref:System.IO.Stream> 또는 <xref:System.IO.TextWriter>인 경우에 지원됩니다.  
   
--   encoding*  
+- encoding*  
   
--   omit-xml-declaration  
+- omit-xml-declaration  
   
--   독립 실행형  
+- 독립 실행형  
   
--   doctype-public  
+- doctype-public  
   
--   doctype-system  
+- doctype-system  
   
--   cdata-section-elements  
+- cdata-section-elements  
   
--   indent  
+- indent  
   
     > [!NOTE]
     >  *<xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드에서 <xref:System.IO.TextWriter>에 해당 출력을 보내는 동안에는 인코딩 특성이 무시됩니다. 대신 <xref:System.IO.TextWriter>의 인코딩 속성이 사용됩니다.  
   
  다음 특성은 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드 출력이 <xref:System.IO.Stream>인 경우에 무시됩니다.  
   
--   version: 항상 1.0  
+- version: 항상 1.0  
   
--   media-type: 미디어 형식  
+- media-type: 미디어 형식  
   
 ## <a name="escaping-special-characters"></a>특수 문자 이스케이프  
- `<xsl:text disable-output-escaping>` 태그는 특수 문자를 XML 형식으로 이스케이프해야 하는지(예: `<&lt>` 기호 대신 `"<"` 사용), 현재 상태로 유지해야 하는지 여부를 나타내는 데 사용됩니다. `disable-output-escaping` 특성은 <xref:System.Xml.XmlReader> 또는 <xref:System.Xml.XmlWriter> 개체로 변환될 때 무시되며 특수 문자에는 영향을 주지 않습니다.  
+ `<xsl:text disable-output-escaping>` 태그는 특수 문자를 XML 형식으로 이스케이프해야 하는지(예: `<&lt>` 기호 대신 `"<"` 사용), 현재 상태로 유지해야 하는지 여부를 나타내는 데 사용됩니다. `disable-output-escaping` 특성은 <xref:System.Xml.XmlReader> 또는 <xref:System.Xml.XmlWriter> 개체로 변형될 때 무시되며 특수 문자에는 영향을 주지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목
 

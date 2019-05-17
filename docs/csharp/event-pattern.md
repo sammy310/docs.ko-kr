@@ -3,12 +3,12 @@ title: 표준 .NET 이벤트 패턴
 description: 표준 이벤트 소스를 만들고 코드에서 표준 이벤트를 구독 및 처리하는 방법과 .NET 이벤트 패턴에 대해 알아봅니다.
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 11755b4754b15070869adf12d5be409af99035d4
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: cd1ead318529d1afc5b27ff8710cebcaae9b7bc3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201250"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062962"
 ---
 # <a name="standard-net-event-patterns"></a>표준 .NET 이벤트 패턴
 
@@ -55,7 +55,7 @@ FileSearcher 클래스를 입력하여 패턴과 일치하는 파일을 검색�
 
 [!code-csharp[DeclareEvent](../../samples/csharp/events/Program.cs#DeclareEvent "Declare the file found event")]
 
-이 예제는 public 필드를 선언하는 것처럼 보이며, 잘못된 개체 지향 사례인 것 같습니다. 속성 또는 메서드를 통해 데이터 액세스를 보호하려고 합니다. 이렇게 하면 잘못된 사례처럼 보이지만 안전한 방식으로 이벤트 개체에만 액세스할 수 있도록 컴파일러에 의해 생성된 코드에서 래퍼를 만듭니다. 필드와 유사한 이벤트에서 사용 가능한 유일한 작업은 처리기 추가입니다.
+이 예제는 public 필드를 선언하는 것처럼 보이며, 잘못된 개체 지향 사례인 것 같습니다. 속성 또는 메서드를 통해 데이터 액세스를 보호하려고 합니다. 이렇게 하면 잘못된 사례처럼 보일 수 있지만 안전한 방식으로 이벤트 개체에만 액세스할 수 있도록 컴파일러에 의해 생성된 코드에서 래퍼를 만듭니다. 필드와 유사한 이벤트에서 사용 가능한 유일한 작업은 처리기 추가입니다.
 
 [!code-csharp[DeclareEventHandler](../../samples/csharp/events/Program.cs#DeclareEventHandler "Declare the file found event handler")]
 

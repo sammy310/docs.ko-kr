@@ -3,12 +3,12 @@ title: LINQ 작업
 description: 이 자습서에서는 LINQ를 사용하여 시퀀스를 생성하고, LINQ 쿼리에서 사용할 메서드를 작성하고, 즉시 계산 및 지연 계산 간을 구분하는 방법을 알아봅니다.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: cfb4f53f47cc316ad6f1ee2772af27af5aee4d00
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 702770650533b0549e414a1de87acf17d77af4e3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58815589"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063223"
 ---
 # <a name="working-with-linq"></a>LINQ 작업
 
@@ -340,9 +340,9 @@ LINQ 외에도 마법사가 카드 속임수에 사용하는 기술에 대해 �
 
 LINQ에 대한 자세한 내용은 다음을 참조하세요.
 - [LINQ(Language-Integrated Query)](../programming-guide/concepts/linq/index.md)
-    - [LINQ 소개](../programming-guide/concepts/linq/introduction-to-linq.md)
-    - [C#에서 LINQ 시작](../programming-guide/concepts/linq/getting-started-with-linq.md)
-        - [기본 LINQ 쿼리 작업(C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
-        - [LINQ를 통한 데이터 변환(C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
-        - [LINQ의 쿼리 구문 및 메서드 구문(C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
-        - [LINQ를 지원하는 C# 기능](../programming-guide/concepts/linq/features-that-support-linq.md)
+  - [LINQ 소개](../programming-guide/concepts/linq/introduction-to-linq.md)
+  - [C#에서 LINQ 시작](../programming-guide/concepts/linq/getting-started-with-linq.md)
+    - [기본 LINQ 쿼리 작업(C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
+    - [LINQ를 통한 데이터 변환(C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
+    - [LINQ의 쿼리 구문 및 메서드 구문(C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
+    - [LINQ를 지원하는 C# 기능](../programming-guide/concepts/linq/features-that-support-linq.md)

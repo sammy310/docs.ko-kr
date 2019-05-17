@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 82ada5e4d1f56ea93bbd7f41b04cda9f98d678c9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a40dd4addfaf8a505cf334876192f0b2ccf66a09
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672396"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452400"
 ---
 # <a name="-operator-c-reference"></a>?: 연산자(C# 참조)
 
@@ -43,10 +43,12 @@ a ? b : c ? d : e
 a ? b : (c ? d : e)
 ```
 
-이 연산자가 다음과 같이 질문하여 평가하는 방법을 기억하는 데 사용할 수 있는 편리한 니모닉 디바이스입니다. 
-```
+이 연산자가 평가하는 방법을 기억하는 데 사용할 수 있는 니모닉 디바이스는 다음과 같은 질문을 하는 것입니다.
+
+```text
 is this condition true ? yes : no
 ```
+
 이 질문에는 이전 문의 물음표로 사용되는 연산자의 ? 부분 및 이 질문에 대한 논리적 응답으로 사용되는 결과가 사용됩니다.
 
 다음 예제에서는 조건부 연산자의 사용법을 보여 줍니다.
@@ -93,6 +95,6 @@ condition ? ref consequent : ref alternative
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 연산자](index.md)
 - [if-else 문](../keywords/if-else.md)
-- [?. 및 ?[] 연산자](null-conditional-operators.md)
+- [?. 및 ?[] 연산자](member-access-operators.md#null-conditional-operators--and-)
 - [?? 연산자](null-coalescing-operator.md)
 - [ref 키워드](../keywords/ref.md)

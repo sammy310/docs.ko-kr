@@ -3,14 +3,14 @@ title: .NET API 분석기
 description: .NET API 분석기가 사용되지 않는 API 및 플랫폼 호환성 문제를 발견하는 데 어떻게 도움이 되는지 알아봅니다.
 author: oliag
 ms.author: mairaw
-ms.date: 05/31/2018
+ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 84dd0717725f3538f9c9b2e3b5573f1385e549ac
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 892fb5cc9fba3434b0884c88b97f784d58093303
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680271"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063352"
 ---
 # <a name="net-api-analyzer"></a>.NET API 분석기
 
@@ -23,7 +23,7 @@ API 분석기는 NuGet 패키지 [Microsoft.DotNet.Analyzers.Compatibility](http
 
 ## <a name="prerequisites"></a>전제 조건
 
-* Visual Studio 2017 또는 Mac용 Visual Studio(모든 버전).
+* Visual Studio 2017 이상 버전 또는 Mac용 Visual Studio(모든 버전).
 
 ## <a name="discovering-deprecated-apis"></a>사용되지 않는 API 검색
 
@@ -98,6 +98,7 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 * <xref:System.PlatformNotSupportedException>(PC001)을 throw하는 .NET Standard API 사용.
 * .NET Framework 4.6.1(PC002)에서 사용할 수 없는 .NET Standard API 사용.
 * UWP(PC003)에 존재하지 않는 네이티브 API 사용.
+* Delegate.BeginInvoke 및 EndInvoke API(PC004) 사용.
 * 사용되지 않음(DEXXXX)으로 표시된 API 사용.
 
 ## <a name="ci-machine"></a>CI 컴퓨터

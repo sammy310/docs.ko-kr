@@ -1,15 +1,13 @@
 ---
 title: IHostedService 및 BackgroundService 클래스를 사용하여 마이크로 서비스에서 백그라운드 작업 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | IHostedService 및 BackgroundService를 사용하여 마이크로 서비스 .NET Core에서 백그라운드 작업을 구현하는 새 옵션을 이해합니다.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: b262f5352f62e74ec184e2e00e8cff3aeecc2f64
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 9203404c0b623570c2b089087b7ce5d676bba376
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613800"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062986"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>IHostedService 및 BackgroundService 클래스를 사용하여 마이크로 서비스에서 백그라운드 작업 구현
 
@@ -96,7 +94,7 @@ namespace Microsoft.Extensions.Hosting
 
 상상할 수 있듯이 IHostedService의 여러 구현을 만들고 이전에 표시된 것처럼 `ConfigureService()` 메서드에서 DI 컨테이너로 등록할 수 있습니다. 이러한 모든 호스팅 서비스는 애플리케이션/마이크로 서비스와 함께 시작되고 중지됩니다.
 
-개발자로서 `StopAsync()` 메서드가 호스트에 의해 트리거될 때 중지 작업 또는 서비스 처리를 담당합니다.
+개발자는 `StopAsync()` 메서드가 호스트에 의해 트리거될 때 서비스의 중지 작업을 처리할 책임이 있습니다.
 
 ## <a name="implementing-ihostedservice-with-a-custom-hosted-service-class-deriving-from-the-backgroundservice-base-class"></a>BackgroundService 기본 클래스에서 파생되는 사용자 지정 호스팅 서비스 클래스로 IHostedService 구현
 

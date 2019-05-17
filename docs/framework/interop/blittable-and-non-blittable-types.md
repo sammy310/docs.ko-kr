@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37b226cad9a34f1629d2972dacf8019adad54d7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 519ce34fc1f86220dfd0f3f7e19e3a50fba06087
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115377"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469453"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Blittable 형식 및 비 Blittable 형식
 대부분의 데이터 형식은 관리되는 메모리와 관리되지 않는 메모리 둘 다에서 공통된 표현을 사용하며 interop 마샬러의 특별한 처리가 필요하지 않습니다. 이러한 형식은 관리 코드와 비관리 코드 간에 전달될 때 변환이 필요하지 않기 때문에 *blittable 형식*이라고 합니다.  
@@ -21,35 +21,35 @@ ms.locfileid: "59115377"
   
  <xref:System> 네임스페이스의 다음 형식은 blittable 형식입니다.  
   
--   <xref:System.Byte?displayProperty=nameWithType>  
+- <xref:System.Byte?displayProperty=nameWithType>  
   
--   <xref:System.SByte?displayProperty=nameWithType>  
+- <xref:System.SByte?displayProperty=nameWithType>  
   
--   <xref:System.Int16?displayProperty=nameWithType>  
+- <xref:System.Int16?displayProperty=nameWithType>  
   
--   <xref:System.UInt16?displayProperty=nameWithType>  
+- <xref:System.UInt16?displayProperty=nameWithType>  
   
--   <xref:System.Int32?displayProperty=nameWithType>  
+- <xref:System.Int32?displayProperty=nameWithType>  
   
--   <xref:System.UInt32?displayProperty=nameWithType>  
+- <xref:System.UInt32?displayProperty=nameWithType>  
   
--   <xref:System.Int64?displayProperty=nameWithType>  
+- <xref:System.Int64?displayProperty=nameWithType>  
   
--   <xref:System.UInt64?displayProperty=nameWithType>  
+- <xref:System.UInt64?displayProperty=nameWithType>  
   
--   <xref:System.IntPtr?displayProperty=nameWithType>  
+- <xref:System.IntPtr?displayProperty=nameWithType>  
   
--   <xref:System.UIntPtr?displayProperty=nameWithType>  
+- <xref:System.UIntPtr?displayProperty=nameWithType>  
   
--   <xref:System.Single?displayProperty=nameWithType>  
+- <xref:System.Single?displayProperty=nameWithType>  
   
--   <xref:System.Double?displayProperty=nameWithType>  
+- <xref:System.Double?displayProperty=nameWithType>  
   
  다음 복합 형식도 blittable 형식입니다.  
   
--   정수 배열 등 blittable 형식의 1차원 배열. 그러나 blittable 형식의 변수 배열을 포함하는 형식 자체는 blittable이 아닙니다.  
+- 정수 배열 등 blittable 형식의 1차원 배열. 그러나 blittable 형식의 변수 배열을 포함하는 형식 자체는 blittable이 아닙니다.  
   
--   blittable 형식(및 서식이 지정된 형식으로 마샬링된 경우 클래스)만 포함하는 서식이 지정된 값 형식. 서식이 지정된 값 형식에 대한 자세한 내용은 [값 형식에 대한 기본 마샬링](default-marshaling-behavior.md#default-marshaling-for-value-types)을 참조하세요.  
+- blittable 형식(및 서식이 지정된 형식으로 마샬링된 경우 클래스)만 포함하는 서식이 지정된 값 형식. 서식이 지정된 값 형식에 대한 자세한 내용은 [값 형식에 대한 기본 마샬링](default-marshaling-behavior.md#default-marshaling-for-value-types)을 참조하세요.  
   
  개체 참조는 blittable이 아닙니다. 여기에는 그 자체가 blittable인 개체에 대한 참조 배열이 포함됩니다. 예를 들어 blittable인 구조를 정의할 수 있지만 이러한 구조에 대한 참조 배열을 포함하는 blittable 형식을 정의할 수 없습니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "59115377"
 |[System.Valuetype](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|고정된 메모리 레이아웃을 사용하는 구조로 변환합니다.|  
 |[System.Szarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|C 스타일 배열 또는 `SAFEARRAY`로 변환합니다.|  
   
- 클래스 및 개체 형식은 COM interop에서만 지원됩니다. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# 및 C++의 해당 형식은 [클래스 라이브러리 개요](../../../docs/standard/class-library-overview.md)를 참조하세요.  
+ 클래스 및 개체 형식은 COM interop에서만 지원됩니다. Visual Basic, C# 및 C++의 해당 형식은 [클래스 라이브러리 개요](../../../docs/standard/class-library-overview.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 

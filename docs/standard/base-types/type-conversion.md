@@ -26,37 +26,37 @@ helpviewer_keywords:
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04ed4dcaab8d39d8a34cadef8285ea8307f198c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea32efaad24f171b7d5ebfa457834b35edbddf4c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659763"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664608"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>.NET Framework의 형식 변환
 <a name="top"></a> 모든 값에는 연결된 형식이 있으며, 이러한 형식은 값에 할당되는 공간, 포함할 수 있는 값의 범위, 값을 통해 사용할 수 있는 멤버 등의 특성을 정의합니다. 대부분의 값들은 하나 이상의 형식으로 표현될 수 있습니다. 예를 들어, 4라는 값은 정수 값 또는 부동 소수점 값으로 표현될 수 있습니다. 형식 변환을 수행하면 이전 형식과 동일한 값을 가지는 새 형식이 만들어지지만, 원래 개체의 ID(또는 실제 값)가 항상 동일하게 유지되지는 않습니다.  
   
  .NET Framework는 다음과 같은 변환을 자동으로 지원합니다.  
   
--   파생 클래스에서 기본 클래스로 변환. 예를 들어, 클래스 또는 구조체 인스턴스가 <xref:System.Object> 인스턴스로 변환될 수 있다는 의미입니다.  이러한 변환에는 캐스팅 또는 변환 연산자가 필요하지 않습니다.  
+- 파생 클래스에서 기본 클래스로 변환. 예를 들어, 클래스 또는 구조체 인스턴스가 <xref:System.Object> 인스턴스로 변환될 수 있다는 의미입니다.  이러한 변환에는 캐스팅 또는 변환 연산자가 필요하지 않습니다.  
   
--   기본 클래스에서 원본 파생 클래스로 다시 변환. C#에서는 이러한 변환에 캐스팅 연산자가 필요합니다. Visual Basic에서는 `Option Strict`가 on이면 `CType` 연산자가 필요합니다.  
+- 기본 클래스에서 원본 파생 클래스로 다시 변환. C#에서는 이러한 변환에 캐스팅 연산자가 필요합니다. Visual Basic에서는 `Option Strict`가 on이면 `CType` 연산자가 필요합니다.  
   
--   인터페이스를 구현하는 형식에서 그 인터페이스를 나타내는 인터페이스 개체로 변환. 이러한 변환에는 캐스팅 또는 변환 연산자가 필요하지 않습니다.  
+- 인터페이스를 구현하는 형식에서 그 인터페이스를 나타내는 인터페이스 개체로 변환. 이러한 변환에는 캐스팅 또는 변환 연산자가 필요하지 않습니다.  
   
--   인터페이스 개체에서 그 인터페이스를 구현하는 원래 형식으로 다시 변환.  C#에서는 이러한 변환에 캐스팅 연산자가 필요합니다. Visual Basic에서는 `Option Strict`가 on이면 `CType` 연산자가 필요합니다.  
+- 인터페이스 개체에서 그 인터페이스를 구현하는 원래 형식으로 다시 변환.  C#에서는 이러한 변환에 캐스팅 연산자가 필요합니다. Visual Basic에서는 `Option Strict`가 on이면 `CType` 연산자가 필요합니다.  
   
  이러한 자동 변환 외에 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]는 사용자 지정 형식 변환을 지원하는 몇 가지 기능을 제공합니다. 이러한 요구 사항은 다음과 같습니다.  
   
--   사용 가능한 형식 간 확대 변환을 정의하는 `Implicit` 연산자. 자세한 내용은 [암시적 연산자를 사용한 암시적 변환](#implicit_conversion_with_the_implicit_operator) 섹션을 참조하세요.  
+- 사용 가능한 형식 간 확대 변환을 정의하는 `Implicit` 연산자. 자세한 내용은 [암시적 연산자를 사용한 암시적 변환](#implicit_conversion_with_the_implicit_operator) 섹션을 참조하세요.  
   
--   사용 가능한 형식 간 축소 변환을 정의하는 `Explicit` 연산자. 자세한 내용은 [명시적 연산자를 사용한 명시적 변환](#explicit_conversion_with_the_explicit_operator) 섹션을 참조하세요.  
+- 사용 가능한 형식 간 축소 변환을 정의하는 `Explicit` 연산자. 자세한 내용은 [명시적 연산자를 사용한 명시적 변환](#explicit_conversion_with_the_explicit_operator) 섹션을 참조하세요.  
   
--   기본 .NET Framework 데이터 형식 각각에 대한 변환을 정의하는 <xref:System.IConvertible> 인터페이스. 자세한 내용은 [IConvertible 인터페이스](#the_iconvertible_interface) 섹션을 참조하세요.  
+- 기본 .NET Framework 데이터 형식 각각에 대한 변환을 정의하는 <xref:System.IConvertible> 인터페이스. 자세한 내용은 [IConvertible 인터페이스](#the_iconvertible_interface) 섹션을 참조하세요.  
   
--   <xref:System.Convert> 인터페이스의 메서드를 구현하는 메서드 집합을 제공하는 <xref:System.IConvertible> 클래스. 자세한 내용은 [Convert 클래스](#Convert) 섹션을 참조하세요.  
+- <xref:System.Convert> 인터페이스의 메서드를 구현하는 메서드 집합을 제공하는 <xref:System.IConvertible> 클래스. 자세한 내용은 [Convert 클래스](#Convert) 섹션을 참조하세요.  
   
--   지정된 형식을 임의의 형식으로 변환하는 작업을 지원하도록 확장될 수 있는 기본 클래스인 <xref:System.ComponentModel.TypeConverter> 클래스. 자세한 내용은 [TypeConverter 클래스](#the_typeconverter_class) 섹션을 참조하세요.  
+- 지정된 형식을 임의의 형식으로 변환하는 작업을 지원하도록 확장될 수 있는 기본 클래스인 <xref:System.ComponentModel.TypeConverter> 클래스. 자세한 내용은 [TypeConverter 클래스](#the_typeconverter_class) 섹션을 참조하세요.  
   
 <a name="implicit_conversion_with_the_implicit_operator"></a>   
 ## <a name="implicit-conversion-with-the-implicit-operator"></a>암시적 연산자를 사용한 암시적 변환  
@@ -97,7 +97,7 @@ ms.locfileid: "54659763"
 |<xref:System.UInt32>|<xref:System.UInt32.MaxValue?displayProperty=nameWithType>가 <xref:System.Int32.MaxValue?displayProperty=nameWithType>보다 큰 경우|  
 |<xref:System.UInt64>|<xref:System.UInt64.MaxValue?displayProperty=nameWithType>가 <xref:System.Int32.MaxValue?displayProperty=nameWithType>보다 큰 경우|  
   
- 이러한 축소 변환을 처리하기 위해 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 형식에서 `Explicit` 연산자를 정의할 수 있게 합니다. 그러면 개별 언어 컴파일러에서 고유 구문을 사용하여 이 연산자를 구현할 수 있거나 변환을 수행하기 위해 <xref:System.Convert> 클래스의 멤버가 호출될 수 있습니다. <xref:System.Convert> 클래스에 대한 자세한 내용은 이 항목의 뒷부분에서 [Convert 클래스](#Convert)를 참조하세요. 다음 예제에서는 언어 기능을 사용하여 범위를 벗어날 수 있는 이러한 정수 값을 <xref:System.Int32> 값으로 명시적으로 변환하는 작업을 처리하는 방법을 보여 줍니다.  
+ 이러한 축소 변환을 처리하기 위해 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 형식에서 `Explicit` 연산자를 정의할 수 있게 합니다. 그러면 개별 언어 컴파일러에서 고유 구문을 사용하여 이 연산자를 구현할 수 있거나 변환을 수행하기 위해 <xref:System.Convert> 클래스의 멤버가 호출될 수 있습니다. (<xref:System.Convert> 클래스에 대한 자세한 내용은 이 항목의 뒷부분에서 [Convert 클래스](#Convert)를 참조하세요.) 다음 예제에서는 언어 기능을 사용하여 범위를 벗어날 수 있는 이러한 정수 값을 <xref:System.Int32> 값으로 명시적으로 변환하는 작업을 처리하는 방법을 보여줍니다.  
   
  [!code-csharp[Conceptual.Conversion#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#4)]
  [!code-vb[Conceptual.Conversion#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#4)]  
@@ -129,11 +129,11 @@ ms.locfileid: "54659763"
 ## <a name="the-iconvertible-interface"></a>IConvertible 인터페이스  
  형식을 공용 언어 런타임 기본 형식으로 변환하는 작업을 지원하기 위해 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 <xref:System.IConvertible> 인터페이스를 제공합니다. 구현하는 형식은 다음을 제공해야 합니다.  
   
--   구현하는 형식의 <xref:System.TypeCode>를 반환하는 메서드  
+- 구현하는 형식의 <xref:System.TypeCode>를 반환하는 메서드  
   
--   구현하는 형식을 각 공용 언어 런타임 기본 형식(<xref:System.Boolean>, <xref:System.Byte>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double> 등)으로 변환하는 메서드  
+- 구현하는 형식을 각 공용 언어 런타임 기본 형식(<xref:System.Boolean>, <xref:System.Byte>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double> 등)으로 변환하는 메서드  
   
--   구현하는 형식의 인스턴스를 다른 지정된 형식으로 변환하는 일반화된 변환 메서드. 지원되지 않는 변환은 <xref:System.InvalidCastException>을 throw해야 합니다.  
+- 구현하는 형식의 인스턴스를 다른 지정된 형식으로 변환하는 일반화된 변환 메서드. 지원되지 않는 변환은 <xref:System.InvalidCastException>을 throw해야 합니다.  
   
  각 공용 언어 런타임 기본 형식(즉, <xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.String>, <xref:System.UInt16>, <xref:System.UInt32> 및 <xref:System.UInt64>)과 <xref:System.DBNull> 및 <xref:System.Enum> 형식은 <xref:System.IConvertible> 인터페이스를 구현합니다. 그러나 이러한 구현은 명시적 인터페이스 구현입니다. 변환 메서드는 다음 예제와 같이 <xref:System.IConvertible> 인터페이스 변수를 통해서만 호출할 수 있습니다. 이 예제에서는 <xref:System.Int32> 값을 해당하는 <xref:System.Char> 값으로 변환합니다.  
   

@@ -3,12 +3,12 @@ title: C#의 문자열 보간
 description: 문자열 보간을 사용하여 C#으로 결과 문자열에 서식이 지정된 식 결과를 포함하는 방법을 알아봅니다.
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 5a66ba9215579a459b543a24ece338ffbbfd9aea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 068a30bdcb96140787a38e9ae52f9c62d8a57c96
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58920716"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063240"
 ---
 # <a name="string-interpolation-in-c"></a>C\#의 문자열 보간
 
@@ -30,9 +30,7 @@ ms.locfileid: "58920716"
 {<interpolatedExpression>}
 ```
 
-컴파일 시 보간된 문자열은 일반적으로 <xref:System.String.Format%2A?displayProperty=nameWithType> 메서드 호출로 변환됩니다. [문자열 복합 서식 지정](../../standard/base-types/composite-formatting.md) 기능의 모든 기능을 사용할 수 있도록 하여 보간된 문자열도 함께 사용합니다.
-
-컴파일러는 분석된 동작이 연결에 해당하는 경우 <xref:System.String.Format%2A?displayProperty=nameWithType>을 <xref:System.String.Concat%2A?displayProperty=nameWithType>으로 대체할 수 있습니다.
+보간된 문자열은 [문자열 복합 서식 지정](../../standard/base-types/composite-formatting.md) 기능의 모든 기능을 지원합니다. 따라서 <xref:System.String.Format%2A?displayProperty=nameWithType> 메서드를 사용할 때 보다 읽기 쉬운 대안이 됩니다.
 
 ## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>보간된 식의 서식 문자열을 지정하는 방법
 

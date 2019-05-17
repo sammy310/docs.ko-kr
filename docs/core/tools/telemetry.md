@@ -4,12 +4,12 @@ description: 어떤 데이터가 수집되고 수집 기능을 사용하지 않�
 author: richlander
 ms.date: 06/20/2018
 ms.custom: seodec18
-ms.openlocfilehash: 3a757daab372b8be8bfe2ee27d910e21fa4e3337
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 82410863c81faa95edfb120c95ec6bc186ed1328
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718040"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751683"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 원격 분석
 
@@ -89,12 +89,12 @@ ms.locfileid: "57718040"
 
 ### <a name="datasets"></a>데이터 세트
 
-[2016 - Q3](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q3.tsv)  
-[2016 - Q4](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q4.tsv)  
-[2017 - Q1](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q1.tsv)  
-[2017 - Q2](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q2.tsv)  
-[2017 - Q3](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q3.tsv)  
-[2017 - Q4](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q4.tsv)  
+- [2016 - Q3](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q3.tsv)
+- [2016 - Q4](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q4.tsv)
+- [2017 - Q1](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q1.tsv)
+- [2017 - Q2](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q2.tsv)
+- [2017 - Q3](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q3.tsv)
+- [2017 - Q4](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q4.tsv)
 
 표준 URL 형식을 사용하여 추가 데이터 세트가 게시됩니다. `<YEAR>`를 연도로 바꾸고 `<QUARTER>`를 해당 연도의 분기로 바꿉니다(`1`, `2`, `3` 또는 `4` 사용). 파일은 *TSV*(탭으로 구분된 값) 형식입니다.
 
@@ -102,11 +102,9 @@ ms.locfileid: "57718040"
 
 ## <a name="license"></a>라이선스
 
-.NET Core의 Microsoft 배포는 [MICROSOFT.NET 라이브러리 EULA](https://aka.ms/dotnet-core-eula)로 허가됩니다. 이 라이선스에는 원격 분석을 구현하기 위한 “DATA” 섹션이 포함됩니다(아래 참조).
+.NET Core의 Microsoft 배포는 [Microsoft 소프트웨어 사용 조건: Mirosoft.NET 라이브러리](https://aka.ms/dotnet-core-eula)로 라이선스가 부여됩니다. 데이터 수집 및 처리에 대한 자세한 내용은 "Data"라는 섹션을 참조하세요.
 
 [.NET NuGet 패키지](https://www.nuget.org/profiles/dotnetframework)에는 동일한 라이선스가 사용되지만 원격 분석을 구현하지 않습니다([범위](#scope) 참조).
-
-> 2. 데이터. 소프트웨어에서 사용자 및 사용자의 소프트웨어 사용에 대한 정보를 수집하고 이 정보를 Microsoft에 보낼 수 있습니다. Microsoft에서는 제품 및 서비스 향상을 위해 이 정보를 사용할 수 있습니다. 데이터 수집 및 사용에 대한 자세한 내용은 도움말 문서 및 개인정보처리방침(<http://go.microsoft.com/fwlink/?LinkId=528096>)을 참조하세요. 소프트웨어를 사용하려면 이러한 사례에 동의해야 합니다.
 
 ## <a name="disclosure"></a>공개
 

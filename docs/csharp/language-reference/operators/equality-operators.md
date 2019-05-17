@@ -1,23 +1,26 @@
 ---
 title: 같음 연산자 - C# 참조
+description: C# 같음 비교 연산자에 대해 알아봅니다.
 ms.date: 03/28/2019
 author: pkulikov
 f1_keywords:
 - ==_CSharpKeyword
 - '!=_CSharpKeyword'
 helpviewer_keywords:
+- comparison operators [C#]
+- relational operators [C#]
 - equality operator [C#]
 - equals operator [C#]
 - == operator [C#]
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 297285ccb9aba7eae1d70a7d28a62241646a023c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b4d3f3c0c6195fef22a33c47ad0b8c498f512f6a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334161"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753494"
 ---
 # <a name="equality-operators-c-reference"></a>같음 연산자(C# 참조)
 
@@ -34,7 +37,7 @@ ms.locfileid: "59334161"
 [!code-csharp-interactive[value types equality](~/samples/snippets/csharp/language-reference/operators/EqualityAndNonEqualityExamples.cs#ValueTypesEquality)]
 
 > [!NOTE]
-> 같음 및 관계형 연산자 `==`, `>`, `<`, `>=` 및 `<=`의 경우 피연산자 중 하나가 숫자(<xref:System.Double.NaN?displayProperty=nameWithType> 또는 <xref:System.Single.NaN?displayProperty=nameWithType>)가 아니며 연산의 결과는 `false`입니다. 즉, `NaN` 값이 `NaN`를 포함한 다른 `double`(또는 `float`) 값보다 크거나, 작거나, 같지 않습니다. 자세한 내용과 예제는 <xref:System.Double.NaN?displayProperty=nameWithType> 또는 <xref:System.Single.NaN?displayProperty=nameWithType> 참조 문서를 참조하세요.
+> `==`, [, `<`, `>`, `<=` 및 `>=`](comparison-operators.md) 연산자의 경우 피연산자 중 하나가 숫자(<xref:System.Double.NaN?displayProperty=nameWithType> 또는 <xref:System.Single.NaN?displayProperty=nameWithType>)가 아니면 연산의 결과는 `false`입니다. 즉, `NaN` 값이 `NaN`를 포함한 다른 `double`(또는 `float`) 값보다 크거나, 작거나, 같지 않습니다. 자세한 내용과 예제는 <xref:System.Double.NaN?displayProperty=nameWithType> 또는 <xref:System.Single.NaN?displayProperty=nameWithType> 참조 문서를 참조하세요.
 
 기본 정수 형식의 해당 값이 같은 경우 동일한 [열거형](../keywords/enum.md) 형식의 피연산자가 동일합니다.
 
@@ -83,3 +86,4 @@ C# 7.3부터는 `==` 및 `!=` 연산자가 C# [튜플](../../tuples.md)에서 �
 - <xref:System.Object.Equals%2A?displayProperty=nameWithType>
 - <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType>
 - [같음 비교](../../programming-guide/statements-expressions-operators/equality-comparisons.md)
+- [비교 연산자](comparison-operators.md)

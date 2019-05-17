@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8d68770fe60f4d9fb3d9982cf426376d54b229e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d9f911f3a2783ec538ef628e10d5c1a4f9b06d0f
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330118"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469474"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>방법: 이벤트 속성을 사용하여 여러 이벤트 처리
 이벤트 속성을 사용하려면 이벤트를 발생시키는 클래스에서 이벤트 속성을 정의한 다음 이벤트를 처리하는 클래스에서 이벤트 속성의 대리자를 설정합니다. 클래스에서 여러 이벤트 속성을 구현하려면 클래스가 각 이벤트에 대해 정의된 대리자를 내부적으로 저장 및 유지 관리해야 합니다. 일반적인 방법은 이벤트 키로 인덱싱된 대리자 컬렉션을 구현하는 것입니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "59330118"
  다음 C# 예제에서는 <xref:System.ComponentModel.EventHandlerList>를 사용하여 각 이벤트의 대리자를 저장하는 이벤트 속성 `MouseDown` 및 `MouseUp`을 구현합니다. 이벤트 속성 구문의 키워드는 굵은 글꼴로 표시됩니다.  
   
 > [!NOTE]
->  [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]에서는 이벤트 속성이 지원되지 않습니다.  
+>  Visual Basic에서는 이벤트 속성이 지원되지 않습니다.  
   
  [!code-cpp[Conceptual.Events.Other#31](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.events.other/cpp/example3.cpp#31)]
  [!code-csharp[Conceptual.Events.Other#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.events.other/cs/example3.cs#31)]

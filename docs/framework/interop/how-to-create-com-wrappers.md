@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c26c84ece1231a4e118144c163fa3e9c7619301
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b0e34785fce3cd88bfe4fe4b075ba34b8d22bff4
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324133"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469646"
 ---
 # <a name="how-to-create-com-wrappers"></a>방법: COM 래퍼 만들기
 
 Visual Studio 2005 기능이나 .NET Framework 도구인 Tlbimp.exe 및 Regasm.exe를 사용하여 COM(구성 요소 개체 모델) 래퍼를 만들 수 있습니다. 두 메서드는 모두 COM 래퍼의 두 가지 형식을 생성합니다.
 
--   관리 코드에서 COM 개체를 실행하기 위한 형식 라이브러리의 [런타임 호출 가능 래퍼](../../../docs/framework/interop/runtime-callable-wrapper.md).
+- 관리 코드에서 COM 개체를 실행하기 위한 형식 라이브러리의 [런타임 호출 가능 래퍼](../../../docs/framework/interop/runtime-callable-wrapper.md).
 
--   네이티브 애플리케이션에서 관리 개체를 실행하기 위한 필수 레지스트리 설정이 포함된 [COM 호출 가능 래퍼](../../../docs/framework/interop/com-callable-wrapper.md).
+- 네이티브 애플리케이션에서 관리 개체를 실행하기 위한 필수 레지스트리 설정이 포함된 [COM 호출 가능 래퍼](../../../docs/framework/interop/com-callable-wrapper.md).
 
 Visual Studio 2005에서 프로젝트에 COM 래퍼를 참조로 추가할 수 있습니다.
 
@@ -38,14 +38,14 @@ Visual Studio 2005에서 프로젝트에 COM 래퍼를 참조로 추가할 수 �
 
      **솔루션 탐색기**에서 COM 구성 요소는 프로젝트의 참조 폴더에 추가됩니다.
 
-이제 COM 개체에 액세스하기 위한 코드를 작성할 수 있습니다. 먼저 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]의 경우 `Imports` 문을 사용하고 [!INCLUDE[csprcslong](../../../includes/csprcslong-md.md)]의 경우 `Using` 문을 사용하여 개체를 선언할 수 있습니다.
+이제 COM 개체에 액세스하기 위한 코드를 작성할 수 있습니다. Visual Basic의 경우 `Imports` 문 또는 C#의 경우 `Using` 문과 같이 개체를 선언하는 것으로 시작할 수 있습니다.
 
 > [!NOTE]
 > Microsoft Office 구성 요소를 프로그래밍하려면 먼저 Microsoft 다운로드 센터에서 [Microsoft Office PIA](https://go.microsoft.com/fwlink/?LinkId=50479)(주 Interop 어셈블리)를 설치합니다. 4단계에서는 **Microsoft Word 11.0 개체 라이브러리**와 같이 원하는 Office 제품에 사용 가능한 최신 버전의 개체 라이브러리를 선택합니다.  
   
 ### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>.NET Framework 도구를 사용하여 런타임 호출 가능 래퍼를 만들려면  
   
--   [Tlbimp.exe(형식 라이브러리 가져오기)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 도구를 실행합니다.  
+- [Tlbimp.exe(형식 라이브러리 가져오기)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 도구를 실행합니다.  
   
  이 도구는 원본 형식 라이브러리에 정의된 형식의 런타임 메타데이터를 포함하는 어셈블리를 만듭니다.  
   

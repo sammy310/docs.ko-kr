@@ -4,12 +4,12 @@ description: .NET Framework 프로젝트용 WCF svcutil 도구와 유사하게, 
 author: mlacouture
 ms.date: 02/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: b5dfb84f19c3748daa303c828cbe881f1582eb76
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 5e361ce85bec696fe5d76c4f43a444c543a9012d
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612821"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063301"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>.NET Core용 WCF dotnet-svcutil 도구
 
@@ -53,55 +53,56 @@ Windows, macOS 또는 Linux 명령 창에서 다음 단계를 수행합니다.
 
 1. 프로젝트에 대해 _HelloSvcutil_ 디렉터리를 만들고 다음 예제와 같이 현재 디렉터리로 설정합니다.
 
-```console
-mkdir HelloSvcutil
-cd HelloSvcutil
-```
+    ```console
+    mkdir HelloSvcutil
+    cd HelloSvcutil
+    ```
 
 2. 다음과 같이 [`dotnet new`](../tools/dotnet-new.md) 명령을 사용하여 이 디렉터리에서 새 C# 웹 프로젝트를 만듭니다.
 
-```console
-dotnet new web
-```
+    ```console
+    dotnet new web
+    ```
 
-3. [`dotnet-svcutil` NuGet 패키지](https://nuget.org/packages/dotnet-svcutil)를 CLI 도구로 설치합니다.
-# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+3. [`dotnet-svcutil` NuGet 패키지](https://nuget.org/packages/dotnet-svcutil)를 CLI 도구( )로 설치합니다.<!-- markdownlint-disable MD023 -->
+    # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
-```console
-dotnet tool install --global dotnet-svcutil
-```
+    ```console
+    dotnet tool install --global dotnet-svcutil
+    ```
 
-# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
-편집기에서 `HelloSvcutil.csproj` 프로젝트 파일을 열고, `Project` 요소를 편집하고, 다음 코드를 사용하여 [`dotnet-svcutil` NuGet 패키지](https://nuget.org/packages/dotnet-svcutil)를 CLI 도구 참조로 추가합니다.
+    # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+    편집기에서 `HelloSvcutil.csproj` 프로젝트 파일을 열고, `Project` 요소를 편집하고, 다음 코드를 사용하여 [`dotnet-svcutil` NuGet 패키지](https://nuget.org/packages/dotnet-svcutil)를 CLI 도구 참조로 추가합니다.
 
-```xml
-<ItemGroup>
-  <DotNetCliToolReference Include="dotnet-svcutil" Version="1.0.*" />
-</ItemGroup>
-```
+    ```xml
+    <ItemGroup>
+      <DotNetCliToolReference Include="dotnet-svcutil" Version="1.0.*" />
+    </ItemGroup>
+    ```
 
-그리고 다음과 같이 [`dotnet restore`](../tools/dotnet-restore.md) 명령을 사용하여 _dotnet-svcutil_ 패키지를 복원합니다.
+    그리고 다음과 같이 [`dotnet restore`](../tools/dotnet-restore.md) 명령을 사용하여 _dotnet-svcutil_ 패키지를 복원합니다.
 
-```console
-dotnet restore
-```
+    ```console
+    dotnet restore
+    ```
 
----
+    ---
 
 4. 다음과 같이 _dotnet-svcutil_ 명령을 실행하여 웹 서비스 참조 파일을 생성합니다.
-# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
-```console
-dotnet-svcutil http://contoso.com/SayHello.svc
-```
+    # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
-# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+    ```console
+    dotnet-svcutil http://contoso.com/SayHello.svc
+    ```
 
-```console
-dotnet svcutil http://contoso.com/SayHello.svc
-```
+    # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
----
+    ```console
+    dotnet svcutil http://contoso.com/SayHello.svc
+    ```
+
+    ---
 
 생성된 파일은 _HelloSvcutil/ServiceReference/Reference.cs_로 저장됩니다. 또한 _dotnet-svcutil_ 도구는 프록시 코드에 필요한 적절한 WCF 패키지를 프로젝트에 패키지 참조로 추가합니다.
 
@@ -109,43 +110,43 @@ dotnet svcutil http://contoso.com/SayHello.svc
 
 1. 다음과 같이 [`dotnet restore`](../tools/dotnet-restore.md) 명령을 사용하여 WCF 패키지를 복원합니다.
 
-```console
-dotnet restore
-```
+    ```console
+    dotnet restore
+    ```
 
 2. 사용하려는 클라이언트 클래스 및 작업의 이름을 찾습니다. `Reference.cs`는 `System.ServiceModel.ClientBase`에서 상속되는 클래스와 서비스에서 작업을 호출하는 데 사용할 수 있는 메서드를 포함합니다. 이 예제에서는 _SayHello_ 서비스의 _Hello_ 작업을 호출합니다. `ServiceReference.SayHelloClient`는 클라이언트 클래스의 이름이고, 작업을 호출하는 데 사용할 수 있는 `HelloAsync`라는 메서드를 갖습니다.
 
 3. 편집기에서 `Startup.cs` 파일을 열고 상단에 서비스 참조 네임스페이스를 위한 using 문을 추가합니다.
 
-```csharp
-using ServiceReference;
-```
+    ```csharp
+    using ServiceReference;
+    ```
 
- 4. `Configure` 메서드가 웹 서비스를 호출하도록 편집합니다. 이렇게 하려면 `ClientBase`에서 상속되는 클래스의 인스턴스를 만들고 클라이언트 개체에서 메서드를 호출합니다.
+4. `Configure` 메서드가 웹 서비스를 호출하도록 편집합니다. 이렇게 하려면 `ClientBase`에서 상속되는 클래스의 인스턴스를 만들고 클라이언트 개체에서 메서드를 호출합니다.
 
-```csharp
-public void Configure(IApplicationBuilder app, IHostingEnvironment env)
-{
-    if (env.IsDevelopment())
+    ```csharp
+    public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     {
-        app.UseDeveloperExceptionPage();
+        if (env.IsDevelopment())
+        {
+            app.UseDeveloperExceptionPage();
+        }
+
+        app.Run(async (context) =>
+        {
+            var client = new SayHelloClient();
+            var response = await client.HelloAsync();
+            await context.Response.WriteAsync(response);
+        });
     }
 
-    app.Run(async (context) =>
-    {
-        var client = new SayHelloClient();
-        var response = await client.HelloAsync();
-        await context.Response.WriteAsync(response);
-    });
-}
-
-```
+    ```
 
 5. 다음과 같이 [`dotnet run`](../tools/dotnet-run.md) 명령을 사용하여 애플리케이션을 실행합니다.
 
-```console
-dotnet run
-```
+    ```console
+    dotnet run
+    ```
 
 6. 웹 브라우저에서, 콘솔에 나열된 URL(예: `http://localhost:5000`)로 이동합니다.
 
