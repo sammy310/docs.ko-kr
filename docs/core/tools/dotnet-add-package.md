@@ -2,12 +2,12 @@
 title: dotnet add package 명령
 description: ‘dotnet add package’ 명령은 NuGet 패키지 참조를 프로젝트에 추가하는 편리한 옵션을 제공합니다.
 ms.date: 04/24/2019
-ms.openlocfilehash: 79059e062368fc9c4b6b8cb31740fdf13ea2b9ca
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 07cb6cd8e7873def6f969a54c1f7b9a7325f9491
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751406"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632281"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 

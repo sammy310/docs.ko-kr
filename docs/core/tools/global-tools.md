@@ -4,12 +4,12 @@ description: .NET Core Global Tool의 개요와 사용 가능한 .NET Core CLI �
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 3bbf1e7953482dc07f05570443cf640a9fab6258
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 29499d28629e483d66e25b8ecdbd5817effba439
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170852"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631731"
 ---
 # <a name="net-core-global-tools-overview"></a>.NET Core Global Tool 개요
 
@@ -70,7 +70,7 @@ Tool 'dotnetsay' (version '2.0.0') was successfully installed.
 
 Global Tool은 기본 디렉터리 또는 특정 위치에 설치할 수 있습니다. 기본 디렉터리는 다음과 같습니다.
 
-| OS          | Path                          |
+| OS          | 경로                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |

@@ -3,12 +3,12 @@ title: Windows에서 .NET Core의 필수 구성 요소
 description: Windows 컴퓨터에서 .NET Core 애플리케이션을 개발 및 실행하기 위해 필요한 종속성이 무엇인지 살펴보세요.
 ms.custom: updateeachvsrelease
 ms.date: 04/08/2019
-ms.openlocfilehash: 2941721dfa4b87d4113e4f4b529845e47f3dc1b9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 8eb2913b0fa1fe037a460633064d6f179b64a248
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59313712"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634084"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows에서 .NET Core의 필수 구성 요소
 
@@ -57,7 +57,7 @@ ms.locfileid: "59313712"
 > [!NOTE]
 > **Windows 8.1 이전 버전 또는 Windows Server 2012 R2 이전 버전의 경우:**
 >
-> 설치된 Windows가 최신 버전이며 Windows 업데이트를 통해 설치할 수 있는 [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows)이 포함되어 있는지 확인하세요. 이 업데이트를 설치하지 않는 경우 .NET Core 애플리케이션을 시작할 때 다음과 같은 오류가 표시됩니다. `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
+> 설치된 Windows가 최신 버전이며 Windows 업데이트를 통해 설치할 수 있는 [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows)이 포함되어 있는지 확인하세요. 이 업데이트를 설치하지 않는 경우 .NET Core 애플리케이션을 시작할 때 `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`과 같은 오류가 표시됩니다.
 >
 > **Windows 7 또는 Windows Server 2008 R2의 경우:**
 >
@@ -73,7 +73,7 @@ ms.locfileid: "59313712"
 
 [릴리스 정보](/visualstudio/releasenotes/vs2017-relnotes)에서 Visual Studio 2017의 변경 내용에 대해 자세히 알아볼 수 있습니다.
 
-# [<a name="net-core-2x"></a>.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 Visual Studio 2017에서 .NET Core 2.2 SDK를 사용하여 .NET Core 앱을 개발하려면
 
@@ -101,7 +101,7 @@ Visual Studio 2017에서 .NET Core 2.2 SDK를 사용하여 .NET Core 앱을 개�
 * .NET Core 1.x 및 2.x 프로젝트의 대상을 .NET Core 2.2로 변경하고 빌드 및 실행합니다.
 * 새로운 .NET Core 2.2 프로젝트를 만듭니다.
 
-# [<a name="net-core-1x"></a>.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 Visual Studio에서 .NET Core 1.x 앱을 개발하려면 **기타 도구 집합** 섹션에서 **“.NET Core 플랫폼 간 개발”** 워크로드를 선택하고 [Visual Studio 2017을 다운로드하여 설치](/visualstudio/install/install-visual-studio)합니다.
 

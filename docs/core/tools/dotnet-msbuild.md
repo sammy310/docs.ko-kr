@@ -2,12 +2,12 @@
 title: dotnet msbuild 명령
 description: dotnet msbuild 명령은 MSBuild 명령줄에 대한 액세스 권한을 제공합니다.
 ms.date: 12/03/2018
-ms.openlocfilehash: f025b5b92e57c7b804b9bdd59c8b4a4a806796da
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 983fae6f4ecf875da0b155a668009984b5df50de
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169081"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632023"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 

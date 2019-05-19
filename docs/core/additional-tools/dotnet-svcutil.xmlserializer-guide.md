@@ -3,12 +3,12 @@ title: .NET Core에서 dotnet-svcutil.xmlserializer 사용
 description: '`dotnet-svcutil.xmlserializer` NuGet 패키지를 사용하여 .NET Core 프로젝트용 serialization 어셈블리를 미리 생성하는 방법을 알아봅니다.'
 author: huanwu
 ms.date: 11/27/2018
-ms.openlocfilehash: f5ffed47079a3ee122c7784d0c61c4d40461ba26
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 375a5ad5660658431c0d327e55513024823a6eee
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235542"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632192"
 ---
 # <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a>.NET Core에서 dotnet-svcutil.xmlserializer 사용
 

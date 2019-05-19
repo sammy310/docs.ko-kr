@@ -2,12 +2,12 @@
 title: dotnet remove package 명령
 description: dotnet remove package 명령은 프로젝트에 대한 NuGet 패키지 참조를 제거하는 편리한 옵션을 제공합니다.
 ms.date: 05/29/2018
-ms.openlocfilehash: 4cc8ac927b761547dc5e53be9abeba827bf1e1d9
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: cbdeacff78ef20c9a73010e10a771a724b23792e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168730"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632429"
 ---
 # <a name="dotnet-remove-package"></a>dotnet remove package
 

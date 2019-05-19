@@ -2,12 +2,12 @@
 title: dotnet migrate 명령
 description: dotnet migrate 명령은 프로젝트와 모든 종속성을 마이그레이션합니다.
 ms.date: 05/25/2018
-ms.openlocfilehash: 73e0169e64be4b55e10127ecca0101885061767e
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 861cd2cb982c6f41baf00a2cbd7e04b26816af76
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170745"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631945"
 ---
 # <a name="dotnet-migrate"></a>dotnet 마이그레이션
 

@@ -2,12 +2,12 @@
 title: dotnet pack 명령
 description: dotnet pack 명령은 .NET Core 프로젝트에 대한 NuGet 패키지를 만듭니다.
 ms.date: 12/04/2018
-ms.openlocfilehash: 8faa99bf35d9802b16f951082b20644d45a939c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5d48e5957e8095cc9ef4eaca2e1e1746c25a2a88
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672128"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876037"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -46,6 +46,14 @@ dotnet pack [-h|--help]
 `dotnet pack`은 기본적으로 프로젝트를 먼저 빌드합니다. 이렇게 하지 않으려면 `--no-build` 옵션을 전달합니다. 이 옵션은 코드가 이미 빌드된 CI(연속 통합) 빌드 시나리오에서 유용합니다.
 
 압축 프로세스에 대한 `dotnet pack` 명령에 MSBuild 속성을 제공할 수 있습니다. 자세한 내용은 [NuGet 메타데이터 속성](csproj.md#nuget-metadata-properties) 및 [MSBuild 명령줄 참조](/visualstudio/msbuild/msbuild-command-line-reference)를 참조하세요. [예제](#examples) 섹션에서는 몇 가지 시나리오에 MSBuild -p 스위치를 사용하는 방법을 보여 줍니다.
+
+웹 프로젝트는 기본적으로 패키지할 수 없습니다. 기본 동작을 재정의하려면 다음 속성을 *.csproj* 파일에 추가합니다.
+
+```xml
+<PropertyGroup>
+   <IsPackable>true</IsPackable>
+</PropertyGroup>
+```
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
@@ -110,15 +118,6 @@ dotnet pack [-h|--help]
 * **`-v|--verbosity <LEVEL>`**
 
   명령의 세부 정보 표시 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다.
-
-> [!NOTE]
-> 웹 프로젝트는 기본적으로 패키지할 수 없습니다. 기본 동작을 재정의하려면 다음 속성을 *.csproj* 파일에 추가합니다.
->
-> ```xml
-> <PropertyGroup>
->    <IsPackable>true</IsPackable>
-> </PropertyGroup>
-> ```
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 

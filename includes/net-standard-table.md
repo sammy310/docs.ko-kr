@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 3f3f60f9752b9bd36d76387102c202d88b39c3ca
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65672743"
+---
 | .NET Standard              | [1.0]  | [1.1]  | [1.2] | [1.3] | [1.4] | [1.5]              | [1.6]              | [2.0]               |
 |----------------------------|--------|--------|-------|-------|-------|--------------------|--------------------|---------------------|
 | .NET Core                  | 1.0    | 1.0    | 1.0   | 1.0   | 1.0   | 1.0                | 1.0                | 2.0                 |
@@ -16,7 +24,7 @@
 - 열은 .NET 표준 버전을 나타냅니다. 각 헤더 셀은 .NET 표준의 해당 버전에 추가된 API를 보여 주는 문서의 링크입니다.
 - 행은 다양한 .NET 구현을 나타냅니다.
 - 각 셀의 버전 번호는 해당 .NET 표준 버전을 대상으로 지정하는 데 필요한 구현의 *최소* 버전을 나타냅니다.
-- 대화형 테이블은 [.NET Standard 버전](https://immo.landwerth.net/netstandard-versions/#)을 참조하세요.
+- 대화형 테이블은 [.NET Standard 버전](https://dotnet.microsoft.com/platform/dotnet-standard#versions)을 참조하세요.
 
 [1.0]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.0.md
 [1.1]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.1.md

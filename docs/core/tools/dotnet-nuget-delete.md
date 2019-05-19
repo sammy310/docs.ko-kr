@@ -3,12 +3,12 @@ title: dotnet nuget delete 명령
 description: dotnet-nuget-delete 명령은 서버에서 패키지를 삭제하거나 목록에서 제거합니다.
 author: karann-msft
 ms.date: 12/04/2018
-ms.openlocfilehash: a657fa273ca6b5229a1713fbcaf003217a59fd7f
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: e1362413aa6458674518d68340634741994b34a3
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612630"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632052"
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 
