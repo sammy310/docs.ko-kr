@@ -2,12 +2,12 @@
 title: 방법 문서(C# 가이드)
 description: 유용한 팁 및 간단하고 집중된 코드 샘플의 컬렉션
 ms.date: 12/20/2017
-ms.openlocfilehash: cc78b8ffffc4f40629f213921fab6145751a7c57
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 77b68af5802f79060e30b2817661de4cb5e46942
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672109"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879021"
 ---
 # <a name="how-to-c"></a>방법(C#)
 
@@ -133,4 +133,3 @@ LINQ를 사용하면 LINQ 쿼리 식 패턴을 지원하는 데이터 소스를 
 일반적으로 C# 프로그램에는 명령줄 인수가 있습니다. 이 문서에서는 이러한 명령줄 인수를 액세스하고 처리하는 방법을 배울 수 있습니다.
 
 - [`for`가 포함된 모든 명령줄 인수를 검색합니다](../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md).
-- [`foreach`가 포함된 모든 명령줄 인수를 검색합니다](../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md).
