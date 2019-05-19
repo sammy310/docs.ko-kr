@@ -5,159 +5,161 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: d9da37d2fb9797c9074765326df1e6eca2469607
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 403b0125e6b1966d201c891448ad25ec83f42be5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622465"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881928"
 ---
-# <a name="custom-composite-designers---workflow-items-presenter"></a><span data-ttu-id="59bf7-102">사용자 지정 복합 디자이너 - 워크플로 항목 프리젠터</span><span class="sxs-lookup"><span data-stu-id="59bf7-102">Custom Composite Designers - Workflow Items Presenter</span></span>
-<span data-ttu-id="59bf7-103"><xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> 는 포함된 요소의 컬렉션을 편집할 수 있도록 하는 WF 디자이너 프로그래밍 모델의 키 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="59bf7-103">The <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> is a key type in the WF designer programming model that allows for the editing of a collection of contained elements.</span></span> <span data-ttu-id="59bf7-104">이 샘플에서는 이러한 편집 가능한 컬렉션을 표시하는 활동 디자이너를 빌드하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="59bf7-104">This sample shows how to build an activity designer that surfaces such an editable collection.</span></span>
+# <a name="custom-composite-designers---workflow-items-presenter"></a><span data-ttu-id="a4a2a-102">사용자 지정 복합 디자이너 - 워크플로 항목 프리젠터</span><span class="sxs-lookup"><span data-stu-id="a4a2a-102">Custom Composite Designers - Workflow Items Presenter</span></span>
 
- <span data-ttu-id="59bf7-105">이 샘플에서는 다음 작업을 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="59bf7-105">This sample demonstrates:</span></span>
+<span data-ttu-id="a4a2a-103"><xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> 는 포함된 요소의 컬렉션을 편집할 수 있도록 하는 WF 디자이너 프로그래밍 모델의 키 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="a4a2a-103">The <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> is a key type in the WF designer programming model that allows for the editing of a collection of contained elements.</span></span> <span data-ttu-id="a4a2a-104">이 샘플에서는 이러한 편집 가능한 컬렉션을 표시하는 활동 디자이너를 빌드하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a4a2a-104">This sample shows how to build an activity designer that surfaces such an editable collection.</span></span>
 
-- <span data-ttu-id="59bf7-106"><xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>를 사용하여 사용자 지정 활동 디자이너 만들기</span><span class="sxs-lookup"><span data-stu-id="59bf7-106">Creating a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.</span></span>
+<span data-ttu-id="a4a2a-105">이 샘플에서는 다음 작업을 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a4a2a-105">This sample demonstrates:</span></span>
 
-- <span data-ttu-id="59bf7-107">"축소" 또는 "확장" 뷰를 사용 하 여 활동 디자이너를 만드는 중입니다.</span><span class="sxs-lookup"><span data-stu-id="59bf7-107">Creating an activity designer with a "collapsed" and "expanded" view.</span></span>
+- <span data-ttu-id="a4a2a-106"><xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>를 사용하여 사용자 지정 활동 디자이너 만들기</span><span class="sxs-lookup"><span data-stu-id="a4a2a-106">Creating a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.</span></span>
 
-- <span data-ttu-id="59bf7-108">다시 호스트된 응용 프로그램에서 기본 디자이너 재정의</span><span class="sxs-lookup"><span data-stu-id="59bf7-108">Overriding a default designer in a rehosted application.</span></span>
+- <span data-ttu-id="a4a2a-107">"축소" 또는 "확장" 뷰를 사용 하 여 활동 디자이너를 만드는 중입니다.</span><span class="sxs-lookup"><span data-stu-id="a4a2a-107">Creating an activity designer with a "collapsed" and "expanded" view.</span></span>
 
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="59bf7-109">샘플을 설치, 빌드 및 실행하려면</span><span class="sxs-lookup"><span data-stu-id="59bf7-109">To set up, build, and run the sample</span></span>
+- <span data-ttu-id="a4a2a-108">다시 호스트된 응용 프로그램에서 기본 디자이너 재정의</span><span class="sxs-lookup"><span data-stu-id="a4a2a-108">Overriding a default designer in a rehosted application.</span></span>
 
-1. <span data-ttu-id="59bf7-110">엽니다는 **UsingWorkflowItemsPresenter.sln** Visual Studio 2010에서 VB 또는 C#에 대 한 샘플 솔루션.</span><span class="sxs-lookup"><span data-stu-id="59bf7-110">Open the **UsingWorkflowItemsPresenter.sln** sample solution for C# or for VB in Visual Studio 2010.</span></span>
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="a4a2a-109">샘플을 설치, 빌드 및 실행하려면</span><span class="sxs-lookup"><span data-stu-id="a4a2a-109">To set up, build, and run the sample</span></span>
 
-2. <span data-ttu-id="59bf7-111">솔루션을 빌드하고 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="59bf7-111">Build and run the solution.</span></span> <span data-ttu-id="59bf7-112">다시 호스트된 Workflow Designer 응용 프로그램이 열리며 여기에서 활동을 캔버스로 끌어 올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="59bf7-112">A rehosted workflow designer application should open, and you can drag activities onto the canvas.</span></span>
+1. <span data-ttu-id="a4a2a-110">엽니다는 **UsingWorkflowItemsPresenter.sln** Visual Studio 2010에서 VB 또는 C#에 대 한 샘플 솔루션.</span><span class="sxs-lookup"><span data-stu-id="a4a2a-110">Open the **UsingWorkflowItemsPresenter.sln** sample solution for C# or for VB in Visual Studio 2010.</span></span>
 
-## <a name="sample-highlights"></a><span data-ttu-id="59bf7-113">샘플의 중요 사항</span><span class="sxs-lookup"><span data-stu-id="59bf7-113">Sample Highlights</span></span>
- <span data-ttu-id="59bf7-114">이 샘플의 코드는 다음 내용을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="59bf7-114">The code for this sample shows the following:</span></span>
+2. <span data-ttu-id="a4a2a-111">솔루션을 빌드하고 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="a4a2a-111">Build and run the solution.</span></span> <span data-ttu-id="a4a2a-112">다시 호스트된 Workflow Designer 응용 프로그램이 열리며 여기에서 활동을 캔버스로 끌어 올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a4a2a-112">A rehosted workflow designer application should open, and you can drag activities onto the canvas.</span></span>
 
-- <span data-ttu-id="59bf7-115">디자이너가 빌드되는 활동:  `Parallel`</span><span class="sxs-lookup"><span data-stu-id="59bf7-115">The activity a designer is built for:  `Parallel`</span></span>
+## <a name="sample-highlights"></a><span data-ttu-id="a4a2a-113">샘플의 중요 사항</span><span class="sxs-lookup"><span data-stu-id="a4a2a-113">Sample Highlights</span></span>
 
-- <span data-ttu-id="59bf7-116"><xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>를 사용하여 사용자 지정 활동 디자이너를 만드는 방법</span><span class="sxs-lookup"><span data-stu-id="59bf7-116">The creation of a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.</span></span> <span data-ttu-id="59bf7-117">고려해야 할 몇 가지 사항은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="59bf7-117">A few things to point out:</span></span>
+<span data-ttu-id="a4a2a-114">이 샘플의 코드는 다음 내용을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a4a2a-114">The code for this sample shows the following:</span></span>
 
-    - <span data-ttu-id="59bf7-118">WPF 데이터 바인딩을 사용하여 `ModelItem.Branches`에 바인딩합니다.</span><span class="sxs-lookup"><span data-stu-id="59bf7-118">Note the use of WPF data binding to bind to `ModelItem.Branches`.</span></span> <span data-ttu-id="59bf7-119">`ModelItem`은 디자이너가 사용될 기본 개체(이 경우 `WorkflowElementDesigner`)를 참조하는 `Parallel`의 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="59bf7-119">`ModelItem` is the property on `WorkflowElementDesigner` that refers to the underlying object the designer is being used for, in this case, our `Parallel`.</span></span>
+- <span data-ttu-id="a4a2a-115">디자이너가 빌드되는 활동:  `Parallel`</span><span class="sxs-lookup"><span data-stu-id="a4a2a-115">The activity a designer is built for:  `Parallel`</span></span>
 
-    - <span data-ttu-id="59bf7-120"><xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType>을 사용하여 컬렉션의 개별 항목을 시각적으로 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="59bf7-120">The <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> can be used to put a visual to display between the individual items in the collection.</span></span>
+- <span data-ttu-id="a4a2a-116"><xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>를 사용하여 사용자 지정 활동 디자이너를 만드는 방법</span><span class="sxs-lookup"><span data-stu-id="a4a2a-116">The creation of a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.</span></span> <span data-ttu-id="a4a2a-117">고려해야 할 몇 가지 사항은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="a4a2a-117">A few things to point out:</span></span>
 
-    - <span data-ttu-id="59bf7-121"><xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType>은 컬렉션에 있는 항목의 레이아웃을 결정하는 데 제공할 수 있는 템플릿입니다.</span><span class="sxs-lookup"><span data-stu-id="59bf7-121"><xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> is a template that can be provided to determine the layout of the items in the collection.</span></span> <span data-ttu-id="59bf7-122">이 경우에는 가로 스택 패널이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="59bf7-122">In this case, a horizontal stack panel is used.</span></span>
+  - <span data-ttu-id="a4a2a-118">WPF 데이터 바인딩을 사용하여 `ModelItem.Branches`에 바인딩합니다.</span><span class="sxs-lookup"><span data-stu-id="a4a2a-118">Note the use of WPF data binding to bind to `ModelItem.Branches`.</span></span> <span data-ttu-id="a4a2a-119">`ModelItem`은 디자이너가 사용될 기본 개체(이 경우 `WorkflowElementDesigner`)를 참조하는 `Parallel`의 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="a4a2a-119">`ModelItem` is the property on `WorkflowElementDesigner` that refers to the underlying object the designer is being used for, in this case, our `Parallel`.</span></span>
 
- <span data-ttu-id="59bf7-123">다음 코드 예제에서는 이를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="59bf7-123">This following example code shows this.</span></span>
+  - <span data-ttu-id="a4a2a-120"><xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType>을 사용하여 컬렉션의 개별 항목을 시각적으로 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a4a2a-120">The <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> can be used to put a visual to display between the individual items in the collection.</span></span>
 
-```xaml
-<sad:WorkflowItemsPresenter HintText="Drop Activities Here"
-                              Items="{Binding Path=ModelItem.Branches}">
-    <sad:WorkflowItemsPresenter.SpacerTemplate>
-      <DataTemplate>
-        <Ellipse Width="10" Height="10" Fill="Black"/>
+  - <span data-ttu-id="a4a2a-121"><xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType>은 컬렉션에 있는 항목의 레이아웃을 결정하는 데 제공할 수 있는 템플릿입니다.</span><span class="sxs-lookup"><span data-stu-id="a4a2a-121"><xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> is a template that can be provided to determine the layout of the items in the collection.</span></span> <span data-ttu-id="a4a2a-122">이 경우에는 가로 스택 패널이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="a4a2a-122">In this case, a horizontal stack panel is used.</span></span>
+
+  <span data-ttu-id="a4a2a-123">다음 코드 예제에서는 이를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a4a2a-123">This following example code shows this.</span></span>
+  
+  ```xaml
+  <sad:WorkflowItemsPresenter HintText="Drop Activities Here"
+                                Items="{Binding Path=ModelItem.Branches}">
+      <sad:WorkflowItemsPresenter.SpacerTemplate>
+        <DataTemplate>
+          <Ellipse Width="10" Height="10" Fill="Black"/>
+        </DataTemplate>
+      </sad:WorkflowItemsPresenter.SpacerTemplate>
+      <sad:WorkflowItemsPresenter.ItemsPanel>
+        <ItemsPanelTemplate>
+          <StackPanel Orientation="Horizontal"/>
+        </ItemsPanelTemplate>
+      </sad:WorkflowItemsPresenter.ItemsPanel>
+    </sad:WorkflowItemsPresenter>
+  ```
+
+- <span data-ttu-id="a4a2a-124">`DesignerAttribute` 형식에 `Parallel`를 연결한 다음 보고되는 특성을 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="a4a2a-124">Perform an association of the `DesignerAttribute` to the `Parallel` type and then output the attributes reported.</span></span>
+
+    - <span data-ttu-id="a4a2a-125">먼저 모든 기본 디자이너를 등록합니다.</span><span class="sxs-lookup"><span data-stu-id="a4a2a-125">First, register all of the default designers.</span></span>
+
+    <span data-ttu-id="a4a2a-126">다음은 코드 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="a4a2a-126">The following is the code example.</span></span>
+
+    ```csharp
+    // register metadata
+    (new DesignerMetadata()).Register();
+    RegisterCustomMetadata();
+    ```
+
+    ```vb
+    ' register metadata
+    Dim metadata = New DesignerMetadata()
+    metadata.Register()
+    ' register custom metadata
+    RegisterCustomMetadata()
+    ```
+
+    - <span data-ttu-id="a4a2a-127">그런 다음 `RegisterCustomMetadata` 메서드에서 병렬을 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="a4a2a-127">Then, override the parallel in `RegisterCustomMetadata` method.</span></span>
+
+    <span data-ttu-id="a4a2a-128">다음 코드에서는 C# 및 Visual Basic으로 이를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a4a2a-128">The following code shows this in C# and Visual Basic.</span></span>
+
+    ```csharp
+    void RegisterCustomMetadata()
+    {
+          AttributeTableBuilder builder = new AttributeTableBuilder();
+          builder.AddCustomAttributes(typeof(Parallel), new DesignerAttribute(typeof(CustomParallelDesigner)));
+          MetadataStore.AddAttributeTable(builder.CreateTable());
+    }
+    ```
+
+    ```vb
+    Sub RegisterCustomMetadata()
+       Dim builder As New AttributeTableBuilder()
+       builder.AddCustomAttributes(GetType(Parallel), New DesignerAttribute(GetType(CustomParallelDesigner)))
+       MetadataStore.AddAttributeTable(builder.CreateTable())
+    End Sub
+    ```
+
+- <span data-ttu-id="a4a2a-129">마지막으로, 다양한 데이터 템플릿과 트리거를 사용하여 `IsRootDesigner` 속성을 기반으로 적절한 템플릿을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="a4a2a-129">Finally, note the use of differing data templates and triggers to select the appropriate template based on the `IsRootDesigner` property.</span></span>
+
+  <span data-ttu-id="a4a2a-130">다음은 코드 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="a4a2a-130">The following is the code example.</span></span>
+
+  ```xaml
+  <sad:ActivityDesigner x:Class="Microsoft.Samples.CustomParallelDesigner"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:sad="clr-namespace:System.Activities.Design;assembly=System.Activities.Design"
+      xmlns:sadv="clr-namespace:System.Activities.Design.View;assembly=System.Activities.Design">
+    <sad:ActivityDesigner.Resources>
+      <DataTemplate x:Key="Expanded">
+        <StackPanel>
+          <TextBlock>This is the Expanded View</TextBlock>
+          <sad:WorkflowItemsPresenter HintText="Drop Activities Here"
+                                      Items="{Binding Path=ModelItem.Branches}">
+            <sad:WorkflowItemsPresenter.SpacerTemplate>
+              <DataTemplate>
+                <Ellipse Width="10" Height="10" Fill="Black"/>
+              </DataTemplate>
+            </sad:WorkflowItemsPresenter.SpacerTemplate>
+            <sad:WorkflowItemsPresenter.ItemsPanel>
+              <ItemsPanelTemplate>
+                <StackPanel Orientation="Horizontal"/>
+              </ItemsPanelTemplate>
+            </sad:WorkflowItemsPresenter.ItemsPanel>
+          </sad:WorkflowItemsPresenter>
+        </StackPanel>
       </DataTemplate>
-    </sad:WorkflowItemsPresenter.SpacerTemplate>
-    <sad:WorkflowItemsPresenter.ItemsPanel>
-      <ItemsPanelTemplate>
-        <StackPanel Orientation="Horizontal"/>
-      </ItemsPanelTemplate>
-    </sad:WorkflowItemsPresenter.ItemsPanel>
-  </sad:WorkflowItemsPresenter>
-```
-
-- <span data-ttu-id="59bf7-124">`DesignerAttribute` 형식에 `Parallel`를 연결한 다음 보고되는 특성을 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="59bf7-124">Perform an association of the `DesignerAttribute` to the `Parallel` type and then output the attributes reported.</span></span>
-
-    - <span data-ttu-id="59bf7-125">먼저 모든 기본 디자이너를 등록합니다.</span><span class="sxs-lookup"><span data-stu-id="59bf7-125">First, register all of the default designers.</span></span>
-
- <span data-ttu-id="59bf7-126">다음은 코드 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="59bf7-126">The following is the code example.</span></span>
-
-```csharp
-// register metadata
-(new DesignerMetadata()).Register();
-RegisterCustomMetadata();
-```
-
-```vb
-' register metadata
-Dim metadata = New DesignerMetadata()
-metadata.Register()
-' register custom metadata
-RegisterCustomMetadata()
-```
-
-    - <span data-ttu-id="59bf7-127">그런 다음 `RegisterCustomMetadata` 메서드에서 병렬을 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="59bf7-127">Then, override the parallel in `RegisterCustomMetadata` method.</span></span>
-
- <span data-ttu-id="59bf7-128">다음 코드에서는 C# 및 Visual Basic으로 이를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="59bf7-128">The following code shows this in C# and Visual Basic.</span></span>
-
-```csharp
-void RegisterCustomMetadata()
-{
-      AttributeTableBuilder builder = new AttributeTableBuilder();
-      builder.AddCustomAttributes(typeof(Parallel), new DesignerAttribute(typeof(CustomParallelDesigner)));
-      MetadataStore.AddAttributeTable(builder.CreateTable());
-}
-```
-
-```vb
-Sub RegisterCustomMetadata()
-   Dim builder As New AttributeTableBuilder()
-   builder.AddCustomAttributes(GetType(Parallel), New DesignerAttribute(GetType(CustomParallelDesigner)))
-   MetadataStore.AddAttributeTable(builder.CreateTable())
-End Sub
-```
-
-- <span data-ttu-id="59bf7-129">마지막으로, 다양한 데이터 템플릿과 트리거를 사용하여 `IsRootDesigner` 속성을 기반으로 적절한 템플릿을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="59bf7-129">Finally, note the use of differing data templates and triggers to select the appropriate template based on the `IsRootDesigner` property.</span></span>
-
- <span data-ttu-id="59bf7-130">다음은 코드 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="59bf7-130">The following is the code example.</span></span>
-
-```xaml
-<sad:ActivityDesigner x:Class="Microsoft.Samples.CustomParallelDesigner"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:sad="clr-namespace:System.Activities.Design;assembly=System.Activities.Design"
-    xmlns:sadv="clr-namespace:System.Activities.Design.View;assembly=System.Activities.Design">
-  <sad:ActivityDesigner.Resources>
-    <DataTemplate x:Key="Expanded">
-      <StackPanel>
-        <TextBlock>This is the Expanded View</TextBlock>
-        <sad:WorkflowItemsPresenter HintText="Drop Activities Here"
-                                    Items="{Binding Path=ModelItem.Branches}">
-          <sad:WorkflowItemsPresenter.SpacerTemplate>
-            <DataTemplate>
-              <Ellipse Width="10" Height="10" Fill="Black"/>
-            </DataTemplate>
-          </sad:WorkflowItemsPresenter.SpacerTemplate>
-          <sad:WorkflowItemsPresenter.ItemsPanel>
-            <ItemsPanelTemplate>
-              <StackPanel Orientation="Horizontal"/>
-            </ItemsPanelTemplate>
-          </sad:WorkflowItemsPresenter.ItemsPanel>
-        </sad:WorkflowItemsPresenter>
-      </StackPanel>
-    </DataTemplate>
-    <DataTemplate x:Key="Collapsed">
-      <TextBlock>This is the Collapsed View</TextBlock>
-    </DataTemplate>
-    <Style x:Key="ExpandOrCollapsedStyle" TargetType="{x:Type ContentPresenter}">
-      <Setter Property="ContentTemplate" Value="{DynamicResource Collapsed}"/>
-      <Style.Triggers>
-        <DataTrigger Binding="{Binding Path=IsRootDesigner}" Value="true">
-          <Setter Property="ContentTemplate" Value="{DynamicResource Expanded}"/>
-        </DataTrigger>
-      </Style.Triggers>
-    </Style>
-  </sad: ActivityDesigner.Resources>
-  <Grid>
-    <ContentPresenter Style="{DynamicResource ExpandOrCollapsedStyle}" Content="{Binding}"/>
-  </Grid>
-</sad: ActivityDesigner>
-```
+      <DataTemplate x:Key="Collapsed">
+        <TextBlock>This is the Collapsed View</TextBlock>
+      </DataTemplate>
+      <Style x:Key="ExpandOrCollapsedStyle" TargetType="{x:Type ContentPresenter}">
+        <Setter Property="ContentTemplate" Value="{DynamicResource Collapsed}"/>
+        <Style.Triggers>
+          <DataTrigger Binding="{Binding Path=IsRootDesigner}" Value="true">
+            <Setter Property="ContentTemplate" Value="{DynamicResource Expanded}"/>
+          </DataTrigger>
+        </Style.Triggers>
+      </Style>
+    </sad: ActivityDesigner.Resources>
+    <Grid>
+      <ContentPresenter Style="{DynamicResource ExpandOrCollapsedStyle}" Content="{Binding}"/>
+    </Grid>
+  </sad: ActivityDesigner>
+  ```
 
 > [!IMPORTANT]
->  <span data-ttu-id="59bf7-131">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="59bf7-131">The samples may already be installed on your machine.</span></span> <span data-ttu-id="59bf7-132">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="59bf7-132">Check for the following (default) directory before continuing.</span></span>  
->   
->  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  <span data-ttu-id="59bf7-133">이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플.</span><span class="sxs-lookup"><span data-stu-id="59bf7-133">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="59bf7-134">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="59bf7-134">This sample is located in the following directory.</span></span>  
->   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemsPresenter`  
-  
-## <a name="see-also"></a><span data-ttu-id="59bf7-135">참고자료</span><span class="sxs-lookup"><span data-stu-id="59bf7-135">See also</span></span>
+> <span data-ttu-id="a4a2a-131">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a4a2a-131">The samples may already be installed on your machine.</span></span> <span data-ttu-id="a4a2a-132">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="a4a2a-132">Check for the following (default) directory before continuing.</span></span>
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> <span data-ttu-id="a4a2a-133">이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플.</span><span class="sxs-lookup"><span data-stu-id="a4a2a-133">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="a4a2a-134">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a4a2a-134">This sample is located in the following directory.</span></span>
+>
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemsPresenter`
+
+## <a name="see-also"></a><span data-ttu-id="a4a2a-135">참고자료</span><span class="sxs-lookup"><span data-stu-id="a4a2a-135">See also</span></span>
 
 - <xref:System.Activities.Presentation.WorkflowItemsPresenter>
-- [<span data-ttu-id="59bf7-136">워크플로 디자이너로 응용 프로그램 개발</span><span class="sxs-lookup"><span data-stu-id="59bf7-136">Developing Applications with the Workflow Designer</span></span>](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
+- [<span data-ttu-id="a4a2a-136">워크플로 디자이너로 응용 프로그램 개발</span><span class="sxs-lookup"><span data-stu-id="a4a2a-136">Developing Applications with the Workflow Designer</span></span>](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

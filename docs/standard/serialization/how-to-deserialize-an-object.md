@@ -8,21 +8,21 @@ helpviewer_keywords:
 - deserializing objects
 - objects, deserializing steps
 ms.assetid: 287129c8-035a-4fea-b7b3-4790057ca076
-ms.openlocfilehash: 53b4a3e3848c1aa92bfa9fbd80bb031125257fc2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e1a960d39319beee1c3c257fcd3ade207de11010
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922722"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881134"
 ---
-# <a name="how-to-deserialize-an-object"></a><span data-ttu-id="762c4-102">방법: 개체 deserialize</span><span class="sxs-lookup"><span data-stu-id="762c4-102">How to: Deserialize an Object</span></span>
-<span data-ttu-id="762c4-103">개체를 deserialize할 때는 전송 형식에 따라 스트림을 만들지 파일 개체를 만들지 여부가 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="762c4-103">When you deserialize an object, the transport format determines whether you will create a stream or file object.</span></span> <span data-ttu-id="762c4-104">전송 형식이 결정된 뒤에는 필요에 따라 <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> 또는 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 메서드를 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="762c4-104">After the transport format is determined, you can call the <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> or <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> methods, as required.</span></span>  
+# <a name="how-to-deserialize-an-object"></a><span data-ttu-id="1dded-102">방법: 개체 deserialize</span><span class="sxs-lookup"><span data-stu-id="1dded-102">How to: Deserialize an Object</span></span>
+<span data-ttu-id="1dded-103">개체를 deserialize할 때는 전송 형식에 따라 스트림을 만들지 파일 개체를 만들지 여부가 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="1dded-103">When you deserialize an object, the transport format determines whether you will create a stream or file object.</span></span> <span data-ttu-id="1dded-104">전송 형식이 결정된 뒤에는 필요에 따라 <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> 또는 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 메서드를 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1dded-104">After the transport format is determined, you can call the <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> or <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> methods, as required.</span></span>  
   
-### <a name="to-deserialize-an-object"></a><span data-ttu-id="762c4-105">개체를 deserialize하려면</span><span class="sxs-lookup"><span data-stu-id="762c4-105">To deserialize an object</span></span>  
+### <a name="to-deserialize-an-object"></a><span data-ttu-id="1dded-105">개체를 deserialize하려면</span><span class="sxs-lookup"><span data-stu-id="1dded-105">To deserialize an object</span></span>  
   
-1. <span data-ttu-id="762c4-106">deserialize할 개체의 형식을 사용하여 <xref:System.Xml.Serialization.XmlSerializer>를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="762c4-106">Construct a <xref:System.Xml.Serialization.XmlSerializer> using the type of the object to deserialize.</span></span>  
+1. <span data-ttu-id="1dded-106">deserialize할 개체의 형식을 사용하여 <xref:System.Xml.Serialization.XmlSerializer>를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="1dded-106">Construct a <xref:System.Xml.Serialization.XmlSerializer> using the type of the object to deserialize.</span></span>  
   
-2. <span data-ttu-id="762c4-107">개체의 복제본을 생성할 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 메서드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="762c4-107">Call the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method to produce a replica of the object.</span></span> <span data-ttu-id="762c4-108">deserialize할 때는 개체를 파일로 deserialize하는(스트림으로 deserialize할 수도 있음) 다음 예제처럼, 반환된 개체를 원래의 형식으로 캐스팅해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="762c4-108">When deserializing, you must cast the returned object to the type of the original, as shown in the following example, which deserializes the object into a file (although it could also be deserialized into a stream).</span></span>  
+2. <span data-ttu-id="1dded-107">개체의 복제본을 생성할 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 메서드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="1dded-107">Call the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method to produce a replica of the object.</span></span> <span data-ttu-id="1dded-108">를 역직렬화 하는 경우 (하지만 해당 스트림에서 deserialize 할 수도) 파일에서 개체를 deserialize 하는 다음 예제와 같이 원래 형식으로 반환된 된 개체를 캐스팅 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1dded-108">When deserializing, you must cast the returned object to the type of the original, as shown in the following example, which deserializes the object from a file (although it could also be deserialized from a stream).</span></span>  
   
     ```vb  
     Dim myObject As MySerializableClass  
@@ -51,7 +51,7 @@ ms.locfileid: "61922722"
     mySerializer.Deserialize(myFileStream)  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="762c4-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="762c4-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1dded-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="1dded-109">See also</span></span>
 
-- [<span data-ttu-id="762c4-110">XML serialization 소개</span><span class="sxs-lookup"><span data-stu-id="762c4-110">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [<span data-ttu-id="762c4-111">방법: 개체 serialize</span><span class="sxs-lookup"><span data-stu-id="762c4-111">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [<span data-ttu-id="1dded-110">XML serialization 소개</span><span class="sxs-lookup"><span data-stu-id="1dded-110">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)
+- [<span data-ttu-id="1dded-111">방법: 개체 serialize</span><span class="sxs-lookup"><span data-stu-id="1dded-111">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)
