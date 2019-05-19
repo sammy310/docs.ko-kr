@@ -2,12 +2,12 @@
 title: '사용자 지정 메시지 인코더: 압축 인코더'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: d5ec330fb4aa0a136c4a0e4c8d249d7ebb9d0692
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6ada1cdeee02eb747f9f85abc9c99602d5f26b72
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650196"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878455"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>사용자 지정 메시지 인코더: 압축 인코더
 이 샘플에는 Windows Communication Foundation (WCF) 플랫폼을 사용 하 여 사용자 지정 인코더를 구현 하는 방법을 보여 줍니다.  
@@ -334,7 +334,7 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1. 다음 명령을 사용하여 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0을 설치합니다.  
+1. 다음 명령을 사용 하 여 ASP.NET 4.0을 설치 합니다.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  

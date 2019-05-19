@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 19571f3102039176ed4d8fab46a7f8229cbfecbe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eff4ee3cb8502645d3b6d9a8986c9c410fe73f1a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875539"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877582"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>스트리밍 공급자(WCF Data Services)
 
@@ -88,7 +88,7 @@ ms.locfileid: "61875539"
 
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>호스팅 환경에서 큰 이진 스트림 사용
 
-[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 응용 프로그램에서 데이터 서비스를 만들 때 WCF(Windows Communication Foundation)가 HTTP 프로토콜 구현을 제공하는 데 사용됩니다. 기본적으로 WCF는 HTTP 메시지의 크기를 65K바이트로 제한합니다. 데이터 서비스에서 보내고 받는 큰 이진 데이터를 스트리밍할 수 있으려면 큰 이진 파일을 사용할 수 있고 전송에 스트림을 사용하도록 웹 응용 프로그램도 구성해야 합니다. 이렇게 하려면 응용 프로그램의 Web.config 파일에 있는 `<configuration />` 요소에 다음을 추가합니다.
+ASP.NET 웹 응용 프로그램에서 데이터 서비스를 만들 때 Windows Communication Foundation (WCF)는 HTTP 프로토콜 구현을 제공 하기 위해 사용 됩니다. 기본적으로 WCF는 HTTP 메시지의 크기를 65K바이트로 제한합니다. 데이터 서비스에서 보내고 받는 큰 이진 데이터를 스트리밍할 수 있으려면 큰 이진 파일을 사용할 수 있고 전송에 스트림을 사용하도록 웹 응용 프로그램도 구성해야 합니다. 이렇게 하려면 응용 프로그램의 Web.config 파일에 있는 `<configuration />` 요소에 다음을 추가합니다.
 
 > [!NOTE]
 > 사용 해야는 <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> 전송 모드는 요청 및 응답 메시지의 이진 데이터 스트림 되 고 WCF로 버퍼링 되지 않습니다.
@@ -125,7 +125,7 @@ ms.locfileid: "61875539"
 
 - <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A> 또는 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 메서드를 구현하는 경우 메서드 매개 변수로 제공되는 eTag 및 Content-Type 값을 사용해야 합니다. <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 공급자 구현에서 eTag 또는 Content-Type 헤더를 설정하지 마세요.
 
-- 기본적으로 클라이언트는 청크된 HTTP Transfer-Encoding을 사용하여 큰 이진 스트림을 보냅니다. 때문에 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 개발 서버는 이러한 종류의 인코딩을 지원 하지 않습니다, 큰 이진 스트림을 받아들여야 하는 스트리밍 데이터 서비스를 호스트 하려면이 웹 서버를 사용할 수 없습니다. 에 대 한 자세한 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 개발 서버를 참조 하세요 [ASP.NET 웹 프로젝트에 대 한 Visual Studio에서 웹 서버](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120))합니다.
+- 기본적으로 클라이언트는 청크된 HTTP Transfer-Encoding을 사용하여 큰 이진 스트림을 보냅니다. ASP.NET Development Server는 이러한 종류의 인코딩을 지원 하지 않으므로, 큰 이진 스트림을 받아들여야 하는 스트리밍 데이터 서비스를 호스트 하려면이 웹 서버를 사용할 수 없습니다. ASP.NET Development Server에 대 한 자세한 내용은 참조 하세요. [ASP.NET 웹 프로젝트에 대 한 Visual Studio에서 웹 서버](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120))합니다.
 
 <a name="versioning"></a>
 

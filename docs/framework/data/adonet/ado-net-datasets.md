@@ -2,15 +2,15 @@
 title: ADO.NET 데이터 집합
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: 50e8e8f5e4b3ee2f5a41cb9dad11b5e701135d9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 29aba76731c4170c8af3c913a06e78e89ce3a08d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607585"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877220"
 ---
 # <a name="adonet-datasets"></a>ADO.NET 데이터 집합
-<xref:System.Data.DataSet> 개체는 연결되지 않은 분산 데이터 시나리오를 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]을 사용하여 지원하는 데 핵심적인 역할을 수행합니다. 합니다 **데이터 집합** 데이터 소스에 관계 없이 일관성 있는 관계형 프로그래밍 모델을 제공 하는 데이터는 메모리 상주 표현입니다. 이 개체는 다양한 여러 데이터 소스에 사용하거나 XML 데이터에 사용할 수 있을 뿐 아니라 이 개체를 사용하여 응용 프로그램의 로컬 데이터를 관리할 수도 있습니다. 합니다 **데이터 집합** 관련된 테이블, 제약 조건 및 테이블 간의 관계를 포함 하 여 데이터의 전체 집합을 나타냅니다. 다음 그림에 표시 된 **데이터 집합** 개체 모델입니다.  
+<xref:System.Data.DataSet> 개체는 지원의 핵심으로 연결이 끊긴 분산 데이터 시나리오 ADO.NET 사용 합니다. 합니다 **데이터 집합** 데이터 소스에 관계 없이 일관성 있는 관계형 프로그래밍 모델을 제공 하는 데이터는 메모리 상주 표현입니다. 이 개체는 다양한 여러 데이터 소스에 사용하거나 XML 데이터에 사용할 수 있을 뿐 아니라 이 개체를 사용하여 응용 프로그램의 로컬 데이터를 관리할 수도 있습니다. 합니다 **데이터 집합** 관련된 테이블, 제약 조건 및 테이블 간의 관계를 포함 하 여 데이터의 전체 집합을 나타냅니다. 다음 그림에 표시 된 **데이터 집합** 개체 모델입니다.  
   
  ![ADO.Net graphic](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
 DataSet 개체 모델  
@@ -20,7 +20,7 @@ DataSet 개체 모델
  합니다 **데이터 집합** 유지 될 수 있으며 해당 내용을 XML로 및 XML 스키마 정의 언어 (XSD)로 스키마를 다시 로드 합니다. 자세한 내용은 [데이터 세트에서 XML 사용](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)을 참조하세요.  
   
 ## <a name="the-datatablecollection"></a>DataTableCollection  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] **데이터 집합** 으로 표시 하는 0 개 이상의 테이블의 컬렉션을 포함 <xref:System.Data.DataTable> 개체입니다. 합니다 <xref:System.Data.DataTableCollection> 모두 포함 합니다 **DataTable** 개체를 **데이터 집합**합니다.  
+ ADO.NET **데이터 집합** 나타내는 0 개 이상의 테이블의 컬렉션을 포함 <xref:System.Data.DataTable> 개체입니다. 합니다 <xref:System.Data.DataTableCollection> 모두 포함 합니다 **DataTable** 개체를 **데이터 집합**합니다.  
   
  **DataTable** 에 정의 된 <xref:System.Data> 네임 스페이스 되며 메모리 상주형 데이터의 단일 테이블을 나타냅니다. 여기에는 <xref:System.Data.DataColumnCollection>에 의해 표현되는 열의 컬렉션과 <xref:System.Data.ConstraintCollection>에 의해 표현되는 제약 조건의 컬렉션이 포함됩니다. 이 두 컬렉션은 테이블의 스키마를 정의합니다. A **DataTable** 나타내는 행의 컬렉션도 포함 합니다 <xref:System.Data.DataRowCollection>, 테이블의 데이터를 포함 하는 합니다. 이와 함께 <xref:System.Data.DataRow>는 현재 버전과 원래 버전을 모두 보유하므로 행에 저장된 값에 대한 변경 사항을 식별할 수 있습니다.  
   

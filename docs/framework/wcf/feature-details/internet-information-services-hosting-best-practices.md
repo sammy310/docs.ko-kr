@@ -2,12 +2,12 @@
 title: 인터넷 정보 서비스 호스팅을 위한 최선의 방법
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: a4312a9affc1103f613f3f8ffd9a14696f9d4bcc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85b8efadca03de71fd98b0f0d1bf5aeb47fe76be
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972616"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878601"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>인터넷 정보 서비스 호스팅을 위한 최선의 방법
 이 항목에서는 Windows Communication Foundation (WCF) 서비스를 호스트 하기 위한 몇 가지 모범 사례를 간략하게 설명 합니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "61972616"
  IIS MMC(Microsoft Management Console) 스냅인을 사용하여 IIS 웹 사이트 바인딩을 구성할 수 있습니다.  
   
 ## <a name="application-pools-running-in-different-user-contexts-overwrite-assemblies-from-other-accounts-in-the-temporary-folder"></a>다른 사용자 컨텍스트에서 실행되는 응용 프로그램 풀이 임시 폴더에 있는 다른 계정의 어셈블리를 덮어씀  
- 다른 사용자 컨텍스트에서 실행되는 응용 프로그램 풀이 임시 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 파일 폴더에 있는 다른 계정의 어셈블리를 덮어쓸 수 없는지 확인하려면 응용 프로그램마다 다른 ID와 임시 폴더를 사용합니다. 예를 들어 두 개의 가상 응용 프로그램/Application1 및 / Application2가 있을 경우 ID가 다른 두 개의 응용 프로그램 풀 A와 B를 만들 수 있습니다. 응용 프로그램 풀 A는 사용자 ID(user1)에서 실행되는 동시에 응용 프로그램 풀 B는 다른 사용자 ID(user2)에서 실행되며 A를 사용하도록 /Application1을 구성하고 B를 사용하도록 /Application2를 구성할 수 있습니다.  
+ 다른 사용자 컨텍스트에서 실행 되는 응용 프로그램 풀에서 temporary ASP.NET files 폴더에 있는 다른 계정의 어셈블리를 덮어쓸 수 없습니다 위해 서로 다른 응용 프로그램에 대 한 다른 id 및 임시 폴더를 사용 하십시오. 예를 들어 두 개의 가상 응용 프로그램/Application1 및 / Application2가 있을 경우 ID가 다른 두 개의 응용 프로그램 풀 A와 B를 만들 수 있습니다. 응용 프로그램 풀 A는 사용자 ID(user1)에서 실행되는 동시에 응용 프로그램 풀 B는 다른 사용자 ID(user2)에서 실행되며 A를 사용하도록 /Application1을 구성하고 B를 사용하도록 /Application2를 구성할 수 있습니다.  
   
  Web.config에서 구성할 수 있습니다 사용 하 여 임시 폴더 \< system.web/compilation/@tempFolder>. /Application1에 대 한 "c:\tempForUser1" 수 및 응용 프로그램 2에 대 한 "c:\tempForUser2" 수 있습니다. 이러한 폴더에 대해 해당하는 쓰기 권한을 두 ID에 부여합니다.  
   

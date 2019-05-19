@@ -2,15 +2,15 @@
 title: Membership and Role Provider
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 73084bb766274d6eab497555e82e029f94be0359
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c172402f95b137117941381fd4803b8b6e4a5d61
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638380"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876737"
 ---
 # <a name="membership-and-role-provider"></a>Membership and Role Provider
-Membership and Role Provider 샘플에서는 서비스에서 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 멤버 자격 및 역할 공급자를 사용하여 클라이언트를 인증하고 권한을 부여하는 방법을 보여 줍니다.  
+Membership and Role Provider 샘플 서비스를 사용 하 여 방법을 ASP.NET 멤버 자격 및 역할 공급자를 인증 하 고 클라이언트에 권한을 부여 하는 방법을 보여 줍니다.  
   
  이 샘플에서 클라이언트는 콘솔 응용 프로그램(.exe)이고 서비스는 IIS(인터넷 정보 서비스)를 통해 호스트됩니다.  
   
@@ -21,11 +21,11 @@ Membership and Role Provider 샘플에서는 서비스에서 [!INCLUDE[vstecasp]
   
 - 클라이언트에서 사용자 이름/암호 조합을 사용하여 인증하는 방법  
   
-- 서버에서 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 멤버 자격 공급자를 기준으로 클라이언트 자격 증명을 확인하는 방법  
+- 서버에는 ASP.NET 멤버 자격 공급자에 대 한 클라이언트 자격 증명 유효성을 검사할 수 있습니다.  
   
 - 서버의 X.509 인증서를 사용하여 서버를 인증하는 방법  
   
-- 서버에서 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 역할 공급자를 사용하여 인증된 클라이언트를 역할에 매핑하는 방법  
+- 서버 역할을 인증 된 클라이언트 ASP.NET 역할 공급자를 사용 하 여 매핑할 수 있습니다.  
   
 - 서버에서 `PrincipalPermissionAttribute`를 사용하여 서비스에 의해 노출되는 특정 메서드에 대한 액세스를 제어하는 방법  
   
@@ -69,7 +69,7 @@ Membership and Role Provider 샘플에서는 서비스에서 [!INCLUDE[vstecasp]
 </system.web>  
 ```  
   
- 서비스에서는 서비스와의 통신에 사용할 수 있는 단일 엔드포인트를 노출하며, 이 엔드포인트는 Web.config 구성 파일을 사용하여 정의합니다. 엔드포인트는 하나의 주소, 바인딩 및 계약으로 구성됩니다. 바인딩은 표준 `wsHttpBinding`을 사용하여 구성하며 기본값으로 Windows 인증이 사용됩니다. 이 샘플에서는 사용자 이름 인증을 사용하도록 표준 `wsHttpBinding`을 설정합니다. 동작에서는 서비스 인증에 서버 인증서를 사용하도록 지정합니다. 서버 인증서에 대해 동일한 값을 포함 해야 합니다는 `SubjectName` 으로 `findValue` 특성을 [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) 구성 요소. 또한 동작에서는 두 공급자에 정의되는 이름을 지정하여 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 멤버 자격 공급자에서 사용자 이름/암호 쌍의 인증을 지정하고 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 역할 공급자에서 역할 매핑을 수행하도록 지정합니다.  
+ 서비스에서는 서비스와의 통신에 사용할 수 있는 단일 엔드포인트를 노출하며, 이 엔드포인트는 Web.config 구성 파일을 사용하여 정의합니다. 엔드포인트는 하나의 주소, 바인딩 및 계약으로 구성됩니다. 바인딩은 표준 `wsHttpBinding`을 사용하여 구성하며 기본값으로 Windows 인증이 사용됩니다. 이 샘플에서는 사용자 이름 인증을 사용하도록 표준 `wsHttpBinding`을 설정합니다. 동작에서는 서비스 인증에 서버 인증서를 사용하도록 지정합니다. 서버 인증서에 대해 동일한 값을 포함 해야 합니다는 `SubjectName` 으로 `findValue` 특성을 [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) 구성 요소. 또한 동작에는 ASP.NET 멤버 자격 공급자에서 사용자 이름 / 암호 쌍의 인증을 수행 하 고 두 공급자에 대해 정의 된 이름을 지정 하 여 역할 매핑을 ASP.NET 역할 공급자가 수행 되도록 지정 합니다.  
   
 ```xml  
 <system.serviceModel>  
@@ -123,10 +123,10 @@ Membership and Role Provider 샘플에서는 서비스에서 [!INCLUDE[vstecasp]
 2. 구성 했는지 확인 합니다 [ASP.NET 응용 프로그램 서비스 데이터베이스](https://go.microsoft.com/fwlink/?LinkId=94997)합니다.  
   
     > [!NOTE]
-    >  SQL Server Express Edition을 실행하는 경우 서버 이름은 .\SQLEXPRESS입니다. 이 서버는 Web.config 연결 문자열에서와 마찬가지로 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램 서비스 데이터베이스를 구성할 때에도 사용해야 합니다.  
+    >  SQL Server Express Edition을 실행하는 경우 서버 이름은 .\SQLEXPRESS입니다. ASP.NET 응용 프로그램 서비스는 물론 데이터베이스와는 Web.config 연결 문자열을 구성 하는 경우이 서버를 사용 해야 합니다.  
   
     > [!NOTE]
-    >  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 작업자 프로세스 계정에는 이 단계에서 만든 데이터베이스에 대한 권한이 있어야 합니다. 이 작업에는 sqlcmd 유틸리티 또는 SQL Server Management Studio를 사용합니다.  
+    >  ASP.NET 작업자 프로세스 계정이이 단계에서 만든 데이터베이스에 대 한 사용 권한이 있어야 합니다. 이 작업에는 sqlcmd 유틸리티 또는 SQL Server Management Studio를 사용합니다.  
   
 3. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행하려면 다음 지침을 사용합니다.  
   
