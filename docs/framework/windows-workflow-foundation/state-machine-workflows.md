@@ -2,12 +2,12 @@
 title: 상태 시스템 워크플로
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
-ms.openlocfilehash: d7f6f2686399d8eabbbc70de11697f3aca61fc8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d3c6f4f815f16ec4878b9aa70bd3a69c862d7800
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665323"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876115"
 ---
 # <a name="state-machine-workflows"></a>상태 시스템 워크플로
 상태 시스템은 잘 알려진 프로그램 개발용 패러다임입니다. <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> 및 기타 작업과 함께 <xref:System.Activities.Statements.Transition> 활동은 상태 시스템 워크플로 프로그램을 빌드하는 데 사용할 수 있습니다. 이 항목에서는 상태 시스템 워크플로를 만드는 방법에 대해 간략하게 설명합니다.  
@@ -23,14 +23,14 @@ ms.locfileid: "64665323"
   
  상태 시스템 워크플로를 만들기 위해 상태가 <xref:System.Activities.Statements.StateMachine> 활동에 추가되고 상태 간 흐름을 제어하기 위해 전환이 사용됩니다. 다음 스크린샷에서에서 합니다 [초보자를 위한 자습서](getting-started-tutorial.md) 단계 [방법: 상태 시스템 워크플로 만드는](how-to-create-a-state-machine-workflow.md), 세 가지 상태 및 세 가지 전환을 사용 하 여 상태 시스템 워크플로 보여 줍니다. **Initialize Target** 워크플로에서 첫 번째 상태를 나타내며 초기 상태입니다. 해당 상태로 이끄는 선으로 지정 하는이 **시작** 노드. 워크플로의 최종 상태 라고 **FinalState**, 워크플로가 완료 되는 시점을 나타냅니다.  
   
- ![완료 된 상태 시스템 워크플로](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+ ![완료 된 상태 시스템 워크플로 보여 주는 그림입니다.](./media/state-machine-workflows/complete-state-machine-workflow.jpg)  
   
  상태 시스템 워크플로에는 하나의 초기 상태만 있어야 하며 하나 이상의 최종 상태가 있어야 합니다. 최종 상태가 아닌 각 상태에는 적어도 하나 이상의 전환이 있어야 합니다. 다음 단원에는 상태 및 전환을 만들고 구성하는 방법에 대해 설명합니다.  
   
 ## <a name="creating-and-configuring-states"></a>상태 만들기 및 구성  
  <xref:System.Activities.Statements.State>는 상태 시스템이 가질 수 있는 상태를 나타냅니다. 추가할를 <xref:System.Activities.Statements.State> 워크플로 끌어 옵니다.를 **상태** 활동 디자이너의를 **상태 시스템** 섹션을 **도구 상자** 놓습니다를 <xref:System.Activities.Statements.StateMachine> 활동에는 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 화면.  
   
- ![WF4 상태 시스템 활동](./media/netframework4platformupdate1statemachineactivities.jpg "NETFramework4PlatformUpdate1StateMachineActivities")  
+ ![도구 상자는 상태 시스템 섹션의 스크린샷.](./media/state-machine-workflows/state-machine-section-toolbox.jpg)  
   
  으로 상태를 구성 하는 **초기 상태**, 상태를 마우스 오른쪽 단추로 **초기 상태로 설정**합니다. 또한 현재 초기 상태가 없을 경우 초기 상태로 지정할 수 있습니다 선을 끌어 합니다 **시작** 원하는 상태로 워크플로의 맨 위에 있는 노드. 경우는 <xref:System.Activities.Statements.StateMachine> 활동이 워크플로 디자이너를 끌어다 놓을, 이라는 초기 상태로 사전 구성 됩니다 **State1**합니다. 상태 시스템 워크플로에는 하나의 초기 상태만 있어야 합니다.  
   

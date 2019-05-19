@@ -2,12 +2,12 @@
 title: Windows Workflow 개요
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: bb714e5e5e4c1fe009ffa775efb456ebcc65c218
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 285ab75f7f67bbb9ffa18367eff126c04227f193
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592567"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876149"
 ---
 # <a name="windows-workflow-overview"></a>Windows Workflow 개요
 워크플로 호출 하는 elemental 단위의 집합인 *활동* 실제 프로세스를 설명 하는 모델로 저장 되는 합니다. 워크플로를 통해 단기 실행 작업과 장기 실행 작업의 실행 순서와 종속 관계를 설명할 수 있습니다. 이 작업은 모델을 시작부터 끝까지 통과하며 활동은 사람이 실행하거나 시스템 함수로 실행될 수 있습니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "64592567"
   
  이 클래스는 각각 활동 실행을 담당하는 <xref:System.Activities.ActivityInstance>로 표현되는 코어 활동 런타임을 래핑합니다. 응용 프로그램 도메인 내에는 동시에 실행되는 여러 <xref:System.Activities.ActivityInstance> 개체가 있을 수 있습니다.  
   
- 위의 세 가지 호스트 상호 작용 개체는 각각 워크플로 프로그램이라는 활동 트리에서 만들어집니다. 이러한 형식 또는 래핑하는 사용자 지정 호스트를 사용 하 여 <xref:System.Activities.ActivityInstance>에 워크플로 콘솔 응용 프로그램을 포함 하 여 모든 Windows 프로세스 내에서 실행할 수 있습니다 폼 기반 응용 프로그램, Windows 서비스, [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 웹 사이트 및 Windows Communication Foundation ( WCF) 서비스입니다.  
+ 위의 세 가지 호스트 상호 작용 개체는 각각 워크플로 프로그램이라는 활동 트리에서 만들어집니다. 이러한 형식 또는 래핑하는 사용자 지정 호스트를 사용 하 여 <xref:System.Activities.ActivityInstance>, 워크플로 콘솔 응용 프로그램, 폼 기반 응용 프로그램, Windows 서비스, ASP.NET 웹 사이트 및 Windows Communication Foundation (WCF)를 포함 하 여 모든 Windows 프로세스 내에서 실행할 수 있습니다 서비스입니다.  
   
  ![호스트 프로세스의 워크플로 구성 요소](./media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178b-4487-87ed-3e33015a3842")  
 호스트 프로세스의 워크플로 구성 요소  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: 5d35e2775c6c6912d2a36c550202b309ebdeaa32
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 638e8177060c489a7469f80adde68cb9ba266365
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583833"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879964"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>매개 변수 및 매개 변수 데이터 형식 구성
 
@@ -96,7 +96,7 @@ Command 개체는 매개 변수를 통해 SQL 문이나 저장 프로시저에 �
 
 ## <a name="using-parameters-with-a-sqlcommand-and-a-stored-procedure"></a>SqlCommand 및 저장된 프로시저를 사용 하 여 매개 변수를 사용 하 여
 
-저장 프로시저는 데이터 구동 애플리케이션에 많은 이점을 제공합니다. 저장 프로시저를 사용하면 데이터베이스 작업이 단일 명령으로 캡슐화되고, 최고의 성능을 나타내도록 최적화되며, 추가 보안 기능을 통해 향상될 수 있습니다. SQL 문처럼 저장 프로시저 이름 뒤에 매개 변수 인수를 붙여 전달하여 저장 프로시저를 호출할 수 있지만 <xref:System.Data.Common.DbCommand.Parameters%2A> [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 개체의 <xref:System.Data.Common.DbCommand> 컬렉션을 사용하면 저장 프로시저 매개 변수를 보다 분명하게 정의할 수 있으며 출력 매개 변수와 반환 값에 액세스할 수 있습니다.
+저장 프로시저는 데이터 구동 애플리케이션에 많은 이점을 제공합니다. 저장 프로시저를 사용하면 데이터베이스 작업이 단일 명령으로 캡슐화되고, 최고의 성능을 나타내도록 최적화되며, 추가 보안 기능을 통해 향상될 수 있습니다. 뒤에 매개 변수 인수를 SQL 문으로 사용 하 여 저장된 프로시저 이름을 전달 하 여 저장된 프로시저를 호출할 수 있지만 합니다 <xref:System.Data.Common.DbCommand.Parameters%2A> ADO.NET의 컬렉션 <xref:System.Data.Common.DbCommand> 개체를 사용 하면 보다 분명 하 게 저장된 프로시저를 정의할 수 있습니다 매개 변수를 output 매개 변수를 액세스 및 값을 반환 합니다.
 
 > [!NOTE]
 > 매개 변수화된 문은 `sp_executesql,` 을 사용하여 서버에서 실행되므로 쿼리 계획을 다시 사용할 수 있습니다. `sp_executesql` 일괄 처리의 로컬 커서 또는 변수는 `sp_executesql`을 호출하는 일괄 처리에 표시되지 않습니다. 데이터베이스 컨텍스트의 변경은 `sp_executesql` 문의 실행이 끝날 때까지만 지속됩니다. 자세한 내용은 [sp_executesql (TRANSACT-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql)합니다.

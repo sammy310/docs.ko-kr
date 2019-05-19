@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 4a6d1b34-b696-476b-bf8a-57c6230aa9e1
-ms.openlocfilehash: 5e530b475745a3df7482b9ea4276f004d13ec055
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b248e9b250ce18f05a2bf57b80af8fbcebb4f811
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642453"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880595"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGrid 컨트롤에 테이블 및 열 추가
 
@@ -29,7 +29,7 @@ ms.locfileid: "61642453"
   
 1. 테이블의 데이터를 표시 하려면 먼저 바인딩해야 합니다 <xref:System.Windows.Forms.DataGrid> 데이터 집합에는 컨트롤입니다. 자세한 내용은 [방법: 데이터 원본 디자이너를 사용 하 여 Windows Forms DataGrid 컨트롤을 바인딩할](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)합니다.  
   
-2. 선택 된 <xref:System.Windows.Forms.DataGrid> 컨트롤의 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 속성이 속성 창에서 줄임표 단추를 클릭 하 고 (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton")) 옆에 속성을 표시 합니다 **DataGridTableStyle 컬렉션 편집기**합니다.  
+2.  선택 합니다 <xref:System.Windows.Forms.DataGrid> 컨트롤의 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 속성 창에서 속성에에서 줄임표 (...) 단추를 클릭 하 고 (![의 줄임표 단추 (...)의 Visual Studio 속성 창에서](./media/visual-studio-ellipsis-button.png)) 표시할 속성 옆에 **DataGridTableStyle 컬렉션 편집기**합니다.  
   
 3. 컬렉션 편집기에서 클릭 **추가** 테이블 스타일을 삽입 합니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "61642453"
   
 ### <a name="to-add-a-column-to-the-datagrid-control-in-the-designer"></a>디자이너에서 DataGrid 컨트롤에 열을 추가 하려면  
   
-1. 에 **멤버** 상자를 **DataGridTableStyle 컬렉션 편집기**, 해당 테이블 스타일을 선택 합니다. 에 **속성** 컬렉션 편집기 선택 상자는 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 컬렉션, 줄임표 단추를 클릭 하 고 (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png " vbEllipsesButton")) 표시할 속성 옆에 **DataGridColumnStyle 컬렉션 편집기**합니다.  
+1.  에 **멤버** 상자를 **DataGridTableStyle 컬렉션 편집기**, 해당 테이블 스타일을 선택 합니다. 에 **속성** 컬렉션 편집기 선택 상자는 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 컬렉션, 줄임표 단추를 클릭 하 고 (![의 줄임표 단추 (...)의 Visual Studio 속성 창에서](./media/visual-studio-ellipsis-button.png)) 옆에 속성을 표시 합니다 **DataGridColumnStyle 컬렉션 편집기**합니다.  
   
 2. 컬렉션 편집기에서 클릭 **추가** 열 스타일을 삽입 하거나 옆에서 아래쪽 화살표를 클릭 **추가** 열 형식을 지정할 수 있습니다.  
   

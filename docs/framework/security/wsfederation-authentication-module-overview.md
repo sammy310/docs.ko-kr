@@ -3,12 +3,12 @@ title: WSFederation 인증 모듈 개요
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 63090efdf97066b4a276880d4f4be0f843de6800
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0bd6c7432f79894c9e31952b72f3426fc88f9d03
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586044"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877199"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 인증 모듈 개요
 WIF(Windows Identity Foundation)에는 WS-FAM( WS-Federated Authentication Module)을 통한 ASP.NET 애플리케이션의 페더레이션된 인증 지원이 포함되어 있습니다. 이 항목은 페더레이션된 인증의 작동 방식과 사용 방법을 이해하는 데 도움이 됩니다.  
@@ -31,7 +31,7 @@ WIF(Windows Identity Foundation)에는 WS-FAM( WS-Federated Authentication Modul
 6. RP는 보안 토큰에서 클라이언트의 클레임을 추출하고 권한 부여를 결정합니다.  
   
 ### <a name="using-the-federated-authentication-module-with-aspnet"></a>ASP.NET과 함께 페더레이션된 인증 모듈 사용  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WS-FAM)은 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 응용 프로그램에 페더레이션된 인증을 추가할 수 있는 HTTP 모듈입니다. 페더레이션된 인증을 사용하면 STS를 통해 인증 논리를 처리하고 비즈니스 논리 작성에 집중할 수 있습니다.  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM)은 ASP.NET 응용 프로그램에 페더레이션된 인증을 추가할 수 있는 HTTP 모듈입니다. 페더레이션된 인증을 사용하면 STS를 통해 인증 논리를 처리하고 비즈니스 논리 작성에 집중할 수 있습니다.  
   
  인증되지 않은 요청을 리디렉션할 STS를 지정하려면 WS-FAM을 구성합니다. WIF에서는 다음 두 가지 방법으로 사용자를 인증할 수 있습니다.  
   
@@ -41,10 +41,10 @@ WIF(Windows Identity Foundation)에는 WS-FAM( WS-Federated Authentication Modul
   
  수동 리디렉션에서는 모든 통신이 클라이언트(일반적으로 브라우저)의 응답/리디렉션을 통해 수행됩니다. 애플리케이션의 HTTP 파이프라인에 WS-FAM을 추가할 수 있습니다. 여기서 인증되지 않은 사용자 요청을 감시하고 사용자를 지정한 STS로 리디렉션합니다.  
   
- WS-FAM은 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 애플리케이션에서 해당 기능을 사용자 지정할 수 있게 해주는 여러 이벤트도 발생시킵니다.  
+ 또한 WS-FAM ASP.NET 응용 프로그램에서 해당 기능을 사용자 지정할 수 있는 몇 가지 이벤트를 발생 시킵니다.  
   
 ### <a name="how-the-ws-fam-works"></a>WS-FAM의 작동 방식  
- WS-FAM은 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 클래스에서 구현됩니다. 일반적으로 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] RP 애플리케이션의 HTTP 파이프라인에 WS-FAM을 추가합니다. 인증되지 않은 사용자가 보호된 리소스에 액세스하려고 하면 RP가 “401 인증이 거부되었습니다.”라는 HTTP 응답을 반환합니다. WS-FAM은 클라이언트의 수신을 허용하는 대신 이 응답을 가로챈 다음 사용자를 지정된 STS로 리디렉션합니다. STS가 보안 토큰을 발급하고, WS-FAM이 이 토큰을 다시 가로챕니다. WS-FAM은 토큰을 사용 하 여의 인스턴스를 만드는 <xref:System.Security.Claims.ClaimsPrincipal> 일반.net 권한 부여 메커니즘이 작동할 수 있는 인증된 된 사용자에 대 한 합니다.  
+ WS-FAM은 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 클래스에서 구현됩니다. 일반적으로 ASP.NET RP 응용 프로그램의 HTTP 파이프라인에 WS-FAM을 추가 합니다. 인증되지 않은 사용자가 보호된 리소스에 액세스하려고 하면 RP가 “401 인증이 거부되었습니다.”라는 HTTP 응답을 반환합니다. WS-FAM은 클라이언트의 수신을 허용하는 대신 이 응답을 가로챈 다음 사용자를 지정된 STS로 리디렉션합니다. STS가 보안 토큰을 발급하고, WS-FAM이 이 토큰을 다시 가로챕니다. WS-FAM은 토큰을 사용 하 여의 인스턴스를 만드는 <xref:System.Security.Claims.ClaimsPrincipal> 일반.net 권한 부여 메커니즘이 작동할 수 있는 인증된 된 사용자에 대 한 합니다.  
   
  HTTP는 상태 비저장이므로 사용자가 다른 보호된 리소스에 액세스를 시도할 때마다 이 전체 프로세스를 반복하지 않을 방법이 필요합니다. <xref:System.IdentityModel.Services.SessionAuthenticationModule>이 필요한 이유가 바로 여기에 있습니다. STS가 사용자에 대한 보안 토큰을 발급할 때 <xref:System.IdentityModel.Services.SessionAuthenticationModule>에서도 사용자에 대한 세션 보안 토큰을 만들어 쿠키에 저장합니다. 후속 요청 시 <xref:System.IdentityModel.Services.SessionAuthenticationModule>은 이 쿠키를 가로챈 다음 사용해서 사용자의 <xref:System.Security.Claims.ClaimsPrincipal>을 다시 구성합니다.  
   
@@ -61,7 +61,7 @@ WIF(Windows Identity Foundation)에는 WS-FAM( WS-Federated Authentication Modul
  ![컨트롤을 사용한 로그인을 보여 주는 SAM 타이밍 다이어그램](../../../docs/framework/security/media/signinusingconrols-sam.gif "SignInUsingConrols_SAM")  
   
 ### <a name="events"></a>이벤트  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule><xref:System.IdentityModel.Services.SessionAuthenticationModule> 및 해당 부모 클래스인 <xref:System.IdentityModel.Services.HttpModuleBase>는 HTTP 요청의 여러 처리 단계에서 이벤트를 발생시킵니다. [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 응용 프로그램의 `global.asax` 파일에서 이러한 이벤트를 처리할 수 있습니다.  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule><xref:System.IdentityModel.Services.SessionAuthenticationModule> 및 해당 부모 클래스인 <xref:System.IdentityModel.Services.HttpModuleBase>는 HTTP 요청의 여러 처리 단계에서 이벤트를 발생시킵니다. 이러한 이벤트를 처리할 수 있습니다는 `global.asax` ASP.NET 응용 프로그램의 파일입니다.  
   
 - ASP.NET 인프라는 모듈의 <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> 메서드를 호출하여 모듈을 초기화합니다.  
   

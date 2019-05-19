@@ -2,17 +2,17 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: 3ddc07fe9a450dad57bce5fec7c73a945d8fa227
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 815f6917413afebc71f0ec6e1c81eb1de14547a4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650013"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876798"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 이 샘플에서는 세션 관리에 HTTP 쿠키를 사용하기 위해 사용자 지정 프로토콜 채널을 빌드하는 방법을 보여 줍니다. 이 채널을 통해 Windows Communication Foundation (WCF) 서비스와 ASMX 클라이언트 또는 WCF 클라이언트와 ASMX 서비스 간에 통신이 있습니다.  
   
- 클라이언트가 세션 기반의 ASMX 웹 서비스에 있는 웹 메서드를 호출하면 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 엔진은 다음 작업을 수행합니다.  
+ 세션 기반 ASMX 웹 서비스에서 웹 메서드를 호출 하는 클라이언트, ASP.NET 엔진은 다음에서 수행 합니다.  
   
 - 고유 ID(세션 ID)를 생성합니다.  
   
@@ -158,7 +158,7 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1. 다음 명령을 사용하여 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0을 설치합니다.  
+1. 다음 명령을 사용 하 여 ASP.NET 4.0을 설치 합니다.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  

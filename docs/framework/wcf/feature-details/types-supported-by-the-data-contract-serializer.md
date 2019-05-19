@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
-ms.openlocfilehash: 1b98b6b3da08ba7a0a37e0c26f58dd4d3ef115b1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 2fc33d3cfcbcb00e69728b73edf4a03f0dbab77e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592207"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878616"
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>데이터 계약 Serializer에서 지원하는 형식
 Windows Communication Foundation (WCF)를 사용 하 여 <xref:System.Runtime.Serialization.DataContractSerializer> XML로 데이터를 변환 하 고 XML 데이터를 다시 변환할 기본 serialization 엔진으로. <xref:System.Runtime.Serialization.DataContractSerializer> 는 *데이터 계약* 형식을 serialize하도록 디자인되었습니다. 그러나 암시적 데이터 계약이 있는 것으로 간주될 수 있는 여러 가지 다른 형식을 지원합니다. 다음은 serialize할 수 있는 형식의 전체 목록입니다.  
@@ -31,7 +31,7 @@ Windows Communication Foundation (WCF)를 사용 하 여 <xref:System.Runtime.Se
   
 - <xref:System.SerializableAttribute> 특성으로 표시된 형식입니다. .NET Framework 기본 클래스 라이브러리에 포함 된 여러 형식이이 범주에 속합니다. <xref:System.Runtime.Serialization.DataContractSerializer> 는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>인터페이스 지원을 비롯하여 .NET Framework Remoting, <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>및 <xref:System.Runtime.Serialization.ISerializable> 에서 사용된 이 serialization 프로그래밍 모델을 완전히 지원합니다.  
   
-- 원시 XML을 나타내는 형식이거나 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 관계형 데이터를 나타내는 형식입니다. <xref:System.Xml.XmlElement> 및 <xref:System.Xml.XmlNode> 형식의 배열은 XML을 직접 나타내는 방식으로 지원됩니다. 또한, 관련된 <xref:System.Xml.Serialization.IXmlSerializable> 특성, <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 및 <xref:System.Xml.Linq.XDocument> 형식을 비롯하여 <xref:System.Xml.Linq.XElement> 인터페이스를 구현하는 형식이 지원됩니다. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataTable> 형식과 <xref:System.Data.DataSet> 형식 및 형식화된 파생 클래스는 모두 <xref:System.Xml.Serialization.IXmlSerializable> 인터페이스를 구현하므로 이 범주에 속합니다. 자세한 내용은 [XML 및 ADO.NET 형식 데이터 계약의](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)합니다.  
+- 원시 XML 또는 ADO.NET 관계형 데이터를 나타내는 형식을 나타내는 형식입니다. <xref:System.Xml.XmlElement> 및 <xref:System.Xml.XmlNode> 형식의 배열은 XML을 직접 나타내는 방식으로 지원됩니다. 또한, 관련된 <xref:System.Xml.Serialization.IXmlSerializable> 특성, <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 및 <xref:System.Xml.Linq.XDocument> 형식을 비롯하여 <xref:System.Xml.Linq.XElement> 인터페이스를 구현하는 형식이 지원됩니다. ADO.NET<xref:System.Data.DataTable> 형식 및 <xref:System.Data.DataSet> 형식 (형식화 된 파생된 클래스) 모두 구현 합니다 <xref:System.Xml.Serialization.IXmlSerializable> 인터페이스 및 하므로이 범주에 속합니다. 자세한 내용은 [XML 및 ADO.NET 형식 데이터 계약의](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)합니다.  
   
 ## <a name="limitations-of-using-certain-types-in-partial-trust-mode"></a>부분 신뢰 모드에서 특정 형식의 사용 제한  
  다음은 부분 신뢰 모드 시나리오에서 특정 형식을 사용할 때의 제한 사항을 나열한 것입니다.  
@@ -63,7 +63,7 @@ Windows Communication Foundation (WCF)를 사용 하 여 <xref:System.Runtime.Se
   
 - 구조체와 클래스 모두 지원됩니다.  
   
-- <xref:System.Runtime.Serialization.DataContractSerializer> 는 <xref:System.Xml.Serialization.XmlSerializer> 및 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 서비스에서 사용하는 프로그래밍 모델을 지원하지 않습니다. 특히 <xref:System.Xml.Serialization.XmlElementAttribute> 및 <xref:System.Xml.Serialization.XmlAttributeAttribute>와 같은 특성을 지원하지 않습니다. 이 프로그래밍 모델에 대 한 지원을 사용 하려면 WCF 사용 하도록 전환 해야 합니다 <xref:System.Xml.Serialization.XmlSerializer> 대신는 <xref:System.Runtime.Serialization.DataContractSerializer>합니다.  
+- 합니다 <xref:System.Runtime.Serialization.DataContractSerializer> 사용 되는 프로그래밍 모델을 지원 하지 않습니다는 <xref:System.Xml.Serialization.XmlSerializer> 및 ASP.NET 웹 서비스입니다. 특히 <xref:System.Xml.Serialization.XmlElementAttribute> 및 <xref:System.Xml.Serialization.XmlAttributeAttribute>와 같은 특성을 지원하지 않습니다. 이 프로그래밍 모델에 대 한 지원을 사용 하려면 WCF 사용 하도록 전환 해야 합니다 <xref:System.Xml.Serialization.XmlSerializer> 대신는 <xref:System.Runtime.Serialization.DataContractSerializer>합니다.  
   
 - <xref:System.DBNull> 형식은 특수한 방법으로 처리됩니다. singleton 형식이며, deserialization 시 deserializer가 singleton 제약 조건을 적용하고 singleton 인스턴스에 대한 모든 `DBNull` 참조를 가리킵니다. `DBNull` 은 serialize 가능한 형식이므로 <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> 권한이 필요합니다.  
   

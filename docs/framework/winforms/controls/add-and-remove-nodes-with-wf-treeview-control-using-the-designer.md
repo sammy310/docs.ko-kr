@@ -7,12 +7,12 @@ helpviewer_keywords:
 - tree nodes in TreeView control
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: 35bf1750-045e-4ec5-97cb-b47b0dbdaa2c
-ms.openlocfilehash: ecf0b758a9c45a0354a68b6cbfecdb1c49ab390f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ca8b19e8019c170f1826660e951294b18a25e96d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640379"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880630"
 ---
 # <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms TreeView 컨트롤에서 노드 추가 및 제거
 Windows Forms 있으므로 <xref:System.Windows.Forms.TreeView> 해당 부모 노드를 주의 기울여야 하는 노드를 추가 하는 경우 컨트롤이 계층적 방식으로 노드를 표시 합니다.  
@@ -26,7 +26,7 @@ Windows Forms 있으므로 <xref:System.Windows.Forms.TreeView> 해당 부모 �
   
 1. <xref:System.Windows.Forms.TreeView> 컨트롤을 선택합니다.  
   
-2. 에 **속성** 창에서 클릭 합니다 **줄임표** (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton")) 단추 옆에 <xref:System.Windows.Forms.TreeView.Nodes%2A> 속성입니다.  
+2.  에 **속성** 창 클릭 합니다 **줄임표** (![The 줄임표 단추 (...)의 Visual Studio 속성 창에서](./media/visual-studio-ellipsis-button.png)) 단추 옆에 <xref:System.Windows.Forms.TreeView.Nodes%2A> 속성 .  
   
      합니다 **트리 노드 편집기** 나타납니다.  
   

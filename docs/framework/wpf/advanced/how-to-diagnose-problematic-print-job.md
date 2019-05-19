@@ -10,12 +10,12 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: ceffef8e911bb3e49e0d6526328523667a462b61
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: c9da2e1daff23ef9ba39d8b5d53cb3be67f35a27
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912449"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878214"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>방법: 인쇄 작업 문제 진단
 네트워크 관리자는 사용자로부터 인쇄 작업이 인쇄되지 않거나 느리게 인쇄되는 문제에 대한 불만을 흔히 처리합니다. 다양 한 인쇄 작업 속성에서 노출 된 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] Microsoft.NET Framework의 인쇄 작업의 신속한 원격 진단을 수행 하기 위한 수단을 제공 합니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "64912449"
  [!code-csharp[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#identifyanddiagnoseproblematicjob)]
  [!code-vb[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#identifyanddiagnoseproblematicjob)]  
   
- 플래그를 사용 하 여 인쇄 작업 상태를 확인 하는 <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> 설정 되어 있는지 확인 하려면 관련 플래그를 검사 속성입니다. 일련의 비트 플래그에 하나의 비트가 설정되었는지 확인하는 표준 방법은 일련의 플래그가 있는 논리적 AND 연산을 하나의 피연산자로 수행하고 플래그 자체를 다른 피연산자로 수행하는 것입니다. 플래그 자체가 하나의 비트만 설정하므로 논리적 AND의 결과는 비트가 설정되는 것과 거의 동일합니다. 여부를 확인하려면 플래그 자체와 논리적 AND의 결과를 비교합니다. 자세한 내용은 참조 하세요. <xref:System.Printing.PrintJobStatus>서 [& 연산자 (C# 참조)](~/docs/csharp/language-reference/operators/and-operator.md), 및 <xref:System.FlagsAttribute>합니다.  
+ 플래그를 사용 하 여 인쇄 작업 상태를 확인 하는 <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> 설정 되어 있는지 확인 하려면 관련 플래그를 검사 속성입니다. 일련의 비트 플래그에 하나의 비트가 설정되었는지 확인하는 표준 방법은 일련의 플래그가 있는 논리적 AND 연산을 하나의 피연산자로 수행하고 플래그 자체를 다른 피연산자로 수행하는 것입니다. 플래그 자체가 하나의 비트만 설정하므로 논리적 AND의 결과는 비트가 설정되는 것과 거의 동일합니다. 여부를 확인하려면 플래그 자체와 논리적 AND의 결과를 비교합니다. 자세한 내용은 참조 하세요. <xref:System.Printing.PrintJobStatus>서 [& 연산자 (C# 참조)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-), 및 <xref:System.FlagsAttribute>합니다.  
   
  비트가 설정된 각 특성의 경우 코드는 콘솔 화면에 이를 보고하고 경우에 따라 응답하는 방법을 제안합니다. 작업 또는 큐가 일시 중지되는 경우 호출되는 **HandlePausedJob** 메서드는 아래에 설명됩니다.  
   
@@ -87,6 +87,6 @@ ms.locfileid: "64912449"
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.FlagsAttribute>
 - <xref:System.Printing.PrintQueue>
-- [& 연산자 (C# 참조)](~/docs/csharp/language-reference/operators/and-operator.md)
+- [& 연산자 (C# 참조)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)
 - [WPF의 문서](documents-in-wpf.md)
 - [인쇄 개요](printing-overview.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-ms.openlocfilehash: f20ffcf356aa0493b1e2356746d9ad7b27d9a1aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49d11556d3703331b4cdf5bf83a69f6b15bca8ed
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876202"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881988"
 ---
 # <a name="quickstart-wcf-data-services"></a>빠른 시작(WCF Data Services)
 
@@ -34,7 +34,7 @@ ms.locfileid: "61876202"
 
  [데이터 서비스 만들기](../../../../docs/framework/data/wcf/creating-the-data-service.md)
 
- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 애플리케이션과 데이터 모델을 정의하고, 데이터 서비스를 만들고, 리소스에 액세스할 수 있도록 합니다.
+ ASP.NET 응용 프로그램과 데이터 모델을 정의하고, 데이터 서비스를 만들고, 리소스에 액세스할 수 있도록 합니다.
 
  [웹 브라우저에서 서비스에 액세스](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)
 

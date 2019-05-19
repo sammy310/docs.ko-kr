@@ -2,12 +2,12 @@
 title: 참조
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: 467bc9f482fa24e679814de3be0fdb7d9363320c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a874cb659bc8701d7f894617d4e1db25f949fbcd
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877138"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881320"
 ---
 # <a name="reference"></a>참조
 이 단원에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개발자를 위한 참조 정보를 제공합니다.  
@@ -45,4 +45,4 @@ ms.locfileid: "61877138"
  포털에 대 한 제공 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 항목입니다.  
   
  [LinqDataSource 웹 서버 컨트롤 개요](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  
- <xref:System.Web.UI.WebControls.LinqDataSource> 컨트롤에서 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 데이터 소스 컨트롤 아키텍처를 통해 [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)]를 웹 개발자에게 노출시키는 방법에 대해 설명합니다.
+ 에 대해 설명 하는 방법을 <xref:System.Web.UI.WebControls.LinqDataSource> 노출 제어 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] ASP.NET 데이터 소스 컨트롤 아키텍처를 통해 웹 개발자에 게 합니다.

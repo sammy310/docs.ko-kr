@@ -8,15 +8,15 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: 2b22cccbd24671a74ed9819d1613ffe5a7e072a8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ef8ac62d9d969ce4463931d69b0302376ca0ccc4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598394"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881533"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>XML의 포함 식(Visual Basic)
-포함 식을 통해 식을 런타임에 계산 되는 식을 포함 하는 XML 리터럴을 만들 수 있습니다. 포함된 식에 대 한 구문은 `<%=` `expression` `%>`는 동일한 구문을 사용 하는 대로 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]입니다.  
+포함 식을 통해 식을 런타임에 계산 되는 식을 포함 하는 XML 리터럴을 만들 수 있습니다. 포함된 식에 대 한 구문은 `<%=` `expression` `%>`, ASP.NET에 사용 된 구문으로 같습니다.  
   
  예를 들어 만들면 XML 요소 리터럴 리터럴 텍스트 콘텐츠를 사용 하 여 포함 된 식을 결합 합니다.  
   

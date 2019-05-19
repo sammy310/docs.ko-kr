@@ -2,12 +2,12 @@
 title: Entity Framework 개요
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: d63e60c90e71593821c38830bc11d767e582619a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c79055adc2be12a5806fe5e8ff129b6ecd3d76f5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634262"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880027"
 ---
 # <a name="entity-framework-overview"></a>Entity Framework 개요
 
@@ -49,7 +49,7 @@ ms.locfileid: "65634262"
 
 - [!INCLUDE[esql](../../../../../includes/esql-md.md)]. 개념적 모델의 엔터티를 직접 사용 하며 지 원하는 SQL 저장소에 독립적인 언어 [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] 개념입니다. [!INCLUDE[esql](../../../../../includes/esql-md.md)] 개체 쿼리와 EntityClient 공급자를 사용 하 여 실행 된 쿼리를 모두 사용 됩니다. 자세한 내용은 [Entity SQL 개요](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)합니다.
 
-[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에는 EntityClient 데이터 공급자가 포함되어 있습니다. 이 공급자는 연결을 관리하고, 엔터티 쿼리를 데이터 소스 특정 쿼리로 변환하며, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에서 엔터티 데이터를 개체로 구체화할 때 사용하는 데이터 판독기를 반환합니다. 개체 구체화가 필요한 경우 EntityClient 공급자도 처럼 사용할 수 있습니다 표준 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 응용 프로그램 실행을 사용 하 여 데이터 공급자 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 쿼리하고 반환 된 읽기 전용 데이터 판독기를 사용 합니다. 자세한 내용은 [Entity Framework 용 EntityClient 공급자](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)합니다.
+[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에는 EntityClient 데이터 공급자가 포함되어 있습니다. 이 공급자는 연결을 관리하고, 엔터티 쿼리를 데이터 소스 특정 쿼리로 변환하며, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에서 엔터티 데이터를 개체로 구체화할 때 사용하는 데이터 판독기를 반환합니다. 개체 구체화가 필요하지 않은 경우 응용 프로그램에서 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 쿼리를 실행하고 반환된 읽기 전용 데이터 판독기를 사용할 수 있도록 하여 EntityClient 공급자를 표준 ADO.NET 데이터 공급자처럼 사용할 수도 있습니다. 자세한 내용은 [Entity Framework 용 EntityClient 공급자](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)합니다.
 
 다음 다이어그램에서는 데이터 액세스를 위한 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 아키텍처를 보여 줍니다.
 
@@ -59,7 +59,7 @@ ms.locfileid: "65634262"
 
 ## <a name="data-providers"></a>데이터 공급자
 
-`EntityClient` 공급자는 개념적 엔터티 및 관계 측면에서 데이터에 액세스하여 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 공급자 모델을 확장합니다. [!INCLUDE[esql](../../../../../includes/esql-md.md)]을 사용하는 쿼리를 실행합니다. [!INCLUDE[esql](../../../../../includes/esql-md.md)]에서는 `EntityClient`가 데이터베이스와 통신할 수 있도록 기본 쿼리 언어를 제공합니다. 자세한 내용은 [Entity Framework 용 EntityClient 공급자](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)합니다.
+`EntityClient` 공급자 개념적 엔터티 및 관계 측면에서 데이터에 액세스 하 여 ADO.NET 공급자 모델을 확장 합니다. [!INCLUDE[esql](../../../../../includes/esql-md.md)]을 사용하는 쿼리를 실행합니다. [!INCLUDE[esql](../../../../../includes/esql-md.md)]에서는 `EntityClient`가 데이터베이스와 통신할 수 있도록 기본 쿼리 언어를 제공합니다. 자세한 내용은 [Entity Framework 용 EntityClient 공급자](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)합니다.
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에는 정식 명령 트리를 지원하는 업데이트된 SqlClient 데이터 공급자가 있습니다. 자세한 내용은 [Entity Framework 용 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)합니다.
 

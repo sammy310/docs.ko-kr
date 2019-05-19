@@ -2,20 +2,20 @@
 title: ADO.NET에서 Side-by-Side 실행
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 377af3c72b0a9a8eb26c8713d98f114803f08356
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d20d8e81d76284509d6fe733e4f283a9ab39cb00
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583625"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877087"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET에서 Side-by-Side 실행
 .NET Framework의 side-by-side-실행 응용 프로그램 컴파일된 버전을 사용 하 여 설치 하는.NET Framework의 여러 버전이 있는지 확인 하는 컴퓨터에서 응용 프로그램을 실행할 수 있다는 점입니다. Side-by-side-실행을 구성 하는 방법에 대 한 자세한 내용은 참조 하세요. [Side-by-side-실행](../../../../docs/framework/deployment/side-by-side-execution.md)합니다.  
   
- 한 버전의.NET Framework를 사용 하 여 컴파일된 응용 프로그램을 다른 버전의.NET Framework에서 실행할 수 있습니다. 그러나.NET Framework의 설치 된 각 버전에 대 한 응용 프로그램의 버전을 컴파일할 개별적으로 실행 하는 것이 좋습니다. 이 두 가지 방법 중 어떠한 방법으로 응용 프로그램을 실행 여부에 관계없이 모든 경우에 응용 프로그램의 다음 버전 또는 이전 버전과의 호환성에 영향을 줄 수 있는 릴리스 간의 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 변경 내용을 파악해야 합니다.  
+ 한 버전의.NET Framework를 사용 하 여 컴파일된 응용 프로그램을 다른 버전의.NET Framework에서 실행할 수 있습니다. 그러나.NET Framework의 설치 된 각 버전에 대 한 응용 프로그램의 버전을 컴파일할 개별적으로 실행 하는 것이 좋습니다. 두 시나리오에서 ADO.NET 응용 프로그램의 이전 버전과 호환성을 이후 버전과 호환성에 영향을 줄 수 있는 릴리스 간의 변경 내용을 파악 해야 합니다.  
   
 ## <a name="forward-compatibility-and-backward-compatibility"></a>다음 버전 및 이전 버전과의 호환성  
- 이후 버전과 호환성 응용 프로그램 이전 버전의.NET Framework를 사용 하 여 컴파일할 수 있는.NET Framework의 이후 버전에서 성공적으로 계속 실행 됩니다 않았음을 의미 합니다. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] .NET Framework 버전 1.1 용으로 작성 하는 코드는 이후 버전과 호환입니다.  
+ 이후 버전과 호환성 응용 프로그램 이전 버전의.NET Framework를 사용 하 여 컴파일할 수 있는.NET Framework의 이후 버전에서 성공적으로 계속 실행 됩니다 않았음을 의미 합니다. .NET Framework 버전 1.1 용으로 작성 하는 ADO.NET 코드는 이후 버전과 호환입니다.  
   
  이전 버전과 호환성 응용 프로그램을 최신 버전의.NET Framework에 대해 컴파일되는 이전 버전의 기능 손실 없이.NET Framework에서 계속 실행 않았음을 의미 합니다. 물론, 새 버전의.NET Framework에 도입 된 기능에 대 한 사례 되지 않습니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "65583625"
   
  그러나.NET Framework 버전 2.0 부터는.NET Framework 데이터 공급자의 모든 사용할 수 있습니다 부분적으로 신뢰할 수 있는 영역에서. 또한.NET Framework 버전 1.1에서에서.NET Framework 데이터 공급자에 새로운 보안 기능이 추가 되었습니다. 이 기능으로 특정 보안 영역에서 사용할 수 있는 연결 문자열을 제한할 수 있습니다. 뿐만 아니라 특정 보안 영역에 대해 빈 암호 사용을 비활성화할 수도 있습니다. 자세한 내용은 [Code Access Security and ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)을 참조하세요.  
   
- .NET Framework의 각 설치에 별도 Security.config 파일에 있으므로는 보안 설정 사용 하 여 호환성 문제가 없습니다. 그러나 응용 프로그램의 추가 보안 기능에 종속 하는 경우 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 를.NET Framework 버전 1.1 이상에 포함 됩니다 버전 1.0 시스템에 배포할 수 있습니다.  
+ .NET Framework의 각 설치에 별도 Security.config 파일에 있으므로는 보안 설정 사용 하 여 호환성 문제가 없습니다. 그러나.NET Framework 버전 1.1에에서 포함 된 이상 ADO.NET의 추가 보안 기능에 따라 응용 프로그램 버전 1.0 시스템에 배포할 수 없습니다.  
   
 ## <a name="sqlcommand-execution"></a>SqlCommand 실행  
  서.NET Framework 버전 1.1부터는 <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> 명령을 실행 하는 데이터 원본 변경 되었습니다.  

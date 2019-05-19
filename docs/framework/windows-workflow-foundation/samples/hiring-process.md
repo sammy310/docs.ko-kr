@@ -2,12 +2,12 @@
 title: 채용 프로세스
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 87e49613214a6a608bd8e22dc9470250c90e220a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 685798ceab5e14169af6bdf16ce30a0f6548dc8c
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622479"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881906"
 ---
 # <a name="hiring-process"></a>채용 프로세스
 이 샘플에서는 워크플로 서비스로 호스트되는 두 개의 워크플로와 메시징 활동을 사용하여 비즈니스 프로세스를 구현하는 방법을 보여 줍니다. 이 워크플로는 Contoso, Inc라는 가상 회사의 IT 인프라 중 일부입니다.  
@@ -126,7 +126,7 @@ ms.locfileid: "64622479"
 |지속적인 타이머|`ResumeRequestService`는 지속적인 타이머를 사용하여 직원 모집 공고 기간을 정의하며 직원 모집 공고는 마감 시한이 되면 마감됩니다.|ResumeRequestService|  
 |트랜잭션|<xref:System.Activities.Statements.TransactionScope>는 새 이력서를 받는 경우 몇 가지 활동 실행 내에서 데이터의 일관성을 유지하는 데 사용됩니다.|ResumeRequestService|  
 |트랜잭션|사용자 지정 지속성 참가자(`HiringRequestPersistenceParticipant`)와 사용자 지정 추적 참가자(`HistoryFileTrackingParticipant`)는 같은 트랜잭션을 사용합니다.|HiringRequestService|  
-|[!INCLUDE[wf1](../../../../includes/wf1-md.md)] 응용 프로그램에서 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]을 사용합니다.|두 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램에서 워크플로에 액세스합니다.|InternalClient/CareersWebSite|  
+|사용 하 여 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ASP.NET 응용 프로그램에서 합니다.|워크플로 두 개의 ASP.NET 응용 프로그램에서 액세스 됩니다.|InternalClient/CareersWebSite|  
   
 ## <a name="data-storage"></a>데이터 저장소  
  데이터는 `ContosoHR`이라는 SQL Server 데이터베이스에 저장되며, 이 데이터베이스를 만드는 데 사용되는 스크립트는 `DbSetup` 폴더에 있습니다. 워크플로 인스턴스는 `InstanceStore`라는 SQL Server 데이터베이스에 저장되며, 인스턴스 저장소를 만드는 데 사용되는 스크립트는 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 배포의 일부입니다.  

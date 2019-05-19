@@ -2,12 +2,12 @@
 title: Entity Framework 용어
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: 9272740bef21dbe8b28bd6e58354a342fb799002
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f78545102823b19cc65b100f2b270ae71c1bd077
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583537"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877477"
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework 용어
 이 항목에서는 자주 참조 되는 용어를 정의 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 설명서. 추가 정보를 볼 수 있는 관련 항목에 대한 링크가 제공됩니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "65583537"
 |.edmx 파일|CSDL로 표현된 개념적 모델, SSDL로 표현된 저장소 모델, MSL로 표현된 두 모델 간의 매핑이 포함된 XML 파일입니다. .edmx 파일은 [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] 도구에서 만들어집니다. 자세한 내용은 [.edmx 파일 개요](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))합니다.|  
 |end|연결에 참여하는 엔터티입니다.<br /><br /> 자세한 내용은 [끝 요소 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#end-element-csdl) 하 고 [연결 end](../../../../../docs/framework/data/adonet/association-end.md)합니다.|  
 |entity|데이터 형식을 정의하는 데 사용되는 응용 프로그램 도메인의 개념입니다.<br /><br /> 자세한 내용은 [EntityType 요소 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitytype-element-csdl) 하 고 [엔터티 형식](../../../../../docs/framework/data/adonet/entity-type.md)합니다.|  
-|EntityClient|[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)], `EntityConnection` 및 `EntityCommand`와 같은 클래스가 포함된, 저장소에 독립적인 `EntityDataReader` 데이터 공급자입니다. 협력 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 특정 저장소에 연결 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 데이터 공급자와 같은 `SqlClient`합니다.<br /><br /> 자세한 내용은 [Entity Framework 용 EntityClient 공급자](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)합니다.|  
+|EntityClient|와 같은 클래스를 포함 하는 저장소에 독립적인 ADO.NET 데이터 공급자 `EntityConnection`, `EntityCommand`, 및 `EntityDataReader`합니다. 협력 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 와 같은 저장소 특정 ADO.NET 데이터 공급자에 연결 하 고 `SqlClient`입니다.<br /><br /> 자세한 내용은 [Entity Framework 용 EntityClient 공급자](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)합니다.|  
 |엔터티 컨테이너(entity container)|지정한 네임스페이스에서 구현될 엔터티 집합과 연결 집합을 지정합니다.<br /><br /> 자세한 내용은 [EntityContainer 요소 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitycontainer-element-csdl) 하 고 [엔터티 컨테이너](../../../../../docs/framework/data/adonet/entity-container.md)합니다.|  
 |EDM(엔터티 데이터 모델)|저장된 폼에 관계없이 데이터 구조를 엔터티와 관계로 설명하는 개념 집합입니다.<br /><br /> 자세한 내용은 [엔터티 데이터 모델](../../../../../docs/framework/data/adonet/entity-data-model.md)합니다.|  
 |Entity Framework|개발자가 데이터 소스의 논리 스키마에 매핑된 개념적 모델을 사용할 수 있도록 하여 데이터 지향 소프트웨어 응용 프로그램의 개발을 지원하는 기술 집합입니다.<br /><br /> 자세한 내용은 [Entity Framework 개요](../../../../../docs/framework/data/adonet/ef/overview.md)합니다.|  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [Windows Forms], setting caption
 - Windows Forms, setting the text displayed
 ms.assetid: 9d18e0e0-f17f-4074-837d-e67ceeeaa89d
-ms.openlocfilehash: a0f567befb1e0c323dd16fffedec279ff836cbf8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 07355be0809f3dde480cf14b39e26a4266c4d936
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013220"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877407"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms 컨트롤에서 표시하는 텍스트 설정
 일반적으로 Windows Forms 컨트롤이 컨트롤의 기본 함수에 관련 된 일부 텍스트를 표시 합니다. 예를 들어, 한 <xref:System.Windows.Forms.Button> 컨트롤에는 일반적으로 단추를 클릭할 때 작업을 수행할지 여부를 나타내는 캡션을 표시 합니다. 모든 컨트롤에 대해 <xref:System.Windows.Forms.Control.Text%2A> 속성을 사용하여 텍스트를 설정하거나 반환할 수 있습니다. <xref:System.Windows.Forms.Control.Font%2A> 속성을 사용하여 글꼴을 변경할 수 있습니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "62013220"
   
      밑줄된 바로 가기 키를 만들려면 앰퍼샌드가 포함 (&) 문자를 바로 가기 키가 됩니다.  
   
-2. 속성 창에서 줄임표 단추를 클릭 합니다. (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton")) 옆에 <xref:System.Windows.Forms.Control.Font%2A> 속성입니다.  
+2.  속성 창에서 줄임표 단추를 클릭 합니다. (![의 줄임표 단추 (...)의 Visual Studio 속성 창의](./media/visual-studio-ellipsis-button.png)) 옆에 <xref:System.Windows.Forms.Control.Font%2A> 속성입니다.  
   
      표준 글꼴 대화 상자, 글꼴, 글꼴 스타일, 크기, 부작용 (예: 취소선, 밑줄) 및 스크립트를 선택 합니다.  
   

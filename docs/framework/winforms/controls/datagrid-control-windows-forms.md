@@ -8,18 +8,18 @@ helpviewer_keywords:
 - displaying data [Windows Forms], on forms
 - data [Windows Forms], displaying on Windows Forms
 ms.assetid: 1d9d5683-43d2-42dd-b6c3-e43f4cf0de99
-ms.openlocfilehash: 5f8fcd21802c52d61d354c5ba85d665bd17237db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a69605901eef7366c7a9ff9930e5f4ec6cece23
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011387"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878764"
 ---
 # <a name="datagrid-control-windows-forms"></a>DataGrid 컨트롤(Windows Forms)
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView> 컨트롤은 `DataGrid` 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 `DataGrid` 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.  
   
- Windows Forms `DataGrid` 컨트롤은 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 데이터 세트에 대한 사용자 인터페이스를 제공하고, 표 형식 데이터를 표시하며, 데이터 원본에 대한 업데이트를 사용하도록 설정합니다.  
+ Windows Forms `DataGrid` 컨트롤은 ADO.NET 데이터 집합을 표 형식 데이터를 표시 하 고 데이터 원본에 대 한 업데이트를 사용 하도록 설정 하기 위한 사용자 인터페이스를 제공 합니다.  
   
  `DataGrid` 컨트롤이 유효한 데이터 소스로 설정되면 컨트롤에 데이터를 자동으로 채우고 데이터의 모양에 기반하여 열과 행을 만듭니다. `DataGrid` 컨트롤은 단일 테이블 또는 테이블 집합 간의 계층 관계를 표시하는 데 사용할 수 있습니다.  
   
@@ -34,10 +34,10 @@ ms.locfileid: "62011387"
  프로그래밍 방식으로 `DataGrid` 컨트롤에 테이블과 열을 추가하는 방법을 설명합니다.  
   
  [방법: 디자이너를 사용 하 여 데이터 원본에 Windows Forms DataGrid 컨트롤 바인딩](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)  
- 디자이너를 사용하여 `DataGrid` 컨트롤에 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 데이터 세트를 바인딩하는 방법을 설명합니다.  
+ ADO.NET 데이터 집합을 바인딩하는 방법을 설명 합니다 `DataGrid` 디자이너를 사용 하 여 제어 합니다.  
   
  [방법: 데이터 소스에 Windows Forms DataGrid 컨트롤 바인딩](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
- `DataGrid` 컨트롤에 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 데이터 집합을 바인딩하는 방법을 설명합니다.  
+ ADO.NET 데이터 집합을 바인딩하는 방법을 설명 합니다 `DataGrid` 제어 합니다.  
   
  [방법: 런타임에 Windows Forms DataGrid 컨트롤에서 표시 된 데이터 변경](change-displayed-data-at-run-time-wf-datagrid-control.md)  
  `DataGrid` 컨트롤에서 프로그래밍 방식으로 데이터를 변경하는 방법을 설명합니다.  

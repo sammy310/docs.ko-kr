@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 0252259d92f08a0f871167fc7930818bab542cc5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6782261953fb5df94498deefb261407a2f0ba33a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626792"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882391"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows Forms에서 지원하는 데이터 소스
 일반적으로 데이터 바인딩은 데 사용 된 응용 프로그램 내에서 데이터베이스에 저장 된 데이터를 활용 합니다. Windows Forms 데이터 바인딩에 특정 최소 요구 사항이 충족 된다면 배열 및 컬렉션 등의 다른 구조에 있는 데이터 뿐만 아니라 데이터베이스에서 데이터를 액세스할 수 있습니다.  
@@ -44,12 +44,12 @@ ms.locfileid: "64626792"
  <xref:System.Collections.IEnumerable>  
  만 지 원하는 데이터 소스에 Windows Forms 컨트롤을 바인딩할 수 있습니다 합니다 <xref:System.Collections.IEnumerable> 인터페이스를 통해 바인딩된 경우를 <xref:System.Windows.Forms.BindingSource> 구성 요소입니다.  
   
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 데이터 개체  
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 데이터 구조에 대 한 바인딩에 적합 한 개수를 제공합니다. 각 해당 숙련도 및 복잡성에 따라 다릅니다.  
+ ADO.NET 데이터 개체  
+ ADO.NET에 대 한 바인딩에 적합 한 데이터 구조를 많이 제공합니다. 각 해당 숙련도 및 복잡성에 따라 다릅니다.  
   
 - <xref:System.Data.DataColumn>. <xref:System.Data.DataColumn> 는의 필수 구성 요소를 <xref:System.Data.DataTable>를 열 수를 하나의 테이블을 구성 합니다. 각 <xref:System.Data.DataColumn> 에 <xref:System.Data.DataColumn.DataType%2A> 열 (예를 들어, 자동차를 설명 하는 테이블에 있는 자동차의 제조업체)에 저장 된 데이터의 종류를 결정 하는 속성입니다. 바인딩할 수 있습니다 단순 컨트롤 (같은 <xref:System.Windows.Forms.TextBox> 컨트롤의 <xref:System.Windows.Forms.Control.Text%2A> 속성) 데이터 테이블 내의 열입니다.  
   
-- <xref:System.Data.DataTable>. A <xref:System.Data.DataTable> 의 행과 열이 있는 테이블의 표현인 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]합니다. 두 컬렉션을 포함 하는 데이터 테이블: <xref:System.Data.DataColumn>합니다 (해당 테이블에 입력할 수 있는 데이터 종류 결정)는 지정된 된 테이블의 데이터 열을 나타내는 및 <xref:System.Data.DataRow>, 지정된 된 테이블의 데이터 행을 나타내는입니다. 바인딩할 수 있습니다 복합 컨트롤을 데이터 테이블에 포함 된 정보 (바인딩 등의 <xref:System.Windows.Forms.DataGridView> 컨트롤을 데이터 테이블에). 그러나에 바인딩하는 경우는 <xref:System.Data.DataTable>, 테이블의 기본 보기에 실제로 바인딩는 합니다.  
+- <xref:System.Data.DataTable>. <xref:System.Data.DataTable> 행 및 열으로 ADO.NET 사용 하 여 테이블의 표현입니다. 두 컬렉션을 포함 하는 데이터 테이블: <xref:System.Data.DataColumn>합니다 (해당 테이블에 입력할 수 있는 데이터 종류 결정)는 지정된 된 테이블의 데이터 열을 나타내는 및 <xref:System.Data.DataRow>, 지정된 된 테이블의 데이터 행을 나타내는입니다. 바인딩할 수 있습니다 복합 컨트롤을 데이터 테이블에 포함 된 정보 (바인딩 등의 <xref:System.Windows.Forms.DataGridView> 컨트롤을 데이터 테이블에). 그러나에 바인딩하는 경우는 <xref:System.Data.DataTable>, 테이블의 기본 보기에 실제로 바인딩는 합니다.  
   
 - <xref:System.Data.DataView>. <xref:System.Data.DataView> 필터링 하거나 정렬할 수 있는 단일 데이터 테이블의 사용자 지정 뷰입니다. 데이터 보기는 "스냅숏" 복합 바인딩된 컨트롤에서 사용 하는 데이터입니다. 단순 바인딩 또는 복합 바인딩할 데이터 뷰의 데이터 따르면 깨끗 하 고 업데이트 하는 데이터 원본 대신 데이터의 고정된 "그림"을 바인딩하는 알고 있어야 합니다.  
   

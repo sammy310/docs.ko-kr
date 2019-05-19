@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-ms.openlocfilehash: 65d4f2858c2be4c2a6872f96ef3739bb16253d74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4ac823b5419d845437ef8e89f5123adafda0c5a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949866"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881355"
 ---
 # <a name="securing-services"></a>서비스에 보안 설정
 Windows Communication Foundation (WCF) 서비스의 보안 구성의 두 가지 기본 요구 사항: 전송 보안 및 권한 부여 합니다. (세 번째 요구 사항에 설명 된 보안 이벤트 감사 [감사](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) 간단히 말해서 전송 보안은 인증(서비스와 클라이언트 모두에 대해 ID 확인), 기밀성(메시지 암호화) 및 무결성(변조 확인을 위한 디지털 서명)을 포함합니다. 권한 부여는 리소스에 대한 액세스 제어입니다. 예를 들어, 권한 있는 사용자에게만 파일 읽기를 허용합니다. WCF의 기능을 사용 하는 두 가지 기본 요구 사항은 쉽게 구현 됩니다.  
@@ -50,7 +50,7 @@ Windows Communication Foundation (WCF) 서비스의 보안 구성의 두 가지 
  인터넷 보안은 인트라넷 보안과 동일한 요구 사항으로 구성됩니다. 서비스는 자격 증명을 제공하여 인증서를 증명하고, 클라이언트는 서비스에 대한 ID를 증명해야 합니다. 클라이언트의 ID가 증명되면 서비스는 클라이언트가 리소스에 대해 갖는 액세스 권한을 제어할 수 있습니다. 그러나 인터넷의 특성이 서로 다르기 때문에 제공되는 자격 증명이 Windows 도메인에 사용된 자격 증명과 다릅니다. Kerberos 컨트롤러는 자격 증명에 대한 티켓을 사용하여 도메인에서 사용자 인증을 처리하지만, 인터넷에서는 서비스와 클라이언트가 다양한 방법 중 하나를 사용하여 자격 증명을 제공합니다. 그러나이 항목에서는 인터넷에서 액세스할 수 있는 WCF 서비스를 만들 수 있게 하는 일반적인 방법 방법은입니다.  
   
 ### <a name="using-iis-and-aspnet"></a>IIS 및 ASP.NET 사용  
- 인터넷 보안 요구 사항과 문제 해결 메커니즘은 새로운 기능이 아닙니다. IIS는 인터넷에 대 한 Microsoft의 웹 서버 및 이며 이러한 문제를 해결 하는 많은 보안 기능 또한 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] WCF 서비스에서 사용할 수 있는 보안 기능을 포함 합니다. 이러한 보안 기능을 활용 하려면 IIS에서 WCF 서비스를 호스트 합니다.  
+ 인터넷 보안 요구 사항과 문제 해결 메커니즘은 새로운 기능이 아닙니다. IIS는 인터넷에 대 한 Microsoft의 웹 서버 및 이며 이러한 문제를 해결 하는 많은 보안 기능 또한 ASP.NET에는 WCF 서비스를 사용할 수 있는 보안 기능이 포함 되어 있습니다. 이러한 보안 기능을 활용 하려면 IIS에서 WCF 서비스를 호스트 합니다.  
   
 #### <a name="using-aspnet-membership-and-role-providers"></a>ASP.NET 멤버 자격 및 역할 공급자 사용  
  ASP.NET에는 멤버 자격 및 역할 공급자가 포함되어 있습니다. 공급자는 호출자를 인증하는 사용자 이름/암호 쌍으로 구성된 데이터베이스이며 각 호출자의 액세스 권한을 지정할 수 있습니다. WCF를 사용 하 여 기존 멤버 자격 및 역할 공급자 구성을 통해 쉽게 사용할 수 있습니다. 이 내용을 설명하는 샘플 애플리케이션에 대해서는 [Membership and Role Provider](../../../docs/framework/wcf/samples/membership-and-role-provider.md) 샘플을 참조하세요.  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: c8f6e51b5ab8242ba8253a04160c40e59fce0088
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6484e6bfce885c28b943ad9844bfa6fc17889c2b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648196"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882244"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>연습: 디자이너를 사용하여 ListView 및 TreeView 컨트롤에서 탐색기 스타일 인터페이스 만들기
 Visual Studio의 이점 중 하나는 짧은 시간 안에 전문적으로 보이는 Windows Forms 응용 프로그램을 만들 수 있습니다. 일반적인 시나리오를 사용 하 여 사용자 인터페이스 (UI)를 만드는 것 <xref:System.Windows.Forms.ListView> 및 <xref:System.Windows.Forms.TreeView> 와 비슷한 Windows 운영 체제의 Windows 탐색기 기능을 제어 합니다. Windows 탐색기는 사용자의 컴퓨터에서 파일 및 폴더의 계층 구조를 표시합니다.  
@@ -54,7 +54,7 @@ Visual Studio의 이점 중 하나는 짧은 시간 안에 전문적으로 보�
   
     2. <xref:System.Windows.Forms.ListView.View%2A> 속성을 <xref:System.Windows.Forms.View.Details>으로 설정합니다.  
   
-    3. 줄임표를 클릭 하 여 ColumnHeader 컬렉션 편집기를 엽니다 (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton"))에 <xref:System.Windows.Forms.ListView.Columns%2A> 속성**합니다.** 세 개의 열을 추가 하 고 설정 자신의 <xref:System.Windows.Forms.ColumnHeader.Text%2A> 속성을 `Name`를 `Type`, 및 `Last Modified`, 각각. **확인** 을 클릭하여 대화 상자를 닫습니다.  
+    3.  줄임표를 클릭 하 여 ColumnHeader 컬렉션 편집기를 엽니다 (![의 줄임표 단추 (...)의 Visual Studio 속성 창의](./media/visual-studio-ellipsis-button.png))에 <xref:System.Windows.Forms.ListView.Columns%2A> 속성**합니다.** 세 개의 열을 추가 하 고 설정 자신의 <xref:System.Windows.Forms.ColumnHeader.Text%2A> 속성을 `Name`를 `Type`, 및 `Last Modified`, 각각. **확인** 을 클릭하여 대화 상자를 닫습니다.  
   
     4. <xref:System.Windows.Forms.ListView.SmallImageList%2A> 속성을 `imageList1.`로 설정합니다.  
   

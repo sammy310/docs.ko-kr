@@ -2,15 +2,15 @@
 title: AJAX Service Using HTTP POST
 ms.date: 03/30/2017
 ms.assetid: 1ac80f20-ac1c-4ed1-9850-7e49569ff44e
-ms.openlocfilehash: 2bc1722056af4fc71f5f93d92ecd12accd99548f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2fb98e38956719608517caa0e7eeaebd14df8d95
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002848"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882144"
 ---
 # <a name="ajax-service-using-http-post"></a>AJAX Service Using HTTP POST
-이 샘플에서는 Windows Communication Foundation (WCF)를 만드는 데는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] HTTP POST를 사용 하는 Asynchronous JavaScript and XML (AJAX) 서비스입니다. AJAX 서비스는 웹 브라우저 클라이언트에서 기본 JavaScript 코드를 사용하여 액세스할 수 있는 서비스입니다. 이 샘플을 기반으로 합니다 [기본 AJAX 서비스](../../../../docs/framework/wcf/samples/basic-ajax-service.md) 두 샘플 사이의 유일한 차이점은 HTTP GET 대신 HTTP post를 사용 하 여 샘플입니다.  
+이 샘플에는 Windows Communication Foundation (WCF)를 사용 하 여 HTTP POST를 사용 하는 ASP.NET Asynchronous JavaScript and XML (AJAX) 서비스를 만드는 방법을 보여 줍니다. AJAX 서비스는 웹 브라우저 클라이언트에서 기본 JavaScript 코드를 사용하여 액세스할 수 있는 서비스입니다. 이 샘플을 기반으로 합니다 [기본 AJAX 서비스](../../../../docs/framework/wcf/samples/basic-ajax-service.md) 두 샘플 사이의 유일한 차이점은 HTTP GET 대신 HTTP post를 사용 하 여 샘플입니다.  
   
  AJAX 지원 Windows Communication Foundation (WCF)를 통해 ASP.NET AJAX와 함께 사용에 최적화 된는 `ScriptManager` 제어 합니다. ASP.NET AJAX와 함께 WCF를 사용 하 여 예제를 참조 합니다 [Ajax 샘플](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)합니다.  
   

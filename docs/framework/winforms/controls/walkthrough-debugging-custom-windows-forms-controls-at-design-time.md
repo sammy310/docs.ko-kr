@@ -15,12 +15,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: a8f228d334785cd880b06dbeda8f96550471599a
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 39adcbd6d915f8b086df7e425efbe08ae8680a45
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211540"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882457"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>연습: 디자인 타임에 사용자 지정 Windows Forms 컨트롤 디버깅
 
@@ -124,7 +124,7 @@ Visual Studio에서 "DebuggingExample" 라는 Windows 응용 프로그램 프로
 
 2. 에 **DebugControlLibrary** 속성 시트를 선택 합니다 **디버그** 탭 합니다.
 
-     에 **시작 작업** 섹션에서 **시작 외부 프로그램**합니다. 해야 줄임표 하므로 별도 인스턴스, Visual Studio의 디버깅 (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton")) 클릭 하 여 Visual Studio IDE에 대 한 검색 합니다. 실행 파일의 이름은 **devenv.exe**, 되며 해당 경로 %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe 기본 위치에 설치한 경우.
+     에 **시작 작업** 섹션에서 **시작 외부 프로그램**합니다. 해야 줄임표 하므로 Visual Studio의 개별 인스턴스를 디버깅 (![의 줄임표 단추 (...)의 Visual Studio 속성 창에서](./media/visual-studio-ellipsis-button.png)) 클릭 하 여 Visual Studio IDE에 대 한 검색 합니다. 실행 파일의 이름은 **devenv.exe**, 되며 해당 경로 %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe 기본 위치에 설치한 경우.
 
 3. **확인** 을 클릭하여 대화 상자를 닫습니다.
 

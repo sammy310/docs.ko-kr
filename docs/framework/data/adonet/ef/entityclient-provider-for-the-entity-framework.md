@@ -2,18 +2,18 @@
 title: Entity Framework용 EntityClient 공급자
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: 268608c82070e60007bc09f97a775918e0d950f3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 17f18753cc64bce5901c9f57181a8c08733f0cfc
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583700"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878798"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Entity Framework용 EntityClient 공급자
 EntityClient 공급자는 Entity Framework 응용 프로그램에서 개념적 모델에 설명된 데이터에 액세스하는 데 사용하는 데이터 공급자입니다. 개념적 모델에 대 한 자세한 내용은 [모델링 및 매핑](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)합니다. EntityClient는 다른 .NET Framework 데이터 공급자를 사용하여 데이터 소스에 액세스합니다. 예를 들어, EntityClient는 SQL Server 데이터베이스에 액세스할 때 .NET Framework Data Provider for SQL Server(SqlClient)를 사용합니다. SqlClient 공급자에 대 한 자세한 내용은 [Entity Framework 용 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)합니다. EntityClient 공급자는 <xref:System.Data.EntityClient> 네임스페이스에 구현되어 있습니다.  
   
 ## <a name="managing-connections"></a>연결 관리  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]는 기본 데이터 공급자 및 관계형 데이터베이스에 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]을 제공하는 방법으로 저장소별 <xref:System.Data.EntityClient.EntityConnection> 데이터 공급자를 기반으로 빌드됩니다. 생성 하는 <xref:System.Data.EntityClient.EntityConnection> 개체를 필요한 모델 및 매핑 및 저장소별 데이터 공급자 이름 및 연결 문자열을 포함 하는 메타 데이터 집합을 참조 해야 합니다. 이후에 <xref:System.Data.EntityClient.EntityConnection> 는 이기 엔터티에 개념적 모델에서 생성 된 클래스를 통해 액세스할 수 있습니다.  
+ 합니다 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 제공 하 여 저장소별 ADO.NET 데이터 공급자를 기반을 <xref:System.Data.EntityClient.EntityConnection> 기본 데이터 공급자 및 관계형 데이터베이스입니다. 생성 하는 <xref:System.Data.EntityClient.EntityConnection> 개체를 필요한 모델 및 매핑 및 저장소별 데이터 공급자 이름 및 연결 문자열을 포함 하는 메타 데이터 집합을 참조 해야 합니다. 이후에 <xref:System.Data.EntityClient.EntityConnection> 는 이기 엔터티에 개념적 모델에서 생성 된 클래스를 통해 액세스할 수 있습니다.  
   
  app.config 파일에서 연결 문자열을 지정할 수 있습니다.  
   

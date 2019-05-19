@@ -2,12 +2,12 @@
 title: ADO.NET의 연결 문자열
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 1197335f3ba2a09b6e7303d31bc32383d1fd3436
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b7cb0ab061da8364a9fecc3868ba9aaf7501577
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032765"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881155"
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET의 연결 문자열
 
@@ -17,24 +17,32 @@ ms.locfileid: "62032765"
 
 연결 문자열은 키/값 매개 변수 쌍의 세미콜론으로 구분 된 목록:
 
-    keyword1=value; keyword2=value;
+```
+keyword1=value; keyword2=value;
+```
 
 키워드는 대/소문자 구분 하지 않습니다. 그러나 값을 않을 대/소문자 구분, 데이터 원본에 따라 합니다. 키워드와 값이 포함 될 수 있습니다 [공백 문자](https://en.wikipedia.org/wiki/Whitespace_character#Unicode)합니다. 선행 및 후행 공백을 키워드에서 무시 되 고 따옴표가 값입니다.
 
 값을 세미콜론을 포함 하는 경우 [유니코드 제어 문자](https://en.wikipedia.org/wiki/Unicode_control_characters), 또는 단일 또는 이중 따옴표로 묶어야 합니다 선행 또는 후행 공백을 삭제 합니다. 예를 들어:
 
-    Keyword=" whitespace  ";
-    Keyword='special;character';
+```
+Keyword=" whitespace  ";
+Keyword='special;character';
+```
 
 바깥쪽 문자 값이 포함 될 수 있습니다. 따라서 큰따옴표에만 그 반대로 작은따옴표를 포함 하는 값을 묶을 수 있습니다.
 
-    Keyword='double"quotation;mark';
-    Keyword="single'quotation;mark";
+```
+Keyword='double"quotation;mark';
+Keyword="single'quotation;mark";
+```
 
 등호 기호 뿐만 아니라 자체에 따옴표 필요 하지 않습니다, 이스케이프 다음 연결 문자열을 유효한 되므로:
 
-    Keyword=no "escaping" 'required';
-    Keyword=a=b=c
+```
+Keyword=no "escaping" 'required';
+Keyword=a=b=c
+```
 
 두 번째 예의 값은 각 값은 다음 세미콜론 이나 문자열의 끝까지 내용은 이후 `a=b=c`, 최종 세미콜론 선택 사항입니다.
 

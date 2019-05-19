@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], data binding
 - cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-ms.openlocfilehash: 60ba1e9304320346d505f3f73e1ba93ff6edab63
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3217680a2bab43124b75529bead97ffcfbb06aea
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961657"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882132"
 ---
 # <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>방법: 런타임에 Windows Forms DataGrid 컨트롤에 표시되는 데이터 변경
 > [!NOTE]
@@ -64,13 +64,13 @@ ms.locfileid: "61961657"
        gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-     런타임에 사용할 수는 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 바인딩할 메서드는 <xref:System.Windows.Forms.DataGrid> 컨트롤을 다른 데이터 소스입니다. 예를 들어, 여러 개 있을 수 있습니다 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 다른 데이터베이스에 연결 된 각 데이터 컨트롤입니다.  
+     런타임에 사용할 수는 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 바인딩할 메서드는 <xref:System.Windows.Forms.DataGrid> 컨트롤을 다른 데이터 소스입니다. 예를 들어 여러 ADO.NET 데이터 컨트롤이 있을 수 있습니다, 각각 서로 다른 데이터베이스에 연결 합니다.  
   
 ### <a name="to-change-the-datasource-programmatically"></a>데이터 소스를 프로그래밍 방식으로 변경 하려면  
   
 1. 설정 된 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 메서드를 데이터 원본 및 바인딩할 하려는 테이블의 이름입니다.  
   
-     다음 예제에서는 사용 하 여 날짜 소스를 변경 하는 방법을 보여 줍니다 합니다 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 메서드는 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] Pubs 데이터베이스에 있는 Authors 테이블에 연결 된 데이터 컨트롤 (adoPubsAuthors).  
+     다음 예제에서는 사용 하 여 날짜 소스를 변경 하는 방법의 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> Pubs 데이터베이스에 있는 Authors 테이블에 연결 된 ADO.NET 데이터 컨트롤 (adoPubsAuthors) 메서드.  
   
     ```vb  
     Private Sub ResetSource()  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 4a41eac3d5b51936ebbae8d9e3dcf623da676bce
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 05ba633415f782d5edea7028c1b82b8031428576
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583502"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878245"
 ---
 # <a name="frequently-asked-questions"></a>질문과 대답
 다음 단원에서는 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]를 구현할 때 발생할 수 있는 일반적인 문제에 대한 해결 방법을 제시합니다.  
@@ -185,7 +185,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  대답: <xref:System.Data.Linq.DataContext>의 인스턴스는 다시 사용하지 마세요. 각 <xref:System.Data.Linq.DataContext>는 하나의 특정 편집/쿼리 세션에 대한 상태(ID 캐시 포함)를 유지합니다. 데이터베이스의 현재 상태를 기반으로 새 인스턴스를 사용하려면 새 <xref:System.Data.Linq.DataContext>를 사용하세요.  
   
- 기본 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 연결 풀링은 사용할 수 있습니다. 자세한 내용은 [SQL Server 연결 풀링(ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)을 참조하세요.  
+ 기본 ADO.NET 연결 풀링을 사용할 수 있습니다. 자세한 내용은 [SQL Server 연결 풀링(ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)을 참조하세요.  
   
 ## <a name="second-datacontext-is-not-updated"></a>두 번째 DataContext가 업데이트되지 않음  
  질문. <xref:System.Data.Linq.DataContext>의 인스턴스 하나를 사용하여 데이터베이스에 값을 저장했습니다. 그런데 동일한 데이터베이스에 대한 두 번째 <xref:System.Data.Linq.DataContext>에 업데이트된 값이 반영되지 않습니다. 두 번째 <xref:System.Data.Linq.DataContext> 인스턴스가 캐시된 값을 반환하는 것 같습니다.  

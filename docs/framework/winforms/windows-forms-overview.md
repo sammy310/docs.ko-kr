@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: c9215d1072060c4272c7d61056d51297dd997197
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 08e85828451ba6c66b13ff31e3d6c106871b8154
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645746"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875879"
 ---
 # <a name="windows-forms-overview"></a>Windows Forms 개요
 
@@ -66,7 +66,7 @@ ms.locfileid: "65645746"
 |설명|도움말 항목|
 |-----------------|----------------|
 |<xref:System.Windows.Forms.BindingSource> 구성 요소 사용|[방법: 디자이너를 사용 하는 BindingSource 구성 요소를 사용 하 여 Windows Forms 컨트롤 바인딩](./controls/bind-wf-controls-with-the-bindingsource.md)|
-|[!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 데이터 소스 작업|[방법: Forms BindingSource 구성 요소는 Windows 사용 하 여 ADO.NET 데이터 정렬 및 필터링](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|ADO.NET 데이터 원본 작업|[방법: Forms BindingSource 구성 요소는 Windows 사용 하 여 ADO.NET 데이터 정렬 및 필터링](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |데이터 소스 창 사용|[Visual Studio에서 데이터에 Windows Forms 컨트롤 바인딩](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)|
 |애플리케이션 설정 사용|[방법: 응용 프로그램 설정 만들기](./advanced/how-to-create-application-settings.md)|
 

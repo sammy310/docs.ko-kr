@@ -2,12 +2,12 @@
 title: ADO.NET 개요
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 7ec3b5f4dd08a39f96ed28e6666fd4b00bced903
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a47a2734e68b4c00aab077191d5257386cd6602
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607364"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877204"
 ---
 # <a name="adonet-overview"></a>ADO.NET 개요
 ADO.NET은 OLE DB 및 ODBC를 통해 노출되는 데이터 소스, SQL Server 및 XML과 같은 데이터 소스에 대한 일관성 있는 액세스를 제공합니다. 데이터 공유 소비자 응용 프로그램은 ADO.NET을 통해 이러한 데이터 소스에 연결하여 포함된 데이터를 검색, 처리 및 업데이트할 수 있습니다.  
@@ -46,7 +46,7 @@ ADO.NET은 OLE DB 및 ODBC를 통해 노출되는 데이터 소스, SQL Server �
   
 ## <a name="related-sections"></a>관련 단원  
  [ADO.NET의 새로운 기능](../../../../docs/framework/data/adonet/whats-new.md)  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]에 새로 추가된 기능을 소개합니다.  
+ ADO.NET에 새로 추가된 기능을 소개합니다.  
   
  [ADO.NET 응용 프로그램 보안](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  ADO.NET을 사용할 때 보안 코드를 작성하는 방법에 대해 설명합니다.  

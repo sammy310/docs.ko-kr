@@ -2,12 +2,12 @@
 title: Windows Communication Foundation 샘플의 일회 설치 절차
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: a34c2ee7cb98c6120e23114674712de0ba5b8162
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f55f994d1fd2d8af8ba15aa159d1bab84cc72d15
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664802"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876715"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 샘플의 일회 설치 절차
 대부분의 Windows Communication Foundation (WCF) 샘플 인터넷 정보 서비스 (IIS)에서 호스팅되고 공용 가상 디렉터리에서 실행 됩니다. 이 일회 설치 절차에서는 디스크에 폴더를 만듭니다. 또한 이라는 iis 가상 디렉터리 추가 **ServiceModelSamples**합니다.
@@ -19,7 +19,7 @@ ms.locfileid: "64664802"
   
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>WCF 샘플의 일회 설치 절차  
   
-1. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]이 설치되어 있는지 확인합니다. 설정 하는 방법에 대 한 자세한 내용은 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]를 참조 하세요 [인터넷 정보 서비스 호스팅 지침](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)합니다.  
+1. ASP.NET가 설정 되어 있는지 확인 합니다. ASP.NET을 설정 하는 방법에 대 한 자세한 내용은 참조 하세요. [인터넷 정보 서비스 호스팅 지침](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)합니다.  
   
 2. [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]이 설치되어 있는지 확인합니다. 다음 v4.0 디렉터리 (또는 이상) 검색: **\Windows\Microsoft.NET\Framework**  
   

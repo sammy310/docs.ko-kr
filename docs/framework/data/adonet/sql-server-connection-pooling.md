@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 566a7905ac2eda17046595bcccc868e44f6a1e9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5165f3ec1ef41e3fb0dd053c112610183197108a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664108"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877439"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server 연결 풀링(ADO.NET)
 데이터베이스 서버에 연결하는 과정은 일반적으로 시간이 많이 걸리는 여러 단계로 이루어져 있습니다. 즉, 소켓이나 명명된 파이프 같은 실제 채널을 설정하고 서버와의 초기 핸드셰이크를 발생시키며 연결 문자열 정보를 구문 분석할 뿐 아니라 서버에 연결을 인증하고 현재 트랜잭션에 인리스트먼트하기 위해 검사를 실행해야 하는 등의 단계를 거쳐야 합니다.  
   
- 실제로 대부분의 응용 프로그램에서는 연결을 위해 구성을 하나만 사용하거나 몇 개의 서로 다른 구성을 사용하기도 합니다. 따라서 응용 프로그램이 실행되는 동안 여러 개의 동일한 연결이 반복해서 열리고 닫히게 됩니다. 연결을 여는 비용을 최소화 하기 위해 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 이라는 최적화 기법을 사용 하 여 *연결 풀링을*합니다.  
+ 실제로 대부분의 응용 프로그램에서는 연결을 위해 구성을 하나만 사용하거나 몇 개의 서로 다른 구성을 사용하기도 합니다. 따라서 응용 프로그램이 실행되는 동안 여러 개의 동일한 연결이 반복해서 열리고 닫히게 됩니다. ADO.NET 연결을 여는 비용을 최소화 하려면 이라는 최적화 기법을 사용 *연결 풀링을*합니다.  
   
  연결 풀링을 사용하면 새 연결을 열어야 하는 횟수가 줄어듭니다. 합니다 *풀러* 실제 연결의 소유권을 유지 관리 합니다. 주어진 각 연결 구성에 대해 활성 연결 집합을 활성화된 상태로 유지하여 연결을 관리합니다. 사용자가 연결에 `Open`을 호출할 때마다 풀러는 풀에서 사용 가능한 연결을 찾습니다. 풀링된 연결이 있으면 새 연결을 여는 대신 이를 호출자에게 반환합니다. 응용 프로그램에서 연결에 `Close`를 호출하면 풀러는 실제로 연결을 닫는 대신 풀링된 활성 연결 집합에 이를 반환합니다. 연결이 풀로 반환되면 다음에 `Open`을 호출할 때 다시 사용할 수 있는 준비를 갖추게 됩니다.  
   
- 구성이 동일한 연결만 풀링할 수 있습니다. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]에서는 각 구성마다 하나씩, 여러 개의 풀을 동시에 유지합니다. 연결은 연결 문자열을 기준으로 풀로 나뉘며 통합 보안을 사용하는 경우에는 Windows ID를 기준으로 합니다. 또한 연결은 트랜잭션에 인리스트먼트되었는지 여부에 따라 풀링되기도 합니다. <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A>를 사용할 때는 <xref:System.Data.SqlClient.SqlCredential> 인스턴스가 연결 풀에 영향을 줍니다. <xref:System.Data.SqlClient.SqlCredential>의 개별 인스턴스는 사용자 ID 및 암호가 동일한 경우에도 서로 다른 연결 풀을 사용합니다.  
+ 구성이 동일한 연결만 풀링할 수 있습니다. ADO.NET 동시에, 각 구성 마다 하나씩 여러 풀을 유지합니다. 연결은 연결 문자열을 기준으로 풀로 나뉘며 통합 보안을 사용하는 경우에는 Windows ID를 기준으로 합니다. 또한 연결은 트랜잭션에 인리스트먼트되었는지 여부에 따라 풀링되기도 합니다. <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A>를 사용할 때는 <xref:System.Data.SqlClient.SqlCredential> 인스턴스가 연결 풀에 영향을 줍니다. <xref:System.Data.SqlClient.SqlCredential>의 개별 인스턴스는 사용자 ID 및 암호가 동일한 경우에도 서로 다른 연결 풀을 사용합니다.  
   
- 연결 풀링을 사용하면 응용 프로그램의 성능 및 확장성을 대폭 향상시킬 수 있습니다. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]에서 연결 풀링은 기본적으로 활성화되어 있습니다. 이를 명시적으로 비활성화하지 않는 한, 풀러는 응용 프로그램에서 열리고 닫히는 연결을 최적화합니다. 또한 여러 개의 연결 문자열 한정자를 지정하여 연결 풀링 동작을 제어할 수 있습니다. 자세한 내용은 이 항목 뒷부분에 있는 "연결 문자열 키워드를 사용하여 연결 풀링 제어"를 참조하세요.  
+ 연결 풀링을 사용하면 응용 프로그램의 성능 및 확장성을 대폭 향상시킬 수 있습니다. 기본적으로 연결 풀링이 ADO.NET에서 사용 됩니다. 이를 명시적으로 비활성화하지 않는 한, 풀러는 응용 프로그램에서 열리고 닫히는 연결을 최적화합니다. 또한 여러 개의 연결 문자열 한정자를 지정하여 연결 풀링 동작을 제어할 수 있습니다. 자세한 내용은 이 항목 뒷부분에 있는 "연결 문자열 키워드를 사용하여 연결 풀링 제어"를 참조하세요.  
   
 > [!NOTE]
 >  연결 풀링을 사용하는 경우와 시간 초과 오류나 기타 로그인 오류가 발생하면 예외가 throw되고 이후 연결 시도가 "차단 기간"인 다음 5초 동안 적용되지 않습니다. 애플리케이션에서 차단 기간 내에 연결을 시도하면 첫 번째 예외가 다시 throw됩니다. 차단 기간이 끝난 후 또 다른 연결이 실패하면 이전 차단 기간의 두 배에서 최대 1분에 이르는 새 차단 기간이 적용됩니다.  
@@ -80,7 +80,7 @@ using (SqlConnection connection = new SqlConnection(
  네트워크에 존재하지 않는 서버에 대한 연결이 있는 경우 연결 풀러에서 이 연결을 검색하지 못하고 잘못된 연결로 표시하지 못해도 풀에서 선택할 수는 있습니다. 이는 연결이 여전히 유효한지 확인하는 오버헤드가 서버에 또 다른 라운드트립을 발생시켜 풀러를 사용하는 이점을 없애기 때문입니다. 이 경우 연결을 사용하려는 첫 번째 시도에서 연결하기 어렵다는 것을 감지하게 되며 예외가 throw됩니다.  
   
 ## <a name="clearing-the-pool"></a>풀 지우기  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0에는 <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> 및 <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>과 같이 풀을 지우는 메서드가 두 가지 도입되었습니다. `ClearAllPools`는 지정된 공급자의 연결 풀을 지우며 `ClearPool`은 특정 연결과 관련된 연결 풀을 지웁니다. 메서드를 호출할 때 사용 중인 연결이 있으면 적절히 표시됩니다. 그리고 연결이 닫히면 풀로 반환되는 대신 삭제됩니다.  
+ ADO.NET 2.0 풀을 지우는 두 개의 새 메서드를 도입 합니다. <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> 고 <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>입니다. `ClearAllPools`는 지정된 공급자의 연결 풀을 지우며 `ClearPool`은 특정 연결과 관련된 연결 풀을 지웁니다. 메서드를 호출할 때 사용 중인 연결이 있으면 적절히 표시됩니다. 그리고 연결이 닫히면 풀로 반환되는 대신 삭제됩니다.  
   
 ## <a name="transaction-support"></a>트랜잭션 지원  
  연결은 트랜잭션 컨텍스트에 따라 풀에서 선택되어 할당됩니다. 연결 문자열에 `Enlist=false`가 지정되어 있는 경우를 제외하고 연결 풀에서는 연결이 <xref:System.Transactions.Transaction.Current%2A> 컨텍스트에 인리스트먼트되었는지 확인합니다. 연결이 닫혀 인리스트먼트된 `System.Transactions` 트랜잭션이 있는 풀로 반환되면 동일한 `System.Transactions` 트랜잭션이 있는 해당 연결 풀에 대한 다음 요청을 통해 동일한 연결(사용할 수 있는 경우)이 반환되도록 하는 데 따로 사용됩니다. 하지만, 그와 같은 요청이 실행되고 풀링된 연결을 사용할 수 없는 경우 연결은 풀의 비트랜잭트 부분에서 선택되어 인리스트먼트됩니다. 풀의 어느 영역에서도 연결을 사용할 수 없으면 새 연결이 만들어져 인리스트먼트됩니다.  

@@ -2,18 +2,18 @@
 title: 중간 계층 클라이언트 응용 프로그램
 ms.date: 03/30/2017
 ms.assetid: f9714a64-d0ae-4a98-bca0-5d370fdbd631
-ms.openlocfilehash: c7934f6d0d34992db229244373b5a170180f51e6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1b1ba177c365bb6913679ed2a217e66d7a0d522b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649452"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877464"
 ---
 # <a name="middle-tier-client-applications"></a>중간 계층 클라이언트 응용 프로그램
 이 항목에서는 Windows Communication Foundation (WCF)를 사용 하는 중간 계층 클라이언트 응용 프로그램에 관련 된 다양 한 문제를 설명 합니다.  
   
 ## <a name="increasing-middle-tier-client-performance"></a>중간 계층 클라이언트 성능 향상  
- 사용 하 여 웹 서비스와 같은 이전 통신 기술과 비교 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], WCF의 다양 한 기능 집합으로 인해 더 복잡할 수 있는 WCF 클라이언트 인스턴스를 생성 합니다. 예를 들어, <xref:System.ServiceModel.ChannelFactory%601> 개체가 열릴 때 클라이언트 인스턴스에 대한 시작 시간을 늘리는 절차인 서비스를 사용하여 보안 세션을 설정할 수 있습니다. 일반적으로 이러한 추가 기능이 영향을 주지 않습니다 클라이언트 응용 프로그램 크게 WCF 클라이언트는 여러 개의 호출 하 고 닫습니다.  
+ ASP.NET을 사용 하 여 웹 서비스와 같은 이전 통신 기술과 비교 WCF 클라이언트 인스턴스를 생성 하는 WCF의 다양 한 기능 집합으로 인해 더 복잡할 수 있습니다. 예를 들어, <xref:System.ServiceModel.ChannelFactory%601> 개체가 열릴 때 클라이언트 인스턴스에 대한 시작 시간을 늘리는 절차인 서비스를 사용하여 보안 세션을 설정할 수 있습니다. 일반적으로 이러한 추가 기능이 영향을 주지 않습니다 클라이언트 응용 프로그램 크게 WCF 클라이언트는 여러 개의 호출 하 고 닫습니다.  
   
  그러나 중간 계층 클라이언트 응용 프로그램 수 많은 WCF 클라이언트 개체 신속 하 게 만들고, 결과적으로, 초기화 요구 사항이 향상 합니다. 서비스를 호출할 때 중간 계층 응용 프로그램의 성능을 향상시키는 두 가지 기본적인 방법이 있습니다.  
   

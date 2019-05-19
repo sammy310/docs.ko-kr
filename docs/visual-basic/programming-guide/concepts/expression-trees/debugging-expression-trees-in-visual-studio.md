@@ -2,26 +2,43 @@
 title: Visual Studio (Visual Basic)에서 식 트리 디버깅
 ms.date: 07/20/2015
 ms.assetid: 492cc28f-b7a2-4c47-b582-b3c437b8a5d5
-ms.openlocfilehash: fb5905c3c1124dd64371216bddda0a17235abdce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7fc97d898c5956b5a569036e6e0fe1174714576d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787194"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879808"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>Visual Studio (Visual Basic)에서 식 트리 디버깅
+애플리케이션을 디버그할 때 식 트리의 구조 및 내용을 분석할 수 있습니다. 식 트리 구조를 간단히 살펴보려면를 사용할 수 있습니다 합니다 `DebugView` 속성을 설명 하는 특수 구문을 사용 하 여 식 트리를 나타내는 [아래](#debugview-syntax)합니다. (유의 `DebugView` 디버그 모드 에서만 사용할 수 있습니다.)  
 
-애플리케이션을 디버그할 때 식 트리의 구조 및 내용을 분석할 수 있습니다. 식 트리 구조의 개요를 빠르게 확인하려면 디버그 모드에서만 제공되는 `DebugView` 속성을 사용합니다. 디버깅에 대한 자세한 내용은 [Debugging in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)(Visual Studio의 디버깅)를 참조하세요.
+![Visual Studio 디버거 내에서 식 트리의 DebugView](media/debugging-expression-trees-in-visual-studio/debugview_vb.png)
 
-식 트리의 내용을 더 잘 표현하기 위해 `DebugView` 속성은 Visual Studio 시각화 도우미를 사용합니다. 자세한 내용은 [Create Custom Visualizers](/visualstudio/debugger/create-custom-visualizers-of-data)(사용자 지정 시각화 도우미 만들기)를 참조하세요.
+하므로 `DebugView` 문자열인 경우 사용할 수는 [기본 제공 텍스트 시각화 도우미](https://docs.microsoft.com/visualstudio/debugger/view-strings-visualizer#open-a-string-visualizer) 선택 하 여 여러 줄에 표시할 **텍스트 시각화 도우미** 옆에 있는 돋보기 아이콘에서는 `DebugView` 레이블입니다.
 
-### <a name="to-open-a-visualizer-for-an-expression-tree"></a>식 트리에 대한 시각화 도우미를 열려면
+ !['DebugView'의 결과에 적용 되는 텍스트 시각화 도우미](media/debugging-expression-trees-in-visual-studio/string_visualizer_vb.png)
 
-1. **DataTips**, **조사식** 창, **자동** 창 또는 **지역** 창에서 식 트리의 `DebugView` 속성 옆에 표시되는 돋보기 아이콘을 클릭합니다.
+설치 및 사용할 수 또는 [사용자 지정 시각화 도우미](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data) 식 트리에 대 한 합니다.
 
-    시각화 도우미의 목록이 나타납니다.
+* [읽을 수 있는 식을](https://github.com/agileobjects/ReadableExpressions) ([MIT 라이선스](https://github.com/agileobjects/ReadableExpressions/blob/master/LICENSE.md)에서 사용할 수 있는 합니다 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=vs-publisher-1232914.ReadableExpressionsVisualizers)), 식 트리를 렌더링 C# 코드:
 
-2. 사용할 시각화 도우미를 클릭합니다.
+  ![읽을 수 있는 식 시각화 도우미](media/debugging-expression-trees-in-visual-studio/readable_expressions_visualizer.png)
+
+* [식 트리 시각화 도우미](https://github.com/zspitz/ExpressionToString#visual-studio-debugger-visualizer-for-expression-trees) ([MIT 라이선스](https://github.com/zspitz/ExpressionToString/blob/master/LICENSE)), 식 트리, 속성 및 관련된 개체의 그래픽 뷰를 제공 하 고 Visual Basic 코드를 사용 하 여 식 트리를 렌더링할 수 있습니다.
+
+  ![ExpressionToString 시각화 도우미](media/debugging-expression-trees-in-visual-studio/expression_to_string_visualizer_vb.png)
+
+### <a name="to-open-a-visualizer-for-an-expression-tree"></a>식 트리에 대한 시각화 도우미를 열려면  
+  
+1. 에서는 식 트리의 옆에 나타나는 돋보기 아이콘을 클릭 **DataTips**, **조사식** 창 합니다 **자동** 창 또는 **지역** 창입니다.  
+  
+     사용 가능한 시각화 도우미의 목록이 표시 됩니다.: 
+
+      ![Visual Studio에서 열기 시각화 도우미](media/debugging-expression-trees-in-visual-studio/expression_tree_visualizers_vb.png)
+
+2. 사용할 시각화 도우미를 클릭합니다.  
+
+## <a name="debugview-syntax"></a>`DebugView` 구문 
 
 각 식 형식은 다음 섹션에 설명된 대로 시각화 도우미에 표시됩니다.
 

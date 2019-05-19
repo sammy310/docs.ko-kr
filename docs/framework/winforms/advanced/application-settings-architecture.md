@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: d0ca890e384fc1f282cfbb62562090ee858bd33f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a049bbe22d29f02acbc7889bb5d5010ec44f9d15
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592770"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876228"
 ---
 # <a name="application-settings-architecture"></a>애플리케이션 설정 아키텍처
 이 항목에서는 애플리케이션 설정 아키텍처가 작동하는 방식과 그룹화된 설정 및 설정 키와 같은 고급 아키텍처 기능에 대해 설명합니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "65592770"
  애플리케이션에서 사용자 지정 구성 요소를 호스팅할 때 구성 요소 자체의 설정을 유지할 수 있도록 하는 인터페이스가 제공됩니다. 설정 키를 사용하면 구성 요소에서 구성 요소의 여러 인스턴스에 대한 설정을 개별적으로 유지할 수 있습니다.  
   
 ## <a name="defining-settings"></a>설정 정의  
- 애플리케이션 설정 아키텍처는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]과 Windows Forms 모두에서 사용되며, 두 환경 간에 공유되는 많은 기본 클래스를 포함합니다. 가장 중요 한 <xref:System.Configuration.SettingsBase>는 컬렉션을 통해 설정에 대 한 액세스를 제공 하며 설정 로드 및 저장에 대 한 하위 수준 메서드를 제공 합니다. 파생 된 고유한 클래스를 구현 하는 각 환경 <xref:System.Configuration.SettingsBase> 해당 환경에 대 한 추가 설정 기능을 제공 합니다. Windows Forms 기반 응용 프로그램을 모든 응용 프로그램 설정에서 파생 된 클래스에 정의 되어야 합니다는 <xref:System.Configuration.ApplicationSettingsBase> 기본 클래스에는 다음과 같은 기능을 추가 하는 클래스:  
+ 응용 프로그램 설정 아키텍처는 Windows Forms 및 ASP.NET에서 사용 되 고 두 환경 간에 공유 되는 기본 클래스의 번호를 포함 합니다. 가장 중요 한 <xref:System.Configuration.SettingsBase>는 컬렉션을 통해 설정에 대 한 액세스를 제공 하며 설정 로드 및 저장에 대 한 하위 수준 메서드를 제공 합니다. 파생 된 고유한 클래스를 구현 하는 각 환경 <xref:System.Configuration.SettingsBase> 해당 환경에 대 한 추가 설정 기능을 제공 합니다. Windows Forms 기반 응용 프로그램을 모든 응용 프로그램 설정에서 파생 된 클래스에 정의 되어야 합니다는 <xref:System.Configuration.ApplicationSettingsBase> 기본 클래스에는 다음과 같은 기능을 추가 하는 클래스:  
   
 - 상위 수준 로드 및 저장 작업  
   

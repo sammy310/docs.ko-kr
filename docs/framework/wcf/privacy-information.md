@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: aaa12ca65257be2f06c84f8ff3be926ea92b0dbb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6da9e2a91fe8156c0631aa77594e3ed47d32cb8b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651066"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882182"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 개인 정보 취급 방침
 Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할 것을 약속합니다. 버전 3.0, Windows Communication Foundation (WCF)를 사용 하 여 응용 프로그램을 빌드할 때 응용 프로그램의 최종 사용자가 개인 정보 보호를 달라질 수 있습니다. 예를 들어 응용 프로그램에서 사용자 연락처 정보를 명시적으로 수집하거나, 정보를 요청하거나 인터넷을 통해 정보를 웹 사이트로 보낼 수 있습니다. 응용 프로그램에 Microsoft 기술을 포함하는 경우 해당 기술의 동작이 개인 정보 보호에 영향을 줄 수 있습니다. WCF 보내지 않습니다 모든 정보를 Microsoft 응용 프로그램에서 우리에 게 보낼 사용자 또는 최종 사용자가 선택 하지 않으면.  
@@ -29,7 +29,7 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
  WCF 메시징 레이어는 로컬 컴퓨터에 개인 정보를 기록 하지 않습니다. 그러나 엔드포인트 이름에 개인 이름을 사용하거나 엔드포인트의 웹 서비스 기술 언어에 개인 정보를 포함하지만 클라이언트에 https를 사용하여 WSDL에 액세스하도록 요구하지 않는 경우 등 서비스 개발자가 이러한 정보를 노출하는 서비스를 만든 경우 네트워크 수준에서 개인 정보를 전파할 수도 있습니다. 또한 개발자가 실행 되는 경우는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 도구의 출력의 개인 정보를 노출 하는 끝점에 대 한 도구에는 해당 정보를 포함할 수 있습니다 하 고 출력 파일에 기록 됩니다는 로컬 하드 디스크입니다.  
   
 ## <a name="hosting"></a>호스팅  
- WCF에서의 호스팅 기능을 필요에 따라 시작 하거나 여러 응용 프로그램 간에 포트 공유를 사용 하도록 응용 프로그램을 수 있습니다. WCF 응용 프로그램에서 인터넷 정보 서비스 (IIS)를 유사한 호스팅될 수 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]입니다.  
+ WCF에서의 호스팅 기능을 필요에 따라 시작 하거나 여러 응용 프로그램 간에 포트 공유를 사용 하도록 응용 프로그램을 수 있습니다. WCF 응용 프로그램에서 인터넷 정보 서비스 (IIS), ASP.NET 비슷합니다 호스트할 수 있습니다.  
   
  호스팅은 네트워크에 특정 정보를 노출하지 않으며 컴퓨터에 데이터를 보관하지 않습니다.  
   
@@ -47,7 +47,7 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
 |데이터|스토리지|  
 |----------|-------------|  
 |사용자 이름, X.509 인증서, Kerberos 토큰, 자격 증명에 대한 참조 등의 프레젠테이션 자격 증명|Windows 인증서 저장소 등의 표준 Windows 자격 증명 관리 메커니즘|  
-|사용자 이름, 암호 등의 사용자 멤버 자격 정보|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 멤버 자격 공급자|  
+|사용자 이름, 암호 등의 사용자 멤버 자격 정보|ASP.NET 멤버 자격 공급자입니다.|  
 |서비스를 클라이언트에 인증하는 데 사용되는 서비스에 대한 ID 정보|서비스의 끝점 주소|  
 |호출자 정보|감사 로그|  
   

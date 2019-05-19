@@ -2,15 +2,15 @@
 title: 부동 소수점 숫자
 ms.date: 03/30/2017
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
-ms.openlocfilehash: 209e53e41495603f4ad559a74bdc87033f6a92a5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d1c033d7999fa403aaf18fccb765da178cba169a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583680"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882041"
 ---
 # <a name="floating-point-numbers"></a>부동 소수점 숫자
-이 항목에서는 개발자가 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]에서 부동 소수점 숫자로 작업할 때 자주 발생하는 몇 가지 문제에 대해 설명합니다. 이러한 문제는 컴퓨터가 부동 소수점 숫자를 저장하는 방식 때문에 발생하며 <xref:System.Data.SqlClient> 또는 <xref:System.Data.OracleClient>와 같은 특정 공급자에 한정된 문제가 아닙니다.  
+이 항목에서는 개발자가 ADO.NET의 부동 소수점 숫자를 작업할 때 자주 발생 하는 문제 중 일부를 설명 합니다. 이러한 문제는 컴퓨터가 부동 소수점 숫자를 저장하는 방식 때문에 발생하며 <xref:System.Data.SqlClient> 또는 <xref:System.Data.OracleClient>와 같은 특정 공급자에 한정된 문제가 아닙니다.  
   
  일반적으로 부동 소수점 숫자에는 정확히 일치하는 이진 표현이 없기 때문에 컴퓨터는 해당 숫자의 근사값을 저장합니다. 즉, 계산 시점에 따라 동일한 숫자를 나타내는 데 서로 다른 이진수가 사용될 수 있습니다. 이것은 부동 소수점 숫자가 한 표현에서 다른 표현으로 변환될 때 숫자의 최하위 유효 자릿수가 조금씩 달라질 수 있기 때문입니다. 이러한 변환은 대개 숫자가 한 형식에서 다른 형식으로 캐스팅될 때 발생합니다. 또한 변환이 데이터베이스 내에서 발생하는지, 데이터베이스 값을 나타내는 형식 간에서 발생하는지, 형식 간에서 발생하는지에 따라 약간씩 달라집니다. 이러한 차이로 인해 논리적으로 같은 숫자의 최하위 유효 자릿수가 달라져 서로 다른 값이 될 수 있습니다. 또한, 숫자의 전체 자릿수가 예상보다 작거나 클 수 있습니다. 따라서 문자열로 서식이 지정된 숫자는 예상과 다른 값으로 표시될 수 있습니다.  
   

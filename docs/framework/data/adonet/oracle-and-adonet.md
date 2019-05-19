@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: a8668ee115a3babbdf1ef549a418187d2c5e26b8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 012a5b55d052f5f06da5c152da79f4676b2bff4e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583412"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877955"
 ---
 # <a name="oracle-and-adonet"></a>Oracle 및 ADO.NET
 > [!NOTE]
@@ -63,7 +63,7 @@ csc /r:System.Data.OracleClient.dll
   
 ## <a name="related-sections"></a>관련 단원  
  [ADO.NET 응용 프로그램 보안](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]을 사용할 때 보안 코드를 작성하는 방법을 설명합니다.  
+ ADO.NET을 사용할 때 보안 코드를 작성하는 방법에 대해 설명합니다.  
   
  [DataSet, DataTable 및 DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  `DataSets`, 형식화된 `DataSets`, `DataTables` 및 `DataViews`를 만들고 사용하는 방법에 대해 설명합니다.  
@@ -75,7 +75,7 @@ csc /r:System.Data.OracleClient.dll
  SQL Server 관련 기능을 사용하는 방법에 대해 설명합니다.  
   
  [DbProviderFactory](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]에서 공급자 독립적인 코드를 쓸 수 있게 하는 일반 클래스에 대해 설명합니다.  
+ ADO.NET에서 공급자 독립적인 코드를 쓸 수 있게 하는 일반 클래스를 설명합니다.  
   
 ## <a name="see-also"></a>참고자료
 

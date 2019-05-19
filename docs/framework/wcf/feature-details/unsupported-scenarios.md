@@ -2,12 +2,12 @@
 title: 지원되지 않는 시나리오
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 48ed292b3bb22ae4966680805a74b40b249d8a32
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6e5b7292f999b3fbecc911c3fef671ea0c675f5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637753"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878734"
 ---
 # <a name="unsupported-scenarios"></a>지원되지 않는 시나리오
 다양 한 이유로 Windows Communication Foundation (WCF)는 일부 특정 보안 시나리오를 지원 하지 않습니다. 예를 들어 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition SSPI 또는 Kerberos 인증 프로토콜을 구현 하지 않으며 WCF 지원 하지 않습니다 해당 플랫폼에서 Windows 인증을 사용 하 여 서비스를 실행 합니다. Windows XP Home Edition에서 WCF를 실행 하는 경우 사용자 이름/암호 및 HTTP/HTTPS 통합된 인증과 같은 다른 인증 메커니즘이 지원 됩니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "64637753"
 >  앞의 요구 사항은 각기 고유합니다. 예를 들어, <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A>는 Windows ID를 생성하는 바인딩 요소를 만들지만 SCT를 설정하지 않습니다. 따라서 `Required`에서 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 옵션을 설정하여 사용할 수 있습니다.  
   
 ### <a name="possible-aspnet-conflict"></a>가능한 ASP.NET 충돌  
- WCF 및 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 둘 다 설정 하거나 해제할 수 가장 합니다. 때 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] WCF 응용 프로그램을 호스트 WCF 간에 충돌이 발생할 수 있습니다 및 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 구성 설정입니다. 충돌이 발생 한 WCF 설정 우선 하지 않는 한 합니다 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 속성이 <xref:System.ServiceModel.ImpersonationOption.NotAllowed>있으며이 경우는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 가장 설정이 우선 합니다.  
+ WCF 및 ASP.NET 수 모두 사용 하거나 가장을 사용 하지 않도록 설정 합니다. ASP.NET에서 WCF 응용 프로그램을 호스트 하는 경우 WCF 및 ASP.NET 구성 설정 간에 충돌이 존재할 수 있습니다. 충돌이 발생 한 WCF 설정 우선 하지 않는 한 합니다 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 속성이 <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, 경우 ASP.NET 가장 설정이 우선 합니다.  
   
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>가장에서 어셈블리 로드 실패  
  가장 컨텍스트에 어셈블리 로드 액세스 권한이 없고 CLR(공용 언어 런타임)에서 AppDomain에 대한 어셈블리 로드를 처음으로 시도하는 경우 <xref:System.AppDomain>은 오류를 캐시합니다. 가장을 변환한 이후 변환된 컨텍스트에 어셈블리 로드 액세스 권한이 있더라도 후속 어셈블리 로드 시도는 실패합니다. CLR은 사용자 컨텍스트가 변경된 이후에 로드를 다시 시도하지 않기 때문입니다. 오류를 복구하려면 응용 프로그램 도메인을 다시 시작해야 합니다.  
@@ -75,13 +75,13 @@ ms.locfileid: "64637753"
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>ASP.NET 가장 및 ASP.NET 호환성을 사용해야 하는 경우 메시지 보안 실패  
  WCF는 클라이언트 인증을 방해할 수 있으므로 다음 설정 조합을 지원 하지 않습니다.  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 가장이 사용됩니다. 설정 하 여 Web.config 파일에 이렇게 합니다 `impersonate` 특성을 <`identity`> 요소를 `true`합니다.  
+- ASP.NET 가장이 사용 됩니다. 설정 하 여 Web.config 파일에 이렇게 합니다 `impersonate` 특성을 <`identity`> 요소를 `true`합니다.  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 호환성 모드를 설정 하 여 사용 합니다 `aspNetCompatibilityEnabled` 특성을 [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) 를 `true`.  
+- 설정 하 여 ASP.NET 호환성 모드를 사용 합니다 `aspNetCompatibilityEnabled` 특성을 [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) 에 `true`합니다.  
   
 - 메시지 모드 보안이 사용됩니다.  
   
- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 호환성 모드를 해제하면 문제가 해결됩니다. 또는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 호환성 모드가 필요 함, 사용 하지 않도록 설정 된 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 가장 기능 및 WCF에서 제공 가장을 대신 사용 합니다. 자세한 내용은 [위임 및 가장](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)합니다.  
+ 해결 ASP.NET 호환 모드를 해제 하는 것입니다. 또는 ASP.NET 호환 모드가 필요한 경우 ASP.NET 가장 기능을 사용 하지 않도록 설정 하 고 WCF에서 제공 가장을 대신 사용 합니다. 자세한 내용은 [위임 및 가장](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)합니다.  
   
 ## <a name="ipv6-literal-address-failure"></a>IPv6 리터럴 주소 오류  
  클라이언트와 서비스가 동일한 컴퓨터에 있고 IPv6 리터럴 주소가 서비스에 사용되는 경우 보안 요청이 실패합니다.  

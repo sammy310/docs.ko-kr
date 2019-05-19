@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data formats
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-ms.openlocfilehash: 8939a182032cfac1beac6c1e5cb3c9de9792114c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7babc0918f5e8a7b4561d99bcfcfc9d7bdf9fb69
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011374"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878792"
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에 대한 기본 셀 스타일 및 데이터 형식 설정
 <xref:System.Windows.Forms.DataGridView> 제어를 사용 하면 기본 셀 스타일을 지정 하 고 셀 및에 대 한 전체 컨트롤, 특정 열, 행 및 열 머리글에 대 한 원장 효과 만드는 행을 교대로 반복 되는 데이터 형식입니다. 전체 컨트롤에 대해 설정 하는 기본 스타일은 기본적으로 스타일 교대로 반복 되는 행과 열에 대 한 설정 재정의 됩니다. 또한 개별 행 및 셀에 대 한 코드에서 설정 하는 스타일에는 기본 스타일을 재정의 합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "62011374"
   
 1. 선택 된 <xref:System.Windows.Forms.DataGridView> 디자이너에서 제어 합니다.  
   
-2. 에 **속성** 창에서 줄임표 단추를 클릭 (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton")) 옆에 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>를 <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>, 또는 <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> 속성입니다. 합니다 **CellStyle 작성기** 대화 상자가 나타납니다.  
+2.  에 **속성** 창에서 줄임표 단추를 클릭 (![의 줄임표 단추 (...)의 Visual Studio 속성 창에서](./media/visual-studio-ellipsis-button.png)) 옆에 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>, 또는 <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> 속성입니다. 합니다 **CellStyle 작성기** 대화 상자가 나타납니다.  
   
 3. 사용 하 여 속성을 설정 하 여 스타일을 정의 합니다 **미리 보기** 선택 사항을 확인 하는 창입니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62011374"
   
 2. 열을 선택 합니다 **선택한 열** 목록입니다.  
   
-3. 에 **열 속성** 표에서 줄임표 단추를 클릭 (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton")) 옆에 <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> 속성입니다. 합니다 **CellStyle 작성기** 대화 상자가 나타납니다.  
+3.  에 **열 속성** 표에서 줄임표 단추를 클릭 (![의 줄임표 단추 (...)의 Visual Studio 속성 창에서](./media/visual-studio-ellipsis-button.png)) 옆에 <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> 속성입니다. 합니다 **CellStyle 작성기** 대화 상자가 나타납니다.  
   
 4. 사용 하 여 속성을 설정 하 여 스타일을 정의 합니다 **미리 보기** 선택 사항을 확인 하는 창입니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62011374"
   
 1. 앞의 절차 중 하나를 사용 하 여 표시할를 **CellStyle 작성기** 대화 상자에 기본 셀 스타일 속성이 관련이 있습니다.  
   
-2. 에 **CellStyle 작성기** 대화 상자에서 줄임표 단추 (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton")) 옆에 <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> 속성입니다. 합니다 **서식 문자열** 대화 상자가 나타납니다.  
+2.  에 **CellStyle 작성기** 대화 상자에서 줄임표 단추를 클릭 (![의 줄임표 단추 (...)의 Visual Studio 속성 창에서](./media/visual-studio-ellipsis-button.png)) 옆에 <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> 속성입니다. 합니다 **서식 문자열** 대화 상자가 나타납니다.  
   
 3. 형식 유형을 선택한 다음 형식 (예: 개수 표시할 소수 자릿수)의 세부 정보를 수정를 사용 하는 **샘플** 선택 사항을 확인 하는 상자입니다.  
   

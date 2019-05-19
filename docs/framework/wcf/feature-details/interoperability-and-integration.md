@@ -2,12 +2,12 @@
 title: 상호 운용성 및 통합
 ms.date: 03/30/2017
 ms.assetid: 0d925119-01a1-45c2-9ea0-23061323ad33
-ms.openlocfilehash: 2410c52e99f3498d8dbd6ec66a5abe0e169f4b91
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8b4113d7545ab4e478b49c07681298d9ee942309
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591234"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875970"
 ---
 # <a name="interoperability-and-integration"></a>상호 운용성 및 통합
 이 섹션에서는 상호 운용성 및 통합 Windows Communication Foundation (WCF)를 사용 하 여 설명 합니다.  
@@ -32,16 +32,16 @@ ms.locfileid: "65591234"
  WSE 3.0 웹 서비스를 WCF 서비스로 마이그레이션하는 방법을 설명 합니다.  
   
  [ASP.NET 웹 서비스와의 상호 운용성](../../../../docs/framework/wcf/feature-details/interop-with-aspnet-web-services.md)  
- WCF와 상호 운용 하는 방법을 설명 합니다. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 서비스입니다.  
+ ASP.NET 웹 서비스와 WCF 상호 운용 하는 방법을 설명 합니다.  
   
  [ASP.NET 웹 서비스를 WCF로 마이그레이션](../../../../docs/framework/wcf/feature-details/migrating-aspnet-web-services-to-wcf.md)  
- 마이그레이션하는 방법에 설명 합니다.는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 서비스를 WCF 서비스입니다.  
+ WCF 서비스에 ASP.NET 웹 서비스를 마이그레이션하는 방법을 설명 합니다.  
   
  [ASP.NET 웹 서비스를 WCF로 마이그레이션](../../../../docs/framework/wcf/feature-details/migrating-aspnet-web-services-to-wcf.md)  
- 마이그레이션하는 방법에 설명 합니다.는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 서비스를 WCF 서비스입니다.  
+ WCF 서비스에 ASP.NET 웹 서비스를 마이그레이션하는 방법을 설명 합니다.  
   
  [ASP.NET 웹 서비스를 WCF로 마이그레이션](../../../../docs/framework/wcf/feature-details/migrating-aspnet-web-services-to-wcf.md)  
- 마이그레이션하는 방법에 설명 합니다.는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 서비스를 WCF 서비스입니다.  
+ WCF 서비스에 ASP.NET 웹 서비스를 마이그레이션하는 방법을 설명 합니다.  
   
  [POX 애플리케이션과의 상호 운용성](../../../../docs/framework/wcf/feature-details/interoperability-with-pox-applications.md)  
  WCF 서비스와 "Plain Old XML" (POX) 메시지를 사용 하는 클라이언트를 제공 하는 방법을 설명 합니다.  

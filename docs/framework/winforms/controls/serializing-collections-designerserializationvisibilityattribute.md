@@ -11,12 +11,12 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: c8321f98b25026e32e7c69f7029f2c589d0567f7
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 1f1412f03f912c0142b08d5ad8581e421252cfb3
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211595"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882352"
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>연습: DesignerSerializationVisibilityAttribute를 사용하여 표준 형식의 컬렉션 직렬화
 
@@ -66,7 +66,7 @@ ms.locfileid: "65211595"
 
 8. 키를 눌러 **F5** 프로젝트를 빌드하고에서 컨트롤을 실행 하는 **UserControl 테스트 컨테이너**합니다.
 
-9. 찾을 합니다 `Strings` 속성에는 <xref:System.Windows.Forms.PropertyGrid> 의 **UserControl 테스트 컨테이너**합니다. 클릭는 `Strings` 속성을 다음 줄임표 (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton")) 버튼을 클릭 하는 **문자열 컬렉션 편집기**.
+9. 찾을 합니다 `Strings` 속성에는 <xref:System.Windows.Forms.PropertyGrid> 의 **UserControl 테스트 컨테이너**합니다. 클릭는 `Strings` 속성을 다음 줄임표 (![의 줄임표 단추 (...)의 Visual Studio 속성 창에서](./media/visual-studio-ellipsis-button.png)) 버튼을 클릭 하는 **문자열 컬렉션 편집기**.
 
 10. 여러 문자열을 입력 합니다 **문자열 컬렉션 편집기**합니다. 키를 눌러 구별 합니다 **Enter** 각 문자열의 끝에 키입니다. 클릭 **확인** 문자열 입력이 완료 되 면 합니다.
 
@@ -85,7 +85,7 @@ ms.locfileid: "65211595"
 
 3. 위치는 `SerializationDemoControl` 양식의 합니다.
 
-4. 찾을 합니다 `Strings` 속성에는 **속성** 창입니다. 클릭는 `Strings` 속성을 다음 줄임표 (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton")) 버튼을 클릭 하는 **문자열 컬렉션 편집기**.
+4. 찾을 합니다 `Strings` 속성에는 **속성** 창입니다. 클릭는 `Strings` 속성을 다음 줄임표 (![의 줄임표 단추 (...)의 Visual Studio 속성 창에서](./media/visual-studio-ellipsis-button.png)) 버튼을 클릭 하는 **문자열 컬렉션 편집기**.
 
 5. 여러 문자열을 입력 합니다 **문자열 컬렉션 편집기**합니다. 각 문자열의 끝에서 ENTER 키를 눌러 구분 합니다. 클릭 **확인** 문자열 입력이 완료 되 면 합니다.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 568fb1c2a18cfde5b15b844754f4356af0a576a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9341ff8bfb2aec4eb7274d444fca4497fa66f210
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046634"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875574"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>ID 모델을 사용하여 클레임 및 권한 부여 관리
 권한 부여는 컴퓨터 리소스를 변경하거나 보거나 컴퓨터 리소스에 액세스할 수 있는 사용 권한이 있는 엔터티를 확인하는 프로세스입니다. 예를 들어 비즈니스에서 관리자만 직원 파일에 액세스할 수 있습니다. Windows Communication Foundation (WCF) 권한 부여 처리를 수행 하기 위한 두 가지 메커니즘을 지원 합니다. 첫 번째 메커니즘을 사용하면 기존의 CLR(공용 언어 런타임) 구문을 사용하여 권한 부여를 제어할 수 있습니다. 두 번째는 이라고 하는 클레임 기반 모델을 *Id 모델*합니다. WCF Id 모델을 사용 하 여 들어오는 메시지에서 클레임을 만들려면 Id 모델 클래스는 사용자 지정 권한 부여 체계에 대 한 새 클레임 형식을 지원 하도록 확장할 수 있습니다. 이 항목에서는 ID 모델 기능의 주요 프로그래밍 개념에 대한 개요와 이 기능에서 사용되는 매우 중요한 클래스의 목록을 제공합니다.  
@@ -90,11 +90,12 @@ ms.locfileid: "62046634"
   
  다음 그림에 있는 세 개의 클레임 집합 예제는 한 클레임 집합이 다른 클레임 집합을 자신의 발급자로 사용하다가 결국에는 System 클레임 집합이 자신의 발급자가 되는 관계를 보여 줍니다. 따라서 클레임 집합의 계층 구조는 얼마든지 깊어질 수 있습니다.  
   
- ![클레임 및 권한 부여 관리](../../../../docs/framework/wcf/feature-details/media/claimshierarchy.gif "claimshierarchy")  
+ ![계층 내에서 클레임 집합이 있습니다.](./media/managing-claims-and-authorization-with-the-identity-model/claims-sets-hierarchy.gif)  
   
- 다음 그림과 같이, 여러 개의 클레임 집합에서 같은 발급 클레임 집합을 사용할 수도 있습니다.  
+ 여러 개의 클레임 집합은 같은 발급 클레임 집합, 다음 그림에 설명 된 대로 포함할 수 있습니다.
+ 
   
- ![클레임 및 권한 부여 관리](../../../../docs/framework/wcf/feature-details/media/multiplesetsofclaims.gif "multiplesetsofclaims")  
+ ![여러 같은 발급 클레임 집합이 클레임 집합입니다.](./media/managing-claims-and-authorization-with-the-identity-model/multiple-claim-sets-same-issuing-claim-set.gif)  
   
  자기 자신을 발급자로 사용하는 클레임 집합 이외에는 ID 모델에서 클레임 집합이 순환 관계를 형성할 수 없습니다. 따라서 A 클레임 집합이 B 클레임 집합에 의해 발급되며 B 클레임 집합이 A 클레임 집합에 의해 발급되는 상황은 발생하지 않습니다. 또한 ID 모델에서는 클레임 집합에 여러 발급자가 있을 수도 없습니다. 지정된 클레임 집합을 둘 이상의 발급자가 발급해야 하는 경우에는, 동일한 클레임이 포함되어 있지만 발급자가 각기 다른 여러 클레임 집합을 사용해야 합니다.  
   

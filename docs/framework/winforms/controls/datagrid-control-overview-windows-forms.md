@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 7c9442635bb193c13ca30fd1e271631a43b33e55
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e1e9ce761baa77ea06b3d66aa5b296a186f054b4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589023"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878859"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid 컨트롤 개요(Windows Forms)
 > [!NOTE]
@@ -53,7 +53,7 @@ ms.locfileid: "65589023"
   
  바인딩된 데이터 세트의 데이터가 임의 메커니즘을 통해 업데이트되면 <xref:System.Windows.Forms.DataGrid> 컨트롤이 변경 내용을 반영합니다. 데이터 그리드 및 해당 표 스타일과 열 스타일 경우는 `ReadOnly` 속성이로 설정 `false`를 통해 데이터 집합의 데이터를 업데이트할 수 있습니다는 <xref:System.Windows.Forms.DataGrid> 컨트롤입니다.  
   
- 한 번에 하나의 테이블만 <xref:System.Windows.Forms.DataGrid>에 표시될 수 있습니다. 테이블 간에 부모-자식 관계가 정의된 경우 사용자가 관련 테이블 간에 이동하여 <xref:System.Windows.Forms.DataGrid> 컨트롤에 표시할 테이블을 선택할 수 있습니다. 바인딩에 대 한 정보에 대 한를 <xref:System.Windows.Forms.DataGrid> 컨트롤을 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 디자인 타임 또는 런타임 중 데이터 원본 참조 [방법: 데이터 소스에 Windows Forms DataGrid 컨트롤 바인딩](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)합니다.  
+ 한 번에 하나의 테이블만 <xref:System.Windows.Forms.DataGrid>에 표시될 수 있습니다. 테이블 간에 부모-자식 관계가 정의된 경우 사용자가 관련 테이블 간에 이동하여 <xref:System.Windows.Forms.DataGrid> 컨트롤에 표시할 테이블을 선택할 수 있습니다. 바인딩에 대 한 정보에는 <xref:System.Windows.Forms.DataGrid> 디자인 타임 또는 런타임 중 하나는 ADO.NET 데이터 소스에 컨트롤을 참조 하세요 [방법: 데이터 소스에 Windows Forms DataGrid 컨트롤 바인딩](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)합니다.  
   
  <xref:System.Windows.Forms.DataGrid>에 유효한 데이터 소스는 다음과 같습니다.  
   

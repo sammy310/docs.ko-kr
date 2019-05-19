@@ -2,12 +2,12 @@
 title: 지원 되는 배포 시나리오-WCF
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: f1a95e5448d2cc8f1ac472c3b1735f58460e2be6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 986459e14206f073686474f5d65845ce682e1270
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639150"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881054"
 ---
 # <a name="supported-deployment-scenarios"></a>지원 되는 배포 시나리오
 
@@ -27,7 +27,7 @@ WCF는 다음 표준 명명 된 권한 집합 중 하나에서 실행 중인 응
 
 ## <a name="partial-trust-on-the-server"></a>서버에서 부분 신뢰
 
-[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 응용 프로그램 호스팅 서비스의 상용 공급자는 대부분 해당 서버에서 실행하는 응용 프로그램을 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] 보통 신뢰 권한 집합에서 실행해야 합니다. WCF 서비스 사용 하는 경우 이러한 환경에서 실행할 수는 <xref:System.ServiceModel.BasicHttpBinding>는 <xref:System.ServiceModel.WebHttpBinding>, 또는 <xref:System.ServiceModel.WSHttpBinding> 전송 수준 보안을 사용 하 여 합니다.
+ASP.NET 웹 응용 프로그램 호스팅 서비스의 상용 공급자는 대부분 해당 서버에서 실행 하는 응용 프로그램에서 실행 하는 위임 된 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] 보통 신뢰 권한 집합입니다. WCF 서비스 사용 하는 경우 이러한 환경에서 실행할 수는 <xref:System.ServiceModel.BasicHttpBinding>는 <xref:System.ServiceModel.WebHttpBinding>, 또는 <xref:System.ServiceModel.WSHttpBinding> 전송 수준 보안을 사용 하 여 합니다.
 
 보통 신뢰 호스팅 환경에서 실행 되는 WCF 서비스를 다른 서버에 클라이언트 요청에 응답 메시지를 전송 하 여 중간 계층 서비스로 사용할 수도 있습니다. 서버에서 중간 계층 시나리오는 호스팅 환경이 애플리케이션에 적합한 <xref:System.Net.WebPermission> 을 부여해서 원하는 서버로 아웃바운드 요청을 한 경우 지원됩니다.
 

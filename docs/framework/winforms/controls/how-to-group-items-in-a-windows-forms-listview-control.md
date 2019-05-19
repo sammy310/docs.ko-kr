@@ -12,19 +12,18 @@ helpviewer_keywords:
 - groups
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 610416a1-8da4-436c-af19-5f19e654769b
-ms.openlocfilehash: f616436671da449e4f7b47c0a5d0c1b576584a1a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bbca1d76f747f53103095c916605ce7335207f51
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941399"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882369"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control"></a>방법: Windows Forms ListView 컨트롤에서 항목 그룹화
 그룹화 기능을 사용 하 여는 <xref:System.Windows.Forms.ListView> 컨트롤 그룹의 관련된 항목 집합을 표시할 수 있습니다. 이러한 그룹은 화면에서 그룹 제목을 포함 하는 행 그룹 머리글에 의해 구분 됩니다. 사용할 수 있습니다 <xref:System.Windows.Forms.ListView> 그룹 날짜 또는 기타 논리 그룹으로 항목을 사전순으로 그룹화 하 여 보다 쉽게 긴 목록 이동 되도록 합니다. 다음 이미지에서는 일부 그룹화 된 항목을 보여 줍니다.  
   
- ![ListView 그룹](./media/listviewgroups.gif "ListViewGroups")  
-ListView 항목 그룹화  
-  
+ ![홀수와 짝수 ListView 그룹의 스크린샷입니다.](./media/how-to-group-items-in-a-windows-forms-listview-control-using-the-designer/odd-even-list-view-groups.gif)  
+   
  그룹화를 사용 하려면 먼저 디자이너에서 또는 프로그래밍 방식으로 하나 이상의 그룹을 만들어야 합니다. 그룹을 정의한 후 할당할 수 있습니다 <xref:System.Windows.Forms.ListView> 그룹 항목입니다. 이동할 수도 있습니다 항목이 하나의 그룹에서 다른 프로그래밍 방식으로 합니다.  
   
 > [!NOTE]

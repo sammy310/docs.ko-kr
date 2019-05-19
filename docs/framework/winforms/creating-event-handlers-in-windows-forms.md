@@ -8,12 +8,12 @@ helpviewer_keywords:
 - events [Windows Forms], event handlers
 - event handlers [Windows Forms]
 ms.assetid: 6514e530-c6b8-489c-a8d2-eda7b7072701
-ms.openlocfilehash: 329060e0c53178a9320be9a7cdff492d69917782
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: e90e1d6643a30c1d2f4438e77317a2348b07fd71
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211243"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882422"
 ---
 # <a name="creating-event-handlers-in-windows-forms"></a>Windows Forms에서 이벤트 처리기 만들기
 
@@ -41,7 +41,7 @@ ms.locfileid: "65211243"
 ## <a name="related-sections"></a>관련 단원
 
  [이벤트](../../standard/events/index.md)\
- 처리에 사용 하 여 이벤트를 발생 시키는 항목에 대 한 링크를 제공 합니다 [!INCLUDE [dnprdnshort](../../../includes/dnprdnshort-md.md)\].
+ 처리 및.NET Framework를 사용 하 여 이벤트를 발생 시키는 항목에 대 한 링크를 제공 합니다.
 
  [Visual Basic에서 상속된 이벤트 처리기 관련 문제 해결](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)\
  상속된 구성 요소의 이벤트 처리기에서 발생하는 일반적인 문제에 대해 설명합니다.

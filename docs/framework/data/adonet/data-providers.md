@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 9fead8a5d54fba7232831bba349f27b7eed4657b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d343f7be3e26575ee9a1e9ccae9f17314db10ac5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583795"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882109"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework 데이터 공급자
 .NET Framework 데이터 공급자는 데이터베이스에 연결 하 고 명령을 실행 한 결과 검색에 사용 됩니다. 검색된 결과는 곧바로 처리되거나 <xref:System.Data.DataSet> 에 저장되어 필요한 경우 사용자에게 노출되거나 여러 소스의 데이터와 함께 사용되거나 계층 간에 원격으로 사용됩니다. .NET framework 데이터 공급자는 경량 만들기는 데이터 소스와 사용자 코드 간에 최소의 계층 기능 저하 없이 성능을 향상 시킵니다.  
@@ -74,7 +74,7 @@ using System.Data.SqlClient;
 ## <a name="net-framework-data-provider-for-ole-db"></a>.NET Framework Data Provider for OLE DB  
  .NET Framework Data Provider for OLE DB (OleDb) COM interop 통해 네이티브 OLE DB를 사용 하 여 데이터 액세스를 활성화 합니다. .NET Framework Data Provider for OLE DB에는 로컬 및 분산 트랜잭션을 지원합니다. 분산된 트랜잭션에 대 한.NET Framework Data Provider for OLE DB에서 기본적으로 자동으로 트랜잭션을 참여 하 고 Windows Component Services 로부터 트랜잭션 세부 정보를 얻습니다. 자세한 내용은 [트랜잭션 및 동시성](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)합니다.  
   
- 다음 표에서는 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]을 사용하여 테스트한 공급자를 보여 줍니다.  
+ 다음 표에서 ADO.NET을 사용 하 여 테스트 한 공급자를 보여 줍니다.  
   
 |드라이버|공급자|  
 |------------|--------------|  
@@ -83,11 +83,11 @@ using System.Data.SqlClient;
 |Microsoft.Jet.OLEDB.4.0|OLE DB provider for Microsoft Jet|  
   
 > [!NOTE]
->  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램과 같은 다중 스레드 응용 프로그램의 경우 Access(Jet) 데이터베이스를 데이터 소스로 사용하지 않는 것이 좋습니다. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램의 데이터 소스로 Jet을 사용하게 되면 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램에서 Access 데이터베이스에 연결할 때 연결 문제가 발생합니다.  
+>  데이터 원본으로 Access (Jet) 데이터베이스를 사용 하 여 ASP.NET 응용 프로그램과 같은 다중 스레드 응용 프로그램에 대 한 권장 되지 않습니다. ASP.NET 응용 프로그램에 대 한 데이터 소스로 Jet을 사용 해야 할, 경우 실현 Access 데이터베이스에 연결 하는 ASP.NET 응용 프로그램 연결 문제를 발생할 수 있습니다.  
   
  .NET Framework Data Provider for OLE DB에서 OLE DB 버전 2.5 인터페이스를 지원 하지 않습니다. OLE DB 공급자는 OLE DB 2.5 인터페이스 지원이 필요한 제대로 작동.NET Framework Data provider for OLE DB입니다. 여기에는 Microsoft OLE DB Provider for Exchange와 Microsoft OLE DB Provider for Internet Publishing이 포함됩니다.  
   
- OLE DB provider for ODBC (MSDASQL)를 사용 하 여.NET Framework Data Provider for OLE DB를 작동 하지 않습니다. ODBC 데이터 원본 사용 하 여 액세스 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)],.NET Framework Data Provider for ODBC 사용 합니다.  
+ OLE DB provider for ODBC (MSDASQL)를 사용 하 여.NET Framework Data Provider for OLE DB를 작동 하지 않습니다. ADO.NET을 사용 하 여 ODBC 데이터 원본에 액세스 하려면.NET Framework Data Provider for ODBC 사용 합니다.  
   
  .NET framework Data Provider for OLE DB 클래스에는 <xref:System.Data.OleDb> 네임 스페이스입니다. 다음 코드 예제에서는 `System.Data.OleDb` 네임스페이스를 애플리케이션에 포함하는 방법을 보여 줍니다.  
   
@@ -102,7 +102,7 @@ using System.Data.OleDb;
 ## <a name="net-framework-data-provider-for-odbc"></a>.NET Framework Data Provider for ODBC  
  .NET Framework Data Provider for ODBC (Odbc) 네이티브 ODBC 드라이버 관리자 (DM)를 사용 하 여 데이터 액세스를 활성화 합니다. ODBC 데이터 공급자는 로컬 및 분산 트랜잭션을 모두 지원합니다. 분산 트랜잭션의 경우, 기본적으로 ODBC 데이터 공급자는 트랜잭션에 자동으로 참여하고 Windows Component Services로부터 트랜잭션 세부 정보를 얻습니다. 자세한 내용은 [트랜잭션 및 동시성](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)합니다.  
   
- 다음 표에서는 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]을 사용하여 테스트한 ODBC 드라이버를 보여 줍니다.  
+ 다음 표에서 ADO.NET을 사용 하 여 테스트 한 ODBC 드라이버를 보여 줍니다.  
   
 |드라이버|  
 |------------|  

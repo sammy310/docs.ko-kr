@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: 1897116389aaa1b4c953612364c7302e9ca2f35a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f686c20a9afd981405e32854fcc594abac78c85c
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584463"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882036"
 ---
 # <a name="local-transactions"></a>로컬 트랜잭션
-[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]의 트랜잭션은 여러 작업을 바인딩하여 하나의 작업 단위로 실행하려는 경우에 사용합니다. 예를 들어 응용 프로그램이 두 가지 작업을 수행한다고 가정합니다. 먼저 응용 프로그램에서 주문 정보로 테이블을 업데이트합니다. 그런 다음, 응용 프로그램에서 재고 정보가 포함된 테이블을 업데이트하고 주문이 들어온 품목을 차변에 기입합니다. 두 작업이 실패 하면 다음 두 업데이트가 모두 롤백됩니다.  
+ADO.NET의 트랜잭션에 단일 단위의 작업으로 실행 되도록 함께 여러 태스크를 바인딩할 때 사용 됩니다. 예를 들어 응용 프로그램이 두 가지 작업을 수행한다고 가정합니다. 먼저 응용 프로그램에서 주문 정보로 테이블을 업데이트합니다. 그런 다음, 응용 프로그램에서 재고 정보가 포함된 테이블을 업데이트하고 주문이 들어온 품목을 차변에 기입합니다. 두 작업이 실패 하면 다음 두 업데이트가 모두 롤백됩니다.  
   
 ## <a name="determining-the-transaction-type"></a>트랜잭션 유형 결정  
  트랜잭션이 1 단계 트랜잭션이 고 데이터베이스에서 직접 처리 하는 경우 로컬 트랜잭션을으로 간주 됩니다. 트랜잭션이는 트랜잭션 모니터로 조정 되 고 트랜잭션 확인에 대 한 유사 시 대기 메커니즘 (예: 2 단계 커밋)를 사용 하는 경우 분산된 트랜잭션으로으로 간주 됩니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "65584463"
 > 트랜잭션은 서버에서 수행 하는 경우 가장 효율적입니다. 명시적 트랜잭션을 폭넓게 사용하는 SQL Server 데이터베이스를 사용하는 경우 Transact-SQL BEGIN TRANSACTION 문을 사용하여 트랜잭션을 저장 프로시저로 작성하는 것이 좋습니다.
   
 ## <a name="performing-a-transaction-using-a-single-connection"></a>단일 연결을 사용하여 트랜잭션 수행  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]에서는 `Connection` 개체로 트랜잭션을 제어합니다. `BeginTransaction` 메서드를 사용하면 로컬 트랜잭션을 시작할 수 있습니다. 트랜잭션이 시작되면 `Transaction` 개체의 `Command` 속성을 사용하여 해당 트랜잭션에 명령을 인리스트먼트할 수 있습니다. 그런 다음 트랜잭션 구성 요소의 성공 또는 실패에 따라 데이터 소스에서 수정된 내용을 커밋 또는 롤백할 수 있습니다.  
+ Ado.net에서 트랜잭션을 제어는 `Connection` 개체입니다. `BeginTransaction` 메서드를 사용하면 로컬 트랜잭션을 시작할 수 있습니다. 트랜잭션이 시작되면 `Transaction` 개체의 `Command` 속성을 사용하여 해당 트랜잭션에 명령을 인리스트먼트할 수 있습니다. 그런 다음 트랜잭션 구성 요소의 성공 또는 실패에 따라 데이터 소스에서 수정된 내용을 커밋 또는 롤백할 수 있습니다.  
   
 > [!NOTE]
 >  `EnlistDistributedTransaction` 메서드는 로컬 트랜잭션에 사용할 수 없습니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "65584463"
   
 4. <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> 개체의 <xref:System.Data.SqlClient.SqlTransaction> 메서드를 호출하여 트랜잭션을 완료하거나 <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> 메서드를 호출하여 트랜잭션을 종료합니다. <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> 또는 <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> 메서드가 실행되기 전에 연결이 닫히거나 삭제되면 트랜잭션이 롤백됩니다.  
   
- 다음 코드 예제에서는 Microsoft SQL Server와 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]을 사용하여 트랜잭션 논리를 설명합니다.  
+ 다음 코드 예제에서는 ADO.NET을 사용 하 여 Microsoft SQL Server를 사용 하 여 트랜잭션 논리를 보여 줍니다.  
   
  [!code-csharp[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/CS/source.cs#1)]
  [!code-vb[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/VB/source.vb#1)]  

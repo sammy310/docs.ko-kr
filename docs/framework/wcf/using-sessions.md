@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: fc0bfec95e625c1433636fbe5e0fdb6cc1112b14
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0c19aa7200cfc938a1de7b788a58ba18f76634d9
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645153"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881470"
 ---
 # <a name="using-sessions"></a>세션 사용
-Windows Communication Foundation (WCF) 응용 프로그램에는 *세션* 메시지 그룹을 대화에 연결 합니다. WCF 세션에서 사용할 수 있는 세션 개체에 다릅니다. [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 응용 프로그램을 다른 동작을 지원 하 고 다양 한 방법으로 제어 됩니다. 세션 WCF에서 사용 하도록 설정 하는 기능에 설명 응용 프로그램 및 사용 하는 방법입니다.  
+Windows Communication Foundation (WCF) 응용 프로그램에는 *세션* 메시지 그룹을 대화에 연결 합니다. WCF는 ASP.NET 응용 프로그램에서 사용할 수 있는 세션 개체와 다르며, 다른 동작을 지원 세션과 다른 방법으로 제어 됩니다. 세션 WCF에서 사용 하도록 설정 하는 기능에 설명 응용 프로그램 및 사용 하는 방법입니다.  
   
 ## <a name="sessions-in-windows-communication-foundation-applications"></a>Windows Communication Foundation 애플리케이션의 세션  
  서비스 계약에서 세션이 필요하도록 지정할 경우 해당 계약은 모든 호출(즉, 호출을 지원하는 기본 메시지 교환)이 동일한 대화의 일부가 되도록 지정합니다. 계약이 세션을 허용하지만 특정 세션이 필요 없음을 지정하는 경우, 클라이언트는 세션을 연결하여 설정하거나 설정하지 않을 수 있습니다. 세션이 종료되고 메시지가 동일한 채널을 통해 전송될 경우 예외가 throw됩니다.  
@@ -30,13 +30,13 @@ Windows Communication Foundation (WCF) 응용 프로그램에는 *세션* 메시
   
 - WCF 세션과 연결 된 일반 데이터 저장소가 없습니다.  
   
- 에 대해 잘 알고 있다면 합니다 <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> 클래스의 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 제공 응용 프로그램 및 기능, 해당 유형의 세션 및 WCF 세션 간에 다음과 같은 차이점을 알 수 있습니다.  
+ 에 대해 잘 알고 있다면는 <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> 제공 기능과 ASP.NET 응용 프로그램의 클래스, 해당 유형의 세션 및 WCF 세션 간에 다음과 같은 차이점을 알 수 있습니다.  
   
-- [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 세션은 항상 서버에 의해 실행됩니다.  
+- ASP.NET 세션은 항상 서버에서 시작 합니다.  
   
-- [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 세션은 암시적으로 순서가 지정되지 않습니다.  
+- ASP.NET 세션은 암시적으로 순서가 없습니다.  
   
-- [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 세션은 요청을 통해 일반 데이터 저장소 메커니즘을 제공합니다.  
+- ASP.NET 세션 요청에 대해 일반 데이터 저장소 메커니즘을 제공합니다.  
   
  이 항목에서는 다음을 설명합니다.  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: ace4b1c32ac30c54b56e2adbbbbf6af0450a4740
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b28a8a8fc2d75f80a14447008c850de63e4e04b3
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651537"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882431"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤에서 새 레코드에 대한 행 사용
 사용 하는 경우는 <xref:System.Windows.Forms.DataGridView> 응용 프로그램에서 데이터 편집을 위해 종종 하려는 사용자에 게 데이터 저장소에 새 데이터 행을 추가 하는 기능을 제공 합니다. <xref:System.Windows.Forms.DataGridView> 컨트롤은 항상 마지막 행으로 표시 된 새 레코드에 대 한 행을 제공 하 여이 기능을 지원 합니다. 행 헤더에 별표 (*) 기호로 표시 됩니다. 다음 섹션에서는 설명 하는 몇 가지 새 레코드에 대 한 행을 사용 하 여 프로그램 사용 하도록 설정 하는 것이 좋습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "64651537"
 ## <a name="sorting"></a>정렬  
  바인딩되지 않은 모드에서 새 레코드는 항상 추가할의 끝에는 <xref:System.Windows.Forms.DataGridView> 사용자의 콘텐츠를 정렬 하는 경우에는 <xref:System.Windows.Forms.DataGridView>합니다. 사용자를 올바른 위치에 행을 정렬 하기 위해 정렬을 다시 적용 해야 합니다. 이 동작은 비슷합니다는 <xref:System.Windows.Forms.ListView> 제어 합니다.  
   
- 데이터 정렬을 적용 될 때 삽입 동작 경계와 가상 모드 데이터 모델의 구현에 종속 됩니다. 에 대 한 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], 행이 올바른 위치에 즉시 정렬 됩니다.  
+ 데이터 정렬을 적용 될 때 삽입 동작 경계와 가상 모드 데이터 모델의 구현에 종속 됩니다. ADO.NET에 대 한 행을 즉시 올바른 위치에 정렬 됩니다.  
   
 ## <a name="other-notes-on-the-row-for-new-records"></a>새 레코드에 대 한 행의 기타 참고 사항  
  설정할 수 없습니다는 <xref:System.Windows.Forms.DataGridViewRow.Visible%2A> 속성을이 행의 `false`합니다. <xref:System.InvalidOperationException> 이 시도 하는 경우 발생 합니다.  

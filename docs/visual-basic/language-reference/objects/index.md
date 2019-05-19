@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic]
 ms.assetid: 651c73e4-dca8-402b-9c6b-e3902b3a3f4b
-ms.openlocfilehash: 161edd2cb3afeb6ba8b10455a1c3a2c43b90dac1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8852a3daa3cd3891d5053cc1fffe19fa310125de
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949671"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880716"
 ---
 # <a name="objects-visual-basic"></a>개체(Visual Basic)
 이 항목에서는 Visual Basic 런타임 개체를 설명하고 멤버 프로시저, 속성 및 이벤트 테이블을 포함하는 기타 항목의 링크를 제공합니다.  
@@ -37,9 +37,9 @@ ms.locfileid: "61949671"
 |`My.Computer.Registry` (<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)|레지스트리를 조작하기 위한 속성 및 메서드를 제공합니다.|  
 |[My.Forms 개체](../../../visual-basic/language-reference/objects/my-forms-object.md)|현재 프로젝트에서 각 Windows Form의 인스턴스에 액세스하기 위한 속성을 제공합니다.|  
 |`My.Log` (<xref:Microsoft.VisualBasic.Logging.AspLog>)|웹 애플리케이션에 대한 이벤트 및 예외 정보를 애플리케이션의 로그 수신기에 쓰기 위한 속성 및 메서드를 제공합니다.|  
-|[My.Request 개체](../../../visual-basic/language-reference/objects/my-request-object.md)|요청된 페이지에 대한 <xref:System.Web.HttpRequest> 개체를 가져옵니다. `My.Request` 개체에는 현재 HTTP 요청에 대한 정보가 포함됩니다.<br /><br /> `My.Request` 개체는 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 응용 프로그램에만 사용할 수 있습니다.|  
+|[My.Request 개체](../../../visual-basic/language-reference/objects/my-request-object.md)|요청된 페이지에 대한 <xref:System.Web.HttpRequest> 개체를 가져옵니다. `My.Request` 개체에는 현재 HTTP 요청에 대한 정보가 포함됩니다.<br /><br /> `My.Request` 개체는 ASP.NET 애플리케이션에만 사용할 수 있습니다.|  
 |[My.Resources 개체](../../../visual-basic/language-reference/objects/my-resources-object.md)|애플리케이션 리소스에 액세스하기 위한 속성 및 클래스를 제공합니다.|  
-|[My.Response 개체](../../../visual-basic/language-reference/objects/my-response-object.md)|<xref:System.Web.HttpResponse>와 연결된 <xref:System.Web.UI.Page> 개체를 가져옵니다. 이 개체를 사용하여 HTTP 응답 데이터를 클라이언트에 보낼 수 있고 이 개체는 해당 응답에 대한 정보를 포함합니다.<br /><br /> `My.Response` 개체는 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 응용 프로그램에만 사용할 수 있습니다.|  
+|[My.Response 개체](../../../visual-basic/language-reference/objects/my-response-object.md)|<xref:System.Web.HttpResponse>와 연결된 <xref:System.Web.UI.Page> 개체를 가져옵니다. 이 개체를 사용하여 HTTP 응답 데이터를 클라이언트에 보낼 수 있고 이 개체는 해당 응답에 대한 정보를 포함합니다.<br /><br /> `My.Response` 개체는 ASP.NET 애플리케이션에만 사용할 수 있습니다.|  
 |[My.Settings 개체](../../../visual-basic/language-reference/objects/my-settings-object.md)|애플리케이션 설정에 액세스하기 위한 속성 및 메서드를 제공합니다.|  
 |`My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>)|현재 사용자에 대한 정보에 액세스할 수 있습니다.|  
 |[My.WebServices 개체](../../../visual-basic/language-reference/objects/my-webservices-object.md)|현재 프로젝트에서 참조하는 각 웹 서비스의 단일 인스턴스를 만들고 액세스하기 위한 속성을 제공합니다.|  

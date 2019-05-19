@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: fb9ad627df640e56b5250a2fdd15f5ac0d52df79
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: af8fff9d034f8dea4ce9f24a2bda042b5b9708a9
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592597"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881260"
 ---
 # <a name="data-member-default-values"></a>데이터 멤버 기본값
 .NET Framework 형식에 개념이 *기본값*합니다. 예를 들어 참조 형식의 기본값은 `null`이고 정수 형식의 기본값은 0입니다. 기본값으로 설정할 경우 serialize된 데이터에서 데이터 멤버를 생략하는 것이 좋을 수도 있습니다. 멤버에 기본값이 있기 때문에 실제 값을 serialize할 필요가 없으므로 성능이 향상됩니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "65592597"
   
 - 사용할 실제 기본값은 스키마에 표시되지 않습니다. 따라서 수신하는 엔드포인트에서 누락된 요소를 적절하게 해석해야 합니다.  
   
- 스키마 가져오기에서는 합니다 <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> 속성으로 자동 설정 됩니다 `false` 언급 한 WCF 관련 주석이 이전에 검색 될 때마다 합니다. 또한 `false` 웹 서비스를 사용할 때 일반적으로 발생하는 특정 상호 운용성 시나리오를 지원하기 위해 `nillable` 속성이 `false`로 설정된 참조 형식 값이 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]로 설정됩니다.  
+ 스키마 가져오기에서는 합니다 <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> 속성으로 자동 설정 됩니다 `false` 언급 한 WCF 관련 주석이 이전에 검색 될 때마다 합니다. 설정 됩니다 `false` 참조 형식에 대해 합니다 `nillable` 속성이로 설정 `false` ASP.NET 웹 서비스를 사용 하는 경우 일반적으로 발생 하는 특정 상호 운용성 시나리오를 지원 하도록 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

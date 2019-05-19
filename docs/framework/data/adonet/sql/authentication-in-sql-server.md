@@ -2,12 +2,12 @@
 title: SQL Server에서 인증
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 33a4a9e7e9d6d8c5324c0e108ec3705582efc866
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 94de49fe89f2b7f4aabaade624e960202f9973bf
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649570"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877456"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server에서 인증
 SQL Server에서는 Windows 인증 모드와 혼합 모드의 두 가지 인증 모드를 지원합니다.  
@@ -43,7 +43,7 @@ SQL Server에서는 Windows 인증 모드와 혼합 모드의 두 가지 인증 
   
 - 사용자가 신뢰할 수 없는 여러 도메인에서 연결하는 경우  
   
-- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]과 같은 인터넷 응용 프로그램  
+- ASP.NET과 같은 인터넷 응용 프로그램을 합니다.  
   
 > [!NOTE]
 >  Windows 인증을 지정하더라도 SQL Server 로그인이 비활성화되지는 않습니다. ALTER LOGIN DISABLE을 사용 하 여 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 문을 높은 SQL Server 로그인을 사용 하지 않도록 설정 합니다.  

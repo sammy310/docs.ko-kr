@@ -2,12 +2,12 @@
 title: ADO.NET에서 데이터 검색 및 수정
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: bf26cd216b456e912dbaf0019114ea8e60b439a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5ac8fbd2a53d2670471c1ef5e59508f582ed944
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033919"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881428"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>ADO.NET에서 데이터 검색 및 수정
 데이터베이스 응용 프로그램의 기본 기능은 데이터 소스에 연결하여 포함된 데이터를 검색하는 것입니다. ADO.NET의.NET Framework 데이터 공급자를 사용 하 여 데이터 검색 뿐 아니라 명령을 실행할 수 있는 응용 프로그램 및 데이터 원본 간의 다리 역할을 **DataReader** 또는 **DataAdapter** . 모든 데이터베이스 응용 프로그램의 한 가지 핵심 기능은 데이터베이스에 저장된 데이터를 업데이트하는 것입니다. Ado.net에서 데이터를 업데이트 하는 중 사용 하는 것은 **DataAdapter** 및 <xref:System.Data.DataSet>, 및 **명령** 개체 및이 포함 될 수도 있습니다 트랜잭션을 사용 하 여 합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "62033919"
  `SqlClient` 및 `OracleClient`에서 사용할 수 있는 성능 카운터에 대해 설명합니다.  
   
  [비동기 프로그래밍](../../../../docs/framework/data/adonet/asynchronous-programming.md)  
- 비동기 프로그래밍에 대한 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 지원에 대해 설명합니다.  
+ 비동기 프로그래밍에 대 한 ADO.NET 지원을 설명합니다.  
   
  [SqlClient 스트리밍 지원](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
  응용 프로그램을 작성할 해당 스트림 데이터에서 SQL Server 없이 완전히 메모리에 로드 하는 방법을 설명 합니다.  

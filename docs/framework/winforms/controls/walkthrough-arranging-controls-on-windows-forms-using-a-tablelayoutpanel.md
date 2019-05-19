@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: 9f72d6d560f82d7d80036f07ec865d78a4ab9955
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d36c51a3346d7d2c2aa4b7b526d590770463826e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606409"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882451"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>연습: TableLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬
 일부 애플리케이션에는 폼 크기가 조정되거나 내용의 크기가 변경될 때 적절하게 정렬되는 레이아웃을 가진 폼이 필요합니다. 동적 레이아웃이 필요하며 코드에서 명시적으로 <xref:System.Windows.Forms.Control.Layout> 이벤트를 처리하지 않으려는 경우 레이아웃 패널을 사용하는 것이 좋습니다.  
@@ -95,7 +95,7 @@ ms.locfileid: "64606409"
   
 1. 선택 합니다 <xref:System.Windows.Forms.TableLayoutPanel> 에서 제어 합니다 **Windows Forms 디자이너**합니다.  
   
-2. 에 **속성** 창을 열어 합니다 <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> 줄임표를 클릭 하 여 컬렉션 (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton")) 단추 다음에 **열** 항목입니다.  
+2.  에 **속성** 창을 열어 합니다 <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> 줄임표를 클릭 하 여 컬렉션 (![의 줄임표 단추 (...)의 Visual Studio 속성 창에서](./media/visual-studio-ellipsis-button.png)) 단추 옆에  **열** 항목입니다.  
   
 3. 첫 번째 열을 선택 하 고 값을 변경 해당 <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> 속성을 <xref:System.Windows.Forms.SizeType.AutoSize>입니다. 클릭 **확인** 하 여 변경 내용을 적용 합니다. 첫 번째 열의 너비에 맞게 축소 되는 참고를 <xref:System.Windows.Forms.Button> 제어 합니다. 열의 너비를 조정할 수 있는지 참고도 합니다.  
   

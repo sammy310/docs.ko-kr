@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: 4886103f7f0246eaacd12c3f12d50a055e650959
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: c240a76ea54d57456ff13fee7a48981354f669de
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582676"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881280"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>데이터 서비스 호스팅(WCF Data Services)
 WCF Data Services를 사용 하 여 데이터를 노출 하는 서비스를 만들 수 있습니다는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드 합니다. 이 데이터 서비스는 <xref:System.Data.Services.DataService%601>에서 상속되는 클래스로 정의됩니다. 이 클래스에서 요청 메시지를 처리 하 고, 데이터 원본에 대해 업데이트를 수행 하 고, OData에서 필요에 따라 응답 메시지를 생성 하는 데 필요한 기능을 제공 합니다. 그러나 데이터 서비스에 바인딩할 수 없으며 들어오는 HTTP 요청에 대 한 네트워크 소켓에서 수신 대기 합니다. 이 필요한 기능을 위해 데이터 서비스는 호스팅 구성 요소를 사용합니다.
@@ -28,9 +28,9 @@ WCF Data Services를 사용 하 여 데이터를 노출 하는 서비스를 만�
 
 - 데이터 서비스를 대신하여 응답을 보냅니다.
 
- 호스팅을 단순화 하기 위해 데이터 서비스, WCF Data Services는 Windows Communication Foundation (WCF)를 사용 하 여 통합 되도록 설계 되었습니다. 데이터 서비스에서 데이터 서비스 호스트 역할을 하는 기본 WCF 구현을 제공는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램입니다. 따라서 다음 방법 중 하나로 데이터 서비스를 호스트할 수 있습니다.
+ 호스팅을 단순화 하기 위해 데이터 서비스, WCF Data Services는 Windows Communication Foundation (WCF)를 사용 하 여 통합 되도록 설계 되었습니다. 데이터 서비스는 ASP.NET 응용 프로그램에서 데이터 서비스 호스트 역할을 하는 기본 WCF 구현을 제공 합니다. 따라서 다음 방법 중 하나로 데이터 서비스를 호스트할 수 있습니다.
 
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램에서
+- ASP.NET 응용 프로그램입니다.
 
 - 자체 호스팅 WCF 서비스를 지원하는 관리되는 응용 프로그램에서
 
@@ -55,12 +55,12 @@ WCF Data Services를 사용 하 여 데이터를 노출 하는 서비스를 만�
  [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
  [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]
 
- 데이터 서비스가 WCF 서비스처럼 동작하기 때문에 데이터 서비스는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]과 통합되고 WCF 웹 프로그래밍 모델을 따릅니다. 자세한 내용은 [WCF 서비스 및 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md) 하 고 [WCF 웹 HTTP 프로그래밍 모델](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)합니다.
+ 데이터 서비스가 WCF 서비스 처럼 때문에 데이터 서비스는 ASP.NET과 통합 하 고 WCF 웹 프로그래밍 모델을 따릅니다. 자세한 내용은 [WCF 서비스 및 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md) 하 고 [WCF 웹 HTTP 프로그래밍 모델](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)합니다.
 
 ## <a name="self-hosted-wcf-services"></a>자체 호스팅 WCF 서비스
  WCF 구현을 통합, 때문에 WCF Data Services는 데이터 서비스를 WCF 서비스로 자체 호스팅 지원. 서비스 콘솔 응용 프로그램과 같은 모든.NET Framework 응용 프로그램에서 자체 호스트할 수 있습니다. <xref:System.Data.Services.DataServiceHost>에서 상속되는 <xref:System.ServiceModel.Web.WebServiceHost> 클래스는 특정 주소에서 데이터 서비스를 인스턴스화하는 데 사용됩니다.
 
- 셀프 호스팅을 개발과 테스트에 사용하면 서비스의 배포와 문제 해결이 보다 쉬워질 수 있습니다. 그러나 이러한 종류의 호스팅은 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 또는 IIS(인터넷 정보 서비스)에서 제공하는 고급 호스팅 및 관리 기능을 제공하지 않습니다. 자세한 내용은 [관리 되는 응용 프로그램에서 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)합니다.
+ 셀프 호스팅을 개발과 테스트에 사용하면 서비스의 배포와 문제 해결이 보다 쉬워질 수 있습니다. 그러나 이러한 종류의 호스팅은 고급 호스팅 및 ASP.NET에서 또는 인터넷 정보 서비스 (IIS)에서 제공 하는 관리 기능을 제공 하지 않습니다. 자세한 내용은 [관리 되는 응용 프로그램에서 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)합니다.
 
 ## <a name="defining-a-custom-data-service-host"></a>사용자 지정 데이터 서비스 호스트 정의
  WCF 호스트 구현이 너무 제한적인 경우 데이터 서비스에 대한 사용자 지정 호스트도 정의할 수 있습니다. <xref:System.Data.Services.IDataServiceHost> 인터페이스를 구현하는 모든 클래스를 데이터 서비스에 대한 네트워크 호스트로 사용할 수 있습니다. 사용자 지정 호스트는 <xref:System.Data.Services.IDataServiceHost> 인터페이스를 구현해야 하며 다음과 같은 데이터 서비스 호스트의 기본 임무를 처리할 수 있어야 합니다.

@@ -2,12 +2,12 @@
 title: ADO.NET 아키텍처
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 2e91077287c051d871eb61f83ec77b7baf90b2d8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 13f65d0a2daf3b477a9b29c4de84fb359c946201
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584568"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877237"
 ---
 # <a name="adonet-architecture"></a>ADO.NET 아키텍처
 기존의 데이터 처리는 연결 기반의 2계층 모델에 의존해 왔습니다. 그러나 다중 계층 아키텍처를 사용하는 데이터 처리가 증가함에 따라 프로그래머는 연결되지 않은 방법으로 전환하여 응용 프로그램의 확장성을 개선하고 있습니다.  
@@ -52,9 +52,9 @@ ADO.NET 아키텍처
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 웹 또는 인트라넷에 데이터 서비스를 배포하는 데 사용됩니다. 데이터는 엔터티 데이터 모델의 사양에 따라 엔터티와 관계로 구조화됩니다. 이 모델에 배포되는 데이터는 표준 HTTP 프로토콜로 주소를 지정할 수 있습니다. 자세한 내용은 [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)를 참조하세요.  
   
 ## <a name="xml-and-adonet"></a>XML 및 ADO.NET  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]에서는 XML을 이용하여 데이터에 대한 연결되지 않은 액세스를 제공합니다. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 가 디자인 된 직접 관련 않으며.NET Framework의 XML 클래스를 사용 하 여 모두 단일 아키텍처의 구성 요소입니다.  
+ ADO.NET 연결 되지 않은 데이터에 액세스할 수 있도록 XML의 강력한 기능을 활용 합니다. ADO.NET가 설계 된 직접 관련 않으며.NET Framework의 XML 클래스를 사용 하 여 모두 단일 아키텍처의 구성 요소입니다.  
   
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] .NET Framework의 XML 클래스에서 수렴 하 고는 `DataSet` 개체입니다. `DataSet`은 파일이든 XML 스트림이든 간에 XML 소스의 데이터로 채울 수 있습니다. `DataSet`은 `DataSet`의 데이터 소스에 관계없이 해당 스키마를 XSD(XML 스키마 정의 언어) 스키마로 포함하여 W3C(World-Wide Web 컨소시엄) 규격의 XML로 작성할 수 있습니다. `DataSet`의 네이티브 serialization 형식은 XML로 `DataSet`은 XML Web services를 통해 데이터 및 스키마 컨텍스트를 원격화하는 데 최적으로 사용할 수 있으므로 계층 간 데이터를 이동하기 위한 탁월한 수단입니다. 자세한 내용은 [XML 문서 및 데이터](../../../../docs/standard/data/xml/index.md)를 참조하세요.  
+ ADO.NET 및.NET Framework의 XML 클래스에서 수렴 된 `DataSet` 개체입니다. `DataSet`은 파일이든 XML 스트림이든 간에 XML 소스의 데이터로 채울 수 있습니다. `DataSet`은 `DataSet`의 데이터 소스에 관계없이 해당 스키마를 XSD(XML 스키마 정의 언어) 스키마로 포함하여 W3C(World-Wide Web 컨소시엄) 규격의 XML로 작성할 수 있습니다. `DataSet`의 네이티브 serialization 형식은 XML로 `DataSet`은 XML Web services를 통해 데이터 및 스키마 컨텍스트를 원격화하는 데 최적으로 사용할 수 있으므로 계층 간 데이터를 이동하기 위한 탁월한 수단입니다. 자세한 내용은 [XML 문서 및 데이터](../../../../docs/standard/data/xml/index.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
 

@@ -2,17 +2,17 @@
 title: 기업 구매 프로세스
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: eaf77fc8b1697d0e337d8c4823ca2184cb9c545c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 83290245dd203d4bb63c96e94ca6bdafee4ecffb
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665933"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876158"
 ---
 # <a name="corporate-purchase-process"></a>기업 구매 프로세스
 이 샘플에서는 최상의 제안을 자동으로 선택하는 구매 프로세스를 기반으로 매우 기본적인 RFP(제안 요청서)를 만드는 방법을 보여 줍니다. 여기에서는 <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> 및 <xref:System.Activities.Statements.ForEach%601>과 사용자 지정 활동을 결합하여 이 프로세스를 나타내는 워크플로를 만듭니다.
 
- 이 샘플에는 다양한 참가자(최초 요청자 또는 특정 공급업체)로 프로세스와 상호 작용할 수 있도록 하는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 클라이언트 응용 프로그램이 포함되어 있습니다.
+ 이 샘플에는 다양 한 참가자 (최초 요청자 또는 특정 공급 업체)로 프로세스와 상호 작용을 허용 하는 ASP.NET 클라이언트 응용 프로그램을 포함 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -36,7 +36,7 @@ ms.locfileid: "64665933"
 
 - 추적(Tracking)
 
-- 서로 다른 클라이언트([!INCLUDE[wf1](../../../../includes/wf1-md.md)] 웹 응용 프로그램 및 WinForms 응용 프로그램)에 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 호스팅
+- 호스팅 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 서로 다른 클라이언트 (ASP.NET 웹 응용 프로그램 및 WinForms 응용 프로그램).
 
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
@@ -82,7 +82,7 @@ ms.locfileid: "64665933"
 |-------------|-----------------|  
 |공용|프로세스 내에 사용되는 엔터티 개체(제안 요청서, 공급업체 및 공급업체 제안서)입니다.|  
 |WfDefinition|구매 프로세스 워크플로의 인스턴스를 만들고 사용하기 위해 클라이언트 응용 프로그램에 사용되는 프로세스([!INCLUDE[wf1](../../../../includes/wf1-md.md)] 프로그램)와 호스트(`PurchaseProcessHost`)에 대한 정의입니다.|  
-|WebClient|사용자가 구매 프로세스의 인스턴스를 만들고 여기에 참가할 수 있도록 하는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 클라이언트 응용 프로그램입니다. 이 응용 프로그램에서는 워크플로 엔진과 상호 작용하기 위해 사용자 지정하여 만든 호스트를 사용합니다.|  
+|WebClient|클라이언트는 ASP.NET 응용 프로그램을 만들고 구매 프로세스의 인스턴스를 참여할 수 있습니다. 이 응용 프로그램에서는 워크플로 엔진과 상호 작용하기 위해 사용자 지정하여 만든 호스트를 사용합니다.|  
 |WinFormsClient|사용자가 구매 프로세스의 인스턴스를 만들고 여기에 참가할 수 있도록 하는 Windows Forms 클라이언트 응용 프로그램입니다. 이 응용 프로그램에서는 워크플로 엔진과 상호 작용하기 위해 사용자 지정하여 만든 호스트를 사용합니다.|  
   
 ### <a name="wfdefinition"></a>WfDefinition  

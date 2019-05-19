@@ -2,12 +2,12 @@
 title: 보안 고려 사항(Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 5a985cfcd4834efd7bbab04d30c86787dfb90955
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 47dbf800852e149f541c512e90a8bafef2077672
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583500"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879926"
 ---
 # <a name="security-considerations-entity-framework"></a>보안 고려 사항(Entity Framework)
 이 항목에서는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 응용 프로그램의 개발, 배포 및 실행과 관련된 보안 고려 사항에 대해 설명합니다. 또한 안전한.NET Framework 응용 프로그램을 만들기 위한 권장 사항을 따라야 합니다. 자세한 내용은 [보안 개요](../../../../../docs/framework/data/adonet/security-overview.md)합니다.  
@@ -141,22 +141,23 @@ ms.locfileid: "65583500"
  <xref:System.Data.Objects.ObjectContext>의 메서드 및 속성은 try-catch 블록 내에서 액세스합니다. 예외를 catch하면 처리되지 않은 예외로 인해 <xref:System.Data.Objects.ObjectStateManager>의 항목이나 테이블 이름 같은 모델 정보가 응용 프로그램 사용자에게 노출되는 것을 방지할 수 있습니다.  
   
 ## <a name="security-considerations-for-aspnet-applications"></a>ASP.NET 응용 프로그램의 보안 고려 사항  
- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] 응용 프로그램에서 경로를 사용할 때 다음 사항을 고려해야 합니다.  
+
+ASP.NET 응용 프로그램의 경로 사용 하 여 작업할 때에 다음을 고려해 야 합니다.  
   
 #### <a name="verify-whether-your-host-performs-path-checks"></a>호스트에서 경로 검사를 수행하는지 여부를 확인합니다.  
- 파이프 기호로 묶인 `|DataDirectory|` 대체 문자열을 사용하면 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]에서 확인된 경로가 지원되는지 확인합니다. 예를 들어, ".."은 `DataDirectory` 뒤에 사용할 수 없습니다. 웹 응용 프로그램 루트 연산자(`~`)를 확인하기 위한 동일한 검사는 [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]을 호스트하는 프로세스에서 수행됩니다. 이 확인을 수행 하는 IIS 그러나 IIS 이외의 호스트는 확인 된 경로 지원 하는지을 확인 하지 않을 수 있습니다. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 응용 프로그램을 배포하는 호스트의 동작을 알고 있어야 합니다.  
+ 경우는 `|DataDirectory|` (파이프 기호 안에 포함 됨) 대체 문자열을 사용 하면 ADO.NET의 확인 된 경로 지원 하는지 확인 합니다. 예를 들어, ".."은 `DataDirectory` 뒤에 사용할 수 없습니다. 웹 응용 프로그램 루트 연산자를 확인 하기 위한 동일한 검사는 (`~`) ASP.NET을 호스팅하는 프로세스에서 수행 됩니다. 이 확인을 수행 하는 IIS 그러나 IIS 이외의 호스트는 확인 된 경로 지원 하는지을 확인 하지 않을 수 있습니다. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 응용 프로그램을 배포하는 호스트의 동작을 알고 있어야 합니다.  
   
 #### <a name="do-not-make-assumptions-about-resolved-path-names"></a>확인된 경로 이름에 대해 가정하지 않습니다.  
  루트 연산자(`~`) 및 `DataDirectory` 대체 문자열이 확인된 값이 응용 프로그램 런타임 동안 일정하게 유지되어야 하는 경우에도 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에서는 호스트의 이러한 값 수정을 제한하지 않습니다.  
   
 #### <a name="verify-the-path-length-before-deployment"></a>배포 전에 경로 길이를 확인합니다.  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 응용 프로그램을 배포하기 전에 루트 연산자(~) 및 `DataDirectory` 대체 문자열의 값이 운영 체제의 경로 길이 제한을 초과하지 않는지 확인해야 합니다. [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 데이터 공급자는 경로 길이가 유효한 제한 범위 내에 있는지 확인하지 않습니다.  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 응용 프로그램을 배포하기 전에 루트 연산자(~) 및 `DataDirectory` 대체 문자열의 값이 운영 체제의 경로 길이 제한을 초과하지 않는지 확인해야 합니다. ADO.NET 데이터 공급자는 경로 길이가 유효한 제한 범위 내 확인 하지 않습니다.  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>ADO.NET 메타데이터의 보안 고려 사항  
  다음 보안 고려 사항은 모델 및 매핑 파일을 생성하고 사용할 때 적용됩니다.  
   
 #### <a name="do-not-expose-sensitive-information-through-logging"></a>로깅을 통해 중요한 데이터를 노출하지 않습니다.  
- [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 메타데이터 서비스 구성 요소는 개인 정보를 기록하지 않습니다. 액세스 제한으로 인해 반환할 수 없는 결과가 있을 경우 데이터베이스 관리 시스템과 파일 시스템에서 중요한 정보가 포함될 수 있는 예외를 발생시키는 대신 0개 결과를 반환해야 합니다.  
+ADO.NET 메타 데이터 서비스 구성 요소는 개인 정보를 기록 하지 않습니다. 액세스 제한으로 인해 반환할 수 없는 결과가 있을 경우 데이터베이스 관리 시스템과 파일 시스템에서 중요한 정보가 포함될 수 있는 예외를 발생시키는 대신 0개 결과를 반환해야 합니다.  
   
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>신뢰할 수 없는 소스의 MetadataWorkspace 개체를 허용하지 않습니다.  
  응용 프로그램에서 신뢰할 수 없는 소스의 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 클래스 인스턴스를 허용하면 안 됩니다. 대신, 명시적으로 작업 영역을 생성하고 해당 소스에서 채워야 합니다.  

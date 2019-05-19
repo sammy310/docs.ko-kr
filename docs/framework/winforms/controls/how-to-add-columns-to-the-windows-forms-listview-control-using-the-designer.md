@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding column headers
 - columns [Windows Forms], adding to ListView controls
 ms.assetid: 5b1a8b4d-587e-479a-95c1-f9b90884f13a
-ms.openlocfilehash: 48fd223c8e770e64513d79ef9d24f93321c98332
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: a37f5d64e8ca10b26a8897d45b8757113ce900c9
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322097"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877603"
 ---
 # <a name="how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms ListView 컨트롤에 열 추가
 Windows Forms <xref:System.Windows.Forms.ListView> 컨트롤 각 목록에 대 한 여러 열을 표시할 수 있습니다 때 항목을 **세부 정보** 보기. 여러 유형의 각 목록 항목에 대 한 정보를 표시할 열을 사용할 수 있습니다. 예를 들어, 파일 이름, 파일 형식, 크기 및 파일을 마지막으로 수정한 날짜 파일의 목록을 표시할 수 있습니다. 만든 후 열을 채우는 방법에 대 한 내용은 참조 [방법: Windows 사용 하 여 열에 하위 항목 표시 Forms ListView 컨트롤](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)합니다.  
@@ -24,7 +24,7 @@ Windows Forms <xref:System.Windows.Forms.ListView> 컨트롤 각 목록에 대 �
   
 1. 에 **속성** 창에서 컨트롤의 설정 <xref:System.Windows.Forms.ListView.View%2A> 속성을 <xref:System.Windows.Forms.View.Details>입니다.  
   
-2. 에 **속성** 창에서 클릭 합니다 **줄임표** 단추 (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton")) 옆에 <xref:System.Windows.Forms.ListView.Columns%2A> 속성입니다.  
+2.  에 **속성** 창 클릭 합니다 **줄임표** 단추 (![The 줄임표 단추 (...)의 Visual Studio 속성 창에서](./media/visual-studio-ellipsis-button.png)) 옆에 <xref:System.Windows.Forms.ListView.Columns%2A> 속성 .  
   
      합니다 **ColumnHeader 컬렉션 편집기** 나타납니다.  
   

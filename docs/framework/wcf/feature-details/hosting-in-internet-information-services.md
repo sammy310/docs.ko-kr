@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: 4d522fb377fd117800ef4d7d754d513a3d919a35
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d881a75e95bc3c3eef1df651b380210ff51ea3ce
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656041"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877512"
 ---
 # <a name="hosting-in-internet-information-services"></a>인터넷 정보 서비스에서의 호스팅
-Windows Communication Foundation (WCF) 서비스를 호스트 하는 한 가지 옵션은 인터넷 정보 서비스 (IIS) 응용 프로그램 내에서. 이 호스팅 모델은 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 및 ASP.NET 웹 서비스(ASMX) 웹 서비스에서 사용되는 모델과 비슷합니다.  
+Windows Communication Foundation (WCF) 서비스를 호스트 하는 한 가지 옵션은 인터넷 정보 서비스 (IIS) 응용 프로그램 내에서. 이 호스팅 모델은 ASP.NET 및 ASP.NET 웹 서비스 (ASMX) 웹 서비스에서 사용 하는 모델과 비슷합니다.  
   
 ## <a name="versions-of-iis"></a>IIS 버전  
  WCF는 다음 운영 체제의 다음 버전의 IIS에서 호스팅할 수 있습니다.  
@@ -28,11 +28,11 @@ Windows Communication Foundation (WCF) 서비스를 호스트 하는 한 가지 
 ## <a name="benefits-of-iis-hosting"></a>IIS 호스팅의 장점  
  IIS에서 WCF 서비스 호스팅에 몇 가지 이점이 있습니다.  
   
-- IIS에서 호스팅되는 WCF 서비스 배포 및 관리 같은 다른 유형의 IIS 응용 프로그램을 포함 하 여 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램 및 ASMX입니다.  
+- IIS에서 호스팅되는 WCF 서비스 배포 및 다른 유형의 IIS 응용 프로그램을 ASP.NET 응용 프로그램 및 ASMX를 비롯 한 같은 관리 합니다.  
   
 - IIS는 프로세스 활성화, 상태 관리 및 재활용 기능을 제공하여 호스트된 응용 프로그램의 신뢰성이 향상됩니다.  
   
-- 와 같은 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]에서 WCF 서비스 호스트 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 활용할 수 있습니다는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 향상 된 서버 밀도 및 확장성에 대 한 공통 작업자 프로세스에 여러 응용 프로그램이 있는 공유 호스팅 모델.  
+- ASP.NET과 같은 ASP.NET에서 호스팅되는 WCF 서비스 활용 ASP.NET 공유 호스팅 모델을 여러 응용 프로그램 향상 된 서버 밀도 및 확장성에 대 한 공통 작업자 프로세스에 상주 합니다.  
   
 - IIS에서 호스팅되는 WCF 서비스와 동일한 동적 컴파일 모델을 사용 하 여 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]개발을 간소화 하는, 및 호스 티 드 서비스를 배포 합니다.  
   
@@ -43,7 +43,7 @@ Windows Communication Foundation (WCF) 서비스를 호스트 하는 한 가지 
   
 - IIS, ASP.NET, WCF 및 WCF HTTP 활성화 구성 요소가 올바르게 설치 되어 등록을 확인 합니다.  
   
-- 새 IIS 애플리케이션을 만들거나 기존 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 애플리케이션을 다시 사용합니다.  
+- 새 IIS 응용 프로그램을 만들거나 기존 ASP.NET 응용 프로그램을 다시 사용 합니다.  
   
 - WCF 서비스의.svc 파일을 만듭니다.  
   
@@ -54,7 +54,7 @@ Windows Communication Foundation (WCF) 서비스를 호스트 하는 한 가지 
  이러한 각 작업의 자세한 내용은 참조 하세요. [인터넷 WCF 서비스 배포](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)합니다.  
   
 ## <a name="wcf-services-and-aspnet"></a>WCF 서비스 및 ASP.NET  
- WCF 서비스 일 수 있습니다 하거나--함께 호스팅 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 또는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 호환 모드는 서비스에서 제공 하는 기능을 완전히 활용을 걸릴 수 있습니다는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 응용 프로그램 플랫폼입니다. 이러한 기능 설명은 참조 하세요 [WCF 서비스 및 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)합니다.  
+ WCF 서비스 수 호스트 중 하나에서 나란히 asp.net 또는 ASP.NET 호환 모드는 서비스에서 ASP.NET 웹 응용 프로그램 플랫폼에서 제공 하는 기능을 완전히 활용을 걸릴 수 있습니다. 이러한 기능 설명은 참조 하세요 [WCF 서비스 및 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
 

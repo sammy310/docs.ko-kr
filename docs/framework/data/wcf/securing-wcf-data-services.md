@@ -8,12 +8,12 @@ helpviewer_keywords:
 - securing application [WCF Data Services]
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
-ms.openlocfilehash: cf99979e2ea3a47247a5df4b6e0ececab6abe8ef
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4db6d7e13bfc4a0e2705c210820db511a60e09de
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645523"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877347"
 ---
 # <a name="securing-wcf-data-services"></a>WCF Data Services에 보안 설정
 이 항목에서는 개발, 배포 및 Open Data Protocol (OData)을 지 원하는 액세스 서비스는 WCF Data Services 및 응용 프로그램 실행에 관련 된 보안 고려 사항을 설명 합니다. 또한 안전한.NET Framework 응용 프로그램을 만들기 위한 권장 사항을 따라야 합니다.  
@@ -55,7 +55,7 @@ context.Credentials = _
  데이터 서비스에 클레임 기반 토큰 또는 쿠키와 같은 <xref:System.Net.NetworkCredential> 개체를 사용하여 지정할 수 없는 로그인 자격 증명이 필요한 경우에는 HTTP 요청에 헤더(일반적으로 `Authorization` 및 `Cookie` 헤더)를 수동으로 설정해야 합니다. 이러한 종류의 인증 시나리오에 대 한 자세한 내용은 블로그 게시물을 참조 하세요 [ OData 및 인증 – 3 부-클라이언트 쪽 후크](https://devblogs.microsoft.com/odata/odata-and-authentication-part-3-clientside-hooks/)합니다. 요청 메시지의 HTTP 헤더를 설정 하는 방법의 예제를 참조 하세요. [방법: 클라이언트 요청의 헤더 설정](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)합니다.  
   
 ## <a name="impersonation"></a>가장  
- 일반적으로 데이터 서비스는 데이터 서비스를 호스트하는 작업자 프로세스의 자격 증명을 사용하여 서버 또는 데이터베이스 파일과 같은 필요한 리소스에 액세스합니다. 가장을 사용하는 경우 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램은 요청하는 사용자의 Windows ID(사용자 계정)를 사용하여 실행될 수 있습니다. 가장은 IIS를 통해 사용자를 인증하는 응용 프로그램에서 주로 사용되며, 이 원칙의 자격 증명은 필요한 리소스에 액세스하는 데 사용됩니다. 자세한 내용은 [ASP.NET 가장](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100))합니다.  
+ 일반적으로 데이터 서비스는 데이터 서비스를 호스트하는 작업자 프로세스의 자격 증명을 사용하여 서버 또는 데이터베이스 파일과 같은 필요한 리소스에 액세스합니다. 가장을 사용 하는 경우 ASP.NET 응용 프로그램을 요청 하는 사용자의 Windows id (사용자 계정)를 사용 하 여 실행할 수 있습니다. 가장은 IIS를 통해 사용자를 인증하는 응용 프로그램에서 주로 사용되며, 이 원칙의 자격 증명은 필요한 리소스에 액세스하는 데 사용됩니다. 자세한 내용은 [ASP.NET 가장](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100))합니다.  
   
 ## <a name="configuring-data-service-authorization"></a>데이터 서비스 권한 부여 구성  
  권한 부여는 이전에 성공적으로 이루어진 인증을 기반으로 식별된 프로세스 또는 원칙에 응용 프로그램 리소스에 대한 액세스 권한을 부여하는 과정입니다. 일반적으로 클라이언트 응용 프로그램에 필요한 작업을 수행하기에 충분한 권한만 데이터 서비스 사용자에게 부여해야 합니다.  

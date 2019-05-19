@@ -10,12 +10,12 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-ms.openlocfilehash: 953a1944073a8cb5b19ef072e2a523baec3a5605
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e55d27b454579268658192ae56daa52e0b28bb83
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650000"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876067"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>방법: 선형 그라데이션 만들기
 GDI + 가로, 세로 및 대각선 선형 그라데이션 제공합니다. 기본적으로 선형 그라데이션에 색이 균일 하 게 변경 합니다. 그러나 균일 하지 않은 방식으로 색이 변경 되도록 선형 그라데이션을 사용자 지정할 수 있습니다.  
@@ -31,9 +31,9 @@ GDI + 가로, 세로 및 대각선 선형 그라데이션 제공합니다. 기�
   
  다음 그림은 선, 타원 및 사각형을 나타냅니다. 참고는 색 그라데이션 반복 하는 가로 좌표는 200 개 이상 증가 합니다.  
   
- ![선형 그라데이션](./media/cslineargradient1.png "cslineargradient1")  
+ ![선, 타원 및 사각형 색 그라데이션을 사용 하 여 채워집니다.](./media/how-to-create-a-linear-gradient/gradient-line-ellipse-rectangle.png)  
   
-### <a name="to-use-horizontal-linear-gradients"></a>가로 선형 그라데이션 사용 하려면  
+## <a name="to-use-horizontal-linear-gradients"></a>가로 선형 그라데이션 사용 하려면  
   
 - 불투명 한 빨강 및 불투명 파란색 세 번째와 네 번째 인수로 각각 전달 합니다.  
   
@@ -56,9 +56,9 @@ GDI + 가로, 세로 및 대각선 선형 그라데이션 제공합니다. 기�
   
  다음 그림에서는 결과 타원 및 사각형을 보여 줍니다.  
   
- ![선형 그라데이션](./media/cslineargradient2.png "cslineargradient2")  
+ ![타원 및 사각형 가로 색 그라데이션을 사용 하 여 채워집니다.](./media/how-to-create-a-linear-gradient/gradient-ellipse-rectangle.png)  
 
-### <a name="to-customize-linear-gradients"></a>선형 그라데이션 사용자 지정 하려면  
+## <a name="to-customize-linear-gradients"></a>선형 그라데이션 사용자 지정 하려면  
   
 - 불투명 한 검정 픽셀과 불투명 한 빨강의 세 번째 및 네 번째 인수로 각각 전달 합니다.  
   
@@ -71,9 +71,9 @@ GDI + 가로, 세로 및 대각선 선형 그라데이션 제공합니다. 기�
   
  다음 그림에서는 줄 및 타원을 보여 줍니다. 참고는 타원 변경에서 색 점진적으로 하나를 따라 이동 하면 줄을 통과 하는 줄에 병렬 되 (0, 0) 및 (200, 100).  
   
- ![선형 그라데이션](./media/cslineargradient3.png "cslineargradient3")  
+ ![줄 및 타원 대각선 색 그라데이션을 사용 하 여 채워집니다.](./media/how-to-create-a-linear-gradient/gradient-line-ellipse.png)  
   
-### <a name="to-create-diagonal-linear-gradients"></a>대각선 선형 그라데이션을 만들려면  
+## <a name="to-create-diagonal-linear-gradients"></a>대각선 선형 그라데이션을 만들려면  
   
 - 불투명 파란색 픽셀과 불투명 한 녹색 세 번째와 네 번째 인수로 각각 전달 합니다.  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: 4342b3d6219f0c996264bb7ed190b1204338ba64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4641c1c63a4f3c13cefb573dacf4e88b5d63077e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051158"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881182"
 ---
 # <a name="hosting-services"></a>서비스 호스팅
 활성화할 서비스는 서비스를 만들고 컨텍스트와 수명을 제어하는 런타임 환경에 호스팅해야 합니다. Windows Communication Foundation (WCF) 서비스는 관리 코드를 지 모든 Windows 프로세스에서 실행 되도록 설계 되었습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "62051158"
  이 호스팅 옵션에 대 한 서비스의 프로세스 수명은 서비스 제어 관리자 (SCM)에 의해 제어 됩니다 있도록 하는 WCF 서비스 (이전의 NT 서비스) 관리 되는 Windows 서비스로 호스팅하는 응용 프로그램 도메인 (AppDomain) 등록 구성 Windows 서비스입니다. 자체 호스팅 옵션과 같이 이러한 유형의 호스팅 환경에서는 일부 호스팅 코드를 애플리케이션의 일부로 작성해야 합니다. 서비스는 모두 Windows 서비스와 WCF 서비스로 상속 하 여 구현 됩니다는 <xref:System.ServiceProcess.ServiceBase> 클래스 뿐만 아니라는 WCF에서 서비스 계약 인터페이스. 그러면 <xref:System.ServiceModel.ServiceHost> 가 만들어지고, 재정의된 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 메서드 내에서 열리고 재정의된 <xref:System.ServiceProcess.ServiceBase.OnStop> 메서드 내에서 닫힙니다. Installutil.exe 도구를 사용하여 프로그램을 Windows 서비스로 설치하려면 <xref:System.Configuration.Install.Installer> 에서 상속되는 설치 관리자 클래스를 구현해야 합니다. 자세한 내용은 [방법: 관리 되는 Windows 서비스에서 WCF 서비스 호스팅](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)합니다. 관리 되는 Windows 서비스 호스팅 옵션에서 사용할 수 있는 시나리오에는 메시지가 활성화 되지 않은 보안 환경의 IIS 외부에서 호스팅되는 장기 실행 WCF 서비스의 경우 서비스 수명은 대신 운영 체제에 의해 제어됩니다. 모든 버전의 Windows에서 이 호스팅 옵션을 사용할 수 있습니다.  
   
 #### <a name="internet-information-services-iis"></a>IIS(인터넷 정보 서비스)  
- IIS 호스팅 옵션은 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 과 통합되어 있으며, 이러한 기술이 제공하는 프로세스 재활용, 유휴 상태이면 종료, 프로세스 상태 모니터링 및 메시지 기반 활성화 같은 기능을 사용합니다. [!INCLUDE[wxp](../../../includes/wxp-md.md)] 및 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 운영 체제에서 이 옵션은 높은 가용성 및 확장성을 필요로 하는 웹 서비스 응용 프로그램을 호스팅하는 기본 솔루션입니다. IIS는 또한 고객이 엔터프라이즈 수준의 서버 제품에서 기대하는 통합된 관리 효율성을 제공합니다. 이 호스팅 옵션을 사용하려면 IIS를 적절히 구성해야 하지만 호스팅 코드를 애플리케이션의 일부로 작성하지 않아도 됩니다. IIS를 구성 하는 방법에 대 한 자세한 내용은 참조는 WCF 서비스에 대 한 호스팅 [방법: IIS에서 WCF 서비스 호스팅](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)합니다.  
+ IIS 호스팅 옵션 ASP.NET과 통합 되어 있으며 이러한 기술은, 프로세스 재활용, 유휴 상태 이면 종료, 프로세스 상태 모니터링 및 메시지 기반 활성화 같은 기능을 사용 합니다. [!INCLUDE[wxp](../../../includes/wxp-md.md)] 및 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 운영 체제에서 이 옵션은 높은 가용성 및 확장성을 필요로 하는 웹 서비스 응용 프로그램을 호스팅하는 기본 솔루션입니다. IIS는 또한 고객이 엔터프라이즈 수준의 서버 제품에서 기대하는 통합된 관리 효율성을 제공합니다. 이 호스팅 옵션을 사용하려면 IIS를 적절히 구성해야 하지만 호스팅 코드를 애플리케이션의 일부로 작성하지 않아도 됩니다. IIS를 구성 하는 방법에 대 한 자세한 내용은 참조는 WCF 서비스에 대 한 호스팅 [방법: IIS에서 WCF 서비스 호스팅](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)합니다.  
   
  IIS에서 호스팅되는 서비스는 HTTP 전송만 사용할 수 있습니다. IIS 5.1에서의 서비스 구현 시 [!INCLUDE[wxp](../../../includes/wxp-md.md)]의 경우 몇 가지 제한이 있습니다. IIS 5.1에서 WCF 서비스에 대해 제공 되는 메시지 기반 활성화 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 통신할 포트 80을 사용 하 여 동일한 컴퓨터에서 자체 호스팅된 WCF 서비스를 차단 합니다. WCF 서비스에서 호스팅되는 경우 다른 응용 프로그램과 동일한 AppDomain/응용 프로그램 풀/작업자 프로세스에서 실행할 수 있습니다 [!INCLUDE[iis601](../../../includes/iis601-md.md)] 에서 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]합니다. 하지만 WCF 및 [!INCLUDE[iis601](../../../includes/iis601-md.md)] 커널 모드 HTTP 스택 (HTTP.sys)을 사용 하 여 모두 [!INCLUDE[iis601](../../../includes/iis601-md.md)] IIS 5.1과 달리 동일한 컴퓨터에서 실행 되는 다른 자체 호스팅된 WCF 서비스를 사용 하 여 포트 80을 공유할 수 있습니다.  
   
@@ -45,9 +45,9 @@ ms.locfileid: "62051158"
 |-------------------------|----------------------|----------------------------------|  
 |관리되는 애플리케이션("자체 호스팅")|콘솔 응용 프로그램 개발 중에 사용 합니다.<br />-리치 WinForm 및 [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 클라이언트 응용 프로그램 서비스에 액세스 합니다.|-유연 합니다.<br />-쉽게 배포할 수 있습니다.<br />-서비스에 대 한 엔터프라이즈 솔루션입니다.|  
 |Windows 서비스(이전의 NT 서비스)|IIS 외부에서 호스팅된-장기 실행 WCF 서비스입니다.|메시지가 활성화 되지 운영 체제에 의해 제어 되는 서비스 프로세스 수명입니다.<br />Windows의 모든 버전에서 지원 합니다.<br />-보안 환경입니다.|  
-|IIS 5.1, [!INCLUDE[iis601](../../../includes/iis601-md.md)]|-나란히 사용 하 여 서비스를 WCF를 실행 하는 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] HTTP 프로토콜을 사용 하 여 인터넷에서 콘텐츠입니다.|-프로세스 재활용 합니다.<br />-유휴 상태 이면 종료 합니다.<br />-상태 모니터링을 처리 합니다.<br />-메시지 기반 활성화 합니다.<br />-HTTP에만 해당 합니다.|  
+|IIS 5.1, [!INCLUDE[iis601](../../../includes/iis601-md.md)]|-WCF 서비스 side-by-side-ASP.NET 콘텐츠를 사용 하 여 인터넷을 통해 실행 HTTP 프로토콜을 사용 합니다.|-프로세스 재활용 합니다.<br />-유휴 상태 이면 종료 합니다.<br />-상태 모니터링을 처리 합니다.<br />-메시지 기반 활성화 합니다.<br />-HTTP에만 해당 합니다.|  
 |WAS(Windows Process Activation Service)|-다양 한 전송 프로토콜을 사용 하 여 인터넷에서 IIS를 설치 하지 않고 WCF 서비스를 실행 합니다.|-IIS 필요 하지 않습니다.<br />-프로세스 재활용 합니다.<br />-유휴 상태 이면 종료 합니다.<br />-상태 모니터링을 처리 합니다.<br />-메시지 기반 활성화 합니다.<br />-HTTP, TCP, 명명 된 파이프 및 MSMQ를 사용 하 여 작동 합니다.|  
-|IIS 7.0|-서비스 WCF 실행 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 콘텐츠입니다.<br />-다양 한 전송 프로토콜을 사용 하 여 인터넷을 통해 WCF 서비스를 실행 합니다.|-혜택 이었습니다.<br />-통합 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 및 IIS 콘텐츠와 합니다.|  
+|IIS 7.0|-ASP.NET 콘텐츠를 사용 하 여 WCF 서비스를 실행 합니다.<br />-다양 한 전송 프로토콜을 사용 하 여 인터넷을 통해 WCF 서비스를 실행 합니다.|-혜택 이었습니다.<br />ASP.NET 및 IIS 콘텐츠와 통합 합니다.|  
   
  애플리케이션이 배포되는 Windows 버전, 메시지를 보내는 데 필요한 전송, 애플리케이션에서 필요로 하는 프로세스와 애플리케이션 도메인 재활용 유형에 따라 선택하는 호스팅 환경이 달라집니다. 다음 표에서는 이러한 요구 사항과 관련된 데이터를 요약하여 설명합니다.  
   

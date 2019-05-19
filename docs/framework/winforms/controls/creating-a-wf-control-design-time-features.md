@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: 9f290629e50d7d791119298059277ba73d8e73eb
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 4d741beffa5649d1d1593ba3dbb7a1918b669b80
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211210"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882305"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>연습: Visual Studio의 디자인 타임 기능을 활용하는 Windows Forms 컨트롤 만들기
 
@@ -59,7 +59,7 @@ ms.locfileid: "65211210"
 
 완료 되 면 다음과 같이 사용자 지정 컨트롤 표시 됩니다.
 
-![가능한 MarqueeControl 배치](./media/demomarqueecontrol.gif "항목")
+![움직이는 텍스트 라는 텍스트와 시작 및 중지 단추를 보여 주는 앱입니다.](./media/creating-a-wf-control-design-time-features/demo-marquee-control.gif)
 
 전체 코드 목록은 참조 하세요. [방법: 디자인 타임 기능을 활용 하는 Windows Forms 컨트롤 만들기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))합니다.
 
@@ -178,7 +178,7 @@ using MarqueeControlLibrary;
 
 2. "MarqueeControlLibrary 속성 페이지" 대화 상자에서 선택 합니다 **디버그** 페이지입니다.
 
-3. 에 **시작 작업** 섹션에서 **시작 외부 프로그램**합니다. 해야 줄임표 하므로 별도 인스턴스, Visual Studio의 디버깅 (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton")) 클릭 하 여 Visual Studio IDE에 대 한 검색 합니다. 실행 파일의 이름을 devenv.exe가 이며 기본 위치에 설치한 경우 해당 경로 %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe 합니다.
+3. 에 **시작 작업** 섹션에서 **시작 외부 프로그램**합니다. 해야 줄임표 하므로 Visual Studio의 개별 인스턴스를 디버깅 (![의 줄임표 단추 (...)의 Visual Studio 속성 창에서](./media/visual-studio-ellipsis-button.png)) 클릭 하 여 Visual Studio IDE에 대 한 검색 합니다. 실행 파일의 이름을 devenv.exe가 이며 기본 위치에 설치한 경우 해당 경로 %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe 합니다.
 
 4. 대화 상자를 닫으려면 확인을 클릭 합니다.
 

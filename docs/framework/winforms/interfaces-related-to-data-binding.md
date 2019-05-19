@@ -12,16 +12,16 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-ms.openlocfilehash: 1609fbd8cbb24d6f2c10fbc3a235f01a451eb0fa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 591b76ca6b5cd3a9180487c79293d5fc3b7991af
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754070"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882340"
 ---
 # <a name="interfaces-related-to-data-binding"></a>데이터 바인딩과 관련된 인터페이스
 
-[!INCLUDE[vstecado](../../../includes/vstecado-md.md)]을 사용하면 애플리케이션과 처리할 데이터의 바인딩 요구를 충족시킬 다양한 데이터 구조를 만들 수 있습니다. Windows Forms에서 데이터를 제공하거나 사용하는 고유 클래스를 만들고 싶을 수도 있습니다. 이러한 개체는 기본 데이터 바인딩부터 디자인 타임 지원, 오류 확인, 변경 사항 알림, 심지어 데이터 자체에 적용된 변경 내용의 구조화된 롤백 지원에 이르기까지 다양한 수준의 복합 기능을 제공할 수 있습니다.
+ADO.NET을 사용 하 여 응용 프로그램을 사용 하는 데이터 바인딩 요구에 맞게 여러 다른 데이터 구조를 만들 수 있습니다. Windows Forms에서 데이터를 제공하거나 사용하는 고유 클래스를 만들고 싶을 수도 있습니다. 이러한 개체는 기본 데이터 바인딩부터 디자인 타임 지원, 오류 확인, 변경 사항 알림, 심지어 데이터 자체에 적용된 변경 내용의 구조화된 롤백 지원에 이르기까지 다양한 수준의 복합 기능을 제공할 수 있습니다.
 
 ## <a name="consumers-of-data-binding-interfaces"></a>데이터 바인딩 인터페이스의 소비자
 
@@ -82,7 +82,7 @@ ms.locfileid: "64754070"
 
 - <xref:System.Collections.IEnumerable> 인터페이스
 
-  구현 하는 클래스를 <xref:System.Collections.IEnumerable> 인터페이스에서 일반적으로 사용 됩니다 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]합니다. 이 인터페이스에 대 한 Windows Forms 지원 까지만 유효 합니다 <xref:System.Windows.Forms.BindingSource> 구성 요소입니다.
+  구현 하는 클래스는 <xref:System.Collections.IEnumerable> 인터페이스는 ASP.NET에서 일반적으로 사용 됩니다. 이 인터페이스에 대 한 Windows Forms 지원 까지만 유효 합니다 <xref:System.Windows.Forms.BindingSource> 구성 요소입니다.
 
   > [!NOTE]
   > 합니다 <xref:System.Windows.Forms.BindingSource> 모든 구성 요소 복사 <xref:System.Collections.IEnumerable> 바인딩할 목적으로 별도 목록 항목입니다.

@@ -2,12 +2,12 @@
 title: UDP 활성화
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 158aa804a796f30e7450bda2fadc256ca3579579
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 127516b79bcb15406bfade09bc1309e55aac3dcf
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623727"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881001"
 ---
 # <a name="udp-activation"></a>UDP 활성화
 이 샘플은 기반는 [전송 합니다. UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플입니다. 확장 된 [전송 합니다. UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플 Windows 프로세스 활성화 서비스 (WAS)를 사용한 프로세스 활성화를 지원 하도록 합니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "64623727"
   
 #### <a name="to-set-up-this-sample"></a>이 샘플을 설치하려면  
   
-1. 다음 명령을 사용하여 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0을 설치합니다.  
+1. 다음 명령을 사용 하 여 ASP.NET 4.0을 설치 합니다.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  

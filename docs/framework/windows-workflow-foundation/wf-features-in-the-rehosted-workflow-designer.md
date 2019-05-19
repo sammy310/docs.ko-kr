@@ -2,12 +2,12 @@
 title: 재호스팅된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대한 지원
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: a7b7ed6987320314ee3fdccf0e58a8c7314fe50d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8807506866ef0f5d73065958f1102460ebcc5e9f
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669798"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876471"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>재호스팅된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대한 지원
 Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 는 workflow designer 환경의 몇 가지 향상 된 기능을 비롯 한 많은 새로운 기능이 도입 되었습니다. 이 항목에서는 이러한 기능 중 재호스트된 디자이너에서 지원되는 기능과 현재 지원되지 않는 기능을 자세히 설명합니다.
@@ -37,25 +37,25 @@ Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-
 
  다음 스크린 샷에서는 변수 및 인수 디자이너의 상황에 맞는 메뉴를 보여 줍니다.
 
- ![변수 및 인수 디자이너 상황에 맞는 메뉴](./media/designercontextmenu.png "DesignerContextMenu")
+ ![변수 및 인수 디자이너 상황에 맞는 메뉴](./media/wf-features-in-the-rehosted-workflow-designer/designer-context-menu.png)
 
 ### <a name="auto-surround-with-sequence"></a>시퀀스로 자동 감싸기
  워크플로 또는 특정 컨테이너 활동(예: <xref:System.Activities.Statements.NoPersistScope>)에는 단일 본문 활동만 포함할 수 있으므로 두 번째 활동을 추가하려면 개발자가 첫 번째 활동을 삭제하고 <xref:System.Activities.Statements.Sequence> 활동을 추가한 후 두 활동을 모두 시퀀스 활동에 추가해야 했습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]부터는 디자이너 화면에 두 번째 활동을 추가하면 `Sequence` 활동이 자동으로 만들어져 두 활동을 래핑합니다. 이 기능은 재호스트된 디자이너에서 지원됩니다.
 
  다음 스크린 샷에서는 `WriteLine`의 `Body`에 있는 `NoPersistScope` 활동을 보여 줍니다.
 
- ![자동&#45;저장 위치를 둘러싸고](./media/autosurround1.png "AutoSurround1")
+ ![NoPersistScope 활동의 본문에는 WriteLine 작업입니다.](./media/wf-features-in-the-rehosted-workflow-designer/auto-surround-write-line-activity.png)
 
  다음 스크린 샷에서는 두 번째 `Sequence`이 첫 번째 항목 아래에 놓였을 때 `Body`에 자동으로 만들어진 `WriteLine` 활동을 보여 줍니다.
 
- ![자동으로 만들어진 sequence 활동](./media/autosurround2.png "AutoSurround2")
+ ![NoPersistScope의 본문에는 자동으로 생성된 하는 시퀀스입니다.](./media/wf-features-in-the-rehosted-workflow-designer/auto-surround-sequence-activity.png)
 
 ### <a name="pan-mode"></a>이동 모드
  디자이너에서 큰 워크플로를 더욱 쉽게 이동하기 위해 이동 모드를 사용할 수 있습니다. 이동 모드에서 개발자는 스크롤 바를 사용할 필요 없이 워크플로의 보이는 부분을 클릭하여 끌 수 있습니다. 이동 모드를 활성화하는 단추는 디자이너의 오른쪽 아래 모퉁이에 있습니다. 이 기능은 재호스트된 디자이너에서 지원됩니다.
 
  다음 스크린 샷에서는 Workflow Designer의 오른쪽 아래 모퉁이에 있는 이동 단추를 보여 줍니다.
 
- ![워크플로 디자이너의 이동 단추](./media/panbutton.png "PanButton")
+ ![워크플로 디자이너에서 강조 표시 된 이동 단추입니다.](./media/wf-features-in-the-rehosted-workflow-designer/pan-button-workflow-designer.png)
 
  마우스 가운데 단추 또는 스페이스바를 사용하여 워크플로 디자이너를 이동할 수도 있습니다.
 
@@ -69,7 +69,7 @@ Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-
 
  완료 된 워크플로의 다음 스크린 샷에서 [초보자를 위한 자습서](getting-started-tutorial.md) 순차 워크플로 사용 하 여 개요 보기를 보여 줍니다.
 
- ![개요 보기에서 Workflow Designer](./media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+ ![Visual Studio에서 순차 워크플로 사용 하 여 개요 보기의 스크린샷](./media/wf-features-in-the-rehosted-workflow-designer/outline-view-in-workflow-designer.jpg)
 
 ### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>셸 표시줄 및 헤더 항목의 표시 방식 제어 향상
  재호스트된 디자이너에서 특정 워크플로에 대해 의미가 없는 일부 표준 UI 컨트롤은 해제할 수 있습니다. [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서는 디자이너의 맨 아래에 있는 셸 표시줄을 통해서만 이를 사용자 지정할 수 있었습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서는 <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A>를 적절한 <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> 값으로 설정하여 디자이너의 맨 위에 있는 셸 헤더 항목의 표시 유형을 조정할 수 있습니다.
@@ -79,18 +79,18 @@ Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-
 
  다음 스크린 샷에서는 도구 상자에서 디자이너 화면으로 활동을 끌어 올 때 표시되는 연결 지점을 보여 줍니다.
 
- ![자동 연결 지점을 보여 주는 순서도 시작 노드](./media/autoconnect1.png "Autoconnect1")
+ ![순서도 시작 노드 표시에 자동으로 연결 지점](./media/wf-features-in-the-rehosted-workflow-designer/auto-connect-points-start-node.png)
 
  활동을 순서도 노드와 상태 간 연결로 끌어 와 다른 두 노드 사이에 노드를 자동으로 삽입할 수도 있습니다. 다음 스크린 샷에서는 도구 상자의 활동을 끌어다 놓을 수 있는 강조 표시된 연결선을 보여 줍니다.
 
- ![자동&#45;활동을 삭제 하는 것에 대 한 핸들을 삽입할](./media/autoinsert.png "Autoinsert")
+ ![활동을 끌기 위한 자동 삽입 핸들](./media/wf-features-in-the-rehosted-workflow-designer/auto-insert-connecting-line.png)
 
  자동 연결 및 자동 삽입은 재호스트된 디자이너에서 지원됩니다.
 
 ### <a name="designer-annotations"></a>디자이너 주석
  이제 대규모 워크플로를 손쉽게 개발할 수 있도록 디자이너에서 주석을 추가하여 디자인 프로세스를 추적할 수 있습니다. 주석은 활동, 상태, 순서도 노드, 변수 및 인수에 추가할 수 있습니다. 다음 스크린 샷에서는 디자이너에 주석을 추가하는 데 사용되는 상황에 맞는 메뉴를 보여 줍니다.
 
- ![주석 상황에 맞는 메뉴](./media/annotationdialog.png "annotationdialog")
+ ![표기법 추가 메뉴를 보여 주는 스크린샷.](./media/wf-features-in-the-rehosted-workflow-designer/designer-annotations-context-menu.png)
 
  디자이너 주석은 재호스트된 디자이너에서 지원됩니다.
 
@@ -134,7 +134,7 @@ Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-
   
  다음 스크린샷은에서 완료 된 상태 시스템 워크플로 [초보자를 위한 자습서](getting-started-tutorial.md) 단계 [방법: 상태 시스템 워크플로 만드는](how-to-create-a-state-machine-workflow.md)합니다.  
   
- ![완료 된 상태 시스템 워크플로](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+ ![완료 된 상태 시스템 워크플로 보여 주는 그림입니다.](./media/wf-features-in-the-rehosted-workflow-designer/complete-state-machine-workflow.jpg)  
   
  상태 시스템 워크플로 만드는 방법에 대 한 자세한 내용은 참조 하세요. [상태 시스템 워크플로](state-machine-workflows.md)합니다. 상태 시스템 워크플로는 재호스트된 디자이너에서 지원됩니다.  
   

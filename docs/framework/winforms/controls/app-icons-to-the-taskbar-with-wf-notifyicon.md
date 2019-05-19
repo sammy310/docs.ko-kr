@@ -13,12 +13,12 @@ helpviewer_keywords:
 - NotifyIcon component
 - taskbar [Windows Forms], adding icons
 ms.assetid: d28c0fe6-aaf2-4df7-ad74-928d861a8510
-ms.openlocfilehash: 52c18b959361079aac6b95dc5d4584bf464a306a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d7fb1dfbdfb7cf9be33fc8c9711b4fbdc3efc2d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640315"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880544"
 ---
 # <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>방법: Windows Forms NotifyIcon 구성 요소를 사용하여 작업 표시줄에 애플리케이션 아이콘 추가
 Windows Forms <xref:System.Windows.Forms.NotifyIcon> 구성 요소 작업 표시줄의 상태 알림 영역에 단일 아이콘을 표시 합니다. 여러 상태 영역에 여러 개의 아이콘을 표시 하려면 해야 <xref:System.Windows.Forms.NotifyIcon> 폼의 구성 요소입니다. 컨트롤에 대해 표시 되는 아이콘을 설정 하려면 사용 된 <xref:System.Windows.Forms.NotifyIcon.Icon%2A> 속성입니다. 코드를 작성할 수도 있습니다는 <xref:System.Windows.Forms.NotifyIcon.DoubleClick> 이벤트 처리기 아이콘을 두 번 클릭할 때 발생 하는 것입니다. 예를 들어, 표시 아이콘으로 표시 하는 백그라운드 프로세스를 구성 하려면 사용자에 대 한 대화 상자를 만들 수 있습니다.  
@@ -28,7 +28,7 @@ Windows Forms <xref:System.Windows.Forms.NotifyIcon> 구성 요소 작업 표시
   
 ### <a name="to-set-the-icon"></a>아이콘을 설정 하려면  
   
-1. 값을 할당 합니다 <xref:System.Windows.Forms.NotifyIcon.Icon%2A> 속성입니다. 값 형식 이어야 합니다 `System.Drawing.Icon` .ico 파일에서 로드할 수 있습니다. 줄임표 단추를 클릭 하거나 코드에서 아이콘 파일을 지정할 수 있습니다 (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton")) 옆에 <xref:System.Windows.Forms.NotifyIcon.Icon%2A> 속성에는  **속성** 후에 파일을 선택 하는 **오픈** 나타나는 대화 상자.  
+1.  값을 할당 합니다 <xref:System.Windows.Forms.NotifyIcon.Icon%2A> 속성입니다. 값 형식 이어야 합니다 `System.Drawing.Icon` .ico 파일에서 로드할 수 있습니다. 줄임표 단추를 클릭 하거나 코드에서 아이콘 파일을 지정할 수 있습니다 (![의 줄임표 단추 (...)의 Visual Studio 속성 창의](./media/visual-studio-ellipsis-button.png)) 옆에 <xref:System.Windows.Forms.NotifyIcon.Icon%2A> 속성에는 **속성** 다음에서 파일을 선택 하는 **열려** 나타나는 대화 상자.  
   
 2. <xref:System.Windows.Forms.NotifyIcon.Visible%2A> 속성을 `true`으로 설정합니다.  
   

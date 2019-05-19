@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: 8788c97842d157e09f7058411db43f86c66769cd
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f0510b9e3f31686e22532f21989cb95905522286
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583807"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879888"
 ---
 # <a name="connection-string-builders"></a>연결 문자열 작성기
-이전 버전의 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]컴파일 시간 실행 시 잘못 된 키워드가 생성 되도록 값 발생 하지 않은 연결된 문자열을 사용 하 여 연결 문자열의 검사는 <xref:System.ArgumentException>합니다. 서로 다른 구문을 어렵게 유효한 연결 문자열 생성 작업은 수동으로 수행 하는 경우 연결 문자열 키워드에 대 한 지원 되는.NET Framework 데이터 공급자의 각. 이 문제를 해결 하기 위해 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0에서는 각.NET Framework 데이터 공급자에 대 한 새로운 연결 문자열 작성기를 도입 합니다. 각 데이터 공급자에는 <xref:System.Data.Common.DbConnectionStringBuilder>에서 상속되는 강력한 형식의 연결 문자열 작성기 클래스가 있습니다. 다음 표에서.NET Framework 데이터 공급자 및 해당 연결 문자열 작성기 클래스를 나열합니다.  
+이전 버전의 ADO.NET에서는 연결 된 문자열 값을 사용 하 여 연결 문자열을 확인 하는 컴파일 타임 발생 하지 않은, 런타임 시 잘못 된 키워드가 생성 되도록는 <xref:System.ArgumentException>합니다. 서로 다른 구문을 어렵게 유효한 연결 문자열 생성 작업은 수동으로 수행 하는 경우 연결 문자열 키워드에 대 한 지원 되는.NET Framework 데이터 공급자의 각. 이 문제를 해결 하기 위해 ADO.NET 2.0에는 각.NET Framework 데이터 공급자에 대 한 새로운 연결 문자열 작성기를 도입 되었습니다. 각 데이터 공급자에는 <xref:System.Data.Common.DbConnectionStringBuilder>에서 상속되는 강력한 형식의 연결 문자열 작성기 클래스가 있습니다. 다음 표에서.NET Framework 데이터 공급자 및 해당 연결 문자열 작성기 클래스를 나열합니다.  
   
 |공급자|ConnectionStringBuilder 클래스|  
 |--------------|-----------------------------------|  

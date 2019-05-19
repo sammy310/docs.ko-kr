@@ -2,12 +2,12 @@
 title: ASP.NET 클라이언트에서 데이터 바인딩
 ms.date: 03/30/2017
 ms.assetid: 68b49fa6-94e7-4d4c-a34e-902a2b3770b6
-ms.openlocfilehash: 07e03a4580795b3424f63cec8f93fea2039b6733
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0cc6fee822ad300969ccf8556a3eeb410660f256
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990628"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876989"
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>ASP.NET 클라이언트에서 데이터 바인딩
 이 샘플에는 Web Forms 응용 프로그램에서 일반적인 Windows Communication Foundation (WCF) 서비스에서 반환 되는 데이터를 바인딩하는 방법을 보여 줍니다.  
@@ -19,7 +19,7 @@ ms.locfileid: "61990628"
   
  이 서비스는 요청-회신 통신 패턴을 정의하는 계약을 구현합니다. 계약은 `IWeatherService`라는 작업을 노출시키는 `GetWeatherData` 인터페이스에 의해 정의됩니다. 이 작업은 도시 배열을 사용하여 도시의 최고 및 최저 예상 기온을 나타내는 `WeatherData` 개체의 배열을 반환합니다.  
   
- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 클라이언트 .aspx 페이지에는 이 서비스에 의해 반환된 데이터의 그래픽 표현을 포함하는 DataGrid 웹 컨트롤이 정의되어 있습니다. .Aspx 페이지의 코드는 날씨 데이터에 대 한 WCF 서비스를 호출 하 고 배열의 데이터를 반환 합니다. `WeatherData` 개체입니다. DataGrid는 `DataSource` 속성을 이 배열로 설정하여 데이터를 가져올 위치를 지정합니다. DataGrid의 `DataBind` 메서드를 호출함과 동시에 데이터 바인딩이 발생하며, 내에이 코드를 모두 포함 되어 합니다.`aspx` 페이지의 `Page_Load` DataGrid의 메서드, 때마다 사용자 브라우저 페이지에서 데이터를 새로 고치면 업데이트 됩니다.  
+ ASP.NET 클라이언트.aspx 페이지에서 서비스에 의해 반환 되는 데이터의 그래픽 표현을 포함 하는 DataGrid 웹 컨트롤이 정의 됩니다. .Aspx 페이지의 코드는 날씨 데이터에 대 한 WCF 서비스를 호출 하 고 배열의 데이터를 반환 합니다. `WeatherData` 개체입니다. DataGrid는 `DataSource` 속성을 이 배열로 설정하여 데이터를 가져올 위치를 지정합니다. DataGrid의 `DataBind` 메서드를 호출함과 동시에 데이터 바인딩이 발생하며, 내에이 코드를 모두 포함 되어 합니다.`aspx` 페이지의 `Page_Load` DataGrid의 메서드, 때마다 사용자 브라우저 페이지에서 데이터를 새로 고치면 업데이트 됩니다.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
