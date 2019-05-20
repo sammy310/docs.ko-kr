@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddd8b0e7965ca734865e83373af2f7ee45d62c05
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f6381747bc998f73b374442fcb15e025ca15795d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633449"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589528"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>방법: 문자열이 올바른 이메일 형식인지 확인
 다음 예제에서는 정규식을 사용하여 문자열이 올바른 전자 메일 형식인지 확인합니다.  
@@ -72,36 +72,12 @@ ms.locfileid: "64633449"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  `IsValidEmail` 및 `DomainMapper` 메서드는 정규식 유틸리티 메서드의 라이브러리에 포함되거나 애플리케이션 클래스에서 전용 정적 또는 인스턴스 메서드로 포함될 수 있습니다.  
   
- 이러한 메서드를 정규식 라이브러리에 포함하려면 코드를 복사한 다음 Visual Studio 클래스 라이브러리 프로젝트에 붙여 넣거나 텍스트 파일에 붙여 넣은 후에 다음과 같은 명령을 사용하여 명령줄에서 컴파일합니다. 여기서는 소스 코드 파일의 이름이 RegexUtilities.cs 또는 RegexUtilities.vb라고 가정합니다.  
-  
-```csharp  
-csc /t:library RegexUtilities.cs  
-```  
-  
-```vb  
-vbc /t:library RegexUtilities.vb  
-```  
-  
  또한 <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> 메서드를 사용하여 정규식 라이브러리에 이 정규식을 포함시킬 수 있습니다.  
   
  정규식 라이브러리에 사용될 경우 다음과 같은 코드를 사용하여 호출할 수 있습니다.  
   
  [!code-csharp[RegularExpressions.Examples.Email#8](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Email/cs/example4.cs#8)]
  [!code-vb[RegularExpressions.Examples.Email#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Email/vb/example4.vb#8)]  
-  
- 메일 유효성 검사 정규식을 포함하는 클래스 라이브러리 RegexUtilities.dll을 만들었다고 가정할 때 다음 방법 중 하나로 이 예제를 컴파일할 수 있습니다.  
-  
-- Visual Studio에서 콘솔 애플리케이션을 만들고 프로젝트에 RegexUtilities.dll에 대한 참조를 추가합니다.  
-  
-- 명령줄에서 소스 코드를 복사한 다음 텍스트 파일에 붙여넣고 다음과 같은 명령을 사용하여 컴파일합니다. 이때 소스 코드 파일의 이름이 Example.cs 또는 Example.vb라고 가정합니다.  
-  
-    ```csharp  
-    csc Example.cs /r:RegexUtilities.dll  
-    ```  
-  
-    ```vb  
-    vbc Example.vb /r:RegexUtilities.dll  
-    ```  
   
 ## <a name="see-also"></a>참고 항목
 
