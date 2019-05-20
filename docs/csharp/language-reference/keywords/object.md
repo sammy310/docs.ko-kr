@@ -8,31 +8,31 @@ f1_keywords:
 helpviewer_keywords:
 - object keyword [C#]
 ms.assetid: 93f60c0b-e17a-40a9-9362-cca5fb77b0e7
-ms.openlocfilehash: a1917a7925d4ed90ede40248fa394f9c45d09b4e
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 99ce5300d06c500d2e45897a6bd57153dc40d34e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238979"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633379"
 ---
-# <a name="object-c-reference"></a><span data-ttu-id="327e5-102">object(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="327e5-102">object (C# Reference)</span></span>
+# <a name="object-c-reference"></a><span data-ttu-id="c45d8-102">object(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="c45d8-102">object (C# Reference)</span></span>
 
-<span data-ttu-id="327e5-103">`object` 형식은 .NET에서 <xref:System.Object>의 별칭입니다.</span><span class="sxs-lookup"><span data-stu-id="327e5-103">The `object` type is an alias for <xref:System.Object> in .NET.</span></span> <span data-ttu-id="327e5-104">C#의 통합 형식 시스템에서 사용자 정의 및 미리 정의된 참조 형식과 값 형식을 비롯한 모든 형식은 직접 또는 간접적으로 <xref:System.Object>에서 상속합니다.</span><span class="sxs-lookup"><span data-stu-id="327e5-104">In the unified type system of C#, all types, predefined and user-defined, reference types and value types, inherit directly or indirectly from <xref:System.Object>.</span></span> <span data-ttu-id="327e5-105">`object` 형식의 변수에 모든 형식의 값을 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="327e5-105">You can assign values of any type to variables of type `object`.</span></span> <span data-ttu-id="327e5-106">값 형식의 변수가 개체로 변환된 경우 *boxed*라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="327e5-106">When a variable of a value type is converted to object, it is said to be *boxed*.</span></span> <span data-ttu-id="327e5-107">형식 개체의 변수가 값 형식으로 변환된 경우 *unboxed*라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="327e5-107">When a variable of type object is converted to a value type, it is said to be *unboxed*.</span></span> <span data-ttu-id="327e5-108">자세한 내용은 [boxing 및 unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="327e5-108">For more information, see [Boxing and Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md).</span></span>
+<span data-ttu-id="c45d8-103">`object` 형식은 .NET에서 <xref:System.Object>의 별칭입니다.</span><span class="sxs-lookup"><span data-stu-id="c45d8-103">The `object` type is an alias for <xref:System.Object> in .NET.</span></span> <span data-ttu-id="c45d8-104">C#의 통합 형식 시스템에서 사용자 정의 및 미리 정의된 참조 형식과 값 형식을 비롯한 모든 형식은 직접 또는 간접적으로 <xref:System.Object>에서 상속합니다.</span><span class="sxs-lookup"><span data-stu-id="c45d8-104">In the unified type system of C#, all types, predefined and user-defined, reference types and value types, inherit directly or indirectly from <xref:System.Object>.</span></span> <span data-ttu-id="c45d8-105">`object` 형식의 변수에 모든 형식의 값을 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c45d8-105">You can assign values of any type to variables of type `object`.</span></span> <span data-ttu-id="c45d8-106">값 형식의 변수가 개체로 변환된 경우 *boxed*라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="c45d8-106">When a variable of a value type is converted to object, it is said to be *boxed*.</span></span> <span data-ttu-id="c45d8-107">형식 개체의 변수가 값 형식으로 변환된 경우 *unboxed*라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="c45d8-107">When a variable of type object is converted to a value type, it is said to be *unboxed*.</span></span> <span data-ttu-id="c45d8-108">자세한 내용은 [boxing 및 unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c45d8-108">For more information, see [Boxing and Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="327e5-109">예</span><span class="sxs-lookup"><span data-stu-id="327e5-109">Example</span></span>
+## <a name="example"></a><span data-ttu-id="c45d8-109">예제</span><span class="sxs-lookup"><span data-stu-id="c45d8-109">Example</span></span>
 
-<span data-ttu-id="327e5-110">다음 샘플은 `object` 형식의 변수가 모든 데이터 형식의 값을 허용할 수 있는 방법 및 `object` 형식의 변수가 .NET Framework의 <xref:System.Object>에 대해 메서드를 사용할 수 있는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="327e5-110">The following sample shows how variables of type `object` can accept values of any data type and how variables of type `object` can use methods on <xref:System.Object> from the .NET Framework.</span></span>
+<span data-ttu-id="c45d8-110">다음 샘플은 `object` 형식의 변수가 모든 데이터 형식의 값을 허용할 수 있는 방법 및 `object` 형식의 변수가 .NET Framework의 <xref:System.Object>에 대해 메서드를 사용할 수 있는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c45d8-110">The following sample shows how variables of type `object` can accept values of any data type and how variables of type `object` can use methods on <xref:System.Object> from the .NET Framework.</span></span>
 
 [!code-csharp[csrefKeywordsTypes#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#16)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="327e5-111">C# 언어 사양</span><span class="sxs-lookup"><span data-stu-id="327e5-111">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="c45d8-111">C# 언어 사양</span><span class="sxs-lookup"><span data-stu-id="c45d8-111">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="327e5-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="327e5-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c45d8-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c45d8-112">See also</span></span>
 
-- [<span data-ttu-id="327e5-113">C# 참조</span><span class="sxs-lookup"><span data-stu-id="327e5-113">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="327e5-114">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="327e5-114">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="327e5-115">C# 키워드</span><span class="sxs-lookup"><span data-stu-id="327e5-115">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="327e5-116">참조 형식</span><span class="sxs-lookup"><span data-stu-id="327e5-116">Reference Types</span></span>](reference-types.md)
-- [<span data-ttu-id="327e5-117">값 형식</span><span class="sxs-lookup"><span data-stu-id="327e5-117">Value Types</span></span>](value-types.md)
+- [<span data-ttu-id="c45d8-113">C# 참조</span><span class="sxs-lookup"><span data-stu-id="c45d8-113">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="c45d8-114">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="c45d8-114">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="c45d8-115">C# 키워드</span><span class="sxs-lookup"><span data-stu-id="c45d8-115">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="c45d8-116">참조 형식</span><span class="sxs-lookup"><span data-stu-id="c45d8-116">Reference Types</span></span>](reference-types.md)
+- [<span data-ttu-id="c45d8-117">값 형식</span><span class="sxs-lookup"><span data-stu-id="c45d8-117">Value Types</span></span>](value-types.md)

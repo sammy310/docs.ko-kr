@@ -1,23 +1,21 @@
 ---
 title: 지수 백오프를 사용하여 사용자 지정 HTTP 호출 다시 시도 탐색
 description: 가능한 HTTP 오류 시나리오를 처리하기 위해 지수 백오프를 사용하여 HTTP 호출 다시 시도를 처음부터 구현하는 방법을 알아봅니다.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: fdbc09cddde34cb8897e1d5b105cb15c863b59ce
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 2b40b73a014faa87d4eb42192c72b5a9b6c8d4fa
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362251"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644733"
 ---
-# <a name="explore-custom-http-call-retries-with-exponential-backoff"></a><span data-ttu-id="d571c-103">지수 백오프를 사용하여 사용자 지정 HTTP 호출 다시 시도 탐색</span><span class="sxs-lookup"><span data-stu-id="d571c-103">Explore custom HTTP call retries with exponential backoff</span></span>
+# <a name="explore-custom-http-call-retries-with-exponential-backoff"></a><span data-ttu-id="65616-103">지수 백오프를 사용하여 사용자 지정 HTTP 호출 다시 시도 탐색</span><span class="sxs-lookup"><span data-stu-id="65616-103">Explore custom HTTP call retries with exponential backoff</span></span>
 
-<span data-ttu-id="d571c-104">복원력 있는 마이크로 서비스를 만들려면 가능한 HTTP 오류 시나리오를 처리해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d571c-104">To create resilient microservices, you need to handle possible HTTP failure scenarios.</span></span> <span data-ttu-id="d571c-105">권장되지는 않지만 이러한 오류를 처리하는 한 가지 방법은 지수 백오프를 사용하여 다시 시도를 직접 구현하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="d571c-105">One way of handling those failures, although not recommended, is to create your own implementation of retries with exponential backoff.</span></span>
+<span data-ttu-id="65616-104">복원력 있는 마이크로 서비스를 만들려면 가능한 HTTP 오류 시나리오를 처리해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="65616-104">To create resilient microservices, you need to handle possible HTTP failure scenarios.</span></span> <span data-ttu-id="65616-105">권장되지는 않지만 이러한 오류를 처리하는 한 가지 방법은 지수 백오프를 사용하여 다시 시도를 직접 구현하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="65616-105">One way of handling those failures, although not recommended, is to create your own implementation of retries with exponential backoff.</span></span>
 
-<span data-ttu-id="d571c-106">**중요 정보:** 이 섹션에서는 HTTP 호출 다시 시도를 구현하는 사용자 고유의 사용자 지정 코드를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d571c-106">**Important note:** This section shows you how you could create your own custom code to implement HTTP call retries.</span></span> <span data-ttu-id="d571c-107">그러나 사용자가 직접 수행하는 것은 권장되지 않으며, .NET Core 2.1부터 제공되는 Polly 포함 `HttpClientFactory`와 같이 더 강력하고 신뢰할 수 있지만 간단한 메커니즘을 사용하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="d571c-107">However, it isn't recommended to do it on your own but to use more powerful and reliable while simpler to use mechanisms, such as `HttpClientFactory` with Polly, available since .NET Core 2.1.</span></span> <span data-ttu-id="d571c-108">다음 섹션에서는 이러한 권장 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d571c-108">Those recommended approaches are explained in the next sections.</span></span>
+<span data-ttu-id="65616-106">**중요 정보:** 이 섹션에서는 HTTP 호출 다시 시도를 구현하는 사용자 고유의 사용자 지정 코드를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="65616-106">**Important note:** This section shows you how you could create your own custom code to implement HTTP call retries.</span></span> <span data-ttu-id="65616-107">그러나 사용자가 직접 수행하는 것은 권장되지 않으며, .NET Core 2.1부터 제공되는 Polly 포함 `HttpClientFactory`와 같이 더 강력하고 신뢰할 수 있지만 간단한 메커니즘을 사용하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="65616-107">However, it isn't recommended to do it on your own but to use more powerful and reliable while simpler to use mechanisms, such as `HttpClientFactory` with Polly, available since .NET Core 2.1.</span></span> <span data-ttu-id="65616-108">다음 섹션에서는 이러한 권장 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="65616-108">Those recommended approaches are explained in the next sections.</span></span>
 
-<span data-ttu-id="d571c-109">초기 살펴보기로, [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260)와 같이 지수 백오프에 대한 유틸리티 클래스를 포함하는 고유한 코드와 다음과 같은 코드를 구현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d571c-109">As an initial exploration, you could implement your own code with a utility class for exponential backoff as in [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260), plus code like the following.</span></span>
+<span data-ttu-id="65616-109">초기 살펴보기로, [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260)와 같이 지수 백오프에 대한 유틸리티 클래스를 포함하는 고유한 코드와 다음과 같은 코드를 구현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="65616-109">As an initial exploration, you could implement your own code with a utility class for exponential backoff as in [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260), plus code like the following.</span></span>
 
 ```csharp
 public sealed class RetryWithExponentialBackoff
@@ -90,7 +88,7 @@ public struct ExponentialBackoff
 }
 ```
 
-<span data-ttu-id="d571c-110">클라이언트 C\# 애플리케이션(다른 웹 API 클라이언트 마이크로 서비스, ASP.NET MVC 애플리케이션 또는 C\# Xamarin 애플리케이션)에서 쉽게 이 코드를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d571c-110">Using this code in a client C\# application (another Web API client microservice, an ASP.NET MVC application, or even a C\# Xamarin application) is straightforward.</span></span> <span data-ttu-id="d571c-111">다음 예제에서는 HttpClient 클래스를 사용하는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="d571c-111">The following example shows how, using the HttpClient class.</span></span>
+<span data-ttu-id="65616-110">클라이언트 C\# 애플리케이션(다른 웹 API 클라이언트 마이크로 서비스, ASP.NET MVC 애플리케이션 또는 C\# Xamarin 애플리케이션)에서 쉽게 이 코드를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="65616-110">Using this code in a client C\# application (another Web API client microservice, an ASP.NET MVC application, or even a C\# Xamarin application) is straightforward.</span></span> <span data-ttu-id="65616-111">다음 예제에서는 HttpClient 클래스를 사용하는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="65616-111">The following example shows how, using the HttpClient class.</span></span>
 
 ```csharp
 public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? type)
@@ -113,9 +111,9 @@ public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? t
 }
 ```
 
-<span data-ttu-id="d571c-112">이 코드는 개념 증명으로만 적합합니다.</span><span class="sxs-lookup"><span data-stu-id="d571c-112">Remember that this code is suitable only as a proof of concept.</span></span> <span data-ttu-id="d571c-113">다음 섹션에서는 HttpClientFactory를 사용하여 더 정교하지만 간단하게 사용할 수 있는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d571c-113">The next sections explain how to use more sophisticated approaches while simpler, by using HttpClientFactory.</span></span> <span data-ttu-id="d571c-114">HttpClientFactory는 Polly와 같이 입증된 복원력 라이브러리가 있는 .NET Core 2.1부터 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d571c-114">HttpClientFactory is available since .NET Core 2.1, with proven resiliency libraries like Polly.</span></span>
+<span data-ttu-id="65616-112">이 코드는 개념 증명으로만 적합합니다.</span><span class="sxs-lookup"><span data-stu-id="65616-112">Remember that this code is suitable only as a proof of concept.</span></span> <span data-ttu-id="65616-113">다음 섹션에서는 HttpClientFactory를 사용하여 더 정교하지만 간단하게 사용할 수 있는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="65616-113">The next sections explain how to use more sophisticated approaches while simpler, by using HttpClientFactory.</span></span> <span data-ttu-id="65616-114">HttpClientFactory는 Polly와 같이 입증된 복원력 라이브러리가 있는 .NET Core 2.1부터 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="65616-114">HttpClientFactory is available since .NET Core 2.1, with proven resiliency libraries like Polly.</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="d571c-115">[이전](implement-resilient-entity-framework-core-sql-connections.md)
->[다음](use-httpclientfactory-to-implement-resilient-http-requests.md)</span><span class="sxs-lookup"><span data-stu-id="d571c-115">[Previous](implement-resilient-entity-framework-core-sql-connections.md)
+><span data-ttu-id="65616-115">[이전](implement-resilient-entity-framework-core-sql-connections.md)
+>[다음](use-httpclientfactory-to-implement-resilient-http-requests.md)</span><span class="sxs-lookup"><span data-stu-id="65616-115">[Previous](implement-resilient-entity-framework-core-sql-connections.md)
 [Next](use-httpclientfactory-to-implement-resilient-http-requests.md)</span></span>

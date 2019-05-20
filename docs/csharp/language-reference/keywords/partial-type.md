@@ -8,36 +8,36 @@ f1_keywords:
 helpviewer_keywords:
 - partial types [C#]
 ms.assetid: 27320743-a22e-4c7b-b0b3-53afe3607334
-ms.openlocfilehash: ed3e18c5981fa52dc2c6ef09bfb666cfa705fede
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5dba3759d8d0046f2a491e1d3408acb54bd0343d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239568"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633365"
 ---
-# <a name="partial-type-c-reference"></a><span data-ttu-id="f4675-102">partial 형식(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="f4675-102">partial type (C# Reference)</span></span>
+# <a name="partial-type-c-reference"></a><span data-ttu-id="73a6b-102">partial 형식(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="73a6b-102">partial type (C# Reference)</span></span>
 
-<span data-ttu-id="f4675-103">부분 형식(Partial Type) 정의를 사용하면 클래스, 구조체 또는 인터페이스의 정의를 여러 파일로 분할할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f4675-103">Partial type definitions allow for the definition of a class, struct, or interface to be split into multiple files.</span></span>
+<span data-ttu-id="73a6b-103">부분 형식(Partial Type) 정의를 사용하면 클래스, 구조체 또는 인터페이스의 정의를 여러 파일로 분할할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="73a6b-103">Partial type definitions allow for the definition of a class, struct, or interface to be split into multiple files.</span></span>
 
-<span data-ttu-id="f4675-104">*File1.cs*:</span><span class="sxs-lookup"><span data-stu-id="f4675-104">In *File1.cs*:</span></span>
+<span data-ttu-id="73a6b-104">*File1.cs*:</span><span class="sxs-lookup"><span data-stu-id="73a6b-104">In *File1.cs*:</span></span>
 
 [!code-csharp[csrefKeywordsContextual#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#3)]  
 
-<span data-ttu-id="f4675-105">*File2.cs*에서 선언은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="f4675-105">In *File2.cs* the declaration:</span></span>
+<span data-ttu-id="73a6b-105">*File2.cs*에서 선언은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="73a6b-105">In *File2.cs* the declaration:</span></span>
 
 [!code-csharp[csrefKeywordsContextual#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#4)]  
 
-## <a name="remarks"></a><span data-ttu-id="f4675-106">설명</span><span class="sxs-lookup"><span data-stu-id="f4675-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="73a6b-106">주의</span><span class="sxs-lookup"><span data-stu-id="73a6b-106">Remarks</span></span>
 
-<span data-ttu-id="f4675-107">클래스, 구조체 또는 인터페이스 형식을 여러 파일에 분할하면 대형 프로젝트 또는 [Windows Forms 디자이너](../../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)에서 제공하는 것과 같은 자동으로 생성된 코드로 작업할 때 유용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f4675-107">Splitting a class, struct or interface type over several files can be useful when you are working with large projects, or with automatically generated code such as that provided by the [Windows Forms Designer](../../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md).</span></span> <span data-ttu-id="f4675-108">부분 형식(Partial Type)에는 [부분 메서드(Partial Method)](partial-method.md)가 포함될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f4675-108">A partial type may contain a [partial method](partial-method.md).</span></span> <span data-ttu-id="f4675-109">자세한 내용은 참조 [Partial 클래스 및 메서드](../../programming-guide/classes-and-structs/partial-classes-and-methods.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="f4675-109">For more information, see [Partial Classes and Methods](../../programming-guide/classes-and-structs/partial-classes-and-methods.md).</span></span>
+<span data-ttu-id="73a6b-107">클래스, 구조체 또는 인터페이스 형식을 여러 파일에 분할하면 대형 프로젝트 또는 [Windows Forms 디자이너](../../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)에서 제공하는 것과 같은 자동으로 생성된 코드로 작업할 때 유용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="73a6b-107">Splitting a class, struct or interface type over several files can be useful when you are working with large projects, or with automatically generated code such as that provided by the [Windows Forms Designer](../../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md).</span></span> <span data-ttu-id="73a6b-108">부분 형식(Partial Type)에는 [부분 메서드(Partial Method)](partial-method.md)가 포함될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="73a6b-108">A partial type may contain a [partial method](partial-method.md).</span></span> <span data-ttu-id="73a6b-109">자세한 내용은 참조 [Partial 클래스 및 메서드](../../programming-guide/classes-and-structs/partial-classes-and-methods.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="73a6b-109">For more information, see [Partial Classes and Methods](../../programming-guide/classes-and-structs/partial-classes-and-methods.md).</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="f4675-110">C# 언어 사양</span><span class="sxs-lookup"><span data-stu-id="f4675-110">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="73a6b-110">C# 언어 사양</span><span class="sxs-lookup"><span data-stu-id="73a6b-110">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="f4675-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f4675-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="73a6b-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="73a6b-111">See also</span></span>
 
-- [<span data-ttu-id="f4675-112">C# 참조</span><span class="sxs-lookup"><span data-stu-id="f4675-112">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="f4675-113">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="f4675-113">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="f4675-114">한정자</span><span class="sxs-lookup"><span data-stu-id="f4675-114">Modifiers</span></span>](modifiers.md)
-- [<span data-ttu-id="f4675-115">제네릭 소개</span><span class="sxs-lookup"><span data-stu-id="f4675-115">Introduction to Generics</span></span>](../../programming-guide/generics/introduction-to-generics.md)
+- [<span data-ttu-id="73a6b-112">C# 참조</span><span class="sxs-lookup"><span data-stu-id="73a6b-112">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="73a6b-113">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="73a6b-113">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="73a6b-114">한정자</span><span class="sxs-lookup"><span data-stu-id="73a6b-114">Modifiers</span></span>](modifiers.md)
+- [<span data-ttu-id="73a6b-115">제네릭 소개</span><span class="sxs-lookup"><span data-stu-id="73a6b-115">Introduction to Generics</span></span>](../../programming-guide/generics/introduction-to-generics.md)
