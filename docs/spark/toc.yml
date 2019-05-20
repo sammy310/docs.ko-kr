@@ -9,6 +9,12 @@
   items:
     - name: 시작
       href: tutorials/get-started.md
+    - name: Azure HDInsight에 배포
+      href: tutorials/hdinsight-deployment.md
+    - name: AWS EMR Spark에 배포
+      href: tutorials/amazon-emr-spark-deployment.md
+    - name: Databricks에 배포
+      href: tutorials/databricks-deployment.md
 - name: 참조
   items:
     - name: API 참조
