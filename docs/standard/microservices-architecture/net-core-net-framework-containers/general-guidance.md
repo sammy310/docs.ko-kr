@@ -1,15 +1,13 @@
 ---
 title: 일반 지침
 description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크로 서비스 아키텍처 | 일반 지침
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: b75bede39f524ea55c77bdb94cd4f2ef94f4d06b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0981cb16d5aa2036391caba0cf6ad3ac5c44ed6f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589818"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644143"
 ---
 # <a name="general-guidance"></a>일반 지침
 

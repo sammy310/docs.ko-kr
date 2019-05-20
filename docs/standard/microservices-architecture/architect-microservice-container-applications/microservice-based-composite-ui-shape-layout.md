@@ -1,15 +1,13 @@
 ---
 title: 마이크로 서비스 기반 복합 UI 만들기
 description: 마이크로 서비스 아키텍처 백 엔드에 대해서만은 아닙니다. 프런트 엔드에서 사용하는 Peek 뷰를 가져옵니다.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 8a2cdf2569f4333dc3ba71b3492d21197ff006ad
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 55cb2a8096cc8122c94cae50af4384e9392868cf
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612422"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644587"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>마이크로 서비스 기반 복합 UI 만들기
 

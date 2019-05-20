@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - static keyword [C#]
 ms.assetid: 5509e215-2183-4da3-bab4-6b7e607a4fdf
-ms.openlocfilehash: 90b043fa13f1737db81518151daaeceabf930c5c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b288e57d9241e294a0fa18edafe72eec675327a7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239158"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633182"
 ---
 # <a name="static-c-reference"></a>static(C# 참조)
 
@@ -50,7 +50,7 @@ Console.WriteLine(MyBaseC.MyStruct.x);
 
 정적 멤버를 보여 주려면 회사 직원을 나타내는 클래스를 고려해 보세요. 클래스에 직원 수를 구하는 메서드와 직원 수를 저장하는 필드가 포함되어 있다고 가정합니다. 메서드와 필드는 둘 다 인스턴스 직원에 속하지 않습니다. 대신 회사 클래스에 속해 있습니다. 따라서 클래스의 정적 멤버로 선언해야 합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이 예제에서는 새 직원의 이름 및 ID를 읽고, 직원 카운터를 1만큼 늘린 다음 새 직원에 대한 정보와 새 직원 수를 표시합니다. 간단히 하기 위해 이 프로그램은 키보드에서 현재 직원 수를 읽습니다. 실제 애플리케이션에서는 이 정보를 파일에서 읽어야 합니다.
 

@@ -1,15 +1,13 @@
 ---
 title: Docker 컨테이너, 이미지 및 레지스트리
 description: 컨테이너화된 .NET 용용 프로그램용 .NET 마이크로 서비스 아키텍쳐 | Docker 컨테이너, 이미지 및 레지스트리
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 1ab5f2f4172caf799b9a63c1ae881a66f8805e20
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 520f8d4d54f1fdd227ff9a1e88660b62e75f927f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659656"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639903"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker 컨테이너, 이미지 및 레지스트리
 

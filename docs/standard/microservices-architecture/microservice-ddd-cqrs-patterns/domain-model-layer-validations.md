@@ -2,12 +2,12 @@
 title: 도메인 모델 레이어에서 유효성 검사 디자인
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 도메인 모델 유효성 검사의 주요 개념을 이해합니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: 75d227c0cc3d5ae20614d816b528d93709ccdfcf
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 1d3196d2130df33969ed231bccfe0fc6f0af2ad8
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063018"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639582"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>도메인 모델 레이어에서 유효성 검사 디자인
 

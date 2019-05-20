@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a73eafa2-1f49-4106-a19e-997186029b58
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa95eccfa39073bb8ccb3cb9c49e099ac1f90ab1
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 5e68465b6fae39089600457414e7f2a2328f725b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222104"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593127"
 ---
 # <a name="how-to-create-pre-computed-tasks"></a>방법: 미리 계산된 작업 만들기
 이 문서에서는 <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> 메서드를 사용하여 캐시에 저장된 비동기 다운로드 작업의 결과를 검색하는 방법을 설명합니다. <xref:System.Threading.Tasks.Task.FromResult%2A> 메서드는 제공된 값을 <xref:System.Threading.Tasks.Task%601> 속성으로 포함하는 완료된 <xref:System.Threading.Tasks.Task%601.Result%2A> 개체를 반환합니다. 이 메서드는 <xref:System.Threading.Tasks.Task%601> 개체가 반환되는 비동기 작업을 수행하고 해당 <xref:System.Threading.Tasks.Task%601> 개체의 결과가 계산되어 있을 때 유용합니다.  
@@ -27,19 +27,6 @@ ms.locfileid: "54222104"
  [!code-vb[TPL_CachedDownloads#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_cacheddownloads/vb/cacheddownloads.vb#1)]  
   
  이 예제에서는 여러 문자열을 두 번 다운로드하는 데 필요한 시간을 계산합니다. 결과가 캐시에 저장되기 때문에 다운로드 작업의 두 번째 집합은 첫 번째 집합보다 시간이 덜 걸려야 합니다. <xref:System.Threading.Tasks.Task.FromResult%2A> 메서드는 `DownloadStringAsync` 메서드가 이러한 미리 계산된 결과를 포함하는 <xref:System.Threading.Tasks.Task%601> 개체를 만들 수 있도록 합니다.  
-  
-## <a name="compiling-the-code"></a>코드 컴파일  
- 예제 코드를 복사하여 Visual Studio 프로젝트에 붙여넣거나, `CachedDownloads.cs`(Visual Basic의 경우 `CachedDownloads.vb`) 파일에 붙여넣은 후 Visual Studio용 개발자 명령 프롬프트 창에서 다음 명령을 실행합니다.  
-  
- Visual C#  
-  
- **csc.exe CachedDownloads.cs**  
-  
- Visual Basic  
-  
- **vbc.exe CachedDownloads.vb**  
-  
-## <a name="robust-programming"></a>강력한 프로그래밍  
   
 ## <a name="see-also"></a>참고 항목
 

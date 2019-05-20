@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: daebcf210dfa484c49f52635bb5c3c8f74c8a88a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2bf8610a1e2ad11d12acd55c69fbb98d078f7cc9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591734"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586151"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>방법: 리플렉션 내보내기를 사용하여 제네릭 메서드 정의
 첫 번째 절차에서는 두 개의 형식 매개 변수가 있는 간단한 제네릭 메서드를 만드는 방법 및 형식 매개 변수에 클래스 제약 조건, 인터페이스 제약 조건 및 특수 제약 조건을 적용하는 방법을 보여 줍니다.  
@@ -161,14 +161,6 @@ ms.locfileid: "64591734"
   
  [!code-csharp[GenericMethodHowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#1)]
  [!code-vb[GenericMethodHowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#1)]  
-  
-## <a name="compiling-the-code"></a>코드 컴파일  
-  
-- 코드에는 컴파일하는 데 필요한 C# `using` 문(Visual Basic에서는 `Imports`)이 포함되어 있습니다.  
-  
-- 추가 어셈블리 참조는 필요하지 않습니다.  
-  
-- csc.exe, vbc.exe 또는 cl.exe를 사용하여 명령줄에서 코드를 컴파일합니다. Visual Studio에서 코드를 컴파일하려면 콘솔 애플리케이션 프로젝트 템플릿에 배치합니다.  
   
 ## <a name="see-also"></a>참고 항목
 

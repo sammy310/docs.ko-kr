@@ -3,12 +3,12 @@ title: C#에서 LINQ 쿼리 작성하기
 description: C#에서 LINQ 쿼리를 작성하는 방법을 알아봅니다.
 ms.date: 12/01/2016
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
-ms.openlocfilehash: df77326b921d22d90cf90c12e9c0f472d808ed95
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ed32543b0422e0664a8577f2c27f7c7c00a719a1
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981337"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632891"
 ---
 # <a name="write-linq-queries-in-c"></a>C\#에서 LINQ 쿼리 작성하기
 

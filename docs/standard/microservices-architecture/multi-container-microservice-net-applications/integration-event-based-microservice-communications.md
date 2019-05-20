@@ -1,15 +1,13 @@
 ---
 title: 마이크로 서비스(통합 이벤트) 간 이벤트 기반 통신 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET Microservices 아키텍처 | 마이크로 서비스 간의 이벤트 기반 통신을 구현하기 위해 통합 이벤트를 이해합니다.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: b451d896186ffb650e495c10786106c37ab16131
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 8a5cfa280063da742dc1693905fc44cf870c1fcc
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676020"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65640724"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>마이크로 서비스(통합 이벤트) 간 이벤트 기반 통신 구현
 

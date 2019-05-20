@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ?? operator [C#]
 - conditional-AND operator (&&) [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: b96fe4790aac7ff5ff5394cbaaeaddc1e334e96c
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: e1e981f9ec6a87f6e7de1900008520cde8e46095
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333215"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633940"
 ---
 # <a name="-operator-c-reference"></a>?? 연산자(C# 참조)
 
@@ -34,7 +34,7 @@ nullable 형식은 형식 도메인의 값을 나타낼 수 있거나 값을 정
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](../language-specification/index.md)의 [null 결합 연산자](~/_csharplang/spec/expressions.md#the-null-coalescing-operator)를 참조하세요. C# 언어 사양은 C# 구문 및 사용법에 대한 신뢰할 수 있는 소스입니다.
+자세한 내용은 [C# 언어 사양](../language-specification/index.md)의 [null 결합 연산자](~/_csharplang/spec/expressions.md#the-null-coalescing-operator)를 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
 
 ## <a name="see-also"></a>참고 항목
 

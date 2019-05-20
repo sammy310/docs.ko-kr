@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: b7a6ae343feae7c28fb7debdc8a6b617872d262f
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 286ffdb73425794e5979cde902e21ebd90a26969
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202108"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644281"
 ---
 # <a name="development-process-for-azure"></a>Azure 개발 프로세스
 

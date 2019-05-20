@@ -1,15 +1,13 @@
 ---
 title: 인프라 지속성 계층 디자인
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 인프라 지속성 계층 디자인에서 리포지토리 패턴을 탐색합니다.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 3e9c2ce0a332351f136dcd4dcb6d3da4f794a1eb
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 76f545403a1b595ce7a541a96d212b9406d89c10
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611018"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644575"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>인프라 지속성 계층 디자인
 
@@ -94,7 +92,7 @@ eShopOnContainers에 구현된 리포지토리는 해당 변경 추적기를 사
 
 이러한 다중 지속성 작업은 애플리케이션 계층에서 해당 코드가 명령을 내리는 경우 나중에 단일 작업으로 수행됩니다. 실제 데이터베이스 스토리지에 메모리 내 변경을 적용은 일반적으로 [작업 단위 패턴](https://martinfowler.com/eaaCatalog/unitOfWork.html)에 기반을 두고 결정됩니다. EF에서, 작업 단위 패턴은 <xref:Microsoft.EntityFrameworkCore.DbContext>로서 구현됩니다.
 
-대부분의 경우, 스토리지에 작업을 적용하는 방식이나 패턴은 애플리케이션 성능을 향상시키고 불일치 가능성을 줄일 수 있습니다. 또한, 의도된 모든 작업은 한 트랜잭션의 일부로서 커밋되기 때문에 데이터베이스 테이블에서 트랜잭션 차단을 줄여줍니다. 이 방법은 데이터베이스에 대해 많은 격리된 작업 실행에 비해 더 효율적입니다. 따라서 선택한 ORM은 많은 소형 및 별도 트랜잭션 실행과 대조적으로 동일한 트랜잭션 내에서 여러 가지 업데이트 작업을 그룹화하여 데이터베이스에서의 실행을 최적화할 수 있습니다.
+대부분의 경우, 저장소에 작업을 적용하는 방식이나 패턴은 애플리케이션 성능을 향상시키고 불일치 가능성을 줄일 수 있습니다. 또한, 의도된 모든 작업은 한 트랜잭션의 일부로서 커밋되기 때문에 데이터베이스 테이블에서 트랜잭션 차단을 줄여줍니다. 이 방법은 데이터베이스에 대해 많은 격리된 작업 실행에 비해 더 효율적입니다. 따라서 선택한 ORM은 많은 소형 및 별도 트랜잭션 실행과 대조적으로 동일한 트랜잭션 내에서 여러 가지 업데이트 작업을 그룹화하여 데이터베이스에서의 실행을 최적화할 수 있습니다.
 
 ### <a name="repositories-shouldnt-be-mandatory"></a>리포지토리는 필수가 아닙니다
 

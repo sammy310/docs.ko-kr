@@ -1,15 +1,13 @@
 ---
 title: 상태 모니터링
 description: 상태 모니터링을 구현하는 한 가지 방법을 살펴봅니다.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: deebcf6771d24be34050dd7fdfb807a681ebce1f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b03506972166eec1864de840c1abda05bc3e5277
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672206"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639871"
 ---
 # <a name="health-monitoring"></a>상태 모니터링
 

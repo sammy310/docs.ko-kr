@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 05978c5604e7aa359b016bd6e3f3196178f706ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8216e144dfcaeaf9b480d681ae91ce59832ae9e3
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332211"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877533"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>명령줄 인수(C# 프로그래밍 가이드)
 다음 방법 중 하나로 메서드를 정의하여 인수를 `Main` 메서드에 보낼 수 있습니다.  
@@ -80,6 +80,5 @@ long num = Convert.ToInt64(s);
 - [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
 - [Main()과 명령줄 인수](../../../csharp/programming-guide/main-and-command-args/index.md)
 - [방법: 명령줄 인수 표시](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [방법: foreach를 사용하여 명령줄 인수 액세스](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
 - [Main() 반환 값](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
 - [클래스](../../../csharp/programming-guide/classes-and-structs/classes.md)

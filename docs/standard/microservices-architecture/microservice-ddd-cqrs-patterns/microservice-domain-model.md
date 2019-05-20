@@ -1,15 +1,13 @@
 ---
 title: 마이크로 서비스 도메인 모델 디자인
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | DDD 지향 도메인 모델을 디자인할 때 주요 개념을 이해합니다.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 5c2ac880462851dd18735ced189b3641a759c8ca
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: c6d2e84189ff542a2ed4c584c4a47bf7bf0e946a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613059"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644182"
 ---
 # <a name="design-a-microservice-domain-model"></a>마이크로 서비스 도메인 모델 디자인
 

@@ -1,15 +1,13 @@
 ---
 title: 마이크로 서비스 API 및 계약 만들기, 개선 및 버전 관리
 description: 요구 사항의 변화에 따라 발전과 버전을 고려하여 마이크로 서비스 API 및 계약을 작성하세요.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: f42de3895f7f9affe09891fd89621fbb414313e9
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 1972d02d8bf7935c71bfd383707ae19ea2baded9
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612110"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644920"
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>마이크로 서비스 API 및 계약 만들기, 개선 및 버전 관리
 

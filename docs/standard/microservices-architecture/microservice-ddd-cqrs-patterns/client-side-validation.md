@@ -1,15 +1,13 @@
 ---
 title: 클라이언트 쪽 유효성 검사(프레젠테이션 레이어의 유효성 검사)
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 클라이언트 쪽 유효성 검사의 주요 개념을 살펴봅니다.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: ddf53456f9356817d28cd0bfa75df3296fb5d722
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 4e72dcafafc3144a75afe1fd23a4a779f5667459
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612617"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644834"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>클라이언트 쪽 유효성 검사(프레젠테이션 레이어의 유효성 검사)
 

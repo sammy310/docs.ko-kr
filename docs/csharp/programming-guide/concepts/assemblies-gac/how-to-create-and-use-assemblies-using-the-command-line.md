@@ -2,12 +2,12 @@
 title: '방법: 명령줄을 사용하여 어셈블리 만들기 및 사용(C#)'
 ms.date: 07/20/2015
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-ms.openlocfilehash: 76243034b4291142efa5ac78c21f65333e1378e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 12d23816b740816bd357c3c2ac57583f31bf3cb3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599863"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586030"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>방법: 명령줄을 사용하여 어셈블리 만들기 및 사용(C#)
 어셈블리 또는 DLL(동적 연결 라이브러리)은 런타임 시 프로그램에 연결됩니다. DLL 빌드 및 사용을 보여 주려면 다음 시나리오를 고려합니다.  
@@ -102,25 +102,6 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2);
  프로그램을 실행하려면 다음과 같이 EXE 파일의 이름과 두 개의 숫자를 차례로 입력합니다.  
   
  `TestCode 1234 5678`  
-  
-## <a name="compiling-the-code"></a>코드 컴파일  
- `MathLibrary.DLL` 파일을 빌드하려면 다음 명령줄을 사용하여 두 개의 파일 `Add` 및 `Mult`를 컴파일합니다.  
-  
-```csharp  
-csc /target:library /out:MathLibrary.DLL Add.cs Mult.cs  
-```  
-  
- [/target:library](../../../../csharp/language-reference/compiler-options/target-library-compiler-option.md) 컴파일러 옵션은 EXE 파일 대신 DLL을 출력하도록 컴파일러에 지시합니다. [/out](../../../../csharp/language-reference/compiler-options/out-compiler-option.md) 컴파일러 옵션은 DLL 파일 이름을 지정하는 데 사용됩니다. 사용하지 않을 경우 컴파일러는 첫 번째 파일(`Add.cs`)을 DLL의 이름으로 사용합니다.  
-  
- 실행 파일 `TestCode.exe`를 빌드하려면 다음 명령줄을 사용합니다.  
-  
-```csharp  
-csc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.cs  
-```  
-  
- **/out** 컴파일러 옵션은 EXE 파일을 출력하도록 컴파일러에 지시하고 출력 파일의 이름(`TestCode.exe`)을 지정합니다. 이 컴파일러 옵션은 선택 사항입니다. [/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 컴파일러 옵션은 이 프로그램이 사용하는 DLL 파일을 지정합니다. 자세한 내용은 [/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md)를 참조하세요.  
-  
- 명령줄에서 빌드하는 방법에 대한 자세한 내용은 [csc.exe를 사용한 명령줄 빌드](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 

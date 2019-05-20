@@ -2,12 +2,12 @@
 title: 값 개체 구현
 description: 컨테이너화된 .NET 애플리케이션의 .NET 마이크로 서비스 아키텍처 | 새로운 Entity Framework 기능을 사용하여 값 개체를 구현하는 세부 정보 및 옵션을 가져옵니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: bd165ac2511476a5041e7d09126647546c632ba6
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 850d571ffb92f2d200e24430a9611fb13b64e635
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063082"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644307"
 ---
 # <a name="implement-value-objects"></a>값 개체 구현
 

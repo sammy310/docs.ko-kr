@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: 6b6e77dea17d71b74c2c06534fd3a941e3e867a8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 83fd5ab1cfe7f48999dd2765405f58543eeb743a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592559"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882211"
 ---
 # <a name="data-transfer-architectural-overview"></a>데이터 전송 아키텍처 개요
 Windows Communication Foundation (WCF) 메시징 인프라로 생각할 수 있습니다. WCF는 메시지를 받고, 처리하고, 추가 작업을 위해 사용자 코드로 디스패치하거나, 사용자 코드에서 제공된 데이터로부터 메시지를 생성하고 이 메시지를 대상에 전달할 수 있습니다. 고급 개발자를 대상으로 한 이 항목에서는 메시지 및 포함된 데이터를 처리하기 위한 아키텍처에 대해 설명합니다. 데이터를 주고 받는 방법을 보다 간단하게, 작업에 초점을 두고 설명하는 내용은 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)을 참조하십시오.  
@@ -268,7 +268,7 @@ Windows Communication Foundation (WCF) 메시징 인프라로 생각할 수 있�
   
  WCF 직렬화 및 역직렬화 매개 변수 및 메시지 파트에 대 한 "기본" 두 가지의 serialization 기술을 지원: 합니다 <xref:System.Runtime.Serialization.DataContractSerializer> 하며 `XmlSerializer`합니다. 그뿐 아니라 사용자 지정 serializer도 작성할 수 있습니다. 그러나 WCF의 다른 부분 (예: 제네릭 `GetBody` 메서드 또는 SOAP 오류 serialization)만 사용 하도록 제한 될 수 있습니다 합니다 <xref:System.Runtime.Serialization.XmlObjectSerializer> 서브 클래스 (<xref:System.Runtime.Serialization.DataContractSerializer> 및 <xref:System.Runtime.Serialization.NetDataContractSerializer>, 아닌는 <xref:System.Xml.Serialization.XmlSerializer>), 또는 사용 하도록 하드 코드 된 있을 수도 있습니다 <xref:System.Runtime.Serialization.DataContractSerializer>합니다.  
   
- `XmlSerializer` 는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 서비스에서 사용되는 serialization 엔진입니다. `DataContractSerializer` 는 새 데이터 계약 프로그래밍 모델을 이해하는 새 serialization 엔진입니다. `DataContractSerializer` 가 기본 선택되며, `XmlSerializer` 를 사용할지 여부는 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A> 특성을 사용하여 작업별로 지정할 수 있습니다.  
+ `XmlSerializer` ASP.NET 웹 서비스에 사용 되는 serialization 엔진입니다. `DataContractSerializer` 는 새 데이터 계약 프로그래밍 모델을 이해하는 새 serialization 엔진입니다. `DataContractSerializer` 가 기본 선택되며, `XmlSerializer` 를 사용할지 여부는 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A> 특성을 사용하여 작업별로 지정할 수 있습니다.  
   
  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 및 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> 는 `DataContractSerializer` 와 `XmlSerializer`각각에 대해 메시지 포맷터에서의 플러그 인을 담당하는 작업 동작입니다. <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 동작은 실제로 <xref:System.Runtime.Serialization.XmlObjectSerializer>를 비롯하여 <xref:System.Runtime.Serialization.NetDataContractSerializer> 에서 파생되는 모든 serializer와 함께 작동할 수 있습니다. 자세한 내용은 독립 실행형 Serialization 사용에 설명되어 있습니다. 해당 동작은 `CreateSerializer` 가상 메서드 오버로드 중 하나를 호출하여 serializer를 가져옵니다. 다른 serializer를 플러그 인하려면 새 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 서브클래스를 만들고, 두 `CreateSerializer` 오버로드를 모두 재정의합니다.  
   

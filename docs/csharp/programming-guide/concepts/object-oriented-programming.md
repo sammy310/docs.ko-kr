@@ -2,12 +2,12 @@
 title: 개체 지향 프로그래밍(C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: a7a3ce1b33d040b337087dfede90b58906c95cbd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2adb1ac24aa625c89fcafe074fe65189aa3767c7
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481173"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880699"
 ---
 # <a name="object-oriented-programming-c"></a>개체 지향 프로그래밍(C#)
 
@@ -25,17 +25,17 @@ C#은 캡슐화, 상속, 다형성 등 개체 지향 프로그래밍에 대한 �
 
   - [클래스 멤버](#Members)
 
-        [Properties and Fields](#Properties)
+    - [속성 및 필드](#Properties)
 
-        [Methods](#Methods)
+    - [메서드](#Methods)
 
-        [Constructors](#Constructors)
+    - [생성자](#Constructors)
 
-        [Finalizers](#Finalizers)
+    - [종료자](#Finalizers)
 
-        [Events](#Events)
+    - [이벤트](#Events)
 
-        [Nested Classes](#NestedClasses)
+    - [중첩 클래스](#NestedClasses)
 
   - [액세스 한정자 및 액세스 수준](#AccessModifiers)
 

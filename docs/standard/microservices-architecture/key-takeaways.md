@@ -1,15 +1,13 @@
 ---
 title: 핵심 내용
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 가이드/전자책에서 핵심 요점을 가져와 혜택 및 단점, 디자인 및 개발에 대한 DDD 패턴, 복원력, 보안, 오케스트레이터 사용 등 마이크로 서비스 아키텍처 사용 시 관련된 상위 수준 문제를 빠르게 살펴볼 수 있습니다.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 90babf9a32d1e139216cbc8eb1c629401b8e83e3
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 3b8b7be9b3903c64221cba7c6abdb1e38f5d944f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362121"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639697"
 ---
 # <a name="key-takeaways"></a>핵심 내용
 

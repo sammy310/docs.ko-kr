@@ -1,15 +1,13 @@
 ---
 title: eShopOnContainers의 DDD 마이크로 서비스에서 CQRS 및 CQS 방법 적용
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | eShopOnContainers의 주문 마이크로 서비스에서 CQRS가 구현되는 방식을 이해합니다.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 6e39b0ce48e7caf755054eb558ab0c99b0ec76e8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0380e759595e8a159e89f858a5ced4dacfa4e9b4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755079"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875904"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>eShopOnContainers의 DDD 마이크로 서비스에서 CQRS 및 CQS 방법 적용
 
@@ -46,20 +44,11 @@ CQRS와 대부분의 DDD 패턴(예: DDD 계층 또는 집계가 있는 도메�
 - **Martin Fowler. CQRS** \
   <https://martinfowler.com/bliki/CQRS.html>
 
-- **Greg Young. CQS vs. CQRS** \
-  <http://codebetter.com/gregyoung/2009/08/13/command-query-separation/>
-
 - **Greg Young. CQRS 문서** \
-  [https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
-
-- **Greg Young. CQRS, 작업 기반 UI 및 이벤트 소싱** \
-  <http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/>
+  <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf>
 
 - **Udi Dahan. 명확한 CQRS** \
   <http://udidahan.com/2009/12/09/clarified-cqrs/>
-
-- **ES(이벤트 소싱)** \
-  <http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/>
 
 >[!div class="step-by-step"]
 >[이전](apply-simplified-microservice-cqrs-ddd-patterns.md)

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: 9352718371226279f0a468913040e48cbeed984d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 332fd7499a9948bb9ab418a3ab8b6c40ad0bcb85
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971366"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634811"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>cref 특성(C# 프로그래밍 가이드)
 XML 문서 태그의 `cref` 특성은 "코드 참조"를 의미합니다. 태그의 내부 텍스트를 형식, 메서드, 속성 등의 코드 요소로 지정합니다. [DocFX](https://dotnet.github.io/docfx/) 및 [Sandcastle](https://github.com/EWSoftware/SHFB) 등의 문서화 도구는 `cref` 특성을 사용하여 형식 또는 멤버가 문서화된 페이지에 대한 하이퍼링크를 자동으로 생성합니다.  
@@ -121,5 +121,5 @@ XML 문서 태그의 `cref` 특성은 "코드 참조"를 의미합니다. 태그
   
 ## <a name="see-also"></a>참고 항목
 
-- [XML 문서 주석](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [XML 문서 주석](../../../csharp/programming-guide/xmldoc/index.md)
 - [문서 주석에 대한 권장 태그](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

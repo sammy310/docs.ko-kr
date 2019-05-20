@@ -5,12 +5,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 1e4c03985908f6e49d5ce001cdc9c1472f5a6d44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ea6f93e52ade91e61bdfcbc35aeb56de9101e80f
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595594"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878923"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() 반환 값(C# 프로그래밍 가이드)
 
@@ -99,4 +99,3 @@ private static async Task<int> AsyncConsoleWork()
 - [C# 참조](../index.md)
 - [Main()과 명령줄 인수](index.md)
 - [방법: 명령줄 인수 표시](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [방법: foreach를 사용하여 명령줄 인수 액세스](../../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)

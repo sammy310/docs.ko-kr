@@ -1,15 +1,13 @@
 ---
 title: 부분 실패 처리
 description: 부분 실패를 정상적으로 처리하는 방법을 알아봅니다. 마이크로 서비스가 완전히 작동하지 않더라도 여전히 일부 유용한 작업을 수행할 수 있습니다.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: 16b6237f79d6b4bc2bc9152ba6eb023ffbd3899f
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: a667ad2e1456db7b5846023de27d3797dad58731
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362706"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65640104"
 ---
 # <a name="handle-partial-failure"></a>부분 실패 처리
 

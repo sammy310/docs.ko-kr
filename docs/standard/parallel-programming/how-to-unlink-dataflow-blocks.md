@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 40f0208d-4618-47f7-85cf-4913d07d2d7d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93705653169b5efce3e3a062b7490abc4ea39c30
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 989220141e4af5d64c3994479949547136843ff5
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223119"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592000"
 ---
 # <a name="how-to-unlink-dataflow-blocks"></a>방법: 데이터 흐름 블록 링크 끊기
 이 문서에서는 소스에서 대상 데이터 흐름 블록의 연결을 해제하는 방법을 설명합니다.
@@ -34,17 +34,6 @@ ms.locfileid: "54223119"
   
  `TrySolution`에 대한 나머지 호출이 한 호출에서 값을 계산한 후 종료될 수 있도록 하기 위해 `TrySolution` 메서드는 <xref:System.Threading.CancellationToken> 호출이 반환된 후 취소되는 `ReceiveFromAny(T)` 개체를 사용합니다. <xref:System.Threading.SpinWait.SpinUntil%2A> 메서드는 이 <xref:System.Threading.CancellationToken> 개체가 취소될 때 반환됩니다.  
   
-## <a name="compiling-the-code"></a>코드 컴파일  
- 예제 코드를 복사하여 Visual Studio 프로젝트에 붙여넣거나, `DataflowReceiveAny.cs`(Visual Basic의 경우 `DataflowReceiveAny.vb`) 파일에 붙여넣은 후 Visual Studio용 개발자 명령 프롬프트 창에서 다음 명령을 실행합니다.  
-  
- Visual C#  
-  
- **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReceiveAny.cs**  
-  
- Visual Basic  
-  
- **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReceiveAny.vb**  
-
 ## <a name="see-also"></a>참고 항목
 
 - [데이터 흐름](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

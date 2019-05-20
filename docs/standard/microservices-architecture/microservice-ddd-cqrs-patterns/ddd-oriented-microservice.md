@@ -1,15 +1,13 @@
 ---
 title: DDD 중심 마이크로 서비스 설계
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | DDD 지향 주문 마이크로 서비스 및 해당 애플리케이션 계층의 디자인을 이해합니다.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 5c56e497ffb6466840d034458daaebf9fe0c8f03
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 303f8909d12dddef93b20604a00b9ea8e8493ee5
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611486"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639665"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>DDD 지향 마이크로 서비스 디자인
 

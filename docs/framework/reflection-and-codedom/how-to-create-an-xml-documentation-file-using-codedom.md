@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ae041ae278dc6f2423a679dab8982f4ccc35620
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d984257958354eb2c6be6aa57d8b68ca39039edc
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592500"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632798"
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>방법: CodeDOM을 사용하여 XML 문서 파일 만들기
 CodeDOM을 사용하여 XML 문서를 생성하는 코드를 만들 수 있습니다. 이 프로세스에서는 XML 문서 주석이 포함된 CodeDOM 그래프를 생성하고, 코드를 생성하고, XML 문서 출력을 만드는 컴파일러 옵션을 사용하여 생성된 코드를 컴파일해야 합니다.  
@@ -82,5 +82,5 @@ CodeDOM을 사용하여 XML 문서를 생성하는 코드를 만들 수 있습�
 ## <a name="see-also"></a>참고 항목
 
 - [코드를 XML로 문서화](~/docs/visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
-- [XML 문서 주석](~/docs/csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [XML 문서 주석](~/docs/csharp/programming-guide/xmldoc/index.md)
 - [XML 문서](/cpp/ide/xml-documentation-visual-cpp)

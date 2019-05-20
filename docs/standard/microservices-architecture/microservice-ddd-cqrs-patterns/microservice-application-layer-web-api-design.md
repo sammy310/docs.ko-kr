@@ -1,15 +1,13 @@
 ---
 title: 마이크로 서비스 애플리케이션 레이어 및 웹 API 설계
 description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크로 서비스 아키텍처 | 애플리케이션 계층 설계를 위한 SOLID 원칙의 간략한 설명
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 9177ac9a79afaea01f0ec21b0a64bad5a94e9966
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 3c3b9f74e76e01deafa1f97de5d3250d57716014
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612240"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639500"
 ---
 # <a name="design-the-microservice-application-layer-and-web-api"></a>마이크로 서비스 애플리케이션 계층 및 웹 API 설계하기
 

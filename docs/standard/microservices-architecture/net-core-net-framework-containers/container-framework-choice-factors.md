@@ -1,15 +1,13 @@
 ---
 title: 의사 결정 테이블. Docker에 사용할 .NET Framework
-description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 의사 결정 테이블, Docker에 사용할 .NET Framework
-author: CESARDELATORRE
-ms.author: wiwagn
+description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크로 서비스 아키텍처 | 의사 결정 테이블, Docker에 사용할 .NET Framework
 ms.date: 09/11/2018
-ms.openlocfilehash: 8044e3064ac372750c174d8b47c3f7a63d6bbd0b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 96b2750e52d64b06444b7f87dea624879f37d3d7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149057"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639176"
 ---
 # <a name="decision-table-net-frameworks-to-use-for-docker"></a>의사 결정 테이블: Docker에 사용할 .NET Framework
 

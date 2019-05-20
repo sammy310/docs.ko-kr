@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /** */ delimiters for C# documentation tags
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
-ms.openlocfilehash: 9874b71462fb66828f6baeef4f46ad93899d4cc8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d08dd0c68a11ddf73c19a1e09bc8c59937708553
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607994"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634758"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>문서 태그에 대한 구분 기호(C# 프로그래밍 가이드)
 XML 문서 주석을 사용하려면 문서 주석이 시작되고 끝나는 위치를 컴파일러에 알리는 구분 기호가 필요합니다. XML 문서 태그에 다음과 같은 종류의 구분 기호를 사용할 수 있습니다.  
@@ -81,6 +81,6 @@ XML 문서 주석을 사용하려면 문서 주석이 시작되고 끝나는 위
 ## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [XML 문서 주석](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [XML 문서 주석](../../../csharp/programming-guide/xmldoc/index.md)
 - [/doc(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
-- [XML 문서 주석](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [XML 문서 주석](../../../csharp/programming-guide/xmldoc/index.md)

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-ms.openlocfilehash: 91be48aa2ca64b152af3dc3f33c713bf4adac0c7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 872406fdf012ed3b8326789f6664cb3396d59a84
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968389"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635159"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>포인터 변환(C# 프로그래밍 가이드)
 다음 표에서는 미리 정의된 암시적 포인터 변환을 보여 줍니다. 암시적 변환은 메서드 호출, 할당 문을 비롯한 대부분의 경우에서 발생할 수 있습니다.  
@@ -42,7 +42,6 @@ ms.locfileid: "56968389"
 ## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [포인터 식](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
 - [포인터 형식](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
 - [유형](../../../csharp/language-reference/keywords/types.md)
 - [unsafe](../../../csharp/language-reference/keywords/unsafe.md)

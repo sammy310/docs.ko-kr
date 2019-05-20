@@ -1,15 +1,13 @@
 ---
 title: 도메인 이벤트. 디자인 및 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 집계 간에 통신을 설정하는 주요 개념인 도메인 이벤트의 세부적인 보기를 가져옵니다.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 353e50de65f21930ebe0bef9e239e1e333403676
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 5f7084ef638a1d04e0050eab447cb8903c973f45
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612045"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875932"
 ---
 # <a name="domain-events-design-and-implementation"></a>도메인 이벤트: 디자인 및 구현
 
@@ -347,7 +345,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 ## <a name="additional-resources"></a>추가 자료
 
 - **Greg Young. 도메인 이벤트란?** \
-  <http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/>
+  <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf#page=25>
 
 - **Jan Stenberg. 도메인 이벤트 및 최종 일관성** \
   <https://www.infoq.com/news/2015/09/domain-events-consistency>

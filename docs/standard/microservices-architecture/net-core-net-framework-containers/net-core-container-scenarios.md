@@ -1,15 +1,13 @@
 ---
 title: Docker 컨테이너에 대해 .NET Core를 선택할 경우
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | Docker 컨테이너에 대해 .NET Core를 선택할 경우
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: b2ede45afee93e8d87a22b2b489eb2a230e04e7d
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 54ed1b4bbb16352b8c99204383f85ffb25d62be7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57844277"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644362"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Docker 컨테이너에 대해 .NET Core를 선택할 경우
 

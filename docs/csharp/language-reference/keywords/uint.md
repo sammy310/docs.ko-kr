@@ -7,12 +7,12 @@ f1_keywords:
 - uint_CSharpKeyword
 helpviewer_keywords:
 - uint keyword [C#]
-ms.openlocfilehash: e22468eea63ce082f2e9842e6ec307aba1888964
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 9a60460f67f9b6cf0b57d40ebf2789536e870d75
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241602"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633153"
 ---
 # <a name="uint-c-reference"></a>uint(C# 참조)
 
@@ -88,7 +88,7 @@ uint y = (uint)3.0;
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](../language-specification/index.md)의 [정수 형식](~/_csharplang/spec/types.md#integral-types)을 참조하세요. C# 언어 사양은 C# 구문 및 사용법에 대한 신뢰할 수 있는 소스입니다.
+자세한 내용은 [C# 언어 사양](../language-specification/index.md)의 [정수 형식](~/_csharplang/spec/types.md#integral-types)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
 
 ## <a name="see-also"></a>참고 항목
 

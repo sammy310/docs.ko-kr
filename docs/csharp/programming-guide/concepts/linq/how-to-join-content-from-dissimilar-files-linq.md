@@ -2,12 +2,12 @@
 title: '방법: 서로 다른 파일의 콘텐츠 조인(LINQ)(C#)'
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: ca340e82e33d9b3ec212f69cb73efafb3c6abc0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dd7287abce7fca803dd87d23f1f58151cf4ec2f5
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328818"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585750"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>방법: 서로 다른 파일의 콘텐츠 조인(LINQ)(C#)
 
@@ -124,14 +124,6 @@ Tucker, 94, 92, 91, 91
  */  
 ```
 
-## <a name="compiling-the-code"></a>코드 컴파일
-
-다음 옵션 중 하나를 대상으로 하는 프로젝트를 만들고 컴파일합니다.
-
-- System.Core.dll에 대한 참조를 포함한 .NET Framework 버전 3.5
-- .NET Framework 버전 4.0 이상
-- .NET Core 버전 1.0 이상
-  
 ## <a name="see-also"></a>참고 항목
 
 - [LINQ 및 문자열(C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)

@@ -4,16 +4,16 @@ description: ML.NET에서 지원되는 기능 엔지니어링 구성 요소를 �
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: d3261f88a8e52c71f8ddf4d3d5c90b2e2b22b620
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7ea06e19b4651017079a6ae57136f033e0ce981c
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64636546"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65558021"
 ---
 # <a name="data-transformations"></a>데이터 변환
 
-데이터 변환은 모델 학습용 데이터를 준비하는 데 사용됩니다. 이 가이드의 변환은 [IEstimator](xref:Microsoft.ML.IEstimator`1) 인터페이스를 구현하는 클래스를 반환합니다. 데이터 변환은 함께 연결될 수 있습니다. 두 변환은 각각 연결된 참조 설명서에 지정된 특정 형식 및 형태의 데이터를 예측하고 생성합니다.
+데이터 변환은 모델 학습용 데이터를 준비하는 데 사용됩니다. 이 가이드의 변환은 [IEstimator](xref:Microsoft.ML.IEstimator%601) 인터페이스를 구현하는 클래스를 반환합니다. 데이터 변환은 함께 연결될 수 있습니다. 두 변환은 각각 연결된 참조 설명서에 지정된 특정 형식 및 형태의 데이터를 예측하고 생성합니다.
 
 일부 데이터 변환의 경우 해당 매개 변수를 계산하려면 학습 데이터가 필요합니다. 예를 들어 <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> 변환기는 `Fit()` 작업 중에 학습 데이터의 평균 및 분산을 계산하고 해당 매개 변수를 `Transform()` 작업에서 사용합니다. 
 

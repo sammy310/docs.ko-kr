@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
-ms.openlocfilehash: b7018afa1272f4ae092863de6b7f9ef783001244
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c88219d03d40c814338a1b09ccd37cfc03c2d577
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965594"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881023"
 ---
 # <a name="how-to-display-command-line-arguments-c-programming-guide"></a>방법: 명령줄 인수 표시(C# 프로그래밍 가이드)
 명령줄에서 실행 파일에 제공된 인수는 `Main`에 대한 선택적 매개 변수를 통해 액세스할 수 있습니다. 인수는 문자열 배열의 형태로 제공됩니다. 배열의 각 요소에는 하나의 인수가 포함되어 있습니다. 인수 사이의 공백은 제거됩니다. 예를 들어 명령줄에서 다음과 같이 가상 실행 파일을 호출한다고 가정합니다.  
@@ -34,5 +34,4 @@ ms.locfileid: "56965594"
 - [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
 - [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
 - [Main()과 명령줄 인수](../../../csharp/programming-guide/main-and-command-args/index.md)
-- [방법: foreach를 사용하여 명령줄 인수 액세스](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
 - [Main() 반환 값](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

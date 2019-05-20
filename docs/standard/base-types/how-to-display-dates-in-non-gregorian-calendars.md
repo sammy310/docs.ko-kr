@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1928980f24f08e0379639090cab8d2ac7ba014e4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ea8b47e7d5c794ea1b33eaaae52a3f8250f80a82
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634006"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588836"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>방법: 그레고리오력이 아닌 달력으로 날짜 표시
 <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 형식은 양력을 기본 달력으로 사용합니다. 즉, 날짜 및 시간 값의 `ToString` 메서드를 호출하면 해당 날짜 및 시간이 다른 달력을 사용하여 생성된 경우에도 해당 날짜 및 시간의 문자열 표현을 양력 달력으로 표시합니다. 이 내용은 두 가지 방법을 사용하여 페르시아력으로 날짜 및 시간 값을 만들지만 <xref:System.DateTime.ToString%2A> 메서드를 호출할 때 해당 날짜 및 시간 값을 여전히 양력으로 표시하는 다음 예제에 설명되어 있습니다. 이 예제에서는 특정 달력의 날짜를 표시하기 위해 자주 사용되지만 잘못된 두 가지 방법을 보여 줍니다.  
@@ -84,11 +84,6 @@ ms.locfileid: "64634006"
 - `DisplayDate` - 두 매개 변수 즉, `CalendarUtility` 개체가 나타내는 달력에 표시할 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 값 및 서식 지정 규칙을 사용할 문화권이 전달되는 오버로드된 공용 메서드입니다. 날짜의 문자열 표현을 반환할 때의 해당 동작은 대상 달력이 사용할 형식 지정 규칙의 문화권에서 지원되는지 여부에 따라 달라집니다.  
   
  이 예제에서 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 값을 만드는 데 사용된 달력과 관계없이 해당 값은 일반적으로 양력 날짜로 표시됩니다. 이는 <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 형식이 달력 정보를 유지하지 않기 때문입니다. 내부적으로 두 값은 0001년 1월 1일 자정 이후에 경과된 틱 수로 표시됩니다. 해당 숫자의 해석은 달력에 따라 달라집니다. 대부분의 문화권에서 기본 달력은 양력입니다.  
-  
-## <a name="compiling-the-code"></a>코드 컴파일  
- 이 예제에서는 System.Core.dll에 대한 참조가 필요합니다.  
-  
- csc.exe 또는 vb.exe를 사용하여 명령줄에서 코드를 컴파일합니다. Visual Studio에서 코드를 컴파일하려면 해당 코드를 콘솔 애플리케이션 프로젝트 템플릿에 배치합니다.  
   
 ## <a name="see-also"></a>참고 항목
 

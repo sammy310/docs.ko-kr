@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: 1c5526366651d7e6623724c939b08ac46aa7db56
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8bb6d4a37b2eea3060921937cf15a1fdd1be97b4
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242635"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634004"
 ---
 # <a name="sizeof-c-reference"></a>sizeof(C# 참조)
 
@@ -52,7 +52,7 @@ ms.locfileid: "53242635"
 int intSize = sizeof(int);
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 C# 버전 2.0부터 단순 형식 또는 열거형 형식에 `sizeof`를 적용하면 [안전하지 않은](unsafe.md) 컨텍스트에서 코드를 더 이상 컴파일할 필요가 없습니다.
 
@@ -60,7 +60,7 @@ C# 버전 2.0부터 단순 형식 또는 열거형 형식에 `sizeof`를 적용�
 
 구조체를 비롯한 다른 모든 형식의 경우 `sizeof` 연산자는 안전하지 않은 코드 블록에서만 사용할 수 있습니다. <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> 메서드를 사용할 수 있지만 이 메서드에서 반환된 값이 `sizeof`에서 반환된 값과 항상 같지는 않습니다. <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType>는 형식이 마샬링된 후의 크기를 반환하는 반면, `sizeof`는 안쪽 여백을 포함하여 공용 언어 런타임에 의해 할당된 크기를 반환합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 [!code-csharp[csrefKeywordsOperator#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#11)]
 

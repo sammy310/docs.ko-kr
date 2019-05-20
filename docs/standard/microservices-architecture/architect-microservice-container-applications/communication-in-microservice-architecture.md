@@ -1,15 +1,13 @@
 ---
 title: 마이크로 서비스 아키텍처의 통신
 description: 동기 및 비동기 방식의 의미를 이해하고 마이크로 서비스 간의 다양한 통신 방법을 탐색합니다.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 364bd4eb82907fcf0fbcc850eca839f676a2dbf8
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 7f7a65ef53d401a8533f82168db5a412d5ac9756
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613241"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644315"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>마이크로 서비스 아키텍처의 통신
 

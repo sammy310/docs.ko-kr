@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: df116a200795fd20405381fd71e82d1d6fe662bc
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: e1a1a960fa69be593ea01cab51be576b0055fd5e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614391"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632907"
 ---
 # <a name="using-statement-c-reference"></a>using 문(C# 참조)
 
@@ -46,7 +46,7 @@ ms.locfileid: "53614391"
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](../language-specification/index.md)의 [using 문](~/_csharplang/spec/statements.md#the-using-statement)을 참조하세요. C# 언어 사양은 C# 구문 및 사용법에 대한 신뢰할 수 있는 소스입니다.
+자세한 내용은 [C# 언어 사양](../language-specification/index.md)의 [using 문](~/_csharplang/spec/statements.md#the-using-statement)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
 
 ## <a name="see-also"></a>참고 항목
 

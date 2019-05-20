@@ -1,15 +1,13 @@
 ---
 title: 마이크로 서비스별 데이터 주권
 description: 마이크로 서비스별 데이터 주권은 마이크로 서비스의 핵심 포인트 중 하나입니다. 각 마이크로 서비스는 데이터베이스의 유일한 소유자여야 하며, 다른 것과 공유하지 않아야 합니다. 물론 모든 마이크로 서비스 인스턴스는 동일한 고가용성 데이터베이스에 연결됩니다.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 1b0b1fbb72f759eb337c0c1a9c465cc4088d8eff
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: ccb12451cd7cd44938e09d171eb29e614786f469
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611239"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644444"
 ---
 # <a name="data-sovereignty-per-microservice"></a>마이크로 서비스별 데이터 주권
 

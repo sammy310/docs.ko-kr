@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], arithmetic operations
 ms.assetid: d4f0b623-827e-45ce-8649-cfcebc8692aa
-ms.openlocfilehash: bfa81bc926b4fe81455cecb88bc55f4dcd69268e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b08f9dbf8137e483bd38a4f396732191598532cf
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977840"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635231"
 ---
 # <a name="arithmetic-operations-on-pointers-c-programming-guide"></a>포인터에 대한 산술 연산(C# 프로그래밍 가이드)
 이 항목에서는 산술 연산자 `+` 및 `-`를 사용하여 포인터를 조작하는 방법을 설명합니다.  
@@ -40,9 +40,8 @@ ms.locfileid: "56977840"
 
 - [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
 - [안전하지 않은 코드 및 포인터](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
-- [포인터 식](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
 - [C# 연산자](../../../csharp/language-reference/operators/index.md)
-- [포인터 조작](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)
+- [포인터 조작](../../../csharp/programming-guide/unsafe-code-pointers/how-to-increment-and-decrement-pointers.md)
 - [포인터 형식](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
 - [유형](../../../csharp/language-reference/keywords/types.md)
 - [unsafe](../../../csharp/language-reference/keywords/unsafe.md)

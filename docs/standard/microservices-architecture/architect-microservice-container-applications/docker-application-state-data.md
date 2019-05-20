@@ -1,15 +1,13 @@
 ---
 title: Docker 애플리케이션의 상태 및 데이터
 description: Docker 애플리케이션의 상태 및 데이터 관리. 마이크로 서비스 인스턴스는 소모용(그러나 데이터는 아님)이며 마이크로 서비스로 이를 처리하는 방법입니다.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 70c3cee8c5fd1e63f2ff869f49b1fb02ab8f59dd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9d7b0ff0e73267c6b80be2f1c956c3b4eae140e2
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152658"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641361"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 애플리케이션의 상태 및 데이터
 
@@ -27,7 +25,7 @@ Docker 호스트에서 [Docker 볼륨](https://docs.docker.com/engine/admin/volu
 
 원격 스토리지에서:
 
-- [Azure Storage](https://azure.microsoft.com/documentation/services/storage/)는 지역 배포 가능한 저장소를 제공하여 컨테이너에 대한 장기 지속성 솔루션을 제공합니다.
+- [Azure Storage](https://azure.microsoft.com/documentation/services/storage/)는 지역 배포 가능한 스토리지를 제공하여 컨테이너에 대한 장기 지속성 솔루션을 제공합니다.
 
 - [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)와 같은 원격 관계형 데이터베이스 또는 [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction)와 같은 NoSQL 데이터베이스 또는 [Redis](https://redis.io/)와 같은 캐시 서비스입니다.
 
@@ -55,9 +53,9 @@ Docker 컨테이너에서:
 
 또한 오케스트레이터에서 Docker 컨테이너를 관리할 때 컨테이너는 클러스터에서 수행한 최적화에 따라 호스트 간에 "이동"할 수 있습니다. 따라서 비즈니스 데이터에 데이터 볼륨을 사용하는 것을 권장하지 않습니다. 그러나 추적 파일, 임시 파일 또는 비즈니스 데이터 일관성에 영향을 주지 않는 유사 파일로 작업하는 적합한 메커니즘입니다.
 
-컨테이너 없이 개발할 때 사용하는 것과 동일한 방식으로 Azure SQL Database와 같은 **원격 데이터 원본 및 캐시** 도구, Azure Cosmos DB 또는 Redis와 같은 원격 캐시를 컨테이너화된 응용 프로그램에서 사용할 수 있습니다. 비즈니스 애플리케이션 데이터를 저장하는 검증된 방법입니다.
+컨테이너 없이 개발할 때 사용하는 것과 동일한 방식으로 Azure SQL Database와 같은 **원격 데이터 원본 및 캐시** 도구, Azure Cosmos DB 또는 Redis와 같은 원격 캐시를 컨테이너화된 애플리케이션에서 사용할 수 있습니다. 비즈니스 애플리케이션 데이터를 저장하는 검증된 방법입니다.
 
-**Azure Storage** 일반적으로 비즈니스 데이터는 Azure Storage와 같은 외부 리소스 또는 데이터베이스에 배치되어야 합니다. 구체적으로 Azure Storage에서는 클라우드에서 다음 서비스를 제공합니다.
+**Azure Storage.** 일반적으로 비즈니스 데이터는 Azure Storage와 같은 외부 리소스 또는 데이터베이스에 배치되어야 합니다. 구체적으로 Azure Storage에서는 클라우드에서 다음 서비스를 제공합니다.
 
 - Blob 스토리지는 구조화되지 않은 개체 데이터를 저장합니다. Blob는 문서 또는 미디어 파일(이미지, 오디오 및 비디오 파일)과 같은 텍스트 또는 이진 데이터 형식일 수 있습니다. Blob 스토리지를 개체 스토리지라고도 합니다.
 

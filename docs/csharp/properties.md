@@ -2,12 +2,12 @@
 title: 속성
 description: 유효성 검사, 계산된 값, 지연 평가, 속성 변경 알림 기능을 포함하는 C# 속성에 대해 알아봅니다.
 ms.date: 04/25/2018
-ms.openlocfilehash: d4fa7b6117bec63c41318dd4bcc3850ce55a5907
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: e8b6955da1f36673962339785b0bfb012343acf8
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956240"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878271"
 ---
 # <a name="properties"></a>속성
 
@@ -140,7 +140,7 @@ C# 7.3부터 필드 특성은 자동 구현된 속성의 컴파일러에서 생�
 
 [!code-csharp[invalidating the cache correctly](../../samples/snippets/csharp/properties/Person.cs#15)]
 
-`?.` 연산자를 *null 조건부 연산자*라고 합니다. 연산자의 오른쪽을 평가하기 전에 null 참조를 확인합니다. 최종 결과로, `PropertyChanged` 이벤트에 대한 구독자가 없는 경우 이벤트를 발생시키는 코드가 실행되지 않습니다. 해당 경우 이 확인을 수행하지 않으면 `NullReferenceException`이 throw됩니다. 자세한 내용은 [`events`](delegates-events.md)를 참조하세요. 또한 이 예제에서는 새 `nameof` 연산자를 사용하여 속성 이름 기호에서 해당 텍스트 표현으로 변환합니다.
+`?.` 연산자를 *null 조건부 연산자*라고 합니다. 연산자의 오른쪽을 평가하기 전에 null 참조를 확인합니다. 최종 결과로, `PropertyChanged` 이벤트에 대한 구독자가 없는 경우 이벤트를 발생시키는 코드가 실행되지 않습니다. 해당 경우 이 확인을 수행하지 않으면 `NullReferenceException`이 throw됩니다. 자세한 내용은 [`events`](events-overview.md)를 참조하세요. 또한 이 예제에서는 새 `nameof` 연산자를 사용하여 속성 이름 기호에서 해당 텍스트 표현으로 변환합니다.
 `nameof`를 사용하면 속성 이름을 잘못 입력하는 오류를 줄일 수 있습니다.
 
 <xref:System.ComponentModel.INotifyPropertyChanged>를 구현하는 작업은 필요한 시나리오를 지원하기 위해 접근자의 코드를 작성할 수 있는 경우의 예제입니다.

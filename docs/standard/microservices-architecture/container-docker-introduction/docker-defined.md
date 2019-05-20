@@ -1,19 +1,17 @@
 ---
 title: Docker란?
-description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | Docker란?
-author: CESARDELATORRE
-ms.author: wiwagn
+description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크로 서비스 아키텍처 | Docker란?
 ms.date: 08/31/2018
-ms.openlocfilehash: 0493e7c08a742abed26ff00ce84b9d77da73ea63
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7f7844f51e96914c1432332d9b641ea65bf48f07
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153867"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644241"
 ---
 # <a name="what-is-docker"></a>Docker란?
 
-[Docker](https://www.docker.com/)는 클라우드 또는 온-프레미스로 실행될 수 있는 이식 가능하고 문제를 스스로 해결할 수 있는 컨테이너로서 응용 프로그램 배포를 자동화하기 위한 [오픈 소스 프로젝트](https://github.com/docker/docker)입니다. Docker는 Microsoft를 비롯한 클라우드, Linux 및 Windows 공급 업체와 공동 작업하여 이 기술을 장려하고 발전시키는 [회사](https://www.docker.com/)이기도 합니다.
+[Docker](https://www.docker.com/)는 클라우드 또는 온-프레미스로 실행될 수 있는 이식 가능하고 문제를 스스로 해결할 수 있는 컨테이너로서 애플리케이션 배포를 자동화하기 위한 [오픈 소스 프로젝트](https://github.com/docker/docker)입니다. Docker는 Microsoft를 비롯한 클라우드, Linux 및 Windows 공급 업체와 공동 작업하여 이 기술을 장려하고 발전시키는 [회사](https://www.docker.com/)이기도 합니다.
 
 ![Docker 컨테이너는 고객 데이터 센터의 온-프레미스, 외부 서비스 공급자 또는 Azure의 클라우드에서, 어디서나 실행할 수 있습니다.](./media/image2.png)
 
@@ -23,11 +21,11 @@ Docker 이미지 컨테이너는 Linux 및 Windows에서 기본적으로 실행�
 
 개발자는 Windows, Linux 또는 macOS에서 개발 환경을 사용할 수 있습니다. 개발자는 개발 컴퓨터에서 앱 및 해당 종속성을 비롯하여 Docker 이미지가 배포된 Docker 호스트를 실행합니다. Linux 또는 Mac에서 작업하는 개발자는 Linux 기반의 Docker 호스트를 사용하고 Linux 컨테이너용 이미지만 만들 수 있습니다. Mac에서 작업하는 개발자는 macOS에서 코드를 편집하거나 Docker CLI를 실행할 수 있지만, 이 작성 시점에는 컨테이너가 macOS에서 직접 실행되지 않습니다. Windows에서 작업하는 개발자는 Linux 또는 Windows 컨테이너용 이미지를 만들 수 있습니다.
 
-개발 환경에서 컨테이너를 호스트하고 추가 개발자 도구를 제공하기 위해 Docker는 Windows 또는 macOS용 [Docker CE(Community Edition)](https://www.docker.com/community-edition)를 제공합니다. 이러한 제품은 컨테이너를 호스트하는 데 필요한 VM(Docker 호스트)을 설치합니다. Docker는 기업 개발용으로 설계되고 프로덕션 환경에서 대규모의 업무상 중요한 응용 프로그램을 빌드, 제공 및 실행하는 IT 팀에서 사용되는 [Docker EE(Enterprise Edition)](https://www.docker.com/enterprise-edition)도 제공합니다.
+개발 환경에서 컨테이너를 호스트하고 추가 개발자 도구를 제공하기 위해 Docker는 Windows 또는 macOS용 [Docker CE(Community Edition)](https://www.docker.com/community-edition)를 제공합니다. 이러한 제품은 컨테이너를 호스트하는 데 필요한 VM(Docker 호스트)을 설치합니다. Docker는 기업 개발용으로 설계되고 프로덕션 환경에서 대규모의 업무상 중요한 애플리케이션을 빌드, 제공 및 실행하는 IT 팀에서 사용되는 [Docker EE(Enterprise Edition)](https://www.docker.com/enterprise-edition)도 제공합니다.
 
 [Windows 컨테이너](/virtualization/windowscontainers/about/)를 실행하기 위해 다음 두 가지 유형의 런타임이 있습니다.
 
-- Windows Server 컨테이너는 프로세스 및 네임스페이스 격리 기술을 통해 응용 프로그램 격리를 제공합니다. Windows Server 컨테이너는 컨테이너 호스트와 호스트에서 실행 중인 모든 컨테이너와 커널을 공유합니다.
+- Windows Server 컨테이너는 프로세스 및 네임스페이스 격리 기술을 통해 애플리케이션 격리를 제공합니다. Windows Server 컨테이너는 컨테이너 호스트와 호스트에서 실행 중인 모든 컨테이너와 커널을 공유합니다.
 
 - Hyper-V 컨테이너는 고도로 최적화된 가상 머신에서 각 컨테이너를 실행하여 Windows Server 컨테이너가 제공하는 격리를 확장합니다. 이 구성에서 컨테이너 호스트의 커널은 Hyper-V 컨테이너와 공유되지 않으므로 격리 기능이 향상됩니다.
 
@@ -40,7 +38,7 @@ Docker 이미지 컨테이너는 Linux 및 Windows에서 기본적으로 실행�
 | 가상 컴퓨터 | Docker 컨테이너 |
 | -----------------| ------------------|
 |![VM의 경우 기본적으로 호스트 서버에 세 가지 기본 계층인 인프라, 호스트 운영 체제 및 하이퍼바이저가 있고, 이들 계층 위에서 각 VM에는 고유한 OS 및 모든 필요한 라이브러리가 포함됩니다.](./media/image3.png)|![Docker의 경우 호스트 서버에는 인프라와 OS만 있고, 그 위에는 컨테이너를 격리 상태로 유지하지만 기본 OS 서비스를 공유하는 컨테이너 엔진이 있습니다.](./media/image4.png)|
-|가상 머신에는 응용 프로그램, 필수 라이브러리 또는 바이너리 및 전체 게스트 운영 체제가 포함됩니다. 전체 가상화를 위해서는 컨테이너화보다 더 많은 리소스가 필요합니다. | 컨테이너에는 응용 프로그램과 모든 종속성이 포함됩니다. 그러나 컨테이너는 호스트 운영 체제의 사용자 공간에 있는 격리 프로세스로 실행 중인 다른 컨테이너와 OS 커널을 공유합니다. 단, 각 컨테이너가 컨테이너별로 특수 가상 머신 내부에서 실행되는 Hyper-V 컨테이너는 예외입니다. |
+|가상 머신에는 애플리케이션, 필수 라이브러리 또는 바이너리 및 전체 게스트 운영 체제가 포함됩니다. 전체 가상화를 위해서는 컨테이너화보다 더 많은 리소스가 필요합니다. | 컨테이너에는 애플리케이션과 모든 종속성이 포함됩니다. 그러나 컨테이너는 호스트 운영 체제의 사용자 공간에 있는 격리 프로세스로 실행 중인 다른 컨테이너와 OS 커널을 공유합니다. 단, 각 컨테이너가 컨테이너별로 특수 가상 머신 내부에서 실행되는 Hyper-V 컨테이너는 예외입니다. |
 
 **그림 2-3**. 기존의 가상 머신과 Docker 컨테이너 비교
 
@@ -52,7 +50,7 @@ Docker 이미지 컨테이너는 Linux 및 Windows에서 기본적으로 실행�
 
 컨테이너 이미지는 앱 또는 서비스를 패키지로 만들고 이를 안정적이고 재현 가능한 방식으로 배포하는 방법입니다. Docker는 기술일 뿐만 아니라 철학이면서 프로세스이기도 합니다.
 
-Docker를 사용할 때 개발자는 “내 머신에서 작동하는데 왜 프로덕션 환경에서는 안 되지?”라고 말하지 않습니다. 패키지된 Docker 응용 프로그램은 지원되는 모든 Docker 환경에서 실행될 수 있기 때문에 “Docker에서 실행”되고 모든 배포 대상(예: 개발, QA, 스테이징 및 프로덕션)에서 의도된 방식으로 실행된다고 말할 수 있습니다.
+Docker를 사용할 때 개발자는 “내 머신에서 작동하는데 왜 프로덕션 환경에서는 안 되지?”라고 말하지 않습니다. 패키지된 Docker 애플리케이션은 지원되는 모든 Docker 환경에서 실행될 수 있기 때문에 “Docker에서 실행”되고 모든 배포 대상(예: 개발, QA, 스테이징 및 프로덕션)에서 의도된 방식으로 실행된다고 말할 수 있습니다.
 
 ## <a name="a-simple-analogy"></a>간단한 비유
 
