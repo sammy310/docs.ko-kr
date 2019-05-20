@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: fbbc0a5accf021df0675192deb040476bc97968d
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 07ef96862c04b8245d8365c3d3b419d227e824c4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452377"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876944"
 ---
 # <a name="c-operators"></a>C# 연산자
 
@@ -69,7 +69,7 @@ C#은 기본 제공 형식에서 지원되는 미리 정의된 여러 연산자�
 
 [stackalloc](../keywords/stackalloc.md) - 스택의 메모리 블록을 할당합니다.
 
-[->](dereference-operator.md) – 멤버 액세스와 결합된 포인터 역참조입니다.
+[->](pointer-related-operators.md#pointer-member-access-operator--) – 멤버 액세스와 결합된 포인터 간접 참조입니다.
 
 ## <a name="unary-operators"></a>단항 연산자
 
@@ -91,9 +91,9 @@ C#은 기본 제공 형식에서 지원되는 미리 정의된 여러 연산자�
 
 [await](../keywords/await.md) – `Task`를 대기합니다.
 
-[&x](and-operator.md) – 주소
+[&x](pointer-related-operators.md#address-of-operator-) – 변수의 주소입니다.
 
-[*x](multiplication-operator.md) – 역참조
+[* x](pointer-related-operators.md#pointer-indirection-operator-) – 포인터 간접 참조 또는 역참조입니다.
 
 [true 연산자](../keywords/true-false-operators.md) - [bool](../keywords/bool.md) 값 `true`를 반환하여 피연산자가 확실히 true임을 나타냅니다.
 
