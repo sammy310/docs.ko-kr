@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 9341ff8bfb2aec4eb7274d444fca4497fa66f210
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 74cf55ba617eee193bcf1d2454f7e26ce0ba78cb
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875574"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960118"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>ID 모델을 사용하여 클레임 및 권한 부여 관리
 권한 부여는 컴퓨터 리소스를 변경하거나 보거나 컴퓨터 리소스에 액세스할 수 있는 사용 권한이 있는 엔터티를 확인하는 프로세스입니다. 예를 들어 비즈니스에서 관리자만 직원 파일에 액세스할 수 있습니다. Windows Communication Foundation (WCF) 권한 부여 처리를 수행 하기 위한 두 가지 메커니즘을 지원 합니다. 첫 번째 메커니즘을 사용하면 기존의 CLR(공용 언어 런타임) 구문을 사용하여 권한 부여를 제어할 수 있습니다. 두 번째는 이라고 하는 클레임 기반 모델을 *Id 모델*합니다. WCF Id 모델을 사용 하 여 들어오는 메시지에서 클레임을 만들려면 Id 모델 클래스는 사용자 지정 권한 부여 체계에 대 한 새 클레임 형식을 지원 하도록 확장할 수 있습니다. 이 항목에서는 ID 모델 기능의 주요 프로그래밍 개념에 대한 개요와 이 기능에서 사용되는 매우 중요한 클래스의 목록을 제공합니다.  
@@ -93,7 +93,6 @@ ms.locfileid: "65875574"
  ![계층 내에서 클레임 집합이 있습니다.](./media/managing-claims-and-authorization-with-the-identity-model/claims-sets-hierarchy.gif)  
   
  여러 개의 클레임 집합은 같은 발급 클레임 집합, 다음 그림에 설명 된 대로 포함할 수 있습니다.
- 
   
  ![여러 같은 발급 클레임 집합이 클레임 집합입니다.](./media/managing-claims-and-authorization-with-the-identity-model/multiple-claim-sets-same-issuing-claim-set.gif)  
   

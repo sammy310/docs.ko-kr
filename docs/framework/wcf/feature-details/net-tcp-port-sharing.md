@@ -5,12 +5,12 @@ helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-ms.openlocfilehash: f40afe25bbc3238ec773ee1ee19673d4d5a3ef1d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8eb0a2a5b8b6edad17477e1fd65f72b540a8a674
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603949"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960040"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP 포트 공유
 Windows Communication Foundation (WCF) 고성능 통신을 위한 새로운 TCP 기반 네트워크 프로토콜 (net.tcp://)를 제공합니다. WCF에는 또한 새 시스템 구성 요소인 net.tcp 포트를 여러 사용자 프로세스 간에 공유할 수 있도록는 Net.TCP Port Sharing Service를 소개 합니다.  
@@ -38,7 +38,7 @@ Windows Communication Foundation (WCF) 고성능 통신을 위한 새로운 TCP 
  Net.tcp:// 포트 열립니다 공유를 사용 하는 WCF 서비스를 WCF TCP 전송 인프라 직접 열리지 않습니다 TCP 소켓 응용 프로그램 진행에서 합니다. 대신 전송 인프라는 서비스의 기본 주소 URI(Uniform Resource Identifier)를 Net.TCP Port Sharing Service를 사용하여 등록하고 포트 공유 서비스가 대신 메시지를 수신 대기하도록 기다립니다.  포트 공유 서비스는 메시지가 도착하면 응용 프로그램 서비스에 주소가 지정된 메시지를 디스패치합니다.  
   
 ## <a name="installing-port-sharing"></a>포트 공유 설치  
- Net.TCP Port Sharing Service는 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]을 지원하는 모든 운영 체제에서 사용할 수 있지만 기본적으로 서비스가 활성화되어 있지는 않습니다. 보안 예방 조치로 관리자는 Net.TCP Port Sharing Service를 처음 사용하기 전에 수동으로 활성화해야 합니다. Net.TCP Port Sharing Service는 포트 공유 서비스에서 소유한 네트워크 소켓의 여러 특징을 조작할 수 있는 구성 옵션을 노출합니다. 자세한 내용은 [방법: Net.TCP port Sharing Service](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)합니다.  
+ Net.TCP Port Sharing Service WinFX를 지 원하는 모든 운영 체제에서 사용할 수 있지만 서비스는 기본으로 사용 되지 않습니다. 보안 예방 조치로 관리자는 Net.TCP Port Sharing Service를 처음 사용하기 전에 수동으로 활성화해야 합니다. Net.TCP Port Sharing Service는 포트 공유 서비스에서 소유한 네트워크 소켓의 여러 특징을 조작할 수 있는 구성 옵션을 노출합니다. 자세한 내용은 [방법: Net.TCP port Sharing Service](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)합니다.  
   
 ## <a name="using-nettcp-port-sharing-in-an-application"></a>응용 프로그램에서 Net.tcp 포트 공유 사용  
  Net.tcp:// 포트 WCF 응용 프로그램에서 공유를 사용 하는 가장 쉬운 방법은 사용 하 여 서비스를 노출 하는 것을 <xref:System.ServiceModel.NetTcpBinding> 를 사용 하 여 Net.TCP Port Sharing Service를 사용 하도록 설정 하려면 다음을 <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> 속성.  

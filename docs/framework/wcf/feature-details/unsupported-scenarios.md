@@ -2,12 +2,12 @@
 title: 지원되지 않는 시나리오
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: d6e5b7292f999b3fbecc911c3fef671ea0c675f5
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 884349739730510c356e1efc1f866d146f6ed946
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878734"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959955"
 ---
 # <a name="unsupported-scenarios"></a>지원되지 않는 시나리오
 다양 한 이유로 Windows Communication Foundation (WCF)는 일부 특정 보안 시나리오를 지원 하지 않습니다. 예를 들어 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition SSPI 또는 Kerberos 인증 프로토콜을 구현 하지 않으며 WCF 지원 하지 않습니다 해당 플랫폼에서 Windows 인증을 사용 하 여 서비스를 실행 합니다. Windows XP Home Edition에서 WCF를 실행 하는 경우 사용자 이름/암호 및 HTTP/HTTPS 통합된 인증과 같은 다른 인증 메커니즘이 지원 됩니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "65878734"
 ## <a name="cryptography"></a>암호화  
   
 ### <a name="sha-256-supported-only-for-symmetric-key-usages"></a>대칭 키 사용에만 SHA-256 지원됨  
- WCF는 다양 한 암호화 및 시스템 제공 바인딩에서 알고리즘 모음을 사용 하 여 지정할 수 있는 서명 다이제스트 만들기 알고리즘을 지원 합니다. WCF는 보안 향상된을 위해 서명 다이제스트 해시를 만들기 위한 해시 알고리즘 (SHA (Secure) 2 알고리즘 특히 SHA-256을 지원 합니다. 이 릴리스는 Kerberos 키와 같은 대칭 키를 사용하는 경우와 메시지 서명에 X.509 인증서를 사용하지 않는 경우에 SHA-256을 지원합니다. WCF는 RSA 서명에 (X.509 인증서에 사용 됨)를 지원 하지 않습니다 RSA-sha256에서 현재 지원 부족으로 인해 SHA-256 해시를 사용 하 여 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]입니다.  
+ WCF는 다양 한 암호화 및 시스템 제공 바인딩에서 알고리즘 모음을 사용 하 여 지정할 수 있는 서명 다이제스트 만들기 알고리즘을 지원 합니다. WCF는 보안 향상된을 위해 서명 다이제스트 해시를 만들기 위한 해시 알고리즘 (SHA (Secure) 2 알고리즘 특히 SHA-256을 지원 합니다. 이 릴리스는 Kerberos 키와 같은 대칭 키를 사용하는 경우와 메시지 서명에 X.509 인증서를 사용하지 않는 경우에 SHA-256을 지원합니다. WCF는 RSA 서명에 (X.509 인증서에 사용 됨)를 지원 하지 않습니다 RSA-sha256 WinFX에서 현재 지원 부족으로 인해 SHA-256 해시를 사용 합니다.  
   
 ### <a name="fips-compliant-sha-256-hashes-not-supported"></a>FIPS 규격 SHA-256 해시 지원되지 않음  
  WCF는 SHA-256을 사용 하는 알고리즘 모음은 FIPS 준수 알고리즘 사용이 필요한 경우 시스템에서 WCF에 의해 지원 되지 않습니다 SHA-256 FIPS 규격 해시를 지원 하지 않습니다.  

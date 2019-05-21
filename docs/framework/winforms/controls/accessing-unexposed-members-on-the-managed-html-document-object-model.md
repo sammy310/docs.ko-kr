@@ -8,15 +8,15 @@ helpviewer_keywords:
 - unexposed members
 - managed HTML DOM [Windows Forms], accessing unexposed members
 ms.assetid: 762295bd-2355-4aa7-b43c-5bff997a33e6
-ms.openlocfilehash: 20341a44eb8a43a9d130e0b76d23b513738c6782
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 539ac998a557615c097c33cdd4207e99f396e81d
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011898"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959621"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>관리되는 HTML 문서 개체 모델의 노출되지 않은 멤버에 액세스
-호출 하는 클래스를 포함 하는 관리 되는 HTML 문서 개체 모델 (DOM) <xref:System.Windows.Forms.HtmlElement> 속성, 메서드 및 모든 HTML 요소에 공통 되는 이벤트를 노출 하는 합니다. 그러나 경우에 따라 해야 관리 되는 인터페이스를 직접 노출 하지 않는 멤버에 액세스 합니다. 이 항목에서는 두 가지 방법으로 노출 되지 않은 멤버를 포함 하 여 액세스 검사 [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] 및 웹 페이지 내에서 정의 하는 VBScript 함수입니다.  
+호출 하는 클래스를 포함 하는 관리 되는 HTML 문서 개체 모델 (DOM) <xref:System.Windows.Forms.HtmlElement> 속성, 메서드 및 모든 HTML 요소에 공통 되는 이벤트를 노출 하는 합니다. 그러나 경우에 따라 해야 관리 되는 인터페이스를 직접 노출 하지 않는 멤버에 액세스 합니다. 이 항목에서는 웹 페이지 내에서 정의 하는 JScript 및 VBScript 함수를 포함 하 여 노출 되지 않은 멤버에 액세스 하기 위한 두 가지 방법으로 검사 합니다.  
   
 ## <a name="accessing-unexposed-members-through-managed-interfaces"></a>관리 되는 인터페이스를 통해 노출 되지 않은 멤버에 액세스  
  <xref:System.Windows.Forms.HtmlDocument> 및 <xref:System.Windows.Forms.HtmlElement> 노출 되지 않은 멤버에 액세스할 수 있도록 네 가지 메서드를 제공 합니다. 다음 표에서 형식 및 해당 메서드를 보여 줍니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "62011898"
  COM 인터페이스를 사용 하는 가장 쉬운 방법은 지원 되지 않습니다 하지만 응용 프로그램에서 관리 되지 않는 HTML DOM 라이브러리 (MSHTML.dll)에 대 한 참조를 추가 하는 것입니다. 자세한 내용은 [기술 자료 문서 934368](https://support.microsoft.com/kb/934368)합니다.  
   
 ## <a name="accessing-script-functions"></a>스크립트 기능에 액세스  
- HTML 페이지와 같은 스크립팅 언어를 사용 하 여 하나 이상의 함수를 정의할 수 [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] 또는 VBScript입니다. 이러한 함수 내부에 배치 된 `SCRIPT` 페이지에서 페이지를 DOM에서 주문형으로 또는 이벤트에 대 한 응답으로 실행할 수  
+ HTML 페이지 JScript 또는 VBScript와 같은 스크립팅 언어를 사용 하 여 하나 이상의 함수를 정의할 수 있습니다. 이러한 함수 내부에 배치 된 `SCRIPT` 페이지에서 페이지를 DOM에서 주문형으로 또는 이벤트에 대 한 응답으로 실행할 수  
   
  사용 하 여 HTML 페이지에서 정의한 모든 스크립트 함수를 호출할 수는 <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> 메서드. HTML 요소를 반환 하는 스크립트 메서드를 하는 경우이 반환 결과를 변환 하는 캐스트를 사용할 수 있습니다는 <xref:System.Windows.Forms.HtmlElement>합니다. 세부 정보 및 예제 코드에 대 한 참조 <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>합니다.  
   

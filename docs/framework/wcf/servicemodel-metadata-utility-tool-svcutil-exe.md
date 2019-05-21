@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 29b030708f2174b55386b13931f1088d15f4eb4f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0cb14bba724b50a8a2b723fe88503fafeeea3880
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582703"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959902"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel Metadata 유틸리티 도구(Svcutil.exe)
 
@@ -49,7 +49,7 @@ Windows SDK 설치 위치에 특히 ServiceModel Metadata 유틸리티 도구를
 
 ### <a name="accessing-wsdl-documents"></a>WSDL 문서 액세스
 
-Svcutil을 사용하여 STS(보안 토큰 서비스)에 대한 참조가 있는 WSDL 문서에 액세스하는 경우 Svcutil은 STS에 대해 WS-MetadataExchange 호출을 수행합니다. 그러나 서비스는 WS-MetadataExchange 또는 HTTP GET을 사용하여 해당 서비스의 WSDL 문서를 노출할 수 있습니다. 따라서 STS가 HTTP GET을 사용하여 WSDL 문서를 노출한 경우에만 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]에 작성된 클라이언트가 실패합니다. 으로 작성 된 클라이언트에 대 한 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], Svcutil 모두 Ws-metadataexchange를 사용 하려고 하 고 HTTP GET STS WSDL을 가져오려고 합니다.
+Svcutil을 사용하여 STS(보안 토큰 서비스)에 대한 참조가 있는 WSDL 문서에 액세스하는 경우 Svcutil은 STS에 대해 WS-MetadataExchange 호출을 수행합니다. 그러나 서비스는 WS-MetadataExchange 또는 HTTP GET을 사용하여 해당 서비스의 WSDL 문서를 노출할 수 있습니다. 따라서 STS가 HTTP GET을 사용 하 여 WSDL 문서를 노출만, WinFX에서 작성 된 클라이언트가 실패 합니다. 으로 작성 된 클라이언트에 대 한 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], Svcutil 모두 Ws-metadataexchange를 사용 하려고 하 고 HTTP GET STS WSDL을 가져오려고 합니다.
 
 ## <a name="using-svcutilexe"></a>SvcUtil.exe 사용
 
@@ -107,7 +107,7 @@ BasicHttpContextBinding 끝점이 있는 서비스에 대 한 *Svcutil.exe* Basi
 |/serializer:Auto|Serializer를 자동으로 선택 합니다. 이 데이터 계약 serializer를 사용 하려고 하며 실패할 경우 XmlSerializer를 사용 합니다.<br /><br /> 약식: `/ser`|
 |/serializer:DataContractSerializer|serialization 및 deserialization을 위해 데이터 계약 Serializer를 사용하는 데이터 형식을 생성합니다.<br /><br /> 약식: `/ser:DataContractSerializer`|
 |/serializer:XmlSerializer|serialization 및 deserialization을 위해 <xref:System.Xml.Serialization.XmlSerializer>를 사용하는 데이터 형식을 생성합니다.<br /><br /> 약식: `/ser:XmlSerializer`|
-|/targetClientVersion|응용 프로그램 대상.NET Framework 버전을 지정 합니다. 유효한 값은 `Version30` 및 `Version35`입니다. 기본값은 `Version30`입니다.<br /><br /> 약식: `/tcv`<br /><br /> `Version30`: 사용 하 여 `/tcv:Version30` 를 사용 하는 클라이언트에 대 한 코드를 생성 하는 경우 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]합니다.<br /><br /> `Version35`: 사용 하 여 `/tcv:Version35` 를 사용 하는 클라이언트에 대 한 코드를 생성 하는 경우 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]합니다. `/tcv:Version35` 스위치와 함께 `/async`를 사용하면 이벤트 기반 메서드 및 콜백/대리자 기반 비동기 메서드가 모두 생성됩니다. 또한 LINQ 사용 DataSet 및 <xref:System.DateTimeOffset>을 지원하도록 설정되어 있습니다.|
+|/targetClientVersion|응용 프로그램 대상.NET Framework 버전을 지정 합니다. 유효한 값은 `Version30` 및 `Version35`입니다. 기본값은 `Version30`입니다.<br /><br /> 약식: `/tcv`<br /><br /> `Version30`: 사용 하 여 `/tcv:Version30` WinFX를 사용 하는 클라이언트에 대 한 코드를 생성 하는 경우.<br /><br /> `Version35`: 사용 하 여 `/tcv:Version35` 를 사용 하는 클라이언트에 대 한 코드를 생성 하는 경우 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]합니다. `/tcv:Version35` 스위치와 함께 `/async`를 사용하면 이벤트 기반 메서드 및 콜백/대리자 기반 비동기 메서드가 모두 생성됩니다. 또한 LINQ 사용 DataSet 및 <xref:System.DateTimeOffset>을 지원하도록 설정되어 있습니다.|
 |/wrapped|래핑된 매개 변수가 있는 문서 리터럴 스타일 문서에 특수 대/소문자가 사용되는지 여부를 제어합니다. 사용 하 여는 **래핑된 /** 스위치와 함께 합니다 [서비스 모델 메타 데이터 유틸리티 도구 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 일반 대/소문자를 지정 하는 도구입니다.|
 
 > [!NOTE]

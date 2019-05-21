@@ -2,15 +2,15 @@
 title: 마이그레이션 지침
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: 64f71061dda96279a7aa0fffa3642ae6d2d01c8f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8bde0775c6e9d7f9522d903214d09e57fa9cbcbd
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649379"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959780"
 ---
 # <a name="migration-guidance"></a>마이그레이션 지침
-에 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], Microsoft는 두 번째 주요 버전의 Windows WF (Workflow Foundation)를 출시 합니다. [!INCLUDE[wf1](../../../includes/wf1-md.md)]는 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]에서 처음 릴리스되었고(System.Workflow.* 네임스페이스의 형식 포함. 현재 WF3이라고 함) [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]에서 기능이 향상되었습니다. WF3 이기도 부분 합니다 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], 새 워크플로 기술과 함께 존재 하지만 (System.Activities에서 형식\* 네임 스페이스 WF4 라고). WF4 사용을 고려하는 경우 타이밍을 제어한다는 점을 먼저 인식해야 합니다.  
+에 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], Microsoft는 두 번째 주요 버전의 Windows WF (Workflow Foundation)를 출시 합니다. [!INCLUDE[wf1](../../../includes/wf1-md.md)] WinFX에 릴리스 되었습니다 (이 system.workflow. * 네임 스페이스의 형식 포함; WF3 라고 부름)의 향상 된 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]합니다. WF3 이기도 부분 합니다 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], 새 워크플로 기술과 함께 존재 하지만 (System.Activities에서 형식\* 네임 스페이스 WF4 라고). WF4 사용을 고려하는 경우 타이밍을 제어한다는 점을 먼저 인식해야 합니다.  
   
 - WF3은 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서 완전히 지원되는 부분입니다.  
   

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31ff93b6935c2237a5935c4b40cc30b4129edcd0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 37a6dc0caa81a365727bfc32a6a0363bb7e1713d
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765234"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960147"
 ---
 # <a name="metahostpolicyflags-enumeration"></a>METAHOST_POLICY_FLAGS 열거형
 대부분의 런타임 호스트에 공통 되는 바인딩 정책을 제공 합니다. 이 열거형은에서 사용 된 [iclrmetahostpolicy:: Getrequestedruntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) 메서드.  
@@ -50,7 +50,6 @@ typedef enum {
 |`METAHOST_POLICY_EMULATE_EXE_LAUNCH`|호출에 제공 된 이미지는 새 프로세스에서 실행 된 것 처럼 바인딩 결과가 반환 됩니다. 현재 `GetRequestedRuntime` 로드할 런타임 집합을 무시 하 고 설치 된 런타임 집합에 대해 바인딩합니다. 이 플래그는 호스트를를 시작할 때 EXE를 바인딩할 런타임을 확인할 수 있습니다.|  
 |`METAHOST_POLICY_SHOW_ERROR_DIALOG`|경우에 오류 대화 상자가 표시 됩니다 `GetRequestedRuntime` 입력된 매개 변수를 사용 하 여 호환 되는 런타임을 찾을 수 없습니다. 부터는 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)],이 오류 대화 상자를 사용자는 적절 한 기능을 사용 하도록 설정 하는지 여부를 묻는 Windows 기능 대화 상자의 형식일 수 있습니다.|  
 |`METAHOST_POLICY_USE_PROCESS_IMAGE_PATH`|`GetRequestedRuntime` 바인딩 프로세스에 대 한 추가 입력으로 프로세스 이미지 (및 모든 해당 구성 파일)를 사용합니다. 기본적으로 `GetRequestedRuntime` 프로세스 이미지 경로 (일반적으로 프로세스를 시작 하는 데 사용 된 EXE)으로 대체 되지 않습니다 바인딩할 런타임에 결정 합니다.|  
-|`METAHOST_POLICY_ENSURE_SKU_SUPPORTED`|`GetRequestedRuntime` 구성 파일에 정보가 없는 경우 해당 SKU에 설치 되어 있는지 확인 해야 합니다. 이 구성 파일을.NET Framework의 기본 설치 보다 작은 Sku에서 정상적으로 실패 하지 않은 응용 프로그램이 있습니다. 기본적으로 `GetRequestedRuntime` 구성 파일에서 SKU 특성을 지정 하지 않으면 해당 SKU에 설치 되어 있는지 확인 하지 않습니다 `<supportedRuntime />` 요소입니다.|  
 |`METAHOST_POLICY_ENSURE_SKU_SUPPORTED`|`GetRequestedRuntime` 구성 파일에 정보가 없는 경우 해당 SKU에 설치 되어 있는지 확인 해야 합니다. 이 구성 파일을.NET Framework의 기본 설치 보다 작은 Sku에서 정상적으로 실패 하지 않은 응용 프로그램이 있습니다. 기본적으로 `GetRequestedRuntime` 구성 파일에서 SKU 특성을 지정 하지 않으면 해당 SKU에 설치 되어 있는지 확인 하지 않습니다 `<supportedRuntime />` 요소입니다.|  
 |`METAHOST_POLICY_IGNORE_ERROR_MODE`|`GetRequestedRuntime` SEM_FAILCRITICALERRORS를 무시 해야 (호출 하 여 설정 됩니다는 [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) 함수), 오류 대화 상자를 표시 합니다. 기본적으로 SEM_FAILCRITICALERRORS를 오류 대화 상자를 표시 하지 않습니다. 다른 프로세스에서 상속 된 된 및 자동 오류 시나리오에서 적합할 수 있습니다.|  
   

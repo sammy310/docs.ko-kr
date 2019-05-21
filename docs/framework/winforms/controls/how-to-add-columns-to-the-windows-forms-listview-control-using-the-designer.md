@@ -5,31 +5,32 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding column headers
 - columns [Windows Forms], adding to ListView controls
 ms.assetid: 5b1a8b4d-587e-479a-95c1-f9b90884f13a
-ms.openlocfilehash: a37f5d64e8ca10b26a8897d45b8757113ce900c9
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 252ed6a599ba3601344c6423385946c3dadfafaa
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877603"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960167"
 ---
 # <a name="how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms ListView 컨트롤에 열 추가
-Windows Forms <xref:System.Windows.Forms.ListView> 컨트롤 각 목록에 대 한 여러 열을 표시할 수 있습니다 때 항목을 **세부 정보** 보기. 여러 유형의 각 목록 항목에 대 한 정보를 표시할 열을 사용할 수 있습니다. 예를 들어, 파일 이름, 파일 형식, 크기 및 파일을 마지막으로 수정한 날짜 파일의 목록을 표시할 수 있습니다. 만든 후 열을 채우는 방법에 대 한 내용은 참조 [방법: Windows 사용 하 여 열에 하위 항목 표시 Forms ListView 컨트롤](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)합니다.  
-  
- 다음 절차를 수행 하려면을 **Windows 응용 프로그램** 포함 하는 양식을 사용 하 여 프로젝트를 <xref:System.Windows.Forms.ListView> 제어 합니다. 이러한 프로젝트 설정에 대 한 자세한 내용은 [방법: Windows Forms 응용 프로그램 프로젝트를 만듭니다](/visualstudio/ide/step-1-create-a-windows-forms-application-project) 고 [방법: Windows Forms에 컨트롤 추가](how-to-add-controls-to-windows-forms.md)합니다.  
-  
+
+Windows Forms <xref:System.Windows.Forms.ListView> 컨트롤 각 목록에 대 한 여러 열을 표시할 수 있습니다 때 항목을 **세부 정보** 보기. 여러 유형의 각 목록 항목에 대 한 정보를 표시할 열을 사용할 수 있습니다. 예를 들어, 파일 이름, 파일 형식, 크기 및 파일을 마지막으로 수정한 날짜 파일의 목록을 표시할 수 있습니다. 만든 후 열을 채우는 방법에 대 한 내용은 참조 [방법: Windows 사용 하 여 열에 하위 항목 표시 Forms ListView 컨트롤](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)합니다.
+
+다음 절차를 수행 하려면을 **Windows 응용 프로그램** 포함 하는 양식을 사용 하 여 프로젝트를 <xref:System.Windows.Forms.ListView> 제어 합니다. 이러한 프로젝트 설정에 대 한 자세한 내용은 [방법: Windows Forms 응용 프로그램 프로젝트를 만듭니다](/visualstudio/ide/step-1-create-a-windows-forms-application-project) 고 [방법: Windows Forms에 컨트롤 추가](how-to-add-controls-to-windows-forms.md)합니다.
+
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](/visualstudio/ide/personalizing-the-visual-studio-ide)을 참조하세요.  
-  
-### <a name="to-add-columns-in-the-designer"></a>디자이너에서 열을 추가 하려면  
-  
-1. 에 **속성** 창에서 컨트롤의 설정 <xref:System.Windows.Forms.ListView.View%2A> 속성을 <xref:System.Windows.Forms.View.Details>입니다.  
-  
-2.  에 **속성** 창 클릭 합니다 **줄임표** 단추 (![The 줄임표 단추 (...)의 Visual Studio 속성 창에서](./media/visual-studio-ellipsis-button.png)) 옆에 <xref:System.Windows.Forms.ListView.Columns%2A> 속성 .  
-  
-     합니다 **ColumnHeader 컬렉션 편집기** 나타납니다.  
-  
-3. 사용 된 **추가** 새 열을 추가 하는 단추입니다. 다음 열 머리글을 선택 하 고 해당 텍스트 (열 캡션), 텍스트 맞춤 및 두께 설정할 수 있습니다.  
-  
+> 표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](/visualstudio/ide/personalizing-the-visual-studio-ide)을 참조하세요.
+
+### <a name="to-add-columns-in-the-designer"></a>디자이너에서 열을 추가 하려면
+
+1. 에 **속성** 창에서 컨트롤의 설정 <xref:System.Windows.Forms.ListView.View%2A> 속성을 <xref:System.Windows.Forms.View.Details>입니다.
+
+2. 에 **속성** 창 클릭 합니다 **줄임표** 단추 (![The 줄임표 단추 (...)의 Visual Studio 속성 창에서](./media/visual-studio-ellipsis-button.png)) 옆에 <xref:System.Windows.Forms.ListView.Columns%2A> 속성 .
+
+     합니다 **ColumnHeader 컬렉션 편집기** 나타납니다.
+
+3. 사용 된 **추가** 새 열을 추가 하는 단추입니다. 다음 열 머리글을 선택 하 고 해당 텍스트 (열 캡션), 텍스트 맞춤 및 두께 설정할 수 있습니다.
+
 ## <a name="see-also"></a>참고자료
 
 - [ListView 컨트롤 개요](listview-control-overview-windows-forms.md)

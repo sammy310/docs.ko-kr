@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 96607a1c744b928b340fe33c2b57a25a59f306dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 953df285d1a439cd8a1a95358915a7a50e98552a
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635263"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960106"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>방법: WCF 활성화 구성 요소 설치 및 구성
 이 항목에서는에 Windows Process Activation Service (WAS 라고도 함)을 설정 하는 데 필요한 단계를 설명 [!INCLUDE[wv](../../../../includes/wv-md.md)] HTTP를 통해 통신 하지 않는 서비스 네트워크 프로토콜을 Windows Communication Foundation (WCF)를 호스트 합니다. 다음 단원에서는 이 구성 단계에 대해 간략히 설명합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "64635263"
   
 3. 에 **태스크** 메뉴에서 클릭 **설정할 Windows 기능 사용 /** 합니다.  
   
-4. [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 노드를 찾아서 선택한 다음 확장합니다.  
+4. 찾을 WinFX 노드를 선택 하 고이 확장 합니다.  
   
 5. 선택 된 **WCF Non-http Activation 구성 요소** 상자 하 고 설정을 저장 합니다.  
   

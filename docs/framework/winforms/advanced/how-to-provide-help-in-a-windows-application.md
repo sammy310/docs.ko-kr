@@ -8,16 +8,16 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: 19bf6a8de3f9ddd5babd149747df87c54b456aeb
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 2f9c0a9791db28cebd055ca446fdff16b9e276a4
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211359"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959614"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>방법: Windows 애플리케이션에서 도움말 제공
 
-사용할 수 있습니다는 <xref:System.Windows.Forms.HelpProvider> Windows Forms에서 특정 컨트롤에 도움말 파일 내의 도움말 항목을 연결할 구성 요소입니다. 도움말 파일은 HTML 또는 HTMLHelp 1.x 이상의 형식이 될 수 있습니다.
+할 수 있습니다 사용 된 <xref:System.Windows.Forms.HelpProvider> Windows Forms에서 특정 컨트롤에 도움말 파일 내의 도움말 항목을 연결할 구성 요소입니다. 도움말 파일은 HTML 또는 HTMLHelp 1.x 이상의 형식이 될 수 있습니다.
 
 ## <a name="provide-help"></a>도움말 제공
 

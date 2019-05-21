@@ -2,12 +2,12 @@
 title: wsatConfig.exe에서 반환된 오류 코드 해석
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
-ms.openlocfilehash: 47db39f2b350c2fa8c655a041ec0239e5d297644
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26e7c40cb105ad10dac3b13b73cb33bc4fa57d69
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928819"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959852"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>wsatConfig.exe에서 반환된 오류 코드 해석
 이 항목에서는 WS-AtomicTransaction 구성 유틸리티(wsatConfig.exe)에서 생성한 모든 오류 코드 및 수행할 동작을 나열합니다.  
@@ -35,9 +35,9 @@ ms.locfileid: "61928819"
 |17|http.sys를 구성하지 못했습니다. 이전 포트에서 SSL 인증서를 바인딩 해제할 수 없습니다.|오류 메시지에 반환된 오류 코드를 사용하여 적절한 시스템 오류에 매핑합니다. 필요한 경우 httpcfg.exe 또는 netsh.exe를 사용하여 잘못된 포트 예약을 제거합니다.|  
 |18|http.sys를 구성하지 못했습니다. 이전 SSL 바인딩이 이미 있으므로 지정된 인증서를 포트에 바인딩할 수 없습니다.|다른 응용 프로그램에 특정 포트에 대한 소유권이 이미 있습니다. 다른 포트로 변경하거나 현재 응용 프로그램을 제거 또는 다시 구성합니다.|  
 |19|MSDTC를 다시 시작하지 못했습니다.|필요한 경우 MSDTC를 수동으로 다시 시작합니다. 문제가 계속되면 Microsoft에 문의하십시오.|  
-|20|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]가 원격 컴퓨터에 설치되지 않았거나 올바로 설치되지 않았습니다.|컴퓨터에 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]를 설치합니다.|  
+|20|WinFX 원격 컴퓨터에 설치 되어 있지 않거나 올바르게 설치 되지 않았습니다.|WinFX 컴퓨터에 설치 합니다.|  
 |21|작업 시간 제한 초과로 인해 원격 구성에 실패했습니다.|원격 컴퓨터에 WS-AT를 구성하기 위해 호출은 90초보다 길어야 합니다.|  
-|22|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]가 원격 컴퓨터에 설치되지 않았거나 올바로 설치되지 않았습니다.|컴퓨터에 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]를 설치합니다.|  
+|22|WinFX 원격 컴퓨터에 설치 되어 있지 않거나 올바르게 설치 되지 않았습니다.|WinFX 컴퓨터에 설치 합니다.|  
 |23|원격 컴퓨터의 예외로 인해 원격 구성에 실패했습니다.|실행 가능한 항목에 대한 오류 메시지를 확인합니다.|  
 |26|잘못된 인수가 WsatConfig.exe에 전달되었습니다.|오류가 있는지 명령줄을 확인합니다.|  
 |27|`-accounts` 명령줄 옵션이 잘못되었습니다.|-`accounts` 명령줄 옵션을 수정하여 사용자 계정을 올바로 지정합니다.|  
@@ -52,10 +52,10 @@ ms.locfileid: "61928819"
 |38|프로세스 또는 사용자에게 방화벽 구성을 변경할 충분한 권한이 없습니다.|Administrator 사용자 계정으로 WsatConfig.exe를 실행합니다.|  
 |39|방화벽 구성을 업데이트하는 동안 WsatConfig.exe에서 오류가 발생했습니다.|실행 가능한 항목에 대한 오류 메시지를 확인합니다.|  
 |40|WsatConfig.exe에서 인증서의 개인 키 파일에 MSDTC 읽기 액세스 권한을 부여할 수 없습니다.|Administrator 사용자 계정으로 WsatConfig.exe를 실행합니다.|  
-|41|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]가 설치되지 않았거나 설치된 버전이 도구에서 구성할 수 있는 버전과 일치하지 않습니다.|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]가 올바르게 설치되어 있고 해당 버전의 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]와 함께 제공되는 WsatConfig.exe 도구만을 사용하여 WS-AT를 구성하는지 확인합니다.|  
+|41|WinFX 설치 하지 않습니다를 찾을 수 또는 버전이 어떤 도구는 구성 가능한 일치 하지 않습니다.|WinFX 올바르게 설치 되어 있는지 확인 하 고만 WS-AT 구성 하는 WinFX의 해당 버전을 사용 하 여 제공 되는 WsatConfig.exe 도구를 사용 합니다.|  
 |42|명령줄에 인수가 여러 번 지정되었습니다.|WsatConfig.exe를 실행할 때 각 인수를 한 번만 지정합니다.|  
 |43|WS-AT를 사용할 수 없는 경우 WsatConfig.exe에서는 WS-AT 설정을 업데이트할 수 없습니다.|`-network:enable`을 추가 명령줄 인수로 지정합니다.|  
-|44|필수 핫픽스가 없습니다. 먼저 핫픽스를 설치해야 WS-AT를 구성할 수 있습니다.|필수 핫픽스 설치에 대한 지침은 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 릴리스 정보를 참조하십시오.|  
+|44|필수 핫픽스가 없습니다. 먼저 핫픽스를 설치해야 WS-AT를 구성할 수 있습니다.|필요한 핫픽스를 설치 하는 방법은 릴리스 WinFX를 참조 하세요.|  
 |45|`-virtualServer` 명령줄 옵션이 잘못되었습니다.|구성할 클러스터 리소스의 네트워크 이름을 지정하여 `-virtualServer` 명령줄 옵션을 수정합니다.|  
 |46|ETW 추적 세션을 시작하려는 동안 예기치 않은 오류가 발생했습니다.|반환된 오류 코드를 사용하여 적절한 시스템 오류에 매핑합니다.|  
 |47|프로세스 또는 사용자에게 ETW 추적 세션을 사용할 충분한 권한이 없습니다.|Administrator 사용자 계정으로 WsatConfig.exe를 실행합니다.|  

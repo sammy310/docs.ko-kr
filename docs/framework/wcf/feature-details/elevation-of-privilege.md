@@ -5,12 +5,12 @@ helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-ms.openlocfilehash: 1e42e2726b54464d479398c023c3e7caecf9b054
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df55b4fa107f3630cd259b755e0aaacdee4904ef
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753043"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960097"
 ---
 # <a name="elevation-of-privilege"></a>권한 높이기
 *권한 상승* 결과에서 공격자가 권한 부여 이상의 처음 부여 된 권한을 제공 합니다. 예를 들어 "읽기 전용" 권한의 권한 집합을 갖는 공격자는 권한 집합이 "읽기 및 쓰기"를 포함하도록 권한을 상승시킵니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "64753043"
  <xref:System.IdentityModel.Tokens.SamlAssertion> 클래스는 SAML 토큰 내에 포함된 디지털 서명을 확인하므로 기본 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>를 사용하려면 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 클래스의 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>가 <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust>로 설정된 경우 유효한 X.509 인증서에서 서명한 SAML 토큰이 있어야 합니다. SAML 토큰 발급자를 신뢰할 것인지 여부를 판단하는 데 `ChainTrust` 모드만으로는 부족합니다. 보다 세부적인 신뢰 모델이 필요한 서비스에서 인증 및 적용 정책을 사용하여 발급된 토큰 인증에서 생성된 클레임 집합 발급자를 확인하거나 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>에 대한 X.509 유효성 검사 설정을 사용하여 허용된 서명 인증서 집합을 제한할 수 있습니다. 자세한 내용은 [관리 클레임 및 Id 모델을 사용 하 여 권한 부여](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) 하 고 [페더레이션 및 발급 된 토큰](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="switching-identity-without-a-security-context"></a>보안 컨텍스트 없이 ID 전환  
- 다음 항목은 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]에만 적용됩니다.  
+ 다음 WinFX에만 적용 합니다.  
   
  클라이언트와 서버, 클라이언트의 id 간의 연결이 설정 되는 경우 변경 되지 않는 한 경우를 제외 하 고: 다음 조건을 모두 만족 하면 WCF 클라이언트를 연 후:  
   
