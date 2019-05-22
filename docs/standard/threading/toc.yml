@@ -27,7 +27,7 @@
           href: destroying-threads.md
         - name: 스레드 스케줄링
           href: scheduling-threads.md
-        - name: 관리되는 스레드의 취소
+        - name: 관리형 스레드의 취소
           href: cancellation-in-managed-threads.md
           items:
             - name: 스레드 함께 취소
