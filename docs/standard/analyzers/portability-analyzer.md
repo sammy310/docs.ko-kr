@@ -1,15 +1,15 @@
 ---
 title: .NET 이식성 분석기 - .NET
 description: .NET 이식성 분석기 도구를 사용하여 .NET Core, .NET Standard, UWP 및 Xamarin을 비롯한 다양한 .NET 구현에서 코드가 얼마나 이식성이 있는지 평가하는 방법을 알아봅니다.
-ms.date: 07/26/2017
+ms.date: 04/26/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: bd92e39a7b53e2807aff687f6dfbf71be34a506d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7de6aa72b2d30c3e54d2ddf9a2d951688571d654
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717650"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063425"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET 이식성 분석기
 
@@ -19,28 +19,28 @@ ms.locfileid: "57717650"
 
 * [.NET Core](../../core/index.md): 모듈형 디자인을 포함하고, Side-by-Side를 이용하며, 플랫폼 간 시나리오를 대상으로 합니다. Side-by-Side를 사용하면 다른 앱을 중단하지 않고 새로운 .NET Core 버전을 채택할 수 있습니다.
 * [ASP.NET Core](/aspnet/core): .NET Core를 기반으로 하는 최신 웹 프레임워크이므로 개발자에게 동일한 혜택을 제공합니다.
-* [유니버설 Windows 플랫폼](https://devblogs.microsoft.com/dotnet/net-native-performance/): .NET 네이티브의 정적 컴파일을 사용하여 x64 및 ARM 컴퓨터에서 실행되는 Windows 스토어 앱의 성능을 향상합니다. 
+* [유니버설 Windows 플랫폼](/uwp): .NET 네이티브의 정적 컴파일을 사용하여 x64 및 ARM 컴퓨터에서 실행되는 Windows 스토어 앱의 성능을 향상합니다. 
 * .NET Core + 플랫폼 확장: .NET Core API뿐만 아니라 WCF, ASP.NET Core, FSharp 및 Azure 같은 .NET 에코시스템의 다른 API도 포함합니다.
 * .NET Standard + 플랫폼 확장: .NET Standard API뿐만 아니라 WCF, ASP.NET Core, FSharp 및 Azure 같은 다른 .NET 에코시스템도 포함합니다.
 
-## <a name="how-to-use-portability-analyzer"></a>이식성 분석기를 사용하는 방법
+## <a name="how-to-use-the-portability-analyzer"></a>이식성 분석기를 사용하는 방법
 
-.NET 이식성 분석기 사용을 시작하려면 먼저 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)에서 확장을 다운로드하고 설치해야 합니다. Visual Studio 2015 및 Visual Studio 2017에서 작동합니다. Visual Studio에서 **분석** > **Portability Analyzer Settings**(이식성 분석기 설정)를 통해 구성하고 대상 플랫폼을 선택할 수 있습니다.
+.NET 이식성 분석기 사용을 시작하려면 먼저 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)에서 확장을 다운로드하고 설치해야 합니다. Visual Studio 2017 이상에서 작동합니다. Visual Studio에서 **분석** > **Portability Analyzer Settings**(이식성 분석기 설정)를 통해 구성하고 대상 플랫폼을 선택할 수 있습니다.
 
 ![이식성 스크린샷](./media/portability-analyzer/portability-screenshot.png)
 
 전체 프로젝트를 분석하려면 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **어셈블리 이식성 분석**을 선택합니다. 전체 프로젝트를 분석하지 않으려면 **분석** 메뉴로 이동한 다음 **어셈블리 이식성 분석**을 선택합니다. 여기서 프로젝트의 실행 파일 또는 DLL을 선택합니다.
 
-![이식성 솔루션 탐색기](./media/portability-analyzer/portability-solution-explorer.png)
+![솔루션 탐색기에서 이식성 분석기](./media/portability-analyzer/portability-solution-explorer.png)
 
 분석을 실행한 후 .NET 이식성 보고서를 확인합니다. 대상 플랫폼에서 지원되지 않는 형식만 목록에 표시되며, **오류 목록**의 **메시지** 탭에서 권장 사항을 검토할 수 있습니다. **메시지** 탭에서 문제 영역으로 직접 이동할 수도 있습니다.
 
 ![이식성 보고서](./media/portability-analyzer/portability-report.png)
 
-Visual Studio를 사용하고 싶지 않으신가요? 명령 프롬프트에서 이식성 분석기를 사용할 수도 있습니다. [API 이식성 분석기](https://www.microsoft.com/download/details.aspx?id=42678)를 다운로드합니다.
+Visual Studio를 사용하지 않는 경우 명령 프롬프트에서 이식성 분석기를 사용할 수 있습니다. [Microsoft/dotnet-apiport](https://github.com/Microsoft/dotnet-apiport/releases) 리포지토리에서 API 이식성 분석기를 다운로드합니다.
 
-*   현재 디렉터리를 분석하려면 다음 명령을 입력합니다. `\...\ApiPort.exe analyze -f .`
-*   .dll 파일의 특정 목록을 분석하려면 다음 명령을 입력합니다. `\...\ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
+* 현재 디렉터리를 분석하려면 다음 명령을 입력합니다. `\...\ApiPort.exe analyze -f .`
+* .dll 파일의 특정 목록을 분석하려면 다음 명령을 입력합니다. `\...\ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
 
 .NET 이식성 보고서는 현재 디렉터리에 Excel 파일(*.xlsx*)로 저장됩니다. Excel 통합 문서의 **세부 정보** 탭에는 추가 정보가 포함됩니다.
 

@@ -2,7 +2,7 @@
 title: $ - 문자열 보간 - C# 참조
 ms.custom: seodec18
 description: 문자열 보간을 이용한 구문으로 기존의 문자열 합성보다 읽기 쉽고 편리하게 문자열 출력의 서식을 지정할 수 있습니다.
-ms.date: 03/26/2018
+ms.date: 04/29/2019
 f1_keywords:
 - $_CSharpKeyword
 - $
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 64728182fe0b758f8da668d19761305e2001f1a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 716f6ee2c9eb09abcbd4ada16954315ed4a56c02
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58920898"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65210422"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - 문자열 보간(C# 참조)
 
@@ -26,7 +26,7 @@ ms.locfileid: "58920898"
 
 문자열 보간은 [문자열 합성 서식 지정](../../../standard/base-types/composite-formatting.md) 기능보다 읽기 쉽고 편리하게 서식이 지정된 문자열을 만들 수 있는 구문을 제공합니다. 다음 예제에서는 두 기능을 사용하여 동일한 출력을 생성합니다.
 
-[!code-csharp-interactive[compare with composite formatting](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#1)]
+[!code-csharp-interactive[compare with composite formatting](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#1)]
 
 ## <a name="structure-of-an-interpolated-string"></a>보간된 문자열의 구조
 
@@ -48,7 +48,7 @@ ms.locfileid: "58920898"
 
 다음 예제에서는 위에 설명된 선택적 서식 지정 구성 요소를 사용합니다.
 
-[!code-csharp-interactive[specify alignment and format string](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#2)]
+[!code-csharp-interactive[specify alignment and format string](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#2)]
 
 ## <a name="special-characters"></a>특수 문자
 
@@ -58,7 +58,7 @@ ms.locfileid: "58920898"
 
 다음 예제에서는 중괄호를 결과 문자열에 포함하는 방법과 보간된 식에서 조건부 연산자를 사용하는 방법을 보여줍니다.
 
-[!code-csharp-interactive[example with ternary conditional operator](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
+[!code-csharp-interactive[example with ternary conditional operator](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
 약어 보간된 문자열은 `@` 문자가 뒤에 오는 `$` 문자로 시작합니다. 약어 문자열에 대한 자세한 내용은 [문자열](../keywords/string.md) 및 [약어 식별자](verbatim.md) 항목을 참조하세요.
 
@@ -83,11 +83,21 @@ ms.locfileid: "58920898"
 
 다음 예제에서는 <xref:System.FormattableString>에 대한 암시적 변환을 사용하여 문화권별 결과 문자열을 만듭니다.
 
-[!code-csharp-interactive[create culture-specific result strings](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#4)]
+[!code-csharp-interactive[create culture-specific result strings](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#4)]
 
 ## <a name="additional-resources"></a>추가 자료
 
-문자열 보간을 처음 접하는 경우 [C#의 문자열 보간](../../tutorials/exploration/interpolated-strings.yml) 대화형 자습서를 참조하세요. 또는 머신에서 로컬로 [C#의 문자열 보간](../../tutorials/string-interpolation.md) 자습서를 시도할 수 있습니다.
+문자열 보간을 처음 접하는 경우 [C#의 문자열 보간](../../tutorials/exploration/interpolated-strings.yml) 대화형 자습서를 참조하세요. 보간된 문자열을 사용하여 서식화된 문자열을 생성하는 방법을 보여 주는 다른 [C#의 문자열 보간](../../tutorials/string-interpolation.md) 자습서도 확인할 수 있습니다.
+
+## <a name="compilation-of-interpolated-strings"></a>보간된 문자열의 컴파일
+
+보간된 문자열이 `string` 형식이면 일반적으로 <xref:System.String.Format%2A?displayProperty=nameWithType> 메서드 호출로 변환됩니다. 컴파일러는 분석된 동작이 연결에 해당하는 경우 <xref:System.String.Format%2A?displayProperty=nameWithType>을 <xref:System.String.Concat%2A?displayProperty=nameWithType>으로 바꿀 수 있습니다.
+
+보간된 문자열 형식이 <xref:System.IFormattable> 또는 <xref:System.FormattableString>이면 컴파일러가 <xref:System.Runtime.CompilerServices.FormattableStringFactory.Create%2A?displayProperty=nameWithType> 메서드에 대한 호출을 생성합니다.
+
+## <a name="c-language-specification"></a>C# 언어 사양
+
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [보간된 문자열](~/_csharplang/spec/expressions.md#interpolated-strings) 섹션을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: b95699430a05ef9d81c705b05d04b4ab06e7abc7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3b8ae80ff17ea2cf12c3d78c092dd3233ac0751d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307654"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755964"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>LINQ 쿼리 작업의 형식 관계(C#)
 쿼리를 효과적으로 작성하려면 전체 쿼리 작업의 변수 형식이 모두 어떻게 서로 관련되는지를 이해해야 합니다. 이러한 관계를 이해하면 설명서의 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 샘플 및 코드 예제를 더 쉽게 이해할 수 있습니다. 또한 `var`을 사용하여 변수를 암시적으로 형식화하는 경우 백그라운드에서 발생하는 상황을 이해할 수 있습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "59307654"
 ## <a name="queries-that-do-not-transform-the-source-data"></a>소스 데이터를 변환하지 않는 쿼리  
  다음 그림에서는 데이터 변환을 수행하지 않는 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects 쿼리 작업을 보여 줍니다. 소스에는 문자열 시퀀스가 포함되어 있고, 쿼리 출력도 문자열 시퀀스입니다.  
   
- ![LINQ 쿼리에서 데이터 형식의 관계](../../../../csharp/programming-guide/concepts/linq/media/linq_flow1.png "LINQ_flow1")  
+ ![LINQ 쿼리에서 데이터 형식의 관계를 보여 주는 다이어그램](./media/type-relationships-in-linq-query-operations/linq-query-data-type-relation.png)  
   
 1. 데이터 소스의 형식 인수에 따라 범위 변수의 형식이 결정됩니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "59307654"
 ## <a name="queries-that-transform-the-source-data"></a>소스 데이터를 변환하는 쿼리  
  다음 그림에서는 간단한 데이터 변환을 수행하는 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 쿼리 작업을 보여 줍니다. 쿼리는 `Customer` 개체 시퀀스를 입력으로 사용하고 결과에서 `Name` 속성만 선택합니다. `Name`이 문자열이기 때문에 쿼리에서 출력으로 문자열 시퀀스를 생성합니다.  
   
- ![데이터 형식을 변환하는 쿼리](../../../../csharp/programming-guide/concepts/linq/media/linq_flow2.png "LINQ_flow2")  
+ ![데이터 형식을 변환하는 쿼리를 보여 주는 다이어그램](./media/type-relationships-in-linq-query-operations/linq-query-transform-data-type.png)  
   
 1. 데이터 소스의 형식 인수에 따라 범위 변수의 형식이 결정됩니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "59307654"
   
  다음 그림에서는 약간 더 복잡한 변환을 보여 줍니다. `select` 문은 원래 `Customer` 개체의 두 멤버만 캡처하는 무명 형식을 반환합니다.  
   
- ![데이터 형식을 변환하는 쿼리](../../../../csharp/programming-guide/concepts/linq/media/linq_flow3.png "LINQ_flow3")  
+ ![데이터 형식을 변환하는 더 복잡한 쿼리를 보여 주는 다이어그램](./media/type-relationships-in-linq-query-operations/linq-complex-query-transform-data-type.png)  
   
 1. 데이터 소스의 형식 인수는 항상 쿼리의 범위 변수 형식입니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "59307654"
 ## <a name="letting-the-compiler-infer-type-information"></a>컴파일러에서 형식 정보를 유추하도록 허용  
  쿼리 작업의 형식 관계를 이해해야 하지만 컴파일러가 모든 작업을 대신 수행하도록 하는 옵션도 있습니다. [var](../../../../csharp/language-reference/keywords/var.md) 키워드를 쿼리 작업의 모든 지역 변수에 사용할 수 있습니다. 다음 그림은 앞에서 설명한 예제 번호 2와 유사합니다. 그러나 컴파일러는 쿼리 작업의 각 변수에 대해 강력한 형식을 제공합니다.  
   
- ![암시적 형식 지정을 사용하는 형식 흐름](../../../../csharp/programming-guide/concepts/linq/media/linq_flow4.png "LINQ_flow4")  
+ ![암시적 형식의 형식 흐름을 보여 주는 다이어그램](./media/type-relationships-in-linq-query-operations/linq-type-flow-implicit-typing.png)  
   
  `var`에 대한 자세한 내용은 [암시적 형식 지역 변수](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)를 참조하세요.  
   

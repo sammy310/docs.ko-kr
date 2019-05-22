@@ -3,12 +3,12 @@ title: .NET Core를 사용하여 REST 클라이언트 만들기
 description: 이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능에 대해 설명합니다.
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 332e47d9a02f48c53bbad272477768fa4c0367f2
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: f6e3371a72810b30f804169be4025360aa10c477
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612070"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063879"
 ---
 # <a name="rest-client"></a>REST 클라이언트
 
@@ -36,11 +36,10 @@ GitHub에서 REST 서비스에 HTTP 요청을 실행하는 애플리케이션을
 
 ## <a name="create-the-application"></a>애플리케이션 만들기
 
-첫 번째 단계에서는 새 애플리케이션을 만듭니다. 명령 프롬프트를 열고 애플리케이션에 대한 새 디렉터리를 만듭니다. 해당 디렉터리를 현재 디렉터리로 지정합니다. 명령 프롬프트에 명령 `dotnet new console`을 입력합니다. 이렇게 하면 기본 "Hello World" 애플리케이션에 대한 시작 파일이 만들어집니다.
+첫 번째 단계에서는 새 애플리케이션을 만듭니다. 명령 프롬프트를 열고 애플리케이션에 대한 새 디렉터리를 만듭니다. 해당 디렉터리를 현재 디렉터리로 지정합니다. 명령 프롬프트에 명령 `dotnet new console`을 입력합니다. 이렇게 하면 기본 "Hello World" 애플리케이션에 대한 시작 파일이 만들어집니다. 새 프로젝트이기 때문에 종속성이 없으므로 첫 번째 실행에서는 .NET Core 프레임워크를 다운로드하고, 개발 인증서를 설치하며, NuGet 패키지 관리자를 실행하여 누락된 종속성을 복원합니다.
 
-파일 수정을 시작하기 전에 간단한 Hello World 애플리케이션을 실행하는 단계를 진행해 보겠습니다. 애플리케이션을 만든 후에 명령 프롬프트에서 `dotnet restore`([참고 참조](#dotnet-restore-note))를 입력합니다. 이 명령은 NuGet 패키지 복원 프로세스를 실행합니다. NuGet은 .NET 패키지 관리자입니다. 이 명령은 프로젝트에 대한 누락된 종속성 중 하나를 다운로드합니다. 이 프로젝트는 새 프로젝트이므로 어떤 종속성도 없습니다. 따라서 처음 실행하면 .NET Core 프레임워크가 다운로드됩니다. 이 초기 단계 후에 새 종속 패키지를 추가하거나 종속성 버전을 업데이트할 때 `dotnet restore`([참고 참조](#dotnet-restore-note))를 실행하기만 하면 됩니다.
-
-패키지를 복원한 후 `dotnet build`를 실행합니다. 이렇게 하면 빌드 엔진이 실행되고 애플리케이션이 만들어집니다. 마지막으로 `dotnet run`을 실행하여 애플리케이션을 실행합니다.
+수정하기 전에 명령 프롬프트에 `dotnet run`([참고 참조](#dotnet-restore-note))을 입력하여 애플리케이션을 실행합니다. 환경에 누락된 종속성이 있으면 `dotnet run`이 자동으로 `dotnet restore`를 수행합니다. 애플리케이션을 다시 빌드해야 하면 `dotnet build`도 수행합니다.
+최초 설치 후에는 프로젝트에 해당할 때만 `dotnet restore` 또는 `dotnet build`를 실행하면 됩니다.
 
 ## <a name="adding-new-dependencies"></a>새 종속성 추가
 
@@ -62,7 +61,7 @@ GitHub에서 REST 서비스에 HTTP 요청을 실행하는 애플리케이션을
 
 대부분의 코드 편집기는 이러한 라이브러리의 완성된 다양한 버전을 제공합니다. 일반적으로 추가하는 모든 패키지의 최신 버전을 사용하려고 할 것입니다. 그러나 모든 패키지의 버전이 일치하는지와 .NET Core 애플리케이션 프레임워크의 버전도 일치하는지 확인해야 합니다.
 
-이러한 변경을 수행한 후에는 패키지가 시스템에 설치되도록 `dotnet restore`([참고 참조](#dotnet-restore-note))를 다시 실행해야 합니다.
+이러한 변경을 수행한 후에는 패키지가 시스템에 설치되도록 `dotnet restore`([참고 참조](#dotnet-restore-note))를 다시 실행합니다
 
 ## <a name="making-web-requests"></a>웹 요청 수행
 

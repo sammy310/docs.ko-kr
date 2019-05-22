@@ -27,18 +27,18 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: a6d98abd446bfa1a5c214da31bc877ecb337e8f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 94c266c3e44f87d8c8503bcf15789723116460df
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301128"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753819"
 ---
 # <a name="arithmetic-operators-c-reference"></a>산술 연산자(C# 참조)
 
 다음 연산자는 숫자 형식을 포함한 산술 작업을 수행합니다.
 
-- 단항 [`++`(증분)](#increment-operator-), [`--`(감소)](#decrement-operator---), [`+`(더하기)](#unary-plus-and-minus-operators) 및 [`-`(빼기)](#unary-plus-and-minus-operators) 연산자
+- 단항 [`++`(증분)](#increment-operator-), [`--`(감소)](#decrement-operator---), [`+`(더하기)](#unary-plus-and-minus-operators), [`-`(빼기)](#unary-plus-and-minus-operators) 연산자
 - 이진 [`*`(곱하기)](#multiplication-operator-), [`/`(나누기)](#division-operator-), [`%`(나머지)](#remainder-operator-), [`+`(더하기)](#addition-operator-) 및 [`-`(빼기)](#subtraction-operator--) 연산자
 
 해당 연산자는 모든 [정수](../keywords/integral-types-table.md) 및 [부동 소수점](../keywords/floating-point-types-table.md) 숫자 형식을 지원합니다.
@@ -163,23 +163,6 @@ ms.locfileid: "59301128"
 
 대리자 제거의 경우 `-` 연산자를 사용할 수도 있습니다. 자세한 내용은 [`-` 연산자](subtraction-operator.md) 문서를 참조하세요.
 
-## <a name="operator-precedence-and-associativity"></a>연산자 우선 순위 및 결합성
-
-다음 목록에서는 산술 연산자를 가장 높은 우선 순위부터 가장 낮은 것으로 정렬합니다.
-
-- 후위 증가 `x++` 및 감소 `x--` 연산자
-- 전위 증가 `++x` 및 감소 `--x` 연산자와 단항 `+` 및 `-` 연산자
-- 곱하기 `*`, `/` 및 `%` 연산자
-- 가감 `+` 및 `-` 연산자
-
-이진 산술 연산자는 왼쪽 결합형입니다. 즉, 우선 순위 수준이 같은 연산자는 왼쪽에서 오른쪽으로 계산됩니다.
-
-괄호(`()`)를 사용하여 연산자 우선 순위와 연결에 따라 주어진 계산 순서를 변경할 수 있습니다.
-
-[!code-csharp-interactive[precedence and associativity](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
-
-우선 순위 수준에 따라 정렬된 전체 연산자 목록은 [C# 연산자](index.md)를 참조하세요.
-
 ## <a name="compound-assignment"></a>복합 할당
 
 이진 연산자(`op`)의 경우 양식의 복합 할당 식
@@ -200,7 +183,28 @@ x = x op y
 
 [!code-csharp-interactive[compound assignment](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignment)]
 
+[숫자 승격](~/_csharplang/spec/expressions.md#numeric-promotions)으로 인해 `op` 연산의 결과가 암시적으로 `x`의 `T` 형식으로 변환되지 못할 수 있습니다. 이 경우 `op`가 미리 정의된 연산자이고 연산의 결과가 명시적으로 `x` 형식의 `T`로 변환 가능하다면 `x op= y` 양식의 복합 할당 식이 `x = (T)(x op y)`에 해당합니다. 단 `x`는 한 번만 평가됩니다. 다음 예제에서는 해당 동작을 보여줍니다.
+
+[!code-csharp-interactive[compound assignment with cast](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
+
 `+=` 및 `-=` 연산자를 사용하여 [이벤트](../keywords/event.md)에서 구독하거나 구독을 취소할 수도 있습니다. 자세한 내용은 [방법: 이벤트 구독 및 구독 취소](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)를 참조하세요.
+
+## <a name="operator-precedence-and-associativity"></a>연산자 우선 순위 및 결합성
+
+다음 목록에서는 산술 연산자를 가장 높은 우선 순위부터 가장 낮은 것으로 정렬합니다.
+
+- 후위 증가 `x++` 및 감소 `x--` 연산자
+- 전위 증가 `++x` 및 감소 `--x` 및 단항 `+` 및 `-` 연산자
+- 곱하기 `*`, `/` 및 `%` 연산자
+- 가감 `+` 및 `-` 연산자
+
+이진 산술 연산자는 왼쪽 결합형입니다. 즉, 우선 순위 수준이 같은 연산자는 왼쪽에서 오른쪽으로 계산됩니다.
+
+괄호(`()`)를 사용하여 연산자 우선 순위와 연결에 따라 주어진 계산 순서를 변경할 수 있습니다.
+
+[!code-csharp-interactive[precedence and associativity](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
+
+우선 순위 수준에 따라 정렬된 전체 연산자 목록은 [C# 연산자](index.md)를 참조하세요.
 
 ## <a name="arithmetic-overflow-and-division-by-zero"></a>산술 오버플로 및 0으로 나누기
 
@@ -256,6 +260,7 @@ x = x op y
 - [빼기 연산자](~/_csharplang/spec/expressions.md#subtraction-operator)
 - [복합 할당](~/_csharplang/spec/expressions.md#compound-assignment)
 - [Checked 및 Unchecked 연산자](~/_csharplang/spec/expressions.md#the-checked-and-unchecked-operators)
+- [숫자 승격](~/_csharplang/spec/expressions.md#numeric-promotions)
 
 ## <a name="see-also"></a>참고 항목
 

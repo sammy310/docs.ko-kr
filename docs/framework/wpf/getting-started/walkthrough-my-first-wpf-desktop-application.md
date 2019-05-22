@@ -11,12 +11,12 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: 9d0abd18b2242ab21e8a915caac1ff9e3216acd0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c3440ddf6cdae6b24bcf1059ab2c76d8fb957263
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617269"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003858"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>연습: 내 첫 WPF 데스크톱 애플리케이션
 
@@ -45,9 +45,9 @@ ms.locfileid: "64617269"
 
 ## <a name="prerequisites"></a>전제 조건
 
-- Visual Studio 2017 이상
+- Visual Studio 2017 이상 (이 문서는 Visual Studio 2019를 사용 하는 데 사용)
 
-   Visual Studio의 최신 버전을 설치 하는 방법에 대 한 자세한 내용은 참조 하세요. [Visual Studio 설치](/visualstudio/install/install-visual-studio)합니다. 이 문서에서는 Visual Studio 2019 합니다.
+   Visual Studio의 최신 버전을 설치 하는 방법에 대 한 자세한 내용은 참조 하세요. [Visual Studio 설치](/visualstudio/install/install-visual-studio)합니다.
 
 ## <a name="create-the-application-project"></a>응용 프로그램 프로젝트 만들기
 
@@ -55,23 +55,21 @@ ms.locfileid: "64617269"
 
 1. Visual Basic 또는 Visual C#에서 새 WPF 응용 프로그램 프로젝트를 만듭니다 **`ExpenseIt`**:
 
-   1. Visual Studio를 열고 선택 **파일** > **새로 만들기** > **프로젝트**합니다.
+   1. Visual Studio를 열고 선택 **새 프로젝트를 만듭니다** 아래의 합니다 **시작** 메뉴.
 
       합니다 **새 프로젝트를 만들** 대화 상자가 열립니다.
 
-      ![새 프로젝트 대화 상자 만들기](./media/gettingstartedfigure0a.png)
-
    2. 에 **언어** 드롭다운에서 선택 **C#** 또는 **Visual Basic**.
-
+      
    3. 선택 된 **WPF 앱 (.NET Framework)** 템플릿을 선택한 후 **다음**합니다. 
+     
+      ![새 프로젝트 대화 상자 만들기](./media/walkthrough-my-first-wpf-desktop-application/create-new-project-dialog.png)
     
-   4. 선택 **새 프로젝트를 만들**합니다.
+      합니다 **새 프로젝트 구성** 대화 상자가 열립니다.
 
-      합니다 **새 프로젝트를 구성** 대화 상자가 열립니다.
+   4. 프로젝트 이름을 입력 **`ExpenseIt`** 선택한 후 **Create**합니다.
 
-      ![새 프로젝트 대화 상자를 구성 합니다.](./media/gettingstartedfigure0c.png)
-
-   5. 프로젝트 이름을 입력 **`ExpenseIt`** 선택한 후 **Create**합니다.
+      ![새 프로젝트 대화 상자를 구성 합니다.](./media/walkthrough-my-first-wpf-desktop-application/configure-new-project-dialog.png)
 
       Visual Studio 프로젝트를 만들고 이라는 기본 응용 프로그램 창에 대 한 디자이너를 엽니다 **MainWindow.xaml**합니다.
 
@@ -224,7 +222,7 @@ ms.locfileid: "64617269"
 
     다음 그림에 나와 있는 응용 프로그램을 <xref:System.Windows.Navigation.NavigationWindow> 단추:
 
-    ![ExpenseIt 샘플 스크린샷](./media/gettingstartedfigure1.png)
+    ![빌드하고 실행 한 후 응용 프로그램입니다.](./media/walkthrough-my-first-wpf-desktop-application/build-run-application.png)
 
 2. Visual Studio로 돌아가서 응용 프로그램을 닫습니다.
 
@@ -290,9 +288,7 @@ ms.locfileid: "64617269"
 
     다음 그림에서는 사용자가 만든 컨트롤을 보여 줍니다.
 
-    ![ExpenseIt 샘플 스크린샷](./media/gettingstartedfigure2.png)
-
-3. Visual Studio로 돌아가서 응용 프로그램을 닫습니다.
+![ExpenseIt 샘플 스크린샷 이름 목록을 표시 합니다.](./media/walkthrough-my-first-wpf-desktop-application/add-application-controls.png)
 
 ## <a name="add-an-image-and-a-title"></a>이미지 및 제목 추가
 
@@ -326,7 +322,7 @@ ms.locfileid: "64617269"
 
 다음 그림에서는 방금 추가한 새로운 결과 보여 줍니다.
 
-![ExpenseIt 샘플 스크린샷](./media/gettingstartedfigure3.png)
+![ExpenseIt 샘플 스크린샷 새 이미지 배경 및 페이지 제목](./media/walkthrough-my-first-wpf-desktop-application/add-application-image-title.png)
 
 ## <a name="add-code-to-handle-events"></a>이벤트를 처리 하는 코드를 추가 합니다.
 
@@ -361,7 +357,7 @@ ms.locfileid: "64617269"
 
 다음 그림에 추가 UI 요소를 보여 줍니다 *ExpenseReportPage.xaml*합니다.
 
-![ExpenseIt 샘플 스크린샷](./media/gettingstartedfigure4.png)
+![ExpenseIt 샘플 스크린샷 방금 만든를 ExpenseReportPage의 UI를 표시 합니다.](./media/walkthrough-my-first-wpf-desktop-application/create-application-ui.png)
 
 ## <a name="style-controls"></a>컨트롤 스타일 지정
 
@@ -405,7 +401,7 @@ ms.locfileid: "64617269"
 
 6. 애플리케이션을 빌드 및 실행합니다. 창 모양 이전과 동일합니다.
 
-    ![ExpenseIt 샘플 스크린샷](./media/gettingstartedfigure4.png)
+    ![마지막 섹션에서와 같이 동일한 모양과 ExpenseIt 샘플 스크린샷.](./media/walkthrough-my-first-wpf-desktop-application/create-application-ui.png)
 
 7. Visual Studio로 돌아가서 응용 프로그램을 닫습니다.
 
@@ -473,7 +469,7 @@ ms.locfileid: "64617269"
 
 다음 그림에서는 두 페이지는 `ExpenseIt` 컨트롤, 레이아웃, 스타일, 데이터 바인딩 및 데이터 템플릿을 적용을 사용 하 여 응용 프로그램:
 
-![ExpenseIt 샘플 스크린샷](./media/gettingstartedfigure5.png)
+![이름 목록 및 비용 보고서를 보여 주는 앱의 두 페이지입니다.](./media/walkthrough-my-first-wpf-desktop-application/application-data-templates.png)
 
 > [!NOTE]
 > 이 샘플은 WPF의 특정 기능을 보여 줍니다 및 보안, 지역화, 접근성 등을 위해 모든 모범 사례를 따르지 않습니다. 포괄적인 WPF 및.NET 앱 개발 모범 사례, 다음 항목을 참조 하세요.

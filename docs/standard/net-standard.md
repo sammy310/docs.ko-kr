@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 02/25/2019
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 3d3d52c9b29e743f676951ec8261ada39078fb27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 16aa1cd43db0b10c4617b4fa92783c75a4ba5303
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335019"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755209"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -27,9 +27,9 @@ ms.locfileid: "59335019"
 
 ## <a name="net-implementation-support"></a>.NET 구현체 지원
 
-다음 표에서는 각 .NET Standard 버전을 지원하는 최소 플랫폼 버전을 나열합니다.
+다음 표에서는 각 .NET Standard 버전을 지원하는 **최소** 플랫폼 버전을 나열합니다. 즉, 목록에 있는 플랫폼의 차후 버전에서는 해당하는 .NET Standard 버전도 지원합니다. 예를 들어, .NET Core 2.2는 .NET 표준 2.0 및 이전 버전을 지원합니다.
 
-[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](../../includes/net-standard-table.md)]
 
 대상으로 지정할 수 있는 가장 높은 버전의 .NET Standard를 찾으려면 다음 단계를 수행합니다.
 

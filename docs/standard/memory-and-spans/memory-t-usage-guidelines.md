@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e942b3f6f6572c05d42a0267f98e6c876a113616
-ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
+ms.openlocfilehash: 728f360d2e8f93ebdf2b17fec39477b95ed11357
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58504342"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063286"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Memory\<T> 및 Span\<T> 사용 지침
 
@@ -86,7 +86,7 @@ class Program
 
 - `Main` 메서드에 <xref:System.Buffers.IMemoryOwner%601> 인스턴스에 대한 참조가 있으므로 `Main` 메서드가 버퍼의 소유자입니다.
 
-- `WriteInt32ToBuffer` 및 `DisplayBufferToConsole` 메서드가 xref:System.Memory%601>를 공용 API로 허용합니다. 따라서 버퍼의 소비자가 됩니다. 또한 한 번에 하나씩 버퍼를 사용합니다.
+- `WriteInt32ToBuffer` 및 `DisplayBufferToConsole` 메서드는 공용 API로 <xref:System.Memory%601>를 수락합니다. 따라서 버퍼의 소비자가 됩니다. 또한 한 번에 하나씩 버퍼를 사용합니다.
 
 `WriteInt32ToBuffer` 메서드는 버퍼에 값을 쓰기 위한 것이지만 `DisplayBufferToConsole` 메서드는 그렇지 않습니다. 이를 반영하기 위해 <xref:System.ReadOnlyMemory%601> 형식의 인수를 허용했을 수 있습니다. <xref:System.ReadOnlyMemory%601>에 대한 자세한 내용은 [규칙 #2: 버퍼가 읽기 전용이어야 하는 경우 ReadOnlySpan\<T> 또는 ReadOnlyMemory\<T> 사용](#rule-2)을 참조하세요.
 
@@ -246,7 +246,7 @@ class Person
 
 **규칙 #9: 동기 P/Invoke 메서드를 래핑하는 경우 API가 Span\<T>를 매개 변수로 사용해야 합니다.**
 
-규칙 #1에 따라 <xref:System.Span%601>은 일반적으로 동기 API에 사용할 올바른 형식입니다. 다음 예제와 같이 [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) 키워드를 통해 <xref:System.Span%601>\<T> 인스턴스를 고정할 수 있습니다.
+규칙 #1에 따라 <xref:System.Span%601>은 일반적으로 동기 API에 사용할 올바른 형식입니다. 다음 예제와 같이 [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) 키워드를 통해 <xref:System.Span%601> 인스턴스를 고정할 수 있습니다.
 
 ```csharp
 using System.Runtime.InteropServices;

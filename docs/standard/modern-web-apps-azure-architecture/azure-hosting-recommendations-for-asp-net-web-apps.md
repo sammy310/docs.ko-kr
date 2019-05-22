@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: cda4c002c73e2dd0db1b2d5d1fa8bc76903c5c62
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 136ad9992ea94b027f095f47df0388408029f24e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828386"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638912"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>ASP.NET Core 웹앱에 대한 Azure 호스팅 권장 사항
 
@@ -26,11 +26,9 @@ ms.locfileid: "55828386"
 
 - 컨테이너
 
-- Azure Service Fabric
-
 - VM(가상 머신)
 
-이 중에서 App Service Web Apps는 대부분의 시나리오에 권장되는 접근 방법입니다. 마이크로 서비스 아키텍처의 경우 컨테이너 기반 접근 방식 또는 Service Fabric을 고려합니다. 애플리케이션을 실행하는 컴퓨터에 대한 더 세부적인 제어가 필요할 경우 Azure Virtual Machines를 고려합니다.
+이 중에서 App Service Web Apps는 대부분의 시나리오에 권장되는 접근 방법입니다. 마이크로서비스 아키텍처의 경우 컨테이너 기반 접근 방식을 고려합니다. 애플리케이션을 실행하는 컴퓨터에 대한 더 세부적인 제어가 필요할 경우 Azure Virtual Machines를 고려합니다.
 
 ### <a name="app-service-web-apps"></a>App Service Web Apps
 
@@ -45,6 +43,8 @@ App Service Web Apps는 웹 애플리케이션 호스팅에 최적화된 완벽�
 - 보안 및 규정 준수
 
 - Visual Studio 통합
+
+- [Web App for Containers](https://azure.microsoft.com/en-us/services/app-service/containers/)를 통한 통해 Linux 및 Windows 컨테이너 지원
 
 Azure App Service는 대부분의 웹앱에 가장 적합한 선택입니다. 배포 및 관리가 플랫폼에 통합되어 있고, 사이트가 높은 트래픽 부하를 처리하기 위해 빠르게 확장될 수 있으며, 기본 제공되는 부하 분산 및 트래픽 관리자가 고가용성을 제공합니다. 온라인 마이그레이션 도구를 사용하여 기존 사이트를 Azure App Service로 쉽게 이동하거나, 웹 애플리케이션 갤러리에서 오픈 소스 애플리케이션을 사용하거나, 원하는 프레임워크와 도구를 사용하여 새 사이트를 만들 수 있습니다. Webjob 기능을 사용하면 백그라운드 작업 처리를 App Service 웹앱에 쉽게 추가할 수 있습니다.
 
@@ -61,30 +61,9 @@ AKS는 대부분의 책임을 Azure로 오프로드함으로써 Kubernetes 클�
 
 이제 AKS 클러스터의 노드 관리를 처리하는 Azure를 사용하면 클러스터 업그레이드와 같은 여러 작업을 수동으로 수행하지 않아도 됩니다. Azure가 사용자를 위해 이와 같은 중요한 유지 관리 작업을 처리하므로 AKS는 클러스터에 대한 직접 액세스를 제공하지 않습니다(예: SSH 사용).
 
-### <a name="azure-service-fabric"></a>Azure Service Fabric
-
-Service Fabric은 새 앱을 만들거나 마이크로 서비스 아키텍처를 사용하도록 기존 앱을 다시 작성하는 경우에 적합한 선택입니다. 공유된 컴퓨터 풀에서 실행되는 앱은 작게 시작하여 필요에 따라 수백 또는 수천 대 컴퓨터와 함께 대규모로 확장할 수 있습니다. 상태 저장 서비스는 일관되고 안정적인 방식으로 앱 상태를 쉽게 저장할 수 있게 해주고, Service Fabric은 자동으로 서비스 분할, 확장 및 가용성을 관리합니다. Service Fabric은 OWIN(Open Web Interface for .NET) 및 ASP.NET Core를 사용하여 WebAPI를 지원합니다. 또한 Service Fabric은 기본 인프라에 대해 App Service보다 세부적인 제어 기능이나 직접 액세스를 제공합니다. 서버에 원격으로 연결하거나 서버 시작 작업을 구성할 수 있습니다.
-
 ### <a name="azure-virtual-machines"></a>Azure Virtual Machines
 
-App Service 또는 Service Fabric에서 실행하려면 상당한 수정이 필요한 기존 애플리케이션의 경우, 클라우드로의 마이그레이션을 간소화하기 위해 Virtual Machines를 선택할 수 있습니다. 그러나 VM을 올바르게 구성, 보호 및 유지 관리하려면 Azure App Service 및 Service Fabric보다 훨씬 더 많은 시간과 IT 전문 지식이 필요합니다. Azure Virtual Machines를 고려 중이라면 VM 환경을 패치, 업데이트 및 관리하는 데 지속적인 유지 관리 노력이 필요함을 염두에 두어야 합니다. Azure Virtual Machines는 IaaS(서비스 형태의 인프라)이며, App Service 및 Service Fabric은 PaaS(Platform-as-a-Service)입니다.
-
-#### <a name="feature-comparison"></a>기능 비교
-
-| 기능                                                                                    | App Service | 컨테이너(AKS) | Service Fabric | 가상 컴퓨터 |
-| ------------------------------------------------------------------------------------------ | ----------- | ---------------- | -------------- | --------------- |
-| 거의 즉각적인 배포                                                                    | X           | X                | X              |                 |
-| 재배포 없이 더 많은 컴퓨터로 확장                                               | X           | X                | X              |                 |
-| 인스턴스가 콘텐츠와 구성 공유, 확장 시 재배포 또는 재구성할 필요 없음 | X           | X                | X              |                 |
-| 여러 배포 환경(프로덕션, 준비)                                     | X           | X                | X              |                 |
-| 자동 OS 업데이트 관리                                                             | X           | X                |                |                 |
-| 32/64비트 플랫폼 간의 원활한 전환                                             | X           | X                |                |                 |
-| Git, FTP를 사용하여 코드 배포                                                                  | X           | X                |                | X               |
-| WebDeploy를 사용하여 코드 배포                                                                 | X           | X                |                | X               |
-| TFS를 사용하여 코드 배포                                                                       | X           | X                | X              | X               |
-| 다중 계층 아키텍처의 호스트 웹 또는 웹 서비스 계층                                    | X           | X                | X              | X               |
-| Service Bus, Storage, SQL Database와 같은 Azure 서비스에 액세스                              | X           | X                | X              | X               |
-| 모든 사용자 지정 MSI 설치                                                                     |             | X                | X              | X               |
+App Service에서 실행하려면 상당한 수정이 필요한 기존 애플리케이션의 경우, 클라우드로의 마이그레이션을 간소화하기 위해 Virtual Machines를 선택할 수 있습니다. 그러나 VM을 올바르게 구성, 보호 및 유지 관리하려면 Azure App Service보다 훨씬 더 많은 시간과 IT 전문 지식이 필요합니다. Azure Virtual Machines를 고려 중이라면 VM 환경을 패치, 업데이트 및 관리하는 데 지속적인 유지 관리 노력이 필요함을 염두에 두어야 합니다. Azure Virtual Machines는 IaaS(서비스 형태의 인프라)이며, App Service는 PaaS(Platform-as-a-Service)입니다. 또한 앱을 Windows 컨테이너로 Web App for Containers에 배포하는 것이 시나리오에 유용한 옵션인지도 고려해야 합니다.
 
 ## <a name="logical-processes"></a>논리적 프로세스
 
@@ -92,7 +71,7 @@ App Service 또는 Service Fabric에서 실행하려면 상당한 수정이 필�
 
 ## <a name="data"></a>데이터
 
-Azure는 다양한 데이터 스토리지 옵션을 제공하므로, 애플리케이션이 해당 데이터에 대해 적절한 데이터 공급자를 사용할 수 있습니다.
+Azure는 다양한 데이터 저장 옵션을 제공하므로, 애플리케이션이 해당 데이터에 대해 적절한 데이터 공급자를 사용할 수 있습니다.
 
 트랜잭션, 관계형 데이터의 경우 Azure SQL Database가 가장 적합한 옵션입니다. 대부분 읽기 전용인 고성능 데이터의 경우 Azure SQL Database에서 지원하는 Redis 캐시가 적합한 솔루션입니다.
 
@@ -121,8 +100,8 @@ Azure는 다양한 데이터 스토리지 옵션을 제공하므로, 애플리�
 - 웹앱 개요\
   <https://docs.microsoft.com/azure/app-service/app-service-web-overview>
 
-- Azure App Service, Virtual Machines, Service Fabric 및 Cloud Services 비교\
-  <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
+- Web App for Containers\
+  <https://azure.microsoft.com/en-us/services/app-service/containers/>
 
 - AKS(Azure Kubernetes Service) 소개\
   <https://docs.microsoft.com/azure/aks/intro-kubernetes>

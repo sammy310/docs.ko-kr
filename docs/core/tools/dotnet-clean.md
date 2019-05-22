@@ -1,17 +1,21 @@
 ---
 title: dotnet clean 명령
 description: dotnet clean 명령은 현재 디렉터리를 정리합니다.
-ms.date: 12/04/2018
-ms.openlocfilehash: a25b7930794795e3dff5051a8ca1dd1b9c261dfd
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.date: 04/14/2019
+ms.openlocfilehash: 3e735c02c9be9b6f51a8cdf048c18eff34f838cb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169861"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754128"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
+**이 항목 적용 대상: ✓** .NET Core 1.x SDK 이상 버전
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>name
 
@@ -20,7 +24,7 @@ ms.locfileid: "53169861"
 ## <a name="synopsis"></a>개요
 
 ```
-dotnet clean [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
 
@@ -30,9 +34,9 @@ dotnet clean [-h|--help]
 
 ## <a name="arguments"></a>인수
 
-`PROJECT`
+`PROJECT | SOLUTION`
 
-정리할 MSBuild 프로젝트입니다. 프로젝트 파일을 지정하지 않으면 MSBuild는 현재 작업 디렉터리에서 *proj*로 끝나는 파일 확장명이 있는 파일을 검색하고 해당 파일을 사용합니다.
+정리할 MSBuild 프로젝트 또는 솔루션 프로젝트 또는 솔루션 파일을 지정하지 않으면 MSBuild는 현재 작업 디렉터리에서 *proj* 또는 *sln*으로 끝나는 파일 확장명이 있는 파일을 검색하고 해당 파일을 사용합니다.
 
 ## <a name="options"></a>옵션
 
@@ -48,9 +52,13 @@ dotnet clean [-h|--help]
 
   명령에 대한 간단한 도움말을 출력합니다.
 
+* **`--interactive`**
+
+  명령이 중지되고 사용자 입력 또는 작업을 대기할 수 있도록 허용합니다. 예를 들어 인증을 완료합니다. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
+
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  빌드 출력이 배치된 디렉터리입니다. 프로젝트를 빌드할 때 프레임워크를 지정한 경우 `-f|--framework <FRAMEWORK>` 스위치와 출력 디렉터리 스위치를 함께 지정합니다.
+  정리할 빌드 아티팩트를 포함하는 디렉터리입니다. 프로젝트를 빌드할 때 프레임워크를 지정한 경우 `-f|--framework <FRAMEWORK>` 스위치와 출력 디렉터리 스위치를 함께 지정합니다.
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
@@ -58,7 +66,7 @@ dotnet clean [-h|--help]
 
 * **`-v|--verbosity <LEVEL>`**
 
-  명령의 세부 정보 표시 수준을 설정합니다. 허용되는 수준은 q[uiet], m[inimal], n[ormal], d[etailed] 및 diag[nostic]입니다.
+  MSBuild의 자세한 정도 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다. 기본값은 `normal`입니다.
 
 ## <a name="examples"></a>예제
 

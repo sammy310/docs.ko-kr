@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 639ebe1552fd3950bd77acd7b5730b0d3bdb150f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34d134d0d7ba1d131ded8d8a6eee818b84c86508
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788000"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003740"
 ---
 # <a name="clr-etw-providers"></a>CLR ETW 공급자
 CLR(공용 언어 런타임)에는 런타임 공급자 및 런다운 공급자라는 두 개의 공급자가 있습니다.  
   
  런타임 공급자는 사용하도록 설정된 키워드(이벤트 범주)에 따라 이벤트를 발생시킵니다. 예를 들어 `LoaderKeyword` 키워드를 사용하도록 설정하면 로더 이벤트를 수집할 수 있습니다.  
   
- ETW(Windows용 이벤트 추적) 이벤트는 .etl 확장명을 가진 파일에 기록되며, 필요에 따라 나중에 쉼표로 구분된 값(.csv) 파일로 사후 처리할 수 있습니다. .etl 파일을 .csv 파일로 변환하는 방법에 대한 자세한 내용은 [.NET Framework 로깅 제어](../../../docs/framework/performance/controlling-logging.md)를 참조하세요.  
+ 이벤트 추적에 대 한 Windows (ETW) 이벤트는.etl 확장명을 나중에 처리할 수 있습니다 후 필요에 따라 쉼표로 구분 된 값 (.csv) 파일에 있는 파일에 기록 됩니다. .etl 파일을 .csv 파일로 변환하는 방법에 대한 자세한 내용은 [.NET Framework 로깅 제어](../../../docs/framework/performance/controlling-logging.md)를 참조하세요.  
   
 ## <a name="the-runtime-provider"></a>런타임 공급자  
  런타임 공급자는 기본 CLR ETW 공급자입니다.  

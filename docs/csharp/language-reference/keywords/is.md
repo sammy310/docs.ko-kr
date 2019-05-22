@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 9fb57caeafde9db5759300d938a85f4abf4d05f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 79cc59eb8de513f547a8fd87db8c95dd9af37375
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672461"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754513"
 ---
 # <a name="is-c-reference"></a>is(C# 참조)
 
@@ -88,7 +88,7 @@ C# 7.0부터는 `is` 및 [switch](../../../csharp/language-reference/keywords/sw
 
 C# 7.1부터 *expr*은 제네릭 형식 매개 변수 및 해당 제약 조건을 통해 컴파일 시간 형식을 정의할 수 있습니다. 
 
-*expr*이 `true`이고 `is`가 `if` 문에서 사용되는 경우 *varname*이 할당되며 `if` 문 내의 로컬 범위만 갖습니다.
+*expr*이 `true`이고 `is`가 `if` 문에서 사용되는 경우 *varname*이 `if` 문 내에서만 할당됩니다. *varname*의 범위는 `is` 식에서부터 `if` 문을 닫는 블록의 끝까지입니다. 다른 위치에서 *varname*을 사용하여 할당되지 않은 변수 사용에 대한 컴파일 시간 오류를 생성합니다.
 
 다음 예제에서는 `is` 형식 패턴을 사용하여 형식의 <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> 메서드 구현을 제공합니다.
 

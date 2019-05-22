@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: f7f1ed2fbca4ab8892cb6c439ae8841fa8828bf0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 22ffdfcc1068dd546c8c07a481c9e21fb1faab80
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008969"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003726"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>방법: 바인딩된 컨트롤 만들기 및 표시된 데이터 서식 지정
 Windows Forms 데이터 바인딩 데이터 바인딩된 컨트롤을 사용 하 여 표시 되는 데이터의 서식을 지정할 수 있습니다 합니다 **서식 지정 및 고급 바인딩** 대화 상자.  
@@ -27,7 +27,7 @@ Windows Forms 데이터 바인딩 데이터 바인딩된 컨트롤을 사용 하
   
 2. 폼에서 컨트롤을 선택하고 속성 창을 엽니다.  
   
-3. 확장을 **(DataBindings)** 속성을 선택한 다음는 **(고급)** 상자에서 줄임표 단추를 클릭 (![VisualStudioEllipsesButton 스크린 샷](./media/vbellipsesbutton.png " vbEllipsesButton"))를 표시 하는 **서식 지정 및 고급 바인딩** 해당 컨트롤에 대 한 속성의 전체 목록이 들어 있는 대화 상자를 합니다.  
+3.  확장을 **(DataBindings)** 속성을 선택한 다음는 **(고급)** 상자에서 줄임표 단추를 클릭 (![Visual Studio의 속성 창에서의 줄임표 단추 (...).](./media/how-to-create-a-bound-control-and-format-the-displayed-data/visual-studio-ellipsis-button.png)) 표시할 합니다 **서식 지정 및 고급 바인딩** 해당 컨트롤에 대 한 속성의 전체 목록이 들어 있는 대화 상자.  
   
 4. 클릭 하 고 바인딩할 속성을 선택 합니다 **바인딩** 화살표입니다.  
   

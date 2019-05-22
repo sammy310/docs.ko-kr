@@ -22,32 +22,32 @@ helpviewer_keywords:
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33aaf09e284db5c818eb0ff3917533cce5e70ad7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 201dbc759b619f65599e09c78c14b96d17395952
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577145"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620709"
 ---
 # <a name="net-regular-expressions"></a>.NET 정규식
-정규식은 텍스트를 처리하는 강력하고 유연하며 효율적인 방법을 제공합니다. 정규식의 광범위한 패턴 일치 표기법을 사용하여 많은 양의 텍스트를 신속하게 구문 분석함으로써 특정 문자 패턴을 찾고, 텍스트의 유효성을 검사하여 해당 텍스트가 미리 정의된 패턴(예: 전자 메일 주소)과 일치하는지 확인하며, 텍스트 부분 문자열을 추출, 편집, 바꾸기 또는 삭제하고, 추출된 문자열을 컬렉션에 추가하여 보고서를 생성할 수 있습니다. 문자열을 처리하거나 텍스트의 큰 블록을 구문 분석하는 많은 응용 프로그램의 경우 정규식은 필수적인 도구입니다.  
+정규식은 텍스트를 처리하는 강력하고 유연하며 효율적인 방법을 제공합니다. 정규식의 광범위한 패턴 일치 표기법을 사용하여 많은 양의 텍스트를 신속하게 구문 분석함으로써 특정 문자 패턴을 찾고, 텍스트의 유효성을 검사하여 해당 텍스트가 미리 정의된 패턴(예: 전자 메일 주소)과 일치하는지 확인하며, 텍스트 부분 문자열을 추출, 편집, 바꾸기 또는 삭제하고, 추출된 문자열을 컬렉션에 추가하여 보고서를 생성할 수 있습니다. 문자열을 처리하거나 텍스트의 큰 블록을 구문 분석하는 많은 애플리케이션의 경우 정규식은 필수적인 도구입니다.  
   
 ## <a name="how-regular-expressions-work"></a>정규식의 작동 방식  
  정규식을 사용하여 텍스트를 처리하는 중심에는 .NET에서 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 개체로 표현되는 정규식 엔진이 있습니다. 정규식을 사용하여 텍스트를 처리하려면 최소한 정규식 엔진이 다음과 같은 두 가지 정보 항목과 함께 제공되어야 합니다.  
   
--   텍스트에서 식별할 정규식 패턴  
+- 텍스트에서 식별할 정규식 패턴  
   
      .NET에서 정규식 패턴은 특수 구문 또는 언어로 정의되며 Perl 5 정규식과 호환되고 오른쪽에서 왼쪽으로 일치와 같은 몇 가지 기능을 더 추가합니다. 자세한 내용은 [정규식 언어 - 빠른 참조](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)를 참조하세요.  
   
--   정규식 패턴에 대해 구문 분석할 텍스트  
+- 정규식 패턴에 대해 구문 분석할 텍스트  
   
  <xref:System.Text.RegularExpressions.Regex> 클래스의 메서드를 사용하여 다음과 같은 작업을 수행할 수 있습니다.  
   
--   <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 메서드를 호출하여 입력 텍스트에서 정규식 패턴이 발생하는지를 확인합니다. 텍스트 유효성 검사에 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> 메서드를 사용하는 예제에 대해서는 [방법: 문자열이 올바른 전자 메일 형식인지 확인](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)을 참조하세요.  
+- <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 메서드를 호출하여 입력 텍스트에서 정규식 패턴이 발생하는지를 확인합니다. <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> 메서드를 사용하여 텍스트의 유효성을 검사하는 예제는 [방법: 문자열이 올바른 이메일 형식인지 확인](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)을 참조하세요.  
   
--   <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> 또는 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 메서드를 호출하여 정규식 패턴과 일치하는 텍스트를 하나 또는 모두 검색합니다. 전자 메서드는 일치하는 텍스트에 대한 정보를 제공하는 <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> 개체를 반환합니다. 후자는 구문 분석된 텍스트에서 찾은 각 일치 항목에 대한 하나의 <xref:System.Text.RegularExpressions.MatchCollection> 개체를 포함하는 <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> 개체를 반환합니다.  
+- <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> 또는 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 메서드를 호출하여 정규식 패턴과 일치하는 텍스트를 하나 또는 모두 검색합니다. 전자 메서드는 일치하는 텍스트에 대한 정보를 제공하는 <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> 개체를 반환합니다. 후자는 구문 분석된 텍스트에서 찾은 각 일치 항목에 대한 하나의 <xref:System.Text.RegularExpressions.MatchCollection> 개체를 포함하는 <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> 개체를 반환합니다.  
   
--   <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 메서드를 호출하여 정규식 패턴과 일치하는 텍스트를 바꿉니다. <xref:System.Text.RegularExpressions.Regex.Replace%2A> 메서드를 사용하여 날짜 형식을 변경하고 문자열에서 잘못된 문자를 제거하는 예제는 [방법: 문자열에서 유효하지 않은 문자 제거](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md) 및 [예제: 데이터 형식 변경](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md)을 참조하세요.  
+- <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 메서드를 호출하여 정규식 패턴과 일치하는 텍스트를 바꿉니다. <xref:System.Text.RegularExpressions.Regex.Replace%2A> 메서드를 사용하여 날짜 형식을 변경하고 문자열에서 잘못된 문자를 제거하는 예제는 [방법: 문자열에서 유효하지 않은 문자 제거](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md) 및 [예제: 날짜 형식 변경](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md)을 참조하세요.  
   
  정규식 개체 모델의 개요는 [정규식 개체 모델](../../../docs/standard/base-types/the-regular-expression-object-model.md)을 참조하세요.  
   

@@ -9,23 +9,5 @@
           href: pointer-types.md
         - name: 포인터 변환
           href: pointer-conversions.md
-        - name: 포인터 식
-          items:
-            - name: '방법: 포인터 변수의 값 가져오기'
-              href: how-to-obtain-the-value-of-a-pointer-variable.md
-            - name: '방법: 변수의 주소 가져오기'
-              href: how-to-obtain-the-address-of-a-variable.md
-            - name: '방법: 포인터를 사용하여 멤버에 액세스'
-              href: how-to-access-a-member-with-a-pointer.md
-            - name: '방법: 포인터를 사용하여 배열 요소에 액세스'
-              href: how-to-access-an-array-element-with-a-pointer.md
-            - name: 포인터 조작
-              items:
-                - name: '방법: 포인터 증가 및 감소'
-                  href: how-to-increment-and-decrement-pointers.md
-                - name: 포인터에 대한 산술 연산
-                  href: arithmetic-operations-on-pointers.md
-                - name: 포인터 비교
-                  href: pointer-comparison.md
         - name: '방법: 포인터를 사용하여 바이트 배열 복사'
           href: how-to-use-pointers-to-copy-an-array-of-bytes.md

@@ -3,12 +3,12 @@ title: 안전하고 효율적인 C# 코드 작성
 description: 최근 C# 언어의 향상된 기능을 통해 성능이 이전에는 안전하지 않은 코드와 연결되어 있는 안정형 안전 코드를 작성할 수 있습니다.
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: d363e357d3749bb2014456c0064c4de7dd7f1acb
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 259ce0b9405dfd74adf51a9cc046ffe3f08d242f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57411568"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753894"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>안전하고 효율적인 C# 코드 작성
 
@@ -180,6 +180,8 @@ public struct Point3D
 [!code-csharp[readonlyInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ReadOnlyInArgument "Specifying a readonly in argument")]
 
 컴파일러가 `readonly struct`의 멤버를 호출할 때 더 효율적인 코드를 생성합니다. 수신기의 복사본 대신 `this` 참조는 항상 멤버 메서드에 대한 참조로 전달된 `in` 매개 변수입니다. 이 최적화는 `readonly struct`를 `in` 인수로 사용하는 경우 복사본을 저장합니다.
+
+null 허용 값 형식은 `in` 인수로 전달할 수 없습니다. <xref:System.Nullable%601> 형식은 읽기 전용 구조체로 선언되지 않습니다. 즉 컴파일러가 매개 변수 선언에서 `in` 수정자를 사용하여 메서드에 전달된 모든 null 허용 값 형식 인수에 대해 방어용 복사본을 생성해야 합니다.
 
 GitHub에 있는 [샘플 리포지토리](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark)에서 [Benchmark.net](https://www.nuget.org/packages/BenchmarkDotNet/)을 사용하여 성능 차이를 설명하는 예제 프로그램을 확인할 수 있습니다. 값으로 및 참조로 변경할 수 있는 구조체를 전달하는 것과 값으로 및 참조로 변경할 수 없는 구조체를 전달하는 것을 비교합니다. 변경할 수 없는 구조체를 사용하고 참조로 전달하는 것이 가장 빠릅니다.
 

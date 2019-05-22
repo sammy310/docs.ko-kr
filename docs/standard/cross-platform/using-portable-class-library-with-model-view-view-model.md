@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4a477b9d204be0bc9a4c438bccb1379ecc7abf53
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3aa18d4498bcdcc3737311473b4736545b184395
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664331"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003779"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Model-View-View Model과 함께 이식 가능한 클래스 라이브러리 사용
 .NET Framework를 사용 하 여 [이식 가능한 클래스 라이브러리](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) 모델-뷰 모델 (MVVM) 패턴을 구현 하 여 여러 플랫폼 간에 어셈블리를 공유 합니다.
@@ -25,7 +25,7 @@ ms.locfileid: "64664331"
 
  MVVM은 내부 비즈니스 논리에서 사용자 인터페이스를 분리하는 응용 프로그램 패턴입니다. 모델 및 보기 모델 클래스를 구현할 수는 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] Visual Studio 2012에서 프로젝트를 만든 다음 다양 한 플랫폼에 대 한 사용자 지정 된 보기입니다. 이 접근 방식을 사용하면 한 번만 데이터 모델과 비즈니스 논리를 작성하고, 다음 설명에서와 같이 .NET Framework, Silverlight, Windows Phone 및 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램의 해당 코드를 사용할 수 있습니다.
 
- ![MVVM 다이어그램으로 이식 가능한](../../../docs/standard/cross-platform/media/portablemvvmdiagram.png "PortableMVVMdiagram")
+ ![플랫폼에서 MVVM 공유 어셈블리를 사용 하 여 이식 가능한 클래스 라이브러리를 보여 줍니다.](./media/using-portable-class-library-with-model-view-view-model/mvvm-share-assemblies-across-platforms.png)
 
  이 항목에서는 MVVM 패턴에 대 한 일반 정보를 제공 하지 않습니다. 만 사용 하는 방법에 대 한 정보를 제공 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] MVVM을 구현 합니다. MVVM에 대 한 자세한 내용은 참조는 [MVVM 퀵 스타트를 사용 하 여 Prism 라이브러리 5.0 WPF 용](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40))합니다.
 
@@ -59,7 +59,7 @@ ms.locfileid: "64664331"
 
  모델을 컴파일하여 모델 프로젝트를 확인 한 후 뷰가 포함 된 앱에서 해당 어셈블리를 참조 합니다. 뷰는 뷰 모델만 상호 작용을 하는 경우 뷰 모델이 포함 된 어셈블리를 참조 해야 합니다.
 
-### <a name="model"></a>모델
+### <a name="model"></a>Model
  다음 예제에서는 수에 있는 간단한 모델 클래스는 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 프로젝트입니다.
 
  [!code-csharp[PortableClassLibraryMVVM#1](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customer.cs#1)]

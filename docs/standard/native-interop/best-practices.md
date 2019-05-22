@@ -4,12 +4,12 @@ description: .NET에서 기본 구성 요소와 인터페이스하는 모범 사
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 6702d469abf317b3b1f545ce79b980e8581ab5f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 09b25ed10958142f8eead6761f18bccbe2645448
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196660"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063091"
 ---
 # <a name="native-interoperability-best-practices"></a>기본 상호 운용성 모범 사례
 
@@ -44,7 +44,7 @@ CharSet가 유니코드이거나 인수가 명시적으로 `[MarshalAs(Unmanaged
 
 **❌** `[Out] string` 매개 변수를 사용하지 않습니다. `[Out]` 특성을 사용하여 값으로 전달된 문자열 매개 변수는 문자열이 인턴 지정된 문자열인 경우 런타임을 불안정하게 만들 수 있습니다. 문자열 인터닝에 대한 자세한 내용은 <xref:System.String.Intern%2A?displayProperty=nameWithType> 문서를 참조하세요.
 
-**❌** `StringBuilder` 매개 변수를 사용하지 않습니다. `StringBuilder` 마샬링은 ‘항상’ 네이티브 버퍼 복사본을 만듭니다. 따라서 매우 비효율적일 수 있습니다. 문자열을 사용하는 Windows API를 호출하는 일반적인 시나리오를 살펴보겠습니다.
+**❌** `StringBuilder` 매개 변수를 사용하지 않습니다. `StringBuilder` 마샬링은 *항상* 네이티브 버퍼 복사본을 만듭니다. 따라서 매우 비효율적일 수 있습니다. 문자열을 사용하는 Windows API를 호출하는 일반적인 시나리오를 살펴보겠습니다.
 
 1. 원하는 용량의 SB 생성(관리 용량 할당) **{1}**
 2. 호출
@@ -61,7 +61,7 @@ CharSet가 유니코드이거나 인수가 명시적으로 `[MarshalAs(Unmanaged
 
 **✔️** `ArrayPool`의 `char[]`을 사용하는 것이 좋습니다.
 
-문자열 마샬링에 대한 자세한 내용은 [문자열의 기본 마샬링](../../framework/interop/default-marshaling-for-strings.md) 및 [문자열 마샬링 사용자 지정](customize-parameter-marshalling.md#customizing-string-parameters)을 참조하세요.
+문자열 마샬링에 대한 자세한 내용은 [문자열의 기본 마샬링](../../framework/interop/default-marshaling-for-strings.md) 및 [문자열 마샬링 사용자 지정](customize-parameter-marshaling.md#customizing-string-parameters)을 참조하세요.
 
 > __Windows 특정__  
 > `[Out]` 문자열에 대해 CLR에서는 기본적으로 `CoTaskMemFree`를 사용하여 문자열을 해제하거나, `UnmanagedType.BSTR`로 표시된 문자열에 `SysStringFree`를 사용합니다.  
@@ -73,7 +73,7 @@ CharSet가 유니코드이거나 인수가 명시적으로 `[MarshalAs(Unmanaged
 
 ## <a name="boolean-parameters-and-fields"></a>부울 매개 변수 및 필드
 
-부울은 문제가 발생하기 쉽습니다. 기본적으로 .NET `bool`은 4바이트 값인 Windows `BOOL`로 마샬링됩니다. 그러나 C 및 C++의 `_Bool` 및 `bool` 형식은 ‘1’바이트입니다. 이로 인해 반환 값의 절반이 버려지고 ‘잠재적’으로 결과가 변경될 수 있기 때문에 버그를 추적하기 어려울 수 있습니다. .NET `bool` 값을 C 또는 C++ `bool` 형식으로 마샬링하는 방법에 대한 자세한 내용은 [부울 필드 마샬링 사용자 지정](customize-struct-marshalling.md#customizing-boolean-field-marshalling) 문서를 참조하세요.
+부울은 문제가 발생하기 쉽습니다. 기본적으로 .NET `bool`은 4바이트 값인 Windows `BOOL`로 마샬링됩니다. 그러나 C 및 C++의 `_Bool` 및 `bool` 형식은 ‘1’바이트입니다. 이로 인해 반환 값의 절반이 버려지고 ‘잠재적’으로 결과가 변경될 수 있기 때문에 버그를 추적하기 어려울 수 있습니다. .NET `bool` 값을 C 또는 C++ `bool` 형식으로 마샬링하는 방법에 대한 자세한 내용은 [부울 필드 마샬링 사용자 지정](customize-struct-marshaling.md#customizing-boolean-field-marshaling) 문서를 참조하세요.
 
 ## <a name="guids"></a>GUID
 
@@ -126,7 +126,7 @@ public struct UnicodeCharStruct
 자세한 내용은 다음을 참조하세요.
 
 - [Blittable 형식 및 비 Blittable 형식](../../framework/interop/blittable-and-non-blittable-types.md)  
-- [형식 마샬링](type-marshalling.md)
+- [형식 마샬링](type-marshaling.md)
 
 ## <a name="keeping-managed-objects-alive"></a>관리형 개체를 활성 상태로 유지
 

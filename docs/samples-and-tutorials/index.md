@@ -4,12 +4,12 @@ description: .NET Core, ASP.NET Core 및 .NET에 대해 배우는 데 도움이 
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: ba0d7e4163a1c4afe08ea3f871c2bccc2335ac48
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: ea5bedc9bd58ca0661524d7edf999e21037e0063
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469462"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960302"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET 샘플 및 자습서
 
@@ -63,7 +63,7 @@ ms.locfileid: "65469462"
 
 **관리형 COM 서버 샘플**
 
-[COM 서버](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo) 샘플은 관리형 COM 서버를 만들고 전역적으로 등록하는 방법을 보여줍니다.
+[COM 서버](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo) 샘플은 관리형 COM 서버를 만들고 전역적으로 등록하거나 RegFree Com을 통해 소비하는 방법을 보여줍니다.
 
 **Microsoft Office PIA 샘플**
 

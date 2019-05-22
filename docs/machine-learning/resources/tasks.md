@@ -1,15 +1,15 @@
 ---
-title: 기계 학습 작업 - ML.NET
+title: 기계 학습 작업
 description: ML.NET에서 지원되는 다양한 기계 학습 작업 및 관련 작업을 살펴봅니다.
 ms.custom: seodec18
-ms.date: 04/12/2019
+ms.date: 04/23/2019
 author: natke
-ms.openlocfilehash: bfed9cf12f8d539c4327549e5305415ce096e022
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: ed6361fdcbca11c100ee5cae4ca76e152ddfba11
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613163"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063538"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET의 기계 학습 작업
 
@@ -28,22 +28,36 @@ ms.locfileid: "59613163"
 
 자세한 내용은 Wikipedia에서 [Binary classification](https://en.wikipedia.org/wiki/Binary_classification)(이진 분류) 문서를 참조하세요.
 
-### <a name="binary-classification-training-algorithms"></a>이진 분류 학습 알고리즘
+### <a name="binary-classification-trainers"></a>이진 분류 트레이너
 
 다음 알고리즘을 사용하여 이진 분류 모델을 학습할 수 있습니다.
 
 * <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer>
-* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.LinearSvmTrainer>
-* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.PriorTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer> 
+* <xref:Microsoft.ML.Trainers.PriorTrainer> 
+* <xref:Microsoft.ML.Trainers.LinearSvmTrainer>
+
+### <a name="binary-classification-inputs-and-outputs"></a>이진 분류 입력 및 출력
+
+이진 분류에서 최상의 결과를 내려면 학습 데이터의 균형이 이루어져야 합니다(즉 긍정 및 부정 학습 데이터 수 일치). 누락 및 값은 학습 전에 처리되어야 합니다.
+
+입력 레이블 열 데이터는 <xref:System.Boolean>이어야 합니다.
+입력 기능 열 데이터는 고정 크기의 <xref:System.Single> 벡터여야 합니다.
+
+이러한 트레이너는 다음 열을 출력합니다.
+
+| 출력 열 이름 | 열 유형 | 설명|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | 모델에서 계산된 원시 점수|
+| `PredictedLabel` | <xref:System.Boolean> | 점수 부호에 따라 예측된 레이블 음수 점수는 `false`에 양수 점수는 `true`에 매핑됩니다.|
 
 ## <a name="multiclass-classification"></a>다중 클래스 분류
 
@@ -58,17 +72,29 @@ ms.locfileid: "59613163"
 >[!NOTE]
 >일 대 다(One vs all)는 모든 [이진 분류 학습자](#binary-classification)를 다중 클래스 데이터 세트에서 작동하도록 업그레이드합니다. 자세한 내용은 [Wikipedia](https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest))를 참조하세요.
 
-### <a name="multiclass-classification-training-algorithms"></a>다중 클래스 분류 학습 알고리즘
+### <a name="multiclass-classification-trainers"></a>다중 클래스 분류 트레이너
 
 다음 학습 알고리즘을 사용하여 다중 클래스 분류 모델을 학습할 수 있습니다.
 
-* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmMulticlassTrainer>
-* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>
-* <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer>
-* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer>
+* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> 
+* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer> 
+* <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
+* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer> 
+
+### <a name="multiclass-classification-inputs-and-outputs"></a>다중 클래스 분류 입력 및 출력
+
+입력 레이블 열 데이터는 [키](xref:Microsoft.ML.Data.KeyDataViewType) 형식이어야 합니다.
+기능 열은 고정된 크기의 <xref:System.Single> 벡터여야 합니다.
+
+이 트레이너는 다음을 출력합니다.
+
+| 출력 이름 | 형식 | 설명|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> 벡터 | 모든 클래스의 점수. 값이 높을수록 연결된 클래스에 해당할 가능성이 높습니다. i번째 요소의 값이 가장 크다면 예측된 레이블 인덱스는 i가 됩니다. i는 0부터 시작하는 인덱스입니다. |
+| `PredictedLabel` | [키](xref:Microsoft.ML.Data.KeyDataViewType) 형식 | 예측된 레이블의 인덱스입니다. 값이 i라면 실제 레이블은 키 값 입력 레이블 형식에서 i번째 범주입니다. |
 
 ## <a name="regression"></a>재발
 
@@ -78,19 +104,29 @@ ms.locfileid: "59613163"
 * 과거 데이터 및 현재 시장 추세를 기반으로 미래 재고 가격 예측.
 * 광고 예산을 기반으로 제품 판매 예측.
 
-### <a name="regression-training-algorithms"></a>회귀 학습 알고리즘
+### <a name="regression-trainers"></a>회귀 트레이너
 
 다음 알고리즘을 사용하여 회귀 모델을 학습할 수 있습니다.
 
+* <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.OlsTrainer>
+* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer> 
 * <xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastForestRegressionTrainer>
-* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer>
-* <xref:Microsoft.ML.Trainers.OlsTrainer>
-* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer>
-* <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.GamRegressionTrainer>
-* <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>
+
+### <a name="regression-inputs-and-outputs"></a>회귀 입력 및 출력
+
+입력 레이블 열 데이터는 <xref:System.Single>이어야 합니다.
+
+이 작업에 대한 트레이너는 다음을 출력합니다.
+
+| 출력 이름 | 형식 | 설명|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | 모델에서 예측된 원시 점수 |
 
 ## <a name="clustering"></a>클러스터링
 
@@ -100,11 +136,22 @@ ms.locfileid: "59613163"
 * 대상 광고 캠페인을 구축하는 데 도움이 되는 고객 세그먼트 및 인구 통계 식별.
 * 제조 메트릭을 기반으로 인벤토리 범주화.
 
-### <a name="clustering-training-algorithms"></a>클러스터링 학습 알고리즘
+### <a name="clustering-trainer"></a>클러스터 트레이너
 
 다음 알고리즘을 사용하여 클러스터링 모델을 학습할 수 있습니다.
 
-* <xref:Microsoft.ML.Trainers.KMeansTrainer>
+* <xref:Microsoft.ML.Trainers.KMeansTrainer> 
+
+### <a name="clustering-inputs-and-outputs"></a>클러스터 입력 및 출력
+
+입력 기능 데이터는 <xref:System.Single>이어야 합니다. 레이블이 필요하지 않습니다.
+
+이 트레이너는 다음을 출력합니다.
+
+| 출력 이름 | 형식 | 설명|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> 벡터 | 모든 클러스터의 중심에서 특정 데이터 지점까지의 거리 |
+| `PredictedLabel` | [키](xref:Microsoft.ML.Data.KeyDataViewType) 형식 | 모델에서 예측한 가장 가까운 클러스터의 인덱스 |
 
 ## <a name="anomaly-detection"></a>변칙 검색
 
@@ -121,11 +168,21 @@ ms.locfileid: "59613163"
 
 변칙은 정의상 거의 발생하지 않으므로 모델링에 사용할 데이터의 대표 샘플을 수집하기 어려울 수 있습니다. 이 범주에 포함된 알고리즘은 특히 불균형 데이터 세트를 사용하여 모델을 빌드하고 학습시키는 핵심 과제를 해결하도록 설계되었습니다.
 
-### <a name="anomaly-detection-training-algorithms"></a>변칙 검색 학습 알고리즘
+### <a name="anomaly-detection-trainer"></a>변칙 검색 트레이너
 
 다음 알고리즘을 사용하여 변칙 검색 모델을 학습할 수 있습니다.
 
 * <xref:Microsoft.ML.Trainers.RandomizedPcaTrainer>
+
+### <a name="anomaly-detection-inputs-and-outputs"></a>변칙 검색 입력 및 출력
+
+입력 기능은 고정 크기의 <xref:System.Single> 벡터여야 합니다.
+
+이 트레이너는 다음을 출력합니다.
+
+| 출력 이름 | 형식 | 설명|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | 변칙 검색 모델에서 계산된 음수가 아니며 바인딩되지 않은 점수 |
 
 ## <a name="ranking"></a>순위 지정
 
@@ -135,8 +192,20 @@ ms.locfileid: "59613163"
 
 다음 알고리즘을 사용하여 순위 지정 모델을 학습할 수 있습니다.
 
-* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer>
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRankingTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer> 
+
+### <a name="ranking-input-and-outputs"></a>순위 지정 입력 및 출력
+
+입력 레이블 데이터 형식은 [키](xref:Microsoft.ML.Data.KeyDataViewType) 형식 또는 <xref:System.Single>이어야 합니다. 레이블의 값은 관련성을 결정하며 값이 클수록 관련성이 높습니다. 레이블인 [키](xref:Microsoft.ML.Data.KeyDataViewType) 형식이면 키 인덱스가 관련성 값이며 가장 작은 인덱스가 가장 관련도가 적습니다. 레이블이 <xref:System.Single>이면 값이 클수록 관련도가 높습니다.
+
+기능 데이터는 고정 크기의 <xref:System.Single> 벡터여야 하며 입력 행 그룹 열은 [키](xref:Microsoft.ML.Data.KeyDataViewType) 형식이어야 합니다.
+
+이 트레이너는 다음을 출력합니다.
+
+| 출력 이름 | 형식 | 설명|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | 모델이 예측을 판단하기 위해 계산한 바인딩되지 않은 점수 |
 
 ## <a name="recommendation"></a>권장 사항
 

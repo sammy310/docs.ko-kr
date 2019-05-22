@@ -1,21 +1,21 @@
 ---
-title: 영화 추천 시나리오에서 ML.NET 사용
-description: 권장 시나리오에서 ML.NET을 사용하여 영화를 사용자에게 추천하는 방법을 알아봅니다.
+title: '자습서: 영화 추천기 빌드'
+description: 이 자습서에서는 .NET Core 콘솔 애플리케이션에서 ML.NET으로 영화 추천기를 빌드하는 방법을 보여 줍니다. 이 단계에서는 C#과 Visual Studio 2019를 사용합니다.
 author: briacht
 ms.author: johalex
-ms.date: 03/08/2019
+ms.date: 05/06/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: bdc49f42e520f11ef63de873f0d30d11ba4b2366
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 5d459d8b28298250f3b815e33ff4d85ac54f79c2
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612279"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063374"
 ---
 # <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>자습서: ML.NET을 사용하여 Movie Recommender 만들기
 
-이 샘플 자습서에서는 ML.NET을 사용하여 Visual Studio 2017에서 C#을 사용하는 .NET Core 콘솔 애플리케이션을 통해 영화 추천기를 빌드하는 방법을 보여줍니다.
+이 자습서에서는 .NET Core 콘솔 애플리케이션에서 ML.NET으로 영화 추천기를 빌드하는 방법을 보여 줍니다. 이 단계에서는 C#과 Visual Studio 2019를 사용합니다.
 
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 > [!div class="checklist"]
@@ -24,11 +24,6 @@ ms.locfileid: "59612279"
 > * 모델 빌드 및 학습
 > * 모델 평가
 > * 모델 배포 및 사용
-
-> [!NOTE]
-> 이 항목은 현재 미리 보기로 제공되는 ML.NET을 참조하며, 자료는 변경될 수 있습니다. 자세한 내용은 [ML.NET 소개](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)를 참조하세요.
-
-이 자습서와 관련 샘플에서는 현재 **ML.NET 버전 0.11**을 사용하고 있습니다. 자세한 내용은 [dotnet/machinelearning GitHub 리포지토리](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)에서 릴리스 정보를 참조하세요.
 
 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation) 리포지토리에서 이 자습서의 소스 코드를 찾을 수 있습니다.
 
@@ -61,10 +56,7 @@ ms.locfileid: "59612279"
 
 3. **Microsoft.ML** 및 **Microsoft.ML.Recommender** NuGet 패키지를 설치합니다.
 
-    **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. “nuget.org”를 패키지 소스로 선택하고, **찾아보기** 탭을 선택하고, **Microsoft.ML**을 검색하고, 목록에서 해당 패키지를 선택하고, **설치** 단추를 선택합니다. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다. **Microsoft.ML.Recommender**에 대해 이 단계를 반복합니다.
-
-    > [!NOTE]
-    > 이 자습서에서는 **Microsoft.ML v0.11.0** 및 **Microsoft.ML.Recommender v0.11.0**을 사용합니다.
+    **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. “nuget.org”를 패키지 소스로 선택하고, **찾아보기** 탭을 선택하고, **Microsoft.ML**을 검색하고, 목록에서 **1.0.0** 패키지를 선택하고, **설치** 단추를 선택합니다. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다. **Microsoft.ML.Recommender v0.12.0**에 대해 이 단계를 반복합니다.
 
 4. *Program.cs* 파일 맨 위에 다음 `using` 문을 추가합니다.
 
@@ -175,7 +167,7 @@ ML.NET의 데이터는 [IDataView 클래스](xref:Microsoft.ML.IDataView)로 표
 
 ## <a name="build-and-train-your-model"></a>모델 빌드 및 학습
 
-ML.NET에는 세 가지 주요 개념이 있습니다. [데이터](../basic-concepts-model-training-in-mldotnet.md#data), [변환기](../basic-concepts-model-training-in-mldotnet.md#transformer) 및 [평가자](../basic-concepts-model-training-in-mldotnet.md#estimator).
+ML.NET에는 세 가지 주요 개념이 있습니다. [데이터](../resources/glossary.md#data), [변환기](../resources/glossary.md#transformer) 및 [평가자](../resources/glossary.md#estimator).
 
 기계 학습 알고리즘은 특정 형식의 데이터가 필요합니다. `Transformers`는 표 형식 데이터를 호환 가능한 형식으로 변환하는 데 사용됩니다.
 

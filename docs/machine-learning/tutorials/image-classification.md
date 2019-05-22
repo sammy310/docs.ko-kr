@@ -1,15 +1,15 @@
 ---
-title: TensorFlow를 사용하여 ML.NET 사용자 지정 이미지 분류자 빌드
+title: '자습서: TensorFlow를 사용하여 ML.NET 사용자 지정 이미지 분류자 빌드'
 description: 미리 학습된 TensorFlow 모델을 다시 사용하여 이미지를 분류하기 위해 TensorFlow 전이 학습 시나리오에서 ML.NET 사용자 지정 이미지 분류자를 빌드하는 방법을 살펴봅니다.
-ms.date: 04/05/2019
+ms.date: 05/06/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 9b9ac1f1f15b4003a19a3d30d6cadf3e86946376
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f7fddc2d6c60a719090af36b7fe91919bfbd115c
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517969"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063621"
 ---
 # <a name="tutorial-build-an-mlnet-custom-image-classifier-with-tensorflow"></a>자습서: TensorFlow를 사용하여 ML.NET 사용자 지정 이미지 분류자 빌드
 
@@ -25,11 +25,6 @@ ms.locfileid: "59517969"
 > * 미리 학습된 모델 다시 사용 및 조정
 > * 이미지 분류
 
-> [!NOTE]
-> 이 항목은 현재 미리 보기로 제공되는 ML.NET을 참조하며, 자료는 변경될 수 있습니다. 자세한 내용은 [ML.NET 소개](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)를 참조하세요.
-
-이 자습서와 관련 샘플에서는 현재 **ML.NET 버전 0.10**을 사용하고 있습니다. 자세한 내용은 [dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)GitHub 리포지토리에서 릴리스 정보를 참조하세요.
-
 ## <a name="image-classification-sample-overview"></a>이미지 분류 샘플 개요
 
 이 샘플은 미리 학습된 모델을 다시 사용하여 적은 양의 학습 데이터가 포함된 이미지를 분류하는 방식으로 ML.NET을 사용하여 이미지를 분류하는 콘솔 애플리케이션입니다.
@@ -40,9 +35,9 @@ ms.locfileid: "59517969"
 
 * “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2017 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017).
 
-* Microsoft.ML 0.10.0 Nuget 패키지
-* Microsoft.ML.ImageAnalytics 0.10.0 Nuget 패키지
-* Microsoft.ML.TensorFlow 0.10.0 Nuget 패키지
+* Microsoft.ML 1.0.0 Nuget 패키지
+* Microsoft.ML.ImageAnalytics 1.0.0 Nuget 패키지
+* Microsoft.ML.TensorFlow 0.12.0 Nuget 패키지
 
 * [자습서 자산 디렉터리 .ZIP 파일](https://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip)
 
@@ -127,14 +122,11 @@ toaster2.png    appliance
 
 ### <a name="create-a-project"></a>프로젝트 만들기
 
-1. Visual Studio 2017을 엽니다. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트**를 선택합니다. **새 프로젝트** 대화 상자에서 **Visual C#** 노드와 **.NET Core** 노드를 차례로 선택합니다. 그런 다음 **콘솔 앱(.NET Core)** 프로젝트 템플릿을 선택합니다. **이름** 텍스트 상자에 “TransferLearningTF”를 입력하고 **확인** 단추를 선택합니다.
+1. "TransferLearningTF"라는 **.NET Core 콘솔 애플리케이션**을 만듭니다.
 
 2. **Microsoft.ML NuGet 패키지**를 설치합니다.
 
-    솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. 패키지 소스로 “nuget.org”를 선택하고, [찾아보기] 탭을 선택하고, **Microsoft.ML**을 검색합니다. **버전** 드롭다운을 클릭하고, 목록에서 **0.10.0** 패키지를 선택하고, **설치** 단추를 선택합니다. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다. **Microsoft.ML.ImageAnalytics v0.10.0** 및 **Microsoft.ML.TensorFlow v0.10.0**에 대해 이 단계를 반복합니다.
-
-  > [!NOTE]
-  > 이 자습서에서는 **Microsoft.ML v0.10.0**, **Microsoft.ML.ImageAnalytics v0.10.0** 및 **Microsoft.ML.TensorFlow v0.10.0**을 사용합니다.
+    솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. 패키지 소스로 “nuget.org”를 선택하고, [찾아보기] 탭을 선택하고, **Microsoft.ML**을 검색합니다. **버전** 드롭다운을 클릭하고, 목록에서 **1.0.0** 패키지를 선택하고, **설치** 단추를 선택합니다. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다. **Microsoft.ML.ImageAnalytics v1.0.0** 및 **Microsoft.ML.TensorFlow v0.12.0**에 대해 이 단계를 반복합니다.
 
 ### <a name="prepare-your-data"></a>데이터 준비
 
@@ -228,31 +220,26 @@ Inception 모델에는 전달해야 하는 여러 가지 기본 매개 변수가
 
 ### <a name="create-a-display-utility-method"></a>표시 유틸리티 메서드 만들기
 
-이미지 데이터와 관련 예측을 두 번 이상 쌍으로 연결하고 표시하며, 코드를 복제하지는 않으려고 합니다. 이미지 및 예측 결과를 쌍으로 연결하고 표시하는 작업을 처리하는 표시 유틸리티 메서드를 만듭니다.
+이미지 데이터와 관련 예측을 여러 번 표시하므로 표시 유틸리티 메서드를 만들어 이미지 및 예측 결과 표시를 처리합니다.
 
-`PairAndDisplayResults()` 메서드는 다음 작업을 실행합니다.
+`DisplayResults()` 메서드는 다음 작업을 실행합니다.
 
-* 보고를 위해 데이터 및 예측을 결합합니다.
 * 예측 결과를 표시합니다.
 
-다음 코드를 사용하여 `InceptionSettings` 구조체 바로 뒤에 `PairAndDisplayResults()` 메서드를 만듭니다.
+다음 코드를 사용하여 `InceptionSettings` 구조체 바로 뒤에 `DisplayResults()` 메서드를 만듭니다.
 
 ```csharp
-private static void PairAndDisplayResults(IEnumerable<ImageNetData> imageData, IEnumerable<ImageNetPrediction> imagePredictionData)
+private static void DisplayResults(IEnumerable<ImagePrediction> imagePredictionData)
 {
 
 }
 ```
 
-예측 결과를 표시하기 전에 `imageData` 및 `imagePrediction`을 결합하여 예측된 범주가 있는 원래 `Image Path`를 확인합니다. 다음 코드는 <xref:System.Linq.Enumerable.Zip%2A?displayProperty=nameWithType> 메서드를 사용하여 작업이 수행되도록 하므로, `PairAndDisplayResults()` 메서드의 첫 줄로 해당 코드를 추가합니다.
-
-[!code-csharp[BuildImagePredictionPairs](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#BuildImagePredictionPairs)]
-
-이제 `imageData` 및 `imageData`를 클래스로 결합했으므로 <xref:System.Console.WriteLine?displayProperty=nameWithType> 메서드를 사용하여 결과를 표시할 수 있습니다.
+`Transform()` 메서드는 예측 필드와 함께 `ImagePrediction`에서 `ImagePath`를 채웁니다. ML.NET 프로세스를 진행하면서 각 구성 요소가 열을 추가하므로 결과를 쉽게 표시합니다.
 
 [!code-csharp[DisplayPredictions](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DisplayPredictions)]
 
-다음 두 가지 방법으로 `PairAndDisplayResults()` 메서드를 호출합니다.
+두 이미지 분류 메서드에서 `DisplayResults()` 메서드를 호출합니다.
 
 ### <a name="create-a-tsv-file-utility-method"></a>.tsv 파일 유틸리티 메서드 만들기
 
@@ -274,7 +261,7 @@ public static IEnumerable<ImageData> ReadFromTsv(string file, string folder)
 다음 코드는 `tags.tsv` 파일을 구문 분석하여 `ImagePath` 속성의 이미지 파일 이름에 파일 경로를 추가하고 로드한 다음, `Label`을 `ImageData` 개체로 로드합니다. `ReadFromTsv()` 메서드의 첫 번째 줄로 추가합니다.  예측 결과를 표시하려면 정규화된 파일 경로가 필요합니다.
 
 [!code-csharp[ReadFromTsv](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ReadFromTsv)]
-ML.NET에는 세 가지 주요 개념이 있습니다. [데이터](../basic-concepts-model-training-in-mldotnet.md#data), [변환기](../basic-concepts-model-training-in-mldotnet.md#transformer) 및 [평가자](../basic-concepts-model-training-in-mldotnet.md#estimator).
+ML.NET에는 세 가지 주요 개념이 있습니다. [데이터](../resources/glossary.md#data), [변환기](../resources/glossary.md#transformer) 및 [평가자](../resources/glossary.md#estimator).
 
 ## <a name="reuse-and-tune-pre-trained-model"></a>미리 학습된 모델 다시 사용 및 조정
 
@@ -290,12 +277,12 @@ ML.NET에는 세 가지 주요 개념이 있습니다. [데이터](../basic-conc
 * 모델을 조정(다시 학습)합니다.
 * 모델 결과를 표시합니다.
 * 모델을 평가합니다.
-* 모델을 저장합니다.
+* 모델을 반환합니다.
 
-다음 코드를 사용하여 `InceptionSettings` 구조체 바로 뒤 및 `PairAndDisplayResults()` 메서드 바로 앞에 `ReuseAndTuneInceptionModel()` 메서드를 만듭니다.
+다음 코드를 사용하여 `InceptionSettings` 구조체 바로 뒤 및 `DisplayResults()` 메서드 바로 앞에 `ReuseAndTuneInceptionModel()` 메서드를 만듭니다.
 
 ```csharp
-public static void ReuseAndTuneInceptionModel(MLContext mlContext, string dataLocation, string imagesFolder, string inputModelLocation, string outputModelLocation)
+public static ITransformer ReuseAndTuneInceptionModel(MLContext mlContext, string dataLocation, string imagesFolder, string inputModelLocation, string outputModelLocation)
 {
 
 }
@@ -303,9 +290,9 @@ public static void ReuseAndTuneInceptionModel(MLContext mlContext, string dataLo
 
 ### <a name="load-the-data"></a>데이터 로드
 
-ML.NET의 데이터는 [IDataView 클래스](xref:Microsoft.Data.DataView.IDataView)로 표시됩니다. `IDataView`는 표 형식 데이터(숫자 및 텍스트)를 유연하고 효율적으로 설명하는 방법입니다. 데이터를 텍스트 파일 또는 실시간(예: SQL 데이터베이스 또는 로그 파일)에서 `IDataView` 개체로 로드할 수 있습니다.
+ML.NET의 데이터는 [IDataView 클래스](xref:Microsoft.ML.IDataView)로 표시됩니다. `IDataView`는 표 형식 데이터(숫자 및 텍스트)를 유연하고 효율적으로 설명하는 방법입니다. 데이터를 텍스트 파일 또는 실시간(예: SQL 데이터베이스 또는 로그 파일)에서 `IDataView` 개체로 로드할 수 있습니다.
 
-`MLContext.Data.ReadFromTextFile` 래퍼를 사용하여 데이터를 로드합니다. `ReuseAndTuneInceptionModel()` 메서드에 아래 코드를 다음 줄로 추가합니다.
+`MLContext.Data.LoadFromTextFile` 래퍼를 사용하여 데이터를 로드합니다. `ReuseAndTuneInceptionModel()` 메서드에 아래 코드를 다음 줄로 추가합니다.
 
 [!code-csharp[LoadData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadData "Load the data")]
 
@@ -322,14 +309,14 @@ ML.NET의 데이터는 [IDataView 클래스](xref:Microsoft.Data.DataView.IDataV
 이미지 처리 평가자는 기능 추출에 미리 학습된 [DNN(심층 신경망)](https://en.wikipedia.org/wiki/Deep_learning#Deep_neural_networks) featurizer를 사용합니다. 심층 신경망을 처리할 때 필요한 네트워크 형식에 맞게 이미지를 조정합니다. 이런 이유로 여러 가지 이미지 변환을 사용하여 모델에 필요한 형식으로 이미지 데이터를 가져옵니다.
 
 1. `LoadImages` 변환 이미지는 비트맵 형식으로 메모리에 로드됩니다.
-2. 미리 학습된 모델에 정의된 입력 이미지 너비 및 높이가 포함되므로 `Resize` 변환은 이미지 크기를 조정합니다.
-3. `ImagePixelExtractingEstimator` 변환은 입력 이미지에서 픽셀을 추출하고 숫자 벡터로 변환합니다.
+2. 미리 학습된 모델에 정의된 입력 이미지 너비 및 높이가 포함되므로 `ResizeImages` 변환은 이미지 크기를 조정합니다.
+3. `ExtractPixels` 변환은 입력 이미지에서 픽셀을 추출하고 숫자 벡터로 변환합니다.
 
 이 이미지 변환을 다음 코드 줄로 추가합니다.
 
 [!code-csharp[ImageTransforms](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ImageTransforms)]
 
-`TensorFlowTransform`은 지정된 출력(`Inception model`의 이미지 기능 `softmax2_pre_activation`)을 추출하고 미리 학습된 `TensorFlow` 모델을 사용하여 데이터 세트의 점수를 매깁니다.
+`LoadTensorFlowModel`은 `TensorFlow` 모델이 한 번 로드되도록 허용한 다음, `ScoreTensorFlowModel`을 사용하여 `TensorFlowEstimator`를 만드는 간편 메서드입니다. `ScoreTensorFlowModel`은 지정된 출력(`Inception model`의 이미지 기능 `softmax2_pre_activation`)을 추출하고 미리 학습된 `TensorFlow` 모델을 사용하여 데이터 세트의 점수를 매깁니다.
 
 `softmax2_pre_activation`은 이미지가 속한 클래스를 판별하여 모델을 지원합니다. `softmax2_pre_activation`은 각 이미지 범주의 확률을 반환하고, 모든 해당 확률의 합계는 1이어야 합니다. 다음 예제와 같이 이미지가 하나의 범주에만 속한다고 가정합니다.
 
@@ -345,7 +332,7 @@ ML.NET의 데이터는 [IDataView 클래스](xref:Microsoft.Data.DataView.IDataV
 
 ### <a name="choose-a-training-algorithm"></a>학습 알고리즘 선택
 
-학습 알고리즘을 추가하려면 `mlContext.MulticlassClassification.Trainers.LogisticRegression()` 래퍼 메서드를 호출합니다.  `LogisticRegression`은 `estimator`에 추가되고 Inception 이미지 기능(`softmax2_pre_activation`) 및 `Label` 입력 매개 변수를 수락하여 기록 데이터를 기반으로 학습합니다.  다음 코드를 사용하여 강사를 추가합니다.
+학습 알고리즘을 추가하려면 `mlContext.MulticlassClassification.Trainers.LbfgsMaximumEntropy()` 래퍼 메서드를 호출합니다.  [LbfgsMaximumEntropy](xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer)는 `estimator`에 추가되고 Inception 이미지 기능(`softmax2_pre_activation`) 및 `Label` 입력 매개 변수를 수락하여 기록 데이터를 기반으로 학습합니다.  다음 코드를 사용하여 강사를 추가합니다.
 
 [!code-csharp[AddTrainer](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#AddTrainer)]
 
@@ -353,7 +340,7 @@ ML.NET의 데이터는 [IDataView 클래스](xref:Microsoft.Data.DataView.IDataV
 
 [!code-csharp[MapValueToKey2](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#MapValueToKey2)]
 
-`Fit()` 메서드는 제공된 학습 데이터 세트를 통해 모델을 학습합니다. 데이터를 변환하고 학습을 적용하여 `Estimator` 정의를 실행하고, 학습된 모델인 `Transformer`를 반환합니다. 모델을 `Train` 데이터에 맞추고 `ReuseAndTuneInceptionModel()` 메서드에서 다음 줄의 코드로 다음 항목을 추가하여 학습된 모델을 반환합니다.
+`Fit()` 메서드는 데이터 세트를 변환하고 학습을 적용하여 모델을 학습합니다. 모델을 학습 데이터 세트에 맞추고 `ReuseAndTuneInceptionModel()` 메서드에서 다음 줄로 다음 항목을 추가하여 학습된 모델을 반환합니다.
 
 [!code-csharp[TrainModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#TrainModel)]
 
@@ -365,15 +352,15 @@ ML.NET의 데이터는 [IDataView 클래스](xref:Microsoft.Data.DataView.IDataV
 
 [!code-csharp[EnumerateDataViews](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#EnumerateDataViews)]
 
-`PairAndDisplayResults()` 메서드를 호출하여 데이터와 예측을 쌍으로 연결하고 `ReuseAndTuneInceptionModel()` 메서드의 다음 줄로 표시합니다.
+`DisplayResults()` 메서드를 호출하여 데이터와 예측을 `ReuseAndTuneInceptionModel()` 메서드의 다음 줄로 표시합니다.
 
-[!code-csharp[CallPairAndDisplayResults1](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallPairAndDisplayResults1)]
+[!code-csharp[CallDisplayResults1](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallDisplayResults1)]
 
 예측 세트가 있으면 [Evaluate()](xref:Microsoft.ML.RecommendationCatalog.Evaluate%2A) 메서드가 다음을 수행합니다.
 
 * 모델을 평가합니다(예측 값을 실제 데이터 세트 `Labels`와 비교).
 
-* 모델 성능 메트릭을 반환합니다. 
+* 모델 성능 메트릭을 반환합니다.
 
 `ReuseAndTuneInceptionModel()` 메서드에 아래 코드를 다음 줄로 추가합니다.
 
@@ -389,9 +376,9 @@ ML.NET의 데이터는 [IDataView 클래스](xref:Microsoft.Data.DataView.IDataV
 
 [!code-csharp[DisplayMetrics](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DisplayMetrics)]
 
-`mlContext.Model.Save`는 학습된 모델을 .zip 파일(“assets/outputs” 폴더에 있음)에 저장하고, 이를 다른 .NET 애플리케이션에서 예측을 수행하는 데 사용할 수 있습니다. `ReuseAndTuneInceptionModel()` 메서드에 아래 코드를 다음 줄로 추가합니다.
+ 다음 코드를 추가하여 학습된 모델을 다음 줄로 반환합니다.
 
-[!code-csharp[SaveModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#SaveModel)]
+[!code-csharp[SaveModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ReturnModel)]
 
 ## <a name="classify-images-with-a-loaded-model"></a>로드된 모델을 통해 이미지 분류
 
@@ -401,34 +388,29 @@ ML.NET의 데이터는 [IDataView 클래스](xref:Microsoft.Data.DataView.IDataV
 
 `ClassifyImages()` 메서드는 다음 작업을 실행합니다.
 
-* 모델을 로드합니다.
 * .TSV 파일을 `IEnumerable`로 읽습니다.
 * 테스트 데이터를 기반으로 이미지 분류를 예측합니다.
 
 다음 코드를 사용하여 `ReuseAndTuneInceptionModel()` 메서드 바로 뒤 및 `PairAndDisplayResults()` 메서드 바로 앞에 `ClassifyImages()` 메서드를 만듭니다.
 
 ```csharp
-public static void ClassifyImages(MLContext mlContext, string dataLocation, string imagesFolder, string outputModelLocation)
+public static void ClassifyImages(MLContext mlContext, string dataLocation, string imagesFolder, string outputModelLocation, ITransformer model)
 {
 
 }
 ```
 
-먼저 다음 코드를 사용하여 이전에 저장한 모델을 로드합니다.
+먼저 `ReadFromTsv()` 메서드를 호출하여 각 `ImagePath`의 정규화된 경로를 포함하는 `IEnumerable<ImageData>` 클래스를 만듭니다. 데이터와 예측 결과를 쌍으로 연결하려면 파일 경로가 필요합니다. 또한 예측하는 데 사용할 `IDataView`로 `IEnumerable<ImageData>` 클래스를 변환해야 합니다. `ClassifyImages()` 메서드의 다음 두 줄로 아래 코드를 추가합니다.
 
-[!code-csharp[LoadModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadModel)]
+[!code-csharp[CallReadFromTSV](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallReadFromTSV)]
 
-`ReadFromTsv()` 메서드를 호출하여 각 `ImagePath`의 정규화된 경로를 포함하는 `IEnumerable<ImageData>` 클래스를 만듭니다. 데이터와 예측 결과를 쌍으로 연결하려면 파일 경로가 필요합니다. 또한 예측하는 데 사용할 `IDataView`로 `IEnumerable<ImageData>` 클래스를 변환해야 합니다. `ClassifyImages()` 메서드의 다음 두 줄로 아래 코드를 추가합니다.
-
-[!code-csharp[ReadFromTSV](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ReadFromTSV)]
-
-이전에 학습 이미지 데이터를 예측한 것처럼 [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) 메서드를 사용하여 테스트 이미지 데이터의 범주를 예측합니다. 예측을 위해 다음 코드를 `ClassifyImages()` 메서드에 추가하고, 쌍 연결 및 표시를 위해 `predictions` `IDataView`를 `IEnumerable`로 변환합니다.
+이전에 학습 이미지 데이터를 예측한 것처럼 전달된 모델의 [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) 메서드를 사용하여 테스트 이미지 데이터의 범주를 예측합니다. 예측을 위해 다음 코드를 `ClassifyImages()` 메서드에 추가하고, 쌍 연결 및 표시를 위해 `predictions` `IDataView`를 `IEnumerable`로 변환합니다.
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#Predict)]
 
-테스트 이미지 데이터 및 예측을 쌍으로 연결하고 표시하려면 다음 코드를 추가하여 `PairAndDisplayResults()` 메서드의 다음 줄로 이전에 만들어진 `ClassifyImages()` 메서드를 호출합니다.
+테스트 이미지 데이터 및 예측을 쌍으로 연결하고 표시하려면 다음 코드를 추가하여 `DisplayResults()` 메서드의 다음 줄로 이전에 만들어진 `ClassifyImages()` 메서드를 호출합니다.
 
-[!code-csharp[CallPairAndDisplayResults2](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallPairAndDisplayResults2)]
+[!code-csharp[CallDisplayResults2](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallDisplayResults2)]
 
 ## <a name="classify-a-single-image-with-a-loaded-model"></a>로드된 모델을 통해 단일 이미지 분류
 
@@ -436,26 +418,21 @@ public static void ClassifyImages(MLContext mlContext, string dataLocation, stri
 
 [!code-csharp[CallClassifySingleImage](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallClassifySingleImage)]
 
-`ClassifyImages()` 메서드는 다음 작업을 실행합니다.
+`ClassifySingleImage()` 메서드는 다음 작업을 실행합니다.
 
-* 모델을 로드합니다.
 * `ImageData` 인스턴스를 로드합니다.
 * 테스트 데이터를 기반으로 이미지 분류를 예측합니다.
 
 다음 코드를 사용하여 `ClassifyImages()` 메서드 바로 뒤 및 `PairAndDisplayResults()` 메서드 바로 앞에 `ClassifySingleImage()` 메서드를 만듭니다.
 
 ```csharp
-public static void ClassifySingleImage(MLContext mlContext, string imagePath, string outputModelLocation)
+public static void ClassifySingleImage(MLContext mlContext, string imagePath, string outputModelLocation, ITransformer model)
 {
 
 }
 ```
 
-먼저 다음 코드를 사용하여 이전에 저장한 모델을 로드합니다.
-
-[!code-csharp[LoadModel2](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadModel2)]
-
-단일 `ImagePath`의 정규화된 경로 및 이미지 파일 이름을 포함하는 `ImageData` 클래스를 만듭니다. `ClassifySingleImage()` 메서드의 다음 줄로 아래 코드를 추가합니다.
+먼저 단일 `ImagePath`의 정규화된 경로 및 이미지 파일 이름을 포함하는 `ImageData` 클래스를 만듭니다. `ClassifySingleImage()` 메서드의 다음 줄로 아래 코드를 추가합니다.
 
 [!code-csharp[LoadImageData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadImageData)]
 
@@ -484,19 +461,15 @@ Image: toaster2.png predicted as: appliance with score: 0.9800823
 =============== Classification metrics ===============
 LogLoss is: 0.0228266745633507
 PerClassLogLoss is: 0.0277501705149937 , 0.0186303530571291 , 0.0217359128952187
-=============== Save model to local file ===============
-Model saved: C:\Tutorials\TransferLearningTF\bin\Debug\netcoreapp2.2\assets\outputs\imageClassifier.zip
-=============== Loading model ===============
-Model loaded: C:\Tutorials\TransferLearningTF\bin\Debug\netcoreapp2.2\assets\outputs\imageClassifier.zip
 =============== Making classifications ===============
 Image: broccoli.png predicted as: food with score: 0.905548
 Image: pizza3.jpg predicted as: food with score: 0.9709008
 Image: teddy6.jpg predicted as: toy with score: 0.9750155
-=============== Loading model ===============
-Model loaded: C:\Tutorials\TransferLearningTF\bin\Debug\netcoreapp2.2\assets\outputs\imageClassifier.zip
 =============== Making single image classification ===============
 Image: toaster3.jpg predicted as: appliance with score: 0.9625379
-Press any key to continue . . .
+
+C:\Program Files\dotnet\dotnet.exe (process 4304) exited with code 0.
+Press any key to close this window . . .
 ```
 
 지금까지 이제 ML.NET에서 미리 학습된 `TensorFlow` 모델을 다시 사용하여 이미지 분류를 위한 기계 학습 모델을 성공적으로 빌드했습니다.

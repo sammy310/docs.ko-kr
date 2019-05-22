@@ -1,17 +1,21 @@
 ---
 title: dotnet build 명령
 description: dotnet build 명령은 프로젝트와 모든 종속성을 빌드합니다.
-ms.date: 12/04/2018
-ms.openlocfilehash: 6a701ee371221c780a878e64b996df95f709371f
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.date: 04/24/2019
+ms.openlocfilehash: 2e58bace8055ba793bf7a6ca3a51eb20aa689768
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612695"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755224"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
+**이 문서 적용 대상: ✓** .NET Core 1.x SDK 이상 버전
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>name
 
@@ -19,25 +23,12 @@ ms.locfileid: "59612695"
 
 ## <a name="synopsis"></a>개요
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```
-dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--no-dependencies] [--no-incremental]
-    [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--interactive] [--no-dependencies]
+    [--no-incremental] [--nologo] [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
 dotnet build [-h|--help]
 ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```
-dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--no-dependencies] [--no-incremental] [-o|--output]
-    [-r|--runtime] [-v|--verbosity] [--version-suffix]
-
-dotnet build [-h|--help]
-```
-
----
 
 ## <a name="description"></a>설명
 
@@ -75,8 +66,6 @@ dotnet build [-h|--help]
 
 ## <a name="options"></a>옵션
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 * **`-c|--configuration {Debug|Release}`**
 
   빌드 구성을 정의합니다. 기본값은 `Debug`입니다.
@@ -87,11 +76,15 @@ dotnet build [-h|--help]
 
 * **`--force`**
 
-  마지막 복원이 성공한 경우에도 모든 종속성을 강제 확인합니다. 이 플래그를 지정하는 것은 *project.assets.json* 파일을 삭제하는 것과 같습니다.
+  마지막 복원이 성공한 경우에도 모든 종속성을 강제 확인합니다. 이 플래그를 지정하는 것은 *project.assets.json* 파일을 삭제하는 것과 같습니다. .NET Core 2.0 SDK 이후 사용할 수 있습니다.
 
 * **`-h|--help`**
 
   명령에 대한 간단한 도움말을 출력합니다.
+
+* **`--interactive`**
+
+  명령이 중지되고 사용자 입력 또는 작업을 대기할 수 있도록 허용합니다. 예를 들어 인증을 완료합니다. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
 
 * **`--no-dependencies`**
 
@@ -101,9 +94,13 @@ dotnet build [-h|--help]
 
   빌드를 증분 빌드에 안전하지 않은 것으로 표시합니다. 이 플래그로 증분 컴파일이 해제되고 프로젝트 종속성 그래프를 강제로 완전히 다시 빌드합니다.
 
+* **`--no-logo`**
+
+  시작 배너 또는 저작권 메시지를 표시하지 않습니다. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
+
 * **`--no-restore`**
 
-  빌드하는 동안 암시적 복원을 실행하지 않습니다.
+  빌드하는 동안 암시적 복원을 실행하지 않습니다. .NET Core 2.0 SDK 이후 사용할 수 있습니다.
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
@@ -115,51 +112,11 @@ dotnet build [-h|--help]
 
 * **`-v|--verbosity <LEVEL>`**
 
-  명령의 세부 정보 표시 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다.
+  MSBuild의 자세한 정도 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다. 기본값은 `minimal`입니다.
 
 * **`--version-suffix <VERSION_SUFFIX>`**
 
-  프로젝트 파일의 버전 필드에서 별표(`*`)에 대한 버전 접미사를 정의합니다. 형식은 NuGet의 버전 지침을 따릅니다.
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-* **`-c|--configuration {Debug|Release}`**
-
-  빌드 구성을 정의합니다. 기본값은 `Debug`입니다.
-
-* **`-f|--framework <FRAMEWORK>`**
-
-  특정 [프레임워크](../../standard/frameworks.md)에 대해 컴파일합니다. 프레임워크는 [프로젝트 파일](csproj.md)에 정의해야 합니다.
-
-* **`-h|--help`**
-
-  명령에 대한 간단한 도움말을 출력합니다.
-
-* **`--no-dependencies`**
-
-  프로젝트 간(P2P) 참조를 무시하고 지정된 루트 프로젝트만 빌드합니다.
-
-* **`--no-incremental`**
-
-  빌드를 증분 빌드에 안전하지 않은 것으로 표시합니다. 이 플래그로 증분 컴파일이 해제되고 프로젝트 종속성 그래프를 강제로 완전히 다시 빌드합니다.
-
-* **`-o|--output <OUTPUT_DIRECTORY>`**
-
-  빌드된 이진 파일을 배치할 디렉터리입니다. 이 옵션을 지정하는 경우 `--framework`도 정의해야 합니다.
-
-* **`-r|--runtime <RUNTIME_IDENTIFIER>`**
-
-  대상 런타임을 지정합니다. RID(런타임 식별자) 목록은 [RID 카탈로그](../rid-catalog.md)를 참조하세요.
-
-* **`-v|--verbosity <LEVEL>`**
-
-  명령의 세부 정보 표시 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다.
-
-* **`--version-suffix <VERSION_SUFFIX>`**
-
-  프로젝트 파일의 버전 필드에서 별표(`*`)에 대한 버전 접미사를 정의합니다. 형식은 NuGet의 버전 지침을 따릅니다.
-
----
+  프로젝트를 빌드할 때 사용할 `$(VersionSuffix)` 속성의 값을 설정합니다. `$(Version)` 속성이 설정되지 않은 경우에만 작동합니다. 그런 다음, `$(Version)`이 대시로 구분하여 `$(VersionSuffix)`와 결합된 `$(VersionPrefix)`로 설정됩니다.
 
 ## <a name="examples"></a>예제
 
@@ -175,10 +132,10 @@ dotnet build [-h|--help]
   dotnet build --configuration Release
   ```
 
-* 특정 런타임(이 예제의 경우 Ubuntu 16.04)에 대한 프로젝트 및 해당 종속성을 빌드합니다.
+* 특정 런타임(이 예제의 경우 Ubuntu 18.04)에 대한 프로젝트 및 해당 종속성을 빌드합니다.
 
   ```console
-  dotnet build --runtime ubuntu.16.04-x64
+  dotnet build --runtime ubuntu.18.04-x64
   ```
 
 * 프로젝트를 빌드하고 복원 작업 중 지정된 NuGet 패키지 소스를 사용합니다(.NET Core 2.0 SDK 이상 버전).

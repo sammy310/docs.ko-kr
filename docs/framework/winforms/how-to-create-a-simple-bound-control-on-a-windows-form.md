@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: fc59e6d5e71bfc69dea0bfc5098a1fa14c97d4b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 79b31e61f4c7739a20765c9484db6a8cfd04b01b
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008956"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003770"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>방법: Windows Form에 단순 바인딩된 컨트롤 만들기
 사용 하 여 *단순 바인딩*, 컨트롤에서 데이터 집합 테이블에서 열 값과 같은 단일 데이터 요소를 표시할 수 있습니다. 컨트롤의 모든 속성을 데이터 값에 간단한 바인딩할 수 있습니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "62008956"
   
      아래에 있는 대부분의 바인딩된 속성이 표시 됩니다는 **(DataBindings)** 속성입니다. 예를 들어, 대부분의 컨트롤에서에서의 **텍스트** 속성은 가장 자주 바인딩됩니다.  
   
-4. 속성을 원하는 경우 바인딩이 아닙니다. 일반적으로 바인딩된 속성 중 하나를 클릭 합니다 **줄임표** 단추 (![VisualStudioEllipsesButton 스크린 샷](./media/vbellipsesbutton.png "vbEllipsesButton") )에 **(고급)** 상자를 표시 합니다 **서식 지정 및 고급 바인딩** 해당 컨트롤에 대 한 속성의 전체 목록 사용 하 여 대화 상자.  
+4.  않으려면 속성 바인딩이 아닙니다. 일반적으로 바인딩된 속성 중 하나를 클릭 합니다 **줄임표** 단추 (![의 줄임표 단추 (...)의 Visual Studio 속성 창에서](./media/how-to-create-a-simple-bound-control-on-a-windows-form/visual-studio-ellipsis-button.png))에 **( 고급)** 상자를 표시 합니다 **서식 지정 및 고급 바인딩** 해당 컨트롤에 대 한 속성의 전체 목록 사용 하 여 대화 상자.  
   
 5. 아래의 드롭다운 화살표를 클릭 하 고 바인딩 속성을 선택 **바인딩**합니다.  
   

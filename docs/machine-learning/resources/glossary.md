@@ -1,14 +1,14 @@
 ---
-title: 기계 학습 용어집 - ML.NET
+title: 기계 학습 용어집
 description: ML.NET에서 사용자 지정 모델을 빌드할 때 유용한 중요한 기계 학습 용어 모음입니다.
 ms.custom: seodec18
 ms.date: 03/05/2019
-ms.openlocfilehash: cc236aaa99fd8a7b05af666a5b96f657d8bd3ad4
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: a3f94f2dedbe620c4d5c2bed2af99471572a91e5
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410240"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063678"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>중요한 용어가 포함된 기계 학습 용어집
 
@@ -29,6 +29,16 @@ ms.locfileid: "58410240"
 
 [레이블](#label)이 두 클래스 중 하나에만 해당하는 [분류](#classification) 사례입니다. 자세한 내용은 [기계 학습 작업](tasks.md) 항목의 [이진 분류](tasks.md#binary-classification) 섹션을 참조하세요.
 
+## <a name="calibration"></a>보정
+
+보정은 이진 및 다중 클래스 분류를 위해 클래스 멤버 자격에 원시 점수를 매핑하는 프로세스입니다. 일부 ML.NET 트레이너에는 `NonCalibrated` 접미사가 있습니다. 이러한 알고리즘은 클래스 확률에 매핑되어야 하는 원시 점수를 생성합니다. 
+
+## <a name="catalog"></a>Catalog 
+
+ML.NET에서 카탈로그는 공통 목적에 따라 그룹화된 확장 함수의 컬렉션입니다.
+
+예를 들어, 각 기계 학습 작업(이진 분류, 회귀, 순위 지정 등)에는 사용 가능한 기계 학습 알고리즘(트레이너)의 카탈로그가 있습니다. 이진 분류 트레이너의 카탈로그는 <xref:Microsoft.ML.BinaryClassificationCatalog.BinaryClassificationTrainers>입니다.
+
 ## <a name="classification"></a>분류
 
 데이터가 범주를 예측하는 데 사용되는 경우 [감독된 기계 학습](#supervised-machine-learning) 작업을 분류라고 합니다. [이진 분류](#binary-classification)는 두 개의 범주만 예측하는 것을 나타냅니다(예: 이미지를 ‘고양이’ 또는 ‘개’의 그림으로 분류). [다중 클래스 분류](#multiclass-classification)는 여러 범주를 예측하는 것을 나타냅니다(예: 이미지를 개의 특정 품종 그림으로 분류하는 경우).
@@ -36,6 +46,25 @@ ms.locfileid: "58410240"
 ## <a name="coefficient-of-determination"></a>결정 계수
 
 [회귀](#regression)에서 데이터가 모델에 얼마나 잘 맞는지를 나타내는 평가 메트릭입니다. 범위는 0에서 1까지입니다. 값 0은 데이터가 무작위이거나 모델에 맞지 않음을 의미합니다. 값 1은 모델이 데이터와 정확히 일치함을 의미합니다. 이를 r<sup>2</sup>, R<sup> 2</sup> 또는 r 제곱이라고 합니다.
+
+## <a name="data"></a>데이터
+
+데이터는 모든 기계 애플리케이션의 핵심입니다. ML.NET에서 데이터는 <xref:Microsoft.ML.IDataView> 개체로 표현됩니다. 데이터 뷰 개체:
+- 열 및 행으로 구성
+- 지연 평가, 자신에 대한 작업이 호출될 때만 데이터 로드
+- 각 열의 유형, 형식, 길이를 정의하는 스키마 포함
+
+## <a name="estimator"></a>평가자
+
+<xref:Microsoft.ML.IEstimator`1> 인터페이스를 구현하는 ML.NET의 클래스입니다.
+
+평가자는 변환의 사양입니다(데이터 준비 변환 및 기계 학습 모델 교육 변환 모두). 평가자는 하나의 변환 파이프라인으로 연결할 수 있습니다. 평가자의 매개 변수 또는 파이프라인은 <xref:Microsoft.ML.IEstimator`1.Fit*> 호출 시 학습됩니다. <xref:Microsoft.ML.IEstimator`1.Fit*>의 결과는 [변환기](#transformer)입니다.
+
+## <a name="extension-method"></a>확장 메서드
+
+클래스의 일부이나 클래스 외부에서 정의되는 .NET 메서드입니다. 확장 메서드의 첫 번째 매개 변수는 확장 메서드가 속한 클래스에 대한 정적 `this` 참조입니다.
+
+확장 메서드는 [평가자](#estimator)의 인스턴스를 구성하기 위해 ML.NET에서 광범위하게 사용됩니다.
 
 ## <a name="feature"></a>기능
 
@@ -60,6 +89,12 @@ ms.locfileid: "58410240"
 ## <a name="log-loss"></a>로그 손실
 
 [분류](#classification)에서 분류자의 정확도를 분류하는 평가 메트릭입니다. 로그 손실이 작을수록 분류자의 정확도가 높아집니다.
+
+## <a name="loss-function"></a>손실 함수
+
+손실 함수는 학습 레이블 값과 모델에 의한 예측 사이의 차이입니다. 손실 함수를 최소화하여 모델의 매개 변수를 추정합니다.
+
+다양한 함수에 서로 다른 트레이너를 구성할 수 있습니다.
 
 ## <a name="mean-absolute-error-mae"></a>MAE(절대 평균 오차)
 
@@ -93,6 +128,13 @@ ms.locfileid: "58410240"
 
 [분류](#classification)에서 클래스의 재현율은 해당 클래스에 속하는 것으로 올바르게 예측된 항목 수를 실제로 클래스에 속하는 총 항목 수로 나눈 값입니다.
 
+## <a name="regularization"></a>정규화
+
+ 정규화는 너무 복잡한 선형 모델에 벌점을 부과합니다. 정규화는 두 가지 종류로 나뉩니다.
+
+- $L_1$ 정규화는 불충분한 기능에 대해 0 가중치를 적용합니다. 이런 정규화 후에는 저장된 모델의 크기가 더 적을 수 있습니다.
+- $L_2$ 정규화는 불충분한 기능에 대한 가중치 범위를 최소화합니다. 더 일반적인 프로세스로, 이상값에 덜 민감합니다.
+
 ## <a name="regression"></a>재발
 
 출력이 실제 값(예: double)인 [감독된 기계 학습](#supervised-machine-learning) 작업입니다. 예로는 재고 가격 예측이 있습니다. 자세한 내용은 [다중 클래스 작업](tasks.md) 항목의 [회귀](tasks.md#regression) 섹션을 참조하세요.
@@ -117,9 +159,11 @@ ms.locfileid: "58410240"
 
 지정된 학습 데이터 집합에 대한 [모델](#model)을 식별하는 프로세스입니다. 선형 모델의 경우 가중치를 찾는 방법입니다. 트리의 경우 분할 지점을 식별하는 작업이 포함됩니다.
 
-## <a name="transform"></a>변형
+## <a name="transformer"></a>변환기
 
-데이터를 변환하는 [파이프라인](#pipeline) 구성 요소입니다. 예를 들어 텍스트에서 숫자의 벡터까지입니다.
+<xref:Microsoft.ML.ITransformer> 인터페이스를 구현하는 ML.NET 클래스
+
+변환기는 한 <xref:Microsoft.ML.IDataView>를 다른 항목으로 변환합니다. 변환기는 [추정기](#estimator) 또는 추정기 파이프라인 학습을 통해 만들어집니다. 
 
 ## <a name="unsupervised-machine-learning"></a>감독되지 않는 기계 학습
 
