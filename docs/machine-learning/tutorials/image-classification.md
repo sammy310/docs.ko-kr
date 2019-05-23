@@ -4,12 +4,12 @@ description: 미리 학습된 TensorFlow 모델을 다시 사용하여 이미지
 ms.date: 05/06/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f7fddc2d6c60a719090af36b7fe91919bfbd115c
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: e248c5ae73281ed6cd492592ba4a51791db75aa2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063621"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593426"
 ---
 # <a name="tutorial-build-an-mlnet-custom-image-classifier-with-tensorflow"></a>자습서: TensorFlow를 사용하여 ML.NET 사용자 지정 이미지 분류자 빌드
 

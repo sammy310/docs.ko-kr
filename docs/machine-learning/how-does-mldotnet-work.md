@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: ea5797cb8f2fd0654d9facb636bc857eeb8e5aad
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: a4573575805ad45d251a900f304b8cb01654a39b
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063679"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557986"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET은 무엇이며 어떻게 작동하나요?
 
@@ -190,7 +190,7 @@ ML.NET 애플리케이션은 <xref:Microsoft.ML.MLContext> 개체로 시작합�
         .Append(mlContext.Regression.Trainers.Sdca(labelColumnName: "Price", maximumNumberOfIterations: 100);
 ```
 
-코드 조각에서 `Concatenate` 및 `Sdca`는 카탈로그에 있는 두 메서드입니다. 이러한 메서드는 파이프라인에 연결된 [IEstimator](xref:Microsoft.ML.IEstimator`1) 개체를 만듭니다.
+코드 조각에서 `Concatenate` 및 `Sdca`는 카탈로그에 있는 두 메서드입니다. 이러한 메서드는 파이프라인에 연결된 [IEstimator](xref:Microsoft.ML.IEstimator%601) 개체를 만듭니다.
 
 이 시점에서는 개체만 만들어집니다. 어떠한 실행도 발생하지 않습니다.
 

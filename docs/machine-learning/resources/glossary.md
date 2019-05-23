@@ -2,20 +2,17 @@
 title: 기계 학습 용어집
 description: ML.NET에서 사용자 지정 모델을 빌드할 때 유용한 중요한 기계 학습 용어 모음입니다.
 ms.custom: seodec18
-ms.date: 03/05/2019
-ms.openlocfilehash: a3f94f2dedbe620c4d5c2bed2af99471572a91e5
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.date: 05/09/2019
+ms.openlocfilehash: 7d098dc9d3dc6cb7bb08b5689b50afff01ba1d7f
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063678"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557973"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>중요한 용어가 포함된 기계 학습 용어집
 
 다음 목록은 ML.NET에서 사용자 지정 모델을 빌드할 때 유용한 중요한 기계 학습 용어 모음입니다.
-
-> [!NOTE]
-> 이 문서는 현재 미리 보기로 제공되고 있는 ML.NET을 참조합니다. 자료가 변경될 수 있습니다. 자세한 내용은 [ML.NET 소개](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)를 참조하세요.
 
 ## <a name="accuracy"></a>정확도
 
@@ -56,7 +53,7 @@ ML.NET에서 카탈로그는 공통 목적에 따라 그룹화된 확장 함수�
 
 ## <a name="estimator"></a>평가자
 
-<xref:Microsoft.ML.IEstimator`1> 인터페이스를 구현하는 ML.NET의 클래스입니다.
+<xref:Microsoft.ML.IEstimator%601> 인터페이스를 구현하는 ML.NET의 클래스입니다.
 
 평가자는 변환의 사양입니다(데이터 준비 변환 및 기계 학습 모델 교육 변환 모두). 평가자는 하나의 변환 파이프라인으로 연결할 수 있습니다. 평가자의 매개 변수 또는 파이프라인은 <xref:Microsoft.ML.IEstimator`1.Fit*> 호출 시 학습됩니다. <xref:Microsoft.ML.IEstimator`1.Fit*>의 결과는 [변환기](#transformer)입니다.
 

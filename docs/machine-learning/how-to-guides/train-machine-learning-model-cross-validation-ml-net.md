@@ -5,12 +5,12 @@ ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: a15dfbfcd563cf9df9c25779a5854a9f556523d1
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: a06711ca83ea545adc7292cf6d8173f006fdb94d
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065566"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557841"
 ---
 # <a name="train-and-evaluate-a-machine-learning-model-using-cross-validation"></a>교차 유효성 검사를 사용하여 기계 학습 모델 학습 및 교육
 
@@ -91,7 +91,7 @@ var cvResults = mlContext.Regression.CrossValidate(transformedData, sdcaEstimato
 1. 각 모델의 성능은 테스트 데이터 세트에 대해 [`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate*) 메서드를 사용하여 평가됩니다. 
 1. 각각의 모델에 대해 모델과 메트릭이 반환됩니다.
 
-`cvResults`에 저장된 결과는 [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult`1) 개체의 컬렉션입니다. 이 개체는 각각 [`Model`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult`1.Model) 및 [`Metrics`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult`1.Metrics) 속성에서 액세스할 수 있는 학습 모델과 메트릭을 포함합니다. 이 샘플에서 `Model` 속성은[`ITransformer`](xref:Microsoft.ML.ITransformer) 형식이고 `Metrics` 속성은 [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics) 형식입니다. 
+`cvResults`에 저장된 결과는 [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) 개체의 컬렉션입니다. 이 개체는 각각 [`Model`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Model) 및 [`Metrics`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Metrics) 속성에서 액세스할 수 있는 학습 모델과 메트릭을 포함합니다. 이 샘플에서 `Model` 속성은[`ITransformer`](xref:Microsoft.ML.ITransformer) 형식이고 `Metrics` 속성은 [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics) 형식입니다. 
 
 ## <a name="extract-metrics"></a>메트릭 추출
 
