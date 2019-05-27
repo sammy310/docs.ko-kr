@@ -18,7 +18,7 @@
       displayName: '>, <, >=, <=, greater, less'
     - name: 멤버 액세스 연산자
       href: member-access-operators.md
-      displayName: '., [], ?., ?[], (), indexer, null-conditional, invocation'
+      displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation'
     - name: 포인터 관련 연산자
       href: pointer-related-operators.md
       displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'

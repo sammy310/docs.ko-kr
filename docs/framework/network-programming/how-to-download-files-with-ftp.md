@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 892548b8-954a-4f6a-9bca-2ae620c3700f
-ms.openlocfilehash: 4e000aa149a9a02e6f12e9b184d9c43a065b673f
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: a0941d42de71029be9aab2fdbc69f8434fb73e2d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028307"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632980"
 ---
-# <a name="how-to-download-files-with-ftp"></a><span data-ttu-id="dddde-103">방법: FTP를 사용하여 파일 다운로드</span><span class="sxs-lookup"><span data-stu-id="dddde-103">How to: Download files with FTP</span></span>
+# <a name="how-to-download-files-with-ftp"></a><span data-ttu-id="0802e-103">방법: FTP를 사용하여 파일 다운로드</span><span class="sxs-lookup"><span data-stu-id="0802e-103">How to: Download files with FTP</span></span>
 
-<span data-ttu-id="dddde-104">이 샘플은 FTP 서버에서 파일을 다운로드하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="dddde-104">This sample shows how to download a file from an FTP server.</span></span>
+<span data-ttu-id="0802e-104">이 샘플은 FTP 서버에서 파일을 다운로드하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0802e-104">This sample shows how to download a file from an FTP server.</span></span>
 
-## <a name="example"></a><span data-ttu-id="dddde-105">예</span><span class="sxs-lookup"><span data-stu-id="dddde-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="0802e-105">예제</span><span class="sxs-lookup"><span data-stu-id="0802e-105">Example</span></span>
 
 ```csharp
 using System;

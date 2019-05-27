@@ -2,17 +2,17 @@
 title: '방법: 폴더의 텍스트 파일 내용 쿼리(LINQ)(C#)'
 ms.date: 07/20/2015
 ms.assetid: f5b4dce7-1a34-4eb4-9bf1-60d5bdda264c
-ms.openlocfilehash: 66e2a2d6ee2b8dd3be3e66f7277947b6d6f749a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1be896f257395cb1e70718ac55e3199da09d8961
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688159"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585840"
 ---
-# <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a><span data-ttu-id="7fb3e-102">방법: 폴더의 텍스트 파일 내용 쿼리(LINQ)(C#)</span><span class="sxs-lookup"><span data-stu-id="7fb3e-102">How to: Query the Contents of Text Files in a Folder (LINQ) (C#)</span></span>
-<span data-ttu-id="7fb3e-103">이 예제에서는 지정된 디렉터리 트리에 있는 모든 파일을 쿼리하고 각 파일을 연 다음 내용을 검사하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="7fb3e-103">This example shows how to query over all the files in a specified directory tree, open each file, and inspect its contents.</span></span> <span data-ttu-id="7fb3e-104">이러한 유형의 기술을 사용하여 디렉터리 트리 내용의 인덱스 또는 역방향 인덱스를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7fb3e-104">This type of technique could be used to create indexes or reverse indexes of the contents of a directory tree.</span></span> <span data-ttu-id="7fb3e-105">이 예제에서는 단순 문자열 검색이 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="7fb3e-105">A simple string search is performed in this example.</span></span> <span data-ttu-id="7fb3e-106">그러나 정규식을 사용하면 더 복잡한 유형의 패턴 일치를 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7fb3e-106">However, more complex types of pattern matching can be performed with a regular expression.</span></span> <span data-ttu-id="7fb3e-107">자세한 내용은 [방법: LINQ 쿼리와 정규식 결합(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="7fb3e-107">For more information, see [How to: Combine LINQ Queries with Regular Expressions (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md).</span></span>  
+# <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a><span data-ttu-id="3b01c-102">방법: 폴더의 텍스트 파일 내용 쿼리(LINQ)(C#)</span><span class="sxs-lookup"><span data-stu-id="3b01c-102">How to: Query the Contents of Text Files in a Folder (LINQ) (C#)</span></span>
+<span data-ttu-id="3b01c-103">이 예제에서는 지정된 디렉터리 트리에 있는 모든 파일을 쿼리하고 각 파일을 연 다음 내용을 검사하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3b01c-103">This example shows how to query over all the files in a specified directory tree, open each file, and inspect its contents.</span></span> <span data-ttu-id="3b01c-104">이러한 유형의 기술을 사용하여 디렉터리 트리 내용의 인덱스 또는 역방향 인덱스를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3b01c-104">This type of technique could be used to create indexes or reverse indexes of the contents of a directory tree.</span></span> <span data-ttu-id="3b01c-105">이 예제에서는 단순 문자열 검색이 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="3b01c-105">A simple string search is performed in this example.</span></span> <span data-ttu-id="3b01c-106">그러나 정규식을 사용하면 더 복잡한 유형의 패턴 일치를 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3b01c-106">However, more complex types of pattern matching can be performed with a regular expression.</span></span> <span data-ttu-id="3b01c-107">자세한 내용은 [방법: LINQ 쿼리와 정규식 결합(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="3b01c-107">For more information, see [How to: Combine LINQ Queries with Regular Expressions (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7fb3e-108">예제</span><span class="sxs-lookup"><span data-stu-id="7fb3e-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="3b01c-108">예제</span><span class="sxs-lookup"><span data-stu-id="3b01c-108">Example</span></span>  
   
 ```csharp  
 class QueryContents  
@@ -70,10 +70,10 @@ class QueryContents
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="7fb3e-109">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="7fb3e-109">Compiling the Code</span></span>  
- <span data-ttu-id="7fb3e-110">System.Core.dll에 대한 참조와 System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 사용하여 .NET Framework 버전 3.5 이상을 대상으로 하는 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="7fb3e-110">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="3b01c-109">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="3b01c-109">Compiling the Code</span></span>  
+<span data-ttu-id="3b01c-110">System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통해 C# 콘솔 애플리케이션 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="3b01c-110">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="7fb3e-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="7fb3e-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3b01c-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="3b01c-111">See also</span></span>
 
-- [<span data-ttu-id="7fb3e-112">LINQ 및 파일 디렉터리(C#)</span><span class="sxs-lookup"><span data-stu-id="7fb3e-112">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
-- [<span data-ttu-id="7fb3e-113">LINQ to Objects(C#)</span><span class="sxs-lookup"><span data-stu-id="7fb3e-113">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [<span data-ttu-id="3b01c-112">LINQ 및 파일 디렉터리(C#)</span><span class="sxs-lookup"><span data-stu-id="3b01c-112">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="3b01c-113">LINQ to Objects(C#)</span><span class="sxs-lookup"><span data-stu-id="3b01c-113">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)

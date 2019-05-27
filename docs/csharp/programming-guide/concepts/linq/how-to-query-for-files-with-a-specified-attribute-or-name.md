@@ -2,17 +2,17 @@
 title: '방법: 지정된 특성 또는 이름을 갖는 파일 쿼리(C#)'
 ms.date: 07/20/2015
 ms.assetid: 560e3879-b0b3-4549-ad02-0a53aff2f83c
-ms.openlocfilehash: e600899251fe08884088275307f4311f3b9787cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94642ff500cb065ffcb28d6099c3f9f50d43d124
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564161"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584332"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a><span data-ttu-id="ceba8-102">방법: 지정된 특성 또는 이름을 갖는 파일 쿼리(C#)</span><span class="sxs-lookup"><span data-stu-id="ceba8-102">How to: Query for Files with a Specified Attribute or Name (C#)</span></span>
-<span data-ttu-id="ceba8-103">이 예제에서는 지정된 디렉터리 트리에서 지정된 파일 이름 확장명(예: ".txt")을 가진 파일을 모두 찾는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ceba8-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="ceba8-104">또한 생성 시간을 기준으로 트리에서 가장 최신 파일이나 가장 오래된 파일을 반환하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ceba8-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a><span data-ttu-id="994f2-102">방법: 지정된 특성 또는 이름을 갖는 파일 쿼리(C#)</span><span class="sxs-lookup"><span data-stu-id="994f2-102">How to: Query for Files with a Specified Attribute or Name (C#)</span></span>
+<span data-ttu-id="994f2-103">이 예제에서는 지정된 디렉터리 트리에서 지정된 파일 이름 확장명(예: ".txt")을 가진 파일을 모두 찾는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="994f2-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="994f2-104">또한 생성 시간을 기준으로 트리에서 가장 최신 파일이나 가장 오래된 파일을 반환하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="994f2-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ceba8-105">예제</span><span class="sxs-lookup"><span data-stu-id="ceba8-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="994f2-105">예제</span><span class="sxs-lookup"><span data-stu-id="994f2-105">Example</span></span>  
   
 ```csharp  
 class FindFileByExtension  
@@ -63,10 +63,10 @@ class FindFileByExtension
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="ceba8-106">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="ceba8-106">Compiling the Code</span></span>  
- <span data-ttu-id="ceba8-107">System.Core.dll에 대한 참조와 System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 사용하여 .NET Framework 버전 3.5 이상을 대상으로 하는 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="ceba8-107">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to   System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="994f2-106">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="994f2-106">Compiling the Code</span></span>  
+  <span data-ttu-id="994f2-107">System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통해 C# 콘솔 애플리케이션 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="994f2-107">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="ceba8-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ceba8-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="994f2-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="994f2-108">See also</span></span>
 
-- [<span data-ttu-id="ceba8-109">LINQ to Objects(C#)</span><span class="sxs-lookup"><span data-stu-id="ceba8-109">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-- [<span data-ttu-id="ceba8-110">LINQ 및 파일 디렉터리(C#)</span><span class="sxs-lookup"><span data-stu-id="ceba8-110">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="994f2-109">LINQ to Objects(C#)</span><span class="sxs-lookup"><span data-stu-id="994f2-109">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [<span data-ttu-id="994f2-110">LINQ 및 파일 디렉터리(C#)</span><span class="sxs-lookup"><span data-stu-id="994f2-110">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
