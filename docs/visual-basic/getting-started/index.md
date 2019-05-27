@@ -5,12 +5,12 @@ helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: 0a8481d312c0a2c58d6e68d3fc0945766eba3e2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb1ce118bd46b2db840138a7ca13e9d1f5d75231
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797141"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053660"
 ---
 # <a name="get-started-with-visual-basic"></a>Visual Basic 시작
 설명서의 이 섹션에서는 Visual Basic 애플리케이션의 개발을 시작하는 데 도움이 되는 내용을 제공합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "61797141"
 - [Visual Basic 가져오기](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)\
 무료 버전을 포함하여 Visual Basic 지원이 포함된 Visual Studio 버전에 대한 다운로드 링크를 제공합니다.
 
-- [초보자를 위한 Visual Basic 기본 사항](https://mva.microsoft.com/en-US/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)\
+- [초보자를 위한 Visual Basic 기본 사항](https://mva.microsoft.com/en-us/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)\
 Visual Basic 프로그래밍의 기본 개념에 대해 설명하는 Microsoft Virtual Academy 과정입니다.
 
 - [개체 지향 프로그래밍](../programming-guide/concepts/object-oriented-programming.md)\

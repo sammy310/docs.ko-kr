@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 81995d8003a9bb78f6a97ca7eadca94a2136c8a7
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 898771c3de8b54c08decd91f1a631a6205292912
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960008"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053634"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework의 새로운 기능
 
@@ -1381,7 +1381,7 @@ WPF에는 DX10 및 Dx11 콘텐츠와 쉽게 상호 운용할 수 있는 <xref:Sy
 
 - [ICorProfilerInfo7](../unmanaged-api/profiling/icorprofilerinfo7-interface.md) 인터페이스에서 PDB 액세스에 대한 지원 개선
 
-   ASP.NET Core에서는 Roslyn에 의해 어셈블리가 메모리 내에서 컴파일되는 경우가 더 많아지고 있습니다. 프로파일링 도구를 만드는 개발자에게 있어 이는 지금까지 디스크에 serialize되던 PDB가 더 이상 존재하지 않는다는 의미입니다. 프로파일러 도구는 종종 코드 검사 또는 줄 단위 성능 분석 등의 작업을 위해 PDB를 사용하여 코드를 다시 소스 줄에 매핑합니다. [ICorProfilerInfo7](../unmanaged-api/profiling/icorprofilerinfo7-interface.md) 인터페이스는 [ICorProfilerInfo7::GetInMemorySymbolsLength](../unmanaged-api/profiling/icorprofilerinfo7-getinmemorysymbolslength-method.md)와 [ICorProfilerInfo7::ReadInMemorySymbols](../unmanaged-api/profiling/icorprofilerinfo7-readinmemorysymbols.md)의 두 가지 새로운 메서드를 포함합니다. 이 인터페이스에는 이제 메모리 내 PDB 데이터에 대한 액세스 권한과 함께 이러한 프로파일러 도구를 제공하는 새 메서드가 포함됩니다. 새 API를 사용하면 프로파일러가 메모리 내 PDB 콘텐츠를 바이트 배열로 가져온 다음 처리하거나 디스크로 직렬화할 수 있습니다.
+   ASP.NET Core에서는 Roslyn에 의해 어셈블리가 메모리 내에서 컴파일되는 경우가 더 많아지고 있습니다. 프로파일링 도구를 만드는 개발자에게 있어 이는 지금까지 디스크에 serialize되던 PDB가 더 이상 존재하지 않는다는 의미입니다. 프로파일러 도구는 종종 코드 검사 또는 줄 단위 성능 분석 등의 작업을 위해 PDB를 사용하여 코드를 다시 소스 줄에 매핑합니다. [ICorProfilerInfo7](../unmanaged-api/profiling/icorprofilerinfo7-interface.md) 인터 페이스는 [ICorProfilerInfo7::GetInMemorySymbolsLength](../unmanaged-api/profiling/icorprofilerinfo7-getinmemorysymbolslength-method.md)와 [ICorProfilerInfo7::ReadInMemorySymbols](../unmanaged-api/profiling/icorprofilerinfo7-readinmemorysymbols.md)의 두 가지 새로운 메서드를 포함합니다. 이 인터페이스에는 이제 메모리 내 PDB 데이터에 대한 액세스 권한과 함께 이러한 프로파일러 도구를 제공하는 새 메서드가 포함됩니다. 새 API를 사용하면 프로파일러가 메모리 내 PDB 콘텐츠를 바이트 배열로 가져온 다음 처리하거나 디스크로 직렬화할 수 있습니다.
 
 - ICorProfiler 인터페이스를 사용하여 계측 개선
 
@@ -1858,7 +1858,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
      이러한 변경 내용에 대한 자세한 내용은 [이식 가능한 클래스 라이브러리](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)을 참조하십시오.
 
-- 이제 Windows 앱 빌드 및 배포를 위한 미리 컴파일 기술인 [!INCLUDE[net_native](../../../includes/net-native-md.md)]에 대한 설명서가 .NET Framework 콘텐츠 집합에 포함되었습니다. [!INCLUDE[net_native](../../../includes/net-native-md.md)]는 앱을 중간 언어가 아닌 네이티브 코드로 직접 컴파일하여 더 나은 성능을 제공합니다. 자세한 내용은 [.NET 네이티브로 앱 컴파일](../net-native/index.md)을 참조하십시오.
+- 이제 Windows 앱 빌드 및 배포를 위한 미리 컴파일 기술인 .NET Native에 대한 설명서가 .NET Framework 콘텐츠 집합에 포함되었습니다. .NET Native는 앱을 중간 언어가 아닌 네이티브 코드로 직접 컴파일하여 더 나은 성능을 제공합니다. 자세한 내용은 [.NET 네이티브로 앱 컴파일](../net-native/index.md)을 참조하십시오.
 
 - [.NET Framework 참조 소스](https://referencesource.microsoft.com/)에서는 새로운 검색 환경과 향상된 기능을 제공합니다. 온라인에서 .NET Framework 소스 코드를 검색하여, [참조를 다운로드](https://referencesource.microsoft.com/download.html)해 오프라인에서 살펴보고, 디버그 시 소스(패치 및 업데이트 포함)를 단계별로 실행할 수 있습니다. 자세한 내용은 블로그 항목 [.NET 참조 소스의 새로운 디자인](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/)을 참조하십시오.
 

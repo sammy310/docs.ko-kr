@@ -4,12 +4,12 @@ description: 이 자습서에서는 Docker를 사용하여 .NET Core 애플리�
 ms.date: 04/10/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: a96f96bd91976b0966fb7e8d0c8fb6fb7842cfe3
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2ea9e9bc2614e62fe6ec0d59e39d42c2e32a80a1
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631858"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051809"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>자습서: .NET Core 앱 컨테이너화
 
@@ -410,6 +410,6 @@ docker rmi mcr.microsoft.com/dotnet/core/runtime:2.2
 ## <a name="next-steps"></a>다음 단계
 
 * [ASP.NET Core 마이크로 서비스 자습서 확인 보기](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
-* [컨테이너를 지원하는 Azure 서비스 검토](https://azure.microsoft.com/en-us/overview/containers/)
+* [컨테이너를 지원하는 Azure 서비스 검토](https://azure.microsoft.com/overview/containers/)
 * [Dockerfile 명령에 대해 읽어 보기](https://docs.docker.com/engine/reference/builder/)
 * [Visual studio용 컨테이너 도구 살펴보기](/visualstudio/containers/overview)

@@ -3,12 +3,12 @@ title: Windows에서 .NET Core의 필수 구성 요소
 description: Windows 컴퓨터에서 .NET Core 애플리케이션을 개발 및 실행하기 위해 필요한 종속성이 무엇인지 살펴보세요.
 ms.custom: updateeachvsrelease
 ms.date: 04/08/2019
-ms.openlocfilehash: 8eb2913b0fa1fe037a460633064d6f179b64a248
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 423a333edf5b2946a28855352adf2915642b1eae
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634084"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051965"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows에서 .NET Core의 필수 구성 요소
 
@@ -57,11 +57,11 @@ ms.locfileid: "65634084"
 > [!NOTE]
 > **Windows 8.1 이전 버전 또는 Windows Server 2012 R2 이전 버전의 경우:**
 >
-> 설치된 Windows가 최신 버전이며 Windows 업데이트를 통해 설치할 수 있는 [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows)이 포함되어 있는지 확인하세요. 이 업데이트를 설치하지 않는 경우 .NET Core 애플리케이션을 시작할 때 `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`과 같은 오류가 표시됩니다.
+> 설치된 Windows가 최신 버전이며 Windows 업데이트를 통해 설치할 수 있는 [KB2999226](https://support.microsoft.com/help/2999226/update-for-universal-c-runtime-in-windows)이 포함되어 있는지 확인하세요. 이 업데이트를 설치하지 않는 경우 .NET Core 애플리케이션을 시작할 때 `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`과 같은 오류가 표시됩니다.
 >
 > **Windows 7 또는 Windows Server 2008 R2의 경우:**
 >
-> KB2999226 외에 [KB2533623](https://support.microsoft.com/en-us/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot)도 설치되어 있는지 확인하세요. 이 업데이트를 설치하지 않는 경우 .NET Core 애플리케이션을 시작할 때 `The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`와 같은 오류가 표시됩니다.
+> KB2999226 외에 [KB2533623](https://support.microsoft.com/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot)도 설치되어 있는지 확인하세요. 이 업데이트를 설치하지 않는 경우 .NET Core 애플리케이션을 시작할 때 `The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`와 같은 오류가 표시됩니다.
 
 ## <a name="prerequisites-for-net-core-30-preview-3"></a>.NET Core 3.0 미리 보기 3의 필수 구성 요소
 

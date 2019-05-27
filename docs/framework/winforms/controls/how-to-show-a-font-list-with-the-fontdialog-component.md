@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Font dialog box [Windows Forms], displaying
 - fonts [Windows Forms], selecting
 ms.assetid: 35692c1b-0937-4b7a-9207-1ae6bdc244a0
-ms.openlocfilehash: 40679136ea62a437009b308a8b206cf251b46222
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05e9b5e1280d0318354b0d47f4d78f7ec1c5f4e7
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012999"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053443"
 ---
 # <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>방법: FontDialog 구성 요소를 사용하여 글꼴 목록 표시
 합니다 [FontDialog](fontdialog-component-windows-forms.md) 구성 요소 글꼴을 선택할 수 있을 뿐만 아니라 해당 가중치 및 크기와 같은 표시 요소를 변경할 수 있습니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "62012999"
        }  
     ```  
   
-     (Visual C# 및 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 이벤트 처리기를 등록 하려면 폼의 생성자에 다음 코드를 추가 합니다.  
+     (Visual C# 및 시각적 C++) 이벤트 처리기를 등록 하려면 폼의 생성자에 다음 코드를 추가 합니다.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  

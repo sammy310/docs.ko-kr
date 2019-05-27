@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: fbc92c03da69dd452f35e5b4e00cd4a9ca17e252
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 8965231307da84fd555b181440978adbea7e7244
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211178"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052838"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>방법: MDI 자식 폼 만들기
 
@@ -34,7 +34,7 @@ MDI 자식 폼의 중요 한 요소는 [다중 문서 MDI (인터페이스) 응�
 
 4. **솔루션 탐색기**프로젝트를 마우스 오른쪽 단추로 클릭, 가리킨 **추가**를 선택한 후 **새 항목 추가**합니다.
 
-5. 에 **새 항목 추가** 대화 상자에서 **Windows 폼** (Visual Basic 또는 Visual C#) 또는 **Windows Forms 응용 프로그램 (.NET)** (에서 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 합니다 에서 **템플릿** 창입니다. 에 **이름을** 상자에서 폼의 이름을 **Form2**합니다. 클릭 합니다 **열려** 프로젝트에 폼을 추가 하려면 단추입니다.
+5. 에 **새 항목 추가** 대화 상자에서 **Windows 폼** (Visual Basic 또는 Visual C#) 또는 **Windows Forms 응용 프로그램 (.NET)** (시각적 개체에 C++)에서 **템플릿** 창입니다. 에 **이름을** 상자에서 폼의 이름을 **Form2**합니다. 클릭 합니다 **열려** 프로젝트에 폼을 추가 하려면 단추입니다.
 
     > [!NOTE]
     > 이 단계에서 만든 MDI 자식 폼은 표준 Windows Form입니다. 따라서 폼의 투명도를 제어할 수 있는 <xref:System.Windows.Forms.Form.Opacity%2A> 속성이 있습니다. 그러나 <xref:System.Windows.Forms.Form.Opacity%2A> 속성은 최상위 창에 사용하도록 설계되었습니다. 그리기 문제가 발생할 수 있으므로 MDI 자식 폼에는 사용하지 마세요.

@@ -8,25 +8,25 @@ dev_langs:
 ms.assetid: 500335af-f9b5-413b-968a-e6d9a824478c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: db10dda3cbb328cd143afa48e300588ccc7667a6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 3b765cc42f7e060ad11d0e8dcd9991a841cda8b3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463074"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586484"
 ---
 # <a name="xslt-transformations-with-the-xsltransform-class"></a>XslTransform 클래스를 사용하여 XSLT 변형
 
 > [!NOTE]
 > <xref:System.Xml.Xsl.XslTransform> 클래스는 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]에서 사용되지 않습니다. <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 XSLT(Extensible Stylesheet Language for Transformations) 변환을 수행할 수 있습니다. 자세한 내용은 [XslCompiledTransform 클래스 사용](using-the-xslcompiledtransform-class.md) 및 [XslTransform 클래스에서 마이그레이션](migrating-from-the-xsltransform-class.md)을 참조하세요.
 
-XSLT의 목표는 소스 XML 문서의 내용을 형식 또는 구조가 다른 문서로 변환하는 것입니다. 예를 들어, XML을 웹 사이트에서 사용하는 HTML로 변환하거나 응용 프로그램에서 필요한 필드만 포함하는 문서로 변환합니다. 이 변환 프로세스는 W3C(World Wide Web 컨소시엄) [XSLT 버전 1.0 권장 사항](https://www.w3.org/TR/1999/REC-xslt-19991116)으로 지정됩니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]에서는 <xref:System.Xml.Xsl.XslTransform> 네임스페이스에 있는 <xref:System.Xml.Xsl> 클래스가 이 사양의 기능을 구현한 XSLT 프로세서입니다. 여기에는 W3C XSLT 1.0 권장 사항에서 구현되지 않은 몇 가지 기능이 있습니다. 이 기능에 대해서는 [XslTransform 출력](outputs-from-an-xsltransform.md)을 참조하세요. 다음 그림은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 변형 아키텍처를 보여 줍니다.
+XSLT의 목표는 소스 XML 문서의 내용을 형식 또는 구조가 다른 문서로 변환하는 것입니다. 예를 들어, XML을 웹 사이트에서 사용하는 HTML로 변환하거나 응용 프로그램에서 필요한 필드만 포함하는 문서로 변환합니다. 이 변환 프로세스는 W3C(World Wide Web 컨소시엄) [XSLT 버전 1.0 권장 사항](https://www.w3.org/TR/1999/REC-xslt-19991116)으로 지정됩니다. .NET Framework에서는 <xref:System.Xml.Xsl> 네임스페이스에 있는 <xref:System.Xml.Xsl.XslTransform> 클래스가 이 사양의 기능을 구현한 XSLT 프로세서입니다. 여기에는 W3C XSLT 1.0 권장 사항에서 구현되지 않은 몇 가지 기능이 있습니다. 이 기능에 대해서는 [XslTransform 출력](outputs-from-an-xsltransform.md)을 참조하세요. 다음 그림은 .NET Framework의 변형 아키텍처를 보여 줍니다.
 
 ## <a name="overview"></a>개요
 
 ![XSLT 변환 아키텍처를 보여주는 다이어그램.](./media/xslt-transformations-with-the-xsltransform-class/xslt-transformation-architecture.gif) 
 
-XSLT 권장 사항에서는 XML 문서의 일부를 선택하는 데 XPath(XML Path Language)를 사용합니다. 여기서 XPath는 문서 트리의 노드를 탐색하는 데 사용되는 쿼리 언어입니다. 그림에서처럼 XPath의 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 구현은 <xref:System.Xml.XmlDocument>, <xref:System.Xml.XmlDataDocument> 및 <xref:System.Xml.XPath.XPathDocument> 등과 같은 여러 클래스에 저장된 XML의 일부를 선택하는 데 사용됩니다. <xref:System.Xml.XPath.XPathDocument>는 최적화된 XSLT 데이터 저장소로, <xref:System.Xml.Xsl.XslTransform>과 함께 사용할 경우 뛰어난 성능으로 XSLT 변형을 수행할 수 있습니다.
+XSLT 권장 사항에서는 XML 문서의 일부를 선택하는 데 XPath(XML Path Language)를 사용합니다. 여기서 XPath는 문서 트리의 노드를 탐색하는 데 사용되는 쿼리 언어입니다. 그림에서처럼 XPath의 .NET Framework 구현은 <xref:System.Xml.XmlDocument>, <xref:System.Xml.XmlDataDocument> 및 <xref:System.Xml.XPath.XPathDocument> 등과 같은 여러 클래스에 저장된 XML의 일부를 선택하는 데 사용됩니다. <xref:System.Xml.XPath.XPathDocument>는 최적화된 XSLT 데이터 저장소로, <xref:System.Xml.Xsl.XslTransform>과 함께 사용할 경우 뛰어난 성능으로 XSLT 변형을 수행할 수 있습니다.
 
 다음 표에서는 <xref:System.Xml.Xsl.XslTransform> 및 XPath와 해당 기능을 사용할 때 자주 사용되는 클래스의 목록을 보여 줍니다.
 

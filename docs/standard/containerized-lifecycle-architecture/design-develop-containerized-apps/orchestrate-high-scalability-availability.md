@@ -2,12 +2,12 @@
 title: 높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 description: 실제 프로덕션 응용 프로그램 배포 및 상태, 작업 및 모든 컨테이너의 수명 주기를 처리 하는 오 케 스트레이 터를 사용 하 여 관리 해야 합니다.
 ms.date: 02/15/2019
-ms.openlocfilehash: 6cb41e632db7c7c6b9412bf54d2efeb44deee80f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: bde9a2815d0496608b3172582481c169cab37f04
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644717"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195646"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 
@@ -70,7 +70,7 @@ Azure Kubernetes Service는 Azure용으로 특별히 인기 있는 Docker 클러
 
 ## <a name="get-started-with-azure-kubernetes-service-aks"></a>Azure Kubernetes Service (AKS)를 사용 하 여 시작 합니다.
 
-AKS를 사용 하 여 시작 하려면 Azure portal 또는 CLI를 사용 하 여 AKS 클러스터를 배포할 수 있습니다. Azure Container Service 클러스터 배포에 대한 자세한 내용은 [AKS(Azure Kubernetes Service) 클러스터 배포](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)를 참조하세요.
+AKS를 사용 하 여 시작 하려면 Azure portal 또는 CLI를 사용 하 여 AKS 클러스터를 배포할 수 있습니다. Azure Kubernetes 클러스터를 배포 하는 방법에 대 한 자세한 내용은 참조 하세요. [Azure Kubernetes Service (AKS) 클러스터를 배포](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)합니다.
 
 기본적으로 AKS의 일부로 설치된 소프트웨어에 대해서는 추가 비용이 없습니다. 모든 기본 옵션은 오픈 소스 소프트웨어로 구현됩니다. AKS는 Azure의 여러 가상 머신에서 사용할 수 있습니다. 선택한 컴퓨팅 인스턴스 및 사용되는 다른 기본 인프라 리소스(예: 스토리지 및 네트워킹)에 대해서만 요금이 청구됩니다. AKS 자체에 대한 추가 비용은 없습니다.
 
@@ -137,7 +137,7 @@ Service Fabric은 서비스 구축하는 방법과 관련하여 제약이 없으
 
 그림 4-10에서와 같이 만들기 및 간단한 프로세스 또는 Docker 컨테이너와 Service Fabric에서 마이크로 서비스를 실행할 수 있습니다. 동일한 Service Fabric 클러스터 내에서 컨테이너 기반 마이크로 서비스와 프로세스 기반 마이크로 서비스를 함께 사용할 수도 있습니다.
 
-![비교의 Azure service Fabric 클러스터의 경우: 각 노드의 각 마이크로 서비스 마다 프로세스 하나를 실행 하는 되는 프로세스로 마이크로 서비스 각 노드 여러 컨테이너를 사용 하 여 Docker를 실행 하는 컨테이너로 마이크로 서비스 마이크로 서비스 당 하나의 컨테이너입니다.](./media/azure-service-fabric-cluster-types.png)
+![Azure Service Fabric 클러스터 비교: 마이크로서비스에 대해 하나의 프로세스를 실행하는 프로세스입니다. 마이크로서비스는 여러 컨테이너가 있는 Docker를 실행하는 컨테이너로, 마이크로서비스당 하나의 컨테이너로 실행됩니다.](./media/azure-service-fabric-cluster-types.png)
 
 **그림 4-10** Azure Service Fabric에서 프로세스 또는 컨테이너로 마이크로 서비스 배포
 

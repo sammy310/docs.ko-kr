@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 665fdd3d19008e7725983ea621a64514238639ce
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: de44f0c416de798fb42fba93e30ec6aa6ed0208d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599953"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585997"
 ---
 # <a name="objects-c-programming-guide"></a>개체(C# 프로그래밍 가이드)
 클래스 또는 구조체 정의는 형식이 수행할 수 있는 작업을 지정하는 청사진과 비슷합니다. 개체는 기본적으로 청사진에 따라 구성 및 할당된 메모리 블록입니다. 프로그램에서 동일한 클래스의 많은 개체를 만들 수 있습니다. 개체를 인스턴스라고도 하며, 명명된 변수나 배열 또는 컬렉션에 저장할 수 있습니다. 클라이언트 코드는 이러한 변수를 사용하여 메서드를 호출하고 개체의 공용 속성에 액세스하는 코드입니다. C#과 같은 개체 지향 언어에서 일반적인 프로그램은 동적으로 상호 작용하는 여러 개체로 구성됩니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "64599953"
   
  [!code-csharp[csProgGuideStatements#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#31)]  
   
- `p1` 및 `p2` 둘 다에 대한 메모리가 스레드 스택에서 할당됩니다. 해당 메모리가 선언된 형식 또는 메서드와 함께 회수됩니다. 이는 할당 시 구조체가 복사되는 이유 중 하나입니다. 반면, 클래스 인스턴스에 할당된 메모리는 개체에 대한 모든 참조가 범위를 벗어날 때 공용 언어 런타임에 의해 자동으로 회수(가비지 수집)됩니다. C++에서와 같이 클래스 개체를 자동으로 제거할 수 없습니다. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]의 가비지 수집에 대한 자세한 내용은 [가비지 수집](../../../standard/garbage-collection/index.md)을 참조하세요.  
+ `p1` 및 `p2` 둘 다에 대한 메모리가 스레드 스택에서 할당됩니다. 해당 메모리가 선언된 형식 또는 메서드와 함께 회수됩니다. 이는 할당 시 구조체가 복사되는 이유 중 하나입니다. 반면, 클래스 인스턴스에 할당된 메모리는 개체에 대한 모든 참조가 범위를 벗어날 때 공용 언어 런타임에 의해 자동으로 회수(가비지 수집)됩니다. C++에서와 같이 클래스 개체를 자동으로 제거할 수 없습니다. .NET Framework의 가비지 수집에 대한 자세한 내용은 [가비지 수집](../../../standard/garbage-collection/index.md)을 참조하세요.  
   
 > [!NOTE]
 >  관리되는 힙의 메모리 할당 및 할당 취소는 공용 언어 런타임에서 고도로 최적화되어 있습니다. 대부분의 경우 힙에서 클래스 인스턴스를 할당하는 경우와 스택에서 구조체 인스턴스를 할당하는 경우의 성능 차이는 크지 않습니다.  

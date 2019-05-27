@@ -4,12 +4,12 @@ description: 기계 학습 모델에 사용할 ML.NET 알고리즘을 선택하�
 author: natke
 ms.topic: overview
 ms.date: 04/20/1029
-ms.openlocfilehash: 3fd515a1d150ea51214b55f882726c4ba76bd6d1
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: d1c637437a7b285f2b66b597d616fcf39248697f
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065636"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557765"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>ML.NET 알고리즘을 선택하는 방법
 
@@ -81,8 +81,8 @@ ML.NET을 사용하여 동일한 알고리즘을 다른 작업에 적용할 수 
 
 |알고리즘|속성|트레이너|
 |---------|----------|--------|
-|One-Vs-One|이 다중 클래스 분류자는 각 클래스에 대해 하나의 이진 분류자를 학습하여 해당 클래스를 다른 모든 클래스와 구별합니다. 범주화할 클래스 수에 따라 규모 조정이 제한적입니다.|[OneVersusAllTrainer<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.OneVersusAllTrainer) |
-|쌍별 결합(Pairwise coupling)|이 다중 클래스 분류자는 각 쌍의 클래스에서 이진 분류 알고리즘을 학습합니다. 두 클래스의 각 조합을 학습해야 하므로 클래스 수에 따라 규모 조정이 제한적입니다.|[PairwiseCouplingTrainer<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer)|
+|One-Vs-One|이 다중 클래스 분류자는 각 클래스에 대해 하나의 이진 분류자를 학습하여 해당 클래스를 다른 모든 클래스와 구별합니다. 범주화할 클래스 수에 따라 규모 조정이 제한적입니다.|[OneVersusAllTrainer\<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.OneVersusAllTrainer) |
+|쌍별 결합(Pairwise coupling)|이 다중 클래스 분류자는 각 쌍의 클래스에서 이진 분류 알고리즘을 학습합니다. 두 클래스의 각 조합을 학습해야 하므로 클래스 수에 따라 규모 조정이 제한적입니다.|[PairwiseCouplingTrainer\<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer)|
 
 ## <a name="k-means"></a>K-평균(K-means)
 
@@ -107,4 +107,3 @@ ML.NET을 사용하여 동일한 알고리즘을 다른 작업에 적용할 수 
 |속성|트레이너|
 |----------|--------|
 |다른 트레이너의 성과를 기준치로 삼기 위해 이 이진 분류 트레이너를 사용합니다. 효과를 발휘하려면 다른 트레이너의 메트릭이 사전 트레이너보다 더 좋아야 합니다. |<xref:Microsoft.ML.Trainers.PriorTrainer>|
-

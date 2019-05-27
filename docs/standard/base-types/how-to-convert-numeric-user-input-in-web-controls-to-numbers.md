@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29141cb43d914dd3781e9307b6a553361152a645
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5af942b5e7576c13ff7be8d11c0009fd0c4f7462
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634169"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882476"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>방법: 웹 컨트롤의 숫자 사용자 입력을 숫자로 변환
 전 세계 어디서든 웹 페이지를 표시할 수 있으므로 사용자가 거의 무제한의 형식으로 숫자 데이터를 <xref:System.Web.UI.WebControls.TextBox> 컨트롤에 입력할 수 있습니다. 따라서 웹 페이지 사용자의 로캘 및 문화권을 확인하는 것이 매우 중요합니다. 사용자 입력을 구문 분석할 때 사용자의 로캘 및 문화권에 의해 정의된 서식 지정 규칙을 적용할 수 있습니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "64634169"
  코드는 사용자 입력이 변환될 숫자 형식의 `Parse` 또는 `TryParse` 메서드를 호출할 수 있습니다. 단일 구문 분석 작업을 수행하는 데 parse 메서드에 대한 반복적인 호출이 필요할 수 있습니다. 따라서 구문 분석 작업에 실패하는 경우 `false`가 반환되므로 `TryParse` 메서드가 더 좋습니다. 반면에, `Parse` 메서드에서 throw할 수 있는 반복적인 예외를 처리하는 것은 웹 애플리케이션에서 매우 비용이 많이 드는 제안일 수 있습니다.  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- 코드를 컴파일하려면 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 코드 숨김 페이지로 코드를 복사하여 기존 코드를 모두 대체합니다. [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 웹 페이지에는 다음과 같은 컨트롤이 있어야 합니다.  
+ 코드를 컴파일하려면 ASP.NET 코드 숨김 페이지로 코드를 복사하여 기존 코드를 모두 대체합니다. ASP.NET 웹 페이지에는 다음과 같은 컨트롤이 있어야 합니다.  
   
 - 코드에서 참조되지 않는 <xref:System.Web.UI.WebControls.Label> 컨트롤. 해당 <xref:System.Web.UI.WebControls.TextBox.Text%2A> 속성을 “Enter a Number:”로 설정합니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "64634169"
   
 - `OKButton`이라는 <xref:System.Web.UI.WebControls.Button> 컨트롤 해당 <xref:System.Web.UI.WebControls.Button.Text%2A> 속성을 “OK”로 설정합니다.  
   
- 클래스 이름을 `NumericUserInput`에서 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 페이지에 있는 `Page` 지시문의 `Inherits` 특성으로 정의되는 클래스 이름으로 변경합니다. `NumericInput` 개체 참조의 이름을 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 페이지에 있는 `form` 태그의 `id` 특성으로 정의된 이름으로 변경합니다.  
+ 클래스 이름을 `NumericUserInput`에서 ASP.NET 페이지에 있는 `Page` 지시문의 `Inherits` 특성으로 정의되는 클래스 이름으로 변경합니다. `NumericInput` 개체 참조의 이름을 ASP.NET 페이지에 있는 `form` 태그의 `id` 특성으로 정의된 이름으로 변경합니다.  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
  사용자가 HTML 스트림에 스크립트를 삽입하지 못하게 하려면 서버 응답에서 사용자 입력을 곧바로 다시 에코해서는 안 됩니다. 대신 <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType> 메서드를 사용하여 인코딩해야 합니다.  

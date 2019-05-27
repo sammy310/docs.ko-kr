@@ -14,12 +14,12 @@ helpviewer_keywords:
 - color palettes [Windows Forms], showing in ColorDialog component
 - colors [Windows Forms], showing palettes
 ms.assetid: ee050f61-dbc8-4436-ba22-51360981ab48
-ms.openlocfilehash: 587b2c3a502ec8a1cb2f4f7c0d981baa0f18ead6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff29df4ecfc90eabe8e3be0e5a6a126858799c16
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012994"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053416"
 ---
 # <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a>방법: ColorDialog 구성 요소를 사용하여 색상표 표시
 합니다 [ColorDialog](colordialog-component-windows-forms.md) 색상표를 표시 하 고 사용자가 선택한 색을 포함 하는 속성을 반환 하는 구성 요소입니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "62012994"
        }  
     ```  
   
-     (Visual C# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 이벤트 처리기를 등록 하려면 폼의 생성자에 다음 코드를 추가 합니다.  
+     (Visual C#, Visual C++) 이벤트 처리기를 등록 하려면 폼의 생성자에 다음 코드를 추가 합니다.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  

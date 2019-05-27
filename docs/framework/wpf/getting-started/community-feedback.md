@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 468b060a-d54b-4900-a74a-9faccb554045
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f77058ac0cb87d0316395bce1dfb11401a2ce806
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6f62fbe13b42202a2eaca212236ee5fd9aa4df05
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921786"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053146"
 ---
 # <a name="wpf-community-feedback"></a>WPF 커뮤니티 사용자 의견
 
@@ -24,7 +24,7 @@ Microsoft는 다양 한 커뮤니티 리소스를 알아보려면, 토론 하 �
 
 ## <a name="forums"></a>포럼
 
-합니다 [WPF 포럼](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=wpf) 토론 하 고 문제 해결에 대 한 기본 커뮤니티 리소스입니다. 포럼에서는 다음을 포함한 포괄적인 지원 기능 집합을 제공하는 방식으로 쉽게 토론하고 문제를 해결하도록 합니다.
+합니다 [WPF 포럼](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=wpf) 토론 하 고 문제 해결에 대 한 기본 커뮤니티 리소스입니다. 포럼에서는 다음을 포함한 포괄적인 지원 기능 집합을 제공하는 방식으로 쉽게 토론하고 문제를 해결하도록 합니다.
 
 - 검색.
 - 토론 추적

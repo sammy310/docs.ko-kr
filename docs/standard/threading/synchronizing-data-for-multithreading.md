@@ -4,28 +4,29 @@ ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - synchronization, threads
-- threading [.NET Framework], synchronizing threads
+- threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55b973e9eb795ef2f5bd69b4ec67c1c194f043a9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c83e7abbd9f9425fab70325f7a77abb0f672bd15
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644753"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638757"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>다중 스레딩을 위한 데이터 동기화
+
 다중 스레드가 단일 개체의 속성 및 메서드에 대한 호출을 할 수 있는 경우 해당 호출을 동기화하는 것은 중요합니다. 그렇지 않으면 하나의 스레드는 다른 스레드가 수행하는 작업을 중단시킬 수 있으며 개체는 잘못된 상태로 남을 수 있습니다. 멤버가 그러한 중단으로부터 보호되는 클래스를 스레드로부터 안전하다고 합니다.  
   
- 공용 언어 인프라는 인스턴스 및 정적 멤버에 대한 액세스를 동기화하는 여러 전략을 제공합니다.  
+.NET은 인스턴스 및 정적 멤버에 대한 액세스를 동기화하는 여러 전략을 제공합니다.  
   
 - 동기화된 코드 영역. <xref:System.Threading.Monitor> 클래스 또는 이 클래스에 대한 컴파일러 지원을 사용하여 성능을 향상시키는 필요한 코드 블록만을 동기화할 수 있습니다.  
   
-- 수동 동기화. .NET Framework 클래스 라이브러리에서 제공하는 동기화 개체를 사용할 수 있습니다. <xref:System.Threading.Monitor> 클래스에 대한 설명을 포함하는 [동기화 기본 형식 개요](../../../docs/standard/threading/overview-of-synchronization-primitives.md)를 참조하세요.  
+- 수동 동기화. .NET 클래스 라이브러리에서 제공하는 동기화 개체를 사용할 수 있습니다. <xref:System.Threading.Monitor> 클래스에 대한 설명을 포함하는 [동기화 기본 형식 개요](../../../docs/standard/threading/overview-of-synchronization-primitives.md)를 참조하세요.  
   
-- 동기화된 컨텍스트. <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>를 사용하여 <xref:System.ContextBoundObject> 개체에 대한 간단한 자동 동기화를 사용하도록 설정할 수 있습니다.  
+- 동기화된 컨텍스트. .NET Framework 및 Xamarin 애플리케이션의 경우 <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>를 사용하여 <xref:System.ContextBoundObject> 개체에 대한 간단한 자동 동기화를 사용하도록 설정할 수 있습니다.  
   
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType> 네임스페이스의 컬렉션 클래스. 이러한 클래스는 기본 제공 동기화된 추가 및 제거 작업을 제공합니다. 자세한 내용은 [스레드로부터 안전한 컬렉션](../../../docs/standard/collections/thread-safe/index.md)을 참조하세요.  
   
@@ -42,7 +43,7 @@ ms.locfileid: "64644753"
  이것은 개체의 기본값입니다. 모든 스레드는 언제든지 모든 메서드 또는 필드에 액세스할 수 있습니다. 한 번에 하나의 스레드만 이러한 개체에 액세스해야 합니다.  
   
 ## <a name="manual-synchronization"></a>수동 동기화  
- .NET Framework 클래스 라이브러리는 스레드 동기화에 대한 다양한 클래스를 제공합니다. [동기화 기본 형식 개요](../../../docs/standard/threading/overview-of-synchronization-primitives.md)를 참조하세요.  
+ .NET 클래스 라이브러리는 스레드 동기화에 대한 다양한 클래스를 제공합니다. [동기화 기본 형식 개요](../../../docs/standard/threading/overview-of-synchronization-primitives.md)를 참조하세요.  
   
 ## <a name="synchronized-code-regions"></a>동기화된 코드 영역  
  <xref:System.Threading.Monitor> 클래스 또는 컴파일러 키워드를 사용하여 코드 블록, 인스턴스 메서드 및 정적 메서드를 동기화할 수 있습니다. 동기화된 정적 필드에 대한 지원은 없습니다.  
@@ -52,7 +53,7 @@ ms.locfileid: "64644753"
 > [!NOTE]
 >  동기화된 영역 내에서 <xref:System.Threading.Monitor>의 다른 메서드와 함께 사용할 수 있도록 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>을 사용하여 `lock` 및 `SyncLock` 문이 구현됩니다.  
   
- **Monitor** 또는 컴파일러 키워드 중 하나를 사용하여 전체 메서드의 본문을 잠그는 것과 동일한 효과를 가지는 **MethodImplAttribute** 및 **MethodImplOptions.Synchronized**를 사용하여 메서드를 데코레이팅할 수도 있습니다.  
+ <xref:System.Threading.Monitor> 또는 컴파일러 키워드 중 하나를 사용하여 전체 메서드의 본문을 잠그는 것과 동일한 효과를 가지는 <xref:System.Runtime.CompilerServices.MethodImplOptions.Synchronized?displayProperty=nameWithType>의 값이 있는 <xref:System.Runtime.CompilerServices.MethodImplAttribute>를 사용하여 메서드를 데코레이팅할 수도 있습니다.  
   
  <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>를 사용하여 동기화된 코드 영역에 대한 액세스를 기다리는 것과 같은 차단 작업에서 스레드를 중단시킬 수 있습니다. <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>과 같은 작업에서 스레드를 중단시키는 데도 **Thread.Interrupt**가 사용됩니다.  
   
@@ -65,7 +66,8 @@ ms.locfileid: "64644753"
  두 경우 모두 코드 블록에서 예외가 throw되는 경우 **lock** 또는 **SyncLock**으로 획득된 잠금이 자동으로 해제됩니다. C# 및 Visual Basic 컴파일러는 시도의 초반에 **Monitor.Enter**로 **try**/**finally** 블록을 내보내고 **finally** 블록에서 **Monitor.Exit**을 내보냅니다. **lock** 또는 **SyncLock** 블록 내에서 예외가 throw되는 경우 **finally** 처리기가 정리 작업을 수행할 수 있도록 실행됩니다.  
   
 ## <a name="synchronized-context"></a>동기화된 컨텍스트  
- 모든 **ContextBoundObject**에서 **SynchronizationAttribute**를 사용하여 모든 인스턴스 메서드와 필드를 동기화할 수 있습니다. 동일한 컨텍스트 도메인에 있는 모든 개체는 동일한 잠금을 공유합니다. 여러 스레드가 메서드 및 필드에 액세스할 수 있지만 한 번에 하나의 스레드만 허용됩니다.  
+ 
+.NET Framework 및 Xamarin 애플리케이션에서만 모든 <xref:System.ContextBoundObject>에 <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>를 사용하여 모든 인스턴스 메서드와 필드를 동기화할 수 있습니다. 동일한 컨텍스트 도메인에 있는 모든 개체는 동일한 잠금을 공유합니다. 여러 스레드가 메서드 및 필드에 액세스할 수 있지만 한 번에 하나의 스레드만 허용됩니다.  
   
 ## <a name="see-also"></a>참고 항목
 

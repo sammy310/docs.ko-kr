@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: 3adc2891579cafff9c8aeb3e918ae74c6f3ad8a5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: fddb51bfe998c360ca418374b119ec12f25b0fad
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591019"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052287"
 ---
 # <a name="events-overview-windows-forms"></a>이벤트 개요(Windows Forms)
 이벤트는 코드에서 응답, 즉 "처리"할 수 있는 작업입니다. 마우스를 클릭하거나 키를 누르는 등의 사용자 작업, 프로그램 코드 또는 시스템에 의해 이벤트가 생성될 수 있습니다.
@@ -29,7 +29,7 @@ ms.locfileid: "65591019"
  발생 시키고 이벤트를 사용 하는 방법에 대 한 정보를 참조 하세요 [이벤트](../../standard/events/index.md)합니다.
 
 ## <a name="delegates-and-their-role"></a>대리자 및 해당 역할
- 대리자는 일반적으로 사용 되는 클래스는.NET Framework 내에서 이벤트 처리 메커니즘을 작성 합니다. 대리자는 [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] 및 기타 개체 지향 언어에서 일반적으로 사용되는 함수 포인터와 거의 비슷합니다. 그러나 함수 포인터와는 달리 대리자는 개체 지향적이고 형식이 안전하며 보안이 유지됩니다. 또한 함수 포인터는 특정 함수에 대한 참조만을 포함하지만 대리자는 개체 참조와 해당 개체 내에 있는 하나 이상의 메서드에 대한 참조로 구성됩니다.
+ 대리자는 일반적으로 사용 되는 클래스는.NET Framework 내에서 이벤트 처리 메커니즘을 작성 합니다. 일반적으로 시각적 개체에 사용 되는 함수 포인터와 거의 대리자 C++ 및 기타 개체 지향 언어입니다. 그러나 함수 포인터와는 달리 대리자는 개체 지향적이고 형식이 안전하며 보안이 유지됩니다. 또한 함수 포인터는 특정 함수에 대한 참조만을 포함하지만 대리자는 개체 참조와 해당 개체 내에 있는 하나 이상의 메서드에 대한 참조로 구성됩니다.
 
  이 이벤트 모델은 사용 *대리자* 처리 하는 데 사용 되는 메서드에 이벤트를 바인딩합니다. 대리자는 처리기 메서드를 지정하여 다른 클래스가 이벤트 알림을 등록할 수 있도록 설정합니다. 이벤트가 발생하면 대리자가 bound 메서드를 호출합니다. 대리자를 정의 하는 방법에 대 한 자세한 내용은 참조 하세요. [이벤트](../../standard/events/index.md)합니다.
 

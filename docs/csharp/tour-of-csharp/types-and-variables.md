@@ -3,12 +3,12 @@ title: C# 형식 및 변수 - C# 언어 둘러보기
 description: C#에서 형식 정의 및 변수 선언에 대한 자세한 정보
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: ae44dd273a2460e5718adc7324fae324e3de5bba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5623b4a1e85508ea7206df2c73b7aaffcbc3fbb1
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672370"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881974"
 ---
 # <a name="types-and-variables"></a>형식 및 변수
 
@@ -23,8 +23,8 @@ C#의 값 형식은 *단순 형식*, *열거형 형식*, *구조체 형식* 및 
     * 부호 있는 정수: `sbyte`, `short`, `int`,`long`
     * 부호 없는 정수: `byte`, `ushort`, `uint`,`ulong`
     * 유니코드 문자: `char`
-    * IEEE 부동 소수점: `float`, `double`
-    * High-Precision 10진수:`decimal`
+    * IEEE 이진 부동 소수점: `float`, `double`
+    * 고정밀 10진수 부동 소수점: `decimal`
     * 부울: `bool`
   - [열거형 형식][EnumTypes]
     * `enum E {...}` 양식의 사용자 정의 형식
@@ -55,33 +55,11 @@ C#의 값 형식은 *단순 형식*, *열거형 형식*, *구조체 형식* 및 
 [DelegateTypes]: ../language-reference/keywords/delegate.md
 [ArrayTypes]: ../programming-guide/arrays/index.md
 
-8가지 정수 형식은 부호 있는 형식 또는 부호 없는 형식으로 8비트, 16비트, 32비트 및 64비트 값에 대한 지원을 제공합니다.
-
-2가지 부동 소수점 형식 `float` 및 `double`은 각각 32비트 단정밀도 및 64비트 배정밀도 IEC-60559 형식을 사용하여 표현됩니다.
-
-`decimal` 형식은 재무 및 통화 계산에 적합한 128비트 데이터 형식입니다.
+숫자 형식에 대한 자세한 내용은 [정수 형식 표](../language-reference/keywords/integral-types-table.md) 및 [부동 소수점 형식 표](../language-reference/keywords/floating-point-types-table.md)를 참조하세요.
 
 C#의 `bool` 형식은 부울 값, 즉 `true` 또는 `false`를 나타내는 데 사용됩니다.
 
 C#의 문자 및 문자열 처리에서는 유니코드 인코딩이 사용됩니다. `char` 형식은 UTF-16 코드 단위를 나타내고, `string` 형식은 UTF-16 코드 단위 시퀀스를 나타냅니다.
-
-이를 통해 C#의 숫자 형식이 요약됩니다.
-
-* 부호 있는 정수
-  - `sbyte`:  8비트(-128~127)
-  - `short`: 16비트(-32,768~32,767)
-  - `int`  : 32비트(-2,147,483,648~2,147,483,647)
-  - `long`은: 64비트(-9,223,372,036,854,775,808~9,223,372,036,854,775,807)
-* 부호 없는 정수
-  - `byte`   :  8비트(0~255)
-  - `ushort`은: 16비트(0~65,535)
-  - `uint`   : 32비트(0~4,294,967,295)
-  - `ulong`  : 64비트(0~18,446,744,073,709,551,615)
-* 부동 소수점
-  - `float`  : 32비트(1.5 × 10<sup>-45</sup>~3.4 × 10<sup>38</sup>),    전체 자릿수 7자리
-  - `double`은: 64비트(5.0 × 10<sup>-324</sup>~1.7 × 10<sup>308</sup>), 전체 자릿수 15자리
-* Decimal
-  - `decimal`은: 128비트(최소 -7.9 × 10<sup>-28</sup>~7.9 × 10<sup>28</sup>), 전체 자릿수 최소 28자리
 
 C# 프로그램에서는 *형식 선언*을 사용하여 새 형식을 만듭니다. 형식 선언은 새 형식의 이름과 멤버를 지정합니다. 사용자 정의가 가능한 C#의 5가지 형식 범주는 클래스 형식, 구조체 형식, 인터페이스 형식, 열거형 형식 및 대리자 형식입니다.
 

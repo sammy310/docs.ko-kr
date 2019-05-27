@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea32efaad24f171b7d5ebfa457834b35edbddf4c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 519b92cd24d75dd8e98fc28dbce3701c521a041d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664608"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593511"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>.NET Framework의 형식 변환
 <a name="top"></a> 모든 값에는 연결된 형식이 있으며, 이러한 형식은 값에 할당되는 공간, 포함할 수 있는 값의 범위, 값을 통해 사용할 수 있는 멤버 등의 특성을 정의합니다. 대부분의 값들은 하나 이상의 형식으로 표현될 수 있습니다. 예를 들어, 4라는 값은 정수 값 또는 부동 소수점 값으로 표현될 수 있습니다. 형식 변환을 수행하면 이전 형식과 동일한 값을 가지는 새 형식이 만들어지지만, 원래 개체의 ID(또는 실제 값)가 항상 동일하게 유지되지는 않습니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "64664608"
   
 - 인터페이스 개체에서 그 인터페이스를 구현하는 원래 형식으로 다시 변환.  C#에서는 이러한 변환에 캐스팅 연산자가 필요합니다. Visual Basic에서는 `Option Strict`가 on이면 `CType` 연산자가 필요합니다.  
   
- 이러한 자동 변환 외에 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]는 사용자 지정 형식 변환을 지원하는 몇 가지 기능을 제공합니다. 이러한 요구 사항은 다음과 같습니다.  
+ 이러한 자동 변환 외에 .NET Framework는 사용자 지정 형식 변환을 지원하는 몇 가지 기능을 제공합니다. 이러한 요구 사항은 다음과 같습니다.  
   
 - 사용 가능한 형식 간 확대 변환을 정의하는 `Implicit` 연산자. 자세한 내용은 [암시적 연산자를 사용한 암시적 변환](#implicit_conversion_with_the_implicit_operator) 섹션을 참조하세요.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "64664608"
 |<xref:System.UInt32>|<xref:System.UInt32.MaxValue?displayProperty=nameWithType>가 <xref:System.Int32.MaxValue?displayProperty=nameWithType>보다 큰 경우|  
 |<xref:System.UInt64>|<xref:System.UInt64.MaxValue?displayProperty=nameWithType>가 <xref:System.Int32.MaxValue?displayProperty=nameWithType>보다 큰 경우|  
   
- 이러한 축소 변환을 처리하기 위해 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 형식에서 `Explicit` 연산자를 정의할 수 있게 합니다. 그러면 개별 언어 컴파일러에서 고유 구문을 사용하여 이 연산자를 구현할 수 있거나 변환을 수행하기 위해 <xref:System.Convert> 클래스의 멤버가 호출될 수 있습니다. (<xref:System.Convert> 클래스에 대한 자세한 내용은 이 항목의 뒷부분에서 [Convert 클래스](#Convert)를 참조하세요.) 다음 예제에서는 언어 기능을 사용하여 범위를 벗어날 수 있는 이러한 정수 값을 <xref:System.Int32> 값으로 명시적으로 변환하는 작업을 처리하는 방법을 보여줍니다.  
+ 이러한 축소 변환을 처리하기 위해 .NET Framework에서는 형식에서 `Explicit` 연산자를 정의할 수 있게 합니다. 그러면 개별 언어 컴파일러에서 고유 구문을 사용하여 이 연산자를 구현할 수 있거나 변환을 수행하기 위해 <xref:System.Convert> 클래스의 멤버가 호출될 수 있습니다. (<xref:System.Convert> 클래스에 대한 자세한 내용은 이 항목의 뒷부분에서 [Convert 클래스](#Convert)를 참조하세요.) 다음 예제에서는 언어 기능을 사용하여 범위를 벗어날 수 있는 이러한 정수 값을 <xref:System.Int32> 값으로 명시적으로 변환하는 작업을 처리하는 방법을 보여줍니다.  
   
  [!code-csharp[Conceptual.Conversion#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#4)]
  [!code-vb[Conceptual.Conversion#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#4)]  
@@ -127,7 +127,7 @@ ms.locfileid: "64664608"
   
 <a name="the_iconvertible_interface"></a>   
 ## <a name="the-iconvertible-interface"></a>IConvertible 인터페이스  
- 형식을 공용 언어 런타임 기본 형식으로 변환하는 작업을 지원하기 위해 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 <xref:System.IConvertible> 인터페이스를 제공합니다. 구현하는 형식은 다음을 제공해야 합니다.  
+ 형식을 공용 언어 런타임 기본 형식으로 변환하는 작업을 지원하기 위해 .NET Framework에서는 <xref:System.IConvertible> 인터페이스를 제공합니다. 구현하는 형식은 다음을 제공해야 합니다.  
   
 - 구현하는 형식의 <xref:System.TypeCode>를 반환하는 메서드  
   
@@ -143,9 +143,9 @@ ms.locfileid: "64664608"
  구현하는 형식이 아니라 인터페이스에 대해 변환 메서드를 호출해야 하기 때문에 명시적 인터페이스 구현 비용이 비교적 높아집니다. 따라서 공용 언어 런타임 기본 형식 간에 변환하려면 이 방법 대신 <xref:System.Convert> 클래스의 적절한 멤버를 호출하는 것이 좋습니다. 자세한 내용은 다음에 나오는 [Convert 클래스](#Convert) 섹션을 참조하세요.  
   
 > [!NOTE]
->  <xref:System.IConvertible>에서 제공하는 <xref:System.Convert> 클래스와 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 인터페이스 외에도 개별 언어에서 변환을 수행하는 방법을 제공할 수 있습니다. 예를 들어, C#에서는 캐스팅 연산자가 사용되고, Visual Basic에서는 `CType`, `CInt` 및 `DirectCast` 등의 컴파일러 구현 변환 함수가 사용됩니다.  
+>  .NET Framework에서 제공하는 <xref:System.Convert> 클래스와 <xref:System.IConvertible> 인터페이스 외에도 개별 언어에서 변환을 수행하는 방법을 제공할 수 있습니다. 예를 들어, C#에서는 캐스팅 연산자가 사용되고, Visual Basic에서는 `CType`, `CInt` 및 `DirectCast` 등의 컴파일러 구현 변환 함수가 사용됩니다.  
   
- 대부분의 경우 <xref:System.IConvertible> 인터페이스는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서 기본 형식 간의 변환을 지원하도록 설계되었습니다. 그러나 사용자 지정 형식에서도 이 인터페이스를 구현하여 해당 사용자 지정 형식을 다른 사용자 지정 형식으로 변환하는 작업을 지원할 수 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [ChangeType 메서드를 사용한 사용자 지정 변환](#ChangeType) 섹션을 참조하세요.  
+ 대부분의 경우 <xref:System.IConvertible> 인터페이스는 .NET Framework에서 기본 형식 간의 변환을 지원하도록 설계되었습니다. 그러나 사용자 지정 형식에서도 이 인터페이스를 구현하여 해당 사용자 지정 형식을 다른 사용자 지정 형식으로 변환하는 작업을 지원할 수 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [ChangeType 메서드를 사용한 사용자 지정 변환](#ChangeType) 섹션을 참조하세요.  
   
  [맨 위로 이동](#top)  
   

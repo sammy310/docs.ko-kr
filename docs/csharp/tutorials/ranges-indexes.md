@@ -3,12 +3,12 @@ title: 인덱스 및 범위를 사용하여 데이터 범위 탐색
 description: 이 고급 자습서에서는 인덱스 및 범위를 사용하여 순차적 데이터 세트를 검사하는 데이터 탐색을 살펴봅니다.
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 64fae4581e265d4f70b8356d5c651b4fdaca3fe9
-ms.sourcegitcommit: dd3b897feb5c4ac39732bb165848e37a344b0765
+ms.openlocfilehash: 118d3c9ccad98ec02195c2b5e26a2ca203990adf
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2019
-ms.locfileid: "64431494"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557182"
 ---
 # <a name="indices-and-ranges"></a>인덱스 및 범위
 
@@ -23,9 +23,13 @@ ms.locfileid: "64431494"
 
 ## <a name="language-support-for-indices-and-ranges"></a>인덱스 및 범위에 대한 언어 지원
 
-인덱스 앞에 `^` 문자를 사용하여 **끝에서부터** 인덱스를 지정할 수 있습니다. 끝에서부터의 인덱스는 `0..^0`이 전체 범위를 지정하는 규칙에서 시작합니다. 전체 배열을 열거하려면 *첫 번째 요소*에서 시작하고 *마지막 요소를 통과*할 때까지 계속합니다. 열거자에서 `MoveNext` 메서드의 동작을 고려해 봅니다. 즉 열거형이 마지막 요소를 통과하면 False를 반환합니다. 인덱스 `^0`은 “끝”, `array[array.Length]` 또는 마지막 요소 뒤에 오는 인덱스를 의미합니다. `array[2]`가 “앞에서부터 2번째” 요소를 의미한다는 것은 이미 잘 알고 계실 것입니다. `array[^2]`는 “뒤에서부터 2번째” 요소를 의미합니다. 
+이 언어 지원은 두 가지 새 형식 및 두 가지 새 연산자를 사용합니다.
+- <xref:System.Index?displayProperty=nameWithType>는 인덱스를 시퀀스로 표현합니다.
+- 인덱스가 시퀀스의 끝을 기준으로 하도록 지정하는 `^` 연산자입니다.
+- <xref:System.Range?displayProperty=nameWithType>는 시퀀스의 하위 범위를 나타냅니다.
+- 범위의 시작과 끝을 피연산자로 지정하는 범위 연산자(`..`)입니다.
 
-**범위**는 **범위 연산자** `..`를 사용하여 지정할 수 있습니다. 예를 들어, `0..^0`은 배열의 전체 범위를 지정하는데, 앞에서부터 인덱스 0에서 뒤에서부터 인덱스 1까지(즉, ^0 인덱스는 은 포함되지 않음)를 의미합니다. 피연산자 둘 다 “앞에서부터” 또는 “뒤에서부터”를 사용할 수 있습니다. 피연산자 둘 다 생략하는 것도 가능합니다. 시작 인덱스의 기본값은 `0`, 끝 인덱스의 기본값은 `^0`입니다.
+인덱스에 대한 규칙을 사용하여 시작하겠습니다. `sequence`배열을 고려합니다. `0` 인덱스는 `sequence[0]`과 동일합니다. `^0` 인덱스는 `sequence[sequence.Length]`와 동일합니다. `sequence[^0]`은 `sequence[sequence.Length]`처럼 예외를 throw합니다. `n`이 어떤 숫자이든, 인덱스 `^n`은 `sequence[sequence.Length - n]`과 동일합니다.
 
 ```csharp-interactive
 string[] words = new string[]
@@ -43,11 +47,11 @@ string[] words = new string[]
 };              // 9 (or words.Length) ^0
 ```
 
-각 요소의 인덱스는 “앞에서부터”라는 개념과 “뒤에서부터”라는 개념과 범위에는 해당 범위의 끝은 포함되지 않음을 보여줍니다. 전체 배열의 “시작”은 첫 번째 요소입니다. 전체 배열의 “끝”은 마지막 요소의 “뒤”에 있습니다.
-
 다음과 같이 `^1` 인덱스를 사용하여 마지막 단어를 가져올 수 있습니다. 초기화 아래에 다음 코드를 추가합니다.
 
 [!code-csharp[LastIndex](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastIndex)]
+
+한 범위는 어떤 범위의 *시작* 및 *끝*을 지정합니다. 여러 범위는 배타적입니다. 즉, *끝*이 범위에 포함되지 않습니다. `[0..sequence.Length]`가 전체 범위를 나타내는 것처럼 `[0..^0]` 범위는 전체 범위를 나타냅니다. 
 
 다음 코드는 “quick”, “brown”, “fox”라는 단어를 포함하는 하위 범위를 만듭니다. 이 하위 범위에는 `words[1]`부터 `words[3]`까지 포함되며, `words[4]` 요소가 범위에 없습니다. 다음 코드를 같은 메서드에 추가합니다. 대화형 창의 맨 아래에 다음 코드를 복사하여 붙여넣습니다.
 
@@ -64,11 +68,6 @@ string[] words = new string[]
 범위나 인덱스를 변수로 선언할 수도 있습니다. 그러면 이 변수를 `[` 및 `]` 문자 사이에 사용할 수 있습니다.
 
 [!code-csharp[IndexRangeTypes](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_RangeIndexTypes)]
-
-앞의 예제에서는 추가적인 설명이 필요한 두 가지 설계 의사 결정을 보여 줍니다.
-
-- 범위가 *배타적*이면 마지막 인덱스의 요소가 범위에 포함되지 않습니다.
-- `^0` 인덱스는 컬렉션의 *끝*이지, 컬렉션의 *마지막 요소*가 아닙니다.
 
 다음 샘플에서는 이러한 선택에 대한 여러 이유를 보여 줍니다. `x`, `y` 및 `z`를 수정하여 다양한 조합을 시도해 봅니다. 실험할 때는 올바른 조합을 위해 `x`가 `y`보다 작고 `y`가 `z`보다 작은 값을 사용합니다. 새 메서드에 다음 코드를 추가합니다. 다양한 조합을 시도해 봅니다.
 

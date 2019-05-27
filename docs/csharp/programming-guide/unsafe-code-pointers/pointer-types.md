@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 028497bbeae26ded126ba4d7ce459a6a85e0bcb5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f04cfbac72008332a429c4e0ad8bd3f4e60cc83
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724046"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880322"
 ---
 # <a name="pointer-types-c-programming-guide"></a>포인터 형식(C# 프로그래밍 가이드)
 
@@ -73,30 +73,28 @@ int* myVariable;
 
 다음 표에서는 안전하지 않은 컨텍스트에서 포인터에 대해 수행할 수 있는 연산자와 문을 보여 줍니다.
 
-|연산자/문|사용|
+|연산자/문|기능|
 |-------------------------|---------|
-|*|포인터 간접 참조를 수행합니다.|
-|->|포인터를 통해 구조체 멤버에 액세스합니다.|
-|[]|포인터를 인덱싱합니다.|
+|`*`|포인터 간접 참조를 수행합니다.|
+|`->`|포인터를 통해 구조체 멤버에 액세스합니다.|
+|`[]`|포인터를 인덱싱합니다.|
 |`&`|변수 주소를 가져옵니다.|
-|++ 및 --|포인터를 증가 및 감소시킵니다.|
-|+ 및 -|포인터 연산을 수행합니다.|
-|==, !=, \<, >, \<= 및 >=|포인터를 비교합니다.|
-|`stackalloc`|스택에 메모리를 할당합니다.|
-|`fixed` 문|해당 주소를 찾을 수 있도록 임시로 변수를 고정합니다.|
+|`++` 및 `--`|포인터를 증가 및 감소시킵니다.|
+|`+` 및 `-`|포인터 연산을 수행합니다.|
+|`==`, `!=`, `<`, `>`, `<=` 및 `>=`|포인터를 비교합니다.|
+|[`stackalloc` 연산자](../../language-reference/keywords/stackalloc.md)|스택에 메모리를 할당합니다.|
+|[`fixed` statement](../../language-reference/keywords/fixed-statement.md)|해당 주소를 찾을 수 있도록 임시로 변수를 고정합니다.|
+
+포인터에 관련 연산자에 대한 자세한 내용은 [포인터 관련 연산자](../../language-reference/operators/pointer-related-operators.md)를 참조하세요.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [포인터 형식](~/_csharplang/spec/unsafe-code.md#pointer-types) 섹션을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [안전하지 않은 코드 및 포인터](index.md)
 - [포인터 변환](pointer-conversions.md)
-- [포인터 식](pointer-expressions.md)
 - [유형](../../language-reference/keywords/types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)
-- [fixed 문](../../language-reference/keywords/fixed-statement.md)
-- [stackalloc](../../language-reference/keywords/stackalloc.md)
-- [boxing 및 unboxing](../types/boxing-and-unboxing.md)

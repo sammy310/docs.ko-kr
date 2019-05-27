@@ -2,12 +2,12 @@
 title: Visual Studio Code에서 F# 시작
 description: Visual Studio Code와 Ionide 플러그인 도구 모음으로 F#을 사용하는 방법을 알아봅니다.
 ms.date: 12/23/2018
-ms.openlocfilehash: 7c2ecab14b3351d441249e7fc7cb3188a4ee7eba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9d5ed4008f657f956ee7a5611a2f5fdd8e5b44a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949552"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051871"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Visual Studio Code에서 F# 시작
 
@@ -16,7 +16,7 @@ ms.locfileid: "61949552"
 시작하려면 [F#과 Ionide 플러그인의 설치](install-fsharp.md#install-f-with-visual-studio-code)가 올바르게 되어있는지 확인합니다.
 
 > [!NOTE]
-> Ionide는 플랫폼 간 호환성 문제가 발생할 수 있는 닷넷 코어가 아닌 .NET Framework F# 프로젝트를 생성합니다. **Linux** 또는 **OSX**에서 실행하는 경우 시작하기 쉬운 방법은 [명령줄 도구](https://docs.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-command-line)를 사용하는 것입니다.
+> Ionide는 플랫폼 간 호환성 문제가 발생할 수 있는 닷넷 코어가 아닌 .NET Framework F# 프로젝트를 생성합니다. 실행 하는 경우 **Linux** 또는 **OSX**를 시작 하는 간단한 방법을 사용 하는 것은 [명령줄 도구](get-started-command-line.md)합니다.
 
 ## <a name="creating-your-first-project-with-ionide"></a>Ionide를 사용하여 첫 번째 프로젝트 만들기
 

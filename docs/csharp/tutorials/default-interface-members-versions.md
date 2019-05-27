@@ -3,16 +3,16 @@ title: C#에서 기본 인터페이스 멤버를 사용하여 안전하게 인�
 description: 이 고급 자습서에서는 해당 인터페이스를 구현하는 모든 클래스 및 구성 요소를 훼손하지 않고 기존 인터페이스 정의에 새 기능을 안전하게 추가할 수 있는 방법을 살펴봅니다.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: ded3704428282b8f9f0542e938137585a07802b4
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 2daa40ead5902454c6d45390233e1491fe6d369b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452915"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877912"
 ---
-# <a name="tutorial-update-interfaces-with-default-interface-members-in-c-8"></a>자습서: C# 8에서 기본 인터페이스 멤버로 인터페이스 업데이트
+# <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>자습서: C# 8.0에서 기본 인터페이스 멤버로 인터페이스 업데이트
 
-.NET Core 3.0의 C# 8에서부터, 인터페이스 멤버 선언 시 구현을 정의할 수 있습니다. 가장 일반적인 시나리오는 이미 릴리스되어 수많은 클라이언트가 사용하는 인터페이스에 멤버를 안전하게 추가하는 것입니다.
+.NET Core 3.0의 C# 8.0에서부터, 인터페이스 멤버 선언 시 구현을 정의할 수 있습니다. 가장 일반적인 시나리오는 이미 릴리스되어 수많은 클라이언트가 사용하는 인터페이스에 멤버를 안전하게 추가하는 것입니다.
 
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 알아봅니다.
 
@@ -23,7 +23,7 @@ ms.locfileid: "65452915"
 
 ## <a name="prerequisites"></a>전제 조건
 
-C# 8.0 미리 보기 컴파일러를 포함해 .NET Core를 실행하도록 머신을 설정해야 합니다. C# 8 미리 보기 컴파일러는 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 또는 최신 [.NET Core 3.0 미리 보기 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0)부터 사용 가능합니다. 기본 인터페이스 멤버는 .NET Core 3.0 미리 보기 4부터 사용 가능합니다.
+C# 8.0 미리 보기 컴파일러를 포함해 .NET Core를 실행하도록 머신을 설정해야 합니다. C# 8.0 미리 보기 컴파일러는 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 또는 최신 [.NET Core 3.0 미리 보기 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0)부터 사용 가능합니다. 기본 인터페이스 멤버는 .NET Core 3.0 미리 보기 4부터 사용 가능합니다.
 
 ## <a name="scenario-overview"></a>시나리오 개요
 

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1602479d4986109ffe89a87250297ee5687930ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fcc294f09172eb2029f92d2c05821837aa10c35f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609579"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591506"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>XslTransform 클래스에서 임의 동작 구현
 
@@ -19,7 +19,7 @@ ms.locfileid: "54609579"
 
 임의 동작은 구현 공급자가 특정 상황을 처리하기 위해 선택할 수 있는 여러 가지 방법을 안내하는 [W3C(World Wide Web 컨소시엄) XSLT(XSL Transformations) 버전 1.0 권장 사항](https://www.w3.org/TR/1999/REC-xslt-19991116)에 나열된 동작으로 설명됩니다. 예를 들어, 7.3단원의 처리 명령 만들기에 나오는 W3C 권장 사항에 따르면 `xsl:processing-instruction`의 내용을 인스턴스화하여 텍스트 노드 이외의 노드가 만들어질 경우 오류가 발생합니다. W3C에서는 일부 문제점에 대해, 프로세서가 오류에서 복구하기로 결정한 경우 어떤 결정을 내려야 하는지 알려 줍니다. 7.3단원에 제시된 문제점의 경우에는 W3C에서 노드 및 해당 내용을 무시함으로써 이 오류에서 구현을 복구할 수 있다고 설명합니다.
 
-따라서 다음 표에서는 W3C에서 허용하는 각각의 임의 동작에 대해 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 클래스의 <xref:System.Xml.Xsl.XslTransform> 구현을 수행하는 임의 동작과 W3C XSLT 1.0 권장 사항에서 해당 문제점에 대해 설명하는 단원의 목록을 보여 줍니다.
+따라서 다음 표에서는 W3C에서 허용하는 각각의 임의 동작에 대해 <xref:System.Xml.Xsl.XslTransform> 클래스의 .NET Framework 구현을 수행하는 임의 동작과 W3C XSLT 1.0 권장 사항에서 해당 문제점에 대해 설명하는 단원의 목록을 보여 줍니다.
 
 |문제점|동작|단원|
 |-------------|--------------|-------------|
@@ -75,7 +75,7 @@ ms.locfileid: "54609579"
 
 다음 표에서는 XSLT 프로세서에서 선택적으로 구현되며 <xref:System.Xml.Xsl.XslTransform> 클래스에서는 일괄 구현되는 기능을 보여 줍니다.
 
-|기능|참조 위치|노트|
+|기능|참조 위치|참고 사항|
 |-------------|------------------------|-----------|
 |`disable-output-escaping` 및 `<xsl:text...>` 태그의 `<xsl:value-of...>` 특성|W3C XSLT 1.0 권장 사항<br /><br /> 16.4단원|`disable-output-escaping` 또는 `xsl:text` 요소가 `xsl:value-of`, `xsl:comment` 또는 `xsl:processing-instruction` 요소에서 사용되면 `xsl:attribute` 특성이 무시됩니다.<br /><br /> 텍스트가 들어 있는 결과 트리 조각 및 이스케이프된 텍스트 출력은 지원되지 않습니다.<br /><br /> disable-output-escaping 특성은 <xref:System.Xml.XmlReader> 또는 <xref:System.Xml.XmlWriter> 개체로 변환할 때 무시됩니다.|
 

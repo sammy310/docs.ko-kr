@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 894895331c2444a8e52a09e3de9d5a47daa87e5d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: cc7a0991ae308f1c61026e946021d22da9a4bc3b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092958"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583547"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 개발 가이드
 이 섹션에서는 .NET Framework 앱을 생성, 구성, 디버그, 배포하고 보안을 적용하는 방법을 설명합니다. 이 섹션에서는 또한 동적 프로그래밍, 상호 운용성, 확장성, 메모리 관리 및 스레딩과 같은 기술 영역에 대한 정보를 제공합니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "56092958"
  
 ## <a name="reference"></a>참조  
  [.NET Framework 클래스 라이브러리](/dotnet/api/?view=netframework-4.7)  
- [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 네임스페이스에 포함된 각 클래스에 대한 구문, 코드 예제 및 사용 정보를 제공합니다.  
+ .NET Framework 네임스페이스에 포함된 각 클래스에 대한 구문, 코드 예제 및 사용 정보를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
  [시작](../../docs/framework/get-started/index.md)  

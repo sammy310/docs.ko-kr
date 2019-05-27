@@ -8,12 +8,12 @@ helpviewer_keywords:
 - codepage compiler option [C#]
 - -codepage compiler option [C#]
 ms.assetid: 75942989-b69a-4308-90a0-840c73d2c478
-ms.openlocfilehash: 7cbd3ec1b2d134106c6c9429341f5603444dac27
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 59dc1abc3f678a4cf15543c11f9f200ff318ce8f
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693982"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876920"
 ---
 # <a name="-codepage-c-compiler-options"></a>-codepage(C# 컴파일러 옵션)
 이 옵션은 필수 페이지가 시스템에 대한 현재 기본 코드 페이지가 아닌 경우 컴파일 중에 사용할 코드 페이지를 지정합니다.  
@@ -29,10 +29,8 @@ ms.locfileid: "54693982"
  컴파일할 때 모든 소스 코드 파일에 사용할 코드 페이지의 ID입니다.  
   
 ## <a name="remarks"></a>주의  
- 컴퓨터의 기본 코드 페이지를 사용하도록 생성되지 않은 소스 코드 파일을 하나 이상 컴파일할 경우 **-codepage** 옵션을 통해 사용할 코드 페이지를 지정할 수 있습니다. **-codepage**는 컴파일에 포함된 모든 소스 코드 파일에 적용됩니다.  
-  
- 소스 코드 파일이 컴퓨터에 적용된 것과 동일한 코드 페이지를 사용하여 생성되었거나 소스 코드 파일이 UNICODE 또는 UTF-8을 사용하여 생성된 경우에는 **-codepage**를 사용할 필요가 없습니다.  
-  
+ 컴파일러는 먼저 모든 소스 파일을 UTF-8로 해석하려고 합니다. 소스 코드 파일이 UTF-8 이외의 인코딩에 있고 7비트 ASCII 문자가 아닌 문자를 사용하는 경우 **-codepage** 옵션을 통해 사용할 코드 페이지를 지정합니다. **-codepage**는 컴파일에 포함된 모든 소스 코드 파일에 적용됩니다.  
+    
  시스템에서 지원되는 코드 페이지를 찾는 방법에 대한 자세한 내용은 [GetCPInfo](/windows/desktop/api/winnls/nf-winnls-getcpinfo)를 참조하세요.  
   
  이 컴파일러 옵션은 Visual Studio에서 사용할 수 없으며 프로그래밍 방식으로 변경할 수 없습니다.  

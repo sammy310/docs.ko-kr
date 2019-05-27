@@ -3,12 +3,12 @@ title: ML.NET CLI(명령줄 인터페이스) 도구를 설치하는 방법
 description: ML.NET CLI(명령줄 인터페이스) 도구 개요 및 설치
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 869c443d519557c9d3976676047e63a4a072d2d3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 9560aa846a1aefabadbd7d4faf8bd306ba72e0de
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065806"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557866"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>ML.NET CLI(명령줄 인터페이스) 도구를 설치하는 방법
 
@@ -56,10 +56,10 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 
 ## <a name="install-a-specific-release-version"></a>특정 릴리스 버전 설치
 
-이전 릴리스 버전 또는 특정 버전의 도구를 설치하려는 경우 다음 형식을 사용하여 버전 번호를 지정할 수 있습니다.
+이전 릴리스 버전 또는 특정 버전의 도구를 설치하려는 경우 다음 형식을 사용하여 [프레임워크](../../standard/frameworks.md)를 지정할 수 있습니다.
 
 ```console
-> dotnet tool install -g <package-name> --version <version-number>
+> dotnet tool install -g mlnet --framework <FRAMEWORK>
 ```
 
 다음 명령을 입력하여 패키지가 올바르게 설치되었는지 확인할 수도 있습니다.

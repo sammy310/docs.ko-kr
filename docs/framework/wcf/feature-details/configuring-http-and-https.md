@@ -4,12 +4,12 @@ ms.date: 04/08/2019
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 86705a4f8daa327c442ac6c53c9b44c5b5c5c2ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4bfdbbc19bb9ed72bc50ebeeac114241ccd47c25
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857365"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053406"
 ---
 # <a name="configuring-http-and-https"></a>HTTP 및 HTTPS 구성
 
@@ -57,7 +57,7 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
 
 <xref:System.ServiceModel.WSDualHttpBinding>을 사용하는 경우 클라이언트 연결은 네임스페이스 예약 및 Windows 방화벽과 호환되는 기본값을 사용합니다. 이중 연결에 대한 클라이언트 기본 주소를 사용자 지정하는 경우에도 새 주소와 일치하도록 클라이언트에 이러한 HTTP 설정을 구성해야 합니다.
 
-HTTP Server API에 HttpCfg를 통해 사용할 수 없는 일부 고급 구성 설정이 있습니다. 이러한 설정은 레지스트리에 유지되며 HTTP Server API를 사용하는 시스템에서 실행되는 모든 응용 프로그램에 적용됩니다. 이러한 설정에 대 한 자세한 내용은 [IIS에 대 한 Http.sys 레지스트리 설정](https://support.microsoft.com/en-us/help/820129/http-sys-registry-settings-for-windows)합니다. 대부분의 사용자는 이러한 설정을 변경할 필요가 없습니다.
+HTTP Server API에 HttpCfg를 통해 사용할 수 없는 일부 고급 구성 설정이 있습니다. 이러한 설정은 레지스트리에 유지되며 HTTP Server API를 사용하는 시스템에서 실행되는 모든 응용 프로그램에 적용됩니다. 이러한 설정에 대 한 자세한 내용은 [IIS에 대 한 Http.sys 레지스트리 설정](https://support.microsoft.com/help/820129/http-sys-registry-settings-for-windows)합니다. 대부분의 사용자는 이러한 설정을 변경할 필요가 없습니다.
 
 ## <a name="see-also"></a>참고자료
 

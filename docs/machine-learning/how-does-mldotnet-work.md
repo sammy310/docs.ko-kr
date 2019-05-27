@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: a4573575805ad45d251a900f304b8cb01654a39b
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 054fa0e1d9d8cc0d7c32efd4a9e8c81b91cb1335
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557986"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960435"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET은 무엇이며 어떻게 작동하나요?
 
@@ -65,7 +65,7 @@ ML.NET을 사용하여 수행할 수 있는 예측 유형은 다음과 같습니
 
             // 2. Specify data preparation and model training pipeline
             var pipeline = mlContext.Transforms.Concatenate("Features", new[] { "Size" })
-                .Append(mlContext.Regression.Trainers.Sdca(labelColumnName: "Price", maximumNumberOfIterations: 100);
+                .Append(mlContext.Regression.Trainers.Sdca(labelColumnName: "Price", maximumNumberOfIterations: 100));
     
             // 3. Train model
             var model = pipeline.Fit(trainingData);
@@ -145,7 +145,7 @@ ML.NET 모델은 예측된 출력에 도달하기 위해 입력 데이터에서 
             new HouseData() { Size = 3.4F, Price = 3.6F }
         };
 
-        var testHouseDataView = mlContext.Data.LoadFromEnumerable(houseData);
+        var testHouseDataView = mlContext.Data.LoadFromEnumerable(testHouseData);
         var testPriceDataView = model.Transform(testHouseDataView);
                 
         var metrics = mlContext.Regression.Evaluate(testPriceDataView, labelColumnName: "Price");
@@ -153,8 +153,8 @@ ML.NET 모델은 예측된 출력에 도달하기 위해 입력 데이터에서 
         Console.WriteLine($"R^2: {metrics.RSquared:0.##}");
         Console.WriteLine($"RMS error: {metrics.RootMeanSquaredError:0.##}");
 
-        // R^2: 0.99
-        // RMS error: 0.09
+        // R^2: 0.96
+        // RMS error: 0.19
 ```
 
 평가 메트릭은 오류가 낮은 수준이며 예측한 출력과 테스트 출력 간 상관 관계가 높다는 것을 알려줍니다. 이 과정은 아주 쉽습니다! 실제 사례에서는 훌륭한 모델 메트릭을 얻는 데 더 많은 튜닝이 필요합니다.
@@ -187,7 +187,7 @@ ML.NET 애플리케이션은 <xref:Microsoft.ML.MLContext> 개체로 시작합�
 
 ```csharp
     var pipeline = mlContext.Transforms.Concatenate("Features", new[] { "Size" })
-        .Append(mlContext.Regression.Trainers.Sdca(labelColumnName: "Price", maximumNumberOfIterations: 100);
+        .Append(mlContext.Regression.Trainers.Sdca(labelColumnName: "Price", maximumNumberOfIterations: 100));
 ```
 
 코드 조각에서 `Concatenate` 및 `Sdca`는 카탈로그에 있는 두 메서드입니다. 이러한 메서드는 파이프라인에 연결된 [IEstimator](xref:Microsoft.ML.IEstimator%601) 개체를 만듭니다.

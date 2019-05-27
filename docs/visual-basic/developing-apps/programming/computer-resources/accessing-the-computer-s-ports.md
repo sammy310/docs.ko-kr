@@ -5,12 +5,12 @@ helpviewer_keywords:
 - serial ports
 - My.Computer.Ports object [Visual Basic], tasks
 ms.assetid: b04a2f76-992a-4585-ab41-8bbbdbd554a1
-ms.openlocfilehash: e3ca5193db9dbcb4674680884a6372e6383c0852
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7788e08c1257ff900b08ef6b8d26d3fe42ad9116
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289031"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589335"
 ---
 # <a name="accessing-the-computers-ports-visual-basic"></a>컴퓨터 포트에 액세스(Visual Basic)
 `My.Computer.Ports` 개체는 컴퓨터의 직렬 포트에 액세스하기 위한 속성 및 메서드를 제공합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "55289031"
  컴퓨터의 직렬 포트에서 문자열을 받는 방법을 보여 줍니다.  
   
  [.NET Framework의 포트 작업](../../../../visual-basic/developing-apps/programming/computer-resources/port-operations-in-the-net-framework.md)  
- 포트 작업을 수행할 때 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]를 사용하는 방법을 설명합니다.  
+ 포트 작업을 수행할 때 .NET Framework를 사용하는 방법을 설명합니다.  
   
 ## <a name="reference"></a>참조  
  <xref:Microsoft.VisualBasic.Devices.Ports>  

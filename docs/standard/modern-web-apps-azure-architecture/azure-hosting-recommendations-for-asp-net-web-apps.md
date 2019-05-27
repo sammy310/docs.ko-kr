@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 136ad9992ea94b027f095f47df0388408029f24e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a93009e66d63aa7d9c3b60951d43eafa3c351a63
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638912"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053271"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>ASP.NET Core 웹앱에 대한 Azure 호스팅 권장 사항
 
@@ -44,7 +44,7 @@ App Service Web Apps는 웹 애플리케이션 호스팅에 최적화된 완벽�
 
 - Visual Studio 통합
 
-- [Web App for Containers](https://azure.microsoft.com/en-us/services/app-service/containers/)를 통한 통해 Linux 및 Windows 컨테이너 지원
+- [Web App for Containers](https://azure.microsoft.com/services/app-service/containers/)를 통한 통해 Linux 및 Windows 컨테이너 지원
 
 Azure App Service는 대부분의 웹앱에 가장 적합한 선택입니다. 배포 및 관리가 플랫폼에 통합되어 있고, 사이트가 높은 트래픽 부하를 처리하기 위해 빠르게 확장될 수 있으며, 기본 제공되는 부하 분산 및 트래픽 관리자가 고가용성을 제공합니다. 온라인 마이그레이션 도구를 사용하여 기존 사이트를 Azure App Service로 쉽게 이동하거나, 웹 애플리케이션 갤러리에서 오픈 소스 애플리케이션을 사용하거나, 원하는 프레임워크와 도구를 사용하여 새 사이트를 만들 수 있습니다. Webjob 기능을 사용하면 백그라운드 작업 처리를 App Service 웹앱에 쉽게 추가할 수 있습니다.
 
@@ -101,7 +101,7 @@ Azure는 다양한 데이터 저장 옵션을 제공하므로, 애플리케이�
   <https://docs.microsoft.com/azure/app-service/app-service-web-overview>
 
 - Web App for Containers\
-  <https://azure.microsoft.com/en-us/services/app-service/containers/>
+  <https://azure.microsoft.com/services/app-service/containers/>
 
 - AKS(Azure Kubernetes Service) 소개\
   <https://docs.microsoft.com/azure/aks/intro-kubernetes>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 77aed78e7822e06b3b1e6c48b07790d93e09559c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 390b2226cc2f345d2f42659bd092e36a4bd0c4fc
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612727"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632912"
 ---
 # <a name="value-types-c-reference"></a>값 형식(C# 참조)
 
@@ -34,7 +34,7 @@ ms.locfileid: "53612727"
 
 값 형식 변수는 기본적으로 `null`일 수 없습니다. 그러나 해당 [nullable 형식](../../../csharp/programming-guide/nullable-types/index.md)의 변수는 `null`일 수 있습니다.
 
-각 값 형식에는 해당 형식의 기본값을 초기화하는 암시적 기본 생성자가 있습니다. 값 형식의 기본값에 대한 자세한 내용은 [기본값 표](default-values-table.md)를 참조하세요.
+각 값 형식에는 해당 형식의 기본값을 초기화하는 암시적 매개 변수 없는 생성자가 있습니다. 값 형식의 기본값에 대한 자세한 내용은 [기본값 표](default-values-table.md)를 참조하세요.
 
 ## <a name="simple-types"></a>단순 형식
 
@@ -67,7 +67,7 @@ int myInt;
 초기화하기 전에는 사용할 수 없습니다. 다음 문을 사용하여 초기화할 수 있습니다.
 
 ```csharp
-myInt = new int();  // Invoke default constructor for int type.
+myInt = new int();  // Invoke parameterless constructor for int type.
 ```
 
 이 문은 다음 문과 같습니다.
@@ -88,12 +88,12 @@ int myInt = new int();
 int myInt = 0;
 ```
 
-[new](new.md) 연산자를 사용하면 특정 형식의 기본 생성자가 호출되고 변수에 기본값이 할당됩니다. 앞의 예제에서는 기본 생성자가 `0` 값을 `myInt`에 할당했습니다. 기본 생성자를 호출하여 할당된 값에 대한 자세한 내용은 [기본값 표](default-values-table.md)를 참조하세요.
+[new](new.md) 연산자를 사용하면 특정 형식의 매개 변수 없는 생성자가 호출되고 변수에 기본값이 할당됩니다. 앞의 예제에서는 매개 변수 없는 생성자가 `0` 값을 `myInt`에 할당했습니다. 기본 생성자를 호출하여 할당된 값에 대한 자세한 내용은 [기본값 표](default-values-table.md)를 참조하세요.
 
-사용자 정의 형식의 경우 [new](new.md)를 사용하여 기본 생성자를 호출합니다. 예를 들어 다음 문은 `Point` 구조체의 기본 생성자를 호출합니다.
+사용자 정의 형식의 경우 [new](new.md)를 사용하여 매개 변수 없는 생성자를 호출합니다. 예를 들어 다음 명령문은 `Point` 구조체의 매개 변수 없는 생성자를 호출합니다.
 
 ```csharp
-Point p = new Point(); // Invoke default constructor for the struct.
+Point p = new Point(); // Invoke parameterless constructor for the struct.
 ```
 
 이 호출 후에는 구조체가 한정적으로 할당된 것으로 간주됩니다. 즉, 모든 멤버가 기본값으로 초기화됩니다.

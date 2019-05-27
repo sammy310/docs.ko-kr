@@ -7,22 +7,22 @@ dev_langs:
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31208a63caaf9158f12742f1547b0e1e2781de4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 803709c97309f9766b6a441f5521cdcd7504862f
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866888"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052495"
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>MissingInteropDataException 클래스(.NET 네이티브)
-**Windows 10의 Windows 앱용 .NET, [!INCLUDE[net_native](../../../includes/net-native-md.md)]에만 해당**  
+**Windows 10,.NET 네이티브 전용의 Windows 앱 용.NET**  
   
  수동 마샬링 메서드를 호출했는데 정적 분석 또는 런타임 지시문 파일에서 형식의 메타데이터를 찾을 수 없을 때 throw되는 예외입니다.  
   
  **네임스페이스:** System.Runtime.CompilerServices  
   
 > [!IMPORTANT]
->  `MissingInteropDataException` 클래스는 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 도구 체인에서 내부용으로만 사용됩니다. 이 클래스는 타사 코드에서 사용하면 안 되고 응용 프로그램 코드에서 예외를 처리하면 안 됩니다. 대신, [런타임 지시문 파일](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)에 항목을 추가하여 예외를 제거합니다. 자세한 내용은 설명 섹션을 참조하세요.  
+>  `MissingInteropDataException` 클래스는.NET 네이티브 도구 체인에서 내부용 으로만 것입니다. 이 클래스는 타사 코드에서 사용하면 안 되고 응용 프로그램 코드에서 예외를 처리하면 안 됩니다. 대신, [런타임 지시문 파일](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)에 항목을 추가하여 예외를 제거합니다. 자세한 내용은 설명 섹션을 참조하세요.  
   
 ## <a name="syntax"></a>구문  
  [!code-csharp[ProjectN#21](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missinginteropdataexception_syntax1.cs#21)]
@@ -34,7 +34,7 @@ ms.locfileid: "61866888"
   
 |생성자|설명|  
 |-----------------|-----------------|  
-|`public MissingInteropDataException(String resourceId, Type pertinentType)`|오류를 설명하는 시스템 제공 메시지의 ID와 데이터가 누락된 형식을 사용하여 `MissingInteropDataException` 클래스의 새 인스턴스를 초기화합니다. 이 생성자는 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 도구 체인에서 내부용으로만 사용됩니다.|  
+|`public MissingInteropDataException(String resourceId, Type pertinentType)`|오류를 설명하는 시스템 제공 메시지의 ID와 데이터가 누락된 형식을 사용하여 `MissingInteropDataException` 클래스의 새 인스턴스를 초기화합니다. 이 생성자는 내부.NET 네이티브 도구 체인에만 사용 합니다.|  
   
 ## <a name="properties"></a>속성  
   

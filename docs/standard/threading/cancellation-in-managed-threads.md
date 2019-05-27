@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 531b9b6ae62b34f78f13ff6cd1784a2823584ed6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d0776db4d045a8e52521859b9126583558bc5b51
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620778"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586376"
 ---
 # <a name="cancellation-in-managed-threads"></a>관리되는 스레드의 취소
 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터 .NET Framework에서는 비동기 또는 장기 실행 비동기 작업의 협조적 취소를 위한 통합 모델을 사용합니다. 이 모델은 취소 토큰이라는 경량 개체에 기반을 둡니다. 취소할 수 있는 작업 하나 이상을 호출하는 개체가 새 스레드나 작업 등을 만드는 방식으로 토큰을 각 작업에 전달합니다. 개별 작업이 토큰 복사본을 다시 다른 작업에 전달할 수 있습니다. 나중에 토큰을 만든 개체가 해당 토큰을 사용하여 관련 작업이 수행 중인 작업을 중지하도록 요청할 수 있습니다. 요청 개체만 취소 요청을 실행할 수 있고 각 수신기는 적절한 시간에 적절한 방식으로 요청을 알리고 요청에 응답해야 합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "64620778"
 |<xref:System.Threading.CancellationToken>|일반적으로 메서드 매개 변수로 수신기 하나 이상에 전달되는 경량 값 형식입니다. 수신기는 핸들을 폴링, 콜백 또는 대기하여 토큰의 `IsCancellationRequested` 속성 값을 모니터링합니다.|  
 |<xref:System.OperationCanceledException>|이 예외 생성자의 오버로드는 <xref:System.Threading.CancellationToken>을 매개 변수로 허용합니다. 수신기는 선택적으로 이 예외를 throw하여 취소의 출처를 확인하고 취소 요청에 응답했다는 것을 다른 수신기에 알립니다.|  
   
- 새 취소 모델은 여러 가지 형식으로 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에 통합되었습니다. 가장 중요한 형식은 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 및 <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>입니다. 모든 새 라이브러리 및 애플리케이션 코드에 대해 이 새 취소 모델을 사용하는 것이 좋습니다.  
+ 새 취소 모델은 여러 가지 형식으로 .NET Framework에 통합되었습니다. 가장 중요한 형식은 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 및 <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>입니다. 모든 새 라이브러리 및 애플리케이션 코드에 대해 이 새 취소 모델을 사용하는 것이 좋습니다.  
   
 ## <a name="code-example"></a>코드 예제  
  다음 예제에서는 요청 개체가 <xref:System.Threading.CancellationTokenSource> 개체를 만들고 <xref:System.Threading.CancellationTokenSource.Token%2A> 속성을 취소 가능한 작업에 전달합니다. 요청을 수신하는 작업에서는 폴링을 통해 토큰의 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 속성 값을 모니터링합니다. 값이 `true`가 되면 수신기가 적절한 방식이더라도 종료될 수 있습니다. 이 예제에서는 대부분 경우에 모두 필요한 메서드가 종료됩니다.  

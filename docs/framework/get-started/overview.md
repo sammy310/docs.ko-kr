@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4aad615df6db5a29b9af21b585ea2b0dfbdedf4
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: f50a469327a06eabdb6a80821203f2222dcd2921
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093686"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878024"
 ---
 # <a name="overview-of-the-net-framework"></a>.NET Framework의 개요
 
@@ -45,7 +45,7 @@ Internet Explorer는 MIME 형식 확장의 형식으로 런타임을 호스트�
 
 다음 그림에서는 앱 및 전체 시스템에 대한 공용 언어 런타임과 클래스 라이브러리의 관계를 보여 줍니다. 이 그림에서는 관리 코드가 보다 큰 아키텍처에서 작동하는 방식도 보여 줍니다.
 
-![더 큰 아키텍처 내의 관리 코드](../../../docs/framework/get-started/media/circle.gif "원") 컨텍스트에 있는 .NET Framework
+![더 큰 아키텍처 내에서 관리 코드가 작동하는 방식을 보여주는 스크린샷.](./media/overview/language-runtime-class-library-relationship.gif)
 
 다음 섹션에서는 .NET Framework의 기본 기능에 대해 보다 자세히 설명합니다.
 

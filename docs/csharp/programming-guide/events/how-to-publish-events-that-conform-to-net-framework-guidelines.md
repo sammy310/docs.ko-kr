@@ -5,15 +5,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: f67789159cee64e928ae88cede9f4dbf33df1b40
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 010077cd95a9cf6bd7d4c22a54abc02b167755e8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608690"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584316"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>방법: .NET Framework 지침을 따르는 이벤트 게시(C# 프로그래밍 가이드)
-다음 절차에서는 표준 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 패턴을 따르는 이벤트를 클래스와 구조체에 추가하는 방법을 보여 줍니다. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 클래스 라이브러리의 모든 이벤트는 다음과 같이 정의된 <xref:System.EventHandler> 대리자를 기반으로 합니다.  
+다음 절차에서는 표준 .NET Framework 패턴을 따르는 이벤트를 클래스와 구조체에 추가하는 방법을 보여 줍니다. .NET Framework 클래스 라이브러리의 모든 이벤트는 다음과 같이 정의된 <xref:System.EventHandler> 대리자를 기반으로 합니다.  
   
 ```csharp  
 public delegate void EventHandler(object sender, EventArgs e);  
@@ -22,7 +22,7 @@ public delegate void EventHandler(object sender, EventArgs e);
 > [!NOTE]
 >  [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)]에서는 이 대리자의 제네릭 버전인 <xref:System.EventHandler%601>가 도입되었습니다. 다음 예제에서는 두 버전을 사용하는 방법을 모두 보여 줍니다.  
   
- 정의하는 클래스의 이벤트는 값을 반환하는 대리자를 포함하여 유효한 모든 대리자 형식을 기반으로 할 수 있지만 다음 예제와 같이 <xref:System.EventHandler>를 사용하여 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 패턴에 따라 이벤트를 만드는 것이 좋습니다.  
+ 정의하는 클래스의 이벤트는 값을 반환하는 대리자를 포함하여 유효한 모든 대리자 형식을 기반으로 할 수 있지만 다음 예제와 같이 <xref:System.EventHandler>를 사용하여 .NET Framework 패턴에 따라 이벤트를 만드는 것이 좋습니다.  
   
 ### <a name="to-publish-events-based-on-the-eventhandler-pattern"></a>EventHandler 패턴에 따라 이벤트를 게시하려면  
   

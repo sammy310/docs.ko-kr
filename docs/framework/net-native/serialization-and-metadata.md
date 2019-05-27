@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e7a8e6509cea5f9035e3b8544aa37aa99681822
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c1ee70c2701492acd331e5faed849ff0b2e8b559
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650322"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052385"
 ---
 # <a name="serialization-and-metadata"></a>Serialization 및 메타데이터
 앱이 개체를 serialize 및 deserialize하는 경우에는 런타임에 필요한 메타데이터가 제공되도록 런타임 지시문(.rd.xml) 파일에 항목을 추가해야 할 수 있습니다. serializer에는 두 가지 범주가 있으며 각 범주는 런타임 지시문 파일에서 서로 다른 방식으로 처리해야 합니다.  
@@ -39,10 +39,10 @@ ms.locfileid: "64650322"
   
  [!code-csharp[ProjectN#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#5)]  
   
- [!INCLUDE[net_native](../../../includes/net-native-md.md)] 컴파일러는 이 코드를 자동으로 처리합니다.  
+ .NET 네이티브 컴파일러는이 코드를 자동으로 처리 합니다.  
   
 ### <a name="typeof-used-outside-the-constructor"></a>생성자 외부에서 사용되는 typeof  
- 이러한 serialization 클래스의 생성자를 호출하고 생성자 <xref:System.Type> 매개 변수에 제공된 식 외부에서 C# [typeof](~/docs/csharp/language-reference/keywords/typeof.md) 키워드를 사용하는 경우, 다음 코드에서처럼 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 컴파일러는 형식을 확인할 수 없습니다.  
+ 이러한 serialization 클래스의 생성자를 호출 하 고 사용 하 여는 C# [typeof](~/docs/csharp/language-reference/keywords/typeof.md) 생성자에 제공 된 식 외부 키워드 <xref:System.Type> 매개 변수 다음 코드와 같이.NET 네이티브 컴파일러 수 없습니다. 형식을 확인 합니다.  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   
@@ -52,7 +52,7 @@ ms.locfileid: "64650322"
 <Type Name="DataSet" Browse="Required Public" />  
 ```  
   
- 마찬가지로 다음 코드에서와 같이 <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> 등의 생성자를 호출하고 serialize할 추가 <xref:System.Type> 개체 배열을 제공하는 경우 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 컴파일러는 해당 형식을 확인할 수 없습니다.  
+ 마찬가지로,와 같은 생성자를 호출 하는 경우 <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> 배열을 추가 설명과 <xref:System.Type> 개체를 serialize 하는데, 다음 코드에서.NET 네이티브 컴파일러에는 해당이 형식을 확인할 수 없습니다.  
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   

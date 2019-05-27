@@ -1,15 +1,15 @@
 ---
-title: F#코딩 규칙
+title: F# 코딩 규칙
 description: 작성 하는 경우 일반 지침 및 코드에 알아봅니다 F# 코드입니다.
 ms.date: 05/14/2018
-ms.openlocfilehash: 1ef016184180eb8d233295e8985903e07693ad26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b292d0a844a4d9efc79aa865b054b4af2cb68c4
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902137"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052793"
 ---
-# <a name="f-coding-conventions"></a>F#코딩 규칙
+# <a name="f-coding-conventions"></a>F# 코딩 규칙
 
 다음 규칙에 작업 환경에서 공식화 됩니다 F# 코드 베이스입니다. 합니다 [good의 다섯 가지 원칙 F# 코드](index.md#five-principles-of-good-f-code) 각 권장 사항의 기반이 됩니다. 관련이 합니다 [ F# 구성 요소 디자인 지침](component-design-guidelines.md), 이지만에 적용할 수 있습니다 F# 코드 라이브러리와 같은 뿐 아니라 구성 요소입니다.
 
@@ -611,7 +611,7 @@ F#개체 및 개체 지향 (개체 지향) 개념에 대 한 전체 지원 합�
 
 ## <a name="type-abbreviations"></a>형식 약어
 
-[형식 약어](../language-reference/type-abbreviations.md) 은 함수 서명 등 보다 복잡 한 형식을 다른 형식에 레이블을 지정 하는 편리한 방법입니다. 다음 별칭 레이블을 사용 하 여 계산을 정의 하는 데 필요한 항목을 할당 하는 예를 들어 [CNTK](https://www.microsoft.com/en-us/cognitive-toolkit/), 심층 학습 라이브러리:
+[형식 약어](../language-reference/type-abbreviations.md) 은 함수 서명 등 보다 복잡 한 형식을 다른 형식에 레이블을 지정 하는 편리한 방법입니다. 다음 별칭 레이블을 사용 하 여 계산을 정의 하는 데 필요한 항목을 할당 하는 예를 들어 [CNTK](https://docs.microsoft.com/cognitive-toolkit/), 심층 학습 라이브러리:
 
 ```fsharp
 open CNTK

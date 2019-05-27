@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6e97591508c2aa90306ed22556f12f257cc4b03
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6007bc6085366e46e60696e412507026726f098a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647714"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593457"
 ---
 # <a name="managed-execution-process"></a>관리되는 실행 프로세스
 <a name="introduction"></a> 관리되는 실행 프로세스에는 이 항목의 뒷부분에서 설명하는 다음 단계가 포함됩니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "64647714"
   
 <a name="compiling_msil_to_native_code"></a>   
 ## <a name="compiling-msil-to-native-code"></a>MSIL을 네이티브 코드로 컴파일  
- MSIL(Microsoft Intermediate Language)을 실행하기 전에 공용 언어 런타임을 기반으로 MSIL을 대상 컴퓨터 아키텍처에 대한 네이티브 코드로 컴파일해야 합니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 은(는) 이 변환을 수행하는 두 가지 방법을 제공합니다.  
+ MSIL(Microsoft Intermediate Language)을 실행하기 전에 공용 언어 런타임을 기반으로 MSIL을 대상 컴퓨터 아키텍처에 대한 네이티브 코드로 컴파일해야 합니다. .NET Framework는 이 변환을 수행하는 두 가지 방법을 제공합니다.  
   
 - .NET Framework JIT(Just-In-Time) 컴파일러.  
   

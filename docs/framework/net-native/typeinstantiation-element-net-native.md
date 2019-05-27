@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4244d47c099fe7a5b0093b94ef44b4354bae86f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8ea167ae15e4d0035785d228f08779406e05e873
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61867117"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052375"
 ---
 # <a name="typeinstantiation-element-net-native"></a>\<TypeInstantiation > 요소 (.NET 네이티브)
 생성된 제네릭 형식에 런타임 리플렉션 정책을 적용합니다.  
@@ -103,7 +103,7 @@ ms.locfileid: "61867117"
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   
- 이 예제는 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 도구 체인을 사용하여 컴파일하면 <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType> 메서드를 호출하는 줄에서 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 예외를 throw합니다. 다음 `<TypeInstantiation>` 요소를 런타임 지시문 파일에 추가하면 예외를 방지하고 필요한 메타데이터를 제공할 수 있습니다.  
+ .NET 네이티브 도구 체인을 사용 하 여 컴파일 후 예제에서는 throw를 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 호출 하는 줄에서 예외를 <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType> 메서드. 다음 `<TypeInstantiation>` 요소를 런타임 지시문 파일에 추가하면 예외를 방지하고 필요한 메타데이터를 제공할 수 있습니다.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

@@ -2,12 +2,12 @@
 title: 컨테이너화된 앱을 위한 Microsoft 플랫폼 및 도구 소개
 description: Docker 응용 프로그램 수명 주기를 지원 하기 위해 Microsoft의 제품을 알아야 가져옵니다.
 ms.date: 02/15/2019
-ms.openlocfilehash: 9e7e821370b98fbda9af0ea69c13eaeab2f35acf
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 6907528a5d7ff354a312e7575531b9c608cb479f
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644900"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195592"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Microsoft 플랫폼 및 컨테이너 화 된 앱에 대 한 도구를 소개
 
@@ -27,8 +27,8 @@ ms.locfileid: "65644900"
 
 | 호스트 | Microsoft 기술 | 타사-Azure 플러그형 |
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
-| Docker 앱용 플랫폼   | • Microsoft Visual Studio 및 Visual Studio Code<br /> • .NET<br /> • Microsoft Azure Container Service<br /> • Azure Service Fabric<br /> • Azure Container Registry<br /> | • 모든 코드 편집기(예: Sublime)<br /> • 모든 언어(Node.js, Java, Go 등)<br /> • 모든 오케스트레이터 및 스케줄러<br /> • 모든 Docker 레지스트리<br /> |
-| Docker 앱용 DevOps     | • Azure DevOps 서비스<br /> • Microsoft Team Foundation Server<br /> • Azure Container Service<br /> • Azure Service Fabric<br /> | • GitHub, Git, Subversion 등<br /> • Jenkins, Chef, Puppet, Velocity, CircleCI, TravisCI 등<br /> • 온-프레미스 Docker Datacenter, Docker Swarm, Mesos DC/OS, Kubernetes 등<br /> |
+| Docker 앱용 플랫폼   | • Microsoft Visual Studio 및 Visual Studio Code<br /> • .NET<br /> • Microsoft Azure Kubernetes Service (AKS)<br /> • Azure Service Fabric<br /> • Azure Container Registry<br /> | • 모든 코드 편집기(예: Sublime)<br /> • 모든 언어(Node.js, Java, Go 등)<br /> • 모든 오케스트레이터 및 스케줄러<br /> • 모든 Docker 레지스트리<br /> |
+| Docker 앱용 DevOps     | • Azure DevOps 서비스<br /> • Microsoft Team Foundation Server<br /> • Azure Kubernetes Service (AKS)<br /> • Azure Service Fabric<br /> | • GitHub, Git, Subversion 등<br /> • Jenkins, Chef, Puppet, Velocity, CircleCI, TravisCI 등<br /> • 온-프레미스 Docker Datacenter, Docker Swarm, Mesos DC/OS, Kubernetes 등<br /> |
 | 관리 및 모니터링  | • Azure Monitor | • Marathon, Chronos 등<br />|
 
 표 3-1에 정의된 컨테이너화된 Docker 앱을 위한 Microsoft 플랫폼 및 도구는 다음과 같은 구성 요소로 이루어집니다.
@@ -37,7 +37,7 @@ ms.locfileid: "65644900"
 
 - **Docker 앱 용 DevOps** Docker 응용 프로그램을 작성 하는 개발자가 사용할 수 있습니다 [Azure DevOps 서비스](https://azure.microsoft.com/services/devops/) 또는 포괄적인 자동화 된 응용 프로그램 수명 주기를 Jenkins와 같은 기타 다른 타사 제품 관리 (ALM)입니다.
 
-  Azure DevOps 서비스를 사용 하면 개발자가 컨테이너에 초점을 맞춘 만들 수 있습니다 (Azure DevOps 서비스-Git, GitHub, 모든 원격 Git 리포지토리 또는 Subversion) 어디에서 나 컨트롤 소스 코드를 포함 하는 빠르고 반복적인 프로세스에 대 한 DevOps CI (지속적인 통합) 내부 단위 테스트, 내부 container/서비스 통합 테스트, CD (지속적인 업데이트), 및 릴리스 관리 (RM). 또한 개발자는 개발 환경에서 준비 및 프로덕션 환경까지 Azure Container Service로의 Docker 애플리케이션 릴리스를 자동화할 수 있습니다.
+  Azure DevOps 서비스를 사용 하면 개발자가 컨테이너에 초점을 맞춘 만들 수 있습니다 (Azure DevOps 서비스-Git, GitHub, 모든 원격 Git 리포지토리 또는 Subversion) 어디에서 나 컨트롤 소스 코드를 포함 하는 빠르고 반복적인 프로세스에 대 한 DevOps CI (지속적인 통합) 내부 단위 테스트, 내부 container/서비스 통합 테스트, CD (지속적인 업데이트), 및 릴리스 관리 (RM). 또한 개발자가 개발에서 스테이징 및 프로덕션 환경에는 Docker 응용 프로그램 릴리스로 Azure Kubernetes Service (AKS)를 자동화할 수 있습니다.
 
 - **관리 및 모니터링** IT 관리 및 프로덕션 응용 프로그램 및 통합된 환경에서 모두 큐브 뷰를 통합 하는 여러 가지 방법으로 서비스를 모니터링할 수 있습니다.
 

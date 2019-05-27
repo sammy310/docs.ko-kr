@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5214ee83ab3009c3d2bb1360f46b39831c37c2ef
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b890ac02d54a9092bf2ad24e31367ef1d487c01f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664620"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593498"
 ---
 # <a name="net-class-library-overview"></a>.NET 클래스 라이브러리 개요
 
@@ -70,7 +70,7 @@ ms.locfileid: "64664620"
 
  .NET 형식에서는 계층 구조를 의미하는 스키마의 이름을 지정하는데 점 구문을 사용합니다. 이 방법을 사용하면 관련 형식을 네임스페이스로 그룹화하여 보다 쉽게 검색하고 참조할 수 있습니다. 전체 이름에서 첫 번째 부분(가장 오른쪽 점의 오른쪽 부분)은 해당 네임스페이스의 이름이고, 마지막 부분은 형식 이름입니다. 예를 들어 `System.Collections.Generic.List<T>`는 `System.Collections.Generic` 네임스페이스에 속하는 `List<T>` 형식을 나타냅니다. <xref:System.Collections.Generic>의 형식은 제네릭 컬렉션에 대한 작업에 사용할 수 있습니다.  
   
- 이 이름 지정 체계를 사용하면 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 확장하는 라이브러리 개발자가 손쉽게 계층 구조의 그룹 형식을 만들고 일관되고 이해하기 쉬운 이름을 그룹에 지정할 수 있습니다. 또한 형식을 전체 이름, 즉 네임스페이스와 형식 이름별로 명확하게 식별할 수 있으므로 형식 이름 간의 충돌을 방지할 수 있습니다. 라이브러리 개발자는 다음과 같은 규칙을 사용하여 네임스페이스의 이름을 만듭니다.  
+ 이 이름 지정 체계를 사용하면 .NET Framework를 확장하는 라이브러리 개발자가 손쉽게 계층 구조의 그룹 형식을 만들고 일관되고 이해하기 쉬운 이름을 그룹에 지정할 수 있습니다. 또한 형식을 전체 이름, 즉 네임스페이스와 형식 이름별로 명확하게 식별할 수 있으므로 형식 이름 간의 충돌을 방지할 수 있습니다. 라이브러리 개발자는 다음과 같은 규칙을 사용하여 네임스페이스의 이름을 만듭니다.  
   
  *CompanyName*.*TechnologyName*  
   

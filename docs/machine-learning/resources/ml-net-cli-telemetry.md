@@ -4,12 +4,12 @@ description: 어떤 데이터가 수집되고 수집 기능을 사용하지 않�
 ms.topic: conceptual
 ms.date: 05/05/2019
 ms.custom: ''
-ms.openlocfilehash: 49ebd6c9e1b77c85d891b8c9fb8cbd5c66b478a9
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 36f4af48615e2e3247f8e21343d0a00519ba1c0a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065546"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645016"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>ML.NET CLI의 원격 분석 수집
 
@@ -42,15 +42,17 @@ ML.NET CLI 원격 분석 기능은 기본적으로 사용됩니다.
 
 이 기능은 다음 데이터를 수집합니다.
 
-- `auto-train` 등, 호출된 명령
+- `auto-train`과 같이 호출된 명령
+- 사용된 명령중 매개 변수 이름(예: "dataset-name, label-column-name, ml-task, output-path, max-exploration-time, verbosity")
 - 해시된 MAC 주소: 컴퓨터에 대한 암호화된(SHA256) 익명 및 고유 ID입니다.
 - 호출의 타임스탬프
-- 지리적 위치 확인에만 사용되는 8진수 IP 주소 3개
+- 지리적 위치 확인에만 사용되는 8진수 IP 주소 3개(전체 IP 주소 아님)
 - 모든 인수/사용된 매개 변수 이름 문자열 등, 고객의 값이 아님
+- 해시된 데이터 세트 파일 이름
+- 데이터 세트 파일 크기 버킷
 - 운영 체제 및 버전
-- --ml-task 매개 변수의 값 범주 값(예: `regression`, `binary-classification` 및 `multiclass-classification`)
-- [반올림한](https://en.wikipedia.org/wiki/Rounding#Rounding_to_a_specified_power) 데이터 세트 파일 크기(2의 배수에 가장 가까운)
-- 명령의 `ExitCode`
+- 작업 매개 변수의 값: 범주 값(예: `regression`, `binary-classification` 및 `multiclass-classification`)
+- ML.NET CLI 버전(예: 0.3.27703.4)
 
 데이터는 [Azure Application Insights](https://azure.microsoft.com/services/application-insights/) 기술을 사용하여 Microsoft 서버로 안전하게 전송되고, 제한된 액세스를 기준으로 보관되고, 안전한 [Azure Storage](https://azure.microsoft.com/services/storage/) 시스템에서 엄격한 보안 제어에 따라 사용됩니다.
 

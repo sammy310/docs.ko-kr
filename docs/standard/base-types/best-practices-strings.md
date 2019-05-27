@@ -21,12 +21,12 @@ ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 0f7c390d2ad7233475786e795fef0290af545145
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 82fdcae2887cf5a3428a0c874b43d9770f35afcf
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634756"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052991"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>.NET에서 문자열 사용에 대한 모범 사례
 <a name="top"></a> .NET에서는 지역화된 애플리케이션과 전역화된 애플리케이션을 개발하기 위한 광범위한 지원을 제공하고 문자열 정렬 및 표시와 같은 일반적인 작업을 수행할 때 현재 문화권이나 특정 문화권의 규칙을 쉽게 적용할 수 있습니다. 그러나 문자열 정렬 및 비교가 항상 문화권이 구분되는 작업은 아닙니다. 예를 들어 애플리케이션에서 내부적으로 사용되는 문자열은 대기 모든 문화권에서 동일하게 처리해야 합니다. XML 태그, HTML 태그, 사용자 이름, 파일 경로 및 시스템 개체 이름과 같이 문화권을 구분하지 않는 문자열 데이터가 문화권이 구분되는 것처럼 해석되면 애플리케이션 코드에는 감지하기 어려운 버그, 성능 저하 및 경우에 따라 보안 문제가 발생할 수 있습니다.  
@@ -125,7 +125,7 @@ ms.locfileid: "64634756"
  문자열 비교는 특히 정렬 및 같음 테스트와 같은 다양한 문자열 관련 작업의 핵심입니다. 결정된 순서로 문자열 정렬: 정렬된 문자열 목록에서 "my"가 "string" 앞에 나타나면 "my"가 "string"과 같거나 작은지 비교해야 합니다. 또한 비교는 암시적으로 같음을 정의합니다. 비교 작업은 같은 것으로 판단되는 문자열에 대해 0을 반환합니다. 다른 문자열보다 작은 문자열이 없다고 해석하는 것이 적절합니다. 문자열과 관련된 대부분 의미 있는 작업에는 다른 문자열과 비교 및 잘 정의된 정렬 작업 실행이라는 두 가지 절차가 둘 다 또는 두 가지 중 하나가 포함됩니다.  
 
 > [!NOTE]
-> Windows 운영 체제에 대한 정렬 및 비교 작업에 사용되는 문자 가중치에 대한 정보를 포함하는 텍스트 파일 집합인 [정렬 가중치 테이블](https://www.microsoft.com/en-us/download/details.aspx?id=10921) 및 Linux 및 macOS용 정렬 가중치 테이블의 최신 버전인 [기본 유니코드 데이터 정렬 요소 테이블](https://www.unicode.org/Public/UCA/latest/allkeys.txt)을 다운로드할 수 있습니다. Linux 및 macOS에서 정렬 가중치 테이블의 특정 버전은 시스템에 설치된 [International Components for Unicode](http://site.icu-project.org/) 라이브러리 버전에 따라 달라집니다. ICU 버전 및 ICU 버전이 구현하는 유니코드 버전에 대한 자세한 내용은 [ICU 다운로드](http://site.icu-project.org/download)를 참조하세요.
+> Windows 운영 체제에 대한 정렬 및 비교 작업에 사용되는 문자 가중치에 대한 정보를 포함하는 텍스트 파일 집합인 [정렬 가중치 테이블](https://www.microsoft.com/download/details.aspx?id=10921) 및 Linux 및 macOS용 정렬 가중치 테이블의 최신 버전인 [기본 유니코드 데이터 정렬 요소 테이블](https://www.unicode.org/Public/UCA/latest/allkeys.txt)을 다운로드할 수 있습니다. Linux 및 macOS에서 정렬 가중치 테이블의 특정 버전은 시스템에 설치된 [International Components for Unicode](http://site.icu-project.org/) 라이브러리 버전에 따라 달라집니다. ICU 버전 및 ICU 버전이 구현하는 유니코드 버전에 대한 자세한 내용은 [ICU 다운로드](http://site.icu-project.org/download)를 참조하세요.
 
  그러나 두 문자열의 같음 또는 정렬 순서를 평가할 때 하나의 올바른 결과가 생성되지는 않습니다. 결과는 문자열 비교에 사용되는 기준에 따라 다릅니다. 특히 서수 문자열 비교나 현재 문화권이나 고정 문화권(영어를 기준으로 로캘을 구분하지 않는 문화권)의 대/소문자 구분 및 정렬 규칙을 기준으로 한 문자열 비교에서는 다른 결과가 생성될 수 있습니다.  
 

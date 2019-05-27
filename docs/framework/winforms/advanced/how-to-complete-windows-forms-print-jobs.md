@@ -9,12 +9,12 @@ helpviewer_keywords:
 - print jobs [Windows Forms], completing in Windows Forms
 - printing [Windows Forms], print jobs
 ms.assetid: 23ec74f7-34c5-4710-82a0-ee2914518548
-ms.openlocfilehash: 256b9a3d8842aaa4b032e67ebac9ca6a9e1ef34a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a95e07596a10e67d32fdd0af036a14e8d66390c7
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937854"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053028"
 ---
 # <a name="how-to-complete-windows-forms-print-jobs"></a>방법: Windows Forms 인쇄 작업 완료
 자주, 워드 프로세서 및 인쇄와 관련 된 기타 응용 프로그램에 인쇄 작업을 완료 되었음을 사용자에 게 메시지를 표시 하는 옵션을 제공 합니다. 처리 하 여 Windows Forms 프로그램에서이 기능을 제공할 수 있습니다 합니다 <xref:System.Drawing.Printing.PrintDocument.EndPrint> 의 이벤트는 <xref:System.Drawing.Printing.PrintDocument> 구성 요소입니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "61937854"
        }  
     ```  
   
-     (Visual C# 및 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 이벤트 처리기를 등록 하려면 폼의 생성자에 다음 코드를 추가 합니다.  
+     (Visual C# 및 시각적 C++) 이벤트 처리기를 등록 하려면 폼의 생성자에 다음 코드를 추가 합니다.  
   
     ```csharp  
     this.printDocument1.EndPrint += new  

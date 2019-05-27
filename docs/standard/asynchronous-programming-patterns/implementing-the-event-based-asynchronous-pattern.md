@@ -17,17 +17,17 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 41303bf548502fe319cbcfb8a152179863902817
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 55ae6467ca6e7f688bcb7b3fc797050a33074963
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623572"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882520"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>이벤트 기반 비동기 패턴 구현
 상당한 지연을 일으킬 수 있는 몇 가지 작업을 사용하여 클래스를 작성하는 경우 [이벤트 기반 비동기 패턴 개요](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)를 구현하여 비동기 기능을 부여하는 것을 고려할 수 있습니다.  
   
- 이벤트 기반 비동기 패턴은 비동기 기능을 포함하는 클래스를 패키지하는 표준화된 방법을 제공합니다. <xref:System.ComponentModel.AsyncOperationManager>와 같은 도우미 클래스를 구현한 경우 클래스는 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], 콘솔 애플리케이션 및 Windows Forms 애플리케이션을 비롯한 모든 애플리케이션 모델에서 올바르게 작동합니다.  
+ 이벤트 기반 비동기 패턴은 비동기 기능을 포함하는 클래스를 패키지하는 표준화된 방법을 제공합니다. <xref:System.ComponentModel.AsyncOperationManager>와 같은 도우미 클래스를 구현한 경우 클래스는 ASP.NET, 콘솔 애플리케이션 및 Windows Forms 애플리케이션을 비롯한 모든 애플리케이션 모델에서 올바르게 작동합니다.  
   
  이벤트 기반 비동기 패턴을 구현하는 예제는 [방법: 이벤트 기반 비동기 패턴을 지 원하는 구성 요소 구현](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)을 참조하세요.  
   

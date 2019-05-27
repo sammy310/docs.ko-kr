@@ -15,12 +15,12 @@ dev_langs:
 - vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6bb41ad3743e19ae3f6ded48dd491542926010d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4c50cdf93d8cfcefeffd35290d26dfa432a241e1
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633880"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882483"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>방법: 웹 사용자에게 지역화된 날짜 및 시간 정보 표시
 웹 페이지는 전 세계 어디에서든 표시될 수 있으므로 날짜 및 시간 값의 구문 분석 및 서식 지정 작업은 사용자와 상호 작용할 때 기본 형식(대체로 웹 서버의 현지 문화권 형식임)을 사용해서는 안 됩니다. 대신 사용자가 입력한 날짜 및 시간 문자열을 처리하는 Web Forms는 사용자의 기본 설정 문화권을 사용하여 문자열을 구문 분석해야 합니다. 마찬가지로 날짜 및 시간 데이터는 사용자의 문화권을 따르는 형식으로 사용자에게 표시되어야 합니다. 이 항목에서는 프로젝션의 형식을 제어하는 방법을 보여 줍니다.  
@@ -98,7 +98,7 @@ ms.locfileid: "64633880"
  코드는 <xref:System.DateTime.Parse%2A> 또는 <xref:System.DateTime.TryParse%2A> 메서드를 호출하여 날짜 및 시간의 사용자 문자열 표현을 <xref:System.DateTime> 값으로 변환할 수 있습니다. 단일 구문 분석 작업을 수행하는 데 parse 메서드에 대한 반복적인 호출이 필요할 수 있습니다. 따라서 구문 분석 작업에 실패하는 경우 `false`가 반환되므로 <xref:System.DateTime.TryParse%2A> 메서드가 더 좋습니다. 반면에, <xref:System.DateTime.Parse%2A> 메서드에서 throw할 수 있는 반복적인 예외를 처리하는 것은 웹 애플리케이션에서 매우 비용이 많이 드는 제안일 수 있습니다.  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- 코드를 컴파일하려면 코드 숨김을 사용하지 않고 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 웹 페이지를 만듭니다. 그런 다음, 예제를 웹 페이지에 복사하여 기존의 모든 코드를 대체합니다. [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 웹 페이지에는 다음과 같은 컨트롤이 있어야 합니다.  
+ 코드를 컴파일하려면 코드 숨김을 사용하지 않고 ASP.NET 웹 페이지를 만듭니다. 그런 다음, 예제를 웹 페이지에 복사하여 기존의 모든 코드를 대체합니다. ASP.NET 웹 페이지에는 다음과 같은 컨트롤이 있어야 합니다.  
   
 - 코드에서 참조되지 않는 <xref:System.Web.UI.WebControls.Label> 컨트롤. 해당 <xref:System.Web.UI.WebControls.TextBox.Text%2A> 속성을 “Enter a Number:”로 설정합니다.  
   

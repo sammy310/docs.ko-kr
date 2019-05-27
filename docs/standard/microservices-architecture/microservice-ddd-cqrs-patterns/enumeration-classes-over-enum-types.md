@@ -2,12 +2,12 @@
 title: 열거형 형식 대신 열거형 클래스 사용
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 후자의 몇 가지 제한 사항을 해결하는 방법으로 열거형 대신 열거형 클래스를 사용하는 방법을 배웁니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: 02d5fcef580f71b6f8c4af6d88095e24b0bd3462
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 10b4c2f7b9f079ed535111e65b8154791f6575cd
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644474"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003832"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>열거형 형식 대신 열거형 클래스 사용하기
 
@@ -67,7 +67,7 @@ public abstract class Enumeration : IComparable
 다음 `CardType` : `Enumeration` 클래스와 같이 모든 엔터티 또는 값 개체의 형식으로 이 클래스를 사용할 수 있습니다.
 
 ```csharp
-public abstract class CardType : Enumeration
+public class CardType : Enumeration
 {
     public static CardType Amex = new CardType(1, "Amex");
     public static CardType Visa = new CardType(2, "Visa");

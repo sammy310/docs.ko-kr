@@ -6,18 +6,18 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 29f52728f0bfa9e78253fc2b39583e89f53198d6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 070b409a7d1cc755451414d24ca2fa6002638dc0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976332"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585808"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>방법: 디렉터리 트리 반복(C# 프로그래밍 가이드)
 "디렉터리 트리 반복" 구는 지정된 루트 폴더 아래의 임의 깊이까지 중첩된 각 하위 디렉터리에 있는 각 파일에 대한 액세스를 의미합니다. 반드시 각 파일을 열 필요는 없습니다. 단순히 파일 또는 하위 디렉터리의 이름을 `string`으로 검색하거나, <xref:System.IO.FileInfo?displayProperty=nameWithType> 또는 <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> 개체의 형태로 추가 정보를 검색할 수 있습니다.  
   
 > [!NOTE]
->  Windows에서 "디렉터리" 및 "폴더" 용어는 같은 의미로 사용됩니다. 대부분의 설명서와 사용자 인터페이스 텍스트는 "폴더"라는 용어를 사용하지만 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 클래스 라이브러리는 "디렉터리"라는 용어를 사용합니다.  
+>  Windows에서 "디렉터리" 및 "폴더" 용어는 같은 의미로 사용됩니다. 대부분의 설명서와 사용자 인터페이스 텍스트는 "폴더"라는 용어를 사용하지만 .NET Framework 클래스 라이브러리는 "디렉터리"라는 용어를 사용합니다.  
   
  지정된 루트 아래의 모든 디렉터리에 대해 확실히 액세스 권한이 있는 가장 간단한 경우에는 `System.IO.SearchOption.AllDirectories` 플래그를 사용할 수 있습니다. 이 플래그는 지정된 패턴과 일치하는 모든 중첩된 하위 디렉터리를 반환합니다. 다음 예제에서는 이 플래그를 사용하는 방법을 보여 줍니다.  
   

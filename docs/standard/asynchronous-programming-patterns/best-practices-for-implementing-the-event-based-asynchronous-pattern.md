@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: aea2715211ad03b763aae9cadc32e97d0e06d09e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 26e1fd4231964be5448229a6b3c7d90c0ba64499
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628842"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882508"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>최선의 이벤트 기반 비동기 패턴 구현 방법
 이벤트 기반 비동기 패턴은 익숙한 이벤트 및 대리자 의미 체계를 사용하여 클래스에 비동기 동작을 노출하는 효과적인 방법을 제공합니다. 이벤트 기반 비동기 패턴을 구현하려면 몇 가지 구체적인 동작 요구 사항을 따라야 합니다. 다음 섹션에서는 이벤트 기반 비동기 패턴을 따르는 클래스를 구현할 때 고려해야 할 요구 사항 및 지침을 설명합니다.  
@@ -118,7 +118,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 - 비동기 작업에서 발생하는 모든 예외를 catch하고 <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> 속성 값을 해당 예외로 설정합니다.  
   
 ### <a name="threading-and-contexts"></a>스레딩 및 컨텍스트  
- 클래스가 올바로 작동하도록 하려면 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 및 Windows Forms 애플리케이션을 비롯한 지정된 애플리케이션 모델에 대해 올바른 스레드 또는 컨텍스트에서 클라이언트의 이벤트 처리기가 호출되도록 해야 합니다. 모든 애플리케이션 모델에서 비동기 클래스가 올바르게 동작하도록 하기 위해 두 개의 중요한 도우미 클래스인 <xref:System.ComponentModel.AsyncOperation> 및 <xref:System.ComponentModel.AsyncOperationManager>가 제공됩니다.  
+ 클래스가 올바로 작동하도록 하려면 ASP.NET 및 Windows Forms 애플리케이션을 비롯한 지정된 애플리케이션 모델에 대해 올바른 스레드 또는 컨텍스트에서 클라이언트의 이벤트 처리기가 호출되도록 해야 합니다. 모든 애플리케이션 모델에서 비동기 클래스가 올바르게 동작하도록 하기 위해 두 개의 중요한 도우미 클래스인 <xref:System.ComponentModel.AsyncOperation> 및 <xref:System.ComponentModel.AsyncOperationManager>가 제공됩니다.  
   
  <xref:System.ComponentModel.AsyncOperationManager>는 <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>을 반환하는 하나의 메서드 <xref:System.ComponentModel.AsyncOperation>을 제공합니다. <em>MethodName</em>**Async** 메서드는 <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>을 호출하고 클래스는 반환된 <xref:System.ComponentModel.AsyncOperation>을 사용하여 비동기 작업의 수명을 추적합니다.  
   

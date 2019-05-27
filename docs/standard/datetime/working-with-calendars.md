@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a0113ef84c2b3e42f6d14d25747f7fdbb836a212
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed276d8026201af94a0259c4258d5c50fa67c0f3
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026486"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053236"
 ---
 # <a name="working-with-calendars"></a>달력 작업
 
@@ -141,7 +141,7 @@ ms.locfileid: "62026486"
 >  Reiwa 연대의 새로운 시대를 <xref:System.Globalization.JapaneseCalendar> 고 <xref:System.Globalization.JapaneseLunisolarCalendar>, 2019 년 5 월 1 일에 시작 합니다. 이번 변경 내용은 달력을 사용하는 모든 애플리케이션에 영향을 줍니다. 자세한 내용은 다음 문서를 참조 하세요.
 > - [.NET에서 일본식 달력의 새로운 시대 처리](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/), 여러 연대를 사용 하 여 달력 지원 하도록.net 추가 기능을 설명 하 고 다중 연대 달력을 처리할 때 사용 하기 위한 모범 사례에 설명 합니다.
 > - [일본어 연대 변경에 대 한 응용 프로그램 준비](/windows/uwp/design/globalizing/japanese-era-change), 연대 변경 될 준비가 되었는지 확인 하려면 Windows에서 응용 프로그램 테스트에 정보를 제공 합니다.
-> - [.NET Framework에 대 한 새 일본어 연대 요약이 업데이트](https://support.microsoft.com/en-us/help/4477957/new-japanese-era-updates-for-net-framework)를 해당 새 일본식 달력의 연대를 관련 된 개별 Windows 버전용.NET Framework 업데이트를 나열 하는 새.NET Framework 기능 다중 연대 지원에 대 한 정보 및 포함 응용 프로그램을 테스트에서 검색할 항목입니다.
+> - [.NET Framework에 대 한 새 일본어 연대 요약이 업데이트](https://support.microsoft.com/help/4477957/new-japanese-era-updates-for-net-framework)를 해당 새 일본식 달력의 연대를 관련 된 개별 Windows 버전용.NET Framework 업데이트를 나열 하는 새.NET Framework 기능 다중 연대 지원에 대 한 정보 및 포함 응용 프로그램을 테스트에서 검색할 항목입니다.
 
 대부분의 달력의 연대를 매우 긴 시간을 나타냅니다. 일반 달력에서 예를 들어, 현재 연대에 걸쳐 두 왔습니다 두 개 있습니다. 에 대 한 합니다 <xref:System.Globalization.JapaneseCalendar> 하며 <xref:System.Globalization.JapaneseLunisolarCalendar>두 달력 여러 연대를 지 원하는,이 비율이 높을수록 좋다고입니다. 연대를 emperor reign 기간에 해당합니다. 여러 연대를에 대 한 지원을 현재 연대의 상한값을 알 수 없는 경우에 특히 특수 문제 제기 합니다. 
 

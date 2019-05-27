@@ -882,23 +882,23 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 5b6cf68ea2e08c63abd5c093d9ffc6ed24131cd9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 168e72e3f9f09c1f13e9d34cc1048f1dfacc2592
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61684058"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052765"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>죄송 합니다. 이 C# 오류에 대한 구체적인 정보가 없습니다.
 죄송합니다. 이 오류에 대한 구체적인 정보가 없습니다. 오류 번호와 메시지 텍스트를 검색하여 웹에서 정보를 찾을 수 있습니다. 또는 다음이 포럼 중 하나를 사용 하 여 다른 개발자에 게 요청할 수 있습니다.  
   
- [Visual C# 언어](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
+ [Visual C# 언어](https://social.msdn.microsoft.com/Forums/home?forum=csharplanguage)  
  시각적 개체에 대 한 일반적인 토론 질문을 위한 포럼을 제공 C# 언어 구문 및 컴파일러.  
   
- [Visual C# IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
+ [Visual C# IDE](https://social.msdn.microsoft.com/Forums/home?forum=csharpide)  
  Visual Studio 환경에서 작업 하는 방법에 대 한 질문에 대 한 포럼을 제공 합니다.  
   
- [Visual C# 일반](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
+ [Visual C# 일반](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=csharpgeneral)  
  에 대 한 질문을 위한 포럼을 제공 하 고 시각적 개체를 사용 하 여 문제 C# 다른 포럼에서 다루지 않습니다.  
   
  [스택 오버플로](https://stackoverflow.com/questions/tagged/c%23)  

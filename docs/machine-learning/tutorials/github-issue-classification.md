@@ -1,17 +1,17 @@
 ---
-title: GitHub 문제 분류 - 다중 클래스 분류
+title: '자습서: 지원 문제 분류 - 다중 클래스 분류'
 description: 다중 클래스 분류 시나리오에서 ML.NET을 사용하여 GitHub 문제를 분류하여 지정된 영역에 할당하는 방법을 알아봅니다.
-ms.date: 05/02/2019
+ms.date: 05/16/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: a4122d0cdfe6531275fabf94743882a82f2a13c1
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.custom: mvc, title-hack-0516
+ms.openlocfilehash: d47522bef632de1aac890d4de384c1b2c16b7a50
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063535"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877336"
 ---
-# <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>자습서: 다중 클래스 분류 시나리오에서 ML.NET을 사용하여 GitHub 문제 분류
+# <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>자습서: ML .NET에서 다중 클래스 분류를 사용하여 지원 문제 분류
 
 이 샘플 자습서에서는 ML.NET을 사용하여 Visual Studio에서 C#을 사용하는 .NET Core 콘솔 애플리케이션을 통해 GitHub 문제를 분류하고 영역 레이블을 예측하는 모델을 학습하는 방법에 대해 설명합니다.
 

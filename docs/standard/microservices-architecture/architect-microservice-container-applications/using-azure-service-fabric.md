@@ -1,15 +1,13 @@
 ---
 title: Azure Service Fabric 사용
 description: Azure Service Fabric 애플리케이션 모델을 컨테이너를 오케스트레이션하는 데 사용하는 것 외에도 어떤 것에 사용할 수 있는지 이해합니다.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: b29be05f5ab353ddfae0d23211efaf57979d0604
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3c629b473a429b64243b5756c96fef6585c939b7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126967"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644522"
 ---
 # <a name="using-azure-service-fabric"></a>Azure Service Fabric 사용
 
@@ -17,7 +15,7 @@ Azure Service Fabric은 Microsoft가 전형적으로 획일화된 스타일의 �
 
 Service Fabric의 목적은 서비스를 구축 및 실행하고 인프라 리소스를 효율적으로 활용하는 어려운 문제를 해결하여, 팀이 마이크로 서비스 접근 방식을 사용하여 비즈니스 문제를 해결할 수 있도록 하는 것입니다.
 
-Service Fabric은 마이크로 서비스 접근 방식을 사용하는 응용 프로그램을 빌드하는 데 도움이 되는 두 가지 폭넓은 영역을 제공합니다.
+Service Fabric은 마이크로 서비스 접근 방식을 사용하는 애플리케이션을 빌드하는 데 도움이 되는 두 가지 폭넓은 영역을 제공합니다.
 
 - 실패한 서비스를 배포, 확장, 업그레이드, 검색 및 다시 시작하고 서비스 위치를 검색하며 상태를 관리하고 상태를 모니터링하는 시스템 서비스를 제공하는 플랫폼. 실제 이러한 시스템 서비스를 통해 이전에 설명한 마이크로 서비스의 많은 특성을 실현할 수 있습니다.
 
@@ -27,7 +25,7 @@ Service Fabric은 서비스 구축하는 방법과 관련하여 제약이 없으
 
 그림 4-27과 같이 Service Fabric에서 간단한 프로세스 또는 Docker 컨테이너로 마이크로 서비스를 만들고 실행할 수 있습니다. 동일한 Service Fabric 클러스터 내에서 컨테이너 기반 마이크로 서비스와 프로세스 기반 마이크로 서비스를 함께 사용할 수도 있습니다.
 
-![Azure Service Fabric 클러스터 비교: 마이크로 서비스에 대해 하나의 프로세스를 실행하는 프로세스입니다. 마이크로 서비스는 여러 컨테이너가 있는 Docker를 실행하는 컨테이너로, 마이크로 서비스당 하나의 컨테이너로 실행됩니다.](./media/image30.png)
+![Azure Service Fabric 클러스터 비교: 마이크로서비스에 대해 하나의 프로세스를 실행하는 프로세스입니다. 마이크로서비스는 여러 컨테이너가 있는 Docker를 실행하는 컨테이너로, 마이크로서비스당 하나의 컨테이너로 실행됩니다.](./media/image30.png)
 
 **그림 4-27**. Azure Service Fabric에서 프로세스 또는 컨테이너로 마이크로 서비스 배포
 
@@ -45,7 +43,7 @@ Service Fabric은 [논리적 아키텍처 및 물리적 아키텍처](logical-ve
 
 어떤 경우든, Service Fabric 상태 저장 Reliable Services를 사용하면, 일반적으로 여러 물리적 서비스로 구성된 논리적 또는 비즈니스 마이크로 서비스(바인딩된 컨텍스트)가 있습니다. 각각의 Gateway 서비스 및 Partition 서비스를 그림 4-28과 같이 ASP.NET Web API 서비스로 구현할 수 있습니다.
 
-Service Fabric에서는 오케스트레이터 또는 클러스터의 패키징 및 배포 단위인 [Service Fabric 응용 프로그램](https://docs.microsoft.com/azure/service-fabric/service-fabric-application-model)으로 서비스 그룹을 그룹화 및 배포할 수 있습니다. 따라서 Service Fabric 응용 프로그램을 이 자치 비즈니스 및 논리적 마이크로 서비스 경계 또는 바인딩된 컨텍스트에도 매핑할 수 있으므로 이러한 서비스를 자율적으로 배포할 수 있습니다.
+Service Fabric에서는 오케스트레이터 또는 클러스터의 패키징 및 배포 단위인 [Service Fabric 애플리케이션](https://docs.microsoft.com/azure/service-fabric/service-fabric-application-model)으로 서비스 그룹을 그룹화 및 배포할 수 있습니다. 따라서 Service Fabric 애플리케이션을 이 자치 비즈니스 및 논리적 마이크로 서비스 경계 또는 바인딩된 컨텍스트에도 매핑할 수 있으므로 이러한 서비스를 자율적으로 배포할 수 있습니다.
 
 ## <a name="service-fabric-and-containers"></a>Service Fabric 및 컨테이너
 
@@ -61,7 +59,7 @@ Service Fabric의 컨테이너와 관련해서는 Service Fabric 클러스터 �
 
 ![Service Fabric 애플리케이션은 동일한 노드에서 서비스와 컨테이너를 모두 실행합니다.](./media/image33.png)
 
-**그림 4-30**. 컨테이너 및 상태 저장 서비스와 함께 Service Fabric 응용 프로그램에 매핑된 비즈니스 마이크로 서비스
+**그림 4-30**. 컨테이너 및 상태 저장 서비스와 함께 Service Fabric 애플리케이션에 매핑된 비즈니스 마이크로 서비스
 
 Azure Service Fabric에서 컨테이너 지원에 대한 자세한 내용은 [Service Fabric 및 컨테이너](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview)를 참조하세요.
 

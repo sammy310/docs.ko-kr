@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: e32f36a0490a198078f8357f3603c91cc50cb3b8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 00e9eeb3227ceef54f899129847bfb74a370c51c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647089"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591275"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>연습: My.Application.Log 출력 필터링(Visual Basic)
 이 연습에서는 `My.Application.Log` 개체에 대한 기본 로그 필터링을 변경하여 `Log` 개체에서 수신기로 전달되는 정보 및 수신기가 작성하는 정보를 제어하는 방법을 보여 줍니다. 구성 정보가 애플리케이션의 구성 파일에 저장되므로 애플리케이션을 빌드한 후에도 로깅 동작을 변경할 수 있습니다.  
@@ -135,7 +135,7 @@ ms.locfileid: "64647089"
 9. `value` 특성의 값을 다시 "정보"로 변경합니다.  
   
     > [!NOTE]
-    >  `DefaultSwitch` 스위치 설정은 `My.Application.Log`만 제어합니다. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=nameWithType> 및 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 클래스의 동작은 변경되지 않습니다.  
+    >  `DefaultSwitch` 스위치 설정은 `My.Application.Log`만 제어합니다. .NET Framework <xref:System.Diagnostics.Trace?displayProperty=nameWithType> 및 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 클래스 동작은 변경되지 않습니다.  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>My.Application.Log 수신기에 대한 개별 필터링  
  이전 예제에서는 모든 `My.Application.Log` 출력에 대한 필터링을 변경하는 방법을 보여 줍니다. 이 예제에서는 개별 로그 수신기를 필터링하는 방법을 보여 줍니다. 기본적으로 애플리케이션에는 각각 애플리케이션의 디버그 출력 및 로그 파일에 기록하는 두 개의 수신기가 있습니다.  

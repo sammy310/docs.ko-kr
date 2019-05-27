@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2961a4c02d8ffe17055307094f56a03680d1a59a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 079718c96a4818285c0b469da9f23213a6915c19
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866979"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052512"
 ---
 # <a name="missingmetadataexception-class-net-native"></a>MissingMetadataException 클래스(.NET 네이티브)
 
-**Windows 10의 Windows 앱용 .NET, [!INCLUDE[net_native](../../../includes/net-native-md.md)]에만 해당**
+**Windows 10,.NET 네이티브 전용의 Windows 앱 용.NET**
 
 리플렉션을 사용하여 존재하지 않는 메타데이터를 검색하면 throw되는 예외입니다.
 
 **네임스페이스:** System.Reflection
 
 > [!IMPORTANT]
-> `MissingMetadataException` 클래스는 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 도구 체인에서 내부용으로만 사용됩니다. 이 클래스는 타사 코드에서 사용하면 안 되고 응용 프로그램 코드에서 예외를 처리하면 안 됩니다. 대신, [런타임 지시문 파일](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)에 항목을 추가하여 예외를 제거합니다. 자세한 내용은 설명 섹션을 참조하세요.
+> `MissingMetadataException` 클래스는.NET 네이티브 도구 체인에서 내부용 으로만 것입니다. 이 클래스는 타사 코드에서 사용하면 안 되고 응용 프로그램 코드에서 예외를 처리하면 안 됩니다. 대신, [런타임 지시문 파일](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)에 항목을 추가하여 예외를 제거합니다. 자세한 내용은 설명 섹션을 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -34,8 +34,8 @@ ms.locfileid: "61866979"
 
 |생성자|설명|
 |-----------------|-----------------|
-|`public MissingMetadataException()`|오류를 설명하는 시스템 제공 메시지를 사용하여 `MissingMetadataException` 클래스의 새 인스턴스를 초기화합니다.<br /><br /> 이 생성자는 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 도구 체인에서 내부용으로만 사용됩니다.|
-|`public MissingMetadataException(String message)`|지정된 오류 메시지를 사용하여 `MissingMetadataException` 클래스의 새 인스턴스를 초기화합니다.<br /><br /> 이 생성자는 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 도구 체인에서 내부용으로만 사용됩니다.|
+|`public MissingMetadataException()`|오류를 설명하는 시스템 제공 메시지를 사용하여 `MissingMetadataException` 클래스의 새 인스턴스를 초기화합니다.<br /><br /> 이 생성자는 내부.NET 네이티브 도구 체인에만 사용 합니다.|
+|`public MissingMetadataException(String message)`|지정된 오류 메시지를 사용하여 `MissingMetadataException` 클래스의 새 인스턴스를 초기화합니다.<br /><br /> 이 생성자는 내부.NET 네이티브 도구 체인에만 사용 합니다.|
 
 ## <a name="properties"></a>속성
 

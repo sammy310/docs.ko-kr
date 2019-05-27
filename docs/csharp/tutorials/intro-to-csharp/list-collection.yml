@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 0de2cc0434087797b9411075a98cc11dd598ed81
-  ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+  ms.openlocfilehash: 8ee13ec60f0504982c33ecc61940b731d320d2de
+  ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 01/04/2019
-  ms.locfileid: "54029491"
+  ms.lasthandoff: 05/19/2019
+  ms.locfileid: "65880557"
 items:
 - durationInMinutes: 1
   content: >
@@ -38,7 +38,7 @@ items:
     ```
 
 
-    문자열 목록을 만들고, 해당 목록에 3개의 이름을 추가하고, 이름을 모두 대문자로 출력했습니다. 이전 자습서에서 학습한 개념을 사용하여 목록을 반복합니다.
+    문자열 목록을 만들고, 해당 목록에 세 개의 이름을 추가하고, 모든 CAPS에 이름을 인쇄했습니다. 이전 자습서에서 학습한 개념을 사용하여 목록을 반복합니다.
 
 
     이름을 표시하는 코드는 [문자열 보간](../../language-reference/tokens/interpolated.md) 기능을 사용합니다. `string` 앞에 `$` 문자를 넣으면 문자열 선언에 C# 코드를 포함할 수 있습니다. 실제 문자열은 C# 코드를 생성하는 값으로 바꿉니다. 이 예제에서는 <xref:System.String.ToUpper%2A?displayProperty=nameWithType> 메서드를 호출했기 때문에 `{name.ToUpper()}`를 대문자로 변환된 각 이름으로 바꿉니다.
@@ -56,7 +56,7 @@ items:
     생성한 컬렉션은 <xref:System.Collections.Generic.List%601> 형식을 사용합니다. 이 형식은 요소의 시퀀스를 저장합니다. 꺾쇠 괄호 사이의 요소 형식을 지정합니다.
 
 
-    이 <xref:System.Collections.Generic.List%601> 형식은 늘리거나 줄일 수 있어 요소를 추가하거나 제거할 수 있습니다. 이미 작성한 코드 아래에 다음 코드를 추가합니다.
+    이 <xref:System.Collections.Generic.List%601> 형식은 늘리거나 줄일 수 있어 요소를 추가하거나 제거할 수 있습니다. 해당 내용을 표시한 후 내용을 수정하여 결과를 볼 수 있습니다. 이미 작성한 코드 아래에 다음 코드를 추가합니다(내용을 인쇄하는 루프 아래).
 
 
     ```csharp
@@ -78,7 +78,7 @@ items:
     ```
 
 
-    목록 끝에 이름을 두 개 더 추가했습니다. 또한 이름을 하나 제거했습니다.
+    목록 끝에 이름을 두 개 더 추가했습니다. 또한 이름을 하나 제거했습니다. 이 코드 블록의 출력은 초기 내용을 표시한 다음, 빈 줄과 새 내용을 인쇄합니다.
 
 
     <xref:System.Collections.Generic.List%601>를 사용하면 **인덱스**별로 각 항목을 참조할 수도 있습니다. `[` 및 `]` 토큰을 사용하여 항목에 액세스합니다. 이미 작성한 코드 아래에 다음 코드를 추가하고 다음을 시도합니다.
@@ -112,7 +112,7 @@ items:
 - title: 목록 검색 및 정렬
   durationInMinutes: 5
   content: >
-    샘플에서는 상대적으로 작은 목록을 사용하지만 애플리케이션에서는 수천에 달하는 많은 요소가 포함된 목록을 작성할 수 있습니다. 이러한 큰 컬렉션에서 요소를 찾으려면 여러 항목의 목록을 검색해야 합니다. <xref:System.Collections.Generic.List%601.IndexOf%2A> 메서드는 항목을 검색하고 항목의 인덱스를 반환합니다. 다음을 시도하여 작동 방식을 확인하세요.  지금까지 작성한 코드 아래에 다음 코드를 추가합니다.
+    샘플에서는 상대적으로 작은 목록을 사용하지만 애플리케이션에서는 수천에 달하는 많은 요소가 포함된 목록을 작성할 수 있습니다. 이러한 큰 컬렉션에서 요소를 찾으려면 여러 항목의 목록을 검색해야 합니다. <xref:System.Collections.Generic.List%601.IndexOf%2A> 메서드는 항목을 검색하고 항목의 인덱스를 반환합니다. 작동 방식을 확인해 보세요.  지금까지 작성한 코드 아래에 다음 코드를 추가합니다.
 
 
     ```csharp
@@ -152,7 +152,7 @@ items:
 - title: 다른 형식 목록
   durationInMinutes: 5
   content: >
-    지금까지 목록에 `string` 형식을 사용했습니다. 다른 형식을 사용하여 <xref:System.Collections.Generic.List%601>를 만들어 보겠습니다. 숫자 집합을 빌드하겠습니다. 지금까지 작성한 코드를 삭제하고 다음으로 바꿉니다.
+    지금까지 목록에 `string` 형식을 사용했습니다. 다른 형식을 사용하여 <xref:System.Collections.Generic.List%601>를 만들어 보겠습니다. 숫자 집합을 빌드하겠습니다. 지금까지 작성한 코드를 삭제하고 다음 코드로 바꿉니다.
 
 
     ```csharp
@@ -162,7 +162,7 @@ items:
     ```
 
 
-    정수 목록을 만들고 처음 두 정수를 값 1로 설정합니다. 숫자 시퀀스인 *피보나치 시퀀스*의 첫 번째 두 값입니다. 다음 각 피보나치 수는 이전의 두 수의 합계를 사용하여 찾습니다. 이 코드를 추가합니다.
+    정수 목록을 만들고 처음 두 정수를 값 1로 설정합니다. *피보나치 시퀀스*는 숫자의 연속으로 두 개의 1로 시작합니다. 다음 각 피보나치 수는 이전의 두 수의 합계를 사용하여 찾습니다. 이 코드를 추가합니다.
 
 
     ```csharp
@@ -230,7 +230,7 @@ items:
     목록 대화형 자습서를 완료했습니다. 이는 C# 대화형 자습서의 최종 소개입니다. [.NET 사이트](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial)를 방문하여 .NET Core SDK를 다운로드하고, 머신에 프로젝트를 만들고, 계속해서 코딩할 수 있습니다. “계속 학습” 단계에서 이러한 자습서로 돌아와 머신에 프로젝트를 빌드합니다.
 
 
-    다음 항목에서는 [.NET 컬렉션](../../../standard/collections/index.md)에 대해 자세히 알아볼 수 있습니다.
+    다음 문서에서는 [.NET 컬렉션](../../../standard/collections/index.md)에 대해 자세히 알아볼 수 있습니다.
 
     - [컬렉션 형식 선택](../../../standard/collections/selecting-a-collection-class.md)
 

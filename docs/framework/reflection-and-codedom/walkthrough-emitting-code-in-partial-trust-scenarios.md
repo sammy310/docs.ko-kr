@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54a6a1cda604cb9cdeecd9587af81dbdb810965c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f461490529f626cfc442d817840b9c2e64df4c19
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592450"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585913"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>연습: 부분 신뢰 시나리오에서 코드 내보내기
 리플렉션 내보내기에는 완전 또는 부분 신뢰에서 동일한 API 집합이 사용되지만 일부 기능의 경우 부분적으로 신뢰할 수 있는 코드에 특수 권한이 필요합니다. 또한 리플렉션 내보내기에는 부분 신뢰와 함께 보안 투명 어셈블리에서 사용되도록 디자인된 익명으로 호스트되는 동적 메서드의 기능이 있습니다.  
@@ -77,12 +77,12 @@ ms.locfileid: "64592450"
      [!code-csharp[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#5)]
      [!code-vb[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#5)]  
   
-     <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> 메서드 오버로드의 마지막 매개 변수를 사용하여 애플리케이션 도메인의 권한 집합이 아닌 완전 신뢰가 부여되는 어셈블리 집합을 지정할 수 있습니다. 애플리케이션에서 사용하는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 어셈블리는 전역 어셈블리 캐시에 있으므로 해당 어셈블리를 지정할 필요가 없습니다. 전역 어셈블리 캐시의 어셈블리는 항상 완전히 신뢰할 수 있습니다. 이 매개 변수를 사용하여 전역 어셈블리 캐시에 없는 강력한 이름의 어셈블리를 지정할 수 있습니다.  
+     <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> 메서드 오버로드의 마지막 매개 변수를 사용하여 애플리케이션 도메인의 권한 집합이 아닌 완전 신뢰가 부여되는 어셈블리 집합을 지정할 수 있습니다. 애플리케이션에서 사용하는 .NET Framework 어셈블리는 글로벌 어셈블리 캐시에 있으므로 해당 어셈블리를 지정할 필요가 없습니다. 전역 어셈블리 캐시의 어셈블리는 항상 완전히 신뢰할 수 있습니다. 이 매개 변수를 사용하여 전역 어셈블리 캐시에 없는 강력한 이름의 어셈블리를 지정할 수 있습니다.  
   
 ### <a name="adding-restrictedmemberaccess-to-sandboxed-domains"></a>샌드박스가 적용된 도메인에 RestrictedMemberAccess 추가  
  호스트 애플리케이션에서는 익명으로 호스트된 동적 메서드가 코드를 내보내는 어셈블리의 신뢰 수준과 같거나 낮은 신뢰 수준을 가진 어셈블리의 전용 데이터에 액세스할 수 있습니다. JIT(Just-In-Time) 표시 유형 확인을 건너뛰는 이 제한된 기능을 사용할 수 있도록 호스트 애플리케이션에서는 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>(RMA) 플래그가 있는 <xref:System.Security.Permissions.ReflectionPermission> 개체를 권한 집합에 추가합니다.  
   
- 예를 들어 호스트에서는 인터넷 애플리케이션에 인터넷 권한과 RMA를 부여할 수 있으므로 인터넷 애플리케이션은 자체 어셈블리의 전용 데이터에 액세스하는 코드를 내보낼 수 있습니다. 액세스는 같거나 낮은 신뢰 수준의 어셈블리로 제한되므로 인터넷 애플리케이션은 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 어셈블리와 같이 완전히 신뢰할 수 있는 어셈블리의 멤버에 액세스할 수 없습니다.  
+ 예를 들어 호스트에서는 인터넷 애플리케이션에 인터넷 권한과 RMA를 부여할 수 있으므로 인터넷 애플리케이션은 자체 어셈블리의 전용 데이터에 액세스하는 코드를 내보낼 수 있습니다. 액세스는 같거나 낮은 신뢰 수준의 어셈블리로 제한되므로 인터넷 애플리케이션은 .NET Framework 어셈블리와 같이 완전히 신뢰할 수 있는 어셈블리의 멤버에 액세스할 수 없습니다.  
   
 > [!NOTE]
 >  권한 상승을 방지하기 위해 익명으로 호스트된 동적 메서드가 생성될 때 내보내는 어셈블리에 대한 스택 정보가 포함됩니다. 메서드가 호출되면 스택 정보가 확인됩니다. 따라서 완전히 신뢰할 수 있는 코드에서 호출되는 익명으로 호스트된 동적 메서드는 계속해서 내보내는 어셈블리의 신뢰 수준으로 제한됩니다.  
@@ -169,7 +169,7 @@ ms.locfileid: "64592450"
      [!code-csharp[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#16)]
      [!code-vb[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#16)]  
   
-     익명으로 호스트된 동적 메서드는 내보내는 어셈블리의 신뢰 수준과 같거나 낮은 신뢰 수준을 가진 어셈블리의 전용 데이터에만 액세스할 수 있도록 제한됩니다. 예를 들어 인터넷 신뢰로 실행되고 있는 동적 메서드는 인터넷 신뢰로 실행되고 있는 다른 어셈블리의 전용 데이터에 액세스할 수 있지만 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 어셈블리의 전용 데이터에는 액세스할 수 없습니다. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 어셈블리는 전역 어셈블리 캐시에 설치되고 항상 완전히 신뢰할 수 있습니다.  
+     익명으로 호스트된 동적 메서드는 내보내는 어셈블리의 신뢰 수준과 같거나 낮은 신뢰 수준을 가진 어셈블리의 전용 데이터에만 액세스할 수 있도록 제한됩니다. 예를 들어 인터넷 신뢰로 실행되고 있는 동적 메서드는 인터넷 신뢰로 실행되고 있는 다른 어셈블리의 전용 데이터에 액세스할 수 있지만 .NET Framework 어셈블리의 전용 데이터에는 액세스할 수 없습니다. .NET Framework 어셈블리는 글로벌 어셈블리 캐시에 설치되고 항상 완전히 신뢰할 수 있습니다.  
   
      익명으로 호스트된 동적 메서드는 호스트 애플리케이션에서 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 플래그로 <xref:System.Security.Permissions.ReflectionPermission>을 부여하는 경우에만 JIT 표시 유형 확인을 건너뛰는 이 제한된 기능을 사용할 수 있습니다. 메서드가 호출될 때 이 권한이 필요합니다.  
   

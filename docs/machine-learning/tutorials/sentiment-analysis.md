@@ -1,15 +1,15 @@
 ---
 title: '자습서: 웹 사이트 주석 분석 -이진 분류'
-description: 이 자습서에서는 웹 사이트 주석에서 감정을 분류하고 적절한 조치를 취하는 .NET Core 콘솔 애플리케이션을 만드는 방법을 보여 줍니다. 이 감정 이진 분류자는 Visual Studio 2017에서 C#을 사용합니다.
-ms.date: 04/18/2019
+description: 이 자습서에서는 웹 사이트 주석에서 감정을 분류하고 적절한 조치를 취하는 .NET Core 콘솔 애플리케이션을 만드는 방법을 보여 줍니다. 감정 이진 분류자는 Visual Studio에서 C#을 사용합니다.
+ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 1989a11a2f06ce4d713d6c3ecc70de0da606604e
-ms.sourcegitcommit: 438824ff21f77c4301c6ba8a89a106114aa27bc8
+ms.openlocfilehash: e145e65e22c955bd547b67de545b883fb0fb3bc2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65462225"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593409"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>자습서: ML.NET에서 이진 분류를 사용하여 웹 사이트 주석의 감정 분석
 
@@ -29,7 +29,7 @@ ms.locfileid: "65462225"
 
 ## <a name="prerequisites"></a>전제 조건
 
-* “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2017 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
+* “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2017 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)
 
 * [UCI Sentiment Labeled Sentences 데이터 세트](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)(zip 파일)
 
@@ -303,7 +303,7 @@ ML.NET의 데이터는 [IDataView 클래스](xref:Microsoft.ML.IDataView)로 표
 1. 다음 코드를 사용하여 `UseModelWithSingleItem()` 메서드 바로 뒤에 `UseModelWithBatchItems()` 메서드를 만듭니다.
 
     ```csharp
-    public static void UseModelWithBatchItems(MLContext mlContext)
+    public static void UseModelWithBatchItems(MLContext mlContext, ITransformer model)
     {
 
     }

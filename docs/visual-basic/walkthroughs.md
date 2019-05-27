@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 928df9baa770185fd5d012e760ca96f3f878cf88
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 47c79b8d716be6c247be3ec66c9ef00fbc021973
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739464"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586274"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Visual Basic 언어 연습
 연습에서는 일반 시나리오에 대한 단계별 지침을 제공하므로 제품 또는 특정 기능 영역 파악을 효율적으로 시작할 수 있습니다.  
@@ -72,7 +72,7 @@ ms.locfileid: "55739464"
  Visual Basic 함수를 사용하여 파일에 대한 정보를 확인하고, 파일에서 문자열을 검색하고, 파일에 쓰는 방법을 보여 줍니다.  
   
  [.NET Framework 메서드를 사용하여 파일 조작](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 메서드를 사용하여 파일에 대한 정보를 확인하고, 파일에서 문자열을 검색하고, 파일에 쓰는 방법을 보여 줍니다.  
+ .NET Framework 메서드를 사용하여 파일에 대한 정보를 확인하고, 파일에서 문자열을 검색하고, 파일에 쓰는 방법을 보여 줍니다.  
   
  [Visual Basic에서 개체 유지](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  간단한 개체를 만들고 데이터를 파일에 유지하는 방법을 보여 줍니다.  

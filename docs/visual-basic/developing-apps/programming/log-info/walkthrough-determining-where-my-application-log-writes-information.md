@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application event logs, output location
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
-ms.openlocfilehash: 5115973e3d8e558199f9569baeea9e272c0528b0
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 895c49fb1fde56a1c9bf8b3a0ecf9de4f29f9972
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674110"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591221"
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>연습: My.Application.Log가 정보를 기록하는 위치 확인(Visual Basic)
 
@@ -35,7 +35,7 @@ ms.locfileid: "57674110"
 
     이들 섹션이 없으면 컴퓨터의 구성 파일이 `My.Application.Log` 로그 수신기를 구성합니다. 다음 단계에서는 컴퓨터 구성 파일에 정의된 내용을 확인하는 방법을 설명합니다.
 
-    1. 컴퓨터의 machine.config 파일을 찾습니다. 이 파일은 일반적으로 *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* 디렉터리에 있으며, 여기서 `SystemRoot` 는 운영 체제 디렉터리이고 `frameworkVersion` 은 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]의 버전입니다.
+    1. 컴퓨터의 machine.config 파일을 찾습니다. 이 파일은 일반적으로 *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* 디렉터리에 있으며, 여기서 `SystemRoot` 는 운영 체제 디렉터리이고 `frameworkVersion`은 .NET Framework의 버전입니다.
 
         machine.config의 설정은 애플리케이션의 구성 파일로 재정의할 수 있습니다.
 

@@ -2,12 +2,12 @@
 title: .NET Core용 csproj 형식에 대한 추가 사항
 description: 기존 및 .NET Core csproj 파일 간의 차이점에 대해 알아보기
 ms.date: 04/08/2019
-ms.openlocfilehash: 89f0bbab1f9887295a68ffc6434340f1c6f10d5d
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 9c1f084af68010632cbe595858b2f242d37af598
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611096"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631810"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core용 csproj 형식에 대한 추가 사항
 
@@ -125,11 +125,13 @@ ASP.NET Core 메타패키지에 대한 이 참조의 동작은 대부분의 일�
 
 ### <a name="sdk-attribute"></a>SDK 특성
 
-*.csproj* 파일의 루트 `<Project>` 요소에 `Sdk`라고 하는 새 특성이 있습니다. `Sdk`는 프로젝트에서 사용될 SDK를 지정합니다. [레이어 문서](cli-msbuild-architecture.md)에 설명된 것처럼 SDK는 .NET Core 코드를 빌드할 수 있는 MSBuild [작업](/visualstudio/msbuild/msbuild-tasks) 및 [대상](/visualstudio/msbuild/msbuild-targets)의 집합입니다. .NET Core 도구와 함께 다음 세 가지 주요 SDK가 제공됩니다.
+*.csproj* 파일의 루트 `<Project>` 요소에 `Sdk`라고 하는 새 특성이 있습니다. `Sdk`는 프로젝트에서 사용될 SDK를 지정합니다. [레이어 문서](cli-msbuild-architecture.md)에 설명된 것처럼 SDK는 .NET Core 코드를 빌드할 수 있는 MSBuild [작업](/visualstudio/msbuild/msbuild-tasks) 및 [대상](/visualstudio/msbuild/msbuild-targets)의 집합입니다. .NET Core 3.0 미리 보기를 사용할 때 .NET Core 도구가 있는 세 개의 기본 SDK와 추가로 두 개의 SDK를 제공합니다.
 
 1. `Microsoft.NET.Sdk`의 ID와 함께 .NET Core SDK
 2. `Microsoft.NET.Sdk.Web`의 ID와 함께 .NET Core 웹 SDK
 3. `Microsoft.NET.Sdk.Razor`의 ID와 함께 .NET Core Razor 클래스 라이브러리 SDK
+4. ID가 `Microsoft.NET.Sdk.Worker`인 .NET Core 작업자 서비스(.NET Core 3.0 미리 보기)
+5. ID가 `Microsoft.NET.Sdk.WindowsDesktop`인 .NET Core WinForms 및 WPF(.NET Core 3.0 미리 보기)
 
 .NET Core 도구를 사용하고 코드를 빌드하려면 `<Project>` 요소의 해당 ID 중 하나에 대한 `Sdk` 특성 집합이 있어야 합니다.
 

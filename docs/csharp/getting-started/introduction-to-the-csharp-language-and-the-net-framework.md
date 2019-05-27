@@ -6,16 +6,16 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 28fde47721e6354612ffec557da25c6d3bb775e4
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: bd2efcd28a8349ef07873adb5eaa69784e61d482
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409226"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585944"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 언어 및 .NET Framework 소개
 
-유연하고 형식이 안전한 개체 지향 언어인 C#은 개발자가 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]에서 실행되는 안전하고 강력한 여러 애플리케이션을 구축할 수 있도록 지원합니다. C#을 사용하여 Windows 클라이언트 애플리케이션, XML Web services, 분산 구성 요소, 클라이언트-서버 애플리케이션, 데이터베이스 애플리케이션 등을 만들 수 있습니다. Visual C#에서는 고급 코드 편집기, 편리한 사용자 인터페이스 디자이너, 통합 디버거 및 다른 많은 도구를 제공하여 C# 언어 및 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]에 따라 보다 쉽게 애플리케이션을 개발할 수 있습니다.  
+유연하고 형식이 안전한 개체 지향 언어인 C#은 개발자가 .NET Framework에서 실행되는 안전하고 강력한 여러 애플리케이션을 빌드할 수 있도록 지원합니다. C#을 사용하여 Windows 클라이언트 애플리케이션, XML Web services, 분산 구성 요소, 클라이언트-서버 애플리케이션, 데이터베이스 애플리케이션 등을 만들 수 있습니다. Visual C#에서는 고급 코드 편집기, 편리한 사용자 인터페이스 디자이너, 통합 디버거 및 다른 많은 도구를 제공하여 C# 언어 및 .NET Framework에 따라 보다 쉽게 애플리케이션을 개발할 수 있습니다.  
   
 > [!NOTE]
 > Visual C# 설명서에서는 사용자가 기본적인 프로그래밍 개념을 이해하고 있다고 간주합니다. 완전 초보 사용자인 경우 웹에서 사용할 수 있는 Visual C#을 살펴볼 수도 있습니다. C#에 대한 설명서 및 웹 리소스를 활용하여 실제 프로그래밍 기술을 배울 수도 있습니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "58409226"
 
 ## <a name="net-framework-platform-architecture"></a>.NET Framework 플랫폼 아키텍처
 
- C# 프로그램은 CLR(공용 언어 런타임)이라고 하는 가상 실행 시스템과 통합된 클래스 라이브러리 집합을 포함하는 Windows의 통합 구성 요소인 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]에서 실행됩니다. CLR은 언어 및 라이브러리가 원활하게 함께 작동하는 실행 및 개발 환경을 만들기 위한 기준이 되는 국제 표준인 CLI(공용 언어 인프라)를 Microsoft에서 상업적으로 구현한 것입니다.  
+ C# 프로그램은 CLR(공용 언어 런타임)이라고 하는 가상 실행 시스템과 통합된 클래스 라이브러리 세트를 포함하는 Windows의 통합 구성 요소인 .NET Framewor에서 실행됩니다. CLR은 언어 및 라이브러리가 원활하게 함께 작동하는 실행 및 개발 환경을 만들기 위한 기준이 되는 국제 표준인 CLI(공용 언어 인프라)를 Microsoft에서 상업적으로 구현한 것입니다.  
   
  C#으로 작성된 소스 코드는 CLI 사양을 준수하는 IL(중간 언어)로 컴파일됩니다. IL 코드 및 리소스(예: 비트맵 및 문자열)는 일반적으로 확장명이 .exe 또는 .dll인 어셈블리라는 실행 파일로 디스크에 저장됩니다. 어셈블리는 어셈블리의 형식, 버전, 문화권 및 보안 요구 사항에 대한 정보를 제공하는 매니페스트를 포함합니다.  
   
@@ -60,9 +60,9 @@ ms.locfileid: "58409226"
   
  ![C&#35; 소스 코드부터 머신 실행까지](./media/introduction-to-the-csharp-language-and-the-net-framework/net-architecture-relationships.png)  
   
- 언어 상호 운용성은 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]의 주요 기능입니다. C# 컴파일러에서 생성된 IL 코드는 CTS(공용 형식 사양)을 준수하므로 C#에서 생성된 IL 코드는 .NET 버전의 Visual Basic, Visual C++ 또는 20개 이상의 다른 CTS 규격 언어에서 생성된 코드와 상호 작용할 수 있습니다. 단일 어셈블리는 다른 .NET 언어로 작성된 여러 모듈을 포함할 수 있고 형식은 마치 같은 언어로 작성된 것처럼 서로를 참조할 수 있습니다.  
+ 언어 상호 운용성은 .NET Framework의 주요 기능입니다. C# 컴파일러에서 생성된 IL 코드는 CTS(공용 형식 사양)을 준수하므로 C#에서 생성된 IL 코드는 .NET 버전의 Visual Basic, Visual C++ 또는 20개 이상의 다른 CTS 규격 언어에서 생성된 코드와 상호 작용할 수 있습니다. 단일 어셈블리는 다른 .NET 언어로 작성된 여러 모듈을 포함할 수 있고 형식은 마치 같은 언어로 작성된 것처럼 서로를 참조할 수 있습니다.  
   
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]에는 런타임 서비스 외에, 파일 입/출력부터 문자열 조작, XML 구문 분석, Windows Forms 컨트롤에 이르는 모든 항목에 대해 다양하고 유용한 기능을 제공하는 네임스페이스로 구성된 4,000개 이상의 광범위한 클래스 라이브러리도 포함됩니다. 일반적인 C# 애플리케이션은 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 클래스 라이브러리를 광범위하게 사용하여 일반적인 "배관" 작업을 처리합니다.  
+ .NET Framework에는 런타임 서비스 외에, 파일 입/출력부터 문자열 조작, XML 구문 분석, Windows Forms 컨트롤에 이르는 모든 항목에 대해 다양하고 유용한 기능을 제공하는 네임스페이스로 구성된 4,000개가 넘는 광범위한 클래스 라이브러리도 포함됩니다. 일반적인 C# 애플리케이션은 .NET Framework 클래스 라이브러리를 광범위하게 사용하여 일반적인 "배관" 작업을 처리합니다.  
   
  .NET Framework에 대한 자세한 내용은 [Microsoft.NET Framework 개요](../../framework/get-started/overview.md)를 참조하세요.  
   

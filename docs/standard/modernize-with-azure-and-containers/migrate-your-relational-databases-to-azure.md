@@ -2,12 +2,12 @@
 title: 관계형 데이터베이스를 azure로 마이그레이션
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 관계형 데이터베이스를 azure로 마이그레이션
 ms.date: 04/28/2018
-ms.openlocfilehash: 1c09172f0948551edfe059be6f43d7a02278203d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3d4f03e61144bb6a442a50916d7fd024d38ec611
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638886"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051928"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>관계형 데이터베이스를 azure로 마이그레이션
 
@@ -81,7 +81,7 @@ Azure SQL Database에서는 다음과 같은 이점을 제공합니다.
 
 마이그레이션 옵션 중 하나는 Oracle, IBM DB2, MySQL, PostgreSQL 또는 SQL Server를 포함한 원래의 관계형 데이터베이스 관리 시스템(RDBMS)을 Azure VM에서 실행 중인 서버와 유사한 서버로 이동하는 것입니다. 전혀 변경하지 않거나 최소한의 변경만으로 가장 빠르게 클라우드로 마이그레이션을 수행해야 하는 기존 애플리케이션이 있으면 클라우드의 IaaS로 직접 마이그레이션하는 것이 적절한 옵션일 수 있습니다. 이 방법이 클라우드의 모든 이점을 활용하는 최선의 방법은 아니지만 아마도 가장 빠르게 시작하는 방법일 것입니다.
 
-현재 Microsoft Azure에서는 IaaS Vm으로 배포되는 최대 [331개의 다양한 데이터베이스 서버](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/category/databases?page=1&subcategories=databases-all)를 지원합니다. 여기에는 SQL Server와 Oracle, MySQL, PostgreSQL, IBM DB2와 같은 인기있는 RDBMS와 MongoDB, Cassandra, DataStax, MariaDB, 및 Cloudera와 같은 다양한 NoSQL 데이터베이스가 포함됩니다.
+현재 Microsoft Azure에서는 IaaS Vm으로 배포되는 최대 [331개의 다양한 데이터베이스 서버](https://azuremarketplace.microsoft.com/marketplace/apps/category/databases?page=1&subcategories=databases-all)를 지원합니다. 여기에는 SQL Server와 Oracle, MySQL, PostgreSQL, IBM DB2와 같은 인기있는 RDBMS와 MongoDB, Cassandra, DataStax, MariaDB, 및 Cloudera와 같은 다양한 NoSQL 데이터베이스가 포함됩니다.
 
 > [!NOTE]
 > Azure VM으로 사용자 RDBMS 데이터를 이전하는 것이 IaaS인 클라우드로 마이그레이션하는 가장 빠른 방법일 수 있지만, 이 방법을 사용하려면 IT 팀(데이터베이스 관리자와 IT 전문가)에 많은 투자를 해야 합니다. 엔터프라이즈 팀은 SQL Server의 고가용성과 재해 복구, 패치를 설정하고 관리할 수 있어야 합니다. 또한 이 컨텍스트에는 전체 관리 권한이 있는 사용자 지정된 환경이 필요합니다.

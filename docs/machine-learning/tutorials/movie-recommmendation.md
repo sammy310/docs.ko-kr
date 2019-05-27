@@ -1,19 +1,19 @@
 ---
-title: '자습서: 영화 추천기 빌드'
+title: '자습서: 영화 추천기 빌드 - 행렬 인수분해'
 description: 이 자습서에서는 .NET Core 콘솔 애플리케이션에서 ML.NET으로 영화 추천기를 빌드하는 방법을 보여 줍니다. 이 단계에서는 C#과 Visual Studio 2019를 사용합니다.
 author: briacht
 ms.author: johalex
 ms.date: 05/06/2019
-ms.custom: mvc
+ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 5d459d8b28298250f3b815e33ff4d85ac54f79c2
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 512c8d663835da77c05fb24926ff85c56afd11ca
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063374"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882260"
 ---
-# <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>자습서: ML.NET을 사용하여 Movie Recommender 만들기
+# <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>자습서: ML.NET에서 행렬 인수분해를 사용하여 영화 추천기 빌드
 
 이 자습서에서는 .NET Core 콘솔 애플리케이션에서 ML.NET으로 영화 추천기를 빌드하는 방법을 보여 줍니다. 이 단계에서는 C#과 Visual Studio 2019를 사용합니다.
 

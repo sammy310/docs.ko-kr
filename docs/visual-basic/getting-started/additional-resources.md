@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: b54c48fb7869fb3d308e238366f8e8b91368320a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: febfe0ae0a3e478109b338b228d0bc306bf56454
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675604"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052780"
 ---
 # <a name="additional-resources"></a>추가 자료
 
@@ -39,7 +39,7 @@ ms.locfileid: "57675604"
 
 |용어|정의|
 |----------|----------------|
-|[Visual Basic 포럼](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)|일반적인 Visual Basic 문제를 설명합니다.|
+|[Visual Basic 포럼](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)|일반적인 Visual Basic 문제를 설명합니다.|
 
 ### <a name="videos-and-webcasts"></a>비디오 및 웹캐스트
 
@@ -47,7 +47,7 @@ ms.locfileid: "57675604"
 |----------|----------------|
 |[Channel9](https://channel9.msdn.com/)|비디오, Wiki 및 포럼을 통해 커뮤니티를 지속적으로 운영합니다.|
 
-### <a name="support"></a>Support(지원)
+### <a name="support"></a>고객 지원팀
 
 |용어|정의|
 |----------|----------------|

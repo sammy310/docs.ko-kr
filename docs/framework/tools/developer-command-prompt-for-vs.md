@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cc88106a54a00b4b12e5043da7961791a98102c0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 79cfc607e20d921c7ae942cb9755eee4264336eb
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344366"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877052"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Visual Studio용 개발자 명령 프롬프트
 
@@ -38,7 +38,7 @@ Visual Studio에 대한 개발자 명령 프롬프트를 통해 .NET Framework �
 
 ### <a name="in-windows-81"></a>Windows 8.1에서
 
-1. 키보드에서 Windows 로고 키 ![Windows logo](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo")를 눌러 **시작** 화면으로 이동합니다.
+1. Windows 로고 키 ![키보드에서 Windows 로고 키](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png)를 눌러 **시작** 화면으로 이동합니다. 예를 들어 키보드에서
 
 2. **시작** 화면에서 **Ctrl**+**Tab**을 눌러 **앱** 목록을 열고 `V`를 입력합니다. 그러면 설치된 모든 Visual Studio 명령 프롬프트가 포함된 목록을 가져옵니다.
 
@@ -46,9 +46,9 @@ Visual Studio에 대한 개발자 명령 프롬프트를 통해 .NET Framework �
 
 ### <a name="in-windows-8"></a>Windows 8에서
 
-1. 키보드에서 Windows 로고 키 ![Windows logo](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo")를 눌러 **시작** 화면으로 이동합니다.
+1. Windows 로고 키 ![키보드에서 Windows 로고 키](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png)를 눌러 **시작** 화면으로 이동합니다. 예를 들어 키보드에서
 
-2. **시작**에서 Windows 로고 키 ![Windows logo](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") `+ Z`를 누릅니다.
+2. **시작** 화면에서 Windows 로고 키 ![키보드에서 로고 키](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png)를 누릅니다. `+ Z`.
 
 3. 화면 아래쪽에서 **앱 보기** 아이콘을 선택하고 `V` 키를 누릅니다. 그러면 설치된 모든 Visual Studio 명령 프롬프트가 포함된 목록을 가져옵니다.
 

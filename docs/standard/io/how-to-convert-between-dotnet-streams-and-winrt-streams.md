@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0cf5b621be7532239b67bfe970302f27eca3ea2a
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 22cf168c660349bda16c59aec4824e3283430807
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835137"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877935"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>방법: .NET Framework와 Windows 런타임 스트림 간의 변환(Windows에만 해당)
 
@@ -51,7 +51,7 @@ Windows 런타임 임의 액세스 스트림에서 .NET Framework 스트림으�
   
 - <xref:System.IO.WindowsRuntimeStreamExtensions.AsOutputStream%2A?displayProperty=nameWithType>은 UWP용 .NET 앱의 관리형 스트림을 Windows 런타임의 출력 스트림으로 변환합니다.
   
-- [AsRandomAccessStream](../../../docs/standard/cross-platform/windowsruntimestreamextensions-asrandomaccessstream-method.md)은 UWP 앱용 .NET의 관리형 스트림을 Windows 런타임에서 읽거나 쓰는 데 사용할 수 있는 임의 액세스 스트림으로 변환합니다.
+- <xref:System.IO.WindowsRuntimeStreamExtensions.AsRandomAccessStream%2A?displayProperty=nameWithType>은 UWP 앱용 .NET의 관리형 스트림을 Windows 런타임에서 읽거나 쓰는 데 사용할 수 있는 임의 액세스 스트림으로 변환합니다.
 
 .NET Framework 스트림을 Windows 런타임 스트림으로 변환할 때 변환된 스트림의 기능은 원본 스트림에 따라 다릅니다. 예를 들어 원본 스트림이 읽기와 쓰기를 모두 지원하는 경우 <xref:System.IO.WindowsRuntimeStreamExtensions.AsInputStream%2A?displayProperty=nameWithType>을 호출하여 스트림을 변환하면, 반환되는 형식은 `IRandomAccessStream`입니다. `IRandomAccessStream`은 `IInputStream`과 `IOutputStream`을 구현하고 읽기와 쓰기를 지원합니다.
 
@@ -59,7 +59,7 @@ Windows 런타임 임의 액세스 스트림에서 .NET Framework 스트림으�
 
 ## <a name="example-convert-net-framework-to-windows-runtime-random-access-stream"></a>예제: .NET Framework를 Windows 런타임 임의 액세스 스트림으로 변환
 
-.NET Framework 스트림을 Windows 런타임 임의 액세스 스트림으로 변환하려면 다음 예제와 같이 [AsRandomAccessStream](../../../docs/standard/cross-platform/windowsruntimestreamextensions-asrandomaccessstream-method.md) 메서드를 사용합니다.
+.NET Framework 스트림을 Windows 런타임 임의 액세스 스트림으로 변환하려면 다음 예제와 같이 <xref:System.IO.WindowsRuntimeStreamExtensions.AsRandomAccessStream%2A> 메서드를 사용합니다.
 
 > [!IMPORTANT]
 > 사용 중인 .NET Framework 스트림이 검색을 지원하는지 확인하고 그렇지 않으면 지원하는 스트림에 복사합니다. <xref:System.IO.Stream.CanSeek%2A?displayProperty=nameWithType> 속성을 사용하여 이를 확인할 수 있습니다.

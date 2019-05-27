@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: faaa48051c80b6dfd330f15f72a38297ff2d1b9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05d9ad4766584b59cca7c31f49b737d4696a9921
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941585"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053534"
 ---
 # <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>방법: Windows Forms RichTextBox 컨트롤을 사용하여 웹 스타일 링크 표시
 Windows Forms <xref:System.Windows.Forms.RichTextBox> 제어와 색이 지정 된 밑줄 웹 링크를 표시할 수 있습니다. 브라우저 창에 링크를 클릭할 때 링크 텍스트에 지정 된 웹 사이트를 표시 하는 코드를 작성할 수 있습니다.  
@@ -74,13 +74,13 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 제어와 색이 지정 �
        }  
     ```  
   
-     ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 프로세스를 초기화 해야 `p`, 폼의 생성자에서 다음 문을 포함 하 여 수행할 수 있습니다.  
+     (Visual C++) 프로세스를 초기화 해야 `p`, 폼의 생성자에서 다음 문을 포함 하 여 수행할 수 있습니다.  
   
     ```cpp  
     p = gcnew System::Diagnostics::Process();  
     ```  
   
-     (Visual C# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 이벤트 처리기를 등록 하려면 폼의 생성자에 다음 코드를 추가 합니다.  
+     (Visual C#, Visual C++) 이벤트 처리기를 등록 하려면 폼의 생성자에 다음 코드를 추가 합니다.  
   
     ```csharp  
     this.richTextBox1.LinkClicked += new   

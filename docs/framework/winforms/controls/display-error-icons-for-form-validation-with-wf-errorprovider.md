@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], displaying error icons
 - error messages [Windows Forms], displaying icons
 ms.assetid: 3b681a32-9db4-497b-a34b-34980eabee46
-ms.openlocfilehash: 9487d4f82878ffefe17c576b16f654293ef01106
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2af8d3b9ea97b678c493de8a58d439b62f448387
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972187"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053707"
 ---
 # <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>방법: Windows Forms ErrorProvider 구성 요소를 사용하여 양식 유효성 오류 아이콘 표시
 Windows Forms를 사용할 수 있습니다 <xref:System.Windows.Forms.ErrorProvider> 구성 요소에 잘못 된 데이터를 입력할 때 오류 아이콘을 표시 합니다. 두 개 이상의 폼의 컨트롤 간에 이동 하 여 유효성 검사 코드를 호출할 수 있어야 합니다.  
@@ -77,7 +77,7 @@ Windows Forms를 사용할 수 있습니다 <xref:System.Windows.Forms.ErrorProv
        }  
     ```  
   
-     (Visual C# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 이벤트 처리기를 등록 하려면 폼의 생성자에 다음 코드를 추가 합니다.  
+     (Visual C#, Visual C++) 이벤트 처리기를 등록 하려면 폼의 생성자에 다음 코드를 추가 합니다.  
   
     ```csharp  
     this.textBox1.Validating += new  

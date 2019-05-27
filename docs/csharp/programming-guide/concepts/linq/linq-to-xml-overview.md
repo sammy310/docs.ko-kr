@@ -2,12 +2,12 @@
 title: LINQ to XML 개요(C#)
 ms.date: 10/30/2018
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-ms.openlocfilehash: 0ae7b226f4fef0aeec895b0b908711a6edb13728
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 2394151d855d75b418616d9fa1a6f69b08cdef86
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612838"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585762"
 ---
 # <a name="linq-to-xml-overview-c"></a>LINQ to XML 개요(C#)
 
@@ -23,7 +23,7 @@ XML은 다양한 컨텍스트에서 데이터의 형식을 지정하는 방법�
 
 ## <a name="what-is-linq-to-xml"></a>LINQ to XML이란?
 
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]은 LINQ를 사용할 수 있는 메모리 내 XML 프로그래밍 인터페이스로, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 프로그래밍 언어에서 XML 작업을 수행할 수 있도록 합니다.
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]는 LINQ를 사용할 수 있는 메모리 내 XML 프로그래밍 인터페이스로, .NET Framework 프로그래밍 언어에서 XML 작업을 수행할 수 있도록 합니다.
 
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]은 XML 문서를 메모리로 가져온다는 점에서 DOM(문서 개체 모델)과 같습니다. 문서를 쿼리하고 수정할 수 있으며 문서를 수정한 후 파일에 저장하거나 serialize하고 네트워크를 통해 보낼 수 있습니다. 그러나 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]는 DOM과 다릅니다. LINQ to XML은 간단하고 작업하기 쉬우며 C#의 언어 기능을 활용하는 새로운 개체 모델을 제공합니다.
 

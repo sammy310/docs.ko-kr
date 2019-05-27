@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34f0002554320f99d961d03e9eebd8d0f774f1f6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5ef6b73d683d43b2a33628db13fa592c7f02199a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591508"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585994"
 ---
 # <a name="security-considerations-for-reflection"></a>리플렉션의 보안 고려 사항
 리플렉션은 형식 및 멤버에 대한 정보를 가져오고 멤버에 액세스하는 기능(즉, 메서드 및 생성자 호출, 속성 값 가져오기 및 설정, 이벤트 처리기 추가 및 제거 등)을 제공합니다. 리플렉션을 사용하여 형식 및 멤버에 대한 정보를 가져오는 기능은 제한되지 않습니다. 모든 코드에서 리플렉션을 사용하여 다음 작업을 수행할 수 있습니다.  
@@ -88,7 +88,7 @@ ms.locfileid: "64591508"
   
 - 어셈블리 B의 권한 부여 집합은 A에 부여되지 않은 권한을 포함하지 않으므로 어셈블리 A가 리플렉션을 사용하여 어셈블리 B의 private 멤버에 액세스할 수 있습니다.  
   
-- mscorlib.dll은 완전히 신뢰할 수 있어 어셈블리 A에 부여되지 않은 권한이 있으므로 어셈블리 A가 리플렉션을 사용하여 mscorlib.dll과 같은 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 어셈블리의 private 멤버에 액세스할 수 없습니다. 런타임에 코드 액세스 보안이 스택을 이동하는 경우 <xref:System.MemberAccessException>이 발생합니다.  
+- mscorlib.dll은 완전히 신뢰할 수 있어 어셈블리 A에 부여되지 않은 권한이 있으므로 어셈블리 A가 리플렉션을 사용하여 mscorlib.dll과 같은 .NET Framework 어셈블리의 private 멤버에 액세스할 수 없습니다. 런타임에 코드 액세스 보안이 스택을 이동하는 경우 <xref:System.MemberAccessException>이 발생합니다.  
   
 ## <a name="serialization"></a>Serialization  
  직렬화를 위해 <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.SecurityPermission>은 접근성에 관계없이 직렬화 가능 형식의 멤버를 가져오고 설정하는 기능을 제공합니다. 이 권한을 통해 코드에서 인스턴스의 private 상태를 검색하고 변경할 수 있습니다. 적절한 권한이 부여되는 것 외에도 메타데이터에서 형식이 직렬화 가능으로 [표시](../../../docs/standard/attributes/applying-attributes.md)되어야 합니다.  
@@ -100,7 +100,7 @@ ms.locfileid: "64591508"
   
 - [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터 투명 코드는 리플렉션을 사용하여 보안에 중요한 멤버에 액세스할 수 없습니다.  
   
-- <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 플래그는 [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)]에서 도입되었습니다. 이전 버전의 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 리플렉션을 사용하여 public이 아닌 멤버에 액세스하는 코드에 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 플래그가 필요합니다. 부분적으로 신뢰할 수 있는 코드에는 이 권한을 부여하면 안 됩니다.  
+- <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 플래그는 [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)]에서 도입되었습니다. 이전 버전의 .NET Framework에서는 리플렉션을 사용하여 public이 아닌 멤버에 액세스하는 코드에 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 플래그가 필요합니다. 부분적으로 신뢰할 수 있는 코드에는 이 권한을 부여하면 안 됩니다.  
   
 - [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]부터 리플렉션을 사용하여 public이 아닌 형식과 멤버에 대한 정보를 가져오는 데 필요한 권한은 없습니다. 이전 버전에서는 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.ReflectionPermission>이 필요합니다.  
   

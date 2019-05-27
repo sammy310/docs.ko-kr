@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a92e6627ba937b10b183a833a005792f0a51f921
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d5541cc34f8967916e4896fd5f9be82edcb332f
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033126"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051988"
 ---
 # <a name="type-element-net-native"></a>\<형식 > 요소 (.NET 네이티브)
 클래스 또는 구조체와 같은 특정 형식에 런타임 정책을 적용합니다.  
@@ -102,7 +102,7 @@ ms.locfileid: "62033126"
   
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]  
   
- <xref:System.Collections.Generic.List%601> 클래스의 메타데이터는 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 도구 체인에 의해 자동으로 포함되지 않으므로 이 예제는 런타임에 요청된 멤버 정보를 표시하지 못합니다. 필요한 메타데이터를 제공하려면 다음 `<Type>` 요소를 런타임 지시문 파일에 추가합니다. 여기서는 부모 [<Namespace\>](../../../docs/framework/net-native/namespace-element-net-native.md) 요소를 제공했으므로 `<Type>` 요소에 정규화된 형식 이름을 제공하지 않아도 됩니다.  
+ 때문에 대 한 메타 데이터는 <xref:System.Collections.Generic.List%601> 클래스는.NET 네이티브 도구 체인에 의해 자동으로 포함 되지, 예제를 런타임에 요청된 된 멤버 정보를 표시 하지 못합니다. 필요한 메타데이터를 제공하려면 다음 `<Type>` 요소를 런타임 지시문 파일에 추가합니다. 여기서는 부모 [<Namespace\>](../../../docs/framework/net-native/namespace-element-net-native.md) 요소를 제공했으므로 `<Type>` 요소에 정규화된 형식 이름을 제공하지 않아도 됩니다.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -120,7 +120,7 @@ ms.locfileid: "62033126"
   
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]  
   
- <xref:System.String> 개체의 메타데이터를 사용할 수 없으므로 <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 도구 체인으로 컴파일한 경우 <xref:System.NullReferenceException> 메서드를 호출하면 런타임에 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 예외가 throw됩니다. 예외를 방지하고 필요한 메타데이터를 제공하려면 다음 `<Type>` 요소를 런타임 지시문 파일에 추가합니다.  
+ 때문에 대 한 메타 데이터를 <xref:System.String> 개체를 사용할 수 없는 호출 합니다 <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 메서드가 throw를 <xref:System.NullReferenceException> 런타임에 예외.NET 네이티브 도구 체인을 사용 하 여 컴파일할 때 시간. 예외를 방지하고 필요한 메타데이터를 제공하려면 다음 `<Type>` 요소를 런타임 지시문 파일에 추가합니다.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

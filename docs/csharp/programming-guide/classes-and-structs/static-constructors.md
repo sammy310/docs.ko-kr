@@ -6,12 +6,12 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 87a7b16d3e096f6a5bf05475ccc7c43862324ae3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 110d83caad0c588fa899a4129897784e9c74aab8
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583363"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881908"
 ---
 # <a name="static-constructors-c-programming-guide"></a>정적 생성자(C# 프로그래밍 가이드)
 정적 생성자는 [정적](../../../csharp/language-reference/keywords/static.md) 데이터를 초기화하거나 한 번만 수행해야 하는 특정 작업을 수행하는 데 사용됩니다. 첫 번째 인스턴스가 만들어지거나 정적 멤버가 참조되기 전에 자동으로 호출됩니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "64583363"
   
 - 정적 생성자는 액세스 한정자를 사용하거나 매개 변수를 갖지 않습니다.  
   
-- 정적 생성자는 첫 번째 인스턴스가 만들어지거나 정적 멤버가 참조되기 전에 자동으로 호출되어 [클래스](../../../csharp/language-reference/keywords/class.md)를 초기화합니다.  
+- 정적 생성자는 첫 번째 인스턴스가 만들어지거나 정적 멤버가 참조되기 전에 자동으로 호출되어 [클래스](../../../csharp/language-reference/keywords/class.md)를 초기화합니다. 유형의 정적 생성자는 이벤트 또는 대리자에 할당된 정적 메서드가 호출될 때 호출되며 할당될 때는 호출되지 않는다는 점에 유의합니다.
   
 - 정적 생성자는 직접 호출할 수 없습니다.  
   

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 9ea293a3c96f193285f45f8d70ac038e785f548a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2109c764d0143a843f75fc0c14cc0d09550efd85
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57477664"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877570"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe(매니페스트 생성 및 편집 도구)
 
-매니페스트 생성 및 편집 도구(*Mage.exe*)는 애플리케이션 매니페스트 및 배포 매니페스트의 생성과 편집을 지원하는 명령줄 도구입니다. *Mage.exe*는 명령줄 도구로서 일괄 처리 스크립트뿐 아니라 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 애플리케이션을 비롯한 Windows 기반 애플리케이션에서도 실행할 수 있습니다.
+매니페스트 생성 및 편집 도구(*Mage.exe*)는 애플리케이션 매니페스트 및 배포 매니페스트의 생성과 편집을 지원하는 명령줄 도구입니다. *Mage.exe*는 명령줄 도구로서 일괄 처리 스크립트뿐 아니라 ASP.NET 애플리케이션을 비롯한 Windows 기반 애플리케이션에서도 실행할 수 있습니다.
 
 *Mage.exe* 대신 그래픽 애플리케이션인 *MageUI.exe*를 사용할 수도 있습니다. 자세한 내용은 [MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)을 참조하십시오.
 

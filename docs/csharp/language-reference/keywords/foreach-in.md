@@ -1,6 +1,6 @@
 ---
 title: C# foreach 문
-ms.date: 06/29/2018
+ms.date: 05/17/2019
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: 417a8cefbc9bc7544ae1156992e6e6c549fb828f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7a1508db23f60cac487e0171c3db7756bc228fd2
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128624"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880531"
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in(C# 참조)
 
@@ -26,6 +26,8 @@ ms.locfileid: "53128624"
 C# 7.3부터는 열거자의 `Current` 속성이 [참조 반환 값](ref.md#reference-return-values)(`ref T` 여기서 `T`는 컬렉션 요소의 형식임)을 반환하는 경우 `ref` 또는 `ref readonly` 한정자를 사용하여 반복 변수를 선언할 수 있습니다.
 
 `foreach` 문 블록 내 원하는 지점에서 [break](break.md) 문을 사용하여 루프를 중단하거나 [continue](continue.md) 문을 사용하여 루프의 다음 반복을 한 단계 실행할 수 있습니다. [goto](goto.md), [return](return.md) 또는 [throw](throw.md) 문으로 `foreach` 루프를 종료할 수도 있습니다.
+
+`foreach` 문이 `null`에 적용되면 <xref:System.NullReferenceException>이 throw됩니다. `foreach` 문의 소스 컬렉션이 비어 있으면 `foreach` 루프의 본문이 실행되지 않고 건너뜁니다.
 
 ## <a name="examples"></a>예제
 

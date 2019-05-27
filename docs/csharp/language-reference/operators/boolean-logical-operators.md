@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: de621b26334bbc9679ba7e48a9d5a0cbaec67eab
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b666c915506872930b16c1c5890de24e9cbe4f7a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427320"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880574"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>부울 논리 연산자(C# 참조)
 
@@ -47,7 +47,7 @@ ms.locfileid: "59427320"
 - 이진 [`&`(논리 AND)](#logical-and-operator-), [`|`(논리 OR)](#logical-or-operator-) 및 [`^`(논리 배타적 OR)](#logical-exclusive-or-operator-) 연산자. 해당 연산자는 항상 두 피연산자를 모두 평가합니다.
 - 이진 [`&&`(조건부 논리 AND)](#conditional-logical-and-operator-) 및 [`||`(조건부 논리 OR)](#conditional-logical-or-operator-) 연산자. 해당 연산자는 필요한 경우에만 두 번째 피연산자를 평가합니다.
 
-[정수](../keywords/integral-types-table.md) 형식 피연산자의 경우 `&`, `|` 및 `^` 연산자는 비트 논리 작업을 수행합니다.
+[정수](../keywords/integral-types-table.md) 형식 피연산자의 경우 `&`, `|` 및 `^` 연산자는 비트 논리 작업을 수행합니다. 자세한 내용은 [비트 및 시프트 연산자](bitwise-and-shift-operators.md)를 참조하세요.
 
 ## <a name="logical-negation-operator-"></a>논리 부정 연산자 !
 
@@ -67,7 +67,7 @@ ms.locfileid: "59427320"
 
 [조건부 논리 AND 연산자](#conditional-logical-and-operator-) `&&`도 해당 피연산자의 논리 AND를 컴퓨팅하지만, 첫 번째 피연산자가 `false`로 평가되는 경우에는 두 번째 피연산자를 평가하지 않습니다.
 
-정수 형식 피연산자의 경우 `&` 연산자는 해당 피연산자의 [비트 논리 AND](and-operator.md#integer-logical-bitwise-and-operator)를 컴퓨팅합니다. 단항 `&` 연산자는 [address-of 연산자](and-operator.md#unary-address-of-operator)입니다.
+정수 형식 피연산자의 경우 `&` 연산자는 해당 피연산자의 [비트 논리 AND](bitwise-and-shift-operators.md#logical-and-operator-)를 컴퓨팅합니다. 단항 `&` 연산자는 [address-of 연산자](pointer-related-operators.md#address-of-operator-)입니다.
 
 ## <a name="logical-exclusive-or-operator-"></a>논리 배타적 OR 연산자 ^
 
@@ -75,7 +75,7 @@ ms.locfileid: "59427320"
 
 [!code-csharp-interactive[logical exclusive OR](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#Xor)]
 
-정수 형식 피연산자의 경우 `^` 연산자는 해당 피연산자의 [비트 논리 배타적 OR](xor-operator.md)을 컴퓨팅합니다.
+정수 형식 피연산자의 경우 `^` 연산자는 해당 피연산자의 [비트 논리 배타적 OR](bitwise-and-shift-operators.md#logical-exclusive-or-operator-)을 컴퓨팅합니다.
 
 ## <a name="logical-or-operator-"></a>논리 OR 연산자 |
 
@@ -89,7 +89,7 @@ ms.locfileid: "59427320"
 
 [조건부 논리 OR 연산자](#conditional-logical-or-operator-) `||`도 해당 피연산자의 논리 OR을 컴퓨팅하지만, 첫 번째 피연산자가 `true`로 평가되는 경우에는 두 번째 피연산자를 평가하지 않습니다.
 
-정수 형식 피연산자의 경우 `|` 연산자는 해당 피연산자의 [비트 논리 OR](or-operator.md)을 컴퓨팅합니다.
+정수 형식 피연산자의 경우 `|` 연산자는 해당 피연산자의 [비트 논리 OR](bitwise-and-shift-operators.md#logical-or-operator-)을 컴퓨팅합니다.
 
 ## <a name="conditional-logical-and-operator-ampamp"></a>조건부 논리 AND 연산자 &amp;&amp;
 
@@ -187,9 +187,11 @@ x = x op y
 - [논리 부정 연산자](~/_csharplang/spec/expressions.md#logical-negation-operator)
 - [논리 연산자](~/_csharplang/spec/expressions.md#logical-operators)
 - [조건부 논리 연산자](~/_csharplang/spec/expressions.md#conditional-logical-operators)
+- [복합 할당](~/_csharplang/spec/expressions.md#compound-assignment)
 
 ## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 연산자](index.md)
+- [비트 및 시프트 연산자](bitwise-and-shift-operators.md)

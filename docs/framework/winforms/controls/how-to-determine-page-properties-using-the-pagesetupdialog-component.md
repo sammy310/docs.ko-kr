@@ -10,12 +10,12 @@ helpviewer_keywords:
 - page setup
 - PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
-ms.openlocfilehash: 7c65eb54bb95b9a20cd1e43f0d491af47985f2e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 306e0dbf7fb819d1214d7d5d93d335b5d2db75e6
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771490"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053612"
 ---
 # <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>방법: PageSetupDialog 구성 요소를 사용하여 페이지 속성 설정
 [PageSetupDialog](pagesetupdialog-component-windows-forms.md) 구성 요소는 문서의 사용자에게 레이아웃, 용지 크기 및 기타 페이지 레이아웃 옵션을 표시합니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "61771490"
        }  
     ```  
   
-     (Visual C# 및 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 이벤트 처리기를 등록 하려면 폼의 생성자에 다음 코드를 추가 합니다.  
+     (Visual C# 및 시각적 C++) 이벤트 처리기를 등록 하려면 폼의 생성자에 다음 코드를 추가 합니다.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  

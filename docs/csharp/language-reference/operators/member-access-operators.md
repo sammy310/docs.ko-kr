@@ -24,14 +24,14 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: 921d69e3deb7e5bb5115eb723727462839af9b6b
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: a76c2855196b229918ee0a6a7d2a4dc66d87d059
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452895"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881039"
 ---
-# <a name="member-access-operators"></a>멤버 액세스 연산자
+# <a name="member-access-operators-c-reference"></a>멤버 액세스 연산자(C# 참조)
 
 형식 멤버에 액세스할 때 다음과 같은 연산자를 사용할 수 있습니다.
 
@@ -88,7 +88,7 @@ ms.locfileid: "65452895"
 
 ### <a name="other-usages-of-"></a>다른 [] 용도
 
-포인터 요소 액세스에 대한 자세한 내용은 [방법: 포인터를 사용하여 배열 요소 액세스](../../programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md)를 참조하세요.
+포인터 요소 액세스에 대한 자세한 내용은 [포인터 관련 연산자](pointer-related-operators.md) 문서의 [포인터 요소 액세스 연산자](pointer-related-operators.md#pointer-element-access-operator-) 섹션을 참조하세요.
 
 또한 대괄호를 사용하여 [특성](../../programming-guide/concepts/attributes/index.md)을 지정합니다.
 

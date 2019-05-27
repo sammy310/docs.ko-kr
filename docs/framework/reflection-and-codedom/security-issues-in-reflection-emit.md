@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7609c88b088b9386201f5ac5725d16f4c5f11071
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b6adbe4e5c82d5f886fcffd5ab272a337c377395
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591374"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586120"
 ---
 # <a name="security-issues-in-reflection-emit"></a>리플렉션 내보내기의 보안 문제점
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 MSIL(Microsoft Intermediate Language)을 내보내는 세 가지 방법을 제공하며, 각각 고유한 보안 문제가 있습니다.  
+.NET Framework에서는 MSIL(Microsoft Intermediate Language)을 내보내는 세 가지 방법을 제공하며, 각각 고유한 보안 문제가 있습니다.  
   
 - [동적 어셈블리](#Dynamic_Assemblies)  
   
@@ -32,7 +32,7 @@ ms.locfileid: "64591374"
  동적 코드를 생성하는 방법에 관계없이 생성된 코드를 실행하려면 생성된 코드가 사용하는 형식 및 메서드에 필요한 모든 권한이 있어야 합니다.  
   
 > [!NOTE]
->  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]의 이후 릴리스에서는 코드에 반영하고 코드를 내보내는 데 필요한 권한이 변경되었습니다. 이 항목의 뒷부분에 있는 [버전 정보](#Version_Information)를 참조하세요.  
+>  .NET Framework의 이후 릴리스에서는 코드에 반영하고 코드를 내보내는 데 필요한 권한이 변경되었습니다. 이 항목의 뒷부분에 있는 [버전 정보](#Version_Information)를 참조하세요.  
   
 <a name="Dynamic_Assemblies"></a>   
 ## <a name="dynamic-assemblies"></a>동적 어셈블리  
@@ -141,17 +141,17 @@ ms.locfileid: "64591374"
 ## <a name="version-information"></a>버전 정보  
  [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]부터 시스템 수준의 보안 정책이 제거되었으며 보안 투명도가 기본 적용 메커니즘이 되었습니다. [보안 변경 내용](../../../docs/framework/security/security-changes.md)을 참조하세요.  
   
- [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)]부터 동적 어셈블리와 동적 메서드를 내보낼 때 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.ReflectionPermission>이 더 이상 필요하지 않습니다. 이 플래그는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]의 모든 이전 버전에서 필요합니다.  
+ [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)]부터 동적 어셈블리와 동적 메서드를 내보낼 때 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.ReflectionPermission>이 더 이상 필요하지 않습니다. 이 플래그는 .NET Framework의 모든 이전 버전에서 필요합니다.  
   
 > [!NOTE]
->  <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.ReflectionPermission>은 기본적으로 명명된 권한 집합 `FullTrust` 및 `LocalIntranet` 에 포함되지만 `Internet` 권한 집합에는 포함되지 않습니다. 따라서 이전 버전의 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>에 대해 <xref:System.Security.PermissionSet.Assert%2A>를 실행하는 경우에만 인터넷 권한으로 라이브러리를 사용할 수 있습니다. 코딩 오류가 있을 경우 보안 허점이 발생할 수 있으므로 이러한 라이브러리는 신중한 보안 검토가 필요합니다. [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)]에서는 코드 생성이 기본적으로 권한 있는 작업이 아니기 때문에 보안 요구를 실행하지 않고 부분 신뢰 시나리오에서 코드를 내보낼 수 있습니다. 즉, 생성된 코드에 코드를 내보내는 어셈블리보다 많은 권한이 없습니다. 따라서 코드를 내보내는 라이브러리가 보안상 투명할 수 있으며 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>를 어설션할 필요가 없으므로 보안 라이브러리 작성 작업이 간소화됩니다.  
+>  <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.ReflectionPermission>은 기본적으로 명명된 권한 집합 `FullTrust` 및 `LocalIntranet` 에 포함되지만 `Internet` 권한 집합에는 포함되지 않습니다. 따라서 이전 버전의 .NET Framework에서는 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>에 대해 <xref:System.Security.PermissionSet.Assert%2A>를 실행하는 경우에만 인터넷 권한으로 라이브러리를 사용할 수 있습니다. 코딩 오류가 있을 경우 보안 허점이 발생할 수 있으므로 이러한 라이브러리는 신중한 보안 검토가 필요합니다. [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)]에서는 코드 생성이 기본적으로 권한 있는 작업이 아니기 때문에 보안 요구를 실행하지 않고 부분 신뢰 시나리오에서 코드를 내보낼 수 있습니다. 즉, 생성된 코드에 코드를 내보내는 어셈블리보다 많은 권한이 없습니다. 따라서 코드를 내보내는 라이브러리가 보안상 투명할 수 있으며 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>를 어설션할 필요가 없으므로 보안 라이브러리 작성 작업이 간소화됩니다.  
   
- 또한 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)]에서는 부분적으로 신뢰할 수 있는 동적 메서드에서 public이 아닌 형식과 멤버에 액세스하기 위한 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 플래그가 도입되었습니다. 이전 버전의 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 public이 아닌 형식과 멤버에 액세스하는 동적 메서드에 대해 부분적으로 신뢰할 수 있는  코드에 부여하면 안 되는 권한인 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 플래그가 필요합니다.  
+ 또한 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)]에서는 부분적으로 신뢰할 수 있는 동적 메서드에서 public이 아닌 형식과 멤버에 액세스하기 위한 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 플래그가 도입되었습니다. 이전 버전의 .NET Framework에서는 public이 아닌 형식과 멤버에 액세스하는 동적 메서드에 대해 부분적으로 신뢰할 수 있는 코드에 부여하면 안 되는 권한인 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 플래그가 필요합니다.  
   
  끝으로, [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)]에서는 익명으로 호스트된 메서드가 도입되었습니다.  
   
 ### <a name="obtaining-information-on-types-and-members"></a>형식 및 멤버에 대한 정보 가져오기  
- [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]부터 public이 아닌 형식과 멤버에 대한 정보를 가져오는 데 필요한 권한은 없습니다. 리플렉션을 사용하여 동적 메서드를 내보내는 데 필요한 정보를 가져옵니다. 예를 들어 <xref:System.Reflection.MethodInfo> 개체를 사용하여 메서드 호출을 내보냅니다. 이전 버전의 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.ReflectionPermission>이 필요합니다. 자세한 내용은 [리플렉션의 보안 고려 사항](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)을 참조하세요.  
+ [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]부터 public이 아닌 형식과 멤버에 대한 정보를 가져오는 데 필요한 권한은 없습니다. 리플렉션을 사용하여 동적 메서드를 내보내는 데 필요한 정보를 가져옵니다. 예를 들어 <xref:System.Reflection.MethodInfo> 개체를 사용하여 메서드 호출을 내보냅니다. 이전 버전의 .NET Framework에서는 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.ReflectionPermission>이 필요합니다. 자세한 내용은 [리플렉션의 보안 고려 사항](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 

@@ -3,12 +3,12 @@ title: ML.NET 자동화 ML API 사용 방법
 description: ML.NET 자동화 ML API는 모델 빌드 프로세스를 자동화하고 배포 준비된 모델을 생성합니다. 자동화된 기계 학습 작업을 구성하기 위해 사용할 수 있는 옵션에 대해 알아보세요.
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 21bf594ba70e8c466cba757ca4dcfe39ddfa4d1e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d624b999384dd92d41033e385d01fe556e10a065
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641233"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960420"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>ML.NET 자동화 기계 학습 API 사용 방법
 
@@ -104,15 +104,15 @@ using Microsoft.ML.AutoML;
     ```
 
 ML 작업당 지원되는 트레이너 목록은 아래의 해당 링크에서 확인할 수 있습니다.
-* [지원되는 이진 분류 알고리즘](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.binaryclassificationtrainer?view=automl-dotnet)
-* [지원되는 다중 클래스 분류 알고리즘](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.multiclassclassificationtrainer?view=automl-dotnet)
-* [지원되는 회귀 알고리즘](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.regressiontrainer?view=automl-dotnet)
+* [지원되는 이진 분류 알고리즘](xref:Microsoft.ML.AutoML.BinaryClassificationTrainer)
+* [지원되는 다중 클래스 분류 알고리즘](xref:Microsoft.ML.AutoML.MulticlassClassificationTrainer)
+* [지원되는 회귀 알고리즘](xref:Microsoft.ML.AutoML.RegressionTrainer)
 
 ## <a name="optimizing-metric"></a>최적화 메트릭
 
 위의 예와 같이 최적화 메트릭은 모델 학습 중 최적화할 메트릭을 결정합니다. 선택할 수 있는 최적화 메트릭은 사용자가 선택하는 작업 유형에 따라 결정됩니다. 다음은 사용 가능한 메트릭 목록입니다.
 
-|[이진 분류](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.binaryclassificationmetric?view=automl-dotnet) | [다중 클래스 분류](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.multiclassclassificationmetric?view=automl-dotnet) | [재발](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.regressionmetric?view=automl-dotnet)
+|[이진 분류](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [다중 클래스 분류](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[재발](xref:Microsoft.ML.AutoML.RegressionMetric)
 |-- |-- |--
 |정확도| LogLoss | RSquared
 |AreaUnderPrecisionRecallCurve | LogLossReduction | MeanAbsoluteError
@@ -210,12 +210,9 @@ Console.WriteLine($"Root Mean Squared Error: {metrics.RootMeanSquaredError:0.##}
 ```
 
 다음은 ML 작업당 사용 가능한 모든 메트릭입니다.
-* [이진 분류 메트릭](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.binaryclassificationmetric?view=automl-dotnet
-)
-* [다중 클래스 분류 메트릭](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.multiclassclassificationmetric?view=automl-dotnet
-)
-* [재발 메트릭](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.regressionmetric?view=automl-dotnet
-)
+* [이진 분류 메트릭](xref:Microsoft.ML.AutoML.BinaryClassificationMetric)
+* [다중 클래스 분류 메트릭](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
+* [재발 메트릭](xref:Microsoft.ML.AutoML.RegressionMetric)
 
 ## <a name="see-also"></a>참고 항목
 

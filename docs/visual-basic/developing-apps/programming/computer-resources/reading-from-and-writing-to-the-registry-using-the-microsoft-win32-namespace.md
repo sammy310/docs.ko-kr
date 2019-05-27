@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - registry [Visual Basic]
 ms.assetid: 4a0dcce0-c27b-4199-baa8-ee4528da6a56
-ms.openlocfilehash: f958fe9355e8c4e3701996cb33e48bd3e2bd759f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a4a2e857e90dda640588cd05396922f55d0bd573
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821909"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589347"
 ---
 # <a name="reading-from-and-writing-to-the-registry-using-the-microsoftwin32-namespace-visual-basic"></a>Microsoft.Win32 네임스페이스를 사용하여 레지스트리 읽기 및 쓰기(Visual Basic)
-`My.Computer.Registry`는 레지스트리에 대해 프로그래밍할 때 기본 요구를 충족해야 하지만, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]의 <xref:Microsoft.Win32> 네임스페이스에서 <xref:Microsoft.Win32.Registry> 및 <xref:Microsoft.Win32.RegistryKey> 클래스를 사용할 수도 있습니다.  
+`My.Computer.Registry`는 레지스트리에 대해 프로그래밍할 때 기본 요구를 충족해야 하지만, .NET Framework의 <xref:Microsoft.Win32> 네임스페이스에서 <xref:Microsoft.Win32.Registry> 및 <xref:Microsoft.Win32.RegistryKey> 클래스를 사용할 수도 있습니다.  
   
 ## <a name="keys-in-the-registry-class"></a>레지스트리 클래스의 키  
  <xref:Microsoft.Win32.Registry> 클래스는 하위 키 및 값에 액세스하기 위해 사용할 수 있는 기본 레지스트리 키를 제공합니다. 기본 키 자체는 읽기 전용입니다. 다음 표에서는 <xref:Microsoft.Win32.Registry> 클래스에서 사용되는 7개의 키를 나열하고 설명합니다.  

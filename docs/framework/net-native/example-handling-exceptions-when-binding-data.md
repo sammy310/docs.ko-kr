@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 25b2117de40bbe7ba36fab028526116fc01ae09b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 137459acc275629bb4608218772ae969e3fcf99a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868534"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052699"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>예제: 데이터를 바인딩하는 경우 예외 처리
 > [!NOTE]
 >  이 항목은 시험판 소프트웨어인 .NET Native Developer Preview를 참조합니다. 이 Preview 버전은 [Microsoft Connect 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=394611)에서 다운로드할 수 있습니다(등록 필요).  
   
- 다음 예제에서는 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 도구 체인을 사용하여 컴파일한 앱이 데이터 바인딩을 시도하면 throw되는 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 예외를 해결하는 방법을 보여 줍니다. 예외 정보는 다음과 같습니다.  
+ 다음 예제에서는 해결 방법을 보여 줍니다.는 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) .NET 네이티브 도구 체인을 사용 하 여 컴파일한 앱에서 데이터 바인딩 하려고 할 때 throw 되는 예외입니다. 예외 정보는 다음과 같습니다.  
   
 ```  
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:   

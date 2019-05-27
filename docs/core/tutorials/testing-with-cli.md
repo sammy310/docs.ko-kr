@@ -4,12 +4,12 @@ description: 이 자습서에서는 명령줄에서 .NET Core 프로젝트를 �
 author: cartermp
 ms.date: 09/10/2018
 ms.custom: seodec18
-ms.openlocfilehash: ffd15edc633142116089d206135eb16416eb14cb
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: ef7263985288445fca273f37389876aeac2f136b
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2019
-ms.locfileid: "57845910"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051950"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>.NET Core 명령줄을 사용하여 프로젝트 구성 및 테스트
 
@@ -108,14 +108,14 @@ Meow!
 테스트 프로젝트는 현재 `NewTypes`의 형식을 테스트할 수 없으며, `NewTypes` 프로젝트에 대한 프로젝트 참조가 필요합니다. 프로젝트 참조를 추가하려면 [`dotnet add reference`](../tools/dotnet-add-reference.md) 명령을 사용합니다.
 
 ```
-dotnet add reference ../../NewTypes/NewTypes.csproj
+dotnet add reference ../../src/NewTypes/NewTypes.csproj
 ```
 
 또는 *NewTypesTests.csproj* 파일에 `<ItemGroup>` 노드를 추가하여 수동으로 프로젝트 참조를 추가할 수도 있습니다.
 
 ```xml
 <ItemGroup>
-  <ProjectReference Include="../../NewTypes/NewTypes.csproj" />
+  <ProjectReference Include="../../src/NewTypes/NewTypes.csproj" />
 </ItemGroup>
 ```
 

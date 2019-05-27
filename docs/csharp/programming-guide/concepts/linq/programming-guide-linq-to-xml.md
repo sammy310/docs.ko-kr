@@ -2,18 +2,18 @@
 title: 프로그래밍 가이드(LINQ to XML)(C#)
 ms.date: 07/20/2015
 ms.assetid: 4b1ffd10-ab81-4a0d-a0ca-e9876478d924
-ms.openlocfilehash: d71fb2d0365199bf89b0cfbd05b614ebd7634219
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8141d915b4262bdb66b0b2d9acc4c549956cdbec
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494004"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585731"
 ---
 # <a name="programming-guide-linq-to-xml-c"></a>프로그래밍 가이드(LINQ to XML)(C#)
 이 단원에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]을 사용한 프로그래밍의 개념과 방법에 대해 설명합니다.  
   
 ## <a name="who-should-read-this-documentation"></a>이 설명서를 읽을 대상  
- 이 설명서는 C#과 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]의 기본적인 내용을 알고 있는 개발자를 대상으로 합니다.  
+ 이 설명서는 C#과 .NET Framework의 기본적인 내용을 알고 있는 개발자를 대상으로 합니다.  
   
  이 설명서의 목표는 모든 개발자가 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]을 쉽게 사용할 수 있도록 하는 것입니다. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]을 사용하면 XML을 쉽게 프로그래밍할 수 있습니다. 전문 개발자가 아니어도 LINQ to XML을 사용할 수 있습니다.  
   

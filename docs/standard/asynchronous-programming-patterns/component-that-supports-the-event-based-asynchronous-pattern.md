@@ -18,17 +18,17 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: bc19ee687b26025d3da4d66888902395b863f046
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6c35398d54b91c9aa595ffdcde56004e59b7693
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628924"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882497"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 구현
 상당한 지연을 일으킬 수 있는 몇 가지 작업을 사용하여 클래스를 작성하는 경우 [이벤트 기반 비동기 패턴 개요](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)를 구현하여 비동기 기능을 부여하는 것을 고려할 수 있습니다.  
   
- 이 연습에서는 이벤트 기반 비동기 패턴을 구현하는 구성 요소를 만드는 방법을 보여줍니다. [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], 콘솔 애플리케이션 및 Windows Forms 애플리케이션을 포함한 모든 애플리케이션 모델에서 구성 요소가 올바르게 작동하도록 하는 <xref:System.ComponentModel?displayProperty=nameWithType> 네임스페이스의 도우미 클래스를 사용하는 것이 좋습니다. 이 구성 요소도 <xref:System.Windows.Forms.PropertyGrid> 컨트롤과 고유한 사용자 지정 디자이너를 사용하여 디자인할 수 있습니다.  
+ 이 연습에서는 이벤트 기반 비동기 패턴을 구현하는 구성 요소를 만드는 방법을 보여줍니다. ASP.NET, 콘솔 애플리케이션 및 Windows Forms 애플리케이션을 포함한 모든 애플리케이션 모델에서 구성 요소가 올바르게 작동하도록 하는 <xref:System.ComponentModel?displayProperty=nameWithType> 네임스페이스의 도우미 클래스를 사용하는 것이 좋습니다. 이 구성 요소도 <xref:System.Windows.Forms.PropertyGrid> 컨트롤과 고유한 사용자 지정 디자이너를 사용하여 디자인할 수 있습니다.  
   
  완료하면 소수를 비동기적으로 계산하는 애플리케이션이 생깁니다. 애플리케이션에는 기본 UI(사용자 인터페이스) 스레드 및 각 소수는 계산을 위한 스레드가 있습니다. 큰 숫자가 소수인지 테스트하는 데는 상당한 시간이 걸릴 수도 있지만 이 지연으로 기본 UI 스레드가 중단되지 않으며 계산 중에도 폼이 빠르게 응답하게 됩니다. 원하는 계산 수만큼 동시에 또는 선택적으로 취소 보류 계산을 실행할 수 있습니다.  
   

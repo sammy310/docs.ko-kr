@@ -1,18 +1,20 @@
 ---
 title: C# 8.0의 새로운 기능 - C# 가이드
-description: C# 8.0의 새로운 기능을 살펴봅니다. 이 문서는 미리 보기 2가 반영된 최신 내용을 담고 있습니다.
+description: C# 8.0의 새로운 기능을 살펴봅니다. 이 문서는 미리 보기 5가 반영된 최신 내용을 담고 있습니다.
 ms.date: 02/12/2019
-ms.openlocfilehash: 16723894d87526972b692a098a57ef3726b252dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dd4aca99a19134ed3ffff859c9c9554d4d480816
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754367"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557142"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0의 새로운 기능
 
-C# 언어에는 여러 개선된 기능이 포함되어 있습니다. 이러한 기능은 미리 보기 2에서 직접 사용해 볼 수 있습니다. 미리 보기 2에 추가된 새로운 기능은 다음과 같습니다.
+C# 언어에는 직접 사용해 볼 수 있는 여러 개선된 기능이 포함되어 있습니다. 
 
+- [읽기 전용 멤버](#readonly-members)
+- [기본 인터페이스 멤버](#default-interface-members)
 - [패턴 일치 개선 사항](#more-patterns-in-more-places):
   * [Switch 식](#switch-expressions)
   * [속성 패턴](#property-patterns)
@@ -21,17 +23,67 @@ C# 언어에는 여러 개선된 기능이 포함되어 있습니다. 이러한 
 - [using 선언](#using-declarations)
 - [정적 로컬 함수](#static-local-functions)
 - [삭제 가능한 ref struct](#disposable-ref-structs)
-
-다음은 C# 8.0 미리 보기 1부터 적용된 언어 기능입니다.
-
 - [nullable 참조 형식](#nullable-reference-types)
 - [비동기 스트림](#asynchronous-streams)
 - [인덱스 및 범위](#indices-and-ranges)
 
 > [!NOTE]
-> 이 문서는 C# 8.0 미리 보기 2를 반영하여 업데이트되었습니다.
+> 이 문서는 C# 8.0 미리 보기 5를 반영하여 업데이트되었습니다.
 
 이 문서의 나머지 부분에서는 이러한 기능에 대해 간략하게 설명합니다. 심화 문서가 공개되면 해당 자습서에 대한 링크 및 개요가 제공됩니다.
+
+## <a name="readonly-members"></a>읽기 전용 멤버
+
+구조체의 멤버에 `readonly` 한정자를 적용할 수 있습니다. 이것은 멤버가 상태를 수정하지 않음을 나타냅니다. 이것이 `readonly` 한정자를 `struct` 선언에 적용하는 것보다 더 세부적입니다.  다음과 같이 변경 가능한 구조체를 고려합니다.
+
+```csharp
+public struct Point
+{
+    public double X { get; set; }
+    public double Y { get; set; }
+    public double Distance => Math.Sqrt(X * X + Y * Y);
+
+    public override string ToString() =>
+        $"({X}, {Y}) is {Distance} from the origin";
+}
+```
+
+대부분의 구조체와 마찬가지로 `ToString()` 메서드는 상태를 수정하지 않습니다. `readonly` 한정자를 `ToString()`의 선언에 추가하여 다음을 나타낼 수 있습니다.
+
+```csharp
+public readonly override string ToString() =>
+    $"({X}, {Y}) is {Distance} from the origin";
+```
+
+`ToString`은 `readonly`로 표시되지 않은 `Distance` 속성에 액세스하므로 이전 변경은 컴파일러 경고를 생성합니다.
+
+```console
+warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonly' member results in an implicit copy of 'this'
+```
+
+컴파일러는 방어 복사본을 만들 필요가 있을 때 사용자에게 경고합니다.  `Distance` 속성은 상태를 변경하지 않으므로 `readonly` 한정자를 선언에 추가하여 이 경고를 수정할 수 있습니다.
+
+```csharp
+public readonly double Distance => Math.Sqrt(X * X + Y * Y);
+```
+
+`readonly` 한정자가 읽기 전용 속성에 필요합니다. 컴파일러는 `get` 접근자가 상태를 수정하지 않는다고 가정하지 않습니다. 명시적으로 `readonly`를 선언해야 합니다. 컴파일러는 `readonly` 멤버가 상태를 수정하지 않는다는 규칙을 적용합니다. 다음 메서드는 `readonly` 한정자를 제거하지 않는 한 컴파일하지 않습니다.
+
+```csharp
+public readonly void Translate(int xOffset, int yOffset)
+{
+    X += xOffset;
+    Y += yOffset;
+}
+```
+
+이 기능을 사용하여 디자인 의도를 지정할 수 있으므로 컴파일러는 이를 적용하고 디자인 의도에 따라 최적화를 수행할 수 있습니다.
+
+## <a name="default-interface-members"></a>기본 인터페이스 멤버
+
+이제 인터페이스에 멤버를 추가하고 해당 멤버에 대 한 구현을 제공할 수 있습니다. 이 언어 기능을 사용하여 API 작성자는 소스 또는 이진과 해당 인터페이스의 기존 구현과의 호환성에 영향을 미치지 않고 후속 버전에서 인터페이스에 메서드를 추가할 수 있습니다. 기존 구현은 기본 구현을 *상속*합니다. 또한 이 기능을 사용하여 C#은 유사한 기능을 지원하는 Android 또는 Swift를 대상으로 하는 API와 상호 운용됩니다. 또한 기본 인터페이스 멤버는 "특성" 언어 기능과 유사한 시나리오를 사용하도록 설정합니다.
+
+기본 인터페이스 멤버는 많은 시나리오와 언어 요소에 영향을 줍니다. 첫 번째 자습서에서는 [기본 구현으로 인터페이스 업데이트](../tutorials/default-interface-members-versions.md)에 대해 다룹니다. 다른 자습서 및 참조 업데이트는 일반 릴리스 시점에 제공됩니다.
 
 ## <a name="more-patterns-in-more-places"></a>더 많은 곳에서 더 많은 패턴 사용
 
@@ -321,9 +373,15 @@ await foreach (var number in GenerateSequence())
 
 범위와 인덱스는 배열, <xref:System.Span%601> 또는 <xref:System.ReadOnlySpan%601>에서 하위 범위를 지정하는 간결한 구문을 제공합니다.
 
-인덱스 앞에 `^` 문자를 사용하여 **끝에서부터** 인덱스를 지정할 수 있습니다. 끝에서부터의 인덱스는 `0..^0`이 전체 범위를 지정하는 규칙에서 시작합니다. 전체 배열을 열거하려면 *첫 번째 요소*에서 시작하고 *마지막 요소를 통과*할 때까지 계속합니다. 열거자에서 `MoveNext` 메서드의 동작을 고려해 봅니다. 즉 열거형이 마지막 요소를 통과하면 False를 반환합니다. 인덱스 `^0`은 “끝”, `array[array.Length]` 또는 마지막 요소 뒤에 오는 인덱스를 의미합니다. `array[2]`가 “앞에서부터 2번째” 요소를 의미한다는 것은 이미 잘 알고 계실 것입니다. `array[^2]`는 “뒤에서부터 2번째” 요소를 의미합니다. 
+이 언어 지원은 두 가지 새 형식 및 두 가지 새 연산자를 사용합니다.
+- <xref:System.Index?displayProperty=nameWithType>는 인덱스를 시퀀스로 표현합니다.
+- 인덱스가 시퀀스의 끝을 기준으로 하도록 지정하는 `^` 연산자입니다.
+- <xref:System.Range?displayProperty=nameWithType>는 시퀀스의 하위 범위를 나타냅니다.
+- 범위의 시작과 끝을 피연산자로 지정하는 범위 연산자(`..`)입니다.
 
-**범위**는 **범위 연산자** `..`를 사용하여 지정할 수 있습니다. 예를 들어, `0..^0`은 배열의 전체 범위를 지정하는데, 앞에서부터 인덱스 0에서 뒤에서부터 인덱스 1까지(즉, ^0 인덱스는 은 포함되지 않음)를 의미합니다. 피연산자 둘 다 “앞에서부터” 또는 “뒤에서부터”를 사용할 수 있습니다. 피연산자 둘 다 생략하는 것도 가능합니다. 시작 인덱스의 기본값은 `0`, 끝 인덱스의 기본값은 `^0`입니다.
+인덱스에 대한 규칙을 사용하여 시작하겠습니다. `sequence`배열을 고려합니다. `0` 인덱스는 `sequence[0]`과 동일합니다. `^0` 인덱스는 `sequence[sequence.Length]`와 동일합니다. `sequence[^0]`은 `sequence[sequence.Length]`처럼 예외를 throw합니다. `n`이 어떤 숫자이든, 인덱스 `^n`은 `sequence.Length - n`과 동일합니다.
+
+한 범위는 어떤 범위의 *시작* 및 *끝*을 지정합니다. 여러 범위는 배타적입니다. 즉, *끝*이 범위에 포함되지 않습니다. `[0..sequence.Length]`가 전체 범위를 나타내는 것처럼 `[0..^0]` 범위는 전체 범위를 나타냅니다. 
 
 몇 가지 예를 살펴보겠습니다. 다음과 같은 배열이 있습니다. 앞에서부터의 인덱스와 뒤에서부터의 인덱스가 주석으로 처리되어 있습니다.
 
@@ -342,8 +400,6 @@ var words = new string[]
     "dog"       // 8                   ^1
 };              // 9 (or words.Length) ^0
 ```
-
-각 요소의 인덱스는 “앞에서부터”라는 개념과 “뒤에서부터”라는 개념과 범위에는 해당 범위의 끝은 포함되지 않음을 보여줍니다. 전체 배열의 “시작”은 첫 번째 요소입니다. 전체 배열의 “끝”은 마지막 요소의 “뒤”에 있습니다.
 
 다음과 같이 `^1` 인덱스를 사용하여 마지막 단어를 가져올 수 있습니다.
 

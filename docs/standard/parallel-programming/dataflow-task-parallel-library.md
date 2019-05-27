@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a58211226b93c8fde9fa4240e04a245fb83a00d0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7058e7857c03a2fc82a3d978ef7c8066a9e272bc
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629034"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589659"
 ---
 # <a name="dataflow-task-parallel-library"></a>데이터 흐름(작업 병렬 라이브러리)
 <a name="top"></a>TPL(작업 병렬 라이브러리)은 동시성 사용 애플리케이션의 견고성을 높이는 데 도움이 되는 데이터 흐름 구성 요소를 제공합니다. 이러한 데이터 흐름 구성 요소를 통칭하여 *TPL 데이터 흐름 라이브러리*라고 합니다. 이 데이터 흐름 모델은 정교하지 않은 데이터 흐름 및 파이프라인 작업을 위해 in-process 메시지 전달을 제공하여 행위자 기반 프로그래밍을 촉진합니다. 데이터 흐름 구성 요소는 TPL의 형식 및 예약 인프라를 바탕으로 빌드되며 비동기 프로그래밍에 대한 C#, Visual Basic 및 F# 언어 지원과 통합됩니다. 이러한 데이터 흐름 구성 요소는 비동기적으로 서로 통신해야 하는 여러 작업이 있는 경우나 데이터를 사용할 수 있게 될 때 해당 데이터를 처리하려는 경우에 유용합니다. 예를 들어 웹 카메라에서 이미지 데이터를 처리하는 애플리케이션의 경우, 데이터 흐름 모델을 사용함으로써 애플리케이션은 이미지 프레임을 사용할 수 있게 될 때 해당 이미지 프레임을 처리할 수 있습니다. 애플리케이션이 명도를 보정하거나 적목 현상을 줄이는 등의 작업을 수행하여 이미지 프레임을 개선하는 경우 데이터 흐름 구성 요소의 *파이프라인*을 만들 수 있습니다. 파이프라인의 각 단계에서는 TPL이 제공하는 기능과 같은 좀더 정교하지 않은 병렬 처리 기능을 사용하여 이미지를 변환할 수도 있습니다.  
@@ -282,4 +282,4 @@ ms.locfileid: "64629034"
 |[방법: 데이터 흐름 블록에서 작업 스케줄러 지정](../../../docs/standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md)|애플리케이션에서 데이터 흐름을 사용하는 경우 특정 작업 스케줄러를 연결하는 방법을 보여 줍니다.|  
 |[연습: BatchBlock 및 BatchedJoinBlock을 사용하여 효율성 향상](../../../docs/standard/parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md)|<xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 클래스를 사용하여 데이터베이스 삽입 작업의 효율성을 높이는 방법과 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 클래스를 사용하여 결과와 프로그램이 데이터베이스에서 읽는 동안 발생하는 모든 예외를 캡처하는 방법을 설명합니다.|  
 |[연습: 사용자 지정 데이터 흐름 블록 형식 만들기](../../../docs/standard/parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md)|사용자 지정 동작을 구현하는 데이터 흐름 블록 형식을 만드는 두 가지 방법을 보여 줍니다.|  
-|[TPL(작업 병렬 라이브러리)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 애플리케이션에서 병렬 및 동시 프로그래밍을 단순화하는 라이브러리인 TPL을 소개합니다.|
+|[TPL(작업 병렬 라이브러리)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|.NET Framework 애플리케이션에서 병렬 및 동시 프로그래밍을 단순화하는 라이브러리인 TPL을 소개합니다.|

@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df526c93c195275751c393299b0e0d80337eee44
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 48331c1b62fa536b905f1288ebb1632f8da15615
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688898"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053585"
 ---
 # <a name="comparing-strings-in-net"></a>.NET에서 문자열 비교
 .NET에서는 문자열의 값을 비교하는 여러 가지 메서드를 제공합니다. 다음 표에서는 값 비교 메서드를 나열하고 설명합니다.  
   
-|메서드 이름|사용|  
+|메서드 이름|기능|  
 |-----------------|---------|  
 |<xref:System.String.Compare%2A?displayProperty=nameWithType>|두 문자열의 값을 비교합니다. 정수 값을 반환합니다.|  
 |<xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType>|로컬 문화권에 관계없이 두 문자열을 비교합니다. 정수 값을 반환합니다.|  
@@ -154,5 +154,5 @@ ms.locfileid: "54688898"
 
 - [기본적인 문자열 작업](../../../docs/standard/base-types/basic-string-operations.md)
 - [Culture의 영향을 받지 않는 문자열 작업 수행](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
-- [정렬 가중치 테이블(Windows의 .NET용)](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
+- [정렬 가중치 테이블(Windows의 .NET용)](https://www.microsoft.com/download/details.aspx?id=10921)
 - [기본 유니코드 데이터 정렬 요소 테이블(Linux 및 macOS의 .NET Core용)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

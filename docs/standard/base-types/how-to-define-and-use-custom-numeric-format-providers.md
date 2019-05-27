@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37c9140db390c55c9cab4e8a3203287d2dd12725
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b3898caa90c695ae681c2d9b20abbba57a2a9f61
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634234"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590476"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>방법: 사용자 지정 숫자 형식 공급 기업 정의 및 사용
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 숫자 값의 문자열 표현을 광범위하게 제어할 수 있습니다. 숫자 값의 형식을 사용자 지정하기 위한 다음과 같은 기능을 지원합니다.  
+.NET Framework에서는 숫자 값의 문자열 표현을 광범위하게 제어할 수 있습니다. 숫자 값의 형식을 사용자 지정하기 위한 다음과 같은 기능을 지원합니다.  
   
 - 숫자를 해당 문자열 표현으로 변환하기 위한 미리 정의된 형식 집합을 제공하는 표준 숫자 형식 문자열입니다. `format` 매개 변수가 있는 숫자 서식 지정 메서드(예: <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>)와 함께 사용할 수 있습니다. 자세한 내용은 [표준 숫자 형식 문자열](../../../docs/standard/base-types/standard-numeric-format-strings.md)을 참조하세요.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "64634234"
   
 - 숫자 값의 문자열 표현을 표시하는 데 사용되는 기호 및 형식 패턴을 정의하는 사용자 지정 <xref:System.Globalization.CultureInfo> 또는 <xref:System.Globalization.NumberFormatInfo> 개체입니다. `provider` 매개 변수가 있는 숫자 서식 지정 메서드(예: <xref:System.Int32.ToString%2A>)와 함께 사용할 수 있습니다. 일반적으로 `provider` 매개 변수는 문화권별 서식 지정에 사용됩니다.  
   
- 애플리케이션에서 형식이 지정된 계정 번호, ID 번호 또는 우편 번호를 표시해야 하는 경우와 같이 이 세 가지 방법이 부적절한 경우도 있습니다. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 <xref:System.Globalization.CultureInfo> 또는 <xref:System.Globalization.NumberFormatInfo> 개체가 아닌 서식 지정 개체를 정의하여 숫자 값의 서식 지정 방법을 결정할 수도 있습니다. 이 항목에서는 이러한 개체를 구현하기 위한 단계별 지침을 제공하고 전화 번호 형식을 지정하는 예제를 제공합니다.  
+ 애플리케이션에서 형식이 지정된 계정 번호, ID 번호 또는 우편 번호를 표시해야 하는 경우와 같이 이 세 가지 방법이 부적절한 경우도 있습니다. .NET Framework에서는 <xref:System.Globalization.CultureInfo> 또는 <xref:System.Globalization.NumberFormatInfo> 개체가 아닌 서식 지정 개체를 정의하여 숫자 값의 서식 지정 방법을 결정할 수도 있습니다. 이 항목에서는 이러한 개체를 구현하기 위한 단계별 지침을 제공하고 전화 번호 형식을 지정하는 예제를 제공합니다.  
   
 ### <a name="to-define-a-custom-format-provider"></a>사용자 지정 형식 공급자를 정의하려면  
   
@@ -87,9 +87,6 @@ ms.locfileid: "64634234"
  [!code-vb[System.ICustomFormatter.Format#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ICustomFormatter.Format/vb/Format.vb#1)]  
   
  이 예제의 경우 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>을 구현하는 메서드는 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 메서드에 대한 콜백 메서드 역할을 하기 위한 것입니다. 따라서 이 메서드는 `formatProvider` 매개 변수를 검사하여 현재 `TelephoneFormatter` 개체에 대한 참조가 있는지 여부를 확인합니다. 그러나 코드에서 메서드를 직접 호출할 수도 있습니다. 이 경우 `formatProvider` 매개 변수를 사용하여 문화권별 서식 지정 정보를 제공하는 <xref:System.Globalization.CultureInfo> 또는 <xref:System.Globalization.NumberFormatInfo> 개체를 제공할 수 있습니다.  
-  
-## <a name="compiling-the-code"></a>코드 컴파일  
- csc.exe 또는 vb.exe를 사용하여 명령줄에서 코드를 컴파일합니다. Visual Studio에서 코드를 컴파일하려면 해당 코드를 콘솔 애플리케이션 프로젝트 템플릿에 배치합니다.  
   
 ## <a name="see-also"></a>참고 항목
 

@@ -2,12 +2,12 @@
 title: C# 7.1의 새로운 기능
 description: C# 7.1의 새로운 기능에 대한 개요입니다.
 ms.date: 04/09/2019
-ms.openlocfilehash: c79c8576f9cbbd921ebf30bd84ee5a817d6dc6e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4b7bd96e428f990b2db91a4cfd45da01dc133aac
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59480965"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881537"
 ---
 # <a name="whats-new-in-c-71"></a>C# 7.1의 새로운 기능
 
@@ -26,7 +26,7 @@ C# 7.1은 [언어 버전 선택](../language-reference/configure-language-versio
 * [제네릭 형식 매개 변수의 패턴 일치](#pattern-matching-on-generic-type-parameters)
   - 형식이 제네릭 형식 매개 변수인 변수에서 패턴 일치 식을 사용할 수 있습니다.
 
-마지막으로 컴파일러에는 [참조 어셈블리 생성](#reference-assembly-generation)을 제어하는 두 가지 옵션 `/refout` 및 `/refonly`가 있습니다.
+마지막으로 컴파일러에는 [참조 어셈블리 생성](#reference-assembly-generation)을 제어하는 두 가지 옵션 `-refout` 및 `-refonly`가 있습니다.
 
 포인트 릴리스에서 최신 기능을 사용하려면 [컴파일러 언어 버전을 구성](../language-reference/configure-language-version.md)하고 해당 버전을 선택해야 합니다.
 
@@ -109,5 +109,5 @@ C# 7.1부터 `is` 및 `switch` 형식 패턴의 패턴 식에는 제네릭 형�
 
 ## <a name="reference-assembly-generation"></a>참조 어셈블리 생성
 
-*참조 전용 어셈블리*인 [/refout](../language-reference/compiler-options/refout-compiler-option.md) 및 [/refonly](../language-reference/compiler-options/refonly-compiler-option.md)를 생성하는 두 개의 새로운 컴파일러 옵션이 있습니다.
+*참조 전용 어셈블리*인 [-refout](../language-reference/compiler-options/refout-compiler-option.md) 및 [-refonly](../language-reference/compiler-options/refonly-compiler-option.md)를 생성하는 두 개의 새로운 컴파일러 옵션이 있습니다.
 연결된 문서에서는 이러한 옵션과 참조 어셈블리를 보다 자세히 설명합니다.

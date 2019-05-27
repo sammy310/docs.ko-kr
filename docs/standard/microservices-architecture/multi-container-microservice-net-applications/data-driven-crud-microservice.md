@@ -2,12 +2,12 @@
 title: 단순 데이터 기반 CRUD 마이크로 서비스 만들기
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스 애플리케이션의 컨텍스트 내에서 단순 CRUD(데이터 기반) 마이크로 서비스의 생성을 이해합니다.
 ms.date: 01/07/2019
-ms.openlocfilehash: 5dd7154fc81c7d0c3fb78bce662ea822f2392a10
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 53aba727c8dae35df8b34bc1558c0cc390fe2014
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644417"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053562"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>단순 데이터 기반 CRUD 마이크로 서비스 만들기
 
@@ -321,7 +321,7 @@ API에 대해 Swagger 메타데이터를 생성하는 주된 이유는 다음과
 
 - [AutoRest](https://github.com/Azure/AutoRest). Swagger를 호출하기 위한 .NET 클라이언트 클래스를 자동으로 생성할 수 있습니다. 이 도구는 CLI에서 사용할 수 있고 Visual Studio와 통합하여 GUI를 통해 간편하게 사용할 수 있습니다.
 
-- [Microsoft Flow](https://flow.microsoft.com/en-us/). 자동으로 [API를 사용하고 높은 수준의 Microsoft Flow 워크플로에 통합할 수 있으며](https://flow.microsoft.com/en-us/blog/integrating-custom-api/) 프로그래밍 기술이 필요하지 않습니다.
+- [Microsoft Flow](https://flow.microsoft.com/). 자동으로 [API를 사용하고 높은 수준의 Microsoft Flow 워크플로에 통합할 수 있으며](https://flow.microsoft.com/blog/integrating-custom-api/) 프로그래밍 기술이 필요하지 않습니다.
 
 - [Microsoft PowerApps](https://powerapps.microsoft.com/). [PowerApps Studio](https://powerapps.microsoft.com/build-powerapps/)의 [PowerApps 모바일 앱](https://powerapps.microsoft.com/blog/register-and-use-custom-apis-in-powerapps/)에서 자동으로 API를 사용할 수 있으며 프로그래밍 기술이 필요하지 않습니다.
 

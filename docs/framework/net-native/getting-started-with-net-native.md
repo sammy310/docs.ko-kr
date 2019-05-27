@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b466b27925b41823ce3f6537782f3bd6201d5af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 39d0066185703ebac7609d506c834b7718693d33
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868522"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052633"
 ---
 # <a name="getting-started-with-net-native"></a>.NET 네이티브 시작
 
-새로운 Windows 10용 Windows 앱을 작성하든지 기존 Windows 스토어 앱을 마이그레이션하든지 상관없이 동일한 절차 집합을 따르면 됩니다. [!INCLUDE[net_native](../../../includes/net-native-md.md)] 앱을 만들려면 다음 단계를 수행합니다.
+새로운 Windows 10용 Windows 앱을 작성하든지 기존 Windows 스토어 앱을 마이그레이션하든지 상관없이 동일한 절차 집합을 따르면 됩니다. .NET 네이티브 앱을 만들려면 다음이 단계를 수행 합니다.
 
 1. [Windows 10을 대상으로 하는 UWP(유니버설 Windows 플랫폼) 앱을 개발하고](#Step1)앱의 디버그 빌드를 테스트하여 제대로 작동하는지 확인합니다.
 
@@ -24,7 +24,7 @@ ms.locfileid: "61868522"
 4. [누락된 메타데이터 문제를 수동으로 해결](#Step4)하고 [3단계](#Step3)를 반복하여 모든 문제를 해결합니다.
 
 > [!NOTE]
-> 기존 Windows 스토어 앱을 [!INCLUDE[net_native](../../../includes/net-native-md.md)]로 마이그레이션하는 경우 [Windows 스토어 앱을 .NET 네이티브로 마이그레이션](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).
+> 기존 Windows 스토어 앱을.NET 네이티브로 마이그레이션하려는 경우 검토 해야 [마이그레이션 Windows 스토어 앱을.NET 네이티브](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)합니다.
 
 <a name="Step1"></a>
 
@@ -36,12 +36,12 @@ ms.locfileid: "61868522"
 
 2. .NET 네이티브 도구 체인을 사용하는 UWP 앱 프로젝트 컴파일과 도구 체인이 없는 프로젝트 컴파일 간에 알려진 호환성 문제가 몇 가지 있습니다. 자세한 내용은 [마이그레이션 가이드](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) 를 참조하세요.
 
-이제는 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 노출 영역에 대해 로컬 시스템이나 시뮬레이터에서 실행되는 C# 또는 Visual Basic 코드를 작성할 수 있습니다.
+작성할 수 있습니다 C# 또는 Visual Basic 코드는 로컬 시스템에서 (또는 시뮬레이터)를 실행 하는.NET 네이티브 노출 영역에 대 한 합니다.
 
 > [!IMPORTANT]
 > 앱을 개발할 때는 코드에서 serialization 또는 리플렉션 사용을 파악합니다.
 
-기본적으로 디버그 빌드는 신속한 F5 배포를 사용할 수 있도록 JIT 컴파일되지만, 릴리스 빌드는 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 미리 컴파일 기술을 사용하여 컴파일됩니다. 이는 .NET 네이티브 도구 체인을 사용하여 프로젝트를 컴파일하기 전에 앱의 디버그 빌드를 빌드하고 테스트하여 정상적으로 작동되는지 확인해야 한다는 의미입니다.
+기본적으로 디버그 빌드는 JIT 컴파일된 릴리스 빌드가.NET 네이티브 미리 컴파일 기술을 사용 하 여 컴파일되는 동안에 신속한 F5 배포를 사용 하도록 설정 하려면 사용 합니다. 이는 .NET 네이티브 도구 체인을 사용하여 프로젝트를 컴파일하기 전에 앱의 디버그 빌드를 빌드하고 테스트하여 정상적으로 작동되는지 확인해야 한다는 의미입니다.
 
 <a name="Step2"></a>
 
@@ -85,13 +85,13 @@ ms.locfileid: "61868522"
 
 앱이 제대로 작동 하지 않는 경우 (throw 되는 경우에 특히 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 하거나 [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) 런타임 시 예외), 다음의 지침에 따라 섹션에서는 [4 단계: 누락 된 메타 데이터를 수동으로 해결](#Step4)합니다. 첫째 예외를 사용하도록 설정하면 이러한 버그를 찾는 데 도움이 될 수 있습니다.
 
-앱의 디버그 빌드를 테스트 및 디버그했으며 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 및 [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) 예외가 제거되었음을 확인했으면 앱을 최적화된 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 앱으로 테스트해야 합니다. 이렇게 하려면 활성 프로젝트 구성을 **디버그** 에서 **릴리스**로 변경합니다.
+앱의 경우 있습니다 테스트 및 디버그 했으며 디버그 빌드를 제거 했습니다 합니다 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 하 고 [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) 테스트 해야 예외 최적화 된.NET 네이티브 앱으로 앱입니다. 이렇게 하려면 활성 프로젝트 구성을 **디버그** 에서 **릴리스**로 변경합니다.
 
 <a name="Step4"></a>
 
 ## <a name="step-4-manually-resolve-missing-metadata"></a>4단계: 누락 된 메타 데이터를 수동으로 해결
 
-데스크톱에서는 발생하지 않지만 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 에서는 발생하는 가장 흔한 오류는 런타임 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)또는 [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 예외입니다. 경우에 따라서는 메타데이터가 없어서 예측할 수 없는 동작이 발생하거나 앱 자체에도 오류가 발생할 수 있습니다. 이 섹션에서는 런타임 지시문 파일에 지시문을 추가하여 이러한 예외를 디버그 및 해결하는 방법을 설명합니다. 런타임 지시문 형식에 대한 자세한 내용은 [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)를 참조하세요. 런타임 지시문을 추가한 후에는 다시 [앱을 배포 및 테스트](#Step3)하고 예외가 더 이상 발생하지 않을 때까지 새로 발생하는 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) 및 [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 예외를 해결해야 합니다.
+데스크톱에서는 발생 하지는.NET 네이티브에서는 발생 하는 가장 흔한 오류는 런타임 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)하십시오 [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), 또는 [ MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 예외입니다. 경우에 따라서는 메타데이터가 없어서 예측할 수 없는 동작이 발생하거나 앱 자체에도 오류가 발생할 수 있습니다. 이 섹션에서는 런타임 지시문 파일에 지시문을 추가하여 이러한 예외를 디버그 및 해결하는 방법을 설명합니다. 런타임 지시문 형식에 대한 자세한 내용은 [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)를 참조하세요. 런타임 지시문을 추가한 후에는 다시 [앱을 배포 및 테스트](#Step3)하고 예외가 더 이상 발생하지 않을 때까지 새로 발생하는 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) 및 [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 예외를 해결해야 합니다.
 
 > [!TIP]
 > 코드 변경 시 앱을 복원하려면 런타임 지시문을 대략적으로 지정합니다.  런타임 지시문은 멤버 수준이 아닌 네임스페이스 및 형식 수준에 추가하는 것이 좋습니다. 복원력을 높이면 이진 파일이 커지고 컴파일 시간이 길어질 수 있습니다.
@@ -113,7 +113,7 @@ ms.locfileid: "61868522"
   - 보다 효율적인 대안을 사용할 수 있는 경우 코드가 리플렉션을 사용하는 메서드를 호출하는지 여부
 
 > [!NOTE]
-> 리플렉션의 차이로 인해 발생하는 문제를 처리하는 방법과, 데스크톱 앱 및 [!INCLUDE[net_native](../../../includes/net-native-md.md)]에서 메타데이터 사용 가능 여부에 대한 자세한 내용은 [APIs That Rely on Reflection](../../../docs/framework/net-native/apis-that-rely-on-reflection.md).
+> 리플렉션의 차이로 데스크톱 앱 및.NET 네이티브에서 메타 데이터의 가용성으로 인 한 문제를 처리 하는 방법에 대 한 자세한 내용은 참조 하세요. [리플렉션을 사용 하는 Api](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)합니다.
 
 앱을 테스트할 때 발생하는 예외 및 기타 문제를 처리하는 몇 가지 구체적인 예제는 다음 항목을 참조하세요.
 
