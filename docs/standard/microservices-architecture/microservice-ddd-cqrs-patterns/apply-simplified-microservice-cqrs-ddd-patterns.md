@@ -2,12 +2,12 @@
 title: 마이크로 서비스에서 간소화된 CQRS 및 DDD 패턴 적용
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | CQRS 및 DDD 간의 전반적인 관계를 이해합니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: a5df8ce495b308df63af47ef1ec2ed26be2b5e37
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 36bffce37176aed6c7d9daea7f2995952b58e895
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875897"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959378"
 ---
 # <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>마이크로 서비스에서 간소화된 CQRS 및 DDD 패턴 적용
 
@@ -35,7 +35,7 @@ CQRS에는 읽기/쓰기 작업에 대해 두 개의 개체가 있습니다. 여
 
 ## <a name="additional-resources"></a>추가 자료
 
- - **Greg Young. 이벤트 소스 시스템에서 버전 관리**(무료로 온라인 eBook 읽기) \
+- **Greg Young. 이벤트 소스 시스템에서 버전 관리**(무료로 온라인 eBook 읽기) \
    <https://leanpub.com/esversioning/read>
 
 >[!div class="step-by-step"]

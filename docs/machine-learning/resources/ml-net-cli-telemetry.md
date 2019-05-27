@@ -4,12 +4,12 @@ description: 어떤 데이터가 수집되고 수집 기능을 사용하지 않�
 ms.topic: conceptual
 ms.date: 05/05/2019
 ms.custom: ''
-ms.openlocfilehash: 36f4af48615e2e3247f8e21343d0a00519ba1c0a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 94c66267dfeec4b70ba4dd1fc47518eb0e01509a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645016"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053583"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>ML.NET CLI의 원격 분석 수집
 
@@ -75,5 +75,5 @@ ML.NET CLI의 Microsoft 배포는 [Microsoft 소프트웨어 사용 조건: Micr
 ## <a name="see-also"></a>참고 항목
 - [ML.NET CLI 참조](../reference/ml-net-cli-reference.md)
 - [Microsoft 소프트웨어 사용 조건: Microsoft .NET 라이브러리](https://aka.ms/dotnet-core-eula)
-- [Microsoft 프라이버시](https://www.microsoft.com/en-us/trustcenter/privacy/)
-- [Microsoft 개인정보처리방침](https://privacy.microsoft.com/en-us/privacystatement)
+- [Microsoft 프라이버시](https://www.microsoft.com/trustcenter/privacy/)
+- [Microsoft 개인정보처리방침](https://privacy.microsoft.com/privacystatement)

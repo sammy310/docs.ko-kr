@@ -3,12 +3,12 @@ title: .NET Core SDK 개요
 description: .NET Core 프로젝트를 만드는 데 사용되는 라이브러리 및 도구 집합인 .NET Core SDK에 관해 알아보세요.
 ms.date: 05/13/2019
 ms.technology: dotnet-cli
-ms.openlocfilehash: ed9d51b337af8edc251a4f3b02c31b72b76ba33d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: f56d7238eaaaa677db38430358ce94890632469e
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877983"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959234"
 ---
 # <a name="net-core-sdk-overview"></a>.NET Core SDK 개요
 
