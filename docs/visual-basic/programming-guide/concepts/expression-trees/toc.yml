@@ -9,3 +9,5 @@
       href: how-to-use-expression-trees-to-build-dynamic-queries.md
     - name: 식 트리 디버그
       href: debugging-expression-trees-in-visual-studio.md
+    - name: DebugView 구문
+      href: debugview-syntax.md
