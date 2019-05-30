@@ -26,16 +26,15 @@
       href: invocation-operator.md
     - name: ':: 연산자'
       href: namespace-alias-qualifer.md
-    - name: + 연산자
+    - name: + 및 += 연산자
       href: addition-operator.md
+      displayName: 'string concatenation, delegate combination, event subscription'
     - name: '- 연산자'
       href: subtraction-operator.md
     - name: = 연산자
       href: assignment-operator.md
     - name: '?: 연산자'
       href: conditional-operator.md
-    - name: += 연산자
-      href: addition-assignment-operator.md
     - name: '-= 연산자'
       href: subtraction-assignment-operator.md
     - name: '?? 연산자'
