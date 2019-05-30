@@ -2,12 +2,12 @@
 title: nullable 참조 형식
 description: 이 문서에서는 C# 8에 추가된 nullable 참조 형식에 대해 간략하게 설명합니다. 이 기능이 신규 및 기존의 프로젝트의 null 참조 예외에 대해 어떻게 안전성을 제공하는지 알아봅니다.
 ms.date: 02/19/2019
-ms.openlocfilehash: 9ce9efb890f0eff5a6c6747f96c143a4d093dbfb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ac19cbba0e078af34801231145ee339d6e42a42b
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725027"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195925"
 ---
 # <a name="nullable-reference-types"></a>nullable 참조 형식
 
@@ -58,7 +58,7 @@ name!.Length;
 
 Nullable 컨텍스트를 통해 컴파일러가 참조 형식 변수를 해석하는 방식을 미세하게 제어할 수 있습니다. 지정된 소스 줄의 **nullable 주석 컨텍스트**는 `enabled` 또는 `disabled`입니다. C# 8 이전 컴파일러는 `disabled` nullable 컨텍스트에서 모든 코드를 컴파일하는 것으로 생각할 수 있습니다. 모든 참조 형식은 null일 수 있습니다. **nullable 경고 컨텍스트**는 `enabled`, `disabled` 또는 `safeonly`로 설정할 수 있습니다. nullable 경고 컨텍스트는 컴파일러가 해당 흐름 분석을 사용하여 생성한 경고를 지정합니다.
 
-`csproj` 파일에 `NullableContextOptions` 요소를 사용하여 프로젝트에 대한 nullable 주석 컨텍스트 및 nullable 경고 컨텍스트를 설정할 수 있습니다. 이 요소는 컴파일러가 형식의 null 허용 여부를 해석하는 방법 및 생성되는 경고를 구성합니다. 유효한 설정은 다음과 같습니다.
+`csproj` 파일에 `Nullable` 요소를 사용하여 프로젝트에 대한 nullable 주석 컨텍스트 및 nullable 경고 컨텍스트를 설정할 수 있습니다. 이 요소는 컴파일러가 형식의 null 허용 여부를 해석하는 방법 및 생성되는 경고를 구성합니다. 유효한 설정은 다음과 같습니다.
 
 - `enable`: nullable 주석 컨텍스트가 **enabled**입니다. nullable 경고 컨텍스트가 **enabled**입니다.
   - 예를 들어 참조 형식 변수 `string`은 null이 아닙니다.  모든 null 허용 여부 경고가 enabled입니다.
@@ -70,6 +70,9 @@ Nullable 컨텍스트를 통해 컴파일러가 참조 형식 변수를 해석�
   - 참조 형식의 변수가 모호합니다. 모든 null 허용 여부 경고가 enabled입니다.
 - `safeonlywarnings`: nullable 주석 컨텍스트가 **disabled**입니다. nullable 경고 컨텍스트가 **safeonly**입니다.
   - 참조 형식의 변수가 모호합니다. 모든 null 허용 여부 안전성 경고가 enabled입니다.
+
+> [!IMPORTANT]
+> `Nullable` 요소의 이전 이름은 `NullableContextOptions`였습니다. Visual Studio 2019, 16.2-p1에서는 바뀐 이름이 제공됩니다. .NET Core SDK 3.0.100-preview5-011568에는 이 변경이 적용되지 않습니다. .NET Core CLI를 사용하는 경우 다음 미리 보기를 사용할 수 있을 때까지 `NullableContextOptions`를 사용해야 합니다.
 
 또한 지시문을 사용하여 프로젝트의 아무 곳에나 이러한 동일한 컨텍스트를 설정할 수도 있습니다.
 

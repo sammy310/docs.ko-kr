@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: cfe3b413506aa1383bbdaa9a89ffe42e3724a4a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 589bb205b10a5b7b0c4480393b8937e0df36022f
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337554"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052391"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>상호 운용성 개요(C# 프로그래밍 가이드)
 이 항목에서는 C# 관리 코드와 비관리 코드 간의 상호 운용성을 사용하도록 설정하는 방법을 설명합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "59337554"
 >  CLR([공용 언어 런타임](../../../standard/clr.md))은 시스템 리소스에 대한 액세스를 관리합니다. CLR 외부에 있는 비관리 코드를 호출하면 이 보안 메커니즘을 우회하므로 보안 위험이 제기됩니다. 예를 들어 비관리 코드는 CLR 보안 메커니즘을 우회하여 비관리 코드의 리소스를 직접 호출할 수 있습니다. 자세한 내용은 [.NET의 보안](../../../standard/security/index.md)을 참조하세요.  
   
 ## <a name="c-interop"></a>C++ Interop  
- C# 또는 다른 .NET Framework 언어로 작성된 코드에서 사용할 수 있도록 IJW(It Just Works)라고도 하는 C++ interop를 사용하여 네이티브 C++ 클래스를 래핑할 수 있습니다. 이렇게 하려면 C++ 코드를 작성하여 네이티브 DLL 또는 COM 구성 요소를 래핑합니다. 다른 .NET Framework 언어와 달리 [!INCLUDE[vcprvc](~/includes/vcprvc-md.md)]에는 관리 코드와 비관리 코드가 동일한 애플리케이션 및 동일한 파일에 있을 수 있도록 하는 상호 운용성 지원이 있습니다. 그런 다음 **/clr** 컴파일러 스위치로 관리되는 어셈블리를 생성하여 C++ 코드를 빌드합니다. 마지막으로, C# 프로젝트의 어셈블리에 대한 참조를 추가하고 다른 관리되는 클래스를 사용하는 것처럼 래핑된 개체를 사용합니다.  
+ C# 또는 다른 .NET Framework 언어로 작성된 코드에서 사용할 수 있도록 IJW(It Just Works)라고도 하는 C++ interop를 사용하여 네이티브 C++ 클래스를 래핑할 수 있습니다. 이렇게 하려면 C++ 코드를 작성하여 네이티브 DLL 또는 COM 구성 요소를 래핑합니다. 다른 .NET Framework 언어와 달리 Visual C++에는 관리 코드와 비관리 코드가 동일한 애플리케이션 및 동일한 파일에 있을 수 있도록 하는 상호 운용성 지원이 있습니다. 그런 다음 **/clr** 컴파일러 스위치로 관리되는 어셈블리를 생성하여 C++ 코드를 빌드합니다. 마지막으로, C# 프로젝트의 어셈블리에 대한 참조를 추가하고 다른 관리되는 클래스를 사용하는 것처럼 래핑된 개체를 사용합니다.  
   
 ## <a name="exposing-com-components-to-c"></a>C\#에 COM 구성 요소 노출
  C# 프로젝트에서 COM 구성 요소를 사용할 수 있습니다. 일반적인 단계는 다음과 같습니다.  

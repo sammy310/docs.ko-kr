@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML [C#], tags
 - XML documentation [C#], tags
 ms.assetid: 6e98f7a9-38f4-4d74-b644-1ff1b23320fd
-ms.openlocfilehash: 963be5273389ebbdb3458d41b0658de0d94bb2cd
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 07594d70b92e2075c3d5aba605eab23d766faed6
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634804"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052741"
 ---
 # <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a>문서 주석에 대한 권장 태그(C# 프로그래밍 가이드)
 C# 컴파일러는 코드의 문서 주석을 처리하고 **/doc** 명령줄 옵션에서 지정한 이름의 파일에 XML로 형식을 지정합니다. 컴파일러에서 생성한 파일을 기반으로 해서 최종 문서를 만들려면 사용자 지정 도구를 만들거나 [DocFX](https://dotnet.github.io/docfx/) 또는 [Sandcastle](https://github.com/EWSoftware/SHFB)과 같은 도구를 사용하면 됩니다.  
@@ -36,12 +36,13 @@ C# 컴파일러는 코드의 문서 주석을 처리하고 **/doc** 명령줄 �
   
  (* 컴파일러에서 구문을 확인함을 나타냅니다.)  
   
- 문서 주석의 텍스트에 꺾쇠 괄호를 표시하려면 다음 예제와 같이 `<` 및 `>`를 사용합니다.  
+ 문서 주석의 텍스트에 꺾쇠 괄호를 표시하려면 각각 `&lt;` 및 `&gt;`인 `<` 및 `>`의 HTML 인코딩을 사용합니다. 이 인코딩은 다음 예제에서 확인할 수 있습니다.
   
 ```csharp  
-/// <summary cref="C < T >">  
-/// </summary>  
-```  
+/// <summary>
+/// This property always returns a value &lt; 1.
+/// </summary>
+```
   
 ## <a name="see-also"></a>참고 항목
 

@@ -2,24 +2,24 @@
 title: 재호스팅된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대한 지원
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 8807506866ef0f5d73065958f1102460ebcc5e9f
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 8459311239d46557405245c10b6fb5e887a4691c
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876471"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380157"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>재호스팅된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대한 지원
-Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 는 workflow designer 환경의 몇 가지 향상 된 기능을 비롯 한 많은 새로운 기능이 도입 되었습니다. 이 항목에서는 이러한 기능 중 재호스트된 디자이너에서 지원되는 기능과 현재 지원되지 않는 기능을 자세히 설명합니다.
+Windows WF (Workflow Foundation).NET Framework 4.5에는 workflow designer 환경의 몇 가지 향상 된 기능을 비롯 한 많은 새로운 기능이 도입 되었습니다. 이 항목에서는 이러한 기능 중 재호스트된 디자이너에서 지원되는 기능과 현재 지원되지 않는 기능을 자세히 설명합니다.
 
 > [!NOTE]
->  에 도입 된 새 Windows WF (Workflow Foundation) 기능의 일부 목록은 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]를 포함 하 여 디자이너 재호스팅 관련이 없는 참조 하세요. [.NET 4.5에서 Windows Workflow Foundation의 새로운](whats-new-in-wf-in-dotnet.md)합니다.
+>  디자이너 재호스팅 관련이 없는 포함 하 여.NET Framework 4.5에서 도입 된 새 Windows WF (Workflow Foundation) 기능의 모든 목록을 참조 하세요 [What's New in Windows Workflow Foundation.NET 4.5에서](whats-new-in-wf-in-dotnet.md)합니다.
 
 ## <a name="activities"></a>활동
  기본 제공 활동 라이브러리에는 새로운 활동과 기존 활동의 새로운 기능이 들어 있습니다. 이러한 모든 새 활동은 재호스트된 디자이너에서 지원됩니다. 이러한 새 활동에 대 한 자세한 내용은 참조는 [활동](whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) 부분 [.NET 4.5에서 Windows Workflow Foundation의 새로운 기능](whats-new-in-wf-in-dotnet.md).
 
 ## <a name="c-expressions"></a>C# 식
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 이전에는 워크플로의 모든 식을 Visual Basic으로만 작성할 수 있었습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서 Visual Basic 식은 Visual Basic을 사용하여 만든 프로젝트에만 사용됩니다. Visual C# 프로젝트는 이제 식에 C#을 사용합니다. Visual Studio 2012에서 워크플로 작성할 때는 문법 강조 표시 및 intellisense와 같은 기능이 포함 된 완전 한 기능의 C# 식 편집기에 제공 됩니다. 이전 버전에서 만들어졌으며 Visual Basic 식을 사용하는 C# 워크플로 프로젝트는 계속 작동합니다.
+ .NET Framework 4.5 이전만 Visual Basic의 대 워크플로의 모든 식은 작성할 수 있습니다. .NET Framework 4.5에서 Visual Basic 식은 Visual Basic을 사용 하 여 만든 프로젝트에만 사용 됩니다. Visual C# 프로젝트는 이제 식에 C#을 사용합니다. Visual Studio 2012에서 워크플로 작성할 때는 문법 강조 표시 및 intellisense와 같은 기능이 포함 된 완전 한 기능의 C# 식 편집기에 제공 됩니다. 이전 버전에서 만들어졌으며 Visual Basic 식을 사용하는 C# 워크플로 프로젝트는 계속 작동합니다.
 
 > [!WARNING]
 >  재호스트된 디자이너에서는 C# 식이 지원되지 않습니다.
@@ -27,20 +27,20 @@ Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-
 ## <a name="new-designer-capabilities"></a>새로운 디자이너 기능
 
 ### <a name="designer-search"></a>디자이너 검색
- 합니다 [빠른 찾기](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) 하 고 [파일에서 찾기](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) 도입 된 기능 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 재 호스트 된 디자이너에서 지원 되지 않습니다. `Toolbox` 검색은 재호스트된 디자이너에서 지원됩니다. 이러한 기능에 대 한 자세한 내용은 참조 하세요. [디자이너 검색](whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch)합니다.
+ 합니다 [빠른 찾기](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) 하 고 [파일에서 찾기](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) .NET Framework 4.5를 사용 하 여 도입 된 기능은 재 호스트 된 디자이너에서 지원 되지 않습니다. `Toolbox` 검색은 재호스트된 디자이너에서 지원됩니다. 이러한 기능에 대 한 자세한 내용은 참조 하세요. [디자이너 검색](whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch)합니다.
 
 > [!WARNING]
 >  [빠른 찾기](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) 하 고 [파일에서 찾기](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) 재 호스트 된 디자이너에서 지원 되지 않습니다.
 
 ### <a name="delete-context-menu-item-in-variable-and-argument-designer"></a>변수 및 인수 디자이너에서 상황에 맞는 메뉴에 표시되는 삭제 항목
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서는 디자이너에서 키보드로만 변수 및 인수를 삭제할 수 있었습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]부터는 상황에 맞는 메뉴를 사용하여 변수 및 인수를 삭제할 수 있습니다. 이 기능은 재호스트된 디자이너에서 지원됩니다.
+ [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서는 디자이너에서 키보드로만 변수 및 인수를 삭제할 수 있었습니다. .NET Framework 4.5부터, 변수 및 인수 삭제할 수 있습니다 상황에 맞는 메뉴를 사용 하 여. 이 기능은 재호스트된 디자이너에서 지원됩니다.
 
  다음 스크린 샷에서는 변수 및 인수 디자이너의 상황에 맞는 메뉴를 보여 줍니다.
 
  ![변수 및 인수 디자이너 상황에 맞는 메뉴](./media/wf-features-in-the-rehosted-workflow-designer/designer-context-menu.png)
 
 ### <a name="auto-surround-with-sequence"></a>시퀀스로 자동 감싸기
- 워크플로 또는 특정 컨테이너 활동(예: <xref:System.Activities.Statements.NoPersistScope>)에는 단일 본문 활동만 포함할 수 있으므로 두 번째 활동을 추가하려면 개발자가 첫 번째 활동을 삭제하고 <xref:System.Activities.Statements.Sequence> 활동을 추가한 후 두 활동을 모두 시퀀스 활동에 추가해야 했습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]부터는 디자이너 화면에 두 번째 활동을 추가하면 `Sequence` 활동이 자동으로 만들어져 두 활동을 래핑합니다. 이 기능은 재호스트된 디자이너에서 지원됩니다.
+ 워크플로 또는 특정 컨테이너 활동(예: <xref:System.Activities.Statements.NoPersistScope>)에는 단일 본문 활동만 포함할 수 있으므로 두 번째 활동을 추가하려면 개발자가 첫 번째 활동을 삭제하고 <xref:System.Activities.Statements.Sequence> 활동을 추가한 후 두 활동을 모두 시퀀스 활동에 추가해야 했습니다. .NET Framework 4.5부터 두 번째 활동을 디자이너 화면에 추가 하는 경우는 `Sequence` 작업은 자동으로 만들어집니다 두 활동을 래핑합니다. 이 기능은 재호스트된 디자이너에서 지원됩니다.
 
  다음 스크린 샷에서는 `WriteLine`의 `Body`에 있는 `NoPersistScope` 활동을 보여 줍니다.
 
@@ -72,10 +72,10 @@ Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-
  ![Visual Studio에서 순차 워크플로 사용 하 여 개요 보기의 스크린샷](./media/wf-features-in-the-rehosted-workflow-designer/outline-view-in-workflow-designer.jpg)
 
 ### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>셸 표시줄 및 헤더 항목의 표시 방식 제어 향상
- 재호스트된 디자이너에서 특정 워크플로에 대해 의미가 없는 일부 표준 UI 컨트롤은 해제할 수 있습니다. [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서는 디자이너의 맨 아래에 있는 셸 표시줄을 통해서만 이를 사용자 지정할 수 있었습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서는 <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A>를 적절한 <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> 값으로 설정하여 디자이너의 맨 위에 있는 셸 헤더 항목의 표시 유형을 조정할 수 있습니다.
+ 재호스트된 디자이너에서 특정 워크플로에 대해 의미가 없는 일부 표준 UI 컨트롤은 해제할 수 있습니다. [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서는 디자이너의 맨 아래에 있는 셸 표시줄을 통해서만 이를 사용자 지정할 수 있었습니다. .NET Framework 4.5에서는 디자이너의 맨 위에 있는 셸 헤더 항목의 표시 유형을 설정 하 여 조정할 수 있습니다 <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> 적절 한 <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> 값입니다.
 
 ### <a name="auto-connect-and-auto-insert-in-flowchart-and-state-machine-workflows"></a>순서도 및 상태 시스템 워크플로의 자동 연결 및 자동 삽입
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서는 순서도 워크플로의 노드 간 연결을 수동으로 추가해야 했습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서는 도구 상자에서 디자이너 화면으로 활동을 끌어올 때 순서도 및 상태 시스템 노드에는 자동 연결 지점이 표시됩니다. 이러한 지점 중 하나에 활동을 놓으면 필요한 연결과 함께 활동이 자동으로 추가됩니다.
+ [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서는 순서도 워크플로의 노드 간 연결을 수동으로 추가해야 했습니다. 순서도 노드와 상태 시스템에.NET Framework 4.5에서 활동을 도구 상자에서 디자이너 화면으로 끌어올 때 표시 되는 지점에 자동으로 연결 합니다. 이러한 지점 중 하나에 활동을 놓으면 필요한 연결과 함께 활동이 자동으로 추가됩니다.
 
  다음 스크린 샷에서는 도구 상자에서 디자이너 화면으로 활동을 끌어 올 때 표시되는 연결 지점을 보여 줍니다.
 
@@ -100,7 +100,7 @@ Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-
  활동 대리자는 재호스트된 디자이너에서 지원됩니다.
 
 ### <a name="build-time-validation"></a>빌드 타임 유효성 검사
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서는 워크플로 프로젝트를 빌드하는 동안 워크플로 유효성 검사 오류가 빌드 오류로 간주되지 않았습니다. 따라서 워크플로 유효성 검사 오류가 있더라도 워크플로 프로젝트를 성공적으로 빌드할 수 있었습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서는 워크플로 유효성 검사 오류가 있으면 빌드에 실패합니다.
+ [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서는 워크플로 프로젝트를 빌드하는 동안 워크플로 유효성 검사 오류가 빌드 오류로 간주되지 않았습니다. 따라서 워크플로 유효성 검사 오류가 있더라도 워크플로 프로젝트를 성공적으로 빌드할 수 있었습니다. .NET Framework 4.5에서는 워크플로 유효성 검사 오류가 있으면 빌드에 실패 합니다.
 
 > [!WARNING]
 >  빌드 타임 유효성 검사는 재호스트된 디자이너에서 지원되지 않습니다.  
@@ -111,18 +111,18 @@ Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-
  디자인 타임 백그라운드 유효성 검사는 재호스트된 디자이너에서 지원됩니다.  
   
 ### <a name="view-state-located-in-a-separate-location-in-xaml-files"></a>XAML 파일의 별도 위치에 있는 뷰 상태  
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서는 워크플로의 뷰 상태 정보가 XAML 파일을 통해 여러 다른 위치에 저장되었습니다. 따라서 개발자가 XAML을 직접 읽거나 뷰 상태 정보를 제거하는 코드를 작성하기에 불편했습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], XAML 파일의 뷰 상태 정보가 XAML 파일에서 별도 요소로 serialize 됩니다.  개발자가 쉽게 찾습니다 및 활동의 뷰 상태 정보를 편집 하거나 제거할 수 있습니다 뷰 상태를 완전히 합니다.  
+ [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서는 워크플로의 뷰 상태 정보가 XAML 파일을 통해 여러 다른 위치에 저장되었습니다. 따라서 개발자가 XAML을 직접 읽거나 뷰 상태 정보를 제거하는 코드를 작성하기에 불편했습니다. .NET Framework 4.5에서 XAML 파일의 뷰 상태 정보가 XAML 파일에서 별도 요소로 serialize 됩니다.  개발자가 쉽게 찾습니다 및 활동의 뷰 상태 정보를 편집 하거나 제거할 수 있습니다 뷰 상태를 완전히 합니다.  
   
  이 기능은 재호스트된 Workflow Designer에서 지원됩니다.  
   
 ### <a name="opt-in-for-workflow-45-features-in-rehosted-designer"></a>재호스트된 디자이너에서 Workflow 4.5 기능 사용  
- 이전 버전과의 호환성을 유지하기 위해 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에 포함된 새로운 기능 중 일부는 재호스트된 디자이너에서 기본적으로 사용되지 않도록 설정됩니다. 따라서 재호스트된 디자이너를 사용하는 기존 응용 프로그램은 최신 버전으로 업데이트해도 차단되지 않습니다. 재호스트된 디자이너에서 새로운 기능을 사용하려면 <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A>을 ".Net Framework 4.5"로 설정하거나 <xref:System.Activities.Presentation.DesignerConfigurationService>의 개별 멤버를 설정하여 개별 기능을 사용하도록 설정합니다.  
+ 이전 버전과 호환성을 유지 하기 위해.NET Framework 4.5에 포함 된 새 기능 몇 가지는 재 호스트 된 디자이너에서 기본적으로 사용할 수 없습니다. 따라서 재호스트된 디자이너를 사용하는 기존 응용 프로그램은 최신 버전으로 업데이트해도 차단되지 않습니다. 재호스트된 디자이너에서 새로운 기능을 사용하려면 <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A>을 ".Net Framework 4.5"로 설정하거나 <xref:System.Activities.Presentation.DesignerConfigurationService>의 개별 멤버를 설정하여 개별 기능을 사용하도록 설정합니다.  
   
 ## <a name="new-workflow-development-models"></a>새로운 워크플로 개발 모델  
  순서도 및 순차 워크플로 개발 모델 외에도 이 릴리스에는 상태 시스템 워크플로 및 계약 중심 워크플로 서비스가 포함되어 있습니다.  
   
 ### <a name="state-machine-workflows"></a>상태 시스템 워크플로  
- 상태 시스템 워크플로가.NET Framework 4.0.1의 일부로 도입 된 [Microsoft.NET Framework 4 플랫폼 업데이트 1](https://go.microsoft.com/fwlink/?LinkID=215092)합니다. 이 업데이트에는 여러 가지 새로운 클래스 및 활동이 포함되어 있으므로 개발자가 상태 시스템 워크플로를 만들 수 있었습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서는 이러한 클래스 및 활동이 업데이트되었습니다. 업데이트에는 다음이 포함됩니다.  
+ 상태 시스템 워크플로가.NET Framework 4.0.1의 일부로 도입 된 [Microsoft.NET Framework 4 플랫폼 업데이트 1](https://go.microsoft.com/fwlink/?LinkID=215092)합니다. 이 업데이트에는 여러 가지 새로운 클래스 및 활동이 포함되어 있으므로 개발자가 상태 시스템 워크플로를 만들 수 있었습니다. 이러한 클래스와 활동은.NET Framework 4.5에 대해 업데이트 되었습니다. 업데이트에는 다음이 포함됩니다.  
   
 1. 상태에 중단점을 설정할 수 있는 기능  
   

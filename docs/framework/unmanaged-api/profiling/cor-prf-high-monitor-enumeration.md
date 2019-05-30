@@ -4,12 +4,12 @@ ms.date: 04/10/2018
 ms.assetid: 3ba543d8-15e5-4322-b6e7-1ebfc92ed7dd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 572fcee528098a4f2929e07dfae63efc56e93dfd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e365dff7c56ddca1d05f2e16605078ef46e4e2af
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599552"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251150"
 ---
 # <a name="corprfhighmonitor-enumeration"></a>COR_PRF_HIGH_MONITOR 열거형
 [.NET Framework 4.5.2 이상 버전에서 지원됨]  
@@ -46,7 +46,7 @@ typedef enum {
 ## <a name="remarks"></a>설명  
  `COR_PRF_HIGH_MONITOR` 플래그 사용 되는 `pdwEventsHigh` 의 매개 변수를 [ICorProfilerInfo5::GetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md) 및 [ICorProfilerInfo5::SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) 메서드.  
   
-부터 합니다 [!INCLUDE[net_v461](../../../../includes/net-v461-md.md)]의 값을 `COR_PRF_HIGH_ALLOWABLE_AFTER_ATTACH` 0에서 변경 `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED` (0x00000002). .NET Framework 4.7.2부터 해당 값을에서 변경할 `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED` 에 `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED | COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS`입니다.   
+.NET Framework 4.6.1의 값을 사용 하 여 시작 합니다 `COR_PRF_HIGH_ALLOWABLE_AFTER_ATTACH` 0에서 변경 `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED` (0x00000002). .NET Framework 4.7.2부터 해당 값을에서 변경할 `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED` 에 `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED | COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS`입니다.   
 
 `COR_PRF_HIGH_MONITOR_IMMUTABLE` 초기화 하는 동안만 설정할 수 있는 모든 플래그를 나타내는 비트 마스크를 것입니다. 다른 곳에서 실패 한 결과이 플래그를 변경 하 려 `HRESULT`합니다.
 

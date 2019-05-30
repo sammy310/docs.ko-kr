@@ -2,15 +2,15 @@
 title: 계약 중심 워크플로 서비스 개발
 ms.date: 03/30/2017
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-ms.openlocfilehash: 2fcc0054a3e4c9dd2152344617c8506c9ce6b0d7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 244a6973dde9aba860b08177a42a2ecd64f3479c
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587626"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380185"
 ---
 # <a name="contract-first-workflow-service-development"></a>계약 중심 워크플로 서비스 개발
-부터 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows WF (Workflow Foundation) 기능에 웹 서비스 및 계약 중심 워크플로 개발의 형태로 워크플로 간의 통합 향상. 계약 중심 워크플로 개발 도구를 사용하면 코드에서 계약을 먼저 디자인할 수 있습니다. 그러면 이 도구는 계약의 작업을 위해 도구 상자에 활동 템플릿을 자동으로 생성합니다. 이 항목에서는 워크플로 서비스 맵의 활동 및 속성을 서비스 계약의 특성에 매핑하는 방법을 간략하게 설명합니다. 계약 중심 워크플로 서비스 만들기의 단계별 예제를 참조 하세요. [방법: 기존 서비스 계약을 사용 하는 워크플로 서비스 만들기](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)합니다.  
+.NET Framework 4.5부터 Windows WF (Workflow Foundation) 기능 향상 된 워크플로 계약 중심 워크플로 개발의 형태로 웹 서비스와 통합 합니다. 계약 중심 워크플로 개발 도구를 사용하면 코드에서 계약을 먼저 디자인할 수 있습니다. 그러면 이 도구는 계약의 작업을 위해 도구 상자에 활동 템플릿을 자동으로 생성합니다. 이 항목에서는 워크플로 서비스 맵의 활동 및 속성을 서비스 계약의 특성에 매핑하는 방법을 간략하게 설명합니다. 계약 중심 워크플로 서비스 만들기의 단계별 예제를 참조 하세요. [방법: 기존 서비스 계약을 사용 하는 워크플로 서비스 만들기](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)합니다.  
   
 ## <a name="in-this-topic"></a>항목 내용  
   

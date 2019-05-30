@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 177e5ef8054f408dc8ec3475c56043394a636bc0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34c358a3405262787ed495bf9d8d75462d97a71f
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049455"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380338"
 ---
 # <a name="icorprofilerinfo4-interface"></a>ICorProfilerInfo4 인터페이스
-코드 프로파일러가 CLR (공용 언어 런타임) 이벤트 모니터링을 제어 하 고 요청 정보를 사용 하 여 통신에 사용 되는 메서드를 제공 합니다. . 합니다 `ICorProfilerInfo4` 인터페이스는 다른 확장 `ICorProfilerInfo` 인터페이스입니다. 추가 시간 (JIT) 컴파일을 지원 하기 위해 새 메서드를 제공 합니다 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]합니다.  
+코드 프로파일러가 CLR (공용 언어 런타임) 이벤트 모니터링을 제어 하 고 요청 정보를 사용 하 여 통신에 사용 되는 메서드를 제공 합니다. . 합니다 `ICorProfilerInfo4` 인터페이스는 다른 확장 `ICorProfilerInfo` 인터페이스입니다. .NET Framework 4.5에 추가-just-in-time (JIT) 컴파일을 지원 하기 위해 새 메서드를 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
   

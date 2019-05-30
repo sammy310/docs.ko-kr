@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 731e52958b89886c2bc069c4c181c0cc3928d487
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8636050b2618d1b2c2da0c08c756b0ed221c7f6f
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674729"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300768"
 ---
 # <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>NameValueSectionHandler 및 DictionarySectionHandler에 대 한 사용자 지정 요소
 
 사용 하는 사용자 지정 구성 섹션에 대 한 설정을 정의 합니다 <xref:System.Configuration.NameValueSectionHandler> 고 <xref:System.Configuration.DictionarySectionHandler> 클래스입니다.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)\
-&nbsp;&nbsp;**\<sectionName>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)\
+&nbsp;&nbsp; **\<sectionName>**
 
 ## <a name="attributes"></a>특성
 
@@ -30,15 +30,15 @@ ms.locfileid: "61674729"
 
 |     | 설명 |
 | --- | ----------- |
-| [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다. |
+| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다. |
 
 ## <a name="child-elements"></a>자식 요소
 
 |     | 설명 |
 | --- | ----------- |
-| [**\<추가 >** ](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md) 에 대 한 <xref:System.Configuration.NameValueSectionHandler> 및 <xref:System.Configuration.DictionarySectionHandler>  | 사용자 지정 응용 프로그램 설정을 추가합니다. |
-| [**\<제거 >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md) 에 대 한 <xref:System.Configuration.NameValueSectionHandler> 및 <xref:System.Configuration.DictionarySectionHandler> | 이전에 정의 된 설정을 제거합니다. |
-| [**\<지우기 >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md) 에 대 한 <xref:System.Configuration.NameValueSectionHandler> 및 <xref:System.Configuration.DictionarySectionHandler> | 섹션에서 이전에 정의 된 모든 설정을 지웁니다. |
+| [ **\<추가 >** ](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md) 에 대 한 <xref:System.Configuration.NameValueSectionHandler> 및 <xref:System.Configuration.DictionarySectionHandler>  | 사용자 지정 응용 프로그램 설정을 추가합니다. |
+| [ **\<제거 >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md) 에 대 한 <xref:System.Configuration.NameValueSectionHandler> 및 <xref:System.Configuration.DictionarySectionHandler> | 이전에 정의 된 설정을 제거합니다. |
+| [ **\<지우기 >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md) 에 대 한 <xref:System.Configuration.NameValueSectionHandler> 및 <xref:System.Configuration.DictionarySectionHandler> | 섹션에서 이전에 정의 된 모든 설정을 지웁니다. |
 
 ## <a name="remarks"></a>설명
 
@@ -55,7 +55,7 @@ ms.locfileid: "61674729"
 
 다음 예제를 사용 하는 섹션을 선언 하는 방법을 보여 줍니다 합니다 <xref:System.Configuration.DictionarySectionHandler> 고 <xref:System.Configuration.NameValueSectionHandler> 클래스입니다.
 
-첫 번째 사용자 지정 요소  **\<dictionarySample >**, 읽은 설정을 포함 하는 합니다 <xref:System.Configuration.DictionarySectionHandler> 클래스는 `System.dll` 어셈블리입니다. 두 번째 사용자 지정 요소는  **\<mySection >**, 읽은 설정을 포함 하는 합니다 <xref:System.Configuration.NameValueSectionHandler> 클래스는 `System.dll` 어셈블리입니다.
+첫 번째 사용자 지정 요소  **\<dictionarySample >** , 읽은 설정을 포함 하는 합니다 <xref:System.Configuration.DictionarySectionHandler> 클래스는 `System.dll` 어셈블리입니다. 두 번째 사용자 지정 요소는  **\<mySection >** , 읽은 설정을 포함 하는 합니다 <xref:System.Configuration.NameValueSectionHandler> 클래스는 `System.dll` 어셈블리입니다.
 
 ```xml
 <configuration>

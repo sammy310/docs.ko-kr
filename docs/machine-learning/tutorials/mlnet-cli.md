@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: feddafdd6becd676f4d18aa94bdfae50f02abc6e
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 029685be9d44ad947d4291912d7da1d8ce73d52a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557951"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053639"
 ---
 # <a name="auto-generate-a-binary-classifier-using-the-cli"></a>CLI를 사용하여 이진 분류자 자동 생성
 
@@ -142,12 +142,12 @@ Visual Studio 또는 `dotnet run`(.NET Core CLI)으로 생성된 C# 코드를 �
 
     ![CLI로 생성된 VS 솔루션](./media/mlnet-cli/generated-csharp-solution-detailed.png)
 
-    - Serialize된 ML 모델과 데이터 클래스를 포함한 생성된 **클래스 라이브러리**는 클래스 라이브러리를 직접 참조하거나(원한다면 코드를 이동하여) 최종 사용자 애플리케이션에서 직접 사용할 수 있습니다.
+    - Serialize된 ML 모델(.zip 파일)과 데이터 클래스(데이터 모델)를 포함한 생성된 **클래스 라이브러리**는 클래스 라이브러리를 직접 참조하거나(원한다면 코드를 이동하여) 최종 사용자 애플리케이션에서 직접 사용할 수 있습니다.
     - 생성된 **콘솔 앱**에는 사용자가 검토해야 하는 실행 코드가 있습니다. 그런 다음, 사용자가 예측하려는 최종 사용자 애플리케이션으로 해당 단순 코드(단 몇 개의 줄)를 이동하여 ‘채점 코드’(예측하기 위해 ML 모델을 실행하는 코드)를 재사용합니다. 
 
-1. 클래스 라이브러리 프로젝트 내에서 **Observation.cs** 및 **Prediction.cs** 클래스 파일을 엽니다. 이러한 클래스는 데이터를 보유하기 위해 사용하는 ‘데이터 클래스’ 또는 POCO 클래스임을 알게 됩니다. '상용구 코드’지만 데이터 세트에 수십 또는 수백 개의 열이 있는 경우 생성하는 것이 유용합니다. 
-    - `SampleObservation` 클래스는 데이터 세트에서 데이터를 읽을 때 사용됩니다. 
-    - `SamplePrediction` 클래스 또는 시기
+1. 클래스 라이브러리 프로젝트에서 **ModelInput.cs** 및 **ModelOutput.cs** 클래스 파일을 엽니다. 이러한 클래스는 데이터를 보유하기 위해 사용하는 ‘데이터 클래스’ 또는 POCO 클래스임을 알게 됩니다. '상용구 코드’지만 데이터 세트에 수십 또는 수백 개의 열이 있는 경우 생성하는 것이 유용합니다. 
+    - `ModelInput` 클래스는 데이터 세트에서 데이터를 읽을 때 사용됩니다. 
+    - `ModelOutput` 클래스는 예측 결과(예측 데이터)를 가져오는 데 사용됩니다.
 
 1. Program.cs 파일을 열고 코드를 검색합니다. 단 몇 개의 줄로 모델을 실행하고 단순 예측을 수행할 수 있습니다.
 
@@ -160,13 +160,13 @@ Visual Studio 또는 `dotnet run`(.NET Core CLI)으로 생성된 C# 코드를 �
         //ModelBuilder.CreateModel();
 
         ITransformer mlModel = mlContext.Model.Load(MODEL_FILEPATH, out DataViewSchema inputSchema);
-        var predEngine = mlContext.Model.CreatePredictionEngine<SampleObservation, SamplePrediction>(mlModel);
+        var predEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
 
         // Create sample data to do a single prediction with it 
-        SampleObservation sampleData = CreateSingleDataSample(mlContext, DATA_FILEPATH);
+        ModelInput sampleData = CreateSingleDataSample(mlContext, DATA_FILEPATH);
 
         // Try a single prediction
-        SamplePrediction predictionResult = predEngine.Predict(sampleData);
+        ModelOutput predictionResult = predEngine.Predict(sampleData);
 
         Console.WriteLine($"Single Prediction --> Actual value: {sampleData.Label} | Predicted value: {predictionResult.Prediction}");
     }
@@ -178,14 +178,14 @@ Visual Studio 또는 `dotnet run`(.NET Core CLI)으로 생성된 C# 코드를 �
 
 - 코드의 세 번째 줄에서는 해당 모델 .ZIP 파일에 대한 경로를 제공하여 `mlContext.Model.Load()` API로 Serialize된 모델 .ZIP 파일에서 모델을 로드합니다.
 
-- 코드의 네 번째 줄에서는 `mlContext.Model.CreatePredictionEngine<TObservation, TPrediction>()` API를 사용하여 `PredictionEngine` 개체를 로드하고 생성합니다. 단일 데이터 샘플(이 경우에는 감정을 예측하기 위한 단일 텍스트 조각)을 대상으로 예측하려고 할 때마다 `PredictionEngine` 개체가 필요합니다.
+- 코드의 네 번째 줄에서는 `mlContext.Model.CreatePredictionEngine<TSrc,TDst>(ITransformer mlModel)` API를 사용하여 `PredictionEngine` 개체를 로드하고 생성합니다. 단일 데이터 샘플(이 경우에는 감정을 예측하기 위한 단일 텍스트 조각)을 대상으로 예측하려고 할 때마다 `PredictionEngine` 개체가 필요합니다.
 
 - 코드의 다섯 번째 줄은 함수 `CreateSingleDataSample()`을 호출하여 예측에 사용할 *단일 샘플 데이터*를 만듭니다. CLI 도구는 어떤 종류의 샘플 데이터를 사용할지 알지 못하므로, 이 함수 내에 데이터 세트의 첫 번째 행을 로드합니다. 하지만 이러한 경우를 위해 이 함수를 구현하는 이 유사한 코드를 업데이트하여 `CreateSingleDataSample()` 함수의 최신 구현 대신 자체의 ‘하드 코드된’ 데이터를 만들 수도 있습니다.
 
     ```csharp
-    private static SampleObservation CreateSingleDataSample()
+    private static ModelInput CreateSingleDataSample()
     {
-        SampleObservation sampleForPrediction = new SampleObservation() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
+        ModelInput sampleForPrediction = new ModelInput() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
         return sampleForPrediction;
     }
     ```
@@ -219,7 +219,7 @@ Visual Studio 또는 `dotnet run`(.NET Core CLI)으로 생성된 C# 코드를 �
 
 유사한 ‘ML 모델 채점 코드’를 사용하여 최종 사용자 애플리케이션에서 모델을 실행하고 예측을 수행할 수 있습니다. 
 
-예를 들어 이 코드를 **WPP** 및 **WinForms** 등의 Windows 데스크톱 애플리케이션으로 직접 이동하고 콘솔 앱에서 실행된 것과 동일한 방식으로 모델을 실행할 수 있습니다.
+예를 들어 이 코드를 **WPF** 및 **WinForms** 등의 Windows 데스크톱 애플리케이션으로 직접 이동하고 콘솔 앱에서 실행된 것과 동일한 방식으로 모델을 실행할 수 있습니다.
 
 그러나 ML 모델을 실행하기 위해 이러한 코드 줄을 구현하는 방식은 최적화되어야 하며(즉, 모델 .zip 파일을 캐싱하고 한 번 로드), 특히 다음 섹션에서 설명된 대로 웹 애플리케이션 또는 분산 서비스와 같이 애플리케이션이 확장 가능해야 하는 경우에는 모든 요청마다 만드는 대신, 싱글톤 개체가 있어야 합니다.
 
@@ -242,7 +242,7 @@ Visual Studio 또는 `dotnet run`(.NET Core CLI)으로 생성된 C# 코드를 �
 
 무엇보다도 이 특별한 시나리오(감정 분석 모델)의 경우 다음 자습서에 설명된 코드와 생성된 학습 코드를 비교할 수도 있습니다.
 
-- 비교: [자습서: 감정 분석 이진 분류 시나리오에서 ML.NET 사용](https://docs.microsoft.com/en-us/dotnet/machine-learning/tutorials/sentiment-analysis)
+- 비교: [자습서: 감정 분석 이진 분류 시나리오에서 ML.NET 사용](sentiment-analysis.md)
 
 CLI 도구를 통해 생성된 코드와 자습서에서 선택된 알고리즘 및 파이프라인 구성을 비교하는 것이 흥미롭습니다. 더 나은 모델을 찾기 위해 반복하고 검색하는 데 소요된 시간에 따라, 선택된 알고리즘은 특정 하이퍼 매개 변수 및 파이프라인 구성과 함께 다를 수 있습니다.
 

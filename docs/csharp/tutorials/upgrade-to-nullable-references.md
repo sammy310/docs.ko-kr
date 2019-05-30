@@ -3,12 +3,12 @@ title: nullable 참조 형식을 사용하여 디자인
 description: 이 고급 자습서에서는 nullable 참조 형식을 소개합니다. 참조 값이 null일 수 있는 경우에 대한 디자인 의도를 표현하고 컴파일러가 null일 수 없는 경우를 적용하게 하는 방법을 알아봅니다.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: fac83d8f61b725a4a2163c9cd42911fe60d12263
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 289b864aaa0380a31e93ef223fb5b5780e35892a
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427294"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195842"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>자습서: nullable 참조 형식이 있는 기존 코드 마이그레이션
 
@@ -49,8 +49,11 @@ C# 8.0 베타 컴파일러를 포함하여 .NET Core를 실행하도록 머신�
 다음 단계로 nullable 주석 컨텍스트를 켜고 경고가 몇 개나 생성되는지 살펴보는 것이 좋습니다. 솔루션의 두 csproj 파일에서 `LangVersion` 요소 아래에 각각 다음 요소를 추가합니다.
 
 ```xml
-<NullableContextOptions>enable</NullableContextOptions>
+<Nullable>enable</Nullable>
 ```
+
+> [!IMPORTANT]
+> `Nullable` 요소의 이전 이름은 `NullableContextOptions`였습니다. Visual Studio 2019, 16.2-p1에서는 바뀐 이름이 제공됩니다. .NET Core SDK 3.0.100-preview5-011568에는 이 변경이 적용되지 않습니다. .NET Core CLI를 사용하는 경우 다음 미리 보기를 사용할 수 있을 때까지 `NullableContextOptions`를 사용해야 합니다.
 
 테스트 빌드를 수행하고 경고 목록을 살펴봅니다. 이 작은 애플리케이션에서 컴파일러가 경고를 5개 생성하는 것을 볼 수 있습니다. 여기서는 nullable 주석 컨텍스트를 활성화 상태로 두고 프로젝트 전체의 경고를 수정할 수 있습니다.
 
@@ -58,7 +61,7 @@ C# 8.0 베타 컴파일러를 포함하여 .NET Core를 실행하도록 머신�
 
 ## <a name="warnings-help-discover-original-design-intent"></a>원래의 설계 의도를 파악하는 데 도움이 되는 경고
 
-2개의 클래스에서 여러 개의 경고가 생성되었습니다. `NewsStoryViewModel` 클래스부터 시작합니다. 경고의 범위를 현재 작업 중인 코드 섹션으로 한정할 수 있도록 두 csproj 파일에서 각각 `NullableContextOptions` 요소를 제거합니다. *NewsStoryViewModel.cs* 파일을 열고 다음 지시문을 추가하여 `NewsStoryViewModel`에서 nullable 주석 컨텍스트를 활성화하고 클래스 정의 후에 이를 복원합니다.
+2개의 클래스에서 여러 개의 경고가 생성되었습니다. `NewsStoryViewModel` 클래스부터 시작합니다. 경고의 범위를 현재 작업 중인 코드 섹션으로 한정할 수 있도록 두 csproj 파일에서 각각 `Nullable` 요소를 제거합니다. *NewsStoryViewModel.cs* 파일을 열고 다음 지시문을 추가하여 `NewsStoryViewModel`에서 nullable 주석 컨텍스트를 활성화하고 클래스 정의 후에 이를 복원합니다.
 
 ```csharp
 #nullable enable

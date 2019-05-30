@@ -2,15 +2,15 @@
 title: WF의 상태 시스템 활동
 ms.date: 03/30/2017
 ms.assetid: 93312eaf-07e0-4a55-b4f7-4cdbbc4dee2d
-ms.openlocfilehash: 5aee2a7cb078d9d62c9296f7dda9f28ff812a88a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64af2698c878066464e2ca3f32d4522d99999aec
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004603"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378044"
 ---
 # <a name="state-machine-activities-in-wf"></a>WF의 상태 시스템 활동
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]은 상태 시스템 워크플로를 만들기 위한 여러 시스템 제공 활동 및 활동 디자이너를 제공합니다.  
+.NET framework 4.5는 상태 시스템 워크플로 만들기 위한 여러 시스템 제공 활동 및 활동 디자이너를 제공 합니다.  
   
 |||  
 |-|-|  

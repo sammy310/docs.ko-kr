@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b625b2962c829e7c0692a61d8f5561818f7ebf1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b59fe76bd6d8d5887ac825e844e89e85677e2d7
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000521"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380345"
 ---
 # <a name="icorprofilerinfo4getiltonativemapping2-method"></a>ICorProfilerInfo4::GetILToNativeMapping2 메서드
 지정된 함수의 JIT 다시 컴파일된 버전에 포함된 코드에 대한 MSIL(Microsoft Intermediate Language) 오프셋과 네이티브 오프셋 간의 맵을 가져옵니다.  
@@ -44,7 +44,7 @@ HRESULT GetILToNativeMapping(
  [in] 코드를 포함하는 함수의 ID입니다.  
   
  `pReJitId`  
- [in] JIT 다시 컴파일된 함수의 ID입니다. [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]에서는 ID가 0이어야 합니다.  
+ [in] JIT 다시 컴파일된 함수의 ID입니다. Id에는.NET Framework 4.5에는 0 이어야 합니다.  
   
  `cMap`  
  [in] `map` 배열의 최대 크기입니다.  
@@ -59,7 +59,7 @@ HRESULT GetILToNativeMapping(
  `GetILToNativeMapping2` 비슷합니다는 [icorprofilerinfo:: Getiltonativemapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) 메서드는 프로파일러가 나중에 다시 컴파일된 함수의 ID를 지정 하는 허용 됩니다 점을 제외 하 고 해제 합니다.  
   
 > [!NOTE]
->  합니다 [icorprofilerfunctioncontrol:: Setilinstrumentedcodemap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md) 에서 메서드를 구현 하지는 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]이므로 JIT 다시 컴파일된 함수가 다른는 IL-네이티브 매핑을 사용할 수 없습니다는 원래 컴파일된 함수입니다. 따라서 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]에서는 0이 아닌 JIT 다시 컴파일된 ID를 사용하여 `GetILToNativeMapping2`를 호출할 수 없습니다.  
+>  합니다 [icorprofilerfunctioncontrol:: Setilinstrumentedcodemap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md) 메서드가 JIT 다시 컴파일된 함수가 다른는 IL-네이티브 매핑을 사용할 수 없습니다 있도록.NET Framework 4.5에서 구현 되지 않습니다는 원래 컴파일된 함수입니다. 이와 같이 `GetILToNativeMapping2` .NET Framework 4.5에서 0이 아닌 JIT 다시 컴파일된 ID를 사용 하 여 호출할 수 없습니다.  
   
  `GetILToNativeMapping2` 메서드는 `COR_DEBUG_IL_TO_NATIVE_MAP` 구조체의 배열을 반환합니다. 특정 범위의 네이티브 명령이 코드 (예: 프롤로그)의 특수 영역에 해당 하는 전달할 배열의 항목 수 해당 `ilOffset` 필드의 값으로 설정 합니다 [CorDebugIlToNativeMappingTypes](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md) 열거형입니다.  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: 85c1d398c1aabbb73d5ae34186775e2c63666cfb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: a868632d6868e6a82c4fa135444279b8ef4dc7af
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309448"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301408"
 ---
 # <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>방법: 런타임에 컨트롤 컬렉션에서 컨트롤 추가 또는 제거
 응용 프로그램 개발의 일반적인 작업은에 컨트롤 추가 및 컨트롤을 양식의 컨테이너 컨트롤에서 제거 (같은 합니다 <xref:System.Windows.Forms.Panel> 또는 <xref:System.Windows.Forms.GroupBox> 컨트롤 또는 양식 자체). 디자인 타임에 컨트롤을 패널이나 그룹 상자로 직접 끌어 놓을 수 있습니다. 런타임 시 이러한 컨트롤은 `Controls` 컬렉션을 유지 관리하고 여기서 배치된 컨트롤을 추적합니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "59309448"
   
 ### <a name="to-remove-controls-from-a-collection-programmatically"></a>컬렉션에서 컨트롤을 프로그래밍 방식으로 제거하려면  
   
-1. 이벤트에서 이벤트 처리기를 제거합니다. Visual basic에서 사용 하 여는 [RemoveHandler 문](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) 키워드; 시각적 개체에 C#를 사용 합니다 [-= 연산자 (C# 참조)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md).  
+1. 이벤트에서 이벤트 처리기를 제거합니다. Visual basic에서 사용 하 여는 [RemoveHandler 문](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) 키워드; C#를 사용 합니다 [-= 연산자](~/docs/csharp/language-reference/operators/subtraction-operator.md).  
   
 2. `Remove` 메서드를 사용하여 패널의 `Controls` 컬렉션에서 원하는 컨트롤을 삭제합니다.  
   

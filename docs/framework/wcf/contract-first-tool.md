@@ -2,15 +2,15 @@
 title: 계약 중심 도구
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-ms.openlocfilehash: 95aef67eb43176ab062b38979e714f232898f221
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7ddc3b2c733c73808d17b6e0f45129cc19d7527c
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652068"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380379"
 ---
 # <a name="contract-first-tool"></a>계약 중심 도구
-서비스 계약을 기존 서비스에서 만들어야 할 경우가 있습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서 계약 중심 도구를 사용하여 데이터 계약 클래스를 기존 서비스에서 자동으로 만들 수 있습니다. 계약 중심 도구를 사용하려면 XSD(XML 스키마 정의) 파일을 로컬에서 다운로드해야 합니다. 이 도구는 HTTP를 통해 원격 데이터 계약을 가져올 수 없습니다.
+서비스 계약을 기존 서비스에서 만들어야 할 경우가 있습니다. .NET Framework 4.5에서는 데이터 계약 클래스를 계약 중심 도구를 사용 하 여 기존 서비스에서 자동으로 만들 수 있습니다. 계약 중심 도구를 사용하려면 XSD(XML 스키마 정의) 파일을 로컬에서 다운로드해야 합니다. 이 도구는 HTTP를 통해 원격 데이터 계약을 가져올 수 없습니다.
 
  계약 중심 도구는 빌드 작업으로 Visual Studio 2012에 통합 됩니다. 빌드 작업에서 생성하는 코드 파일은 프로젝트가 빌드될 때마다 생성되므로 프로젝트는 기본 서비스 계약에서 변경 사항을 쉽게 채택할 수 있습니다.
 

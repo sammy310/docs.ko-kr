@@ -13,12 +13,12 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-ms.openlocfilehash: 279f7932d38885331b69616afa719ad782d7244b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3630b9e2f50830faf50599388e4fbb7ec1630b73
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659910"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300745"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>사용자 지정 가능한 모양이 있는 컨트롤 만들기
 <a name="introduction"></a>
@@ -78,7 +78,7 @@ ms.locfileid: "64659910"
   
  [!code-xaml[VSMCustomControl#VisualStructure](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#visualstructure)]  
   
- 시각적 동작을 `NumericUpDown` 컨트롤은 음수 이면 값을 빨간색 글꼴로입니다.  변경 하는 경우는 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 의 <xref:System.Windows.Controls.TextBlock> 때 코드에서 합니다 `Value` 음수인 경우는 `NumericUpDown` 빨간색 음수 값을 항상 표시 됩니다. 컨트롤의 시각적 동작을 지정 합니다 <xref:System.Windows.Controls.ControlTemplate> 를 추가 하 여 <xref:System.Windows.VisualState> 개체를 <xref:System.Windows.Controls.ControlTemplate>합니다.  다음 예제와 합니다 <xref:System.Windows.VisualState> 에 대 한 개체를 `Positive` 및 `Negative` 상태입니다.  `Positive` 및 `Negative` (컨트롤은 항상 두 가지 중 하나)은 상호 배타적 이므로 예제에서는 배치 합니다 <xref:System.Windows.VisualState> 개체를 하나의 <xref:System.Windows.VisualStateGroup>합니다.  컨트롤을 이동 하는 경우는 `Negative` 상태는 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 의 <xref:System.Windows.Controls.TextBlock> 빨간색으로 변합니다.  컨트롤에는 `Positive` 상태는 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 반환 원래 값입니다.  정의 <xref:System.Windows.VisualState> 개체를 <xref:System.Windows.Controls.ControlTemplate> 에 대해 자세히 설명 [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](customizing-the-appearance-of-an-existing-control.md)합니다.  
+ 시각적 동작을 `NumericUpDown` 컨트롤은 음수 이면 값을 빨간색 글꼴로입니다.  변경 하는 경우는 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 의 <xref:System.Windows.Controls.TextBlock> 때 코드에서 합니다 `Value` 음수인 경우는 `NumericUpDown` 빨간색 음수 값을 항상 표시 됩니다. 컨트롤의 시각적 동작을 지정 합니다 <xref:System.Windows.Controls.ControlTemplate> 를 추가 하 여 <xref:System.Windows.VisualState> 개체를 <xref:System.Windows.Controls.ControlTemplate>합니다.  다음 예제와 합니다 <xref:System.Windows.VisualState> 에 대 한 개체를 `Positive` 및 `Negative` 상태입니다.  `Positive` 및 `Negative` (컨트롤은 항상 두 가지 중 하나)은 상호 배타적 이므로 예제에서는 배치 합니다 <xref:System.Windows.VisualState> 개체를 하나의 <xref:System.Windows.VisualStateGroup>합니다.  컨트롤을 이동 하는 경우는 `Negative` 상태는 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 의 <xref:System.Windows.Controls.TextBlock> 빨간색으로 변합니다.  컨트롤에는 `Positive` 상태는 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 원래 값으로 반환 합니다.  정의 <xref:System.Windows.VisualState> 개체를 <xref:System.Windows.Controls.ControlTemplate> 에 대해 자세히 설명 [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](customizing-the-appearance-of-an-existing-control.md)합니다.  
   
 > [!NOTE]
 >  설정 해야 합니다 <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> 루트에 연결 <xref:System.Windows.FrameworkElement> 의 <xref:System.Windows.Controls.ControlTemplate>합니다.  

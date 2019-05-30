@@ -7,22 +7,22 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: ad3ac93b2a7f92cd33787620fc0caa2b632aa072
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5ab12150c5200dc346e950541443d5286f739c8
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705365"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301244"
 ---
 # <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<지우기 > NameValueSectionHandler 및 DictionarySectionHandler에 대 한 요소
 
 섹션에서 이전에 정의 된 모든 설정을 지웁니다.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<sectionName>** ](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
 
 ## <a name="syntax"></a>구문
 
@@ -38,7 +38,7 @@ ms.locfileid: "61705365"
 
 |     | 설명 |
 | --- | ------------|
-| [**\<sectionName>** Element](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 사용 하는 사용자 지정 구성 섹션에 대 한 설정을 정의 합니다 <xref:System.Configuration.NameValueSectionHandler> 고 <xref:System.Configuration.DictionarySectionHandler> 클래스입니다. |
+| [ **\<sectionName>** Element](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 사용 하는 사용자 지정 구성 섹션에 대 한 설정을 정의 합니다 <xref:System.Configuration.NameValueSectionHandler> 고 <xref:System.Configuration.DictionarySectionHandler> 클래스입니다. |
 
 ## <a name="child-elements"></a>자식 요소
 
@@ -52,7 +52,7 @@ ms.locfileid: "61705365"
 
 이 예제에서는 컴퓨터 구성 파일 및 응용 프로그램 구성 파일을 정의 하 고 사용 하는 방법을 보여 줍니다 합니다  **\<지우기 >** 요소에서 이전에 정의 된 섹션의 선택을 취소 하는 응용 프로그램 구성 파일에는 컴퓨터 구성 파일입니다.
 
-다음 컴퓨터 구성 파일 코드 섹션을 선언  **\<mySection >**:
+다음 컴퓨터 구성 파일 코드 섹션을 선언  **\<mySection >** :
 
 ```xml
 <!-- Machine.config file -->

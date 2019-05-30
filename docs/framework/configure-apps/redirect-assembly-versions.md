@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-ms.openlocfilehash: 68169063c9cf152942ff8a7757a1b3d97886002a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fa7c0c22d070ec12cb67252dee7dca02c5160b9e
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034569"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380082"
 ---
 # <a name="redirecting-assembly-versions"></a>어셈블리 버전 리디렉션
 
@@ -23,7 +23,7 @@ ms.locfileid: "62034569"
 ## <a name="assembly-unification-and-default-binding"></a>어셈블리 통합 및 기본 바인딩
  .NET Framework 어셈블리에 대한 바인딩은 *어셈블리 통합*이라고 하는 프로세스를 통해 리디렉션되는 경우가 있습니다. .NET Framework는 공용 언어 런타임 버전과 형식 라이브러리를 구성하는 약 24개의 .NET Framework 어셈블리로 이루어져 있습니다. 이러한 .NET Framework 어셈블리는 런타임에서 하나의 단위로 처리됩니다. 기본적으로, 응용 프로그램이 시작되면 런타임으로 실행되는 코드의 형식에 대한 모든 참조는 프로세스에서 로드되는 런타임과 버전 번호가 같은 .NET Framework 어셈블리로 이동됩니다. 이 모델에서 발생하는 리디렉션은 런타임에 대한 기본 동작입니다.
 
- 예를 들어 응용 프로그램에서 System.XML 네임스페이스의 형식을 참조하고 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]를 사용하여 빌드된 경우, 런타임 버전 4.5와 함께 제공되는 System.XML 어셈블리에 대한 정적 참조를 포함합니다. .NET Framework 4와 함께 제공되는 System.XML 어셈블리를 가리키도록 바인딩 참조를 리디렉션하려는 경우에는 응용 프로그램 구성 파일에 리디렉션 정보를 넣을 수 있습니다. 통합된 .NET Framework 어셈블리에 대한 구성 파일에서 바인딩 리디렉션은 해당 어셈블리에 대한 통합을 취소합니다.
+ 예를 들어, 앱 참조 System.XML 네임 스페이스의 형식은.NET Framework 4.5를 사용 하 여 빌드된 경우 런타임 버전 4.5와 함께 제공 되는 System.XML 어셈블리에 대 한 정적 참조를 포함 합니다. .NET Framework 4와 함께 제공되는 System.XML 어셈블리를 가리키도록 바인딩 참조를 리디렉션하려는 경우에는 응용 프로그램 구성 파일에 리디렉션 정보를 넣을 수 있습니다. 통합된 .NET Framework 어셈블리에 대한 구성 파일에서 바인딩 리디렉션은 해당 어셈블리에 대한 통합을 취소합니다.
 
  또한 여러 버전을 사용할 수 있는 경우 타사 어셈블리에 대해 어셈블리 바인딩을 수동으로 리디렉션할 수 있습니다.
 
@@ -55,7 +55,7 @@ ms.locfileid: "62034569"
 
 ### <a name="relying-on-automatic-binding-redirection"></a>자동 바인딩 리디렉션 사용
 
-데스크톱 앱을 Visual Studio에서 만들 때 대상으로 하는 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 또는 이상 버전으로 앱을 자동 바인딩 리디렉션 사용 합니다. 즉, 두 구성 요소가 강력한 이름의 동일한 어셈블리의 다른 버전을 참조하는 경우 런타임에서 출력 앱 구성 파일(app.config)에 최신 버전의 어셈블리에 바인딩 리디렉션을 자동으로 추가한다는 의미입니다. 이 리디렉션은 그 밖에 발생할 수 있는 어셈블리 통합을 재정의합니다. 소스 app.config 파일은 수정되지 않습니다. 예를 들어, 앱에서 대역 외 .NET Framework 구성 요소를 직접 참조하지만 동일한 구성 요소의 이전 버전을 대상으로 하는 타사 라이브러리를 사용한다고 가정해 보겠습니다. 앱을 컴파일하면, 최신 버전의 구성 요소에 대한 바인딩 리디렉션이 포함되도록 출력 앱 구성 파일이 수정됩니다. 웹앱을 만드는 경우, 바인딩 충돌에 대한 빌드 경고가 표시된 후에 소스 웹 구성 파일에 필요한 바인딩 리디렉션을 추가할 수 있는 옵션이 제공됩니다.
+데스크톱 앱을 Visual Studio에서 해당 대상.NET Framework 4.5.1 이상 버전을 만든 경우 앱 자동 바인딩 리디렉션을 사용 합니다. 즉, 두 구성 요소가 강력한 이름의 동일한 어셈블리의 다른 버전을 참조하는 경우 런타임에서 출력 앱 구성 파일(app.config)에 최신 버전의 어셈블리에 바인딩 리디렉션을 자동으로 추가한다는 의미입니다. 이 리디렉션은 그 밖에 발생할 수 있는 어셈블리 통합을 재정의합니다. 소스 app.config 파일은 수정되지 않습니다. 예를 들어, 앱에서 대역 외 .NET Framework 구성 요소를 직접 참조하지만 동일한 구성 요소의 이전 버전을 대상으로 하는 타사 라이브러리를 사용한다고 가정해 보겠습니다. 앱을 컴파일하면, 최신 버전의 구성 요소에 대한 바인딩 리디렉션이 포함되도록 출력 앱 구성 파일이 수정됩니다. 웹앱을 만드는 경우, 바인딩 충돌에 대한 빌드 경고가 표시된 후에 소스 웹 구성 파일에 필요한 바인딩 리디렉션을 추가할 수 있는 옵션이 제공됩니다.
 
 수동으로 바인딩 리디렉션을 소스 app.config 파일에 컴파일 타임에 추가한 경우 Visual Studio를 기준으로 추가한 바인딩 리디렉션이 어셈블리 통합 하려고 합니다. 예를 들어, 어셈블리에 대해 다음과 같은 바인딩 리디렉션을 삽입한다고 가정해 보겠습니다.
 

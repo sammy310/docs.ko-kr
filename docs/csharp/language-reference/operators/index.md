@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 07ef96862c04b8245d8365c3d3b419d227e824c4
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a342c0aaf6a1b0c9959c9b79e3e3e92134693bf1
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876944"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66250763"
 ---
 # <a name="c-operators"></a>C# 연산자
 
@@ -197,9 +197,9 @@ C#은 기본 제공 형식에서 지원되는 미리 정의된 여러 연산자�
 
 [x = y](assignment-operator.md) – 할당
 
-[x += y](addition-assignment-operator.md) – 증가. `y`의 값을 `x` 값에 더하고 결과를 `x`에 저장한 다음 새 값을 반환합니다. `x`가 `event`를 지정하는 경우 `y`는 C#에서 이벤트 처리기로 추가하는 적절한 함수여야 합니다.
+[x += y](arithmetic-operators.md#compound-assignment) – 증가. `y`의 값을 `x` 값에 더하고 결과를 `x`에 저장한 다음 새 값을 반환합니다. `x`가 [이벤트](../keywords/event.md)를 지정하는 경우 `y`는 C#에서 이벤트 처리기로 추가하는 적절한 방법이어야 합니다.
 
-[x -= y](subtraction-assignment-operator.md) – 감소. `x`의 값에서 `y`의 값을 빼고 결과를 `x`에 저장한 다음 새 값을 반환합니다. `x`가 `event`를 지정하는 경우 `y`는 C#에서 이벤트 처리기로 제거하는 적절한 함수여야 합니다.
+[x -= y](subtraction-assignment-operator.md) – 감소. `x`의 값에서 `y`의 값을 빼고 결과를 `x`에 저장한 다음 새 값을 반환합니다. `x`가 [이벤트](../keywords/event.md)를 지정하는 경우 `y`는 C#에서 이벤트 처리기로 제거하는 적절한 방법이어야 합니다.
 
 [x *= y](arithmetic-operators.md#compound-assignment) – 곱하기 대입. `y`의 값을 `x`의 값에 곱하고 결과를 `x`에 저장한 다음 새 값을 반환합니다.
 

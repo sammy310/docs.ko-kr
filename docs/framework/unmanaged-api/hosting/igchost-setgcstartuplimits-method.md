@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 365261883f0b81884bb7cf70614628c05f9067c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e65a83d1da0580436babd15e4f27e2db7a698668
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993267"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377604"
 ---
 # <a name="igchostsetgcstartuplimits-method"></a>IGCHost::SetGCStartupLimits 메서드
 0 세대에 대 한 세그먼트 크기 및 최대 크기를 설정합니다.  
   
 > [!IMPORTANT]
->  로 시작 합니다 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], 세그먼트 크기를 설정할 수 있습니다 및 0 세대의 최대 크기 보다 큰 값 `DWORD` 사용 하 여를 [IGCHost2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) 메서드.  
+>  .NET Framework 4.5부터 설정할 수 있습니다 세그먼트 크기 및 최대 0 세대 크기 값 보다 큰 `DWORD` 를 사용 하 여 합니다 [IGCHost2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) 메서드.  
   
 ## <a name="syntax"></a>구문  
   

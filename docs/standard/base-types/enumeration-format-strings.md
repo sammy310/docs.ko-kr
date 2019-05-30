@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4f2a8fc10d2aad6b2d43bf128697e86aa73c411
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: be2e5dbe0d02bcec8974a1e52c0dce107d3bf46b
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644667"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052846"
 ---
 # <a name="enumeration-format-strings"></a>열거형 형식 문자열
 
@@ -48,7 +48,7 @@ ms.locfileid: "65644667"
 
 ## <a name="x-or-x"></a>X 또는 x
 
-열거형 항목을 16진수 값으로 표시합니다. 필요에 따라 값 앞에 0을 추가하여 값의 길이가 최소 8자리가 되도록 합니다. 다음 예제에서는 X 형식 지정자를 보여 줍니다.
+열거형 항목을 16진수 값으로 표시합니다. 결과 문자열이 열거형의 [기본 숫자 형식](xref:System.Enum.GetUnderlyingType%2A)에서 바이트마다 2개 문자를 갖도록 하기 위해 필요에 따라 앞에 0이 오는 값으로 표현됩니다. 다음 예제에서는 X 형식 지정자를 보여 줍니다. 예제에서 <xref:System.ConsoleColor> 및 <xref:System.IO.FileAttributes>의 기본 형식은 <xref:System.Int32> 또는 8 글자 결과 문자열을 생성하는 32비트(또는 4바이트) 정수입니다.
 
 [!code-csharp[Formatting.Enum#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)]      
 [!code-vb[Formatting.Enum#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#4)]

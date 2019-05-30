@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15f3aa8d2cd7c21fa2b77660cd668d211f8376a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d23a12ff92202ace69cb80ff59d6afcb5d8f8243
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690620"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960372"
 ---
 # <a name="using-threads-and-threading"></a>스레드 및 스레딩 사용
 
@@ -32,7 +32,7 @@ ms.locfileid: "54690620"
 
 스레드의 실행을 종료하려면 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 메서드를 사용합니다. 해당 메서드는 호출되는 스레드에서 <xref:System.Threading.ThreadAbortException>을 발생시킵니다. 자세한 내용은 [스레드 제거](destroying-threads.md)를 참조하세요.
 
-.NET Framework 4부터 <xref:System.Threading.CancellationToken?displayProperty=nameWithType>을 사용하여 스레드를 함께 취소할 수 있습니다. 자세한 내용은 [스레드 함께 취소](canceling-threads-cooperatively.md)를 참조하세요.
+.NET Framework 4부터 <xref:System.Threading.CancellationToken?displayProperty=nameWithType>을 사용하여 스레드를 함께 취소할 수 있습니다. 자세한 내용은 [관리형 스레드의 취소](cancellation-in-managed-threads.md)를 참조하세요.
 
 <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> 메서드를 사용하여 호출 스레드가 메서드가 호출되는 스레드가 종료될 때까지 기다리도록 합니다.
 

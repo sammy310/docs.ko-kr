@@ -2,12 +2,12 @@
 title: 높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 description: Kubernetes 애플리케이션 수명 주기를 개발하는 동안 높은 확장성과 가용성 및 Azure Dev Spaces의 가능성을 위해 마이크로 서비스 및 다중 컨테이너 애플리케이션을 오케스트레이션하는 옵션을 검색합니다.
 ms.date: 09/20/2018
-ms.openlocfilehash: 3b7383f6153b787ce8bfad87e3902c34afba0fb2
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 27155736c6b5308d4794b17e5f5bd0b93109b5c1
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644887"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66196031"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 
@@ -101,7 +101,7 @@ Azure Kubernetes Service는 Azure용으로 특별히 인기 있는 Docker 클러
 
 ## <a name="getting-started-with-azure-kubernetes-service-aks"></a>AKS(Azure Kubernetes Service) 시작 
 
-AKS를 사용하여 시작하려면 Azure Portal에서 또는 CLI를 사용하여 AKS 클러스터를 배포합니다. Azure Container Service 클러스터 배포에 대한 자세한 내용은 [AKS(Azure Kubernetes Service) 클러스터 배포](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)를 참조하세요.
+AKS를 사용하여 시작하려면 Azure 포털에서 또는 CLI를 사용하여 AKS 클러스터를 배포합니다. Azure에서 Kubernetes 클러스터를 배포하는 방법에 대한 자세한 내용은 [Azure Kubernetes Service(AKS) 클러스터 배포](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)를 참조하세요.
 
 기본적으로 AKS의 일부로 설치된 소프트웨어에 대해서는 추가 비용이 없습니다. 모든 기본 옵션은 오픈 소스 소프트웨어로 구현됩니다. AKS는 Azure의 여러 가상 머신에서 사용할 수 있습니다. 선택한 컴퓨팅 인스턴스 및 사용되는 다른 기본 인프라 리소스(예: 스토리지 및 네트워킹)에 대해서만 요금이 청구됩니다. AKS 자체에 대한 추가 비용은 없습니다.
 

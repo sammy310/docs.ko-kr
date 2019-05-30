@@ -7,22 +7,22 @@ helpviewer_keywords:
 - sectionGroup Element
 - <sectionGroup> Element
 ms.assetid: 6c27f9e2-809c-4bc9-aca9-72f90360e7a3
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: ce0fa5bd77a7b9012d69fd5afab1f4c332f213a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 750708483f9680745eef4531d86fa7ecaa329f51
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673825"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301187"
 ---
 # <a name="sectiongroup-element-for-configsections"></a>\<sectionGroup > 요소에 대 한 \<configSections >
 
 구성 섹션에 대 한 네임 스페이스를 정의합니다.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<sectionGroup>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<sectionGroup>**
 
 ## <a name="syntax"></a>구문
 
@@ -42,13 +42,13 @@ ms.locfileid: "61673825"
 
 |     | 설명 |
 | --- | ----------- |
-| [**\<configSections >** 요소](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 구성 섹션 및 네임 스페이스 선언을 포함합니다. |
+| [ **\<configSections >** 요소](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 구성 섹션 및 네임 스페이스 선언을 포함합니다. |
 
 ## <a name="child-elements"></a>자식 요소
 
 |     | 설명 |
 | --- | ----------- |
-| [**\<section>**](~/docs/framework/configure-apps/file-schema/section-element.md) | 구성 섹션 선언을 포함합니다. |
+| [ **\<section>** ](~/docs/framework/configure-apps/file-schema/section-element.md) | 구성 섹션 선언을 포함합니다. |
 
 ## <a name="remarks"></a>설명
 

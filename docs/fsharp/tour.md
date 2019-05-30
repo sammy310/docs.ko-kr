@@ -2,12 +2,12 @@
 title: F# 둘러보기
 description: 이 자습서에서는 예제 코드를 사용하여 F# 프로그래밍 언어의 주요 기능을 살펴봅니다.
 ms.date: 11/06/2018
-ms.openlocfilehash: 4b3ec7fd2c42712440ea7d7045c560ab20390b45
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64394342777003b33dd77028739fb7209b9f3c86
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61901732"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301262"
 ---
 # <a name="tour-of-f"></a>F\# 둘러보기
 
@@ -17,7 +17,7 @@ F#에 함수(function)와 유형(type)이라는 두 가지 기본 개념이 있�
 
 ## <a name="executing-the-code-online"></a>온라인에서 코드 실행
 
-F#이 컴퓨터에 설치되지 않았다면 [Fable REPL](https://fable.io/repl/)을 사용하여 온라인의 모든 샘플을 실행할 수 없습니다. Fable은 F#과 유사하며 브라우저에서 직접 실행할 수 있습니다. REPL에서 다음에 나오는 예제를 보기 위해서는 Fable REPL의 왼쪽 메뉴 바에서 **Samples > Learn > Tour of F#** 를 확인하세요.
+없는 경우 F# 컴퓨터에 설치를 실행할 수 있습니다 모든 샘플 사용 하 여 브라우저에서 [시도 F# 에서 WebAssembly](https://tryfsharp.fsbolero.io/)합니다. Fable은 F#과 유사하며 브라우저에서 직접 실행할 수 있습니다. REPL에서 다음에 나오는 예제를 보기 위해서는 Fable REPL의 왼쪽 메뉴 바에서 **Samples > Learn > Tour of F#** 를 확인하세요.
 
 ## <a name="functions-and-modules"></a>함수와 모듈
 

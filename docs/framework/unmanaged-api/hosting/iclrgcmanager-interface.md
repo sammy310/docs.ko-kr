@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9519f7c2df5cf078bac6be038275527d7741edb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6e284f94ad0dac9523bd6267e7bc1034a079503d
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700841"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380300"
 ---
 # <a name="iclrgcmanager-interface"></a>ICLRGCManager 인터페이스
 공용 언어 런타임의 가비지 컬렉션 시스템과 상호 작용 하는 데 사용 하는 메서드를 제공 합니다.  
   
 > [!NOTE]
->  부터 합니다 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]를 사용할 수는 [ICLRGCManager2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md) 가비지 수집 세그먼트의 크기 및 가비지 컬렉션 시스템의 0 세대의 최대 크기 값에 큰 설정 하는 방법 보다는 `DWORD` 에 의해 적용 되는 제한 된 [SetGCStartupLimits](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-setgcstartuplimits-method.md) 메서드.  
+>  .NET Framework 4.5부터 사용할 수는 [ICLRGCManager2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md) 가비지 수집 세그먼트의 크기 및 가비지 컬렉션 시스템의 0 세대의 최대 크기 값으로 설정 하는 방법 보다 큰 합니다 `DWORD` 에 의해 적용 되는 제한 된 [SetGCStartupLimits](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-setgcstartuplimits-method.md) 메서드.  
   
 ## <a name="methods"></a>메서드  
   

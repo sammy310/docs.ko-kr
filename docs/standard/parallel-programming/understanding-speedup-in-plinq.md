@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1905a61a1843427563ffcbad43ea6b2a4c161828
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 014adfbf6f9afab0eaacd574cfb181c0eec07b5b
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654962"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960317"
 ---
 # <a name="understanding-speedup-in-plinq"></a>PLINQ의 속도 향상 이해
 PLINQ의 기본 목적은 다중 코어 컴퓨터에서 쿼리 대리자를 병렬로 실행하여 LINQ to Objects 쿼리의 실행 속도를 높이는 것입니다. PLINQ는 소스 컬렉션의 각 요소 처리가 개별 대리자 간에 공유 상태가 관련되지 않고 독립적인 경우 최고의 성능을 발휘합니다. 이러한 작업은 LINQ to Objects 및 PLINQ에서 공통적이고 여러 스레드가 쉽게 예약에 참여하므로 “즐거운 병렬”이라고 합니다. 그러나 모든 쿼리가 완전히 즐거운 병렬 작업으로 구성되는 것은 아니고, 대부분의 경우 쿼리에는 병렬 처리할 수 없거나 병렬 실행을 느리게 하는 일부 연산자가 포함됩니다. 또한 완전히 즐거운 병렬인 쿼리를 사용해도 PLINQ는 스레드에서 데이터 분할하고 작업을 예약해야 하며 일반적으로 쿼리가 완료될 때 결과를 병합해야 합니다. 이러한 모든 작업은 병렬 처리 계산 비용에 추가됩니다. 이러한 병렬 처리 추가 비용을 ‘오버헤드’라고 합니다. PLINQ 쿼리의 성능을 최적화하기 위해 목표는 즐거운 병렬인 파트를 최대화하고 오버헤드가 필요한 파트를 최소화하는 것입니다. 이 문서에서는 올바른 결과를 생성하면서 가능한 한 효율적인 PLINQ 쿼리를 작성하는 데 도움이 되는 정보를 제공합니다.  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc7a0991ae308f1c61026e946021d22da9a4bc3b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 032958c24e03025fc3fc3eee2aae40bdd4491e7b
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583547"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052727"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 개발 가이드
 이 섹션에서는 .NET Framework 앱을 생성, 구성, 디버그, 배포하고 보안을 적용하는 방법을 설명합니다. 이 섹션에서는 또한 동적 프로그래밍, 상호 운용성, 확장성, 메모리 관리 및 스레딩과 같은 기술 영역에 대한 정보를 제공합니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "65583547"
  .NET Framework 앱을 다시 컴파일하지 않고도 구성 파일을 사용하여 설정을 변경할 수 있는 방법에 대해 설명합니다.  
   
  [.NET Native로 앱 컴파일](../../docs/framework/net-native/index.md)  
- [!INCLUDE[net_native](../../includes/net-native-md.md)] 미리 컴파일 기술을 사용하여 Windows 스토어 앱을 빌드 및 배포하는 방법을 설명합니다. [!INCLUDE[net_native](../../includes/net-native-md.md)]에서는 관리 코드(C#)로 작성되며 .NET Framework을 대상으로 지정하는 앱을 네이티브 코드로 컴파일합니다.  
+ .NET 네이티브 미리 컴파일 기술을 사용하여 Windows 스토어 앱을 빌드 및 배포하는 방법을 설명합니다. .NET 네이티브에서는 관리 코드(C#)로 작성되며 .NET Framework을 대상으로 지정하는 앱을 네이티브 코드로 컴파일합니다.  
   
  [보안](../../docs/standard/security/index.md)  
  안전한 앱 개발을 용이하게 하는 .NET Framework의 클래스 및 서비스에 대한 정보를 제공합니다.  

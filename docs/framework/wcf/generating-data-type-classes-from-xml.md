@@ -2,15 +2,15 @@
 title: XML에서 데이터 형식 클래스 생성
 ms.date: 03/30/2017
 ms.assetid: e4e5e4e8-527f-44d1-92fa-8904a08784ea
-ms.openlocfilehash: c1b5dfda8aa5370dbc202ab90c75ab5677970467
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b99bb40105398dbd91b910c4a19828d069c3d9e7
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929573"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380216"
 ---
 # <a name="generating-data-type-classes-from-xml"></a>XML에서 데이터 형식 클래스 생성
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에는 XML에서 데이터 형식 클래스를 생성하는 새 기능이 포함되어 있습니다. 이 항목에서는.NET 블로그 RSS 피드를 자동으로 생성 하는 방법을 설명 합니다.  
+.NET framework 4.5에서 XML 데이터 형식 클래스를 생성 하는 새 기능이 포함 됩니다. 이 항목에서는.NET 블로그 RSS 피드를 자동으로 생성 하는 방법을 설명 합니다.  
   
 ### <a name="obtaining-the-xml-from-the-net-blog-rss-feed"></a>피드.NET 블로그 rss에서 XML 가져오기  
   
@@ -22,7 +22,7 @@ ms.locfileid: "61929573"
   
 ### <a name="creating-the-data-types"></a>데이터 형식 만들기  
   
-1. 프록시를 사용할 코드 파일을 엽니다. 이 파일은 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 프로젝트의 일부여야 합니다.  
+1. 프록시를 사용할 코드 파일을 엽니다. 이 파일에는.NET Framework 4.5 프로젝트의 일부 여야 합니다.  
   
 2. 커서를 기존 클래스 외부에 있는 파일의 한 위치에 배치합니다.  
   

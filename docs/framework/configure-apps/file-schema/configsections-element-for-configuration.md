@@ -7,21 +7,21 @@ helpviewer_keywords:
 - configSections Element
 - <configSections> Element
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: dc2bb949c7db4f70c20c3c0b687cacafed8696df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d522d004630dee942e24c39a936feae7dc957bd5
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674805"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300785"
 ---
 # <a name="configsections-element-for-configuration"></a>\<configSections > 요소에 대 한 \<구성 >
 
 구성 섹션 및 네임 스페이스 선언을 포함합니다.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;**\<configSections>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp; **\<configSections>**
 
 ## <a name="attributes"></a>특성
 
@@ -31,16 +31,16 @@ ms.locfileid: "61674805"
 
 |     | 설명 |
 | --- | ----------- |
-| [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다. |
+| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다. |
 
 ## <a name="child-elements"></a>자식 요소
 
 |     | 설명 |
 | --- | ----------- |
-| [**\<section>**](~/docs/framework/configure-apps/file-schema/section-element.md) | 구성 섹션 선언을 포함합니다. |
-| [**\<sectionGroup>**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | 구성 섹션에 대 한 네임 스페이스를 정의합니다. |
-| [**\<remove>**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | 미리 정의 된 섹션 또는 섹션 그룹을 제거합니다. |
-| [**\<clear>**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | 모든 이전에 정의 된 섹션 및 섹션 그룹을 지웁니다. |
+| [ **\<section>** ](~/docs/framework/configure-apps/file-schema/section-element.md) | 구성 섹션 선언을 포함합니다. |
+| [ **\<sectionGroup>** ](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | 구성 섹션에 대 한 네임 스페이스를 정의합니다. |
+| [ **\<remove>** ](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | 미리 정의 된 섹션 또는 섹션 그룹을 제거합니다. |
+| [ **\<clear>** ](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | 모든 이전에 정의 된 섹션 및 섹션 그룹을 지웁니다. |
 
 ## <a name="remarks"></a>설명
 

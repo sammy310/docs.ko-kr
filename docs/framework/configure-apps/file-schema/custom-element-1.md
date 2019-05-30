@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: bfc2a916e37ac27d45746eb268912b3752f4d80f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad98617cd4e88d1650f67136536b7dd5994233a4
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705300"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301148"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>SingleTagSectionHandler에 대 한 사용자 지정 요소
 
 정의한 사용자 지정 구성 섹션에서 설정을 정의 \<섹션 > 사용 하 여 요소를 <xref:System.Configuration.SingleTagSectionHandler> 클래스입니다.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;*\<sectionName>*
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp; *\<sectionName>*
 
 ## <a name="syntax"></a>구문
 
@@ -36,7 +36,7 @@ ms.locfileid: "61705300"
 
 |     | 설명 |
 | --- | ----------- |
-| [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다. |
+| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다. |
 
 ## <a name="child-elements"></a>자식 요소
 

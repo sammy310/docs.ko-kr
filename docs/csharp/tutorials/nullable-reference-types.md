@@ -3,12 +3,12 @@ title: nullable 참조 형식을 사용하여 디자인
 description: 이 고급 자습서에서는 nullable 참조 형식을 소개합니다. 참조 값이 null일 수 있는 경우에 대한 디자인 의도를 표현하고 컴파일러가 null일 수 없는 경우를 적용하게 하는 방법을 알아봅니다.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 97b41574b328c9f6bed60d4bf2943c7a726261d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cd73a73554514c2b7c70c78ba24038ee8d543266
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296149"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195830"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>자습서: nullable 참조 형식 및 nullable이 아닌 참조 형식을 사용하여 디자인 의도를 보다 명확하게 표현
 
@@ -36,15 +36,18 @@ C# 8.0 베타 컴파일러를 포함하여 .NET Core를 실행하도록 머신�
 
 ## <a name="create-the-application-and-enable-nullable-reference-types"></a>애플리케이션을 만들고 nullable 참조 형식을 사용하도록 설정
 
-Visual Studio 또는 `dotnet new console`을 사용하여 명령줄에서 새로운 콘솔 애플리케이션을 만듭니다. 응용 프로그램 이름을 `NullableIntroduction`으로 지정합니다. 애플리케이션을 만든 후에는 C# 8 베타 기능을 사용하도록 설정해야 합니다. `csproj` 파일을 열고 `PropertyGroup` 요소에 `LangVersion` 요소를 추가합니다. C# 8 프로젝트에서도 **nullable 참조 형식** 기능을 옵트인해야 합니다. 기능이 켜지고 나면 기존 참조 변수 선언이 **nullable이 아닌 참조 형식**으로 바뀌기 때문입니다. 이러한 의사 결정은 기존 코드에 적절한 null 확인이 없는 문제를 찾는 데 도움이 되지만 원래 디자인 의도를 정확하게 반영하지 않을 수 있습니다. `NullableContextOptions`요소를 `enable`로 설정하여 이 기능을 켭니다.
+Visual Studio 또는 `dotnet new console`을 사용하여 명령줄에서 새로운 콘솔 애플리케이션을 만듭니다. 응용 프로그램 이름을 `NullableIntroduction`으로 지정합니다. 애플리케이션을 만든 후에는 C# 8 베타 기능을 사용하도록 설정해야 합니다. `csproj` 파일을 열고 `PropertyGroup` 요소에 `LangVersion` 요소를 추가합니다. C# 8 프로젝트에서도 **nullable 참조 형식** 기능을 옵트인해야 합니다. 기능이 켜지고 나면 기존 참조 변수 선언이 **nullable이 아닌 참조 형식**으로 바뀌기 때문입니다. 이러한 의사 결정은 기존 코드에 적절한 null 확인이 없는 문제를 찾는 데 도움이 되지만 원래 디자인 의도를 정확하게 반영하지 않을 수 있습니다. `Nullable`요소를 `enable`로 설정하여 이 기능을 켭니다.
 
 ```xml
 <LangVersion>8.0</LangVersion>
-<NullableContextOptions>enable</NullableContextOptions>
+<Nullable>enable</Nullable>
 ```
 
+> [!IMPORTANT]
+> `Nullable` 요소의 이전 이름은 `NullableContextOptions`였습니다. Visual Studio 2019, 16.2-p1에서는 바뀐 이름이 제공됩니다. .NET Core SDK 3.0.100-preview5-011568에는 이 변경이 적용되지 않습니다. .NET Core CLI를 사용하는 경우 다음 미리 보기를 사용할 수 있을 때까지 `NullableContextOptions`를 사용해야 합니다.
+
 > [!NOTE]
-> 미리 보기 모드가 아닌 C# 8 정식 출시 버전에서는 새로운 프로젝트 템플릿에 의해 `NullableContextOptions` 요소가 추가됩니다. 그때까지는 이 요소를 수동으로 추가해야 합니다.
+> 미리 보기 모드가 아닌 C# 8 정식 출시 버전에서는 새로운 프로젝트 템플릿에 의해 `Nullable` 요소가 추가됩니다. 그때까지는 이 요소를 수동으로 추가해야 합니다.
 
 ### <a name="design-the-types-for-the-application"></a>애플리케이션의 형식 디자인
 

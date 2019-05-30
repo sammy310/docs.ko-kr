@@ -2,12 +2,12 @@
 title: 마이크로 서비스 주소 지정 기능 및 서비스 레지스트리
 description: 마이크로 서비스 아키텍처에서 컨테이너 이미지 레지스트리의 역할을 이해합니다.
 ms.date: 09/20/2018
-ms.openlocfilehash: 5b601f19b60a8e989977e7135138add7644bd7b6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 756be4d7102d2d8ef36ffbf172b70b08872c028c
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639963"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66196011"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>마이크로 서비스 주소 지정 기능 및 서비스 레지스트리
 
@@ -15,7 +15,7 @@ ms.locfileid: "65639963"
 
 [서비스 레지스트리 패턴](https://microservices.io/patterns/service-registry.html)은 서비스 검색의 핵심 부분입니다. 레지스트리는 서비스 인스턴스의 네트워크 위치를 포함하는 데이터베이스입니다. 서비스 레지스트리는 항상 사용 가능하고 최신 상태를 유지해야 합니다. 클라이언트는 서비스 레지스트리에서 가져온 네트워크 위치를 캐시할 수 있습니다. 그러나 해당 정보가 결국 만료되고 클라이언트는 서비스 인스턴스를 더 이상 검색할 수 없습니다. 따라서 서비스 레지스트리는 복제 프로토콜을 사용하여 일관성을 유지하는 서버 클러스터로 구성됩니다.
 
-일부 마이크로 서비스 배포 환경(이후 섹션에서 다루는 클러스터라고 함)에서 서비스 검색은 기본 제공됩니다. 예를 들어 Kubernetes(AKS) 환경을 갖춘 Azure Container Service는 서비스 인스턴스 등록 및 등록 취소를 처리할 수 있습니다. 또한 서버 쪽 검색 라우터의 역할을 수행하는 각 클러스터 호스트에서 프록시를 실행합니다. 또 다른 예로 Azure Service Fabric이 있습니다. 여기서는 해당 기본 명명 서비스를 통해 서비스 레지스트리를 제공합니다.
+일부 마이크로 서비스 배포 환경(이후 섹션에서 다루는 클러스터라고 함)에서 서비스 검색은 기본 제공됩니다. 예를 들어 Azure Kubernetes Service(AKS) 환경은 서비스 인스턴스 등록 및 등록 취소를 처리할 수 있습니다. 또한 서버 쪽 검색 라우터의 역할을 수행하는 각 클러스터 호스트에서 프록시를 실행합니다. 또 다른 예로 Azure Service Fabric이 있습니다. 여기서는 해당 기본 명명 서비스를 통해 서비스 레지스트리를 제공합니다.
 
 서비스 레지스트리와 API 게이트웨이 패턴 간에 특정한 겹침이 있습니다. 따라서 이 문제도 해결할 수 있습니다. 예를 들어 [Service Fabric 역방향 프록시](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy)는 Service Fabrice 명명 서비스를 기반으로 하고 내부 서비스에 대한 주소 확인을 해결하는 데 도움이 되는 API 게이트웨이의 구현 형식입니다.
 

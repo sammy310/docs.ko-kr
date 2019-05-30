@@ -2,12 +2,12 @@
 title: WorkflowIdentity 및 버전 관리 사용
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-ms.openlocfilehash: 77f5663665d56209cbb1ebc5999d44d411189f04
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: acf2b2c9502487c8bc8960f2a5625db94c31945f
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603290"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380125"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>WorkflowIdentity 및 버전 관리 사용
 <xref:System.Activities.WorkflowIdentity>는 워크플로 응용 프로그램 개발자에게 이름 및 <xref:System.Version>을 워크플로 정의에 연결하는 방법을 제공하며, 이러한 정보는 지속형 워크플로 인스턴스와 연결됩니다. 이 ID 정보는 워크플로 응용 프로그램 개발자가 여러 버전의 워크플로 정의를 side-by-side로 실행하는 경우와 같은 시나리오를 가능하도록 하는 데 사용될 수 있으며 동적 업데이트와 같은 다른 기능의 토대를 제공합니다. 이 항목에서는 <xref:System.Activities.WorkflowIdentity> 호스팅과 함께 <xref:System.Activities.WorkflowApplication>를 사용하는 방법을 간단하게 설명합니다. 워크플로 서비스에서 워크플로 정의의 side-by-side-실행 정보를 참조 하세요 [WorkflowServiceHost에서 Side-by-side 버전 관리](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md)합니다. 동적 업데이트에 대 한 자세한 내용은 [동적 업데이트](dynamic-update.md)합니다.  
@@ -139,9 +139,9 @@ wfApp.Load(instance);
 ```  
   
 ## <a name="UpdatingWF4PersistenceDatabases"></a> 워크플로 버전 관리를 지원 하기 위해.NET Framework 4 지 속성 데이터베이스 업그레이드  
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 데이터베이스 스크립트를 사용하여 만들어진 지속성 데이터베이스를 업그레이드하기 위해 SqlWorkflowInstanceStoreSchemaUpgrade.sql 데이터베이스 스크립트가 제공됩니다. 이 스크립트는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에 도입된 새 버전 관리 기능을 지원하도록 데이터베이스를 업데이트합니다. 데이터베이스의 지속형 워크플로 인스턴스는 기본 버전 관리 값이 제공 받으며, side-by-side 실행 및 동적 업데이트에 참여할 수 있습니다.  
+ [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 데이터베이스 스크립트를 사용하여 만들어진 지속성 데이터베이스를 업그레이드하기 위해 SqlWorkflowInstanceStoreSchemaUpgrade.sql 데이터베이스 스크립트가 제공됩니다. 이 스크립트는.NET Framework 4.5에서 도입 된 새 버전 관리 기능을 지원 하도록 데이터베이스를 업데이트 합니다. 데이터베이스의 지속형 워크플로 인스턴스는 기본 버전 관리 값이 제공 받으며, side-by-side 실행 및 동적 업데이트에 참여할 수 있습니다.  
   
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 워크플로 응용 프로그램이 제공된 스크립트를 사용하여 업그레이드되지 않은 지속성 데이터베이스에서 새 버전 관리 기능을 사용하는 지속성 작업을 시도하면 다음 메시지와 함께 <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException>이 throw됩니다.  
+ .NET Framework 4.5 워크플로 응용 프로그램 업그레이드 되지 않았습니다. 제공된 된 스크립트를 사용 하 여 지 속성 데이터베이스에서 새 버전 관리 기능을 사용 하는 지 속성 작업을 시도 하는 경우는 <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> 유사한 메시지를 사용 하 여 throw 되는 다음 메시지입니다.  
   
  **SqlWorkflowInstanceStore의 데이터베이스 버전이 '4.0.0.0'입니다. InstancePersistenceCommand 'System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand'을(를) 이 데이터베이스 버전에 대해 실행할 수 없습니다.  '4.5.0.0' 데이터베이스를 업그레이드 하세요.**  
 ### <a name="ToUpgrade"></a> 데이터베이스 스키마를 업그레이드 하려면  

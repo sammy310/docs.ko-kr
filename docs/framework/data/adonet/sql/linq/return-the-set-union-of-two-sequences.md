@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8b8bd3cb-86d4-4a3b-9906-61f68726dd1f
-ms.openlocfilehash: 0d0d87e2fe14553d468384dfa2cfde1d3ee0d526
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ade12c42ac6a307c341bc5be26430fb56e51ee5
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876930"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380036"
 ---
 # <a name="return-the-set-union-of-two-sequences"></a>두 시퀀스의 합집합 반환
 <xref:System.Linq.Queryable.Union%2A> 연산자를 사용하여 두 시퀀스의 합집합을 반환합니다.  
   
 ## <a name="example"></a>예제  
- 이 예제에서는 <xref:System.Linq.Queryable.Union%2A>을 사용하여 `Customers` 또는 `Employees`가 있는 모든 국가의 시퀀스를 반환합니다.  
+ 이 예제에서는 <xref:System.Linq.Queryable.Union%2A> 는 모든 국가/지역 중가 시퀀스를 반환 하도록 `Customers` 또는 `Employees`합니다.  
   
  [!code-csharp[DLinqQueryExamples#43](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#43)]
  [!code-vb[DLinqQueryExamples#43](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#43)]  

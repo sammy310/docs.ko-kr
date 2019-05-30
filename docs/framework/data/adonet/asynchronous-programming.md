@@ -2,20 +2,20 @@
 title: 비동기 프로그래밍
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: c41a231959536f4bd558fcd3e94d0d58c2375021
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 2698ffabb1f4d7c25f8d889c549c27b668647d62
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584501"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380077"
 ---
 # <a name="asynchronous-programming"></a>비동기 프로그래밍
 
-이 항목에서는 비동기 프로그래밍에.NET Framework Data Provider for SQL Server (SqlClient)에 도입 된 비동기 프로그래밍 기능을 지원 하려고 하는 향상 된 기능을 포함 하 여에 대 한 지원을 설명 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]합니다.
+이 항목에서는 비동기 프로그래밍에.NET Framework Data Provider for SQL Server (SqlClient).NET Framework 4.5에서 도입 된 비동기 프로그래밍 기능을 지원 하기 위한 향상 된 기능을 포함 하 여에 대 한 지원을 설명 합니다.
 
 ## <a name="legacy-asynchronous-programming"></a>레거시 비동기 프로그래밍
 
-[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 이전에 SqlClient의 비동기 프로그래밍은 다음 메서드 및 `Asynchronous Processing=true` 연결 속성을 사용하여 수행되었습니다.
+.NET Framework 4.5 이전 SqlClient 사용 하 여 비동기 프로그래밍은 다음 메서드를 사용 하 여 수행 된 및 `Asynchronous Processing=true` 연결 속성:
 
 1. <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A?displayProperty=nameWithType>
 
@@ -23,16 +23,16 @@ ms.locfileid: "65584501"
 
 3. <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>
 
-[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]에서 이 기능은 SqlClient에 남아 있습니다.
+이 기능은.NET Framework 4.5에서 SqlClient에 남아 있습니다.
 
 > [!TIP]
-> 부터 합니다 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], 이러한 레거시 메서드에 더 이상 필요 합니다. `Asynchronous Processing=true` 연결 문자열에 없습니다.
+> .NET Framework 4.5부터 이러한 레거시 메서드에 더 이상 필요 `Asynchronous Processing=true` 연결 문자열에 없습니다.
 
-## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]에 추가된 비동기 프로그래밍 기능
+## <a name="asynchronous-programming-features-added-in-net-framework-45"></a>.NET Framework 4.5에에서 추가 하는 비동기 프로그래밍 기능
 
 새로운 비동기 프로그래밍 기능에서는 코드를 비동기화하는 간단한 기술을 제공합니다.
 
-[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]에서 도입된 비동기 프로그래밍 기능에 대한 자세한 내용은 다음을 참조하세요.
+.NET Framework 4.5에서 도입 된 비동기 프로그래밍 기능에 대 한 자세한 내용은 다음을 참조 하세요.
 
 - [C#의 비동기 프로그래밍](../../../csharp/async.md)
 
@@ -53,7 +53,7 @@ ms.locfileid: "65584501"
 
 `async` 메서드를 호출할 때는 추가 스레드가 할당되지 않습니다. 완료 시 기존 I/O 완료 스레드를 잠시 사용할 수 있습니다.
 
-[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]에서는 비동기 프로그래밍을 지원하기 위해 다음 메서드가 추가되었습니다.
+다음 메서드는 비동기 프로그래밍을 지원 하려면.NET Framework 4.5에 추가 되었습니다.
 
 - <xref:System.Data.Common.DbConnection.OpenAsync%2A?displayProperty=nameWithType>
 

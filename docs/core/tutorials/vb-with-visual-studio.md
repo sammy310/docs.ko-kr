@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: faa801d8ded90b1a0f68eac1824e60ee6ba468a4
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 32e2acedb0f837703fb716c45887672494f8d40f
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612682"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959272"
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Visual Studio 2017에서 .NET Core SDK를 사용하여 Visual Basic Hello World 애플리케이션 빌드
 
@@ -63,7 +63,7 @@ ms.locfileid: "59612682"
 
    [!code-vb[GettingStarted#1](../../../samples/snippets/core/tutorials/vb-with-visual-studio/helloworld.vb#1)]
 
-   이 코드는 기존 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, <xref:System.Console.Write%2A?displayProperty=nameWithType> 및 <xref:System.Console.ReadKey%2A?displayProperty=nameWithType> 문을 대체합니다.
+   이 코드는 `Main` 메서드의 콘텐츠를 바꿉니다.
 
    ![업데이트된 Main 메서드가 포함된 Visual Studio 프로그램 파일](./media/vb-with-visual-studio/visual-basic-code-window.png)
 

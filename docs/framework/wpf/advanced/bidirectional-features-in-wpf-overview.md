@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 16cf232ccbdcca496aaa18fc2cfac280072ca24f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a3a991a841182438dca4ef0a4067d333180f4f60
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655482"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380178"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF의 양방향 기능 개요
 다른 개발 플랫폼과 달리 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 혼합된 왼쪽에서 오른쪽을 오른쪽으로 동일한 문서에 데이터를 유지 하는 예를 들어, 양방향 콘텐츠의 신속한 개발을 지 원하는 많은 기능이 있습니다. 동시에, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 아랍어 및 히브리어 사용자와 같은 양방향 기능이 필요한 사용자를 위한 뛰어난 경험을 만듭니다.  
@@ -178,11 +178,11 @@ ms.locfileid: "64655482"
   
  **대체**:  
   
- 이 속성에는 수행할 숫자 대체의 형식을 지정합니다. 다음 중 하나를 사용 <xref:System.Windows.Media.NumberSubstitutionMethod> 열거형 값입니다.  
+ 이 속성에는 수행할 숫자 대체의 형식을 지정합니다. 다음 중 하나를 사용 <xref:System.Windows.Media.NumberSubstitutionMethod> 열거형 값:  
   
 - <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: 대체 메서드가 숫자 문화권에 따라 결정 됩니다 <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> 속성입니다. 이 값이 기본값입니다.  
   
-- <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: 숫자 문화권은 아랍어 또는 페르시아어 문화권 인 경우 숫자가 컨텍스트에 따라 지정 합니다.  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: 숫자 문화권을 아랍어 또는 페르시아어 문화권 인 경우 숫자가 컨텍스트에 따라 지정 합니다.  
   
 - <xref:System.Windows.Media.NumberSubstitutionMethod.European>: 숫자는 항상 유럽 숫자로 렌더링 됩니다.  
   

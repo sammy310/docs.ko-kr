@@ -17,6 +17,7 @@ helpviewer_keywords:
 - indexer operator [C#]
 - '[] operator [C#]'
 - null-conditional operators [C#]
+- Elvis operator [C#]
 - ?. operator [C#]
 - ?[] operator [C#]
 - invocation operator [C#]
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: a76c2855196b229918ee0a6a7d2a4dc66d87d059
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: eec70f5446eec11fa4e241b86eed4ed8d6146f85
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881039"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195771"
 ---
 # <a name="member-access-operators-c-reference"></a>멤버 액세스 연산자(C# 참조)
 
@@ -99,7 +100,7 @@ void TraceMethod() {}
 
 ## <a name="null-conditional-operators--and-"></a>Null 조건부 연산자 ?. 및 ?[]
 
-C# 6 이상에서 사용할 수 있는 null 조건부 연산자는 피연산자가 null이 아닌 것으로 평가되었을 때만 멤버 액세스 `?.`, 또는 요소 액세스 `?[]` 연산을 피연산자에게 적용합니다. 피연산자가 `null`로 평가되면 연산자 적용 결과가 `null`입니다.
+C# 6 이상에서 사용할 수 있는 null 조건부 연산자는 피연산자가 null이 아닌 것으로 평가되었을 때만 멤버 액세스 `?.`, 또는 요소 액세스 `?[]` 연산을 피연산자에게 적용합니다. 피연산자가 `null`로 평가되면 연산자 적용 결과가 `null`입니다. Null 조건부 멤버 액세스 연산자 `?.`를 Elvis 연산자라고도 합니다.
 
 Null 조건부 연산자는 단락 연산자입니다. 즉 조건부 멤버나 요소 액세스 작업의 한 체인의 작업에서 `null`을 반환하면 나머지 체인은 실행되지 않습니다. 다음 예제에서 `A`가 `null`로 평가되면 `B`가 평가되지 않고, `A` 또는 `B`가 `null`로 평가되면 `C`가 평가되지 않습니다.
 

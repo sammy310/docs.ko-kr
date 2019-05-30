@@ -2,15 +2,15 @@
 title: '방법: 기존 서비스 계약을 사용하는 워크플로 서비스 만들기'
 ms.date: 03/30/2017
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
-ms.openlocfilehash: c2ca9c349718c3939d74d052ff0ed448879cd045
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82c9ccc21600ae0b9ff8c514a51ec9b97f8f1d37
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945576"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378126"
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>방법: 기존 서비스 계약을 사용하는 워크플로 서비스 만들기
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]는 계약 중심 워크플로 개발의 형태로 웹 서비스와 워크플로 간에 보다 우수한 통합 성능을 제공합니다. 계약 중심 워크플로 개발 도구를 사용하면 코드에서 계약을 먼저 디자인할 수 있습니다. 그러면 이 도구는 계약의 작업을 위해 도구 상자에 활동 템플릿을 자동으로 생성합니다.  
+.NET framework 4.5 기능에는 웹 서비스 및 계약 중심 워크플로 개발의 형태로 워크플로 간의 통합 향상. 계약 중심 워크플로 개발 도구를 사용하면 코드에서 계약을 먼저 디자인할 수 있습니다. 그러면 이 도구는 계약의 작업을 위해 도구 상자에 활동 템플릿을 자동으로 생성합니다.  
   
 > [!NOTE]
 >  이 항목에서는 계약 중심 워크플로 서비스를 만들기 위한 단계별 지침을 제공합니다. 계약 중심 워크플로 서비스 개발에 대 한 자세한 내용은 참조 하세요. [계약 중심 워크플로 서비스 개발](contract-first-workflow-service-development.md)합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "61945576"
   
 ### <a name="importing-the-service-contract"></a>서비스 계약 가져오기  
   
-1. 프로젝트를 마우스 오른쪽 단추로 클릭 **솔루션 탐색기** 선택한 **서비스 계약 가져오기**합니다. 아래  **\<현재 프로젝트 >**, 모든 하위 노드를 열고 선택한 **IBookService**합니다. **확인**을 클릭합니다.  
+1. 프로젝트를 마우스 오른쪽 단추로 클릭 **솔루션 탐색기** 선택한 **서비스 계약 가져오기**합니다. 아래  **\<현재 프로젝트 >** , 모든 하위 노드를 열고 선택한 **IBookService**합니다. **확인**을 클릭합니다.  
   
 2. 작업이 성공적으로 완료되었음을 알리는 대화 상자가 열리고 프로젝트가 빌드된 후 생성된 활동이 도구 상자에 나타납니다. **확인**을 클릭합니다.  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 416a00eb6966a9c5f83427182d9a12c4bbb20810
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b47c4d07fc0ee0cdaf53fe3c8199fb37dcb6c1b1
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592656"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377898"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions > 요소
 작업 예외가 처리되지 않으면 실행 중인 프로세스를 종료할지를 지정합니다.  
@@ -63,9 +63,9 @@ ms.locfileid: "64592656"
   
  에 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], 경우 기본값을 <xref:System.Threading.Tasks.Task> 있는 관찰 되지 않은 예외는 가비지 수집, 종료자 예외를 throw 하 고 프로세스를 종료 합니다. 프로세스의 종료는 가비지 수집 및 종료 시간에 따라 결정 됩니다.  
   
- 개발자가 작업 기반 비동기 코드를 작성 하는 데 쉽게는 [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 관찰 되지 않은 예외에 대 한이 기본 동작을 변경 합니다. 관찰 되지 않은 예외를 일으킬 수는 <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> 이벤트를 발생 하지만 기본적으로 프로세스 종료 하지 않습니다. 대신, 이벤트 처리기에서 예외를 관찰 하는 여부에 관계 없이 이벤트가 발생 한 후 예외는 무시 됩니다.  
+ 개발자가 작업 기반 비동기 코드를 작성 하는 데 쉽게.NET Framework 4.5는 관찰 되지 않은 예외에 대 한이 기본 동작을 변경 합니다. 관찰 되지 않은 예외를 일으킬 수는 <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> 이벤트를 발생 하지만 기본적으로 프로세스 종료 하지 않습니다. 대신, 이벤트 처리기에서 예외를 관찰 하는 여부에 관계 없이 이벤트가 발생 한 후 예외는 무시 됩니다.  
   
- [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], 사용할 수는 [ \<ThrowUnobservedTaskExceptions > 요소](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) 사용 하도록 설정 하려면 응용 프로그램 구성 파일에서를 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] 동작의 예외를 throw 합니다.  
+ .NET Framework 4.5에서 사용할 수 있습니다는 [ \<ThrowUnobservedTaskExceptions > 요소](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) 사용 하도록 설정 하려면 응용 프로그램 구성 파일에는 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] 동작의 예외를 throw 합니다.  
   
  또한 다음 방법 중 하나에서 예외 동작을 지정할 수 있습니다.  
   

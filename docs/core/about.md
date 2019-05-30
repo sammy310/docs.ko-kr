@@ -3,12 +3,12 @@ title: .NET Core 정보
 description: .NET Core에 대한 자세히 알아봅니다.
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: 87514b476124196c835e4b22154f9bbaca7482a5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: fb6088bcadcdc9c28699446df035b899485c406d
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59296409"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003752"
 ---
 # <a name="about-net-core"></a>.NET Core 정보
 
@@ -17,7 +17,7 @@ ms.locfileid: "59296409"
 - **플랫폼 간:** Windows, macOS 및 Linux [운영 체제](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md)에서 실행됩니다.
 - **아키텍처 간에 일관됨:** x64, x86 및 ARM을 비롯한 여러 아키텍처에서 동일한 동작을 사용하여 코드를 실행합니다.
 - **명령줄 도구:**  로컬 개발 및 연속 통합 시나리오에서 사용할 수 있는 편리한 명령줄 도구를 포함합니다.
-- **유연한 배포:** 앱이나 설치된 side-by-side 사용자 또는 머신 수준에 포함할 수 있습니다. [Docker 컨테이너](docker/index.md)에서 사용될 수 있습니다.
+- **유연한 배포:** 앱이나 설치된 side-by-side(사용자 또는 시스템 수준 설치)에 포함할 수 있습니다. [Docker 컨테이너](docker/index.md)에서 사용될 수 있습니다.
 - **호환 가능:** .NET Core는 [.NET Standard](../standard/net-standard.md)를 통해 .NET Framework, Xamarin 및 Mono와 호환됩니다.
 - **오픈 소스:** .NET Core 플랫폼은 MIT 및 Apache 2 라이선스를 사용하는 오픈 소스입니다. .NET Core는 [.NET Foundation](https://dotnetfoundation.org/) 프로젝트입니다.
 - **Microsoft에서 지원됨:** .NET Core는 [.NET Core 지원](https://www.microsoft.com/net/core/support/)에 따라 Microsoft에서 지원됩니다.
@@ -61,7 +61,7 @@ C#, Visual Basic 및 F# 언어를 사용하여 .NET Core에 대한 애플리케�
 - [ASP.NET Core 런타임](https://www.microsoft.com/net/download/dotnet-core/2.1) - ASP.NET Core 및 .NET Core 런타임 및 프레임워크 라이브러리가 포함되어 있습니다.
 - [.NET Core SDK](https://www.microsoft.com/net/download/dotnet-core/2.1) - .NET CLI 도구, ASP.NET Core 런타임 및 .NET Core 런타임 및 프레임워크가 포함되어 있습니다.
 
-### <a name="open-source"></a>오픈 소스
+### <a name="open-source"></a>소스 열기
 
 [.NET Core](https://github.com/dotnet/core)는 오픈 소스([MIT 라이선스](https://github.com/dotnet/core/blob/master/LICENSE.TXT))이며 2014년 Microsoft에 의해 [.NET Foundation](https://dotnetfoundation.org)에 제공되었습니다. 이제 가장 많이 사용되는 .NET Foundation 프로젝트 중의 하나입니다. 이 프로젝트는 개인, 교육 또는 상업용으로 개인 및 회사에서 자유롭게 채택할 수 있습니다. 여러 회사에서 앱, 도구, 새 플랫폼 및 호스팅 서비스의 일부로 .NET Core를 사용합니다. 이러한 회사 중 일부는 GitHub에서 .NET Core에 대한 중요한 정보를 제공하고 [.NET Foundation Technical Steering Group(.NET Foundation 기술 방향 설정 그룹)](https://dotnetfoundation.org/blog/tsg-welcome)의 일부로 제품 판매에 대한 지침을 제공합니다.
 
@@ -102,6 +102,8 @@ Windows 및 Unix 구현은 크기가 비슷합니다. CoreFX는 [Microsoft.Win32
 - **오픈 소스** -- .NET Core는 오픈 소스이며, [.NET Framework의 읽기 전용 하위 집합](https://github.com/microsoft/referencesource)은 오픈 소스입니다.
 
 .NET Core는 고유하며, .NET Framework 및 기타 .NET 구현과 현저한 차이가 있지만, 원본 또는 이진 공유 기술을 사용하여 이러한 구현 간에 간단하게 코드를 공유할 수 있습니다.
+
+.NET Core는 side-by-side 설치를 지원하고 그 런타임은 .NET Framework와 완전히 독립적이므로 .NET Framework가 설치된 머신에 아무 문제 없이 설치할 수 있습니다.
 
 ### <a name="comparison-with-mono"></a>Mono와 비교
 

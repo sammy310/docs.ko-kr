@@ -5,20 +5,20 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-ms.openlocfilehash: f646445d5fa4556646700bb5daf8ac859631da2c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b6c9c3508c53e8a68a3f7e1cb12b6b6c95600e7b
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61880123"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380096"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>방법: 자동 바인딩 리디렉션 사용 설정 및 해제
 
-대상으로 하는 Visual Studio에서 앱을 컴파일할 때의 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 이상 버전에서는 바인딩 리디렉션이 어셈블리 통합을 재정의 하도록 앱 구성 파일을에 자동으로 추가 될 수 있습니다. 수동으로 바인딩 리디렉션을 응용 프로그램의 구성 파일에 지정할 지라도 응용 프로그램 또는 해당 구성 요소가 동일 어셈블리의 두 개 이상의 버전을 참조할 경우 바인딩 리디렉션을 추가합니다. 자동 바인딩 리디렉션 기능에 영향을 데스크톱 앱 및 웹 앱 대상으로 하는 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 이상 버전, 웹 앱에 대 한 동작을 약간 다릅니다. 하지만 합니다. 수동으로 바인딩 리디렉션을 작성 하려는 경우에이 기능을 비활성화할 수 있습니다 또는 기존 앱 해당 이전 버전의 대상으로.NET Framework를 있는 경우 자동 바인딩 리디렉션을 사용할 수 있습니다.
+Visual Studio는 대상.NET Framework 4.5.1 이상 버전에서 앱을 컴파일할 때 어셈블리 통합을 재정의 하려면 앱 구성 파일에 바인딩 리디렉션을 자동으로 추가할 수 있습니다. 수동으로 바인딩 리디렉션을 응용 프로그램의 구성 파일에 지정할 지라도 응용 프로그램 또는 해당 구성 요소가 동일 어셈블리의 두 개 이상의 버전을 참조할 경우 바인딩 리디렉션을 추가합니다. 자동 바인딩 리디렉션 기능 또는 영향을 데스크톱 앱 및 웹 앱 대상인.NET Framework 4.5.1 이상 버전을 웹 앱에 대 한 동작을 약간 다릅니다. 하지만 합니다. 수동으로 바인딩 리디렉션을 작성 하려는 경우에이 기능을 비활성화할 수 있습니다 또는 기존 앱 해당 이전 버전의 대상으로.NET Framework를 있는 경우 자동 바인딩 리디렉션을 사용할 수 있습니다.
 
 ## <a name="disable-automatic-binding-redirects-in-desktop-apps"></a>데스크톱 앱에서 자동 바인딩 리디렉션을 사용 하지 않도록 설정
 
-대상으로 하는 Windows 데스크톱 앱에 대해 기본적으로 자동 바인딩 리디렉션을 사용할 수는 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 이상. 바인딩 리디렉션이 출력 구성에 추가 됩니다 (**app.config**) 앱을 컴파일하면 파일과 그렇지 않은 경우에 발생할 수 있는 어셈블리 통합을 재정의 합니다. 소스 **app.config** 파일은 수정 되지 않습니다. 앱 용 프로젝트 파일을 수정 하 여 또는 Visual Studio에서 프로젝트의 속성에 있는 확인란을 선택 취소 하 여이 기능을 비활성화할 수 있습니다.
+자동 바인딩 리디렉션은 고.NET Framework 4.5.1 이상 버전을 대상으로 하는 Windows 데스크톱 앱에 대해 기본적으로 활성화 됩니다. 바인딩 리디렉션이 출력 구성에 추가 됩니다 (**app.config**) 앱을 컴파일하면 파일과 그렇지 않은 경우에 발생할 수 있는 어셈블리 통합을 재정의 합니다. 소스 **app.config** 파일은 수정 되지 않습니다. 앱 용 프로젝트 파일을 수정 하 여 또는 Visual Studio에서 프로젝트의 속성에 있는 확인란을 선택 취소 하 여이 기능을 비활성화할 수 있습니다.
 
 ### <a name="disable-through-project-properties"></a>프로젝트 속성을 통해 사용 하지 않도록 설정
 

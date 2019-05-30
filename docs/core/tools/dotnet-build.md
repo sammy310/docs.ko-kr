@@ -2,12 +2,12 @@
 title: dotnet build 명령
 description: dotnet build 명령은 프로젝트와 모든 종속성을 빌드합니다.
 ms.date: 04/24/2019
-ms.openlocfilehash: 6564aacbe520797b47095929cfe72c6b180b99a7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: df264fe830259832e5c75db9fd71230ba70a9f18
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632130"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959200"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -144,7 +144,7 @@ dotnet build [-h|--help]
   dotnet build --source c:\packages\mypackages
   ```
 
-* 프로젝트를 빌드하고 1.2.3.4 버전을 빌드 매개 변수로 설정합니다.
+* `-p` [MSBuild 옵션](#msbuild)을 사용하여 프로젝트를 빌드하고 버전 1.2.3.4를 빌드 매개 변수로 설정합니다.
 
   ```console
   dotnet build -p:Version=1.2.3.4

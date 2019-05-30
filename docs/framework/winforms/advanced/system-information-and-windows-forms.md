@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user names [Windows Forms], retrieving
 - system information [Windows Forms]
 ms.assetid: 30cf43a3-8cb2-4ff3-862b-6c34576616a8
-ms.openlocfilehash: eeb469dbf4553634aa50d0a9ea17e9b2464defb4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2edc2e867259f8884467c3d5b0ae3d22ba391a77
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934695"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380111"
 ---
 # <a name="system-information-and-windows-forms"></a>시스템 정보 및 Windows Forms
 경우에 따라 코드에서 결정 하기 위해 응용 프로그램에서 실행 되는 컴퓨터에 대 한 정보를 수집 해야 합니다. 예를 들어만 특정 네트워크 도메인;에 연결 하는 경우에 적용할 수 있는 함수를 해야 할 수 있습니다. 이 경우 도메인을 확인 하 고 도메인에 없는 경우 함수를 사용 하지 않도록 설정 하는 방법을 해야 합니다.  
@@ -34,8 +34,8 @@ MessageBox.Show("Good morning " & User & ". You are connected to " _
 string User = SystemInformation.UserName;  
 string Domain = SystemInformation.UserDomainName;  
   
-MessageBox.Show("Good morning " + User + ". You are connected to " _  
-+ Domain)  
+MessageBox.Show("Good morning " + User + ". You are connected to "
++ Domain);
 ```  
   
  모든 멤버는 <xref:System.Windows.Forms.SystemInformation> 클래스는 읽기 전용 이며 사용자의 설정을 수정할 수 없습니다. 컴퓨터에 연결 하는 모니터의 수는 모든 정보를 반환 하는 클래스의 100 개 이상의 멤버가 (<xref:System.Windows.Forms.SystemInformation.MonitorCount%2A>)의 Windows 탐색기 아이콘 간격으로 (<xref:System.Windows.Forms.SystemInformation.IconHorizontalSpacing%2A> 및 <xref:System.Windows.Forms.SystemInformation.IconVerticalSpacing%2A>).  

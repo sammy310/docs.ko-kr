@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a89df5067fdf6d82ee9836da2409194371b05bc0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eeb92845d9b4eb40eef496ffaf5b35e38ed91423
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795241"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301163"
 ---
 # <a name="encrypting-data"></a>데이터 암호화
 대칭 암호화와 비대칭 암호화는 서로 다른 프로세스를 사용하여 수행됩니다. 대칭 암호화는 스트림에서 수행되므로 많은 양의 데이터를 암호화하는 데 유용합니다. 비대칭 암호화는 적은 수의 바이트에서 수행되므로 적은 양의 데이터에만 유용합니다.  
@@ -246,8 +246,8 @@ class Class1
       RSAParameters rsaKeyInfo = new RSAParameters();  
   
       //Set rsaKeyInfo to the public key values.   
-      rsaKeyInfo.Modulus = PublicKey;  
-      rsaKeyInfo.Exponent = Exponent;  
+      rsaKeyInfo.Modulus = publicKey;  
+      rsaKeyInfo.Exponent = exponent;  
   
       //Import key parameters into RSA.  
       rsa.ImportParameters(rsaKeyInfo);  

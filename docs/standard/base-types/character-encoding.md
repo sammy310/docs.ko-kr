@@ -14,12 +14,12 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 735fedc5869ab82d49ef4d9068c67302bf825e2e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ac4de843b3a134b840fc37e3c1d8327fe0010d79
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634674"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960324"
 ---
 # <a name="character-encoding-in-net"></a>.NET의 문자 인코딩
 문자는 다양한 방법으로 표현할 수 있는 추상 엔터티입니다. 문자 인코딩은 지원되는 문자 집합의 각 문자와 해당 문자를 나타내는 일부 값의 쌍을 만드는 시스템입니다. 예를 들어 모르스 부호는 로마 알파벳의 각 문자와 전화선을 통한 전송에 적합한 점과 대시 패턴의 쌍을 만드는 문자 인코딩입니다. 컴퓨터의 문자 인코딩은 지원되는 문자 집합의 각 문자와 해당 문자를 나타내는 숫자 값의 쌍을 만듭니다. 문자 인코딩에는 다음 두 가지 구성 요소가 있습니다.  
@@ -78,8 +78,8 @@ ms.locfileid: "64634674"
   
  이러한 인코딩을 통해 유니코드 문자는 물론 레거시 애플리케이션에서 가장 일반적으로 사용되는 인코딩으로 작업할 수 있습니다. 또한 <xref:System.Text.Encoding> 에서 파생되는 클래스를 정의하고 해당 멤버를 재정의하여 사용자 지정 인코딩을 만들 수 있습니다.  
   
-### <a name="platform-notes-includenetcoreincludesnet-core-mdmd"></a>플랫폼 참고 사항: [!INCLUDE[net_core](../../../includes/net-core-md.md)]  
- 기본적으로 [!INCLUDE[net_core](../../../includes/net-core-md.md)] 에서는 코드 페이지 28591 이외의 코드 페이지 인코딩 및 유니코드 인코딩(예: UTF-8 및 UTF-16)을 사용할 수 없습니다. 그러나 .NET을 대상으로 하는 표준 Windows 앱에 있는 코드 페이지 인코딩을 해당 앱에 추가할 수 있습니다. 자세한 내용은 <xref:System.Text.CodePagesEncodingProvider> 항목을 참조하세요.  
+### <a name="platform-notes-net-core"></a>플랫폼 참고 사항: .NET Core  
+ 기본적으로 .NET Core에서는 코드 페이지 28591 이외의 코드 페이지 인코딩 및 유니코드 인코딩(예: UTF-8 및 UTF-16)을 사용할 수 없습니다. 그러나 .NET을 대상으로 하는 표준 Windows 앱에 있는 코드 페이지 인코딩을 해당 앱에 추가할 수 있습니다. 자세한 내용은 <xref:System.Text.CodePagesEncodingProvider> 항목을 참조하세요.  
   
 <a name="Selecting"></a>   
 ## <a name="selecting-an-encoding-class"></a>인코딩 클래스 선택  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
-ms.openlocfilehash: 33473eadefabc2bcbbb552d225d021eae4bed0bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f645232d2ae9d9bad8c26a5b9fec2243c6cf9d0
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033386"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380018"
 ---
 # <a name="sort-elements-in-a-sequence"></a>시퀀스의 요소 정렬
 <xref:System.Linq.Enumerable.OrderBy%2A> 연산자를 사용하여 하나 이상의 키에 따른 시퀀스를 정렬합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "62033386"
  [!code-vb[DLinqQueryExamples#24](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#24)]  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 발송된 나라별로 `EmployeeID 1`에서 주문을 정렬한 다음 운임료를 최상위에서 최하위 기준으로 정렬합니다.  
+ 다음 예제에서 주문을 정렬 `EmployeeID 1` 여 `ShipCountry`, 내림차순 freight 기준입니다.  
   
  [!code-csharp[DLinqQueryExamples#25](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#25)]
  [!code-vb[DLinqQueryExamples#25](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#25)]  

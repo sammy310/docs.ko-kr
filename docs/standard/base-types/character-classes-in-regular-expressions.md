@@ -15,15 +15,16 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 54d190bfa3f13ccfc78dd2501018442afb281d37
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e577f376b347442f6693a7a5478757ce3b698752
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634704"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053010"
 ---
 # <a name="character-classes-in-regular-expressions"></a>정규식의 문자 클래스
-<a name="Top"></a> 문자 클래스는 문자 집합을 정의하며, 이 중 하나가 입력 문자열에서 발생하면 일치하는 것으로 판정할 수 있습니다. .NET의 정규식 언어는 다음과 같은 문자 클래스를 지원합니다.  
+
+문자 클래스는 문자 집합을 정의하며, 이 중 하나가 입력 문자열에서 발생하면 일치하는 것으로 판정할 수 있습니다. .NET의 정규식 언어는 다음과 같은 문자 클래스를 지원합니다.  
   
 - 긍정 문자 그룹. 입력 문자열의 문자는 지정된 문자 집합 중 하나와 일치해야 합니다. 자세한 내용은 [긍정 문자 그룹](#PositiveGroup)을 참조하세요.  
   
@@ -107,8 +108,6 @@ ms.locfileid: "64634704"
 |`\w*`|0개 이상의 단어 문자를 찾습니다.|  
 |`\b`|단어 경계를 찾습니다.|  
   
- [맨 위로 이동](#Top)  
-  
 <a name="NegativeGroup"></a>   
 ## <a name="negative-character-group-"></a>부정 문자 그룹: [^]  
  부정 문자 그룹은 일치 항목으로 간주되려면 입력 문자열에 나타나서는 안 되는 문자 목록을 지정합니다. 문자 목록은 개별적으로, 범위로 또는 둘 다 지정할 수 있습니다.  
@@ -154,8 +153,6 @@ ms.locfileid: "64634704"
 |`\w+`|하나 이상의 단어 문자를 찾습니다.|  
 |`\b`|단어 경계를 종료합니다.|  
   
- [맨 위로 이동](#Top)  
-  
 <a name="AnyCharacter"></a>   
 ## <a name="any-character-"></a>임의의 문자: .  
  마침표 문자(.)는 `\n`(줄바꿈 문자, \u000A)를 제외하고 다음 두 한정자가 있는 모든 문자를 찾습니다.  
@@ -177,8 +174,6 @@ ms.locfileid: "64634704"
   
 > [!NOTE]
 >  모든 문자와 일치하기 때문에 `.` 언어 요소는 정규식 패턴이 여러 번 임의의 문자와 일치하도록 시도할 경우 종종 lazy 수량자와 함께 사용됩니다. 자세한 내용은 [수량자](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)를 참조하세요.  
-  
- [맨 위로 이동](#Top)  
   
 <a name="CategoryOrBlock"></a>   
 ## <a name="unicode-category-or-unicode-block-p"></a>유니코드 범주 또는 유니코드 블록: \p{}  
@@ -209,8 +204,6 @@ ms.locfileid: "64634704"
 |`(\s)?`|0번 이상 나오는 공백 문자를 찾습니다.|  
 |`(\p{IsBasicLatin}+(\s)?)+`|하나 이상의 기본 라틴 문자 다음에 0개 또는 1개의 공백 문자가 한 번 이상 나타나는 패턴을 찾습니다.|  
   
- [맨 위로 이동](#Top)  
-  
 <a name="NegativeCategoryOrBlock"></a>   
 ## <a name="negative-unicode-category-or-unicode-block-p"></a>부정 유니코드 범주 또는 유니코드 블록: \P{}  
  유니코드 표준에서는 각 문자를 일반 범주에 할당합니다. 예를 들어, 특정 문자는 대문자(`Lu` 범주로 표현), 10진수(`Nd` 범주), 수학 기호(`Sm` 범주) 또는 단락 구분 기호(`Zl` 범주)가 될 수 있습니다. 유니코드 표준의 특정 문자 집합이 특정 범위 또는 연속된 코드 포인트의 블록도 차지합니다. 예를 들어, 기본 라틴 문자 집합은 \u0000부터 \u007F까지에서 발견되고, 아랍어 문자 집합이 \u0600부터 \u06FF까지에서 발견됩니다.  
@@ -227,8 +220,6 @@ ms.locfileid: "64634704"
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/notcategory1.vb#7)]  
   
  정규식 패턴 `(\P{Sc})+`는 통화 기호가 아닌 하나 이상의 문자를 찾습니다. 결과 문자열에서 모든 통화 기호를 효과적으로 제거합니다.  
-  
- [맨 위로 이동](#Top)  
   
 <a name="WordCharacter"></a>   
 ## <a name="word-character-w"></a>단어 문자: \w  
@@ -260,10 +251,8 @@ ms.locfileid: "64634704"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/wordchar1.cs#8)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/wordchar1.vb#8)]  
   
- [맨 위로 이동](#Top)  
-  
 <a name="NonWordCharacter"></a>   
-## <a name="non-word-character-w"></a>비단어 문자: \W  
+## <a name="non-word-character-w"></a>단어가 아닌 문자: \W  
  `\W`는 비단어 문자를 찾습니다. \W 언어 요소는 다음 문자 클래스에 해당합니다.  
   
 ```  
@@ -301,11 +290,9 @@ ms.locfileid: "64634704"
   
  두 번째 캡처링 그룹의 <xref:System.Text.RegularExpressions.Group> 개체가 단일 캡처된 비단어 문자만 포함하기 때문에 예제에서는 <xref:System.Text.RegularExpressions.CaptureCollection> 속성에 의해 반환되는 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 개체에서 모든 캡처된 비단어 문자를 검색합니다.  
   
- [맨 위로 이동](#Top)  
-  
 <a name="WhitespaceCharacter"></a>   
-## <a name="white-space-character-s"></a>공백 문자: \s  
- `\s`는 임의의 공백 문자와 일치합니다. 다음 표에 나열된 이스케이프 시퀀스 및 유니코드 범주와 동일합니다.  
+## <a name="whitespace-character-s"></a>공백 문자: \s  
+ `\s`는 공백 문자를 찾습니다. 다음 표에 나열된 이스케이프 시퀀스 및 유니코드 범주와 동일합니다.  
   
 |범주|설명|  
 |--------------|-----------------|  
@@ -332,10 +319,8 @@ ms.locfileid: "64634704"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/whitespace1.cs#10)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/whitespace1.vb#10)]  
   
- [맨 위로 이동](#Top)  
-  
 <a name="NonWhitespaceCharacter"></a>   
-## <a name="non-white-space-character-s"></a>공백이 아닌 모든 문자: \S  
+## <a name="non-whitespace-character-s"></a>공백이 아닌 문자: \S  
  `\S`는 공백 문자가 아닌 문자를 찾습니다. `[^\f\n\r\t\v\x85\p{Z}]` 정규식 패턴과 동일하거나, 공백 문자와 일치하는 `\s`과 동일한 정규식 패턴의 반대입니다. 자세한 내용은 [공백 문자: \s](#WhitespaceCharacter)를 참조하세요.  
   
  ECMAScript와 호환되는 동작을 지정한 경우 `\S`는 `[^ \f\n\r\t\v]`와 같습니다. ECMAScript 정규식에 대한 자세한 내용은 [정규식 옵션](../../../docs/standard/base-types/regular-expression-options.md)에서 "ECMAScript 일치 동작" 섹션을 참조하세요.  
@@ -351,10 +336,8 @@ ms.locfileid: "64634704"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nonwhitespace1.cs#11)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/nonwhitespace1.vb#11)]  
   
- [맨 위로 이동](#Top)  
-  
 <a name="DigitCharacter"></a>   
-## <a name="decimal-digit-character-d"></a>10진수 숫자 문자: \d  
+## <a name="decimal-digit-character-d"></a>10진수 문자: \d  
  `\d`는 10진수를 찾습니다. 많은 다른 문자 집합의 10진수뿐만 아니라 표준 10진수 0-9를 포함하는 `\p{Nd}` 정규식 패턴과 동일합니다.  
   
  ECMAScript와 호환되는 동작을 지정한 경우 `\d`는 `[0-9]`와 같습니다. ECMAScript 정규식에 대한 자세한 내용은 [정규식 옵션](../../../docs/standard/base-types/regular-expression-options.md)에서 "ECMAScript 일치 동작" 섹션을 참조하세요.  
@@ -375,8 +358,6 @@ ms.locfileid: "64634704"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/digit1.cs#12)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/digit1.vb#12)]  
   
- [맨 위로 이동](#Top)  
-  
 <a name="NonDigitCharacter"></a>   
 ## <a name="non-digit-character-d"></a>숫자가 아닌 문자: \D  
  `\D`는 숫자가 아닌 문자를 찾습니다. `\P{Nd}` 정규식 패턴과 동일합니다.  
@@ -395,8 +376,6 @@ ms.locfileid: "64634704"
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nondigit1.cs#13)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/nondigit1.vb#13)]  
-  
- [맨 위로 이동](#Top)  
   
 <a name="SupportedUnicodeGeneralCategories"></a>   
 ## <a name="supported-unicode-general-categories"></a>지원되는 유니코드 일반 범주  
@@ -447,11 +426,10 @@ ms.locfileid: "64634704"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/getunicodecategory1.cs#14)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/getunicodecategory1.vb#14)]  
   
- [맨 위로 이동](#Top)  
-  
 <a name="SupportedNamedBlocks"></a>   
-## <a name="supported-named-blocks"></a>지원되는 명명된 블록  
- .NET에서는 다음 표에 나와 있는 명명된 블록을 제공합니다. 지원되는 명명된 블록 집합은 유니코드 4.0 및 Perl 5.6을 기반으로 합니다.  
+## <a name="supported-named-blocks"></a>지원되는 명명된 블록
+
+.NET에서는 다음 표에 나와 있는 명명된 블록을 제공합니다. 지원되는 명명된 블록 집합은 유니코드 4.0 및 Perl 5.6을 기반으로 합니다. 명명된 블록을 사용하는 정규식에 대해서는 [유니코드 범주 또는 유니코드 블록: \\p{}](#unicode-category-or-unicode-block-p) 섹션을 참조하세요.  
   
 |코드 포인트 범위|블록 이름|  
 |----------------------|----------------|  
@@ -560,8 +538,6 @@ ms.locfileid: "64634704"
 |FE70 - FEFF|`IsArabicPresentationForms-B`|  
 |FF00 - FFEF|`IsHalfwidthandFullwidthForms`|  
 |FFF0 - FFFF|`IsSpecials`|  
-  
- [맨 위로 이동](#Top)  
   
 <a name="CharacterClassSubtraction"></a>   
 ## <a name="character-class-subtraction-basegroup---excludedgroup"></a>문자 클래스 빼기: [base_group - [excluded_group]]  
