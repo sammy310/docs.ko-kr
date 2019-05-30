@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3aa18d4498bcdcc3737311473b4736545b184395
-ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
+ms.openlocfilehash: 1a8c2b6ca9701f5eec4a8f43eaae531a0cfc18c1
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66003779"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377709"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Model-View-View Model과 함께 이식 가능한 클래스 라이브러리 사용
 .NET Framework를 사용 하 여 [이식 가능한 클래스 라이브러리](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) 모델-뷰 모델 (MVVM) 패턴을 구현 하 여 여러 플랫폼 간에 어셈블리를 공유 합니다.
@@ -30,7 +30,7 @@ ms.locfileid: "66003779"
  이 항목에서는 MVVM 패턴에 대 한 일반 정보를 제공 하지 않습니다. 만 사용 하는 방법에 대 한 정보를 제공 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] MVVM을 구현 합니다. MVVM에 대 한 자세한 내용은 참조는 [MVVM 퀵 스타트를 사용 하 여 Prism 라이브러리 5.0 WPF 용](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40))합니다.
 
 ## <a name="classes-that-support-mvvm"></a>MVVM을 지 원하는 클래스
- 대상 하는 경우는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight 또는 Windows Phone 7.5에 대 한 프로그램 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 프로젝트에 다음 클래스는 MVVM 패턴을 구현 하기 위한 사용할 수 있습니다:
+ .NET Framework 4.5를 대상 지정 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight 또는 Windows Phone 7.5에 대 한 프로그램 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 프로젝트에 다음 클래스는 MVVM 패턴을 구현 하기 위한 사용할 수 있습니다:
 
 - <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> 클래스
 
@@ -59,7 +59,7 @@ ms.locfileid: "66003779"
 
  모델을 컴파일하여 모델 프로젝트를 확인 한 후 뷰가 포함 된 앱에서 해당 어셈블리를 참조 합니다. 뷰는 뷰 모델만 상호 작용을 하는 경우 뷰 모델이 포함 된 어셈블리를 참조 해야 합니다.
 
-### <a name="model"></a>Model
+### <a name="model"></a>모델
  다음 예제에서는 수에 있는 간단한 모델 클래스는 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 프로젝트입니다.
 
  [!code-csharp[PortableClassLibraryMVVM#1](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customer.cs#1)]
@@ -87,7 +87,7 @@ ms.locfileid: "66003779"
  [!code-vb[PortableClassLibraryMVVM#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerviewmodel.vb#5)]  
   
 ### <a name="view"></a>보기  
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 앱 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱, Silverlight 기반 앱 또는 Windows Phone 7.5 앱, 모델과 뷰 모델 프로젝트를 포함 하는 어셈블리를 참조할 수 있습니다.  그런 다음 뷰 모델을 사용 하 여 상호 작용 하는 뷰를 만듭니다. 다음 예제에서는 검색 및 보기 모델의 데이터를에서 업데이트 하는 간단한 Windows Presentation Foundation (WPF) 앱을 보여 줍니다. Windows Phone Silverlight에서 유사한 뷰를 만들 수 있습니다 또는 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱.  
+ .NET Framework 4.5 앱에서 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱, Silverlight 기반 앱 또는 Windows Phone 7.5 앱, 모델과 뷰 모델 프로젝트를 포함 하는 어셈블리를 참조할 수 있습니다.  그런 다음 뷰 모델을 사용 하 여 상호 작용 하는 뷰를 만듭니다. 다음 예제에서는 검색 및 보기 모델의 데이터를에서 업데이트 하는 간단한 Windows Presentation Foundation (WPF) 앱을 보여 줍니다. Windows Phone Silverlight에서 유사한 뷰를 만들 수 있습니다 또는 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱.  
   
  [!code-xaml[PortableClassLibraryMVVM#6](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainwindow.xaml#6)]  
   

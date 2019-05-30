@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb2b082393656e84cedb293c3f3857e6680ed2ab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 45e28ebb9319447f2e1ae98f1de883f90840720f
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664334"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378289"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]는 [!INCLUDE[wrt](../../../includes/wrt-md.md)]와 함께 다양한 소프트웨어 개발 시나리오를 지원합니다. 이러한 시나리오는 다음 세 가지 범주로 구분됩니다.
+많은 소프트웨어 개발 시나리오를 지원 하며,.NET Framework 4.5는 [!INCLUDE[wrt](../../../includes/wrt-md.md)]합니다. 이러한 시나리오는 다음 세 가지 범주로 구분됩니다.
 
 - 개발 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 에 설명 된 대로 XAML 컨트롤을 사용 하 여 앱 [Windows 스토어 앱 용 로드맵 C# 또는 Visual Basic을 사용 하 여](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10)), [하는 방법 (XAML) tos](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10)), 및 [.NET Windows 스토어 용 앱 개요 ](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)).
 
@@ -127,7 +127,7 @@ ms.locfileid: "64664334"
 - 구성 요소의 형식은 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 형식에서 파생될 수 있습니다. 컨트롤의 기본 컨트롤 형식에서 파생 될 수 있습니다 합니다 <xref:Windows.UI.Xaml.Controls.Primitives> 네임 스페이스 또는 좀 더 완료 된 컨트롤 같은 <xref:Windows.UI.Xaml.Controls.Button>합니다.
 
     > [!IMPORTANT]
-    >  [!INCLUDE[win8](../../../includes/win8-md.md)] 및 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]부터 관리 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 구성 요소의 모든 공용 형식은 봉인되어야 합니다. 여기서 다른 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 구성 요소의 형식은 파생될 수 없습니다. 구성 요소에서 다형 동작을 제공하려면 인터페이스를 만들어 다형 형식에서 구현할 수 있습니다.
+    >  부터는 [!INCLUDE[win8](../../../includes/win8-md.md)] 및.NET Framework 4.5의 관리 되는 모든 공용 형식 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 구성 요소는 봉인 되어야 합니다. 여기서 다른 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 구성 요소의 형식은 파생될 수 없습니다. 구성 요소에서 다형 동작을 제공하려면 인터페이스를 만들어 다형 형식에서 구현할 수 있습니다.
 
 - 구성 요소에서 공용 형식에 대한 모든 매개 변수 및 반환 형식은 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 형식(구성 요소가 정의하는 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 형식 포함)이어야 합니다.
 
