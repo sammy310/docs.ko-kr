@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: a342c0aaf6a1b0c9959c9b79e3e3e92134693bf1
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: c1f891314a2490d6dbf22977ea5a5f69533b330d
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66250763"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300318"
 ---
 # <a name="c-operators"></a>C# 연산자
 
@@ -95,9 +95,9 @@ C#은 기본 제공 형식에서 지원되는 미리 정의된 여러 연산자�
 
 [* x](pointer-related-operators.md#pointer-indirection-operator-) – 포인터 간접 참조 또는 역참조입니다.
 
-[true 연산자](../keywords/true-false-operators.md) - [bool](../keywords/bool.md) 값 `true`를 반환하여 피연산자가 확실히 true임을 나타냅니다.
+[true 연산자](true-false-operators.md) - [bool](../keywords/bool.md) 값 `true`를 반환하여 피연산자가 확실히 true임을 나타냅니다.
 
-[false 연산자](../keywords/true-false-operators.md) - [bool](../keywords/bool.md) 값 `true`를 반환하여 피연산자가 확실히 false임을 나타냅니다.
+[false 연산자](true-false-operators.md) - [bool](../keywords/bool.md) 값 `true`를 반환하여 피연산자가 확실히 false임을 나타냅니다.
 
 ## <a name="multiplicative-operators"></a>곱하기 연산자
 
@@ -199,7 +199,7 @@ C#은 기본 제공 형식에서 지원되는 미리 정의된 여러 연산자�
 
 [x += y](arithmetic-operators.md#compound-assignment) – 증가. `y`의 값을 `x` 값에 더하고 결과를 `x`에 저장한 다음 새 값을 반환합니다. `x`가 [이벤트](../keywords/event.md)를 지정하는 경우 `y`는 C#에서 이벤트 처리기로 추가하는 적절한 방법이어야 합니다.
 
-[x -= y](subtraction-assignment-operator.md) – 감소. `x`의 값에서 `y`의 값을 빼고 결과를 `x`에 저장한 다음 새 값을 반환합니다. `x`가 [이벤트](../keywords/event.md)를 지정하는 경우 `y`는 C#에서 이벤트 처리기로 제거하는 적절한 방법이어야 합니다.
+[x -= y](arithmetic-operators.md#compound-assignment) – 감소. `x`의 값에서 `y`의 값을 빼고 결과를 `x`에 저장한 다음 새 값을 반환합니다. `x`가 [이벤트](../keywords/event.md)를 지정하는 경우 `y`는 C#에서 이벤트 처리기로 제거하는 적절한 방법이어야 합니다.
 
 [x *= y](arithmetic-operators.md#compound-assignment) – 곱하기 대입. `y`의 값을 `x`의 값에 곱하고 결과를 `x`에 저장한 다음 새 값을 반환합니다.
 

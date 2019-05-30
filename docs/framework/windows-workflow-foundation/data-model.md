@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], data model
 ms.assetid: d5752e51-cfc9-4499-af71-53b6daae9879
-ms.openlocfilehash: 9b6a6b572bafc3a13c5c15e29527644b1c1a16ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c001d2a7a388b46e277b23a527c8792bcdcebfeb
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945862"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378133"
 ---
 # <a name="windows-workflow-foundation-data-model"></a>Windows Workflow Foundation 데이터 모델
 Windows Workflow Foundation 데이터 모델은 변수, 인수, 식이라는 세 가지 개념으로 구성됩니다. 변수는 데이터 저장소를 나타내고 인수는 활동 내부 및 외부로 흐르는 데이터 흐름을 나타냅니다. 인수는 변수를 참조할 수 있는 식을 사용하여 바인딩(값이 할당)됩니다.  
@@ -22,7 +22,7 @@ Windows Workflow Foundation 데이터 모델은 변수, 인수, 식이라는 세
  식을 설명하고 워크플로 개발에서 식이 사용되는 방법에 대해 설명합니다.  
   
  [C# 식](csharp-expressions.md)  
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에 도입된 워크플로의 C# 식에 대해 설명합니다.  
+ 설명 C# .NET Framework 4.5를 사용 하 여 도입 된 워크플로에서 식입니다.  
   
  [속성 및 인수](properties-vs-arguments.md)  
  활동 입력에 사용할 형식을 선택하는 방법에 대해 설명합니다.  

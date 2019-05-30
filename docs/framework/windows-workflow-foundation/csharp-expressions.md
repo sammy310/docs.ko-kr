@@ -2,15 +2,15 @@
 title: C# 식
 ms.date: 03/30/2017
 ms.assetid: 29110be7-f4e3-407e-8dbe-78102eb21115
-ms.openlocfilehash: c50f6a2a8dfb69b914fb4fa84c028f9d65c00cfa
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7e29c4cacf97c729a07fa8d234e7c12006418027
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882101"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378408"
 ---
 # <a name="c-expressions"></a>C# 식
-부터 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], C# 식의 Windows WF (Workflow Foundation) 지원 됩니다. 새 C# 워크플로 프로젝트 대상으로 하는 Visual Studio 2012에서 만든 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 사용 하 여 C# 식 및 Visual Basic 워크플로 프로젝트를 Visual Basic 식을 사용 합니다. Visual Basic 식을 사용하는 기존 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 워크플로 프로젝트는 프로젝트 언어에 관계없이 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]로 마이그레이션할 수 있으며 지원됩니다. 이 항목에서는 [!INCLUDE[wf1](../../../includes/wf1-md.md)]의 C# 식에 대해 간략하게 설명합니다.
+.NET Framework 4.5부터 C# 식에서 Windows WF (Workflow Foundation) 지원 됩니다. 새 C# 사용 하 여.NET Framework 4.5를 대상으로 하는 워크플로 프로젝트 Visual Studio 2012에서 만든 C# 식 및 Visual Basic 워크플로 프로젝트를 Visual Basic 식을 사용 합니다. Visual Basic 식을 사용하는 기존 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 워크플로 프로젝트는 프로젝트 언어에 관계없이 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]로 마이그레이션할 수 있으며 지원됩니다. 이 항목에서는 [!INCLUDE[wf1](../../../includes/wf1-md.md)]의 C# 식에 대해 간략하게 설명합니다.
 
 ## <a name="using-c-expressions-in-workflows"></a>워크플로에서 C# 식 사용
 
@@ -29,7 +29,7 @@ ms.locfileid: "65882101"
 - [XAMLX 워크플로 서비스에서 C# 식 사용](csharp-expressions.md#WFServices)
 
 ### <a name="WFDesigner"></a> 워크플로 디자이너에서 C# 식 사용
- 부터 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], C# 식의 Windows WF (Workflow Foundation) 지원 됩니다. Visual Studio 2012에서 만들어진 C# 워크플로 프로젝트 대상으로 하는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Visual Basic 워크플로 프로젝트에서는 Visual Basic 식을 사용 하는 동안 C# 식을 사용 합니다. 원하는 C# 식을 지정 하려면 입력란에 입력 **C# 식 입력**합니다. 이 레이블은 디자이너에서 활동이 선택된 경우 속성 창에 표시되거나 워크플로 디자이너의 활동에 표시됩니다. 다음 예제에서는 `WriteLine`의 `Sequence` 내에 두 개의 `NoPersistScope` 활동이 포함되어 있습니다.
+ .NET Framework 4.5부터 C# 식에서 Windows WF (Workflow Foundation) 지원 됩니다. C#사용 하 여.NET Framework 4.5를 대상으로 하는 워크플로 프로젝트 Visual Studio 2012에서 만든 C# Visual Basic 워크플로 프로젝트에서는 Visual Basic 식을 사용 하는 동안 식입니다. 원하는 C# 식을 지정 하려면 입력란에 입력 **C# 식 입력**합니다. 이 레이블은 디자이너에서 활동이 선택된 경우 속성 창에 표시되거나 워크플로 디자이너의 활동에 표시됩니다. 다음 예제에서는 `WriteLine`의 `Sequence` 내에 두 개의 `NoPersistScope` 활동이 포함되어 있습니다.
 
  ![자동으로 만들어진된 sequence 활동을 보여 주는 스크린샷.](./media/csharp-expressions/auto-surround-sequence-activity.png)
 

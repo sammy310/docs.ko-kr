@@ -2,16 +2,16 @@
 title: SqlClient 스트리밍 지원
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: 6fda1dd2d46bbe5ad6b23cab0cd817365c6104eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83a657d1156774ec5ea342d47dca0434fd9d506c
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698449"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380000"
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient 스트리밍 지원
 
-SQL Server 및 응용 프로그램 간의 스트리밍 지원 (새로운 기능 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) 서버 (문서, 이미지 및 미디어 파일)에서 구조화 되지 않은 데이터를 지원 합니다. SQL Server 데이터베이스를 binary large object (Blob)를 저장할 수 있지만 BLOB를 검색 하는 많은 양의 메모리를 사용할 수 있습니다.
+SQL Server 및 응용 프로그램 (.NET Framework 4.5의 새로운) 간의 스트리밍 지원 (문서, 이미지 및 미디어 파일) 서버에 구조화 되지 않은 데이터를 지원 합니다. SQL Server 데이터베이스를 binary large object (Blob)를 저장할 수 있지만 BLOB를 검색 하는 많은 양의 메모리를 사용할 수 있습니다.
 
 완벽 하 게 더 적은 메모리 오버플로 예외가 발생 하는 메모리에 데이터를 로드 하지 않고도 응용 프로그램 작성 해당 스트림 데이터를 간소화의 스트리밍 지원은 SQL Server에서 합니다.
 
@@ -101,9 +101,9 @@ GO
 
 - 큰 파일을 검색하는 비동기적 방법을 제공하여 사용자 인터페이스 스레드의 차단을 방지합니다.
 
-- SQL server에서 큰 텍스트 파일을 전송 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]합니다.
+- .NET Framework 4.5에서 SQL Server에서 큰 텍스트 파일을 전송 합니다.
 
-- SQL server에서 큰 XML 파일로 전송 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]합니다.
+- .NET Framework 4.5에서 SQL Server에서 큰 XML 파일을 전송 합니다.
 
 - SQL Server에서 데이터를 검색 합니다.
 
@@ -323,9 +323,9 @@ GO
 
 이 샘플에서는 다음 작업의 수행 방법을 보여 줍니다.
 
-- 큰 BLOB에서 SQL Server로 전송 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]합니다.
+- .NET Framework 4.5에서 SQL Server로 큰 BLOB를 전송합니다.
 
-- 큰 텍스트 파일에서 SQL Server로 전송 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]합니다.
+- .NET Framework 4.5에서 SQL Server로 큰 텍스트 파일을 전송합니다.
 
 - 새로운 비동기 기능을 사용하여 큰 BLOB를 전송합니다.
 

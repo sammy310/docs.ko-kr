@@ -2,15 +2,15 @@
 title: 고가용성 및 재해 복구에 대한 SqlClient 지원
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 9b928be56ac09ec707a45829c862e606b68b717c
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
-ms.translationtype: HT
+ms.openlocfilehash: b01db93c51c6d975c9cc951f08b64c5ffd6c1de4
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251163"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380004"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>고가용성 및 재해 복구에 대한 SqlClient 지원
-이 항목에서는 고가용성, 재해 복구, AlwaysOn 가용성 그룹에 대한 SqlClient 지원([!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]에 추가됨)에 대해 설명합니다.  SQL Server 2012 AlwaysOn 가용성 그룹 기능이 추가 되었습니다. AlwaysOn 가용성 그룹에 대 한 자세한 내용은 SQL Server 온라인 설명서를 참조 합니다.  
+이 항목에서는 고가용성, 재해 복구 AlwaysOn 가용성 그룹에 대 한 SqlClient 지원 (.NET Framework 4.5에서 추가)를 설명 합니다.  SQL Server 2012 AlwaysOn 가용성 그룹 기능이 추가 되었습니다. AlwaysOn 가용성 그룹에 대 한 자세한 내용은 SQL Server 온라인 설명서를 참조 합니다.  
   
  이제 가용성 그룹 수신기를 지정할 수 있습니다 (고가용성, 재해 복구) 가용성 그룹 (AG) 또는 연결 속성에 SQL Server 2012 장애 조치 클러스터 인스턴스. SqlClient 응용 프로그램이 장애 조치되는 AlwaysOn 데이터베이스에 연결되면 원래 연결이 끊어지고 응용 프로그램이 장애 조치 후 작업을 계속할 수 있도록 새 연결을 열어야 합니다.  
   
@@ -19,7 +19,7 @@ ms.locfileid: "66251163"
 > [!NOTE]
 >  연결 제한 시간을 늘리고 연결 재시도 논리를 구현하면 응용 프로그램이 가용성 그룹에 연결될 가능성이 높아집니다. 그리고 장애 조치 때문에 연결되지 못할 수 있으므로 다시 연결될 때까지 실패한 연결을 다시 시도하는 연결 재시도 논리를 구현해야 합니다.  
   
- [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]에서 SqlClient에 다음 연결 속성이 추가되었습니다.  
+ .NET Framework 4.5에서 SqlClient에 다음 연결 속성이 추가 되었습니다.  
   
 - `ApplicationIntent`  
   

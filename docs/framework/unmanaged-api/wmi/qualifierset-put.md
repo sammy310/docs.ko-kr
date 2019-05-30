@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42bef9ab728af251b043e29af4cee9e5cb3f405d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a11f19a9b5ebdf491b79c250da7fc5ac3d980b64
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636541"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377861"
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put 함수
 
@@ -72,7 +72,7 @@ HRESULT QualifierSet_Put (
 
 |상수  |값  |설명  |
 |---------|---------|---------|
-| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | 지정 하려고 했습니다. 합니다 **키** 한정자 속성 키가 될 수 없습니다. 키를 지정 된 om c; 개체에 대 한 클래스 정의 인스턴스 당 단위로 변경할 수 없습니다. |
+| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | 지정 하려고 했습니다. 합니다 **키** 한정자 속성 키가 될 수 없습니다. 키 개체에 대 한 클래스 정의에 지정 되 고 인스턴스 단위로 변경할 수 없습니다. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 매개 변수가 잘못 되었습니다. |
 | `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | `pVal` 매개 변수가 올바른 한정자 형식이 아닙니다. |
 | `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | 호출 하는 것이 불가능 합니다 `QualifierSet_Put` 메서드 한정자를 소유 하는 개체는 허용 하지 않으므로 재정의 합니다. |

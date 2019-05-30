@@ -2,20 +2,20 @@
 title: ADO.NET의 새로운 기능
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 90ac3ffe9bae892bf20ad874e5634a3a045f776d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 77a7aa5721a83bf7bc8d3e3cbf57a77c56267062
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877431"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379981"
 ---
 # <a name="whats-new-in-adonet"></a>ADO.NET의 새로운 기능
 
-다음 기능은에 ADO.NET의 새로운 기능을 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]입니다.
+다음 기능은.NET Framework 4.5에서 ADO.NET의 새로운 기능입니다.
 
 ## <a name="sqlclient-data-provider"></a>SqlClient Data Provider
 
-다음 기능은 SQL Server에 대 한.NET Framework Data Provider에서 새 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:
+다음 기능은.NET Framework Data Provider for SQL Server에서.NET Framework 4.5의에서 새로운 기능:
 
 - ConnectRetryCount 및 ConnectRetryInterval 연결 문자열 키워드(<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>)를 사용하면 유휴 연결 복원 기능을 제어할 수 있습니다.
 
@@ -51,7 +51,7 @@ ms.locfileid: "65877431"
 
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework
 
-[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]에는 Entity Framework 5.0을 사용할 경우 새로운 시나리오를 사용할 수 있게 하는 API가 추가되었습니다. Entity Framework 5.0에 추가 된 기능과 향상 된 기능에 대 한 자세한 내용은 다음 항목을 참조 하세요. [새로운 기능](https://go.microsoft.com/fwlink/?LinkID=251106) 하 고 [Entity Framework 릴리스 및 버전 관리](https://go.microsoft.com/fwlink/?LinkId=234899)합니다.
+.NET Framework 4.5는 Entity Framework 5.0을 사용 하 여 작업 하는 경우에 새로운 시나리오를 사용 하도록 설정 하는 Api를 추가 합니다. Entity Framework 5.0에 추가 된 기능과 향상 된 기능에 대 한 자세한 내용은 다음 항목을 참조 하세요. [새로운 기능](https://go.microsoft.com/fwlink/?LinkID=251106) 하 고 [Entity Framework 릴리스 및 버전 관리](https://go.microsoft.com/fwlink/?LinkId=234899)합니다.
 
 ## <a name="see-also"></a>참고자료
 
