@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d064e2377e39f673d47ce497ebd6c96e9f3c1cd0
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 8a9c9072c5565cf322bbf6a913255542fb46cb93
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251064"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378560"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework의 새로운 기능
 
@@ -1200,11 +1200,11 @@ WPF 앱에 대해 최근에 확산되는 높은 DPI 및 하이브리드 DPI 환�
 
 **다시 호스트된 WF 디자이너에서 C# 식 및 IntelliSense 지원**
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 이상에서 WF는 Visual Studio 디자이너와 코드 워크플로 모두에서 C# 식을 지원합니다. 다시 호스트된 워크플로 디자이너는 Visual Studio 외부 애플리케이션(예: WPF)에서 워크플로 디자이너가 위치할 수 있도록 해주는 WF의 주요 기능입니다.  Windows Workflow Foundation을 사용하면 다시 호스트된 워크플로 디자이너에서 C# 식 및 IntelliSense를 지원할 수 있습니다. 자세한 내용은 [Windows Workflow Foundation 블로그](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409)를 참조하십시오.
+.NET Framework 4.5 이상에서 WF는 Visual Studio 디자이너와 코드 워크플로 모두에서 C# 식을 지원합니다. 다시 호스트된 워크플로 디자이너는 Visual Studio 외부 애플리케이션(예: WPF)에서 워크플로 디자이너가 위치할 수 있도록 해주는 WF의 주요 기능입니다.  Windows Workflow Foundation을 사용하면 다시 호스트된 워크플로 디자이너에서 C# 식 및 IntelliSense를 지원할 수 있습니다. 자세한 내용은 [Windows Workflow Foundation 블로그](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409)를 참조하십시오.
 
 `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` .NET Framework 4.6.2 이전 버전의 .NET Framework에서는 고객이 Visual Studio에서 워크플로 프로젝트를 다시 작성할 때 WF Designer IntelliSense가 중단됩니다. 프로젝트가 빌드되면 워크플로 형식을 디자이너에서 찾을 수 없으므로 IntelliSense의 누락된 워크플로 형식에 대한 경고가 **오류 목록** 창에 표시됩니다. .NET Framework 4.6.2에서는 이 문제를 해결하고 IntelliSense를 사용할 수 있도록 해줍니다.
 
- **워크플로 추적 기능이 설정된 Workflow V1 애플리케이션을 이제 FIPS 모드로 실행 가능**
+**워크플로 추적 기능이 설정된 Workflow V1 애플리케이션을 이제 FIPS 모드로 실행 가능**
 
 이제 FIPS 호환성 모드를 사용하는 컴퓨터에서 워크플로 추적이 설정된 워크플로 버전 1 스타일 애플리케이션을 실행할 수 있습니다. 이 시나리오를 사용하려면 app.config 파일을 다음과 같이 변경해야 합니다.
 
@@ -1399,7 +1399,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
 ## <a name="whats-new-in-net-2015"></a>.NET 2015의 새로운 기능
 
-.NET 2015에서는 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 및 .NET Core가 도입되었습니다. 일부 새로운 기능은 둘 다에 적용되고 기타 기능은 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 또는 .Net Core와 관련이 있습니다.
+.NET Framework 2015에서는 .NET Framework 4.6 및 .NET Core가 도입되었습니다. 일부 새로운 기능은 둘 다에 적용되고 기타 기능은 .NET Framework 4.6 또는 .NET Core 중 하나와 관련이 있습니다.
 
 - **ASP.NET Core**
 
@@ -1417,7 +1417,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
     - **모델 바인딩의 태스크 반환 메서드 지원**
 
-         [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에 ASP.NET이 Web Forms 페이지 및 사용자 정의 컨트롤에서 CRUD 기반 데이터 작업으로 확장 가능하고 코드 중심의 접근이 가능하도록 모델 바인딩 기능을 추가했습니다. 이제 모델 바인딩 시스템이 <xref:System.Threading.Tasks.Task>를 반환하는 모델 바인딩 메서드를 지원합니다. 이 기능으로 Web Forms 개발자가 Entity Framework를 포함하여 새 버전의 ORM을 사용하는 경우 간편한 데이터 바인딩 시스템과 함께 비동기의 확장성 이점을 얻을 수 있습니다.
+         .NET Framework 4.5에 ASP.NET이 Web Forms 페이지 및 사용자 정의 컨트롤에서 CRUD 기반 데이터 작업으로 확장 가능하고 코드 중심의 접근이 가능하도록 모델 바인딩 기능을 추가했습니다. 이제 모델 바인딩 시스템이 <xref:System.Threading.Tasks.Task>를 반환하는 모델 바인딩 메서드를 지원합니다. 이 기능으로 Web Forms 개발자가 Entity Framework를 포함하여 새 버전의 ORM을 사용하는 경우 간편한 데이터 바인딩 시스템과 함께 비동기의 확장성 이점을 얻을 수 있습니다.
 
          비동기 모델 바인딩은 `aspnet:EnableAsyncModelBinding` 구성 설정으로 제어합니다.
 
@@ -1427,7 +1427,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
         </appSettings>
         ```
 
-         [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]을 대상으로 하는 앱에서는 기본적으로 `true`입니다. 이전 버전의 .NET Framework를 대상으로 하고 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]에서 실행되는 앱에서는 기본적으로 `false`입니다. 구성을 `true`로 설정하여 사용할 수 있습니다.
+         .NET Framework 4.6을 대상으로 하는 앱에서는 기본적으로 `true`입니다. 이전 버전의 .NET Framework를 대상으로 하고 .NET Framework 4.6에서 실행되는 앱에서는 기본적으로 `false`입니다. 구성을 `true`로 설정하여 사용할 수 있습니다.
 
     - **HTTP/2 지원(Windows 10)**
 
@@ -1452,7 +1452,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
     - **임의 문자열 해시 알고리즘**
 
-         .NET Framework 4.5에서는 [임의 문자열 해시 알고리즘](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)이 도입되었습니다. 그러나 일부 ASP.NET 기능이 안정적인 해시 코드에 종속되어 있어 ASP.NET에서는 지원하지 않았습니다. 이제 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]에서 임의 문자열 해시 알고리즘을 지원합니다. 이 기능을 사용하려면 `aspnet:UseRandomizedStringHashAlgorithm` 구성 설정을 사용합니다.
+         .NET Framework 4.5에서는 [임의 문자열 해시 알고리즘](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)이 도입되었습니다. 그러나 일부 ASP.NET 기능이 안정적인 해시 코드에 종속되어 있어 ASP.NET에서는 지원하지 않았습니다. 이제 .NET Framework 4.6에서 임의 문자열 해시 알고리즘을 지원합니다. 이 기능을 사용하려면 `aspnet:UseRandomizedStringHashAlgorithm` 구성 설정을 사용합니다.
 
         ```xml
         <appSettings>
@@ -1476,7 +1476,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
 - **기본 클래스 라이브러리 변경 내용**
 
-     주요 시나리오를 사용할 수 있도록 많은 API가 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]에 새로 추가되었습니다. 변경 및 추가된 내용은 다음과 같습니다.
+     주요 시나리오를 사용할 수 있도록 많은 API가 .NET Framework 4.6에 새로 추가되었습니다. 변경 및 추가된 내용은 다음과 같습니다.
 
     - **IReadOnlyCollection\<T> 구현**
 
@@ -1592,7 +1592,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
     - **TAP(작업 기반 비동기 패턴) 변경 내용**
 
-         [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]를 대상으로 하는 앱의 경우 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 개체가 호출 스레드의 문화권과 UI 문화권을 상속합니다. 이전 버전의 .NET Framework를 대상으로 하거나 특정 버전의 .NET Framework를 대상으로 하지 않는 앱의 동작은 영향을 받지 않습니다. 자세한 내용은 <xref:System.Globalization.CultureInfo> 클래스 항목의 “문화권 및 작업 기반 비동기 작업” 섹션을 참조하세요.
+         .NET Framework 4.6을 대상으로 하는 앱의 경우 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 개체가 호출 스레드의 문화권과 UI 문화권을 상속합니다. 이전 버전의 .NET Framework를 대상으로 하거나 특정 버전의 .NET Framework를 대상으로 하지 않는 앱의 동작은 영향을 받지 않습니다. 자세한 내용은 <xref:System.Globalization.CultureInfo> 클래스 항목의 “문화권 및 작업 기반 비동기 작업” 섹션을 참조하세요.
 
          <xref:System.Threading.AsyncLocal%601?displayProperty=nameWithType> 클래스를 사용하여 `async` 메서드와 같은 지정된 비동기 제어 흐름의 로컬 앰비언트 데이터를 나타낼 수 있습니다. 스레드 간에 데이터를 유지하는 데 사용할 수 있습니다. <xref:System.Threading.AsyncLocal%601.Value%2A?displayProperty=nameWithType> 속성이 명시적으로 변경되거나 스레드가 컨텍스트 전환을 발생시켜 앰비언트 데이터가 변경될 때마다 알림을 표시하는 콜백 메서드를 정의할 수도 있습니다.
 
@@ -1624,7 +1624,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
     - **HDPI 기능 향상**
 
-         이제 WPF의 HDPI 지원이 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]에서 보다 향상되었습니다. 테두리가 있는 컨트롤에 클리핑 인스턴스를 줄이기 위해 레이아웃 반올림을 변경했습니다. 기본적으로 이 기능은 <xref:System.Runtime.Versioning.TargetFrameworkAttribute>가 .NET 4.6으로 설정될 때에만 사용됩니다.  이전 버전의 프레임워크를 대상으로 하지만 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]에서 실행되는 애플리케이션은 app.config 파일의 [\<runtime&gt;](../configure-apps/file-schema/runtime/runtime-element.md) 섹션에 다음 줄을 추가하여 새 동작을 옵트인(opt in)할 수 있습니다.
+         이제 WPF의 HDPI 지원이 .NET Framework 4.6에서 보다 향상되었습니다. 테두리가 있는 컨트롤에 클리핑 인스턴스를 줄이기 위해 레이아웃 반올림을 변경했습니다. 기본적으로 이 기능은 <xref:System.Runtime.Versioning.TargetFrameworkAttribute>가 .NET 4.6으로 설정될 때에만 사용됩니다.  이전 버전의 프레임워크를 대상으로 하지만 .NET Framework 4.6에서 실행되는 애플리케이션은 app.config 파일의 [\<runtime&gt;](../configure-apps/file-schema/runtime/runtime-element.md) 섹션에 다음 줄을 추가하여 새 동작을 옵트인(opt in)할 수 있습니다.
 
         ```xml
         <AppContextSwitchOverrides
@@ -1642,11 +1642,11 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
     - **터치 기능 향상**
 
-         고객이 터치 시 예기치 않은 동작이 발생한다고 [Connect](https://connect.microsoft.com/VisualStudio/feedback/details/903760/)에 신고한 문제가 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]에서 해결되었습니다. 이제 Windows 스토어 애플리케이션 및 WPF 애플리케이션에 대한 두 번 탭하기 임계값이 Windows 8.1 이상 버전에서 같습니다.
+         고객이 터치 시 예기치 않은 동작이 발생한다고 [Connect](https://connect.microsoft.com/VisualStudio/feedback/details/903760/)에 신고한 문제가 .NET Framework 4.6에서 해결되었습니다. 이제 Windows 스토어 애플리케이션 및 WPF 애플리케이션에 대한 두 번 탭하기 임계값이 Windows 8.1 이상 버전에서 같습니다.
 
     - **투명한 자식 창 지원**
 
-         [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]의 WPF는 Windows 8.1 이상 버전에서 투명한 자식 창을 지원합니다. 이를 통해 최상위 창에서 사각형이 아닌 투명한 자식 창을 만들 수 있습니다. <xref:System.Windows.Interop.HwndSourceParameters.UsesPerPixelTransparency%2A?displayProperty=nameWithType> 속성을 `true`로 설정하여 이 기능을 사용하도록 설정할 수 있습니다.
+         .NET Framework 4.6의 WPF는 Windows 8.1 이상 버전에서 투명한 자식 창을 지원합니다. 이를 통해 최상위 창에서 사각형이 아닌 투명한 자식 창을 만들 수 있습니다. <xref:System.Windows.Interop.HwndSourceParameters.UsesPerPixelTransparency%2A?displayProperty=nameWithType> 속성을 `true`로 설정하여 이 기능을 사용하도록 설정할 수 있습니다.
 
 - **WCF(Windows Communication Foundation)**
 
@@ -1719,7 +1719,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
          Windows 10에는 새로운 확장성 높은 네트워킹 알고리즘이 있습니다. 이 알고리즘을 통해 아웃바운드 TCP 연결에 대한 로컬 포트를 재사용하여 컴퓨터 리소스를 효과적으로 사용할 수 있습니다. .NET Framework 4.6은 새 알고리즘을 지원하므로 .NET 앱이 새 동작을 활용할 수 있습니다. 이전 버전의 Windows에는 인위적인 동시 연결 제한(일반적으로 동적 포트 범위의 기본 크기는 16,384임)이 있었습니다. 이는 부하 상태에서 포트 소모를 발생시켜 서비스의 확장성을 제한할 수 있습니다.
 
-         [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]에는 두 개의 새 API가 추가되어 포트를 재사용할 수 있습니다. 이를 통해 동시 연결 시 64K 제한을 효과적으로 제거합니다.
+         .NET Framework 4.6에는 다음 두 개의 새 API가 추가되어 포트를 재사용할 수 있습니다. 이를 통해 동시 연결 시 64K 제한을 효과적으로 제거합니다.
 
         - <xref:System.Net.Sockets.SocketOptionName?displayProperty=nameWithType> 열거형 값
 
@@ -1735,7 +1735,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
 - **Windows Forms 컨트롤 크기 조정.**
 
-     [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]에서는 이 기능이 <xref:System.Windows.Forms.DomainUpDown>, <xref:System.Windows.Forms.NumericUpDown>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, <xref:System.Windows.Forms.DataGridViewColumn> 및 <xref:System.Windows.Forms.ToolStripSplitButton> 형식과 <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A>를 그릴 때 사용되는 <xref:System.Drawing.Design.UITypeEditor> 속성으로 지정된 사각형을 포함하도록 확장되었습니다.
+     .NET Framework 4.6에서는 이 기능이 <xref:System.Windows.Forms.DomainUpDown>, <xref:System.Windows.Forms.NumericUpDown>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, <xref:System.Windows.Forms.DataGridViewColumn> 및 <xref:System.Windows.Forms.ToolStripSplitButton> 형식과 <xref:System.Drawing.Design.UITypeEditor>를 그릴 때 사용되는 <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A> 속성으로 지정된 사각형을 포함하도록 확장되었습니다.
 
      이 기능은 옵트인 기능입니다. 이 기능을 사용하려면 아래와 같이 애플리케이션 구성 파일(app.config)에서 `EnableWindowsFormsHighDpiAutoResizing` 요소를 `true`로 설정해야 합니다.
 
@@ -1864,7 +1864,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
 .NET Framework 4.5.1에서 기본 클래스의 새로운 기능 및 향상된 기능은 다음과 같습니다.
 
-- 어셈블리에 대한 자동 바인딩 리디렉션. Visual Studio 2013부터는 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]을 대상으로 하는 앱을 컴파일할 때 앱 또는 해당 구성 요소가 동일한 어셈블리의 여러 버전을 참조할 경우 앱 구성 파일에 바인딩 리디렉션을 추가할 수 있습니다. 또한 이전 버전의 .NET Framework를 대상으로 하는 프로젝트에 대해 이 기능을 사용하도록 설정할 수 있습니다. 자세한 내용은 [방법: 자동 바인딩 리디렉션 사용 설정 및 해제](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)를 참조하세요.
+- 어셈블리에 대한 자동 바인딩 리디렉션. Visual Studio 2013부터는 .NET Framework 4.5.1을 대상으로 하는 응용 프로그램을 컴파일할 때 응용 프로그램 또는 해당 구성 요소가 동일한 어셈블리의 여러 버전을 참조할 경우 응용 프로그램 구성 파일에 바인딩 리디렉션을 추가할 수 있습니다. 또한 이전 버전의 .NET Framework를 대상으로 하는 프로젝트에 대해 이 기능을 사용하도록 설정할 수 있습니다. 자세한 내용은 [방법: 자동 바인딩 리디렉션 사용 설정 및 해제](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)를 참조하세요.
 
 - 진단 정보를 수집하여 개발자가 서버 및 클라우드 애플리케이션의 성능을 향상시키는 기능. 자세한 내용은 <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> 클래스의 <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> 및 <xref:System.Diagnostics.Tracing.EventSource> 메서드를 참조하세요.
 
@@ -1912,7 +1912,7 @@ ASP.NET 4.5.1의 새로운 기능은 [Visual Studio 2013용 ASP.NET 및 Web Tool
 
 - 64비트 플랫폼에서 2GB보다 큰 배열 지원. 애플리케이션 구성 파일에서 이 기능을 사용하도록 설정할 수 있습니다. 개체 크기와 배열 크기에 대한 기타 제한을 나열하는 [\<gcAllowVeryLargeObjects> 요소](../configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)를 참조하십시오.
 
-- 서버에 대한 백그라운드 가비지 수집을 통해 성능 향상. 사용자가 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서 서버 가비지 수집을 사용하면 백그라운드 가비지 수집을 사용하도록 자동으로 설정됩니다. [가비지 컬렉션 기본 사항](../../standard/garbage-collection/fundamentals.md) 항목의 백그라운드 서버 가비지 컬렉션 섹션을 참조하십시오.
+- 서버에 대한 백그라운드 가비지 수집을 통해 성능 향상. 사용자가 .NET Framework 4.5에서 서버 가비지 수집을 사용하면 백그라운드 가비지 수집을 사용하도록 자동으로 설정됩니다. [가비지 컬렉션 기본 사항](../../standard/garbage-collection/fundamentals.md) 항목의 백그라운드 서버 가비지 컬렉션 섹션을 참조하십시오.
 
 - 애플리케이션 성능 개선을 위해 다중 코어 프로세서에서 선택적으로 사용 가능한 백그라운드 JIT(Just-In-Time) 컴파일. <xref:System.Runtime.ProfileOptimization>을 참조하세요.
 
@@ -1940,7 +1940,7 @@ ASP.NET 4.5.1의 새로운 기능은 [Visual Studio 2013용 ASP.NET 및 Web Tool
 
 ### <a name="managed-extensibility-framework-mef"></a>MEF(Managed Extensibility Framework)
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]의 MEF(Managed Extensibility Framework)는 다음과 같은 새로운 기능을 제공합니다.
+.NET Framework 4.5의 MEF(Managed Extensibility Framework)는 다음과 같은 새로운 기능을 제공합니다.
 
 - 제네릭 형식 지원
 
@@ -1954,13 +1954,13 @@ ASP.NET 4.5.1의 새로운 기능은 [Visual Studio 2013용 ASP.NET 및 Web Tool
 
 ### <a name="asynchronous-file-operations"></a>비동기 파일 작업
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서는 C# 및 Visual Basic 언어에 새로운 비동기 기능이 추가되었습니다. 이러한 기능은 비동기 작업을 수행하는 작업 기반 모델을 추가합니다. 이 새로운 모델을 사용하려면 I/O 클래스에서 비동기 메서드를 사용합니다. [비동기 파일 I/O](../../standard/io/asynchronous-file-i-o.md)를 참조하십시오.
+.NET Framework 4.5에서는 C# 및 Visual Basic 언어에 새로운 비동기 기능이 추가되었습니다. 이러한 기능은 비동기 작업을 수행하는 작업 기반 모델을 추가합니다. 이 새로운 모델을 사용하려면 I/O 클래스에서 비동기 메서드를 사용합니다. [비동기 파일 I/O](../../standard/io/asynchronous-file-i-o.md)를 참조하십시오.
 
 <a name="tools" />
 
 ### <a name="tools"></a>도구
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서 리소스 파일 생성기(Resgen.exe)를 사용하면 .NET Framework 어셈블리에 포함된 .resources 파일에서 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에 사용할 .resw 파일을 만들 수 있습니다. 자세한 내용은 [Resgen.exe(리소스 파일 생성기)](../tools/resgen-exe-resource-file-generator.md)를 참조하십시오.
+.NET Framework 4.5에서 리소스 파일 생성기(Resgen.exe)를 사용하면 .NET Framework 어셈블리에 포함된 .resources 파일에서 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱에 사용할 .resw 파일을 만들 수 있습니다. 자세한 내용은 [Resgen.exe(리소스 파일 생성기)](../tools/resgen-exe-resource-file-generator.md)를 참조하십시오.
 
 관리되는 프로필 기반 최적화(Mpgo.exe)를 사용하면 네이티브 이미지 어셈블리를 최적화하여 애플리케이션 시작 시간, 메모리 사용률(작업 집합 크기) 및 처리량을 개선할 수 있습니다. 명령줄 도구는 네이티브 이미지 애플리케이션 어셈블리에 대한 프로필 데이터를 생성합니다. [Mpgo.exe(관리되는 프로필 기반 최적화 도구)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md)를 참조하십시오. Visual Studio 2013부터는 Mpgo.exe를 사용하여 데스크톱 앱뿐만 아니라 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱을 최적화할 수 있습니다.
 
@@ -1968,7 +1968,7 @@ ASP.NET 4.5.1의 새로운 기능은 [Visual Studio 2013용 ASP.NET 및 Web Tool
 
 ### <a name="parallel-computing"></a>병렬 컴퓨팅
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]는 병렬 컴퓨팅을 위한 몇 가지 새로운 기능과 향상된 기능을 제공합니다. 여기에는 성능 향상, 제어 강화, 비동기 프로그래밍에 대한 지원 개선, 새 데이터 흐름 라이브러리 및 병렬 디버깅 및 성능 분석에 대한 지원 개선이 포함됩니다. .NET 블로그에서 병렬 프로그래밍에 대한 항목인 [.NET 4.5의 새로운 병렬 처리 기능](https://go.microsoft.com/fwlink/?LinkId=235061)을 참조하십시오.
+.NET Framework 4.5는 병렬 컴퓨팅을 위한 몇 가지 새로운 기능과 향상된 기능을 제공합니다. 여기에는 성능 향상, 제어 강화, 비동기 프로그래밍에 대한 지원 개선, 새 데이터 흐름 라이브러리 및 병렬 디버깅 및 성능 분석에 대한 지원 개선이 포함됩니다. .NET 블로그에서 병렬 프로그래밍에 대한 항목인 [.NET 4.5의 새로운 병렬 처리 기능](https://go.microsoft.com/fwlink/?LinkId=235061)을 참조하십시오.
 
 <a name="web" />
 
@@ -1982,11 +1982,11 @@ ASP.NET 4.5 및 4.5.1은 Web Forms, WebSocket 지원, 비동기 처리기, 성�
 
 ### <a name="networking-a-namenetworking-"></a>네트워킹<a name="networking" />
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서는 HTTP 애플리케이션의 새로운 프로그래밍 인터페이스를 제공합니다. 자세한 내용은 새로운 <xref:System.Net.Http?displayProperty=nameWithType> 및 <xref:System.Net.Http.Headers?displayProperty=nameWithType> 네임스페이스를 참조하세요.
+.NET Framework 4.5에서는 HTTP 애플리케이션의 새로운 프로그래밍 인터페이스를 제공합니다. 자세한 내용은 새로운 <xref:System.Net.Http?displayProperty=nameWithType> 및 <xref:System.Net.Http.Headers?displayProperty=nameWithType> 네임스페이스를 참조하세요.
 
 기존의 <xref:System.Net.HttpListener> 및 관련 클래스를 사용하여 WebSocket 연결을 허용하고 이와 상호 작용하는 새로운 프로그래밍 인터페이스 지원도 포함되어 있습니다. 자세한 내용은 새로운 <xref:System.Net.WebSockets> 네임스페이스 및 <xref:System.Net.HttpListener> 클래스를 참조하세요.
 
-또한 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에는 다음 네트워킹 개선 사항이 포함되어 있습니다.
+또한 .NET Framework 4.5에는 다음 네트워킹 개선 사항이 포함되어 있습니다.
 
 - RFC 규격 URI 지원. 자세한 내용은 <xref:System.Uri> 및 관련 클래스를 참조하세요.
 
@@ -2002,7 +2002,7 @@ ASP.NET 4.5 및 4.5.1은 Web Forms, WebSocket 지원, 비동기 처리기, 성�
 
 ### <a name="windows-presentation-foundation-wpf"></a>WPF(Windows Presentation Foundation)
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]의 WPF(Windows Presentation Foundation)에서 변경되고 개선된 영역은 다음과 같습니다.
+.NET Framework 4.5의 WPF(Windows Presentation Foundation)에서 변경되고 개선된 영역은 다음과 같습니다.
 
 - 빠른 실행 도구 모음, 애플리케이션 메뉴 및 탭을 호스팅하는 리본 사용자 인터페이스 구현에 사용할 수 있는 새로운 <xref:System.Windows.Controls.Ribbon.Ribbon> 컨트롤
 
@@ -2026,7 +2026,7 @@ ASP.NET 4.5 및 4.5.1은 Web Forms, WebSocket 지원, 비동기 처리기, 성�
 
 ### <a name="windows-communication-foundation-wcf"></a>WCF(Windows Communication Foundation)
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서 WCF(Windows Communication Foundation) 애플리케이션을 더 쉽게 작성하고 유지 관리할 수 있도록 다음 기능이 추가되었습니다.
+.NET Framework 4.5에서 WCF(Windows Communication Foundation) 애플리케이션을 더 쉽게 작성하고 유지 관리할 수 있도록 다음 기능이 추가되었습니다.
 
 - 생성된 구성 파일의 단순화
 
@@ -2068,9 +2068,9 @@ ASP.NET 4.5 및 4.5.1은 Web Forms, WebSocket 지원, 비동기 처리기, 성�
 
 ### <a name="windows-workflow-foundation-wf"></a>Windows WF(Workflow Foundation)
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]의 Windows WF(Workflow Foundation)에 몇 가지 새로운 기능이 추가되었습니다.
+.NET Framework 4.5의 Windows WF(Workflow Foundation)에 몇 가지 새로운 기능이 추가되었습니다.
 
-- 상태 머신 워크플로가 .NET Framework 4.0.1([.NET Framework 4 플랫폼 업데이트 1](https://go.microsoft.com/fwlink/?LinkID=215092))의 일부로 처음 도입되었습니다. 이 업데이트에는 개발자가 상태 시스템 워크플로를 만들 수 있도록 하는 몇 가지 새로운 클래스와 활동이 포함되었습니다. 이러한 클래스와 활동은 다음을 포함하도록 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에 대해 업데이트되었습니다.
+- 상태 머신 워크플로가 .NET Framework 4.0.1([.NET Framework 4 플랫폼 업데이트 1](https://go.microsoft.com/fwlink/?LinkID=215092))의 일부로 처음 도입되었습니다. 이 업데이트에는 개발자가 상태 시스템 워크플로를 만들 수 있도록 하는 몇 가지 새로운 클래스와 활동이 포함되었습니다. 이러한 클래스와 활동은 다음을 포함하도록 .NET Framework 4.5에 대해 업데이트되었습니다.
 
     - 상태에 중단점을 설정하는 기능
 
@@ -2122,7 +2122,7 @@ ASP.NET 4.5 및 4.5.1은 Web Forms, WebSocket 지원, 비동기 처리기, 성�
 
 ### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
 
-[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램은 특정 폼 팩터용으로 설계되었으며 Windows 운영 체제의 강력한 기능을 활용합니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 또는 4.5.1의 하위 집합은 C# 또는 Visual Basic을 사용하여 Windows용 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램을 빌드하는 데 사용할 수 있습니다. 이 하위 집합을 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]이라고 하며 Windows 개발자 센터의 [개요](https://go.microsoft.com/fwlink/?LinkId=228491)에 설명되어 있습니다.
+[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램은 특정 폼 팩터용으로 설계되었으며 Windows 운영 체제의 강력한 기능을 활용합니다. .NET Framework 4.5 또는 4.5.1의 하위 집합은 C# 또는 Visual Basic을 사용하여 Windows용 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱을 빌드하는 데 사용할 수 있습니다. 이 하위 집합을 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]이라고 하며 Windows 개발자 센터의 [개요](https://go.microsoft.com/fwlink/?LinkId=228491)에 설명되어 있습니다.
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>이식 가능한 클래스 라이브러리<a name="portable" />
 
