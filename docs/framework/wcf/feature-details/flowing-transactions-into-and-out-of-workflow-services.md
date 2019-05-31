@@ -2,18 +2,18 @@
 title: 트랜잭션을 워크플로 서비스 내부 및 외부로 이동
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: 7c47810ae168d39d7ebcd96952a75d6a3ba4d263
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2a837e446ec65caa6d481d3a5f141f87fe509910
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592817"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421895"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>트랜잭션을 워크플로 서비스 내부 및 외부로 이동
 워크플로 서비스 및 클라이언트는 트랜잭션에 참여할 수 있습니다.  서비스 작업이 앰비언트 트랜잭션의 일부가 되도록 하려면 <xref:System.ServiceModel.Activities.Receive> 활동 내에 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 활동을 배치합니다. <xref:System.ServiceModel.Activities.Send> 내의 <xref:System.ServiceModel.Activities.SendReply> 또는 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 활동에서 실행하는 모든 호출은 앰비언트 트랜잭션 내에서도 실행됩니다. 워크플로 클라이언트 응용 프로그램에서는 <xref:System.Activities.Statements.TransactionScope> 활동을 사용하여 앰비언트 트랜잭션을 만들고 앰비언트 트랜잭션을 사용하여 서비스 작업을 호출할 수 있습니다. 이 항목에서는 트랜잭션에 참여하는 워크플로 서비스와 워크플로 클라이언트를 만드는 과정을 보여 줍니다.  
   
 > [!WARNING]
->  워크플로 서비스 인스턴스가 트랜잭션 내에서 로드되고 워크플로에 <xref:System.Activities.Statements.Persist> 활동이 포함된 경우 트랜잭션 제한 시간이 초과될 때까지 워크플로 인스턴스가 중단됩니다.  
+>  워크플로 서비스 인스턴스가 트랜잭션 내에서 로드 되 고 워크플로 포함 하는 경우는 <xref:System.Activities.Statements.Persist> 작업 트랜잭션 제한 시간이 초과 될 때까지 워크플로 인스턴스가 차단 됩니다.  
   
 > [!IMPORTANT]
 >  <xref:System.ServiceModel.Activities.TransactedReceiveScope>를 사용할 때마다 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 활동 내에 워크플로의 모든 Receive를 두는 것이 좋습니다.  

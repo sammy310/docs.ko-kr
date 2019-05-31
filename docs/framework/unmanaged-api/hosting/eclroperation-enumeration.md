@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d5f24d7415ff7ecceba6b0a5fbd3098d70dcd0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c9bbff8bb1f095502f27b649639434010453ffe1
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796024"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423856"
 ---
 # <a name="eclroperation-enumeration"></a>EClrOperation 열거형
 호스트 정책 작업을 적용할 수 있는 작업 집합을 설명 합니다.  
@@ -55,7 +55,7 @@ typedef enum {
 ## <a name="remarks"></a>설명  
  공용 언어 런타임 (CLR) 안정성 인프라 중단 되 고 리소스 간에 코드 및 코드의 중요 하지 않은 지역에서 발생 하는 중요 한 영역에서 발생 하는 할당 오류를 구분 합니다. 이 차이 호스트 코드에서 오류가 발생 하는 위치에 따라 다양 한 정책을 설정할 수 있도록 설계 되었습니다.  
   
- A *중요 한 코드 영역* CLR에서 해당 작업을 중단 또는 리소스에는 현재 태스크에만 영향이 대 한 요청을 완료 하지 못함을 줄 수 없는 공간이 있습니다. 예를 들어 작업 잠금을 보유 하는 메모리 할당 요청 시 오류를 나타내는 hresult가 하는 경우 충분 하지 않기 위해 해당 작업의 안정성을 중단 합니다 <xref:System.AppDomain>이므로 <xref:System.AppDomain> 다른 포함 될 수 있습니다 동일한 잠금을 대기 하는 태스크입니다. 중단할 현재 작업 발생할 수 있습니다 이러한 응답을 중지 (또는 중단) 다른 작업이 무기한으로 합니다. 이런 경우 호스트 해야 전체를 언로드할 수 <xref:System.AppDomain> 위험 잠재적 불안정 하는 대신 합니다.  
+ A *중요 한 코드 영역* CLR에서 해당 작업을 중단 또는 리소스에는 현재 태스크에만 영향이 대 한 요청을 완료 하지 못함을 줄 수 없는 공간이 있습니다. 예를 들어 작업 잠금을 보유 하는 메모리 할당 요청 시 오류를 나타내는 hresult가 하는 경우 충분 하지 않기 위해 해당 작업의 안정성을 중단 합니다 <xref:System.AppDomain>이므로 <xref:System.AppDomain> 다른 포함 될 수 있습니다 동일한 잠금을 대기 하는 태스크입니다. 중단할 현재 작업 응답을 중지 하도록 다른 작업이 발생할 수 있습니다. 이런 경우 호스트 해야 전체를 언로드할 수 <xref:System.AppDomain> 위험 잠재적 불안정 하는 대신 합니다.  
   
  A *중요 하지 않은 코드 영역의*, 다른 한편으로 여기서 CLR 중단 또는 실패는 오류가 발생 하는 작업에만 영향이 보장할 수 영역입니다.  
   

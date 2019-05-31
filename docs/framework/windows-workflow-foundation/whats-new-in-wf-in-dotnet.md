@@ -2,12 +2,12 @@
 title: .NET 4.5에서 Windows Workflow Foundation의 새로운 기능
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: fb9604061fd6ccd7909a2d5b26675a1b637f2b4d
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 9bf836abaa568b3df2080500d8d2357e604dff60
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380145"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423975"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>.NET 4.5에서 Windows Workflow Foundation의 새로운 기능
 
@@ -200,7 +200,7 @@ C# 식에 대 한 자세한 내용은 참조 하십시오 [C# 식을](csharp-exp
 
 ### <a name="BKMK_DesignTimeValidation"></a> 디자인 타임 백그라운드 유효성 검사
 
-[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서는 포그라운드 프로세스로 워크플로의 유효성을 검사하므로 복잡하거나 시간이 많이 걸리는 유효성 검사 프로세스 중에 UI가 중단될 수 있었습니다. 이제는 백그라운드 스레드에서 워크플로 유효성 검사를 수행하므로 UI가 차단되지 않습니다.
+[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], 복잡 하거나 시간이 많이 걸리는 유효성 검사 프로세스 중 UI를 잠재적으로 차단할 수는 포그라운드 프로세스로 워크플로의 유효성입니다. 이제는 백그라운드 스레드에서 워크플로 유효성 검사를 수행하므로 UI가 차단되지 않습니다.
 
 ### <a name="BKMK_ViewState"></a> XAML 파일의 별도 위치에 있는 뷰 상태
 

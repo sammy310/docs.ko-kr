@@ -15,12 +15,12 @@ helpviewer_keywords:
 - literals [Visual Basic], Date
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-ms.openlocfilehash: d6179624ffbdf423f8d9b895c65ff41ac9846f33
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 970c69b36eecd110dd81b6a3700fbb0a7eea2834
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647040"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66424027"
 ---
 # <a name="date-data-type-visual-basic"></a>Date 데이터 형식(Visual Basic)
 0001년 1월 1일부터 9999년 12월 31일까지의 날짜와 오전 12:00:00(자정)부터 오후 11:59:59.9999999까지의 시간을 나타내는 IEEE 64비트(8비트) 값을 보유합니다. 각 증분은 일반 달력에서 1년 1월 1일 시작 이후 경과된 시간의 100나노초를 나타냅니다. 최대값은 10000년 1월 1일 시작 이전 100나노초를 나타냅니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "64647040"
 ## <a name="format-requirements"></a>형식 요구 사항  
  숫자 기호(`# #`) 내의 `Date` 리터럴을 묶어야 합니다. M/d/yyyy(예: `#5/31/1993#`) 또는 yyyy-MM-dd(예: `#1993-5-31#`) 형식으로 날짜 값을 지정해야 합니다. 연도를 먼저 지정하는 경우 슬래시를 사용할 수 있습니다.  이 요구 사항은 사용자 로캘과 컴퓨터의 날짜 및 시간 형식 설정에 독립적입니다.  
   
- 이러한 제한 이유는 응용 프로그램을 실행하는 로캘에 따라 코드의 의미가 변경되면 안 되기 때문입니다. `#3/4/1998#`의 `Date` 리터럴을 하드 코딩하고 1998년 3월 4로 지정한다고 가정해 보세요. mm/dd/yyyy를 사용하는 로캘에서는 3/4/1998이 의도한 대로 컴파일됩니다. 그러나 여러 국가에 응용 프로그램을 배포한다고 가정해 보세요. dd/mm/yyyy를 사용하는 로캘에서는 하드 코딩된 리터럴이 1998년 4월 3일로 컴파일됩니다. yyyy/mm/dd를 사용하는 로캘에서는 리터럴이 잘못 지정되며(0003년 4월 1998일) 컴파일러 오류가 발생합니다.  
+ 이러한 제한 이유는 응용 프로그램을 실행하는 로캘에 따라 코드의 의미가 변경되면 안 되기 때문입니다. `#3/4/1998#`의 `Date` 리터럴을 하드 코딩하고 1998년 3월 4로 지정한다고 가정해 보세요. mm/dd/yyyy를 사용하는 로캘에서는 3/4/1998이 의도한 대로 컴파일됩니다. 하지만 많은 국가/지역에서 응용 프로그램을 배포 한다고 가정해 보세요. dd/mm/yyyy를 사용하는 로캘에서는 하드 코딩된 리터럴이 1998년 4월 3일로 컴파일됩니다. yyyy/mm/dd를 사용하는 로캘에서는 리터럴이 잘못 지정되며(0003년 4월 1998일) 컴파일러 오류가 발생합니다.  
   
 ## <a name="workarounds"></a>해결 방법  
  `Date` 리터럴을 해당 로캘 형식이나 사용자 지정 형식으로 변환하려면 <xref:Microsoft.VisualBasic.Strings.Format%2A> 함수에 리터럴을 제공하고 미리 정의된 날짜 형식이나 사용자 정의 날짜 형식을 지정합니다. 다음은 이에 대한 예입니다.  

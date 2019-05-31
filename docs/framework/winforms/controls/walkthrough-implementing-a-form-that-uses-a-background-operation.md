@@ -15,16 +15,16 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: 1988ebd8c5f46346babe212962b617d30d765385
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 60421d6ba634bd7b4107f1c9998fbbe158417c83
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211529"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423842"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>연습: 백그라운드 작업을 사용하는 양식 구현
 
-를 완료 하려면 시간이 오래 걸리는 작업을 해야 하 고 원하지 않는 사용자 인터페이스 (UI) 응답을 중지 하거나 사용할 수 있습니다 "중단" 하는 경우는 <xref:System.ComponentModel.BackgroundWorker> 다른 스레드에서 작업을 실행 하는 클래스입니다.
+를 완료 하려면 시간이 오래 걸리는 작업을 해야 하 고 원하지 않는 사용자 인터페이스 (UI) 응답을 중지 하거나 차단 하도록을 사용할 수는 <xref:System.ComponentModel.BackgroundWorker> 다른 스레드에서 작업을 실행 하는 클래스입니다.
 
 이 연습에 사용 하는 방법을 보여 줍니다는 <xref:System.ComponentModel.BackgroundWorker> "백그라운드"에서 시간이 오래 걸리는 계산을 수행 하는 클래스 사용자 인터페이스의 응답성을 유지 하는 동안.  완료하면 피보나치 수를 비동기적으로 계산하는 애플리케이션이 생깁니다. 큰 피보나치 수를 계산하는 데는 상당한 시간이 걸릴 수도 있지만 이 지연으로 주 UI 스레드가 중단되지 않으며 계산 중에도 폼이 응답하게 됩니다.
 

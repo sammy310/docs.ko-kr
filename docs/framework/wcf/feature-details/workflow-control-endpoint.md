@@ -2,18 +2,18 @@
 title: 워크플로 제어 엔드포인트
 ms.date: 03/30/2017
 ms.assetid: 1b883334-1590-4fbb-b0d6-65197efe0700
-ms.openlocfilehash: 40fec2902598daed178e070b02c1067c308507c9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 781a7cefaeeb8cd9cd21298471c59de2e7815244
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929716"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66424024"
 ---
 # <a name="workflow-control-endpoint"></a>워크플로 제어 엔드포인트
 개발자는 워크플로 제어 엔드포인트를 사용하여 <xref:System.ServiceModel.Activities.WorkflowServiceHost>를 사용하여 호스팅되는 워크플로 인스턴스를 원격으로 제어할 수 있는 제어 작업을 호출할 수 있습니다. 이 기능은 일시 중단, 다시 시작 및 종료 같은 제어 작업을 프로그래밍 방식으로 수행하는 데 사용될 수 있습니다.  
   
 > [!WARNING]
->  트랜잭션 내에서 워크플로 제어 엔드포인트를 사용하고 제어되는 워크플로에 <xref:System.Activities.Statements.Persist> 활동이 포함된 경우 트랜잭션 제한 시간이 초과될 때까지 워크플로 인스턴스가 중단됩니다.  
+>  트랜잭션 및 제어 되는 워크플로 내에서 워크플로 제어 끝점을 사용 하 여 포함 된 경우는 <xref:System.Activities.Statements.Persist> 작업 트랜잭션 제한 시간이 초과 될 때까지 워크플로 인스턴스가 차단 됩니다.  
   
 ## <a name="workflow-instance-management"></a>워크플로 인스턴스 관리  
  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]에서는 <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>라는 새 계약을 정의합니다. 이 계약은 <xref:System.ServiceModel.Activities.WorkflowServiceHost>에서 호스팅하는 워크플로 인스턴스를 원격으로 제어할 수 있도록 하는 일련의 제어 작업을 정의합니다. <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>는 <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> 계약의 구현을 제공하는 표준 엔드포인트입니다. <xref:System.ServiceModel.Activities.WorkflowControlClient>는 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>에 제어 작업을 보내는 데 사용하는 클래스입니다.  

@@ -2,12 +2,12 @@
 title: 재호스팅된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대한 지원
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 8459311239d46557405245c10b6fb5e887a4691c
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 70e4a8580a8b383bdd4e5e5299bcc5210f3210dc
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380157"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423970"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>재호스팅된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대한 지원
 Windows WF (Workflow Foundation).NET Framework 4.5에는 workflow designer 환경의 몇 가지 향상 된 기능을 비롯 한 많은 새로운 기능이 도입 되었습니다. 이 항목에서는 이러한 기능 중 재호스트된 디자이너에서 지원되는 기능과 현재 지원되지 않는 기능을 자세히 설명합니다.
@@ -106,7 +106,7 @@ Windows WF (Workflow Foundation).NET Framework 4.5에는 workflow designer 환�
 >  빌드 타임 유효성 검사는 재호스트된 디자이너에서 지원되지 않습니다.  
   
 ### <a name="design-time-background-validation"></a>디자인 타임 백그라운드 유효성 검사  
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서는 포그라운드 프로세스로 워크플로의 유효성을 검사하므로 복잡하거나 시간이 많이 걸리는 유효성 검사 프로세스 중에 UI가 중단될 수 있었습니다. 이제는 백그라운드 스레드에서 워크플로 유효성 검사를 수행하므로 UI가 차단되지 않습니다.  
+ [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], 복잡 하거나 시간이 많이 걸리는 유효성 검사 프로세스 중 UI를 잠재적으로 차단할 수는 포그라운드 프로세스로 워크플로의 유효성입니다. 이제는 백그라운드 스레드에서 워크플로 유효성 검사를 수행하므로 UI가 차단되지 않습니다.  
   
  디자인 타임 백그라운드 유효성 검사는 재호스트된 디자이너에서 지원됩니다.  
   

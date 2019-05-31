@@ -17,12 +17,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 64e9b3ab-7443-4a77-ab17-b8b8c0cb3f62
-ms.openlocfilehash: da1d87464ef30fb549a2c201170e81c45cbdf6fc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2ef09fdc755480205b9929037277162349afa135
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587733"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423813"
 ---
 # <a name="backgroundworker-component-overview"></a>BackgroundWorker 구성 요소 개요
 일반적으로 수행하는 작업 중에는 실행 시간이 오래 걸릴 수 있는 것들이 많습니다. 예를 들어:  
@@ -39,7 +39,7 @@ ms.locfileid: "64587733"
   
 - 로컬 디스크 액세스(메모리 액세스에 비해 속도가 느림)  
   
- 이러한 작업을 수행하는 동안에는 사용자 인터페이스가 응답하지 않을 수 있습니다. 응답성이 뛰어난 UI가 필요한데 이러한 작업과 관련하여 지연이 길어지는 경우 <xref:System.ComponentModel.BackgroundWorker> 구성 요소를 사용하면 문제를 편리하게 해결할 수 있습니다.  
+ 이러한 작업을 실행 하는 동안 차단 하 여 사용자 인터페이스를 발생할 수 있습니다. 응답성이 뛰어난 UI가 필요한데 이러한 작업과 관련하여 지연이 길어지는 경우 <xref:System.ComponentModel.BackgroundWorker> 구성 요소를 사용하면 문제를 편리하게 해결할 수 있습니다.  
   
  <xref:System.ComponentModel.BackgroundWorker> 구성 요소는 응용 프로그램의 주 UI 스레드와는 다른 스레드에서 시간이 많이 걸리는 작업을 "백그라운드"에서 비동기식으로 실행하는 기능을 제공합니다. <xref:System.ComponentModel.BackgroundWorker>를 사용하려는 경우 백그라운드에서 실행하려는 시간이 많이 걸리는 작업자 프로세스를 지정한 다음 <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> 메서드만 호출하면 됩니다. 호출 스레드는 계속 정상적으로 실행되며 작업자 메서드는 비동기식으로 실행됩니다. 메서드가 완료되면 <xref:System.ComponentModel.BackgroundWorker>는 <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> 이벤트를 발생시켜 호출 스레드에 경고를 표시합니다. 이 이벤트는 필요에 따라 작업 결과를 포함합니다.  
   

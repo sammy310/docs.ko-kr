@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
-ms.openlocfilehash: 58c52a7d73efbd96d772dd85d6bf2c9084fb1241
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4374a229392d51b67c99210da91ae05dd3342e96
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863651"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66424061"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>방법: 선택적 매개 변수 (Visual Basic)를 사용 하는 프로시저 오버 로드
 프로시저에 있는 경우 하나 이상의 [선택 사항](../../../../visual-basic/language-reference/modifiers/optional.md) 매개 변수를 암시적 오버 로드 중 하 나와 일치 하는 오버 로드 된 버전을 정의할 수 없습니다. 자세한 내용은 "암시적 오버 로드에 대 한 선택적 매개 변수"를 참조 하세요 [프로시저 오버 로드의 고려 사항](./considerations-in-overloading-procedures.md)합니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "61863651"
   
 #### <a name="to-overload-a-procedure-that-takes-more-than-one-optional-parameter"></a>둘 이상의 선택적 매개 변수를 사용 하는 프로시저 오버 로드  
   
-1. 프로시저의 논리를 제공 된 선택적 인수의 조합을 결정 합니다. 허용 된 조합이 하나의 선택적 매개 변수는 다른 종속 된 경우에 발생할 수 있습니다. 예를 들어, 1 개의 매개 변수가 배우자의 이름은 허용 하 고 배우자의 시대를 허용 하는 다른, 보존 기간을 제공 하지만 이름을 생략 인수의 조합을 허용 되지 않습니다.  
+1. 프로시저의 논리를 제공 된 선택적 인수의 조합을 결정 합니다. 허용 된 조합이 하나의 선택적 매개 변수는 다른 종속 된 경우에 발생할 수 있습니다. 예를 들어, 1 개의 매개 변수가 사람 이름이 허용 하 고 다른 사람의 나이 수락, 보존 기간을 제공 하지만 이름을 생략 인수의 조합을 허용 되지 않습니다.  
   
 2. 선택적 인수를 제공 된 각 허용 가능한 조합에 대해 작성 된 `Sub` 또는 `Function` 해당 매개 변수 목록을 정의 하는 선언문입니다. 사용 하지 마십시오는 `Optional` 키워드입니다.  
   

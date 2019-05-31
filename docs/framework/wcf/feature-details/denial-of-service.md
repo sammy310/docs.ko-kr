@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 426429eefd038008340a956ab3fa3cba21906c84
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6dea344d5af24ba2f5bb4aa4064a4f876408380
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627021"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423894"
 ---
 # <a name="denial-of-service"></a>서비스 거부
 서비스 거부는 시스템을 가득 채워 메시지를 처리할 수 없거나 메시지가 매우 느리게 처리되는 경우에 발생합니다.  
@@ -46,8 +46,8 @@ ms.locfileid: "64627021"
   
  이 문제를 완화하려면 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 속성을 `true`로 설정하고 이벤트 뷰어의 속성을 사용하여 감사 동작을 제어합니다. 이벤트 뷰어를 사용 하 여 이벤트 로그 보기 및 관리에 대 한 자세한 내용은 참조 하세요. [이벤트 뷰어](https://go.microsoft.com/fwlink/?LinkId=186123)합니다. 자세한 내용은 [감사](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)합니다.  
   
-## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>IAuthorizationPolicy의 잘못된 구현으로 인해 서비스가 중단될 수 있음  
- <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> 인터페이스의 잘못된 구현에서 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 메서드를 호출하면 서비스가 중단될 수 있습니다.  
+## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>IAuthorizationPolicy의 잘못 된 구현에는 서비스가 응답 하지 않을 않을 수 있습니다.  
+ 호출 된 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> 의 잘못 된 구현에서 메서드를 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 인터페이스 서비스가 응답 하지 않게 될 수 있습니다.  
   
  완화: 신뢰할 수 있는 코드만 사용 합니다. 즉, 직접 작성하고 테스트한 코드나 신뢰할 수 있는 공급자가 제공한 코드만 사용합니다. 신뢰할 수 없는 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 확장이 적절한 고려 없이 코드에 연결할 수 없도록 합니다. 이 내용은 서비스 구현에 사용되는 모든 확장에 적용됩니다. WCF는 확장성 지점을 사용 하 여 응용 프로그램 코드와 연결 된 외부 코드 구분을 만들지 않습니다.  
   

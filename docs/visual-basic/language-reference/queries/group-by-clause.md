@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Group By statement [Visual Basic]
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
-ms.openlocfilehash: 5224c7b5ae1c8a83be07fdf5f2065794fb46dd55
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 04378d2c9a7e565343ff663997e2a3e61f04f9d2
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625558"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423581"
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By 절(Visual Basic)
 쿼리 결과의 요소를 그룹화합니다. 각 그룹에 집계 함수를 적용하는 데 사용할 수도 있습니다. 그룹화 작업은 하나 이상의 키를 기반으로 합니다.  
@@ -65,7 +65,7 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
  `aggregateList` 절의 `Into` 매개 변수와 `Group` 키워드를 사용하여 그룹을 참조하는 데 사용되는 멤버 이름을 식별합니다. `Into` 절에 집계 함수를 포함하여 그룹화된 요소의 값을 계산할 수도 있습니다. 표준 집계 함수 목록은 [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
- 다음 코드 예제에서는 해당 위치(국가)를 기준으로 고객 목록을 그룹화하고 각 그룹에 있는 고객 수를 제공합니다. 결과는 국가 이름별로 정렬됩니다. 그룹화된 결과는 도시 이름별로 정렬됩니다.  
+ 다음 코드 예제에서는 해당 위치 (국가/지역)를 기반으로 고객 목록을 그룹화 하 고 각 그룹의 고객 수를 제공 합니다. 결과 국가/지역 이름별으로 정렬 됩니다. 그룹화된 결과는 도시 이름별로 정렬됩니다.  
   
  [!code-vb[VbSimpleQuerySamples#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#11)]  
   
