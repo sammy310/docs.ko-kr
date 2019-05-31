@@ -6,4 +6,4 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2019
 ms.locfileid: "65629883"
 ---
-<span data-ttu-id="67548-101">2.0부터 사용할 수 있음</span><span class="sxs-lookup"><span data-stu-id="67548-101">Available since 2.0</span></span>
+<span data-ttu-id="4bd22-101">2.0부터 사용할 수 있음</span><span class="sxs-lookup"><span data-stu-id="4bd22-101">Available since 2.0</span></span>
