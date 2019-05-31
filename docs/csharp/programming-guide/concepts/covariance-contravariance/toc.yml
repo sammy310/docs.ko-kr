@@ -1,6 +1,7 @@
 - name: 공 분산 및 반공 분산
-  href: index.md
   items:
+    - name: 개요
+      href: index.md
     - name: 제네릭 인터페이스의 가변성
       href: variance-in-generic-interfaces.md
       items:
