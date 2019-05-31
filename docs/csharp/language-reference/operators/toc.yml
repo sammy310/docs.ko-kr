@@ -1,5 +1,4 @@
 - name: 'C# 연산자'
-  href: index.md
   items:
     - name: 산술 연산자
       href: arithmetic-operators.md
@@ -29,15 +28,16 @@
     - name: + 및 += 연산자
       href: addition-operator.md
       displayName: 'string concatenation, delegate combination, event subscription'
-    - name: '- 연산자'
+    - name: '- 및 -= 연산자'
       href: subtraction-operator.md
+      displayName: 'delegate removal, event unsubscription'
     - name: = 연산자
       href: assignment-operator.md
     - name: '?: 연산자'
       href: conditional-operator.md
-    - name: '-= 연산자'
-      href: subtraction-assignment-operator.md
     - name: '?? 연산자'
       href: null-coalescing-operator.md
     - name: => 연산자
       href: lambda-operator.md
+    - name: true 및 false 연산자
+      href: true-false-operators.md

@@ -2,12 +2,12 @@
 title: Docker 기반 애플리케이션에 대한 개발 프로세스
 description: Docker 기반 애플리케이션 개발 옵션을 개괄적으로 살펴봅니다. Windows용 Visual Studio, Mac용 Visual Studio 또는 여러 플랫폼(Windows, Mac, Linux)을 지원하는 Visual Studio Code를 사용합니다.
 ms.date: 09/27/2018
-ms.openlocfilehash: a871fcbfcf079c745759cb17960fa4eaa6ec6eec
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8807bc57365e70a0cbf265dc7bce28c93de16098
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640078"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300640"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Docker 기반 애플리케이션에 대한 개발 프로세스
 
@@ -19,13 +19,13 @@ ms.locfileid: "65640078"
 
 완전하고 강력한 IDE를 선호하든지 아니면 간단하고 민첩한 편집기를 선호하든지 상관없이 Microsoft는 Docker 애플리케이션을 개발하는 데 사용할 수 있는 도구를 제공합니다.
 
-**Visual Studio(Windows용)**. Visual Studio를 사용하여 Docker 기반 애플리케이션을 개발할 때에는 이미 기본 제공되는 Docker용 도구와 함께 제공되는 Visual Studio 2017 버전 15.7 이상을 사용하는 것이 좋습니다. Docker용 도구를 통해 대상 Docker 환경에서 직접 애플리케이션을 개발하고 실행할 수 있으며, 애플리케이션의 유효성을 검사할 수 있습니다. F5 키를 눌러 애플리케이션(단일 컨테이너 또는 여러 컨테이너)을 Docker 호스트에 직접 실행 및 디버그하거나, Ctrl+F5를 눌러 컨테이너를 다시 빌드하지 않고도 애플리케이션을 편집 및 새로 고칠 수 있습니다. 이는 Docker 기반 앱을 위한 가장 강력한 개발 옵션입니다.
+**Visual Studio(Windows용)** . Visual Studio를 사용하여 Docker 기반 애플리케이션을 개발할 때에는 이미 기본 제공되는 Docker용 도구와 함께 제공되는 Visual Studio 2017 버전 15.7 이상을 사용하는 것이 좋습니다. Docker용 도구를 통해 대상 Docker 환경에서 직접 애플리케이션을 개발하고 실행할 수 있으며, 애플리케이션의 유효성을 검사할 수 있습니다. F5 키를 눌러 애플리케이션(단일 컨테이너 또는 여러 컨테이너)을 Docker 호스트에 직접 실행 및 디버그하거나, Ctrl+F5를 눌러 컨테이너를 다시 빌드하지 않고도 애플리케이션을 편집 및 새로 고칠 수 있습니다. 이는 Docker 기반 앱을 위한 가장 강력한 개발 옵션입니다.
 
 **Mac용 Visual Studio.** macOS에서 실행되는 Xamarin Studio의 확장인 IDE로, 2017년 중반부터 Docker를 지원합니다. 이는 Mac 컴퓨터에서 작업 중인 개발자로, 강력한 IDE도 사용하고자 하는 경우에 권장되는 옵션입니다.
 
 **Visual Studio Code 및 Docker CLI**. 개발 언어를 지원하는 간단한 플랫폼 간 편집기를 선호하는 경우 Microsoft VS Code(Visual Studio Code) 및 Docker CLI를 사용할 수 있습니다. 이는 Mac, Linux 및 Windows에 대한 플랫폼 간 개발 접근법입니다. 또한 Visual Studio Code는 Dockerfile용 IntelliSense와 같은 Docker용 확장을 지원하고 편집기에서 Docker 명령을 실행하는 바로 가기 작업도 지원합니다.
 
-[Docker CE(Community Edition)](https://www.docker.com/community-edition) 도구를 설치하면 단일 Docker CLI를 사용하여 Windows용 앱과 Linux용 앱을 모두 빌드할 수 있습니다.
+[Docker Desktop CE(Community Edition)](https://hub.docker.com/search/?type=edition&offering=community)를 설치하면 단일 Docker CLI를 사용하여 Windows용 앱과 Linux용 앱을 모두 빌드할 수 있습니다.
 
 ### <a name="additional-resources"></a>추가 자료
 
@@ -35,8 +35,11 @@ ms.locfileid: "65640078"
 - **Visual Studio Code**. 공식 사이트입니다. \
   <https://code.visualstudio.com/download>
 
-- **Mac 및 Windows용 Docker CE(Community Edition)** \
-  [https://www.docker.com/community-editions](https://www.docker.com/community-edition)
+- **Windows CE(Community Edition)를 위한 Docker Desktop** \
+  [https://hub.docker.com/editions/community/docker-ce-desktop-windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
+  
+- **Mac CE(Community Edition)를 위한 Docker Desktop** \
+  [https://hub.docker.com/editions/community/docker-ce-desktop-mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 
 ## <a name="net-languages-and-frameworks-for-docker-containers"></a>Docker 컨테이너를 위한 .NET 언어 및 프레임워크
 

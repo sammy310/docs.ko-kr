@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 6d3b77a506186166c9ad76490ef47f8759c704eb
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 893ac7bbfcfe159787789238c3142f34ac7ecf35
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452723"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423297"
 ---
 # <a name="namespaces-c-programming-guide"></a>네임스페이스(C# 프로그래밍 가이드)
 
@@ -53,6 +53,5 @@ ms.locfileid: "65452723"
 - [방법: 전역 네임스페이스 별칭 사용](how-to-use-the-global-namespace-alias.md)
 - [방법: My 네임스페이스 사용](how-to-use-the-my-namespace.md)
 - [식별자 이름](../inside-a-program/identifier-names.md)
-- [네임스페이스 키워드](../../language-reference/keywords/namespace-keywords.md)
 - [using 지시문](../../language-reference/keywords/using-directive.md)
 - [:: 연산자](../../language-reference/operators/namespace-alias-qualifer.md)

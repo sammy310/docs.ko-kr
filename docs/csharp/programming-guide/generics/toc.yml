@@ -1,10 +1,6 @@
 - name: 제네릭
   href: index.md
   items:
-    - name: 제네릭 소개
-      href: introduction-to-generics.md
-    - name: 제네릭의 장점
-      href: benefits-of-generics.md
     - name: 제네릭 형식 매개 변수
       href: generic-type-parameters.md
     - name: 형식 매개 변수에 대한 제약 조건
