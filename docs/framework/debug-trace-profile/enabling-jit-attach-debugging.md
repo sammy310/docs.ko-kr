@@ -7,35 +7,35 @@ helpviewer_keywords:
 ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7af34cf4bd3a2367eaf320990dbbc24f4e7a8bbf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 088ca6dd8973a626b1f028c638e60bf995af1e65
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660145"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457323"
 ---
-# <a name="enabling-jit-attach-debugging"></a><span data-ttu-id="d57b4-102">JIT 연결 디버깅 설정</span><span class="sxs-lookup"><span data-stu-id="d57b4-102">Enabling JIT-Attach Debugging</span></span>
-<span data-ttu-id="d57b4-103">오류가 발생한 경우 JIT 연결 디버깅은 디버거를 프로세스에 연결하는 방법을 설명하는 데 사용되는 구문이고, 오류가 발생하지 않은 경우 특정 메서드 또는 함수에 의해 트리거될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d57b4-103">JIT-attach debugging is the phrase used to describe attaching a debugger to a process when you encounter errors, or it can be triggered by specific methods or functions.</span></span>  
+# <a name="enabling-jit-attach-debugging"></a><span data-ttu-id="5d57f-102">JIT 연결 디버깅 설정</span><span class="sxs-lookup"><span data-stu-id="5d57f-102">Enabling JIT-Attach Debugging</span></span>
+<span data-ttu-id="5d57f-103">오류가 발생한 경우 JIT 연결 디버깅은 디버거를 프로세스에 연결하는 방법을 설명하는 데 사용되는 구문이고, 오류가 발생하지 않은 경우 특정 메서드 또는 함수에 의해 트리거될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5d57f-103">JIT-attach debugging is the phrase used to describe attaching a debugger to a process when you encounter errors, or it can be triggered by specific methods or functions.</span></span>  
   
- <span data-ttu-id="d57b4-104">JIT 연결 디버깅은 다음 오류 조건에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="d57b4-104">JIT-attach debugging is used under the following fault conditions:</span></span>  
+ <span data-ttu-id="5d57f-104">JIT 연결 디버깅은 다음 오류 조건에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="5d57f-104">JIT-attach debugging is used under the following fault conditions:</span></span>  
   
-- <span data-ttu-id="d57b4-105">처리되지 않은 예외(네이티브 및 관리 코드에서 둘 다).</span><span class="sxs-lookup"><span data-stu-id="d57b4-105">Unhandled exceptions (in both native and managed code).</span></span>  
+- <span data-ttu-id="5d57f-105">처리되지 않은 예외(네이티브 및 관리 코드에서 둘 다).</span><span class="sxs-lookup"><span data-stu-id="5d57f-105">Unhandled exceptions (in both native and managed code).</span></span>  
   
-- <span data-ttu-id="d57b4-106"><xref:System.Environment.FailFast%2A?displayProperty=nameWithType> 메서드 또는 [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) 함수(Windows 7 제품군).</span><span class="sxs-lookup"><span data-stu-id="d57b4-106"><xref:System.Environment.FailFast%2A?displayProperty=nameWithType> method or [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) function (Windows 7 family).</span></span>  
+- <span data-ttu-id="5d57f-106"><xref:System.Environment.FailFast%2A?displayProperty=nameWithType> 메서드 또는 [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) 함수(Windows 7 제품군).</span><span class="sxs-lookup"><span data-stu-id="5d57f-106"><xref:System.Environment.FailFast%2A?displayProperty=nameWithType> method or [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) function (Windows 7 family).</span></span>  
   
-- <span data-ttu-id="d57b4-107">런타임 오류.</span><span class="sxs-lookup"><span data-stu-id="d57b4-107">Runtime fatal errors.</span></span>  
+- <span data-ttu-id="5d57f-107">런타임 오류.</span><span class="sxs-lookup"><span data-stu-id="5d57f-107">Runtime fatal errors.</span></span>  
   
- <span data-ttu-id="d57b4-108">JIT 연결 디버깅은 다음 메서드 및 함수에 대한 호출에 의해서도 트리거됩니다.</span><span class="sxs-lookup"><span data-stu-id="d57b4-108">JIT-attach debugging is also triggered by calls to the following methods and functions:</span></span>  
+ <span data-ttu-id="5d57f-108">JIT 연결 디버깅은 다음 메서드 및 함수에 대한 호출에 의해서도 트리거됩니다.</span><span class="sxs-lookup"><span data-stu-id="5d57f-108">JIT-attach debugging is also triggered by calls to the following methods and functions:</span></span>  
   
-- <span data-ttu-id="d57b4-109"><xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> 메서드를 호출하여 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="d57b4-109"><xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> method.</span></span>  
+- <span data-ttu-id="5d57f-109"><xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> 메서드를 호출하여 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="5d57f-109"><xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> method.</span></span>  
   
-- <span data-ttu-id="d57b4-110"><xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> 메서드를 호출하여 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="d57b4-110"><xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> method.</span></span>  
+- <span data-ttu-id="5d57f-110"><xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> 메서드를 호출하여 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="5d57f-110"><xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> method.</span></span>  
   
-- <span data-ttu-id="d57b4-111">[DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) 함수(Win32).</span><span class="sxs-lookup"><span data-stu-id="d57b4-111">[DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) function (Win32).</span></span>  
+- <span data-ttu-id="5d57f-111">[DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) 함수(Win32).</span><span class="sxs-lookup"><span data-stu-id="5d57f-111">[DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) function (Win32).</span></span>  
   
- <span data-ttu-id="d57b4-112">[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 이전에 .NET Framework에서는 네이티브 및 관리되는 디버거의 동작을 제어하기 위한 개별 레지스트리 키를 제공했습니다.</span><span class="sxs-lookup"><span data-stu-id="d57b4-112">Before the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], the .NET Framework provided separate registry keys to control the behavior of native and managed debuggers.</span></span> <span data-ttu-id="d57b4-113">부터 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], 컨트롤은 단일 레지스트리 키 아래에서 통합: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug.</span><span class="sxs-lookup"><span data-stu-id="d57b4-113">Starting with the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], control is consolidated under a single registry key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug.</span></span> <span data-ttu-id="d57b4-114">해당 키에 대해 설정할 수 있는 값에 따라 디버거 호출 여부가 결정되고 디버거가 호출되는 경우 사용자 조작이 필요한 대화 상자와 함께 호출되는지 여부가 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="d57b4-114">The values you can set for that key determine whether a debugger is invoked, and, if so, whether it is invoked with a dialog box that requires user interaction.</span></span> <span data-ttu-id="d57b4-115">이 레지스트리 키 설정에 대 한 자세한 내용은 [자동 디버깅 구성](https://go.microsoft.com/fwlink/?LinkId=181767)합니다.</span><span class="sxs-lookup"><span data-stu-id="d57b4-115">For information about setting this registry key, see [Configuring Automatic Debugging](https://go.microsoft.com/fwlink/?LinkId=181767).</span></span>  
+ <span data-ttu-id="5d57f-112">[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 이전에 .NET Framework에서는 네이티브 및 관리되는 디버거의 동작을 제어하기 위한 개별 레지스트리 키를 제공했습니다.</span><span class="sxs-lookup"><span data-stu-id="5d57f-112">Before the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], the .NET Framework provided separate registry keys to control the behavior of native and managed debuggers.</span></span> <span data-ttu-id="5d57f-113">.NET Framework 4부터 컨트롤은 아래에 통합 된 단일 레지스트리 키: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug.</span><span class="sxs-lookup"><span data-stu-id="5d57f-113">Starting with the .NET Framework 4, control is consolidated under a single registry key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug.</span></span> <span data-ttu-id="5d57f-114">해당 키에 대해 설정할 수 있는 값에 따라 디버거 호출 여부가 결정되고 디버거가 호출되는 경우 사용자 조작이 필요한 대화 상자와 함께 호출되는지 여부가 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="5d57f-114">The values you can set for that key determine whether a debugger is invoked, and, if so, whether it is invoked with a dialog box that requires user interaction.</span></span> <span data-ttu-id="5d57f-115">이 레지스트리 키 설정에 대 한 자세한 내용은 [자동 디버깅 구성](https://go.microsoft.com/fwlink/?LinkId=181767)합니다.</span><span class="sxs-lookup"><span data-stu-id="5d57f-115">For information about setting this registry key, see [Configuring Automatic Debugging](https://go.microsoft.com/fwlink/?LinkId=181767).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d57b4-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="d57b4-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5d57f-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="5d57f-116">See also</span></span>
 
-- [<span data-ttu-id="d57b4-117">디버깅, 추적 및 프로파일링</span><span class="sxs-lookup"><span data-stu-id="d57b4-117">Debugging, Tracing, and Profiling</span></span>](../../../docs/framework/debug-trace-profile/index.md)
-- [<span data-ttu-id="d57b4-118">쉽게 디버깅할 수 있도록 이미지 만들기</span><span class="sxs-lookup"><span data-stu-id="d57b4-118">Making an Image Easier to Debug</span></span>](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)
+- [<span data-ttu-id="5d57f-117">디버깅, 추적 및 프로파일링</span><span class="sxs-lookup"><span data-stu-id="5d57f-117">Debugging, Tracing, and Profiling</span></span>](../../../docs/framework/debug-trace-profile/index.md)
+- [<span data-ttu-id="5d57f-118">쉽게 디버깅할 수 있도록 이미지 만들기</span><span class="sxs-lookup"><span data-stu-id="5d57f-118">Making an Image Easier to Debug</span></span>](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)

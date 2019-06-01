@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: ef6f2662-323b-4534-aa82-6d1afb7b9309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1297c84acadf0a53b418b06afe806237d374ee25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b09c509c3e0ba941a34f60ff522117ff30d83caf
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993163"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457385"
 ---
-# <a name="iclrruntimeinfoisstarted-method"></a><span data-ttu-id="a1a2d-102">ICLRRuntimeInfo::IsStarted 메서드</span><span class="sxs-lookup"><span data-stu-id="a1a2d-102">ICLRRuntimeInfo::IsStarted Method</span></span>
-<span data-ttu-id="a1a2d-103">런타임이 시작 되었는지 여부를 나타냅니다 (있는지, 즉 합니다 [iclrruntimehost:: Start 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) 이 호출 되었고, 했습니다).</span><span class="sxs-lookup"><span data-stu-id="a1a2d-103">Indicates whether the runtime has been started (that is, whether the [ICLRRuntimeHost::Start method](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) has been called and has succeeded).</span></span>  
+# <a name="iclrruntimeinfoisstarted-method"></a><span data-ttu-id="49bd6-102">ICLRRuntimeInfo::IsStarted 메서드</span><span class="sxs-lookup"><span data-stu-id="49bd6-102">ICLRRuntimeInfo::IsStarted Method</span></span>
+<span data-ttu-id="49bd6-103">런타임이 시작 되었는지 여부를 나타냅니다 (있는지, 즉 합니다 [iclrruntimehost:: Start 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) 이 호출 되었고, 했습니다).</span><span class="sxs-lookup"><span data-stu-id="49bd6-103">Indicates whether the runtime has been started (that is, whether the [ICLRRuntimeHost::Start method](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) has been called and has succeeded).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a1a2d-104">구문</span><span class="sxs-lookup"><span data-stu-id="a1a2d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="49bd6-104">구문</span><span class="sxs-lookup"><span data-stu-id="49bd6-104">Syntax</span></span>  
   
 ```  
 HRESULT IsStarted(  
@@ -33,35 +33,35 @@ HRESULT IsStarted(
         [out] DWORD    *pdwStartupFlags);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a1a2d-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="a1a2d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="49bd6-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="49bd6-105">Parameters</span></span>  
  `pbStarted`  
- <span data-ttu-id="a1a2d-106">[out] `true` 이 런타임에서이 고, 그렇지 않으면 시작 경우 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="a1a2d-106">[out] `true` if this runtime is started; otherwise, `false`.</span></span>  
+ <span data-ttu-id="49bd6-106">[out] `true` 이 런타임에서이 고, 그렇지 않으면 시작 경우 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="49bd6-106">[out] `true` if this runtime is started; otherwise, `false`.</span></span>  
   
  `pdwStartupFlags`  
- <span data-ttu-id="a1a2d-107">[out] 런타임을 시작 하는 데 사용 된 플래그를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="a1a2d-107">[out] Returns the flags that were used to start the runtime.</span></span>  
+ <span data-ttu-id="49bd6-107">[out] 런타임을 시작 하는 데 사용 된 플래그를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="49bd6-107">[out] Returns the flags that were used to start the runtime.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a1a2d-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="a1a2d-108">Return Value</span></span>  
- <span data-ttu-id="a1a2d-109">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="a1a2d-109">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="49bd6-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="49bd6-108">Return Value</span></span>  
+ <span data-ttu-id="49bd6-109">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="49bd6-109">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="a1a2d-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a1a2d-110">HRESULT</span></span>|<span data-ttu-id="a1a2d-111">설명</span><span class="sxs-lookup"><span data-stu-id="a1a2d-111">Description</span></span>|  
+|<span data-ttu-id="49bd6-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="49bd6-110">HRESULT</span></span>|<span data-ttu-id="49bd6-111">설명</span><span class="sxs-lookup"><span data-stu-id="49bd6-111">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="a1a2d-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="a1a2d-112">S_OK</span></span>|<span data-ttu-id="a1a2d-113">메서드가 완료되었습니다.</span><span class="sxs-lookup"><span data-stu-id="a1a2d-113">The method completed successfully.</span></span>|  
-|<span data-ttu-id="a1a2d-114">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="a1a2d-114">E_NOTIMPL</span></span>|<span data-ttu-id="a1a2d-115">공용 언어 런타임 (CLR) 버전에서 CLR 버전 보다 이전 인지를 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]입니다.</span><span class="sxs-lookup"><span data-stu-id="a1a2d-115">The common language runtime (CLR) version is earlier than the CLR version in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>|  
+|<span data-ttu-id="49bd6-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="49bd6-112">S_OK</span></span>|<span data-ttu-id="49bd6-113">메서드가 완료되었습니다.</span><span class="sxs-lookup"><span data-stu-id="49bd6-113">The method completed successfully.</span></span>|  
+|<span data-ttu-id="49bd6-114">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="49bd6-114">E_NOTIMPL</span></span>|<span data-ttu-id="49bd6-115">공용 언어 런타임 (CLR) 버전에서 CLR 버전 보다 이전 인지를 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]입니다.</span><span class="sxs-lookup"><span data-stu-id="49bd6-115">The common language runtime (CLR) version is earlier than the CLR version in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a1a2d-116">설명</span><span class="sxs-lookup"><span data-stu-id="a1a2d-116">Remarks</span></span>  
- <span data-ttu-id="a1a2d-117">이 메서드는 사용 하지 않고 CLR 버전에서 CLR 버전 보다 이전는 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="a1a2d-117">This method does not work with CLR versions earlier than the CLR version in the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].</span></span>  
+## <a name="remarks"></a><span data-ttu-id="49bd6-116">설명</span><span class="sxs-lookup"><span data-stu-id="49bd6-116">Remarks</span></span>  
+ <span data-ttu-id="49bd6-117">이전.NET Framework 4에서 CLR 버전 CLR 버전을 사용 하 여이 메서드가 작동 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="49bd6-117">This method does not work with CLR versions earlier than the CLR version in the .NET Framework 4.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a1a2d-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="a1a2d-118">Requirements</span></span>  
- <span data-ttu-id="a1a2d-119">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="a1a2d-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="49bd6-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="49bd6-118">Requirements</span></span>  
+ <span data-ttu-id="49bd6-119">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="49bd6-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a1a2d-120">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="a1a2d-120">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="49bd6-120">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="49bd6-120">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="a1a2d-121">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="a1a2d-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="49bd6-121">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="49bd6-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="a1a2d-122">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a1a2d-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="49bd6-122">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="49bd6-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a1a2d-123">참고자료</span><span class="sxs-lookup"><span data-stu-id="a1a2d-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="49bd6-123">참고자료</span><span class="sxs-lookup"><span data-stu-id="49bd6-123">See also</span></span>
 
-- [<span data-ttu-id="a1a2d-124">ICLRRuntimeInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a1a2d-124">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [<span data-ttu-id="a1a2d-125">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a1a2d-125">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="a1a2d-126">호스팅</span><span class="sxs-lookup"><span data-stu-id="a1a2d-126">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="49bd6-124">ICLRRuntimeInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="49bd6-124">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [<span data-ttu-id="49bd6-125">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="49bd6-125">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="49bd6-126">호스팅</span><span class="sxs-lookup"><span data-stu-id="49bd6-126">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
