@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af68041cd016b457c449c283601bd5a0d4258c8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dfad184e30ec94c8add265db2ef8131d0d34396f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666061"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457232"
 ---
 # <a name="setting-up-a-profiling-environment"></a>프로파일링 환경 설정
 > [!NOTE]
@@ -37,10 +37,10 @@ ms.locfileid: "64666061"
  CLR 응용 프로그램을 프로파일링하려면 응용 프로그램을 실행하기 전에 COR_ENABLE_PROFILING 및 COR_PROFILER 환경 변수를 설정해야 합니다. 또한 프로파일러 DLL이 등록되었는지 확인해야 합니다.  
   
 > [!NOTE]
->  [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]부터 프로파일러를 등록할 필요가 없습니다.  
+>  .NET Framework 4부터 프로파일러 없는 등록 해야 합니다.  
   
 > [!NOTE]
->  .NET Framework 버전 2.0, 3.0 및 3.5 프로파일러를 사용 하 여 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 이상 버전에서는 COMPLUS_ProfAPI_ProfilerCompatibilitySetting 환경 변수를 설정 해야 합니다.  
+>  .NET Framework 4 및 이후 버전의.NET Framework 버전 2.0, 3.0 및 3.5 프로파일러를 사용 하려면 COMPLUS_ProfAPI_ProfilerCompatibilitySetting 환경 변수를 설정 해야 합니다.  
   
 ## <a name="environment-variable-scope"></a>환경 변수 범위  
  COR_ENABLE_PROFILING 및 COR_PROFILER 환경 변수를 설정하는 방법에 따라 영향을 미치는 범위가 결정됩니다. 다음 방법의 하나로 이들 변수를 설정할 수 있습니다.  

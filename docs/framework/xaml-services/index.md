@@ -6,15 +6,15 @@ helpviewer_keywords:
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: 9c75f6add000b2055bcbf13a7fcdf635bd707947
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c99e44c7d373d050113687753d4f18eca27e0de5
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663231"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457405"
 ---
 # <a name="xaml-services"></a>XAML 서비스
-이 항목에서는.NET Framework XAML 서비스 라고 하는 기술 집합의 기능을 설명 합니다. 에 도입 된 어셈블리인 System.Xaml 어셈블리에 있는 대부분의 서비스와 설명 되는 Api는 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] .NET core 어셈블리의 집합입니다. 판독기 및 작성기, 스키마 클래스 및 스키마 지원이 팩터리를 포함 하는 서비스 클래스, XAML 언어 내장 함수 지원을 및 다른 XAML 언어 기능 특성을 지정 합니다.  
+이 항목에서는.NET Framework XAML 서비스 라고 하는 기술 집합의 기능을 설명 합니다. 대부분의 서비스와 설명 되는 Api는.NET core 어셈블리 집합은.NET Framework 4를 사용 하 여 도입 된 어셈블리인 System.Xaml 어셈블리에 있습니다. 판독기 및 작성기, 스키마 클래스 및 스키마 지원이 팩터리를 포함 하는 서비스 클래스, XAML 언어 내장 함수 지원을 및 다른 XAML 언어 기능 특성을 지정 합니다.  
   
 ## <a name="about-this-documentation"></a>이 설명서에 대 한  
  .NET Framework XAML 서비스에 대 한 개념 설명서는 XAML 언어 및 어떻게이 적용 될 수 있습니다 특정 프레임 워크, 예를 들어 사용 경험이 있다고 가정 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] Windows Workflow Foundation 또는 특정 기술 기능 영역, 예를 들어 빌드 사용자 지정 기능 <xref:Microsoft.Build.Framework.XamlTypes>합니다. 이 설명서 태그 언어, XAML 구문 용어 또는 기타 입문 자료로 XAML의 기본 사항을 설명 하지 않습니다. 대신,이 설명서에 특별히 사용할 수 있는.NET Framework XAML 서비스를 사용 하 여 System.Xaml 어셈블리 라이브러리의 중점을 둡니다. 대부분의 이러한 Api는 XAML 언어 통합 및 확장성에 대 한 시나리오에 대 한 합니다. 다음 중 하나를이 포함 될 수 있습니다.  

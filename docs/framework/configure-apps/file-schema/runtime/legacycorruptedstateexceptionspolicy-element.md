@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78b670d8b23b5ecf274432d3758d07dae34dcfcf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8733e11aba30ebea30fc71a5350f76dfd041eb4
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607164"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456410"
 ---
 # <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy > 요소
 공용 언어 런타임에서 액세스 위반 및 기타 손상 된 상태 예외를 catch 하는 관리 되는 코드를 허용 하는지 여부를 지정 합니다.  
@@ -64,10 +64,10 @@ ms.locfileid: "64607164"
   
 - 적용 된 <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> 특성을 메서드에 예외를 포함 하는 `catch` 블록입니다.  
   
- 이 구성 요소는 에서만 사용할 수는 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] 이상.  
+ 이 구성 요소가 이상.NET Framework 4에만 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 응용 프로그램이 이전 동작으로 되돌려야 함을 지정 하는 방법의 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], 모든 손상 된 상태 예외 오류를 catch 합니다.  
+ 다음 예제에서는 응용 프로그램이.NET Framework 4 이전 동작으로 되돌리려면 하 고 모든 손상 된 상태 예외 오류를 catch 해야를 지정 하는 방법을 보여 줍니다.  
   
 ```xml  
 <configuration>  

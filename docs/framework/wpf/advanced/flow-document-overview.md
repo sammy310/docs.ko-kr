@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: 082f5bf9f8cdd8e5f44aa74e7b34e03637b5c579
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b74ab89837592de2de6cfa43d9efb1ed0f63d69
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663362"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457450"
 ---
 # <a name="flow-document-overview"></a>유동 문서 개요
 유동 문서는 보기와 가독성을 최적화하도록 설계되었습니다. 유동 문서는 미리 정의된 하나의 레이아웃으로 설정되는 것이 아니라, 창 크기, 디바이스 해상도 및 선택적 사용자 기본 설정 등의 런타임 변수에 따라 동적으로 콘텐츠를 조정하고 리플로우합니다. 유동 문서에서는 페이지 매김 및 열과 같은 고급 문서 기능을 제공합니다. 이 항목에서는 유동 문서의 개요와 해당 문서를 작성하는 방법을 제공합니다.  
@@ -152,7 +152,7 @@ ms.locfileid: "64663362"
   
  [!code-xaml[FlowOvwSnippets_snip#RunExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/RunSnippetsExample.xaml#runexample1)]  
   
- **참고:**  부터 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], <xref:System.Windows.Documents.Run.Text%2A> 의 속성을 <xref:System.Windows.Documents.Run> 개체 속성은 종속성 속성입니다. 바인딩할 수 있습니다 합니다 <xref:System.Windows.Documents.Run.Text%2A> 와 같은 속성에 대 한 데이터 소스를 <xref:System.Windows.Controls.TextBlock>입니다. <xref:System.Windows.Documents.Run.Text%2A> 속성은 단방향 바인딩을 완벽 하 게 지원 합니다. 합니다 <xref:System.Windows.Documents.Run.Text%2A> 속성을 제외 하 고 양방향 바인딩도 지원 <xref:System.Windows.Controls.RichTextBox>합니다. 예제를 보려면 <xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>를 참조하십시오.  
+ **참고:**  .NET Framework 4부터를 <xref:System.Windows.Documents.Run.Text%2A> 의 속성을 <xref:System.Windows.Documents.Run> 개체 속성은 종속성 속성입니다. 바인딩할 수 있습니다 합니다 <xref:System.Windows.Documents.Run.Text%2A> 와 같은 속성에 대 한 데이터 소스를 <xref:System.Windows.Controls.TextBlock>입니다. <xref:System.Windows.Documents.Run.Text%2A> 속성은 단방향 바인딩을 완벽 하 게 지원 합니다. 합니다 <xref:System.Windows.Documents.Run.Text%2A> 속성을 제외 하 고 양방향 바인딩도 지원 <xref:System.Windows.Controls.RichTextBox>합니다. 예제를 보려면 <xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>를 참조하십시오.  
   
  **Span**  
   

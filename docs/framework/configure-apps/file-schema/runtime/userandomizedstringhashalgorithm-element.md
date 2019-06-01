@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2a51b9fb485da605effbad0e81b8baf5e05e382a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91983a0910b272e621783f0fdb68242ddbd20f03
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675093"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456177"
 ---
 # <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm > 요소
 공용 언어 런타임에서 문자열에 대 한 해시 코드를 계산할지 여부를 결정 한 응용 프로그램 도메인 별로 합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "61675093"
 |`runtime`|런타임 초기화 옵션에 대한 정보를 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
- 기본적으로 <xref:System.StringComparer> 클래스 및 <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> 메서드 응용 프로그램 도메인 간에 일관 된 해시 코드를 생성 하는 단일 해싱 알고리즘을 사용 합니다. 이 설정에 해당 하는 합니다 `enabled` 특성을 `<UseRandomizedStringHashAlgorithm>` 요소를 `0`입니다. 에 사용 되는 해시 알고리즘을 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]입니다.  
+ 기본적으로 <xref:System.StringComparer> 클래스 및 <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> 메서드 응용 프로그램 도메인 간에 일관 된 해시 코드를 생성 하는 단일 해싱 알고리즘을 사용 합니다. 이 설정에 해당 하는 합니다 `enabled` 특성을 `<UseRandomizedStringHashAlgorithm>` 요소를 `0`입니다. .NET Framework 4에 사용 되는 해시 알고리즘입니다.  
   
  합니다 <xref:System.StringComparer> 클래스 및 <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> 메서드가 해시 코드를 계산 하는 다른 해싱 알고리즘을 사용할 수도 응용 프로그램 도메인 별로 합니다. 결과적으로 동일한 문자열에 대 한 해시 코드는 응용 프로그램 도메인 간에 달라 집니다. 이 옵트인 기능입니다. 를 이용 하려면으로 설정 해야 합니다는 `enabled` 특성을 `<UseRandomizedStringHashAlgorithm>` 요소를 `1`입니다.  
   

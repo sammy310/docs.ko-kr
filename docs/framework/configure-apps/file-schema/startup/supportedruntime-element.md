@@ -9,12 +9,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: cc55809ecaffa4cab4fa4336f9f7f5c06debde2d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c6bf4c6b262bc9066277a683d5eda67ada6f4d08
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634222"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456220"
 ---
 # <a name="supportedruntime-element"></a>\<supportedRuntime > 요소
 
@@ -22,7 +22,7 @@ ms.locfileid: "65634222"
 
 [\<구성>](../configuration-element.md)  
 &nbsp;&nbsp;[\<startup>](../startup/startup-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;**\<supportedRuntime>**  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<supportedRuntime>**  
 
 ## <a name="syntax"></a>구문
 
@@ -51,7 +51,7 @@ ms.locfileid: "65634222"
 경우는  **\<supportedRuntime >** 사용 하 여 요소를 `sku` 특성은 구성 파일 및 설치 된.NET Framework 버전이 아래 인 지원 되는 지정 된 버전의 응용 프로그램 실행에 실패 하 고 지원 되는 버전을 설치 하 라는 메시지가 표시 됩니다. 이 고, 그렇지 응용 프로그램이 설치 된 버전에서 실행 하려고 하지만 해당 버전과 완전히 호환 되지 않는 경우 예기치 않게 동작할 수 있습니다. (.NET Framework 버전 간에 호환성 차이점에 대 한 참조 [.NET Framework의 응용 프로그램 호환성](https://docs.microsoft.com/dotnet/framework/migration-guide/application-compatibility).) 따라서 오류를 쉽게 진단에 대 한 응용 프로그램 구성 파일에서이 요소를 포함 하는 것이 좋습니다. (이미 새 프로젝트를 만들 때 Visual Studio에서 자동으로 생성 하는 구성 파일 포함)
   
 > [!NOTE]
-> 응용 프로그램에서는 사용 레거시 활성화 경로 같은 합니다 [CorBindToRuntimeEx 함수](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), 해당 경로 이전 버전 대신 CLR 버전 4를 활성화 하 고 를사용하여응용프로그램을빌드할경우또는[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]종속 되어 있지만 이전 버전의.NET Framework를 사용 하 여 빌드된 혼합 모드 어셈블리에 없는 지정 하는 데 충분 합니다 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] 지원 되는 런타임 목록에서. 또한 합니다 [ \<시작 > 요소](../startup/startup-element.md) 구성 파일에서 설정 해야 합니다 `useLegacyV2RuntimeActivationPolicy` 특성을 `true`입니다. 그러나 이 특성을 `true`로 설정하면 .NET Framework의 이전 버전으로 빌드된 모든 구성 요소가 빌드 시 사용된 런타임 대신 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]을(를) 사용하여 실행됩니다.
+> 응용 프로그램에서는 사용 레거시 활성화 경로 같은 합니다 [CorBindToRuntimeEx 함수](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), 해당 경로 이전 버전 대신 CLR 버전 4를 활성화 하 고.NET Framework를 사용 하 여 응용 프로그램을 빌드할 경우 또는 하지만 정품이 4 이전 버전의.NET Framework를 사용 하 여 빌드된 혼합 모드 어셈블리에 없는 지원 되는 런타임 목록에서.NET Framework 4를 지정 하는 데 충분 합니다. 또한 합니다 [ \<시작 > 요소](../startup/startup-element.md) 구성 파일에서 설정 해야 합니다 `useLegacyV2RuntimeActivationPolicy` 특성을 `true`입니다. 하지만이 특성을 설정 `true` 빌드될 때 사용 된 런타임 대신.NET Framework 4를 사용 하 여 이전 버전의.NET Framework를 사용 하 여 빌드된 모든 구성 요소가 실행 되는 것을 의미 합니다.
 
 실행할 수 있는 모든 .NET Framework 버전을 사용하여 응용 프로그램을 테스트하는 것이 좋습니다.
 

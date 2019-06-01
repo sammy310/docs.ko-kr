@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6405c61429d56b125fd0327824482bf702e41319
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: aceb0179c6ee52699370480041af62262eff6bc2
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380287"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456936"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>.NET Framework 4 및 4.5에 추가된 CLR 호스팅 인터페이스
 이 섹션에서는 관리 되지 않는 인터페이스를 설명 합니다. 호스트에는 CLR (공용 언어 런타임) 통합을 사용할 수는 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)],.NET Framework 4.5 및 해당 응용 프로그램에 최신 버전입니다. 이러한 인터페이스는 구성 프로세스에 런타임을 로드 하는 호스트에 대 한 메서드를 제공 합니다.  
   
- 부터 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]모든 호스팅, 인터페이스는 다음과 같은 특징이 있습니다.  
+ .NET Framework 4 부터는 모든 호스팅 인터페이스는 다음과 같은 특징이 있습니다.  
   
 - 수명 관리 사용 (`AddRef` 하 고 `Release`)를 캡슐화 (암시적 컨텍스트) 및 `QueryInterface` com  
   

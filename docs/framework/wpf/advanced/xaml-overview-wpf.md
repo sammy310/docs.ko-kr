@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: 403bd881f6e6349a91fc952a80441b0cec0c08fd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f03d9481a2af3edebe83df5b1b725b7290d30d00
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662241"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457544"
 ---
 # <a name="xaml-overview-wpf"></a>XAML 개요 (WPF)
 이 항목에서는 XAML 언어의 기능을 설명하고 XAML을 사용하여 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 애플리케이션을 작성하는 방법을 보여 줍니다. 이 항목에서는 특히 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 구현된 XAML에 대해 자세히 설명합니다. XAML 자체는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]보다 큰 언어 개념입니다.  
@@ -307,7 +307,7 @@ ms.locfileid: "64662241"
 ## <a name="xaml-security"></a>XAML 보안  
  XAML은 개체 인스턴스화 및 실행을 직접적으로 나타내는 태그 언어입니다. 따라서 XAML에서 만든 요소에는 생성된 해당 코드가 수행하는 것과 마찬가지로 시스템 리소스(예: 네트워크 액세스, 파일 시스템 IO)와 상호 작용하는 동일한 기능이 있습니다.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 보안 프레임워크인 [!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]를 지원합니다. 즉, 인터넷 영역에서 실행되는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠는 실행 권한이 줄어듭니다. 이때 "느슨한 XAML"(컴파일되지 않은 XAML의 페이지가 로드 시 XAML 뷰어에 의해 해석됨) 및 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]는 일반적으로 이 인터넷 영역에서 실행되며 같은 권한 집합을 사용합니다.  하지만 완전히 신뢰할 수 있는 애플리케이션으로 로드된 XAML은 시스템 리소스에 대해 호스팅 애플리케이션과 동일한 액세스 권한을 가집니다. 자세한 내용은 [WPF 부분 신뢰 보안](../wpf-partial-trust-security.md)을 참조하세요.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 보안 프레임 워크를.NET Framework 4를 지 원하는 [!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]합니다. 즉, 인터넷 영역에서 실행되는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠는 실행 권한이 줄어듭니다. 이때 "느슨한 XAML"(컴파일되지 않은 XAML의 페이지가 로드 시 XAML 뷰어에 의해 해석됨) 및 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]는 일반적으로 이 인터넷 영역에서 실행되며 같은 권한 집합을 사용합니다.  하지만 완전히 신뢰할 수 있는 애플리케이션으로 로드된 XAML은 시스템 리소스에 대해 호스팅 애플리케이션과 동일한 액세스 권한을 가집니다. 자세한 내용은 [WPF 부분 신뢰 보안](../wpf-partial-trust-security.md)을 참조하세요.  
   
 <a name="loading_xaml_from_code"></a>   
 ## <a name="loading-xaml-from-code"></a>코드에서 XAML 로드  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5cb528bbb4f85cd4502b4e2efabbcf592ac6bd0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 60f2856bea79f36beb3c467158114fa78d99e09a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868747"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456505"
 ---
 # <a name="security-transparent-code"></a>보안 투명 코드
 
@@ -59,14 +59,14 @@ ms.locfileid: "61868747"
 
 수준은 다음과 같습니다.
 
-- 수준 2(<xref:System.Security.SecurityRuleSet.Level2>) – [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 투명도 규칙입니다.
+- 수준 2 (<xref:System.Security.SecurityRuleSet.Level2>) –.NET Framework 4 투명도 규칙입니다.
 
 - 수준 1(<xref:System.Security.SecurityRuleSet.Level1>)-.NET Framework 2.0 투명도 규칙입니다.
 
 두 투명도 수준 간의 주요 차이점은 수준 1은 어셈블리 외부의 호출에 대해 투명도 규칙을 적용하지 않고 호환성 목적으로만 사용된다는 점입니다.
 
 > [!IMPORTANT]
-> 수준 1 투명도는 호환성 목적으로만 지정해야 합니다. 즉, <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 특성을 사용하거나 투명도 모델을 사용하지 않는 .NET Framework 3.5 이하로 개발된 코드에만 수준 1을 지정하세요. 예를 들어 부분적으로 신뢰할 수 있는 호출자(APTCA)의 호출을 허용하는 .NET Framework 2.0 어셈블리에는 수준 1 투명도를 사용합니다. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]용으로 개발된 코드에는 항상 수준 2 투명도를 사용합니다.
+> 수준 1 투명도는 호환성 목적으로만 지정해야 합니다. 즉, <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 특성을 사용하거나 투명도 모델을 사용하지 않는 .NET Framework 3.5 이하로 개발된 코드에만 수준 1을 지정하세요. 예를 들어 부분적으로 신뢰할 수 있는 호출자(APTCA)의 호출을 허용하는 .NET Framework 2.0 어셈블리에는 수준 1 투명도를 사용합니다. .NET Framework 4에 대 한 개발 된 코드의 경우 항상 수준 2 투명도 사용 합니다.
 
 ### <a name="level-2-transparency"></a>수준 2 투명도
 
@@ -114,7 +114,7 @@ ms.locfileid: "61868747"
 
 ## <a name="transparency-enforcement"></a>투명도 적용
 
-투명도 규칙은 투명도가 계산될 때까지 적용되지 않습니다. 적용 시 투명도 규칙에 위반되면 <xref:System.InvalidOperationException>이 throw됩니다. 투명도 계산 시간은 여러 요소에 따라 다르고 예측할 수 없습니다. 가능한 한 늦게 계산됩니다. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서 어셈블리 수준 투명도 계산은 .NET Framework 2.0에서보다 더 빨리 수행됩니다. 투명도 계산은 필요한 시간 이내에 수행됩니다. 이는 메서드가 컴파일되고 해당 메서드에서 오류가 감지되는 시점을 JIT(Just-In-Time ) 컴파일러가 변경하는 방법과 비슷합니다. 코드에 투명도 오류가 없으면 투명도 계산이 표시되지 않습니다.
+투명도 규칙은 투명도가 계산될 때까지 적용되지 않습니다. 적용 시 투명도 규칙에 위반되면 <xref:System.InvalidOperationException>이 throw됩니다. 투명도 계산 시간은 여러 요소에 따라 다르고 예측할 수 없습니다. 가능한 한 늦게 계산됩니다. .NET Framework 4 어셈블리 수준 투명도 계산은.NET Framework 2.0에서 하는 것 보다 더 자주 발생 합니다. 투명도 계산은 필요한 시간 이내에 수행됩니다. 이는 메서드가 컴파일되고 해당 메서드에서 오류가 감지되는 시점을 JIT(Just-In-Time ) 컴파일러가 변경하는 방법과 비슷합니다. 코드에 투명도 오류가 없으면 투명도 계산이 표시되지 않습니다.
 
 ## <a name="see-also"></a>참고자료
 

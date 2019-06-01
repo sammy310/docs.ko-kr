@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
-ms.openlocfilehash: 9263edf18872f510f5f2f4e3e9cb793e45c5d0b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ca0c1b466f5a89730c72f32321394ccfc6d9c7a2
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954104"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457365"
 ---
 # <a name="generics-in-xaml"></a>XAML의 제네릭
 System.Xaml에서 구현 될 때.NET Framework XAML 서비스 일반 CLR 형식을 사용 하 여에 대 한 지원을 제공 합니다. 이 지원은 포함 형식 인수로 제네릭의 제약 조건을 지정 하 고 적절 한 호출 하 여 제약 조건을 적용 `Add` 제네릭 컬렉션의 경우에 대 한 메서드. 이 항목에서는 사용 하 고 XAML의 제네릭 형식 참조의 측면을 설명 합니다.  
@@ -38,7 +38,7 @@ System.Xaml에서 구현 될 때.NET Framework XAML 서비스 일반 CLR 형식�
   
  제네릭 사용을 지원 하기 위해 가능한 해결 방법이 포함 제네릭 형식을 반환할 수 있는 사용자 지정 태그 확장을 정의 하거나 래핑 제공 클래스는 제네릭 형식에서 파생 되지만 평면화는 자체 클래스 정의에서 제네릭 제약 조건을 정의 합니다.  
   
- WPF와 대상 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]와 함께 XAML 2009 기능을 사용할 수 있습니다 `x:TypeArguments`, 느슨한 XAML (태그 컴파일되지 않은 XAML)에 대해서만 합니다. WPF에 대한 태그로 컴파일된 XAML 및 BAML 형식의 XAML은 현재 XAML 2009 키워드 및 기능을 지원하지 않습니다.  
+ WPF 및.NET Framework 4를 대상으로 하에서 함께 XAML 2009 기능을 사용할 수 있습니다 `x:TypeArguments`, 느슨한 XAML (태그 컴파일되지 않은 XAML)에 대해서만 합니다. WPF에 대한 태그로 컴파일된 XAML 및 BAML 형식의 XAML은 현재 XAML 2009 키워드 및 기능을 지원하지 않습니다.  
   
  Windows Workflow foundation에 대 한 사용자 지정 워크플로 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 일반 XAML 사용을 지원 하지 않습니다.  
   

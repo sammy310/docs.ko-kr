@@ -20,12 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ddef35b1b707cc5c962402e880923dca7d4d9d6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6a28b9d6e41d0572d423576f5b4024a60a70216c
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789651"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456871"
 ---
 # <a name="coeeshutdowncom-function"></a>CoEEShutDownCOM 함수
 CLR (공용 언어 런타임) 런타임 호출 가능 래퍼 (RCW) 내에서 보유 하는 모든 인터페이스 포인터가 해제 되도록 합니다. 이 효과가 모든 RCW 캐시를 해제 합니다. 이 전역 함수에서 사용 되지 않습니다는 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다. 대신, 특정 런타임에 대 한 진입점을 사용 합니다.  
@@ -42,7 +42,7 @@ void CoEEShutDownCOM ();
 > [!CAUTION]
 >  이 함수는 모든 런타임을 프로세스로 로드 되는 영향을 줍니다.  
   
- 부터는 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], 영향을 주려는 특정 런타임에서이 함수에 대 한 진입점을 호출 합니다. 진입점을 가져오려면 호출 합니다 [iclrruntimeinfo:: Getprocaddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) 메서드 "CoEEShutDownCOM"를 지정 합니다.  
+ .NET Framework 4 부터는이 영향을 주려는 특정 런타임이 함수에 대 한 진입점을 호출 합니다. 진입점을 가져오려면 호출 합니다 [iclrruntimeinfo:: Getprocaddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) 메서드 "CoEEShutDownCOM"를 지정 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

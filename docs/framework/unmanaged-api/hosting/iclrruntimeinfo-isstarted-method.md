@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef6f2662-323b-4534-aa82-6d1afb7b9309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1297c84acadf0a53b418b06afe806237d374ee25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b09c509c3e0ba941a34f60ff522117ff30d83caf
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993163"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457385"
 ---
 # <a name="iclrruntimeinfoisstarted-method"></a>ICLRRuntimeInfo::IsStarted 메서드
 런타임이 시작 되었는지 여부를 나타냅니다 (있는지, 즉 합니다 [iclrruntimehost:: Start 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) 이 호출 되었고, 했습니다).  
@@ -49,7 +49,7 @@ HRESULT IsStarted(
 |E_NOTIMPL|공용 언어 런타임 (CLR) 버전에서 CLR 버전 보다 이전 인지를 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]입니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 메서드는 사용 하지 않고 CLR 버전에서 CLR 버전 보다 이전는 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]합니다.  
+ 이전.NET Framework 4에서 CLR 버전 CLR 버전을 사용 하 여이 메서드가 작동 하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

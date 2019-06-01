@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfd241056947fbf1daf48b84ff41e3f74ff7b8de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6aef46db47f881d6a15cc1e58d46219a80194b0
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674278"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456450"
 ---
 # <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion > 요소
 문자열 비교를 수행할 때 런타임에서 레거시 정렬 순서를 사용하도록 지정합니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "61674278"
 |`runtime`|런타임 초기화 옵션에 대한 정보를 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
- 문자열 비교, 정렬 및 대/소문자 구분 작업을 수행 하므로 합니다 <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> 클래스를 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] 와 같은 문자열 비교 메서드의 결과 유니코드 5.1을 표준 준수 <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> 및 <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> 에서 다를 수 있습니다 .NET Framework의 이전 버전입니다. 응용 프로그램이 레거시 동작에 의존하는 경우 응용 프로그램의 구성 파일에 [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)]을 추가하여 `<CompatSortNLSVersion>` 및 이전 버전에 사용된 문자열 비교 및 정렬 규칙을 복원할 수 있습니다.  
+ 문자열 비교, 정렬 및 대/소문자 구분 작업을 수행 하므로 합니다 <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> .NET Framework 4에서 클래스와 같은 Unicode 5.1 표준 문자열 비교 메서드의 결과 준수 <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> 고 <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> 에서 다를 수 있습니다 .NET Framework의 이전 버전입니다. 응용 프로그램이 레거시 동작에 의존하는 경우 응용 프로그램의 구성 파일에 [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)]을 추가하여 `<CompatSortNLSVersion>` 및 이전 버전에 사용된 문자열 비교 및 정렬 규칙을 복원할 수 있습니다.  
   
 > [!IMPORTANT]
 >  레거시 문자열 비교 복원 및 정렬 규칙을 실행하려면 로컬 시스템에서 sort00001000.dll 동적 링크 라이브러리를 사용할 수 있어야 합니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "61674278"
  [!code-csharp[String.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/string.breakingchanges/cs/example1.cs#1)]
  [!code-vb[String.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/string.breakingchanges/vb/example1.vb#1)]  
   
- [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]에서 예제를 실행하면 다음 출력이 표시됩니다.  
+ .NET Framework 4에서 예제를 실행 하면 다음과 같은 출력이 표시 됩니다.  
   
 ```  
 sta follows a in the sort order.  
@@ -82,7 +82,7 @@ sta follows a in the sort order.
 sta equals a in the sort order.  
 ```  
   
- 그러나 다음 구성 파일을 예제 디렉터리에 추가한 다음 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]에서 예제를 실행하는 경우 출력은 [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)]에서 실행할 때 예제가 생성한 출력과 동일합니다.  
+ 그러나 다음 구성 파일을 예제 디렉터리에 추가 하 고 다음.NET Framework 4에서 예제를 실행 하는 경우 출력은 동일 실행할 때 예제가 생성 하는 [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)]합니다.  
   
 ```xml  
 <?xml version ="1.0"?>  

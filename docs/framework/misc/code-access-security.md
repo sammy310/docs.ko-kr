@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c8508b4ba7d6ac6e25fdcc70fb8162b8908e8fa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aa256fe95013494488ff52258186763fab7a85c9
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592856"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456662"
 ---
 # <a name="code-access-security"></a>코드 액세스 보안
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -67,7 +67,7 @@ ms.locfileid: "64592856"
 |제목|설명|  
 |-----------|-----------------|  
 |[코드 액세스 보안 기본 사항](../../../docs/framework/misc/code-access-security-basics.md)|코드 액세스 보안 및 가장 일반적인 용도를 설명합니다.|  
-|[보안 투명 코드, 수준 2](../../../docs/framework/misc/security-transparent-code-level-2.md)|[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]의 보안 투명성 모델을 설명합니다.|  
+|[보안 투명 코드, 수준 2](../../../docs/framework/misc/security-transparent-code-level-2.md)|.NET Framework 4의 보안 투명도 모델을 설명합니다.|  
 |[부분적으로 신뢰할 수 있는 코드에서 라이브러리 사용](../../../docs/framework/misc/using-libraries-from-partially-trusted-code.md)|비관리 코드에 라이브러리를 사용할 수 있도록 하는 방법 및 비관리 코드에서 라이브러리를 사용하는 방법을 설명합니다.|  
 |[주요 보안 개념](../../../docs/standard/security/key-security-concepts.md)|.NET Framework 보안 시스템에서 사용되는 주요 용어와 개념을 개략적으로 설명합니다.|  
 |[역할 기반 보안](../../../docs/standard/security/role-based-security.md)|역할 기반 보안을 통합하는 방법을 설명합니다.|  

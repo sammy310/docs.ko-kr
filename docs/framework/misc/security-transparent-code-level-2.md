@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9c3970823557d1d1b24405fd4b390b81006533a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3da3e48f898797849a5304c4884b648f47a26dd
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868903"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456561"
 ---
 # <a name="security-transparent-code-level-2"></a>보안 투명 코드, 수준 2
 
@@ -58,7 +58,7 @@ ms.locfileid: "61868903"
 
 ## <a name="usage-examples-and-behaviors"></a>사용 예제 및 동작
 
-[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 규칙(수준 2 투명도)을 지정하려면 어셈블리에 대한 다음 주석을 사용합니다.
+.NET Framework 4 규칙 (수준 2 투명도)을 지정 하려면 어셈블리에 대 한 다음 주석을 사용 합니다.
 
 ```csharp
 [assembly: SecurityRules(SecurityRuleSet.Level2)]
@@ -70,7 +70,7 @@ ms.locfileid: "61868903"
 [assembly: SecurityRules(SecurityRuleSet.Level1)]
 ```
 
-어셈블리를 주석으로 처리하지 않으면 기본적으로 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 규칙이 사용됩니다. 그러나 권장 되는 가장 좋은 방법은 사용 하는 것은 <xref:System.Security.SecurityRulesAttribute> 기본값에 따라 대신 특성입니다.
+어셈블리의 주석을 지정 하지 않으면 기본적으로.NET Framework 4 규칙이 사용 됩니다. 그러나 권장 되는 가장 좋은 방법은 사용 하는 것은 <xref:System.Security.SecurityRulesAttribute> 기본값에 따라 대신 특성입니다.
 
 ### <a name="assembly-wide-annotation"></a>어셈블리 수준 주석
 

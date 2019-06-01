@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 08a13a57-dc49-488d-b937-31e3051fda97
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8bb5d93c91de857ebbee63009cad73fba7e1d284
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ea65c06871d9762fa6daac229a568594b4c4479
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758251"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457479"
 ---
 # <a name="profiling-global-static-functions"></a>프로파일링 전역 정적 함수
 이 섹션에서는 프로 파일링 API를 사용 하는 관리 되지 않는 API 함수를 설명 합니다.  
@@ -35,13 +35,13 @@ ms.locfileid: "61758251"
  함수는 지정 된 식별자에 사용할 대체 ID를 다시 매핑할 수는 프로파일러에 알립니다. 합니다 [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)를 [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), 및 [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) 함수에 대 한 콜백 합니다. 프로파일러를 함수에 대 한 콜백을 받을 수 있는지 여부를 나타낼 수 있습니다.  
   
  [FunctionEnter2 함수](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)  
- 제어 함수에 전달 되 고 및 프레임과 함수 인수는 스택에 대 한 정보를 제공 하는 프로파일러에 알립니다. 사용 되지 않는 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]합니다.  
+ 제어 함수에 전달 되 고 및 프레임과 함수 인수는 스택에 대 한 정보를 제공 하는 프로파일러에 알립니다. .NET Framework 4에서에서 사용 되지 않습니다.  
   
  [FunctionLeave2 함수](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)  
- 함수에 대 한 호출자에 게 반환 하는 것을 스택 프레임 및 함수 반환 값에 대 한 정보를 제공 프로파일러에 알립니다. 사용 되지 않는 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]합니다.  
+ 함수에 대 한 호출자에 게 반환 하는 것을 스택 프레임 및 함수 반환 값에 대 한 정보를 제공 프로파일러에 알립니다. .NET Framework 4에서에서 사용 되지 않습니다.  
   
  [FunctionTailcall2 함수](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)  
- 현재 실행 중인 함수를 다른 함수에 대 한 마무리 호출이 수행 하려고 하는 스택 프레임에 대 한 정보를 제공 프로파일러에 알립니다. 사용 되지 않는 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]합니다.  
+ 현재 실행 중인 함수를 다른 함수에 대 한 마무리 호출이 수행 하려고 하는 스택 프레임에 대 한 정보를 제공 프로파일러에 알립니다. .NET Framework 4에서에서 사용 되지 않습니다.  
   
  [StackSnapshotCallback 함수](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md)  
  프로파일러가 시작 되는 스택 워크 중 스택의 각 관리 되는 프레임 및 관리 되지 않는 프레임의 각 실행에 대 한 정보를 제공 합니다 [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) 메서드.  

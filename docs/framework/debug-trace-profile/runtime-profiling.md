@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f02cbac83bd1e849c30f6c732395335464e6e4e
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 1f97892ecf7d891113cc7524dd8c1423e144583f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582816"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457328"
 ---
 # <a name="runtime-profiling"></a>런타임 프로파일링
 프로파일링은 모든 개발 또는 배포 시나리오에서 성능 데이터를 수집하는 방법입니다. 이 섹션은 애플리케이션 성능에 대한 정보를 수집하려는 개발자 및 시스템 관리자를 위한 것입니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "65582816"
   
 3. 성능 모니터 도구 모음에서 **추가** 아이콘(더하기 기호)이 있는 경우 클릭합니다. 아이콘이 없는 경우 모니터 창을 마우스 오른쪽 단추로 클릭하고 **카운터 추가** 옵션을 선택합니다.  
   
-     그러면 **카운터 추가** 대화 상자가 열립니다. **사용 가능한 카운터** 목록 상자에 사용 가능한 성능 개체가 표시됩니다. 메모리 관리(**.NET CLR 메모리**), 상호 운용성(**.NET CLR Interop**), 예외 처리(**.NET CLR 예외**) 및 다중 스레딩(**.NET CLR LocksAndThreads**)에 대한 개체를 비롯한 .NET Framework 애플리케이션에 대해 다수의 미리 정의된 개체가 있습니다. 각 성능 개체에는 많은 개별 성능 카운터가 포함됩니다. 성능 모니터에서 사용할 수 있는 성능 카운터 목록은 [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)이 함께 설치된 .NET Framework 성능 카운터의 데이터를 그래픽으로 표시합니다.  
+     그러면 **카운터 추가** 대화 상자가 열립니다. **사용 가능한 카운터** 목록 상자에 사용 가능한 성능 개체가 표시됩니다. 메모리 관리( **.NET CLR 메모리**), 상호 운용성( **.NET CLR Interop**), 예외 처리( **.NET CLR 예외**) 및 다중 스레딩( **.NET CLR LocksAndThreads**)에 대한 개체를 비롯한 .NET Framework 애플리케이션에 대해 다수의 미리 정의된 개체가 있습니다. 각 성능 개체에는 많은 개별 성능 카운터가 포함됩니다. 성능 모니터에서 사용할 수 있는 성능 카운터 목록은 [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)이 함께 설치된 .NET Framework 성능 카운터의 데이터를 그래픽으로 표시합니다.  
   
 4. 지원되는 개별 성능 카운터의 목록을 보려면 성능 개체의 이름 옆에 있는 확인란을 선택합니다.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "65582816"
  특정 영역이나 원격 공유에 있는 어셈블리를 프로파일링하려면 성능 카운터를 실행하는 컴퓨터에서 원격 어셈블리를 완전히 신뢰해야 합니다. 어셈블리를 충분히 신뢰하지 않는 경우 성능 카운터가 작동하지 않습니다. 여러 다른 영역에 신뢰를 부여하는 데 관한 내용은 [Caspol.exe(코드 액세스 보안 정책 도구)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)를 참조하세요.  
   
 > [!NOTE]
->  [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 가 설치된 시스템에서 성능 모니터는 **를 사용하여 개발된 응용 프로그램의 일부 범주(예:** .NET CLR 데이터 **및**.NET CLR 네트워킹 [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)])에서 성능 카운터에 대한 데이터를 표시하지 않을 수 있습니다. 이 경우, [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) 요소를 응용 프로그램의 구성 파일에 추가하여 성능 모니터가 이 데이터를 표시하도록 구성할 수 있습니다.  
+>  .NET Framework 4가 설치 된 시스템에서 성능 모니터 표시 되지 성능 카운터에 대 한 데이터의 일부 범주와 같은 **.NET CLR 데이터** 하 고 **.NET CLR 네트워킹**에 대 한 사용 하 여 개발 된 응용 프로그램을 [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)]입니다. 이 경우, [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) 요소를 응용 프로그램의 구성 파일에 추가하여 성능 모니터가 이 데이터를 표시하도록 구성할 수 있습니다.  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>프로그래밍 방식으로 성능 카운터 읽기 및 만들기  
  .NET Framework 성능 콘솔에서 사용할 수 있는 동일한 성능 정보를 프로그래밍 방식으로 액세스 하 여 클래스를 제공 합니다. 또한 이러한 클래스를 사용하여 사용자 지정 성능 카운터를 만들 수도 있습니다. 다음 표에서 성능 모니터링.NET Framework에서 제공 되는 클래스의 일부를 설명 합니다.  
