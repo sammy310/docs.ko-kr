@@ -1,15 +1,15 @@
 ---
 title: Mac용 Visual Studio를 사용하여 macOS에서 .NET Core 시작
 description: 이 항목에서는 Mac 및 .NET Core용 Visual Studio를 사용하여 간단한 콘솔 애플리케이션을 빌드하는 과정을 안내합니다.
-author: guardrex
+author: mairaw
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: d99cabf15be63593b272474867359324a5892b04
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 4467842c0b65ea536cc26601981d9fcc2bc68f2d
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59300881"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300046"
 ---
 # <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Mac용 Visual Studio를 사용하여 macOS에서 .NET Core 시작
 

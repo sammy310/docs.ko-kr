@@ -1,14 +1,14 @@
 ---
 title: dotnet new에 대한 사용자 지정 템플릿
 description: 모든 형식의 .NET 프로젝트 또는 파일에 대한 사용자 지정 템플릿을 알아봅니다.
-author: guardrex
+author: mairaw
 ms.date: 08/11/2017
-ms.openlocfilehash: e37fb692640c25d7a91904b0802f97ebfab75851
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 6ce53cab308ed404974e4d736e735bc82ac04fe6
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679062"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66299916"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new에 대한 사용자 지정 템플릿
 

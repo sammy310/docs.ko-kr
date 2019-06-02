@@ -1,15 +1,15 @@
 ---
 title: dotnet new에 대한 사용자 지정 템플릿 만들기
 description: 이 재미있는 자습서에서 dotnet new 명령에 대한 사용자 지정 템플릿을 만드는 방법을 알아봅니다.
-author: guardrex
+author: mairaw
 ms.date: 08/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3b45a24c8a249eeb99fb1a4b14918483b978980b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e47da048584ec31c275ff9c122d157f34556268a
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676449"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66299953"
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>dotnet new에 대한 사용자 지정 템플릿 만들기
 
