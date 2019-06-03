@@ -1,1 +1,9 @@
-<span data-ttu-id="8b16c-101">데스크톱</span><span class="sxs-lookup"><span data-stu-id="8b16c-101">desktop</span></span>
+---
+ms.openlocfilehash: 5889c4b8ca50b403dcda1e45b9de8f3ca97a04e8
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66377542"
+---
+<span data-ttu-id="58749-101">데스크톱</span><span class="sxs-lookup"><span data-stu-id="58749-101">desktop</span></span>
