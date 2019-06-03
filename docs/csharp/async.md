@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.custom: seodec18
-ms.openlocfilehash: 0eb4cf5bc912f1fd77e6c42a0a60d1c723c66dae
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: cdfbab381360bfcbae6cf3849d0bf0e18fda24bc
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633971"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377851"
 ---
 # <a name="asynchronous-programming"></a>비동기 프로그래밍
 
@@ -108,7 +108,7 @@ C#에서는 컴파일러가 해당 코드를, `await`에 도달할 때 실행을
 
 **I/O 바인딩된** 작업이 있을 경우 `Task.Run` *없이* `async` 및 `await`를 사용합니다.  작업 병렬 라이브러리를 사용*하면 안 됩니다*.  그 이유는 [세부 비동기 문서](../standard/async-in-depth.md)에서 간단히 설명합니다.
 
-**CPU 바인딩된** 작업이 있고 빠른 응답이 필요할 경우 `async` 및 `await`를 사용하지만 `Task.Run`을 사용하여 또 다른 스레드에서 작업을 생성합니다.  작업이 동시성 및 병렬 처리에 해당할 경우 [작업 병렬 라이브러리](../standard/parallel-programming/task-parallel-library-tpl.md)를 사용하는 것이 좋습니다.
+**CPU 바인딩된** 작업이 있고 빠른 응답이 필요할 경우 `async` 및 `await`를 사용하지만 `Task.Run`을  사용하여 또 다른 스레드에서 작업을 생성합니다.  작업이 동시성 및 병렬 처리에 해당할 경우 [작업 병렬 라이브러리](../standard/parallel-programming/task-parallel-library-tpl.md)를 사용하는 것이 좋습니다.
 
 또한 항상 코드 실행을 측정해야 합니다.  예를 들어 CPU 바인딩된 작업이 다중 스레딩 시 컨텍스트 전환의 오버헤드에 비해 부담이 크지 않은 상황이 될 수 있습니다.  모든 선택에는 절충점이 있습니다. 상황에 맞는 올바른 절충점을 선택해야 합니다.
 
@@ -155,7 +155,7 @@ private async void SeeTheDotNets_Click(object sender, RoutedEventArgs e)
     NetworkProgressBar.Visibility = Visibility.Visible;
 
     // The await operator suspends SeeTheDotNets_Click, returning control to its caller.
-    // This is what allows the app to be responsive and not hang on the UI thread.
+    // This is what allows the app to be responsive and not block the UI thread.
     var html = await getDotNetFoundationHtmlTask;
     int count = Regex.Matches(html, @"\.NET").Count;
 

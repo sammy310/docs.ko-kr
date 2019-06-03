@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generics [C#], delegates
 - delegates [C#], generic
 ms.assetid: bdea509c-44c1-4309-aaa9-15c7aee009df
-ms.openlocfilehash: 2806eadd2d3f8a4c3e8f001b02b28d35a60daaec
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ff19b3d71858552158a8ae5d0ab362a86dc98e65
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970157"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423501"
 ---
 # <a name="generic-delegates-c-programming-guide"></a>제네릭 대리자(C# 프로그래밍 가이드)
 [대리자](../../../csharp/language-reference/keywords/delegate.md)는 자체 형식 매개 변수를 정의할 수 있습니다. 제네릭 대리자를 참조하는 코드는 다음 예제와 같이 제네릭 클래스를 인스턴스화하거나 제네릭 메서드를 호출하는 것과 같은 방법으로 형식 인수를 지정하여 폐쇄형 생성 형식을 만들 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "56970157"
 
 - <xref:System.Collections.Generic>
 - [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [제네릭 소개](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [제네릭 소개](../../../csharp/programming-guide/generics/index.md)
 - [제네릭 메서드](../../../csharp/programming-guide/generics/generic-methods.md)
 - [제네릭 클래스](../../../csharp/programming-guide/generics/generic-classes.md)
 - [제네릭 인터페이스](../../../csharp/programming-guide/generics/generic-interfaces.md)

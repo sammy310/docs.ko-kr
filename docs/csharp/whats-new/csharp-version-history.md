@@ -3,12 +3,12 @@ title: C#의 역사 - C# 가이드
 description: 이 언어의 초창기 버전은 어떤 모습이었으며 이후 어떻게 변했는가?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 727f0064ac1de46eb670a366af38cf561e1a1533
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 351e4de01a7c3c50cb815a99f0bde546848a9e51
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303364"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423244"
 ---
 # <a name="the-history-of-c"></a>C\#의 역사
 
@@ -45,7 +45,6 @@ C# 1.0의 주요 기능에는 다음이 포함되어 있습니다.
 - [식](../programming-guide/statements-expressions-operators/expressions.md)
 - [문](../programming-guide/statements-expressions-operators/statements.md)
 - [특성](../programming-guide/concepts/attributes/index.md)
-- [리터럴](../language-reference/keywords/literal-keywords.md)
 
 ## <a name="c-version-12"></a>C# 버전 1.2
 
@@ -174,4 +173,4 @@ C# 버전 5.0은 집중된 버전의 언어였습니다. 해당 버전에 대한
 
 그러나 C#은 더욱 광범위하게 사용되고 있습니다. .NET Core는 이제 모든 운영 체제를 대상으로 하며 클라우드와 휴대성에 확실히 집중하고 있습니다.  이는 새로운 기능을 제공하는 것 외에도 언어 디자이너가 많이 생각하고 시간을 투자하게 만듭니다.
 
-_아티클_ [_NDepend 블로그에 최초로 게시됨_](https://blog.ndepend.com/c-versions-look-language-history/)_, Erik Dietrich 및 Patrick Smacchia 제공_
+_아티클_ [_NDepend 블로그에 최초로 게시됨_](https://blog.ndepend.com/c-versions-look-language-history/) _, Erik Dietrich 및 Patrick Smacchia 제공_

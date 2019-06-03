@@ -7,12 +7,12 @@ helpviewer_keywords:
 - types [C#], value types
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: 7a2b61e7b699319bc57ff3fddcb712ef8e3c30fd
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 959d4840344ba041ae1b01fd6d202f2b53936afc
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632847"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422365"
 ---
 # <a name="value-types-table-c-reference"></a>값 형식 표(C# 참조)
 
@@ -52,7 +52,6 @@ decimal a = 0.1M;
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
-- [형식 참조 테이블](reference-tables-for-types.md)
 - [기본값 표](default-values-table.md)
 - [값 형식](value-types.md)
 - [숫자 결과 형식 지정 표](formatting-numeric-results-table.md)

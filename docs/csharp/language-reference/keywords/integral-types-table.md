@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], integral types
 - ranges of integral types [C#]
 ms.assetid: 62e86126-46ff-40b0-9028-e61d7558268c
-ms.openlocfilehash: 7f8e4a9dabb3e24293ae7fcc724e8787dd6d4cf5
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: b4a3a46ba98c0c621b747284ce39e03d68a5b62d
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53396788"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421726"
 ---
 # <a name="integral-types-table-c-reference"></a>정수 계열 형식 표(C# 참조)
 
@@ -43,7 +43,6 @@ ms.locfileid: "53396788"
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 키워드](index.md)
-- [형식 참조 테이블](reference-tables-for-types.md)
 - [부동 소수점 형식 표](floating-point-types-table.md)
 - [기본값 표](default-values-table.md)
 - [숫자 결과 형식 지정 표](formatting-numeric-results-table.md)

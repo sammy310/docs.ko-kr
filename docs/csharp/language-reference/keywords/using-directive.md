@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: 3e8daf24929339e31cda81a726ec11fdcffc687a
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 072af9850f792cb6d7322724f2adbc978465dc84
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029504"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421748"
 ---
 # <a name="using-directive-c-reference"></a>using 지시문(C# 참조)
 
@@ -94,7 +94,7 @@ using alias 지시문의 오른쪽에는 공개 제네릭 형식이 포함될 �
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](../language-specification/index.md)의 [Using 지시문](~/_csharplang/spec/namespaces.md#using-directives)을 참조하세요. C# 언어 사양은 C# 구문 및 사용법에 대한 신뢰할 수 있는 소스입니다.
+자세한 내용은 [C# 언어 사양](../language-specification/index.md)의 [Using 지시문](~/_csharplang/spec/namespaces.md#using-directives)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
 
 ## <a name="see-also"></a>참고 항목
 
@@ -102,6 +102,5 @@ using alias 지시문의 오른쪽에는 공개 제네릭 형식이 포함될 �
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [네임스페이스 사용](../../programming-guide/namespaces/using-namespaces.md)
 - [C# 키워드](index.md)
-- [네임스페이스 키워드](namespace-keywords.md)
 - [네임스페이스](../../programming-guide/namespaces/index.md)
 - [using 문](using-statement.md)
