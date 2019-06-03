@@ -1,6 +1,7 @@
 - name: 유형
-  href: index.md
   items:
+    - name: 형식 사용 및 정의
+      href: index.md
     - name: 캐스팅 및 형식 변환
       href: casting-and-type-conversions.md
     - name: boxing 및 unboxing
