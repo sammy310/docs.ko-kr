@@ -2,11 +2,11 @@
   href: index.md
   items:
     - name: 유형
-      href: types.md
       items:
         - name: 값 형식
-          href: value-types.md
           items:
+            - name: 값 형식의 기능
+              href: value-types.md
             - name: bool
               href: bool.md
             - name: byte
@@ -38,8 +38,9 @@
             - name: ushort
               href: ushort.md
         - name: 참조 형식
-          href: reference-types.md
           items:
+            - name: 참조 형식의 기능
+              href: reference-types.md
             - name: 클래스
               href: class.md
             - name: 대리자(delegate)
@@ -57,7 +58,6 @@
         - name: var
           href: var.md
         - name: 형식 참조 테이블
-          href: reference-tables-for-types.md
           items:
             - name: 기본 제공 형식 표
               href: built-in-types-table.md
@@ -76,11 +76,11 @@
             - name: 숫자 결과 서식 지정 표
               href: formatting-numeric-results-table.md
     - name: 한정자
-      href: modifiers.md
       items:
         - name: 액세스 한정자
-          href: access-modifiers.md
           items:
+            - name: 빠른 참조
+              href: access-modifiers.md
             - name: 내게 필요한 옵션 수준
               href: accessibility-levels.md
             - name: 내게 필요한 옵션 도메인
@@ -128,17 +128,16 @@
         - name: volatile
           href: volatile.md
     - name: 문 키워드
-      href: statement-keywords.md
       items:
+        - name: 명령문 범주
+          href: statement-keywords.md
         - name: 선택 영역 문
-          href: selection-statements.md
           items:
             - name: if-else
               href: if-else.md
             - name: switch
               href: switch.md
         - name: 반복 문
-          href: iteration-statements.md
           items:
             - name: do
               href: do.md
@@ -149,7 +148,6 @@
             - name: while
               href: while.md
         - name: 점프 문
-          href: jump-statements.md
           items:
             - name: break
               href: break.md
@@ -160,7 +158,6 @@
             - name: return
               href: return.md
         - name: 예외 처리 문
-          href: exception-handling-statements.md
           items:
             - name: throw
               href: throw.md
@@ -171,8 +168,9 @@
             - name: try-catch-finally
               href: try-catch-finally.md
         - name: Checked 및 Unchecked
-          href: checked-and-unchecked.md
           items:
+            - name: 개요
+              href: checked-and-unchecked.md
             - name: checked
               href: checked.md
             - name: unchecked
@@ -182,8 +180,9 @@
         - name: lock 문
           href: lock-statement.md
     - name: 메서드 매개 변수
-      href: method-parameters.md
       items:
+        - name: 매개 변수 전달
+          href: method-parameters.md
         - name: params
           href: params.md
         - name: in(매개 변수 한정자)
@@ -193,13 +192,13 @@
         - name: out(매개 변수 한정자)
           href: out-parameter-modifier.md
     - name: 네임스페이스 키워드
-      href: namespace-keywords.md
       items:
         - name: 네임스페이스(namespace)
           href: namespace.md
         - name: using
-          href: using.md
           items:
+            - name: using 컨텍스트
+              href: using.md
             - name: using 지시문
               href: using-directive.md
             - name: using 정적 지시문
@@ -209,7 +208,6 @@
         - name: extern alias
           href: extern-alias.md
     - name: 연산자 키워드
-      href: operator-keywords.md
       items:
         - name: as
           href: as.md
@@ -218,8 +216,9 @@
         - name: is
           href: is.md
         - name: new
-          href: new.md
           items:
+            - name: 'new 연산자, 한정자 및 제약 조건'
+              href: new.md
             - name: new 연산자
               href: new-operator.md
             - name: new 한정자
@@ -235,7 +234,6 @@
         - name: nameof
           href: nameof.md
     - name: 변환 키워드
-      href: conversion-keywords.md
       items:
         - name: explicit
           href: explicit.md
@@ -244,14 +242,12 @@
         - name: 연산자
           href: operator.md
     - name: 액세스 키워드
-      href: access-keywords.md
       items:
         - name: base
           href: base.md
         - name: this
           href: this.md
     - name: 리터럴 키워드
-      href: literal-keywords.md
       items:
         - name: 'null'
           href: null.md
@@ -262,8 +258,9 @@
         - name: default
           href: default.md
     - name: 상황별 키워드
-      href: contextual-keywords.md
       items:
+        - name: 빠른 참조
+          href: contextual-keywords.md
         - name: add
           href: add.md
         - name: get
@@ -287,8 +284,9 @@
         - name: yield
           href: yield.md
     - name: 쿼리 키워드
-      href: query-keywords.md
       items:
+        - name: 빠른 참조
+          href: query-keywords.md
         - name: from 절
           href: from-clause.md
         - name: where 절
