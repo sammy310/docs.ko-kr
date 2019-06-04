@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f66e00c3334aecdf8c653f57e28d1b327c4170e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4bd398a5b214ac0046d5fe1965f70eef2eedaa6b
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61628004"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490389"
 ---
 # <a name="getcorversion-function"></a>GetCORVersion 함수
 현재 프로세스에서 실행 중인 공용 언어 런타임 (CLR)의 버전 번호를 반환 합니다.  
   
- 이 함수에서 사용 중단에 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다.  
+ .NET Framework 4에서이 함수에 사용 되지 않습니다.  
   
 ## <a name="syntax"></a>구문  
   

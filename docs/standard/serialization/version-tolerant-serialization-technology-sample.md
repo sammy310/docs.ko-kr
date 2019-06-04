@@ -2,12 +2,12 @@
 title: Version Tolerant Serialization 기술 샘플
 ms.date: 03/30/2017
 ms.assetid: 2a183664-bfbf-4ff0-96f6-c836284ea916
-ms.openlocfilehash: d7dfcf7548571d29032495ca8be96db70f2336fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6c30c39848be02785b6b808ecf4af711c0c9e95d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62028267"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483001"
 ---
 # <a name="version-tolerant-serialization-technology-sample"></a>Version Tolerant Serialization 기술 샘플
 [샘플 다운로드](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
@@ -22,7 +22,7 @@ ms.locfileid: "62028267"
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>Visual Studio를 사용하여 샘플을 빌드하려면  
   
-1. [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]를 열고 샘플에 대한 언어별 하위 디렉터리 중 하나로 이동합니다.  
+1. 파일 탐색기를 열고 샘플에 대 한 언어별 하위 디렉터리 중 하나로 이동 합니다.  
   
 2. 이전 단계에서 선택한 디렉터리의 V1 Application 하위 디렉터리로 이동합니다.  
   

@@ -2,12 +2,12 @@
 title: ADO.NET의 데이터 추적
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: df49fc7a5f7c437132a4dc24ed7f18492d9e7647
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 120a9e2a817401ba04e0dce8052caecb83115e0e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583772"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489530"
 ---
 # <a name="data-tracing-in-adonet"></a>ADO.NET의 데이터 추적
 
@@ -41,7 +41,7 @@ ADO.NET ADO.NET 뿐만 아니라 SQL Server, Oracle, OLE DB 및 ODBC에 대 한.
 
 또한 ADO.NET은 스레드별 동작 ID를 전송합니다. 작업 ID는 세션 TRACK_CAUSALITY 옵션을 설정한 상태로 시작 하는 경우 확장된 이벤트 세션에서 캡처됩니다. 활성 연결과 관련한 성능 문제의 경우 클라이언트의 데이터 액세스 추적에서 동작 ID(`ActivityID` 필드)를 가져온 다음 확장 이벤트 출력에서 동작 ID를 찾아볼 수 있습니다. 확장 이벤트의 동작 ID는16바이트 GUID(클라이언트 연결 ID의 GUID와는 다름)에 4바이트 시퀀스 번호를 추가한 것입니다. 시퀀스 번호는 스레드 내의 요청 순서를 나타내며 스레드에서 일괄 처리 및 RPC 문의 상대적인 순서를 나타냅니다. `ActivityID`는 현재 데이터 액세스 추적이 활성화된 상태이고 데이터 액세스 추적 구성 단어의 18번째 비트가 ON 상태인 경우 SQL 일괄 처리 문과 RPC 요청에 대해 선택적으로 전송됩니다.
 
-다음은 [!INCLUDE[tsql](../../../../includes/tsql-md.md)]을 사용하여 링 버퍼에 저장되는 확장 이벤트 세션을 시작하고 RPC 및 일괄 처리 작업에서 클라이언트로부터 전송된 동작 ID를 기록하는 샘플입니다.
+다음은 링 버퍼에 저장 되 고 RPC 및 일괄 처리 작업 시 클라이언트에서 보낸 활동 ID를 기록할 확장된 이벤트 세션을 시작 하려면 TRANSACT-SQL을 사용 하는 샘플.
 
 ```sql
 create event session MySession on server

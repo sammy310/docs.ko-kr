@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 848c56773c0ff2986f0bec3e82a08a3d0dd35434
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 868c5f0742fa4dc963539fd70414752092156c64
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456476"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489425"
 ---
 # <a name="netfx40legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy > 요소
 런타임이 레거시 CAS(코드 액세스 보안) 정책을 사용할지를 지정합니다.  
@@ -55,11 +55,11 @@ ms.locfileid: "66456476"
 |`runtime`|런타임 초기화 옵션에 대한 정보를 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
- .NET Framework 버전 3.5 및 이전 버전에서 CAS 정책을 항상 적용에서 됩니다. 에 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], CAS 정책을 사용 하도록 설정 해야 합니다.  
+ .NET Framework 버전 3.5 및 이전 버전에서 CAS 정책을 항상 적용에서 됩니다. .NET Framework 4에서는 CAS 정책을 사용 해야 합니다.  
   
  CAS 정책에는 버전 별로 다릅니다. .NET Framework 4에서 이전 버전의.NET Framework에 존재 하는 사용자 지정 CA 정책은 없게 해야 합니다.  
   
- 적용은 `<NetFx40_LegacySecurityPolicy>` 요소를 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 어셈블리에 영향을 주지 않습니다 [보안 투명 코드](../../../../../docs/framework/misc/security-transparent-code.md); 투명도 규칙은 계속 적용 합니다.  
+ 적용 된 `<NetFx40_LegacySecurityPolicy>` 요소는.NET Framework 4 어셈블리에 영향을 주지 않습니다 [보안 투명 코드](../../../../../docs/framework/misc/security-transparent-code.md); 투명도 규칙은 계속 적용 합니다.  
   
 > [!IMPORTANT]
 >  적용 된 `<NetFx40_LegacySecurityPolicy>` 요소에서 만든 네이티브 이미지 어셈블리에 대 한 상당한 성능 저하가 발생할 수 있습니다 합니다 [네이티브 이미지 생성기 (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) 에 설치 되지 않은 [전역 어셈블리 캐시 ](../../../../../docs/framework/app-domains/gac.md). 성능 저하는 특성이 적용 되는 경우 네이티브 이미지 어셈블리를 로드 하는 런타임의 없을 때 발생, 될으로-just-in-time 어셈블리를 로드 합니다.  

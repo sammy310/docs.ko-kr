@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa256fe95013494488ff52258186763fab7a85c9
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: b16f169ca61485cf3031076d32178a9407aa54ff
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456662"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66488008"
 ---
 # <a name="code-access-security"></a>코드 액세스 보안
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -34,7 +34,7 @@ ms.locfileid: "66456662"
  .NET Framework에서는 악성 모바일 코드로부터 컴퓨터 시스템을 보호하고, 알 수 없는 출처의 코드가 보호된 상태로 실행될 수 있도록 하고, 신뢰할 수 있는 코드가 의도적으로 또는 실수로 보안을 손상시키지 않도록 방지하는 코드 액세스 보안이라는 보안 메커니즘을 제공합니다. 코드 액세스 보안을 통해 코드 발생 위치 및 코드 ID의 다른 측면에 따라 다양한 수준으로 코드를 신뢰할 수 있습니다. 또한 코드 액세스 보안은 코드에 다양한 신뢰 수준을 적용하여 실행되려면 완전히 신뢰할 수 있어야 하는 코드의 양을 최소화합니다. 코드 액세스 보안을 사용하면 코드가 악의적이거나 오류가 많은 코드에서 악용될 가능성을 줄일 수 있습니다. 코드에서 수행할 수 있도록 허용해야 하는 작업 집합을 지정할 수 있으므로 책임을 줄일 수 있습니다. 코드 액세스 보안은 코드에서 보안 취약성으로 인해 발생할 수 있는 손상을 최소화하는 데 도움이 될 수도 있습니다.  
   
 > [!NOTE]
->  [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]에서는 코드 액세스 보안의 주요 부분이 변경되었습니다. 가장 주목할 만한 변경은 [보안 투명도](../../../docs/framework/misc/security-transparent-code.md), 또한 코드 액세스 보안에 영향을 주는 다른 중요 한 변경 내용이 있지만. 이러한 변경에 대 한 자세한 내용은 [보안 변경 내용](../../../docs/framework/security/security-changes.md)합니다.  
+>  .NET Framework 4의 코드 액세스 보안에 주요 변경 사항이 있습니다. 가장 주목할 만한 변경은 [보안 투명도](../../../docs/framework/misc/security-transparent-code.md), 또한 코드 액세스 보안에 영향을 주는 다른 중요 한 변경 내용이 있지만. 이러한 변경에 대 한 자세한 내용은 [보안 변경 내용](../../../docs/framework/security/security-changes.md)합니다.  
   
  코드 액세스 보안은 주로 라이브러리 코드와 부분적으로 신뢰할 수 있는 응용 프로그램에 영향을 줍니다. 라이브러리 개발자는 부분적으로 신뢰할 수 있는 응용 프로그램의 무단 액세스로부터 코드를 보호해야 합니다. 부분적으로 신뢰할 수 있는 응용 프로그램은 인터넷과 같은 외부 소스에서 로드된 응용 프로그램입니다. 데스크톱이나 로컬 인트라넷에 설치된 응용 프로그램은 완전 신뢰로 실행됩니다. 완전 신뢰 응용 프로그램은 영향을 받지 않습니다 코드 액세스 보안으로 표시 되어 있지 않다면 [보안 투명](../../../docs/framework/misc/security-transparent-code.md)이므로 완전히 신뢰할 수 있습니다. 완전 신뢰 응용 프로그램에 대한 유일한 제한 사항은 <xref:System.Security.SecurityTransparentAttribute> 특성으로 표시된 응용 프로그램이 <xref:System.Security.SecurityCriticalAttribute> 특성으로 표시된 코드를 호출할 수 없다는 것입니다. 코드 액세스 보안을 적용할 수 있도록 부분적으로 신뢰할 수 있는 응용 프로그램은 샌드박스(예: Internet Explorer)에서 실행되어야 합니다. 인터넷에서 응용 프로그램을 다운로드 하 고 바탕 화면에서 실행 하려고 하는 경우는 <xref:System.NotSupportedException> 메시지와 함께 합니다. "는 하려고 어셈블리에.NET Framework의 이전 버전에서 샌드박스가 적용 된 네트워크 위치에서 어셈블리를 로드 합니다. .NET Framework의 이 릴리스는 기본적으로 CAS 정책을 사용하도록 설정하지 않으므로 이러한 로드는 위험할 수 있습니다." 사용 하 여 완전 신뢰로 실행 되도록 설정할 수 있습니다 응용 프로그램이 신뢰할 수 있는 경우는 [ \<loadFromRemoteSources > 요소](../../../docs/framework/configure-apps/file-schema/runtime/loadfromremotesources-element.md)합니다. 샌드박스에서 응용 프로그램을 실행 하는 방법에 대 한 내용은 [방법: 샌드박스에서 부분적으로 신뢰할 수 있는 코드 실행](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)의 설명대로 신뢰할 수 없는 코드에 별도의 폴더를 사용합니다.  
   

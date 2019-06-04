@@ -2,12 +2,12 @@
 title: 기호 및 연산자 참조
 description: 기호 및 연산자에 사용 되는 방법을 알아봅니다는 F# 프로그래밍 언어입니다.
 ms.date: 02/11/2019
-ms.openlocfilehash: 11a02792dc949b0a7a0a6e7bb59786c489b3aa9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ea8337a9055c8df639fe6abdb6c79445d189d64
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982745"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490811"
 ---
 # <a name="symbol-and-operator-reference"></a>기호 및 연산자 참조
 
@@ -127,6 +127,7 @@ ms.locfileid: "61982745"
 |`let`|결합성 없음|
 |`function`, `fun`, `match`, `try`|결합성 없음|
 |`if`|결합성 없음|
+|`not`|오른쪽|
 |`->`|오른쪽|
 |`:=`|오른쪽|
 |`,`|결합성 없음|

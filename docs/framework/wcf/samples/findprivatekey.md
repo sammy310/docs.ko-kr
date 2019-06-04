@@ -4,12 +4,12 @@ ms.date: 12/04/2017
 helpviewer_keywords:
 - FindPrivateKey
 ms.assetid: 16b54116-0ceb-4413-af0c-753bb2a785a6
-ms.openlocfilehash: 72e2f49ae7c39b4a0486ec053ff1164c2d833cbe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b89d135d7412f10cb9de1e4bda1aaab14b29cbf0
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990095"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490775"
 ---
 # <a name="findprivatekey-sample"></a>FindPrivateKey 샘플
 
@@ -46,7 +46,7 @@ cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto
 
 프로젝트를 다운로드 하려면 방문 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://www.microsoft.com/download/details.aspx?id=21459)합니다.
 
-1. 오픈 [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] 로 이동 합니다 *WF_WCF_Samples\WCF\Setup\FindPrivateKey\CS* 샘플을 설치한 디렉터리 위치 아래의 폴더.
+1. 파일 탐색기를 열고로 이동 합니다 *WF_WCF_Samples\WCF\Setup\FindPrivateKey\CS* 샘플을 설치한 디렉터리 위치 아래의 폴더입니다.
 
 2. .sln 파일 아이콘을 두 번 클릭하여 Visual Studio에서 파일을 엽니다.
 

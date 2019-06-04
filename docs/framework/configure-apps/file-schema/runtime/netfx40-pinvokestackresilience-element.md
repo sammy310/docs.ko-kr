@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60fcdd902c6acf919e68806ff65e3b8142533280
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: f7a1cf34f63b1ba0dfced8ff23c252f3363723c6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456389"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489401"
 ---
 # <a name="netfx40pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience > 요소
 런타임이 잘못된 플랫폼 호출 선언을 실행 시간에 자동으로 수정할지를 지정합니다. 자동 수정을 수행하는 경우 관리 코드와 비관리 코드 간 전환 속도가 느려집니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "66456389"
   
 |값|설명|  
 |-----------|-----------------|  
-|`0`|런타임에서 사용 하는 빠른 interop 마샬링에 도입 된 아키텍처는 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], 검색 하지는 않으며 수정 잘못 된 플랫폼 호출 선언 합니다. 이 값이 기본값입니다.|  
+|`0`|런타임에서 빠른 interop 마샬링 검색 하지 않습니다는.NET Framework 4에 도입 된 아키텍처를 사용 하 고 수정 잘못 된 플랫폼 호출 선언 합니다. 이 값이 기본값입니다.|  
 |`1`|검색 하 고 잘못 된 플랫폼을 수정 하는 런타임을 사용 하 여 느린 전환 호출 선언 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  

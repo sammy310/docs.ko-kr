@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 1929e854-23a0-4bb1-94be-e8aa3b609e32
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ae24cdcb97e30da0bd4aec6569ef3dcda11488c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17a596d9fc223dc53268ae9c91f7d02357b0a9b8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775767"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489983"
 ---
 # <a name="dangerous-permissions-and-policy-administration"></a>위험한 권한 및 정책 관리
 .NET Framework가 권한을 제공하는 보호되는 몇몇 작업은 보안 시스템의 보안을 손상시킬 수 있습니다. 이렇게 위험한 권한은 필요한 경우에만, 그리고 신뢰할 수 있는 코드에만 제공되어야 합니다. 일반적으로 이러한 권한이 부여되면 악성 코드를 방어할 수 없습니다.  
   
 > [!NOTE]
->  [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]에서는 .NET Framework 보안 모델 및 용어 대한 중요한 변경 내용이 있습니다. 이러한 변경에 대 한 자세한 내용은 참조 하세요. [보안 변경 내용](../../../docs/framework/security/security-changes.md)합니다.  
+>  .NET Framework 4에서에.NET Framework 보안 모델 및 용어에 중요 한 변경 내용이 있었는지 합니다. 이러한 변경에 대 한 자세한 내용은 참조 하세요. [보안 변경 내용](../../../docs/framework/security/security-changes.md)합니다.  
   
  위험한 권한은 다음 표에 설명되어 있습니다.  
   

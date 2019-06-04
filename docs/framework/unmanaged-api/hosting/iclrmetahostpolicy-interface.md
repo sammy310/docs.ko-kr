@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93507ac72b79210dc3a267fea39a6a7b2874916a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 426d77114d3deeff94c39e2f5fc1f2e56e753641
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638699"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490281"
 ---
 # <a name="iclrmetahostpolicy-interface"></a>ICLRMetaHostPolicy 인터페이스
 제공 된 [GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) 메서드 정책 조건에 따라 공용 언어 런타임 (CLR) 인터페이스에 대 한 포인터를 반환 하는 어셈블리, 버전 및 구성 파일을 관리 합니다.  
@@ -44,7 +44,7 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHostPolicy,
 > [!NOTE]
 >  이 인터페이스를 로드 하거나 CLR, 하지만 기본 CLR 버전 설치 되거나 로드 된 사용 가능한 버전에 따라 반환 단순히 활성화 실제로 않습니다.  
   
- [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] 특정 요구 사항이 있는 호스트 의도 하지 않은 저하를 초래 하지 않고 기본 기능을 사용할 수 있도록 정책을 통합 API를 호스트 합니다. 예를 들어 MSCorEE.dll 내보내기의 여러 바인딩될 특정 CLR 메서드 필요 하지 않을 있지만 논리적으로 해당 합니다. 합니다 [METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) 열거형은 대부분의 호스트에 공통 되는 바인딩 정책을 제공 합니다.  
+ .NET Framework 4 호스팅 API는 특정 요구 사항이 있는 호스트 의도 하지 않은 저하를 초래 하지 않고 기본 기능을 사용할 수 있도록 정책을 통합 합니다. 예를 들어 MSCorEE.dll 내보내기의 여러 바인딩될 특정 CLR 메서드 필요 하지 않을 있지만 논리적으로 해당 합니다. 합니다 [METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) 열거형은 대부분의 호스트에 공통 되는 바인딩 정책을 제공 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

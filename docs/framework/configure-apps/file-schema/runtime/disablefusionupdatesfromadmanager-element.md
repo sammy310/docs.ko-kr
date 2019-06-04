@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27c8c1cac68aca1c40826ff549d62d9636d9b0c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c96d5aea150c0dbb55889e9fc26417e7803a155
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704910"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487668"
 ---
 # <a name="disablefusionupdatesfromadmanager-element"></a>\<disableFusionUpdatesFromADManager > 요소
 런타임 호스트가 애플리케이션 도메인에 대한 구성 설정을 재정의할 수 있도록 허용하는 기본 동작을 사용하지 않도록 설정할지를 지정합니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "61704910"
   
 |값|설명|  
 |-----------|-----------------|  
-|0|Fusion 설정을 재정의 하는 기능을 해제 하지 않습니다. 이 기본 동작을 사용 하 여 시작 된 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]합니다.|  
+|0|Fusion 설정을 재정의 하는 기능을 해제 하지 않습니다. 이 동작은 기본,.NET Framework 4를 사용 하 여 시작 합니다.|  
 |1|Fusion 설정을 재정의 하는 기능을 사용 하지 않도록 설정 합니다. 이.NET Framework의 이전 버전의 동작으로 돌아갑니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
@@ -54,7 +54,7 @@ ms.locfileid: "61704910"
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
- 부터 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], 기본 동작은 허용 하는 <xref:System.AppDomainManager> 개체를 사용 하 여 구성 설정을 재정의 하려면를 <xref:System.AppDomainSetup.ConfigurationFile%2A> 속성 또는 <xref:System.AppDomainSetup.SetConfigurationBytes%2A> 메서드의 <xref:System.AppDomainSetup> 구현에 전달 되는 개체 <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> 의 서브 클래스에서 메서드를 <xref:System.AppDomainManager>입니다. 기본 응용 프로그램 도메인에 대 한 설정을 변경 하면 응용 프로그램 구성 파일에 지정 된 설정을 재정의 합니다. 에 전달 된 구성 설정을 다른 응용 프로그램 도메인에 대 한 재정의 <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> 또는 <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> 메서드.  
+ .NET Framework 4 부터는 기본 동작은 허용 하는 <xref:System.AppDomainManager> 개체를 사용 하 여 구성 설정을 재정의 하려면 합니다 <xref:System.AppDomainSetup.ConfigurationFile%2A> 속성 또는 <xref:System.AppDomainSetup.SetConfigurationBytes%2A> 메서드의 <xref:System.AppDomainSetup> 구현에 전달 되는 개체 <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> 의 서브 클래스에서 메서드를 <xref:System.AppDomainManager>입니다. 기본 응용 프로그램 도메인에 대 한 설정을 변경 하면 응용 프로그램 구성 파일에 지정 된 설정을 재정의 합니다. 에 전달 된 구성 설정을 다른 응용 프로그램 도메인에 대 한 재정의 <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> 또는 <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> 메서드.  
   
  새 구성 정보를 전달 하거나 null을 전달 (`Nothing` Visual Basic에서)에 전달 된 구성 정보를 제거 합니다.  
   

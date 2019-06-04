@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 567e6533a9a9ac718f8b5acac769295c104f7f3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a412bd8410750ec826762e45d70d59c514c61542
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61628101"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490378"
 ---
 # <a name="getcorsystemdirectory-function"></a>GetCORSystemDirectory 함수
 프로세스에 로드 되는 공용 언어 런타임 (CLR)의 설치 디렉터리를 반환 합니다. 설치 디렉터리는 정규화 된 이름, 예를 들어, "c:\windows\microsoft.net\framework\v1.0.3705"입니다.  
   
- 이 함수는 사용 되지 않습니다. 에 의해 대체 합니다 [iclrruntimeinfo:: Getruntimedirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) 에서 제공 하는 메서드는 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다.  
+ 이 함수는 사용 되지 않습니다. 에 의해 대체 된 [iclrruntimeinfo:: Getruntimedirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) .NET Framework 4에서 제공 하는 메서드.  
   
 ## <a name="syntax"></a>구문  
   

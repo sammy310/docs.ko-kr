@@ -2,12 +2,18 @@
 title: 런타임 설정 스키마
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - schema runtime settings
-  - 'configuration schema [.NET Framework], runtime settings'
-  - runtime settings schema
+- schema runtime settings
+- configuration schema [.NET Framework], runtime settings
+- runtime settings schema
 ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: caef2a1d1230f020389c6b86015702075b9fc582
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489464"
 ---
 # <a name="runtime-settings-schema"></a>런타임 설정 스키마
 런타임 설정은 공용 언어 런타임에서 .NET Framework를 대상으로 하는 애플리케이션을 구성하는 데 사용됩니다.  
@@ -115,7 +121,7 @@ ms.author: ronpet
 |[\<relativeBindForResources>](../../../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md)|위성 어셈블리에 대한 프로브를 최적화합니다.|  
 |[\<remove>](../../../../../docs/framework/configure-apps/file-schema/runtime/remove-element-for-namedcaches.md)|메모리 캐시용으로 명명된 캐시 항목을 `namedCaches` 컬렉션에서 제거합니다.|  
 |[\<runtime>](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)|어셈블리 바인딩 및 가비지 수집 동작에 대한 정보를 포함합니다.|  
-|[\<shadowCopyTimeStampVerification>](../../../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)|섀도 복사에서 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]에 도입된 기본 시작 동작을 사용하는지 아니면 이전 .NET Framework 버전의 시작 동작으로 되돌아가는지를 지정합니다.|  
+|[\<shadowCopyTimeStampVerification>](../../../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)|섀도 복사를.NET Framework 4에 도입 된 기본 시작 동작은 사용할지를 지정 하거나 이전 버전의.NET Framework의 시작 동작으로 돌아갑니다.|  
 |[\<supportPortability>](../../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md)|애플리케이션 이식성을 위해 어셈블리를 동일하게 간주하는 기본 동작을 사용하지 않도록 설정함으로써, 애플리케이션이 .NET Framework의 서로 다른 두 구현에서 같은 어셈블리를 참조할 수 있도록 지정합니다.|  
 |[\<system.runtime.caching>](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)|기본 메모리 내 개체 캐시에 대한 구성 정보를 제공합니다.|  
 |[<Thread_UseAllCpuGroups>](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md)|런타임이 모든 CPU 그룹에 관리되는 스레드를 배포할지를 지정합니다.|  

@@ -2,12 +2,12 @@
 title: Entity Framework용 SqlClient에서 알려진 문제
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 0a6fec7e2d129523e5f68955e51ac50154cb58df
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5c500a61a00914df7b106b7e89485921123e56ec
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631716"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489539"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Entity Framework용 SqlClient에서 알려진 문제
 이 단원에서는 .NET Framework Data Provider for SQL Server(SqlClient)와 관련된 알려진 문제에 대해 설명합니다.  
@@ -43,9 +43,9 @@ SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP
 ```  
   
 ## <a name="targeting-the-correct-sql-server-version"></a>올바른 SQL Server 버전을 대상으로 지정  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 대상 합니다 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 에 지정 된 SQL Server 버전을 기반으로 하는 쿼리는 `ProviderManifestToken` 저장소 모델 (.ssdl) 파일에 있는 스키마 요소의 특성입니다. 이 버전은 연결된 실제 SQL Server의 버전과 다를 수 있습니다. 예를 들어 SQL Server 2005를 사용하지만 `ProviderManifestToken` 특성이 2008로 설정된 경우 생성된 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 쿼리가 서버에서 실행되지 않을 수 있습니다. 예를 들어, SQL Server 2008에서 도입 된 새 날짜 시간 형식을 사용 하는 쿼리는 이전 버전의 SQL Server에서 실행 되지 않습니다. SQL Server 2005를 사용하지만 `ProviderManifestToken` 특성이 2000으로 설정된 경우 생성된 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 쿼리가 덜 최적화되거나, 쿼리가 지원되지 않는다는 예외가 표시될 수 있습니다. 자세한 내용은 CROSS 및 OUTER APPLY 연산자 단원을이 항목 앞부분의 참조 하세요.  
+ 합니다 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 에 지정 된 SQL Server 버전을 기반으로 TRANSACT-SQL 쿼리를 대상으로 `ProviderManifestToken` 저장소 모델 (.ssdl) 파일에 있는 스키마 요소의 특성입니다. 이 버전은 연결된 실제 SQL Server의 버전과 다를 수 있습니다. 예를 들어, SQL Server 2005를 사용 하는 경우 하지만 `ProviderManifestToken` 특성이 2008로 설정 된, 서버에서 생성 된 TRANSACT-SQL 쿼리 실행 되지 않을 수 있습니다. 예를 들어, SQL Server 2008에서 도입 된 새 날짜 시간 형식을 사용 하는 쿼리는 이전 버전의 SQL Server에서 실행 되지 않습니다. SQL Server 2005를 사용 하는 경우 하지만 `ProviderManifestToken` 특성이 2000으로 설정 되어, 생성 된 TRANSACT-SQL 쿼리는 덜 최적화 될 수 있습니다, 또는 쿼리는 지원 되지 않습니다 않는다는 예외가 표시 될 수 있습니다. 자세한 내용은 CROSS 및 OUTER APPLY 연산자 단원을이 항목 앞부분의 참조 하세요.  
   
- 특정 데이터베이스 동작은 데이터베이스로 설정된 호환성 수준에 따라 달라집니다. `ProviderManifestToken` 특성이 2005로 설정되어 있고 SQL Server 버전은 2005지만 데이터베이스의 호환성 수준이 "80"(SQL Server 2000)으로 설정된 경우 생성된 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]에서 SQL Server 2005를 대상으로 지정하지만 호환성 수준 설정으로 인해 예상대로 실행되지 않을 수 있습니다. 예를 들어, ORDER BY 목록의 열 이름이 선택기의 열 이름과 일치하는 경우 정렬 정보가 손실될 수 있습니다.  
+ 특정 데이터베이스 동작은 데이터베이스로 설정된 호환성 수준에 따라 달라집니다. 경우에 `ProviderManifestToken` 특성이 2005로 설정 된 및 SQL Server 버전이 2005 데이터베이스의 호환성 수준이 "80" (SQL Server 2000)로 하지만 생성 된 TRANSACT-SQL SQL Server 2005를 대상으로 하지만으로 인해 예상 대로 실행 되지 않을 수 있습니다는 호환성 수준 설정입니다. 예를 들어, ORDER BY 목록의 열 이름이 선택기의 열 이름과 일치하는 경우 정렬 정보가 손실될 수 있습니다.  
   
 ## <a name="nested-queries-in-projection"></a>프로젝션의 중첩 쿼리  
  프로젝션 절의 중첩 쿼리는 서버의 Cartesian 제품 쿼리로 변환될 수 있습니다. SLQ Server를 비롯 한 일부 백엔드 서버에서는이 TempDB 테이블이 매우 커질 발생할 수 있습니다. 서버 성능이 저하될 수 있습니다.  

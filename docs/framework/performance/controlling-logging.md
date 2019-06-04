@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e14fa2d739a6fdabda7b64e7e765e51da19701a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f6f6744451bf3436e58a3ff9efcdb16ceee08c9d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616457"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489750"
 ---
 # <a name="controlling-net-framework-logging"></a>.NET Framework 로깅 제어
 ETW(Windows용 이벤트 추적)를 사용하여 CLR(공용 언어 런타임) 이벤트를 기록할 수 있습니다. 다음과 같은 도구를 사용하여 추적을 만들고 볼 수 있습니다.  
@@ -28,7 +28,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.  
 ```  
   
- CLR 공급자가 목록에 없는 경우 Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) 명령줄 도구를 사용하여 Windows Vista 이상의 운영 체제에 설치할 수 있습니다. 관리자 권한으로 명령 프롬프트 창을 엽니다. 프롬프트 디렉터리를 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 폴더(%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET 버전>\)로 변경합니다. 이 폴더에는 CLR-ETW.man 파일이 들어 있습니다. 명령 프롬프트에서 다음 명령을 입력하여 CLR 공급자를 설치합니다.  
+ CLR 공급자가 목록에 없는 경우 Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) 명령줄 도구를 사용하여 Windows Vista 이상의 운영 체제에 설치할 수 있습니다. 관리자 권한으로 명령 프롬프트 창을 엽니다. .NET Framework 4 폴더로 프롬프트 디렉터리를 변경 (%WINDIR%\Microsoft.NET\Framework[64]\v4.\<합니다. .NET 버전 > \). 이 폴더에는 CLR-ETW.man 파일이 들어 있습니다. 명령 프롬프트에서 다음 명령을 입력하여 CLR 공급자를 설치합니다.  
   
  `wevtutil im CLR-ETW.man`  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <startup> element
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-ms.openlocfilehash: 5b15c504a01a0ab8e17b8ad8811d9ed183609322
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: e40ca31ddc40cccbeb3b8dda1d148ddec5032d7c
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456269"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489545"
 ---
 # <a name="startup-element"></a>\<시작 > 요소
 
@@ -37,7 +37,7 @@ ms.locfileid: "66456269"
 
 |특성|설명|
 |---------------|-----------------|
-|`useLegacyV2RuntimeActivationPolicy`|선택적 특성입니다.<br /><br /> 사용 여부를 지정 합니다 [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] 런타임 정품 인증 정책 사용 하는 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 정품 인증 정책입니다.|
+|`useLegacyV2RuntimeActivationPolicy`|선택적 특성입니다.<br /><br /> 사용 여부를 지정 된 [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] 런타임 정품 인증 정책 또는.NET Framework 4 정품 인증 정책을 사용 하도록 합니다.|
 
 ## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>useLegacyV2RuntimeActivationPolicy 특성
 

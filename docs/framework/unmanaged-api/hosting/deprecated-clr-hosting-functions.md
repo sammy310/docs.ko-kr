@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: 91fbbb35-e543-4814-b806-371cebae8c5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa84ca0defd173563817673aad183a8b64226d41
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dde711f2d626d88fd80009fa83f1198dd9d47810
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905972"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490486"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>사용되지 않는 CLR 호스팅 함수
 이 섹션에서는 호스팅 API의 이전 버전에서 사용 되는 관리 되지 않는 전역 정적 함수를 설명 합니다.  
   
- 인프라 기능을 제외 하 고 (`_Cor*` 함수),.NET Framework 에서만 사용 되는, 이러한 함수에서 되지는 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다.  
+ 인프라 기능을 제외 하 고 (`_Cor*` 함수),.NET Framework 에서만 사용 되는, 이러한 함수는.NET Framework 4에서 되지 않습니다.  
   
 ## <a name="activation-functions"></a>활성화 함수  
  [ClrCreateManagedInstance 함수](../../../../docs/framework/unmanaged-api/hosting/clrcreatemanagedinstance-function.md)  

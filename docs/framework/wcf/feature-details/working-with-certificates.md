@@ -7,24 +7,24 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: d8c7d65f593f2ba5c21625835a0be7a77a44afb5
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 2122213e69512b06d1328272740ac4ffdc36c1eb
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881111"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483039"
 ---
 # <a name="working-with-certificates"></a>인증서 작업
 WCF(Windows Communication Foundation) 보안을 프로그래밍하려면 일반적으로 X.509 디지털 인증서를 사용하여 클라이언트 및 서버를 인증하고, 암호화하고, 메시지에 디지털 서명합니다. 이 항목에서는 X.509 디지털 인증서 기능과 WCF에서 인증서 기능을 사용하는 방법을 간략하게 설명하며, 이러한 개념을 자세히 설명하거나 WCF 및 인증서를 사용하여 일반 작업을 수행하는 방법을 보여 주는 항목에 대한 링크를 제공합니다.  
   
- 간단히 말해서 디지털 인증서는 공개 키 암호화 사용을 통해 전자 트랜잭션에 참여하는 각각의 상대방에 대해 유효성을 확인하고 인증하는 디지털 인증서, 인증 기관 및 기타 등록 기관의 시스템인 PKI(*공개 키 인프라*)의 일부입니다. 인증 기관은 인증서를 발급하며 각 인증서에는 *주체*(인증서가 발급되는 엔터티), 유효 날짜(인증서의 유효 기간), 발급자(인증서를 발급한 엔터티), 공개 키 등과 같은 데이터를 포함하는 필드 집합이 있습니다. WCF에서 이러한 각 속성은 <xref:System.IdentityModel.Claims.Claim>으로 처리되며, 각 클레임은 ID와 권한의 두 가지 형식으로 세분화됩니다. X.509 인증서에 대한 자세한 내용은[X.509 공개 키 인증서](https://go.microsoft.com/fwlink/?LinkId=209952)를 참조하세요. WCF에서 클레임 및 권한 부여에 대한 자세한 내용은 [ID 모델을 사용하여 클레임 및 권한 부여 관리](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)를 참조하세요. PKI 구현에 대한 자세한 내용은 [Windows Server 2008 R2 - 인증서 서비스](https://go.microsoft.com/fwlink/?LinkId=209949)를 참조하세요.  
+ 간단히 말해서 디지털 인증서는 공개 키 암호화 사용을 통해 전자 트랜잭션에 참여하는 각각의 상대방에 대해 유효성을 확인하고 인증하는 디지털 인증서, 인증 기관 및 기타 등록 기관의 시스템인 PKI(*공개 키 인프라*)의 일부입니다. 인증 기관은 인증서를 발급하며 각 인증서에는 *주체*(인증서가 발급되는 엔터티), 유효 날짜(인증서의 유효 기간), 발급자(인증서를 발급한 엔터티), 공개 키 등과 같은 데이터를 포함하는 필드 집합이 있습니다. WCF에서 이러한 각 속성은 <xref:System.IdentityModel.Claims.Claim>으로 처리되며, 각 클레임은 ID와 권한의 두 가지 형식으로 세분화됩니다. X.509 인증서에 대한 자세한 내용은[X.509 공개 키 인증서](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates)를 참조하세요. WCF에서 클레임 및 권한 부여에 대한 자세한 내용은 [ID 모델을 사용하여 클레임 및 권한 부여 관리](managing-claims-and-authorization-with-the-identity-model.md)를 참조하세요. PKI 구현 하는 방법에 대 한 자세한 내용은 참조 하세요. [Windows Server 2012 R2 Active Directory 인증서 서비스를 사용 하 여 엔터프라이즈 PKI](https://blogs.technet.microsoft.com/yungchou/2013/10/21/enterprise-pki-with-windows-server-2012-r2-active-directory-certificate-services-part-1-of-2/)합니다.  
   
  인증서의 기본 기능은 인증서 소유자의 ID를 다른 엔터티에 인증하는 것입니다. 인증서는 소유자의 *공개 키*를 포함하고, 소유자는 개인 키를 보유합니다. 공개 키를 사용하여 인증서 소유자에게 보내는 메시지를 암호화할 수 있습니다. 소유자만 개인 키에 액세스할 수 있으므로 소유자만이 해당 메시지를 해독할 수 있습니다.  
   
  인증서는 인증 기관에서 발급해야 합니다. 인증 기관이 인증서의 타사 발급자인 경우도 있습니다. Windows 도메인의 경우 도메인에서 컴퓨터에 인증서를 발급하는 데 사용할 수 있는 인증 기관이 포함되어 있습니다.  
   
 ## <a name="viewing-certificates"></a>인증서 보기  
- 인증서로 작업하려면 인증서를 표시하여 해당 속성을 검사해야 하는 경우가 종종 있습니다. 이 작업은 MMC(Microsoft Management Console) 스냅인 도구를 사용하여 쉽게 수행할 수 있습니다. 자세한 내용은 [방법: MMC 스냅인을 사용 하 여 인증서 보기](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)합니다.  
+ 인증서로 작업하려면 인증서를 표시하여 해당 속성을 검사해야 하는 경우가 종종 있습니다. 이 작업은 MMC(Microsoft Management Console) 스냅인 도구를 사용하여 쉽게 수행할 수 있습니다. 자세한 내용은 [방법: MMC 스냅인을 사용 하 여 인증서 보기](how-to-view-certificates-with-the-mmc-snap-in.md)합니다.  
   
 ## <a name="certificate-stores"></a>인증서 저장소  
  인증서는 저장소에 있습니다. 하위 저장소로 세분화되는 두 가지 주 저장소 위치가 있습니다. 컴퓨터의 관리자는 MMC 스냅인 도구를 사용하여 두 주 저장소를 모두 볼 수 있습니다. 관리자가 아닌 사용자는 현재 사용자 저장소만 볼 수 있습니다.  
@@ -52,12 +52,12 @@ WCF(Windows Communication Foundation) 보안을 프로그래밍하려면 일반�
 - 서비스 또는 클라이언트가 사용자 계정에서 실행되는 애플리케이션인 경우 **현재 사용자** 저장소를 사용합니다.  
   
 ### <a name="accessing-stores"></a>저장소 액세스  
- 저장소는 컴퓨터에 있는 폴더처럼 ACL(액세스 제어 목록)에 의해 보호됩니다. 인터넷 정보 서비스 (IIS)에서 호스팅되는 서비스를 만들 때 ASP.NET 프로세스 ASP.NET 계정으로 실행 됩니다. 이 계정은 서비스에 사용되는 인증서가 들어 있는 저장소에 대한 액세스 권한이 있어야 합니다. 각각의 주 저장소는 기본 액세스 목록으로 보호되지만, 목록을 수정할 수 있습니다. 저장소 액세스를 위한 개별 역할을 만들 경우 해당 역할에 액세스 권한을 부여해야 합니다. WinHttpCertConfig.exe 도구를 사용 하 여 액세스 목록을 수정 하는 방법에 알아보려면 참조 [방법: 개발 중 사용할 임시 인증서 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)합니다. IIS에서 클라이언트 인증서 사용에 대한 자세한 내용은 [ASP.NET 웹 애플리케이션에서 인증을 위해 클라이언트 인증서를 사용하여 웹 서비스를 호출하는 방법](https://go.microsoft.com/fwlink/?LinkId=88914)을 참조하세요.  
+ 저장소는 컴퓨터에 있는 폴더처럼 ACL(액세스 제어 목록)에 의해 보호됩니다. 인터넷 정보 서비스 (IIS)에서 호스팅되는 서비스를 만들 때 ASP.NET 프로세스 ASP.NET 계정으로 실행 됩니다. 이 계정은 서비스에 사용되는 인증서가 들어 있는 저장소에 대한 액세스 권한이 있어야 합니다. 각각의 주 저장소는 기본 액세스 목록으로 보호되지만, 목록을 수정할 수 있습니다. 저장소 액세스를 위한 개별 역할을 만들 경우 해당 역할에 액세스 권한을 부여해야 합니다. WinHttpCertConfig.exe 도구를 사용 하 여 액세스 목록을 수정 하는 방법에 알아보려면 참조 [방법: 개발 중 사용할 임시 인증서 만들기](how-to-create-temporary-certificates-for-use-during-development.md)합니다. IIS에서 클라이언트 인증서 사용에 대한 자세한 내용은 [ASP.NET 웹 애플리케이션에서 인증을 위해 클라이언트 인증서를 사용하여 웹 서비스를 호출하는 방법](https://support.microsoft.com/en-us/help/901183/how-to-call-a-web-service-by-using-a-client-certificate-for-authentica)을 참조하세요.  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>신뢰 체인 및 인증 기관  
  인증서는 개별 인증서가 인증서를 발급한 CA에 연결되는 계층 구조에 만들어집니다. 이 링크는 CA의 인증서로 연결됩니다. CA의 인증서 다음 원래 CA의 인증서를 발급 한 CA에 대 한 링크입니다. 이 프로세스는 루트 CA의 인증서에 도달할 때까지 반복됩니다. 루트 CA의 인증서는 본질적으로 신뢰할 수 있는 인증서입니다.  
   
- 디지털 인증서는 *신뢰 체인*이라고도 하는 이 계층 구조를 사용하여 엔터티를 인증하는 데 사용됩니다. 인증서를 두 번 클릭한 다음 **인증서 경로** 탭을 클릭하여 MMC 스냅인을 통해 인증서의 체인을 볼 수 있습니다. 인증 기관에 대 한 인증서 체인 가져오기에 대 한 자세한 내용은 참조 하세요. [방법: 서명을 확인 하는 데 인증서 기관 인증서 체인 지정](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md)합니다.  
+ 디지털 인증서는 *신뢰 체인*이라고도 하는 이 계층 구조를 사용하여 엔터티를 인증하는 데 사용됩니다. 인증서를 두 번 클릭한 다음 **인증서 경로** 탭을 클릭하여 MMC 스냅인을 통해 인증서의 체인을 볼 수 있습니다. 인증 기관에 대 한 인증서 체인 가져오기에 대 한 자세한 내용은 참조 하세요. [방법: 서명을 확인 하는 데 인증서 기관 인증서 체인 지정](specify-the-certificate-authority-chain-verify-signatures-wcf.md)합니다.  
   
 > [!NOTE]
 >  신뢰할 수 있는 루트 기관 인증서 저장소에 발급자의 인증서를 넣어 발급자를 신뢰할 수 있는 루트 기관으로 지정할 수 있습니다.  
@@ -96,7 +96,7 @@ WCF(Windows Communication Foundation) 보안을 프로그래밍하려면 일반�
   
 3. 루트 기관 인증서를 신뢰할 수 있는 루트 인증 기관 저장소로 가져옵니다.  
   
-4. 단계별 지침을 참조 하세요. [방법: 개발 중 사용할 임시 인증서 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)합니다.  
+4. 단계별 지침을 참조 하세요. [방법: 개발 중 사용할 임시 인증서 만들기](how-to-create-temporary-certificates-for-use-during-development.md)합니다.  
   
 ## <a name="which-certificate-to-use"></a>사용할 인증서  
  인증서에 대한 일반적인 질문은 사용할 인증서와 그 이유에 대한 것입니다. 대답은 클라이언트를 프로그래밍하는지 서비스를 프로그래밍하는지에 따라 달라집니다. 다음 정보에서는 일반적인 지침을 제공하며 이러한 질문에 대한 세부적인 대답은 아닙니다.  

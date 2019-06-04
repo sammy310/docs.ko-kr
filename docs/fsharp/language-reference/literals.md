@@ -2,12 +2,12 @@
 title: 리터럴
 description: 리터럴 형식에 알아봅니다는 F# 프로그래밍 언어입니다.
 ms.date: 02/08/2019
-ms.openlocfilehash: 28ce34dee3c3c3d4d0cfd4107e8cbc375a23032c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 032bc82d222cd34e7ac62e42ee4394c97d975b2e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904568"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490980"
 ---
 # <a name="literals"></a>리터럴
 
@@ -28,6 +28,7 @@ ms.locfileid: "61904568"
 |uint16|부호 없는 16 비트 자연 수|us|`86us`|
 |int<br /><br />int32|부호 있는 32 비트 정수|l 또는 없음|`86`<br /><br />`86l`|
 |uint<br /><br />uint32|부호 없는 32 비트 자연 수|u 또는 ul|`86u`<br /><br />`86ul`|
+|nativeint|서명 된 자연 수에 대 한 네이티브 포인터|n|`123n`|
 |unativeint|부호 없는 자연 수는 네이티브 포인터|취소|`0x00002D3Fun`|
 |int64|부호 있는 64 비트 정수|L|`86L`|
 |uint64|부호 없는 64 비트 자연 수|UL|`86UL`|

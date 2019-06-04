@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: ae8d5a7e-e7f7-47f7-98d9-455cc243a322
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7aa13d26ac11ed624caa4c9704325f2d604418bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 19cd74f0e2550ec91cb56e70cf34a03bd84fc60e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705053"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487744"
 ---
 # <a name="appdomainmanagertype-element"></a>\<appDomainManagerType> Element
 기본 애플리케이션 도메인용 애플리케이션 도메인 관리자로 사용되는 유형을 지정합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "61705053"
   
  형식 및 네임 스페이스의 형식은 동일한 형식에 사용 되는 여 <xref:System.Type.FullName%2A?displayProperty=nameWithType> 속성입니다.  
   
- 이 구성 요소는 에서만 사용할 수는 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 이상.  
+ 이 구성 요소가 이상.NET Framework 4에만 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 프로세스의 기본 응용 프로그램 도메인에 대 한 응용 프로그램 도메인 관리자는 지정 하는 방법을 보여 줍니다 합니다 `MyMgr` 입력을 `AdMgrExample` 어셈블리입니다.  

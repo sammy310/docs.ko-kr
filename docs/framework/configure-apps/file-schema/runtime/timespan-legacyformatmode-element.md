@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38adde3cd51a96f0e15ed5a0c539e088f2d3b480
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31e2a075f9202439cd62c81a06528b20c4971656
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701634"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489339"
 ---
 # <a name="timespanlegacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode > 요소
 런타임에서 사용 하 여 작업을 서식 지정에 레거시 동작을 유지할지 여부를 결정 <xref:System.TimeSpan?displayProperty=nameWithType> 값입니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "61701634"
 |`runtime`|런타임 초기화 옵션에 대한 정보를 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
- 부터 합니다 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]의 <xref:System.TimeSpan?displayProperty=nameWithType> 구현 구조체는 <xref:System.IFormattable> 인터페이스 및 서식 지정 작업 표준 및 사용자 지정 형식 문자열을 사용 하 여 지원 합니다. 구문 분석 메서드는 지원 되지 않는 형식 지정자 또는 서식 문자열을 발견 하면, throw 된 <xref:System.FormatException>합니다.  
+ .NET Framework 4를 사용 하 여 시작 합니다 <xref:System.TimeSpan?displayProperty=nameWithType> 구현 구조체를 <xref:System.IFormattable> 인터페이스 및 서식 지정 작업 표준 및 사용자 지정 형식 문자열을 사용 하 여 지원 합니다. 구문 분석 메서드는 지원 되지 않는 형식 지정자 또는 서식 문자열을 발견 하면, throw 된 <xref:System.FormatException>합니다.  
   
  이전 버전의.NET Framework에는 <xref:System.TimeSpan> 구조를 구현 하지 않았습니다 <xref:System.IFormattable> 형식 문자열을 지원 하지 않았습니다. 그러나 많은 개발자가 잘못 된 것으로 간주 <xref:System.TimeSpan> 에 사용 및 형식 문자열 집합을 지원 하지 못했습니다 [복합 서식 지정 작업](../../../../../docs/standard/base-types/composite-formatting.md) 와 같은 메서드를 사용 하 여 <xref:System.String.Format%2A?displayProperty=nameWithType>입니다. 일반적으로 형식을 구현 하는 경우 <xref:System.IFormattable> 지원 형식 문자열, 문자열 일반적으로 throw 하는 지원 되지 않는 형식으로 서식 지정 메서드를 호출 하 고는 <xref:System.FormatException>합니다. 그러나 때문 <xref:System.TimeSpan> 를 구현 하지 않았습니다 <xref:System.IFormattable>, 런타임에서 형식 문자열을 무시 하 고 대신 호출는 <xref:System.TimeSpan.ToString?displayProperty=nameWithType> 메서드. 즉,는 형식 문자열은 서식 지정 작업에 영향을 주지 않지만, 근무 발생 하지는 <xref:System.FormatException>합니다.  
   
@@ -76,13 +76,13 @@ ms.locfileid: "61701634"
 12:30:45  
 ```  
   
- 이는 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 이상 버전에서 예제를 실행하는 경우 출력과 다르게 표시됩니다.  
+ 이 점에서 훨씬 출력에서.NET Framework 4 또는 이상 버전에서 예제를 실행 하는 경우:  
   
 ```  
 Invalid Format  
 ```  
   
- 그러나 다음 구성 파일을 예제 디렉터리에 추가한 다음 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 이상 버전에서 예제를 실행하는 경우 출력은 [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)]에서 실행할 때 예제가 생성한 출력과 동일합니다.  
+ 그러나 다음 구성 파일을 예제 디렉터리에 추가 하 고 다음.NET Framework 4 또는 이상 버전에서 예제를 실행 하는 경우 출력은 실행할 때 예제가 생성 한 동일한 [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)]입니다.  
   
 ```xml  
 <?xml version ="1.0"?>  

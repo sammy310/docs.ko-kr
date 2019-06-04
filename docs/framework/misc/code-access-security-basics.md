@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d5a5658fcb6bbba72938a16a9e5c82fd779e2e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c41becaa149b933d46a01f6ada0ea4b29b68fe8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868773"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66488024"
 ---
 # <a name="code-access-security-basics"></a>코드 액세스 보안 기본 사항
 
@@ -32,7 +32,7 @@ ms.locfileid: "61868773"
 
 - **보안 클래스 라이브러리**: 보안 클래스 라이브러리는 라이브러리의 호출자에 게 라이브러리가 노출 하는 리소스에 액세스할 수 있는 권한이 있도록 보안 요청을 사용 합니다. 예를 들어 보안 클래스 라이브러리에 호출자에게 파일을 만들 수 있는 권한이 있도록 요구하는 파일 생성 메서드가 있을 수 있습니다. .NET Framework는 보안 클래스 라이브러리로 구성되어 있습니다. 코드에서 사용하는 라이브러리에 액세스하는 데 필요한 권한을 알고 있어야 합니다. 자세한 내용은 참조는 [보안 클래스 라이브러리를 사용 하 여](#secure_library) 이 항목의 뒷부분에 나오는 섹션입니다.
 
-- **투명 코드**: 부터 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], 특정 권한을 식별 하는 것 외에도 또한 결정 해야 코드를 보안 투명으로 실행할지 여부입니다. 보안 투명 코드는 보안에 중요한 것으로 식별된 형식이나 멤버를 호출할 수 없습니다. 이 규칙은 완전 신뢰 응용 프로그램과 부분적으로 신뢰할 수 있는 응용 프로그램에 적용됩니다. 자세한 내용은 [보안 투명 코드](../../../docs/framework/misc/security-transparent-code.md)합니다.
+- **투명 코드**: 특정 권한을 식별 하는 것 외에도.NET Framework 4를 사용 하 여 시작 코드를 보안 투명으로 실행할지 여부를 결정 해야 합니다. 보안 투명 코드는 보안에 중요한 것으로 식별된 형식이나 멤버를 호출할 수 없습니다. 이 규칙은 완전 신뢰 응용 프로그램과 부분적으로 신뢰할 수 있는 응용 프로그램에 적용됩니다. 자세한 내용은 [보안 투명 코드](../../../docs/framework/misc/security-transparent-code.md)합니다.
 
 <a name="typesafe_code"></a>
 
@@ -55,7 +55,7 @@ JIT(Just-In-Time) 컴파일은 코드를 검사하고 코드의 형식이 안전
 선언적 보안 구문을 사용 하 여 [특성](../../../docs/standard/attributes/index.md) 에 대 한 보안 정보를 배치 하는 [메타 데이터](../../../docs/standard/metadata-and-self-describing-components.md) 코드입니다. 어셈블리, 클래스 또는 멤버 수준에 특성을 배치하여 사용할 요청, 요구 또는 재정의 형식을 나타낼 수 있습니다. 요청은 응용 프로그램이 요구하거나 원하지 않는 권한에 대해 런타임 보안 시스템에 알리기 위해 공용 언어 런타임을 대상으로 하는 응용 프로그램에서 사용됩니다. 요구와 재정의는 호출자로부터 리소스를 보호하거나 기본 보안 동작을 재정의하기 위해 라이브러리에서 사용됩니다.
 
 > [!NOTE]
-> [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]에서는 .NET Framework 보안 모델 및 용어 대한 중요한 변경 내용이 있습니다. 이러한 변경에 대 한 자세한 내용은 참조 하세요. [보안 변경 내용](../../../docs/framework/security/security-changes.md)합니다.
+> .NET Framework 4에서에.NET Framework 보안 모델 및 용어에 중요 한 변경 내용이 있었는지 합니다. 이러한 변경에 대 한 자세한 내용은 참조 하세요. [보안 변경 내용](../../../docs/framework/security/security-changes.md)합니다.
 
 선언적 보안 호출을 사용하려면 필요한 특정 형식의 권한을 나타내도록 권한 개체의 상태 데이터를 초기화해야 합니다. 모든 기본 제공 권한에는 수행할 보안 작업 형식을 설명하는 <xref:System.Security.Permissions.SecurityAction> 열거형이 전달되는 특성이 있습니다. 그러나 권한은 고유한 전용 매개 변수도 수락합니다.
 

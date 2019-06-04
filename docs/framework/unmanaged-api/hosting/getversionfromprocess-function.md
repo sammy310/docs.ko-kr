@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 452104939acf5de7bb151cba00d65fb6631c98d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3055ac73f15329015f532f42c1f922eab38828cb
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985636"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490299"
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess 함수
 지정 된 프로세스 핸들을 사용 하 여 연결 된 공용 언어 런타임 (CLR)의 버전 번호를 가져옵니다.  
   
- 이 함수에서 사용 중단에 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다.  
+ .NET Framework 4에서이 함수에 사용 되지 않습니다.  
   
 ## <a name="syntax"></a>구문  
   

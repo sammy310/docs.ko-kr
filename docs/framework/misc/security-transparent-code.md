@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 60f2856bea79f36beb3c467158114fa78d99e09a
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 44003cbd0f13d2665c5b753454689c10546325b7
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456505"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487852"
 ---
 # <a name="security-transparent-code"></a>보안 투명 코드
 
@@ -23,7 +23,7 @@ ms.locfileid: "66456505"
 보안에는 샌드박싱, 권한 및 적용이라는 세 가지 조작 부분이 관련됩니다. 샌드박싱은 일부 코드를 완전히 신뢰할 수 있는 코드로 처리하고 다른 코드를 샌드박스에 대한 권한 부여 집합의 권한으로 제한하는 격리된 도메인을 만드는 방법을 나타냅니다. 샌드박스의 권한 부여 집합 내에서 실행되는 애플리케이션 코드는 투명한 것으로 간주합니다. 즉, 보안에 영향을 줄 수 있는 모든 작업을 수행할 수 없습니다. 샌드박스의 권한 부여 집합은 증거(<xref:System.Security.Policy.Evidence> 클래스)에 따라 결정됩니다. 증거는 샌드박스에 필요한 특정 권한 및 만들 수 있는 샌드박스 종류를 식별합니다. 적용은 투명 코드가 권한 부여 집합 내에서만 실행되도록 허용하는 것입니다.
 
 > [!IMPORTANT]
-> 보안 정책은 이전 .NET Framework 버전의 핵심 요소였습니다. 부터 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], 보안 정책에는 사용 되지 않습니다. 보안 정책 제거는 보안 투명도와 관련이 없습니다. 이 변경의 영향에 대 한 정보를 참조 하세요 [코드 액세스 보안 정책 호환성 및 마이그레이션](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md)합니다.
+> 보안 정책은 이전 .NET Framework 버전의 핵심 요소였습니다. 보안 정책에서.NET Framework 4부터 사용 되지 않습니다. 보안 정책 제거는 보안 투명도와 관련이 없습니다. 이 변경의 영향에 대 한 정보를 참조 하세요 [코드 액세스 보안 정책 호환성 및 마이그레이션](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md)합니다.
 
 이 항목에서는 투명도 모델에 대해 자세히 설명합니다. 여기에는 다음 단원이 포함되어 있습니다.
 
@@ -70,7 +70,7 @@ ms.locfileid: "66456505"
 
 ### <a name="level-2-transparency"></a>수준 2 투명도
 
-수준 2 투명도는 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]에서 새로 추가되었습니다. 이 모델의 세 가지 개념은 투명 코드, 보안 안전에 중요 코드 및 보안에 중요 코드입니다.
+수준 2 투명도.NET Framework 4에서 도입 되었습니다. 이 모델의 세 가지 개념은 투명 코드, 보안 안전에 중요 코드 및 보안에 중요 코드입니다.
 
 - 투명도 코드는 부여된 권한과 관계없이(완전 신뢰 포함) 다른 투명 코드나 보안 안전에 중요 코드만 호출할 수 있습니다. 부분적으로 신뢰할 수 있는 코드는 도메인의 권한 집합에서 허용되는 작업만 수행할 수 있습니다. 투명 코드는 다음을 수행할 수 없습니다.
 

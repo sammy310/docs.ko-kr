@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 310aec9b180b37b7e5f34c4594fd61747ef02d39
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 87ca5470fe5994d34d12a339c2d92a5f3917063d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457051"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490228"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim 함수
 지정된 된 버전의.NET Framework 재배포 가능 패키지에 포함 된 DLL 로드 합니다.  
   
- 이 함수에서 사용 중단에 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다. 사용 된 [iclrruntimeinfo:: Loadlibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) 메서드 대신 합니다.  
+ .NET Framework 4에서이 함수에 사용 되지 않습니다. 사용 된 [iclrruntimeinfo:: Loadlibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) 메서드 대신 합니다.  
   
 ## <a name="syntax"></a>구문  
   

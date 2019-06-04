@@ -9,12 +9,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: c6bf4c6b262bc9066277a683d5eda67ada6f4d08
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 90bdd5b8c5fdebe2c5d7ec580975dc63144b2401
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456220"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489305"
 ---
 # <a name="supportedruntime-element"></a>\<supportedRuntime > 요소
 
@@ -34,7 +34,7 @@ ms.locfileid: "66456220"
 
 |특성|설명|
 |---------------|-----------------|
-|**version**|선택적 특성입니다.<br /><br /> 응용 프로그램이 지원하는 공용 언어 런타임(CLR) 버전을 지정하는 문자열 값입니다. 유효한 값에 대 한는 `version` 특성을 참조 합니다 ["런타임 버전" 값](#version) 섹션. **참고:**  .NET Framework 3.5를 통해를 "*런타임 버전*" 형식으로 지정 *주요*. *사소한*. *빌드*합니다. [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]부터는 주 및 부 버전 번호만 필요합니다(즉, "v4.0.30319"가 아니라 "v4.0"만 필요). 짧은 문자열이 권장됩니다.|
+|**version**|선택적 특성입니다.<br /><br /> 응용 프로그램이 지원하는 공용 언어 런타임(CLR) 버전을 지정하는 문자열 값입니다. 유효한 값에 대 한는 `version` 특성을 참조 합니다 ["런타임 버전" 값](#version) 섹션. **참고:**  .NET Framework 3.5를 통해를 "*런타임 버전*" 형식으로 지정 *주요*. *사소한*. *빌드*합니다. 주 및 부 버전 번호는 필수.NET Framework 4부터 (즉, "v4.0" 대신 "v4.0.30319"). 짧은 문자열이 권장됩니다.|
 |**sku**|선택적 특성입니다.<br /><br /> 이 응용 프로그램이 지원하는 .NET Framework 버전을 지정하는 SKU(Stock Keeping Unit)를 지정하는 문자열 값입니다.<br /><br /> .NET Framework 4.0을 시작할 때에는 `sku` 특성을 사용하는 것이 좋습니다.  존재한다면 앱이 대상으로 하는 .NET Framework의 버전을 나타냅니다.<br /><br /> Sku 특성의 유효한 값에 대 한 참조를 ["sku id" 값](#sku) 섹션입니다.|
 
 ## <a name="remarks"></a>설명

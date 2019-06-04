@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 697557463aa949036acb21e63b9a82b1fb84b415
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b5520aef09c72819ff2b3763cd43af13f013263c
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765286"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490214"
 ---
 # <a name="loadstringrcex-function"></a>LoadStringRCEx 함수
 지정된 된 문화권에 대 한 적절 한 오류 메시지에는 HRESULT 값으로 변환합니다.  
   
- 이 함수에서 사용 중단에 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다.  
+ .NET Framework 4에서이 함수에 사용 되지 않습니다.  
   
 ## <a name="syntax"></a>구문  
   

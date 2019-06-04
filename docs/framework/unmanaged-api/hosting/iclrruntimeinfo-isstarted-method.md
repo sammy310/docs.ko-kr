@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef6f2662-323b-4534-aa82-6d1afb7b9309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b09c509c3e0ba941a34f60ff522117ff30d83caf
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 432de909e1b8166f6d8923889382d9408fb6c62d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457385"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490266"
 ---
 # <a name="iclrruntimeinfoisstarted-method"></a>ICLRRuntimeInfo::IsStarted 메서드
 런타임이 시작 되었는지 여부를 나타냅니다 (있는지, 즉 합니다 [iclrruntimehost:: Start 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) 이 호출 되었고, 했습니다).  
@@ -46,7 +46,7 @@ HRESULT IsStarted(
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_NOTIMPL|공용 언어 런타임 (CLR) 버전에서 CLR 버전 보다 이전 인지를 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]입니다.|  
+|E_NOTIMPL|공용 언어 런타임 (CLR) 버전은.NET Framework 4에서 CLR 버전 보다 이전입니다.|  
   
 ## <a name="remarks"></a>설명  
  이전.NET Framework 4에서 CLR 버전 CLR 버전을 사용 하 여이 메서드가 작동 하지 않습니다.  

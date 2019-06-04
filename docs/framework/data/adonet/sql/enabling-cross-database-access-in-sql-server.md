@@ -2,12 +2,12 @@
 title: SQL Server에서 데이터베이스간 액세스 활성화
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: ef018566c5d3881d2f9b77dad932712d1fb11841
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 50e2a9149074d2d29ff2e17fa2a339bd7820b984
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583693"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490086"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>SQL Server에서 데이터베이스간 액세스 활성화
 데이터베이스 간 소유권 체인은 한 데이터베이스의 프로시저가 다른 데이터베이스의 개체에 종속되는 경우 발생합니다. 끊어지지 않은 소유권 체인에서는 모든 개체 소유자가 동일한 로그인 계정에 매핑되어야 한다는 점을 제외하고 데이터베이스 간 소유권 체인은 단일 데이터베이스 내의 소유권 체인과 같은 방식으로 작동합니다. 소스 데이터베이스의 소스 개체와 대상 데이터베이스의 대상 개체를 동일한 로그인 계정에서 소유하는 경우 SQL Server는 대상 개체의 권한을 확인하지 않습니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "64583693"
 - CREATE DATABASE 권한이 있는 사용자는 새 데이터베이스를 만들고 기존 데이터베이스에 연결할 수 있습니다. 데이터베이스 간 소유권 체인이 활성화되면 이러한 사용자는 새로 만들었거나 연결한 데이터베이스를 통해 권한이 없는 다른 데이터베이스의 개체에 액세스할 수 있습니다.  
   
 ## <a name="enabling-cross-database-ownership-chaining"></a>데이터베이스 간 소유권 체인 활성화  
- 데이터베이스 간 소유권 체인은 권한이 높은 사용자를 완전 신뢰할 수 있는 환경에서만 활성화해야 합니다. 데이터베이스 간 소유권 체인은 설정 중에 모든 데이터베이스에 대해 구성하거나 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 명령 `sp_configure` 및 `ALTER DATABASE`를 사용하여 특정 데이터베이스에 대해 선택적으로 구성할 수 있습니다.  
+ 데이터베이스 간 소유권 체인은 권한이 높은 사용자를 완전 신뢰할 수 있는 환경에서만 활성화해야 합니다. 모든 데이터베이스에 대해 설정하는 동안 구성하거나 Transact-SQL 명령 `sp_configure` 및 `ALTER DATABASE`을 사용하는 특정 데이터베이스에 대해 선택적으로 구성할 수 있습니다.  
   
  데이터베이스 간 소유권 체인을 선택적으로 구성하려면 `sp_configure`를 사용하여 서버에 대해 이를 해제합니다. ALTER DATABASE 명령을 SET DB_CHAINING ON으로 사용하여 데이터베이스 간 소유권 체인을 해당 데이터베이스에 대해서만 구성합니다.  
   

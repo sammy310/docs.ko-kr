@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3da3e48f898797849a5304c4884b648f47a26dd
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 36c3f139564b39555370cd5d41133f39c6b271bb
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456561"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487836"
 ---
 # <a name="security-transparent-code-level-2"></a>보안 투명 코드, 수준 2
 
@@ -22,7 +22,7 @@ ms.locfileid: "66456561"
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-수준 2 투명도는 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]에서 새로 추가되었습니다. 이 모델의 세 가지 개념은 투명 코드, 보안 안전에 중요 코드 및 보안에 중요 코드입니다.
+수준 2 투명도.NET Framework 4에서 도입 되었습니다. 이 모델의 세 가지 개념은 투명 코드, 보안 안전에 중요 코드 및 보안에 중요 코드입니다.
 
 - 완전 신뢰로 실행되는 코드를 포함하는 투명 코드는 다른 투명 코드나 보안 안전에 중요 코드만 호출할 수 있습니다. 도메인의 부분 신뢰 권한 집합(있는 경우)에서 허용하는 작업만 수행할 수 있습니다. 투명 코드는 다음을 수행할 수 없습니다.
 

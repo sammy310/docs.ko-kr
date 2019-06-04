@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb6cfc8e1c3f0409d99d31efa0a645476b47e45e
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 9647297bf976d26a97be0da8807d607789e8a065
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456259"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489578"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions > 요소
 작업 예외가 처리되지 않으면 실행 중인 프로세스를 종료할지를 지정합니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "66456259"
 ## <a name="remarks"></a>설명  
  경우 연관 된 예외를 <xref:System.Threading.Tasks.Task> 지켜지지 않았습니다, 방법이 없는 <xref:System.Threading.Tasks.Task.Wait%2A> 작업을 부모 연결 되어 있지 않습니다 및 <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> 작업 예외를 관찰 하지 것으로 간주 됩니다 속성을 읽지 않았습니다.  
   
- 에 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], 경우 기본값을 <xref:System.Threading.Tasks.Task> 있는 관찰 되지 않은 예외는 가비지 수집, 종료자 예외를 throw 하 고 프로세스를 종료 합니다. 프로세스의 종료는 가비지 수집 및 종료 시간에 따라 결정 됩니다.  
+ 기본적으로.NET Framework 4에서 하는 경우는 <xref:System.Threading.Tasks.Task> 있는 관찰 되지 않은 예외는 가비지 수집, 종료자 예외를 throw 하 고 프로세스를 종료 합니다. 프로세스의 종료는 가비지 수집 및 종료 시간에 따라 결정 됩니다.  
   
  개발자가 작업 기반 비동기 코드를 작성 하는 데 쉽게.NET Framework 4.5는 관찰 되지 않은 예외에 대 한이 기본 동작을 변경 합니다. 관찰 되지 않은 예외를 일으킬 수는 <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> 이벤트를 발생 하지만 기본적으로 프로세스 종료 하지 않습니다. 대신, 이벤트 처리기에서 예외를 관찰 하는 여부에 관계 없이 이벤트가 발생 한 후 예외는 무시 됩니다.  
   

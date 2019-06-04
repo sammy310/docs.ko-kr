@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d8733e11aba30ebea30fc71a5350f76dfd041eb4
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 6191ee2169a85725f0367763874e60c0ceb1d7a4
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456410"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489428"
 ---
 # <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy > 요소
 공용 언어 런타임에서 액세스 위반 및 기타 손상 된 상태 예외를 catch 하는 관리 되는 코드를 허용 하는지 여부를 지정 합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "66456410"
 ## <a name="remarks"></a>설명  
  .NET Framework 버전 3.5 및 이전 버전에서 공용 언어 런타임 손상 된 프로세스 상태에서 발생 한 예외를 catch 하는 관리 되는 코드를 허용 합니다. 액세스 위반이 발생은 이러한 유형의 예외는 예제입니다.  
   
- 로 시작 합니다 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]관리 되는 코드에는 더 이상 이러한 유형의 예외 catch `catch` 블록입니다. 그러나 이러한 변경 내용을 재정의 하 고 두 가지 방법으로 손상 된 상태 예외 처리를 유지 관리할 수 있습니다.  
+ .NET Framework 4 부터는 관리 코드 더 이상 catch 이러한 유형의 예외 `catch` 블록입니다. 그러나 이러한 변경 내용을 재정의 하 고 두 가지 방법으로 손상 된 상태 예외 처리를 유지 관리할 수 있습니다.  
   
 - 설정 된 `<legacyCorruptedStateExceptionsPolicy>` 요소의 `enabled` 특성을 `true`입니다. 이 구성 설정은 프로세스 전체에 적용된 되며 모든 메서드에 영향을 줍니다.  
   
