@@ -5,35 +5,35 @@ helpviewer_keywords:
 - WPF class library [WPF]
 - Windows Presentation Foundation class library [WPF]
 ms.assetid: dcb35927-00ad-4141-a1ab-a7a524dd3f10
-ms.openlocfilehash: 5cef189a947bcbab96b22f33251971f5794e156e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1c806147d1dfb30bfd9fa73102ed4b65c776671a
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591311"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489606"
 ---
-# <a name="class-library-wpf"></a><span data-ttu-id="0547f-102">클래스 라이브러리(WPF)</span><span class="sxs-lookup"><span data-stu-id="0547f-102">Class Library (WPF)</span></span>
-<span data-ttu-id="0547f-103">다음 링크를 포함 하는 네임 스페이스를 참조 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../includes/tlasharptla-apisharpplural-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="0547f-103">The following links refer to namespaces that contain [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  
+# <a name="class-library-wpf"></a><span data-ttu-id="9cc45-102">클래스 라이브러리(WPF)</span><span class="sxs-lookup"><span data-stu-id="9cc45-102">Class Library (WPF)</span></span>
+<span data-ttu-id="9cc45-103">다음 링크를 포함 하는 네임 스페이스를 참조 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../includes/tlasharptla-apisharpplural-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="9cc45-103">The following links refer to namespaces that contain [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="0547f-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="0547f-104">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="9cc45-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="9cc45-104">In This Section</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="0547f-105">참조</span><span class="sxs-lookup"><span data-stu-id="0547f-105">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="9cc45-105">참조</span><span class="sxs-lookup"><span data-stu-id="9cc45-105">Reference</span></span>  
   
 - <xref:Microsoft.Build.Tasks.Windows>  
   
-- <span data-ttu-id="0547f-106"><xref:Microsoft.Win32> (공유)</span><span class="sxs-lookup"><span data-stu-id="0547f-106"><xref:Microsoft.Win32> (shared)</span></span>  
+- <span data-ttu-id="9cc45-106"><xref:Microsoft.Win32> (공유)</span><span class="sxs-lookup"><span data-stu-id="9cc45-106"><xref:Microsoft.Win32> (shared)</span></span>  
   
 - <xref:Microsoft.Windows.Themes>  
   
-- <span data-ttu-id="0547f-107"><xref:System.Collections.ObjectModel> (공유)</span><span class="sxs-lookup"><span data-stu-id="0547f-107"><xref:System.Collections.ObjectModel> (shared)</span></span>  
+- <span data-ttu-id="9cc45-107"><xref:System.Collections.ObjectModel> (공유)</span><span class="sxs-lookup"><span data-stu-id="9cc45-107"><xref:System.Collections.ObjectModel> (shared)</span></span>  
   
-- <span data-ttu-id="0547f-108"><xref:System.Collections.Specialized> (공유)</span><span class="sxs-lookup"><span data-stu-id="0547f-108"><xref:System.Collections.Specialized> (shared)</span></span>  
+- <span data-ttu-id="9cc45-108"><xref:System.Collections.Specialized> (공유)</span><span class="sxs-lookup"><span data-stu-id="9cc45-108"><xref:System.Collections.Specialized> (shared)</span></span>  
   
-- <span data-ttu-id="0547f-109"><xref:System.ComponentModel> (공유)</span><span class="sxs-lookup"><span data-stu-id="0547f-109"><xref:System.ComponentModel> (shared)</span></span>  
+- <span data-ttu-id="9cc45-109"><xref:System.ComponentModel> (공유)</span><span class="sxs-lookup"><span data-stu-id="9cc45-109"><xref:System.ComponentModel> (shared)</span></span>  
   
-- <span data-ttu-id="0547f-110"><xref:System.Diagnostics> (공유)</span><span class="sxs-lookup"><span data-stu-id="0547f-110"><xref:System.Diagnostics> (shared)</span></span>  
+- <span data-ttu-id="9cc45-110"><xref:System.Diagnostics> (공유)</span><span class="sxs-lookup"><span data-stu-id="9cc45-110"><xref:System.Diagnostics> (shared)</span></span>  
   
-- <span data-ttu-id="0547f-111"><xref:System.IO> (공유)</span><span class="sxs-lookup"><span data-stu-id="0547f-111"><xref:System.IO> (shared)</span></span>  
+- <span data-ttu-id="9cc45-111"><xref:System.IO> (공유)</span><span class="sxs-lookup"><span data-stu-id="9cc45-111"><xref:System.IO> (shared)</span></span>  
   
 - <xref:System.IO.Packaging>  
   
@@ -43,7 +43,7 @@ ms.locfileid: "64591311"
   
 - <xref:System.Printing.Interop>  
   
-- <span data-ttu-id="0547f-112"><xref:System.Security.Permissions> (공유)</span><span class="sxs-lookup"><span data-stu-id="0547f-112"><xref:System.Security.Permissions> (shared)</span></span>  
+- <span data-ttu-id="9cc45-112"><xref:System.Security.Permissions> (공유)</span><span class="sxs-lookup"><span data-stu-id="9cc45-112"><xref:System.Security.Permissions> (shared)</span></span>  
   
 - <xref:System.Security.RightsManagement>  
   
@@ -85,7 +85,7 @@ ms.locfileid: "64591311"
   
 - <xref:System.Windows.Interop>  
   
-- <span data-ttu-id="0547f-113"><xref:System.Windows.Markup> (공유)</span><span class="sxs-lookup"><span data-stu-id="0547f-113"><xref:System.Windows.Markup> (shared)</span></span>  
+- <span data-ttu-id="9cc45-113"><xref:System.Windows.Markup> (공유)</span><span class="sxs-lookup"><span data-stu-id="9cc45-113"><xref:System.Windows.Markup> (shared)</span></span>  
   
 - <xref:System.Windows.Markup.Localizer>  
   
@@ -123,10 +123,10 @@ ms.locfileid: "64591311"
   
 - <xref:UIAutomationClientsideProviders>  
   
-## <a name="xaml-support-in-net-4"></a><span data-ttu-id="0547f-114">.NET 4의에서 XAML 지원</span><span class="sxs-lookup"><span data-stu-id="0547f-114">XAML Support in .NET 4</span></span>  
- <span data-ttu-id="0547f-115">다음 네임 스페이스에는 System.Xaml 어셈블리의 형식을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="0547f-115">The following namespaces contain types from the System.Xaml assembly.</span></span> <span data-ttu-id="0547f-116">System.Xaml WPF에서 빌드된와 같은 프레임 워크에 대 한 일반적인 XAML 언어 지원을 제공 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="0547f-116">System.Xaml provides common XAML language support for frameworks such as WPF that are built on [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)].</span></span>  
+## <a name="xaml-support-in-net-4"></a><span data-ttu-id="9cc45-114">.NET 4의에서 XAML 지원</span><span class="sxs-lookup"><span data-stu-id="9cc45-114">XAML Support in .NET 4</span></span>  
+ <span data-ttu-id="9cc45-115">다음 네임 스페이스에는 System.Xaml 어셈블리의 형식을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="9cc45-115">The following namespaces contain types from the System.Xaml assembly.</span></span> <span data-ttu-id="9cc45-116">System.Xaml은.NET Framework 4를 기반으로 하는 WPF와 같은 프레임 워크에 대 한 일반적인 XAML 언어 지원을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="9cc45-116">System.Xaml provides common XAML language support for frameworks such as WPF that are built on .NET Framework 4.</span></span>  
   
-- <span data-ttu-id="0547f-117"><xref:System.Windows.Markup> (공유)</span><span class="sxs-lookup"><span data-stu-id="0547f-117"><xref:System.Windows.Markup> (shared)</span></span>  
+- <span data-ttu-id="9cc45-117"><xref:System.Windows.Markup> (공유)</span><span class="sxs-lookup"><span data-stu-id="9cc45-117"><xref:System.Windows.Markup> (shared)</span></span>  
   
 - <xref:System.Xaml>  
   
