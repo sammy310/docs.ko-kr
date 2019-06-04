@@ -4,12 +4,12 @@ description: 어떤 데이터가 수집되고 수집 기능을 사용하지 않�
 author: richlander
 ms.date: 06/20/2018
 ms.custom: seodec18
-ms.openlocfilehash: 82410863c81faa95edfb120c95ec6bc186ed1328
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85cceab08fc6e4108a5b951c8b67c1ad5a28f6bb
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751683"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377499"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 원격 분석
 
@@ -79,7 +79,7 @@ ms.locfileid: "64751683"
 
 &#8224;*발생* 열에는 해당 날짜에 해당 행 메트릭에 대한 해당 명령 사용의 집계 개수가 표시됩니다.
 
-&#8225;일반적으로 *지리* 열에는 국가 이름이 표시됩니다. 경우에 따라 연구원이 남극에서 .NET Core를 사용하거나 위치 데이터가 정확하지 않아 남극 대륙이 이 열에 표시됩니다.
+&#8225;일반적으로 *지리* 열에는 국가/지역 이름이 표시됩니다. 경우에 따라 연구원이 남극에서 .NET Core를 사용하거나 위치 데이터가 정확하지 않아 남극 대륙이 이 열에 표시됩니다.
 
 ### <a name="example"></a>예제
 

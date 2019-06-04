@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d9cc44b8a5d43a3fe0414ddeeb51f37e239480b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b5b8e9290231e884b8b78c1f20bc99f5bc4326db
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647895"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490903"
 ---
 # <a name="xml-documents-and-data"></a>XML 문서 및 데이터
 .NET Framework에서 XML 인식 응용 프로그램을 쉽게 작성할 수 있도록 하는 종합적이고 통합된 클래스 집합을 제공합니다. 다음 네임스페이스의 클래스에서는 XML 구문 분석 및 작성, 메모리에서의 XML 데이터 편집, 데이터 유효성 검사 및 XSLT 변형을 지원합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "64647895"
   
  .NET Framework의 XML 클래스는 다음과 같은 이점을 제공합니다.  
   
-- **생산성** [LINQ to XML(C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) 및 [LINQ to XML(Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)을 통해 XML로 프로그래밍하기 쉽고 SQL과 유사한 쿼리 환경을 제공합니다.  
+- **생산성** [LINQ to XML(C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) 및 [LINQ to XML(Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)을 통해 XML로 프로그래밍하기 쉽고 SQL과 유사한 쿼리 환경을 제공합니다.  
   
 - **확장성** .NET Framework의 XML 클래스는 추상 기본 클래스와 가상 메서드를 사용하여 확장 가능합니다. 예를 들어, 캐시 스트림을 로컬 디스크에 저장하는 <xref:System.Xml.XmlUrlResolver> 클래스의 파생 클래스를 만들 수 있습니다.  
   
