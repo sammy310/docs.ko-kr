@@ -2,12 +2,12 @@
 title: CASE(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
-ms.openlocfilehash: e44f48d040fc77bf702759be0c53a618cd84f9fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3fc916d201ec79c753e06ccfcd6514761f826eb7
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607195"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489492"
 ---
 # <a name="case-entity-sql"></a>CASE(Entity SQL)
 `Boolean` 식 집합을 계산하여 결과를 결정합니다.  
@@ -41,7 +41,7 @@ END
  `result_expression` 과 선택적 요소인 `else_result_expression`의 형식 집합에서 우선 순위가 가장 높은 형식을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] CASE 식은 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] CASE 식과 비슷합니다. CASE 식을 사용하면 적절한 결과를 생성하는 식을 결정하는 일련의 조건 테스트를 만들 수 있습니다. 이러한 CASE 식 형식은 하나 이상으로 구성된 일련의 `Boolean` 식에 적용되어 올바른 결과 식을 결정합니다.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] case 식에는 TRANSACT-SQL case 식과 비슷합니다. CASE 식을 사용하면 적절한 결과를 생성하는 식을 결정하는 일련의 조건 테스트를 만들 수 있습니다. 이러한 CASE 식 형식은 하나 이상으로 구성된 일련의 `Boolean` 식에 적용되어 올바른 결과 식을 결정합니다.  
   
  CASE 함수는 지정된 순서대로 각 WHEN 절에 대해 `Boolean_expression` 을 계산한 다음 `result_expression` 인 첫 번째 `Boolean_expression` 의 `true`을 반환합니다. 나머지 식은 계산되지 않습니다. `Boolean_expression` 인 `true`이 없으면 ELSE 절이 지정된 경우 데이터베이스 엔진에서 `else_result_expression` 을 반환하고 ELSE 절이 지정되지 않은 경우 null 값을 반환합니다.  
   

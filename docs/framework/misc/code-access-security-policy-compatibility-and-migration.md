@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 796c3b03612138238cb336361ab49514d80b4d7b
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 163ed8d00e8f0f886481dbaca956bb633a625871
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456643"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487978"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>코드 액세스 보안 정책 호환성 및 마이그레이션
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-CAS(코드 액세스 보안)의 정책 부분이 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]에서는 사용되지 않습니다. 결과적으로 발생할 수 컴파일 경고 및 런타임 예외 사용 되지 않는 정책 형식과 멤버를 호출 하는 경우 [명시적](#explicit_use) 하거나 [암시적으로](#implicit_use) (을 통해 다른 형식 및 멤버).
+정책에 대 한 부분의 코드 액세스 보안 (CA)는.NET Framework 4에서는 사용 되지 않는 변경 되었습니다. 결과적으로 발생할 수 컴파일 경고 및 런타임 예외 사용 되지 않는 정책 형식과 멤버를 호출 하는 경우 [명시적](#explicit_use) 하거나 [암시적으로](#implicit_use) (을 통해 다른 형식 및 멤버).
 
 다음 중 하나를 수행하여 경고와 오류를 방지할 수 있습니다.
 

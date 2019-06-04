@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4adfa5d592514c9a91c93095e7199f4b425b712
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: abbc817142ab6906a04b4dc053693f87109922dc
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596646"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487900"
 ---
 # <a name="securing-wrapper-code"></a>래퍼 코드 보안
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -76,7 +76,7 @@ ms.locfileid: "64596646"
 - [LinkDemand](../../../docs/framework/misc/link-demands.md) -just-in-time (JIT) 컴파일 타임에 발생 하 고 즉각적인 호출자만 검사 합니다. 이 보안 검사는 호출자의 호출자를 검사하지 않습니다. 이 검사가 성공하고 나면 호출자가 호출할 수 있는 횟수에 관계없이 추가 보안 오버헤드가 없습니다. 그러나 유인 공격으로부터 보호되지 않습니다. 사용 하 여 **LinkDemand**, 악성 코드를 권한이 부여 된 코드를 사용 하 여 호출할 수 있도록 하 여 테스트를 통과 하 고 코드를 참조할 수 있는 모든 코드 보안을 잠재적으로 위반할 수 있습니다. 따라서 사용 하지 마세요 **LinkDemand** 않으면 가능한 모든 보안 약점을 완전히 방지할 수 있습니다.  
   
     > [!NOTE]
-    >  에 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], 링크 요청으로 대체 되었습니다 합니다 <xref:System.Security.SecurityCriticalAttribute> 특성 <xref:System.Security.SecurityRuleSet.Level2> 어셈블리입니다. 그러나 <xref:System.Security.SecurityCriticalAttribute> 완전 신뢰에 대 한 링크 요청은 상속 규칙도 적용 합니다. 이 변경에 대 한 자세한 내용은 참조 하세요. [보안 투명 코드, 수준 2](../../../docs/framework/misc/security-transparent-code-level-2.md)합니다.  
+    >  .NET Framework 4에서 링크 요청으로 대체 되었습니다 합니다 <xref:System.Security.SecurityCriticalAttribute> 특성 <xref:System.Security.SecurityRuleSet.Level2> 어셈블리입니다. 그러나 <xref:System.Security.SecurityCriticalAttribute> 완전 신뢰에 대 한 링크 요청은 상속 규칙도 적용 합니다. 이 변경에 대 한 자세한 내용은 참조 하세요. [보안 투명 코드, 수준 2](../../../docs/framework/misc/security-transparent-code-level-2.md)합니다.  
   
  사용할 때 필요한 추가 예방 조치 **LinkDemand** 개별적으로 프로그래밍 해야 합니다;을 적용 하 여 도움이 보안 시스템이 될 수 있습니다. 실수는 보안 약점이 됩니다. 사용자 코드를 사용하는 모든 권한 있는 코드는 다음을 수행하여 추가 보안을 구현해야 합니다.  
   

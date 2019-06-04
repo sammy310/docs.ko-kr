@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18f1a4ede1a362860df1271835600e7b867eac00
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9597b12b0da6df807b2d4eaa42c2035c518b71d9
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696927"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490632"
 ---
 # <a name="coinitializeee-function"></a>CoInitializeEE 함수
-공용 언어 런타임 실행 엔진 프로세스에 로드 되도록 합니다. 이 함수에서 사용 되지 않습니다는 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다. 사용 된 [iclrruntimehost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) 메서드 대신 합니다.  
+공용 언어 런타임 실행 엔진 프로세스에 로드 되도록 합니다. 이 함수는.NET Framework 4에서 사용 되지 않습니다. 사용 된 [iclrruntimehost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) 메서드 대신 합니다.  
   
 ## <a name="syntax"></a>구문  
   

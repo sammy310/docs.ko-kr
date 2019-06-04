@@ -2,12 +2,12 @@
 title: 보안 고려 사항(Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 47dbf800852e149f541c512e90a8bafef2077672
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: fe272bada02e6628b6275d2a5282f0def23074c8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879926"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489842"
 ---
 # <a name="security-considerations-entity-framework"></a>보안 고려 사항(Entity Framework)
 이 항목에서는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 응용 프로그램의 개발, 배포 및 실행과 관련된 보안 고려 사항에 대해 설명합니다. 또한 안전한.NET Framework 응용 프로그램을 만들기 위한 권장 사항을 따라야 합니다. 자세한 내용은 [보안 개요](../../../../../docs/framework/data/adonet/security-overview.md)합니다.  
@@ -92,7 +92,7 @@ ms.locfileid: "65879926"
  다음 보안 고려 사항은 개념적 모델을 쿼리할 때 적용됩니다. 이러한 고려 사항은 EntityClient를 사용한 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 쿼리와 LINQ, [!INCLUDE[esql](../../../../../includes/esql-md.md)] 및 쿼리 작성기 메서드를 사용한 개체 쿼리에 적용됩니다.  
   
 #### <a name="prevent-sql-injection-attacks"></a>SQL 삽입 공격을 방지합니다.  
- 응용 프로그램은 사용자나 다른 외부 에이전트로부터 외부 입력을 받아 그에 기반한 동작을 수행하는 경우가 많습니다. 사용자나 외부 에이전트에서 직접 또는 간접적으로 파생되는 모든 입력에는 인증되지 않은 작업을 수행하기 위해 대상 언어의 구문을 사용하는 콘텐츠가 있을 수 있습니다. 대상 언어가 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]과 같은 SQL(구조적 쿼리 언어)인 경우 이 조작을 SQL 삽입 공격이라고 합니다. 악의적인 사용자는 쿼리에 직접 명령을 삽입하고 데이터베이스 테이블을 삭제하거나, 서비스 거부를 발생시키거나, 수행되는 작업의 특성을 다른 방식으로 변경할 수 있습니다.  
+ 응용 프로그램은 사용자나 다른 외부 에이전트로부터 외부 입력을 받아 그에 기반한 동작을 수행하는 경우가 많습니다. 사용자나 외부 에이전트에서 직접 또는 간접적으로 파생되는 모든 입력에는 인증되지 않은 작업을 수행하기 위해 대상 언어의 구문을 사용하는 콘텐츠가 있을 수 있습니다. 대상 언어를 언어 SQL (구조적 쿼리), TRANSACT-SQL에서와 같은 경우이 조작은 SQL 삽입 공격 이라고 합니다. 악의적인 사용자는 쿼리에 직접 명령을 삽입하고 데이터베이스 테이블을 삭제하거나, 서비스 거부를 발생시키거나, 수행되는 작업의 특성을 다른 방식으로 변경할 수 있습니다.  
   
 - [!INCLUDE[esql](../../../../../includes/esql-md.md)] 삽입 공격:  
   

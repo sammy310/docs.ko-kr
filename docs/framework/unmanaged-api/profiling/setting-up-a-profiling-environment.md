@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dfad184e30ec94c8add265db2ef8131d0d34396f
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: cc5171b135facfbbe901b38a19fef9e9d47699b5
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457232"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490723"
 ---
 # <a name="setting-up-a-profiling-environment"></a>프로파일링 환경 설정
 > [!NOTE]
->  [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]에서 프로파일링이 크게 변경되었습니다.  
+>  .NET Framework 4에는 프로 파일링이 변경 되었습니다.  
   
  관리되는 프로세스(응용 프로그램 또는 서비스)가 시작되면 CLR(공용 언어 런타임)을 로드합니다. CLR이 초기화되면 다음 두 가지 환경 변수를 평가하여 프로세스를 프로파일러에 연결해야 할지를 결정합니다.  
   

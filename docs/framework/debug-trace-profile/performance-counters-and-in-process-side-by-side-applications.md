@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6888f9be-c65b-4b03-a07b-df7ebdee2436
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc3f9c9c61afd4c231846adffc4b304a01d59281
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: dd3501bc74da2c9a812f9c4816b5a081b3780cd0
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457261"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490036"
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>성능 카운터 및 In-Process Side-By-Side 응용 프로그램
 성능 모니터(Perfmon.exe)를 사용하면 런타임별로 성능 카운터를 구분할 수 있습니다. 이 항목에서는 이 기능을 사용하는 데 필요한 레지스트리 변경 사항에 대해 설명합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "66457261"
   
 - 이름이 동일한 두 개의 애플리케이션을 모니터링하는 경우. 예를 들어 두 애플리케이션의 이름을 모두 myapp.exe로 지정하면 **인스턴스** 열에 하나는 **myapp**으로 표시되고 다른 하나는 **myapp#1**오 표시됩니다. 이 경우 성능 카운터를 특정 애플리케이션과 일치시키는 것은 어렵습니다. **myapp#1**용으로 수집한 데이터가 첫 번째 myapp.exe를 참조하는지 아니면 두 번째 myapp.exe를 참조하는지 명확하지 않습니다.  
   
-- 애플리케이션에서 공용 언어 런타임의 인스턴스를 여러 개 사용하는 경우. [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]에서는 In-Process Side-by-Side 호스팅 시나리오를 지원합니다. 즉, 단일 프로세스 또는 응용 프로그램에서 공용 언어 런타임의 인스턴스를 여러 개 로드할 수 있습니다. myapp.exe라는 단일 애플리케이션에서 두 개의 런타임 인스턴스를 로드하는 경우 기본적으로 **Instance** 열이 **myapp** 및 **myapp#1**로 지정됩니다. 이 경우 **myapp** 및 **myapp#1**이 이름이 같은 두 애플리케이션을 나타내는지 아니면 런타임이 두 개인 동일한 애플리케이션을 나타내는지 명확하지 않습니다. 이름이 같은 여러 애플리케이션에서 여러 런타임을 로드하는 경우 모호성은 더 커집니다.  
+- 애플리케이션에서 공용 언어 런타임의 인스턴스를 여러 개 사용하는 경우. .NET Framework 4-in-process side-by-side-호스팅 시나리오를 지원합니다. 즉, 단일 프로세스 또는 응용 프로그램을 공용 언어 런타임에서의 여러 인스턴스를 로드할 수 있습니다. myapp.exe라는 단일 애플리케이션에서 두 개의 런타임 인스턴스를 로드하는 경우 기본적으로 **Instance** 열이 **myapp** 및 **myapp#1**로 지정됩니다. 이 경우 **myapp** 및 **myapp#1**이 이름이 같은 두 애플리케이션을 나타내는지 아니면 런타임이 두 개인 동일한 애플리케이션을 나타내는지 명확하지 않습니다. 이름이 같은 여러 애플리케이션에서 여러 런타임을 로드하는 경우 모호성은 더 커집니다.  
   
  이 모호성을 제거하기 위해 레지스트리 키를 설정할 수 있습니다. 이 레지스트리 변경은.NET Framework 4를 사용 하 여 개발한 응용 프로그램에 대 한 런타임 인스턴스 식별자 뒤에 응용 프로그램 이름에 프로세스 식별자를 추가 합니다 **인스턴스** 열입니다. *application* 또는 *application*#1 대신 이제 **Instance** 열에서 응용 프로그램은 *application*_`p`*processID*\_`r`*runtimeID*로 식별됩니다. 으로 해당 인스턴스를 나타내는 경우 공용 언어 런타임의 이전 버전을 사용 하 여 응용 프로그램 개발 *응용 프로그램\_* `p`*processID* 제공 합니다. .NET Framework 4가 설치 되어 있습니다.  
   

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - XAML [XAML Services], System.Xaml and WPF
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
-ms.openlocfilehash: c5e1c1ad838440419024a2abb44f86f6bce01061
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 03f7e17983e56cc2d2136b38b3402ce689f719ee
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457033"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491067"
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>WPF에서 System.Xaml로 마이그레이션된 형식
-[!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 하 고 [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)]모두 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 및 Windows Workflow Foundation XAML 언어 구현이 포함 되었습니다. WPF XAML 구현에 대해 확장성을 제공한 공용 형식은 대부분 WindowsBase, PresentationCore 및 PresentationFramework 어셈블리에 있었습니다. 마찬가지로,을 Windows Workflow Foundation XAML에 대 한 확장성을 제공한 공용 형식은 System.Workflow.ComponentModel 어셈블리에 존재 합니다. [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]에서는 XAML 관련 형식 중 일부가 System.Xaml 어셈블리로 마이그레이션되었습니다. XAML 언어 서비스는 일반적인.NET Framework 구현은 원래 특정 프레임 워크의 XAML 구현에서 정의 된 전체.NET Framework 4 XAML 언어 지원의 일부인 이제는 많은 XAML 확장성 시나리오를 수 있습니다. 이 항목에서는 마이그레이션되는 형식을 나열하고 마이그레이션과 관련된 문제를 논의합니다.  
+.NET Framework 3.5에서 및 [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)]모두 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 및 Windows Workflow Foundation XAML 언어 구현이 포함 되었습니다. WPF XAML 구현에 대해 확장성을 제공한 공용 형식은 대부분 WindowsBase, PresentationCore 및 PresentationFramework 어셈블리에 있었습니다. 마찬가지로,을 Windows Workflow Foundation XAML에 대 한 확장성을 제공한 공용 형식은 System.Workflow.ComponentModel 어셈블리에 존재 합니다. .NET Framework 4는 XAML 관련 형식 중 일부가 System.Xaml 어셈블리로 마이그레이션됩니다. XAML 언어 서비스는 일반적인.NET Framework 구현은 원래 특정 프레임 워크의 XAML 구현에서 정의 된 전체.NET Framework 4 XAML 언어 지원의 일부인 이제는 많은 XAML 확장성 시나리오를 수 있습니다. 이 항목에서는 마이그레이션되는 형식을 나열하고 마이그레이션과 관련된 문제를 논의합니다.  
   
 <a name="assemblies_and_namespaces"></a>   
 ## <a name="assemblies-and-namespaces"></a>어셈블리 및 네임스페이스  

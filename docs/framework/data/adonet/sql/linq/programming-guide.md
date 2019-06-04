@@ -2,12 +2,12 @@
 title: 프로그래밍 가이드
 ms.date: 03/30/2017
 ms.assetid: ed1012d4-3ff2-4877-af27-93125c4180ea
-ms.openlocfilehash: 32e62899c13be3f2f08bef7e882d5b9c4d11fda2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 102d2ecba162e19258b707c1c902c29b0a7f2f02
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794461"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490038"
 ---
 # <a name="programming-guide"></a>프로그래밍 가이드
 이 단원에는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개체 모델을 생성하고 사용하는 방법에 대한 정보가 들어 있습니다. Visual Studio를 사용 하는 경우 사용할 수도 있습니다는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 이러한 동일한 작업을 수행 하도록 합니다.  
@@ -38,9 +38,9 @@ ms.locfileid: "61794461"
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 기술에 대해 설명하고 기능을 보여 주는 항목에 대한 링크를 제공합니다.  
   
  [저장 프로시저](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
- 저장 프로시저를 사용하는 방법을 보여 주는 항목에 대한 링크를 포함합니다.   
+ 저장 프로시저를 사용하는 방법을 보여 주는 항목에 대한 링크를 포함합니다.  
   
- [LINQ 소개 (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq.md)  
+ [LINQ 소개 (C#)](../../../../../csharp/programming-guide/concepts/linq/index.md)  
  리소스를 사용 하 여 SQL에 LINQ를 배우는데 도움이 제공 C#입니다.
 
  [LINQ 소개(Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  

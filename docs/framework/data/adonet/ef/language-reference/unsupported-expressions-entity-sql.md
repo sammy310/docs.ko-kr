@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: 5e79da7e-e78a-413c-8fb0-f3f9cd84f579
 dev_langs:
 - sql
-ms.openlocfilehash: a47ff46ca99a84500bc5dfecc19bb31652e9b4b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af0e00f470584883b6a65b63f2650c1c359b404c
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034075"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489863"
 ---
 # <a name="unsupported-expressions"></a>지원 되지 않는 식
 
-이 항목에서는 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]에서 지원되지 않는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 식에 대해 설명합니다. 자세한 내용은 [Entity SQL 차이점 TRANSACT-SQL에서](../../../../../../docs/framework/data/adonet/ef/language-reference/how-entity-sql-differs-from-transact-sql.md)합니다.
+이 항목에서는 TRANSACT-SQL 식에서 지원 되지 않는 설명 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]합니다. 자세한 내용은 [Entity SQL 차이점 TRANSACT-SQL에서](../../../../../../docs/framework/data/adonet/ef/language-reference/how-entity-sql-differs-from-transact-sql.md)합니다.
 
 ## <a name="quantified-predicates"></a>정량화 된 조건자
 
-[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]에서는 다음 폼을 생성할 수 있습니다.
+TRANSACT-SQL을 사용 하면 다음 형태의 구문이 있습니다.
 
 ```sql
 sal > all (select salary from employees)
@@ -33,7 +33,7 @@ exists(select 0 from employees as e where sal > e.salary)
 
 ## <a name="-operator"></a>* 연산자
 
-[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]에서는 모든 열이 프로젝션되어야 함을 나타내도록 SELECT 절에서 * 연산자를 사용하도록 지원합니다. 이는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 지원되지 않습니다.
+TRANSACT-SQL 사용을 지원 합니다 *는 모든 열이 프로젝션 되어야 나타내려면 SELECT 절의 연산자. 이는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 지원되지 않습니다.
 
 ## <a name="see-also"></a>참고자료
 

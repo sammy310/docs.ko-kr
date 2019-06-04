@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f070419fb8cdca178369bee12545dd1a0d89ea47
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: fa05fe1e170a0285df73d179ef39db6301059ac8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592741"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490956"
 ---
 # <a name="cryptographic-services"></a>암호화 서비스
 
@@ -39,7 +39,7 @@ ms.locfileid: "65592741"
 
 .NET Framework에서 <xref:System.Security.Cryptography?displayProperty=nameWithType> 네임스페이스의 클래스는 고유한 여러 암호화 세부 정보를 관리합니다. 이러한 클래스 중 일부는 관리되지 않는 Microsoft CryptoAPI(암호화 API)에 대한 래퍼이지만, 나머지는 완전하게 관리되는 구현 클래스입니다. 이러한 클래스를 사용하기 위해 암호화 전문가가 될 필요는 없습니다. 암호화 알고리즘 클래스 중 하나의 새 인스턴스를 만들 경우 키가 사용 편의를 위해 자동으로 생성되며, 기본 속성은 가능한 한 안전합니다.
 
-이 개요에서는 ClickOnce 매니페스트, Suite B 및 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]에서 도입된 CNG(Cryptography Next Generation) 지원을 비롯하여 .NET Framework에서 지원하는 암호화 메서드 및 구현 방법에 대해 설명합니다.
+이 개요에는 암호화 메서드 및 ClickOnce 매니페스트, Suite B 및.NET Framework 3.5에 도입 된 CNG Cryptography Next Generation () 지원을 포함 하 여.NET Framework에서 지 원하는 사례 개요를 제공 합니다.
 
 이 개요는 다음과 같은 단원으로 구성됩니다.
 
@@ -114,7 +114,7 @@ Alice와 bob은 안전 하지 않은 채널을 통해 통신 하려는 두 당�
 
 .NET Framework는 비밀 키 암호화 알고리즘을 구현 하는 다음 클래스를 제공 합니다.
 
-- <xref:System.Security.Cryptography.AesManaged> ( [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]에서 도입)
+- <xref:System.Security.Cryptography.AesManaged> (.NET Framework 3.5에 도입 됨).
 
 - <xref:System.Security.Cryptography.DESCryptoServiceProvider>.
 
