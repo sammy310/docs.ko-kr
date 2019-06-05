@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 72207861850875f08786401aacf7b911b2a5b1f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b3dcd46f1158814b836c7491cf1ed3ac468122ad
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777132"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689334"
 ---
 # <a name="application-startup-time"></a>애플리케이션 시작 시간
 WPF 애플리케이션을 시작하는 데 필요한 시간은 크게 다를 수 있습니다. 이 항목에서는 WPF(Windows Presentation Foundation) 애플리케이션의 체감 시작 시간과 실제 시작 시간을 줄일 수 있는 다양한 기술에 대해 설명합니다.  
@@ -81,7 +81,7 @@ WPF 애플리케이션을 시작하는 데 필요한 시간은 크게 다를 수
   
  클라이언트 컴퓨터에 CA 인증서를 설치하거나, 가능한 경우 Authenticode를 사용하지 않는 것이 좋습니다. 애플리케이션에 게시자 증명 정보가 필요하지 않은 경우 서명 확인에 비용을 들일 필요가 없습니다.  
   
- [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]부터는 Authenticode 확인을 무시할 수 있는 구성 옵션이 있습니다. 이렇게 하려면 app.exe.config 파일에 다음 설정을 추가합니다.  
+ Authenticode 확인을 무시할 수 있도록 구성 옵션은.NET Framework 3.5부터. 이렇게 하려면 app.exe.config 파일에 다음 설정을 추가합니다.  
   
 ```xml  
 <configuration>  

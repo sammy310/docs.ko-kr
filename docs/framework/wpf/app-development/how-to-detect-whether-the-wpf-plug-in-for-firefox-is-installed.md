@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Firefox [WPF], detecting installation
 - detecting whether the WPF plug-in for Firefox is installed [WPF]
 ms.assetid: 5f839373-e3fb-44f1-88ad-4a0761f02189
-ms.openlocfilehash: 5ae2f39883c8edd7be912bfeb8326c14ca38704a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f84a0a2af43931b3ada1f674390ec5d841b79a1c
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592624"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690425"
 ---
 # <a name="how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed"></a>방법: Firefox용 WPF 플러그 인 설치 여부 확인
 
@@ -24,7 +24,7 @@ Windows Presentation Foundation (WPF) Firefox 플러그 인을 사용 하면 [!I
 
 ## <a name="example"></a>예제
 
-경우는 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 가 설치 된 클라이언트 컴퓨터가 구성 된 WPF 플러그 인을 사용 하 여 Firefox에 대 한 합니다. 다음 예제 스크립트 Firefox 용 WPF 플러그 인에 대해 확인 하 고는 적절 한 상태 메시지를 표시 합니다.
+.NET Framework 3.5를 설치할 때 클라이언트 컴퓨터는 Firefox 용 WPF 플러그 인으로 구성 됩니다. 다음 예제 스크립트 Firefox 용 WPF 플러그 인에 대해 확인 하 고는 적절 한 상태 메시지를 표시 합니다.
 
 ```html
 <HTML>

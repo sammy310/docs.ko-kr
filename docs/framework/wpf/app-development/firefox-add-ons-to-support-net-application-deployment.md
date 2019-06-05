@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET application deployment [WPF], deploying with Firefox add-ons
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-ms.openlocfilehash: 1c0ee38037e79fc93a4318fc5309f61c9060213c
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: e018048df70470e349f06ac80e7a597cd742dac5
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457084"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690521"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>.NET 응용 프로그램 배포를 지원하기 위한 Firefox 추가 기능
 Windows Presentation Foundation (WPF) Firefox 및 Firefox에 대 한.NET Framework Assistant에 대 한 플러그 인을 사용 하도록 설정 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]느슨한, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], 및 Mozilla Firefox 브라우저를 사용 하 여 ClickOnce 응용 프로그램입니다.  
@@ -20,9 +20,9 @@ Windows Presentation Foundation (WPF) Firefox 및 Firefox에 대 한.NET Framewo
 ## <a name="wpf-plug-in-for-firefox"></a>Firefox 용 WPF 플러그  
  Firefox 용 WPF 플러그 수 있도록 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 느슨한 및 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일을 탐색 하 고 최상위 수준 또는 Firefox 브라우저에서 HTML IFRAME에서를 실행 합니다. [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 되는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 웹 서버에 게시 하 고 내에서 시작할 수 있는 응용 프로그램에서 지원 되는 브라우저입니다. 느슨한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 는 XAML 전용 파일을 탐색 하 고 XML 파일에서와 마찬가지로 지원 되는 브라우저에 표시 수입니다.  
   
- 합니다 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Firefox와 함께 설치에 대 한 플러그 인을 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]입니다. 7 창에는 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]를 포함 하지 않습니다는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Firefox 플러그 인. 설치할 수 없습니다는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Windows 7에서 Firefox 플러그 인입니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] .NET Framework 3.5를 사용 하 여 설치 된 Firefox에 대 한 플러그 인입니다. 창 7.NET Framework 3.5를 포함 하지만 포함 하지 않습니다는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Firefox 플러그 인입니다. 설치할 수 없습니다는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Windows 7에서 Firefox 플러그 인입니다.  
   
- .NET Framework 4가 포함 되지 않습니다는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Firefox 플러그 인입니다. 그러나 모두를 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 설치 된.NET Framework 4, Firefox 용 WPF 플러그와 함께 설치 되는 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]합니다. 따라서 WPF 호스트 올바른 버전의 프레임 워크 로드 되므로.NET Framework 4 응용 프로그램 계속 실행 됩니다. 자세한 내용은 [WPF 호스트 (PresentationHost.exe)](wpf-host-presentationhost-exe.md)합니다.  
+ .NET Framework 4가 포함 되지 않습니다는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Firefox 플러그 인입니다. 그러나.NET Framework 3.5와.NET Framework 4를 설치 하는 경우 Firefox 용 WPF 플러그.NET Framework 3.5를 사용 하 여 설치 됩니다. 따라서 WPF 호스트 올바른 버전의 프레임 워크 로드 되므로.NET Framework 4 응용 프로그램 계속 실행 됩니다. 자세한 내용은 [WPF 호스트 (PresentationHost.exe)](wpf-host-presentationhost-exe.md)합니다.  
   
 ## <a name="net-framework-assistant-for-firefox"></a>Firefox용 .NET Framework Assistant  
  Firefox 용.NET Framework Assistant Firefox 브라우저에서 실행할 독립 실행형 ClickOnce 응용 프로그램을 수 있습니다. Firefox 용.NET Framework Assistant 함수 동일 하 게 Firefox 브라우저 전후 설치 되어 있는 경우입니다. Firefox 브라우저를 시작할 때 및 [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)] 가 설치 된 Firefox 찾습니다 및 Firefox에 대 한.NET Framework Assistant를 설치 합니다. 사용자는 다음을 수행 하는 Firefox 용.NET Framework Assistant 구성할 수 있습니다.  

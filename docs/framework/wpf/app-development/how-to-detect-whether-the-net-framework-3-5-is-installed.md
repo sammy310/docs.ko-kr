@@ -7,21 +7,21 @@ helpviewer_keywords:
 - detecting whether.NET Framework 3.5 is installed [WPF]
 - determining whether.NET Framework 3.5 is installed [WPF]
 ms.assetid: 8556a9d2-1eb8-48ef-919c-5baf22a2a9a2
-ms.openlocfilehash: 7c373d9fd5934be98735cd814dafb35ed81fddfe
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 69dfa0eb8d9ad9b780d258a874d255484f270cfe
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592637"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690442"
 ---
 # <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>방법: .NET Framework 3.5 설치 여부 확인
-대상으로 하는 시스템에서 Windows Presentation Foundation (WPF) 응용 프로그램을 배포 하려면 관리자는 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]를 먼저 확인 해야 합니다 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 런타임이 있는지 합니다. 이 항목에서는 작성 된 스크립트 관리자 결정 하는 데 사용할 수 있는 HTML/javascript 여부를 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 를 시스템에 있는 합니다.  
+.NET Framework 3.5를 대상으로 하는 시스템에서 Windows Presentation Foundation (WPF) 응용 프로그램을 배포 하려면 관리자,.NET Framework 3.5 런타임 있는지 먼저 확인 해야 합니다. 이 항목에서는 HTML/JavaScript로 작성 된 스크립트를 관리자 사용은.NET Framework 3.5가 시스템에 있는지 확인할 수 있습니다.  
   
 > [!NOTE]
 >  설치에 대 한 정보를 자세한 배포 및.NET Framework 검색 참조 [개발자 용.NET Framework 설치](../../install/guide-for-developers.md)합니다.  
   
 ## <a name="example"></a>예제  
- 경우는 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 는 설치 MSI를 추가 하는 ".NET CLR" 및 버전 번호를 UserAgent 문자열입니다. 다음 예제에서는 간단한 HTML 페이지에 포함 된 스크립트를 보여 줍니다. 확인 하려면 UserAgent 문자열을 검색 하는 스크립트 여부를 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 이 설치 되어 있으며 검색 결과에 상태 메시지를 표시 합니다.  
+ .NET Framework 3.5를 설치 하면 MSI UserAgent 문자열에 ".NET CLR" 및 버전 번호를 추가 합니다. 다음 예제에서는 간단한 HTML 페이지에 포함 된 스크립트를 보여 줍니다. .NET Framework 3.5가 설치 되어 있는지 여부를 확인 하는 검색 결과에 상태 메시지를 표시 하려면 UserAgent 문자열을 검색 하는 스크립트입니다.  
   
 > [!NOTE]
 >  이 스크립트는 Internet Explorer에 대 한 설계 되었습니다. 다른 브라우저 UserAgent 문자열에서.NET CLR 정보를 포함할 수 있습니다.  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 163ed8d00e8f0f886481dbaca956bb633a625871
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 15e693f716d02e6f7ef8b666ddf51a8bd352f642
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487978"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690288"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>코드 액세스 보안 정책 호환성 및 마이그레이션
 
@@ -26,7 +26,7 @@ ms.locfileid: "66487978"
 
    \- 또는 -
 
-- 사용 하 여 [< NetFx40_LegacySecurityPolicy > 구성 요소](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) 레거시 CAS 정책은 동작을 옵트인 하 합니다.
+- 사용 하 여 [ \<NetFx40_LegacySecurityPolicy > 구성 요소](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) 레거시 CAS 정책은 동작을 옵트인 하 합니다.
 
 이 항목에는 다음과 같은 단원이 포함되어 있습니다.
 
@@ -142,7 +142,7 @@ CAS 정책은 대체로 어셈블리 또는 응용 프로그램 도메인의 권
 
 ## <a name="compatibility-using-the-cas-policy-legacy-option"></a>호환성: CAS 정책 레거시 옵션을 사용 하 여
 
-합니다 [구성 요소 < NetFx40_LegacySecurityPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) 프로세스나 라이브러리에서 레거시 CAS 정책을 사용 하도록 지정할 수 있습니다. 이 요소를 사용하도록 설정하면 정책 및 증거 오버로드가 이전 버전의 프레임워크와 동일하게 작동합니다.
+합니다 [ \<NetFx40_LegacySecurityPolicy > 구성 요소](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) 프로세스나 라이브러리에서 레거시 CAS 정책을 사용 하도록 지정할 수 있습니다. 이 요소를 사용하도록 설정하면 정책 및 증거 오버로드가 이전 버전의 프레임워크와 동일하게 작동합니다.
 
 > [!NOTE]
 > CAS 정책 동작은 런타임 버전별로 지정되므로 특정 런타임 버전에 대해 CAS 정책을 수정해도 다른 버전의 CAS 정책에는 영향을 주지 않습니다.

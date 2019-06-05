@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fa05fe1e170a0285df73d179ef39db6301059ac8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1f773b6f7d0b8b4e0b8647b7086d8782d1afbb93
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490956"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690523"
 ---
 # <a name="cryptographic-services"></a>암호화 서비스
 
@@ -266,7 +266,7 @@ RSA는 암호화 및 서명에서 모두 사용할 수 있지만, DSA는 서명�
 
 ## <a name="clickonce-manifests"></a>ClickOnce 매니페스트
 
-[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]에서는 다음과 같은 암호화 클래스를 통해 [ClickOnce 기술](/visualstudio/deployment/clickonce-security-and-deployment)로 배포된 응용 프로그램의 매니페스트 서명에 대한 정보를 가져오고 확인할 수 있습니다.
+.NET Framework 3.5에서는 다음과 같은 암호화 클래스 가져오고 사용 하 여 배포 된 응용 프로그램 매니페스트 서명에 대 한 정보를 확인할 수 있습니다 [ClickOnce 기술을](/visualstudio/deployment/clickonce-security-and-deployment):
 
 - <xref:System.Security.Cryptography.ManifestSignatureInformation> 클래스의 <xref:System.Security.Cryptography.ManifestSignatureInformation.VerifySignature%2A> 메서드 오버로드를 사용할 경우 매니페스트 서명에 대한 정보를 가져올 수 있습니다.
 
@@ -290,7 +290,7 @@ RSA는 암호화 및 서명에서 모두 사용할 수 있지만, DSA는 서명�
 
 ## <a name="suite-b-support"></a>Suite B 지원
 
-[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 에서는 NSA(National Security Agency)에서 게시하는 암호화 알고리즘의 Suite B 집합을 지원합니다. Suite B에 대한 자세한 내용은 [NSA Suite B Cryptography Fact Sheet](https://www.nsa.gov/what-we-do/information-assurance/)를 참조하세요.
+.NET Framework 3.5에서 NSA National Security Agency ()를 게시 하는 암호화 알고리즘의 Suite B 집합을 지원 합니다. Suite B에 대한 자세한 내용은 [NSA Suite B Cryptography Fact Sheet](https://www.nsa.gov/what-we-do/information-assurance/)를 참조하세요.
 
 다음 알고리즘이 포함되어 있습니다.
 
@@ -314,7 +314,7 @@ CNG(Cryptography Next Generation) 클래스는 네이티브 CNG 함수 관련 �
 
 <xref:System.Security.Cryptography.CngKey> 클래스는 키 열기, 생성, 삭제, 내보내기 등의 다양한 추가 작업에 사용됩니다. 또한 네이티브 함수를 직접 호출할 때 사용할 기본 키 핸들에 대한 액세스를 제공합니다.
 
-[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 에는 다음과 같은 다양한 지원 CNG 클래스도 포함되어 있습니다.
+.NET Framework 3.5에는 다양 한 지원 CNG 클래스는 다음과 같은 포함 됩니다.
 
 - <xref:System.Security.Cryptography.CngProvider> 는 키 저장소 공급자를 유지 관리합니다.
 

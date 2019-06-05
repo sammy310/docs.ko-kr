@@ -2,12 +2,12 @@
 title: 워크플로 추적 구성
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: c3e73c3801a41a9401ac2e636fda6362487a05af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d8d3293fd2b271c0e1a00a1fca30d5ecd166df12
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052770"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690570"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>워크플로 추적 구성
 
@@ -199,7 +199,7 @@ WF 4는 추적 레코드를 ETW(Windows용 이벤트 추적) 세션에 기록하
     </system.serviceModel>
     ```
 
-2. %Windir%\Microsoft.NET\Framework에서 매니페스트 파일을 복사\\< 최신 버전의 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> 임시 위치로 \Microsoft.Windows.ApplicationServer.Applications.man 하 고 이름을 Microsoft.Windows.ApplicationServer.Applications_Provider1.man
+2. %Windir%\Microsoft.NET\Framework에서 매니페스트 파일을 복사\\\<최신 버전의 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> 임시 위치로 \Microsoft.Windows.ApplicationServer.Applications.man 하 고 이름을 Microsoft.Windows.ApplicationServer.Applications_Provider1.man
 
 3. 매니페스트 파일의 GUID를 새 GUID로 변경합니다.
 
