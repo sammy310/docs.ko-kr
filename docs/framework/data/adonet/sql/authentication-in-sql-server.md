@@ -2,12 +2,12 @@
 title: SQL Server에서 인증
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 94de49fe89f2b7f4aabaade624e960202f9973bf
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 5809a75dbadffbd2528f6882aa586aecd3232408
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877456"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490090"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server에서 인증
 SQL Server에서는 Windows 인증 모드와 혼합 모드의 두 가지 인증 모드를 지원합니다.  
@@ -46,7 +46,7 @@ SQL Server에서는 Windows 인증 모드와 혼합 모드의 두 가지 인증 
 - ASP.NET과 같은 인터넷 응용 프로그램을 합니다.  
   
 > [!NOTE]
->  Windows 인증을 지정하더라도 SQL Server 로그인이 비활성화되지는 않습니다. ALTER LOGIN DISABLE을 사용 하 여 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 문을 높은 SQL Server 로그인을 사용 하지 않도록 설정 합니다.  
+>  Windows 인증을 지정하더라도 SQL Server 로그인이 비활성화되지는 않습니다. 따라서 높은 수준의 권한이 있는 SQL Server 로그인은 ALTER LOGIN DISABLE Transact-SQL 문을 사용하여 비활성화해야 합니다.  
   
 ## <a name="login-types"></a>로그인 유형  
  SQL Server는 세 가지 유형의 로그인을 지원합니다.  
