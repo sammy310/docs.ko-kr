@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d9d423ef71b76b2dcbbf2812e13850922fb50ac0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8be971cee4aa2ae09745a090396269c80ca62198
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625888"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487951"
 ---
 # <a name="securing-method-access"></a>메서드 액세스 보안
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- 몇몇 메서드는 임의의 신뢰할 수 없는 코드 호출을 허용하는 데 적합하지 않을 수 있습니다. 이러한 메서드는 위험을 가져옵니다. 메서드는 몇 가지 제한 된 정보를 제공할 수 있습니다. 적용 합니다. 전달 된 모든 정보를 생각할 수 있습니다. 매개 변수를;에서 오류 검사를 수행 하지 않을 수 있습니다. 또는 잘못 된 매개 변수를 사용 하 여 오작동 하거나 피해 합니다.  이들 경우에 대해 알고 있어야 하고 메서드 보호를 도와주는 조치를 취해야 합니다.  
+ 몇몇 메서드는 임의의 신뢰할 수 없는 코드 호출을 허용하는 데 적합하지 않을 수 있습니다. 이러한 메서드는 위험을 가져옵니다. 메서드는 몇 가지 제한 된 정보를 제공할 수 있습니다. 적용 합니다. 전달 된 모든 정보를 생각할 수 있습니다. 매개 변수를;에서 오류 검사를 수행 하지 않을 수 있습니다. 또는 잘못 된 매개 변수를 사용 하 여 오작동 하거나 피해 합니다. 이들 경우에 대해 알고 있어야 하고 메서드 보호를 도와주는 조치를 취해야 합니다.  
   
  경우에 따라 공용으로 제공되지 않지만 공용으로 사용되어야 하는 메서드를 제한해야 할 수 있습니다. 예를 들어 자체 DLL에서 호출되어야 하고 공용으로도 사용되어야 하는 인터페이스를 포함하지만, 이 인터페이스를 고객이 사용하지 않도록 하고 악성 코드가 구성 요소에 대한 진입점으로 악용하지 못하도록 방지하기 위해 이 인터페이스를 공개적으로 노출하지 않고자 할 수 있습니다. 공용으로 제공되지 않은 메서드를 제한하는 또 다른 일반적인 이유는 완전히 내부적인 인터페이스일 수 있는 내용을 문서화하고 지원할 필요가 없도록 하려는 것입니다.  
   
@@ -60,7 +60,7 @@ public class Class1
  이 섹션에 표시된 선언을 사용하여 특정 클래스와 메서드 및 속성과 이벤트가 부분 신뢰 코드에서 사용되지 않도록 방지합니다. 이들 선언을 클래스에 적용하여 모든 메서드, 속성 및 이벤트에 보호를 적용하지만, 필드 액세스는 선언적 보안의 영향을 받지 않습니다. 또한 링크 요청은 직접 실행 호출자 차단에만 도움이 되고 유인 공격의 대상이 될 수 있습니다.  
   
 > [!NOTE]
->  새 투명성 모델은 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]에서 도입되었습니다. 합니다 [보안 투명 코드, 수준 2](../../../docs/framework/misc/security-transparent-code-level-2.md) 사용 하 여 보안 코드를 식별 하는 모델을 <xref:System.Security.SecurityCriticalAttribute> 특성입니다. 보안에 중요한 코드에서는 호출자와 상속자를 둘 다 완전히 신뢰할 수 있어야 합니다. 이전 .NET Framework 버전에서 코드 액세스 보안 규칙에 따라 실행 중인 어셈블리는 수준 2 어셈블리를 호출할 수 있습니다. 이 경우 보안에 중요한 특성은 완전 신뢰를 위해 링크 요청으로 처리됩니다.  
+>  새로운 transparency 모델을.NET Framework 4에서 도입 되었습니다. 합니다 [보안 투명 코드, 수준 2](../../../docs/framework/misc/security-transparent-code-level-2.md) 사용 하 여 보안 코드를 식별 하는 모델을 <xref:System.Security.SecurityCriticalAttribute> 특성입니다. 보안에 중요한 코드에서는 호출자와 상속자를 둘 다 완전히 신뢰할 수 있어야 합니다. 이전 .NET Framework 버전에서 코드 액세스 보안 규칙에 따라 실행 중인 어셈블리는 수준 2 어셈블리를 호출할 수 있습니다. 이 경우 보안에 중요한 특성은 완전 신뢰를 위해 링크 요청으로 처리됩니다.  
   
  강력한 이름의 어셈블리에는 [LinkDemand](../../../docs/framework/misc/link-demands.md) 모든 공개적으로 액세스할 수 있는 메서드, 속성 및 완전히 신뢰할 수 있는 호출자에 게 해당 사용을 제한 하도록 이벤트에 적용 됩니다. 이 기능을 사용하지 않도록 설정하려면 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 특성을 적용해야 합니다. 따라서 신뢰할 수 없는 호출자를 제외하도록 클래스에 명시적으로 표시하는 작업은 서명되지 않은 어셈블리나 이 특성이 포함된 어셈블리에만 필요합니다. 이들 선언을 사용하여 신뢰할 수 없는 호출자로 제공되지 않은 형식 하위 집합을 표시할 수 있습니다.  
   
