@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb2aabfd083a71d8d083d08e9bc7e2a7ad065e7f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c6b908cadc02e0d1739d8b36b6904bb47c5ea090
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623282"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378460"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe(리소스 파일 생성기)
 리소스 파일 생성기(Resgen.exe)를 사용하면 텍스트 파일(.txt 또는 .restext)과 XML 기반 리소스 형식 파일(.resx)을 런타임 이진 실행 파일에 포함하거나 위성 어셈블리에 포함할 수 있는 공용 언어 런타임의 이진 파일(.resources)로 변환할 수 있습니다. [리소스 파일 만들기](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)를 참조하세요.  
@@ -73,7 +73,7 @@ resgen filename.extension [outputDirectory]
   
 |매개 변수 또는 스위치|설명|  
 |-------------------------|-----------------|  
-|`/define:` *symbol1*[, *symbol2*,...]|[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]로 시작하며 텍스트 기반(.txt 또는 .restext) 리소스 파일로 된 조건부 컴파일을 지원합니다. *symbol*이 `#ifdef` 구문 안의 입력 텍스트 파일에 포함된 기호에 해당하는 경우 연결된 문자열 리소스가 .resources 파일에 포함됩니다. 입력 텍스트 파일에 `#if !` 문이 `/define` 스위치에 의해 정의되지 않은 기호와 함께 포함되어 있는 경우 연결된 문자열 리소스는 리소스 파일에 포함됩니다.<br /><br /> `/define`은 텍스트가 아닌 파일과 함께 사용하는 경우 무시됩니다. 기호는 대/소문자를 구분합니다.<br /><br /> 이 옵션에 대한 자세한 내용은 이 항목의 뒤에 나오는 [리소스 조건부 컴파일](#Conditional)을 참조하세요.|  
+|`/define:` *symbol1*[, *symbol2*,...]|.NET Framework 4.5로 시작하며 텍스트 기반(.txt 또는 .restext) 리소스 파일로 된 조건부 컴파일을 지원합니다. *symbol*이 `#ifdef` 구문 안의 입력 텍스트 파일에 포함된 기호에 해당하는 경우 연결된 문자열 리소스가 .resources 파일에 포함됩니다. 입력 텍스트 파일에 `#if !` 문이 `/define` 스위치에 의해 정의되지 않은 기호와 함께 포함되어 있는 경우 연결된 문자열 리소스는 리소스 파일에 포함됩니다.<br /><br /> `/define`은 텍스트가 아닌 파일과 함께 사용하는 경우 무시됩니다. 기호는 대/소문자를 구분합니다.<br /><br /> 이 옵션에 대한 자세한 내용은 이 항목의 뒤에 나오는 [리소스 조건부 컴파일](#Conditional)을 참조하세요.|  
 |`useSourcePath`|입력 파일의 현재 디렉터리를 사용하여 상대 경로를 확인하도록 지정합니다.|  
 |`/compile`|단일 일괄 작업을 통해 여러 .resources 파일로 변환할 여러 .resx 또는 텍스트 파일을 지정할 수 있습니다. 이 옵션을 지정하지 않으면 입력 파일 인수를 하나만 지정할 수 있습니다. 출력 파일의 이름은 *filename*.resources입니다.<br /><br /> 이 옵션은 `/str:` 옵션과 함께 사용할 수 없습니다.<br /><br /> 이 옵션에 대한 자세한 내용은 이 항목의 뒤에 나오는 [다중 파일 컴파일 또는 변환](#Multiple)을 참조하세요.|  
 |`/r:` `assembly`|지정한 어셈블리에서 메타데이터를 참조합니다. .Resx 파일을 변환할 때 사용하고 Resgen.exe를 통해 개체 리소스를 serialize하거나 deserialize할 수 있습니다. C# 및 Visual Basic 컴파일러에 대한 `/reference:` 또는 `/r:` 옵션과 유사합니다.|  
@@ -244,7 +244,7 @@ resgen MyApp.exe Win8Resources
   
 <a name="Conditional"></a>   
 ### <a name="conditionally-compiling-resources"></a>리소스 조건부 컴파일  
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]로 시작하는 Resgen.exe에서는 텍스트(.txt 및 .restext) 파일로 된 문자열 리소스의 조건부 컴파일을 지원합니다. 이것은 여러 빌드 구성에 단일 텍스트 기반 리소스 파일을 사용할 수 있도록 합니다.  
+ .NET Framework 4.5로 시작하는 Resgen.exe에서는 텍스트(.txt 및 .restext) 파일로 된 문자열 리소스의 조건부 컴파일을 지원합니다. 이것은 여러 빌드 구성에 단일 텍스트 기반 리소스 파일을 사용할 수 있도록 합니다.  
   
  .txt 또는 .restext 파일에서 기호가 정의된 경우 `#ifdef`...`#endif` 구문을 사용하며 이진 .resources 파일에 리소스를 포함하고, 기호가 정의되지 않은 경우 `#if !`...`#endif` 구문을 사용하여 리소스를 포함합니다. 컴파일할 때 `/define:` 옵션과 쉼표로 구분된 기호 목록을 사용하여 기호를 정의합니다. 비교는 대/소문자를 구분합니다. `/define`으로 정의된 기호의 대/소문자는 컴파일될 텍스트 파일에 있는 기호의 대/소문자와 일치해야 합니다.  
   

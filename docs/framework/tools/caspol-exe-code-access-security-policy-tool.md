@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e6057d1ce6b5d0e961449ef298b1a50c7a407ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f2a0e8d95595d663585639c47be34262f7452e94
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200534"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457415"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe(코드 액세스 보안 정책 도구)
 CAS(코드 액세스 보안 정책 도구)(Caspol.exe)를 사용하면 사용자나 관리자가 컴퓨터 정책 수준, 사용자 정책 수준 및 엔터프라이즈 정책 수준의 보안 정책을 수정할 수 있습니다.  
@@ -56,7 +56,7 @@ caspol [options]
 |**-customall**  *path*<br /><br /> 또는<br /><br /> **-ca**  *path*|이 옵션 다음의 모든 옵션이 컴퓨터 정책, 엔터프라이즈 정책 및 지정된 사용자 지정 사용자 정책에 적용됨을 나타냅니다. *path* 인수를 사용하여 사용자 지정 사용자의 보안 구성 파일에 대한 위치를 지정해야 합니다.|  
 |**-cu**[**stomuser**] *path*|현재 Caspol.exe가 실행되고 있는 대상 사용자에 속하지 않는 사용자 지정 사용자 정책의 관리를 허용합니다. *path* 인수를 사용하여 사용자 지정 사용자의 보안 구성 파일에 대한 위치를 지정해야 합니다.|  
 |**-enterprise**<br /><br /> 또는<br /><br /> **-en**|이 옵션 다음의 모든 옵션이 엔터프라이즈 수준 정책에 적용됨을 나타냅니다. 엔터프라이즈 관리자가 아닌 사용자는 엔터프라이즈 정책을 볼 수는 있지만 수정할 수 있는 권한은 없습니다. 비엔터프라이즈 시나리오에서, 이 정책은 기본적으로 컴퓨터 및 사용자 정책과 상충되지 않습니다.|  
-|**-e**[**xecution**] {**on** &#124; **off**}|코드가 실행되기 전에 권한이 실행되도록 하는 메커니즘을 설정하거나 설정 해제합니다. **참고:**  [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 이상 버전에서는 이 스위치가 제거되었습니다. 자세한 내용은 [보안 변경 내용](../../../docs/framework/security/security-changes.md)을 참조하세요.|  
+|**-e**[**xecution**] {**on** &#124; **off**}|코드가 실행되기 전에 권한이 실행되도록 하는 메커니즘을 설정하거나 설정 해제합니다. **참고:**  .NET Framework 4 이상 버전에서는 이 스위치가 제거되었습니다. 자세한 내용은 [보안 변경 내용](../../../docs/framework/security/security-changes.md)을 참조하세요.|  
 |**-f**[**orce**]|도구의 자동 소멸 테스트 기능을 억제하고 해당 정책을 사용자가 지정한 대로 변경합니다. 일반적으로, Caspol.exe가 올바르게 실행되지 못하도록 하는 정책 변경 내용이 있는지 여부를 확인한 다음, 그러한 정책 변경 내용이 있으면 해당 정책 변경 내용을 저장하지 않고 오류 메시지를 인쇄합니다. 이로 인해 Caspol.exe가 실행되지 않더라도 Caspol.exe에서 강제로 정책을 변경하려면 **–force** 옵션을 사용합니다.|  
 |**-h**[**elp**]|Caspol.exe의 명령 구문 및 옵션을 표시합니다.|  
 |**-l**[**ist**]|지정된 컴퓨터, 사용자, 엔터프라이즈 또는 모든 정책 수준에 대한 코드 그룹 계층 구조와 권한 집합을 표시합니다. Caspol.exe를 사용하여 코드 그룹의 레이블을 먼저 표시한 다음 이름(null이 아닌 경우)을 표시합니다.|  
@@ -75,7 +75,7 @@ caspol [options]
 |**-resetlockdown**<br /><br /> 또는<br /><br /> **-rsld**|기본 상태의 보다 제한적인 버전에 정책을 반환하고 이를 디스크에 유지시킵니다. 이전 컴퓨터 정책의 백업을 만들어 `security.config.bac`라는 이름의 파일에 유지시킵니다.  잠긴 정책은 기본 정책과 유사하지만 `Local Intranet`, `Trusted Sites` 및 `Internet` 영역에서 코드에 권한을 부여하지 않으며 해당 코드 그룹에 자식 노드 그룹이 없다는 점에서 다릅니다.|  
 |**-resolvegroup** *assembly_file*<br /><br /> 또는<br /><br /> **-rsg**  *assembly_file*|특정 어셈블리(*assembly_file*)가 속한 코드 그룹을 표시합니다. 기본적으로 이 옵션은 어셈블리가 속한 컴퓨터, 사용자 및 엔터프라이즈 정책 수준을 표시합니다. 하나의 정책 수준만 보려면 **-machine**, **-user** 또는 **-enterprise** 옵션 중 하나와 함께 이 옵션을 사용합니다.|  
 |**-resolveperm** *assembly_file*<br /><br /> 또는<br /><br /> **-rsp** *assembly_file*|해당 어셈블리의 실행이 가능한 경우, 지정된(또는 기본) 보안 정책 수준이 해당 어셈블리에 부여하는 모든 권한을 표시합니다. *assembly_file* 인수는 해당 어셈블리를 지정합니다. **-all** 옵션을 지정하면 Caspol.exe에서 사용자, 컴퓨터 또는 엔터프라이즈 정책에 따라 해당 어셈블리의 권한을 계산합니다. 그렇지 않으면 기본 동작 규칙이 적용됩니다.|  
-|**-s**[**ecurity**] {**on** &#124; **off**}|코드 액세스 보안을 설정하거나 설정 해제합니다. **-s off** 옵션을 지정하면 역할 기반 보안을 사용하도록 설정할 수 있습니다. **참고:**  [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 이상 버전에서는 이 스위치가 제거되었습니다. 자세한 내용은 [보안 변경 내용](../../../docs/framework/security/security-changes.md)을 참조하세요. **주의:**  코드 액세스 보안을 해제하면 모든 코드 액세스 요청이 성공합니다. 그러나 코드 액세스 보안을 해제하면 시스템이 바이러스나 웜과 같은 악의적 코드를 사용한 공격에 취약해집니다. 보안을 해제하면 성능이 약간 향상되지만 다른 보안 방법을 통해 전반적인 시스템 보안을 유지한 경우에만 보안을 해제해야 합니다. 다른 보안 예방 조치의 예로 공용 네트워크에서 연결을 끊거나 컴퓨터를 물리적으로 보호하는 경우를 들 수 있습니다.|  
+|**-s**[**ecurity**] {**on** &#124; **off**}|코드 액세스 보안을 설정하거나 설정 해제합니다. **-s off** 옵션을 지정하면 역할 기반 보안을 사용하도록 설정할 수 있습니다. **참고:**  .NET Framework 4 이상 버전에서는 이 스위치가 제거되었습니다. 자세한 내용은 [보안 변경 내용](../../../docs/framework/security/security-changes.md)을 참조하세요. **주의:**  코드 액세스 보안을 해제하면 모든 코드 액세스 요청이 성공합니다. 그러나 코드 액세스 보안을 해제하면 시스템이 바이러스나 웜과 같은 악의적 코드를 사용한 공격에 취약해집니다. 보안을 해제하면 성능이 약간 향상되지만 다른 보안 방법을 통해 전반적인 시스템 보안을 유지한 경우에만 보안을 해제해야 합니다. 다른 보안 예방 조치의 예로 공용 네트워크에서 연결을 끊거나 컴퓨터를 물리적으로 보호하는 경우를 들 수 있습니다.|  
 |**-u**[**ser**]|이 옵션 다음의 모든 옵션이 현재 Caspol.exe가 실행되고 있는 대상 사용자의 사용자 수준 정책에 적용됨을 나타냅니다. 관리자가 아닌 사용자의 경우 **-user**가 기본값입니다.|  
 |**-?**|Caspol.exe의 명령 구문 및 옵션을 표시합니다.|  
   
@@ -86,7 +86,7 @@ caspol [options]
 |**-allcode**|모든 코드를 지정합니다. 이 멤버 자격 조건에 대한 자세한 내용은 <xref:System.Security.Policy.AllMembershipCondition?displayProperty=nameWithType>을 참조하세요.|  
 |**-appdir**|애플리케이션 디렉터리를 지정합니다. **–appdir**를 멤버 자격 조건으로 지정하면 코드의 URL 증명 정보가 해당 코드의 애플리케이션 디렉터리 증명 정보와 비교됩니다. 두 증명 정보 값이 모두 동일하면 이 멤버 자격 조건이 충족됩니다. 이 멤버 자격 조건에 대한 자세한 내용은 <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition?displayProperty=nameWithType>을 참조하세요.|  
 |**-custom**  *xmlfile*|사용자 지정 멤버 자격 조건을 추가합니다. 필수 *xmlfile* 인수는 사용자 지정 멤버 자격 조건의 XML serialization이 포함된 .xml 파일을 지정합니다.|  
-|**-hash** *hashAlg* {**-hex** *hashValue* &#124; **-file** *assembly_file* }|지정된 어셈블리 해시가 포함된 코드를 지정합니다. 해시를 코드 그룹 멤버 자격 조건으로 사용하려면 해시 값 또는 어셈블리 파일 중 하나를 지정해야 합니다. 이 멤버 자격 조건에 대한 자세한 내용은 <xref:System.Security.Policy.HashMembershipCondition?displayProperty=nameWithType>을 참조하세요.|  
+|**-hash** *hashAlg* { **-hex** *hashValue* &#124; **-file** *assembly_file* }|지정된 어셈블리 해시가 포함된 코드를 지정합니다. 해시를 코드 그룹 멤버 자격 조건으로 사용하려면 해시 값 또는 어셈블리 파일 중 하나를 지정해야 합니다. 이 멤버 자격 조건에 대한 자세한 내용은 <xref:System.Security.Policy.HashMembershipCondition?displayProperty=nameWithType>을 참조하세요.|  
 |**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string* }|인증서 파일, 파일의 서명 또는 X509 인증서의 16진수 표시가 나타내는 것처럼 지정된 소프트웨어 게시자가 포함된 코드를 지정합니다. 이 멤버 자격 조건에 대한 자세한 내용은 <xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>을 참조하세요.|  
 |**-site** *website*|지정된 원본 사이트가 포함된 코드를 지정합니다. 예:<br /><br /> `-site** www.proseware.com`<br /><br /> 이 멤버 자격 조건에 대한 자세한 내용은 <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>을 참조하세요.|  
 |**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|파일 이름, 문자열 형식의 어셈블리 이름 및 *major*.*minor*.*build*.*revision* 형식의 어셈블리 버전으로 지정된 강력한 이름의 코드를 지정합니다. 예:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> 이 멤버 자격 조건에 대한 자세한 내용은 <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>을 참조하세요.|  

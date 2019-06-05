@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ef6b73d683d43b2a33628db13fa592c7f02199a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 116df78eb20d6e6c6355d07099ae5d3de9320f30
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585994"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457298"
 ---
 # <a name="security-considerations-for-reflection"></a>리플렉션의 보안 고려 사항
 리플렉션은 형식 및 멤버에 대한 정보를 가져오고 멤버에 액세스하는 기능(즉, 메서드 및 생성자 호출, 속성 값 가져오기 및 설정, 이벤트 처리기 추가 및 제거 등)을 제공합니다. 리플렉션을 사용하여 형식 및 멤버에 대한 정보를 가져오는 기능은 제한되지 않습니다. 모든 코드에서 리플렉션을 사용하여 다음 작업을 수행할 수 있습니다.  
@@ -58,10 +58,10 @@ ms.locfileid: "65585994"
   
  명령줄에서 실행 되는 애플리케이션 코드는 완전 신뢰로 실행됩니다. 투명으로 표시되지 않은 한 리플렉션을 사용하여 보안에 중요한 멤버에 액세스할 수 있습니다. 동일한 코드가 부분 신뢰(예: 샌드박스 애플리케이션 도메인에서)로 실행될 때 어셈블리의 신뢰 수준은 보안 중요 코드에 액세스할 수 있는지 여부를 결정합니다. 어셈블리에 강력한 이름이 있고 글로벌 어셈블리 캐시에 설치된 경우, 신뢰할 수 있는 어셈블리이며 보안에 중요한 멤버를 호출할 수 있습니다. 신뢰할 수 없는 경우 투명으로 표시되지 않았어도 투명하게 되며 보안에 중요한 멤버를 액세스할 수 없습니다.  
   
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]의 보안 모델에 대한 자세한 내용은 [보안 변경 내용](../../../docs/framework/security/security-changes.md)을 참조하세요.  
+ .NET Framework 4의 보안 모델에 대한 자세한 내용은 [보안 변경 내용](../../../docs/framework/security/security-changes.md)을 참조하세요.  
   
 ## <a name="reflection-and-transparency"></a>리플렉션 및 투명도  
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]부터 공용 언어 런타임에서 어셈블리의 신뢰 수준 및 애플리케이션 도메인의 신뢰 수준을 포함하여 여러 요소의 형식 또는 멤버에 대한 투명도 수준을 결정합니다. 리플렉션은 형식의 투명도 수준을 검색할 수 있게 해주는 <xref:System.Type.IsSecurityCritical%2A>, <xref:System.Type.IsSecuritySafeCritical%2A> 및 <xref:System.Type.IsSecurityTransparent%2A> 속성을 제공합니다. 다음 표에서는 이러한 속성의 유효한 조합을 보여 줍니다.  
+ .NET Framework 4부터 공용 언어 런타임에서 어셈블리의 신뢰 수준 및 애플리케이션 도메인의 신뢰 수준을 포함하여 여러 요소의 형식 또는 멤버에 대한 투명도 수준을 결정합니다. 리플렉션은 형식의 투명도 수준을 검색할 수 있게 해주는 <xref:System.Type.IsSecurityCritical%2A>, <xref:System.Type.IsSecuritySafeCritical%2A> 및 <xref:System.Type.IsSecurityTransparent%2A> 속성을 제공합니다. 다음 표에서는 이러한 속성의 유효한 조합을 보여 줍니다.  
   
 |보안 수준|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|  
 |--------------------|------------------------|----------------------------|---------------------------|  

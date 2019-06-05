@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdb74259d7b034511722b1d2992b4ec16adb551e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 991053a2728ec7b8c5d9157dbf6307e0974479c6
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750433"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379925"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>방법: .NET Framework 4.5 설치 관리자에서 진행률 가져오기
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]는 재배포 가능 런타임입니다. .NET Framework의 이 버전용 응용 프로그램을 개발하는 경우 응용 프로그램 설치 시 필수 구성 요소로 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 설치를 포함(연결)시킬 수 있습니다. 사용자 지정 설치 환경이나 통합 설치 환경을 제공하려면 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 설치 프로그램을 자동으로 시작하고 앱의 설치 진행률을 표시하는 동안 진행 상태를 추적하는 것이 좋습니다. 자동 추적을 사용하도록 설정하기 위해 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 설치 프로그램(감시할 수 있음)은 메모리 매핑된 I/O(MMIO) 세그먼트를 사용하여 설치 프로그램과 함께 통신할 프로토콜(감시자 또는 chainer)을 정의합니다. 이 프로토콜은 chainer가 진행률 정보를 가져오고, 자세한 결과를 확인하고. 메시지에 응답하고, [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 설치를 취소하는 방법을 정의합니다.
+.NET Framework 4.5는 재배포 가능 런타임입니다. .NET Framework의 이 버전용 앱을 개발하는 경우 앱 설치 시 필수 구성 요소로 .NET Framework 4.5 설치를 포함(연결)시킬 수 있습니다. 사용자 지정 설치 환경이나 통합 설치 환경을 제공하려면 .NET Framework 4.5 설치 프로그램을 자동으로 시작하고 앱의 설치 진행률을 표시하는 동안 진행 상태를 추적하는 것이 좋습니다. 자동 추적을 사용하도록 설정하기 위해 .NET Framework 4.5 설치 프로그램(감시할 수 있음)은 메모리 매핑된 I/O(MMIO) 세그먼트를 사용하여 설치 프로그램과 함께 통신할 프로토콜(감시자 또는 chainer)을 정의합니다. 이 프로토콜은 chainer가 진행률 정보를 가져오고, 자세한 결과를 확인하고. 메시지에 응답하고, .NET Framework 4.5 설치를 취소하는 방법을 정의합니다.
 
-- **호출**. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 설치 프로그램을 호출하고 MMIO 섹션에서 진행률 정보를 받으려면 설치 프로그램에서 다음을 수행해야 합니다.
+- **호출**. .NET Framework 4.5 설치 프로그램을 호출하고 MMIO 섹션에서 진행률 정보를 받으려면 설치 프로그램에서 다음을 수행해야 합니다.
 
-    1. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 재배포 가능 프로그램을 호출합니다.
+    1. .NET Framework 4.5 재배포 가능 프로그램을 호출합니다.
 
         ```
         dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name
@@ -36,9 +36,9 @@ ms.locfileid: "64750433"
 
         이러한 이름을 설치 프로그램에 고유한 이름으로 바꾸세요.
 
-    2. MMIO 섹션을 읽습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서 다운로드 및 설치 작업이 동시에 수행됩니다. 다른 부분을 다운로드하는 동안 .NET Framework의 한 부분이 설치 중일 수 있습니다. 따라서 진행률이 0에서 255까지 증가하는 두 개의 숫자(`m_downloadSoFar` 및 `m_installSoFar`)로 MMIO 섹션에 다시 전송(기록)됩니다. 255가 기록되고 .NET Framework가 종료되면 설치가 완료된 것입니다.
+    2. MMIO 섹션을 읽습니다. .NET Framework 4.5에서 다운로드 및 설치 작업이 동시에 수행됩니다. 다른 부분을 다운로드하는 동안 .NET Framework의 한 부분이 설치 중일 수 있습니다. 따라서 진행률이 0에서 255까지 증가하는 두 개의 숫자(`m_downloadSoFar` 및 `m_installSoFar`)로 MMIO 섹션에 다시 전송(기록)됩니다. 255가 기록되고 .NET Framework가 종료되면 설치가 완료된 것입니다.
 
-- **종료 코드**. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 재배포 가능 프로그램을 호출하는 명령의 다음 종료 코드는 설치에 성공했는지 아니면 실패했는지를 나타냅니다.
+- **종료 코드**. .NET Framework 4.5 재배포 가능 프로그램을 호출하는 명령의 다음 종료 코드는 설치에 성공했는지 아니면 실패했는지를 나타냅니다.
 
   - 0 - 설치가 완료되었습니다.
 
@@ -52,7 +52,7 @@ ms.locfileid: "64750433"
 
 ## <a name="chainer-sample"></a>chainer 샘플
 
-chainer 샘플은 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 설치 프로그램을 자동으로 시작하고 진행률을 표시하는 동안 설치를 추적합니다. 이 샘플은 .NET Framework 4에 대해 제공된 chainer 샘플과 비슷합니다. 그러나 또한 .NET Framework 4 앱을 닫기 위한 메시지 상자를 처리하여 시스템 다시 시작을 방지할 수 있습니다. 이 메시지 상자에 대한 자세한 내용은 [.NET Framework 4.5를 설치하는 동안 시스템 다시 시작 줄이기](../../../docs/framework/deployment/reducing-system-restarts.md)를 참조하세요. .NET Framework 4 설치 관리자와 함께 이 샘플을 사용할 수 있습니다. 해당 시나리오에서는 메시지가 전송되지 않습니다.
+Chainer 샘플은 .NET Framework 4.5 설치 프로그램을 자동으로 시작하고 진행률을 표시하는 동안 설치를 추적합니다. 이 샘플은 .NET Framework 4에 대해 제공된 chainer 샘플과 비슷합니다. 그러나 또한 .NET Framework 4 앱을 닫기 위한 메시지 상자를 처리하여 시스템 다시 시작을 방지할 수 있습니다. 이 메시지 상자에 대한 자세한 내용은 [.NET Framework 4.5를 설치하는 동안 시스템 다시 시작 줄이기](../../../docs/framework/deployment/reducing-system-restarts.md)를 참조하세요. .NET Framework 4 설치 관리자와 함께 이 샘플을 사용할 수 있습니다. 해당 시나리오에서는 메시지가 전송되지 않습니다.
 
 > [!WARNING]
 > 관리자 권한으로 예제를 실행해야 합니다.
@@ -63,7 +63,7 @@ MSDN 샘플 갤러리에서 [.NET Framework 4.5 chainer 샘플](https://go.micro
 
 #### <a name="mmiochainerh"></a>MMIOChainer.h
 
-- MMIOChainer.h 파일([전체 코드](https://go.microsoft.com/fwlink/?LinkId=231369) 참조)에는 chainer 클래스가 파생되어야 하는 데이터 구조 정의와 기본 클래스가 포함되어 있습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]는 MMIO 데이터 구조를 확장하여 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 설치 관리자에 필요한 데이터를 처리합니다. MMIO 구조에 대한 변경 내용은 이전 버전과 호환되므로 .NET Framework 4 chainer가 다시 컴파일하지 않고도 .NET Framework 4.5 설치 프로그램에서 작동할 수 있습니다. 그러나 이 시나리오에서는 시스템 다시 시작을 줄이는 기능이 지원되지 않습니다.
+- MMIOChainer.h 파일([전체 코드](https://go.microsoft.com/fwlink/?LinkId=231369) 참조)에는 chainer 클래스가 파생되어야 하는 데이터 구조 정의와 기본 클래스가 포함되어 있습니다. .NET Framework 4.5는 MMIO 데이터 구조를 확장하여 .NET Framework 4.5 설치 관리자에 필요한 데이터를 처리합니다. MMIO 구조에 대한 변경 내용은 이전 버전과 호환되므로 .NET Framework 4 chainer가 다시 컴파일하지 않고도 .NET Framework 4.5 설치 프로그램에서 작동할 수 있습니다. 그러나 이 시나리오에서는 시스템 다시 시작을 줄이는 기능이 지원되지 않습니다.
 
     버전 필드를 통해 구조 및 메시지 형식에 대한 수정 버전을 식별할 수 있습니다. .NET Framework 설치 프로그램은 `VirtualQuery` 함수 호출을 통해 파일 매핑의 크기를 확인하여 chainer 인터페이스 버전을 확인합니다. 크기가 버전 필드를 수용하기에 충분히 큰 경우 .NET Framework 설치 프로그램은 지정된 값을 사용합니다. .NET Framework 4의 경우처럼 파일 매핑이 너무 작아서 버전 필드를 포함할 수 없는 경우 설치 프로세스에서 버전 0(4)을 가정합니다. chainer가 .NET Framework 설치 프로그램에서 보내려고 하는 메시지 버전을 지원하지 않는 경우 .NET Framework 설치 프로그램은 무시 응답을 가정합니다.
 
@@ -96,7 +96,7 @@ MSDN 샘플 갤러리에서 [.NET Framework 4.5 chainer 샘플](https://go.micro
         };
     ```
 
-- `MmioDataStructure` 데이터 구조를 직접 사용하면 안 됩니다. `MmioChainer` 클래스를 대신 사용하여 chainer를 구현하세요. `MmioChainer` 클래스에서 파생하여 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 재배포 가능 패키지를 연결합니다.
+- `MmioDataStructure` 데이터 구조를 직접 사용하면 안 됩니다. `MmioChainer` 클래스를 대신 사용하여 chainer를 구현하세요. `MmioChainer` 클래스에서 파생하여 .NET Framework 4.5 재배포 가능 패키지를 연결합니다.
 
 #### <a name="iprogressobserverh"></a>IProgressObserver.h
 
@@ -151,7 +151,7 @@ MSDN 샘플 갤러리에서 [.NET Framework 4.5 chainer 샘플](https://go.micro
     }
     ```
 
-- 설치를 시작하기 전에 chainer는 `IsNetFx4Present`를 호출하여 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]가 이미 설치되어 있는지 확인합니다.
+- 설치를 시작하기 전에 chainer는 `IsNetFx4Present`를 호출하여 .NET Framework 4.5가 이미 설치되어 있는지 확인합니다.
 
     ```cpp
     ///  Checks for presence of the .NET Framework 4.
@@ -307,7 +307,7 @@ MSDN 샘플 갤러리에서 [.NET Framework 4.5 chainer 샘플](https://go.micro
     ```
 
     > [!IMPORTANT]
-    > [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 재배포 가능 패키지는 일반적으로 많은 진행률 메시지와 완료를 나타내는 단일 메시지(chainer 쪽)를 씁니다. 또한 비동기적으로 읽으면서 `Abort` 레코드를 찾습니다. `Abort` 레코드를 받으면 설치를 취소하고, 설치가 중단되고 설치 작업이 롤백된 후 E_ABORT를 해당 데이터로 사용하여 완성된 레코드를 씁니다.
+    > .NET Framework 4.5 재배포 가능 패키지는 일반적으로 많은 진행률 메시지와 완료를 나타내는 단일 메시지(chainer 쪽)를 씁니다. 또한 비동기적으로 읽으면서 `Abort` 레코드를 찾습니다. `Abort` 레코드를 받으면 설치를 취소하고, 설치가 중단되고 설치 작업이 롤백된 후 E_ABORT를 해당 데이터로 사용하여 완성된 레코드를 씁니다.
 
 일반적인 서버는 임의의 MMIO 파일 이름을 만들고, 파일을 만든 다음(이전 코드 예제와 같이 `Server::CreateSection`에서) `CreateProcess` 메서드를 사용하고 `-pipe someFileSectionName` 옵션으로 파이프 이름을 전달하여 재배포 가능 패키지를 시작합니다. 서버는 애플리케이션 UI 관련 코드를 사용하여 `OnProgress`, `Send` 및 `Finished` 메서드를 구현해야 합니다.
 

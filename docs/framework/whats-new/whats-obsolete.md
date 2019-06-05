@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ca7bf5ad4b4d145f484f46ee46220a58f326333
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7db411e9ef38adb42c8df2059d166d1fa4184f95
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635613"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378368"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>.NET Framework 클래스 라이브러리의 사용되지 않는 기능
 
@@ -43,7 +43,7 @@ ms.locfileid: "65635613"
 
 - 이 기술 영역에 대한 설명서를 검토하여 사용 중단에 대응하는 방법을 확인합니다.
 
-이후 버전의 .NET Framework에 대해 기존 코드를 다시 컴파일하지 않도록 선택할 수 있습니다. 대신, 기존의 컴파일된 코드가 실행되는 .NET Framework 버전을 지정할 수 있습니다. 예를 들어 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]에 대해 컴파일된 app1.exe라는 애플리케이션이 있지만 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에 대해 애플리케이션을 실행하려 한다고 가정합니다. 이 경우 다음 단계를 수행해야 합니다.
+이후 버전의 .NET Framework에 대해 기존 코드를 다시 컴파일하지 않도록 선택할 수 있습니다. 대신, 기존의 컴파일된 코드가 실행되는 .NET Framework 버전을 지정할 수 있습니다. 예를 들어 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]에 대해 컴파일된 app1.exe라는 애플리케이션이 있지만 .NET Framework 4.5에 대해 애플리케이션을 실행하려 한다고 가정합니다. 이 경우 다음 단계를 수행해야 합니다.
 
 1. 주 실행 파일에 대한 구성 파일을 만들고 이름을 *appName*.exe.config로 지정합니다. 여기서 *appName*은 애플리케이션 실행 파일의 이름입니다. 예제에서는 app1.exe라는 애플리케이션에 대해 app1.exe.config라는 구성 파일을 만듭니다.
 

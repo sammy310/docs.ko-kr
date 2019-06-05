@@ -6,12 +6,12 @@ helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: 6dcf5a69be7817351a9e250506ba51471918a772
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 78d40aa2069e56357f55f39c3b7479ee46d0342c
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608129"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422821"
 ---
 # <a name="statements-c-programming-guide"></a>문(C# 프로그래밍 가이드)
 프로그램이 수행하는 작업은 문으로 표현됩니다. 일반적인 작업으로 지정된 조건에 따라 변수 선언, 값 할당, 메서드 호출, 컬렉션 반복, 하나 또는 다른 코드 블록으로 분기 등이 있습니다. 프로그램에서 문이 실행되는 순서를 제어 흐름 또는 실행 흐름이라고 합니다. 제어 흐름은 프로그램이 런타임 시 수신하는 입력에 대응하는 방식에 따라 프로그램을 실행할 때마다 달라질 수 있습니다.  
@@ -27,10 +27,10 @@ ms.locfileid: "64608129"
 |--------------|---------------------------|  
 |[선언문](#declaration-statements)|선언문은 새 변수 또는 상수를 소개합니다. 필요에 따라 변수 선언에서 변수에 값을 할당할 수 있습니다. 상수 선언에서 대입은 필수입니다.|  
 |[식 문](expressions.md)|값을 계산하는 식 문은 값을 변수에 저장해야 합니다. 자세한 내용은 [식 문](#expression-statements)을 참조하세요.|  
-|[선택 문](../../../csharp/language-reference/keywords/selection-statements.md)|선택 문을 사용하면 하나 이상의 지정된 조건에 따라 코드의 다른 섹션으로 분기할 수 있습니다. 자세한 내용은 다음 항목을 참조하세요.<br /><br /> [if](../../../csharp/language-reference/keywords/if-else.md), [else](../../../csharp/language-reference/keywords/if-else.md), [switch](../../../csharp/language-reference/keywords/switch.md), [case](../../../csharp/language-reference/keywords/switch.md)|  
-|[반복 문](../../../csharp/language-reference/keywords/iteration-statements.md)|반복 문을 사용하면 배열과 같은 컬렉션을 반복하거나, 지정한 조건이 충족될 때까지 동일한 문 집합을 반복해서 수행할 수 있습니다. 자세한 내용은 다음 항목을 참조하세요.<br /><br /> [do](../../../csharp/language-reference/keywords/do.md), [for](../../../csharp/language-reference/keywords/for.md), [foreach](../../../csharp/language-reference/keywords/foreach-in.md), [in](../../../csharp/language-reference/keywords/foreach-in.md), [while](../../../csharp/language-reference/keywords/while.md)|  
-|[점프 문](../../../csharp/language-reference/keywords/jump-statements.md)|점프 문은 컨트롤을 다른 코드 섹션으로 전송합니다. 자세한 내용은 다음 항목을 참조하세요.<br /><br /> [break](../../../csharp/language-reference/keywords/break.md), [continue](../../../csharp/language-reference/keywords/continue.md), [default](../../../csharp/language-reference/keywords/switch.md), [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md), [yield](../../../csharp/language-reference/keywords/yield.md)|  
-|[예외 처리 문](../../../csharp/language-reference/keywords/exception-handling-statements.md)|예외 처리 문을 사용하면 런타임 시 발생하는 예외 조건에서 정상적으로 복구할 수 있습니다. 자세한 내용은 다음 항목을 참조하세요.<br /><br /> [throw](../../../csharp/language-reference/keywords/throw.md), [try-catch](../../../csharp/language-reference/keywords/try-catch.md), [try-finally](../../../csharp/language-reference/keywords/try-finally.md), [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)|  
+|선택 영역 문|선택 문을 사용하면 하나 이상의 지정된 조건에 따라 코드의 다른 섹션으로 분기할 수 있습니다. 자세한 내용은 다음 항목을 참조하세요.<br /><br /> [if](../../../csharp/language-reference/keywords/if-else.md), [else](../../../csharp/language-reference/keywords/if-else.md), [switch](../../../csharp/language-reference/keywords/switch.md), [case](../../../csharp/language-reference/keywords/switch.md)|  
+|반복 문|반복 문을 사용하면 배열과 같은 컬렉션을 반복하거나, 지정한 조건이 충족될 때까지 동일한 문 집합을 반복해서 수행할 수 있습니다. 자세한 내용은 다음 항목을 참조하세요.<br /><br /> [do](../../../csharp/language-reference/keywords/do.md), [for](../../../csharp/language-reference/keywords/for.md), [foreach](../../../csharp/language-reference/keywords/foreach-in.md), [in](../../../csharp/language-reference/keywords/foreach-in.md), [while](../../../csharp/language-reference/keywords/while.md)|  
+|점프 문|점프 문은 컨트롤을 다른 코드 섹션으로 전송합니다. 자세한 내용은 다음 항목을 참조하세요.<br /><br /> [break](../../../csharp/language-reference/keywords/break.md), [continue](../../../csharp/language-reference/keywords/continue.md), [default](../../../csharp/language-reference/keywords/switch.md), [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md), [yield](../../../csharp/language-reference/keywords/yield.md)|  
+|예외 처리 문|예외 처리 문을 사용하면 런타임 시 발생하는 예외 조건에서 정상적으로 복구할 수 있습니다. 자세한 내용은 다음 항목을 참조하세요.<br /><br /> [throw](../../../csharp/language-reference/keywords/throw.md), [try-catch](../../../csharp/language-reference/keywords/try-catch.md), [try-finally](../../../csharp/language-reference/keywords/try-finally.md), [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)|  
 |[Checked 및 Unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)|checked 및 unchecked 문을 사용하면 결과가 저장되는 변수가 너무 작아서 결과 값을 수용할 수 없는 경우 수치 연산에서 오버플로가 발생할 수 있는지 여부를 지정할 수 있습니다. 자세한 내용은 [checked](../../../csharp/language-reference/keywords/checked.md) 및 [unchecked](../../../csharp/language-reference/keywords/unchecked.md)를 참조하세요.|  
 |`await` 문|메서드에 [async](../../../csharp/language-reference/keywords/async.md) 한정자를 표시하면 메서드에서 [await](../../../csharp/language-reference/keywords/await.md) 연산자를 사용할 수 있습니다. 컨트롤이 비동기 메서드의 `await` 식에 도달하면 컨트롤이 호출자로 돌아가고 대기 중인 작업이 완료될 때까지 메서드의 진행이 일시 중단됩니다. 작업이 완료되면 메서드가 실행이 다시 시작될 수 있습니다.<br /><br /> 간단한 예제는 [메서드](../../../csharp/programming-guide/classes-and-structs/methods.md)의 "Async 메서드" 섹션을 참조하세요. 자세한 내용은 [async 및 await를 사용한 비동기 프로그래밍](../../../csharp/programming-guide/concepts/async/index.md)을 참조하세요.|  
 |`yield return` 문|반복기는 배열 목록과 같은 컬렉션에 대해 사용자 지정 반복을 수행합니다. 반복기는 [yield return](../../../csharp/language-reference/keywords/yield.md) 문을 사용하여 각 요소를 한 번에 하나씩 반환합니다. `yield return` 문에 도달하면 코드의 현재 위치가 기억됩니다. 다음에 반복기가 호출되면 해당 위치에서 실행이 다시 시작됩니다.<br /><br /> 자세한 내용은 [반복기](../../../csharp/programming-guide/concepts/iterators.md)를 참조하세요.|  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 00dc191d53d01d33a5dce3ed2d012942e2672dae
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 51bf359ea6ba4e5b45827928a50a095a7960a68f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607521"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456710"
 ---
 # <a name="shadow-copying-assemblies"></a>어셈블리 섀도 복사
 섀도 복사를 사용하면 애플리케이션 도메인을 언로드하지 않고 애플리케이션 도메인에서 사용되는 어셈블리를 업데이트할 수 있습니다. 특히 이 기능은 ASP.NET 사이트와 같이 지속적으로 제공되어야 하는 애플리케이션에 유용합니다.  
@@ -67,9 +67,9 @@ ms.locfileid: "64607521"
   
 <a name="StartupPerformance"></a>   
 ## <a name="startup-performance"></a>시작 성능  
- 섀도 복사를 사용하는 애플리케이션 도메인이 시작될 때 애플리케이션 디렉터리의 어셈블리가 섀도 복사 디렉터리로 복사되거나 이미 해당 위치에 있는지 확인되는 동안 지연이 발생합니다. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 이전에는 모든 어셈블리가 임시 디렉터리로 복사되었습니다. 각 어셈블리를 열어 어셈블리 이름을 확인하고 강력한 이름의 유효성을 검사했습니다. 각 어셈블리가 섀도 복사 디렉터리의 복사본보다 더 최근에 업데이트되었는지를 확인했습니다. 그럴 경우 섀도 복사 디렉터리로 복사되었습니다. 마지막으로 임시 복사본이 삭제되었습니다.  
+ 섀도 복사를 사용하는 애플리케이션 도메인이 시작될 때 애플리케이션 디렉터리의 어셈블리가 섀도 복사 디렉터리로 복사되거나 이미 해당 위치에 있는지 확인되는 동안 지연이 발생합니다. .NET Framework 4 이전에는 모든 어셈블리가 임시 디렉터리로 복사되었습니다. 각 어셈블리를 열어 어셈블리 이름을 확인하고 강력한 이름의 유효성을 검사했습니다. 각 어셈블리가 섀도 복사 디렉터리의 복사본보다 더 최근에 업데이트되었는지를 확인했습니다. 그럴 경우 섀도 복사 디렉터리로 복사되었습니다. 마지막으로 임시 복사본이 삭제되었습니다.  
   
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]부터 기본 시작 동작은 애플리케이션 디렉터리에 있는 각 어셈블리의 파일 날짜 및 시간을 섀도 복사 디렉터리에 있는 복사본의 파일 날짜 및 시간과 직접 비교하는 것입니다. 어셈블리가 업데이트되었으면 .NET Framework의 이전 버전에서와 같은 절차를 사용하여 복사되고, 그러지 않으면 섀도 복사 디렉터리의 복사본이 로드됩니다.  
+ .NET Framework 4부터 기본 시작 동작은 애플리케이션 디렉터리에 있는 각 어셈블리의 파일 날짜 및 시간을 섀도 복사 디렉터리에 있는 복사본의 파일 날짜 및 시간과 직접 비교하는 것입니다. 어셈블리가 업데이트되었으면 .NET Framework의 이전 버전에서와 같은 절차를 사용하여 복사되고, 그러지 않으면 섀도 복사 디렉터리의 복사본이 로드됩니다.  
   
  어셈블리가 자주 변경되지 않고 대개 어셈블리의 작은 하위 집합에서 변경이 발생하는 애플리케이션에 대한 결과 성능 향상이 가장 큽니다. 애플리케이션의 대부분 어셈블리가 자주 변경되면 새로운 기본 동작 때문에 성능이 저하될 수 있습니다. 이 경우 `enabled="false"`로 [\<shadowCopyVerifyByTimestamp> 요소](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)를 구성 파일에 추가하여 이전 버전 .NET Framework의 시작 동작을 되돌릴 수 있습니다.  
   

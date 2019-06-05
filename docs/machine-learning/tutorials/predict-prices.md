@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 05/09/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: f216c8aac37a28d5cd998ba2e406af4cfc4be686
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 40f70b6d89bf19ae0b20cb00d56e9f7dceb48f61
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882761"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377782"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>자습서: ML.NET와 함께 회귀를 사용하여 가격 예측
 
@@ -34,7 +34,7 @@ ms.locfileid: "65882761"
 
 1. "TaxiFarePrediction"이라는 **.NET Core 콘솔 애플리케이션**을 만듭니다.
 
-1. 프로젝트에서 *Data*라는 디렉터리를 만들어 데이터 세트와 모델 파일을 저장합니다.
+1. 프로젝트에서 *Data* 디렉터리를 만들어 데이터 세트와 모델 파일을 저장합니다.
 
 1. **Microsoft.ML** NuGet 패키지를 설치합니다.
 
@@ -159,6 +159,10 @@ ML.NET은 숫자 또는 텍스트 테이블 형식 데이터를 설명하는 효
 
 [Fit()](xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) 메서드는 데이터 세트를 변환하고 학습을 적용하여 모델을 학습합니다.
 
+`Train()` 메서드에서 다음 코드 줄을 사용하여 학습된 모델을 반환합니다.
+
+[!code-csharp[ReturnModel](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#12 "Return the model")]
+
 ## <a name="evaluate-the-model"></a>모델 평가
 
 다음으로, 품질 보증 및 유효성 검사를 위해 테스트 데이터로 모델 성능을 평가합니다. 다음 코드로 `Train()` 바로 뒤에 `Evaluate()` 메서드를 만듭니다.
@@ -185,7 +189,7 @@ private static void Evaluate(MLContext mlContext, ITransformer model)
 
 [!code-csharp[LoadTestDataset](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#15 "Load the test dataset")]
 
-이제 `EvaluateModel()`에 다음 코드를 추가하여 `Test`데이터를 변환합니다.
+이제 `EvaluateModel()`에 다음 코드를 추가하여 `Test` 데이터를 변환합니다.
 
 [!code-csharp[PredictWithTransformer](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#16 "Predict using the Transformer")]
 
@@ -248,7 +252,7 @@ private static void TestSinglePrediction(MLContext mlContext, ITransformer model
 
 [!code-csharp[PredictionData](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#23 "Create test data for single prediction")]
 
-다음으로, 택시 이동 데이터의 단일 인스턴스를 기준으로 요금을 예측하고 `TestSinglePrediction()` 메서드에 다음 코드 줄로 다음을 추가하여 `PredictionEngine`에 전달합니다.
+이제 택시 이동 데이터의 단일 인스턴스를 기준으로 요금을 예측하고 `TestSinglePrediction()` 메서드에 다음 코드 줄로 다음을 추가하여 `PredictionEngine`에 전달합니다.
 
 [!code-csharp[Predict](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#24 "Create a prediction of taxi fare")]
 

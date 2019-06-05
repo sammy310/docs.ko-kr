@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccea0aace05016f8e485de92d61f23622d7db797
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c6b7b120a5a21301ff82aa8ebd1cfc169f7884e4
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615152"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457441"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>가비지 수집 기본 사항
 <a name="top"></a> CLR(공용 언어 런타임)에서 가비지 수집은 자동 메모리 관리자 역할을 합니다. 가비지 수집은 다음과 같은 이점을 제공합니다.  
@@ -149,7 +149,7 @@ ms.locfileid: "64615152"
   
      2세대 수집은 여러 세그먼트를 점유할 수 있으므로 2세대로 승격된 개체는 오래된 세그먼트로 이동될 수 있습니다. 1세대 및 2세대 남은 개체는 2세대로 승격되므로 모두 다른 세그먼트로 이동될 수 있습니다.  
   
-     일반적으로 대형 개체를 복사하면 성능 저하가 발생하기 때문에 대형 개체 힙은 압축되지 않습니다. 하지만 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]부터 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> 속성을 사용하면 요구에 따라 대형 개체 힙을 압축시킬 수 있습니다.  
+     일반적으로 대형 개체를 복사하면 성능 저하가 발생하기 때문에 대형 개체 힙은 압축되지 않습니다. 하지만 .NET Framework 4.5.1부터 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> 속성을 사용하면 요구에 따라 대형 개체 힙을 압축시킬 수 있습니다.  
   
  가비지 수집기는 다음 정보를 사용하여 개체가 활성 개체인지 여부를 판단합니다.  
   
@@ -253,7 +253,7 @@ ms.locfileid: "64615152"
  백그라운드 가비지 수집에서 임시 세대(0세대 및 1세대)는 2세대 수집이 진행되는 동안 필요에 따라 수집됩니다. 백그라운드 가비지 수집은 동시 가비지 수집에서 자동으로 활성화되며 사용자가 설정할 부분이 없습니다. 백그라운드 가비지 수집은 동시 가비지 수집을 대체합니다. 백그라운드 가비지 수집은 동시 가비지 수집과 마찬가지로 전용 스레드에서 수행되며 2세대 수집에만 적용될 수 있습니다.  
   
 > [!NOTE]
->  백그라운드 가비지 수집은 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 이상 버전에서만 사용할 수 있습니다. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서는 워크스테이션 가비지 수집의 경우에만 지원됩니다. .NET Framework 4.5부터 백그라운드 가비지 수집이 워크스테이션과 서버 가비지 수집 모두에서 가능합니다.  
+>  백그라운드 가비지 수집은 .NET Framework 4 이상 버전에서만 사용할 수 있습니다. .NET Framework 4에서는 워크스테이션 가비지 수집의 경우에만 지원됩니다. .NET Framework 4.5부터 백그라운드 가비지 수집이 워크스테이션과 서버 가비지 수집 모두에서 가능합니다.  
   
  백그라운드 가비지 수집 중의 임시 세대 수집을 포그라운드 가비지 수집이라고 합니다. 포그라운드 가비지 수집이 발생하면 모든 관리되는 스레드가 일시 중단됩니다.  
   

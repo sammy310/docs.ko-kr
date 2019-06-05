@@ -1,15 +1,15 @@
 ---
 title: 판매 변칙 검색 시나리오에서 ML.NET 사용
 description: 변칙 급증과 적절한 조치를 취해야 할 변화점에 대한 데이터 분석 방법을 이해하기 위해 판매 변칙 검색 시나리오에서 ML.NET 사용 방법에 대해 알아보세요.
-ms.date: 05/06/2019
+ms.date: 05/29/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 39e812facccfa75d1643704f8960a387a70c94bc
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d31765aa4ff2a0be9c4f140f33de1f5678fc7612
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641140"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423902"
 ---
 # <a name="tutorial-use-mlnet-for-product-sales-anomaly-detection"></a>자습서: 제품 판매 변칙 검색에 ML.NET 사용 
 
@@ -173,7 +173,7 @@ static void DetectSpike(MLContext mlContext, int docSize, IDataView productSales
 
 [!code-csharp[AddSpikeTrainer](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddSpikeTrainer)]
 
-모델을 `productSales` 데이터에 맞추고 `DetectSpike()` 메서드에서 다음 줄의 코드로 다음 항목을 추가하여 학습된 모델을 반환합니다.
+`DetectSpike()` 메서드에서 다음 코드 줄로 다음 항목을 추가하여 모델을 `productSales` 데이터에 맞춥니다.
 
 [!code-csharp[TrainModel1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TrainModel1)]
 
@@ -283,7 +283,7 @@ static void DetectChangepoint(MLContext mlContext, int docSize, IDataView produc
 
 [!code-csharp[AddChangepointTrainer](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddChangepointTrainer)]
 
-이전에 했던 것처럼, 모델을 `productSales` 데이터에 맞추고 `DetectChangePoint()` 메서드에서 다음 줄의 코드로 다음 항목을 추가하여 학습된 모델을 반환합니다.
+이전에 했던 것처럼 `DetectChangePoint()` 메서드에서 다음 코드 줄로 다음 항목을 추가하여 모델을 `productSales` 데이터에 맞춥니다.
 
 [!code-csharp[TrainModel2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TrainModel2)]
 

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 1c4de9d7-9aba-427a-8f38-0ab9bfb8f85e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e75b838a2c6126fe82e97faac624a9ad6b7ea132
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f8811fd916afcb39c466b8c9a60f7c7ed2a62ea8
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626226"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301428"
 ---
 # <a name="mitigation-product-versioning"></a>완화: 제품 버전 관리
-[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 및 이상에서, 제품 버전 관리가 .NET Framework(.NET Framework 4, 4.5, 4.5.1 및 4.5.2)의 이전 릴리스에서 변경되었습니다.  
+.NET Framework 4.6 이상에서, 제품 버전 관리가 .NET Framework(.NET Framework 4, 4.5, 4.5.1 및 4.5.2)의 이전 릴리스에서 변경되었습니다.  
   
 ## <a name="product-versioning-changes"></a>제품 버전 관리 변경 내용  
  자세한 변경 내용은 다음과 같습니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "64626226"
   
 - 관리되는 어셈블리의 <xref:System.Reflection.AssemblyFileVersionAttribute> 및 <xref:System.Reflection.AssemblyInformationalVersionAttribute> 특성은 .NET Framework 4.6 및 해당 포인트 릴리스의 경우 `4.6.X.0` 형식, 그리고 .NET Framework 4.7의 경우에는 `4.7.X.0` 형식의 <xref:System.Version> 값을 포함합니다.  
   
-- [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1, 4.6.2 및 4.7에서 <xref:System.Environment.Version%2A?displayProperty=nameWithType> 속성은 최종 버전 문자열 `4.0.30319.42000`을 반환합니다. .NET Framework 4, 4.5, 4.5.1 및 4.5.2에서는 버전 문자열을 `4.0.30319.xxxxx` 형식(예: "4.0.30319.18010")으로 반환합니다. <xref:System.Environment.Version%2A?displayProperty=nameWithType> 속성에서 새 종속성을 취하는 애플리케이션 코드는 권장하지 않습니다.  
+- .NET Framework 4.6, 4.6.1, 4.6.2 및 4.7에서 <xref:System.Environment.Version%2A?displayProperty=nameWithType> 속성은 최종 버전 문자열 `4.0.30319.42000`을 반환합니다. .NET Framework 4, 4.5, 4.5.1 및 4.5.2에서는 버전 문자열을 `4.0.30319.xxxxx` 형식(예: "4.0.30319.18010")으로 반환합니다. <xref:System.Environment.Version%2A?displayProperty=nameWithType> 속성에서 새 종속성을 취하는 애플리케이션 코드는 권장하지 않습니다.  
   
 ### <a name="handling-the-product-versioning-changes"></a>제품 버전 관리 변경 내용 처리  
  일반적으로 애플리케이션은 .NET Framework 및 설치 디렉터리 검색의 런타임 버전과 같은 항목 검색을 위한 권장 기술에 의존해야 합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "64626226"
   
 - .NET Framework 공용 언어 런타임에 대한 디렉터리 경로를 확인하려면 <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetRuntimeDirectory%2A?displayProperty=nameWithType> 메서드를 호출합니다.  
   
-- CLR 버전을 알아보려면 <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetSystemVersion%2A?displayProperty=nameWithType> 메서드를 호출합니다.   .NET Framework 4 및 해당 포인트 릴리스(.NET Framework 4.5, 4.5.1, 4.5.2, [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1, 4.6.2 및 4.7)에 대해 `v4.0.30319` 문자열을 반환합니다.  
+- CLR 버전을 알아보려면 <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetSystemVersion%2A?displayProperty=nameWithType> 메서드를 호출합니다.   .NET Framework 4 및 해당 지점 릴리스(.NET Framework 4.5, 4.5.1, 4.5.2 및 .NET Framework 4.6, 4.6.1, 4.6.2 및 4.7)의 경우 문자열 `v4.0.30319`를 반환합니다.  
   
 ## <a name="see-also"></a>참고 항목
 

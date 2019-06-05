@@ -2,12 +2,12 @@
 title: Polly를 통해 지수 백오프를 사용하여 HTTP 호출 다시 시도 구현
 description: Polly와 HttpClientFactory를 사용하여 HTTP 오류를 처리하는 방법을 알아봅니다.
 ms.date: 01/07/2019
-ms.openlocfilehash: 9ffb0d918dc2efdc41d6c2db2e2141d14061b687
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: aa500b5525eff9f0bbf91bf98de8945f7c84704f
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053109"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301482"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>HttpClientFactory 및 Polly 정책을 통해 지수 백오프를 사용하여 HTTP 호출 다시 시도 구현
 
@@ -69,16 +69,16 @@ Policy
 
 ## <a name="additional-resources"></a>추가 자료
 
-- **패턴 다시 시도**\
+- **패턴 다시 시도**  
   [https://docs.microsoft.com/azure/architecture/patterns/retry](/azure/architecture/patterns/retry)
 
-- **Polly 및 HttpClientFactory**\
+- **Polly 및 HttpClientFactory**  
   <https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory>
 
-- **Polly(.NET 복원력 및 transient-fault-handling 라이브러리)**\
+- **Polly(.NET 복원력 및 transient-fault-handling 라이브러리)**  
   <https://github.com/App-vNext/Polly>
 
-- **Marc Brooker. 지터: 임의성으로 더 효율적인 지터 만들기**\
+- **Marc Brooker. 지터: 임의성으로 작업을 더 효율적인 만들기**  
   <https://brooker.co.za/blog/2015/03/21/backoff.html>
 
 >[!div class="step-by-step"]

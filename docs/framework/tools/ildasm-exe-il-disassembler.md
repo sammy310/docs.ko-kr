@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a785401f0477131e6ebf0e9c04ce6d0b0b4d4f5c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dfc55bcd97a6c1d68d4ce900b19ace7356d6ee92
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517540"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378564"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe(IL 디스어셈블러)
 
@@ -53,7 +53,7 @@ ildasm [options] [PEfilename] [options]
 |**/linenum**|원본 소스 줄에 대한 참조를 포함합니다.|
 |**/nobar**|디스어셈블리 진행률 표시줄 팝업 창을 표시하지 않습니다.|
 |**/noca**|사용자 지정 특성 출력을 생성하지 않습니다.|
-|**/project**|메타데이터를 기본 [!INCLUDE[wrt](../../../includes/wrt-md.md)]에서 표시되는 방식 대신에 관리되는 코드에 표시되는 방식대로 표시합니다. 만약 `PEfilename`이 Windows 메타데이터(*.winmd*) 파일이 아니라면, 이 옵션은 효과가 없습니다. [Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)을 참조하세요.|
+|**/project**|메타데이터를 기본 [!INCLUDE[wrt](../../../includes/wrt-md.md)]에서 표시되는 방식 대신에 관리되는 코드에 표시되는 방식대로 표시합니다. 만약 `PEfilename`이 Windows 메타데이터( *.winmd*) 파일이 아니라면, 이 옵션은 효과가 없습니다. [Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)을 참조하세요.|
 |**/pubonly**|공용 형식 및 멤버만 디스어셈블합니다. **/visibility:PUB**와 같습니다.|
 |**/quoteallnames**|모든 이름을 작은따옴표 내에 포함시킵니다.|
 |**/raweh**|예외 처리 절을 원시 형식으로 표시합니다.|
@@ -69,7 +69,7 @@ ildasm [options] [PEfilename] [options]
 |**/classlist**|모듈에 정의된 클래스 목록을 포함합니다.|
 |**/forward**|정방향 클래스 선언을 사용합니다.|
 |**/headers**|출력에 파일 헤더 정보를 포함시킵니다.|
-|**/item:** `class`[**::** `member`[`(sig`]]|지정된 인수에 따라 다음과 같이 디스어셈블합니다.<br /><br /> -   지정된 `class`를 디스어셈블합니다.<br />-   지정된 `class`의 `member`를 디스어셈블합니다.<br />-   지정된 시그니처 `sig`가 포함된 `class`의 `member`를 디스어셈블합니다. `sig` 형식은 다음과 같습니다.<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **참고** .NET Framework 버전 1.0 및 1.1에서는 `(sig)`와 같이 `sig` 다음에 닫는 괄호가 있어야 합니다. .Net Framework 2.0부터는 `(sig`와 같이 닫는 괄호를 생략해야 합니다.|
+|**/item:** `class`[ **::** `member`[`(sig`]]|지정된 인수에 따라 다음과 같이 디스어셈블합니다.<br /><br /> -   지정된 `class`를 디스어셈블합니다.<br />-   지정된 `class`의 `member`를 디스어셈블합니다.<br />-   지정된 시그니처 `sig`가 포함된 `class`의 `member`를 디스어셈블합니다. `sig` 형식은 다음과 같습니다.<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **참고** .NET Framework 버전 1.0 및 1.1에서는 `(sig)`와 같이 `sig` 다음에 닫는 괄호가 있어야 합니다. .Net Framework 2.0부터는 `(sig`와 같이 닫는 괄호를 생략해야 합니다.|
 |**/noil**|IL 어셈블리 코드 출력을 표시하지 않습니다.|
 |**/stats**|이미지에 대한 통계를 포함합니다.|
 |**/typelist**|라운드트립에서 형식 순서를 유지하기 위해 전체 형식 목록을 생성합니다.|
@@ -111,7 +111,7 @@ IL 디스어셈블러의 기본 GUI를 사용하면 계층 구조 트리 뷰에�
 
 ## <a name="version-information"></a>버전 정보
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]부터 제공되는 *Ildasm.exe*는 원시 이진 콘텐츠를 표시하여 인식할 수 없는 마샬 BLOB(Binary Large Object)을 처리합니다. 예를 들어, 다음 코드는 C# 프로그램에서 생성된 마샬 BLOB가 표시되는 방법을 보여 줍니다.
+.NET Framework 4.5부터 제공되는 *Ildasm.exe*는 원시 이진 콘텐츠를 표시하여 인식할 수 없는 마샬 BLOB(Binary Large Object)을 처리합니다. 예를 들어, 다음 코드는 C# 프로그램에서 생성된 마샬 BLOB가 표시되는 방법을 보여 줍니다.
 
 ```csharp
 public void Test([MarshalAs((short)70)] int test) { }
@@ -122,7 +122,7 @@ public void Test([MarshalAs((short)70)] int test) { }
 .method public hidebysig instance void Test(int32  marshal({ 46 }) test) cil managed
 ```
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]부터 제공되는 *Ildasm.exe*는 *Ildasm.exe* 출력에서 발췌한 다음 예제에서와 같이 인터페이스 구현에 적용되는 특성을 표시합니다.
+.NET Framework 4.5부터 제공되는 *Ildasm.exe*는 *Ildasm.exe* 출력에서 발췌한 다음 예제에서와 같이 인터페이스 구현에 적용되는 특성을 표시합니다.
 
 ```
 .class public auto ansi beforefieldinit MyClass

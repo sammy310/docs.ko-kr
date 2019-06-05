@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: a0bb52de-d279-419d-8f23-4b12d1a3f36e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6799e36ec312bf857a12293dc0be15e9cc21f55
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e41a51dcdf243091d3962278f1a59a85a2722894
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648463"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251125"
 ---
 # <a name="mitigation-path-colon-checks"></a>완화: 경로 콜론 검사
-[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]를 대상으로 하는 앱부터 이전에 지원되지 않던 경로를 지원하도록 여러 가지 변경이 수행되었습니다(길이 및 형식 측면에서). 특히 적절한 드라이브 구분 기호 구문(콜론)에 대한 확인이 좀 더 정확해졌습니다.  
+.NET Framework 4.6.2를 대상으로 하는 앱부터 이전에 지원되지 않던 경로를 지원하도록 여러 가지 변경이 수행되었습니다(길이 및 형식 측면에서). 특히 적절한 드라이브 구분 기호 구문(콜론)에 대한 확인이 좀 더 정확해졌습니다.  
   
 ## <a name="impact"></a>영향  
  이러한 변경으로 인해 <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> 및 <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> 메서드에서 이전에 지원했던 일부 URI 경로가 차단됩니다.  

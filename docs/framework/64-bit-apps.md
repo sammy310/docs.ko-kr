@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bad0abdba4c14659fdfa9b8064ebb8203100b33
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6e10682dbf5615f9d1ef345cf2c7eeeafa87ec28
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607881"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377981"
 ---
 # <a name="64-bit-applications"></a>64비트 애플리케이션
 애플리케이션을 컴파일할 때 Windows 64비트 운영 체제에서 네이티브 애플리케이션으로 실행되거나 WOW64(Windows 64비트 기반 Windows 32비트)를 통해 실행되도록 지정할 수 있습니다. WOW64는 32비트 애플리케이션이 64비트 시스템에서 실행되도록 하는 호환성 환경입니다. WOW64는 Windows 운영 체제의 모든 64비트 버전에 포함됩니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "64607881"
 > [!NOTE]
 >  Itanium 프로세서 제품군용 x86 에뮬레이션 및 WOW64 하위 시스템의 설계 때문에 애플리케이션은 한 프로세서에서 실행되도록 제한됩니다. 이들 요소 때문에 Itanium 기반 시스템에서 실행되는 32비트 .NET Framework 애플리케이션의 성능과 확장성이 감소합니다. 성능과 확장성을 높이려면 Itanium 기반 시스템에 대한 네이티브 64비트 지원이 포함된 [!INCLUDE[net_v40_long](../../includes/net-v40-long-md.md)]을(를) 사용하는 것이 좋습니다.  
   
- 기본적으로 64비트 관리되는 애플리케이션을 64비트 Windows 운영 체제에서 실행할 때 2GB 이하 개체를 만들 수 있습니다. 그러나 [!INCLUDE[net_v45](../../includes/net-v45-md.md)]에서는 이 제한을 늘릴 수 있습니다.  자세한 내용은 [\<gcAllowVeryLargeObjects> 요소](../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)를 참조하세요.  
+ 기본적으로 64비트 관리되는 애플리케이션을 64비트 Windows 운영 체제에서 실행할 때 2GB 이하 개체를 만들 수 있습니다. 그러나 .NET Framework 4.5에서는 이 제한을 늘릴 수 있습니다.  자세한 내용은 [\<gcAllowVeryLargeObjects> 요소](../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)를 참조하세요.  
   
  대부분 어셈블리는 32비트 CLR 및 64비트 CLR에서 둘 다 똑같이 실행됩니다. 그러나 일부 응용 프로그램은 다음의 하나 이상을 포함할 경우 CLR에 따라 다르게 동작할 수 있습니다.  
   

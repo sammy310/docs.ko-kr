@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fa4b8fdd56ed8a1304b6ee436ce3391c52ae7b9d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 44e5f52ce2bfe03247ab25bb48607ae313523ff0
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622732"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456859"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>제네릭의 공 분산과 반공 분산
 <a name="top"></a> 공변성(Covariance)과 반공변성(Contravariance)은 원래 지정된 것보다 더 많이 파생되거나(더 구체적인) 더 적게 파생된 형식(덜 구체적인)을 사용할 수 있는 능력을 지칭하는 용어입니다. 제네릭 형식 매개 변수는 더욱 유연하게 제네릭 형식을 할당하고 사용할 수 있도록 공변성과 반공변성을 지원합니다. 형식 시스템을 참조할 때 공변성, 반공변성 및 불변성의 정의는 다음과 같습니다. 이 예제에서는 `Base` 라는 기본 클래스와 `Derived`라는 파생 클래스가 있는 것으로 가정합니다.  
@@ -81,7 +81,7 @@ ms.locfileid: "64622732"
   
 <a name="InterfaceCovariantTypeParameters"></a>   
 ## <a name="generic-interfaces-with-covariant-type-parameters"></a>공변 형식 매개 변수가 있는 제네릭 인터페이스  
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]부터는 여러 제네릭 인터페이스에 공변 형식 매개 변수가 있습니다(예: <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.Generic.IEnumerator%601>, <xref:System.Linq.IQueryable%601>, <xref:System.Linq.IGrouping%602>). 이러한 인터페이스의 모든 형식 매개 변수는 공변성이므로, 형식 매개 변수는 멤버의 반환 형식에만 사용됩니다.  
+ .NET Framework 4부터는 여러 제네릭 인터페이스에 공변 형식 매개 변수가 있습니다(예: <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.Generic.IEnumerator%601>, <xref:System.Linq.IQueryable%601>및 <xref:System.Linq.IGrouping%602>). 이러한 인터페이스의 모든 형식 매개 변수는 공변성이므로, 형식 매개 변수는 멤버의 반환 형식에만 사용됩니다.  
   
  다음 예제에서는 공변 형식 매개 변수를 사용하는 방법을 보여 줍니다. 이 예제에서는 두 가지 형식을 정의합니다. 그중 하나인 `Base` 에는 `PrintBases` (Visual Basic의 경우 `IEnumerable<Base>` )를 취하고 요소를 출력하는`IEnumerable(Of Base)` 라는 정적 메서드가 있습니다. `Derived` 는 `Base`에서 상속됩니다. 이 예제에서는 빈 `List<Derived>` (Visual Basic의 경우`List(Of Derived)` )를 만든 다음 이 형식을 캐스팅하지 않은 채 `PrintBases` 에 전달하고 `IEnumerable<Base>` 형식의 변수에 할당하는 방법을 보여 줍니다. <xref:System.Collections.Generic.List%601> 은 단일 공변 형식 매개 변수가 있는 <xref:System.Collections.Generic.IEnumerable%601>을 구현합니다. `IEnumerable<Derived>` 의 인스턴스를 `IEnumerable<Base>`대신 사용할 수 있는 것은 공변 형식 매개 변수 때문입니다.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "64622732"
   
 <a name="InterfaceContravariantTypeParameters"></a>   
 ## <a name="generic-interfaces-with-contravariant-generic-type-parameters"></a>반공변 제네릭 형식 매개 변수가 있는 제네릭 인터페이스  
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]부터는 <xref:System.Collections.Generic.IComparer%601>, <xref:System.IComparable%601>및 <xref:System.Collections.Generic.IEqualityComparer%601>같은 여러 제네릭 인터페이스에서 반공변 형식 매개 변수를 사용합니다. 이러한 인터페이스에는 반공변 형식 매개 변수만 있으므로 형식 매개 변수가 인터페이스 멤버의 매개 변수 형식으로만 사용됩니다.  
+ .NET Framework 4부터는 여러 제네릭 인터페이스에 반공변 형식 매개 변수가 있습니다(예: <xref:System.Collections.Generic.IComparer%601>, <xref:System.IComparable%601> 및 <xref:System.Collections.Generic.IEqualityComparer%601>). 이러한 인터페이스에는 반공변 형식 매개 변수만 있으므로 형식 매개 변수가 인터페이스 멤버의 매개 변수 형식으로만 사용됩니다.  
   
  다음 예제에서는 반공변 형식 매개 변수를 사용하는 방법을 보여 줍니다. 이 예제에서는`MustInherit` 속성을 사용하여 추상(Visual Basic의 경우 `Shape` ) `Area` 클래스를 정의합니다. 이 예제에서는 또한 `ShapeAreaComparer` (Visual Basic의 경우 `IComparer<Shape>` )를 구현하는`IComparer(Of Shape)` 클래스를 정의합니다. <xref:System.Collections.Generic.IComparer%601.Compare%2A?displayProperty=nameWithType> 메서드 구현은 `Area` 속성의 값을 기반으로 하므로 `ShapeAreaComparer` 를 사용하여 `Shape` 개체를 영역별로 정렬할 수 있습니다.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "64622732"
   
 <a name="DelegateVariantTypeParameters"></a>   
 ## <a name="generic-delegates-with-variant-type-parameters"></a>variant 형식 매개 변수가 있는 제네릭 대리자  
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서는 `Func` 같은 <xref:System.Func%602>제네릭 대리자가 공변 반환 형식과 반공변 매개 변수 형식을 사용합니다. `Action` 같은 <xref:System.Action%602>제네릭 대리자는 반공변 매개 변수 형식을 사용합니다. 즉, 더 많이 파생된 매개 변수 형식과 더 적게 파생된 반환 형식( `Func` 제네릭 대리자의 경우)이 있는 변수에 대리자를 할당할 수 있습니다.  
+ .NET Framework 4에서는 <xref:System.Func%602> 같은 `Func` 제네릭 대리자가 공변 반환 형식과 반공변 매개 변수 형식을 사용합니다. `Action` 같은 <xref:System.Action%602>제네릭 대리자는 반공변 매개 변수 형식을 사용합니다. 즉, 더 많이 파생된 매개 변수 형식과 더 적게 파생된 반환 형식( `Func` 제네릭 대리자의 경우)이 있는 변수에 대리자를 할당할 수 있습니다.  
   
 > [!NOTE]
 >  `Func` 제네릭 대리자의 마지막 제네릭 형식 매개 변수는 대리자 시그니처에 반환 값의 형식을 지정합니다. 이 제네릭 형식 매개 변수는 공변(`out` 키워드)인 반면 다른 한 제네릭 형식 매개 변수는 반공변(`in` 키워드)입니다.  
@@ -146,12 +146,12 @@ ms.locfileid: "64622732"
   
 <a name="DefiningVariantTypeParameters"></a>   
 ## <a name="defining-variant-generic-interfaces-and-delegates"></a>variant 제네릭 인터페이스 및 대리자 정의  
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]부터는 Visual Basic과 C#에서 인터페이스와 대리자의 제네릭 형식 매개 변수를 공변 또는 반공변으로 표시하는 데 사용할 수 있는 키워드를 제공합니다.  
+ .NET Framework 4부터는 Visual Basic과 C#에서 인터페이스와 대리자의 제네릭 형식 매개 변수를 공변 또는 반공변으로 표시하는 데 사용할 수 있는 키워드를 제공합니다.  
   
 > [!NOTE]
->  .NET Framework 버전 2.0부터는 공용 언어 런타임에서 제네릭 형식 매개 변수에 대한 가변성 주석을 지원합니다. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 이전에서는 이러한 주석이 있는 제네릭 클래스를 정의하는 유일한 방법이 MSIL(Microsoft Intermediate Language)을 사용하여 [Ilasm.exe (IL 어셈블러)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)로 클래스를 컴파일하거나 동적 어셈블리에 클래스를 내보내는 것입니다.  
+>  .NET Framework 버전 2.0부터는 공용 언어 런타임에서 제네릭 형식 매개 변수에 대한 가변성 주석을 지원합니다. .NET Framework 4 이전에서는 이러한 주석이 있는 제네릭 클래스를 정의하는 유일한 방법이 MSIL(Microsoft Intermediate Language)을 사용하여 [Ilasm.exe (IL 어셈블러)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)로 클래스를 컴파일하거나 동적 어셈블리에 클래스를 내보내는 것입니다.  
   
- 공변 형식 매개 변수는 `out` 키워드(Visual Basic의 경우 `Out` 키워드, [MSIL 어셈블러](../../../docs/framework/tools/ilasm-exe-il-assembler.md)의 경우 `+`)로 표시됩니다. 공변 형식 매개 변수는 인터페이스에 속하는 메서드의 반환 값이나 대리자의 반환 형식으로 사용할 수 있지만 인터페이스 메서드에 대한 제네릭 형식 제약 조건으로는 사용할 수 없습니다.  
+ 공변 형식 매개 변수는 `out` 키워드(Visual Basic의 경우`Out` 키워드, `+` MSIL 어셈블러 [의 경우](../../../docs/framework/tools/ilasm-exe-il-assembler.md))로 표시됩니다. 공변 형식 매개 변수는 인터페이스에 속하는 메서드의 반환 값이나 대리자의 반환 형식으로 사용할 수 있지만 인터페이스 메서드에 대한 제네릭 형식 제약 조건으로는 사용할 수 없습니다.  
   
 > [!NOTE]
 >  인터페이스의 메서드에 제네릭 대리자 형식인 매개 변수가 있으면 인터페이스 형식의 공변 형식 매개 변수를 사용하여 대리자 형식의 반공변 형식 매개 변수를 지정할 수 있습니다.  
@@ -168,7 +168,7 @@ ms.locfileid: "64622732"
   
 <a name="VariantList"></a>   
 ## <a name="list-of-variant-generic-interface-and-delegate-types"></a>variant 제네릭 인터페이스 및 대리자 형식의 목록  
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서는 다음 인터페이스 및 대리자 형식에서 공변 및/또는 반공변 형식 매개 변수를 사용합니다.  
+ .NET Framework 4에서는 다음 인터페이스 및 대리자 형식에서 공변 및/또는 반공변 형식 매개 변수를 사용합니다.  
   
 |형식|공변 형식 매개 변수|반공변 형식 매개 변수|  
 |----------|-------------------------------|-----------------------------------|  
