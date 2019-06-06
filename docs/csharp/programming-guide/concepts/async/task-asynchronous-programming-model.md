@@ -155,7 +155,7 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
   
 -   표시된 비동기 메서드는 이 메서드를 호출한 다른 메서드에 의해 대기할 수 있습니다.  
   
-비동기 메서드는 일반적으로 `await` 연산자를 하나 이상 가지고 있지만, `await` 식이 없을 경우 컴파일러 오류가 발생하지 않습니다. 비동기 메서드에서 `await` 연산자를 사용하여 일시 중단 시점을 표시하지 않는 경우 메서드가 `async` 한정자에 상관없이 동기 메서드가 실행되는 방식으로 실행됩니다. 컴파일러는 해당 메서드에 대해 경고를 표시합니다.  
+비동기 메서드는 일반적으로 `await` 연산자를 하나 이상 가지고 있지만, `await` 식이 없는 경우 컴파일러 오류가 발생하지는 않습니다. 비동기 메서드에서 `await` 연산자를 사용하여 일시 중단 시점을 표시하지 않는 경우 메서드가 `async` 한정자에 상관없이 동기 메서드가 실행되는 방식으로 실행됩니다. 컴파일러는 해당 메서드에 대해 경고를 표시합니다.
   
  `async` 및 `await`은 상황별 키워드입니다. 자세한 내용과 예제는 다음 항목을 참조하세요.  
   
@@ -208,11 +208,11 @@ await GetTaskAsync();
   
 비동기 메서드의 반환 형식은 `void`일 수 있습니다. 이 반환 형식은 기본적으로 `void` 반환 형식이 필요할 때 이벤트 처리기를 정의하는 데 사용합니다. 비동기 이벤트 처리기는 비동기 프로그램의 시작점 역할을 하는 경우가 많습니다.  
   
-`void` 반환 형식을 가진 비동기 메서드는 대기할 수 없습니다. 또한 void를 반환하는 메서드의 호출자는 메서드가 throw하는 예외를 처리할 수 없습니다.  
+`void` 반환 형식을 가진 비동기 메서드는 대기할 수 없습니다. 또한 void를 반환하는 메서드의 호출자는 메서드가 throw하는 예외를 catch할 수 없습니다. 
   
 비동기 메서드는 모든 [in](../../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../../csharp/language-reference/keywords/ref.md) 또는 [out](../../../../csharp/language-reference/keywords/out-parameter-modifier.md) 매개 변수를 선언할 수 없지만, 이러한 매개 변수가 있는 메서드를 호출할 수는 있습니다. 마찬가지로 비동기 메서드는 참조 반환 값을 사용하여 메서드를 호출할 수 있지만 참조를 통해 값을 반환할 수 없습니다. 
   
-자세한 내용과 예제는 [비동기 반환 형식(C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)을 참조하세요. 비동기 메서드에서 예외 처리하는 방법에 대한 자세한 내용은 [try-catch](../../../../csharp/language-reference/keywords/try-catch.md)를 참조하세요. 
+자세한 내용과 예제는 [비동기 반환 형식(C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)을 참조하세요. 비동기 메서드에서 예외를 처리하는 방법에 대한 자세한 내용은 [try-catch](../../../../csharp/language-reference/keywords/try-catch.md)를 참조하세요. 
   
 Windows 런타임 프로그래밍의 비동기 API에는 작업과 유사한 다음 반환 형식 중 하나가 있습니다.  
   
