@@ -6,19 +6,19 @@ helpviewer_keywords:
 - XAML [XAML Services], System.Xaml and WPF
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
-ms.openlocfilehash: e39c4ca5e4a6563a94fbf6f386283053a197f5ce
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: ea8ab81b192e0e8cb40988cb67cce08a7d9dab82
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690666"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722582"
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>WPF에서 System.Xaml로 마이그레이션된 형식
 .NET Framework 3.5에서 및 [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)]모두 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 및 Windows Workflow Foundation XAML 언어 구현이 포함 되었습니다. WPF XAML 구현에 대해 확장성을 제공한 공용 형식은 대부분 WindowsBase, PresentationCore 및 PresentationFramework 어셈블리에 있었습니다. 마찬가지로,을 Windows Workflow Foundation XAML에 대 한 확장성을 제공한 공용 형식은 System.Workflow.ComponentModel 어셈블리에 존재 합니다. .NET Framework 4는 XAML 관련 형식 중 일부가 System.Xaml 어셈블리로 마이그레이션됩니다. XAML 언어 서비스는 일반적인.NET Framework 구현은 원래 특정 프레임 워크의 XAML 구현에서 정의 된 전체.NET Framework 4 XAML 언어 지원의 일부인 이제는 많은 XAML 확장성 시나리오를 수 있습니다. 이 항목에서는 마이그레이션되는 형식을 나열하고 마이그레이션과 관련된 문제를 논의합니다.  
   
 <a name="assemblies_and_namespaces"></a>   
 ## <a name="assemblies-and-namespaces"></a>어셈블리 및 네임스페이스  
- .NET Framework 3.5에서 및 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)], WPF XAML을 지원 하기 위해 구현 하는 형식에 일반적으로 된를 <xref:System.Windows.Markup> 네임 스페이스입니다. 이러한 형식은 대부분 WindowsBase 어셈블리에 있었습니다.  
+ .NET Framework 3.5 및.NET Framework 3.0에서는 WPF XAML을 지원 하기 위해 구현 하는 형식에 일반적으로 된를 <xref:System.Windows.Markup> 네임 스페이스입니다. 이러한 형식은 대부분 WindowsBase 어셈블리에 있었습니다.  
   
  .NET Framework 4의 새로운 <xref:System.Xaml> 네임 스페이스와 새로운 System.Xaml 어셈블리가 있습니다. 원래 WPF XAML에 대해 구현된 많은 형식이 이제 XAML 구현에 대한 확장성 지점 또는 서비스로 제공됩니다. 보다 일반적인 시나리오에 사용할 수 있도록 하는 작업의 일부로 원래의 WPF 어셈블리에서 System.Xaml 어셈블리로 형식이 전달됩니다. 이 다른 프레임 워크 (예: WPF 및 Windows Workflow Foundation)의 어셈블리를 포함 하지 않고 XAML 확장성 시나리오를 통해.  
   
@@ -37,11 +37,11 @@ ms.locfileid: "66690666"
   
 <a name="markupextension"></a>   
 ## <a name="markupextension"></a>MarkupExtension  
- .NET Framework 3.5에서 및 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)], <xref:System.Windows.Markup.MarkupExtension> WPF가 WindowsBase 어셈블리에 대 한 클래스입니다. Windows Workflow Foundation에 대 한 병렬 클래스 <xref:System.Workflow.ComponentModel.Serialization.MarkupExtension>은 System.Workflow.ComponentModel 어셈블리에 있었습니다. .NET Framework 4에서는 <xref:System.Windows.Markup.MarkupExtension> 클래스 System.Xaml 어셈블리로 마이그레이션. .NET Framework 4에서는 <xref:System.Windows.Markup.MarkupExtension> 특정 프레임 워크에서 빌드된에 뿐 아니라.NET Framework XAML 서비스를 사용 하는 모든 XAML 확장성 시나리오를 위한 것입니다. 가능한 경우 특정 프레임워크 또는 프레임워크의 사용자 코드도 XAML 확장에 대한 <xref:System.Windows.Markup.MarkupExtension> 클래스에서 빌드되어야 합니다.  
+ .NET Framework 3.5 및.NET Framework 3.0에는 <xref:System.Windows.Markup.MarkupExtension> WPF가 WindowsBase 어셈블리에 대 한 클래스입니다. Windows Workflow Foundation에 대 한 병렬 클래스 <xref:System.Workflow.ComponentModel.Serialization.MarkupExtension>은 System.Workflow.ComponentModel 어셈블리에 있었습니다. .NET Framework 4에서는 <xref:System.Windows.Markup.MarkupExtension> 클래스 System.Xaml 어셈블리로 마이그레이션. .NET Framework 4에서는 <xref:System.Windows.Markup.MarkupExtension> 특정 프레임 워크에서 빌드된에 뿐 아니라.NET Framework XAML 서비스를 사용 하는 모든 XAML 확장성 시나리오를 위한 것입니다. 가능한 경우 특정 프레임워크 또는 프레임워크의 사용자 코드도 XAML 확장에 대한 <xref:System.Windows.Markup.MarkupExtension> 클래스에서 빌드되어야 합니다.  
   
 <a name="markupextension_supporting_service_classes"></a>   
 ## <a name="markupextension-supporting-service-classes"></a>MarkupExtension 지원 서비스 클래스  
- .NET framework 3.5 및 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] WPF를 사용할 수 있었던 여러 서비스에 대 한 <xref:System.Windows.Markup.MarkupExtension> 구현자 및 <xref:System.ComponentModel.TypeConverter> XAML에서 형식/속성 사용을 지원 하기 위해 구현 합니다. 이러한 서비스는 다음과 같습니다.  
+ .NET framework 3.5 및 WPF에 대 한.NET Framework 3.0을 사용할 수 있었던 여러 서비스를 제공 <xref:System.Windows.Markup.MarkupExtension> 구현자 및 <xref:System.ComponentModel.TypeConverter> XAML에서 형식/속성 사용을 지원 하기 위해 구현 합니다. 이러한 서비스는 다음과 같습니다.  
   
 - <xref:System.Windows.Markup.IProvideValueTarget>  
   
@@ -69,11 +69,11 @@ ms.locfileid: "66690666"
   
 <a name="valueserializer_and_supporting_classes"></a>   
 ## <a name="valueserializer-and-supporting-classes"></a>ValueSerializer 및 지원 클래스  
- <xref:System.Windows.Markup.ValueSerializer> 클래스는 특히 직렬화 시 출력에 여러 모드 또는 노드가 필요할 수 있는 XAML 직렬화 사례를 위해 문자열로의 형식 변환을 지원합니다. .NET Framework 3.5에서 및 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)], <xref:System.Windows.Markup.ValueSerializer> WPF가 WindowsBase 어셈블리에 대 한 합니다. .NET Framework 4에서는 <xref:System.Windows.Markup.ValueSerializer> 클래스 system.xaml 및 WPF에서 빌드된 위한 뿐 아니라 모든 XAML 확장성 시나리오에 대 한 것입니다. <xref:System.Windows.Markup.IValueSerializerContext> (지원 서비스) 및 <xref:System.Windows.Markup.DateTimeValueSerializer> (특정 서브클래스)도 System.Xaml로 마이그레이션됩니다.  
+ <xref:System.Windows.Markup.ValueSerializer> 클래스는 특히 직렬화 시 출력에 여러 모드 또는 노드가 필요할 수 있는 XAML 직렬화 사례를 위해 문자열로의 형식 변환을 지원합니다. .NET Framework 3.5 및.NET Framework 3.0에는 <xref:System.Windows.Markup.ValueSerializer> WPF가 WindowsBase 어셈블리에 대 한 합니다. .NET Framework 4에서는 <xref:System.Windows.Markup.ValueSerializer> 클래스 system.xaml 및 WPF에서 빌드된 위한 뿐 아니라 모든 XAML 확장성 시나리오에 대 한 것입니다. <xref:System.Windows.Markup.IValueSerializerContext> (지원 서비스) 및 <xref:System.Windows.Markup.DateTimeValueSerializer> (특정 서브클래스)도 System.Xaml로 마이그레이션됩니다.  
   
 <a name="xamlrelated_attributes"></a>   
 ## <a name="xaml-related-attributes"></a>XAML 관련 특성  
- WPF XAML은 XAML 동작에 대한 특징을 나타내기 위해 CLR 형식에 적용할 수 있는 여러 특성을 포함했습니다. 다음은.NET Framework 3.5에서 WPF 어셈블리에 존재 하는 특성의 목록 및 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]합니다. 이러한 특성은.NET Framework 4에서 System.Xaml로 마이그레이션됩니다.  
+ WPF XAML은 XAML 동작에 대한 특징을 나타내기 위해 CLR 형식에 적용할 수 있는 여러 특성을 포함했습니다. 다음은.NET Framework 3.5 및.NET Framework 3.0에서 WPF 어셈블리에 존재 하는 특성의 목록입니다. 이러한 특성은.NET Framework 4에서 System.Xaml로 마이그레이션됩니다.  
   
 - <xref:System.Windows.Markup.AmbientAttribute>  
   
@@ -107,9 +107,9 @@ ms.locfileid: "66690666"
   
 <a name="miscellaneous_classes"></a>   
 ## <a name="miscellaneous-classes"></a>기타 클래스  
- <xref:System.Windows.Markup.IComponentConnector> 인터페이스에서는 windowsbase.NET Framework 3.5에 있던 및 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)],.NET Framework 4에서 System.Xaml에 있습니다. <xref:System.Windows.Markup.IComponentConnector> 는 주로 도구 지원 및 XAML 태그 컴파일러에 사용됩니다.  
+ <xref:System.Windows.Markup.IComponentConnector> 인터페이스.NET Framework 3.5 및.NET Framework 3.0에서는 windowsbase에 있었지만 System.Xaml.NET Framework 4에 있습니다. <xref:System.Windows.Markup.IComponentConnector> 는 주로 도구 지원 및 XAML 태그 컴파일러에 사용됩니다.  
   
- <xref:System.Windows.Markup.INameScope> 인터페이스에서는 windowsbase.NET Framework 3.5에 있던 및 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)],.NET Framework 4에서 System.Xaml에 있습니다. <xref:System.Windows.Markup.INameScope> 는 XAML 네임스페이스에 대한 기본 작업을 정의합니다.  
+ <xref:System.Windows.Markup.INameScope> 인터페이스.NET Framework 3.5 및.NET Framework 3.0에서는 windowsbase에 있었지만 System.Xaml.NET Framework 4에 있습니다. <xref:System.Windows.Markup.INameScope> 는 XAML 네임스페이스에 대한 기본 작업을 정의합니다.  
   
 <a name="xamlrelated_classes_with_shared_names_that_exist_in_wpf_and_systemxaml"></a>   
 ## <a name="xaml-related-classes-with-shared-names-that-exist-in-wpf-and-systemxaml"></a>WPF 및 System.Xaml에 있는 공유 이름의 XAML 관련 클래스  

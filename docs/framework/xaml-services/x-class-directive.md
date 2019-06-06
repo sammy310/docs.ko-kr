@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: ee94d7bf52f3fb2ea534cdb2f44d0be2cc8699eb
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 7245b14ff2f765c1cfe96a2d49aec34eff7e8a17
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689406"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722568"
 ---
 # <a name="xclass-directive"></a>x:Class 지시문
 태그와 코드 숨김 부분 클래스를 조인 하는 XAML 태그 컴파일을 구성 합니다. 코드 partial 클래스는 별도 코드 파일에 정의 된를 [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] 언어 반면 태그 partial 클래스는 대개 XAML 컴파일하는 동안 코드 생성에서 만들어집니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "66689406"
  의미는 아키텍처의 특정 수준 `x:Class` .NET Framework XAML 서비스에 정의 되어 있지 않습니다. 즉,.NET Framework XAML 서비스는 XAML에서 태그 및 코드를 지 원하는 연결 된 프로그래밍 모델을 지정 하지 않습니다. 추가 사용을 `x:Class` 지시문 프로그래밍 모델이 나 응용 프로그램 모델을 사용 하 여 CLR 기반 코드 숨김 및 XAML 태그를 연결 하는 방법을 정의 하는 특정 프레임 워크에서 구현할 수 있습니다. 각 프레임 워크 동작 또는 빌드 환경에 포함 되어야 하는 특정 구성 요소 중 일부를 사용 하도록 설정 하는 자체 빌드 작업이 있습니다. 프레임 워크 내에서 빌드 작업도 코드 숨김에 사용 되는 특정 CLR 언어에 따라 달라질 수 있습니다.  
   
 ## <a name="xclass-in-the-wpf-programming-model"></a>X:class WPF 프로그래밍 모델  
- WPF 응용 프로그램 및 WPF 응용 프로그램 모델 `x:Class` 는 XAML 파일의 루트 이며 컴파일되는 모든 요소에 대 한 특성으로 선언할 수 있습니다 (사용 하 여 WPF 응용 프로그램 프로젝트에서는 XAML 포함 되어 있는 `Page` 빌드 작업), 또는 < c4 > <xref:System.Windows.Application>  컴파일된 WPF 응용 프로그램의 응용 프로그램 정의의 루트입니다. 선언 `x:Class` 루트 페이지 또는 응용 프로그램 루트 이외의 요소 또는 WPF XAML 파일을 컴파일되지 않은에서 컴파일 타임 오류가 발생 합니다 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] 및.NET Framework 3.5 WPF XAML 컴파일러. 다른 측면에 대 한 자세한 `x:Class` WPF의 처리를 참조 하세요 [코드 숨김 및 WPF에서 XAML](../wpf/advanced/code-behind-and-xaml-in-wpf.md)합니다.  
+ WPF 응용 프로그램 및 WPF 응용 프로그램 모델 `x:Class` 는 XAML 파일의 루트 이며 컴파일되는 모든 요소에 대 한 특성으로 선언할 수 있습니다 (사용 하 여 WPF 응용 프로그램 프로젝트에서는 XAML 포함 되어 있는 `Page` 빌드 작업), 또는 < c4 > <xref:System.Windows.Application>  컴파일된 WPF 응용 프로그램의 응용 프로그램 정의의 루트입니다. 선언 `x:Class` 페이지 루트 또는 응용 프로그램 루트 이외의 요소 또는 WPF XAML 파일을 컴파일되지 않은.NET Framework 3.0과.NET Framework 3.5 WPF XAML 컴파일러에서 컴파일 타임 오류가 발생 합니다. 다른 측면에 대 한 자세한 `x:Class` WPF의 처리를 참조 하세요 [코드 숨김 및 WPF에서 XAML](../wpf/advanced/code-behind-and-xaml-in-wpf.md)합니다.  
   
 ## <a name="xclass-for-windows-workflow-foundation"></a>Windows Workflow Foundation에 대 한 x: 클래스  
  Windows Workflow Foundation에 대 한 `x:Class` 클래스를 XAML로만 작성 된 사용자 지정 활동의 이름 또는 코드 숨김을 사용 하 여 activity designer에 대 한 XAML 페이지의 partial 클래스의 이름을 지정 합니다.  
