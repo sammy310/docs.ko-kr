@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 5165f3ec1ef41e3fb0dd053c112610183197108a
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: dca5830a73d0f4374302862e7ccdffdf9dc48cb2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877439"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490111"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server 연결 풀링(ADO.NET)
 데이터베이스 서버에 연결하는 과정은 일반적으로 시간이 많이 걸리는 여러 단계로 이루어져 있습니다. 즉, 소켓이나 명명된 파이프 같은 실제 채널을 설정하고 서버와의 초기 핸드셰이크를 발생시키며 연결 문자열 정보를 구문 분석할 뿐 아니라 서버에 연결을 인증하고 현재 트랜잭션에 인리스트먼트하기 위해 검사를 실행해야 하는 등의 단계를 거쳐야 합니다.  
@@ -99,7 +99,7 @@ using (SqlConnection connection = new SqlConnection(
 ### <a name="pool-fragmentation-due-to-many-databases"></a>많은 데이터베이스로 인한 풀 조각화  
  많은 인터넷 서비스 공급자가 단일 서버에서 여러 개의 웹 사이트를 호스트합니다. 이들은 단일 데이터베이스를 사용하여 폼 인증 로그인을 확인한 다음 해당 사용자나 사용자 그룹에 대해 특정 데이터베이스 연결을 열 수 있습니다. 그러면 인증 데이터베이스 연결이 풀링되어 모든 사용자가 사용하게 됩니다. 그러나 각 데이터베이스마다 개별 연결 풀이 있으므로 서버에 대한 연결 수가 증가하게 됩니다.  
   
- 이 역시 응용 프로그램 디자인의 부작용입니다. 하지만 SQL Server에 연결할 때 보안 수준을 떨어뜨리지 않고 이러한 부작용을 비교적 간단히 해결할 수 있는 방법이 있습니다. 각 사용자나 그룹에 대해 개별 데이터베이스에 연결하는 대신 서버에 있는 동일한 데이터베이스에 연결한 다음 [!INCLUDE[tsql](../../../../includes/tsql-md.md)] USE 문을 실행하여 원하는 데이터베이스로 변경하는 것입니다. 다음 코드 조각에서는 `master` 데이터베이스에 대한 초기 연결을 만든 다음 이를 `databaseName` 문자열 변수에 지정된 원하는 데이터베이스로 전환하는 방법을 보여 줍니다.  
+ 이 역시 응용 프로그램 디자인의 부작용입니다. 하지만 SQL Server에 연결할 때 보안 수준을 떨어뜨리지 않고 이러한 부작용을 비교적 간단히 해결할 수 있는 방법이 있습니다. 각 사용자나 그룹에 대해 개별 데이터베이스에 연결하는 대신 서버에 있는 동일한 데이터베이스에 연결한 다음 Transact-SQL USE 문을 실행하여 원하는 데이터베이스로 변경하는 것입니다. 다음 코드 조각에서는 `master` 데이터베이스에 대한 초기 연결을 만든 다음 이를 `databaseName` 문자열 변수에 지정된 원하는 데이터베이스로 전환하는 방법을 보여 줍니다.  
   
 ```vb  
 ' Assumes that command is a valid SqlCommand object and that  

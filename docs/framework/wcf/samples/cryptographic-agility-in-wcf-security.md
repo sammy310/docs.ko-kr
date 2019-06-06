@@ -2,12 +2,12 @@
 title: WCF 보안의 암호화 agility
 ms.date: 03/30/2017
 ms.assetid: c2c549e5-ac19-40c5-b686-8f67f52b6dbf
-ms.openlocfilehash: 0a4171d6e753be9fbdd6974850fc6757ff585ae0
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b8e3b6dc62baf31901520d7f5edac0529e937016
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637839"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490944"
 ---
 # <a name="cryptographic-agility-in-wcf-security"></a>WCF 보안의 암호화 agility
 
@@ -27,7 +27,7 @@ WCF 클라이언트 인증에 성공 하면 서비스에 액세스 하는 경우
 
 2. Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.
 
-3. 오픈 [!INCLUDE[fileExplorer](~/includes/fileexplorer-md.md)] \WCF\Basic\Security\CryptoAgility\Service\bin 디렉터리로 이동 하 고 관리자 권한으로 service.exe를 마우스 오른쪽 단추로 클릭 하 고 선택 하 여 service.exe 파일을 실행 **관리자 권한으로 실행**합니다.
+3. 파일 탐색기를 열고 \WCF\Basic\Security\CryptoAgility\Service\bin 디렉터리로 이동 하 고 관리자 권한으로 service.exe를 마우스 오른쪽 단추로 클릭 하 고 선택 하 여 service.exe 파일을 실행 **관리자 권한으로 실행**합니다.
 
 4. \WCF\Basic\Security\CryptoAgility\Client\bin 디렉터리로 이동하고 client.exe 파일을 정상적으로 실행합니다.
 

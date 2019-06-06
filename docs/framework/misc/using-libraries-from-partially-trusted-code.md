@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8500abe590d4c85dcb5ecda54212a1ba9cc7950d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6d858ef4c2f70c55b0a36e845f90d9a8e08f5e2d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586982"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487815"
 ---
 # <a name="using-libraries-from-partially-trusted-code"></a>부분 신뢰 코드에서 라이브러리 사용
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
 > [!NOTE]
->  이 항목에서는 강력한 이름의 어셈블리의 동작을 해결 하 고에 적용 됩니다 [수준 1](../../../docs/framework/misc/security-transparent-code-level-1.md) 어셈블리입니다. [보안 투명 코드, 수준 2](../../../docs/framework/misc/security-transparent-code-level-2.md) 어셈블리는 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 나중에 강력한 이름을 영향을 받지 않습니다. 보안 시스템 변경에 대 한 자세한 내용은 참조 하세요. [보안 변경 내용](../../../docs/framework/security/security-changes.md)합니다.  
+>  이 항목에서는 강력한 이름의 어셈블리의 동작을 해결 하 고에 적용 됩니다 [수준 1](../../../docs/framework/misc/security-transparent-code-level-1.md) 어셈블리입니다. [보안 투명 코드, 수준 2](../../../docs/framework/misc/security-transparent-code-level-2.md) .NET Framework 4 이상 어셈블리 강력한 이름의 영향을 받지 않습니다. 보안 시스템 변경에 대 한 자세한 내용은 참조 하세요. [보안 변경 내용](../../../docs/framework/security/security-changes.md)합니다.  
   
  해당 호스트 또는 샌드박스로부터 완전 신뢰 미만을 받는 응용 프로그램은 라이브러리 작성자가 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 특성을 사용하여 특별히 허용하지 않는 한 관리되는 공유 라이브러리를 호출할 수 없습니다. 따라서 응용 프로그램 작성자는 부분적으로 신뢰할 수 있는 컨텍스트에서 일부 라이브러리가 제공되지 않음을 알고 있어야 합니다. 기본적으로 모든 코드에서에서 실행 되는 부분 신뢰 [샌드박스](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md) 아닙니다. 완전 신뢰 어셈블리 목록을 부분적으로 신뢰할 수 있는 고 합니다. 코드가 부분적으로 신뢰할 수 있는 컨텍스트에서 실행되거나 부분적으로 신뢰할 수 있는 코드에서 호출되지 않는 경우에는 이 섹션의 내용에 주의할 필요가 없습니다. 그러나 부분적으로 신뢰할 수 있는 코드와 상호 작용하거나 부분적으로 신뢰할 수 있는 컨텍스트에서 작동해야 하는 코드를 작성하는 경우 다음과 같은 요소를 고려해야 합니다.  
   

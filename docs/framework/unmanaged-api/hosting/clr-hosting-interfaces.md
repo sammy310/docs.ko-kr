@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 703b8381-43db-4a4d-9faa-cca39302d922
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03839a2c6e52f9d2dcdd2e0941ff4fdbeb8a3a17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80404e65263aa4ad245a8c8213630a4736bd7b11
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789664"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456879"
 ---
 # <a name="clr-hosting-interfaces"></a>CLR 호스팅 인터페이스
 이 섹션에서는 관리 되지 않는 인터페이스를 설명 합니다. 호스트 응용 프로그램에는 CLR (공용 언어 런타임) 통합을 사용할 수 있습니다. 정보는.NET Framework 버전 2.0 및 이후 버전에 적용 됩니다. 이러한 인터페이스는 런타임 버전 1.0 및 1.1에에서 비해 더 많은 요소를 제어 하려면 호스트를 사용 하도록 설정 하 고 CLR와 호스트의 실행 모델 간의 더 긴밀 한 통합을 제공 합니다.  
@@ -191,4 +191,4 @@ ms.locfileid: "61789664"
  .NET Framework 버전 1.0 및 1.1에서에서 제공 하는 호스팅 인터페이스를 설명 하는 항목을 포함 합니다.  
   
  [.NET Framework 4 및 4.5에 추가된 CLR 호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
- 제공 하는 호스팅 인터페이스를 설명 하는 항목이 포함 된 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]합니다.
+ .NET Framework 4에서 제공 하는 호스팅 인터페이스를 설명 하는 항목을 포함 합니다.

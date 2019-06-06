@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c683ce454e4db36367cb097371427d27dc4c555
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c43e17edf5795874d8b92db659f07e8f6ec3c30a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636311"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457239"
 ---
 # <a name="migrating-from-the-net-framework-11"></a>.NET Framework 1.1에서 마이그레이션
 
@@ -62,10 +62,10 @@ ms.locfileid: "65636311"
 
 - [.NET Framework 3.5 SP1의 변경 내용](https://go.microsoft.com/fwlink/?LinkID=186989) 문서의 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 와 [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)]사이의 변경 내용
 
-- [.NET Framework 4 마이그레이션 문제](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md) 문서의 [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)]과 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]사이의 변경 내용
+- [.NET Framework 4 마이그레이션 문제](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md) 문서의 [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)]과 .NET Framework 4 사이의 변경 내용을 문서화합니다.
 
 ## <a name="obsolete-types-and-members"></a>사용되지 않는 형식 및 멤버
 
 사용되지 않는 형식 및 멤버의 영향은 대상이 변경된 애플리케이션 및 다시 컴파일된 애플리케이션에서 다르게 나타납니다. 사용되지 않는 형식 및 멤버를 사용하더라도 해당 어셈블리에서 해당 형식 및 멤버를 물리적으로 제거하지 않는 경우 대상이 변경된 애플리케이션에 영향을 주지 않습니다. 사용되지 않는 형식 및 멤버를 사용하는 애플리케이션을 다시 컴파일하면 일반적으로 컴파일러 오류가 아닌 컴파일러 경고가 발생합니다. 하지만 경우에 따라 컴파일러 오류가 발생되어 사용되지 않는 형식 및 멤버를 사용하는 코드가 성공적으로 컴파일되지 않습니다. 이 경우 애플리케이션을 다시 컴파일하기 전에 사용되지 않는 형식 및 멤버를 호출하는 소스 코드를 다시 작성해야 합니다. 사용되지 않는 형식 및 멤버에 대한 자세한 내용은 [클래스 라이브러리의 사용되지 않는 기능](../../../docs/framework/whats-new/whats-obsolete.md)을 참조하세요.
 
-[!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 릴리스 이후 사용되지 않는 형식 및 멤버의 영향을 평가하려면 [클래스 라이브러리의 사용되지 않는 기능](../../../docs/framework/whats-new/whats-obsolete.md)을 참조하세요. 사용되지 않는 형식 및 멤버 목록은 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 및 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서 확인하십시오.
+[!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 릴리스 이후 사용되지 않는 형식 및 멤버의 영향을 평가하려면 [클래스 라이브러리의 사용되지 않는 기능](../../../docs/framework/whats-new/whats-obsolete.md)을 참조하세요. 사용되지 않는 형식 및 멤버 목록은 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 및 .NET Framework 4에서 검토합니다.

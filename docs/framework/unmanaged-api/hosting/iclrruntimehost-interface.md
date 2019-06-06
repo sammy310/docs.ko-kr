@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da22cbfe06245d915bed6db9cba220fc32b38942
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ba02373aae33baf77b72323fabf1f6ca1fe4eecf
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627138"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490237"
 ---
 # <a name="iclrruntimehost-interface"></a>ICLRRuntimeHost 인터페이스
 유사한 기능을 제공 합니다 [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) 버전 1에서는 다음과 같이 변경을 사용 하 여.NET Framework에서 제공 하는 인터페이스:  
@@ -45,7 +45,7 @@ ms.locfileid: "64627138"
 |[UnloadAppDomain 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-unloadappdomain-method.md)|언로드를 <xref:System.AppDomain> 지정된 된 숫자 식별자에 해당 하는 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 부터 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]를 사용 하 여는 [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md) 인터페이스에 대 한 포인터를 가져오려면를 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) 인터페이스를 고를 호출 하는 [iclrruntimeinfo:: Getinterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md) 에 대 한 포인터를 가져올 메서드를 `ICLRRuntimeHost`입니다. .NET Framework의 이전 버전에서는 호스트에 대 한 포인터를 가져옵니다는 `ICLRRuntimeHost` 를 호출 하 여 인스턴스 [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) 하거나 [CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)합니다. .NET Framework 버전 2.0에서에서 제공 하는 기술을의 구현에 제공 하려면 사용 해야 `ICLRRuntimeHost` 대신 `ICorRuntimeHost`합니다.  
+ .NET Framework 4부터 사용 합니다 [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md) 인터페이스에 대 한 포인터를 가져오려면를 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) 인터페이스를 고를 호출 하는 [iclrruntimeinfo:: Getinterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md)에 대 한 포인터를 가져올 메서드를 `ICLRRuntimeHost`입니다. .NET Framework의 이전 버전에서는 호스트에 대 한 포인터를 가져옵니다는 `ICLRRuntimeHost` 를 호출 하 여 인스턴스 [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) 하거나 [CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)합니다. .NET Framework 버전 2.0에서에서 제공 하는 기술을의 구현에 제공 하려면 사용 해야 `ICLRRuntimeHost` 대신 `ICorRuntimeHost`합니다.  
   
 > [!IMPORTANT]
 >  호출 하지 마십시오 합니다 [시작](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) 메서드를 호출 하기 전에 [ExecuteApplication](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-executeapplication-method.md) 매니페스트 기반 응용 프로그램을 활성화 하는 방법입니다. 경우는 `Start` 메서드를 먼저 호출 된 `ExecuteApplication` 메서드 호출이 실패 합니다.  

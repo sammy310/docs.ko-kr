@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32aee404891bfad1aed2abc9ad84e43bcd002df5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87ca5470fe5994d34d12a339c2d92a5f3917063d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765325"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490228"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim 함수
 지정된 된 버전의.NET Framework 재배포 가능 패키지에 포함 된 DLL 로드 합니다.  
   
- 이 함수에서 사용 중단에 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다. 사용 된 [iclrruntimeinfo:: Loadlibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) 메서드 대신 합니다.  
+ .NET Framework 4에서이 함수에 사용 되지 않습니다. 사용 된 [iclrruntimeinfo:: Loadlibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) 메서드 대신 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,7 +45,7 @@ HRESULT LoadLibraryShim (
  [in] .NET Framework 라이브러리에서 로드할 DLL의 이름을 나타내는 0으로 끝나는 문자열입니다.  
   
  `szVersion`  
- [in] 로드할 DLL의 버전을 나타내는 0으로 끝나는 문자열입니다. 경우 `szVersion` 가 null 인 로드 4 버전 보다 낮은 경우 지정된 된 DLL의 최신 버전에 대 한 선택한 버전입니다. 즉, 버전 4 보다 크거나 같은 버전을 모두 무시 됩니다 `szVersion` 가 null DLL을 로드 하지 없는 보다 낮은 버전이 버전 4가 설치 되어 있습니다. 설치를 확인 하는 것이 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 기존 응용 프로그램 또는 구성 요소에는 영향을 주지 않습니다. 항목을 참조 하세요 [In-proc SxS 및 마이그레이션 퀵스타트](https://go.microsoft.com/fwlink/?LinkId=200329) CLR 팀 블로그의 합니다.  
+ [in] 로드할 DLL의 버전을 나타내는 0으로 끝나는 문자열입니다. 경우 `szVersion` 가 null 인 로드 4 버전 보다 낮은 경우 지정된 된 DLL의 최신 버전에 대 한 선택한 버전입니다. 즉, 버전 4 보다 크거나 같은 버전을 모두 무시 됩니다 `szVersion` 가 null DLL을 로드 하지 없는 보다 낮은 버전이 버전 4가 설치 되어 있습니다. 이렇게 하면 기존 응용 프로그램 또는 구성 요소는.NET Framework 4 설치에 영향을 주지 않습니다. 항목을 참조 하세요 [In-proc SxS 및 마이그레이션 퀵스타트](https://go.microsoft.com/fwlink/?LinkId=200329) CLR 팀 블로그의 합니다.  
   
  `pvReserved`  
  나중에 사용하기 위해 예약되어 있습니다.  

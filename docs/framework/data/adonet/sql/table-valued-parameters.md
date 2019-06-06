@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: ccef487eb27a5a170d197a6bc670ec4d2bcf8bdf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a7a39677bbd975ac384357481ef419f57b96d977
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645796"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489811"
 ---
 # <a name="table-valued-parameters"></a>테이블 반환 매개 변수
-테이블 반환 매개 변수를 사용하면 클라이언트 응용 프로그램에서 여러 행 데이터를 반복적인 라운드트립이나 데이터 처리를 위한 특수한 서버측 논리를 사용하지 않고도 SQL Server로 쉽게 마샬링할 수 있습니다. 또한 테이블 반환 매개 변수를 사용하면 클라이언트 응용 프로그램에서 데이터 행을 캡슐화하여 매개 변수화된 단일 명령을 통해 데이터를 서버에 보낼 수 있습니다. 들어오는 데이터 행은 테이블 변수에 저장되며, 이러한 테이블 변수에 대해서는 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]을 사용하여 작업할 수 있습니다.  
+테이블 반환 매개 변수를 사용하면 클라이언트 응용 프로그램에서 여러 행 데이터를 반복적인 라운드트립이나 데이터 처리를 위한 특수한 서버측 논리를 사용하지 않고도 SQL Server로 쉽게 마샬링할 수 있습니다. 또한 테이블 반환 매개 변수를 사용하면 클라이언트 응용 프로그램에서 데이터 행을 캡슐화하여 매개 변수화된 단일 명령을 통해 데이터를 서버에 보낼 수 있습니다. 들어오는 데이터 행은 테이블 변수에 저장되며, 이러한 테이블 변수에 대해서는 Transact-SQL을 사용하여 작업할 수 있습니다.  
   
- 테이블 반환 매개 변수의 열 값은 표준 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] SELECT 문을 사용하여 액세스할 수 있습니다. 테이블 반환 매개 변수는 강력한 형식이며 해당 구조체의 유효성은 자동으로 검사됩니다. 테이블 반환 매개 변수의 크기는 서버 메모리 크기의 제한만 받습니다.  
+ 테이블 반환 매개 변수의 열 값은 표준 Transact-SQL SELECT 문을 사용하여 액세스할 수 있습니다. 테이블 반환 매개 변수는 강력한 형식이며 해당 구조체의 유효성은 자동으로 검사됩니다. 테이블 반환 매개 변수의 크기는 서버 메모리 크기의 제한만 받습니다.  
   
 > [!NOTE]
 >  데이터를 테이블 반환 매개 변수로 반환할 수 없습니다. 테이블 반환 매개 변수는 입력 전용이며 OUTPUT 키워드를 지원하지 않습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "64645796"
 - `bcp` 유틸리티 프로그램이나 <xref:System.Data.SqlClient.SqlBulkCopy> 개체를 사용하여 여러 데이터 행을 테이블에 로드합니다. 이 기술은 매우 효율적이기는 하지만 데이터를 임시 테이블이나 테이블 변수에 로드해야만 서버측 처리가 지원됩니다.  
   
 ## <a name="creating-table-valued-parameter-types"></a>테이블 반환 매개 변수 형식 만들기  
- 테이블 반환 매개 변수는 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] CREATE TYPE 문을 사용하여 정의된 강력한 형식의 테이블 구조를 기반으로 합니다. 클라이언트 응용 프로그램에서 테이블 반환 매개 변수를 사용할 수 있으려면 먼저 SQL Server에서 테이블 형식을 만들고 구조를 정의해야 합니다. 테이블 형식 만들기에 대 한 자세한 내용은 참조 하세요. [사용자 정의 테이블 형식](https://go.microsoft.com/fwlink/?LinkID=98364) SQL Server 온라인 설명서의 합니다.  
+ 테이블 반환 매개 변수는 Transact-SQL CREATE TYPE 문을 사용하여 정의된 강력한 형식의 테이블 구조를 기반으로 합니다. 클라이언트 응용 프로그램에서 테이블 반환 매개 변수를 사용할 수 있으려면 먼저 SQL Server에서 테이블 형식을 만들고 구조를 정의해야 합니다. 테이블 형식 만들기에 대 한 자세한 내용은 참조 하세요. [사용자 정의 테이블 형식](https://go.microsoft.com/fwlink/?LinkID=98364) SQL Server 온라인 설명서의 합니다.  
   
  다음 문은 이름이 CategoryTableType이고 CategoryID 및 CategoryName 열로 구성된 테이블 형식을 만듭니다.  
   
@@ -48,7 +48,7 @@ CREATE TYPE dbo.CategoryTableType AS TABLE
     ( CategoryID int, CategoryName nvarchar(50) )  
 ```  
   
- 테이블 형식을 만든 후에는 해당 형식에 기반하여 테이블 반환 매개 변수를 선언할 수 있습니다. 다음 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 조각은 저장 프로시저 정의에 테이블 반환 매개 변수를 선언하는 방법을 보여 줍니다. READONLY 키워드는 테이블 반환 매개 변수를 선언하는 데 필요합니다.  
+ 테이블 형식을 만든 후에는 해당 형식에 기반하여 테이블 반환 매개 변수를 선언할 수 있습니다. 다음 Transact-SQL 조각은 저장 프로시저 정의에 테이블 반환 매개 변수를 선언하는 방법을 보여 줍니다. READONLY 키워드는 테이블 반환 매개 변수를 선언하는 데 필요합니다.  
   
 ```  
 CREATE PROCEDURE usp_UpdateCategories   
@@ -58,7 +58,7 @@ CREATE PROCEDURE usp_UpdateCategories
 ## <a name="modifying-data-with-table-valued-parameters-transact-sql"></a>테이블 반환 매개 변수를 사용하여 데이터 수정(Transact-SQL)  
  단일 문을 실행하여 여러 행에 영향을 주는 집합 기반 데이터 수정 작업에 테이블 반환 매개 변수를 사용할 수 있습니다. 예를 들어 테이블 반환 매개 변수에서 모든 행을 선택하여 데이터베이스 테이블에 삽입하거나 테이블 반환 매개 변수를 업데이트하려는 테이블에 조인하여 업데이트 문을 만들 수 있습니다.  
   
- 다음 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] UPDATE 문은 테이블 반환 매개 변수를 Categories 테이블에 조인하여 사용하는 방법을 보여 줍니다. 테이블 반환 매개 변수를 FROM 절에 JOIN과 함께 사용할 경우에는 다음과 같이 별칭을 지정해야 합니다. 이 경우에는 테이블 반환 매개 변수의 별칭을 "ec"로 지정했습니다.  
+ 다음 Transact-SQL UPDATE 문은 테이블 반환 매개 변수를 Categories 테이블에 조인하여 사용하는 방법을 보여 줍니다. 테이블 반환 매개 변수를 FROM 절에 JOIN과 함께 사용할 경우에는 다음과 같이 별칭을 지정해야 합니다. 이 경우에는 테이블 반환 매개 변수의 별칭을 "ec"로 지정했습니다.  
   
 ```  
 UPDATE dbo.Categories  
@@ -67,7 +67,7 @@ UPDATE dbo.Categories
     ON dbo.Categories.CategoryID = ec.CategoryID;  
 ```  
   
- 이 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 예제에서는 테이블 반환 매개 변수에서 행을 선택하여 단일 집합 기반 작업으로 INSERT를 수행하는 방법을 보여 줍니다.  
+ 이 Transact-SQL 예제에서는 테이블 반환 매개 변수에서 행을 선택하여 단일 집합 기반 작업으로 INSERT를 수행하는 방법을 보여 줍니다.  
   
 ```  
 INSERT INTO dbo.Categories (CategoryID, CategoryName)  
@@ -81,7 +81,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
   
 - 테이블 반환 매개 변수는 UNIQUE 또는 PRIMARY KEY 제약 조건을 지원하도록 인덱싱만 수행할 수 있습니다. SQL Server에서는 테이블 반환 매개 변수에 대한 통계가 유지되지 않습니다.  
   
-- 테이블 반환 매개 변수는 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 코드에서 읽기 전용입니다. 테이블 반환 매개 변수의 행에서 열 값을 업데이트하거나, 행을 삽입 또는 삭제할 수 없습니다. 테이블 반환 매개 변수를 사용하여 저장 프로시저나 매개 변수화된 문에 전달된 데이터를 수정하려면 데이터를 임시 테이블이나 테이블 변수에 삽입해야 합니다.  
+- 테이블 반환 매개 변수는 Transact-SQL 코드에서 읽기 전용입니다. 테이블 반환 매개 변수의 행에서 열 값을 업데이트하거나, 행을 삽입 또는 삭제할 수 없습니다. 테이블 반환 매개 변수를 사용하여 저장 프로시저나 매개 변수화된 문에 전달된 데이터를 수정하려면 데이터를 임시 테이블이나 테이블 변수에 삽입해야 합니다.  
   
 - ALTER TABLE 문을 사용하여 테이블 반환 매개 변수의 디자인을 수정할 수 없습니다.  
   

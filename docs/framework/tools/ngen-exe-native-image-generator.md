@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e425394df0d04ffbb4cde41c83a9efe3c5b4abe0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 011bb2d7a1a700ba4daf86d96d825373e353f57e
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481264"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457425"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe(네이티브 이미지 생성기)
 
@@ -139,7 +139,7 @@ Ngen.exe를 실행하려면 관리자 권한이 있어야 합니다.
 > [!CAUTION]
 > 완전히 신뢰할 수 없는 어셈블리에서 Ngen.exe를 실행하지 마세요. [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터는 Ngen.exe가 완전 신뢰로 어셈블리를 컴파일하고 CAS(코드 액세스 보안) 정책이 더 이상 평가되지 않습니다.
 
-[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]부터는 Ngen.exe로 생성되는 네이티브 이미지는 부분 신뢰로 실행되는 애플리케이션에 더 이상 로드할 수 없습니다. 대신, JIT(Just-In-Time) 컴파일러가 호출됩니다.
+.NET Framework 4부터는 Ngen.exe로 생성되는 네이티브 이미지는 부분 신뢰로 실행되는 애플리케이션에 더 이상 로드할 수 없습니다. 대신, JIT(Just-In-Time) 컴파일러가 호출됩니다.
 
 Ngen.exe는 `install` 동작 및 해당하는 모든 종속성에 대한 `assemblyname` 인수로 지정된 네이티브 이미지를 생성합니다. 어셈블리 매니페스트의 참조로 종속성을 확인할 수 있습니다. 종속성을 별도로 설치해야 하는 경우는 애플리케이션에서 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 메서드를 호출하는 것과 같은 방법으로 리플렉션을 사용하여 종속성을 로드하는 경우밖에 없습니다.
 

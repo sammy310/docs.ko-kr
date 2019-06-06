@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19dacae05766566521f563d0d24980c01dfb7a0b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb19f950122f7b0db66830e9ed5dff44ccd370c2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796152"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490429"
 ---
 # <a name="eclrfailure-enumeration"></a>EClrFailure 열거형
 호스트 정책 작업 설정할 수 있는 오류를 설명 합니다.  
@@ -49,7 +49,7 @@ typedef enum {
 |`FAIL_FatalRuntime`|CLR (공용 언어 런타임)이 더 이상 프로세스에서 관리 되는 코드를 실행 수 없습니다. 예측이 모든 호스팅 함수를 호출 하는 HOST_E_CLRNOTAVAILABLE의 HRESULT 값을 반환합니다.|  
 |`FAIL_OrphanedLock`|반환 시 잠금 해제 하지 못했습니다 스레드는 <xref:System.AppDomain> 개체입니다. 호스트에는이 오류는 스레드가 중단 되도록를 설정할 수 없습니다.|  
 |`FAIL_StackOverflow`|스택 오버플로가 발생 했습니다.|  
-|`FAIL_AccessViolation`|보호 된 메모리를 쓰거나 읽을 하려고 했습니다. 지원 되지 않는 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다.|  
+|`FAIL_AccessViolation`|보호 된 메모리를 쓰거나 읽을 하려고 했습니다. .NET Framework 4에서 지원 되지 않습니다.|  
 |`FAIL_CodeContract`|코드 계약 실패가 했습니다. 참조 [계약 코드](../../../../docs/framework/debug-trace-profile/code-contracts.md)합니다.|  
   
 ## <a name="remarks"></a>설명  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d750087cc000ad31a24d91411c0885a75d59e74f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9264d8eb7923663061f9bccfffe5b8f5254549f0
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501949"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379896"
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a>완화: 포인터 기반 터치 및 스타일러스 지원
 
@@ -38,7 +38,7 @@ ms.locfileid: "54501949"
 
   - 끌어서 놓기가 더 이상 터치/스타일러스 이벤트에서 시작될 수 없습니다.
 
-      이로 인해 마우스 입력이 감지될 때까지 애플리케이션이 중단될 수 있습니다. 대신, 개발자는 마우스 이벤트에서 끌어서 놓기를 시작하는 것이 좋습니다.
+      이로 인해 마우스 입력이 감지될 때까지 애플리케이션이 응답하지 않을 수 있습니다. 대신, 개발자는 마우스 이벤트에서 끌어서 놓기를 시작하는 것이 좋습니다.
 
 ## <a name="opting-in-to-wmpointer-based-touchstylus-support"></a>WM_POINTER 기반 터치/스타일러스 지원 옵트인(opt in)
 

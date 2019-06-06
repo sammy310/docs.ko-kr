@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 479307a0bdee162103f798e5f852cd20f259811e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 629a59cd28e58e4b08805e3bb742d12e9cacbebd
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607678"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377873"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>강력한 이름의 어셈블리 만들기 및 사용
 
@@ -71,7 +71,7 @@ ms.locfileid: "64607678"
 |-----------|-----------------|
 |[방법: 공개/개인 키 쌍 만들기](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|어셈블리 서명을 위해 암호화 키 쌍을 만드는 방법에 대해 설명합니다.|
 |[방법: 강력한 이름으로 어셈블리 서명](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|강력한 이름의 어셈블리를 만드는 방법에 대해 설명합니다.|
-|[향상된 강력한 이름 지정](../../../docs/framework/app-domains/enhanced-strong-naming.md)|[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서 강력한 이름에 대해 향상된 기능을 설명합니다.|
+|[향상된 강력한 이름 지정](../../../docs/framework/app-domains/enhanced-strong-naming.md)|.NET Framework 4.5에서 강력한 이름에 대해 향상된 기능을 설명합니다.|
 |[방법: 강력한 이름의 어셈블리 참조](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|컴파일 타임 또는 런타임에 강력한 이름의 어셈블리에 있는 형식 또는 리소스를 참조하는 방법에 대해 설명합니다.|
 |[방법: 강력한 이름 건너뛰기 기능 비활성화](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)|강력한 이름 서명의 유효성 검사를 건너뛰는 기능을 비활성화하는 방법에 대해 설명합니다. 이 기능은 모든 애플리케이션 또는 특정 애플리케이션에 대해 비활성화할 수 있습니다.|
 |[어셈블리 만들기](../../../docs/framework/app-domains/create-assemblies.md)|단일 파일 어셈블리와 다중 파일 어셈블리에 대해 설명합니다.|

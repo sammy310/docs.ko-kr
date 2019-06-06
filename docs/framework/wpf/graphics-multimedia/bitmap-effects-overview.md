@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
-ms.openlocfilehash: df8ce418b761ce1fca7f94614f5708ecb1b3652e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ccf837bd9f0e0bb40cfb07d5eeaa1f0f80a86ca9
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615485"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456689"
 ---
 # <a name="bitmap-effects-overview"></a>비트맵 효과 개요
 디자이너를 사용 하는 비트맵 효과 및 시각적 효과를 적용 하려면 개발자가 Windows Presentation Foundation (WPF)을 콘텐츠 렌더링 합니다. 예를 들어 비트맵 효과 사용 하면 쉽게 적용할 수는 <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> 효과나 흐림 효과를 이미지 또는 단추입니다.  
   
 > [!IMPORTANT]
->  에 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 이상 버전에서는 <xref:System.Windows.Media.Effects.BitmapEffect> 클래스는 사용 되지 않습니다. 사용 하려는 경우는 <xref:System.Windows.Media.Effects.BitmapEffect> 클래스 사용 되지 않는 예외가 발생 합니다. 않는 대신 합니다 <xref:System.Windows.Media.Effects.BitmapEffect> 클래스는 <xref:System.Windows.Media.Effects.Effect> 클래스입니다. 대부분의 경우는 <xref:System.Windows.Media.Effects.Effect> 클래스는 훨씬 더 빠릅니다.  
+>  .NET Framework 4 이상는 <xref:System.Windows.Media.Effects.BitmapEffect> 클래스는 사용 되지 않습니다. 사용 하려는 경우는 <xref:System.Windows.Media.Effects.BitmapEffect> 클래스 사용 되지 않는 예외가 발생 합니다. 않는 대신 합니다 <xref:System.Windows.Media.Effects.BitmapEffect> 클래스는 <xref:System.Windows.Media.Effects.Effect> 클래스입니다. 대부분의 경우는 <xref:System.Windows.Media.Effects.Effect> 클래스는 훨씬 더 빠릅니다.  
 
 <a name="wpf_effects"></a>   
 ## <a name="wpf-bitmap-effects"></a>WPF 비트맵 효과  

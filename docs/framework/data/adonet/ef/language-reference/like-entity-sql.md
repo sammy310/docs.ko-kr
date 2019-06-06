@@ -2,12 +2,12 @@
 title: LIKE(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 9463a5cb522a3d3dab7725c4b71a5970d1bdf19d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98940c075a01de2ebe061b6dff53917247fc5193
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780447"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489916"
 ---
 # <a name="like-entity-sql"></a>LIKE(Entity SQL)
 특정 문자 `String`이 지정된 패턴과 일치하는지 여부를 결정합니다.  
@@ -49,7 +49,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
 > [!NOTE]
 >  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] LIKE 연산자와 ESCAPE 절은 `System.DateTime` 또는 `System.Guid` 값에 적용할 수 없습니다.  
   
- LIKE는 ASCII 패턴 일치 및 유니코드 패턴 일치를 지원합니다. 모든 매개 변수가 ASCII 문자인 경우 ASCII 패턴 일치가 수행됩니다. 인수 하나 이상이 유니코드인 경우 모든 인수가 유니코드로 변환되고 유니코드 패턴 일치가 수행됩니다. LIKE로 유니코드를 사용할 경우에는 후행 공백이 중요하지만 비유니코드의 경우에는 후행 공백이 중요하지 않습니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]의 패턴 문자열 구문은 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]의 구문과 같습니다.  
+ LIKE는 ASCII 패턴 일치 및 유니코드 패턴 일치를 지원합니다. 모든 매개 변수가 ASCII 문자인 경우 ASCII 패턴 일치가 수행됩니다. 인수 하나 이상이 유니코드인 경우 모든 인수가 유니코드로 변환되고 유니코드 패턴 일치가 수행됩니다. LIKE로 유니코드를 사용할 경우에는 후행 공백이 중요하지만 비유니코드의 경우에는 후행 공백이 중요하지 않습니다. 패턴 문자열 구문은 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] TRANSACT-SQL의으로 동일 합니다.  
   
  패턴에는 정규 문자와 와일드카드 문자가 포함될 수 있습니다. 패턴 일치 과정에서 정규 문자는 문자 `string`에 지정된 문자와 정확히 일치해야 합니다. 와일드카드 문자는 문자열의 임의의 부분과 일치하면 됩니다. 와일드카드 문자와 함께 사용할 때 LIKE 연산자는 = 및 != 문자열 비교 연산자보다 융통성이 뛰어납니다.  
   

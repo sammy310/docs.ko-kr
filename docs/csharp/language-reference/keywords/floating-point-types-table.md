@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ranges of floating-point types [C#]
 - types [C#], floating-point types
 ms.assetid: da886cc5-e01e-4f62-b3ec-6428c8f7a102
-ms.openlocfilehash: de14541be0e1247b99d6f000a69544b5f601ef8f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6dcab8e546ef12ebec5f8b57c66458172fc6f5d0
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753777"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422334"
 ---
 # <a name="floating-point-types-table-c-reference"></a>부동 소수점 형식 표(C# 참조)
 
@@ -30,7 +30,6 @@ ms.locfileid: "64753777"
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 키워드](index.md)
-- [형식 참조 테이블](reference-tables-for-types.md)
 - [정수 계열 형식 표](integral-types-table.md)
 - [기본값 표](default-values-table.md)
 - [숫자 결과 형식 지정 표](formatting-numeric-results-table.md)

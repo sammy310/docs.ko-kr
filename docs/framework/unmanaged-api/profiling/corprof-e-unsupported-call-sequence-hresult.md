@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: f2fc441f-d62e-4f72-a011-354ea13c8c59
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 087518cc43776848785d005f0b6c4c8aa5e2e43e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a8eb622b974de350f86a586a0f07b887bffdbd61
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621447"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483059"
 ---
 # <a name="corprofeunsupportedcallsequence-hresult"></a>CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT
-CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT는.NET Framework 버전 2.0에서에서 도입 되었습니다. [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] 두 가지 시나리오에서이 HRESULT를 반환 합니다.  
+CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT는.NET Framework 버전 2.0에서에서 도입 되었습니다. .NET Framework 4는 두 가지 시나리오에서이 HRESULT를 반환합니다.  
   
 - 하이재킹 프로파일러 스레드를 강제로 다시 설정 하는 경우는 스레드가 일관성이 없는 상태에 있는 구조에 액세스 하려고 있도록 임의의 시간에 컨텍스트를 등록 합니다.  
   

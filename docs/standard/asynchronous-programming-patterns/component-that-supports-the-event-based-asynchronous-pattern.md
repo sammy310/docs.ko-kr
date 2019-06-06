@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: d6c35398d54b91c9aa595ffdcde56004e59b7693
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 85e7f10643c57837cf0b66613825241db94c0065
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882497"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423882"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 구현
 상당한 지연을 일으킬 수 있는 몇 가지 작업을 사용하여 클래스를 작성하는 경우 [이벤트 기반 비동기 패턴 개요](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)를 구현하여 비동기 기능을 부여하는 것을 고려할 수 있습니다.  
@@ -176,7 +176,7 @@ ms.locfileid: "65882497"
  `CalculateWorker` 메서드는 대리자로 래핑되고 `BeginInvoke` 호출을 통해 비동기적으로 호출됩니다.  
   
 > [!NOTE]
->  진행률 보고는 `BuildPrimeNumberList` 메서드에서 구현됩니다. 빠른 컴퓨터에서는 `ProgressChanged` 이벤트가 연속적으로 발생할 수 있습니다. 이러한 이벤트가 발생하는 클라이언트 스레드에서 이 상황을 처리할 수 있어야 합니다. 사용자 인터페이스 코드가 메시지로 넘치는데 유지할 수 없어서 동작이 멈출 수 있습니다. 이 상황을 처리하는 예제 사용자 인터페이스는 [방법: 이벤트 기반 비동기 패턴의 클라이언트 구현](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)을 참조하세요.  
+>  진행률 보고는 `BuildPrimeNumberList` 메서드에서 구현됩니다. 빠른 컴퓨터에서는 `ProgressChanged` 이벤트가 연속적으로 발생할 수 있습니다. 이러한 이벤트가 발생하는 클라이언트 스레드에서 이 상황을 처리할 수 있어야 합니다. 사용자 인터페이스 코드가 메시지로 넘쳐 유지할 수 없어서 응답하지 않을 수 있습니다. 이 상황을 처리하는 예제 사용자 인터페이스는 [방법: 이벤트 기반 비동기 패턴의 클라이언트 구현](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)을 참조하세요.  
   
 #### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>소수 계산을 비동기적으로 실행하려면:  
   

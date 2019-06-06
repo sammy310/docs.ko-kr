@@ -2,19 +2,19 @@
 title: 집계 함수(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
-ms.openlocfilehash: 423c7e843f54e48d4f05f26f3f4071bff1795c69
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b01c7dca675e79c61b87bcc1fb30455286db3118
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631751"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489967"
 ---
 # <a name="aggregate-functions-entity-sql"></a>집계 함수(Entity SQL)
 집계는 컬렉션을 그룹 작업의 일부분인 스칼라로 압축하는 언어 구문입니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 집계의 형식은 다음 두 가지입니다.  
   
 - [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 식의 어디서 나 사용할 수 있는 컬렉션 함수. 이 함수는 프로젝션의 집계 함수를 사용하며 컬렉션에 대한 해당 동작을 예측합니다. 컬렉션 함수는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서 집계를 지정하는 데 주로 사용되는 모드입니다.  
   
-- GROUP BY 절을 포함하는 쿼리 식의 그룹 집계. [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]에서와 같이 그룹 집계는 DISTINCT 및 ALL을 집계 입력에 대한 한정자로 받아들입니다.  
+- GROUP BY 절을 포함하는 쿼리 식의 그룹 집계. TRANSACT-SQL에서와 같이 그룹 집계는 DISTINCT 및 ALL 한정자 집계 입력으로 수락합니다.  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 먼저 식을 컬렉션 함수로 해석 하려고 하는 경우 식이 SELECT 식의 컨텍스트에서 이것으로 그룹 집계로 해석 합니다.  
   

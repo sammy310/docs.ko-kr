@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af68041cd016b457c449c283601bd5a0d4258c8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc5171b135facfbbe901b38a19fef9e9d47699b5
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666061"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490723"
 ---
 # <a name="setting-up-a-profiling-environment"></a>프로파일링 환경 설정
 > [!NOTE]
->  [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]에서 프로파일링이 크게 변경되었습니다.  
+>  .NET Framework 4에는 프로 파일링이 변경 되었습니다.  
   
  관리되는 프로세스(응용 프로그램 또는 서비스)가 시작되면 CLR(공용 언어 런타임)을 로드합니다. CLR이 초기화되면 다음 두 가지 환경 변수를 평가하여 프로세스를 프로파일러에 연결해야 할지를 결정합니다.  
   
@@ -37,10 +37,10 @@ ms.locfileid: "64666061"
  CLR 응용 프로그램을 프로파일링하려면 응용 프로그램을 실행하기 전에 COR_ENABLE_PROFILING 및 COR_PROFILER 환경 변수를 설정해야 합니다. 또한 프로파일러 DLL이 등록되었는지 확인해야 합니다.  
   
 > [!NOTE]
->  [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]부터 프로파일러를 등록할 필요가 없습니다.  
+>  .NET Framework 4부터 프로파일러 없는 등록 해야 합니다.  
   
 > [!NOTE]
->  .NET Framework 버전 2.0, 3.0 및 3.5 프로파일러를 사용 하 여 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 이상 버전에서는 COMPLUS_ProfAPI_ProfilerCompatibilitySetting 환경 변수를 설정 해야 합니다.  
+>  .NET Framework 4 및 이후 버전의.NET Framework 버전 2.0, 3.0 및 3.5 프로파일러를 사용 하려면 COMPLUS_ProfAPI_ProfilerCompatibilitySetting 환경 변수를 설정 해야 합니다.  
   
 ## <a name="environment-variable-scope"></a>환경 변수 범위  
  COR_ENABLE_PROFILING 및 COR_PROFILER 환경 변수를 설정하는 방법에 따라 영향을 미치는 범위가 결정됩니다. 다음 방법의 하나로 이들 변수를 설정할 수 있습니다.  

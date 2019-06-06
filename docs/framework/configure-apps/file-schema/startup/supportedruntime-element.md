@@ -9,12 +9,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: cc55809ecaffa4cab4fa4336f9f7f5c06debde2d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 90bdd5b8c5fdebe2c5d7ec580975dc63144b2401
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634222"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489305"
 ---
 # <a name="supportedruntime-element"></a>\<supportedRuntime > 요소
 
@@ -22,7 +22,7 @@ ms.locfileid: "65634222"
 
 [\<구성>](../configuration-element.md)  
 &nbsp;&nbsp;[\<startup>](../startup/startup-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;**\<supportedRuntime>**  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<supportedRuntime>**  
 
 ## <a name="syntax"></a>구문
 
@@ -34,7 +34,7 @@ ms.locfileid: "65634222"
 
 |특성|설명|
 |---------------|-----------------|
-|**version**|선택적 특성입니다.<br /><br /> 응용 프로그램이 지원하는 공용 언어 런타임(CLR) 버전을 지정하는 문자열 값입니다. 유효한 값에 대 한는 `version` 특성을 참조 합니다 ["런타임 버전" 값](#version) 섹션. **참고:**  .NET Framework 3.5를 통해를 "*런타임 버전*" 형식으로 지정 *주요*. *사소한*. *빌드*합니다. [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]부터는 주 및 부 버전 번호만 필요합니다(즉, "v4.0.30319"가 아니라 "v4.0"만 필요). 짧은 문자열이 권장됩니다.|
+|**version**|선택적 특성입니다.<br /><br /> 응용 프로그램이 지원하는 공용 언어 런타임(CLR) 버전을 지정하는 문자열 값입니다. 유효한 값에 대 한는 `version` 특성을 참조 합니다 ["런타임 버전" 값](#version) 섹션. **참고:**  .NET Framework 3.5를 통해를 "*런타임 버전*" 형식으로 지정 *주요*. *사소한*. *빌드*합니다. 주 및 부 버전 번호는 필수.NET Framework 4부터 (즉, "v4.0" 대신 "v4.0.30319"). 짧은 문자열이 권장됩니다.|
 |**sku**|선택적 특성입니다.<br /><br /> 이 응용 프로그램이 지원하는 .NET Framework 버전을 지정하는 SKU(Stock Keeping Unit)를 지정하는 문자열 값입니다.<br /><br /> .NET Framework 4.0을 시작할 때에는 `sku` 특성을 사용하는 것이 좋습니다.  존재한다면 앱이 대상으로 하는 .NET Framework의 버전을 나타냅니다.<br /><br /> Sku 특성의 유효한 값에 대 한 참조를 ["sku id" 값](#sku) 섹션입니다.|
 
 ## <a name="remarks"></a>설명
@@ -51,7 +51,7 @@ ms.locfileid: "65634222"
 경우는  **\<supportedRuntime >** 사용 하 여 요소를 `sku` 특성은 구성 파일 및 설치 된.NET Framework 버전이 아래 인 지원 되는 지정 된 버전의 응용 프로그램 실행에 실패 하 고 지원 되는 버전을 설치 하 라는 메시지가 표시 됩니다. 이 고, 그렇지 응용 프로그램이 설치 된 버전에서 실행 하려고 하지만 해당 버전과 완전히 호환 되지 않는 경우 예기치 않게 동작할 수 있습니다. (.NET Framework 버전 간에 호환성 차이점에 대 한 참조 [.NET Framework의 응용 프로그램 호환성](https://docs.microsoft.com/dotnet/framework/migration-guide/application-compatibility).) 따라서 오류를 쉽게 진단에 대 한 응용 프로그램 구성 파일에서이 요소를 포함 하는 것이 좋습니다. (이미 새 프로젝트를 만들 때 Visual Studio에서 자동으로 생성 하는 구성 파일 포함)
   
 > [!NOTE]
-> 응용 프로그램에서는 사용 레거시 활성화 경로 같은 합니다 [CorBindToRuntimeEx 함수](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), 해당 경로 이전 버전 대신 CLR 버전 4를 활성화 하 고 를사용하여응용프로그램을빌드할경우또는[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]종속 되어 있지만 이전 버전의.NET Framework를 사용 하 여 빌드된 혼합 모드 어셈블리에 없는 지정 하는 데 충분 합니다 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] 지원 되는 런타임 목록에서. 또한 합니다 [ \<시작 > 요소](../startup/startup-element.md) 구성 파일에서 설정 해야 합니다 `useLegacyV2RuntimeActivationPolicy` 특성을 `true`입니다. 그러나 이 특성을 `true`로 설정하면 .NET Framework의 이전 버전으로 빌드된 모든 구성 요소가 빌드 시 사용된 런타임 대신 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]을(를) 사용하여 실행됩니다.
+> 응용 프로그램에서는 사용 레거시 활성화 경로 같은 합니다 [CorBindToRuntimeEx 함수](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), 해당 경로 이전 버전 대신 CLR 버전 4를 활성화 하 고.NET Framework를 사용 하 여 응용 프로그램을 빌드할 경우 또는 하지만 정품이 4 이전 버전의.NET Framework를 사용 하 여 빌드된 혼합 모드 어셈블리에 없는 지원 되는 런타임 목록에서.NET Framework 4를 지정 하는 데 충분 합니다. 또한 합니다 [ \<시작 > 요소](../startup/startup-element.md) 구성 파일에서 설정 해야 합니다 `useLegacyV2RuntimeActivationPolicy` 특성을 `true`입니다. 하지만이 특성을 설정 `true` 빌드될 때 사용 된 런타임 대신.NET Framework 4를 사용 하 여 이전 버전의.NET Framework를 사용 하 여 빌드된 모든 구성 요소가 실행 되는 것을 의미 합니다.
 
 실행할 수 있는 모든 .NET Framework 버전을 사용하여 응용 프로그램을 테스트하는 것이 좋습니다.
 

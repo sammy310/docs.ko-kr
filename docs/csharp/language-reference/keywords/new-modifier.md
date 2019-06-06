@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-ms.openlocfilehash: d5fd244ea22fd48bf5b81d2cdf55127f745c145b
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 3a642996da8f0126e59e21d3553a7d8ba73dab23
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835020"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422685"
 ---
 # <a name="new-modifier-c-reference"></a>new 한정자(C# 참조)
 
@@ -22,7 +22,7 @@ ms.locfileid: "56835020"
 
 이 예제에서 `BaseC.Invoke`는 `DerivedC.Invoke`에 의해 숨겨집니다. `x` 필드는 비슷한 이름으로 숨겨져 있지 않기 때문에 영향을 받지 않습니다.
 
-상속을 사용한 이름 숨기기는 다음 중 한 가지 형식을 취합니다. 
+상속을 사용한 이름 숨기기는 다음 중 한 가지 형식을 취합니다.
 
 - 일반적으로 클래스 또는 구조체에 파생된 상수, 필드, 속성 또는 형식은 동일한 이름의 모든 기본 클래스 멤버를 숨깁니다.  이 사항이 적용되지 않는 경우가 있습니다.  예를 들어 호출할 수 없는 형식이 포함된 `N`이라는 이름의 새 필드를 선언하고 기본 형식에서 `N`을 메서드로 선언하면 새 필드가 호출 구문에서 기본 선언을 숨기지 않습니다.  자세한 내용은 [C# 5.0 언어 사양](https://www.microsoft.com/download/details.aspx?id=7029)을 참조하세요("식" 섹션의 "멤버 조회" 섹션 참조).
 
@@ -61,7 +61,6 @@ The keyword new is required on 'MyDerivedC.x' because it hides inherited member 
 - [C# 참조](../../language-reference/index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 키워드](index.md)
-- [연산자 키워드](operator-keywords.md)
 - [한정자](modifiers.md)
 - [Override 및 New 키워드를 사용하여 버전 관리](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)
 - [Override 및 New 키워드를 사용해야 하는 경우](../../programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d4a205f643c844b2fe77d3aa5211b4bc1f322fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26fed0a10b9a25f25a580c7ac9a468cbedeb3671
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674252"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489477"
 ---
 # <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<forcePerformanceCounterUniqueSharedMemoryReads> Element
 PerfCounter.dll이 .NET Framework 버전 1.1 애플리케이션에서 CategoryOptions 레지스트리 설정을 사용하여 성능 카운터 데이터를 범주별 공유 메모리에서 로드할지 또는 전역 메모리에서 로드할지를 결정하도록 지정합니다.  
@@ -55,11 +55,11 @@ enabled="true|false"/>
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
- 이전의.NET Framework의 버전에는 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], 프로세스에서 로드 된 런타임에 해당 하는 perfcounter.dll이 로드 된 버전입니다. 컴퓨터는.NET Framework 버전 1.1 했습니다 및 [!INCLUDE[dnprdnlong](../../../../../includes/dnprdnlong-md.md)] 설치 된.NET Framework 1.1 응용 프로그램을 로드 perfcounter.dll이.NET Framework 1.1 버전입니다. 부터 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], perfcounter.dll이 설치 된 최신 버전이 로드 됩니다. 즉,.NET Framework 1.1 응용 프로그램을 로드 됩니다 합니다 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] perfcounter.dll이 버전이 경우는 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] 컴퓨터에 설치 됩니다.  
+ Perfcounter.dll이 로드 된 버전이 프로세스에서 로드 된 런타임에 해당 하는.NET Framework 4 이전의.NET Framework의 버전입니다. 컴퓨터는.NET Framework 버전 1.1 했습니다 및 [!INCLUDE[dnprdnlong](../../../../../includes/dnprdnlong-md.md)] 설치 된.NET Framework 1.1 응용 프로그램을 로드 perfcounter.dll이.NET Framework 1.1 버전입니다. .NET Framework 4 부터는 perfcounter.dll이 설치 된 최신 버전이 로드 됩니다. 이 컴퓨터에.NET Framework 4를 설치 하는 경우.NET Framework 1.1 응용 프로그램을 perfcounter.dll이.NET Framework 4 버전이 로드 함을 의미 합니다.  
   
- 부터 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], 성능 카운터를 사용 하 고 perfcounter.dll이 범주별 공유 메모리 또는 전역 공유 메모리에서 읽어야 하는지 여부를 확인 하려면 각 공급자에 대 한 CategoryOptions 레지스트리 항목을 확인 합니다. 범주별 공유 메모리를 인식 하지 않기 때문에.NET Framework 1.1 perfcounter.dll이 해당 레지스트리 항목을 읽지 못하는 항상 전역 공유 메모리에서 읽습니다.  
+ Perfcounter.dll이.NET Framework 4부터 성능 카운터를 사용 하는 경우, 범주별 공유 메모리 또는 전역 공유 메모리에서 읽어야 하는지 여부를 확인 하려면 각 공급자에 대 한 CategoryOptions 레지스트리 항목을 확인 합니다. 범주별 공유 메모리를 인식 하지 않기 때문에.NET Framework 1.1 perfcounter.dll이 해당 레지스트리 항목을 읽지 못하는 항상 전역 공유 메모리에서 읽습니다.  
   
- 이전 버전과 호환성을 위해는 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] perfcounter.dll이.NET Framework 1.1 응용 프로그램에서 실행 하는 경우 CategoryOptions 레지스트리 항목을 확인 하지 않습니다. 단순히.NET Framework 1.1 perfcounter.dll이 처럼 전역 공유 메모리를 사용합니다. 지시할 수 있습니다 합니다 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] perfcounter.dll이 레지스트리 설정을 사용 하 여 확인 하는 `<forcePerformanceCounterUniqueSharedMemoryReads>` 요소입니다.  
+ 이전 버전과 호환성을 위해.NET Framework 4 perfcounter.dll이 확인 하지 않습니다 CategoryOptions 레지스트리 항목에서.NET Framework 1.1 응용 프로그램을 실행 하는 경우. 단순히.NET Framework 1.1 perfcounter.dll이 처럼 전역 공유 메모리를 사용합니다. 그러나 사용 하 여 레지스트리 설정을 확인 하려면.NET Framework 4 perfcounter.dll이 지시할 수 있습니다는 `<forcePerformanceCounterUniqueSharedMemoryReads>` 요소입니다.  
   
 > [!NOTE]
 >  사용 하도록 설정 된 `<forcePerformanceCounterUniqueSharedMemoryReads>` 요소 범주별 공유 메모리 사용 됨을 보장 하지 않습니다. 사용 하는 설정과 `true` 만 perfcounter.dll이 CategoryOptions 레지스트리 설정을 참조를 사용 하면 됩니다. CategoryOptions의 기본 설정은 범주별 공유 메모리를 사용 하는 것 그러나 전역 공유 메모리를 사용 해야 함을 나타내려면 CategoryOptions를 변경할 수 있습니다.  

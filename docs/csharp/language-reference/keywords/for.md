@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: ba156eed25f28a0568e11c986de1e84db3cd9cf0
-ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
+ms.openlocfilehash: 166f8a99a3556664f5f3701c94aa8593ac7ebe32
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58504485"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422088"
 ---
 # <a name="for-c-reference"></a>for(C# 참조)
 
@@ -112,5 +112,4 @@ i++
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 키워드](index.md)
-- [반복 문](iteration-statements.md)
 - [foreach, in](foreach-in.md)

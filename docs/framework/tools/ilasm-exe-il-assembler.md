@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b73a98542dfc6fa68e79655bc5538cf005e4636
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2fa95755142b5ea3999cca127c868bc878da516e
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492585"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378577"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe(IL 어셈블러)
 
@@ -58,7 +58,7 @@ ilasm [options] filename [[options]filename...]
 |**/include:** `includePath`|`#include`에 포함된 파일을 검색할 경로를 설정합니다.|
 |**/itanium**|Intel Itanium을 대상 프로세서로 지정합니다.<br /><br /> 이미지 비트가 지정되지 않은 경우 기본값은 **/pe64**입니다.|
 |**/key:** `keyFile`|`keyFile`에 들어 있는 개인 키를 사용하여 강력한 시그니처가 있는 `filename`을 컴파일합니다.|
-|**/key:** @`keySource`|`keySource`에 생성된 개인 키를 사용하여 강력한 시그니처가 있는 `filename`을 컴파일합니다.|
+|**/key:**  @`keySource`|`keySource`에 생성된 개인 키를 사용하여 강력한 시그니처가 있는 `filename`을 컴파일합니다.|
 |**/listing**|표준 출력 파일에 대한 목록 파일을 생성합니다. 이 옵션을 생략하면 목록 파일이 생성되지 않습니다.<br /><br /> 이 매개 변수는 .NET Framework 2.0 이상에서 지원되지 않습니다.|
 |**/mdv:** `versionString`|메타데이터 버전 문자열을 설정합니다.|
 |**/msv:** `major`.`minor`|`major` 및 `minor` 가 정수인 메타데이터 스트림 버전을 설정합니다.|
@@ -108,7 +108,7 @@ IL 문법에 대한 자세한 내용은 [!INCLUDE[winsdklong](../../../includes/
 
 ## <a name="version-information"></a>버전 정보
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]부터 다음과 같은 코드를 사용하여 사용자 지정 특성을 인터페이스 구현에 연결할 수 있습니다.
+.NET Framework 4.5부터 다음과 같은 코드를 사용하여 사용자 지정 특성을 인터페이스 구현에 연결할 수 있습니다.
 
 ```
 .class interface public abstract auto ansi IMyInterface
@@ -128,7 +128,7 @@ IL 문법에 대한 자세한 내용은 [!INCLUDE[winsdklong](../../../includes/
       …
 ```
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]부터 다음 코드와 같이 원시 이진 표현을 사용하여 임의의 마샬 BLOB(이진 대형 개체)를 지정할 수 있습니다.
+.NET Framework 4.5부터 다음 코드와 같이 원시 이진 표현을 사용하여 임의의 마샬 BLOB(이진 대형 개체)을 지정할 수 있습니다.
 
 ```
 .method public hidebysig abstract virtual

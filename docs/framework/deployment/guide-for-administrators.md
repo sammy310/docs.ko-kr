@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4710f299c97a6ef8039314243ca481db51c2bb52
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 793012b21ae6a3a597efaea23a6d3b6d1db58562
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614080"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379954"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>관리자를 위한 .NET Framework 배포 가이드
 
-이 단계별 문서에서는 시스템 관리자가 Microsoft System Center Configuration Manager를 사용하여 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 및 해당 시스템 종속성을 네트워크 전체에 배포할 수 있는 방법에 대해 설명합니다. 이 문서에서는 .NET Framework 4의 최소 요구 사항이 모든 대상 클라이언트 컴퓨터에서 충족되는 것으로 가정합니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 설치를 위한 소프트웨어와 하드웨어 요구 사항 목록은 [시스템 요구 사항](../../../docs/framework/get-started/system-requirements.md)을 참조하세요.
+이 단계별 문서에서는 시스템 관리자가 Microsoft System Center Configuration Manager를 사용하여 .NET Framework 4.5 및 해당 시스템 종속성을 네트워크 전체에 배포할 수 있는 방법에 대해 설명합니다. 이 문서에서는 .NET Framework 4의 최소 요구 사항이 모든 대상 클라이언트 컴퓨터에서 충족되는 것으로 가정합니다. .NET Framework 4.5 설치를 위한 소프트웨어와 하드웨어 요구 사항 목록은 [시스템 요구 사항](../../../docs/framework/get-started/system-requirements.md)을 참조하세요.
 
 > [!NOTE]
-> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], System Center Configuration Manager 및 Active Directory를 비롯하여 이 문서에서 언급된 소프트웨어에는 각각 사용권 계약 내용이 적용됩니다. 이 지침에서는 적절한 소프트웨어 라이선스로 이러한 사용권 계약 내용을 검토하고 이에 동의했다고 가정합니다. 이 지침에서는 이러한 사용권 계약의 어떠한 내용도 배제하지 않습니다.
+> .NET Framework 4.5, System Center Configuration Manager 및 Active Directory를 비롯하여 이 문서에서 언급된 소프트웨어에는 각각 사용권 계약 내용이 적용됩니다. 이 지침에서는 적절한 소프트웨어 라이선스로 이러한 사용권 계약 내용을 검토하고 이에 동의했다고 가정합니다. 이 지침에서는 이러한 사용권 계약의 어떠한 내용도 배제하지 않습니다.
 >
 > .NET Framework 지원에 대한 자세한 내용은 Microsoft 지원 웹 사이트의 [Microsoft .NET Framework 지원 기간 정책](https://go.microsoft.com/fwlink/?LinkId=196607)을 참조하십시오.
 
@@ -55,7 +55,7 @@ ms.locfileid: "64614080"
 
 ## <a name="deploying-the-net-framework"></a>.NET Framework 배포
 
-System Center 2012 Configuration Manager를 사용하여 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]의 자동 설치를 배포할 수 있고, 이 경우 사용자는 설치 프로세스와 상호 작용할 필요가 없습니다. 아래 단계를 수행합니다.
+System Center 2012 Configuration Manager를 사용하여 .NET Framework 4.5의 자동 설치를 배포할 수 있고, 이 경우 사용자는 설치 프로세스와 상호 작용할 필요가 없습니다. 아래 단계를 수행합니다.
 
 1. [컬렉션을 만듭니다](#creating_a_collection).
 
@@ -202,7 +202,7 @@ System Center 2012 Configuration Manager를 사용하여 [!INCLUDE[net_v45](../.
 
 ## <a name="resources"></a>자료
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 재배포 가능 패키지의 배포 테스트를 위한 인프라에 대한 자세한 내용은 다음 자료를 참조하십시오.
+.NET Framework 4.5 재배포 가능 패키지의 배포 테스트를 위한 인프라에 대한 자세한 내용은 다음 리소스를 참조하세요.
 
 **Active Directory, DNS, DHCP:**
 
@@ -249,7 +249,7 @@ System Center 2012 Configuration Manager를 사용하여 [!INCLUDE[net_v45](../.
 
 ### <a name="return-codes"></a>반환 코드
 
-다음 표에서는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 재배포 가능 설치 프로그램의 가장 일반적인 반환 코드를 보여 줍니다. 반환 코드는 설치 관리자 버전에 관계없이 모두 동일합니다.
+다음 표에서는 .NET Framework 4.5 재배포 가능 설치 프로그램의 가장 일반적인 반환 코드를 보여 줍니다. 반환 코드는 설치 관리자 버전에 관계없이 모두 동일합니다.
 
 자세한 정보에 대한 링크는 다음 섹션인 [다운로드 오류 코드](#additional_error_codes)를 참조하세요.
 

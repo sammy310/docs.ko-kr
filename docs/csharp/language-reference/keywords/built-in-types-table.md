@@ -7,12 +7,12 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: fae0cedfe8bf675dceb9cb9d5835d923cae8b4ab
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: bd8c52cd798496a4df3086411dfe3be6241fbff5
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235632"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422338"
 ---
 # <a name="built-in-types-table-c-reference"></a>기본 제공 형식 표(C# 참조)
 
@@ -36,7 +36,7 @@ ms.locfileid: "53235632"
 |[ushort](ushort.md)|<xref:System.UInt16?displayProperty=nameWithType>|  
 |[string](string.md)|<xref:System.String?displayProperty=nameWithType>|  
   
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 `object` 및 `string`을 제외하고 표에 있는 모든 형식을 단순 형식이라고 합니다.  
   
@@ -66,7 +66,6 @@ Console.WriteLine(doubleType.FullName);
 - [C# 참조](../../../csharp/language-reference/index.md)
 - [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
 - [C# 키워드](index.md)
-- [형식 참조 테이블](reference-tables-for-types.md)
 - [값 형식](value-types.md)
 - [참조 형식](reference-types.md)
 - [기본값 표](default-values-table.md)

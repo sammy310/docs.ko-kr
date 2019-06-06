@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 63101fb127c84de21d165994bba85a2753e97344
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5df5afec17d400ed14fe9b4c03c2f754895f0dd7
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59236609"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378760"
 ---
-### <a name="resizing-a-grid-can-hang"></a>눈금 크기 조정이 중지될 수 있음
+### <a name="resizing-a-grid-can-cause-an-application-to-become-unresponsive"></a>눈금 크기를 조정하면 애플리케이션이 응답하지 않을 수 있습니다.
 
 |   |   |
 |---|---|

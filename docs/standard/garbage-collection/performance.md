@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da29bd6bc53b59f1f20e2272a8293b49e230bff0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 996ea7802473817594420a108470f7604170482e
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622875"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456795"
 ---
 # <a name="garbage-collection-and-performance"></a>가비지 컬렉션 및 성능
 <a name="top"></a> 이 항목에서는 가비지 컬렉션 및 메모리 사용과 관련된 문제를 설명합니다. 관리되는 힙과 관련된 문제를 해결하고 애플리케이션에 미치는 가비지 컬렉션의 영향을 최소화하는 방법을 설명합니다. 각 문제에는 문제를 조사하는 데 사용할 수 있는 절차 링크가 있습니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "64622875"
  프로파일러는 포괄적인 정보를 제공할 수 있습니다. 그러나 복잡한 프로파일러는 애플리케이션의 동작을 수정할 가능성이 있습니다.  
   
 ### <a name="application-domain-resource-monitoring"></a>애플리케이션 도메인 리소스 모니터링  
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]부터 ARM(애플리케이션 도메인 리소스 모니터링)을 통해 호스트가 애플리케이션 도메인별로 CPU 및 메모리 사용량을 모니터링할 수 있습니다. 자세한 내용은 [애플리케이션 도메인 리소스 모니터링](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)을 참조하세요.  
+ .NET Framework 4부터 ARM(애플리케이션 도메인 리소스 모니터링)을 통해 호스트가 애플리케이션 도메인별로 CPU 및 메모리 사용량을 모니터링할 수 있습니다. 자세한 내용은 [애플리케이션 도메인 리소스 모니터링](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)을 참조하세요.  
   
  [맨 위로 이동](#top)  
   

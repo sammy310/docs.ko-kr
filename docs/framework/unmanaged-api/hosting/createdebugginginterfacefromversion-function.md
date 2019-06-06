@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60d1c49e8762d00e3e154c598c2542c4a76b9b28
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 247383e267ab3e8932d43621e122986a59d9a30d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985714"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490514"
 ---
 # <a name="createdebugginginterfacefromversion-function"></a>CreateDebuggingInterfaceFromVersion 함수
 만듭니다는 [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) 개체 정보를 기반으로 지정 된 버전입니다.  
   
- 이 함수에서 사용 되지는 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다. CLR (공용 언어 런타임) 2.0에 대 한 인터페이스를 가져오려면 대신 합니다 [iclrruntimeinfo:: Getinterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md) 메서드 인터페이스 식별자 IID_ICorDebug CLSID_CLRDebuggingLegacy 클래스 식별자를 지정 합니다. CLR 4에 대 한 인터페이스를 가져오거나 나중에 호출 하 여 [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) 함수 및 클래스 식별자 CLSID_CLRDebugging 및 IID_ICLRDebugging 인터페이스 식별자를 지정 합니다.  
+ 이 함수는.NET Framework 4에서 사용 되지 않습니다. CLR (공용 언어 런타임) 2.0에 대 한 인터페이스를 가져오려면 대신 합니다 [iclrruntimeinfo:: Getinterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md) 메서드 인터페이스 식별자 IID_ICorDebug CLSID_CLRDebuggingLegacy 클래스 식별자를 지정 합니다. CLR 4에 대 한 인터페이스를 가져오거나 나중에 호출 하 여 [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) 함수 및 클래스 식별자 CLSID_CLRDebugging 및 IID_ICLRDebugging 인터페이스 식별자를 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   

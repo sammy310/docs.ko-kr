@@ -24,12 +24,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 972efa150d560e74f0e7daadf18688ac12b9fbf3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a8f5c6f6aba9ec4ad627fcd4d3b3caaff810ee72
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583642"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456207"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>구성 파일을 사용하여 앱 구성
 .NET Framework에서 개발자와 관리자는 구성 파일을 통해 응용 프로그램이 실행되는 방식을 유연하게 제어할 수 있습니다. 구성 파일은 필요에 따라 변경할 수 있는 XML 파일입니다. 관리자는 응용 프로그램에서 액세스할 수 있는 보호되는 리소스와 응용 프로그램에서 사용할 어셈블리 버전 그리고 원격 응용 프로그램과 개체의 위치를 제어할 수 있습니다. 개발자는 설정을 구성 파일에 저장할 수 있으므로, 설정이 변경될 때마다 매번 응용 프로그램을 다시 컴파일할 필요가 없습니다. 이 단원에서는 응용 프로그램 구성과 유용성에 대해 설명합니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "64583642"
 ## <a name="machine-configuration-files"></a>컴퓨터 구성 파일  
  컴퓨터 구성 파일인 Machine.config 에는 전체 컴퓨터에 적용되는 설정이 포함되어 있습니다. 이 파일은 %*런타임 설치 경로*%\Config 디렉터리에 있습니다. Machine.config는 컴퓨터 전반의 어셈블리 바인딩, 기본 제공 [원격 채널](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100)) 및 ASP.NET에 대한 구성 설정을 포함합니다.  
   
- 구성 시스템은 먼저 컴퓨터 구성 파일에서 [**\<appSettings>** 요소](~/docs/framework/configure-apps/file-schema/appsettings/index.md)를 찾아본 후 개발자가 정의한 다른 구성 섹션에서 찾아봅니다. 그런 다음 응용 프로그램 구성 파일에서 찾아봅니다. 컴퓨터 구성 파일을 지속적으로 관리하려면 이러한 설정을 응용 프로그램 구성 파일에 넣는 것이 가장 좋습니다. 그러나 컴퓨터 구성 파일에 설정을 넣으면 시스템을 유지 관리하기가 더 쉬울 수 있습니다. 예를 들어, 클라이언트 및 서버 응용 프로그램이 모두 사용하는 타사 제품의 구성 요소를 가지고 있을 경우에는 이 구성 요소의 설정을 한 곳에 두는 것이 더 용이합니다. 이 때 설정을 넣을 적합한 위치는 컴퓨터 구성 파일이며, 이럴 경우 동일한 설정을 서로 다른 두 파일에 둘 필요가 없습니다.  
+ 구성 시스템은 먼저 컴퓨터 구성 파일에서 [ **\<appSettings>** 요소](~/docs/framework/configure-apps/file-schema/appsettings/index.md)를 찾아본 후 개발자가 정의한 다른 구성 섹션에서 찾아봅니다. 그런 다음 응용 프로그램 구성 파일에서 찾아봅니다. 컴퓨터 구성 파일을 지속적으로 관리하려면 이러한 설정을 응용 프로그램 구성 파일에 넣는 것이 가장 좋습니다. 그러나 컴퓨터 구성 파일에 설정을 넣으면 시스템을 유지 관리하기가 더 쉬울 수 있습니다. 예를 들어, 클라이언트 및 서버 응용 프로그램이 모두 사용하는 타사 제품의 구성 요소를 가지고 있을 경우에는 이 구성 요소의 설정을 한 곳에 두는 것이 더 용이합니다. 이 때 설정을 넣을 적합한 위치는 컴퓨터 구성 파일이며, 이럴 경우 동일한 설정을 서로 다른 두 파일에 둘 필요가 없습니다.  
   
 > [!NOTE]
 >  XCOPY를 사용하여 응용 프로그램을 배포하면 컴퓨터 구성 파일의 설정이 복사되지 않습니다.  
@@ -90,7 +90,7 @@ ms.locfileid: "64583642"
  보안 구성 파일에는 코드 그룹 계층 구조 및 정책 수준과 관련된 사용 권한 집합에 대한 정보가 포함되어 있습니다. 정책 변경에 의해 보안 구성 파일이 손상되지 않도록 [코드 액세스 보안 도구(Caspol.exe)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md) 또는 코드 액세스 보안 정책 도구(Caspol.exe)를 사용하여 보안 정책을 수정하는 것이 좋습니다.  
   
 > [!NOTE]
->  [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]부터 보안 구성 파일은 보안 정책이 변경된 경우에만 제공됩니다.  
+>  .NET Framework 4부터 보안 구성 파일은 보안 정책이 변경 된 경우에 제공 합니다.  
   
  보안 구성 파일은 다음 위치에 있습니다.  
   

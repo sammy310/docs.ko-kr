@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ecc1090f2697eb0243a081cde70338c0e6fffec
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: ad13a5771adbfbd389feeccd3e8c833c4c2f778a
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409928"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300630"
 ---
 # <a name="task-based-asynchronous-programming"></a>작업 기반 비동기 프로그래밍
 
@@ -113,27 +113,27 @@ TPL(작업 병렬 라이브러리)은 *작업*이란 개념을 기반으로 하�
 
 ## <a name="tasks-threads-and-culture"></a>작업, 스레드 및 문화권
 
-각 스레드에는 각각 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> 속성으로 정의된 관련 문화권 및 UI 문화권이 있습니다. 스레드의 문화권은 형식 지정, 구문 분석, 정렬 및 문자열 비교와 같은 작업에서 사용됩니다. 스레드의 UI 문화권은 리소스 조회에서 사용됩니다. 일반적으로, <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> 및 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> 속성을 사용하여 응용 프로그램 도메인의 모든 스레드에 대한 기본 문화권을 지정하지 않는 한 스레드의 기본 문화권 및 UI 문화권은 시스템 문화권에 의해 정의됩니다. 스레드의 문화권을 명시적으로 설정하고 새 스레드를 시작하는 경우 새 스레드는 호출 스레드의 문화권을 상속하지 않습니다. 대신, 해당 문화권은 기본 시스템 문화권입니다. [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 이전의 .NET Framework 버전을 대상으로 하는 응용 프로그램에 대한 작업 기반 프로그래밍 모델은 이 관행을 준수합니다.
+각 스레드에는 각각 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> 속성으로 정의된 관련 문화권 및 UI 문화권이 있습니다. 스레드의 문화권은 형식 지정, 구문 분석, 정렬 및 문자열 비교와 같은 작업에서 사용됩니다. 스레드의 UI 문화권은 리소스 조회에서 사용됩니다. 일반적으로, <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> 및 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> 속성을 사용하여 응용 프로그램 도메인의 모든 스레드에 대한 기본 문화권을 지정하지 않는 한 스레드의 기본 문화권 및 UI 문화권은 시스템 문화권에 의해 정의됩니다. 스레드의 문화권을 명시적으로 설정하고 새 스레드를 시작하는 경우 새 스레드는 호출 스레드의 문화권을 상속하지 않습니다. 대신, 해당 문화권은 기본 시스템 문화권입니다. .NET Framework 4.6 이전의 .NET Framework 버전을 대상으로 하는 앱에 대한 작업 기반 프로그래밍 모델은 이 관행을 준수합니다.
 
 > [!IMPORTANT]
-> 작업 컨텍스트의 일부인 호출 스레드의 문화권은 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] *아래에서 실행*되는 앱이 아니라 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]를 *대상으로 하는* 앱에 적용됩니다. Visual Studio에서 **새 프로젝트** 대화 상자 위쪽의 드롭다운 목록에서 버전을 선택하여 프로젝트를 만들 때 특정 버전의 .NET Framework를 대상으로 지정할 수 있으며, Visual Studio 외부에서는 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 특성을 사용할 수 있습니다. [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 이전의 .NET Framework 버전을 대상으로 하거나 특정 버전의 .NET Framework를 대상으로 하는 앱의 경우 작업의 문화권은 작업이 실행되는 스레드의 문화권에 의해 계속 결정됩니다.
+> 작업 컨텍스트의 일부인 호출 스레드의 문화권은 .NET Framework 4.6 *아래에서 실행*되는 앱이 아니라 .NET Framework 4.6을 *대상으로 하는* 앱에 적용됩니다. Visual Studio에서 **새 프로젝트** 대화 상자 위쪽의 드롭다운 목록에서 버전을 선택하여 프로젝트를 만들 때 특정 버전의 .NET Framework를 대상으로 지정할 수 있으며, Visual Studio 외부에서는 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 특성을 사용할 수 있습니다. .NET Framework 4.6 이전의 .NET Framework 버전을 대상으로 하거나 특정 버전의 .NET Framework를 대상으로 하는 앱의 경우 작업의 문화권은 작업이 실행되는 스레드의 문화권에 의해 계속 결정됩니다.
 
-[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]를 대상으로 하는 앱부터 작업이 스레드 풀 스레드에서 비동기적으로 실행되는 경우에도 호출 스레드의 문화권이 각 작업에 상속됩니다.
+.NET Framework 4.6을 대상으로 하는 앱부터 작업이 스레드 풀 스레드에서 비동기적으로 실행되는 경우에도 호출 스레드의 문화권이 각 작업에 상속됩니다.
 
-다음 예제에서는 간단한 설명을 제공합니다. <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 특성을 사용하여 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]를 대상으로 지정하고 앱의 현재 문화권을 프랑스어(프랑스) 또는 프랑스어(프랑스)가 이미 현재 문화권인 경우 영어(미국)로 변경합니다. 그런 다음 새 문화권의 통화 값으로 형식이 지정된 일부 숫자를 반환하는 `formatDelegate`라는 대리자를 호출합니다. 호출 스레드의 문화권이 비동기 작업에 상속되므로 작업으로서 대리자가 동기적 또는 비동기적인지에 관계없이 예상 결과를 반환합니다.
+다음 예제에서는 간단한 설명을 제공합니다. <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 특성을 사용하여 .NET Framework 4.6을를 대상으로 지정하고 앱의 현재 문화권을 프랑스어(프랑스) 또는 프랑스어(프랑스)가 이미 현재 문화권인 경우 영어(미국)로 변경합니다. 그런 다음 새 문화권의 통화 값으로 형식이 지정된 일부 숫자를 반환하는 `formatDelegate`라는 대리자를 호출합니다. 호출 스레드의 문화권이 비동기 작업에 상속되므로 작업으로서 대리자가 동기적 또는 비동기적인지에 관계없이 예상 결과를 반환합니다.
 
 [!code-csharp[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/cs/asyncculture1.cs#5)]
 [!code-vb[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/vb/asyncculture1.vb#5)]
 
 Visual Studio를 사용할 경우 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 특성을 생략하고 **새 프로젝트** 대화 상자에서 프로젝트를 만들 때 대신 .NET Framework 4.6을 대상으로 선택할 수 있습니다.
 
-[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 이전의 .NET Framework 버전을 대상으로 하는 앱의 동작을 반영하는 출력의 경우 소스 코드에서 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 특성을 제거합니다. 출력은 호출 스레드의 문화권이 아닌 기본 시스템 문화권의 형식 지정 규칙을 반영합니다.
+.NET Framework 4.6 이전의 .NET Framework 버전을 대상으로 하는 앱의 동작을 반영하는 출력의 경우 소스 코드에서 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 특성을 제거합니다. 출력은 호출 스레드의 문화권이 아닌 기본 시스템 문화권의 형식 지정 규칙을 반영합니다.
 
 비동기 작업 및 문화권에 대한 자세한 내용은 <xref:System.Globalization.CultureInfo> 항목의 "문화권 및 비동기 작업 기반 작업" 섹션을 참조하세요.
 
 ## <a name="creating-task-continuations"></a>작업 연속 만들기
 
-<xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> 메서드를 사용하면 ‘선행 작업’이 완료될 때 시작할 작업을 지정할 수 있습니다. 연속 작업의 대리자가 선행 작업으로 참조를 전달하여 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 속성의 값을 검색하여 선행 작업의 상태를 검사할 수 있으며 선행 작업의 출력을 연속 작업의 입력으로 사용할 수 있습니다.
+<xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> 메서드를 사용하면 ‘선행 작업’이 완료될 때 시작할 작업을 지정할 수 있습니다.  연속 작업의 대리자가 선행 작업으로 참조를 전달하여 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 속성의 값을 검색하여 선행 작업의 상태를 검사할 수 있으며 선행 작업의 출력을 연속 작업의 입력으로 사용할 수 있습니다.
 
 다음 예제에서는 `getData` 작업이 <xref:System.Threading.Tasks.TaskFactory.StartNew%60%601%28System.Func%7B%60%600%7D%29?displayProperty=nameWithType> 메서드에 대한 호출로 시작됩니다. `processData`작업은 `getData`가 완료되면 자동으로 시작되고 `displayData`는 `processData`가 완료되면 시작됩니다. `getData`는 `processData` 작업의 `getData` 속성을 통해 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 작업에 액세스할 수 있는 정수 배열을 생성합니다. `processData` 작업은 해당 배열을 처리하고 <xref:System.Threading.Tasks.Task%601.ContinueWith%60%601%28System.Func%7BSystem.Threading.Tasks.Task%7B%600%7D%2C%60%600%7D%29?displayProperty=nameWithType> 메서드로 전달된 람다 식의 반환 형식에서 유추한 형식을 갖는 결과를 반환합니다. `displayData` 작업은 `processData`가 완료되면 자동으로 실행되며 <xref:System.Tuple%603> 람다 식에서 반환한 `processData` 개체는 `displayData` 작업의 `processData` 속성을 통해 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 작업에 액세스할 수 있습니다. `displayData` 작업은 `processData` 작업의 결과를 사용해서 해당 형식이 비슷한 방식으로 유추되고 <xref:System.Threading.Tasks.Task%601.Result%2A> 속성의 프로그램에서 사용할 수 있는 결과를 생성합니다.
 
@@ -160,7 +160,7 @@ Visual Studio를 사용할 경우 <xref:System.Runtime.Versioning.TargetFramewor
 
 ## <a name="creating-child-tasks"></a>자식 작업 만들기
 
-작업에서 실행되는 사용자 코드를 통해 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 옵션을 사용해서 작업을 만들 경우, 새 작업은 부모 작업의 ‘연결된 자식 작업’으로 알려집니다. <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 옵션을 사용하면 부모 작업은 암시적으로 모든 연결된 자식 작업이 완료될 때까지 대기하게 되므로 이 옵션을 사용하여 구조적 작업 병렬 처리를 표현할 수 있습니다. 다음 예제에서는 10개의 연결된 자식 작업을 만드는 부모 작업을 보여 줍니다. 예제는 부모 작업이 완료되기를 기다리도록 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 메서드를 호출하지만 첨부된 자식 작업이 완료되기를 명시적으로 기다릴 필요가 없습니다.
+작업에서 실행되는 사용자 코드를 통해 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 옵션을 사용해서 작업을 만들 경우, 새 작업은 부모 작업의 ‘연결된 자식 작업’으로 알려집니다.  <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 옵션을 사용하면 부모 작업은 암시적으로 모든 연결된 자식 작업이 완료될 때까지 대기하게 되므로 이 옵션을 사용하여 구조적 작업 병렬 처리를 표현할 수 있습니다. 다음 예제에서는 10개의 연결된 자식 작업을 만드는 부모 작업을 보여 줍니다. 예제는 부모 작업이 완료되기를 기다리도록 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 메서드를 호출하지만 첨부된 자식 작업이 완료되기를 명시적으로 기다릴 필요가 없습니다.
 
 [!code-csharp[TPL_TaskIntro#8](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/child1.cs#8)]
 [!code-vb[TPL_TaskIntro#8](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/child1.vb#8)]

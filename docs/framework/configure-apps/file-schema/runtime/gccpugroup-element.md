@@ -7,71 +7,76 @@ helpviewer_keywords:
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85cfe57f7a3b8cfecfae4c4ae00efaea464e6120
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1251f286a4e6168ef1d18b05288e0c5f353ad828
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674092"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689873"
 ---
 # <a name="gccpugroup-element"></a>\<GCCpuGroup > 요소
-가비지 수집에서 여러 CPU 그룹을 지원할지를 지정합니다.  
-  
- \<configuration>  
-\<runtime>  
-\<GCCpuGroup>  
-  
-## <a name="syntax"></a>구문  
-  
-```xml  
-<GCCpuGroup    
-   enabled="true|false"/>  
-```  
-  
-## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
-  
-### <a name="attributes"></a>특성  
-  
-|특성|설명|  
-|---------------|-----------------|  
-|`enabled`|필수 특성입니다.<br /><br /> 가비지 수집에서 여러 CPU 그룹을 지원할지를 지정합니다.|  
-  
-## <a name="enabled-attribute"></a>enabled 특성  
-  
-|값|설명|  
-|-----------|-----------------|  
-|`false`|가비지 수집에서 여러 CPU 그룹을 지원 하지 않습니다. 이 값이 기본값입니다.|  
-|`true`|가비지 수집이 서버 가비지 수집을 사용 하는 경우 여러 CPU 그룹을 지원 합니다.|  
-  
-### <a name="child-elements"></a>자식 요소  
- 없음  
-  
-### <a name="parent-elements"></a>부모 요소  
-  
-|요소|설명|  
-|-------------|-----------------|  
-|`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
-|`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|  
-  
-## <a name="remarks"></a>설명  
- 컴퓨터에 여러 CPU 그룹이 시간과 서버 가비지 컬렉션이 설정 되었는지 (참조를 [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) 요소), 모든 CPU 그룹에 걸쳐 가비지 컬렉션을 확장 하 고 모든 코어에는이 요소를 사용 하도록 설정 계정 만들기 및 힙 분산 하는 경우입니다.  
-  
+
+가비지 수집에서 여러 CPU 그룹을 지원할지를 지정합니다.
+
+\<configuration>\
+\<runtime>\
+\<GCCpuGroup>
+
+## <a name="syntax"></a>구문
+
+```xml
+<GCCpuGroup
+   enabled="true|false"/>
+```
+
+## <a name="attributes-and-elements"></a>특성 및 요소
+
+다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.
+
+### <a name="attributes"></a>특성
+
+|특성|설명|
+|---------------|-----------------|
+|`enabled`|필수 특성입니다.<br /><br /> 가비지 수집에서 여러 CPU 그룹을 지원할지를 지정합니다.|
+
+## <a name="enabled-attribute"></a>enabled 특성
+
+|값|설명|
+|-----------|-----------------|
+|`false`|가비지 수집에서 여러 CPU 그룹을 지원 하지 않습니다. 이 값이 기본값입니다.|
+|`true`|가비지 수집이 서버 가비지 수집을 사용 하는 경우 여러 CPU 그룹을 지원 합니다.|
+
+### <a name="child-elements"></a>자식 요소
+
+없음
+
+### <a name="parent-elements"></a>부모 요소
+
+|요소|설명|
+|-------------|-----------------|
+|`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|
+|`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|
+
+## <a name="remarks"></a>설명
+
+컴퓨터에 여러 CPU 그룹이 시간과 서버 가비지 컬렉션이 설정 되었는지 (참조를 [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) 요소), 모든 CPU 그룹에 걸쳐 가비지 컬렉션을 확장 하 고 모든 코어에는이 요소를 사용 하도록 설정 계정 만들기 및 힙 분산 하는 경우입니다.
+
 > [!NOTE]
->  이 요소는 가비지 수집 스레드에만 적용 됩니다. 런타임이 모든 CPU 그룹에 사용자 스레드를 분산할 수 있도록 설정할 수도 있습니다는 [< Thread_UseAllCpuGroups >](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md) 요소입니다.  
-  
-## <a name="example"></a>예제  
- 다음 예제에서는 여러 CPU 그룹에 대 한 가비지 수집을 사용 하도록 설정 하는 방법을 보여 줍니다.  
-  
-```xml  
-<configuration>  
-   <runtime>  
-      <GCCpuGroup enabled="true"/>  
-      <gcServer enabled="true"/>  
-   </runtime>  
-</configuration>  
-```  
-  
+> 이 요소는 가비지 수집 스레드에만 적용 됩니다. 런타임이 모든 CPU 그룹에 사용자 스레드를 분산할 수 있도록 설정할 수도 있습니다는 [ \<Thread_UseAllCpuGroups >](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md) 요소입니다.
+
+## <a name="example"></a>예제
+
+다음 예제에서는 여러 CPU 그룹에 대 한 가비지 수집을 사용 하도록 설정 하는 방법을 보여 줍니다.
+
+```xml
+<configuration>
+   <runtime>
+      <GCCpuGroup enabled="true"/>
+      <gcServer enabled="true"/>
+   </runtime>
+</configuration>
+```
+
 ## <a name="see-also"></a>참고자료
 
 - [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)

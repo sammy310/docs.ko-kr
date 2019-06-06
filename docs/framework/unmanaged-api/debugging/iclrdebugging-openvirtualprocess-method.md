@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a313ea62455067fb36b94d942b0ce21589677e3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d530f37c979a1ecddf2cb3895234aab2f7556b88
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698163"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489623"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess 메서드
 프로세스에 로드 된 공용 언어 런타임 (CLR) 모듈에 해당 하는 ICorDebugProcess 인터페이스를 가져옵니다.  
@@ -78,7 +78,7 @@ HRESULT OpenVirtualProcess(
 |CORDBG_E_LIBRARY_PROVIDER_ERROR|합니다 [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) 콜백 오류를 반환 하거나 유효한 핸들을 제공 하지 않습니다.|  
 |CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` 이 버전의 런타임이 필요한 데이터 대상 인터페이스를 구현 하지 않습니다.|  
 |CORDBG_E_NOT_CLR|표시 된 모듈이 CLR 모듈이 아닙니다. 메모리가 손상, 모듈을 사용할 수 없는 CLR 버전은 shim 된 버전 보다 최신 때문에 CLR 모듈을 검색할 수 없는 경우에이 HRESULT 반환 됩니다.|  
-|CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|이 런타임 버전에서이 디버깅 모델을 지원 하지 않습니다. 현재, 모델을 디버깅 하기 전에 CLR 버전에서 지원 되지 않습니다는 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다. `pwszVersion` 출력 매개 변수는 여전히이 오류 후 올바른 값으로 설정 됩니다.|  
+|CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|이 런타임 버전에서이 디버깅 모델을 지원 하지 않습니다. 현재 디버깅 모델을.NET Framework 4 이전 버전의 CLR에서 지원 되지 않습니다. `pwszVersion` 출력 매개 변수는 여전히이 오류 후 올바른 값으로 설정 됩니다.|  
 |CORDBG_E_UNSUPPORTED_FORWARD_COMPAT|버전의 CLR이 디버거에서 지원 해야 하는 버전 보다 큽니다. `pwszVersion` 출력 매개 변수는 여전히이 오류 후 올바른 값으로 설정 됩니다.|  
 |E_NO_INTERFACE|`riidProcess` 인터페이스를 사용할 수 없습니다.|  
 |CORDBG_E_UNSUPPORTED_VERSION_STRUCT|합니다 `CLR_DEBUGGING_VERSION` 구조에 대 한 인식 된 값이 없는 `wStructVersion`합니다. 이 이번에 허용 되는 유일한 값은 0입니다.|  

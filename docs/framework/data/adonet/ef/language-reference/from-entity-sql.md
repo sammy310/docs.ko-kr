@@ -2,12 +2,12 @@
 title: FROM(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: 3cc02b4c51b32d0faace4d89d0c6c1f6923dd138
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36e3059869ed048bd7c5294c4f5f5407288610b2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879582"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489944"
 ---
 # <a name="from-entity-sql"></a>FROM(Entity SQL)
 에 사용 되는 컬렉션을 지정 [선택](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) 문입니다.  
@@ -46,7 +46,7 @@ LOB.Customers
  별칭이 지정되지 않은 경우 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 컬렉션 식을 기반으로 별칭을 생성합니다.  
   
 ### <a name="join-from-clause-item"></a>JOIN FROM 절 항목  
- `JOIN FROM` 절 항목은 두 `FROM` 절 항목 간의 조인을 나타냅니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 Cross Join, Inner Join, Left Outer Join, Right Outer Join 및 Full Outer Join을 지원합니다. 이러한 모든 조인은 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]에서와 유사한 방식으로 지원됩니다. [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]과 마찬가지로 `FROM`에 관련된 두 `JOIN` 절 항목은 서로 독립적이어야 합니다. 즉, 상호 관련될 수 없습니다. 이러한 경우 `CROSS APPLY` 또는 `OUTER APPLY`를 사용할 수 있습니다.  
+ `JOIN FROM` 절 항목은 두 `FROM` 절 항목 간의 조인을 나타냅니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 Cross Join, Inner Join, Left Outer Join, Right Outer Join 및 Full Outer Join을 지원합니다. 이러한 모든 조인은 Transact SQL에서 지원 되는 방식과 유사 하 게 지원 됩니다. Transact SQL에서 두와 같이 `FROM` 절 항목에 관련 된 `JOIN` 독립적 이어야 합니다. 즉, 상호 관련될 수 없습니다. 이러한 경우 `CROSS APPLY` 또는 `OUTER APPLY`를 사용할 수 있습니다.  
   
 #### <a name="cross-joins"></a>Cross Join  
  `CROSS JOIN` 쿼리 식에서는 다음 예제와 같이 두 컬렉션의 Cartesian 곱을 생성합니다.  
@@ -77,7 +77,7 @@ LOB.Customers
  위의 쿼리 식에서는 `ON` 조건이 true인 오른쪽 컬렉션의 모든 요소와 왼쪽 컬렉션의 모든 요소 쌍으로 이루어진 조합을 처리합니다. `ON` 조건이 false이면 식에서 값이 Null인 오른쪽 요소와 쌍을 이루는 왼쪽 요소의 단일 인스턴스를 처리합니다. 또한 값이 Null인 왼쪽 요소와 쌍을 이루는 오른쪽 요소의 단일 인스턴스를 처리합니다.  
   
 > [!NOTE]
->  SQL-92와의 호환성을 유지하기 위해 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]에서 OUTER 키워드는 선택 사항입니다. 따라서 `LEFT JOIN`, `RIGHT JOIN` 및 `FULL JOIN`은 `LEFT OUTER JOIN`, `RIGHT OUTER JOIN` 및 `FULL OUTER JOIN`과 같습니다.  
+>  TRANSACT-SQL에서 SQL-92와의 호환성을 유지 하기 위해에서 OUTER 키워드는 선택 사항입니다. 따라서 `LEFT JOIN`, `RIGHT JOIN` 및 `FULL JOIN`은 `LEFT OUTER JOIN`, `RIGHT OUTER JOIN` 및 `FULL OUTER JOIN`과 같습니다.  
   
 ### <a name="apply-clause-item"></a>APPLY 절 항목  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 두 가지 종류의 `APPLY`인 `CROSS APPLY`와 `OUTER APPLY`를 지원합니다.  
@@ -93,7 +93,7 @@ LOB.Customers
  `SELECT c, f FROM C AS c OUTER APPLY c.Assoc AS f`  
   
 > [!NOTE]
->  [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]과 달리, [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 명시적 중첩 해제 단계가 필요하지 않습니다.  
+>  와 달리 TRANSACT-SQL 한지는 명시적 중첩 해제 단계가 필요 하지 않습니다 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]합니다.  
   
 > [!NOTE]
 >  `CROSS` 및 `OUTER APPLY` 연산자는 [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]에서 도입되었습니다. 경우에 따라 쿼리 파이프라인에서 `CROSS APPLY` 및/또는 `OUTER APPLY` 연산자가 포함된 Transact-SQL을 생성할 수 있습니다. 때문에 SQL Server의 버전을 비롯 한 일부 백엔드 공급자 이전의 [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]이러한 연산자를 지원 하지 않습니다, 해당 백엔드 공급자에서 쿼리를 실행할 수 없습니다.  
@@ -137,7 +137,7 @@ from (C as c join D as d) cross apply c.Names as e
 from (C as c join D as d) cross apply c.Names as e  
 ```  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]과 달리 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]에서는 `FROM` 절만 별칭을 범위에 생성합니다. 이러한 컬렉션의 열(속성)에 대한 모든 참조는 해당 별칭으로 정규화해야 합니다.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (Transact SQL), 달리는 `FROM` 절이 범위로 별칭을 생성 합니다. 이러한 컬렉션의 열(속성)에 대한 모든 참조는 해당 별칭으로 정규화해야 합니다.  
   
 ## <a name="pulling-up-keys-from-nested-queries"></a>중첩 쿼리에서 키 끌어오기  
  중첩 쿼리에서 키를 끌어와야 하는 특정 쿼리 유형은 지원되지 않습니다. 예를 들어, 다음 쿼리는 유효합니다.  

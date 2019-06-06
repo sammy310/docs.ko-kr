@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 201dbc759b619f65599e09c78c14b96d17395952
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cb70b0ef4c6e619418f8464b543795a59c2ddff5
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620709"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423788"
 ---
 # <a name="net-regular-expressions"></a>.NET 정규식
 정규식은 텍스트를 처리하는 강력하고 유연하며 효율적인 방법을 제공합니다. 정규식의 광범위한 패턴 일치 표기법을 사용하여 많은 양의 텍스트를 신속하게 구문 분석함으로써 특정 문자 패턴을 찾고, 텍스트의 유효성을 검사하여 해당 텍스트가 미리 정의된 패턴(예: 전자 메일 주소)과 일치하는지 확인하며, 텍스트 부분 문자열을 추출, 편집, 바꾸기 또는 삭제하고, 추출된 문자열을 컬렉션에 추가하여 보고서를 생성할 수 있습니다. 문자열을 처리하거나 텍스트의 큰 블록을 구문 분석하는 많은 애플리케이션의 경우 정규식은 필수적인 도구입니다.  
@@ -97,7 +97,7 @@ ms.locfileid: "64620709"
   
 |||  
 |-|-|  
-|`\$`|입력 문자열에서 단일 달러 기호($)를 찾습니다. 정규식 패턴 문자열에는 백슬래시가 포함되어 달러 기호가 정규식 앵커로 해석되는 것이 아니라 리터럴로 해석될 것임을 나타냅니다. ($ 기호 단독으로는 정규식 엔진이 문자열의 끝 부분에서 찾기를 시작하려고 해야 한다는 사실을 나타냅니다.) 현재 문화권의 통화 기호가 정규식 기호로 잘못 해석되지 않도록 하기 위해 이 예제에서는 <xref:System.Text.RegularExpressions.Regex.Escape%2A> 메서드를 호출하여 문자를 이스케이프합니다.|  
+|`\$`|입력 문자열에서 단일 달러 기호(`$`)를 찾습니다. 정규식 패턴 문자열에는 백슬래시가 포함되어 달러 기호가 정규식 앵커로 해석되는 것이 아니라 리터럴로 해석될 것임을 나타냅니다. (`$` 기호 단독으로는 정규식 엔진이 문자열의 끝 부분에서 찾기를 시작하려고 해야 한다는 사실을 나타냅니다.) 현재 문화권의 통화 기호가 정규식 기호로 잘못 해석되지 않도록 하기 위해 이 예제에서는 <xref:System.Text.RegularExpressions.Regex.Escape%2A?displayProperty=nameWithType> 메서드를 호출하여 문자를 이스케이프합니다.|  
 |`\s*`|0개 이상의 공백 문자를 찾습니다.|  
 |`[-+]?`|0개 이상의 더하기 기호 또는 빼기 기호를 찾습니다.|  
 |`([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`|이 식을 둘러싼 바깥쪽 괄호는 이 식을 캡처링 그룹 또는 하위 식으로 정의합니다. 일치 항목을 찾은 경우 일치하는 문자열의 이 부분에 대한 정보는 <xref:System.Text.RegularExpressions.Group> 속성에서 반환하는 <xref:System.Text.RegularExpressions.GroupCollection> 개체의 두 번째 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 개체에서 검색할 수 있습니다. (컬렉션의 첫 번째 요소는 전체 일치를 나타냅니다.)|  

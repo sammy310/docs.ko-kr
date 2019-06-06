@@ -2,12 +2,12 @@
 title: CAST(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: 36bf627c7dfabdcf4bbc279bec8f3933f7aafb2a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 743c90cd9bc77a89051c59a217befa4275b28572
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631644"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489954"
 ---
 # <a name="cast-entity-sql"></a>CAST(Entity SQL)
 데이터 형식의 식을 다른 형식의 식으로 변환합니다.  
@@ -29,7 +29,7 @@ CAST ( expression AS data_type )
  `data_type`와 동일한 값을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- CAST 식과 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] CONVERT 식의 의미 체계는 서로 비슷합니다. CAST 식은 한 형식의 값을 다른 형식의 값으로 변환하는 데 사용됩니다.  
+ Cast 식은 Transact SQL 변환 식으로 유사한 의미 체계를 있습니다. CAST 식은 한 형식의 값을 다른 형식의 값으로 변환하는 데 사용됩니다.  
   
 ```  
 CAST( e as T )  

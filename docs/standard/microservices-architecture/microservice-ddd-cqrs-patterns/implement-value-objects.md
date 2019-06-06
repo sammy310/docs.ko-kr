@@ -2,12 +2,12 @@
 title: 값 개체 구현
 description: 컨테이너화된 .NET 애플리케이션의 .NET 마이크로 서비스 아키텍처 | 새로운 Entity Framework 기능을 사용하여 값 개체를 구현하는 세부 정보 및 옵션을 가져옵니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: 850d571ffb92f2d200e24430a9611fb13b64e635
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b2f7b0f36fea25c25edd47731d9387810bd2b44d
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644307"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423730"
 ---
 # <a name="implement-value-objects"></a>값 개체 구현
 
@@ -21,7 +21,7 @@ ms.locfileid: "65644307"
 
 **그림 7-13** 순서 집계 내부의 주소 값 개체
 
-그림 7-13에 표시된 것처럼, 엔터티는 일반적으로 여러 특성으로 구성됩니다. 예를 들어 `Order` 엔터티는 ID가 있는 엔터티로 모델링하고 내부적으로 OrderId, OrderDate, OrderItems 등의 특성 집합으로 구성할 수 있습니다. 하지만 국가, 거리, 도시 등으로 구성되고 이 도메인의 ID를 갖지 않는 복잡한 값인 주소는 값 개체로 모델링되고 처리되어야 합니다.
+그림 7-13에 표시된 것처럼, 엔터티는 일반적으로 여러 특성으로 구성됩니다. 예를 들어 `Order` 엔터티는 ID가 있는 엔터티로 모델링하고 내부적으로 OrderId, OrderDate, OrderItems 등의 특성 집합으로 구성할 수 있습니다. 하지만 국가/지역, 거리, 도시 등으로 구성되고 이 도메인의 ID를 갖지 않는 복잡한 값인 주소는 값 개체로 모델링되고 처리되어야 합니다.
 
 ## <a name="important-characteristics-of-value-objects"></a>값 개체의 중요한 특징
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c7c56e39-a700-44f5-b94e-411bfce339d9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4fe1dfbd62a6967ae51031fa12f80e9c5563dc44
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff8c91680a0c3049fa9bc2f7e9c1bf3f654a19b9
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704923"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487764"
 ---
 # <a name="appdomainmanagerassembly-element"></a>\<appDomainManagerAssembly> Element
 프로세스의 기본 애플리케이션 도메인용 애플리케이션 도메인 관리자를 제공하는 어셈블리를 지정합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "61704923"
   
  형식의 어셈블리 표시 이름에 대 한 참조를 <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> 속성입니다.  
   
- 이 구성 요소는 에서만 사용할 수는 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 이상.  
+ 이 구성 요소가 이상.NET Framework 4에만 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 프로세스의 기본 응용 프로그램 도메인에 대 한 응용 프로그램 도메인 관리자는 지정 하는 방법을 보여 줍니다 합니다 `MyMgr` 입력을 `AdMgrExample` 어셈블리입니다.  

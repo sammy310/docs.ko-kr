@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: 548f7de2753ef0c30aa787f4c879af87987bfbde
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f0486e9faf70e7d5d147cfef996edcdaa8846963
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621511"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456298"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<응용 프로그램 풀 > 요소 (웹 설정)
 ASP.NET에서 ASP.NET 응용 프로그램 통합된 모드에서 실행 중인 경우 프로세스 전반 동작을 관리 하는 데 사용 되는 구성 설정을 지정 [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 이상 버전.  
@@ -59,7 +59,7 @@ ASP.NET에서 ASP.NET 응용 프로그램 통합된 모드에서 실행 중인 �
 > [!IMPORTANT]
 >  실행 하는 경우 [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 에서 [!INCLUDE[win7](../../../../../includes/win7-md.md)], 모든 응용 프로그램 풀에 대 한 별도 aspnet.config 파일을 구성할 수 있습니다. 이렇게 하면 각 응용 프로그램 풀에 대 한 스레드의 성능을 조정할 수 있습니다.  
   
- 에 대 한는 `maxConcurrentRequestsPerCPU` 설정에서 기본 설정인 "5000"는 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] CPU 당 5000 개 이상의 요청이 실제로 없으면 ASP.NET에 의해 제어 되는 요청 된 제한 해제 효과적으로 합니다. 기본 설정은 자동으로 CPU 당 동시성을 관리 하도록 CLR 스레드 풀에 따라 대신 달라 집니다. 비동기 요청 처리를 광범위 하 게 사용 하는 또는 네트워크 I/O에서 차단 된 많은 장기 실행 요청이 응용 프로그램의 향상 된 기본 제한에서 이익을 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]합니다. 설정 `maxConcurrentRequestsPerCPU` 를 0으로 설정 하면 관리 되는 스레드 사용 해제 ASP.NET 요청을 처리 합니다. 응용 프로그램 IIS 응용 프로그램 풀에서 실행 되 면 IIS I/O 스레드 요청 유지 및 동시성 IIS 스레드 설정에 의해 제한 됩니다 따라서 합니다.  
+ 에 대 한는 `maxConcurrentRequestsPerCPU` 설정, 기본 설정인 "5000".NET Framework 4에서 효과적으로 해제 요청 스로틀이 ASP.NET에 의해 제어 되는 CPU 당 5000 개 이상의 요청이 실제로 없으면입니다. 기본 설정은 자동으로 CPU 당 동시성을 관리 하도록 CLR 스레드 풀에 따라 대신 달라 집니다. 비동기 요청 처리를 광범위 하 게 사용 하는 또는 네트워크 I/O에서 차단 된 많은 장기 실행 요청이 응용 프로그램은.NET Framework 4의 향상 된 기본 제한에서 도움이 됩니다. 설정 `maxConcurrentRequestsPerCPU` 를 0으로 설정 하면 관리 되는 스레드 사용 해제 ASP.NET 요청을 처리 합니다. 응용 프로그램 IIS 응용 프로그램 풀에서 실행 되 면 IIS I/O 스레드 요청 유지 및 동시성 IIS 스레드 설정에 의해 제한 됩니다 따라서 합니다.  
   
  `requestQueueLimit` 설정은 동일한 방식으로 작동 합니다 `requestQueueLimit` 특성을 [processModel](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7w2sway1(v=vs.100)) ASP.NET 응용 프로그램에 대 한 Web.config 파일에 설정 된 요소입니다. 그러나 합니다 `requestQueueLimit` aspnet.config 파일의 설정 재정의 `requestQueueLimit` Web.config 파일에서 설정 합니다. 즉, 두 특성 모두 설정 된 경우 (기본적으로 true 이면)는 `requestQueueLimit` aspnet.config 파일에서 설정이 우선 합니다.  
   

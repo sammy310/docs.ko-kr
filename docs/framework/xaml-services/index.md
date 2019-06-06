@@ -6,15 +6,15 @@ helpviewer_keywords:
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: 9c75f6add000b2055bcbf13a7fcdf635bd707947
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 61b141642fa3745c3abcf8d0234f70373fa5485e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663231"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491112"
 ---
 # <a name="xaml-services"></a>XAML 서비스
-이 항목에서는.NET Framework XAML 서비스 라고 하는 기술 집합의 기능을 설명 합니다. 에 도입 된 어셈블리인 System.Xaml 어셈블리에 있는 대부분의 서비스와 설명 되는 Api는 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] .NET core 어셈블리의 집합입니다. 판독기 및 작성기, 스키마 클래스 및 스키마 지원이 팩터리를 포함 하는 서비스 클래스, XAML 언어 내장 함수 지원을 및 다른 XAML 언어 기능 특성을 지정 합니다.  
+이 항목에서는.NET Framework XAML 서비스 라고 하는 기술 집합의 기능을 설명 합니다. 대부분의 서비스와 설명 되는 Api는.NET core 어셈블리 집합은.NET Framework 4를 사용 하 여 도입 된 어셈블리인 System.Xaml 어셈블리에 있습니다. 판독기 및 작성기, 스키마 클래스 및 스키마 지원이 팩터리를 포함 하는 서비스 클래스, XAML 언어 내장 함수 지원을 및 다른 XAML 언어 기능 특성을 지정 합니다.  
   
 ## <a name="about-this-documentation"></a>이 설명서에 대 한  
  .NET Framework XAML 서비스에 대 한 개념 설명서는 XAML 언어 및 어떻게이 적용 될 수 있습니다 특정 프레임 워크, 예를 들어 사용 경험이 있다고 가정 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] Windows Workflow Foundation 또는 특정 기술 기능 영역, 예를 들어 빌드 사용자 지정 기능 <xref:Microsoft.Build.Framework.XamlTypes>합니다. 이 설명서 태그 언어, XAML 구문 용어 또는 기타 입문 자료로 XAML의 기본 사항을 설명 하지 않습니다. 대신,이 설명서에 특별히 사용할 수 있는.NET Framework XAML 서비스를 사용 하 여 System.Xaml 어셈블리 라이브러리의 중점을 둡니다. 대부분의 이러한 Api는 XAML 언어 통합 및 확장성에 대 한 시나리오에 대 한 합니다. 다음 중 하나를이 포함 될 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "64663231"
 ## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>.NET framework XAML 서비스 및 System.Xaml에.NET 아키텍처  
  이전 버전의 Microsoft.NET Framework, Microsoft.NET Framework에서 구축 하는 프레임 워크에서 구현 되었습니다 XAML 언어 기능에 대 한 지원이 ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Windows Workflow Foundation 및 Windows Communication Foundation (WCF)), 즉 동작 및 사용 되는 API를 사용 하는 특정 프레임 워크에 따라 달라 집니다. 이 포함 된 XAML 파서 및 해당 개체 그래프 생성 메커니즘, XAML 언어 내장, serialization 지원 및 등입니다.  
   
- [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], XAML 언어 기능을 지원 하기 위해 필요한 많은.NET Framework XAML 서비스 및 System.Xaml 어셈블리에 정의 합니다. XAML 판독기 및 XAML 작성기에 대 한 기본 클래스가 포함 됩니다. 프레임 워크별 XAML 구현 중 하나에 존재 하지 않는.NET Framework XAML 서비스에 추가 하는 가장 중요 한 기능에는 XAML에 대 한 형식 시스템 표현입니다. 형식 시스템 표현을 XAML 프레임 워크의 특정 기능에 의존 하지 않고 XAML 기능에 집중 하는 개체 지향 방식으로 제공 합니다.  
+ .NET Framework 4,.NET Framework XAML 서비스 및 System.Xaml 어셈블리에는 XAML 언어 기능을 지원 하기 위해 필요한 많은 정의 합니다. XAML 판독기 및 XAML 작성기에 대 한 기본 클래스가 포함 됩니다. 프레임 워크별 XAML 구현 중 하나에 존재 하지 않는.NET Framework XAML 서비스에 추가 하는 가장 중요 한 기능에는 XAML에 대 한 형식 시스템 표현입니다. 형식 시스템 표현을 XAML 프레임 워크의 특정 기능에 의존 하지 않고 XAML 기능에 집중 하는 개체 지향 방식으로 제공 합니다.  
   
  XAML 형식 시스템의 XAML 원본; 런타임 세부 정보 또는 태그 형식으로 제한 되지 않습니다. 또는 모든 특정 지원 형식 시스템에 의해 제한 됩니다. XAML 형식 시스템 형식, 멤버, XAML 스키마 컨텍스트, XML 수준 개념 및 다른 XAML 언어 개념 또는 XAML 내장 함수에 대 한 개체 표현을 포함합니다. 사용 하거나 XAML 형식 시스템을 확장 가능 하도록 XAML 판독기 및 XAML 작성기와 같은 클래스에서 파생 하 고 프레임 워크, 기술 또는 사용 하는 응용 프로그램으로 사용 하도록 설정 하는 특정 기능에 대 한 XAML 표현의 기능 확장 또는 XAML을 내보냅니다. XAML 스키마 컨텍스트를 개념이 XAML 개체 작성기 구현, 어셈블리는 컨텍스트 및 XAML 노드 정보를 통해 전달 되는 기술 지원 형식 시스템의 조합을 통해 실제 개체 그래프 쓰기 작업을 실행할 수 소스입니다. XAML 스키마 개념에 대 한 자세한 내용은 합니다. 참조 [기본 XAML 스키마 컨텍스트 및 WPF XAML 스키마 컨텍스트](default-xaml-schema-context-and-wpf-xaml-schema-context.md)합니다.  
   

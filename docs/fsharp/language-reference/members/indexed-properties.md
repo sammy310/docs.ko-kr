@@ -2,34 +2,34 @@
 title: 인덱싱된 속성
 description: 인덱싱된 속성에 대해 알아봅니다 F#를 정렬 된 데이터에 대 한 배열 유사 액세스를 허용 합니다.
 ms.date: 10/17/2018
-ms.openlocfilehash: bc330641c451973ddefa0a34fe6e757a808f6cb7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7fc8f46e029255c6ed985a43b92c8f7c2908c428
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903827"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489482"
 ---
 # <a name="indexed-properties"></a>인덱싱된 속성
 
-순서가 지정 된 데이터에 대 한 추상화 하는 클래스를 정의 하는 경우 기본 구현에 노출 하지 않고 해당 데이터에 대 한 인덱싱된 액세스를 제공 하는 데 도움이 경우가 있습니다. 그러려면는 `Index` 멤버입니다.
+순서가 지정 된 데이터에 대 한 추상화 하는 클래스를 정의 하는 경우 기본 구현에 노출 하지 않고 해당 데이터에 대 한 인덱싱된 액세스를 제공 하는 데 도움이 경우가 있습니다. 그러려면는 `Item` 멤버입니다.
 
 ## <a name="syntax"></a>구문
 
 ```fsharp
-// Indexed property that has both get and set defined.
-member self-identifier.Index
+// Indexed property that can be read and written to
+member self-identifier.Item
     with get(index-values) =
         get-member-body
     and set index-values values-to-set =
         set-member-body
 
-// Indexed property with get only
-member self-identifier.Index
+// Indexed property can only be read
+member self-identifier.Item
     with get(index-values) =
         get-member-body
 
-// Indexed property that has set only.
-member self-identifier.Index
+// Indexed property that can only be set
+member self-identifier.Item
     with set index-values values-to-set =
         set-member-body
 ```

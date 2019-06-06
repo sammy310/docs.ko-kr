@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e12deefd4b20d2868ab86fdb4c81f6be3a63aa6d
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 0dff2bf22b701ee57818d04e01dbf643e04acb27
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052652"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379900"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>차단된 .NET Framework 설치 및 제거 문제 해결
 
@@ -38,7 +38,7 @@ Windows 8 이상에서 .NET Framework는 운영 체제 구성 요소이며 독�
 |.NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x*/4.8을 제거할 수 없습니다. 컴퓨터의 다른 애플리케이션이 이 프로그램에 종속되어 있습니다.|사용하는 애플리케이션이 특정 버전의 .NET Framework에 종속될 수 있으므로 일반적으로 컴퓨터에서 .NET Framework 버전을 제거해서는 안 됩니다. 자세한 내용은 *시작* 가이드의 [사용자용 .NET Framework](../../../docs/framework/get-started/index.md#ForUsers)를 참조하십시오.|  
 |.NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x*/4.8 재배포 가능 패키지는 이 운영 체제에 적용되지 않습니다. Microsoft 다운로드 센터에서 해당 운영 체제용 .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x*/4.8을 다운로드하십시오.|지원되지 않는 플랫폼에 .NET Framework 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 또는 4.8을 설치하려고 했거나 지원되는 모든 운영 체제에 대한 구성 요소가 포함되지 않은 설치 패키지를 선택했을 수 있습니다. 오프라인 설치 관리자([4.5.1용](https://go.microsoft.com/fwlink/p/?LinkId=309493), [4.5.2용](https://go.microsoft.com/fwlink/p/?LinkId=397706), [4.6용](https://go.microsoft.com/fwlink/p/?LinkId=528233), [4.6.1용](https://go.microsoft.com/fwlink/p/?LinkId=671744), [4.6.2용](https://go.microsoft.com/fwlink/p/?LinkId=780604), [4.7용](https://go.microsoft.com/fwlink/p/?LinkId=825306)), [4.7.1](https://go.microsoft.com/fwlink/p/?LinkId=852090)용, [4.7.2](https://go.microsoft.com/fwlink/p/?LinkId=863265)용 또는 [4.8](https://go.microsoft.com/fwlink/?linkid=2088631)용을 사용하여 설치를 다시 실행합니다. 자세한 내용은 지원되는 운영 체제의 [설치 가이드](../../../docs/framework/install/guide-for-developers.md) 및 [시스템 요구 사항](../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.|  
 |이 제품을 설치하기 전에 Kb\<*번호*>에 해당하는 업데이트를 설치해야 합니다.|.NET Framework를 설치하기 전에 KB 업데이트가 설치되어 있어야 .NET Framework를 설치할 수 있습니다. 업데이트를 설치하고 .NET Framework 설치를 다시 시작합니다.<br /><br /> 예를 들어 .NET Framework에 Windows 8.1, Windows RT 8.1 및 Windows Server 2012 R2의 업데이트된 버전 설치는 [KB 2919355](https://support.microsoft.com/kb/2919355)에 해당하는 업데이트가 설치되어 있어야 합니다.|  
-|컴퓨터에서 현재 Windows Server 2008 운영 체제의 Server Core 설치를 실행하고 있습니다. .NET Framework 4.5.*x*를 실행하려면 이후 버전의 운영 체제가 필요합니다. Windows Server 2008 R2 SP1 이상을 설치한 후 .NET Framework 4.5.*x* 설치 프로그램을 다시 실행하십시오.|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 및 4.5.2는 Windows Server 2008 R2 SP1 이상의 Server Core 역할에서 지원됩니다. [시스템 요구 사항](../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.|  
+|컴퓨터에서 현재 Windows Server 2008 운영 체제의 Server Core 설치를 실행하고 있습니다. .NET Framework 4.5.*x*를 실행하려면 이후 버전의 운영 체제가 필요합니다. Windows Server 2008 R2 SP1 이상을 설치한 후 .NET Framework 4.5.*x* 설치 프로그램을 다시 실행하십시오.|.NET Framework 4.5.1 및 4.5.2는 Windows Server 2008 R2 SP1 이상의 Server Core 역할에서 지원됩니다. [시스템 요구 사항](../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.|  
 |이 컴퓨터의 모든 사용자가 사용하도록 이 작업을 완료할 수 있는 권한이 없습니다. 관리자로 로그온한 다음 **설치 프로그램**을 다시 실행하십시오.|.NET Framework를 설치하려면 컴퓨터의 관리자여야 합니다.|  
 |이전에 실행한 설치 작업을 사용하려면 컴퓨터를 다시 시작해야 하므로 설치 프로그램을 계속할 수 없습니다. 컴퓨터를 다시 시작하고 설치 프로그램을 다시 실행하십시오.|설치를 완료하려면 컴퓨터를 다시 시작해야 할 수도 있습니다. 지침에 따라 컴퓨터를 다시 시작하고 설치 프로그램을 다시 실행하세요.<br /><br /> 드문 경우지만 Windows가 누락된 업데이트 횟수를 감지하고 다음 순서의 업데이트를 설치하기 위해 다시 시작하는 경우 두 번 이상 시스템을 다시 시작하라는 메시지가 나타날 수 있습니다.|  
 |.NET Framework 설치 프로그램은 프로그램 호환성 모드로 실행할 수 없습니다.|이 문서 뒷부분에 있는 [프로그램 호환성 문제](#compat) 섹션을 참조하십시오.|  
@@ -71,7 +71,7 @@ Windows 프로그램 호환성 모드로 실행될 때 .NET Framework 4.5 또는
 
    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers
 
-1. 이름 열에서 설치하는 버전에 따라 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 또는 4.7.2 다운로드 이름을 찾아 이러한 항목을 삭제합니다. 다운로드 이름에 대해서는 [개발자용 .NET Framework 설치](../../../docs/framework/install/guide-for-developers.md) 문서를 참조하세요.
+1. 이름 열에서 설치하는 버전에 따라 .NET Framework 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 또는 4.7.2 다운로드 이름을 찾아 이러한 항목을 삭제합니다. 다운로드 이름에 대해서는 [개발자용 .NET Framework 설치](../../../docs/framework/install/guide-for-developers.md) 문서를 참조하세요.
 
 1. 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 또는 4.7.2 버전용 .NET Framework 설치 관리자를 다시 실행합니다.
 

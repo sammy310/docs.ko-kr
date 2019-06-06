@@ -1,7 +1,7 @@
 ---
 title: .NET에서 문자열 사용에 대한 모범 사례
 description: .NET 애플리케이션에서 문자열을 효율적으로 사용하는 방법을 알아봅니다.
-ms.date: 09/13/2018
+ms.date: 05/01/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -21,12 +21,12 @@ ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 82fdcae2887cf5a3428a0c874b43d9770f35afcf
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 68bcc9321d5a97620d0e8d24befbd24f4f350f94
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052991"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66250811"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>.NET에서 문자열 사용에 대한 모범 사례
 <a name="top"></a> .NET에서는 지역화된 애플리케이션과 전역화된 애플리케이션을 개발하기 위한 광범위한 지원을 제공하고 문자열 정렬 및 표시와 같은 일반적인 작업을 수행할 때 현재 문화권이나 특정 문화권의 규칙을 쉽게 적용할 수 있습니다. 그러나 문자열 정렬 및 비교가 항상 문화권이 구분되는 작업은 아닙니다. 예를 들어 애플리케이션에서 내부적으로 사용되는 문자열은 대기 모든 문화권에서 동일하게 처리해야 합니다. XML 태그, HTML 태그, 사용자 이름, 파일 경로 및 시스템 개체 이름과 같이 문화권을 구분하지 않는 문자열 데이터가 문화권이 구분되는 것처럼 해석되면 애플리케이션 코드에는 감지하기 어려운 버그, 성능 저하 및 경우에 따라 보안 문제가 발생할 수 있습니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "66052991"
   
 - <xref:System.String.Compare%2A?displayProperty=nameWithType> 및 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드를 사용하여 같은지 확인하는 것이 아니라 문자열을 정렬합니다.  
   
-- 문화권이 구분되는 형식 지정을 사용하여 사용자 인터페이스에서 숫자 및 날짜와 같이 문자열이 아닌 데이터를 표시합니다. 고정 문화권과 함께 형식 지정을 사용하여 문자열 양식에서 문자열이 아닌 데이터를 유지합니다.  
+- 문화권이 구분되는 형식 지정을 사용하여 사용자 인터페이스에서 숫자 및 날짜와 같이 문자열이 아닌 데이터를 표시합니다. [고정 문화권](xref:System.Globalization.CultureInfo.InvariantCulture)과 함께 형식 지정을 사용하여 문자열 양식에서 문자열이 아닌 데이터를 유지합니다.  
   
  문자열을 사용할 때 다음 사례를 사용하지 마세요.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "66052991"
 > [!NOTE]
 > Windows 운영 체제에 대한 정렬 및 비교 작업에 사용되는 문자 가중치에 대한 정보를 포함하는 텍스트 파일 집합인 [정렬 가중치 테이블](https://www.microsoft.com/download/details.aspx?id=10921) 및 Linux 및 macOS용 정렬 가중치 테이블의 최신 버전인 [기본 유니코드 데이터 정렬 요소 테이블](https://www.unicode.org/Public/UCA/latest/allkeys.txt)을 다운로드할 수 있습니다. Linux 및 macOS에서 정렬 가중치 테이블의 특정 버전은 시스템에 설치된 [International Components for Unicode](http://site.icu-project.org/) 라이브러리 버전에 따라 달라집니다. ICU 버전 및 ICU 버전이 구현하는 유니코드 버전에 대한 자세한 내용은 [ICU 다운로드](http://site.icu-project.org/download)를 참조하세요.
 
- 그러나 두 문자열의 같음 또는 정렬 순서를 평가할 때 하나의 올바른 결과가 생성되지는 않습니다. 결과는 문자열 비교에 사용되는 기준에 따라 다릅니다. 특히 서수 문자열 비교나 현재 문화권이나 고정 문화권(영어를 기준으로 로캘을 구분하지 않는 문화권)의 대/소문자 구분 및 정렬 규칙을 기준으로 한 문자열 비교에서는 다른 결과가 생성될 수 있습니다.  
+ 그러나 두 문자열의 같음 또는 정렬 순서를 평가할 때 하나의 올바른 결과가 생성되지는 않습니다. 결과는 문자열 비교에 사용되는 기준에 따라 다릅니다. 특히 서수 문자열 비교나 현재 문화권이나 [고정 문화권](xref:System.Globalization.CultureInfo.InvariantCulture)(영어를 기준으로 로캘을 구분하지 않는 문화권)의 대/소문자 구분 및 정렬 규칙을 기준으로 한 문자열 비교에서는 다른 결과가 생성될 수 있습니다.  
 
 또한 다른 버전의 .NET을 사용하거나 다른 운영 체제 또는 운영 체제 버전의 .NET을 사용하여 문자열을 비교하면 다른 결과가 반환될 수 있습니다. 자세한 내용은 [문자열과 유니코드 표준](xref:System.String#Unicode)을 참조하세요. 
 
@@ -348,10 +348,36 @@ ms.locfileid: "66052991"
  [맨 위로 이동](#top)  
   
 <a name="Formatted"></a>   
-## <a name="displaying-and-persisting-formatted-data"></a>서식이 지정된 데이터 표시 및 유지  
- 숫자와 날짜 및 시간과 같은 문자열이 아닌 데이터를 사용자에게 표시할 때 사용자의 문화권 설정을 사용하여 형식을 지정합니다. 기본적으로 <xref:System.String.Format%2A?displayProperty=nameWithType> 메서드와 숫자 형식 및 날짜/시간 형식의 `ToString` 메서드는 형식 지정 작업에 현재 스레드 문화권을 사용합니다. 형식 지정 메서드가 현재 문화권을 사용하도록 명시적으로 지정하려면 `provider` 또는 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 와 같은 <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>매개 변수가 있는 형식 지정 메서드의 오버로드를 호출하고 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 속성을 전달하면 됩니다.  
-  
- 문자열이 아닌 데이터를 이진 데이터 또는 형식이 지정된 데이터로 유지할 수 있습니다. 서식이 지정된 데이터로 저장하는 경우 `provider` 매개 변수를 포함하는 서식 지정 메서드 오버로드를 호출하고 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 속성에 전달해야 합니다. 고정 문화권은 문화권 및 컴퓨터와 관계없는 형식이 지정된 데이터에 대해 일관된 형식을 제공합니다. 반대로 고정 문화권이 아닌 문화권을 사용하여 형식이 지정된 영구 데이터에는 많은 제한 사항이 있습니다.  
+## <a name="displaying-and-persisting-formatted-data"></a>서식이 지정된 데이터 표시 및 유지
+
+숫자와 날짜 및 시간과 같은 문자열이 아닌 데이터를 사용자에게 표시할 때 사용자의 문화권 설정을 사용하여 형식을 지정합니다. 기본적으로 다음 항목은 모두 서식 지정 작업에서 현재 스레드 문화권을 사용합니다.
+
+- [C#](../../csharp/language-reference/tokens/interpolated.md) 및 [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) 컴파일러에서 지원하는 보간된 문자열입니다.
+
+- [C#](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) 또는 [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md ) 연결 연산자를 사용하거나 직접 <xref:System.String.Concat%2A?displayProperty=nameWithType> 메서드를 호출하는 문자열 연결 연산자입니다.
+
+- <xref:System.String.Format%2A?displayProperty=nameWithType> 메서드
+
+- 숫자 형식과 날짜 및 시간 형식의 `ToString` 메서드.
+
+지정된 문화권의 규칙 또는 [고정 문화권](xref:System.Globalization.CultureInfo.InvariantCulture)을 사용하여 문자열의 서식을 지정해야 함을 명시적으로 지정하려면 다음을 수행합니다.
+
+- <xref:System.String.Format%2A?displayProperty=nameWithType> 및 `ToString` 메서드를 사용하는 경우 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 또는 <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>과 같이 `provider` 매개 변수가 있는 오버로드를 호출하고 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 속성, 원하는 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 인스턴스 또는 <xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType> 속성을 전달합니다.  
+
+- 문자열 연결의 경우 컴파일러에서 암시적 변환을 수행하지 못하게 합니다. 대신 `provider` 매개 변수가 있는 `ToString` 오버로드를 호출하여 명시적 변환을 수행합니다. 예를 들어 컴파일러는 <xref:System.Double> 값을 다음 C# 코드의 문자열로 변환할 때 암시적으로 현재 문화권을 사용합니다.
+
+  [!code-csharp[Implicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#1)]
+
+  대신, 다음 C# 코드와 같이 <xref:System.Double.ToString(System.IFormatProvider)?displayProperty=nameWithType> 메서드를 호출하여 변환에 사용되는 서식 지정 규칙을 사용하는 문화권을 명시적으로 지정할 수 있습니다.
+
+  [!code-csharp[Explicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#2)]
+
+- 문자열 보간의 경우, 보간된 문자열을 <xref:System.String> 인스턴스에 할당하는 대신 <xref:System.FormattableString>에 할당합니다. 그런 다음, 해당 <xref:System.FormattableString.ToString?displayProperty=nameWithType> 메서드를 호출하여 현재 문화권의 규칙을 반영하는 결과 문자열을 생성하거나 <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> 메서드를 호출하여 지정된 문화권의 규칙을 반영하는 결과 문자열을 생성할 수 있습니다. 서식 지정 가능 문자열을 정적 <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> 메서드에 전달하여 고정 문화권의 규칙을 반영하는 결과 문자열을 생성할 수도 있습니다. 다음 예제에서 이 방법을 보여 줍니다. (이 예제의 출력에는 en-US의 현재 문화권이 반영됩니다.)
+
+  [!code-csharp[String interpolation](~/samples/snippets/standard/base-types/string-practices/cs/formattable.cs)]
+  [!code-vb[String interpolation](~/samples/snippets/standard/base-types/string-practices/vb/formattable.vb)]
+
+문자열이 아닌 데이터를 이진 데이터 또는 형식이 지정된 데이터로 유지할 수 있습니다. 서식이 지정된 데이터로 저장하는 경우 `provider` 매개 변수를 포함하는 서식 지정 메서드 오버로드를 호출하고 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 속성에 전달해야 합니다. 고정 문화권은 문화권 및 컴퓨터와 관계없는 형식이 지정된 데이터에 대해 일관된 형식을 제공합니다. 반대로 고정 문화권이 아닌 문화권을 사용하여 형식이 지정된 영구 데이터에는 많은 제한 사항이 있습니다.  
   
 - 다른 문화권이 포함된 시스템에서 데이터를 검색하거나 현재 시스템의 사용자가 현재 문화권을 변경하고 데이터를 검색하려고 하면 데이터를 사용하지 못할 수 있습니다.  
   
@@ -366,7 +392,7 @@ ms.locfileid: "66052991"
   
  그러나 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 및 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 에 대한 호출에서 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 속성을 <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>로 바꾸면 다음 출력과 같이 영구 날짜 및 시간 데이터가 성공적으로 복원됩니다.  
   
-```  
+```console  
 06.05.1758 21:26  
 05.05.1818 07:19  
 22.04.1870 23:54  

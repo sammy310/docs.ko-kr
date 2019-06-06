@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6adbe4e5c82d5f886fcffd5ab272a337c377395
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5ca4a087b60e6cb857ec78273dad099e5e5da07a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586120"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457311"
 ---
 # <a name="security-issues-in-reflection-emit"></a>리플렉션 내보내기의 보안 문제점
 .NET Framework에서는 MSIL(Microsoft Intermediate Language)을 내보내는 세 가지 방법을 제공하며, 각각 고유한 보안 문제가 있습니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "65586120"
   
  다른 내보낸 코드와 마찬가지로, 동적 메서드를 실행하려면 동적 메서드가 사용하는 메서드에서 요구하는 권한이 있어야 합니다.  
   
- 익명으로 호스트된 동적 메서드를 호스트하는 시스템 어셈블리는 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 이전의 .NET Framework에서 사용된 투명도 모델인 <xref:System.Security.SecurityRuleSet.Level1?displayProperty=nameWithType> 투명도 모델을 사용합니다.  
+ 익명으로 호스트된 동적 메서드를 호스트하는 시스템 어셈블리는 .NET Framework 4 이전의 .NET Framework에서 사용된 투명도 모델인 <xref:System.Security.SecurityRuleSet.Level1?displayProperty=nameWithType> 투명도 모델을 사용합니다.  
   
  자세한 내용은 <xref:System.Reflection.Emit.DynamicMethod> 클래스를 참조하세요.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "65586120"
   
 <a name="Version_Information"></a>   
 ## <a name="version-information"></a>버전 정보  
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]부터 시스템 수준의 보안 정책이 제거되었으며 보안 투명도가 기본 적용 메커니즘이 되었습니다. [보안 변경 내용](../../../docs/framework/security/security-changes.md)을 참조하세요.  
+ .NET Framework 4부터 시스템 수준의 보안 정책이 제거되었으며 보안 투명도가 기본 적용 메커니즘이 되었습니다. [보안 변경 내용](../../../docs/framework/security/security-changes.md)을 참조하세요.  
   
  [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)]부터 동적 어셈블리와 동적 메서드를 내보낼 때 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.ReflectionPermission>이 더 이상 필요하지 않습니다. 이 플래그는 .NET Framework의 모든 이전 버전에서 필요합니다.  
   

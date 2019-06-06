@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: d8f37431279cc22b8e9c131f860b5de82f35af2e
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4ee973eb5a81a6428ee5a5fcfc00e28425ff2a44
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591197"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457520"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>연습: WPF 애플리케이션에서 애플리케이션 데이터 캐싱
 캐싱을 사용하면 빠른 액세스를 위해 데이터를 메모리에 저장할 수 있습니다. 데이터에 다시 액세스할 때 애플리케이션은 원래 소스에서 검색하는 대신 캐시에서 데이터를 가져올 수 있습니다. 이 경우 성능과 확장성이 향상됩니다. 또한 캐싱을 사용하면 데이터 소스를 일시적으로 사용할 수 없는 경우에도 데이터를 사용할 수 있습니다.
@@ -22,7 +22,7 @@ ms.locfileid: "65591197"
  .NET Framework는.NET Framework 응용 프로그램에서 캐싱을 사용할 수 있도록 하는 클래스를 제공 합니다. 이러한 클래스에는 <xref:System.Runtime.Caching> 네임 스페이스입니다.
 
 > [!NOTE]
->  합니다 <xref:System.Runtime.Caching> 네임 스페이스의 새로운는 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]합니다. 이 네임 스페이스는 캐싱은 모든.NET Framework 응용 프로그램에 사용할 수 있습니다. 이전 버전의.NET Framework에서는 캐시 된 에서만 사용할 수 있습니다를 <xref:System.Web> 네임 스페이스 및 따라서 ASP.NET 클래스에 대 한 종속성이 필요 합니다.
+>  <xref:System.Runtime.Caching> 네임 스페이스는.NET Framework 4의에서 새로운 기능입니다. 이 네임 스페이스는 캐싱은 모든.NET Framework 응용 프로그램에 사용할 수 있습니다. 이전 버전의.NET Framework에서는 캐시 된 에서만 사용할 수 있습니다를 <xref:System.Web> 네임 스페이스 및 따라서 ASP.NET 클래스에 대 한 종속성이 필요 합니다.
 
  이 연습 일부로.NET Framework에서 사용할 수 있는 캐싱 기능을 사용 하는 방법을 보여 줍니다.는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램입니다. 이 연습에서는 텍스트 파일의 내용을 캐시 합니다.
 
@@ -30,7 +30,7 @@ ms.locfileid: "65591197"
 
 - WPF 응용 프로그램 프로젝트를 만드는 중입니다.
 
-- 에 대 한 참조를 추가 합니다 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]합니다.
+- .NET Framework 4에 대 한 참조를 추가합니다.
 
 - 캐시를 초기화합니다.
 
@@ -62,12 +62,12 @@ ms.locfileid: "65591197"
 
      **새 프로젝트** 대화 상자가 표시됩니다.
 
-3. 아래 **설치 된 템플릿**를 사용 하려는 프로그래밍 언어 선택 (**Visual Basic** 또는 **Visual C#**).
+3. 아래 **설치 된 템플릿**를 사용 하려는 프로그래밍 언어 선택 (**Visual Basic** 또는 **Visual C#** ).
 
 4. 에 **새 프로젝트** 대화 상자에서 **WPF 응용 프로그램**합니다.
 
     > [!NOTE]
-    >  표시 되지 않으면 합니다 **WPF 응용 프로그램** 템플릿을 WPF를 지 원하는.NET Framework의 버전을 대상으로 하는 있는지 확인 합니다. 에 **새 프로젝트** 대화 상자에서 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 목록에서.
+    >  표시 되지 않으면 합니다 **WPF 응용 프로그램** 템플릿을 WPF를 지 원하는.NET Framework의 버전을 대상으로 하는 있는지 확인 합니다. 에 **새 프로젝트** 대화 상자, 목록에서.NET Framework 4를 선택 합니다.
 
 5. 에 **이름을** 텍스트 상자에 프로젝트의 이름을 입력 합니다. 예를 들어 입력할 수 있습니다 **WPFCaching**합니다.
 
@@ -78,7 +78,7 @@ ms.locfileid: "65591197"
      WPF 디자이너에서 엽니다 **디자인** 살펴보고 MainWindow.xaml 파일을 표시 합니다. Visual Studio 만듭니다는 **My Project** 폴더, Application.xaml 파일 및 MainWindow.xaml 파일입니다.
 
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>.NET Framework 대상 지정 및 캐싱 어셈블리에 대 한 참조를 추가 합니다.
- 기본적으로 WPF 응용 프로그램 대상의 [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]합니다. 사용 하는 <xref:System.Runtime.Caching> WPF 응용 프로그램에서 네임 스페이스를 응용 프로그램 대상으로 해야 합니다는 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] (하지는 [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) 네임 스페이스에 대 한 참조를 포함 해야 합니다.
+ 기본적으로 WPF 응용 프로그램 대상의 [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]합니다. 사용 하는 <xref:System.Runtime.Caching> 네임 스페이스는 WPF 응용 프로그램, 응용 프로그램에서에서.NET Framework 4를 대상으로 해야 합니다 (하지는 [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) 네임 스페이스에 대 한 참조를 포함 해야 합니다.
 
  따라서 다음 단계에 대 한 참조를 추가한.NET Framework 대상을 변경 하는 것은 <xref:System.Runtime.Caching> 네임 스페이스입니다.
 
@@ -97,7 +97,7 @@ ms.locfileid: "65591197"
 
      합니다 **고급 컴파일러 설정** 대화 상자가 표시 됩니다.
 
-4. 에 **대상 프레임 워크 (모든 구성)** 목록에서 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]합니다. (선택 하지 않으면 [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)
+4. 에 **대상 프레임 워크 (모든 구성)** 목록에서.NET Framework 4를 선택 합니다. (선택 하지 않으면 [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)
 
 5. **확인**을 클릭합니다.
 
@@ -121,7 +121,7 @@ ms.locfileid: "65591197"
 
 2. **응용 프로그램** 탭을 클릭합니다.
 
-3. 에 **대상 프레임 워크** 목록에서 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]합니다. (선택 하지 마세요 **.NET Framework 4 Client Profile**.)
+3. 에 **대상 프레임 워크** 목록에서.NET Framework 4를 선택 합니다. (선택 하지 마세요 **.NET Framework 4 Client Profile**.)
 
 4. 다음이 단계를 수행 하 여 캐싱 어셈블리에 대 한 참조를 추가 합니다.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9833d768b84faaf6e1dcf8c9cb8b00b92adc3d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 70113d98c5a4ab41700f6c9842dba89e2b49c297
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673988"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489333"
 ---
 # <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks > 요소
 요청 된 CLR (공용 언어 런타임)는 메모리를 줄일 이러한 스레드에 대 한 기본 스택 크기를 사용 하는 대신 내부적으로 사용 되는 특정 스레드를 만들 때 명시적 스택 크기를 지정 하 여 사용 합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "61673988"
 |값|설명|  
 |-----------|-----------------|  
 |true|명시적 스택 크기를 요청 합니다.|  
-|False|기본 스택 크기를 사용 합니다. 에 대 한 기본값을 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]입니다.|  
+|False|기본 스택 크기를 사용 합니다. 이것은.NET Framework 4에 대 한 기본값입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -57,7 +57,7 @@ ms.locfileid: "61673988"
  이 구성 요소는 요청이 적용 되는 경우 CLR에서 내부 스레드를 사용 하는 명시적 스레드 크기는 기본 크기 보다 작은 때문에 프로세스에서 축소 된 가상 메모리 사용을 요청에 사용 됩니다.  
   
 > [!IMPORTANT]
->  이 구성 요소는 요청은 절대적인 요구 사항이 아닌 CLR을 합니다. 에 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], x86에 대해서만 요청이 수행 됩니다 아키텍처입니다. 이 요소는 CLR의 이후 버전에서는 완전히 무시 또는 선택한 내부 스레드에 항상 사용 되는 명시적 스택 크기 바뀝니다 수 있습니다.  
+>  이 구성 요소는 요청은 절대적인 요구 사항이 아닌 CLR을 합니다. .NET Framework 4에서는 요청 x86에만 적용 됩니다 아키텍처입니다. 이 요소는 CLR의 이후 버전에서는 완전히 무시 또는 선택한 내부 스레드에 항상 사용 되는 명시적 스택 크기 바뀝니다 수 있습니다.  
   
  이 구성 요소 거래 작은 가상 메모리 사용에 대 한 안정성 CLR은 요청을 하는 경우 스택 크기가 작은 스택을 만들 수 있으므로 지정 오버플로가 발생할 가능성이 더 합니다.  
   

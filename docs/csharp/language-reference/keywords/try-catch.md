@@ -11,12 +11,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: df4ccde0a9a377b06b8efc64cc78936a983c66cc
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 28bf939cb7da760400486c52bb07649826628c1c
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083927"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422592"
 ---
 # <a name="try-catch-c-reference"></a>try-catch(C# 참조)
 
@@ -185,7 +185,6 @@ catch에 대한 자세한 내용은 [try-catch-finally](try-catch-finally.md)를
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 키워드](index.md)
 - [try, throw 및 catch 문(C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)
-- [예외 처리 문](exception-handling-statements.md)
 - [throw](throw.md)
 - [try-finally](try-finally.md)
 - [방법: 명시적으로 예외 Throw](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cc26f9721e911e05c5b5d4092be21a4e1191c84
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab9feaa1c46a45471395fd4c6158490a24882a65
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704754"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489371"
 ---
 # <a name="supportportability-element"></a>\<supportPortability > 요소
 애플리케이션 이식성을 위해 어셈블리를 동일하게 간주하는 기본 동작을 사용하지 않도록 설정함으로써, 애플리케이션이 .NET Framework의 서로 다른 두 구현에서 같은 어셈블리를 참조할 수 있도록 지정합니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "61704754"
 |`assemblyBinding`|어셈블리 버전 리디렉션 및 어셈블리 위치에 대한 정보를 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
- 부터는 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], 지원은.NET Framework의 두 구현 중 하나를 사용 하는 응용 프로그램에 대 한 자동으로 제공 됩니다 예를 들어.NET Framework 구현 또는.NET Framework for Silverlight 구현과 합니다. 특정.NET Framework 어셈블리의 두 가지 구현이 어셈블리 바인더를 통해 동등한 것으로 나타납니다. 몇 가지 시나리오에서이 응용 프로그램 이식성 기능 문제가 발생합니다. 이러한 시나리오에서는 `<supportPortability>` 기능을 해제 하는 요소를 사용할 수 있습니다.  
+ .NET Framework 4 부터는 자동으로 지원 됩니다.NET Framework의 두 구현 중 하나를 사용 하는 응용 프로그램에 대 한 예를 들어.NET Framework 구현 또는.NET Framework for Silverlight 구현과 합니다. 특정.NET Framework 어셈블리의 두 가지 구현이 어셈블리 바인더를 통해 동등한 것으로 나타납니다. 몇 가지 시나리오에서이 응용 프로그램 이식성 기능 문제가 발생합니다. 이러한 시나리오에서는 `<supportPortability>` 기능을 해제 하는 요소를 사용할 수 있습니다.  
   
  이러한 시나리오 중 하나는 특정 참조 어셈블리의 Silverlight 구현을 위해.NET Framework 및.NET Framework 구현을 참조 하는 어셈블리입니다. 예를 들어 Windows Presentation Foundation (WPF)에서 작성 된 XAML 디자이너를 디자이너의 사용자 인터페이스 및 Silverlight 구현과에 포함 된 WPF 하위 집합에 대 한 두는 WPF 데스크톱 구현을 참조 해야 합니다. 기본적으로, 어셈블리 바인딩 시 두 어셈블리가 동등한 것으로 간주되기 때문에 서로 다른 참조를 사용할 경우 컴파일러 오류가 발생합니다. 이 요소는 기본 동작을 사용 하지 않도록 설정 하 고 컴파일이 성공 하도록 합니다.  
   

@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: b0e6d6f228647148083d3df64e65f817dc3455d5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "66379702"
 ---
 ### <a name="exceptions-during-unobserved-processing-in-systemthreadingtaskstask-no-longer-propagate-on-finalizer-thread"></a>System.Threading.Tasks.Task의 관찰되지 않은 처리 중에 예외는 더 이상 종료자 스레드를 전파하지 않습니다
 
