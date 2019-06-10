@@ -2,12 +2,12 @@
 title: Azure Container Service(즉, Kubernetes)에 Windows 컨테이너를 배포하는 경우
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | Azure Container Service(즉, Kubernetes)에 Windows 컨테이너를 배포하는 경우
 ms.date: 04/30/2018
-ms.openlocfilehash: 921767b52f2b0d80f2d31d972b65ac7551d2f7c5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 903082deba635dd0dfc22d0186fbc589f8d05b92
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643567"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758569"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-service-that-is-kubernetes"></a>Azure Container Service(즉, Kubernetes)에 Windows 컨테이너를 배포하는 경우
 
@@ -22,5 +22,5 @@ Linux Docker 컨테이너를 사용하는 경우에는 이러한 오케스트레
 중요 참고 사항: Kubernetes의 진화되고 '자세한 PaaS' ACS(Azure Container Service)의 버전은 AKS(Azure Kubernetes Service)입니다. Windows 컨테이너는 2018년 2분기에도 여전히 지원되지 않고 있지만 곧 지원될 예정입니다.
 
 >[!div class="step-by-step"]
->[이전](when-to-deploy-windows-containers-to-service-fabric.md)
+>[이전](when-to-deploy-windows-containers-to-azure-container-instances-ACI.md)
 >[다음](choosing-azure-compute-options-for-container-based-applications.md)

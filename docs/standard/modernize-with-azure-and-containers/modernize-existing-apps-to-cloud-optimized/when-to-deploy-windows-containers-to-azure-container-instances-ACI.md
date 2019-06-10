@@ -2,12 +2,12 @@
 title: Windows 컨테이너를 Azure ACI(Container Instances)에 배포하는 경우
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | Windows 컨테이너를 Azure ACI(Container Instances)에 배포하는 경우
 ms.date: 04/29/2018
-ms.openlocfilehash: 9bfa0688d07bd04964a1b28f688f125b5bcd2299
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3b6ae1ced9c4e01f5ab400e2575947a396064ebd
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638931"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758587"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a>Windows 컨테이너를 Azure ACI(Container Instances)에 배포하는 경우
 
@@ -36,4 +36,4 @@ Azure 컨테이너 인스턴스 (ACI)의 가장 큰 장점은 다음과 같습�
 
 > [!div class="step-by-step"]
 > [이전](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
-> [다음](when-to-deploy-windows-containers-to-service-fabric.md)
+> [다음](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)

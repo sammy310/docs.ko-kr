@@ -2,12 +2,12 @@
 title: 모니터링 및 원격 분석을 사용하여 앱을 최신화
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 모니터링 및 원격 분석을 사용하여 앱을 최신화
 ms.date: 04/30/2018
-ms.openlocfilehash: 94196365e6ed93839b28ed3b375e75a9119ae12d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5bffb336234f63dca150acc9ef31f9efa2e3937b
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643685"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758615"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>모니터링 및 원격 분석을 사용하여 앱을 최신화
 
@@ -38,8 +38,6 @@ OMS 포털 또는 모든 브라우저에서 실행 하는 Azure portal을 통해
 - DC/OS
 
 - Kubernetes
-
-- Service Fabric
 
 - Red Hat OpenShift
 
@@ -88,10 +86,6 @@ Log Analytics 컨테이너 모니터링 솔루션을 사용할 수 있습니다.
 - **Operations Management Suite (OMS) 란?**
 
 <https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview>
-
-- **OMS 사용 하 여 Service Fabric에서 Windows Server 컨테이너 모니터링**
-
-<https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver>
 
 >[!div class="step-by-step"]
 >[이전](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

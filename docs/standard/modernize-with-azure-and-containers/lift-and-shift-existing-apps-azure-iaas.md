@@ -2,12 +2,12 @@
 title: 기존.NET 앱을 Azure IaaS(클라우드 인프라 지원)로 리프트 앤 시프트하기
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존.NET 응용 프로그램을 최신으로 변경합니다.
 ms.date: 04/28/2018
-ms.openlocfilehash: 24e413ad82742067b2fee6cd3a7a99e6f0f87b0a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: cda316ad01a58f26661395c804547de04e20d052
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643715"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758868"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>기존.NET 앱을 Azure IaaS(클라우드 인프라 지원)로 리프트 앤 시프트하기
 
@@ -39,7 +39,7 @@ ms.locfileid: "65643715"
 
 목표는 단순히 클라우드로 기존 응용 프로그램을 이동 하는, 하는 경우 먼저 Azure App Service에서 실행 하려면 상당한 수정이 필요 하지 않습니다는 기존 응용 프로그램을 식별 합니다. 이러한 앱에 대 한 첫 번째 후보 있어야 클라우드 최적화 합니다. 
 
-그런 다음 앱에 대 한는 계속 이동할 수 없습니다 Windows 컨테이너 및 PaaS App Service 또는 Azure Service Fabric과 같은 오 케 스트레이 터는 간단한 일반 Vm (IaaS)에 마이그레이션 등. 
+그런 다음 앱에 대 한는 계속 이동할 수 없습니다 Windows 컨테이너 및 PaaS App Service 또는 Azure Kubernetes Service와 같은 오 케 스트레이 터는 간단한 일반 Vm (IaaS)에 마이그레이션 등. 
 
 그러나 제대로 구성, 보호 및 Vm을 유지 관리 해야 한다는 훨씬 더 많은 시간과 IT 전문 지식을 Azure에서 PaaS 서비스를 사용 하 여 비교할 염두에서에 둡니다. Azure Virtual Machines를 고려 하는 경우를 고려해 야 패치, 업데이트 및 VM 환경을 관리 하는 데 필요한 지속적인 유지 관리 노력 해야 합니다. Azure Virtual Machines는 IaaS.
 

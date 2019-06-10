@@ -2,12 +2,12 @@
 title: 컨테이너 기반 응용 프로그램용 Azure 계산 플랫폼 선택
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 컨테이너 기반 응용 프로그램용 Azure 계산 플랫폼 선택
 ms.date: 05/04/2018
-ms.openlocfilehash: 28e103c67f47d63582384c9ab468a5f631b5ce9e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d91cd279402dc24beb5f766c06cb85ac8d74f482
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638987"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758817"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>컨테이너 기반 응용 프로그램용 Azure 계산 플랫폼 선택
 
@@ -16,9 +16,9 @@ ms.locfileid: "65638987"
 *기본적인* 권장 사항으로, 이 설명서에서 권장하는 주요 기준은 다음과 같습니다.
 
 - **단일 모놀리식 앱:** Azure App Service를 선택합니다.
-- **N 계층 앱:** 단일 또는 몇 개의 백 엔드 서비스가 있다면 Azure Kubernetes Service(AKS)나 Service Fabric(SF), App Service와 같은 오케스트레이터를 선택합니다.
+- **N 계층 앱:** 단일 또는 몇 백 엔드 서비스에 있는 경우 App Service 또는 Azure Kubernetes Service (AKS) 같은 오 케 스트레이 터를 선택 합니다.
 - **Linux 마이크로 서비스:** AKS/Kubernetes를 선택합니다.
-- **Windows 마이크로 서비스:** Service Fabric을 선택합니다
+- **Windows 마이크로 서비스:** 컨테이너용 Azure Web Apps 선택
 - **서버리스 functions 및 이벤트 처리기:** Azure 함수를 선택합니다
 - **대규모 일괄 처리:** Azure Batch를 선택합니다.
 
@@ -26,13 +26,9 @@ ms.locfileid: "65638987"
 
 응용 프로그램의 요구사항을 심층적으로 분석한 후에 선택한 제품이 다를 수 있습니다. 그러나 출발점으로 특정 우선 순위에 따라 테스트하거나 측청할 수 있는 초기 지침을 갖는 것은 좋습니다.
 
-다음 그림에서는 자세한 의사 결정 테이블을 통해 보다 전반적인 분석을 할 수 있습니다.
+다음 그림에서는 다른 종류의 앱 및 이상적인 Azure 호스팅 시나리오에 대 한 분석을 볼 수 있습니다.
 
 ![](./media/image8.5.png)
-
-일부 오케스트레이터가 Linux 컨테이너와 Windows 컨테이너에서 더 완성도가 있으므로 기본 OS(Windows와 Linux)가 결정 요인이 될 수 있습니다. 예를 들어, Linux 컨테이너는 Kubernetes(Azure의 AKS)에서는 매우 완성도가 높지만 서비스 Fabric에서는 그렇지 않습니다. 반면 Windows Container는 Service Fabric(2017 년 5월에 릴리스됨)에서 완성도가 있지만 AKS에서는 그렇지 않습니다.
-
-그러나 앞으로 OS에 따른 완성도의 차이는 사라지게 되고, 다양한 플랫폼의 OS 완성도는 비슷해지며, 의사 결정은 응용 프로그램에서 필요로 하는 특정 기능이나 각 플랫폼의 생태계에 따른 환경 설정에 기반한 선호도에 따라 결정하게 될 것입니다.
 
 > [!div class="step-by-step"]
 > [이전](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)

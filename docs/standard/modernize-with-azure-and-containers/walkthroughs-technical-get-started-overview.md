@@ -2,12 +2,12 @@
 title: 기술 개요와 실습
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 기술 개요와 실습
 ms.date: 04/28/2018
-ms.openlocfilehash: f5c1ca2b78d27b275845ada72d252450761f5091
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0b0dbae999e31150a55368d669f718eea0925d51
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638963"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758791"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>기술 개요와 실습
 
@@ -30,8 +30,6 @@ ms.locfileid: "65638963"
 - **Azure Vm에 Windows 컨테이너 기반 앱 배포**
 
 - **Azure Container Service에서 Kubernetes에 Windows 컨테이너 기반 앱을 배포 합니다.**
-
-- **Azure Service Fabric에 Windows 컨테이너 기반 앱을 배포 합니다.**
 
 ## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>연습 1: 레거시 앱 eShop 둘러보기
 
@@ -119,7 +117,7 @@ Windows 컨테이너를 사용 하 여 MVC, Web Forms, WCF, 프로덕션, 개발
 
 또 다른 이점은 개발자가 Windows 컨테이너에서 제공 하는 일관 된 환경에서 응용 프로그램 실행 수입니다. 스테이징 또는 프로덕션 환경에서 표시 하는 대신 특정 버전에만 표시 되는 문제를 즉시 확인할 수 있습니다. 개발 팀의 멤버에서 사용 하는 개발 환경에 차이가 덜 중요 해 집니다 컨테이너에서 응용 프로그램을 실행 합니다.
 
-컨테이너 화 된 응용 프로그램에는 스케일 아웃 곡선을 flatter 수도 있습니다. 컨테이너 화 된 앱 VM 또는 물리적 컴퓨터 컴퓨터당 일반 응용 프로그램 배포에 비해 더 많은 응용 프로그램 및 서비스 인스턴스 (컨테이너 기반) 할 수를 사용 합니다. 밀도가 높아지고 필요한 변환이 Kubernetes 또는 Service Fabric과 같은 오 케 스트레이 터를 사용 하는 경우에 특히 리소스입니다.
+컨테이너 화 된 응용 프로그램에는 스케일 아웃 곡선을 flatter 수도 있습니다. 컨테이너 화 된 앱 VM 또는 물리적 컴퓨터 컴퓨터당 일반 응용 프로그램 배포에 비해 더 많은 응용 프로그램 및 서비스 인스턴스 (컨테이너 기반) 할 수를 사용 합니다. 밀도가 높아지고 필요한 변환이 Kubernetes 같은 오 케 스트레이 터를 사용 하는 경우에 특히 리소스입니다.
 
 이상적인 상황에서는 컨테이너 화 응용 프로그램 코드 변경 필요 하지 않습니다 (C\#). 대부분의 시나리오에서 하기만 하면 Docker 배포 메타 데이터 파일 (Dockerfiles 및 Docker Compose 파일).
 
@@ -210,7 +208,7 @@ Azure Container Instances를 사용 하면 쉽게 만들고 가상 머신을 프
 
 ### <a name="considerations"></a>고려 사항
 
-전체.NET Framework 중 하나를 사용 하 여 Windows 컨테이너를 배포 / ASP.NET 또는 SQL Server에 Azure ACI (Container Instances)는 매우 빨리 Docker 이미지 수 있으므로 (예: Windows 컨테이너를 사용 하 여 Windows Server 2016) 일반 Docker 호스트에 배포 하지만 될 때마다 (Docker 레지스트리에서 끌어온) 다운로드 하 고 (영구적으로 온라인 사용자 고유의 docker 호스트를 유지 관리 보다 훨씬 저렴 SQL 컨테이너 이미지 (15.1 GB) 및 ASP.NET 컨테이너 이미지 (13.9 GB)의 크기는 훨씬 큰 경우 Azure에서 VM에 Windows 컨테이너를 사용 하 여 Windows Server 2016) 인 반면에 유리한 프로덕션 배포에는 Azure (AKS/ACS) 또는 Azure Service Fabric에서 Kubernetes와 같은 전체 orchestrator 말할 것도 없습니다.
+전체.NET Framework 중 하나를 사용 하 여 Windows 컨테이너를 배포 / ASP.NET 또는 SQL Server에 Azure ACI (Container Instances)는 매우 빨리 Docker 이미지 수 있으므로 (예: Windows 컨테이너를 사용 하 여 Windows Server 2016) 일반 Docker 호스트에 배포 하지만 될 때마다 (Docker 레지스트리에서 끌어온) 다운로드 하 고 (영구적으로 온라인 사용자 고유의 docker 호스트를 유지 관리 보다 훨씬 저렴 SQL 컨테이너 이미지 (15.1 GB) 및 ASP.NET 컨테이너 이미지 (13.9 GB)의 크기는 훨씬 큰 경우 Azure에서 VM에 Windows 컨테이너를 사용 하 여 Windows Server 2016)는 Kubernetes의 AKS (Azure) 인 반면에 적합 한 프로덕션 배포와 같은 전체 오 케 스트레이 터를 말할 것도 없습니다.
 
 주 결론으로 Azure Container Instances를 사용 하 여는 CI/CD 파이프라인 및 개발/테스트 시나리오에 대 한 매우 매력적인 옵션입니다.
 
@@ -279,80 +277,6 @@ Kubernetes를 사용 하 여 개발자 수행해 볼 수 있습니다 실제 및
 ## <a name="next-steps"></a>다음 단계
 
 GitHub wiki의이 콘텐츠를 더 자세히 살펴보기 <https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)>
-
-## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>연습 6: Azure Service Fabric에 Windows 컨테이너 기반 앱을 배포 합니다.
-
-### <a name="technical-walkthrough-availability"></a>기술 연습 가용성
-
-전체 기술 연습 eShopModernizing GitHub 리포지토리 wiki에서 제공 됩니다.
-
-<https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)>
-
-### <a name="overview"></a>개요
-
-Windows 컨테이너를 신속 하 게 기반 응용 프로그램 플랫폼에서 IaaS Vm에서 지금 이동 더욱 사용 해야 합니다. 이 쉽게 높은 확장성을 달성 하는 데 필요한 더 확장성, 자동화 된 및의 향상에 대 한 배포 및 버전 관리를 자동화 합니다. 다른 공용 클라우드 또는 오 케 스트레이 터 인 Azure 클라우드에서 사용할 수 있지만 사용할 수 있는 온-프레미스 Azure Service Fabric을 사용 하 여 이러한 목표를 달성할 수 있습니다.
-
-### <a name="goals"></a>목표
-
-이 연습의 목표는 Azure에서 Service Fabric 클러스터에 Windows 컨테이너 기반 응용 프로그램을 배포 하는 방법을 알아보려면입니다. 부터 Service Fabric에 배포 하는 2 단계 프로세스입니다.
-
-1. Azure로 (또는 다른 환경으로) Service Fabric 클러스터를 배포 합니다.
-
-2. Service Fabric 클러스터에 응용 프로그램 및 관련된 리소스를 배포 합니다.
-
-### <a name="scenarios"></a>시나리오
-
-#### <a name="scenario-a-deploy-directly-to-a-service-fabric-cluster-from-a-dev-environment"></a>시나리오 a: 개발 환경에서 Service Fabric 클러스터에 직접 배포
-
-![개발 환경에서 Service Fabric 클러스터에 직접 배포](./media/image5-9.png)
-
-> **그림 5-9.** 개발 환경에서 Service Fabric 클러스터에 직접 배포
-
-### <a name="scenario-b-deploy-to-a-service-fabric-cluster-from-cicd-pipelines-in-azure-devops-services"></a>시나리오 b: Azure DevOps 서비스의 CI/CD 파이프라인에서 Service Fabric 클러스터에 배포
-
-![Azure DevOps 서비스의 CI/CD 파이프라인에서 Service Fabric 클러스터에 배포](./media/image5-10.png)
-
-**그림 5-10.** Azure DevOps 서비스의 CI/CD 파이프라인에서 Service Fabric 클러스터에 배포
-
-## <a name="benefits"></a>이점
-
-Service Fabric에서 클러스터에 배포 하는 이점을 Kubernetes를 사용 하는 이점은 비슷합니다. 한 가지 차이점 그러나은 Service Fabric Windows 컨테이너 버전 1.9로 Kubernetes에 대 한 베타 단계에는 Kubernetes에 비해 Windows 응용 프로그램에 대 한 더 완성도 높은 프로덕션 환경 (2017 년 12 월). Kubernetes에 Linux에 대 한 보다 성숙한 환경입니다.
-
-Azure Service Fabric을 사용 하는 주요 이점은는 확장할 수 있습니다 (내부-확장성 있는 기존 노드에)를 사용 하 고의 수를 기준으로 컨테이너 인스턴스 수를 기준으로 응용 프로그램을 프로덕션이 준비 된 환경을 제공 하는 노드 또는 클러스터 (클러스터의 글로벌 확장성)의 Vm입니다.
-
-Azure Service Fabric은 컨테이너와 응용 프로그램 구성에 대 한 이식성을 제공합니다. Service Fabric 클러스터에 Azure 또는 고유한 데이터 센터에 온-프레미스 설치를 사용할 수 있습니다. 다른 클라우드에서 Service Fabric 클러스터와 같은 설치도 [Amazon AWS](https://blogs.msdn.microsoft.com/azureservicefabric/2017/05/18/tutorial-how-to-create-a-service-fabric-standalone-cluster-with-aws-ec2-instances/)합니다.
-
-Service Fabric을 사용 하 여 개발자 수행해 볼 수 있습니다 실제 및 가상 컴퓨터에 대 한 생각은 다음 기능 중 일부를 용이 하 게 하는 컨테이너 중심 인프라를 계획 합니다.
-
-- 여러 컨테이너 기반 응용 프로그램입니다.
-
-- Container instances 및 수평적 자동 크기 조정을 복제합니다.
-
-- 이름 지정 및 (예를 들어 내부 DNS)를 검색 합니다.
-
-- 부하를 분산합니다.
-
-- 롤링 업데이트 합니다.
-
-- 비밀을 배포 합니다.
-
-- 응용 프로그램 상태를 확인합니다.
-
-다음 기능은 다른 오 케 스트레이 터와 비교 하는 Service Fabric에서 전용입니다.
-
-- 상태 저장 Reliable Services 응용 프로그램 모델을 통해 기능을 서비스 합니다.
-
-- Reliable Actors 응용 프로그램 모델을 통해 행위자 패턴입니다.
-
-- Windows 또는 Linux 컨테이너 외에도 틀 프로세스를 배포 합니다.
-
-- 고급 롤링 업데이트 및 상태 검사 합니다.
-
-### <a name="next-steps"></a>다음 단계
-
-GitHub wiki의이 콘텐츠를 더 자세히 살펴보기
-
-<https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)>
 
 > [!div class="step-by-step"]
 > [이전](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)
