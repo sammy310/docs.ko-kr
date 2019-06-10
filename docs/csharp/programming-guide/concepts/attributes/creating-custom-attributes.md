@@ -41,7 +41,7 @@ class SampleClass
 }  
 ```  
   
- `AttributeUsage`에는 사용자 지정 특성을 한 번 또는 여러 번 사용하도록 설정하는 데 이용하는 명명된 매개 변수인 `AllowMultiple`이 있습니다. 다음 코드 예제에서는 다중 사용 특성이 만들어집니다.  
+ `AttributeUsage`에는 사용자 지정 특성을 한 번 또는 여러 번 사용하도록 설정하기 위해 사용하는 명명된 매개 변수인 `AllowMultiple`이 있습니다. 다음 코드 예제에서는 다중 사용 특성을 만듭니다.  
   
 ```csharp  
 [System.AttributeUsage(System.AttributeTargets.Class |  
