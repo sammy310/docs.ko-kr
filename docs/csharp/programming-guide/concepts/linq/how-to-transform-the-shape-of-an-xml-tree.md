@@ -2,12 +2,12 @@
 title: '방법: XML 트리의 모양 변환(C#)'
 ms.date: 07/20/2015
 ms.assetid: 93c5d426-dea2-4709-a991-60204de42e8f
-ms.openlocfilehash: 535f528d347e0c72ddaaab74ea78b47993a873a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 39e8bd3232ff19be5e4f7db3c678c6c7af670ab5
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491626"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484784"
 ---
 # <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a>방법: XML 트리의 모양 변환(C#)
 XML 문서의 *모양*은 요소 이름, 특성 이름 및 계층 구조의 특징을 나타냅니다.  
@@ -137,7 +137,3 @@ static void Main(string[] args)
   <COUNTRY>USA</COUNTRY>  
 </PO>  
 ```  
-  
-## <a name="see-also"></a>참고 항목
-
-- [프로젝션 및 변환(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

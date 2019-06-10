@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: 40dc844f2a4b6411ea82aa2f029b36d7dd8f6e5a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 85182acb84ea79cb00a9edb315c3954f440305f4
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716321"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758359"
 ---
 # <a name="-operator-c-reference"></a>= 연산자(C# 참조)
 
@@ -32,13 +32,13 @@ a = (b = c)
 
 다음 예제는 대입 연산자를 사용하여 지역 변수, 속성 및 인덱서 요소에 값을 할당하는 방법을 보여 줍니다.
 
-[!code-csharp-interactive[assignment operator](~/samples/snippets/csharp/language-reference/operators/AssignmentExamples.cs#Assignments)]
+[!code-csharp-interactive[assignment operator](~/samples/csharp/language-reference/operators/AssignmentExamples.cs#Assignments)]
 
 ## <a name="ref-assignment-operator"></a>ref 대입 연산자
 
 C# 7.3부터 ref 대입 연산자 `= ref`를 사용하여 [ref 지역](../keywords/ref.md#ref-locals) 또는 [ref readonly 지역](../keywords/ref.md#ref-readonly-locals) 변수를 다시 할당할 수 있습니다. 다음 예제에서는 ref 대입 연산자의 사용법을 보여 줍니다.
 
-[!code-csharp[ref assignment operator](~/samples/snippets/csharp/language-reference/operators/AssignmentExamples.cs#RefAssignment)]
+[!code-csharp[ref assignment operator](~/samples/csharp/language-reference/operators/AssignmentExamples.cs#RefAssignment)]
 
 ref 대입 연산자의 경우 왼쪽 피연산자의 형식과 오른쪽 피연산자의 형식이 같아야 합니다.
 

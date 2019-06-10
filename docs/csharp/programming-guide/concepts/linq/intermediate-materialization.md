@@ -2,12 +2,12 @@
 title: 중간 구체화(C#)
 ms.date: 07/20/2015
 ms.assetid: 7922d38f-5044-41cf-8e17-7173d6553a5e
-ms.openlocfilehash: fa1e11c6b4cacff3b5a5a7ca1cc311f5fabda6c7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d83bbc5e3de992e9ad4d86d0f684e2dfc3a29411
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596612"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484534"
 ---
 # <a name="intermediate-materialization-c"></a>중간 구체화(C#)
 주의하지 않으면 특정한 경우에 쿼리에서 컬렉션을 미리 구체화하여 애플리케이션의 메모리와 성능 프로필을 크게 변경할 수 있습니다. 일부 표준 쿼리 연산자는 단일 요소를 생성하기 전에 소스 컬렉션을 구체화합니다. 예를 들어, <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType>는 먼저 전체 소스 컬렉션을 반복한 다음 모든 항목을 정렬하고 마지막으로 첫 번째 항목을 생성합니다. 즉, 정렬된 컬렉션의 첫 번째 항목을 가져오는 것은 비용이 많이 들며 그 다음에 나오는 각 항목에는 비용이 많이 들지 않습니다. 이는 적절한 동작입니다. 해당 쿼리 연산자가 다른 방식으로 작업하는 것은 불가능할 것입니다.  
@@ -88,4 +88,4 @@ Main: str >GHI!!!<
   
 ## <a name="see-also"></a>참고 항목
 
-- [자습서: 여러 쿼리 연결(C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+- [자습서: 여러 쿼리 연결(C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

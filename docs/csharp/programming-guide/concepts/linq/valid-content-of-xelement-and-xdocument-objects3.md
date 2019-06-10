@@ -2,12 +2,12 @@
 title: XElement 및 XDocument 개체의 유효한 콘텐츠3
 ms.date: 07/20/2015
 ms.assetid: 0d253586-2b97-459f-b1a7-f30f38f3ed9f
-ms.openlocfilehash: cf8e1f1aab576fa7cccab83fb2194ae2a4e33288
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c179f2e57abf0e2028ec58428e75c8df786b4214
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595270"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483275"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>XElement 및 XDocument 개체의 올바른 콘텐츠
 이 항목에서는 생성자에 전달될 수 있는 유효한 인수에 대해 설명하고 내용을 요소와 문서에 추가하는 데 사용하는 메서드에 대한 정보를 제공합니다.  
@@ -90,4 +90,4 @@ ms.locfileid: "64595270"
   
 ## <a name="see-also"></a>참고 항목
 
-- [XML 트리 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+- [XML 트리 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)

@@ -3,12 +3,12 @@ title: LINQ 작업
 description: 이 자습서에서는 LINQ를 사용하여 시퀀스를 생성하고, LINQ 쿼리에서 사용할 메서드를 작성하고, 즉시 계산 및 지연 계산 간을 구분하는 방법을 알아봅니다.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 702770650533b0549e414a1de87acf17d77af4e3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: e51fb166ccba793f9f2aa9d11a109280bf8eea93
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063223"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486991"
 ---
 # <a name="working-with-linq"></a>LINQ 작업
 
@@ -144,7 +144,7 @@ public static void Main(string[] args)
 
 LINQ 쿼리에서 반환되는 <xref:System.Collections.Generic.IEnumerable%601>을 조작하는 방법에 몇 가지 기능을 추가하려면 [확장 메서드](../../csharp/programming-guide/classes-and-structs/extension-methods.md)라는 특수한 종류의 메서드를 작성해야 합니다. 간단히 말해, 확장 메서드는 기능을 추가하려는 원래 형식을 수정하지 않고 기존 형식에 새로운 기능을 추가하는 특별한 용도의 *정적 메서드*입니다.
 
-`Extensions.cs`라는 프로그램에 새 ‘정적’ 클래스 파일을 추가하여 확장 메서드에 새로운 홈을 제공한 다음, 첫 번째 확장 메서드 빌드를 시작합니다.
+`Extensions.cs`라는 프로그램에 새 ‘정적’ 클래스 파일을 추가하여 확장 메서드에 새로운 홈을 제공한 다음, 첫 번째 확장 메서드 빌드를 시작합니다. 
 
 ```csharp
 // Extensions.cs
@@ -250,7 +250,7 @@ static void Main(string[] args)
 
 ## <a name="optimizations"></a>최적화
 
-지금까지 빌드한 샘플은 ‘외부 순서 섞기’를 실행합니다. 즉, 맨 위 및 맨 아래 카드가 실행할 때마다 항상 같은 위치에 있습니다. 한 가지 부분을 변경하겠습니다. 52장 카드의 위치가 모두 변경되는 ‘내부 순서 섞기’를 대신 사용하겠습니다. 내부 순서 섞기의 경우 반으로 나눈 아래쪽 부분의 첫 번째 카드가 데크의 첫 번째 카드가 되도록 데크를 인터리빙합니다. 즉, 반으로 나눈 위쪽 부분의 마지막 카드가 맨 아래 카드가 됩니다. 이는 단일 코드 줄에 대한 간단한 변경입니다. <xref:System.Linq.Enumerable.Take%2A> 및 <xref:System.Linq.Enumerable.Skip%2A>의 위치를 전환하여 현재 순서 섞기 쿼리를 업데이트합니다. 이렇게 하면 데크의 위쪽 절반과 아래쪽 절반의 순서가 바뀝니다.
+지금까지 빌드한 샘플은 ‘외부 순서 섞기’를 실행합니다. 즉, 맨 위 및 맨 아래 카드가 실행할 때마다 항상 같은 위치에 있습니다.  한 가지 부분을 변경하겠습니다. 52장 카드의 위치가 모두 변경되는 ‘내부 순서 섞기’를 대신 사용하겠습니다.  내부 순서 섞기의 경우 반으로 나눈 아래쪽 부분의 첫 번째 카드가 데크의 첫 번째 카드가 되도록 데크를 인터리빙합니다. 즉, 반으로 나눈 위쪽 부분의 마지막 카드가 맨 아래 카드가 됩니다. 이는 단일 코드 줄에 대한 간단한 변경입니다. <xref:System.Linq.Enumerable.Take%2A> 및 <xref:System.Linq.Enumerable.Skip%2A>의 위치를 전환하여 현재 순서 섞기 쿼리를 업데이트합니다. 이렇게 하면 데크의 위쪽 절반과 아래쪽 절반의 순서가 바뀝니다.
 
 ```csharp
 shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
@@ -258,7 +258,7 @@ shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
 
 프로그램을 다시 실행합니다. 그러면 데크가 자체적으로 순서를 변경하는 데 52회 반복된다는 것을 알 수 있습니다. 또한 프로그램이 계속 실행될 때 몇 가지 심각한 성능 저하를 알 수 있습니다.
 
-그 이유로는 여러 가지가 있습니다. 이 성능 저하의 주요 원인 중 하나인 비효율적인 [‘지연 계산’](../programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md) 사용을 해결할 수 있습니다.
+그 이유로는 여러 가지가 있습니다. 이 성능 저하의 주요 원인 중 하나인 비효율적인 [‘지연 계산’](../programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md) 사용을 해결할 수 있습니다. 
 
 간단히 말해, 지연 계산은 해당 값이 필요할 때까지 문이 계산되지 않음을 나타냅니다. LINQ 쿼리는 지연 계산되는 문입니다. 요소가 요청될 때만 시퀀스가 생성됩니다. 일반적으로 이것이 LINQ의 큰 장점입니다. 그러나 이러한 프로그램에서 사용하면 실행 시간이 기하급수적으로 늘어납니다.
 
@@ -318,7 +318,7 @@ public static void Main(string[] args)
 
 쿼리에 액세스할 때마다 로깅하지는 않고, 원래 쿼리를 만들 때만 로깅합니다. 프로그램을 실행하는 데 여전히 오래 걸리지만 이제 이유를 확인할 수 있습니다. 로깅을 켠 상태로 내부 순서 섞기를 실행하다가 지치면 외부 순서 섞기로 다시 전환합니다. 여전히 지연 계산 효과가 나타날 것입니다. 한 번 실행에서 모든 값 및 세트 생성을 비롯한 2592개의 쿼리가 실행됩니다.
 
-여기서 코드 성능을 개선하여 수행하는 실행 횟수를 줄일 수 있습니다. 간단한 해결 방법은 카드 데크를 구성하는 원래 LINQ 쿼리의 결과를 ‘캐시’하는 것입니다. 현재, do-while 루프가 반복될 때마다 쿼리를 계속해서 다시 실행하고 카드 데크를 다시 구성하며 매번 순서를 변경합니다. 카드 데크를 캐시하려면 LINQ 메서드 <xref:System.Linq.Enumerable.ToArray%2A> 및 <xref:System.Linq.Enumerable.ToList%2A>를 활용합니다. 두 메서드를 쿼리에 추가하면 지정된 대로 동일한 작업을 수행하지만, 이제 호출하도록 선택한 메서드에 따라 배열이나 목록에 결과를 저장합니다. LINQ 메서드 <xref:System.Linq.Enumerable.ToArray%2A>를 두 쿼리에 모두 추가하고 프로그램을 다시 실행합니다.
+여기서 코드 성능을 개선하여 수행하는 실행 횟수를 줄일 수 있습니다. 간단한 해결 방법은 카드 데크를 구성하는 원래 LINQ 쿼리의 결과를 ‘캐시’하는 것입니다.  현재, do-while 루프가 반복될 때마다 쿼리를 계속해서 다시 실행하고 카드 데크를 다시 구성하며 매번 순서를 변경합니다. 카드 데크를 캐시하려면 LINQ 메서드 <xref:System.Linq.Enumerable.ToArray%2A> 및 <xref:System.Linq.Enumerable.ToList%2A>를 활용합니다. 두 메서드를 쿼리에 추가하면 지정된 대로 동일한 작업을 수행하지만, 이제 호출하도록 선택한 메서드에 따라 배열이나 목록에 결과를 저장합니다. LINQ 메서드 <xref:System.Linq.Enumerable.ToArray%2A>를 두 쿼리에 모두 추가하고 프로그램을 다시 실행합니다.
 
 [!CODE-csharp[Main](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
 
@@ -340,9 +340,9 @@ LINQ 외에도 마법사가 카드 속임수에 사용하는 기술에 대해 �
 
 LINQ에 대한 자세한 내용은 다음을 참조하세요.
 - [LINQ(Language-Integrated Query)](../programming-guide/concepts/linq/index.md)
-  - [LINQ 소개](../programming-guide/concepts/linq/introduction-to-linq.md)
-  - [C#에서 LINQ 시작](../programming-guide/concepts/linq/getting-started-with-linq.md)
-    - [기본 LINQ 쿼리 작업(C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
-    - [LINQ를 통한 데이터 변환(C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
-    - [LINQ의 쿼리 구문 및 메서드 구문(C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
-    - [LINQ를 지원하는 C# 기능](../programming-guide/concepts/linq/features-that-support-linq.md)
+  - [LINQ 소개](../programming-guide/concepts/linq/index.md)
+  - [기본 LINQ 쿼리 작업(C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
+  - [LINQ를 통한 데이터 변환(C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
+  - [LINQ의 쿼리 구문 및 메서드 구문(C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
+  - [LINQ를 지원하는 C# 기능](../programming-guide/concepts/linq/features-that-support-linq.md)
+    

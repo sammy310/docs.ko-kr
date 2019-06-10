@@ -8,25 +8,25 @@ ms.topic: reference
 helpviewer_keywords:
 - expression trees
 - debugview
-ms.openlocfilehash: de82a738430cdd37c4905a5ae7da5faeb46f00a4
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: bc3fc579ed8031d818241f41ac728ef7e5be0b99
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196369"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690118"
 ---
 # <a name="debugview-syntax"></a>`DebugView` 구문
 
 `DebugView` 속성(디버깅할 때만 사용 가능)은 식 트리의 문자열 렌더링을 제공합니다. 대부분의 구문은 이해하기 쉽습니다. 특별한 경우는 다음 섹션에서 설명합니다.
 
-각 예제 다음에는 `DebugView`를 포함한 블록 주석이 이어집니다. 
+각 예제 다음에는 `DebugView`를 포함한 블록 주석이 이어집니다.
 
-## <a name="parameterexpression"></a>ParameterExpression 
+## <a name="parameterexpression"></a>ParameterExpression
 
 <xref:System.Linq.Expressions.ParameterExpression?displayProperty=nameWithType> 변수 이름의 시작 부분에 `$` 기호가 표시됩니다.
-  
+
 매개 변수에 이름이 없으면 자동으로 생성된 이름이 할당됩니다(예: `$var1` 또는 `$var2`).
-  
+
 ### <a name="examples"></a>예제
 
 ```csharp
@@ -41,31 +41,31 @@ ParameterExpression numParam =  Expression.Parameter(typeof(int));
 */
 ```
 
-## <a name="constantexpression"></a>ConstantExpression  
+## <a name="constantexpression"></a>ConstantExpression
 
-정수 값, 문자열 및 `null`을 나타내는 <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> 개체의 경우 상수 값이 표시됩니다.  
-  
-표준 접미사인 C# 리터럴이 있는 숫자 형식의 경우 접미사가 값에 추가됩니다. 다음 표에서는 다양한 숫자 형식과 연결된 접미사를 보여 줍니다.  
+정수 값, 문자열 및 `null`을 나타내는 <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> 개체의 경우 상수 값이 표시됩니다.
 
-| 형식 | 키워드 | 접미사 |  
-|--|--|--|  
-| <xref:System.UInt32?displayProperty=nameWithType> | [uint](../../../language-reference/keywords/uint.md) | U |  
-| <xref:System.Int64?displayProperty=nameWithType> | [long](../../../language-reference/keywords/long.md) | L |  
-| <xref:System.UInt64?displayProperty=nameWithType> | [ulong](../../../language-reference/keywords/ulong.md) | UL |  
-| <xref:System.Double?displayProperty=nameWithType> | [double](../../../language-reference/keywords/double.md) | D |  
-| <xref:System.Single?displayProperty=nameWithType> | [float](../../../language-reference/keywords/float.md) | F |  
-| <xref:System.Decimal?displayProperty=nameWithType> | [decimal](../../../language-reference/keywords/decimal.md) | M |  
-  
-### <a name="examples"></a>예제  
+표준 접미사인 C# 리터럴이 있는 숫자 형식의 경우 접미사가 값에 추가됩니다. 다음 표에서는 다양한 숫자 형식과 연결된 접미사를 보여 줍니다.
+
+| 형식 | 키워드 | 접미사 |
+|--|--|--|
+| <xref:System.UInt32?displayProperty=nameWithType> | [uint](../../../language-reference/keywords/uint.md) | U |
+| <xref:System.Int64?displayProperty=nameWithType> | [long](../../../language-reference/keywords/long.md) | L |
+| <xref:System.UInt64?displayProperty=nameWithType> | [ulong](../../../language-reference/keywords/ulong.md) | UL |
+| <xref:System.Double?displayProperty=nameWithType> | [double](../../../language-reference/keywords/double.md) | D |
+| <xref:System.Single?displayProperty=nameWithType> | [float](../../../language-reference/keywords/float.md) | F |
+| <xref:System.Decimal?displayProperty=nameWithType> | [decimal](../../../language-reference/keywords/decimal.md) | M |
+
+### <a name="examples"></a>예제
 
 ```csharp
-int num = 10; 
+int num = 10;
 ConstantExpression expr = Expression.Constant(num);
 /*
     10
 */
 
-double num = 10; 
+double num = 10;
 ConstantExpression expr = Expression.Constant(num);
 /*
     10D
@@ -73,10 +73,10 @@ ConstantExpression expr = Expression.Constant(num);
 ```
 
 ## <a name="blockexpression"></a>BlockExpression
- 
-<xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> 개체의 형식이 블록에 있는 마지막 식의 형식과 다를 경우 형식은 꺾쇠 괄호(`<` 및 `>`) 안에 표시됩니다. 같을 경우 <xref:System.Linq.Expressions.BlockExpression> 개체의 형식이 표시되지 않습니다.  
-  
-### <a name="examples"></a>예제  
+
+<xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> 개체의 형식이 블록에 있는 마지막 식의 형식과 다를 경우 형식은 꺾쇠 괄호(`<` 및 `>`) 안에 표시됩니다. 같을 경우 <xref:System.Linq.Expressions.BlockExpression> 개체의 형식이 표시되지 않습니다.
+
+### <a name="examples"></a>예제
 
 ```csharp
 BlockExpression block = Expression.Block(Expression.Constant("test"));
@@ -97,9 +97,9 @@ BlockExpression block =  Expression.Block(typeof(Object), Expression.Constant("t
 ## <a name="lambdaexpression"></a>LambdaExpression
 
 <xref:System.Linq.Expressions.LambdaExpression?displayProperty=nameWithType> 개체는 대리자 형식과 함께 표시됩니다.
-  
+
 람다 식에 이름이 없으면 자동으로 생성된 이름이 할당됩니다(예: `#Lambda1` 또는 `#Lambda2`).
-  
+
 ### <a name="examples"></a>예제
 
 ```csharp
@@ -117,15 +117,15 @@ LambdaExpression lambda =  Expression.Lambda<Func<int>>(Expression.Constant(1), 
     }
 */
 ```
-  
+
 ## <a name="labelexpression"></a>LabelExpression
 
 <xref:System.Linq.Expressions.LabelExpression?displayProperty=nameWithType> 개체의 기본값을 지정하면 이 값은 <xref:System.Linq.Expressions.LabelTarget?displayProperty=nameWithType> 개체 앞에 표시됩니다.
-  
+
 `.Label` 토큰은 레이블의 시작을 나타냅니다. `.LabelTarget` 토큰은 이동할 대상의 목적지를 나타냅니다.
-  
+
 레이블에 이름이 없으면 자동으로 생성된 이름이 할당됩니다(예: `#Label1` 또는 `#Label2`).
-  
+
 ### <a name="examples"></a>예제
 
 ```csharp
@@ -156,12 +156,12 @@ BlockExpression block = Expression.Block(
     }
 */
 ```
-  
-## <a name="checked-operators"></a>확인된 연산자  
 
-확인된 연산자는 연산자 앞에 `#` 기호가 표시됩니다. 예를 들어 확인된 더하기 연산자는 `#+`로 표시됩니다.  
-  
-### <a name="examples"></a>예제  
+## <a name="checked-operators"></a>확인된 연산자
+
+확인된 연산자는 연산자 앞에 `#` 기호가 표시됩니다. 예를 들어 확인된 더하기 연산자는 `#+`로 표시됩니다.
+
+### <a name="examples"></a>예제
 
 ```csharp
 Expression expr = Expression.AddChecked( Expression.Constant(1), Expression.Constant(2));

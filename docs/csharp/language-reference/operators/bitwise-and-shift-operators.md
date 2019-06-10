@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 65f7e2db176b408c9768ce73e297008c4b4c83d8
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: bf42a53a89676f457d3d2df8d193a83299c3e4cc
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880610"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758375"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>비트 및 시프트 연산자(C# 참조)
 
@@ -54,7 +54,7 @@ ms.locfileid: "65880610"
 
 `~` 연산자는 각 비트를 반대로 하여 해당 피연산자의 비트 보수를 생성합니다.
 
-[!code-csharp-interactive[bitwise NOT](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseComplement)]
+[!code-csharp-interactive[bitwise NOT](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseComplement)]
 
 `~` 기호를 사용하여 종료자를 선언할 수도 있습니다. 자세한 내용은 [종료자](../../programming-guide/classes-and-structs/destructors.md)를 참조하세요.
 
@@ -64,11 +64,11 @@ ms.locfileid: "65880610"
 
 왼쪽 시프트 연산은 결과 형식의 범위를 벗어나는 상위 비트를 삭제하고 다음 예제와 같이 빈 하위 비트 위치를 0으로 설정합니다.
 
-[!code-csharp-interactive[left shift](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShift)]
+[!code-csharp-interactive[left shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShift)]
 
 시프트 연산자는 `int`, `uint`, `long` 및 `ulong` 유형에 대해서만 정의되므로 작업 결과에는 항상 32비트 이상이 포함됩니다. 첫 번째 피연산자가 다른 정수 형식(`sbyte`, `byte`, `short`, `ushort` 또는 `char`)인 경우, 다음 예제와 같이 해당 값이 `int` 유형으로 변환됩니다.
 
-[!code-csharp-interactive[left shift with promotion](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShiftPromoted)]
+[!code-csharp-interactive[left shift with promotion](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShiftPromoted)]
 
 `<<` 연산자의 두 번째 피연산자가 시프트 수를 정의하는 방법에 대한 자세한 내용은 [시프트 연산자의 시프트 수](#shift-count-of-the-shift-operators) 섹션을 참조하세요.
 
@@ -78,17 +78,17 @@ ms.locfileid: "65880610"
 
 오른쪽 시프트 연산은 다음 예제와 같이 하위 비트를 삭제합니다.
 
-[!code-csharp-interactive[right shift](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#RightShift)]
+[!code-csharp-interactive[right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#RightShift)]
 
 빈 상위 공백 비트 위치는 다음과 같이 첫 번째 피연산자 형식에 따라 설정됩니다.
 
 - 첫 번째 피연산자가 [int](../keywords/int.md) 또는 [long](../keywords/long.md) 형식인 경우 오른쪽 시프트 연산자는 *산술* 시프트를 수행합니다. 첫 번째 피연산자의 최상위 비트(부호 비트) 값이 빈 상위 비트 위치로 전파됩니다. 즉, 빈 상위 비트 위치는 첫 번째 피연산자가 음수가 아닌 경우 0으로 설정되고, 음수인 경우 1로 설정됩니다.
 
-  [!code-csharp-interactive[arithmetic right shift](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
+  [!code-csharp-interactive[arithmetic right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
 
 - 첫 번째 피연산자가 [uint](../keywords/uint.md) 또는 [ulong](../keywords/ulong.md) 형식이면 오른쪽 시프트 피연산자는 *논리적* 시프트를 수행합니다. 빈 상위 비트 위치가 항상 0으로 설정됩니다.
 
-  [!code-csharp-interactive[logical right shift](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
+  [!code-csharp-interactive[logical right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
 
 `>>` 연산자의 두 번째 피연산자가 시프트 수를 정의하는 방법에 대한 자세한 내용은 [시프트 연산자의 시프트 수](#shift-count-of-the-shift-operators) 섹션을 참조하세요.
 
@@ -96,7 +96,7 @@ ms.locfileid: "65880610"
 
 `&` 연산자는 해당 피연산자의 비트 논리 AND를 컴퓨팅합니다.
 
-[!code-csharp-interactive[bitwise AND](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseAnd)]
+[!code-csharp-interactive[bitwise AND](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseAnd)]
 
 `bool` 유형의 피연산자의 경우 `&` 연산자는 해당 피연산자의 [논리 AND](boolean-logical-operators.md#logical-and-operator-)를 컴퓨팅합니다. 단항 `&` 연산자는 [address-of 연산자](pointer-related-operators.md#address-of-operator-)입니다.
 
@@ -104,7 +104,7 @@ ms.locfileid: "65880610"
 
 `^` 연산자는 해당 피연산자의 비트 논리 XOR이라고도 하는 비트 논리 배타적 OR을 컴퓨팅합니다.
 
-[!code-csharp-interactive[bitwise XOR](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseXor)]
+[!code-csharp-interactive[bitwise XOR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseXor)]
 
 `bool` 유형의 피연산자의 경우 `^` 연산자는 해당 피연산자의 [논리 배타적 OR](boolean-logical-operators.md#logical-exclusive-or-operator-)을 컴퓨팅합니다.
 
@@ -112,7 +112,7 @@ ms.locfileid: "65880610"
 
 `|` 연산자는 해당 피연산자의 비트 논리 OR을 컴퓨팅합니다.
 
-[!code-csharp-interactive[bitwise OR](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseOr)]
+[!code-csharp-interactive[bitwise OR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseOr)]
 
 `bool` 유형의 피연산자의 경우 `|` 연산자는 해당 피연산자의 [논리 OR](boolean-logical-operators.md#logical-or-operator-)을 컴퓨팅합니다.
 
@@ -134,11 +134,11 @@ x = x op y
 
 다음 예제에서는 비트 및 시프트 연산자를 사용하는 복합 할당의 사용법을 보여줍니다.
 
-[!code-csharp-interactive[compound assignment](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignment)]
+[!code-csharp-interactive[compound assignment](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignment)]
 
 [숫자 승격](~/_csharplang/spec/expressions.md#numeric-promotions)으로 인해 `op` 연산의 결과가 암시적으로 `x`의 `T` 형식으로 변환되지 못할 수 있습니다. 이 경우 `op`가 미리 정의된 연산자이고 연산의 결과가 명시적으로 `x`의 `T` 형식으로 변환 가능하다면 `x op= y` 양식의 복합 할당 식이 `x = (T)(x op y)`에 해당합니다. 단 `x`는 한 번만 평가됩니다. 다음 예제에서는 해당 동작을 보여줍니다.
 
-[!code-csharp-interactive[compound assignment with cast](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignmentWithCast)]
+[!code-csharp-interactive[compound assignment with cast](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignmentWithCast)]
 
 ## <a name="operator-precedence"></a>연산자 우선 순위
 
@@ -152,7 +152,7 @@ x = x op y
 
 괄호(`()`)를 사용하여 연산자 우선 순위에 따라 주어진 평가 순서를 변경합니다.
 
-[!code-csharp-interactive[operator precedence](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#Precedence)]
+[!code-csharp-interactive[operator precedence](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#Precedence)]
 
 우선 순위 수준에 따라 정렬된 전체 연산자 목록은 [C# 연산자](index.md)를 참조하세요.
 
@@ -168,7 +168,7 @@ x = x op y
 
 다음 예제에서는 해당 동작을 보여줍니다.
 
-[!code-csharp-interactive[shift count example](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ShiftCount)]
+[!code-csharp-interactive[shift count example](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ShiftCount)]
 
 ## <a name="enumeration-logical-operators"></a>열거형 논리 연산자
 

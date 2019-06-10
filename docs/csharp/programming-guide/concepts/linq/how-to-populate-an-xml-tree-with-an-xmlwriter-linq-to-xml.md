@@ -2,12 +2,12 @@
 title: '방법: XmlWriter를 사용하여 XML 트리 채우기(LINQ to XML)(C#)'
 ms.date: 07/20/2015
 ms.assetid: cd5674d1-5c54-4efc-ba68-e23b2875295f
-ms.openlocfilehash: 32dd06dbd166847298716d1da840cb37f0172b43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e121b246729b2b671d0d07dfed6a31602bfe565
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661024"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485227"
 ---
 # <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-c"></a>방법: XmlWriter를 사용하여 XML 트리 채우기(LINQ to XML)(C#)
 XML 트리를 채우는 한 가지 방법은 <xref:System.Xml.Linq.XContainer.CreateWriter%2A>를 사용하여 <xref:System.Xml.XmlWriter>를 만든 다음 <xref:System.Xml.XmlWriter>에 쓰는 것입니다. XML 트리는 <xref:System.Xml.XmlWriter>에 쓴 모든 노드로 채워집니다.  
@@ -67,4 +67,4 @@ Console.WriteLine(newTree);
 - <xref:System.Xml.Linq.XContainer.CreateWriter%2A>
 - <xref:System.Xml.XmlWriter>
 - <xref:System.Xml.Xsl.XslCompiledTransform>
-- [XML 트리 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+- [XML 트리 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
