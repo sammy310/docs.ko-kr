@@ -2,12 +2,12 @@
 title: '방법: LINQ to XML 축 메서드 작성(C#)'
 ms.date: 07/20/2015
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-ms.openlocfilehash: 7e00ba6ba2880ab4f26f59a0b8543ac9f58dfbb0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e777e615d21dd43317f0813461a3f1d8a506c90
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529751"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484667"
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>방법: LINQ to XML 축 메서드 작성(C#)
 XML 트리에서 컬렉션을 검색하는 축 메서드를 작성할 수 있습니다. 축 메서드를 작성하는 가장 좋은 방법 중 하나는 요소나 특성의 컬렉션을 반환하는 확장 메서드를 작성하는 것입니다. 애플리케이션의 요구 사항에 따라 요소나 특성의 특정 하위 집합을 반환하는 확장명 메서드를 작성할 수 있습니다.  
@@ -291,6 +291,3 @@ class Program
 1999-10-22  
 ```  
   
-## <a name="see-also"></a>참고 항목
-
-- [고급 쿼리 기술(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
