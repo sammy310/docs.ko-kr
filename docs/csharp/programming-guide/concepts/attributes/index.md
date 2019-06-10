@@ -41,7 +41,7 @@ ms.locfileid: "61668616"
 [!code-csharp[Using the conditional attribute](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#5)]
 
 > [!NOTE]
-> 규칙에 따라 모든 특성 이름은 .NET 라이브러리의 다른 항목과 구분하기 위해 단어 "Attribute"로 끝납니다. 그러나 코드에서 특성을 사용하는 경우 특성 접미사를 지정할 필요가 없습니다. 예를 들어 `[DllImport]`는 `[DllImportAttribute]`와 같지만 `DllImportAttribute`는 .NET Framework 클래스 라이브러리에서 특성의 실제 이름입니다.
+> 규칙에 따라 모든 특성 이름은 .NET 라이브러리의 다른 항목과 구분하기 위해 "Attribute" 단어로 끝납니다. 그러나 코드에서 특성을 사용하는 경우 특성 접미사를 지정할 필요가 없습니다. 예를 들어 `[DllImport]`는 `[DllImportAttribute]`와 같지만 `DllImportAttribute`는 .NET Framework 클래스 라이브러리에서 특성의 실제 이름입니다.
 
 ### <a name="attribute-parameters"></a>특성 매개 변수
 
