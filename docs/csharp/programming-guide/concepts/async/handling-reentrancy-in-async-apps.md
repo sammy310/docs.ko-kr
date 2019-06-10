@@ -49,7 +49,7 @@ ms.locfileid: "59480874"
 TOTAL bytes returned:  890591
 ```
 
-그러나 사용자가 버튼을 두 번 이상 클릭하면 이벤트 처리기가 반복적으로 호출되고 다운로드 과정이 매번 다시 실행됩니다. 따라서 여러 개의 비동기 작업이 동시에 실행되면 출력 결과가 섞이게 되고 총 바이트 수를 파악하기 어렵게 됩니다.
+그러나 사용자가 버튼을 두 번 이상 클릭하면 이벤트 처리기가 반복적으로 호출되고 다운로드 프로세스가 매번 다시 실행됩니다. 따라서 여러 개의 비동기 작업이 동시에 실행되면 출력에서 결과를 인터리브하며 총 바이트 수를 파악하기 어렵게 됩니다.
 
 ```
 1. msdn.microsoft.com/library/hh191443.aspx                83732
@@ -88,7 +88,7 @@ TOTAL bytes returned:  890591
 
 이 항목의 끝으로 스크롤하면 이 출력을 생성하는 코드를 검토할 수 있습니다. 로컬 컴퓨터에 솔루션을 다운로드한 다음, WebsiteDownload 프로젝트를 실행하거나 이 항목의 끝에 있는 코드를 사용하여 고유한 프로젝트를 만들어 코드를 테스트할 수 있습니다. 자세한 내용 및 지침은 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)을 참조하세요.
 
-## <a name="BKMK_HandlingReentrancy"></a> 재 처리
+## <a name="BKMK_HandlingReentrancy"></a> 재진입 처리
 
 앱에서 수행하려는 작업에 따라 다양한 방법으로 재진입을 처리할 수 있습니다. 이 항목에서는 다음 예제를 제공합니다.
 
@@ -98,11 +98,11 @@ TOTAL bytes returned:  890591
 
 - [작업 취소 및 다시 시작](#BKMK_CancelAndRestart)
 
-  사용자가 **시작** 버튼을 다시 클릭하는 경우 현재 실행되고 있는 작업을 취소한 다음 가장 최근에 요청한 작업이 실행되도록 합니다.
+  사용자가 **시작** 버튼을 다시 클릭하는 경우 현재 실행되고 있는 작업을 취소한 다음 가장 최근에 요청한 작업이 계속해서 실행되도록 합니다.
 
 - [여러 작업을 실행하고 출력을 큐 대기](#BKMK_RunMultipleOperations)
 
-  요청한 모든 작업이 비동기적으로 실행되도록 허용하지만 각 작업의 결과가 순서대로 나타나도록 출력 결과를 조정합니다.
+  요청한 모든 작업이 비동기적으로 실행되도록 허용하지만 각 작업의 결과가 함께 순서대로 나타나도록 출력의 표시를 조정합니다.
 
 ### <a name="BKMK_DisableTheStartButton"></a> 시작 버튼 사용 안 함
 
@@ -143,7 +143,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
 
 취소에 대한 자세한 내용은 [비동기 애플리케이션 미세 조정(C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)을 참조하세요.
 
-이 시나리오를 설정하려면 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)에서 제공하는 기본 코드를 다음과 같이 변경합니다. [Async Samples: .NET 데스크톱 앱의 재](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)에서 완성된 앱을 다운로드할 수도 있습니다. 프로젝트의 이름은 CancelAndRestart입니다.
+이 시나리오를 설정하려면 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)에서 제공하는 기본 코드를 다음과 같이 변경합니다. [Async Samples: .NET Desktop 앱에서의 재진입](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)에서 완성된 앱을 다운로드할 수도 있습니다. 프로젝트의 이름은 CancelAndRestart입니다.
 
 1. 모든 메서드에 대한 범위 내에 있는 <xref:System.Threading.CancellationTokenSource> 변수 `cts`를 선언합니다.
 
@@ -268,7 +268,7 @@ async Task AccessTheWebAsync(CancellationToken ct)
 }
 ```
 
-이 앱이 실행되는 동안 **시작** 버튼을 여러 번 선택하면 다음 출력과 유사한 결과가 생성되어야 합니다.
+이 앱이 실행되는 동안 **시작** 버튼을 여러 번 선택하면 다음 출력과 유사한 결과가 생성됩니다.
 
 ```
 1. msdn.microsoft.com/library/hh191443.aspx                83732
@@ -296,7 +296,7 @@ Download canceled.
 TOTAL bytes returned:  890591
 ```
 
-부분 목록을 제거하려면 `StartButton_Click`에서 코드 첫 줄의 주석 처리를 제거하여 사용자가 작업을 다시 시작할 때마다 텍스트 상자을 청소합니다.
+부분 목록을 제거하려면 `StartButton_Click`에서 코드 첫 줄의 주석 처리를 제거하여 사용자가 작업을 다시 시작할 때마다 텍스트 상자의 내용을 지웁니다.
 
 ### <a name="BKMK_RunMultipleOperations"></a> 여러 작업을 실행하고 출력을 큐 대기
 
@@ -326,7 +326,7 @@ TOTAL bytes returned:  918876
 #Group A is complete.
 ```
 
-사용자가 **시작** 버튼 세 번 선택하면 앱이 다음 줄과 유사한 출력을 생성합니다. 파운드 기호(#)로 시작하는 정보 줄은 애플리케이션의 진행률을 추적합니다.
+사용자가 **시작** 버튼을 세 번 선택하면 앱이 다음 줄과 유사한 출력을 생성합니다. 파운드 기호(#)로 시작하는 정보 줄은 애플리케이션의 진행률을 추적합니다.
 
 ```
 #Starting group A.
@@ -553,7 +553,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
 ### <a name="BKMK_DownloadingTheApp"></a> 앱 다운로드
 
-1. [Async Samples: .NET 데스크톱 앱의 재](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)에서 압축 파일을 다운로드합니다.
+1. [Async Samples: .NET 데스크톱 앱의 재진입](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)에서 압축 파일을 다운로드합니다.
 
 2. 다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.
 
@@ -581,7 +581,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
 4. 프로젝트 형식 목록에서 **WPF 애플리케이션**을 선택합니다.
 
-5. 프로젝트 이름을 `WebsiteDownloadWPF`로 지정한 다음 **확인** 를 선택합니다.
+5. 프로젝트 이름을 `WebsiteDownloadWPF`로 지정한 다음 **확인**을 선택합니다.
 
      **솔루션 탐색기**에 새 프로젝트가 표시됩니다.
 
@@ -607,7 +607,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
     </Window>
     ```
 
-     텍스트 상자와 버튼 포함된 간단한 창이 MainWindow.xaml의 **디자인** 보기에 나타납니다.
+     텍스트 상자와 버튼이 포함된 간단한 창이 MainWindow.xaml의 **디자인** 보기에 나타납니다.
 
 8. <xref:System.Net.Http>에 대한 참조를 추가합니다.
 
@@ -718,7 +718,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
     }
     ```
 
-11. CTRL+F5 키를 선택하여 프로그램을 실행한 다음 **시작** 버튼를 여러 번 선택합니다.
+11. CTRL+F5 키를 선택하여 프로그램을 실행한 다음 **시작** 버튼을 여러 번 선택합니다.
 
 12. [시작 버튼 사용 안 함](#BKMK_DisableTheStartButton), [작업 취소 및 다시 시작](#BKMK_CancelAndRestart) 또는 [여러 작업을 실행하고 출력을 큐 대기](#BKMK_RunMultipleOperations)의 내용을 변경하여 재진입을 처리합니다.
 
