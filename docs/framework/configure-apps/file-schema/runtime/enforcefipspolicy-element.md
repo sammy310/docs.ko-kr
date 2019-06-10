@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1aa958e15449949a1b7ca740198fff71295b2ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c13dd2f00e08539d2ba502058c74aa4a1525e3ff
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704965"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816112"
 ---
 # <a name="enforcefipspolicy-element"></a>\<enforceFIPSPolicy > 요소
 암호화 알고리즘이 FIPS(Federal Information Processing Standards)를 준수해야 하는 컴퓨터 구성 요구 사항을 적용할지를 지정합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "61704965"
 ## <a name="remarks"></a>설명  
  .NET Framework 2.0부터 컴퓨터의 구성에 따라 암호화 알고리즘을 구현 하는 클래스의 생성 제어 됩니다. 컴퓨터 알고리즘을 FIPS를 준수를 요구 하도록 구성 된 FIPS와 호환 되지 않는 알고리즘을 구현 하는 클래스를 해당 클래스의 인스턴스를 만들려고 시도 예외가 throw 됩니다. 생성자가 throw를 <xref:System.InvalidOperationException> 예외 및 `Create` 메서드는 throw를 <xref:System.Reflection.TargetInvocationException> 내부 예외 <xref:System.InvalidOperationException> 예외입니다.  
   
- 구성 파일에는 CLR (공용 언어 런타임)에서 사용 하지 않으려면이 요소를 사용 수는 구성이 필요 FIPS 준수 하는 컴퓨터에서 응용 프로그램을 실행 하는 경우 FIPS와 호환 되지 않는 알고리즘을 사용 하는 응용 프로그램 FIPS 준수를 적용 합니다. 이 요소에 도입 된 [!INCLUDE[net_v20SP1_long](../../../../../includes/net-v20sp1-long-md.md)]합니다.  
+ 구성 파일에는 CLR (공용 언어 런타임)에서 사용 하지 않으려면이 요소를 사용 수는 구성이 필요 FIPS 준수 하는 컴퓨터에서 응용 프로그램을 실행 하는 경우 FIPS와 호환 되지 않는 알고리즘을 사용 하는 응용 프로그램 FIPS 준수를 적용 합니다. 이 요소는.NET Framework 2.0 서비스 팩 1에서 도입 되었습니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 CLR FIPS 준수를 적용 하지 못하도록 하는 방법을 보여 줍니다.  

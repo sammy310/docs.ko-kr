@@ -2,12 +2,12 @@
 title: 구별된 공용 구조체
 description: 사용 하는 방법을 알아봅니다 F# 구별 된 공용 구조체입니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 27fb9205f3f216adc435483fd1dcc839a6e13e03
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: a3958a9ffb021c0c46c24216f17a1e7ee5605dd3
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557965"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816248"
 ---
 # <a name="discriminated-unions"></a>구별된 공용 구조체
 
@@ -111,7 +111,7 @@ let someFunctionUsingShaderProgram (ShaderProgram id) =
 
 ## <a name="struct-discriminated-unions"></a>구조체를 구별 된 공용 구조체
 
-부터 F# 4.1 구조체로 구별 된 공용 구조체를 나타낼 수도 있습니다.  그러려면는 `[<Struct>]` 특성입니다.
+구조체로 구별 된 공용 구조체를 나타낼 수도 있습니다.  그러려면는 `[<Struct>]` 특성입니다.
 
 ```fsharp
 [<Struct>]
@@ -164,14 +164,46 @@ Area of rectangle that has height 5.000000 and width 10.000000 is 50.000000
 
 이 코드를 실행할 때, 변수의 `result` 은 5입니다.
 
+## <a name="members"></a>멤버
+
+구별 된 공용 구조체에 멤버를 정의 하는 것이 가능 합니다. 다음 예제에서는 속성을 정의 하 고 인터페이스를 구현 하는 방법을 보여 줍니다.
+
+```fsharp
+open System
+
+type IPrintable =
+    abstract Print: unit -> unit
+
+type Shape =
+    | Circle of float
+    | EquilateralTriangle of float
+    | Square of float
+    | Rectangle of float * float
+
+    member this.Area =
+        match this with
+        | Circle r -> 2.0 * Math.PI * r
+        | EquilateralTriangle s -> s * s * sqrt 3.0 / 4.0
+        | Square s -> s * s
+        | Rectangle(l, w) -> l * w
+
+    interface IPrintable with
+        member this.Print () =
+            match this with
+            | Circle r -> printfn "Circle with radius %f" r
+            | EquilateralTriangle s -> printfn "Equilateral Triangle of side %f" s
+            | Square s -> printfn "Square with side %f" s
+            | Rectangle(l, w) -> printfn "Rectangle with length %f and width %f" l w
+```
+
 ## <a name="common-attributes"></a>공통 특성
 
 다음 특성은 일반적으로 구별 된 공용 구조체에 표시 됩니다.
 
-* `[RequireQualifiedAccess]`
-* `[NoEquality]`
-* `[NoComparison]`
-* `[Struct]`
+* `[<RequireQualifiedAccess>]`
+* `[<NoEquality>]`
+* `[<NoComparison>]`
+* `[<Struct>]`
 
 ## <a name="see-also"></a>참고자료
 
