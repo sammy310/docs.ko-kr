@@ -162,7 +162,7 @@
                   href: keywords/continue.md
                 - name: goto
                   href: keywords/goto.md
-                - name: return
+                - name: 반환값(return)
                   href: keywords/return.md
             - name: 예외 처리 문
               items:
@@ -361,8 +361,10 @@
           href: operators/assignment-operator.md
         - name: '?: 연산자'
           href: operators/conditional-operator.md
+          displayName: 'conditional, ternary'
         - name: '?? 연산자'
           href: operators/null-coalescing-operator.md
+          displayName: null-coalescing
         - name: => 연산자
           href: operators/lambda-operator.md
         - name: true 및 false 연산자

@@ -60,8 +60,6 @@
           href: architect-microservice-container-applications/resilient-high-availability-microservices.md
         - name: 높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
           href: architect-microservice-container-applications/scalable-available-multi-container-microservice-applications.md
-        - name: Azure Service Fabric 사용
-          href: architect-microservice-container-applications/using-azure-service-fabric.md
     - name: Docker 기반 애플리케이션에 대한 개발 프로세스
       href: docker-application-development-process/index.md
       items:
