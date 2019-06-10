@@ -2,12 +2,12 @@
 title: 결론
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 결론
 ms.date: 10/26/2017
-ms.openlocfilehash: c6f56e312c052f3ea87e62d36a1ae6846a4b8735
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c5d4a3d504e7d62f74cf74e7b3f53f44f4b9b152
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643759"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758882"
 ---
 # <a name="conclusions"></a>결론
 
@@ -15,7 +15,7 @@ ms.locfileid: "65643759"
 
 - Docker 컨테이너는 서버 기반 응용 프로그램이나 서비스 배포의 표준 단위가 되고 있습니다.
 
-- 프로덕션 환경에서는 확장성이 뛰어난 Windows 컨테이너 기반 응용 프로그램을 게시하기 위해 오케스트레이터(예: Service Fabric이나 Kubernetes)를 사용해야 합니다.
+- 프로덕션 환경에서는 호스트 확장성이 뛰어난 Windows 컨테이너 기반 응용 프로그램 (예: Kubernetes) 오 케 스트레이 터를 사용 해야 합니다.
 
 - 컨테이너를 호스트하는 Azure VM은 클라우드에서 작은 개발/테스트 환경을 쉽고 빠르게 만드는 방법입니다.
 

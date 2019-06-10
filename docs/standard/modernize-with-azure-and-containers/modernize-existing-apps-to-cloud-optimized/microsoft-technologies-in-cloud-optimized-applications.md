@@ -2,12 +2,12 @@
 title: 클라우드에 최적화된 응용 프로그램 내의 Microsoft 기술
 description: 기존.NET 응용 프로그램을 Azure 클라우드와 Windows 컨테이너를 사용하여 최신화 | 클라우드에 최적화된 응용 프로그램 내의 Microsoft 기술
 ms.date: 04/28/2018
-ms.openlocfilehash: ebdbc7bb3a5f51f8408b69a5e13f03f424eae242
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 915aa99d2331c5b9c46eabef3335fb809baa9370
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639036"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758625"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>클라우드에 최적화된 응용 프로그램 내의 Microsoft 기술
 
@@ -17,7 +17,7 @@ ms.locfileid: "65639036"
 
 - **런타임**: 이 계층에는 응용 프로그램 실행을 위한 환경을 제공 합니다. 이 계층에 기반 일반적으로 컨테이너를 사용 하는 경우 [Docker 엔진](https://docs.docker.com/engine/), Windows 호스트 또는 Linux 호스트에서 실행 중입니다. ([Windows 컨테이너](https://docs.microsoft.com/virtualization/windowscontainers/about/) 은 Windows Server 2016부터 지원 합니다. Windows 컨테이너는 Windows에서 실행 되는 기존.NET Framework 응용 프로그램에 적합 합니다.)
 
-- **클라우드 관리**: 관리 되는 클라우드 옵션을 선택 하면 비용 및 관리 하 고 기본 인프라를 Vm에 OS 패치를 지 원하는 네트워킹 구성의 복잡성을 피할 수 있습니다. IaaS를 사용 하 여 마이그레이션하도록 선택 하면 사용자는 이러한 작업을 모두에 대 한 관련 된 비용에 대 한 책임이 있습니다. 관리 되는 클라우드 옵션을 응용 프로그램 및 개발 하는 서비스를 관리 합니다. 일반적으로 클라우드 서비스 공급자를 다른 모든 항목을 관리 합니다. Azure에서 관리 되는 클라우드 서비스의 예로 [Azure SQL Database](https://azure.microsoft.com/services/sql-database), [Azure Redis Cache](https://azure.microsoft.com/services/cache/)합니다 [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)를 [Azure Storage](https://azure.microsoft.com/services/storage/), [Azure Database for MySQL](https://azure.microsoft.com/services/mysql/)를 [Azure Database for PostgreSQL](https://azure.microsoft.com/services/postgresql/)를 [Azure Active Directory](https://azure.microsoft.com/services/active-directory/), 및와 같은 계산 서비스를 관리 되는 [VM 확장 설정](https://azure.microsoft.com/services/virtual-machine-scale-sets/), [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)합니다 [Azure App Service](https://azure.microsoft.com/services/app-service/), 및 [Azure Kubernetes Service](https://azure.microsoft.com/services/container-service/)합니다.
+- **클라우드 관리**: 관리 되는 클라우드 옵션을 선택 하면 비용 및 관리 하 고 기본 인프라를 Vm에 OS 패치를 지 원하는 네트워킹 구성의 복잡성을 피할 수 있습니다. IaaS를 사용 하 여 마이그레이션하도록 선택 하면 사용자는 이러한 작업을 모두에 대 한 관련 된 비용에 대 한 책임이 있습니다. 관리 되는 클라우드 옵션을 응용 프로그램 및 개발 하는 서비스를 관리 합니다. 일반적으로 클라우드 서비스 공급자를 다른 모든 항목을 관리 합니다. Azure에서 관리 되는 클라우드 서비스의 예로 [Azure SQL Database](https://azure.microsoft.com/services/sql-database), [Azure Redis Cache](https://azure.microsoft.com/services/cache/)합니다 [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)를 [Azure Storage](https://azure.microsoft.com/services/storage/), [Azure Database for MySQL](https://azure.microsoft.com/services/mysql/)를 [Azure Database for PostgreSQL](https://azure.microsoft.com/services/postgresql/)를 [Azure Active Directory](https://azure.microsoft.com/services/active-directory/), 및와 같은 계산 서비스를 관리 되는 [VM 확장 설정](https://azure.microsoft.com/services/virtual-machine-scale-sets/)하십시오 [Azure App Service](https://azure.microsoft.com/services/app-service/), 및 [Azure Kubernetes Service](https://azure.microsoft.com/services/container-service/)합니다.
 
 - **응용 프로그램 개발**: 컨테이너에서 실행 되는 응용 프로그램을 빌드할 때 많은 언어 중에서 선택할 수 있습니다. 이 가이드에 중점을 둡니다 [.NET](https://www.microsoft.com/net)에 있지만 이동 하거나 Node.js, Python, Java/Spring와 마찬가지로 다른 언어를 사용 하 여 컨테이너 기반 앱을 개발할 수 있습니다.
 
@@ -27,7 +27,7 @@ ms.locfileid: "65639036"
 
 - **응용 프로그램 수명 주기**: [Azure DevOps 서비스](https://azure.microsoft.com/services/devops/) 및 Jenkins와 같은 다른 도구는 도움이 되는 기본 제공된 자동화 서버 구현 릴리스 관리를 비롯 하 여 CI/CD 파이프라인을 합니다.
 
-다음 섹션에서는이 장 및 관련된 연습을 런타임 계층 (Windows 컨테이너)에 대 한 세부 정보 특히 집중합니다. 지침에는 Windows Server 2016 (및 이상 버전)에서 Windows 컨테이너 Vm 및 Azure Container Instances에 배포할 수 있습니다 하는 방법을 설명 합니다. 또한 Azure App Service와 같은 고급 PaaS 플랫폼 및 Azure Service Fabric 및 Azure Kubernetes Service와 같은 오 케 스트레이 터 다룹니다.
+다음 섹션에서는이 장 및 관련된 연습을 런타임 계층 (Windows 컨테이너)에 대 한 세부 정보 특히 집중합니다. 지침에는 Windows Server 2016 (및 이상 버전)에서 Windows 컨테이너 Vm 및 Azure Container Instances에 배포할 수 있습니다 하는 방법을 설명 합니다. 또한 Azure App Service와 같은 고급 PaaS 플랫폼 및 Azure Kubernetes Service와 같은 오 케 스트레이 터 다룹니다.
 
 ## <a name="monolithic-applications-can-be-cloud-optimized"></a>모놀리식 응용 프로그램 *수* 클라우드에 최적화 수
 

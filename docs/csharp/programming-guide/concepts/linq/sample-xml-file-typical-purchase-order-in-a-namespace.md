@@ -2,12 +2,12 @@
 title: '샘플 XML 파일: 네임스페이스에서 일반적인 구매 주문1'
 ms.date: 07/20/2015
 ms.assetid: 84dc3339-ea32-4ccc-9af6-ab38ddfecced
-ms.openlocfilehash: 68ead71acee450b7b37e7c933bcb3987681a1311
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f47761409a0a174317259eea9b2d3a16c9fb2396
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741563"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487193"
 ---
 # <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>샘플 XML 파일: 네임스페이스에서 일반적인 구매 주문
 다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다. 이 파일은 일반적인 구매 주문입니다. XML은 네임스페이스에 있습니다.  
@@ -53,7 +53,4 @@ ms.locfileid: "54741563"
   </aw:Items>  
 </aw:PurchaseOrder>  
 ```  
-  
-## <a name="see-also"></a>참고 항목
-
-- [샘플 XML 문서(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+ 

@@ -2,15 +2,19 @@
 title: 순수 함수 변환 소개(C#)
 ms.date: 07/20/2015
 ms.assetid: 8495c9d9-2d02-4aa0-8a10-9e8794b985fe
-ms.openlocfilehash: 63b7a69baeb42c82fb1c94d08cee17519330025c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c9d187e9ee6750d8ad09e197839d107c3c79e4ed
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501806"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484499"
 ---
 # <a name="introduction-to-pure-functional-transformations-c"></a>순수 함수 변환 소개(C#)
 이 단원에서는 기본 개념과 지원하는 언어 구문을 비롯하여 함수 변환에 대해 소개합니다. 프로그래밍에 대한 개체 지향 및 함수 변환 방법을 대조하고 함수 변환 방법으로 전환하는 방법에 대한 조언을 제공합니다. 많은 프로그래밍 시나리오에서 함수 변환을 사용할 수 있지만 여기에서는 XML 변환이 구체적인 예제로 사용되었습니다.  
+  
+ [자습서: WordprocessingML 문서에서 내용 조작(C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) 자습서에서는 각각 이전 예제를 기반으로 하는 일련의 예제를 제공합니다. 이러한 예제에서는 XML을 조작하기 위한 순수 함수 변환 방법을 보여 줍니다. 이 자습서에서는 사용자가 C#의 실무 지식을 가지고 있다고 가정합니다. 언어 구문의 자세한 의미는 이 자습서에 나와 있지 않지만 해당 언어 설명서에 대한 링크가 제공됩니다.  
+  
+ 이 자습서의 대상 사용자는 기본 컴퓨터 과학 개념과 XML 네임스페이스를 비롯한 XML에 대한 실무 지식도 있다고 간주됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -22,6 +26,3 @@ ms.locfileid: "54501806"
 |[함수 변환의 적용 가능 범위(C#)](../../../../csharp/programming-guide/concepts/linq/applicability-of-functional-transformation.md)|함수 변환의 일반적인 시나리오에 대해 설명합니다.|  
 |[XML의 함수 변환(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)|XML 트리 변환 측면에서 함수 변환에 대해 설명합니다.|  
   
-## <a name="see-also"></a>참고 항목
-
-- [XML의 순수 함수 변환(C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)

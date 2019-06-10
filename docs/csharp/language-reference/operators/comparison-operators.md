@@ -19,12 +19,12 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: 6d3751ff1ee2c6ee2f058eeda4ffd5db188a988e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3b123ea1ae57735cdcb763087f12c30b8008dc11
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633756"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758208"
 ---
 # <a name="comparison-operators-c-reference"></a>비교 연산자(C# 참조)
 
@@ -41,25 +41,25 @@ ms.locfileid: "65633756"
 
 `<` 연산자는 첫 번째 피연산자가 두 번째 피연산자보다 작으면 `true`를 반환하고, 그렇지 않으면 `false`를 반환합니다.
 
-[!code-csharp-interactive[less than example](~/samples/snippets/csharp/language-reference/operators/GreaterAndLessOperatorsExamples.cs#Less)]
+[!code-csharp-interactive[less than example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#Less)]
 
 ## <a name="greater-than-operator-"></a>보다 큼 연산자 >
 
 `>` 연산자는 첫 번째 피연산자가 두 번째 피연산자보다 크면 `true`를 반환하고, 그렇지 않으면 `false`를 반환합니다.
 
-[!code-csharp-interactive[greater than example](~/samples/snippets/csharp/language-reference/operators/GreaterAndLessOperatorsExamples.cs#Greater)]
+[!code-csharp-interactive[greater than example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#Greater)]
 
 ## <a name="less-than-or-equal-operator-"></a>작거나 같음 연산자 \<=
 
 `<=` 연산자는 첫 번째 피연산자가 두 번째 피연산자보다 작거나 같으면 `true`를 반환하고, 그렇지 않으면 `false`를 반환합니다.
 
-[!code-csharp-interactive[less than or equal example](~/samples/snippets/csharp/language-reference/operators/GreaterAndLessOperatorsExamples.cs#LessOrEqual)]
+[!code-csharp-interactive[less than or equal example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#LessOrEqual)]
 
 ## <a name="greater-than-or-equal-operator-"></a>크거나 같음 연산자 >=
 
 `>=` 연산자는 첫 번째 피연산자가 두 번째 피연산자보다 크거나 같으면 `true`를 반환하고, 그렇지 않으면 `false`를 반환합니다.
 
-[!code-csharp-interactive[greater than or equal example](~/samples/snippets/csharp/language-reference/operators/GreaterAndLessOperatorsExamples.cs#GreaterOrEqual)]
+[!code-csharp-interactive[greater than or equal example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#GreaterOrEqual)]
 
 ## <a name="operator-overloadability"></a>연산자 오버로드 가능성
 

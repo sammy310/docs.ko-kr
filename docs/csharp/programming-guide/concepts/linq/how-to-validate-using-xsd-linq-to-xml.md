@@ -2,12 +2,12 @@
 title: '방법: XSD를 사용하여 유효성 검사(LINQ to XML)(C#)'
 ms.date: 07/20/2015
 ms.assetid: 6a7f83a9-2d74-4c2b-8417-0a8595879516
-ms.openlocfilehash: eea274380cd9b1a601059c12ee7bf654dff10437
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99ff764c5e5ae51720d257bcb2ff0bb8e2591243
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604290"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484770"
 ---
 # <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>방법: XSD를 사용하여 유효성 검사(LINQ to XML)(C#)
 <xref:System.Xml.Schema> 네임스페이스에는 XSD(XML 스키마 정의 언어) 파일에 대해 XML 트리의 유효성을 쉽게 검사할 수 있도록 하는 확장 메서드가 포함되어 있습니다. 자세한 내용은 <xref:System.Xml.Schema.Extensions.Validate%2A> 메서드 설명서를 참조하세요.  
@@ -123,4 +123,4 @@ custOrdDoc did not validate
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Xml.Schema.Extensions.Validate%2A>
-- [XML 트리 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+- [XML 트리 만들기(C#)](creating-xml-trees-linq-to-xml-2.md)
