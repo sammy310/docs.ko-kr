@@ -2,20 +2,20 @@
 title: '방법: 프로젝션 형식 제어(C#)'
 ms.date: 07/20/2015
 ms.assetid: e4db6b7e-4cc9-4c8f-af85-94acf32aa348
-ms.openlocfilehash: 020e847545d62709da091a9645d39f8fd0a5ce25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45f60934d6dcac5d2c0fa46409a773d8cdc8b6a2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561025"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487446"
 ---
-# <a name="how-to-control-the-type-of-a-projection-c"></a><span data-ttu-id="8ecf5-102">방법: 프로젝션 형식 제어(C#)</span><span class="sxs-lookup"><span data-stu-id="8ecf5-102">How to: Control the Type of a Projection (C#)</span></span>
-<span data-ttu-id="8ecf5-103">프로젝션은 데이터 집합을 하나 가져와서 필터링하고 모양을 변경하며 형식까지도 변경하는 프로세스입니다.</span><span class="sxs-lookup"><span data-stu-id="8ecf5-103">Projection is the process of taking one set of data, filtering it, changing its shape, and even changing its type.</span></span> <span data-ttu-id="8ecf5-104">대부분의 쿼리 식은 프로젝션을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="8ecf5-104">Most query expressions perform projections.</span></span> <span data-ttu-id="8ecf5-105">이 단원에 나와 있는 대부분의 쿼리 식은 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement>로 확인되지만 다른 형식의 컬렉션을 만들기 위해 프로젝션의 형식을 제어할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8ecf5-105">Most of the query expressions shown in this section evaluate to <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, but you can control the type of the projection to create collections of other types.</span></span> <span data-ttu-id="8ecf5-106">이 항목에서는 프로젝션의 형식을 제어하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8ecf5-106">This topic shows how to do this.</span></span>  
+# <a name="how-to-control-the-type-of-a-projection-c"></a><span data-ttu-id="91c7b-102">방법: 프로젝션 형식 제어(C#)</span><span class="sxs-lookup"><span data-stu-id="91c7b-102">How to: Control the Type of a Projection (C#)</span></span>
+<span data-ttu-id="91c7b-103">프로젝션은 데이터 집합을 하나 가져와서 필터링하고 모양을 변경하며 형식까지도 변경하는 프로세스입니다.</span><span class="sxs-lookup"><span data-stu-id="91c7b-103">Projection is the process of taking one set of data, filtering it, changing its shape, and even changing its type.</span></span> <span data-ttu-id="91c7b-104">대부분의 쿼리 식은 프로젝션을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="91c7b-104">Most query expressions perform projections.</span></span> <span data-ttu-id="91c7b-105">이 단원에 나와 있는 대부분의 쿼리 식은 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement>로 확인되지만 다른 형식의 컬렉션을 만들기 위해 프로젝션의 형식을 제어할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="91c7b-105">Most of the query expressions shown in this section evaluate to <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, but you can control the type of the projection to create collections of other types.</span></span> <span data-ttu-id="91c7b-106">이 항목에서는 프로젝션의 형식을 제어하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="91c7b-106">This topic shows how to do this.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8ecf5-107">예</span><span class="sxs-lookup"><span data-stu-id="8ecf5-107">Example</span></span>  
- <span data-ttu-id="8ecf5-108">다음 예제에서는 새 형식 `Customer`를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="8ecf5-108">The following example defines a new type, `Customer`.</span></span> <span data-ttu-id="8ecf5-109">쿼리 식은 `Customer` 절에서 새 `Select` 개체를 인스턴스화합니다.</span><span class="sxs-lookup"><span data-stu-id="8ecf5-109">The query expression then instantiates new `Customer` objects in the `Select` clause.</span></span> <span data-ttu-id="8ecf5-110">이에 따라 쿼리 식의 형식이 <xref:System.Collections.Generic.IEnumerable%601>의 `Customer`이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8ecf5-110">This causes the type of the query expression to be <xref:System.Collections.Generic.IEnumerable%601> of `Customer`.</span></span>  
+## <a name="example"></a><span data-ttu-id="91c7b-107">예</span><span class="sxs-lookup"><span data-stu-id="91c7b-107">Example</span></span>  
+ <span data-ttu-id="91c7b-108">다음 예제에서는 새 형식 `Customer`를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="91c7b-108">The following example defines a new type, `Customer`.</span></span> <span data-ttu-id="91c7b-109">쿼리 식은 `Customer` 절에서 새 `Select` 개체를 인스턴스화합니다.</span><span class="sxs-lookup"><span data-stu-id="91c7b-109">The query expression then instantiates new `Customer` objects in the `Select` clause.</span></span> <span data-ttu-id="91c7b-110">이에 따라 쿼리 식의 형식이 <xref:System.Collections.Generic.IEnumerable%601>의 `Customer`이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="91c7b-110">This causes the type of the query expression to be <xref:System.Collections.Generic.IEnumerable%601> of `Customer`.</span></span>  
   
- <span data-ttu-id="8ecf5-111">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="8ecf5-111">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
+ <span data-ttu-id="91c7b-111">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="91c7b-111">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
   
 ```csharp  
 public class Customer  
@@ -60,7 +60,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="8ecf5-112">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="8ecf5-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="91c7b-112">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="91c7b-112">This code produces the following output:</span></span>  
   
 ```  
 GREAL:Great Lakes Food Market:Howard Snyder  
@@ -69,7 +69,6 @@ LAZYK:Lazy K Kountry Store:John Steel
 LETSS:Let's Stop N Shop:Jaime Yorres  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8ecf5-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8ecf5-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="91c7b-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="91c7b-113">See also</span></span>
 
 - <xref:System.Linq.Enumerable.Select%2A>
-- [<span data-ttu-id="8ecf5-114">프로젝션 및 변환(LINQ to XML)(C#)</span><span class="sxs-lookup"><span data-stu-id="8ecf5-114">Projections and Transformations (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

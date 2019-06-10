@@ -1,11 +1,11 @@
 ---
-ms.openlocfilehash: b4058bc1d5c58c76af8a34f70485ca024bf6a38a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d5d9ef219d397103b2f40f44c4b001acf24b4aae
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804585"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66722040"
 ---
 
 > [!NOTE]
-> <span data-ttu-id="848c9-101">이 문서의 C# 예제는 [Try.NET](https://try.dot.net) 인라인 코드 러너 및 놀이터에서 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="848c9-101">The C# examples in this article run in the [Try.NET](https://try.dot.net) inline code runner and playground.</span></span> <span data-ttu-id="848c9-102">대화형 창에서 예제를 실행하려면 **실행** 버튼을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="848c9-102">Select the **Run** button to run an example in an interactive window.</span></span> <span data-ttu-id="848c9-103">코드를 실행하면 **실행**을 다시 선택하여 코드를 수정하고 수정된 코드를 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="848c9-103">Once you execute the code, you can modify it and run the modified code by selecting **Run** again.</span></span> <span data-ttu-id="848c9-104">수정된 코드는 대화형 창에서 실행되거나, 컴파일이 실패하면 대화형 창에 모든 C# 컴파일러 오류 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="848c9-104">The modified code either runs in the interactive window or, if compilation fails, the interactive window displays all C# compiler error messages.</span></span>  
+> <span data-ttu-id="2fe90-101">이 문서의 C# 예제는 [Try.NET](https://dotnet.microsoft.com/platform/try-dotnet) 인라인 코드 러너 및 놀이터에서 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="2fe90-101">The C# examples in this article run in the [Try.NET](https://dotnet.microsoft.com/platform/try-dotnet) inline code runner and playground.</span></span> <span data-ttu-id="2fe90-102">대화형 창에서 예제를 실행하려면 **실행** 버튼을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="2fe90-102">Select the **Run** button to run an example in an interactive window.</span></span> <span data-ttu-id="2fe90-103">코드를 실행하면 **실행**을 다시 선택하여 코드를 수정하고 수정된 코드를 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2fe90-103">Once you execute the code, you can modify it and run the modified code by selecting **Run** again.</span></span> <span data-ttu-id="2fe90-104">수정된 코드는 대화형 창에서 실행되거나, 컴파일이 실패하면 대화형 창에 모든 C# 컴파일러 오류 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="2fe90-104">The modified code either runs in the interactive window or, if compilation fails, the interactive window displays all C# compiler error messages.</span></span>  

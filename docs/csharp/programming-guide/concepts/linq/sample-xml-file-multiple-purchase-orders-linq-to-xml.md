@@ -2,17 +2,17 @@
 title: '샘플 XML 파일: 여러 구매 주문(LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2d29fcaa-60df-43d4-8ccc-6cdba7c013e9
-ms.openlocfilehash: 232be52bb75c6e07773c79a65f4e8e8f346a65d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a2bfd64470fb52588d02fcfda5f89301e8d400a
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54747793"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483694"
 ---
-# <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a><span data-ttu-id="84e20-102">샘플 XML 파일: 여러 구매 주문(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="84e20-102">Sample XML File: Multiple Purchase Orders (LINQ to XML)</span></span>
-<span data-ttu-id="84e20-103">다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="84e20-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="84e20-104">이 파일에는 몇 가지 구매 주문이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="84e20-104">This file contains several purchase orders.</span></span>  
+# <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a><span data-ttu-id="63f0e-102">샘플 XML 파일: 여러 구매 주문(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="63f0e-102">Sample XML File: Multiple Purchase Orders (LINQ to XML)</span></span>
+<span data-ttu-id="63f0e-103">다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="63f0e-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="63f0e-104">이 파일에는 몇 가지 구매 주문이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="63f0e-104">This file contains several purchase orders.</span></span>  
   
-## <a name="purchaseordersxml"></a><span data-ttu-id="84e20-105">PurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="84e20-105">PurchaseOrders.xml</span></span>  
+## <a name="purchaseordersxml"></a><span data-ttu-id="63f0e-105">PurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="63f0e-105">PurchaseOrders.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -108,7 +108,4 @@ ms.locfileid: "54747793"
   </PurchaseOrder>  
 </PurchaseOrders>  
 ```  
-  
-## <a name="see-also"></a><span data-ttu-id="84e20-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="84e20-106">See also</span></span>
-
-- [<span data-ttu-id="84e20-107">샘플 XML 문서(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="84e20-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+ 

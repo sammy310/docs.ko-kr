@@ -2,17 +2,17 @@
 title: '샘플 XML 파일: 네임스페이스에서 테스트 구성1'
 ms.date: 07/20/2015
 ms.assetid: e75ad1bc-5636-4623-9a34-a286a8c485d6
-ms.openlocfilehash: 975e0bdfe22758b968dde4e97cf5b302579a7ca7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 38f7da203ee32bd921e680742e91abde91d8aa08
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589245"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487251"
 ---
-# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="c54bd-102">샘플 XML 파일: 네임스페이스에서 테스트 구성</span><span class="sxs-lookup"><span data-stu-id="c54bd-102">Sample XML File: Test Configuration in a Namespace</span></span>
-<span data-ttu-id="c54bd-103">다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="c54bd-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="c54bd-104">이것은 테스트 구성 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="c54bd-104">This is a test configuration file.</span></span> <span data-ttu-id="c54bd-105">XML은 네임스페이스에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c54bd-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="d1f91-102">샘플 XML 파일: 네임스페이스에서 테스트 구성</span><span class="sxs-lookup"><span data-stu-id="d1f91-102">Sample XML File: Test Configuration in a Namespace</span></span>
+<span data-ttu-id="d1f91-103">다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="d1f91-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="d1f91-104">이것은 테스트 구성 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="d1f91-104">This is a test configuration file.</span></span> <span data-ttu-id="d1f91-105">XML은 네임스페이스에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d1f91-105">The XML is in a namespace.</span></span>  
   
-## <a name="testconfiginnamespacexml"></a><span data-ttu-id="c54bd-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="c54bd-106">TestConfigInNamespace.xml</span></span>  
+## <a name="testconfiginnamespacexml"></a><span data-ttu-id="d1f91-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="d1f91-106">TestConfigInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -55,7 +55,4 @@ ms.locfileid: "54589245"
   </Test>  
 </Tests>  
 ```  
-  
-## <a name="see-also"></a><span data-ttu-id="c54bd-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c54bd-107">See also</span></span>
-
-- [<span data-ttu-id="c54bd-108">샘플 XML 문서(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="c54bd-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+ 

@@ -2,20 +2,20 @@
 title: '방법: 특정 자식 요소로 요소 찾기(C#)'
 ms.date: 07/20/2015
 ms.assetid: 00cf5555-374e-4369-bf93-7bd2e7f21db3
-ms.openlocfilehash: 6888de3bc255691fbbb05f2a1debae05492661c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 71068774b93581fdd82a0fe57651bc7780ca1ef1
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547282"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485576"
 ---
-# <a name="how-to-find-an-element-with-a-specific-child-element-c"></a><span data-ttu-id="d6f85-102">방법: 특정 자식 요소로 요소 찾기(C#)</span><span class="sxs-lookup"><span data-stu-id="d6f85-102">How to: Find an Element with a Specific Child Element (C#)</span></span>
-<span data-ttu-id="d6f85-103">이 항목에서는 지정된 값을 가진 자식 요소가 포함된 특정 요소를 찾는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d6f85-103">This topic shows how to find a particular element that has a child element with a specific value.</span></span>  
+# <a name="how-to-find-an-element-with-a-specific-child-element-c"></a><span data-ttu-id="13fa8-102">방법: 특정 자식 요소로 요소 찾기(C#)</span><span class="sxs-lookup"><span data-stu-id="13fa8-102">How to: Find an Element with a Specific Child Element (C#)</span></span>
+<span data-ttu-id="13fa8-103">이 항목에서는 지정된 값을 가진 자식 요소가 포함된 특정 요소를 찾는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="13fa8-103">This topic shows how to find a particular element that has a child element with a specific value.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d6f85-104">예제</span><span class="sxs-lookup"><span data-stu-id="d6f85-104">Example</span></span>  
- <span data-ttu-id="d6f85-105">이 예제에서는 값이 "Examp2.EXE"인 `Test` 자식 요소가 포함된 `CommandLine` 요소를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="d6f85-105">The example finds the `Test` element that has a `CommandLine` child element with the value of "Examp2.EXE".</span></span>  
+## <a name="example"></a><span data-ttu-id="13fa8-104">예제</span><span class="sxs-lookup"><span data-stu-id="13fa8-104">Example</span></span>  
+ <span data-ttu-id="13fa8-105">이 예제에서는 값이 "Examp2.EXE"인 `Test` 자식 요소가 포함된 `CommandLine` 요소를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="13fa8-105">The example finds the `Test` element that has a `CommandLine` child element with the value of "Examp2.EXE".</span></span>  
   
- <span data-ttu-id="d6f85-106">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 테스트 구성(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="d6f85-106">This example uses the following XML document: [Sample XML File: Test Configuration (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="13fa8-106">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 테스트 구성(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="13fa8-106">This example uses the following XML document: [Sample XML File: Test Configuration (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Load("TestConfig.xml");  
@@ -27,17 +27,17 @@ foreach (XElement el in tests)
     Console.WriteLine((string)el.Attribute("TestId"));  
 ```  
   
- <span data-ttu-id="d6f85-107">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="d6f85-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="13fa8-107">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="13fa8-107">This code produces the following output:</span></span>  
   
 ```  
 0002  
 0006  
 ```  
   
-## <a name="example"></a><span data-ttu-id="d6f85-108">예제</span><span class="sxs-lookup"><span data-stu-id="d6f85-108">Example</span></span>  
- <span data-ttu-id="d6f85-109">다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d6f85-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="d6f85-110">자세한 내용은 [XML 네임스페이스 작업(C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d6f85-110">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="13fa8-108">예제</span><span class="sxs-lookup"><span data-stu-id="13fa8-108">Example</span></span>  
+ <span data-ttu-id="13fa8-109">다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="13fa8-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="13fa8-110">자세한 내용은 [XML 네임스페이스 작업(C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="13fa8-110">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="d6f85-111">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 네임스페이스에서 테스트 구성](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace1.md).</span><span class="sxs-lookup"><span data-stu-id="d6f85-111">This example uses the following XML document: [Sample XML File: Test Configuration in a Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace1.md).</span></span>  
+ <span data-ttu-id="13fa8-111">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 네임스페이스에서 테스트 구성](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace1.md).</span><span class="sxs-lookup"><span data-stu-id="13fa8-111">This example uses the following XML document: [Sample XML File: Test Configuration in a Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace1.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Load("TestConfigInNamespace.xml");  
@@ -50,17 +50,16 @@ foreach (XElement el in tests)
     Console.WriteLine((string)el.Attribute("TestId"));  
 ```  
   
- <span data-ttu-id="d6f85-112">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="d6f85-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="13fa8-112">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="13fa8-112">This code produces the following output:</span></span>  
   
 ```  
 0002  
 0006  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d6f85-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d6f85-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="13fa8-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="13fa8-113">See also</span></span>
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [<span data-ttu-id="d6f85-114">기본 쿼리(LINQ to XML)(C#)</span><span class="sxs-lookup"><span data-stu-id="d6f85-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-- [<span data-ttu-id="d6f85-115">표준 쿼리 연산자 개요(C#)</span><span class="sxs-lookup"><span data-stu-id="d6f85-115">Standard Query Operators Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [<span data-ttu-id="d6f85-116">프로젝션 작업(C#)</span><span class="sxs-lookup"><span data-stu-id="d6f85-116">Projection Operations (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
+- [<span data-ttu-id="13fa8-114">표준 쿼리 연산자 개요(C#)</span><span class="sxs-lookup"><span data-stu-id="13fa8-114">Standard Query Operators Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [<span data-ttu-id="13fa8-115">프로젝션 작업(C#)</span><span class="sxs-lookup"><span data-stu-id="13fa8-115">Projection Operations (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)

@@ -2,24 +2,24 @@
 title: '방법: 형제 노드 찾기(XPath 및 LINQ to XML)(C#)'
 ms.date: 07/20/2015
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-ms.openlocfilehash: b71bf1123461e4b0c0db5024eac3330bcf666ecc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d225b30b8bfcae09c5824d974e194f8a06ddfc86
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646765"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485393"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a><span data-ttu-id="aeeb1-102">방법: 형제 노드 찾기(XPath 및 LINQ to XML)(C#)</span><span class="sxs-lookup"><span data-stu-id="aeeb1-102">How to: Find Sibling Nodes (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="aeeb1-103">특정 이름을 가진 노드의 형제를 모두 찾으려고 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="aeeb1-103">You might want to find all siblings of a node that have a specific name.</span></span> <span data-ttu-id="aeeb1-104">컨텍스트 노드도 해당 이름을 가진 경우 생성되는 컬렉션에 컨텍스트 노드가 포함될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="aeeb1-104">The resulting collection might include the context node if the context node also has the specific name.</span></span>  
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a><span data-ttu-id="47caf-102">방법: 형제 노드 찾기(XPath 및 LINQ to XML)(C#)</span><span class="sxs-lookup"><span data-stu-id="47caf-102">How to: Find Sibling Nodes (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="47caf-103">특정 이름을 가진 노드의 형제를 모두 찾으려고 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="47caf-103">You might want to find all siblings of a node that have a specific name.</span></span> <span data-ttu-id="47caf-104">컨텍스트 노드도 해당 이름을 가진 경우 생성되는 컬렉션에 컨텍스트 노드가 포함될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="47caf-104">The resulting collection might include the context node if the context node also has the specific name.</span></span>  
   
- <span data-ttu-id="aeeb1-105">XPath 식은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="aeeb1-105">The XPath expression is:</span></span>  
+ <span data-ttu-id="47caf-105">XPath 식은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="47caf-105">The XPath expression is:</span></span>  
   
  `../Book`  
   
-## <a name="example"></a><span data-ttu-id="aeeb1-106">예제</span><span class="sxs-lookup"><span data-stu-id="aeeb1-106">Example</span></span>  
- <span data-ttu-id="aeeb1-107">이 예제에서는 먼저 `Book` 요소를 찾은 다음 `Book`이라는 모든 형제 요소를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="aeeb1-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`.</span></span> <span data-ttu-id="aeeb1-108">생성되는 컬렉션에는 컨텍스트 노드가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="aeeb1-108">The resulting collection includes the context node.</span></span>  
+## <a name="example"></a><span data-ttu-id="47caf-106">예제</span><span class="sxs-lookup"><span data-stu-id="47caf-106">Example</span></span>  
+ <span data-ttu-id="47caf-107">이 예제에서는 먼저 `Book` 요소를 찾은 다음 `Book`이라는 모든 형제 요소를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="47caf-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`.</span></span> <span data-ttu-id="47caf-108">생성되는 컬렉션에는 컨텍스트 노드가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="47caf-108">The resulting collection includes the context node.</span></span>  
   
- <span data-ttu-id="aeeb1-109">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: Books(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="aeeb1-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="47caf-109">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: Books(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="47caf-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  
@@ -49,7 +49,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="aeeb1-110">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="aeeb1-110">This example produces the following output:</span></span>  
+ <span data-ttu-id="47caf-110">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="47caf-110">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -73,7 +73,3 @@ Results are identical
       of the world.</Description>  
 </Book>  
 ```  
-  
-## <a name="see-also"></a><span data-ttu-id="aeeb1-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="aeeb1-111">See also</span></span>
-
-- [<span data-ttu-id="aeeb1-112">XPath 사용자를 위한 LINQ to XML(C#)</span><span class="sxs-lookup"><span data-stu-id="aeeb1-112">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
