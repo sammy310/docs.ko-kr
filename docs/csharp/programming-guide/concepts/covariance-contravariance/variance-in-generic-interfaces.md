@@ -1,13 +1,13 @@
 ---
 title: 제네릭 인터페이스의 가변성(C#)
-ms.date: 04/10/2019
+ms.date: 06/06/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: 5874a39a57f85695bedc3d1ffa61adf19fcdbe37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a2d0bcc049d62978930b4e5cdef7920349e3b894
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59480783"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815954"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>제네릭 인터페이스의 가변성(C#)
 
@@ -31,9 +31,9 @@ ms.locfileid: "59480783"
 
 .NET Framework 4.5부터 다음 인터페이스는 variant입니다.
 
-- <xref:System.Collections.Generic.IReadOnlyList%601>(T는 반공변(contravariant)임)
+- <xref:System.Collections.Generic.IReadOnlyList%601>(T는 공변(covariant)임)
 
-- <xref:System.Collections.Generic.IReadOnlyCollection%601>(T는 반공변(contravariant)임)
+- <xref:System.Collections.Generic.IReadOnlyCollection%601>(T는 공변(covariant)임)
 
 공변성(covariance)은 메서드가 인터페이스의 제네릭 형식 매개 변수에 정의된 것보다 더 많은 수의 파생된 반환 형식을 갖도록 허용합니다. 공변성(covariance) 기능을 설명하려면 `IEnumerable<Object>` 및 `IEnumerable<String>`이라는 제네릭 인터페이스를 고려하세요. `IEnumerable<String>` 인터페이스는 `IEnumerable<Object>` 인터페이스를 상속하지 않습니다. 그러나 `String` 형식은 `Object` 형식을 상속하며, 경우에 따라 이러한 인터페이스의 개체를 서로 할당할 수 있습니다. 다음 코드 예제에서 이를 확인할 수 있습니다.
 
