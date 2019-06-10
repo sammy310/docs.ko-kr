@@ -30,7 +30,7 @@ ms.locfileid: "59480874"
 > [!NOTE]
 > 예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.
 
-## <a name="BKMK_RecognizingReentrancy"></a> 재입력 인식
+## <a name="BKMK_RecognizingReentrancy"></a> 재진입 인식
 
 이 항목의 예제에서는 사용자가 **시작** 버튼를 선택하여 일련의 웹 사이트를 다운로드하고 다운로드되는 총 바이트 수를 계산하는 비동기 앱을 시작합니다. 예제의 동기 버전은 처음 실행 후 앱 실행이 완료될 때까지 UI 스레드에서 해당 이벤트를 무시하므로 사용자가 버튼를 선택하는 횟수에 관계없이 동일한 방식으로 응답합니다. 그러나 비동기 앱에서 UI 스레드는 계속 응답하므로 완료되기 전에 비동기 작업을 다시 실행할 수 있습니다.
 
@@ -88,7 +88,7 @@ TOTAL bytes returned:  890591
 
 이 항목의 끝으로 스크롤하면 이 출력을 생성하는 코드를 검토할 수 있습니다. 로컬 컴퓨터에 솔루션을 다운로드한 다음, WebsiteDownload 프로젝트를 실행하거나 이 항목의 끝에 있는 코드를 사용하여 고유한 프로젝트를 만들어 코드를 테스트할 수 있습니다. 자세한 내용 및 지침은 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)을 참조하세요.
 
-## <a name="BKMK_HandlingReentrancy"></a> 재입력 처리
+## <a name="BKMK_HandlingReentrancy"></a> 재진입 처리
 
 앱에서 수행하려는 작업에 따라 다양한 방법으로 재진입을 처리할 수 있습니다. 이 항목에서는 다음 예제를 제공합니다.
 
@@ -104,11 +104,11 @@ TOTAL bytes returned:  890591
 
   요청한 모든 작업이 비동기적으로 실행되도록 허용하지만 각 작업의 결과가 함께 순서대로 나타나도록 출력의 표시를 조정합니다.
 
-### <a name="BKMK_DisableTheStartButton"></a> 시작 단추 사용 안 함
+### <a name="BKMK_DisableTheStartButton"></a> 시작 버튼 사용 안 함
 
 `StartButton_Click` 이벤트 처리기의 위쪽에 있는 버튼를 사용하지 않도록 설정하여 작업이 실행되는 동안 **시작** 버튼를 차단할 수 있습니다. 그런 다음 작업이 완료되면 `finally` 블록 내에서 버튼를 다시 사용하도록 설정하여 사용자가 앱을 다시 실행하도록 할 수 있습니다.
 
-이 시나리오를 설정하려면 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)에서 제공하는 기본 코드를 다음과 같이 변경합니다. [Async Samples: .NET 데스크톱 앱의 재입력](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)에서 완성된 앱을 다운로드할 수도 있습니다. 프로젝트 이름은 DisableStartButton입니다.
+이 시나리오를 설정하려면 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)에서 제공하는 기본 코드를 다음과 같이 변경합니다. [Async Samples: .NET 데스크톱 앱의 재진입](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)에서 완성된 앱을 다운로드할 수도 있습니다. 프로젝트 이름은 DisableStartButton입니다.
 
 ```csharp
 private async void StartButton_Click(object sender, RoutedEventArgs e)
@@ -143,7 +143,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
 
 취소에 대한 자세한 내용은 [비동기 애플리케이션 미세 조정(C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)을 참조하세요.
 
-이 시나리오를 설정하려면 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)에서 제공하는 기본 코드를 다음과 같이 변경합니다. [Async Samples: .NET 데스크톱 앱의 재입력](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)에서 완성된 앱을 다운로드할 수도 있습니다. 프로젝트의 이름은 CancelAndRestart입니다.
+이 시나리오를 설정하려면 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)에서 제공하는 기본 코드를 다음과 같이 변경합니다. [Async Samples: .NET Desktop 앱에서의 재진입](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)에서 완성된 앱을 다운로드할 수도 있습니다. 프로젝트의 이름은 CancelAndRestart입니다.
 
 1. 모든 메서드에 대한 범위 내에 있는 <xref:System.Threading.CancellationTokenSource> 변수 `cts`를 선언합니다.
 
@@ -304,7 +304,7 @@ TOTAL bytes returned:  890591
 
 작업은 표시 프로세스의 게이트키퍼 역할을 하는 전역 <xref:System.Threading.Tasks.Task>, `pendingWork`를 공유합니다.
 
-이 시나리오를 설정하려면 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)에서 제공하는 기본 코드를 다음과 같이 변경합니다. [Async Samples: .NET 데스크톱 앱의 재입력](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)에서 완성된 앱을 다운로드할 수도 있습니다. 프로젝트의 이름은 QueueResults입니다.
+이 시나리오를 설정하려면 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)에서 제공하는 기본 코드를 다음과 같이 변경합니다. [Async Samples: .NET 데스크톱 앱의 재진입](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)에서 완성된 앱을 다운로드할 수도 있습니다. 프로젝트의 이름은 QueueResults입니다.
 
 다음 출력은 사용자가 **시작** 버튼을 한 번만 선택하는 경우의 결과를 보여 줍니다. 문제 레이블 A는 처음으로 **시작** 버튼을 선택한 경우의 결과임을 나타냅니다. 숫자는 다운로드 대상 목록에서 URL의 순서를 보여 줍니다.
 
@@ -553,7 +553,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
 ### <a name="BKMK_DownloadingTheApp"></a> 앱 다운로드
 
-1. [Async Samples: .NET 데스크톱 앱의 재입력](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)에서 압축 파일을 다운로드합니다.
+1. [Async Samples: .NET 데스크톱 앱의 재진입](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)에서 압축 파일을 다운로드합니다.
 
 2. 다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.
 
