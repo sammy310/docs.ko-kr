@@ -23,23 +23,23 @@ ms.locfileid: "54589313"
   - 반환값(return)
   - 형식(type)
 - 특성을 단일 프로그램 요소에 여러 번 적용할 수 있는지 여부
-- 특성이 자식 클래스에게 상속되는지 여부
+- 특성이 파생 클래스에게 상속되는지 여부
 
 기본 설정을 명시적으로 적용할 경우 다음 예제와 같이 작성합니다.
 
 [!code-csharp[Define a new attribute](../../../../../samples/snippets/csharp/attributes/NewAttribute.cs#1)]
 
-이 예제에서 `NewAttribute` 클래스는 모든 지원되는 프로그램 요소에 적용할 수 있습니다. 하지만 각 엔터티에 한 번만 적용할 수 있습니다. 이 특성은 기본 클래스에 적용될 때 자식 클래스에게 상속됩니다.
+이 예제에서 `NewAttribute` 클래스는 모든 지원되는 프로그램 요소에 적용할 수 있습니다. 하지만 각 엔터티에 한 번만 적용할 수 있습니다. 이 특성은 기본 클래스에 적용될 때 파생 클래스에게 상속됩니다.
 
-<xref:System.AttributeUsageAttribute.AllowMultiple> 및 <xref:System.AttributeUsageAttribute.Inherited> 인수는 선택 사항이므로 다음 코드와 동일한 효과를 가집니다.
+<xref:System.AttributeUsageAttribute.AllowMultiple> 및 <xref:System.AttributeUsageAttribute.Inherited> 인수는 선택 사항이므로 다음 코드는 동일한 효과를 가집니다.
 
 [!code-csharp[Omit optional attributes](../../../../../samples/snippets/csharp/attributes/NewAttribute.cs#2)]
 
-첫 번째 <xref:System.AttributeUsageAttribute> 인수는 <xref:System.AttributeTargets> 열거형의 요소가 하나 이상 있어야 합니다. 다음 예제와 같이 OR 연산자를 사용하여 여러 형식을 함께 연결할 수 있습니다.
+첫 번째 <xref:System.AttributeUsageAttribute> 인수는 <xref:System.AttributeTargets> 열거형의 요소가 하나 이상이어야 합니다. 다음 예제와 같이 OR 연산자를 사용하여 여러 대상 형식을 함께 연결할 수 있습니다.
 
 [!code-csharp[Create an attribute for fields or properties](../../../../../samples/snippets/csharp/attributes/NewPropertyOrFieldAttribute.cs#1)]
 
-C# 7.3부터 특성은 속성 또는 자동 구현 속성 필드에 적용할 수 있습니다. 특성에 `field`를 지정하지 않는 한 특성이 속성에 적용됩니다. 두 경우 모두 다음 예제에서 표시됩니다.
+C# 7.3부터 특성은 속성 또는 자동 구현 속성의 지원 필드에 적용할 수 있습니다. 특성에 `field` 지정자를 지정하지 않는 한 특성이 속성에 적용됩니다. 두 경우 모두 다음 예제에서 표시됩니다.
 
 [!code-csharp[Create an attribute for fields or properties](../../../../../samples/snippets/csharp/attributes/NewPropertyOrFieldAttribute.cs#2)]
 
