@@ -2,14 +2,17 @@
 title: '방법: 리플렉션을 사용하여 어셈블리의 메타데이터 쿼리(LINQ)(C#)'
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: 1e8aa8652470240d63ac950d43e5b41e8b3ef1ca
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 52b961c5a016754964285221e252965ff89efd26
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584422"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485231"
 ---
 # <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>방법: 리플렉션을 사용하여 어셈블리의 메타데이터 쿼리(LINQ)(C#)
+
+.NET Framework 클래스 라이브러리 리플렉션 API는 .NET 어셈블리에서 메타데이터를 검사하고 해당 어셈블리에 없는 형식, 형식 멤버, 매개 변수 등의 컬렉션을 만드는 데 사용할 수 있습니다. 이러한 컬렉션은 제네릭 `IEnumerable` 인터페이스를 지원하므로 LINQ를 사용하여 쿼리할 수 있습니다.  
+  
 다음 예제에서는 리플렉션과 함께 LINQ를 사용하여 지정된 검색 조건과 일치하는 메서드에 대한 특정 메타데이터를 검색하는 방법을 보여 줍니다. 이 경우 쿼리는 배열과 같은 열거 가능한 형식을 반환하는 모든 메서드의 이름을 어셈블리에서 검색합니다.  
   
 ## <a name="example"></a>예제  

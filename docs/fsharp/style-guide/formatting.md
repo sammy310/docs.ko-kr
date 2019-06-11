@@ -1,15 +1,15 @@
 ---
-title: F#코드 서식 지정 지침
+title: F# 코드 서식 지정 지침
 description: 서식 지정에 대 한 지침을 알아보려면 F# 코드입니다.
 ms.date: 02/08/2019
-ms.openlocfilehash: ce07bd800984ec082a522bc62cb487f786fa0510
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: bfec950395312eac7e837abf8694a4381d5ca82f
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063602"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816175"
 ---
-# <a name="f-code-formatting-guidelines"></a>F#코드 서식 지정 지침
+# <a name="f-code-formatting-guidelines"></a>F# 코드 서식 지정 지침
 
 이 문서에서는 프로그램 코드의 서식을 지정 하는 방법에 대 한 지침을 제공 하 여 F# 코드는:
 
@@ -836,14 +836,14 @@ type MyRecord =
 
 ## <a name="formatting-literals"></a>형식 지정 리터럴
 
-[F#리터럴](../language-reference/literals.md) 를 사용 하는 `Literal` 특성에서 특성 자체 줄에 배치 하 고 camelCase 명명을 사용 해야 합니다.
+[F#리터럴](../language-reference/literals.md) 를 사용 하 여는 `Literal` 특성에서 자체 줄에 특성을 배치 하 고 PascalCase 명명을 사용 해야 합니다.
 
 ```fsharp
 [<Literal>]
-let path = __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+let Path = __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
 
 [<Literal>]
-let myUrl = "www.mywebsitethatiamworkingwith.com"
+let MyUrl = "www.mywebsitethatiamworkingwith.com"
 ```
 
 특성 값으로 동일한 줄에 배치 하지 마십시오.

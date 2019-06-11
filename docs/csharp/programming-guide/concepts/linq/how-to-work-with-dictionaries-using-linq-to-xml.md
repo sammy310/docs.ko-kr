@@ -2,12 +2,12 @@
 title: '방법: LINQ to XML을 사용하여 사전 작업(C#)'
 ms.date: 07/20/2015
 ms.assetid: 57bcefe3-8433-4d3b-935a-511c9bcbdfa8
-ms.openlocfilehash: a1104d041c72b48a9aad38a489aefe3ec90a16dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 196720ff9c17e62f8da9e65e1b8c481fed5074cc
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582021"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484718"
 ---
 # <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>방법: LINQ to XML을 사용하여 사전 작업(C#)
 다양한 데이터 구조를 XML로 변환하고 XML을 다시 다른 데이터 구조로 변환하는 것이 편리한 경우가 많습니다. 이 항목에서는 <xref:System.Collections.Generic.Dictionary%602>를 XML로 변환하고 다시 그 반대로 변환하여 이 일반적인 방법을 구체적으로 구현하는 것을 보여 줍니다.  
@@ -66,6 +66,3 @@ Child3:Value3
 Child4:Value4  
 ```  
   
-## <a name="see-also"></a>참고 항목
-
-- [프로젝션 및 변환(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

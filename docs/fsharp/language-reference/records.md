@@ -1,17 +1,17 @@
 ---
 title: 레코드
 description: 에 대해 알아봅니다 하는 방법 F# 레코드는 멤버를 사용 하 여 필요에 따라 명명 된 값의 간단한 집계를 나타냅니다.
-ms.date: 05/16/2016
-ms.openlocfilehash: a499755383654ddaf76af12776ee93f27834b7b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.date: 06/09/2019
+ms.openlocfilehash: cfb8de8272b479571119ae4cf91ea1d6fd5db73c
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795423"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816197"
 ---
 # <a name="records"></a>레코드
 
-레코드는 명명된 값의 간단한 집계(경우에 따라 멤버가 포함된)를 나타냅니다.  부터 F# 4.1, 구조체 또는 참조 형식 일 수 있습니다.  기본적으로 참조 형식입니다.
+레코드는 명명된 값의 간단한 집계(경우에 따라 멤버가 포함된)를 나타냅니다. 이러한 구조체 또는 참조 형식이 될 수 있습니다.  기본적으로 참조 형식입니다.
 
 ## <a name="syntax"></a>구문
 

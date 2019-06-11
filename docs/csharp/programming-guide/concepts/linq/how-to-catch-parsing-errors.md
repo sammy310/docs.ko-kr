@@ -2,12 +2,12 @@
 title: '방법: 구문 분석 오류 Catch(C#)'
 ms.date: 07/20/2015
 ms.assetid: bfb612d4-5605-48ef-8c93-915cf9d5dcfb
-ms.openlocfilehash: 2f56ca48278f9ad8b38f8564f54a379cc09f94ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 094485b24cdccee7898bd0344aa7c100e26bf4e9
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515864"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487477"
 ---
 # <a name="how-to-catch-parsing-errors-c"></a>방법: 구문 분석 오류 Catch(C#)
 이 항목에서는 잘못 구성되었거나 유효하지 않은 XML을 검색하는 방법을 보여 줍니다.  
@@ -42,6 +42,3 @@ The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line
   
  <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> 및 <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> 메서드가 throw할 수 있는 예외에 대한 자세한 내용은 <xref:System.Xml.XmlReader> 문서를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
-
-- [XML 구문 분석(C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

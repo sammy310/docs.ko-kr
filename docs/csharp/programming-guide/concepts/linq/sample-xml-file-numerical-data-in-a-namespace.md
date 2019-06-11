@@ -2,12 +2,12 @@
 title: '샘플 XML 파일: 네임스페이스의 숫자 데이터3'
 ms.date: 07/20/2015
 ms.assetid: 51750cab-3c66-4511-90fb-b9d211308d31
-ms.openlocfilehash: d00ad41c6703945b80dd49ff5f375a3896b43bed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02788b73a7af9922b5a50237f2d2e401cba8abe2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702134"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483693"
 ---
 # <a name="sample-xml-file-numerical-data-in-a-namespace"></a>샘플 XML 파일: 네임스페이스의 숫자 데이터
 다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다. 이 파일에는 합계 및 평균을 구하고 그룹화할 숫자 데이터가 포함되어 있습니다. XML은 네임스페이스에 있습니다.  
@@ -54,7 +54,3 @@ ms.locfileid: "54702134"
   </Data>  
 </Root>  
 ```  
-  
-## <a name="see-also"></a>참고 항목
-
-- [샘플 XML 문서(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

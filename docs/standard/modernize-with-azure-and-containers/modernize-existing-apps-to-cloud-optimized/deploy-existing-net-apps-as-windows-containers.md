@@ -2,12 +2,12 @@
 title: 기존 .NET 앱을 Windows 컨테이너로 배포
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 기존 .NET 앱을 Windows 컨테이너로 배포
 ms.date: 04/29/2018
-ms.openlocfilehash: 77d10867573765a7e86a9827825e1313de7a3035
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ba9af3fc3a5bf285830bb873fa6a5da8390dc6b4
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643746"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758837"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>기존 .NET 앱을 Windows 컨테이너로 배포
 
@@ -153,7 +153,6 @@ Azure 지원 컨테이너 수준 동시에 보다 PaaS (Platform as a Service)�
 
 - **Azure App Service**
 - **Azure Kubernetes Service (AKS 및 ACS)**
-- **Azure Service Fabric** 
 - **Azure Batch** 
 
 그런 다음 Azure Container Registry는 모든 이전 제품의 등록 및 사용자 지정 컨테이너 이미지를 배포할 때 사용할 수 있는 Azure에서 호스트 되는 높은 확장성이 뛰어난 컨테이너 레지스트리입니다.

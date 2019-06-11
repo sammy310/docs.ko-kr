@@ -2,12 +2,12 @@
 title: 클라우드에서 DevOps 도구와 CI/CD 파이프라인을 사용하여 앱의 수명 주기 최신화
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 클라우드에서 DevOps 도구와 CI/CD 파이프라인를 사용하여 앱의 수명 주기 최신화
 ms.date: 04/30/2018
-ms.openlocfilehash: 7a0005da56e2d8ab7a2348f9032f887451132558
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: cc991bba5df3a9cd972d9a172c1a8f1035ce8c58
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638948"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758644"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>클라우드에서 DevOps 도구와 CI/CD 파이프라인을 사용하여 앱의 수명 주기 최신화
 
@@ -18,8 +18,6 @@ ms.locfileid: "65638948"
 Azure DevOps 서비스는 다양 한 공식 Azure DevOps 서비스 배포 작업을 통해 환경에 다중 컨테이너 응용 프로그램의 지속적인 통합 및 배포를 지원합니다.
 
 - [독립 실행형 Docker 호스트 VM에 배포](https://docs.microsoft.com/azure/devops/build-release/apps/cd/deploy-docker-windowsvm) (Linux 또는 Windows Server 2016 이상)
-
-- [Service Fabric에 배포](https://docs.microsoft.com/azure/service-fabric/service-fabric-tutorial-deploy-app-with-cicd-vsts)
 
 - [Azure Container Service-Kubernetes에 배포](https://docs.microsoft.com/azure/devops/build-release/apps/cd/azure/deploy-container-kubernetes)
 

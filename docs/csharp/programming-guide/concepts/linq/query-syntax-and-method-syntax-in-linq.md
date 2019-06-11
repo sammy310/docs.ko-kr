@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 1d6bd14a88f22bfa961ee28f0014b1f89ccb28b5
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: e3fced818a257cb0bde166b0dd98c59c3b41e8ac
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654044"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484108"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>LINQ의 쿼리 구문 및 메서드 구문(C#)
 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)](Language Integrated Query) 소개 설명서에 있는 대부분의 쿼리는 LINQ 선언적 쿼리 구문을 사용하여 작성되었습니다. 그러나 쿼리 구문은 코드를 컴파일할 때 .NET CLR(공용 언어 런타임)에 대한 메서드 호출로 변환해야 합니다. 이러한 메서드 호출은 `Where`, `Select`, `GroupBy`, `Join`, `Max`, `Average` 등과 같은 표준 쿼리 연산자를 호출합니다. 사용자는 쿼리 구문 대신 메서드 구문을 사용하여 연산자를 직접 호출할 수 있습니다.  
@@ -41,7 +41,3 @@ ms.locfileid: "58654044"
   
 ## <a name="composability-of-queries"></a>쿼리 작성 가능성  
  이전 코드 예제에서는 `Where` 호출 시 점 연산자를 사용하여 `OrderBy` 메서드를 호출합니다. `Where`가 필터링된 시퀀스를 생성하면 `Orderby`는 이를 정렬하여 해당 시퀀스에서 작동합니다. 쿼리는 `IEnumerable`을 반환하기 때문에, 사용자는 메서드 호출을 함께 연결하여 메서드 구문에서 쿼리를 작성합니다. 사용자가 쿼리 구문을 사용하여 쿼리를 작성할 때 백그라운드에서는 컴파일러가 이 작업을 수행합니다. 쿼리 변수는 쿼리 결과를 저장하지 않기 때문에 언제든지 수정할 수 있으며, 실행한 후에도 언제든지 새 쿼리의 기반으로 사용할 수 있습니다.  
-  
-## <a name="see-also"></a>참고 항목
-
-- [C#에서 LINQ 시작](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

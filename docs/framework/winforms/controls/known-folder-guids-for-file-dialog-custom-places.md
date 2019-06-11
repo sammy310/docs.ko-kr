@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: 0f06ca2251ae1bf9bd5e199562eff116614e7117
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 09c51341a2b81c21804bcca3b244bbebdb7342b6
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973842"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758770"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>파일 대화 상자의 사용자 지정 위치에 대한 알려진 폴더 GUID
-사용할를 <xref:System.Guid> 지정 하는 [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] 알려진 폴더에 폴더를 추가 하는 경우는 <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> 컬렉션입니다. 알려진 폴더 Guid 대/소문자 구분 없는 및의 KnownFolders.h 파일에 정의 된 [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)]합니다.  
+사용할를 <xref:System.Guid> 지정 하는 [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] 알려진 폴더에 폴더를 추가 하는 경우는 <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> 컬렉션입니다. 알려진된 폴더 Guid는 대/소문자 구분 하지 않으며 Windows SDK의 KnownFolders.h 파일에서 정의 됩니다.  
   
 > [!NOTE]
 >  일부 경우에는 알려진 폴더에 추가 합니다 <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> 에 표시 되지 것입니다는 **즐겨찾기 링크** 영역입니다. 예를 들어, 지정된 된 알려진 폴더를 응용 프로그램을 실행 하는 컴퓨터에 없는 경우에 알려진 폴더 표시 되지 않습니다.  
@@ -130,7 +130,7 @@ ms.locfileid: "61973842"
  PhotoAlbums  
  69D2CF90-FC33-4FB7-9A0C-EBB0F0FCB43C  
   
- 그림  
+ 사진  
  33E28130-4E1E-4676-835A-98395C3BC3BB  
   
  재생 목록  

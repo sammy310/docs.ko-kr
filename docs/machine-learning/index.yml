@@ -27,7 +27,7 @@ sections:
           - html: <a href="/dotnet/machine-learning/tutorials/github-issue-classification">다중 클래스 분류를 사용하여 GitHub 문제 분류</a></li>
           - html: <a href="/dotnet/machine-learning/tutorials/taxi-fare">회귀를 사용하여 뉴욕 택시 요금 예측</a>
           - html: <a href="/dotnet/machine-learning/tutorials/iris-clustering">클러스터링을 사용하여 특징으로 꽃 분류</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/movie-recommmendation">행렬 인수분해를 사용하여 영화 추천기 만들기</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/movie-recommendation">행렬 인수분해를 사용하여 영화 추천기 만들기</a>
           - html: <a href="/dotnet/machine-learning/tutorials/image-classification">TensorFlow를 사용하여 사용자 지정 이미지 분류자 빌드</a>
   - title: 참조 및 리소스
     items:

@@ -2,12 +2,12 @@
 title: '방법: 텍스트를 XML로 변환 스트리밍 수행(C#)'
 ms.date: 07/20/2015
 ms.assetid: 9b3bd941-d0ff-4f2d-ae41-7c3b81d8fae6
-ms.openlocfilehash: 906150483f7f76b4429ea390d083e9f18696ac9e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d37ea5167576098d4ea343e49ae4ff6bac20d4ba
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555884"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485252"
 ---
 # <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>방법: 텍스트를 XML로 변환 스트리밍 수행(C#)
 텍스트 파일을 처리하는 한 가지 방법은 `yield return` 구문을 사용하여 한 번에 한 줄씩 텍스트 파일을 스트리밍하는 확장 메서드를 작성하는 것입니다. 그런 다음 지연된 방식으로 텍스트 파일을 처리하는 LINQ 쿼리를 작성할 수 있습니다. <xref:System.Xml.Linq.XStreamingElement>를 사용하여 출력을 스트림하면 소스 텍스트 파일의 크기에 관계없이 최소 메모리 크기를 사용하는 XML로 텍스트 파일을 변환할 수 있습니다.  
@@ -89,4 +89,3 @@ class Program
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Xml.Linq.XStreamingElement>
-- [고급 쿼리 기술(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

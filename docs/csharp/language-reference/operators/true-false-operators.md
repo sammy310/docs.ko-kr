@@ -6,12 +6,12 @@ helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: 003ca79343de14aa3a3b1d95d84d0637c873652c
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: b1acf9a16dd977ec49a7f1dc3bea4ee41792e9be
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66302064"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758129"
 ---
 # <a name="true-and-false-operators-c-reference"></a>true 및 false 연산자(C# 참조)
 
@@ -26,7 +26,7 @@ ms.locfileid: "66302064"
 
 다음 예제는 `true` 및 `false` 연산자를 둘 다 정의하는 형식을 제공합니다. 더욱이, `&&` 연산자도 해당 형식의 피연산자에 대해 계산될 수 있는 방식으로 논리적 AND 연산자 `&`를 오버로드합니다.
 
-[!code-csharp-interactive[true and false operators example](~/samples/snippets/csharp/keywords/TrueFalseOperatorsExample.cs)]
+[!code-csharp[true and false operators example](~/samples/csharp/language-reference/operators/TrueFalseOperators.cs)]
 
 `&&` 연산자의 단락 동작을 확인합니다. `GetFuelLaunchStatus` 메서드가 `LaunchStatus.Red`를 반환하면 `&&` 연산자의 두 번째 피연산자는 계산되지 않습니다. `LaunchStatus.Red`가 확실히 false이기 때문입니다. 따라서 논리적 AND의 결과가 두 번째 피연산자의 값에 종속되지 않습니다. 예제 출력은 다음과 같습니다.
 

@@ -2,12 +2,12 @@
 title: '방법: 두 위치 경로의 공용 구조체 찾기(XPath-LINQ to XML)(C#)'
 ms.date: 07/20/2015
 ms.assetid: 069622d3-2b58-4919-8903-710a564c0788
-ms.openlocfilehash: 837a94f716c87a1671b5577f8a21a520d4314ec1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e00c606460159d05f1d3fcaddb1ac5f7b2ec86fa
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526765"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485611"
 ---
 # <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-c"></a>방법: 두 위치 경로의 공용 구조체 찾기(XPath-LINQ to XML)(C#)
 XPath를 사용하여 두 XPath 위치 경로의 통합을 찾을 수 있습니다.  
@@ -68,6 +68,3 @@ Results are identical
 <Price>6.99</Price>  
 ```  
   
-## <a name="see-also"></a>참고 항목
-
-- [XPath 사용자를 위한 LINQ to XML(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

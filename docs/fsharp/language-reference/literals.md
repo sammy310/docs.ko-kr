@@ -1,13 +1,13 @@
 ---
 title: 리터럴
 description: 리터럴 형식에 알아봅니다는 F# 프로그래밍 언어입니다.
-ms.date: 02/08/2019
-ms.openlocfilehash: 032bc82d222cd34e7ac62e42ee4394c97d975b2e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.date: 06/08/2019
+ms.openlocfilehash: 93329cd868ff7a2daaffa1b87ba838bbbc98015c
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490980"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816237"
 ---
 # <a name="literals"></a>리터럴
 
@@ -44,13 +44,16 @@ ms.locfileid: "66490980"
 |byte[]|ASCII 문자열|B|`"text"B`|
 |String 또는 byte]|축 자 문자열|@ prefix|`@"\\server\share"` (유니코드)<br /><br />`@"\\server\share"B` (ASCII)|
 
-## <a name="remarks"></a>설명
+## <a name="named-literals"></a>명명 된 리터럴
 
-유니코드 문자열에는 명시적 인코딩을 사용 하 여 지정할 수 있는 포함 될 수 있습니다 `\u` 뒤에 16 비트 16 진수 코드 또는 UTF-32 인코딩을 사용 하 여 지정할 수 있는 `\U` 뒤에 유니코드를 나타내는 32 비트 16 진수 코드 서로게이트 쌍입니다.
+값은 상수를 사용 하 여 표시할 수 있습니다 합니다 [리터럴](https://msdn.microsoft.com/library/465f36ce-d146-41c0-b425-679c509cd285) 특성입니다. 이 특성에 적용 하면 값을 상수로 컴파일됩니다.
 
-F# 3.1에서는 사용할 수는 `+` 문자열 리터럴을 결합 하 여 로그인 합니다. 비트 이용할 수 있습니다 또는 (`|||`) 열거형 플래그를 결합 하는 연산자입니다. 예를 들어, 다음 코드는에서 사용할 F# 3.1:
+패턴 일치 식에서에서 소문자로 시작 하는 식별자는 항상 바인딩을 위한 변수로 처리 됩니다 것이 아니라 리터럴로 하므로 일반적으로 사용 해야 문자가 대문자 리터럴을 정의할 때.
 
 ```fsharp
+[<Literal>]
+let SomeJson = """{"numbers":[1,2,3,4,5]}"""
+
 [<Literal>]
 let Literal1 = "a" + "b"
 
@@ -64,13 +67,11 @@ let Literal2 = 1 ||| 64
 let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 ```
 
-다른 비트 연산자의 사용이 허용 되지 않습니다.
+## <a name="remarks"></a>설명
 
-## <a name="named-literals"></a>명명 된 리터럴
+유니코드 문자열에는 명시적 인코딩을 사용 하 여 지정할 수 있는 포함 될 수 있습니다 `\u` 뒤에 16 비트 16 진수 코드 또는 UTF-32 인코딩을 사용 하 여 지정할 수 있는 `\U` 뒤에 유니코드를 나타내는 32 비트 16 진수 코드 서로게이트 쌍입니다.
 
-값은 상수를 사용 하 여 표시할 수 있습니다 합니다 [리터럴](https://msdn.microsoft.com/library/465f36ce-d146-41c0-b425-679c509cd285) 특성입니다. 이 특성에 적용 하면 값을 상수로 컴파일됩니다.
-
-패턴 일치 식에서에서 소문자로 시작 하는 식별자는 항상 바인딩을 위한 변수로 처리 됩니다 것이 아니라 리터럴로 하므로 일반적으로 사용 해야 문자가 대문자 리터럴을 정의할 때.
+이외의 다른 비트 연산자를 사용 하 여 `|||` 허용 되지 않습니다.
 
 ## <a name="integers-in-other-bases"></a>다른 밑에 있는 정수
 
@@ -83,7 +84,7 @@ let numbers = (0x9F, 0o77, 0b1010)
 
 ## <a name="underscores-in-numeric-literals"></a>숫자 리터럴의 밑줄
 
-부터 F# 4.1 밑줄 문자를 사용 하 여 숫자를 구분할 수 있습니다 (`_`).
+밑줄 문자를 사용 하 여 숫자를 구분할 수 있습니다 (`_`).
 
 ```fsharp
 let value = 0xDEAD_BEEF

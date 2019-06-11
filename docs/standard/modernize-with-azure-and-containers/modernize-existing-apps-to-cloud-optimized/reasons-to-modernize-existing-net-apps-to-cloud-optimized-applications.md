@@ -2,12 +2,12 @@
 title: 기존 .NET 앱을 클라우드 최적화된 응용 프로그램으로 최신화하는 이유
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 기존 .NET 앱을 클라우드 최적화된 응용 프로그램으로 최신화하는 이유
 ms.date: 04/28/2018
-ms.openlocfilehash: e09d8066e883aaef55408336e3817158e2c14be6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5aa9828f65f76138461c18711fe03bdbe6a70ffd
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639054"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758750"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>기존 .NET 앱을 클라우드 최적화된 응용 프로그램으로 최신화하는 이유
 
@@ -27,7 +27,7 @@ ms.locfileid: "65639054"
 
 키는 *민첩성*합니다. 모든 배포-프로덕션에을 최소로 줄이고 경우가 아니면 민첩 하 게 제공할 수 없습니다 문제 및 개발/테스트 환경 문제입니다. 컨테이너 (특히, Docker, 사실상 표준으로) 및 관리 되는 서비스는이 목적을 위해 특별히 설계 되었습니다.
 
-민첩성을 위해 확장성이 뛰어난 클라우드 플랫폼에 릴리스 하는 CI/CD 파이프라인을 기반으로 하는 자동화 된 DevOps 프로세스 필요 합니다. 확장성 및 복원 력 있는 클라우드 플랫폼 (예: Azure App Service, Azure Service Fabric 또는 Azure Kubernetes Service)에 배포 하는 CI/CD 플랫폼 (예: Azure DevOps Services 또는 Jenkins)는 클라우드의 민첩성을 위한 핵심 기술입니다.
+민첩성을 위해 확장성이 뛰어난 클라우드 플랫폼에 릴리스 하는 CI/CD 파이프라인을 기반으로 하는 자동화 된 DevOps 프로세스 필요 합니다. 확장성 및 복원 력 있는 클라우드 플랫폼 (예: Azure App Service 또는 Azure Kubernetes Service)에 배포 하는 CI/CD 플랫폼 (예: Azure DevOps Services 또는 Jenkins)는 클라우드의 민첩성을 위한 핵심 기술입니다.
 
 다음 목록에는 주요 개념 또는 클라우드에 최적화 된 응용 프로그램에 대 한 사례를 설명합니다. 전체 또는 일부 점진적 또는 증분 방식으로 이러한 원칙을 채택할 수 있습니다. 참고:
 

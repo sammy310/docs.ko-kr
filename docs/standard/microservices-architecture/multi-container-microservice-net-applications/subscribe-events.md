@@ -2,12 +2,12 @@
 title: 이벤트 구독
 description: 컨테이너화된 .NET 애플리케이션의.NET 마이크로 서비스 아키텍처 | 통합 이벤트에 대한 게시 및 구독의 세부 정보를 이해합니다.
 ms.date: 10/02/2018
-ms.openlocfilehash: ff165f6bba7940b99ef9712049191e356b893897
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c0eaacce51b186191431bf827bb84d3a2d2b7b1f
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639716"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722672"
 ---
 # <a name="subscribing-to-events"></a>이벤트 구독
 
@@ -322,7 +322,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>추가 자료
 
-- **NServiceBus를 사용하여 포크된 eShopOnContainers(특정 소프트웨어)** \
+- **NServiceBus를 사용하여 포크된 eShopOnContainers(특정 소프트웨어)**  \
     <https://go.particular.net/eShopOnContainers>
 
 - **이벤트 기반 메시징** \
@@ -378,12 +378,6 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 - **안정성 가이드**(RabbitMQ 설명서) \
     [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
-
-- **Azure Service Bus. 조정된 메시징: 중복 검색** \
-    <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
-
-- **안정성 가이드**(RabbitMQ 설명서) \
-    [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html%23consumer)
 
 > [!div class="step-by-step"]
 > [이전](rabbitmq-event-bus-development-test-environment.md)
