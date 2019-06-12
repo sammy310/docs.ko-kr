@@ -2,12 +2,12 @@
 title: 인터넷 정보 서비스에서 호스트하는 WCF 서비스 배포
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 99ed9ce5304717073057f6712a2b96d910d43bea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a41615ab096f3aa4f1ee94defd775248d0df4d2e
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858323"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025738"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>인터넷 정보 서비스에서 호스트하는 WCF 서비스 배포
 
@@ -41,7 +41,7 @@ IIS에서 호스팅되는 WCF 서비스가 제대로 작동 하려면 WCF, IIS �
 
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>새 IIS 애플리케이션을 만들거나 기존 ASP.NET 애플리케이션을 다시 사용
 
-IIS에서 호스팅되는 WCF 서비스는 IIS 응용 프로그램을 내부에 있어야 합니다. 단독으로 WCF 서비스를 호스트할 새 IIS 응용 프로그램을 만들 수 있습니다. WCF 서비스를 이미 호스팅하고 있는 기존 응용 프로그램으로 배포할 수 있습니다 또는 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] 콘텐츠 (예:.aspx 페이지 및 ASP.NET 웹 서비스 [ASMX]). 이러한 옵션에 대 한 자세한 내용은 참조는 "호스팅 WCF-Side-by-side ASP.NET 사용 하 여" 및 "ASP.NET 호환 모드에서 WCF 서비스 호스팅" 섹션 [WCF 서비스 및 ASP.NET](wcf-services-and-aspnet.md)합니다.
+IIS에서 호스팅되는 WCF 서비스는 IIS 응용 프로그램을 내부에 있어야 합니다. 단독으로 WCF 서비스를 호스트할 새 IIS 응용 프로그램을 만들 수 있습니다. 또는 이미 ASP.NET 2.0 콘텐츠 (예:.aspx 페이지 및 ASP.NET 웹 서비스 [ASMX])를 호스트 하는 기존 응용 프로그램에는 WCF 서비스를 배포할 수 있습니다. 이러한 옵션에 대 한 자세한 내용은 참조는 "호스팅 WCF-Side-by-side ASP.NET 사용 하 여" 및 "ASP.NET 호환 모드에서 WCF 서비스 호스팅" 섹션 [WCF 서비스 및 ASP.NET](wcf-services-and-aspnet.md)합니다.
 
 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 이상 버전은 격리된 개체 지향 프로그래밍 응용 프로그램을 정기적으로 다시 시작합니다. 기본값은 1740분입니다. 지원되는 최대값은 71,582분입니다. 다시 시작은 사용할 수 없습니다. 이 속성에 대 한 자세한 내용은 참조는 [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968)합니다.
 
@@ -65,7 +65,7 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
 
 ## <a name="deploy-the-service-implementation-to-the-iis-application"></a>IIS 애플리케이션에 서비스 구현 배포
 
-IIS에서 호스팅되는 WCF 서비스와 동일한 동적 컴파일 모델을 사용 하 여 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]입니다. ASP.NET의 경우와 마찬가지로 다음과 같이 다양 한 위치에서 여러 가지 방법으로 IIS에서 호스팅되는 WCF 서비스에 대 한 구현 코드를 배포할 수 있습니다.
+IIS에서 호스팅되는 WCF 서비스는 ASP.NET 2.0으로 동일한 동적 컴파일 모델을 사용 합니다. ASP.NET의 경우와 마찬가지로 다음과 같이 다양 한 위치에서 여러 가지 방법으로 IIS에서 호스팅되는 WCF 서비스에 대 한 구현 코드를 배포할 수 있습니다.
 
 - GAC(전역 어셈블리 캐시) 또는 애플리케이션의 \bin 디렉터리에 있는 미리 컴파일된 .dll 파일로 배포합니다. 미리 컴파일된 이진 파일은 클래스 라이브러리의 새 버전이 배포될 때까지 업데이트되지 않습니다.
 
@@ -73,7 +73,7 @@ IIS에서 호스팅되는 WCF 서비스와 동일한 동적 컴파일 모델을 
 
 - 컴파일되지 않은 코드는.svc 파일에 직접 배치 합니다. 구현 코드 후 서비스의.svc 파일에서 인라인으로 찾을된 수도 있습니다는 \@ServiceHost 지시문입니다. 인라인 코드를 변경하면 다음 요청을 받았을 때 애플리케이션이 재활용되고 다시 컴파일됩니다.
 
-에 대 한 자세한 내용은 합니다 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] 컴파일 모델 참조 [ASP.NET 컴파일 개요](https://go.microsoft.com/fwlink/?LinkId=94773)합니다.
+ASP.NET 2.0 컴파일 모델에 대 한 자세한 내용은 참조 하세요. [ASP.NET 컴파일 개요](https://go.microsoft.com/fwlink/?LinkId=94773)합니다.
 
 ## <a name="configure-the-wcf-service"></a>WCF 서비스 구성
 

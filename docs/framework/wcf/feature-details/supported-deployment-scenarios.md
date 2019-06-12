@@ -2,16 +2,16 @@
 title: 지원 되는 배포 시나리오-WCF
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: 986459e14206f073686474f5d65845ce682e1270
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7b508f53365c1b4b90e2883ddb9d5f2a71c7e814
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881054"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025629"
 ---
 # <a name="supported-deployment-scenarios"></a>지원 되는 배포 시나리오
 
-부분적으로 신뢰할 수 있는 응용 프로그램에서 사용 하기 위해 지원 되는 Windows Communication Foundation (WCF) 기능의 하위 집합은 WCF를 사용 하 여 전부는 아니지만 일부 시나리오의 요구 사항을 충족 하도록 설계 되었습니다. 서버의 WCF 인터넷 규모의 요구 사항을 만족 공유 타사 응용 프로그램을 실행 하는 호스팅 공급자에는 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] 보통 신뢰 권한 보안상의 이유로 집합입니다. 와 같은 배포 기술의 요구 사항을 충족 하기 위해 클라이언트에서 WCF 부분 신뢰 지원이 디자인 되었습니다 [ClickOnce 배포](/visualstudio/deployment/clickonce-security-and-deployment) 또는 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]의 원활 하 고 보안을 허용 하는 XAML 브라우저 응용 프로그램 기술 신뢰할 수 없는 사이트에서 데스크톱 응용 프로그램 배포입니다.
+부분적으로 신뢰할 수 있는 응용 프로그램에서 사용 하기 위해 지원 되는 Windows Communication Foundation (WCF) 기능의 하위 집합은 WCF를 사용 하 여 전부는 아니지만 일부 시나리오의 요구 사항을 충족 하도록 설계 되었습니다. 서버에서 WCF 보안을 위해 ASP.NET 2.0 보통 신뢰 권한에서 타사 응용 프로그램을 실행 하는 공유 호스팅 공급자를 설정 하는 인터넷 규모의 요구 사항을 충족 합니다. 와 같은 배포 기술의 요구 사항을 충족 하기 위해 클라이언트에서 WCF 부분 신뢰 지원이 디자인 되었습니다 [ClickOnce 배포](/visualstudio/deployment/clickonce-security-and-deployment) 또는 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]의 원활 하 고 보안을 허용 하는 XAML 브라우저 응용 프로그램 기술 신뢰할 수 없는 사이트에서 데스크톱 응용 프로그램 배포입니다.
 
 ## <a name="minimum-permission-requirements"></a>최소 권한 요구 사항
 
@@ -27,7 +27,7 @@ WCF는 다음 표준 명명 된 권한 집합 중 하나에서 실행 중인 응
 
 ## <a name="partial-trust-on-the-server"></a>서버에서 부분 신뢰
 
-ASP.NET 웹 응용 프로그램 호스팅 서비스의 상용 공급자는 대부분 해당 서버에서 실행 하는 응용 프로그램에서 실행 하는 위임 된 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] 보통 신뢰 권한 집합입니다. WCF 서비스 사용 하는 경우 이러한 환경에서 실행할 수는 <xref:System.ServiceModel.BasicHttpBinding>는 <xref:System.ServiceModel.WebHttpBinding>, 또는 <xref:System.ServiceModel.WSHttpBinding> 전송 수준 보안을 사용 하 여 합니다.
+ASP.NET 웹 응용 프로그램 호스팅 서비스의 상용 공급자는 대부분 ASP.NET 2.0 보통 신뢰 권한 집합에 해당 서버에서 실행 하는 응용 프로그램이 실행을 위임 합니다. WCF 서비스 사용 하는 경우 이러한 환경에서 실행할 수는 <xref:System.ServiceModel.BasicHttpBinding>는 <xref:System.ServiceModel.WebHttpBinding>, 또는 <xref:System.ServiceModel.WSHttpBinding> 전송 수준 보안을 사용 하 여 합니다.
 
 보통 신뢰 호스팅 환경에서 실행 되는 WCF 서비스를 다른 서버에 클라이언트 요청에 응답 메시지를 전송 하 여 중간 계층 서비스로 사용할 수도 있습니다. 서버에서 중간 계층 시나리오는 호스팅 환경이 애플리케이션에 적합한 <xref:System.Net.WebPermission> 을 부여해서 원하는 서버로 아웃바운드 요청을 한 경우 지원됩니다.
 

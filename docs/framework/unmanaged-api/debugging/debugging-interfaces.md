@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: b6297c26-7624-4431-8af4-14112d07bcd5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d939063aaefb00d4db3de604df0dbd1b2175bf95
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff589285d81a3febf887bba976b62a9ae4a573c8
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698423"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025936"
 ---
 # <a name="debugging-interfaces"></a>디버깅 인터페이스
 이 단원에서는 CLR(공용 언어 런타임)에서 실행되는 프로그램의 디버깅을 처리하는 관리되지 않는 인터페이스에 대해 설명합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "61698423"
  배열, 포인터, 함수 포인터 및 ByRef 형식에 사용할 수 있는 메서드를 제공합니다. 이 인터페이스는 `ICorDebugAppDomain` 인터페이스의 확장입니다.  
   
  [ICorDebugAppDomain3 인터페이스](icordebugappdomain3-interface.md)\
- 응용 프로그램 도메인에서 [!INCLUDE[wrt](../../../../includes/wrt-md.md)] 형식으로 작동하기 위한 메서드를 제공합니다. 이 인터페이스는 `ICorDebugAppDomain` 및 `ICorDebugAppDomain2` 인터페이스의 확장입니다.  
+ 응용 프로그램 도메인에서 Windows 런타임 형식을 사용 하는 방법을 제공 합니다. 이 인터페이스는 `ICorDebugAppDomain` 및 `ICorDebugAppDomain2` 인터페이스의 확장입니다.  
   
  [ICorDebugAppDomain4 인터페이스](icordebugappdomain4-interface.md)\
  논리적으로 확장 합니다 [ICorDebugAppDomain](icordebugappdomain-interface.md) 인터페이스를 COM 호출 가능 래퍼를에서 관리 되는 개체를 가져옵니다.  

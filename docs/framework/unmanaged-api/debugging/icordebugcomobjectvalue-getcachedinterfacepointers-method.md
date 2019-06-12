@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da0e62250dbef9be93ccee7020e23c3f83e85592
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4a77e7f20aba1908a63d77b4ccada7fabacf55f7
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61749906"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025853"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacepointers-method"></a>ICorDebugComObjectValue::GetCachedInterfacePointers 메서드
 현재 런타임 호출 가능 래퍼 (RCW)에 캐시 하는 원시 인터페이스 포인터를 가져옵니다.  
@@ -37,7 +37,7 @@ HRESULT GetCachedInterfacePointers(
   
 ## <a name="parameters"></a>매개 변수  
  `bIInspectableOnly`  
- [in] 메서드는만 반환 하는지 여부를 나타내는 값을 [!INCLUDE[wrt](../../../../includes/wrt-md.md)] 인터페이스 (`IInspectable` 인터페이스) 또는 런타임 호출 가능 래퍼 (RCW)에 의해 캐시 되는 모든 COM 인터페이스입니다.  
+ [in] 메서드는 Windows 런타임 인터페이스를 반환 하는지 여부를 나타내는 값 (`IInspectable` 인터페이스) 또는 런타임 호출 가능 래퍼 (RCW)에 의해 캐시 되는 모든 COM 인터페이스입니다.  
   
  `celt`  
  [in] 해당 주소를 검색할 개체의 수입니다.  

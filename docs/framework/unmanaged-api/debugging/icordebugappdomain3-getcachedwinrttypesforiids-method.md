@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed1d7ad95b7c8474121994d0f54557c1c36cb531
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 95c84f7f40db0096b26ec448f8f229cdbfe3afb1
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917378"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025897"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypesforiids-method"></a>ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs 메서드
-캐시에 대 한 열거자를 가져옵니다 [!INCLUDE[wrt](../../../../includes/wrt-md.md)] 형식은 응용 프로그램 도메인에서 해당 인터페이스 식별자 기반으로 합니다.  
+해당 인터페이스 식별자에 따라 응용 프로그램 도메인에서 캐시 된 Windows 런타임 형식에 대 한 열거자를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,16 +42,16 @@ HRESULT GetCachedWinRTTypesForIIDs (
  [in] 필요한 형식의 수입니다.  
   
  `iidsToResolve`  
- [in] 관리 되는 표현에 해당 하는 인터페이스 식별자를 포함 하는 배열에 대 한 포인터를 [!INCLUDE[wrt](../../../../includes/wrt-md.md)] 검색할 형식입니다.  
+ [in] 검색할 Windows 런타임 형식의 관리 되는 표현에 해당 하는 인터페이스 식별자를 포함 하는 배열에 대 한 포인터입니다.  
   
  `ppTypesEnum`  
- [out] 캐시 된 열거 수 있도록 "ICorDebugTypeEnum" 인터페이스 개체의 주소에 대 한 포인터의 표현을 관리 합니다 [!INCLUDE[wrt](../../../../includes/wrt-md.md)] 의 인터페이스 식별자에 따라 형식 검색 `iidsToResolve`합니다.  
+ [out] Windows 런타임 형식의 관리 되는 캐시 된 표현을 열거형을 허용 하는 "ICorDebugTypeEnum" 인터페이스 개체의 주소에 대 한 포인터를 기반으로 검색의 인터페이스 식별자 `iidsToResolve`합니다.  
   
 ## <a name="remarks"></a>설명  
  메서드를 특정 인터페이스 식별자에 대 한 정보를 검색 하지 못하는 경우 "ICorDebugTypeEnum" 컬렉션의 해당 항목은 형식이 `ELEMENT_TYPE_END` 데이터 검색 문제로 인해 오류 또는 `ELEMENT_TYPE_VOID` 알 수 없는 인터페이스에 대 한 식별자입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]  
+ **플랫폼:** Windows 런타임  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   

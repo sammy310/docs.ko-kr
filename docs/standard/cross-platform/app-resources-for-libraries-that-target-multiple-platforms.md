@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c3e9e58a8cfe5f18aba2e8db56f84d089cc49df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c95c77d0b2e2b68750891431822e2637e5e88f9
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62055019"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025582"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>여러 플랫폼을 대상으로 하는 라이브러리의 앱 리소스
 .NET Framework를 사용 하 여 [이식 가능한 클래스 라이브러리](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) 프로젝트 형식에 여러 플랫폼에서 클래스 라이브러리의 리소스에에서 액세스할 수 있는지 확인 합니다. 이 프로젝트 형식은 Visual Studio 2012에서 사용할 수 및.NET Framework 클래스 라이브러리의 이식 가능한 하위 집합을 대상으로 합니다. [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]을 사용할 경우 데스크톱 앱, Silverlight 앱, Windows Phone 앱 및 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱을 통해 라이브러리에 액세스할 수 있게 됩니다.
@@ -47,9 +47,9 @@ ms.locfileid: "62055019"
 ## <a name="the-includenetportableincludesnet-portable-mdmd-and-windows-store-apps"></a>[!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 및 Windows 스토어 앱
  [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 프로젝트는 .resx 파일에 리소스를 저장한 다음 .resources 파일로 컴파일하고 컴파일 타임에 주 어셈블리 또는 위성 어셈블리에 포함시킵니다. 반면에 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램은 리소스를 단일 패키지 리소스 인덱스(PRI) 파일로 컴파일되는 .resw 파일에 저장해야 합니다. 그러나 호환되지 않는 파일 형식에도 불구하고 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]은 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 작동합니다.
 
- [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 클래스 라이브러리를 사용하려면 Windows 스토어 앱 프로젝트에 이 라이브러리에 대한 참조를 추가합니다. Visual Studio는 어셈블리의 리소스를 .resw 파일에 투명하게 추출하여 [!INCLUDE[wrt](../../../includes/wrt-md.md)]에서 리소스를 추출할 수 있는 PRI 파일을 생성하는 데 이 파일을 사용합니다. 런타임에 [!INCLUDE[wrt](../../../includes/wrt-md.md)]는 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]에서 코드를 실행하지만 PRI 파일에서 이식 가능한 클래스 라이브러리의 리소스를 검색합니다.
+ [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 클래스 라이브러리를 사용하려면 Windows 스토어 앱 프로젝트에 이 라이브러리에 대한 참조를 추가합니다. Visual Studio.resw 파일로 어셈블리에서 리소스를 추출 하 고 Windows 런타임 리소스를 추출할 수 있는 PRI 파일을 생성 하는 데 사용할 투명 하 게 됩니다. 런타임에 Windows 런타임에서 실행의 코드에 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], PRI 파일에서 이식 가능한 클래스 라이브러리의 리소스를 검색 하지만 합니다.
 
- [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 프로젝트에 지역화된 리소스가 포함된 경우 허브 및 스포크 모델을 사용하여 데스크톱 응용 프로그램에서 라이브러리에 대해 수행하는 것처럼 배포합니다. [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 주 리소스 파일과 지역화된 모든 리소스 파일을 사용하도록 주 어셈블리에 대한 참조를 추가합니다. 컴파일 타임에 Visual Studio는 주 리소스 파일 및 지역화된 리소스 파일에서 리소스를 추출하여 별도의 .resw 파일에 넣습니다. 그런 다음 런타임에 [!INCLUDE[wrt](../../../includes/wrt-md.md)]가 액세스하는 단일 PRI 파일로 .resw 파일을 컴파일합니다.
+ [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 프로젝트에 지역화된 리소스가 포함된 경우 허브 및 스포크 모델을 사용하여 데스크톱 응용 프로그램에서 라이브러리에 대해 수행하는 것처럼 배포합니다. [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 주 리소스 파일과 지역화된 모든 리소스 파일을 사용하도록 주 어셈블리에 대한 참조를 추가합니다. 컴파일 타임에 Visual Studio는 주 리소스 파일 및 지역화된 리소스 파일에서 리소스를 추출하여 별도의 .resw 파일에 넣습니다. 그런 다음 실행 시 Windows 런타임에서 액세스 하는 단일 PRI 파일로.resw 파일을 컴파일합니다.
 
 <a name="NonLoc"></a>
 ## <a name="example-non-localized-includenetportableincludesnet-portable-mdmd"></a>예제: 지역화 되지 않은 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]

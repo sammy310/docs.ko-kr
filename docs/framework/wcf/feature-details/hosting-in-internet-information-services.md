@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: d881a75e95bc3c3eef1df651b380210ff51ea3ce
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 8563662a4408d0425e92b960301311ce5d423f9d
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877512"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025744"
 ---
 # <a name="hosting-in-internet-information-services"></a>인터넷 정보 서비스에서의 호스팅
 Windows Communication Foundation (WCF) 서비스를 호스트 하는 한 가지 옵션은 인터넷 정보 서비스 (IIS) 응용 프로그램 내에서. 이 호스팅 모델은 ASP.NET 및 ASP.NET 웹 서비스 (ASMX) 웹 서비스에서 사용 하는 모델과 비슷합니다.  
@@ -34,7 +34,7 @@ Windows Communication Foundation (WCF) 서비스를 호스트 하는 한 가지 
   
 - ASP.NET과 같은 ASP.NET에서 호스팅되는 WCF 서비스 활용 ASP.NET 공유 호스팅 모델을 여러 응용 프로그램 향상 된 서버 밀도 및 확장성에 대 한 공통 작업자 프로세스에 상주 합니다.  
   
-- IIS에서 호스팅되는 WCF 서비스와 동일한 동적 컴파일 모델을 사용 하 여 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]개발을 간소화 하는, 및 호스 티 드 서비스를 배포 합니다.  
+- IIS에서 호스팅되는 WCF 서비스 호스팅된 서비스의 개발 및 배포를 간소화 하는 ASP.NET 2.0으로 동일한 동적 컴파일 모델을 사용 합니다.  
   
  IIS에서 WCF 서비스 호스트를 결정할 때 고려해 야는 IIS 5.1 및 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] HTTP 통신 으로만 제한 됩니다. 호스팅 환경 선택 하는 방법에 대 한 자세한 내용은 참조 하세요. [호스팅 서비스](../../../../docs/framework/wcf/hosting-services.md)합니다.  
   

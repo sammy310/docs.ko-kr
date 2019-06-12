@@ -2,17 +2,17 @@
 title: ASP.NET 웹 서비스와의 상호 운용성
 ms.date: 03/30/2017
 ms.assetid: 622422f8-6651-442f-b8be-e654a4aabcac
-ms.openlocfilehash: c1b027eda315a76778e772235dc5f66e03c9d83e
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: f2f1a8fd2bf34ff61784f2dcb88c0669585da573
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875543"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026023"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>ASP.NET 웹 서비스와의 상호 운용성
 Windows Communication Foundation (WCF) 웹 서비스와 ASP.NET 웹 서비스 간의 상호 운용성 두 기술을 사용 하 여 구현 된 서비스는 WS에 따르는지 확인 하 여 수행할 수 있습니다-Basic Profile 1.1 사양입니다. WS 따르는 ASP.NET 웹 서비스-는 WCF 시스템 제공 바인딩을 사용 하 여 WCF 클라이언트와 상호 운용 가능한 Basic Profile 1.1 <xref:System.ServiceModel.BasicHttpBinding>합니다.  
   
- 다음 예제 코드에 표시된 것처럼 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] 및 <xref:System.Web.Services.WebService> 특성을 클래스가 아니라 인터페이스에 추가하고 클래스를 기록하는 <xref:System.Web.Services.WebMethodAttribute> 옵션을 사용하여 인터페이스를 구현합니다.  
+ 추가 하는 ASP.NET 2.0 옵션을 사용 합니다 <xref:System.Web.Services.WebService> 및 <xref:System.Web.Services.WebMethodAttribute> 아닌 클래스 및 인터페이스를 구현 하려면 클래스를 작성 하 여 다음 샘플 코드와 같이 인터페이스에 특성입니다.  
   
 ```  
 [WebService]  

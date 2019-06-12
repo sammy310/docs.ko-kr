@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73a08e83d67c973294938a030b95b906aec6be6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7e2685d17f3dd32db295f926fc19121d29e1752
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962606"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025918"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypes-method"></a>ICorDebugAppDomain3::GetCachedWinRTTypes 메서드
-모든 캐시에 대 한 열거자를 가져옵니다 [!INCLUDE[wrt](../../../../includes/wrt-md.md)] 형식입니다.  
+캐시 된 모든 Windows 런타임 형식에 대 한 열거자를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,10 +37,10 @@ HRESULT GetCachedWinRTTypes (
   
 ## <a name="parameters"></a>매개 변수  
  `ppGuidToTypeEnum`  
- [out] 에 대 한 포인터를 [ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md) 의 관리 되는 표현을 열거할 수 있는 인터페이스 개체 [!INCLUDE[wrt](../../../../includes/wrt-md.md)] 현재 응용 프로그램 도메인에 로드 된 형식입니다.  
+ [out] 에 대 한 포인터를 [ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md) 응용 프로그램 도메인에서 현재 관리 되는 Windows 런타임 형식 표현을 열거할 수 있는 인터페이스 개체를 로드 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]  
+ **플랫폼:** Windows 런타임  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   

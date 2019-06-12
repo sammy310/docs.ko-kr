@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36e6313ae7b4c67a20bee6d2a76a4ed1da84acbe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e1da347fd85e1b3856615faf49c60b607cc7f0da
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61749815"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025833"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacetypes-method"></a>ICorDebugComObjectValue::GetCachedInterfaceTypes 메서드
 현재 개체 캐스팅 되거나 사용 된 인터페이스 형식에 대 한 열거자를 제공 합니다.  
@@ -35,7 +35,7 @@ HRESULT GetCachedInterfaceTypes(
   
 ## <a name="parameters"></a>매개 변수  
  `bIInspectableOnly`  
- [in] 메서드가 반환 하는지 여부를 나타내는 값 [!INCLUDE[wrt](../../../../includes/wrt-md.md)] 인터페이스 (`IInspectable` 인터페이스) 또는 런타임 호출 가능 래퍼 (RCW)에 의해 캐시 되는 모든 COM 인터페이스입니다.  
+ [in] 메서드를 Windows 런타임 인터페이스를 반환 하는지 여부를 나타내는 값 (`IInspectable` 인터페이스) 또는 런타임 호출 가능 래퍼 (RCW)에 의해 캐시 되는 모든 COM 인터페이스입니다.  
   
  `ppInterfacesEnum`  
  [out] 캐시 된 인터페이스 형식을 나타내는 ICorDebugType 개체에 대 한 액세스를 제공 하는 ICorDebugTypeEnum 열거자의 주소에 대 한 포인터에 따라 필터링 `bIInspectableOnly`합니다.  

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-ms.openlocfilehash: ecde6ca8d3a95e356c5b1389ba95c4ad72b68d45
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5c2332b7371ec4ac7b5cfc0681466536d49bb7be
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623900"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026066"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next 문(Visual Basic)
 컬렉션의 각 요소에 대 한 문 그룹을 반복합니다.  
@@ -49,7 +49,7 @@ Next [ element ]
 |용어|정의|  
 |---|---|  
 |`element`|에 필요한는 `For Each` 문입니다. 선택 사항는 `Next` 문입니다. 변수입니다. 컬렉션의 요소를 반복 하는 데 사용 합니다.|  
-|`datatype`|필요한 경우 `element` 이미 선언 되지 않습니다. 데이터 형식의 `element`합니다.|  
+|`datatype`|선택적 [ `Option Infer` ](option-infer-statement.md) (기본 설정) 또는 `element` 선언 이미은 필요한 경우 `Option Infer` 꺼져 및 `element` 이미 선언 되지 않습니다. `element`의 데이터 형식입니다.|  
 |`group`|필수 요소. 컬렉션 형식 또는 개체 형식으로 사용 되는 변수입니다. 컬렉션을 의미 합니다 `statements` 반복 됩니다.|  
 |`statements`|선택 사항입니다. 간에 하나 이상의 문으로 `For Each` 하 고 `Next` 각 항목에 대해 실행 되는 `group`합니다.|  
 |`Continue For`|선택 사항입니다. 컨트롤의 시작 부분으로 전송 된 `For Each` 루프입니다.|  
@@ -113,8 +113,8 @@ Next [ element ]
  경우는 `For Each`...`Next` 한 번만 루프가 시작 되기 전에 컬렉션을 평가 하는 Visual Basic 문을 실행 합니다. 문 블록이 변경 되 면 `element` 또는 `group`, 이러한 변경 내용을 반복 루프의 영향을 주지 않습니다.  
   
  때 컬렉션의 모든 요소가 연속적에 할당 된 `element`는 `For Each` 루프가 종료 되 고 다음 문으로 전달 제어를 `Next` 문입니다.  
-  
- 하는 경우 `element` 선언 해야이 루프 외부 선언 되지 않은에 `For Each` 문. 형식을 선언할 수 있습니다 `element` 를 사용 하 여 명시적으로 `As` 문 또는 있습니다 형식을 할당 하는 형식 유추에 사용할 수 있습니다. 두 경우 모두 범위의 `element` 루프의 본문입니다. 그러나 선언할 수 없습니다 `element` 외부와 루프입니다.  
+ 
+하는 경우 [Option Infer](option-infer-statement.md) 됩니다 (기본 설정)에서 Visual Basic 컴파일러의 데이터 형식을 유추할 수 `element`입니다. 해제 되어 있으면 및 `element` 선언 해야 합니다를 루프 바깥쪽 선언 되지 않은에 `For Each` 문입니다. 데이터 형식을 선언 하 `element` 명시적으로 사용 하 여는 `As` 절. 외부 데이터 형식의 요소를 정의 하지 않으면는 `For Each`... `Next` 범위 구문을 루프의 본문입니다. 선언할 수 없습니다는 `element` 외부와 루프입니다.
   
  선택적으로 지정할 수 있습니다 `element` 에 `Next` 문입니다. 중첩 된 경우에 특히 프로그램의 가독성을 향상 시킵니다이 `For Each` 루프입니다. 해당 표시 되는 것과 동일한 변수를 지정 해야 합니다 `For Each` 문입니다.  
   
@@ -124,7 +124,7 @@ Next [ element ]
   
  코드를 특정 순서로 컬렉션을 순회에 종속 된 경우는 `For Each`... `Next` 루프에 적합 하지 않을, 열거자 개체의 특징을 알 수 없는 컬렉션을 노출 합니다. 트래버스 순서에서 하지만 Visual Basic에서 결정 되지 않습니다는 <xref:System.Collections.IEnumerator.MoveNext%2A> 열거자 개체의 메서드. 반환할 첫 번째 컬렉션의 요소를 예측할 수 없습니다 따라서 `element`, 다음에 지정 된 요소 반환 되는 또는 합니다. 와 같은 다른 루프 구조를 사용 하 여 더 안정적인 결과 얻을 수 있습니다 `For`... `Next` 또는 `Do`... `Loop`.  
   
- 데이터 형식이 `element` 요소의 데이터 형식이 되도록 해야 `group` 변환할 수 있습니다.  
+런타임에서의 요소를 변환할 수 있어야 합니다 `group` 에 `element`입니다. [`Option Strict`] 문은 클래스는 확대 및 축소 변환을 허용 되는지 여부를 제어 (`Option Strict` 은 기본값 off), 확장 변환만 허용 하는지 여부 또는 (`Option Strict` 에). 자세한 내용은 [축소 변환](#narrowing-conversions)합니다.
   
  데이터 형식은 `group` 컬렉션 또는 열거할 수 있는 배열을 참조 하는 참조 형식 이어야 합니다. 즉 가장 일반적으로 `group` 구현 하는 개체를 참조 하는 <xref:System.Collections.IEnumerable> 의 인터페이스는 `System.Collections` 네임 스페이스 또는 <xref:System.Collections.Generic.IEnumerable%601> 의 인터페이스는 `System.Collections.Generic` 네임 스페이스입니다. `System.Collections.IEnumerable` 정의 된 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 컬렉션에 대 한 열거자 개체를 반환 하는 메서드. 열거자 개체를 구현 하는 `System.Collections.IEnumerator` 의 인터페이스를 `System.Collections` 네임 스페이스 노출 합니다 <xref:System.Collections.IEnumerator.Current%2A> 속성 및 <xref:System.Collections.IEnumerator.Reset%2A> 및 <xref:System.Collections.IEnumerator.MoveNext%2A> 메서드. Visual Basic을 사용 하 여 컬렉션을 순회를 이러한.  
   

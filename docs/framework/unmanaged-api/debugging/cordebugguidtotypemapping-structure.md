@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9dc7093edaf12e801a1e1adc52b0be823ff92b91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 38e1b19d6340f559e6f8b7e0f7bc042a10df16c3
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651798"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025994"
 ---
 # <a name="cordebugguidtotypemapping-structure"></a>CorDebugGuidToTypeMapping 구조체
-Maps는 [!INCLUDE[wrt](../../../../includes/wrt-md.md)] 해당 ICorDebugType 개체 GUID입니다.  
+Windows 런타임 GUID 해당 ICorDebugType 개체에 매핑됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,11 +41,11 @@ typedef struct CorDebugGuidToTypeMapping {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`iid`|캐시 된 GUID [!INCLUDE[wrt](../../../../includes/wrt-md.md)] 형식입니다.|  
+|`iid`|캐시 된 Windows 런타임 형식의 GUID입니다.|  
 |`pType`|캐시 된 유형에 대 한 정보를 제공 하는 ICorDebugType 개체에 대 한 포인터입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]합니다.  
+ **플랫폼:** Windows 런타임입니다.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   

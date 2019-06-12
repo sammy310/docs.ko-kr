@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eca4b66a3f7c1a96bb06827dde477f34cb904ba3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 43bfec471fbcfc481e178f6610e0318e9538ee34
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906245"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025777"
 ---
 # <a name="corassemblyflags-enumeration"></a>CorAssemblyFlags 열거형
 어셈블리 컴파일에 적용되는 메타데이터를 설명하는 값을 포함합니다.  
@@ -76,7 +76,7 @@ typedef enum CorAssemblyFlags {
 |`afRetargetable`|어셈블리 다른 게시자의 어셈블리를 런타임 시 대상이 될 수 있는지를 나타냅니다.|  
 |`afContentType_Mask`|콘텐츠 형식을 설명 하는 마스크입니다.|  
 |`afContentType_Default`|기본 콘텐츠 유형을 나타냅니다.|  
-|`afContentType_WindowsRuntime`|나타냅니다는 [!INCLUDE[wrt](../../../../includes/wrt-md.md)] 콘텐츠 형식입니다.|  
+|`afContentType_WindowsRuntime`|Windows 런타임 콘텐츠 유형을 나타냅니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

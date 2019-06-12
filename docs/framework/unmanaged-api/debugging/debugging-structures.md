@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 173ba2c2-ab34-49ae-b6a8-e5c49882bf05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f50db519410b9513725c3dc10637421ba8bb37ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 45a4b5c2a65ae7e4c01ffc3977875e598d076557
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698362"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025935"
 ---
 # <a name="debugging-structures"></a>디버깅 구조체
 
@@ -60,7 +60,7 @@ ms.locfileid: "61698362"
 
  [CorDebugExceptionObjectStackFrame 구조체](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) 스택 예외 개체에서 프레임 정보를 나타냅니다.
 
- [CorDebugGuidToTypeMapping 구조체](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) 지도 [!INCLUDE[wrt](../../../../includes/wrt-md.md)] 해당 하는 GUID [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md) 개체입니다.
+ [CorDebugGuidToTypeMapping 구조체](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) 해당 Windows 런타임 GUID 매핑합니다 [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md) 개체입니다.
 
  [DacpGetModuleAddress 구조](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-structure.md) 모듈 주소 요청에 대 한 컨테이너를 정의 합니다.
 
