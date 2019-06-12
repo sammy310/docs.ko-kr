@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 10ed899f1eda3b7fcaa95391b9af6dddb5c94560
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b46404ee791855301611c1d883f26514b9b9d2f
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949229"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833794"
 ---
 # <a name="reliability-best-practices"></a>최선의 안정성 구현 방법
 
@@ -265,7 +265,7 @@ COM STA(단일 스레드 아파트)를 사용하는 코드를 식별합니다.  
 
 ### <a name="avoid-unmanaged-memory-if-possible"></a>가능하면 관리되지 않는 메모리를 사용하지 않음
 
-운영 체제 핸들과 마찬가지로 관리되지 않는 메모리는 누출될 수 있습니다.  가능하면 [stackalloc](~/docs/csharp/language-reference/keywords/stackalloc.md)를 사용하는 스택의 메모리, 고정된 관리 개체(예: [fixed 문](~/docs/csharp/language-reference/keywords/fixed-statement.md)) 또는 byte[]를 사용하는 <xref:System.Runtime.InteropServices.GCHandle>를 사용합니다.  결국 <xref:System.GC>에서 정리합니다.  그러나 관리되지 않는 메모리를 할당해야 하는 경우 <xref:System.Runtime.InteropServices.SafeHandle>에서 파생되는 클래스를 사용하여 메모리 할당을 래핑합니다.
+운영 체제 핸들과 마찬가지로 관리되지 않는 메모리는 누출될 수 있습니다. 가능하면 [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md)를 사용하는 스택의 메모리, 고정된 관리 개체(예: [fixed 문](~/docs/csharp/language-reference/keywords/fixed-statement.md)) 또는 byte[]를 사용하는 <xref:System.Runtime.InteropServices.GCHandle>를 사용합니다. 결국 <xref:System.GC>에서 정리합니다. 그러나 관리되지 않는 메모리를 할당해야 하는 경우 <xref:System.Runtime.InteropServices.SafeHandle>에서 파생되는 클래스를 사용하여 메모리 할당을 래핑합니다.
 
 <xref:System.Runtime.InteropServices.SafeHandle>이 적합하지 않은 경우가 하나 이상 있습니다.  메모리를 할당하거나 해제하는 COM 메서드 호출의 경우 한 DLL에서 `CoTaskMemAlloc`를 통해 메모리를 할당한 다음 다른 DLL에서 `CoTaskMemFree`로 메모리를 해제하는 것이 일반적입니다.  이러한 위치에서 <xref:System.Runtime.InteropServices.SafeHandle>을 사용하면 다른 DLL에서 메모리의 수명을 제어하도록 허용하지 않고 관리되지 않는 메모리의 수명을 <xref:System.Runtime.InteropServices.SafeHandle>의 수명과 연결하려고 하므로 적합하지 않습니다.
 

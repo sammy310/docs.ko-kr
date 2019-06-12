@@ -9,18 +9,18 @@ helpviewer_keywords:
 - pipeline processing
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 76a5c32660c8a08ef34c40f8f4ee9430e5ead5c8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0ada6003cd6d1cd19036c42a3d0d976e18568f3a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644288"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833967"
 ---
 # <a name="memory--and-span-related-types"></a>메모리 및 범위 관련 형식
 
 .NET Core 2.1부터 .NET에는 임의 메모리의 인접한 강력한 형식의 영역을 나타내는 여러 개의 상호 연결된 형식이 포함되어 있습니다. 여기에는 다음이 포함됩니다.
 
-- <xref:System.Span%601?displayProperty=nameWithType> - 메모리의 인접한 영역에 액세스하는 데 사용되는 형식입니다. <xref:System.Span%601> 인스턴스는 `T` 형식 배열, <xref:System.String>, [stackalloc](~/docs/csharp/language-reference/keywords/stackalloc.md)로 할당된 버퍼 또는 관리되지 않는 메모리에 대한 포인터를 통해 지원할 수 있습니다. 스택에 할당되어야 하므로 여러 가지 제한 사항이 있습니다. 예를 들어 클래스의 필드는 <xref:System.Span%601> 형식일 수 없으며, 비동기 작업에 범위를 사용할 수도 없습니다.
+- <xref:System.Span%601?displayProperty=nameWithType> - 메모리의 인접한 영역에 액세스하는 데 사용되는 형식입니다. <xref:System.Span%601> 인스턴스는 `T` 형식 배열, <xref:System.String>, [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md)로 할당된 버퍼 또는 관리되지 않는 메모리에 대한 포인터를 통해 지원할 수 있습니다. 스택에 할당되어야 하므로 여러 가지 제한 사항이 있습니다. 예를 들어 클래스의 필드는 <xref:System.Span%601> 형식일 수 없으며, 비동기 작업에 범위를 사용할 수도 없습니다.
 
 - <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> - 변경할 수 없는 <xref:System.Span%601> 구조체 버전입니다.
 

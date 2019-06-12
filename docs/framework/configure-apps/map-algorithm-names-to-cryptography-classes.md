@@ -7,15 +7,15 @@ helpviewer_keywords:
 - cryptographic algorithms
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-ms.openlocfilehash: 9e4154923b2bb0abfe48e7a530497c3d5bf28d91
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c76f80273d37f838ca52efd3b8f8c028b76a4d30
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583739"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832679"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>알고리즘 이름을 암호화 클래스에 매핑
-네 가지 방법으로 개발자는 암호화 하 여 개체를 만들 수는 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:  
+네 가지 방법으로 개발자는 Windows 소프트웨어 개발 키트 (SDK)를 사용 하는 암호화 개체를 만들 수 있습니다.  
   
 - 사용 하 여 개체를 만들 합니다 **새** 연산자입니다.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "64583739"
 ## <a name="mapping-algorithm-names-in-configuration-files"></a>구성 파일에서 알고리즘 이름 매핑  
  기본적으로 런타임에 반환을 <xref:System.Security.Cryptography.SHA1CryptoServiceProvider> 모든 네 가지 시나리오에 대 한 개체입니다. 그러나 컴퓨터 관리자 마지막 두 시나리오의 메서드가 반환 하는 개체의 형식을 변경할 수 있습니다. 이 위해 컴퓨터 구성 파일 (Machine.config)에서 사용 하려면 클래스에 알고리즘 이름을 매핑해야 합니다.  
   
- 다음 예제에서는 런타임을 구성 하는 방법을 보여 줍니다 있도록 **System.Security.Cryptography.SHA1.Create**하십시오 **System.Security.CryptoConfig.CreateFromName("SHA1")**, 및  **System.Security.Cryptography.HashAlgorithm.Create** 반환을 `MySHA1HashClass` 개체입니다.  
+ 다음 예제에서는 런타임을 구성 하는 방법을 보여 줍니다 있도록 **System.Security.Cryptography.SHA1.Create**하십시오 **System.Security.CryptoConfig.CreateFromName("SHA1")** , 및  **System.Security.Cryptography.HashAlgorithm.Create** 반환을 `MySHA1HashClass` 개체입니다.  
   
 ```xml  
 <configuration>  

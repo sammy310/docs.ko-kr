@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: f0486e9faf70e7d5d147cfef996edcdaa8846963
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 629eb482768e4ed2b3d70ee3d27157b502eeb72b
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456298"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832716"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<응용 프로그램 풀 > 요소 (웹 설정)
 ASP.NET에서 ASP.NET 응용 프로그램 통합된 모드에서 실행 중인 경우 프로세스 전반 동작을 관리 하는 데 사용 되는 구성 설정을 지정 [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 이상 버전.  
@@ -70,7 +70,7 @@ ASP.NET에서 ASP.NET 응용 프로그램 통합된 모드에서 실행 중인 �
   
 - [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 통합된 모드에서 실행 됩니다.  
   
-- 응용 프로그램을 사용 하는 [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] 이상 버전.  
+- 응용 프로그램은.NET Framework 3.5 SP1 또는 최신 버전 사용 합니다.  
   
  예제에서 값은 기본값입니다.  
   

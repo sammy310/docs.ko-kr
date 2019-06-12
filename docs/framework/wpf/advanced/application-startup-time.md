@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: b3dcd46f1158814b836c7491cf1ed3ac468122ad
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 321aad14d17d6ef6fe0b7c112f8f694dd1c767d6
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689334"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832694"
 ---
 # <a name="application-startup-time"></a>애플리케이션 시작 시간
 WPF 애플리케이션을 시작하는 데 필요한 시간은 크게 다를 수 있습니다. 이 항목에서는 WPF(Windows Presentation Foundation) 애플리케이션의 체감 시작 시간과 실제 시작 시간을 줄일 수 있는 다양한 기술에 대해 설명합니다.  
@@ -24,7 +24,7 @@ WPF 애플리케이션을 시작하는 데 필요한 시간은 크게 다를 수
  웜 시작은 주 CLR(공용 언어 런타임) 구성 요소의 페이지 대부분이 메모리에 이미 로드되어 있을 때 발생하며, 이 경우 비용이 많이 드는 디스크 액세스 시간을 줄일 수 있습니다. 이에 따라 관리되는 애플리케이션을 다시 실행할 때 더 빠르게 시작됩니다.  
   
 ## <a name="implement-a-splash-screen"></a>시작 화면 구현  
- 애플리케이션을 시작한 후 첫 번째 UI가 표시될 때까지 어쩔 수 없이 상당히 지연될 경우 *시작 화면*을 사용하여 체감 시작 시간을 최적화합니다. 이 방법을 사용하면 사용자가 애플리케이션을 시작한 직후에 이미지가 표시됩니다. 애플리케이션에서 첫 번째 UI를 표시할 준비가 되면 시작 화면이 사라집니다. 부터 합니다 [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]를 사용할 수는 <xref:System.Windows.SplashScreen> 시작 화면을 구현 하는 클래스입니다. 자세한 내용은 [WPF 애플리케이션에 시작 화면 추가](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)를 참조하세요.  
+ 애플리케이션을 시작한 후 첫 번째 UI가 표시될 때까지 어쩔 수 없이 상당히 지연될 경우 *시작 화면*을 사용하여 체감 시작 시간을 최적화합니다. 이 방법을 사용하면 사용자가 애플리케이션을 시작한 직후에 이미지가 표시됩니다. 애플리케이션에서 첫 번째 UI를 표시할 준비가 되면 시작 화면이 사라집니다. .NET Framework 3.5 SP1부터 사용할 수는 <xref:System.Windows.SplashScreen> 시작 화면을 구현 하는 클래스입니다. 자세한 내용은 [WPF 애플리케이션에 시작 화면 추가](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)를 참조하세요.  
   
  네이티브 Win32 그래픽을 사용하여 사용자 고유의 시작 화면을 구현할 수도 있습니다. 구현 하기 전에 표시 된 <xref:System.Windows.Application.Run%2A> 메서드가 호출 됩니다.  
   

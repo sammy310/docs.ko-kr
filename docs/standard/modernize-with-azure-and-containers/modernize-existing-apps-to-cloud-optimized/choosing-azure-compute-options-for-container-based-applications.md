@@ -2,12 +2,12 @@
 title: 컨테이너 기반 응용 프로그램용 Azure 계산 플랫폼 선택
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 컨테이너 기반 응용 프로그램용 Azure 계산 플랫폼 선택
 ms.date: 05/04/2018
-ms.openlocfilehash: d91cd279402dc24beb5f766c06cb85ac8d74f482
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 64ae542e006bf7a5d7a0be08fe1cff9770552a77
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758817"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833852"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>컨테이너 기반 응용 프로그램용 Azure 계산 플랫폼 선택
 
@@ -17,8 +17,7 @@ ms.locfileid: "66758817"
 
 - **단일 모놀리식 앱:** Azure App Service를 선택합니다.
 - **N 계층 앱:** 단일 또는 몇 백 엔드 서비스에 있는 경우 App Service 또는 Azure Kubernetes Service (AKS) 같은 오 케 스트레이 터를 선택 합니다.
-- **Linux 마이크로 서비스:** AKS/Kubernetes를 선택합니다.
-- **Windows 마이크로 서비스:** 컨테이너용 Azure Web Apps 선택
+- **마이크로 서비스:** AKS, Azure Web Apps for Containers 선택
 - **서버리스 functions 및 이벤트 처리기:** Azure 함수를 선택합니다
 - **대규모 일괄 처리:** Azure Batch를 선택합니다.
 

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: c4629b18a207f1146f97327088fabf5f85a31892
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c36de23a6a49e684330fc0f47fc46bd86c55e767
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623324"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834078"
 ---
 # <a name="application-management-overview"></a>애플리케이션 관리 개요
 모든 애플리케이션은 애플리케이션 구현 및 관리에 적용하는 일반적인 기능 집합을 공유하는 경향이 있습니다. 이 항목에서는의 기능 개요를 제공 합니다 <xref:System.Windows.Application> 만들고 응용 프로그램을 관리 하기 위한 클래스입니다.  
@@ -127,7 +127,7 @@ ms.locfileid: "64623324"
 
 <a name="Splash_Screen"></a>   
 ### <a name="splash-screen"></a>시작 화면  
- 시작 합니다 [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], 시작 창에서 사용할 이미지를 지정할 수 있습니다 또는 *시작 화면*합니다. <xref:System.Windows.SplashScreen> 클래스를 사용 하면 쉽게 응용 프로그램을 로드 하는 동안 시작 창을 표시할 수 있습니다. 합니다 <xref:System.Windows.SplashScreen> 창을 만들고 앞에서 나온 <xref:System.Windows.Application.Run%2A> 라고 합니다. 자세한 내용은 [응용 프로그램 시작 시간](../advanced/application-startup-time.md) 하 고 [WPF 응용 프로그램 시작 화면에 추가](how-to-add-a-splash-screen-to-a-wpf-application.md)합니다.  
+ .NET Framework 3.5 SP1부터, 시작 창에서 사용할 이미지를 지정할 수 또는 *시작 화면*합니다. <xref:System.Windows.SplashScreen> 클래스를 사용 하면 쉽게 응용 프로그램을 로드 하는 동안 시작 창을 표시할 수 있습니다. 합니다 <xref:System.Windows.SplashScreen> 창을 만들고 앞에서 나온 <xref:System.Windows.Application.Run%2A> 라고 합니다. 자세한 내용은 [응용 프로그램 시작 시간](../advanced/application-startup-time.md) 하 고 [WPF 응용 프로그램 시작 화면에 추가](how-to-add-a-splash-screen-to-a-wpf-application.md)합니다.  
   
 <a name="Starting_an_Application"></a>   
 ### <a name="starting-an-application"></a>애플리케이션 시작  

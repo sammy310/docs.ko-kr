@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: c1f891314a2490d6dbf22977ea5a5f69533b330d
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: c6b83779a630c6d797968d79635793e229751f93
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300318"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833266"
 ---
 # <a name="c-operators"></a>C# 연산자
 
@@ -67,7 +67,7 @@ C#은 기본 제공 형식에서 지원되는 미리 정의된 여러 연산자�
 
 [sizeof](../keywords/sizeof.md) – 형식 피연산자의 크기(바이트)를 반환합니다.
 
-[stackalloc](../keywords/stackalloc.md) - 스택의 메모리 블록을 할당합니다.
+[stackalloc](stackalloc.md) - 스택의 메모리 블록을 할당합니다.
 
 [->](pointer-related-operators.md#pointer-member-access-operator--) – 멤버 액세스와 결합된 포인터 간접 참조입니다.
 

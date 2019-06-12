@@ -2,12 +2,12 @@
 title: F# 코드 서식 지정 지침
 description: 서식 지정에 대 한 지침을 알아보려면 F# 코드입니다.
 ms.date: 02/08/2019
-ms.openlocfilehash: bfec950395312eac7e837abf8694a4381d5ca82f
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 8be5337d3f593c7e5a2f32cb7231cb7f759fb509
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816175"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833900"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# 코드 서식 지정 지침
 
@@ -290,12 +290,13 @@ x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 
 ### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>제네릭에 대 한 접두사 구문을 사용 하 여 (`Foo<T>`) 후 위 구문 보다 우선적으로 (`T Foo`)
 
-F#제네릭 형식 명명 모두는 후 위 ML 스타일 상속 (예를 들어 `int list`) 접두사.NET 스타일 뿐만 아니라 (예를 들어 `list<int>`). 네 개의 특정 형식 제외 하 고.NET 스타일을 선호 합니다.
+F#제네릭 형식 명명 모두는 후 위 ML 스타일 상속 (예를 들어 `int list`) 접두사.NET 스타일 뿐만 아니라 (예를 들어 `list<int>`). 5 특정 형식 제외 하 고.NET 스타일을 선호 합니다.
 
 1. 에 대 한 F# 목록, 후 위 형식 사용: `int list` 대신 `list<int>`합니다.
 2. 에 대 한 F# 옵션을 사용 후 위 형식: `int option` 대신 `option<int>`합니다.
-3. 에 대 한 F# 배열 구문 이름을 사용 하 여 `int[]` 대신 `int array` 하거나 `array<int>`합니다.
-4. 참조 셀에 대 한 사용 `int ref` 대신 `ref<int>` 또는 `Ref<int>`합니다.
+3. 에 대 한 F# 값 옵션을 사용 후 위 형식: `int voption` 대신 `voption<int>`합니다.
+4. 에 대 한 F# 배열 구문 이름을 사용 하 여 `int[]` 대신 `int array` 하거나 `array<int>`합니다.
+5. 참조 셀에 대 한 사용 `int ref` 대신 `ref<int>` 또는 `Ref<int>`합니다.
 
 다른 모든 형식에 대 한 접두사 형식을 사용 합니다.
 

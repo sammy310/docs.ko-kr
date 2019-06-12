@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: d536d141d1ac7126c5a3339f75ba374d3e071806
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 286ec3c67e296eb49776e0f2882954c75c53eed8
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591401"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833982"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 브라우저 애플리케이션 개요
 <a name="introduction"></a>
@@ -182,7 +182,7 @@ ms.locfileid: "64591401"
 ## <a name="xbap-start-time-performance-considerations"></a>XBAP 시작 시간 성능 고려 사항  
  XBAP 성능에서 중요한 측면은 시작 시간입니다. XBAP가 로드할 첫 번째 WPF 애플리케이션인 경우 *콜드 부팅* 시간은 10초 이상일 수 있습니다. 이는 진행률 페이지가 WPF에 의해 렌더링되고 애플리케이션을 표시하기 위해 CLR 및 WPF가 모두 콜드 부팅되어야 하기 때문입니다.  
   
- [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]부터는 배포 주기 초기에 관리되지 않는 진행률 페이지가 표시되므로 XBAP 콜드 부팅 시간이 완화됩니다. 진행률 페이지는 원시 호스팅 코드에 의해 표시되고 HTML로 렌더링되기 때문에 거의 애플리케이션이 시작된 직후에 표시됩니다.  
+ .NET Framework 3.5 SP1 부터는 배포 주기 초기에 관리 되지 않는 진행률 페이지를 표시 하 여 XBAP 콜드 부팅 시간이 완화 됩니다. 진행률 페이지는 원시 호스팅 코드에 의해 표시되고 HTML로 렌더링되기 때문에 거의 애플리케이션이 시작된 직후에 표시됩니다.  
   
  또한 ClickOnce 다운로드 시퀀스의 동시성을 향상 된 시작 시간이 10%까지 향상 됩니다. ClickOnce 다운로드 하 고 유효성을 검사 한 후 매니페스트, 응용 프로그램 다운로드가 시작 되 고 진행률 표시줄을 업데이트 하기 시작 합니다.  
   

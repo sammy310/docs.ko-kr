@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: 25883b7be10c68e527e4e04182b7162574b994d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 198d7f616d843a3c90b8d32cf33096ee253d2935
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61880050"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832731"
 ---
 # <a name="generating-strongly-typed-datasets"></a>강력한 형식의 데이터 세트 생성
-XSD(XML 스키마 정의 언어) 표준과 호환되는 XML 스키마가 있으면 <xref:System.Data.DataSet>에 제공된 XSD.exe 도구를 사용하여 강력한 형식의 [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)]을 생성할 수 있습니다.  
+표준 XML 스키마 정의 언어 (XSD)를 준수 하는 XML 스키마에 지정 된을 생성할 수 있습니다 강력한 형식의 <xref:System.Data.DataSet> Windows 소프트웨어 개발 키트 (SDK)으로 제공 되는 XSD.exe 도구를 사용 하 여 합니다.  
   
  (데이터베이스 테이블에서 xsd를 만들려면, 참조 <xref:System.Data.DataSet.WriteXmlSchema%2A> 나 [Visual Studio에서 데이터 집합 작업](/visualstudio/data-tools/dataset-tools-in-visual-studio)).  
   

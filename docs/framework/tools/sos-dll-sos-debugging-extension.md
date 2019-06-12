@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ddd075de6152d7f040d69682dde0361843971922
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0821b4a680db4822cea1787edb095309e6333cbf
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631838"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690159"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll(SOS 디버깅 확장)
 
@@ -68,11 +68,11 @@ SOS 디버깅 확장명(SOS.dll)을 사용하면 내부 CLR(공용 언어 런타
 |**HeapStat** [ **-inclUnrooted** &#124; **-iu**]|각 힙의 생성 크기와 각 힙의 각 세대에 있는 총 여유 공간을 표시합니다. -**inclUnrooted** 옵션을 지정하면 더 이상 루트가 아닌 가비지 수집 힙의 관리되는 개체에 대한 정보가 보고서에 포함됩니다.|
 |**HistClear**|`Hist` 명령의 패밀리에서 사용하는 모든 리소스를 해제합니다.<br /><br /> 일반적으로 각 `HistClear`가 이전 리소스를 정리하기 때문에 `HistInit`를 명시적으로 호출할 필요가 없습니다.|
 |**HistInit**|디버기에 저장된 스트레스 로그에서 SOS 구조를 초기화합니다.|
-|**HistObj** *<obj_address>*|모든 스트레스 로그 재배치 레코드를 검사하여 인수로 전달된 주소로 연결될 수 있는 가비지 수집 재배치의 체인을 표시합니다.|
-|**HistObjFind**  *<obj_address>*|지정된 주소의 개체를 참조하는 모든 로그 항목을 표시합니다.|
+|**HistObj** *\<obj_address>*|모든 스트레스 로그 재배치 레코드를 검사하여 인수로 전달된 주소로 연결될 수 있는 가비지 수집 재배치의 체인을 표시합니다.|
+|**HistObjFind**  *\<obj_address>*|지정된 주소의 개체를 참조하는 모든 로그 항목을 표시합니다.|
 |**HistRoot** *\<root>*|지정된 루트의 승격 및 재배치와 관련된 정보를 표시합니다.<br /><br /> 루트 값은 가비지 컬렉션을 통해 개체의 움직임을 추적하는 데 사용할 수 있습니다.|
 |**IP2MD** \<*Code address*>|JIT 컴파일된 코드의 지정된 주소에 있는 `MethodDesc` 구조체를 표시합니다.|
-|`ListNearObj` (`lno`) *<obj_address>*|지정된 주소 앞에 오거나 뒤에 오는 개체를 표시합니다. 명령은 관리되는 개체(유효한 메서드 테이블을 기준으로 함)와 인수 주소 다음에 있는 개체의 유효한 시작처럼 보이는 가비지 수집 힙에서 주소를 찾습니다.|
+|`ListNearObj` (`lno`) *\<obj_address>*|지정된 주소 앞에 오거나 뒤에 오는 개체를 표시합니다. 명령은 관리되는 개체(유효한 메서드 테이블을 기준으로 함)와 인수 주소 다음에 있는 개체의 유효한 시작처럼 보이는 가비지 수집 힙에서 주소를 찾습니다.|
 |**MinidumpMode** [**0**] [**1**]|미니덤프를 사용할 때 안전하지 않은 명령이 실행되지 않도록 합니다.<br /><br /> 이 기능을 해제하려면 **0**을 전달하고, 설정하려면 **1**을 전달합니다. 기본적으로 **MinidumpMode** 값은 **0**으로 설정됩니다.<br /><br /> **.dump /m** 명령 또는 **.dump** 명령으로 만들어진 미니덤프에는 제한된 CLR 관련 데이터가 있으며, 이 미니덤프를 사용하면 SOS 명령의 하위 집합만 올바르게 실행할 수 있습니다. 일부 명령은 필요한 메모리 영역이 매핑되지 않거나 부분적으로만 매핑되었기 때문에 예기치 않은 오류와 함께 실패할 수 있습니다. 이 옵션은 미니덤프에 대해 안전하지 않은 명령이 실행되지 않도록 합니다.|
 |**Name2EE** \<*module name*> \<*type or method name*><br /><br /> 또는<br /><br /> **Name2EE** \<*module name*> **!** \<*type or method name*>|지정된 모듈에 있는 지정된 형식 또는 메서드의 `MethodTable` 구조체와 `EEClass` 구조체를 표시합니다.<br /><br /> 지정된 모듈은 프로세스에 로드되어 있어야 합니다.<br /><br /> 올바른 형식 이름을 가져오려면 [Ildasm.exe(IL 디스어셈블러)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)를 사용하여 모듈을 찾아봅니다. `*`를 module name 매개 변수로 전달하여 로드된 모든 관리되는 모듈을 검색할 수도 있습니다. *module name* 매개 변수는 모듈의 디버거 이름(예: `mscorlib` 또는 `image00400000`)일 수도 있습니다.<br /><br /> 이 명령은 <`module`>`!`<`type`>의 Windows 디버거 구문을 지원합니다. 해당 형식은 정규화된 형식이어야 합니다.|
 |**ObjSize** [\<*Object address*>] &#124; [ **-aggregate**] [ **-stat**]|지정된 개체의 크기를 표시합니다. 매개 변수를 지정하지 않으면 **ObjSize** 명령은 관리되는 스레드에 있는 모든 개체의 크기를 표시하고, 프로세스의 모든 가비지 수집기 핸들 및 이러한 핸들이 가리키는 모든 개체의 총 크기를 표시합니다. **ObjSize** 명령은 부모 개체뿐만 아니라 모든 자식 개체의 크기도 포함합니다.<br /><br /> **-aggregate** 옵션은 **-stat** 인수와 함께 사용하여 여전히 루트인 형식의 자세한 보기를 얻을 수 있습니다. **!dumpheap -stat** 및 **!objsize -aggregate -stat**를 사용하면 더 이상 루트가 아닌 개체를 확인하고 다양한 메모리 문제를 진단할 수 있습니다.|
