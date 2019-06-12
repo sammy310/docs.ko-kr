@@ -2,34 +2,33 @@
 title: '방법: 리플렉션 (LINQ) (Visual Basic)를 사용 하 여 어셈블리의 메타 데이터 쿼리'
 ms.date: 07/20/2015
 ms.assetid: 53caa336-ab83-4181-b0f6-5c87c5f9e4ee
-ms.openlocfilehash: cea1469e6f0acc9c958be9247d7d3d750d881afe
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: fd9fa5fcbd1f02cec4e96511fa8c4e60d77ce965
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586357"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026063"
 ---
-# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-visual-basic"></a><span data-ttu-id="873a1-102">방법: 리플렉션 (LINQ) (Visual Basic)를 사용 하 여 어셈블리의 메타 데이터 쿼리</span><span class="sxs-lookup"><span data-stu-id="873a1-102">How to: Query An Assembly's Metadata with Reflection (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="873a1-103">다음 예제에서는 리플렉션과 함께 LINQ를 사용하여 지정된 검색 조건과 일치하는 메서드에 대한 특정 메타데이터를 검색하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="873a1-103">The following example shows how LINQ can be used with reflection to retrieve specific metadata about methods that match a specified search criterion.</span></span> <span data-ttu-id="873a1-104">이 경우 쿼리는 배열과 같은 열거 가능한 형식을 반환하는 모든 메서드의 이름을 어셈블리에서 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="873a1-104">In this case, the query will find the names of all the methods in the assembly that return enumerable types such as arrays.</span></span>  
+# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-visual-basic"></a><span data-ttu-id="a32b0-102">방법: 리플렉션 (LINQ) (Visual Basic)를 사용 하 여 어셈블리의 메타 데이터 쿼리</span><span class="sxs-lookup"><span data-stu-id="a32b0-102">How to: Query An Assembly's Metadata with Reflection (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="a32b0-103">다음 예제에서는 리플렉션과 함께 LINQ를 사용하여 지정된 검색 조건과 일치하는 메서드에 대한 특정 메타데이터를 검색하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a32b0-103">The following example shows how LINQ can be used with reflection to retrieve specific metadata about methods that match a specified search criterion.</span></span> <span data-ttu-id="a32b0-104">이 경우 쿼리는 배열과 같은 열거 가능한 형식을 반환하는 모든 메서드의 이름을 어셈블리에서 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="a32b0-104">In this case, the query will find the names of all the methods in the assembly that return enumerable types such as arrays.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="873a1-105">예제</span><span class="sxs-lookup"><span data-stu-id="873a1-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="a32b0-105">예제</span><span class="sxs-lookup"><span data-stu-id="a32b0-105">Example</span></span>  
   
-```vb  
+```vb
+Imports System.Linq
 Imports System.Reflection  
-Imports System.IO  
-Imports System.Linq  
+
 Module Module1  
-  
     Sub Main()  
-        Dim asmbly As Assembly =   
+        Dim asmbly As Assembly =
             Assembly.Load("System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken= b77a5c561934e089")  
   
-        Dim pubTypesQuery = From type In asmbly.GetTypes()   
-                            Where type.IsPublic   
-                            From method In type.GetMethods()   
-                            Where method.ReturnType.IsArray = True   
-                            Let name = method.ToString()   
-                            Let typeName = type.ToString()   
+        Dim pubTypesQuery = From type In asmbly.GetTypes()
+                            Where type.IsPublic
+                            From method In type.GetMethods()
+                            Where method.ReturnType.IsArray = True
+                            Let name = method.ToString()
+                            Let typeName = type.ToString()
                             Group name By typeName Into methodNames = Group  
   
         Console.WriteLine("Getting ready to iterate")  
@@ -40,17 +39,14 @@ Module Module1
                 Console.WriteLine(" " & type)  
             Next  
         Next  
+        Console.WriteLine("Press any key to exit... ")  
         Console.ReadKey()  
     End Sub  
-  
 End Module  
 ```  
   
- <span data-ttu-id="873a1-106">이 예제에서는 <xref:System.Reflection.Assembly.GetTypes%2A> 메서드를 사용하여 지정된 어셈블리의 형식 배열을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="873a1-106">The example uses the <xref:System.Reflection.Assembly.GetTypes%2A> method to return an array of types in the specified assembly.</span></span> <span data-ttu-id="873a1-107">합니다 [Where 절](../../../../visual-basic/language-reference/queries/where-clause.md) public 형식만 반환 되도록 필터가 적용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="873a1-107">The [Where Clause](../../../../visual-basic/language-reference/queries/where-clause.md) filter is applied so that only public types are returned.</span></span> <span data-ttu-id="873a1-108">각 public 형식에 대해 <xref:System.Type.GetMethods%2A> 호출에서 반환된 <xref:System.Reflection.MethodInfo> 배열을 사용하여 하위 쿼리가 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="873a1-108">For each public type, a subquery is generated by using the <xref:System.Reflection.MethodInfo> array that is returned from the <xref:System.Type.GetMethods%2A> call.</span></span> <span data-ttu-id="873a1-109">이러한 결과는 해당 반환 형식이 배열이거나 <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 형식인 메서드만 반환하도록 필터링됩니다.</span><span class="sxs-lookup"><span data-stu-id="873a1-109">These results are filtered to return only those methods whose return type is an array or else a type that implements <xref:System.Collections.Generic.IEnumerable%601>.</span></span> <span data-ttu-id="873a1-110">마지막으로, 이러한 결과는 형식 이름을 키로 사용하여 그룹화됩니다.</span><span class="sxs-lookup"><span data-stu-id="873a1-110">Finally, these results are grouped by using the type name as a key.</span></span>  
+<span data-ttu-id="a32b0-106">이 예제에서는 <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> 메서드를 사용하여 지정된 어셈블리의 형식 배열을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="a32b0-106">The example uses the <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> method to return an array of types in the specified assembly.</span></span> <span data-ttu-id="a32b0-107">합니다 [Where 절](../../../../visual-basic/language-reference/queries/where-clause.md) public 형식만 반환 되도록 필터가 적용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a32b0-107">The [Where Clause](../../../../visual-basic/language-reference/queries/where-clause.md) filter is applied so that only public types are returned.</span></span> <span data-ttu-id="a32b0-108">각 public 형식에 대해 <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> 호출에서 반환된 <xref:System.Reflection.MethodInfo> 배열을 사용하여 하위 쿼리가 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="a32b0-108">For each public type, a subquery is generated by using the <xref:System.Reflection.MethodInfo> array that is returned from the <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> call.</span></span> <span data-ttu-id="a32b0-109">이러한 결과는 해당 반환 형식이 배열이거나 <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 형식인 메서드만 반환하도록 필터링됩니다.</span><span class="sxs-lookup"><span data-stu-id="a32b0-109">These results are filtered to return only those methods whose return type is an array or else a type that implements <xref:System.Collections.Generic.IEnumerable%601>.</span></span> <span data-ttu-id="a32b0-110">마지막으로, 이러한 결과는 형식 이름을 키로 사용하여 그룹화됩니다.</span><span class="sxs-lookup"><span data-stu-id="a32b0-110">Finally, these results are grouped by using the type name as a key.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="873a1-111">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="873a1-111">Compiling the Code</span></span>  
-<span data-ttu-id="873a1-112">VB.NET 콘솔 응용 프로그램 프로젝트를 만듭니다는 `Imports` System.Linq 네임 스페이스에 대 한 문입니다.</span><span class="sxs-lookup"><span data-stu-id="873a1-112">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
-  
-## <a name="see-also"></a><span data-ttu-id="873a1-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="873a1-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a32b0-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="a32b0-111">See also</span></span>
 
-- [<span data-ttu-id="873a1-114">LINQ to Objects(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="873a1-114">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [<span data-ttu-id="a32b0-112">LINQ to Objects(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a32b0-112">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
