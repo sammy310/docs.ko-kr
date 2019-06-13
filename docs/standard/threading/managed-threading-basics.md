@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7241dfb7e31ed2f83bf7af0ecc6bf0d97363b999
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: a47946ab8eb26045e641c44642bfe7a026269f3d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960363"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486333"
 ---
 # <a name="managed-threading-basics"></a>관리형 스레딩 기본 사항
 
@@ -24,7 +24,7 @@ ms.locfileid: "65960363"
  이 섹션의 나머지 항목에서는 Windows 운영 체제와 관리되는 스레딩의 상호 작용을 비롯한 고급 주제를 다룹니다.  
   
 > [!NOTE]
->  [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]에서 작업 병렬 라이브러리 및 PLINQ는 다중 스레드 프로그램에서 작업 및 데이터 병렬 처리를 위한 API를 제공합니다. 자세한 내용은 [병렬 프로그래밍](../../../docs/standard/parallel-programming/index.md)을 참조하세요.  
+>  에서 작업 병렬 라이브러리 및 PLINQ는 다중 스레드 프로그램에서 작업 및 데이터 병렬 처리를 위한 API를 제공합니다. 자세한 내용은 [병렬 프로그래밍](../../../docs/standard/parallel-programming/index.md)을 참조하세요.  
   
 ## <a name="in-this-section"></a>단원 내용
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 681a9e71dcfb139c364d750383f13cdabbf33366
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7beb22c68450d7ae4aeb6d0bcae45fafdfe78191
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644902"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490909"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>스레드 로컬 스토리지: 스레드 상대 정적 필드 및 데이터 슬롯
 관리되는 TLS(스레드 로컬 저장소)를 사용하여 스레드 및 애플리케이션 도메인에 고유한 데이터를 저장할 수 있습니다. .NET Framework는 관리되는 TLS를 사용하는 두 가지 방법인 스레드 관련 정적 필드 및 데이터 슬롯을 제공합니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "64644902"
   
  관리되지 않는 C++에서 `TlsAlloc`를 사용하여 슬롯을 동적으로 할당하고 `__declspec(thread)`를 사용하여 변수가 스레드 관련 스토리지에서 할당되어야 함을 선언합니다. 스레드 관련 정적 필드 및 데이터 슬롯은 이 동작의 관리되는 버전을 제공합니다.  
   
- [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]에서 <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 클래스를 사용하여 개체가 처음 사용될 때 초기화가 지연되는 스레드 로컬 개체를 만들 수 있습니다. 자세한 내용은 [초기화 지연](../../../docs/framework/performance/lazy-initialization.md)을 참조하세요.  
+ <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>에서  클래스를 사용하여 개체가 처음 사용될 때 초기화가 지연되는 스레드 로컬 개체를 만들 수 있습니다. 자세한 내용은 [초기화 지연](../../../docs/framework/performance/lazy-initialization.md)을 참조하세요.  
   
 ## <a name="uniqueness-of-data-in-managed-tls"></a>관리되는 TLS의 데이터 고유성  
  스레드 관련 정적 필드 또는 데이터 슬롯을 사용할지 여부에 관계없이 관리되는 TLS의 데이터는 스레드 및 애플리케이션 도메인의 조합에 고유합니다.  

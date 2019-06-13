@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2a0e8d95595d663585639c47be34262f7452e94
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: ccb1d78f939d2faf90013392fc60d5597bc3922e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457415"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489683"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe(코드 액세스 보안 정책 도구)
 CAS(코드 액세스 보안 정책 도구)(Caspol.exe)를 사용하면 사용자나 관리자가 컴퓨터 정책 수준, 사용자 정책 수준 및 엔터프라이즈 정책 수준의 보안 정책을 수정할 수 있습니다.  
   
 > [!IMPORTANT]
->  [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터는 Caspol.exe가 CAS 정책에 영향을 주려면 [\<legacyCasPolicy> 요소](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)를 `true`로 설정해야 합니다. CasPol.exe에 의해 표시 또는 수정되는 모든 설정은 CAS 정책을 사용하도록 선택하는 애플리케이션에만 영향을 줍니다. 자세한 내용은 [보안 변경 내용](../../../docs/framework/security/security-changes.md)을 참조하세요.  
+>  [부터는 Caspol.exe가 CAS 정책에 영향을 주려면 \<](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)legacyCasPolicy> 요소`true`를 로 설정해야 합니다. CasPol.exe에 의해 표시 또는 수정되는 모든 설정은 CAS 정책을 사용하도록 선택하는 애플리케이션에만 영향을 줍니다. 자세한 내용은 [보안 변경 내용](../../../docs/framework/security/security-changes.md)을 참조하세요.  
   
 > [!NOTE]
 >  64비트 컴퓨터에 64비트 및 32비트 버전의 보안 정책이 포함됩니다. 정책 변경 내용을 32비트와 64비트 애플리케이션에 적용하도록 하려면, Caspol.exe의 32비트와 64비트 버전을 모두 실행해야 합니다.  

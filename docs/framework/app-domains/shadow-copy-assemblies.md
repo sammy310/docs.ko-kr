@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51bf359ea6ba4e5b45827928a50a095a7960a68f
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 5bbf579540ccb93101dba05c5b2577ae8f24ec09
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456710"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486515"
 ---
 # <a name="shadow-copying-assemblies"></a>어셈블리 섀도 복사
 섀도 복사를 사용하면 애플리케이션 도메인을 언로드하지 않고 애플리케이션 도메인에서 사용되는 어셈블리를 업데이트할 수 있습니다. 특히 이 기능은 ASP.NET 사이트와 같이 지속적으로 제공되어야 하는 애플리케이션에 유용합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "66456710"
   
 - [섀도 복사 설정 및 사용](#EnablingAndUsing)에서는 섀도 복사에 대해 사용할 수 있는 기본 사용 및 옵션에 대해 설명합니다.  
   
-- [시작 성능](#StartupPerformance)에서는 시작 성능을 개선하려고 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]에서 섀도 복사에 적용된 변경 내용과 이전 버전의 동작으로 되돌리는 방법을 설명합니다.  
+- [시작 성능](#StartupPerformance)에서는 시작 성능을 개선하려고 에서 섀도 복사에 적용된 변경 내용과 이전 버전의 동작으로 되돌리는 방법을 설명합니다.  
   
 - [사용되지 않는 메서드](#ObsoleteMethods)에서는 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]에서 섀도 복사를 제어하는 속성 및 메서드의 변경 내용을 설명합니다.  
   

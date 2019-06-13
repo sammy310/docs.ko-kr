@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 58317c26f87034991c817d0d7221d810657ca332
-ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
+ms.openlocfilehash: ae3039df2c1260211f4c7ec3e813db1d0c6cd42b
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66003720"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815928"
 ---
 # <a name="-operator-c-reference"></a>?: 연산자(C# 참조)
 
@@ -52,7 +52,7 @@ a ? b : (c ? d : e)
 
 다음 예제에서는 조건부 연산자의 사용법을 보여 줍니다.
 
-[!code-csharp[non ref conditional](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalValue)]
+[!code-csharp-interactive[non ref conditional](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalValue)]
 
 ## <a name="conditional-ref-expression"></a>조건부 ref 식
 
@@ -70,7 +70,7 @@ condition ? ref consequent : ref alternative
 
 다음 예제에서는 조건부 ref 식의 사용법을 보여 줍니다.
 
-[!code-csharp[conditional ref](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalRef)]
+[!code-csharp-interactive[conditional ref](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalRef)]
 
 자세한 내용은 [기능 제안 노트](../../../../_csharplang/proposals/csharp-7.2/conditional-ref.md)를 참조하세요.
 
@@ -78,7 +78,7 @@ condition ? ref consequent : ref alternative
 
 [if-else](../keywords/if-else.md) 문보다 조건부 연산자를 사용하면 조건부로 값을 계산해야 하는 경우 코드가 보다 간결해질 수 있습니다. 다음 예제에서는 정수를 음수 또는 음수가 아닌 값으로 분류하는 두 가지 방법을 보여 줍니다.
 
-[!code-csharp[conditional and if-else](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#CompareWithIf)]
+[!code-csharp[conditional and if-else](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#CompareWithIf)]
 
 ## <a name="operator-overloadability"></a>연산자 오버로드 가능성
 
@@ -86,7 +86,7 @@ condition ? ref consequent : ref alternative
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](../language-specification/index.md)의 [조건부 연산자](~/_csharplang/spec/expressions.md#conditional-operator) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [조건부 연산자](~/_csharplang/spec/expressions.md#conditional-operator) 섹션을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 
@@ -95,5 +95,5 @@ condition ? ref consequent : ref alternative
 - [C# 연산자](index.md)
 - [if-else 문](../keywords/if-else.md)
 - [?. 및 ?[] 연산자](member-access-operators.md#null-conditional-operators--and-)
-- [?? 연산자](null-coalescing-operator.md)
+- [?? operator](null-coalescing-operator.md)
 - [ref 키워드](../keywords/ref.md)

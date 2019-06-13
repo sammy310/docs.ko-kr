@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ed4533c934120c3400ddba68e65bc82aabc9370
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 350cc91a2d423bc40cc44466e679db769daac1d8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456778"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486980"
 ---
 # <a name="resolving-assembly-loads"></a>어셈블리 로드 해결
 .NET Framework에서는 어셈블리 로드를 보다 효율적으로 제어해야 하는 애플리케이션에 대해 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 이벤트를 제공합니다. 이 이벤트를 처리하면 애플리케이션이 정상적인 검색 경로 외부에서 로드 컨텍스트에 어셈블리를 로드하고, 여러 어셈블리 버전 중에서 로드할 버전을 선택하고, 동적 어셈블리를 내보내 반환하는 작업 등을 수행할 수 있습니다. 이 항목에서는 <xref:System.AppDomain.AssemblyResolve> 이벤트 처리 지침을 제공합니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "66456778"
 > [!NOTE]
 >  처리기는 어셈블리를 로드 소스 컨텍스트에 로드하거나, 로드 컨텍스트에 로드하거나, 컨텍스트 없이 로드해야 합니다. 처리기가 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> 또는 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> 메서드를 사용하여 어셈블리를 리플렉션 전용 컨텍스트에 로드하는 경우 <xref:System.AppDomain.AssemblyResolve> 이벤트를 발생시킨 로드 시도가 실패합니다.  
   
- 적합한 어셈블리를 반환하는 것은 이벤트 처리기의 책임입니다. 처리기는 <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> 속성 값을 <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29> 생성자에 전달하여 요청된 어셈블리의 표시 이름을 구문 분석할 수 있습니다. [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터 처리기는 <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> 속성을 사용하여 현재 요청이 다른 어셈블리의 종속성인지 여부를 확인합니다. 이 정보는 종속성을 충족하는 어셈블리를 식별하는 데 도움이 됩니다.  
+ 적합한 어셈블리를 반환하는 것은 이벤트 처리기의 책임입니다. 처리기는 <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> 속성 값을 <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29> 생성자에 전달하여 요청된 어셈블리의 표시 이름을 구문 분석할 수 있습니다. <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType>부터 처리기는  속성을 사용하여 현재 요청이 다른 어셈블리의 종속성인지 여부를 확인합니다. 이 정보는 종속성을 충족하는 어셈블리를 식별하는 데 도움이 됩니다.  
   
  이벤트 처리기는 요청된 버전과 다른 어셈블리 버전을 반환할 수 있습니다.  
   

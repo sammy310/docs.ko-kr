@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e836329527740d490bc3ad96cd62d56bc0b7b3e
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 0d5798b8067bde8b711982bfe4f78d66fe1521c6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377745"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490840"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>작업 기반 비동기 패턴 사용
 
@@ -64,7 +64,7 @@ await someTask.ConfigureAwait(continueOnCapturedContext:false);
 ```
 
 ## <a name="canceling-an-asynchronous-operation"></a>비동기 작업 취소
- [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터는 취소를 지원하는 TAP 메서드가 취소 토큰(<xref:System.Threading.CancellationToken> 개체)을 수락하는 오버로드를 하나 이상 제공합니다.
+ <xref:System.Threading.CancellationToken>부터는 취소를 지원하는 TAP 메서드가 취소 토큰( 개체)을 수락하는 오버로드를 하나 이상 제공합니다.
 
  취소 토큰은 취소 토큰 소스(<xref:System.Threading.CancellationTokenSource> 개체)를 통해 생성됩니다.  소스의 <xref:System.Threading.CancellationTokenSource.Token%2A> 속성은 소스의 <xref:System.Threading.CancellationTokenSource.Cancel%2A> 메서드가 호출될 때 신호를 받을 취소 토큰을 반환합니다.  예를 들어 단일 웹 페이지를 다운로드하려고 하며 작업을 취소할 수 있게 하려는 경우 <xref:System.Threading.CancellationTokenSource> 개체를 만들고, 해당 토큰을 TAP 메서드에 전달한 후 작업을 취소할 준비가 되면 소스의 <xref:System.Threading.CancellationTokenSource.Cancel%2A> 메서드를 호출합니다.
 

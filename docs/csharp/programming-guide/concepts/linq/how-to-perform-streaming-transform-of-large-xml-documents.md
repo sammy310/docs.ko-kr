@@ -2,12 +2,12 @@
 title: '방법: 큰 XML 문서의 변환 스트리밍 수행(C#)'
 ms.date: 07/20/2015
 ms.assetid: 5f16d1f8-5370-4b55-b0c8-e497df163037
-ms.openlocfilehash: 8ddd7e25cf160526b741db5769a78682970c3724
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 033665d14938bc3970b83eddccc159f89e6451d1
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524678"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486633"
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>방법: 큰 XML 문서의 변환 스트리밍 수행(C#)
 큰 XML 파일을 변환하고 애플리케이션의 메모리 사용 공간이 예상 가능하도록 애플리케이션을 작성해야 하는 경우가 있습니다. XML 트리를 매우 큰 XML 파일로 채우려는 경우 메모리 사용은 파일 크기에 비례하므로 지나치게 증가하게 됩니다. 따라서 스트리밍 기법을 대신 사용해야 합니다.  
@@ -322,6 +322,3 @@ static void Main(string[] args)
 </Root>  
 ```  
   
-## <a name="see-also"></a>참고 항목
-
-- [고급 LINQ to XML 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

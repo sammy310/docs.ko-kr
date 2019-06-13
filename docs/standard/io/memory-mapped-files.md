@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bd1ced48847739318f22ec77b17a83a36fd36ee0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c796a93f7ea5ad4664f35788b766117c712b9766
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647764"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487059"
 ---
 # <a name="memory-mapped-files"></a>메모리 매핑된 파일
-메모리 매핑된 파일에는 가상 메모리에 있는 파일의 내용이 포함됩니다. 파일과 메모리 공간 사이의 매핑을 사용하면 여러 프로세스를 포함한 애플리케이션이 메모리에 직접 읽고 쓰는 방식으로 파일을 수정할 수 있습니다. [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터는 네이티브 Windows 함수가 메모리 매핑된 파일에 액세스할 때와 같은 방식으로 관리 코드를 사용하여 메모리 매핑된 파일에 액세스할 수 있습니다. 이에 대해서는 [메모리 매핑된 파일 관리](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10))에 설명되어 있습니다.  
+메모리 매핑된 파일에는 가상 메모리에 있는 파일의 내용이 포함됩니다. 파일과 메모리 공간 사이의 매핑을 사용하면 여러 프로세스를 포함한 애플리케이션이 메모리에 직접 읽고 쓰는 방식으로 파일을 수정할 수 있습니다. [부터는 네이티브 Windows 함수가 메모리 매핑된 파일에 액세스할 때와 같은 방식으로 관리 코드를 사용하여 메모리 매핑된 파일에 액세스할 수 있습니다. 이에 대해서는 ](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10))메모리 매핑된 파일 관리에 설명되어 있습니다.  
   
  메모리 매핑된 파일에는 다음과 같은 두 가지 형식이 있습니다.  
   

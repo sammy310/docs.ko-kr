@@ -2,12 +2,12 @@
 title: 모놀리식 애플리케이션 컨테이너화
 description: 모놀리식 애플리케이션을 컨테이너화하는 것은 마이크로 서비스 아키텍처에서 모든 이점을 가져올 수 없지만, 즉시 제공할 수 있는 중요한 배포 이점을 가지고 있습니다.
 ms.date: 09/20/2018
-ms.openlocfilehash: 061afe86e0d38f058becde2b3afdb45b4428517a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9e457fba56c8fdf946618fca10285f4c0a343af4
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640824"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690536"
 ---
 # <a name="containerizing-monolithic-applications"></a>모놀리식 애플리케이션 컨테이너화
 

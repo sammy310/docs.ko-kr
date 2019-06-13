@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf0244060d3c5dfa39c220fc2d699a5f2f1fef9e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4369ce9c9ce82ecdbf11d76f3b043778b8374d8b
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636208"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489763"
 ---
 # <a name="compiling-an-interop-project"></a>Interop 프로젝트 컴파일
 
@@ -24,7 +24,7 @@ ms.locfileid: "65636208"
 
  Interop 어셈블리를 참조하는 방법에는 다음 두 가지가 있습니다.
 
-- 포함 interop 형식: [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 및 Visual Studio 2010부터 interop 어셈블리의 형식 정보를 실행 파일에 포함하도록 컴파일러에 지시할 수 있습니다. 이것이 권장되는 방법입니다.
+- 포함 interop 형식:  및 Visual Studio 2010부터 interop 어셈블리의 형식 정보를 실행 파일에 포함하도록 컴파일러에 지시할 수 있습니다. 이것이 권장되는 방법입니다.
 
 - interop 어셈블리 배포: interop 어셈블리에 대한 표준 참조를 만들 수 있습니다. 이 경우 interop 어셈블리를 애플리케이션에 배포해야 합니다.
 

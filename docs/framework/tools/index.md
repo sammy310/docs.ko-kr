@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 81110736651db9fe00b116c3abbbdaa8d3670bee
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 995aeca60d462c96f951411aff9fcb2c772169d1
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456104"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489657"
 ---
 # <a name="net-framework-tools"></a>.NET Framework 도구
 .NET Framework 도구를 사용하면 .NET Framework를 대상으로 하는 애플리케이션 및 구성 요소를 보다 쉽게 만들고 배포하고 관리할 수 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "66456104"
  ActiveX 컨트롤용 COM 형식 라이브러리의 형식 정의를 Windows Forms 컨트롤로 변환합니다.  
   
  [Caspol.exe(코드 액세스 보안 정책 도구)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
- 컴퓨터 정책 수준, 사용자 정책 수준 및 엔터프라이즈 정책 수준의 보안 정책을 보고 구성할 수 있도록 합니다. [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 이상 버전에서 [\<legacyCasPolicy> 요소](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)를 `true`로 설정하지 않으면 이 도구는 CAS(코드 액세스 보안) 정책에 영향을 주지 않습니다. 자세한 내용은 [보안 변경 내용](../../../docs/framework/security/security-changes.md)을 참조하세요.  
+ 컴퓨터 정책 수준, 사용자 정책 수준 및 엔터프라이즈 정책 수준의 보안 정책을 보고 구성할 수 있도록 합니다. .NET Framework 4 이상 버전에서는이 도구 영향을 주지 않습니다 코드 액세스 보안 (CA) 정책 경우가 아니면 합니다 [ \<legacyCasPolicy > 요소](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) 로 설정 된 `true`합니다. 자세한 내용은 [보안 변경 내용](../../../docs/framework/security/security-changes.md)을 참조하세요.  
   
  [Cert2spc.exe(SPC 테스트 도구)](../../../docs/framework/tools/cert2spc-exe-software-publisher-certificate-test-tool.md)  
  하나 이상의 X.509 인증서에서 SPC(소프트웨어 게시 인증서)를 만듭니다. 이 도구는 테스트 전용입니다.  

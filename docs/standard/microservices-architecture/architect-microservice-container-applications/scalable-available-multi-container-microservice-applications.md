@@ -2,12 +2,12 @@
 title: 높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 description: Kubernetes 애플리케이션 수명 주기를 개발하는 동안 높은 확장성과 가용성 및 Azure Dev Spaces의 가능성을 위해 마이크로 서비스 및 다중 컨테이너 애플리케이션을 오케스트레이션하는 옵션을 검색합니다.
 ms.date: 09/20/2018
-ms.openlocfilehash: 27155736c6b5308d4794b17e5f5bd0b93109b5c1
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 76fa68cee41f8d1f34ec399c346f457efae57151
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196031"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815845"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 
@@ -27,7 +27,7 @@ ms.locfileid: "66196031"
 
 아키텍처 및 개발 관점에서 마이크로 서비스 기반 애플리케이션으로 구성된 대규모 엔터프라이즈를 구축하는 경우 고급 시나리오를 지원하는 다음 플랫폼과 제품을 이해해야 합니다.
 
-**클러스터 및 오케스트레이터.** 대규모 마이크로 서비스 기반 애플리케이션과 같이 많은 Docker 호스트에서 애플리케이션을 확장해야 하는 경우, 기본 플랫폼의 복잡성을 추상화하여 모든 호스트를 단일 클러스터로 관리할 수 있어야 합니다. 이는 컨테이너 클러스터 및 오케스트레이터에서 제공하는 것입니다. 오케스트레이터의 예로는 Azure Service Fabric 및 Kubernetes가 있습니다. Kubernetes는 Azure Kubernetes Service를 통해 Azure에서 제공됩니다.
+**클러스터 및 오케스트레이터.** 대규모 마이크로 서비스 기반 애플리케이션과 같이 많은 Docker 호스트에서 애플리케이션을 확장해야 하는 경우, 기본 플랫폼의 복잡성을 추상화하여 모든 호스트를 단일 클러스터로 관리할 수 있어야 합니다. 이는 컨테이너 클러스터 및 오케스트레이터에서 제공하는 것입니다. Kubernetes 오 케 스트레이 터의 예로 이며 Azure Kubernetes 서비스를 통해 Azure에서 사용할 수 있습니다.
 
 **스케줄러.** *예약*은 관리자가 클러스터에서 컨테이너를 시작하여 UI도 제공할 수 있는 기능을 의미합니다. 클러스터 스케줄러에는 클러스터 리소스를 효율적으로 사용하고, 사용자가 제공하는 제약 조건을 설정하며, 노드 또는 호스트 간에 컨테이너를 효율적으로 부하 분산하고, 고가용성을 제공하면서 오류에 대해 강력한 기능을 제공하기 위한 여러 가지 역할이 있습니다.
 
@@ -51,31 +51,9 @@ ms.locfileid: "66196031"
 
 > [AKS(Azure Kubernetes Service)](https://azure.microsoft.com/services/kubernetes-service/)는 Kubernetes 클러스터의 관리, 배포 및 운영을 간소화하는 Azure에서 관리되는 Kubernetes 컨테이너 오케스트레이션 서비스입니다.
 
-### <a name="azure-service-fabric"></a>Azure Service Fabric
-
-![Azure Service Fabric 로고](./media/image27.png)
-
-> [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview)은 애플리케이션을 빌드하기 위한 Microsoft 마이크로 서비스 플랫폼입니다. 서비스의 [오케스트레이터](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction)이며, 머신의 클러스터를 만듭니다. Service Fabric은 서비스를 컨테이너 또는 일반 프로세스로 배포할 수 있습니다. 또한 동일한 애플리케이션 및 클러스터 내의 컨테이너에 있는 서비스와 프로세스에 있는 서비스를 혼합할 수도 있습니다.
->
-> *Service Fabric* 클러스터는 Azure, 온-프레미스 또는 모든 클라우드에 배포할 수 있습니다. 그러나 Azure에서의 배포는 관리 방식으로 간소화됩니다.
->
-> *Service Fabric*은 [상태 저장 서비스](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) 및[ Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction)와 같이 규범적 [Service Fabric 프로그래밍 모델](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework)(추가 및 선택 사양)을 제공합니다.
->
-> *Service Fabric*의 완성도는 Windows에서 높았지만(Windows에서 진화), Linux에서는 그렇지 못했습니다.
->
-> 2017년 이후 Service Fabric에서 Linux 및 Windows 컨테이너를 모두 지원합니다.
-
-### <a name="azure-service-fabric-mesh"></a>Azure Service Fabric Mesh
-
-![Azure Service Fabric Mesh 로고](./media/image35.png)
-
-> [*Azure Service Fabric Mesh*](https://docs.microsoft.com/azure/service-fabric-mesh/service-fabric-mesh-overview)는 Service Fabric과 동일한 안정성, 중요 업무용 성능 및 규모를 제공하지만 완전 관리형과 서버리스 플랫폼을 제공합니다. 클러스터, VM, 스토리지 또는 네트워킹 구성을 관리할 필요가 없습니다. 애플리케이션의 개발에만 주력할 수 있습니다.
->
-> *Service Fabric Mesh*는 Windows 및 Linux 컨테이너를 모두 지원하므로 원하는 프로그래밍 언어와 프레임워크를 사용하여 개발할 수 있습니다.
-
 ## <a name="using-container-based-orchestrators-in-microsoft-azure"></a>Microsoft Azure에서 컨테이너 기반 오케스트레이션 사용
 
-여러 클라우드 공급업체에서 Microsoft Azure, Amazon EC2 Container Service 및 Google Container Engine을 포함하여 Docker 컨테이너 지원 및 Docker 클러스터/오케스트레이션 지원을 제공합니다. Microsoft Azure는 AKS(Azure Kubernetes Service)와 Azure Service Fabric 및 Azure Service Fabric Mesh를 통해 Docker 클러스터 및 오케스트레이터 지원을 제공합니다.
+여러 클라우드 공급업체에서 Microsoft Azure, Amazon EC2 Container Service 및 Google Container Engine을 포함하여 Docker 컨테이너 지원 및 Docker 클러스터/오케스트레이션 지원을 제공합니다. Microsoft Azure Docker 클러스터 및 오 케 스트레이 터 지원을 통해 Azure Kubernetes Service (AKS)을 제공합니다.
 
 ## <a name="using-azure-kubernetes-service"></a>Azure Kubernetes Service 사용
 
@@ -156,4 +134,4 @@ Azure Dev Spaces는 팀 작업과 분리될 걱정 없이 상대적으로 격리
 
 >[!div class="step-by-step"]
 >[이전](resilient-high-availability-microservices.md)
->[다음](using-azure-service-fabric.md)
+>[다음](../docker-application-development-process/index.md)

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bf7424c8aa2ae816340f6fa641e5c79a56ae0dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3e67861a32d5863e4c1b4d9b147c507c1bb54c39
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834129"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491103"
 ---
 # <a name="standard-timespan-format-strings"></a>표준 TimeSpan 서식 문자열
 <a name="Top"></a> 표준 <xref:System.TimeSpan> 형식 문자열은 단일 형식 지정자를 사용하여 서식 지정 작업으로 생성되는 <xref:System.TimeSpan> 값의 텍스트 표현을 정의합니다. 공백을 포함하여 문자가 두 개 이상 포함된 형식 문자열은 사용자 지정 <xref:System.TimeSpan> 형식 문자열로 해석됩니다. 자세한 내용은 [사용자 지정 TimeSpan 서식 문자열](../../../docs/standard/base-types/custom-timespan-format-strings.md)을 참조하세요.  
@@ -64,7 +64,7 @@ ms.locfileid: "58834129"
 |*ss*|"0"부터 "59" 범위의 초입니다.|  
 |*fffffff*|선택적인 초의 소수 부분입니다.  값 범위는 "0000001"(틱 1개 또는 1천만 분의 1초)에서 "9999999"(9,999,999천만 분의 1초 또는 1초-틱 1개)까지입니다.|  
   
- "g" 및 "G" 형식 지정자와 달리 "c" 형식 지정자는 문화권을 구분하지 않으며, <xref:System.TimeSpan> 이전의 모든 이전 .NET Framework 버전에 공통적으로 적용되는 고정된 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 값의 문자열 표현을 생성합니다. “c”는 기본 <xref:System.TimeSpan> 형식 문자열입니다. 즉, <xref:System.TimeSpan.ToString?displayProperty=nameWithType> 메서드는 “c” 형식 문자열을 사용하여 시간 간격 값의 서식을 지정합니다.  
+ "g" 및 "G" 형식 지정자와 달리 "c" 형식 지정자는 문화권을 구분하지 않으며, .NET Framework 4 이전의 모든 .NET Framework 버전에 공통적으로 적용되는 고정된 <xref:System.TimeSpan>TimeSpan 값의 문자열 표현을 생성합니다. “c”는 기본 <xref:System.TimeSpan> 형식 문자열입니다. 즉, <xref:System.TimeSpan.ToString?displayProperty=nameWithType> 메서드는 “c” 형식 문자열을 사용하여 시간 간격 값의 서식을 지정합니다.  
   
 > [!NOTE]
 >  <xref:System.TimeSpan>은 "c" 표준 형식 문자열과 동작이 동일한 "t" 및 "T" 표준 형식 문자열도 지원합니다.  

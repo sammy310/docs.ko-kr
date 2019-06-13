@@ -17,8 +17,8 @@
       href: tutorials/predict-prices.md
     - name: 아이리스 꽃 분류(k-means 클러스터링)
       href: tutorials/iris-clustering.md
-    - name: 영화 추천기(행렬 인수 분해)
-      href: tutorials/movie-recommmendation.md
+    - name: 동영상을 (matrix factorization)는 것이 좋습니다.
+      href: tutorials/movie-recommendation.md
     - name: 이미지 분류(전이 학습)
       href: tutorials/image-classification.md
     - name: 제품 판매 분석(변칙 검색)

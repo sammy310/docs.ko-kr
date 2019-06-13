@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d2b8866d3a1922988518dfe2857c98d4725cc464
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 96841d23da342fdb4da6c7d53420d6c3319f75c6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664566"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491021"
 ---
 # <a name="sorted-collection-types"></a>Sorted 컬렉션 형식
 <xref:System.Collections.SortedList?displayProperty=nameWithType> 클래스, <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType> 제네릭 클래스 및 <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType> 제네릭 클래스는 <xref:System.Collections.Hashtable> 클래스 및 <xref:System.Collections.Generic.Dictionary%602> 제네릭 클래스와 유사합니다. 해당 항목은 여기서 <xref:System.Collections.IDictionary> 인터페이스를 구현하지만 키를 기준으로 한 정렬 순서로 해당 요소를 유지 관리하고 O(1) 삽입 및 해시 테이블의 검색 특성을 갖지 않습니다. 세 가지 클래스에는 공통적으로 다음과 같은 몇 가지 기능이 있습니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "64664566"
 > [!NOTE]
 >  고유한 키를 포함하는 값(예: 직원 ID 번호를 포함하는 직원 레코드)의 경우 <xref:System.Collections.ObjectModel.KeyedCollection%602> 제네릭 클래스에서 파생하여 목록의 일부 특성 및 사전의 일부 특성을 가진 키가 지정된 컬렉션을 만들 수 있습니다.  
   
- [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터 <xref:System.Collections.Generic.SortedSet%601> 클래스는 삽입, 삭제 및 검색 후에 정렬된 순서에 따라 데이터를 유지 관리하는 자체 균형 조정 트리를 제공합니다. 이 클래스와 <xref:System.Collections.Generic.HashSet%601> 클래스는 <xref:System.Collections.Generic.ISet%601> 인터페이스를 구현합니다.  
+ <xref:System.Collections.Generic.SortedSet%601>부터  클래스는 삽입, 삭제 및 검색 후에 정렬된 순서에 따라 데이터를 유지 관리하는 자체 균형 조정 트리를 제공합니다. 이 클래스와 <xref:System.Collections.Generic.HashSet%601> 클래스는 <xref:System.Collections.Generic.ISet%601> 인터페이스를 구현합니다.  
   
 ## <a name="see-also"></a>참고 항목
 

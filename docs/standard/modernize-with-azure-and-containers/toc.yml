@@ -24,8 +24,6 @@
           href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md
         - name: Windows Container Service에 Windows 컨테이너를 배포해야 하는 경우(ACI)
           href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-container-instances-ACI.md
-        - name: Service Fabric에 Windows 컨테이너를 배포해야 하는 경우
-          href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-service-fabric.md
         - name: Azure Container Service에 Windows 컨테이너를 배포해야 하는 경우(ACS-Kubernetes)
           href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md
         - name: 컨테이너 기반 애플리케이션의 Azure 컴퓨팅 플랫폼 선택

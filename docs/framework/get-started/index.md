@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4c9e85b2a884f6f348d801a27b7f362bd0236b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16e20214981bb5c0f96b26f34be99026aac19266
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644043"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690195"
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework 시작
 
@@ -53,7 +53,7 @@ Windows 운영 체제를 사용하는 경우 .NET Framework가 이미 컴퓨터�
 
 - 사용 중인 앱이 특정 .NET Framework 버전을 사용하는 경우 해당 버전을 제거하면 앱이 손상될 수 있습니다.
 
-- 일부 .NET Framework 버전은 이전 버전의 내부 업데이트입니다. 예를 들어 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]는 버전 2.0의 내부 업데이트이고 .NET Framework 4.8은 버전 4~4.7.2의 내부 업데이트입니다. 자세한 내용은 [.NET Framework 버전 및 종속성](../migration-guide/versions-and-dependencies.md)을 참조하십시오.
+- 일부 .NET Framework 버전은 이전 버전의 내부 업데이트입니다. 예를 들어,.NET Framework 3.5 버전 2.0에 대 한 전체 업데이트 이며.NET Framework 4.8 버전 4 ~ 4.7.2에 대 한 전체 업데이트 합니다. 자세한 내용은 [.NET Framework 버전 및 종속성](../migration-guide/versions-and-dependencies.md)을 참조하십시오.
 
 Windows 8 이전 버전에서 .NET Framework를 제거하려는 경우에는 항상 제어판의 **프로그램 및 기능**을 사용하여 제거합니다. .NET Framework 버전을 수동으로 제거해서는 안 됩니다. Windows 8 이상에서 .NET Framework는 운영 체제 구성 요소이며 독립적으로 제거할 수 없습니다.
 

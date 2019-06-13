@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 996ea7802473817594420a108470f7604170482e
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 23c1bf7412f18674e87896949e0b57ff8bd60d14
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456795"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489591"
 ---
 # <a name="garbage-collection-and-performance"></a>가비지 컬렉션 및 성능
 <a name="top"></a> 이 항목에서는 가비지 컬렉션 및 메모리 사용과 관련된 문제를 설명합니다. 관리되는 힙과 관련된 문제를 해결하고 애플리케이션에 미치는 가비지 컬렉션의 영향을 최소화하는 방법을 설명합니다. 각 문제에는 문제를 조사하는 데 사용할 수 있는 절차 링크가 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "66456795"
   
 <a name="etw"></a>   
 ### <a name="garbage-collection-etw-events"></a>가비지 컬렉션 ETW 이벤트  
- ETW(Windows용 이벤트 추적)는 .NET Framework에서 제공하는 프로파일링 및 디버깅 지원을 보완하는 추적 시스템입니다. [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터 [가비지 컬렉션 ETW 이벤트](../../../docs/framework/performance/garbage-collection-etw-events.md)는 통계 관점에서 관리되는 힙을 분석하는 데 유용한 정보를 캡처합니다. 예를 들어 가비지 수집이 수행되려고 할 때 발생하는 `GCStart_V1` 이벤트는 다음과 같은 정보를 제공합니다.  
+ ETW(Windows용 이벤트 추적)는 .NET Framework에서 제공하는 프로파일링 및 디버깅 지원을 보완하는 추적 시스템입니다. [부터 ](../../../docs/framework/performance/garbage-collection-etw-events.md)가비지 컬렉션 ETW 이벤트는 통계 관점에서 관리되는 힙을 분석하는 데 유용한 정보를 캡처합니다. 예를 들어 가비지 수집이 수행되려고 할 때 발생하는 `GCStart_V1` 이벤트는 다음과 같은 정보를 제공합니다.  
   
 - 수집되는 개체 세대  
   

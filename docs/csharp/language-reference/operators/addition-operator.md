@@ -1,5 +1,5 @@
 ---
-title: + 및 += 연산자 - C# 참조
+title: + + 및 += 연산자(C# 참조)
 ms.custom: seodec18
 ms.date: 05/24/2019
 f1_keywords:
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: d03743bad47c60925462d027d18445047ebc0fc9
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 14e62d53fca16212fae374b2627d1e96cbbca6ac
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300108"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025322"
 ---
 # <a name="-and--operators-c-reference"></a>+ 및 += 연산자(C# 참조)
 
@@ -31,17 +31,19 @@ ms.locfileid: "66300108"
 
 피연산자 중 하나 또는 둘 다가 [문자열](../keywords/string.md) 형식이면 `+` 연산자는 피연산자의 문자열 표현을 연결합니다.
 
-[!code-csharp-interactive[string concatenation](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddStrings)]
+[!code-csharp-interactive[string concatenation](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddStrings)]
 
 C# 6부터 [문자열 보간](../tokens/interpolated.md)은 문자열 형식을 지정하는 더욱 편리한 방법을 제공합니다.
 
-[!code-csharp-interactive[string interpolation](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#UseStringInterpolation)]
+[!code-csharp-interactive[string interpolation](~/samples/csharp/language-reference/operators/AdditionOperator.cs#UseStringInterpolation)]
 
 ## <a name="delegate-combination"></a>대리자 조합
 
 동일한 [대리자](../keywords/delegate.md) 형식의 피연산자의 경우 `+` 연산자는 호출될 때 첫 번째 피연산자를 호출한 다음, 두 번째 피연산자를 호출하는 새 대리자 인스턴스를 반환합니다. 피연산자 중 하나라도 `null`이면 `+` 연산자는 다른 피연산자(`null`일 수도 있음)의 값을 반환합니다. 다음 예제는 `+` 연산자를 사용하여 대리자를 결합하는 방법을 보여 줍니다.
 
-[!code-csharp-interactive[delegate combination](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddDelegates)]
+[!code-csharp-interactive[delegate combination](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddDelegates)]
+
+대리자 제거를 수행 하려면 사용 합니다 [ `-` 연산자](subtraction-operator.md#delegate-removal)합니다.
 
 대리자 형식에 대한 자세한 내용은 [대리자](../../programming-guide/delegates/index.md)를 참조하세요.
 
@@ -63,7 +65,7 @@ x = x + y
   
 다음 예제에서는 `+=` 연산자의 사용법을 보여 줍니다.
 
-[!code-csharp-interactive[+= examples](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddAndAssign)]
+[!code-csharp-interactive[+= examples](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddAndAssign)]
 
 또한 [이벤트](../keywords/event.md)를 구독할 때 `+=` 연산자를 사용하여 이벤트 처리기 메서드를 지정합니다. 자세한 내용은 [방법: 이벤트 구독 및 구독 취소](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)를 참조하세요.
 
@@ -73,17 +75,15 @@ x = x + y
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](../language-specification/index.md)의 [단항 더하기 연산자](~/_csharplang/spec/expressions.md#unary-plus-operator) 및 [더하기 연산자](~/_csharplang/spec/expressions.md#addition-operator) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [단항 더하기 연산자](~/_csharplang/spec/expressions.md#unary-plus-operator) 및 [더하기 연산자](~/_csharplang/spec/expressions.md#addition-operator) 섹션을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
-- [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 연산자](index.md)
 - [문자열 보간](../tokens/interpolated.md)
 - [방법: 여러 문자열 연결](../../how-to/concatenate-multiple-strings.md)
 - [대리자](../../programming-guide/delegates/index.md)
 - [이벤트](../../programming-guide/events/index.md)
-- [Checked 및 Unchecked](../keywords/checked-and-unchecked.md)
 - [산술 연산자](arithmetic-operators.md)
 - [- 및 -= 연산자](subtraction-operator.md)

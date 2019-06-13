@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45f3e8533bf7400566304ddb0fdd9d8e5a9b4280
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 2ee08e9ca243ac086a0b75892bf9258246e8fd7c
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456129"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490668"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>강력한 이름 지정(관리되지 않는 API 참조)
 강력한 이름 API를 통해 클라이언트는 어셈블리에 대한 강력한 이름 서명을 관리할 수 있습니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "66456129"
 ## <a name="in-this-section"></a>섹션 내용  
   
 > [!NOTE]
->  이러한 모든 함수는 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]부터는 사용되지 않습니다. 권장된 대안은 [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md) 인터페이스를 참조하세요.  
+>  이러한 모든 함수는 부터는 사용되지 않습니다. 권장된 대안은 [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md) 인터페이스를 참조하세요.  
   
  [GetHashFromAssemblyFile 함수](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromassemblyfile-function.md)  
  지정된 해시 알고리즘을 사용하여 지정된 어셈블리 파일의 해시를 가져옵니다. .NET Framework 4부터 사용되지 않습니다.  

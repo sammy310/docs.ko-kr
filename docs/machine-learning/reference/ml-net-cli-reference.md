@@ -3,12 +3,12 @@ title: ML.NET CLI 도구의 auto-train 명령
 description: ML.NET CLI 도구의 auto-train 명령에 대한 개요, 샘플 및 참조입니다.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 28eb56eb018e3d1cc76f300ee78c298af77c9b91
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: ce5994f392c492e80676b9e65ce54fe010cf03ab
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557939"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722606"
 ---
 # <a name="the-auto-train-command-in-mlnet-cli"></a>ML.NET CLI의 'auto-train' 명령
 

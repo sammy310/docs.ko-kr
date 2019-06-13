@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: adf2e3e3d10f4f32952dbca270be4ca0924d0b73
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 89dfe697f49e8144d15586cc9c1075f69d1f3a07
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457269"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816045"
 ---
 # <a name="in-process-side-by-side-execution"></a>In-Process Side-by-Side 실행
-[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터 In-Process Side-By-Side 호스팅을 사용하여 단일 프로세스에서 여러 버전의 CLR(공용 언어 런타임)을 실행할 수 있습니다. 기본적으로 관리되는 COM 구성 요소는 프로세스에 대해 로드된 .NET Framework 버전에 관계없이 빌드 시 사용된 .NET Framework 버전을 사용하여 실행됩니다.  
+부터 In-Process Side-By-Side 호스팅을 사용하여 단일 프로세스에서 여러 버전의 CLR(공용 언어 런타임)을 실행할 수 있습니다. 기본적으로 관리되는 COM 구성 요소는 프로세스에 대해 로드된 .NET Framework 버전에 관계없이 빌드 시 사용된 .NET Framework 버전을 사용하여 실행됩니다.  
   
 ## <a name="background"></a>배경  
  .NET Framework는 관리 코드 애플리케이션에 대해 항상 병렬 호스팅을 제공하지만 .NET Framework 4 이전에는 관리되는 COM 구성 요소에 대해 해당 기능을 제공하지 않았습니다. 과거에는 프로세스에 로드된 관리되는 COM 구성 요소를 이미 로드된 런타임 버전 또는 설치된 최신 버전의 .NET Framework로 실행했습니다. 이 버전이 COM 구성 요소와 호환되지 않으면 구성 요소가 실패합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "66457269"
   
      할 일: 이 시나리오에서는 수행할 작업이 없습니다. COM 구성 요소는 등록된 .NET Framework 버전과 함께 실행됩니다.  
   
-- **시나리오 2**: [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)]로 빌드된 관리 애플리케이션은 [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)]에서 실행하는 것이 좋지만 버전 2.0이 없는 경우 .NET Framework 4에서 실행하려고 합니다.  
+- **시나리오 2**: [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)]로 빌드된 관리 애플리케이션은 에서 실행하는 것이 좋지만 버전 2.0이 없는 경우 .NET Framework 4에서 실행하려고 합니다.  
   
      설치된 .NET Framework 버전: .NET Framework 및 .NET Framework 4의 이전 버전.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66457269"
 ## <a name="example"></a>예제  
  다음 예제에서는 구성 요소가 사용하도록 컴파일된 .NET Framework 버전을 사용하여 관리되는 COM 구성 요소를 실행하는 관리되지 않는 COM 호스트를 보여 줍니다.  
   
- 다음 예제를 실행하려면 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]을 사용하여 다음 관리 COM 구성 요소를 컴파일하고 등록합니다. 구성 요소를 등록하려면 **프로젝트** 메뉴에서 **속성**을 클릭하고 **빌드** 탭을 클릭한 다음 **COM Interop 등록** 확인란을 선택합니다.  
+ 다음 예제를 실행하려면 을 사용하여 다음 관리 COM 구성 요소를 컴파일하고 등록합니다. 구성 요소를 등록하려면 **프로젝트** 메뉴에서 **속성**을 클릭하고 **빌드** 탭을 클릭한 다음 **COM Interop 등록** 확인란을 선택합니다.  
   
 ```csharp
 using System;  

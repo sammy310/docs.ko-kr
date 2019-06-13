@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 116df78eb20d6e6c6355d07099ae5d3de9320f30
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 6446cc3ee102fa57f5bf60c1353f7b9d5522be69
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457298"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816122"
 ---
 # <a name="security-considerations-for-reflection"></a>리플렉션의 보안 고려 사항
 리플렉션은 형식 및 멤버에 대한 정보를 가져오고 멤버에 액세스하는 기능(즉, 메서드 및 생성자 호출, 속성 값 가져오기 및 설정, 이벤트 처리기 추가 및 제거 등)을 제공합니다. 리플렉션을 사용하여 형식 및 멤버에 대한 정보를 가져오는 기능은 제한되지 않습니다. 모든 코드에서 리플렉션을 사용하여 다음 작업을 수행할 수 있습니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "66457298"
   
 - 어셈블리 및 모듈을 열거하고 검사합니다.  
   
- 반면, 리플렉션을 사용하여 멤버에 액세스하는 경우 제한 사항이 적용됩니다. [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터 신뢰할 수 있는 코드만 리플렉션을 사용하여 보안에 중요한 멤버에 액세스할 수 있습니다. 또한 신뢰할 수 있는 코드만 리플렉션을 사용하여 컴파일된 코드에서 직접 액세스할 수 없는 public이 아닌 멤버에 액세스할 수 있습니다. 마지막으로, 안전상 중요한 멤버에 액세스하기 위해 리플렉션을 사용하는 코드는 컴파일된 코드와 마찬가지로 안전상 중요한 멤버에서 요구하는 권한을 가져야 합니다.  
+ 반면, 리플렉션을 사용하여 멤버에 액세스하는 경우 제한 사항이 적용됩니다. 부터 신뢰할 수 있는 코드만 리플렉션을 사용하여 보안에 중요한 멤버에 액세스할 수 있습니다. 또한 신뢰할 수 있는 코드만 리플렉션을 사용하여 컴파일된 코드에서 직접 액세스할 수 없는 public이 아닌 멤버에 액세스할 수 있습니다. 마지막으로, 안전상 중요한 멤버에 액세스하기 위해 리플렉션을 사용하는 코드는 컴파일된 코드와 마찬가지로 안전상 중요한 멤버에서 요구하는 권한을 가져야 합니다.  
   
  필요한 권한이 적용되는 경우 코드에서 리플렉션을 사용하여 다음 종류의 액세스를 수행할 수 있습니다.  
   
@@ -42,13 +42,13 @@ ms.locfileid: "66457298"
   
  예를 들어 샌드박스 애플리케이션 도메인에서 실행되는 코드는 애플리케이션 도메인이 추가 권한을 부여하지 않는 한 이 목록에 설명된 액세스로 제한됩니다.  
   
- [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)]부터 일반적으로 액세스할 수 없는 멤버에 액세스하려고 하면 대상 개체 및 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.ReflectionPermission>의 권한 부여 집합에 대한 요구가 생성됩니다. 완전 신뢰 수준으로 실행되는 코드(예: 명령줄에서 시작된 애플리케이션의 코드)는 항상 이러한 권한을 충족시킬 수 있습니다. 이 경우 이 문서의 뒷부분에 설명된 것처럼 보안에 중요한 멤버에 액세스할 때의 제한 사항이 적용됩니다.  
+ <xref:System.Security.Permissions.ReflectionPermission>부터 일반적으로 액세스할 수 없는 멤버에 액세스하려고 하면 대상 개체 및  플래그가 있는 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>의 권한 부여 집합에 대한 요구가 생성됩니다. 완전 신뢰 수준으로 실행되는 코드(예: 명령줄에서 시작된 애플리케이션의 코드)는 항상 이러한 권한을 충족시킬 수 있습니다. 이 경우 이 문서의 뒷부분에 설명된 것처럼 보안에 중요한 멤버에 액세스할 때의 제한 사항이 적용됩니다.  
   
  필요한 경우 이 문서의 뒷부분에 있는 [일반적으로 액세스할 수 없는 멤버 액세스](#accessingNormallyInaccessible) 섹션에 설명된 대로 샌드박스 애플리케이션 도메인에서 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 플래그로 <xref:System.Security.Permissions.ReflectionPermission>을 부여할 수 있습니다.  
   
 <a name="accessingSecurityCritical"></a>   
 ## <a name="accessing-security-critical-members"></a>보안에 중요한 멤버 액세스  
- <xref:System.Security.SecurityCriticalAttribute>가 있거나, <xref:System.Security.SecurityCriticalAttribute>를 가진 형식에 속하거나, 보안에 중요한 어셈블리에 있는 경우 멤버가 보안에 중요합니다. [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터 보안에 중요한 멤버에 액세스하기 위한 규칙은 다음과 같습니다.  
+ <xref:System.Security.SecurityCriticalAttribute>가 있거나, <xref:System.Security.SecurityCriticalAttribute>를 가진 형식에 속하거나, 보안에 중요한 어셈블리에 있는 경우 멤버가 보안에 중요합니다. 부터 보안에 중요한 멤버에 액세스하기 위한 규칙은 다음과 같습니다.  
   
 - 코드를 완전히 신뢰할 수 있는 경우에도 투명 코드는 리플렉션을 사용하여 보안에 중요한 멤버에 액세스할 수 없습니다. <xref:System.MethodAccessException>, <xref:System.FieldAccessException> 또는 <xref:System.TypeAccessException>이 발생합니다.  
   
@@ -98,9 +98,9 @@ ms.locfileid: "66457298"
   
 ## <a name="version-information"></a>버전 정보  
   
-- [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터 투명 코드는 리플렉션을 사용하여 보안에 중요한 멤버에 액세스할 수 없습니다.  
+- 부터 투명 코드는 리플렉션을 사용하여 보안에 중요한 멤버에 액세스할 수 없습니다.  
   
-- <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 플래그는 [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)]에서 도입되었습니다. 이전 버전의 .NET Framework에서는 리플렉션을 사용하여 public이 아닌 멤버에 액세스하는 코드에 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 플래그가 필요합니다. 부분적으로 신뢰할 수 있는 코드에는 이 권한을 부여하면 안 됩니다.  
+- <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 플래그는.NET Framework 2.0 서비스 팩 1에서 도입 되었습니다. 이전 버전의 .NET Framework에서는 리플렉션을 사용하여 public이 아닌 멤버에 액세스하는 코드에 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 플래그가 필요합니다. 부분적으로 신뢰할 수 있는 코드에는 이 권한을 부여하면 안 됩니다.  
   
 - [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]부터 리플렉션을 사용하여 public이 아닌 형식과 멤버에 대한 정보를 가져오는 데 필요한 권한은 없습니다. 이전 버전에서는 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.ReflectionPermission>이 필요합니다.  
   

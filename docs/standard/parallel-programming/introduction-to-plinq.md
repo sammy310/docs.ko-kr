@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d41a88b7a9197a19a131cbda078297a96acdabfb
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 39ca7ca02c2bb1050653daf1b53450533cc950dd
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457485"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490961"
 ---
 # <a name="introduction-to-plinq"></a>PLINQ 소개
 
 ## <a name="what-is-a-parallel-query"></a>병렬 쿼리는 무엇입니까?
 
-LINQ(Language-Integrated Query)가 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]에 도입되었습니다. 모든 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 또는 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 데이터 소스를 형식이 안전한 방법으로 쿼리하기 위한 통합 모델로 기능합니다. LINQ to Objects는 <xref:System.Collections.Generic.List%601> 및 배열과 같은 메모리 내 컬렉션에 대해 실행되는 LINQ 쿼리에 대한 이름입니다. 이 문서에서는 사용자가 LINQ의 기본적인 개념을 이해하고 있다고 가정합니다. 자세한 내용은 [LINQ(Language-Integrated Query) - C# ](../../csharp/programming-guide/concepts/linq/index.md) 또는 [LINQ(Language-Integrated Query) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md)을 참조하세요.
+LINQ(Language-Integrated Query)가 에 도입되었습니다. 모든 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 또는 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 데이터 소스를 형식이 안전한 방법으로 쿼리하기 위한 통합 모델로 기능합니다. LINQ to Objects는 <xref:System.Collections.Generic.List%601> 및 배열과 같은 메모리 내 컬렉션에 대해 실행되는 LINQ 쿼리에 대한 이름입니다. 이 문서에서는 사용자가 LINQ의 기본적인 개념을 이해하고 있다고 가정합니다. 자세한 내용은 [LINQ(Language-Integrated Query) - C# ](../../csharp/programming-guide/concepts/linq/index.md) 또는 [LINQ(Language-Integrated Query) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md)을 참조하세요.
 
 PLINQ(병렬 LINQ)는 LINQ 패턴의 병렬 구현입니다. PLINQ 쿼리는 비병렬 LINQ to Objects 쿼리와 여러 가지 방법에서 유사합니다. 순차적 [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] 쿼리와 마찬가지로 PLINQ 쿼리는 모든 메모리 내 <xref:System.Collections.IEnumerable> 또는 <xref:System.Collections.Generic.IEnumerable%601> 데이터 소스에서 작동하며 지연된 실행을 가집니다. 즉, 쿼리가 열거될 때까지 실행을 시작하지 않습니다. 주요 차이점은 PLINQ가 시스템에서 모든 프로세서를 충분히 활용하도록 시도한다는 것입니다. 데이터 소스를 세그먼트로 분할한 다음 다중 프로세서에서 병렬로 별도 작업자 스레드의 각 세그먼트에서 쿼리를 실행하여 수행합니다. 대부분의 경우 병렬 실행은 쿼리가 훨씬 더 빠르게 실행되는 것을 의미합니다.
 
@@ -36,7 +36,7 @@ PLINQ(병렬 LINQ)는 LINQ 패턴의 병렬 구현입니다. PLINQ 쿼리는 비
 
 <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> 클래스는 거의 모든 PLINQ 기능을 노출합니다. 해당 항목 및 나머지 <xref:System.Linq?displayProperty=nameWithType> 네임스페이스 형식은 System.Core.dll 어셈블리에 컴파일됩니다. Visual Studio에서 기본 C# 및 Visual Basic 프로젝트는 모두 어셈블리를 참조하고 네임스페이스를 가져옵니다.
 
-<xref:System.Linq.ParallelEnumerable>은 각각을 병렬 처리하려고 하지 않지만 LINQ to Objects가 지원하는 모든 표준 쿼리 연산자의 구현을 포함합니다. [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)]에 익숙하지 않은 경우 [LINQ 소개(C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq.md) 및 [LINQ 소개(Visual Basic)](../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)를 참조하세요.
+<xref:System.Linq.ParallelEnumerable>은 각각을 병렬 처리하려고 하지 않지만 LINQ to Objects가 지원하는 모든 표준 쿼리 연산자의 구현을 포함합니다. [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)]에 익숙하지 않은 경우 [LINQ 소개(C#)](../../csharp/programming-guide/concepts/linq/index.md) 및 [LINQ 소개(Visual Basic)](../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)를 참조하세요.
 
 표준 쿼리 연산자뿐만 아니라 <xref:System.Linq.ParallelEnumerable> 클래스에는 병렬 실행과 관련된 동작을 사용하도록 설정하는 메서드 집합이 포함되어 있습니다. 이러한 PLINQ 전용 메서드는 다음 표에 나열되어 있습니다.
 

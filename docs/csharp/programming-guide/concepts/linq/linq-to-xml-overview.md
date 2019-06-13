@@ -2,15 +2,17 @@
 title: LINQ to XML 개요(C#)
 ms.date: 10/30/2018
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-ms.openlocfilehash: 2394151d855d75b418616d9fa1a6f69b08cdef86
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a9435027a7487af96227fdc7a0eae6f511d82b23
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585762"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484353"
 ---
 # <a name="linq-to-xml-overview-c"></a>LINQ to XML 개요(C#)
 
+LINQ to XML에서는 .NET LINQ(Language-Integrated Query) Framework를 사용하는 메모리 내 XML 프로그래밍 인터페이스를 제공합니다. 은 최신  언어 기능을 사용하며 업데이트되고 다시 디자인된 DOM(문서 개체 모델) XML 프로그래밍 인터페이스와 유사합니다. 
+ 
 XML은 다양한 컨텍스트에서 데이터의 형식을 지정하는 방법으로 널리 채택되고 있습니다. 예를 들어, 웹에 있는 구성 파일, Microsoft Office Word 파일 및 데이터베이스에서 XML을 찾을 수 있습니다.
 
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]은 XML을 사용한 프로그래밍을 위해 다시 디자인된 최신 방법입니다. LINQ to XML은 DOM(문서 개체 모델)의 메모리 내 문서 수정 기능을 제공하며 .[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 식을 지원합니다. 이러한 쿼리 식은 구문적으로 XPath와 다르지만 유사한 기능을 제공합니다.
@@ -114,9 +116,11 @@ new XElement("Contacts",
 );
 ```
 
-자세한 내용은 [XML 트리 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)를 참조하세요.
+자세한 내용은 [XML 트리 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 
+- [참조(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/reference-linq-to-xml.md)
+- [LINQ to XML과 DOM 비교(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)
+- [LINQ to XML과 기타 XML 기술 비교](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)
 - <xref:System.Xml.Linq>
-- [시작(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

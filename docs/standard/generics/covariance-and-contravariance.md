@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 44e5f52ce2bfe03247ab25bb48607ae313523ff0
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: a7e4493fca5b73cfd0bdc59ceab9de097de799aa
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456859"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490751"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>제네릭의 공 분산과 반공 분산
 <a name="top"></a> 공변성(Covariance)과 반공변성(Contravariance)은 원래 지정된 것보다 더 많이 파생되거나(더 구체적인) 더 적게 파생된 형식(덜 구체적인)을 사용할 수 있는 능력을 지칭하는 용어입니다. 제네릭 형식 매개 변수는 더욱 유연하게 제네릭 형식을 할당하고 사용할 수 있도록 공변성과 반공변성을 지원합니다. 형식 시스템을 참조할 때 공변성, 반공변성 및 불변성의 정의는 다음과 같습니다. 이 예제에서는 `Base` 라는 기본 클래스와 `Derived`라는 파생 클래스가 있는 것으로 가정합니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "66456859"
   
  공변성(Covariance) 및 반공변성(Contravariance)을 전체적으로 *차이*라고 합니다. 공변 또는 반공변 여부가 표시되지 않은 제네릭 형식 매개 변수를 *고정(invariant)* 매개 변수라고 합니다. 다음은 공용 언어 런타임의 가변성에 대한 간략한 설명입니다.  
   
-- [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]에서는 variant 형식 매개 변수가 제네릭 인터페이스와 제네릭 대리자 형식에만 사용됩니다.  
+- 에서는 variant 형식 매개 변수가 제네릭 인터페이스와 제네릭 대리자 형식에만 사용됩니다.  
   
 - 제네릭 인터페이스 또는 제네릭 대리자 형식은 공변 및 반공변 형식 매개 변수를 둘 다 가질 수 있습니다.  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6b7b120a5a21301ff82aa8ebd1cfc169f7884e4
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 8d3ac6acf756a0ac468eb4483432467429ed91ca
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457441"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483280"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>가비지 수집 기본 사항
 <a name="top"></a> CLR(공용 언어 런타임)에서 가비지 수집은 자동 메모리 관리자 역할을 합니다. 가비지 수집은 다음과 같은 이점을 제공합니다.  
@@ -186,7 +186,7 @@ ms.locfileid: "66457441"
   
      워크스테이션 가비지 수집은 동시 수집 또는 비동시 수집일 수 있습니다. 동시 가비지 수집의 경우 가비지 수집 중 관리되는 스레드가 작업을 계속 수행할 수 있습니다.  
   
-     [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터는 백그라운드 가비지 수집이 동시 가비지 수집을 대체합니다.  
+     부터는 백그라운드 가비지 수집이 동시 가비지 수집을 대체합니다.  
   
 - 높은 처리 속도 및 확장성이 필요한 서버 애플리케이션을 위한 서버 가비지 수집 서버 가비지 수집은 비동시 또는 백그라운드일 수 있습니다.  
   

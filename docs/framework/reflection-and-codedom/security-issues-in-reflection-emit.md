@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ca4a087b60e6cb857ec78273dad099e5e5da07a
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 434a88e305f833a5a95bb62835b5badd4a2c4949
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457311"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816142"
 ---
 # <a name="security-issues-in-reflection-emit"></a>리플렉션 내보내기의 보안 문제점
 .NET Framework에서는 MSIL(Microsoft Intermediate Language)을 내보내는 세 가지 방법을 제공하며, 각각 고유한 보안 문제가 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "66457311"
   
 <a name="Dynamic_Assemblies"></a>   
 ## <a name="dynamic-assemblies"></a>동적 어셈블리  
- 동적 어셈블리는 <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> 메서드의 오버로드를 사용하여 만듭니다. 이 메서드의 오버로드는 시스템 수준의 보안 정책이 제거되어 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]에서 대부분 사용되지 않습니다. [보안 변경 내용](../../../docs/framework/security/security-changes.md)을 참조하세요. 나머지 오버로드는 신뢰 수준에 관계없이 모든 코드에서 실행할 수 있습니다. 이러한 오버로드는 만들 때 동적 어셈블리에 적용할 특성 목록을 지정하는 오버로드와 그러지 않은 오버로드의 두 그룹으로 나뉩니다. 어셈블리를 만들 때 <xref:System.Security.SecurityRulesAttribute> 특성을 적용하여 어셈블리에 대한 투명도 모델을 지정하지 않을 경우 내보내는 어셈블리에서 투명도 모델이 상속됩니다.  
+ 동적 어셈블리는 <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> 메서드의 오버로드를 사용하여 만듭니다. 이 메서드의 오버로드는 시스템 수준의 보안 정책이 제거되어 에서 대부분 사용되지 않습니다. [보안 변경 내용](../../../docs/framework/security/security-changes.md)을 참조하세요. 나머지 오버로드는 신뢰 수준에 관계없이 모든 코드에서 실행할 수 있습니다. 이러한 오버로드는 만들 때 동적 어셈블리에 적용할 특성 목록을 지정하는 오버로드와 그러지 않은 오버로드의 두 그룹으로 나뉩니다. 어셈블리를 만들 때 <xref:System.Security.SecurityRulesAttribute> 특성을 적용하여 어셈블리에 대한 투명도 모델을 지정하지 않을 경우 내보내는 어셈블리에서 투명도 모델이 상속됩니다.  
   
 > [!NOTE]
 >  동적 어셈블리를 만든 후에 <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> 메서드를 사용하여 적용하는 특성은 어셈블리를 디스크에 저장하고 메모리에 다시 로드할 때까지 적용되지 않습니다.  
@@ -141,14 +141,14 @@ ms.locfileid: "66457311"
 ## <a name="version-information"></a>버전 정보  
  .NET Framework 4부터 시스템 수준의 보안 정책이 제거되었으며 보안 투명도가 기본 적용 메커니즘이 되었습니다. [보안 변경 내용](../../../docs/framework/security/security-changes.md)을 참조하세요.  
   
- [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)]부터 동적 어셈블리와 동적 메서드를 내보낼 때 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.ReflectionPermission>이 더 이상 필요하지 않습니다. 이 플래그는 .NET Framework의 모든 이전 버전에서 필요합니다.  
+ <xref:System.Security.Permissions.ReflectionPermission>부터 동적 어셈블리와 동적 메서드를 내보낼 때  플래그가 있는 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType>이 더 이상 필요하지 않습니다. 이 플래그는 .NET Framework의 모든 이전 버전에서 필요합니다.  
   
 > [!NOTE]
->  <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.ReflectionPermission>은 기본적으로 명명된 권한 집합 `FullTrust` 및 `LocalIntranet` 에 포함되지만 `Internet` 권한 집합에는 포함되지 않습니다. 따라서 이전 버전의 .NET Framework에서는 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>에 대해 <xref:System.Security.PermissionSet.Assert%2A>를 실행하는 경우에만 인터넷 권한으로 라이브러리를 사용할 수 있습니다. 코딩 오류가 있을 경우 보안 허점이 발생할 수 있으므로 이러한 라이브러리는 신중한 보안 검토가 필요합니다. [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)]에서는 코드 생성이 기본적으로 권한 있는 작업이 아니기 때문에 보안 요구를 실행하지 않고 부분 신뢰 시나리오에서 코드를 내보낼 수 있습니다. 즉, 생성된 코드에 코드를 내보내는 어셈블리보다 많은 권한이 없습니다. 따라서 코드를 내보내는 라이브러리가 보안상 투명할 수 있으며 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>를 어설션할 필요가 없으므로 보안 라이브러리 작성 작업이 간소화됩니다.  
+>  <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.ReflectionPermission>은 기본적으로 명명된 권한 집합 `FullTrust` 및 `LocalIntranet` 에 포함되지만 `Internet` 권한 집합에는 포함되지 않습니다. 따라서 이전 버전의 .NET Framework에서는 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>에 대해 <xref:System.Security.PermissionSet.Assert%2A>를 실행하는 경우에만 인터넷 권한으로 라이브러리를 사용할 수 있습니다. 코딩 오류가 있을 경우 보안 허점이 발생할 수 있으므로 이러한 라이브러리는 신중한 보안 검토가 필요합니다. 에서는 코드 생성이 기본적으로 권한 있는 작업이 아니기 때문에 보안 요구를 실행하지 않고 부분 신뢰 시나리오에서 코드를 내보낼 수 있습니다. 즉, 생성된 코드에 코드를 내보내는 어셈블리보다 많은 권한이 없습니다. 따라서 코드를 내보내는 라이브러리가 보안상 투명할 수 있으며 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>를 어설션할 필요가 없으므로 보안 라이브러리 작성 작업이 간소화됩니다.  
   
- 또한 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)]에서는 부분적으로 신뢰할 수 있는 동적 메서드에서 public이 아닌 형식과 멤버에 액세스하기 위한 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 플래그가 도입되었습니다. 이전 버전의 .NET Framework에서는 public이 아닌 형식과 멤버에 액세스하는 동적 메서드에 대해 부분적으로 신뢰할 수 있는 코드에 부여하면 안 되는 권한인 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 플래그가 필요합니다.  
+ 또한 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>에서는 부분적으로 신뢰할 수 있는 동적 메서드에서 public이 아닌 형식과 멤버에 액세스하기 위한  플래그가 도입되었습니다. 이전 버전의 .NET Framework에서는 public이 아닌 형식과 멤버에 액세스하는 동적 메서드에 대해 부분적으로 신뢰할 수 있는 코드에 부여하면 안 되는 권한인 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 플래그가 필요합니다.  
   
- 끝으로, [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)]에서는 익명으로 호스트된 메서드가 도입되었습니다.  
+ 마지막으로.NET Framework 2.0 SP1에서는 익명으로 호스트 된 메서드를 소개합니다.  
   
 ### <a name="obtaining-information-on-types-and-members"></a>형식 및 멤버에 대한 정보 가져오기  
  [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]부터 public이 아닌 형식과 멤버에 대한 정보를 가져오는 데 필요한 권한은 없습니다. 리플렉션을 사용하여 동적 메서드를 내보내는 데 필요한 정보를 가져옵니다. 예를 들어 <xref:System.Reflection.MethodInfo> 개체를 사용하여 메서드 호출을 내보냅니다. 이전 버전의 .NET Framework에서는 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.ReflectionPermission>이 필요합니다. 자세한 내용은 [리플렉션의 보안 고려 사항](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)을 참조하세요.  

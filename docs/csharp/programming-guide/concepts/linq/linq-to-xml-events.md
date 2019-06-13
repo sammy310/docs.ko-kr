@@ -2,12 +2,12 @@
 title: LINQ to XML 이벤트(C#)
 ms.date: 07/20/2015
 ms.assetid: ce7de951-cba7-4870-9962-733eb01cd680
-ms.openlocfilehash: f7ce6ed99f7279d1dc774314cdc2dde345b6a84d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8278d3eac9d1e149cbfe64e184439ef9ac3cd39b
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736866"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484342"
 ---
 # <a name="linq-to-xml-events-c"></a>LINQ to XML 이벤트(C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 이벤트를 통해 XML 트리가 변경될 때 알림을 받을 수 있습니다.  
@@ -97,6 +97,3 @@ Total:308
 </Root>  
 ```  
   
-## <a name="see-also"></a>참고 항목
-
-- [고급 LINQ to XML 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

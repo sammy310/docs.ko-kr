@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 01c82f2867097b98b04727592cf72c29712075ba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b553ec62cf493b94b87079cddd3ec3d1d60daf9d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664539"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491001"
 ---
 # <a name="when-to-use-generic-collections"></a>제네릭 컬렉션 사용 기준
 제네릭 컬렉션을 사용하면 기본 컬렉션 형식에서 파생하고 형식별 멤버를 구현하지 않아도 형식 보안 이점이 즉시 제공되므로 일반적으로는 제네릭 컬렉션을 사용하는 것이 좋습니다. 또한 컬렉션 요소가 값 형식일 때는 대개 제네릭 컬렉션 형식이 해당하는 제네릭이 아닌 컬렉션 형식 및 제네릭이 아닌 기본 컬렉션 형식에서 파행되는 형식에 비해 성능도 뛰어납니다. 제네릭을 사용하는 경우에는 요소를 boxing할 필요가 없기 때문입니다.  
   
- [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 이상을 대상으로 하는 프로그램의 경우에는 여러 스레드가 컬렉션에서 동시에 항목을 추가하거나 제거하는 경우 <xref:System.Collections.Concurrent> 네임스페이스에서 제네릭 컬렉션 클래스를 사용해야 합니다.  
+ <xref:System.Collections.Concurrent> 이상을 대상으로 하는 프로그램의 경우에는 여러 스레드가 컬렉션에서 동시에 항목을 추가하거나 제거하는 경우  네임스페이스에서 제네릭 컬렉션 클래스를 사용해야 합니다.  
   
  기존 컬렉션 형식에 해당하는 제네릭 형식은 다음과 같습니다.  
   

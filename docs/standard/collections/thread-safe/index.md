@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0b4639402ee99d215edb3fb28ababe6f750fb353
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 0bc333a828a9d18cd5ad98af42a91c1d53c2569b
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457077"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816201"
 ---
 # <a name="thread-safe-collections"></a>스레드로부터 안전한 컬렉션
 .NET Framework 4에서는 네임스페이스는 스레드로부터 안전하면서 확장 가능한 몇 가지 컬렉션 클래스를 포함하는 <xref:System.Collections.Concurrent?displayProperty=nameWithType> 네임스페이스를 도입합니다. 여러 스레드는 사용자 코드에서 추가로 동기화할 필요없이 이러한 컬렉션으로부터 안전하고 효율적으로 항목을 추가하거나 제거할 수 있습니다. 새 코드를 작성하는 경우 여러 스레드가 컬렉션에 동시에 작성될 때마다 동시 컬렉션 클래스를 사용합니다. 공유 컬렉션에서 읽기만 하는 경우에 <xref:System.Collections.Generic?displayProperty=nameWithType> 네임스페이스에서 클래스를 사용할 수 있습니다. .NET Framework 1.1 또는 이전 런타임을 대상으로 해야 하는 경우가 아니면 1.0 컬렉션 클래스를 사용하지 않는 것이 좋습니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "66457077"
   
  .NET Framework 2.0에 도입된 컬렉션 클래스는 <xref:System.Collections.Generic?displayProperty=nameWithType> 네임스페이스에 있습니다. 여기에는 <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602> 등이 포함됩니다. 이러한 클래스는 .NET Framework 1.0 클래스에 비해 형식 안정성 및 성능을 향상시킵니다. 그러나 .NET Framework 2.0 컬렉션 클래스는 스레드 동기화를 제공하지 않습니다. 여러 스레드에서 동시에 항목이 추가되거나 제거되는 경우 사용자 코드에서는 모든 동기화를 제공해야 합니다.  
   
- .NET Framework 4의 동시 컬렉션 클래스는 .NET Framework 2.0 컬렉션 클래스의 형식 안전성을 제공할 뿐만 아니라 [!INCLUDE[net_v10_short](../../../../includes/net-v10-short-md.md)] 컬렉션이 제공하는 스레드로부터의 안전성보다 더 효율적이고 안전하기 때문에 권장됩니다.  
+ .NET Framework 4의 동시 컬렉션 클래스는 .NET Framework 2.0 컬렉션 클래스의 형식 안전성을 제공할 뿐만 아니라  컬렉션이 제공하는 스레드로부터의 안전성보다 더 효율적이고 안전하기 때문에 권장됩니다.  
   
 ## <a name="fine-grained-locking-and-lock-free-mechanisms"></a>세부적인 잠금 및 잠금 해제 메커니즘  
  동시 컬렉션 형식의 일부에서는 .NET Framework 4에 새로 도입된 <xref:System.Threading.SpinLock>, <xref:System.Threading.SpinWait>, <xref:System.Threading.SemaphoreSlim> 및 <xref:System.Threading.CountdownEvent>와 같은 간단한 동기화 메커니즘을 사용합니다. 실제로 이러한 동기화 형식이 스레드를 Wait 상태로 전환하기 전 짧은 기간 동안에는 일반적으로 *사용 중인 회전*을 사용합니다. 대기 시간이 매우 짧을 경우 회전은 비용이 많이 드는 커널 전환을 포함하는 대기보다 훨씬 계산 비용이 적습니다. 회전을 사용하는 컬렉션 클래스의 경우 이 효율성 덕분에 여러 스레드가 매우 빠른 속도로 항목을 추가하고 제거할 수 있습니다. 회전 및 차단에 대한 자세한 내용은 [SpinLock](../../../../docs/standard/threading/spinlock.md) 및 [SpinWait](../../../../docs/standard/threading/spinwait.md)를 참조하세요.  

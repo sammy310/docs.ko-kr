@@ -4,12 +4,12 @@ description: 기계 학습 모델에 사용할 ML.NET 알고리즘을 선택하�
 author: natke
 ms.topic: overview
 ms.date: 04/20/1029
-ms.openlocfilehash: d1c637437a7b285f2b66b597d616fcf39248697f
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 89c3c612d79f02d58a16070feadb645b081dd3e3
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557765"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722625"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>ML.NET 알고리즘을 선택하는 방법
 
@@ -42,7 +42,7 @@ ML.NET을 사용하여 동일한 알고리즘을 다른 작업에 적용할 수 
 |알고리즘|속성|트레이너|
 |---------|----------|--------|
 |평균 퍼셉트론(Averaged perceptron)|텍스트 분류에 최적|<xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>|
-|확률적 강하 좌표 상승|좋은 기본 성능에는 튜닝이 필요하지 않음|<xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>|
+|확률적 이중 조정된 ascent|좋은 기본 성능에는 튜닝이 필요하지 않음|<xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>|
 |L-BFGS|기능 수가 클 경우에 사용합니다. 로지스틱 회귀 학습 통계를 생성하지만 AveragedPerceptronTrainer처럼 규모 조정은 안 됩니다.|<xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>|
 |기호 확률적 경사 하강법(Symbolic stochastic gradient descent)|가장 빠르고 가장 정확한 선형 이진 분류 트레이너입니다. 다수의 프로세서에 맞게 규모 조정이 가능합니다.|<xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>|
 
