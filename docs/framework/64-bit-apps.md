@@ -8,23 +8,23 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e10682dbf5615f9d1ef345cf2c7eeeafa87ec28
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 11295f4b0d1a425fd3859c904b8ebc7830c64d1f
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377981"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815951"
 ---
 # <a name="64-bit-applications"></a>64비트 애플리케이션
 애플리케이션을 컴파일할 때 Windows 64비트 운영 체제에서 네이티브 애플리케이션으로 실행되거나 WOW64(Windows 64비트 기반 Windows 32비트)를 통해 실행되도록 지정할 수 있습니다. WOW64는 32비트 애플리케이션이 64비트 시스템에서 실행되도록 하는 호환성 환경입니다. WOW64는 Windows 운영 체제의 모든 64비트 버전에 포함됩니다.  
   
 ## <a name="running-32-bit-vs-64-bit-applications-on-windows"></a>Windows에서 32비트 응용 프로그램과  64비트 애플리케이션의 실행 비교  
- .NET Framework 1.0 또는 1.1에서 빌드된 모든 애플리케이션은 64비트 운영 체제에서 32비트 애플리케이션으로 처리되고 항상 WOW64 및 32비트 CLR(공용 언어 런타임)을 통해 실행됩니다. [!INCLUDE[net_v40_long](../../includes/net-v40-long-md.md)] 이상 버전에서 빌드된 32비트 애플리케이션은 64비트 시스템에서 WOW64를 통해 실행됩니다.  
+ .NET Framework 1.0 또는 1.1에서 빌드된 모든 애플리케이션은 64비트 운영 체제에서 32비트 애플리케이션으로 처리되고 항상 WOW64 및 32비트 CLR(공용 언어 런타임)을 통해 실행됩니다. 이상 버전에서 빌드된 32비트 애플리케이션은 64비트 시스템에서 WOW64를 통해 실행됩니다.  
   
  Visual Studio에서는 32비트 버전의 CLR을 x86 컴퓨터에 설치하고 32비트 버전 및 해당하는 64비트 버전의 CLR을 64비트 Windows 컴퓨터에 설치합니다. Visual Studio는 32비트 애플리케이션이므로 64비트 시스템에 설치될 때 WOW64를 통해 실행됩니다.  
   
 > [!NOTE]
->  Itanium 프로세서 제품군용 x86 에뮬레이션 및 WOW64 하위 시스템의 설계 때문에 애플리케이션은 한 프로세서에서 실행되도록 제한됩니다. 이들 요소 때문에 Itanium 기반 시스템에서 실행되는 32비트 .NET Framework 애플리케이션의 성능과 확장성이 감소합니다. 성능과 확장성을 높이려면 Itanium 기반 시스템에 대한 네이티브 64비트 지원이 포함된 [!INCLUDE[net_v40_long](../../includes/net-v40-long-md.md)]을(를) 사용하는 것이 좋습니다.  
+>  Itanium 프로세서 제품군용 x86 에뮬레이션 및 WOW64 하위 시스템의 설계 때문에 애플리케이션은 한 프로세서에서 실행되도록 제한됩니다. 이들 요소 때문에 Itanium 기반 시스템에서 실행되는 32비트 .NET Framework 애플리케이션의 성능과 확장성이 감소합니다. 성능과 확장성을 높이려면 Itanium 기반 시스템에 대한 네이티브 64비트 지원이 포함된 을(를) 사용하는 것이 좋습니다.  
   
  기본적으로 64비트 관리되는 애플리케이션을 64비트 Windows 운영 체제에서 실행할 때 2GB 이하 개체를 만들 수 있습니다. 그러나 .NET Framework 4.5에서는 이 제한을 늘릴 수 있습니다.  자세한 내용은 [\<gcAllowVeryLargeObjects> 요소](../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)를 참조하세요.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66377981"
   
 - 64비트 Windows 컴퓨터의 64비트 버전 CLR에 대한 자세한 내용은 MSDN 웹 사이트에서 [.NET Framework 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=37079)를 참조하세요.  
   
-- [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)] 문서에서 [64비트 Windows에 대한 프로그래밍 가이드](https://go.microsoft.com/fwlink/p/?LinkId=253512)를 참조하세요.  
+- [ 문서에서 ](https://go.microsoft.com/fwlink/p/?LinkId=253512)64비트 Windows에 대한 프로그래밍 가이드를 참조하세요.  
   
 - 64비트 버전 CLR을 다운로드하는 방법에 대한 자세한 내용은 MSDN 웹 사이트에서 [.NET Framework 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=50953)를 참조하세요.  
   
