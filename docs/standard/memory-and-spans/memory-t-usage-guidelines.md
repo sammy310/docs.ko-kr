@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 728f360d2e8f93ebdf2b17fec39477b95ed11357
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 380c0eef137eb5142c30e63f5446f5d60723087a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063286"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834051"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Memory\<T> 및 Span\<T> 사용 지침
 
@@ -138,7 +138,7 @@ void DisplayBufferToConsole(ReadOnlyMemory<char> buffer);
 void DisplayBufferToConsole(ReadOnlySpan<char> buffer);
 ```
 
-이제 `DisplayBufferToConsole` 메서드는 `T[]`, [stackalloc](~/docs/csharp/language-reference/keywords/stackalloc.md)로 할당된 스토리지 등 거의 모든 버퍼 형식에서 작동합니다. 이 메서드에 <xref:System.String>을 직접 전달할 수도 있습니다.
+이제 `DisplayBufferToConsole` 메서드는 `T[]`, [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md)로 할당된 스토리지 등 거의 모든 버퍼 형식에서 작동합니다. 이 메서드에 <xref:System.String>을 직접 전달할 수도 있습니다.
 
 **규칙 #3: 메서드가 Memory\<T>를 사용하고 `void`를 반환하는 경우 메서드가 반환된 후에는 Memory\<T> 인스턴스를 사용하면 안 됩니다.**
 
