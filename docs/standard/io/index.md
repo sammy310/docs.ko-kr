@@ -147,7 +147,7 @@ Visual Basic 사용자는 이러한 클래스를 사용하는 것 외에도, 파
 
 다음은 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 I/O 작업을 사용할 때 알아야 할 몇 가지 중요한 차이점입니다.
 
-- 특히 파일 작업에 관련된 형식(예: <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> 및 <xref:System.IO.DirectoryInfo>)은 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]에 포함되지 않습니다. 형식을 대신 사용 합니다 <xref:Windows.Storage?displayProperty=nameWithType> Windows 런타임 네임 스페이스와 같은 <xref:Windows.Storage.StorageFile> 및 <xref:Windows.Storage.StorageFolder>합니다.
+- 특히 파일 작업에 관련된 형식(예: <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> 및 <xref:System.IO.DirectoryInfo>)은 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]에 포함되지 않습니다. 대신 <xref:Windows.Storage.StorageFile> 및 <xref:Windows.Storage.StorageFolder> 등 Windows 런타임의 <xref:Windows.Storage?displayProperty=nameWithType> 네임스페이스에 있는 유형을 사용합니다.
 
 - 격리된 저장소는 사용할 수 없습니다. 대신에 [애플리케이션 데이터](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))를 사용합니다.
 

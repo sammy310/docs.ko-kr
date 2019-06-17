@@ -3,12 +3,12 @@ title: 안전하고 효율적인 C# 코드 작성
 description: 최근 C# 언어의 향상된 기능을 통해 성능이 이전에는 안전하지 않은 코드와 연결되어 있는 안정형 안전 코드를 작성할 수 있습니다.
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: 259ce0b9405dfd74adf51a9cc046ffe3f08d242f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 73ad7a84d2ad47f0e0242825d250247ffb39928e
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753894"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832937"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>안전하고 효율적인 C# 코드 작성
 
@@ -189,7 +189,7 @@ GitHub에 있는 [샘플 리포지토리](https://github.com/dotnet/samples/tree
 
 관련 언어 기능은 단일 스택 프레임에 제한되어야 하는 값 형식을 선언하는 기능입니다. 이 제한을 통해 컴파일러는 몇 가지 최적화를 수행할 수 있습니다. 이 기능의 기본 동기 부여는 <xref:System.Span%601> 및 관련 구조였습니다. <xref:System.Span%601> 유형을 사용하는 새롭고 업데이트된 .NET API를 사용함으로써 이러한 향상된 기능으로부터 성능 향상을 달성할 수 있습니다.
 
-[`stackalloc`](language-reference/keywords/stackalloc.md)을 사용하여 만들어진 메모리로 작업할 때나 interop API에서 메모리를 사용할 때도 유사한 요구 사항이 있을 수 있습니다. 해당 요구 사항에 대한 사용자 고유의 `ref struct` 형식을 정의할 수 있습니다.
+[`stackalloc`](language-reference/operators/stackalloc.md)을 사용하여 만들어진 메모리로 작업할 때나 interop API에서 메모리를 사용할 때도 유사한 요구 사항이 있을 수 있습니다. 해당 요구 사항에 대한 사용자 고유의 `ref struct` 형식을 정의할 수 있습니다.
 
 ## <a name="readonly-ref-struct-type"></a>`readonly ref struct` 형식
 

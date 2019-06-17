@@ -2,12 +2,12 @@
 title: C# 7.3의 새로운 기능
 description: C# 7.3의 새로운 기능에 대한 개요입니다.
 ms.date: 05/16/2018
-ms.openlocfilehash: f97bda11d1da3f6deb4597c8d7742fd47e9cf15f
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: aca5c1b82253c02eccf24af1e5c45d0203d0b1b8
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58028679"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832705"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3의 새로운 기능
 
@@ -112,7 +112,7 @@ int* pArr2 = stackalloc int[] {1, 2, 3};
 Span<int> arr = stackalloc [] {1, 2, 3};
 ```
 
-자세한 내용은 언어 참조에서 [`stackalloc` 문](../language-reference/keywords/stackalloc.md) 문서를 참조하세요.
+자세한 내용은 [`stackalloc` 연산자](../language-reference/operators/stackalloc.md) 문서를 참조하세요.
 
 ### <a name="more-types-support-the-fixed-statement"></a>더 많은 형식이 `fixed` 문을 지원함
 

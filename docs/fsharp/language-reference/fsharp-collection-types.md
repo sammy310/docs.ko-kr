@@ -2,12 +2,12 @@
 title: F# 컬렉션 형식
 description: 에 대해 알아봅니다 F# 컬렉션 형식 및.NET Framework의 컬렉션 형식에서 서로 어떻게 합니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: a3cfc3f06582c31a79dce43b583eca39f69ddf1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b370d850deaacc961dff9515ffa8c20634af4ed6
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996816"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041717"
 ---
 # <a name="f-collection-types"></a>F# 컬렉션 형식
 
@@ -83,6 +83,7 @@ ms.locfileid: "61996816"
 |iteri|O (N)|O (N)|O (N)|-|-|컬렉션의 각 요소에 지정된 된 함수를 적용 합니다. 함수에 전달 되는 정수는 요소의 인덱스를 나타냅니다.|
 |iteri2|O (N)|O (N)|-|-|-|일치 하는 두 배열 인덱스에서 가져온 요소 쌍에 지정된 된 함수를 적용 합니다. 함수에 전달 되는 정수는 요소의 인덱스를 나타냅니다. 두 배열이 동일한 길이 있어야 합니다.|
 |iter2|O (N)|O (N)|O (N)|-|-|일치 하는 두 배열 인덱스에서 가져온 요소 쌍에 지정된 된 함수를 적용 합니다. 두 배열이 동일한 길이 있어야 합니다.|
+|last|O (1)|O (N)|O (N)|-|-|해당 컬렉션의 마지막 항목을 반환합니다.|
 |길이|O (1)|O (N)|O (N)|-|-|컬렉션의 요소 수를 반환합니다.|
 |map|O (N)|O (N)|O (1)|-|-|해당 요소는 배열의 각 요소에 지정된 된 함수를 적용 한 결과 컬렉션을 빌드합니다.|
 |map2|O (N)|O (N)|O (1)|-|-|해당 요소가 쌍 단위로 두 컬렉션의 해당 요소에 지정된 된 함수를 적용 한 결과 컬렉션을 빌드합니다. 두 입력된 배열의 길이가 있어야 합니다.|

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - DeleteSetting function [Visual Basic], increasing performance
 - My.Computer.Registry object
 ms.assetid: afd9edf9-ef9b-438b-a390-d71a02dc8203
-ms.openlocfilehash: d388d349755e0847b9b1374c043c3de45e0de800
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f214378d459ecafc5843a0cbe2cb8db945f3f68b
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949385"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041713"
 ---
 # <a name="mycomputerregistry-object"></a>My.Computer.Registry 개체
 레지스트리를 조작하기 위한 속성 및 메서드를 제공합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "61949385"
   
  **클래스:** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy> (에 대 한 액세스를 제공 <xref:Microsoft.Win32.Registry>)  
   
- **어셈블리:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
+ **어셈블리:** Visual Basic 런타임 라이브러리(Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>참고자료
 

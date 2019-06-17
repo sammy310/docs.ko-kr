@@ -1,5 +1,5 @@
 ---
-title: 및 += 연산자 - C# 참조
+title: C# 연산자 - C# 참조
 ms.date: 04/30/2019
 f1_keywords:
 - cs.operators
@@ -25,7 +25,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 06/12/2019
 ms.locfileid: "67025141"
 ---
-# <a name="c-operators-c-reference"></a>+ 및 += 연산자(C# 참조)
+# <a name="c-operators-c-reference"></a>C# 연산자(C# 참조)
 
 C#은 기본 제공 형식에서 지원되는 미리 정의된 여러 연산자를 제공합니다. 예를 들어 [산술 연산자](arithmetic-operators.md)는 기본 제공 숫자 형식의 피연산자를 사용하여 산술 연산을 수행하고 [부울 논리 연산자](boolean-logical-operators.md)는 [bool](../keywords/bool.md) 피연산자를 사용하여 논리 연산을 수행합니다.
 

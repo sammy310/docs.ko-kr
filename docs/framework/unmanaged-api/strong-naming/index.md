@@ -23,7 +23,7 @@ ms.locfileid: "66490668"
 ## <a name="in-this-section"></a>섹션 내용  
   
 > [!NOTE]
->  이러한 모든 함수는 부터는 사용되지 않습니다. 권장된 대안은 [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md) 인터페이스를 참조하세요.  
+>  이러한 모든 함수는 .NET Framework 4부터는 사용되지 않습니다. 권장된 대안은 [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md) 인터페이스를 참조하세요.  
   
  [GetHashFromAssemblyFile 함수](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromassemblyfile-function.md)  
  지정된 해시 알고리즘을 사용하여 지정된 어셈블리 파일의 해시를 가져옵니다. .NET Framework 4부터 사용되지 않습니다.  

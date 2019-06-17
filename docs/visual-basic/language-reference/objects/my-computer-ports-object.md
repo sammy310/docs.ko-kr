@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Computer.Ports object
 - Ports object
 ms.assetid: 244ede4e-25b7-445b-9fd6-163550cce193
-ms.openlocfilehash: 6639499291f203f355ec6e7f9c70e19c7555cd9a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c3d2904dfc2f7d2fecbe74552b4ba8416e425d3
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054863"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041743"
 ---
 # <a name="mycomputerports-object"></a>My.Computer.Ports 개체
 컴퓨터의 직렬 포트에 액세스하기 위한 속성 및 메서드를 제공합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "62054863"
   
  **클래스:** <xref:Microsoft.VisualBasic.Devices.Ports>  
   
- **어셈블리:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
+ **어셈블리:** Visual Basic 런타임 라이브러리(Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>참고자료
 

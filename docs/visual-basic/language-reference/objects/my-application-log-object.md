@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application.Log object
 ms.assetid: 296147f9-1109-4a55-9b5e-047f1ab9466c
-ms.openlocfilehash: e4c78a12d6ba66ea88573e6ef2e5b4cc04c1121a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b3c34dc33d99ea2852baeb9c3b4758c94224d573
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949424"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041702"
 ---
 # <a name="myapplicationlog-object"></a>My.Application.Log 개체
 애플리케이션의 로그 수신기에 이벤트 및 예외 정보를 쓸 수 있는 속성 및 메서드를 제공합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "61949424"
   
  **클래스:** <xref:Microsoft.VisualBasic.Logging.Log>  
   
- **어셈블리:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
+ **어셈블리:** Visual Basic 런타임 라이브러리(Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>참고자료
 

@@ -2,12 +2,12 @@
 title: 문자열 함수
 ms.date: 03/30/2017
 ms.assetid: 338f0c26-8aee-43eb-bd1a-ec0849a376b9
-ms.openlocfilehash: 6da257cad90232426c71221dfd9d418265479bbe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3eb70151628e32f6ad0a87be8ff0cd071ae89235
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879123"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041602"
 ---
 # <a name="string-functions"></a>문자열 함수
 .NET Framework Data Provider for SQL Server(SqlClient)에서는 입력 `String`에 대해 연산을 수행하고 `String` 또는 숫자 값 결과를 반환하는 `String` 함수를 제공합니다. 이 함수는 SqlClient를 사용할 때 사용 가능한 SqlServer 네임스페이스에 있습니다. 공급자의 네임스페이스 속성이 있으면 특정 구문(예: 형식 및 함수)에 대해 이 공급자가 사용하는 접두사를 Entity Framework에서 찾을 수 있습니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "61879123"
 |`NCHAR(expression)`|유니코드 표준의 정의에 따라 지정된 정수 코드에 해당하는 유니코드 `String`을 반환합니다.<br /><br /> **인수**<br /><br /> `expression`: `Int32`입니다.<br /><br /> **반환 값**<br /><br /> 유니코드 `String`입니다.<br /><br /> **예제**<br /><br /> `SqlServer.NCHAR(65)`|  
 |`PATINDEX('%pattern%', expression)`|지정된 `String` 식에서 처음 발견된 패턴의 시작 위치를 반환합니다.<br /><br /> **인수**<br /><br /> `'%pattern%'`: ASCII 또는 유니코드 `String` 형식입니다. 와일드카드 문자를 사용할 수 있지만 첫 번째 또는 마지막 문자를 검색할 때 이외에는 패턴 앞뒤에 % 문자가 있어야 합니다.<br /><br /> `expression`: 지정된 패턴을 검색할 ASCII 또는 유니코드 `String`입니다.<br /><br /> **반환 값**<br /><br /> `Int32`입니다.<br /><br /> **예제**<br /><br /> `SqlServer.PATINDEX('abc', 'ab')`|  
 |`QUOTENAME('char_string' [, 'quote_char'])`|입력 문자열이 유효한 SQL Server 2005 구분 식별자가 되도록 구분 기호를 추가한 유니코드 `String`을 반환합니다.<br /><br /> **인수**<br /><br /> `char_string`: 유니코드 `String`입니다.<br /><br /> `quote_char`: 구분 기호로 사용되는 단일 문자로 된 문자열입니다. 작은따옴표( ' ), 왼쪽 또는 오른쪽 대괄호( [ ] ) 또는 큰따옴표( " )일 수 있습니다. `quote_char`를 지정하지 않은 경우 대괄호가 사용됩니다.<br /><br /> **반환 값**<br /><br /> 유니코드 `String`입니다.<br /><br /> **예제**<br /><br /> `SqlServer.QUOTENAME('abc[]def')`|  
-|`REPLACE(expression1, expression2, expression3)`|문자 식을 지정한 횟수만큼 반복합니다.<br /><br /> **인수**<br /><br /> `expression1`: 검색할 문자열 식입니다. 유니코드 또는 ASCII String 형식의 string_expression1일 수 있습니다.<br /><br /> `expression2`: 부분 문자열을 찾을 수입니다. 유니코드 또는 ASCII String 형식의 string_expression2일 수 있습니다.<br /><br /> `expression3`: 대체 문자열입니다. 유니코드 또는 ASCII String 형식의 string_expression3일 수 있습니다.<br /><br /> **예제**<br /><br /> `SqlServer.REPLACE('aabbcc', 'bc', 'zz')`|  
+|`REPLACE(expression1, expression2, expression3)`|문자 식을 다른 문자 식으로 바꿉니다.<br /><br /> **인수**<br /><br /> `expression1`: 검색할 문자열 식입니다. `expression1` 유니코드 또는 ASCII String 형식일 수 있습니다.<br /><br /> `expression2`: 부분 문자열을 찾을 수입니다. `expression2` 유니코드 또는 ASCII String 형식일 수 있습니다.<br /><br /> `expression3`: 대체 문자열입니다. `expression3` 유니코드 또는 ASCII String 형식일 수 있습니다.<br /><br /> **예제**<br /><br /> `SqlServer.REPLACE('aabbcc', 'bc', 'zz')`|  
 |`REPLICATE(char_expression, int_expression)`|문자 식을 지정한 횟수만큼 반복합니다.<br /><br /> **인수**<br /><br /> `char_expression`: 유니코드 또는 ASCII `String` 형식입니다.<br /><br /> `int_expression`: `Int64`(SQL Server 2000에서는 지원되지 않음) 또는 `Int32`입니다.<br /><br /> **반환 값**<br /><br /> 유니코드 또는 ASCII `String` 형식입니다.<br /><br /> **예제**<br /><br /> `SqlServer.REPLICATE('aa',2)`|  
 |`REVERSE(expression)`|문자 위치가 입력 문자열의 역순으로 된 유니코드 또는 ASCII String을 반환합니다.<br /><br /> **인수**<br /><br /> `expression`: 유니코드 또는 ASCII `String` 형식입니다.<br /><br /> **반환 값**<br /><br /> 유니코드 또는 ASCII `String` 형식입니다.<br /><br /> **예제**<br /><br /> `SqlServer.REVERSE('abcd')`|  
 |`RIGHT(char_expression, count)`|지정된 문자 수만큼 문자열의 오른쪽 부분을 반환합니다.<br /><br /> **인수**<br /><br /> `char_expression`: 유니코드 또는 ASCII String 형식입니다. character_expression을 명시적으로 변환하려면 CAST 함수를 사용합니다.<br /><br /> `count`: character_expression에서 반환할 문자 수를 지정하는 `Int64`(SQL Server 2000에서는 반환되지 않음) 또는 `Int32` 형식입니다.<br /><br /> **반환 값**<br /><br /> ASCII `String` 형식입니다.<br /><br /> **예제**<br /><br /> `SqlServer.RIGHT('SQL Server', 6)`|  

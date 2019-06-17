@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Log object
 ms.assetid: 309b14b4-8875-4b2f-9661-a734b8cbff07
-ms.openlocfilehash: 1c36382db2918952a9c84c25fb4319f7006d73d2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6f0f7d51c31c674d70d40b7cd9a717aa5a1b0f4c
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794955"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041696"
 ---
 # <a name="mylog-object"></a>My.Log 개체
-속성 및 이벤트와 예외 정보는 응용 프로그램의 로그 수신기를 쓰기 위한 메서드를 제공 합니다.  
+이벤트와 예외 정보를 애플리케이션의 로그 수신기에 쓰기 위한 속성과 메서드를 제공합니다.  
   
 ## <a name="remarks"></a>설명  
  `My.Log` 개체의 메서드 및 속성에 대한 자세한 내용은 <xref:Microsoft.VisualBasic.Logging.AspLog>를 참조하세요.  
@@ -24,4 +24,4 @@ ms.locfileid: "61794955"
   
  **클래스:** <xref:Microsoft.VisualBasic.Logging.AspLog>  
   
- **어셈블리:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]
+ **어셈블리:** Visual Basic 런타임 라이브러리(Microsoft.VisualBasic.dll)

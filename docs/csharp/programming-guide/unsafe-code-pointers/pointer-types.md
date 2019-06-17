@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 7f04cfbac72008332a429c4e0ad8bd3f4e60cc83
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 3183f8434dd8a6bc8182e2257d0ab3c7e7c014c4
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880322"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833432"
 ---
 # <a name="pointer-types-c-programming-guide"></a>포인터 형식(C# 프로그래밍 가이드)
 
@@ -45,7 +45,7 @@ int *p1, *p2, *p3;   // Invalid in C#
 
 `myType*` 형식의 포인터 변수 값은 `myType` 형식의 변수 주소입니다. 다음은 포인터 형식 선언의 예제입니다.
 
-|예제|설명|
+|예|설명|
 |-------------|-----------------|
 |`int* p`|`p`는 정수에 대한 포인터입니다.|
 |`int** p`|`p`는 정수에 대한 포인터를 가리키는 포인터입니다.|
@@ -82,7 +82,7 @@ int* myVariable;
 |`++` 및 `--`|포인터를 증가 및 감소시킵니다.|
 |`+` 및 `-`|포인터 연산을 수행합니다.|
 |`==`, `!=`, `<`, `>`, `<=` 및 `>=`|포인터를 비교합니다.|
-|[`stackalloc` 연산자](../../language-reference/keywords/stackalloc.md)|스택에 메모리를 할당합니다.|
+|[`stackalloc` 연산자](../../language-reference/operators/stackalloc.md)|스택에 메모리를 할당합니다.|
 |[`fixed` statement](../../language-reference/keywords/fixed-statement.md)|해당 주소를 찾을 수 있도록 임시로 변수를 고정합니다.|
 
 포인터에 관련 연산자에 대한 자세한 내용은 [포인터 관련 연산자](../../language-reference/operators/pointer-related-operators.md)를 참조하세요.

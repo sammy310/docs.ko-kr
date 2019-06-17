@@ -7,12 +7,12 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: 2c49c8517e15534121b0f8dbc04902b46a92ef20
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 88e2b93fda786db15b3a3a693bdb9293ed31df4c
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959367"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833216"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed 문(C# 참조)
 
@@ -63,7 +63,7 @@ fixed (byte* ps = srcarray, pd = dstarray)
 }
 ```
 
-가비지 수집의 대상이 아니므로 고정할 필요가 없는 스택에서 메모리를 할당할 수 있습니다. 이를 위해 [`stackalloc` 연산자](stackalloc.md)를 사용합니다.
+가비지 수집의 대상이 아니므로 고정할 필요가 없는 스택에서 메모리를 할당할 수 있습니다. 이를 위해 [`stackalloc` 연산자](../operators/stackalloc.md)를 사용합니다.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 

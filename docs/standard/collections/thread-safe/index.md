@@ -22,7 +22,7 @@ ms.locfileid: "66816201"
   
  .NET Framework 2.0에 도입된 컬렉션 클래스는 <xref:System.Collections.Generic?displayProperty=nameWithType> 네임스페이스에 있습니다. 여기에는 <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602> 등이 포함됩니다. 이러한 클래스는 .NET Framework 1.0 클래스에 비해 형식 안정성 및 성능을 향상시킵니다. 그러나 .NET Framework 2.0 컬렉션 클래스는 스레드 동기화를 제공하지 않습니다. 여러 스레드에서 동시에 항목이 추가되거나 제거되는 경우 사용자 코드에서는 모든 동기화를 제공해야 합니다.  
   
- .NET Framework 4의 동시 컬렉션 클래스는 .NET Framework 2.0 컬렉션 클래스의 형식 안전성을 제공할 뿐만 아니라  컬렉션이 제공하는 스레드로부터의 안전성보다 더 효율적이고 안전하기 때문에 권장됩니다.  
+ .NET Framework 4의 동시 컬렉션 클래스는 .NET Framework 2.0 컬렉션 클래스의 형식 안전성을 제공할 뿐만 아니라 .NET Framework 1.0 컬렉션이 제공하는 스레드로부터의 안전성보다 더 효율적이고 안전하기 때문에 권장됩니다.  
   
 ## <a name="fine-grained-locking-and-lock-free-mechanisms"></a>세부적인 잠금 및 잠금 해제 메커니즘  
  동시 컬렉션 형식의 일부에서는 .NET Framework 4에 새로 도입된 <xref:System.Threading.SpinLock>, <xref:System.Threading.SpinWait>, <xref:System.Threading.SemaphoreSlim> 및 <xref:System.Threading.CountdownEvent>와 같은 간단한 동기화 메커니즘을 사용합니다. 실제로 이러한 동기화 형식이 스레드를 Wait 상태로 전환하기 전 짧은 기간 동안에는 일반적으로 *사용 중인 회전*을 사용합니다. 대기 시간이 매우 짧을 경우 회전은 비용이 많이 드는 커널 전환을 포함하는 대기보다 훨씬 계산 비용이 적습니다. 회전을 사용하는 컬렉션 클래스의 경우 이 효율성 덕분에 여러 스레드가 매우 빠른 속도로 항목을 추가하고 제거할 수 있습니다. 회전 및 차단에 대한 자세한 내용은 [SpinLock](../../../../docs/standard/threading/spinlock.md) 및 [SpinWait](../../../../docs/standard/threading/spinwait.md)를 참조하세요.  
