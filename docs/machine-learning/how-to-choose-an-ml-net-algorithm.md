@@ -21,7 +21,7 @@ ms.locfileid: "66722625"
 
 알고리즘은 **모델**을 생성하기 위해 실행하는 수학입니다. 다른 알고리즘은 다른 특징의 모델을 생성합니다. 
 
-ML.NET을 사용하여 동일한 알고리즘을 다른 작업에 적용할 수 있습니다. 예를 들어 확률적 하강법 좌표 상승법(Stochastic Descent Coordinated Ascent)을 이진 분류, 다중 클래스 분류 및 회귀에 사용할 수 있습니다. 차이점은 작업에 맞추기 위해 알고리즘의 출력이 해석되는 방식에 있습니다. 
+ML.NET을 사용하여 동일한 알고리즘을 다른 작업에 적용할 수 있습니다. 예를 들어 확률적 이중 좌표 상승법(Stochastic Descent Coordinated Ascent)을 이진 분류, 다중 클래스 분류 및 회귀에 사용할 수 있습니다. 차이점은 작업에 맞추기 위해 알고리즘의 출력이 해석되는 방식에 있습니다. 
 
 각 알고리즘/작업 조합에 대해 ML.NET은 학습 알고리즘을 실행하고 해석을 수행하는 구성 요소를 제공합니다. 이러한 구성 요소를 트레이너라고 합니다. 예를 들어 <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>는 **회귀** 작업에 적용된 **StochasticDualCoordinatedAscent** 알고리즘을 사용합니다.
 
@@ -42,7 +42,7 @@ ML.NET을 사용하여 동일한 알고리즘을 다른 작업에 적용할 수 
 |알고리즘|속성|트레이너|
 |---------|----------|--------|
 |평균 퍼셉트론(Averaged perceptron)|텍스트 분류에 최적|<xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>|
-|확률적 이중 조정된 ascent|좋은 기본 성능에는 튜닝이 필요하지 않음|<xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>|
+|확률적 이중 좌표 상승|좋은 기본 성능에는 튜닝이 필요하지 않음|<xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>|
 |L-BFGS|기능 수가 클 경우에 사용합니다. 로지스틱 회귀 학습 통계를 생성하지만 AveragedPerceptronTrainer처럼 규모 조정은 안 됩니다.|<xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>|
 |기호 확률적 경사 하강법(Symbolic stochastic gradient descent)|가장 빠르고 가장 정확한 선형 이진 분류 트레이너입니다. 다수의 프로세서에 맞게 규모 조정이 가능합니다.|<xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>|
 

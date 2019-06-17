@@ -146,7 +146,7 @@ Azure API Management를 통해 키, 토큰 및 IP 필터링을 사용하여 API�
 
 [Ocelot](https://github.com/ThreeMammals/Ocelot)은 더 간단한 방법으로 사용하는 API 게이트웨이입니다. Ocelot은 시스템에 대한 통합된 진입점이 필요한 마이크로 서비스 아키텍처용으로 특별히 만들어진 오픈 소스 .NET Core 기반 API 게이트웨이입니다. 간단하고 빠르고 확장 가능하며 다양한 기능과 함께 라우팅 및 인증을 제공합니다.
 
-[eShopOnContainers 참조 애플리케이션](https://github.com/dotnet-architecture/eShopOnContainers)에서 Ocelot을 선택하는 주요 원인은 Ocelot이 Docker Host, Kubernetes, Service Fabric 등의 마이크로 서비스/컨테이너를 배포하는 것과 동일한 애플리케이션 배포 환경에 배포할 수 있는 .NET Core 기반의 간단한 API 게이트웨이이기 때문입니다. 또한 .NET Core를 기반으로 하므로 Linux 또는 Windows에 배포할 수 있는 플랫폼 간 API 게이트웨이입니다.
+[eShopOnContainers 참조 애플리케이션](https://github.com/dotnet-architecture/eShopOnContainers)에서 Ocelot을 선택하는 주요 원인은 Ocelot이 Docker Host, Kubernetes 등의 마이크로서비스/컨테이너를 배포하는 것과 동일한 애플리케이션 배포 환경에 배포할 수 있는 .NET Core 기반의 간단한 API 게이트웨이이기 때문입니다. 또한 .NET Core를 기반으로 하므로 Linux 또는 Windows에 배포할 수 있는 플랫폼 간 API 게이트웨이입니다.
 
 컨테이너에서 실행되는 사용자 지정 API 게이트웨이를 보여 주는 이전 다이어그램은 컨테이너 및 마이크로 서비스 기반 애플리케이션에서 Ocelot을 실행하는 방법과 동일합니다.
 

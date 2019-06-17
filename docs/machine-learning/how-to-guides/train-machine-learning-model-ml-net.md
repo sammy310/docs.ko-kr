@@ -1,16 +1,16 @@
 ---
 title: 모델 학습 및 평가
-description: ML.NET에서 기계 학습 모델을 학습 및 평가하는 방법 알아보기
-ms.date: 05/03/2019
+description: ML.NET을 사용한 기계 학습 모델 빌드, 학습된 매개 변수 추출 및 성능 측정 방법을 알아봅니다. 이 샘플에서는 회귀 모델을 학습하지만 개념은 대부분의 다른 알고리즘에 널리 적용할 수 있습니다.
+ms.date: 06/11/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc, how-to
-ms.openlocfilehash: 3a3f1f672ed078754162dc377cf5c239d206b715
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.custom: mvc, how-to, title-hack-0612
+ms.openlocfilehash: b7799d19f5ad51ce509cc6872d9053cad1158552
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557845"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025586"
 ---
 # <a name="train-and-evaluate-a-model"></a>모델 학습 및 평가
 

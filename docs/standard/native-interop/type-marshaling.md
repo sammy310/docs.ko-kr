@@ -4,12 +4,12 @@ description: .NET에서 형식을 네이티브 표현으로 마샬링하는 방�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: cb18a7607a3d99907401543b4d37995a956a3920
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2cb8898b52b4b4afba1184a886e16c9f7f68f03a
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065966"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041791"
 ---
 # <a name="type-marshaling"></a>형식 마샬링
 
@@ -79,6 +79,20 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 | `System.Runtime.InteropServices.HandleRef` | `void*` |
 
 이러한 기본값이 원하는 동작을 정확히 수행하지 않는 경우 매개 변수의 마샬링 방식을 사용자 지정할 수 있습니다. [매개 변수 마샬링](customize-parameter-marshaling.md) 문서에서는 여러 매개 변수 형식의 마샬링 방식을 사용자 지정하는 방법을 안내합니다.
+
+## <a name="default-marshaling-in-com-scenarios"></a>COM 시나리오의 기본 마샬링
+
+.NET에서 COM 개체에 대한 메서드를 호출할 때 .NET 런타임은 일반적인 COM 의미 체계와 일치하도록 기본 마샬링 규칙을 변경합니다. 다음 표에서는 .NET 런타임이 COM 시나리오에서 사용하는 규칙을 나열합니다.
+
+| .NET 형식 | 네이티브 형식(COM 메서드 호출) |
+|-----------|--------------------------------|
+| `bool`    | `VARIANT_BOOL`                 |
+| `StringBuilder` | `LPWSTR`                 |
+| `string`  | `BSTR`                         |
+| 대리자 형식 | .NET Framework의 `_Delegate*`. .NET Core에서는 허용되지 않습니다. |
+| `System.Drawing.Color` | `OLECOLOR`        |
+| .NET 배열 | `SAFEARRAY`                   |
+| `string[]` | `BSTR`의 `SAFEARRAY`        |
 
 ## <a name="marshaling-classes-and-structs"></a>클래스 및 구조체 마샬링
 

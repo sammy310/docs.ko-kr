@@ -95,5 +95,5 @@ condition ? ref consequent : ref alternative
 - [C# 연산자](index.md)
 - [if-else 문](../keywords/if-else.md)
 - [?. 및 ?[] 연산자](member-access-operators.md#null-conditional-operators--and-)
-- [?? operator](null-coalescing-operator.md)
+- [?? 연산자](null-coalescing-operator.md)
 - [ref 키워드](../keywords/ref.md)

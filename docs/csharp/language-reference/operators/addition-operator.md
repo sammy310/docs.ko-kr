@@ -1,5 +1,5 @@
 ---
-title: + + 및 += 연산자(C# 참조)
+title: + 및 += 연산자 - C# 참조
 ms.custom: seodec18
 ms.date: 05/24/2019
 f1_keywords:
@@ -43,7 +43,7 @@ C# 6부터 [문자열 보간](../tokens/interpolated.md)은 문자열 형식을 
 
 [!code-csharp-interactive[delegate combination](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddDelegates)]
 
-대리자 제거를 수행 하려면 사용 합니다 [ `-` 연산자](subtraction-operator.md#delegate-removal)합니다.
+대리자 제거를 수행하려면 [`-` 연산자](subtraction-operator.md#delegate-removal)를 사용합니다.
 
 대리자 형식에 대한 자세한 내용은 [대리자](../../programming-guide/delegates/index.md)를 참조하세요.
 

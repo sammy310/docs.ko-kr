@@ -64,7 +64,7 @@ ms.locfileid: "66491103"
 |*ss*|"0"부터 "59" 범위의 초입니다.|  
 |*fffffff*|선택적인 초의 소수 부분입니다.  값 범위는 "0000001"(틱 1개 또는 1천만 분의 1초)에서 "9999999"(9,999,999천만 분의 1초 또는 1초-틱 1개)까지입니다.|  
   
- "g" 및 "G" 형식 지정자와 달리 "c" 형식 지정자는 문화권을 구분하지 않으며, .NET Framework 4 이전의 모든 .NET Framework 버전에 공통적으로 적용되는 고정된 <xref:System.TimeSpan>TimeSpan 값의 문자열 표현을 생성합니다. “c”는 기본 <xref:System.TimeSpan> 형식 문자열입니다. 즉, <xref:System.TimeSpan.ToString?displayProperty=nameWithType> 메서드는 “c” 형식 문자열을 사용하여 시간 간격 값의 서식을 지정합니다.  
+ "g" 및 "G" 형식 지정자와 달리 "c" 형식 지정자는 문화권을 구분하지 않으며, .NET Framework 4 이전의 모든 .NET Framework 버전에 공통적으로 적용되는 고정된 <xref:System.TimeSpan> 값의 문자열 표현을 생성합니다. “c”는 기본 <xref:System.TimeSpan> 형식 문자열입니다. 즉, <xref:System.TimeSpan.ToString?displayProperty=nameWithType> 메서드는 “c” 형식 문자열을 사용하여 시간 간격 값의 서식을 지정합니다.  
   
 > [!NOTE]
 >  <xref:System.TimeSpan>은 "c" 표준 형식 문자열과 동작이 동일한 "t" 및 "T" 표준 형식 문자열도 지원합니다.  

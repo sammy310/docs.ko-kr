@@ -40,7 +40,7 @@ ms.locfileid: "66490824"
  [!code-vb[CDS_CountdownEvent#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_countdownevent/vb/module1.vb#01)]  
   
 ## <a name="countdownevent-with-cancellation"></a>취소를 사용하는 CountdownEvent  
- 다음 예제는 취소 토큰을 사용하여 <xref:System.Threading.CountdownEvent>에서 대기 작업을 취소하는 방법을 보여줍니다. 기본 패턴은 에 도입된 통합 취소를 위한 모델을 따릅니다. 자세한 내용은 [관리되는 스레드의 취소](../../../docs/standard/threading/cancellation-in-managed-threads.md)를 참조하세요.  
+ 다음 예제는 취소 토큰을 사용하여 <xref:System.Threading.CountdownEvent>에서 대기 작업을 취소하는 방법을 보여줍니다. 기본 패턴은 .NET Framework 4에 도입된 통합 취소를 위한 모델을 따릅니다. 자세한 내용은 [관리되는 스레드의 취소](../../../docs/standard/threading/cancellation-in-managed-threads.md)를 참조하세요.  
   
  [!code-csharp[CDS_CountdownEvent#02](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_countdownevent/cs/countdownevent.cs#02)]
  [!code-vb[CDS_CountdownEvent#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_countdownevent/vb/canceleventwait.vb#02)]  

@@ -33,7 +33,7 @@ ms.locfileid: "66490008"
 >
 > .NET Framework 버전과 CLR 버전은 다릅니다.
 > - .NET Framework의 버전은 .NET Framework 클래스 라이브러리를 구성하는 어셈블리 세트를 기반으로 정해집니다. 예를 들어, .NET Framework 버전에는 4.5, 4.6.1, 4.7.2가 있습니다.
->- CLR의 버전은 .NET Framework 애플리케이션이 실행되는 런타임을 기반으로 정해집니다. 하나의 CLR 버전이 여러 개의.NET Framework 버전을 지원합니다. 예를들어, CLR 버전 4.0.30319.*xxxxx*는 .NET Framework 버전 4~4.5.2를 지원하고, CLR버전 4.0.30319.42000은 .NET Framework 4.6.에서 시작하는 .NET Framework 버전을 지원합니다.
+>- CLR의 버전은 .NET Framework 애플리케이션이 실행되는 런타임을 기반으로 정해집니다. 하나의 CLR 버전이 여러 개의.NET Framework 버전을 지원합니다. 예를들어, CLR 버전 4.0.30319.*xxxxx*는 .NET Framework 버전 4~4.5.2를 지원하고, *xxxxx*는 42000보다 작으며, CLR버전 4.0.30319.42000은 .NET Framework 4.6.에서 시작하는 .NET Framework 버전을 지원합니다.
 >
 > 자세한 내용은 [.NET Framework 버전 및 종속성](versions-and-dependencies.md)을 참조하십시오.
 
@@ -90,7 +90,7 @@ ms.locfileid: "66490008"
 |.NET Framework 4.7|Windows 10 Creators Update: 460798<br />다른 모든 Windows 운영 체제(다른 Windows 10 운영 체제 포함): 460805|
 |.NET Framework 4.7.1|Windows 10 Fall Creators Update 및 Windows Server, 버전 1709: 461308<br/>다른 모든 Windows 운영 체제(다른 Windows 10 운영 체제 포함): 461310|
 |.NET Framework 4.7.2|Windows 10 2018년 4월 업데이트 및 Windows Server, 버전 1803: 461808<br/>Windows 10 2018년 4월 업데이트 및 Windows Server, 버전 1803 이외의 모든 Windows 운영 체제: 461814|
-|.NET Framework 4.8|Windows 10 2019년 5월 업데이트 528040<br/>다른 모든 Windows 운영 체제(다른 Windows 10 운영 체제 포함): 528049|
+|.NET Framework 4.8|Windows 10 2019년 5월 업데이트: 528040<br/>다른 모든 Windows 운영 체제(다른 Windows 10 운영 체제 포함): 528049|
 
 이 값은 다음과 같이 사용할 수 있습니다.
 
@@ -204,7 +204,7 @@ ms.locfileid: "66490008"
 
     반환된 `System.Version`개체는 현재 코드를 실행하는 런타임 버전을 식별합니다. 컴퓨터에 설치된 어셈블리 버전이나 다른 런타임 버전은 반환하지 않습니다.
 
-    .NET Framework 버전이 4, 4.5, 4.5.1 및 4.5.2의 경우 문자열 표시가 4.0.30319.*xxxxx* 형식인 <xref:System.Version>개체를 반환합니다. .NET Framework 4.6 및 이후 버전의 경우 형식은 4.0.30319.42000입니다.
+    .NET Framework 버전 4, 4.5, 4.5.1 및 4.5.2의 경우 반환된 <xref:System.Version>개체 문자열 표현은 4.0.30319.*xxxxx* 형식이며, *xxxxx*는 42000보다 작습니다. .NET Framework 4.6 및 이후 버전의 경우 형식은 4.0.30319.42000입니다.
 
 2. `Version`개체를 가져온 후, 다음과 같이 개체를 쿼리하십시오.
 

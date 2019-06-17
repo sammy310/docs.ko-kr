@@ -52,7 +52,7 @@ ms.locfileid: "66486980"
 > [!NOTE]
 >  처리기는 어셈블리를 로드 소스 컨텍스트에 로드하거나, 로드 컨텍스트에 로드하거나, 컨텍스트 없이 로드해야 합니다. 처리기가 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> 또는 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> 메서드를 사용하여 어셈블리를 리플렉션 전용 컨텍스트에 로드하는 경우 <xref:System.AppDomain.AssemblyResolve> 이벤트를 발생시킨 로드 시도가 실패합니다.  
   
- 적합한 어셈블리를 반환하는 것은 이벤트 처리기의 책임입니다. 처리기는 <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> 속성 값을 <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29> 생성자에 전달하여 요청된 어셈블리의 표시 이름을 구문 분석할 수 있습니다. <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType>부터 처리기는  속성을 사용하여 현재 요청이 다른 어셈블리의 종속성인지 여부를 확인합니다. 이 정보는 종속성을 충족하는 어셈블리를 식별하는 데 도움이 됩니다.  
+ 적합한 어셈블리를 반환하는 것은 이벤트 처리기의 책임입니다. 처리기는 <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> 속성 값을 <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29> 생성자에 전달하여 요청된 어셈블리의 표시 이름을 구문 분석할 수 있습니다. .NET Framework 4부터 처리기는 <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> 속성을 사용하여 현재 요청이 다른 어셈블리의 종속성인지 여부를 확인합니다. 이 정보는 종속성을 충족하는 어셈블리를 식별하는 데 도움이 됩니다.  
   
  이벤트 처리기는 요청된 버전과 다른 어셈블리 버전을 반환할 수 있습니다.  
   

@@ -23,7 +23,7 @@ ms.locfileid: "66489994"
   
 - 관리되는 어셈블리의 <xref:System.Reflection.AssemblyFileVersionAttribute> 및 <xref:System.Reflection.AssemblyInformationalVersionAttribute> 특성은 .NET Framework 4.6 및 해당 포인트 릴리스의 경우 `4.6.X.0` 형식, 그리고 .NET Framework 4.7의 경우에는 `4.7.X.0` 형식의 <xref:System.Version> 값을 포함합니다.  
   
-- .NET Framework 4.6 부터는 합니다 <xref:System.Environment.Version%2A?displayProperty=nameWithType> 속성은 최종된 버전 문자열을 반환 합니다. `4.0.30319.42000`합니다. .NET framework 4, 4.5, 4.5.1 및 4.5.2에서는 버전 문자열 형식으로 반환 `4.0.30319.xxxxx` 여기서 `xxxxx` 미만 42000 (예: "4.0.30319.18010") 됩니다. <xref:System.Environment.Version%2A?displayProperty=nameWithType> 속성에서 새 종속성을 취하는 애플리케이션 코드는 권장하지 않습니다.
+- .NET Framework 4.6부터 <xref:System.Environment.Version%2A?displayProperty=nameWithType> 속성은 최종 버전 문자열 `4.0.30319.42000`을 반환합니다. .NET Framework 4, 4.5, 4.5.1 및 4.5.2에서는 `xxxxx`가 42000보다 작은 `4.0.30319.xxxxx` 형식의 버전 문자열을 반환합니다(예: "4.0.30319.18010"). <xref:System.Environment.Version%2A?displayProperty=nameWithType> 속성에서 새 종속성을 취하는 애플리케이션 코드는 권장하지 않습니다.
   
 ### <a name="handling-the-product-versioning-changes"></a>제품 버전 관리 변경 내용 처리  
  일반적으로 애플리케이션은 .NET Framework 및 설치 디렉터리 검색의 런타임 버전과 같은 항목 검색을 위한 권장 기술에 의존해야 합니다.  

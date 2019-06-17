@@ -63,9 +63,9 @@ Azure에 배포된 컨테이너의 유효성 검사를 수행하거나 애플리
 
 **그림 4-4** Visual Studio에서 Azure App Service에 단일 컨테이너 애플리케이션 게시
 
-Docker 없이 Azure App Service에서 지원되지 않는 다른 기능, 프레임워크 또는 종속성이 필요한 경우 Azure 팀이 App Service에서 해당 종속성을 업데이트할 때까지 기다려야 했습니다. 또는 Azure Service Fabric, Azure Cloud Services 또는 VM과 같은 다른 서비스도 전환해야 했습니다. 여기서는 추가적으로 제어하고 애플리케이션에 대한 필수 구성 요소 또는 프레임워크를 설치할 수 있습니다.
+Docker 없이 Azure App Service에서 지원되지 않는 다른 기능, 프레임워크 또는 종속성이 필요한 경우 Azure 팀이 App Service에서 해당 종속성을 업데이트할 때까지 기다려야 했습니다. 또는, 추가 제어 기능이 있고 애플케이션에 필요한 구성 요소 또는 프레임워크를 설치할 수 있는 Azure Cloud Services 또는 VM과 같은 다른 서비스로 전환해야 했습니다.
 
-Visual Studio 2017의 컨테이너 지원은 그림 4-4에 표시된 대로 애플리케이션 환경에서 원하는 작업이 무엇이든 포함할 수 있는 기능을 제공합니다. 이를 컨테이너에서 실행하므로 애플리케이션에 종속성을 추가하는 경우 Dockerfile 또는 Docker 이미지에서 종속성을 포함할 수 있습니다.
+Visual Studio 2017 이상의 컨테이너 지원은 그림 4-4에 표시된 대로 애플리케이션 환경에서 원하는 작업이 무엇이든 포함할 수 있는 기능을 제공합니다. 이를 컨테이너에서 실행하므로 애플리케이션에 종속성을 추가하는 경우 Dockerfile 또는 Docker 이미지에서 종속성을 포함할 수 있습니다.
 
 또한 그림 4-4에 표시된 대로 게시 흐름은 컨테이너 레지스트리를 통해 이미지를 푸시합니다. Azure Container Registry(Azure에서 배포와 가깝고 Azure Active Directory 그룹 및 계정에 의해 보호되는 레지스트리) 또는 Docker 허브 또는 온-프레미스 레지스트리와 같은 다른 Docker 레지스트리일 수 있습니다.
 

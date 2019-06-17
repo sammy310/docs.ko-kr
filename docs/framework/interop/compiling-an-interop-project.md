@@ -24,7 +24,7 @@ ms.locfileid: "66489763"
 
  Interop 어셈블리를 참조하는 방법에는 다음 두 가지가 있습니다.
 
-- 포함 interop 형식:  및 Visual Studio 2010부터 interop 어셈블리의 형식 정보를 실행 파일에 포함하도록 컴파일러에 지시할 수 있습니다. 이것이 권장되는 방법입니다.
+- 포함 interop 형식: .NET Framework 4 및 Visual Studio 2010부터 interop 어셈블리의 형식 정보를 실행 파일에 포함하도록 컴파일러에 지시할 수 있습니다. 이것이 권장되는 방법입니다.
 
 - interop 어셈블리 배포: interop 어셈블리에 대한 표준 참조를 만들 수 있습니다. 이 경우 interop 어셈블리를 애플리케이션에 배포해야 합니다.
 

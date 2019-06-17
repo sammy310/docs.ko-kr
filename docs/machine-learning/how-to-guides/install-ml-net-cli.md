@@ -3,12 +3,12 @@ title: ML.NET CLI(명령줄 인터페이스) 도구를 설치하는 방법
 description: ML.NET CLI(명령줄 인터페이스) 도구 개요 및 설치
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 9560aa846a1aefabadbd7d4faf8bd306ba72e0de
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 4888acd10570318ef53dc4b1a5a4ff5d8dc0c99b
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557866"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832928"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>ML.NET CLI(명령줄 인터페이스) 도구를 설치하는 방법
 
@@ -34,7 +34,7 @@ ML.NET CLI는 다른 DotNet Global Tool처럼 설치됩니다. `dotnet tool inst
 다음 예제에서는 기본 NuGet 피드 위치에 ML.NET CLI를 설치하는 방법을 보여 줍니다.
 
 ```console
-> dotnet tool install -g mlnet
+dotnet tool install -g mlnet
 ```
 
 도구를 설치할 수 없는 경우(즉 기본 NuGet 피드에서 사용할 수 없는 경우) 오류 메시지가 표시됩니다. 예상한 피드가 확인되고 있는지 검사합니다.
@@ -49,7 +49,7 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 다음 명령을 입력하여 설치가 완료되었는지 확인할 수 있습니다.
 
 ```console
-> mlnet
+mlnet
 ```
 
 'auto-train' 명령처럼 mlnet 도구에 대해 사용 가능한 명령의 도움말을 참조해야 합니다.
@@ -59,13 +59,13 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 이전 릴리스 버전 또는 특정 버전의 도구를 설치하려는 경우 다음 형식을 사용하여 [프레임워크](../../standard/frameworks.md)를 지정할 수 있습니다.
 
 ```console
-> dotnet tool install -g mlnet --framework <FRAMEWORK>
+dotnet tool install -g mlnet --framework <FRAMEWORK>
 ```
 
 다음 명령을 입력하여 패키지가 올바르게 설치되었는지 확인할 수도 있습니다.
 
 ```console
-> dotnet tool list -g
+dotnet tool list -g
 ```
 
 ## <a name="uninstall-the-cli-package"></a>CLI 패키지 제거
@@ -73,7 +73,7 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 로컬 컴퓨터에서 패키지를 제거하려면 다음 명령을 입력합니다.
 
 ```console
-> dotnet tool uninstall mlnet -g
+dotnet tool uninstall mlnet -g
 ```
 
 ## <a name="update-the-cli-package"></a>CLI 패키지 업데이트
@@ -81,7 +81,7 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 로컬 컴퓨터에서 패키지를 업데이트하려면 다음 명령을 입력합니다.
 
 ```console
-> dotnet tool update -g mlnet
+dotnet tool update -g mlnet
 ```
 
 ## <a name="set-up-cli-suggestions-tab-based-auto-completion"></a>CLI 제안(탭 기반 자동 완성) 설정
@@ -101,7 +101,7 @@ ML.NET CLI는 `System.CommandLine`을 기반으로 하므로 탭 완성을 기�
 1. 다음 명령을 실행하여 `dotnet-suggest` 글로벌 도구를 설치합니다.
 
     ```console
-    > dotnet tool install dotnet-suggest -g
+    dotnet tool install dotnet-suggest -g
     ```
 
 2. 셸 프로필에 적합한 Shim 스크립트를 추가합니다. 셸 프로필 파일을 만들어야 할 수 있습니다. Shim 스크립트는 셸의 완성 요청을 `dotnet-suggest` 도구로 전달하며 적합한 `System.CommandLine` 기반 앱에 위임됩니다.
@@ -111,7 +111,7 @@ ML.NET CLI는 `System.CommandLine`을 기반으로 하므로 탭 완성을 기�
     * PowerShell의 경우 [dotnet-suggest-shim.ps1](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1)의 콘텐츠를 PowerShell 프로필에 추가합니다. 콘솔에서 다음 명령을 실행하여 PowerShell 프로필의 예상 경로를 찾을 수 있습니다.
 
     ```console
-    > echo $profile
+    echo $profile
     ``` 
 
 (다른 셸의 경우 [검색](https://github.com/dotnet/System.CommandLine/issues?q=is%3Aissue+is%3Aopen+label%3A%22shell+suggestion%22) 또는 [문제](https://github.com/dotnet/System.CommandLine/issues) 열기)

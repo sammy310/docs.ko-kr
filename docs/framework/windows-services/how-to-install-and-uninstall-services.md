@@ -47,7 +47,7 @@ F5 키를 눌러 Visual Studio 개발 환경에서 직접 Windows 서비스 프�
     installutil <yourproject>.exe
     ```
 
-     Visual Studio용 개발자 명령 프롬프트를 사용하는 경우 *InstallUtil.exe*가 시스템 경로에 있어야 합니다. 그렇지 않으면 해당 파일을 경로에 추가하거나 정규화된 경로를 사용하여 호출하면 됩니다. 이 도구는 *%WINDIR%\Microsoft.NET\Framework[64]\\<framework_version>\> 폴더에 .NET Framework와 함께 설치됩니다.
+     Visual Studio용 개발자 명령 프롬프트를 사용하는 경우 *InstallUtil.exe*가 시스템 경로에 있어야 합니다. 그렇지 않으면 해당 파일을 경로에 추가하거나 정규화된 경로를 사용하여 호출하면 됩니다. 이 도구는 *%WINDIR%\Microsoft.NET\Framework[64]\\<framework_version\>* 에 .NET Framework와 함께 설치됩니다.
 
      예:
      - 32비트 버전의 .NET Framework 4 또는 4.5 이상인 경우 Windows 설치 디렉터리가 *C:\Windows*이면 기본 경로는 *C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe*입니다.

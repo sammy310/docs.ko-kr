@@ -44,7 +44,7 @@ ms.locfileid: "66489591"
   
 <a name="etw"></a>   
 ### <a name="garbage-collection-etw-events"></a>가비지 컬렉션 ETW 이벤트  
- ETW(Windows용 이벤트 추적)는 .NET Framework에서 제공하는 프로파일링 및 디버깅 지원을 보완하는 추적 시스템입니다. [부터 ](../../../docs/framework/performance/garbage-collection-etw-events.md)가비지 컬렉션 ETW 이벤트는 통계 관점에서 관리되는 힙을 분석하는 데 유용한 정보를 캡처합니다. 예를 들어 가비지 수집이 수행되려고 할 때 발생하는 `GCStart_V1` 이벤트는 다음과 같은 정보를 제공합니다.  
+ ETW(Windows용 이벤트 추적)는 .NET Framework에서 제공하는 프로파일링 및 디버깅 지원을 보완하는 추적 시스템입니다. .NET Framework 4부터 [가비지 수집 ETW 이벤트](../../../docs/framework/performance/garbage-collection-etw-events.md)는 통계 관점에서 관리되는 힙을 분석하는 데 유용한 정보를 캡처합니다. 예를 들어 가비지 수집이 수행되려고 할 때 발생하는 `GCStart_V1` 이벤트는 다음과 같은 정보를 제공합니다.  
   
 - 수집되는 개체 세대  
   

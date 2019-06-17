@@ -28,7 +28,7 @@ ms.locfileid: "66489683"
 CAS(코드 액세스 보안 정책 도구)(Caspol.exe)를 사용하면 사용자나 관리자가 컴퓨터 정책 수준, 사용자 정책 수준 및 엔터프라이즈 정책 수준의 보안 정책을 수정할 수 있습니다.  
   
 > [!IMPORTANT]
->  [부터는 Caspol.exe가 CAS 정책에 영향을 주려면 \<](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)legacyCasPolicy> 요소`true`를 로 설정해야 합니다. CasPol.exe에 의해 표시 또는 수정되는 모든 설정은 CAS 정책을 사용하도록 선택하는 애플리케이션에만 영향을 줍니다. 자세한 내용은 [보안 변경 내용](../../../docs/framework/security/security-changes.md)을 참조하세요.  
+>  .NET Framework 4부터는 Caspol.exe가 CAS 정책에 영향을 주려면 [\<legacyCasPolicy> 요소](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)를 `true`로 설정해야 합니다. CasPol.exe에 의해 표시 또는 수정되는 모든 설정은 CAS 정책을 사용하도록 선택하는 애플리케이션에만 영향을 줍니다. 자세한 내용은 [보안 변경 내용](../../../docs/framework/security/security-changes.md)을 참조하세요.  
   
 > [!NOTE]
 >  64비트 컴퓨터에 64비트 및 32비트 버전의 보안 정책이 포함됩니다. 정책 변경 내용을 32비트와 64비트 애플리케이션에 적용하도록 하려면, Caspol.exe의 32비트와 64비트 버전을 모두 실행해야 합니다.  

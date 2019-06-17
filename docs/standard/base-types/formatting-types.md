@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac253e5ff294360fff89e9746ca3038b4e1ee75c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f3273b8babe44a48d6952620e4331cba4f22b6e9
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751106"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026034"
 ---
 # <a name="formatting-types-in-net"></a>.NET의 서식 지정 형식
 
@@ -123,7 +123,7 @@ ms.locfileid: "64751106"
 [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]
 
 > [!WARNING]
-> [!INCLUDE[win81](../../../includes/win81-md.md)]부터 [!INCLUDE[wrt](../../../includes/wrt-md.md)]에는 기본 형식 지원을 제공하는 단일 메서드([IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A))를 사용하는 <xref:Windows.Foundation.IStringable> 인터페이스가 포함됩니다. 그러나 관리되는 형식은 `IStringable` 인터페이스를 구현하지 않는 것이 좋습니다. 자세한 내용은 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 참조 페이지의 " `IStringable` 및 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 인터페이스" 단원을 참조하세요.
+> [!INCLUDE[win81](../../../includes/win81-md.md)]부터 Windows Runtime에는 기본 형식 지원을 제공하는 단일 메서드([IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A))를 사용하는 <xref:Windows.Foundation.IStringable> 인터페이스가 포함됩니다. 그러나 관리되는 형식은 `IStringable` 인터페이스를 구현하지 않는 것이 좋습니다. 자세한 내용은 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 참조 페이지의 " Windows Runtime 및 `IStringable` 인터페이스" 섹션을 참조하세요.
 
 인터페이스를 제외한 모든 형식이 <xref:System.Object>에서 파생되기 때문에 이 함수는 사용자 지정 클래스 또는 구조체에 자동으로 제공됩니다. 그러나 기본 `ToString` 메서드에서 제공하는 기능은 다음과 같이 제한됩니다. 형식을 식별하지만 형식의 인스턴스에 대한 정보를 제공하지 못합니다. 이 개체에 대한 정보를 제공하는 개체의 문자열 표현을 제공하려면 `ToString` 메서드를 재정의해야 합니다.
 

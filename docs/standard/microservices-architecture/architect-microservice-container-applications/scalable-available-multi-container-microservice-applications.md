@@ -27,7 +27,7 @@ ms.locfileid: "66815845"
 
 아키텍처 및 개발 관점에서 마이크로 서비스 기반 애플리케이션으로 구성된 대규모 엔터프라이즈를 구축하는 경우 고급 시나리오를 지원하는 다음 플랫폼과 제품을 이해해야 합니다.
 
-**클러스터 및 오케스트레이터.** 대규모 마이크로 서비스 기반 애플리케이션과 같이 많은 Docker 호스트에서 애플리케이션을 확장해야 하는 경우, 기본 플랫폼의 복잡성을 추상화하여 모든 호스트를 단일 클러스터로 관리할 수 있어야 합니다. 이는 컨테이너 클러스터 및 오케스트레이터에서 제공하는 것입니다. Kubernetes 오 케 스트레이 터의 예로 이며 Azure Kubernetes 서비스를 통해 Azure에서 사용할 수 있습니다.
+**클러스터 및 오케스트레이터.** 대규모 마이크로 서비스 기반 애플리케이션과 같이 많은 Docker 호스트에서 애플리케이션을 확장해야 하는 경우, 기본 플랫폼의 복잡성을 추상화하여 모든 호스트를 단일 클러스터로 관리할 수 있어야 합니다. 이는 컨테이너 클러스터 및 오케스트레이터에서 제공하는 것입니다. Kubernetes는 오케스트레이터의 한 예로서 Azure Kubernetes Service를 통해 Azure에서 제공됩니다.
 
 **스케줄러.** *예약*은 관리자가 클러스터에서 컨테이너를 시작하여 UI도 제공할 수 있는 기능을 의미합니다. 클러스터 스케줄러에는 클러스터 리소스를 효율적으로 사용하고, 사용자가 제공하는 제약 조건을 설정하며, 노드 또는 호스트 간에 컨테이너를 효율적으로 부하 분산하고, 고가용성을 제공하면서 오류에 대해 강력한 기능을 제공하기 위한 여러 가지 역할이 있습니다.
 
@@ -53,7 +53,7 @@ ms.locfileid: "66815845"
 
 ## <a name="using-container-based-orchestrators-in-microsoft-azure"></a>Microsoft Azure에서 컨테이너 기반 오케스트레이션 사용
 
-여러 클라우드 공급업체에서 Microsoft Azure, Amazon EC2 Container Service 및 Google Container Engine을 포함하여 Docker 컨테이너 지원 및 Docker 클러스터/오케스트레이션 지원을 제공합니다. Microsoft Azure Docker 클러스터 및 오 케 스트레이 터 지원을 통해 Azure Kubernetes Service (AKS)을 제공합니다.
+여러 클라우드 공급업체에서 Microsoft Azure, Amazon EC2 Container Service 및 Google Container Engine을 포함하여 Docker 컨테이너 지원 및 Docker 클러스터/오케스트레이션 지원을 제공합니다. Microsoft Azure는 AKS(Azure Kubernetes Service)를 통해 Docker 클러스터 및 오케스트레이터 지원을 제공합니다.
 
 ## <a name="using-azure-kubernetes-service"></a>Azure Kubernetes Service 사용
 

@@ -32,7 +32,7 @@ ms.locfileid: "66486515"
   
 - [섀도 복사 설정 및 사용](#EnablingAndUsing)에서는 섀도 복사에 대해 사용할 수 있는 기본 사용 및 옵션에 대해 설명합니다.  
   
-- [시작 성능](#StartupPerformance)에서는 시작 성능을 개선하려고 에서 섀도 복사에 적용된 변경 내용과 이전 버전의 동작으로 되돌리는 방법을 설명합니다.  
+- [시작 성능](#StartupPerformance)에서는 시작 성능을 개선하려고 .NET Framework 4에서 섀도 복사에 적용된 변경 내용과 이전 버전의 동작으로 되돌리는 방법을 설명합니다.  
   
 - [사용되지 않는 메서드](#ObsoleteMethods)에서는 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]에서 섀도 복사를 제어하는 속성 및 메서드의 변경 내용을 설명합니다.  
   

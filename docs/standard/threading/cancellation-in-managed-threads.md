@@ -18,7 +18,7 @@ ms.lasthandoff: 06/04/2019
 ms.locfileid: "66490780"
 ---
 # <a name="cancellation-in-managed-threads"></a>관리되는 스레드의 취소
-부터 .NET Framework에서는 비동기 또는 장기 실행 비동기 작업의 협조적 취소를 위한 통합 모델을 사용합니다. 이 모델은 취소 토큰이라는 경량 개체에 기반을 둡니다. 취소할 수 있는 작업 하나 이상을 호출하는 개체가 새 스레드나 작업 등을 만드는 방식으로 토큰을 각 작업에 전달합니다. 개별 작업이 토큰 복사본을 다시 다른 작업에 전달할 수 있습니다. 나중에 토큰을 만든 개체가 해당 토큰을 사용하여 관련 작업이 수행 중인 작업을 중지하도록 요청할 수 있습니다. 요청 개체만 취소 요청을 실행할 수 있고 각 수신기는 적절한 시간에 적절한 방식으로 요청을 알리고 요청에 응답해야 합니다.  
+.NET Framework 4부터 .NET Framework에서는 비동기 또는 장기 실행 비동기 작업의 협조적 취소를 위한 통합 모델을 사용합니다. 이 모델은 취소 토큰이라는 경량 개체에 기반을 둡니다. 취소할 수 있는 작업 하나 이상을 호출하는 개체가 새 스레드나 작업 등을 만드는 방식으로 토큰을 각 작업에 전달합니다. 개별 작업이 토큰 복사본을 다시 다른 작업에 전달할 수 있습니다. 나중에 토큰을 만든 개체가 해당 토큰을 사용하여 관련 작업이 수행 중인 작업을 중지하도록 요청할 수 있습니다. 요청 개체만 취소 요청을 실행할 수 있고 각 수신기는 적절한 시간에 적절한 방식으로 요청을 알리고 요청에 응답해야 합니다.  
   
  협조적 취소 모델을 구현하는 일반적인 패턴은 다음과 같습니다.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66490780"
  [!code-csharp[Cancellation#5](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex9.cs#5)]
  [!code-vb[Cancellation#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex9.vb#5)]  
   
- <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>을(를) 대상으로 지정한 새 코드에서 <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> 및 `Wait`은 둘 다  메서드에서 새 취소 프레임워크를 지원합니다. <xref:System.Threading.CancellationToken>을 메서드에 전달하고 취소가 요청될 대 이벤트가 활성화되어 <xref:System.OperationCanceledException>을 throw합니다.  
+ .NET Framework 4를 대상으로 지정한 새 코드에서 <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> 및 <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>는 둘 다 `Wait` 메서드에서 새 취소 프레임워크를 지원합니다. <xref:System.Threading.CancellationToken>을 메서드에 전달하고 취소가 요청될 대 이벤트가 활성화되어 <xref:System.OperationCanceledException>을 throw합니다.  
   
  [!code-csharp[Cancellation#6](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex10.cs#6)]
  [!code-vb[Cancellation#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex10.vb#6)]  
