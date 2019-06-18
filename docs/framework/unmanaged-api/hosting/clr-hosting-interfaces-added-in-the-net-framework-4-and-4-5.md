@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 89d71b3dfa71438b72fe622a491141364db25f52
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: ea95789ea1623985a6a53fcf923b70d7df2ad460
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490660"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170433"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>.NET Framework 4 및 4.5에 추가된 CLR 호스팅 인터페이스
 관리 되지 않는 인터페이스를 설명 하는이 섹션에서는 호스트 응용 프로그램에.NET Framework 4,.NET Framework 4.5 및 이후 버전에는 CLR (공용 언어 런타임) 통합을 사용할 수 있습니다. 이러한 인터페이스는 구성 프로세스에 런타임을 로드 하는 호스트에 대 한 메서드를 제공 합니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "66490660"
   
 - 수명 관리 사용 (`AddRef` 하 고 `Release`)를 캡슐화 (암시적 컨텍스트) 및 `QueryInterface` com  
   
-- 사용 하지 않습니다 COM 형식을 같은 `BSTR`, `SAFEARRAY`, 또는 `VARIANT`합니다.  
+- COM 형식이 현재 형식과 같은 사용 하지 `BSTR`하십시오 `SAFEARRAY`, 또는 `VARIANT`합니다.  
   
 - 아파트 모델, 집계 또는 없습니다 레지스트리 정품 인증을 사용 하는 합니다 [CoCreateInstance 함수](https://go.microsoft.com/fwlink/?LinkId=142894)합니다.  
   

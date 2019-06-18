@@ -2,12 +2,12 @@
 title: '방법: 사용자 지정 작업 디자이너 만들기'
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-ms.openlocfilehash: e455d00ebd128c37eacb19df0e7f864505df04e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c6d2ae695a04c85ade6ae4da0b812f4043fa2f6
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945654"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170673"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>방법: 사용자 지정 작업 디자이너 만들기
 
@@ -17,7 +17,7 @@ ms.locfileid: "61945654"
 
 <xref:System.Activities.Presentation.ActivityDesigner>는 <xref:System.Activities.Presentation.WorkflowItemPresenter> 및 <xref:System.Activities.Presentation.WorkflowItemsPresenter>라는 두 도우미 컨트롤을 사용하여 사용자 지정 활동 디자이너를 쉽게 개발할 수 있습니다. 또한 자식 요소 끌어서 놓기, 삭제, 선택, 추가 등과 같은 일반적인 기능을 처리합니다. 합니다 <xref:System.Activities.Presentation.WorkflowItemPresenter> 단일 자식 UI 요소 허용, "끌어 놓기 영역"을 제공 하지만 <xref:System.Activities.Presentation.WorkflowItemsPresenter> 순서와 같은 추가 기능을 비롯 한 여러 UI 요소를 지원할 수 있습니다, 이동, 삭제 및 자식 요소를 추가 합니다.
 
-사용자 지정 활동 디자이너의 구현에서 주목해야 할 또 다른 주요 부분은 [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 데이터 바인딩을 사용하여 디자이너에서 편집 중인 항목의 메모리에 저장된 인스턴스에 시각적 편집 내용을 바인딩하는 방법과 관련된 내용입니다. 이 방법은 변경 내용 알림을 활성화하고 해당 상태의 변경 내용과 비슷한 이벤트를 추적하는 모델 항목 트리에 의해 수행됩니다.
+디자이너에서 편집 중인 항목의 메모리에 저장 된 인스턴스를 WPF 데이터 바인딩을 사용 하 여 시각적 편집 내용을 바인딩되는 방식과 관련 된 사용자 지정 활동 디자이너의 구현에서 주목 해야 하는 스토리의 다른 주요 부분입니다. 이 방법은 변경 내용 알림을 활성화하고 해당 상태의 변경 내용과 비슷한 이벤트를 추적하는 모델 항목 트리에 의해 수행됩니다.
 
 이 항목에서는 두 가지 절차에 대해 간략하게 설명합니다.
 

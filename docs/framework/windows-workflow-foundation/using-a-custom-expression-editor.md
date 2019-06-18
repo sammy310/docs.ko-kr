@@ -2,12 +2,12 @@
 title: 사용자 지정 식 편집기 사용
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 9d73134c3f17fad618d26f335d89fdab2d99dbdf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7bbd855595bc67f0e2837afd4876ac3690cac776
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650909"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169962"
 ---
 # <a name="using-a-custom-expression-editor"></a>사용자 지정 식 편집기 사용
 사용자 지정 식 편집기를 구현하여 보다 다양하거나 단순한 식 편집 환경을 제공할 수 있습니다. 사용자 지정 식 편집기는 다음과 같은 경우에 사용할 수 있습니다.  
@@ -222,7 +222,7 @@ namespace MyExpressionEditorService
 ```  
   
 ### <a name="publishing-a-custom-expression-editor-in-a-wpf-project"></a>WPF 프로젝트에서 사용자 지정 식 편집기 게시  
- 다음 코드에서는 [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 응용 프로그램에서 디자이너를 다시 호스트하는 방법과 `MyEditorService` 서비스를 만들고 게시하는 방법을 보여 줍니다. 이 코드를 사용하기 전에 avalon2를 포함하는 프로젝트에서 MyExpressionEditorService 라이브러리 프로젝트에 대한 참조를 추가합니다.  
+ 다음은 WPF 응용 프로그램에서 디자이너를 다시 호스트 하는 방법 및 만들기 및 게시 하는 방법을 보여 주는 코드는 `MyEditorService` 서비스입니다. 이 코드를 사용하기 전에 avalon2를 포함하는 프로젝트에서 MyExpressionEditorService 라이브러리 프로젝트에 대한 참조를 추가합니다.  
   
 ```  
 using System.Windows;  

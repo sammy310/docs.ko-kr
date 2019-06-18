@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
-ms.openlocfilehash: df3a61dae9ad926f56da4e9d15e0e8b8c6f1c8a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c053c14bb06d1bb28c7b7e6652ccc6e41af9c4e5
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648256"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170599"
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>소유자가 그린 기본 제공 컨트롤 지원
 사용자 지정 그리기라고도 하는 Windows Forms의 소유자 그리기는 특정 컨트롤을 시각적 모양으로 변경하는 기술입니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "64648256"
   
 - <xref:System.Windows.Forms.TabControl>  
   
- 다음 컨트롤은 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]에서만 소유자 그리기를 지원합니다.  
+ 다음 컨트롤은.NET Framework 2.0에서만 소유자 그리기를 지원 합니다.  
   
 - <xref:System.Windows.Forms.ToolTip>  
   
@@ -54,7 +54,7 @@ ms.locfileid: "64648256"
   
 - <xref:System.Windows.Forms.TreeView>  
   
- 다음 컨트롤은 소유자 그리기를 지원하며 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]에서는 새로운 기능입니다.  
+ 다음 컨트롤은 소유자 그리기를 지원 하며.NET Framework 2.0에 새로 추가 된:  
   
 - <xref:System.Windows.Forms.DataGridView>  
   

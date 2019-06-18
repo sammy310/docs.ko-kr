@@ -51,7 +51,7 @@ ms.locfileid: "66490882"
  .NET에서는 한 문자 클래스에서 다른 문자 클래스를 제외한 결과로 문자 집합을 정의하는 데 사용할 수 있는 문자 클래스 빼기 식을 지원합니다. 자세한 내용은 [문자 클래스 빼기](#CharacterClassSubtraction)를 참조하세요.  
   
 > [!NOTE]
->  일치하는 단어 문자를 검색하는 [\w](#WordCharacter) 또는 일치하는 유니코드 범주를 검색하는 [\p{}](#CategoryOrBlock)와 같이 범주별로 일치하는 문자를 검색하는 문자 클래스는 <xref:System.Globalization.CharUnicodeInfo> 클래스를 활용하여 문자 범주에 대한 정보를 제공합니다.  .NET Framework 4.6.2부터, 문자 범주는 [유니코드 표준, 버전 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/)을 기준으로 합니다. 기반.NET Framework 4.6.1 통해.NET Framework 4에 대 한 [유니코드 표준, 버전 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/)합니다.  
+>  일치하는 단어 문자를 검색하는 [\w](#WordCharacter) 또는 일치하는 유니코드 범주를 검색하는 [\p{}](#CategoryOrBlock)와 같이 범주별로 일치하는 문자를 검색하는 문자 클래스는 <xref:System.Globalization.CharUnicodeInfo> 클래스를 활용하여 문자 범주에 대한 정보를 제공합니다.  .NET Framework 4.6.2부터, 문자 범주는 [유니코드 표준, 버전 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/)을 기준으로 합니다. .NET Framework 4에서 .NET Framework 4.6.1까지는 [유니코드 표준, 버전 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/)을 기반으로 합니다.  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>긍정 문자 그룹: [ ]  

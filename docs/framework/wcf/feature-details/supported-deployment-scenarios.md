@@ -2,16 +2,16 @@
 title: 지원 되는 배포 시나리오-WCF
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: 7b508f53365c1b4b90e2883ddb9d5f2a71c7e814
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 2da55176cbfe618b332f2df210e3e1c0516b17ae
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025629"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170046"
 ---
 # <a name="supported-deployment-scenarios"></a>지원 되는 배포 시나리오
 
-부분적으로 신뢰할 수 있는 응용 프로그램에서 사용 하기 위해 지원 되는 Windows Communication Foundation (WCF) 기능의 하위 집합은 WCF를 사용 하 여 전부는 아니지만 일부 시나리오의 요구 사항을 충족 하도록 설계 되었습니다. 서버에서 WCF 보안을 위해 ASP.NET 2.0 보통 신뢰 권한에서 타사 응용 프로그램을 실행 하는 공유 호스팅 공급자를 설정 하는 인터넷 규모의 요구 사항을 충족 합니다. 와 같은 배포 기술의 요구 사항을 충족 하기 위해 클라이언트에서 WCF 부분 신뢰 지원이 디자인 되었습니다 [ClickOnce 배포](/visualstudio/deployment/clickonce-security-and-deployment) 또는 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]의 원활 하 고 보안을 허용 하는 XAML 브라우저 응용 프로그램 기술 신뢰할 수 없는 사이트에서 데스크톱 응용 프로그램 배포입니다.
+부분적으로 신뢰할 수 있는 응용 프로그램에서 사용 하기 위해 지원 되는 Windows Communication Foundation (WCF) 기능의 하위 집합은 WCF를 사용 하 여 전부는 아니지만 일부 시나리오의 요구 사항을 충족 하도록 설계 되었습니다. 서버에서 WCF 보안을 위해 ASP.NET 2.0 보통 신뢰 권한에서 타사 응용 프로그램을 실행 하는 공유 호스팅 공급자를 설정 하는 인터넷 규모의 요구 사항을 충족 합니다. 와 같은 배포 기술의 요구 사항을 충족 하기 위해 클라이언트에서 WCF 부분 신뢰 지원이 디자인 되었습니다 [ClickOnce 배포](/visualstudio/deployment/clickonce-security-and-deployment) 또는 원활 하 고 안전한 배포를 허용 하는 WPF의 XAML 브라우저 응용 프로그램 기술 신뢰할 수 없는 사이트에서 데스크톱 응용 프로그램입니다.
 
 ## <a name="minimum-permission-requirements"></a>최소 권한 요구 사항
 
@@ -39,7 +39,7 @@ WCF는 SOAP 메시징 지원 되는 SOAP 바인딩 중 하나를 사용 하는 �
 
 ## <a name="partial-trust-on-the-client"></a>클라이언트에서 부분 신뢰
 
-신뢰할 수 없는 인터넷 사이트에서 코드를 다운로드하고 실행할 때 특정 보안 조치를 취해야 합니다. [ClickOnce 배포](/visualstudio/deployment/clickonce-security-and-deployment) 및 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]의 XBAP(XAML 브라우저 애플리케이션) 기술은 둘 다 부분 신뢰를 사용하여 제한된 권한(인터넷 영역)을 신뢰할 수 없는 코드에 부여합니다.
+신뢰할 수 없는 인터넷 사이트에서 코드를 다운로드하고 실행할 때 특정 보안 조치를 취해야 합니다. 둘 다 [ClickOnce 배포](/visualstudio/deployment/clickonce-security-and-deployment) WPF의 XAML 브라우저 응용 프로그램 (XBAP)이 기술을 확인를 사용 하 여 부분 신뢰의 제한 된 권한 (인터넷 영역)을 신뢰할 수 없는 코드에 부여 합니다.
 
 WCF에서 배포한 부분 신뢰 응용 프로그램 내에서 원격 서버와 통신할 수 [ClickOnce 배포](/visualstudio/deployment/clickonce-security-and-deployment) 또는 XBAP 합니다. 인터넷 영역 권한 집합에 포함 됩니다 <xref:System.Net.WebPermission> 원래 호스트에 대 한 이러한 응용 프로그램에 설명 된 지원 되는 WCF 바인딩 중 하나를 사용 하 여 원본 서버와 통신할 수 있는 [Partial Trust Feature Compatibility ](partial-trust-feature-compatibility.md).
 

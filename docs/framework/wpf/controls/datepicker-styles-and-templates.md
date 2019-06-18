@@ -9,12 +9,12 @@ helpviewer_keywords:
 - styles [WPF], DatePicker
 - states [WPF], DatePicker
 ms.assetid: c430a657-692f-44bd-a549-2341f92d6115
-ms.openlocfilehash: 5c8e199dd7123e1490c8a836a62ffea158797eb8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 013076fdac8666b974fdf0ce9b09740197031c15
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912251"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170535"
 ---
 # <a name="datepicker-styles-and-templates"></a>DatePicker 스타일 및 템플릿
 이 항목에서는 스타일 및 템플릿에 대해 설명 합니다 <xref:System.Windows.Controls.DatePicker> 제어 합니다. 기본값을 수정할 수 있습니다 <xref:System.Windows.Controls.ControlTemplate> 고유한 모양을 제어할 수 있습니다. 자세한 내용은 [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](customizing-the-appearance-of-an-existing-control.md)을 참조하세요.  
@@ -62,8 +62,8 @@ ms.locfileid: "61912251"
 |워터 마크 지정|WatermarkStates|컨트롤의 초기 텍스트를 표시합니다.  <xref:System.Windows.Controls.Primitives.DatePickerTextBox> 상태인 경우 사용자가 텍스트를 입력 하거나 날짜를 선택 하지 않습니다.|  
 |Unwatermarked|WatermarkStates|사용자가 텍스트를 입력 합니다 <xref:System.Windows.Controls.Primitives.DatePickerTextBox> 에서 날짜를 선택 하거나를 <xref:System.Windows.Controls.DatePicker>입니다.|  
 |유효|ValidationStates|컨트롤에서 사용 된 <xref:System.Windows.Controls.Validation> 클래스 및 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성은 `false`합니다.|  
-|InvalidFocused|ValidationStates|합니다 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성은 `true` 가 컨트롤에 포커스가 있습니다.|  
-|InvalidUnfocused|ValidationStates|합니다 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성은 `true` 가 컨트롤에 포커스가 없는 합니다.|  
+|InvalidFocused|ValidationStates|합니다 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성은 `true` 컨트롤에 포커스가 있을 합니다.|  
+|InvalidUnfocused|ValidationStates|합니다 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성은 `true` 컨트롤에 포커스가 없는 합니다.|  
   
 ## <a name="datepicker-controltemplate-example"></a>DatePicker ControlTemplate 예제  
  다음 예제에서는 정의 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.ControlTemplate> 에 대 한는 <xref:System.Windows.Controls.DatePicker> 제어 합니다.  

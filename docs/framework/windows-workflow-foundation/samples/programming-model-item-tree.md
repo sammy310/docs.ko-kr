@@ -2,12 +2,12 @@
 title: Programming Model Item Tree
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: 1aaa1aa9922a7f57138782effe9492ec84198c8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 59c1f0c3722d6e68a9f629504f5012377dbacc5f
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004978"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170065"
 ---
 # <a name="programming-model-item-tree"></a>Programming Model Item Tree
 이 샘플을 탐색 하는 방법을 보여 줍니다는 <xref:System.Activities.Presentation.Model.ModelItem> Windows Presentation Foundation (WPF) 트리 뷰에서 선언적 데이터 바인딩을 사용 하 여 트리.
@@ -33,7 +33,7 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 
 2. 선택 하 여 솔루션을 빌드합니다 **솔루션 빌드** 에서 합니다 **빌드** 메뉴.
 
-3. F5 키를 눌러 애플리케이션을 실행합니다. 그러면 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 폼이 표시됩니다.
+3. F5 키를 눌러 애플리케이션을 실행합니다. WPF 폼 표시 됩니다.
 
 4. 클릭 합니다 **WF 로드** 로드 하려면 단추를 <xref:System.Activities.Presentation.Model.ModelItem> 트리 뷰에 바인딩합니다.
 

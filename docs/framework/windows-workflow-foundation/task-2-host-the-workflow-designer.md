@@ -2,17 +2,17 @@
 title: '작업 2: 워크플로 디자이너 호스트'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: cce90c6b7f5edfaf960415f0a5d0787f8eee526b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 553a02732e08fa148ffdee250df0305deb8e63b7
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665294"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169991"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>작업 2: 워크플로 디자이너 호스트
 인스턴스를 호스트 하는 절차에 설명 합니다 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] Windows Presentation Foundation (WPF) 응용 프로그램에서입니다.  
   
- 절차는 구성 합니다 **표** designer가 들어 있는 컨트롤의 인스턴스를 프로그래밍 방식으로 만듭니다는 <xref:System.Activities.Presentation.WorkflowDesigner> 기본값을 포함 하는 <xref:System.Activities.Statements.Sequence> 활동, 디자이너 메타 데이터를 제공 등록 모든 기본 제공 활동 및 호스트에 대 한 디자이너 지원 합니다 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] 에 [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 응용 프로그램입니다.  
+ 절차는 구성 합니다 **표** designer가 들어 있는 컨트롤의 인스턴스를 프로그래밍 방식으로 만듭니다는 <xref:System.Activities.Presentation.WorkflowDesigner> 기본값을 포함 하는 <xref:System.Activities.Statements.Sequence> 활동, 디자이너 메타 데이터를 제공 등록 모든 기본 제공 활동 및 호스트에 대 한 디자이너 지원을 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] WPF 응용 프로그램에서입니다.  
   
 ### <a name="to-host-the-workflow-designer"></a>워크플로 디자이너를 호스트하려면  
   
@@ -22,7 +22,7 @@ ms.locfileid: "64665294"
   
 3. 선택 하 여 표 이름을 설정 합니다 **그리드** 디자이너에서 패널 (안의 상자 클릭를 **MainWindow**) 설정를 **이름** 맨 위에 있는 속성을  **속성** "추가한 다음 grid1" 창입니다.  
   
-4. 에 **속성** 창에서 줄임표 (**...** ) 옆에 `ColumnDefinitions` 열려는 속성을 **컬렉션 편집기** 대화 상자.  
+4. 에 **속성** 창에서 줄임표 ( **...** ) 옆에 `ColumnDefinitions` 열려는 속성을 **컬렉션 편집기** 대화 상자.  
   
 5. 에 **컬렉션 편집기** 대화 상자에서 클릭 합니다 **추가** 단추를 세 번 레이아웃에 세 개의 열을 삽입할 합니다. 첫 번째 열이 포함 됩니다는 **도구 상자**, 두 번째 열을 호스트 하는 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], 세 번째 열 속성 검사자에 사용 됩니다.  
   

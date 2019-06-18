@@ -8,12 +8,12 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-ms.openlocfilehash: 0a53e9b9d23c03715bf3088a4ae8577a39527995
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3266724503960b8b45cd134dfa5b007a58d578fa
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672603"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169808"
 ---
 # <a name="how-to-read-image-metadata"></a>방법: 이미지 메타데이터 읽기
 일부 이미지 파일 이미지의 기능을 확인 하려면 읽을 수 있는 메타 데이터를 포함 합니다. 예를 들어, 디지털 사진 제조업체 및 모델의 이미지 캡처에 사용한 카메라 결정할 읽을 수 있는 메타 데이터를 포함할 수 있습니다. 사용 하 여 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], 기존 메타 데이터를 읽을 수 있습니다 및 이미지 파일에 새 메타 데이터를 쓸 수도 있습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "61672603"
 |6|사용되지 않음|  
 |7|Undefined|  
 |8|사용되지 않음|  
-|10|`SLong`|  
+|9|`SLong`|  
 |10|`SRational`|  
   
 ## <a name="example"></a>예제  
@@ -57,64 +57,66 @@ ms.locfileid: "61672603"
  다음 코드 예제를 읽고 파일의 일곱 가지 메타 데이터 표시 `FakePhoto.jpg`합니다. 두 번째 (인덱스 1) 속성 목록에 항목이 <xref:System.Drawing.Imaging.PropertyItem.Id%2A> 는 0x010F (장비 제조업체) 및 <xref:System.Drawing.Imaging.PropertyItem.Type%2A> 2 (ASCII로 인코딩된 바이트 배열)입니다. 코드 예제에서는 해당 속성 항목의 값을 표시합니다.  
   
  코드에는 다음과 유사한 출력이 생성 됩니다.  
+ 
+```
+ Property Item 0
   
- `Property Item 0`  
+ id: 0x320
   
- `id: 0x320`  
+ type: 2
+ 
+ length: 16 bytes 
   
- `type: 2`  
+ Property Item 1
   
- `length: 16 bytes`  
+ id: 0x10f
   
- `Property Item 1`  
+ type: 2 
   
- `id: 0x10f`  
+ length: 17 bytes
   
- `type: 2`  
+ Property Item 2
   
- `length: 17 bytes`  
+ id: 0x110
   
- `Property Item 2`  
+ type: 2
   
- `id: 0x110`  
+ length: 7 bytes
   
- `type: 2`  
+ Property Item 3
   
- `length: 7 bytes`  
+ id: 0x9003
   
- `Property Item 3`  
+ type: 2
   
- `id: 0x9003`  
+ length: 20 bytes
   
- `type: 2`  
+ Property Item 4
   
- `length: 20 bytes`  
+ id: 0x829a
   
- `Property Item 4`  
+ type: 5
   
- `id: 0x829a`  
+ length: 8 bytes
   
- `type: 5`  
+ Property Item 5
   
- `length: 8 bytes`  
+ id: 0x5090
   
- `Property Item 5`  
+ type: 3
   
- `id: 0x5090`  
+ length: 128 bytes
   
- `type: 3`  
+ Property Item 6
   
- `length: 128 bytes`  
+ id: 0x5091
   
- `Property Item 6`  
+ type: 3
   
- `id: 0x5091`  
+ length: 128 bytes
   
- `type: 3`  
-  
- `length: 128 bytes`  
-  
- `The equipment make is Northwind Camera.`  
+ The equipment make is Northwind Camera.
+ ```
   
 ### <a name="code"></a>코드  
  [!code-csharp[System.Drawing.WorkingWithImages#51](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#51)]

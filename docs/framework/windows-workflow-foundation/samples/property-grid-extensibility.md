@@ -2,12 +2,12 @@
 title: 속성 표 확장성-WF 샘플
 ms.date: 03/30/2017
 ms.assetid: 3530c3a3-756d-4712-9f10-fb2897414d3a
-ms.openlocfilehash: d22b6e21fbf2d5deb4d47fce683553378e990000
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 1cc8b8b34d6236e263f95439da84994e35d627ed
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637670"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170361"
 ---
 # <a name="property-grid-extensibility"></a>속성 표 확장성
 
@@ -69,7 +69,7 @@ Workflow Designer 속성 표 확장성
 
 1. <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor>에서 파생되는 형식을 만듭니다.
 
-2. <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> 데이터 템플릿을 사용하여 생성자에서 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 값을 설정합니다. 이 값을 XAML로 만들 수 있지만 이 샘플에서는 코드로 만듭니다.
+2. 집합의 <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> WPF 데이터 템플릿 사용 하 여 생성자의 값입니다. 이 값을 XAML로 만들 수 있지만 이 샘플에서는 코드로 만듭니다.
 
 3. 데이터 템플릿에는 속성 표에서 렌더링된 항목의 <xref:System.Activities.Presentation.PropertyEditing.PropertyValue>에 대한 데이터 컨텍스트가 있습니다. 다음 코드에서는 이 컨텍스트가 `Value` 속성에 바인딩됩니다. FilePickerEditor.cs에 대화 상자를 발생시키는 단추를 제공하도록 <xref:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton>를 포함하는 것도 중요합니다.
 

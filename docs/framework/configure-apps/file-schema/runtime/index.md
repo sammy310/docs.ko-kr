@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e830c3d77b9e112d94d74e255aff6add54433ca8
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: d22046393b22683b961f5da7a5623f5dfa6a702e
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689887"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170027"
 ---
 # <a name="runtime-settings-schema"></a>런타임 설정 스키마
 
@@ -95,7 +95,7 @@ ms.locfileid: "66689887"
 |[\<CompatSortNLSVersion>](../../../../../docs/framework/configure-apps/file-schema/runtime/compatsortnlsversion-element.md)|Specifies that the runtime should use legacy sorting behavior when performing string comparisons|
 |[\<dependentAssembly>](../../../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)|각 어셈블리에 대한 바인딩 정책 및 어셈블리 위치를 캡슐화합니다.|
 |[\<developmentMode>](../../../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md)|런타임이 DEVPATH 환경 변수로 지정된 디렉터리에서 어셈블리를 검색할지를 지정합니다.|
-|[\<disableCachingBindingFailures>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)|[!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)]의 기본 동작인 바인딩 실패 캐싱을 사용하지 않도록 설정할지를 지정합니다.|
+|[\<disableCachingBindingFailures>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)|.NET Framework 2.0의 기본 동작인 바인딩 실패 캐싱을 비활성화할지 여부를 지정 합니다.|
 |[\<disableCommitThreadStack>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecommitthreadstack-element.md)|스레드가 시작될 때 전체 스레드 스택을 커밋할지를 지정합니다.|
 |[\<disableFusionUpdatesFromADManager>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablefusionupdatesfromadmanager-element.md)|런타임 호스트가 애플리케이션 도메인에 대한 구성 설정을 재정의할 수 있도록 허용하는 기본 동작을 사용하지 않도록 설정할지를 지정합니다.|
 |[\<EnableAmPmParseAdjustment>](../../../../../docs/framework/configure-apps/file-schema/runtime/enableampmparseadjustment-element.md)|날짜 및 시간 구문 분석 메서드가 조정된 규칙 집합을 사용하여 일, 월, 시간 및 오전/오후 지정자만 포함하는 날짜 문자열을 구문 분석할지를 결정합니다.|

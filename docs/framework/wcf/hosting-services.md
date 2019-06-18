@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: 4641c1c63a4f3c13cefb573dacf4e88b5d63077e
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 2d926fb3f630d2a1af00242f94ddcb3c2dc284df
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881182"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170063"
 ---
 # <a name="hosting-services"></a>서비스 호스팅
 활성화할 서비스는 서비스를 만들고 컨텍스트와 수명을 제어하는 런타임 환경에 호스팅해야 합니다. Windows Communication Foundation (WCF) 서비스는 관리 코드를 지 모든 Windows 프로세스에서 실행 되도록 설계 되었습니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "65881182"
 #### <a name="self-hosting-in-a-managed-application"></a>관리되는 애플리케이션에서의 자체 호스팅  
  모든 관리 되는 응용 프로그램에서 WCF 서비스를 호스트할 수 있습니다. 이 경우 배포하는 데 있어 최소한의 인프라를 필요하므로 가장 유연한 옵션입니다. 관리되는 애플리케이션 코드 내에 서비스 코드를 포함시킨 다음 서비스를 사용할 수 있도록 <xref:System.ServiceModel.ServiceHost> 의 인스턴스를 만들고 엽니다. 자세한 내용은 [방법: 관리 되는 응용 프로그램에서 WCF 서비스 호스팅](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)합니다.  
   
- 이 옵션을 사용 하면 두 가지 일반적인 시나리오: 콘솔 응용 프로그램 및 Windows Presentation Foundation (WPF) 또는 Windows Forms (WinForms)에 따라 같은 리치 클라이언트 응용 프로그램 내에서 실행 되는 WCF 서비스입니다. 콘솔 응용 프로그램 내에서 WCF 서비스를 호스팅하는 응용 프로그램의 개발 단계 중 일반적으로 유용 합니다. 이 경우 쉽게 디버깅을 수행할 수 있으며, 애플리케이션 내에서 발생하는 상황을 확인하기 위한 추적 정보를 손쉽게 얻을 수 있으며, 새 위치에 서비스를 복사하여 이동하기 용이합니다. 이 호스팅 옵션을 사용하면 리치 클라이언트 애플리케이션(예: [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 및 WinForms 애플리케이션)에서 외부와 쉽게 통신할 수 있습니다. 예를 들어 피어-투-피어 공동 작업 사용 하는 클라이언트 [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 사용자 인터페이스에 대 한도 다른 클라이언트가 연결 하 고 정보를 공유할 수 있도록 WCF 서비스를 호스팅합니다.  
+ 이 옵션을 사용 하면 두 가지 일반적인 시나리오: 콘솔 응용 프로그램 및 Windows Presentation Foundation (WPF) 또는 Windows Forms (WinForms)에 따라 같은 리치 클라이언트 응용 프로그램 내에서 실행 되는 WCF 서비스입니다. 콘솔 응용 프로그램 내에서 WCF 서비스를 호스팅하는 응용 프로그램의 개발 단계 중 일반적으로 유용 합니다. 이 경우 쉽게 디버깅을 수행할 수 있으며, 애플리케이션 내에서 발생하는 상황을 확인하기 위한 추적 정보를 손쉽게 얻을 수 있으며, 새 위치에 서비스를 복사하여 이동하기 용이합니다. 이 호스팅 옵션 또한 쉽게 리치 클라이언트 응용 프로그램의 경우 WPF 및 WinForms 응용 프로그램과 같은 외부 세계와 통신할 수 있습니다. 예를 들어, 해당 사용자 인터페이스에 대 한 WPF를 사용 하 고 또한 다른 클라이언트가 연결 하 고 정보를 공유할 수 있도록 WCF 서비스를 호스팅하는 피어-투-피어 공동 작업 클라이언트가 있습니다.  
   
 #### <a name="managed-windows-services"></a>관리되는 Windows 서비스  
  이 호스팅 옵션에 대 한 서비스의 프로세스 수명은 서비스 제어 관리자 (SCM)에 의해 제어 됩니다 있도록 하는 WCF 서비스 (이전의 NT 서비스) 관리 되는 Windows 서비스로 호스팅하는 응용 프로그램 도메인 (AppDomain) 등록 구성 Windows 서비스입니다. 자체 호스팅 옵션과 같이 이러한 유형의 호스팅 환경에서는 일부 호스팅 코드를 애플리케이션의 일부로 작성해야 합니다. 서비스는 모두 Windows 서비스와 WCF 서비스로 상속 하 여 구현 됩니다는 <xref:System.ServiceProcess.ServiceBase> 클래스 뿐만 아니라는 WCF에서 서비스 계약 인터페이스. 그러면 <xref:System.ServiceModel.ServiceHost> 가 만들어지고, 재정의된 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 메서드 내에서 열리고 재정의된 <xref:System.ServiceProcess.ServiceBase.OnStop> 메서드 내에서 닫힙니다. Installutil.exe 도구를 사용하여 프로그램을 Windows 서비스로 설치하려면 <xref:System.Configuration.Install.Installer> 에서 상속되는 설치 관리자 클래스를 구현해야 합니다. 자세한 내용은 [방법: 관리 되는 Windows 서비스에서 WCF 서비스 호스팅](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)합니다. 관리 되는 Windows 서비스 호스팅 옵션에서 사용할 수 있는 시나리오에는 메시지가 활성화 되지 않은 보안 환경의 IIS 외부에서 호스팅되는 장기 실행 WCF 서비스의 경우 서비스 수명은 대신 운영 체제에 의해 제어됩니다. 모든 버전의 Windows에서 이 호스팅 옵션을 사용할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "65881182"
   
 |호스팅 환경|일반적인 시나리오|주요 이점 및 제한|  
 |-------------------------|----------------------|----------------------------------|  
-|관리되는 애플리케이션("자체 호스팅")|콘솔 응용 프로그램 개발 중에 사용 합니다.<br />-리치 WinForm 및 [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 클라이언트 응용 프로그램 서비스에 액세스 합니다.|-유연 합니다.<br />-쉽게 배포할 수 있습니다.<br />-서비스에 대 한 엔터프라이즈 솔루션입니다.|  
+|관리되는 애플리케이션("자체 호스팅")|콘솔 응용 프로그램 개발 중에 사용 합니다.<br />-리치 WinForm 및 WPF 클라이언트 응용 프로그램 서비스에 액세스 합니다.|-유연 합니다.<br />-쉽게 배포할 수 있습니다.<br />-서비스에 대 한 엔터프라이즈 솔루션입니다.|  
 |Windows 서비스(이전의 NT 서비스)|IIS 외부에서 호스팅된-장기 실행 WCF 서비스입니다.|메시지가 활성화 되지 운영 체제에 의해 제어 되는 서비스 프로세스 수명입니다.<br />Windows의 모든 버전에서 지원 합니다.<br />-보안 환경입니다.|  
 |IIS 5.1, [!INCLUDE[iis601](../../../includes/iis601-md.md)]|-WCF 서비스 side-by-side-ASP.NET 콘텐츠를 사용 하 여 인터넷을 통해 실행 HTTP 프로토콜을 사용 합니다.|-프로세스 재활용 합니다.<br />-유휴 상태 이면 종료 합니다.<br />-상태 모니터링을 처리 합니다.<br />-메시지 기반 활성화 합니다.<br />-HTTP에만 해당 합니다.|  
 |WAS(Windows Process Activation Service)|-다양 한 전송 프로토콜을 사용 하 여 인터넷에서 IIS를 설치 하지 않고 WCF 서비스를 실행 합니다.|-IIS 필요 하지 않습니다.<br />-프로세스 재활용 합니다.<br />-유휴 상태 이면 종료 합니다.<br />-상태 모니터링을 처리 합니다.<br />-메시지 기반 활성화 합니다.<br />-HTTP, TCP, 명명 된 파이프 및 MSMQ를 사용 하 여 작동 합니다.|  

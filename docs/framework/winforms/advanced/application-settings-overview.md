@@ -8,19 +8,19 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: 49c7ceb431e9ab59b47e3b8b912e2881aeeef6c2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5e70b9c16c3af46b72ea8f8745806c7ebf849e2f
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583557"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169977"
 ---
 # <a name="application-settings-overview"></a>애플리케이션 설정 개요
 이 항목은 애플리케이션 및 사용자를 대신하여 설정 데이터를 만들고 저장하는 방법을 설명합니다.  
   
  Windows Forms의 애플리케이션 설정 기능을 사용하면 클라이언트 컴퓨터에서 사용자 지정 애플리케이션과 사용자 기본 설정을 쉽게 만들고 저장 및 유지 관리할 수 있습니다. Windows Forms 애플리케이션 설정을 통해 데이터베이스 연결 문자열과 같은 애플리케이션 데이터뿐 아니라 사용자 애플리케이션 기본 설정과 같은 사용자별 데이터도 저장할 수 있습니다. Visual Studio 또는 사용자 지정 관리 코드를 사용하여 새 설정을 만들고, 디스크에서 읽거나 쓰고, 폼의 속성에 바인딩하고, 설정 데이터를 로드 및 저장하기 전에 유효성을 검사할 수 있습니다.  
   
- 응용 프로그램 설정을 사용 하면 거의 사용자 지정 코드를 사용 하 여 해당 응용 프로그램에서 상태를 저장 하는 개발자를 이전 버전의.NET Framework의 동적 속성에 대 한 대체 합니다. 애플리케이션 설정은 읽기 전용이고 런타임에 바인딩되며 더 많은 사용자 지정 프로그래밍을 요구하는 동적 속성보다 많은 향상된 기능을 포함합니다. 동적 속성 클래스는 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]에서 유지되었지만 애플리케이션 설정 클래스를 씬 래핑하는 셸 클래스일 뿐입니다.  
+ 응용 프로그램 설정을 사용 하면 거의 사용자 지정 코드를 사용 하 여 해당 응용 프로그램에서 상태를 저장 하는 개발자를 이전 버전의.NET Framework의 동적 속성에 대 한 대체 합니다. 애플리케이션 설정은 읽기 전용이고 런타임에 바인딩되며 더 많은 사용자 지정 프로그래밍을 요구하는 동적 속성보다 많은 향상된 기능을 포함합니다. .NET Framework 2.0에서는 동적 클래스는 계속 유지 되지만 응용 프로그램 설정 클래스를 씬 래핑하는 셸 클래스일 뿐입니다.  
   
 ## <a name="what-are-application-settings"></a>애플리케이션 설정이란?  
  Windows Forms 애플리케이션은 애플리케이션 실행에 중요하지만 애플리케이션 코드에 직접 포함되지 않는 데이터를 요구하는 경우가 많습니다. 애플리케이션이 웹 서비스나 데이터베이스 서버를 사용하는 경우 나중에 다시 컴파일하지 않고 변경할 수 있도록 이 정보를 별도 파일에 저장할 수 있습니다. 마찬가지로, 애플리케이션에서 현재 사용자와 관련된 데이터를 저장해야 할 수도 있습니다. 예를 들어 대부분의 애플리케이션에는 애플리케이션의 모양과 동작을 사용자 지정하는 사용자 기본 설정이 있습니다.  
