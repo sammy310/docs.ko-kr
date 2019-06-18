@@ -2,12 +2,12 @@
 title: 소스 줄, 파일 및 경로 식별자
 description: 기본 제공을 사용 하는 방법을 알아봅니다 F# 식별자 값 원본에 액세스할 수 있도록 하는 줄 번호, 디렉터리 및 코드에서 파일 이름입니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 4b145fe1fe20e3d7f868558e33bab26204fb0125
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3f2048aed9ef75037b43cd091a749e3d6bbaf9a3
+ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663624"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67152058"
 ---
 # <a name="source-line-file-and-path-identifiers"></a>소스 줄, 파일 및 경로 식별자
 
@@ -31,7 +31,7 @@ __SOURCE_FILE__
 |---------------------|-----------|
 |`__LINE__`|현재 줄 번호를로 고려 `#line` 지시문입니다.|
 |`__SOURCE_DIRECTORY__`|원본 디렉터리의 전체 경로 평가 고려 `#line` 지시문입니다.|
-|`__SOURCE_FILE__`|현재 소스 파일 이름과 경로 평가 고려 `#line` 지시문입니다.|
+|`__SOURCE_FILE__`|해당 경로가 없는 현재 소스 파일 이름에 평가 고려 `#line` 지시문입니다.|
 
 에 대 한 자세한 내용은 합니다 `#line` 지시문을 참조 하십시오 [컴파일러 지시문](compiler-directives.md)합니다.
 
@@ -46,7 +46,7 @@ __SOURCE_FILE__
 ```
 Line: 4
 Source Directory: C:\Users\username\Documents\Visual Studio 2017\Projects\SourceInfo\SourceInfo
-Source File: C:\Users\username\Documents\Visual Studio 2017\Projects\SourceInfo\SourceInfo\Program.fs
+Source File: Program.fs
 ```
 
 ## <a name="see-also"></a>참고자료
