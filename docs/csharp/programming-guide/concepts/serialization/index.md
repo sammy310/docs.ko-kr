@@ -10,11 +10,11 @@ ms.locfileid: "61680109"
 ---
 # <a name="serialization-c"></a>Serialization(C#)
 
-Serialization은 개체를 저장하거나 메모리, 데이터베이스 또는 파일로 전송하기 위해 개체를 바이트 스트림으로 변환하는 프로세스입니다. 주 목적은 필요할 때 다시 만들 수 있도록 개체의 상태를 저장하는 것입니다. 역 프로세스를 deserialization이라고 합니다.
+Serialization은 개체를 저장하거나 메모리, 데이터베이스 또는 파일로 전송하기 위해 개체를 바이트 스트림으로 변환하는 프로세스입니다. 주 목적은 필요할 때 다시 개체로 만들 수 있도록 개체의 상태를 저장하는 것입니다. 역 프로세스는 deserialization입니다.
 
 ## <a name="how-serialization-works"></a>Serialization 작동 방법
 
-이 그림에서는 serialization의 전체 프로세스를 보여 줍니다:
+아래 그림에서는 serialization의 전체 프로세스 과정을 보여 줍니다:
 
 ![Serialization 그래픽](./media/index/serialization-process.gif)
 
@@ -28,9 +28,9 @@ Serialization을 사용하여 개발자는 개체의 상태를 저장하고 필�
 
 개체를 직렬화하려면 직렬화할 개체, 직렬화된 개체를 포함할 스트림 및 <xref:System.Runtime.Serialization.Formatter>가 필요합니다. <xref:System.Runtime.Serialization>은 개체를 직렬화하거나 deserialize하는 데 사용할 수 있는 클래스를 포함합니다.
 
-형식에 <xref:System.SerializableAttribute> 특성을 적용하여 이 형식의 인스턴스를 직렬화할 수 있음을 나타냅니다. 직렬화하려고 하지만 형식에 <xref:System.SerializableAttribute> 특성이 없는 경우 예외가 throw됩니다.
+형식에 <xref:System.SerializableAttribute> 특성을 적용하여 이 형식의 인스턴스를 직렬화할 수 있음을 나타냅니다. 형식에 <xref:System.SerializableAttribute> 특성이 없는 경우 직렬화하려고 하면 예외가 throw됩니다.
 
-클래스 내의 필드를 직렬화 가능하게 하지 않으려면 <xref:System.NonSerializedAttribute> 특성을 적용합니다. serialize 가능한 형식의 필드에 특정 환경과 관련된 포인터, 핸들 또는 다른 데이터 구조가 포함되어 있고 필드를 다른 환경에서 의미 있게 재구성할 수 없으면 serialize할 수 없게 만들 수 있습니다.
+클래스 내의 필드를 직렬화가 불가능하게 하려면 <xref:System.NonSerializedAttribute> 특성을 적용합니다. serialize 가능한 형식의 필드에 특정 환경과 관련된 포인터, 핸들 또는 다른 데이터 구조가 포함되어 있고 필드를 다른 환경에서 의미 있게 재구성할 수 없으면 serialize할 수 없게 만들 수 있습니다.
 
 직렬화된 클래스에 <xref:System.SerializableAttribute>가 표시된 다른 클래스의 개체에 대한 참조가 포함된 경우 해당 개체도 직렬화됩니다.
 
@@ -40,7 +40,7 @@ Serialization을 사용하여 개발자는 개체의 상태를 저장하고 필�
 
 ### <a name="binary-serialization"></a>이진 Serialization
 
-이진 serialization은 이진 인코딩을 사용하여 스토리지 또는 스트림 기반 네트워크 스트림과 같은 용도로 사용할 수 있는 압축 serialization을 생성합니다.
+이진 serialization은 이진 인코딩을 사용하여 스토리지 또는 소켓 기반 네트워크 스트림과 같은 용도에서 사용할 수 있는 압축된 serialization을 생성합니다.
 
 ### <a name="xml-serialization"></a>XML serialization
 
