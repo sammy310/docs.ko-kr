@@ -27,9 +27,9 @@ ms.locfileid: "66195607"
 
 이 단계에서 버전 관리 시스템이 팀의 여러 개발자로부터 들어오는 모든 코드의 통합된 버전을 수집하게 해야 합니다.
 
-SCC(소스 코드 제어) 및 소스 코드 관리는 대부분의 개발자가 꼭 수행해야 하는 작업 같지만 DevOps 수명 주기에서 Docker 애플리케이션을 만드는 경우 개발자의 머신에서 애플리케이션을 포함하는 Docker 이미지를 전역 Docker 레지스트리(예: Azure Container Registry 또는 Docker Hub)에 직접 제출하지 않아야 한다는 점을 강조합니다. 반대로 프로덕션 환경에 릴리스 및 배포할 Docker 이미지는 소스 코드 리포지토리(예: Git)를 기반으로 전역 빌드 또는 CI 파이프라인에 통합된 소스 코드에만 만들어야 합니다.
+SCC(소스 코드 제어) 및 소스 코드 관리는 대부분의 개발자에게 습관처럼 생각될 수 있지만 DevOps 수명 주기에서 Docker 애플리케이션을 만드는 경우 개발자의 머신에서 애플리케이션과 함께 Docker 이미지를 글로벌 Docker 레지스트리(예: Azure Container Registry 또는 Docker Hub)에 직접 제출해서는 안 된다는 점이 매우 중요합니다. 반대로 프로덕션 환경에 릴리스 및 배포할 Docker 이미지는 소스 코드 리포지토리(예: Git)를 기반으로 글로벌 빌드 또는 CI 파이프라인에 통합되는 소스 코드에서만 생성해야 합니다.
 
-개발자가 생성하는 로컬 이미지는 해당 개발자의 고유한 머신 내에서 테스트하는 경우에만 사용해야 합니다. DevOps 파이프라인을 SCC 코드에서 활성화하는 것이 중요한 것도 바로 이 때문입니다.
+개발자가 생성하는 로컬 이미지는 개발자 자신의 머신 내에서 테스트용으로만 사용해야 합니다. DevOps 파이프라인을 SCC 코드에서 활성화하는 것이 중요한 것도 바로 이 때문입니다.
 
 Azure DevOps Services 및 Team Foundation Server는 Git 및 Team Foundation 버전 관리를 지원합니다. 이들 중에서 선택하여 엔드투엔드 Microsoft 환경에서 사용할 수 있습니다. 그러나 외부 리포지토리(예: GitHub, 온-프레미스 Git 리포지토리 또는 Subversion)에서 코드를 관리하고 해당 리포지토리에 연결하여 DevOps CI 파이프라인의 시작점으로 코드를 가져올 수도 있습니다.
 
@@ -37,7 +37,7 @@ Azure DevOps Services 및 Team Foundation Server는 Git 및 Team Foundation 버�
 
 CI는 최신 소프트웨어 테스트 및 제공을 위한 표준으로 부상 했습니다. Docker 솔루션은 개발 팀과 운영 팀 간에 관심사를 명확하게 분리합니다. Docker 이미지의 불변성 덕분에 CI를 통해 개발하고 테스트하는 내용과 프로덕션에서 실행하는 내용 간의 반복 가능한 배포가 보장됩니다. 개발자 랩톱 및 테스트 인프라 간에 배포되는 Docker 엔진을 통해 환경 간에 컨테이너를 이식할 수 있게 됩니다.
 
-이 시점에서 올바른 코드가 제출된 버전 관리 시스템을 보유한 후 코드를 선택하고 전역 빌드 및 테스트를 실행하기 위해 *빌드 서비스*가 필요합니다.
+이 시점에서 올바른 코드가 제출된 버전 관리 시스템을 보유한 후 코드를 선택하고 글로벌 빌드 및 테스트를 실행하기 위해 *빌드 서비스*가 필요합니다.
 
 이 단계(CI, 빌드, 테스트)에 대한 내부 워크플로는 코드 리포지토리(Git 등), 빌드 서버(Azure DevOps 서비스), Docker 엔진 및 Docker 레지스트리 코드 리포지토리로 구성된 CI 파이프라인을 구축하는 과정입니다.
 
@@ -75,7 +75,7 @@ Visual Studio Azure DevOps Services는 CI/CD 파이프라인에 사용하여 Doc
 
 이 템플릿과 작업을 사용하여 Azure Service Fabric, Azure Kubernetes Service 및 유사한 제품에서 빌드 / 테스트 및 배포에 대해 CI/CD 아티팩트를 구성할 수 있습니다.
 
-이러한 Visual Studio Team Services 작업을 통해 Azure 및 선호하는 Docker 레지스트리(Azure Container Registry, Docker Hub, 프라이빗 Docker DTR 또는 기타 Docker 레지스트리)에서 프로비저닝된 빌드 Linux-Docker Host/VM이 Docker CI 파이프라인을 아주 일관된 방법으로 조립할 수 있습니다.
+이러한 Visual Studio Team Services 작업을 통해 Azure 및 선호하는 Docker 레지스트리(Azure Container Registry, Docker Hub, 프라이빗 Docker DTR 또는 다른 Docker 레지스트리)에서 프로비저닝되는 Linux-Docker Host/VM을 빌드하면 Docker CI 파이프라인을 아주 일관된 방법으로 조립할 수 있습니다.
 
 ***요구 사항:***
 
@@ -85,7 +85,7 @@ Visual Studio Azure DevOps Services는 CI/CD 파이프라인에 사용하여 Doc
 
   이러한 에이전트 중 하나를 만드는 쉬운 방법은 Docker를 사용하여 Azure DevOps Services 에이전트 Docker 이미지를 기반으로 컨테이너를 실행하는 것입니다.
 
-> [!정보] Azure DevOps Services Docker CI 파이프라인 조립에 관하여 더 자세히 읽고 연습을 보려면 다음 사이트를 방문하세요.
+> [!정보] Azure DevOps Services Docker CI 파이프라인 조립에 대해 더 자세히 알아보려면 다음 사이트를 방문하세요.
 >
 > - Visual Studio Team Services(현재 Azure DevOps Services) 에이전트를 Docker 컨테이너로 실행: \
 >   <https://hub.docker.com/_/microsoft-azure-pipelines-vsts-agent>
@@ -116,13 +116,13 @@ Visual Studio Azure DevOps Services는 CI/CD 파이프라인에 사용하여 Doc
 
 여러 클러스터(테스트 클러스터, 준비 클러스터 및 프로덕션 클러스터)를 포함하는 경우와 같은 고급 시나리오를 테스트할 때 실용적인 옵션은 이미지를 여러 클러스터에서 테스트할 수 있도록 레지스트리에 게시하는 것입니다.
 
-### <a name="push-the-custom-application-docker-image-into-your-global-docker-registry"></a>전역 Docker 레지스트리에 사용자 지정 애플리케이션 Docker 이미지 푸시
+### <a name="push-the-custom-application-docker-image-into-your-global-docker-registry"></a>글로벌 Docker 레지스트리에 사용자 지정 애플리케이션 Docker 이미지 푸시
 
 Docker 이미지를 테스트하고 유효성을 검사한 후 태그를 지정하고 Docker 레지스트리에 게시하는 것이 좋습니다. Docker 레지스트리는 QA 및 프로덕션 환경에 배포할 사용자 지정 테스트(일명 "성공적인 이미지")를 저장하는 중심 위치이므로 Docker 애플리케이션 수명 주기에서 중요한 부분입니다.
 
 SCC 레지스트리(예: Git)에 저장된 애플리케이션 코드가 "신뢰할 수 있는 원본"인 이유와 유사한 원리로, Docker 레지스트리는 QA 또는 프로덕션 환경에 배포할 이진 애플리케이션 또는 비트의 "신뢰할 수 있는 원본"입니다.
 
-일반적으로 Azure Container Registry의 프라이빗 리포지토리 또는 Docker Trusted Registry와 같은 온-프레미스 레지스트리 또는 제한된 액세스 권한을 가진 공용 클라우드 레지스트리(예: Docker Hub)에 사용자 지정 이미지에 대한 프라이빗 리포지토리가 있는 것이 좋습니다. 단, 마지막 레지스트리의 경우 코드가 오픈 소스가 아니면 공급업체의 보안을 신뢰해야 합니다. 어느 방법이든 사용하는 방법은 유사하며 그림 5-4와 같이 `docker push` 명령을 기반으로 합니다.
+일반적으로 Azure Container Registry의 프라이빗 리포지토리 또는 Docker Trusted Registry와 같은 온-프레미스 레지스트리 또는 제한된 액세스 권한을 가진 공용 클라우드 레지스트리(예: Docker Hub)에 사용자 지정 이미지에 대한 프라이빗 리포지토리가 있는 것이 좋습니다. 단, 마지막 레지스트리의 경우 코드가 오픈 소스가 아니더라도 공급업체의 보안을 신뢰해야 합니다. 어느 방법이든 사용하는 방법은 유사하며 그림 5-4와 같이 `docker push` 명령을 기반으로 합니다.
 
 ![3단계에서 통합 및 테스트(CI)를 빌드하는 경우 결과로 얻은 Docker 이미지를 프라이빗 또는 공용 레지스트리에 게시할 수 있습니다.](./media/image4.png)
 
@@ -142,7 +142,7 @@ Docker 작업을 사용하면 그림 5-5와 같이 다중 태그를 통해 `dock
 
 Docker 이미지의 불변성 덕분에 CI를 통해 개발하고 테스트하는 내용과 프로덕션에서 실행하는 내용을 이용한 반복 가능한 배포가 보장됩니다. Docker 레지스트리(프라이빗 또는 공용)에 애플리케이션 Docker 이미지를 게시한 후 Azure DevOps Services 파이프라인 작업 또는 Azure DevOps Services Release Management를 사용하여 CD 파이프라인에서 해당 이미지를 여러 환경(프로덕션, QA, 준비 등)에 배포할 수 있습니다.
 
-그러나 이 시점에는 배포하는 Docker 애플리케이션의 종류에 따라 달라집니다. 몇몇 컨테이너 또는 서비스로 구성되고 몇몇 서버 또는 VM에 배포된 모놀리식 애플리케이션과 같은 간단한 애플리케이션을 배포하는 작업은 하이퍼스케일 기능을 사용하여 마이크로서비스 지향 애플리케이션과 같은 더 복잡한 애플리케이션을 배포하는 작업과 다릅니다(구성 및 배포 관점에서). 두 시나리오를 다음 섹션에서 설명합니다.
+그러나 이 시점에는 배포하는 Docker 애플리케이션의 종류에 따라 달라집니다. 몇 개의 컨테이너 또는 서비스로 구성되고 몇 대의 서버 또는 VM에 배포되는 모놀리식 애플리케이션과 같은 간단한 애플리케이션을 배포하는 작업은 하이퍼스케일 기능을 갖춘 마이크로서비스 지향 애플리케이션과 같은 더 복잡한 애플리케이션을 배포하는 작업과 다릅니다(구성 및 배포 관점에서). 두 시나리오를 다음 섹션에서 설명합니다.
 
 ### <a name="deploying-composed-docker-applications-to-multiple-docker-environments"></a>구성된 Docker 애플리케이션을 Docker 환경에 배포
 
@@ -170,7 +170,7 @@ Azure DevOps Services 템플릿을 통해 새 이미지를 빌드하고, Docker 
 
 **그림 5-8**. Azure DevOps Services Release Management에서 Azure DevOps Services Docker Compose 작업 구성
 
-그러나 그림 5-6에 표시되고 그림 5-8에서 구현되는 시나리오는 단일 Docker 호스트와 VM에 배포하고 이미지당 단일 컨테이너 또는 인스턴스가 있는 간단한 시나리오이며, 아마도 개발 또는 테스트 시나리오에 대해서만 사용해야 한다는 점을 염두에 두어야 합니다. 대부분의 엔터프라이즈 프로덕션 시나리오에서는 여러 노드, 서버 및 VM 간의 부하 분산 및 "지능적인 장애 조치(failover)"에 의해 HA(고가용성) 및 관리하기 쉬운 확장성을 가져야 하므로 서버 또는 노드가 고장인 경우 해당 서비스 및 컨테이너는 다른 호스트 서버 또는 VM으로 이동됩니다. 이 경우 컨테이너 클러스터, 오케스트레이터 및 스케줄러 등과 같은 고급 기술이 필요합니다. 따라서 해당 클러스터에 배포하는 방법은 다음 섹션에서 설명하는 고급 시나리오를 처리하는 방법입니다.
+그러나 그림 5-6에 나와 있고 그림 5-8에서 구현되는 시나리오는 단일 Docker 호스트 및 VM에 배포되고 이미지당 단일 컨테이너 또는 인스턴스가 있는 간단한 시나리오이며, 개발 또는 테스트 시나리오용으로만 사용해야 한다는 점을 염두에 두어야 합니다. 대부분의 엔터프라이즈 프로덕션 시나리오에서는 여러 노드, 서버 및 VM 간의 부하 분산을 통해 HA(고가용성) 및 관리하기 쉬운 확장성을 갖기를 원하고 "인텔리전트 장애 조치(failover)" 기능을 더하여 서버 또는 노드에 장애가 발생한 경우 해당 서비스 및 컨테이너가 다른 호스트 서버 또는 VM으로 이동됩니다. 이 경우 컨테이너 클러스터, 오케스트레이터 및 스케줄러 등과 같은 고급 기술이 필요합니다. 따라서 해당 클러스터에 배포하는 방법은 다음 섹션에서 설명하는 고급 시나리오를 처리하는 방법입니다.
 
 ### <a name="deploying-docker-applications-to-docker-clusters"></a>Docker 클러스터에 Docker 애플리케이션 배포
 
@@ -196,7 +196,7 @@ CD 관점 및 구체적으로 Azure DevOps Services 관점에서 보면 그림 5
 
 **그림 5-11**. ACS DC/OS에 배포하는 Docker 배포 작업 정의
 
-> [!정보] Azure DevOps Services 및 Docker를 포함하는 CD 파이프라인에 대해 자세히 읽으려면 <https://azure.microsoft.com/services/devops/pipelines>를 방문하세요.
+> [!정보] Azure DevOps Services 및 Docker를 포함하는 CD 파이프라인에 대해 자세히 알아보려면 <https://azure.microsoft.com/services/devops/pipelines>을 방문하세요.
 
 ## <a name="step-5-run-and-manage"></a>5단계: 실행 및 관리
 

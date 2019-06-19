@@ -1,41 +1,41 @@
 ---
 title: Docker 앱을 위한 개발 환경
-description: Docker 개발 수명 주기를 지 원하는 가장 중요 한 개발 도구 옵션 익히기.
+description: Docker 개발 수명 주기를 지원하는 가장 중요한 개발 도구 옵션을 알아봅니다.
 ms.date: 02/15/2019
 ms.openlocfilehash: 0f71ffa5e6870f45908e4def6577120a17ec744c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: MT
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65641412"
 ---
 # <a name="development-environment-for-docker-apps"></a>Docker 앱을 위한 개발 환경
 
 ## <a name="development-tools-choices-ide-or-editor"></a>개발 도구 선택: IDE 또는 편집기
 
-든 관계 없이 완전 하 고 강력한 IDE 또는 가볍고 민첩 한 편집기를 선호 하는 경우 Microsoft는 Docker 응용 프로그램 개발에 있어.
+개발자가 완전하고 강력한 IDE를 선호하든 아니면 가볍고 민첩한 편집기를 선호하든, Microsoft에서는 Docker 애플리케이션 개발에 필요한 모든 것을 제공해 드립니다.
 
-### <a name="visual-studio-code-and-docker-cli-cross-platform-tools-for-mac-linux-and-windows"></a>Visual Studio Code 및 Docker CLI (Mac, Linux 및 Windows 용 플랫폼 간 도구)
+### <a name="visual-studio-code-and-docker-cli-cross-platform-tools-for-mac-linux-and-windows"></a>Visual Studio Code 및 dotnet CLI(Mac, Linux 및 Windows용 플랫폼 간 도구)
 
-모든 개발 언어를 지 원하는 경량, 플랫폼 간 편집기를 원한다 면 Visual Studio Code 및 Docker CLI를 사용할 수 있습니다. 이러한 제품은 개발자 워크플로 간소화 하는 것에 대 한 중요 한 간단 하지만 강력한 환경을 제공 합니다. "Docker에 대 한 Mac" 또는 "Docker에 대 한 Windows" (개발 환경)를 설치 하 여 Docker 개발자 모두 Windows 또는 Linux (런타임 환경)에 대 한 앱을 빌드할 수는 단일 Docker CLI를 사용할 수 있습니다. 또한 Visual Studio Code 편집기에서 Docker 명령을 실행 하는 Dockerfile 및 바로 가기 작업에 대 한 IntelliSense 사용 하 여 Docker에 대 한 확장을 지원 합니다.
+모든 개발 언어를 지원하는 가벼운 플랫폼 간 편집기를 선호하는 경우 Visual Studio Code 및 Docker CLI를 사용하면 됩니다. 이러한 제품은 개발자 워크플로를 간소화하는 데 필요한 간단하면서도 강력한 환경을 제공합니다. "Mac용 Docker" 또는 "Windows용 Docker"(개발 환경)를 설치하면 Docker 개발자는 단일 Docker CLI를 사용하여 Windows 또는 Linux용 앱(런타임 환경)을 모두 빌드할 수 있습니다. 뿐만 아니라 Visual Studio Code는 Dockerfile용 IntelliSense가 포함된 Docker용 확장 및 편집기에서 Docker 명령을 실행하는 바로 가기 작업을 지원합니다.
 
 > [!NOTE]
 >
-> Visual Studio Code를 다운로드 하려면로 이동 <https://code.visualstudio.com/download>합니다.
+> Visual Studio Code를 다운로드하려면 <https://code.visualstudio.com/download>로 이동합니다.
 >
-> Mac 및 Windows 용 Docker를 다운로드 하려면로 이동 <https://www.docker.com/products/docker>합니다.
+> Mac 및 Windows용 Docker를 다운로드하려면 <https://www.docker.com/products/docker>로 이동합니다.
 
-### <a name="visual-studio-with-docker-tools-windows-development-machine"></a>Docker 도구 (Windows 개발 컴퓨터)를 사용 하 여 visual Studio
+### <a name="visual-studio-with-docker-tools-windows-development-machine"></a>Docker 도구가 포함된 Visual Studio(Windows 개발 머신)
 
-Visual Studio 2017 (이상)를 사용 하는 것이 좋습니다 설정 하는 기본 제공 Docker 도구를 사용 하 여 합니다. Visual Studio를 사용 하 여 개발, 실행 및 선택한 Docker 환경에서 직접 응용 프로그램의 유효성을 검사 수 있습니다. F5 키를 눌러 응용 프로그램을 디버깅 (단일 컨테이너 또는 여러 컨테이너) Docker 호스트에서 직접 또는 Ctrl + f5를 눌러 편집 하 고 컨테이너를 다시 빌드하지 않고 앱을 새로 고칩니다. 해당 하는 Linux 또는 Windows 용 Docker 컨테이너를 만들려면 Windows 개발자를 위한 간단 하 고 가장 강력한 좋습니다.
+기본 제공 Docker 도구를 사용하도록 설정된 Visual Studio 2017(이상)을 사용하는 것이 좋습니다. Visual Studio가 있으면 원하는 Docker 환경에서 직접 애플리케이션을 개발하고, 실행하고, 유효성을 검사할 수 있습니다. F5 키를 눌러 Docker 호스트에서 직접 애플리케이션(단일 컨테이너 또는 여러 컨테이너)을 디버그하거나, Ctrl+F5 키를 눌러 컨테이너를 다시 빌드하지 않고 앱을 편집하고 새로 고칠 수 있습니다. 이 방법은 Windows 개발자가 Linux 또는 Windows용 Docker 컨테이너를 만들 수 있는 가장 간단하면서도 강력한 옵션입니다.
 
-### <a name="visual-studio-for-mac-mac-development-machine"></a>Visual Studio for Mac (Mac 개발 컴퓨터)
+### <a name="visual-studio-for-mac-mac-development-machine"></a>Mac용 Visual Studio(Mac 개발 머신)
 
-사용할 수 있습니다 [Mac 용 Visual Studio](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) Docker 기반 응용 프로그램을 개발 하는 경우. Mac 용 visual Studio는 mac 용 Visual Studio Code를 비교할 때 다양 한 IDE
+Docker 기반 애플리케이션을 개발할 때 [Mac용 Visual Studio](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)를 사용할 수 있습니다. Mac용 Visual Studio는 Mac용 Visual Studio Code에 비해 풍부한 IDE를 제공합니다.
 
-## <a name="language-and-framework-choices"></a>언어 및 프레임 워크 선택
+## <a name="language-and-framework-choices"></a>언어 및 프레임워크 선택
 
-Microsoft 도구를 사용 하 여 가장 최신 언어를 사용 하 여 Docker 응용 프로그램을 개발할 수 있습니다. 다음은 초기 목록에 있지만를 제한 합니다.
+Microsoft 도구를 사용하여 가장 최신 언어로 Docker 애플리케이션을 개발할 수 있습니다. 다음은 초기 목록이지만, 이 목록으로 제한되지는 않습니다.
 
 - .NET Core 및 ASP.NET Core
 - Node.js
@@ -44,7 +44,7 @@ Microsoft 도구를 사용 하 여 가장 최신 언어를 사용 하 여 Docker
 - Ruby
 - Python
 
-기본적으로, Linux 또는 Windows에서 Docker를 지 원하는 모든 최신 언어를 사용할 수 있습니다.
+기본적으로 Linux 또는 Windows에서 Docker가 지원하는 모든 최신 언어를 사용할 수 있습니다.
 
 >[!div class="step-by-step"]
 >[이전](deploy-azure-kubernetes-service.md)

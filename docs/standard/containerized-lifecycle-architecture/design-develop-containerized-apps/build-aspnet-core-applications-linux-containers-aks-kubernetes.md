@@ -43,7 +43,7 @@ ASP.NET Core 2.2를 프레임워크로 선택했는지 확인합니다. .NET Cor
 
 **그림 4-37**. ASP.NET CORE 2.2 및 웹 API 프로젝트 형식 선택
 
-이전 버전의.NET Core를 보유한 경우 <https://www.microsoft.com/net/download/core#/sdk>에서 2.2 버전을 다운로드하여 설치할 수 있습니다.
+이전 버전의 .NET Core를 보유한 경우 <https://www.microsoft.com/net/download/core#/sdk>에서 2.2 버전을 다운로드하여 설치할 수 있습니다.
 
 프로젝트를 만들 때 또는 그 후에 Docker 지원을 추가할 수 있으므로 언제든지 프로젝트를 "Docker화"할 수 있습니다. 프로젝트를 만든 후 Docker 지원을 추가하려면 솔루션 탐색기에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **추가** > **Docker 지원**을 선택합니다.
 
