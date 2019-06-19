@@ -10,11 +10,11 @@ ms.locfileid: "61680109"
 ---
 # <a name="serialization-c"></a>Serialization(C#)
 
-Serialization은 개체를 저장하거나 메모리, 데이터베이스 또는 파일로 전송하기 위해 개체를 바이트 스트림으로 변환하는 프로세스입니다. 주 목적은 필요할 때 다시 개체로 만들 수 있도록 개체의 상태를 저장하는 것입니다. 역 프로세스는 deserialization 입니다.
+Serialization은 개체를 저장하거나 메모리, 데이터베이스 또는 파일로 전송하기 위해 개체를 바이트 스트림으로 변환하는 프로세스입니다. 주 목적은 필요할 때 다시 개체로 만들 수 있도록 개체의 상태를 저장하는 것입니다. 역 프로세스는 deserialization입니다.
 
 ## <a name="how-serialization-works"></a>Serialization 작동 방법
 
-아래 그림에서 serialization 의 전체 프로세스 과정을 보여 줍니다:
+아래 그림에서는 serialization의 전체 프로세스 과정을 보여 줍니다:
 
 ![Serialization 그래픽](./media/index/serialization-process.gif)
 
