@@ -36,7 +36,7 @@ Serialization은 개발자에게 개체의 상태를 저장하고 필요할 때 
 
 ## <a name="binary-and-xml-serialization"></a>이진 및 XML Serialization
 
-이진 또는 XML Serialization을 사용할 수 있습니다. 이진 Serialization에서 멤버가 읽기 전용이더라도 모든 멤버가 Serialize되고 성능이 향상됩니다. XML Serialization은 보다 읽기 쉬운 코드와 객체 공유의 유연성, 상호 운용을 위한 방법을 제공합니다.
+이진 또는 XML Serialization을 사용할 수 있습니다. 이진 Serialization에서 멤버가 읽기 전용이더라도 모든 멤버가 Serialize되고 성능이 향상됩니다. XML Serialization은 상호 운용성을 위한 보다 읽기 쉬운 코드 및 보다 유연한 개체 공유 및 사용을 제공합니다.
 
 ### <a name="binary-serialization"></a>이진 Serialization
 
