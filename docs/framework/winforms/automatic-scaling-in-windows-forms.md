@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: cacda830a2501dcd127248955848d207d80bbe2c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f8afece073076b9ae94faaba8477f2a13e11b295
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636984"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268092"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Windows Forms의 자동 크기 조정
 
@@ -48,7 +48,7 @@ ms.locfileid: "65636984"
 
 - 와 같은.NET Framework 버전 2.0에 도입 된 최신 레이아웃 관리자와 호환 되지 않습니다 <xref:System.Windows.Forms.FlowLayoutPanel> 고 <xref:System.Windows.Forms.TableLayoutPanel>입니다.
 
-- [!INCLUDE[compact](../../../includes/compact-md.md)]와의 호환성에 필요한 디스플레이 해상도를 직접 기반으로 하는 크기 조정을 지원하지 않았습니다.
+- .NET Compact Framework에 대 한 호환성에 필요한 디스플레이 해상도 직접 기반 크기 조정을 지원 하지 않았습니다.
 
 이 메커니즘은 이전 버전과 호환성을 유지 하기 위해.NET Framework 버전 2.0 유지 하지만 다음에 설명 하는 보다 강력한 크기 조정 메커니즘으로 대체 되었습니다. 따라서 <xref:System.Windows.Forms.Form.AutoScale%2A>, <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>, <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> 및 특정 <xref:System.Windows.Forms.Control.Scale%2A> 오버로드는 사용되지 않는 것으로 표시됩니다.
 
@@ -63,7 +63,7 @@ ms.locfileid: "65636984"
 
 - <xref:System.Windows.Forms.Control> 클래스에는 크기 조정에 참여하고 동일한 폼에서 혼합된 크기 조정을 지원할 수 있게 해주는 여러 개의 새 멤버도 있습니다. 구체적으로 <xref:System.Windows.Forms.Control.Scale%2A>, <xref:System.Windows.Forms.Control.ScaleChildren%2A> 및 <xref:System.Windows.Forms.Control.GetScaledBounds%2A> 멤버가 크기 조정을 지원합니다.
 
-- <xref:System.Windows.Forms.AutoScaleMode> 열거형에서 정의된 시스템 글꼴 지원을 보완하기 위해 화면 해상도를 기반으로 하는 크기 조정 지원이 추가되었습니다. 이 모드는 [!INCLUDE[compact](../../../includes/compact-md.md)]에서 지원하는 자동 크기 조정과 호환되므로 애플리케이션을 쉽게 마이그레이션할 수 있습니다.
+- <xref:System.Windows.Forms.AutoScaleMode> 열거형에서 정의된 시스템 글꼴 지원을 보완하기 위해 화면 해상도를 기반으로 하는 크기 조정 지원이 추가되었습니다. 이 모드는 응용 프로그램을 쉽게 마이그레이션할을 사용 하도록 설정 하는.NET Compact Framework에서 지 원하는 자동 크기 조정과 호환입니다.
 
 - <xref:System.Windows.Forms.FlowLayoutPanel> 및 <xref:System.Windows.Forms.TableLayoutPanel>과 같은 레이아웃 관리자와의 호환성이 자동 크기 조정 구현에 추가되었습니다.
 

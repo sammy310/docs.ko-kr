@@ -9,16 +9,16 @@ helpviewer_keywords:
 - netcf compiler option [Visual Basic]
 - /netcf compiler option [Visual Basic]
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
-ms.openlocfilehash: b64c55b73a9c835ded0d7c81ff36329b8d6a8bc9
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 028fa148d0e5622648a5fdfff1789c3d0bfde057
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586549"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268287"
 ---
 # <a name="-netcf"></a>-netcf
 
-[!INCLUDE[Compact](~/includes/compact-md.md)]를 대상으로 하도록 컴파일러를 설정합니다.
+컴파일러가.NET Compact Framework를 대상으로 설정 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -28,7 +28,7 @@ ms.locfileid: "65586549"
 
 ## <a name="remarks"></a>설명
 
-합니다 `-netcf` 옵션을 사용 하면 대상에 Visual Basic 컴파일러는 [!INCLUDE[Compact](~/includes/compact-md.md)] 전체.NET Framework 대신 합니다. 전체.NET Framework에만 존재 하는 언어 기능이 비활성화 됩니다.
+`-netcf` 옵션을 사용 하면 Visual Basic 컴파일러는 전체.NET Framework 대신.NET Compact Framework를 대상으로 합니다. 전체.NET Framework에만 존재 하는 언어 기능이 비활성화 됩니다.
 
 합니다 `-netcf` 옵션은 사용 하도록 설계 되었습니다 [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)합니다. 사용 하지 않도록 설정 하는 언어 기능 `-netcf` 동일한 언어 기능을 사용 하 여 대상 파일에 없는 `-sdkpath`합니다.
 
@@ -85,7 +85,7 @@ ms.locfileid: "65586549"
 
 ## <a name="example"></a>예제
 
-다음 코드에서는 `Myfile.vb` 사용 하 여 합니다 [!INCLUDE[Compact](~/includes/compact-md.md)]의 기본 설치 디렉터리에서 찾을 mscorlib.dll 및 Microsoft.VisualBasic.dll의 버전을 사용 하는 [!INCLUDE[Compact](~/includes/compact-md.md)] C 드라이브에 합니다. 최신 버전의 사용은 일반적으로 [!INCLUDE[Compact](~/includes/compact-md.md)]합니다.
+다음 코드에서는 `Myfile.vb` .NET Compact Framework를 사용 하 여 C 드라이브에.NET Compact Framework의 기본 설치 디렉터리에서 찾을 mscorlib.dll 및 Microsoft.VisualBasic.dll의 버전을 사용 합니다. 일반적으로.NET Compact Framework의 최신 버전을 사용 하면 됩니다.
 
 ```console
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb

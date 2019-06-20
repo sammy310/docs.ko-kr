@@ -2,18 +2,18 @@
 title: ADO.NET 아키텍처
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 13f65d0a2daf3b477a9b29c4de84fb359c946201
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 282f18cc7d379dffc410a0c62dc3b3e66e0a44f6
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877237"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267974"
 ---
 # <a name="adonet-architecture"></a>ADO.NET 아키텍처
 기존의 데이터 처리는 연결 기반의 2계층 모델에 의존해 왔습니다. 그러나 다중 계층 아키텍처를 사용하는 데이터 처리가 증가함에 따라 프로그래머는 연결되지 않은 방법으로 전환하여 응용 프로그램의 확장성을 개선하고 있습니다.  
   
 ## <a name="adonet-components"></a>ADO.NET 구성 요소  
- 두 가지 주요 구성 요소 [!INCLUDE[ado_orcas_long](../../../../includes/ado-orcas-long-md.md)] 에 대 한 데이터 액세스 및 조작을.NET Framework 데이터 공급자 및 <xref:System.Data.DataSet>합니다.  
+ 데이터 액세스 및 조작을 위한 ADO.NET의 두 가지 주요 구성 요소는.NET Framework 데이터 공급자 및 <xref:System.Data.DataSet>합니다.  
   
 ### <a name="net-framework-data-providers"></a>.NET Framework 데이터 공급자  
  .NET Framework 데이터 공급자는 데이터 조작과 정방향 읽기 전용 고속 데이터 액세스를 위해 명시적으로 디자인된 구성 요소입니다. `Connection` 개체는 데이터 소스에 대한 연결을 제공합니다. `Command` 개체를 사용하면 데이터베이스 명령에 액세스하여 데이터를 반환 및 수정하고 저장 프로시저를 실행하며 매개 변수 정보를 보내거나 검색할 수 있습니다. `DataReader`는 데이터 소스의 데이터에 대한 고성능 스트림을 제공합니다. 마지막으로 `DataAdapter`는 `DataSet` 개체와 데이터 소스 사이를 연결합니다. `DataAdapter`는 `Command` 개체로 데이터 소스에서 SQL 명령을 실행하여 `DataSet`을 데이터와 함께 로드하고 `DataSet`에 포함된 데이터의 변경 내용을 데이터 소스로 되돌려 조정합니다. 자세한 내용은 [.NET Framework 데이터 공급자](../../../../docs/framework/data/adonet/data-providers.md) 하 고 [ADO.NET에서 데이터 수정 및 검색](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)합니다.  

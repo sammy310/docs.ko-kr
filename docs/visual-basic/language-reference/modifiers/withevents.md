@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - WithEvents keyword [Visual Basic]
 ms.assetid: 19d461f5-d72f-4de9-8c1d-0a6650316990
-ms.openlocfilehash: 41d38dcb3f44ccda19253adcd39401b0ac8dfb02
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e8a8fb571fa65228f3a0acec1f902d21eb9bfe04
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647650"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268311"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents(Visual Basic)
 하나 이상의 선언 된 멤버 변수가 이벤트를 발생 시킬 수 있는 클래스의 인스턴스 참조 하는지를 지정 합니다.  
@@ -31,6 +31,12 @@ ms.locfileid: "64647650"
 - **요소 형식입니다.** 선언 해야 `WithEvents` 을 받을 수 있도록 개체 변수를 변수 클래스 인스턴스. 그러나로 선언할 수 없습니다 `Object`합니다. 이벤트를 발생 시킬 수 있는 특정 클래스로 선언 해야 합니다.  
   
  `WithEvents` 한정자는이 컨텍스트에서 사용할 수 있습니다. [Dim 문](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ 
+## <a name="example"></a>예제
+
+```VB
+Dim WithEvents app As Application
+```
   
 ## <a name="see-also"></a>참고자료
 

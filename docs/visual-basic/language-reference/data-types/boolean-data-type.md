@@ -12,12 +12,12 @@ helpviewer_keywords:
 - True keyword [Visual Basic]
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
-ms.openlocfilehash: 03497136ec53d89ac944fdd90301a4c590be326a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b1e4add39cee6c733a6f4b95aa1668975f2f2d6d
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622534"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268258"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boolean 데이터 형식(Visual Basic)
 만 될 수 있는 값을 포함 `True` 또는 `False`합니다. 키워드 `True` 하 고 `False` 의 두 가지 상태에 해당 `Boolean` 변수입니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "64622534"
 ## <a name="example"></a>예제  
  다음 예에서 `runningVB` 는 `Boolean` 간단한 예/아니요 설정을 저장 하는 변수입니다.  
   
-```  
+```vb  
 Dim runningVB As Boolean  
 ' Check to see if program is running on Visual Basic engine.  
 If scriptEngine = "VB" Then  
