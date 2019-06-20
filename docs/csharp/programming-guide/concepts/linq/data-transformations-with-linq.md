@@ -18,11 +18,11 @@ ms.lasthandoff: 06/04/2019
 ms.locfileid: "66486276"
 ---
 # <a name="data-transformations-with-linq-c"></a>LINQ를 통한 데이터 변환(C#)
-[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]는 데이터 검색만 관련된 것이 아닙니다. 데이터 변환을 위한 강력한 도구이기도 합니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리를 사용하여 소스 시퀀스를 입력으로 사용하고 다양한 방법으로 수정하여 새 출력 시퀀스를 만들 수 있습니다. 정렬 및 그룹화를 통해 요소 자체를 수정하지 않고 시퀀스 자체를 수정할 수 있습니다. 하지만 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리의 가장 강력한 기능은 새 형식을 만드는 기능일 것입니다. 이 작업은 [select](../../../../csharp/language-reference/keywords/select-clause.md) 절에서 수행합니다. 예를 들어, 아래와 같은 작업을 수행할 수 있습니다.  
+[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]는 데이터 검색만을 위한 도구는 아닙니다. 데이터 변환을 위한 강력한 도구이기도 합니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리를 사용하여 소스 시퀀스를 입력으로 사용하고 다양한 방법으로 수정하여 새 출력 시퀀스를 만들 수 있습니다. 정렬 및 그룹화를 통해 요소 자체를 수정하지 않고 시퀀스 자체를 수정할 수 있습니다. 하지만 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리의 가장 강력한 기능은 새 형식을 만드는 기능일 것입니다. 이 작업은 [select](../../../../csharp/language-reference/keywords/select-clause.md) 절에서 수행합니다. 예를 들어, 아래와 같은 작업을 수행할 수 있습니다.  
   
 - 여러 입력 시퀀스를 새 형식을 가진 단일 출력 시퀀스로 병합합니다.  
   
-- 요소가 소스 시퀀스에 있는 각 요소의 속성 하나만 또는 여러 속성으로 구성된 출력 시퀀스를 만듭니다.  
+- 소스 시퀀스에 있는 각 요소의 속성 하나만으로 또는 여러 속성으로 구성된 출력 시퀀스를 만듭니다.  
   
 - 요소가 소스 데이터에서 수행된 작업의 결과로 구성된 출력 시퀀스를 만듭니다.  
   
