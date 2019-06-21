@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79a8d378f69ced0bc22926b066e76dc515b06559
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 04f31748fd53fe3281102fcadcc1e56ea3cc1109
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65210437"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307085"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > 요소
 <xref:System.AppContext> 클래스에 사용되는 스위치를 하나 이상 정의하여 새 기능의 옵트아웃 메커니즘을 제공합니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "65210437"
 |`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|한 PackageDigitalSignatureManager 서명 패키지 부분에 사용 되는 기본 알고리즘은 SHA1 또는 SHA256 여부를 제어 합니다.<br>SHA1 관련 충돌 문제로 인해 SHA256을 사용하는 것이 좋습니다.|.NET Framework 4.7.1|
 |`Switch.System.Activities.`<br/>`UseMD5CryptoServiceProviderForWFDebugger`|로 설정 하면 `false`, FIPS가 활성화 하는 경우 Visual Studio를 사용 하 여 XAML 기반 워크플로 프로젝트를 디버깅할 수 있습니다. 없으면를 <xref:System.NullReferenceException> System.Activities 어셈블리의 메서드 호출에서 throw 됩니다.|.NET Framework 4.7|
 |`Switch.System.Activities.`<br/>`UseMD5ForWFDebugger`|디버거에서 워크플로 인스턴스에 대 한 체크섬 MD5 또는 SHA1 사용 하는지 여부를 제어 합니다. | .NET Framework 4.7|
-|`Switch.System.Activities.`<br/>`UseSHA1HashForDebuggerSymbols`|워크플로 체크섬 해시.NET Framework 4.7의 기본값으로 도입 SHA1 알고리즘을 사용 하는지 여부를 제어 (`true`)를 사용 하는지 여부 또는.NET Framework 4.8에서 기본적으로 도입 된 기본 SHA256 알고리즘 (`false`).<br>SHA1 관련 충돌 문제로 인해 SHA256을 사용하는 것이 좋습니다.|.NET Framework 4.8|
+|`Switch.System.Activities.`<br/>`UseSHA1HashForDebuggerSymbols`|워크플로 체크섬 해시.NET Framework 4.7의 기본값으로 도입 SHA1 알고리즘을 사용 하는지 여부를 제어 (`true`),.NET Framework 4.8에서 기본적으로 도입 된 기본 SHA256 알고리즘을 사용 하는지 여부 또는 (`false`).<br>SHA1 관련 충돌 문제로 인해 SHA256을 사용하는 것이 좋습니다.|.NET Framework 4.8|
 |`Switch.System.Diagnostics.`<br/>`IgnorePortablePDBsInStackTraces`|원본 파일 및 줄 정보를 포함할 수 이식 가능한 Pdb를 사용 하는 경우 스택 추적 가져오기 하는 여부를 제어 합니다. `false` 소스 파일 및 줄 정보를 포함 하려면 그렇지 않으면 `true`합니다.|.NET Framework 4.7.2|
 |`Switch.System.Drawing.`<br/>`DontSupportPngFramesInIcons`|컨트롤 여부를 <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> 메서드에서 예외를 throw 때는 <xref:System.Drawing.Icon> 개체에 PNG 프레임이 있는 합니다. 자세한 내용은 [완화: 아이콘 개체의 PNG 프레임](../../../migration-guide/mitigation-png-frames-in-icon-objects.md)합니다.|.NET Framework 4.6|
 |`Switch.System.Drawing.Text.`<br/>`DoNotRemoveGdiFontsResourcesFromFontCollection`|결정 여부 <xref:System.Drawing.Text.PrivateFontCollection?displayProperty=nameWithType> 사용 하 여 컬렉션에 추가 될 때 개체가 제대로 삭제 됩니다는 <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile(System.String)?displayProperty=nameWithType> 메서드. `true` 레거시 동작을 유지 하려면 `false` 모든 개인 글꼴 개체의 삭제 합니다. |.NET Framework 4.7.2|
@@ -134,7 +134,7 @@ ms.locfileid: "65210437"
 |`Switch.UseLegacyAccessibilityFeatures`|컨트롤이 내게 필요한 옵션 기능을 사용할 수 있는.NET Framework 4.7.1부터 여부를 설정 또는 해제 합니다. | .NET Framework 4.7.1 |
 |`Switch.UseLegacyAccessibilityFeatures.2`|내게 필요한 옵션 기능은.NET Framework 4.7.2에서에서 사용할 수 있는지 여부는 사용 하도록 설정 하는 컨트롤 (`false`) 또는 사용 안 함 (`true`). 하는 경우 `true`, `Switch.UseLegacyAccessibilityFeatures` 수도 있어야 `true` .NET Framework 4.7.1 내게 필요한 옵션 기능을 사용 하도록 설정 합니다.|.NET Framework 4.7.2|
 |`Switch.UseLegacyAccessibilityFeatures.3`|.NET Framework 4.8에서 내게 필요한 옵션 기능을 도입 하는 여부는 사용 하도록 설정 하는 컨트롤 (`false`) 또는 사용 안 함 (`true`). 하는 경우 `true`, `Switch.UseLegacyAccessibilityFeatures` 하 고 `Switch.UseLegacyAccessibilityFeatures.2` 수도 있어야 `true`합니다.|.NET Framework 4.8|
-|`Switch.UseLegacyToolTipDisplay`|컨트롤 도구 설명 사용자 displaed 인지 가리킬 마우스 커서를 WPF 컨트롤 (`true`), 키보드 포커스와 키보드 바로 가기 키를 통해 표시 됩니다 여부 또는 (`false`, 기본 동작). .NET Framework 4.8 실행 되지만 이전 버전의.NET Framework를 대상으로 응용 프로그램, 키보드 포커스를 둘 다를 사용 하도록 설정 하 고 바로 가기 키 지원 해야 `Switch.UseLegacyAccessibilityFeatures`, `Switch.UseLegacyAccessibilityFeatures.2`, 및 `Switch.UseLegacyAccessibilityFeatures.3` 설정할 모든 `false`합니다.|.NET Framework 4.8|
+|`Switch.UseLegacyToolTipDisplay`|컨트롤 도구 설명에는 사용자가 표시 되는지 여부를 가리킬 마우스 커서를 WPF 컨트롤 (`true`), 키보드 포커스와 키보드 바로 가기 키를 통해 표시 됩니다 여부 또는 (`false`, 기본 동작). .NET Framework 4.8 실행 되지만 이전 버전의.NET Framework를 대상으로 응용 프로그램, 키보드 포커스를 둘 다를 사용 하도록 설정 하 고 바로 가기 키 지원 해야 `Switch.UseLegacyAccessibilityFeatures`, `Switch.UseLegacyAccessibilityFeatures.2`, 및 `Switch.UseLegacyAccessibilityFeatures.3` 설정할 모든 `false`합니다.|.NET Framework 4.8|
 |`System.Xml.`<br /><br /> `IgnoreEmptyKeySequences`|XSD 스키마 유효성 검사 하 여 복합 키에 빈 키 시퀀스가 무시할지 여부를 제어 합니다. 자세한 내용은 [완화: XML 스키마 유효성 검사](../../../migration-guide/mitigation-xml-schema-validation.md)합니다.|.NET Framework 4.6|  
   
 > [!NOTE]

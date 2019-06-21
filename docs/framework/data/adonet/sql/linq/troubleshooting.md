@@ -2,12 +2,12 @@
 title: 문제 해결
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: ebcfec475d20492f5ce1f971163544d9faa52223
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8b34336871d599b72e548e2db90487c17377ba66
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613755"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307194"
 ---
 # <a name="troubleshooting"></a>문제 해결
 다음은 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 응용 프로그램에서 발생할 수 있는 문제와 이러한 문제를 방지하거나 문제의 영향을 줄일 수 있는 방법에 대한 설명입니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "64613755"
 ## <a name="expression-not-queryable"></a>쿼리할 수 없는 식  
  "Expression [expression] 형식의 식은 쿼리할 수 없습니다. 어셈블리 참조가 있는지 확인하십시오." 오류가 나타나면 다음 사항을 확인하십시오.  
   
-- 응용 프로그램이 [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)]를 대상으로 하는지 여부  
+- 응용 프로그램의.NET Compact Framework 3.5를 대상입니다.  
   
 - `System.Core.dll` 및 `System.Data.Linq.dll`에 대한 참조가 있는지 여부  
   

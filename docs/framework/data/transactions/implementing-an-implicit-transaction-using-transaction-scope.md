@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: e9e5e09bdde82c7b818fd47275bdbfeda5850682
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f45019ccc54056371954965e105e309fd41d9ffd
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645750"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306210"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>트랜잭션 범위를 사용하여 암시적 트랜잭션 구현
 <xref:System.Transactions.TransactionScope> 클래스는 트랜잭션 자체와 상호 작용할 필요 없이 코드 블록을 트랜잭션에 참여하는 것으로 표시하는 단순한 방법을 제공합니다. 트랜잭션 범위는 자동으로 앰비언트 트랜잭션을 선택하고 관리할 수 있습니다. 사용하기 쉽고 효율적이므로 트랜잭션 응용 프로그램을 개발할 때는 <xref:System.Transactions.TransactionScope> 클래스를 사용하는 것이 좋습니다.  
@@ -124,7 +124,9 @@ using(TransactionScope scope1 = new TransactionScope())
  이 예제에서는 `scope1`를 사용하여 새 범위(<xref:System.Transactions.TransactionScopeOption.Required>)를 만드는 앰비언트 트랜잭션이 없는 코드 블록을 보여 줍니다. `scope1` 범위는 새 트랜잭션(Transaction A)을 만들 때 루트 범위이며 Transaction A를 앰비언트 트랜잭션으로 설정합니다. 그런 다음 `Scope1`은 각각 다른 <xref:System.Transactions.TransactionScopeOption> 값을 사용하여 세 개의 개체를 추가로 만듭니다. 예를 들어 `scope2`는 <xref:System.Transactions.TransactionScopeOption.Required>를 사용하여 만들어지고 앰비언트 트랜잭션이 있으므로 `scope1`에서 만든 첫 번째 트랜잭션에 참여합니다. `scope3`은 새 트랜잭션의 루트 범위이고 `scope4`에는 앰비언트 트랜잭션이 없습니다.  
   
  <xref:System.Transactions.TransactionScopeOption>의 기본값이며 가장 일반적으로 사용되는 값은 <xref:System.Transactions.TransactionScopeOption.Required>이고 다른 값은 각각 고유한 용도를 가집니다.  
-  
+
+### <a name="non-transactional-code-inside-a-transaction-scope"></a>트랜잭션 범위 내부에 비트랜잭션 코드
+
  <xref:System.Transactions.TransactionScopeOption.Suppress> 코드 섹션에서 수행한 작업을 유지 하 고 작업이 실패 하는 경우 앰비언트 트랜잭션을 중단 하지 않으려는 경우 유용 합니다. 예를 들어 로깅 또는 감사 작업을 수행하려는 경우 또는 앰비언트 트랜잭션이 커밋 또는 중단되든 관계없이 구독자에게 이벤트를 게시하려는 경우에 유용합니다. 이 값을 사용하면 다음 예제와 같이 트랜잭션 범위 내부에 비트랜잭션 코드 섹션이 있을 수 있습니다.  
   
 ```csharp  

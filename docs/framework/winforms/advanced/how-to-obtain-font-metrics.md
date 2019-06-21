@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fonts [Windows Forms], obtaining metrics
 - font metrics [Windows Forms], obtaining
 ms.assetid: ff7c0616-67f7-4fa2-84ee-b8d642f2b09b
-ms.openlocfilehash: 75177b609f14d335aa57aba77d647827f50a8692
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7d7ad92199bb8a8f01290066f8ae023a14c2f9ce
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881851"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307432"
 ---
 # <a name="how-to-obtain-font-metrics"></a>방법: 글꼴 메트릭 가져오기
 <xref:System.Drawing.FontFamily> 클래스는 특정 제품군/스타일 조합에 대 한 다양 한 메트릭을 검색 하는 메서드를 제공 합니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "65881851"
   
 - <xref:System.Drawing.FontFamily.GetLineSpacing%2A>(FontStyle)  
   
- 크기 및 특정 단위의 독립 되므로 이러한 메서드에서 반환 되는 숫자를 글꼴 디자인 단위로 있는 <xref:System.Drawing.Font> 개체입니다.  
+ 이러한 메서드에서 반환 된 값은 글꼴 디자인 단위로 크기 및 특정 단위의 독립 되므로 <xref:System.Drawing.Font> 개체입니다.  
   
  다음 그림에는 다양 한 메트릭을 보여 줍니다.
   

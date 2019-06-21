@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 78286cde925a4583a3610ce100d23e16adcefe49
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7dd93e5aa44effcf9fc41598e41f6f612a209c86
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878083"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307140"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>방법: ADO.NET Entity Framework 데이터 원본을 (WCF Data Services)를 사용 하 여 데이터 서비스 만들기
 
@@ -26,7 +26,7 @@ WCF Data Services에서는 엔터티 데이터를 데이터 서비스로 노출 
 
 3. 모델 이름을 입력 한 다음 클릭 **추가**합니다.
 
-     [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] 마법사의 첫 페이지가 표시됩니다.
+     엔터티 데이터 모델 마법사 시작 페이지가 표시됩니다.
 
 4. 에 **모델 콘텐츠 선택** 대화 상자에서 **데이터베이스에서 생성**합니다. **다음**을 클릭합니다.
 

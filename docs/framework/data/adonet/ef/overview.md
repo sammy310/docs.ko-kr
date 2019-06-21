@@ -2,12 +2,12 @@
 title: Entity Framework 개요
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: c79055adc2be12a5806fe5e8ff129b6ecd3d76f5
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: e6c96326991c6f883ad670393bb5c2691f8ad29e
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880027"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307339"
 ---
 # <a name="entity-framework-overview"></a>Entity Framework 개요
 
@@ -39,7 +39,7 @@ ms.locfileid: "65880027"
 ## <a name="map-objects-to-data"></a>데이터 맵 개체
  개체 지향 프로그래밍을 사용하는 경우 데이터 저장소 시스템과 상호 작용해야 합니다. 클래스의 구성은 관계형 데이터베이스 테이블의 구성을 미러링하는 경우가 많지만 완전히 일치하지는 않습니다. 여러 개의 정규화된 테이블이 하나의 클래스에 해당하는 경우가 많으며 클래스 간의 관계가 테이블 간의 관계와 다르게 표현되기도 합니다. 예를 들어 판매 주문의 고객을 나타내기 위해 `Order` 클래스는 `Customer` 클래스 인스턴스에 대한 참조가 포함된 속성을 사용할 수 있지만, 데이터베이스의 `Order` 테이블 행에는 `Customer` 테이블의 기본 키 값에 해당하는 값을 가진 외래 키 열(또는 열 집합)이 포함됩니다. `Customer` 클래스는 `Orders` 클래스 인스턴스의 컬렉션이 포함된 `Order` 속성을 가질 수 있는 반면, 데이터베이스의 `Customer` 테이블에는 해당하는 열이 없습니다. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]를 사용하면 개발자는 보다 융통성 있게 관계를 이 방식으로 표현하거나 데이터베이스에서 표현되는 방식과 보다 가깝게 관계를 모델링할 수 있습니다.
 
- 기존 솔루션은 개체 지향 클래스와 속성을 관계형 테이블과 열에 매핑만 하여 흔히 "임피던스 불일치"라고 하는 이 간격을 연결하려고 했습니다. 기존의이 방법 대신는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 관계형 테이블, 열 및 논리 모델에 외래 키 제약 조건을 개념적 모델의 엔터티 및 관계를 매핑합니다. 이렇게 하면 보다 유연성 있게 개체를 정의하고 논리 모델을 최적화할 수 있습니다. [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] 도구는 개념적 모델을 기반으로 확장 가능한 데이터 클래스를 생성합니다. 이러한 클래스는 개발자가 추가하는 멤버로 확장할 수 있는 부분 클래스입니다. 기본적으로, 특정 개념적 모델에 대해 생성되는 클래스는 엔터티를 개체로 구체화하고 변경 내용을 추적 및 저장하기 위한 서비스를 제공하는 기본 클래스에서 파생됩니다. 개발자는 이러한 클래스를 통해 엔터티 및 관계를 연결에 의해 관련된 개체로 사용할 수 있습니다. 또한 개발자는 개념적 모델에 대해 생성된 클래스를 사용자 지정할 수도 있습니다. 자세한 내용은 [개체를 사용 하 여 작업](../../../../../docs/framework/data/adonet/ef/working-with-objects.md)합니다.
+ 기존 솔루션은 개체 지향 클래스와 속성을 관계형 테이블과 열에 매핑만 하여 흔히 "임피던스 불일치"라고 하는 이 간격을 연결하려고 했습니다. 기존의이 방법 대신는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 관계형 테이블, 열 및 논리 모델에 외래 키 제약 조건을 개념적 모델의 엔터티 및 관계를 매핑합니다. 이렇게 하면 보다 유연성 있게 개체를 정의하고 논리 모델을 최적화할 수 있습니다. 엔터티 데이터 모델 도구는 개념적 모델을 기반으로 하는 확장 가능한 데이터 클래스를 생성 합니다. 이러한 클래스는 개발자가 추가하는 멤버로 확장할 수 있는 부분 클래스입니다. 기본적으로, 특정 개념적 모델에 대해 생성되는 클래스는 엔터티를 개체로 구체화하고 변경 내용을 추적 및 저장하기 위한 서비스를 제공하는 기본 클래스에서 파생됩니다. 개발자는 이러한 클래스를 통해 엔터티 및 관계를 연결에 의해 관련된 개체로 사용할 수 있습니다. 또한 개발자는 개념적 모델에 대해 생성된 클래스를 사용자 지정할 수도 있습니다. 자세한 내용은 [개체를 사용 하 여 작업](../../../../../docs/framework/data/adonet/ef/working-with-objects.md)합니다.
 
 ## <a name="access-and-change-entity-data"></a>엔터티 데이터를 액세스 및 변경
 
@@ -47,7 +47,7 @@ ms.locfileid: "65880027"
 
 - [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]. 개념적 모델에 정의된 엔터티 형식을 쿼리하기 위한 LINQ(Language-Integrated Query) 지원을 제공합니다. 자세한 내용은 [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)합니다.
 
-- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. 개념적 모델의 엔터티를 직접 사용 하며 지 원하는 SQL 저장소에 독립적인 언어 [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] 개념입니다. [!INCLUDE[esql](../../../../../includes/esql-md.md)] 개체 쿼리와 EntityClient 공급자를 사용 하 여 실행 된 쿼리를 모두 사용 됩니다. 자세한 내용은 [Entity SQL 개요](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)합니다.
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. 개념적 모델의 엔터티를 직접 사용 하며 엔터티 데이터 모델 개념을 지 원하는 sql 저장소에 독립적인 언어입니다. [!INCLUDE[esql](../../../../../includes/esql-md.md)] 개체 쿼리와 EntityClient 공급자를 사용 하 여 실행 된 쿼리를 모두 사용 됩니다. 자세한 내용은 [Entity SQL 개요](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)합니다.
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에는 EntityClient 데이터 공급자가 포함되어 있습니다. 이 공급자는 연결을 관리하고, 엔터티 쿼리를 데이터 소스 특정 쿼리로 변환하며, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에서 엔터티 데이터를 개체로 구체화할 때 사용하는 데이터 판독기를 반환합니다. 개체 구체화가 필요하지 않은 경우 응용 프로그램에서 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 쿼리를 실행하고 반환된 읽기 전용 데이터 판독기를 사용할 수 있도록 하여 EntityClient 공급자를 표준 ADO.NET 데이터 공급자처럼 사용할 수도 있습니다. 자세한 내용은 [Entity Framework 용 EntityClient 공급자](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)합니다.
 
@@ -55,7 +55,7 @@ ms.locfileid: "65880027"
 
 ![Entity Framework 아키텍처 다이어그램](../../../../../docs/framework/data/adonet/ef/media/wd-efarchdiagram.gif "wd_EFArchDiagram")
 
-[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] 도구는 개념적 모델의 엔터티 컨테이너를 나타내며 `System.Data.Objects.ObjectContext` 또는 `System.Data.Entity.DbContext`에서 파생된 클래스를 생성할 수 있습니다. 이 개체 컨텍스트는 변경 내용을 추적하고 ID, 동시성 및 관계를 관리하기 위한 기능을 제공합니다. 또한 이 클래스는 데이터 소스에 삽입, 업데이트 및 삭제를 쓰는 `SaveChanges` 메서드를 노출합니다. 쿼리와 마찬가지로, 이러한 변경 작업은 시스템에서 자동으로 생성된 명령이나 개발자가 지정한 저장 프로시저로 수행됩니다.
+엔터티 데이터 모델 도구에서 파생 된 클래스를 생성할 수 있습니다 `System.Data.Objects.ObjectContext` 또는 `System.Data.Entity.DbContext` 개념적 모델의 엔터티 컨테이너를 나타내는입니다. 이 개체 컨텍스트는 변경 내용을 추적하고 ID, 동시성 및 관계를 관리하기 위한 기능을 제공합니다. 또한 이 클래스는 데이터 소스에 삽입, 업데이트 및 삭제를 쓰는 `SaveChanges` 메서드를 노출합니다. 쿼리와 마찬가지로, 이러한 변경 작업은 시스템에서 자동으로 생성된 명령이나 개발자가 지정한 저장 프로시저로 수행됩니다.
 
 ## <a name="data-providers"></a>데이터 공급자
 

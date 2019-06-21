@@ -2,12 +2,12 @@
 title: 기호 및 연산자 참조
 description: 기호 및 연산자에 사용 되는 방법을 알아봅니다는 F# 프로그래밍 언어입니다.
 ms.date: 02/11/2019
-ms.openlocfilehash: 0ea8337a9055c8df639fe6abdb6c79445d189d64
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 14ea7a66f7e9a79d24b62a4aa0564eecb891ee1a
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490811"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306193"
 ---
 # <a name="symbol-and-operator-reference"></a>기호 및 연산자 참조
 
@@ -47,7 +47,7 @@ ms.locfileid: "66490811"
 |`+?`|[null 허용 연산자](nullable-operators.md)|<ul><li>우변이 nullable 형식이면 좌변과 우변을 더합니다.<br /></li></ul>|
 |`,`|[튜플](../tuples.md)|<ul><li>튜플의 요소나 형식 매개 변수를 구분합니다.<br /></li></ul>|
 |`-`|[산술 연산자](arithmetic-operators.md)|<ul><li>이항 연산자로 사용하는 경우 좌변에서 우변을 뺍니다.<br /></li><li>단항 연산자로 사용하는 경우 부정 연산을 수행합니다.<br /></li></ul>|
-|`-`|[null 허용 연산자](nullable-operators.md)|<ul><li>우변이 nullable 형식이면 좌변에서 우변을 뺍니다.<br /></li></ul>|
+|`-?`|[null 허용 연산자](nullable-operators.md)|<ul><li>우변이 nullable 형식이면 좌변에서 우변을 뺍니다.<br /></li></ul>|
 |`->`|[함수](../functions/index.md)<br /><br />[일치 식](../match-expressions.md)|<ul><li>함수 형식에서는 인수와 반환 값을 구분합니다.<br /></li><li>시퀀스 식에서 식을 생성하며, `yield` 키워드와 동일합니다.<br /></li><li>일치 식에서 사용됩니다.<br /></li></ul>|
 |`.`|[멤버](../members/index.md)<br /><br />[기본 형식](../primitive-types.md)|<ul><li>멤버에 액세스하고 개별 이름을 정규화된 이름으로 구분합니다.<br /></li><li>부동 소수점 수로 소수점을 지정합니다.<br /></li></ul>|
 |`..`|[루프: `for...in` Expression](../loops-for-in-expression.md)|<ul><li>범위를 지정합니다.<br /></li></ul>|

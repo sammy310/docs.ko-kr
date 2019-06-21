@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 47c320b6d458ff1220808cacfb334e380b1edbc4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d2469324317fe19d2876dceefe68d70a5fd2eae3
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622741"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306292"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>데이터 서비스 구성(WCF Data Services)
 사용 하 여 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 노출 하는 데이터 서비스를 만들 수 있습니다 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드 합니다. 이러한 피드의 데이터는 다양한 데이터 소스에서 제공될 수 있습니다. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 데이터 공급자를 사용 하 여이 데이터를 노출 하는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드 합니다. 이러한 공급자에는 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 공급자, 리플렉션 공급자 및 사용자 지정 데이터 서비스 공급자 인터페이스의 집합이 포함됩니다. 공급자 구현은 서비스에 대한 데이터 모델을 정의합니다. 자세한 내용은 [데이터 서비스 공급자](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)합니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "64622741"
 |`/Customers?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> 및<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|지원 안 함|지원 안 함|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend>|지원 안 함|  
 |`/Customers('ALFKI')?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> 및<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|지원 안 함|지원되지 않음|지원되지 않음|지원 안 함|  
   
- <sup>1</sup> 이 예에서 `Address` 의 복합 형식 속성을 나타냅니다 합니다 `Customers` 라는 속성이 있는 엔터티 `StreetAddress`합니다. Northwind 데이터 서비스에서 사용되는 모델은 이 복합 형식을 명시적으로 정의하지 않습니다. 데이터 모델이 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 공급자를 사용하여 정의된 경우 [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] 도구를 사용하여 이러한 복합 형식을 정의할 수 있습니다. 자세한 내용은 [방법: 복합 형식 만들기 및 수정](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100))합니다.  
+ <sup>1</sup> 이 예에서 `Address` 의 복합 형식 속성을 나타냅니다 합니다 `Customers` 라는 속성이 있는 엔터티 `StreetAddress`합니다. Northwind 데이터 서비스에서 사용되는 모델은 이 복합 형식을 명시적으로 정의하지 않습니다. 사용 하 여 데이터 모델은 정의 하는 경우는 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 공급자 이러한 복합 형식을 정의 하는 엔터티 데이터 모델 도구를 사용할 수 있습니다. 자세한 내용은 [방법: 복합 형식 만들기 및 수정](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100))합니다.  
   
  <sup>2</sup> binary large object (BLOB)를 반환 하는 속성은이 경우에 미디어 링크 항목인 엔터티에 속한 미디어 리소스로 정의 된 경우이 URI는 `Customers`합니다. 자세한 내용은 [스트리밍 공급자](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)합니다.  
   

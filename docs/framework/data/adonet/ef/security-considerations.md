@@ -2,12 +2,12 @@
 title: 보안 고려 사항(Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: fe272bada02e6628b6275d2a5282f0def23074c8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 66f8a9217a007ed1faf975638dfa8148e2f1c5ba
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489842"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307308"
 ---
 # <a name="security-considerations-entity-framework"></a>보안 고려 사항(Entity Framework)
 이 항목에서는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 응용 프로그램의 개발, 배포 및 실행과 관련된 보안 고려 사항에 대해 설명합니다. 또한 안전한.NET Framework 응용 프로그램을 만들기 위한 권장 사항을 따라야 합니다. 자세한 내용은 [보안 개요](../../../../../docs/framework/data/adonet/security-overview.md)합니다.  
@@ -86,7 +86,7 @@ ms.locfileid: "66489842"
  공급자 고정 이름은 app.config에서 수정할 수 있습니다. 클라이언트 응용 프로그램은 강력한 이름을 사용하여 표준 공급자 팩터리 모델을 통해 기본 공급자에 액세스해야 합니다.  
   
 #### <a name="restrict-permissions-to-the-model-and-mapping-files"></a>모델 및 매핑 파일에 대한 권한을 제한합니다.  
- 관리자는 모델 및 매핑 파일(.edmx, .csdl, .ssdl 및 .msl)에 대한 쓰기 권한을 모델 또는 매핑을 수정하는 사용자로만 제한해야 합니다. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]는 런타임에 해당 파일에 대한 쓰기 권한만 있으면 됩니다. 또한 관리자는 [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] 도구로 생성된 개체 계층 및 미리 컴파일된 뷰 소스 코드 파일에 대한 액세스를 제한해야 합니다.  
+ 관리자는 모델 및 매핑 파일(.edmx, .csdl, .ssdl 및 .msl)에 대한 쓰기 권한을 모델 또는 매핑을 수정하는 사용자로만 제한해야 합니다. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]는 런타임에 해당 파일에 대한 쓰기 권한만 있으면 됩니다. 또한 관리자 개체 계층 및 엔터티 데이터 모델 도구에서 생성 되는 미리 컴파일된 뷰 소스 코드 파일에 액세스를 제한 해야 합니다.  
   
 ## <a name="security-considerations-for-queries"></a>쿼리의 보안 고려 사항  
  다음 보안 고려 사항은 개념적 모델을 쿼리할 때 적용됩니다. 이러한 고려 사항은 EntityClient를 사용한 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 쿼리와 LINQ, [!INCLUDE[esql](../../../../../includes/esql-md.md)] 및 쿼리 작성기 메서드를 사용한 개체 쿼리에 적용됩니다.  
