@@ -5,12 +5,12 @@ description: Windows 7 SP1에서.NET Framework를 설치하는 방법을 알아�
 author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: bc39a6658f300fc2cbe7f2686030b86a5f53802c
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 1e046641e5d09b13c41e1c5c4e07ed2531dfe058
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052715"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267944"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>Windows 7 SP1 및 Windows Server 2008 R2에 .NET Framework 설치
 
@@ -23,7 +23,7 @@ Windows에서 많은 애플리케이션을 실행하는 데 .NET Framework가 �
 ## <a name="net-framework-48"></a>.NET Framework 4.8
 
 > [!div class="button"]
-> [.NET Framework 4.8 다운로드]https://dotnet.microsoft.com/download/dotnet-framework/net48)
+> [.NET Framework 4.8 다운로드](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
 [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48)는 .NET Framework 4.0 이상용으로 빌드된 애플리케이션을 실행하는 데 사용될 수 있습니다.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ad78c37dda00e0b52ec8e84b8c996ee3dca09a5
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 342c570bff89d4c03780cdc280199c722b53890a
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378676"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170459"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 버전 및 종속성
 .NET Framework의 각 버전에는 CLR(공용 언어 런타임), 기본 클래스 라이브러리 및 기타 관리되는 라이브러리가 포함되어 있습니다. 이 항목에서는 버전별 .NET Framework의 주요 기능에 대해 설명하고 기본 CLR 버전 및 관련 개발 환경에 대한 정보를 제공하며 Windows 운영 체제별로 설치된 버전을 확인합니다.  
@@ -27,7 +27,9 @@ ms.locfileid: "66378676"
  지원되는 운영 체제의 전체 목록은 [시스템 요구 사항](../../../docs/framework/get-started/system-requirements.md)을 참조하십시오. 다운로드에 대해서는 [개발자용 .NET Framework 설치](../../../docs/framework/install/guide-for-developers.md)를 참조하세요. 컴퓨터에 설치되어 있는 .NET Framework의 버전을 확인하려면 [방법: 설치된 .NET Framework 버전 확인](how-to-determine-which-versions-are-installed.md)을 참조하세요.  
   
  표의 **Windows에 포함됨/설치 가능** 및 **Windows Server에 포함됨/설치 가능** 열에 ✓ 표시된 운영 체제 버전에 설치된 .NET Framework 버전은 [제어판에서 활성화](../../../docs/framework/install/dotnet-35-windows-10.md)되거나(Windows의 경우) 서버 관리자를 통해 활성화되어야(Windows Server의 경우) 합니다.  
-  
+
+[!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
+ 
 |.NET Framework 버전|CLR 버전|포함된 운영 체제<br /> Visual Studio<br/>버전|✓ 다음에서 포함된 버전:<br />+ 다음에서 설치 가능한 버전:<br />Windows|✓ 다음에서 포함된 버전:<br />+ 다음에서 설치 가능한 버전:<br />Windows Server|설치된 .NET 버전 확인 방법|  
 |----------------------------|-----------------|--------------|---------------------------------------|----------------------------------------------------|-----------------------------------------------------------|-----------------------------------------| 
 |4.8<br/><br/>[새로운 기능](../whats-new/index.md#whats-new-in-net-framework-48)<br/><br/>[내게 필요한 옵션의 새로운 기능](../whats-new/whats-new-in-accessibility.md#whats-new-in-accessibility-in-net-framework-48)<br /><br >[릴리스 정보](https://github.com/Microsoft/dotnet/tree/master/releases/net48/README.md)|4| | ✓ 2019년 5월 10일 업데이트<br/><br/> + 2018년 10월 10일 업데이트(버전 1809) <br/> + 2018년 4월 10일 업데이트(버전 1803) <br/> + 10 Fall Creators Update(버전 1709) <br/> + 10 Creators Update(버전 1703) <br/> + 10 1주년 업데이트(버전 1607) <br/> + 8.1 <br/> +7 | + Windows Server 2019<br/> + Windows Server, 버전 1809 <br/> + Windows Server, 버전 1803 <br/> + 2016 <br/> + 2012 R2 <br/> + 2012 <br/> + 2008 R2 SP1 |`Release` DWORD 사용:<br/><br/> - 528040(Windows 10 2019년 5월 업데이트) <br/> - 528049(다른 모든 OS 버전) <br/><br/> ([지침](how-to-determine-which-versions-are-installed.md) 참조)|

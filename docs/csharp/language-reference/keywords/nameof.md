@@ -6,12 +6,12 @@ f1_keywords:
 - nameof_CSharpKeyword
 - nameof
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-ms.openlocfilehash: be60593ea5339db700140a6c7fb3fbd17af92912
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 349cbf4e918d97a5a2a5c1e873d7fa114be8e2db
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063787"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306630"
 ---
 # <a name="nameof-c-reference"></a>nameof(C# 참조)
 
@@ -112,7 +112,7 @@ class Test {
 }
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 `nameof`에 대한 인수는 단순한 이름, 정규화된 이름, 멤버 액세스, 지정된 멤버를 사용한 기본 액세스 또는 지정된 멤버를 사용한 이 액세스여야 합니다.  인수 식은 코드 정의를 식별하지만 계산되지 않습니다.
 
@@ -151,4 +151,4 @@ class C {
 
 - [C# 참조](../../../csharp/language-reference/index.md)
 - [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [typeof](../../../csharp/language-reference/keywords/typeof.md)
+- [typeof](../operators/type-testing-and-conversion-operators.md#typeof-operator)

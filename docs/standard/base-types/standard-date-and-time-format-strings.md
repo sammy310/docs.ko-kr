@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6939efa608f4887dfdb00abe8292bec841929440
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ddf4b84d44abb353cb9a5e025291690fb14b9461
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664635"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267921"
 ---
 # <a name="standard-date-and-time-format-strings"></a>표준 날짜 및 시간 형식 문자열
 표준 날짜 및 시간 서식 문자열은 단일 서식 지정자를 사용하여 날짜 및 시간 값의 텍스트 표현을 정의합니다. 공백을 포함하여 문자가 두 개 이상 포함된 날짜 및 시간 서식 문자열은 사용자 지정 날짜 및 시간 서식 문자열로 해석됩니다. 자세한 내용은 [사용자 지정 날짜 및 시간 서식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)을 참조하세요. 표준 또는 사용자 지정 서식 문자열은 다음 두 가지 방법으로 사용할 수 있습니다.  
@@ -92,7 +92,7 @@ ms.locfileid: "64664635"
   
  표준 서식 문자열은 입력 문자열이 특정 패턴을 정확하게 따라야 구문 분석 작업이 성공하는 <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> 또는 <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType> 메서드의 구문 분석 작업에서도 사용할 수 있습니다. 많은 표준 서식 문자열은 여러 사용자 지정 서식 문자열로 매핑되므로 날짜 및 시간 값을 여러 서식으로 표현할 수 있으며 그래도 구문 분석 작업이 성공합니다. <xref:System.Globalization.DateTimeFormatInfo.GetAllDateTimePatterns%28System.Char%29?displayProperty=nameWithType> 메서드를 호출하면 표준 서식 문자열에 해당하는 사용자 지정 서식 문자열을 확인할 수 있습니다. 다음 예제에서는 "d"(간단한 날짜 패턴) 표준 서식 문자열로 매핑되는 사용자 지정 서식 문자열을 보여 줍니다.  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#17](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/stdandparsing1.cs#17)]
+ [!code-csharp[Formatting.DateAndTime.Standard#17](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/stdandparsing1.cs#17)]
  [!code-vb[Formatting.DateAndTime.Standard#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/stdandparsing1.vb#17)]  
   
  다음 단원에서는 <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 값에 대한 표준 서식 지정자에 대해 설명합니다.  
@@ -261,7 +261,7 @@ ms.locfileid: "64664635"
   
  다음 예제에서는 "o" 서식 지정자를 사용하여 미국 태평양 표준 시간대에 있는 시스템에 일련의 <xref:System.DateTime> 값과 <xref:System.DateTimeOffset> 값을 표시합니다.  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
+ [!code-csharp[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Standard#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/o1.vb#8)]  
   
  다음 예제에서는 "o" 서식 지정자를 사용하여 서식이 지정된 문자열을 만든 다음 날짜 및 시간 `Parse` 메서드를 호출하여 원래 날짜 및 시간 값을 복원합니다.  

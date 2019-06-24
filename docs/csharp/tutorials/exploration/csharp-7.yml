@@ -8,12 +8,12 @@ metadata:
   ms.date: 03/20/2019
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 1b1de22769c86f75684f41635287a73558d1d15a
-  ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+  ms.openlocfilehash: 7cec35e0749ea0b38162244171459f311d27cb25
+  ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 04/28/2019
-  ms.locfileid: "64750376"
+  ms.lasthandoff: 06/18/2019
+  ms.locfileid: "67170231"
 items:
 - durationInMinutes: 1
   content: >
@@ -202,7 +202,7 @@ items:
     반환 값이 참조인 경우 반환된 참조를 수정하기 위해 지역 변수 선언에 `ref` 한정자를 추가하고 `Find`를 호출하기 전에 변수를 참조로 만들어야 합니다. 다음과 일치하도록 브라우저에서 테스트 코드를 수정합니다.
 
 
-    [!code-csharp[EverythingByValue](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#TestByValue "test code for return object by reference")]
+    [!code-csharp[TestByRef](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#TestByRef "test code for return object by reference")]
 
 
     이제 위 예제의 두 번째 `WriteLine` 문은 매트릭스의 스토리지가 수정되었음을 나타내는 `24` 값을 출력합니다. 지역 변수는 `ref` 한정자로 선언되었고 `ref` return을 사용합니다. `ref` 변수는 선언될 때 초기화되어야 합니다. 선언과 초기화를 분할할 수 없습니다.
