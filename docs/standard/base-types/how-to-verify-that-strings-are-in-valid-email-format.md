@@ -21,16 +21,16 @@ ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f6381747bc998f73b374442fcb15e025ca15795d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/24/2019
 ms.locfileid: "65589528"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>방법: 문자열이 올바른 이메일 형식인지 확인
 다음 예제에서는 정규식을 사용하여 문자열이 올바른 전자 메일 형식인지 확인합니다.  
 
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 문자열에 올바른 전자 메일 주소가 포함되어 있으면 `IsValidEmail` 를 반환하고, 그렇지 않으면 `true` 를 반환하지만 다른 작업을 수행하지 않는 `false` 메서드를 정의합니다.  
   
  전자 메일 주소가 올바른지 확인하기 위해 `IsValidEmail` 메서드는 <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.MatchEvaluator%29?displayProperty=nameWithType> 정규식 패턴으로 `(@)(.+)$` 메서드를 호출하여 전자 메일 주소에서 도메인 이름을 분리합니다. 세 번째 매개 변수는 일치하는 텍스트를 처리하고 대체하는 메서드를 나타내는 <xref:System.Text.RegularExpressions.MatchEvaluator> 대리자입니다. 정규식 패턴은 다음과 같이 해석됩니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "65589528"
 |`(?("")("".+?(?<!\\)""@)`|첫 번째 문자가 따옴표인 경우 시작 따옴표 뒤에 임의의 문자가 1개 이상 나오고 그 뒤에 끝 따옴표가 나오는 일치 항목을 찾습니다. 끝 따옴표는 앞에 백슬래시 문자(\\)가 없어야 합니다. `(?<!` 는 너비가 0인 부정 lookbehind 어설션의 시작 부분입니다. 문자열은 @ 기호로 끝나야 합니다.|  
 |<code>&#124;(([0-9a-z]</code>|첫 번째 문자가 따옴표가 아니면 a-z 또는 A-Z(비교는 대/소문자를 구분하지 않음)의 영문자 또는 0-9의 숫자를 찾습니다.|  
 |`(\.(?!\.))`|다음 문자가 마침표이면 일치하게 됩니다. 마침표가 아니면 왼쪽에서 오른쪽으로 다음 문자를 검색하여 일치 항목을 계속 찾습니다. `(?!\.)` 는 메일 주소의 로컬 부분에 마침표 두 개가 연속으로 나타나지 않도록 하며 너비가 0인 부정 lookahead 어설션입니다.|  
-|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}&#124;~\w]</code>|다음 문자가 마침표가 아니면 단어 문자 또는- !#$%'*+=?^\`{}&#124;~ 중 하나를 찾습니다.|  
+|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}&#124;~\w]</code>|다음 문자가 마침표가 아니면 단어 문자 또는 -!#$%'*+=?^\`{}&#124;~ 중 하나를 찾습니다.|  
 |<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}&#124;~\w])*</code>|교체 패턴(마침표가 아닌 문자 또는 여러 문자 중 하나 앞에 마침표가 있는 패턴)을 0번 이상 찾습니다.|  
 |`@`|@ 문자를 찾습니다.|  
 |`(?<=[0-9a-z])`|@ 문자 앞의 문자가 영문자(A-Z, a-z) 또는 숫자(0-9)인 경우 일치 항목 찾기를 계속합니다. `(?<=[0-9a-z])` 구문은 너비가 0인 긍정 lookbehind 어설션을 정의합니다.|  
