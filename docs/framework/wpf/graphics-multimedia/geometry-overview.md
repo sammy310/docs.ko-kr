@@ -8,12 +8,12 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-ms.openlocfilehash: 3c26b08dd7ec70a1763fce89b34376350b985fb5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5545e89f744c3874840a773556e0670abc0a46a9
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615381"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348064"
 ---
 # <a name="geometry-overview"></a>Geometry 개요
 이 개요에서는 사용 하는 방법을 설명 합니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> 도형을 설명 하는 클래스입니다. 이 항목의 차이점도 비교해 서 설명 <xref:System.Windows.Media.Geometry> 개체 및 <xref:System.Windows.Shapes.Shape> 요소입니다.  
@@ -105,7 +105,7 @@ Image 컨트롤 클리핑에 사용되는 EllipseGeometry
   
 <a name="wcpsdk_graphics_geometry_pathgeometry"></a>   
 ## <a name="path-geometries"></a>경로 기하 도형  
- 합니다 <xref:System.Windows.Media.PathGeometry> 클래스 및 해당 하는 간단한은 <xref:System.Windows.Media.StreamGeometry> 클래스, 원호, 곡선 및 선 구성 된 여러 복잡 한 그림을 설명 하는 수단을 제공 합니다.  
+ 합니다 <xref:System.Windows.Media.PathGeometry> 클래스 및 간단한 동등한은 <xref:System.Windows.Media.StreamGeometry> 클래스, 원호, 곡선 및 선 구성 된 여러 복잡 한 그림을 설명 하는 수단을 제공 합니다.  
   
  핵심을 <xref:System.Windows.Media.PathGeometry> 컬렉션인 <xref:System.Windows.Media.PathFigure> 그렇게 각 그림의 개별 도형을 설명 하기 때문에 명명 된 개체는 <xref:System.Windows.Media.PathGeometry>합니다. 각 <xref:System.Windows.Media.PathFigure> 자체는 하나 이상의 구성 <xref:System.Windows.Media.PathSegment> 그림의 세그먼트를 설명 하는 각 개체입니다.  
   

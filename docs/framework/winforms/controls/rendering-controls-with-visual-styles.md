@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: 4dbccfc881e777309394aed9711a93b8a25315be
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 558600c9256f205598288f9e20d38cb94608c920
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592610"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348481"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>비주얼 스타일을 사용하여 컨트롤 렌더링
 .NET Framework 지원을 제공 렌더링 컨트롤 및 기타 Windows 사용자 인터페이스 (UI) 요소를 지 원하는 운영 체제에서 비주얼 스타일을 사용 하 여 합니다. 이 항목에서는 운영 체제의 현재 비주얼 스타일을 사용 하 여 여러 수준의 렌더링 컨트롤 및 기타 UI 요소에 대 한.NET framework 지원 설명합니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "65592610"
 ## <a name="rendering-classes-for-common-controls"></a>공용 컨트롤의 클래스 렌더링  
  컨트롤 렌더링이란 컨트롤의 사용자 인터페이스를 그리는 것을 말합니다. <xref:System.Windows.Forms?displayProperty=nameWithType> 네임스페이스는 몇 가지 일반적인 Windows Forms 컨트롤 렌더링을 위한 <xref:System.Windows.Forms.ControlPaint> 클래스를 제공합니다. 그러나 이 클래스는 Windows 클래식 스타일로 컨트롤을 그립니다. 따라서 비주얼 스타일이 사용되는 애플리케이션에서 사용자 지정 컨트롤을 그릴 때 일관된 UI 환경을 유지하기가 어려울 수 있습니다.  
   
- [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] 의 <xref:System.Windows.Forms?displayProperty=nameWithType> 네임스페이스에는 공용 컨트롤의 일부 및 상태를 비주얼 스타일로 렌더링하는 클래스가 포함되어 있습니다. 이러한 각 클래스에는 운영 체제의 현재 비주얼 스타일을 사용하여 특별한 상태의 컨트롤 또는 컨트롤의 일부를 그리기 위한 `static` 메서드가 포함되어 있습니다.  
+ 클래스를 포함 하는.NET Framework 2.0의 <xref:System.Windows.Forms?displayProperty=nameWithType> 파트 및 비주얼 스타일을 사용 하 여 공용 컨트롤의 상태를 렌더링 하는 네임 스페이스입니다. 이러한 각 클래스에는 운영 체제의 현재 비주얼 스타일을 사용하여 특별한 상태의 컨트롤 또는 컨트롤의 일부를 그리기 위한 `static` 메서드가 포함되어 있습니다.  
   
  이러한 클래스 중 일부는 비주얼 스타일의 사용 가능 여부와 상관없이 관련 컨트롤을 그리도록 설계되어 있습니다. 비주얼 스타일을 사용할 수 있는 경우 클래스 멤버는 비주얼 스타일로 관련 컨트롤을 그립니다. 비주얼 스타일을 사용할 수 없는 경우 클래스 멤버는 Windows 클래식 스타일로 컨트롤을 그립니다. 이러한 클래스에는 다음이 포함됩니다.  
   

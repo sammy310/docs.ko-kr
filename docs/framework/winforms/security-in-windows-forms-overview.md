@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 4a669b4eefeeb91c0835dc41a1c8736aacf0e14f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a2d0f5f740186d3dd7483408f88d612711f57575
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586657"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348465"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows Forms의 보안 개요
 
@@ -52,7 +52,7 @@ Windows Forms 응용 프로그램을 배포하는 데 사용하는 [!INCLUDE[ndp
 
 선택적 권한을 요청할 때는 애플리케이션에서 부여되지 않은 권한이 필요한 작업을 수행하는 경우 생성되는 보안 예외를 처리해야 합니다. <xref:System.Security.SecurityException>을 적절히 처리하면 응용 프로그램이 계속 작동할 수 있습니다. 애플리케이션은 예외를 사용하여 사용자에 대해 기능을 사용할 수 없도록 설정할지 여부를 결정할 수 있습니다. 예를 들어 필요한 파일 권한이 부여되지 않은 경우 애플리케이션에서 **저장** 메뉴 옵션을 사용할 수 없습니다.
 
-적절한 권한을 모두 어설션했는지 확인하기 어려운 경우도 있습니다. 예를 들어 화면에서 무해한 것처럼 보이는 메서드 호출이 실행 중 특정 지점에서 파일 시스템에 액세스할 수도 있습니다. 필요한 모든 권한으로 애플리케이션을 배포하지 않을 경우 데스크톱에서 디버그할 때는 정상적으로 테스트되지만 배포 시 실패할 수 있습니다. 모두는 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK 및 Visual Studio 2005에는 응용 프로그램에 필요한 권한을 계산 하기 위한 도구가 포함 되어:는 MT.exe 명령줄 도구 및 Visual Studio의 권한 계산 기능이 명령을 각각.
+적절한 권한을 모두 어설션했는지 확인하기 어려운 경우도 있습니다. 예를 들어 화면에서 무해한 것처럼 보이는 메서드 호출이 실행 중 특정 지점에서 파일 시스템에 액세스할 수도 있습니다. 필요한 모든 권한으로 애플리케이션을 배포하지 않을 경우 데스크톱에서 디버그할 때는 정상적으로 테스트되지만 배포 시 실패할 수 있습니다. .NET Framework 2.0 SDK와 Visual Studio 2005 응용 프로그램에 필요한 권한을 계산 하는 것에 대 한 도구를 포함 합니다:는 MT.exe 명령줄 도구 및 Visual Studio의 권한 계산 기능이 명령을 각각.
 
 다음 항목에서는 추가 Windows Forms 보안 기능을 설명합니다.
 
@@ -77,7 +77,7 @@ Windows Forms 응용 프로그램을 배포하는 데 사용하는 [!INCLUDE[ndp
 
 선택하는 기술은 배포 환경에 따라 달라집니다. 자세한 내용은 [ClickOnce 배포 전략 선택](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)을 참조하세요.
 
-기본적으로 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] Visual Studio를 사용 하 여 배포 된 응용 프로그램 또는 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK 도구 (Mage.exe 및 MageUI.exe) 완전 신뢰에 클라이언트 컴퓨터에서 실행 되도록 구성 됩니다. 부분 신뢰를 사용하거나 일부 추가 권한만 사용하여 애플리케이션을 배포하는 경우 이 기본값을 변경해야 합니다. Visual Studio를 사용 하 여이 수행할 수 있습니다 또는 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK 도구 MageUI.exe 배포를 구성 합니다. MageUI.exe를 사용 하는 방법에 대 한 자세한 내용은 연습을 참조 하세요. 명령줄에서 ClickOnce 응용 프로그램을 배포 합니다.  또한 참조 [방법: ClickOnce 응용 프로그램에 대 한 사용자 지정 권한 설정](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) 또는 [방법: ClickOnce 응용 프로그램에 대 한 사용자 지정 권한을 설정](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)합니다.
+기본적으로 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] Visual Studio 또는.NET Framework SDK 도구 (Mage.exe 및 MageUI.exe)를 사용 하 여 배포 된 응용 프로그램은 완전 신뢰 하는 클라이언트 컴퓨터에서 실행 되도록 구성 됩니다. 부분 신뢰를 사용하거나 일부 추가 권한만 사용하여 애플리케이션을 배포하는 경우 이 기본값을 변경해야 합니다. 배포를 구성할 때 Visual Studio 또는.NET Framework SDK 도구 MageUI.exe 사용 하 여이 수행할 수 있습니다. MageUI.exe를 사용 하는 방법에 대 한 자세한 내용은 연습을 참조 하세요. 명령줄에서 ClickOnce 응용 프로그램을 배포 합니다.  또한 참조 [방법: ClickOnce 응용 프로그램에 대 한 사용자 지정 권한 설정](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) 또는 [방법: ClickOnce 응용 프로그램에 대 한 사용자 지정 권한을 설정](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)합니다.
 
 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 및 권한 상승의 보안 측면에 대한 자세한 내용은 [ClickOnce 응용 프로그램 보안](/visualstudio/deployment/securing-clickonce-applications)을 참조하세요. 신뢰할 수 있는 애플리케이션 배포에 대한 자세한 내용은 [신뢰할 수 있는 애플리케이션 배포 개요](/visualstudio/deployment/trusted-application-deployment-overview)를 참조하세요.
 

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1883365f-9d6c-4ccb-9187-df309f47706d
-ms.openlocfilehash: 69f5489d82511c249c1bde3ab65429561a87af59
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 9a2913de6534612455c14858f6baffea8ef78976
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307273"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347487"
 ---
 # <a name="generic-field-and-setfield-methods-linq-to-dataset"></a>제네릭 Field 및 SetField 메서드(LINQ to DataSet)
-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]은 열 값에 액세스할 수 있도록 확장명 메서드인 <xref:System.Data.DataRow> 및 <xref:System.Data.DataRowExtensions.Field%2A> 메서드를 <xref:System.Data.DataRowExtensions.SetField%2A> 클래스에 제공합니다. 개발자는 이러한 메서드를 사용하여 열 값에 쉽게 액세스할 수 있으며, 특히 null 값과 관련된 작업을 쉽게 수행할 수 있습니다. <xref:System.Data.DataSet>은 <xref:System.DBNull.Value>를 사용하여 null 값을 나타내는 반면 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]에서는 [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]에서 도입된 nullable 형식 지원을 사용합니다. <xref:System.Data.DataRow>의 기존 열 접근자를 사용하려면 반환 개체를 적절한 형식으로 캐스팅해야 합니다. 반환된 <xref:System.Data.DataRow>가 암시적으로 다른 형식으로 캐스팅되면 <xref:System.DBNull.Value>이 throw되므로 <xref:System.InvalidCastException>의 특정 필드가 null일 가능성이 있는 경우 명시적으로 null 값을 확인해야 합니다. 다음 예제에서 <xref:System.Data.DataRow.IsNull%2A> 메서드를 사용하여 null 값을 확인하지 않으면 인덱서에서 <xref:System.DBNull.Value>를 반환하면서 <xref:System.String>으로 캐스팅할 때 예외가 throw됩니다.  
+[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]은 열 값에 액세스할 수 있도록 확장명 메서드인 <xref:System.Data.DataRow> 및 <xref:System.Data.DataRowExtensions.Field%2A> 메서드를 <xref:System.Data.DataRowExtensions.SetField%2A> 클래스에 제공합니다. 개발자는 이러한 메서드를 사용하여 열 값에 쉽게 액세스할 수 있으며, 특히 null 값과 관련된 작업을 쉽게 수행할 수 있습니다. <xref:System.Data.DataSet> 사용 하 여 <xref:System.DBNull.Value?displayProperty=nameWithType> 반면 null 값을 나타내는 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 사용 하는 <xref:System.Nullable> 및 <xref:System.Nullable%601> 형식. <xref:System.Data.DataRow>의 기존 열 접근자를 사용하려면 반환 개체를 적절한 형식으로 캐스팅해야 합니다. 반환된 <xref:System.Data.DataRow>가 암시적으로 다른 형식으로 캐스팅되면 <xref:System.DBNull.Value?displayProperty=nameWithType>이 throw되므로 <xref:System.InvalidCastException>의 특정 필드가 null일 가능성이 있는 경우 명시적으로 null 값을 확인해야 합니다. 다음 예제에서 <xref:System.Data.DataRow.IsNull%2A?displayProperty=nameWithType> 메서드를 사용하여 null 값을 확인하지 않으면 인덱서에서 <xref:System.DBNull.Value?displayProperty=nameWithType>를 반환하면서 <xref:System.String>으로 캐스팅할 때 예외가 throw됩니다.  
   
  [!code-csharp[DP LINQ to DataSet Examples#WhereIsNull](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#whereisnull)]
  [!code-vb[DP LINQ to DataSet Examples#WhereIsNull](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#whereisnull)]  

@@ -12,18 +12,18 @@ helpviewer_keywords:
 - icons [Windows Forms], setting for TreeView control
 - tree nodes in TreeView control [Windows Forms], icons
 ms.assetid: c14ddcc0-e5a6-4c21-a2d5-6799fd491781
-ms.openlocfilehash: eb2d75b7c18aa2e65c5e90749852383eea7985b3
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: c7c801242c7d5958cce9826a5f60d13a0b257add
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880674"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348051"
 ---
 # <a name="how-to-set-icons-for-the-windows-forms-treeview-control"></a>방법: Windows Forms TreeView 컨트롤에 대한 아이콘 설정
 Windows Forms <xref:System.Windows.Forms.TreeView> 컨트롤 각 노드 옆에 아이콘을 표시할 수 있습니다. 아이콘 노드 텍스트의 바로 왼쪽에 배치 됩니다. 이러한 아이콘을 표시 하려면 트리 뷰에서 사용 하 여 연결 해야 합니다는 <xref:System.Windows.Forms.ImageList> 제어 합니다. 이미지 목록에 대 한 자세한 내용은 참조 하세요. [ImageList 구성 요소](imagelist-component-windows-forms.md) 고 [방법: 제거 이미지는 Windows Forms ImageList 구성 요소 추가 또는](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)합니다.  
   
 > [!NOTE]
->  Microsoft.NET Framework 버전 1.1의에서 버그는 이미지에 표시 되지 않도록 방지 <xref:System.Windows.Forms.TreeView> 응용 프로그램 호출 노드 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>합니다. 이 버그를 해결 하려면 호출 <xref:System.Windows.Forms.Application.DoEvents%2A?displayProperty=nameWithType> 에 사용자 `Main` 메서드를 호출한 후 즉시 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>합니다. 이 버그는에서 수정 [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]합니다.  
+>  Microsoft.NET Framework 버전 1.1의에서 버그는 이미지에 표시 되지 않도록 방지 <xref:System.Windows.Forms.TreeView> 응용 프로그램 호출 노드 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>합니다. 이 버그를 해결 하려면 호출 <xref:System.Windows.Forms.Application.DoEvents%2A?displayProperty=nameWithType> 에 사용자 `Main` 메서드를 호출한 후 즉시 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>합니다. 이 버그는.NET Framework 2.0에서 해결 됩니다.  
   
 ### <a name="to-display-images-in-a-tree-view"></a>트리 보기에서 이미지를 표시 하려면  
   

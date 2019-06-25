@@ -4,26 +4,26 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: e78616acc56e75dd06445f7a569ab94e65e20cc0
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8449fe048cc9149e8e8cf02f27f131c0d90d6984
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592236"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348192"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation 바인딩 개요
 바인딩에 Windows Communication Foundation (WCF) 서비스의 끝점에 연결 하는 데 필요한 통신 세부 정보를 지정 하는 데 사용 되는 개체입니다. WCF 서비스에서 각 끝점에 대해 바인딩을 올바로 지정 필요 합니다. 이 항목에서는 통신 세부 정보 바인딩을 정의 하는 바인딩, 바인딩 종류는 WCF에 포함 된 및 끝점에 대 한 바인딩을 지정할 수 있습니다 하는 방법의 요소 형식에 설명 합니다.  
   
 ## <a name="what-a-binding-defines"></a>바인딩이 정의하는 내용  
- 바인딩의 정보는 매우 기본적이거나 매우 복잡할 수 있습니다. 가장 기본적인 바인딩은 엔드포인트에 연결하는 데 사용해야 하는 HTTP 등의 전송 프로토콜만 지정합니다. 보다 일반적으로, 엔드포인트 연결 방법과 관련해서 바인딩에 포함되는 정보는 다음 범주 중 하나에 해당합니다.  
+ 바인딩의 정보는 매우 기본적이거나 매우 복잡할 수 있습니다. 가장 기본적인 바인딩은 엔드포인트에 연결하는 데 사용해야 하는 HTTP 등의 전송 프로토콜만 지정합니다. 보다 일반적으로 끝점에 연결 하는 방법에 대 한 바인딩을 포함 정보는 다음 범주 중 하나에 해당 됩니다.  
   
- 프로토콜  
+ **프로토콜**  
  신뢰할 수 있는 메시징 기능 또는 트랜잭션 컨텍스트 흐름 설정 중 하나인 사용되는 보안 메커니즘을 결정합니다.  
   
- 인코딩  
+ **인코딩**  
  메시지 인코딩(예: 텍스트 또는 이진)을 결정합니다.  
   
- 전송  
+ **전송**  
  사용할 내부 전송 프로토콜(예: TCP 또는 HTTP)을 결정합니다.  
   
 ## <a name="the-elements-of-a-binding"></a>바인딩의 요소입니다.  

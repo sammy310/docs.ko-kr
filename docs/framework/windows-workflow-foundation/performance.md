@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 4 성능
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 701e05301e82537aa6119ab3ec894483daee41f3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 51cd5b248789c85ab06073f1bb41a83e5f97c139
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592539"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348532"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 성능
 
@@ -31,7 +31,7 @@ ms.locfileid: "65592539"
 ### <a name="wf-runtime"></a>WF 런타임
  [!INCLUDE[wf1](../../../includes/wf1-md.md)] 런타임의 핵심에는 워크플로의 작업 실행을 구동하는 비동기 스케줄러가 있습니다. 비동기 스케줄러는 예측 가능한 고성능 작업 실행 환경을 제공합니다. 이 환경에는 실행, 연속, 완료, 취소, 예외 및 예측 가능한 스레딩 모델에 대한 정의가 포함되어 있습니다.
 
- WF3에 비해 WF4 런타임의 스케줄러는 더 효율적입니다. 일괄 처리 된 작업 항목 실행에 매우 효율적인는 WCF에서 사용 되는 동일한 I/O 스레드 풀을 활용 합니다. 내부 작업 항목 스케줄러 큐는 가장 일반적인 사용 패턴에 최적화되어 있습니다. 또한 WF4 런타임은 동기화 및 이벤트 처리 논리를 최소화하여 경량 방식으로 실행 상태를 관리하는 반면에 WF3은 중량 이벤트 등록 및 호출을 사용하여 상태 전환을 위한 복잡한 동기화를 수행합니다.
+ WF3에 비해 WF4 런타임의 스케줄러는 더 효율적입니다. 일괄 처리 된 작업 항목 실행에 매우 효율적인는 WCF에서 사용 되는 동일한 I/O 스레드 풀을 활용 합니다. 내부 작업 항목 스케줄러 큐는 가장 일반적인 사용 패턴에 최적화되어 있습니다. 또한 WF4 런타임의 최소 동기화 및 이벤트 WF3은 중량 이벤트 등록 및 상태 전환을 위한 복잡 한 동기화를 수행 하는 호출에 따라 달라 지지만 처리 논리를 사용 하 여 매우 간단한 방식으로 실행 상태를 관리 합니다.
 
 ### <a name="data-storage-and-flow"></a>데이터 저장소 및 흐름
  WF3에서는 작업과 연결된 데이터가 <xref:System.Windows.DependencyProperty> 형식으로 구현된 종속성 속성을 통해 모델링됩니다. 종속성 속성 패턴에는 Windows Presentation Foundation (WPF)에서 도입 되었습니다. 일반적으로 이 패턴은 쉬운 데이터 바인딩 및 기타 UI 기능을 매우 유연하게 지원합니다. 하지만 이 패턴을 사용하려면 워크플로 정의에서 속성을 정적 필드로 정의해야 합니다. [!INCLUDE[wf1](../../../includes/wf1-md.md)] 런타임이 속성 값을 설정하거나 가져올 때마다 중량 조회 논리가 사용됩니다.
@@ -43,7 +43,7 @@ ms.locfileid: "65592539"
 ### <a name="control-flow"></a>제어 흐름
  모든 프로그래밍 언어와 마찬가지로 [!INCLUDE[wf1](../../../includes/wf1-md.md)]에서는 시퀀싱, 반복, 분기 및 기타 패턴에 대한 제어 흐름 작업 집합을 도입하여 워크플로 정의에 대한 제어 흐름을 지원합니다. WF3에서는 동일한 작업을 다시 실행해야 하는 경우 새로운 <xref:System.Workflow.ComponentModel.ActivityExecutionContext>가 생성되고 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>를 기반으로 하는 중량 serialization 및 deserialization 논리를 통해 작업이 복제됩니다. 일반적으로 반복 제어 흐름의 성능은 작업 시퀀스를 실행하는 것보다 훨씬 느립니다.
 
- WF4에서는 이러한 경우를 완전히 다른 방식으로 처리합니다. 작업 템플릿을 사용하고 새 ActivityInstance 개체를 만든 다음 스케줄러 큐에 추가합니다. 이 전체 프로세스는 명시적 개체 만들기만 포함하며 매우 경량입니다.
+ WF4에서는 이러한 경우를 완전히 다른 방식으로 처리합니다. 작업 템플릿을 사용하고 새 ActivityInstance 개체를 만든 다음 스케줄러 큐에 추가합니다. 이 전체 프로세스는만 명시적 개체 만들기를 포함 하 고는 매우 간단 합니다.
 
 ### <a name="asynchronous-programming"></a>비동기 프로그래밍
  일반적으로 I/O 또는 분산 컴퓨팅 작업과 같은 장기 실행 차단 작업에 대해 비동기 프로그래밍을 사용하면 응용 프로그램의 성능과 확장성이 향상됩니다. WF4에서는 기본 작업 형식 <xref:System.Activities.AsyncCodeActivity>, <xref:System.Activities.AsyncCodeActivity%601>를 통해 비동기 지원을 제공합니다. 런타임은 기본적으로 비동기 작업을 이해하므로 비동기 작업이 처리되는 동안 자동으로 인스턴스를 지속적이지 않은 영역에 배치할 수 있습니다. 워크플로 스케줄러 스레드를 보류하지 않고 병렬로 실행될 수 있는 작업을 차단하지 않으면서 비동기 작업을 수행하기 위해 이러한 유형에서 사용자 지정 작업이 파생될 수 있습니다.

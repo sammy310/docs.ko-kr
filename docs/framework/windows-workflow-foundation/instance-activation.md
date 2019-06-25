@@ -2,12 +2,12 @@
 title: 인스턴스 활성화
 ms.date: 03/30/2017
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
-ms.openlocfilehash: 088722ba19a1f38e8a341e34a8344963021f1113
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5e0d5a91a0f0ccc02d13ef96c3470da1942cc520
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584914"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348253"
 ---
 # <a name="instance-activation"></a>인스턴스 활성화
 SQL 워크플로 인스턴스 저장소는 정기적으로 다시 시작되어 지속성 데이터베이스에서 실행 가능하거나 활성화 가능한 워크플로 인스턴스를 검색하는 내부 작업를 실행합니다. 실행 가능한 워크플로 인스턴스를 발견하면 해당 인스턴스를 활성화할 수 있는 워크플로 호스트에 알려 줍니다. 인스턴스 저장소에서 활성화 가능한 워크플로 인스턴스를 발견하면 워크플로 호스트를 활성화하여 워크플로 인스턴스를 실행하는 일반 호스트에 알려 줍니다. 이 항목의 다음 단원에서는 인스턴스 활성화 프로세스에 대해 자세히 설명합니다.  
@@ -35,7 +35,7 @@ SQL 워크플로 인스턴스 저장소는 정기적으로 다시 시작되어 �
 ## <a name="generic-hosts"></a>일반 호스트  
  일반 호스트는 메타 데이터 속성의 값을 사용 하 여 호스트 **WorkflowServiceType** 로 설정 되어 있는 일반 호스트에 대 한 있습니다 **WorkflowServiceType.Any** 모든 워크플로 유형을 처리할 수 있음을 나타냅니다. 일반 호스트 이라는 XName 매개 변수가 **ActivationType**합니다.  
   
- SQL 워크플로 인스턴스 저장소로 ActivationType 매개 변수의 값을 사용 하 여 일반 호스트를 지원 하는 현재 **WAS**합니다. ActivationType이 WAS로 설정되어 있지 않으면 SQL 워크플로 인스턴스 저장소는 <xref:System.Runtime.DurableInstancing.InstancePersistenceException>을 throw합니다. 와 함께 제공 되는 워크플로 관리 서비스를 [!INCLUDE[dublin](../../../includes/dublin-md.md)] 로 정품 인증 유형을 포함 하는 일반 호스트 **WAS**합니다.  
+ SQL 워크플로 인스턴스 저장소로 ActivationType 매개 변수의 값을 사용 하 여 일반 호스트를 지원 하는 현재 **WAS**합니다. ActivationType이 WAS로 설정되어 있지 않으면 SQL 워크플로 인스턴스 저장소는 <xref:System.Runtime.DurableInstancing.InstancePersistenceException>을 throw합니다. Windows Server appfabric 호스팅 기능을 사용 하 여 제공 되는 워크플로 관리 서비스는로 정품 인증 유형을 포함 하는 일반 호스트 **WAS**합니다.  
   
  WAS 활성화를 위해 일반 호스트에는 새 호스트를 활성화할 수 있는 엔드포인트 주소를 파생하는 활성화 매개 변수 집합이 필요합니다. WAS 활성화를 위한 활성화 매개 변수는 사이트 이름, 사이트에 상대적인 응용 프로그램 경로 및 응용 프로그램에 상대적인 서비스 경로입니다. SQL 워크플로 인스턴스 저장소는 <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>를 실행하는 동안 이러한 활성화 매개 변수를 저장합니다.  
   

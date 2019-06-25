@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], copying data to
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
-ms.openlocfilehash: 4d035dd6611909c9a6b67662d17f80057dc33386
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 06ce64de5e2a6b4aa299b9ad9c41982b7c1924c7
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169958"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348270"
 ---
 # <a name="how-to-add-data-to-the-clipboard"></a>방법: 클립보드에 데이터 추가
 <xref:System.Windows.Forms.Clipboard> 클래스는 Windows 운영 체제 클립보드 기능과 상호 작용 하는 데 사용할 수 있는 메서드를 제공 합니다. 많은 응용 프로그램 데이터에 대 한 임시 저장소로 클립보드를 사용 합니다. 예를 들어 워드 프로세서 잘라내기 및 붙여넣기 작업 중 클립보드를 사용합니다. 클립보드 다른 응용 프로그램에서 데이터를 전송할 때도 유용 합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "67169958"
   
 ### <a name="to-add-data-to-the-clipboard-in-multiple-formats"></a>여러 형식으로 클립보드에 데이터를 추가 하려면  
   
-1. 사용 된 <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> 메서드와 전달을 <xref:System.Windows.Forms.DataObject> 데이터를 포함 하는. 버전에서 클립보드에 데이터를 추가 하려면이 메서드를 사용 해야 이전의 [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]합니다.  
+1. 사용 된 <xref:System.Windows.Forms.Clipboard.SetDataObject%2A?displayProperty=nameWithType> 메서드와 전달을 <xref:System.Windows.Forms.DataObject> 데이터를 포함 하는. .NET Framework 2.0 보다 이전 버전에서 클립보드에 데이터를 추가 하려면이 메서드를 사용 해야 합니다.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  

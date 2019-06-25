@@ -2,12 +2,12 @@
 title: '사용자 지정 메시지 인코더: 압축 인코더'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 6ada1cdeee02eb747f9f85abc9c99602d5f26b72
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 32ca96987a86c04c227f8bb0d680f647898dfccf
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878455"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348433"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>사용자 지정 메시지 인코더: 압축 인코더
 이 샘플에는 Windows Communication Foundation (WCF) 플랫폼을 사용 하 여 사용자 지정 인코더를 구현 하는 방법을 보여 줍니다.  
@@ -222,7 +222,7 @@ binding.Namespace = "http://tempuri.org/bindings";
   
  대부분의 사용자 시나리오에서는 이 정도로 충분할 수 있지만 서비스가 웹 호스팅되는 경우 파일 구성 지원이 중요합니다. 웹 호스팅되는 시나리오를 지원하려면 파일에서 사용자 지정 바인딩 요소를 구성할 수 있도록 사용자 지정 구성 처리기를 개발해야 합니다.  
   
- [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]에서 제공하는 구성 시스템의 위에서 바인딩 요소를 위한 구성 처리기를 빌드할 수 있습니다. 바인딩 요소의 구성 처리기는 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 클래스에서 파생되어야 합니다. 이 단원에서 만들 바인딩 요소의 형식을 구성 시스템에 알리기 위해 `BindingElementType` 속성이 사용됩니다. 설정 가능한 모든 `BindingElement`의 요소는 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 파생 클래스에서 속성으로 노출되어야 합니다. 구성 요소 특성을 속성에 매핑하고 특성이 없는 경우 기본값을 설정하는 작업을 돕도록 <xref:System.Configuration.ConfigurationPropertyAttribute>가 사용됩니다. 구성으로부터 값이 로드되어 속성에 적용된 후 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A> 메서드가 호출되며 이 메서드는 속성을 바인딩 요소의 구체적인 인스턴스로 변환합니다. <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A> 파생 클래스의 속성을 새로 만들어진 바인딩 요소에서 설정될 값으로 변환하기 위해 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 메서드가 사용됩니다.  
+ 구성 시스템의 위에서 바인딩 요소에 대 한 구성 처리기를 빌드할 수 있습니다. 바인딩 요소의 구성 처리기는 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 클래스에서 파생되어야 합니다. <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.BindingElementType?displayProperty=nameWithType> 의이 섹션에 대해 만들려는 바인딩 요소의 형식 구성 시스템에 알려 줍니다. 설정 가능한 모든 `BindingElement`의 요소는 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 파생 클래스에서 속성으로 노출되어야 합니다. <xref:System.Configuration.ConfigurationPropertyAttribute> 구성 요소 특성 속성에 매핑하고 특성이 없는 경우 기본값을 설정 하는 데 도움이 됩니다. 구성으로부터 값이 로드되어 속성에 적용된 후 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A?displayProperty=nameWithType> 메서드가 호출되며 이 메서드는 속성을 바인딩 요소의 구체적인 인스턴스로 변환합니다. <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A?displayProperty=nameWithType> 속성에서 변환 메서드는는 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 새로 만들어진된 바인딩 요소에서 설정할 값으로 클래스를 파생 합니다.  
   
  다음 샘플 코드에서는 `GZipMessageEncodingElement`의 구현을 보여 줍니다.  
   

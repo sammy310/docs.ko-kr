@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 6ab898c93086e477bf4384b4d6c725fbdc8fe761
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: d1f43a5b7a539c89a753d168fbf0e05ca4118f58
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879141"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347994"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Forms 응용 프로그램 기초(Visual Basic)
 사용자의 컴퓨터에서 로컬로 실행 되는 Windows Forms 응용 프로그램을 만드는 기능은 Visual Basic의 중요 한 부분입니다. Windows Forms를 사용 하 여 응용 프로그램 및 사용자 인터페이스를 만들려면 Visual Studio를 사용할 수 있습니다. Windows Forms 응용 프로그램의 클래스에 빌드되는 <xref:System.Windows.Forms> 네임 스페이스입니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "65879141"
 ## <a name="displaying-and-manipulating-data"></a>데이터 표시 및 조작  
  많은 애플리케이션은 데이터베이스, XML 파일, XML Web services 또는 기타 데이터 소스의 데이터를 표시해야 합니다. Windows Forms 이라는 유연한 컨트롤을 제공 합니다 <xref:System.Windows.Forms.DataGridView> 각 데이터 조각이 해당 셀 수 있도록 이러한 테이블 형식 데이터를 기존의 행 및 열 형식으로 렌더링 합니다. 사용 하 여 <xref:System.Windows.Forms.DataGridView> 개별 셀의 모양을 사용자 지정, 임의의 행 및 열 위치에 잠금 및 기타 기능 간에 셀 안에 복잡 한 컨트롤을 표시 합니다.  
   
- 네트워크를 통해 데이터 소스에 연결하는 것은 Windows Forms 스마트 클라이언트에서 간단한 작업입니다. 합니다 <xref:System.Windows.Forms.BindingSource> Visual Studio 2005에서 Windows Forms를 사용 하 여 새 구성 요소 및 [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)]데이터 원본에 연결을 나타내며 이전 및 다음 레코드로 이동, 레코드를 편집 및 저장 컨트롤에 데이터 바인딩 메서드를 노출 변경 내용을 다시 원본입니다. <xref:System.Windows.Forms.BindingNavigator> 컨트롤은 <xref:System.Windows.Forms.BindingSource> 구성 요소를 통해 사용자가 레코드를 탐색하기 위한 간단한 인터페이스를 제공합니다.  
+ 네트워크를 통해 데이터 소스에 연결하는 것은 Windows Forms 스마트 클라이언트에서 간단한 작업입니다. 합니다 <xref:System.Windows.Forms.BindingSource> Windows Forms에서 Visual Studio 2005 및.NET Framework 2.0에서 새로 추가 된 구성 요소를 데이터 원본에 대 한 연결을 나타내며 레코드를 편집 하는 이전 및 다음 레코드로 이동 하는 컨트롤에 데이터 바인딩 메서드를 노출 하 고 변경 내용을 다시 원래 소스에 저장 합니다. <xref:System.Windows.Forms.BindingNavigator> 컨트롤은 <xref:System.Windows.Forms.BindingSource> 구성 요소를 통해 사용자가 레코드를 탐색하기 위한 간단한 인터페이스를 제공합니다.  
   
 ### <a name="data-bound-controls"></a>데이터 바인딩된 컨트롤  
  프로젝트에서 데이터 원본 개체, 데이터베이스 및 웹 서비스 등을 표시 하는 데이터 소스 창를 사용 하 여 쉽게 데이터 바인딩된 컨트롤을 만들 수 있습니다. 이 창에서 프로젝트의 폼으로 항목을 끌어 데이터 바인딩된 컨트롤을 만들 수 있습니다. 데이터 소스 창에서 기존 컨트롤로 개체를 끌어 기존 컨트롤을 데이터에 바인딩할 수도 있습니다.  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pasting Clipboard data
 - Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
-ms.openlocfilehash: e29e71974abda3e6e57d22d9faef28e386ebeefd
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 868afc36f08571d16285d0df52f6d1cad8c9c7a6
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169897"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348215"
 ---
 # <a name="how-to-retrieve-data-from-the-clipboard"></a>방법: 클립보드에서 데이터 검색
 <xref:System.Windows.Forms.Clipboard> 클래스는 Windows 운영 체제 클립보드 기능과 상호 작용 하는 데 사용할 수 있는 메서드를 제공 합니다. 많은 응용 프로그램 데이터에 대 한 임시 저장소로 클립보드를 사용 합니다. 예를 들어 워드 프로세서 잘라내기 및 붙여넣기 작업 중 클립보드를 사용합니다. 클립보드 다른 응용 프로그램에서 정보를 전송할 때도 유용 합니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "67169897"
   
  클립보드 데이터를 특정 형식으로 포함 되는지 여부를 확인 하려면 중 하나를 사용 합니다 `Contains` *형식을* 메서드 또는 <xref:System.Windows.Forms.Clipboard.GetData%2A> 메서드. 클립보드에서 데이터를 검색할 중 하나를 사용 합니다 `Get` *형식을* 메서드 또는 <xref:System.Windows.Forms.Clipboard.GetData%2A> 메서드. 이러한 메서드는.NET Framework 2.0의 새로운 기능입니다.  
   
- 버전을 사용 하 여 클립보드의 데이터에 액세스 하려면 이전의 [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]를 사용 합니다 <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> 메서드 반환 된 메서드를 호출 <xref:System.Windows.Forms.IDataObject>. 특정 형식으로 반환된 된 개체의 사용 가능한 지 알아보려면, 예를 들어 호출 된 <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A> 메서드.  
+ .NET Framework 2.0 이전 버전을 사용 하 여 클립보드의 데이터에 액세스 하려면 사용 합니다 <xref:System.Windows.Forms.Clipboard.GetDataObject%2A?displayProperty=nameWithType> 메서드는 반환 메서드를 호출 <xref:System.Windows.Forms.IDataObject>. 특정 형식으로 반환된 된 개체의 사용 가능한 지 알아보려면, 예를 들어 호출 된 <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A> 메서드.  
   
 > [!NOTE]
 >  모든 Windows 기반 응용 프로그램은 시스템 클립보드를 공유 합니다. 따라서 내용이 변경 될 수 있습니다 다른 응용 프로그램으로 전환 합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "67169897"
   
 ### <a name="to-retrieve-data-from-the-clipboard-in-multiple-formats"></a>여러 형식으로 클립보드의 데이터를 검색 하려면  
   
-1. <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> 메서드를 사용하세요. 버전에서 클립보드의 데이터를 검색 하려면이 메서드를 사용 해야 이전의 [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]합니다.  
+1. <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> 메서드를 사용하세요. .NET Framework 2.0 보다 이전 버전에서 클립보드의 데이터를 검색 하려면이 메서드를 사용 해야 합니다.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  
