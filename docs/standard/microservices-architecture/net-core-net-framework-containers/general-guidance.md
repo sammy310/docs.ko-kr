@@ -13,7 +13,7 @@ ms.locfileid: "65644143"
 
 이 섹션에서는 .NET Framework 또는.NET Core를 선택하는 경우에 대해 요약합니다. 이 선택에 대한 더 자세한 내용은 다음 섹션에서 설명합니다.
 
-다음과 같은 상황에서는 컨테이너화된 Dockeer 서버 애플리케이션에 대해 .NET Core를 Linux 또는 Windows Containers에 사용해야 합니다.
+다음과 같은 상황에서는 컨테이너화된 Docker 서버 애플리케이션에 대해 .NET Core를 Linux 또는 Windows Containers에 사용해야 합니다.
 
 - 플랫폼 간 요구 사항이 있습니다. 예를 들어 Linux와 Windows 컨테이너를 모두 사용하려 합니다.
 
