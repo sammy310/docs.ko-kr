@@ -1,7 +1,0 @@
-- name: 'C# 특수 문자'
-  href: index.md
-  items:
-    - name: $ -- 문자열 보간
-      href: interpolated.md
-    - name: '@ -- 약어 식별자'
-      href: verbatim.md
