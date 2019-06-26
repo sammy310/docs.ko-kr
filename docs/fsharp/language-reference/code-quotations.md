@@ -2,12 +2,12 @@
 title: 코드 인용
 description: 에 대해 알아봅니다 F# 코드 인용을 생성 하 여 작업할 수 있는 언어 기능 F# 식에 프로그래밍 방식으로 코드입니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5523d54a271ad1c53c6de85f37f261e0ecf6cced
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 30fd5b575fa59d78c3e70c1a94cd921a6a655ace
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490798"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402124"
 ---
 # <a name="code-quotations"></a>코드 인용
 
@@ -39,7 +39,7 @@ ms.locfileid: "66490798"
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet502.fs)]
 
-함수로를 F# 를 사용 해야 합니다를 묶어 합니다 [ F# 인용 계산기](https://github.com/fsprojects/FSharp.Quotations.Evaluator)합니다. 평가 및 실행에 대 한 지원을 제공 F# 식 개체입니다.
+평가 F# 를 사용 해야 합니다를 묶어 합니다 [ F# 인용 계산기](https://github.com/fsprojects/FSharp.Quotations.Evaluator). 평가 및 실행에 대 한 지원을 제공 F# 식 개체입니다.
 
 ## <a name="expr-type"></a>Expr 형식
 

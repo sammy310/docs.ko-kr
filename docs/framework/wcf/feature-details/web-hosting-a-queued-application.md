@@ -2,15 +2,15 @@
 title: 대기 중인 응용 프로그램 웹 호스팅
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: c44a6b5059f5294646d95b4281dcf7845b369929
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c8584f78b6b31bc95e088b424122a9cf77a17f27
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126024"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402276"
 ---
 # <a name="web-hosting-a-queued-application"></a>대기 중인 응용 프로그램 웹 호스팅
-Windows 프로세스 활성화 서비스 (WAS)는 정품 인증 및 호스트 Windows Communication Foundation (WCF) 서비스를 사용 하는 응용 프로그램을 포함 하는 작업자 프로세스의 수명을 관리 합니다. WAS 프로세스 모델은 HTTP에 대한 종속성을 제거하여 HTTP 서버의 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 프로세스 모델을 일반화합니다. 이렇게 하면 WCF 서비스가 HTTP 및 net.msmq 및 msmq.formatname 메시지 기반 활성화를 지원 하 고 많은 수의 지정된 된 컴퓨터에서 응용 프로그램을 호스트 하는 기능을 제공 하는 호스팅 환경에서와 같은 HTTP가 아닌 프로토콜을 모두 사용할 수 있습니다.  
+Windows 프로세스 활성화 서비스 (WAS)는 정품 인증 및 호스트 Windows Communication Foundation (WCF) 서비스를 사용 하는 응용 프로그램을 포함 하는 작업자 프로세스의 수명을 관리 합니다. WAS 프로세스 모델은 HTTP에 대 한 종속성을 제거 하 여 HTTP 서버에 대 한 IIS 6.0 프로세스 모델을 일반화 합니다. 이렇게 하면 WCF 서비스가 HTTP 및 net.msmq 및 msmq.formatname 메시지 기반 활성화를 지원 하 고 많은 수의 지정된 된 컴퓨터에서 응용 프로그램을 호스트 하는 기능을 제공 하는 호스팅 환경에서와 같은 HTTP가 아닌 프로토콜을 모두 사용할 수 있습니다.  
   
  WAS에는 대기 중인 응용 프로그램에 사용된 큐 중 하나에 하나 이상의 메시지가 있을 경우 해당 응용 프로그램을 활성화하는 MSMQ(메시지 큐) 활성화 서비스가 포함됩니다. MSMQ 활성화 서비스는 기본적으로 자동 시작되는 NT 서비스입니다.  
   

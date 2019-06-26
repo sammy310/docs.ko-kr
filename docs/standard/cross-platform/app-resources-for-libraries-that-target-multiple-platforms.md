@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2c95c77d0b2e2b68750891431822e2637e5e88f9
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: ba4546397adcfcf6142b41482f574cf86607a6b9
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025582"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402111"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>여러 플랫폼을 대상으로 하는 라이브러리의 앱 리소스
 .NET Framework를 사용 하 여 [이식 가능한 클래스 라이브러리](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) 프로젝트 형식에 여러 플랫폼에서 클래스 라이브러리의 리소스에에서 액세스할 수 있는지 확인 합니다. 이 프로젝트 형식은 Visual Studio 2012에서 사용할 수 및.NET Framework 클래스 라이브러리의 이식 가능한 하위 집합을 대상으로 합니다. [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]을 사용할 경우 데스크톱 앱, Silverlight 앱, Windows Phone 앱 및 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱을 통해 라이브러리에 액세스할 수 있게 됩니다.
@@ -72,12 +72,12 @@ ms.locfileid: "67025582"
  [!code-csharp[Conceptual.Resources.Portable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/uilibrary.cs#1)]
  [!code-vb[Conceptual.Resources.Portable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/uilibrary.vb#1)]
 
- 다음 코드는 `UILibrary` 클래스와 해당 리소스를 콘솔 모드 응용 프로그램에서 액세스하는 방법을 보여 줍니다. 이 콘솔 응용 프로그램 프로젝트에 추가하려면 UILIbrary.dll에 대한 참조가 필요합니다.
+ 다음 코드는 `UILibrary` 클래스와 해당 리소스를 콘솔 모드 응용 프로그램에서 액세스하는 방법을 보여 줍니다. 콘솔 앱 프로젝트에 추가 하려면 uilibrary.dll 대 한 참조가 필요 합니다.
 
  [!code-csharp[Conceptual.Resources.Portable#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program.cs#2)]
  [!code-vb[Conceptual.Resources.Portable#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module1.vb#2)]
 
- 다음 코드는 `UILibrary` 클래스와 해당 리소스를 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 액세스하는 방법을 보여줍니다. Windows 스토어 앱 프로젝트에 추가하려면 UILIbrary.dll에 대한 참조가 필요합니다.
+ 다음 코드는 `UILibrary` 클래스와 해당 리소스를 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 액세스하는 방법을 보여줍니다. Windows 스토어 앱 프로젝트에 추가 하려면 uilibrary.dll 대 한 참조가 필요 합니다.
 
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]
 
@@ -94,12 +94,12 @@ ms.locfileid: "67025582"
 |이름|Nom|
 |제목|Base de données des employés|
 
- 다음 코드는 `UILibrary` 클래스와 해당 리소스를 콘솔 모드 응용 프로그램에서 액세스하는 방법을 보여 줍니다. 이 콘솔 응용 프로그램 프로젝트에 추가하려면 UILIbrary.dll에 대한 참조가 필요합니다.
+ 다음 코드는 `UILibrary` 클래스와 해당 리소스를 콘솔 모드 응용 프로그램에서 액세스하는 방법을 보여 줍니다. 콘솔 앱 프로젝트에 추가 하려면 uilibrary.dll 대 한 참조가 필요 합니다.
 
  [!code-csharp[Conceptual.Resources.Portable#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program2.cs#3)]
  [!code-vb[Conceptual.Resources.Portable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module2.vb#3)]
 
- 다음 코드는 `UILibrary` 클래스와 해당 리소스를 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 액세스하는 방법을 보여줍니다. Windows 스토어 앱 프로젝트에 추가하려면 UILIbrary.dll에 대한 참조가 필요합니다. 정적 `ApplicationLanguages.PrimaryLanguageOverride` 속성을 사용하여 응용 프로그램의 기본 설정 언어를 프랑스어로 설정합니다.
+ 다음 코드는 `UILibrary` 클래스와 해당 리소스를 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 액세스하는 방법을 보여줍니다. Windows 스토어 앱 프로젝트에 추가 하려면 uilibrary.dll 대 한 참조가 필요 합니다. 정적 `ApplicationLanguages.PrimaryLanguageOverride` 속성을 사용하여 응용 프로그램의 기본 설정 언어를 프랑스어로 설정합니다.
 
  [!code-csharp[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetroloc/cs/blankpage.xaml.cs#1)]
  [!code-vb[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portablemetroloc/vb/blankpage.xaml.vb#1)]  

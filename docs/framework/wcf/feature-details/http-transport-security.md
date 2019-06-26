@@ -2,12 +2,12 @@
 title: HTTP 전송 보안
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: ab099302df93ce7d01c2730df88240265411bc8d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 386c24a9b51be56bf5a8195123e573cfced6392f
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587677"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402315"
 ---
 # <a name="http-transport-security"></a>HTTP 전송 보안
 HTTP를 전송으로 사용하는 경우 SSL(Secure Sockets Layer) 구현에서 보안을 제공합니다. SSL은 서비스를 클라이언트에 인증한 다음 채널에 기밀성(암호화)을 제공하기 위해 인터넷에서 널리 사용됩니다. 이 항목에서는 SSL 작동 원리 및 Windows Communication Foundation (WCF)에서 구현 되는 방법을 설명 합니다.  
@@ -43,9 +43,9 @@ HTTP를 전송으로 사용하는 경우 SSL(Secure Sockets Layer) 구현에서 
  사용에 대 한 인증서를 구성 하려면 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]를 참조 하세요 [IIS 7.0 베타: IIS 7.0에서에서 서버 인증서 구성](https://go.microsoft.com/fwlink/?LinkID=88595)합니다.  
   
 #### <a name="iis-60"></a>IIS 6.0  
- 설정 하려면 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 보안 호스트 (SSL 사용), 참조 [Secure Sockets Layer 구성](https://go.microsoft.com/fwlink/?LinkId=88601)합니다.  
+ IIS 6.0을 보안 호스트 (SSL 사용)를 설정 하려면을 참조 하세요 [Secure Sockets Layer 구성](https://go.microsoft.com/fwlink/?LinkId=88601)합니다.  
   
- 사용에 대 한 인증서를 구성 하려면 [!INCLUDE[iis601](../../../../includes/iis601-md.md)]를 참조 하세요 [Certificates_IIS_SP1_Ops](https://go.microsoft.com/fwlink/?LinkId=88602)합니다.  
+ IIS 6.0을 사용 하 여 사용할 인증서를 구성 하려면 [Certificates_IIS_SP1_Ops](https://go.microsoft.com/fwlink/?LinkId=88602)합니다.  
   
 ### <a name="using-httpcfg-for-ssl"></a>SSL에 HttpCfg 사용  
  자체 호스팅된 WCF 응용 프로그램을 만드는 경우에 사용 가능한 HttpCfg.exe 도구를 다운로드 합니다 [Windows XP 서비스 팩 2 지원 도구 사이트](https://go.microsoft.com/fwlink/?LinkId=29002)합니다.  

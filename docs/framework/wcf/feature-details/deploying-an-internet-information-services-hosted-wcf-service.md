@@ -2,12 +2,12 @@
 title: 인터넷 정보 서비스에서 호스트하는 WCF 서비스 배포
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: a41615ab096f3aa4f1ee94defd775248d0df4d2e
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 4c46a7ac0482e0f9c969505b87558d240bb1391e
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025738"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402291"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>인터넷 정보 서비스에서 호스트하는 WCF 서비스 배포
 
@@ -43,7 +43,7 @@ IIS에서 호스팅되는 WCF 서비스가 제대로 작동 하려면 WCF, IIS �
 
 IIS에서 호스팅되는 WCF 서비스는 IIS 응용 프로그램을 내부에 있어야 합니다. 단독으로 WCF 서비스를 호스트할 새 IIS 응용 프로그램을 만들 수 있습니다. 또는 이미 ASP.NET 2.0 콘텐츠 (예:.aspx 페이지 및 ASP.NET 웹 서비스 [ASMX])를 호스트 하는 기존 응용 프로그램에는 WCF 서비스를 배포할 수 있습니다. 이러한 옵션에 대 한 자세한 내용은 참조는 "호스팅 WCF-Side-by-side ASP.NET 사용 하 여" 및 "ASP.NET 호환 모드에서 WCF 서비스 호스팅" 섹션 [WCF 서비스 및 ASP.NET](wcf-services-and-aspnet.md)합니다.
 
-[!INCLUDE[iis601](../../../../includes/iis601-md.md)] 이상 버전은 격리된 개체 지향 프로그래밍 응용 프로그램을 정기적으로 다시 시작합니다. 기본값은 1740분입니다. 지원되는 최대값은 71,582분입니다. 다시 시작은 사용할 수 없습니다. 이 속성에 대 한 자세한 내용은 참조는 [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968)합니다.
+Note는 IIS 6.0 및 이후 버전 주기적으로 격리 된 개체 지향 프로그래밍 응용 프로그램 다시 시작 합니다. 기본값은 1740분입니다. 지원되는 최대값은 71,582분입니다. 다시 시작은 사용할 수 없습니다. 이 속성에 대 한 자세한 내용은 참조는 [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968)합니다.
 
 ## <a name="create-an-svc-file-for-the-wcf-service"></a>WCF 서비스에 대한 .svc 파일 만들기
 
@@ -103,7 +103,7 @@ IIS에서 호스팅되는 서비스 엔드포인트에는 항상 상대 엔드�
 
 ### <a name="available-transports"></a>사용 가능한 전송
 
-IIS 5.1에서 호스팅되는 WCF 서비스 및 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] HTTP 기반 통신을 사용 하 여 제한 됩니다. 이러한 IIS 플랫폼에서 HTTP가 아닌 바인딩을 사용하도록 호스팅된 서비스를 구성하면 서비스 활성화 중에 오류가 발생합니다. 기존 MSMQ 애플리케이션과의 호환성을 위해 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]에서 지원되는 전송에는 HTTP, Net.TCP, Net.Pipe, Net.MSMQ 및 msmq.formatname이 있습니다.
+WCF 서비스 호스팅된의 IIS 5.1 및 6.0 IIS HTTP 기반 통신을 사용 하 여 제한 됩니다. 이러한 IIS 플랫폼에서 HTTP가 아닌 바인딩을 사용하도록 호스팅된 서비스를 구성하면 서비스 활성화 중에 오류가 발생합니다. 기존 MSMQ 애플리케이션과의 호환성을 위해 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]에서 지원되는 전송에는 HTTP, Net.TCP, Net.Pipe, Net.MSMQ 및 msmq.formatname이 있습니다.
 
 ### <a name="http-transport-security"></a>HTTP 전송 보안
 

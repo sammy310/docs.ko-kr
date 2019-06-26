@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 13108e86d76b0d806eddf71b2f7e50337ca0afba
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 37e12c499b19d196dd695e1e2970d750f4dc9b0e
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348294"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402421"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation 정의
 Windows Communication Foundation (WCF)은 서비스 지향 응용 프로그램을 빌드하기 위한 프레임 워크입니다. WCF를 사용 하 여 보낼 수 있습니다 데이터 비동기 메시지로 서비스 끝점에서 간에. 서비스 엔드포인트는 IIS에서 호스팅하는 계속 사용 가능한 서비스의 일부분일 수도 있고 애플리케이션에서 호스팅되는 서비스일 수도 있습니다. 또한 엔드포인트는 서비스 엔드포인트에서 데이터를 요청하는 서비스의 클라이언트일 수 있습니다. 메시지는 XML로 전송되는 한 문자나 단어처럼 간단할 수도 있고 이진 데이터 스트림처럼 복잡할 수도 있습니다. 다음은 몇 가지 샘플 시나리오입니다.
@@ -92,7 +92,7 @@ Microsoft BizTalk Server R2 에서도 통신 기술로 WCF를 활용합니다. B
 
 Microsoft Silverlight는 상호 운용 가능하며 다양한 기능을 제공하는 웹 애플리케이션을 만들기 위한 플랫폼입니다. 개발자는 이러한 웹 애플리케이션을 통해 스트리밍 비디오 등의 다양한 미디어를 사용하는 웹 사이트를 만들 수 있습니다. 버전 2부터 Silverlight는 WCF Silverlight 응용 프로그램의 WCF 끝점을 연결 하는 통신 기술로 통합 되었습니다.
 
-응용 프로그램 서버를 Windows Server AppFabric 호스팅 기능 배포 및 통신에 대 한 WCF를 사용 하는 응용 프로그램 관리를 위해 설계 된. [!INCLUDE[dublin2](../../../includes/dublin2-md.md)] WCF 지원 응용 프로그램을 위해 특별히 설계 된 다양 한 도구 및 구성 옵션이 포함 되어 있습니다.
+응용 프로그램 서버를 Windows Server AppFabric 호스팅 기능 배포 및 통신에 대 한 WCF를 사용 하는 응용 프로그램 관리를 위해 설계 된. 호스팅 기능에는 특히 WCF 지원 응용 프로그램을 위한 풍부한 도구 및 구성 옵션이 포함 됩니다.
 
 ## <a name="see-also"></a>참고자료
 

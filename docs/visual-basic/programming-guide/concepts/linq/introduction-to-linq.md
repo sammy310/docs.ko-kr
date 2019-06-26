@@ -2,12 +2,12 @@
 title: LINQ (Visual Basic) 소개
 ms.date: 07/20/2015
 ms.assetid: c6339c12-9b2d-433e-961c-0d2b7f0091c2
-ms.openlocfilehash: 95c1d99604ba9f87e34b5bb423d42bf97c0cd29e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7c42cf73dce91bfb4da1b886613635532460f0e6
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648794"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402419"
 ---
 # <a name="introduction-to-linq-visual-basic"></a>LINQ (Visual Basic) 소개
 LINQ(Language-Integrated Query)는 개체 환경과 데이터 환경 간의 간격을 연결하는 .NET Framework 버전 3.5에서 도입된 혁신입니다.  
@@ -20,7 +20,7 @@ LINQ(Language-Integrated Query)는 개체 환경과 데이터 환경 간의 간�
   
  다음 그림에서는 Visual Studio에서 전체 형식 검사 및 IntelliSense를 지원하는 C#과 Visual Basic을 사용하여 SQL Server 데이터베이스에 대해 부분적으로 완성된 LINQ 쿼리를 보여 줍니다.  
   
- ![해당 shwos Intellisense 사용한 LINQ 쿼리를 다이어그램입니다.](./media/introduction-to-linq/linq-query-intellisense.png)  
+ ![Intellisense를 사용하는 LINQ 쿼리를 보여주는 다이어그램](./media/introduction-to-linq/linq-query-intellisense.png)  
   
 ## <a name="next-steps"></a>다음 단계  
  시작 섹션에서 몇 가지 기본 개념을 파악 하 여 시작에 LINQ에 대 한 자세한 내용을 알아보려면 [Getting Started with Visual Basic의 LINQ](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md), 다음에 LINQ 기술에 대 한 설명서를 읽어보세요 관련:  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: 4d5fe4c92f0d456942219bc3f7014f09a005aa5d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 611e8df29b37efd880ee1d19515697d899e4fa7e
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048298"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402151"
 ---
 # <a name="choosing-a-transport"></a>전송 선택
 이 항목에서는 Windows Communication Foundation (WCF)에 포함 된 세 개의 주요 전송 사이의 선택 기준을에 설명 합니다. HTTP, TCP 및 명명 된 파이프 합니다. 또한 WCF는 메시지 큐 (MSMQ 라고도 함) 전송 하지만이 문서는 메시지 큐를 다루지 않습니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "62048298"
 |특성|설명|선호 전송|  
 |---------------|-----------------|------------------------|  
 |진단|진단을 사용하면 전송 연결 문제를 자동으로 검색할 수 있습니다. 모든 전송에서는 연결을 설명하는 오류 정보를 돌려보내는 기능을 지원합니다. 그러나 WCF는 네트워크 문제를 조사 하는 것에 대 한 진단 도구를 포함 되지 않습니다.|없음|  
-|호스팅|모든 WCF 끝점은 응용 프로그램 내부에서 호스트 되어야 합니다. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 이하는 HTTP 전송을 사용하는 응용 프로그램의 호스팅만 지원합니다. [!INCLUDE[wv](../../../../includes/wv-md.md)], TCP를 포함 하 여 모든 WCF 전송에 대 한 추가 지원은 되며 명명 된 파이프 합니다. 자세한 내용은 [인터넷 정보 서비스에서 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md) 하 고 [Windows Process Activation Service에서 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)합니다.|HTTP|  
+|호스팅|모든 WCF 끝점은 응용 프로그램 내부에서 호스트 되어야 합니다. IIS 6.0 및 이전 버전에는 HTTP 전송을 사용 하는 호스팅 응용 프로그램만 지원 합니다. [!INCLUDE[wv](../../../../includes/wv-md.md)], TCP를 포함 하 여 모든 WCF 전송에 대 한 추가 지원은 되며 명명 된 파이프 합니다. 자세한 내용은 [인터넷 정보 서비스에서 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md) 하 고 [Windows Process Activation Service에서 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)합니다.|HTTP|  
 |검사|검사는 전송 중에 메시지에서 정보를 추출하고 처리하는 기능입니다. HTTP 프로토콜에서는 메시지를 검사 및 분석하는 도구를 더 쉽게 작성할 수 있도록 데이터에서 라우팅 및 제어 정보를 분리합니다. 검사하기 쉬운 전송에는 네트워크 제품의 처리 능력도 덜 필요합니다. 사용되는 보안 수준에 따라 메시지의 검사 가능 여부가 결정됩니다.|HTTP|  
 |대기 시간|대기 시간은 메시지 교환을 완료하는 데 필요한 최소 시간입니다. 모든 네트워크 작업에는 선택한 전송에 따라 어느 정도의 대기 시간이 필요합니다. HTTP와 같이 네이티브 메시지 교환 패턴이 요청 응답인 이중 또는 단방향 통신을 사용하면 메시지에 적용되는 상관 관계 때문에 대기 시간이 추가될 수도 있습니다. 이런 경우에는 TCP와 같이 네이티브 메시지 교환 패턴이 이중인 전송을 사용할 수 있습니다.|TCP, 명명된<br /><br /> 파이프|  
 |도달 범위|전송의 도달 범위는 전송에서 다른 시스템과 연결하는 능력을 나타냅니다. 명명된 파이프 전송은 도달 범위가 짧으며, 같은 시스템에서 실행되는 서비스에만 연결할 수 있습니다. TCP 및 HTTP 전송은 모두 도달 범위가 크며 일부 NAT 및 방화벽 구성도 통과할 수 있습니다. 자세한 내용은 [Nat 및 방화벽 작업](../../../../docs/framework/wcf/feature-details/working-with-nats-and-firewalls.md)합니다.|HTTP, TCP|  

@@ -2,12 +2,12 @@
 title: F# 코딩 규칙
 description: 작성 하는 경우 일반 지침 및 코드에 알아봅니다 F# 코드입니다.
 ms.date: 05/14/2018
-ms.openlocfilehash: 4b292d0a844a4d9efc79aa865b054b4af2cb68c4
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: c8df654cbb94fff1ef7ffb909655439398f30bf5
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052793"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402371"
 ---
 # <a name="f-coding-conventions"></a>F# 코딩 규칙
 
@@ -378,7 +378,7 @@ type Transactor(ctx, currentBalance) =
         ...
 ```
 
-단위 테스트 `Transactions.doTransaction` 에서 `ImplementationLogic.Tests.fspoj` 쉽습니다.
+단위 테스트 `Transactions.doTransaction` 에서 `ImplementationLogic.Tests.fsproj` 쉽습니다.
 
 ```fsharp
 namespace TransactionsTestingUtil

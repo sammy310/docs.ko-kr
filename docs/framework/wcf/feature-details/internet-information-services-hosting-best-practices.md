@@ -2,12 +2,12 @@
 title: 인터넷 정보 서비스 호스팅을 위한 최선의 방법
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 85b8efadca03de71fd98b0f0d1bf5aeb47fe76be
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: bb60330aeedfe4b16a2a53d644e79a4a16636afa
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878601"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402444"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>인터넷 정보 서비스 호스팅을 위한 최선의 방법
 이 항목에서는 Windows Communication Foundation (WCF) 서비스를 호스트 하기 위한 몇 가지 모범 사례를 간략하게 설명 합니다.  
@@ -16,7 +16,7 @@ ms.locfileid: "65878601"
  WCF 구현 서비스 웹 응용 프로그램의 \bin 디렉터리에 배포 되는 DLL로를 사용 하면 인터넷 정보 서비스 (IIS)가 배포 되지 않은 테스트 환경의 예를 들어, 웹 응용 프로그램 모델 외부에서 서비스를 재사용 합니다.  
   
 ## <a name="service-hosts-in-iis-hosted-applications"></a>IIS에서 호스팅되는 응용 프로그램의 서비스 호스트  
- TCP 통신이 기본적으로 [!INCLUDE[iis601](../../../../includes/iis601-md.md)]에서 지원되지 않기 때문에 TCP 서비스를 호스팅하는 [!INCLUDE[iis601](../../../../includes/iis601-md.md)]처럼, IIS 호스팅 환경에서 기본적으로 지원하지 않는 네트워크 전송에서 수신 대기하는 새 서비스 호스트를 만들 때 명령적 자체 호스팅 API를 사용하지 마십시오. 이는 권장되는 방법이 아닙니다. 명령적으로 만들어진 서비스 호스트는 IIS 호스팅 환경 내에서 알 수 없습니다. 중요한 점은 호스팅 응용 프로그램 풀이 유휴 상태인지 여부를 결정할 때 명령적으로 만든 서비스에서 수행된 처리가 IIS에 의해 정의되지 않는다는 것입니다. 결과적으로 명령적으로 그러한 서비스 호스트를 만든 응용 프로그램에 적극적으로 IIS 호스트 프로세스를 삭제하는 IIS 호스팅 환경이 포함됩니다.  
+ IIS 호스팅 환경에서 지원 되지 않습니다 기본적으로 네트워크 전송에서 수신 대기 하도록 새 서비스 호스트를 만드는 데 명령적 자체 호스팅 Api를 사용 하지 마십시오 (예를 들어, IIS 6.0 TCP 호스트에 서비스를 TCP 통신이 기본적으로 IIS 6.0에서 지원 되지 않으므로). 이는 권장되는 방법이 아닙니다. 명령적으로 만들어진 서비스 호스트는 IIS 호스팅 환경 내에서 알 수 없습니다. 중요한 점은 호스팅 응용 프로그램 풀이 유휴 상태인지 여부를 결정할 때 명령적으로 만든 서비스에서 수행된 처리가 IIS에 의해 정의되지 않는다는 것입니다. 결과적으로 명령적으로 그러한 서비스 호스트를 만든 응용 프로그램에 적극적으로 IIS 호스트 프로세스를 삭제하는 IIS 호스팅 환경이 포함됩니다.  
   
 ## <a name="uris-and-iis-hosted-endpoints"></a>URI 및 IIS에서 호스팅되는 엔드포인트  
  IIS에서 호스팅되는 서비스의 엔드포인트는 절대 주소가 아닌 상대 URI(Uniform Resource Identifier)를 사용하여 구성되어야 합니다. 이렇게 하면 엔드포인트 주소가 호스팅 응용 프로그램에 속하는 URI 주소 집합 내에 있게 되고 예상한 대로 메시지 기반 활성화가 수행됩니다.  

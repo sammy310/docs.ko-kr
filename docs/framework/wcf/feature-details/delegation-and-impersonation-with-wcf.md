@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: f037c47618873a6d866433483aadf2f20c4c4971
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: b9dd02724b8c2a9e4f50ecd61d822d5f1a478eee
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882250"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402330"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF를 통한 위임 및 가장
 *가장* 은 서비스에서 서비스 도메인 리소스에 대한 클라이언트 액세스를 제한하는 데 사용하는 일반적인 기술 서비스입니다. 서비스 도메인 리소스는 로컬 파일(가장)과 같은 시스템 리소스이거나 파일 공유(위임)와 같은 다른 시스템의 리소스일 수 있습니다. 샘플 응용 프로그램을 보려면 [클라이언트 가장](../../../../docs/framework/wcf/samples/impersonating-the-client.md)을 참조하세요. 가장을 사용 하는 방법의 예제를 참조 하세요. [방법: 서비스에서 클라이언트 가장](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "65882250"
 ### <a name="cached-token-impersonation"></a>캐시된 토큰 가장  
  다음과 같은 바인딩을 통해 캐시된 토큰 가장을 수행할 수 있습니다.  
   
-- Windows 클라이언트 자격 증명이 있는<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>및 <xref:System.ServiceModel.NetTcpBinding>   
+- Windows 클라이언트 자격 증명이 있는<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>및 <xref:System.ServiceModel.NetTcpBinding>  
   
 - <xref:System.ServiceModel.BasicHttpBinding> 가 <xref:System.ServiceModel.BasicHttpSecurityMode> 자격 증명으로 설정된 <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> 또는 서비스를 통해 올바른 Windows 계정으로 매핑할 수 있는 사용자 이름 자격 증명을 클라이언트에서 제공하는 기타 표준 바인딩  
   
@@ -48,7 +48,7 @@ ms.locfileid: "65882250"
 ### <a name="s4u-based-impersonation"></a>S4U 기반 가장  
  다음과 같은 바인딩을 통해 S4U 기반 가장을 수행할 수 있습니다.  
   
-- 서비스를 통해 올바른Windows 계정으로 매핑될 수 있는 인증서 클라이언트 자격 증명을 가진<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>및 <xref:System.ServiceModel.NetTcpBinding>   
+- 서비스를 통해 올바른Windows 계정으로 매핑될 수 있는 인증서 클라이언트 자격 증명을 가진<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>및 <xref:System.ServiceModel.NetTcpBinding>  
   
 - <xref:System.ServiceModel.Channels.CustomBinding> 속성이 `requireCancellation` 로 설정된 Windows 클라이언트 자격 증명을 사용하는 `false`  
   
@@ -57,7 +57,7 @@ ms.locfileid: "65882250"
  서비스를 통해 클라이언트를 가장할 수 있는 범위는 서비스를 통해 가장을 시도할 때의 서비스 계정 권한, 사용되는 가장 형식 및 클라이언트에서 허용하는 가장 범위에 따라 다릅니다.  
   
 > [!NOTE]
->  클라이언트 및 서비스가 동일한 컴퓨터에서 실행 중이고 클라이언트가 시스템 계정(예: `Local System` 또는 `Network Service`)으로 실행 중인 경우, 상태 저장 보안 컨텍스트 토큰을 사용하여 보안 세션을 설정할 때 클라이언트를 가장할 수 없습니다. 일반적으로 Windows Form 또는 콘솔 애플리케이션은 현재 계정에 로그인된 상태에서 실행되기 때문에 기본적으로 계정을 가장할 수 있습니다. 그러나 경우 클라이언트는 ASP.NET 페이지가 고 해당 페이지에서 호스트 되 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 또는 [!INCLUDE[iisver](../../../../includes/iisver-md.md)], 다음 클라이언트에서 실행에 `Network Service` 기본적으로 계정. 보안 세션을 지원하는 모든 시스템 제공 바인딩은 기본적으로 상태 비저장 SCT(보안 컨텍스트 토큰)를 사용합니다. 그러나 클라이언트는 ASP.NET 페이지 및 상태 저장 Sct 사용 하 여 보안 세션이 사용 되는지, 경우에 클라이언트를 가장할 수 없습니다. 보안 세션에서 상태 저장 Sct를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 보안 컨텍스트를 만들 보안 세션에 대 한 토큰](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)합니다.  
+>  클라이언트 및 서비스가 동일한 컴퓨터에서 실행 중이고 클라이언트가 시스템 계정(예: `Local System` 또는 `Network Service`)으로 실행 중인 경우, 상태 저장 보안 컨텍스트 토큰을 사용하여 보안 세션을 설정할 때 클라이언트를 가장할 수 없습니다. 일반적으로 Windows Form 또는 콘솔 애플리케이션은 현재 계정에 로그인된 상태에서 실행되기 때문에 기본적으로 계정을 가장할 수 있습니다. 그러나 경우 클라이언트는 ASP.NET 페이지가 고 IIS 6.0에서 호스트 되는 페이지 또는 [!INCLUDE[iisver](../../../../includes/iisver-md.md)], 다음 클라이언트에서 실행에 `Network Service` 기본적으로 계정. 보안 세션을 지원하는 모든 시스템 제공 바인딩은 기본적으로 상태 비저장 SCT(보안 컨텍스트 토큰)를 사용합니다. 그러나 클라이언트는 ASP.NET 페이지 및 상태 저장 Sct 사용 하 여 보안 세션이 사용 되는지, 경우에 클라이언트를 가장할 수 없습니다. 보안 세션에서 상태 저장 Sct를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 보안 컨텍스트를 만들 보안 세션에 대 한 토큰](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)합니다.  
   
 ## <a name="impersonation-in-a-service-method-declarative-model"></a>서비스 메서드에서의 가장: 선언적 모델  
  대부분의 가장 시나리오의 경우 호출자 컨텍스트에서 서비스 메서드를 실행하게 됩니다. WCF에 가장 요구 사항을 지정할 수 있도록 허용 하 여 작업을 편리 하는 가장 기능을 제공 합니다 <xref:System.ServiceModel.OperationBehaviorAttribute> 특성입니다. 예를 들어, 다음 코드에서 WCF 인프라 호출자를 가장 실행 하기 전에 `Hello` 메서드. `Hello` 메서드 내의 네이티브 리소스에 대한 액세스 시도는 이 리소스의 ACL(액세스 제어 목록)에서 호출자 액세스 권한을 허용하는 경우에만 가능합니다. 가장을 가능하게 하려면, 다음 예제에서와 같이 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 속성을 <xref:System.ServiceModel.ImpersonationOption> 열거형 값인 <xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType> 중 하나로 설정합니다.  

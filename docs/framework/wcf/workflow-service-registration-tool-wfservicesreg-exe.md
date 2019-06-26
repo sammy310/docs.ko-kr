@@ -2,12 +2,12 @@
 title: 워크플로 서비스 등록 도구(WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: da377e865258169bdca16cfb0db3f8612d4e0f0d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 211af75c04dfe971228bc1710fbe1fc4d7aaee60
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613051"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402478"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>워크플로 서비스 등록 도구(WFServicesReg.exe)
 워크플로 서비스 등록 도구(WFServicesReg.exe)는 Windows WF(Workflow Foundation) 서비스의 구성 요소를 추가, 제거 또는 복구하는 데 사용할 수 있는 독립 실행형 도구입니다.  
@@ -56,7 +56,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  이 도구는 또한 IIS 메타베이스에 .xoml과 .rules 스크립트 맵 및 처리기를 등록합니다.  
   
- [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 시스템(IIS 5.1 및 [!INCLUDE[iis601](../../../includes/iis601-md.md)])에서는 .xoml과 .rules 스크립트 맵 집합 하나가 등록됩니다.  
+ [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 컴퓨터 (IIS 5.1 및 IIS 6.0) 하나의 집합.xoml과.rules 스크립트 맵 등록 합니다.  
   
  64비트 시스템에서 도구는 `Enable32BitAppOnWin64` 스위치를 사용할 수 있는 경우 WOW 모드 스크립트 맵을 등록하고, `Enable32BitAppOnWin64` 스위치를 사용할 수 없는 경우 네이티브 64비트 스크립트 맵을 등록합니다.  
   

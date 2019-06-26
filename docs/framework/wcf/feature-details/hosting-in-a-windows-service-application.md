@@ -2,12 +2,12 @@
 title: Windows 서비스 응용 프로그램에서의 호스팅
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: b5167e61bd825ce56905149237dae05ebb44b134
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc95634745aa0c0246cf139d19e0777fde7e1aba
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613302"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402166"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Windows 서비스 응용 프로그램에서의 호스팅
 Windows 서비스(이전의 Windows NT 서비스)에서는 장기 실행되는 실행 파일에 있어야 하는 응용 프로그램에 특히 적합한 프로세스 모델을 제공하지만 사용자 인터페이스 폼을 표시하지 않습니다. Windows 서비스 응용 프로그램의 프로세스 수명은 Windows 서비스 응용 프로그램을 시작, 중지 및 일지 중지할 수 있도록 해 주는 SCM(서비스 제어 관리자)이 관리합니다. "무중단" 응용 프로그램에 적합 한 호스팅 환경을 쉽게 컴퓨터를 시작할 때 자동으로 시작 하는 Windows 서비스 프로세스를 구성할 수 있습니다. Windows 서비스 응용 프로그램에 대 한 자세한 내용은 참조 하세요. [Windows 서비스 응용 프로그램](https://go.microsoft.com/fwlink/?LinkId=89450)합니다.  
@@ -20,7 +20,7 @@ Windows 서비스(이전의 Windows NT 서비스)에서는 장기 실행되는 �
   
 - 응용 프로그램을 호스트하는 프로세스가 일단 시작되면 계속 실행되어야 하는 경우. Windows 서비스 프로세스는 일단 시작되면 서버 관리자가 서비스 제어 관리자를 사용하여 명시적으로 종료하지 않는 한 계속 실행됩니다. IIS 또는 WAS에서 호스트되는 응용 프로그램은 시스템 리소스의 사용을 최적화하기 위해 동적으로 시작되거나 중지될 수 있습니다. 호스팅 프로세스의 수명을 명시적으로 제어할 필요가 있는 응용 프로그램은 IIS 또는 WAS 대신 Windows 서비스를 사용해야 합니다.  
   
-- WCF 서비스는 Windows Server 2003에서 실행 하 고 HTTP 이외의 전송을 사용 해야 합니다. Windows Server 2003에서 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 호스팅 환경은 HTTP 통신으로만 제한됩니다. Windows 서비스 응용 프로그램이이 제한이 적용 되지 않으며 net.tcp, net.pipe 및 net.msmq를 포함 하 여 모든 전송 WCF 지원에 사용할 수 있습니다.  
+- WCF 서비스는 Windows Server 2003에서 실행 하 고 HTTP 이외의 전송을 사용 해야 합니다. Windows Server 2003에서 IIS 6.0 호스팅 환경은 HTTP 통신 으로만 제한 합니다. Windows 서비스 응용 프로그램이이 제한이 적용 되지 않으며 net.tcp, net.pipe 및 net.msmq를 포함 하 여 모든 전송 WCF 지원에 사용할 수 있습니다.  
   
 ### <a name="to-host-wcf-inside-of-a-windows-service-application"></a>Windows 서비스 응용 프로그램 대신 WCF를 호스트하려면  
   

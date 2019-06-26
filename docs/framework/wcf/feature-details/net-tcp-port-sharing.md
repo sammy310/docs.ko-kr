@@ -5,12 +5,12 @@ helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-ms.openlocfilehash: 8eb0a2a5b8b6edad17477e1fd65f72b540a8a674
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 4d7f28c692c7eb3527a851c6456473afc20a9aeb
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960040"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402462"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP 포트 공유
 Windows Communication Foundation (WCF) 고성능 통신을 위한 새로운 TCP 기반 네트워크 프로토콜 (net.tcp://)를 제공합니다. WCF에는 또한 새 시스템 구성 요소인 net.tcp 포트를 여러 사용자 프로세스 간에 공유할 수 있도록는 Net.TCP Port Sharing Service를 소개 합니다.  
@@ -22,7 +22,7 @@ Windows Communication Foundation (WCF) 고성능 통신을 위한 새로운 TCP 
   
  여러 HTTP 응용 프로그램의 트래픽이 단일 TCP 포트에 멀티플렉싱되는 HTTP.SYS 모델이 Windows 플랫폼의 표준이 되었습니다. 따라서 응용 프로그램 개발자가 네트워크를 사용할 수 있는 새 응용 프로그램을 빌드하는 데 필요한 배포 비용을 최소화할 수 있도록 하는 동시에 방화벽 관리자를 위한 공통 제어 지점을 제공합니다.  
   
- 여러 HTTP 응용 프로그램 간의 포트를 공유할 수 있는 기능은 IIS(인터넷 정보 서비스)의 오래된 기능 중 하나입니다. 그러나 이 인프라가 완전히 일반화된 것은 [!INCLUDE[iis601](../../../../includes/iis601-md.md)]과 함께 HTTP.SYS(커널 모드 HTTP 프로토콜 수신기)가 도입된 이후부터입니다. 실제로 HTTP.SYS를 사용하면 임의의 사용자 프로세스에서 HTTP 트래픽 전용 TCP 포트를 공유할 수 있습니다. 이 기능을 사용하면 동일한 실제 컴퓨터에서 여러 HTTP 응용 프로그램을 별도의 격리 프로세스로 함께 사용할 수 있고, TCP 포트 80을 통해 트래픽을 보내고 받는 데 필요한 네트워크 인프라를 공유할 수 있습니다. Net.TCP Port Sharing Service를 통해 net.tcp 응용 프로그램에서 동일한 형식의 포트를 공유할 수 있습니다.  
+ 여러 HTTP 응용 프로그램 간의 포트를 공유할 수 있는 기능은 IIS(인터넷 정보 서비스)의 오래된 기능 중 하나입니다. 그러나 http 도입 된 것입니다. SYS이이 인프라가 완전히 일반화 된는 IIS 6.0 (커널 모드 HTTP 프로토콜 수신기)을 선택 합니다. 실제로 HTTP.SYS를 사용하면 임의의 사용자 프로세스에서 HTTP 트래픽 전용 TCP 포트를 공유할 수 있습니다. 이 기능을 사용하면 동일한 실제 컴퓨터에서 여러 HTTP 응용 프로그램을 별도의 격리 프로세스로 함께 사용할 수 있고, TCP 포트 80을 통해 트래픽을 보내고 받는 데 필요한 네트워크 인프라를 공유할 수 있습니다. Net.TCP Port Sharing Service를 통해 net.tcp 응용 프로그램에서 동일한 형식의 포트를 공유할 수 있습니다.  
   
 ## <a name="port-sharing-architecture"></a>포트 공유 아키텍처  
  WCF에서 포트 공유 아키텍처에는 세 가지 주요 구성 요소에 있습니다.  
