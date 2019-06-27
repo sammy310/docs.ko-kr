@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: c971a2d5d7caeb030cf504c44be8c8123decc3fc
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 796dbb012426cdaea7828afeea4fba15f57095c6
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423409"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398092"
 ---
 # <a name="types-c-programming-guide"></a>형식(C# 프로그래밍 가이드)
 
@@ -126,7 +126,7 @@ char c = 'Z';
 
 ### <a name="reference-types"></a>참조 형식
 
-[클래스](../../../csharp/language-reference/keywords/class.md), [대리자](../../../csharp/language-reference/keywords/delegate.md), 배열 또는 [인터페이스](../../../csharp/language-reference/keywords/interface.md)로 정의되는 형식은 *참조 형식*입니다. 런타임에 참조 형식의 변수를 선언하면 [new](../../../csharp/language-reference/keywords/new.md) 연산자를 사용하여 개체를 명시적으로 만들거나 다음 예제와 같이 `new`를 사용하여 다른 곳에서 만들어진 개체를 할당할 때까지 변수에는 [null](../../../csharp/language-reference/keywords/null.md) 값이 포함됩니다.
+[클래스](../../../csharp/language-reference/keywords/class.md), [대리자](../../../csharp/language-reference/keywords/delegate.md), 배열 또는 [인터페이스](../../../csharp/language-reference/keywords/interface.md)로 정의되는 형식은 *참조 형식*입니다. 런타임에 참조 형식의 변수를 선언하면 [new](../../../csharp/language-reference/operators/new-operator.md) 연산자를 사용하여 개체를 명시적으로 만들거나 다음 예제와 같이 `new`를 사용하여 다른 곳에서 만들어진 개체를 할당할 때까지 변수에는 [null](../../../csharp/language-reference/keywords/null.md) 값이 포함됩니다.
 
 ```csharp
 MyClass mc = new MyClass();

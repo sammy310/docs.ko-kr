@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 57781dd5a988435778587636cc458256b966446c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e193d6a51c3d4f1d81e3b74b1474d0e7cdcfca53
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61678506"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398120"
 ---
 # <a name="strings-c-programming-guide"></a>문자열(C# 프로그래밍 가이드)
 문자열은 값이 텍스트인 <xref:System.String> 형식의 개체입니다. 내부적으로 텍스트는 <xref:System.Char> 개체의 순차적 읽기 전용 컬렉션으로 저장됩니다. C# 문자열의 끝에 null 종료 문자가 없으므로 C# 문자열에는 포함된 null 문자('\0')를 여러 개 사용할 수 있습니다. 문자열의 <xref:System.String.Length%2A> 속성은 유니코드 문자 수가 아닌 포함된 `Char` 개체 수를 나타냅니다. 문자열에서 개별 유니코드 코드 포인트에 액세스하려면 <xref:System.Globalization.StringInfo> 개체를 사용합니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "61678506"
   
  [!code-csharp[csProgGuideStrings#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#1)]  
   
- 문자 배열이 포함된 문자열을 초기화할 경우를 제외하고는 문자열 개체를 만들기 위해 [new](../../../csharp/language-reference/keywords/new-operator.md) 연산자를 사용하지 않습니다.  
+ 문자 배열이 포함된 문자열을 초기화할 경우를 제외하고는 문자열 개체를 만들기 위해 [new](../../../csharp/language-reference/operators/new-operator.md) 연산자를 사용하지 않습니다.  
   
  문자열 길이가 0인 새 <xref:System.String> 개체를 만들려면 <xref:System.String.Empty> 상수 값이 포함된 문자열을 초기화하세요. 빈 문자열을 문자열 리터럴로 나타내면 ""로 표시됩니다. [null](../../../csharp/language-reference/keywords/null.md) 대신 <xref:System.String.Empty> 값이 포함된 문자열을 초기화하면 <xref:System.NullReferenceException> 발생을 줄일 수 있습니다. 액세스하기 전에 문자열의 값을 확인하려면 정적 <xref:System.String.IsNullOrEmpty%28System.String%29> 메서드를 사용하세요.  
   
@@ -71,10 +71,10 @@ ms.locfileid: "61678506"
 >  컴파일 시 축자 문자열은 모두 동일한 이스케이프 시퀀스가 포함된 일반 문자열로 변환됩니다. 따라서 디버거 조사식 창에서 축자 문자열을 확인할 경우 소스 코드의 축자 버전이 아니라 컴파일러에 의해 추가된 이스케이프 문자가 나타납니다. 예를 들어 축자 문자열 @"C:\files.txt"는 조사식 창에 "c:\\\files.txt"로 나타납니다.  
   
 ## <a name="format-strings"></a>형식 문자열  
- 형식 문자열은 콘텐츠가 런타임에 동적으로 결정되는 문자열입니다. 형식 문자열은 문자열 내의 중괄호 안에 ‘보간된 식’이나 자리 표시자를 포함하여 만들어집니다. 중괄호(`{...}`) 안의 모든 내용은 런타임에 하나의 값으로 확인되고 형식화된 문자열로 출력됩니다. 형식 문자열을 만드는 두 가지 방법은 문자열 보간 및 복합 형식 지정입니다.
+ 형식 문자열은 콘텐츠가 런타임에 동적으로 결정되는 문자열입니다. 형식 문자열은 문자열 내의 중괄호 안에 ‘보간된 식’이나 자리 표시자를 포함하여 만들어집니다.  중괄호(`{...}`) 안의 모든 내용은 런타임에 하나의 값으로 확인되고 형식화된 문자열로 출력됩니다. 형식 문자열을 만드는 두 가지 방법은 문자열 보간 및 복합 형식 지정입니다.
 
 ### <a name="string-interpolation"></a>문자열 보간
-C# 6.0 이상에서 사용 가능한 [‘보간된 문자열’](../../language-reference/tokens/interpolated.md)은 `$` 특수 문자로 식별되고 중괄호 안에 보간된 식을 포함합니다. 문자열 보간을 처음 접하는 경우 빠른 개요를 위해 [문자열 보간 - C# 대화형 자습서](../../tutorials/exploration/interpolated-strings.yml)를 참조하세요.
+C# 6.0 이상에서 사용 가능한 [‘보간된 문자열’](../../language-reference/tokens/interpolated.md)은 `$` 특수 문자로 식별되고 중괄호 안에 보간된 식을 포함합니다.  문자열 보간을 처음 접하는 경우 빠른 개요를 위해 [문자열 보간 - C# 대화형 자습서](../../tutorials/exploration/interpolated-strings.yml)를 참조하세요.
 
 코드의 가독성과 유지 관리를 개선하려면 문자열 보간을 사용합니다. 문자열 보간은 `String.Format` 메서드와 동일한 결과를 제공하지만 더 편리하고 인라인 명확성이 향상됩니다.
 
