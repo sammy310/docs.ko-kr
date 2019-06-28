@@ -2,12 +2,12 @@
 title: PII 보안 잠금
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 18095845db094f0911578816e6bacdb7f3776156
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 83c100459ca5cf522b9040a807008e66e1a5c9d8
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664778"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425419"
 ---
 # <a name="pii-security-lockdown"></a>PII 보안 잠금
 이 샘플에 사용 하 여 Windows Communication Foundation (WCF) 서비스의 여러 보안 관련 기능을 제어 하는 방법을 보여 줍니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "64664778"
  이 샘플에서는 사용자 이름 및 암호와 같은 추적 및 메시지 로그의 알려진 PII(개인적으로 식별할 수 있는 정보)의 로깅을 제어하는 방법을 보여 줍니다. 기본적으로 알려진 PII의 로깅은 사용되지 않지만 특정 상황에서는 응용 프로그램 디버깅을 위해 PII의 로깅이 중요할 수 있습니다. 이 샘플은 기반 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)합니다. 또한 이 샘플에서는 추적 및 메시지 로깅을 사용합니다. 자세한 내용은 참조는 [Tracing and Message Logging](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) 샘플입니다.  
   
 ## <a name="encrypting-configuration-file-elements"></a>구성 파일 요소 암호화  
- 공유된 웹 호스팅 환경에서의 보안을 위해 중요한 정보가 포함된 데이터베이스 연결 문자열과 같은 특정 구성 요소를 암호화하는 것이 바람직할 수 있습니다. .NET Framework 폴더(예: %WINDIR%\Micrsoft.NET\Framework\v4.0.20728)에 있는 aspnet_regiis.exe 도구를 사용하여 구성 요소를 암호화할 수 있습니다.  
+ 공유된 웹 호스팅 환경에서의 보안을 위해 중요한 정보가 포함된 데이터베이스 연결 문자열과 같은 특정 구성 요소를 암호화하는 것이 바람직할 수 있습니다. 예를 들어 %WINDIR%\Microsoft.NET\Framework\v4.0.20728.NET Framework 폴더에 있는 aspnet_regiis.exe 도구를 사용 하 여 구성 요소를 암호화할 수 있습니다.  
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>샘플의 Web.config에서 appSettings 섹션의 값을 암호화하려면  
   

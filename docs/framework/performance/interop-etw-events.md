@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 38db390b8fad9cd36dacf33f9647b0272eddc4a0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c52c9bf37e67e4d26867d2b3754945e86e2bf609
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616418"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422417"
 ---
 # <a name="interop-etw-events"></a>Interop ETW 이벤트
 <a name="top"></a> Interop 이벤트는 MSIL(Microsoft Intermediate Language) 스텁 생성 및 캐싱에 대한 정보를 캡처합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "64616418"
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt16|모듈 식별자입니다.|  
 |StubMethodID|win:UInt64|스텁 메서드 식별자입니다.|  
-|StubFlags|win:UInt64|스텁에 대한 플래그:<br /><br /> 0x1 - 역방향 interop<br /><br /> 0x2 - COM interop<br /><br /> 0x4 - NGen.exe에서 생성한 스텁<br /><br /> 0x8 - 대리자<br /><br /> 0x10 - 가변 인수<br /><br /> 0x20 - 비관리 호출 수신자|  
+|StubFlags|win:UInt64|스텁에 대한 플래그:<br /><br /> 0x1 - 역방향 interop<br /><br /> 0x2 - COM interop<br /><br /> 0x4 - NGen.exe에서 생성한 스텁<br /><br /> 0x8 - 대리자<br /><br /> 0x10-가변 인수입니다.<br /><br /> 0x20 - 비관리 호출 수신자|  
 |ManagedInteropMethodToken|win:UInt32|관리되는 interop 메서드의 토큰입니다.|  
 |ManagedInteropMethodNameSpace|win:UnicodeString|관리되는 interop 메서드의 네임스페이스입니다.|  
 |ManagedInteropMethodName|win:UnicodeString|관리되는 interop 메서드의 이름입니다.|  

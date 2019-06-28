@@ -2,12 +2,12 @@
 title: 예외 및 오류 처리
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: f2042bac30ee84530c0da9c30193919dfb99a608
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e99ef5721791af229c68a958e4840a0703d34ac9
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654986"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424939"
 ---
 # <a name="handling-exceptions-and-faults"></a>예외 및 오류 처리
 예외는 서비스 또는 클라이언트 구현 내에서 로컬 오류 통신에 사용됩니다. 이와 반대로 오류는 서버에서 클라이언트로 또는 그 반대로 가는 경우와 같이 서비스 경계 너머로 이루어지는 오류 통신에도 사용되는 말입니다. 오류 외에, 전송 채널에서 전송별 메커니즘을 사용하여 전송 수준의 오류 통신을 수행하는 경우도 많습니다. 예를 들어 HTTP 전송에서는 404 등의 상태 코드를 사용하여 엔드포인트 URL이 없는 경우(오류를 다시 보낼 엔드포인트가 없음)를 나타냅니다. 이 문서는 사용자 지정 채널 작성자를 위한 안내 자료를 제공하는 세 개의 단원으로 구성되어 있습니다. 첫 단원에서는 예외를 정의하고 throw하는 방법에 대한 안내 자료를 제공합니다. 둘째 단원에서는 오류 생성 및 소비에 대한 안내 자료를 제공합니다. 셋째 단원에서는 추적 정보를 제공하여 사용자 지정 채널 사용자의 응용 프로그램 실행 문제 해결을 돕는 방법에 대해 설명합니다.  
@@ -286,7 +286,7 @@ public override bool OnTryCreateException(
  구분되는 복구 시나리오가 있는 특정 오류 조건의 경우에는 `ProtocolException`의 파생된 클래스를 사용하는 것을 고려해 보십시오.  
   
 ### <a name="mustunderstand-processing"></a>MustUnderstand 처리  
- SOAP에서는 수신기에서 필수 헤더가 이해되지 않은 경우를 나타내기 위한 일반 오류를 정의합니다. 이 오류를 `mustUnderstand` 오류라고 합니다. Wcf에서 사용자 지정 채널을 생성 하지 않습니다 `mustUnderstand` 오류입니다. WCF 통신 스택 맨 위에 WCF 디스패처를 확인 하는 대신 MustUndestand로 표시 된 모든 헤더 = true 기본 스택에서 이해 했습니다. 이해되지 않은 것이 있으면 그 순간 `mustUnderstand` 오류가 생성됩니다. 사용자는 이 `mustUnderstand` 처리를 끄고 응용 프로그램에서 모든 메시지 헤더를 받게 만들 수 있습니다. 그런 경우에는 응용 프로그램에서 `mustUnderstand` 처리를 수행합니다. 생성된 오류에는 MustUnderstand=true이고 이해되지 않은 모든 헤더의 이름이 포함된 NotUnderstood 헤더가 있습니다.  
+ SOAP에서는 수신기에서 필수 헤더가 이해되지 않은 경우를 나타내기 위한 일반 오류를 정의합니다. 이 오류를 `mustUnderstand` 오류라고 합니다. Wcf에서 사용자 지정 채널을 생성 하지 않습니다 `mustUnderstand` 오류입니다. WCF 통신 스택 맨 위에 WCF 디스패처를 확인 하는 대신 MustUnderstand로 표시 된 모든 헤더 = true 기본 스택에서 이해 했습니다. 이해되지 않은 것이 있으면 그 순간 `mustUnderstand` 오류가 생성됩니다. 사용자는 이 `mustUnderstand` 처리를 끄고 응용 프로그램에서 모든 메시지 헤더를 받게 만들 수 있습니다. 그런 경우에는 응용 프로그램에서 `mustUnderstand` 처리를 수행합니다. 생성된 오류에는 MustUnderstand=true이고 이해되지 않은 모든 헤더의 이름이 포함된 NotUnderstood 헤더가 있습니다.  
   
  프로토콜 채널에서 MustUnderstand=true인 사용자 지정 헤더를 보낸 후 `mustUnderstand` 오류를 받은 경우에는 헤더를 보냈기 때문에 발생한 오류인지 여부를 확인해야 합니다. `MessageFault` 클래스에는 여기에 유용한 2개의 멤버가 있습니다.  
   

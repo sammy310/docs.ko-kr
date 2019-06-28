@@ -2,12 +2,12 @@
 title: '연습: SQL 생성'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: 380ab80a577fa103c33328047cd24cce6be5cb6e
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 5d8723c6a6d1ab12a2ba1f0f2f7cd5e09e82bfad
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690353"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422770"
 ---
 # <a name="walkthrough-sql-generation"></a>연습: SQL 생성
 
@@ -128,7 +128,7 @@ Join1의 오른쪽 입력을 방문하기 전에 "LEFT OUTER JOIN"이 SelectStat
 
 ![Diagram](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")
 
-다음으로, "false"가 IsParentAJoin 스택에 제공되고 조인 조건 Var(Extent1).CategoryID == Var(Extent2).CategoryID가 처리됩니다. Var(Extenent1) 확인 되기 \<symbol_Extent1 > 기호 테이블에서 조회 한 후입니다. 인스턴스가 단순한 기호로 Var(Extent1) 처리의 결과로으로 확인 되므로 합니다. CategoryID과 함께 SqlBuilder \<symbol1 >. " CategoryID "가 반환 됩니다. 마찬가지로 비교의 다른 쪽이 처리되며, 조인 조건을 방문한 결과가 SelectStatement1의 FROM 절에 추가되고 "false" 값이 IsParentAJoin 스택에서 제공됩니다.
+다음으로, "false"가 IsParentAJoin 스택에 제공되고 조인 조건 Var(Extent1).CategoryID == Var(Extent2).CategoryID가 처리됩니다. Var(Extent1) 확인 되기 \<symbol_Extent1 > 기호 테이블에서 조회 한 후입니다. 인스턴스가 단순한 기호로 Var(Extent1) 처리의 결과로으로 확인 되므로 합니다. CategoryID과 함께 SqlBuilder \<symbol1 >. " CategoryID "가 반환 됩니다. 마찬가지로 비교의 다른 쪽이 처리되며, 조인 조건을 방문한 결과가 SelectStatement1의 FROM 절에 추가되고 "false" 값이 IsParentAJoin 스택에서 제공됩니다.
 
 이를 통해 Join1이 완전히 처리되었으며 범위가 기호 테이블에서 제공됩니다.
 

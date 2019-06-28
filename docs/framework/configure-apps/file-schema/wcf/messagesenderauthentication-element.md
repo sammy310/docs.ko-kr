@@ -2,12 +2,12 @@
 title: <messageSenderAuthentication> 요소
 ms.date: 03/30/2017
 ms.assetid: 8d979dfc-a6f9-42ec-96d5-7fbc13a48118
-ms.openlocfilehash: 410fffd541926b9a2e75c04d26a2a1e08a262939
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 804c280bcdb0fecc87f71121b7d95b5fd0268de9
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764090"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423118"
 ---
 # <a name="messagesenderauthentication-element"></a>\<messageSenderAuthentication > 요소
 피어 투 피어 메시지 발신자에 대한 인증 옵션을 지정합니다.  
@@ -38,10 +38,10 @@ ms.locfileid: "61764090"
   
 |특성|설명|  
 |---------------|-----------------|  
-|customCertificateValidatorType|사용자 지정 형식의 유효성을 검사하는 데 사용되는 형식 및 어셈블리입니다. 이 특성은 `certificateValidationMode`가 `Custom`으로 설정되어 있을 때 설정해야 합니다.|  
-|certifcateValidationMode|자격 증명의 유효성을 검사하는 데 사용되는 세 가지 모드 중 하나를 지정합니다. `Custom`으로 설정되면 `customCertificateValidator`도 지정해야 합니다.|  
-|revocationMode|CRL(해지된 인증서 목록)을 검사하는 데 사용되는 모드 중 하나입니다.|  
-|trustedStoreLocation|시스템 저장소 위치 `LocalMachine` 또는 `CurrentUser` 중 하나입니다. 서비스 인증서가 클라이언트와 협상될 때 이 값이 사용됩니다. 에 대 한 유효성 검사를 수행 합니다 **신뢰할 수 있는 사용자** 지정한 저장소 위치에 저장 합니다.|  
+|`customCertificateValidatorType`|사용자 지정 형식의 유효성을 검사하는 데 사용되는 형식 및 어셈블리입니다. 이 특성은 `certificateValidationMode`가 `Custom`으로 설정되어 있을 때 설정해야 합니다.|  
+|`certificateValidationMode`|자격 증명의 유효성을 검사하는 데 사용되는 세 가지 모드 중 하나를 지정합니다. `Custom`으로 설정되면 `customCertificateValidator`도 지정해야 합니다.|  
+|`revocationMode`|CRL(해지된 인증서 목록)을 검사하는 데 사용되는 모드 중 하나입니다.|  
+|`trustedStoreLocation`|시스템 저장소 위치 `LocalMachine` 또는 `CurrentUser` 중 하나입니다. 서비스 인증서가 클라이언트와 협상될 때 이 값이 사용됩니다. 에 대 한 유효성 검사를 수행 합니다 **신뢰할 수 있는 사용자** 지정한 저장소 위치에 저장 합니다.|  
   
 ## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType 특성  
   

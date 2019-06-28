@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 37e12c499b19d196dd695e1e2970d750f4dc9b0e
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: a7db79185d4445c68adda214d10be6d31f6ed9e0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402421"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425108"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation 정의
 Windows Communication Foundation (WCF)은 서비스 지향 응용 프로그램을 빌드하기 위한 프레임 워크입니다. WCF를 사용 하 여 보낼 수 있습니다 데이터 비동기 메시지로 서비스 끝점에서 간에. 서비스 엔드포인트는 IIS에서 호스팅하는 계속 사용 가능한 서비스의 일부분일 수도 있고 애플리케이션에서 호스팅되는 서비스일 수도 있습니다. 또한 엔드포인트는 서비스 엔드포인트에서 데이터를 요청하는 서비스의 클라이언트일 수 있습니다. 메시지는 XML로 전송되는 한 문자나 단어처럼 간단할 수도 있고 이진 데이터 스트림처럼 복잡할 수도 있습니다. 다음은 몇 가지 샘플 시나리오입니다.
@@ -72,7 +72,7 @@ WCF에는 다음과 같은 기능 집합이 포함 되어 있습니다. 자세�
 
 - **트랜잭션**
 
-     또한 WCF에는 세 가지 트랜잭션 모델 중 하나를 사용 하 여 트랜잭션을 지원 합니다. Ws-atomicttransactions의 Api는 <xref:System.Transactions> 네임 스페이스 및 Microsoft Distributed Transaction Coordinator 합니다. WCF에서 지원 한 트랜잭션에 대 한 자세한 내용은 참조 [트랜잭션을](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md)합니다.
+     또한 WCF에는 세 가지 트랜잭션 모델 중 하나를 사용 하 여 트랜잭션을 지원 합니다. Ws-atomictransactions의 Api는 <xref:System.Transactions> 네임 스페이스 및 Microsoft Distributed Transaction Coordinator 합니다. WCF에서 지원 한 트랜잭션에 대 한 자세한 내용은 참조 [트랜잭션을](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md)합니다.
 
 - **AJAX 및 REST 지원**
 

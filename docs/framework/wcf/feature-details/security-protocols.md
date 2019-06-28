@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], protocols
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
-ms.openlocfilehash: 9993a7ecb61d9a45d88162fdef488e79b155540c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6212fd911bd5b255347459a1b5a7b2f46e31963e
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586861"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425080"
 ---
 # <a name="security-protocols"></a>보안 프로토콜
 Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징 보안 요구 사항을 포함하는 Web Services Security 메커니즘을 제공합니다. 이 섹션에서는 Windows Communication Foundation (WCF) 세부 정보를 설명 합니다. (에서 구현 되는 <xref:System.ServiceModel.Channels.SecurityBindingElement>) 다음 Web services security 프로토콜에 대 한 합니다.  
@@ -131,7 +131,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
  WCF는 SAML v1.1 토큰 용 WSS SAML Token profiles 1.0 및 1.1을 지원합니다. 또한 다른 버전의 SAML 토큰 형식을 구현할 수 있습니다.  
   
 ### <a name="15-security-context-token"></a>1.5 보안 컨텍스트 토큰  
- WCF 보안 컨텍스트 토큰 (SCT) Ws-securecoversation에 도입 된 지원 합니다. SCT는 아래에 설명하는 이진 협상 프로토콜 TLS 및 SSPI를 비롯하여 SecureConversation에 설정된 보안 컨텍스트를 나타내는 데 사용됩니다.  
+ WCF 보안 컨텍스트 토큰 (SCT) Ws-secureconversation에 도입 된 지원 합니다. SCT는 아래에 설명하는 이진 협상 프로토콜 TLS 및 SSPI를 비롯하여 SecureConversation에 설정된 보안 컨텍스트를 나타내는 데 사용됩니다.  
   
 ## <a name="2-common-message-security-parameters"></a>2. 일반 메시지 보안 매개 변수  
   

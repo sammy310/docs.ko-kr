@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04f31748fd53fe3281102fcadcc1e56ea3cc1109
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 39060d503a006ab292818b58a6fa71f44dee68a0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307085"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423325"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > 요소
 <xref:System.AppContext> 클래스에 사용되는 스위치를 하나 이상 정의하여 새 기능의 옵트아웃 메커니즘을 제공합니다.  
@@ -99,7 +99,7 @@ ms.locfileid: "67307085"
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|컨트롤 여부를 값을 [cspparameters.parentwindowhandle에](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) 속성은는 [IntPtr](xref:System.IntPtr) 나타내는 창에 메모리 위치 처리 또는 창 핸들 (HWND) 인지는. 자세한 내용은 [완화: Cspparameters.parentwindowhandle에 HWND 필요](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value)합니다. |.NET Framework 4.7|   
 |`Switch.System.Security.Cryptography.`<br/>`UseLegacyFipsThrow`|FIPS 모드 throw의 클래스를 관리 되는 암호화를 사용 하는지 여부를 제어를 <xref:System.Security.Cryptography.CryptographicException> (`true`) 또는 시스템 라이브러리의 구현을 사용 (`false`).|.NET Framework 4.8|
 |`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|일부 SignedCMS 작업에 대 한 기본값은 SHA1 또는 SHA256 여부를 결정 합니다.<br>SHA1 관련 충돌 문제로 인해 SHA256을 사용하는 것이 좋습니다.|.NET Framework 4.7.1|
-|`Switch.System.Security.Cryptography.X509Certificates.`<br/>`ECDsaCertificateExtensions.UseLegacyPublicKeyReader`|컨트롤 여부는 <xref:System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey%2A?displayProperty=nameWithtype> 메서드는 운영 체제에서 지 원하는 모든 명명 된 곡선을 올바르게 처리 (`false`) 또는 레거시 동작으로 돌아갑니다.|.NET Framework 4.8|
+|`Switch.System.Security.Cryptography.X509Certificates.`<br/>`ECDsaCertificateExtensions.UseLegacyPublicKeyReader`|컨트롤 여부는 <xref:System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey%2A?displayProperty=nameWithType> 메서드는 운영 체제에서 지 원하는 모든 명명 된 곡선을 올바르게 처리 (`false`) 또는 레거시 동작으로 돌아갑니다.|.NET Framework 4.8|
 |`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|일부 SignedXML 작업에 대 한 기본값은 SHA1 또는 SHA256 여부를 결정 합니다.<br>SHA1 관련 충돌 문제로 인해 SHA256을 사용하는 것이 좋습니다.|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|결정 하는지 여부를 `TransportWithMessageCredential` 보안 모드에서는 메시지를 부호 없는 "to" 헤더가 합니다. 이 옵트인 스위치입니다. 자세한 내용은 [.NET Framework 4.6.1의에서 런타임 변경 내용](../../../migration-guide/runtime/4.5.2-4.6.1.md#windows-communication-foundation-wcf)합니다.|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|컨트롤 여부를 합니다 <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})> 생성자에서 throw를 <xref:System.ArgumentException> 요소 중 하나 이면 `null`합니다.|.NET Framework 4.7.1| 
@@ -118,7 +118,7 @@ ms.locfileid: "67307085"
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |Windows Presentation Foundation 이전 알고리즘을 적용 하는지 여부를 결정 (`true`) 또는 새 알고리즘 (`false`)에서 공간을 할당 \*-열입니다. 자세한 내용은 [완화: Grid 컨트롤의 별 열 공간 할당](../../../migration-guide/retargeting/4.6.2-4.7.md#wpf-grid-allocation-of-space-to-star-columns)합니다. |.NET Framework 4.7 |
 |`Switch.System.Windows.Controls.TabControl.`<br/>`SelectionPropertiesCanLagBehindSelectionChangedEvent`|컨트롤 선택 발생 하기 전에 선택한 값 속성의 값을 업데이트 여부 선택기 또는 탭 컨트롤에서 항상 변경 이벤트입니다.|.NET Framework 4.7.1|
 |`Switch.System.Windows.Controls.Text.`<br/>`UseAdornerForTextboxSelectionRendering`|비 표시기 기반된 선택 렌더링에 사용할 수 있는 인지 여부를 확인 합니다 <xref:System.Windows.Controls.TextBox> 및 <xref:System.Windows.Controls.PasswordBox> 폐색 텍스트를 방지 하기 위한 컨트롤 (`false`), 아니면 텍스트 표시기 계층에만 렌더링 됩니다 (`true`).|.NET Framework 4.7.2|
-|`Switch.System.Windows.Data.Binding.`<br/>`IListIndexerHidesCustomIndexer`|여부를 사용자 지정 IList 인덱서 잘못 사용할 제어 (`false`) 또는 올바르게 (`true`) 여는 <xref:System.Windows.Data.Binding?displayProperty=nameWithtype> 클래스.|.NET Framework 4.8|
+|`Switch.System.Windows.Data.Binding.`<br/>`IListIndexerHidesCustomIndexer`|여부를 사용자 지정 IList 인덱서 잘못 사용할 제어 (`false`) 또는 올바르게 (`true`) 여는 <xref:System.Windows.Data.Binding?displayProperty=nameWithType> 클래스.|.NET Framework 4.8|
 |`Switch.System.Windows.DoNotScaleForDpiChanges`|DPI 변경 당 시스템에서 발생할 지 여부를 결정 (값 `false`) 또는 모니터별 (값 `true`).|.NET Framework 4.6.2|
 |`Switch.System.Windows.`<br/>`DoNotUsePresentationDpiCapabilityTier2OrGreater`|컨트롤 여부를에서 컨트롤의 크기 조정의 향상 된 기능을 <xref:System.Windows.Interop.HwndHost?displayProperty=nameWithType> WPF 모니터별 인식 모드에서 실행 되는 경우 사용할 수 없습니다 (`true`) 사용 하도록 설정 하거나 (`false`).|.NET Framework 4.8|
 |`Switch.System.Windows.Forms.`<br/>`DomainUpDown.UseLegacyScrolling`|개발자를 특별히 처리 해야 하는지 여부를 결정 합니다 <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> 작업은 컨트롤 텍스트가 존재 하는 경우. `true` 처리 하는 <xref:System.Windows.Forms.DomainUpDown.UpButton> 작업; `false` 에 대 한는 <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> 고 <xref:System.Windows.Forms.DomainUpDown.DownButton?displayProperty=nameWithType> 제대로 동기화 되어야 하는 작업입니다.|.NET Framework 4.7.2|

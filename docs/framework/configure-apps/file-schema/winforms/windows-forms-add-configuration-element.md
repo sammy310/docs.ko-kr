@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eca84aa3a3d7bffaac31cc36ed14e5d5bb5a37cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75a66ee7ca1d7c99de6e2cc9a1d502ea58dbf9f7
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775845"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422822"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms 구성 요소를 추가합니다.
 
@@ -43,7 +43,7 @@ ms.locfileid: "61775845"
 | ---------- | ------ | ----------- |
 | "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | 고정 된 컨트롤은 단일 패스에서 배율 조정 여부를 나타냅니다. 크기 조정, 단일을 사용 하지 않도록 설정 하려면 "true" 전달 그렇지 않으면 false입니다. "단일 확장 전달 하는 데 사용" 섹션을 참조 합니다 [주의](#remarks) 자세한 내용은 합니다. |
 | "DpiAwareness" | "PerMonitorV2"&#124;"false" | 응용 프로그램의 DPI 인식 여부를 나타냅니다. Dpi 인식;를 지원 하기 위해 "PerMonitorV2" 키를 설정 합니다. 그렇지 않으면 "false"로 설정 합니다. DPI 인식은 옵트인 기능입니다. Windows Forms의 높은 DPI 지원을 이용 하려면 "PerMonitorV2" 값을 설정 해야 합니다. 참조 된 [주의](#remarks) 자세한 내용은 섹션입니다. |
-| "CheckedListBox.DisableHighDpiImprovements" | "true"&#124;"false" | 나타냅니다 여부는 <xref:System.Windows.Forms.CheckedListBox> 컨트롤은.NET Framework 4.7에서 도입 된 크기 조정 및 레이아웃 개선 사항 활용 합니다. caling 및 레이아웃 개선; 옵트아웃 하려면 "true" 그렇지 않으면, "false"입니다. |
+| "CheckedListBox.DisableHighDpiImprovements" | "true"&#124;"false" | 나타냅니다 여부는 <xref:System.Windows.Forms.CheckedListBox> 컨트롤은.NET Framework 4.7에서 도입 된 크기 조정 및 레이아웃 개선 사항 활용 합니다. 크기 조정 및 레이아웃 개선; 옵트아웃 하려면 "true" 그렇지 않으면, "false"입니다. |
 | "DataGridView.DisableHighDpiImprovements" | "true"&#124;"false" | 나타냅니다 여부는 <xref:System.Windows.Forms.DataGridView> .NET Framework 4.7에 도입 된 크기 조정 및 레이아웃 향상 된 기능을 제어 합니다. DPI 인식; 옵트아웃 하려면 "true" "false" 그렇지 않은 경우. |
 | "DisableDpiChangedMessageHandling" | "true"&#124;"false" | DPI 배율을 변경;와 관련 된 메시지 수신을 옵트아웃 하려면 "true" "false" 그렇지 않은 경우. 참조 된 [주의](#remarks) 자세한 내용은 섹션입니다. |
 | "EnableWindowsFormsHighDpiAutoResizing" | "true"&#124;"false" | Windows Forms 응용 프로그램을 자동으로 DPI 배율 변경으로 인해 크기 조정 여부를 나타냅니다. 자동 크기 조정을 사용 하도록 설정 하려면 "true" 그렇지 않으면 false입니다. |

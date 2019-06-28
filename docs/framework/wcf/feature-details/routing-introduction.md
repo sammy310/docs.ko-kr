@@ -2,12 +2,12 @@
 title: 라우팅 소개
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: 41545d0340ae222e427d1e6d428ed1e3f7b4fa76
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 478c9aa6563cab4ba7769c56d7084c8716c43c58
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912485"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425376"
 ---
 # <a name="routing-introduction"></a>라우팅 소개
 라우팅 서비스는 메시지 내용에 따라 메시지를 라우트할 수 있는 제네릭 플러그형 SOAP 매개자를 제공합니다. 라우팅 서비스를 사용하면 서비스 집계, 서비스 버전 관리, 우선 순위 라우팅 및 멀티캐스트 라우팅과 같은 시나리오를 구현할 수 있도록 하는 복합적인 라우팅 논리를 만들 수 있습니다. 또한 라우팅 서비스는 오류 처리 기능을 제공하므로 기본 대상 엔드포인트로 메시지를 보내는 중 오류가 발생할 경우 이 기능을 통해 메시지를 보낼 백업 엔드포인트 목록을 설정할 수 있습니다.  
@@ -250,7 +250,7 @@ rc.SoapProcessingEnabled = false;
 ### <a name="dynamic-configuration"></a>동적 구성  
  부가적인 클라이언트 엔드포인트를 추가하는 경우 또는 메시지를 라우트하는 데 사용되는 필터를 수정해야 하는 경우 현재 라우팅 서비스를 통해 메시지를 수신하는 엔드포인트에 대한 서비스를 중단시키지 않도록 런타임에 동적으로 구성을 업데이트하는 방법이 필요합니다. 구성 파일이나 호스트 응용 프로그램의 코드를 수정하는 것으로는 부족한 경우가 있습니다. 두 방법에는 모두 응용 프로그램 재활용이 필요하고, 이 경우 현재 전송 중인 메시지가 손실될 가능성, 그리고 서비스가 다시 시작될 때까지 대기하는 동안 작동 중단이 발생할 가능성이 있기 때문입니다.  
   
- 수정할 수 있습니다 합니다 **RoutingConfiguration** 프로그래밍 방식으로 합니다. 처음에 구성 파일을 사용 하 여 서비스를 구성할 수 있습니다, 있지만 수정할 수 있습니다 런타임에 구성을 새 만듦으로써 **RoutingConfigution** 매개 변수로 전달 하는 <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> 메서드 에 의해 노출 된 <xref:System.ServiceModel.Routing.RoutingExtension> 서비스 확장 합니다. 현재 전송 중인 메시지가 계속 이전 구성을 사용 하는 동안 호출 후에 받은 메시지 전달 **ApplyConfiguration** 새 구성을 사용 합니다. 다음 예제에서는 라우팅 서비스의 인스턴스를 만들고 그 후 구성을 수정하는 것을 보여 줍니다.  
+ 수정할 수 있습니다 합니다 **RoutingConfiguration** 프로그래밍 방식으로 합니다. 처음에 구성 파일을 사용 하 여 서비스를 구성할 수 있습니다, 있지만 수정할 수 있습니다 런타임에 구성을 새 만듦으로써 **RoutingConfiguration** 매개 변수로 전달 하는 <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> 메서드 에 의해 노출 된 <xref:System.ServiceModel.Routing.RoutingExtension> 서비스 확장 합니다. 현재 전송 중인 메시지가 계속 이전 구성을 사용 하는 동안 호출 후에 받은 메시지 전달 **ApplyConfiguration** 새 구성을 사용 합니다. 다음 예제에서는 라우팅 서비스의 인스턴스를 만들고 그 후 구성을 수정하는 것을 보여 줍니다.  
   
 ```csharp  
 RoutingConfiguration routingConfig = new RoutingConfiguration();  

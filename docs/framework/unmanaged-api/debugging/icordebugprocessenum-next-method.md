@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c298107983f4835569cfee7503537537ad11a165
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9f32b554de191ff84e7c319e2a00e3cd0610a9f
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783002"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422193"
 ---
 # <a name="icordebugprocessenumnext-method"></a>ICorDebugProcessEnum::Next 메서드
 ICorDebugProcess 인스턴스 수가 지정 된 현재 위치부터 시작 하는 열거형에서 가져옵니다.  
@@ -42,7 +42,7 @@ HRESULT Next (
  `celt`  
  [in] 수가 `ICorDebugProcess` 인스턴스를 검색할 수 있습니다.  
   
- `processess`  
+ `processes`  
  [out] 각각 가리키는 포인터 배열을 `ICorDebugProcess` 프로세스를 나타내는 개체입니다.  
   
  `pceltFetched`  

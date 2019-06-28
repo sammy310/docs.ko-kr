@@ -2,12 +2,12 @@
 title: '방법: WSE 3.0 클라이언트와 상호 운용하도록 WCF 서비스 구성'
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
-ms.openlocfilehash: 1c5a5e4e92eedb21e3405370e59344d3b861d1dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5034744059e7ed87d4f8b41c6ae89d1af1bf0f56
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619169"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425397"
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>방법: WSE 3.0 클라이언트와 상호 운용하도록 WCF 서비스 구성
 Windows Communication Foundation (WCF) 서비스는 WCF 서비스가 Ws-addressing 사양의 2004 년 8 월 버전을 사용 하도록 구성 된 경우 Microsoft.NET (WSE) 클라이언트에 대 한 Web Services Enhancements 3.0과 유선 수준으로 호환 됩니다.  
@@ -24,7 +24,7 @@ Windows Communication Foundation (WCF) 서비스는 WCF 서비스가 Ws-addressi
   
     3. 인증 모드와 자식을 추가 하 여 WSE 3.0과 호환 되는 메시지 보안을 설정 하는 데 사용 되는 Ws-security 사양 버전 지정 [ \<보안 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) 에 [ \<바인딩 >](../../../../docs/framework/misc/binding.md)합니다.  
   
-         인증 모드를 설정 하려면 설정 합니다 `authenicationMode` 특성을 [ \<보안 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)합니다. 인증 모드는 대체로 WSE 3.0의 턴키 보안 어설션에 해당합니다. 다음 표에서 WSE 3.0에서 턴키 보안 어설션이 wcf에서 인증 모드를 매핑합니다.  
+         인증 모드를 설정 하려면 설정 합니다 `authenticationMode` 특성을 [ \<보안 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)합니다. 인증 모드는 대체로 WSE 3.0의 턴키 보안 어설션에 해당합니다. 다음 표에서 WSE 3.0에서 턴키 보안 어설션이 wcf에서 인증 모드를 매핑합니다.  
   
         |WCF 인증 모드|WSE 3.0 턴키 보안 어설션|  
         |-----------------------------|----------------------------------------|  

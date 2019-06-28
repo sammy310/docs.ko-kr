@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 6aad851770fb886de5d5c00b544ac6eac2857e42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9fd7f99b35730cf867bfad5da24bc3f223e9a0f8
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801857"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425328"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>방법: Windows Forms 애플리케이션에서 글꼴 구성표 변경 내용에 대응
 Windows 운영 체제에서 사용자 크게 또는 작게 표시 기본 글꼴을 확인 하려면 시스템 글꼴 설정을 변경할 수 있습니다. 이러한 글꼴 설정을 변경 하는 것이 더 큰 형식 해당 화면에 텍스트를 읽이 필요는 시각 장애가 있는 사용자에 대 한 중요 합니다. 글꼴 구성표 변경 될 때마다 양식 및 포함 된 모든 텍스트의 크기를 늘리거나 줄여 이러한 변경에 반응 하는 Windows Forms 응용 프로그램을 조정할 수 있습니다. 동적으로 글꼴 크기의 변경 내용을 수용 하기 위해 폼을 하려는 경우에 폼에 코드를 추가할 수 있습니다.  
@@ -62,7 +62,7 @@ Windows 운영 체제에서 사용자 크게 또는 작게 표시 기본 글꼴�
  [!code-csharp[WinFormsAutoScaling#1](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#1)]
  [!code-vb[WinFormsAutoScaling#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#1)]  
   
- 에 대 한 호출을 포함 하는이 코드 예제에서 constructer `InitializeComponent`, Visual Studio에서 새 Windows Forms 프로젝트를 만들 때 정의 합니다. 명령줄에서 응용 프로그램을 작성 하는 경우이 코드 줄을 제거 합니다.  
+ 이 코드 예제는 생성자 호출을 포함 `InitializeComponent`, Visual Studio에서 새 Windows Forms 프로젝트를 만들 때 정의 합니다. 명령줄에서 응용 프로그램을 작성 하는 경우이 코드 줄을 제거 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

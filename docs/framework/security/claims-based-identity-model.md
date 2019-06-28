@@ -3,12 +3,12 @@ title: 클레임 기반 ID 모델
 ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
-ms.openlocfilehash: 8560c7fd1969cfed6e43e2982fb69313c45c9405
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b7cafa727251c28b79615a37adce4effe6885392
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650457"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422403"
 ---
 # <a name="claims-based-identity-model"></a>클레임 기반 ID 모델
 클레임 인식 응용 프로그램을 작성할 때 사용자 ID가 클레임 집합으로 응용 프로그램에 표시됩니다. 클레임이 하나는 사용자의 이름, 다른 전자 메일 주소를 수 있습니다. 외부 ID 시스템은 수신하는 ID 데이터가 신뢰할 수 있는 출처에서 제공되는 암호화 보증과 함께 각각의 요청을 작성한 사용자에 대해 파악하기 위해 필요한 모든 사항을 응용 프로그램에 제공하도록 구성됩니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "64650457"
  클레임을 신뢰하는 응용 프로그램을 빌드할 때 RP(신뢰 당사자) 응용 프로그램을 빌드합니다. RP의 동의어로는, “클레임 인식 애플리케이션” 및 “클레임 기반 애플리케이션”이 있습니다. 웹 응용 프로그램과 웹 서비스가 모두 RP일 수 있습니다. RP 응용 프로그램은 STS에서 발급한 토큰을 사용하고 토큰에서 클레임을 추출하여 ID 관련 작업에 사용합니다. WIF는 RP 응용 프로그램을 작성하는 데 도움을 주는 기능을 제공합니다.  
   
 ### <a name="standards"></a>표준  
- 모두 상호 운용 가능한 상태로 만들기 위해 이전 시나리오에서 여러 WS-* 표준이 사용됩니다. WS-MetadataExchange를 사용하여 정책이 검색되고 WS-Policy 사양에 따라 정책이 구조화됩니다. STS가 보안 토큰을 요청하고 수신하는 방법을 설명하는 WS-Trust 사양을 구현하는 엔드포인트를 노출합니다. 오늘날 대부분의 STS가 SAML(Security Assertion Markup Language)로 서식이 지정된 토큰을 발급합니다. SAML은 상호 운용 가능한 방식으로 클레임을 나타내는 데 사용할 수 있는 업계에서 통용되는 XML 용어입니다. 또는 다중 플랫폼 상황에서 이를 통해 완전히 다른 플랫폼에서 STS와 통신하고 플랫폼에 관계없이 모든 응용 프로그램에서 Single Sign-On을 달성할 수 있습니다.  
+ 모두 상호 운용 가능한 상태로 만들기 위해 이전 시나리오에서 여러 WS-* 표준이 사용됩니다. WS-MetadataExchange를 사용하여 정책이 검색되고 WS-Policy 사양에 따라 정책이 구조화됩니다. STS가 보안 토큰을 요청하고 수신하는 방법을 설명하는 WS-Trust 사양을 구현하는 엔드포인트를 노출합니다. 오늘날 대부분의 sts가 사용 하 여 SAML Security Assertion Markup Language () 서식이 지정 된 토큰을 발급 합니다. SAML은 상호 운용 가능한 방식으로 클레임을 나타내는 데 사용할 수 있는 업계에서 통용되는 XML 용어입니다. 또는 다중 플랫폼 상황에서 이를 통해 완전히 다른 플랫폼에서 STS와 통신하고 플랫폼에 관계없이 모든 응용 프로그램에서 Single Sign-On을 달성할 수 있습니다.  
   
 ### <a name="browser-based-applications"></a>브라우저 기반 응용 프로그램  
  스마트 클라이언트만 클레임 기반 ID 모델을 사용할 수 있는 것이 아닙니다. 브라우저 기반 응용 프로그램(수동 클라이언트라고도 함)에서도 사용할 수 있습니다. 다음 시나리오는 이러한 작동 방식을 설명합니다.  

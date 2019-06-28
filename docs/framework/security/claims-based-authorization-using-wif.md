@@ -3,12 +3,12 @@ title: WIF를 사용하여 클레임 기반 권한 부여
 ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
-ms.openlocfilehash: 0c99053610c8df9b6825c773a09cb1330d1e22f4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9d20f8fbce916a038fc8224492a4077e1978ed8c
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650444"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422362"
 ---
 # <a name="claims-based-authorization-using-wif"></a>WIF를 사용하여 클레임 기반 권한 부여
 신뢰 당사자 응용 프로그램에서 권한 부여에 따라 인증된 ID가 액세스할 수 있도록 허용되는 리소스 및 이러한 리소스에서 수행할 수 있도록 허용되는 작업이 결정됩니다. 권한 부여가 부적절하거나 취약한 상태인 경우 정보가 노출되거나 데이터가 변조될 수 있습니다. 이 항목에서는 ACS(Windows Azure Access Control Service)와 같은 STS(보안 토큰 서비스) 및 WIF(Windows Identity Foundation)를 사용하여 클레임 인식 ASP.NET 웹 응용 프로그램과 서비스에 대한 권한 부여를 구현하기 위해 사용할 수 있는 방법에 대해 간략하게 설명합니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "64650444"
  RBAC는 사용자 역할에 따라 응용 프로그램에서 사용자 권한을 관리하고 적용하는 권한 부여 방법입니다. 사용자에게 작업을 수행하는 데 필요한 역할이 있는 경우 액세스 권한이 부여되고, 그렇지 않으면 액세스가 거부됩니다.  
   
 ### <a name="iprincipalisinrole-method"></a>IPrincipal.IsInRole 메서드  
- 클레임 인식 애플리케이션에서 RBAC 방식을 구현하려면 비-클레임 인식 애플리케이션에서와 마찬가지로 **IPrinicpal** 인터페이스에서 **IsInRole()** 메서드를 사용합니다. 다음과 같은 여러 가지 방법으로 **IsInRole()** 메서드를 사용할 수 있습니다.  
+ 클레임 인식 응용 프로그램에서 RBAC 방식을 구현 하려면 사용 합니다 **isinrole ()** 에서 메서드를 **IPrincipal** 비 클레임 인식 응용 프로그램에서와 마찬가지로 인터페이스입니다. 다음과 같은 여러 가지 방법으로 **IsInRole()** 메서드를 사용할 수 있습니다.  
   
 - **IPrincipal.IsInRole(“Administrator”)** 의 명시적 호출 이 방법에서는 결과가 부울입니다. 이는 조건문에서 사용되며, 코드에서 임의의 위치에 사용할 수 있습니다.  
   

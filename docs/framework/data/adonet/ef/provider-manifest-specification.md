@@ -2,12 +2,12 @@
 title: 공급자 매니페스트 지정
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 0f3eaa73a26c3f8519e1c168ab2e2968ed4ab28d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9ae528105119241e05be5182db418312c4120112
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641160"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422713"
 ---
 # <a name="provider-manifest-specification"></a>공급자 매니페스트 지정
 이 단원에서는 데이터 저장소 공급자가 데이터 저장소의 형식 및 함수를 지원하는 방법에 대해 설명합니다.  
@@ -83,9 +83,9 @@ ms.locfileid: "64641160"
  공급자 매니페스트는 데이터 저장소 연결이나 공급자 매니페스트 토큰을 사용하여 저장소 메타데이터 로더(StoreItemCollection)에 의해 로드됩니다.  
   
 #### <a name="using-a-data-store-connection"></a>데이터 저장소 연결 사용  
- 데이터 저장소 연결을 사용할 수 있는 경우 DbProvderServices.GetProviderManifestToken을 호출하여 GetProviderManifest 메서드에 전달되는 토큰을 반환합니다. GetProviderManifest 메서드는 DbProviderManifest를 반환합니다. 이 메서드는 공급자의 GetDbProviderManifestToken 구현에 작업을 위임합니다.  
+ 데이터 저장소 연결을 사용할 수 있는 경우 호출할 <xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType> 에 전달 되는 토큰을 반환 하는 <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A> 메서드를 반환 하는 <xref:System.Data.Common.DbProviderManifest>합니다. 이 메서드는 공급자의 구현에 위임 `GetDbProviderManifestToken`합니다.  
   
-```  
+```csharp
 public string GetProviderManifestToken(DbConnection connection);  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
 ```  

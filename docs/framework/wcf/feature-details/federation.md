@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: baf65340e390c7439e8639e334819fb0bf60f952
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 376448502b7b9c7002213be5c3437849a3868166
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662622"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425029"
 ---
 # <a name="federation"></a>페더레이션
 이 항목에서는 페더레이션 보안의 개념에 대한 간략한 개요를 제공합니다. 또한 페더레이션된 보안 아키텍처를 배포 하는 것에 대 한 Windows Communication Foundation (WCF) 지원을 설명 합니다. 페더레이션을 설명 하는 샘플 응용 프로그램을 참조 하세요 [Federation 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)합니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "64662622"
   
  사용 [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) 페더레이션된 보안에서 시나리오 분리할 수와 논리적으로 독립 두 단계로 다음 섹션에 설명 된 대로 합니다.  
   
-### <a name="phase-1-design-phase"></a>1 단계: 디자인 단계  
+### <a name="phase-1-design-phase"></a>1단계: 디자인 단계  
  디자인 단계 동안 클라이언트가 사용 하 여 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 서비스 끝점이 노출 하는 정책을 확인 하 고 서비스의 인증 및 권한 부여 요구 사항을 수집 하 합니다. 적절한 프록시는 클라이언트에서 다음 페더레이션 보안 통신 패턴을 만들기 위해 생성됩니다.  
   
 - 클라이언트 신뢰 영역의 STS로부터 보안 토큰을 가져옵니다.  
@@ -160,7 +160,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 #### <a name="sts-b"></a>STS B  
  다음 그림에서는 STS B를 보여 줍니다. 위에서 설명한 것처럼 STS(보안 토큰 서비스)도 웹 서비스이며 이와 연관된 엔드포인트, 정책 등을 가질 수 있습니다.  
   
- ![2. 보안 토큰 서비스를 보여 주는 다이어그램](./media/federation/myservice-security-token-service-b.gif)  
+ ![2\. 보안 토큰 서비스를 보여 주는 다이어그램](./media/federation/myservice-security-token-service-b.gif)  
   
  STS B는 보안 토큰을 요청하는 데 사용할 수 있는 `STSEndpoint`라는 단일 엔드포인트를 노출합니다. 특히 STS B는 서비스에 액세스하기 위해 `accessAuthorized` 클레임과 함께 `MyService` 서비스 사이트에 제공할 수 있는 SAML 토큰을 발급합니다. 그러나 STS B를 사용하려면 `userAuthenticated` 클레임이 포함된 STS A에서 발급한 유효한 SAML 토큰을 제공해야 합니다. 이는 STS 구성에서 선언적으로 지정됩니다.  
   
@@ -284,7 +284,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ### <a name="client-at-organization-a"></a>조직 A의 클라이언트  
  다음 그림에서는 `MyService` 서비스 호출에 포함된 단계와 함께 조직 A의 클라이언트를 보여 줍니다. 다른 기능 구성 요소도 완전성을 위해 포함됩니다.  
   
- ![Showwing MyService 서비스 호출에서 단계 다이어그램입니다.](./media/federation/federation-myservice-service-call-process.gif)  
+ ![MyService 서비스 호출에서 단계를 보여 주는 다이어그램입니다.](./media/federation/federation-myservice-service-call-process.gif)  
   
 ## <a name="summary"></a>요약  
  페더레이션 보안은 책임을 확실히 나누며, 안전하고 확장성 있는 서비스 아키텍처를 구축하는 데 도움이 됩니다. 빌드하고 분산된 응용 프로그램을 배포 하기 위한 플랫폼으로 WCF는 페더레이션된 보안을 구현 하는 것에 대 한 기본 지원을 제공 합니다.  
