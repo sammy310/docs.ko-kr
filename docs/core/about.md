@@ -3,12 +3,12 @@ title: .NET Core 정보
 description: .NET Core에 대한 자세히 알아봅니다.
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: fb6088bcadcdc9c28699446df035b899485c406d
-ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
+ms.openlocfilehash: d81c6ad15c12d7bb1e866aef3bd1e799d5b62cde
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66003752"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67421882"
 ---
 # <a name="about-net-core"></a>.NET Core 정보
 
@@ -30,7 +30,7 @@ C#, Visual Basic 및 F# 언어를 사용하여 .NET Core에 대한 애플리케�
 
 .NET Core는 다음과 같은 여러 시나리오에서 API를 노출합니다.
 
-- [bool](../csharp/language-reference/keywords/bool.md) 및 [int](../csharp/language-reference/keywords/int.md)와 같은 기본 형식
+- [bool](../csharp/language-reference/keywords/bool.md) 및 [int](../csharp/language-reference/builtin-types/integral-numeric-types.md)와 같은 기본 형식
 - <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 및 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>과 같은 컬렉션
 - <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 및 <xref:System.IO.FileStream?displayProperty=nameWithType>과 같은 유틸리티 형식
 - <xref:System.Data.DataSet?displayProperty=nameWithType> 및 [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/)과 같은 데이터 형식

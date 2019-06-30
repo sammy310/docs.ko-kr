@@ -1,13 +1,13 @@
 ---
 title: dotnet clean 명령
 description: dotnet clean 명령은 현재 디렉터리를 정리합니다.
-ms.date: 04/14/2019
-ms.openlocfilehash: fa19f1b041e4031082f928135395a5f06ce702e9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 36630c046ff8f1ad8d513b4e64cfb74a8625776b
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631814"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422014"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
@@ -24,7 +24,8 @@ ms.locfileid: "65631814"
 ## <a name="synopsis"></a>개요
 
 ```
-dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] [-o|--output] [-r|--runtime] [-v|--verbosity]
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] 
+    [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
 
@@ -55,6 +56,10 @@ dotnet clean [-h|--help]
 * **`--interactive`**
 
   명령이 중지되고 사용자 입력 또는 작업을 대기할 수 있도록 허용합니다. 예를 들어 인증을 완료합니다. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
+
+* **`--nologo`**
+
+  시작 배너 또는 저작권 메시지를 표시하지 않습니다. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 

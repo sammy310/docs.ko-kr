@@ -4,12 +4,12 @@ description: 어떤 데이터가 수집되고 수집 기능을 사용하지 않�
 author: richlander
 ms.date: 06/20/2018
 ms.custom: seodec18
-ms.openlocfilehash: 85cceab08fc6e4108a5b951c8b67c1ad5a28f6bb
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 40d9f3f698f513306e087753b4c33d09e8df0046
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377499"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397752"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 원격 분석
 
@@ -81,7 +81,7 @@ ms.locfileid: "66377499"
 
 &#8225;일반적으로 *지리* 열에는 국가/지역 이름이 표시됩니다. 경우에 따라 연구원이 남극에서 .NET Core를 사용하거나 위치 데이터가 정확하지 않아 남극 대륙이 이 열에 표시됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 | 타임스탬프      | 발생 | 명령 | 지리 | OSFamily | RuntimeID     | OSVersion | SDKVersion |
 | -------------- | ----------- | ------- | --------- | -------- | ------------- | --------- | ---------- |
@@ -102,7 +102,7 @@ ms.locfileid: "66377499"
 
 ## <a name="license"></a>라이선스
 
-.NET Core의 Microsoft 배포는 [Microsoft 소프트웨어 사용 조건: Mirosoft.NET 라이브러리](https://aka.ms/dotnet-core-eula)로 라이선스가 부여됩니다. 데이터 수집 및 처리에 대한 자세한 내용은 "Data"라는 섹션을 참조하세요.
+.NET Core의 Microsoft 배포는 [Microsoft 소프트웨어 사용 조건: Microsoft .NET 라이브러리](https://aka.ms/dotnet-core-eula)에 따라 라이선스가 부여됩니다. 데이터 수집 및 처리에 대한 자세한 내용은 "Data"라는 섹션을 참조하세요.
 
 [.NET NuGet 패키지](https://www.nuget.org/profiles/dotnetframework)에는 동일한 라이선스가 사용되지만 원격 분석을 구현하지 않습니다([범위](#scope) 참조).
 

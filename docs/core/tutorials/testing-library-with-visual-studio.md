@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 352599d60a42a034b3d6647b1fe8f1cbf2f4572d
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 32593465c1a161aa1293b7b233539fa930c7e1d8
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612006"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402203"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Visual Studio 2017에서 .NET Core를 사용하여 .NET Standard 라이브러리 테스트
 
@@ -68,7 +68,7 @@ ms.locfileid: "59612006"
 
    단위 테스트 템플릿을 통해 만들어진 소스 코드는 다음을 수행합니다.
 
-   * 단위 테스트에 사용되는 형식이 포함되어 있는 {Microsoft.VisualStudio.TestTools.UnitTesting}<xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=namewithType> 네임스페이스를 가져옵니다.
+   * 단위 테스트에 사용되는 형식을 포함하는 <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType> 네임스페이스를 가져옵니다.
 
    * <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute>) 특성을 `UnitTest1` 클래스에 적용합니다. <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 특성으로 태그가 지정된 테스트 클래스의 각 테스트 메서드는 단위 테스트를 실행할 때 자동으로 실행됩니다.
 

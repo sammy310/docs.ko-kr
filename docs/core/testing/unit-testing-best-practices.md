@@ -5,12 +5,12 @@ author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
 ms.custom: seodec18
-ms.openlocfilehash: 7f4699b5277c5feeac4d9116ac85e096247aa748
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.openlocfilehash: 2787f43645250dbaf7a67aa7b7158372cf624be5
+ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59427450"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410369"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core 및.NET 표준을 사용하는 단위 테스트 모범 사례
 
@@ -82,7 +82,7 @@ purchase.ValidateOrders();
 Assert.True(purchase.CanBeShipped);
 ```
 
-클래스 이름을 `FakeOrder`로 바꾸면 클래스를 훨씬 더 일반화되게 만들므로 클래스를 mock 또는 stub으로 사용할 수 있습니다. 어느 것이든 테스트 사례에 좋습니다. 위의 예에서는 `FakeOrder`가 stub으로 사용됩니다. assert 중에 `FakeOrder`를 어떤 모양 또는 형태로 사용하지 않습니다. `FakeOrder` 방금 `Purchase` 클래스에 전달되어 생성자의 요구 사항을 충족했습니다.
+클래스 이름을 `FakeOrder`로 바꾸면 클래스를 훨씬 더 일반화되게 만들므로 클래스를 mock 또는 stub으로 사용할 수 있습니다. 어느 것이든 테스트 사례에 좋습니다. 위의 예에서는 `FakeOrder`가 stub으로 사용됩니다. assert 중에 `FakeOrder`를 어떤 모양 또는 형태로 사용하지 않습니다. `FakeOrder`는 방금 `Purchase` 클래스에 전달되어 생성자의 요구 사항을 충족했습니다.
 
 Mock으로 사용하려면 다음과 같이 수행하면 됩니다.
 
@@ -283,7 +283,7 @@ public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
 ```csharp
 public int GetDiscountedPrice(int price)
 {
-    if(DateTime.Now == DayOfWeek.Tuesday) 
+    if(DateTime.Now.DayOfWeek == DayOfWeek.Tuesday) 
     {
         return price / 2;
     }

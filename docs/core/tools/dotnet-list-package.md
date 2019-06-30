@@ -1,13 +1,13 @@
 ---
 title: dotnet list package 명령
 description: ‘dotnet list package’ 명령은 프로젝트 또는 솔루션에 대한 패키지 참조를 나열하는 편리한 옵션을 제공합니다.
-ms.date: 04/09/2019
-ms.openlocfilehash: 88ef3302a955eadc4167384312e4eb721dd496fb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 98cc456fff02364310cec98f0282700f7697f07e
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631759"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67421945"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
@@ -20,8 +20,8 @@ ms.locfileid: "65631759"
 ## <a name="synopsis"></a>개요
 
 ```
-dotnet list [<PROJECT | SOLUTION>] package [--config] [--framework] [--highest-minor] [--highest-patch] 
-   [--include-prerelease] [--include-transitive] [--outdated] [--source]
+dotnet list [<PROJECT>|<SOLUTION>] package [--config] [--framework] [--highest-minor] [--highest-patch] 
+   [--include-prerelease] [--include-transitive] [--interactive] [--outdated] [--source]
 dotnet list package [-h|--help]
 ```
 
@@ -104,6 +104,10 @@ Project 'HelloPlugin' has the following package references
 * **`--include-transitive`**
 
   최상위 패키지 이외에 전이적 패키지를 나열합니다. 이 옵션을 지정하면 최상위 패키지가 종속된 패키지 목록을 가져옵니다.
+
+* **`--interactive`**
+
+  명령이 중지되고 사용자 입력 또는 작업을 대기할 수 있도록 허용합니다. 예를 들어 인증을 완료합니다. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
 
 * **`--outdated`**
 
