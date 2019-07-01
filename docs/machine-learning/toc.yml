@@ -80,6 +80,14 @@
   items:
     - name: 개요
       href: automl-overview.md
+    - name: 모델 작성기
+      items:
+        - name: 모델 작성기란?
+          href: automate-training-with-model-builder.md
+        - name: 모델 작성기 설치
+          href: how-to-guides/install-model-builder.md
+        - name: 모델 작성기를 사용하여 가격 예측
+          href: tutorials/predict-prices-with-model-builder.md
     - name: ML.NET CLI
       items:
         - name: CLI 설치
