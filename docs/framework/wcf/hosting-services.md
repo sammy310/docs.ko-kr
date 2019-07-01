@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: db7ca2690fc7b76d3e843a4ed51ef356890ab9eb
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: b1a0a07876e9cc111e8c5eef56f208d7bf2cb49f
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402404"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487707"
 ---
 # <a name="hosting-services"></a>서비스 호스팅
 활성화할 서비스는 서비스를 만들고 컨텍스트와 수명을 제어하는 런타임 환경에 호스팅해야 합니다. Windows Communication Foundation (WCF) 서비스는 관리 코드를 지 모든 Windows 프로세스에서 실행 되도록 설계 되었습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "67402404"
  IIS에서 호스팅되는 서비스는 HTTP 전송만 사용할 수 있습니다. IIS 5.1에서의 서비스 구현 시 [!INCLUDE[wxp](../../../includes/wxp-md.md)]의 경우 몇 가지 제한이 있습니다. IIS 5.1에서 WCF 서비스에 대해 제공 되는 메시지 기반 활성화 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 통신할 포트 80을 사용 하 여 동일한 컴퓨터에서 자체 호스팅된 WCF 서비스를 차단 합니다. WCF 서비스는 IIS 6.0에서 호스팅되는 경우 다른 응용 프로그램과 동일한 AppDomain/응용 프로그램 풀/작업자 프로세스에서 실행할 수 있습니다 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]합니다. 하지만 WCF 및 IIS 6.0 모두 커널 모드 HTTP 스택 (HTTP.sys)를 사용 하므로 IIS 6.0 IIS 5.1과 달리 동일한 컴퓨터에서 실행 되는 다른 자체 호스팅된 WCF 서비스를 사용 하 여 포트 80를 공유할 수 있습니다.  
   
 #### <a name="windows-process-activation-service-was"></a>WAS(Windows Process Activation Service)  
- WAS(Windows Process Activation Service)는 [!INCLUDE[lserver](../../../includes/lserver-md.md)] 에서도 사용할 수 있는 [!INCLUDE[wv](../../../includes/wv-md.md)]을 위한 새 프로세스 활성화 메커니즘입니다. 친숙 한 IIS 6.0 프로세스 모델 (응용 프로그램 풀 및 메시지 기반 프로세스 활성화)는 그대로 유지 하 고 활성화에서 HTTP에 대 한 종속성을 제거 하지만 기능 (예: 오류 로부터 신속한 보호, 상태 모니터링 및 재활용), 호스팅 아키텍처입니다. [!INCLUDE[iisver](../../../includes/iisver-md.md)] 은 WAS를 사용하여 HTTP를 통한 메시지 기반 활성화를 수행합니다. 또한 WCF 구성 요소를 추가 WCF 지 원하는 다른 프로토콜을 통해, TCP, MSMQ 및 명명 된 파이프와 같은 메시지 기반 활성화를 제공 하도록 WAS 꽂습니다. 이렇게 하면 통신 프로토콜을 사용하는 애플리케이션에서 프로세스 재활용, 오류로부터 신속한 보호 및 일반적인 구성 시스템과 같은 HTTP 기반 애플리케이션에서만 사용할 수 있었던 IIS 기능을 사용할 수 있습니다.  
+ WAS(Windows Process Activation Service)는 [!INCLUDE[lserver](../../../includes/lserver-md.md)] 에서도 사용할 수 있는 [!INCLUDE[wv](../../../includes/wv-md.md)]을 위한 새 프로세스 활성화 메커니즘입니다. 친숙 한 IIS 6.0 프로세스 모델 (응용 프로그램 풀 및 메시지 기반 프로세스 활성화)는 그대로 유지 하 고 활성화에서 HTTP에 대 한 종속성을 제거 하지만 기능 (예: 오류 로부터 신속한 보호, 상태 모니터링 및 재활용), 호스팅 아키텍처입니다. IIS 7.0 WAS를 사용 하 여 HTTP를 통한 메시지 기반 활성화를 수행. 또한 WCF 구성 요소를 추가 WCF 지 원하는 다른 프로토콜을 통해, TCP, MSMQ 및 명명 된 파이프와 같은 메시지 기반 활성화를 제공 하도록 WAS 꽂습니다. 이렇게 하면 통신 프로토콜을 사용하는 애플리케이션에서 프로세스 재활용, 오류로부터 신속한 보호 및 일반적인 구성 시스템과 같은 HTTP 기반 애플리케이션에서만 사용할 수 있었던 IIS 기능을 사용할 수 있습니다.  
   
  이 호스팅 옵션을 사용하려면 IIS를 적절히 구성해야 하지만 호스팅 코드를 애플리케이션의 일부로 작성하지 않아도 됩니다. 구성 하는 방법에 대 한 자세한 내용은 WAS 호스팅을 참조 [방법: WAS에서 WCF 서비스 호스팅](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)합니다.  
   

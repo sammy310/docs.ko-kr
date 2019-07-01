@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 70ed0fe9191c18e88198871319b3c3ee3c0b4ab4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c4feb52cbefe7e3f8bab7f90568b231302b77372
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626965"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486857"
 ---
 # <a name="distributed-application-security"></a>분산 응용 프로그램 보안
 Windows Communication Foundation (WCF) 보안 세 가지 주요 기능 영역으로 나뉩니다: 전송 보안, 액세스 제어 및 감사 합니다. 전송 보안은 무결성, 기밀성 및 인증을 제공합니다. 전송 보안은 전송 보안, 메시지 보안, `TransportWithMessageCredential` 중 하나를 통해 제공됩니다.  
@@ -80,7 +80,7 @@ Windows Communication Foundation (WCF) 보안 세 가지 주요 기능 영역으
 |Windows|Windows 자격 증명의 인증된 컨텍스트에서 SOAP 메시지 교환을 수행할 수 있습니다. SSPI 협상 메커니즘을 사용하여 Kerberos 프로토콜 또는 NTLM을 인증 서비스로 선택합니다.|  
 |사용자 이름|서비스에서 사용자 이름 자격 증명을 사용하여 클라이언트를 인증하도록 요구할 수 있습니다. WCF 서명 생성, 데이터 암호화 등과 같은 사용자 이름의 암호화 작업을 허용 하지 않도록 하는 참고 합니다. 이와 같이 WCF 사용자 이름 자격 증명을 사용 하는 경우에 전송 보안을 적용 합니다.|  
 |인증서|서비스에서 인증서를 사용하여 클라이언트를 인증하도록 요구할 수 있습니다.|  
-|[!INCLUDE[infocard](../../../../includes/infocard-md.md)]|서비스에서 [!INCLUDE[infocard](../../../../includes/infocard-md.md)]를 사용하여 클라이언트를 인증하도록 요구할 수 있습니다.|  
+|CardSpace|필요 하도록 서비스를 허용 하는 CardSpace를 사용 하 여 클라이언트를 인증 합니다.|  
   
 ### <a name="programming-credentials"></a>프로그래밍 자격 증명  
  각 클라이언트 자격 증명 형식에 대해 WCF 프로그래밍 모델을를 사용 하면 서비스 동작과 채널 동작을 사용 하 여 유효성 검사기를 자격 증명 및 자격 증명 값을 지정할 수 있습니다.  

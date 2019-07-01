@@ -2,12 +2,12 @@
 title: 인터넷 정보 서비스에서 호스트하는 WCF 서비스 배포
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 4c46a7ac0482e0f9c969505b87558d240bb1391e
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: fcfad4c6cd7ffb0bf1233bab842b57a10bcc7f87
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402291"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486924"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>인터넷 정보 서비스에서 호스트하는 WCF 서비스 배포
 
@@ -103,7 +103,7 @@ IIS에서 호스팅되는 서비스 엔드포인트에는 항상 상대 엔드�
 
 ### <a name="available-transports"></a>사용 가능한 전송
 
-WCF 서비스 호스팅된의 IIS 5.1 및 6.0 IIS HTTP 기반 통신을 사용 하 여 제한 됩니다. 이러한 IIS 플랫폼에서 HTTP가 아닌 바인딩을 사용하도록 호스팅된 서비스를 구성하면 서비스 활성화 중에 오류가 발생합니다. 기존 MSMQ 애플리케이션과의 호환성을 위해 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]에서 지원되는 전송에는 HTTP, Net.TCP, Net.Pipe, Net.MSMQ 및 msmq.formatname이 있습니다.
+WCF 서비스 호스팅된의 IIS 5.1 및 6.0 IIS HTTP 기반 통신을 사용 하 여 제한 됩니다. 이러한 IIS 플랫폼에서 HTTP가 아닌 바인딩을 사용하도록 호스팅된 서비스를 구성하면 서비스 활성화 중에 오류가 발생합니다. IIS 7.0의 경우는 지원 되는 전송에는 HTTP, Net.TCP, Net.Pipe, Net.MSMQ 및 msmq.formatname에 대 한 이전 버전과 기존 MSMQ 응용 프로그램과 호환성.
 
 ### <a name="http-transport-security"></a>HTTP 전송 보안
 

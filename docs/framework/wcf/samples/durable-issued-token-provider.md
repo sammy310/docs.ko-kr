@@ -2,18 +2,18 @@
 title: 영속 제공된 토큰 공급자
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: b7f204fcb2c1b72a73e091ecf37c2921f7575516
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bfe8f8bb8c3775760bc69031e338a156d690ab25
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650080"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487595"
 ---
 # <a name="durable-issued-token-provider"></a>영속 제공된 토큰 공급자
 이 샘플에서는 사용자 지정 클라이언트가 발급한 토큰 공급자를 구현하는 방법을 보여 줍니다.  
   
 ## <a name="discussion"></a>토론  
- 토큰 공급자를 Windows Communication Foundation (WCF)에서 보안 인프라에 자격 증명을 제공 됩니다. 일반적으로 토큰 공급자는 대상을 검사하고 적절한 자격 증명을 발급하여 보안 인프라에서 메시지의 보안을 유지할 수 있도록 합니다. WCF와 함께 제공 되는 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 토큰 공급자입니다. 사용자 지정 토큰 공급자는 다음과 같은 경우에 유용합니다.  
+ 토큰 공급자를 Windows Communication Foundation (WCF)에서 보안 인프라에 자격 증명을 제공 됩니다. 일반적으로 토큰 공급자는 대상을 검사하고 적절한 자격 증명을 발급하여 보안 인프라에서 메시지의 보안을 유지할 수 있도록 합니다. WCF는 CardSpace 토큰 공급자를 사용 하 여 제공 됩니다. 사용자 지정 토큰 공급자는 다음과 같은 경우에 유용합니다.  
   
 - 기본 제공 토큰 공급자가 작동하지 않는 자격 증명 저장소가 있는 경우  
   

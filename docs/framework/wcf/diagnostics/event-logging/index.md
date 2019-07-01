@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
-ms.openlocfilehash: adff5bf2fad9f78fccbb606a5bd27f2f1dc32647
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c4f73480208fbf900bb8742eb6d7b2e2c0e6a4ff
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638760"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486621"
 ---
 # <a name="event-logging-in-wcf"></a>WCF에서 이벤트 로깅
 Windows Communication Foundation (WCF)는 Windows 이벤트 로그에는 내부 이벤트를 추적합니다.  
@@ -24,7 +24,7 @@ Windows Communication Foundation (WCF)는 Windows 이벤트 로그에는 내부 
   
 - 공유 수신기: WCF TCP Port Sharing Service를 시작 하는 데 실패할 경우 이벤트를 기록 합니다.  
   
-- [!INCLUDE[infocard](../../../../../includes/infocard-md.md)]: 서비스가 시작 되지 않을 때 이벤트를 기록 합니다.  
+- CardSpace: 서비스가 시작 되지 않을 때 이벤트를 기록 합니다.  
   
 - 시작 실패 또는 크래시 등의 위험 및 오류 이벤트  
   

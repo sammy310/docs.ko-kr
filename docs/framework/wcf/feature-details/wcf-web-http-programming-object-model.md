@@ -2,12 +2,12 @@
 title: WCF 웹 HTTP 프로그래밍 개체 모델
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: f8bda6292506b64057dee006fa59b7723fa406b2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2401a8a051ed4dcd386c7794a2197672709ea423
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648404"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487688"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>WCF 웹 HTTP 프로그래밍 개체 모델
 WCF 웹 HTTP 프로그래밍 모델을 통해 SOAP 없이 기본 HTTP 요청을 통해 Windows Communication Foundation (WCF) 웹 서비스를 노출 하는 개발자. WCF WEB HTTP 프로그래밍 모델은 기존 WCF 확장성 모델 위에 빌드됩니다. 다음과 같은 클래스를 정의합니다.  
@@ -97,7 +97,7 @@ WCF 웹 HTTP 프로그래밍 모델을 통해 SOAP 없이 기본 HTTP 요청을 
  WCF 웹 HTTP 프로그래밍 모델을 SOAP 기반 메시지를 사용 하지 않습니다 하 고 지원 하지 않습니다는 WS-* 프로토콜입니다. 그러나 SOAP를 사용하는 엔드포인트와 SOAP를 사용하지 않는 엔드포인트 등 두 개의 다른 엔드포인트에 대해 동일한 계약을 노출할 수 있습니다. [방법: SOAP 및 웹 클라이언트에 계약을 노출할](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) 예입니다.  
   
 ## <a name="security"></a>보안  
- WCF 웹 HTTP 프로그래밍 모델을 지원 하지 않으므로 WS-* 프로토콜 WCF 웹 HTTP 프로그래밍 모델에 빌드된 웹 서비스를 보호 하는 유일한 방법은 SSL을 사용 하 여 서비스를 노출 하는 것입니다. SSL을 설정 하는 방법에 대 한 자세한 내용은 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 참조 [IIS에서 SSL을 구현 하는 방법](https://go.microsoft.com/fwlink/?LinkId=131613)  
+ WCF 웹 HTTP 프로그래밍 모델을 지원 하지 않으므로 WS-* 프로토콜 WCF 웹 HTTP 프로그래밍 모델에 빌드된 웹 서비스를 보호 하는 유일한 방법은 SSL을 사용 하 여 서비스를 노출 하는 것입니다. IIS 7.0을 사용 하 여 SSL을 설정 하는 방법에 대 한 자세한 내용은 참조 하세요. [IIS에서 SSL을 구현 하는 방법](https://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="see-also"></a>참고자료
 

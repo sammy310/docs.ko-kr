@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: a049bbe22d29f02acbc7889bb5d5010ec44f9d15
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 717abc8f54669a5ca814a61827a0865215204e1b
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876228"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487350"
 ---
 # <a name="application-settings-architecture"></a>애플리케이션 설정 아키텍처
 이 항목에서는 애플리케이션 설정 아키텍처가 작동하는 방식과 그룹화된 설정 및 설정 키와 같은 고급 아키텍처 기능에 대해 설명합니다.  
@@ -109,16 +109,16 @@ ms.locfileid: "65876228"
  사용자 고유의 설정 클래스를 구현 하는 경우 사용할 수 있습니다 합니다 <xref:System.Configuration.SettingsSerializeAsAttribute> 사용 하 여 이진 또는 사용자 지정 serialization에 대 한 설정을 표시 하는 <xref:System.Configuration.SettingsSerializeAs> 열거형입니다. 코드에서 사용자 고유의 설정 클래스를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 응용 프로그램 설정 만들기](how-to-create-application-settings.md)합니다.  
   
 ### <a name="settings-file-locations"></a>설정 파일 위치  
- `app`.exe.config 및 *user*.config 파일의 위치는 응용 프로그램을 설치하는 방법에 따라 다릅니다. 로컬 컴퓨터에 복사 하는 Windows Forms 기반 응용 프로그램에 대 한 `app`합니다. 응용 프로그램의 주 실행 파일의 기본 디렉터리와 같은 디렉터리의 exe.config 상주할 및 *사용자*.config에 상주할 합니다 지정 된 위치는 <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType> 속성입니다. [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]를 사용하여 응용 프로그램을 설치한 경우 이 두 파일은 모두 %InstallRoot%\Documents and Settings\\*username*\Local Settings 아래의 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 데이터 디렉터리에 있습니다.  
+ `app`.exe.config 및 *user*.config 파일의 위치는 응용 프로그램을 설치하는 방법에 따라 다릅니다. 로컬 컴퓨터에 복사 하는 Windows Forms 기반 응용 프로그램에 대 한 `app`합니다. 응용 프로그램의 주 실행 파일의 기본 디렉터리와 같은 디렉터리의 exe.config 상주할 및 *사용자*.config에 상주할 합니다 지정 된 위치는 <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType> 속성입니다. ClickOnce를 사용 하 여 설치 된 응용 프로그램을 위해 이러한 파일은 모두 상주할 %InstallRoot%\Documents 아래 ClickOnce 데이터 디렉터리 및 설정을\\*username*\Local Settings입니다.  
   
- 사용자가 로밍 프로필을 사용하도록 설정한 경우 한 도메인 내에서 다른 컴퓨터를 사용할 때 다른 Windows 및 애플리케이션 설정을 정의할 수 있으므로 이러한 파일의 저장 위치는 약간 다릅니다. 이 경우 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 애플리케이션과 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]가 아닌 애플리케이션에서는 모두 `app`.exe.config 및 *user*.config 파일이 %InstallRoot%\Documents and Settings\\*username*\Application Data에 저장되어 있습니다.  
+ 사용자가 로밍 프로필을 사용하도록 설정한 경우 한 도메인 내에서 다른 컴퓨터를 사용할 때 다른 Windows 및 애플리케이션 설정을 정의할 수 있으므로 이러한 파일의 저장 위치는 약간 다릅니다. ClickOnce 응용 프로그램 및 비 ClickOnce 응용 프로그램을 모두 해야 경우 해당 `app`..exe.config로 지정 하 고 *사용자*.config 파일이 %InstallRoot%\Documents and Settings 아래에 저장\\  *사용자 이름*\Application Data.  
   
- 애플리케이션 설정 기능이 새로운 배포 기술을 통해 작동하는 방법에 대한 자세한 내용은 [ClickOnce 및 애플리케이션 설정](/visualstudio/deployment/clickonce-and-application-settings)을 참조하세요. [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 데이터 디렉터리에 대한 자세한 내용은 [ClickOnce 응용 프로그램의 로컬 및 원격 데이터 액세스](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)를 참조하세요.  
+ 애플리케이션 설정 기능이 새로운 배포 기술을 통해 작동하는 방법에 대한 자세한 내용은 [ClickOnce 및 애플리케이션 설정](/visualstudio/deployment/clickonce-and-application-settings)을 참조하세요. ClickOnce 데이터 디렉터리에 대 한 자세한 내용은 참조 하세요. [로컬 및 ClickOnce 응용 프로그램의 원격 데이터 액세스](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)합니다.  
   
 ## <a name="application-settings-and-security"></a>애플리케이션 설정 및 보안  
  애플리케이션 설정은 인터넷이나 인트라넷에서 호스팅되는 Windows Forms 애플리케이션의 기본적인 제한된 환경인 부분 신뢰 환경에서 작동하도록 설계되었습니다. 기본 설정 공급자를 포함한 애플리케이션 설정을 사용하는 데에는 부분 신뢰 권한만 필요합니다.  
   
- [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 응용 프로그램에서 응용 프로그램 설정을 사용하면 `user`.config 파일이 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 데이터 디렉터리에 저장됩니다. 애플리케이션의 `user`.config 파일 크기는 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]에서 설정된 데이터 디렉터리 할당량을 초과할 수 없습니다. 자세한 내용은 [ClickOnce 및 애플리케이션 설정](/visualstudio/deployment/clickonce-and-application-settings)을 참조하세요.  
+ ClickOnce 응용 프로그램에서는 응용 프로그램 설정을 사용 하는 경우는 `user`.config 파일은 ClickOnce 데이터 디렉터리에 저장 합니다. 응용 프로그램의 크기 `user`.config 파일이 ClickOnce를 통해 설정 된 데이터 디렉터리 할당량을 초과할 수 없습니다. 자세한 내용은 [ClickOnce 및 애플리케이션 설정](/visualstudio/deployment/clickonce-and-application-settings)을 참조하세요.  
   
 ## <a name="custom-settings-providers"></a>사용자 지정 설정 공급자  
  응용 프로그램 설정 아키텍처에 있어서 응용 프로그램 설정 간의 느슨한 결합을에서 파생 된 래퍼 클래스 <xref:System.Configuration.ApplicationSettingsBase>와 연결 된 설정 공급자 또는 공급자의 경우 파생 된 <xref:System.Configuration.SettingsProvider>합니다. 이 연결을 에서만 정의 <xref:System.Configuration.SettingsProviderAttribute> 래퍼 클래스 또는 해당 개별 속성에 적용 합니다. 설정 공급자가 없습니다 명시적으로 지정 하면 기본 공급자 인 <xref:System.Configuration.LocalFileSettingsProvider>에 사용 됩니다. 따라서 이 아키텍처는 사용자 지정 설정 공급자를 만들고 사용할 수 있도록 지원합니다.  

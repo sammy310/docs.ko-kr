@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: a2d0f5f740186d3dd7483408f88d612711f57575
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 471ed75a922ab8a7df18f2e4a3ccd89ede171248
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348465"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487257"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows Forms의 보안 개요
 
@@ -21,7 +21,7 @@ ms.locfileid: "67348465"
 
 .NET Framework 코드 액세스 보안 권한을 구분할 수 있도록 또는 코드에서 사용자가 권한을 갖는 이라는 인프라가 도입 되었습니다. 기본적으로 인터넷 및 인트라넷에서 들어오는 코드는 부분 신뢰에서만 실행할 수 있습니다. 부분 신뢰에서는 애플리케이션에 일련의 제한이 적용됩니다. 특히, 애플리케이션의 로컬 하드 디스크 액세스가 제한되며 비관리 코드를 실행할 수 없습니다. 코드는 액세스할 수 있는 코드의 id를 기반으로 리소스를 제어 하는.NET Framework: 어디에 있는지 여부에서 왔는지에 [강력한 이름의 어셈블리](../app-domains/strong-named-assemblies.md), 인증서 및 등을 사용 하 여 서명 되었는지 여부입니다.
 
-Windows Forms 응용 프로그램을 배포하는 데 사용하는 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 기술은 부분 신뢰, 완전 신뢰 또는 높은 권한으로 부분 신뢰에서 실행되는 응용 프로그램을 쉽게 개발할 수 있도록 도와줍니다. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]에서는 응용 프로그램이 책임 있는 방식으로 로컬 사용자로부터 완전 신뢰 또는 높은 권한을 요청할 수 있도록 권한 상승 및 신뢰할 수 있는 응용 프로그램 배포와 같은 기능을 제공합니다.
+Windows Forms 응용 프로그램을 배포 하는 데 사용할 수 있는 ClickOnce 기술을 사용 하면 쉽게 부분 신뢰, 완전 신뢰 또는 부분 신뢰 환경에서 관리자 권한으로 실행 되는 응용 프로그램을 개발할 수 있습니다. ClickOnce 응용 프로그램이 요청할 수 있도록 완전 신뢰 또는 높은 권한을 로컬 사용자의 책임 방식으로 권한 상승 및 신뢰할 수 있는 응용 프로그램 배포와 같은 기능을 제공 합니다.
 
 ## <a name="understanding-security-in-the-net-framework"></a>.NET Framework의 보안 이해
 
@@ -34,7 +34,7 @@ Windows Forms 응용 프로그램을 배포하는 데 사용하는 [!INCLUDE[ndp
 >
 > 각 권한 집합에 부여되는 기본 권한은 [기본 보안 정책](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/03kwzyfc(v=vs.100)) 항목에 나열됩니다. 받는 권한에 따라 애플리케이션이 올바르게 실행되거나 보안 예외를 생성합니다.
 >
-> 대부분의 Windows Forms 애플리케이션은 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]를 사용하여 배포됩니다. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 배포를 생성하는 데 사용되는 도구는 앞에서 설명한 것과 다른 보안 기본값을 사용합니다. 자세한 내용은 다음 설명을 참조하세요.
+> 많은 Windows Forms 응용 프로그램은 ClickOnce를 사용 하 여 배포 됩니다. ClickOnce 배포를 생성 하는 데는 도구는 앞에서 설명한 것과 다른 보안 기본값을 갖습니다. 자세한 내용은 다음 설명을 참조하세요.
 
 보안 정책을 수정할 수 있기 때문에 애플리케이션에 부여되는 실제 권한은 기본값과 다를 수 있습니다. 즉, 컴퓨터에 따라 애플리케이션의 권한이 다를 수 있습니다.
 
@@ -64,9 +64,9 @@ Windows Forms 응용 프로그램을 배포하는 데 사용하는 [!INCLUDE[ndp
 
 ### <a name="deploying-an-application-with-the-appropriate-permissions"></a>적절한 권한으로 애플리케이션 배포
 
-클라이언트 컴퓨터에 Windows Forms 애플리케이션을 배포하는 가장 일반적인 방법은 애플리케이션에서 실행해야 하는 모든 구성 요소를 설명하는 배포 기술인 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]를 사용하는 것입니다. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]는 매니페스트라는 XML 파일을 사용하여 응용 프로그램을 구성하는 어셈블리 및 파일과 응용 프로그램에 필요한 권한을 설명합니다.
+모든 응용 프로그램을 실행 하는 데 필요한 구성 요소를 설명 하는 배포 기술인 ClickOnce를 사용 하 여 클라이언트 컴퓨터에 Windows Forms 응용 프로그램을 배포 하는 가장 일반적인 방법 이며 ClickOnce 매니페스트 라는 XML 파일을 사용 하 여 응용 프로그램을 구성 하는 파일과 어셈블리를 설명 하 고 응용 프로그램에 필요한 권한을 합니다.
 
-[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]에는 클라이언트 컴퓨터에서 높은 권한을 요청하는 두 가지 기술이 있습니다. 두 기술은 모두 Authenticode 인증서를 사용합니다. 인증서는 애플리케이션이 신뢰할 수 있는 소스에서 제공되었다는 일부 보증을 사용자에게 제공합니다.
+ClickOnce에 클라이언트 컴퓨터에서 높은 권한을 요청 하는 두 가지 기술이 있습니다. 두 기술은 모두 Authenticode 인증서를 사용합니다. 인증서는 애플리케이션이 신뢰할 수 있는 소스에서 제공되었다는 일부 보증을 사용자에게 제공합니다.
 
 다음 표에서는 이러한 기술을 설명합니다.
 
@@ -77,9 +77,9 @@ Windows Forms 응용 프로그램을 배포하는 데 사용하는 [!INCLUDE[ndp
 
 선택하는 기술은 배포 환경에 따라 달라집니다. 자세한 내용은 [ClickOnce 배포 전략 선택](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)을 참조하세요.
 
-기본적으로 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] Visual Studio 또는.NET Framework SDK 도구 (Mage.exe 및 MageUI.exe)를 사용 하 여 배포 된 응용 프로그램은 완전 신뢰 하는 클라이언트 컴퓨터에서 실행 되도록 구성 됩니다. 부분 신뢰를 사용하거나 일부 추가 권한만 사용하여 애플리케이션을 배포하는 경우 이 기본값을 변경해야 합니다. 배포를 구성할 때 Visual Studio 또는.NET Framework SDK 도구 MageUI.exe 사용 하 여이 수행할 수 있습니다. MageUI.exe를 사용 하는 방법에 대 한 자세한 내용은 연습을 참조 하세요. 명령줄에서 ClickOnce 응용 프로그램을 배포 합니다.  또한 참조 [방법: ClickOnce 응용 프로그램에 대 한 사용자 지정 권한 설정](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) 또는 [방법: ClickOnce 응용 프로그램에 대 한 사용자 지정 권한을 설정](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)합니다.
+기본적으로 Visual Studio 또는.NET Framework SDK 도구 (Mage.exe 및 MageUI.exe)를 사용 하 여 배포 하는 ClickOnce 응용 프로그램은 완전 신뢰 된 클라이언트 컴퓨터에서 실행 되도록 구성 됩니다. 부분 신뢰를 사용하거나 일부 추가 권한만 사용하여 애플리케이션을 배포하는 경우 이 기본값을 변경해야 합니다. 배포를 구성할 때 Visual Studio 또는.NET Framework SDK 도구 MageUI.exe 사용 하 여이 수행할 수 있습니다. MageUI.exe를 사용 하는 방법에 대 한 자세한 내용은 연습을 참조 하세요. 명령줄에서 ClickOnce 응용 프로그램을 배포 합니다.  또한 참조 [방법: ClickOnce 응용 프로그램에 대 한 사용자 지정 권한 설정](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) 또는 [방법: ClickOnce 응용 프로그램에 대 한 사용자 지정 권한을 설정](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)합니다.
 
-[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 및 권한 상승의 보안 측면에 대한 자세한 내용은 [ClickOnce 응용 프로그램 보안](/visualstudio/deployment/securing-clickonce-applications)을 참조하세요. 신뢰할 수 있는 애플리케이션 배포에 대한 자세한 내용은 [신뢰할 수 있는 애플리케이션 배포 개요](/visualstudio/deployment/trusted-application-deployment-overview)를 참조하세요.
+ClickOnce 및 권한 상승의 보안 측면에 대 한 자세한 내용은 참조 [ClickOnce 응용 프로그램 보안](/visualstudio/deployment/securing-clickonce-applications)합니다. 신뢰할 수 있는 애플리케이션 배포에 대한 자세한 내용은 [신뢰할 수 있는 애플리케이션 배포 개요](/visualstudio/deployment/trusted-application-deployment-overview)를 참조하세요.
 
 ### <a name="testing-the-application"></a>애플리케이션 테스트
 

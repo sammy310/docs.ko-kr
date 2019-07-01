@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: d1f43a5b7a539c89a753d168fbf0e05ca4118f58
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: dd3385d6459199d56f74abfb1b8e0e218a2adf78
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347994"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487800"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Forms 응용 프로그램 기초(Visual Basic)
 사용자의 컴퓨터에서 로컬로 실행 되는 Windows Forms 응용 프로그램을 만드는 기능은 Visual Basic의 중요 한 부분입니다. Windows Forms를 사용 하 여 응용 프로그램 및 사용자 인터페이스를 만들려면 Visual Studio를 사용할 수 있습니다. Windows Forms 응용 프로그램의 클래스에 빌드되는 <xref:System.Windows.Forms> 네임 스페이스입니다.  
@@ -71,19 +71,19 @@ ms.locfileid: "67347994"
 |데이터 소스 창 사용|[연습: Windows Form에 데이터 표시](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>클라이언트 컴퓨터에 애플리케이션 배포  
- 응용 프로그램을 작성 한 후 설치 하 고 자체 클라이언트 컴퓨터에서 실행할 수 있도록 사용자에 게 전송 해야 합니다. 사용 하는 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 기술을 몇 번의 클릭을 사용 하 여 Visual Studio 내에서 응용 프로그램을 배포 하는 웹에서 응용 프로그램을 가리키는 URL을 사용 하 여 사용자에 게 제공 합니다. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 모든 요소 및 응용 프로그램에서 종속성 관리 및 응용 프로그램이 클라이언트 컴퓨터에 제대로 설치 되어 있는지 확인 합니다.  
+ 응용 프로그램을 작성 한 후 설치 하 고 자체 클라이언트 컴퓨터에서 실행할 수 있도록 사용자에 게 전송 해야 합니다. ClickOnce 기술을 사용 하 여, 몇 번의 클릭을 사용 하 여 Visual Studio 내에서 응용 프로그램을 배포 하 고 웹 응용 프로그램을 가리키는 URL을 사용 하 여 사용자를 제공할 수 있습니다. ClickOnce의 모든 요소 및 응용 프로그램에서 종속성 관리 및 응용 프로그램이 클라이언트 컴퓨터에 제대로 설치 되어 있는지 확인 합니다.  
   
- 사용자가 네트워크에 연결된 경우에만 실행되거나 온라인 및 오프라인 둘 다에서 실행되도록 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 응용 프로그램을 구성할 수 있습니다. 응용 프로그램이 오프 라인 작업을 지원 해야를 지정 하는 경우 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 사용자의 응용 프로그램에 링크 추가 **시작** 메뉴에서 사용자는 URL을 사용 하지 않고 열 수 있도록 합니다.  
+ ClickOnce 응용 프로그램은 사용자가 네트워크에 연결 하는 경우에 실행 하거나 모두 실행 되도록 구성 된 오프 라인으로 사용할 수 있습니다. ClickOnce 응용 프로그램에 오프 라인 작업을 지원 해야 한다고 지정 하면 사용자의 응용 프로그램에 링크를 추가 **시작** 메뉴에서 사용자가 URL을 사용 하지 않고 열 수 있도록 합니다.  
   
- 애플리케이션을 업데이트하는 경우 새 배포 매니페스트와 애플리케이션의 새 복사본을 웹 서버에 게시합니다. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 사용 가능한 업데이트에 대 한 사용자의 설치를 업그레이드를 검색 합니다. 사용자 지정 프로그래밍 없이 이전 어셈블리를 업데이트 해야 합니다.  
+ 애플리케이션을 업데이트하는 경우 새 배포 매니페스트와 애플리케이션의 새 복사본을 웹 서버에 게시합니다. ClickOnce 사용 가능한 업데이트에 대 한 사용자의 설치를 업그레이드를 검색합니다 사용자 지정 프로그래밍 없이 이전 어셈블리를 업데이트 해야 합니다.  
   
- [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]에 대한 전체 개요는 [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)를 참조하세요. 이러한 기능을 사용 하는 방법에 대 한 단계별 정보를 다음 도움말 항목을 참조 하세요.  
+ ClickOnce에 대 한 전체 소개를 참조 하세요 [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)합니다. 이러한 기능을 사용 하는 방법에 대 한 단계별 정보를 다음 도움말 항목을 참조 하세요.  
   
-|대상|보기|  
+|대상|참조|  
 |--------|---------|  
-|응용 프로그램 배포 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[방법: 게시 마법사를 사용하여 ClickOnce 애플리케이션 게시](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [연습: 수동으로 ClickOnce 애플리케이션 배포](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
-|업데이트는 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 배포|[방법: ClickOnce 애플리케이션에 대한 업데이트 관리](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
-|사용 하 여 보안 관리 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[방법: ClickOnce 보안 설정 사용](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
+|ClickOnce 사용 하 여 응용 프로그램 배포|[방법: 게시 마법사를 사용하여 ClickOnce 애플리케이션 게시](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [연습: 수동으로 ClickOnce 애플리케이션 배포](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
+|ClickOnce 배포를 업데이트 합니다.|[방법: ClickOnce 애플리케이션에 대한 업데이트 관리](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
+|ClickOnce 사용 하 여 보안 관리|[방법: ClickOnce 보안 설정 사용](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
 ## <a name="other-controls-and-features"></a>기타 컨트롤 및 기능  
  Windows Forms에는 대화 상자 만들기, 인쇄, 도움말 및 설명서 추가 및 여러 언어로 애플리케이션 지역화 지원과 같이 일반적인 작업을 쉽고 빠르게 구현할 수 있게 해주는 다른 여러 기능이 있습니다. 또한 Windows Forms는 고객에 게 보다 안전한 응용 프로그램을 릴리스 하는 데 사용할.NET Framework의 강력한 보안 시스템에 의존 합니다.  

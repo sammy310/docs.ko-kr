@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 08e85828451ba6c66b13ff31e3d6c106871b8154
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 71bf50bdcf058e94981dc5df4731b5d32dcc2069
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875879"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487203"
 ---
 # <a name="windows-forms-overview"></a>Windows Forms 개요
 
@@ -72,21 +72,21 @@ ms.locfileid: "65875879"
 
 ### <a name="deploy-apps-to-client-computers"></a>클라이언트 컴퓨터에 앱 배포
 
-애플리케이션을 작성한 후 해당 클라이언트 컴퓨터에 설치하고 실행할 수 있도록 사용자에게 애플리케이션을 보내야 합니다. 사용 하는 경우는 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 기술을 몇 번의 클릭을 사용 하 여 Visual Studio 내에서 응용 프로그램을 배포 하는 웹에서 응용 프로그램을 가리키는 URL을 사용 하 여 사용자에 게 제공 합니다. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]는 응용 프로그램의 모든 요소와 종속성을 관리하고 클라이언트 컴퓨터에 응용 프로그램이 올바르게 설치되었는지 확인합니다.
+애플리케이션을 작성한 후 해당 클라이언트 컴퓨터에 설치하고 실행할 수 있도록 사용자에게 애플리케이션을 보내야 합니다. ClickOnce 기술을 사용 하면 몇 번의 클릭을 사용 하 여 Visual Studio 내에서 응용 프로그램을 배포 하 고 웹 응용 프로그램을 가리키는 URL을 사용 하 여 사용자를 제공할 수 있습니다. ClickOnce는 모든 요소와 응용 프로그램에서 종속성 관리 및 응용 프로그램이 클라이언트 컴퓨터에 올바르게 설치 되어 있는지 확인 합니다.
 
-사용자가 네트워크에 연결된 경우에만 실행되거나 온라인 및 오프라인 둘 다에서 실행되도록 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 응용 프로그램을 구성할 수 있습니다. 애플리케이션이 오프라인 작업을 지원하도록 지정하면 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]는 사용자의 **시작** 메뉴에 애플리케이션에 대한 링크를 추가합니다. 그러면 사용자가 URL을 사용하지 않고도 애플리케이션을 열 수 있습니다.
+ClickOnce 응용 프로그램은 사용자가 네트워크에 연결 하는 경우에 실행 하거나 모두 실행 되도록 구성 된 오프 라인으로 사용할 수 있습니다. ClickOnce 응용 프로그램에 오프 라인 작업을 지원 해야 한다고 지정 하면 사용자의 응용 프로그램에 링크를 추가 **시작** 메뉴. 그러면 사용자가 URL을 사용하지 않고도 애플리케이션을 열 수 있습니다.
 
-애플리케이션을 업데이트하는 경우 새 배포 매니페스트와 애플리케이션의 새 복사본을 웹 서버에 게시합니다. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]에서 사용 가능한 업데이트가 있음을 감지하고 사용자 설치를 업그레이드합니다. 이전 어셈블리를 업데이트하는 데 사용자 지정 프로그래밍이 필요하지 않습니다.
+애플리케이션을 업데이트하는 경우 새 배포 매니페스트와 애플리케이션의 새 복사본을 웹 서버에 게시합니다. ClickOnce는 사용 가능한 업데이트에 대 한 사용자의 설치를 업그레이드를 검색합니다 사용자 지정 프로그래밍 없이 이전 어셈블리를 업데이트 해야 합니다.
 
 #### <a name="deploy-clickonce-apps"></a>ClickOnce 앱 배포
 
-[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]에 대한 전체 개요는 [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)를 참조하세요. 이러한 기능을 사용하는 방법에 대한 단계별 정보는 다음 도움말 항목을 참조하세요.
+ClickOnce에 대 한 전체 소개를 참조 하세요 [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)합니다. 이러한 기능을 사용하는 방법에 대한 단계별 정보는 다음 도움말 항목을 참조하세요.
 
 |설명|도움말 항목|
 |-----------------|----------------|
-|[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]를 사용하여 응용 프로그램 배포|[방법: 게시 마법사를 사용하여 ClickOnce 애플리케이션 게시](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [연습: 수동으로 ClickOnce 애플리케이션 배포](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
-|[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 배포 업데이트|[방법: ClickOnce 애플리케이션에 대한 업데이트 관리](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
-|[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]를 사용하여 보안 관리|[방법: ClickOnce 보안 설정 사용](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
+|ClickOnce를 사용 하 여 응용 프로그램 배포|[방법: 게시 마법사를 사용하여 ClickOnce 애플리케이션 게시](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [연습: 수동으로 ClickOnce 애플리케이션 배포](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
+|ClickOnce 배포를 업데이트 하는 중|[방법: ClickOnce 애플리케이션에 대한 업데이트 관리](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
+|ClickOnce 사용 하 여 보안 관리|[방법: ClickOnce 보안 설정 사용](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
 
 ### <a name="other-controls-and-features"></a>기타 컨트롤 및 기능
 

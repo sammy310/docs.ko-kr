@@ -2,15 +2,15 @@
 title: Token Provider
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-ms.openlocfilehash: f4316e459666dd434da5ec77694d079d9ca5639f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b3f56ed46507d68092268c3202cee6234fda7b42
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622958"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487465"
 ---
 # <a name="token-provider"></a>Token Provider
-이 샘플에서는 사용자 지정 토큰 공급자를 구현하는 방법을 보여 줍니다. 토큰 공급자를 Windows Communication Foundation (WCF)에서 보안 인프라에 자격 증명 제공에 사용 됩니다. 일반적으로 토큰 공급자는 대상을 검사하고 적절한 자격 증명을 발급하여 보안 인프라에서 메시지의 보안을 유지할 수 있도록 합니다. WCF는 기본 자격 증명 관리자 토큰 공급자를 사용 하 여 제공 됩니다. WCF도와 함께 제공 되는 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 토큰 공급자입니다. 사용자 지정 토큰 공급자는 다음과 같은 경우에 유용합니다.
+이 샘플에서는 사용자 지정 토큰 공급자를 구현하는 방법을 보여 줍니다. 토큰 공급자를 Windows Communication Foundation (WCF)에서 보안 인프라에 자격 증명 제공에 사용 됩니다. 일반적으로 토큰 공급자는 대상을 검사하고 적절한 자격 증명을 발급하여 보안 인프라에서 메시지의 보안을 유지할 수 있도록 합니다. WCF는 기본 자격 증명 관리자 토큰 공급자를 사용 하 여 제공 됩니다. WCF는 CardSpace 토큰 공급자를 사용 하 여도 제공 됩니다. 사용자 지정 토큰 공급자는 다음과 같은 경우에 유용합니다.
 
 - 이러한 토큰 공급자가 작동되지 않는 자격 증명 저장소가 있는 경우
 
@@ -115,7 +115,7 @@ ms.locfileid: "64622958"
 
      이 작업을 수행하려면 사용자 지정 토큰 공급자가 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 클래스를 파생하고 <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%28System.TimeSpan%29> 메서드를 재정의해야 합니다. 이 메서드는 새 `UserNameSecurityToken`을 만들고 반환합니다.
 
-    ```
+    ```csharp
     protected override SecurityToken GetTokenCore(TimeSpan timeout)
     {
         // obtain username and password from the user using console window
@@ -132,7 +132,7 @@ ms.locfileid: "64622958"
 
      <xref:System.IdentityModel.Selectors.SecurityTokenManager>는 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 메서드에서 전달되는 특정 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>에 대한 `CreateSecurityTokenProvider`를 만드는 데 사용됩니다. 또한 보안 토큰 관리자는 토큰 인증자와 토큰 serializer를 만드는 데 사용되지만 이 샘플에서는 설명하지 않습니다. 이 샘플에서 사용자 지정 보안 토큰 관리자는 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 클래스에서 상속되며 `CreateSecurityTokenProvider` 메서드를 재정의하여 전달된 토큰 요구 사항에서 사용자 이름 공급자가 요청됨을 나타낼 때 사용자 지정 사용자 이름 토큰 공급자를 반환합니다.
 
-    ```
+    ```csharp
     public class MyUserNameSecurityTokenManager : ClientCredentialsSecurityTokenManager
     {
         MyUserNameClientCredentials myUserNameClientCredentials;
@@ -163,7 +163,7 @@ ms.locfileid: "64622958"
 
      클라이언트 자격 증명 클래스는 클라이언트 프록시에 대해 구성된 자격 증명을 나타내는 데 사용되며 토큰 인증자, 토큰 공급자 및 토큰 serializer를 가져오는 데 사용되는 보안 토큰 관리자를 만듭니다.
 
-    ```
+    ```csharp
     public class MyUserNameClientCredentials : ClientCredentials
     {
         public MyUserNameClientCredentials()
@@ -188,7 +188,7 @@ ms.locfileid: "64622958"
 
      클라이언트가 사용자 지정 클라이언트 자격 증명을 이용할 수 있도록 이 샘플에서는 기본 클라이언트 자격 증명 클래스를 삭제하고 새 클라이언트 자격 증명 클래스를 제공합니다.
 
-    ```
+    ```csharp
     static void Main()
     {
         // ...
@@ -204,7 +204,7 @@ ms.locfileid: "64622958"
 
  서비스에서 호출자의 정보를 표시하려면 다음 코드 예제와 같이 <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A>를 사용합니다. <xref:System.ServiceModel.ServiceSecurityContext.Current%2A>에는 현재 호출자에 대한 클레임 정보가 포함됩니다.
 
-```
+```csharp
 static void DisplayIdentityInformation()
 {
     Console.WriteLine("\t\tSecurity context identity  :  {0}",

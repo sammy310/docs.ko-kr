@@ -2,12 +2,12 @@
 title: IdentityModel 예외
 ms.date: 03/30/2017
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
-ms.openlocfilehash: ee0b5537a415e1ea53c653ae8e8485e94cc713fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b8af2620b6179ce4cff59d7f9871377f06ffe5f
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998519"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486661"
 ---
 # <a name="identitymodel-exceptions"></a>IdentityModel 예외
 이 항목에서는 IdentityModel에 의해 생성된 모든 예외를 보여 줍니다.  
@@ -100,11 +100,11 @@ ms.locfileid: "61998519"
 |SAMLAssertionMissingMajorVersionAttributeOnRead|읽는 중인 SamlAssertion의 MajorVersion이 없거나 길이가 0입니다.|  
 |SamlAttributeClaimRightShouldBePossessProperty|이 SamlAttribute 생성자에서는 클레임 권한이 System.IdentityModel.Claims.Rights.PossessProperty 값을 가질 것을 요구합니다.|  
 |AuthorizationPolicyEvaluated|특정 ID가 있는 정책을 확인합니다.|  
-|SAMLUnableToLoadCondtions|\<saml: conditions > 요소를 로드 하지 못했습니다.|  
+|SAMLUnableToLoadCondtions<!-- the misspelling here is deliberate. -->|\<saml: conditions > 요소를 로드 하지 못했습니다.|  
 |AESKeyLengthNotSupported|특정 비트 키가 지원되지 않습니다. 128, 192 및 256 비트 키만 지원됩니다.|  
 |UserNameCannotBeEmpty|사용자 이름은 비어 있을 수 없습니다.|  
 |AlgorithmAndPublicKeyMisMatch|지정된 알고리즘과 공개 키가 일치하지 않습니다.|  
-|SAMLUnableToLoadCondtion|\<saml: conditions > 요소를 로드 하지 못했습니다.|  
+|SAMLUnableToLoadCondtion<!-- the misspelling here is deliberate. -->|\<saml: conditions > 요소를 로드 하지 못했습니다.|  
 |SamlAssertionMissingSigningCredentials|SigningCredentials가 SamlAssertion에서 설정되지 않았습니다. SamlAssertions는 서명되어야 합니다. 계속하려면 SamlAssertion에서 올바른 SigningCredentials를 설정하십시오.|  
 |SspiPayloadNotEncrypted|이진 데이터가 SSPI 보안 컨텍스트로 암호화되지 않았습니다.|  
 |SAMLAuthorizationDecisionShouldHaveOneActionOnRead|읽는 중인 SamlAuthorizationDecisionStatement에 SamlAction이 없습니다.|  

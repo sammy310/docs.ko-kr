@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: 12296fbd503a7e9f1866f407964a5e223d1afadd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 58dcfacba302ef3b85a8bc7b24b17f2435115594
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650328"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486658"
 ---
 # <a name="bindings-and-security"></a>바인딩 및 보안
 Windows Communication Foundation (WCF)를 사용 하 여 포함 된 시스템 제공 바인딩 WCF 응용 프로그램을 프로그래밍 하는 빠른 방법을 제공 합니다. 한 가지 예외를 통해 모든 바인딩의 기본 보안 스키마가 활성화됩니다. 이 항목은 보안 요구 사항에 적합한 바인딩을 선택하는 데 도움을 줍니다.  
@@ -210,7 +210,7 @@ Windows Communication Foundation (WCF)를 사용 하 여 포함 된 시스템 �
 |NTLM|NTLM(NT LAN Manager) 인증입니다.|  
 |Windows|Windows 인증입니다.|  
 |인증서|인증서를 사용하여 수행되는 인증입니다.|  
-|IssuedToken|이를 사용하는 서비스의 경우 보안 토큰 서비스 또는 [!INCLUDE[infocard](../../../../includes/infocard-md.md)]에서 발급한 토큰을 사용하여 클라이언트를 인증해야 합니다. 자세한 내용은 [페더레이션 및 발급 된 토큰](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)합니다.|  
+|IssuedToken|필요 하도록 서비스를 허용 또는 CardSpace 보안 토큰 서비스에서 발급 한 토큰을 사용 하 여 클라이언트 인증입니다. 자세한 내용은 [페더레이션 및 발급 된 토큰](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)합니다.|  
   
 ### <a name="message-client-credentials-in-bindings"></a>바인딩의 메시지 클라이언트 자격 증명  
  다음 표에서는 메시지 보안 모드에서 바인딩 사용 시 사용할 수 있는 클라이언트 자격 증명 형식을 보여 줍니다.  

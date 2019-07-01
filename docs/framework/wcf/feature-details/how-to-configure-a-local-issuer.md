@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-ms.openlocfilehash: 46dbb39a31a1ef256bef0f5b7e1bbc41ce1eca3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98d4c01bf2b84a6379eca5d0e1d5dbee68dc7cdd
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779303"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487146"
 ---
 # <a name="how-to-configure-a-local-issuer"></a>방법: 로컬 발급자 구성
 이 항목에서는 발급된 토큰에 로컬 발급자를 사용하도록 클라이언트를 구성하는 방법에 대해 설명합니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "61779303"
  Windows Communication Foundation (WCF) 페더레이션 바인딩의 발급자 주소가 되는 경우에는 로컬 발급자를 사용 하 여 `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` 또는 `null`합니다. 이러한 경우 로컬 발급자와의 통신에 사용할 바인딩과 이 발급자의 주소를 사용하여 <xref:System.ServiceModel.Description.ClientCredentials>를 구성해야 합니다.  
   
 > [!NOTE]
->  경우는 <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> 의 속성을 `ClientCredentials` 클래스로 설정 됩니다 `true`, 로컬 발급자 주소를 지정 하지 않으면 및 발급자 주소 지정 하는 [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) 또는 기타 페더레이션 바인딩에서 `http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self`, `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous`, 또는 `null`, Windows 다음 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 발급자 사용 됩니다.  
+>  경우는 <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> 의 속성을 `ClientCredentials` 클래스로 설정 됩니다 `true`, 로컬 발급자 주소를 지정 하지 않으면 및 발급자 주소 지정 하는 [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) 또는 기타 페더레이션 바인딩에서 `http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self`, `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous`, 또는 `null`, Windows CardSpace 발급자가 사용 됩니다.  
   
 ### <a name="to-configure-the-local-issuer-in-code"></a>로컬 발급자를 코드로 구성하려면  
   

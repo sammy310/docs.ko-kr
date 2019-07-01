@@ -5,18 +5,18 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: 629eb482768e4ed2b3d70ee3d27157b502eeb72b
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: d6c931ec904e9a7e58d5b747c74898208863b8e9
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832716"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486727"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<응용 프로그램 풀 > 요소 (웹 설정)
-ASP.NET에서 ASP.NET 응용 프로그램 통합된 모드에서 실행 중인 경우 프로세스 전반 동작을 관리 하는 데 사용 되는 구성 설정을 지정 [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 이상 버전.  
+ASP.NET에서 ASP.NET 응용 프로그램을 IIS 7.0 또는 이후 버전에서 통합된 모드에서 실행 중인 경우 프로세스 전반 동작을 관리 하는 데 사용 되는 구성 설정을 지정 합니다.  
   
 > [!IMPORTANT]
->  ASP.NET 응용 프로그램에서 호스팅되는 경우 유일한 작업 지원이 요소 및 기능 [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 이상 버전.  
+>  이 요소와 기능을 ASP.NET 응용 프로그램은 IIS 7.0 이상 버전에서 호스팅되는 경우 유일한 작업을 지원 합니다.  
   
  \<configuration>  
 \<system.web > 요소 (웹 설정)  
@@ -52,12 +52,12 @@ ASP.NET에서 ASP.NET 응용 프로그램 통합된 모드에서 실행 중인 �
 |[\<system.web>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|ASP.NET 응용 프로그램을 호스트와 상호 작용 하는 방법에 대 한 정보를 포함 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 실행할 때 [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 또는 통합된 모드의 이후 버전에서이 요소 조합을 사용 하 여 응용 프로그램은 IIS 응용 프로그램 풀에 호스팅되는 경우 ASP.NET 스레드 및 큐 요청을 관리 하는 방법을 구성 합니다. IIS 6을 실행 하거나 실행 하면 [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 클래식 모드에서 또는 ISAPI 모드에서 이러한 설정이 무시 됩니다.  
+ 통합된 모드의 IIS 7.0 또는 이후 버전을 실행 하면이 요소 조합을 사용 하 여 응용 프로그램은 IIS 응용 프로그램 풀에 호스팅되는 경우 ASP.NET 스레드 및 큐 요청을 관리 하는 방법을 구성 합니다. IIS 6을 실행 또는 클래식 모드에서 또는 ISAPI 모드로 IIS 7.0을 실행 하는 경우 이러한 설정이 무시 됩니다.  
   
  `applicationPool` 설정은.NET Framework의 특정 버전에서 실행 되는 모든 응용 프로그램 풀에 적용 합니다. 설정을은 aspnet.config 파일에 포함 됩니다. 버전 2.0 및.NET framework 4.0에 대 한이 파일의 버전이 있습니다. (버전 3.0 및 3.5는.NET Framework의 공유 aspnet.config 파일 버전 2.0 사용 하 여.)  
   
 > [!IMPORTANT]
->  실행 하는 경우 [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 에서 [!INCLUDE[win7](../../../../../includes/win7-md.md)], 모든 응용 프로그램 풀에 대 한 별도 aspnet.config 파일을 구성할 수 있습니다. 이렇게 하면 각 응용 프로그램 풀에 대 한 스레드의 성능을 조정할 수 있습니다.  
+>  IIS 7.0 실행 하는 경우 [!INCLUDE[win7](../../../../../includes/win7-md.md)], 모든 응용 프로그램 풀에 대 한 별도 aspnet.config 파일을 구성할 수 있습니다. 이렇게 하면 각 응용 프로그램 풀에 대 한 스레드의 성능을 조정할 수 있습니다.  
   
  에 대 한는 `maxConcurrentRequestsPerCPU` 설정, 기본 설정인 "5000".NET Framework 4에서 효과적으로 해제 요청 스로틀이 ASP.NET에 의해 제어 되는 CPU 당 5000 개 이상의 요청이 실제로 없으면입니다. 기본 설정은 자동으로 CPU 당 동시성을 관리 하도록 CLR 스레드 풀에 따라 대신 달라 집니다. 비동기 요청 처리를 광범위 하 게 사용 하는 또는 네트워크 I/O에서 차단 된 많은 장기 실행 요청이 응용 프로그램은.NET Framework 4의 향상 된 기본 제한에서 도움이 됩니다. 설정 `maxConcurrentRequestsPerCPU` 를 0으로 설정 하면 관리 되는 스레드 사용 해제 ASP.NET 요청을 처리 합니다. 응용 프로그램 IIS 응용 프로그램 풀에서 실행 되 면 IIS I/O 스레드 요청 유지 및 동시성 IIS 스레드 설정에 의해 제한 됩니다 따라서 합니다.  
   
@@ -66,9 +66,9 @@ ASP.NET에서 ASP.NET 응용 프로그램 통합된 모드에서 실행 중인 �
 ## <a name="example"></a>예제  
  다음 예제에서는 다음과 같은 경우에서 aspnet.config 파일에서 ASP.NET 프로세스 전반 동작을 구성 하는 방법을 보여 줍니다.  
   
-- 응용 프로그램에서 호스트 되는 [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 응용 프로그램 풀.  
+- 응용 프로그램을 IIS 7.0 응용 프로그램 풀에서 호스팅됩니다.  
   
-- [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 통합된 모드에서 실행 됩니다.  
+- IIS 7.0 통합된 모드에서 실행 됩니다.  
   
 - 응용 프로그램은.NET Framework 3.5 SP1 또는 최신 버전 사용 합니다.  
   

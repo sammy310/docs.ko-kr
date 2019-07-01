@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: 376448502b7b9c7002213be5c3437849a3868166
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 295e4bd5eca58bc190b31fd96e79f97678e381a4
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425029"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486779"
 ---
 # <a name="federation"></a>페더레이션
 이 항목에서는 페더레이션 보안의 개념에 대한 간략한 개요를 제공합니다. 또한 페더레이션된 보안 아키텍처를 배포 하는 것에 대 한 Windows Communication Foundation (WCF) 지원을 설명 합니다. 페더레이션을 설명 하는 샘플 응용 프로그램을 참조 하세요 [Federation 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)합니다.  
@@ -224,7 +224,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
   
  ![Federation](../../../../docs/framework/wcf/feature-details/media/sts-b.gif "STS_B")  
   
- STS B와 마찬가지로 STS A도 보안 토큰을 발급하고, 이를 위해 단일 엔드포인트를 노출하는 웹 서비스입니다. 그러나 이는 다른 바인딩(`wsHttpBinding`)을 사용하며, 사용자가 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 클레임과 함께 유효한 `emailAddress`를 제공해야 합니다. 그 결과, STS A가 `userAuthenticated` 클레임과 함께 SAML 토큰을 발급합니다. 이는 서비스 구성에서 선언적으로 지정됩니다.  
+ STS B와 마찬가지로 STS A도 보안 토큰을 발급하고, 이를 위해 단일 엔드포인트를 노출하는 웹 서비스입니다. 그러나 다른 바인딩을 사용 (`wsHttpBinding`)와 유효한 CardSpace를 제공 하며는 `emailAddress` 클레임입니다. 그 결과, STS A가 `userAuthenticated` 클레임과 함께 SAML 토큰을 발급합니다. 이는 서비스 구성에서 선언적으로 지정됩니다.  
   
 ```xml  
 <system.serviceModel>  

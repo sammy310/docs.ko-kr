@@ -1,13 +1,13 @@
 ---
 title: 문자열
 description: 설명 하는 방법을 F# 'string' 형식은 유니코드 문자 시퀀스로 변경할 수 없는 텍스트를 나타냅니다.
-ms.date: 05/16/2016
-ms.openlocfilehash: c2fda4d936abab5bc3f4653613991a7f5471d81d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/28/2019
+ms.openlocfilehash: 8bd7a65a8d8e9e6a2d3930cd1fc9e800342d9a18
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642073"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487764"
 ---
 # <a name="strings"></a>문자열
 
@@ -29,7 +29,7 @@ ms.locfileid: "65642073"
 |백슬래시|`\\`|
 |따옴표|`\"`|
 |아포스트로피|`\'`|
-|유니코드 문자|`\uXXXX` 또는 `\UXXXX` (여기서 `X` 나타내는 16 진수)|
+|유니코드 문자|`\uXXXX` (U t F-16) 또는 `\U00XXXXXX` (UTF-32) (여기서 `X` 나타내는 16 진수)|
 
 앞의 리터럴은 축 자 문자열 @ 기호입니다. 즉, 모든 이스케이프 시퀀스가 무시 되는 제외 하 고 두 개의 따옴표 문자 하나 따옴표 문자로 해석 됩니다.
 

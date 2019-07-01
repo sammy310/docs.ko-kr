@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-ms.openlocfilehash: 4200918057a32d077dbc44f48057f8e886d87a44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7b09578bf39a081b1bed83614cff755f234f8e45
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624497"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487093"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>방법: 페더레이션 서비스에서 자격 증명 구성
 Windows Communication Foundation (WCF), 페더레이션된 서비스를 만드는 다음과 같은 기본 절차 이루어져 있습니다.  
@@ -28,7 +28,7 @@ Windows Communication Foundation (WCF), 페더레이션된 서비스를 만드�
   
 1. <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A> 클래스의 <xref:System.ServiceModel.Description.ServiceCredentials> 속성을 사용하여 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 인스턴스에 대한 참조를 반환합니다. <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> 클래스의 <xref:System.ServiceModel.ServiceHostBase> 속성에서 이 속성에 액세스합니다.  
   
-2. <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> 카드와 같은 자체 발급 토큰이 인증될 경우에는 `true` 속성을 [!INCLUDE[infocard](../../../../includes/infocard-md.md)]로 설정합니다. 기본값은 `false`입니다.  
+2. 설정 된 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> 속성을 `true` CardSpace 카드와 같은 자체 발급 된 토큰 인증 되어야 하는 경우. 기본값은 `false`입니다.  
   
 3. <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 속성에 의해 반환된 컬렉션을 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 클래스의 인스턴스로 채웁니다. 각 인스턴스는 서비스에서 인증되는 토큰 발급자를 나타냅니다.  
   
@@ -47,7 +47,7 @@ Windows Communication Foundation (WCF), 페더레이션된 서비스를 만드�
   
 1. 만들기는 `<issuedTokenAuthentication>` 의 자식 요소로 <`serviceCredentials`> 요소입니다.  
   
-2. `allowUntrustedRsaIssuers` 카드와 같은 자체 발급 토큰을 인증하는 경우, `<issuedTokenAuthentication>` 요소의 `true` 특성을 [!INCLUDE[infocard](../../../../includes/infocard-md.md)]로 설정합니다.  
+2. 설정 합니다 `allowUntrustedRsaIssuers` 특성을 `<issuedTokenAuthentication>` 요소를 `true` CardSpace 카드와 같은 자체 발급 된 토큰을 인증 하는 경우.  
   
 3. `<knownCertificates>` 요소를 `<issuedTokenAuthentication>` 요소의 자식으로 만듭니다.  
   

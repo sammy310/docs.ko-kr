@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Web hosted service
 - IIS Hosting Using Inline Code Sample [Windows Communication Foundation]
 ms.assetid: 56fe3687-a34b-4661-8e30-b33770f413fa
-ms.openlocfilehash: 8e401d6ce73c036188d13f40c1293abd1f0de58c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a96e00adbe12365220a58d93edf9dc965825d07e
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781474"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487584"
 ---
 # <a name="iis-hosting-using-inline-code"></a>인라인 코드를 사용한 IIS 호스팅
 
@@ -92,7 +92,7 @@ Press <ENTER> to terminate client.
 
 2. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.
 
-3. 솔루션을 빌드한 후 setup.bat를 실행하여 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]에 ServiceModelSamples 응용 프로그램을 설치합니다. 이제 ServiceModelSamples 디렉터리가 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 응용 프로그램으로 나타납니다.
+3. 후 솔루션을 빌드한 IIS 7.0에 ServiceModelSamples 응용 프로그램을 설정 하는 setup.bat를 실행 합니다. 이제 ServiceModelSamples 디렉터리가 IIS 7.0 응용 프로그램으로 나타납니다.
 
 4. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다. 이 서비스를 호출할 수 있는 클라이언트 응용 프로그램을 만드는 방법의 예제를 참조 하세요. [방법: 클라이언트를 만드는](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)합니다.
 

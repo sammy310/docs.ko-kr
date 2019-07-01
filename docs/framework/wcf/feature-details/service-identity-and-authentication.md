@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: 834829d8eee95a8a62363a05b4af9430c435753b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 695b6c24700fe42664944d6f9c1e03010248d86a
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586236"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487740"
 ---
 # <a name="service-identity-and-authentication"></a>서비스 ID 및 인증
 서비스의 *종단점 id* 서비스 설명 언어 WSDL (웹 서비스)에서 생성 된 값입니다. 모든 클라이언트에 전파되는 이 값은 서비스를 인증하는 데 사용합니다. 클라이언트가 엔드포인트에 대한 통신을 시작하고 서비스가 클라이언트에 대해 인증되면 클라이언트는 엔드포인트 ID 값과 엔드포인트 인증 프로세스에서 반환된 실제 값을 비교합니다. 두 값이 일치하는 경우 클라이언트는 예상 서비스 엔드포인트에 연결됩니다. 이 함수에 대해 보호할 *피싱* 클라이언트가 악성 서비스에서 호스팅되는 끝점에 리디렉션되지 하지 못하도록 하 여 합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "64586236"
 |ID 형식|설명|일반적인 시나리오|  
 |-------------------|-----------------|----------------------|  
 |DNS(Domain Name System)|이 요소를 X.509 인증서 또는 Windows 계정과 함께 사용합니다. 자격 증명에 지정된 DNS 이름과 이 요소에 지정된 값을 비교합니다.|DNS 검사를 사용하면 DNS 또는 주체 이름을 가진 인증서를 사용할 수 있습니다. DNS 또는 주체 이름이 같은 인증서를 다시 발급하는 경우 ID 검사가 계속 유효합니다. 인증서를 다시 발급하면 새 RSA 키를 얻게 되지만 같은 DNS 또는 주체 이름을 유지합니다. 따라서 클라이언트는 서비스에 대한 ID 정보를 업데이트할 필요가 없습니다.|  
-|인증서. `ClientCredentialType`을 Certificate로 설정한 경우 기본값입니다.|이 요소는 클라이언트와 비교할 Base64 인코딩된 X.509 인증서 값을 지정합니다.<br /><br /> 또한 서비스를 인증할 자격 증명으로 [!INCLUDE[infocard](../../../../includes/infocard-md.md)]를 사용하는 경우 이 요소를 사용합니다.|이 요소는 지문 값에 따라 하나의 인증서만 사용하도록 인증을 제한합니다. 이렇게 하면 고유한 지문 값을 가지므로 인증을 강화할 수 있습니다. 이 한 가지 주의할 점은 함께 제공 됩니다. 동일한 주체 이름을 가진 인증서 발급을 하는 경우 새 지문이 있습니다. 따라서 새 지문을 모르는 경우 클라이언트가 서비스의 유효성을 검사할 수 없습니다. 인증서 지문 찾기에 대 한 자세한 내용은 참조 하세요. [방법: 인증서의 지문 검색](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)합니다.|  
+|인증서. `ClientCredentialType`을 Certificate로 설정한 경우 기본값입니다.|이 요소는 클라이언트와 비교할 Base64 인코딩된 X.509 인증서 값을 지정합니다.<br /><br /> 자격 증명으로는 CardSpace를 사용 하 여 서비스를 인증 하는 경우에이 요소를 사용 합니다.|이 요소는 지문 값에 따라 하나의 인증서만 사용하도록 인증을 제한합니다. 이렇게 하면 고유한 지문 값을 가지므로 인증을 강화할 수 있습니다. 이 한 가지 주의할 점은 함께 제공 됩니다. 동일한 주체 이름을 가진 인증서 발급을 하는 경우 새 지문이 있습니다. 따라서 새 지문을 모르는 경우 클라이언트가 서비스의 유효성을 검사할 수 없습니다. 인증서 지문 찾기에 대 한 자세한 내용은 참조 하세요. [방법: 인증서의 지문 검색](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)합니다.|  
 |Certificate Reference|앞에서 설명한 Certificate 옵션과 동일합니다. 그러나 이 요소를 사용하면 인증서 이름 및 인증서를 검색할 저장소 위치를 지정할 수 있습니다.|앞에서 설명한 Certificate 시나리오와 동일합니다.<br /><br /> 인증서 저장소 위치를 변경할 수 있는 이점이 있습니다.|  
 |RSA|이 요소는 클라이언트와 비교할 RSA 키 값을 지정합니다. Certificate 옵션과 비슷하지만 인증서 지문을 사용하는 대신 인증서의 RSA 키를 사용합니다.|RSA 검사를 사용하면 RSA 키에 따라 하나의 인증서만 사용하도록 인증을 제한할 수 있습니다. 이렇게 하면 RSA 키 값이 변경된 경우 기존 클라이언트와 작동하지 않는 서비스 대신 특정 RSA 키에 대한 인증을 강화할 수 있습니다.|  
 |UPN(User Principal Name). `ClientCredentialType`이 Windows로 설정되고 시스템 계정 중 하나로 서비스 프로세스가 실행되지 않는 경우 기본값입니다.|이 요소는 서비스를 실행하는 UPN을 지정합니다. Kerberos 프로토콜 및 Id 단원을 참조 하세요 [인증을 위해 서비스 Id 재정의](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)합니다.|이렇게 하면 서비스가 특정 Windows 사용자 계정으로 실행됩니다. 사용자 계정은 현재 로그온한 사용자이거나 특정 사용자 계정으로 실행 중인 서비스일 수 있습니다.<br /><br /> 서비스가 Active Directory 환경 내의 도메인 계정으로 실행 중인 경우 이 설정에서는 Windows Kerberos 보안을 활용합니다.|  

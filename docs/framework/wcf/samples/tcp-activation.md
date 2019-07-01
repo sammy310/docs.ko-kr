@@ -2,12 +2,12 @@
 title: TCP 활성화
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: 065c4706d0a52414c4abed85044ce06ad3efe35c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e3bfbe9d7e7a6efafc8bf1e281e1f7a99c9c5fbe
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007749"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487527"
 ---
 # <a name="tcp-activation"></a>TCP 활성화
 
@@ -141,7 +141,7 @@ Press <ENTER> to terminate client.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면
 
-1. [!INCLUDE[iisver](../../../../includes/iisver-md.md)]이 설치되어 있는지 확인합니다. [!INCLUDE[iisver](../../../../includes/iisver-md.md)]은 WAS 활성화에 필요합니다.
+1. IIS 7.0이 설치 되어 있는지 확인 합니다. IIS 7.0은 WAS 활성화에 필요 합니다.
 
 2. 수행 해야 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.
 

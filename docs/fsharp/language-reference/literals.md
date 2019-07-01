@@ -1,13 +1,13 @@
 ---
 title: 리터럴
 description: 리터럴 형식에 알아봅니다는 F# 프로그래밍 언어입니다.
-ms.date: 06/08/2019
-ms.openlocfilehash: 93329cd868ff7a2daaffa1b87ba838bbbc98015c
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.date: 06/28/2019
+ms.openlocfilehash: 53647d8cbc2a59527a50e122bc1abc6055c1fce5
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816237"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487776"
 ---
 # <a name="literals"></a>리터럴
 
@@ -69,7 +69,7 @@ let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 
 ## <a name="remarks"></a>설명
 
-유니코드 문자열에는 명시적 인코딩을 사용 하 여 지정할 수 있는 포함 될 수 있습니다 `\u` 뒤에 16 비트 16 진수 코드 또는 UTF-32 인코딩을 사용 하 여 지정할 수 있는 `\U` 뒤에 유니코드를 나타내는 32 비트 16 진수 코드 서로게이트 쌍입니다.
+유니코드 문자열에는 명시적 인코딩을 사용 하 여 지정할 수 있는 포함 될 수 있습니다 `\u` 뒤에 16 비트 16 진수 코드 (0000-FFFF) 또는 UTF-32 인코딩을 사용 하 여 지정할 수 있는 `\U` 를 나타내는 32 비트 16 진수 코드 뒤에 유니코드 코드 포인트 (00000000-00010FFFF)이 모든입니다.
 
 이외의 다른 비트 연산자를 사용 하 여 `|||` 허용 되지 않습니다.
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: d6dea344d5af24ba2f5bb4aa4064a4f876408380
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 0946e123e10fbad7357c9be356287e5e87b271d2
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423894"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486934"
 ---
 # <a name="denial-of-service"></a>서비스 거부
 서비스 거부는 시스템을 가득 채워 메시지를 처리할 수 없거나 메시지가 매우 느리게 처리되는 경우에 발생합니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "66423894"
  드물지만 X.509 인증서에 여러 개의 대체 주체 이름이 포함된 경우 대체 주체 이름을 사용하여 권한을 부여하면 권한 부여가 실패할 수도 있습니다.  
   
 ## <a name="protect-configuration-files-with-acls"></a>ACL을 사용하여 구성 파일 보호  
- [!INCLUDE[infocard](../../../../includes/infocard-md.md)]에서 발급된 토큰에 대해 코드와 구성 파일에서 필수 및 선택적 클레임을 지정할 수 있습니다. 이로 인해 보안 토큰 서비스로 전송되는 `RequestSecurityToken` 메시지에 해당 요소가 내보내집니다. 공격자는 코드나 구성을 수정하여 필수 또는 선택적 클레임을 제거하고 보안 토큰 서비스가 대상 서비스에 대한 액세스를 허용하지 않는 토큰을 발급하게 할 수 있습니다.  
+ CardSpace 발급 된 토큰에 대 한 코드 및 구성 파일에서 필수 및 선택적 클레임을 지정할 수 있습니다. 이로 인해 보안 토큰 서비스로 전송되는 `RequestSecurityToken` 메시지에 해당 요소가 내보내집니다. 공격자는 코드나 구성을 수정하여 필수 또는 선택적 클레임을 제거하고 보안 토큰 서비스가 대상 서비스에 대한 액세스를 허용하지 않는 토큰을 발급하게 할 수 있습니다.  
   
  완화: 구성 파일을 수정 하 여 컴퓨터에 액세스를 해야 합니다. 파일 ACL(액세스 제어 목록)을 사용하여 구성 파일에 보안을 설정합니다. WCF 구성에서 로드 되도록 이러한 코드는 허용 됩니다 전에 응용 프로그램 디렉터리나 전역 어셈블리 캐시에서 코드는 필요 합니다. 디렉터리 ACL을 사용하여 디렉터리에 보안을 설정합니다.  
   

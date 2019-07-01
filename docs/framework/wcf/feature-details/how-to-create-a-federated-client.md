@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-ms.openlocfilehash: 19ffe7e3fb0de9b377279d9cd274f998a104c6b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8de673fae16da8189589e20b6d9a66b96e1823ba
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047817"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487102"
 ---
 # <a name="how-to-create-a-federated-client"></a>방법: 페더레이션 클라이언트 만들기
 Windows Communication Foundation (WCF)를 만들기에 대 한 클라이언트를 *페더레이션 서비스* 세 가지 주요 단계로 구성 됩니다.  
@@ -39,7 +39,7 @@ Windows Communication Foundation (WCF)를 만들기에 대 한 클라이언트�
   
 4. 추가 검사 [ \<issuedTokenParameters >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md) 요소 내 주석 처리 된 out <`alternativeIssuedTokenParameters`> 요소입니다. Svcutil.exe 도구를 사용하여 페더레이션 서비스에 대한 구성을 생성할 때, 페더레이션 서비스 또는 중간 보안 토큰 서비스에서 발급자 주소를 지정하지 않고 여러 엔드포인트를 노출하는 보안 토큰 서비스에 대한 메타데이터 주소를 지정하는 경우 결과 구성 파일이 첫 번째 엔드포인트를 참조합니다. 주석 처리 된 구성 파일에서 추가 끝점은 <`alternativeIssuedTokenParameters`> 요소입니다.  
   
-     여부를 결정 이러한 <`issuedTokenParameters`> 구성에 이미 있는 것이 좋습니다. 예를 들어 클라이언트가 사용자 이름/암호 쌍을 사용하지 않고 Windows [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 토큰을 사용하여 보안 토큰 서비스를 인증하는 것을 선호할 수 있습니다.  
+     여부를 결정 이러한 <`issuedTokenParameters`> 구성에 이미 있는 것이 좋습니다. 예를 들어, 클라이언트는 사용자 이름/암호 쌍이 아닌 Windows CardSpace 토큰을 사용 하 여 보안 토큰 서비스에 인증할 수 원할 수 있습니다.  
   
     > [!NOTE]
     >  서비스와 통신하기 전에 여러 보안 토큰 서비스를 이동해야 하는 경우 중간 보안 토큰 서비스가 클라이언트에 잘못된 보안 토큰 서비스를 지시할 수 있습니다. 따라서 보안 토큰 서비스에 대 한 끝점 확인 합니다 [ \<issuedTokenParameters >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md) 예상된 보안 토큰 서비스 이며 알 수 없는 보안 토큰 서비스가 아닌 합니다.  

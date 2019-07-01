@@ -2,12 +2,12 @@
 title: 사용자 지정 서비스 호스트
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: d2eebd502fa02d01ac86cf88f336b72829a6116f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c2a1fc1b398a3a9efcd0c824ca041a790448dd3
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990667"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487641"
 ---
 # <a name="custom-service-host"></a>사용자 지정 서비스 호스트
 이 샘플에서는 <xref:System.ServiceModel.ServiceHost> 클래스의 사용자 지정 파생 항목을 사용하여 서비스의 런타임 동작을 변경하는 방법을 보여 줍니다. 이 접근 방식을 사용하면 일반적인 방법으로 여러 서비스를 구성하는 대신 재사용 가능한 대체 방법이 제공됩니다. 또한 샘플에서는 <xref:System.ServiceModel.Activation.ServiceHostFactory> 클래스를 사용하여 IIS(인터넷 정보 서비스) 또는 WAS(Windows Process Activation Service) 호스팅 환경에서 사용자 지정 ServiceHost를 사용하는 방법을 보여 줍니다.  
@@ -168,11 +168,11 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
   
 2. 지침에 따라 솔루션을 빌드하려면 [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.  
   
-3. 솔루션을 빌드한 후 Setup.bat를 실행하여 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]에 ServiceModelSamples 응용 프로그램을 설치합니다. 이제 ServiceModelSamples 디렉터리가 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 응용 프로그램으로 나타납니다.  
+3. 후 솔루션을 빌드한 IIS 7.0에 ServiceModelSamples 응용 프로그램을 설정 하는 Setup.bat를 실행 합니다. 이제 ServiceModelSamples 디렉터리가 IIS 7.0 응용 프로그램으로 나타납니다.  
   
 4. 단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
   
-5. [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 응용 프로그램을 제거하려면 Cleanup.bat를 실행합니다.  
+5. IIS 7.0 응용 프로그램을 제거 하려면 Cleanup.bat를 실행 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

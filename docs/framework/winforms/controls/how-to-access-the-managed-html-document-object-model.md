@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-ms.openlocfilehash: 0374e63191f5f81891a0c7c78c5e739ac5ec7984
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2a195dc6583d5a0a72bd08b66f8933f4002e879a
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624159"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487269"
 ---
 # <a name="how-to-access-the-managed-html-document-object-model"></a>방법: 관리형 HTML 문서 개체 모델 액세스
 다음과 같은 두 가지 유형의 애플리케이션에서 관리되는 HTML DOM(문서 개체 모델)에 액세스할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "64624159"
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
   
-1. 관리되는 HTML DOM에 액세스하려면 응용 프로그램 또는 <xref:System.Windows.Forms.UserControl>을 완전히 신뢰해야 합니다. [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]를 사용하여 Windows Forms 응용 프로그램을 배포하는 경우 권한 상승 또는 신뢰할 수 있는 응용 프로그램 배포를 통해 완전 신뢰를 요청할 수 있습니다. 자세한 내용은 [ClickOnce 응용 프로그램 보안](/visualstudio/deployment/securing-clickonce-applications)을 참조하세요.  
+1. 관리되는 HTML DOM에 액세스하려면 응용 프로그램 또는 <xref:System.Windows.Forms.UserControl>을 완전히 신뢰해야 합니다. ClickOnce를 사용 하 여 Windows Forms 응용 프로그램을 배포 하는 경우 권한 상승 또는 신뢰할 수 있는 응용 프로그램 배포를 사용 하 여 완전 신뢰를 요청할 수 있습니다. 참조 [ClickOnce 응용 프로그램 보안](/visualstudio/deployment/securing-clickonce-applications) 세부 정보에 대 한 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

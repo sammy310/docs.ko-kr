@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 953df285d1a439cd8a1a95358915a7a50e98552a
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 1141bd8344887990ddd8646eba9d25c5d9a4287d
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960106"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487057"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>방법: WCF 활성화 구성 요소 설치 및 구성
 이 항목에서는에 Windows Process Activation Service (WAS 라고도 함)을 설정 하는 데 필요한 단계를 설명 [!INCLUDE[wv](../../../../includes/wv-md.md)] HTTP를 통해 통신 하지 않는 서비스 네트워크 프로토콜을 Windows Communication Foundation (WCF)를 호스트 합니다. 다음 단원에서는 이 구성 단계에 대해 간략히 설명합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "65960106"
   
 ### <a name="to-configure-the-was-to-support-tcp-activation"></a>TCP 활성화를 지원하도록 WAS를 구성하려면  
   
-1. net.tcp 활성화를 지원하려면 먼저 기본 웹 사이트를 net.tcp 포트에 바인딩해야 합니다. 이 작업은 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 관리 도구 집합과 함께 설치되는 Appcmd.exe를 사용하여 수행할 수 있습니다. 관리자 수준 명령 프롬프트 창에서 다음 명령을 실행합니다.  
+1. net.tcp 활성화를 지원하려면 먼저 기본 웹 사이트를 net.tcp 포트에 바인딩해야 합니다. IIS 7.0 관리 도구 집합과 함께 설치 되는 Appcmd.exe를 사용 하 여이 수행할 수 있습니다. 관리자 수준 명령 프롬프트 창에서 다음 명령을 실행합니다.  
   
     ```  
     %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']  
