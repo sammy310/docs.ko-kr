@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-ms.openlocfilehash: e34350e8f431b6ece95186147762d1954b5dd10f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 669357bbd6527324bbedbcf1f537bf570c63ce5b
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601700"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423663"
 ---
 # <a name="enumeration-types-c-programming-guide"></a>열거형 형식(C# 프로그래밍 가이드)
 
@@ -21,7 +21,7 @@ ms.locfileid: "54601700"
 
 [!code-csharp[csProgGuideEnums#1](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#1)]
 
-기본적으로 열거형에서 각 요소의 기본 형식은 [int](../../csharp/language-reference/keywords/int.md)입니다. 이전 예제와 같이 콜론을 사용하여 다른 정수 계열 숫자 형식을 지정할 수 있습니다. 가능한 형식의 전체 목록은 [enum(C# 참조)](../../csharp/language-reference/keywords/enum.md)을 참조하세요.
+기본적으로 열거형에서 각 요소의 기본 형식은 [int](../../csharp/language-reference/builtin-types/integral-numeric-types.md)입니다. 이전 예제와 같이 콜론을 사용하여 다른 정수 계열 숫자 형식을 지정할 수 있습니다. 가능한 형식의 전체 목록은 [enum(C# 참조)](../../csharp/language-reference/keywords/enum.md)을 참조하세요.
 
 다음 예제와 같이 기본 형식으로 캐스트하여 기본 숫자 값을 확인할 수 있습니다.
 

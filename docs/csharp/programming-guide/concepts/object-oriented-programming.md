@@ -2,12 +2,12 @@
 title: 개체 지향 프로그래밍(C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 2adb1ac24aa625c89fcafe074fe65189aa3767c7
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 8bf02cbfca30d6dfc29c4e5e6c30a5013931e71b
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880699"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398074"
 ---
 # <a name="object-oriented-programming-c"></a>개체 지향 프로그래밍(C#)
 
@@ -270,7 +270,7 @@ SampleClass sampleObject = new SampleClass
 
 자세한 내용은 다음을 참조하세요.
 
-- [new 연산자](../../../csharp/language-reference/keywords/new-operator.md)
+- [new 연산자](../../../csharp/language-reference/operators/new-operator.md)
 
 - [개체 이니셜라이저 및 컬렉션 이니셜라이저](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
 

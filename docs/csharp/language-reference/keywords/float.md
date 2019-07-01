@@ -9,12 +9,12 @@ helpviewer_keywords:
 - float keyword [C#]
 - floating-point numbers [C#], float keyword
 ms.assetid: 1e77db7b-dedb-48b7-8dd1-b055e96a9258
-ms.openlocfilehash: 6bf8043b97d23fdb91ca5798ed46cdea783bad7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db0139f2000c1bc2c5a13a3a542164201e73f0fb
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514133"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424216"
 ---
 # <a name="float-c-reference"></a>float(C# 참조)
 
@@ -54,9 +54,9 @@ float x = 3.5F;
 
 이러한 값에 대한 자세한 내용은 [IEEE](https://www.ieee.org) 웹 사이트에서 제공되는 이진 부동 소수점 연산에 대한 IEEE 표준을 참조하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
-다음 예제에서는 [int](int.md), [short](short.md) 및 `float`가 수학 식에 포함되어 `float` 결과를 제공합니다. (`float`는 <xref:System.Single?displayProperty=nameWithType> 형식의 별칭입니다.) 식에 [double](double.md)이 없습니다.
+다음 예제에서는 [int](../builtin-types/integral-numeric-types.md), [short](../builtin-types/integral-numeric-types.md) 및 `float`가 수학 식에 포함되어 `float` 결과를 제공합니다. (`float`는 <xref:System.Single?displayProperty=nameWithType> 형식의 별칭입니다.) 식에 [double](double.md)이 없습니다.
 
 [!code-csharp[csrefKeywordsTypes#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#13)]
 
@@ -71,7 +71,7 @@ float x = 3.5F;
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [캐스팅 및 형식 변환](../../programming-guide/types/casting-and-type-conversions.md)
 - [C# 키워드](index.md)
-- [정수 계열 형식 표](integral-types-table.md)
+- [정수 형식](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
 - [기본 제공 형식 표](built-in-types-table.md)
 - [암시적 숫자 변환 표](implicit-numeric-conversions-table.md)
 - [명시적 숫자 변환 표](explicit-numeric-conversions-table.md)

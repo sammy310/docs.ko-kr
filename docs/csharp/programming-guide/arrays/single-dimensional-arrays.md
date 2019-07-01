@@ -6,12 +6,12 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: 719e4463806c9c7e8b5407f2494c3b548ffa43e8
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: d221cb9071a2c58f9d7068d5a43dd3a750ba716b
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200782"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398568"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>1차원 배열(C# 프로그래밍 가이드)
 
@@ -19,7 +19,7 @@ ms.locfileid: "57200782"
   
  [!code-csharp[csProgGuideArrays#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#4)]  
   
- 이 배열에는 `array[0]` ~ `array[4]`의 요소가 포함되어 있습니다. [new](../../../csharp/language-reference/keywords/new.md) 연산자는 배열을 만들고 배열 요소를 기본값으로 초기화하는 데 사용됩니다. 이 예제에서는 모든 배열 요소가 0으로 초기화됩니다.  
+ 이 배열에는 `array[0]` ~ `array[4]`의 요소가 포함되어 있습니다. [new](../../../csharp/language-reference/operators/new-operator.md) 연산자는 배열을 만들고 배열 요소를 기본값으로 초기화하는 데 사용됩니다. 이 예제에서는 모든 배열 요소가 0으로 초기화됩니다.  
   
  동일한 방식으로 문자열 요소를 저장하는 배열을 선언할 수 있습니다. 예:  
   

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - decimal keyword [C#]
 ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
-ms.openlocfilehash: 7bc806cd5516666c86780bb53842725f0c0c1617
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ad01f9e4f5a8b1a153b1ef306e9d6168335eb3d
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600702"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424300"
 ---
 # <a name="decimal-c-reference"></a>decimal(C# 참조)
 
@@ -61,7 +61,7 @@ myMoney = (decimal)x;
 
 `String.Format` 메서드를 사용하거나 <xref:System.Console.Write%2A?displayProperty=nameWithType>을 호출하는 `String.Format()` 메서드를 통해 결과의 서식을 지정할 수 있습니다. 통화 서식은 이 문서 뒷부분에 있는 두 번째 예제처럼 표준 통화 서식 문자열 "C" 또는 "c"를 사용하여 지정합니다. `String.Format` 메서드에 대한 자세한 내용은 <xref:System.String.Format%2A?displayProperty=nameWithType>을 참조하십시오.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음은 [double](../../../csharp/language-reference/keywords/double.md) 및 `decimal` 변수를 추가하려고 시도하여 컴파일러 오류가 발생하는 예제입니다.
 
@@ -81,11 +81,11 @@ Console.WriteLine((double)dec + dub);
 
 `Operator '+' cannot be applied to operands of type 'double' and 'decimal'`
 
-이 예제에서는 같은 식에 `decimal`과 [int](../../../csharp/language-reference/keywords/int.md)가 혼합되어 있습니다. 계산 결과는 `decimal` 형식입니다.
+이 예제에서는 같은 식에 `decimal`과 [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)가 혼합되어 있습니다. 계산 결과는 `decimal` 형식입니다.
 
 [!code-csharp[csrefKeywordsTypes#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#6)]
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 이 예제에서는 통화 서식 문자열을 사용하여 출력 서식을 지정합니다. `x`는 소수 자릿수가 $0.99를 초과하기 때문에 반올림됩니다. 최대 자릿수를 나타내는 변수 `y`는 올바른 서식으로 정확하게 표시됩니다.
 
@@ -101,7 +101,7 @@ Console.WriteLine((double)dec + dub);
 - [C# 참조](../../../csharp/language-reference/index.md)
 - [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
 - [C# 키워드](../../../csharp/language-reference/keywords/index.md)
-- [정수 계열 형식 표](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [정수 형식](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
 - [기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)
 - [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
 - [명시적 숫자 변환 표](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

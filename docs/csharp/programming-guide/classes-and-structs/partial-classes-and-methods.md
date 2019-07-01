@@ -7,12 +7,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 0d54101badab297457e8d8ecf277898fc6908779
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0a0cf7c3b6024f75196abed5fdb7d18a058c58db
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481057"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398377"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Partial 클래스 및 메서드(C# 프로그래밍 가이드)
 
@@ -105,7 +105,7 @@ partial 클래스 정의로 작업할 때 따라야 할 몇 가지 규칙이 있
 
   - 기본 클래스
 
-  - [new](../../../csharp/language-reference/keywords/new.md) 한정자(중첩된 부분)
+  - [new](../../../csharp/language-reference/keywords/new-modifier.md) 한정자(중첩된 부분)
 
   - 제네릭 제약 조건
 

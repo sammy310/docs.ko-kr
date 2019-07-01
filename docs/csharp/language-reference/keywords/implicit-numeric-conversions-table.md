@@ -8,12 +8,12 @@ helpviewer_keywords:
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: 703f60f48e1e569e0ffcab66ff7ccc91d4a49514
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 9c3efe1dbea355e8bc00ef44e08efcc9d0e0bdca
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093556"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424174"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>암시적 숫자 변환 표(C# 참조)
 
@@ -21,20 +21,20 @@ ms.locfileid: "56093556"
   
 |시작|대상|  
 |----------|--------|  
-|[sbyte](sbyte.md)|`short`, `int`, `long`, `float`, `double` 또는 `decimal`|  
-|[byte](byte.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` 또는 `decimal`|  
+|[sbyte](../builtin-types/integral-numeric-types.md)|`short`, `int`, `long`, `float`, `double` 또는 `decimal`|  
+|[byte](../builtin-types/integral-numeric-types.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` 또는 `decimal`|  
 |[char](char.md)|`ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` 또는 `decimal`|  
-|[short](short.md)|`int`, `long`, `float`, `double` 또는 `decimal`|  
-|[ushort](ushort.md)|`int`, `uint`, `long`, `ulong`, `float`, `double` 또는 `decimal`|  
-|[int](int.md)|`long`, `float`, `double` 또는 `decimal`|  
-|[uint](uint.md)|`long`, `ulong`, `float`, `double` 또는 `decimal`|  
-|[long](long.md)|`float`, `double`또는 `decimal`|  
-|[ulong](ulong.md)|`float`, `double`또는 `decimal`|  
+|[short](../builtin-types/integral-numeric-types.md)|`int`, `long`, `float`, `double` 또는 `decimal`|  
+|[ushort](../builtin-types/integral-numeric-types.md)|`int`, `uint`, `long`, `ulong`, `float`, `double` 또는 `decimal`|  
+|[int](../builtin-types/integral-numeric-types.md)|`long`, `float`, `double` 또는 `decimal`|  
+|[uint](../builtin-types/integral-numeric-types.md)|`long`, `ulong`, `float`, `double` 또는 `decimal`|  
+|[long](../builtin-types/integral-numeric-types.md)|`float`, `double`또는 `decimal`|  
+|[ulong](../builtin-types/integral-numeric-types.md)|`float`, `double`또는 `decimal`|  
 |[float](float.md)|`double`|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
 
-- 모든 [정수 형식](integral-types-table.md)은 암시적으로 모든 [부동 소수점 형식](floating-point-types-table.md)으로 전환할 수 있습니다.
+- 모든 [정수 형식](../builtin-types/integral-numeric-types.md)은 암시적으로 모든 [부동 소수점 형식](floating-point-types-table.md)으로 전환할 수 있습니다.
 
 - `int`, `uint`, `long` 또는 `ulong`에서 `float`로 변환하고 `long` 또는 `ulong`에서 `double`로 변환하는 동안 전체 자릿수가 손실될 수도 있지만 크기는 손실되지 않습니다.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "56093556"
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
-- [정수 계열 형식 표](integral-types-table.md)
+- [정수 형식](../builtin-types/integral-numeric-types.md)
 - [부동 소수점 형식 표](floating-point-types-table.md)
 - [기본 제공 형식 표](built-in-types-table.md)
 - [명시적 숫자 변환 표](explicit-numeric-conversions-table.md)

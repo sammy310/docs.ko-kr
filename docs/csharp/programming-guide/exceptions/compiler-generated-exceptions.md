@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions [C#], compiler-generated
 ms.assetid: 53b52f97-b366-4ed7-b05b-9eb78096b7f9
-ms.openlocfilehash: 15a42b8fb23aed024fede726d0b5fb731d8272f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 28e6ba0c20948aa769a1517c664db80b5beb6b68
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686363"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398026"
 ---
 # <a name="compiler-generated-exceptions-c-programming-guide"></a>컴파일러 생성 예외(C# 프로그래밍 가이드)
 기본 작업이 실패하면 .NET Framework의 CLR(공용 언어 런타임)에 의해 자동으로 일부 예외가 throw됩니다. 이러한 예외와 관련 오류 조건이 다음 표에 나와 있습니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "54686363"
 |<xref:System.IndexOutOfRangeException>|인덱스가 0보다 작거나 배열 경계를 벗어날 때 배열을 인덱싱하려고 시도할 경우 throw됩니다.|  
 |<xref:System.InvalidCastException>|기본 형식에서 인터페이스 또는 파생 형식으로의 명시적 변환이 런타임에 실패할 경우 throw됩니다.|  
 |<xref:System.NullReferenceException>|값이 [null](../../../csharp/language-reference/keywords/null.md)인 개체를 참조하려고 시도할 경우 throw됩니다.|  
-|<xref:System.OutOfMemoryException>|[new](../../../csharp/language-reference/keywords/new-operator.md) 연산자를 사용한 메모리 할당 시도가 실패할 경우 throw됩니다. 이 예외는 공용 언어 런타임에 사용할 수 있는 메모리가 모두 사용되었음을 나타냅니다.|  
+|<xref:System.OutOfMemoryException>|[new](../../../csharp/language-reference/operators/new-operator.md) 연산자를 사용한 메모리 할당 시도가 실패할 경우 throw됩니다. 이 예외는 공용 언어 런타임에 사용할 수 있는 메모리가 모두 사용되었음을 나타냅니다.|  
 |<xref:System.OverflowException>|`checked` 컨텍스트의 산술 연산이 오버플로될 경우 throw됩니다.|  
 |<xref:System.StackOverflowException>|보류 중인 메서드 호출이 너무 많아 실행 스택이 모두 사용될 경우 throw됩니다. 대개 매우 깊은 재귀나 무한 재귀를 나타냅니다.|  
 |<xref:System.TypeInitializationException>|정적 생성자가 예외를 throw하고 이 예외를 catch할 수 있는 호환되는 `catch` 절이 없는 경우 throw됩니다.|  

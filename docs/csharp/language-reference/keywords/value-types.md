@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: af3eab1c2453f37aa5bd881dc9804d7504c89298
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 9907811a43f408020e2ee76621d4975a53945570
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422125"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424026"
 ---
 # <a name="value-types-c-reference"></a>값 형식(C# 참조)
 
@@ -40,11 +40,11 @@ ms.locfileid: "66422125"
 
 *단순 형식*은 C#에서 제공하는 미리 정의된 구조체 형식 세트이며, 다음과 같은 형식으로 구성됩니다.
 
-- [정수 형식](integral-types-table.md): 정수 숫자 형식 및 [char](char.md) 형식
+- [정수 형식](../builtin-types/integral-numeric-types.md): 정수 숫자 형식 및 [char](char.md) 형식
 - [부동 소수점 형식](floating-point-types-table.md)
 - [bool](bool.md)
 
-단순 형식은 키워드를 통해 식별되지만, 이러한 키워드는 단순히 <xref:System> 네임스페이스에 미리 정의된 구조체 형식의 별칭입니다. 예를 들어 [int](int.md)는 <xref:System.Int32?displayProperty=nameWithType>의 별칭입니다. 별칭의 전체 목록은 [기본 제공 형식 표](built-in-types-table.md)를 참조하세요.
+단순 형식은 키워드를 통해 식별되지만, 이러한 키워드는 단순히 <xref:System> 네임스페이스에 미리 정의된 구조체 형식의 별칭입니다. 예를 들어 [int](../builtin-types/integral-numeric-types.md)는 <xref:System.Int32?displayProperty=nameWithType>의 별칭입니다. 별칭의 전체 목록은 [기본 제공 형식 표](built-in-types-table.md)를 참조하세요.
 
 단순 형식은 특정 추가 작업을 허용한다는 점에서 다른 구조체 형식과는 다릅니다.
 
@@ -88,9 +88,9 @@ int myInt = new int();
 int myInt = 0;
 ```
 
-[new](new.md) 연산자를 사용하면 특정 형식의 매개 변수 없는 생성자가 호출되고 변수에 기본값이 할당됩니다. 앞의 예제에서는 매개 변수 없는 생성자가 `0` 값을 `myInt`에 할당했습니다. 기본 생성자를 호출하여 할당된 값에 대한 자세한 내용은 [기본값 표](default-values-table.md)를 참조하세요.
+[new](../operators/new-operator.md) 연산자를 사용하면 특정 형식의 매개 변수 없는 생성자가 호출되고 변수에 기본값이 할당됩니다. 앞의 예제에서는 매개 변수 없는 생성자가 `0` 값을 `myInt`에 할당했습니다. 기본 생성자를 호출하여 할당된 값에 대한 자세한 내용은 [기본값 표](default-values-table.md)를 참조하세요.
 
-사용자 정의 형식의 경우 [new](new.md)를 사용하여 매개 변수 없는 생성자를 호출합니다. 예를 들어 다음 명령문은 `Point` 구조체의 매개 변수 없는 생성자를 호출합니다.
+사용자 정의 형식의 경우 [new](../operators/new-operator.md)를 사용하여 매개 변수 없는 생성자를 호출합니다. 예를 들어 다음 명령문은 `Point` 구조체의 매개 변수 없는 생성자를 호출합니다.
 
 ```csharp
 Point p = new Point(); // Invoke parameterless constructor for the struct.
@@ -98,7 +98,7 @@ Point p = new Point(); // Invoke parameterless constructor for the struct.
 
 이 호출 후에는 구조체가 한정적으로 할당된 것으로 간주됩니다. 즉, 모든 멤버가 기본값으로 초기화됩니다.
 
-`new` 연산자에 대한 자세한 내용은 [new](new.md)를 참조하세요.
+`new` 연산자에 대한 자세한 내용은 [new](../operators/new-operator.md)를 참조하세요.
 
 숫자 형식의 출력에 서식을 지정하는 방법에 대한 자세한 내용은 [숫자 결과 형식 지정 표](formatting-numeric-results-table.md)를 참조하세요.
 

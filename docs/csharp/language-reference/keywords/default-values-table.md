@@ -12,12 +12,12 @@ helpviewer_keywords:
 - variables [C#], value types
 - constructors [C#], parameterless constructor
 - types [C#], parameterless constructor return values
-ms.openlocfilehash: 4fc9a35f69540e047a97c21788015ca8e54068a0
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: dfab5107d4a0ad14c3ffbfc6a5f3c4317b44d17c
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422026"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424227"
 ---
 # <a name="default-values-table-c-reference"></a>기본값 표(C# 참조)
 
@@ -26,22 +26,22 @@ ms.locfileid: "66422026"
 |값 형식|기본값|
 |----------------|-------------------|
 |[bool](bool.md)|`false`|
-|[byte](byte.md)|0|
+|[byte](../builtin-types/integral-numeric-types.md)|0|
 |[char](char.md)|'\0'|
 |[decimal](decimal.md)|0M|
 |[double](double.md)|0.0D|
 |[enum](enum.md)|식 `(E)0`로 생성한 값이며 여기서 `E`는 열거형 식별자입니다.|
 |[float](float.md)|0.0F|
-|[int](int.md)|0|
-|[long](long.md)|0L|
-|[sbyte](sbyte.md)|0|
-|[short](short.md)|0|
+|[int](../builtin-types/integral-numeric-types.md)|0|
+|[long](../builtin-types/integral-numeric-types.md)|0L|
+|[sbyte](../builtin-types/integral-numeric-types.md)|0|
+|[short](../builtin-types/integral-numeric-types.md)|0|
 |[struct](struct.md)|모든 값 형식 필드를 기본값으로 설정하고 모든 참조 형식 필드를 `null`로 설정하여 생성한 값입니다.|
-|[uint](uint.md)|0|
-|[ulong](ulong.md)|0|
-|[ushort](ushort.md)|0|
+|[uint](../builtin-types/integral-numeric-types.md)|0|
+|[ulong](../builtin-types/integral-numeric-types.md)|0|
+|[ushort](../builtin-types/integral-numeric-types.md)|0|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 C#에서 초기화되지 않은 변수를 사용할 수 없습니다. 해당 형식의 기본값을 사용하여 변수를 초기화할 수 있습니다. 또한 형식의 기본 값을 사용하여 메서드의 [선택적 인수](../../programming-guide/classes-and-structs/named-and-optional-arguments.md#optional-arguments)의 기본값을 지정할 수도 있습니다.
 

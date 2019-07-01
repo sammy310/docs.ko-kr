@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: 7cbd1a2c1a9968ae8ed4f96d503d472bbe9b32c4
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 50b1cdb8b7e5087f1fd6669e7163e2c15e9b23bf
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545457"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423654"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>같음 비교(C# 프로그래밍 가이드)
 
@@ -28,7 +28,7 @@ ms.locfileid: "58545457"
 
 ## <a name="value-equality"></a>값 같음
 
- 값 같음은 두 개체에 동일한 값이 포함되어 있음을 의미합니다. [int](../../../csharp/language-reference/keywords/int.md) 또는 [bool](../../../csharp/language-reference/keywords/bool.md)과 같은 기본 값 형식의 경우 값 같음 테스트가 간단합니다. 다음 예제와 같이 [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) 연산자를 사용할 수 있습니다.  
+ 값 같음은 두 개체에 동일한 값이 포함되어 있음을 의미합니다. [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) 또는 [bool](../../../csharp/language-reference/keywords/bool.md)과 같은 기본 값 형식의 경우 값 같음 테스트가 간단합니다. 다음 예제와 같이 [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) 연산자를 사용할 수 있습니다.  
   
 ```csharp  
 int a = GetOriginalValue();  
