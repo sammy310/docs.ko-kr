@@ -6,15 +6,15 @@ helpviewer_keywords:
 - examples [Windows Forms], drawing curves
 - curves [Windows Forms], drawing
 ms.assetid: 76e92623-4130-4644-b867-faca58bdb3a2
-ms.openlocfilehash: 92e7b1e8b4ce37db633b5dafe212a252b854d1af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4c1b0cc6c6f878569fcf0c392f1b6f9683ec8afc
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935449"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506106"
 ---
 # <a name="constructing-and-drawing-curves"></a>곡선 구성 및 그리기
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 여러 종류의 곡선을 지원 합니다: 타원, 원호를 카디 날 곡선 스플라인 및 3 차원 곡선 스플라인 합니다. 타원의 경계 사각형; 정의한 호에는 시작 각도 및 스윕 각도에서 정의 되는 타원의 일부입니다. 카디널 스플라인 포인트와 장력 매개 변수 배열에 의해 정의 된-곡선 배열의 각 요소 원활 하 게 전달 되 고 장력 매개 변수 곡률 방식에 영향을 줍니다. 두 개의 끝점과 곡선 제어 지점을 통과 하지 않으므로 두 개의 제어점 베 지 어 스플라인을 정의 되어 있지만 제어점 방향에 영향을 줄 및 다른 끝점에서 곡선 흐르면서 수정.  
+GDI + 여러 종류의 곡선을 지원 합니다: 타원, 원호를 카디 날 곡선 스플라인 및 3 차원 곡선 스플라인 합니다. 타원의 경계 사각형; 정의한 호에는 시작 각도 및 스윕 각도에서 정의 되는 타원의 일부입니다. 카디널 스플라인 포인트와 장력 매개 변수 배열에 의해 정의 된-곡선 배열의 각 요소 원활 하 게 전달 되 고 장력 매개 변수 곡률 방식에 영향을 줍니다. 두 개의 끝점과 곡선 제어 지점을 통과 하지 않으므로 두 개의 제어점 베 지 어 스플라인을 정의 되어 있지만 제어점 방향에 영향을 줄 및 다른 끝점에서 곡선 흐르면서 수정.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [방법: 카디널 스플라인 그리기](how-to-draw-cardinal-splines.md)  

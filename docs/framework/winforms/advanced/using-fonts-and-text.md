@@ -8,37 +8,37 @@ helpviewer_keywords:
 - fonts [Windows Forms], using in Windows Forms
 - strings [Windows Forms], drawing in Windows Forms
 ms.assetid: d43640f3-da94-4df2-a29d-a9d021a1c069
-ms.openlocfilehash: c9fe16752223203806c7d3828f632aad0cab0c28
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73a4af5fe7367e777fcb83af8c84c09be91e5b1e
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769418"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505115"
 ---
 # <a name="using-fonts-and-text"></a>글꼴 및 텍스트 사용
-제공 하는 여러 클래스 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 고 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] Windows Forms에서 텍스트를 그리기 위한 합니다. 합니다 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> 클래스에 여러 개의 <xref:System.Drawing.Graphics.DrawString%2A> 텍스트, 위치, 경계 사각형, 글꼴 및 형식 등의 다양 한 기능을 지정할 수 있도록 하는 메서드. 그릴 텍스트를 측정 하는 또한 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 정적을 사용 하 여 <xref:System.Windows.Forms.TextRenderer.DrawText%2A> 하 고 <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> 에서 제공 하는 메서드는 `TextRenderer` 클래스입니다. [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 메서드 수 있습니다 위치, 글꼴 및 서식 지정 합니다. 그러나 선택할 수 있습니다 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 나 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 텍스트 렌더링;에 대 한 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 제품 향상 된 성능과 더 정확 하 게 텍스트 측정 일반적으로 합니다. 텍스트 렌더링에 영향을 주는 다른 클래스를 포함 `FontFamily`, `Font`를 <xref:System.Drawing.StringFormat>, 및 `TextFormatFlags`합니다.  
+Windows Forms에서 텍스트를 그리기 위한 GDI 및 GDI +에서 제공 하는 몇 가지 클래스가 있습니다. GDI + <xref:System.Drawing.Graphics> 클래스에 여러 개의 <xref:System.Drawing.Graphics.DrawString%2A> 텍스트, 위치, 경계 사각형, 글꼴 및 형식 등의 다양 한 기능을 지정할 수 있도록 하는 메서드. 그릴 텍스트를 사용 하는 정적 GDI를 사용 하 여 측정 하는 또한 <xref:System.Windows.Forms.TextRenderer.DrawText%2A> 하 고 <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> 에서 제공 하는 메서드를 `TextRenderer` 클래스. GDI 메서드는 위치, 글꼴 및 서식을 지정할 수 있습니다. 텍스트 렌더링;에 대 한 GDI 또는 GDI +를 선택할 수 있습니다. 그러나 GDI 더 나은 성능과 더 정확 하 게 텍스트 측정에 일반적으로 제공합니다. 텍스트 렌더링에 영향을 주는 다른 클래스를 포함 `FontFamily`, `Font`를 <xref:System.Drawing.StringFormat>, 및 `TextFormatFlags`합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [방법: 글꼴 패밀리 및 글꼴 만들기](how-to-construct-font-families-and-fonts.md)  
  만드는 방법을 보여 줍니다 `Font` 고 `FontFamily` 개체입니다.  
   
  [방법: 지정된 된 위치에 텍스트 그리기](how-to-draw-text-at-a-specified-location.md)  
- 특정 위치 사용 하 여 텍스트를 그리는 방법에 설명 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 고 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]입니다.  
+ GDI 및 GDI +를 사용 하 여 특정 위치에 텍스트를 그리는 방법을 설명 합니다.  
   
  [방법: 사각형 안에 줄 바꿈된 텍스트 그리기](how-to-draw-wrapped-text-in-a-rectangle.md)  
- 사용 하 여 사각형에서 텍스트를 그리는 방법을 설명 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 고 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]입니다.  
+ GDI 및 GDI +를 사용 하 여 사각형에서 텍스트를 그리는 방법을 설명 합니다.  
   
  [방법: GDI 사용 하 여 텍스트 그리기](how-to-draw-text-with-gdi.md)  
- 사용 하는 방법을 보여 줍니다 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 텍스트를 그리기 위한 합니다.  
+ 텍스트를 그리기 위한 GDI를 사용 하는 방법에 설명 합니다.  
   
  [방법: 그린된 텍스트 맞추기](how-to-align-drawn-text.md)  
- 형식을 지정 하는 방법을 보여 줍니다 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 고 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 텍스트입니다.  
+ GDI 및 GDI +의 텍스트 서식을 지정 하는 방법을 보여 줍니다.  
   
  [방법: 세로 텍스트 만들기](how-to-create-vertical-text.md)  
- 사용 하 여 세로로 정렬 된 텍스트를 그리는 방법을 설명 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]합니다.  
+ GDI +를 사용 하 여 세로로 정렬 된 텍스트를 그리는 방법을 설명 합니다.  
   
  [방법: 그린된 텍스트에 탭 정지 설정](how-to-set-tab-stops-in-drawn-text.md)  
- 표시 된 탭 정지를 사용 하 여 텍스트를 그리는 방법을 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]합니다.  
+ 그리는 GDI +를 사용 하 여 탭 정지를 사용 하 여 텍스트 방법을 보여 줍니다.  
   
  [방법: 설치 된 글꼴 열거](how-to-enumerate-installed-fonts.md)  
  설치 된 글꼴의 이름을 나열 하는 방법에 설명 합니다.  

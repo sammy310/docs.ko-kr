@@ -2,12 +2,12 @@
 title: 마이그레이션 고려 사항(Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: 0fafa786805a14d9adc3523a5eb876e7e5b0e9c5
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: f0b8e4918844da08ab48525836878b6a21230891
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489872"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504520"
 ---
 # <a name="migration-considerations-entity-framework"></a>마이그레이션 고려 사항(Entity Framework)
 ADO.NET Entity Framework에는 기존 응용 프로그램에 몇 가지 이점이 있습니다. 가장 중요한 이점 중 하나는 개념적 모델을 사용하여 응용 프로그램에서 사용되는 데이터 구조를 데이터 소스의 스키마와 구분할 수 있다는 것입니다. 이렇게 하면 응용 프로그램을 적절하게 변경하지 않아도 나중에 저장소 모델이나 데이터 소스 자체를 쉽게 변경할 수 있습니다. 사용 하는 이점에 대 한 자세한 내용은 합니다 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]를 참조 하세요 [Entity Framework 개요](../../../../../docs/framework/data/adonet/ef/overview.md) 및 [엔터티 데이터 모델](../../../../../docs/framework/data/adonet/entity-data-model.md)합니다.  
@@ -17,7 +17,7 @@ ADO.NET Entity Framework에는 기존 응용 프로그램에 몇 가지 이점�
 ## <a name="general-migration-considerations"></a>일반적인 마이그레이션 고려 사항  
  모든 응용 프로그램을 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]로 마이그레이션할 때는 다음 사항을 고려해야 합니다.  
   
-- 3.5 SP1 버전부터.NET Framework를 사용 하는 모든 응용 프로그램 응용 프로그램에서 사용 되는 데이터 원본에 대 한 데이터 공급자는 Entity Framework를 지원 하기만 하면 Entity Framework로 마이그레이션할 수 있습니다.  
+- 3\.5 SP1 버전부터.NET Framework를 사용 하는 모든 응용 프로그램 응용 프로그램에서 사용 되는 데이터 원본에 대 한 데이터 공급자는 Entity Framework를 지원 하기만 하면 Entity Framework로 마이그레이션할 수 있습니다.  
   
 - 공급자가 Entity Framework를 지원하지만 Entity Framework에서 데이터 소스 공급자의 모든 기능을 지원하지 않을 수도 있습니다.  
   
@@ -66,7 +66,7 @@ ADO.NET Entity Framework에는 기존 응용 프로그램에 몇 가지 이점�
 
   [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 다양 한 메모리 내 지 속성을 포함 하 여 데이터 집합에서 제공 하는 동일한 기능 변경 내용 추적, 데이터 바인딩 및 XML 데이터로 개체를 직렬화 하는 작업을 제공 합니다. 자세한 내용은 [개체를 사용 하 여 작업](../../../../../docs/framework/data/adonet/ef/working-with-objects.md)합니다.  
   
-  경우는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 기능을 제공 하지 않는 응용 프로그램에 필요한 데이터 집합, 있습니다 수 활용할 LINQ 쿼리의 이점을 사용 하 여 [!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)]입니다. 자세한 내용은 [LINQ to DataSet](../../../../../docs/framework/data/adonet/linq-to-dataset.md)을 참조하세요.  
+  경우는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 기능을 제공 하지 않는 응용 프로그램에 필요한 데이터 집합, 있습니다 수 활용할 LINQ 쿼리의 이점을 LINQ to DataSet 사용 하 여 합니다. 자세한 내용은 [LINQ to DataSet](../../../../../docs/framework/data/adonet/linq-to-dataset.md)을 참조하세요.  
   
 ## <a name="considerations-for-applications-that-bind-data-to-controls"></a>데이터를 컨트롤에 바인딩하는 응용 프로그램에 대한 고려 사항  
  .NET Framework를 사용 하 여 데이터 집합 등 ASP.NET 데이터 소스 컨트롤, 데이터 원본에서 데이터를 캡슐화 하 고 다음 사용자 인터페이스 요소에 해당 데이터 컨트롤을 바인딩할 수 있습니다. 다음 목록에서는 컨트롤을 Entity Framework 데이터에 바인딩할 때 고려할 사항에 대해 설명합니다.  

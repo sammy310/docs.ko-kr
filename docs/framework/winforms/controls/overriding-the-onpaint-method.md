@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: 92aaeabfc12e964ac294fbd69998c4671fc8763c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e3c48aec830cdc3ccceb8683f93e3a99ee6364e2
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582612"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506190"
 ---
 # <a name="overriding-the-onpaint-method"></a>OnPaint 메서드 재정의
 .NET Framework에 정의 된 이벤트를 재정의 하기 위한 기본 단계는 동일 하며 다음 목록에 요약 되어 있습니다.  
@@ -82,7 +82,7 @@ public class PaintEventArgs : EventArgs {
 }  
 ```  
   
- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 를 그릴 사각형 및 <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> 속성은 참조를 <xref:System.Drawing.Graphics> 개체입니다. 클래스는 <xref:System.Drawing?displayProperty=nameWithType> 네임 스페이스는 관리 되는 기능에 대 한 액세스를 제공 하는 클래스 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], 새로운 Windows 그래픽 라이브러리입니다. <xref:System.Drawing.Graphics> 지점, 문자열, 선, 원호, 타원, 및 기타 많은 도형을 그릴 메서드가 개체입니다.  
+ <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 를 그릴 사각형 및 <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> 속성은 참조를 <xref:System.Drawing.Graphics> 개체입니다. 클래스는 <xref:System.Drawing?displayProperty=nameWithType> 네임 스페이스는 관리 되는 GDI +에서 새 Windows 그래픽 라이브러리의 기능에 대 한 액세스를 제공 하는 클래스입니다. <xref:System.Drawing.Graphics> 지점, 문자열, 선, 원호, 타원, 및 기타 많은 도형을 그릴 메서드가 개체입니다.  
   
  호출 하는 컨트롤을 해당 <xref:System.Windows.Forms.Control.OnPaint%2A> 해당 시각적 표시를 변경 해야 할 때마다 메서드. 이 메서드가 발생을 <xref:System.Windows.Forms.Control.Paint> 이벤트입니다.  
   
