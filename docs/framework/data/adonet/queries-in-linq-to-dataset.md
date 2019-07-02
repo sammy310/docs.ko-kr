@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: deb8f4396700086627aaef35ead7f15f38d9320c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f8fabd38ec49070bc588196b38ec64942feab93f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583874"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504694"
 ---
 # <a name="queries-in-linq-to-dataset"></a>LINQ to DataSet에서 쿼리
 쿼리는 데이터 소스에서 데이터를 검색하는 식입니다. 관계형 데이터베이스에는 SQL이 사용되고 XML에는 XQuery가 사용되는 것과 같이 쿼리는 일반적으로 특수화된 쿼리 언어로 표현됩니다. 따라서 개발자는 쿼리하는 데이터 소스나 데이터 형식에 따라 새로운 쿼리 언어를 배워야 했습니다. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]는 다양한 데이터 소스 및 형식에 사용할 수 있는 간단하고 일관된 모델을 제공합니다. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 쿼리에서는 항상 프로그래밍 개체를 사용합니다.  
   
  [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 쿼리 작업은 데이터 소스 가져오기, 쿼리 만들기 및 쿼리 실행으로 구성됩니다.  
   
- <xref:System.Collections.Generic.IEnumerable%601> 제네릭 인터페이스를 구현한 데이터 소스는 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]을 통해 쿼리할 수 있습니다. <xref:System.Data.DataTableExtensions.AsEnumerable%2A>에 대해 <xref:System.Data.DataTable>을 호출하면 <xref:System.Collections.Generic.IEnumerable%601> 쿼리의 데이터 소스 역할을 하는 제네릭 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 인터페이스를 구현한 개체가 반환됩니다.  
+ <xref:System.Collections.Generic.IEnumerable%601> 제네릭 인터페이스를 구현한 데이터 소스는 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]을 통해 쿼리할 수 있습니다. 호출 <xref:System.Data.DataTableExtensions.AsEnumerable%2A> 에 <xref:System.Data.DataTable> 제네릭 구현 하는 개체를 반환 합니다 <xref:System.Collections.Generic.IEnumerable%601> 데이터 집합 쿼리에 LINQ에 대 한 데이터 원본으로 사용 되는 인터페이스입니다.  
   
  쿼리에는 데이터 소스에서 검색하려는 정보를 정확히 지정해야 합니다. 또한 정보를 반환하기 전에 정보에 대한 정렬, 그룹화 및 구체화하는 방법을 쿼리에 지정할 수 있습니다. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]에서 쿼리는 변수에 저장됩니다. 값 시퀀스를 반환하도록 설계된 쿼리인 경우에는 쿼리 변수 자체가 열거 가능한 형식이어야 합니다. 이 쿼리 변수는 어떠한 작업을 수행하거나 데이터를 반환하지 않고 쿼리 정보를 저장하기만 합니다. 쿼리를 만든 후에는 해당 쿼리를 실행하여 데이터를 검색해야 합니다.  
   
@@ -26,7 +26,7 @@ ms.locfileid: "65583874"
  값 시퀀스를 반환하는 지연된 쿼리와는 달리 singleton 값을 반환하는 쿼리는 즉시 실행됩니다. singleton 쿼리의 예로는 <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Average%2A> 및 <xref:System.Linq.Enumerable.First%2A>가 있습니다. singleton 결과를 계산하려면 쿼리 결과가 필요하므로 이러한 쿼리는 즉시 실행됩니다. 예를 들어, 쿼리 결과의 평균을 구하려면 평균 함수에 사용할 입력 데이터를 얻기 위해 쿼리를 실행해야 합니다. 또한 쿼리에서 <xref:System.Linq.Enumerable.ToList%2A> 또는 <xref:System.Linq.Enumerable.ToArray%2A> 메서드를 사용하여 singleton 값을 생성하지 않는 쿼리를 즉시 실행할 수도 있습니다. 쿼리 결과를 캐시하려는 경우 즉시 실행을 적용하는 이러한 기술을 유용하게 사용할 수 있습니다.
   
 ## <a name="queries"></a>쿼리  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리는 쿼리 식 구문과 메서드 기반 쿼리 구문이라는 두 가지 구문 형식으로 만들 수 있습니다.  
+ 이라는 두 가지 구문 LINQ to DataSet 쿼리를 작성할 수 있습니다: 쿼리 식 구문과 메서드 기반 쿼리 구문입니다.  
   
 ### <a name="query-expression-syntax"></a>쿼리 식 구문  
  쿼리 식은 선언적 쿼리 구문입니다. 이 구문을 사용하면 C# 또는 Visual Basic에서 SQL에서와 비슷한 형식으로 쿼리를 작성할 수 있습니다. 쿼리 식 구문을 사용하면 최소한의 코드로 데이터 소스에 대해 복잡한 필터링, 정렬 및 그룹화 작업을 수행할 수 있습니다. 자세한 내용은 [LINQ 쿼리 식](../../../csharp/linq/index.md#query-expression-overview) 하 고 [기본 쿼리 작업 (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)합니다.
@@ -39,7 +39,7 @@ ms.locfileid: "65583874"
  [!code-vb[DP LINQ to DataSet Examples#SelectSimple1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#selectsimple1)]  
   
 ### <a name="method-based-query-syntax"></a>메서드 기반 쿼리 구문  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리를 작성하는 데 메서드 기반 쿼리를 사용할 수도 있습니다. 메서드 기반 쿼리 구문은 람다 식을 매개 변수로 전달하는 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 연산자 메서드에 대한 직접 메서드 호출의 시퀀스입니다. 자세한 내용은 [람다 식](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)을 참조하세요.  
+ 메서드 기반 쿼리를 사용 하 여 LINQ to DataSet 쿼리 작성 하는 다른 방법은 됩니다. 메서드 기반 쿼리 구문은 람다 식을 매개 변수로 전달하는 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 연산자 메서드에 대한 직접 메서드 호출의 시퀀스입니다. 자세한 내용은 [람다 식](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)을 참조하세요.  
   
  이 예제에서는 <xref:System.Linq.Enumerable.Select%2A>를 사용하여 `Product` 테이블의 모든 행을 반환하고 제품 이름을 표시합니다.  
   

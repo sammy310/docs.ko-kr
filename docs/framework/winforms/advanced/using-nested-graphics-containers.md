@@ -9,15 +9,15 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-ms.openlocfilehash: 6bbf7918ccff184e597204b35aa005ab17d8d8af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4533fbba62c36714f55cd8bd55fde7a1c8f6c9e6
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766299"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505052"
 ---
 # <a name="using-nested-graphics-containers"></a>중첩된 Graphics 컨테이너 사용
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 일시적으로 바꾸거나의 상태 부분을 보강 하는 데 사용할 수 있는 컨테이너를 제공 된 <xref:System.Drawing.Graphics> 개체입니다. 호출 하 여 컨테이너를 만들어야 합니다 <xref:System.Drawing.Graphics.BeginContainer%2A> 메서드는 <xref:System.Drawing.Graphics> 개체입니다. 호출할 수 있습니다 <xref:System.Drawing.Graphics.BeginContainer%2A> 반복 하 여 중첩 된 컨테이너를 구성 합니다. 호출할 때마다 <xref:System.Drawing.Graphics.BeginContainer%2A> 를 호출 하 여 이루어야 <xref:System.Drawing.Graphics.EndContainer%2A>합니다.  
+GDI +-임시로 바꾸거나의 상태 부분을 보강 하는 데 사용할 수 있는 컨테이너를 제공 하는 중에 <xref:System.Drawing.Graphics> 개체입니다. 호출 하 여 컨테이너를 만들어야 합니다 <xref:System.Drawing.Graphics.BeginContainer%2A> 메서드는 <xref:System.Drawing.Graphics> 개체입니다. 호출할 수 있습니다 <xref:System.Drawing.Graphics.BeginContainer%2A> 반복 하 여 중첩 된 컨테이너를 구성 합니다. 호출할 때마다 <xref:System.Drawing.Graphics.BeginContainer%2A> 를 호출 하 여 이루어야 <xref:System.Drawing.Graphics.EndContainer%2A>합니다.  
   
 ## <a name="transformations-in-nested-containers"></a>중첩 된 컨테이너에서 변환  
  다음 예제는 <xref:System.Drawing.Graphics> 개체 및 해당 컨테이너 <xref:System.Drawing.Graphics> 개체입니다. 월드 변형을 <xref:System.Drawing.Graphics> 개체가 x 방향의 변환 100 단위 및 y 방향의 80 단위입니다. 컨테이너의 월드 변형을 30도 회전입니다. 코드에서는 호출 `DrawRectangle(pen, -60, -30, 120, 60)` 두 번입니다. 첫 번째 호출은 <xref:System.Drawing.Graphics.DrawRectangle%2A> ; 컨테이너 내부 즉, 호출에 대 한 호출 사이는 <xref:System.Drawing.Graphics.BeginContainer%2A> 고 <xref:System.Drawing.Graphics.EndContainer%2A>입니다. 두 번째 호출은 <xref:System.Drawing.Graphics.DrawRectangle%2A> 호출 후 <xref:System.Drawing.Graphics.EndContainer%2A>합니다.  

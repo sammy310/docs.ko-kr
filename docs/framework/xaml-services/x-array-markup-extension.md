@@ -8,19 +8,19 @@ helpviewer_keywords:
 - x:Array [XAML Services]
 - XAML [XAML Services], x:Array markup extension
 ms.assetid: c5358e14-d24c-44c7-b5eb-6062a4fd981c
-ms.openlocfilehash: 4f4e26eb3e5ccaf66b2173c7fc9952375c5f2a58
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8acb732841aa7aaaad3e8fdd2cf2962ff44dd60b
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62025407"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506065"
 ---
 # <a name="xarray-markup-extension"></a>x:Array 태그 확장
 XAML 태그 확장을 통해 개체의 배열에 대 한 일반 지원을 제공합니다. 이에 해당 합니다 `x:ArrayExtension` [MS XAML]에서 XAML 형식입니다.  
   
 ## <a name="xaml-object-element-usage"></a>XAML 개체 요소 사용  
   
-```  
+```xaml
 <x:Array Type="typeName">  
   arrayContents  
 </x:Array>  
@@ -55,17 +55,14 @@ XAML 태그 확장을 통해 개체의 배열에 대 한 일반 지원을 제공
   
  예를 들어, 다음 된 두 문자열의 간단한 배열 합니다 `sys` 접두사 (그리고 `x`) 배열 수준에서 정의 합니다.  
   
- [xaml]  
-  
- `<x:Array Type="sys:String" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`  
-  
- `xmlns:sys="clr-namespace:System;assembly=mscorlib">`  
-  
- `<sys:String>Hello</sys:String>`  
-  
- `<sys:String>World</sys:String>`  
-  
- `</x:Array>`  
+```xaml
+<x:Array Type="sys:String"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String>Hello</sys:String>
+    <sys:String>World</sys:String>
+</x:Array>
+```
   
  배열 요소로 사용 되는 사용자 지정 형식에 대 한 클래스는 XAML 개체 요소로 인스턴스화되는 것에 대 한 요구 사항을 지원도 해야 합니다. 자세한 내용은 [XAML 및 WPF에 대 한 사용자 지정 클래스](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)합니다.  
   

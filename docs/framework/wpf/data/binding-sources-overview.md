@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: a8129b2c8674fb5ecc4d513f57236fde66fdff14
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fe5cb97b4802c2b638a4b218a27da05468dc50fb
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659916"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505557"
 ---
 # <a name="binding-sources-overview"></a>바인딩 소스 개요
 데이터 바인딩에서 바인딩 소스 개체는 데이터를 가져오는 개체를 의미합니다. 이 항목에서는 바인딩 소스로 사용할 수 있는 개체 형식에 대해 설명합니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "64659916"
 |--------------------|-----------------|  
 |[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체|모든 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체의 공용 속성, 하위 속성 및 인덱서에 바인딩할 수 있습니다. 바인딩 엔진은 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 리플렉션을 사용하여 속성의 값을 가져옵니다. 구현 하는 개체 또는 <xref:System.ComponentModel.ICustomTypeDescriptor> 등록 되어 있거나 <xref:System.ComponentModel.TypeDescriptionProvider> 도 바인딩 엔진과 함께 작동 합니다.<br /><br /> 바인딩 소스로 사용할 수 있는 클래스를 구현하는 방법은 이 항목 뒷부분의 [바인딩 소스에 대한 클래스 구현](#classes)을 참조하세요.|  
 |동적 개체|사용 가능한 속성 및 인덱서를 구현 하는 개체에 바인딩할 수 있습니다는 <xref:System.Dynamic.IDynamicMetaObjectProvider> 인터페이스입니다. 코드의 멤버에 액세스할 수 있는 경우 바인딩할 수 있습니다. 예를 들어 동적 개체를 사용하여 `someObjet.AProperty`를 통해 코드의 멤버에 액세스할 수 있는 경우 바인딩 경로를 `AProperty`로 설정하여 바인딩할 수 있습니다.|  
-|[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] 개체|바인딩할 수 있습니다 [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] 같은 개체 <xref:System.Data.DataTable>합니다. 합니다 [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] <xref:System.Data.DataView> 구현 하는 <xref:System.ComponentModel.IBindingList> 바인딩 엔진이 수신 하는 변경 알림을 제공 하는 인터페이스입니다.|  
+|[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] 개체|와 같은 ADO.NET 개체를 바인딩할 수 <xref:System.Data.DataTable>입니다. ADO.NET <xref:System.Data.DataView> 구현 된 <xref:System.ComponentModel.IBindingList> 바인딩 엔진이 수신 하는 변경 알림을 제공 하는 인터페이스입니다.|  
 |[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 개체|바인딩할 하 고 실행할 수 있습니다 `XPath` 대 한 쿼리는 <xref:System.Xml.XmlNode>를 <xref:System.Xml.XmlDocument>, 또는 <xref:System.Xml.XmlElement>합니다. 에 액세스 하는 편리한 방법을 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 태그의 바인딩 소스인 데이터 사용 하는 것을 <xref:System.Windows.Data.XmlDataProvider> 개체입니다. 자세한 내용은 [XMLDataProvider 및 XPath 쿼리를 사용하여 XML 데이터에 바인딩](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)을 참조하세요.<br /><br /> 에 바인딩할 수도 있습니다는 <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XDocument>, LINQ to XML 사용 하 여 이러한 형식의 개체에서 실행 되는 쿼리의 결과에 바인딩 또는 합니다. LINQ to XML 사용 하 여 태그의 바인딩 소스인 XML 데이터에 액세스 하는 편리한 방법을 사용 하는 것을 <xref:System.Windows.Data.ObjectDataProvider> 개체입니다. 자세한 내용은 [XDocument, XElement 또는 LINQ for XML 쿼리 결과에 바인딩](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)을 참조하세요.|  
 |<xref:System.Windows.DependencyObject> 개체|모든 종속성 속성에 바인딩할 수 있습니다 <xref:System.Windows.DependencyObject>합니다. 예제는 [두 컨트롤의 속성 바인딩](how-to-bind-the-properties-of-two-controls.md)을 참조하세요.|  
   

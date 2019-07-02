@@ -7,12 +7,12 @@ helpviewer_keywords:
 - images [Windows Forms], about images
 - Windows Forms, images
 ms.assetid: 7152b45b-a55c-49bc-8c78-ae002a844f71
-ms.openlocfilehash: 2ce19642b37946db7a172e61004688059dba61db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5f50d21f4793efb497eb5b030d96a7dc3ab54a04
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62003940"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505704"
 ---
 # <a name="images-bitmaps-and-metafiles"></a>이미지, 비트맵 및 메타파일
 `Image` 클래스는 래스터 이미지(비트맵) 및 벡터 이미지(메타파일) 작업을 위한 메서드를 제공하는 추상 기본 클래스입니다. `Bitmap` 클래스와 <xref:System.Drawing.Imaging.Metafile> 클래스는 모두 `Image` 클래스에서 상속됩니다. `Bitmap` 클래스는 래스터 이미지를 로드, 저장 및 조작하기 위한 추가 메서드를 제공하여 `Image` 클래스의 기능을 확장합니다. <xref:System.Drawing.Imaging.Metafile> 클래스는 벡터 이미지를 기록 및 검사하기 위한 추가 메서드를 제공하여 `Image` 클래스의 기능을 확장합니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "62003940"
  다양한 이미지 형식을 설명합니다.  
   
  [GDI+의 메타파일](metafiles-in-gdi.md)  
- 메타파일에 대한 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 지원을 설명합니다.  
+ GDI + 메타 파일에 대 한 지원을 설명합니다.  
   
  [GDI+에서 이미지 그리기, 위치 지정 및 복제](drawing-positioning-and-cloning-images-in-gdi.md)  
  관리 코드로 벡터 및 래스터 이미지를 그리기 위한 메서드를 설명합니다.  

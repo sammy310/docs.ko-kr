@@ -8,19 +8,19 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-ms.openlocfilehash: 9cff13cabb0cd496ee4e628664e4b92bd9e60808
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2df74e022b842f7e5c9ff80f6aeddfce51af5eab
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063729"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505831"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>방법: 색 매트릭스를 사용하여 단색으로 변환
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 제공 된 <xref:System.Drawing.Image> 고 <xref:System.Drawing.Bitmap> 저장 및 이미지 조작을 위한 클래스입니다. <xref:System.Drawing.Image> 및 <xref:System.Drawing.Bitmap> 개체는 32 비트 숫자도 각 픽셀의 색을 저장 합니다. 각각 8 비트가 빨간색, 녹색, 파랑 및 알파에 대 한 합니다. 각 네 가지 구성 요소에는 0부터 농도가 없음을 나타내고 255 전체 강도 나타내는 0부터 255 까지의 숫자입니다. 색의 투명도 지정 하는 알파 구성 요소: 0은 완전히 투명 하 고 255는 완전히 불투명 한 합니다.  
+GDI +를 제공 합니다 <xref:System.Drawing.Image> 고 <xref:System.Drawing.Bitmap> 저장 및 이미지 조작을 위한 클래스입니다. <xref:System.Drawing.Image> 및 <xref:System.Drawing.Bitmap> 개체는 32 비트 숫자도 각 픽셀의 색을 저장 합니다. 각각 8 비트가 빨간색, 녹색, 파랑 및 알파에 대 한 합니다. 각 네 가지 구성 요소에는 0부터 농도가 없음을 나타내고 255 전체 강도 나타내는 0부터 255 까지의 숫자입니다. 색의 투명도 지정 하는 알파 구성 요소: 0은 완전히 투명 하 고 255는 완전히 불투명 한 합니다.  
   
  색 벡터는 (빨강, 녹색, 파란색, 알파) 형식의 4 중 튜플입니다. 예를 들어 색 벡터 (0, 255, 0, 255)를 빨강 및 파랑, 녹색 농도가 불투명 한 색을 나타냅니다.  
   
- 색을 나타내는 다른 규칙에 대 한 전체 강도로 돌아가는 숫자 1을 사용 합니다. 해당 규칙을 사용 하 여 이전 단락에서 설명한 색을 표시 벡터 (0, 1, 0, 1). [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 색 변환을 수행 하는 경우 전체 강도로 돌아가는으로 1의 규칙을 사용 합니다.  
+ 색을 나타내는 다른 규칙에 대 한 전체 강도로 돌아가는 숫자 1을 사용 합니다. 해당 규칙을 사용 하 여 이전 단락에서 설명한 색을 표시 벡터 (0, 1, 0, 1). GDI + 1의 규칙으로 사용 전체 강도로 돌아가는 색 변환을 수행 하는 경우.  
   
  4x4 행렬으로 색 벡터를 곱하여 색 벡터로 선형 변환 (회전, 크기 조정 등)를 적용할 수 있습니다. 그러나 비선형 변환을 수행 하는 4x4 행렬을 사용할 수 없습니다. 각 색 벡터에 더미 다섯 번째 좌표 (예를 들어, 숫자 1)을 추가 하는 경우 변환이 선형 조합을 적용할 5 × 5 행렬을 사용할 수 있습니다. 선형 번역 뒤에 변환으로 구성 된 변환에는 3x3 유사 변형을 라고 합니다.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "65063729"
   
 1. Double 빨강 구성 요소  
   
-2. 0.2 빨강, 녹색 및 파랑 구성 요소에 추가  
+2. 0\.2 빨강, 녹색 및 파랑 구성 요소에 추가  
   
  나열 된 순서로 다음 행렬 곱셈 변환이 수행 합니다.  
   

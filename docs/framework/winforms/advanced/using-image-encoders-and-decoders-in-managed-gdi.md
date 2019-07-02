@@ -5,17 +5,17 @@ helpviewer_keywords:
 - image encoders [Windows Forms], using
 - image decoders [Windows Forms], using
 ms.assetid: 0e838ea1-4e7e-4334-b882-ab25df607b8b
-ms.openlocfilehash: e56bc20eb55d694d19b25d9e94e5c9d9e3952628
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8cd66f3ce3da462867da9e23c38b3f6d877c058c
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666441"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505084"
 ---
 # <a name="using-image-encoders-and-decoders-in-managed-gdi"></a>관리형 GDI+에서 이미지 인코더 및 디코더 사용
-합니다 <xref:System.Drawing> 네임 스페이스를 제공 합니다 <xref:System.Drawing.Image> 및 <xref:System.Drawing.Bitmap> 저장 및 이미지 조작을 위한 클래스입니다. 이미지 인코더를 사용 하 여 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]를 디스크에 메모리에서 이미지를 작성할 수 있습니다. 이미지 디코더를 사용 하 여 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]을 메모리로 디스크에서 이미지를 로드할 수 있습니다. 데이터를 해석 하는 인코더를 <xref:System.Drawing.Image> 또는 <xref:System.Drawing.Bitmap> 지정 된 디스크 파일 형식으로 개체입니다. 필요한 형식으로 디스크 파일에 데이터를 해석 하는 디코더를 <xref:System.Drawing.Image> 및 <xref:System.Drawing.Bitmap> 개체입니다.  
+합니다 <xref:System.Drawing> 네임 스페이스를 제공 합니다 <xref:System.Drawing.Image> 및 <xref:System.Drawing.Bitmap> 저장 및 이미지 조작을 위한 클래스입니다. GDI +에서 이미지 인코더를 사용 하 여 디스크에 메모리에서 이미지를 작성할 수 있습니다. 이미지 디코더 GDI +를 사용 하 여 메모리를 디스크에서 이미지를 로드할 수 있습니다. 데이터를 해석 하는 인코더를 <xref:System.Drawing.Image> 또는 <xref:System.Drawing.Bitmap> 지정 된 디스크 파일 형식으로 개체입니다. 필요한 형식으로 디스크 파일에 데이터를 해석 하는 디코더를 <xref:System.Drawing.Image> 및 <xref:System.Drawing.Bitmap> 개체입니다.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 기본 제공 인코더 및 디코더는 다음 파일 형식을 지 원하는 있습니다.  
+ GDI + 기본 제공 인코더 및 디코더는 다음 파일 형식을 지 원하는 있습니다.  
   
 - BMP  
   
@@ -27,7 +27,7 @@ ms.locfileid: "64666441"
   
 - TIFF  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 다음 파일 형식을 지 원하는 기본 제공 디코더에 있습니다.  
+ GDI +는 다음 파일 형식을 지 원하는 기본 제공 디코더에 있습니다.  
   
 - WMF  
   

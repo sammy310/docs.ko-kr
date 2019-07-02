@@ -8,17 +8,17 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-ms.openlocfilehash: 3266724503960b8b45cd134dfa5b007a58d578fa
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 6c02f7e5744828fd8eddc88be8d7da28f3bc2a2a
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169808"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505782"
 ---
 # <a name="how-to-read-image-metadata"></a>방법: 이미지 메타데이터 읽기
-일부 이미지 파일 이미지의 기능을 확인 하려면 읽을 수 있는 메타 데이터를 포함 합니다. 예를 들어, 디지털 사진 제조업체 및 모델의 이미지 캡처에 사용한 카메라 결정할 읽을 수 있는 메타 데이터를 포함할 수 있습니다. 사용 하 여 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], 기존 메타 데이터를 읽을 수 있습니다 및 이미지 파일에 새 메타 데이터를 쓸 수도 있습니다.  
+일부 이미지 파일 이미지의 기능을 확인 하려면 읽을 수 있는 메타 데이터를 포함 합니다. 예를 들어, 디지털 사진 제조업체 및 모델의 이미지 캡처에 사용한 카메라 결정할 읽을 수 있는 메타 데이터를 포함할 수 있습니다. GDI +를 사용 하 여 기존 메타 데이터를 읽을 수 있습니다 및 이미지 파일에 새 메타 데이터를 쓸 수도 있습니다.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 메타 데이터의 개별 항목을 저장 한 <xref:System.Drawing.Imaging.PropertyItem> 개체입니다. 읽을 수 있습니다는 <xref:System.Drawing.Image.PropertyItems%2A> 의 속성을 <xref:System.Drawing.Image> 파일에서 모든 메타 데이터를 검색할 개체입니다. 합니다 <xref:System.Drawing.Image.PropertyItems%2A> 속성의 배열을 반환 <xref:System.Drawing.Imaging.PropertyItem> 개체입니다.  
+ GDI +의 메타 데이터의 개별 항목을 저장 한 <xref:System.Drawing.Imaging.PropertyItem> 개체입니다. 읽을 수 있습니다는 <xref:System.Drawing.Image.PropertyItems%2A> 의 속성을 <xref:System.Drawing.Image> 파일에서 모든 메타 데이터를 검색할 개체입니다. 합니다 <xref:System.Drawing.Image.PropertyItems%2A> 속성의 배열을 반환 <xref:System.Drawing.Imaging.PropertyItem> 개체입니다.  
   
  A <xref:System.Drawing.Imaging.PropertyItem> 개체에는 다음 네 가지 속성이: `Id`를 `Value`를 `Len`, 및 `Type`합니다.  
   

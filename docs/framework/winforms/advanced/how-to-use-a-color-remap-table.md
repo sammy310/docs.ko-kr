@@ -9,17 +9,17 @@ helpviewer_keywords:
 - custom colors [Windows Forms], creating with color remap table
 - color remap tables [Windows Forms], using
 ms.assetid: 977df1ce-8665-42d4-9fb1-ef7f0ff63419
-ms.openlocfilehash: bff5e3585804e027f2d0e78e5ea525f933a351a5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 360ec30563ee5001d784dc7c4ccdb50563867c29
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593180"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505768"
 ---
 # <a name="how-to-use-a-color-remap-table"></a>방법: 색 다시 매핑 변경 테이블 사용
 다시 매핑하는 프로세스 색 다시 매핑 테이블에 따라 이미지의 색을 변환입니다. 색 다시 매핑 테이블을 배열이 <xref:System.Drawing.Imaging.ColorMap> 개체입니다. 각 <xref:System.Drawing.Imaging.ColorMap> 배열의 개체에는 <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> 속성 및 <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> 속성입니다.  
   
- 때 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 이전 색 배열을 비교할 이미지의 각 픽셀 이미지를 그립니다. 이전 색상을 픽셀의 색 일치 하는 경우 해당 새로운 색으로 변경 됩니다. 색이 렌더링에만 변경 됩니다-이미지 자체의 색상 값 (에 저장 된를 <xref:System.Drawing.Image> 또는 <xref:System.Drawing.Bitmap> 개체)는 변경 되지 않습니다.  
+ GDI + 이미지를 그립니다, 이미지의 각 픽셀의 이전 색 배열에 비교 됩니다. 이전 색상을 픽셀의 색 일치 하는 경우 해당 새로운 색으로 변경 됩니다. 색이 렌더링에만 변경 됩니다-이미지 자체의 색상 값 (에 저장 된를 <xref:System.Drawing.Image> 또는 <xref:System.Drawing.Bitmap> 개체)는 변경 되지 않습니다.  
   
  매핑된 이미지를 그릴 배열을 초기화할 <xref:System.Drawing.Imaging.ColorMap> 개체입니다. 해당 배열을 전달 합니다 <xref:System.Drawing.Imaging.ImageAttributes.SetRemapTable%2A> 메서드의 <xref:System.Drawing.Imaging.ImageAttributes> 개체를 전달한를 <xref:System.Drawing.Imaging.ImageAttributes> 개체를 <xref:System.Drawing.Graphics.DrawImage%2A> 메서드의 <xref:System.Drawing.Graphics> 개체.  
   

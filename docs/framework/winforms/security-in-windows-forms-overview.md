@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 471ed75a922ab8a7df18f2e4a3ccd89ede171248
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 88301663a78bb7d6f31c23bb03409ca44a2e55a9
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487257"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506173"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows Forms의 보안 개요
 
@@ -77,7 +77,7 @@ ClickOnce에 클라이언트 컴퓨터에서 높은 권한을 요청 하는 두 
 
 선택하는 기술은 배포 환경에 따라 달라집니다. 자세한 내용은 [ClickOnce 배포 전략 선택](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)을 참조하세요.
 
-기본적으로 Visual Studio 또는.NET Framework SDK 도구 (Mage.exe 및 MageUI.exe)를 사용 하 여 배포 하는 ClickOnce 응용 프로그램은 완전 신뢰 된 클라이언트 컴퓨터에서 실행 되도록 구성 됩니다. 부분 신뢰를 사용하거나 일부 추가 권한만 사용하여 애플리케이션을 배포하는 경우 이 기본값을 변경해야 합니다. 배포를 구성할 때 Visual Studio 또는.NET Framework SDK 도구 MageUI.exe 사용 하 여이 수행할 수 있습니다. MageUI.exe를 사용 하는 방법에 대 한 자세한 내용은 연습을 참조 하세요. 명령줄에서 ClickOnce 응용 프로그램을 배포 합니다.  또한 참조 [방법: ClickOnce 응용 프로그램에 대 한 사용자 지정 권한 설정](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) 또는 [방법: ClickOnce 응용 프로그램에 대 한 사용자 지정 권한을 설정](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)합니다.
+기본적으로 Visual Studio 또는.NET Framework SDK 도구 (Mage.exe 및 MageUI.exe)를 사용 하 여 배포 하는 ClickOnce 응용 프로그램은 완전 신뢰 된 클라이언트 컴퓨터에서 실행 되도록 구성 됩니다. 부분 신뢰를 사용하거나 일부 추가 권한만 사용하여 애플리케이션을 배포하는 경우 이 기본값을 변경해야 합니다. 배포를 구성할 때 Visual Studio 또는.NET Framework SDK 도구 MageUI.exe 사용 하 여이 수행할 수 있습니다. MageUI.exe를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [연습: 수동으로 ClickOnce 응용 프로그램을 배포](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)합니다.  또한 참조 [방법: ClickOnce 응용 프로그램에 대 한 사용자 지정 권한 설정](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) 또는 [방법: ClickOnce 응용 프로그램에 대 한 사용자 지정 권한을 설정](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)합니다.
 
 ClickOnce 및 권한 상승의 보안 측면에 대 한 자세한 내용은 참조 [ClickOnce 응용 프로그램 보안](/visualstudio/deployment/securing-clickonce-applications)합니다. 신뢰할 수 있는 애플리케이션 배포에 대한 자세한 내용은 [신뢰할 수 있는 애플리케이션 배포 개요](/visualstudio/deployment/trusted-application-deployment-overview)를 참조하세요.
 

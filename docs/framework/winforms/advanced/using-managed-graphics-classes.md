@@ -6,19 +6,19 @@ helpviewer_keywords:
 - graphics [Windows Forms], using in Windows Forms
 - graphics [Windows Forms], managed classes
 ms.assetid: e6d1a42d-2100-46aa-97e6-a5ddc0baaae5
-ms.openlocfilehash: 86f6b3fff1937694f4b7890249e36d5e12b769dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b6811e1412e1dc5b0731810f159bac633cd1eb2
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766170"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505041"
 ---
 # <a name="using-managed-graphics-classes"></a>관리형 그래픽 클래스 사용
-다음 항목을 사용 하는 방법에 설명 합니다 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] API framework의 관리 되는 클래스입니다.  
+다음 항목에서는 프레임 워크를 관리 되는 클래스에서 GDI + API를 사용 하는 방법에 설명 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [그래픽 프로그래밍 시작](getting-started-with-graphics-programming.md)  
- 기본적인 작업을 수행 하는 방법에 설명 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]합니다.  
+ GDI +를 사용 하 여 기본 작업을 수행 하는 방법을 설명 합니다.  
   
  [펜을 사용하여 선과 도형 그리기](using-a-pen-to-draw-lines-and-shapes.md)  
  펜을 생성 하 고 다양 한 선과 도형 그리기를 사용 하는 방법을 보여 줍니다.  

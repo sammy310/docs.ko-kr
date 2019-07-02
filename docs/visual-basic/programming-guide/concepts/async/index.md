@@ -2,12 +2,12 @@
 title: Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
-ms.openlocfilehash: 030ef4549bc820cab66d33fa81c205158c09fff9
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 0d8810da424b0759dcfba882efe462514a14145a
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67026102"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505962"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)
 
@@ -39,7 +39,7 @@ Visual Studio 2012에는 Windows 런타임 뿐 아니라 .NET Framework 4.5 이�
 
 ## <a name="BKMK_HowtoWriteanAsyncMethod"></a> 작성이 간편한 Async 메서드
 
-Visual Basic의 [Async](../../../../visual-basic/language-reference/modifiers/async.md) 및 [Await](../../../../visual-basic/language-reference/modifiers/async.md) 키워드는 비동기 프로그래밍의 핵심입니다. 이 키워드 두 개를 사용하면 .NET Framework 또는 Windows 런타임의 리소스를 사용하여 동기 메서드를 만드는 것만큼 쉽게 비동기 메서드를 만들 수 있습니다. `Async` 및 `Await`를 사용하여 정의하는 비동기 메서드를 비동기 메서드라고 합니다.
+Visual Basic의 [Async](../../../../visual-basic/language-reference/modifiers/async.md) 및 [Await](../../../../visual-basic/language-reference/operators/await-operator.md) 키워드는 비동기 프로그래밍의 핵심입니다. 이 키워드 두 개를 사용하면 .NET Framework 또는 Windows 런타임의 리소스를 사용하여 동기 메서드를 만드는 것만큼 쉽게 비동기 메서드를 만들 수 있습니다. `Async` 및 `Await`를 사용하여 정의하는 비동기 메서드를 비동기 메서드라고 합니다.
 
 다음 예제에서는 비동기 메서드를 보여줍니다. 코드의 거의 모든 내용이 익숙할 것입니다. 주석은 비동기를 만들 때 추가하는 기능을 호출합니다.
 

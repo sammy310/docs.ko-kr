@@ -6,15 +6,15 @@ helpviewer_keywords:
 - shapes [Windows Forms], filling
 - brushes
 ms.assetid: bf8f7fff-5a90-41e8-9051-494449fb2844
-ms.openlocfilehash: 95112321794359dc282749b94fd9061305b42c23
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb8112076bf0b835b558a9f88ae2ff59bdb8476d
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61926947"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505180"
 ---
 # <a name="using-a-brush-to-fill-shapes"></a>브러시를 사용하여 도형 채우기
-A [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> 개체의 닫힌된 도형 내부를 채우는 데 사용 됩니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 여러 채우기 스타일을 정의 합니다: 단색, 빗살 무늬, 이미지 질감 및 색 그라데이션 합니다.  
+GDI + <xref:System.Drawing.Brush> 개체의 닫힌된 도형 내부를 채우는 데 사용 됩니다. GDI +-여러 채우기 스타일을 정의 하는 중: 단색, 빗살 무늬, 이미지 질감 및 색 그라데이션 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [방법: 단색으로 도형 채우기](how-to-fill-a-shape-with-a-solid-color.md)  

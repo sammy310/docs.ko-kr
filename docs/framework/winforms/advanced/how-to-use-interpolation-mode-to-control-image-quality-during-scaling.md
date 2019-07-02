@@ -9,15 +9,15 @@ helpviewer_keywords:
 - images [Windows Forms], scaling
 - images [Windows Forms], controlling quality
 ms.assetid: fde9bccf-8aa5-4b0d-ba4b-788740627b02
-ms.openlocfilehash: 609851737f142cfcbfeace3b1c020f3ac27bfd7c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ab0ff93b3ee26467c0de448efd31b698167f95c2
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64636846"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505719"
 ---
 # <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a>방법: 배율 조정 시 보간 모드를 사용하여 이미지 품질 관리
-보간 모드를 <xref:System.Drawing.Graphics> 방식에 영향을 미칩니다 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 확장 (확장 및 축소) 이미지입니다. <xref:System.Drawing.Drawing2D.InterpolationMode> 열거형은 다음 목록에 나와 있는 여러 보간 모드를 정의 합니다.  
+보간 모드를 <xref:System.Drawing.Graphics> 방법은 GDI + 확장 (확장 및 축소) 이미지에 영향을 미칩니다. <xref:System.Drawing.Drawing2D.InterpolationMode> 열거형은 다음 목록에 나와 있는 여러 보간 모드를 정의 합니다.  
   
 - <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor>  
   

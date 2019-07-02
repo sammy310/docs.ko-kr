@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 00b0773ba66ad8e0acfdccb37964030a9cacff52
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87a2f6853136b4b3e622968327bde01c9862bfdf
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664170"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504636"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>단일 클래스 쿼리(LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 쿼리를 구현 하는 데이터 소스에서 작동 합니다 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스 또는 <xref:System.Linq.IQueryable%601> 인터페이스입니다. <xref:System.Data.DataTable> 클래스에는 두 인터페이스가 구현되어 있지 않으므로 <xref:System.Data.DataTableExtensions.AsEnumerable%2A> 쿼리의 <xref:System.Data.DataTable> 절에서 `From`을 소스로 사용하려면 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 메서드를 호출해야 합니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "61664170"
  [!code-csharp[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#where1)]  
  [!code-vb[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#where1)] 
   
- 지역 변수 쿼리는 표준 쿼리 연산자 또는 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]의 경우 <xref:System.Data.DataSet> 클래스 관련 연산자에서 하나 이상의 쿼리 연산자를 적용하여 하나 이상의 정보 소스에 대해 작동하는 쿼리 식으로 초기화됩니다. 이전 예제의 쿼리 식에서는 두 개의 표준 쿼리 연산자인 `Where`와 `Select`를 사용합니다.  
+ 표준 쿼리 연산자에서 하나 이상의 쿼리 연산자를 적용 하 여 하나 이상의 정보 소스에서 작동 하는 쿼리 식을 사용 하 여 또는 LINQ to DataSet 는특정연산자의경우지역변수쿼리인스턴스화될<xref:System.Data.DataSet>클래스입니다. 이전 예제의 쿼리 식에서는 두 개의 표준 쿼리 연산자인 `Where`와 `Select`를 사용합니다.  
   
  `Where` 절에서는 조건을 기준으로 시퀀스를 필터링하며, 이 경우에는 `OnlineOrderFlag`가 `true`로 설정됩니다. `Select` 연산자는 연산자로 전달된 인수를 캡처하는 열거 가능한 개체를 할당하고 반환합니다. 위 예제에서는 세 개의 `SalesOrderID`, `OrderDate` 및 `SalesOrderNumber` 속성을 가진 익명 형식이 만들어집니다. 이러한 세 속성의 값은 `SalesOrderID` 테이블에 있는 `OrderDate`, `SalesOrderNumber` 및 `SalesOrderHeader` 열의 값으로 설정됩니다.  
   

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - curves [Windows Forms], drawing
 ms.assetid: ace6e8d4-4e94-486b-9681-758a6667dc7f
-ms.openlocfilehash: 746d757510776b8d6894c456bb1860a5d68632c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fef3361ca29ed3e118a54b3e81dd82e48b831bef
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942976"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505643"
 ---
 # <a name="lines-curves-and-shapes"></a>선, 곡선 및 도형
-벡터 그래픽 부분 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 선, 곡선을 그리는을 그리기 및 도형 채우기 사용 됩니다.  
+GDI +의 벡터 그래픽 부분 선, 곡선을 그리는을 그리기 및 도형 채우기 사용 됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [벡터 그래픽 개요](vector-graphics-overview.md)  
