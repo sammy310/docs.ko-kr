@@ -214,14 +214,14 @@
                   href: keywords/using-statement.md
             - name: extern alias
               href: keywords/extern-alias.md
-        - name: 연산자 키워드
+        - name: 형식 테스트 키워드
           items:
-            - name: as
-              href: keywords/as.md
-            - name: await
-              href: keywords/await.md
             - name: is
               href: keywords/is.md
+        - name: 연산자 키워드
+          items:
+            - name: await
+              href: keywords/await.md
             - name: new
               items:
                 - name: 'new 연산자, 한정자 및 제약 조건'
@@ -234,8 +234,6 @@
                   href: keywords/new-constraint.md
             - name: sizeof
               href: keywords/sizeof.md
-            - name: typeof
-              href: keywords/typeof.md
             - name: nameof
               href: keywords/nameof.md
         - name: 변환 키워드
@@ -342,30 +340,34 @@
         - name: 멤버 액세스 연산자
           href: operators/member-access-operators.md
           displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation'
+        - name: 형식 테스트 및 변환 연산자
+          href: operators/type-testing-and-conversion-operators.md
+          displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), cast'
         - name: 포인터 관련 연산자
           href: operators/pointer-related-operators.md
           displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'
-        - name: () 연산자
-          href: operators/invocation-operator.md
-        - name: ':: 연산자'
-          href: operators/namespace-alias-qualifer.md
+        - name: = 연산자
+          href: operators/assignment-operator.md
+          displayName: 'assignment, ref'
         - name: + 및 += 연산자
           href: operators/addition-operator.md
           displayName: 'string concatenation, delegate combination, event subscription'
         - name: '- 및 -= 연산자'
           href: operators/subtraction-operator.md
           displayName: 'delegate removal, event unsubscription'
-        - name: = 연산자
-          href: operators/assignment-operator.md
         - name: '?: 연산자'
           href: operators/conditional-operator.md
-          displayName: 'conditional, ternary'
+          displayName: 'conditional, ternary, ref'
         - name: '?? 연산자'
           href: operators/null-coalescing-operator.md
           displayName: null-coalescing
         - name: => 연산자
           href: operators/lambda-operator.md
-        - name: stackalloc
+          displayName: lambda
+        - name: ':: 연산자'
+          href: operators/namespace-alias-qualifer.md
+          displayName: namespace alias qualifier
+        - name: stackalloc 연산자
           href: operators/stackalloc.md
         - name: true 및 false 연산자
           href: operators/true-false-operators.md

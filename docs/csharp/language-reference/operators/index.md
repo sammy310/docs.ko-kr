@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 98f73ed958f8b43cd4fea700a478cf3337ea68db
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 7d8ee9be8f399bca0aace61d344b19094c9518b0
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025141"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401461"
 ---
 # <a name="c-operators-c-reference"></a>C# 연산자(C# 참조)
 
@@ -51,9 +51,9 @@ C#은 기본 제공 형식에서 지원되는 미리 정의된 여러 연산자�
 
 [x--](arithmetic-operators.md#decrement-operator---) –  후위 감소. x의 값을 반환하고 1보다 작은 x 값(일반적으로 정수 1을 뺌)으로 스토리지 위치를 업데이트합니다.
 
-[new](../keywords/new-operator.md) – 형식 인스턴스화.
+[new](new-operator.md) – 형식 인스턴스화.
 
-[typeof](../keywords/typeof.md) – 피연산자를 나타내는 <xref:System.Type> 개체를 반환합니다.
+[typeof](type-testing-and-conversion-operators.md#typeof-operator) – 피연산자를 나타내는 <xref:System.Type> 개체를 반환합니다.
 
 [checked](../keywords/checked.md) – 정수 연산에 오버플로 검사를 사용하도록 설정합니다.
 
@@ -87,7 +87,7 @@ C#은 기본 제공 형식에서 지원되는 미리 정의된 여러 연산자�
 
 [--x](arithmetic-operators.md#decrement-operator---) – 전위 감소 1보다 작은 x 값(일반적으로 정수 1을 뺌)으로 스토리지 위치를 업데이트한 후 x의 값을 반환합니다.
 
-[(T)x](invocation-operator.md) – 형식 캐스팅
+[(T)x](type-testing-and-conversion-operators.md#cast-operator-) – 형식 캐스팅
 
 [await](../keywords/await.md) – `Task`를 대기합니다.
 
@@ -137,9 +137,9 @@ C#은 기본 제공 형식에서 지원되는 미리 정의된 여러 연산자�
 
 [x >= y](comparison-operators.md#greater-than-or-equal-operator-) – 보다 크거나 같음
 
-[is](../keywords/is.md) – 형식 호환성. 계산된 왼쪽 피연산자를 오른쪽 피연산자에 지정된 형식(정적 형식)으로 캐스팅할 수 있는 경우 true를 반환합니다.
+[is](type-testing-and-conversion-operators.md#is-operator) – 형식 호환성. 계산된 왼쪽 피연산자를 오른쪽 피연산자에 지정된 형식으로 캐스팅할 수 있는 경우 `true`를 반환합니다.
 
-[as](../keywords/as.md) – 형식 변환. 오른쪽 피연산자에 지정된 형식(정적 유형)으로 캐스팅된 왼쪽 피연산자를 반환하지만 `(T)x`가 예외를 throw하는 경우 `as`는 `null`을 반환합니다.
+[as](type-testing-and-conversion-operators.md#as-operator) – 형식 변환. 오른쪽 피연산자에 지정된 형식으로 캐스팅된 왼쪽 피연산자를 반환하지만 `(T)x`가 예외를 throw하는 경우 `as`는 `null`을 반환합니다.
 
 ## <a name="equality-operators"></a>같음 연산자
 
@@ -171,13 +171,13 @@ C#은 기본 제공 형식에서 지원되는 미리 정의된 여러 연산자�
 
 이 연산자는 다음 섹션보다 우선 순위가 높고 이전 섹션보다 우선 순위가 낮습니다.
 
-[x && y](boolean-logical-operators.md#conditional-logical-and-operator-) – 논리적 AND. 첫 번째 피연산자가 false로 확인되면, C#에서 두 번째 피연산자를 계산하지 않습니다.
+[x && y](boolean-logical-operators.md#conditional-logical-and-operator-) – 논리적 AND. `x`가 `false`이면 `y`는 계산되지 않습니다.
 
 ## <a name="conditional-or-operator"></a>조건부 OR 연산자
 
 이 연산자는 다음 섹션보다 우선 순위가 높고 이전 섹션보다 우선 순위가 낮습니다.
 
-[x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) – 논리적 OR. 첫 번째 피연산자가 true로 확인되면, C#에서 두 번째 피연산자를 계산하지 않습니다.
+[x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) – 논리적 OR. `x`가 `true`이면 `y`는 계산되지 않습니다.
 
 ## <a name="null-coalescing-operator"></a>Null 병합 연산자
 
