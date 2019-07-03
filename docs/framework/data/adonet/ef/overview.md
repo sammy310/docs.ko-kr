@@ -2,12 +2,12 @@
 title: Entity Framework 개요
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: e6c96326991c6f883ad670393bb5c2691f8ad29e
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 498d0478dc94048a69c393151d3ff8a752706e1c
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307339"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539478"
 ---
 # <a name="entity-framework-overview"></a>Entity Framework 개요
 
@@ -45,7 +45,7 @@ ms.locfileid: "67307339"
 
 단순한 개체-관계형 매핑 솔루션 이상의 의미가 있는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]는 근본적으로 응용 프로그램이 개념적 모델의 엔터티 및 관계로 표현된 데이터에 액세스하여 변경할 수 있도록 합니다. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]는 모델 및 매핑 파일의 정보를 사용하여 개념적 모델로 표현된 엔터티 형식에 대한 개체 쿼리를 데이터 소스에 대한 쿼리로 변환합니다. 쿼리 결과를 개체로 구체화 되는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 관리 합니다. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 개념적 모델을 쿼리하고 개체를 반환 하는 다음 방법을 제공 합니다.
 
-- [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]. 개념적 모델에 정의된 엔터티 형식을 쿼리하기 위한 LINQ(Language-Integrated Query) 지원을 제공합니다. 자세한 내용은 [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)합니다.
+- LINQ to Entities 합니다. 개념적 모델에 정의된 엔터티 형식을 쿼리하기 위한 LINQ(Language-Integrated Query) 지원을 제공합니다. 자세한 내용은 [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)합니다.
 
 - [!INCLUDE[esql](../../../../../includes/esql-md.md)]. 개념적 모델의 엔터티를 직접 사용 하며 엔터티 데이터 모델 개념을 지 원하는 sql 저장소에 독립적인 언어입니다. [!INCLUDE[esql](../../../../../includes/esql-md.md)] 개체 쿼리와 EntityClient 공급자를 사용 하 여 실행 된 쿼리를 모두 사용 됩니다. 자세한 내용은 [Entity SQL 개요](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)합니다.
 

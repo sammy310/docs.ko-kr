@@ -2,12 +2,12 @@
 title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 570d6a60e4f34e89e758b505353a083b959d9def
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8a69d74966b99d78b4a7addaa4323d61d82ce8d5
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630725"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539768"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities에서는 개발자가 Visual Basic 또는 Visual C#을 사용하여 Entity Framework 개념적 모델에 대한 쿼리를 작성할 수 있도록 해 주는 LINQ(Language-Integrated Query) 지원을 제공합니다. Entity Framework에 대한 쿼리는 개체 컨텍스트에 대해 실행되는 명령 트리 쿼리로 표현됩니다. LINQ to Entities는 LINQ(Language-Integrated Query) 쿼리를 명령 트리 쿼리로 변환하여 Entity Framework에 대해 실행한 다음 Entity Framework와 LINQ에서 모두 사용할 수 있는 개체를 반환합니다. 다음은 LINQ to Entities 쿼리를 만들고 실행하는 프로세스입니다.  
@@ -47,7 +47,7 @@ LINQ to Entities에서는 개발자가 Visual Basic 또는 Visual C#을 사용�
   
  CLR 메서드 호출이 데이터 소스의 정식 함수에 매핑되는 방법에 대 한 내용은 [정식 함수 매핑 CLR 메서드](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md)합니다.  
   
- 정식 호출, 데이터베이스, 방법 및 내에서 사용자 정의 함수에 대 한 자세한 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 쿼리를 참조 하세요 [linq to Entities 쿼리에서 함수 호출](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)합니다.  
+ 정식 호출, 데이터베이스 및 사용자 지정 함수를 내 LINQ to Entities 쿼리에서 하는 방법에 대 한 정보를 참조 하세요 [linq to Entities 쿼리에서 함수 호출](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)합니다.  
   
 ## <a name="query-execution"></a>쿼리 실행  
  사용자가 만든 LINQ 쿼리는 Entity Framework와 호환되는 표현(명령 트리 형태)으로 변환된 다음 데이터 소스에 대해 실행됩니다. 쿼리 실행 시 모든 쿼리 식(또는 쿼리의 구성 요소)은 클라이언트나 서버에서 계산됩니다. 이러한 식에는 결과 구체화나 엔터티 프로젝션에 사용되는 식이 포함됩니다. 자세한 내용은 [쿼리 실행](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md)합니다. 쿼리를 한 번 컴파일한 후 여러 차례 실행 다른 매개 변수를 사용 하 여 성능을 향상 하는 방법에 대 한 자세한 내용은 [컴파일된 쿼리 (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)합니다.  

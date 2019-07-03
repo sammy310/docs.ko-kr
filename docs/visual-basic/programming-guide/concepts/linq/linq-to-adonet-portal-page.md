@@ -2,12 +2,12 @@
 title: LINQ to ADO.NET(포털 페이지)
 ms.date: 07/20/2015
 ms.assetid: bbbd7c76-2981-4b91-b8d2-437547181f52
-ms.openlocfilehash: 5783e45f666779e6cfecd611f1e2a34dae5e7df9
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 850e154b40e69cc655ee1b59161351b0b2898033
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505995"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539375"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET(포털 페이지)
 LINQ to ADO.NET 사용 하면 사용 하 여 ADO.NET의 열거 가능한 개체에 대해 쿼리할 수 있습니다는 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 프로그래밍 모델입니다.  
@@ -15,7 +15,7 @@ LINQ to ADO.NET 사용 하면 사용 하 여 ADO.NET의 열거 가능한 개체�
 > [!NOTE]
 >  LINQ to ADO.NET 설명서는.NET Framework SDK의 ADO.NET 섹션인에 있습니다. [LINQ 및 ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md).
   
- 세 가지 별도 ADO.NET 가지 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 기술: LINQ to DataSet [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], 및 [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]합니다. LINQ to DataSet 통해 보다 풍부 하 고 최적화 된 쿼리를 제공 합니다 <xref:System.Data.DataSet>, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] SQL Server 데이터베이스 스키마를 직접 쿼리할 수 있습니다 및 [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)] 엔터티 데이터 모델을 쿼리할 수 있습니다.  
+ 세 가지 별도 ADO.NET 가지 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 기술: LINQ to DataSet [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], 및 LINQ to Entities 합니다. LINQ to DataSet 통해 보다 풍부 하 고 최적화 된 쿼리를 제공 합니다 <xref:System.Data.DataSet>, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 엔터티 데이터 모델을 쿼리할 수 있습니다 SQL Server 데이터베이스 스키마 및 LINQ to Entities 직접 쿼리할 수 있습니다.  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
  <xref:System.Data.DataSet>는 ADO.NET에서 가장 널리 사용되는 구성 요소 중 하나이며, ADO.NET의 기반이 되는 연결되지 않은 프로그래밍 모델의 핵심 요소입니다. 그러나 이러한 탁월함에도 불구하고 <xref:System.Data.DataSet>의 쿼리 기능에는 한계가 있습니다.  
@@ -32,7 +32,7 @@ LINQ to ADO.NET 사용 하면 사용 하 여 ADO.NET의 열거 가능한 개체�
  자세한 내용은 [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)을 참조하세요.  
   
 ## <a name="linq-to-entities"></a>LINQ to Entities  
- 엔터티 데이터 모델을 통해 관계형 데이터는.NET 환경에서 개체로 제공 됩니다. 이를 통해 개체 계층은 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 지원을 위한 이상적인 대상이 되므로 개발자는 비즈니스 논리를 개발할 때 사용한 언어로 데이터베이스에 대한 쿼리를 작성할 수 있습니다. 이러한 기능은 [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]로 알려져 있습니다. 자세한 내용은 [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)를 참조하세요.  
+ 엔터티 데이터 모델을 통해 관계형 데이터는.NET 환경에서 개체로 제공 됩니다. 이를 통해 개체 계층은 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 지원을 위한 이상적인 대상이 되므로 개발자는 비즈니스 논리를 개발할 때 사용한 언어로 데이터베이스에 대한 쿼리를 작성할 수 있습니다. 이 기능은 linq to Entities 알려져 있습니다. 자세한 내용은 [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
 

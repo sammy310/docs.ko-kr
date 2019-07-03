@@ -2,12 +2,12 @@
 title: 보안 고려 사항(Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 66f8a9217a007ed1faf975638dfa8148e2f1c5ba
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: cf42787d7cc67d80f43a08b5fa71161fee20f5c3
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307308"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539830"
 ---
 # <a name="security-considerations-entity-framework"></a>보안 고려 사항(Entity Framework)
 이 항목에서는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 응용 프로그램의 개발, 배포 및 실행과 관련된 보안 고려 사항에 대해 설명합니다. 또한 안전한.NET Framework 응용 프로그램을 만들기 위한 권장 사항을 따라야 합니다. 자세한 내용은 [보안 개요](../../../../../docs/framework/data/adonet/security-overview.md)합니다.  
@@ -100,9 +100,9 @@ ms.locfileid: "67307308"
   
      [!INCLUDE[esql](../../../../../includes/esql-md.md)] 쿼리는 해당 리터럴이 허용되는 모든 곳에서 매개 변수를 허용합니다. 외부 에이전트에서 쿼리로 직접 리터럴을 삽입하는 대신 매개 변수가 있는 쿼리를 사용해야 합니다. 사용 하 여 고려해 야 [쿼리 작성기 메서드](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) 안전 하 게 Entity SQL을 생성 합니다.  
   
-- [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] 삽입 공격:  
+- 엔터티 삽입 공격 TO:  
   
-     쿼리는 [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]에서 작성할 수 있지만 개체 모델 API를 통해 수행됩니다. [!INCLUDE[esql](../../../../../includes/esql-md.md)] 쿼리는 [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] 쿼리와 달리 문자열 조작이나 연결을 사용하여 작성되지 않으므로 일반적인 SQL 삽입 공격을 쉽게 받지 않습니다.  
+     쿼리 컴퍼지션 LINQ to Entities에서에서 가능한 경우에 개체 모델 API를 통해 수행 됩니다. 와 달리 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 쿼리 문자열 조작 이나 연결을 사용 하 여 LINQ to Entities 쿼리는 작성 되지 및 일반적인 SQL 주입 공격을 쉽게 받지 않습니다.  
   
 #### <a name="prevent-very-large-result-sets"></a>결과 집합이 너무 커지지 않도록 합니다.  
  결과 집합이 매우 크면 클라이언트에서 결과 집합의 크기에 비례하여 리소스를 사용하는 작업을 수행할 경우 클라이언트 시스템이 종료될 수 있습니다. 결과 집합은 다음 조건에서 매우 커질 수 있습니다.  
@@ -113,7 +113,7 @@ ms.locfileid: "67307308"
   
 - 중첩된 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 쿼리  
   
- 사용자 입력을 허용하는 경우 해당 입력으로 인해 결과 집합이 시스템에서 처리할 수 있는 것보다 더 커지지 않도록 해야 합니다. 사용할 수도 있습니다는 <xref:System.Linq.Queryable.Take%2A> 의 메서드 [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] 또는 [제한](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) 연산자 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 결과 집합의 크기를 제한 하려면.  
+ 사용자 입력을 허용하는 경우 해당 입력으로 인해 결과 집합이 시스템에서 처리할 수 있는 것보다 더 커지지 않도록 해야 합니다. 사용할 수도 있습니다는 <xref:System.Linq.Queryable.Take%2A> LINQ to Entities에서에서 메서드 또는 [제한을](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) 연산자 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 결과 집합의 크기를 제한 하려면.  
   
 #### <a name="avoid-returning-iqueryable-results-when-exposing-methods-to-potentially-untrusted-callers"></a>신뢰할 수 없는 호출자에 메서드를 노출할 때 IQueryable 결과를 반환하지 않도록 합니다.  
  다음과 같은 이유로 신뢰할 수 없는 호출자에 노출되는 메서드에서 <xref:System.Linq.IQueryable%601> 형식을 반환하지 않도록 해야 합니다.  

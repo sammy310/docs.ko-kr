@@ -2,18 +2,18 @@
 title: 지원 및 미지원 LINQ 메서드 (LINQ to Entities)
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
-ms.openlocfilehash: 74b3973f931fa6f0d1f5b380833b8d5e5566563b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 338069b5139999a046d1b1b10a8eac4acb1d9e06
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797685"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539422"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>지원 및 미지원 LINQ 메서드 (LINQ to Entities)
-이 단원에서는 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 쿼리에서 지원되거나 지원되지 않는 LINQ(Language-Integrated Query) 표준 쿼리 연산자에 대한 정보를 제공합니다. LINQ 표준 쿼리 연산자 중 상당수는 정수 인수를 허용하는 오버로드된 버전이 있습니다. 정수 인수는 연산 대상인 시퀀스에서 0부터 시작하는 인덱스, <xref:System.Collections.Generic.IEqualityComparer%601> 또는 <xref:System.Collections.Generic.IComparer%601>에 해당합니다. 별도로 명시하지 않는 한 오버로드된 버전의 이 LINQ 표준 쿼리 연산자는 지원되지 않으며, 이 버전을 사용할 경우 예외가 throw됩니다.  
+이 섹션에서는 linq에서 to Entities 쿼리에서 지원 되지 않는 또는 지원 되는 LINQ (Language-Integrated Query) 표준 쿼리 연산자에 대 한 정보를 제공 합니다. LINQ 표준 쿼리 연산자 중 상당수는 정수 인수를 허용하는 오버로드된 버전이 있습니다. 정수 인수는 연산 대상인 시퀀스에서 0부터 시작하는 인덱스, <xref:System.Collections.Generic.IEqualityComparer%601> 또는 <xref:System.Collections.Generic.IComparer%601>에 해당합니다. 별도로 명시하지 않는 한 오버로드된 버전의 이 LINQ 표준 쿼리 연산자는 지원되지 않으며, 이 버전을 사용할 경우 예외가 throw됩니다.  
   
 ## <a name="projection-and-restriction-methods"></a>프로젝션 및 제한 메서드  
- 위치 인수를 허용하는 메서드를 제외한 대부분의 LINQ 프로젝션 및 제한 메서드가 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 쿼리에서 지원됩니다. 자세한 내용은 [linq to Entities 쿼리에서 표준 쿼리 연산자](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)합니다. 다음 표에서는 지원되거나 지원되지 않는 프로젝션 및 제한 메서드 목록을 보여 줍니다.  
+ 대부분의 LINQ 프로젝션 및 제한 메서드는 linq에서 to Entities 쿼리에서 위치 인수를 허용 하는 것을 제외 하 고 지. 자세한 내용은 [linq to Entities 쿼리에서 표준 쿼리 연산자](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)합니다. 다음 표에서는 지원되거나 지원되지 않는 프로젝션 및 제한 메서드 목록을 보여 줍니다.  
   
 |메서드|Support(지원)|Visual Basic 함수 시그니처|C# 메서드 시그니처|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -27,7 +27,7 @@ ms.locfileid: "61797685"
 |<xref:System.Linq.Queryable.Where%2A>|지원 안 함|`Function Where(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Integer, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Where<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, int, bool>> predicate )`|  
   
 ## <a name="join-methods"></a>조인 메서드  
- LINQ 조인 메서드가 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]에서 지원되지만 `IEqualityComparer`를 허용하는 메서드는 예외입니다. 이 비교자는 데이터 소스로 변환될 수 없기 때문입니다. 자세한 내용은 [linq to Entities 쿼리에서 표준 쿼리 연산자](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)합니다. 다음 표에서는 지원되거나 지원되지 않는 조인 메서드를 보여 줍니다.  
+ LINQ 조인 메서드는 허용 하는 것을 제외 하 고 LINQ to Entities에서에서 지원 한 `IEqualityComparer` 비교자를 데이터 원본에 변환 될 수 없기 때문입니다. 자세한 내용은 [linq to Entities 쿼리에서 표준 쿼리 연산자](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)합니다. 다음 표에서는 지원되거나 지원되지 않는 조인 메서드를 보여 줍니다.  
   
 |메서드|Support(지원)|Visual Basic 함수 시그니처|C# 메서드 시그니처|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -37,7 +37,7 @@ ms.locfileid: "61797685"
 |<xref:System.Linq.Queryable.Join%2A>|지원되지 않음|`Function Join(Of TOuter, TInner, TKey, TResult) ( _ outer As IQueryable(Of TOuter), _ inner As IEnumerable(Of TInner), _ outerKeySelector As Expression(Of Func(Of TOuter, TKey)), _ innerKeySelector As Expression(Of Func(Of TInner, TKey)), _ resultSelector As Expression(Of Func(Of TOuter, TInner, TResult)), _ comparer As IEqualityComparer(Of TKey) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> Join\<TOuter, TInner, TKey, TResult>( this IQueryable<TOuter> outer, IEnumerable<TInner> inner, Expression<Func\<TOuter, TKey>> outerKeySelector, Expression<Func\<TInner, TKey>> innerKeySelector, Expression<Func\<TOuter, TInner, TResult>> resultSelector, IEqualityComparer<TKey> comparer )`|  
   
 ## <a name="set-methods"></a>메서드 설정  
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]를 사용하는 메서드를 제외하고, 대부분의 LINQ set 메서드가 <xref:System.Collections.Generic.EqualityComparer%601> 쿼리에서 지원됩니다. 자세한 내용은 [linq to Entities 쿼리에서 표준 쿼리 연산자](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)합니다. 다음 표에서는 지원되거나 지원되지 않는 set 메서드를 보여 줍니다.  
+ 대부분의 LINQ set 메서드가 to Entities 쿼리를 사용 하는 것을 제외 하 고 LINQ에서 지원 됩니다는 <xref:System.Collections.Generic.EqualityComparer%601>합니다. 자세한 내용은 [linq to Entities 쿼리에서 표준 쿼리 연산자](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)합니다. 다음 표에서는 지원되거나 지원되지 않는 set 메서드를 보여 줍니다.  
   
 |메서드|Support(지원)|Visual Basic 함수 시그니처|C# 메서드 시그니처|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -59,7 +59,7 @@ ms.locfileid: "61797685"
 |<xref:System.Linq.Queryable.Union%2A>|지원 안 함|`Function Union(Of TSource) ( _ source1 As IQueryable(Of TSource), _ source2 As IEnumerable(Of TSource), _ comparer As IEqualityComparer(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Union<TSource>( this IQueryable<TSource> source1, IEnumerable<TSource> source2, IEqualityComparer<TSource> comparer )`|  
   
 ## <a name="ordering-methods"></a>정렬 메서드  
- 대부분의 LINQ 정렬 메서드가 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]에서 지원되지만 <xref:System.Collections.Generic.IComparer%601>를 허용하는 메서드는 예외입니다. 이 비교자는 데이터 원본으로 변환될 수 없기 때문입니다. 자세한 내용은 [linq to Entities 쿼리에서 표준 쿼리 연산자](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)합니다. 다음 표에서는 지원되거나 지원되지 않는 정렬 메서드를 보여 줍니다.  
+ 대부분의 LINQ 정렬 메서드를 허용 하는 것을 제외 하 고 LINQ to Entities에서에서 지원 됩니다는 <xref:System.Collections.Generic.IComparer%601>이므로 비교자는 데이터 원본에 변환 될 수 없습니다. 자세한 내용은 [linq to Entities 쿼리에서 표준 쿼리 연산자](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)합니다. 다음 표에서는 지원되거나 지원되지 않는 정렬 메서드를 보여 줍니다.  
   
 |메서드|Support(지원)|Visual Basic 함수 시그니처|C# 메서드 시그니처|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -74,7 +74,7 @@ ms.locfileid: "61797685"
 |<xref:System.Linq.Queryable.Reverse%2A>|지원 안 함|`Function Reverse(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Reverse<TSource>( this IQueryable<TSource> source )`|  
   
 ## <a name="grouping-methods"></a>그룹화 메서드  
- 대부분의 LINQ 그룹화 메서드가 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]에서 지원되지만 <xref:System.Collections.Generic.IEqualityComparer%601>를 허용하는 메서드는 예외입니다. 이 비교자는 데이터 소스로 변환될 수 없기 때문입니다. 자세한 내용은 [linq to Entities 쿼리에서 표준 쿼리 연산자](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)합니다. 다음 표에서는 지원되거나 지원되지 않는 그룹화 메서드를 보여 줍니다.  
+ 허용 하는 것을 제외 하 고 대부분의 LINQ 그룹화 메서드는 LINQ to Entities에서에서 지원 됩니다는 <xref:System.Collections.Generic.IEqualityComparer%601>이므로 비교자는 데이터 원본에 변환 될 수 없습니다. 자세한 내용은 [linq to Entities 쿼리에서 표준 쿼리 연산자](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)합니다. 다음 표에서는 지원되거나 지원되지 않는 그룹화 메서드를 보여 줍니다.  
   
 |메서드|Support(지원)|Visual Basic 함수 시그니처|C# 메서드 시그니처|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -88,7 +88,7 @@ ms.locfileid: "61797685"
 |<xref:System.Linq.Queryable.GroupBy%2A>|지원 안 함|`Function GroupBy(Of TSource, TKey, TElement, TResult) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)), _ elementSelector As Expression(Of Func(Of TSource, TElement)), _ resultSelector As Expression(Of Func(Of TKey, IEnumerable(Of TElement), TResult)), _ comparer As IEqualityComparer(Of TKey) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> GroupBy<TSource, TKey, TElement, TResult>( this IQueryable<TSource> source, Expression<Func<TSource, TKey>> keySelector, Expression<Func<TSource, TElement>> elementSelector, Expression<Func<TKey, IEnumerable<TElement>, TResult>> resultSelector, IEqualityComparer<TKey> comparer )`|  
   
 ## <a name="aggregate-methods"></a>집계 메서드  
- 기본 데이터 형식을 수용하는 집계 메서드 대부분이 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]에서 지원됩니다. 자세한 내용은 [linq to Entities 쿼리에서 표준 쿼리 연산자](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)합니다. 다음 표에서는 지원되거나 지원되지 않는 집계 메서드를 보여 줍니다.  
+ 대부분의 기본 데이터 형식을 사용 하는 집계 메서드는 LINQ to Entities에서에서 지원 됩니다. 자세한 내용은 [linq to Entities 쿼리에서 표준 쿼리 연산자](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)합니다. 다음 표에서는 지원되거나 지원되지 않는 집계 메서드를 보여 줍니다.  
   
 |메서드|Support(지원)|Visual Basic 함수 시그니처|C# 메서드 시그니처|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -153,7 +153,7 @@ ms.locfileid: "61797685"
 |<xref:System.Linq.Queryable.OfType%2A>|<xref:System.Data.Metadata.Edm.EntityType>에 지원됨|`Function OfType(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> OfType<TResult>( this IQueryable source )`|  
   
 ## <a name="paging-methods"></a>페이징 메서드  
- 많은 LINQ 페이징 메서드는 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 쿼리에서 지원되지 않습니다. 자세한 내용은 [linq to Entities 쿼리에서 표준 쿼리 연산자](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)합니다. 다음 표에서는 지원되거나 지원되지 않는 페이징 메서드를 보여 줍니다.  
+ 다양 한 LINQ 페이징 메서드를 linq에서 to Entities 쿼리에서 지원 되지 않습니다. 자세한 내용은 [linq to Entities 쿼리에서 표준 쿼리 연산자](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)합니다. 다음 표에서는 지원되거나 지원되지 않는 페이징 메서드를 보여 줍니다.  
   
 |메서드|Support(지원)|Visual Basic 함수 시그니처|C# 메서드 시그니처|  
 |------------|-------------|-------------------------------------|--------------------------|  
