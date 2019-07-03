@@ -302,8 +302,9 @@
     - name: .NET Core SDK 개요
       href: core/sdk.md
     - name: .NET Core CLI 도구
-      href: core/tools/index.md
       items:
+        - name: .NET Core CLI 개요
+          href: core/tools/index.md
         - name: 원격 분석
           href: core/tools/telemetry.md
         - name: 전역 도구
@@ -311,6 +312,8 @@
           items:
             - name: Global Tool 만들기
               href: core/tools/global-tools-how-to-create.md
+        - name: 상승된 액세스 권한
+          href: core/tools/elevated-access.md
         - name: 확장성 모델
           href: core/tools/extensibility.md
         - name: 연속 통합
@@ -530,8 +533,6 @@
                   href: csharp/tutorials/intro-to-csharp/introduction-to-classes.md
         - name: 'C# 6 탐색'
           href: csharp/tutorials/exploration/csharp-6.yml
-        - name: 'C# 7.0 탐색'
-          href: csharp/tutorials/exploration/csharp-7.yml
         - name: 문자열 보간 탐색 - 대화형 자습서
           href: csharp/tutorials/exploration/interpolated-strings.yml
         - name: 사용자 환경에서 문자열 보간 탐색
