@@ -3,12 +3,12 @@ title: dotnet new에 대한 사용자 지정 템플릿
 description: 모든 형식의 .NET 프로젝트 또는 파일에 대한 사용자 지정 템플릿을 알아봅니다.
 author: thraka
 ms.date: 06/14/2019
-ms.openlocfilehash: d7e9c549ff132deb4682ba81ab5ff354d6cc1522
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 738c6b07f77bdbf6fd946253f95c8691e4172f31
+ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169626"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410344"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new에 대한 사용자 지정 템플릿
 
@@ -100,7 +100,7 @@ dotnet new --list
 01. `<PackageType>` 설정이 추가되고 `Template`으로 설정됩니다.
 01. `<PackageVersion>` 설정이 추가되고 유효한 [NuGet 버전 번호](/nuget/reference/package-versioning)로 설정됩니다.
 01. `<PackageId>` 설정이 추가되고 고유 식별자로 설정됩니다. 이 식별자는 템플릿 팩을 제거하는 데 사용되며, NuGet 피드에서 템플릿 팩을 등록하는 데 사용됩니다.
-01. `<Title>`, `<Authors>`, `<Description>`, `<Tags>` 등의 일반 메타데이터 설정을 지정해야 합니다.
+01. `<Title>`, `<Authors>`, `<Description>`, `<PackageTags>` 등의 일반 메타데이터 설정을 지정해야 합니다.
 01. 템플릿 프로세스에서 생성된 이진 파일을 사용하지 않더라도 `<TargetFramework>` 설정을 지정해야 합니다. 아래 예제에서는 `netstandard2.0`으로 설정되었습니다.
 
 *.nupkg* NuGet 패키지 양식의 템플릿 팩은 모든 템플릿이 패키지 내의 *content* 폴더에 저장되어 있어야 합니다. 생성된 *.nupkg*을 템플릿 팩으로 설치할 수 있도록 *.csproj* 파일에 추가해야 하는 몇 가지 설정이 더 있습니다.
@@ -125,7 +125,7 @@ dotnet new --list
     <Title>AdatumCorporation Templates</Title>
     <Authors>Me</Authors>
     <Description>Templates to use when creating an application for Adatum Corporation.</Description>
-    <Tags>dotnet-new;templates;contoso</Tags>
+    <PackageTags>dotnet-new;templates;contoso</PackageTags>
     <TargetFramework>netstandard2.0</TargetFramework>
 
     <IncludeContentInPack>true</IncludeContentInPack>

@@ -8,23 +8,26 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: c3d18a52068b17b4a4259200754819dd43e28a03
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 4a51bb0e854de127c632c28f613a7602bf09f432
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267650"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348017"
 ---
 # <a name="readonly-c-reference"></a>readonly(C# 참조)
 
 `readonly` 키워드는 세 가지 컨텍스트에서 사용할 수 있는 한정자입니다.
 
-- [필드 선언](#readonly-field-example)에서 필드에 대한 할당을 나타내는 `readonly`는 선언의 일부로 또는 동일한 클래스의 생성자에서만 발생할 수 있습니다. 필드 선언과 생성자 내에서 읽기 전용 필드를 여러 번 할당 및 재할당할 수 있습니다. 생성자가 종료된 후에는 `readonly` 필드를 할당할 수 없습니다. 이 제한의 의미는 값 형식과 참조 형식에서 서로 다릅니다.
-- 값 형식에는 해당 데이터가 직접 포함되므로, `readonly` 값 형식인 필드는 변경할 수 없습니다. 
-- 참조 형식에는 해당 데이터에 대한 참조가 포함되므로, `readonly` 참조 형식인 필드는 항상 같은 개체를 참조해야 합니다. 해당 개체는 변경할 수 있습니다. `readonly` 한정자는 필드가 참조 형식의 다른 인스턴스로 바뀌지 않도록 합니다. 그러나 한정자는 필드의 인스턴스 데이터가 읽기 전용 필드를 통해 수정되는 것을 방지하지는 않습니다.
+- [필드 선언](#readonly-field-example)에서 필드에 대한 할당을 나타내는 `readonly`는 선언의 일부로 또는 동일한 클래스의 생성자에서만 발생할 수 있습니다. 필드 선언과 생성자 내에서 읽기 전용 필드를 여러 번 할당 및 재할당할 수 있습니다. 
+  
+  생성자가 종료된 후에는 `readonly` 필드를 할당할 수 없습니다. 이 제한의 의미는 값 형식과 참조 형식에서 서로 다릅니다.
+  
+  - 값 형식에는 해당 데이터가 직접 포함되므로, `readonly` 값 형식인 필드는 변경할 수 없습니다. 
+  - 참조 형식에는 해당 데이터에 대한 참조가 포함되므로, `readonly` 참조 형식인 필드는 항상 같은 개체를 참조해야 합니다. 해당 개체는 변경할 수 있습니다. `readonly` 한정자는 필드가 참조 형식의 다른 인스턴스로 바뀌지 않도록 합니다. 그러나 한정자는 필드의 인스턴스 데이터가 읽기 전용 필드를 통해 수정되는 것을 방지하지는 않습니다.
 
-> [!WARNING]
-> 변경 가능한 참조 형식인, 외부에서 볼 수 있는 읽기 전용 필드가 포함된 외부에서 볼 수 있는 형식은 보안상 취약할 수 있으며 경고 [CA2104](/visualstudio/code-quality/ca2104-do-not-declare-read-only-mutable-reference-types) : “변경 가능한 읽기 전용 참조 형식을 선언하지 마세요.”를 실행할 수 있습니다.
+  > [!WARNING]
+  > 변경 가능한 참조 형식인, 외부에서 볼 수 있는 읽기 전용 필드가 포함된 외부에서 볼 수 있는 형식은 보안상 취약할 수 있으며 경고 [CA2104](/visualstudio/code-quality/ca2104-do-not-declare-read-only-mutable-reference-types) : “변경 가능한 읽기 전용 참조 형식을 선언하지 마세요.”를 실행할 수 있습니다.
 
 - [`readonly struct` 정의](#readonly-struct-example)에서 `readonly`는 `struct`가 불변임을 나타냅니다.
 - [`ref readonly` 메서드 반환](#ref-readonly-return-example)에서 `readonly` 한정자는 해당 메서드가 참조를 반환하고 해당 참조에 쓰기를 허용하지 않음을 나타냅니다.
@@ -41,9 +44,9 @@ ms.locfileid: "67267650"
 
 - 변수가 선언에서 초기화될 때. 예를 들면 다음과 같습니다.
 
-```csharp
-public readonly int y = 5;
-```
+  ```csharp
+  public readonly int y = 5;
+  ```
 
 - 인스턴스 필드 선언을 포함하는 클래스의 인스턴스 생성자.
 - 정적 필드 선언을 포함하는 클래스의 정적 생성자.

@@ -3,12 +3,12 @@ title: C# 7.0의 새로운 기능 - C# 가이드
 description: C# 언어 버전 7.0의 새로운 기능을 살펴봅니다.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: c3fdee2bdb974640b56bfab3af4be57133ad2f7a
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 58d43167341b69e7e9ac67024e9993cf51c26c0b
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307159"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347453"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0의 새로운 기능
 
@@ -34,7 +34,12 @@ C# 7.0에서는 C# 언어에 많은 새로운 기능을 추가합니다.
 * [숫자 리터럴 구문 개선 사항](#numeric-literal-syntax-improvements)
   - 새로운 토큰으로 숫자 상수의 가독성이 향상됩니다.
 
-이 문서의 나머지 부분에서는 해당 기능에 대한 개요를 제공합니다. 각 기능의 배경과 원리를 알아봅니다. 구문을 알아봅니다. 기능의 [대화형 살펴보기](../tutorials/exploration/csharp-7.yml)에서 이러한 기능을 살펴볼 수 있습니다.
+이 문서의 나머지 부분에서는 해당 기능에 대한 개요를 제공합니다. 각 기능의 배경과 원리를 알아봅니다. 구문을 알아봅니다. `dotnet try` 글로벌 도구를 사용하여 환경에서 다음과 같은 기능을 탐색할 수 있습니다.
+
+1. [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) 글로벌 도구를 설치합니다.
+1. [dotnet/try-samples](https://github.com/dotnet/try-samples) 리포지토리를 복제합니다.
+1. 현재 디렉터리를 *try-samples* 리포지토리의 *csharp7* 하위 디렉터리로 설정합니다.
+1. `dotnet try`를 실행합니다.
 
 ## <a name="out-variables"></a>`out` 변수
 
