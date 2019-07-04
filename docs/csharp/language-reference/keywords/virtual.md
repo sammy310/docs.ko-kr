@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-ms.openlocfilehash: fa201b90a6d0e4afd15034c04b36bbbd25352886
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2568eed5a889f6c03e237875194b8adcb9334ef7
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633096"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401821"
 ---
 # <a name="virtual-c-reference"></a>virtual(C# 참조)
 
@@ -28,7 +28,7 @@ public virtual double Area()
 
 가상 멤버의 구현은 파생 클래스의 [재정의 멤버](override.md)로 변경할 수 있습니다. `virtual` 키워드 사용 방법에 대한 자세한 내용은 [Override 및 New 키워드를 사용하여 버전 관리](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) 및 [Override 및 New 키워드를 사용해야 하는 경우](../../programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)를 참조하세요.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 가상 메서드가 호출되면 재정의 멤버에 대해 개체의 런타임 형식이 확인됩니다. 파생 클래스가 멤버를 재정의하지 않은 경우 가장 많이 파생된 클래스의 재정의 멤버(원래 멤버일 수 있음)가 호출됩니다.
 
@@ -44,7 +44,7 @@ public virtual double Area()
 
 - `override` 한정자를 사용하는 속성 선언을 포함함으로써 상속된 가상 속성을 파생 클래스에서 재정의할 수 있습니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 이 예제에서 `Shape` 클래스는 두 개의 좌표 `x`, `y`와 `Area()` 가상 메서드를 포함합니다. `Circle`, `Cylinder` 및 `Sphere`와 같은 서로 다른 도형의 클래스는 `Shape` 클래스를 상속하며, 각 모양에 대해 노출 영역이 계산됩니다. 각 파생 클래스에는 `Area()`의 자체 재정의 구현이 있습니다.
 
@@ -71,4 +71,4 @@ public Cylinder(double r, double h): base(r, h) {}
 - [다형성](../../programming-guide/classes-and-structs/polymorphism.md)
 - [abstract](abstract.md)
 - [override](override.md)
-- [new](new.md)
+- [new(한정자)](new-modifier.md)

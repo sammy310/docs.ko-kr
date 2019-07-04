@@ -4,12 +4,12 @@ description: .NET Core에서 사용할 수 없는 .NET Framework 기술에 대�
 author: cartermp
 ms.author: mairaw
 ms.date: 04/30/2019
-ms.openlocfilehash: 9485f331856fde3b6836709e8983c2babe094c5b
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 4a798e85adc056b09761bd17b5d9a143643e77ad
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456089"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397631"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Core에서 사용할 수 없는 .NET Framework 기술
 
@@ -45,7 +45,7 @@ CAS와 마찬가지로 보안 투명도는 샌드박스 코드를 보안상 중�
 
 ## <a name="systementerpriseservices"></a>System.EnterpriseServices
 
-System.EnterpiseServices(COM+)는 .NET Core에서 지원되지 않습니다.
+System.EnterpriseServices(COM+)는 .NET Core에서 지원되지 않습니다.
 
 >[!div class="step-by-step"]
 >[다음](third-party-deps.md)

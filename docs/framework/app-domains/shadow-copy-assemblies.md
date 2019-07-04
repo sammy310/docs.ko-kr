@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5bbf579540ccb93101dba05c5b2577ae8f24ec09
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 30e013d39d403bef5fe060fd1c64dc435de5be06
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486515"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347386"
 ---
 # <a name="shadow-copying-assemblies"></a>어셈블리 섀도 복사
 섀도 복사를 사용하면 애플리케이션 도메인을 언로드하지 않고 애플리케이션 도메인에서 사용되는 어셈블리를 업데이트할 수 있습니다. 특히 이 기능은 ASP.NET 사이트와 같이 지속적으로 제공되어야 하는 애플리케이션에 유용합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "66486515"
   
 - [시작 성능](#StartupPerformance)에서는 시작 성능을 개선하려고 .NET Framework 4에서 섀도 복사에 적용된 변경 내용과 이전 버전의 동작으로 되돌리는 방법을 설명합니다.  
   
-- [사용되지 않는 메서드](#ObsoleteMethods)에서는 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]에서 섀도 복사를 제어하는 속성 및 메서드의 변경 내용을 설명합니다.  
+- [사용되지 않는 메서드](#ObsoleteMethods)에서는 .NET Framework 2.0에서 섀도 복사를 제어하는 속성 및 메서드의 변경 내용을 설명합니다.  
   
 <a name="EnablingAndUsing"></a>   
 ## <a name="enabling-and-using-shadow-copying"></a>섀도 복사 설정 및 사용  

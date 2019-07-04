@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 2109c764d0143a843f75fc0c14cc0d09550efd85
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 549eca835b2161429668a2ee340a71dfae658524
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877570"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422351"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe(매니페스트 생성 및 편집 도구)
 
@@ -57,7 +57,7 @@ Mage [commands] [commandOptions]
 |**-if, -IconFile**  `filePath`||애플리케이션 매니페스트|.ICO 아이콘 파일의 전체 경로를 지정합니다. 이 아이콘은 시작 메뉴 및 프로그램 추가 또는 제거 항목에서 애플리케이션 이름 옆에 나타납니다. 아이콘을 지정하지 않으면 기본 아이콘이 사용됩니다.|
 |**-ip, -IncludeProviderURL**  `url`|true|배포 매니페스트|배포 매니페스트가 **-ProviderURL**에 의해 설정된 업데이트 위치 값을 포함할지 여부를 나타냅니다.|
 |**-i, -Install** `willInstall`|true|배포 매니페스트|ClickOnce 애플리케이션을 로컬 컴퓨터에 설치할지 여부 또는 웹에서 실행할지 여부를 지정합니다. 애플리케이션을 설치하면 Windows의 **시작** 메뉴에 애플리케이션이 표시됩니다. 유효한 값은 "true" 또는 "t"와 "false" 또는 "f"입니다.<br /><br /> **-MinVersion** 옵션을 지정하면 사용자 컴퓨터에 **-MinVersion** 보다 이전 버전이 설치되어 있는 경우 **-Install**에 전달하는 값에 관계없이 애플리케이션이 설치됩니다.<br /><br /> 이 옵션은 **-BrowserHosted** 옵션과 함께 사용할 수 없습니다. 같은 매니페스트에 두 옵션을 모두 지정하려고 하면 오류가 발생합니다.|
-|**-kc, -KeyContainer** `name`||모든 파일 형식|개인 키의 이름을 포함하는 키 컨테이너를 지정합니다. 이 옵션에는 **CyproProvider** 옵션이 필요합니다.<br/><br/>이 옵션은 .NET Framework 4.7부터 사용할 수 있습니다.|
+|**-kc, -KeyContainer** `name`||모든 파일 형식|개인 키의 이름을 포함하는 키 컨테이너를 지정합니다. 이 옵션에는 **CryptoProvider** 옵션이 필요합니다.<br/><br/>이 옵션은 .NET Framework 4.7부터 사용할 수 있습니다.|
 |**-mv, -MinVersion**  `[version]`|ClickOnce 배포 매니페스트에서 **-Version** 플래그에 지정되어 나열된 버전입니다.|배포 매니페스트|사용자가 실행할 수 있는 이 애플리케이션의 최소 버전입니다. 이 플래그를 사용하면 애플리케이션의 명명된 버전이 필수 업데이트가 됩니다. 주요 변경 내용 또는 심각한 보안 결함에 대한 업데이트가 포함된 제품 버전을 출시하는 경우 이 플래그를 사용하여 해당 업데이트를 필수적으로 설치해야 하고 이전 버전을 더 이상 실행할 수 없도록 지정할 수 있습니다.<br /><br /> `version` 의 의미 체계는 **-Version** 플래그에 대한 인수와 동일합니다.|
 |**-n, -Name** `nameString`|배포|모든 파일 형식|애플리케이션을 식별하는 데 사용되는 이름입니다. ClickOnce에서는 **시작** 메뉴(애플리케이션 자체를 설치하도록 구성한 경우)와 권한 높이기 대화 상자에 애플리케이션을 표시하는 데 이 이름을 사용합니다. **참고:**  기존 매니페스트를 업데이트하고 게시자 이름을 이 옵션으로 지정하지 않으면 *Mage.exe*에서 컴퓨터에 정의된 조직 이름으로 매니페스트를 업데이트합니다. 다른 이름을 사용하려면 이 옵션을 사용하여 원하는 게시자 이름을 지정합니다.|
 |**-pwd, -Password** `passwd`||모든 파일 형식|디지털 인증서로 매니페스트에 서명하는 데 사용되는 암호입니다. **-CertFile** 옵션과 함께 사용해야 합니다.|
@@ -81,11 +81,11 @@ Mage [commands] [commandOptions]
 |**-cf, -CertFile** `filePath`|매니페스트에 서명하는 데 사용할 디지털 인증서의 위치를 지정합니다. 인증서에 PFX(Personal Information Exchange) 파일에 대한 암호가 필요한 경우 **-Password** 옵션을 이 옵션과 함께 사용할 수 있습니다. .NET Framework 4.7부터 파일에 개인 키가 없는 경우 **-CryptoProvider** 및 **-KeyContainer** 옵션의 조합이 필요합니다.<br/><br/>.NET Framework 4.6.2부터 *Mage.exe*는 CNG 및 CAPI 인증서로 매니페스트에 서명합니다.|
 |**-ch, -CertHash** `hashSignature`|클라이언트 컴퓨터의 개인 인증서 저장소에 저장되는 디지털 인증서의 해시를 지정합니다. 이 해시는 Windows 인증서 콘솔에서 표시되는 디지털 인증서의 지문 속성에 해당합니다.<br /><br /> `hashSignature` 에는 대문자와 소문자를 모두 사용할 수 있습니다. 이 매개 변수를 단일 문자열로 제공할 수도 있고, 지문의 각 8진수 단위 값을 공백으로 구분하여 전체 지문을 따옴표로 묶어 제공할 수도 있습니다.|
 **-csp, -CryptoProvider** `provider-name`|개인 키 컨테이너를 포함하는 CSP(암호화 서비스 공급자)의 이름을 지정합니다. 이 옵션에는 **-KeyContainer** 옵션이 필요합니다.<br/><br/>이 옵션은 .NET Framework 4.7부터 사용할 수 있습니다.|
-|**-kc, -KeyContainer** `name`|개인 키의 이름을 포함하는 키 컨테이너를 지정합니다. 이 옵션에는 **CyproProvider** 옵션이 필요합니다.<br/><br/>이 옵션은 .NET Framework 4.7부터 사용할 수 있습니다.|
+|**-kc, -KeyContainer** `name`|개인 키의 이름을 포함하는 키 컨테이너를 지정합니다. 이 옵션에는 **CryptoProvider** 옵션이 필요합니다.<br/><br/>이 옵션은 .NET Framework 4.7부터 사용할 수 있습니다.|
 |**-pwd, -Password** `passwd`|디지털 인증서로 매니페스트에 서명하는 데 사용되는 암호입니다. **-CertFile** 옵션과 함께 사용해야 합니다.|
 |**-t, -ToFile** `filePath`|생성 또는 수정된 파일의 출력 경로를 지정합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 *Mage.exe*에 대한 모든 인수는 대/소문자를 구분하지 않습니다. 명령 및 옵션의 앞에 대시(-) 또는 슬래시(/)를 사용할 수 있습니다.
 
@@ -214,7 +214,7 @@ mage -Sign deploy.application -CertFile cert.pfx -Password <passwd>
 다음 예제에서는 현재 작업 디렉터리에 있는 디지털 인증서 및 개인 키를 사용하여 기존 배포 매니페스트에 서명합니다.
 
 ```console
-mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -CryptoProvider "Microsoft Enghanced Cryptographic Provider v1.0"
+mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -CryptoProvider "Microsoft Enhanced Cryptographic Provider v1.0"
 ```
 
 ## <a name="see-also"></a>참고 항목

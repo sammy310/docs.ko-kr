@@ -1,17 +1,21 @@
 ---
 title: dotnet list reference 명령
 description: dotnet list reference 명령은 프로젝트 간 참조를 나열하는 편리한 옵션을 제공합니다.
-ms.date: 12/03/2018
-ms.openlocfilehash: c0b88c4a0af4469d7ddc9e0a9368bb1b2d9d20b6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 1f87ff89997cdaa6d0095a4db9f28a2e7cb7e6a9
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632403"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67421840"
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 
+**이 항목 적용 대상: ✓** .NET Core 1.x SDK 이상 버전
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>name
 
@@ -19,7 +23,7 @@ ms.locfileid: "65632403"
 
 ## <a name="synopsis"></a>개요
 
-`dotnet list [<PROJECT>] reference [-h|--help]`
+`dotnet list [<PROJECT>|<SOLUTION>] reference [-h|--help]`
 
 ## <a name="description"></a>설명
 
@@ -27,9 +31,9 @@ ms.locfileid: "65632403"
 
 ## <a name="arguments"></a>인수
 
-* **`PROJECT`**
+* **`PROJECT | SOLUTION`**
 
-  참조를 나열하기 위해 사용할 프로젝트 파일을 지정합니다. 지정하지 않으면 이 명령은 현재 디렉터리에서 프로젝트 파일을 검색합니다.
+  참조를 나열하기 위해 사용할 프로젝트 또는 솔루션 파일을 지정합니다. 지정하지 않으면 이 명령은 현재 디렉터리에서 프로젝트 파일을 검색합니다.
 
 ## <a name="options"></a>옵션
 

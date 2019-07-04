@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 768d8da320022a686f2ecfe5222880eccacee7dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6af1f7f23447f9f1379ac6d223e198a4a2ea5645
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727640"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424237"
 ---
 # <a name="enum-c-reference"></a>enum(C# 참조)
 
@@ -35,13 +35,12 @@ enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 
 이 열거형에서 요소의 순서는 `1` 대신 `0`부터 시작합니다. 그러나 값이 0인 상수를 포함하는 것이 좋습니다. 자세한 내용은 [열거형 형식](../../programming-guide/enumeration-types.md)을 참조하세요.
 
-모든 열거형 형식에는 기본 형식이 있으며, 해당 형식은 [char](char.md) 형식을 제외한 임의의 정수 형식이 될 수 있습니다. 열거형 요소의 기본적인 기본 형식은 i [int](int.md)입니다. [바이트](byte.md)와 같은 다른 정수 형식의 열거형을 선언하려면 다음 예제에서와 같이 콜론을 사용하여 identifier 다음에 형식을 사용합니다.
+모든 열거형 형식에는 기본 형식이 있으며, 해당 형식은 [정수 숫자 형식](../builtin-types/integral-numeric-types.md)일 수 있습니다. [char](char.md) 형식은 열거형의 기본 형식일 수 없습니다. 열거형 요소의 기본적인 기본 형식은 i [int](../builtin-types/integral-numeric-types.md)입니다. [바이트](../builtin-types/integral-numeric-types.md)와 같은 다른 정수 형식의 열거형을 선언하려면 다음 예제에서와 같이 콜론을 사용하여 identifier 다음에 형식을 사용합니다.
 
 ```csharp
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 ```
 
-열거형으로 승인된 형식은 [byte](byte.md), [sbyte](sbyte.md), [short](short.md), [ushort](ushort.md), [int](int.md), [uint](uint.md), [long](long.md) 또는 [ulong](ulong.md)입니다.
 
 열거형 형식의 변수에는 명명된 상수뿐 아니라 기본 형식의 범위에 있는 모든 값을 할당할 수 있습니다.
 
@@ -50,7 +49,7 @@ enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 > [!NOTE]
 > 열거자의 이름에는 공백이 포함될 수 없습니다.
 
-기본 형식은 각 열거자에 할당될 스토리지 크기를 지정합니다. 그러나 `enum` 형식에서 정수 계열 형식으로 변환하려면 명시적 캐스트가 필요합니다. 예를 들어 다음 문은 `Sun` 을 [로 변환하는 캐스트를 사용하여 열거자](int.md) 을 `enum` int `int`형식 변수에 대입합니다.
+기본 형식은 각 열거자에 할당될 스토리지 크기를 지정합니다. 그러나 `enum` 형식에서 정수 계열 형식으로 변환하려면 명시적 캐스트가 필요합니다. 예를 들어 다음 문은 `Sun` 을 [로 변환하는 캐스트를 사용하여 열거자](../builtin-types/integral-numeric-types.md) 을 `enum` int `int`형식 변수에 대입합니다.
 
 ```csharp
 int x = (int)Day.Sun;
@@ -66,19 +65,19 @@ int x = (int)Day.Sun;
 
 다른 개발자가 코드를 사용할 경우 `enum` 형식에 새 요소가 추가된다면 해당 코드에서 이를 적절히 처리할 수 있도록 지침을 제공해야 합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에서는 열거형 `Day`를 선언합니다. 두 개의 열거자를 명시적으로 정수로 변환하여 정수 변수에 대입합니다.
 
 [!code-csharp[csrefKeywordsTypes#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#10)]
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에서는 base-type 옵션을 사용하여 멤버가 `enum` 형식인 `long`을 선언합니다. 열거형의 기본 형식이 `long`인 경우에도 캐스트를 사용하여 열거형 멤버를 `long` 형식으로 명시적으로 변환해야 합니다.
 
 [!code-csharp[csrefKeywordsTypes#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#11)]
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 코드 예제에서는 <xref:System.FlagsAttribute?displayProperty=nameWithType> 선언에 `enum` 특성을 사용하는 방법과 그 결과를 보여 줍니다.
 
@@ -101,7 +100,7 @@ int x = (int)Day.Sun;
 - [C# 참조](../index.md)
 - [열거형 형식](../../programming-guide/enumeration-types.md)
 - [C# 키워드](index.md)
-- [정수 계열 형식 표](integral-types-table.md)
+- [정수 형식](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
 - [기본 제공 형식 표](built-in-types-table.md)
 - [암시적 숫자 변환 표](implicit-numeric-conversions-table.md)
 - [명시적 숫자 변환 표](explicit-numeric-conversions-table.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f6f6fa8afe2e4aaea6e9f2b96329542b7fe5292
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b78b770417b9599719ea219041a9fd6adaf5a84
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607691"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423405"
 ---
 # <a name="assembly-security-considerations"></a>어셈블리 보안 고려 사항
 <a name="top"></a> 어셈블리를 빌드할 때 어셈블리를 실행하는 데 필요한 권한을 지정할 수 있습니다. 어셈블리에 대한 특정 권한 부여 여부는 증명 정보를 바탕으로 합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "64607691"
   
  어떤 신뢰 수준도 강력한 이름과 연결되지 않기 때문에 [SignTool.exe(서명 도구)](../../../docs/framework/tools/signtool-exe.md)가 필요합니다. 두 가지 서명 도구를 사용하려면 게시자는 외부 기관에서 ID를 증명 받은 후 인증서를 얻어야 합니다. 이 인증서는 파일에 포함되며, 관리자는 이 인증서를 사용하여 코드의 신뢰 여부를 판단합니다.  
   
- 강력한 이름과 [SignTool.exe(서명 도구)](../../../docs/framework/tools/signtool-exe.md)를 사용하여 만든 디지털 서명을 어셈블리에 모두 제공하거나 둘 중 하나만 사용할 수 있습니다. 두 서명 도구는 한 번에 파일 하나씩만 서명할 수 있는데, 다중 파일 어셈블리의 경우에는 어셈블리 매니페스트를 포함하는 파일에 서명하면 됩니다. 강력한 이름은 어셈블리 매니페스트를 포함하는 파일에 저장되지만, [SignTool.exe(서명 도구)](../../../docs/framework/tools/signtool-exe.md)로 만든 서명은 어셈블리 매니페스트를 포함하는 PE(이식 가능한 실행) 파일의 예약된 슬롯에 저장됩니다. [SignTool.exe(서명 도구)](../../../docs/framework/tools/signtool-exe.md)에서 생성된 서명을 사용하는 신뢰 계층 구조가 이미 있거나 정책에서 키 부분만 사용하고 신뢰 체인을 확인하지 않으면, 강력한 이름의 유무와 상관 없이 [SignTool.exe(서명 도구)](../../../docs/framework/tools/signtool-exe.md)를 사용하여 어셈블리를 서명할 수 있습니다.  
+ 강력한 이름과 [SignTool.exe(서명 도구)](../../../docs/framework/tools/signtool-exe.md)를 사용하여 만든 디지털 서명을 어셈블리에 모두 제공하거나 둘 중 하나만 사용할 수 있습니다. 두 서명 도구는 한 번에 파일 하나씩만 서명할 수 있는데, 다중 파일 어셈블리의 경우에는 어셈블리 매니페스트를 포함하는 파일에 서명하면 됩니다. 강력한 이름은 어셈블리 매니페스트를 포함하는 파일에 저장되지만, [SignTool.exe(서명 도구)](../../../docs/framework/tools/signtool-exe.md)로 만든 서명은 어셈블리 매니페스트를 포함하는 PE(이식 가능한 실행) 파일의 예약된 슬롯에 저장됩니다. [SignTool.exe(서명 도구)](../../../docs/framework/tools/signtool-exe.md)에서 생성된 서명을 사용하는 신뢰 계층 구조가 이미 있거나 정책에서 키 부분만 사용하고 신뢰 체인을 확인하지 않으면, 강력한 이름의 유무와 상관없이 [SignTool.exe(서명 도구)](../../../docs/framework/tools/signtool-exe.md)를 사용하여 어셈블리를 서명할 수 있습니다.  
   
 > [!NOTE]
 >  어셈블리에 강력한 이름과 서명 도구 서명을 모두 사용하는 경우, 강력한 이름을 먼저 지정해야 합니다.  

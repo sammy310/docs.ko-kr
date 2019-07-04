@@ -1,18 +1,18 @@
 ---
-title: 데이터 로드
-description: 데이터 파일 로드 및 ML.NET에 데이터 스트리밍
-ms.date: 05/03/2019
-ms.custom: mvc,how-to
-ms.openlocfilehash: 6edcc92b610e2e1f5e21c371b9f0aefd0b216d31
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+title: 파일 및 기타 소스에서 데이터 로드
+description: 여기에서는 ML.NET에서의 처리 및 학습을 위해 데이터를 로드하는 방법을 보여 줍니다. 데이터는 원래 파일이나 데이터베이스, JSON, XML 또는 메모리 내 컬렉션 등의 다른 데이터 원본에 저장됩니다.
+ms.date: 06/25/2019
+ms.custom: mvc,how-to, title-hack-0625
+ms.openlocfilehash: fafbe3fed9e3f0b509eda4f9d8967965bde19767
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063643"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397739"
 ---
-# <a name="load-data-from-file-and-in-memory-sources"></a>파일 및 메모리 내 원본에서 데이터 로드
+# <a name="load-data-from-files-and-other-sources"></a>파일 및 기타 소스에서 데이터 로드
 
-여기에서는 ML.NET에서의 처리 및 학습을 위해 데이터를 로드하는 방법을 보여 줍니다. 데이터는 기본적으로 파일 또는 실시간/스트리밍 데이터 원본에 저장됩니다.
+여기에서는 ML.NET에서의 처리 및 학습을 위해 데이터를 로드하는 방법을 보여 줍니다. 데이터는 원래 파일이나 데이터베이스, JSON, XML 또는 메모리 내 컬렉션 등의 다른 데이터 원본에 저장됩니다.
 
 ## <a name="create-the-data-model"></a>데이터 모델 만들기
 
@@ -102,16 +102,15 @@ TextLoader textLoader = mlContext.Data.CreateTextLoader<HousingData>(separatorCh
 IDataView data = textLoader.Load("DataFolder/SubFolder1/1.txt", "DataFolder/SubFolder2/1.txt");
 ```
 
-## <a name="load-data-from-a-streaming-source"></a>스트리밍 원본에서 데이터 로드
+## <a name="load-data-from-other-sources"></a>다른 소스에서 데이터 로드
 
-ML.NET에서는 디스크에 저장된 데이터의 로드 외에도, 다음을 망라한 다양한 스트리밍 원본에서의 데이터 로드를 지원합니다.
+파일에 저장된 데이터를 로드하는 것 외에도, ML.NET은 다음을 포함하지만 이에 국한되지 않는 소스에서 데이터 로드를 지원합니다.
 
 - 메모리 내 컬렉션
 - JSON/XML
 - Databases
 
-> [!IMPORTANT]
-> 스트리밍 원본을 사용할 때는 ML.NET이 메모리 내 컬렉션 형태의 입력을 기대합니다. 따라서 JSON/XML 등의 원본을 사용할 때는 데이터 형식이 메모리 내 컬렉션이 되게 합니다.
+스트리밍 원본을 사용할 때는 ML.NET이 메모리 내 컬렉션 형태의 입력을 기대합니다. 따라서 JSON/XML 등의 원본을 사용할 때는 데이터 형식이 메모리 내 컬렉션이 되게 합니다.
 
 다음 메모리 내 컬렉션을 지정합니다.
 

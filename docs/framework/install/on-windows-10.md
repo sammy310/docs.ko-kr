@@ -5,12 +5,12 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 69c647e57dead3b4f61bb45202c6b039099f0499
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 13ccdafc00f7a43d456126e3ec3afc1ae5897564
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052179"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422661"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Windows 10 및 Windows Server 2016 이상에 .NET Framework 설치
 
@@ -34,7 +34,7 @@ Windows에서 많은 애플리케이션을 실행하는 데 .NET Framework가 �
 다음에 [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)을 설치할 수 있습니다.
 
 * Windows 10 2018년 10월 업데이트(버전 1809)
-* Windows 10 2018 년 4월 업데이트(버전 1803)
+* Windows 10 2018년 4월 업데이트(버전 1803)
 * Windows 10 가을 작성자 업데이트(버전 1709)
 * Windows 10 Creators Update(버전 1703)
 * Windows 10 1주년 업데이트(버전 1607)
