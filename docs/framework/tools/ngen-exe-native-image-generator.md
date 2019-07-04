@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c806366e8f80e9fd770b45a5f1154d388ac49ab
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: fd1773b184b9ea39b83b91c139acb09658beae11
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489671"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832820"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe(네이티브 이미지 생성기)
 
@@ -132,7 +132,7 @@ ngen /? | /help
 |`/verbose`|디버깅에 대한 자세한 내용을 표시합니다. **참고:**  운영 체제 제한으로 인해 이 옵션은 Windows 98 및 Windows Millennium Edition에 대한 추가 정보를 표시하지 않습니다.|
 |`/help`, `/?`|현재 릴리스의 명령 구문 및 옵션을 표시합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 Ngen.exe를 실행하려면 관리자 권한이 있어야 합니다.
 
@@ -233,7 +233,7 @@ Ngen.exe로 어셈블리를 미리 컴파일하면 일부 애플리케이션의 
 하드 바인딩은 주 애플리케이션 어셈블리에 하드 바인딩된 모든 이미지를 동시에 로드해야 하므로 시작 시간에 영향을 줄 수 있습니다.
 
 > [!NOTE]
-> [!INCLUDE[net_v35SP1_long](../../../includes/net-v35sp1-long-md.md)] 이전에 로더는 전역 어셈블리 캐시에 없는 강력한 이름의 어셈블리에서 추가 유효성 검사를 수행하여 시작 시간에 네이티브 이미지를 사용하여 얻은 향상된 기능을 효율적으로 제거하기 때문에 전역 어셈블리에 공유되는 강력한 이름의 구성 요소를 두어야 합니다. [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)]에 도입된 최적화가 추가 유효성 검사를 제거했습니다.
+> .NET Framework 3.5 서비스 팩 1 이전에는 로더가 전역 어셈블리 캐시에 없는 강력한 이름의 어셈블리에 대해 추가 유효성 검사를 수행하여 시작 시간에 네이티브 이미지를 통해 얻은 향상된 기능을 모두 제거하기 때문에 전역 어셈블리 캐시에 강력한 이름의 공유 구성 요소를 배치해야 합니다. .NET Framework 3.5 SP1에서 도입된 최적화로 인해 추가 유효성 검사가 제거되었습니다.
 
 <a name="UsageSummary"></a>
 

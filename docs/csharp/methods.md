@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 9e7434f2267baf82021dfb3875f2da39552e72ef
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 0decc563fdcf068c0b9dc88a55b2bd6f4e3657cd
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186080"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025101"
 ---
 # <a name="methods"></a>메서드
 
@@ -144,9 +144,9 @@ by ref 매개 변수를 사용하는 일반적인 패턴은 변수 값의 교환
 - 적절한 형식의 개별 인수가 포함된 쉼표로 구분된 목록을 메서드에 전달
 - 매개 변수 배열에 인수 제공 안 함
 
-다음 예제에서는 첫 번째 매개 변수인 `StringOperation` 열거형 멤버에 지정된 문자열 작업을 수행하는 `DoStringOperation` 메서드를 정의합니다. 작업을 수행하는 대상 문자열은 매개 변수 배열에 의해 정의됩니다. `Main` 메서드는 해당 메서드를 호출하는 세 가지 방법을 모두 보여 줍니다. `params` 키워드로 태그가 지정된 메서드는 매개 변수 배열에 대한 인수가 제공되지 않은 경우 해당 값을 `null`로 처리하도록 준비해야 합니다.
+다음 예제에서는 매개 변수 배열의 모든 모음을 반환하는 `GetVowels` 메서드를 정의합니다. `Main` 메서드는 해당 메서드를 호출하는 세 가지 방법을 모두 보여 줍니다. 호출자가 `params` 한정자를 포함하는 매개 변수의 인수를 제공할 필요는 없습니다. 이 경우 매개 변수는 `null`입니다.
 
-[!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/byref108.cs#108)]
+[!code-csharp[csSnippets.Methods#75](~/samples/snippets/csharp/concepts/methods/params75.cs#75)]
 
 <a name="optional"></a>
 
@@ -157,7 +157,7 @@ by ref 매개 변수를 사용하는 일반적인 패턴은 변수 값의 교환
 다음 종류의 식 중 하나로 매개 변수의 기본값을 할당해야 합니다.
 
 - 리터럴 문자열이나 숫자와 같은 상수
-- `new ValType` 형태의 식. 여기서 `ValType`은 값 형식입니다. 이 경우 형식의 실제 멤버가 아닌 값 형식의 암시적 기본 생성자가 호출됩니다.
+- `new ValType` 형태의 식. 여기서 `ValType`은 값 형식입니다. 이 경우 형식의 실제 멤버가 아닌 값 형식의 매개 변수가 없는 암시적 생성자가 호출됩니다.
 - `default(ValType)` 형태의 식. 여기서 `ValType`은 값 형식입니다.
 
 메서드에 필수 및 선택적 매개 변수가 둘 다 포함된 경우 선택적 매개 변수는 매개 변수 목록의 끝에서 모든 필수 매개 변수 다음에 정의됩니다.

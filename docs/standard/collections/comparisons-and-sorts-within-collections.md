@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e1a5fa5113afdfb94a0b035b83cb59946d0970c9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2d9124c90d09e2fa94a0eaa2ff8cd4e4ab15206f
+ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664590"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67135665"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>컬렉션 내에서 비교 및 정렬
 <xref:System.Collections> 클래스는 제거할 요소 검색, 키-값 쌍의 값 반환 등 컬렉션 관리와 관련된 거의 모든 프로세스에서 비교를 수행합니다.  

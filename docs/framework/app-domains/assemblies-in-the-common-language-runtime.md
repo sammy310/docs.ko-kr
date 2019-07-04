@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2cfebe19-7436-49f1-bd99-3c4019f0b676
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a91890435b1c2b5b955875f52de86249c2ee79df
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a3b516e43c07666f4b52e67f85cb567ab310f020
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607816"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832910"
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a>공용 언어 런타임의 어셈블리
 어셈블리는 .NET Framework 애플리케이션의 문서 블록으로서 배포, 버전 제어, 다시 사용, 활성화 범위 지정 및 보안 권한의 기본 단위를 형성합니다. 어셈블리는 서로 함께 사용되어 논리적 기능 단위를 형성하도록 빌드되는 형식 및 리소스의 컬렉션입니다. 어셈블리는 형식 구현을 인식하는 데 필요한 정보와 함께 공용 언어 런타임을 제공합니다. 런타임에 대해, 형식은 어셈블리 컨텍스트 외부에 존재하지 않습니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "64607816"
   
  어셈블리는 정적 또는 동적이 될 수 있습니다. 정적 어셈블리에는 .NET Framework 형식(인터페이스 및 클래스)과 어셈블리 리소스(비트맵, JPEG 파일, 리소스 파일 등)가 포함될 수 있습니다. 정적 어셈블리는 PE(이식 가능한 실행) 파일로 디스크에 저장됩니다. .NET Framework를 사용하여, 메모리에서 직접 실행되며 실행 전에 디스크에 저장되지 않는 동적 어셈블리를 만들 수도 있습니다. 동적 어셈블리는 실행된 후에 디스크에 저장할 수 있습니다.  
   
- 여러 가지 방법으로 어셈블리를 만들 수 있습니다. 이전에 .dll 또는 .exe 파일을 만들기 위해 사용했던 Visual Studio 등의 개발 도구를 사용할 수 있습니다. [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]에 제공된 도구를 사용하여, 다른 개발 환경에서 만든 모듈이 포함된 어셈블리를 만들 수 있습니다. 또한 <xref:System.Reflection.Emit?displayProperty=nameWithType> 등의 공용 언어 런타임 API를 사용하여 동적 어셈블리를 만들 수도 있습니다.  
+ 여러 가지 방법으로 어셈블리를 만들 수 있습니다. 이전에 .dll 또는 .exe 파일을 만들기 위해 사용했던 Visual Studio 등의 개발 도구를 사용할 수 있습니다. Windows SDK(소프트웨어 개발 키트)에 제공된 도구를 사용하여, 다른 개발 환경에서 만든 모듈이 포함된 어셈블리를 만들 수 있습니다. 또한 <xref:System.Reflection.Emit?displayProperty=nameWithType> 등의 공용 언어 런타임 API를 사용하여 동적 어셈블리를 만들 수도 있습니다.  
   
 ## <a name="related-topics"></a>관련 항목  
   

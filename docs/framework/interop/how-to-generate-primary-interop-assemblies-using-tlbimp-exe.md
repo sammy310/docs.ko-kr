@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b3b1ae2734715c4204ac1887921505b5592e79e
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 09ee63a1283744da407cde2a99802969c7f55127
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910764"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833660"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>방법: Tlbimp.exe를 사용하여 주 Interop 어셈블리 생성
 주 interop 어셈블리를 생성하는 다음 두 가지 방법이 있습니다.  
   
-- [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]에서 제공하는 [형식 라이브러리 가져오기(Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 사용.  
+- Windows SDK(소프트웨어 개발 키트)에서 제공하는 [형식 라이브러리 가져오기(Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 사용.  
   
      주 interop 어셈블리를 생성하는 가장 간단한 방법은 [Tlbimp.exe(형식 라이브러리 가져오기)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)를 사용하는 것입니다. Tlbimp.exe는 다음과 같은 보호 기능을 제공합니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "64910764"
   
  여러 버전의 형식 라이브러리를 래핑할 수도 있습니다. 자세한 내용은 [방법: 여러 버전의 형식 라이브러리 래핑](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/1565h6hc(v=vs.100))을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 COM 형식 라이브러리 `LibUtil.tlb`를 가져오고 키 파일 `CompanyA.snk`를 사용하여 강력한 이름으로 `LibUtil.dll` 어셈블리에 서명합니다. 이 예제에서는 특정 네임스페이스 이름을 생략하여 기본 네임스페이스 `LibUtil`을 생성합니다.  
   
 ```  

@@ -6,17 +6,17 @@ helpviewer_keywords:
 - marshaling data, COM interop
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 807e514fac7d33cdacac3a48a37c7aa8dd92ef9c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d16f94e8b85a1bedb8b7791c2b7fcaf6d154ba1b
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648637"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833531"
 ---
 # <a name="marshaling-data-with-com-interop"></a>COM Interop를 사용하여 데이터 마샬링
 COM interop는 관리 코드에서 COM 개체를 사용하고 관리되는 개체를 COM에 노출하는 기능을 모두 지원합니다. COM과의 데이터 마샬링 지원은 광범위하며 거의 항상 올바른 마샬링 동작을 제공합니다.  
   
- [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]에는 다음과 같은 COM interop 도구가 포함됩니다.  
+ Windows SDK(소프트웨어 개발 키트)에는 다음과 같은 COM interop 도구가 포함되어 있습니다.  
   
 - [형식 라이브러리 가져오기(Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) - COM 형식 라이브러리를 interop 어셈블리로 변환합니다. 이 어셈블리에서 interop 마샬링 서비스는 관리되는 메모리와 관리되지 않는 메모리 간에 데이터 마샬링을 수행하는 래퍼를 생성합니다.  
   

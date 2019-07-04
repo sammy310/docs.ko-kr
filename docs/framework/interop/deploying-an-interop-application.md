@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 00347b295eb5d9a092fb817e75f852f16004bb87
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: acb4d3820d06845834b127d8f03763e7dd346f53
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489258"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833691"
 ---
 # <a name="deploying-an-interop-application"></a>Interop 응용 프로그램 배포
-Interop 애플리케이션에는 일반적으로 .NET 클라이언트 어셈블리, 고유한 COM 형식 라이브러리를 나타내는 하나 이상의 interop 어셈블리 및 하나 이상의 등록된 COM 구성 요소가 포함됩니다. Visual Studio 및 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]에서는 [형식 라이브러리를 어셈블리로 가져오기](importing-a-type-library-as-an-assembly.md)에 설명된 대로 형식 라이브러리를 interop 어셈블리로 가져오고 변환하는 도구를 제공합니다. Interop 애플리케이션을 배포하는 두 가지 방법은 다음과 같습니다.  
+Interop 애플리케이션에는 일반적으로 .NET 클라이언트 어셈블리, 고유한 COM 형식 라이브러리를 나타내는 하나 이상의 interop 어셈블리 및 하나 이상의 등록된 COM 구성 요소가 포함됩니다. Visual Studio 및 Windows SDK(소프트웨어 개발 키트)에서는 [형식 라이브러리를 어셈블리로 가져오기](importing-a-type-library-as-an-assembly.md)에 설명된 대로 형식 라이브러리를 interop 어셈블리로 가져오고 변환하는 도구를 제공합니다. Interop 애플리케이션을 배포하는 두 가지 방법은 다음과 같습니다.  
   
 - 포함된 interop 형식 사용: .NET Framework 4부터 interop 어셈블리의 형식 정보를 실행 파일에 포함하도록 컴파일러에 지시할 수 있습니다. 컴파일러는 애플리케이션에서 사용하는 형식 정보만 포함합니다. Interop 어셈블리를 애플리케이션에 배포할 필요는 없습니다. 이것이 권장되는 방법입니다.  
   

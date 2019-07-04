@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 6196cb52cb1b42b3354bc7f8836a171397d0af1e
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 50243f148f37f5f33f0c69ddd896549e7aea9462
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758094"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025111"
 ---
 # <a name="pointer-related-operators-c-reference"></a>포인터 관련 연산자(C# 참조)
 
@@ -96,7 +96,7 @@ x->y
 
 [!code-csharp[pointer element access](~/samples/csharp/language-reference/operators/PointerOperators.cs#ElementAccess)]
 
-이 예제에서는 [`stackalloc` 연산자](../keywords/stackalloc.md)를 사용하여 스택의 메모리 블록을 할당합니다.
+이 예제에서는 [`stackalloc` 연산자](stackalloc.md)를 사용하여 스택의 메모리 블록을 할당합니다.
 
 > [!NOTE]
 > 포인터 요소 액세스 연산자는 범위 이탈 오류를 검사하지 않습니다.
@@ -188,10 +188,9 @@ x->y
 ## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
-- [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 연산자](index.md)
 - [포인터 형식](../../programming-guide/unsafe-code-pointers/pointer-types.md)
-- [`unsafe` 키워드](../keywords/unsafe.md)
-- [`fixed` 키워드](../keywords/fixed-statement.md)
-- [`stackalloc` 연산자](../keywords/stackalloc.md)
-- [`sizeof` 연산자](../keywords/sizeof.md)
+- [unsafe 키워드](../keywords/unsafe.md)
+- [fixed 키워드](../keywords/fixed-statement.md)
+- [stackalloc 연산자](stackalloc.md)
+- [sizeof 연산자](../keywords/sizeof.md)

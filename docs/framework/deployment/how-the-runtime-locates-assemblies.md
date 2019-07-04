@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b967e6441ae3f3d43e5a6276cfcf79e3c44f74cf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2d69fd06f4048667a05ddbfec571067c16f9e86a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613970"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833727"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>런타임에서 어셈블리를 찾는 방법
 .NET Framework 애플리케이션을 성공적으로 배포하려면 공용 언어 런타임이 애플리케이션을 구성하는 어셈블리를 찾아서 바인딩하는 방법을 이해해야 합니다. 기본적으로 런타임은 애플리케이션 빌드 시 사용된 정확한 버전의 어셈블리로 바인딩을 시도합니다. 이 기본 동작은 구성 파일 설정으로 재정의할 수 있습니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "64613970"
  공용 언어 런타임은 어셈블리를 찾아서 어셈블리 참조를 확인하려고 할 때 다양 한 단계를 수행합니다. 각 단계는 다음 섹션에서 설명합니다. 검색이라는 용어는 대개 런타임에서 어셈블리를 찾는 방법을 설명할 때 사용됩니다. 해당 이름 및 문화권에 따라 어셈블리를 찾는 데 사용되는 추론 집합을 가리킵니다.  
   
 > [!NOTE]
->  [에 포함된](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)어셈블리 바인딩 로그 뷰어(Fuslogvw.exe) [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]를 사용하여 로그 파일의 바인딩 정보를 볼 수 있습니다.  
+>  Windows SDK(소프트웨어 개발 키트)에 포함된 [어셈블리 바인딩 로그 뷰어(Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)를 사용하여 로그 파일의 바인딩 정보를 볼 수 있습니다.  
   
 ## <a name="initiating-the-bind"></a>바인딩 시작  
  런타임에서 다른 어셈블리에 대한 참조를 확인하려고 시도하면 어셈블리를 찾아서 바인딩하는 프로세스가 시작됩니다. 이 참조는 정적이거나 동적일 수 있습니다. 컴파일러는 빌드 타임에 정적 참조를 어셈블리 매니페스트 메타데이터에 기록합니다. 동적 참조는 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>와 같은 다양한 메서드의 호출 결과로 즉석에서 생성됩니다.  
@@ -130,7 +130,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  게시자 정책 파일은 공유 구성 요소가 업데이트되고 해당 구성 요소를 사용하는 모든 애플리케이션이 새 버전의 공유 구성 요소를 선택할 때 사용됩니다. 애플리케이션 구성 파일이 안전 모드를 적용하지 않는 한 게시자 정책 파일의 설정이 애플리케이션 구성 파일의 설정을 재정의합니다.  
   
 #### <a name="safe-mode"></a>안전 모드  
- 게시자 정책 파일은 일반적으로 서비스 팩이나 프로그램 업데이트의 일부로 명시적으로 설치됩니다. 업그레이드된 공유 구성 요소에 문제가 있는 경우 안전 모드를 사용하여 게시자 정책 파일의 재정의를 무시할 수 있습니다. 안전 모드는 **\<publisherPolicy apply="yes**&amp;#124;**no"/&gt;** 요소에 의해 결정되며, 이 요소는 애플리케이션 구성 파일에만 있습니다. 바인딩 프로세스에서 게시자 정책 구성 정보를 제거할지 여부를 지정합니다.  
+ 게시자 정책 파일은 일반적으로 서비스 팩이나 프로그램 업데이트의 일부로 명시적으로 설치됩니다. 업그레이드된 공유 구성 요소에 문제가 있는 경우 안전 모드를 사용하여 게시자 정책 파일의 재정의를 무시할 수 있습니다. 안전 모드는 **\<publisherPolicy apply="yes**&#124;**no"/&amp;gt;** 요소에 의해 결정되며, 이 요소는 애플리케이션 구성 파일에만 있습니다. 바인딩 프로세스에서 게시자 정책 구성 정보를 제거할지 여부를 지정합니다.  
   
  전체 애플리케이션이나 선택한 어셈블리에 대해 안전 모드를 설정할 수 있습니다. 즉, 애플리케이션을 구성하는 모든 어셈블리에 대해 정책을 해제하거나 다른 어셈블리는 제외하고 일부 어셈블리에 대해서만 설정할 수 있습니다. 애플리케이션을 구성하는 어셈블리에 게시자 정책을 선택적으로 적용하려면, **\<publisherPolicy apply\=no/&gt;** 를 설정한 다음 \<**dependentAssembly**&gt; 요소를 사용하여 정책을 적용하려는 어셈블리를 지정합니다. 애플리케이션을 구성하는 모든 어셈블리에 게시자 정책을 적용하려면 종속 어셈블리 요소 없이 **\<publisherPolicy apply\=no/&gt;** 를 설정합니다. 구성에 대한 자세한 내용은 [구성 파일을 사용하여 앱 구성](../../../docs/framework/configure-apps/index.md)을 참조하세요.  
   

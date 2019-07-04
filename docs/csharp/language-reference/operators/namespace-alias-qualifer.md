@@ -9,12 +9,12 @@ helpviewer_keywords:
 - 'namespaces [C#], :: operator'
 - namespace alias qualifier operator (::) [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: 0b456ed3ce9965ef389d8ce40167afa4ac33da18
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: c494e8dbb18f44ce5520b21800a21d3feb03da59
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422529"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025065"
 ---
 # <a name="-operator-c-reference"></a>:: 연산자(C# 참조)
 
@@ -29,7 +29,7 @@ ms.locfileid: "66422529"
 var numbers = new Col::List<int> { 1, 2, 3 };
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 네임스페이스 별칭 한정자는 `global`일 수 있습니다. 별칭이 지정된 네임스페이스가 아니라 전역 네임스페이스에서 조회를 호출합니다.
 
@@ -46,7 +46,6 @@ var numbers = new Col::List<int> { 1, 2, 3 };
 ## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
-- [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 연산자](index.md)
 - [. 연산자](member-access-operators.md#member-access-operator-)
 - [extern alias](../keywords/extern-alias.md)

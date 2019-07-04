@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 629a59cd28e58e4b08805e3bb742d12e9cacbebd
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 9a3ba9b86a1611408f510098726ac49f543f8451
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377873"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832877"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>강력한 이름의 어셈블리 만들기 및 사용
 
@@ -51,7 +51,7 @@ ms.locfileid: "66377873"
 
 ## <a name="bypass-signature-verification-of-trusted-assemblies"></a>신뢰할 수 있는 어셈블리의 시그니처 확인 건너뛰기
 
-[!INCLUDE[net_v35SP1_long](../../../includes/net-v35sp1-long-md.md)]부터는 어셈블리가 완전 신뢰 애플리케이션 도메인(예: `MyComputer` 영역의 기본 애플리케이션 도메인)에 로드될 때 강력한 이름 서명의 유효성을 검사하지 않습니다. 이를 강력한 이름 건너뛰기 기능이라고 합니다. 완전 신뢰 환경에서는 <xref:System.Security.Permissions.StrongNameIdentityPermission>에 대한 요청이 해당 서명과 관계없이 서명된 완전 신뢰 어셈블리에 대해 항상 성공합니다. 강력한 이름 건너뛰기 기능을 사용하면 이러한 상황에서 완전 신뢰 어셈블리의 강력한 이름 서명을 확인하는 데 따르는 불필요한 오버헤드가 발생하지 않으므로 어셈블리가 더 빠르게 로드됩니다.
+.NET Framework 3.5 서비스 팩 1부터, 어셈블리가 완전 신뢰 애플리케이션 도메인(예: `MyComputer` 영역의 기본 애플리케이션 도메인)에 로드될 때 강력한 이름 시그니처의 유효성을 검사하지 않습니다. 이를 강력한 이름 건너뛰기 기능이라고 합니다. 완전 신뢰 환경에서는 <xref:System.Security.Permissions.StrongNameIdentityPermission>에 대한 요청이 해당 서명과 관계없이 서명된 완전 신뢰 어셈블리에 대해 항상 성공합니다. 강력한 이름 건너뛰기 기능을 사용하면 이러한 상황에서 완전 신뢰 어셈블리의 강력한 이름 서명을 확인하는 데 따르는 불필요한 오버헤드가 발생하지 않으므로 어셈블리가 더 빠르게 로드됩니다.
 
 건너뛰기 기능은 강력한 이름으로 서명되었으며 다음과 같은 특징이 있는 모든 어셈블리에 적용됩니다.
 

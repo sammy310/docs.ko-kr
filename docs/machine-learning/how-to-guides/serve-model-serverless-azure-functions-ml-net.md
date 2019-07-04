@@ -1,16 +1,16 @@
 ---
 title: Azure Functions에 모델 배포
 description: Azure Functions를 사용하여 인터넷을 통해 예측하기 위한 ML.NET 감정 분석 기계 학습 모델 제공
-ms.date: 05/03/2019
+ms.date: 06/11/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 9e62d8826227aed07451387cc733d27094327f99
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7df7a6f9fcc5a4702171e1aac4b6b67e0c343748
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645101"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025985"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>Azure Functions에 모델 배포
 
@@ -22,6 +22,7 @@ Azure Functions 서버리스 환경을 통해 HTTP에서의 예측을 위해 미
 ## <a name="prerequisites"></a>전제 조건
 
 - “.NET Core 플랫폼 간 개발” 워크로드 및 “Azure 개발”이 설치된 [Visual Studio 2017 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017).
+- Microsoft.NET.Sdk.Functions NuGet 패키지 버전 1.0.28 이상
 - [Azure Functions 도구](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
 - PowerShell
 - 미리 학습된 모델입니다. [ML.NET 감정 분석 자습서](../tutorials/sentiment-analysis.md)를 사용하여 자체 모델을 빌드하거나 이 [미리 학습된 감정 분석 기계 학습 모델](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip) 다운로드
@@ -38,9 +39,17 @@ Azure Functions 서버리스 환경을 통해 HTTP에서의 예측을 위해 미
 
     솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. “nuget.org”를 패키지 소스로 선택하고, [찾아보기] 탭을 선택하고, **Microsoft.ML**을 검색하고, 목록에서 해당 패키지를 선택하고, **설치** 단추를 선택합니다. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다.
 
+1. **Microsoft.Azure.Functions.Extensions NuGet 패키지**를 설치합니다.
+
+    솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. “nuget.org”를 패키지 소스로 선택하고 찾아보기 탭을 선택합니다. **Microsoft.Azure.Functions.Extensions**를 검색하고 목록에서 해당 패키지를 선택한 다음, **설치** 단추를 선택합니다. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다.
+
 1. **Microsoft.Extensions.ML NuGet 패키지**를 설치합니다.
 
     솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. “nuget.org”를 패키지 원본으로 선택하고, 찾아보기 탭을 선택하고, **Microsoft.Extensions.ML**을 검색하고, 목록에서 해당 패키지를 선택하고, **설치** 단추를 선택합니다. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다.
+
+1. **Microsoft.NET.Sdk.Functions NuGet 패키지**를 버전 1.0.28로 업데이트합니다.
+
+    솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. “nuget.org”를 패키지 소스로 선택하고 설치 탭을 선택합니다. **Microsoft.NET.Sdk.Functions**를 검색하고 목록에서 해당 패키지를 선택한 다음, 버전 드롭다운에서 1.0.28 이상을 선택하고 **업데이트** 단추를 선택합니다. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다.
 
 ## <a name="add-pre-trained-model-to-project"></a>프로젝트에 미리 학습된 모델 추가
 
@@ -174,28 +183,6 @@ Azure Functions 서버리스 환경을 통해 HTTP에서의 예측을 위해 미
 
 > [!WARNING]
 > [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)은 스레드로부터 안전하지 않습니다. 성능과 스레드 안전 향상을 위해 애플리케이션용으로 `PredictionEngine` 개체의 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)을 만드는 `PredictionEnginePool` 서비스를 사용합니다. 
-
-## <a name="register-startup-as-an-azure-functions-extension"></a>Azure Functions 확장으로 시작 등록
-
-애플리케이션에서 `Startup`을 사용하려면 Azure Functions 확장으로 등록해야 합니다. 이름이 *extensions.json*인 새 파일이 없으면 프로젝트에 하나 만듭니다.
-
-1. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가** > **새 항목**을 선택합니다.
-1. **새 항목** 대화에서 **Visual C#** 노드와 **웹** 노드를 차례로 선택합니다. 그런 다음, **Json 파일** 옵션을 선택합니다. **이름** 텍스트 상자에 "extensions.json"을 입력한 다음, **확인** 단추를 선택합니다.
-
-    *extensions.json* 파일이 코드 편집기에서 열립니다. *extensions.json*에 다음 콘텐츠를 추가합니다.
-    
-    ```json
-    {
-      "extensions": [
-        {
-          "name": "Startup",
-          "typename": "SentimentAnalysisFunctionsApp.Startup, SentimentAnalysisFunctionsApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
-        }
-      ]
-    }
-    ```
-
-1. 솔루션 탐색기에서 *extensions.json* 파일을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **고급** 아래에서 **출력 디렉터리에 복사** 값을 **변경된 내용만 복사**로 변경합니다.
 
 ## <a name="load-the-model-into-the-function"></a>함수에 모델 로드
 

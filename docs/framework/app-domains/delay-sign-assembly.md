@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31c43607a710316696a9765feb6f36b7676f906f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eb055285af7365536f7e1ad7c7d9290e51be50db
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593638"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832859"
 ---
 # <a name="delay-signing-an-assembly"></a>어셈블리 서명 연기
 조직에 개발자가 일상적으로 액세스할 수 없는 엄격하게 보호된 키 쌍이 있을 수 있습니다. 대부분이 경우 공개 키를 사용할 수 있지만 개인 키에 대한 액세스는 몇몇 개인만으로 제한됩니다. 강력한 이름을 사용하여 어셈블리를 개발할 경우 강력한 이름의 대상 어셈블리를 참조하는 각 어셈블리에는 대상 어셈블리에 강력한 이름을 지정하는 데 사용되는 공개 키의 토큰이 포함됩니다. 이를 위해 개발 프로세스 중에 공개 키를 사용할 수 있어야 합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "64593638"
   
  다음 단계에서는 어셈블리 서명을 연기하는 프로세스를 간략하게 설명합니다.  
   
-1. 최종 서명을 수행할 조직에서 키 쌍의 공개 키 부분을 가져옵니다. 일반적으로 이 키는 .snk 파일 형식으로, [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]에서 제공된 [강력한 이름 도구(Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)를 사용하여 만들 수 있습니다.  
+1. 최종 서명을 수행할 조직에서 키 쌍의 공개 키 부분을 가져옵니다. 일반적으로 이 키는 .snk 파일 양식으로, Windows SDK(소프트웨어 개발 키트)에서 제공된 [강력한 이름 도구(Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)를 사용하여 만들 수 있습니다.  
   
 2. <xref:System.Reflection>의 두 가지 사용자 지정 특성을 사용하여 어셈블리에 대한 소스 코드를 주석으로 처리합니다.  
   

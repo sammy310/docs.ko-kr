@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: d94552d9a1acfdd63b9694810e724c4347e615e7
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 37fe329026c16043abb20f8a9f030d877469951d
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758285"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025232"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>부울 논리 연산자(C# 참조)
 
@@ -192,6 +192,5 @@ x = x op y
 ## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
-- [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 연산자](index.md)
 - [비트 및 시프트 연산자](bitwise-and-shift-operators.md)

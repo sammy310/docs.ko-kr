@@ -1,21 +1,19 @@
 ---
-title: '자습서: TensorFlow를 사용하여 ML.NET 사용자 지정 이미지 분류자 빌드'
-description: 미리 학습된 TensorFlow 모델을 다시 사용하여 이미지를 분류하기 위해 TensorFlow 전이 학습 시나리오에서 ML.NET 사용자 지정 이미지 분류자를 빌드하는 방법을 살펴봅니다.
-ms.date: 05/06/2019
+title: '자습서: TensorFlow 이미지 분류자 재학습 - 전이 학습'
+description: 전이 학습 및 ML.NET을 사용하여 이미지 분류 TensorFlow 모델을 재학습하는 방법을 알아봅니다. 원래 모델은 개별 이미지를 분류하도록 학습되었습니다. 재학습 후에는 새 모델이 이미지를 광범위한 범주로 구성합니다.
+ms.date: 06/12/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: e248c5ae73281ed6cd492592ba4a51791db75aa2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.custom: mvc, title-hack-0612
+ms.openlocfilehash: 2ad9e71f572cb694897fd12ecbb15da069afe338
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593426"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026088"
 ---
-# <a name="tutorial-build-an-mlnet-custom-image-classifier-with-tensorflow"></a>자습서: TensorFlow를 사용하여 ML.NET 사용자 지정 이미지 분류자 빌드
+# <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>자습서: 전이 학습 및 ML.NET을 사용하여 TensorFlow 이미지 분류자 재학습
 
-이 샘플 자습서에서는 이미 학습된 이미지 분류자 `TensorFlow` 모델을 사용하여 이미지를 몇 가지 범주로 분류하기 위해 새 사용자 지정 모델을 빌드하는 방법을 보여 줍니다.
-
-유사한 문제를 해결하도록 미리 학습된 모델을 다시 사용하고 문제를 해결할 수 있도록 해당 모델 계층의 전부 또는 일부를 다시 학습시킬 수 있다면 어떻게 될까요? 이미 학습된 모델의 일부를 다시 사용하여 새 모델을 빌드하는 기술을 [전이 학습](https://en.wikipedia.org/wiki/Transfer_learning)이라고 합니다.
+전이 학습 및 ML.NET을 사용하여 이미지 분류 TensorFlow 모델을 재학습하는 방법을 알아봅니다. 원래 모델은 개별 이미지를 분류하도록 학습되었습니다. 재학습 후에는 새 모델이 이미지를 광범위한 범주로 구성합니다. 
 
 [이미지 분류](https://en.wikipedia.org/wiki/Outline_of_object_recognition) 모델을 처음부터 학습시키려면 수백만 개의 매개 변수, 많은 레이블 지정 학습 데이터 및 많은 양의 컴퓨팅 리소스(수백 시간의 GPU 시간)를 설정해야 합니다. 사용자 지정 모델을 처음부터 학습시키는 것만큼 효과적이지는 않지만, 전이 학습을 사용하면 수천 개 이미지 및 수백만 개 레이블 지정 이미지를 사용하여 이 프로세스를 간소화하고 사용자 지정 모델을 매우 빠르게 빌드할 수 있습니다(GPU가 없는 머신에서는 1시간 안에 가능).
 
@@ -24,6 +22,10 @@ ms.locfileid: "65593426"
 > * 문제 이해
 > * 미리 학습된 모델 다시 사용 및 조정
 > * 이미지 분류
+
+## <a name="what-is-transfer-learning"></a>전이 학습이란?
+
+유사한 문제를 해결하도록 미리 학습된 모델을 다시 사용하고 문제를 해결할 수 있도록 해당 모델 계층의 전부 또는 일부를 다시 학습시킬 수 있다면 어떻게 될까요? 이미 학습된 모델의 일부를 다시 사용하여 새 모델을 빌드하는 기술을 [전이 학습](https://en.wikipedia.org/wiki/Transfer_learning)이라고 합니다.
 
 ## <a name="image-classification-sample-overview"></a>이미지 분류 샘플 개요
 
@@ -71,7 +73,7 @@ ms.locfileid: "65593426"
 > * “119px-Nalle_-_a_small_brown_teddy_bear.jpg” 작성자: [Jonik](https://commons.wikimedia.org/wiki/User:Jonik) - 직접 사진 촬영, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=48166.
 > * “193px-Broodrooster.jpg” 작성자: [M.Minderhoud](https://nl.wikipedia.org/wiki/Gebruiker:Michiel1972) - 직접 작업, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=27403
 
-전이 학습에는 모든 계층 다시 학습 및 끝에서 두 번째 계층과 같은 몇 가지 전략이 포함됩니다. 이 자습서에서는 끝에서 두 번째 계층 전략을 사용하는 방법을 설명하고 보여 줍니다. 끝에서 두 번째 계층 전략에서는 특정 문제를 해결하기 위해 미리 학습된 모델을 다시 사용합니다. 그런 다음, 새 문제를 해결할 수 있도록 해당 모델의 마지막 계층을 다시 학습시킵니다. 미리 학습된 모델을 새 모델의 일부로 다시 사용하면 상당한 시간과 리소스가 절약됩니다.
+전이 학습에는 모든 계층 다시 학습 및 끝에서 두 번째 계층과 같은 몇 가지 전략이 포함됩니다.   이 자습서에서는 끝에서 두 번째 계층 전략을 사용하는 방법을 설명하고 보여 줍니다.  끝에서 두 번째 계층 전략에서는 특정 문제를 해결하기 위해 미리 학습된 모델을 다시 사용합니다.  그런 다음, 새 문제를 해결할 수 있도록 해당 모델의 마지막 계층을 다시 학습시킵니다. 미리 학습된 모델을 새 모델의 일부로 다시 사용하면 상당한 시간과 리소스가 절약됩니다.
 
 이 이미지 분류 모델의 경우 TensorFlow 모델에서 전체 이미지를 “우산”, “저지” 및 “식기 세척기” 같은 수천 개의 클래스로 분류하려고 시도하는 `ImageNet` 데이터 세트를 기반으로 학습된 널리 사용되는 이미지 인식 모델인 [Inception 모델](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)을 다시 사용합니다.
 
