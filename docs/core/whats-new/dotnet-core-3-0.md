@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 05/06/2019
-ms.openlocfilehash: f7dc95a9f0b652f1509720fb987cbdb88f64e78c
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 369c74d2d8e82f157de0eec4294a5ee50542292b
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689258"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169780"
 ---
 # <a name="whats-new-in-net-core-30-preview-5"></a>.NET Core 3.0(Preview 5)의 새로운 기능
 
@@ -20,10 +20,11 @@ ms.locfileid: "66689258"
 
 .NET Core 3.0에서는 C# 8.0에 대한 지원이 추가되었습니다. OmniSharp 확장이 지원되는 VSCode 또는 Visual Studio 2019 업데이트 1 미리 보기 최신 릴리스를 사용하는 것이 매우 좋습니다.
 
-Windows, Mac 및 Linux에서 지금 바로 [.NET Core 3.0 Preview 5를 다운로드하여 시작하세요](https://aka.ms/netcore3download).
+Windows, Mac 및 Linux에서 지금 바로 [.NET Core 3.0 Preview 6을 다운로드하여 시작](https://aka.ms/netcore3download)하세요.
 
 각 미리 보기 릴리스에 대한 자세한 내용은 다음 공지를 참조하세요.
 
+- [.NET Core 3.0 Preview 6 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/)
 - [.NET Core 3.0 Preview 5 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-5/)
 - [.NET Core 3.0 Preview 4 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-4/)
 - [.NET Core 3.0 Preview 3 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-3/)
@@ -112,6 +113,34 @@ dotnet publish -r win10-x64 /p:PublishSingleFile=true
 
 단일 파일 게시에 대한 자세한 내용은 [단일 파일 번들러 설계 문서](https://github.com/dotnet/designs/blob/master/accepted/single-file/design.md)를 참조하세요.
 
+## <a name="assembly-linking"></a>어셈블리 연결
+
+.NET Core SDK 3.0에는 IL을 분석하고 사용되지 않는 어셈블리를 잘라내어 앱의 크기를 줄일 수 있는 도구가 포함되어 있습니다.
+
+자체 포함 앱에는 호스트 컴퓨터에 .NET을 설치하지 않고도 코드를 실행하는 데 필요한 모든 요소가 포함됩니다. 그러나 앱을 실행하는 데 프레임워크의 작은 하위 집합만 필요한 경우가 많으므로 사용되지 않는 다른 라이브러리를 제거할 수 있습니다.
+
+이제 .NET Core에 [IL 링커](https://github.com/mono/linker) 도구를 사용하여 앱의 IL을 검사하는 설정이 포함되어 있습니다. 이 도구는 필요한 코드를 검색한 다음, 사용되지 않는 라이브러리를 잘라냅니다. 이 도구를 통해 일부 앱의 배포 크기를 훨씬 줄일 수 있습니다.
+
+이 도구를 사용하려면 프로젝트에서 `<PublishTrimmed>` 설정을 지정하고 자체 포함 앱을 게시합니다.
+
+```xml
+<PropertyGroup>
+  <PublishTrimmed>true</PublishTrimmed>
+</PropertyGroup>
+```
+
+```console
+dotnet publish -r <rid> -c Release
+```
+
+예를 들어 포함된 기본 “hello world” 새 콘솔 프로젝트 템플릿은 게시될 때 크기가 약 70MB입니다. `<PublishTrimmed>`를 사용하면 크기가 약 30MB로 줄어듭니다.
+
+잘라낼 때 리플렉션이나 관련된 동적 기능을 사용하는 애플리케이션 또는 프레임워크 (ASP.NET Core, WPF 등)가 중단되는 경우가 많다는 것을 고려해야 합니다. 이러한 중단은 링커에서 이 동적 동작을 알지 못하고 리플렉션에 필요한 프레임워크 유형을 확인할 수 없기 때문에 발생합니다. 이 시나리오를 인식하도록 IL 링커 도구를 구성할 수 있습니다.
+
+무엇보다도, 잘라낸 후 앱을 테스트해야 합니다.
+
+IL 링커 도구에 대한 자세한 내용은 [문서](https://aka.ms/dotnet-illink)또는 [mono/linker]( https://github.com/mono/linker) 리포지토리를 참조하세요.
+
 ## <a name="tiered-compilation"></a>계층화된 컴파일
 
 [계층화된 컴파일](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/)(TC)은 .NET Core 3.0에서 기본적으로 켜져 있습니다. 런타임 시 JIT(Just-In-Time) 컴파일러를 보다 유연하게 사용해서 성능을 선할 수 있도록 하는 기능입니다.
@@ -131,6 +160,38 @@ TC를 완전히 비활성화하려면 프로젝트 파일에서 다음 설정을
 ```xml
 <TieredCompilation>false</TieredCompilation>
 ```
+
+## <a name="readytorun-images"></a>ReadyToRun 이미지
+
+R2R(ReadyToRun) 형식으로 애플리케이션 어셈블리를 컴파일하면 .NET Core 애플리케이의 시작 시간을 향상할 수 있습니다. R2R은 AOT(Ahead-Of-Time) 컴파일 양식입니다.
+
+R2R 이진 파일은 애플리케이션이 로드될 때 JIT(Just-In-Time) 컴파일러에서 수행해야 하는 작업량을 줄여 시작 성능을 향상합니다. 이진 파일에는 JIT에서 생성되는 코드와 비슷한 네이티브 코드가 포함되어 있습니다.
+
+R2R 이진 파일에는 일부 시나리오에서 필요한 IL(중간 언어) 코드와 동일한 코드의 네이티브 버전이 모두 포함되므로 파일 크기가 더 큽니다. R2R은 Linux x64 또는 Windows x64와 같은 특정 런타임 환경(RID)을 대상으로 하는 자체 포함 앱을 게시하는 경우에만 사용할 수 있습니다.
+
+앱을 R2R로 컴파일하려면 `<PublishReadyToRun>` 설정을 추가합니다.
+
+```xml
+<PropertyGroup>
+  <PublishReadyToRun>true</PublishReadyToRun>
+</PropertyGroup>
+```
+
+자체 포함 앱을 게시합니다. 예를 들어 이 명령은 Windows 64비트 버전용 자체 포함 앱을 만듭니다.
+
+```console
+dotnet publish -c Release -r win-x64 --self-contained true
+```
+
+### <a name="cross-platformarchitecture-restrictions"></a>교차 플랫폼/아키텍처 제한 사항
+
+현재 ReadyToRun 컴파일러는 교차 대상 지정을 지원하지 않습니다. 지정된 대상에서 컴파일해야 합니다. 예를 들어 Windows x64용 R2R 이미지를 만들려는 경우 해당 환경에서 게시 명령을 실행해야 합니다.
+
+교차 대상 지정 예외:
+
+- Windows x64를 사용하여 Windows ARM32, ARM64 및 x86 이미지를 컴파일할 수 있습니다.
+- Windows x86을 사용하여 Windows ARM32 이미지를 컴파일할 수 있습니다.
+- Linux X64를 사용하여 Linux ARM32 및 ARM64 이미지를 컴파일할 수 있습니다.
 
 ## <a name="build-copies-dependencies"></a>빌드 복사본 종속성
 
@@ -362,9 +423,19 @@ Windows는 플랫 C API, COM 및 WinRT의 형태로 다양한 네이티브 API�
 
 ## <a name="http2-support"></a>HTTP/2 지원
 
-<xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 형식은 HTTP/2 프로토콜을 지원합니다. 현재 지원이 비활성화되어 있지만, <xref:System.Net.Http.HttpClient>를 사용하기 전에 `AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2Support", true);`를 호출하면 활성화할 수 있습니다. 또한 앱을 실행하기 전에 `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2SUPPORT` 환경 변수를 `true`로 설정해도 HTTP/2 지원을 활성활 수 있습니다.
+<xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 형식은 HTTP/2 프로토콜을 지원합니다. HTTP/2를 사용할 수 있는 경우 TLS/ALPN을 통해 HTTP 프로토콜 버전이 협상되며, 서버에서 사용하기로 선택하면 HTTP/2가 사용됩니다.
 
-HTTP/2가 활성화되면 HTTP 프로토콜 버전은 TLS/ALPN을 통해 협상되며, HTTP/2는 서버가 사용하기로 선택한 경우에만 사용됩니다.
+기본 프로토콜은 여전히 HTTP/1.1이지만, 두 가지 방법으로 HTTP/2를 사용할 수 있습니다. 첫째, HTTP/2를 사용하도록 HTTP 요청 메시지를 설정할 수 있습니다.
+
+[!CODE-csharp[Http2Request](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Request)]
+
+둘째, 기본적으로 HTTP/2를 사용하도록 <xref:System.Net.Http.HttpClient>를 변경할 수 있습니다.
+
+[!CODE-csharp[Http2Client](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Client)]
+
+애플리케이션 개발 중에 암호화되지 않은 연결을 사용하려는 경우가 많습니다. 대상 엔드포인트에서 HTTP/2를 사용할 것을 알고 있으면, HTTP/2에 대해 암호화되지 않은 연결을 켤 수 있습니다. `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2UNENCRYPTEDSUPPORT` 환경 변수를 `1` 로 설정하거나 앱 컨텍스트에서 사용하도록 설정하면 됩니다.
+
+[!CODE-csharp[Http2Context](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#AppContext)]
 
 ## <a name="tls-13--openssl-111-on-linux"></a>Linux의 TLS 1.3 및 OpenSSL 1.1.1
 

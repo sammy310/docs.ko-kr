@@ -2,12 +2,12 @@
 title: C# 8.0의 새로운 기능 - C# 가이드
 description: C# 8.0의 새로운 기능을 살펴봅니다. 이 문서는 미리 보기 5가 반영된 최신 내용을 담고 있습니다.
 ms.date: 02/12/2019
-ms.openlocfilehash: dd4aca99a19134ed3ffff859c9c9554d4d480816
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 99056c9cd330c0c3ae6c63239989a2e9e9dc496c
+ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557142"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67151973"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0의 새로운 기능
 
@@ -181,7 +181,7 @@ public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
 
 ### <a name="tuple-patterns"></a>튜플 패턴
 
-일부 알고리즘은 여러 입력을 사용합니다. **튜플 패턴**을 사용하면 [튜플](../tuples.md)로 표현되는 여러 값에 따라 전환할 수 있습니다.  다음 코드는 게임 ‘가위, 바위, 보’에 대한 전환 식을 보여 줍니다.
+일부 알고리즘은 여러 입력을 사용합니다. **튜플 패턴**을 사용하면 [튜플](../tuples.md)로 표현되는 여러 값에 따라 전환할 수 있습니다.  다음 코드는 게임 ‘가위, 바위, 보’에 대한 전환 식을 보여 줍니다. 
 
 ```csharp
 public static string RockPaperScissors(string first, string second)
@@ -381,7 +381,7 @@ await foreach (var number in GenerateSequence())
 
 인덱스에 대한 규칙을 사용하여 시작하겠습니다. `sequence`배열을 고려합니다. `0` 인덱스는 `sequence[0]`과 동일합니다. `^0` 인덱스는 `sequence[sequence.Length]`와 동일합니다. `sequence[^0]`은 `sequence[sequence.Length]`처럼 예외를 throw합니다. `n`이 어떤 숫자이든, 인덱스 `^n`은 `sequence.Length - n`과 동일합니다.
 
-한 범위는 어떤 범위의 *시작* 및 *끝*을 지정합니다. 여러 범위는 배타적입니다. 즉, *끝*이 범위에 포함되지 않습니다. `[0..sequence.Length]`가 전체 범위를 나타내는 것처럼 `[0..^0]` 범위는 전체 범위를 나타냅니다. 
+한 범위는 어떤 범위의 *시작* 및 *끝*을 지정합니다. 범위의 시작은 포함되지만 범위의 끝은 포함되지 않으므로, ‘시작’은 범위에 포함되고 ‘끝’은 범위에 포함되지 않습니다.   `[0..sequence.Length]`가 전체 범위를 나타내는 것처럼 `[0..^0]` 범위는 전체 범위를 나타냅니다. 
 
 몇 가지 예를 살펴보겠습니다. 다음과 같은 배열이 있습니다. 앞에서부터의 인덱스와 뒤에서부터의 인덱스가 주석으로 처리되어 있습니다.
 

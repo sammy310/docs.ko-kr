@@ -4,12 +4,12 @@ description: .NET Core 런타임의 작동 방식을 제어해야 하는 고급 
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 0ebd5b1532af77c082a2d8cd6508a83e969b325e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6cddb6fa7dcd7a7d050749c26249f1f5d876322d
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587051"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306198"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>사용자 지정 .NET Core 호스트를 작성하여 네이티브 코드에서 .NET 런타임 제어
 
@@ -26,19 +26,63 @@ ms.locfileid: "64587051"
 또한 호스트를 테스트할 간단한 .NET Core 애플리케이션이 필요하므로 [.NET Core SDK](https://www.microsoft.com/net/core)를 설치하고 [소규모 .NET Core 테스트 앱](../../core/tutorials/with-visual-studio.md)(예: 'Hello World' 앱)을 빌드해야 합니다. 새로운 .NET Core 콘솔 프로젝트 템플릿으로 만든 'Hello World' 앱으로 충분합니다.
 
 ## <a name="hosting-apis"></a>호스팅 API
-.NET Core를 호스트하는 데 사용할 수 있는 두 가지 API가 있습니다. 이 문서(및 관련 [샘플](https://github.com/dotnet/samples/tree/master/core/hosting))에서는 두 가지 옵션을 다룹니다.
+.NET Core를 호스트하는 데 사용할 수 있는 세 가지 API가 있습니다. 이 문서(및 관련 [샘플](https://github.com/dotnet/samples/tree/master/core/hosting))에서는 모든 옵션에 대해 설명합니다.
 
-* .NET Core 런타임을 호스팅할 때 권장되는 방법은 [CoreClrHost.h](https://github.com/dotnet/coreclr/blob/master/src/coreclr/hosts/inc/coreclrhost.h) API를 사용하는 것입니다. 이 API는 런타임을 쉽게 시작 및 중지하고, 관리 코드를 호출하는 데 사용할 수 있는 함수를 제공합니다(관리 exe를 실행하거나 정적 관리 메서드를 호출하는 방식).
+* .NET Core 3.0 이상에서 .NET Core 런타임을 호스트하는 기본 방법은 `nethost` 및 `hostfxr` 라이브러리 API를 사용하는 것입니다. 이러한 진입점은 런타임을 찾아 초기화에 대해 설정하는 복잡성을 처리하고, 관리형 애플리케이션 시작과 정적 관리형 메서드 호출을 모두 허용합니다.
+* .NET Core 3.0 이전 버전에서 .NET Core 런타임을 호스트하는 기본 방법은 [CoreClrHost.h](https://github.com/dotnet/coreclr/blob/master/src/coreclr/hosts/inc/coreclrhost.h) API를 사용하는 것입니다. 이 API는 런타임을 쉽게 시작 및 중지하고, 관리 코드를 호출하는 데 사용할 수 있는 함수를 제공합니다(관리 exe를 실행하거나 정적 관리 메서드를 호출하는 방식).
 * [mscoree.h](https://github.com/dotnet/coreclr/blob/master/src/pal/prebuilt/inc/mscoree.h)의 `ICLRRuntimeHost4` 인터페이스를 사용하여 .NET Core를 호스트할 수도 있습니다. 이 API는 CoreClrHost.h보다 오래 되었으므로 이를 사용하는 이전 호스트를 보았을 것입니다. 이 API도 여전히 사용할 수 있으며, CoreClrHost보다 호스팅 프로세스에 대한 더 세부적인 제어를 지원합니다. 하지만 대부분의 시나리오에서는 이제 CoreClrHost.h가 권장됩니다. 더 간단한 API이기 때문입니다.
 
 ## <a name="sample-hosts"></a>샘플 호스트
 자습서에 설명된 단계를 보여주는 [샘플 호스트](https://github.com/dotnet/samples/tree/master/core/hosting)는 GitHub의 dotnet/samples 리포지토리에서 사용할 수 있습니다. 샘플에 있는 주석은 이 자습서에서 번호가 매겨진 단계를 샘플에서 수행되는 위치와 명확하게 연결합니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
 
-샘플 호스트는 학습 목적으로 사용되므로 오류 검사가 부족하며 효율성보다 가독성을 강조하도록 설계되었습니다. [dotnet/coreclr](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts) 리포지토리에서 더 많은 실제 호스트 샘플을 사용할 수 있습니다. 특히 [CoreRun 호스트](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts/corerun) 및 [Unix CoreRun 호스트](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts/unixcorerun)는 간단한 샘플을 읽은 후 학습하기 좋은 일반 용도의 호스트입니다.
+샘플 호스트는 학습 목적으로 사용되므로 오류 검사가 부족하며 효율성보다 가독성을 강조하도록 설계되었습니다.
+
+## <a name="create-a-host-using-nethosth-and-hostfxrh"></a>NetHost.h 및 HostFxr.h를 사용하여 호스트 만들기
+
+다음 단계에서는 `nethost` 및 `hostfxr` 라이브러리를 사용하여 네이티브 애플리케이션에서 .NET Core 런타임을 시작하고 관리형 정적 메서드를 호출하는 방법을 자세히 설명합니다. [샘플](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithHostFxr)은 .NET SDK와 함께 설치된 `nethost` 헤더 및 라이브러리와 [dotnet/core-setup](https://github.com/dotnet/core-setup) 리포지토리의 [`coreclr_delegates.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/coreclr_delegates.h) 및 [`hostfxr.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/hostfxr.h) 파일 복사본을 사용합니다.
+
+### <a name="step-1---load-hostfxr-and-get-exported-hosting-functions"></a>1단계 - HostFxr 로드 및 내보낸 호스팅 함수 가져오기
+
+`nethost` 라이브러리는 `hostfxr` 라이브러리를 찾기 위한 `get_hostfxr_path` 함수를 제공합니다. `hostfxr` 라이브러리는 .NET Core 런타임을 호스트하기 위한 함수를 공개합니다. 함수의 전체 목록은 [`hostfxr.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/hostfxr.h) 및 [기본 호스팅 디자인 문서](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/native-hosting.md)에서 확인할 수 있습니다. 샘플 및 이 자습서는 다음을 사용합니다.
+* `hostfxr_initialize_for_runtime_config`: 호스트 컨텍스트를 초기화하고, 지정된 런타임 구성을 사용하여 .NET Core 런타임 초기화를 준비합니다.
+* `hostfxr_get_runtime_delegate`: 런타임 기능의 대리자를 가져옵니다.
+* `hostfxr_close`: 호스트 컨텍스트를 닫습니다.
+
+`get_hostfxr_path`를 사용하여 `hostfxr` 라이브러리를 찾습니다. 라이브러리가 로드되고, 해당 내보내기가 검색됩니다.
+
+[!code-cpp[HostFxrHost#LoadHostFxr](~/samples/core/hosting/HostWithHostFxr/src/NativeHost/nativehost.cpp#LoadHostFxr)]
+
+### <a name="step-2---initialize-and-start-the-net-core-runtime"></a>2단계 - .NET Core 런타임 초기화 및 시작
+
+`hostfxr_initialize_for_runtime_config` 및 `hostfxr_get_runtime_delegate` 함수는 로드되는 관리형 구성 요소에 대한 런타임 구성을 사용하여 .NET Core 런타임을 초기화하고 시작합니다. `hostfxr_get_runtime_delegate` 함수는 관리형 어셈블리를 로드하고 해당 어셈블리의 정적 메서드에 대한 함수 포인터를 가져올 수 있도록 런타임 대리자를 가져오는 데 사용됩니다.
+
+[!code-cpp[HostFxrHost#Initialize](~/samples/core/hosting/HostWithHostFxr/src/NativeHost/nativehost.cpp#Initialize)]
+
+### <a name="step-3---load-managed-assembly-and-get-function-pointer-to-a-managed-method"></a>3단계 - 관리형 어셈블리 로드 및 관리형 메서드에 대한 함수 포인터 가져오기
+
+관리형 어셈블리를 로드하고 관리형 메서드에 대한 함수 포인터를 가져오기 위해 런타임 대리자가 호출됩니다. 대리자는 어셈블리 경로, 형식 이름 및 메서드 이름을 입력으로 사용하고, 관리형 메서드를 호출하는 데 사용할 수 있는 함수 포인터를 반환합니다.
+
+[!code-cpp[HostFxrHost#LoadAndGet](~/samples/core/hosting/HostWithHostFxr/src/NativeHost/nativehost.cpp#LoadAndGet)]
+
+샘플에서는 런타임 대리자를 호출할 때 `nullptr`을 대리자 형식 이름으로 전달하여 기본 시그니처를 관리형 메서드에 사용합니다.
+
+```csharp
+public delegate int ComponentEntryPoint(IntPtr args, int sizeBytes);
+```
+
+런타임 대리자를 호출할 때 대리자 형식 이름을 지정하면 다른 시그니처를 사용할 수 있습니다.
+
+### <a name="step-4---run-managed-code"></a>4단계 - 관리 코드 실행!
+
+이제 기본 호스트가 관리형 메서드를 호출하고 원하는 매개 변수를 전달할 수 있습니다.
+
+[!code-cpp[HostFxrHost#CallManaged](~/samples/core/hosting/HostWithHostFxr/src/NativeHost/nativehost.cpp#CallManaged)]
 
 ## <a name="create-a-host-using-coreclrhosth"></a>CoreClrHost.h를 사용하여 호스트 만들기
 
 다음 단계에서는 CoreClrHost.h API를 사용하여 네이티브 애플리케이션에서 .NET Core 런타임을 시작하고 관리되는 정적 메서드로 호출하는 방법을 자세히 설명합니다. 이 문서의 코드 조각은 Windows 관련 API를 사용하지만 [전체 샘플 호스트](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithCoreClrHost)는 Windows 및 Linux 코드 경로를 모두 보여줍니다.
+
+[Unix CoreRun 호스트](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts/unixcorerun)는 coreclrhost.h를 사용하여 더욱 복잡하고 현실적인 호스팅 예를 보여 줍니다.
 
 ### <a name="step-1---find-and-load-coreclr"></a>1단계 - CoreCLR 찾기 및 로드
 
@@ -119,6 +163,8 @@ CoreCLR은 다시 초기화 또는 언로드를 지원하지 않습니다. `core
 ## <a name="create-a-host-using-mscoreeh"></a>Mscoree.h를 사용하여 호스트 만들기
 
 이전에 말했듯이 .NET Core 런타임을 호스팅할 때 권장되는 방법은 이제 CoreClrHost.h입니다. CoreClrHost.h 인터페이스로 충분하지 않은 경우에는 `ICLRRuntimeHost4` 인터페이스를 여전히 사용할 수 있습니다(예를 들어 비표준 시작 플래그가 필요하거나 기본 도메인에서 AppDomainManager가 필요한 경우). 이러한 지침에서는 mscoree.h를 사용하여 .NET Core를 호스트하는 방법을 안내합니다.
+
+[CoreRun 호스트](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts/corerun)는 mscoree.h를 사용하여 더욱 복잡하고 현실적인 호스팅 예를 보여 줍니다.
 
 ### <a name="a-note-about-mscoreeh"></a>mscoree.h에 대한 정보
 `ICLRRuntimeHost4` .NET Core 호스팅 인터페이스는 [MSCOREE.IDL](https://github.com/dotnet/coreclr/blob/master/src/inc/MSCOREE.IDL)에 정의됩니다. 호스트에서 참조해야 할 이 파일의 헤더 버전(mscoree.h)은 [.NET Core 런타임](https://github.com/dotnet/coreclr/)이 빌드될 때 MIDL을 통해 생성됩니다. .NET Core 런타임을 빌드하지 않으려는 경우 mscoree.h는 dotnet/coreclr 리포지토리에 [미리 빌드된 헤더](https://github.com/dotnet/coreclr/tree/master/src/pal/prebuilt/inc)로 제공됩니다. [.NET Core 런타임 빌드에 대한 지침](https://github.com/dotnet/coreclr#building-the-repository)은 GitHub 리포지토리에서 찾을 수 있습니다.

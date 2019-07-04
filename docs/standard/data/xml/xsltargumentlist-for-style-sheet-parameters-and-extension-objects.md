@@ -8,18 +8,18 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 11cf0b694d75836ad903edeafc79a55ec4612b45
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 2c9a3b43f81f00a7b6a3a0b3a8e1c102aafe0c0e
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586469"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170938"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>스타일시트 매개 변수 및 확장 개체의 XsltArgumentList
 <xref:System.Xml.Xsl.XsltArgumentList> 클래스에는 XSLT(Extensible Stylesheet Language for Transformations) 매개 변수와 XSLT 확장 개체가 포함되어 있습니다. 이러한 매개 변수와 확장명 개체는 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드에 전달될 경우 스타일시트에서 호출할 수 있습니다.  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> 및 <xref:System.Xml.Xsl.XsltArgumentList> 클래스는 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]에서 사용되지 않습니다. <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 XSLT 변환을 수행할 수 있습니다. 자세한 내용은 [XslCompiledTransform 클래스 사용](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) 및 [XslTransform 클래스에서 마이그레이션](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)을 참조하세요.  
+>  .NET Framework 2.0에서는 <xref:System.Xml.Xsl.XslTransform> 및 <xref:System.Xml.Xsl.XsltArgumentList> 클래스가 사용되지 않습니다. <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 XSLT 변환을 수행할 수 있습니다. 자세한 내용은 [XslCompiledTransform 클래스 사용](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) 및 [XslTransform 클래스에서 마이그레이션](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)을 참조하세요.  
   
  <xref:System.Xml.Xsl.XsltArgumentList> 클래스에는 XSLT 매개 변수와 XSLT 확장 개체가 포함되어 있습니다. 이러한 매개 변수와 확장명 개체는 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드에 전달될 경우 스타일시트에서 호출할 수 있습니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "65586469"
   
 3. <xref:System.Xml.Xsl.XsltArgumentList>를 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드에 전달합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> 메서드를 사용하여 계산된 할인 기간을 유지하는 매개 변수를 만듭니다. 할인 기간은 주문 날짜로부터 20일 동안으로 계산됩니다.  
   
 ```vb  
@@ -197,7 +197,7 @@ public class Sample
   
 3. <xref:System.Xml.Xsl.XsltArgumentList>를 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드에 전달합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 반지름이 주어진 원의 원주를 계산합니다.  
   
 ```vb  

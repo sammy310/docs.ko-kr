@@ -1,6 +1,6 @@
 ---
 title: Windows 시스템의 파일 경로 형식
-ms.date: 06/28/2018
+ms.date: 06/06/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecaae9e1af359ead1c15a9e431eac21e41040efe
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 75261bc44b938432c9c22b90dc4db30ca00d630b
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835826"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170738"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 시스템의 파일 경로 형식
 
@@ -30,7 +30,7 @@ ms.locfileid: "56835826"
 - 디렉터리 이름. [디렉터리 구분 문자](<xref:System.IO.Path.DirectorySeparatorChar>)는 중첩된 디렉터리 계층 내에서 하위 디렉터리를 구분합니다.
 - 선택적 파일 이름. [디렉터리 구분 문자](<xref:System.IO.Path.DirectorySeparatorChar>)는 파일 경로 및 파일 이름을 구분합니다.
 
-세 구성 요소가 모두 존재하면 절대 경로입니다. 볼륨 또는 드라이브 문자를 지정하고 디렉터리 이름이 [디렉터리 구분 문자](<xref:System.IO.Path.DirectorySeparatorChar>)로 시작하면 현재 드라이브의 루트에 대한 상대 경로입니다. 그렇지 않으면 현재 디렉터리를 기준으로 하는 상대 경로입니다. 다음 표는 몇몇 가능한 디렉터리 및 파일 경로를 보여 줍니다.
+세 구성 요소가 모두 존재하면 절대 경로입니다. 볼륨 또는 드라이브 문자가 지정되지 않았으며 디렉터리 이름이 [디렉터리 구분 문자](<xref:System.IO.Path.DirectorySeparatorChar>)로 시작하는 경우 현재 드라이브의 루트에 대한 상대 경로입니다. 그렇지 않으면 현재 디렉터리를 기준으로 하는 상대 경로입니다. 다음 표는 몇몇 가능한 디렉터리 및 파일 경로를 보여 줍니다.
 
 |Path  |설명  |
 | -- | -- |
@@ -76,6 +76,11 @@ Windows 운영 체제는 파일을 포함한 모든 리소스를 가리키는 �
 `\\.\C:\Test\Foo.txt`  
 `\\?\C:\Test\Foo.txt`
 
+드라이브 문자로 드라이브를 식별하는 것 외에, 볼륨 GUID로 볼륨을 식별할 수도 있습니다. 다음 양식을 사용합니다.
+
+`\\.\Volume{b75e2c83-0000-0000-0000-602f00000000}\Test\Foo.txt`
+`\\?\Volume{b75e2c83-0000-0000-0000-602f00000000}\Test\Foo.txt`
+
 > [!NOTE]
 > DOS 디바이스 경로 구문은 .NET Core 1.1 및 .NET Framework 4.6.2부터 Windows에서 실행하는 .NET 구현에서 지원됩니다.
 
@@ -85,8 +90,8 @@ DOS 디바이스 경로는 다음 구성 요소로 구성됩니다.
 
    > [!NOTE]
    > `\\?\`는 .NET Core의 모든 버전 및 버전 4.6.2부터 .NET Framework에서 지원됩니다.
-   
-- "실제" 디바이스 개체(이 경우 C:)에 대한 기호 링크.
+
+- “실제” 디바이스 개체의 바로 가기 링크입니다(드라이브 이름의 경우 C:, 볼륨 GUID의 경우 Volume{b75e2c83-0000-0000-0000-602f00000000}).
 
    디바이스 경로 지정자 뒤에 오는 DOS 디바이스 경로의 첫 번째 세그먼트는 볼륨 또는 드라이브를 식별합니다. (예를 들어 `\\?\C:\` 및 `\\.\BootPartition\`)
 
@@ -95,7 +100,7 @@ DOS 디바이스 경로는 다음 구성 요소로 구성됩니다.
   `\\.\UNC\Server\Share\Test\Foo.txt`  
   `\\?\UNC\Server\Share\Test\Foo.txt`
 
-    디바이스 UNC의 경우, 서버/공유 부분이 볼륨을 형성합니다. 예를 들어 `\\?\server1\e:\utilities\\filecomparer\`에서 서버/공유 부분은 server1\utilities입니다. 이는 상대 디렉터리 경로를 사용하여 <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> 같은 메서드를 호출할 때 중요하며, 볼륨을 지나서 탐색하는 것은 불가능합니다. 
+    디바이스 UNC의 경우, 서버/공유 부분이 볼륨을 구성합니다. 예를 들어 `\\?\server1\e:\utilities\\filecomparer\`에서 서버/공유 부분은 server1\utilities입니다. 이는 상대 디렉터리 경로를 사용하여 <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> 같은 메서드를 호출할 때 중요하며, 볼륨을 지나서 탐색하는 것은 불가능합니다. 
 
 DOS 디바이스 경로는 정의에 의해 정규화됩니다. 상대 디렉터리 세그먼트(`.` 및 `..`)는 허용되지 않습니다. 현재 디렉터리는 해당 사용에 포함되지 않습니다.
 

@@ -25,12 +25,12 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: de0715a2ac946fa47f0d83ac8569595e622f0b97
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: b6bca26cc05a13e1384c4fc9642264f65b159ff7
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758089"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306534"
 ---
 # <a name="member-access-operators-c-reference"></a>멤버 액세스 연산자(C# 참조)
 
@@ -147,7 +147,7 @@ if (handler != null)
 
 또한 괄호를 사용하여 식에서 연산을 계산하는 순서를 지정합니다. 자세한 내용은 [연산자](../../programming-guide/statements-expressions-operators/operators.md) 문서의 [괄호 추가](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) 섹션을 참조하세요. 우선 순위 수준에 따라 정렬된 연산자 목록은 [C# 연산자](index.md)를 참조하세요.
 
-전환 연산자를 호출하는 [캐스트 식](invocation-operator.md#cast-expression)도 괄호를 사용합니다.
+명시적 형식 변환을 수행하는 [캐스트 식](type-testing-and-conversion-operators.md#cast-operator-)도 괄호를 사용합니다.
 
 ## <a name="operator-overloadability"></a>연산자 오버로드 가능성
 
@@ -165,6 +165,5 @@ if (handler != null)
 ## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
-- [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 연산자](index.md)
 - [??(Null 병합 연산자)](null-coalescing-operator.md)

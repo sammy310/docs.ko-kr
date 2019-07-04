@@ -5,17 +5,17 @@ ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fb130c17fa7b2a5d02f55a2944be386bc1bb334c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e3b99606698124455ca9b325042ffbe430915aee
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750720"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170769"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>변형의 결과 트리 조각
 
 > [!NOTE]
-> <xref:System.Xml.Xsl.XslTransform> 클래스는 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]에서 사용되지 않습니다. <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 XSLT(Extensible Stylesheet Language for Transformations) 변환을 수행할 수 있습니다. 자세한 내용은 [XslCompiledTransform 클래스 사용](using-the-xslcompiledtransform-class.md) 및 [XslTransform 클래스에서 마이그레이션](migrating-from-the-xsltransform-class.md)을 참조하세요.
+> <xref:System.Xml.Xsl.XslTransform> 클래스는 .NET Framework 2.0에서 사용되지 않습니다. <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 XSLT(Extensible Stylesheet Language for Transformations) 변환을 수행할 수 있습니다. 자세한 내용은 [XslCompiledTransform 클래스 사용](using-the-xslcompiledtransform-class.md) 및 [XslTransform 클래스에서 마이그레이션](migrating-from-the-xsltransform-class.md)을 참조하세요.
 
  결과 트리 조각이라고도 하는 노드 조각은 특수한 형식의 노드 집합과 크게 다르지 않습니다. 노드 집합에 대해 수행될 수 있는 함수는 노드 조각에 대해서도 수행될 수 있습니다. 또는 `node-set()` 함수를 사용하여 결과 트리 조각을 노드 집합으로 변환한 후 나중에 노드 집합을 사용할 수 있는 위치에서 변환된 해당 노드 집합을 사용할 수 있습니다.
 

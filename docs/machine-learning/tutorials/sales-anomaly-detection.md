@@ -1,19 +1,19 @@
 ---
-title: 판매 변칙 검색 시나리오에서 ML.NET 사용
-description: 변칙 급증과 적절한 조치를 취해야 할 변화점에 대한 데이터 분석 방법을 이해하기 위해 판매 변칙 검색 시나리오에서 ML.NET 사용 방법에 대해 알아보세요.
-ms.date: 05/29/2019
+title: '자습서: 제품 판매의 변칙 검색'
+description: 제품 판매 데이터에 대한 변칙 검색 애플리케이션을 빌드하는 방법을 알아봅니다. 이 자습서에서는 Visual Studio 2019에서 C#을 사용하여 .NET Core 콘솔 애플리케이션을 만듭니다.
+ms.date: 06/11/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: e092aea66ca9f439cf97c1ebee83097def0f520b
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.custom: mvc, title-hack-0612
+ms.openlocfilehash: 3e3e368ed3bcb35e7e2c8bdf08abe71afd4ae87c
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758802"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306220"
 ---
-# <a name="tutorial-use-mlnet-for-product-sales-anomaly-detection"></a>자습서: 제품 판매 변칙 검색에 ML.NET 사용 
+# <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>자습서: ML.NET을 사용하여 제품 판매의 변칙 검색
 
-이 샘플 자습서는 ML.NET을 사용하여 제품 판매 데이터에서 변칙을 검색하여 Visual Studio 2019에서 C#를 사용하는 .NET Core 콘솔 애플리케이션을 통해 적절한 조치를 취하는 방법에 대해 자세히 설명합니다. 
+제품 판매 데이터에 대한 변칙 검색 애플리케이션을 빌드하는 방법을 알아봅니다. 이 자습서에서는 Visual Studio에서 C#을 사용하여 .NET Core 콘솔 애플리케이션을 만듭니다.
 
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 > [!div class="checklist"]
@@ -157,7 +157,7 @@ ML.NET에서 IID 급증 검색 또는 IID 변화점 검색 알고리즘은 [독�
 `DetectSpike()` 메서드는 다음 작업을 실행합니다.
 
 * 모델을 학습시킵니다.
-* 판매 내역 데이터에 기반하여 급증을 검색합니다.
+* 판매 기록 데이터를 기준으로 급증을 검색합니다.
 * 결과를 표시합니다.
 
 다음 코드를 사용하여 `Main()` 메서드 바로 뒤에 `DetectSpike()` 메서드를 만듭니다.

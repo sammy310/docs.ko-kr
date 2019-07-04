@@ -4,12 +4,12 @@ description: 전이 학습 및 ML.NET을 사용하여 이미지 분류 TensorFlo
 ms.date: 06/12/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 2ad9e71f572cb694897fd12ecbb15da069afe338
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 62a926795ce34a8c1639f1d42ebbb34b53dc67ad
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67026088"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401732"
 ---
 # <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>자습서: 전이 학습 및 ML.NET을 사용하여 TensorFlow 이미지 분류자 재학습
 

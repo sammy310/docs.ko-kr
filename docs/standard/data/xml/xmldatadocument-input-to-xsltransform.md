@@ -5,16 +5,16 @@ ms.technology: dotnet-standard
 ms.assetid: a0b536b6-cdb3-4a44-86c2-3b2ebc7bd4c9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 811c513e6c8c613801c0ca60c11a9e5577672183
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 308725ecc139d3c95ddff6bdf2d75746750673ce
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592757"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170846"
 ---
 # <a name="xmldatadocument-input-to-xsltransform"></a>XslTransform에 대한 XmlDataDocument 입력
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> 클래스는 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]에서 사용되지 않습니다. <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 XSLT(Extensible Stylesheet Language for Transformations) 변환을 수행할 수 있습니다. 자세한 내용은 [XslCompiledTransform 클래스 사용](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) 및 [XslTransform 클래스에서 마이그레이션](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)을 참조하세요.  
+>  <xref:System.Xml.Xsl.XslTransform> 클래스는 .NET Framework 2.0에서 사용되지 않습니다. <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 XSLT(Extensible Stylesheet Language for Transformations) 변환을 수행할 수 있습니다. 자세한 내용은 [XslCompiledTransform 클래스 사용](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) 및 [XslTransform 클래스에서 마이그레이션](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)을 참조하세요.  
   
  Microsoft .NET Framework에서는 XML 문서의 데이터에 대한 액세스를 제공하는 XML DOM(문서 개체 모델)과 XML 문서를 읽고, 쓰고, 탐색하는 추가 클래스를 구현합니다. <xref:System.Xml.XmlDataDocument> 네임스페이스에 있는 <xref:System.Xml>는 <xref:System.Data.DataSet>의 관계형 데이터를 동기화하는 기능을 사용하여 데이터에 대한 관계형 액세스를 제공합니다. <xref:System.Data.DataSet>의 관계형 표현을 통해 구조적 XML을 보면서 조작하거나 <xref:System.Xml.XmlDataDocument>의 DOM 표현을 통해 반구조적 XML을 조작할 수 있습니다. 따라서 <xref:System.Xml.XmlDataDocument>는 XML과 관계형 데이터의 경계를 초월합니다.  
   

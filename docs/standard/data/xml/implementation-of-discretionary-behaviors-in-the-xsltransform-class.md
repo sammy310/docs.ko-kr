@@ -5,19 +5,19 @@ ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fcc294f09172eb2029f92d2c05821837aa10c35f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d0a6b3faff0208634e711b9d7908e3fd8dc640ae
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591506"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170837"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>XslTransform 클래스에서 임의 동작 구현
 
 > [!NOTE]
-> <xref:System.Xml.Xsl.XslTransform> 클래스는 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]에서 사용되지 않습니다. <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 XSLT(Extensible Stylesheet Language for Transformations) 변환을 수행할 수 있습니다. 자세한 내용은 [XslCompiledTransform 클래스 사용](using-the-xslcompiledtransform-class.md) 및 [XslTransform 클래스에서 마이그레이션](migrating-from-the-xsltransform-class.md)을 참조하세요.
+> <xref:System.Xml.Xsl.XslTransform> 클래스는 .NET Framework 2.0에서 사용되지 않습니다. <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 XSLT(Extensible Stylesheet Language for Transformations) 변환을 수행할 수 있습니다. 자세한 내용은 [XslCompiledTransform 클래스 사용](using-the-xslcompiledtransform-class.md) 및 [XslTransform 클래스에서 마이그레이션](migrating-from-the-xsltransform-class.md)을 참조하세요.
 
-임의 동작은 구현 공급자가 특정 상황을 처리하기 위해 선택할 수 있는 여러 가지 방법을 안내하는 [W3C(World Wide Web 컨소시엄) XSLT(XSL Transformations) 버전 1.0 권장 사항](https://www.w3.org/TR/1999/REC-xslt-19991116)에 나열된 동작으로 설명됩니다. 예를 들어, 7.3단원의 처리 명령 만들기에 나오는 W3C 권장 사항에 따르면 `xsl:processing-instruction`의 내용을 인스턴스화하여 텍스트 노드 이외의 노드가 만들어질 경우 오류가 발생합니다. W3C에서는 일부 문제점에 대해, 프로세서가 오류에서 복구하기로 결정한 경우 어떤 결정을 내려야 하는지 알려 줍니다. 7.3단원에 제시된 문제점의 경우에는 W3C에서 노드 및 해당 내용을 무시함으로써 이 오류에서 구현을 복구할 수 있다고 설명합니다.
+임의 동작은 구현 공급자가 특정 상황을 처리하기 위해 선택할 수 있는 여러 가지 방법을 안내하는 [W3C(World Wide Web 컨소시엄) XSLT(XSL Transformations) 버전 1.0 권장 사항](https://www.w3.org/TR/1999/REC-xslt-19991116)에 나열된 동작으로 설명됩니다. 예를 들어, 7.3단원의 처리 명령 만들기에 나오는 W3C 권장 사항에 따르면 `xsl:processing-instruction`의 내용을 인스턴스화하여 텍스트 노드 이외의 노드가 만들어질 경우 오류가 발생합니다. W3C에서는 일부 문제점에 대해, 프로세서가 오류에서 복구하기로 결정한 경우 어떤 결정을 내려야 하는지 알려 줍니다. 7\.3단원에 제시된 문제점의 경우에는 W3C에서 노드 및 해당 내용을 무시함으로써 이 오류에서 구현을 복구할 수 있다고 설명합니다.
 
 따라서 다음 표에서는 W3C에서 허용하는 각각의 임의 동작에 대해 <xref:System.Xml.Xsl.XslTransform> 클래스의 .NET Framework 구현을 수행하는 임의 동작과 W3C XSLT 1.0 권장 사항에서 해당 문제점에 대해 설명하는 단원의 목록을 보여 줍니다.
 

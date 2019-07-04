@@ -3,12 +3,12 @@ title: C# 7.0의 새로운 기능 - C# 가이드
 description: C# 언어 버전 7.0의 새로운 기능을 살펴봅니다.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 9b4569f31211afc69efb1b853723fded9329ae41
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: c3fdee2bdb974640b56bfab3af4be57133ad2f7a
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66815978"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307159"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0의 새로운 기능
 
@@ -95,7 +95,7 @@ C#에서는 디자인 의도를 설명하는 데 사용되는 클래스 및 구�
 * [is](../language-reference/keywords/is.md) 및 [switch](../language-reference/keywords/switch.md) 문을 사용한 패턴 일치 작업에서.
 * 할당 값을 버림으로 명시적으로 지정할 때 독립 실행형 식별자인 경우.
 
-다음 예제는 서로 다른 2년 동안 도시에 대한 데이터를 포함한 6 튜플을 반환하는 `QueryCityDataForYears` 메서드를 정의합니다. 예제의 메서드 호출은 메서드에 의해 반환된 두 개의 채우기 값에만 관련되어 있으므로 튜플을 해체할 때 튜플의 나머지 값을 버림으로 처리합니다.
+다음 예제에서는 서로 다른 2년간의 도시 데이터가 포함된 6 튜플을 반환하는 `QueryCityDataForYears` 메서드를 정의합니다. 예제의 메서드 호출은 메서드에 의해 반환된 두 개의 채우기 값에만 관련되어 있으므로 튜플을 해체할 때 튜플의 나머지 값을 버림으로 처리합니다.
 
 [!code-csharp[Tuple-discard](~/samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 

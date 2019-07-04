@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: 60ee4b8c5ac3a572fd352140c968a8ec8f3a084a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3e5bb96357293c42d4bd2161756260fd849cc099
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632983"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267784"
 ---
 # <a name="yield-c-reference"></a>yield(C# 참조)
 
@@ -26,11 +26,11 @@ yield return <expression>;
 yield break;
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 `yield return` 문을 사용하여 각 요소를 따로따로 반환할 수 있습니다.
 
-[foreach](foreach-in.md) 문 또는 LINQ 쿼리를 이용하여 반복기 메서드를 사용합니다. 각각의 `foreach` 루프의 반복이 반복기 메서드를 호출합니다. `yield return` 문이 반복기 메서드에 도달하면 `expression` 이 반환되고 코드에서 현재 위치는 유지됩니다. 다음에 반복기 함수가 호출되면 해당 위치에서 실행이 다시 시작됩니다.
+반복기 메서드에서 반환된 시퀀스는 [foreach](foreach-in.md) 문 또는 LINQ 쿼리를 통해 사용할 수 있습니다. 각각의 `foreach` 루프의 반복이 반복기 메서드를 호출합니다. `yield return` 문이 반복기 메서드에 도달하면 `expression` 이 반환되고 코드에서 현재 위치는 유지됩니다. 다음에 반복기 함수가 호출되면 해당 위치에서 실행이 다시 시작됩니다.
 
 `yield break` 문을 사용하여 반복기를 종료할 수 있습니다.
 
@@ -78,7 +78,7 @@ foreach (string element in elements)
 
 이후에 `foreach` 루프가 반복될 때마다 중지되었던 위치에서 반복기 본문 실행이 계속되고 `yield return` 문에 도달하면 다시 중지됩니다. `foreach` 루프는 반복기 메서드가 종료되거나 `yield break` 문에 도달하면 완료됩니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에는 `yield return` 루프 내에 `for` 문이 있습니다. `Main` 메서드에서 `foreach` 문의 본문을 반복할 때마다 `Power` 반복기 함수에 대한 호출이 생성됩니다. 반복기 함수를 호출할 때마다 다음에 `yield return` 루프를 반복하는 도중에 `for` 문이 실행됩니다.
 
@@ -86,7 +86,7 @@ foreach (string element in elements)
 
 [!code-csharp[csrefKeywordsContextual#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#5)]
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제는 반복기인 `get` 접근자에 대해 설명합니다. 이 예제에서는 각 `yield return` 문이 사용자 정의 클래스의 인스턴스를 반환합니다.
 

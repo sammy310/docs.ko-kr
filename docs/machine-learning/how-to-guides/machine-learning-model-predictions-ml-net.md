@@ -1,16 +1,16 @@
 ---
 title: 학습된 모델로 예측
 description: 학습된 모델을 사용한 예측 알아보기
-ms.date: 05/03/2019
+ms.date: 06/20/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: dac3b3bfa68776975a2e5e762f46db16e39d61fb
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: ef2b22ff220d1fce1ec43f26c7d51f7e551e038d
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065606"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307392"
 ---
 # <a name="make-predictions-with-a-trained-model"></a>학습된 모델로 예측
 
@@ -92,7 +92,7 @@ HousingPrediction prediction = predictionEngine.Predict(inputData);
 
 ## <a name="batch-prediction"></a>일괄 처리 예측
 
-다음 데이터의 경우 [`IDataView`](xref:Microsoft.ML.IDataView)에 로드합니다. `CurrentPrice`는 새 데이터를 통해 예측하려는 대상 또는 레이블이므로 해당 시점에는 값이 없다고 가정합니다.
+다음 데이터의 경우 [`IDataView`](xref:Microsoft.ML.IDataView)에 로드합니다. 이 경우 [`IDataView`](xref:Microsoft.ML.IDataView)의 이름은 `inputData`입니다. `CurrentPrice`는 새 데이터를 통해 예측하려는 대상 또는 레이블이므로 해당 시점에는 값이 없다고 가정합니다.
 
 ```csharp
 // Actual data
