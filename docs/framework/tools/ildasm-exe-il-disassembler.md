@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfc55bcd97a6c1d68d4ce900b19ace7356d6ee92
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 2239b73eb8418d469085ad72b8a28093146a1f6b
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378564"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025972"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe(IL 디스어셈블러)
 
@@ -53,7 +53,7 @@ ildasm [options] [PEfilename] [options]
 |**/linenum**|원본 소스 줄에 대한 참조를 포함합니다.|
 |**/nobar**|디스어셈블리 진행률 표시줄 팝업 창을 표시하지 않습니다.|
 |**/noca**|사용자 지정 특성 출력을 생성하지 않습니다.|
-|**/project**|메타데이터를 기본 [!INCLUDE[wrt](../../../includes/wrt-md.md)]에서 표시되는 방식 대신에 관리되는 코드에 표시되는 방식대로 표시합니다. 만약 `PEfilename`이 Windows 메타데이터( *.winmd*) 파일이 아니라면, 이 옵션은 효과가 없습니다. [Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)을 참조하세요.|
+|**/project**|메타데이터를 기본 Windows 런타임에서 표시되는 방식 대신, 관리 코드에 표시되는 방식으로 표시합니다. 만약 `PEfilename`이 Windows 메타데이터( *.winmd*) 파일이 아니라면, 이 옵션은 효과가 없습니다. [Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)을 참조하세요.|
 |**/pubonly**|공용 형식 및 멤버만 디스어셈블합니다. **/visibility:PUB**와 같습니다.|
 |**/quoteallnames**|모든 이름을 작은따옴표 내에 포함시킵니다.|
 |**/raweh**|예외 처리 절을 원시 형식으로 표시합니다.|
@@ -91,7 +91,7 @@ ildasm [options] [PEfilename] [options]
 > [!NOTE]
 > *Ildasm.exe*의 모든 옵션은 대/소문자가 구분되지 않으며 처음 세 문자로 인식됩니다. 예를 들어 **/quo**는 **/quoteallnames**와 같습니다. 인수를 지정하는 옵션에는 옵션과 인수 사이의 구분 기호로 콜론(:) 또는 등호(=) 중 하나만 사용할 수 있습니다. 예를 들어 **/output:** *filename*은 **/output=** *filename*과 같습니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 *Ildasm.exe*는 디스크의 PE 파일에 대해서만 작동하며, 전역 어셈블리 캐시에 설치된 파일에 대해서는 작동하지 않습니다.
 
@@ -100,7 +100,7 @@ ildasm [options] [PEfilename] [options]
 > [!NOTE]
 > 포함된 네이티브 코드가 들어 있는 PE 파일(예: Visual C++로 생성된 PE 파일)에는 현재 이 방법을 사용할 수 없습니다.  
 
-IL 디스어셈블러의 기본 GUI를 사용하면 계층 구조 트리 뷰에서 기존 PE 파일의 메타데이터 및 디스어셈블된 코드를 볼 수 있습니다. 이 GUI를 사용하려면 해당 명령줄에서 **ildasm**을 입력합니다. 이때 *PEfilename* 인수나 기타 옵션은 지정하지 않습니다. **파일** 메뉴에서 *Ildasm.exe*에 로드하려는 PE 파일 탐색할 수 있습니다. 선택한 PE에 대해 표시된 메타데이터 및 디스어셈블된 코드를 저장하려면 **파일** 메뉴에서 **덤프** 명령을 선택합니다. 계층 구조 트리 뷰만 저장하려면 **파일** 메뉴에서 **트리 뷰 덤프** 명령을 선택합니다. *Ildasm.exe*로 파일을 로드하고 출력 내용을 해석하는 방법에 대한 자세한 지침을 보려면 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]와 함께 제공되는 Samples 폴더의 *Ildasm.exe* 자습서를 참조하세요.
+IL 디스어셈블러의 기본 GUI를 사용하면 계층 구조 트리 뷰에서 기존 PE 파일의 메타데이터 및 디스어셈블된 코드를 볼 수 있습니다. 이 GUI를 사용하려면 해당 명령줄에서 **ildasm**을 입력합니다. 이때 *PEfilename* 인수나 기타 옵션은 지정하지 않습니다. **파일** 메뉴에서 *Ildasm.exe*에 로드하려는 PE 파일 탐색할 수 있습니다. 선택한 PE에 대해 표시된 메타데이터 및 디스어셈블된 코드를 저장하려면 **파일** 메뉴에서 **덤프** 명령을 선택합니다. 계층 구조 트리 뷰만 저장하려면 **파일** 메뉴에서 **트리 뷰 덤프** 명령을 선택합니다. *Ildasm.exe*로 파일을 로드하고 출력 내용을 해석하는 방법에 대한 자세한 내용은 Windows SDK(소프트웨어 개발 키트)와 함께 제공되는 Samples 폴더의 *Ildasm.exe* 자습서를 참조하세요.
 
 *Ildasm.exe*에 포함 리소스가 들어 있는 *PEfilename* 인수를 제공하면 여러 개의 출력 파일이 생성됩니다. 즉, IL 코드가 들어 있는 텍스트 파일이 생성되고, 관리되는 각 포함 리소스의 경우 메타데이터의 리소스 이름을 사용하여 .resources 파일이 생성됩니다. 관리되지 않는 리소스가 *PEfilename*에 포함되어 있으면 **/output** 옵션으로 IL 출력에 대해 지정한 파일 이름을 사용하여 .res 파일이 생성됩니다.
 

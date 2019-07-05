@@ -2,15 +2,15 @@
 title: 샘플 데이터베이스 다운로드(LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
-ms.openlocfilehash: 1ef5a5ceac6a7f819551f6221b63197786ab4f09
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 340ccd1e0e2d415fe60721775bd39acf9db00f85
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606885"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504507"
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>샘플 데이터베이스 다운로드(LINQ to DataSet)
-샘플 및 연습에는 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 설명서 AdventureWorks 샘플 데이터베이스를 사용 합니다. 이 제품은 Microsoft 다운로드 사이트에서 무료로 다운로드할 수 있습니다. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 설명서의 샘플과 연습에서는 SQL Server를 데이터 저장소로 사용합니다. SQL Server 대신 무료로 사용할 수 있는 SQL Server Express Edition을 데이터 저장소로 사용할 수도 있습니다.  
+샘플 및 연습 LINQ to DataSet 설명서에서는 AdventureWorks 샘플 데이터베이스를 사용합니다. 이 제품은 Microsoft 다운로드 사이트에서 무료로 다운로드할 수 있습니다. 샘플 및 연습에서는 LINQ to DataSet 설명서를 데이터 저장소로 SQL Server를 사용 합니다. SQL Server 대신 무료로 사용할 수 있는 SQL Server Express Edition을 데이터 저장소로 사용할 수도 있습니다.  
   
 ## <a name="downloading-and-installing-the-adventureworks-database"></a>AdventureWorks 데이터베이스 다운로드 및 설치  
   
@@ -63,7 +63,7 @@ ms.locfileid: "61606885"
      이러한 파일을 다른 드라이브나 디렉터리에 설치한 경우에는 `sp_attach_db` 저장 프로시저를 실행하기 전에 경로를 올바르게 수정해야 합니다.  
   
 ## <a name="downloading-sql-server-express-edition"></a>SQL Server Express Edition 다운로드  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 단원의 샘플과 연습에서는 SQL Server 2005를 데이터 저장소로 사용하지만 SQL Server Express Edition을 대신 사용하도록 수정할 수 있습니다. SQL Server Express Edition은 무료로 제공되며 응용 프로그램과 함께 재배포할 수 있습니다. Visual Studio를 사용 하는 경우 SQL Server Express Edition이 Pro 이상의 에디션에 포함 됩니다.  
+ 샘플 및 연습 데이터 집합 섹션에는 LINQ의 데이터 저장소로 SQL Server 2005를 사용 하지만 SQL Server Express Edition을 대신 사용 하도록 수정할 수 있습니다. SQL Server Express Edition은 무료로 제공되며 응용 프로그램과 함께 재배포할 수 있습니다. Visual Studio를 사용 하는 경우 SQL Server Express Edition이 Pro 이상의 에디션에 포함 됩니다.  
   
 #### <a name="to-download-and-install-sql-server-express-edition"></a>SQL Server Express Edition을 다운로드하여 설치하려면  
   

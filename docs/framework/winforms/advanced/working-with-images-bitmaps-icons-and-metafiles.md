@@ -9,15 +9,15 @@ helpviewer_keywords:
 - images [Windows Forms], working with
 - examples [Windows Forms], metafiles
 ms.assetid: a626d701-bd99-4fd8-b92f-7b8f794e042b
-ms.openlocfilehash: 61d534f8299c920f656abe4280cc3ea5e609c0b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c778018a2d78fbec67a3bf41b5cbaa8e4bfb606
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011920"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504850"
 ---
 # <a name="working-with-images-bitmaps-icons-and-metafiles"></a>이미지, 비트맵, 아이콘 및 메타파일 사용
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]는 래스터 이미지 작업을 위한 `Bitmap` 클래스와 벡터 이미지 작업을 위한 `Metafile` 클래스를 제공합니다. `Bitmap` 및 `Metafile` 클래스는 둘 다 `Image` 클래스에서 상속됩니다.  
+GDI +를 제공 합니다 `Bitmap` 래스터 이미지 작업에 대 한 클래스 및 `Metafile` 벡터 이미지 작업에 대 한 클래스입니다. `Bitmap` 및 `Metafile` 클래스는 둘 다 `Image` 클래스에서 상속됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [방법: 화면에 기존 비트맵 그리기](how-to-draw-an-existing-bitmap-to-the-screen.md)  

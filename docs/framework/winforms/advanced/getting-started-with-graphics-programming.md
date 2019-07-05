@@ -7,15 +7,15 @@ helpviewer_keywords:
 - examples [Windows Forms], graphics
 - drawing
 ms.assetid: eb0f6d6f-9e52-4167-9592-ff4b82fb5869
-ms.openlocfilehash: f19a0e87c140a3fde8c43acc546ae11ea3b62d33
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b2a330324085f1a73418cd535f83f2b73e9721c0
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747695"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67503948"
 ---
 # <a name="getting-started-with-graphics-programming"></a>그래픽 프로그래밍 시작
-이 단원에서는 사용 하 여 시작 하는 방법을 보여 줍니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Windows Forms 응용 프로그램에서입니다. 다음 항목에서는 몇 가지를 완료 하는 방법을 보여 줍니다 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 그리기 및 도형 및 텍스트 입력 등의 작업입니다.  
+이 섹션에는 Windows Forms 응용 프로그램에서에서 GDI +를 사용 하는 방법을 보여 줍니다. 다음 항목에는 몇 가지 GDI + 그리기 및 채우기 도형 및 텍스트와 같은 작업을 완료 하는 방법을 보여 줍니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [방법: 그리는 데 필요한 그래픽 개체 만들기](how-to-create-graphics-objects-for-drawing.md)  

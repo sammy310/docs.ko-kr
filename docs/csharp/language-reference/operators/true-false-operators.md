@@ -6,12 +6,12 @@ helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: b1acf9a16dd977ec49a7f1dc3bea4ee41792e9be
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: f4391e73b17c3700dc04240e1289b523c4bdc596
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758129"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025036"
 ---
 # <a name="true-and-false-operators-c-reference"></a>true 및 false 연산자(C# 참조)
 
@@ -38,7 +38,6 @@ Wait!
 ## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
-- [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 연산자](index.md)
-- [`true` 리터럴](../keywords/true-literal.md)
-- [`false` 리터럴](../keywords/false-literal.md)
+- [true 리터럴](../keywords/true-literal.md)
+- [false 리터럴](../keywords/false-literal.md)

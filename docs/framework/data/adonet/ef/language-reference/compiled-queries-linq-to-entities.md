@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-ms.openlocfilehash: f3ba6bfd0f83270bc6b9e980fe92f6630c90ad49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3f24fb335169c2b38ce945377bc4e64a47fe9d5
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785348"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539916"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>컴파일된 쿼리(LINQ to Entities)
 구조적으로 비슷한 쿼리를 Entity Framework에서 여러 차례 실행하는 응용 프로그램이 있는 경우, 쿼리를 한 번 컴파일한 후 매개 변수를 다르게 하여 여러 차례 실행하는 방법을 통해 성능을 높일 수 있는 경우가 많습니다. 예를 들어, 응용 프로그램에서 특정 도시의 모든 고객을 검색해야 하며 사용자가 런타임에 양식에서 도시를 지정하는 경우를 생각해 봅니다. LINQ to Entities에서는 컴파일된 쿼리를 이 용도로 사용할 수 있도록 지원합니다.  
@@ -19,7 +19,7 @@ ms.locfileid: "61785348"
   
  <xref:System.Data.Objects.CompiledQuery> 클래스는 쿼리를 재사용할 수 있도록 컴파일하고 캐시합니다. 개념상 이 클래스에는 다수의 오버로드가 있는 <xref:System.Data.Objects.CompiledQuery>의 `Compile` 메서드가 포함됩니다. 이 `Compile` 메서드를 호출하여 컴파일된 쿼리를 나타내는 새 대리자를 만듭니다. `Compile` 및 매개 변수 값과 함께 제공된 <xref:System.Data.Objects.ObjectContext> 메서드는 <xref:System.Linq.IQueryable%601> 인스턴스와 같이 결과를 생성하는 대리자를 반환합니다. 쿼리는 첫 번째 실행 중에만 한 번 컴파일됩니다. 컴파일 시에 쿼리에 대해 설정된 병합 옵션은 나중에 변경할 수 없습니다. 쿼리가 컴파일되면 기본 형식의 매개 변수만 제공할 수 있지만 생성된 SQL을 변경할 쿼리의 부분을 대체할 수 없습니다. 자세한 내용은 참조 하세요. [Entity Framework 병합 옵션 및 컴파일된 쿼리](https://go.microsoft.com/fwlink/?LinkId=199591)  
   
- 합니다 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 쿼리 식은 합니다 <xref:System.Data.Objects.CompiledQuery>의 `Compile` 메서드에서 컴파일하는 제네릭의 하나로 표현 됩니다 `Func` 대리자가 같은 <xref:System.Func%605>합니다. 쿼리 식은 최대로 `ObjectContext` 매개 변수 1개, 반환 매개 변수 1개 및 쿼리 매개 변수 16개를 캡슐화할 수 있습니다. 쿼리 매개 변수가 17개 이상 필요한 경우 속성으로 쿼리 매개 변수를 나타내는 구조를 만들 수 있습니다. 속성을 설정한 후 쿼리 식에서 구조의 속성을 사용할 수 있습니다.  
+ LINQ to Entities 쿼리 식 하는 <xref:System.Data.Objects.CompiledQuery>의 `Compile` 메서드에서 컴파일하는 제네릭의 하나로 표현 됩니다 `Func` 대리자가 같은 <xref:System.Func%605>합니다. 쿼리 식은 최대로 `ObjectContext` 매개 변수 1개, 반환 매개 변수 1개 및 쿼리 매개 변수 16개를 캡슐화할 수 있습니다. 쿼리 매개 변수가 17개 이상 필요한 경우 속성으로 쿼리 매개 변수를 나타내는 구조를 만들 수 있습니다. 속성을 설정한 후 쿼리 식에서 구조의 속성을 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 <xref:System.Decimal> 입력 매개 변수를 사용하고 총 금액이 200달러 이상인 일련의 주문을 반환하는 쿼리를 컴파일한 다음 호출합니다.  

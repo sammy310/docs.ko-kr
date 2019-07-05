@@ -15,15 +15,15 @@ helpviewer_keywords:
 - coordinate systems
 - transformations [Windows Forms], world
 ms.assetid: c61ff50a-eb1d-4e6c-83cd-f7e9764cfa9f
-ms.openlocfilehash: 765df4bcd3cef83e624ad8b11676696b95f7d035
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 24079f24bdae5fefd785a20dda9b29a190fb4068
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792367"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505256"
 ---
 # <a name="types-of-coordinate-systems"></a>좌표계 형식
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 세 가지 좌표 공간을 사용 하 여: 전역, 페이지 및 장치입니다. 세계 좌표 좌표 특정 그래픽 월드를 모델링 하는 데 사용 되며.NET Framework의 메서드에 전달 합니다. 페이지 좌표 양식이 나 컨트롤 같은 그리기 화면을 사용 하는 좌표계를 가리킵니다. 장치 좌표는 화면이 나 용지 같이 항목이 그려지는 실제 장치에서 사용 된 좌표입니다. 호출이 이루어지면 `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`에 전달 하는 지점 합니다 <xref:System.Drawing.Graphics.DrawLine%2A> 메서드-`(0, 0)` 및 `(160, 80)`-세계 좌표 공간에 합니다. 전에 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 화면에서 선을 그리려면, 좌표 변환의 시퀀스를 통과 합니다. 월드 변형을 호출 하는 하나의 변환 세계 좌표를 페이지 좌표로 변환 하는 페이지 변환을 통해 다른 변환 페이지 좌표 장치 좌표에 있습니다.  
+GDI +-세 가지 좌표 공간을 사용 하는 중: 전역, 페이지 및 디바이스입니다. 세계 좌표 좌표 특정 그래픽 월드를 모델링 하는 데 사용 되며.NET Framework의 메서드에 전달 합니다. 페이지 좌표 양식이 나 컨트롤 같은 그리기 화면을 사용 하는 좌표계를 가리킵니다. 장치 좌표는 화면이 나 용지 같이 항목이 그려지는 실제 장치에서 사용 된 좌표입니다. 호출이 이루어지면 `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`에 전달 하는 지점 합니다 <xref:System.Drawing.Graphics.DrawLine%2A> 메서드-`(0, 0)` 및 `(160, 80)`-세계 좌표 공간에 합니다. GDI + 화면의 줄을 그릴 수 있습니다, 전에 좌표를 일련의 변환을 통해 전달 합니다. 월드 변형을 호출 하는 하나의 변환 세계 좌표를 페이지 좌표로 변환 하는 페이지 변환을 통해 다른 변환 페이지 좌표 장치 좌표에 있습니다.  
   
 ## <a name="transforms-and-coordinate-systems"></a>변환 및 좌표계  
  원점은 왼쪽 위 모퉁이 사용 하지 않고 클라이언트 영역의 본문에는 좌표계를 사용 한다고 가정 합니다. 예를 들어, 원본 클라이언트 영역의 왼쪽된 가장자리에서 100 픽셀인 클라이언트 영역의 위쪽에서 50 픽셀 이어야 한다고 가정해 보십시오. 다음 그림에서는 이러한 좌표 시스템을 보여 줍니다.  

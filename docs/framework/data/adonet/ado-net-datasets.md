@@ -2,12 +2,12 @@
 title: ADO.NET 데이터 집합
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: 29aba76731c4170c8af3c913a06e78e89ce3a08d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: da6fb7bbe82e37787615518fa74a0d84bf95758f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877220"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504265"
 ---
 # <a name="adonet-datasets"></a>ADO.NET 데이터 집합
 <xref:System.Data.DataSet> 개체는 지원의 핵심으로 연결이 끊긴 분산 데이터 시나리오 ADO.NET 사용 합니다. 합니다 **데이터 집합** 데이터 소스에 관계 없이 일관성 있는 관계형 프로그래밍 모델을 제공 하는 데이터는 메모리 상주 표현입니다. 이 개체는 다양한 여러 데이터 소스에 사용하거나 XML 데이터에 사용할 수 있을 뿐 아니라 이 개체를 사용하여 응용 프로그램의 로컬 데이터를 관리할 수도 있습니다. 합니다 **데이터 집합** 관련된 테이블, 제약 조건 및 테이블 간의 관계를 포함 하 여 데이터의 전체 집합을 나타냅니다. 다음 그림에 표시 된 **데이터 집합** 개체 모델입니다.  
@@ -41,7 +41,7 @@ DataSet 개체 모델
  합니다 **데이터 집합**를 **DataTable**, 및 **DataColumn** 모두를 **ExtendedProperties** 속성입니다. **ExtendedProperties** 되는 **PropertyCollection** 결과 집합을 생성 하는 SELECT 문이나 데이터가 생성 된 시간 등의 사용자 지정 정보를 배치할 수 있습니다. 합니다 **ExtendedProperties** 컬렉션에 대 한 스키마 정보를 함께 유지 되는 **데이터 집합**합니다.  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]에서는 데이터 집합에 저장되어 있는 연결되지 않은 데이터에 대한 통합 언어 쿼리 기능을 제공합니다. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] standard를 사용 하 여 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 구문을 Visual Studio IDE를 사용 하는 경우 컴파일 타임 구문 검사, 정적 입력 및 IntelliSense 지원을 제공 합니다.  
+ LINQ to DataSet 데이터 집합에 저장 하는 연결 되지 않은 데이터에 대 한 통합 언어 쿼리 기능을 제공 합니다. LINQ to DataSet standard를 사용 하 여 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 구문을 Visual Studio IDE를 사용 하는 경우 컴파일 타임 구문 검사, 정적 입력 및 IntelliSense 지원을 제공 합니다.  
   
  자세한 내용은 [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)을 참조하세요.  
   

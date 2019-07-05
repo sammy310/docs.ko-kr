@@ -8,12 +8,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], for scaling colors
 - colors [Windows Forms], scaling
 ms.assetid: df23c887-7fd6-4b15-ad94-e30b5bd4b849
-ms.openlocfilehash: 9c8f2392137d04f56096120cec64b60c42c47419
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 81c0ddf5b937d604559a9eb1a8b598885546c97f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791159"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504953"
 ---
 # <a name="using-transformations-to-scale-colors"></a>변형을 사용하여 색의 비율 조정
 배율 조정 변환 이상의 숫자로 된 네 가지 구성 요소를 곱합니다. 크기 조정 여부를 나타내는 색 매트릭스 항목은 다음 표에 제공 됩니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "61791159"
   
  ![원래 및 배율 조정 된 색을 비교 하는 스크린샷.](./media/using-transformations-to-scale-colors/four-bar-scale-one-color.png)  
   
- 다음 표에서 파란색 크기 조정 전과 후 4 개 막대에 대 한 색 벡터를 나열합니다. 네 번째 색 막대의 파랑 구성 요소에서 0.8 0.6을 참고 합니다. 있기 때문입니다 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 결과의 소수 부분에만 유지 합니다. 예를 들어 (2)(0.8) 1.6 = 1.6의 소수 부분은 0.6 및 합니다. 소수 부분에만 유지 하 고 결과 [0, 1] 간격에서 항상 확인 합니다.  
+ 다음 표에서 파란색 크기 조정 전과 후 4 개 막대에 대 한 색 벡터를 나열합니다. 네 번째 색 막대의 파랑 구성 요소에서 0.8 0.6을 참고 합니다. GDI + 결과의 소수 부분에만 유지 때문입니다. 예를 들어 (2)(0.8) 1.6 = 1.6의 소수 부분은 0.6 및 합니다. 소수 부분에만 유지 하 고 결과 [0, 1] 간격에서 항상 확인 합니다.  
   
 |원래 색|확장|  
 |--------------|------------|  

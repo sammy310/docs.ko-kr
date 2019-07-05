@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
-ms.openlocfilehash: b41b95ba06f031dc45c0267432d0d6afb7f3a7d9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1af8863dd22b5ebb3a2c87009b9c51d5ec25bb89
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645685"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504837"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>DataView로 필터링(LINQ to DataSet)
 특정 조건을 사용하여 데이터를 필터링한 다음 UI 컨트롤을 통해 클라이언트에 데이터를 제공하는 기능은 데이터 바인딩의 중요한 기능입니다. <xref:System.Data.DataView>에서는 데이터를 필터링하여 특정 필터 조건을 충족하는 데이터 행의 하위 집합을 반환하는 여러 가지 방법을 제공합니다. 문자열 기반 하는 것 외에도 필터링 기능도 <xref:System.Data.DataView> 사용 하는 기능도 제공 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 식을 필터링 조건에 대 한 합니다. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 식은 문자열 기반 필터링에 비해 훨씬 더 복잡 하 고 강력한 필터링 작업을 허용 합니다.  
   
  <xref:System.Data.DataView>를 사용하여 데이터를 필터링하는 방법에는 두 가지가 있습니다.  
   
-- Where 절이 있는 <xref:System.Data.DataView> 쿼리에서 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]를 만듭니다.  
+- 만들기는 <xref:System.Data.DataView> Where 사용 하 여 linq to DataSet 쿼리에서 절.  
   
 - <xref:System.Data.DataView>의 기존 문자열 기반 필터링 기능을 사용합니다.  
   
 ## <a name="creating-dataview-from-a-query-with-filtering-information"></a>필터링 정보가 있는 쿼리에서 DataView 만들기  
- <xref:System.Data.DataView> 개체는 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리에서 만들 수 있습니다. 해당 쿼리에 `Where` 절이 있으면 쿼리의 필터링 정보를 사용하여 <xref:System.Data.DataView>를 만듭니다. `Where` 절의 식은 <xref:System.Data.DataView>에 포함되는 데이터 행을 확인하는 데 사용되며 필터의 기본 요소입니다.  
+ <xref:System.Data.DataView> 에 데이터 집합 쿼리에 LINQ에서 개체를 만들 수 있습니다. 해당 쿼리에 `Where` 절이 있으면 쿼리의 필터링 정보를 사용하여 <xref:System.Data.DataView>를 만듭니다. `Where` 절의 식은 <xref:System.Data.DataView>에 포함되는 데이터 행을 확인하는 데 사용되며 필터의 기본 요소입니다.  
   
  식 기반 필터는 간단한 문자열 기반 필터에 비해 강력하고 복잡한 필터링 기능을 제공합니다. 문자열 기반 필터와 식 기반 필터는 함께 사용할 수 없습니다. <xref:System.Data.DataView.RowFilter%2A>를 쿼리에서 만든 후에 문자열 기반 <xref:System.Data.DataView>를 설정하면 쿼리에서 유추된 식 기반 필터가 지워집니다.  
   
@@ -59,14 +59,14 @@ ms.locfileid: "64645685"
  [!code-vb[DP DataView Samples#SoundEx](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#soundex)]  
   
 ## <a name="using-the-rowfilter-property"></a>RowFilter 속성 사용  
- <xref:System.Data.DataView>의 기존 문자열 기반 필터링 기능은 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 컨텍스트에서 계속 사용할 수 있습니다. 문자열 기반 하는 방법에 대 한 자세한 내용은 <xref:System.Data.DataView.RowFilter%2A> 필터링을 참조 하세요 [정렬 및 필터링 데이터](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)입니다.  
+ 기존 문자열 기반 필터링 기능의 <xref:System.Data.DataView> LINQ to DataSet 컨텍스트에서에서 계속 작동 합니다. 문자열 기반 하는 방법에 대 한 자세한 내용은 <xref:System.Data.DataView.RowFilter%2A> 필터링을 참조 하세요 [정렬 및 필터링 데이터](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)입니다.  
   
  다음 예제에서는 Contact 테이블에서 <xref:System.Data.DataView>를 만든 다음 연락처의 성이 "Zhu"인 행을 반환하도록 <xref:System.Data.DataView.RowFilter%2A> 속성을 설정합니다.  
   
  [!code-csharp[DP DataView Samples#LDVRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvrowfilter)]
  [!code-vb[DP DataView Samples#LDVRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvrowfilter)]  
   
- <xref:System.Data.DataView> 또는 <xref:System.Data.DataTable> 쿼리에서 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]를 만든 다음 <xref:System.Data.DataView.RowFilter%2A> 속성을 사용하여 열 값을 기준으로 행의 하위 집합을 지정할 수 있습니다. 문자열 기반 필터와 식 기반 필터는 함께 사용할 수 없습니다. <xref:System.Data.DataView.RowFilter%2A> 속성을 설정하면 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리에서 유추된 필터 식이 지워지며, 이 필터 식은 재설정할 수 없습니다.  
+ 후는 <xref:System.Data.DataView> 에서 생성 된를 <xref:System.Data.DataTable> 또는 LINQ to DataSet 쿼리에서 사용할 수는 <xref:System.Data.DataView.RowFilter%2A> 해당 열 값을 기반으로 하는 행의 하위 집합을 지정 하는 속성입니다. 문자열 기반 필터와 식 기반 필터는 함께 사용할 수 없습니다. 설정 된 <xref:System.Data.DataView.RowFilter%2A> 속성은 데이터 집합 쿼리의 LINQ에서 유추 된 필터 식을 지우고 필터 식을 다시 설정할 수 없습니다.  
   
  [!code-csharp[DP DataView Samples#LDVFromQueryWhereSetRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvfromquerywheresetrowfilter)]
  [!code-vb[DP DataView Samples#LDVFromQueryWhereSetRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromquerywheresetrowfilter)]  

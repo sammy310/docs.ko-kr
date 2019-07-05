@@ -6,15 +6,15 @@ helpviewer_keywords:
 - graphics [Windows Forms], transformations
 - matrix transformations
 ms.assetid: 9fef7451-bddf-4c68-9350-400d1f1f25a3
-ms.openlocfilehash: 5093bfa6bc4051c1c6cf3ca059831b0cbe137ef0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d267253a1a75117f986790d1e0002a3607944577
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755768"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506048"
 ---
 # <a name="coordinate-systems-and-transformations"></a>좌표계 및 변환
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 변형할 수 있도록 월드 변형 및 페이지 변환을 제공 (회전, 크기 조정, 변환 및 등) 사용자가 그린 항목입니다. 두 개의 변환은 좌표 시스템의 다양 한 작업 수 있습니다.  
+GDI +는 월드 변형 및 페이지 변환 하므로 변환할 수 있습니다 (회전, 크기 조정, 변환 및 등) 사용자가 그린 항목입니다. 두 개의 변환은 좌표 시스템의 다양 한 작업 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [좌표계 형식](types-of-coordinate-systems.md)  

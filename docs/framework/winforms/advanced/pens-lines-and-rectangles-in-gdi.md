@@ -17,15 +17,15 @@ helpviewer_keywords:
 - examples [Windows Forms], GDI+
 - lines [Windows Forms], dashed
 ms.assetid: 30b25aae-e3eb-4479-bdb8-187cf651fc84
-ms.openlocfilehash: 84752773c0b56d9684dc31620d463d4ddccf9dad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06d2351ffa7d7f009d7b049f4689df7038b4d202
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641391"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505344"
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>GDI+의 펜, 선 및 사각형
-있는 선을 그리려면 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 만들어야를 <xref:System.Drawing.Graphics> 개체 및 <xref:System.Drawing.Pen> 개체입니다. 합니다 <xref:System.Drawing.Graphics> 실제로 그리기를 수행 하는 메서드를 제공 하는 개체 및 <xref:System.Drawing.Pen> 개체 선 색, 너비 및 스타일 같은 특성을 저장 합니다.  
+GDI + 만들 필요가 있는 선을 그리려면를 <xref:System.Drawing.Graphics> 개체 및 <xref:System.Drawing.Pen> 개체입니다. 합니다 <xref:System.Drawing.Graphics> 실제로 그리기를 수행 하는 메서드를 제공 하는 개체 및 <xref:System.Drawing.Pen> 개체 선 색, 너비 및 스타일 같은 특성을 저장 합니다.  
   
 ## <a name="drawing-a-line"></a>선 그리기  
  선 그리기를 호출 합니다 <xref:System.Drawing.Graphics.DrawLine%2A> 메서드는 <xref:System.Drawing.Graphics> 개체. 합니다 <xref:System.Drawing.Pen> 개체에 대 한 인수 중 하나로 전달 되는 <xref:System.Drawing.Graphics.DrawLine%2A> 메서드. 다음 예제에서는 점 (12, 6) 줄 (4, 2) 지점에서 그립니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "61641391"
  ![Lines](./media/aboutgdip02-art04.gif "Aboutgdip02_art04")  
   
 ## <a name="drawing-a-rectangle"></a>사각형 그리기  
- 사용 하 여 사각형 그리기 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 선을 그릴 비슷합니다. 사각형을 그리려면 하려면를 <xref:System.Drawing.Graphics> 개체 및 <xref:System.Drawing.Pen> 개체입니다. <xref:System.Drawing.Graphics> 개체를 제공을 <xref:System.Drawing.Graphics.DrawRectangle%2A> 메서드 및 <xref:System.Drawing.Pen> 개체 선 두께 색 같은 특성을 저장 합니다. 합니다 <xref:System.Drawing.Pen> 개체에 대 한 인수 중 하나로 전달 되는 <xref:System.Drawing.Graphics.DrawRectangle%2A> 메서드. 다음 예제에서는 왼쪽 위 모퉁이가 사용 하 여 사각형을 그립니다 (100, 50), 80, 너비 및 높이가 40:  
+ GDI +를 사용 하 여 사각형 그리기 선을 그릴와 비슷합니다. 사각형을 그리려면 하려면를 <xref:System.Drawing.Graphics> 개체 및 <xref:System.Drawing.Pen> 개체입니다. <xref:System.Drawing.Graphics> 개체를 제공을 <xref:System.Drawing.Graphics.DrawRectangle%2A> 메서드 및 <xref:System.Drawing.Pen> 개체 선 두께 색 같은 특성을 저장 합니다. 합니다 <xref:System.Drawing.Pen> 개체에 대 한 인수 중 하나로 전달 되는 <xref:System.Drawing.Graphics.DrawRectangle%2A> 메서드. 다음 예제에서는 왼쪽 위 모퉁이가 사용 하 여 사각형을 그립니다 (100, 50), 80, 너비 및 높이가 40:  
   
  [!code-csharp[LinesCurvesAndShapes#45](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#45)]
  [!code-vb[LinesCurvesAndShapes#45](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#45)]  

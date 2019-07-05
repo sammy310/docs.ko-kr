@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b947aefae4924a70c394626ace5a5abe1ebf546f
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 87fcf4221dc5b334c6e9342c2aaac04a417a9f46
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816157"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832769"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe(어셈블리 링커)
 
@@ -79,7 +79,7 @@ al sources options
 |`@filename`|*Al.exe* 명령을 포함하는 지시 파일을 지정합니다.<br /><br /> 지시 파일의 명령은 한 줄에 하나씩 나타나거나 하나 이상의 공백으로 분리되어 같은 줄에 나타날 수 있습니다.|
 |**/?**|이 도구의 명령 구문 및 옵션을 표시합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 모든 Visual Studio 컴파일러는 어셈블리를 만듭니다. 그러나 모듈(매니페스트 없는 메타데이터)이 하나 이상 있으면 *Al.exe*를 사용하여 별도의 파일에 매니페스트가 있는 어셈블리를 만들 수 있습니다.
 
@@ -108,7 +108,7 @@ al sources options
 |al1015|'alinkui.dll' 메시지 파일을 찾을 수 없습니다.<br /><br /> *Al.exe*를 사용하려면 *Alinkui.dll*이 필요합니다. 이 파일이 경로에 있는지 확인합니다. 필요한 경우 제품 CD에서 복사합니다.|
 |al1016|유효한 입력 파일을 지정하지 않았습니다.<br /><br /> *Al.exe*를 사용하려면 어셈블리 정보가 없는 입력 파일이 하나 이상 필요합니다.|
 |al1017|대상 파일 이름을 지정하지 않았습니다.<br /><br /> 대상 파일 이름을 지정하는 필수 **/out** 옵션이 없습니다.|
-|al1018|‘file’ 필수 파일을 로드할 수 없습니다.<br /><br /> 특정 DLL 파일을 로드할 수 없습니다. Visual Studio 또는 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]를 다시 설치합니다.|
+|al1018|‘file’ 필수 파일을 로드할 수 없습니다.<br /><br /> 특정 DLL 파일을 로드할 수 없습니다. Visual Studio 또는 Windows SDK(소프트웨어 개발 키트)를 다시 설치합니다.|
 |al1019|어셈블리를 만드는 동안 메타데이터 오류 발생 - reason<br /><br /> 지정된 이유로 어셈블리 생성이 중단되었습니다. 예를 들어 **/win32res** 옵션으로 지정한 파일을 찾을 수 없는 경우 이 오류가 발생합니다.|
 |al1020|포함된 어셈블리 'file'을 무시합니다.<br /><br /> 어셈블리를 포함하는 입력 파일을 지정했습니다. *Al.exe* 입력 파일은 어셈블리를 포함할 수 없습니다.|
 |al1021|'setting': 이전 설정 재정의<br /><br /> 모듈에 사용자 지정 특성을 통해 할당된 특정 설정 값이 있었습니다. 이 값이 *Al.exe* 명령줄 옵션을 사용하여 전달된 값으로 재정의되었습니다.|
@@ -165,7 +165,7 @@ al sources options
 |al1076|'type' 형식이 여러 어셈블리에 전달되었습니다. 'assembly' 및 'assembly'.<br /><br /> 각 형식을 하나의 어셈블리에만 전달할 수 있습니다.|
 |al1077|'type' public 형식이 'assembly'에서 정의되고 'assembly'로 전달됩니다.<br /><br /> 생성되는 어셈블리에 중복된 public 형식이 있습니다. 하나는 유효한 형식 정의이고 다른 하나는 형식 전달자입니다.|
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 명령은 `t2.netmodule` 모듈의 어셈블리를 사용하여 실행 파일 *t2a.exe*를 만듭니다. 진입점은 `Main`의 `MyClass` 메서드입니다.
 

@@ -2,9 +2,15 @@
 title: Entity SQL 언어 참조
 ms.date: 03/30/2017
 ms.assetid: bb07282c-161d-47e8-856d-b2374ba18181
+ms.openlocfilehash: 32e70c67bb36df167f7a6fbc8f2a855d63ed815a
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539480"
 ---
 # <a name="entity-sql-language-reference"></a>Entity SQL 언어 참조
-이 단원에서는 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]에 사용되는 모델링 및 매핑 언어, [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에 대해 설명합니다.  
+이 단원에서는 자세한 LINQ to Entities [!INCLUDE[esql](../../../../../../includes/esql-md.md)], 모델링 및 매핑 언어에서 사용 된 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [CSDL, SSDL 및 MSL 사양](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)  

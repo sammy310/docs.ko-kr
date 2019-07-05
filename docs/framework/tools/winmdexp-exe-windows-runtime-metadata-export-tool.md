@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a00828eba91e4fea41e8b6a6da8953fc399387e3
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 01cdcbb93fde0d2d2f1c800613d9709da0d695f6
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378502"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026008"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe(Windows 런타임 메타데이터 내보내기 도구)
-[!INCLUDE[wrt](../../../includes/wrt-md.md)] Metadata Export Tool(Winmdexp.exe)은 .NET Framework 모듈을 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 메타데이터가 포함되는 파일로 변환합니다. .NET Framework 어셈블리 및 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 메타데이터 파일이 같은 물리적 형식을 사용하지만 메타데이터 테이블의 내용에 차이가 있습니다. 즉, .NET Framework 어셈블리는 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 구성 요소로 자동으로 사용할 수 있습니다. .NET Framework 모듈을 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 구성 요소로 전환하는 프로세스를 *내보내기*라고 합니다. .NET Framework 4.5 및 .NET Framework 4.5.1에서 결과 Windows 메타데이터(.winmd) 파일은 메타데이터와 구현이 모두 포함됩니다.  
+Windows 런타임 메타데이터 내보내기 도구(Winmdexp.exe)는 .NET Framework 모듈을 Windows 런타임 메타데이터가 포함된 파일로 변환합니다. .NET Framework 어셈블리 및 Windows 런타임 메타데이터 파일이 같은 물리적 형식을 사용하지만 메타데이터 테이블의 내용에 차이가 있습니다. 즉, .NET Framework 어셈블리는 Windows 런타임 구성 요소로 자동으로 사용할 수 있습니다. .NET Framework 모듈을 Windows 런타임 구성 요소로 전환하는 프로세스를 ‘내보내기’라고 합니다.  .NET Framework 4.5 및 .NET Framework 4.5.1에서 결과 Windows 메타데이터(.winmd) 파일은 메타데이터와 구현이 모두 포함됩니다.  
   
- **Microsoft Store**에 있는 Visual Studio 2013 또는 Visual Studio 2012의 C# 및 Visual Basic에 대한 **[!INCLUDE[wrt](../../../includes/wrt-md.md)] 구성 요소** 템플릿을 사용할 경우 컴파일러 대상은 .winmdobj 파일이고, 이후 빌드 단계에서는 Winmdexp.exe를 호출하여 .winmdobj 파일을 .winmd 파일로 내보냅니다. 이러한 방법으로 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 구성 요소를 빌드하는 것이 좋습니다. Visual Studio가 제공하는 것보다 빌드 프로세스를 더 자세하게 제어하려면 Winmdexp.exe를 사용합니다.  
+ **Microsoft Store**에 있는 Visual Studio 2013 또는 Visual Studio 2012의 C# 및 Visual Basic용 **Windows 런타임 구성 요소** 템플릿을 사용할 경우 컴파일러 대상은 .winmdobj 파일이고, 이후 빌드 단계에서는 Winmdexp.exe를 호출하여 .winmdobj 파일을 .winmd 파일로 내보냅니다. 이러한 방법으로 Windows 런타임 구성 요소를 빌드하는 것이 좋습니다. Visual Studio가 제공하는 것보다 빌드 프로세스를 더 자세하게 제어하려면 Winmdexp.exe를 사용합니다.  
   
  이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 참조하세요.  
   
@@ -45,10 +45,10 @@ winmdexp [options] winmdmodule
 |`/warnaserror+`|모든 경고를 오류로 처리하도록 지정합니다.|  
 |**@** `responsefile`|옵션이 포함된 지시(.rsp) 파일이나 `winmdmodule`을 지정합니다. `responsefile`의 각 줄은 하나의 인수 또는 옵션을 포함해야 합니다.|  
   
-## <a name="remarks"></a>주의  
- Winmdexp.exe는 임의의 .NET Framework 어셈블리를 .winmd 파일로 변환할 수 없습니다. `/target:winmdobj` 옵션으로 컴파일된 모듈이 필요하고 추가 제한 사항이 적용됩니다. 이러한 제한 사항 중 가장 중요한 사항은 어셈블리의 API 화면에 노출된 모든 형식이 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 형식이어야 하는 것입니다. 자세한 내용은 Windows 개발자 센터에 있는 [C# 및 Visual Basic으로 Windows 런타임 구성 요소 만들기](https://go.microsoft.com/fwlink/p/?LinkID=238313) 문서의 "Windows 런타임 구성 요소에서 형식 선언" 섹션을 참조하세요.  
+## <a name="remarks"></a>설명  
+ Winmdexp.exe는 임의의 .NET Framework 어셈블리를 .winmd 파일로 변환할 수 없습니다. `/target:winmdobj` 옵션으로 컴파일된 모듈이 필요하고 추가 제한 사항이 적용됩니다. 이러한 제한 사항 중 가장 중요한 사항은 어셈블리의 API 표면에 공개되는 모든 형식이 Windows 런타임 형식이어야 한다는 것입니다. 자세한 내용은 Windows 개발자 센터에 있는 [C# 및 Visual Basic으로 Windows 런타임 구성 요소 만들기](https://go.microsoft.com/fwlink/p/?LinkID=238313) 문서의 "Windows 런타임 구성 요소에서 형식 선언" 섹션을 참조하세요.  
   
- C# 또는 Visual Basic으로 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램 또는 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 구성 요소를 쓸 때, .NET Framework는 지원을 제공하여 [!INCLUDE[wrt](../../../includes/wrt-md.md)]을 사용한 프로그램을 더 자연스럽게 만듭니다. 이 내용은 [Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md) 문서에서 설명합니다. 이 프로세스에서 몇 가지 자주 사용되는 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 형식이 .NET Framework 형식으로 매핑됩니다. Winmdexp.exe는 이 프로세스를 반대로 바꾸고 해당 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 형식을 사용하는 API 화면을 생성합니다. 예를 들어 <xref:System.Collections.Generic.IList%601> 인터페이스에서 구성된 형식은 [!INCLUDE[wrt](../../../includes/wrt-md.md)][IVector\<T>](https://go.microsoft.com/fwlink/p/?LinkId=251132) 인터페이스로 구성한 형식으로 매핑됩니다.  
+ C# 또는 Visual Basic으로 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱 또는 Windows 런타임 구성 요소를 작성하는 경우, .NET Framework는 Windows 런타임을 사용하여 더 자연스럽게 프로그래밍할 수 있도록 지원합니다. 이 내용은 [Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md) 문서에서 설명합니다. 이 프로세스에서, 자주 사용되는 몇 가지 Windows 런타임 형식이 .NET Framework 형식에 매핑됩니다. Winmdexp.exe는 이 프로세스를 반대로 하여, 해당 Windows 런타임 형식을 사용하는 API 표면을 생성합니다. 예를 들어 <xref:System.Collections.Generic.IList%601> 인터페이스에서 생성된 형식이 Windows 런타임[IVector\<T>](https://go.microsoft.com/fwlink/p/?LinkId=251132) 인터페이스에서 생성된 형식에 매핑됩니다.  
   
 ## <a name="see-also"></a>참고 항목
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16776e83c8bae6cc82329a8f709fd9d1d7cab145
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 63a3ee099d4256a4bc800f74615fca8eaec2a77f
+ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634337"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67135687"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>정규식의 그룹화 구문
 그룹화 구문은 정규식의 하위 식을 나타내며 입력 문자열의 부분 문자열을 캡처합니다. 그룹화 구문은 다음과 같은 경우에 사용할 수 있습니다.  
@@ -187,7 +187,7 @@ ms.locfileid: "64634337"
   
  여기서 *name1* 은 현재 그룹이고(선택 사항), *name2* 는 이전에 정의된 그룹이며, *subexpression* 은 임의의 유효한 정규식 패턴입니다. 균형 조정 그룹 정의는 *name2* 의 정의를 삭제하고 *name1* 에 *name2* 와 *name1*간의 간격을 저장합니다. *name2* 그룹이 정의되어 있지 않으면 일치에서 역추적합니다. *name2* 의 마지막 정의를 삭제하면 *name2*의 이전 정의가 표시되므로 이 구문을 통해 그룹 *name2* 에 대한 캡처 스택을 괄호 또는 여는 대괄호 및 닫는 대괄호와 같은 중첩된 구문을 추적하기 위한 카운터로 사용할 수 있습니다.  
   
- 균형 조정 그룹 정의에서는 *name2* 를 스택으로 사용합니다. 각 중첩된 구문의 시작 문자는 그룹 및 해당 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 컬렉션에 배치됩니다. 닫는 문자가 일치하면 해당 여는 문자가 그룹에서 제거되고 <xref:System.Text.RegularExpressions.Group.Captures%2A> 컬렉션이 하나 감소합니다. 모든 중첩된 구문의 여는 문자와 닫는 문자가 일치하고 나면 *name1* 이 비어 있습니다.  
+ 균형 조정 그룹 정의에서는 *name2* 를 스택으로 사용합니다. 각 중첩된 구문의 시작 문자는 그룹 및 해당 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 컬렉션에 배치됩니다. 닫는 문자가 일치하면 해당 여는 문자가 그룹에서 제거되고 <xref:System.Text.RegularExpressions.Group.Captures%2A> 컬렉션이 하나 감소합니다. 모든 중첩된 구문의 여는 문자와 닫는 문자가 일치하고 나면 *name2*가 비어 있습니다.  
   
 > [!NOTE]
 >  다음 예제에서 중첩된 구문의 적절한 여는 문자와 닫는 문자를 사용하도록 정규식을 수정하고 나면 이러한 정규식을 사용하여 가장 많이 중첩된 구문(예: 여러 중첩 메서드 호출을 포함하는 프로그램 코드 줄 또는 수학식)을 처리할 수 있습니다.  

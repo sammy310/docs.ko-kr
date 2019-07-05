@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
-ms.openlocfilehash: 7baf358d9cdabe8cadf6b297a1d0d63d64282525
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bd39b40864703b6bb24c2cc6590787562f3f4f98
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583538"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504158"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>DataView 개체 만들기(LINQ to DataSet)
-<xref:System.Data.DataView> 컨텍스트에서 두 가지 방법으로 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]를 만들 수 있습니다. <xref:System.Data.DataView>에 대한 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리를 사용하거나 형식화되었거나 형식화되지 않은 <xref:System.Data.DataTable>을 사용하여 <xref:System.Data.DataTable>를 만들 수 있습니다. 만든 두 경우 모두를 <xref:System.Data.DataView> 중 하나를 사용 하 여는 <xref:System.Data.DataTableExtensions.AsDataView%2A> 확장명 메서드 <xref:System.Data.DataView> 만들게 되며 직접 아닙니다는 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 컨텍스트.  
+두 가지 방법으로 만들려면는 <xref:System.Data.DataView> linq to DataSet 컨텍스트. 만들 수 있습니다는 <xref:System.Data.DataView> 데이터 집합 쿼리 하는 LINQ에서를 <xref:System.Data.DataTable>, 또는 형식화 된 또는 형식화 되지 않은 만들 수 있습니다 <xref:System.Data.DataTable>합니다. 만든 두 경우 모두를 <xref:System.Data.DataView> 중 하나를 사용 하 여는 <xref:System.Data.DataTableExtensions.AsDataView%2A> 확장명 메서드 <xref:System.Data.DataView> 직접 linq to DataSet 컨텍스트 형식이 아닙니다.  
   
  <xref:System.Data.DataView>를 만든 후에 Windows Forms 응용 프로그램 또는 ASP.NET 응용 프로그램의 UI 컨트롤에 바인딩하거나 필터링 및 정렬 설정을 변경할 수 있습니다.  
   
@@ -22,7 +22,7 @@ ms.locfileid: "64583538"
  사용한 필터링 및 정렬 하는 방법에 대 한 자세한 내용은 <xref:System.Data.DataView>를 참조 하세요 [DataView로 필터링](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md) 하 고 [DataView로 정렬](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)합니다.  
   
 ## <a name="creating-dataview-from-a-linq-to-dataset-query"></a>LINQ to DataSet 쿼리에서 DataView 만들기  
- <xref:System.Data.DataView> 개체는 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리 결과에서 만들어집니다. 여기서 결과는 <xref:System.Data.DataRow> 개체의 프로젝션입니다. 새로 만들어진 <xref:System.Data.DataView>는 자신을 만든 쿼리의 필터링 및 정렬 정보를 상속합니다.  
+ A <xref:System.Data.DataView> 결과의 프로젝션이 있는 데이터 집합 쿼리의 결과 linq에서 개체를 만들 수 있습니다 <xref:System.Data.DataRow> 개체입니다. 새로 만들어진 <xref:System.Data.DataView>는 자신을 만든 쿼리의 필터링 및 정렬 정보를 상속합니다.  
   
 > [!NOTE]
 >  대부분의 경우 필터링 및 정렬에 사용되는 식은 파생 효과가 없어야 하고 명확해야 합니다. 또한 정렬 및 필터링 작업이 여러 번 실행될 수 있으므로 이러한 식에는 실행 집합 번호에 따라 달라지는 논리가 없어야 합니다.  
@@ -45,18 +45,18 @@ ms.locfileid: "64583538"
   
 - <xref:System.Data.EnumerableRowCollectionExtensions.Where%2A>  
   
- 경우를 <xref:System.Data.DataView> 에서 만들어집니다를 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리를 <xref:System.Data.EnumerableRowCollectionExtensions.Select%2A> 메서드 쿼리에서 호출 이어야 합니다. 이 만드는 다음 예제에 표시 됩니다는 <xref:System.Data.DataView> 합계 별로 정렬 된 온라인 주문의:  
+ 경우는 <xref:System.Data.DataView> linq에서 to DataSet 쿼리에서 만들어집니다는 <xref:System.Data.EnumerableRowCollectionExtensions.Select%2A> 메서드 쿼리에서 호출 이어야 합니다. 이 만드는 다음 예제에 표시 됩니다는 <xref:System.Data.DataView> 합계 별로 정렬 된 온라인 주문의:  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQuery1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromquery1)]
  [!code-vb[DP DataView Samples#CreateLDVFromQuery1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquery1)]  
   
- 문자열 기반 이용할 수 있습니다 <xref:System.Data.DataView.RowFilter%2A> 하 고 <xref:System.Data.DataView.Sort%2A> 필터링 및 정렬 속성을 <xref:System.Data.DataView> 쿼리에서 만들어진 후. 이렇게 하면 쿼리에서 상속된 정렬 및 필터링 정보가 지워집니다. 다음 예제에서는 'S'로 시작하는 성을 기준으로 필터링하는 <xref:System.Data.DataView> 쿼리에서 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]를 만듭니다. 성을 기준으로 오름차순으로 정렬한 다음 이름을 기준으로 내림차순으로 정렬하도록 문자열 기반 <xref:System.Data.DataView.Sort%2A> 속성을 설정합니다.  
+ 문자열 기반 이용할 수 있습니다 <xref:System.Data.DataView.RowFilter%2A> 하 고 <xref:System.Data.DataView.Sort%2A> 필터링 및 정렬 속성을 <xref:System.Data.DataView> 쿼리에서 만들어진 후. 이렇게 하면 쿼리에서 상속된 정렬 및 필터링 정보가 지워집니다. 다음 예제에서는 한 <xref:System.Data.DataView> 로 시작 하는 성을 기준으로 필터링 하는 데이터 집합 쿼리는 LINQ에서의 '. 성을 기준으로 오름차순으로 정렬한 다음 이름을 기준으로 내림차순으로 정렬하도록 문자열 기반 <xref:System.Data.DataView.Sort%2A> 속성을 설정합니다.  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromquerystringsort)]
  [!code-vb[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquerystringsort)]  
   
 ## <a name="creating-a-dataview-from-a-datatable"></a>DataTable에서 DataView 만들기  
- 생성 되는 것 외에도 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리는 <xref:System.Data.DataView> 에서 개체를 만들 수 있습니다를 <xref:System.Data.DataTable> 사용 하 여를 <xref:System.Data.DataTableExtensions.AsDataView%2A> 메서드.  
+ Linq에서 to DataSet 쿼리에서 생성 되는 것 외에도 <xref:System.Data.DataView> 에서 개체를 만들 수는 <xref:System.Data.DataTable> 사용 하 여를 <xref:System.Data.DataTableExtensions.AsDataView%2A> 메서드.  
   
  다음 예제에서는 SalesOrderDetail 테이블에서 <xref:System.Data.DataView>를 만든 다음 <xref:System.Windows.Forms.BindingSource> 개체의 데이터 소스로 설정합니다. 이 개체는 <xref:System.Windows.Forms.DataGridView> 컨트롤에 대한 프록시 역할을 합니다.  
   

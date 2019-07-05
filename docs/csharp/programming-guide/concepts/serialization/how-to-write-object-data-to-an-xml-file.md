@@ -2,17 +2,17 @@
 title: '방법: XML 파일에 개체 데이터 쓰기(C#)'
 ms.date: 07/20/2015
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-ms.openlocfilehash: a4fdb496e3b015b2e3b46c9705ba1c05c20423f0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 77d3a45f6213bc390e0b3da0d30cfbc55235b1d1
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595520"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170243"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-c"></a>방법: XML 파일에 개체 데이터 쓰기(C#)
 이 예제에서는 <xref:System.Xml.Serialization.XmlSerializer> 클래스를 사용하여 XML 파일에 클래스의 개체를 씁니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```csharp  
 public class XMLWrite  
@@ -45,7 +45,7 @@ public class XMLWrite
 ```  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- 클래스에는 매개 변수가 없는 public 생성자가 있어야 합니다.  
+ 직렬화되는 클래스에는 매개 변수가 없는 공용 생성자가 있어야 합니다.  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
  다음 조건에서 예외가 발생합니다.  

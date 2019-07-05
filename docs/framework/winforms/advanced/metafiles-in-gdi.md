@@ -9,18 +9,18 @@ helpviewer_keywords:
 - GDI+, metafiles
 - metafiles
 ms.assetid: 51da872c-c783-440f-8bf6-1e580a966c31
-ms.openlocfilehash: f46c24b699aa49db2bc4b8467ce96a125602acec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df54289722cf12bad840722c6eafdaa43279a5dc
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645737"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504592"
 ---
 # <a name="metafiles-in-gdi"></a>GDI+의 메타파일
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 제공 된 <xref:System.Drawing.Imaging.Metafile> 클래스를 기록 하 고 메타 파일을 표시할 수 있도록 합니다. 벡터 이미지 라고도 불리는 메타 파일 이미지 그리기 명령 및 설정의 시퀀스로 저장 되어 있는 경우 명령 및 설정에 기록를 <xref:System.Drawing.Imaging.Metafile> 개체를 메모리에 저장 하거나 파일 또는 스트림에 저장할 수 있습니다.  
+GDI + 제공은 <xref:System.Drawing.Imaging.Metafile> 클래스를 기록 하 고 메타 파일을 표시할 수 있도록 합니다. 벡터 이미지 라고도 불리는 메타 파일 이미지 그리기 명령 및 설정의 시퀀스로 저장 되어 있는 경우 명령 및 설정에 기록를 <xref:System.Drawing.Imaging.Metafile> 개체를 메모리에 저장 하거나 파일 또는 스트림에 저장할 수 있습니다.  
   
 ## <a name="metafile-formats"></a>메타 파일 형식  
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 다음 형식으로 저장 된 메타 파일을 표시할 수 있습니다.  
+ GDI +에서는 다음 형식으로 저장 된 메타 파일을 표시할 수 있습니다.  
   
 - Windows 메타 파일 (WMF)  
   
@@ -28,9 +28,9 @@ ms.locfileid: "64645737"
   
 - EMF+  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] EMF, EMF + 형식으로 있지만 WMF 형식이 메타 파일을 기록할 수 있습니다.  
+ GDI +를 기록할 수 메타 파일 EMF, EMF + 형식으로 있지만 WMF 형식에 없습니다.  
   
- EMF +는 EMF 수 있도록 하려면 확장 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 레코드를 저장 합니다. EMF + 형식에 두 가지 변형이 있습니다. EMF +만 및 EMF + 복합 합니다. EMF + 전용 메타 파일 포함 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 레코드입니다. 이러한 메타 파일은 표시할 수 있습니다 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 하지 않습니다 하지만 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]합니다. EMF + 복합 메타 파일 포함 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 고 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 레코드입니다. 각 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] EMF + 복합 레코드 메타 파일 쌍을 이룹니다 대체를 사용 하 여 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 레코드입니다. 이러한 메타 파일은 표시할 수 있습니다 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 또는 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]합니다.  
+ EMF +는 GDI + 레코드를 저장할 수 있는 EMF 확장 합니다. EMF + 형식에 두 가지 변형이 있습니다. EMF +만 및 EMF + 복합 합니다. EMF + 전용 메타 파일에는 GDI + 레코드만 포함합니다. GDI는 아니라 GDI +에서 이러한 메타 파일을 표시할 수 있습니다. EMF + 복합 메타 파일 GDI 및 GDI + 레코드를 포함 합니다. EMF + 복합 메타 파일의 각 GDI + 레코드를 대체 GDI 레코드를 이룹니다. 이러한 메타 파일은 GDI 또는 GDI +에서 표시할 수 있습니다.  
   
  다음 예제에서는 이전에 파일로 저장 된 메타 파일을 표시 합니다. 메타 파일에서 왼쪽 위 모퉁이 표시 됩니다 (100, 100).  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - curves [Windows Forms], drawing
 - curves
 ms.assetid: 08d2cc9a-dc9d-4eed-bcbb-2c8e2ca5d3ae
-ms.openlocfilehash: 33a8954296a7e63637ad5e210fb30fba1a3fdd53
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06afdc4549f7c3c9b0636e5c7052dcca87a153f1
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641469"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505458"
 ---
 # <a name="open-and-closed-curves-in-gdi"></a>GDI+의 개곡선 및 폐곡선
 다음 그림에서는 두 곡선으로 분할: 개곡선 및 닫힙니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "61641469"
  ![개곡선 및 폐곡선](./media/aboutgdip02-art24.gif "Aboutgdip02_art24")  
   
 ## <a name="managed-interface-for-curves"></a>곡선에 대 한 관리 되는 인터페이스  
- 닫힌된 곡선 내부 있고 브러시를 사용 하 여 채울 수 있습니다. <xref:System.Drawing.Graphics> 클래스의 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 닫힌된 도형 및 곡선을 채우기 위한 메서드를 제공: <xref:System.Drawing.Graphics.FillRectangle%2A>, <xref:System.Drawing.Graphics.FillEllipse%2A>, <xref:System.Drawing.Graphics.FillPie%2A>를 <xref:System.Drawing.Graphics.FillPolygon%2A>, <xref:System.Drawing.Graphics.FillClosedCurve%2A>를 <xref:System.Drawing.Graphics.FillPath%2A>, 및 <xref:System.Drawing.Graphics.FillRegion%2A>합니다. 다음이 방법 중 하나를 호출할 때마다 특정 브러시 형식 중 하나를 전달 해야 합니다 있습니다 (<xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>를 <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, 또는 <xref:System.Drawing.Drawing2D.PathGradientBrush>) 인수로 합니다.  
+ 닫힌된 곡선 내부 있고 브러시를 사용 하 여 채울 수 있습니다. <xref:System.Drawing.Graphics> 닫힌된 도형 및 곡선을 채우기 위한 메서드를 제공 하는 GDI +의 클래스: <xref:System.Drawing.Graphics.FillRectangle%2A>, <xref:System.Drawing.Graphics.FillEllipse%2A>, <xref:System.Drawing.Graphics.FillPie%2A>를 <xref:System.Drawing.Graphics.FillPolygon%2A>를 <xref:System.Drawing.Graphics.FillClosedCurve%2A>, <xref:System.Drawing.Graphics.FillPath%2A>, 및 <xref:System.Drawing.Graphics.FillRegion%2A>합니다. 다음이 방법 중 하나를 호출할 때마다 특정 브러시 형식 중 하나를 전달 해야 합니다 있습니다 (<xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>를 <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, 또는 <xref:System.Drawing.Drawing2D.PathGradientBrush>) 인수로 합니다.  
   
  <xref:System.Drawing.Graphics.FillPie%2A> 메서드를 함께 제공 되는 <xref:System.Drawing.Graphics.DrawArc%2A> 메서드. 처럼 합니다 <xref:System.Drawing.Graphics.DrawArc%2A> 메서드는 타원 윤곽선의 부분을 그리는 <xref:System.Drawing.Graphics.FillPie%2A> 메서드는 타원의 내부를 채웁니다. 다음 예제에서는 원호를 그리는 데 및 타원의 내부의 해당 부분을 채웁니다.  
   

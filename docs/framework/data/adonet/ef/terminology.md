@@ -2,12 +2,12 @@
 title: Entity Framework 용어
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: 53a6888d0b32cfeb73e7254dc0778274fe6cd0eb
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: bc3712628d308629208af893e8fdee16cbba1e93
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306346"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539873"
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework 용어
 이 항목에서는 자주 참조 되는 용어를 정의 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 설명서. 추가 정보를 볼 수 있는 관련 항목에 대한 링크가 제공됩니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "67306346"
 |독립 연결|독립 개체에 의해 표현되고 추적되는 엔터티 간의 연결입니다.|  
 |key|엔터티 형식의 고유한 인스턴스를 식별하는 데 사용되는 속성 또는 속성 집합을 지정하는 엔터티 형식의 특성입니다. <xref:System.Data.EntityKey> 클래스에 의해 개체 계층에서 표현됩니다.<br /><br /> 자세한 내용은 [Key 요소 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#key-element-csdl) 하 고 [엔터티 키](../../../../../docs/framework/data/adonet/entity-key.md)합니다.|  
 |지연 로드|개체가 쿼리에서 반환될 때 관련 개체가 동시에 로드되지 않습니다. 대신 탐색 속성에 액세스하면 관련 개체가 자동으로 로드됩니다.|  
-|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|통과, 필터 및 프로젝션 작업 Visual C# 및 Visual Basic에서 직접적이 고 선언적인 방식으로 표현할 수 있도록 하는 쿼리 연산자 집합을 정의 하는 쿼리 구문입니다.<br /><br /> 자세한 내용은 [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)합니다.|  
+|LINQ to Entities|통과, 필터 및 프로젝션 작업 Visual C# 및 Visual Basic에서 직접적이 고 선언적인 방식으로 표현할 수 있도록 하는 쿼리 연산자 집합을 정의 하는 쿼리 구문입니다.<br /><br /> 자세한 내용은 [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)합니다.|  
 |매핑|개념적 모델에 있는 항목과 저장소 모델에 있는 항목 간의 대응 지정입니다.<br /><br /> 자세한 내용은 [MSL 사양](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md)합니다.|  
 |.msl 파일|MSL로 표현된, 개념적 모델과 저장소 모델 간의 매핑이 포함된 XML 파일입니다.|  
 |MSL(매핑 사양 언어)|개념 모델에서 정의한 항목을 저장소 모델의 항목에 매핑하는 데 사용되는 XML 기반 언어입니다.<br /><br /> 자세한 내용은 [MSL 사양](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md)합니다.|  

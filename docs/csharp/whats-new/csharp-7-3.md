@@ -2,12 +2,12 @@
 title: C# 7.3의 새로운 기능
 description: C# 7.3의 새로운 기능에 대한 개요입니다.
 ms.date: 05/16/2018
-ms.openlocfilehash: aca5c1b82253c02eccf24af1e5c45d0203d0b1b8
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 768070ead2b180d5f4491ac87be6c248c39e9944
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832705"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397788"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3의 새로운 기능
 
@@ -34,7 +34,12 @@ C# 7.3 릴리스에는 두 개의 기본 테마가 있습니다. 하나의 테�
 - `-publicsign` - OSS(오픈 소스 소프트웨어) 시그니처를 사용하도록 설정합니다.
 - `-pathmap` - 소스 디렉터리에 대한 매핑을 제공합니다.
 
-이 문서의 나머지 부분에서는 각 개선 사항에 대해 자세히 알아보기 위한 세부 정보와 링크를 제공합니다.
+이 문서의 나머지 부분에서는 각 개선 사항에 대해 자세히 알아보기 위한 세부 정보와 링크를 제공합니다. `dotnet try` 글로벌 도구를 사용하여 환경에서 다음과 같은 기능을 탐색할 수 있습니다.
+
+1. [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) 글로벌 도구를 설치합니다.
+1. [dotnet/try-samples](https://github.com/dotnet/try-samples) 리포지토리를 복제합니다.
+1. 현재 디렉터리를 *try-samples* 리포지토리의 *csharp7* 하위 디렉터리로 설정합니다.
+1. `dotnet try`를 실행합니다.
 
 ## <a name="enabling-more-efficient-safe-code"></a>좀 더 효율적인 안전한 코드 사용
 

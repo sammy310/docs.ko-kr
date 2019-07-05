@@ -7,15 +7,15 @@ helpviewer_keywords:
 - examples [Windows Forms], pens
 - drawing
 ms.assetid: 8a7542ab-3e9e-443f-8405-2d6053528e20
-ms.openlocfilehash: 3846c59712cec6003c35f336714041544dec94b3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d20b4e47c9f8a5dd7a144e6ebb3151d3ab65a800
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777249"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505146"
 ---
 # <a name="using-a-pen-to-draw-lines-and-shapes"></a>펜을 사용하여 선과 도형 그리기
-사용 하 여 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] `Pen` 선 세그먼트, 곡선 및 도형의 윤곽선을 그릴 개체입니다. 이 단원의 *줄* 선분을 의미를 지정 하지 않으면 이러한를 가리킵니다. 색, 너비, 맞춤 및 해당 펜을 사용 하 여 그리는 선의 스타일을 제어 하는 펜의 속성을 설정 합니다.  
+GDI +를 사용 하 여 `Pen` 선 세그먼트, 곡선 및 도형의 윤곽선을 그릴 개체입니다. 이 단원의 *줄* 선분을 의미를 지정 하지 않으면 이러한를 가리킵니다. 색, 너비, 맞춤 및 해당 펜을 사용 하 여 그리는 선의 스타일을 제어 하는 펜의 속성을 설정 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [방법: 선을 그리는 펜을 사용 합니다.](how-to-use-a-pen-to-draw-lines.md)  

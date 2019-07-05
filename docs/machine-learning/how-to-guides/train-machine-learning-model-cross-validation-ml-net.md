@@ -1,20 +1,20 @@
 ---
-title: 교차 유효성 검사를 사용하여 기계 학습 모델 학습 및 교육
-description: 교차 유효성 검사를 사용하여 기계 학습 모델을 학습 및 교육하는 방법 알아보기
-ms.date: 05/03/2019
+title: 교차 유효성 검사를 사용하여 기계 학습 모델을 학습합니다.
+description: 교차 유효성 검사를 사용하여 ML.NET에서 더 강력한 기계 학습 모델을 구축하는 방법을 알아봅니다. 교차 유효성 검사는 학습 데이터를 여러 파티션으로 분할하고 이 파티션에서 여러 알고리즘을 학습하는 학습 및 모델 평가 기법입니다.
+ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc,how-to
-ms.openlocfilehash: a06711ca83ea545adc7292cf6d8173f006fdb94d
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.custom: mvc,how-to,title-hack-0625
+ms.openlocfilehash: c68c2b61054f59f03b4743ec30a694e94086ebab
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557841"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397652"
 ---
-# <a name="train-and-evaluate-a-machine-learning-model-using-cross-validation"></a>교차 유효성 검사를 사용하여 기계 학습 모델 학습 및 교육
+# <a name="train-a-machine-learning-model-using-cross-validation"></a>교차 유효성 검사를 사용하여 기계 학습 모델을 학습합니다.
 
-교차 유효성 검사를 사용하여 ML.NET에서 더 강력한 기계 학습 모델을 구축하는 방법을 알아봅니다. 
+교차 유효성 검사를 사용하여 ML.NET에서 더 강력한 기계 학습 모델을 학습하는 방법을 알아봅니다. 
 
 교차 유효성 검사는 학습 데이터를 여러 파티션으로 분할하고 이 파티션에서 여러 알고리즘을 학습하는 학습 및 모델 평가 기법입니다. 이 기법은 학습 프로세스 밖에서 데이터를 유지하여 모델의 견고성을 높입니다. 보이지 않는 관찰에 대한 성능 향상 외에도, 데이터 제약 환경에서 데이터 세트가 더 적은 학습 모델에 효과적인 도구가 될 수 있습니다.
 
@@ -93,7 +93,7 @@ var cvResults = mlContext.Regression.CrossValidate(transformedData, sdcaEstimato
 
 `cvResults`에 저장된 결과는 [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) 개체의 컬렉션입니다. 이 개체는 각각 [`Model`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Model) 및 [`Metrics`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Metrics) 속성에서 액세스할 수 있는 학습 모델과 메트릭을 포함합니다. 이 샘플에서 `Model` 속성은[`ITransformer`](xref:Microsoft.ML.ITransformer) 형식이고 `Metrics` 속성은 [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics) 형식입니다. 
 
-## <a name="extract-metrics"></a>메트릭 추출
+## <a name="evaluate-the-model"></a>모델 평가
 
 다양한 학습 모델에 대한 메트릭은 개별 [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) 개체의 `Metrics` 속성을 통해 액세스할 수 있습니다. 이 경우 [R 제곱 메트릭](https://en.wikipedia.org/wiki/Coefficient_of_determination)이 `rSquared` 변수를 통해 액세스 및 저장됩니다. 
 
@@ -103,11 +103,7 @@ IEnumerable<double> rSquared =
         .Select(fold => fold.Metrics.RSquared);
 ```
 
-`rSquared` 변수의 콘텐츠를 검사할 경우 출력은 0-1 범위의 5개 값이며 1에 가까울수록 적합한 값입니다.
-
-## <a name="select-the-best-performing-model"></a>최상의 모델 선택
-
-R 제곱 같은 메트릭을 사용하여 가장 적합한 값에서 가장 부족한 값까지 모델을 선택합니다. 그런 다음, 최고 모델을 선택하여 예측하거나 추가적인 작업을 수행합니다.
+`rSquared` 변수의 콘텐츠를 검사할 경우 출력은 0-1 범위의 5개 값이며 1에 가까울수록 적합한 값입니다. R 제곱 같은 메트릭을 사용하여 가장 적합한 값에서 가장 부족한 값까지 모델을 선택합니다. 그런 다음, 최고 모델을 선택하여 예측하거나 추가적인 작업을 수행합니다.
 
 ```csharp
 // Select all models

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], translation
 - affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
-ms.openlocfilehash: c87be8eaf715e373da75dd8f91889b0e396dba0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ceaad7b4bb5a70a890d261e39bc608becb388c17
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967525"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505631"
 ---
 # <a name="matrix-representation-of-transformations"></a>변환에 대한 매트릭스 표현
 m × n 행렬은 행 m과 n 열으로 정렬 하는 숫자 집합입니다. 다음 그림에서는 몇 가지 매트릭스를 보여 줍니다.  
@@ -66,7 +66,7 @@ m × n 행렬은 행 m과 n 열으로 정렬 하는 숫자 집합입니다. 다�
   
  ![Transformations](./media/aboutgdip05-art10.gif "AboutGdip05_art10")  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 는 3x3 유사 변형에 저장할 수 있습니다는 <xref:System.Drawing.Drawing2D.Matrix> 개체입니다. 나타내는 3x3 유사 변형 매트릭스의 세 번째 열은 항상 때문에 (0, 0, 1)을 생성 하는 경우 처음 두 열에 있는 6 개의 숫자만 지정를 <xref:System.Drawing.Drawing2D.Matrix> 개체입니다. 문이 `Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)` 앞의 그림에 표시 된 행렬을 생성 합니다.  
+ GDI +는 3x3 유사 변형에 저장할 수 있습니다는 <xref:System.Drawing.Drawing2D.Matrix> 개체입니다. 나타내는 3x3 유사 변형 매트릭스의 세 번째 열은 항상 때문에 (0, 0, 1)을 생성 하는 경우 처음 두 열에 있는 6 개의 숫자만 지정를 <xref:System.Drawing.Drawing2D.Matrix> 개체입니다. 문이 `Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)` 앞의 그림에 표시 된 행렬을 생성 합니다.  
   
 ## <a name="composite-transformations"></a>합성 변형  
  복합 변환에는 뒤에 다른 하나는 변환의 시퀀스입니다. 행렬 및 다음과 같은 변환을 고려 합니다.  

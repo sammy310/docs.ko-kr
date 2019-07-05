@@ -10,12 +10,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: 9ad7253fb9efc891e1f0fdea118e1fe7bde6a857
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 8f49118ebff8dcdfee45ce30de9b35437141e2bb
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58125917"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398467"
 ---
 # <a name="inheritance-c-programming-guide"></a>상속(C# 프로그래밍 가이드)
 
@@ -40,7 +40,7 @@ ms.locfileid: "58125917"
  기본 클래스가 메서드를 [virtual](../../../csharp/language-reference/keywords/virtual.md)로 선언하는 경우 파생 클래스가 해당 구현으로 메서드를 [재정의](../../../csharp/language-reference/keywords/override.md)할 수 있습니다. 기본 클래스가 멤버를 [abstract](../../../csharp/language-reference/keywords/abstract.md)로 선언하는 경우 해당 클래스에서 직접 상속하는 모든 비추상 클래스에서 메서드를 재정의해야 합니다. 파생 클래스 자체가 abstract인 경우 직접 구현하지 않고 추상 멤버를 상속합니다. 추상 멤버 및 가상 멤버는 개체 지향 프로그래밍의 두 번째 주요 특징인 다형성의 기초가 됩니다. 자세한 내용은 [다형성](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)을 참조하세요.  
   
 ## <a name="abstract-base-classes"></a>추상 기본 클래스  
- [new](../../../csharp/language-reference/keywords/new.md) 키워드를 사용한 직접 인스턴스화를 방지하려는 경우 클래스를 [abstract](../../../csharp/language-reference/keywords/abstract.md)로 선언할 수 있습니다. 이 작업을 수행하면 해당 클래스에서 새 클래스가 파생된 경우에만 클래스를 사용할 수 있습니다. 추상 클래스에는 그 자체가 abstract로 선언된 메서드 시그니처가 하나 이상 포함될 수 있습니다. 이러한 시그니처는 매개 변수와 반환 값을 지정하지만 구현(메서드 본문)이 없습니다. 추상 클래스는 추상 멤버를 포함하지 않아도 됩니다. 그러나 클래스에 추상 멤버가 포함되지 않은 경우 클래스 자체를 abstract로 선언해야 합니다. 그 자체가 추상이 아닌 파생 클래스는 추상 기본 클래스의 모든 추상 멤버에 대한 구현을 제공해야 합니다. 자세한 내용은 [Abstract 및 Sealed 클래스와 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)를 참조하세요.  
+ [new](../../../csharp/language-reference/operators/new-operator.md) 연산자를 사용한 직접 인스턴스화를 방지하려는 경우 클래스를 [abstract](../../../csharp/language-reference/keywords/abstract.md)로 선언할 수 있습니다. 이 작업을 수행하면 해당 클래스에서 새 클래스가 파생된 경우에만 클래스를 사용할 수 있습니다. 추상 클래스에는 그 자체가 abstract로 선언된 메서드 시그니처가 하나 이상 포함될 수 있습니다. 이러한 시그니처는 매개 변수와 반환 값을 지정하지만 구현(메서드 본문)이 없습니다. 추상 클래스는 추상 멤버를 포함하지 않아도 됩니다. 그러나 클래스에 추상 멤버가 포함되지 않은 경우 클래스 자체를 abstract로 선언해야 합니다. 그 자체가 추상이 아닌 파생 클래스는 추상 기본 클래스의 모든 추상 멤버에 대한 구현을 제공해야 합니다. 자세한 내용은 [Abstract 및 Sealed 클래스와 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)를 참조하세요.  
   
 ## <a name="interfaces"></a>인터페이스  
  *인터페이스*는 추상 멤버로만 구성된 추상 기본 클래스와 비슷한 참조 형식입니다. 클래스에서 인터페이스를 구현하는 경우 인터페이스의 모든 멤버에 대해 구현을 제공해야 합니다. 하나의 직접 기본 클래스에서만 파생할 수 있는 경우에도 클래스에서 여러 인터페이스를 구현할 수 있습니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "58125917"
  클래스는 자신이나 멤버를 [sealed](../../../csharp/language-reference/keywords/sealed.md)로 선언하여 다른 클래스가 해당 클래스나 멤버에서 상속할 수 없도록 차단할 수 있습니다. 자세한 내용은 [추상 및 봉인 클래스와 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)를 참조하세요.  
   
 ## <a name="derived-class-hiding-of-base-class-members"></a>파생 클래스의 기본 클래스 멤버 숨기기  
- 파생 클래스는 동일한 이름과 시그니처로 멤버를 선언하여 기본 클래스 멤버를 숨길 수 있습니다. [new](../../../csharp/language-reference/keywords/new.md) 한정자를 사용하여 멤버가 기본 멤버를 재정의하지 않음을 명시적으로 나타내는 데 사용할 수 있습니다. [new](../../../csharp/language-reference/keywords/new.md) 사용은 필수가 아니지만 [new](../../../csharp/language-reference/keywords/new.md)를 사용하지 않을 경우 컴파일러 경고가 생성됩니다. 자세한 내용은 [Override 및 New 키워드를 사용하여 버전 관리](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) 및 [Override 및 New 키워드를 사용해야 하는 경우](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)를 참조하세요.  
+ 파생 클래스는 동일한 이름과 시그니처로 멤버를 선언하여 기본 클래스 멤버를 숨길 수 있습니다. [new](../../../csharp/language-reference/keywords/new-modifier.md) 한정자를 사용하여 멤버가 기본 멤버를 재정의하지 않음을 명시적으로 나타내는 데 사용할 수 있습니다. [new](../../../csharp/language-reference/keywords/new-modifier.md) 사용은 필수가 아니지만 [new](../../../csharp/language-reference/keywords/new-modifier.md)를 사용하지 않을 경우 컴파일러 경고가 생성됩니다. 자세한 내용은 [Override 및 New 키워드를 사용하여 버전 관리](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) 및 [Override 및 New 키워드를 사용해야 하는 경우](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 

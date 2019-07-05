@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: f3bbb55ec65df1af776779682d307a67034e34b3
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 5862506960ae1e763baebee5d990df83f92cc784
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489906"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539732"
 ---
 # <a name="null-comparisons"></a>null 비교
-데이터 소스의 `null` 값은 값을 알 수 없음을 나타냅니다. [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 쿼리에서는 특정 계산이나 비교가 유효한 데이터 또는 Null이 아닌 데이터를 가진 행에서만 수행되도록 Null 값을 확인할 수 있습니다. 그러나 CLR Null 의미 체계는 데이터 소스의 Null 의미 체계와 다를 수 있습니다. 대부분의 데이터베이스는 세 개의 값으로 구성된 논리 버전을 사용하여 Null 비교를 처리합니다. 즉, Null 값에 대한 비교는 `true` 또는 `false`가 되지 않고 `unknown`이 됩니다. ANSI Null은 이렇게 구현되는 경우가 많지만 항상 그런 것은 아닙니다.  
+데이터 소스의 `null` 값은 값을 알 수 없음을 나타냅니다. Linq to Entities 쿼리에서 특정 계산 이나 비교가 유효한 지, 또는 null이 아닌 데이터가 있는 행에만 수행 되도록 null 값을 확인할 수 있습니다. 그러나 CLR Null 의미 체계는 데이터 소스의 Null 의미 체계와 다를 수 있습니다. 대부분의 데이터베이스는 세 개의 값으로 구성된 논리 버전을 사용하여 Null 비교를 처리합니다. 즉, Null 값에 대한 비교는 `true` 또는 `false`가 되지 않고 `unknown`이 됩니다. ANSI Null은 이렇게 구현되는 경우가 많지만 항상 그런 것은 아닙니다.  
   
  기본적으로 SQL Server에서 Null은 Null과 같음 비교는 Null 값을 반환합니다. 다음 예제에서는 행에에서 있는 `ShipDate` 는 null 결과 집합에서 제외 되 고 TRANSACT-SQL 문에서 0 행을 반환 합니다.  
   
@@ -44,7 +44,7 @@ WHERE h.ShipDate IS Null
  [!code-vb[DP L2E Conceptual Examples#CastResultsIsNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#castresultsisnull)]  
   
 ## <a name="passing-null-collections-to-aggregate-functions"></a>Null 컬렉션을 집계 함수에 전달  
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]지 원하는 컬렉션을 전달 하면 `IQueryable` 집계 함수, 집계 작업은 데이터베이스에서 수행 됩니다. 메모리 내에서 수행된 된 쿼리 및 데이터베이스에서 수행 된 쿼리 결과에 차이가 있을 수 있습니다. 메모리 내 쿼리를 사용 하 여 일치 하지 않는 경우 쿼리 0을 반환 합니다. 데이터베이스에서 동일한 쿼리가 `null`을 반환합니다. 경우는 `null` 값이 LINQ 집계 함수에 전달 되는, 예외가 throw 됩니다. 가능한 적용할 `null` 형식 및 null 허용 형식으로 쿼리 결과 수신 하는 형식의 속성 값을 캐스팅 합니다.  
+ LINQ to Entities 지 원하는 컬렉션을 전달 하는 경우에서 `IQueryable` 집계 함수, 집계 작업은 데이터베이스에서 수행 됩니다. 메모리 내에서 수행된 된 쿼리 및 데이터베이스에서 수행 된 쿼리 결과에 차이가 있을 수 있습니다. 메모리 내 쿼리를 사용 하 여 일치 하지 않는 경우 쿼리 0을 반환 합니다. 데이터베이스에서 동일한 쿼리가 `null`을 반환합니다. 경우는 `null` 값이 LINQ 집계 함수에 전달 되는, 예외가 throw 됩니다. 가능한 적용할 `null` 형식 및 null 허용 형식으로 쿼리 결과 수신 하는 형식의 속성 값을 캐스팅 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

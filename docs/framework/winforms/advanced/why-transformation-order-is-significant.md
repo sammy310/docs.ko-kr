@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - transformations [Windows Forms], order significance
 ms.assetid: 37d5f9dc-a5cf-4475-aa5d-34d714e808a9
-ms.openlocfilehash: 4a65e588984241affea3083810b4901266480ea4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 08927ebaa460e19e558dce22f39c13c31f0e49d0
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747461"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504912"
 ---
 # <a name="why-transformation-order-is-significant"></a>변형 순서의 중요성
 단일 <xref:System.Drawing.Drawing2D.Matrix> 개체는 단일 변환 또는 변환의 시퀀스에 저장할 수 있습니다. 후자 보다 복합 변환을 이라고 합니다. 개별 변환의 매트릭스를 곱하여 복합 변환의 매트릭스를 가져옵니다.  
   
 ## <a name="composite-transform-examples"></a>복합 변환 예제  
- 복합 변환에서 개별 변환의 순서가 중요 합니다. 예를 들어 경우 먼저 회전 다음 크기 조정, 변환, 결과 얻게 다른 보다 먼저 변환 하는 경우 다음 회전 하 고 확장 합니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], 오른쪽에서 왼쪽 복합 변환 빌드됩니다. S, R 및 T 인 경우 크기 조정, 회전 및 변환 행렬 각각 다음 제품 SRT (해당 순서 대로)은 복합 변환의 매트릭스는 첫 번째 눈금, 회전, 그런 변환 합니다. 제품에 의해 생성 되는 매트릭스 SRT TR 제품에 의해 생성 되는 매트릭스와에서 다릅니다.  
+ 복합 변환에서 개별 변환의 순서가 중요 합니다. 예를 들어 경우 먼저 회전 다음 크기 조정, 변환, 결과 얻게 다른 보다 먼저 변환 하는 경우 다음 회전 하 고 확장 합니다. GDI +에서 복합 변환 왼쪽에서 오른쪽으로 작성 됩니다. S, R 및 T 인 경우 크기 조정, 회전 및 변환 행렬 각각 다음 제품 SRT (해당 순서 대로)은 복합 변환의 매트릭스는 첫 번째 눈금, 회전, 그런 변환 합니다. 제품에 의해 생성 되는 매트릭스 SRT TR 제품에 의해 생성 되는 매트릭스와에서 다릅니다.  
   
  순서는 중요 한 이유 등 회전 및 배율 조정 변환 좌표계의 원점을 기준으로 수행 되는 경우 원점에서 이동 된 개체 크기 조정 결과 서로 다르게 생성 원점에 중점을 두는 개체를 확장 합니다. 마찬가지로, 개체를 회전 하면 원점에 중점을 두는 원본에서 이동 된 개체를 회전 다른 결과 생성 합니다.  
   

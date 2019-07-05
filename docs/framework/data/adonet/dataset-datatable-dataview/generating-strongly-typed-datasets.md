@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: 198d7f616d843a3c90b8d32cf33096ee253d2935
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 2d3dc99d78ee9ceb3e8e1cac22fc5571cc1545ba
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832731"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504100"
 ---
 # <a name="generating-strongly-typed-datasets"></a>강력한 형식의 데이터 세트 생성
 표준 XML 스키마 정의 언어 (XSD)를 준수 하는 XML 스키마에 지정 된을 생성할 수 있습니다 강력한 형식의 <xref:System.Data.DataSet> Windows 소프트웨어 개발 키트 (SDK)으로 제공 되는 XSD.exe 도구를 사용 하 여 합니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "66832731"
 xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace  
 ```  
   
- 이 구문에서은 `/d` 지시문은 생성 하는 도구를 **데이터 집합**, 및 `/l:` 도구 (예: C# 또는 Visual Basic.NET) 사용 하는 언어를 알려 줍니다. 선택적 `/eld` 지시문을 사용할 수 있는 지정 [!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)] 생성 된 쿼리 **데이터 집합입니다.** 이 옵션은 `/d` 옵션도 함께 지정한 경우에 사용합니다. 자세한 내용은 [형식화 된 데이터 집합 쿼리](../../../../../docs/framework/data/adonet/querying-typed-datasets.md)합니다. 선택적 `/n:` 지시문은 또한 네임 스페이스를 생성 하는 도구를 **데이터 집합** 호출 **XSDSchema.Namespace**합니다. 이 명령을 실행하면 XSDSchemaFileName.cs가 생성되며, 이 파일을 컴파일하여 ADO.NET 응용 프로그램에서 사용할 수 있습니다. 생성된 코드는 라이브러리나 모듈로 컴파일할 수 있습니다.  
+ 이 구문에서은 `/d` 지시문은 생성 하는 도구를 **데이터 집합**, 및 `/l:` 도구 (예: C# 또는 Visual Basic.NET) 사용 하는 언어를 알려 줍니다. 선택적 `/eld` 지시문에 대해 생성 된 쿼리를 LINQ to DataSet 사용할 수 있도록 지정 **데이터 집합입니다.** 이 옵션은 `/d` 옵션도 함께 지정한 경우에 사용합니다. 자세한 내용은 [형식화 된 데이터 집합 쿼리](../../../../../docs/framework/data/adonet/querying-typed-datasets.md)합니다. 선택적 `/n:` 지시문은 또한 네임 스페이스를 생성 하는 도구를 **데이터 집합** 호출 **XSDSchema.Namespace**합니다. 이 명령을 실행하면 XSDSchemaFileName.cs가 생성되며, 이 파일을 컴파일하여 ADO.NET 응용 프로그램에서 사용할 수 있습니다. 생성된 코드는 라이브러리나 모듈로 컴파일할 수 있습니다.  
   
  다음 코드는 생성된 코드를 C# 컴파일러(csc.exe)를 사용하여 라이브러리로 컴파일하는 구문을 보여 줍니다.  
   

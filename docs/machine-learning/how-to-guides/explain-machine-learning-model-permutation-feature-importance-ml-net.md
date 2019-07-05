@@ -5,12 +5,12 @@ ms.date: 05/02/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 51ef4b55b1518381881e57d83fd43f8ec7f786c6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 1037a1f1c21ef2c9b9a87a070a7d2003c1e76eb4
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645053"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307365"
 ---
 # <a name="explain-model-predictions-using-permutation-feature-importance"></a>순열 기능 중요도를 사용하여 예측 모델 설명
 
@@ -175,4 +175,4 @@ NearWater           |   0.000203
 PercentPopulationLivingBelowPoverty|    0.000031
 ToxicWasteLevels    |   -0.000019
 
-이 데이터 세트에 대해 가장 중요한 5개 기능을 살펴보면 이 모델이 예측한 주택 가격은 고속도로 근접성, 지역 내 교사 학생 비율, 주요 업무 지구 근접성, 재산세율, 주택 내 평균 방 수에 영향을 받습니다.
+이 데이터 세트에 가장 중요한 기능 5개를 살펴보면 이 모델이 예측한 주택 가격은 고속도로 근접성, 지역 내 학교의 학생-교사 비율, 주요 업무 지구 근접성, 재산세율, 주택의 평균 방 수의 영향을 받습니다.

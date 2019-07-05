@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: bcd7b699-4e50-4523-8c33-2f54a103d94e
-ms.openlocfilehash: 98dbb0185de88c6fd69c6daf1540e997c14cc9e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 165fb1524daa781c29037bf1c9cb2b3013504177
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641423"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539749"
 ---
 # <a name="query-results"></a>쿼리 결과
-[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 쿼리가 명령 트리로 변환되어 실행되고 나면 일반적으로 쿼리 결과가 다음 중 하나의 형태로 반환됩니다.  
+LINQ to Entities 쿼리의 명령 트리로 변환 되 고 실행을 후 쿼리 결과 다음 중 하나로 일반적으로 반환 됩니다.  
   
 - 개념적 모델에 있는 0개 이상의 형식화된 엔터티 개체 컬렉션 또는 복합 형식의 프로젝션  
   

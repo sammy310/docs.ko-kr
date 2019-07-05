@@ -5,15 +5,15 @@ helpviewer_keywords:
 - examples [Windows Forms], regions
 - regions [Windows Forms], using
 ms.assetid: 7809295b-870f-4107-a8b5-8386c298acd5
-ms.openlocfilehash: ec11b8c7d2eeb153eb4a8c8772fef24977310e13
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c881cec3aa6fd8ab528b1ae6f5b7e2920ba51f90
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791107"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505021"
 ---
 # <a name="using-regions"></a>영역 사용
-합니다 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Region> 클래스를 사용 하면 사용자 지정 셰이프를 정의할 수 있습니다. 선, 다각형 및 곡선의 모양은 가능 합니다.  
+GDI + <xref:System.Drawing.Region> 클래스를 사용 하면 사용자 지정 셰이프를 정의할 수 있습니다. 선, 다각형 및 곡선의 모양은 가능 합니다.  
   
  테스트 및 클리핑 영역에 대 한 일반적인 용도 적중 합니다. 적중 테스트에서 마우스를 화면의 특정 지역에서 클릭 여부를 결정 합니다. 클리핑은 특정 지역에 그리기 제한입니다.  
   

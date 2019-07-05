@@ -8,7 +8,7 @@
       items:
         - name: 개요
           href: keywords/index.md
-        - name: 유형
+        - name: 기본 제공 형식
           items:
             - name: 값 형식
               items:
@@ -16,8 +16,9 @@
                   href: keywords/value-types.md
                 - name: bool
                   href: keywords/bool.md
-                - name: byte
-                  href: keywords/byte.md
+                - name: 정수 숫자 형식
+                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer'
+                  href: builtin-types/integral-numeric-types.md
                 - name: char
                   href: keywords/char.md
                 - name: decimal
@@ -28,22 +29,8 @@
                   href: keywords/enum.md
                 - name: float
                   href: keywords/float.md
-                - name: int
-                  href: keywords/int.md
-                - name: long
-                  href: keywords/long.md
-                - name: sbyte
-                  href: keywords/sbyte.md
-                - name: short
-                  href: keywords/short.md
                 - name: struct
                   href: keywords/struct.md
-                - name: uint
-                  href: keywords/uint.md
-                - name: ulong
-                  href: keywords/ulong.md
-                - name: ushort
-                  href: keywords/ushort.md
             - name: 참조 형식
               items:
                 - name: 참조 형식의 기능
@@ -68,8 +55,6 @@
               items:
                 - name: 기본 제공 형식 표
                   href: keywords/built-in-types-table.md
-                - name: 정수 형식 표
-                  href: keywords/integral-types-table.md
                 - name: 부동 소수점 형식 표
                   href: keywords/floating-point-types-table.md
                 - name: 값 형식 표
@@ -118,6 +103,8 @@
               href: keywords/extern.md
             - name: in(제네릭 한정자)
               href: keywords/in-generic-modifier.md
+            - name: new(멤버 한정자)
+              href: keywords/new-modifier.md
             - name: out(제네릭 한정자)
               href: keywords/out-generic-modifier.md
             - name: override
@@ -218,20 +205,16 @@
           items:
             - name: is
               href: keywords/is.md
+        - name: 제네릭 형식 제약 조건 키워드
+          items:
+            - name: new 제약 조건
+              href: keywords/new-constraint.md
+            - name: 형식에 대한 설명
+              href: keywords/where-generic-type-constraint.md
         - name: 연산자 키워드
           items:
             - name: await
               href: keywords/await.md
-            - name: new
-              items:
-                - name: 'new 연산자, 한정자 및 제약 조건'
-                  href: keywords/new.md
-                - name: new 연산자
-                  href: keywords/new-operator.md
-                - name: new 한정자
-                  href: keywords/new-modifier.md
-                - name: new 제약 조건
-                  href: keywords/new-constraint.md
             - name: sizeof
               href: keywords/sizeof.md
             - name: nameof
@@ -280,8 +263,6 @@
               href: keywords/set.md
             - name: when(필터 조건)
               href: keywords/when.md
-            - name: where(제네릭 형식 제약 조건)
-              href: keywords/where-generic-type-constraint.md
             - name: 값
               href: keywords/value.md
             - name: yield
@@ -367,6 +348,8 @@
         - name: ':: 연산자'
           href: operators/namespace-alias-qualifer.md
           displayName: namespace alias qualifier
+        - name: new 연산자
+          href: operators/new-operator.md
         - name: stackalloc 연산자
           href: operators/stackalloc.md
         - name: true 및 false 연산자

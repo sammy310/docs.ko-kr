@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: b25de14267bc31ad0ac5e3f51d4cd964b5a0535f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 88abd0e5b7f56702c7a7009842253d3ca552d01f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607338"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504210"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>쿼리에서 DataTable 만들기(LINQ to DataSet)
 데이터 바인딩에는 일반적으로 <xref:System.Data.DataTable> 개체가 사용됩니다. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 메서드는 쿼리 결과를 받아서 나중에 데이터 바인딩에 사용할 수 있도록 데이터를 <xref:System.Data.DataTable>에 복사합니다. 데이터 작업이 수행되면 새 <xref:System.Data.DataTable>이 소스 <xref:System.Data.DataTable>에 다시 병합됩니다.  
   
  <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 메서드는 다음 프로세스를 사용하여 쿼리에서 <xref:System.Data.DataTable>을 만듭니다.  
   
-1. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 메서드는 소스 테이블(<xref:System.Data.DataTable> 인터페이스를 구현한 <xref:System.Data.DataTable> 개체)에서 <xref:System.Linq.IQueryable%601>을 복제합니다. <xref:System.Collections.IEnumerable> 소스는 일반적으로 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 식 또는 메서드 쿼리를 통해 만들어집니다.  
+1. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 메서드는 소스 테이블(<xref:System.Data.DataTable> 인터페이스를 구현한 <xref:System.Data.DataTable> 개체)에서 <xref:System.Linq.IQueryable%601>을 복제합니다. <xref:System.Collections.IEnumerable> 원본 데이터 집합 식 또는 메서드 쿼리에 linq에서 일반적으로 시작 했습니다.  
   
 2. 복제된 <xref:System.Data.DataTable>의 스키마는 소스 테이블의 첫 번째 열거된 <xref:System.Data.DataRow> 개체 열을 통해 작성되며 복제된 테이블의 이름은 소스 테이블 이름에 "query"라는 단어를 추가하여 지정됩니다.  
   

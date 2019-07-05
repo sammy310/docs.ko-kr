@@ -8,12 +8,12 @@ helpviewer_keywords:
 - private font collections [Windows Forms], creating
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
-ms.openlocfilehash: 1aa3030d9daea57bb9b8970baa78f8117a07bd1a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0bb7293a5423004a13cf98b79bba0a6c411a7c97
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624198"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505520"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>방법: 개인 글꼴 컬렉션 만들기
 합니다 <xref:System.Drawing.Text.PrivateFontCollection> 클래스에서 상속 된 <xref:System.Drawing.Text.FontCollection> 추상 기본 클래스입니다. 사용할 수는 <xref:System.Drawing.Text.PrivateFontCollection> 응용 프로그램에 맞게 글꼴 집합도 유지 관리 하는 개체입니다. 개인 글꼴 컬렉션 컴퓨터에 설치 되지 않은 글꼴 뿐만 아니라 설치 된 시스템 글꼴을 포함할 수 있습니다. 글꼴 파일을 개인 글꼴 컬렉션에 추가할 호출을 <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> 메서드를 <xref:System.Drawing.Text.PrivateFontCollection> 개체입니다.  
@@ -41,9 +41,9 @@ ms.locfileid: "64624198"
   
  ![다양 한 글꼴의 텍스트를 보여 주는 스크린샷.](./media/how-to-create-a-private-font-collection/various-fonts-text-output.png)  
   
- (다음 코드 예제에서 개인 글꼴 컬렉션에 추가 된)는 Arial.tff에 Arial 보통 스타일에 대 한 글꼴 파일입니다. 그러나는 프로그램 출력 Arial 글꼴 패밀리에 대 한 일반 이외의 여러 사용 가능한 스타일을 보여 줍니다. 있기 때문입니다 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 일반 스타일에서 굵게, 기울임꼴 및 굵은 기울임꼴 스타일을 시뮬레이션할 수 있습니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 일반 스타일에서 밑줄과 만들 수 있습니다.  
+ (다음 코드 예제에서 개인 글꼴 컬렉션에 추가 된)는 Arial.tff에 Arial 보통 스타일에 대 한 글꼴 파일입니다. 그러나는 프로그램 출력 Arial 글꼴 패밀리에 대 한 일반 이외의 여러 사용 가능한 스타일을 보여 줍니다. 이것은 GDI + 일반 스타일에서 굵게, 기울임꼴 및 굵은 기울임꼴 스타일을 시뮬레이션할 수 있습니다. GDI + 일반 스타일에서 밑줄과 만들 수 있습니다.  
   
- 마찬가지로, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 를 굵게 또는 기울임꼴 스타일에서 굵게 기울임꼴 스타일을 시뮬레이션할 수 있습니다. 굵은 기울임꼴 스타일 되 번 제품군에 사용할 수 있는 유일한 TimesBd.tff (Times New Roman 굵게 표시 된) 경우에 프로그램 출력에 표시 컬렉션에 있는 파일입니다.  
+ 마찬가지로, GDI + 시뮬레이트하는 굵게 또는 기울임꼴 스타일에서 굵게 기울임꼴 스타일입니다. 굵은 기울임꼴 스타일 되 번 제품군에 사용할 수 있는 유일한 TimesBd.tff (Times New Roman 굵게 표시 된) 경우에 프로그램 출력에 표시 컬렉션에 있는 파일입니다.  
   
  [!code-csharp[System.Drawing.FontsAndText#51](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#51)]
  [!code-vb[System.Drawing.FontsAndText#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#51)]  

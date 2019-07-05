@@ -1,7 +1,7 @@
 ---
 title: .NET Framework에서 내게 필요한 옵션의 새로운 기능
 ms.custom: updateeachrelease
-ms.date: 04/10/2018
+ms.date: 04/18/2019
 dev_langs:
 - csharp
 - vb
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59fe1a5492b34d2aef88e81b86307498e3a5dc2c
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 19d9752e1c7cfbc0a7c85e7cf8053c09c5baca7a
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612292"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425573"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework에서 내게 필요한 옵션의 새로운 기능
 
@@ -28,6 +28,7 @@ ms.locfileid: "59612292"
 |---|---|
 |.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
 |.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
+|.NET Framework 4.8|"Switch.UseLegacyAccessibilityFeatures.3"|
 
 ### <a name="taking-advantage-of-accessibility-enhancements"></a>내게 필요한 옵션 개선 사항 활용
 
@@ -49,9 +50,18 @@ ms.locfileid: "59612292"
 </runtime>
 ```
 
+.NET Framework 4.7.1 및 4.7.2 및 4.8에서 내게 필요한 옵션 개선 사항을 활용하도록 앱을 구성하려면 다음 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소가 필요합니다.
+
+```xml
+<runtime>
+    <!-- AppContextSwitchOverrides value attribute is in the form of 'key1=true|false;key2=true|false  -->
+    <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;Switch.UseLegacyAccessibilityFeatures.3=false" />
+</runtime>
+```
+
 ### <a name="restoring-legacy-behavior"></a>레거시 동작 복원
 
-4.7.1부터 시작하는 .NET Framework의 버전을 대상으로 하는 애플리케이션은 애플리케이션의 구성 파일의 [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) 섹션에서 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소에 스위치를 추가하고 `true`로 해당 값을 설정하여 내게 필요한 옵션 기능을 비활성화할 수 있습니다. 예를 들어 다음 구성은 .NET Framework 4.7.2에 도입된 내게 필요한 옵션 기능을 옵트아웃합니다.
+4\.7.1부터 시작하는 .NET Framework의 버전을 대상으로 하는 애플리케이션은 애플리케이션의 구성 파일의 [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) 섹션에서 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소에 스위치를 추가하고 `true`로 해당 값을 설정하여 내게 필요한 옵션 기능을 비활성화할 수 있습니다. 예를 들어 다음 구성은 .NET Framework 4.7.2에 도입된 내게 필요한 옵션 기능을 옵트아웃합니다.
 
 ```xml
 <runtime>
@@ -60,7 +70,258 @@ ms.locfileid: "59612292"
 </runtime>
 ```
 
-## <a name="whats-new-in-accessibility-in-the-net-framework-472"></a>.NET Framework 4.7.2에서 내게 필요한 옵션의 새로운 기능
+## <a name="whats-new-in-accessibility-in-net-framework-48"></a>.NET Framework 4.8에서 내게 필요한 옵션의 새로운 기능
+
+.NET Framework 4.8에는 다음과 같은 영역의 새로운 내게 필요한 옵션 기능이 포함됩니다.
+
+- [Windows Forms](#winforms48)
+
+- [WPF(Windows Presentation Foundation)](#wpf48)
+
+- [Windows WF(Workflow Foundation) 워크플로 디자이너](#wf48)
+
+<a name="winforms48" />
+
+### <a name="windows-forms"></a>Windows Forms
+
+.NET Framework 4.8에서 Windows Forms는 자주 사용되는 많은 컨트롤에 LiveRegions 및 알림 이벤트에 대한 지원을 추가합니다. 또한 사용자가 키보드를 사용하여 컨트롤로 이동할 때 도구 설명에 대한 지원을 추가합니다.
+
+**레이블 및 StatusStrips에서 UIA LiveRegions 지원**
+
+UIA LiveRegions를 사용하면 애플리케이션 개발자는 사용자가 작업하는 위치와 별도로 위치한 컨트롤의 텍스트 변경 내용을 화면 readers에 알릴 수 있습니다. 예를 들어 연결 상태를 표시하는 <xref:System.Windows.Forms.StatusStrip> 컨트롤에 유용합니다. 연결이 끊어지고 상태가 변경되면 개발자가 화면 reader에 알리기를 원할 수 있습니다.
+
+.NET Framework 4.8부터 Windows Forms는 <xref:System.Windows.Forms.Label> 및 <xref:System.Windows.Forms.StatusStrip> 컨트롤 모두에 대해 UIA LiveRegions를 구현합니다. 예를 들어 다음 코드에서는 `label1`이라는 <xref:System.Windows.Forms.Label> 컨트롤에서 LiveRegion을 사용합니다.
+
+```csharp
+public Form1()
+{
+   InitializeComponent();
+   label1.AutomationLiveSetting = AutomationLiveSetting.Polite;
+}
+
+…
+Label1.Text = “Ready!”;
+```
+
+내레이터는 사용자가 애플리케이션과 상호 작용하는 위치에 관계없이 “준비”를 알립니다.
+
+<xref:System.Windows.Forms.UserControl>을 LiveRegion으로 구현할 수 있습니다.
+
+```csharp
+using System;
+using System.Windows.Forms;
+using System.Windows.Forms.Automation;
+
+namespace WindowsFormsApplication
+{
+   public partial class UserControl1 : UserControl, IAutomationLiveRegion
+   {
+      public UserControl1()
+      {
+         InitializeComponent();
+      }
+
+      public AutomationLiveSetting AutomationLiveSetting { get; set; }
+      private AutomationLiveSetting IAutomationLiveRegion.GetLiveSetting()
+      {
+         return this.AutomationLiveSetting;
+      }
+
+      protected override void OnTextChanged(EventArgs e)
+      {
+         base.OnTextChanged(e);
+         AutomationNotifications.UiaRaiseLiveRegionChangedEvent(this.AccessibilityObject);
+      }
+   }
+}
+```
+
+**UIA 알림 이벤트**
+
+Windows 10 Fall Creators Update에 도입된 UIA 알림 이벤트를 사용하면 앱에서 UIA 이벤트를 발생시킬 수 있습니다. 이로 인해 내레이터가 UI에서 해당 컨트롤을 사용할 필요 없이 이벤트와 함께 제공하는 텍스트를 기반으로 간단히 알림을 만듭니다. 일부 시나리오에서는 앱의 액세스 가능성을 크게 개선하는 간단한 방법입니다. 시간이 오래 걸릴 수 있는 일부 프로세스의 진행 상황을 알리는 데도 유용할 수 있습니다. UIA 알림 이벤트에 대한 자세한 내용은 [데스크톱 앱이 새 UI 알림 이벤트를 활용할 수 있나요?](https://blogs.msdn.microsoft.com/winuiautomation/2017/11/08/can-your-desktop-app-leverage-the-new-uia-notification-event-in-order-to-have-narrator-say-exactly-what-your-customers-need/)를 참조하세요.
+
+다음 예제에서는 [알림 이벤트](xref:System.Windows.Forms.AccessibleObject.RaiseAutomationNotification%2A)를 발생시킵니다.
+
+```csharp
+MethodInfo raiseMethod = typeof(AccessibleObject).GetMethod("RaiseAutomationNotification");
+if (raiseMethod != null) {
+   raiseMethod.Invoke(progressBar1.AccessibilityObject, new object[3] {/*Other*/ 4, /*All*/ 2, "The progress is 50%." });
+}
+```
+
+**키보드 액세스에 대한 도구 설명**
+
+.NET Framework 4.7.2 및 이전 버전을 대상으로 하는 애플리케이션에서는 마우스 포인터를 컨트롤로 이동하여 컨트롤 [도구 설명](xref:System.Windows.Forms.ToolTip)이 팝업되도록 트리거할 수 있습니다. .NET Framework 4.8부터 키보드 사용자는 한정자 키의 유무와 상관없이 Tab 키 또는 화살표 키를 사용하여 컨트롤을 중심으로 도구 설명을 트리거할 수 있습니다. 이 특정 액세스 가능성 개선을 위해서는 [AppContext 스위치](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)가 필요합니다.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+   <startup>
+      <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.1"/>
+   </startup>
+   <runtime>
+      <!-- AppContextSwitchOverrides values are in the form of 'key1=true|false;key2=true|false  -->
+      <!-- Please note that disabling Switch.UseLegacyAccessibilityFeatures, Switch.UseLegacyAccessibilityFeatures.2 and Switch.UseLegacyAccessibilityFeatures.3 is required to disable Switch.System.Windows.Forms.UseLegacyToolTipDisplay -->
+      <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;Switch.UseLegacyAccessibilityFeatures.3=false;Switch.System.Windows.Forms.UseLegacyToolTipDisplay=false"/>
+   </runtime>
+</configuration>
+```
+
+다음 그림은 사용자가 키보드를 사용하여 단추를 선택한 경우의 도구 설명을 보여줍니다.
+
+![사용자가 키보드를 사용하여 단추를 탐색할 때 도구 설명](media/tooltip.png)
+
+<a name="wpf48" />
+
+### <a name="windows-presentation-foundation-wpf"></a>WPF(Windows Presentation Foundation)
+
+.NET Framework 4.8부터 WPF에는 여러 가지 접근성 개선 사항이 포함되어 있습니다.
+
+**화면 내레이터가 더 이상 축소되거나 숨겨긴 가시성이 있는 요소를 공지하지 않음**
+
+축소되거나 숨겨진 가시성이 있는 요소는 더 이상 화면 reader에서 공지하지 않습니다. 가시성이 <xref:System.Windows.Visibility.Collapsed?displayProperty=nameWithType> 또는 <xref:System.Windows.Visibility.Hidden?displayProperty=nameWithType>인 요소가 포함된 사용자 인터페이스는 사용자에게 공지된 경우 화면 readers에 의해 잘못 전달될 수 있습니다. .NET Framework 4.8부터 WPF는 더 이상 UIAutomation 트리의 컨트롤 뷰에 축소되거나 숨겨진 요소를 포함하지 않기 때문에 화면 readers는 이러한 요소를 더 이상 공지할 수 없습니다.
+
+**비표시기(Adorner) 기반 텍스트 선택 영역과 함께 사용할 SelectionTextBrush 속성**
+
+.NET Framework 4.7.2에서 WPF는 표시기 계층을 사용하지 않고 <xref:System.Windows.Controls.TextBox> 및 <xref:System.Windows.Controls.PasswordBox> 텍스트 선택 영역을 그리는 기능을 추가했습니다. 이 시나리오에서 선택한 텍스트의 전경색은 <xref:System.Windows.SystemColors.HighlightTextBrush?displayProperty=nameWithType>에 의해 지정되었습니다.
+
+.NET Framework 4.8은 개발자가 비표시기 기반 텍스트 선택 영역을 사용할 때 선택한 텍스트에 대한 특정 브러시를 선택할 수 있도록 하는 새 속성(`SelectionTextBrush`)을 추가합니다. 이 속성은 <xref:System.Windows.Controls.Primitives.TextBoxBase>에서 파생된 컨트롤과 비표시기 기반 텍스트 선택이 활성화된 WPF 애플리케이션의 <xref:System.Windows.Controls.PasswordBox> 컨트롤에서만 작동합니다. <xref:System.Windows.Controls.RichTextBox> 콘트롤에서는 작동하지 않습니다. 비표시기 기반 텍스트 선택 영역이 활성화되지 않은 경우 이 속성은 무시됩니다.
+
+이 속성을 사용하려면 XAML 코드에 추가하고 적절한 브러시 또는 바인딩을 사용하기만 하면 됩니다. 결과 텍스트 선택 영역은 다음과 같습니다.
+
+![사용자가 키보드를 사용하여 단추를 탐색할 때 도구 설명](media/selectiontextbrush-property.png)
+
+`SelectionBrush` 및 `SelectionTextBrush` 속성의 사용을 조합하여 적절한 것으로 간주되는 배경 및 전경색 조합을 생성할 수 있습니다.
+
+**UIAutomation ControllerFor 속성 지원**
+
+UIAutomation의 `ControllerFor` 속성은 이 속성을 지원하는 자동화 요소에 의해 조작되는 자동화 요소의 배열을 반환합니다. 이 속성은 자동 제안 접근성에 주로 사용됩니다. `ControllerFor`는 자동화 요소가 애플리케이션 UI 또는 데스크톱의 하나 이상의 세그먼트에 영향을 줄 때 사용됩니다. 그렇지 않으면 제어 작업의 영향을 UI 요소와 연결시키기가 어렵습니다. 이 기능은 컨트롤이 `ControllerFor` 속성 값을 제공하는 기능을 추가합니다.
+
+.NET Framework 4.8에는 새로운 가상 메서드인 <xref:System.Windows.Automation.Peers.AutomationPeer.GetControlledPeersCore?displayProperty=nameWithType?displayProperty=nameWithType>이 추가됩니다. `ControllerFor` 속성에 대한 값을 제공하려면 이 메서드를 재정의하고 이 <xref:System.Windows.Automation.Peers.AutomationPeer>에 의해 조작되는 컨트롤에 대해 `List<AutomationPeer>`를 반환합니다.
+
+```csharp
+public class AutoSuggestTextBox: TextBox
+{
+   protected override AutomationPeer OnCreateAutomationPeer()
+   {
+      return new AutoSuggestTextBoxAutomationPeer(this);
+   }
+
+   public ListBox SuggestionListBox;
+}
+
+internal class AutoSuggestTextBoxAutomationPeer : TextBoxAutomationPeer
+{
+   public AutoSuggestTextBoxAutomationPeer(AutoSuggestTextBox owner) : base(owner)
+   {
+   }
+
+   protected override List<AutomationPeer> GetControlledPeersCore()
+   {
+      List<AutomationPeer> controlledPeers = new List<AutomationPeer>();
+      AutoSuggestTextBox owner = Owner as AutoSuggestTextBox;
+      controlledPeers.Add(UIElementAutomationPeer.CreatePeerForElement(owner.SuggestionListBox));
+      return controlledPeers;
+   }
+}
+```
+
+**키보드 액세스에 대한 도구 설명**
+
+.NET Framework 4.7.2 및 이전 버전에서 도구 설명은 사용자가 마우스 커서를 컨트롤 위에 놓을 때만 표시됩니다. .NET Framework 4.8에서 도구 설명은 키보드 포커스뿐만 아니라 바로 가기 키를 통해서도 표시됩니다.
+
+이 기능을 사용하려면 애플리케이션이 `Switch.UseLegacyAccessibilityFeatures.3` 및 `Switch.UseLegacyToolTipDisplay`[AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 스위치를 사용하여 .NET Framework 4.8을 대상으로 하거나 옵트인해야 합니다. 다음은 샘플 애플리케이션 구성 파일입니다.
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+   <startup>
+      <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+   </startup>
+   <runtime>
+      <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;Switch.UseLegacyAccessibilityFeatures.3=false;Switch.UseLegacyToolTipDisplay=false" />
+   </runtime>
+</configuration>
+```
+
+활성화되어 컨트롤이 키보드 포커스를 받으면 도구 설명이 포함된 모든 컨트롤이 표시됩니다. 도구 설명은 시간이 경과하거나 키보드 포커스가 변경될 때 해제할 수 있습니다. 사용자가 새로운 바로 가기 키인 Ctrl + Shift + F10을 사용하여 도구 설명을 수동으로 해제할 수도 있습니다. 도구 설명이 해제되면 동일한 바로 가기 키를 사용하여 다시 표시할 수 있습니다.
+
+> [!NOTE]
+> <xref:System.Windows.Controls.Ribbon.Ribbon> 컨트롤의 [리본 도구 설명](xref:System.Windows.Controls.Ribbon.RibbonToolTip)이 키보드 포커스에 표시되지 않습니다. 바로 가기 키를 통해서만 표시됩니다.
+
+**SizeOfSet 및 PositionInSet UIAutomation 속성에 대한 지원 추가**
+
+Windows 10에는 애플리케이션에서 집합의 항목 수를 설명하는 데 사용되는 두 개의 새로운 UIAutomation 속성(`SizeOfSet` 및 `PositionInSet`)이 도입되었습니다. 그런 다음, 화면 readers와 같은 UIAutomation 클라이언트 애플리케이션은 이러한 속성에 대한 애플리케이션을 쿼리하고 애플리케이션의 UI를 정확하게 표시할 수 있습니다.
+
+.NET Framework 4.8부터 WPF 애플리케이션의 UIAutomation에 이러한 두 속성을 노출합니다. 이는 두 가지 방법으로 수행할 수 있습니다.
+
+- 종속성 속성을 사용합니다.
+
+   WPF는 두 개의 새 종속성 속성(<xref:System.Windows.Automation.AutomationProperties.SizeOfSet?displayProperty=nameWithType> 및 <xref:System.Windows.Automation.AutomationProperties.PositionInSet?displayProperty=nameWithType>)을 추가합니다. 개발자는 XAML을 사용하여 해당 값을 설정할 수 있습니다.
+
+   ```xaml
+   <Button AutomationProperties.SizeOfSet="3"
+     AutomationProperties.PositionInSet="1">Button 1</Button>
+
+   <Button AutomationProperties.SizeOfSet="3"
+     AutomationProperties.PositionInSet="2">Button 2</Button>
+
+   <Button AutomationProperties.SizeOfSet="3"
+     AutomationProperties.PositionInSet="3">Button 3</Button>
+   ```
+
+- AutomationPeer 가상 메서드를 재정의합니다.
+
+   <xref:System.Windows.Automation.Peers.AutomationPeer.GetSizeOfSetCore> 및 <xref:System.Windows.Automation.Peers.AutomationPeer.GetPositionInSetCore> 가상 메서드가 AutomationPeer 클래스에 추가되었습니다. 개발자는 다음 예제와 같이 이러한 메서드를 재정의하여 `SizeOfSet` 및 `PositionInSet`에 대한 값을 제공할 수 있습니다.
+
+   ```csharp
+   public class MyButtonAutomationPeer : ButtonAutomationPeer
+   {
+      protected override int GetSizeOfSetCore()
+      {
+         // Call into your own logic to provide a value for SizeOfSet
+         return CalculateSizeOfSet();
+      }
+
+      protected override int GetPositionInSetCore()
+      {
+         // Call into your own logic to provide a value for PositionInSet
+         return CalculatePositionInSet();
+      }
+   }
+   ```
+
+또한 <xref:System.Windows.Controls.ItemsControl> 인스턴스의 항목은 개발자의 추가 작업 없이 이러한 속성에 대한 값을 자동으로 제공합니다. <xref:System.Windows.Controls.ItemsControl>이 그룹화되면 그룹의 컬렉션이 집합으로 표시되고, 각 그룹은 별도의 집합으로 계산되며, 그룹 내의 각 항목은 해당 그룹 내에서의 위치뿐 아니라 그룹의 크기를 제공합니다. 자동 값은 가상화의 영향을 받지 않습니다. 항목이 실현되지 않더라도 여전히 집합의 전체 크기로 계산되며, 해당 형제 항목 세트의 위치에 영향을 줍니다.
+
+자동 값은 애플리케이션이 .NET Framework 4.8을 대상으로 하는 경우에만 제공됩니다. 이전 버전의 .NET Framework를 대상으로 하는 애플리케이션의 경우 다음 App.config 파일에 표시된 것처럼 `Switch.UseLegacyAccessibilityFeatures.3` [AppContext 스위치](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)를 설정할 수 있습니다.
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+   <startup>
+      <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+   </startup>
+   <runtime>
+      <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;Switch.UseLegacyAccessibilityFeatures.3=false" />
+   </runtime>
+</configuration>
+```
+
+<a name="wf48" />
+
+### <a name="windows-workflow-foundation-wf-workflow-designer"></a>Windows WF(Workflow Foundation) 워크플로 디자이너
+
+워크플로 디자이너는 .NET Framework 4.8에서 다음과 같은 변경 내용을 포함합니다.
+
+- 내레이터를 사용하는 사용자는 FlowSwitch 케이스 레이블의 개선 사항을 볼 수 있습니다.
+
+- 내레이터를 사용하는 사용자는 단추 설명의 개선 사항을 볼 수 있습니다.
+
+- 고대비 테마를 선택한 사용자는 워크플로 디자이너의 표시 유형에서 개선 사항 및 포커스 요소에 사용되는 요소와 더욱 분명한 선택 영역 상자 사이의 대조율과 같은 해당 컨트롤을 확인할 수 있습니다.
+
+애플리케이션이 .NET Framework 4.7.2 또는 이전 버전을 대상으로 하는 경우 애플리케이션 구성 파일에서 `Switch.UseLegacyAccessibilityFeatures.3` [AppContext 스위치](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)를 `false`로 설정하여 이러한 변경 내용을 선택할 수 있습니다. 자세한 내용은 이 문서의 [내게 필요한 옵션 개선 사항 활용](#taking-advantage-of-accessibility-enhancements) 섹션을 참조하세요.
+
+## <a name="whats-new-in-accessibility-in-net-framework-472"></a>.NET Framework 4.7.2에서 내게 필요한 옵션의 새로운 기능
 
 .NET Framework 4.7.2에는 다음과 같은 영역의 새로운 내게 필요한 옵션 기능이 포함됩니다.
 
@@ -134,11 +395,11 @@ NET Framework 4.7.2에서 이러한 시각적 개체는 이제 테마에서 더�
 
 **WPF 애플리케이션에서 호스트되는 WinForms 컨트롤**
 
-.NET Framework 4.7.1 이전 버전에서 WPF 애플리케이션에서 호스트되는 WinForms 컨트롤의 경우 사용자는 해당 계층의 첫 번째 또는 마지막 컨트롤이 WPF <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤인 경우 WinForms 계층을 탭아웃할 수 없습니다. .NET Framework 4.7.2에서 사용자는 이제 WinForms 계층을 탭아웃할 수 있습니다.
+.NET Framework 4.7.1 이전 버전의 WPF 애플리케이션에서 호스팅되는 WinForms 컨트롤의 경우 사용자는 해당 계층의 첫 번째 또는 마지막 컨트롤이 WPF <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤이면 WinForms 계층을 탭아웃할 수 없습니다. .NET Framework 4.7.2에서 사용자는 이제 WinForms 계층을 탭아웃할 수 있습니다.
 
 그러나 WinForms 계층을 이스케이프하지 않는 포커스를 사용하는 자동화된 애플리케이션은 더 이상 예상대로 작동하지 않을 수 있습니다.
 
-## <a name="whats-new-in-accessibility-in-the-net-framework-471"></a>.NET Framework 4.7.1에서 내게 필요한 옵션의 새로운 기능
+## <a name="whats-new-in-accessibility-in-net-framework-471"></a>.NET Framework 4.7.1에서 내게 필요한 옵션의 새로운 기능
 
 .NET Framework 4.7.1에는 다음과 같은 영역의 새로운 내게 필요한 옵션 기능이 포함됩니다.
 
@@ -160,11 +421,11 @@ NET Framework 4.7.2에서 이러한 시각적 개체는 이제 테마에서 더�
 
 내게 필요한 옵션 개선 사항이 활성화된 경우 .NET Framework 4.7.1에는 화면 판독기에 영향을 주는 다음과 같은 향상 기능이 포함되어 있습니다.
 
-- .NET Framework 4.7 이전 버전에서 <xref:System.Windows.Controls.Expander> 컨트롤은 단추로 화면 판독기에서 공지되었습니다. .NET Framework 4.7.1부터 확장/축소 가능한 그룹으로 올바르게 공지됩니다.
+- .NET Framework 4.7 이전 버전에서 <xref:System.Windows.Controls.Expander> 컨트롤은 단추로 화면 readers에서 공지되었습니다. .NET Framework 4.7.1부터 확장/축소 가능한 그룹으로 올바르게 공지됩니다.
 
-- .NET Framework 4.7 이전 버전에서 <xref:System.Windows.Controls.DataGridCell> 컨트롤은 “사용자 지정”으로 화면 판독기에서 공지되었습니다. .NET Framework 4.7.1부터 이제 데이터 표 셸(지역화된)로 올바르게 공지됩니다.
+- .NET Framework 4.7 이전 버전에서 <xref:System.Windows.Controls.DataGridCell> 컨트롤은 “사용자 지정”으로 화면 readers에서 공지되었습니다. .NET Framework 4.7.1부터 이제 데이터 표 셸(지역화된)로 올바르게 공지됩니다.
 
-- .NET Framework 4.7.1부터 화면 판독기는 편집 가능한 <xref:System.Windows.Controls.ComboBox>의 이름을 공지합니다.
+- .NET Framework 4.7.1부터 화면 readers는 편집 가능한 <xref:System.Windows.Controls.ComboBox>의 이름을 공지합니다.
 
 - .NET Framework 4.7 이전 버전에서 <xref:System.Windows.Controls.PasswordBox> 컨트롤은 "보기에 항목 없음"으로 공지되었거나 그렇지 않은 경우 잘못된 동작이 있었습니다. 이 문제는 .NET Framework 4.7.1부터 수정되었습니다.
 

@@ -4,12 +4,12 @@ description: 이 자습서에서는 웹 사이트 주석에서 감정을 분류�
 ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 674dc2d12cb8f65753730e187e13fc5e522ff6b3
-ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
+ms.openlocfilehash: a766d95c62fd3a89e3291e1ab803f5222fac46ea
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67135699"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306177"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>자습서: ML.NET에서 이진 분류를 사용하여 웹 사이트 주석의 감정 분석
 
@@ -41,7 +41,7 @@ ms.locfileid: "67135699"
 
 3. **Microsoft.ML NuGet 패키지**를 설치합니다.
 
-    솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. 패키지 소스로 "nuget.org"를 선택하고 **찾아보기** 탭을 선택합니다. **Microsoft.ML**을 검색하고 원하는 패키지를 선택한 다음, **설치** 단추를 선택합니다. 선택한 패키지에 대한 사용 조건에 동의하여 설치를 진행합니다. **Microsoft.ML.FastTree** NuGet 패키지에 대해 동일한 작업을 수행합니다.
+    솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. 패키지 소스로 "nuget.org"를 선택하고 **찾아보기** 탭을 선택합니다. **Microsoft.ML**을 검색하고 원하는 패키지를 선택한 다음, **설치** 단추를 선택합니다. 선택한 패키지의 사용 조건에 동의하여 설치를 진행합니다. **Microsoft.ML.FastTree** NuGet 패키지에 대해 동일한 작업을 수행합니다.
 
 ## <a name="prepare-your-data"></a>데이터 준비
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2811674ad8d870062e3a0c67dbd21e6550f6c48d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d69de3265fa0954f640c8a2f08ba85c106320f3e
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655673"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506219"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Windows Forms 애플리케이션에 대한 양방향 지원
 Visual Studio를 사용 하 여 아랍어 및 히브리어와 같은 양방향 (오른쪽에서 왼쪽) 언어를 지 원하는 Windows 기반 응용 프로그램을 만들 수 있습니다. 여기에는 표준 폼, 대화 상자, MDI 폼 및 이러한 폼에서 사용할 수 있는 모든 컨트롤(즉, <xref:System.Windows.Forms.Control> 네임스페이스의 모든 개체)이 포함됩니다.  
@@ -82,7 +82,7 @@ Visual Studio를 사용 하 여 아랍어 및 히브리어와 같은 양방향 (
  Windows Forms는 유니코드를 지원하므로 양방향 애플리케이션을 만들 때 모든 문자 집합을 포함할 수 있습니다. 그러나 모든 Windows Forms 컨트롤이 모든 플랫폼에서 유니코드를 지원하는 것은 아닙니다. 자세한 내용은 [인코딩 및 Windows Forms 전역화](encoding-and-windows-forms-globalization.md)를 참조하세요.  
   
 ## <a name="gdi"></a>GDI+  
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]를 사용하여 오른쪽에서 왼쪽 읽기 순서로 텍스트를 그릴 수 있습니다. 텍스트를 그리는 데 사용되는 <xref:System.Drawing.Graphics.DrawString%2A> 메서드는 텍스트의 원점을 반대로 바꾸기 위해 <xref:System.Drawing.StringFormatFlags> 열거형의 <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> 멤버로 설정할 수 있는 `StringFormat` 매개 변수를 지원합니다.  
+ GDI + 하 여 오른쪽에서 왼쪽 읽기 순서를 사용 하 여 텍스트를 그립니다. 텍스트를 그리는 데 사용되는 <xref:System.Drawing.Graphics.DrawString%2A> 메서드는 텍스트의 원점을 반대로 바꾸기 위해 <xref:System.Drawing.StringFormatFlags> 열거형의 <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> 멤버로 설정할 수 있는 `StringFormat` 매개 변수를 지원합니다.  
   
 ## <a name="common-dialog-boxes"></a>일반 대화 상자  
  파일 열기 대화 상자와 같은 시스템 도구는 Windows에 의해 제어됩니다. 이러한 도구는 운영 체제에서 언어 요소를 상속합니다. 올바른 언어 설정으로 Windows 버전을 사용하는 경우 이러한 대화 상자가 양방향 언어에서 제대로 작동합니다.  

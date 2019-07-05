@@ -6,12 +6,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], painting
 - user controls [Windows Forms], painting
 ms.assetid: a09dbf76-0966-4cbf-a66a-2083ba98e068
-ms.openlocfilehash: ec9002ffa4a7e2c82f59d52344764a01afe4c568
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 14abac5678bfffa3cdb61307fd3cb54681c82a99
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011486"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506091"
 ---
 # <a name="custom-control-painting-and-rendering"></a>사용자 지정 컨트롤 그리기 및 렌더링
 컨트롤 그리기 사용자 지정.NET Framework로 쉽게 수행할 수 있는 여러 복잡 한 작업 중 하나입니다. 사용자 지정 컨트롤을 작성할 때 컨트롤의 그래픽 모양에 대 한 여러 옵션이 있습니다. 상속 되는 컨트롤을 작성 하는 경우는 `Control`, 컨트롤의 그래픽 표현을 렌더링할 수 있도록 코드를 제공 해야 합니다. 상속 하 여 사용자 정의 컨트롤을 만드는 경우는 `UserControl`, 상속 되는지 또는 Windows Forms 컨트롤 중 하나에서 표준 그래픽 표시를 재정의 하 고 수 있습니다 그래픽 코드를 제공 합니다. 구성 요소 컨트롤에 대 한 사용자 지정 렌더링을 제공 하려는 경우는 `UserControl` 을 제작 하는, 옵션은 더욱 제한 되지만 광범위 한 컨트롤 및 응용 프로그램에 대 한 그래픽 기능을 계속 사용할 수 있습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "62011486"
   
 ## <a name="related-sections"></a>관련 단원  
  [방법: 그리는 데 필요한 그래픽 개체 만들기](../advanced/how-to-create-graphics-objects-for-drawing.md)  
- 소개 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Visual Studio 관점 및 제공 링크에서 자세한 정보를 그래픽 기능입니다.  
+ Visual Studio의 관점에서 GDI + 그래픽 기능을 소개 하 고 자세한 정보에 대 한 링크를 제공 합니다.  
   
  [사용자 지정 컨트롤의 종류](varieties-of-custom-controls.md)  
  작성할 수 있습니다 하는 사용자 지정 컨트롤의 종류를 설명 합니다.

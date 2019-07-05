@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: 303e46e79786ce7f062db4a1a3ffb6c321169af8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e84319c60534c3ecf154c3f58973bcc429a73842
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631295"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539819"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities에서 알려진 문제 및 고려 사항
-이 단원에서는 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 쿼리와 관련하여 알려진 문제에 대한 정보를 제공합니다.  
+이 섹션에서는 LINQ to Entities 쿼리에서 알려진된 문제에 대 한 정보를 제공 합니다.  
   
 - [LINQ 쿼리는 캐시할 수 없습니다.](#LINQQueriesThatAreNotCached)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "64631295"
   
 <a name="UnsignedIntsUnsupported"></a>   
 ## <a name="unsigned-integers-not-supported"></a>부호 없는 정수 지원되지 않음  
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]에서 부호 없는 정수가 지원되지 않으므로 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 쿼리에서 부호 없는 정수 형식을 지정할 수 없습니다. 부호 없는 정수를 지정 하는 경우는 <xref:System.ArgumentException> 다음 예와에서 같이 쿼리 식 변환 도중 예외가 throw 됩니다. 다음 예제에서는 ID 48000인 주문을 쿼리합니다.  
+ Linq to Entities 쿼리에서 부호 없는 정수를 지정 하기 때문에 지원 되지 않습니다는 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 부호 없는 정수를 지원 하지 않습니다. 부호 없는 정수를 지정 하는 경우는 <xref:System.ArgumentException> 다음 예와에서 같이 쿼리 식 변환 도중 예외가 throw 됩니다. 다음 예제에서는 ID 48000인 주문을 쿼리합니다.  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  

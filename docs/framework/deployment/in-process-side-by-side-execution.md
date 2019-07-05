@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 89dfe697f49e8144d15586cc9c1075f69d1f3a07
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: b7964b2a59c67380d7f19077c01efa0a4a636cff
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816045"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170511"
 ---
 # <a name="in-process-side-by-side-execution"></a>In-Process Side-by-Side 실행
 .NET Framework 4부터 In-Process Side-By-Side 호스팅을 사용하여 단일 프로세스에서 여러 버전의 CLR(공용 언어 런타임)을 실행할 수 있습니다. 기본적으로 관리되는 COM 구성 요소는 프로세스에 대해 로드된 .NET Framework 버전에 관계없이 빌드 시 사용된 .NET Framework 버전을 사용하여 실행됩니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "66816045"
   
      할 일: 이 시나리오에서는 수행할 작업이 없습니다. COM 구성 요소는 등록된 .NET Framework 버전과 함께 실행됩니다.  
   
-- **시나리오 2**: .NET Framework 2.0 SP1로 빌드된 관리 애플리케이션은 [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)]에서 실행하는 것이 좋지만 버전 2.0이 없는 경우 .NET Framework 4에서 실행하려고 합니다.  
+- **시나리오 2**: .NET Framework 2.0 SP1로 빌드된 관리형 애플리케이션은 .NET Framework 2.0에서 실행하는 것을 선호하지만, 버전 2.0이 없을 경우 .NET Framework 4에서 실행하려고 합니다.  
   
      설치된 .NET Framework 버전: .NET Framework 및 .NET Framework 4의 이전 버전.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "66816045"
     </configuration>  
     ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 구성 요소가 사용하도록 컴파일된 .NET Framework 버전을 사용하여 관리되는 COM 구성 요소를 실행하는 관리되지 않는 COM 호스트를 보여 줍니다.  
   
  다음 예제를 실행하려면 .NET Framework 3.5를 사용하여 다음 관리 COM 구성 요소를 컴파일하고 등록합니다. 구성 요소를 등록하려면 **프로젝트** 메뉴에서 **속성**을 클릭하고 **빌드** 탭을 클릭한 다음 **COM Interop 등록** 확인란을 선택합니다.  

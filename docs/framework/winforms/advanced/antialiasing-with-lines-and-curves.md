@@ -9,15 +9,15 @@ helpviewer_keywords:
 - antialiasing [Windows Forms], smoothing modes
 - GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
-ms.openlocfilehash: cbc9033f18f1ab255862c8f8e2891aa9b68cf8d6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 871c5cb3cd9356f677633acb04fe82021a9787c5
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961103"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506143"
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>선과 곡선의 앤티 앨리어싱
-사용 하는 경우 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 선을 그릴 시작 지점 및 끝 줄의 지점 제공 되지만 줄에 각 픽셀에 대 한 정보를 제공할 필요가 없습니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 특정 디스플레이 장치에 선을 표시 하려면 어떤 픽셀이 켜 집니다 결정할 디스플레이 드라이버 소프트웨어와 함께 작동 합니다.  
+선을 그릴 GDI +를 사용 하면 시작 지점 및 끝 줄의 지점 제공 하지만 줄에 각 픽셀에 대 한 정보를 제공할 필요가 없습니다. GDI + 특정 디스플레이 장치에 선을 표시 하려면 어떤 픽셀이 켜 집니다 결정할 디스플레이 드라이버 소프트웨어와 함께 작동 합니다.  
   
 ## <a name="aliasing"></a>별칭 지정  
  바로 빨간색 선이 (4, 2) 지점에서 점 (16, 10)으로 이동 하는 것이 좋습니다. 좌표 시스템의 왼쪽 위 모퉁이에 원점 및 측정 단위는 픽셀을 가정 합니다. 또한 해당 x 축 지점 y 축 지점과 오른쪽 아래로 가정 합니다. 다음 그림에서는 컬러 배경에 그려진 빨간색 선은의 확대 된 뷰를 보여 줍니다.  

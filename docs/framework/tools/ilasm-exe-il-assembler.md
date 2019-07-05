@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fa95755142b5ea3999cca127c868bc878da516e
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 78a601e8b2da4fda0951c1d4f7b565753f0ca03a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378577"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833897"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe(IL 어셈블러)
 
@@ -81,7 +81,7 @@ ilasm [options] filename [[options]filename...]
 > [!NOTE]
 > *Ilasm.exe*의 모든 옵션은 대/소문자가 구분되지 않으며 처음 세 문자로 인식됩니다. 예를 들어 **/lis**는 **/listing**과 같고, **/res:** myresfile.res는 **/resource:** myresfile.res와 같습니다. 인수를 지정하는 옵션에는 옵션과 인수 사이의 구분 기호로 콜론(:) 또는 등호(=) 중 하나만 사용할 수 있습니다. 예를 들어, **/output**:*file.ext*는 **/output**=*file.ext*와 같습니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 IL 어셈블러를 사용하면 도구 공급업체는 IL 생성기를 쉽게 디자인하여 구현할 수 있으며, *Ilasm.exe*를 사용하면 도구 및 컴파일러 개발자는 IL을 PE 파일 형식으로 내보내는 것에 신경 쓰지 않고 IL 및 메타데이터 생성에만 몰두할 수 있습니다.
 
@@ -104,7 +104,7 @@ IL 어셈블러를 사용하면 런타임을 대상으로 하는 프로그래밍
 > [!NOTE]
 > *Ildasm.exe*는 디스크의 파일에 대해서만 작동하며, 전역 어셈블리 캐시에 설치된 파일에 대해서는 작동하지 않습니다.
 
-IL 문법에 대한 자세한 내용은 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]에서 asmparse.grammar 파일을 참조하십시오.
+IL 문법에 대한 자세한 내용은 Windows SDK(소프트웨어 개발 키트)의 asmparse.grammar 파일을 참조하세요.
 
 ## <a name="version-information"></a>버전 정보
 
@@ -137,7 +137,7 @@ IL 문법에 대한 자세한 내용은 [!INCLUDE[winsdklong](../../../includes/
         Test(object A_1) cil managed
 ```
 
-IL 문법에 대한 자세한 내용은 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]에서 asmparse.grammar 파일을 참조하십시오.
+IL 문법에 대한 자세한 내용은 Windows SDK(소프트웨어 개발 키트)의 asmparse.grammar 파일을 참조하세요.
 
 ## <a name="examples"></a>예제
 

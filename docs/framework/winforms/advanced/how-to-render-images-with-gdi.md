@@ -9,15 +9,15 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, rendering existing images
 ms.assetid: c128b79a-3e31-47d8-9e66-3470f570a056
-ms.openlocfilehash: e038da545bb3f56cc757710bcaa93aa2c86bfa67
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: da637152737510847830e885fdcd065ab92f16b3
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967117"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505754"
 ---
 # <a name="how-to-render-images-with-gdi"></a>방법: GDI+를 사용하여 이미지 렌더링
-애플리케이션에서 파일로 존재하는 이미지를 렌더링하는 데 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]을 사용할 수 있습니다. 새 개체를 만들어이 작업을 수행는 <xref:System.Drawing.Image> 클래스 (같은 <xref:System.Drawing.Bitmap>) 만들기를 <xref:System.Drawing.Graphics> 를 사용 하려는 그리기 화면을 참조 하는 개체를 호출 합니다 <xref:System.Drawing.Graphics.DrawImage%2A> 메서드의 <xref:System.Drawing.Graphics> 개체. 이미지는 그래픽 클래스에서 표시하는 그리기 화면에 그려집니다. 이미지 편집기를 사용하여 디자인 타임에 이미지 파일을 만들고 편집하고 런타임 시 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]을 사용하여 렌더링합니다. 자세한 내용은 [아이콘에 대한 이미지 편집기](/cpp/windows/image-editor-for-icons)를 참조하세요.  
+GDI + 하 여 응용 프로그램에서 파일로 존재 하는 이미지를 렌더링 합니다. 새 개체를 만들어이 작업을 수행는 <xref:System.Drawing.Image> 클래스 (같은 <xref:System.Drawing.Bitmap>) 만들기를 <xref:System.Drawing.Graphics> 를 사용 하려는 그리기 화면을 참조 하는 개체를 호출 합니다 <xref:System.Drawing.Graphics.DrawImage%2A> 메서드의 <xref:System.Drawing.Graphics> 개체. 이미지는 그래픽 클래스에서 표시하는 그리기 화면에 그려집니다. 이미지 편집기를 사용 하 여 만들기 및 디자인 타임에 이미지 파일을 편집 하 고 런타임 시 GDI +를 사용 하 여 렌더링할 수 있습니다. 자세한 내용은 [아이콘에 대한 이미지 편집기](/cpp/windows/image-editor-for-icons)를 참조하세요.  
   
 ### <a name="to-render-an-image-with-gdi"></a>GDI+를 사용하여 이미지를 렌더링하려면  
   
