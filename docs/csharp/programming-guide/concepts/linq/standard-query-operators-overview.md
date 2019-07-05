@@ -10,7 +10,7 @@ ms.lasthandoff: 01/23/2019
 ms.locfileid: "54537961"
 ---
 # <a name="standard-query-operators-overview-c"></a>표준 쿼리 연산자 개요(C#)
-*표준 쿼리 연산자*는 LINQ 패턴을 형성하는 메서드입니다. 이 메서드 중 대부분은 시퀀스에서 작동합니다. 여기서 시퀀스란 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스 또는 <xref:System.Linq.IQueryable%601> 인터페이스를 구현하는 형식의 개체입니다. 표준 쿼리 연산자는 필터링, 프로젝션, 집계, 정렬 등을 포함하여 쿼리 기능을 제공합니다.  
+*표준 쿼리 연산자*는 LINQ 패턴을 형성하는 메서드입니다. 이 메서드 중 대부분은 시퀀스에서 작동합니다. 여기서 시퀀스란 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스 또는 <xref:System.Linq.IQueryable%601> 인터페이스를 구현하는 형식의 개체를 의미합니다. 표준 쿼리 연산자는 필터링, 프로젝션, 집계, 정렬 등을 포함하여 다양한 쿼리 기능을 제공합니다.  
   
  <xref:System.Collections.Generic.IEnumerable%601> 형식의 개체와 작동하는 연산자와 <xref:System.Linq.IQueryable%601> 형식의 개체와 작동하는 연산자로 두 가지 LINQ 표준 쿼리 연산자 집합이 있습니다. 각 집합을 구성하는 메서드는 각각 <xref:System.Linq.Enumerable> 및 <xref:System.Linq.Queryable> 클래스의 정적 멤버입니다. 작동하는 형식의 *확장 메서드*로 정의됩니다. 따라서 정적 메서드 구문 또는 인스턴스 메서드 구문을 사용하여 호출할 수 있습니다.  
   
@@ -22,7 +22,8 @@ ms.locfileid: "54537961"
   
  반면, <xref:System.Linq.IQueryable%601>을 확장하는 메서드는 쿼리 동작을 구현하지 않고 수행할 쿼리를 나타내는 식 트리를 빌드합니다. 쿼리 처리는 소스 <xref:System.Linq.IQueryable%601> 개체에 의해 처리됩니다.  
   
- 쿼리 메서드 호출을 연결하여 임의로 복잡해질 수 있는 한 쿼리로 연결될 수 있습니다.  
+ 쿼리 메서드 호출을 연결하여 임의로 복잡해질 수 있는 한 쿼리로 연결될 수 있습니다.
+
   
  다음 코드 예제에서는 표준 쿼리 연산자를 사용하여 시퀀스에 대한 정보를 가져올 수 있는 방법을 보여 줍니다.  
   
