@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 2122213e69512b06d1328272740ac4ffdc36c1eb
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 55d78ed9bf839d66b3487f91d71d7a07a2123c5f
+ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483039"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67569563"
 ---
 # <a name="working-with-certificates"></a>인증서 작업
 WCF(Windows Communication Foundation) 보안을 프로그래밍하려면 일반적으로 X.509 디지털 인증서를 사용하여 클라이언트 및 서버를 인증하고, 암호화하고, 메시지에 디지털 서명합니다. 이 항목에서는 X.509 디지털 인증서 기능과 WCF에서 인증서 기능을 사용하는 방법을 간략하게 설명하며, 이러한 개념을 자세히 설명하거나 WCF 및 인증서를 사용하여 일반 작업을 수행하는 방법을 보여 주는 항목에 대한 링크를 제공합니다.  
@@ -85,8 +85,8 @@ WCF(Windows Communication Foundation) 보안을 프로그래밍하려면 일반�
   
  사용자 지정 인증자를 만들 때 재정의할 가장 중요한 메서드는 <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> 메서드입니다. 사용자 지정 인증에 대한 예제는 [X.509 인증서 유효성 검사기](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md) 샘플을 참조하세요. 자세한 내용은 [사용자 지정 자격 증명 및 자격 증명 유효성 검사](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)를 참조하세요.  
   
-## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>인증서 체인을 만드는 Powershell New-selfsignedcertificate Cmdlet을 사용 하 여  
- New-selfsignedcertificate Powershell cmdlet는 X.509 인증서 및 키/공개/개인 키 쌍을 만듭니다. 개인 키를 디스크에 저장한 다음 새 인증서를 발급하고 서명하여 체인 인증서의 계층 구조를 시뮬레이션할 수 있습니다. Cmdlet은 서비스 개발 및 실제 배포에 대 한 인증서를 만들려면 하지 사용 해야 하는 경우 도구로 사용 하 여 위한 것입니다. WCF 서비스를 개발할 때에 New-selfsignedcertificate cmdlet 사용 하 여 신뢰 체인을 만드는 다음 단계를 사용 합니다.  
+## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>인증서 체인을 만드는 PowerShell New-selfsignedcertificate Cmdlet을 사용 하 여  
+ New-selfsignedcertificate PowerShell cmdlet는 X.509 인증서 및 키/공개/개인 키 쌍을 만듭니다. 개인 키를 디스크에 저장한 다음 새 인증서를 발급하고 서명하여 체인 인증서의 계층 구조를 시뮬레이션할 수 있습니다. Cmdlet은 서비스 개발 및 실제 배포에 대 한 인증서를 만들려면 하지 사용 해야 하는 경우 도구로 사용 하 여 위한 것입니다. WCF 서비스를 개발할 때에 New-selfsignedcertificate cmdlet 사용 하 여 신뢰 체인을 만드는 다음 단계를 사용 합니다.  
   
 #### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>New-selfsignedcertificate cmdlet 사용 하 여 신뢰 체인을 만드는  
   
