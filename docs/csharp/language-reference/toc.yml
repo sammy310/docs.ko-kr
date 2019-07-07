@@ -225,8 +225,6 @@
               href: keywords/explicit.md
             - name: implicit
               href: keywords/implicit.md
-            - name: 연산자
-              href: keywords/operator.md
         - name: 액세스 키워드
           items:
             - name: base
@@ -354,6 +352,8 @@
           href: operators/stackalloc.md
         - name: true 및 false 연산자
           href: operators/true-false-operators.md
+        - name: 연산자 오버로드
+          href: operators/operator-overloading.md
     - name: 'C# 특수 문자'
       items:
         - name: 개요
