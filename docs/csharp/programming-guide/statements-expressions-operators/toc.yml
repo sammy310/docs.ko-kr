@@ -21,8 +21,6 @@
           href: how-to-use-lambda-expressions-outside-linq.md
         - name: 무명 메서드
           href: anonymous-methods.md
-    - name: 오버로드할 수 있는 연산자
-      href: overloadable-operators.md
     - name: 변환 연산자
       items:
         - name: 변환 개요
