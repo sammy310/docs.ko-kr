@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: f4a6e6c2a63e58c40e0cca9c67b12d1f65af0d2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 697a3dff663b333ce97e05783df6b163692b5d9e
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053147"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610354"
 ---
 # <a name="wpf-architecture"></a>WPF 아키텍처
 이 항목에서는 Windows Presentation Foundation (WPF) 클래스 계층의 둘러보기를 제공합니다. 이 항목은 대부분의 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 주요 하위 시스템을 다루며 이들이 어떻게 상호 작용하는지를 설명하고, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 설계자가 선택한 몇 가지 사항에 대해서 자세히 설명합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "62053147"
   
 <a name="System_Windows_Media_Visual"></a>   
 ## <a name="systemwindowsmediavisual"></a>System.Windows.Media.Visual  
- 시스템이 정의되면 다음 단계는 화면에서 픽셀을 그리는 것입니다. <xref:System.Windows.Media.Visual> 그리기 명령과 해당 명령을 (예: 클리핑, 변환) 렌더링 하는 방법에 대 한 메타 데이터를 선택적으로 포함 된 각 시각적 개체의 트리를 빌드하기 위한 클래스를 제공 합니다. <xref:System.Windows.Media.Visual> 대부분의 기능은 비공용 있으므로 매우 간단 하 고 유연 하도록 설계 되었습니다 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 노출 보호 되는 콜백 함수에 크게 의존 합니다.  
+ 시스템이 정의되면 다음 단계는 화면에서 픽셀을 그리는 것입니다. <xref:System.Windows.Media.Visual> 그리기 명령과 해당 명령을 (예: 클리핑, 변환) 렌더링 하는 방법에 대 한 메타 데이터를 선택적으로 포함 된 각 시각적 개체의 트리를 빌드하기 위한 클래스를 제공 합니다. <xref:System.Windows.Media.Visual> 대부분의 기능은 공용 API 노출 되지 있고 보호 되는 콜백 함수에 크게 의존 하므로 매우 간단 하 고 유연 하도록 설계 되었습니다.  
   
  <xref:System.Windows.Media.Visual> 에 대 한 진입점은 실제로 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 컴퍼지션 시스템입니다. <xref:System.Windows.Media.Visual> 관리 되는 두 하위 간의 연결 지점이 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] 및 관리 되지 않는 milcore 합니다.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "62053147"
   
  도입 된 기본 정책은 <xref:System.Windows.FrameworkElement> 응용 프로그램 레이아웃에 됩니다. <xref:System.Windows.FrameworkElement> 도입 된 기본 레이아웃 계약 기반 <xref:System.Windows.UIElement> 레이아웃을 쉽게 레이아웃 작성자 속성 중심 레이아웃 의미 체계는 일관 된 집합에 대 한 "슬롯" 개념을 추가 합니다. 등의 속성 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>, <xref:System.Windows.FrameworkElement.MinWidth%2A>, 및 <xref:System.Windows.FrameworkElement.Margin%2A> (을)에서 파생 된 모든 구성 요소를 제공 <xref:System.Windows.FrameworkElement> 레이아웃 컨테이너 내의 일관 된 동작입니다.  
   
- <xref:System.Windows.FrameworkElement> 또한 쉽게 제공 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 다양 한 기능에 대 한 노출을의 핵심 계층에 있는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]합니다. 예를 들어 <xref:System.Windows.FrameworkElement> 애니메이션에 직접 액세스할 수는 <xref:System.Windows.FrameworkElement.BeginStoryboard%2A> 메서드. <xref:System.Windows.Media.Animation.Storyboard> 속성 집합에 대해 여러 애니메이션을 스크립팅할 수 있는 방법을 제공 합니다.  
+ <xref:System.Windows.FrameworkElement> 에서는 다음의 핵심 계층에 있는 여러 가지 기능에 쉽게 API 노출 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]합니다. 예를 들어 <xref:System.Windows.FrameworkElement> 애니메이션에 직접 액세스할 수는 <xref:System.Windows.FrameworkElement.BeginStoryboard%2A> 메서드. <xref:System.Windows.Media.Animation.Storyboard> 속성 집합에 대해 여러 애니메이션을 스크립팅할 수 있는 방법을 제공 합니다.  
   
  가장 중요 한 두 가지는 <xref:System.Windows.FrameworkElement> 소개은 데이터 바인딩 및 스타일.  
   

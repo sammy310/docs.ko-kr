@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: f82fd9803512dbd2466c4d0b49142e2c553d578a
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 2090c58369ed3c7bda5df1342291001d9550d48d
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380225"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610464"
 ---
 # <a name="printing-overview"></a>인쇄 개요
 Microsoft.NET Framework를 사용 하 여 Windows Presentation Foundation (WPF)를 사용 하 여 응용 프로그램 개발자는 새로운 풍부한 인쇄 및 인쇄 시스템 관리 Api. [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]에서는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램을 만드는 개발자와 비관리 코드를 사용하는 개발자도 이러한 인쇄 시스템 향상 기능을 일부 사용할 수 있습니다. 이 새로운 기능의 핵심은 새 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 파일 형식과 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 인쇄 경로입니다.  
@@ -31,7 +31,7 @@ Microsoft.NET Framework를 사용 하 여 Windows Presentation Foundation (WPF)�
 ## <a name="about-xps"></a>XPS 정보  
  XPS는 전자 문서 형식, 스풀 파일 형식 및 페이지 설명 언어입니다. [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], [!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)] 및 기타 산업 표준을 사용하여 플랫폼 간 문서를 만드는 공개 문서 형식입니다. XPS는 디지털 문서, 공유, 인쇄, 보고, 만들어지고 보관 프로세스를 간소화 합니다. 참조 추가 대 한 내용은 XPS [XPS 문서](/windows/desktop/printdocs/documents)합니다.  
   
- 인쇄 XPS 기반 콘텐츠를 사용 하 여에 대 한 몇 가지 기법 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 에서 보여 [프로그래밍 방식으로 XPS 파일 인쇄](how-to-programmatically-print-xps-files.md)합니다. 이 항목에 포함된 내용을 검토하는 동안 이러한 예제를 참조하는 것이 유용할 수도 있습니다. (비관리 코드 개발자에 대 한 설명서를 참조 해야 합니다 [MXDC_ESCAPE 함수](/windows/desktop/printdocs/mxdc-escape)합니다. Windows Forms 개발자 사용 해야 합니다는 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 에 <xref:System.Drawing.Printing> 전체를 지원 하지 않는 네임 스페이스 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 하이브리드 GDI-XPS 인쇄 경로 지원 하지 않지만 인쇄 경로입니다. 아래의 **인쇄 경로 아키텍처**를 참조하세요.  
+ 인쇄 XPS 기반 콘텐츠를 사용 하 여에 대 한 몇 가지 기법 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 에서 보여 [프로그래밍 방식으로 XPS 파일 인쇄](how-to-programmatically-print-xps-files.md)합니다. 이 항목에 포함된 내용을 검토하는 동안 이러한 예제를 참조하는 것이 유용할 수도 있습니다. (비관리 코드 개발자에 대 한 설명서를 참조 해야 합니다 [MXDC_ESCAPE 함수](/windows/desktop/printdocs/mxdc-escape)합니다. Windows Forms 개발자의 API를 사용 해야 합니다 <xref:System.Drawing.Printing> 전체를 지원 하지 않는 네임 스페이스 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 하이브리드 GDI-XPS 인쇄 경로 지원 하지 않지만 인쇄 경로입니다. 아래의 **인쇄 경로 아키텍처**를 참조하세요.  
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>XPS 인쇄 경로  
@@ -51,7 +51,7 @@ Microsoft.NET Framework를 사용 하 여 Windows Presentation Foundation (WPF)�
   
 - 업계 표준 XPS 형식입니다.  
   
- 기본 인쇄 시나리오에서는 사용자 인터페이스, 구성 및 작업 제출을 위한 단일 진입점으로 간단하고 직관적인 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]를 사용할 수 있습니다. 고급 시나리오에서는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 사용자 지정(또는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 없음), 동기 또는 비동기 인쇄 및 일괄 처리 인쇄 기능을 위한 추가 지원이 추가됩니다. 두 옵션 모두 완전 신뢰 또는 부분 신뢰 모드로 인쇄 지원을 제공합니다.  
+ 기본 인쇄 시나리오에서는 간단 하 고 직관적인 API 사용자 인터페이스, 구성 및 작업 제출 위한 단일 진입점을 사용 하 여 제공 됩니다. 고급 시나리오에서는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 사용자 지정(또는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 없음), 동기 또는 비동기 인쇄 및 일괄 처리 인쇄 기능을 위한 추가 지원이 추가됩니다. 두 옵션 모두 완전 신뢰 또는 부분 신뢰 모드로 인쇄 지원을 제공합니다.  
   
  XPS는 확장성을 염두에서에 두고 설계 되었습니다. 확장성 프레임 워크를 사용 하 여 기능과 모듈 방식으로 xps 추가할 수 있습니다. 확장성 기능은 다음과 같습니다.  
   
@@ -75,7 +75,7 @@ Microsoft.NET Framework를 사용 하 여 Windows Presentation Foundation (WPF)�
  합니다 <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> 컨트롤에 대 한 단일 진입점을 제공 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], 구성 및 XPS 작업을 제출 합니다. 컨트롤을 인스턴스화하고 사용하는 방법에 대한 자세한 내용은 [인쇄 대화 상자 호출](how-to-invoke-a-print-dialog.md)을 참조하세요.  
   
 ### <a name="advanced-xps-printing"></a>고급 XPS 인쇄  
- XPS의 전체 집합에 액세스 하려면 기능, 고급 인쇄 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 사용 해야 합니다. 아래에서는 여러 관련 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]에 대해 자세히 설명합니다. 전체 목록은 XPS 인쇄 경로 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]를 참조 합니다 <xref:System.Windows.Xps> 및 <xref:System.Printing> 네임 스페이스 참조 합니다.  
+ XPS 기능의 전체 집합에 액세스 하려면 고급 인쇄 API는 사용 해야 합니다. 여러 관련 API는 아래에 자세히 설명 되어 있습니다. 전체 목록은 XPS 인쇄 경로 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]를 참조 합니다 <xref:System.Windows.Xps> 및 <xref:System.Printing> 네임 스페이스 참조 합니다.  
   
 #### <a name="printticket-and-printcapabilities"></a>PrintTicket 및 PrintCapabilities  
  합니다 <xref:System.Printing.PrintTicket> 고 <xref:System.Printing.PrintCapabilities> 클래스 고급 XPS 기능의 기반이 됩니다. 두 유형의 개체는 모두 데이터 정렬, 양면 인쇄, 스테이플링 등과 같은 인쇄 지향 기능의 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 형식 구조체입니다. 이러한 구조체는 인쇄 스키마에서 정의됩니다. <xref:System.Printing.PrintTicket>은 인쇄 작업을 처리하는 방법을 프린터에 지시합니다. <xref:System.Printing.PrintCapabilities> 클래스는 프린터 기능을 정의합니다. 프린터 기능 쿼리를 통해 프린터에서 지원하는 기능을 완전히 활용하는 <xref:System.Printing.PrintTicket>을 만들 수 있습니다. 마찬가지로, 지원되지 않는 기능을 방지할 수 있습니다.  

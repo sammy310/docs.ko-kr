@@ -10,12 +10,12 @@ helpviewer_keywords:
 - elements [WPF], initializing
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
-ms.openlocfilehash: 6f3c8611b83977431038573eb1c5c880acbefdc4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b0032492a9403660e91980f5e968b519a4306589
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62001470"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610489"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>개체 트리에 없는 개체 요소 초기화
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 초기화의 몇 가지 측면은 일반적으로 논리적 트리 또는 시각적 트리에 연결되는 요소에 의존하는 프로세스로 지연됩니다. 이 항목에서는 두 트리에 연결되지 않는 요소를 초기화하기 위해 필요할 수 있는 단계를 설명합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "62001470"
  요소에서 속성을 설정 된 경우는 <xref:System.Windows.FrameworkElement> 또는 <xref:System.Windows.FrameworkContentElement> 파생 클래스의 클래스 버전을 호출할 수 있습니다 <xref:System.Windows.FrameworkElement.BeginInit%2A> 하 고 <xref:System.Windows.FrameworkElement.EndInit%2A> 캐스팅 하는 대신 <xref:System.ComponentModel.ISupportInitialize>합니다.  
   
 ### <a name="sample-code"></a>샘플 코드  
- 다음 예제는 렌더링을 사용 하는 콘솔 응용 프로그램에 대 한 샘플 코드 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 및 <xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29?displayProperty=nameWithType> 의 느슨한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 적절 한 위치를 설명 하기 위해 파일 <xref:System.Windows.FrameworkElement.BeginInit%2A> 및 <xref:System.Windows.FrameworkElement.EndInit%2A> 주위 다른 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 호출 렌더링에 영향을 주는 속성을 조정 합니다.  
+ 다음 예제는 렌더링을 사용 하는 콘솔 응용 프로그램에 대 한 샘플 코드 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 하 고 <xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29?displayProperty=nameWithType> 의 느슨한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 의 적절 한 위치를 설명 하기 위해 파일 <xref:System.Windows.FrameworkElement.BeginInit%2A> 및 <xref:System.Windows.FrameworkElement.EndInit%2A> 조정 하는 다른 API 호출 렌더링에 영향을 주는 속성입니다.  
   
  이 예제는 main 함수만 보여 줍니다. 함수 `Rasterize` 및 `Save`(표시되지 않음)는 이미지 처리 및 IO를 처리하는 유틸리티 함수입니다.  
   

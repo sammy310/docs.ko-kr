@@ -2,12 +2,12 @@
 title: 참조
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: a874cb659bc8701d7f894617d4e1db25f949fbcd
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 659bd64fe06e2de7bd9dd8e929faa5d0353a5b58
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881320"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610574"
 ---
 # <a name="reference"></a>참조
 이 단원에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개발자를 위한 참조 정보를 제공합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "65881320"
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에 관련된 일반적인 질문에 대한 대답을 제공합니다.  
   
  [SQL Server Compact 및 LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-server-compact-and-linq-to-sql.md)  
- 에 대해 설명 하는 방법 [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] SQL server에서 다른 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 응용 프로그램입니다.  
+ SQL server에서 SQL Server Compact 3.5 어떻게 다른 지 설명 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 응용 프로그램입니다.  
   
  [표준 쿼리 연산자 변환](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 표준 쿼리 연산자를 SQL 명령으로 변환하는 방법에 대해 설명합니다.  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: 7712ed02d20d692842267464a645bfc93ca8fd73
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 326900087f755b6c92d9ebb77dad36e5880fd2c0
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063887"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610434"
 ---
 # <a name="routed-events-overview"></a>라우트된 이벤트 개요
 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 라우트된 이벤트의 개념을 설명합니다. 이 항목에서는 라우트된 이벤트 용어를 정의하고, 라우트된 이벤트가 요소 트리를 통해 라우트되는 방식을 설명하고, 라우트된 이벤트를 처리하는 방법을 요약하고, 자체 사용자 지정 라우트된 이벤트를 만드는 방법을 소개합니다.
@@ -98,7 +98,7 @@ ms.locfileid: "65063887"
   
  공통 루트에서 공통 처리기 정의, 자체 컨트롤 합치기 또는 자체 사용자 지정 컨트롤 클래스 정의와 같은 제안된 시나리오를 사용할 경우 라우트된 이벤트가 강력해집니다.  
   
- 라우트된 이벤트 수신기와 라우트된 이벤트 소스는 계층 구조에서 공통 이벤트를 공유할 필요가 없습니다. 모든 <xref:System.Windows.UIElement> 또는 <xref:System.Windows.ContentElement> 라우트된 이벤트에 대 한 이벤트 수신기 일 수 있습니다. 따라서 애플리케이션의 서로 다른 요소가 이벤트 정보를 교환하는 데 사용되는 개념적 “인터페이스”로 설정된 전체 작업 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]에서 사용 가능한 전체 라우트된 이벤트 집합을 사용할 수 있습니다. 라우트된 이벤트에 대한 이 “인터페이스” 개념은 특히 입력 이벤트에 적합합니다.  
+ 라우트된 이벤트 수신기와 라우트된 이벤트 소스는 계층 구조에서 공통 이벤트를 공유할 필요가 없습니다. 모든 <xref:System.Windows.UIElement> 또는 <xref:System.Windows.ContentElement> 라우트된 이벤트에 대 한 이벤트 수신기 일 수 있습니다. 따라서 응용 프로그램의 서로 다른 요소가 이벤트 정보를 교환 가능해 집니다 "인터페이스"의 개념으로 설정 하는 작업 API를 통해 사용할 수 있는 라우트된 이벤트의 전체 집합을 사용할 수 있습니다. 라우트된 이벤트에 대한 이 “인터페이스” 개념은 특히 입력 이벤트에 적합합니다.  
   
  이벤트에 대한 이벤트 데이터는 경로의 각 요소에 대해 지속되기 때문에 라우트된 이벤트는 요소 트리를 통해 통신하는 데도 사용될 수 있습니다. 하나의 요소가 이벤트 데이터의 무엇인가를 변경할 수 있고 해당 변경은 경로의 다음 요소에 사용할 수 있습니다.  
   

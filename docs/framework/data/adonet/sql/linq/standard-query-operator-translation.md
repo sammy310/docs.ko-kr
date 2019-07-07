@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: 280557a5098c513111557f52d835b20d9a2eeb62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab93a5bae3c83bcce8fa46800ef759d8a2a7f858
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876887"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610561"
 ---
 # <a name="standard-query-operator-translation"></a>표준 쿼리 연산자 변환
 
@@ -198,7 +198,7 @@ C# 캐스트는 프로젝션에서만 지원됩니다. 다른 위치에 사용�
 
 ## <a name="sql-server-2000-support"></a>SQL Server 2000 지원
 
-[!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]와 달리 다음과 같은 [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)] 제한 사항이 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 지원에 적용됩니다.
+다음 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] 제한 사항 (Microsoft SQL Server 2005에 비해)에 영향을 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 지원 합니다.
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Cross Apply 및 Outer Apply 연산자
 
@@ -208,7 +208,7 @@ C# 캐스트는 프로젝션에서만 지원됩니다. 다른 위치에 사용�
 
 ### <a name="text--ntext"></a>text/ntext
 
-데이터 형식 `text`  /  `ntext` 에 대 한 특정 쿼리 작업에 사용할 수 없습니다 `varchar(max)`  /  `nvarchar(max)`을에서 지원 되는 [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)]합니다.
+데이터 형식 `text`  /  `ntext` 에 대 한 특정 쿼리 작업에 사용할 수 없습니다 `varchar(max)`  /  `nvarchar(max)`, Microsoft SQL Server 2005에서 지원 되는 합니다.
 
 이 제한에 대한 해결 방법은 없습니다. 특히 `Distinct()` 또는 `text` 열에 매핑된 멤버가 들어 있는 결과에서는 `ntext`를 사용할 수 없습니다.
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 05ba633415f782d5edea7028c1b82b8031428576
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 68d4215129cf4481beb2d8561c1569b3049a287e
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878245"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610579"
 ---
 # <a name="frequently-asked-questions"></a>질문과 대답
 다음 단원에서는 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]를 구현할 때 발생할 수 있는 일반적인 문제에 대한 해결 방법을 제시합니다.  
@@ -132,9 +132,9 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ```  
   
 ## <a name="errors-using-sql-compact-35"></a>SQL Compact 3.5 사용 오류  
- 질문. [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] 데이터베이스에서 테이블을 끌어 오면 오류가 발생합니다.  
+ 질문. SQL Server Compact 3.5 데이터베이스에서 테이블을 끌어 때 오류가 발생 한 경우  
   
- 대답: [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]에서는 [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] 런타임과 달리 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]를 지원하지 않습니다. 이 경우에는 고유 엔터티 클래스를 만들어 적절한 특성을 추가해야 합니다.  
+ 대답: 합니다 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 있지만 SQL Server Compact 3.5를 지원 하지 않습니다는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 런타임 않습니다. 이 경우에는 고유 엔터티 클래스를 만들어 적절한 특성을 추가해야 합니다.  
   
 ## <a name="errors-in-inheritance-relationships"></a>상속 관계 오류  
  질문. [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]에서 도구 상자의 상속 모양을 사용하여 두 엔터티를 연결했는데 오류가 발생합니다.  
@@ -144,7 +144,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="provider-model"></a>공급자 모델  
  질문. 사용할 수 있는 공용 공급자 모델이 있습니까?  
   
- 대답: 아니요, 사용할 수 있는 공용 공급자 모델은 없습니다. 지금은 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL Server 지원 및 [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] 만 합니다.  
+ 대답: 아니요, 사용할 수 있는 공용 공급자 모델은 없습니다. 이때 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 만 SQL Server 및 SQL Server Compact 3.5를 지원 합니다.  
   
 ## <a name="sql-injection-attacks"></a>SQL 삽입 공격  
  질문. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 SQL 삽입 공격으로부터 어떻게 보호됩니까?  

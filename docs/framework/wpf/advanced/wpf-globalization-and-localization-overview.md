@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: ce54c3299d599e990fa02abd3cea1460d588e280
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 28aeaae7292224dc8f56787efbde82712340af11
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662262"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610395"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 전역화 및 지역화 개요
 
@@ -90,7 +90,7 @@ ms.locfileid: "64662262"
 
 지역화 프로세스 시작 되지 않은 후 `MyDialog.resources.dll` 파일이 만들어집니다. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 요소 및 속성의 원래 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 를 사용 하 여 키-값 쌍으로 BAML 양식의 XAML에서 추출 된 합니다 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 에서 <xref:System.Windows.Markup.Localizer>합니다. 지역화 담당자는 키/값 쌍을 사용하여 애플리케이션을 지역화합니다. 지역화가 완료된 후 새 값에서 새 .resource.dll을 생성할 수 있습니다.
   
- 키-값 쌍의 키는 `x:Uid` 원래에서 개발자가 배치 되는 값 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다. 이러한 `x:Uid` 값을 사용 합니다 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 추적 하 고 지역화 도중 개발자와 지역화 담당자 간에 발생 하는 변경 내용을 병합 합니다. 예를 들어 개발자가 변경 된 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 지역화 담당자가 지역화를 시작한 후 손실 되는 최소한의 변환 작업을 이미 완료 된 지역화 작업과 개발 변경 내용을 병합할 수 있습니다.  
+ 키-값 쌍의 키는 `x:Uid` 원래에서 개발자가 배치 되는 값 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다. 이러한 `x:Uid` 값을 추적 하 고 지역화 도중 개발자와 지역화 담당자 간에 발생 하는 변경 내용을 병합 하는 API를 사용 하도록 설정 합니다. 예를 들어 개발자가 변경 된 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 지역화 담당자가 지역화를 시작한 후 손실 되는 최소한의 변환 작업을 이미 완료 된 지역화 작업과 개발 변경 내용을 병합할 수 있습니다.  
   
  다음 그래픽은 BAML 양식의 XAML을 기반으로 하는 일반적인 지역화 워크플로를 보여 줍니다. 이 다이어그램 개발자 응용 프로그램을 영어로 작성 하는 것으로 가정 합니다. 개발자가 WPF 애플리케이션을 만들고 전역화합니다. 프로젝트 파일에서 개발자 설정 `<UICulture>en-US</UICulture>` , 빌드 시 언어 중립적 주 어셈블리의 위성을 사용 하 여 생성 되도록 합니다. resources.dll 모든 지역화 가능 리소스를 포함 합니다. 또는 WPF 지역화 API가 주 어셈블리에서의 추출을 지원하므로 주 어셈블리에서 소스 언어를 유지할 수 있습니다. 빌드 프로세스 후 XAML이 BAML로 컴파일됩니다. 문화권에 중립적인 MyDialog.exe.resources.dll이 영어권 고객에게 제공됩니다.  
   

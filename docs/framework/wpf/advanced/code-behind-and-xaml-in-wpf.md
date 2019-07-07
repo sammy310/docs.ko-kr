@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: 01122991e99e41259c3b83a38eba002734d749ee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6a47f5a93cb161c9a87df25403cc86247619cd81
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655521"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610528"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>WPF의 코드 숨김 및 XAML
 <a name="introduction"></a> 코드 숨김 태그 정의 된 개체와 결합 되는 코드를 설명 하는 용어는 때를 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지는 태그 컴파일된 합니다. 이 항목에서는 코드에 대 한 대체 인라인 코드 메커니즘 및 코드 숨김에 대 한 요구 사항 설명 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "64655521"
   
 <a name="Inline_Code_Limitations"></a>   
 ## <a name="inline-code-limitations"></a>인라인 코드 제한 사항  
- 인라인 코드의 사용을 제한 하거나 방지를 고려해 야 합니다. 아키텍처 및 코딩 개념 측면에서 태그와 코드 숨김 간의 분리를 유지 관리 하는 유지 디자이너와 개발자 역할 훨씬 고유 합니다. 자세한 기술 수준에서 인라인 코드에 작성 하는 코드 좋지 않을 수 있습니다를 작성 하려면 항상 쓸 때문에 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 생성 된 partial 클래스 및 기본 XML 네임 스페이스 매핑을 사용할 수 있습니다. 추가할 수 없으므로 `using` 문, 정규화 해야 많은 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 를 호출 하 합니다. 기본값 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 전부는 아니지만 대부분의 매핑을 포함 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 에 있는 네임 스페이스는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 어셈블리 형식 및 다른 CLR 네임 스페이스 내에 포함 된 멤버에 대 한 호출을 정규화 해야 합니다. 도 정의할 수 없습니다 partial 클래스 이외의 다른 항목에서 인라인 코드를 참조 하는 모든 사용자 코드 엔터티 멤버 또는 변수로 생성 된 partial 클래스 내에 있어야 합니다. 다른 언어 프로그래밍 같은 특정 기능이 매크로 또는 `#ifdef` 전역 변수 또는 빌드 변수 로부터 사용할 수 없는 합니다. 자세한 내용은 [X:code 내장 XAML 형식](../../xaml-services/x-code-intrinsic-xaml-type.md)합니다.  
+ 인라인 코드의 사용을 제한 하거나 방지를 고려해 야 합니다. 아키텍처 및 코딩 개념 측면에서 태그와 코드 숨김 간의 분리를 유지 관리 하는 유지 디자이너와 개발자 역할 훨씬 고유 합니다. 자세한 기술 수준에서 인라인 코드에 작성 하는 코드 좋지 않을 수 있습니다를 작성 하려면 항상 쓸 때문에 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 생성 된 partial 클래스 및 기본 XML 네임 스페이스 매핑을 사용할 수 있습니다. 추가할 수 없으므로 `using` 문을 정규화 해야 다양 한 확인 하는 API 호출 합니다. 기본값 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 전부는 아니지만 대부분의 매핑을 포함 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 에 있는 네임 스페이스는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 어셈블리 형식 및 다른 CLR 네임 스페이스 내에 포함 된 멤버에 대 한 호출을 정규화 해야 합니다. 도 정의할 수 없습니다 partial 클래스 이외의 다른 항목에서 인라인 코드를 참조 하는 모든 사용자 코드 엔터티 멤버 또는 변수로 생성 된 partial 클래스 내에 있어야 합니다. 다른 언어 프로그래밍 같은 특정 기능이 매크로 또는 `#ifdef` 전역 변수 또는 빌드 변수 로부터 사용할 수 없는 합니다. 자세한 내용은 [X:code 내장 XAML 형식](../../xaml-services/x-code-intrinsic-xaml-type.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
 

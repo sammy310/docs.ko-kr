@@ -24,31 +24,31 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 6aae66de973c357b4b87578221a169bf750739fb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 47d892db8418b44fffeec870e56b49d5f986b563
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599024"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610474"
 ---
 # <a name="input-overview"></a>입력 개요
 <a name="introduction"></a> 합니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 하위 시스템은 강력한 제공 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] 다양 한 장치에서에서 입력을 가져오는, 마우스, 키보드, 터치 및 스타일러스를 포함 합니다. 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]가 제공하는 서비스에 대해 설명하고 입력 시스템의 아키텍처를 살펴봅니다.
 
 <a name="input_api"></a>
 ## <a name="input-api"></a>입력 API
- 기본 입력 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 기본 요소 클래스에 노출 됩니다. <xref:System.Windows.UIElement>를 <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, 및 <xref:System.Windows.FrameworkContentElement>합니다.  기본 요소에 대한 자세한 내용은 [기본 요소 개요](base-elements-overview.md)를 참조하세요.  이러한 클래스는 키 누르기, 마우스 단추, 마우스 휠, 마우스 이동, 포커스 관리, 마우스 캡처 등과 관련된 입력 이벤트를 위한 기능을 제공합니다. 입력 아키텍처는 모든 입력 이벤트를 서비스로 처리하는 대신 기본 요소에 입력 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]를 배치함으로써 UI의 특정 개체가 입력 이벤트를 발생시키도록 하고, 둘 이상의 요소가 입력 이벤트를 처리할 수 있는 이벤트 라우팅 체계를 지원할 수 있습니다. 대부분의 입력 이벤트에는 연결된 이벤트 쌍이 있습니다.  예를 들어 키 누름 이벤트는 연관 된 <xref:System.Windows.Input.Keyboard.KeyDown> 및 <xref:System.Windows.Input.Keyboard.PreviewKeyDown> 이벤트.  이벤트마다 이벤트가 대상 요소로 라우트되는 방법이 다릅니다.  미리 보기 이벤트는 요소 트리의 루트 요소에서 대상 요소로 터널링됩니다.  버블링 이벤트는 대상 요소에서 루트 요소로 버블링됩니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 이벤트 라우팅에 대한 자세한 내용은 이 개요 항목의 이후 단원 및 [라우트된 이벤트 개요](routed-events-overview.md)에서 자세히 설명합니다.
+ 기본 입력 기본 요소 클래스에 API 노출 됩니다. <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>를 <xref:System.Windows.FrameworkElement>, 및 <xref:System.Windows.FrameworkContentElement>합니다.  기본 요소에 대한 자세한 내용은 [기본 요소 개요](base-elements-overview.md)를 참조하세요.  이러한 클래스는 키 누르기, 마우스 단추, 마우스 휠, 마우스 이동, 포커스 관리, 마우스 캡처 등과 관련된 입력 이벤트를 위한 기능을 제공합니다. 입력된 아키텍처 대신 하 여 기본 요소 API 입력 배치 서비스로 모든 입력된 이벤트를 처리 하는 방법, ui에서 특정 개체에 의해 발생 하 고 가능해 집니다 둘 이상의 요소가 있는 opp 이벤트 라우팅 체계를 지원 하기 위해 입력된 이벤트를 사용 하면 ortunity 입력된 이벤트를 처리 하도록 합니다. 대부분의 입력 이벤트에는 연결된 이벤트 쌍이 있습니다.  예를 들어 키 누름 이벤트는 연관 된 <xref:System.Windows.Input.Keyboard.KeyDown> 및 <xref:System.Windows.Input.Keyboard.PreviewKeyDown> 이벤트.  이벤트마다 이벤트가 대상 요소로 라우트되는 방법이 다릅니다.  미리 보기 이벤트는 요소 트리의 루트 요소에서 대상 요소로 터널링됩니다.  버블링 이벤트는 대상 요소에서 루트 요소로 버블링됩니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 이벤트 라우팅에 대한 자세한 내용은 이 개요 항목의 이후 단원 및 [라우트된 이벤트 개요](routed-events-overview.md)에서 자세히 설명합니다.
 
 ### <a name="keyboard-and-mouse-classes"></a>키보드 및 마우스 클래스
- 입력 하는 것 외에도 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 기본 요소 클래스에는 <xref:System.Windows.Input.Keyboard> 클래스 및 <xref:System.Windows.Input.Mouse> 클래스 추가 제공 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 키보드 및 마우스 입력을 사용 하 여 작업에 대 한 합니다.
+ 기본 요소 클래스에 있는 입력 API 외에 <xref:System.Windows.Input.Keyboard> 클래스 및 <xref:System.Windows.Input.Mouse> 클래스 작업 키보드 및 마우스 입력을 위한 추가 API를 제공 합니다.
 
- 입력의 예 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 에 <xref:System.Windows.Input.Keyboard> 클래스는 <xref:System.Windows.Input.Keyboard.Modifiers%2A> 반환 하는 속성을 <xref:System.Windows.Input.ModifierKeys> 현재 누른 및 <xref:System.Windows.Input.Keyboard.IsKeyDown%2A> 지정된 된 키를 눌렀는지 여부를 결정 하는 메서드를.
+ 입력 API의 예제는 <xref:System.Windows.Input.Keyboard> 클래스를 <xref:System.Windows.Input.Keyboard.Modifiers%2A> 반환 하는 속성을 <xref:System.Windows.Input.ModifierKeys> 현재 누른 및 <xref:System.Windows.Input.Keyboard.IsKeyDown%2A> 지정된 된 키를 눌렀는지 여부를 결정 하는 메서드를 합니다.
 
  다음 예제에서는 합니다 <xref:System.Windows.Input.Keyboard.GetKeyStates%2A> 여부를 확인 하는 메서드를 <xref:System.Windows.Input.Key> 아래쪽 상태.
 
  [!code-csharp[keyargssnippetsample#KeyEventArgsKeyBoardGetKeyStates](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyArgsSnippetSample/CSharp/Window1.xaml.cs#keyeventargskeyboardgetkeystates)]
  [!code-vb[keyargssnippetsample#KeyEventArgsKeyBoardGetKeyStates](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb#keyeventargskeyboardgetkeystates)]
 
- 입력 예가 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 에 <xref:System.Windows.Input.Mouse> 클래스 <xref:System.Windows.Input.Mouse.MiddleButton%2A>, 마우스 가운데 단추의 상태를 가져오는 및 <xref:System.Windows.Input.Mouse.DirectlyOver%2A>, 조치 중인 요소를 가져옵니다는 마우스 포인터입니다.
+ API 입력의 예는 <xref:System.Windows.Input.Mouse> 클래스 <xref:System.Windows.Input.Mouse.MiddleButton%2A>, 마우스 가운데 단추의 상태를 가져오는 및 <xref:System.Windows.Input.Mouse.DirectlyOver%2A>를 통해 중인 요소를 가져옵니다는 마우스 포인터입니다.
 
  다음 예제에서는 확인 여부를 <xref:System.Windows.Input.Mouse.LeftButton%2A> 마우스가는 <xref:System.Windows.Input.MouseButtonState.Pressed> 상태입니다.
 
@@ -58,7 +58,7 @@ ms.locfileid: "64599024"
  합니다 <xref:System.Windows.Input.Mouse> 고 <xref:System.Windows.Input.Keyboard> 클래스는이 개요 항목에서 자세히 설명 되어 있습니다.
 
 ### <a name="stylus-input"></a>스타일러스 입력
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에 대 한 지원을 통합 합니다 <xref:System.Windows.Input.Stylus>합니다.  합니다 <xref:System.Windows.Input.Stylus> 에서 인기 있는 펜 입력을 [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]입니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램은 마우스 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]를 사용하여 스타일러스를 마우스로 처리할 수 있지만 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 키보드 및 마우스와 비슷한 모델을 사용하는 스타일러스 장치 추상화도 노출합니다.  스타일러스와 관련된 모든 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]에는 “Stylus”라는 단어가 포함됩니다.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에 대 한 지원을 통합 합니다 <xref:System.Windows.Input.Stylus>합니다.  합니다 <xref:System.Windows.Input.Stylus> 에서 인기 있는 펜 입력을 [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]입니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 API에서 마우스를 사용 하 여 마우스 스타일러스 처리할 수 있지만 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 키보드 및 마우스와 비슷한 모델을 사용 하는 스타일러스 장치 추상화도 노출 합니다.  스타일러스와 관련된 모든 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]에는 “Stylus”라는 단어가 포함됩니다.
 
  스타일러스는 마우스처럼 동작할 수 있으므로 마우스 입력만 지원하는 애플리케이션도 약간의 스타일러스 지원을 자동으로 받을 수 있습니다. 이러한 방식으로 스타일러스를 사용하는 경우 애플리케이션은 알맞은 스타일러스 이벤트를 처리한 다음 해당 마우스 이벤트를 처리할 수 있게 됩니다. 뿐만 아니라 스타일러스 디바이스 추상화를 통해 잉크 입력과 같은 높은 수준의 서비스도 사용할 수 있습니다.  잉크 입력에 대한 자세한 내용은 [잉크 시작](getting-started-with-ink.md)을 참조하세요.
 
@@ -350,7 +350,7 @@ ms.locfileid: "64599024"
 
 <a name="mouse_position"></a>
 ## <a name="mouse-position"></a>마우스 위치
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 입력 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]는 좌표 공간과 관련된 유용한 정보를 제공합니다.  예를 들어 좌표 `(0,0)`은 좌표의 왼쪽 위를 나타냅니다. 그러나 트리에서 어떤 요소의 왼쪽 위인가요? 즉, 좌표가 나타내는 요소가 입력 대상인지 이벤트 처리기를 연결한 요소인지 또는 다른 요소인지 알 수 없습니다. 이러한 혼동을 피하기 위해 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 입력 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]에서 마우스로 좌표를 사용할 때는 참조 프레임을 지정해야 합니다. <xref:System.Windows.Input.Mouse.GetPosition%2A> 메서드는 지정 된 요소를 기준으로 마우스 포인터의 좌표를 반환 합니다.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 입력 API 좌표 공간과 관련 된 유용한 정보를 제공 합니다.  예를 들어 좌표 `(0,0)`은 좌표의 왼쪽 위를 나타냅니다. 그러나 트리에서 어떤 요소의 왼쪽 위인가요? 즉, 좌표가 나타내는 요소가 입력 대상인지 이벤트 처리기를 연결한 요소인지 또는 다른 요소인지 알 수 없습니다. 혼동을 피하기 위해는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 입력 API에서 마우스로 좌표를 사용 하 여 작업할 때 참조 프레임을 지정 해야 합니다. <xref:System.Windows.Input.Mouse.GetPosition%2A> 메서드는 지정 된 요소를 기준으로 마우스 포인터의 좌표를 반환 합니다.
 
 <a name="mouse_capture"></a>
 ## <a name="mouse-capture"></a>마우스 캡처

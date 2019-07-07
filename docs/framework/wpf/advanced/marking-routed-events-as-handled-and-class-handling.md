@@ -17,12 +17,12 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 8cce3d1effa163c35cd219a6a52504b0f4d98c73
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a1004ce10baf6293c4c93efc61b91b3b6361377f
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598652"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610379"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>라우트된 이벤트를 처리된 것으로 표시 및 클래스 처리
 라우트된 이벤트의 처리기는 이벤트 데이터 내에서 이벤트를 처리된 것으로 표시할 수 있습니다. 이벤트를 처리하면 경로가 효과적으로 단축됩니다. 클래스 처리는 라우트된 이벤트를 통해 지원되는 프로그래밍 개념입니다. 클래스 처리기는 클래스의 모든 인스턴스에서 가장 먼저 호출되는 처리기를 사용하여 라우트된 특정 이벤트를 클래스 수준에서 처리할 수 있습니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "64598652"
   
 <a name="Class_Handlers_and_Instance_Handlers"></a>   
 ## <a name="class-handlers-and-instance-handlers"></a>클래스 처리기 및 인스턴스 처리기  
- 라우트된 이벤트에서는 클래스 수신기와 인스턴스 수신기라는 두 가지 종류의 이벤트 수신기를 사용합니다. 클래스 수신기 형식 특정 호출 하기 때문에 존재 <xref:System.Windows.EventManager> [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] ,<xref:System.Windows.EventManager.RegisterClassHandler%2A>, 정적 생성자에서 요소의 기본 클래스에서 클래스 처리기 가상 메서드를 재정의 했기 합니다. 인스턴스 수신기는 특정 클래스 인스턴스/요소는 하나 이상의 처리기가 연결 해당 라우트된 이벤트를 호출 하 여 <xref:System.Windows.UIElement.AddHandler%2A>입니다. 기존 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 라우트된 이벤트에 대 한 호출을 확인 <xref:System.Windows.UIElement.AddHandler%2A> 의 일부로 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 이벤트 래퍼 추가{} 제거{} 구현 하는 방법 이기도 하는 이벤트의 간단한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 연결 메커니즘 이벤트 처리기 특성 구문을 통해 설정 됩니다. 따라서 간단한에도 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 사용을 <xref:System.Windows.UIElement.AddHandler%2A> 호출 합니다.  
+ 라우트된 이벤트에서는 클래스 수신기와 인스턴스 수신기라는 두 가지 종류의 이벤트 수신기를 사용합니다. 클래스 수신기 형식 특정 호출 하기 때문에 존재 <xref:System.Windows.EventManager> API<xref:System.Windows.EventManager.RegisterClassHandler%2A>, 정적 생성자에서 요소의 기본 클래스에서 클래스 처리기 가상 메서드를 재정의 했기 합니다. 인스턴스 수신기는 특정 클래스 인스턴스/요소는 하나 이상의 처리기가 연결 해당 라우트된 이벤트를 호출 하 여 <xref:System.Windows.UIElement.AddHandler%2A>입니다. 기존 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 라우트된 이벤트에 대 한 호출을 확인 <xref:System.Windows.UIElement.AddHandler%2A> 의 일부로 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 이벤트 래퍼 추가{} 제거{} 구현 하는 방법 이기도 하는 이벤트의 간단한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 연결 메커니즘 이벤트 처리기 특성 구문을 통해 설정 됩니다. 따라서 간단한에도 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 사용을 <xref:System.Windows.UIElement.AddHandler%2A> 호출 합니다.  
   
  시각적 트리 내에 있는 요소는 등록된 처리기 구현이 있는지 확인됩니다. 이 처리기는 해당 라우트된 이벤트의 라우팅 전략 형식에 내재된 순서에 따라 경로에서 호출될 수 있습니다. 예를 들어 라우트된 버블링 이벤트는 라우트된 이벤트를 발생시킨 동일한 요소에 연결된 처리기를 먼저 호출합니다. 그런 다음 라우트된 이벤트는 다음 부모 요소로 “버블링”되며 애플리케이션 루트 요소에 도달할 때까지 이 동작이 계속 수행됩니다.  
   

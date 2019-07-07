@@ -21,21 +21,21 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 6cb389cd0458d1c9e7af94586c394764f01e4bab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b84a2e4c3cf4126a6efa7edaf868080dbc48b859
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665183"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610386"
 ---
 # <a name="imaging-overview"></a>이미징 개요
 이 항목에서는 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]를 소개합니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]를 사용하여 개발자는 이미지를 표시 및 변환하고 서식을 지정할 수 있습니다.  
 
 <a name="_wpfImaging"></a>   
 ## <a name="wpf-imaging-component"></a>WPF Imaging Component  
- [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]에서는 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 내에서 향상된 이미징 기능을 제공합니다. 비트맵을 표시하거나 공용 컨트롤에서 이미지를 사용하는 것과 같은 이미징 기능에는 이전에는 [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] 또는 [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)] 라이브러리가 필요했습니다. 이러한 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]는 기준 이미징 기능은 제공했지만 코덱 확장성 및 고품질 이미지 지원 등과 같은 기능이 없었습니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]는 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 및 [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)]의 단점을 보완하고 응용 프로그램 내에서 이미지를 표시 및 사용하기 위한 새로운 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 집합을 제공하도록 다시 디자인되었습니다.  
+ [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]에서는 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 내에서 향상된 이미징 기능을 제공합니다. 비트맵을 표시하거나 공용 컨트롤에서 이미지를 사용하는 것과 같은 이미징 기능에는 이전에는 [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] 또는 [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)] 라이브러리가 필요했습니다. 이러한 API는 기준 이미징 코덱 확장성 및 고품질 이미지 지원 등과 같은 기능이 있지만 기능을 제공 합니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 단점을 극복 하도록 디자인 된 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 고 [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)] 새 표시 하 고 응용 프로그램 내에서 이미지를 사용 하는 API 집합을 제공 합니다.  
   
- [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]에 액세스하는 방법에는 관리되는 구성 요소와 관리되지 않는 구성 요소의 두 가지 방법이 있습니다. 관리되지 않는 구성 요소는 다음과 같은 기능을 제공합니다.  
+ 두 가지 방법으로 액세스 하는 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] API, 관리 되는 구성 및 관리 되지 않는 구성 요소입니다. 관리되지 않는 구성 요소는 다음과 같은 기능을 제공합니다.  
   
 - 새롭거나 또는 독자적인 이미지 형식에 대한 확장성 모델  
   
@@ -51,9 +51,9 @@ ms.locfileid: "64665183"
   
 - 관리되는 구성 요소는 관리되지 않는 인프라를 활용하여 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], 애니메이션 및 그래픽 등의 기타 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 기능에 이미지를 원활하게 통합할 수 있도록 합니다. 관리 되는 구성 요소는 Windows Presentation Foundation (WPF) 이미징 코덱 확장성 모델을 자동에서 새 이미지 형식으로 인식에서 이점도 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램입니다.  
   
- 대부분의 관리 되는 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 에 <xref:System.Windows.Media.Imaging?displayProperty=nameWithType> 네임 스페이스와 같은 몇 가지 중요 한 형식은 있지만 <xref:System.Windows.Media.ImageBrush> 및 <xref:System.Windows.Media.ImageDrawing> 에 <xref:System.Windows.Media?displayProperty=nameWithType> 네임 스페이스 및 <xref:System.Windows.Controls.Image> 상주 하는 <xref:System.Windows.Controls?displayProperty=nameWithType> 네임 스페이스입니다.  
+ 대부분의 관리 되는 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] API에는 <xref:System.Windows.Media.Imaging?displayProperty=nameWithType> 네임 스페이스 등의 몇 가지 중요 한 형식은 있지만 <xref:System.Windows.Media.ImageBrush> 및 <xref:System.Windows.Media.ImageDrawing> 에 <xref:System.Windows.Media?displayProperty=nameWithType> 네임 스페이스 및 <xref:System.Windows.Controls.Image> 에 <xref:System.Windows.Controls?displayProperty=nameWithType> 네임 스페이스입니다.  
   
- 이 항목에서는 관리되는 구성 요소에 대한 추가 정보를 제공합니다. 관리되지 않는 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]에 대한 자세한 내용은 [관리되지 않는 WPF Imaging Component](/windows/desktop/wic/-wic-lh) 설명서를 참조하세요.  
+ 이 항목에서는 관리되는 구성 요소에 대한 추가 정보를 제공합니다. 관리 되지 않는 API 참조에 대 한 자세한 내용은 합니다 [관리 되지 않는 WPF Imaging Component](/windows/desktop/wic/-wic-lh) 설명서.  
   
 <a name="_imageformats"></a>   
 ## <a name="wpf-image-formats"></a>WPF 이미지 형식  
@@ -183,7 +183,7 @@ ms.locfileid: "64665183"
 ## <a name="codec-extensibility"></a>코덱 확장성  
  [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]의 핵심 기능은 새로운 이미지 코덱에 대한 확장성 모델입니다. 이러한 관리되지 않는 인터페이스를 통해 코덱 개발자들은 코덱을 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에 통합할 수 있으므로 새로운 이미지 형식이 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션에서 자동으로 사용될 수 있습니다.  
   
- 확장성 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]의 샘플을 보려면 [Win32 샘플 코덱](https://go.microsoft.com/fwlink/?LinkID=160052)을 참조하세요. 이 샘플에는 사용자 지정 이미지 형식용 디코더 및 인코더를 만드는 방법을 보여 줍니다.  
+ 확장성 API의 샘플을 참조 하세요. 합니다 [Win32 샘플 코덱](https://go.microsoft.com/fwlink/?LinkID=160052)합니다. 이 샘플에는 사용자 지정 이미지 형식용 디코더 및 인코더를 만드는 방법을 보여 줍니다.  
   
 > [!NOTE]
 >  시스템이 코덱을 인식하려면 디지털로 서명되어야 합니다.  
