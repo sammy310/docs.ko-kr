@@ -2,17 +2,21 @@
 title: dotnet nuget delete 명령
 description: dotnet-nuget-delete 명령은 서버에서 패키지를 삭제하거나 목록에서 제거합니다.
 author: karann-msft
-ms.date: 12/04/2018
-ms.openlocfilehash: e1362413aa6458674518d68340634741994b34a3
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 0b2ba64b70bae5e06f213457e30fedeca26a9819
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632052"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539248"
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 
+**이 항목 적용 대상: ✓** .NET Core 1.x SDK 이상 버전
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>name
 
@@ -20,23 +24,11 @@ ms.locfileid: "65632052"
 
 ## <a name="synopsis"></a>개요
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```
 dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [--interactive] [-k|--api-key] [--no-service-endpoint]
     [--non-interactive] [-s|--source]
 dotnet nuget delete [-h|--help]
 ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```
-dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [-k|--api-key] [--non-interactive]
-    [-s|--source]
-dotnet nuget delete [-h|--help]
-```
-
----
 
 ## <a name="description"></a>설명
 
@@ -53,8 +45,6 @@ dotnet nuget delete [-h|--help]
   삭제할 패키지의 버전입니다.
 
 ## <a name="options"></a>옵션
-
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 * **`--force-english-output`**
 
@@ -83,30 +73,6 @@ dotnet nuget delete [-h|--help]
 * **`-s|--source <SOURCE>`**
 
   서버 URL을 지정합니다. nuget.org에 대해 지원되는 URL에는 `https://www.nuget.org`, `https://www.nuget.org/api/v3` 및 `https://www.nuget.org/api/v2/package`가 포함됩니다. 개인용 피드의 경우 호스트 이름(예: `%hostname%/api/v3`)을 바꿉니다.
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-* **`--force-english-output`**
-
-  고정 영어 기반 문화권을 사용하여 애플리케이션을 강제로 실행합니다.
-
-* **`-h|--help`**
-
-  명령에 대한 간단한 도움말을 출력합니다.
-
-* **`-k|--api-key <API_KEY>`**
-
-  서버에 대한 API 키입니다.
-
-* **`--non-interactive`**
-
-  사용자 입력 또는 확인에 대한 메시지를 표시하지 않습니다.
-
-* **`-s|--source <SOURCE>`**
-
-  서버 URL을 지정합니다. nuget.org에 대해 지원되는 URL에는 `https://www.nuget.org`, `https://www.nuget.org/api/v3` 및 `https://www.nuget.org/api/v2/package`가 포함됩니다. 개인용 피드의 경우 호스트 이름(예: `%hostname%/api/v3`)을 바꿉니다.
-
----
 
 ## <a name="examples"></a>예제
 
