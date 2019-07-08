@@ -2,12 +2,12 @@
 title: 제네릭 인터페이스의 가변성(C#)
 ms.date: 06/06/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: a2d0bcc049d62978930b4e5cdef7920349e3b894
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 9cbbea35003e86e05d618f5e6000ba2788359cb0
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66815954"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539504"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>제네릭 인터페이스의 가변성(C#)
 
@@ -87,7 +87,7 @@ IEnumerable<int> integers = new List<int>();
 // IEnumerable<Object> objects = integers;
 ```
 
-Variant 인터페이스를 구현하는 클래스는 여전히 비 variant라는 점에 유의해야 합니다. 예를 들어 <xref:System.Collections.Generic.List%601>는 공변(covariant) 인터페이스 <xref:System.Collections.Generic.IEnumerable%601>을 구현하지만 암시적으로 `List<Object>`를 `List<String>`으로 변환할 수 없습니다. 다음 코드 예제에서 이 내용을 보여 줍니다.
+Variant 인터페이스를 구현하는 클래스는 여전히 비 variant라는 점에 유의해야 합니다. 예를 들어 <xref:System.Collections.Generic.List%601>는 공변(covariant) 인터페이스 <xref:System.Collections.Generic.IEnumerable%601>을 구현하지만 암시적으로 `List<String>`를 `List<Object>`으로 변환할 수 없습니다. 다음 코드 예제에서 이 내용을 보여 줍니다.
 
 ```csharp
 // The following line generates a compiler error

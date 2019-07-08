@@ -3,12 +3,12 @@ title: C# 식 - C# 언어 둘러보기
 description: 식, 피연산자 및 연산자는 C# 언어의 블록을 빌드합니다.
 ms.date: 04/25/2019
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: ffe800304a9125e11e20d96a84919936f1fee2c1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2553730d495942730c53d3646f35e80759a4d168
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753639"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609325"
 ---
 # <a name="expressions"></a>식
 
@@ -23,7 +23,7 @@ ms.locfileid: "64753639"
 
 우선 순위 및 결합성은 괄호를 사용하여 제어할 수 있습니다. 예를 들어 `x + y * z`는 먼저 `y`와 `z`를 곱한 다음 그 결과를 `x`와 더하지만 `(x + y) * z`는 먼저 `x`와 `y`를 더한 다음 그 결과에 `z`를 곱합니다.
 
-대부분의 연산자는 [*오버로드*](../language-reference/keywords/operator.md)할 수 있습니다. 연산자 오버로드는 피연산자 중 하나 또는 둘 다가 사용자 정의 클래스 또는 구조체 형식인 연산에 대해 사용자 정의 연산자 구현을 지정할 수 있도록 허용합니다.
+대부분의 연산자는 [*오버로드*](../language-reference/operators/operator-overloading.md)할 수 있습니다. 연산자 오버로드는 피연산자 중 하나 또는 둘 다가 사용자 정의 클래스 또는 구조체 형식인 연산에 대해 사용자 정의 연산자 구현을 지정할 수 있도록 허용합니다.
 
 C#은 [산술](../language-reference/operators/arithmetic-operators.md), [논리](../language-reference/operators/boolean-logical-operators.md), [비트 및 시프트](../language-reference/operators/bitwise-and-shift-operators.md) 연산과 [같음](../language-reference/operators/equality-operators.md) 및 [순서](../language-reference/operators/comparison-operators.md) 비교를 수행하는 여러 연산자를 제공합니다.
 
