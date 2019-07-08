@@ -2,12 +2,12 @@
 title: async 및 await를 사용한 TAP(작업 비동기 프로그래밍) 모델(C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 6e8f5c91bec158ae46b95597d90aaf3a6ab811d3
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: dcb5148e7f91d07bc038e5304ab65f5f3c59b216
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170313"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347684"
 ---
 # <a name="task-asynchronous-programming-model"></a>작업 비동기 프로그래밍 모델
 
@@ -32,7 +32,7 @@ ms.locfileid: "67170313"
 
 모든 UI 관련 작업이 대체로 스레드 한 개를 공유하므로 비동기는 특히 UI 스레드에 액세스하는 애플리케이션의 변수를 증명합니다. 동기 애플리케이션에서 임의의 프로세스가 차단되면 모든 프로세스가 차단됩니다. 애플리케이션이 응답을 중지하면 기다리지 않고 애플리케이션이 실패한 것으로 결론을 내릴 것입니다.
 
-비동기 메서드를 사용하면 애플리케이션이 UI에 계속 응답합니다. 예를 들어 창의 크기를 조정하거나 최소화할 수 있습니다. 또는 애플리케이션이 완료될 때까지 기다리지 않으려면 애플리케이션을 종료할 수 있습니다.
+비동기 메서드를 사용하면 애플리케이션이 UI에 계속 응답합니다. 예를 들어 창의 크기를 조정하거나 최소화할 수 있습니다. 또는 애플리케이션이 완료될 때까지 기다리고 싶지 않다면 애플리케이션을 종료할 수 있습니다.
 
 비동기 기반 접근 방식을 사용하면 비동기 작업을 디자인할 때 선택할 수 있는 옵션 목록에 자동 전송과 동일한 기능을 추가할 수 있습니다. 즉, 더 적은 개발자의 노력으로 기존 비동기 프로그래밍의 이점을 모두 활용할 수 있습니다.
 
@@ -61,7 +61,7 @@ async Task<int> AccessTheWebAsync()
 }
 ```
 
-위의 샘플에서 몇 가지 사례를 알아볼 수 있습니다. 메서드 서명을 시작합니다. 여기에는 `async` 한정자가 포함됩니다. 반환 형식은 `Task<int>`입니다(추가 옵션은 "반환 형식" 섹션 참조). 메서드 이름은 `Async`로 끝납니다. 메서드의 본문에서 `GetStringAsync`가 `Task<string>`을 반환합니다. 즉, 작업을 `await`하는 경우 `string`을 받게 됩니다(`urlContents`).  작업을 대기하기 전에 `GetStringAsync`의 `string`을 사용하지 않는 작업을 수행할 수 있습니다.
+위의 샘플에서 몇 가지 사례를 알아볼 수 있습니다. 메서드 서명부터 시작해봅시다. 여기에는 `async` 한정자가 포함됩니다. 반환 형식은 `Task<int>`입니다(추가 옵션은 "반환 형식" 섹션 참조). 메서드 이름은 `Async`로 끝납니다. 메서드의 본문에서 `GetStringAsync`가 `Task<string>`을 반환합니다. 즉, 작업을 `await`하는 경우 `string`을 받게 됩니다(`urlContents`).  작업을 대기하기 전에 `GetStringAsync`의 `string`을 사용하지 않는 작업을 수행할 수 있습니다.
 
 `await` 연산자에 주의하세요. `AccessTheWebAsync`를 일시 중단합니다.
 
@@ -234,7 +234,7 @@ Windows 런타임 프로그래밍의 비동기 API에는 작업과 유사한 다
 
 ## <a name="BKMK_NamingConvention"></a> 명명 규칙
 
-규칙에 따라 일반적으로 대기 가능한 형식(예: `Task`, `Task<T>`, `ValueTask`, `ValueTask<T>`)을 반환하는 메서드에는 "Async"로 끝나는 이름을 사용해야 합니다. 비동기 작업을 시작하지만 대기 가능한 형식을 반환하지 않는 메서드는 "Async"로 끝나는 이름을 사용하지 않아야 하지만, "Begin", "Start" 또는 일부 다른 동사로 시작하여 이 메서드가 작업 결과를 반환하거나 throw하지 않도록 할 수 있습니다.
+규칙에 따라 일반적으로 대기 가능한 형식(예: `Task`, `Task<T>`, `ValueTask`, `ValueTask<T>`)을 반환하는 메서드에는 "Async"로 끝나는 이름을 사용해야 합니다. 비동기 작업을 시작하지만 대기 가능한 형식을 반환하지 않는 메서드는 "Async"로 끝나는 이름을 사용하지 않아야 하지만, "Begin", "Start" 또는 일부 다른 동사로 시작하여 이 메서드가 작업 결과를 반환하거나 예외가 발생하지 않음을 알려야 합니다.
 
 여기서 이벤트, 기본 클래스 또는 인터페이스 계약으로 다른 이름을 제안하는 규칙을 무시할 수 있습니다. 예를 들어, `Button1_Click`과 같은 공용 이벤트 처리기의 이름을 변경할 수 없습니다.
 

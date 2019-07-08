@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: af3f7a9379aa8ac12ef8c12abc99a0ded9188eb8
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 155ce5ce4673008a61b4231a3aaee5a40ad9ead6
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025301"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423992"
 ---
 # <a name="arithmetic-operators-c-reference"></a>산술 연산자(C# 참조)
 
@@ -41,7 +41,7 @@ ms.locfileid: "67025301"
 - 단항 [`++`(증분)](#increment-operator-), [`--`(감소)](#decrement-operator---), [`+`(더하기)](#unary-plus-and-minus-operators), [`-`(빼기)](#unary-plus-and-minus-operators) 연산자
 - 이진 [`*`(곱하기)](#multiplication-operator-), [`/`(나누기)](#division-operator-), [`%`(나머지)](#remainder-operator-), [`+`(더하기)](#addition-operator-) 및 [`-`(빼기)](#subtraction-operator--) 연산자
 
-해당 연산자는 모든 [정수](../keywords/integral-types-table.md) 및 [부동 소수점](../keywords/floating-point-types-table.md) 숫자 형식을 지원합니다.
+해당 연산자는 모든 [정수](../builtin-types/integral-numeric-types.md) 및 [부동 소수점](../keywords/floating-point-types-table.md) 숫자 형식을 지원합니다.
 
 ## <a name="increment-operator-"></a>증가 연산자 ++
 
@@ -51,13 +51,13 @@ ms.locfileid: "67025301"
 
 ### <a name="postfix-increment-operator"></a>후위 증가 연산자
 
-`x++`의 결과는 다음 예제와 같이 연산 ‘전’ `x`의 값입니다. 
+`x++`의 결과는 다음 예제와 같이 연산 ‘전’ `x`의 값입니다.
 
 [!code-csharp-interactive[postfix increment](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PostfixIncrement)]
 
 ### <a name="prefix-increment-operator"></a>후위 증가 연산자
 
-`++x`의 결과는 다음 예제와 같이 연산 ‘후’ `x`의 값입니다. 
+`++x`의 결과는 다음 예제와 같이 연산 ‘후’ `x`의 값입니다.
 
 [!code-csharp-interactive[prefix increment](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PrefixIncrement)]
 
@@ -69,13 +69,13 @@ ms.locfileid: "67025301"
 
 ### <a name="postfix-decrement-operator"></a>후위 감소 연산자
 
-`x--`의 결과는 다음 예제와 같이 연산 ‘전’ `x`의 값입니다. 
+`x--`의 결과는 다음 예제와 같이 연산 ‘전’ `x`의 값입니다.
 
 [!code-csharp-interactive[postfix decrement](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PostfixDecrement)]
 
 ### <a name="prefix-decrement-operator"></a>후위 감소 연산자
 
-`--x`의 결과는 다음 예제와 같이 연산 ‘후’ `x`의 값입니다. 
+`--x`의 결과는 다음 예제와 같이 연산 ‘후’ `x`의 값입니다.
 
 [!code-csharp-interactive[prefix decrement](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PrefixDecrement)]
 
@@ -85,7 +85,7 @@ ms.locfileid: "67025301"
 
 [!code-csharp-interactive[unary plus and minus](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#UnaryPlusAndMinus)]
 
-단항 `-` 연산자는 [ulong](../keywords/ulong.md) 형식을 지원하지 않습니다.
+단항 `-` 연산자는 [ulong](../builtin-types/integral-numeric-types.md) 형식을 지원하지 않습니다.
 
 ## <a name="multiplication-operator-"></a>곱하기 연산자 *
 
@@ -97,7 +97,7 @@ ms.locfileid: "67025301"
 
 ## <a name="division-operator-"></a>나누기 연산자 /
 
-나누기 연산자 `/`는 두 번째 피연산자로 첫 번째 피연산자를 나눕니다.
+나누기 연산자 `/`는 오른쪽 피연산자로 왼쪽 피연산자를 나눕니다.
 
 ### <a name="integer-division"></a>정수 나누기
 
@@ -119,11 +119,11 @@ ms.locfileid: "67025301"
 
 ## <a name="remainder-operator-"></a>나머지 연산자 %
 
-나머지 연산자 `%`는 첫 번째 피연산자를 두 번째 피연산자로 나눈 후 나머지를 계산합니다.
+나머지 연산자 `%`는 왼쪽 피연산자를 오른쪽 피연산자로 나눈 후 나머지를 계산합니다.
 
 ### <a name="integer-remainder"></a>정수 나머지
   
-정수 형식의 피연산자의 경우 `a % b`의 결과가 `a - (a / b) * b`에서 생성된 값입니다. 다음 예와 같이 0이 아닌 나머지의 부호는 첫 번째 피연산자와 동일합니다.
+정수 형식의 피연산자의 경우 `a % b`의 결과가 `a - (a / b) * b`에서 생성된 값입니다. 다음 예와 같이 0이 아닌 나머지의 부호는 왼쪽 피연산자와 동일합니다.
 
 [!code-csharp-interactive[integer remainder](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerRemainder)]
 
@@ -157,7 +157,7 @@ ms.locfileid: "67025301"
 
 ## <a name="subtraction-operator--"></a>빼기 연산자 -
 
-빼기 연산자 `-`는 첫 번째 피연산자에서 두 번째 피연산자를 뺍니다.
+빼기 연산자 `-`는 왼쪽 피연산자에서 오른쪽 피연산자를 뺍니다.
 
 [!code-csharp-interactive[subtraction operator](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#Subtraction)]
 

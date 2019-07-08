@@ -2,12 +2,12 @@
 title: C# 8.0의 새로운 기능 - C# 가이드
 description: C# 8.0의 새로운 기능을 살펴봅니다. 이 문서는 미리 보기 5가 반영된 최신 내용을 담고 있습니다.
 ms.date: 02/12/2019
-ms.openlocfilehash: 99056c9cd330c0c3ae6c63239989a2e9e9dc496c
-ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
+ms.openlocfilehash: 962829b68c5d02c3a7e563a00d391c4698024d47
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67151973"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397767"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0의 새로운 기능
 
@@ -30,7 +30,12 @@ C# 언어에는 직접 사용해 볼 수 있는 여러 개선된 기능이 포�
 > [!NOTE]
 > 이 문서는 C# 8.0 미리 보기 5를 반영하여 업데이트되었습니다.
 
-이 문서의 나머지 부분에서는 이러한 기능에 대해 간략하게 설명합니다. 심화 문서가 공개되면 해당 자습서에 대한 링크 및 개요가 제공됩니다.
+이 문서의 나머지 부분에서는 이러한 기능에 대해 간략하게 설명합니다. 심화 문서가 공개되면 해당 자습서에 대한 링크 및 개요가 제공됩니다. `dotnet try` 글로벌 도구를 사용하여 환경에서 다음과 같은 기능을 탐색할 수 있습니다.
+
+1. [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) 글로벌 도구를 설치합니다.
+1. [dotnet/try-samples](https://github.com/dotnet/try-samples) 리포지토리를 복제합니다.
+1. 현재 디렉터리를 *try-samples* 리포지토리의 *csharp8* 하위 디렉터리로 설정합니다.
+1. `dotnet try`를 실행합니다.
 
 ## <a name="readonly-members"></a>읽기 전용 멤버
 
@@ -425,7 +430,7 @@ var lazyDog = words[^2..^0];
 ```csharp
 var allWords = words[..]; // contains "The" through "dog".
 var firstPhrase = words[..4]; // contains "The" through "fox"
-var lastPhrase = words[6..]; // contains "the, "lazy" and "dog"
+var lastPhrase = words[6..]; // contains "the", "lazy" and "dog"
 ```
 
 범위를 변수로 선언할 수도 있습니다.

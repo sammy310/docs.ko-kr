@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 37fe329026c16043abb20f8a9f030d877469951d
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 60907eb1bbfeb1daa9d9a74733387c4771accb45
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025232"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423984"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>부울 논리 연산자(C# 참조)
 
@@ -45,9 +45,9 @@ ms.locfileid: "67025232"
 
 - 단항 [`!`(논리 부정)](#logical-negation-operator-) 연산자.
 - 이진 [`&`(논리 AND)](#logical-and-operator-), [`|`(논리 OR)](#logical-or-operator-) 및 [`^`(논리 배타적 OR)](#logical-exclusive-or-operator-) 연산자. 해당 연산자는 항상 두 피연산자를 모두 평가합니다.
-- 이진 [`&&`(조건부 논리 AND)](#conditional-logical-and-operator-) 및 [`||`(조건부 논리 OR)](#conditional-logical-or-operator-) 연산자. 해당 연산자는 필요한 경우에만 두 번째 피연산자를 평가합니다.
+- 이진 [`&&`(조건부 논리 AND)](#conditional-logical-and-operator-) 및 [`||`(조건부 논리 OR)](#conditional-logical-or-operator-) 연산자. 해당 연산자는 필요한 경우에만 오른쪽 피연산자를 평가합니다.
 
-[정수](../keywords/integral-types-table.md) 형식 피연산자의 경우 `&`, `|` 및 `^` 연산자는 비트 논리 작업을 수행합니다. 자세한 내용은 [비트 및 시프트 연산자](bitwise-and-shift-operators.md)를 참조하세요.
+[정수](../builtin-types/integral-numeric-types.md) 형식 피연산자의 경우 `&`, `|` 및 `^` 연산자는 비트 논리 작업을 수행합니다. 자세한 내용은 [비트 및 시프트 연산자](bitwise-and-shift-operators.md)를 참조하세요.
 
 ## <a name="logical-negation-operator-"></a>논리 부정 연산자 !
 
@@ -55,17 +55,17 @@ ms.locfileid: "67025232"
 
 [!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
 
-## <a name="logical-and-operator-amp"></a>논리 AND 연산자 &amp;
+## <a name="logical-and-operator-"></a> 논리 AND 연산자 &amp;
 
 `&` 연산자는 해당 피연산자의 논리 AND를 컴퓨팅합니다. `x` 및 `y`가 모두 `true`로 평가되면 `x & y`의 결과는 `true`입니다. 그렇지 않으면 결과는 `false`입니다.
 
-첫 번째 피연산자가 `false`로 평가되더라도 `&` 연산자는 두 피연산자를 평가하여 두 번째 피연산자의 값에 관계없이 `false`이어야 합니다.
+왼쪽 피연산자가 `false`로 평가되더라도 `&` 연산자는 두 피연산자를 평가하여 오른쪽 피연산자의 값에 관계없이 `false`이어야 합니다.
 
-다음 예제에서 `&` 연산자의 두 번째 피연산자는 첫 번째 피연산자의 값과 관계없이 수행되는 메서드 호출입니다.
+다음 예제에서 `&` 연산자의 오른쪽 피연산자는 왼쪽 피연산자의 값과 관계없이 수행되는 메서드 호출입니다.
 
 [!code-csharp-interactive[logical AND](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#And)]
 
-[조건부 논리 AND 연산자](#conditional-logical-and-operator-) `&&`도 해당 피연산자의 논리 AND를 컴퓨팅하지만, 첫 번째 피연산자가 `false`로 평가되는 경우에는 두 번째 피연산자를 평가하지 않습니다.
+[조건부 논리 AND 연산자](#conditional-logical-and-operator-) `&&`도 해당 피연산자의 논리 AND를 계산하지만, 왼쪽 피연산자가 `false`로 평가되는 경우에는 오른쪽 피연산자를 평가하지 않습니다.
 
 정수 형식 피연산자의 경우 `&` 연산자는 해당 피연산자의 [비트 논리 AND](bitwise-and-shift-operators.md#logical-and-operator-)를 컴퓨팅합니다. 단항 `&` 연산자는 [address-of 연산자](pointer-related-operators.md#address-of-operator-)입니다.
 
@@ -81,21 +81,21 @@ ms.locfileid: "67025232"
 
 `|` 연산자는 해당 피연산자의 논리 OR을 컴퓨팅합니다. `x` 또는 `y`가 `true`로 평가되면 `x | y`의 결과는 `true`입니다. 그렇지 않으면 결과는 `false`입니다.
 
-첫 번째 피연산자가 `true`로 평가되더라도 `|` 연산자는 두 피연산자를 평가하여 두 번째 피연산자의 값에 관계없이 `true`이어야 합니다.
+왼쪽 피연산자가 `true`로 평가되더라도 `|` 연산자는 두 피연산자를 평가하여 오른쪽 피연산자의 값에 관계없이 `true`이어야 합니다.
 
-다음 예제에서 `|` 연산자의 두 번째 피연산자는 첫 번째 피연산자의 값과 관계없이 수행되는 메서드 호출입니다.
+다음 예제에서 `|` 연산자의 오른쪽 피연산자는 왼쪽 피연산자의 값과 관계없이 수행되는 메서드 호출입니다.
 
 [!code-csharp-interactive[logical OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Or)]
 
-[조건부 논리 OR 연산자](#conditional-logical-or-operator-) `||`도 해당 피연산자의 논리 OR을 컴퓨팅하지만, 첫 번째 피연산자가 `true`로 평가되는 경우에는 두 번째 피연산자를 평가하지 않습니다.
+[조건부 논리 OR 연산자](#conditional-logical-or-operator-) `||`도 해당 피연산자의 논리 OR을 계산하지만, 왼쪽 피연산자가 `true`로 평가되는 경우에는 오른쪽 피연산자를 평가하지 않습니다.
 
 정수 형식 피연산자의 경우 `|` 연산자는 해당 피연산자의 [비트 논리 OR](bitwise-and-shift-operators.md#logical-or-operator-)을 컴퓨팅합니다.
 
-## <a name="conditional-logical-and-operator-ampamp"></a>조건부 논리 AND 연산자 &amp;&amp;
+## <a name="conditional-logical-and-operator-"></a> 조건부 논리 AND 연산자 &amp;&amp;
 
-“단락(short-circuiting)” 논리 AND 연산자로도 알려진 조건부 논리 AND 연산자 `&&`는 해당 피연산자의 논리 AND를 컴퓨팅합니다. `x` 및 `y`가 모두 `true`로 평가되면 `x && y`의 결과는 `true`입니다. 그렇지 않으면 결과는 `false`입니다. 첫 번째 피연산자가 `false`로 평가되면 두 번째 피연산자는 평가되지 않습니다.
+“단락(short-circuiting)” 논리 AND 연산자로도 알려진 조건부 논리 AND 연산자 `&&`는 해당 피연산자의 논리 AND를 컴퓨팅합니다. `x` 및 `y`가 모두 `true`로 평가되면 `x && y`의 결과는 `true`입니다. 그렇지 않으면 결과는 `false`입니다. `x`가 `false`이면 `y`는 계산되지 않습니다.
 
-다음 예제에서 `&&` 연산자의 두 번째 피연산자는 첫 번째 피연산자가 `false`로 평가되는 경우 수행되지 않는 메서드 호출입니다.
+다음 예제에서 `&&` 연산자의 오른쪽 피연산자는 왼쪽 피연산자가 `false`로 평가되는 경우 수행되지 않는 메서드 호출입니다.
 
 [!code-csharp-interactive[conditional logical AND](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#ConditionalAnd)]
 
@@ -103,9 +103,9 @@ ms.locfileid: "67025232"
 
 ## <a name="conditional-logical-or-operator-"></a>조건부 논리 OR 연산자 ||
 
-“단락(short-circuiting)” 논리 OR 연산자로도 알려진 조건부 논리 OR 연산자 `||`는 해당 피연산자의 논리 OR을 컴퓨팅합니다. `x` 또는 `y`가 `true`로 평가되면 `x || y`의 결과는 `true`입니다. 그렇지 않으면 결과는 `false`입니다. 첫 번째 피연산자가 `true`로 평가되면 두 번째 피연산자는 평가되지 않습니다.
+“단락(short-circuiting)” 논리 OR 연산자로도 알려진 조건부 논리 OR 연산자 `||`는 해당 피연산자의 논리 OR을 컴퓨팅합니다. `x` 또는 `y`가 `true`로 평가되면 `x || y`의 결과는 `true`입니다. 그렇지 않으면 결과는 `false`입니다. `x`가 `true`이면 `y`는 계산되지 않습니다.
 
-다음 예제에서 `||` 연산자의 두 번째 피연산자는 첫 번째 피연산자가 `true`로 평가되는 경우 수행되지 않는 메서드 호출입니다.
+다음 예제에서 `||` 연산자의 오른쪽 피연산자는 왼쪽 피연산자가 `true`로 평가되는 경우 수행되지 않는 메서드 호출입니다.
 
 [!code-csharp-interactive[conditional logical OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#ConditionalOr)]
 

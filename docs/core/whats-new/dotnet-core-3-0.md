@@ -6,19 +6,19 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 05/06/2019
-ms.openlocfilehash: 369c74d2d8e82f157de0eec4294a5ee50542292b
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.date: 06/14/2019
+ms.openlocfilehash: bb100ea064585235768ecb46781eb830c7dae0c6
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169780"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401953"
 ---
-# <a name="whats-new-in-net-core-30-preview-5"></a>.NET Core 3.0(Preview 5)의 새로운 기능
+# <a name="whats-new-in-net-core-30-preview-6"></a>.NET Core 3.0(Preview 6)의 새로운 기능
 
-이 문서는 .NET Core 3.0(Preview 5)의 새로운 기능에 대해 설명합니다. 가장 중요한 개선 사항 중 하나는 Windows 데스크톱 애플리케이션에 대한 지원(Windows만 해당)입니다. .NET Core 3.0 SDK 구성 요소 Windows 데스크톱을 사용하여 Windows Forms 및 Windows Presentation Foundation(WPF) 애플리케이션을 포트할 수 있습니다. 분명히 말하지만, Windows 데스크톱 구성 요소는 Windows에서만 지원되고 포함됩니다. 자세한 내용은 이 문서 후반부의 [Windows 데스크톱](#windows-desktop) 섹션을 참조하세요.
+이 문서는 .NET Core 3.0(Preview 6)의 새로운 기능에 대해 설명합니다. 가장 중요한 개선 사항 중 하나는 Windows 데스크톱 애플리케이션에 대한 지원(Windows만 해당)입니다. .NET Core 3.0 SDK 구성 요소 Windows 데스크톱을 사용하여 Windows Forms 및 Windows Presentation Foundation(WPF) 애플리케이션을 포트할 수 있습니다. 분명히 말하지만, Windows 데스크톱 구성 요소는 Windows에서만 지원되고 포함됩니다. 자세한 내용은 이 문서 후반부의 [Windows 데스크톱](#windows-desktop) 섹션을 참조하세요.
 
-.NET Core 3.0에서는 C# 8.0에 대한 지원이 추가되었습니다. OmniSharp 확장이 지원되는 VSCode 또는 Visual Studio 2019 업데이트 1 미리 보기 최신 릴리스를 사용하는 것이 매우 좋습니다.
+.NET Core 3.0에서는 C# 8.0에 대한 지원이 추가되었습니다. [Visual Studio 미리 보기 최신 릴리스](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview) 또는 OmniSharp 확장이 지원되는 Visual Studio Code를 사용하는 것이 매우 좋습니다.
 
 Windows, Mac 및 Linux에서 지금 바로 [.NET Core 3.0 Preview 6을 다운로드하여 시작](https://aka.ms/netcore3download)하세요.
 
@@ -55,7 +55,7 @@ Windows용 MSI 설치 관리자는 .NET Core 3.0부터 변경되었습니다. �
 </Project>
 ```
 
-Visual Studio를 사용하고 있는 경우 Visual Studio 2017은 **.NET 표준 2.1** 또는 **.NET Core 3.0**을 지원하지 않으므로 Visual Studio 2019가 필요합니다. [Visual Studio 2019 업데이트 1 미리 보기](https://visualstudio.microsoft.com/vs/preview/)를 사용하는 것이 매우 좋습니다.
+Visual Studio를 사용하고 있는 경우 Visual Studio 2017은 **.NET Standard 2.1** 또는 **.NET Core 3.0**을 지원하지 않으므로 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)가 필요합니다.
 
 ## <a name="improved-net-core-version-apis"></a>향상된 .NET Core Version API
 

@@ -6,12 +6,12 @@ ms.date: 05/01/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
-ms.openlocfilehash: 39e454d67f60280c6a43e3b80d788d873345ab77
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: e34694eedd06c0a3e3558c9137c6add9a7f802e4
+ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307384"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410515"
 ---
 # <a name="automated-machine-learning-with-mlnet"></a>ML.NET을 통해 자동화된 기계 학습
 
@@ -26,6 +26,6 @@ ms.locfileid: "67307384"
 자동화된 ML은 현재 이진 분류, 다중 클래스 분류, 회귀의 기게 학습 [작업](resources/tasks.md)으로 제한됩니다. 다른 기계 학습 작업은 향후 릴리스에서 지원될 것입니다.
 
 세 가지 방법으로 자동화된 ML을 사용할 수 있습니다.
+1. 그래픽 사용자 인터페이스에서 [ML.NET 모델 작성기](automate-training-with-model-builder.md) 사용
 1. 명령줄에서 [ML.NET CLI](automate-training-with-cli.md) 사용
 1. 애플리케이션에서 [자동화된 ML API](how-to-guides/how-to-use-the-automl-api.md) 사용
-1. 그래픽 사용자 인터페이스에서 ML.NET 모델 작성기 사용

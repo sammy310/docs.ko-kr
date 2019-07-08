@@ -29,16 +29,16 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 4a495fb5ce353bcb4f7ccda975dfc74ba711db79
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 8068ec09f0c7d05d6d711e4e7a607b6183727b41
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025245"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424006"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>비트 및 시프트 연산자(C# 참조)
 
-다음 연산자는 [정수 형식](../keywords/integral-types-table.md)의 피연산자를 사용하여 비트 논리 또는 시프트 연산을 수행합니다.
+다음 연산자는 [정수 형식](../builtin-types/integral-numeric-types.md)의 피연산자를 사용하여 비트 논리 또는 시프트 연산을 수행합니다.
 
 - 단항 [`~`(비트 보수)](#bitwise-complement-operator-) 연산자
 - 이진 [`<<`(왼쪽 시프트)](#left-shift-operator-) 및 [`>>`(오른쪽 시프트)](#right-shift-operator-) 시프트 연산자
@@ -60,39 +60,39 @@ ms.locfileid: "67025245"
 
 ## <a name="left-shift-operator-"></a>왼쪽 시프트 연산자 \<\<
 
-`<<` 연산자는 첫 번째 피연산자를 두 번째 피연산자로 정의된 비트 수만큼 왼쪽으로 이동합니다.
+`<<` 연산자는 왼쪽 피연산자를 오른쪽 피연산자로 정의된 비트 수만큼 왼쪽으로 이동합니다.
 
 왼쪽 시프트 연산은 결과 형식의 범위를 벗어나는 상위 비트를 삭제하고 다음 예제와 같이 빈 하위 비트 위치를 0으로 설정합니다.
 
 [!code-csharp-interactive[left shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShift)]
 
-시프트 연산자는 `int`, `uint`, `long` 및 `ulong` 유형에 대해서만 정의되므로 작업 결과에는 항상 32비트 이상이 포함됩니다. 첫 번째 피연산자가 다른 정수 형식(`sbyte`, `byte`, `short`, `ushort` 또는 `char`)인 경우, 다음 예제와 같이 해당 값이 `int` 유형으로 변환됩니다.
+시프트 연산자는 `int`, `uint`, `long` 및 `ulong` 유형에 대해서만 정의되므로 작업 결과에는 항상 32비트 이상이 포함됩니다. 왼쪽 피연산자가 다른 정수 형식(`sbyte`, `byte`, `short`, `ushort` 또는 `char`)인 경우, 다음 예제와 같이 해당 값이 `int` 유형으로 변환됩니다.
 
 [!code-csharp-interactive[left shift with promotion](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShiftPromoted)]
 
-`<<` 연산자의 두 번째 피연산자가 시프트 수를 정의하는 방법에 대한 자세한 내용은 [시프트 연산자의 시프트 수](#shift-count-of-the-shift-operators) 섹션을 참조하세요.
+`<<` 연산자의 오른쪽 피연산자가 시프트 수를 정의하는 방법에 대한 자세한 내용은 [시프트 연산자의 시프트 수](#shift-count-of-the-shift-operators) 섹션을 참조하세요.
 
 ## <a name="right-shift-operator-"></a>오른쪽 시프트 연산자 >>
 
-`>>` 연산자는 첫 번째 피연산자를 두 번째 피연산자로 정의된 비트 수만큼 오른쪽으로 이동합니다.
+`>>` 연산자는 왼쪽 피연산자를 오른쪽 피연산자로 정의된 비트 수만큼 오른쪽으로 이동합니다.
 
 오른쪽 시프트 연산은 다음 예제와 같이 하위 비트를 삭제합니다.
 
 [!code-csharp-interactive[right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#RightShift)]
 
-빈 상위 공백 비트 위치는 다음과 같이 첫 번째 피연산자 형식에 따라 설정됩니다.
+빈 상위 공백 비트 위치는 다음과 같이 왼쪽 피연산자 형식에 따라 설정됩니다.
 
-- 첫 번째 피연산자가 [int](../keywords/int.md) 또는 [long](../keywords/long.md) 형식인 경우 오른쪽 시프트 연산자는 *산술* 시프트를 수행합니다. 첫 번째 피연산자의 최상위 비트(부호 비트) 값이 빈 상위 비트 위치로 전파됩니다. 즉, 빈 상위 비트 위치는 첫 번째 피연산자가 음수가 아닌 경우 0으로 설정되고, 음수인 경우 1로 설정됩니다.
+- 왼쪽 피연산자가 [int](../builtin-types/integral-numeric-types.md) 또는 [long](../builtin-types/integral-numeric-types.md) 형식인 경우 오른쪽 시프트 연산자는 *산술* 시프트를 수행합니다. 왼쪽 피연산자의 최상위 비트(부호 비트) 값이 빈 상위 비트 위치로 전파됩니다. 즉, 빈 상위 비트 위치는 왼쪽 피연산자가 음수가 아닌 경우 0으로 설정되고, 음수인 경우 1로 설정됩니다.
 
   [!code-csharp-interactive[arithmetic right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
 
-- 첫 번째 피연산자가 [uint](../keywords/uint.md) 또는 [ulong](../keywords/ulong.md) 형식이면 오른쪽 시프트 피연산자는 *논리적* 시프트를 수행합니다. 빈 상위 비트 위치가 항상 0으로 설정됩니다.
+- 왼쪽 피연산자가 [uint](../builtin-types/integral-numeric-types.md) 또는 [ulong](../builtin-types/integral-numeric-types.md) 형식이면 오른쪽 시프트 피연산자는 *논리적* 시프트를 수행합니다. 빈 상위 비트 위치가 항상 0으로 설정됩니다.
 
   [!code-csharp-interactive[logical right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
 
-`>>` 연산자의 두 번째 피연산자가 시프트 수를 정의하는 방법에 대한 자세한 내용은 [시프트 연산자의 시프트 수](#shift-count-of-the-shift-operators) 섹션을 참조하세요.
+`>>` 연산자의 오른쪽 피연산자가 시프트 수를 정의하는 방법에 대한 자세한 내용은 [시프트 연산자의 시프트 수](#shift-count-of-the-shift-operators) 섹션을 참조하세요.
 
-## <a name="logical-and-operator-amp"></a>논리 AND 연산자 &amp;
+## <a name="logical-and-operator-"></a> 논리 AND 연산자 &amp;
 
 `&` 연산자는 해당 피연산자의 비트 논리 AND를 컴퓨팅합니다.
 
@@ -158,13 +158,13 @@ x = x op y
 
 ## <a name="shift-count-of-the-shift-operators"></a>시프트 연산자의 시프트 수
 
-시트프 연산자 `<<` 및 `>>`의 경우 두 번째 피연산자의 형식은 [int](../keywords/int.md)이거나 `int`로의 [미리 정의된 암시적 숫자 변환](../keywords/implicit-numeric-conversions-table.md)이 있는 형식이어야 합니다.
+시트프 연산자 `<<` 및 `>>`의 경우 오른쪽 피연산자의 형식은 [int](../builtin-types/integral-numeric-types.md)이거나 `int`로의 [미리 정의된 암시적 숫자 변환](../keywords/implicit-numeric-conversions-table.md)이 있는 형식이어야 합니다.
 
 `x << count` 및 `x >> count`식의 경우 실제 시프트 수는 다음과 같이 `x` 형식에 따라 달라집니다.
 
-- `x`의 형식이 [int](../keywords/int.md) 또는 [uint](../keywords/uint.md)이면 시프트 수는 두 번째 피연산자의 하위 *5*비트로 정의됩니다. 즉, 시프트 수는 `count & 0x1F`(또는 `count & 0b_1_1111`)에서 계산됩니다.
+- `x`의 형식이 [int](../builtin-types/integral-numeric-types.md) 또는 [uint](../builtin-types/integral-numeric-types.md)이면 시프트 수는 오른쪽 피연산자의 하위 *5*비트로 정의됩니다. 즉, 시프트 수는 `count & 0x1F`(또는 `count & 0b_1_1111`)에서 계산됩니다.
 
-- `x`의 형식이 [long](../keywords/long.md) 또는 [ulong](../keywords/ulong.md)이면 시프트 수는 두 번째 피연산자의 하위 *6*비트로 정의됩니다. 즉, 시프트 수는 `count & 0x3F`(또는 `count & 0b_11_1111`)에서 계산됩니다.
+- `x`의 형식이 [long](../builtin-types/integral-numeric-types.md) 또는 [ulong](../builtin-types/integral-numeric-types.md)이면 시프트 수는 오른쪽 피연산자의 하위 *6*비트로 정의됩니다. 즉, 시프트 수는 `count & 0x3F`(또는 `count & 0b_11_1111`)에서 계산됩니다.
 
 다음 예제에서는 해당 동작을 보여줍니다.
 

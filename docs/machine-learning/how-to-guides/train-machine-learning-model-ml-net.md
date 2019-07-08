@@ -1,20 +1,20 @@
 ---
 title: 모델 학습 및 평가
-description: ML.NET을 사용한 기계 학습 모델 빌드, 학습된 매개 변수 추출 및 성능 측정 방법을 알아봅니다. 이 샘플에서는 회귀 모델을 학습하지만 개념은 대부분의 다른 알고리즘에 널리 적용할 수 있습니다.
-ms.date: 06/11/2019
+description: ML.NET을 사용한 기계 학습 모델 빌드, 메트릭 수집 및 성능 측정 방법을 알아봅니다. 기계 학습 모델은 새 데이터를 사용하여 예측을 수행하기 위해 학습 데이터에서 패턴을 식별합니다.
+ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc, how-to, title-hack-0612
-ms.openlocfilehash: d93353a3503ba67bde5fb61dc88f45d26e2f4306
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.custom: mvc, how-to, title-hack-0625
+ms.openlocfilehash: 61cdaf693c417d02da95d1d79ab30eb2d30a057b
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307439"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397637"
 ---
 # <a name="train-and-evaluate-a-model"></a>모델 학습 및 평가
 
-ML.NET을 사용한 기계 학습 모델 빌드, 학습된 매개 변수 추출 및 성능 측정 방법을 알아봅니다. 이 샘플에서는 회귀 모델을 학습하지만 개념은 대부분의 다른 알고리즘에 널리 적용할 수 있습니다.
+ML.NET을 사용한 기계 학습 모델 빌드, 메트릭 수집 및 성능 측정 방법을 알아봅니다. 이 샘플에서는 회귀 모델을 학습하지만 개념은 대부분의 다른 알고리즘에 널리 적용할 수 있습니다.
 
 ## <a name="split-data-for-training-and-testing"></a>학습 및 테스트를 위한 데이터 분할
 
