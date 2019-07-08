@@ -14,12 +14,12 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 258adc45fc6874cca5829479eef1196ebea1e300
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 41355dbadd566648b45d825cdd6515bfc6d411aa
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347970"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610034"
 ---
 # <a name="-and--operators-c-reference"></a>+ 및 += 연산자(C# 참조)
 
@@ -71,7 +71,7 @@ x = x + y
 
 ## <a name="operator-overloadability"></a>연산자 오버로드 가능성
 
-사용자 정의 형식은 `+` 연산자를 [오버로드](../keywords/operator.md)할 수 있습니다. 이진 `+` 연산자가 오버로드되면 `+=` 연산자도 암시적으로 오버로드됩니다. 사용자 정의 형식에는 `+=` 연산자를 명시적으로 오버로드할 수 없습니다.
+사용자 정의 형식은 `+` 연산자를 [오버로드](operator-overloading.md)할 수 있습니다. 이진 `+` 연산자가 오버로드되면 `+=` 연산자도 암시적으로 오버로드됩니다. 사용자 정의 형식에는 `+=` 연산자를 명시적으로 오버로드할 수 없습니다.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
