@@ -2,12 +2,12 @@
 title: Entity Framework용 SqlClient
 ms.date: 03/30/2017
 ms.assetid: 9a5d6d39-d955-43a5-a5c2-931c239398f1
-ms.openlocfilehash: d81499961e7e47bba3b2594ddddd192c87a4a936
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8933a975c075407066bff97672f1b82f125bb47
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879122"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662102"
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>Entity Framework용 SqlClient
 이 단원에서는 Entity Framework가 Microsoft SQL Server에서 작동할 수 있도록 하는 .NET Framework Data Provider for SQL Server(SqlClient)에 대해 설명합니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "61879122"
 ## <a name="providermanifesttoken-schema-attribute"></a>ProviderManifestToken 스키마 특성  
  `ProviderManifestToken`은 SSDL에서 `Schema` 요소의 필수 특성입니다. 이 토큰은 오프라인 시나리오용으로 공급자 매니페스트를 로드하는 데 사용됩니다. 에 대 한 자세한 내용은 `ProviderManifestToken` 특성을 참조 하십시오 [스키마 요소 (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl)합니다.  
   
- SqlClient 다른 버전의 SQL Server에 대 한 데이터 공급자로 사용할 수 있습니다. 이러한 버전에는 서로 다른 기능이 있습니다. 예를 들어 [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]은 `varchar(max)`에서 도입된 `nvarchar(max)` 및 [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] 형식을 지원하지 않습니다.  
+ SqlClient 다른 버전의 SQL Server에 대 한 데이터 공급자로 사용할 수 있습니다. 이러한 버전에는 서로 다른 기능이 있습니다. 예를 들어, SQL Server 2000 지원 하지 않습니다 `varchar(max)` 고 `nvarchar(max)` SQL Server 2005를 사용 하 여 도입 된 형식입니다.  
   
  SqlClient는 여러 버전의 SQL Server에 대해 다음과 같은 공급자 매니페스트 토큰을 생성하고 허용합니다.  
   

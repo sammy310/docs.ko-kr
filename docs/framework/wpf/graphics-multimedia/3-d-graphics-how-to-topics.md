@@ -7,15 +7,15 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 - graphics [WPF], 3-D
 ms.assetid: 4f091835-28d1-498c-b660-9b3acf34ed13
-ms.openlocfilehash: 1f78d2f0ff8887ca5cf1cd1129fb946d2224246d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9689e3c42010b7de641bee47af34e6888c415ed9
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020285"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663952"
 ---
 # <a name="3-d-graphics-how-to-topics"></a>3차원 그래픽 방법 항목
-이 섹션의에서 항목에서는 사용 하는 방법을 보여 줍니다 [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] 그래픽에서 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램입니다.  
+이 섹션의에서 항목에서는의 3 차원 그래픽을 사용 하는 방법을 보여 줍니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [3차원 장면 만들기](how-to-create-a-3-d-scene.md)  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: e84319c60534c3ecf154c3f58973bcc429a73842
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: d7d87a3e95cf66efb91b71f6ff3c7c9bb1fbb311
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539819"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662144"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities에서 알려진 문제 및 고려 사항
 이 섹션에서는 LINQ to Entities 쿼리에서 알려진된 문제에 대 한 정보를 제공 합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "67539819"
   
 <a name="OrderingInfoLost"></a>   
 ## <a name="ordering-information-lost"></a>순서 정보 손실  
- 열을 익명 형식으로 프로젝션하면 호환성 수준 "80"에서 [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)] 데이터베이스에 대해 실행되는 일부 쿼리에서 순서 정보가 손실됩니다.  이런 현상은 다음 예제와 같이 정렬 순서 목록에 있는 열 이름이 선택기의 열 이름과 일치할 때 발생합니다.  
+ 익명 형식으로 열을 프로젝션 손실 호환성 수준 "80"으로 설정 된 SQL Server 2005 데이터베이스에 대해 실행 되는 일부 쿼리에서 순서 정보가 발생 합니다.  이런 현상은 다음 예제와 같이 정렬 순서 목록에 있는 열 이름이 선택기의 열 이름과 일치할 때 발생합니다.  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt543840)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt543840)]  

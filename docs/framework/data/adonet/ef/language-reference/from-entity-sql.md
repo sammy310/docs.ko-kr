@@ -2,12 +2,12 @@
 title: FROM(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: 36e3059869ed048bd7c5294c4f5f5407288610b2
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 69a6af868ace384a63d08d705c395b58a173ca8e
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489944"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662163"
 ---
 # <a name="from-entity-sql"></a>FROM(Entity SQL)
 에 사용 되는 컬렉션을 지정 [선택](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) 문입니다.  
@@ -96,7 +96,7 @@ LOB.Customers
 >  와 달리 TRANSACT-SQL 한지는 명시적 중첩 해제 단계가 필요 하지 않습니다 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]합니다.  
   
 > [!NOTE]
->  `CROSS` 및 `OUTER APPLY` 연산자는 [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]에서 도입되었습니다. 경우에 따라 쿼리 파이프라인에서 `CROSS APPLY` 및/또는 `OUTER APPLY` 연산자가 포함된 Transact-SQL을 생성할 수 있습니다. 때문에 SQL Server의 버전을 비롯 한 일부 백엔드 공급자 이전의 [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]이러한 연산자를 지원 하지 않습니다, 해당 백엔드 공급자에서 쿼리를 실행할 수 없습니다.  
+>  `CROSS` 및 `OUTER APPLY` 연산자는 SQL Server 2005에서 도입 되었습니다. 경우에 따라 쿼리 파이프라인에서 `CROSS APPLY` 및/또는 `OUTER APPLY` 연산자가 포함된 Transact-SQL을 생성할 수 있습니다. SQL Server 2005 보다 이전 버전의 SQL Server를 비롯 한 일부 백엔드 공급자 이러한 연산자를 지원 하지 않으므로 해당 백엔드 공급자에서 이러한 쿼리를 실행할 수 없습니다.  
 >   
 >  출력 쿼리에 `CROSS APPLY` 및/또는 `OUTER APPLY` 연산자가 포함될 수 있는 일부 일반적인 시나리오는 페이징이 포함된 상호 관련된 하위 쿼리, 상호 관련된 하위 쿼리 또는 탐색으로 생성된 컬렉션에 대한 AnyElement, 요소 선택기를 허용하는 그룹화 메서드를 사용하는 LINQ 쿼리, `CROSS APPLY` 또는 `OUTER APPLY`가 명시적으로 지정된 쿼리, `DEREF` 구문에 대한 `REF` 구문이 있는 쿼리 등입니다.  
   

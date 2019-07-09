@@ -2,12 +2,12 @@
 title: 문자열
 description: 설명 하는 방법을 F# 'string' 형식은 유니코드 문자 시퀀스로 변경할 수 없는 텍스트를 나타냅니다.
 ms.date: 07/05/2019
-ms.openlocfilehash: b252aef7d7e6e299df8282407198714971e80cd5
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: ec895723cc6d21a701a27b5d70d053bb681ce2b3
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610171"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660606"
 ---
 # <a name="strings"></a>문자열
 
@@ -32,8 +32,8 @@ ms.locfileid: "67610171"
 |백슬래시|`\\`|
 |따옴표|`\"`|
 |아포스트로피|`\'`|
-|유니코드 문자|`\DDD` (여기서 `D` 10 진수를 나타내는 숫자; 000-의 범위 255; 예: `\231` "ç" =)|
-|유니코드 문자|`\xHH` (여기서 `H` 16 진수; 00-FF;의 범위를 나타내는 예: `\xE7` "ç" =)|
+|유니코드 문자|`\DDD` (여기서 `D` 10 진수를 나타냅니다 자리; 000-범위의 255; 예를 들어 `\231` "ç" =)|
+|유니코드 문자|`\xHH` (여기서 `H` 16 진수; 00-FF;의 범위를 나타내는 예를 들어 `\xE7` "ç" =)|
 |유니코드 문자|`\uHHHH` (U T F-16) (여기서 `H` 16 진수; 0000-FFFF;의 범위를 나타냅니다  예를 들어 `\u00E7` "ç" =)|
 |유니코드 문자|`\U00HHHHHH` (UTF-32) (여기서 `H` 16 진수; 000000-10ffff 까지의;의 범위를 나타냅니다  예를 들어 `\U0001F47D` = "👽")|
 

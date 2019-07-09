@@ -2,12 +2,12 @@
 title: 추적 프로필
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: c934ec9fd0524506577ab4457a2ec194d4d0cba7
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a643cf37bbb3e72baefb434249aa54b386060627
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589940"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660920"
 ---
 # <a name="tracking-profiles"></a>추적 프로필
 
@@ -112,199 +112,199 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery> - 앞에서 설명한 `Started` 및 `Completed`와 같은 워크플로 인스턴스 수명 주기 변경 내용을 추적하려면 이 쿼리 형식을 사용합니다. <xref:System.Activities.Tracking.WorkflowInstanceQuery>는 다음 <xref:System.Activities.Tracking.TrackingRecord> 개체를 구독하는 데 사용됩니다.
 
-    - <xref:System.Activities.Tracking.WorkflowInstanceRecord>
+  - <xref:System.Activities.Tracking.WorkflowInstanceRecord>
 
-    - <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>
+  - <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>
 
-    - <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>
+  - <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>
 
-    - <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>
+  - <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>
 
-    - <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>
+  - <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>
 
-    구독 가능한 상태는 <xref:System.Activities.Tracking.WorkflowInstanceStates> 클래스에서 지정됩니다.
+  구독 가능한 상태는 <xref:System.Activities.Tracking.WorkflowInstanceStates> 클래스에서 지정됩니다.
 
-    다음 예제에서는 `Started`를 사용하여 <xref:System.Activities.Tracking.WorkflowInstanceQuery> 인스턴스에 대한 워크플로 인스턴스 수준 추적 레코드를 구독하는 데 사용되는 구성 또는 코드를 보여 줍니다.
+  다음 예제에서는 `Started`를 사용하여 <xref:System.Activities.Tracking.WorkflowInstanceQuery> 인스턴스에 대한 워크플로 인스턴스 수준 추적 레코드를 구독하는 데 사용되는 구성 또는 코드를 보여 줍니다.
 
-    ```xml
-    <workflowInstanceQueries>
-        <workflowInstanceQuery>
-          <states>
-            <state name="Started"/>
-          </states>
-        </workflowInstanceQuery>
-    </workflowInstanceQueries>
-    ```
+  ```xml
+  <workflowInstanceQueries>
+      <workflowInstanceQuery>
+        <states>
+          <state name="Started"/>
+        </states>
+      </workflowInstanceQuery>
+  </workflowInstanceQueries>
+  ```
 
-    ```csharp
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()
-    {
-        Name = "Sample Tracking Profile",
-        Queries =
-        {
-            new WorkflowInstanceQuery()
-            {
-                States = { WorkflowInstanceStates.Started}
-            }
-        }
-    };
-    ```
+  ```csharp
+  TrackingProfile sampleTrackingProfile = new TrackingProfile()
+  {
+      Name = "Sample Tracking Profile",
+      Queries =
+      {
+          new WorkflowInstanceQuery()
+          {
+              States = { WorkflowInstanceStates.Started}
+          }
+      }
+  };
+  ```
 
 - <xref:System.Activities.Tracking.ActivityStateQuery> - 워크플로 인스턴스를 구성하는 활동에 대한 수명 주기 변경 내용을 추적하려면 이 쿼리 형식을 사용합니다. 예를 들어 다음 워크플로 인스턴스 내에 "전자 메일 보내기" 활동이 완료 될 때마다 추적 하는 것이 좋습니다. 이 쿼리는 <xref:System.Activities.Tracking.TrackingParticipant>가 <xref:System.Activities.Tracking.ActivityStateRecord> 개체를 구독하는 데 필요합니다. 구독하기 위해 사용 가능한 상태는 <xref:System.Activities.Tracking.ActivityStates>에서 지정됩니다.
 
-    다음 예제에서는 <xref:System.Activities.Tracking.ActivityStateQuery> 활동에 대해 `SendEmailActivity`를 사용하는 활동 상태 추적 레코드를 구독하는 데 사용되는 구성과 코드를 보여 줍니다.
+  다음 예제에서는 <xref:System.Activities.Tracking.ActivityStateQuery> 활동에 대해 `SendEmailActivity`를 사용하는 활동 상태 추적 레코드를 구독하는 데 사용되는 구성과 코드를 보여 줍니다.
 
-    ```xml
-    <activityStateQueries>
-      <activityStateQuery activityName="SendEmailActivity">
-        <states>
-          <state name="Closed"/>
-        </states>
-      </activityStateQuery>
-    </activityStateQueries>
-    ```
+  ```xml
+  <activityStateQueries>
+    <activityStateQuery activityName="SendEmailActivity">
+      <states>
+        <state name="Closed"/>
+      </states>
+    </activityStateQuery>
+  </activityStateQueries>
+  ```
 
-    ```csharp
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()
-    {
-        Name = "Sample Tracking Profile",
-        Queries =
-        {
-            new ActivityStateQuery()
-            {
-                ActivityName = "SendEmailActivity",
-                States = { ActivityStates.Closed }
-            }
-        }
-    };
-    ```
+  ```csharp
+  TrackingProfile sampleTrackingProfile = new TrackingProfile()
+  {
+      Name = "Sample Tracking Profile",
+      Queries =
+      {
+          new ActivityStateQuery()
+          {
+              ActivityName = "SendEmailActivity",
+              States = { ActivityStates.Closed }
+          }
+      }
+  };
+  ```
 
-    > [!NOTE]
-    > 여러 activityStateQuery 요소에 동일한 이름을 사용할 경우 마지막 요소의 상태만 추적 프로필에 사용됩니다.
+  > [!NOTE]
+  > 여러 activityStateQuery 요소에 동일한 이름을 사용할 경우 마지막 요소의 상태만 추적 프로필에 사용됩니다.
 
 - <xref:System.Activities.Tracking.ActivityScheduledQuery> - 이 쿼리를 사용하여 부모 활동에 의해 실행이 예약된 활동을 추적할 수 있습니다. 이 쿼리는 <xref:System.Activities.Tracking.TrackingParticipant>가 <xref:System.Activities.Tracking.ActivityScheduledRecord> 개체를 구독하는 데 필요합니다.
 
-    다음 예제에서는 `SendEmailActivity`를 사용하여 예약된 <xref:System.Activities.Tracking.ActivityScheduledQuery> 자식 활동 관련 레코드를 구독하는 데 사용되는 구성과 코드를 보여 줍니다.
+  다음 예제에서는 `SendEmailActivity`를 사용하여 예약된 <xref:System.Activities.Tracking.ActivityScheduledQuery> 자식 활동 관련 레코드를 구독하는 데 사용되는 구성과 코드를 보여 줍니다.
 
-    ```xml
-    <activityScheduledQueries>
-      <activityScheduledQuery activityName="ProcessNotificationsActivity" childActivityName="SendEmailActivity" />
-     </activityScheduledQueries>
-    ```
+  ```xml
+  <activityScheduledQueries>
+    <activityScheduledQuery activityName="ProcessNotificationsActivity" childActivityName="SendEmailActivity" />
+  </activityScheduledQueries>
+  ```
 
-    ```csharp
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()
-    {
-        Name = "Sample Tracking Profile",
-        Queries =
-        {
-            new ActivityScheduledQuery()
-            {
-                ActivityName = "ProcessNotificationsActivity",
-                ChildActivityName = "SendEmailActivity"
-            }
-        }
-    };
-    ```
+  ```csharp
+  TrackingProfile sampleTrackingProfile = new TrackingProfile()
+  {
+      Name = "Sample Tracking Profile",
+      Queries =
+      {
+          new ActivityScheduledQuery()
+          {
+              ActivityName = "ProcessNotificationsActivity",
+              ChildActivityName = "SendEmailActivity"
+          }
+      }
+  };
+  ```
 
 - <xref:System.Activities.Tracking.FaultPropagationQuery> - 활동에서 발생하는 오류 처리를 추적하려면 이 쿼리 형식을 사용합니다. 이 쿼리는 <xref:System.Activities.Tracking.TrackingParticipant>가 <xref:System.Activities.Tracking.FaultPropagationRecord> 개체를 구독하는 데 필요합니다.
 
-    다음 예제에서는 <xref:System.Activities.Tracking.FaultPropagationQuery>를 사용하여 오류 전파 관련 레코드를 구독하는 데 사용되는 구성과 코드를 보여 줍니다.
+  다음 예제에서는 <xref:System.Activities.Tracking.FaultPropagationQuery>를 사용하여 오류 전파 관련 레코드를 구독하는 데 사용되는 구성과 코드를 보여 줍니다.
 
-    ```xml
-    <faultPropagationQueries>
-      <faultPropagationQuery faultSourceActivityName="SendEmailActivity" faultHandlerActivityName="NotificationsFaultHandler" />
-    </faultPropagationQueries>
-    ```
+  ```xml
+  <faultPropagationQueries>
+    <faultPropagationQuery faultSourceActivityName="SendEmailActivity" faultHandlerActivityName="NotificationsFaultHandler" />
+  </faultPropagationQueries>
+  ```
 
-    ```csharp
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()
-    {
-        Name = "Sample Tracking Profile",
-        Queries =
-        {
-            new FaultPropagationQuery()
-            {
-                FaultSourceActivityName = "SendEmailActivity",
-                FaultHandlerActivityName = "NotificationsFaultHandler"
-            }
-        }
-    };
-    ```
+  ```csharp
+  TrackingProfile sampleTrackingProfile = new TrackingProfile()
+  {
+      Name = "Sample Tracking Profile",
+      Queries =
+      {
+          new FaultPropagationQuery()
+          {
+              FaultSourceActivityName = "SendEmailActivity",
+              FaultHandlerActivityName = "NotificationsFaultHandler"
+          }
+      }
+  };
+  ```
 
 - <xref:System.Activities.Tracking.CancelRequestedQuery> - 부모 활동에 의한 자식 활동 취소 요청을 추적하려면 이 쿼리 형식을 사용합니다. 이 쿼리는 <xref:System.Activities.Tracking.TrackingParticipant>가 <xref:System.Activities.Tracking.CancelRequestedRecord> 개체를 구독하는 데 필요합니다.
 
-    구성 및 레코드를 구독 하는 데 사용 되는 코드를 사용 하 여 활동 취소 관련 <xref:System.Activities.Tracking.CancelRequestedQuery> 다음 예와에서 같습니다.
+  구성 및 레코드를 구독 하는 데 사용 되는 코드를 사용 하 여 활동 취소 관련 <xref:System.Activities.Tracking.CancelRequestedQuery> 다음 예와에서 같습니다.
 
-    ```xml
-    <cancelRequestedQueries>
-      <cancelRequestedQuery activityName="ProcessNotificationsActivity" childActivityName="SendEmailActivity" />
-    </cancelRequestedQueries>
-    ```
+  ```xml
+  <cancelRequestedQueries>
+    <cancelRequestedQuery activityName="ProcessNotificationsActivity" childActivityName="SendEmailActivity" />
+  </cancelRequestedQueries>
+  ```
 
-    ```csharp
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()
-    {
-        Name = "Sample Tracking Profile",
-        Queries =
-        {
-            new CancelRequestedQuery()
-            {
-                ActivityName = "ProcessNotificationsActivity",
-                ChildActivityName = "SendEmailActivity"
-            }
-        }
-    };
-    ```
+  ```csharp
+  TrackingProfile sampleTrackingProfile = new TrackingProfile()
+  {
+      Name = "Sample Tracking Profile",
+      Queries =
+      {
+          new CancelRequestedQuery()
+          {
+              ActivityName = "ProcessNotificationsActivity",
+              ChildActivityName = "SendEmailActivity"
+          }
+      }
+  };
+  ```
 
 - <xref:System.Activities.Tracking.CustomTrackingQuery> - 코드 활동에서 정의한 이벤트를 추적하려면 이 쿼리 형식을 사용합니다. 이 쿼리는 <xref:System.Activities.Tracking.TrackingParticipant>가 <xref:System.Activities.Tracking.CustomTrackingRecord> 개체를 구독하는 데 필요합니다.
 
-    다음 예제에서는 <xref:System.Activities.Tracking.CustomTrackingQuery>를 사용하여 사용자 지정 추적 레코드 관련 레코드를 구독하는 데 사용되는 구성과 코드를 보여 줍니다.
+  다음 예제에서는 <xref:System.Activities.Tracking.CustomTrackingQuery>를 사용하여 사용자 지정 추적 레코드 관련 레코드를 구독하는 데 사용되는 구성과 코드를 보여 줍니다.
 
-    ```xml
-    <customTrackingQueries>
-      <customTrackingQuery name="EmailAddress" activityName="SendEmailActivity" />
-    </customTrackingQueries>
-    ```
+  ```xml
+  <customTrackingQueries>
+    <customTrackingQuery name="EmailAddress" activityName="SendEmailActivity" />
+  </customTrackingQueries>
+  ```
 
-    ```csharp
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()
-    {
-        Name = "Sample Tracking Profile",
-        Queries =
-        {
-            new CustomTrackingQuery()
-            {
-                Name = "EmailAddress",
-                ActivityName = "SendEmailActivity"
-            }
-        }
-    };
-    ```
+  ```csharp
+  TrackingProfile sampleTrackingProfile = new TrackingProfile()
+  {
+      Name = "Sample Tracking Profile",
+      Queries =
+      {
+          new CustomTrackingQuery()
+          {
+              Name = "EmailAddress",
+              ActivityName = "SendEmailActivity"
+          }
+      }
+  };
+  ```
 
 - <xref:System.Activities.Tracking.BookmarkResumptionQuery> - 워크플로 인스턴스 내의 책갈피 다시 시작을 추적하려면 이 쿼리 형식을 사용합니다. 이 쿼리는 <xref:System.Activities.Tracking.TrackingParticipant>가 <xref:System.Activities.Tracking.BookmarkResumptionRecord> 개체를 구독하는 데 필요합니다.
 
-    다음 예제에서는 <xref:System.Activities.Tracking.BookmarkResumptionQuery>를 사용하여 책갈피 다시 시작 관련 레코드를 구독하는 데 사용되는 구성과 코드를 보여 줍니다.
+  다음 예제에서는 <xref:System.Activities.Tracking.BookmarkResumptionQuery>를 사용하여 책갈피 다시 시작 관련 레코드를 구독하는 데 사용되는 구성과 코드를 보여 줍니다.
 
-    ```xml
-    <bookmarkResumptionQueries>
-      <bookmarkResumptionQuery name="SentEmailBookmark" />
-    </bookmarkResumptionQueries>
-    ```
+  ```xml
+  <bookmarkResumptionQueries>
+    <bookmarkResumptionQuery name="SentEmailBookmark" />
+  </bookmarkResumptionQueries>
+  ```
 
-    ```csharp
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()
-    {
-        Name = "Sample Tracking Profile",
-        Queries =
-        {
-            new BookmarkResumptionQuery()
-            {
-                Name = "sentEmailBookmark"
-            }
-        }
-    };
-    ```
+  ```csharp
+  TrackingProfile sampleTrackingProfile = new TrackingProfile()
+  {
+      Name = "Sample Tracking Profile",
+      Queries =
+      {
+          new BookmarkResumptionQuery()
+          {
+              Name = "sentEmailBookmark"
+          }
+      }
+  };
+  ```
 
 ### <a name="annotations"></a>주석
 
@@ -352,38 +352,38 @@ XML 구성 파일로 구성된 프로필은 동작 확장을 사용하여 추적
 
 - 워크플로 인스턴스 레코드 및 오류를 가져오는 추적 프로필
 
-```xml
-<trackingProfile name="Instance and Fault Records">
-  <workflow activityDefinitionId="*">
-    <workflowInstanceQueries>
-      <workflowInstanceQuery>
-        <states>
-          <state name="*" />
-        </states>
-      </workflowInstanceQuery>
-    </workflowInstanceQueries>
-    <activityStateQueries>
-      <activityStateQuery activityName="*">
-        <states>
-          <state name="Faulted"/>
-        </states>
-      </activityStateQuery>
-    </activityStateQueries>
-  </workflow>
-</trackingProfile>
-```
+  ```xml
+  <trackingProfile name="Instance and Fault Records">
+    <workflow activityDefinitionId="*">
+      <workflowInstanceQueries>
+        <workflowInstanceQuery>
+          <states>
+            <state name="*" />
+          </states>
+        </workflowInstanceQuery>
+      </workflowInstanceQueries>
+      <activityStateQueries>
+        <activityStateQuery activityName="*">
+          <states>
+            <state name="Faulted"/>
+          </states>
+        </activityStateQuery>
+      </activityStateQueries>
+    </workflow>
+  </trackingProfile>
+  ```
 
-1. 모든 사용자 지정 추적 레코드를 가져오는 추적 프로필
+- 모든 사용자 지정 추적 레코드를 가져오는 추적 프로필
 
-```xml
-<trackingProfile name="Instance_And_Custom_Records">
-  <workflow activityDefinitionId="*">
-    <customTrackingQueries>
-      <customTrackingQuery name="*" activityName="*" />
-    </customTrackingQueries>
-  </workflow>
-</trackingProfile>
-```
+  ```xml
+  <trackingProfile name="Instance_And_Custom_Records">
+    <workflow activityDefinitionId="*">
+      <customTrackingQueries>
+        <customTrackingQuery name="*" activityName="*" />
+      </customTrackingQueries>
+    </workflow>
+  </trackingProfile>
+  ```
 
 ## <a name="see-also"></a>참고자료
 

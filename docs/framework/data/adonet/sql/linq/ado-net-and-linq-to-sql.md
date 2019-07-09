@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-ms.openlocfilehash: 4f2f9fa1cb1be421be57ae0671573150871ebd1d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 6a6e057b45c1305a889ce4ed915b437a29ab2794
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880475"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662074"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET 및 LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ADO.NET 기술 제품군의 일부가입니다. ADO.NET 공급자 모델에서 제공 하는 서비스는 기반으로 합니다. 따라서 혼합할 수 있습니다 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 기존 ADO.NET 응용 프로그램을 사용 하 여 코드에 대 한 현재 ADO.NET 솔루션 마이그레이션하고 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]합니다. 다음 그림에서는 이 관계를 간략하게 보여 줍니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "65880475"
  [!code-csharp[DLinqAdoNet#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqAdoNet/cs/Program.cs#2)]
  [!code-vb[DLinqAdoNet#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#2)]  
   
- 이 방법을 모든 데이터베이스에 사용할 수 있는 것은 아닙니다. 예를 들어 SqlClient 연결은 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] 서버에 대해 작동할 경우 시스템 트랜잭션을 승격할 수 없습니다. 대신에 사용 중인 트랜잭션 범위가 있을 때마다 완전한 분산 트랜잭션에 자동으로 참여합니다.  
+ 이 방법을 모든 데이터베이스에 사용할 수 있는 것은 아닙니다. 예를 들어 SqlClient 연결은 SQL Server 2000 서버에 대해 작동 하는 경우 시스템 트랜잭션을 승격할 수 없습니다. 대신에 사용 중인 트랜잭션 범위가 있을 때마다 완전한 분산 트랜잭션에 자동으로 참여합니다.  
   
 ## <a name="direct-sql-commands"></a>SQL 명령 직접 실행  
  <xref:System.Data.Linq.DataContext>를 사용하여 변경 내용을 쿼리하거나 전송하는 기능으로는 원하는 특수한 작업을 수행할 수 없는 경우가 종종 있습니다. 이러한 상황에서는 <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> 메서드를 사용하여 SQL 명령을 데이터베이스에 대해 실행하고 쿼리 결과를 개체로 변환할 수 있습니다.  

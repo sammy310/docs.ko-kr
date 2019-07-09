@@ -2,16 +2,22 @@
 title: 그래픽 및 멀티미디어
 ms.date: 03/30/2017
 dev_langs:
-  - csharp
-  - vb
+- csharp
+- vb
 helpviewer_keywords:
-  - 'media [WPF], features'
-  - 'video effects [WPF]'
-  - 'sound effects [WPF]'
-  - 'animation [WPF], features'
-  - 'graphics features [WPF]'
-  - 'transition effects [WPF]'
+- media [WPF], features
+- video effects [WPF]
+- sound effects [WPF]
+- animation [WPF], features
+- graphics features [WPF]
+- transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
+ms.openlocfilehash: a770bcbbc8ac553c55e9dda5097abec8790182e5
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663733"
 ---
 # <a name="graphics-and-multimedia"></a>그래픽 및 멀티미디어
 
@@ -53,7 +59,7 @@ WPF는 고품질의 2차원 그래픽을 지원합니다. 기능으로는 브러
 
 ### <a name="2-d-shapes"></a>2차원 도형
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 다음 그림에 표시된 사각형 및 타원과 같은 일반적인 벡터 기반의 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 도형 라이브러리를 제공합니다.
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 일반적으로 사용 되는, 벡터 기반의 2d 도형 다음 그림에 나와 있는 타원, 사각형 등의 라이브러리를 제공 합니다.
 
 ![다이어그램 표시 타원 및 사각형입니다.](./media/index/two-deminsional-shapes-ellipses-rectangles.png)
 
@@ -95,7 +101,7 @@ End Class
 
 ### <a name="2-d-geometries"></a>2차원 기하 도형
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 제공하는 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 도형으로 충분하지 않을 경우 기하 도형 및 경로에 대한 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 지원을 사용하여 도형을 직접 만들 수 있습니다. 다음 그림에서는 기하 도형을 그리기 브러시로 사용하여 도형을 만들고 다른 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 요소를 클리핑하는 방법을 보여 줍니다.
+경우는 2 차원 셰이프는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 제공 권한이 사용할 수 없는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 기 하 도형 및 경로를 직접 만들에 대 한 지원. 다음 그림에서는 기하 도형을 그리기 브러시로 사용하여 도형을 만들고 다른 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 요소를 클리핑하는 방법을 보여 줍니다.
 
 ![기 하 도형을 만들어야 사용 하는 방법을 보여주는 스크린샷.](./media/index/use-geometries-create-shapes.png)
 
@@ -103,7 +109,7 @@ End Class
 
 ### <a name="2-d-effects"></a>2차원 효과
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서는 다양한 효과 만드는 데 사용할 수 있는 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 클래스 라이브러리를 제공합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 렌더링 기능은 그라데이션, 비트맵, 그림 및 비디오가 있는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 요소를 그리고 회전, 크기 조정 및 기울이기를 사용하여 조작하는 기능을 제공합니다. 다음 그림에서는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 브러시를 사용하여 획득할 수 있는 많은 효과의 예를 보여 줍니다.
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 다양 한 효과 만드는 데 사용할 수는 2 차원 클래스 라이브러리를 제공 합니다. 2 차원 렌더링 기능이 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 그릴 수 있는 기능도 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 그라데이션, 비트맵, 그림 및 비디오; 요소 회전을 사용 하 여 조작 하 고 크기 조정 및 기울이기와 합니다. 다음 그림에서는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 브러시를 사용하여 획득할 수 있는 많은 효과의 예를 보여 줍니다.
 
 ![다양 한 WPF 브러시 및 그리기 요소를 보여 주는 그림입니다.](./media/index/brushes-paint-elements.png)
 
@@ -113,7 +119,7 @@ End Class
 
 ## <a name="3-d-rendering"></a>3차원 렌더링
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서는 더 흥미로운 레이아웃, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 및 데이터 시각화를 만들 수 있도록 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 그래픽 지원을 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에 통합하는 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 렌더링 기능 집합을 제공합니다. 다음 그림과 같이 스펙트럼의 한쪽 끝에서 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]를 사용하여 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 이미지를 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 도형 표면 위에 렌더링할 수 있습니다.
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 2 차원 그래픽 지원 통합 되는 3 차원 렌더링 기능 집합을 제공 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 더 흥미로운 레이아웃을 만들 수 있는 순서로 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], 및 데이터 시각화. 스펙트럼의 한쪽 끝 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 2 차원 이미지는 다음 그림에서는 3 차원 도형 표면 위에 렌더링할 수 있습니다.
 
 ![다른 질감을 사용 하 여 3 차원 도형을 보여 주는 샘플의 스크린샷.](./media/index/visual-three-dimensional-shape.png)
 

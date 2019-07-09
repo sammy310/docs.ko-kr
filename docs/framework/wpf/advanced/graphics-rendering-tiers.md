@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: a0ed7bb48c0b8c81b44d4e321dec902ba68fc523
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 77694b2a86c91f3e6946ecd50f4765404750f37b
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64640851"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67664164"
 ---
 # <a name="graphics-rendering-tiers"></a>그래픽 렌더링 계층
 렌더링 계층은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 실행하는 디바이스의 그래픽 하드웨어 기능과 성능 수준을 정의합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "64640851"
   
 |기능|계층 1|계층 2|  
 |-------------|------------|------------|  
-|[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 버전|9.0보다 크거나 같아야 합니다.|9.0보다 크거나 같아야 합니다.|  
+|[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 버전|9\.0보다 크거나 같아야 합니다.|9\.0보다 크거나 같아야 합니다.|  
 |비디오 RAM|60MB보다 크거나 같아야 합니다.|120MB보다 크거나 같아야 합니다.|  
 |픽셀 셰이더|버전 수준은 2.0 이상이어야 합니다.|버전 수준은 2.0 이상이어야 합니다.|  
 |꼭짓점 셰이더|요구 사항이 없습니다.|버전 수준은 2.0 이상이어야 합니다.|  
@@ -101,7 +101,7 @@ ms.locfileid: "64640851"
 |설정|설명|  
 |-------------|-----------------|  
 |**하드웨어 가속 옵션 사용 안 함**|하드웨어 가속을 사용해야 하는지 지정합니다.|  
-|**최대 다중 샘플 값**|[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 콘텐츠를 앤티앨리어싱하는 데 사용할 다중 샘플링의 수준을 지정합니다.|  
+|**최대 다중 샘플 값**|앤티 앨리어싱 3 차원 콘텐츠의 다중 샘플링의 수준을 지정합니다.|  
 |**필수 비디오 드라이버 날짜 설정**|시스템에서 2004년 11월 이전에 릴리스된 드라이버의 하드웨어 가속을 사용하지 않게 설정할지 지정합니다.|  
 |**참조 래스터라이저 옵션 사용**|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 참조 래스터라이저를 사용해야 하는지 지정합니다.|  
   

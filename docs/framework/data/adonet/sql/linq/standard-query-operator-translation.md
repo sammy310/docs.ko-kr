@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: ab93a5bae3c83bcce8fa46800ef759d8a2a7f858
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 1bba36579fce4fe78289ccb986073280b531420a
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610561"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661868"
 ---
 # <a name="standard-query-operator-translation"></a>표준 쿼리 연산자 변환
 
@@ -198,13 +198,13 @@ C# 캐스트는 프로젝션에서만 지원됩니다. 다른 위치에 사용�
 
 ## <a name="sql-server-2000-support"></a>SQL Server 2000 지원
 
-다음 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] 제한 사항 (Microsoft SQL Server 2005에 비해)에 영향을 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 지원 합니다.
+다음 SQL Server 2000 제한 사항 (Microsoft SQL Server 2005에 비해)에 영향을 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 지원 합니다.
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Cross Apply 및 Outer Apply 연산자
 
-이러한 연산자는 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]에서 사용할 수 없습니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 일련의 다시 쓰기를 시도하여 해당 연산자를 적절한 조인으로 바꿉니다.
+이러한 연산자는 SQL Server 2000에서 사용할 수 없습니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 일련의 다시 쓰기를 시도하여 해당 연산자를 적절한 조인으로 바꿉니다.
 
-`Cross Apply` 및 `Outer Apply`는 관계 탐색을 위해 생성됩니다. 이러한 다시 쓰기가 가능한 쿼리 집합은 잘 정의되어 있지 않습니다. 따라서 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]에서 지원되는 최소 쿼리 집합은 관계 탐색을 포함하지 않는 집합입니다.
+`Cross Apply` 및 `Outer Apply`는 관계 탐색을 위해 생성됩니다. 이러한 다시 쓰기가 가능한 쿼리 집합은 잘 정의되어 있지 않습니다. 이 따라서 SQL Server 2000에 대 한 지원 되는 최소 쿼리 집합은 관계 탐색을 포함 하지 않는 집합입니다.
 
 ### <a name="text--ntext"></a>text/ntext
 
@@ -214,11 +214,11 @@ C# 캐스트는 프로젝션에서만 지원됩니다. 다른 위치에 사용�
 
 ### <a name="behavior-triggered-by-nested-queries"></a>중첩된 쿼리에 의해 트리거되는 동작
 
-[!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)](SP4 이하) 바인더에는 중첩된 쿼리에 의해 트리거되는 몇 가지 고유한 특징이 있습니다. 이러한 작업을 트리거하는 SQL 쿼리 집합 제대로 정의 되지 않습니다. 따라서 SQL Server 예외를 일으킬 수 있는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 쿼리 집합을 정의할 수 없습니다.
+SQL Server 2000 (sp4이 하) 바인더에 중첩 된 쿼리에 의해 트리거되는 몇 가지 고유한 특징이 있습니다. 이러한 작업을 트리거하는 SQL 쿼리 집합 제대로 정의 되지 않습니다. 따라서 SQL Server 예외를 일으킬 수 있는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 쿼리 집합을 정의할 수 없습니다.
 
 ### <a name="skip-and-take-operators"></a>Skip 및 Take 연산자
 
-<xref:System.Linq.Enumerable.Take%2A> 및 <xref:System.Linq.Enumerable.Skip%2A>에는 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]에 대한 쿼리에서 사용할 경우 몇 가지 제한이 따릅니다. 자세한 내용은 "Skip 및 Take 예외 SQL Server 2000의 에서" 항목을 참조 하세요 [문제 해결](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)합니다.
+<xref:System.Linq.Enumerable.Take%2A> 및 <xref:System.Linq.Enumerable.Skip%2A>에는 SQL Server 2000에 대한 쿼리에서 사용할 경우 몇 가지 제한이 따릅니다. 자세한 내용은 "Skip 및 Take 예외 SQL Server 2000의 에서" 항목을 참조 하세요 [문제 해결](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)합니다.
 
 ## <a name="object-materialization"></a>개체 구체화
 

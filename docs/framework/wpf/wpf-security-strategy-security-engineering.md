@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: 9123d59709b483c72ab49652bda1e547430fa33d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c28fc87a71a1262ed5b3a6a04f615efc58e685ab
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663242"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663339"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>WPF 보안 전략 - 보안 엔지니어링
 신뢰할 수 있는 컴퓨팅은 보안 코드 생성을 보장하기 위한 Microsoft 이니셔티브입니다. 신뢰할 수 있는 컴퓨팅 이니셔티브의 핵심 요소는 [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]입니다. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)]은 보안 코드 전달이 용이하도록 표준 엔지니어링 프로세스와 함께 사용되는 엔지니어링 방법입니다. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)]은 형식화, 측정 가능성 및 다음을 비롯한 추가 구조와 모범 사례를 결합하는 10단계로 이루어져 있습니다.  
@@ -71,13 +71,13 @@ ms.locfileid: "64663242"
   
 - **Prefix/Prefast**: 버퍼 오버런, 형식 문자열 문제 및 오류 검사 같은 비관리 코드에서 보안 취약성 및 일반적인 보안 문제를 찾습니다.  
   
-- **금지 된 Api**: 소스는 같은 보안 문제가 발생 하는 것에 대 한 잘 알려진 함수가 실수로 사용을 식별 하는 코드 검색 `strcpy`합니다. 이러한 함수는 식별된 후 보다 안전한 대체 항목으로 바뀝니다.  
+- **금지 된 Api**: 소스는 같은 보안 문제가 발생 하는 것에 대 한 잘 알려진 함수가 실수로 사용을 식별 하는 코드 검색 `strcpy`합니다. 식별 되 면 이러한 함수는 보다 안전한 대체 항목으로 대체 됩니다.  
   
 <a name="techniques"></a>   
 ### <a name="testing-techniques"></a>테스트 기술  
  [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]는 다음을 포함하는 다양한 보안 테스트 기술을 사용합니다.  
   
-- **Whitebox 테스트**: 테스터가 소스 코드를 본 다음 악용 테스트를 빌드  
+- **Whitebox 테스트**: 테스터가 소스 코드를 한 다음 악용 테스트를 빌드합니다.
   
 - **Blackbox 테스트**: 테스터가 API 및 기능을 검사 하 여 보안 익를 찾으려고 시도 및 제품을 공격 하려고 합니다.  
   

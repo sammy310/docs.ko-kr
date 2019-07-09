@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1f773b6f7d0b8b4e0b8647b7086d8782d1afbb93
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: c026174e881768af245860d1b719184dc47f1798
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690523"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663993"
 ---
 # <a name="cryptographic-services"></a>암호화 서비스
 
@@ -207,19 +207,19 @@ RSA는 암호화 및 서명에서 모두 사용할 수 있지만, DSA는 서명�
 
 - Alice는 일반 텍스트 메시지와 해시된 메시지(디지털 서명)를 Bob에게 보냅니다. Bob은 메시지를 받아 해시하고 자신의 해시 값과 Alice로부터 받은 해시 값을 비교합니다. 해시 값이 동일하면 메시지가 변경되지 않은 것입니다. 값이 동일하지 않으면 Alice가 메시지를 작성한 후 해당 메시지가 변경된 것입니다.
 
-    하지만 이 방법이 보낸 사람의 신뢰성을 보장하지는 않습니다. 다른 사람이 Alice를 가장하여 Bob에게 메시지를 보낼 수도 있습니다. Alice와 Bob이 동일한 해시 알고리즘을 사용하여 메시지에 서명할 수 있는데 이때 Bob은 메시지와 해당 서명이 일치한다는 사실만 확인하면 됩니다. 이는 메시지 가로채기(man-in-the-middle) 공격의 한 가지 형태입니다. 자세한 내용은 [세대 CNG (Cryptography Next) 보안 통신 예제](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100))합니다.
+  하지만 이 방법이 보낸 사람의 신뢰성을 보장하지는 않습니다. 다른 사람이 Alice를 가장하여 Bob에게 메시지를 보낼 수도 있습니다. Alice와 Bob이 동일한 해시 알고리즘을 사용하여 메시지에 서명할 수 있는데 이때 Bob은 메시지와 해당 서명이 일치한다는 사실만 확인하면 됩니다. 이는 메시지 가로채기(man-in-the-middle) 공격의 한 가지 형태입니다. 자세한 내용은 [세대 CNG (Cryptography Next) 보안 통신 예제](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100))합니다.
 
 - Alice가 비보안 공용 채널을 통해 Bob에게 일반 텍스트 메시지를 보냅니다. 그리고 보안 개인 채널을 통해 Bob에게 해시된 메시지를 보냅니다. Bob은 일반 텍스트 메시지를 받아 해시하고, 이 해시를 개인 채널로 교환된 해시와 비교합니다. 해시가 일치하면 Bob은 다음 두 가지 사실을 알게 됩니다.
 
-    - 메시지가 변경되지 않았습니다.
+  - 메시지가 변경되지 않았습니다.
 
-    - 메시지를 보낸 사람(Alice)이 인증되었습니다.
+  - 메시지를 보낸 사람(Alice)이 인증되었습니다.
 
-    이 시스템이 작동되려면 Alice가 Bob을 제외한 모든 사람에게 원본 해시 값을 숨겨야 합니다.
+  이 시스템이 작동되려면 Alice가 Bob을 제외한 모든 사람에게 원본 해시 값을 숨겨야 합니다.
 
 - Alice가 비보안 공용 채널을 통해 Bob에게 일반 텍스트 메시지를 보내고 공개적으로 볼 수 있는 자신의 웹 사이트에 해시된 메시지를 게시합니다.
 
-    이 방법을 사용하면 아무도 해시 값을 수정할 수 없으므로 메시지 변조를 방지할 수 있습니다. 메시지와 해당 해시를 아무나 읽을 수 있지만, 해시 값은 Alice만 변경할 수 있습니다. Alice를 가장하려는 공격자는 Alice의 웹 사이트에 액세스할 수 있어야 합니다.
+  이 방법을 사용하면 아무도 해시 값을 수정할 수 없으므로 메시지 변조를 방지할 수 있습니다. 메시지와 해당 해시를 아무나 읽을 수 있지만, 해시 값은 Alice만 변경할 수 있습니다. Alice를 가장하려는 공격자는 Alice의 웹 사이트에 액세스할 수 있어야 합니다.
 
 이러한 방법 중 어떠한 방법을 사용해도 일반 텍스트로 전송되는 Alice의 메시지를 다른 사람이 읽지 못하게 할 수는 없습니다. 일반적으로 완벽한 보안을 구현하려면 디지털 서명(메시지 서명)과 암호화가 필요합니다.
 

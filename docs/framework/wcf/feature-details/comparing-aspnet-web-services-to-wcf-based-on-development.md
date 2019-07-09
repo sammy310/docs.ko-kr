@@ -2,12 +2,12 @@
 title: 개발을 기반으로 ASP.NET 웹 서비스와 WCF 비교
 ms.date: 03/30/2017
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-ms.openlocfilehash: e5d249514ecad7507235bb8bd354c80bdc17c5dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b0e26f0b76ee56d06c426cd3c11b169a74b1896
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857591"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663364"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>개발을 기반으로 ASP.NET 웹 서비스와 WCF 비교
 
@@ -151,22 +151,22 @@ public class LineItem
 
 - <xref:System.Xml.Serialization.XmlSerializer> 및 <xref:System.Xml.Serialization> 네임스페이스의 특성은 .NET Framework 형식을 XML 스키마에 정의된 유효한 형식에 매핑할 수 있도록 고안되었으므로 .NET Framework 형식을 XML로 표현하는 방식을 매우 자세하게 제어할 수 있습니다. <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.DataContractAttribute> 및 <xref:System.Runtime.Serialization.DataMemberAttribute>는 형식을 XML로 표현하는 방식을 거의 제어하지 않습니다. 형식과 해당 필드 또는 속성을 XML로 표현하는 데 사용되는 네임스페이스와 이름, 그리고 필드와 속성이 XML로 나타나는 순서만 지정할 수 있습니다.
 
-    ```csharp
-    [DataContract(
-    Namespace="urn:Contoso:2006:January:29",
-    Name="LineItem")]
-    public class LineItem
-    {
-         [DataMember(Name="ItemNumber",IsRequired=true,Order=0)]
-         public string itemNumber;
-         [DataMember(Name="Quantity",IsRequired=false,Order = 1)]
-         public decimal quantity;
-         [DataMember(Name="Price",IsRequired=false,Order = 2)]
-         public decimal unitPrice;
-    }
-    ```
+  ```csharp
+  [DataContract(
+  Namespace="urn:Contoso:2006:January:29",
+  Name="LineItem")]
+  public class LineItem
+  {
+        [DataMember(Name="ItemNumber",IsRequired=true,Order=0)]
+        public string itemNumber;
+        [DataMember(Name="Quantity",IsRequired=false,Order = 1)]
+        public decimal quantity;
+        [DataMember(Name="Price",IsRequired=false,Order = 2)]
+        public decimal unitPrice;
+  }
+  ```
 
-    .NET 형식을 표현하는 데 사용되는 XML의 구조에 관한 다른 모든 요소는 <xref:System.Runtime.Serialization.DataContractSerializer>에 의해 결정됩니다.
+  .NET 형식을 표현하는 데 사용되는 XML의 구조에 관한 다른 모든 요소는 <xref:System.Runtime.Serialization.DataContractSerializer>에 의해 결정됩니다.
 
 - 형식을 XML로 표현하는 방식에 대해 많은 제어를 허용하지 않기 때문에 <xref:System.Runtime.Serialization.DataContractSerializer>에 대해 serialization 프로세스의 예측이 매우 쉽고, 따라서 최적화가 더 용이합니다. <xref:System.Runtime.Serialization.DataContractSerializer> 디자인의 실질적 이점은 약 10% 정도의 성능 향상에 있습니다.
 
@@ -180,9 +180,9 @@ public class LineItem
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>는 버전 관리를 위한 일부 지원을 통합합니다.
 
-    - <xref:System.Runtime.Serialization.DataMemberAttribute>에는 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 속성이 있습니다. 이 속성에는 새 버전의 데이터 계약에 추가된, 이전 버전에는 없었던 멤버에 대해 false 값을 할당할 수 있기 때문에 새 버전의 계약이 있는 응용 프로그램에서 이전 버전을 처리할 수 있습니다.
+  - <xref:System.Runtime.Serialization.DataMemberAttribute>에는 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 속성이 있습니다. 이 속성에는 새 버전의 데이터 계약에 추가된, 이전 버전에는 없었던 멤버에 대해 false 값을 할당할 수 있기 때문에 새 버전의 계약이 있는 응용 프로그램에서 이전 버전을 처리할 수 있습니다.
 
-    - 데이터 계약에서 <xref:System.Runtime.Serialization.IExtensibleDataObject> 인터페이스를 구현하도록 함으로써 <xref:System.Runtime.Serialization.DataContractSerializer>가 새 버전의 데이터 계약에 정의된 멤버를 이전 버전의 계약을 사용하는 응용 프로그램을 통해 전달하도록 허용할 수 있습니다.
+  - 데이터 계약에서 <xref:System.Runtime.Serialization.IExtensibleDataObject> 인터페이스를 구현하도록 함으로써 <xref:System.Runtime.Serialization.DataContractSerializer>가 새 버전의 데이터 계약에 정의된 멤버를 이전 버전의 계약을 사용하는 응용 프로그램을 통해 전달하도록 허용할 수 있습니다.
 
 이러한 모든 차이점에도 불구하고 <xref:System.Xml.Serialization.XmlSerializer>에서 기본적으로 형식을 serialize하는 XML은 해당 XML에 대한 네임스페이스가 명시적으로 정의되어 있는 경우 <xref:System.Runtime.Serialization.DataContractSerializer>에서 형식을 serialize하는 XML과 의미상 동일합니다. 두 serializer 사용에 대 한 특성에는 다음 클래스는 의미상 동일한 XML로 변환 합니다 <xref:System.Xml.Serialization.XmlSerializer> 및는 <xref:System.Runtime.Serialization.DataContractAttribute>:
 
@@ -346,9 +346,9 @@ IIS 5.1, 6.0 또는 WAS에서 서비스를 호스트하려면 다음 단계를 �
 
 4. 구성 파일을 가상 디렉터리에 복사하고 파일 이름을 Web.config로 지정합니다.
 
- 그러면 응용 프로그램 루트에 있는 서비스 파일의 URL을 사용하여 해당 응용 프로그램에 액세스할 수 있습니다.
+그러면 응용 프로그램 루트에 있는 서비스 파일의 URL을 사용하여 해당 응용 프로그램에 액세스할 수 있습니다.
 
- .NET 응용 프로그램 내에서 WCF 서비스를 호스트 하려면 서비스 유형을 응용 프로그램에서 참조 하는 클래스 라이브러리 어셈블리로 컴파일하고 사용 하 여 서비스 호스트 응용 프로그램을 프로그래밍 합니다 <xref:System.ServiceModel.ServiceHost> 클래스입니다. 다음은 필요한 기본 프로그래밍 예제입니다.
+.NET 응용 프로그램 내에서 WCF 서비스를 호스트 하려면 서비스 유형을 응용 프로그램에서 참조 하는 클래스 라이브러리 어셈블리로 컴파일하고 사용 하 여 서비스 호스트 응용 프로그램을 프로그래밍 합니다 <xref:System.ServiceModel.ServiceHost> 클래스입니다. 다음은 필요한 기본 프로그래밍 예제입니다.
 
 ```csharp
 string httpBaseAddress = "http://www.contoso.com:8000/";
@@ -553,7 +553,7 @@ public interface IEcho
 
 ASP.NET에서 서비스에 대해 생성하는 WSDL을 사용자 지정할 수 있습니다. <xref:System.Web.Services.Description.ServiceDescriptionFormatExtension>의 파생 클래스를 만들어 WSDL에 항목을 추가함으로써 사용자 지정합니다.
 
-6.0 또는 WAS WCF 서비스를 설명 하는 WSDL로 응답 하면 내 IIS 5.1에서 호스팅되는 HTTP 끝점이 있는 WCF 서비스의.svc 파일에 대해 쿼리 WSDL 사용 하 여 HTTP GET 요청을 발급 합니다. httpGetEnabled가 true로 설정된 경우 .NET 응용 프로그램에서 호스트되는 서비스의 HTTP 기본 주소에 대해 쿼리 WSDL을 사용하여 HTTP GET 요청을 실행해도 동일한 효과가 나타납니다.
+6\.0 또는 WAS WCF 서비스를 설명 하는 WSDL로 응답 하면 내 IIS 5.1에서 호스팅되는 HTTP 끝점이 있는 WCF 서비스의.svc 파일에 대해 쿼리 WSDL 사용 하 여 HTTP GET 요청을 발급 합니다. httpGetEnabled가 true로 설정된 경우 .NET 응용 프로그램에서 호스트되는 서비스의 HTTP 기본 주소에 대해 쿼리 WSDL을 사용하여 HTTP GET 요청을 실행해도 동일한 효과가 나타납니다.
 
 그러나 WCF는 또한 생성 하는 서비스를 설명 하는 WSDL 사용 하 여 Ws-metadataexchange 요청에 응답 합니다. ASP.NET 웹 서비스는 WS-MetadataExchange 요청에 대한 지원을 기본적으로 제공하지 않습니다.
 

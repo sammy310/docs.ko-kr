@@ -2,12 +2,12 @@
 title: Entity Framework용 SqlClient에서 알려진 문제
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 5c500a61a00914df7b106b7e89485921123e56ec
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 8cadb234ffc0f00049edd0c09475031eeec275df
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489539"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662266"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Entity Framework용 SqlClient에서 알려진 문제
 이 단원에서는 .NET Framework Data Provider for SQL Server(SqlClient)와 관련된 알려진 문제에 대해 설명합니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "66489539"
  `null`이 아닌 값을 첫 번째 인수, 0을 두 번째 인수로 `RIGHT(nvarchar(max)`, 0`)` 또는 `RIGHT(varchar(max)`, 0`)`에 전달하면 `NULL` 문자열 대신 `empty` 값이 반환됩니다.  
   
 ## <a name="cross-and-outer-apply-operators"></a>CROSS 및 OUTER APPLY 연산자  
- CROSS 및 OUTER APPLY 연산자는 [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)]에서 도입되었습니다. 경우에 따라 쿼리 파이프라인에는 CROSS APPLY 및/또는 OUTER APPLY 연산자를 포함 하는 TRANSACT-SQL 문을 생성할 수 있습니다. 때문에 SQL Server의 버전을 비롯 한 일부 백엔드 공급자 이전의 [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)]이러한 연산자를 지원 하지 않습니다, 해당 백엔드 공급자에서 쿼리를 실행할 수 없습니다.  
+ CROSS 및 OUTER APPLY 연산자는 SQL Server 2005에서 도입 되었습니다. 경우에 따라 쿼리 파이프라인에는 CROSS APPLY 및/또는 OUTER APPLY 연산자를 포함 하는 TRANSACT-SQL 문을 생성할 수 있습니다. SQL Server 2005 보다 이전 버전의 SQL Server를 비롯 한 일부 백엔드 공급자 이러한 연산자를 지원 하지 않으므로 해당 백엔드 공급자에서 이러한 쿼리를 실행할 수 없습니다.  
   
  다음은 출력 쿼리에 CROSS APPLY 및/또는 OUTER APPLY 연산자가 포함될 수 있는 일반적인 시나리오입니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66489539"
 - REF 구문보다 DEREF 구문을 우선 적용하는 쿼리  
   
 ## <a name="skip-operator"></a>SKIP 연산자  
- [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]을 사용하는 경우 키가 아닌 열에 ORDER BY와 함께 SKIP을 사용하면 잘못된 결과가 반환될 수 있습니다. 키가 아닌 열에 중복 데이터가 있는 경우, 지정된 개수 이상의 행을 건너뛸 수 있습니다. 이런 현상은 SKIP이 [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]에 맞게 변환되는 방식 때문에 발생합니다. 예를 들어 다음 쿼리에서 `E.NonKeyColumn`에 중복 값이 있으면 5개가 넘는 행을 건너뛸 수 있습니다.  
+ SQL Server 2000을 사용 하는 경우 키가 아닌 열에 ORDER BY와 함께 SKIP을 사용 하 여 잘못 된 결과 반환할 수 있습니다. 키가 아닌 열에 중복 데이터가 있는 경우, 지정된 개수 이상의 행을 건너뛸 수 있습니다. SQL Server 2000의 SKIP은 변환 하는 방법을 때문입니다. 예를 들어 다음 쿼리에서 `E.NonKeyColumn`에 중복 값이 있으면 5개가 넘는 행을 건너뛸 수 있습니다.  
   
 ```  
 SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L  

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - animation [WPF], Material properties in 3-D scenes
 - 3-D scenes [WPF], animating Material properties
 ms.assetid: 229fd6eb-7401-4992-b0c9-8b28de230c0f
-ms.openlocfilehash: 58e880a2828d21ee76f7fac6bdcf313e8454e65b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8dfd7f01b87e2becfbcf57544ec4f8340cf8d5cc
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789326"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662548"
 ---
 # <a name="how-to-animate-material-properties-in-a-3-d-scene"></a>방법: 3차원 장면의 Material 속성에 애니메이션 효과 주기
-애니메이션을 적용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Brush.Opacity%2A> 의 속성을 <xref:System.Windows.Media.Media3D.Material> 적용할를 [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] 모델.  
+애니메이션을 적용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Brush.Opacity%2A> 의 속성을 <xref:System.Windows.Media.Media3D.Material> 3d 모델에 적용 합니다.  
   
  다음 코드 예제에서는 정의 <xref:System.Windows.Media.LinearGradientBrush> 받았던는 <xref:System.Windows.Media.Media3D.Material> 3D 개체에 적용 합니다.  
   

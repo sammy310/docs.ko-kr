@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 6372f9cb4c332eb77cd70a9b0786eff005216516
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f99a9f38d5fbb62732f157720ee544042e346469
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642878"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663558"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 보안 전략 - 플랫폼 보안
 운영 체제를 포함 하는 기본 플랫폼의 보안 기능도 활용 다양 한 보안 서비스를 제공 하는 Windows Presentation Foundation (WPF), 합니다 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], 및 [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]합니다. 이러한 계층이 결합되어 다음 그림과 같이 단일 실패 지점을 방지하는 강력한 심층 방어 보안 모델인 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]를 제공합니다.  
@@ -132,7 +132,7 @@ ms.locfileid: "64642878"
   
 - **LocalIntranet** 응용 프로그램에서 시작 합니다 **로컬 인트라넷** 영역입니다. 격리된 스토리지, 무제한 UI 액세스, 무제한 파일 대화 상자, 제한된 리플렉션, 환경 변수에 대한 제한된 액세스를 포함하여 클라이언트 머신의 리소스에 대해 보통 액세스 권한을 제공하도록 권한 하위 집합이 부여됩니다. 레지스트리와 같은 중요한 리소스에 대한 권한은 제공되지 않습니다.  
   
-- **인터넷** 시작 된 응용 프로그램을 **인터넷** 하거나 **신뢰할 수 있는 사이트** 영역입니다. 격리된 스토리지, 파일 열기 전용 및 제한된 UI를 포함하여 클라이언트 머신의 리소스에 대해 제한된 액세스 권한을 제공하도록 권한 하위 집합이 부여됩니다. 기본적으로 이 권한 집합은 클라이언트 컴퓨터에서 애플리케이션을 격리시킵니다.  
+- **인터넷** 시작 된 응용 프로그램을 **인터넷** 하거나 **신뢰할 수 있는 사이트** 영역입니다. 격리된 스토리지, 파일 열기 전용 및 제한된 UI를 포함하여 클라이언트 머신의 리소스에 대해 제한된 액세스 권한을 제공하도록 권한 하위 집합이 부여됩니다. 기본적으로이 권한이 설정할 클라이언트 컴퓨터에서 응용 프로그램을 격리 합니다.  
   
  응용 프로그램을 식별 합니다 **신뢰할 수 없는 사이트** 영역 없습니다 권한도 부여 하지 않습니다 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 전혀 합니다. 따라서 미리 정의된 해당 권한 집합이 없습니다.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "64642878"
   
  이 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]을 실행하려면 다음을 포함하여 내부 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 코드에서 호출하는 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]이 사용할 수 있는 것보다 많은 기능을 실행해야 합니다.  
   
-- 렌더링을 위한 창 핸들(hWnd) 만들기  
+- 렌더링에 대 한 창 핸들 (HWND) 만들기  
   
 - 메시지 디스패치  
   
@@ -157,7 +157,7 @@ ms.locfileid: "64642878"
   
  샌드박스 애플리케이션에서 이러한 작업에 직접 액세스할 수 있도록 허용하면 보안상 치명적일 수 있습니다.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]는 샌드박스 응용 프로그램 대신 높은 권한으로 이러한 작업을 실행할 수 있도록 허용하여 이 상황에 대응합니다. 모든 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 작업은 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] 응용 프로그램 도메인의 제한된 인터넷 영역 보안 권한을 기준으로 검사되지만 다른 시스템 라이브러리와 마찬가지로 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]에 가능한 모든 권한을 포함하는 권한 집합이 부여됩니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]는 샌드박스 응용 프로그램 대신 높은 권한으로 이러한 작업을 실행할 수 있도록 허용하여 이 상황에 대응합니다. 모든 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 작업은 응용 프로그램 도메인의 제한 된 인터넷 영역 보안 권한을 검사 합니다 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] (다른 시스템 라이브러리와 마찬가지로) 모든 가능한을 포함 하는 권한 집합이 부여 됩니다 사용 권한입니다.
   
  이 경우 해당 권한이 호스트 응용 프로그램 도메인의 인터넷 영역 권한 집합에 의해 제어되지 않도록 하는 동시에 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]가 높은 권한을 받아야 합니다.  
   
@@ -174,7 +174,7 @@ ms.locfileid: "64642878"
 ### <a name="clickonce-deployment"></a>ClickOnce 배포  
  [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] .NET Framework에 포함 되 고 통합 하는 포괄적인 배포 기술 [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] (참조 [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment) 자세한). 브라우저에서 호스트된 응용 프로그램은 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]로 배포해야 하지만 독립 실행형 [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] 응용 프로그램은 [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]로 배포할 수 있습니다.  
   
- [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]로 배포된 응용 프로그램에는 [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]보다 높은 추가 보안 계층이 제공됩니다. 기본적으로 [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)]로 배포된 응용 프로그램이 필요한 권한을 요청합니다. 애플리케이션이 배포된 소스 영역에 대한 권한 집합을 초과하지 않는 경우에만 해당 권한이 부여됩니다. 시작 영역의 권한 집합에서 제공하는 것보다 작아도 권한 집합을 필요한 권한으로만 줄이면 애플리케이션이 액세스할 수 있는 리소스 수가 최소한으로 줄어듭니다. 따라서 애플리케이션을 가로채는 경우 클라이언트 컴퓨터의 손상 가능성이 줄어듭니다.  
+ [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]로 배포된 응용 프로그램에는 [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]보다 높은 추가 보안 계층이 제공됩니다. 기본적으로 [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)]로 배포된 응용 프로그램이 필요한 권한을 요청합니다. 애플리케이션이 배포된 소스 영역에 대한 권한 집합을 초과하지 않는 경우에만 해당 권한이 부여됩니다. 만 하 게 필요한 사용 권한 집합을 줄여 시작 영역의 권한에서 제공 하는 것 보다 작아도 하는 경우에 설정, 응용 프로그램을 최소한으로 감소할 때 권한이 있음을 리소스의 수입니다. 따라서 애플리케이션을 가로채는 경우 클라이언트 컴퓨터의 손상 가능성이 줄어듭니다.  
   
 <a name="Security_Critical_Methodology"></a>   
 ### <a name="security-critical-methodology"></a>보안에 중요한 방법론  
@@ -208,7 +208,6 @@ ms.locfileid: "64642878"
   
 ## <a name="see-also"></a>참고자료
 
-- [Windows XP SP2의 Microsoft Internet Explorer 6 보안 이해](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)
 - [코드 액세스 보안](../misc/code-access-security.md)
 - [보안](security-wpf.md)
 - [WPF 부분 신뢰 보안](wpf-partial-trust-security.md)

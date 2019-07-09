@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 616c74ccd787d9acdcb2a3bbe281c2f43bb49c2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1c61aa333c428e5cb811a5d19469516cbb813e3
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762728"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663167"
 ---
 # <a name="graphics-rendering-registry-settings"></a>그래픽 렌더링 레지스트리 설정
 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애플리케이션에 영향을 미치는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 그래픽 렌더링 레지스트리 설정에 대해 간략하게 설명합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "61762728"
 |설정|설명|  
 |-------------|-----------------|  
 |**하드웨어 가속 옵션 사용 안 함**|하드웨어 가속을 사용해야 하는지 지정합니다.|  
-|**최대 다중 샘플 값**|[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 콘텐츠를 앤티앨리어싱하는 데 사용할 다중 샘플링의 수준을 지정합니다.|  
+|**최대 다중 샘플 값**|앤티 앨리어싱 3 차원 콘텐츠의 다중 샘플링의 수준을 지정합니다.|  
 |**필수 비디오 드라이버 날짜 설정**|시스템에서 2004년 11월 이전에 릴리스된 드라이버의 하드웨어 가속을 사용하지 않게 설정할지 지정합니다.|  
 |**참조 래스터라이저 옵션 사용**|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 참조 래스터라이저를 사용해야 하는지 지정합니다.|  
   
@@ -57,9 +57,9 @@ ms.locfileid: "61762728"
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
   
- **최대 다중 샘플 값**을 사용하여 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 콘텐츠의 앤티앨리어싱 최대 크기를 조정할 수 있습니다. 이 수준을 사용하여 [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)]에서 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 앤티앨리어싱을 사용하지 않도록 설정하거나 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]에서 사용하도록 설정할 수 있습니다.  
+ 합니다 **최대 다중 샘플 값** 의 3 차원 콘텐츠의 앤티앨리어싱 최대 크기를 조정할 수 있습니다. 이 수준을 사용 하 여 3 차원 앤티앨리어싱을 사용 안 함 [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] 에서 사용 하도록 설정 하거나 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]합니다.  
   
- **최대 다중 샘플 값**은 0~16 사이의 DWORD 값입니다. 값 0은 3차원 콘텐츠의 다중 샘플 앤티앨리어싱을 사용 안 함으로 설정하도록 지정하고, 값 16은 비디오 카드에서 지원할 경우 최대 16배의 다중 샘플 앤티앨리어싱을 사용하려고 합니다. XPDM 드라이버를 사용하는 컴퓨터에서 이 레지스트리 키 값을 설정하면 애플리케이션이 많은 양의 추가 비디오 메모리를 사용하고, [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 렌더링 성능이 저하되고, 렌더링 오류 및 안정성 문제가 발생할 가능성이 있습니다.  
+ **최대 다중 샘플 값**은 0~16 사이의 DWORD 값입니다. 값 0은 3차원 콘텐츠의 다중 샘플 앤티앨리어싱을 사용 안 함으로 설정하도록 지정하고, 값 16은 비디오 카드에서 지원할 경우 최대 16배의 다중 샘플 앤티앨리어싱을 사용하려고 합니다. 렌더링 오류 및 안정성 발생할 가능성이 있고는 XPDM 드라이버를 사용 하 여 컴퓨터에이 레지스트리 키 값을 설정 하면 응용 프로그램이 많은 양의 추가 비디오 메모리를 사용 하 여의 3 차원 렌더링 성능이 저하에 주의 하십시오. 문제가 발생 했습니다.  
   
  이 레지스트리 키가 설정되지 않았으면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기본값은 XPDM 드라이버의 경우 0, WDDM 드라이버의 경우 4입니다.  
   

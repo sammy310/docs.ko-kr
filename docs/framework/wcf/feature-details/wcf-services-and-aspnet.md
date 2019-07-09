@@ -2,12 +2,12 @@
 title: WCF 서비스 및 ASP.NET
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: ef772a360ea53c2b5f177ed88ad14c4a1e1277ef
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d42787492b00b8e0a5a732d641947fec61b5ff96
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637545"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663676"
 ---
 # <a name="wcf-services-and-aspnet"></a>WCF 서비스 및 ASP.NET
 
@@ -29,15 +29,15 @@ ASP.NET HTTP 런타임은 ASP.NET 요청을 처리 하지만 이러한 서비스
 
 - AppDomain 내에서 HTTP 런타임에 의해 구현 된 기능에는 ASP.NET 콘텐츠 아니라 WCF 적용 됩니다. ASP.NET 응용 프로그램 플랫폼의 많은 HTTP 관련 기능은 ASP.NET 내용이 포함 된 AppDomain의 내부에서 호스팅되는 WCF 서비스에 적용 되지 않습니다. 이러한 기능의 예는 다음과 같습니다.
 
-    - HttpContext: <xref:System.Web.HttpContext.Current%2A> 항상 `null` WCF 서비스 내에서 액세스 하는 경우. 대신 <xref:System.ServiceModel.Channels.RequestContext>를 사용하세요.
+  - HttpContext: <xref:System.Web.HttpContext.Current%2A> 항상 `null` WCF 서비스 내에서 액세스 하는 경우. 대신 <xref:System.ServiceModel.Channels.RequestContext>를 사용하세요.
 
-    - 파일 기반 권한 부여: WCF 보안 모델에서는 서비스 요청 권한이 있는지 결정 하는 경우 서비스의.svc 파일에 적용할 액세스 제어 목록 (ACL)에 대 한 수 없습니다.
+  - 파일 기반 권한 부여: WCF 보안 모델에서는 서비스 요청 권한이 있는지 결정 하는 경우 서비스의.svc 파일에 적용할 액세스 제어 목록 (ACL)에 대 한 수 없습니다.
 
-    - 구성 기반 URL 권한 부여: 마찬가지로, WCF 보안 모델을 따르지 않으면 System.Web의에서 지정 된 URL 기반 권한 부여 규칙 \<권한 부여 > 구성 요소입니다. WCF 요청은 ASP로 보호 되는 URL 공간에 상주 하는 경우 이러한 설정은 무시 됩니다. NET의 URL 권한 부여 규칙입니다.
+  - 구성 기반 URL 권한 부여: 마찬가지로, WCF 보안 모델을 따르지 않으면 System.Web의에서 지정 된 URL 기반 권한 부여 규칙 \<권한 부여 > 구성 요소입니다. WCF 요청은 ASP로 보호 되는 URL 공간에 상주 하는 경우 이러한 설정은 무시 됩니다. NET의 URL 권한 부여 규칙입니다.
 
-    - HttpModule 확장성: WCF 호스팅 인프라 가로채 WCF 요청 하는 경우는 <xref:System.Web.HttpApplication.PostAuthenticateRequest> 이벤트가 발생 하 고 ASP.NET HTTP 파이프라인에 처리를 반환 하지 않습니다. 코딩 된 모듈은 파이프라인의 이후 단계에서 요청을 가로채도록 WCF 요청 가로채지 않습니다.
+  - HttpModule 확장성: WCF 호스팅 인프라 가로채 WCF 요청 하는 경우는 <xref:System.Web.HttpApplication.PostAuthenticateRequest> 이벤트가 발생 하 고 ASP.NET HTTP 파이프라인에 처리를 반환 하지 않습니다. 코딩 된 모듈은 파이프라인의 이후 단계에서 요청을 가로채도록 WCF 요청 가로채지 않습니다.
 
-    - ASP.NET 가장: 기본적으로 WCF 요청 항상 실행 되는 IIS 프로세스 id로 ASP.NET이 System.Web의를 사용 하는 가장을 사용 하도록 설정 하려면 설정 되어 있어도 \<impersonate = "true" / > 구성 옵션입니다.
+  - ASP.NET 가장: 기본적으로 WCF 요청 항상 실행 되는 IIS 프로세스 id로 ASP.NET이 System.Web의를 사용 하는 가장을 사용 하도록 설정 하려면 설정 되어 있어도 \<impersonate = "true" / > 구성 옵션입니다.
 
 이러한 제한 사항은 IIS 응용 프로그램에서 호스팅되는 WCF 서비스에만 적용 됩니다. ASP.NET 내용의 동작은 WCF의 현재 상태를 받지 않습니다.
 

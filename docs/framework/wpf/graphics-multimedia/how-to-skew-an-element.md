@@ -6,15 +6,15 @@ helpviewer_keywords:
 - graphics [WPF], skewing elements
 - classes [WPF], SkewTransform
 ms.assetid: 56b65f2f-dc6e-4238-923f-ca44ec53c52f
-ms.openlocfilehash: 47f671f493e7b379c36f9bf4b50ec9d185d10b8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf770a284238826852e788e27f3b3f329ed0269f
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61804062"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67664079"
 ---
 # <a name="how-to-skew-an-element"></a>방법: 요소 기울이기
-사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.SkewTransform> 요소 기울이기 하 합니다. 전단이라고도 하는 기울이기는 일관되지 않은 방식으로 좌표 공간을 늘리는 변환입니다. 일반적인 한 가지 용도 <xref:System.Windows.Media.SkewTransform> 시뮬레이션입니다 [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] 깊이 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] 개체입니다.  
+사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.SkewTransform> 요소 기울이기 하 합니다. 전단이라고도 하는 기울이기는 일관되지 않은 방식으로 좌표 공간을 늘리는 변환입니다. 일반적인 한 가지 용도 <xref:System.Windows.Media.SkewTransform> 를 2 차원 개체에 3 차원 깊이 시뮬레이트하는 것입니다.  
   
  사용 하 여는 <xref:System.Windows.Media.SkewTransform.CenterX%2A> 및 <xref:System.Windows.Media.SkewTransform.CenterY%2A> 가운데를 지정 하는 속성의 가리킨는 <xref:System.Windows.Media.SkewTransform>합니다.  
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-ms.openlocfilehash: 7f5fad56d00e9a7e33843222a81593a90bf7e733
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 28d990bc2ea043fa1770054877148f1f09acefd0
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651898"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662625"
 ---
 # <a name="transforms-overview"></a>Transform 개요
-이 항목에서는 사용 하는 방법을 설명 합니다 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> 회전, 크기 조정, 이동 하는 클래스 (변환) 및 기울이기 <xref:System.Windows.FrameworkElement> 개체입니다.  
+이 항목에서는 2-D를 사용 하는 방법을 설명 <xref:System.Windows.Media.Transform> 클래스를 회전, 크기 조정, 이동 (변환) 및 기울이기 <xref:System.Windows.FrameworkElement> 개체입니다.  
 
 <a name="whatIsATransformSection"></a>   
 ## <a name="what-is-a-transform"></a>변환이란?  
@@ -45,7 +45,7 @@ ms.locfileid: "64651898"
   
 <a name="transformClassesSection"></a>   
 ## <a name="transform-classes"></a>변환 클래스  
- Windows Presentation Foundation (WPF) 다음 기능을 제공 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> 일반적인 변환 작업에 대 한 클래스:  
+ Windows Presentation Foundation (WPF) 다음 2-d 제공 <xref:System.Windows.Media.Transform> 일반적인 변환 작업에 대 한 클래스:  
   
 |클래스|설명|예제|그림|  
 |-----------|-----------------|-------------|------------------|  
@@ -61,7 +61,7 @@ ms.locfileid: "64651898"
 |<xref:System.Windows.Media.TransformGroup>|여러 그룹화 <xref:System.Windows.Media.TransformGroup> 개체를 하나의 <xref:System.Windows.Media.Transform> 그런 다음 변환 속성에 적용할 수 있습니다.|[개체에 다중 변환 적용](how-to-apply-multiple-transforms-to-an-object.md)|  
 |<xref:System.Windows.Media.MatrixTransform>|다른 사람이 제공 되지 않는 사용자 지정 변환을 만듭니다 <xref:System.Windows.Media.Transform> 클래스입니다. 사용 하는 경우는 <xref:System.Windows.Media.MatrixTransform>에 행렬을 직접 조작 합니다.|[MatrixTransform을 사용하여 사용자 지정 변환 만들기](how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
   
- Windows Presentation Foundation (WPF)에서는 [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] 변환 합니다. 자세한 내용은 <xref:System.Windows.Media.Media3D.Transform3D> 클래스를 참조하세요.  
+ Windows Presentation Foundation (WPF)는 3 차원 변환도 제공합니다. 자세한 내용은 <xref:System.Windows.Media.Media3D.Transform3D> 클래스를 참조하세요.  
   
 <a name="transformationproperties"></a>   
 ## <a name="common-transformation-properties"></a>사용자 지정 변환 속성  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: 403b0125e6b1966d201c891448ad25ec83f42be5
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: b28981196490e249d053ecd1704f6ba978585520
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881928"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662861"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>사용자 지정 복합 디자이너 - 워크플로 항목 프리젠터
 
@@ -45,7 +45,7 @@ ms.locfileid: "65881928"
   - <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType>은 컬렉션에 있는 항목의 레이아웃을 결정하는 데 제공할 수 있는 템플릿입니다. 이 경우에는 가로 스택 패널이 사용됩니다.
 
   다음 코드 예제에서는 이를 보여 줍니다.
-  
+
   ```xaml
   <sad:WorkflowItemsPresenter HintText="Drop Activities Here"
                                 Items="{Binding Path=ModelItem.Branches}">
@@ -64,7 +64,7 @@ ms.locfileid: "65881928"
 
 - `DesignerAttribute` 형식에 `Parallel`를 연결한 다음 보고되는 특성을 출력합니다.
 
-    - 먼저 모든 기본 디자이너를 등록합니다.
+  - 먼저 모든 기본 디자이너를 등록합니다.
 
     다음은 코드 예제입니다.
 
@@ -82,7 +82,7 @@ ms.locfileid: "65881928"
     RegisterCustomMetadata()
     ```
 
-    - 그런 다음 `RegisterCustomMetadata` 메서드에서 병렬을 재정의합니다.
+  - 그런 다음 `RegisterCustomMetadata` 메서드에서 병렬을 재정의합니다.
 
     다음 코드에서는 C# 및 Visual Basic으로 이를 보여 줍니다.
 

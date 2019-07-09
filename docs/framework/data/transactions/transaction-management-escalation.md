@@ -2,12 +2,12 @@
 title: 트랜잭션 관리 에스컬레이션
 ms.date: 03/30/2017
 ms.assetid: 1e96331e-31b6-4272-bbbd-29ed1e110460
-ms.openlocfilehash: 1e40244e1f6b5ffd7b52584a5da121d1203f8376
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df2597d6fcce7fbd51f6f17bd42469cb7fcf3fdf
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630566"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662455"
 ---
 # <a name="transaction-management-escalation"></a>트랜잭션 관리 에스컬레이션
 Windows는 트랜잭션 관리자를 구성하는 서비스 및 모듈 집합을 호스팅합니다. 트랜잭션 관리 에스컬레이션은 트랜잭션 관리자의 구성 요소 중 하나에서 다른 구성 요소로 트랜잭션을 마이그레이션하는 프로세스에 대해 설명합니다.  
@@ -25,7 +25,7 @@ Windows는 트랜잭션 관리자를 구성하는 서비스 및 모듈 집합을
   
 - 단일 단계 알림을 지원하지 않는 지속적인 리소스가 하나 이상 트랜잭션에 참여하는 경우  
   
-- 단일 단계 알림을 지원하는 지속적인 리소스가 두 개 이상 트랜잭션에 참여하는 경우. 예를 들어 [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)]와의 단일 연결을 참여시키면 트랜잭션이 승격되지 않습니다. 그러나 [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] 데이터베이스에 대한 두 번째 연결을 열어 데이터베이스에서 참여시킬 때마다 <xref:System.Transactions> 인프라는 이를 트랜잭션의 두 번째 지속적인 리소스로 감지하고 MSDTC 트랜잭션으로 에스컬레이션합니다.  
+- 단일 단계 알림을 지원하는 지속적인 리소스가 두 개 이상 트랜잭션에 참여하는 경우. 예를 들어, SQL Server 2005를 사용 하 여 단일 연결을 참여 시키면 트랜잭션이 승격 될 발생 하지 않습니다. 그러나 되어 인 리스트 먼 트를 데이터베이스의 SQL Server 2005 데이터베이스에 두 번째 연결을 열 때마다는 <xref:System.Transactions> 트랜잭션에 두 번째 지속적인 리소스로 되 고 MSDTC 트랜잭션으로 에스컬레이션 인프라를 검색 합니다.  
   
 - 트랜잭션을 다른 응용 프로그램 도메인이나 다른 프로세스로 "마샬링"하는 요청이 호출됩니다. 예를 들어 응용 프로그램 도메인 경계를 넘어 트랜잭션 개체가 serialize됩니다. 트랜잭션 개체는 값으로 마샬링되므로 동일한 프로세스인 경우에도 응용 프로그램 도메인 경계를 넘어 전달하려고 하면 트랜잭션 개체의 serialization이 발생합니다. <xref:System.Transactions.Transaction>을 매개 변수로 사용하는 원격 메서드를 호출하여 트랜잭션 개체를 전달하거나 트랜잭션에서 처리된 구성 요소에 액세스할 수 있습니다. 이 경우 트랜잭션 개체가 serialize되어 트랜잭션이 응용 프로그램 도메인에서 serialize될 때와 마찬가지로 에스컬레이션이 발생합니다. 트랜잭션 개체가 분산되어 로컬 트랜잭션 관리자가 더 이상 적합하지 않습니다.  
   

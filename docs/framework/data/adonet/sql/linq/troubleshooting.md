@@ -2,12 +2,12 @@
 title: 문제 해결
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 8b34336871d599b72e548e2db90487c17377ba66
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: c09871abcdfb9243b5170386ffe79012c9c3f71d
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307194"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661856"
 ---
 # <a name="troubleshooting"></a>문제 해결
 다음은 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 응용 프로그램에서 발생할 수 있는 문제와 이러한 문제를 방지하거나 문제의 영향을 줄일 수 있는 방법에 대한 설명입니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "67307194"
 ## <a name="skip-and-take-exceptions-in-sql-server-2000"></a>SQL Server 2000의 Skip 및 Take 예외  
  SQL Server 2000 데이터베이스에 대해 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A> 또는 <xref:System.Linq.Queryable.Take%2A>을 사용할 때는 ID 멤버(<xref:System.Linq.Queryable.Skip%2A>)를 사용해야 합니다. 조인이 아니라 단일 테이블에 대해 쿼리를 실행하거나, 쿼리가 <xref:System.Linq.Queryable.Distinct%2A>, <xref:System.Linq.Queryable.Except%2A>, <xref:System.Linq.Queryable.Intersect%2A> 또는 <xref:System.Linq.Queryable.Union%2A> 작업이어야 하며 쿼리에 <xref:System.Linq.Queryable.Concat%2A> 작업이 포함되면 안 됩니다. 자세한 내용은 "SQL Server 2000 지원" 섹션을 참조 하세요 [표준 쿼리 연산자 변환](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)합니다.  
   
- 이 요구 사항은 [!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)]에는 적용되지 않습니다.  
+ 이 요구 사항은 SQL Server 2005에는 적용 되지 않습니다.  
   
 ## <a name="groupby-invalidoperationexception"></a>GroupBy InvalidOperationException  
  <xref:System.Linq.Enumerable.GroupBy%2A>처럼 `boolean` 식을 사용하여 그룹화하는 `group x by (Phone==@phone)` 쿼리에서 열 값이 null이면 이 예외가 throw됩니다. 식이 `boolean`이기 때문에 키가 `boolean` `nullable`이 아니라 `boolean`로 유추됩니다. 할당할 시도 번역 된 비교 연산의 결과가 null 이면 하는 경우는 `nullable` `boolean` 에 `boolean`, 예외가 throw 되 고 합니다.  

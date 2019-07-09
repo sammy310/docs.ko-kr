@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: bedb6df564e4301ec8009992ec0ec5c51de729e0
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: e0f2c6300f8dccb8cc316527af9c75f6a40ff2df
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910819"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661903"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>시퀀스에서 요소 반환 또는 건너뛰기
 <xref:System.Linq.Queryable.Take%2A> 연산자를 사용하여 지정된 수의 시퀀스 요소를 반환한 다음 나머지는 건너뜁니다.  
@@ -49,9 +49,9 @@ ms.locfileid: "64910819"
  SQL의 정렬에 대한 제한 사항 때문에 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 <xref:System.Linq.Queryable.Take%2A> 또는 <xref:System.Linq.Queryable.Skip%2A> 연산자의 정렬 인수가 연산자의 결과로 이동합니다.  
   
 > [!NOTE]
->  [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]과 [!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)]의 변환은 서로 다릅니다. 복잡한 쿼리와 함께 <xref:System.Linq.Queryable.Skip%2A>을 사용하려면 [!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)]를 사용하세요.  
+>  번역은 SQL Server 2000 및 SQL Server 2005에서 서로 다릅니다. 사용 하려는 경우 <xref:System.Linq.Queryable.Skip%2A> 복잡 한 쿼리를 사용 하 여 SQL Server 2005를 사용 합니다.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에 대해 다음 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] 쿼리를 살펴보세요.  
+ 다음 사항을 고려 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL Server 2000에 대 한 쿼리:  
   
  [!code-csharp[DLinqQueryExamples#19](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#19)]
  [!code-vb[DLinqQueryExamples#19](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#19)]  

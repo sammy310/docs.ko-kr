@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-ms.openlocfilehash: d35e5b5127f335eac04caa8ee95749f45cb870bf
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: c7b30a854667a122ff30ec4a8e4855902489087f
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674005"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660779"
 ---
 # <a name="ui-automation-textpattern-overview"></a>UI 자동화 TextPattern 개요
 
@@ -41,7 +41,7 @@ ms.locfileid: "57674005"
 
 ## <a name="control-types"></a>컨트롤 형식
 
-#### <a name="text"></a>텍스트
+### <a name="text"></a>텍스트
 
 텍스트 컨트롤은 화면에 텍스트 부분을 나타내는 기본 요소입니다.
 
@@ -50,14 +50,14 @@ ms.locfileid: "57674005"
 > [!NOTE]
 > 텍스트 컨트롤의 콘텐츠 뷰에 나타나지 않을 수 있습니다 합니다 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 (참조 [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)). 이는 텍스트 컨트롤이 대개 다른 컨트롤의 Name 속성을 통해 표시되기 때문입니다. 예를 들어 편집 컨트롤의 레이블을 지정하는 데 사용되는 텍스트는 편집 컨트롤의 Name 속성을 통해 노출됩니다. 편집 컨트롤이 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 콘텐츠 뷰에 있기 때문에 텍스트 요소 자체가 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 해당 뷰에 있을 필요는 없습니다. 콘텐츠 뷰에 표시되는 텍스트는 중복 정보가 아닌 텍스트뿐입니다. 이렇게 하면 보조 기술이 사용자에게 필요한 정보 부분만 신속하게 필터링할 수 있습니다.
 
-#### <a name="edit"></a>편집
+### <a name="edit"></a>편집
 
 편집 컨트롤을 통해 사용자는 텍스트 한 줄을 보고 편집할 수 있습니다.
 
 > [!NOTE]
 > 특정 레이아웃 시나리오에서는 텍스트 한 줄이 줄 바꿈될 수도 있습니다.
 
-#### <a name="document"></a>문서
+### <a name="document"></a>문서
 
 문서 컨트롤을 통해 사용자는 여러 텍스트 페이지를 탐색하고 정보를 가져올 수 있습니다.
 
@@ -93,8 +93,10 @@ ms.locfileid: "57674005"
 |`System.Windows.Automation.TextPatternIdentifiers Class`|텍스트 공급자의 식별자로 사용되는 값을 포함합니다( <xref:System.Windows.Automation.TextPatternIdentifiers>참조).|
 
 <a name="Security"></a>
+
 ## <a name="security"></a>보안
- 합니다 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 아키텍처는 보안을 염두에 두고 설계 되었습니다 (참조 [UI 자동화 보안 개요](../../../docs/framework/ui-automation/ui-automation-security-overview.md)). 그러나 이 개요에 설명된 TextPattern 클래스에는 특정 보안 고려 사항이 일부 필요합니다.
+
+합니다 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 아키텍처는 보안을 염두에 두고 설계 되었습니다 (참조 [UI 자동화 보안 개요](../../../docs/framework/ui-automation/ui-automation-security-overview.md)). 그러나 이 개요에 설명된 TextPattern 클래스에는 특정 보안 고려 사항이 일부 필요합니다.
 
 - [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 텍스트 공급자는 읽기 전용 인터페이스를 제공하며 컨트롤의 기존 텍스트를 변경하는 기능을 제공하지 않습니다.
 
@@ -104,9 +106,9 @@ ms.locfileid: "57674005"
 
 - [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] 보안에서 가장 중요한 변경 내용 중 하나를 광범위하게 "안전한 입력"이라고 하며, LUA(최소 권한 (또는 제한됨) 사용자 계정) 및 UIPI(UI 권한 수준 격리)와 같은 기술을 포함합니다.
 
-    - UIPI는 프로그램이 보다 "권한 있는” 다른 프로그램을 제어 및/또는 모니터링할 수 없도록 차단하여 사용자 입력을 스푸핑하는 크로스 프로세스 창 메시지 공격을 방지합니다.
+  - UIPI는 프로그램이 보다 "권한 있는” 다른 프로그램을 제어 및/또는 모니터링할 수 없도록 차단하여 사용자 입력을 스푸핑하는 크로스 프로세스 창 메시지 공격을 방지합니다.
 
-    - LUA는 Administrators 그룹의 사용자가 실행하는 애플리케이션의 권한에 제한을 설정합니다. 애플리케이션에 관리자 권한이 반드시 필요한 것은 아니며 필요한 최소 권한으로 실행됩니다. 결과적으로 LUA 시나리오에서는 몇 가지 제한 사항이 적용될 수 있습니다. 가장 주목할 만한 사항은 문자열 잘림(TextPattern 문자열 포함)입니다. 이 경우 애플리케이션을 사용할 수 없게 되는 지점까지 강제로 메모리를 할당하지 않아도 되도록 관리자 수준 애플리케이션에서 검색되는 문자열의 크기를 제한해야 할 수도 있습니다.
+  - LUA는 Administrators 그룹의 사용자가 실행하는 애플리케이션의 권한에 제한을 설정합니다. 애플리케이션에 관리자 권한이 반드시 필요한 것은 아니며 필요한 최소 권한으로 실행됩니다. 결과적으로 LUA 시나리오에서는 몇 가지 제한 사항이 적용될 수 있습니다. 가장 주목할 만한 사항은 문자열 잘림(TextPattern 문자열 포함)입니다. 이 경우 애플리케이션을 사용할 수 없게 되는 지점까지 강제로 메모리를 할당하지 않아도 되도록 관리자 수준 애플리케이션에서 검색되는 문자열의 크기를 제한해야 할 수도 있습니다.
 
 <a name="Performance"></a>
 
@@ -120,19 +122,25 @@ TextPattern은 대부분의 기능에 크로스 프로세스 호출을 사용하
 
 ## <a name="textpattern-terminology"></a>TextPattern 용어
 
-**특성** 텍스트 범위의 형식 특성 (예를 들어 <xref:System.Windows.Automation.TextPattern.IsItalicAttribute> 또는 <xref:System.Windows.Automation.TextPattern.FontNameAttribute>).
+**특성**\
+텍스트 범위의 형식 특성(예: <xref:System.Windows.Automation.TextPattern.IsItalicAttribute> 또는 <xref:System.Windows.Automation.TextPattern.FontNameAttribute>)입니다.
 
-**중복 제거 범위** 중복 제거 범위는 비어 있거나 0 자 텍스트 범위입니다. TextPattern 컨트롤 패턴의 목적을 위해 텍스트 삽입 지점(또는 시스템 캐럿)은 중복 제거 범위로 간주됩니다. 선택한 텍스트가 없는 경우 <xref:System.Windows.Automation.TextPattern.GetSelection%2A>은 중복 제거 범위를 텍스트 삽입 지점에 반환하고 <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A>는 중복 제거 범위를 시작 엔드포인트로 반환합니다. 텍스트 공급자가 지정된 조건과 일치하는 텍스트 범위를 찾을 수 없는 경우<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> 및 <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> 에서 중복 제거 범위를 반환할 수도 있습니다. 이 중복 제거 범위는 텍스트 공급자 내에서 시작 엔드포인트로 사용될 수 있습니다. <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> 및 <xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A> null 참조를 반환 (`Nothing` Microsoft Visual Basic.net에서) 및 중복 제거 범위 검색 된 범위와 혼동 되지 않도록 합니다.
+**중복 제거 범위**\
+중복 제거 범위는 비어 있거나 0자 텍스트 범위입니다. TextPattern 컨트롤 패턴의 목적을 위해 텍스트 삽입 지점(또는 시스템 캐럿)은 중복 제거 범위로 간주됩니다. 선택한 텍스트가 없는 경우 <xref:System.Windows.Automation.TextPattern.GetSelection%2A>은 중복 제거 범위를 텍스트 삽입 지점에 반환하고 <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A>는 중복 제거 범위를 시작 엔드포인트로 반환합니다. 텍스트 공급자가 지정된 조건과 일치하는 텍스트 범위를 찾을 수 없는 경우<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> 및 <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> 에서 중복 제거 범위를 반환할 수도 있습니다. 이 중복 제거 범위는 텍스트 공급자 내에서 시작 엔드포인트로 사용될 수 있습니다. <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> 및 <xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A> null 참조를 반환 (`Nothing` Microsoft Visual Basic.net에서) 및 중복 제거 범위 검색 된 범위와 혼동 되지 않도록 합니다.
 
-**포함 된 개체** 에 포함 된 개체의 두 가지가 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 텍스트 모델입니다. 하이퍼링크 또는 테이블과 같은 텍스트 기반 콘텐츠 요소와 이미지 및 단추와 같은 컨트롤 요소로 구성됩니다. 자세한 내용은 [Access Embedded Objects Using UI Automation](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)를 참조하세요.
+**포함 된 개체**\
+[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 텍스트 모델에는 두 가지 유형의 포함 개체가 있습니다. 하이퍼링크 또는 테이블과 같은 텍스트 기반 콘텐츠 요소와 이미지 및 단추와 같은 컨트롤 요소로 구성됩니다. 자세한 내용은 [Access Embedded Objects Using UI Automation](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)를 참조하세요.
 
-**끝점** 절대 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> 또는 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 지점의 텍스트 컨테이너 내의 텍스트 범위입니다.
+**끝점**\
+텍스트 컨테이너 내에서 텍스트 범위의 절대 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> 또는 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 지점입니다.
 
 ![TextPatternRangeEndpoints &#40;시작 및 종료&#41;합니다. ](../../../docs/framework/ui-automation/media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints") 다음에는 시작점과 끝점의 집합을 보여 줍니다.
 
-**TextRange** 텍스트 컨테이너에 연결 된 모든 특성 및 기능을 포함 하 여 시작점과 끝점을 사용 하 여 텍스트 범위를 표시 합니다.
+**TextRange**\
+연결된 모든 특성 및 기능을 포함하여 시작점과 끝점을 사용한 텍스트 컨테이너 내의 텍스트 범위에 대한 표현입니다.
 
-<xref:System.Windows.Automation.Text.TextUnit> 텍스트 범위의 논리적 세그먼트를 탐색 하기 위한 사용 되는 텍스트 (문자, 단어, 줄 또는 단락)의 미리 정의 된 단위입니다.
+<xref:System.Windows.Automation.Text.TextUnit>\
+텍스트 범위의 논리적 세그먼트를 탐색하는 데 사용되는 미리 정의된 텍스트 단위(문자, 단어, 줄 또는 단락)입니다.
 
 ## <a name="see-also"></a>참고자료
 

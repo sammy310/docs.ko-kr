@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 061a8c7b73903b763de27e614e9b3067777afe58
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85792aea8a72ffc0c9b579473332756c6ca3bb47
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64756019"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663833"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>방법: 여러 버전의 워크플로를 함께 호스팅
 
@@ -27,11 +27,11 @@ ms.locfileid: "64756019"
 
 - [워크플로 업데이트 하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)
 
-    - [StateMachine 워크플로 업데이트 하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)
+  - [StateMachine 워크플로 업데이트 하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)
 
-    - [순서도 워크플로 업데이트 하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)
+  - [순서도 워크플로 업데이트 하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)
 
-    - [순차 워크플로 업데이트 하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)
+  - [순차 워크플로 업데이트 하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)
 
 - [이전 워크플로 버전을 포함 하도록 WorkflowVersionMap을 업데이트.](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)
 
@@ -68,7 +68,7 @@ ms.locfileid: "64756019"
 
 ### <a name="BKMK_UpdateWorkflows"></a> 워크플로 업데이트 하려면
 
- 이 단원에서는 워크플로 정의를 업데이트합니다. 즉, 사용자의 추측에 대한 피드백을 제공하는 두 개의 `WriteLine` 활동을 업데이트하고, 숫자가 추측된 후 게임에 대한 추가 정보를 제공하는 새로운 `WriteLine` 활동을 추가합니다.
+이 단원에서는 워크플로 정의를 업데이트합니다. 즉, 사용자의 추측에 대한 피드백을 제공하는 두 개의 `WriteLine` 활동을 업데이트하고, 숫자가 추측된 후 게임에 대한 추가 정보를 제공하는 새로운 `WriteLine` 활동을 추가합니다.
 
 #### <a name="BKMK_UpdateStateMachine"></a> StateMachine 워크플로 업데이트 하려면
 
