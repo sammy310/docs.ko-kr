@@ -18,18 +18,18 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 7d8ee9be8f399bca0aace61d344b19094c9518b0
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 0cd0a06dc919ecf11f1a3d343fe8ff023a5f8524
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401461"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609908"
 ---
 # <a name="c-operators-c-reference"></a>C# 연산자(C# 참조)
 
 C#은 기본 제공 형식에서 지원되는 미리 정의된 여러 연산자를 제공합니다. 예를 들어 [산술 연산자](arithmetic-operators.md)는 기본 제공 숫자 형식의 피연산자를 사용하여 산술 연산을 수행하고 [부울 논리 연산자](boolean-logical-operators.md)는 [bool](../keywords/bool.md) 피연산자를 사용하여 논리 연산을 수행합니다.
 
-사용자 정의 형식은 특정 연산자를 오버로드하여 해당 형식의 피연산자에 대한 해당 동작을 정의할 수 있습니다. 자세한 내용은 [연산자](../keywords/operator.md) 키워드 문서를 참조하세요.
+사용자 정의 형식은 특정 연산자를 오버로드하여 해당 형식의 피연산자에 대한 해당 동작을 정의할 수 있습니다. 자세한 내용은 [연산자 오버로드](operator-overloading.md)를 참조하세요.
 
 다음 섹션에서는 우선순위가 가장 높은 것부터 시작하여 순서대로 C# 연산자를 나열합니다. 각 섹션 내의 연산자는 동일한 우선 순위 수준을 공유합니다.
 
@@ -223,4 +223,3 @@ C#은 기본 제공 형식에서 지원되는 미리 정의된 여러 연산자�
 
 - [C# 참조](../index.md)
 - [연산자](../../programming-guide/statements-expressions-operators/operators.md)
-- [오버로드할 수 있는 연산자](../../programming-guide/statements-expressions-operators/overloadable-operators.md)

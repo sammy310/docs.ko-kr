@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 58e79cf0b017d65644f25250d05d252b5635c21e
-ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
+ms.openlocfilehash: 06085091a13ad76dcd554cfe637bcc151bbb8476
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67152000"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610174"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET은 무엇이며 어떻게 작동하나요?
 
@@ -164,16 +164,19 @@ ML.NET 모델은 예측된 출력에 도달하기 위해 입력 데이터에서 
 ML.NET 애플리케이션은 <xref:Microsoft.ML.MLContext> 개체로 시작합니다. 이 싱글톤 개체는 **카탈로그**를 포함합니다. 카탈로그는 데이터 로드 및 저장, 변환, 트레이너, 모델 작동 구성 요소를 위한 팩터리입니다. 각 카탈로그 개체마다 다른 유형의 구성 요소를 만드는 메서드가 있습니다.
 
 ||||
-|-|-|-|
-|데이터 로드 및 저장||<xref:Microsoft.ML.DataOperationsCatalog>|
-|데이터 준비||<xref:Microsoft.ML.TransformsCatalog>|
-|학습 알고리즘|이진 분류|<xref:Microsoft.ML.BinaryClassificationCatalog>|
-||다중 클래스 분류|<xref:Microsoft.ML.MulticlassClassificationCatalog>|
-||변칙 검색|<xref:Microsoft.ML.AnomalyDetectionCatalog>|
-||순위 지정|<xref:Microsoft.ML.RankingCatalog>|
-||재발|<xref:Microsoft.ML.RegressionCatalog>|
-||권장 사항|<xref:Microsoft.ML.RecommendationCatalog>|
-|모델 사용 ||<xref:Microsoft.ML.ModelOperationsCatalog>|
+|-|-|-|-|
+|데이터 로드 및 저장||<xref:Microsoft.ML.DataOperationsCatalog>||
+|데이터 준비||<xref:Microsoft.ML.TransformsCatalog>||
+|학습 알고리즘|이진 분류|<xref:Microsoft.ML.BinaryClassificationCatalog>||
+||다중 클래스 분류|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
+||변칙 검색|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
+||클러스터링|<xref:Microsoft.ML.ClusteringCatalog>||
+||예측|<xref:Microsoft.ML.Forecasting>||
+||순위 지정|<xref:Microsoft.ML.RankingCatalog>||
+||재발|<xref:Microsoft.ML.RegressionCatalog>||
+||권장 사항|<xref:Microsoft.ML.RecommendationCatalog>|Microsoft.ML.Recommender 추가|
+||TimeSeries|<xref:Microsoft.ML.TimeSeriesCatalog>|Microsoft.ML.TimeSeries 추가|
+|모델 사용 ||<xref:Microsoft.ML.ModelOperationsCatalog>||
 
 위의 각 범주에서 만들기 메서드로 이동할 수 있습니다. 카탈로그는 Visual Studio를 사용하여 IntelliSense를 통해 나타납니다.
 

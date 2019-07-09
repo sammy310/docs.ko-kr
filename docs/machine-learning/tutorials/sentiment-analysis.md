@@ -4,12 +4,12 @@ description: 이 자습서에서는 웹 사이트 주석에서 감정을 분류�
 ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: a766d95c62fd3a89e3291e1ab803f5222fac46ea
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 833aeeb045ef1fd7bb0e6dbd2236bc3d9da2e8fc
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306177"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506154"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>자습서: ML.NET에서 이진 분류를 사용하여 웹 사이트 주석의 감정 분석
 
@@ -93,12 +93,16 @@ ms.locfileid: "67306177"
 |우와... 여기가 좋았습니다.              |    1     |
 |서비스가 매우 신속합니다.              |    1     |
 
-`SentimentPrediction`은 모델 학습 후 사용되는 예측 클래스입니다. 예측과 함께 `SentimentText`를 표시하기 위해 `SentimentData`에서 상속됩니다. `SentimentPrediction`에는 단일 부울(`Sentiment`)과 `PredictedLabel` `ColumnName` 특성이 있습니다. `Label`은 세트를 만들고 학습시키는 데 사용되며 분할된 테스트 데이터 세트와 함께 모델을 평가하는 데도 사용됩니다. `PredictedLabel`은 예측 및 평가 중에 사용됩니다. 평가를 위해 학습 데이터, 예측 값 및 모델이 사용됩니다.
+`SentimentPrediction`은 모델 학습 후에 사용되는 예측 클래스입니다. 출력 예측과 함께 입력 `SentimentText`를 표시할 수 있도록 `SentimentData`에서 상속됩니다. `Prediction` 부울은 새 입력 `SentimentText`와 함께 제공될 때 모델이 예측하는 값입니다.
 
-[MLContext 클래스](xref:Microsoft.ML.MLContext)는 모든 ML.NET 작업의 시작 지점입니다. `mlContext`를 초기화하면 모델 생성 워크플로 개체 간에 공유할 수 있는 새 ML.NET 환경이 생성됩니다. 개념적으로 Entity Framework의 `DBContext`와 유사합니다.
+출력 클래스 `SentimentPrediction`에는 `Score`(모델에서 계산한 원시 점수) 및 `Probability`(긍정적인 감정이 있는 텍스트의 가능성에 따라 조정된 점수)가 포함되어 있습니다.
+
+이 자습서에서 가장 중요한 속성은 `Prediction`입니다.
 
 ## <a name="load-the-data"></a>데이터 로드
 ML.NET의 데이터는 [IDataView 클래스](xref:Microsoft.ML.IDataView)로 표시됩니다. `IDataView`는 표 형식 데이터(숫자 및 텍스트)를 유연하고 효율적으로 설명하는 방법입니다. 데이터를 텍스트 파일 또는 실시간(예: SQL 데이터베이스 또는 로그 파일)에서 `IDataView` 개체로 로드할 수 있습니다.
+
+[MLContext 클래스](xref:Microsoft.ML.MLContext)는 모든 ML.NET 작업의 시작 지점입니다. `mlContext`를 초기화하면 모델 생성 워크플로 개체 간에 공유할 수 있는 새 ML.NET 환경이 생성됩니다. 개념적으로 Entity Framework의 `DBContext`와 유사합니다.
 
 앱을 준비한 다음, 데이터를 로드합니다.
 

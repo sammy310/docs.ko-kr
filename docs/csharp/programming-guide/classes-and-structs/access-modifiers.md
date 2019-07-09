@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: d328f8e73824a4773c6e10f506f3021d3c88d085
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6622612e927b800e1a4769c99df0e2fa7d99a33d
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378054"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609646"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>액세스 한정자(C# 프로그래밍 가이드)
 모든 형식과 형식 멤버에는 사용 중인 어셈블리나 기타 어셈블리의 다른 코드에서 사용될 수 있는지 여부를 제어하는 액세스 가능성 수준이 있습니다. 다음 액세스 한정자를 사용하여 형식 또는 멤버를 선언할 때 해당 항목의 액세스 가능성을 지정할 수 있습니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "57378054"
   
  필드, 속성 또는 이벤트인 멤버의 형식은 최소한 멤버 자체만큼 액세스할 수 있어야 합니다. 마찬가지로 메서드, 인덱서 또는 대리자인 멤버의 반환 형식과 매개 변수 형식은 최소한 멤버 자체만큼 액세스할 수 있어야 합니다. 예를 들어 `C` 클래스도 public인 경우에만 public 메서드 `M`이 `C` 클래스를 반환할 수 있습니다. 마찬가지로 `A` 형식이 private으로 선언되면 `A` 형식에는 protected 속성은 있을 수 없습니다.  
   
- 사용자 정의 연산자는 public으로 선언되어야 합니다. 자세한 내용은 [연산자(C# 참조)](../../../csharp/language-reference/keywords/operator.md)를 참조하세요.  
+ 사용자 정의 연산자는 항상 공용 및 정적으로 선언되어야 합니다. 자세한 내용은 [연산자 오버로드](../../../csharp/language-reference/operators/operator-overloading.md)를 참조하세요.  
   
  종료자에는 접근성 한정자를 사용할 수 없습니다.  
   

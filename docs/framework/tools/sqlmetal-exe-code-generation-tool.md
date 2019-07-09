@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: b6f7450b4f682ea5ac69fd1bab434b27451e58df
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d2ee9537df540936e0a5ec448e6aaddbbbc162b1
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586059"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610548"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe(코드 생성 도구)
 SqlMetal 명령줄 도구는 .NET Framework의 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 구성 요소에 사용할 코드 및 매핑을 생성합니다. 이 항목의 뒷부분에 나오는 옵션을 적용하면 SqlMetal을 통해 다음을 포함하는 다양한 작업을 수행할 수 있습니다.  
@@ -72,20 +72,20 @@ sqlmetal [options] [<input file>]
   
 |옵션|설명|  
 |------------|-----------------|  
-|**/language:** *\<language>*|소스 코드 언어를 지정합니다.<br /><br /> 유효한 *\<language>*: vb, csharp.<br /><br /> 기본값: 코드 파일 이름의 확장명에서 파생됩니다.|  
+|**/language:** *\<language>*|소스 코드 언어를 지정합니다.<br /><br /> 유효한 *\<language>* : vb, csharp.<br /><br /> 기본값: 코드 파일 이름의 확장명에서 파생됩니다.|  
 |**/namespace:** *\<name>*|생성된 코드의 네임스페이스를 지정합니다. 기본적으로는 네임스페이스가 없습니다.|  
 |**/context:** *\<type>*|데이터 컨텍스트 클래스의 이름을 지정합니다. 기본값: 데이터베이스 이름에서 파생됩니다.|  
 |**/entitybase:** *\<type>*|생성된 코드에서 엔터티 클래스의 기본 클래스를 지정합니다. 기본값: 엔터티에 기본 클래스가 없습니다.|  
 |**/pluralize**|클래스 및 멤버 이름을 자동으로 복수 및 단수로 지정합니다.<br /><br /> 이 옵션은 미국에서만 사용할 수 있습니다. 영어 버전입니다.|  
-|**/serialization:** *\<option>*|serialize 가능한 클래스를 생성합니다.<br /><br /> Valid *\<option>*: None, Unidirectional. 기본값: 없음<br /><br /> 자세한 내용은 [Serialization](../../../docs/framework/data/adonet/sql/linq/serialization.md)을 참조하세요.|  
+|**/serialization:** *\<option>*|serialize 가능한 클래스를 생성합니다.<br /><br /> Valid *\<option>* : None, Unidirectional. 기본값: 없음<br /><br /> 자세한 내용은 [Serialization](../../../docs/framework/data/adonet/sql/linq/serialization.md)을 참조하세요.|  
   
  **입력 파일**  
   
 |옵션|설명|  
 |------------|-----------------|  
-|**\<input file>**|SQL Server Express .mdf 파일, [!INCLUDE[ssEW](../../../includes/ssew-md.md)] .sdf 파일 또는 .dbml 중간 파일을 지정합니다.|  
+|**\<input file>**|SQL Server Express .mdf 파일, SQL Server Compact 3.5 .sdf 파일 또는 .dbml 중간 파일을 지정합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  실제로 SqlMetal 기능에는 다음과 같은 두 단계가 포함됩니다.  
   
 - 데이터베이스의 메타데이터를 .dbml 파일에 추출  
@@ -98,7 +98,7 @@ sqlmetal [options] [<input file>]
   
  **/server** 가 지정되어 있지 않으면 **localhost/sqlexpress** 로 간주됩니다.  
   
- 다음 조건 중 하나 이상이 true이면[!INCLUDE[sqprsqext](../../../includes/sqprsqext-md.md)] 는 예외를 throw합니다.  
+ Microsoft SQL Server 2005는 다음 조건 중 하나 이상이 true이면 예외를 throw합니다.  
   
 - SqlMetal이 자기 자신을 호출하는 저장 프로시저의 추출을 시도합니다.  
   

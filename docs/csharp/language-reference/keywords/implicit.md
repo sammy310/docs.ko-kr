@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - implicit keyword [C#]
 ms.assetid: 34db590e-eb3a-4f11-88d0-ffb3cd753dab
-ms.openlocfilehash: d3e1cb9d6fb37617c6e2aa7070b006c594d39762
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00fe1a02b52ef2ddc393bc7424efa73fc4059a9c
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661713"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610120"
 ---
 # <a name="implicit-c-reference"></a>implicit(C# 참조)
 
 `implicit` 키워드는 암시적 사용자 정의 형식 변환 연산자를 선언하는 데 사용됩니다. 변환 시 데이터가 손실되지 않는 경우 이 키워드를 통해 사용자 정의 형식과 다른 형식 간에 암시적 변환을 사용할 수 있습니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 [!code-csharp[csrefKeywordsConversion#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#5)]
 
@@ -35,5 +35,5 @@ ms.locfileid: "54661713"
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 키워드](index.md)
 - [explicit](explicit.md)
-- [연산자(C# 참조)](operator.md)
+- [연산자 오버로드](../operators/operator-overloading.md)
 - [방법: 구조체 간의 사용자 정의 변환 구현](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)

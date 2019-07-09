@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 60e7f7c25b525c6db856731bd16c1c0e60efe6d6
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 551d4cd8bf26a1c1caf3cbf611d9f338ae2581be
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422930"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609498"
 ---
 # <a name="operators-c-programming-guide"></a>연산자(C# 프로그래밍 가이드)
 
@@ -80,7 +80,7 @@ a = (b = c);
   
 ## <a name="operator-overloading"></a>연산자 오버로드
 
-사용자 지정 클래스 및 구조체에 대한 특정 연산자의 동작을 정의할 수 있습니다. 이러한 과정을 *연산자 오버로드*라고 합니다. 자세한 내용은 [오버로드할 수 있는 연산자](overloadable-operators.md) 및 [연산자](../../language-reference/keywords/operator.md) 키워드 문서를 참조하세요.
+사용자 지정 클래스 및 구조체에 대한 특정 연산자의 동작을 정의할 수 있습니다. 이러한 과정을 *연산자 오버로드*라고 합니다. 자세한 내용은 [연산자 오버로드](../../language-reference/operators/operator-overloading.md)를 참조하세요.
   
 ## <a name="see-also"></a>참고 항목
 

@@ -3,12 +3,12 @@ title: LINQ 작업
 description: 이 자습서에서는 LINQ를 사용하여 시퀀스를 생성하고, LINQ 쿼리에서 사용할 메서드를 작성하고, 즉시 계산 및 지연 계산 간을 구분하는 방법을 알아봅니다.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: e51fb166ccba793f9f2aa9d11a109280bf8eea93
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e37c013add02f651875db7b908ae2b49711d996d
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486991"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609303"
 ---
 # <a name="working-with-linq"></a>LINQ 작업
 
@@ -268,6 +268,14 @@ LINQ 쿼리를 사용하여 원래 데크를 생성했습니다. 각 순서 섞�
 
 [!CODE-csharp[LogQuery](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
 
+`File` 아래에 빨간색 물결이 나타나면 존재하지 않는다는 것을 의미합니다. 컴파일러가 `File`을 인식하지 못하기 때문에 컴파일되지 않습니다. 이 문제를 해결하려면 `Extensions.cs`의 첫 번째 줄 아래에 다음 코드 줄을 추가해야 합니다.
+
+```csharp
+using System.IO;
+```
+
+이렇게 하면 문제가 해결되고 빨간색 오류가 사라집니다.
+
 그런 후 로그 메시지를 사용하여 각 쿼리의 정의를 계측합니다.
 
 ```csharp
@@ -345,4 +353,3 @@ LINQ에 대한 자세한 내용은 다음을 참조하세요.
   - [LINQ를 통한 데이터 변환(C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
   - [LINQ의 쿼리 구문 및 메서드 구문(C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
   - [LINQ를 지원하는 C# 기능](../programming-guide/concepts/linq/features-that-support-linq.md)
-    

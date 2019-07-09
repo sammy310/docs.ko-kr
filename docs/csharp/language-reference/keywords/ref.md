@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 1faebe2ce1a59798621888e3a518900234720be5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5b45a24e719a03d052c88b5afd64bbe13eb0793e
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116258"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610061"
 ---
 # <a name="ref-c-reference"></a>ref(C# 참조)
 
@@ -138,7 +138,7 @@ Ref readonly 로컬은 해당 시그니처에 `ref readonly`가 있고 `return r
 
 - `ref struct`를 boxing할 수 없습니다. `ref struct` 형식을 `object`, `dynamic` 형식 또는 인터페이스 유형의 변수에 할당할 수 없습니다.
 - `ref struct` 형식은 인터페이스를 구현할 수 없습니다.
-- `ref struct`를 클래스 또는 일반 구조체의 멤버로 선언할 수 없습니다.
+- `ref struct`를 클래스 또는 일반 구조체의 필드 멤버로 선언할 수 없습니다. 여기에는 컴파일러에서 생성된 지원 필드를 만드는 자동 구현 속성의 선언이 포함됩니다. 
 - 비동기 메서드에 `ref struct` 형식인 로컬 변수를 선언할 수 없습니다. <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> 또는 `Task`와 유사한 형식을 반환하는 동기 메서드에 선언할 수 있습니다.
 - 반복기에 `ref struct` 로컬 변수를 선언할 수 없습니다.
 - 람다 식 또는 로컬 함수에서 `ref struct` 변수를 캡처할 수 없습니다.

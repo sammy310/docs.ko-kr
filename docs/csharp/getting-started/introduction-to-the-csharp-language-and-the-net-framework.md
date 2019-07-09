@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: bd2efcd28a8349ef07873adb5eaa69784e61d482
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 361a6669d5d638bbb39bc646607cce212bbb3bfa
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585944"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504026"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 언어 및 .NET Framework 소개
 
@@ -54,7 +54,7 @@ ms.locfileid: "65585944"
 
  C# 프로그램은 CLR(공용 언어 런타임)이라고 하는 가상 실행 시스템과 통합된 클래스 라이브러리 세트를 포함하는 Windows의 통합 구성 요소인 .NET Framewor에서 실행됩니다. CLR은 언어 및 라이브러리가 원활하게 함께 작동하는 실행 및 개발 환경을 만들기 위한 기준이 되는 국제 표준인 CLI(공용 언어 인프라)를 Microsoft에서 상업적으로 구현한 것입니다.  
   
- C#으로 작성된 소스 코드는 CLI 사양을 준수하는 IL(중간 언어)로 컴파일됩니다. IL 코드 및 리소스(예: 비트맵 및 문자열)는 일반적으로 확장명이 .exe 또는 .dll인 어셈블리라는 실행 파일로 디스크에 저장됩니다. 어셈블리는 어셈블리의 형식, 버전, 문화권 및 보안 요구 사항에 대한 정보를 제공하는 매니페스트를 포함합니다.  
+ C#으로 작성된 소스 코드는 CLI 사양을 준수하는 [IL(중간 언어)](../../standard/managed-code.md)로 컴파일됩니다. IL 코드 및 리소스(예: 비트맵 및 문자열)는 일반적으로 확장명이 .exe 또는 .dll인 어셈블리라는 실행 파일로 디스크에 저장됩니다. 어셈블리는 어셈블리의 형식, 버전, 문화권 및 보안 요구 사항에 대한 정보를 제공하는 매니페스트를 포함합니다.  
   
  C# 프로그램이 실행될 경우 어셈블리가 CLR에 로드되어 매니페스트의 정보를 기준으로 다양한 작업을 수행할 수 있습니다. 그런 다음 보안 요구 사항을 충족되면 CLR은 JIT(Just-In-Time) 컴파일을 수행하여 IL 코드를 네이티브 기계어 명령으로 변환합니다. 또한 CLR은 자동 가비지 수집, 예외 처리 및 리소스 관리와 관련된 다른 서비스도 제공합니다. CLR에서 실행되는 코드는 "관리 코드"라고도 합니다. 즉, 특정 시스템을 대상으로 하는 네이티브 기계어로 컴파일되는 "비관리 코드"와는 반대됩니다. 다음 다이어그램은 C# 소스 코드 파일, .NET Framework 클래스 라이브러리, 어셈블리 및 CLR의 컴파일 타임 및 런타임 관계를 보여 줍니다.  
   
