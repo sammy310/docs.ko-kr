@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a412bd8410750ec826762e45d70d59c514c61542
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: deec4d40270a11b9e48a0ab39504d774314c077c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490378"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736195"
 ---
 # <a name="getcorsystemdirectory-function"></a>GetCORSystemDirectory 함수
 프로세스에 로드 되는 공용 언어 런타임 (CLR)의 설치 디렉터리를 반환 합니다. 설치 디렉터리는 정규화 된 이름, 예를 들어, "c:\windows\microsoft.net\framework\v1.0.3705"입니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "66490378"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetCORSystemDirectory (   
     [out] LPWSTR  pbuffer,     
     [in]  DWORD   cchBuffer,   

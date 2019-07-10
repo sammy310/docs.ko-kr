@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 690d556eb3991747d1627bae63b9c59ca68daaaa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3cbecd5be9b1ac7c08e6970933a48eeb95f01a22
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616224"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739386"
 ---
 # <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType 열거형
 가비지가 수집될 개체의 소스를 식별합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum {  
     CorHandleStrong = 1,  
     CorHandleStrongPinning = 2,  
@@ -59,7 +59,7 @@ typedef enum {
 |`CorHandleStrongRefCount`|개체 핸들 테이블의 참조 횟수가 계산 개체에 대 한 핸들입니다.|  
 |`CorHandleStrongDependent`|개체 핸들 테이블의 종속 개체에 대 한 핸들입니다.|  
 |`CorHandleStrongAsyncPinned`|개체 핸들 테이블의 비동기 고정된 개체입니다.|  
-|`CorHandleStrongSizedByref`|가비지 컬렉션 시 모든 개체 및 개체 루트의 집합 클로저의 대략적인 크기를 유지하는 강력한 핸들입니다. |  
+|`CorHandleStrongSizedByref`|가비지 컬렉션 시 모든 개체 및 개체 루트의 집합 클로저의 대략적인 크기를 유지하는 강력한 핸들입니다.|  
 |`CorReferenceStack`|관리 되는 스택에서 참조입니다.|  
 |`CorReferenceFinalizer`|종료자 큐의 참조입니다.|  
 |CorHandleStrongOnly|핸들 테이블의 강력한 참조만을 반환 합니다. 이 값은 사용 된 [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) 방법만 해당 합니다.|  

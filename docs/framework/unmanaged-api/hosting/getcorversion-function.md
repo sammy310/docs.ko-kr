@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bd398a5b214ac0046d5fe1965f70eef2eedaa6b
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: fe5525fc29bc01bb84f7f2997d115eec12d72b13
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490389"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736279"
 ---
 # <a name="getcorversion-function"></a>GetCORVersion 함수
 현재 프로세스에서 실행 중인 공용 언어 런타임 (CLR)의 버전 번호를 반환 합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "66490389"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetCORVersion (  
     [in] LPWSTR  pbuffer,  
     [in]  DWORD   cchBuffer,   

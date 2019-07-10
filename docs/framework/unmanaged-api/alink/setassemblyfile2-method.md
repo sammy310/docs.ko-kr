@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 59bfc6785d3ad195e219afc323b7fdb513d8fefc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d96881ce35dca1ee7a196507ef8d81a565eed82
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949060"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741508"
 ---
 # <a name="setassemblyfile2-method"></a>SetAssemblyFile2 메서드
 이름 및 새 어셈블리에 대 한 옵션을 설정합니다. 바인딩되지 않은 모듈을 생성 하는 경우에이 메서드를 호출 하지 마세요.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT SetAssemblyFile2(  
     LPCWSTR pszFilename,  
     IMetaDataEmit2* pEmitter,  

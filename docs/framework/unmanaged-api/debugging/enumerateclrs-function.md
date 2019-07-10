@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e7532218728aead72186b5156da87db6d3bc0a8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae668a40ba1510e0e3d4f509643022ebe822a4f0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698215"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738944"
 ---
 # <a name="enumerateclrs-function"></a>EnumerateCLRs 함수
 프로세스의 CLR을 열거하기 위한 메커니즘을 제공합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT EnumerateCLRs (  
     [in]  DWORD      debuggeePID,  
     [out] HANDLE**   ppHandleArrayOut,  
