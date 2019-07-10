@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73645265821d5854776e412f8eb0f33b36db00d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 54abcd357c6f26f54432b39bfcb4a0d63afabfe4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698176"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738720"
 ---
 # <a name="iclrdatatargetgetpointersize-method"></a>ICLRDataTarget::GetPointerSize 메서드
 대상 프로세스를 사용 하는 포인터 형식의 바이트 크기를 가져옵니다. 이 메서드는 공용 언어 런타임 데이터 액세스 서비스에서 호출 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetPointerSize (  
     [out] ULONG32     *pointerSize  
 );  

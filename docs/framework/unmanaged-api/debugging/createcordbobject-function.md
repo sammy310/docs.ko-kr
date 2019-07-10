@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f546d7707c40f7f26a46177ae972a988e54e1e45
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ab86277956469e558d20cea81174a7fdcc0020b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61965835"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739329"
 ---
 # <a name="createcordbobject-function"></a>CreateCordbObject 함수
 디버거 인터페이스를 만듭니다 ([ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)) 원격 프로세스에서 관리 되는 디버깅 세션을 인스턴스화하기 위한 기능을 제공 하는 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT CordbCreateObject (  
        [in]  int         iDebuggerVersion,   
        [out] IUnknown**  ppCordb  

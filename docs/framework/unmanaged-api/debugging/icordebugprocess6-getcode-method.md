@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: faa538c2-60c9-4064-b996-1b4c24ebd751
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7349a20da35eb0b87894440026a0974d49ae2aa0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 810590f0d1f7f74b778d73d98a9f7f9b1988b75f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948644"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736445"
 ---
 # <a name="icordebugprocess6getcode-method"></a>ICorDebugProcess6::GetCode 메서드
 특정 코드 주소에서 관리 코드에 대한 정보를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetCode(  
     [in] CORDB_ADDRESS codeAddress,   
     [out] ICorDebugCode **ppCode);  
