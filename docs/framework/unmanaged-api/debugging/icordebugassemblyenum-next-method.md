@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 25861b2635605042acc1bf81f3f7a4739e678522
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00adc852a0940766cdd4188ffa5d6be2b472e51f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645450"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744883"
 ---
 # <a name="icordebugassemblyenumnext-method"></a>ICorDebugAssemblyEnum::Next 메서드
 현재 커서 위치부터 컬렉션에서 지정된 된 어셈블리 수를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT Next (  
     [in] ULONG celt,  
     [out, size_is(celt), length_is(*pceltFetched)]  
