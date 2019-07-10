@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38e2ec063d46ce9c890927391107888032e31378
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f7911d09c97c5401bff827ca5fb0a8766933778f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698098"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738663"
 ---
-# <a name="iclrdatatargetreadvirtual-method"></a><span data-ttu-id="362d9-102">ICLRDataTarget::ReadVirtual 메서드</span><span class="sxs-lookup"><span data-stu-id="362d9-102">ICLRDataTarget::ReadVirtual Method</span></span>
-<span data-ttu-id="362d9-103">지정된 된 버퍼에 지정 된 가상 메모리 주소에서 데이터를 읽습니다.</span><span class="sxs-lookup"><span data-stu-id="362d9-103">Reads data from the specified virtual memory address into the specified buffer.</span></span>  
+# <a name="iclrdatatargetreadvirtual-method"></a><span data-ttu-id="b8f59-102">ICLRDataTarget::ReadVirtual 메서드</span><span class="sxs-lookup"><span data-stu-id="b8f59-102">ICLRDataTarget::ReadVirtual Method</span></span>
+<span data-ttu-id="b8f59-103">지정된 된 버퍼에 지정 된 가상 메모리 주소에서 데이터를 읽습니다.</span><span class="sxs-lookup"><span data-stu-id="b8f59-103">Reads data from the specified virtual memory address into the specified buffer.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="362d9-104">구문</span><span class="sxs-lookup"><span data-stu-id="362d9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b8f59-104">구문</span><span class="sxs-lookup"><span data-stu-id="b8f59-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT ReadVirtual (  
     [in] CLRDATA_ADDRESS    address,  
     [out, size_is(bytesRequested), length_is(*bytesRead)]   
@@ -39,28 +39,28 @@ HRESULT ReadVirtual (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="362d9-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="362d9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b8f59-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="b8f59-105">Parameters</span></span>  
  `address`  
- <span data-ttu-id="362d9-106">[in] 가상 메모리 주소를 저장 하는 CLRDATA_ADDRESS 합니다.</span><span class="sxs-lookup"><span data-stu-id="362d9-106">[in] A CLRDATA_ADDRESS that stores the virtual memory address.</span></span>  
+ <span data-ttu-id="b8f59-106">[in] 가상 메모리 주소를 저장 하는 CLRDATA_ADDRESS 합니다.</span><span class="sxs-lookup"><span data-stu-id="b8f59-106">[in] A CLRDATA_ADDRESS that stores the virtual memory address.</span></span>  
   
  `buffer`  
- <span data-ttu-id="362d9-107">[out] 데이터를 받는 버퍼에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="362d9-107">[out] A pointer to a buffer that receives the data.</span></span>  
+ <span data-ttu-id="b8f59-107">[out] 데이터를 받는 버퍼에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="b8f59-107">[out] A pointer to a buffer that receives the data.</span></span>  
   
  `bytesRequested`  
- <span data-ttu-id="362d9-108">[in] 버퍼의 길이입니다.</span><span class="sxs-lookup"><span data-stu-id="362d9-108">[in] The length of the buffer.</span></span>  
+ <span data-ttu-id="b8f59-108">[in] 버퍼의 길이입니다.</span><span class="sxs-lookup"><span data-stu-id="b8f59-108">[in] The length of the buffer.</span></span>  
   
  `bytesRead`  
- <span data-ttu-id="362d9-109">[out] 바이트 수에 대 한 포인터를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="362d9-109">[out] A pointer to the number of bytes returned.</span></span>  
+ <span data-ttu-id="b8f59-109">[out] 바이트 수에 대 한 포인터를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="b8f59-109">[out] A pointer to the number of bytes returned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="362d9-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="362d9-110">Requirements</span></span>  
- <span data-ttu-id="362d9-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="362d9-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b8f59-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b8f59-110">Requirements</span></span>  
+ <span data-ttu-id="b8f59-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="b8f59-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="362d9-112">**헤더:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="362d9-112">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="b8f59-112">**헤더:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="b8f59-112">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="362d9-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="362d9-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b8f59-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b8f59-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="362d9-114">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="362d9-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b8f59-114">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b8f59-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="362d9-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="362d9-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b8f59-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="b8f59-115">See also</span></span>
 
-- [<span data-ttu-id="362d9-116">ICLRDataTarget 인터페이스</span><span class="sxs-lookup"><span data-stu-id="362d9-116">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [<span data-ttu-id="b8f59-116">ICLRDataTarget 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b8f59-116">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

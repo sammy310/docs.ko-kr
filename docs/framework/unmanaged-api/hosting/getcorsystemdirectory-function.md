@@ -17,21 +17,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a412bd8410750ec826762e45d70d59c514c61542
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: deec4d40270a11b9e48a0ab39504d774314c077c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490378"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736195"
 ---
-# <a name="getcorsystemdirectory-function"></a><span data-ttu-id="ccd4b-102">GetCORSystemDirectory 함수</span><span class="sxs-lookup"><span data-stu-id="ccd4b-102">GetCORSystemDirectory Function</span></span>
-<span data-ttu-id="ccd4b-103">프로세스에 로드 되는 공용 언어 런타임 (CLR)의 설치 디렉터리를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="ccd4b-103">Returns the installation directory of the common language runtime (CLR) that is loaded into the process.</span></span> <span data-ttu-id="ccd4b-104">설치 디렉터리는 정규화 된 이름, 예를 들어, "c:\windows\microsoft.net\framework\v1.0.3705"입니다.</span><span class="sxs-lookup"><span data-stu-id="ccd4b-104">The installation directory is fully qualified, for example, "c:\windows\microsoft.net\framework\v1.0.3705".</span></span>  
+# <a name="getcorsystemdirectory-function"></a><span data-ttu-id="bb5dd-102">GetCORSystemDirectory 함수</span><span class="sxs-lookup"><span data-stu-id="bb5dd-102">GetCORSystemDirectory Function</span></span>
+<span data-ttu-id="bb5dd-103">프로세스에 로드 되는 공용 언어 런타임 (CLR)의 설치 디렉터리를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb5dd-103">Returns the installation directory of the common language runtime (CLR) that is loaded into the process.</span></span> <span data-ttu-id="bb5dd-104">설치 디렉터리는 정규화 된 이름, 예를 들어, "c:\windows\microsoft.net\framework\v1.0.3705"입니다.</span><span class="sxs-lookup"><span data-stu-id="bb5dd-104">The installation directory is fully qualified, for example, "c:\windows\microsoft.net\framework\v1.0.3705".</span></span>  
   
- <span data-ttu-id="ccd4b-105">이 함수는 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ccd4b-105">This function is deprecated.</span></span> <span data-ttu-id="ccd4b-106">에 의해 대체 된 [iclrruntimeinfo:: Getruntimedirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) .NET Framework 4에서 제공 하는 메서드.</span><span class="sxs-lookup"><span data-stu-id="ccd4b-106">It is superseded by the [ICLRRuntimeInfo::GetRuntimeDirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) method provided in the .NET Framework 4.</span></span>  
+ <span data-ttu-id="bb5dd-105">이 함수는 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="bb5dd-105">This function is deprecated.</span></span> <span data-ttu-id="bb5dd-106">에 의해 대체 된 [iclrruntimeinfo:: Getruntimedirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) .NET Framework 4에서 제공 하는 메서드.</span><span class="sxs-lookup"><span data-stu-id="bb5dd-106">It is superseded by the [ICLRRuntimeInfo::GetRuntimeDirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) method provided in the .NET Framework 4.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ccd4b-107">구문</span><span class="sxs-lookup"><span data-stu-id="ccd4b-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bb5dd-107">구문</span><span class="sxs-lookup"><span data-stu-id="bb5dd-107">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetCORSystemDirectory (   
     [out] LPWSTR  pbuffer,     
     [in]  DWORD   cchBuffer,   
@@ -39,30 +39,30 @@ HRESULT GetCORSystemDirectory (
 );   
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ccd4b-108">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ccd4b-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bb5dd-108">매개 변수</span><span class="sxs-lookup"><span data-stu-id="bb5dd-108">Parameters</span></span>  
  `pbuffer`  
- <span data-ttu-id="ccd4b-109">[out] 런타임을 프로세스로 로드 되는 런타임 설치 디렉터리의 정규화 된 이름을 포함 하는 문자열을 반환 하는 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="ccd4b-109">[out] A buffer in which the runtime returns a string that contains the fully qualified name of the installation directory for the runtime that is loaded into the process.</span></span> <span data-ttu-id="ccd4b-110">런타임 프로세스에 아직 로드 되지가 컴퓨터에 설치 된 런타임의 최신 버전에 대 한 적절 한 디렉터리 정보를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="ccd4b-110">If the runtime has not yet been loaded into the process, the function returns the appropriate directory information for the latest version of the runtime installed on the computer.</span></span>  
+ <span data-ttu-id="bb5dd-109">[out] 런타임을 프로세스로 로드 되는 런타임 설치 디렉터리의 정규화 된 이름을 포함 하는 문자열을 반환 하는 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="bb5dd-109">[out] A buffer in which the runtime returns a string that contains the fully qualified name of the installation directory for the runtime that is loaded into the process.</span></span> <span data-ttu-id="bb5dd-110">런타임 프로세스에 아직 로드 되지가 컴퓨터에 설치 된 런타임의 최신 버전에 대 한 적절 한 디렉터리 정보를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb5dd-110">If the runtime has not yet been loaded into the process, the function returns the appropriate directory information for the latest version of the runtime installed on the computer.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="ccd4b-111">[in] 크기 (바이트)의 `pbuffer`합니다.</span><span class="sxs-lookup"><span data-stu-id="ccd4b-111">[in] The size, in bytes, of `pbuffer`.</span></span>  
+ <span data-ttu-id="bb5dd-111">[in] 크기 (바이트)의 `pbuffer`합니다.</span><span class="sxs-lookup"><span data-stu-id="bb5dd-111">[in] The size, in bytes, of `pbuffer`.</span></span>  
   
  `dwLength`  
- <span data-ttu-id="ccd4b-112">[out] 반환 된 문자 수가 `pbuffer`합니다.</span><span class="sxs-lookup"><span data-stu-id="ccd4b-112">[out] The number of characters returned in `pbuffer`.</span></span>  
+ <span data-ttu-id="bb5dd-112">[out] 반환 된 문자 수가 `pbuffer`합니다.</span><span class="sxs-lookup"><span data-stu-id="bb5dd-112">[out] The number of characters returned in `pbuffer`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ccd4b-113">설명</span><span class="sxs-lookup"><span data-stu-id="ccd4b-113">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bb5dd-113">설명</span><span class="sxs-lookup"><span data-stu-id="bb5dd-113">Remarks</span></span>  
   
 > [!CAUTION]
->  <span data-ttu-id="ccd4b-114">CLR 버전 4를 실행 하는 프로세스에서이 함수를 사용 하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="ccd4b-114">Do not use this function in processes that are running version 4 of the CLR.</span></span> <span data-ttu-id="ccd4b-115">CLR의 이전 버전 컴퓨터의 설치는 경우이 함수는 해당 버전의 설치 디렉터리를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="ccd4b-115">If an earlier version of the CLR is installed on the computer, this function returns the installation directory for that version.</span></span>  
+>  <span data-ttu-id="bb5dd-114">CLR 버전 4를 실행 하는 프로세스에서이 함수를 사용 하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="bb5dd-114">Do not use this function in processes that are running version 4 of the CLR.</span></span> <span data-ttu-id="bb5dd-115">CLR의 이전 버전 컴퓨터의 설치는 경우이 함수는 해당 버전의 설치 디렉터리를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb5dd-115">If an earlier version of the CLR is installed on the computer, this function returns the installation directory for that version.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ccd4b-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ccd4b-116">Requirements</span></span>  
- <span data-ttu-id="ccd4b-117">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="ccd4b-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bb5dd-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="bb5dd-116">Requirements</span></span>  
+ <span data-ttu-id="bb5dd-117">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="bb5dd-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ccd4b-118">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ccd4b-118">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="bb5dd-118">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="bb5dd-118">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="ccd4b-119">**라이브러리:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ccd4b-119">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="bb5dd-119">**라이브러리:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="bb5dd-119">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ccd4b-120">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ccd4b-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="bb5dd-120">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bb5dd-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ccd4b-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="ccd4b-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bb5dd-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="bb5dd-121">See also</span></span>
 
-- [<span data-ttu-id="ccd4b-122">사용되지 않는 CLR 호스팅 함수</span><span class="sxs-lookup"><span data-stu-id="ccd4b-122">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="bb5dd-122">사용되지 않는 CLR 호스팅 함수</span><span class="sxs-lookup"><span data-stu-id="bb5dd-122">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
