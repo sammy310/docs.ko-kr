@@ -4,46 +4,46 @@ ms.date: 03/30/2017
 ms.assetid: faa538c2-60c9-4064-b996-1b4c24ebd751
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7349a20da35eb0b87894440026a0974d49ae2aa0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 810590f0d1f7f74b778d73d98a9f7f9b1988b75f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948644"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736445"
 ---
-# <a name="icordebugprocess6getcode-method"></a><span data-ttu-id="288af-102">ICorDebugProcess6::GetCode 메서드</span><span class="sxs-lookup"><span data-stu-id="288af-102">ICorDebugProcess6::GetCode Method</span></span>
-<span data-ttu-id="288af-103">특정 코드 주소에서 관리 코드에 대한 정보를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="288af-103">Gets information about the managed code at a particular code address.</span></span>  
+# <a name="icordebugprocess6getcode-method"></a><span data-ttu-id="f67aa-102">ICorDebugProcess6::GetCode 메서드</span><span class="sxs-lookup"><span data-stu-id="f67aa-102">ICorDebugProcess6::GetCode Method</span></span>
+<span data-ttu-id="f67aa-103">특정 코드 주소에서 관리 코드에 대한 정보를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="f67aa-103">Gets information about the managed code at a particular code address.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="288af-104">구문</span><span class="sxs-lookup"><span data-stu-id="288af-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f67aa-104">구문</span><span class="sxs-lookup"><span data-stu-id="f67aa-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetCode(  
     [in] CORDB_ADDRESS codeAddress,   
     [out] ICorDebugCode **ppCode);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="288af-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="288af-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f67aa-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f67aa-105">Parameters</span></span>  
  `codeAddress`  
- <span data-ttu-id="288af-106">[in] A [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) 관리 코드 세그먼트의 시작 주소를 지정 하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="288af-106">[in] A [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) value that specifies the starting address of the managed code segment.</span></span>  
+ <span data-ttu-id="f67aa-106">[in] A [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) 관리 코드 세그먼트의 시작 주소를 지정 하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="f67aa-106">[in] A [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) value that specifies the starting address of the managed code segment.</span></span>  
   
  `ppCode`  
- <span data-ttu-id="288af-107">[out] 관리 코드의 세그먼트를 나타내는 "ICorDebugCode" 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="288af-107">[out] A pointer to the address of an "ICorDebugCode" object that represents a segment of managed code.</span></span>  
+ <span data-ttu-id="f67aa-107">[out] 관리 코드의 세그먼트를 나타내는 "ICorDebugCode" 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="f67aa-107">[out] A pointer to the address of an "ICorDebugCode" object that represents a segment of managed code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="288af-108">설명</span><span class="sxs-lookup"><span data-stu-id="288af-108">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f67aa-108">설명</span><span class="sxs-lookup"><span data-stu-id="f67aa-108">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="288af-109">이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="288af-109">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="f67aa-109">이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f67aa-109">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="288af-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="288af-110">Requirements</span></span>  
- <span data-ttu-id="288af-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="288af-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f67aa-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f67aa-110">Requirements</span></span>  
+ <span data-ttu-id="f67aa-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="f67aa-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="288af-112">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="288af-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f67aa-112">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f67aa-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="288af-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="288af-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f67aa-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f67aa-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="288af-114">**.NET Framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="288af-114">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="f67aa-114">**.NET Framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f67aa-114">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="288af-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="288af-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f67aa-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="f67aa-115">See also</span></span>
 
-- [<span data-ttu-id="288af-116">ICorDebugProcess6 인터페이스</span><span class="sxs-lookup"><span data-stu-id="288af-116">ICorDebugProcess6 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)
-- [<span data-ttu-id="288af-117">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="288af-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="f67aa-116">ICorDebugProcess6 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f67aa-116">ICorDebugProcess6 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)
+- [<span data-ttu-id="f67aa-117">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f67aa-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
