@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: e88897342bf18111ebd4914948ab45085c35ea08
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 66e4768acff7ab735c6ac9e8f8f51a9511f7e371
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942365"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744690"
 ---
 # <a name="ixclrdatamethodinstancegetiladdressmap-method"></a>IXCLRDataMethodInstance::GetILAddressMap 메서드
 
@@ -30,7 +30,7 @@ IL을 주소 매핑 정보를 가져옵니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 HRESULT GetILAddressMap(
     [in] ULONG32                                   mapLen,
     [out] ULONG32                                 *mapNeeded,

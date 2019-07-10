@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ba9200419d6b6fef467ae02bd74101414e125da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92eff65078f05557f542c64c1be7d4f6eca43eb5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698007"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738474"
 ---
 # <a name="iclrdatatarget2allocvirtual-method"></a>ICLRDataTarget2::AllocVirtual 메서드
 이 대상 프로세스의 주소 공간에 메모리를 할당 하는 공용 언어 런타임 (CLR) 데이터 액세스 서비스에서 호출 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT AllocVirtual(  
     [in] CLRDATA_ADDRESS addr,  
     [in] ULONG32 size,  

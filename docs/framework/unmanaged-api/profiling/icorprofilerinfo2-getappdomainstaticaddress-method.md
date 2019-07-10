@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 383d7cd0e315089362b478eed6bdde6d0e4621a6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e68178a71d7ba73b4956a7d23854c23300301d8e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586726"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747852"
 ---
 # <a name="icorprofilerinfo2getappdomainstaticaddress-method"></a>ICorProfilerInfo2::GetAppDomainStaticAddress 메서드
 지정 된 응용 프로그램 도메인의 범위 내에 있는 지정 된 응용 프로그램 도메인 정적 필드의 주소를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 RESULT GetAppDomainStaticAddress(  
     [in] ClassID classId,  
     [in] mdFieldDef fieldToken,  

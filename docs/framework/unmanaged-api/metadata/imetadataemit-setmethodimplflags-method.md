@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 28c0aa37bdcae2a09a4d53f920efd3ffe7117bd3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a437ff11114ea8d577b2fc3b81cd981cebb8c8d6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992461"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751074"
 ---
 # <a name="imetadataemitsetmethodimplflags-method"></a>IMetaDataEmit::SetMethodImplFlags 메서드
 설정 하거나 지정된 된 토큰에서 참조 되는 상속 된 메서드 구현의 메타 데이터 서명을 업데이트 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT SetMethodImplFlags (   
     [in]  mdMethodDef   md,   
     [in]  DWORD         dwImplFlags   

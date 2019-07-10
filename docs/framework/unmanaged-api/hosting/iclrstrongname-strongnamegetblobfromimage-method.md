@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7fa83f55a03ebfff9ae88217b01c86272bf0de93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e13f0ebbdc4e5fe3974208f91ab57f86dd29c910
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993072"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748018"
 ---
 # <a name="iclrstrongnamestrongnamegetblobfromimage-method"></a>ICLRStrongName::StrongNameGetBlobFromImage 메서드
 지정된 메모리 주소에 있는 어셈블리 이미지의 이진 표현을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT StrongNameGetBlobFromImage (  
     [in]  BYTE        *pbBase,  
     [in]  DWORD       dwLength,  
