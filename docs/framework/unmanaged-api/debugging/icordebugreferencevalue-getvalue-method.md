@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e52ef20f2b8e3937911dc37e68f8a338ab0d85d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5542cf5895bc60c5880f2f082a9c14d722e02478
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782969"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744916"
 ---
-# <a name="icordebugreferencevaluegetvalue-method"></a><span data-ttu-id="535b2-102">ICorDebugReferenceValue::GetValue 메서드</span><span class="sxs-lookup"><span data-stu-id="535b2-102">ICorDebugReferenceValue::GetValue Method</span></span>
-<span data-ttu-id="535b2-103">참조 된 개체의 현재 메모리 주소를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="535b2-103">Gets the current memory address of the referenced object.</span></span>  
+# <a name="icordebugreferencevaluegetvalue-method"></a><span data-ttu-id="fa76a-102">ICorDebugReferenceValue::GetValue 메서드</span><span class="sxs-lookup"><span data-stu-id="fa76a-102">ICorDebugReferenceValue::GetValue Method</span></span>
+<span data-ttu-id="fa76a-103">참조 된 개체의 현재 메모리 주소를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="fa76a-103">Gets the current memory address of the referenced object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="535b2-104">구문</span><span class="sxs-lookup"><span data-stu-id="535b2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fa76a-104">구문</span><span class="sxs-lookup"><span data-stu-id="fa76a-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetValue (  
     [out] CORDB_ADDRESS   *pValue  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="535b2-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="535b2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fa76a-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="fa76a-105">Parameters</span></span>  
  `pValue`  
- <span data-ttu-id="535b2-106">[out] 에 대 한 포인터를 `CORDB_ADDRESS` 이 ICorDebugReferenceValue 개체가 가리키는 개체의 주소를 지정 하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="535b2-106">[out] A pointer to a `CORDB_ADDRESS` value that specifies the address of the object to which this ICorDebugReferenceValue object points.</span></span>  
+ <span data-ttu-id="fa76a-106">[out] 에 대 한 포인터를 `CORDB_ADDRESS` 이 ICorDebugReferenceValue 개체가 가리키는 개체의 주소를 지정 하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="fa76a-106">[out] A pointer to a `CORDB_ADDRESS` value that specifies the address of the object to which this ICorDebugReferenceValue object points.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="535b2-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="535b2-107">Requirements</span></span>  
- <span data-ttu-id="535b2-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="535b2-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fa76a-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="fa76a-107">Requirements</span></span>  
+ <span data-ttu-id="fa76a-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="fa76a-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="535b2-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="535b2-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="fa76a-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fa76a-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="535b2-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="535b2-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="fa76a-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fa76a-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="535b2-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="535b2-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="fa76a-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fa76a-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
