@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6f5f1da94e1ae07a604a616c631a38d02caea9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e0159ce6ad1087838681214533d386f4d44cee2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645632"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737466"
 ---
-# <a name="icordebugarrayvaluegetelementtype-method"></a><span data-ttu-id="42d88-102">ICorDebugArrayValue::GetElementType 메서드</span><span class="sxs-lookup"><span data-stu-id="42d88-102">ICorDebugArrayValue::GetElementType Method</span></span>
-<span data-ttu-id="42d88-103">단순 형식 배열의 요소를 나타내는 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="42d88-103">Gets a value that indicates the simple type of the elements in the array.</span></span>  
+# <a name="icordebugarrayvaluegetelementtype-method"></a><span data-ttu-id="7d111-102">ICorDebugArrayValue::GetElementType 메서드</span><span class="sxs-lookup"><span data-stu-id="7d111-102">ICorDebugArrayValue::GetElementType Method</span></span>
+<span data-ttu-id="7d111-103">단순 형식 배열의 요소를 나타내는 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="7d111-103">Gets a value that indicates the simple type of the elements in the array.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="42d88-104">구문</span><span class="sxs-lookup"><span data-stu-id="42d88-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7d111-104">구문</span><span class="sxs-lookup"><span data-stu-id="7d111-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetElementType (  
     [out] CorElementType  *pType  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="42d88-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="42d88-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7d111-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="7d111-105">Parameters</span></span>  
  `pType`  
- <span data-ttu-id="42d88-106">[out] CorElementType 열거형 형식을 나타내는 값에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="42d88-106">[out] A pointer to a value of the CorElementType enumeration that indicates the type.</span></span>  
+ <span data-ttu-id="7d111-106">[out] CorElementType 열거형 형식을 나타내는 값에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="7d111-106">[out] A pointer to a value of the CorElementType enumeration that indicates the type.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="42d88-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="42d88-107">Requirements</span></span>  
- <span data-ttu-id="42d88-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="42d88-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7d111-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="7d111-107">Requirements</span></span>  
+ <span data-ttu-id="7d111-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="7d111-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="42d88-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="42d88-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="7d111-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7d111-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="42d88-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="42d88-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7d111-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7d111-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="42d88-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="42d88-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="7d111-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7d111-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

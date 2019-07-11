@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bbe8a43f44d59249abc713c95fce31f1fb9a5993
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31dec878c92e2e2196ab2d586a78578b7244a41a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775637"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742247"
 ---
-# <a name="addimport-method"></a><span data-ttu-id="c85a8-102">AddImport 메서드</span><span class="sxs-lookup"><span data-stu-id="c85a8-102">AddImport Method</span></span>
-<span data-ttu-id="c85a8-103">어셈블리에 가져오기를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="c85a8-103">Adds imports to the assembly.</span></span>  
+# <a name="addimport-method"></a><span data-ttu-id="37943-102">AddImport 메서드</span><span class="sxs-lookup"><span data-stu-id="37943-102">AddImport Method</span></span>
+<span data-ttu-id="37943-103">어셈블리에 가져오기를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="37943-103">Adds imports to the assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c85a8-104">구문</span><span class="sxs-lookup"><span data-stu-id="c85a8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="37943-104">구문</span><span class="sxs-lookup"><span data-stu-id="37943-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT AddImport(  
     mdAssembly      AssemblyID,  
     mdToken         ImportToken,  
@@ -38,27 +38,27 @@ HRESULT AddImport(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c85a8-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="c85a8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="37943-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="37943-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="c85a8-106">확대 하 여 어셈블리의 고유 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="c85a8-106">Unique ID of assembly to be augmented.</span></span>  
+ <span data-ttu-id="37943-106">확대 하 여 어셈블리의 고유 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="37943-106">Unique ID of assembly to be augmented.</span></span>  
   
  `ImportToken`  
- <span data-ttu-id="c85a8-107">고유한 ID를 검색할 [ImportFile 메서드](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)를 가져올 파일의 합니다.</span><span class="sxs-lookup"><span data-stu-id="c85a8-107">Unique ID, retrieved from [ImportFile Method](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), of file to be imported.</span></span>  
+ <span data-ttu-id="37943-107">고유한 ID를 검색할 [ImportFile 메서드](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)를 가져올 파일의 합니다.</span><span class="sxs-lookup"><span data-stu-id="37943-107">Unique ID, retrieved from [ImportFile Method](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), of file to be imported.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="c85a8-108">COM + FileDef 플래그와 같은 `ffContainsNoMetaData` 고 `ffWriteable`입니다.</span><span class="sxs-lookup"><span data-stu-id="c85a8-108">COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`.</span></span> <span data-ttu-id="c85a8-109">`dwFlags` 에 전달 됩니다 [DefineFile 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="c85a8-109">`dwFlags` is passed to [DefineFile Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).</span></span>  
+ <span data-ttu-id="37943-108">COM + FileDef 플래그와 같은 `ffContainsNoMetaData` 고 `ffWriteable`입니다.</span><span class="sxs-lookup"><span data-stu-id="37943-108">COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`.</span></span> <span data-ttu-id="37943-109">`dwFlags` 에 전달 됩니다 [DefineFile 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="37943-109">`dwFlags` is passed to [DefineFile Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).</span></span>  
   
  `pFileToken`  
- <span data-ttu-id="c85a8-110">결과 파일에 대 한 ID를 받는 토큰에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="c85a8-110">Pointer to token that receives the ID for the resulting file.</span></span>  
+ <span data-ttu-id="37943-110">결과 파일에 대 한 ID를 받는 토큰에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="37943-110">Pointer to token that receives the ID for the resulting file.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c85a8-111">반환 값</span><span class="sxs-lookup"><span data-stu-id="c85a8-111">Return Value</span></span>  
- <span data-ttu-id="c85a8-112">메서드가 성공 하면 S_OK를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="c85a8-112">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="37943-111">반환 값</span><span class="sxs-lookup"><span data-stu-id="37943-111">Return Value</span></span>  
+ <span data-ttu-id="37943-112">메서드가 성공 하면 S_OK를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="37943-112">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c85a8-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c85a8-113">Requirements</span></span>  
- <span data-ttu-id="c85a8-114">Alink.h 필요</span><span class="sxs-lookup"><span data-stu-id="c85a8-114">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="37943-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="37943-113">Requirements</span></span>  
+ <span data-ttu-id="37943-114">Alink.h 필요</span><span class="sxs-lookup"><span data-stu-id="37943-114">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c85a8-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="c85a8-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="37943-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="37943-115">See also</span></span>
 
-- [<span data-ttu-id="c85a8-116">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c85a8-116">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="c85a8-117">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c85a8-117">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="c85a8-118">ALink API</span><span class="sxs-lookup"><span data-stu-id="c85a8-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="37943-116">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="37943-116">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="37943-117">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="37943-117">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="37943-118">ALink API</span><span class="sxs-lookup"><span data-stu-id="37943-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

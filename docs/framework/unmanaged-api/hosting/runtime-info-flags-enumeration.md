@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c0f4b6e024d75d9334f91373f9d3bbd2c5e41093
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4bf3a0507f9f7d4d622163a55fc9c45b4a4dd0a6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622505"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781155"
 ---
-# <a name="runtimeinfoflags-enumeration"></a><span data-ttu-id="efc32-102">RUNTIME_INFO_FLAGS 열거형</span><span class="sxs-lookup"><span data-stu-id="efc32-102">RUNTIME_INFO_FLAGS Enumeration</span></span>
-<span data-ttu-id="efc32-103">CLR (공용 언어 런타임)에 대 한 정보를 반환할지 여부를 나타내는 값을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="efc32-103">Contains values that indicate what information about the common language runtime (CLR) should be returned.</span></span>  
+# <a name="runtimeinfoflags-enumeration"></a><span data-ttu-id="10ef1-102">RUNTIME_INFO_FLAGS 열거형</span><span class="sxs-lookup"><span data-stu-id="10ef1-102">RUNTIME_INFO_FLAGS Enumeration</span></span>
+<span data-ttu-id="10ef1-103">CLR (공용 언어 런타임)에 대 한 정보를 반환할지 여부를 나타내는 값을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="10ef1-103">Contains values that indicate what information about the common language runtime (CLR) should be returned.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="efc32-104">구문</span><span class="sxs-lookup"><span data-stu-id="efc32-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="10ef1-104">구문</span><span class="sxs-lookup"><span data-stu-id="10ef1-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum {  
   
     RUNTIME_INFO_UPGRADE_VERSION             = 0x01,  
@@ -43,37 +43,37 @@ typedef enum {
 } RUNTIME_INFO_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="efc32-105">멤버</span><span class="sxs-lookup"><span data-stu-id="efc32-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="10ef1-105">멤버</span><span class="sxs-lookup"><span data-stu-id="10ef1-105">Members</span></span>  
   
-|<span data-ttu-id="efc32-106">멤버</span><span class="sxs-lookup"><span data-stu-id="efc32-106">Member</span></span>|<span data-ttu-id="efc32-107">설명</span><span class="sxs-lookup"><span data-stu-id="efc32-107">Description</span></span>|  
+|<span data-ttu-id="10ef1-106">멤버</span><span class="sxs-lookup"><span data-stu-id="10ef1-106">Member</span></span>|<span data-ttu-id="10ef1-107">Description</span><span class="sxs-lookup"><span data-stu-id="10ef1-107">Description</span></span>|  
 |------------|-----------------|  
-|`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|<span data-ttu-id="efc32-108">디렉터리 정보를 포함 하지 해야 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="efc32-108">Indicates that directory information should not be included.</span></span>|  
-|`RUNTIME_INFO_DONT_RETURN_VERSION`|<span data-ttu-id="efc32-109">버전 정보를 포함 하지 해야 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="efc32-109">Indicates that version information should not be included.</span></span>|  
-|`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|<span data-ttu-id="efc32-110">실패 시 오류 대화 상자를 표시 되지 않음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="efc32-110">Indicates that an error dialog box should not be shown upon failure.</span></span>|  
-|`RUNTIME_INFO_IGNORE_ERROR_MODE`|<span data-ttu-id="efc32-111">나타내는 호출의 결과 [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) SEM_FAILCRITICALERRORS 플래그를 사용 하 여 함수를 재정의 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="efc32-111">Indicates that the effects of calling the [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) function with the SEM_FAILCRITICALERRORS flag should be overridden.</span></span> <span data-ttu-id="efc32-112">즉, 설치 대화 상자를 표시 되는 대신 실패 하면 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="efc32-112">That is, an installation dialog box should be shown upon failure, instead of being suppressed.</span></span>|  
-|`RUNTIME_INFO_REQUEST_AMD64`|<span data-ttu-id="efc32-113">런타임의 AMD-64-호환 되는 버전 정보에 대 한 요청을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="efc32-113">Indicates a request for information about an AMD-64-compatible version of the runtime.</span></span>|  
-|`RUNTIME_INFO_REQUEST_IA64`|<span data-ttu-id="efc32-114">런타임의 IA-64-호환 되는 버전 정보에 대 한 요청을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="efc32-114">Indicates a request for information about an IA-64-compatible version of the runtime.</span></span>|  
-|`RUNTIME_INFO_REQUEST_X86`|<span data-ttu-id="efc32-115">런타임의 x86 호환 버전 정보에 대 한 요청을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="efc32-115">Indicates a request for information about an x86-compatible version of the runtime.</span></span>|  
-|`RUNTIME_INFO_UPGRADE_VERSION`|<span data-ttu-id="efc32-116">버전 업그레이드 정보 포함 되어야 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="efc32-116">Indicates that version upgrade information should be included.</span></span>|  
+|`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|<span data-ttu-id="10ef1-108">디렉터리 정보를 포함 하지 해야 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="10ef1-108">Indicates that directory information should not be included.</span></span>|  
+|`RUNTIME_INFO_DONT_RETURN_VERSION`|<span data-ttu-id="10ef1-109">버전 정보를 포함 하지 해야 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="10ef1-109">Indicates that version information should not be included.</span></span>|  
+|`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|<span data-ttu-id="10ef1-110">실패 시 오류 대화 상자를 표시 되지 않음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="10ef1-110">Indicates that an error dialog box should not be shown upon failure.</span></span>|  
+|`RUNTIME_INFO_IGNORE_ERROR_MODE`|<span data-ttu-id="10ef1-111">나타내는 호출의 결과 [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) SEM_FAILCRITICALERRORS 플래그를 사용 하 여 함수를 재정의 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="10ef1-111">Indicates that the effects of calling the [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) function with the SEM_FAILCRITICALERRORS flag should be overridden.</span></span> <span data-ttu-id="10ef1-112">즉, 설치 대화 상자를 표시 되는 대신 실패 하면 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="10ef1-112">That is, an installation dialog box should be shown upon failure, instead of being suppressed.</span></span>|  
+|`RUNTIME_INFO_REQUEST_AMD64`|<span data-ttu-id="10ef1-113">런타임의 AMD-64-호환 되는 버전 정보에 대 한 요청을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="10ef1-113">Indicates a request for information about an AMD-64-compatible version of the runtime.</span></span>|  
+|`RUNTIME_INFO_REQUEST_IA64`|<span data-ttu-id="10ef1-114">런타임의 IA-64-호환 되는 버전 정보에 대 한 요청을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="10ef1-114">Indicates a request for information about an IA-64-compatible version of the runtime.</span></span>|  
+|`RUNTIME_INFO_REQUEST_X86`|<span data-ttu-id="10ef1-115">런타임의 x86 호환 버전 정보에 대 한 요청을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="10ef1-115">Indicates a request for information about an x86-compatible version of the runtime.</span></span>|  
+|`RUNTIME_INFO_UPGRADE_VERSION`|<span data-ttu-id="10ef1-116">버전 업그레이드 정보 포함 되어야 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="10ef1-116">Indicates that version upgrade information should be included.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="efc32-117">설명</span><span class="sxs-lookup"><span data-stu-id="efc32-117">Remarks</span></span>  
- <span data-ttu-id="efc32-118">다음 플랫폼 아키텍처 플래그를 한 번에 하나만 지정된 될 수 있습니다 및 함께 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="efc32-118">The following platform architecture flags can be specified only one at a time and cannot be combined:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="10ef1-117">설명</span><span class="sxs-lookup"><span data-stu-id="10ef1-117">Remarks</span></span>  
+ <span data-ttu-id="10ef1-118">다음 플랫폼 아키텍처 플래그를 한 번에 하나만 지정된 될 수 있습니다 및 함께 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="10ef1-118">The following platform architecture flags can be specified only one at a time and cannot be combined:</span></span>  
   
-- <span data-ttu-id="efc32-119">RUNTIME_INFO_REQUEST_IA64</span><span class="sxs-lookup"><span data-stu-id="efc32-119">RUNTIME_INFO_REQUEST_IA64</span></span>  
+- <span data-ttu-id="10ef1-119">RUNTIME_INFO_REQUEST_IA64</span><span class="sxs-lookup"><span data-stu-id="10ef1-119">RUNTIME_INFO_REQUEST_IA64</span></span>  
   
-- <span data-ttu-id="efc32-120">RUNTIME_INFO_REQUEST_AMD64</span><span class="sxs-lookup"><span data-stu-id="efc32-120">RUNTIME_INFO_REQUEST_AMD64</span></span>  
+- <span data-ttu-id="10ef1-120">RUNTIME_INFO_REQUEST_AMD64</span><span class="sxs-lookup"><span data-stu-id="10ef1-120">RUNTIME_INFO_REQUEST_AMD64</span></span>  
   
-- <span data-ttu-id="efc32-121">RUNTIME_INFO_REQUEST_X86</span><span class="sxs-lookup"><span data-stu-id="efc32-121">RUNTIME_INFO_REQUEST_X86</span></span>  
+- <span data-ttu-id="10ef1-121">RUNTIME_INFO_REQUEST_X86</span><span class="sxs-lookup"><span data-stu-id="10ef1-121">RUNTIME_INFO_REQUEST_X86</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="efc32-122">요구 사항</span><span class="sxs-lookup"><span data-stu-id="efc32-122">Requirements</span></span>  
- <span data-ttu-id="efc32-123">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="efc32-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="10ef1-122">요구 사항</span><span class="sxs-lookup"><span data-stu-id="10ef1-122">Requirements</span></span>  
+ <span data-ttu-id="10ef1-123">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="10ef1-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="efc32-124">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="efc32-124">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="10ef1-124">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="10ef1-124">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="efc32-125">**라이브러리:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="efc32-125">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="10ef1-125">**라이브러리:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="10ef1-125">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="efc32-126">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="efc32-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="10ef1-126">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="10ef1-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="efc32-127">참고자료</span><span class="sxs-lookup"><span data-stu-id="efc32-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="10ef1-127">참고자료</span><span class="sxs-lookup"><span data-stu-id="10ef1-127">See also</span></span>
 
-- [<span data-ttu-id="efc32-128">호스팅 열거형</span><span class="sxs-lookup"><span data-stu-id="efc32-128">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="10ef1-128">호스팅 열거형</span><span class="sxs-lookup"><span data-stu-id="10ef1-128">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
