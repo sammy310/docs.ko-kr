@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91b1e4469f07954dc433769911c78d72bb3c36cb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8dd1daf3528bbc642033e254a809c18c3662ff1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904984"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779190"
 ---
-# <a name="imetadataassemblyimportgetexportedtypeprops-method"></a><span data-ttu-id="5faa6-102">IMetaDataAssemblyImport::GetExportedTypeProps 메서드</span><span class="sxs-lookup"><span data-stu-id="5faa6-102">IMetaDataAssemblyImport::GetExportedTypeProps Method</span></span>
-<span data-ttu-id="5faa6-103">지정 된 메타 데이터 서명 사용 하 여 내보낸 형식의 속성 집합을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="5faa6-103">Gets the set of properties of the exported type with the specified metadata signature.</span></span>  
+# <a name="imetadataassemblyimportgetexportedtypeprops-method"></a><span data-ttu-id="655b2-102">IMetaDataAssemblyImport::GetExportedTypeProps 메서드</span><span class="sxs-lookup"><span data-stu-id="655b2-102">IMetaDataAssemblyImport::GetExportedTypeProps Method</span></span>
+<span data-ttu-id="655b2-103">지정 된 메타 데이터 서명 사용 하 여 내보낸 형식의 속성 집합을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="655b2-103">Gets the set of properties of the exported type with the specified metadata signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5faa6-104">구문</span><span class="sxs-lookup"><span data-stu-id="5faa6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="655b2-104">구문</span><span class="sxs-lookup"><span data-stu-id="655b2-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetExportedTypeProps (  
     [in]  mdExportedType    mdct,   
     [out] LPWSTR            szName,   
@@ -41,37 +41,37 @@ HRESULT GetExportedTypeProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5faa6-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="5faa6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="655b2-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="655b2-105">Parameters</span></span>  
  `mdct`  
- <span data-ttu-id="5faa6-106">[in] `mdExportedType` 내보낸된 형식을 나타내는 메타 데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="5faa6-106">[in] An `mdExportedType` metadata token that represents the exported type.</span></span>  
+ <span data-ttu-id="655b2-106">[in] `mdExportedType` 내보낸된 형식을 나타내는 메타 데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="655b2-106">[in] An `mdExportedType` metadata token that represents the exported type.</span></span>  
   
  `szName`  
- <span data-ttu-id="5faa6-107">[out] 내보낸 형식 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="5faa6-107">[out] The name of the exported type.</span></span>  
+ <span data-ttu-id="655b2-107">[out] 내보낸 형식 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="655b2-107">[out] The name of the exported type.</span></span>  
   
  `cchName`  
- <span data-ttu-id="5faa6-108">[in] 와이드 문자에서 크기의 `szName`합니다.</span><span class="sxs-lookup"><span data-stu-id="5faa6-108">[in] The size, in wide characters, of `szName`.</span></span>  
+ <span data-ttu-id="655b2-108">[in] 와이드 문자에서 크기의 `szName`합니다.</span><span class="sxs-lookup"><span data-stu-id="655b2-108">[in] The size, in wide characters, of `szName`.</span></span>  
   
  `pchName`  
- <span data-ttu-id="5faa6-109">[out] 에 실제로 반환 된 와이드 문자 수 `szName`</span><span class="sxs-lookup"><span data-stu-id="5faa6-109">[out] The number of wide characters actually returned in `szName`</span></span>  
+ <span data-ttu-id="655b2-109">[out] 에 실제로 반환 된 와이드 문자 수 `szName`</span><span class="sxs-lookup"><span data-stu-id="655b2-109">[out] The number of wide characters actually returned in `szName`</span></span>  
   
  `ptkImplementation`  
- <span data-ttu-id="5faa6-110">[out] `mdFile`, `mdAssemblyRef`, 또는 `mdExportedType` 내보낸 형식의 속성에 대 한 액세스를 허용 또는 포함 된 메타 데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="5faa6-110">[out] An `mdFile`, `mdAssemblyRef`, or `mdExportedType` metadata token that contains or allows access to the properties of the exported type.</span></span>  
+ <span data-ttu-id="655b2-110">[out] `mdFile`, `mdAssemblyRef`, 또는 `mdExportedType` 내보낸 형식의 속성에 대 한 액세스를 허용 또는 포함 된 메타 데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="655b2-110">[out] An `mdFile`, `mdAssemblyRef`, or `mdExportedType` metadata token that contains or allows access to the properties of the exported type.</span></span>  
   
  `ptkTypeDef`  
- <span data-ttu-id="5faa6-111">[out] 에 대 한 포인터를 `mdTypeDef` 파일의 형식을 나타내는 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="5faa6-111">[out] A pointer to an `mdTypeDef` token that represents a type in the file.</span></span>  
+ <span data-ttu-id="655b2-111">[out] 에 대 한 포인터를 `mdTypeDef` 파일의 형식을 나타내는 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="655b2-111">[out] A pointer to an `mdTypeDef` token that represents a type in the file.</span></span>  
   
  `pdwExportedTypeFlags`  
- <span data-ttu-id="5faa6-112">[out] 내보낸된 형식에 적용 하는 메타 데이터를 설명 하는 플래그에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="5faa6-112">[out] A pointer to the flags that describe the metadata applied to the exported type.</span></span> <span data-ttu-id="5faa6-113">하나 이상의 플래그 값이 될 수 있습니다 [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) 값입니다.</span><span class="sxs-lookup"><span data-stu-id="5faa6-113">The flags value can be one or more [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) values.</span></span>  
+ <span data-ttu-id="655b2-112">[out] 내보낸된 형식에 적용 하는 메타 데이터를 설명 하는 플래그에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="655b2-112">[out] A pointer to the flags that describe the metadata applied to the exported type.</span></span> <span data-ttu-id="655b2-113">하나 이상의 플래그 값이 될 수 있습니다 [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) 값입니다.</span><span class="sxs-lookup"><span data-stu-id="655b2-113">The flags value can be one or more [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) values.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5faa6-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5faa6-114">Requirements</span></span>  
- <span data-ttu-id="5faa6-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="5faa6-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="655b2-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="655b2-114">Requirements</span></span>  
+ <span data-ttu-id="655b2-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="655b2-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5faa6-116">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="5faa6-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="655b2-116">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="655b2-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="5faa6-117">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="5faa6-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="655b2-117">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="655b2-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="5faa6-118">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5faa6-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="655b2-118">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="655b2-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5faa6-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="5faa6-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="655b2-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="655b2-119">See also</span></span>
 
-- [<span data-ttu-id="5faa6-120">IMetaDataAssemblyImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5faa6-120">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="655b2-120">IMetaDataAssemblyImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="655b2-120">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

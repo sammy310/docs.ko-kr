@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5fd9798b3681d66e71d5703f4d16564b153da07b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 37794d40b4b379c5d3a05935cf1f2b7b3da11baa
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789632"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777369"
 ---
-# <a name="isymunmanagedwriterdefinefield-method"></a><span data-ttu-id="ff5f1-102">ISymUnmanagedWriter::DefineField 메서드</span><span class="sxs-lookup"><span data-stu-id="ff5f1-102">ISymUnmanagedWriter::DefineField Method</span></span>
-<span data-ttu-id="ff5f1-103">메서드를 단일 변수를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="ff5f1-103">Defines a single variable that is not within a method.</span></span> <span data-ttu-id="ff5f1-104">이 방법은 클래스의 특정 필드, 비트 필드 등에 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="ff5f1-104">This method is used for certain fields in classes, bit fields, and so on.</span></span>  
+# <a name="isymunmanagedwriterdefinefield-method"></a><span data-ttu-id="d935e-102">ISymUnmanagedWriter::DefineField 메서드</span><span class="sxs-lookup"><span data-stu-id="d935e-102">ISymUnmanagedWriter::DefineField Method</span></span>
+<span data-ttu-id="d935e-103">메서드를 단일 변수를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="d935e-103">Defines a single variable that is not within a method.</span></span> <span data-ttu-id="d935e-104">이 방법은 클래스의 특정 필드, 비트 필드 등에 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="d935e-104">This method is used for certain fields in classes, bit fields, and so on.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ff5f1-105">구문</span><span class="sxs-lookup"><span data-stu-id="ff5f1-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d935e-105">구문</span><span class="sxs-lookup"><span data-stu-id="d935e-105">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT DefineField(  
     [in] mdTypeDef    parent,  
     [in] const WCHAR  *name,  
@@ -42,40 +42,40 @@ HRESULT DefineField(
     [in] ULONG32      addr3);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ff5f1-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ff5f1-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d935e-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d935e-106">Parameters</span></span>  
  `parent`  
- <span data-ttu-id="ff5f1-107">[in] 메타 데이터 형식 또는 메서드 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="ff5f1-107">[in] The metadata type or method token.</span></span>  
+ <span data-ttu-id="d935e-107">[in] 메타 데이터 형식 또는 메서드 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="d935e-107">[in] The metadata type or method token.</span></span>  
   
  `name`  
- <span data-ttu-id="ff5f1-108">[in] 필드 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="ff5f1-108">[in] The field name.</span></span>  
+ <span data-ttu-id="d935e-108">[in] 필드 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="d935e-108">[in] The field name.</span></span>  
   
  `attributes`  
- <span data-ttu-id="ff5f1-109">[in] 필드 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="ff5f1-109">[in] The field attributes.</span></span>  
+ <span data-ttu-id="d935e-109">[in] 필드 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="d935e-109">[in] The field attributes.</span></span>  
   
  `cSig`  
- <span data-ttu-id="ff5f1-110">[in] `ULONG32` 문자 필드 시그니처를 포함 하는 데 필요한 버퍼 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="ff5f1-110">[in] A `ULONG32` that is the size, in characters, of the buffer required to contain the field signature.</span></span>  
+ <span data-ttu-id="d935e-110">[in] `ULONG32` 문자 필드 시그니처를 포함 하는 데 필요한 버퍼 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="d935e-110">[in] A `ULONG32` that is the size, in characters, of the buffer required to contain the field signature.</span></span>  
   
  `signature`  
- <span data-ttu-id="ff5f1-111">[in] 배열 필드 시그니처입니다.</span><span class="sxs-lookup"><span data-stu-id="ff5f1-111">[in] The array of field signatures.</span></span>  
+ <span data-ttu-id="d935e-111">[in] 배열 필드 시그니처입니다.</span><span class="sxs-lookup"><span data-stu-id="d935e-111">[in] The array of field signatures.</span></span>  
   
  `addrKind`  
- <span data-ttu-id="ff5f1-112">[in] 주소 유형입니다.</span><span class="sxs-lookup"><span data-stu-id="ff5f1-112">[in] The address type.</span></span>  
+ <span data-ttu-id="d935e-112">[in] 주소 유형입니다.</span><span class="sxs-lookup"><span data-stu-id="d935e-112">[in] The address type.</span></span>  
   
  `addr1`  
- <span data-ttu-id="ff5f1-113">[in] 필드 사양의 첫 번째 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="ff5f1-113">[in] The first address for the field specification.</span></span>  
+ <span data-ttu-id="d935e-113">[in] 필드 사양의 첫 번째 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="d935e-113">[in] The first address for the field specification.</span></span>  
   
  `addr2`  
- <span data-ttu-id="ff5f1-114">[in] 필드 사양의 두 번째 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="ff5f1-114">[in] The second address for the field specification.</span></span>  
+ <span data-ttu-id="d935e-114">[in] 필드 사양의 두 번째 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="d935e-114">[in] The second address for the field specification.</span></span>  
   
  `addr3`  
- <span data-ttu-id="ff5f1-115">[in] 필드 사양의 세 번째 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="ff5f1-115">[in] The third address for the field specification.</span></span>  
+ <span data-ttu-id="d935e-115">[in] 필드 사양의 세 번째 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="d935e-115">[in] The third address for the field specification.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ff5f1-116">반환 값</span><span class="sxs-lookup"><span data-stu-id="ff5f1-116">Return Value</span></span>  
- <span data-ttu-id="ff5f1-117">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="ff5f1-117">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d935e-116">반환 값</span><span class="sxs-lookup"><span data-stu-id="d935e-116">Return Value</span></span>  
+ <span data-ttu-id="d935e-117">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="d935e-117">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ff5f1-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ff5f1-118">Requirements</span></span>  
- <span data-ttu-id="ff5f1-119">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ff5f1-119">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d935e-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d935e-118">Requirements</span></span>  
+ <span data-ttu-id="d935e-119">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d935e-119">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ff5f1-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="ff5f1-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d935e-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="d935e-120">See also</span></span>
 
-- [<span data-ttu-id="ff5f1-121">ISymUnmanagedWriter 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ff5f1-121">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="d935e-121">ISymUnmanagedWriter 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d935e-121">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

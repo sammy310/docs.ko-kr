@@ -17,43 +17,43 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 472e06c3a00762a7bb012fbcb525d8e0b3a9271a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d075aeeb904469613999829a1444511d069b9918
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599522"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775970"
 ---
-# <a name="ibindingdisplaygetcurrentdisplay-method"></a><span data-ttu-id="d1a13-102">IBindingDisplay::GetCurrentDisplay 메서드</span><span class="sxs-lookup"><span data-stu-id="d1a13-102">IBindingDisplay::GetCurrentDisplay Method</span></span>
-<span data-ttu-id="d1a13-103">현재 바인딩 표시 정보를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="d1a13-103">Returns the current binding display information.</span></span>  
+# <a name="ibindingdisplaygetcurrentdisplay-method"></a><span data-ttu-id="d98a8-102">IBindingDisplay::GetCurrentDisplay 메서드</span><span class="sxs-lookup"><span data-stu-id="d98a8-102">IBindingDisplay::GetCurrentDisplay Method</span></span>
+<span data-ttu-id="d98a8-103">현재 바인딩 표시 정보를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="d98a8-103">Returns the current binding display information.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d1a13-104">구문</span><span class="sxs-lookup"><span data-stu-id="d1a13-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d98a8-104">구문</span><span class="sxs-lookup"><span data-stu-id="d98a8-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetCurrentDisplay (  
     [out, retval] SAFEARRAY(struct BindingDisplayTabControl) *display  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d1a13-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d1a13-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d98a8-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d98a8-105">Parameters</span></span>  
  `display`  
- <span data-ttu-id="d1a13-106">[out, retval] 바인딩 표시 정보를 포함 하는 safearray에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="d1a13-106">[out, retval] A pointer to a safearray containing the binding display information.</span></span>  
+ <span data-ttu-id="d98a8-106">[out, retval] 바인딩 표시 정보를 포함 하는 safearray에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="d98a8-106">[out, retval] A pointer to a safearray containing the binding display information.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d1a13-107">설명</span><span class="sxs-lookup"><span data-stu-id="d1a13-107">Remarks</span></span>  
- <span data-ttu-id="d1a13-108">합니다 [ibindingdisplay:: Initializeforprocess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md) 메서드 분명히 성공 했을 이전에, 및는 디버거에서 프로그램을 중지 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d1a13-108">The [IBindingDisplay::InitializeForProcess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md) method must have previously succeeded, and the program must be stopped by a debugger.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d98a8-107">설명</span><span class="sxs-lookup"><span data-stu-id="d98a8-107">Remarks</span></span>  
+ <span data-ttu-id="d98a8-108">합니다 [ibindingdisplay:: Initializeforprocess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md) 메서드 분명히 성공 했을 이전에, 및는 디버거에서 프로그램을 중지 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d98a8-108">The [IBindingDisplay::InitializeForProcess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md) method must have previously succeeded, and the program must be stopped by a debugger.</span></span>  
   
- <span data-ttu-id="d1a13-109">호출자는 반환 된 할당 취소 해야 `SAFEARRAY` 를 사용 하 여 메모리 [SafeArrayDestroy](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy)합니다.</span><span class="sxs-lookup"><span data-stu-id="d1a13-109">The caller must deallocate the returned `SAFEARRAY` memory by using [SafeArrayDestroy](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy).</span></span>  
+ <span data-ttu-id="d98a8-109">호출자는 반환 된 할당 취소 해야 `SAFEARRAY` 를 사용 하 여 메모리 [SafeArrayDestroy](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy)합니다.</span><span class="sxs-lookup"><span data-stu-id="d98a8-109">The caller must deallocate the returned `SAFEARRAY` memory by using [SafeArrayDestroy](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d1a13-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d1a13-110">Requirements</span></span>  
- <span data-ttu-id="d1a13-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="d1a13-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d98a8-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d98a8-110">Requirements</span></span>  
+ <span data-ttu-id="d98a8-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="d98a8-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d1a13-112">**헤더:** BindingDisplay.h</span><span class="sxs-lookup"><span data-stu-id="d1a13-112">**Header:** BindingDisplay.h</span></span>  
+ <span data-ttu-id="d98a8-112">**헤더:** BindingDisplay.h</span><span class="sxs-lookup"><span data-stu-id="d98a8-112">**Header:** BindingDisplay.h</span></span>  
   
- <span data-ttu-id="d1a13-113">**라이브러리:** BindingDisplay.idl</span><span class="sxs-lookup"><span data-stu-id="d1a13-113">**Library:** BindingDisplay.idl</span></span>  
+ <span data-ttu-id="d98a8-113">**라이브러리:** BindingDisplay.idl</span><span class="sxs-lookup"><span data-stu-id="d98a8-113">**Library:** BindingDisplay.idl</span></span>  
   
- <span data-ttu-id="d1a13-114">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d1a13-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d98a8-114">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d98a8-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d1a13-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="d1a13-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d98a8-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="d98a8-115">See also</span></span>
 
-- [<span data-ttu-id="d1a13-116">IBindingDisplay 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d1a13-116">IBindingDisplay Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)
-- [<span data-ttu-id="d1a13-117">InitializeForProcess 메서드</span><span class="sxs-lookup"><span data-stu-id="d1a13-117">InitializeForProcess Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)
+- [<span data-ttu-id="d98a8-116">IBindingDisplay 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d98a8-116">IBindingDisplay Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)
+- [<span data-ttu-id="d98a8-117">InitializeForProcess 메서드</span><span class="sxs-lookup"><span data-stu-id="d98a8-117">InitializeForProcess Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)

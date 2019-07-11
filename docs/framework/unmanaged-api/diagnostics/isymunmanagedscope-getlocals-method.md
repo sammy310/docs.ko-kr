@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 625609d8632f1f73ee2ec01e3b2e0e1af7e4a134
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6e45f5411d48032b86403e35358d7ce83d5f97c6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986247"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777919"
 ---
-# <a name="isymunmanagedscopegetlocals-method"></a><span data-ttu-id="20656-102">ISymUnmanagedScope::GetLocals 메서드</span><span class="sxs-lookup"><span data-stu-id="20656-102">ISymUnmanagedScope::GetLocals Method</span></span>
-<span data-ttu-id="20656-103">이 범위 내에 정의 된 로컬 변수를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="20656-103">Gets the local variables defined within this scope.</span></span>  
+# <a name="isymunmanagedscopegetlocals-method"></a><span data-ttu-id="74f29-102">ISymUnmanagedScope::GetLocals 메서드</span><span class="sxs-lookup"><span data-stu-id="74f29-102">ISymUnmanagedScope::GetLocals Method</span></span>
+<span data-ttu-id="74f29-103">이 범위 내에 정의 된 로컬 변수를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="74f29-103">Gets the local variables defined within this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="20656-104">구문</span><span class="sxs-lookup"><span data-stu-id="20656-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="74f29-104">구문</span><span class="sxs-lookup"><span data-stu-id="74f29-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetLocals(  
     [in]  ULONG32  cLocals,  
     [out] ULONG32  *pcLocals,  
@@ -37,22 +37,22 @@ HRESULT GetLocals(
         length_is(*pcLocals)] ISymUnmanagedVariable* locals[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="20656-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="20656-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="74f29-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="74f29-105">Parameters</span></span>  
  `cLocals`  
- <span data-ttu-id="20656-106">[in] A `ULONG32` 의 크기를 나타내는 `locals` 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="20656-106">[in] A `ULONG32` that indicates the size of the `locals` array.</span></span>  
+ <span data-ttu-id="74f29-106">[in] A `ULONG32` 의 크기를 나타내는 `locals` 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="74f29-106">[in] A `ULONG32` that indicates the size of the `locals` array.</span></span>  
   
  `pcLocals`  
- <span data-ttu-id="20656-107">[out] 에 대 한 포인터를 `ULONG32` 지역 변수를 포함 하는 데 필요한 버퍼의 크기를 받는 합니다.</span><span class="sxs-lookup"><span data-stu-id="20656-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the local variables.</span></span>  
+ <span data-ttu-id="74f29-107">[out] 에 대 한 포인터를 `ULONG32` 지역 변수를 포함 하는 데 필요한 버퍼의 크기를 받는 합니다.</span><span class="sxs-lookup"><span data-stu-id="74f29-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the local variables.</span></span>  
   
  `locals`  
- <span data-ttu-id="20656-108">[out] 지역 변수를 수신 하는 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="20656-108">[out] The array that receives the local variables.</span></span>  
+ <span data-ttu-id="74f29-108">[out] 지역 변수를 수신 하는 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="74f29-108">[out] The array that receives the local variables.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="20656-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="20656-109">Return Value</span></span>  
- <span data-ttu-id="20656-110">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="20656-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="74f29-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="74f29-109">Return Value</span></span>  
+ <span data-ttu-id="74f29-110">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="74f29-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="20656-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="20656-111">Requirements</span></span>  
- <span data-ttu-id="20656-112">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="20656-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="74f29-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="74f29-111">Requirements</span></span>  
+ <span data-ttu-id="74f29-112">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="74f29-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="20656-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="20656-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="74f29-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="74f29-113">See also</span></span>
 
-- [<span data-ttu-id="20656-114">ISymUnmanagedScope 인터페이스</span><span class="sxs-lookup"><span data-stu-id="20656-114">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+- [<span data-ttu-id="74f29-114">ISymUnmanagedScope 인터페이스</span><span class="sxs-lookup"><span data-stu-id="74f29-114">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

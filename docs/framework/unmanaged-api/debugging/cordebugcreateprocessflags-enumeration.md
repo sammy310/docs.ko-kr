@@ -16,39 +16,39 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae3ba480e208762f5a80f9f1b78dd008f02b6df4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0dfc7da632a5e56f0f6ab6ed55d1e722f49c7e88
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609115"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740286"
 ---
-# <a name="cordebugcreateprocessflags-enumeration"></a><span data-ttu-id="dbb2b-102">CorDebugCreateProcessFlags 열거형</span><span class="sxs-lookup"><span data-stu-id="dbb2b-102">CorDebugCreateProcessFlags Enumeration</span></span>
-<span data-ttu-id="dbb2b-103">에 대 한 호출에서 사용할 수 있는 추가 디버깅 옵션을 제공 합니다 [icordebug:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="dbb2b-103">Provides additional debugging options that can be used in a call to the [ICorDebug::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) method.</span></span>  
+# <a name="cordebugcreateprocessflags-enumeration"></a><span data-ttu-id="b2ccb-102">CorDebugCreateProcessFlags 열거형</span><span class="sxs-lookup"><span data-stu-id="b2ccb-102">CorDebugCreateProcessFlags Enumeration</span></span>
+<span data-ttu-id="b2ccb-103">에 대 한 호출에서 사용할 수 있는 추가 디버깅 옵션을 제공 합니다 [icordebug:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="b2ccb-103">Provides additional debugging options that can be used in a call to the [ICorDebug::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dbb2b-104">구문</span><span class="sxs-lookup"><span data-stu-id="dbb2b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b2ccb-104">구문</span><span class="sxs-lookup"><span data-stu-id="b2ccb-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum CorDebugCreateProcessFlags {  
     DEBUG_NO_SPECIAL_OPTIONS    = 0x0000  
 } CorDebugCreateProcessFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="dbb2b-105">멤버</span><span class="sxs-lookup"><span data-stu-id="dbb2b-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="b2ccb-105">멤버</span><span class="sxs-lookup"><span data-stu-id="b2ccb-105">Members</span></span>  
   
-|<span data-ttu-id="dbb2b-106">멤버</span><span class="sxs-lookup"><span data-stu-id="dbb2b-106">Member</span></span>|<span data-ttu-id="dbb2b-107">설명</span><span class="sxs-lookup"><span data-stu-id="dbb2b-107">Description</span></span>|  
+|<span data-ttu-id="b2ccb-106">멤버</span><span class="sxs-lookup"><span data-stu-id="b2ccb-106">Member</span></span>|<span data-ttu-id="b2ccb-107">Description</span><span class="sxs-lookup"><span data-stu-id="b2ccb-107">Description</span></span>|  
 |------------|-----------------|  
-|`DEBUG_NO_SPECIAL_OPTIONS`|<span data-ttu-id="dbb2b-108">특별 한 옵션 없이 설정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="dbb2b-108">No special options are set.</span></span>|  
+|`DEBUG_NO_SPECIAL_OPTIONS`|<span data-ttu-id="b2ccb-108">특별 한 옵션 없이 설정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b2ccb-108">No special options are set.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="dbb2b-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="dbb2b-109">Requirements</span></span>  
- <span data-ttu-id="dbb2b-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="dbb2b-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b2ccb-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b2ccb-109">Requirements</span></span>  
+ <span data-ttu-id="b2ccb-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="b2ccb-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dbb2b-111">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="dbb2b-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b2ccb-111">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b2ccb-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="dbb2b-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dbb2b-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b2ccb-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b2ccb-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="dbb2b-113">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dbb2b-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="b2ccb-113">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b2ccb-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dbb2b-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="dbb2b-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b2ccb-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="b2ccb-114">See also</span></span>
 
-- [<span data-ttu-id="dbb2b-115">디버깅 열거형</span><span class="sxs-lookup"><span data-stu-id="dbb2b-115">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="b2ccb-115">디버깅 열거형</span><span class="sxs-lookup"><span data-stu-id="b2ccb-115">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
