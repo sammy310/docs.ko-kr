@@ -17,40 +17,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14751b41809eeda5e6bd990fae368879d0f30492
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3e374c03ca90c904cd4ef8a4585cb35ccf43cb43
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61927250"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766522"
 ---
-# <a name="igchostgetstats-method"></a><span data-ttu-id="14260-102">IGCHost::GetStats 메서드</span><span class="sxs-lookup"><span data-stu-id="14260-102">IGCHost::GetStats Method</span></span>
-<span data-ttu-id="14260-103">가비지 컬렉션 시스템의 현재 상태에 대 한 통계를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="14260-103">Gets the statistics for the current state of the garbage collection system.</span></span>  
+# <a name="igchostgetstats-method"></a><span data-ttu-id="acd38-102">IGCHost::GetStats 메서드</span><span class="sxs-lookup"><span data-stu-id="acd38-102">IGCHost::GetStats Method</span></span>
+<span data-ttu-id="acd38-103">가비지 컬렉션 시스템의 현재 상태에 대 한 통계를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="acd38-103">Gets the statistics for the current state of the garbage collection system.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="14260-104">구문</span><span class="sxs-lookup"><span data-stu-id="14260-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="acd38-104">구문</span><span class="sxs-lookup"><span data-stu-id="acd38-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetStats (  
     [in, out] COR_GC_STATS *pStats  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="14260-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="14260-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="acd38-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="acd38-105">Parameters</span></span>  
  `pStats`  
- <span data-ttu-id="14260-106">[out에서] 에 대 한 포인터를 [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) 가비지 컬렉션 시스템의 현재 상태에 대 한 통계를 포함 하는 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="14260-106">[in, out] A pointer to a [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) structure that contains the statistics for the current state of the garbage collection system.</span></span>  
+ <span data-ttu-id="acd38-106">[out에서] 에 대 한 포인터를 [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) 가비지 컬렉션 시스템의 현재 상태에 대 한 통계를 포함 하는 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="acd38-106">[in, out] A pointer to a [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) structure that contains the statistics for the current state of the garbage collection system.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="14260-107">설명</span><span class="sxs-lookup"><span data-stu-id="14260-107">Remarks</span></span>  
- <span data-ttu-id="14260-108">통계를 가비지 수집 시스템이 작동 하는 데 스마트 할당 시스템에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="14260-108">The statistics can be used by a smart allocation system to help the garbage collection system operate.</span></span> <span data-ttu-id="14260-109">예를 들어, 더 많은 메모리를 추가 하거나 수집을 강제 실행 해야 하는 통계를 검토 한 후 할당 시스템 결정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="14260-109">For example, the allocation system may determine, after reviewing the statistics, that it needs to add more memory or force a collection.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="acd38-107">설명</span><span class="sxs-lookup"><span data-stu-id="acd38-107">Remarks</span></span>  
+ <span data-ttu-id="acd38-108">통계를 가비지 수집 시스템이 작동 하는 데 스마트 할당 시스템에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="acd38-108">The statistics can be used by a smart allocation system to help the garbage collection system operate.</span></span> <span data-ttu-id="acd38-109">예를 들어, 더 많은 메모리를 추가 하거나 수집을 강제 실행 해야 하는 통계를 검토 한 후 할당 시스템 결정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="acd38-109">For example, the allocation system may determine, after reviewing the statistics, that it needs to add more memory or force a collection.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="14260-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="14260-110">Requirements</span></span>  
- <span data-ttu-id="14260-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="14260-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="acd38-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="acd38-110">Requirements</span></span>  
+ <span data-ttu-id="acd38-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="acd38-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="14260-112">**헤더:** GCHost.idl, GCHost.h</span><span class="sxs-lookup"><span data-stu-id="14260-112">**Header:** GCHost.idl, GCHost.h</span></span>  
+ <span data-ttu-id="acd38-112">**헤더:** GCHost.idl, GCHost.h</span><span class="sxs-lookup"><span data-stu-id="acd38-112">**Header:** GCHost.idl, GCHost.h</span></span>  
   
- <span data-ttu-id="14260-113">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="14260-113">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="acd38-113">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="acd38-113">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="14260-114">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="14260-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="acd38-114">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="acd38-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="14260-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="14260-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="acd38-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="acd38-115">See also</span></span>
 
-- [<span data-ttu-id="14260-116">IGCHost 인터페이스</span><span class="sxs-lookup"><span data-stu-id="14260-116">IGCHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)
+- [<span data-ttu-id="acd38-116">IGCHost 인터페이스</span><span class="sxs-lookup"><span data-stu-id="acd38-116">IGCHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)

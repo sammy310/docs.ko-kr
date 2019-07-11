@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48650a370f7d15724e20850e9d3b47dc8215f960
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e5120b5fddf621d6f4c684c4c432fda4f5c0117
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989497"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745261"
 ---
-# <a name="icordebugchaingetreason-method"></a><span data-ttu-id="d7f77-102">ICorDebugChain::GetReason 메서드</span><span class="sxs-lookup"><span data-stu-id="d7f77-102">ICorDebugChain::GetReason Method</span></span>
-<span data-ttu-id="d7f77-103">이 호출 체인의 발생 한 이유를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="d7f77-103">Gets the reason for the genesis of this calling chain.</span></span>  
+# <a name="icordebugchaingetreason-method"></a><span data-ttu-id="0049d-102">ICorDebugChain::GetReason 메서드</span><span class="sxs-lookup"><span data-stu-id="0049d-102">ICorDebugChain::GetReason Method</span></span>
+<span data-ttu-id="0049d-103">이 호출 체인의 발생 한 이유를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="0049d-103">Gets the reason for the genesis of this calling chain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d7f77-104">구문</span><span class="sxs-lookup"><span data-stu-id="d7f77-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0049d-104">구문</span><span class="sxs-lookup"><span data-stu-id="0049d-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetReason (  
     [out] CorDebugChainReason *pReason  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d7f77-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d7f77-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0049d-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="0049d-105">Parameters</span></span>  
  `pReason`  
- <span data-ttu-id="d7f77-106">[out] CorDebugChainReason 열거형이 호출 체인의 발생 한 이유를 나타내는 값 (조합)에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="d7f77-106">[out] A pointer to a value (a bitwise combination) of the CorDebugChainReason enumeration that indicates the reason for the genesis of this calling chain.</span></span>  
+ <span data-ttu-id="0049d-106">[out] CorDebugChainReason 열거형이 호출 체인의 발생 한 이유를 나타내는 값 (조합)에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="0049d-106">[out] A pointer to a value (a bitwise combination) of the CorDebugChainReason enumeration that indicates the reason for the genesis of this calling chain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d7f77-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d7f77-107">Requirements</span></span>  
- <span data-ttu-id="d7f77-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="d7f77-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0049d-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="0049d-107">Requirements</span></span>  
+ <span data-ttu-id="0049d-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="0049d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d7f77-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d7f77-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="0049d-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0049d-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d7f77-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d7f77-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0049d-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0049d-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d7f77-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d7f77-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="0049d-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0049d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

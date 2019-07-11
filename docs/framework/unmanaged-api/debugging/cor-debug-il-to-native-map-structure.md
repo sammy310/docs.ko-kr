@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03ce77dd7407db8289abfefba13d71a9af053e10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 238e59978bd084379fe6c0576107d674812bce8d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609518"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740790"
 ---
-# <a name="cordebugiltonativemap-structure"></a><span data-ttu-id="1e4b6-102">COR_DEBUG_IL_TO_NATIVE_MAP 구조체</span><span class="sxs-lookup"><span data-stu-id="1e4b6-102">COR_DEBUG_IL_TO_NATIVE_MAP Structure</span></span>
-<span data-ttu-id="1e4b6-103">MSIL(Microsoft Intermediate Language) 코드를 네이티브 코드에 매핑하는 데 사용되는 오프셋을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="1e4b6-103">Contains the offsets that are used to map Microsoft intermediate language (MSIL) code to native code.</span></span>  
+# <a name="cordebugiltonativemap-structure"></a><span data-ttu-id="0bc1b-102">COR_DEBUG_IL_TO_NATIVE_MAP 구조체</span><span class="sxs-lookup"><span data-stu-id="0bc1b-102">COR_DEBUG_IL_TO_NATIVE_MAP Structure</span></span>
+<span data-ttu-id="0bc1b-103">MSIL(Microsoft Intermediate Language) 코드를 네이티브 코드에 매핑하는 데 사용되는 오프셋을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="0bc1b-103">Contains the offsets that are used to map Microsoft intermediate language (MSIL) code to native code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1e4b6-104">구문</span><span class="sxs-lookup"><span data-stu-id="1e4b6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0bc1b-104">구문</span><span class="sxs-lookup"><span data-stu-id="0bc1b-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {  
     ULONG32  ilOffset;  
     ULONG32  nativeStartOffset;  
@@ -36,26 +36,26 @@ typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {
 } COR_DEBUG_IL_TO_NATIVE_MAP;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="1e4b6-105">멤버</span><span class="sxs-lookup"><span data-stu-id="1e4b6-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="0bc1b-105">멤버</span><span class="sxs-lookup"><span data-stu-id="0bc1b-105">Members</span></span>  
   
-|<span data-ttu-id="1e4b6-106">멤버</span><span class="sxs-lookup"><span data-stu-id="1e4b6-106">Member</span></span>|<span data-ttu-id="1e4b6-107">설명</span><span class="sxs-lookup"><span data-stu-id="1e4b6-107">Description</span></span>|  
+|<span data-ttu-id="0bc1b-106">멤버</span><span class="sxs-lookup"><span data-stu-id="0bc1b-106">Member</span></span>|<span data-ttu-id="0bc1b-107">설명</span><span class="sxs-lookup"><span data-stu-id="0bc1b-107">Description</span></span>|  
 |------------|-----------------|  
-|`ilOffset`|<span data-ttu-id="1e4b6-108">MSIL 코드의 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="1e4b6-108">The offset of the MSIL code.</span></span>|  
-|`nativeStartOffset`|<span data-ttu-id="1e4b6-109">네이티브 코드의 시작 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="1e4b6-109">The offset of the start of the native code.</span></span>|  
-|`nativeEndOffset`|<span data-ttu-id="1e4b6-110">네이티브 코드의 끝 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="1e4b6-110">The offset of the end of the native code.</span></span>|  
+|`ilOffset`|<span data-ttu-id="0bc1b-108">MSIL 코드의 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="0bc1b-108">The offset of the MSIL code.</span></span>|  
+|`nativeStartOffset`|<span data-ttu-id="0bc1b-109">네이티브 코드의 시작 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="0bc1b-109">The offset of the start of the native code.</span></span>|  
+|`nativeEndOffset`|<span data-ttu-id="0bc1b-110">네이티브 코드의 끝 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="0bc1b-110">The offset of the end of the native code.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="1e4b6-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="1e4b6-111">Requirements</span></span>  
- <span data-ttu-id="1e4b6-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="1e4b6-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0bc1b-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="0bc1b-111">Requirements</span></span>  
+ <span data-ttu-id="0bc1b-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="0bc1b-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1e4b6-113">**헤더:** CorProf.idl, CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="1e4b6-113">**Header:** CorProf.idl, CorDebug.idl</span></span>  
+ <span data-ttu-id="0bc1b-113">**헤더:** CorProf.idl, CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="0bc1b-113">**Header:** CorProf.idl, CorDebug.idl</span></span>  
   
- <span data-ttu-id="1e4b6-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1e4b6-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0bc1b-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0bc1b-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1e4b6-115">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1e4b6-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="0bc1b-115">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0bc1b-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1e4b6-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="1e4b6-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0bc1b-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="0bc1b-116">See also</span></span>
 
-- [<span data-ttu-id="1e4b6-117">GetILToNativeMapping 메서드</span><span class="sxs-lookup"><span data-stu-id="1e4b6-117">GetILToNativeMapping Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)
-- [<span data-ttu-id="1e4b6-118">GetILToNativeMapping 메서드</span><span class="sxs-lookup"><span data-stu-id="1e4b6-118">GetILToNativeMapping Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)
-- [<span data-ttu-id="1e4b6-119">디버깅 구조체</span><span class="sxs-lookup"><span data-stu-id="1e4b6-119">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="1e4b6-120">디버깅</span><span class="sxs-lookup"><span data-stu-id="1e4b6-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="0bc1b-117">GetILToNativeMapping 메서드</span><span class="sxs-lookup"><span data-stu-id="0bc1b-117">GetILToNativeMapping Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)
+- [<span data-ttu-id="0bc1b-118">GetILToNativeMapping 메서드</span><span class="sxs-lookup"><span data-stu-id="0bc1b-118">GetILToNativeMapping Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)
+- [<span data-ttu-id="0bc1b-119">디버깅 구조체</span><span class="sxs-lookup"><span data-stu-id="0bc1b-119">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="0bc1b-120">디버깅</span><span class="sxs-lookup"><span data-stu-id="0bc1b-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

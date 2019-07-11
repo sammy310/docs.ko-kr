@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0267ae8b57c837b097d496c8e119085d03417e36
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 995c7edf99c917b8bcdc1d51dcc0bf50868e4f35
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670042"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777060"
 ---
-# <a name="isymunmanagedreadergetuserentrypoint-method"></a><span data-ttu-id="b9156-102">ISymUnmanagedReader::GetUserEntryPoint 메서드</span><span class="sxs-lookup"><span data-stu-id="b9156-102">ISymUnmanagedReader::GetUserEntryPoint Method</span></span>
-<span data-ttu-id="b9156-103">있는 경우 모듈의 사용자 진입점으로 지정 된 메서드를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="b9156-103">Returns the method that was specified as the user entry point for the module, if any.</span></span> <span data-ttu-id="b9156-104">예를 들어이 메서드는 main 메서드의 전에 컴파일러에서 생성 된 스텁이 아닌 사용자의 기본 메서드 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b9156-104">For example, this method could be the user's main method rather than compiler-generated stubs before the main method.</span></span>  
+# <a name="isymunmanagedreadergetuserentrypoint-method"></a><span data-ttu-id="33621-102">ISymUnmanagedReader::GetUserEntryPoint 메서드</span><span class="sxs-lookup"><span data-stu-id="33621-102">ISymUnmanagedReader::GetUserEntryPoint Method</span></span>
+<span data-ttu-id="33621-103">있는 경우 모듈의 사용자 진입점으로 지정 된 메서드를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="33621-103">Returns the method that was specified as the user entry point for the module, if any.</span></span> <span data-ttu-id="33621-104">예를 들어이 메서드는 main 메서드의 전에 컴파일러에서 생성 된 스텁이 아닌 사용자의 기본 메서드 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="33621-104">For example, this method could be the user's main method rather than compiler-generated stubs before the main method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b9156-105">구문</span><span class="sxs-lookup"><span data-stu-id="b9156-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="33621-105">구문</span><span class="sxs-lookup"><span data-stu-id="33621-105">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetUserEntryPoint (  
     [out, retval]  mdMethodDef  *pToken);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b9156-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="b9156-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="33621-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="33621-106">Parameters</span></span>  
  `pToken`  
- <span data-ttu-id="b9156-107">[out] 진입점을 수신 하는 변수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="b9156-107">[out] A pointer to a variable that receives the entry point.</span></span>  
+ <span data-ttu-id="33621-107">[out] 진입점을 수신 하는 변수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="33621-107">[out] A pointer to a variable that receives the entry point.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b9156-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="b9156-108">Return Value</span></span>  
- <span data-ttu-id="b9156-109">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="b9156-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="33621-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="33621-108">Return Value</span></span>  
+ <span data-ttu-id="33621-109">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="33621-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b9156-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b9156-110">Requirements</span></span>  
- <span data-ttu-id="b9156-111">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="b9156-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="33621-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="33621-110">Requirements</span></span>  
+ <span data-ttu-id="33621-111">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="33621-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b9156-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="b9156-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="33621-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="33621-112">See also</span></span>
 
-- [<span data-ttu-id="b9156-113">ISymUnmanagedReader 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b9156-113">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="33621-113">ISymUnmanagedReader 인터페이스</span><span class="sxs-lookup"><span data-stu-id="33621-113">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

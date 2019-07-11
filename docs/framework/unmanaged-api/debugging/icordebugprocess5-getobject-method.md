@@ -17,45 +17,45 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35fdcd4bc3c9dbf6408f501256ce0df0174f9374
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ec3dc37984228565b4a3fcc560d3857a1c1e46d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948735"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767336"
 ---
-# <a name="icordebugprocess5getobject-method"></a><span data-ttu-id="47eb8-102">ICorDebugProcess5::GetObject 메서드</span><span class="sxs-lookup"><span data-stu-id="47eb8-102">ICorDebugProcess5::GetObject Method</span></span>
-<span data-ttu-id="47eb8-103">"ICorDebugObjectValue" 개체를 개체 주소를 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="47eb8-103">Converts an object address to an "ICorDebugObjectValue" object.</span></span>  
+# <a name="icordebugprocess5getobject-method"></a><span data-ttu-id="9fa17-102">ICorDebugProcess5::GetObject 메서드</span><span class="sxs-lookup"><span data-stu-id="9fa17-102">ICorDebugProcess5::GetObject Method</span></span>
+<span data-ttu-id="9fa17-103">"ICorDebugObjectValue" 개체를 개체 주소를 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="9fa17-103">Converts an object address to an "ICorDebugObjectValue" object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="47eb8-104">구문</span><span class="sxs-lookup"><span data-stu-id="47eb8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9fa17-104">구문</span><span class="sxs-lookup"><span data-stu-id="9fa17-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetObject(  
     [in] CORDB_ADDRESS addr,   
     [out] ICorDebugObjectValue **ppObject  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="47eb8-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="47eb8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9fa17-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="9fa17-105">Parameters</span></span>  
  `addr`  
- <span data-ttu-id="47eb8-106">[in] 개체 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="47eb8-106">[in] The object address.</span></span>  
+ <span data-ttu-id="9fa17-106">[in] 개체 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="9fa17-106">[in] The object address.</span></span>  
   
  `ppObject`  
- <span data-ttu-id="47eb8-107">[out] "ICorDebugObjectValue" 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="47eb8-107">[out] A pointer to the address of an  "ICorDebugObjectValue" object.</span></span>  
+ <span data-ttu-id="9fa17-107">[out] "ICorDebugObjectValue" 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="9fa17-107">[out] A pointer to the address of an  "ICorDebugObjectValue" object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="47eb8-108">설명</span><span class="sxs-lookup"><span data-stu-id="47eb8-108">Remarks</span></span>  
- <span data-ttu-id="47eb8-109">하는 경우 `addr` 유효한 관리 되는 개체를 가리키지 합니다 `GetObject` 메서드가 반환 되는 `E_FAIL`합니다.</span><span class="sxs-lookup"><span data-stu-id="47eb8-109">If `addr` does not point to a valid managed object, the `GetObject` method returns `E_FAIL`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9fa17-108">설명</span><span class="sxs-lookup"><span data-stu-id="9fa17-108">Remarks</span></span>  
+ <span data-ttu-id="9fa17-109">하는 경우 `addr` 유효한 관리 되는 개체를 가리키지 합니다 `GetObject` 메서드가 반환 되는 `E_FAIL`합니다.</span><span class="sxs-lookup"><span data-stu-id="9fa17-109">If `addr` does not point to a valid managed object, the `GetObject` method returns `E_FAIL`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="47eb8-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="47eb8-110">Requirements</span></span>  
- <span data-ttu-id="47eb8-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="47eb8-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9fa17-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9fa17-110">Requirements</span></span>  
+ <span data-ttu-id="9fa17-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="9fa17-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="47eb8-112">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="47eb8-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9fa17-112">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9fa17-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="47eb8-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="47eb8-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9fa17-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9fa17-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="47eb8-114">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="47eb8-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="9fa17-114">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9fa17-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="47eb8-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="47eb8-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9fa17-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="9fa17-115">See also</span></span>
 
-- [<span data-ttu-id="47eb8-116">ICorDebugProcess5 인터페이스</span><span class="sxs-lookup"><span data-stu-id="47eb8-116">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [<span data-ttu-id="47eb8-117">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="47eb8-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="9fa17-116">ICorDebugProcess5 인터페이스</span><span class="sxs-lookup"><span data-stu-id="9fa17-116">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [<span data-ttu-id="9fa17-117">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="9fa17-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -17,43 +17,43 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49ced1b4be888c7550c3927d1b319ab2f0bef086
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 67959b2ebbfb62b47a1b2a770e278d043fc66d21
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763778"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754921"
 ---
-# <a name="icordebugfunction2setjmcstatus-method"></a><span data-ttu-id="66c60-102">ICorDebugFunction2::SetJMCStatus 메서드</span><span class="sxs-lookup"><span data-stu-id="66c60-102">ICorDebugFunction2::SetJMCStatus Method</span></span>
-<span data-ttu-id="66c60-103">Just My Code에 대 한이 ICorDebugFunction2 함수가 표시 단계별로 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="66c60-103">Marks the function represented by this ICorDebugFunction2 for Just My Code stepping.</span></span>  
+# <a name="icordebugfunction2setjmcstatus-method"></a><span data-ttu-id="06124-102">ICorDebugFunction2::SetJMCStatus 메서드</span><span class="sxs-lookup"><span data-stu-id="06124-102">ICorDebugFunction2::SetJMCStatus Method</span></span>
+<span data-ttu-id="06124-103">Just My Code에 대 한이 ICorDebugFunction2 함수가 표시 단계별로 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="06124-103">Marks the function represented by this ICorDebugFunction2 for Just My Code stepping.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="66c60-104">구문</span><span class="sxs-lookup"><span data-stu-id="66c60-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="06124-104">구문</span><span class="sxs-lookup"><span data-stu-id="06124-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT SetJMCStatus (  
     [in] BOOL   bIsJustMyCode  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="66c60-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="66c60-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="06124-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="06124-105">Parameters</span></span>  
  `bIsJustMyCode`  
- <span data-ttu-id="66c60-106">[in] 로 `true` 사용자 코드로; 함수를 표시 하려면이 고, 그렇지로 `false`.</span><span class="sxs-lookup"><span data-stu-id="66c60-106">[in] Set to `true` to mark the function as user code; otherwise, set to `false`.</span></span>  
+ <span data-ttu-id="06124-106">[in] 로 `true` 사용자 코드로; 함수를 표시 하려면이 고, 그렇지로 `false`.</span><span class="sxs-lookup"><span data-stu-id="06124-106">[in] Set to `true` to mark the function as user code; otherwise, set to `false`.</span></span>  
   
-## <a name="return-values"></a><span data-ttu-id="66c60-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="66c60-107">Return Values</span></span>  
+## <a name="return-values"></a><span data-ttu-id="06124-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="06124-107">Return Values</span></span>  
   
-|<span data-ttu-id="66c60-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="66c60-108">HRESULT</span></span>|<span data-ttu-id="66c60-109">설명</span><span class="sxs-lookup"><span data-stu-id="66c60-109">Description</span></span>|  
+|<span data-ttu-id="06124-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="06124-108">HRESULT</span></span>|<span data-ttu-id="06124-109">설명</span><span class="sxs-lookup"><span data-stu-id="06124-109">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="66c60-110">함수를 표시 했습니다.</span><span class="sxs-lookup"><span data-stu-id="66c60-110">The function was successfully marked.</span></span>|  
-|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|<span data-ttu-id="66c60-111">디버깅할 수 없습니다 때문에 사용자 코드로 함수를 표시할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="66c60-111">The function could not be marked as user code because it cannot be debugged.</span></span>|  
+|`S_OK`|<span data-ttu-id="06124-110">함수를 표시 했습니다.</span><span class="sxs-lookup"><span data-stu-id="06124-110">The function was successfully marked.</span></span>|  
+|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|<span data-ttu-id="06124-111">디버깅할 수 없습니다 때문에 사용자 코드로 함수를 표시할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="06124-111">The function could not be marked as user code because it cannot be debugged.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="66c60-112">설명</span><span class="sxs-lookup"><span data-stu-id="66c60-112">Remarks</span></span>  
- <span data-ttu-id="66c60-113">내 코드만 스텝 사용자 코드가 아닌 건너뜁니다.</span><span class="sxs-lookup"><span data-stu-id="66c60-113">A Just My Code stepper will skip non-user code.</span></span> <span data-ttu-id="66c60-114">사용자 코드에 디버깅 가능한 코드가의 하위 집합 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="66c60-114">User code must be a subset of debuggable code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="06124-112">설명</span><span class="sxs-lookup"><span data-stu-id="06124-112">Remarks</span></span>  
+ <span data-ttu-id="06124-113">내 코드만 스텝 사용자 코드가 아닌 건너뜁니다.</span><span class="sxs-lookup"><span data-stu-id="06124-113">A Just My Code stepper will skip non-user code.</span></span> <span data-ttu-id="06124-114">사용자 코드에 디버깅 가능한 코드가의 하위 집합 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="06124-114">User code must be a subset of debuggable code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="66c60-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="66c60-115">Requirements</span></span>  
- <span data-ttu-id="66c60-116">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="66c60-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="06124-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="06124-115">Requirements</span></span>  
+ <span data-ttu-id="06124-116">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="06124-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="66c60-117">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="66c60-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="06124-117">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="06124-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="66c60-118">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="66c60-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="06124-118">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="06124-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="66c60-119">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="66c60-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="06124-119">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="06124-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

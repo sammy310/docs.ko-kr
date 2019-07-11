@@ -17,36 +17,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4166b63e0bb0ae276c48abb961e381809cc9792
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9dde27f74ac59d033b6e25fba1dbb8e52c4b91af
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763752"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760685"
 ---
-# <a name="icordebugstepperisactive-method"></a><span data-ttu-id="78878-102">ICorDebugStepper::IsActive 메서드</span><span class="sxs-lookup"><span data-stu-id="78878-102">ICorDebugStepper::IsActive Method</span></span>
-<span data-ttu-id="78878-103">이 ICorDebugStepper 현재 단계를 실행 하는지 여부를 나타내는 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="78878-103">Gets a value that indicates whether this ICorDebugStepper is currently executing a step.</span></span>  
+# <a name="icordebugstepperisactive-method"></a><span data-ttu-id="41697-102">ICorDebugStepper::IsActive 메서드</span><span class="sxs-lookup"><span data-stu-id="41697-102">ICorDebugStepper::IsActive Method</span></span>
+<span data-ttu-id="41697-103">이 ICorDebugStepper 현재 단계를 실행 하는지 여부를 나타내는 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="41697-103">Gets a value that indicates whether this ICorDebugStepper is currently executing a step.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="78878-104">구문</span><span class="sxs-lookup"><span data-stu-id="78878-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="41697-104">구문</span><span class="sxs-lookup"><span data-stu-id="41697-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT IsActive (  
     [out] BOOL   *pbActive  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="78878-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="78878-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="41697-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="41697-105">Parameters</span></span>  
  `pbActive`  
- <span data-ttu-id="78878-106">[out] 반환 `true` 스텝 퍼 단계; 현재 실행 중인 경우 반환이 고, 그렇지 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="78878-106">[out] Returns `true` if the stepper is currently executing a step; otherwise, returns `false`.</span></span>  
+ <span data-ttu-id="41697-106">[out] 반환 `true` 스텝 퍼 단계; 현재 실행 중인 경우 반환이 고, 그렇지 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="41697-106">[out] Returns `true` if the stepper is currently executing a step; otherwise, returns `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="78878-107">설명</span><span class="sxs-lookup"><span data-stu-id="78878-107">Remarks</span></span>  
- <span data-ttu-id="78878-108">디버거를 받을 때까지 모든 단계 작업 활성화를 [icordebugmanagedcallback:: Stepcomplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md) 스텝 퍼에 자동으로 비활성화 하는 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="78878-108">Any step action remains active until the debugger receives a [ICorDebugManagedCallback::StepComplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md) call, which automatically deactivates the stepper.</span></span> <span data-ttu-id="78878-109">스텝 호출 하 여 중간 비활성화할 수도 있습니다 [icordebugstepper:: Deactivate](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md) 콜백 전에 조건에 도달 했습니다.</span><span class="sxs-lookup"><span data-stu-id="78878-109">A stepper may also be deactivated prematurely by calling [ICorDebugStepper::Deactivate](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md) before the callback condition is reached.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="41697-107">설명</span><span class="sxs-lookup"><span data-stu-id="41697-107">Remarks</span></span>  
+ <span data-ttu-id="41697-108">디버거를 받을 때까지 모든 단계 작업 활성화를 [icordebugmanagedcallback:: Stepcomplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md) 스텝 퍼에 자동으로 비활성화 하는 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="41697-108">Any step action remains active until the debugger receives a [ICorDebugManagedCallback::StepComplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md) call, which automatically deactivates the stepper.</span></span> <span data-ttu-id="41697-109">스텝 호출 하 여 중간 비활성화할 수도 있습니다 [icordebugstepper:: Deactivate](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md) 콜백 전에 조건에 도달 했습니다.</span><span class="sxs-lookup"><span data-stu-id="41697-109">A stepper may also be deactivated prematurely by calling [ICorDebugStepper::Deactivate](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md) before the callback condition is reached.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="78878-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="78878-110">Requirements</span></span>  
- <span data-ttu-id="78878-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="78878-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="41697-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="41697-110">Requirements</span></span>  
+ <span data-ttu-id="41697-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="41697-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="78878-112">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="78878-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="41697-112">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="41697-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="78878-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="78878-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="41697-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="41697-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="78878-114">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="78878-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="41697-114">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="41697-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

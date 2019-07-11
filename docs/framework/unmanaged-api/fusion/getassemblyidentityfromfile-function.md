@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f5dd25ec2a6a1b0b5d6266c3d8e728bd128a9ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 581c675cfb69503e6366471a469ffed1a2d13b1a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697760"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745235"
 ---
-# <a name="getassemblyidentityfromfile-function"></a><span data-ttu-id="daf6c-102">GetAssemblyIdentityFromFile 함수</span><span class="sxs-lookup"><span data-stu-id="daf6c-102">GetAssemblyIdentityFromFile Function</span></span>
-<span data-ttu-id="daf6c-103">포인터를 가져는 `IUnknown` 지정 된 개체 `IID` 지정된 된 파일 경로에 있는 어셈블리에서.</span><span class="sxs-lookup"><span data-stu-id="daf6c-103">Gets a pointer to an `IUnknown` object with the specified `IID` in the assembly at the specified file path.</span></span>  
+# <a name="getassemblyidentityfromfile-function"></a><span data-ttu-id="ceaea-102">GetAssemblyIdentityFromFile 함수</span><span class="sxs-lookup"><span data-stu-id="ceaea-102">GetAssemblyIdentityFromFile Function</span></span>
+<span data-ttu-id="ceaea-103">포인터를 가져는 `IUnknown` 지정 된 개체 `IID` 지정된 된 파일 경로에 있는 어셈블리에서.</span><span class="sxs-lookup"><span data-stu-id="ceaea-103">Gets a pointer to an `IUnknown` object with the specified `IID` in the assembly at the specified file path.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="daf6c-104">구문</span><span class="sxs-lookup"><span data-stu-id="daf6c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ceaea-104">구문</span><span class="sxs-lookup"><span data-stu-id="ceaea-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetAssemblyIdentityFromFile (  
     [in]  LPCWSTR   pwzFilePath,  
     [in]  REFIID    riid,  
@@ -38,24 +38,24 @@ HRESULT GetAssemblyIdentityFromFile (
  );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="daf6c-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="daf6c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ceaea-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ceaea-105">Parameters</span></span>  
  `pwzFilePath`  
- <span data-ttu-id="daf6c-106">[in] 요청된 된 어셈블리에 대 한 유효한 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="daf6c-106">[in] A valid path to the requested assembly.</span></span>  
+ <span data-ttu-id="ceaea-106">[in] 요청된 된 어셈블리에 대 한 유효한 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="ceaea-106">[in] A valid path to the requested assembly.</span></span>  
   
  `riid`  
- <span data-ttu-id="daf6c-107">[in] `IID` 반환할 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="daf6c-107">[in] The `IID` of the interface to return.</span></span>  
+ <span data-ttu-id="ceaea-107">[in] `IID` 반환할 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="ceaea-107">[in] The `IID` of the interface to return.</span></span>  
   
  `ppIdentity`  
- <span data-ttu-id="daf6c-108">[out] 반환 된 인터페이스 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="daf6c-108">[out] The returned interface pointer.</span></span>  
+ <span data-ttu-id="ceaea-108">[out] 반환 된 인터페이스 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="ceaea-108">[out] The returned interface pointer.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="daf6c-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="daf6c-109">Requirements</span></span>  
- <span data-ttu-id="daf6c-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="daf6c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ceaea-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ceaea-109">Requirements</span></span>  
+ <span data-ttu-id="ceaea-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="ceaea-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="daf6c-111">**헤더:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="daf6c-111">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="ceaea-111">**헤더:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="ceaea-111">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="daf6c-112">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="daf6c-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ceaea-112">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ceaea-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="daf6c-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="daf6c-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ceaea-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="ceaea-113">See also</span></span>
 
-- [<span data-ttu-id="daf6c-114">IUnknown</span><span class="sxs-lookup"><span data-stu-id="daf6c-114">IUnknown</span></span>](/cpp/atl/iunknown)
-- [<span data-ttu-id="daf6c-115">Fusion 전역 정적 함수</span><span class="sxs-lookup"><span data-stu-id="daf6c-115">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [<span data-ttu-id="ceaea-114">IUnknown</span><span class="sxs-lookup"><span data-stu-id="ceaea-114">IUnknown</span></span>](/cpp/atl/iunknown)
+- [<span data-ttu-id="ceaea-115">Fusion 전역 정적 함수</span><span class="sxs-lookup"><span data-stu-id="ceaea-115">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

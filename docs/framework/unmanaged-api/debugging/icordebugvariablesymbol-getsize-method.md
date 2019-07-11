@@ -4,43 +4,43 @@ ms.date: 03/30/2017
 ms.assetid: add0cd9d-9a29-49b1-ae07-d9d3786b4ccd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 027b3f773ff0ed0ca7bf9d193f97a3b060ea8494
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e963e655c933c9191953bb32ba0b73adf0ae86d7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768838"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774875"
 ---
-# <a name="icordebugvariablesymbolgetsize-method"></a><span data-ttu-id="f790c-102">Icordebugvariablesymbol:: Getsize 메서드</span><span class="sxs-lookup"><span data-stu-id="f790c-102">ICorDebugVariableSymbol::GetSize Method</span></span>
-<span data-ttu-id="f790c-103">변수의 크기(바이트)를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="f790c-103">Gets the size of a variable in bytes.</span></span>  
+# <a name="icordebugvariablesymbolgetsize-method"></a><span data-ttu-id="685a5-102">Icordebugvariablesymbol:: Getsize 메서드</span><span class="sxs-lookup"><span data-stu-id="685a5-102">ICorDebugVariableSymbol::GetSize Method</span></span>
+<span data-ttu-id="685a5-103">변수의 크기(바이트)를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="685a5-103">Gets the size of a variable in bytes.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f790c-104">구문</span><span class="sxs-lookup"><span data-stu-id="f790c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="685a5-104">구문</span><span class="sxs-lookup"><span data-stu-id="685a5-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetSize(  
    [out] ULONG32 *pcbValue  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f790c-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f790c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="685a5-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="685a5-105">Parameters</span></span>  
  `pcbValue`  
- <span data-ttu-id="f790c-106">변수의 크기를 포함하는 32비트 부호 없는 정수에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="f790c-106">A pointer to a 32-bit unsigned integer containing the size of the variable.</span></span>  
+ <span data-ttu-id="685a5-106">변수의 크기를 포함하는 32비트 부호 없는 정수에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="685a5-106">A pointer to a 32-bit unsigned integer containing the size of the variable.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f790c-107">설명</span><span class="sxs-lookup"><span data-stu-id="f790c-107">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="685a5-107">설명</span><span class="sxs-lookup"><span data-stu-id="685a5-107">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f790c-108">이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f790c-108">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="685a5-108">이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="685a5-108">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f790c-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f790c-109">Requirements</span></span>  
- <span data-ttu-id="f790c-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="f790c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="685a5-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="685a5-109">Requirements</span></span>  
+ <span data-ttu-id="685a5-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="685a5-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f790c-111">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f790c-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="685a5-111">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="685a5-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f790c-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f790c-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="685a5-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="685a5-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f790c-113">**.NET Framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f790c-113">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="685a5-113">**.NET Framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="685a5-113">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f790c-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="f790c-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="685a5-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="685a5-114">See also</span></span>
 
-- [<span data-ttu-id="f790c-115">ICorDebugVariableSymbol 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f790c-115">ICorDebugVariableSymbol Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)
-- [<span data-ttu-id="f790c-116">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f790c-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="685a5-115">ICorDebugVariableSymbol 인터페이스</span><span class="sxs-lookup"><span data-stu-id="685a5-115">ICorDebugVariableSymbol Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)
+- [<span data-ttu-id="685a5-116">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="685a5-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -17,40 +17,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf74da6eb0e7ce0215023a9a58d6b88c57c4fe8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1a044d1600f7e21e3abfbf704daef5213617b4c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936944"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780043"
 ---
-# <a name="icorruntimehostgetconfiguration-method"></a><span data-ttu-id="0eac1-102">ICorRuntimeHost::GetConfiguration 메서드</span><span class="sxs-lookup"><span data-stu-id="0eac1-102">ICorRuntimeHost::GetConfiguration Method</span></span>
-<span data-ttu-id="0eac1-103">호스트에서의 CLR (공용 언어 런타임)의 콜백 구성을 지정할 수 있는 개체를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="0eac1-103">Gets an object that allows the host to specify the callback configuration of the common language runtime (CLR).</span></span>  
+# <a name="icorruntimehostgetconfiguration-method"></a><span data-ttu-id="f356c-102">ICorRuntimeHost::GetConfiguration 메서드</span><span class="sxs-lookup"><span data-stu-id="f356c-102">ICorRuntimeHost::GetConfiguration Method</span></span>
+<span data-ttu-id="f356c-103">호스트에서의 CLR (공용 언어 런타임)의 콜백 구성을 지정할 수 있는 개체를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="f356c-103">Gets an object that allows the host to specify the callback configuration of the common language runtime (CLR).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0eac1-104">구문</span><span class="sxs-lookup"><span data-stu-id="0eac1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f356c-104">구문</span><span class="sxs-lookup"><span data-stu-id="f356c-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetConfiguration(  
     [out] ICorConfiguration** pConfiguration  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0eac1-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="0eac1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f356c-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f356c-105">Parameters</span></span>  
  `pConfiguration`  
- <span data-ttu-id="0eac1-106">[out] 주소에 대 한 포인터를 [ICorConfiguration](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md) CLR을 구성 하는 데 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0eac1-106">[out] A pointer to the address of an [ICorConfiguration](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md) object that can be used to configure the CLR.</span></span>  
+ <span data-ttu-id="f356c-106">[out] 주소에 대 한 포인터를 [ICorConfiguration](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md) CLR을 구성 하는 데 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f356c-106">[out] A pointer to the address of an [ICorConfiguration](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md) object that can be used to configure the CLR.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0eac1-107">설명</span><span class="sxs-lookup"><span data-stu-id="0eac1-107">Remarks</span></span>  
- <span data-ttu-id="0eac1-108">CLR의 초기화 하기 전에 구성 해야 합니다. 이 고, 그렇지는 `GetConfiguration` 메서드는 오류를 나타내는 HRESULT를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="0eac1-108">The CLR must be configured prior to its initialization; otherwise, the `GetConfiguration` method returns an HRESULT indicating an error.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f356c-107">설명</span><span class="sxs-lookup"><span data-stu-id="f356c-107">Remarks</span></span>  
+ <span data-ttu-id="f356c-108">CLR의 초기화 하기 전에 구성 해야 합니다. 이 고, 그렇지는 `GetConfiguration` 메서드는 오류를 나타내는 HRESULT를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="f356c-108">The CLR must be configured prior to its initialization; otherwise, the `GetConfiguration` method returns an HRESULT indicating an error.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0eac1-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="0eac1-109">Requirements</span></span>  
- <span data-ttu-id="0eac1-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="0eac1-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f356c-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f356c-109">Requirements</span></span>  
+ <span data-ttu-id="f356c-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="f356c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0eac1-111">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="0eac1-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f356c-111">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f356c-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="0eac1-112">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="0eac1-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f356c-112">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="f356c-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="0eac1-113">**.NET framework 버전:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="0eac1-113">**.NET Framework Versions:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="f356c-113">**.NET framework 버전:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="f356c-113">**.NET Framework Versions:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0eac1-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="0eac1-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f356c-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="f356c-114">See also</span></span>
 
-- [<span data-ttu-id="0eac1-115">ICorRuntimeHost 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0eac1-115">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [<span data-ttu-id="f356c-115">ICorRuntimeHost 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f356c-115">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

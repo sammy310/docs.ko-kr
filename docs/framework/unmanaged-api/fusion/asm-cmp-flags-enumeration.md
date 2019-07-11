@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a37355365f337527bbc9254cae6e6f3d3f2f604
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 28157d2ed223d89af4b4314035e7c03d572be7b8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61914757"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778559"
 ---
-# <a name="asmcmpflags-enumeration"></a><span data-ttu-id="c77e3-102">ASM_CMP_FLAGS 열거형</span><span class="sxs-lookup"><span data-stu-id="c77e3-102">ASM_CMP_FLAGS Enumeration</span></span>
-<span data-ttu-id="c77e3-103">버전, 빌드, 문화권, 서명 및 등과에서 비교할 두 명의 어셈블리를 나타내는 합니다 [iassemblyname:: Isequal](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="c77e3-103">Indicates the version, build, culture, signature, and so on, of two assemblies to be compared by the [IAssemblyName::IsEqual](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md) method.</span></span>  
+# <a name="asmcmpflags-enumeration"></a><span data-ttu-id="0db6a-102">ASM_CMP_FLAGS 열거형</span><span class="sxs-lookup"><span data-stu-id="0db6a-102">ASM_CMP_FLAGS Enumeration</span></span>
+<span data-ttu-id="0db6a-103">버전, 빌드, 문화권, 서명 및 등과에서 비교할 두 명의 어셈블리를 나타내는 합니다 [iassemblyname:: Isequal](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="0db6a-103">Indicates the version, build, culture, signature, and so on, of two assemblies to be compared by the [IAssemblyName::IsEqual](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c77e3-104">구문</span><span class="sxs-lookup"><span data-stu-id="c77e3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0db6a-104">구문</span><span class="sxs-lookup"><span data-stu-id="0db6a-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum {  
   
     ASM_CMPF_NAME                   = 0x1,  
@@ -67,16 +67,16 @@ typedef enum {
 } ASM_CMP_FLAGS;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="c77e3-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c77e3-105">Requirements</span></span>  
- <span data-ttu-id="c77e3-106">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="c77e3-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0db6a-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="0db6a-105">Requirements</span></span>  
+ <span data-ttu-id="0db6a-106">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="0db6a-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c77e3-107">**헤더:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="c77e3-107">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="0db6a-107">**헤더:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="0db6a-107">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="c77e3-108">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="c77e3-108">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="0db6a-108">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="0db6a-108">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="c77e3-109">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c77e3-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="0db6a-109">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0db6a-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c77e3-110">참고자료</span><span class="sxs-lookup"><span data-stu-id="c77e3-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0db6a-110">참고자료</span><span class="sxs-lookup"><span data-stu-id="0db6a-110">See also</span></span>
 
-- [<span data-ttu-id="c77e3-111">IAssemblyName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c77e3-111">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [<span data-ttu-id="c77e3-112">Fusion 열거형</span><span class="sxs-lookup"><span data-stu-id="c77e3-112">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [<span data-ttu-id="0db6a-111">IAssemblyName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0db6a-111">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [<span data-ttu-id="0db6a-112">Fusion 열거형</span><span class="sxs-lookup"><span data-stu-id="0db6a-112">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
