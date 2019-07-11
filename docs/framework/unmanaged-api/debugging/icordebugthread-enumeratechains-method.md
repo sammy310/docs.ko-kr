@@ -17,46 +17,46 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f131f7566376d6474f3189d5eb612b30bec2e2b7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a6f0ed843f72d3f1e1575da15776a94a9097fd02
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648431"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771106"
 ---
-# <a name="icordebugthreadenumeratechains-method"></a><span data-ttu-id="92fe2-102">ICorDebugThread::EnumerateChains 메서드</span><span class="sxs-lookup"><span data-stu-id="92fe2-102">ICorDebugThread::EnumerateChains Method</span></span>
-<span data-ttu-id="92fe2-103">이 ICorDebugThread 개체의 모든 스택 체인을 포함 하는 ICorDebugChainEnum 열거자에 대 한 인터페이스 포인터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="92fe2-103">Gets an interface pointer to an ICorDebugChainEnum enumerator that contains all the stack chains in this ICorDebugThread object.</span></span>  
+# <a name="icordebugthreadenumeratechains-method"></a><span data-ttu-id="b14fb-102">ICorDebugThread::EnumerateChains 메서드</span><span class="sxs-lookup"><span data-stu-id="b14fb-102">ICorDebugThread::EnumerateChains Method</span></span>
+<span data-ttu-id="b14fb-103">이 ICorDebugThread 개체의 모든 스택 체인을 포함 하는 ICorDebugChainEnum 열거자에 대 한 인터페이스 포인터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="b14fb-103">Gets an interface pointer to an ICorDebugChainEnum enumerator that contains all the stack chains in this ICorDebugThread object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="92fe2-104">구문</span><span class="sxs-lookup"><span data-stu-id="92fe2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b14fb-104">구문</span><span class="sxs-lookup"><span data-stu-id="b14fb-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT EnumerateChains (  
     [out] ICorDebugChainEnum **ppChains  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="92fe2-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="92fe2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b14fb-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="b14fb-105">Parameters</span></span>  
  `ppChains`  
- <span data-ttu-id="92fe2-106">[out] 주소에 대 한 포인터는 `ICorDebugChainEnum` 활성 (즉, 가장 최근) 체인에서 시작,이 스레드의 모든 스택 열거를 사용할 수 있는 개체 체인입니다.</span><span class="sxs-lookup"><span data-stu-id="92fe2-106">[out] A pointer to the address of an `ICorDebugChainEnum` object that allows enumeration of all the stack chains in this thread, starting at the active (that is, the most recent) chain.</span></span>  
+ <span data-ttu-id="b14fb-106">[out] 주소에 대 한 포인터는 `ICorDebugChainEnum` 활성 (즉, 가장 최근) 체인에서 시작,이 스레드의 모든 스택 열거를 사용할 수 있는 개체 체인입니다.</span><span class="sxs-lookup"><span data-stu-id="b14fb-106">[out] A pointer to the address of an `ICorDebugChainEnum` object that allows enumeration of all the stack chains in this thread, starting at the active (that is, the most recent) chain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="92fe2-107">설명</span><span class="sxs-lookup"><span data-stu-id="92fe2-107">Remarks</span></span>  
- <span data-ttu-id="92fe2-108">스택 체인 스레드의 실제 호출 스택을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="92fe2-108">The stack chain represents the physical call stack for the thread.</span></span> <span data-ttu-id="92fe2-109">다음과 같은 경우 스택 체인 경계를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="92fe2-109">The following circumstances create a stack chain boundary:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b14fb-107">설명</span><span class="sxs-lookup"><span data-stu-id="b14fb-107">Remarks</span></span>  
+ <span data-ttu-id="b14fb-108">스택 체인 스레드의 실제 호출 스택을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="b14fb-108">The stack chain represents the physical call stack for the thread.</span></span> <span data-ttu-id="b14fb-109">다음과 같은 경우 스택 체인 경계를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="b14fb-109">The following circumstances create a stack chain boundary:</span></span>  
   
-- <span data-ttu-id="92fe2-110">관리-비관리 또는 관리 되지 않는 관리로 전환 합니다.</span><span class="sxs-lookup"><span data-stu-id="92fe2-110">A managed-to-unmanaged or unmanaged-to-managed transition.</span></span>  
+- <span data-ttu-id="b14fb-110">관리-비관리 또는 관리 되지 않는 관리로 전환 합니다.</span><span class="sxs-lookup"><span data-stu-id="b14fb-110">A managed-to-unmanaged or unmanaged-to-managed transition.</span></span>  
   
-- <span data-ttu-id="92fe2-111">컨텍스트 전환 합니다.</span><span class="sxs-lookup"><span data-stu-id="92fe2-111">A context switch.</span></span>  
+- <span data-ttu-id="b14fb-111">컨텍스트 전환 합니다.</span><span class="sxs-lookup"><span data-stu-id="b14fb-111">A context switch.</span></span>  
   
-- <span data-ttu-id="92fe2-112">사용자 스레드의 하이재킹 디버거.</span><span class="sxs-lookup"><span data-stu-id="92fe2-112">A debugger hijacking of a user thread.</span></span>  
+- <span data-ttu-id="b14fb-112">사용자 스레드의 하이재킹 디버거.</span><span class="sxs-lookup"><span data-stu-id="b14fb-112">A debugger hijacking of a user thread.</span></span>  
   
- <span data-ttu-id="92fe2-113">단일 컨텍스트에 순수 관리 코드를 실행 하는 스레드에 대 한 간단한 경우 스레드 스택 체인 간의 일대일로 대응 존재 합니다.</span><span class="sxs-lookup"><span data-stu-id="92fe2-113">In the simple case for a thread that is running purely managed code in a single context, a one-to-one correspondence will exist between threads and stack chains.</span></span>  
+ <span data-ttu-id="b14fb-113">단일 컨텍스트에 순수 관리 코드를 실행 하는 스레드에 대 한 간단한 경우 스레드 스택 체인 간의 일대일로 대응 존재 합니다.</span><span class="sxs-lookup"><span data-stu-id="b14fb-113">In the simple case for a thread that is running purely managed code in a single context, a one-to-one correspondence will exist between threads and stack chains.</span></span>  
   
- <span data-ttu-id="92fe2-114">디버거 논리 호출 스택을에 모든 스레드의 실제 호출 스택을 다시 정렬 하려고 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="92fe2-114">A debugger may want to rearrange the physical call stacks of all threads into logical call stacks.</span></span> <span data-ttu-id="92fe2-115">여기에 모든 스레드의 체인이 해당 호출자/호출 수신자 관계에 의해 정렬 되 고 이러한 다시 그룹화 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="92fe2-115">This would involve sorting all the threads' chains by their caller/callee relationships and regrouping them.</span></span>  
+ <span data-ttu-id="b14fb-114">디버거 논리 호출 스택을에 모든 스레드의 실제 호출 스택을 다시 정렬 하려고 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b14fb-114">A debugger may want to rearrange the physical call stacks of all threads into logical call stacks.</span></span> <span data-ttu-id="b14fb-115">여기에 모든 스레드의 체인이 해당 호출자/호출 수신자 관계에 의해 정렬 되 고 이러한 다시 그룹화 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b14fb-115">This would involve sorting all the threads' chains by their caller/callee relationships and regrouping them.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="92fe2-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="92fe2-116">Requirements</span></span>  
- <span data-ttu-id="92fe2-117">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="92fe2-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b14fb-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b14fb-116">Requirements</span></span>  
+ <span data-ttu-id="b14fb-117">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="b14fb-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="92fe2-118">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="92fe2-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b14fb-118">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b14fb-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="92fe2-119">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="92fe2-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b14fb-119">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b14fb-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="92fe2-120">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="92fe2-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="b14fb-120">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b14fb-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

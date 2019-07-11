@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 156c16f73916d2b4efa1c1b3541a772fb43dd470
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f50e5fcee3705e05aeed820cf736613c12b00e50
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988769"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754863"
 ---
-# <a name="icordebugframegetfunctiontoken-method"></a><span data-ttu-id="04be3-102">ICorDebugFrame::GetFunctionToken 메서드</span><span class="sxs-lookup"><span data-stu-id="04be3-102">ICorDebugFrame::GetFunctionToken Method</span></span>
-<span data-ttu-id="04be3-103">이 스택 프레임을 사용 하 여 연결 된 코드를 포함 하는 함수에 대 한 메타 데이터 토큰을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="04be3-103">Gets the metadata token for the function that contains the code associated with this stack frame.</span></span>  
+# <a name="icordebugframegetfunctiontoken-method"></a><span data-ttu-id="f1816-102">ICorDebugFrame::GetFunctionToken 메서드</span><span class="sxs-lookup"><span data-stu-id="f1816-102">ICorDebugFrame::GetFunctionToken Method</span></span>
+<span data-ttu-id="f1816-103">이 스택 프레임을 사용 하 여 연결 된 코드를 포함 하는 함수에 대 한 메타 데이터 토큰을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="f1816-103">Gets the metadata token for the function that contains the code associated with this stack frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="04be3-104">구문</span><span class="sxs-lookup"><span data-stu-id="04be3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f1816-104">구문</span><span class="sxs-lookup"><span data-stu-id="f1816-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetFunctionToken (  
     [out] mdMethodDef        *pToken  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="04be3-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="04be3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f1816-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f1816-105">Parameters</span></span>  
  `pToken`  
- <span data-ttu-id="04be3-106">[out] 에 대 한 포인터는 `mdMethodDef` 함수에 대 한 메타 데이터를 참조 하는 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="04be3-106">[out] A pointer to an `mdMethodDef` token that references the metadata for the function.</span></span>  
+ <span data-ttu-id="f1816-106">[out] 에 대 한 포인터는 `mdMethodDef` 함수에 대 한 메타 데이터를 참조 하는 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="f1816-106">[out] A pointer to an `mdMethodDef` token that references the metadata for the function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="04be3-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="04be3-107">Requirements</span></span>  
- <span data-ttu-id="04be3-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="04be3-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f1816-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f1816-107">Requirements</span></span>  
+ <span data-ttu-id="f1816-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="f1816-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="04be3-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="04be3-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f1816-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f1816-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="04be3-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="04be3-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f1816-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f1816-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="04be3-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="04be3-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="f1816-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f1816-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

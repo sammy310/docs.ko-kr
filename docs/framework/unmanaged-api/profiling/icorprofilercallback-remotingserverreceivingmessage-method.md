@@ -17,51 +17,51 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec6f7cf8c70292d586e58b5b6d8251aa4700dbac
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2bc3e48185c3bc289a4f7bfd865f69d9c06a720c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662893"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750506"
 ---
-# <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a><span data-ttu-id="9a7ae-102">ICorProfilerCallback::RemotingServerReceivingMessage 메서드</span><span class="sxs-lookup"><span data-stu-id="9a7ae-102">ICorProfilerCallback::RemotingServerReceivingMessage Method</span></span>
-<span data-ttu-id="9a7ae-103">프로세스가 원격 메서드 호출 또는 정품 인증 요청을 받았는지 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="9a7ae-103">Notifies the profiler that the process has received a remote method invocation or activation request.</span></span>  
+# <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a><span data-ttu-id="3ff7a-102">ICorProfilerCallback::RemotingServerReceivingMessage 메서드</span><span class="sxs-lookup"><span data-stu-id="3ff7a-102">ICorProfilerCallback::RemotingServerReceivingMessage Method</span></span>
+<span data-ttu-id="3ff7a-103">프로세스가 원격 메서드 호출 또는 정품 인증 요청을 받았는지 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="3ff7a-103">Notifies the profiler that the process has received a remote method invocation or activation request.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9a7ae-104">구문</span><span class="sxs-lookup"><span data-stu-id="9a7ae-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3ff7a-104">구문</span><span class="sxs-lookup"><span data-stu-id="3ff7a-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT RemotingClientSendingMessage(  
     [in] GUID *pCookie,  
     [in] BOOL fIsAsync);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9a7ae-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="9a7ae-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3ff7a-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="3ff7a-105">Parameters</span></span>  
  `pCookie`  
- <span data-ttu-id="9a7ae-106">[in] 에 제공 된 값을 사용 하 여 해당 하는 값 [icorprofilercallback:: Remotingclientsendingmessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) 이러한 조건에서:</span><span class="sxs-lookup"><span data-stu-id="9a7ae-106">[in] A value that will correspond with the value provided in [ICorProfilerCallback::RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) under these conditions:</span></span>  
+ <span data-ttu-id="3ff7a-106">[in] 에 제공 된 값을 사용 하 여 해당 하는 값 [icorprofilercallback:: Remotingclientsendingmessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) 이러한 조건에서:</span><span class="sxs-lookup"><span data-stu-id="3ff7a-106">[in] A value that will correspond with the value provided in [ICorProfilerCallback::RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) under these conditions:</span></span>  
   
-- <span data-ttu-id="9a7ae-107">원격 GUID 쿠키 활성화 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9a7ae-107">Remoting GUID cookies are active.</span></span>  
+- <span data-ttu-id="3ff7a-107">원격 GUID 쿠키 활성화 됩니다.</span><span class="sxs-lookup"><span data-stu-id="3ff7a-107">Remoting GUID cookies are active.</span></span>  
   
-- <span data-ttu-id="9a7ae-108">채널은 메시지 전송에 성공 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a7ae-108">The channel succeeds in transmitting the message.</span></span>  
+- <span data-ttu-id="3ff7a-108">채널은 메시지 전송에 성공 합니다.</span><span class="sxs-lookup"><span data-stu-id="3ff7a-108">The channel succeeds in transmitting the message.</span></span>  
   
-- <span data-ttu-id="9a7ae-109">GUID 쿠키는 클라이언트 쪽 프로세스에서 활성 상태입니다.</span><span class="sxs-lookup"><span data-stu-id="9a7ae-109">GUID cookies are active on the client-side process.</span></span>  
+- <span data-ttu-id="3ff7a-109">GUID 쿠키는 클라이언트 쪽 프로세스에서 활성 상태입니다.</span><span class="sxs-lookup"><span data-stu-id="3ff7a-109">GUID cookies are active on the client-side process.</span></span>  
   
- <span data-ttu-id="9a7ae-110">따라서 쉽게 페어링 원격 호출 및 논리 호출 스택 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a7ae-110">This allows easy pairing of remoting calls and the creation of a logical call stack.</span></span>  
+ <span data-ttu-id="3ff7a-110">따라서 쉽게 페어링 원격 호출 및 논리 호출 스택 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="3ff7a-110">This allows easy pairing of remoting calls and the creation of a logical call stack.</span></span>  
   
  `fIsAsync`  
- <span data-ttu-id="9a7ae-111">[in] 값을 `true` 호출이 고, 그렇지 않으면 비동기 이면 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="9a7ae-111">[in] A value that is `true` if the call is asynchronous; otherwise, `false`.</span></span>  
+ <span data-ttu-id="3ff7a-111">[in] 값을 `true` 호출이 고, 그렇지 않으면 비동기 이면 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="3ff7a-111">[in] A value that is `true` if the call is asynchronous; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9a7ae-112">설명</span><span class="sxs-lookup"><span data-stu-id="9a7ae-112">Remarks</span></span>  
- <span data-ttu-id="9a7ae-113">메시지 요청 비동기 인 경우 임의의 스레드에서 요청을 처리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9a7ae-113">If the message request is asynchronous, the request can be serviced by any arbitrary thread.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3ff7a-112">설명</span><span class="sxs-lookup"><span data-stu-id="3ff7a-112">Remarks</span></span>  
+ <span data-ttu-id="3ff7a-113">메시지 요청 비동기 인 경우 임의의 스레드에서 요청을 처리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3ff7a-113">If the message request is asynchronous, the request can be serviced by any arbitrary thread.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9a7ae-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9a7ae-114">Requirements</span></span>  
- <span data-ttu-id="9a7ae-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="9a7ae-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3ff7a-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="3ff7a-114">Requirements</span></span>  
+ <span data-ttu-id="3ff7a-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="3ff7a-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9a7ae-116">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="9a7ae-116">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="3ff7a-116">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="3ff7a-116">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="9a7ae-117">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9a7ae-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3ff7a-117">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3ff7a-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9a7ae-118">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9a7ae-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="3ff7a-118">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3ff7a-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9a7ae-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="9a7ae-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3ff7a-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="3ff7a-119">See also</span></span>
 
-- [<span data-ttu-id="9a7ae-120">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="9a7ae-120">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="3ff7a-120">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="3ff7a-120">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

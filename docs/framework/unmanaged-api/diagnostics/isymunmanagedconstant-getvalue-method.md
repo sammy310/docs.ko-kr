@@ -17,36 +17,36 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 75cc16f44ddf29b161c758718b697cc2aaba8e08
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e89dabeeb4956d106e8d0ca83520d87f3b330e63
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940025"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776810"
 ---
-# <a name="isymunmanagedconstantgetvalue-method"></a><span data-ttu-id="952c9-102">ISymUnmanagedConstant::GetValue 메서드</span><span class="sxs-lookup"><span data-stu-id="952c9-102">ISymUnmanagedConstant::GetValue Method</span></span>
-<span data-ttu-id="952c9-103">상수 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="952c9-103">Gets the value of the constant.</span></span>  
+# <a name="isymunmanagedconstantgetvalue-method"></a><span data-ttu-id="0d03b-102">ISymUnmanagedConstant::GetValue 메서드</span><span class="sxs-lookup"><span data-stu-id="0d03b-102">ISymUnmanagedConstant::GetValue Method</span></span>
+<span data-ttu-id="0d03b-103">상수 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="0d03b-103">Gets the value of the constant.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="952c9-104">구문</span><span class="sxs-lookup"><span data-stu-id="952c9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0d03b-104">구문</span><span class="sxs-lookup"><span data-stu-id="0d03b-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetValue(  
     [out]  VARIANT* pValue  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="952c9-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="952c9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0d03b-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="0d03b-105">Parameters</span></span>  
  `pValue`  
- <span data-ttu-id="952c9-106">[out] 값을 수신 하는 변수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="952c9-106">[out] A pointer to a variable that receives the value.</span></span>  
+ <span data-ttu-id="0d03b-106">[out] 값을 수신 하는 변수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="0d03b-106">[out] A pointer to a variable that receives the value.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="952c9-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="952c9-107">Return Value</span></span>  
- <span data-ttu-id="952c9-108">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="952c9-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0d03b-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="0d03b-107">Return Value</span></span>  
+ <span data-ttu-id="0d03b-108">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="0d03b-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="952c9-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="952c9-109">Requirements</span></span>  
- <span data-ttu-id="952c9-110">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="952c9-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0d03b-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="0d03b-109">Requirements</span></span>  
+ <span data-ttu-id="0d03b-110">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="0d03b-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="952c9-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="952c9-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0d03b-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="0d03b-111">See also</span></span>
 
-- [<span data-ttu-id="952c9-112">ISymUnmanagedConstant 인터페이스</span><span class="sxs-lookup"><span data-stu-id="952c9-112">ISymUnmanagedConstant Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)
-- [<span data-ttu-id="952c9-113">GetName 메서드</span><span class="sxs-lookup"><span data-stu-id="952c9-113">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)
-- [<span data-ttu-id="952c9-114">GetSignature 메서드</span><span class="sxs-lookup"><span data-stu-id="952c9-114">GetSignature Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getsignature-method.md)
+- [<span data-ttu-id="0d03b-112">ISymUnmanagedConstant 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0d03b-112">ISymUnmanagedConstant Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)
+- [<span data-ttu-id="0d03b-113">GetName 메서드</span><span class="sxs-lookup"><span data-stu-id="0d03b-113">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)
+- [<span data-ttu-id="0d03b-114">GetSignature 메서드</span><span class="sxs-lookup"><span data-stu-id="0d03b-114">GetSignature Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getsignature-method.md)

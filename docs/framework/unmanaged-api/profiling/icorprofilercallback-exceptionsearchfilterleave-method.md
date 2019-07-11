@@ -17,32 +17,32 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e89b76f7a246277737123e180c20874940437506
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c71eb61dba5b62fcfed21d3500df70c1a699d42c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597506"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756092"
 ---
-# <a name="icorprofilercallbackexceptionsearchfilterleave-method"></a><span data-ttu-id="386bd-102">ICorProfilerCallback::ExceptionSearchFilterLeave 메서드</span><span class="sxs-lookup"><span data-stu-id="386bd-102">ICorProfilerCallback::ExceptionSearchFilterLeave Method</span></span>
-<span data-ttu-id="386bd-103">사용자 필터를 방금 실행을 마친 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="386bd-103">Notifies the profiler that a user filter has just finished executing.</span></span>  
+# <a name="icorprofilercallbackexceptionsearchfilterleave-method"></a><span data-ttu-id="15b9c-102">ICorProfilerCallback::ExceptionSearchFilterLeave 메서드</span><span class="sxs-lookup"><span data-stu-id="15b9c-102">ICorProfilerCallback::ExceptionSearchFilterLeave Method</span></span>
+<span data-ttu-id="15b9c-103">사용자 필터를 방금 실행을 마친 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="15b9c-103">Notifies the profiler that a user filter has just finished executing.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="386bd-104">구문</span><span class="sxs-lookup"><span data-stu-id="386bd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="15b9c-104">구문</span><span class="sxs-lookup"><span data-stu-id="15b9c-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT ExceptionSearchFilterLeave();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="386bd-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="386bd-105">Requirements</span></span>  
- <span data-ttu-id="386bd-106">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="386bd-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="15b9c-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="15b9c-105">Requirements</span></span>  
+ <span data-ttu-id="15b9c-106">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="15b9c-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="386bd-107">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="386bd-107">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="15b9c-107">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="15b9c-107">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="386bd-108">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="386bd-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="15b9c-108">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="15b9c-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="386bd-109">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="386bd-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="15b9c-109">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="15b9c-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="386bd-110">참고자료</span><span class="sxs-lookup"><span data-stu-id="386bd-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="15b9c-110">참고자료</span><span class="sxs-lookup"><span data-stu-id="15b9c-110">See also</span></span>
 
-- [<span data-ttu-id="386bd-111">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="386bd-111">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="386bd-112">ExceptionSearchFilterEnter 메서드</span><span class="sxs-lookup"><span data-stu-id="386bd-112">ExceptionSearchFilterEnter Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterenter-method.md)
+- [<span data-ttu-id="15b9c-111">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="15b9c-111">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="15b9c-112">ExceptionSearchFilterEnter 메서드</span><span class="sxs-lookup"><span data-stu-id="15b9c-112">ExceptionSearchFilterEnter Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterenter-method.md)

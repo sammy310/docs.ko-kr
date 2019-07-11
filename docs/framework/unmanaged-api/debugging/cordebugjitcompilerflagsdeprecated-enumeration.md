@@ -16,39 +16,39 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f15a4557be0dc633fb9ecda5916896e340f00da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fd0def06defa677ddde798106c299ed909cd4ce1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599275"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739781"
 ---
-# <a name="cordebugjitcompilerflagsdeprecated-enumeration"></a><span data-ttu-id="73b3d-102">CorDebugJITCompilerFlagsDeprecated 열거형</span><span class="sxs-lookup"><span data-stu-id="73b3d-102">CorDebugJITCompilerFlagsDeprecated Enumeration</span></span>
-<span data-ttu-id="73b3d-103">이 열거형은 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="73b3d-103">This enumeration is obsolete.</span></span> <span data-ttu-id="73b3d-104">사용 합니다 `CORDEBUG_JIT_DEFAULT` 의 멤버는 [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) 열거형 대신 합니다.</span><span class="sxs-lookup"><span data-stu-id="73b3d-104">Use the `CORDEBUG_JIT_DEFAULT` member of the [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) enumeration instead.</span></span>  
+# <a name="cordebugjitcompilerflagsdeprecated-enumeration"></a><span data-ttu-id="4ea5e-102">CorDebugJITCompilerFlagsDeprecated 열거형</span><span class="sxs-lookup"><span data-stu-id="4ea5e-102">CorDebugJITCompilerFlagsDeprecated Enumeration</span></span>
+<span data-ttu-id="4ea5e-103">이 열거형은 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4ea5e-103">This enumeration is obsolete.</span></span> <span data-ttu-id="4ea5e-104">사용 합니다 `CORDEBUG_JIT_DEFAULT` 의 멤버는 [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) 열거형 대신 합니다.</span><span class="sxs-lookup"><span data-stu-id="4ea5e-104">Use the `CORDEBUG_JIT_DEFAULT` member of the [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) enumeration instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="73b3d-105">구문</span><span class="sxs-lookup"><span data-stu-id="73b3d-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4ea5e-105">구문</span><span class="sxs-lookup"><span data-stu-id="4ea5e-105">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum CorDebugJITCompilerFlagsDeprecated {  
     CORDEBUG_JIT_TRACK_DEBUG_INFO  = 0x1  
 } CorDebugJITCompilerFlagsDeprecated;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="73b3d-106">멤버</span><span class="sxs-lookup"><span data-stu-id="73b3d-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="4ea5e-106">멤버</span><span class="sxs-lookup"><span data-stu-id="4ea5e-106">Members</span></span>  
   
-|<span data-ttu-id="73b3d-107">멤버</span><span class="sxs-lookup"><span data-stu-id="73b3d-107">Member</span></span>|<span data-ttu-id="73b3d-108">설명</span><span class="sxs-lookup"><span data-stu-id="73b3d-108">Description</span></span>|  
+|<span data-ttu-id="4ea5e-107">멤버</span><span class="sxs-lookup"><span data-stu-id="4ea5e-107">Member</span></span>|<span data-ttu-id="4ea5e-108">Description</span><span class="sxs-lookup"><span data-stu-id="4ea5e-108">Description</span></span>|  
 |------------|-----------------|  
-|`CORDEBUG_JIT_TRACK_DEBUG_INFO`|<span data-ttu-id="73b3d-109">대신 `CORDEBUG_JIT_DEFAULT`를 사용하세요.</span><span class="sxs-lookup"><span data-stu-id="73b3d-109">Use `CORDEBUG_JIT_DEFAULT` instead.</span></span>|  
+|`CORDEBUG_JIT_TRACK_DEBUG_INFO`|<span data-ttu-id="4ea5e-109">대신 `CORDEBUG_JIT_DEFAULT`를 사용하세요.</span><span class="sxs-lookup"><span data-stu-id="4ea5e-109">Use `CORDEBUG_JIT_DEFAULT` instead.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="73b3d-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="73b3d-110">Requirements</span></span>  
- <span data-ttu-id="73b3d-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="73b3d-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4ea5e-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4ea5e-110">Requirements</span></span>  
+ <span data-ttu-id="4ea5e-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="4ea5e-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="73b3d-112">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="73b3d-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4ea5e-112">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4ea5e-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="73b3d-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="73b3d-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4ea5e-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4ea5e-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="73b3d-114">**.NET framework 버전:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="73b3d-114">**.NET Framework Versions:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="4ea5e-114">**.NET framework 버전:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="4ea5e-114">**.NET Framework Versions:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="73b3d-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="73b3d-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4ea5e-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="4ea5e-115">See also</span></span>
 
-- [<span data-ttu-id="73b3d-116">디버깅 열거형</span><span class="sxs-lookup"><span data-stu-id="73b3d-116">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="4ea5e-116">디버깅 열거형</span><span class="sxs-lookup"><span data-stu-id="4ea5e-116">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

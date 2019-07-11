@@ -17,45 +17,45 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b3eb8bf59ee2a91c62a6ff74b1903d92607a9ffe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 629a4850d47940633c8c69a7e464cfae315b3c56
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995153"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761252"
 ---
-# <a name="icordebugmanagedcallbackunloadclass-method"></a><span data-ttu-id="6e115-102">ICorDebugManagedCallback::UnloadClass 메서드</span><span class="sxs-lookup"><span data-stu-id="6e115-102">ICorDebugManagedCallback::UnloadClass Method</span></span>
-<span data-ttu-id="6e115-103">클래스를 언로드되고 있음을 디버거에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="6e115-103">Notifies the debugger that a class is being unloaded.</span></span>  
+# <a name="icordebugmanagedcallbackunloadclass-method"></a><span data-ttu-id="06db0-102">ICorDebugManagedCallback::UnloadClass 메서드</span><span class="sxs-lookup"><span data-stu-id="06db0-102">ICorDebugManagedCallback::UnloadClass Method</span></span>
+<span data-ttu-id="06db0-103">클래스를 언로드되고 있음을 디버거에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="06db0-103">Notifies the debugger that a class is being unloaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6e115-104">구문</span><span class="sxs-lookup"><span data-stu-id="6e115-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="06db0-104">구문</span><span class="sxs-lookup"><span data-stu-id="06db0-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT UnloadClass (  
     [in] ICorDebugAppDomain  *pAppDomain,  
     [in] ICorDebugClass      *c  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6e115-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="6e115-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="06db0-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="06db0-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="6e115-106">[in] 클래스를 포함 하는 응용 프로그램 도메인을 나타내는 ICorDebugAppDomain 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="6e115-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the class.</span></span>  
+ <span data-ttu-id="06db0-106">[in] 클래스를 포함 하는 응용 프로그램 도메인을 나타내는 ICorDebugAppDomain 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="06db0-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the class.</span></span>  
   
  `c`  
- <span data-ttu-id="6e115-107">[in] 클래스를 나타내는 ICorDebugClass 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="6e115-107">[in] A pointer to an ICorDebugClass object that represents the class.</span></span>  
+ <span data-ttu-id="06db0-107">[in] 클래스를 나타내는 ICorDebugClass 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="06db0-107">[in] A pointer to an ICorDebugClass object that represents the class.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6e115-108">설명</span><span class="sxs-lookup"><span data-stu-id="6e115-108">Remarks</span></span>  
- <span data-ttu-id="6e115-109">이 호출 후에 클래스를 참조할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="6e115-109">The class should not be referenced after this call.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="06db0-108">설명</span><span class="sxs-lookup"><span data-stu-id="06db0-108">Remarks</span></span>  
+ <span data-ttu-id="06db0-109">이 호출 후에 클래스를 참조할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="06db0-109">The class should not be referenced after this call.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6e115-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="6e115-110">Requirements</span></span>  
- <span data-ttu-id="6e115-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="6e115-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="06db0-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="06db0-110">Requirements</span></span>  
+ <span data-ttu-id="06db0-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="06db0-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6e115-112">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6e115-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="06db0-112">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="06db0-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6e115-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6e115-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="06db0-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="06db0-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6e115-114">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6e115-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="06db0-114">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="06db0-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6e115-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="6e115-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="06db0-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="06db0-115">See also</span></span>
 
-- [<span data-ttu-id="6e115-116">LoadClass 메서드</span><span class="sxs-lookup"><span data-stu-id="6e115-116">LoadClass Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md)
-- [<span data-ttu-id="6e115-117">ICorDebugManagedCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="6e115-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="06db0-116">LoadClass 메서드</span><span class="sxs-lookup"><span data-stu-id="06db0-116">LoadClass Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md)
+- [<span data-ttu-id="06db0-117">ICorDebugManagedCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="06db0-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
