@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfb1cff3e95c5ff86d22913745b7d14982766b48
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: caf76fa7962de9392b06591777ac862aa548d20d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968607"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779547"
 ---
 # <a name="hosttype-enumeration"></a>HOST_TYPE 열거형
 응용 프로그램을 시작 하는 호스트의 형식을 지정 하는 값을 포함 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum {  
     HOST_TYPE_DEFAULT     = 0x0,  
     HOST_TYPE_APPLAUNCH   = 0x1,  
@@ -38,7 +38,7 @@ typedef enum {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`HOST_TYPE_APPLAUNCH`|AppLaunch.exe에서 응용 프로그램을 시작 합니다.<br /><br /> 부분적으로 신뢰할 수 있는 응용 프로그램에 대 한이 값을 사용 합니다.|  
 |`HOST_TYPE_CORFLAG`|응용 프로그램을 직접 시작 합니다. 즉, 자체의.exe 파일에서 응용 프로그램을 시작 합니다.<br /><br /> 완전히 신뢰할 수 있는 응용 프로그램에 대 한이 값을 사용 합니다.|  

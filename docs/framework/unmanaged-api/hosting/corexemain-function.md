@@ -19,19 +19,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7407db297a827004c851b904b2da8652778cb08
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f97e90e3953a01f07d77e604628fbdb79eb9efa0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756418"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779169"
 ---
 # <a name="corexemain-function"></a>_CorExeMain 함수
 CLR (공용 언어 런타임)을 초기화 하 고 실행 가능한 어셈블리의 CLR 헤더에서 관리 되는 진입점을 찾습니다 실행을 시작 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 __int32 STDMETHODCALLTYPE _CorExeMain ();  
 ```  
   

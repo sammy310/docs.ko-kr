@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 07a4998f86958e21fffc8ba8657ec9f2a170f43e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a9e438e6dd436303cd6f7aa60c779179b5d3c04
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984661"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779666"
 ---
 # <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a>ICLRHostBindingPolicyManager::ModifyApplicationPolicy 메서드
 지정된 된 어셈블리에 대 한 바인딩 정책 수정 하 고 정책의 새 버전을 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT  ModifyApplicationPolicy (  
     [in] LPCWSTR     pwzSourceAssemblyIdentity,   
     [in] LPCWSTR     pwzTargetAssemblyIdentity,  
@@ -65,7 +65,7 @@ HRESULT  ModifyApplicationPolicy (
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|설명|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|정책을 수정 했습니다.|  
 |E_INVALIDARG|`pwzSourceAssemblyIdentity` 또는 `pwzTargetAssemblyIdentity` null 참조 되었습니다.|  

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be2dfd6bb521dee14afd3728bdd9c446cb779e85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 206d6448835b60c55b378636ff5daa5fa4f8b5d0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598846"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782591"
 ---
 # <a name="qualifiersetendenumeration-function"></a>QualifierSet_EndEnumeration 함수
 에 대 한 호출으로 시작 하는 열거형을 종료 합니다 [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) 함수입니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "61598846"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT QualifierSet_EndEnumeration (
    [in] int                  vFunc, 
    [in] IWbemQualifierSet*   ptr

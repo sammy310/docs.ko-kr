@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 148ca261e717b9a54192a13c317fe385b98f4ccd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85c0cc3880e4fc78d4badea329d62a6fced2a977
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651158"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781937"
 ---
 # <a name="corprfexclauseinfo-structure"></a>COR_PRF_EX_CLAUSE_INFO 구조체
 특정 예외 절 인스턴스 및 관련 프레임에 대한 정보를 저장합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef struct COR_PRF_EX_CLAUSE_INFO {  
     COR_PRF_CLAUSE_TYPE clauseType;  
     UINT_PTR programCounter;  
@@ -39,7 +39,7 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`clauseType`|값을 [COR_PRF_CLAUSE_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-clause-type-enumeration.md) 예외 절 방금 입력 한 코드 왼쪽의 형식을 지정 하는 열거형입니다.|  
 |`programCounter`|절 처리기의 네이티브 진입점-X86 EIP 레지스터의 내용을 예를 들어 있습니다.|  

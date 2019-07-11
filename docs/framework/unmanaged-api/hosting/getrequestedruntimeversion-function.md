@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbc77195c3fe2581475d768b59993de274ac06a6
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 4083440903e6147ae645f2d6420f19160471841c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490332"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779578"
 ---
 # <a name="getrequestedruntimeversion-function"></a>GetRequestedRuntimeVersion 함수
 지정된 된 응용 프로그램에서 요청한 공용 언어 런타임 (CLR)의 버전 번호를 가져옵니다. 해당 버전이 설치 되지 않은 경우 요청 된 버전 보다 먼저 설치 되는 최신 버전을 가져옵니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "66490332"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetRequestedRuntimeVersion (  
     [in]  LPWSTR  pExe,   
     [out] LPWSTR  pVersion,   
@@ -56,7 +56,7 @@ HRESULT GetRequestedRuntimeVersion (
 ## <a name="return-value"></a>반환 값  
  이 메서드는 다음 값 외에도 WinError.h에 정의 된 대로 표준 구성 요소 개체 모델 (COM) 오류 코드를 반환 합니다.  
   
-|반환 코드|설명|  
+|반환 코드|Description|  
 |-----------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
 |ERROR_INSUFFICIENT_BUFFER|버전 버퍼의 버전 문자열을 저장할 만큼 크지 않습니다.|  

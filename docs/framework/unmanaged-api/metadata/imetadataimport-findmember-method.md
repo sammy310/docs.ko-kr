@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63afd82ca88e1a7c61913ec7fcc4d77d03ae9927
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: caec760cea52cb14d3fdb5d4cf0b59adcae5633b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777938"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782513"
 ---
 # <a name="imetadataimportfindmember-method"></a>IMetaDataImport::FindMember 메서드
 토큰을 가져옵니다 memberdef 묶여 있는 메서드나 필드에 대 한 지정 된 <xref:System.Type> 지정 된 이름 및 메타 데이터 서명을 하 고 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT FindMember (  
    [in]  mdTypeDef         td,  
    [in]  LPCWSTR           szName,   

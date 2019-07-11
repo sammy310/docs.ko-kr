@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69897a7b646eb9f58e6b38588e302287b4241779
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0b0a190ce57091434006421e6d8551c78cbe66b8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043682"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777176"
 ---
 # <a name="imetadataemit2getdeltasavesize-method"></a>IMetaDataEmit2::GetDeltaSaveSize 메서드
 편집 하며 계속 하기는 현재 세션에서 발생 하는 메타 데이터 크기의 변화를 나타내는 값을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetDeltaSaveSize (  
     [in]  CorSaveSize  fSave,  
     [out] DWORD        *pdwSaveSize  

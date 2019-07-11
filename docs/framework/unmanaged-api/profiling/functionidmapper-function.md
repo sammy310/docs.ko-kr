@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2de19252b5c978fef38124636e4098ae5ece1b0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b9dee1404a8da63208bba7b7529b16eabbee3254
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599028"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745769"
 ---
 # <a name="functionidmapper-function"></a>FunctionIDMapper 함수
 함수는 지정 된 식별자에 사용할 대체 ID를 다시 매핑할 수는 프로파일러에 알립니다. 합니다 [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)를 [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), 및 [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) 함수에 대 한 콜백 합니다. `FunctionIDMapper`를 통해 프로파일러는 해당 함수에 대한 콜백을 받을지 여부를 나타낼 수도 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 UINT_PTR __stdcall FunctionIDMapper (  
     [in]  FunctionID  funcId,   
     [out] BOOL       *pbHookFunction  

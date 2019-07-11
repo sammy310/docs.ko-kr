@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: faf1be65d308b223490f3ae67eed3d8a2b1688b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eef2d75a2c8a3445c7f8666fec5be9e4d089e3cb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609366"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740523"
 ---
 # <a name="corsegment-structure"></a>COR_SEGMENT 구조체
 관리되는 힙의 메모리 영역에 대한 정보를 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef struct _COR_SEGMENT {  
     CORDB_ADDRESS start;            
     CORDB_ADDRESS end;              
@@ -39,7 +39,7 @@ typedef struct _COR_SEGMENT {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`start`|메모리 영역의 시작 주소입니다.|  
 |`end`|메모리 영역의 끝 주소입니다.|  

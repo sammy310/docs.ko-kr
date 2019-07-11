@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8ba8a762c56a666c67b25b9ce0420099fce419a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 057bae1d702fa091ebc3d3178c9fba35d5dd3d90
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62044163"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777649"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField 메서드
 지정 된 메타 데이터 서명을 사용 하 여 필드에 대 한 정의 만들고 해당 필드 정의 하는 토큰을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT DefineField (   
     [in]  mdTypeDef   td,   
     [in]  LPCWSTR     szName,   

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b5520aef09c72819ff2b3763cd43af13f013263c
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 4a0cac77d7bf7611acf6042298bfe6814d8f4352
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490214"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768444"
 ---
 # <a name="loadstringrcex-function"></a>LoadStringRCEx 함수
 지정된 된 문화권에 대 한 적절 한 오류 메시지에는 HRESULT 값으로 변환합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "66490214"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT LoadStringRCEx (  
     [in]  LCID    lcid,   
     [in]  UINT    iResouceID,   
@@ -63,7 +63,7 @@ HRESULT LoadStringRCEx (
 ## <a name="return-value"></a>반환 값  
  이 메서드는 다음 값 외에도 WinError.h에 정의 된 대로 표준 COM 오류 코드를 반환 합니다.  
   
-|반환 코드|설명|  
+|반환 코드|Description|  
 |-----------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
 |E_INVALIDARG|`szBuffer` 이 null 또는 `iMax` 은 영 (0).|  

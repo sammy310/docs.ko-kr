@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95c84f7f40db0096b26ec448f8f229cdbfe3afb1
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 6ef8d1c47275d3cbd69c1516b788b950f8535513
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025897"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737722"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypesforiids-method"></a>ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs 메서드
 해당 인터페이스 식별자에 따라 응용 프로그램 도메인에서 캐시 된 Windows 런타임 형식에 대 한 열거자를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetCachedWinRTTypesForIIDs (   
     [in]  ULONG32            cReqTypes,  
     [in]  GUID                *iidsToResolve,  

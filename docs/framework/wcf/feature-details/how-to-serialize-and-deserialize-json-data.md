@@ -2,12 +2,12 @@
 title: '방법: JSON 데이터 직렬화 및 역직렬화'
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-ms.openlocfilehash: 7edce66a23021fa03a6f98b3b847a5b671c17124
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c56b298737dc9b9902f13c586edffb3d05257f8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972993"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783004"
 ---
 # <a name="how-to-serialize-and-deserialize-json-data"></a>방법: JSON 데이터 serialize 및 deserialize
 JSON(JavaScript Object Notation)은 클라이언트 브라우저 및 AJAX 사용 웹 서비스 간에 소량의 데이터를 신속하게 교환할 수 있는 효율적인 데이터 인코딩 형식입니다.  
@@ -42,7 +42,7 @@ JSON(JavaScript Object Notation)은 클라이언트 브라우저 및 AJAX 사용
 1. `Person` 형식의 인스턴스를 만듭니다.  
   
     ```csharp  
-    Person p = new Person();  
+    var p = new Person();  
     p.name = "John";  
     p.age = 42;  
     ```  
@@ -50,8 +50,8 @@ JSON(JavaScript Object Notation)은 클라이언트 브라우저 및 AJAX 사용
 2. Serialize 된 `Person` 개체를 사용 하 여 메모리 스트림으로 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>합니다.  
   
     ```csharp  
-    MemoryStream stream1 = new MemoryStream();  
-    DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Person));  
+    var stream1 = new MemoryStream();  
+    var ser = new DataContractJsonSerializer(typeof(Person));  
     ```  
   
 3. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> 메서드를 사용하여 JSON 데이터를 스트림에 씁니다.  
@@ -64,7 +64,7 @@ JSON(JavaScript Object Notation)은 클라이언트 브라우저 및 AJAX 사용
   
     ```csharp  
     stream1.Position = 0;  
-    StreamReader sr = new StreamReader(stream1);  
+    var sr = new StreamReader(stream1);  
     Console.Write("JSON form of Person object: ");  
     Console.WriteLine(sr.ReadToEnd());  
     ```  
@@ -75,7 +75,7 @@ JSON(JavaScript Object Notation)은 클라이언트 브라우저 및 AJAX 사용
   
     ```csharp  
     stream1.Position = 0;  
-    Person p2 = (Person)ser.ReadObject(stream1);  
+    var p2 = (Person)ser.ReadObject(stream1);  
     ```  
   
 2. 결과를 표시합니다.  
@@ -90,14 +90,14 @@ JSON(JavaScript Object Notation)은 클라이언트 브라우저 및 AJAX 사용
 // Create a User object and serialize it to a JSON stream.  
 public static string WriteFromObject()  
 {  
-    //Create User object.  
-    User user = new User("Bob", 42);  
+    // Create User object.  
+    var user = new User("Bob", 42);  
   
-    //Create a stream to serialize the object to.  
-    MemoryStream ms = new MemoryStream();  
+    // Create a stream to serialize the object to.  
+    var ms = new MemoryStream();  
   
     // Serializer the User object to the stream.  
-    DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(User));  
+    var ser = new DataContractJsonSerializer(typeof(User));  
     ser.WriteObject(ms, user);  
     byte[] json = ms.ToArray();  
     ms.Close();  
@@ -107,9 +107,9 @@ public static string WriteFromObject()
 // Deserialize a JSON stream to a User object.  
 public static User ReadToObject(string json)  
 {  
-    User deserializedUser = new User();  
-    MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(json));  
-    DataContractJsonSerializer ser = new DataContractJsonSerializer(deserializedUser.GetType());  
+    var deserializedUser = new User();  
+    var ms = new MemoryStream(Encoding.UTF8.GetBytes(json));  
+    var ser = new DataContractJsonSerializer(deserializedUser.GetType());  
     deserializedUser = ser.ReadObject(ms) as User;  
     ms.Close();  
     return deserializedUser;  

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c54b2af6e7a200db89bfd7335868a629d7a886fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 76fbbb3f924f610b604586dca78cab344217b544
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61724111"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739457"
 ---
 # <a name="cordebuguserstate-enumeration"></a>CorDebugUserState 열거형
 스레드의 사용자 상태를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorDebugUserState {  
     USER_STOP_REQUESTED     =  0x01,  
     USER_SUSPEND_REQUESTED  =  0x02,  
@@ -44,7 +44,7 @@ typedef enum CorDebugUserState {
   
 ## <a name="members"></a>멤버  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |`USER_STOP_REQUESTED`|스레드 종료를 요청 했습니다.|  
 |`USER_SUSPEND_REQUESTED`|스레드 일시 중단을 요청 했습니다.|  

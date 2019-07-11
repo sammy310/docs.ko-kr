@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 432e202eb8db105e8d56d3d36cdc8001bac5320c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e909680428c7957da2283d13f5676329d953bf22
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045944"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781886"
 ---
 # <a name="corfieldattr-enumeration"></a>CorFieldAttr 열거형
 필드에 대한 메타데이터를 설명하는 값을 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorFieldAttr {  
   
     fdFieldAccessMask           =   0x0007,  
@@ -60,7 +60,7 @@ typedef enum CorFieldAttr {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`fdFieldAccessMask`|내게 필요한 옵션 정보를 지정합니다.|  
 |`fdPrivateScope`|필드는 참조할 수 없음을 지정 합니다.|  

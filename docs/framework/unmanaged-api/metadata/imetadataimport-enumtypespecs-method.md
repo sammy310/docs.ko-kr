@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 01151dc2fe6aa995285a34076527609816b2f3e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 81592b6da7fa7cdf275e9fa5b4b82ef0a15061c0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753623"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782563"
 ---
 # <a name="imetadataimportenumtypespecs-method"></a>IMetaDataImport::EnumTypeSpecs 메서드
 현재 메타데이터 범위에서 정의된 TypeSpec 토큰을 열거합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT EnumTypeSpecs (  
    [in, out] HCORENUM    *phEnum,  
    [out] mdTypeSpec      rTypeSpecs[],  
@@ -53,7 +53,7 @@ HRESULT EnumTypeSpecs (
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|설명|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |`S_OK`|`EnumTypeSpecs` 성공적으로 반환 합니다.|  
 |`S_FALSE`|열거할 토큰이 있습니다. 이런 경우 `pcTypeSpecs` 0입니다.|  

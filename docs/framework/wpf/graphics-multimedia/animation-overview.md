@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: 63353f670528cd52f3e2927426ae715432422504
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 5c776942bced836437fdcb8aaf30faef48e3aaff
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663862"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780154"
 ---
 # <a name="animation-overview"></a>애니메이션 개요
 
@@ -79,7 +79,7 @@ ms.locfileid: "67663862"
 
 <a name="opacity_animation_step1"></a>
 
-### <a name="part-1-create-a-doubleanimation"></a>1부: DoubleAnimation 만들기
+### <a name="part-1-create-a-doubleanimation"></a>1단계: DoubleAnimation 만들기
 
 애니메이션 효과를 주는 페이드 보기 내부 및 외부 요소를 한 가지 방법은 해당 <xref:System.Windows.UIElement.Opacity%2A> 속성입니다. 때문에 합니다 <xref:System.Windows.UIElement.Opacity%2A> 형식의 속성이 <xref:System.Double>를 double 값을 생성 하는 애니메이션이 필요 합니다. <xref:System.Windows.Media.Animation.DoubleAnimation> 이러한 애니메이션 중 하나는 합니다. <xref:System.Windows.Media.Animation.DoubleAnimation> 두 개의 double 값 사이 전환을 만듭니다. 설정한 해당 시작 값을 지정 하려면 해당 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 속성입니다. 설정한 끝 값을 지정 하려면 해당 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 속성입니다.
 
@@ -242,7 +242,7 @@ ms.locfileid: "67663862"
 
 모든 애니메이션 형식은에서 상속 된 <xref:System.Windows.Media.Animation.Timeline> 클래스; 따라서 모든 애니메이션은 특수 한 유형의 타임 라인입니다. <xref:System.Windows.Media.Animation.Timeline> 시간의 세그먼트를 정의 합니다. 지정할 수 있습니다 합니다 *타이밍 동작* 타임 라인의: 해당 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, 몇 번 반복 되며도 시간 진행 속도 대 한 것입니다.
 
-애니메이션은을 <xref:System.Windows.Media.Animation.Timeline>, 시간 세그먼트를 나타냅니다. 애니메이션 출력 값을 계산 되면서 하지만 해당 지정된 시간 세그먼트 (또는 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>). 애니메이션은 진행되거나 "재생"되면서 연결된 속성을 업데이트합니다.
+애니메이션은을 <xref:System.Windows.Media.Animation.Timeline>, 시간 세그먼트를 나타냅니다. 애니메이션 출력 값을 계산 해당 지정된 시간 세그먼트를 통해 진행 되는 동안 (또는 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>). 애니메이션은 진행되거나 "재생"되면서 연결된 속성을 업데이트합니다.
 
 세 가지 자주 사용 되는 타이밍 속성은 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>하십시오 <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>, 및 <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>합니다.
 
@@ -321,7 +321,7 @@ Storyboard를 시작 하려면 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla
 [!code-csharp[animation_ovws_procedural_snip#FillBehaviorExampleRectangleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_procedural_snip/CSharp/FillBehaviorExample.cs#fillbehaviorexamplerectangleinline)]
 [!code-vb[animation_ovws_procedural_snip#FillBehaviorExampleRectangleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws_procedural_snip/visualbasic/fillbehaviorexample.vb#fillbehaviorexamplerectangleinline)]
 
-때문에 해당 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 는 해당 기본값에서 변경 되지 않았습니다 <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, 애니메이션 보유 한 최종 값을 0으로 종료 될 때입니다. 따라서는 <xref:System.Windows.UIElement.Opacity%2A> 애니메이션 후 0으로 사각형 유지의 종료 합니다. 설정 하는 경우는 <xref:System.Windows.UIElement.Opacity%2A> 사각형을 다른 값의 코드가 아무런 효과가 없으며, 애니메이션에 여전히 영향 때문에 <xref:System.Windows.UIElement.Opacity%2A> 속성입니다.
+때문에 해당 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 는 해당 기본값에서 변경 되지 않았습니다 <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, 애니메이션이 종료 될 때 해당 최종 값인 0을 포함 합니다. 따라서는 <xref:System.Windows.UIElement.Opacity%2A> 애니메이션 후 0으로 사각형 유지의 종료 합니다. 설정 하는 경우는 <xref:System.Windows.UIElement.Opacity%2A> 사각형을 다른 값의 코드가 아무런 효과가 없으며, 애니메이션에 여전히 영향 때문에 <xref:System.Windows.UIElement.Opacity%2A> 속성입니다.
 
 다시 코드에서 애니메이션된 속성을 제어 하는 방법을 사용 하는 것은 <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> 메서드 null을 지정 하는 <xref:System.Windows.Media.Animation.AnimationTimeline> 매개 변수입니다. 자세한 내용 및 예제를 참조 하세요 [속성 설정 후 애니메이션 스토리 보드를 사용 하 여](how-to-set-a-property-after-animating-it-with-a-storyboard.md)입니다.
 
@@ -372,7 +372,7 @@ Storyboard를 시작 하려면 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla
 |[애니메이션 및 타이밍 시스템 개요](animation-and-timing-system-overview.md)|타이밍 시스템을 사용 하는 방법에 대해 설명 합니다 <xref:System.Windows.Media.Animation.Timeline> 및 <xref:System.Windows.Media.Animation.Clock> 클래스가 애니메이션을 만들 수 있습니다.|
 |[애니메이션에 대한 유용한 정보](animation-tips-and-tricks.md)|성능 같은 애니메이션 문제 해결에 도움이 되는 유용한 정보를 나열합니다.|
 |[사용자 지정 애니메이션 개요](custom-animations-overview.md)|키 프레임, 애니메이션 클래스 또는 프레임당 콜백으로 애니메이션 시스템을 확장하는 방법을 설명합니다.|
-|From/To/By 애니메이션 개요|두 값 사이를 전환하는 애니메이션을 만드는 방법을 설명합니다.|
+|[From/To/By 애니메이션 개요](from-to-by-animations-overview.md)|두 값 사이를 전환하는 애니메이션을 만드는 방법을 설명합니다.|
 |[키 프레임 애니메이션 개요](key-frame-animations-overview.md)|보간 방법을 제어하는 기능을 포함하여 여러 대상 값을 사용하여 애니메이션을 만드는 방법을 설명합니다.|
 |[감속/가속 함수](easing-functions.md)|반송 같은 실질적인 동작을 얻기 위해 애니메이션에 수학 수식을 적용하는 방법을 설명합니다.|
 |[경로 애니메이션 개요](path-animations-overview.md)|복잡한 경로를 따라 개체를 이동하거나 회전하는 방법을 설명합니다.|

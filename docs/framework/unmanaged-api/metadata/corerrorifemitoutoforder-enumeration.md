@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 628ca1b555d80319312450d784981cfed1bda947
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16f6d7bf6fa1730d50cfe81526817e492a453dad
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045996"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781980"
 ---
 # <a name="corerrorifemitoutoforder-enumeration"></a>CorErrorIfEmitOutOfOrder 열거형
 메타데이터를 내보내는 순서가 잘못되었을 때 오류 메시지가 생성되어야 하는 조건을 나타내는 플래그 값을 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorErrorIfEmitOutOfOrder {  
   
     MDErrorOutOfOrderDefault    = 0x00000000,  
@@ -45,7 +45,7 @@ typedef enum CorErrorIfEmitOutOfOrder {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`MDErrorOutOfOrderDefault`|오류 메시지를 생성 하지 않는 기본 동작을 나타냅니다.|  
 |`MDErrorOutOfOrderNone`|컴파일러 오류 메시지를 생성 하지 해야 함을 나타냅니다.|  

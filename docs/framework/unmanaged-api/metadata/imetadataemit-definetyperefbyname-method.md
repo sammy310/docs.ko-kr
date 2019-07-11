@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 82d81be7a9e0843dfe382767de582f93371acb4c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f005ee9d3d9d4b8977cd6a1838fe46015e604df5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584486"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777474"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>IMetaDataEmit::DefineTypeRefByName 메서드
 현재 범위 외부에 지정된 된 범위에 정의 된 형식에 대 한 메타 데이터를 토큰을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT DefineTypeRefByName (   
     [in]  mdToken     tkResolutionScope,   
     [in]  LPCWSTR     szName,   

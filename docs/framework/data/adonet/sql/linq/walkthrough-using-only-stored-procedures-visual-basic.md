@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 22db347afb45b981602d5a92516271f75b8e4359
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 270b0f2123a20787a8e75d40f56a675c55824243
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648675"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742549"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>연습: 저장 프로시저만 사용(Visual Basic)
 이 연습에서는 저장 프로시저만 사용하여 데이터에 액세스하기 위한 기본 종단 간 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 시나리오를 제공합니다. 일반적으로 데이터베이스 관리자는 데이터 저장소에 액세스하는 방법을 제한하기 위해 이 방법을 사용합니다.  
@@ -19,7 +19,7 @@ ms.locfileid: "64648675"
   
  이 연습에서는 Northwind 샘플 데이터베이스의 저장된 프로시저에 매핑된 두 개의 메서드 사용: CustOrdersDetail 및 CustOrderHist 합니다. Visual Basic 파일을 생성 하려면 SqlMetal 명령줄 도구를 실행 하는 경우 매핑이 발생 합니다. 자세한 내용은 이 연습 뒷부분의 사전 요구 사항 단원을 참조하세요.  
   
- 이 연습에서는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]에 의존하지 않습니다. 개발자가 Visual Studio를 사용 하 여 사용할 수도 있습니다는 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] 저장된 프로시저 기능을 구현 합니다. 참조 [LINQ to SQL 도구 Visual Studio에서](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)합니다.  
+ 이 연습에서는 Object Relational Designer에 의존 하지 않습니다. 개발자가 Visual Studio를 사용 하 여 저장된 프로시저 기능을 구현 하는 O/R 디자이너를 이용할 수 있습니다. 참조 [LINQ to SQL 도구 Visual Studio에서](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)합니다.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -60,7 +60,7 @@ ms.locfileid: "64648675"
 ## <a name="creating-a-linq-to-sql-solution"></a>LINQ to SQL 솔루션 만들기  
  빌드 및 실행에 필요한 참조를 포함 하는 Visual Studio 솔루션을 만든이 첫 번째 태스크는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 프로젝트입니다.  
   
-#### <a name="to-create-a-linq-to-sql-solution"></a>LINQ to SQL 솔루션을 만들려면  
+### <a name="to-create-a-linq-to-sql-solution"></a>LINQ to SQL 솔루션을 만들려면  
   
 1. Visual Studio의 **파일** 메뉴에서 **새 프로젝트**를 클릭합니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "64648675"
 ## <a name="adding-the-linq-to-sql-assembly-reference"></a>LINQ to SQL 어셈블리 참조 추가  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 어셈블리는 표준 Windows Forms 응용 프로그램 템플릿에 포함되어 있지 않습니다. 다음 단계에 설명된 대로 이 어셈블리를 직접 추가해야 합니다.  
   
-#### <a name="to-add-systemdatalinqdll"></a>System.Data.Linq.dll을 추가하려면  
+### <a name="to-add-systemdatalinqdll"></a>System.Data.Linq.dll을 추가하려면  
   
 1. **솔루션 탐색기**, 클릭 **모든 파일 표시**합니다.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "64648675"
 ## <a name="adding-the-northwind-code-file-to-the-project"></a>Northwind 코드 파일을 프로젝트에 추가  
  이 단계에서는 SqlMetal 도구를 사용하여 Northwind 샘플 데이터베이스에서 코드 파일을 생성했다고 가정합니다. 자세한 내용은 이 연습 앞부분의 사전 요구 사항 단원을 참조하세요.  
   
-#### <a name="to-add-the-northwind-code-file-to-the-project"></a>northwind 코드 파일을 프로젝트에 추가하려면  
+### <a name="to-add-the-northwind-code-file-to-the-project"></a>northwind 코드 파일을 프로젝트에 추가하려면  
   
 1. **프로젝트** 메뉴에서 **기존 항목 추가**를 클릭합니다.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "64648675"
 ## <a name="creating-a-database-connection"></a>데이터베이스 연결 만들기  
  이 단계에서는 Northwind 샘플 데이터베이스에 대한 연결을 정의합니다. "c:\linqtest3\northwnd.mdf"가 이 연습에서 경로로 사용됩니다.  
   
-#### <a name="to-create-the-database-connection"></a>데이터베이스 연결을 만들려면  
+### <a name="to-create-the-database-connection"></a>데이터베이스 연결을 만들려면  
   
 1. **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 **Form1.vb**를 클릭 하 고 **코드 보기**합니다.  
   
@@ -114,9 +114,9 @@ ms.locfileid: "64648675"
 ## <a name="setting-up-the-user-interface"></a>사용자 인터페이스 설정  
  이 작업에서는 사용자가 저장 프로시저를 실행하여 데이터베이스의 데이터에 액세스할 수 있도록 인터페이스를 만듭니다. 이 연습을 사용하여 개발하는 응용 프로그램에서 사용자는 응용 프로그램에 포함된 저장 프로시저를 통해서만 데이터베이스의 데이터에 액세스할 수 있습니다.  
   
-#### <a name="to-set-up-the-user-interface"></a>사용자 인터페이스를 설정하려면  
+### <a name="to-set-up-the-user-interface"></a>사용자 인터페이스를 설정하려면  
   
-1. 반환 하는 Windows Forms 디자이너 (**Form1.vb[Design]**).  
+1. 반환 하는 Windows Forms 디자이너 (**Form1.vb[Design]** ).  
   
 2. **보기** 메뉴에서 **도구 상자**를 클릭합니다.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "64648675"
   
 5. 변경 된 **텍스트** 속성을 **Label1** 에 **Enter OrderID:** 합니다.  
   
-6. 에 대 한 동일한 방식으로 **Label2**를 변경 합니다 **텍스트** 속성을 **Label2** 를 **Enter CustomerID:**.  
+6. 에 대 한 동일한 방식으로 **Label2**를 변경 합니다 **텍스트** 속성을 **Label2** 를 **Enter CustomerID:** .  
   
 7. 같은 방법으로 변경 합니다 **텍스트** 속성에 대 한 **Button1** 에 **Order Details**합니다.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "64648675"
   
      모든 텍스트를 볼 수 있도록 단추 컨트롤을 넓힙니다.  
   
-#### <a name="to-handle-button-clicks"></a>단추 클릭을 처리하려면  
+### <a name="to-handle-button-clicks"></a>단추 클릭을 처리하려면  
   
 1. 두 번 클릭 **Order Details** 에 **Form1** 만들려는 `Button1` 이벤트 처리기 및 코드 편집기를 엽니다.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "64648675"
 ## <a name="testing-the-application"></a>애플리케이션 테스트  
  이제 응용 프로그램을 테스트할 차례입니다. 데이터 저장소와의 연결은 두 개의 저장 프로시저가 수행할 수 있는 작업으로 제한됩니다. 이러한 작업은 입력한 orderID에 대한 포함된 제품을 반환하거나 입력한 CustomerID에 대한 주문된 제품의 기록을 반환하는 것입니다.  
   
-#### <a name="to-test-the-application"></a>애플리케이션을 테스트하려면  
+### <a name="to-test-the-application"></a>애플리케이션을 테스트하려면  
   
 1. F5 키를 눌러 디버깅을 시작합니다.  
   

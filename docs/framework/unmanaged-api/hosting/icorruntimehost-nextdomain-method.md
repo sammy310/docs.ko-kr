@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c3ff0c91713a6bb7449791bae6a754c43659335
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf19d322d8e4d0d05993d22b2aa7e46bda7b5a1d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700169"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780070"
 ---
 # <a name="icorruntimehostnextdomain-method"></a>ICorRuntimeHost::NextDomain 메서드
 열거형에서 다음 도메인에 대 한 인터페이스 포인터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT NextDomain (  
     [in] HCORENUM hEnum,  
     [out] void** pAppDomain  
@@ -45,7 +45,7 @@ HRESULT NextDomain (
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|설명|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|작업에 성공 합니다.|  
 |S_FALSE|작업을 완료 하지 못했습니다 또는 열거형에 도메인이 더 있습니다.|  

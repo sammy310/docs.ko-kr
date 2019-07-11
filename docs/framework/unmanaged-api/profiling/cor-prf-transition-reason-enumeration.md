@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2556196b7c8f81709e6880962e8ff36e126dd8b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c22e3c7c04a2b85723f1c0dba4543465faccab58
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599041"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745489"
 ---
 # <a name="corprftransitionreason-enumeration"></a>COR_PRF_TRANSITION_REASON 열거형
 관리 코드에서 비관리 코드로 전환 또는 그 반대의 경우로 전환하는 이유를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum {  
     COR_PRF_TRANSITION_CALL,  
     COR_PRF_TRANSITION_RETURN  
@@ -37,7 +37,7 @@ typedef enum {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`COR_PRF_TRANSITION_CALL`|전환 하는 함수 호출 되었기 때문입니다.|  
 |`COR_PRF_TRANSITION_RETURN`|전환 함수에서 반환 되었기 때문입니다.|  

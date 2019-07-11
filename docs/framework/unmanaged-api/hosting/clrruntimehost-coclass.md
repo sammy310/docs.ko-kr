@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bae2d134c412023d0f126453b5285662d994c78
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 841b05ca1037d82046820554878d883f94687d34
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789599"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779152"
 ---
 # <a name="clrruntimehost-coclass"></a>CLRRuntimeHost Coclass
 런타임에서 코드 실행을 관리 하기 위한 인터페이스를 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 coclass CLRRuntimeHost {  
     [default] interface  ICLRRuntimeHost;  
     interface            ICLRValidator;  
@@ -37,7 +37,7 @@ coclass CLRRuntimeHost {
   
 ## <a name="interfaces"></a>인터페이스  
   
-|인터페이스|설명|  
+|인터페이스|Description|  
 |---------------|-----------------|  
 |[ICLRRuntimeHost 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)|런타임에서 응용 프로그램의 실행을 제어 하기 위한 메서드를 제공 합니다.|  
 |[ICLRValidator 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)|이식 가능한 실행 가능 이미지의 유효성 검사 및 유효성 검사 오류를 자세히 보고 메서드를 제공 합니다.|  

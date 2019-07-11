@@ -20,12 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 909c283b1355153ffe1aa02acfbe8acc25a7e215
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6f495500b087b9e24936acd414f1aff463d7f64
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000313"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781071"
 ---
 # <a name="strongnameerrorinfo-function"></a>StrongNameErrorInfo 함수
 강력한 이름 함수 중 하나에 의해 발생하는 마지막 오류 코드를 가져옵니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "62000313"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT StrongNameErrorInfo ();   
 ```  
   

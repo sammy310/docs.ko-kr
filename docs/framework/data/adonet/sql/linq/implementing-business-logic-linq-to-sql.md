@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: 3dcc6f763acfff076bb03076a17e3a8f8916267c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9456340834c06e87f977cd784a37f7436523d29e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033568"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743141"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>비즈니스 논리 구현(LINQ to SQL)
 이 항목에서 "비즈니스 논리"는 데이터베이스에서 데이터를 삽입, 업데이트 또는 삭제하기 전에 데이터에 적용하는 모든 사용자 지정 규칙 또는 유효성 검사 테스트를 의미합니다. 비즈니스 논리를 "비즈니스 규칙" 또는 "도메인 논리"라고도 합니다. N 계층 응용 프로그램의 경우 비즈니스 논리는 일반적으로 프레젠테이션 계층이나 데이터 액세스 계층과 독립적으로 수정될 수 있도록 논리 계층으로 디자인됩니다. 비즈니스 논리는 데이터베이스 데이터의 업데이트, 삽입 또는 삭제 전과 후에 데이터 액세스 계층에서 호출될 수 있습니다.  
@@ -18,14 +18,14 @@ ms.locfileid: "62033568"
  비즈니스 논리는 필드의 형식이 테이블 열의 형식과 호환되는지 확인하는 스키마 유효성 검사처럼 간단한 논리부터 훨씬 더 복잡한 방식으로 상호 작용하는 개체의 집합으로 구성된 논리까지 매우 다양합니다. 규칙은 데이터베이스에 저장 프로시저로 구현되거나 메모리 내 개체로 구현될 수 있습니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]을 사용하면 비즈니스 논리가 어떻게 구현되었는지에 관계없이 부분 클래스와 부분 메서드(Partial Method)를 사용하여 비즈니스 논리와 데이터 액세스 코드를 분리할 수 있습니다.  
   
 ## <a name="how-linq-to-sql-invokes-your-business-logic"></a>LINQ to SQL로 비즈니스 논리를 호출하는 방법  
- 디자인 타임에 엔터티 클래스를 직접 생성하거나 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 또는 SQLMetal을 사용하여 생성하면 해당 엔터티 클래스가 부분 클래스로 정의됩니다. 즉, 별도의 코드 파일에서 사용자 지정 비즈니스 논리가 포함된 엔터티 클래스의 다른 부분을 사용자가 정의할 수 있습니다. 컴파일할 때 이 두 부분은 하나의 클래스로 병합됩니다. 그러나 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 또는 SQLMetal을 사용하여 엔터티 클래스를 다시 생성해도 이전에 정의한 클래스 부분은 수정되지 않습니다.  
+ 수동으로 또는 개체 관계형 디자이너 또는 SQLMetal을 사용 하 여 디자인 타임에 엔터티 클래스를 생성 하는 경우 partial 클래스로 정의 됩니다. 즉, 별도의 코드 파일에서 사용자 지정 비즈니스 논리가 포함된 엔터티 클래스의 다른 부분을 사용자가 정의할 수 있습니다. 컴파일할 때 이 두 부분은 하나의 클래스로 병합됩니다. 하지만 개체 관계형 디자이너 또는 SQLMetal을 사용 하 여 엔터티 클래스를 다시 생성 해야 할 경우 그렇게 할 수 있습니다 및 클래스 부분은 수정 되지 것입니다.  
   
  엔터티와 <xref:System.Data.Linq.DataContext>를 정의하는 부분 클래스에는 부분 메서드가 포함됩니다. 부분 메서드는 엔터티 또는 엔터티 속성을 업데이트, 삽입 또는 삭제하기 전과 후에 비즈니스 논리를 적용하는 데 사용할 수 있는 확장성 지점입니다. 부분 메서드는 컴파일 시간 이벤트 정도로 생각할 수 있습니다. 코드 생성기에서는 메서드 시그니처를 정의하고 `DataContext` 생성자인 get/set 속성 접근자에서 메서드를 호출하며 경우에 따라 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>가 호출되면 메서드를 내부적으로 호출합니다. 그러나 특정 부분 메서드를 구현하지 않으면 컴파일할 때 관련된 모든 참조 및 정의가 제거됩니다.  
   
  별도의 코드 파일에 작성하는 구현 정의에는 필요한 모든 사용자 지정 논리를 수행할 수 있습니다. 부분 클래스 자체를 도메인 계층으로 사용하거나 부분 메서드의 구현 정의에서 별도의 개체로 호출할 수 있습니다. 어느 방법을 사용하든 비즈니스 논리는 데이터 액세스 코드 및 프레젠테이션 계층 코드에서 완벽하게 분리됩니다.  
   
 ## <a name="a-closer-look-at-the-extensibility-points"></a>확장성 지점 자세히 보기  
- 다음 예제에서는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]와 `DataContext`라는 테이블 두 개가 있는 `Customers` 클래스에 대해 `Orders`에서 생성하는 코드의 일부를 보여 줍니다. 이 코드에서는 클래스의 각 테이블에 대해 Insert, Update 및 Delete 메서드를 정의합니다.  
+ 다음 예제에서는 개체 관계형 디자이너에서 생성 한 코드 부분을 보여 줍니다.는 `DataContext` 두 개의 테이블이 있는 클래스: `Customers` 및 `Orders`합니다. 이 코드에서는 클래스의 각 테이블에 대해 Insert, Update 및 Delete 메서드를 정의합니다.  
   
 ```vb  
 Partial Public Class Northwnd  

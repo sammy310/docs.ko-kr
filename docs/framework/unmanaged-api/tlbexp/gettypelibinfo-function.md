@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d12cbb66464baba4ee706ccb076764fbf025fc5f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 916d62a2b79a44d92611e735c6f9bbb3e01970e2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786180"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782735"
 ---
 # <a name="gettypelibinfo-function"></a>GetTypeLibInfo 함수
 검사 하 여 지정된 된 형식 라이브러리에 대 한 정보를 반환 합니다. 해당 [>TLIBATTR](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagtlibattr) 구조입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetTypeLibInfo(  
     [in]   LPWSTR     szFile,  
     [out]  GUID      *pTypeLibID,  

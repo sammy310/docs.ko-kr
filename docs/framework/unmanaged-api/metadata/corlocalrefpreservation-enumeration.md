@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 845994b96445d8ec2a0e37affc5164b432894a91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6338034d6714e8770e06ff61994fdf4433eb1684
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045714"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781784"
 ---
 # <a name="corlocalrefpreservation-enumeration"></a>CorLocalRefPreservation 열거형
 로컬 참조의 처리에 대한 플래그 값을 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorLocalRefPreservation  
 {  
     MDPreserveLocalRefsNone     =   0x00000000,  
@@ -39,7 +39,7 @@ typedef enum CorLocalRefPreservation
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`MDPreserveLocalRefsNone`|없는 로컬 참조를 유지 합니다.|  
 |`MDPreserveLocalTypeRef`|로컬 형식 참조를 유지 합니다.|  

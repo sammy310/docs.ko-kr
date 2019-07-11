@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 953a3123b00280484dd71965c34119e8eeacaf47
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cd420f0f166b0b17e5fbaf08d6bedd6651188b1c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623768"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778748"
 ---
 # <a name="iassemblycacheinstallassembly-method"></a>IAssemblyCache::InstallAssembly 메서드
 전역 어셈블리 캐시에 지정된 된 어셈블리를 설치합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT InstallAssembly (  
     [in] DWORD dwFlags,  
     [in] LPCWSTR pszManifestFilePath,  

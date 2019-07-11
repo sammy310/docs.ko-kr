@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7a651be40773607e0db215eadf884ed642e6e3b1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de85d264d709da747fab636f40c99bc0d0752251
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775670"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742360"
 ---
 # <a name="addfile2-method"></a>AddFile2 메서드
 어셈블리 파일을 추가합니다. 바인딩되지 않은 모듈을 만드는 데 사용할 수도 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT AddFile2(  
     mdAssembly AssemblyID,  
     LPCWSTR pszFilename,  

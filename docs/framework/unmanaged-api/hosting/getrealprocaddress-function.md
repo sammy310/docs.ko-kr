@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40cd5b6298012ef4dc21987a2a2dbe95c02a0ff2
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 0027514392dfbb93ab4189eb7c66a380fb77c1ae
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490356"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778163"
 ---
 # <a name="getrealprocaddress-function"></a>GetRealProcAddress 함수
 사용 하는 CLR (공용 언어 런타임)의 최신 설치 버전에서 내보낸 지정 된 함수의 주소를 가져옵니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "66490356"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetRealProcAddress (  
     [in]  LPCSTR  pwszProcName,   
     [out] VOID  **ppv  
@@ -47,7 +47,7 @@ HRESULT GetRealProcAddress (
 ## <a name="return-value"></a>반환 값  
  이 메서드는 CorError.h에 정의 된 다음 값 외에도 WinError.h에 정의 된 대로 표준 구성 요소 개체 모델 (COM) 오류 코드를 반환 합니다.  
   
-|반환 코드|설명|  
+|반환 코드|Description|  
 |-----------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
 |E_POINTER|`ppv`가 잘못된 경우|  

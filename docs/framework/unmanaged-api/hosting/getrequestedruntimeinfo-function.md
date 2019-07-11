@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21b96d435bdb0265d31972edbd4038d0b8cd8d2b
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 62a6f6d6e73ce42c8c86d4e458322e5bd361f412
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490347"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778133"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>GetRequestedRuntimeInfo 함수
 버전 및 디렉터리는 CLR (공용 언어 런타임) 응용 프로그램에서 요청한 정보를 가져옵니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "66490347"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetRequestedRuntimeInfo (  
     [in]  LPCWSTR  pExe,   
     [in]  LPCWSTR  pwszVersion,   
@@ -84,10 +84,10 @@ HRESULT GetRequestedRuntimeInfo (
 ## <a name="return-value"></a>반환 값  
  이 메서드는 다음 값 외에도 WinError.h에 정의 된 대로 표준 구성 요소 개체 모델 (COM) 오류 코드를 반환 합니다.  
   
-|반환 코드|설명|  
+|반환 코드|Description|  
 |-----------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|ERROR_INSUFFICIENT_BUFFER|디렉터리 버퍼가 디렉터리 경로 저장 하기에 충분 하지 않습니다.<br /><br /> 또는<br /><br /> 버전 버퍼의 버전 문자열을 저장할 만큼 크지 않습니다.|  
+|ERROR_INSUFFICIENT_BUFFER|디렉터리 버퍼가 디렉터리 경로 저장 하기에 충분 하지 않습니다.<br /><br /> -또는-<br /><br /> 버전 버퍼의 버전 문자열을 저장할 만큼 크지 않습니다.|  
   
 ## <a name="remarks"></a>설명  
  `GetRequestedRuntimeInfo` 메서드 최신 컴퓨터에 설치할 필요가 없는 프로세스에 로드 된 버전에 대 한 런타임 정보를 반환 합니다.  
