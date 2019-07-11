@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3ff91a24dec7f8507989b701ea24b569c1670c89
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 48cd62f89f1112a1007a5661dc55fe2977dace2b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777617"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778910"
 ---
-# <a name="imetadataimportgetpermissionsetprops-method"></a><span data-ttu-id="79df0-102">IMetaDataImport::GetPermissionSetProps 메서드</span><span class="sxs-lookup"><span data-stu-id="79df0-102">IMetaDataImport::GetPermissionSetProps Method</span></span>
-<span data-ttu-id="79df0-103">연관 된 메타 데이터를 가져옵니다는 <xref:System.Security.PermissionSet?displayProperty=nameWithType> 지정한 권한 토큰이 나타내는입니다.</span><span class="sxs-lookup"><span data-stu-id="79df0-103">Gets the metadata associated with the <xref:System.Security.PermissionSet?displayProperty=nameWithType> represented by the specified Permission token.</span></span>  
+# <a name="imetadataimportgetpermissionsetprops-method"></a><span data-ttu-id="61b83-102">IMetaDataImport::GetPermissionSetProps 메서드</span><span class="sxs-lookup"><span data-stu-id="61b83-102">IMetaDataImport::GetPermissionSetProps Method</span></span>
+<span data-ttu-id="61b83-103">연관 된 메타 데이터를 가져옵니다는 <xref:System.Security.PermissionSet?displayProperty=nameWithType> 지정한 권한 토큰이 나타내는입니다.</span><span class="sxs-lookup"><span data-stu-id="61b83-103">Gets the metadata associated with the <xref:System.Security.PermissionSet?displayProperty=nameWithType> represented by the specified Permission token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="79df0-104">구문</span><span class="sxs-lookup"><span data-stu-id="79df0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="61b83-104">구문</span><span class="sxs-lookup"><span data-stu-id="61b83-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetPermissionSetProps (  
    [in]  mdPermission      pm,  
    [out] DWORD             *pdwAction,   
@@ -38,30 +38,30 @@ HRESULT GetPermissionSetProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="79df0-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="79df0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="61b83-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="61b83-105">Parameters</span></span>  
  `pm`  
- <span data-ttu-id="79df0-106">[in] 권한 집합에 대 한 메타 데이터 속성을 get을 나타내는 권한 메타 데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="79df0-106">[in] The Permission metadata token that represents the permission set to get the metadata properties for.</span></span>  
+ <span data-ttu-id="61b83-106">[in] 권한 집합에 대 한 메타 데이터 속성을 get을 나타내는 권한 메타 데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="61b83-106">[in] The Permission metadata token that represents the permission set to get the metadata properties for.</span></span>  
   
  `pdwAction`  
- <span data-ttu-id="79df0-107">[out] 사용 권한 집합에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="79df0-107">[out] A pointer to the permission set.</span></span>  
+ <span data-ttu-id="61b83-107">[out] 사용 권한 집합에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="61b83-107">[out] A pointer to the permission set.</span></span>  
   
  `ppvPermission`  
- <span data-ttu-id="79df0-108">[out] 권한 집합의 이진 메타 데이터 서명에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="79df0-108">[out] A pointer to the binary metadata signature of the permission set.</span></span>  
+ <span data-ttu-id="61b83-108">[out] 권한 집합의 이진 메타 데이터 서명에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="61b83-108">[out] A pointer to the binary metadata signature of the permission set.</span></span>  
   
  `pcbPermission`  
- <span data-ttu-id="79df0-109">[out] 크기 (바이트) `ppvPermission`합니다.</span><span class="sxs-lookup"><span data-stu-id="79df0-109">[out] The size in bytes of `ppvPermission`.</span></span>  
+ <span data-ttu-id="61b83-109">[out] 크기 (바이트) `ppvPermission`합니다.</span><span class="sxs-lookup"><span data-stu-id="61b83-109">[out] The size in bytes of `ppvPermission`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="79df0-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="79df0-110">Requirements</span></span>  
- <span data-ttu-id="79df0-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="79df0-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="61b83-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="61b83-110">Requirements</span></span>  
+ <span data-ttu-id="61b83-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="61b83-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="79df0-112">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="79df0-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="61b83-112">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="61b83-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="79df0-113">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="79df0-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="61b83-113">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="61b83-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="79df0-114">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="79df0-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="61b83-114">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="61b83-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="79df0-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="79df0-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="61b83-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="61b83-115">See also</span></span>
 
 - <xref:System.Security.PermissionSet>
-- [<span data-ttu-id="79df0-116">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="79df0-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="79df0-117">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="79df0-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="61b83-116">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="61b83-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="61b83-117">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="61b83-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -17,56 +17,56 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3b07b3649cc1d7fcc2c75cbbd59414ee67819103
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 127c0c134b287ed7fad73c11fd505ac0de5a0aef
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599418"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763933"
 ---
-# <a name="ihostautoeventwait-method"></a><span data-ttu-id="966bf-102">IHostAutoEvent::Wait 메서드</span><span class="sxs-lookup"><span data-stu-id="966bf-102">IHostAutoEvent::Wait Method</span></span>
-<span data-ttu-id="966bf-103">현재 [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) 소유 될 때까지 대기 하는 인스턴스 또는 지정된 된 시간 간격이 경과 시간입니다.</span><span class="sxs-lookup"><span data-stu-id="966bf-103">Causes the current [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) instance to wait until it is owned or a specified amount of time elapses.</span></span>  
+# <a name="ihostautoeventwait-method"></a><span data-ttu-id="e7fc1-102">IHostAutoEvent::Wait 메서드</span><span class="sxs-lookup"><span data-stu-id="e7fc1-102">IHostAutoEvent::Wait Method</span></span>
+<span data-ttu-id="e7fc1-103">현재 [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) 소유 될 때까지 대기 하는 인스턴스 또는 지정된 된 시간 간격이 경과 시간입니다.</span><span class="sxs-lookup"><span data-stu-id="e7fc1-103">Causes the current [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) instance to wait until it is owned or a specified amount of time elapses.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="966bf-104">구문</span><span class="sxs-lookup"><span data-stu-id="966bf-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e7fc1-104">구문</span><span class="sxs-lookup"><span data-stu-id="e7fc1-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT Wait (  
     [in] DWORD dwMilliseconds,  
     [in] DWORD option  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="966bf-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="966bf-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e7fc1-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="e7fc1-105">Parameters</span></span>  
  `dwMilliseconds`  
- <span data-ttu-id="966bf-106">[in] 시간을 밀리초 단위로 현재 `IHostAutoEvent` 소유권 파이버가 또는 스레드가 없는 경우 인스턴스가 반환 되기 전에 대기 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="966bf-106">[in] The number of milliseconds the current `IHostAutoEvent` instance should wait before returning, if no thread or fiber takes ownership.</span></span>  
+ <span data-ttu-id="e7fc1-106">[in] 시간을 밀리초 단위로 현재 `IHostAutoEvent` 소유권 파이버가 또는 스레드가 없는 경우 인스턴스가 반환 되기 전에 대기 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e7fc1-106">[in] The number of milliseconds the current `IHostAutoEvent` instance should wait before returning, if no thread or fiber takes ownership.</span></span>  
   
  `option`  
- <span data-ttu-id="966bf-107">[in] 중 하나는 [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) 이 호스트가 수행할 동작을 지정 하는 값을 작업이 차단 됩니다.</span><span class="sxs-lookup"><span data-stu-id="966bf-107">[in] One of the [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) values, specifying the action the host should take if this operation blocks.</span></span>  
+ <span data-ttu-id="e7fc1-107">[in] 중 하나는 [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) 이 호스트가 수행할 동작을 지정 하는 값을 작업이 차단 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e7fc1-107">[in] One of the [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) values, specifying the action the host should take if this operation blocks.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="966bf-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="966bf-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e7fc1-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="e7fc1-108">Return Value</span></span>  
   
-|<span data-ttu-id="966bf-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="966bf-109">HRESULT</span></span>|<span data-ttu-id="966bf-110">설명</span><span class="sxs-lookup"><span data-stu-id="966bf-110">Description</span></span>|  
+|<span data-ttu-id="e7fc1-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="e7fc1-109">HRESULT</span></span>|<span data-ttu-id="e7fc1-110">설명</span><span class="sxs-lookup"><span data-stu-id="e7fc1-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="966bf-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="966bf-111">S_OK</span></span>|<span data-ttu-id="966bf-112">`Wait` 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="966bf-112">`Wait` returned successfully.</span></span>|  
-|<span data-ttu-id="966bf-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="966bf-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="966bf-114">프로세스에는 CLR (공용 언어 런타임)에 로드 되지 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="966bf-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="966bf-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="966bf-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="966bf-116">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="966bf-116">The call timed out.</span></span>|  
-|<span data-ttu-id="966bf-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="966bf-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="966bf-118">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="966bf-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="966bf-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="966bf-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="966bf-120">이벤트가 차단 된 스레드가 취소 된 또는 파이버를 대기 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="966bf-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="966bf-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="966bf-121">E_FAIL</span></span>|<span data-ttu-id="966bf-122">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="966bf-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="966bf-123">메서드 E_FAIL을 반환 하는 경우 CLR은 프로세스 내에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="966bf-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="966bf-124">메서드를 호스트 하는 데 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="966bf-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="966bf-125">HOST_E_DEADLOCK</span><span class="sxs-lookup"><span data-stu-id="966bf-125">HOST_E_DEADLOCK</span></span>|<span data-ttu-id="966bf-126">호스트 대기 간격 동안 교착 상태를 감지 하 고 현재 나타내는 이벤트 `IHostAutoEvent` 인스턴스 교착 상태가 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="966bf-126">The host detected a deadlock during the wait interval, and chose the event represented by the current `IHostAutoEvent` instance as the deadlock victim.</span></span>|  
+|<span data-ttu-id="e7fc1-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="e7fc1-111">S_OK</span></span>|<span data-ttu-id="e7fc1-112">`Wait` 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="e7fc1-112">`Wait` returned successfully.</span></span>|  
+|<span data-ttu-id="e7fc1-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="e7fc1-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="e7fc1-114">프로세스에는 CLR (공용 언어 런타임)에 로드 되지 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e7fc1-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="e7fc1-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="e7fc1-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="e7fc1-116">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="e7fc1-116">The call timed out.</span></span>|  
+|<span data-ttu-id="e7fc1-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="e7fc1-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="e7fc1-118">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e7fc1-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="e7fc1-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="e7fc1-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="e7fc1-120">이벤트가 차단 된 스레드가 취소 된 또는 파이버를 대기 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e7fc1-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="e7fc1-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="e7fc1-121">E_FAIL</span></span>|<span data-ttu-id="e7fc1-122">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="e7fc1-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="e7fc1-123">메서드 E_FAIL을 반환 하는 경우 CLR은 프로세스 내에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e7fc1-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="e7fc1-124">메서드를 호스트 하는 데 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="e7fc1-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="e7fc1-125">HOST_E_DEADLOCK</span><span class="sxs-lookup"><span data-stu-id="e7fc1-125">HOST_E_DEADLOCK</span></span>|<span data-ttu-id="e7fc1-126">호스트 대기 간격 동안 교착 상태를 감지 하 고 현재 나타내는 이벤트 `IHostAutoEvent` 인스턴스 교착 상태가 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="e7fc1-126">The host detected a deadlock during the wait interval, and chose the event represented by the current `IHostAutoEvent` instance as the deadlock victim.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="966bf-127">요구 사항</span><span class="sxs-lookup"><span data-stu-id="966bf-127">Requirements</span></span>  
- <span data-ttu-id="966bf-128">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="966bf-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e7fc1-127">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e7fc1-127">Requirements</span></span>  
+ <span data-ttu-id="e7fc1-128">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="e7fc1-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="966bf-129">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="966bf-129">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="e7fc1-129">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="e7fc1-129">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="966bf-130">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="966bf-130">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="e7fc1-130">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="e7fc1-130">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="966bf-131">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="966bf-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e7fc1-131">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e7fc1-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="966bf-132">참고자료</span><span class="sxs-lookup"><span data-stu-id="966bf-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e7fc1-132">참고자료</span><span class="sxs-lookup"><span data-stu-id="e7fc1-132">See also</span></span>
 
-- [<span data-ttu-id="966bf-133">ICLRSyncManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="966bf-133">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [<span data-ttu-id="966bf-134">IHostAutoEvent 인터페이스</span><span class="sxs-lookup"><span data-stu-id="966bf-134">IHostAutoEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
-- [<span data-ttu-id="966bf-135">IHostManualEvent 인터페이스</span><span class="sxs-lookup"><span data-stu-id="966bf-135">IHostManualEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
-- [<span data-ttu-id="966bf-136">IHostSyncManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="966bf-136">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [<span data-ttu-id="e7fc1-133">ICLRSyncManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e7fc1-133">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [<span data-ttu-id="e7fc1-134">IHostAutoEvent 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e7fc1-134">IHostAutoEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
+- [<span data-ttu-id="e7fc1-135">IHostManualEvent 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e7fc1-135">IHostManualEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
+- [<span data-ttu-id="e7fc1-136">IHostSyncManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e7fc1-136">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)

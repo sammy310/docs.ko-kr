@@ -16,24 +16,24 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb0e7a676fdbbe3cf04108266471833b28275b1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d6fb0b11c26ff65f74681d1e3bf7324bfb0e559d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985363"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766618"
 ---
-# <a name="iceefilegen-class"></a><span data-ttu-id="23763-102">ICeeFileGen 클래스</span><span class="sxs-lookup"><span data-stu-id="23763-102">ICeeFileGen Class</span></span>
-<span data-ttu-id="23763-103">기본 이식 가능한 실행 파일 (PE) 파일을 만들기 위한 기능을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="23763-103">Provides functionality for creating a native portable executable (PE) file.</span></span> <span data-ttu-id="23763-104">인터페이스를 실행 하는 컴파일된 출력을 생성 하려면 컴파일러에서 일반적으로 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="23763-104">The interface will typically be used by compilers to generate their compiled output executable.</span></span>  
+# <a name="iceefilegen-class"></a><span data-ttu-id="fcc75-102">ICeeFileGen 클래스</span><span class="sxs-lookup"><span data-stu-id="fcc75-102">ICeeFileGen Class</span></span>
+<span data-ttu-id="fcc75-103">기본 이식 가능한 실행 파일 (PE) 파일을 만들기 위한 기능을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="fcc75-103">Provides functionality for creating a native portable executable (PE) file.</span></span> <span data-ttu-id="fcc75-104">인터페이스를 실행 하는 컴파일된 출력을 생성 하려면 컴파일러에서 일반적으로 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="fcc75-104">The interface will typically be used by compilers to generate their compiled output executable.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="23763-105">`ICeeFileGen` .NET Framework 인프라를 지원 하며 코드에서 직접 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="23763-105">`ICeeFileGen` supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+>  <span data-ttu-id="fcc75-105">`ICeeFileGen` .NET Framework 인프라를 지원 하며 코드에서 직접 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="fcc75-105">`ICeeFileGen` supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
- <span data-ttu-id="23763-106">이 인터페이스는 않으며 이후 릴리스에서 제거 됩니다.</span><span class="sxs-lookup"><span data-stu-id="23763-106">This interface has been deprecated and will be removed in a future release.</span></span>  
+ <span data-ttu-id="fcc75-106">이 인터페이스는 않으며 이후 릴리스에서 제거 됩니다.</span><span class="sxs-lookup"><span data-stu-id="fcc75-106">This interface has been deprecated and will be removed in a future release.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="23763-107">구문</span><span class="sxs-lookup"><span data-stu-id="23763-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fcc75-107">구문</span><span class="sxs-lookup"><span data-stu-id="fcc75-107">Syntax</span></span>  
   
-```  
+```cpp  
 class ICeeFileGen {  
 public:  
     virtual HRESULT CreateCeeFile(HCEEFILE *ceeFile);  
@@ -236,13 +236,13 @@ public:
 };  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="23763-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="23763-108">Requirements</span></span>  
- <span data-ttu-id="23763-109">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="23763-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fcc75-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="fcc75-108">Requirements</span></span>  
+ <span data-ttu-id="fcc75-109">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="fcc75-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="23763-110">**헤더:** ICeeFileGen.h</span><span class="sxs-lookup"><span data-stu-id="23763-110">**Header:** ICeeFileGen.h</span></span>  
+ <span data-ttu-id="fcc75-110">**헤더:** ICeeFileGen.h</span><span class="sxs-lookup"><span data-stu-id="fcc75-110">**Header:** ICeeFileGen.h</span></span>  
   
- <span data-ttu-id="23763-111">**.NET framework 버전:** 1.0</span><span class="sxs-lookup"><span data-stu-id="23763-111">**.NET Framework Version:** 1.0</span></span>  
+ <span data-ttu-id="fcc75-111">**.NET framework 버전:** 1.0</span><span class="sxs-lookup"><span data-stu-id="fcc75-111">**.NET Framework Version:** 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="23763-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="23763-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fcc75-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="fcc75-112">See also</span></span>
 
-- [<span data-ttu-id="23763-113">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="23763-113">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="fcc75-113">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="fcc75-113">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

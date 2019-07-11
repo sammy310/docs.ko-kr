@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5de74b52caee27a1a12cff4a7f9165a07e961ce7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b518a3be939c70b207a71d79a3d362dba26fd3d0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993582"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774195"
 ---
-# <a name="icorpublishappdomaingetname-method"></a><span data-ttu-id="956c1-102">ICorPublishAppDomain::GetName 메서드</span><span class="sxs-lookup"><span data-stu-id="956c1-102">ICorPublishAppDomain::GetName Method</span></span>
-<span data-ttu-id="956c1-103">이 표시 되는 응용 프로그램 도메인의 이름을 가져옵니다 [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="956c1-103">Gets the name of the application domain that is represented by this [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).</span></span>  
+# <a name="icorpublishappdomaingetname-method"></a><span data-ttu-id="21a2f-102">ICorPublishAppDomain::GetName 메서드</span><span class="sxs-lookup"><span data-stu-id="21a2f-102">ICorPublishAppDomain::GetName Method</span></span>
+<span data-ttu-id="21a2f-103">이 표시 되는 응용 프로그램 도메인의 이름을 가져옵니다 [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="21a2f-103">Gets the name of the application domain that is represented by this [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="956c1-104">구문</span><span class="sxs-lookup"><span data-stu-id="956c1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="21a2f-104">구문</span><span class="sxs-lookup"><span data-stu-id="21a2f-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetName (  
     [in]  ULONG32   cchName,   
     [out] ULONG32   *pcchName,  
@@ -38,30 +38,30 @@ HRESULT GetName (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="956c1-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="956c1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="21a2f-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="21a2f-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="956c1-106">[in] `szName` 배열의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="956c1-106">[in] The size of the `szName` array.</span></span>  
+ <span data-ttu-id="21a2f-106">[in] `szName` 배열의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="21a2f-106">[in] The size of the `szName` array.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="956c1-107">[out] 반환 된 null 문자를 포함 하는 와이드 문자의 수에 대 한 포인터를 `szName` 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="956c1-107">[out] A pointer to the number of wide characters, including the null character, returned in the `szName` array.</span></span>  
+ <span data-ttu-id="21a2f-107">[out] 반환 된 null 문자를 포함 하는 와이드 문자의 수에 대 한 포인터를 `szName` 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="21a2f-107">[out] A pointer to the number of wide characters, including the null character, returned in the `szName` array.</span></span>  
   
  `szName`  
- <span data-ttu-id="956c1-108">[out] 이름을 저장 하는 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="956c1-108">[out] An array in which to store the name.</span></span>  
+ <span data-ttu-id="21a2f-108">[out] 이름을 저장 하는 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="21a2f-108">[out] An array in which to store the name.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="956c1-109">설명</span><span class="sxs-lookup"><span data-stu-id="956c1-109">Remarks</span></span>  
- <span data-ttu-id="956c1-110">하는 경우 `szName` 가 null이 아닌 합니다 `GetName` 메서드를 복사 `cchName` 문자 (null 종결자 포함)에 `szName`입니다.</span><span class="sxs-lookup"><span data-stu-id="956c1-110">If `szName` is non-null, the `GetName` method copies up to `cchName` characters (including the null terminator) into `szName`.</span></span> <span data-ttu-id="956c1-111">반환 된 null이 아닌 경우 `pcchName`, 실제 이름 (null 종결자 포함)의 문자 수에 저장 됩니다는 `szName` 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="956c1-111">If a non-null is returned in `pcchName`, the actual number of characters in the name (including the null terminator) is stored in the `szName` array.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="21a2f-109">설명</span><span class="sxs-lookup"><span data-stu-id="21a2f-109">Remarks</span></span>  
+ <span data-ttu-id="21a2f-110">하는 경우 `szName` 가 null이 아닌 합니다 `GetName` 메서드를 복사 `cchName` 문자 (null 종결자 포함)에 `szName`입니다.</span><span class="sxs-lookup"><span data-stu-id="21a2f-110">If `szName` is non-null, the `GetName` method copies up to `cchName` characters (including the null terminator) into `szName`.</span></span> <span data-ttu-id="21a2f-111">반환 된 null이 아닌 경우 `pcchName`, 실제 이름 (null 종결자 포함)의 문자 수에 저장 됩니다는 `szName` 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="21a2f-111">If a non-null is returned in `pcchName`, the actual number of characters in the name (including the null terminator) is stored in the `szName` array.</span></span>  
   
- <span data-ttu-id="956c1-112">`GetName` 메서드 복사 된 문자 수에 관계 없이 S_OK HRESULT를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="956c1-112">The `GetName` method returns an S_OK HRESULT regardless of how many characters were copied.</span></span>  
+ <span data-ttu-id="21a2f-112">`GetName` 메서드 복사 된 문자 수에 관계 없이 S_OK HRESULT를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="21a2f-112">The `GetName` method returns an S_OK HRESULT regardless of how many characters were copied.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="956c1-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="956c1-113">Requirements</span></span>  
- <span data-ttu-id="956c1-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="956c1-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="21a2f-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="21a2f-113">Requirements</span></span>  
+ <span data-ttu-id="21a2f-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="21a2f-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="956c1-115">**헤더:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="956c1-115">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="21a2f-115">**헤더:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="21a2f-115">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="956c1-116">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="956c1-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="21a2f-116">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="21a2f-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="956c1-117">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="956c1-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="21a2f-117">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="21a2f-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="956c1-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="956c1-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="21a2f-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="21a2f-118">See also</span></span>
 
-- [<span data-ttu-id="956c1-119">ICorPublishAppDomain 인터페이스</span><span class="sxs-lookup"><span data-stu-id="956c1-119">ICorPublishAppDomain Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)
+- [<span data-ttu-id="21a2f-119">ICorPublishAppDomain 인터페이스</span><span class="sxs-lookup"><span data-stu-id="21a2f-119">ICorPublishAppDomain Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)

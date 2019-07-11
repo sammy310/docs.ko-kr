@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d8d5f2123608af241095c966901bd227fa6152d3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a837a43594413ce175f2d52e398440fb6dcb8560
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61919284"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766101"
 ---
-# <a name="icordebugprocessenumerateobjects-method"></a><span data-ttu-id="6eb71-102">ICorDebugProcess::EnumerateObjects 메서드</span><span class="sxs-lookup"><span data-stu-id="6eb71-102">ICorDebugProcess::EnumerateObjects Method</span></span>
-<span data-ttu-id="6eb71-103">이 메서드는 구현되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="6eb71-103">This method has not been implemented.</span></span>  
+# <a name="icordebugprocessenumerateobjects-method"></a><span data-ttu-id="64755-102">ICorDebugProcess::EnumerateObjects 메서드</span><span class="sxs-lookup"><span data-stu-id="64755-102">ICorDebugProcess::EnumerateObjects Method</span></span>
+<span data-ttu-id="64755-103">이 메서드는 구현되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="64755-103">This method has not been implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6eb71-104">구문</span><span class="sxs-lookup"><span data-stu-id="6eb71-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="64755-104">구문</span><span class="sxs-lookup"><span data-stu-id="64755-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT EnumerateObjects (  
     [out] ICorDebugObjectEnum **ppObjects  
 );  

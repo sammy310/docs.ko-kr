@@ -17,43 +17,43 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b0e78e10f092bce1c8f7762362f02b7a403c86a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 882d3b3c359724688c0fb8fe5e2b567f1d575e76
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597253"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782867"
 ---
-# <a name="icorprofilercallbackjitcachedfunctionsearchfinished-method"></a><span data-ttu-id="9c5ef-102">ICorProfilerCallback::JITCachedFunctionSearchFinished 메서드</span><span class="sxs-lookup"><span data-stu-id="9c5ef-102">ICorProfilerCallback::JITCachedFunctionSearchFinished Method</span></span>
-<span data-ttu-id="9c5ef-103">네이티브 이미지 생성기 (NGen.exe)를 사용 하 여 이전에 컴파일된 함수에 대 한 검색 되었음을 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ef-103">Notifies the profiler that a search has finished for a function that was compiled previously using the Native Image Generator (NGen.exe).</span></span>  
+# <a name="icorprofilercallbackjitcachedfunctionsearchfinished-method"></a><span data-ttu-id="8d568-102">ICorProfilerCallback::JITCachedFunctionSearchFinished 메서드</span><span class="sxs-lookup"><span data-stu-id="8d568-102">ICorProfilerCallback::JITCachedFunctionSearchFinished Method</span></span>
+<span data-ttu-id="8d568-103">네이티브 이미지 생성기 (NGen.exe)를 사용 하 여 이전에 컴파일된 함수에 대 한 검색 되었음을 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="8d568-103">Notifies the profiler that a search has finished for a function that was compiled previously using the Native Image Generator (NGen.exe).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9c5ef-104">구문</span><span class="sxs-lookup"><span data-stu-id="9c5ef-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8d568-104">구문</span><span class="sxs-lookup"><span data-stu-id="8d568-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT JITCachedFunctionSearchFinished(  
     [in] FunctionID        functionId,  
     [in] COR_PRF_JIT_CACHE result);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9c5ef-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="9c5ef-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8d568-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="8d568-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="9c5ef-106">[in] 검색이 수행 되었음을 함수의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ef-106">[in] The ID of the function for which the search was performed.</span></span>  
+ <span data-ttu-id="8d568-106">[in] 검색이 수행 되었음을 함수의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="8d568-106">[in] The ID of the function for which the search was performed.</span></span>  
   
  `result`  
- <span data-ttu-id="9c5ef-107">[in] 값을 [COR_PRF_JIT_CACHE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md) 검색의 결과 나타내는 열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ef-107">[in] A value of the [COR_PRF_JIT_CACHE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md) enumeration that indicates the result of the search.</span></span>  
+ <span data-ttu-id="8d568-107">[in] 값을 [COR_PRF_JIT_CACHE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md) 검색의 결과 나타내는 열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="8d568-107">[in] A value of the [COR_PRF_JIT_CACHE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md) enumeration that indicates the result of the search.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9c5ef-108">설명</span><span class="sxs-lookup"><span data-stu-id="9c5ef-108">Remarks</span></span>  
- <span data-ttu-id="9c5ef-109">.NET Framework 버전 2.0에에서는 [icorprofilercallback:: Jitcachedfunctionsearchstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchstarted-method.md) 및 `JITCachedFunctionSearchFinished` 콜백을 일반 NGen 이미지의 모든 함수에 대 한 걸 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ef-109">In the .NET Framework version 2.0, the [ICorProfilerCallback::JITCachedFunctionSearchStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchstarted-method.md) and `JITCachedFunctionSearchFinished` callbacks will not be made for all functions in regular NGen images.</span></span> <span data-ttu-id="9c5ef-110">만 NGen 이미지의 프로파일러에 대 한 액세스에 최적화 된 이미지의 모든 함수에 대 한 콜백을 생성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ef-110">Only NGen images optimized for a profiler will generate callbacks for all functions in the image.</span></span> <span data-ttu-id="9c5ef-111">그러나 추가 오버 헤드로 인해 프로파일러 요청 해야 프로파일러에 최적화 된 NGen 이미지를 컴파일된-just-in-time (JIT) 함수를 적용할 이러한 콜백을 사용 하려는 경우에 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ef-111">However, due to the additional overhead, a profiler should request profiler-optimized NGen images only if it intends to use these callbacks to force a function to be compiled just-in-time (JIT).</span></span> <span data-ttu-id="9c5ef-112">그렇지 않은 경우 프로파일러 함수 정보를 수집 지연 전략을 사용 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ef-112">Otherwise, the profiler should use a lazy strategy for gathering function information.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8d568-108">설명</span><span class="sxs-lookup"><span data-stu-id="8d568-108">Remarks</span></span>  
+ <span data-ttu-id="8d568-109">.NET Framework 버전 2.0에에서는 [icorprofilercallback:: Jitcachedfunctionsearchstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchstarted-method.md) 및 `JITCachedFunctionSearchFinished` 콜백을 일반 NGen 이미지의 모든 함수에 대 한 걸 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="8d568-109">In the .NET Framework version 2.0, the [ICorProfilerCallback::JITCachedFunctionSearchStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchstarted-method.md) and `JITCachedFunctionSearchFinished` callbacks will not be made for all functions in regular NGen images.</span></span> <span data-ttu-id="8d568-110">만 NGen 이미지의 프로파일러에 대 한 액세스에 최적화 된 이미지의 모든 함수에 대 한 콜백을 생성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8d568-110">Only NGen images optimized for a profiler will generate callbacks for all functions in the image.</span></span> <span data-ttu-id="8d568-111">그러나 추가 오버 헤드로 인해 프로파일러 요청 해야 프로파일러에 최적화 된 NGen 이미지를 컴파일된-just-in-time (JIT) 함수를 적용할 이러한 콜백을 사용 하려는 경우에 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d568-111">However, due to the additional overhead, a profiler should request profiler-optimized NGen images only if it intends to use these callbacks to force a function to be compiled just-in-time (JIT).</span></span> <span data-ttu-id="8d568-112">그렇지 않은 경우 프로파일러 함수 정보를 수집 지연 전략을 사용 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d568-112">Otherwise, the profiler should use a lazy strategy for gathering function information.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9c5ef-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9c5ef-113">Requirements</span></span>  
- <span data-ttu-id="9c5ef-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="9c5ef-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8d568-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="8d568-113">Requirements</span></span>  
+ <span data-ttu-id="8d568-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="8d568-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9c5ef-115">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="9c5ef-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="8d568-115">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8d568-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="9c5ef-116">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9c5ef-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8d568-116">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8d568-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9c5ef-117">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9c5ef-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8d568-117">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8d568-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9c5ef-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="9c5ef-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8d568-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="8d568-118">See also</span></span>
 
-- [<span data-ttu-id="9c5ef-119">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="9c5ef-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="8d568-119">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8d568-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 649f44bd7966b9ca89d2d040b7eede662404aa0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 62eb5782071b42df1a035a4553b6cf9da53e24ac
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638608"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778089"
 ---
-# <a name="isymunmanagedsymbolsearchinfogetsearchpath-method"></a><span data-ttu-id="69bff-102">ISymUnmanagedSymbolSearchInfo::GetSearchPath 메서드</span><span class="sxs-lookup"><span data-stu-id="69bff-102">ISymUnmanagedSymbolSearchInfo::GetSearchPath Method</span></span>
-<span data-ttu-id="69bff-103">검색 경로를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="69bff-103">Gets the search path.</span></span>  
+# <a name="isymunmanagedsymbolsearchinfogetsearchpath-method"></a><span data-ttu-id="f086c-102">ISymUnmanagedSymbolSearchInfo::GetSearchPath 메서드</span><span class="sxs-lookup"><span data-stu-id="f086c-102">ISymUnmanagedSymbolSearchInfo::GetSearchPath Method</span></span>
+<span data-ttu-id="f086c-103">검색 경로를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="f086c-103">Gets the search path.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="69bff-104">구문</span><span class="sxs-lookup"><span data-stu-id="69bff-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f086c-104">구문</span><span class="sxs-lookup"><span data-stu-id="f086c-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetSearchPathLength(  
     [out] ULONG32 *pcchPath);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="69bff-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="69bff-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f086c-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f086c-105">Parameters</span></span>  
  `pcchPath`  
- <span data-ttu-id="69bff-106">[out] 에 대 한 포인터를 `ULONG32` 문자 검색 경로 포함 하는 데 필요한 버퍼의 크기를 받는 합니다.</span><span class="sxs-lookup"><span data-stu-id="69bff-106">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the search path.</span></span>  
+ <span data-ttu-id="f086c-106">[out] 에 대 한 포인터를 `ULONG32` 문자 검색 경로 포함 하는 데 필요한 버퍼의 크기를 받는 합니다.</span><span class="sxs-lookup"><span data-stu-id="f086c-106">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the search path.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="69bff-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="69bff-107">Return Value</span></span>  
- <span data-ttu-id="69bff-108">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="69bff-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f086c-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="f086c-107">Return Value</span></span>  
+ <span data-ttu-id="f086c-108">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="f086c-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="69bff-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="69bff-109">Requirements</span></span>  
- <span data-ttu-id="69bff-110">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="69bff-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f086c-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f086c-109">Requirements</span></span>  
+ <span data-ttu-id="f086c-110">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f086c-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="69bff-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="69bff-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f086c-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="f086c-111">See also</span></span>
 
-- [<span data-ttu-id="69bff-112">ISymUnmanagedSymbolSearchInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="69bff-112">ISymUnmanagedSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)
+- [<span data-ttu-id="f086c-112">ISymUnmanagedSymbolSearchInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f086c-112">ISymUnmanagedSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)

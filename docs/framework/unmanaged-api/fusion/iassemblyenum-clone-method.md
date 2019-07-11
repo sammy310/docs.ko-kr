@@ -17,35 +17,35 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a16717de7c109261e73f3a41fa07e9c0d86ee72
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d288f4ccf91567224546df1a3309a411590a5a12
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697461"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779034"
 ---
-# <a name="iassemblyenumclone-method"></a><span data-ttu-id="97193-102">IAssemblyEnum::Clone 메서드</span><span class="sxs-lookup"><span data-stu-id="97193-102">IAssemblyEnum::Clone Method</span></span>
-<span data-ttu-id="97193-103">이 항목의 단순 복사본을 만듭니다 [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="97193-103">Creates a shallow copy of this [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) object.</span></span>  
+# <a name="iassemblyenumclone-method"></a><span data-ttu-id="e89b9-102">IAssemblyEnum::Clone 메서드</span><span class="sxs-lookup"><span data-stu-id="e89b9-102">IAssemblyEnum::Clone Method</span></span>
+<span data-ttu-id="e89b9-103">이 항목의 단순 복사본을 만듭니다 [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="e89b9-103">Creates a shallow copy of this [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="97193-104">구문</span><span class="sxs-lookup"><span data-stu-id="97193-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e89b9-104">구문</span><span class="sxs-lookup"><span data-stu-id="e89b9-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT Clone (  
     [out] IAssemblyEnum   **ppEnum  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="97193-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="97193-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e89b9-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="e89b9-105">Parameters</span></span>  
  `ppEnum`  
- <span data-ttu-id="97193-106">[out] 복사본에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="97193-106">[out] A pointer to the copy.</span></span>  
+ <span data-ttu-id="e89b9-106">[out] 복사본에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="e89b9-106">[out] A pointer to the copy.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="97193-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="97193-107">Requirements</span></span>  
- <span data-ttu-id="97193-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="97193-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e89b9-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e89b9-107">Requirements</span></span>  
+ <span data-ttu-id="e89b9-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="e89b9-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="97193-109">**헤더:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="97193-109">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="e89b9-109">**헤더:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="e89b9-109">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="97193-110">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="97193-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e89b9-110">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e89b9-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="97193-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="97193-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e89b9-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="e89b9-111">See also</span></span>
 
-- [<span data-ttu-id="97193-112">IAssemblyEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="97193-112">IAssemblyEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
+- [<span data-ttu-id="e89b9-112">IAssemblyEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e89b9-112">IAssemblyEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)

@@ -15,22 +15,22 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: cdbf662c664d6c87b2fa17bcb10d735b0f573dd2
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ea54fdd83b9470db4a08daceaa695e450f5ca1af
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632309"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764816"
 ---
-# <a name="isosdacinterfacegetmethoddescdata-method"></a><span data-ttu-id="0f073-102">ISOSDacInterface::GetMethodDescData 메서드</span><span class="sxs-lookup"><span data-stu-id="0f073-102">ISOSDacInterface::GetMethodDescData Method</span></span>
+# <a name="isosdacinterfacegetmethoddescdata-method"></a><span data-ttu-id="bf53c-102">ISOSDacInterface::GetMethodDescData 메서드</span><span class="sxs-lookup"><span data-stu-id="bf53c-102">ISOSDacInterface::GetMethodDescData Method</span></span>
 
-<span data-ttu-id="0f073-103">지정된 된 MethodDesc 포인터에 대 한 데이터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="0f073-103">Gets the data for the given MethodDesc pointer.</span></span>
+<span data-ttu-id="bf53c-103">지정된 된 MethodDesc 포인터에 대 한 데이터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="bf53c-103">Gets the data for the given MethodDesc pointer.</span></span>
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a><span data-ttu-id="0f073-104">구문</span><span class="sxs-lookup"><span data-stu-id="0f073-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="bf53c-104">구문</span><span class="sxs-lookup"><span data-stu-id="bf53c-104">Syntax</span></span>
 
-```
+```cpp
 HRESULT GetMethodDescData(
     CLRDATA_ADDRESS            methodDesc,
     CLRDATA_ADDRESS            ip,
@@ -41,38 +41,38 @@ HRESULT GetMethodDescData(
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="0f073-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="0f073-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="bf53c-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="bf53c-105">Parameters</span></span>
 
 `methodDesc`\
-<span data-ttu-id="0f073-106">[in] 주소는 MethodDesc입니다.</span><span class="sxs-lookup"><span data-stu-id="0f073-106">[in] The address of the MethodDesc.</span></span>
+<span data-ttu-id="bf53c-106">[in] 주소는 MethodDesc입니다.</span><span class="sxs-lookup"><span data-stu-id="bf53c-106">[in] The address of the MethodDesc.</span></span>
 
 `ip`\
-<span data-ttu-id="0f073-107">[in] 메서드의 IP 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="0f073-107">[in] The IP address of the method.</span></span>
+<span data-ttu-id="bf53c-107">[in] 메서드의 IP 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="bf53c-107">[in] The IP address of the method.</span></span>
 
 `data`\
-<span data-ttu-id="0f073-108">[out] 내부 Api에서 반환 되는 MethodDesc와 연결 된 데이터입니다.</span><span class="sxs-lookup"><span data-stu-id="0f073-108">[out] The data associated with the MethodDesc as returned from the internal APIs.</span></span>
+<span data-ttu-id="bf53c-108">[out] 내부 Api에서 반환 되는 MethodDesc와 연결 된 데이터입니다.</span><span class="sxs-lookup"><span data-stu-id="bf53c-108">[out] The data associated with the MethodDesc as returned from the internal APIs.</span></span>
 
 `cRevertedRejitVersions`\
-<span data-ttu-id="0f073-109">[out] 되돌린된 rejit 버전 수입니다.</span><span class="sxs-lookup"><span data-stu-id="0f073-109">[out] The number of reverted rejit versions.</span></span>
+<span data-ttu-id="bf53c-109">[out] 되돌린된 rejit 버전 수입니다.</span><span class="sxs-lookup"><span data-stu-id="bf53c-109">[out] The number of reverted rejit versions.</span></span>
 
 `rgRevertedRejitData`\
-<span data-ttu-id="0f073-110">[out] 내부 Api에서 반환 된 되돌린된 rejit 버전과 연결 된 데이터입니다.</span><span class="sxs-lookup"><span data-stu-id="0f073-110">[out] The data associated with the reverted rejit versions as returned from the internal APIs.</span></span>
+<span data-ttu-id="bf53c-110">[out] 내부 Api에서 반환 된 되돌린된 rejit 버전과 연결 된 데이터입니다.</span><span class="sxs-lookup"><span data-stu-id="bf53c-110">[out] The data associated with the reverted rejit versions as returned from the internal APIs.</span></span>
 
 `pcNeededRevertedRejitData`\
-<span data-ttu-id="0f073-111">[out] 되돌린된 ReJit 버전과 연결 된 데이터를 저장 하는 데 필요한 바이트 수입니다.</span><span class="sxs-lookup"><span data-stu-id="0f073-111">[out] The number of bytes required to store the data associated with the reverted ReJit versions.</span></span>
+<span data-ttu-id="bf53c-111">[out] 되돌린된 ReJit 버전과 연결 된 데이터를 저장 하는 데 필요한 바이트 수입니다.</span><span class="sxs-lookup"><span data-stu-id="bf53c-111">[out] The number of bytes required to store the data associated with the reverted ReJit versions.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="0f073-112">설명</span><span class="sxs-lookup"><span data-stu-id="0f073-112">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="bf53c-112">설명</span><span class="sxs-lookup"><span data-stu-id="bf53c-112">Remarks</span></span>
 
-<span data-ttu-id="0f073-113">제공 된 메서드는의 일부는 `ISOSDacInterface` 인터페이스 및 가상 메서드 테이블의 20 슬롯에 해당 합니다.</span><span class="sxs-lookup"><span data-stu-id="0f073-113">The provided method is part of the `ISOSDacInterface` interface and corresponds to the 20th slot of the virtual method table.</span></span> <span data-ttu-id="0f073-114">사용할 수 있으려면 [ `CLRDATA_ADDRESS` ](../common-data-types-unmanaged-api-reference.md) 64 비트 부호 없는 정수로 정의 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0f073-114">To be able to use them, [`CLRDATA_ADDRESS`](../common-data-types-unmanaged-api-reference.md) must be defined as a 64-bit unsigned integer.</span></span>
+<span data-ttu-id="bf53c-113">제공 된 메서드는의 일부는 `ISOSDacInterface` 인터페이스 및 가상 메서드 테이블의 20 슬롯에 해당 합니다.</span><span class="sxs-lookup"><span data-stu-id="bf53c-113">The provided method is part of the `ISOSDacInterface` interface and corresponds to the 20th slot of the virtual method table.</span></span> <span data-ttu-id="bf53c-114">사용할 수 있으려면 [ `CLRDATA_ADDRESS` ](../common-data-types-unmanaged-api-reference.md) 64 비트 부호 없는 정수로 정의 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="bf53c-114">To be able to use them, [`CLRDATA_ADDRESS`](../common-data-types-unmanaged-api-reference.md) must be defined as a 64-bit unsigned integer.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="0f073-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="0f073-115">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="bf53c-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="bf53c-115">Requirements</span></span>
 
-<span data-ttu-id="0f073-116">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="0f073-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-<span data-ttu-id="0f073-117">**헤더:** 없음</span><span class="sxs-lookup"><span data-stu-id="0f073-117">**Header:** None</span></span>  
-<span data-ttu-id="0f073-118">**라이브러리:** 없음</span><span class="sxs-lookup"><span data-stu-id="0f073-118">**Library:** None</span></span>  
-<span data-ttu-id="0f073-119">**.NET Framework 버전:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="0f073-119">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
+<span data-ttu-id="bf53c-116">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="bf53c-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+<span data-ttu-id="bf53c-117">**헤더:** 없음</span><span class="sxs-lookup"><span data-stu-id="bf53c-117">**Header:** None</span></span>  
+<span data-ttu-id="bf53c-118">**라이브러리:** 없음</span><span class="sxs-lookup"><span data-stu-id="bf53c-118">**Library:** None</span></span>  
+<span data-ttu-id="bf53c-119">**.NET Framework 버전:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="bf53c-119">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
 
-## <a name="see-also"></a><span data-ttu-id="0f073-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="0f073-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bf53c-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="bf53c-120">See also</span></span>
 
-- [<span data-ttu-id="0f073-121">디버깅</span><span class="sxs-lookup"><span data-stu-id="0f073-121">Debugging</span></span>](index.md)
-- [<span data-ttu-id="0f073-122">ISOSDacInterface 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0f073-122">ISOSDacInterface Interface</span></span>](isosdacinterface-interface.md)
+- [<span data-ttu-id="bf53c-121">디버깅</span><span class="sxs-lookup"><span data-stu-id="bf53c-121">Debugging</span></span>](index.md)
+- [<span data-ttu-id="bf53c-122">ISOSDacInterface 인터페이스</span><span class="sxs-lookup"><span data-stu-id="bf53c-122">ISOSDacInterface Interface</span></span>](isosdacinterface-interface.md)

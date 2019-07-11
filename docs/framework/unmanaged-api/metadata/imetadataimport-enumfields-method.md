@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 313dbd11f1d033f0e15de651b9c130cc98c217e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65f59d3df96f46ad65650183bdb6f631356a4d0b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049936"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775536"
 ---
-# <a name="imetadataimportenumfields-method"></a><span data-ttu-id="7bd86-102">IMetaDataImport::EnumFields 메서드</span><span class="sxs-lookup"><span data-stu-id="7bd86-102">IMetaDataImport::EnumFields Method</span></span>
-<span data-ttu-id="7bd86-103">지정한 TypeDef 토큰이 참조하는 형식에 대한 FieldDef 토큰을 열거합니다.</span><span class="sxs-lookup"><span data-stu-id="7bd86-103">Enumerates FieldDef tokens for the type referenced by the specified TypeDef token.</span></span>  
+# <a name="imetadataimportenumfields-method"></a><span data-ttu-id="dad17-102">IMetaDataImport::EnumFields 메서드</span><span class="sxs-lookup"><span data-stu-id="dad17-102">IMetaDataImport::EnumFields Method</span></span>
+<span data-ttu-id="dad17-103">지정한 TypeDef 토큰이 참조하는 형식에 대한 FieldDef 토큰을 열거합니다.</span><span class="sxs-lookup"><span data-stu-id="dad17-103">Enumerates FieldDef tokens for the type referenced by the specified TypeDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7bd86-104">구문</span><span class="sxs-lookup"><span data-stu-id="7bd86-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dad17-104">구문</span><span class="sxs-lookup"><span data-stu-id="dad17-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT EnumFields (   
    [in, out] HCORENUM    *phEnum,   
    [in]      mdTypeDef   cl,   
@@ -39,39 +39,39 @@ HRESULT EnumFields (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7bd86-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="7bd86-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dad17-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="dad17-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="7bd86-106">[out에서] 열거자에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="7bd86-106">[in, out] A pointer to the enumerator.</span></span>  
+ <span data-ttu-id="dad17-106">[out에서] 열거자에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="dad17-106">[in, out] A pointer to the enumerator.</span></span>  
   
  `cl`  
- <span data-ttu-id="7bd86-107">[in] 해당 필드를 열거할 수는 클래스의 TypeDef 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="7bd86-107">[in] The TypeDef token of the class whose fields are to be enumerated.</span></span>  
+ <span data-ttu-id="dad17-107">[in] 해당 필드를 열거할 수는 클래스의 TypeDef 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="dad17-107">[in] The TypeDef token of the class whose fields are to be enumerated.</span></span>  
   
  `rFields`  
- <span data-ttu-id="7bd86-108">[out] 목록 FieldDef 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="7bd86-108">[out] The list of FieldDef tokens.</span></span>  
+ <span data-ttu-id="dad17-108">[out] 목록 FieldDef 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="dad17-108">[out] The list of FieldDef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="7bd86-109">[in] `rFields` 배열의 최대 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="7bd86-109">[in] The maximum size of the `rFields` array.</span></span>  
+ <span data-ttu-id="dad17-109">[in] `rFields` 배열의 최대 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="dad17-109">[in] The maximum size of the `rFields` array.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="7bd86-110">[out] 실제 FieldDef 토큰에서 반환 된 수가 `rFields`합니다.</span><span class="sxs-lookup"><span data-stu-id="7bd86-110">[out] The actual number of FieldDef tokens returned in `rFields`.</span></span>  
+ <span data-ttu-id="dad17-110">[out] 실제 FieldDef 토큰에서 반환 된 수가 `rFields`합니다.</span><span class="sxs-lookup"><span data-stu-id="dad17-110">[out] The actual number of FieldDef tokens returned in `rFields`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7bd86-111">반환 값</span><span class="sxs-lookup"><span data-stu-id="7bd86-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="dad17-111">반환 값</span><span class="sxs-lookup"><span data-stu-id="dad17-111">Return Value</span></span>  
   
-|<span data-ttu-id="7bd86-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="7bd86-112">HRESULT</span></span>|<span data-ttu-id="7bd86-113">설명</span><span class="sxs-lookup"><span data-stu-id="7bd86-113">Description</span></span>|  
+|<span data-ttu-id="dad17-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="dad17-112">HRESULT</span></span>|<span data-ttu-id="dad17-113">Description</span><span class="sxs-lookup"><span data-stu-id="dad17-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="7bd86-114">`EnumFields` 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="7bd86-114">`EnumFields` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="7bd86-115">열거 하는 필드가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7bd86-115">There are no fields to enumerate.</span></span> <span data-ttu-id="7bd86-116">이런 경우 `pcTokens` 0입니다.</span><span class="sxs-lookup"><span data-stu-id="7bd86-116">In that case, `pcTokens` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="dad17-114">`EnumFields` 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="dad17-114">`EnumFields` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="dad17-115">열거 하는 필드가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dad17-115">There are no fields to enumerate.</span></span> <span data-ttu-id="dad17-116">이런 경우 `pcTokens` 0입니다.</span><span class="sxs-lookup"><span data-stu-id="dad17-116">In that case, `pcTokens` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="7bd86-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="7bd86-117">Requirements</span></span>  
- <span data-ttu-id="7bd86-118">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="7bd86-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dad17-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="dad17-117">Requirements</span></span>  
+ <span data-ttu-id="dad17-118">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="dad17-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7bd86-119">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="7bd86-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="dad17-119">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="dad17-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="7bd86-120">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="7bd86-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="dad17-120">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="dad17-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="7bd86-121">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7bd86-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="dad17-121">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dad17-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7bd86-122">참고자료</span><span class="sxs-lookup"><span data-stu-id="7bd86-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dad17-122">참고자료</span><span class="sxs-lookup"><span data-stu-id="dad17-122">See also</span></span>
 
-- [<span data-ttu-id="7bd86-123">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="7bd86-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="7bd86-124">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="7bd86-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="dad17-123">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="dad17-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="dad17-124">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="dad17-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

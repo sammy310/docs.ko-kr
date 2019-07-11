@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 57ddbd8c6935f2c0275c132e30ea175c6f198fac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65bc4bc74e06368e6c7be9b742a8f311ecadc7fc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777704"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782314"
 ---
-# <a name="imetadataimportgetmethodsemantics-method"></a><span data-ttu-id="48897-102">IMetaDataImport::GetMethodSemantics 메서드</span><span class="sxs-lookup"><span data-stu-id="48897-102">IMetaDataImport::GetMethodSemantics Method</span></span>
-<span data-ttu-id="48897-103">토큰 쌍을 이루는 속성과 지정한 MethodDef 토큰이 참조 하는 메서드 및 이벤트 지정한 eventprop 참조 간의 관계를 나타내는 플래그를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="48897-103">Gets flags indicating the relationship between the method referenced by the specified MethodDef token and the paired property and event referenced by the specified EventProp token.</span></span>  
+# <a name="imetadataimportgetmethodsemantics-method"></a><span data-ttu-id="42995-102">IMetaDataImport::GetMethodSemantics 메서드</span><span class="sxs-lookup"><span data-stu-id="42995-102">IMetaDataImport::GetMethodSemantics Method</span></span>
+<span data-ttu-id="42995-103">토큰 쌍을 이루는 속성과 지정한 MethodDef 토큰이 참조 하는 메서드 및 이벤트 지정한 eventprop 참조 간의 관계를 나타내는 플래그를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="42995-103">Gets flags indicating the relationship between the method referenced by the specified MethodDef token and the paired property and event referenced by the specified EventProp token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="48897-104">구문</span><span class="sxs-lookup"><span data-stu-id="48897-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="42995-104">구문</span><span class="sxs-lookup"><span data-stu-id="42995-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetMethodSemantics (  
    [in]  mdMethodDef   mb,  
    [in]  mdToken       tkEventProp,  
@@ -37,29 +37,29 @@ HRESULT GetMethodSemantics (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="48897-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="48897-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="42995-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="42995-105">Parameters</span></span>  
  `mb`  
- <span data-ttu-id="48897-106">[in] 의미 체계 역할 정보를 가져올 메서드를 나타내는 MethodDef 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="48897-106">[in] A MethodDef token representing the method to get the semantic role information for.</span></span>  
+ <span data-ttu-id="42995-106">[in] 의미 체계 역할 정보를 가져올 메서드를 나타내는 MethodDef 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="42995-106">[in] A MethodDef token representing the method to get the semantic role information for.</span></span>  
   
  `tkEventProp`  
- <span data-ttu-id="48897-107">[in] 쌍으로 연결 된 속성 및 메서드의 역할을 검색할 원본에 대 한 이벤트를 나타내는 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="48897-107">[in] A token representing the paired property and event for which to get the method's role.</span></span>  
+ <span data-ttu-id="42995-107">[in] 쌍으로 연결 된 속성 및 메서드의 역할을 검색할 원본에 대 한 이벤트를 나타내는 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="42995-107">[in] A token representing the paired property and event for which to get the method's role.</span></span>  
   
  `pdwSemanticsFlags`  
- <span data-ttu-id="48897-108">[out] 연결 된 의미 체계 플래그에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="48897-108">[out] A pointer to the associated semantics flags.</span></span> <span data-ttu-id="48897-109">이 값은의 비트 마스크를 [CorMethodSemanticsAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodsemanticsattr-enumeration.md) 열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="48897-109">This value is a bitmask from the [CorMethodSemanticsAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodsemanticsattr-enumeration.md) enumeration.</span></span>  
+ <span data-ttu-id="42995-108">[out] 연결 된 의미 체계 플래그에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="42995-108">[out] A pointer to the associated semantics flags.</span></span> <span data-ttu-id="42995-109">이 값은의 비트 마스크를 [CorMethodSemanticsAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodsemanticsattr-enumeration.md) 열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="42995-109">This value is a bitmask from the [CorMethodSemanticsAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodsemanticsattr-enumeration.md) enumeration.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="48897-110">설명</span><span class="sxs-lookup"><span data-stu-id="48897-110">Remarks</span></span>  
- <span data-ttu-id="48897-111">합니다 [imetadataemit:: Defineproperty](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md) 메서드는 메서드의 의미 체계 플래그를 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="48897-111">The [IMetaDataEmit::DefineProperty](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md) method sets a method's semantics flags.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="42995-110">설명</span><span class="sxs-lookup"><span data-stu-id="42995-110">Remarks</span></span>  
+ <span data-ttu-id="42995-111">합니다 [imetadataemit:: Defineproperty](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md) 메서드는 메서드의 의미 체계 플래그를 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="42995-111">The [IMetaDataEmit::DefineProperty](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md) method sets a method's semantics flags.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="48897-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="48897-112">Requirements</span></span>  
- <span data-ttu-id="48897-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="48897-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="42995-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="42995-112">Requirements</span></span>  
+ <span data-ttu-id="42995-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="42995-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="48897-114">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="48897-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="42995-114">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="42995-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="48897-115">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="48897-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="42995-115">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="42995-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="48897-116">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="48897-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="42995-116">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="42995-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="48897-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="48897-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="42995-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="42995-117">See also</span></span>
 
-- [<span data-ttu-id="48897-118">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="48897-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="48897-119">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="48897-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="42995-118">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="42995-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="42995-119">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="42995-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

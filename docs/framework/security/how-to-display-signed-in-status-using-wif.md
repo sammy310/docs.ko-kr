@@ -3,101 +3,101 @@ title: '방법: WIF를 사용하여 로그인 상태 표시'
 ms.date: 03/30/2017
 ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
 author: BrucePerlerMS
-ms.openlocfilehash: a41f24faa5b535c02feef99ae0d592bd7d13db4e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6d81bd2023886799f939fc9851db516a00aa92df
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626092"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742446"
 ---
-# <a name="how-to-display-signed-in-status-using-wif"></a><span data-ttu-id="4e24b-102">방법: WIF를 사용하여 로그인 상태 표시</span><span class="sxs-lookup"><span data-stu-id="4e24b-102">How To: Display Signed In Status Using WIF</span></span>
-## <a name="applies-to"></a><span data-ttu-id="4e24b-103">적용 대상</span><span class="sxs-lookup"><span data-stu-id="4e24b-103">Applies To</span></span>  
+# <a name="how-to-display-signed-in-status-using-wif"></a><span data-ttu-id="17824-102">방법: WIF를 사용하여 로그인 상태 표시</span><span class="sxs-lookup"><span data-stu-id="17824-102">How To: Display Signed In Status Using WIF</span></span>
+## <a name="applies-to"></a><span data-ttu-id="17824-103">적용 대상</span><span class="sxs-lookup"><span data-stu-id="17824-103">Applies To</span></span>  
   
-- <span data-ttu-id="4e24b-104">Microsoft® Windows® Identity Foundation(WIF) 4.5</span><span class="sxs-lookup"><span data-stu-id="4e24b-104">Microsoft® Windows® Identity Foundation (WIF) 4.5</span></span>  
+- <span data-ttu-id="17824-104">Microsoft® Windows® Identity Foundation(WIF) 4.5</span><span class="sxs-lookup"><span data-stu-id="17824-104">Microsoft® Windows® Identity Foundation (WIF) 4.5</span></span>  
   
-- <span data-ttu-id="4e24b-105">ASP.NET® Web Forms</span><span class="sxs-lookup"><span data-stu-id="4e24b-105">ASP.NET® Web Forms</span></span>  
+- <span data-ttu-id="17824-105">ASP.NET® Web Forms</span><span class="sxs-lookup"><span data-stu-id="17824-105">ASP.NET® Web Forms</span></span>  
   
-## <a name="summary"></a><span data-ttu-id="4e24b-106">요약</span><span class="sxs-lookup"><span data-stu-id="4e24b-106">Summary</span></span>  
- <span data-ttu-id="4e24b-107">이 항목에서는 WIF 사용 가능 ASP.NET 애플리케이션에서 로그인 상태를 표시하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-107">This topic describes how to display the sign in status in a WIF-enabled ASP.NET application.</span></span> <span data-ttu-id="4e24b-108">WIF는 애플리케이션이 클레임을 인식하도록 설정하고 애플리케이션 리소스에 대한 인증 및 권한 부여를 관리하기 위한 메커니즘을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-108">WIF provides the mechanism for making your application claims-aware, and managing authentication and authorization for application resources.</span></span>  
+## <a name="summary"></a><span data-ttu-id="17824-106">요약</span><span class="sxs-lookup"><span data-stu-id="17824-106">Summary</span></span>  
+ <span data-ttu-id="17824-107">이 항목에서는 WIF 사용 가능 ASP.NET 애플리케이션에서 로그인 상태를 표시하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="17824-107">This topic describes how to display the sign in status in a WIF-enabled ASP.NET application.</span></span> <span data-ttu-id="17824-108">WIF는 애플리케이션이 클레임을 인식하도록 설정하고 애플리케이션 리소스에 대한 인증 및 권한 부여를 관리하기 위한 메커니즘을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="17824-108">WIF provides the mechanism for making your application claims-aware, and managing authentication and authorization for application resources.</span></span>  
   
-## <a name="contents"></a><span data-ttu-id="4e24b-109">목차</span><span class="sxs-lookup"><span data-stu-id="4e24b-109">Contents</span></span>  
+## <a name="contents"></a><span data-ttu-id="17824-109">목차</span><span class="sxs-lookup"><span data-stu-id="17824-109">Contents</span></span>  
   
-- <span data-ttu-id="4e24b-110">개요</span><span class="sxs-lookup"><span data-stu-id="4e24b-110">Overview</span></span>  
+- <span data-ttu-id="17824-110">개요</span><span class="sxs-lookup"><span data-stu-id="17824-110">Overview</span></span>  
   
-- <span data-ttu-id="4e24b-111">단계 요약</span><span class="sxs-lookup"><span data-stu-id="4e24b-111">Summary of Steps</span></span>  
+- <span data-ttu-id="17824-111">단계 요약</span><span class="sxs-lookup"><span data-stu-id="17824-111">Summary of Steps</span></span>  
   
-- <span data-ttu-id="4e24b-112">1단계 – ID 및 액세스 도구 확장 설치</span><span class="sxs-lookup"><span data-stu-id="4e24b-112">Step 1 – Install the Identity and Access Extension</span></span>  
+- <span data-ttu-id="17824-112">1단계 – ID 및 액세스 도구 확장 설치</span><span class="sxs-lookup"><span data-stu-id="17824-112">Step 1 – Install the Identity and Access Extension</span></span>  
   
-- <span data-ttu-id="4e24b-113">2단계 – 신뢰 당사자 ASP.NET 애플리케이션 만들기</span><span class="sxs-lookup"><span data-stu-id="4e24b-113">Step 2 – Create a Relying Party ASP.NET Application</span></span>  
+- <span data-ttu-id="17824-113">2단계 – 신뢰 당사자 ASP.NET 애플리케이션 만들기</span><span class="sxs-lookup"><span data-stu-id="17824-113">Step 2 – Create a Relying Party ASP.NET Application</span></span>  
   
-- <span data-ttu-id="4e24b-114">3단계 – 로컬 개발 STS를 사용하여 사용자 인증</span><span class="sxs-lookup"><span data-stu-id="4e24b-114">Step 3 – Enable Local Development STS to Authenticate Users</span></span>  
+- <span data-ttu-id="17824-114">3단계 – 로컬 개발 STS를 사용하여 사용자 인증</span><span class="sxs-lookup"><span data-stu-id="17824-114">Step 3 – Enable Local Development STS to Authenticate Users</span></span>  
   
-- <span data-ttu-id="4e24b-115">4단계 – ASP.NET 애플리케이션을 수정하여 로그인 상태 표시</span><span class="sxs-lookup"><span data-stu-id="4e24b-115">Step 4 – Modify Your ASP.NET Application to Display Sign In Status</span></span>  
+- <span data-ttu-id="17824-115">4단계 – ASP.NET 애플리케이션을 수정하여 로그인 상태 표시</span><span class="sxs-lookup"><span data-stu-id="17824-115">Step 4 – Modify Your ASP.NET Application to Display Sign In Status</span></span>  
   
-- <span data-ttu-id="4e24b-116">5단계 – WIF 및 ASP.NET 애플리케이션 간 통합 테스트</span><span class="sxs-lookup"><span data-stu-id="4e24b-116">Step 5 – Test the Integration Between WIF and Your ASP.NET Application</span></span>  
+- <span data-ttu-id="17824-116">5단계 – WIF 및 ASP.NET 애플리케이션 간 통합 테스트</span><span class="sxs-lookup"><span data-stu-id="17824-116">Step 5 – Test the Integration Between WIF and Your ASP.NET Application</span></span>  
   
-## <a name="overview"></a><span data-ttu-id="4e24b-117">개요</span><span class="sxs-lookup"><span data-stu-id="4e24b-117">Overview</span></span>  
- <span data-ttu-id="4e24b-118">이 항목에서는 WIF를 사용하여 간단한 클레임 인식 애플리케이션을 만드는 방법 및 사용자가 로그인되어 있는지 여부를 쉽게 표시하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-118">This topic demonstrates how to create a simple claims-aware application using WIF and how to easily display whether a user is signed in or not.</span></span> <span data-ttu-id="4e24b-119">다음 단계에서는 ID 및 액세스 Visual Studio 확장과 함께 제공되는 로컬 개발 STS를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-119">The following steps use the Local Development STS that is included with the Identity and Access Visual Studio Extension.</span></span> <span data-ttu-id="4e24b-120">로컬 개발 STS는 클레임을 애플리케이션에 통합하는 간단한 메서드를 제공하기 위해 테스트 및 개발 환경에서 사용되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-120">The Local Development STS is intended for a testing and development environment to provide a simple method of integrating claims into your application.</span></span> <span data-ttu-id="4e24b-121">실제 인증을 수행하지 않고 자격 증명이 필요하지 않으므로 프로덕션 환경에서 사용하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-121">It should never be used in a production environment, as it does not perform real authentication and credentials are not required.</span></span> <span data-ttu-id="4e24b-122">그러나 실제 인증을 사용하는 프로덕션 준비 애플리케이션의 경우 다음 단계의 명령형 코드가 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-122">However, the imperative code in the following steps is the same for a production-ready application using real authentication.</span></span>  
+## <a name="overview"></a><span data-ttu-id="17824-117">개요</span><span class="sxs-lookup"><span data-stu-id="17824-117">Overview</span></span>  
+ <span data-ttu-id="17824-118">이 항목에서는 WIF를 사용하여 간단한 클레임 인식 애플리케이션을 만드는 방법 및 사용자가 로그인되어 있는지 여부를 쉽게 표시하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="17824-118">This topic demonstrates how to create a simple claims-aware application using WIF and how to easily display whether a user is signed in or not.</span></span> <span data-ttu-id="17824-119">다음 단계에서는 ID 및 액세스 Visual Studio 확장과 함께 제공되는 로컬 개발 STS를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="17824-119">The following steps use the Local Development STS that is included with the Identity and Access Visual Studio Extension.</span></span> <span data-ttu-id="17824-120">로컬 개발 STS는 클레임을 애플리케이션에 통합하는 간단한 메서드를 제공하기 위해 테스트 및 개발 환경에서 사용되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="17824-120">The Local Development STS is intended for a testing and development environment to provide a simple method of integrating claims into your application.</span></span> <span data-ttu-id="17824-121">실제 인증을 수행하지 않고 자격 증명이 필요하지 않으므로 프로덕션 환경에서 사용하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="17824-121">It should never be used in a production environment, as it does not perform real authentication and credentials are not required.</span></span> <span data-ttu-id="17824-122">그러나 실제 인증을 사용하는 프로덕션 준비 애플리케이션의 경우 다음 단계의 명령형 코드가 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="17824-122">However, the imperative code in the following steps is the same for a production-ready application using real authentication.</span></span>  
   
-## <a name="summary-of-steps"></a><span data-ttu-id="4e24b-123">단계 요약</span><span class="sxs-lookup"><span data-stu-id="4e24b-123">Summary of Steps</span></span>  
+## <a name="summary-of-steps"></a><span data-ttu-id="17824-123">단계 요약</span><span class="sxs-lookup"><span data-stu-id="17824-123">Summary of Steps</span></span>  
   
-- <span data-ttu-id="4e24b-124">1단계 – ID 및 액세스 도구 확장 설치</span><span class="sxs-lookup"><span data-stu-id="4e24b-124">Step 1 – Install the Identity and Access Extension</span></span>  
+- <span data-ttu-id="17824-124">1단계 – ID 및 액세스 도구 확장 설치</span><span class="sxs-lookup"><span data-stu-id="17824-124">Step 1 – Install the Identity and Access Extension</span></span>  
   
-- <span data-ttu-id="4e24b-125">2단계 – 신뢰 당사자 ASP.NET 애플리케이션 만들기</span><span class="sxs-lookup"><span data-stu-id="4e24b-125">Step 2 – Create a Relying Party ASP.NET Application</span></span>  
+- <span data-ttu-id="17824-125">2단계 – 신뢰 당사자 ASP.NET 애플리케이션 만들기</span><span class="sxs-lookup"><span data-stu-id="17824-125">Step 2 – Create a Relying Party ASP.NET Application</span></span>  
   
-- <span data-ttu-id="4e24b-126">3단계 – 로컬 개발 STS를 사용하여 사용자 인증</span><span class="sxs-lookup"><span data-stu-id="4e24b-126">Step 3 – Enable Local Development STS to Authenticate Users</span></span>  
+- <span data-ttu-id="17824-126">3단계 – 로컬 개발 STS를 사용하여 사용자 인증</span><span class="sxs-lookup"><span data-stu-id="17824-126">Step 3 – Enable Local Development STS to Authenticate Users</span></span>  
   
-- <span data-ttu-id="4e24b-127">4단계 – ASP.NET 애플리케이션을 수정하여 로그인 상태 표시</span><span class="sxs-lookup"><span data-stu-id="4e24b-127">Step 4 – Modify Your ASP.NET Application to Display Sign In Status</span></span>  
+- <span data-ttu-id="17824-127">4단계 – ASP.NET 애플리케이션을 수정하여 로그인 상태 표시</span><span class="sxs-lookup"><span data-stu-id="17824-127">Step 4 – Modify Your ASP.NET Application to Display Sign In Status</span></span>  
   
-- <span data-ttu-id="4e24b-128">5단계 – WIF 및 ASP.NET 애플리케이션 간 통합 테스트</span><span class="sxs-lookup"><span data-stu-id="4e24b-128">Step 5 – Test the Integration Between WIF and Your ASP.NET Application</span></span>  
+- <span data-ttu-id="17824-128">5단계 – WIF 및 ASP.NET 애플리케이션 간 통합 테스트</span><span class="sxs-lookup"><span data-stu-id="17824-128">Step 5 – Test the Integration Between WIF and Your ASP.NET Application</span></span>  
   
-## <a name="step-1--install-the-identity-and-access-extension"></a><span data-ttu-id="4e24b-129">1단계 – ID 및 액세스 도구 확장 설치</span><span class="sxs-lookup"><span data-stu-id="4e24b-129">Step 1 – Install the Identity and Access Extension</span></span>  
- <span data-ttu-id="4e24b-130">이 단계에서는 Visual Studio 2012에 대한 ID 및 액세스 확장을 구성하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-130">This step describes how to configure the Identity and Access extension to Visual Studio 2012.</span></span> <span data-ttu-id="4e24b-131">이 확장은 STS 엔드포인트와 통신하도록 애플리케이션을 구성하는 프로세스를 자동화합니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-131">This extension automates the process of configuring your application to communicate with STS endpoints.</span></span>  
+## <a name="step-1--install-the-identity-and-access-extension"></a><span data-ttu-id="17824-129">1단계 – ID 및 액세스 도구 확장 설치</span><span class="sxs-lookup"><span data-stu-id="17824-129">Step 1 – Install the Identity and Access Extension</span></span>  
+ <span data-ttu-id="17824-130">이 단계에서는 Visual Studio 2012에 대한 ID 및 액세스 확장을 구성하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="17824-130">This step describes how to configure the Identity and Access extension to Visual Studio 2012.</span></span> <span data-ttu-id="17824-131">이 확장은 STS 엔드포인트와 통신하도록 애플리케이션을 구성하는 프로세스를 자동화합니다.</span><span class="sxs-lookup"><span data-stu-id="17824-131">This extension automates the process of configuring your application to communicate with STS endpoints.</span></span>  
   
-#### <a name="to-install-the-identity-and-access-extension"></a><span data-ttu-id="4e24b-132">ID 및 액세스 확장을 설치하려면</span><span class="sxs-lookup"><span data-stu-id="4e24b-132">To install the Identity and Access extension</span></span>  
+### <a name="to-install-the-identity-and-access-extension"></a><span data-ttu-id="17824-132">ID 및 액세스 확장을 설치하려면</span><span class="sxs-lookup"><span data-stu-id="17824-132">To install the Identity and Access extension</span></span>  
   
-1. <span data-ttu-id="4e24b-133">관리자로 승격된 모드에서 Visual Studio를 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-133">Start Visual Studio in elevated mode as administrator.</span></span>  
+1. <span data-ttu-id="17824-133">관리자로 승격된 모드에서 Visual Studio를 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="17824-133">Start Visual Studio in elevated mode as administrator.</span></span>  
   
-2. <span data-ttu-id="4e24b-134">Visual Studio에서 **도구**, **확장 관리자**를 차례로 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-134">In Visual Studio, click **Tools** and click **Extension Manager**.</span></span> <span data-ttu-id="4e24b-135">**확장 관리자** 창이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-135">The **Extension Manager** window appears.</span></span>  
+2. <span data-ttu-id="17824-134">Visual Studio에서 **도구**, **확장 관리자**를 차례로 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="17824-134">In Visual Studio, click **Tools** and click **Extension Manager**.</span></span> <span data-ttu-id="17824-135">**확장 관리자** 창이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="17824-135">The **Extension Manager** window appears.</span></span>  
   
-3. <span data-ttu-id="4e24b-136">**확장 관리자**의 왼쪽 메뉴에서 **온라인 확장**을 클릭하고 **Visual Studio 갤러리**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-136">In **Extension Manager**, click **Online Extensions** from the left menu, then select **Visual Studio Gallery**.</span></span>  
+3. <span data-ttu-id="17824-136">**확장 관리자**의 왼쪽 메뉴에서 **온라인 확장**을 클릭하고 **Visual Studio 갤러리**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="17824-136">In **Extension Manager**, click **Online Extensions** from the left menu, then select **Visual Studio Gallery**.</span></span>  
   
-4. <span data-ttu-id="4e24b-137">**확장 관리자**의 오른쪽 위에서 *ID 및 액세스*를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-137">In the top right corner of **Extension Manager**, search for *Identity and Access*.</span></span>  
+4. <span data-ttu-id="17824-137">**확장 관리자**의 오른쪽 위에서 *ID 및 액세스*를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="17824-137">In the top right corner of **Extension Manager**, search for *Identity and Access*.</span></span>  
   
-5. <span data-ttu-id="4e24b-138">**ID 및 액세스** 항목이 검색 결과에 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-138">The **Identity and Access** item will appear in the search results.</span></span> <span data-ttu-id="4e24b-139">해당 항목을 클릭하고 **다운로드**를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-139">Click it, and then click **Download**.</span></span>  
+5. <span data-ttu-id="17824-138">**ID 및 액세스** 항목이 검색 결과에 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="17824-138">The **Identity and Access** item will appear in the search results.</span></span> <span data-ttu-id="17824-139">해당 항목을 클릭하고 **다운로드**를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="17824-139">Click it, and then click **Download**.</span></span>  
   
-6. <span data-ttu-id="4e24b-140">**다운로드 및 설치** 대화 상자가 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-140">The **Download and Install** dialog appears.</span></span> <span data-ttu-id="4e24b-141">사용 약관에 동의하면 **설치**를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-141">If you agree with the license terms, click **Install**.</span></span>  
+6. <span data-ttu-id="17824-140">**다운로드 및 설치** 대화 상자가 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="17824-140">The **Download and Install** dialog appears.</span></span> <span data-ttu-id="17824-141">사용 약관에 동의하면 **설치**를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="17824-141">If you agree with the license terms, click **Install**.</span></span>  
   
-7. <span data-ttu-id="4e24b-142">**ID 및 액세스** 확장이 설치를 완료하면 관리자 모드에서 Visual Studio를 다시 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-142">When the **Identity and Access** extension has finished installing, restart Visual Studio in administrator mode.</span></span>  
+7. <span data-ttu-id="17824-142">**ID 및 액세스** 확장이 설치를 완료하면 관리자 모드에서 Visual Studio를 다시 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="17824-142">When the **Identity and Access** extension has finished installing, restart Visual Studio in administrator mode.</span></span>  
   
-## <a name="step-2--create-a-relying-party-aspnet-application"></a><span data-ttu-id="4e24b-143">2단계 – 신뢰 당사자 ASP.NET 애플리케이션 만들기</span><span class="sxs-lookup"><span data-stu-id="4e24b-143">Step 2 – Create a Relying Party ASP.NET Application</span></span>  
- <span data-ttu-id="4e24b-144">이 단계에서는 WIF와 통합될 신뢰 당사자 ASP.NET Web Forms 애플리케이션을 만드는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-144">This step describes how to create a relying party ASP.NET Web Forms application that will integrate with WIF.</span></span>  
+## <a name="step-2--create-a-relying-party-aspnet-application"></a><span data-ttu-id="17824-143">2단계 – 신뢰 당사자 ASP.NET 애플리케이션 만들기</span><span class="sxs-lookup"><span data-stu-id="17824-143">Step 2 – Create a Relying Party ASP.NET Application</span></span>  
+ <span data-ttu-id="17824-144">이 단계에서는 WIF와 통합될 신뢰 당사자 ASP.NET Web Forms 애플리케이션을 만드는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="17824-144">This step describes how to create a relying party ASP.NET Web Forms application that will integrate with WIF.</span></span>  
   
-#### <a name="to-create-a-simple-aspnet-application"></a><span data-ttu-id="4e24b-145">간단한 ASP.NET 애플리케이션을 만들려면</span><span class="sxs-lookup"><span data-stu-id="4e24b-145">To create a simple ASP.NET application</span></span>  
+### <a name="to-create-a-simple-aspnet-application"></a><span data-ttu-id="17824-145">간단한 ASP.NET 애플리케이션을 만들려면</span><span class="sxs-lookup"><span data-stu-id="17824-145">To create a simple ASP.NET application</span></span>  
   
-1. <span data-ttu-id="4e24b-146">Visual Studio를 시작하고 **파일**, **새로 만들기**, **프로젝트**를 차례로 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-146">Start Visual Studio and click **File**, **New**, and then **Project**.</span></span>  
+1. <span data-ttu-id="17824-146">Visual Studio를 시작하고 **파일**, **새로 만들기**, **프로젝트**를 차례로 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="17824-146">Start Visual Studio and click **File**, **New**, and then **Project**.</span></span>  
   
-2. <span data-ttu-id="4e24b-147">**새 프로젝트** 창에서 **ASP.NET Web Forms 응용 프로그램**을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-147">In the **New Project** window, click **ASP.NET Web Forms Application**.</span></span>  
+2. <span data-ttu-id="17824-147">**새 프로젝트** 창에서 **ASP.NET Web Forms 응용 프로그램**을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="17824-147">In the **New Project** window, click **ASP.NET Web Forms Application**.</span></span>  
   
-3. <span data-ttu-id="4e24b-148">**이름**에서 `TestApp`을 입력하고 **확인**을 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-148">In **Name**, enter `TestApp` and press **OK**.</span></span>  
+3. <span data-ttu-id="17824-148">**이름**에서 `TestApp`을 입력하고 **확인**을 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="17824-148">In **Name**, enter `TestApp` and press **OK**.</span></span>  
   
-## <a name="step-3--enable-local-development-sts-to-authenticate-users"></a><span data-ttu-id="4e24b-149">3단계 – 로컬 개발 STS를 사용하여 사용자 인증</span><span class="sxs-lookup"><span data-stu-id="4e24b-149">Step 3 – Enable Local Development STS to Authenticate Users</span></span>  
- <span data-ttu-id="4e24b-150">이 단계에서는 애플리케이션에서 로컬 개발 STS를 사용하도록 설정하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-150">This step describes how to enable Local Development STS in your application.</span></span> <span data-ttu-id="4e24b-151">로컬 개발 STS는 Visual Studio용 ID 및 액세스 확장을 통해 사용하도록 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-151">Local Development STS is enabled by using the Identity and Access extension for Visual Studio.</span></span>  
+## <a name="step-3--enable-local-development-sts-to-authenticate-users"></a><span data-ttu-id="17824-149">3단계 – 로컬 개발 STS를 사용하여 사용자 인증</span><span class="sxs-lookup"><span data-stu-id="17824-149">Step 3 – Enable Local Development STS to Authenticate Users</span></span>  
+ <span data-ttu-id="17824-150">이 단계에서는 애플리케이션에서 로컬 개발 STS를 사용하도록 설정하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="17824-150">This step describes how to enable Local Development STS in your application.</span></span> <span data-ttu-id="17824-151">로컬 개발 STS는 Visual Studio용 ID 및 액세스 확장을 통해 사용하도록 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="17824-151">Local Development STS is enabled by using the Identity and Access extension for Visual Studio.</span></span>  
   
-#### <a name="to-enable-local-development-sts-in-your-aspnet-application"></a><span data-ttu-id="4e24b-152">ASP.NET 애플리케이션에서 로컬 개발 STS를 사용하도록 설정하려면</span><span class="sxs-lookup"><span data-stu-id="4e24b-152">To enable Local Development STS in your ASP.NET application</span></span>  
+### <a name="to-enable-local-development-sts-in-your-aspnet-application"></a><span data-ttu-id="17824-152">ASP.NET 애플리케이션에서 로컬 개발 STS를 사용하도록 설정하려면</span><span class="sxs-lookup"><span data-stu-id="17824-152">To enable Local Development STS in your ASP.NET application</span></span>  
   
-1. <span data-ttu-id="4e24b-153">Visual Studio의 **솔루션 탐색기**에서 **TestApp** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **ID 및 액세스**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-153">In Visual Studio, right-click the **TestApp** project under **Solution Explorer**, then select **Identity and Access**.</span></span>  
+1. <span data-ttu-id="17824-153">Visual Studio의 **솔루션 탐색기**에서 **TestApp** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **ID 및 액세스**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="17824-153">In Visual Studio, right-click the **TestApp** project under **Solution Explorer**, then select **Identity and Access**.</span></span>  
   
-2. <span data-ttu-id="4e24b-154">**ID 및 액세스** 창이 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-154">The **Identity and Access** window appears.</span></span> <span data-ttu-id="4e24b-155">**공급자**에서 **로컬 개발 STS로 응용 프로그램 테스트**를 선택한 다음 **적용**을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-155">Under **Providers**, select **Test your application with the Local Development STS**, then click **Apply**.</span></span>  
+2. <span data-ttu-id="17824-154">**ID 및 액세스** 창이 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="17824-154">The **Identity and Access** window appears.</span></span> <span data-ttu-id="17824-155">**공급자**에서 **로컬 개발 STS로 응용 프로그램 테스트**를 선택한 다음 **적용**을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="17824-155">Under **Providers**, select **Test your application with the Local Development STS**, then click **Apply**.</span></span>  
   
-## <a name="step-4--modify-your-aspnet-application-to-display-sign-in-status"></a><span data-ttu-id="4e24b-156">4단계 – ASP.NET 애플리케이션을 수정하여 로그인 상태 표시</span><span class="sxs-lookup"><span data-stu-id="4e24b-156">Step 4 – Modify Your ASP.NET Application to Display Sign In Status</span></span>  
- <span data-ttu-id="4e24b-157">이 단계에서는 ASP.NET 애플리케이션을 수정하여 현재 사용자가 로그인되어 있는지 여부를 동적으로 표시하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-157">This step describes how to modify your ASP.NET application to dynamically display whether the current user is signed in.</span></span> <span data-ttu-id="4e24b-158">STS 공급자가 구성되면 WIF가 들어오는 클레임을 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-158">Once your STS provider has been configured, WIF handles the incoming claims.</span></span> <span data-ttu-id="4e24b-159">이제 인증 결과를 표시하도록 애플리케이션 코드를 구성해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-159">Now you need to configure your application’s code to display the result of the authentication.</span></span>  
+## <a name="step-4--modify-your-aspnet-application-to-display-sign-in-status"></a><span data-ttu-id="17824-156">4단계 – ASP.NET 애플리케이션을 수정하여 로그인 상태 표시</span><span class="sxs-lookup"><span data-stu-id="17824-156">Step 4 – Modify Your ASP.NET Application to Display Sign In Status</span></span>  
+ <span data-ttu-id="17824-157">이 단계에서는 ASP.NET 애플리케이션을 수정하여 현재 사용자가 로그인되어 있는지 여부를 동적으로 표시하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="17824-157">This step describes how to modify your ASP.NET application to dynamically display whether the current user is signed in.</span></span> <span data-ttu-id="17824-158">STS 공급자가 구성되면 WIF가 들어오는 클레임을 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="17824-158">Once your STS provider has been configured, WIF handles the incoming claims.</span></span> <span data-ttu-id="17824-159">이제 인증 결과를 표시하도록 애플리케이션 코드를 구성해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="17824-159">Now you need to configure your application’s code to display the result of the authentication.</span></span>  
   
-#### <a name="to-display-sign-in-status"></a><span data-ttu-id="4e24b-160">로그인 상태를 표시하려면</span><span class="sxs-lookup"><span data-stu-id="4e24b-160">To display sign in status</span></span>  
+### <a name="to-display-sign-in-status"></a><span data-ttu-id="17824-160">로그인 상태를 표시하려면</span><span class="sxs-lookup"><span data-stu-id="17824-160">To display sign in status</span></span>  
   
-1. <span data-ttu-id="4e24b-161">Visual Studio의 **TestApp** 프로젝트에서 **Default.aspx** 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-161">In Visual Studio, open the **Default.aspx** file under the **TestApp** project.</span></span>  
+1. <span data-ttu-id="17824-161">Visual Studio의 **TestApp** 프로젝트에서 **Default.aspx** 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="17824-161">In Visual Studio, open the **Default.aspx** file under the **TestApp** project.</span></span>  
   
-2. <span data-ttu-id="4e24b-162">**Default.aspx** 파일의 기존 태그를 다음 태그로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-162">Replace the existing markup in the **Default.aspx** file with the following markup:</span></span>  
+2. <span data-ttu-id="17824-162">**Default.aspx** 파일의 기존 태그를 다음 태그로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="17824-162">Replace the existing markup in the **Default.aspx** file with the following markup:</span></span>  
   
     ```  
     <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
@@ -114,12 +114,12 @@ ms.locfileid: "64626092"
     </html>  
     ```  
   
-3. <span data-ttu-id="4e24b-163">**Default.aspx**를 저장하고 나서 **Default.aspx.cs**라는 코드 숨김 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-163">Save **Default.aspx**, and then open its code behind file named **Default.aspx.cs**.</span></span>  
+3. <span data-ttu-id="17824-163">**Default.aspx**를 저장하고 나서 **Default.aspx.cs**라는 코드 숨김 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="17824-163">Save **Default.aspx**, and then open its code behind file named **Default.aspx.cs**.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="4e24b-164">**Default.aspx.cs**는 솔루션 탐색기에서 **Default.aspx** 아래에 숨겨질 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-164">**Default.aspx.cs** may be hidden beneath **Default.aspx** in Solution Explorer.</span></span> <span data-ttu-id="4e24b-165">**Default.aspx.cs**가 표시되지 않으면 옆에 있는 삼각형을 클릭하여 **Default.aspx**를 확장합니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-165">If **Default.aspx.cs** is not visible, expand **Default.aspx** by clicking on the triangle next to it.</span></span>  
+    >  <span data-ttu-id="17824-164">**Default.aspx.cs**는 솔루션 탐색기에서 **Default.aspx** 아래에 숨겨질 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="17824-164">**Default.aspx.cs** may be hidden beneath **Default.aspx** in Solution Explorer.</span></span> <span data-ttu-id="17824-165">**Default.aspx.cs**가 표시되지 않으면 옆에 있는 삼각형을 클릭하여 **Default.aspx**를 확장합니다.</span><span class="sxs-lookup"><span data-stu-id="17824-165">If **Default.aspx.cs** is not visible, expand **Default.aspx** by clicking on the triangle next to it.</span></span>  
   
-4. <span data-ttu-id="4e24b-166">**Default.aspx.cs**의 기존 코드를 다음 코드로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-166">Replace the existing code in **Default.aspx.cs** with the following code:</span></span>  
+4. <span data-ttu-id="17824-166">**Default.aspx.cs**의 기존 코드를 다음 코드로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="17824-166">Replace the existing code in **Default.aspx.cs** with the following code:</span></span>  
   
     ```csharp  
     using System;  
@@ -144,13 +144,13 @@ ms.locfileid: "64626092"
     }  
     ```  
   
-5. <span data-ttu-id="4e24b-167">**Default.aspx.cs**를 저장하고 응용 프로그램을 빌드합니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-167">Save **Default.aspx.cs**, and build the application.</span></span>  
+5. <span data-ttu-id="17824-167">**Default.aspx.cs**를 저장하고 응용 프로그램을 빌드합니다.</span><span class="sxs-lookup"><span data-stu-id="17824-167">Save **Default.aspx.cs**, and build the application.</span></span>  
   
-## <a name="step-5--test-the-integration-between-wif-and-your-aspnet-application"></a><span data-ttu-id="4e24b-168">5단계 – WIF 및 ASP.NET 애플리케이션 간 통합 테스트</span><span class="sxs-lookup"><span data-stu-id="4e24b-168">Step 5 – Test the Integration Between WIF and Your ASP.NET Application</span></span>  
- <span data-ttu-id="4e24b-169">이 단계에서는 WIF 및 ASP.NET 애플리케이션 간 통합을 테스트하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-169">This step describes how you can test the integration between WIF and your ASP.NET application.</span></span>  
+## <a name="step-5--test-the-integration-between-wif-and-your-aspnet-application"></a><span data-ttu-id="17824-168">5단계 – WIF 및 ASP.NET 애플리케이션 간 통합 테스트</span><span class="sxs-lookup"><span data-stu-id="17824-168">Step 5 – Test the Integration Between WIF and Your ASP.NET Application</span></span>  
+ <span data-ttu-id="17824-169">이 단계에서는 WIF 및 ASP.NET 애플리케이션 간 통합을 테스트하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="17824-169">This step describes how you can test the integration between WIF and your ASP.NET application.</span></span>  
   
-#### <a name="to-test-the-integration-between-wif-and-aspnet"></a><span data-ttu-id="4e24b-170">WIF 및 ASP.NET 응용 프로그램 간 통합을 테스트하려면</span><span class="sxs-lookup"><span data-stu-id="4e24b-170">To test the integration between WIF and ASP.NET</span></span>  
+### <a name="to-test-the-integration-between-wif-and-aspnet"></a><span data-ttu-id="17824-170">WIF 및 ASP.NET 응용 프로그램 간 통합을 테스트하려면</span><span class="sxs-lookup"><span data-stu-id="17824-170">To test the integration between WIF and ASP.NET</span></span>  
   
-1. <span data-ttu-id="4e24b-171">Visual Studio에서 **F5** 키를 눌러 애플리케이션 디버깅을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-171">In Visual Studio, press **F5** to start debugging your application.</span></span> <span data-ttu-id="4e24b-172">오류가 발견되지 않으면 새 브라우저 창이 열립니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-172">If no errors are found, a new browser window will open.</span></span>  
+1. <span data-ttu-id="17824-171">Visual Studio에서 **F5** 키를 눌러 애플리케이션 디버깅을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="17824-171">In Visual Studio, press **F5** to start debugging your application.</span></span> <span data-ttu-id="17824-172">오류가 발견되지 않으면 새 브라우저 창이 열립니다.</span><span class="sxs-lookup"><span data-stu-id="17824-172">If no errors are found, a new browser window will open.</span></span>  
   
-2. <span data-ttu-id="4e24b-173">브라우저가 요청을 STS로 자동으로 리디렉션하고 나서 Default.aspx 페이지를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-173">You may notice that the browser silently redirects your request to the STS, and then opens the Default.aspx page.</span></span> <span data-ttu-id="4e24b-174">WIF가 제대로 구성 하는 경우에 다음 텍스트를 표시 하는 사이트를 표시 됩니다. **"로그인"** 합니다.</span><span class="sxs-lookup"><span data-stu-id="4e24b-174">If WIF is properly configured, you should see the site display the following text: **"You are signed in"**.</span></span>
+2. <span data-ttu-id="17824-173">브라우저가 요청을 STS로 자동으로 리디렉션하고 나서 Default.aspx 페이지를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="17824-173">You may notice that the browser silently redirects your request to the STS, and then opens the Default.aspx page.</span></span> <span data-ttu-id="17824-174">WIF가 제대로 구성 하는 경우에 다음 텍스트를 표시 하는 사이트를 표시 됩니다. **"로그인"** 합니다.</span><span class="sxs-lookup"><span data-stu-id="17824-174">If WIF is properly configured, you should see the site display the following text: **"You are signed in"**.</span></span>
