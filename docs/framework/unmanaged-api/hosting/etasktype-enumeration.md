@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f256195a4cd5b18f568e05156db867aa5dba9161
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73098077e3860d3f4a8a02921ecedf8dff24165b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61627965"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774053"
 ---
 # <a name="etasktype-enumeration"></a>ETaskType 열거형
 으로 표시 되는 작업의 형식을 나타내는 값을 포함 한 [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) 또는 [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) 인터페이스입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum ETaskType {  
     TT_DEBUGGERHELPER           = 0x1,  
     TT_GC                       = 0x2,  

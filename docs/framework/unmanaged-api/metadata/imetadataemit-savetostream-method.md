@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f6b5582b96dfc83eed482def2c4c4abfeb33a4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 96b3b270fb12aa451d9026435dd3d2c4c196b09c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62042993"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782021"
 ---
 # <a name="imetadataemitsavetostream-method"></a>IMetaDataEmit::SaveToStream 메서드
 지정 된 현재 범위에서 모든 메타 데이터를 저장 `IStream`합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT SaveToStream (   
     [in]  IStream     *pIStream,  
     [in]  DWORD       dwSaveFlags  

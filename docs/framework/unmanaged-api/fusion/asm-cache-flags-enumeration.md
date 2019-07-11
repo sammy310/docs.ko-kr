@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 619643eb50abc75fd10d59b38767013b2617c8cf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 27caa9916b5adab2b2049a8f66ac34fed40e4d7f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61915293"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778580"
 ---
 # <a name="asmcacheflags-enumeration"></a>ASM_CACHE_FLAGS 열거형
 표현 되는 어셈블리의 소스를 나타냅니다 [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) 전역 어셈블리 캐시에 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum {  
     ASM_CACHE_ZAP       = 0x01,  
     ASM_CACHE_GAC       = 0x02,  
@@ -40,7 +40,7 @@ typedef enum {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`ASM_CACHE_ZAP`|Ngen.exe를 사용 하 여 미리 컴파일된 어셈블리의 캐시를 열거 합니다.|  
 |`ASM_CACHE_GAC`|전역 어셈블리 캐시를 열거합니다.|  

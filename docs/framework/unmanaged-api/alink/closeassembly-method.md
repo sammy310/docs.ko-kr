@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 94c1c083d010cd82fd9e9e2f02b23e81d88fedd5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 18e0b7b3547bb246588f6b255483d4c317e0df88
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790093"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742234"
 ---
 # <a name="closeassembly-method"></a>CloseAssembly 메서드
 어셈블리 작업을 완료 합니다. 새 어셈블리 또는 바인딩되지 않은 모듈을 시작 하기 전에이 메서드를 호출 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT CloseAssembly(  
     mdAssembly AssemblyID  
 ) PURE;  

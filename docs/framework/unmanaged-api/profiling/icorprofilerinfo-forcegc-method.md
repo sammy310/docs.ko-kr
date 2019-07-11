@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5672d1b89b4260d1ebfbf444deb2702f215a0e95
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 208552dd94f587b9326280ad455ca2478ae4ac4d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049650"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780257"
 ---
 # <a name="icorprofilerinfoforcegc-method"></a>ICorProfilerInfo::ForceGC 메서드
 가비지 수집이 CLR (공용 언어 런타임) 내에 발생 하도록 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT ForceGC();  
 ```  
   

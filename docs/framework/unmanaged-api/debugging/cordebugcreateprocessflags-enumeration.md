@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae3ba480e208762f5a80f9f1b78dd008f02b6df4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0dfc7da632a5e56f0f6ab6ed55d1e722f49c7e88
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609115"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740286"
 ---
 # <a name="cordebugcreateprocessflags-enumeration"></a>CorDebugCreateProcessFlags 열거형
 에 대 한 호출에서 사용할 수 있는 추가 디버깅 옵션을 제공 합니다 [icordebug:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) 메서드.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorDebugCreateProcessFlags {  
     DEBUG_NO_SPECIAL_OPTIONS    = 0x0000  
 } CorDebugCreateProcessFlags;  
@@ -36,7 +36,7 @@ typedef enum CorDebugCreateProcessFlags {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`DEBUG_NO_SPECIAL_OPTIONS`|특별 한 옵션 없이 설정 됩니다.|  
   

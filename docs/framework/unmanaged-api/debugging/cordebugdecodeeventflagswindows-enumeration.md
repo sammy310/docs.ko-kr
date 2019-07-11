@@ -12,19 +12,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d4e006a03db5b16de93dfd07ec7b964db4bfc1d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bab7da5855eaf562e55738b489ebf6f62dc45d04
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609219"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740223"
 ---
 # <a name="cordebugdecodeeventflagswindows-enumeration"></a>CorDebugDecodeEventFlagsWindows 열거형
 Windows 플랫폼에서 디버그 이벤트에 대한 추가 정보를 제공합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorDebugDecodeEventFlagsWindows {  
     IS_FIRST_CHANCE = 1,  
 } CorDebugDecodeEventFlagsWindows;  
@@ -32,7 +32,7 @@ typedef enum CorDebugDecodeEventFlagsWindows {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`IS_FIRST_CHANCE`|디버그 이벤트가 첫째 예외임을 나타냅니다.|  
   

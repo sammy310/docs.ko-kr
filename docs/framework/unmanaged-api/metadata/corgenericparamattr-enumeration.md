@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0aa9b84c9e16811f799a3cd2ad096508db3f7d34
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 981829500e499be05a8de7c1ffb4683429a903e6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045796"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781854"
 ---
 # <a name="corgenericparamattr-enumeration"></a>CorGenericParamAttr 열거형
 설명 하는 값을 포함 합니다 <xref:System.Type> 호출에서 사용된 된 제네릭 형식에 대 한 매개 변수 [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorGenericParamAttr {  
   
     gpVarianceMask                     =   0x0003,  
@@ -47,7 +47,7 @@ typedef enum CorGenericParamAttr {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`gpVarianceMask`|매개 변수 분산 인터페이스 및 대리자에 제네릭 매개 변수에 적용 됩니다.|  
 |`gpNonVariant`|분산이 없음을 나타냅니다.|  

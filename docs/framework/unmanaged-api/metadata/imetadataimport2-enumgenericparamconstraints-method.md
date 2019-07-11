@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f66b0145dbaece7292d2ccad169a97fbb10b6d11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ba9d7f8873d15a7cab2b9893feb8563dfc971b0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61959596"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778753"
 ---
 # <a name="imetadataimport2enumgenericparamconstraints-method"></a>IMetaDataImport2::EnumGenericParamConstraints 메서드
 제네릭 매개 변수 제약 조건이 지정된 된 토큰을 나타내는 제네릭 매개 변수를 사용 하 여 연결의 배열에 대 한 열거자를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT EnumGenericParamConstraints (  
     [in, out] HCORENUM                *phEnum,  
     [in]  mdGenericParam              tk,  
@@ -57,7 +57,7 @@ HRESULT EnumGenericParamConstraints (
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|설명|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |`S_OK`|`EnumGenericParameterConstraints` 성공적으로 반환 합니다.|  
 |`S_FALSE`|`phEnum` 멤버 요소가 없습니다. 이 경우 `pcGenericParameterConstraints` 0 (영)으로 설정 됩니다.|  

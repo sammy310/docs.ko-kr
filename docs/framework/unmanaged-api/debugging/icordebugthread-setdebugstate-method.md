@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d29f5cefd22592fa8949ff5361109c09c0972b24
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 66f60b2342b6ff64f1329cbe57032291d5139384
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987144"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770593"
 ---
 # <a name="icordebugthreadsetdebugstate-method"></a>ICorDebugThread::SetDebugState 메서드
 이 ICorDebugThread 디버깅 상태를 설명 하는 플래그를 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT SetDebugState (  
     [in] CorDebugThreadState state  
 );  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 88cd08b4290739808079bc8ecb713a5c5ea96584
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1baee71b5b8575f51eb54fbc8a037a5dddd24500
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777899"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782533"
 ---
 # <a name="imetadataimportfindfield-method"></a>IMetaDataImport::FindField 메서드
 에 포인터를 가져옵니다 FieldDef 토큰 포함 되는 필드에 대 한 지정 된 <xref:System.Type> 지정 된 이름 및 메타 데이터 서명을 하 고 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT FindField (  
    [in]  mdTypeDef         td,  
    [in]  LPCWSTR           szName,  

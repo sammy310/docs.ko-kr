@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5754968511f7b2db48f60b99748f10f5d27e8d21
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e959ce7a77ad6ceb7f2fc848193cbd9fff028279
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599405"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739611"
 ---
 # <a name="cordebugsetcontextflag-enumeration"></a>CorDebugSetContextFlag 열거형
 컨텍스트가 스택의 활성(리프) 프레임에서 가져온 것인지 아니면 다른 프레임에서 해제하여 계산되었는지를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorDebugSetContextFlag  
 {  
    SET_CONTEXT_FLAG_ACTIVE_FRAME = 1  
@@ -38,7 +38,7 @@ typedef enum CorDebugSetContextFlag
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |SET_CONTEXT_FLAG_ACTIVE_FRAME|컨텍스트는 스레드의 현재 컨텍스트입니다.|  
 |SET_CONTEXT_FLAG_UNWIND_FRAME|컨텍스트는 다른 프레임에서 해제 하 여 계산 됩니다.|  

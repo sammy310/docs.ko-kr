@@ -3,12 +3,12 @@ title: '방법: Windows 인증을 사용하여 클레임 인식 ASP.NET 애플�
 ms.date: 03/30/2017
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 author: BrucePerlerMS
-ms.openlocfilehash: 039fccde55dd48571e38f064f68b16480b65cb44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b58a4066538441a48bc6646f364e846a25cc8c8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650412"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742504"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>방법: Windows 인증을 사용하여 클레임 인식 ASP.NET 애플리케이션 빌드
 ## <a name="applies-to"></a>적용 대상  
@@ -56,7 +56,7 @@ ms.locfileid: "64650412"
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>1단계 – 간단한 ASP.NET Web Forms 애플리케이션 만들기  
  이 단계에서는 새로운 ASP.NET Web Forms 애플리케이션을 만듭니다.  
   
-#### <a name="to-create-a-simple-aspnet-application"></a>간단한 ASP.NET 애플리케이션을 만들려면  
+### <a name="to-create-a-simple-aspnet-application"></a>간단한 ASP.NET 애플리케이션을 만들려면  
   
 1. Visual Studio를 시작하고 **파일**, **새로 만들기**, **프로젝트**를 차례로 클릭합니다.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "64650412"
 ## <a name="step-2--configure-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>2단계 – Windows 인증을 사용하여 클레임에 대한 ASP.NET Web Forms 애플리케이션 구성  
  이 단계에서는 *Web.config* 구성 파일에 구성 항목을 추가하고 *Default.aspx* 파일을 수정하여 계정에 대한 클레임 정보를 표시합니다.  
   
-#### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a>Windows 인증을 사용하여 클레임에 대한 ASP.NET 애플리케이션을 구성하려면  
+### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a>Windows 인증을 사용하여 클레임에 대한 ASP.NET 애플리케이션을 구성하려면  
   
 1. **TestApp** 프로젝트의 *Default.aspx* 파일에서 기존 태그를 다음으로 바꿉니다.  
   
@@ -136,6 +136,6 @@ ms.locfileid: "64650412"
 ## <a name="step-3--test-your-solution"></a>3단계 - 솔루션 테스트  
  이 단계에서는 ASP.NET Web Forms 애플리케이션을 테스트하고 사용자가 Windows 인증으로 로그인할 때 클레임이 제공되는지 확인합니다.  
   
-#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Windows 인증을 사용하여 클레임에 대한 ASP.NET Web Forms 애플리케이션을 테스트하려면  
+### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Windows 인증을 사용하여 클레임에 대한 ASP.NET Web Forms 애플리케이션을 테스트하려면  
   
 1. **F5** 키를 눌러 응용 프로그램을 빌드하고 실행합니다. *Default.aspx*가 있어야 하고 Windows 계정 이름(도메인 이름)이 페이지의 오른쪽 위에 인증된 사용자로 표시되어 있어야 합니다. 페이지의 콘텐츠에 Windows 계정에서 검색된 클레임으로 채워진 표가 포함되어야 합니다.

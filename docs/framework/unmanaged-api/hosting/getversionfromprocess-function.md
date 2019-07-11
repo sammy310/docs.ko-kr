@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3055ac73f15329015f532f42c1f922eab38828cb
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 4015ecec38466650488a653641f5af93c4680f22
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490299"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779590"
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess 함수
 지정 된 프로세스 핸들을 사용 하 여 연결 된 공용 언어 런타임 (CLR)의 버전 번호를 가져옵니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "66490299"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetVersionFromProcess (  
     [in]  HANDLE  hProcess,   
     [out] LPWSTR  pVersion,   
@@ -56,7 +56,7 @@ HRESULT GetVersionFromProcess (
 ## <a name="return-value"></a>반환 값  
  이 메서드는 다음 값 외에도 WinError.h에 정의 된 대로 표준 구성 요소 개체 모델 (COM) 오류 코드를 반환 합니다.  
   
-|반환 코드|설명|  
+|반환 코드|Description|  
 |-----------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
 |E_INVALIDARG|`pVersion` isnull 및 `cchBuffer` null이 아니면 또는 그 반대의 경우도 마찬가지입니다.<br /><br /> 또는<br /><br /> `hProcess` 프로세스에는 유효한 핸들이 아닙니다.<br /><br /> 또는<br /><br /> CLR 로드 되지 않습니다.|  

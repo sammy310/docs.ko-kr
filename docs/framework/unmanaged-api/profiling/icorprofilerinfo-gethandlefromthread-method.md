@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8fc26ad9b25ad243bf868d6ef3155360509e6483
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be8f4e396171f3e56b5b93969d3960b7aaea142e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049585"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780644"
 ---
 # <a name="icorprofilerinfogethandlefromthread-method"></a>ICorProfilerInfo::GetHandleFromThread 메서드
 Win32 스레드 핸들을 스레드 ID를 매핑합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetHandleFromThread(  
     [in]  ThreadID threadId,  
     [out] HANDLE  *phThread);  

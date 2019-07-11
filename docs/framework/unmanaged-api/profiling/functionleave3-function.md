@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9dce2f961a01b70c0cba50894d670a586a40b605
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 27b2241f7eb0e1ce8b0728a54028f9b4a6112e36
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586825"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781258"
 ---
 # <a name="functionleave3-function"></a>FunctionLeave3 함수
 제어 함수에서 반환 되는 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 void __stdcall FunctionLeave3(FunctionOrRemappedID functionOrRemappedID);  
 ```  
   

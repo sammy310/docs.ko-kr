@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 848765a4ea9657020bd84e476f992ae69750dda9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 61a9cad9d0ce807d62c811e77402b8cc6d8c6905
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617701"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740698"
 ---
 # <a name="corgcreference-structure"></a>COR_GC_REFERENCE 구조체
 가비지 수집할 개체에 대한 정보를 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef struct _COR_GC_REFERENCE {  
     ICorDebugAppDomain *domain;   
     ICorDebugValue *location;  
@@ -39,7 +39,7 @@ typedef struct _COR_GC_REFERENCE {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`domain`|핸들 또는 개체가 속한 응용 프로그램 도메인에 대 한 포인터입니다. 해당 값 `null`합니다.|  
 |`location`|ICorDebugValue 또는 가비지 수집 개체에 해당 하는 ICorDebugReferenceValue 인터페이스입니다.|  
@@ -55,7 +55,7 @@ typedef struct _COR_GC_REFERENCE {
   
 - 종료자 큐에서 개체 (`CorGCReferenceType.CorReferenceFinalizer`). 종료자 큐는 종료 자가 실행 될 때까지 개체 루트입니다.  
   
- `extraData` 필드 참조의 원본 (또는 유형)에 따라 추가 데이터를 포함 합니다. 가능한 값은 다음과 같습니다.  
+ `extraData` 필드 참조의 원본 (또는 유형)에 따라 추가 데이터를 포함 합니다. 가능한 값은  
   
 - `DependentSource`. 경우는 `type` 됩니다 `CorGCREferenceType.CorHandleStrongDependent`,이 필드는 활성 상태로 유지 하는 경우 루트 개체에서 가비지 수집 되도록 하는 개체 `COR_GC_REFERENCE.Location`합니다.  
   

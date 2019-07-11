@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: abbd35fe390cc09951b762a5fd671d2d34a57c6c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0d446e2b78f41d43aa70f429e23f1f4be22fd799
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777886"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782503"
 ---
 # <a name="imetadataimportfindmemberref-method"></a>IMetaDataImport::FindMemberRef 메서드
 지정 된로 묶인 멤버에 대 한 MemberRef 토큰에 대 한 포인터는 참조를 가져옵니다 <xref:System.Type> 지정 된 이름 및 메타 데이터 서명을 하 고 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT FindMemberRef (  
    [in]  mdTypeRef          td,  
    [in]  LPCWSTR            szName,   
