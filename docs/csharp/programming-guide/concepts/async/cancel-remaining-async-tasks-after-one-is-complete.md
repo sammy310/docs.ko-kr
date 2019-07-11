@@ -44,7 +44,7 @@ ms.locfileid: "59298671"
  **CancelAListOfTasks** 프로젝트의 MainWindow.xaml.cs 파일에서는 `AccessTheWebAsync`의 루프에서 각 웹 사이트에 대한 처리 단계를 다음 비동기 메서드로 이동하여 전환을 시작합니다.  
   
 ```csharp  
-/ ***Bundle the processing steps for a website into one async method.  
+// ***Bundle the processing steps for a website into one async method.  
 async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken ct)  
 {  
     // GetAsync returns a Task<HttpResponseMessage>.   
