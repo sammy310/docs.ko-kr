@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6156499368fb743b69c03f38b40ad3c5bcabce6e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c0755cb2a91d61725338562cb1fe249a9cfacc38
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992409"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781509"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>IMetaDataTables::GetColumnInfo 메서드
 지정된 된 테이블의 지정한 열에 대 한 데이터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetColumnInfo (   
     [in]  ULONG        ixTbl,  
     [in]  ULONG        ixCol,  

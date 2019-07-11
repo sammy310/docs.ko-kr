@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54652727b4684d71068a19eb5eeb2e862f413f25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ea71439c9a6c494c218a7cfc18508f4f8173b03
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609258"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740378"
 ---
 # <a name="cordebugblockingreason-enumeration"></a>CorDebugBlockingReason 열거형
 지정된 개체에서 스레드가 차단될 수 있는 이유를 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 Typedef enum CorDebugBlockingReason  
 {  
    BLOCKING_NONE = 0  
@@ -39,9 +39,9 @@ Typedef enum CorDebugBlockingReason
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
-|`BLOCKING_NONE`|내부 전용입니다.|  
+|`BLOCKING_NONE`|내부적으로만 사용됩니다.|  
 |`BLOCKING_MONITOR_CRITICAL_SECTION`|스레드 개체에 대 한 모니터 잠금과 사용 하 여 연결 하는 중요 섹션을 획득 하려고 합니다. 일반적으로이 경우 중 하나를 호출 합니다 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 또는 <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> 메서드.|  
 |`BLOCKING_MONITOR_EVENT`|개체에 대 한 모니터 잠금과 연관 된 이벤트에 대 한 스레드를 기다리고 있습니다. 일반적으로이 경우 중 하나를 호출 합니다 <xref:System.Threading.Monitor?displayProperty=nameWithType> `Wait` 메서드.|  
   

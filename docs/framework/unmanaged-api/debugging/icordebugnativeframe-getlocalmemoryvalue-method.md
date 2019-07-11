@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c44f3e369ac64773811a6aea74756783dedd2fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9a8e5a1813a81a84eac612a53964d39b48f0c536
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994762"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746224"
 ---
 # <a name="icordebugnativeframegetlocalmemoryvalue-method"></a>ICorDebugNativeFrame::GetLocalMemoryValue 메서드
 네이티브 프레임에 대 한 지정 된 메모리 위치에 저장 된 로컬 변수 또는 인수의 값을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetLocalMemoryValue (  
     [in]  CORDB_ADDRESS      address,  
     [in]  ULONG              cbSigBlob,  

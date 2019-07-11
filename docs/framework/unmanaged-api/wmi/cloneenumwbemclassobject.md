@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7b384bb24cbf7ab7379949fd85a22121a1310e3
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ab660769a49cf12b129cb7f44b8378053a231f8c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636862"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761618"
 ---
 # <a name="cloneenumwbemclassobject-function"></a>CloneEnumWbemClassObject 함수
 열거형의 현재 위치를 유지하면서 열거자의 논리적 복사본을 만듭니다.
@@ -30,7 +30,7 @@ ms.locfileid: "65636862"
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 HRESULT CloneEnumWbemClassObject (
    [out] IEnumWbemClassObject**  ppEnum, 
    [in] DWORD                    authLevel,
@@ -68,7 +68,7 @@ HRESULT CloneEnumWbemClassObject (
 
 이 함수에 의해 반환 되는 다음 값에 정의 된 합니다 *WbemCli.h* 헤더 파일에서 정의할 수 상수로 코드:
 
-|상수  |값  |설명  |
+|상수  |값  |Description  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | 일반 오류가 발생이 했습니다. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 매개 변수가 잘못 되었습니다. |

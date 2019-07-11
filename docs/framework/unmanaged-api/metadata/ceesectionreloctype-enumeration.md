@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 882242da493c49a2e6aa09888e9503dcf2933589
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1218ee76a3b7a2f501f87adf1e0bc8133d5329b5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906141"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781344"
 ---
 # <a name="ceesectionreloctype-enumeration"></a>CeeSectionRelocType 열거형
 값의 형식에 영향을 줄을 제공 `reloc` 명령에 대 한 호출에서 내보낸 [iceegen:: Addsectionreloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum  {  
     srRelocAbsolute,  
     srRelocHighLow          = 3,  
@@ -52,7 +52,7 @@ typedef enum  {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`srRelocAbsolute`|섹션 상대만 생성 `reloc`.reloc 섹션에 아무 것도 합니다.|  
 |`srRelocHighLow`|생성 된 `reloc` 포인터 크기의 위치에 대 한 합니다. 플랫폼에 따라 BASED_HIGHLOW 또는 BASED_DIR64로 변환 됩니다.|  

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8a1942f903b1c7c15e58077e35b6a72a86a9419
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c1f838c26d45c0f3cfbd50ac0ce02d234b82ddae
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636527"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746666"
 ---
 # <a name="get-function"></a>Get 함수
 
@@ -31,7 +31,7 @@ ms.locfileid: "65636527"
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 HRESULT Get (
    [in] int               vFunc, 
    [in] IWbemClassObject* ptr, 
@@ -76,7 +76,7 @@ HRESULT Get (
 
 이 함수에 의해 반환 되는 다음 값에 정의 된 합니다 *WbemCli.h* 헤더 파일에서 정의할 수 상수로 코드:
 
-|상수  |값  |설명  |
+|상수  |값  |Description  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 일반 오류가 발생이 했습니다. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 하나 이상의 매개 변수가 올바르지 않습니다. |

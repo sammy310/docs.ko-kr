@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86348c35a023e22d10c4ad2e08f5cb1104b895a8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 314ffb143e99f9490bcd4a6489f2afed314b7c2c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641413"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768766"
 ---
 # <a name="iclrruntimehostexecuteinappdomain-method"></a>ICLRRuntimeHost::ExecuteInAppDomain 메서드
 지정 된 <xref:System.AppDomain> 지정 된 관리 되는 코드를 실행 하는 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT ExecuteInAppDomain(  
     [in] DWORD AppDomainId,   
     [in] FExecuteInDomainCallback pCallback,   
@@ -49,7 +49,7 @@ HRESULT ExecuteInAppDomain(
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|설명|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`ExecuteInAppDomain` 성공적으로 반환 합니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR이 로드 된 프로세스에 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  

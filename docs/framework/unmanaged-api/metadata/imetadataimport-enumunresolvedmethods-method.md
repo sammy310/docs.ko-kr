@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2e6e53f69f58c2f5778083d9b8f8be466b952cdd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 74d0c2e9777a7bd3d49622fb326ecb6b58fbec07
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777951"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782542"
 ---
 # <a name="imetadataimportenumunresolvedmethods-method"></a>IMetaDataImport::EnumUnresolvedMethods 메서드
 현재 메타데이터 범위에서 확인되지 않은 메서드를 나타내는 MemberDef 토큰을 열거합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT EnumUnresolvedMethods (  
    [in, out] HCORENUM    *phEnum,  
    [out]     mdToken     rMethods[],  
@@ -53,7 +53,7 @@ HRESULT EnumUnresolvedMethods (
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|설명|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |`S_OK`|`EnumUnresolvedMethods` 성공적으로 반환 합니다.|  
 |`S_FALSE`|열거할 토큰이 있습니다. 이런 경우 `pcTokens` 0입니다.|  

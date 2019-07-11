@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: f03d9481a2af3edebe83df5b1b725b7290d30d00
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: e0d277eb039c1fb1668f292d83ab9e7dbe4be70e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457544"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762330"
 ---
 # <a name="xaml-overview-wpf"></a>XAML 개요 (WPF)
 이 항목에서는 XAML 언어의 기능을 설명하고 XAML을 사용하여 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 애플리케이션을 작성하는 방법을 보여 줍니다. 이 항목에서는 특히 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 구현된 XAML에 대해 자세히 설명합니다. XAML 자체는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]보다 큰 언어 개념입니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "66457544"
 ### <a name="property-element-syntax"></a>속성 요소 구문  
  개체 요소의 일부 속성의 경우에는 속성 값을 제공하기 위해 필요한 개체나 정보를 특성 구문의 문자열 제한에 맞춰 따옴표 안에 적절하게 표현할 수 없기 때문에 특성 구문을 사용할 수 없습니다. 이러한 경우에는 속성 요소 구문이라고 하는 다른 구문을 사용할 수 있습니다.  
   
- 속성 요소 시작 태그의 구문은 `<`*typeName*`.`*propertyName*`>`입니다. 일반적으로 해당 태그의 콘텐츠는 속성이 해당 값으로 사용하는 형식의 개체 요소입니다. 콘텐츠를 지정한 후에는 끝 태그로 속성 요소를 닫아야 합니다. 끝 태그에 대한 구문은 `</`*typeName*`.`*propertyName*`>`입니다.  
+ 속성 요소 시작 태그의 구문은 `<`*typeName*`.`*propertyName*`>`입니다. 일반적으로 해당 태그의 콘텐츠는 속성 값으로 사용 되는 형식의 개체 요소. 콘텐츠를 지정한 후 끝 태그로 속성 요소를 닫아야 합니다. 끝 태그에 대한 구문은 `</`*typeName*`.`*propertyName*`>`입니다.  
   
  특성 구문이 지원되는 경우에는 특성 구문을 사용하는 것이 일반적으로 편리하며 태그를 간결하게 만들 수 있지만 이것은 기술적으로 제한이 있다는 것을 의미하는 것이 아니라 대체로 스타일의 문제입니다. 다음 예제에서는 앞의 특성 구문 예제에서와 같이 동일한 속성을 설정하는 것을 보여 주지만 이번에는 `Button`의 모든 속성에 대해 속성 요소 구문을 사용합니다.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "66457544"
  [!code-xaml[XAMLOvwSupport#MarginVerbose](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#marginverbose)]  
   
 > [!NOTE]
->  또한 형식 개체 자체에 기본 생성자가 없기 때문에 서브클래스 없이 형식 변환을 통해서만 해당 형식에 속성을 공개적으로 설정할 수 있는 제한된 개수의 개체가 있습니다. 예로 <xref:System.Windows.Input.Cursor>합니다.  
+>  또한 형식 개체 자체에 기본 생성자가 없기 때문에 서브클래스 없이 형식 변환을 통해서만 해당 형식에 속성을 공개적으로 설정할 수 있는 제한된 개수의 개체가 있습니다. 예제입니다. <xref:System.Windows.Input.Cursor>  
   
  형식 변환 및 특성 구문에 대한 사용이 지원되는 방법에 대한 자세한 내용은 [TypeConverters 및 XAML](typeconverters-and-xaml.md)을 참조하세요.  
   
@@ -208,7 +208,7 @@ ms.locfileid: "66457544"
  XAML 프로세서의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 구현에는 WPF 핵심 어셈블리를 인식하는 인프라가 포함되어 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 핵심 어셈블리는 기본 XAML 네임스페이스로의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 매핑을 지원하는 형식을 포함한다고 알려져 있습니다. 이 어셈블리는 프로젝트 빌드 파일과 WPF 빌드 및 프로젝트 시스템에 속하는 구성을 통해 사용할 수 있습니다. 따라서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 어셈블리에서 제공된 XAML 요소를 참조하려는 경우 기본 XAML 네임스페이스를 기본 `xmlns`로 선언하기만 하면 됩니다.  
   
 ### <a name="the-x-prefix"></a>X: 접두사  
- 앞의 루트 요소 예제에서는 접두사 `x:`를 사용하여 XAML 언어 구문을 지원하는 전용 XAML 네임스페이스인 XAML 네임스페이스 [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)]를 매핑했습니다. 이 `x:` 접두사는 이 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 전체의 설명서, 예제 및 프로젝트 템플릿에서 이 XAML 네임스페이스를 매핑하는 데 사용됩니다. XAML 언어의 XAML 네임스페이스에는 XAML에서 자주 사용하게 될 몇 가지 프로그래밍 구문이 들어 있습니다. 다음은 가장 많이 사용하게 될 `x:` 접두사 네임스페이스 프로그래밍 구문의 목록입니다.  
+ 앞의 루트 요소 예제에서는 접두사 `x:`를 사용하여 XAML 언어 구문을 지원하는 전용 XAML 네임스페이스인 XAML 네임스페이스 [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)]를 매핑했습니다. 이 `x:` 접두사는 이 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 전체의 설명서, 예제 및 프로젝트 템플릿에서 이 XAML 네임스페이스를 매핑하는 데 사용됩니다. XAML 언어 XAML 네임 스페이스에 XAML에서 매우 자주 사용 하는 몇 가지 프로그래밍 구문이 포함 되어 있습니다. 다음은 가장 많이 사용하게 될 `x:` 접두사 네임스페이스 프로그래밍 구문의 목록입니다.  
   
 - [x:Key](../../xaml-services/x-key-directive.md): 각 리소스에 대 한 고유 키를 설정 하는 <xref:System.Windows.ResourceDictionary> (또는 다른 프레임 워크에서 비슷한 사전 개념). `x:Key`는 일반적인 WPF 응용 프로그램 태그에서 보게 될 `x:` 사용의 90%를 차지할 것입니다.  
   

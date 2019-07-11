@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a95b6b7e20bbcd86dedf187c932f2cf74d37cdab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c196eafbc2ff1d851471355a630b860c7c02ba1b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771776"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765532"
 ---
 # <a name="iclrruntimeinfogetprocaddress-method"></a>ICLRRuntimeInfo::GetProcAddress 메서드
 이 인터페이스와 연결 된 공용 언어 런타임 (CLR)에서 내보낸 지정 된 함수의 주소를 가져옵니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "61771776"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetProcAddress(  
      [in]  LPCSTR pszProcName,  
      [out, retval] LPVOID *ppProc);  

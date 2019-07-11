@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: 976679e4b6e6bba7288756616db639ed61472591
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f19186380b0cbc71cdd64013ca5e49361ba26cda
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64605435"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778387"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>연습: WPF에서 ActiveX 컨트롤 호스팅
 브라우저를 사용 하 여 향상 된 상호 작용을 사용 하도록 설정 하려면 사용할 수 있습니다 [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] 컨트롤에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-기반 응용 프로그램입니다. 이 연습에서는 호스팅하는 방법을 보여 줍니다.는 [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 의 컨트롤로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 페이지입니다.
@@ -37,7 +37,7 @@ ms.locfileid: "64605435"
 
 ## <a name="creating-the-project"></a>프로젝트 만들기
 
-#### <a name="to-create-and-set-up-the-project"></a>프로젝트를 만들고 설정하려면
+### <a name="to-create-and-set-up-the-project"></a>프로젝트를 만들고 설정하려면
 
 1. 이라는 WPF 응용 프로그램 프로젝트를 만듭니다 `HostingAxInWpf`합니다.
 
@@ -62,7 +62,7 @@ ms.locfileid: "64605435"
 ## <a name="creating-the-activex-control"></a>ActiveX 컨트롤 만들기
  [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 자동으로 생성을 <xref:System.Windows.Forms.AxHost> 에 대 한 래퍼 클래스를 [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] 컨트롤이 디자인 화면에 추가 되는 경우를 제어 합니다. 다음 절차는 AxInterop.WMPLib.dll 이라는 관리 되는 어셈블리를 만듭니다.
 
-#### <a name="to-create-the-activex-control"></a>ActiveX 컨트롤을 만들려면
+### <a name="to-create-the-activex-control"></a>ActiveX 컨트롤을 만들려면
 
 1. Windows Forms 디자이너에서 WmpAxControl.vb 또는 WmpAxControl.cs를 엽니다.
 
@@ -74,7 +74,7 @@ ms.locfileid: "64605435"
 
 ## <a name="hosting-the-activex-control-on-a-wpf-page"></a>WPF 페이지에서 ActiveX 컨트롤 호스팅
 
-#### <a name="to-host-the-activex-control"></a>ActiveX 컨트롤을 호스트 하려면
+### <a name="to-host-the-activex-control"></a>ActiveX 컨트롤을 호스트 하려면
 
 1. HostingAxInWpf 프로젝트에서 생성 된에 대 한 참조를 추가 [!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)] 상호 운용성 어셈블리.
 

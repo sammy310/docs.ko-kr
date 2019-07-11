@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d8f830ca7e273b65dc9ec77566a02df6c32cd464
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0bfe30567bcd8e22a82d401e00b0a6ee50407def
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045541"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781665"
 ---
 # <a name="corpekind-enumeration"></a>CorPEKind 열거형
 에 대 한 호출에서 반환 된 pe (이식 가능) 파일을 설명 하는 값을 포함 [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorPEKind {  
   
     peNot           = 0x00000000,  
@@ -43,7 +43,7 @@ typedef enum CorPEKind {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`peNot`|PE 파일 아님을 나타냅니다.|  
 |`peILOnly`|이 PE 파일에 코드를 관리 되는 포함 되어 있음을 나타냅니다.|  

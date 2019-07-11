@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04e562b41b3d835d66fb9b803ee7db1c7fb8537f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a6f1d76ef5cf36bcbab29a33647520663f822798
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662552"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770031"
 ---
 # <a name="corvalidateimage-function"></a>_CorValidateImage 함수
 관리 되는 모듈 이미지의 유효성을 검사 하 고 로드 된 후 운영 체제 로더에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 STDAPI _CorValidateImage (   
    [in] PVOID* ImageBase,  
    [in] LPCWSTR FileName  
@@ -45,7 +45,7 @@ STDAPI _CorValidateImage (
 ## <a name="return-value"></a>반환 값  
  이 함수는 표준 값 반환 `E_INVALIDARG`, `E_OUTOFMEMORY`를 `E_UNEXPECTED`, 및 `E_FAIL`, 다음 값 뿐만 아니라 합니다.  
   
-|반환 값|설명|  
+|반환 값|Description|  
 |------------------|-----------------|  
 |`STATUS_INVALID_IMAGE_FORMAT`|이미지가 올바르지 않습니다. 이 값은 HRESULT 0xC000007BL.|  
 |`STATUS_SUCCESS`|올바른 이미지가입니다. 이 값은 HRESULT 0x00000000L.|  

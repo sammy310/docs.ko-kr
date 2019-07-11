@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a2f71a277484adbbfe3628222c635528cdab03e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 38c0937804eb82d1c96a605b55a00784ba58fe13
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045749"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781822"
 ---
 # <a name="corimportoptions-enumeration"></a>CorImportOptions 열거형
 현재 범위를 벗어난 어셈블리를 가져오는 중의 동작을 제어하는 플래그 값을 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorImportOptions {  
   
     MDImportOptionDefault                = 0x00000000,  
@@ -46,7 +46,7 @@ typedef enum CorImportOptions {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`MDImportOptionDefault`|삭제 된 레코드를 건너뛸 하는 기본 동작을 나타냅니다.|  
 |`MDImportOptionAll`|모든 메타 데이터를 열거 해야 함을 나타냅니다.|  

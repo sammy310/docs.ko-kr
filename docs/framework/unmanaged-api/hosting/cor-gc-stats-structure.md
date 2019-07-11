@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d335a62545f06a66d4044b59aa9499d3f7ede515
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 630c365c8710388ae3e913bedece0fb710da7cd9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774545"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768141"
 ---
 # <a name="corgcstats-structure"></a>COR_GC_STATS 구조체
 CLR (공용 언어 런타임)의 가비지 수집 메커니즘에 대 한 통계를 제공합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef struct _COR_GC_STATS {  
     ULONG   Flags;   
     SIZE_T  ExplicitGCCount;  
@@ -46,7 +46,7 @@ typedef struct _COR_GC_STATS {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`Flags`|계산 고 반환 하는 필드 값을 나타냅니다.|  
 |`ExplicitGCCount`|외부 요청에서 강제 된 가비지 수집 횟수를 나타냅니다.|  
@@ -71,7 +71,7 @@ typedef struct _COR_GC_STATS {
   
  사용 예는 다음과 같습니다.  
   
-```  
+```cpp  
 COR_GC_STATS GCStats;  
 GCStats.Flags = COR_GC_COUNTS | COR_GC_MEMORYUSAGE;  
 pCLRGCManager->GetStats(&GCStats);  

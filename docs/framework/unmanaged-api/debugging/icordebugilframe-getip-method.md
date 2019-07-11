@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a7b8985e7580282d0e38205f9b1d6078f86cee6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4d7eca3c2825707c9190436377bba7e4bb0d5447
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988613"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757966"
 ---
 # <a name="icordebugilframegetip-method"></a>ICorDebugILFrame::GetIP 메서드
 명령 포인터의 값 및 명령 포인터의 값을 가져온 방법에 대해 설명 하는 비트 조합 값을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetIP (  
     [out] ULONG32               *pnOffset,   
     [out] CorDebugMappingResult *pMappingResult  

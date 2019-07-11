@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7c86a4fd2788c8ea2df5d9e54c5c221afd179704
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 502e7841f8c413aa48732bcea0b6c2178d70c061
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905998"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776440"
 ---
 # <a name="assemblyflags-enumeration"></a>AssemblyFlags 열거형
 어셈블리의 런타임 기능을 설명 하는 값을 포함 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum {  
     afImplicitExportedTypes = 0x0001,  
     afImplicitResources = 0x0002,  
@@ -40,7 +40,7 @@ typedef enum {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`afImplicitExportedTypes`|내보낸된 형식 정의 어셈블리를 구성 하는 파일 내에서 암시적 되도록 지정 합니다. .NET Framework 버전 1.0 및 1.1에서는이 값은 항상 설정으로 간주 됩니다.|  
 |`afImplicitResources`|리소스 정의 어셈블리를 구성 하는 파일 내에서 암시적 되도록 지정 합니다. .NET Framework 1.0 및 1.1에서는이 값은 항상 설정할으로 간주 됩니다.|  

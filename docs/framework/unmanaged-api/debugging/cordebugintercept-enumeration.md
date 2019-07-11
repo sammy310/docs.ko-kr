@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0791a59e0325668960dcfc98816920db55bcfb87
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 148bc423a9497962ebfbc73faefcc799c6db6499
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651703"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739906"
 ---
 # <a name="cordebugintercept-enumeration"></a>CorDebugIntercept 열거형
 가로챌 수 있는(즉, 한 단계씩 실행할 수 있는) 코드 형식을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorDebugIntercept {  
     INTERCEPT_NONE                = 0x0,  
     INTERCEPT_CLASS_INIT          = 0x01,  
@@ -42,7 +42,7 @@ typedef enum CorDebugIntercept {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`INTERCEPT_NONE`|코드를 가로챌 수 없습니다.|  
 |`INTERCEPT_CLASS_INIT`|생성자를 가로챌 수 있습니다.|  

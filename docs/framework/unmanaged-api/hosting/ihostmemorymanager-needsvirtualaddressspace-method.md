@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0f029c8fbab97afe3089956391e8446d4cc5e15
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 57ed64ad8a6ae8ef46f423471436c3fce29d6fe5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760176"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767812"
 ---
 # <a name="ihostmemorymanagerneedsvirtualaddressspace-method"></a>IHostMemoryManager::NeedsVirtualAddressSpace 메서드
 지정된 된 메모리 사용을 시도 하는 CLR (공용 언어 런타임) 것임 호스트에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT NeedsVirtualAddressSpace (  
     [in] LPVOID  startAddress,  
     [in] SIZE_T  size  

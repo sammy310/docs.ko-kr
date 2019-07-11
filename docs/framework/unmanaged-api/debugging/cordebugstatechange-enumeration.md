@@ -12,12 +12,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05a29022d3ebad37322aef9826f10689d2b5b06b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 676489880cb30ca540cb78d70797dbf4eedf7395
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723071"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739591"
 ---
 # <a name="cordebugstatechange-enumeration"></a>CorDebugStateChange 열거형
 
@@ -25,7 +25,7 @@ ms.locfileid: "61723071"
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 typedef enum CorDebugStateChange
 {
     PROCESS_RUNNING = 0x0000001,
@@ -35,7 +35,7 @@ typedef enum CorDebugStateChange
 
 ## <a name="members"></a>멤버
 
-| 멤버            | 설명                                                              |
+| 멤버            | Description                                                              |
 | ----------------- | ------------------------------------------------------------------------ |
 | `PROCESS_RUNNING` | 프로세스가 정방향 실행을 통해 새로운 메모리 상태에 도달했습니다.            |
 | `FLUSH_ALL`       | 프로세스의 메모리가 이전과 임의적으로 달라질 수 있습니다. |

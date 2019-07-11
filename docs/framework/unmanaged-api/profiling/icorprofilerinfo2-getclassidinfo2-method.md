@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b98746be189e211572e5517aac1f06825973b39
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 892379d3281a98821b7feb5250973fac74f1f4f6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779784"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751849"
 ---
 # <a name="icorprofilerinfo2getclassidinfo2-method"></a>ICorProfilerInfo2::GetClassIDInfo2 메서드
 부모 모듈 및 메타 데이터를 지정된 된 클래스의 제네릭 정의 열기에 대 한 토큰 가져옵니다 합니다 `ClassID` , 부모 클래스의 및 `ClassID` 있는 클래스의 경우 각 형식 인수에 대 한 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetClassIDInfo2(  
     [in]  ClassID classId,  
     [out] ModuleID *pModuleId,  

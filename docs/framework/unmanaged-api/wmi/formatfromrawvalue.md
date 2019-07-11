@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44a84b03c85cc1332c07ffbaf53187b7f01d0236
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 47f92122eddf3cc8e6aec19d75fd2a95f76e9973
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609050"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746701"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue 함수
 형식 변환이 시간 기반인 경우 하나의 원시 성능 데이터 값을 지정된 형식으로 변화하거나 두 개의 원시 성능 데이터 값으로 변환합니다. 
@@ -30,7 +30,7 @@ ms.locfileid: "61609050"
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 int FormatFromRawValue (
    [in] uint                    dwCounterType, 
    [in] uint                    dwFormat, 
@@ -49,7 +49,7 @@ int FormatFromRawValue (
 `dwFormat`\
 [in] 원시 성능 데이터를 변환할 대상 형식입니다. 다음 값 중 하나일 수 있습니다.
 
-|상수  |값  |설명 |
+|상수  |값  |Description |
 |---------|---------|---------|
 | `PDH_FMT_DOUBLE` |0x00000200 | 배정밀도 부동 소수점 값으로 계산된 된 값을 반환 합니다. | 
 | `PDH_FMT_LARGE` | 0x00000400 | 64 비트 정수로 계산된 된 값을 반환 합니다. |

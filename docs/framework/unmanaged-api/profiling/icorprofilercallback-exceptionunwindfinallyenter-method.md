@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aebfc0d763fa1ea14c55a0c61fbf63db65fefe02
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b25ae535bfe50d216ca64a2e8163c0e6df58535
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597994"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755970"
 ---
 # <a name="icorprofilercallbackexceptionunwindfinallyenter-method"></a>ICorProfilerCallback::ExceptionUnwindFinallyEnter 메서드
 예외 해제 단계 처리를 입력 하는 프로파일러에 알립니다는 `finally` 지정된 된 함수에 포함 된 절.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT ExceptionUnwindFinallyEnter(  
     [in] FunctionID functionId);  
 ```  

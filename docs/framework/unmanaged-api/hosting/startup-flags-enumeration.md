@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05ff93f9dc7e875c9f84dd6d8d1f4be9b4f12653
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f254582d96b310c247778818fc0d5daaae0d911c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043513"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737269"
 ---
 # <a name="startupflags-enumeration"></a>STARTUP_FLAGS 열거형
 CLR (공용 언어 런타임)의 시작 동작을 나타내는 값을 포함 합니다. 기본적으로 가비지 수집은 비 동시 및 전용 기본 클래스 라이브러리는 도메인 중립적인 영역에 로드 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum {  
     STARTUP_CONCURRENT_GC                         = 0x1,  
     STARTUP_LOADER_OPTIMIZATION_MASK              = 0x3<<1,  
@@ -55,7 +55,7 @@ typedef enum {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`STARTUP_CONCURRENT_GC`|동시 가비지 수집을 사용 해야 함을 지정 합니다. 호출자를 묻는 메시지가 나타나면 서버 빌드 및 동시 가비지 컬렉션을 단일 프로세서 컴퓨터에서 워크스테이션 빌드 및 비 동시 가비지 수집 대신 실행 됩니다. **참고:**  동시 가비지 컬렉션은 WOW64를 실행 중인 응용 프로그램에서 지원 되지 않습니다 x86 에뮬레이터 (이전의 IA-64) Intel Itanium 아키텍처를 구현 하는 64 비트 시스템에서. 64 비트 Windows 시스템에서 WOW64를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [실행 중인 32 비트 응용 프로그램](/windows/desktop/WinProg64/running-32-bit-applications)합니다.|  
 |`STARTUP_LOADER_OPTIMIZATION_MASK`|해당 로더 최적화가 실행을 지정 합니다.|  

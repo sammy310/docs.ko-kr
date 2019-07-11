@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0ec2981cbee4675f9cd2a4fd13d507f50ad2a3ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80bff6f06851206ff01b861001c6ed7c90db7d1e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597143"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758188"
 ---
 # <a name="icorprofilercallback4rejitcompilationfinished-method"></a>ICorProfilerCallback4::ReJITCompilationFinished 메서드
 Just-in-time (JIT) 컴파일러는 함수를 다시 컴파일 되었음을 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT ReJITCompilationFinished(  
     [in] FunctionID functionId,    [in] ReJITID rejitId,  
     [in] HRESULT    hrStatus,  

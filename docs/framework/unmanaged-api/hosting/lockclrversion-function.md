@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16dd1b895abbd2357c46361c6381b1625422403f
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 6742293c1970198ef3d5f5da7d75a0c78e78045c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490193"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768416"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion 함수
 호스트가 명시적으로 CLR을 초기화 하기 전에 프로세스 내에서 사용할는 버전의 CLR (공용 언어 런타임)을 결정할 수 있습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "66490193"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT LockClrVersion (  
     [in] FLockClrVersionCallback   hostCallback,  
     [in] FLockClrVersionCallback  *pBeginHostSetup,  
@@ -52,7 +52,7 @@ HRESULT LockClrVersion (
 ## <a name="return-value"></a>반환 값  
  이 메서드는 다음 값 외에도 WinError.h에 정의 된 대로 표준 COM 오류 코드를 반환 합니다.  
   
-|반환 코드|설명|  
+|반환 코드|Description|  
 |-----------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
 |E_INVALIDARG|인수 중 하나 이상이 null입니다.|  
@@ -60,7 +60,7 @@ HRESULT LockClrVersion (
 ## <a name="remarks"></a>설명  
  호스트에서는 `LockClrVersion` CLR을 초기화 하기 전에 합니다. `LockClrVersion` 형식의 콜백을 모두 3 개의 매개 변수를 [FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)합니다. 이 형식은 다음과 같이 정의 됩니다.  
   
-```  
+```cpp  
 typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();  
 ```  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9869efee18549c3d0c8b9ee9ca27cf31c1ccf452
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6916e6344fe5c112b216ca753c372fa73a4d5af5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050144"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777705"
 ---
 # <a name="imetadatadispenserexsetoption-method"></a>IMetaDataDispenserEx::SetOption 메서드
 현재 메타 데이터 범위에 대 한 지정 된 값으로 지정된 된 옵션을 설정합니다. 현재 메타 데이터 범위에 대 한 호출을 처리 하는 방법을 제어 하는 옵션입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT SetOption (  
     [in] REFGUID optionId,   
     [in] const VARIANT *pValue  
@@ -46,7 +46,7 @@ HRESULT SetOption (
 ## <a name="remarks"></a>설명  
  다음 표에서 사용할 수 있는 Guid는를 `optionId` 매개 변수를 가리킬 수 있습니다 및 해당 유효 값을 `pValue` 매개 변수입니다.  
   
-|GUID|설명|`pValue` 매개 변수|  
+|GUID|Description|`pValue` 매개 변수|  
 |----------|-----------------|------------------------|  
 |MetaDataCheckDuplicatesFor|중복 항목을 검사할 제어 합니다. 호출할 때마다를 [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) 새 항목을 만드는 메서드를 현재 범위에 항목이 이미 있는지 여부를 검사 하도록 요청할 수 있습니다. 예를 들어 있는지 확인할 수 있습니다 `mdMethodDef` 항목;이 경우 호출 하는 경우 [imetadataemit:: Definemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md), 확인 메서드가 현재 범위에 이미 존재 하지 않습니다. 지정된 된 메서드를 고유 하 게 식별 하는 키를 사용 하는이 검사: 유형, 이름 및 서명을 부모입니다.|UI4, 형식의 variant 이어야 하며 값 조합을 포함 해야 합니다 [CorCheckDuplicatesFor](../../../../docs/framework/unmanaged-api/metadata/corcheckduplicatesfor-enumeration.md) 열거형입니다.|  
 |MetaDataRefToDefCheck|항목을 참조 하는 컨트롤 정의로 변환 됩니다. 기본적으로 메타 데이터 엔진은 참조 된 항목은 실제로 현재 범위에서 정의 하는 경우 해당 정의에 참조 된 항목을 변환 하 여 코드를 최적화 합니다.|UI4, 형식의 variant 이어야 하며 값 조합을 포함 해야 합니다 [CorRefToDefCheck](../../../../docs/framework/unmanaged-api/metadata/correftodefcheck-enumeration.md) 열거형입니다.|  

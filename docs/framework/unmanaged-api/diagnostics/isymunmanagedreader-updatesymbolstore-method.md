@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f62c954bf9d73ab564eba388e742794a330362d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cfc4507557102e19d95f1b746b3a76a231882d7b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986325"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736749"
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a>ISymUnmanagedReader::UpdateSymbolStore 메서드
 기존 기호 저장소를 델타 기호 저장소로 업데이트합니다. 이 메서드는 원래 이식 가능한 실행 파일 (PE) 파일에 대 한 델타에 맞게 기호 저장소를 업데이트 하려면 편집 하며 계속 하기 시나리오에서 사용 됩니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "61986325"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT UpdateSymbolStore (  
     [in] const WCHAR *filename,  
     [in] IStream *pIStream);  

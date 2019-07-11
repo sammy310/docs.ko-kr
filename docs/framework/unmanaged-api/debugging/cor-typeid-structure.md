@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51104516008ffee0694c72733cb5f82b5ba6d8cf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 426420175a7d05f39859b9e217a888a8c01b6d63
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609459"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740517"
 ---
 # <a name="cortypeid-structure"></a>COR_TYPEID 구조체
 유형 식별자를 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef struct COR_TYPEID{  
     UINT64 token1;  
     UINT64 token2;  
@@ -37,7 +37,7 @@ typedef struct COR_TYPEID{
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`token1`|첫 번째 토큰입니다.|  
 |`token2`|두 번째 토큰입니다.|  

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15c5e8b34f2748868611bd7dc47ef73c491b1338
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7a7859bd890a2ecc10b5117f697ff8b06ad569f6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045437"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781695"
 ---
 # <a name="cornotificationfortokenmovement-enumeration"></a>CorNotificationForTokenMovement 열거형
 토큰 다시 매핑으로 발생할 때 메타 데이터 API 클라이언트에 보낼 알림을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorNotificationForTokenMovement {  
   
     MDNotifyDefault             = 0x0000000f,  
@@ -63,7 +63,7 @@ typedef enum CorNotificationForTokenMovement {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`MDNotifyDefault`|알립니다 `mdTypeRef`, `mdMethodDef`를 `mdMemberRef`, 또는 `mdFieldDef` 토큰이 이동 합니다.|  
 |`MDNotifyAll`|모든 토큰 이동할 때 알립니다.|  

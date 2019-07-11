@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 4f2e9a2c-8369-4a07-a881-ad5422626353
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 103768918f67ca695a47c52b9cd97f24fb8d46ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bde1083fe232563aa6129cec79fdfc6c16c77d03
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996127"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750013"
 ---
 # <a name="icordebugdebugeventgetthread-method"></a>ICorDebugDebugEvent::GetThread 메서드
 이벤트가 발생한 스레드를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetThread(  
         [out]ICorDebugThread **ppThread  
 );  

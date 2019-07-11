@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 951941092f67f66c5b17c8ae592569c2a8e6a675
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a876ff1ba0d2342f7975bf5adfc8ec03d21578f5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045398"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781640"
 ---
 # <a name="corpinvokemap-enumeration"></a>CorPinvokeMap 열거형
 PInvoke 호출에 대 한 옵션을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum  CorPinvokeMap {  
   
     pmNoMangle          = 0x0001,  
@@ -68,16 +68,16 @@ typedef enum  CorPinvokeMap {
 |멤버|설명|  
 |------------|-----------------|  
 |`pmNoMangle`|각 멤버 이름은 지정 된 대로 사용 합니다.|  
-|`pmCharSetMask`|예약됨.|  
-|`pmCharSetNotSpec`|예약됨.|  
+|`pmCharSetMask`|예약되어 있습니다.|  
+|`pmCharSetNotSpec`|예약되어 있습니다.|  
 |`pmCharSetAnsi`|문자열을 다중 바이트 문자열로 마샬링하십시오.|  
 |`pmCharSetUnicode`|문자열을 유니코드 2 바이트 문자로 마샬링하십시오.|  
 |`pmCharSetAuto`|대상 운영 체제에 맞게 문자열을 자동으로 마샬링하십시오. 기본값은 Windows NT, Windows 2000, Windows XP 및 Windows Server 2003 제품군;의 유니코드 기본값은 Windows 98 및 me. Windows ANSI|  
-|`pmBestFitUseAssem`|예약됨.|  
+|`pmBestFitUseAssem`|예약되어 있습니다.|  
 |`pmBestFitEnabled`|ANSI 문자 집합에는 정확한 일치 항목이 없는 유니코드 문자의 최적된 매핑을 수행 합니다.|  
 |`pmBestFitDisabled`|유니코드 문자의 최적된 매핑을 수행 하지 않습니다. 매핑할 수 없는 모든 문자는 대체 하는 경우에 '?'입니다.|  
-|`pmBestFitMask`|예약됨.|  
-|`pmThrowOnUnmappableCharUseAssem`|예약됨.|  
+|`pmBestFitMask`|예약되어 있습니다.|  
+|`pmThrowOnUnmappableCharUseAssem`|예약되어 있습니다.|  
 |`pmThrowOnUnmappableCharEnabled`|Interop 마샬러를 매핑할 수 없는 문자를 발견 한 경우 예외를 throw 합니다.|  
 |`pmThrowOnUnmappableCharDisabled`|Interop 마샬러를 매핑할 수 없는 문자를 발견 한 경우에 예외를 throw 하지 않습니다.|  
 |`pmThrowOnUnmappableCharMask`|예약됨|  
@@ -87,8 +87,8 @@ typedef enum  CorPinvokeMap {
 |`pmCallConvCdecl`|사용 된 `Cdecl` 호출 규칙입니다. 이 경우 호출자가 스택을 정리합니다. 이렇게 하면 사용 하 여 함수를 호출할 수 있습니다. `varargs` (즉, 가변 개수의 매개 변수를 허용 하는 함수).|  
 |`pmCallConvStdcall`|사용 된 `StdCall` 호출 규칙입니다. 이 경우 호출 수신자가 스택을 정리합니다. 이 플랫폼을 사용 하 여 관리 되지 않는 함수를 호출할 호출에 대 한 기본 규칙입니다.|  
 |`pmCallConvThiscall`|사용 된 `ThisCall` 호출 규칙입니다. 첫 번째 매개 변수는이 경우에 `this` 포인터 레지스터 ECX에에서 저장 됩니다. 다른 매개 변수는 스택에 푸시됩니다. `ThisCall` 관리 되지 않는 DLL에서 내보낸 클래스의 메서드를 호출할 호출 규칙이 사용 됩니다.|  
-|`pmCallConvFastcall`|예약됨.|  
-|`pmMaxValue`|예약됨.|  
+|`pmCallConvFastcall`|예약되어 있습니다.|  
+|`pmMaxValue`|예약되어 있습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

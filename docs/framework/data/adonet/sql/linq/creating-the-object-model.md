@@ -2,21 +2,21 @@
 title: 개체 모델 만들기
 ms.date: 03/30/2017
 ms.assetid: 27afce86-9b1d-45fb-8e0b-636bf671a236
-ms.openlocfilehash: 7724d6e75b350e5c57f090d42ef1f49c4d3593b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f1a0d035f2b11f33a9899ededd876155d45de3c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032449"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743581"
 ---
 # <a name="creating-the-object-model"></a>개체 모델 만들기
 기존 데이터베이스에서 개체 모델을 만들어 해당 모델을 기본 상태로 사용할 수 있습니다. 또한 모델의 많은 부분과 동작을 사용자 지정할 수 있습니다.  
   
- Visual Studio를 사용 하는 경우 사용할 수 있습니다는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 개체 모델을 만들려고 합니다.  
+ Visual Studio를 사용 하는 경우에 개체 모델을 만들려면 개체 관계형 디자이너를 사용할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [방법: Visual Basic 또는 C#에서 개체 모델 생성](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)  
- SQLMetal 명령줄 도구 사용법에 대해 설명합니다. 또한에 대 한 링크를 제공 합니다 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Visual Studio 사용자에 대 한  
+ SQLMetal 명령줄 도구 사용법에 대해 설명합니다. 또한 Visual Studio 사용자에 대 한 링크 개체 관계형 디자이너를 제공  
   
  [방법: 외부 파일로 개체 모델 생성](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)  
  특성 기반 매핑을 사용하는 대신에 외부 매핑 파일을 생성하는 방법에 대해 설명합니다.  

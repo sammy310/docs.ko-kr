@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
-ms.openlocfilehash: dd156f9e5bf6519363f66ca61687f1e9f2bfc6ab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ac747bf46c4dd1451e58615b1ec0311d75c899e8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630422"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760484"
 ---
 # <a name="how-to-set-the-input-mask"></a>방법: 입력 마스크 설정
 마스킹된 텍스트 상자 컨트롤에는 수락 하거나 거부 하는 사용자 입력에 대 한 선언적 구문을 지 원하는 향상 된 텍스트 상자 컨트롤이입니다. 마스크 속성을 설정 하면 응용 프로그램에 사용자 지정 유효성 검사 논리를 작성 하지 않고 허용 되는 사용자 입력을 지정할 수 있습니다. 자세한 내용은의 설명 섹션을 참조 하십시오.는 <xref:System.Windows.Forms.MaskedTextBox> 클래스입니다.  
@@ -19,18 +19,18 @@ ms.locfileid: "64630422"
 ## <a name="setting-the-mask-property-manually"></a>마스크 속성을 수동으로 설정  
  마스크 속성을 지 원하는 문자에 익숙한 경우 수동으로 입력할 수 있습니다. 마스크 속성을 지 원하는 문자 요약이의 설명 섹션을 참조 하세요.를 <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> 속성입니다.  
   
-#### <a name="to-set-the-mask-property-manually"></a>마스크 속성을 수동으로 설정 하려면  
+### <a name="to-set-the-mask-property-manually"></a>마스크 속성을 수동으로 설정 하려면  
   
 1. **디자인** 뷰에서 select를 <xref:System.Windows.Forms.MaskedTextBox>.  
   
 2. 에 **속성** 창 찾기는 <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> 속성입니다.  
   
-3. 마스크를 입력 합니다. 예를 들어 `###`을 입력합니다.  
+3. 마스크를 입력 합니다. 예를 들어 `###`과 같이 입력합니다.  
   
 ## <a name="using-the-input-mask-dialog-box"></a>입력된 마스크 대화 상자를 사용 하 여  
  입력 마스크 대화 상자에서 일부 미리 정의 된 입력된 마스크를 제공합니다. 미리 정의 된 마스크를 변경 하거나 사용자 고유의 마스크를 수동으로 입력할 수도 있습니다.  
   
-#### <a name="to-open-the-input-mask-dialog-box"></a>입력 마스크 대화 상자를 열려면  
+### <a name="to-open-the-input-mask-dialog-box"></a>입력 마스크 대화 상자를 열려면  
   
 1. **디자인** 뷰에서 select를 <xref:System.Windows.Forms.MaskedTextBox>.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "64630422"
   
      합니다 **입력 마스크** 대화 상자가 나타납니다.  
   
-#### <a name="to-use-the-input-mask-dialog-box"></a>입력 마스크 대화 상자를 사용 하려면  
+### <a name="to-use-the-input-mask-dialog-box"></a>입력 마스크 대화 상자를 사용 하려면  
   
 1. (선택 사항) 목록에서 미리 정의 된 면 중 하나를 클릭 합니다.  
   

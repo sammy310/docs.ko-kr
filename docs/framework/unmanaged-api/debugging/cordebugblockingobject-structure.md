@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 12a114ea65aca544d653704cdfb01ed15d19c581
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83dac3b9b2ac396cdef19695fcce0f7e20485a50
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609271"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740400"
 ---
 # <a name="cordebugblockingobject-structure"></a>CorDebugBlockingObject 구조체
 스레드가 차단 되는 특정 이유와 스레드를 차단 하는 개체를 정의 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 Typedef struct CorDebugBlockingObject  
 {  
 ICorDebugValue pBlockingObject;  
@@ -39,7 +39,7 @@ CorDebugBlockingReason blockingReason;
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`pBlockingObject`|스레드를 차단 하는 개체입니다. 이 개체는 현재 동기화 된 상태의 기간에만 유효 합니다. 예상할 수 있는 경우 두 스레드가 동일한 동기화 된 상태 내에서 동일한 개체에서 차단 되는 [icordebugvalue:: Getaddress](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md) 동일한 값을 반환 하는 방법입니다. 그러나 인터페이스 수도 있고 해당 포인터 되지 않을 수 있습니다.|  
 |`dwTimeout`|차단 작업 전에 시간을 밀리초 단위로 시간 초과 또는 무한 시간 초과 되지 않음을 나타내는 값을 됩니다. 시간 제한 값은 남아 있는 시간이 아닌 차단 작업에 대 한 총 기간을 지정 합니다.|  

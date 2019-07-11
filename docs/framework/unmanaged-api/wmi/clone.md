@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf9cca10a580af7991889de6993e931347fc27ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80faf1a5a6297f5b105fdb609366f6774f8692b3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968157"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761655"
 ---
 # <a name="clone-function"></a>Clone 함수
 현재 개체의 전체 복제본인 새 개체를 반환합니다.   
@@ -30,7 +30,7 @@ ms.locfileid: "61968157"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT Clone (
    [in] int                  vFunc, 
    [in] IWbemClassObject*    ptr, 
@@ -53,7 +53,7 @@ HRESULT Clone (
 
 이 함수에 의해 반환 되는 다음 값에 정의 된 합니다 *WbemCli.h* 헤더 파일에서 정의할 수 상수로 코드:
 
-|상수  |값  |설명  |
+|상수  |값  |Description  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | 일반 오류가 발생이 했습니다. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null` 매개 변수로 지정 된이 사용이 적합 하지 않습니다. |

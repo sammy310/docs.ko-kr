@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3ce2b23306e7e38f3982f8d5a4b377aa2f9547c4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d9dc94689083d79858319387747eb9dafe8b2f6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723162"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739568"
 ---
 # <a name="cordebugstepreason-enumeration"></a>CorDebugStepReason 열거형
 개별 단계의 결과를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorDebugStepReason {  
     STEP_NORMAL,  
     STEP_RETURN,  
@@ -42,7 +42,7 @@ typedef enum CorDebugStepReason {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`STEP_NORMAL`|단계별 실행는 동일한 함수 내에서 정상적으로 완료 합니다.|  
 |`STEP_RETURN`|단계별 함수 반환 후 정상적으로 계속 합니다.|  

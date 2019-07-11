@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a02719651d8169c1122f5a46b1b8df39b28612ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98fc95c618a7a06f5e6c219d7707af291770c06a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779797"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781409"
 ---
 # <a name="imetadatatablesgetrow-method"></a>IMetaDataTables::GetRow 메서드
 지정된 된 테이블 인덱스에 있는 표에 지정 된 행 인덱스에 행을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetRow (   
     [in]  ULONG   ixTbl,  
     [in]  ULONG   rid,  

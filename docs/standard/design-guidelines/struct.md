@@ -12,19 +12,19 @@ helpviewer_keywords:
 - structures [.NET Framework], design guidelines
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
 author: KrzysztofCwalina
-ms.openlocfilehash: cc5b8d7effda31b0236477b217bccf5cf2137f8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e787c5b34848a561b43c3457341673f11cc2bd00
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650143"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775551"
 ---
 # <a name="struct-design"></a>구조체 디자인
 범용 값 형식 대부분의 구조체를 해당 C# 키워드 라고 합니다. 이 섹션에서는 일반 구조체 디자인에 대 한 지침을 제공 합니다.  
   
- **X DO NOT** 구조체에 대 한 기본 생성자를 제공 합니다.  
+ **X 하지** 구조체에 대 한 매개 변수가 없는 생성자를 제공 합니다.  
   
- 이 지침은 다음 배열을 구조체를 배열의 각 항목에 대해 생성자를 실행할 필요 없이 만들 수 있습니다. C#을 허용 하지 않도록 구조체에는 기본 생성자를 확인할 수 있습니다.  
+ 이 지침은 다음 배열을 구조체를 배열의 각 항목에 대해 생성자를 실행할 필요 없이 만들 수 있습니다. C# 구조체에는 매개 변수가 없는 생성자를 허용 하지 않습니다.  
   
  **X DO NOT** 변경할 수 있는 값 형식을 정의 합니다.  
   

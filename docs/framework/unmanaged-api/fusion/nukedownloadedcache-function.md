@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e549e13c0d51e4aa708a674a2224168ab66f8ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 76ada8400573dd61c25e0dce3f49ce66b5fb30c1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774532"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773808"
 ---
 # <a name="nukedownloadedcache-function"></a>NukeDownloadedCache 함수
 공용 언어 런타임 (CLR) 다운로드 캐시를 삭제합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT NukeDownloadedCache();  
 ```  
   

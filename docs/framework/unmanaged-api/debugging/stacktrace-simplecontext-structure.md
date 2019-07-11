@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0625dc72d44485dbb69b42cba5387085d1862bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc0fc18e31b89b22ffd30d99a8b079ed7b87fa1b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986533"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752493"
 ---
 # <a name="stacktracesimplecontext-structure"></a>StackTrace_SimpleContext 구조체
 전체 `CONTEXT` 구조체 대신 사용할 수 있는 단순 컨텍스트를 제공합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 struct StackTrace_SimpleContext  
 {  
     ULONG64 StackOffset;       // ESP on x86  
@@ -40,7 +40,7 @@ struct StackTrace_SimpleContext
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`StackOffset`|스택 포인터 또는 x86 enter 스택 포인터 (ESP) 플랫폼입니다.|  
 |`FrameOffset`|프레임 오프셋 또는 x86의 EBP 레지스터 플랫폼입니다.|  

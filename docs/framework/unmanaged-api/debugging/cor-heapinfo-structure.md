@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23bda470b8b5812b567081ba268ad503ac39ecaa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3dd233643bd18b60b7d6176c34ee57e4061daf7c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609485"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740661"
 ---
 # <a name="corheapinfo-structure"></a>COR_HEAPINFO 구조체
 가비지 수집 힙에 대한 일반 정보(열거 가능 여부 포함)를 제공합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef struct _COR_HEAPINFO {  
     BOOL areGCStructuresValid;   
     DWORD pointerSize;   
@@ -40,7 +40,7 @@ typedef struct _COR_HEAPINFO {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`areGCStructuresValid`|`true` 가비지 수집 구조 유효 하 고 힙을 열거할 수 있습니다. 그렇지 않으면 `false`합니다.|  
 |`pointerSize`|대상 아키텍처에 대 한 포인터의 바이트 크기입니다.|  

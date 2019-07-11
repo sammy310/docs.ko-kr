@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d73e11dad2413958b6c92d3ae90ba4834e8824d3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b19d6e43783211698ae2e68868aff87c91cc3e5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765403"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773146"
 ---
 # <a name="iclrdebugmanagergetdacl-method"></a>ICLRDebugManager::GetDacl 메서드
 이 메서드가 구현되지 않았습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetDacl (  
     [out] PACL* ppacl  
 );  
@@ -41,7 +41,7 @@ HRESULT GetDacl (
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|설명|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |E_NOTIMPL|메서드가 구현 되지 않았습니다.|  
   

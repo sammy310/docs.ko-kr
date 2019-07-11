@@ -17,25 +17,25 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2db47f90e73922858013885e99e953ddcacbd450
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7750d50b772ff17cf9dcd05de2e2f34556714e4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763518"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770472"
 ---
 # <a name="iclrtaskrudeabort-method"></a>ICLRTask::RudeAbort 메서드
 CLR (공용 언어 런타임)를 나타내는 현재 작업을 중단 하도록 지시 [ICLRTask 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) 즉시 및 무조건 인스턴스.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT RudeAbort ();   
 ```  
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|설명|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`RudeAbort` 성공적으로 반환 합니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR이 로드 된 프로세스에 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  
