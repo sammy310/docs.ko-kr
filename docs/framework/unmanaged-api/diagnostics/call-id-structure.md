@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b6fa729b131d12b2825a2def700fd918ce8acc40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2823c018ff22607052cb9a298f69dbd0c4fe2c23
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986481"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769505"
 ---
 # <a name="callid-structure"></a>CALL_ID 구조체
 디버거에 호출 되는 함수에 대 한 정보를 제공 합니다. 참조 된 [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) 자세한 정보에 대 한 인터페이스입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef struct tagCALL_ID  
 {  
     LPCOLESTR       szMachine;  
@@ -42,7 +42,7 @@ typedef struct tagCALL_ID
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`szMachine`|호출 하는 컴퓨터를 식별 합니다.|  
 |`dwPid`|컴퓨터 프로세서를 식별합니다.|  

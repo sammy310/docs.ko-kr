@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 49784a0eba0458a7b9ddbcd58cbe1a187c3c779a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9fb1dff80fccc920540d370797441b3a019d766c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905829"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780919"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets 열거형
 특성을 적용하는 데 유효한 애플리케이션 요소를 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorAttributeTargets  
 {  
     catAssembly            = 0x0001,  
@@ -78,7 +78,7 @@ typedef enum CorAttributeTargets
 |`catParameter`|특성 매개 변수에 적용할 수 있습니다.|  
 |`catDelegate`|대리자에 특성을 적용할 수 있습니다.|  
 |`catGenericParameter`|제네릭 매개 변수 특성을 적용할 수 있습니다.|  
-|`catAll`|응용 프로그램 요소에 특성을 적용할 수 있습니다.|  
+|`catAll`|특성은 모든 애플리케이션 요소에 적용할 수 있습니다.|  
 |`catClassMembers`|특성은 클래스의 멤버에 적용할 수 있습니다.|  
   
 ## <a name="remarks"></a>설명  

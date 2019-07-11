@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 11551221732e454e48111d48d60ca9b72f7f9b66
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0191f1fa17d436944fcb590d88dd4004adfa1aba
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61914708"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744293"
 ---
 # <a name="userthread-structure"></a>USER_THREAD 구조체
 디버거에 스레드에 대 한 정보를 제공합니다. 자세한 내용은 참조는 [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) 메서드.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef struct tagUSER_THREAD  
 {  
     BYTE    *pSidBuffer;  
@@ -39,7 +39,7 @@ typedef struct tagUSER_THREAD
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`pSidBuffer`|스레드 버퍼의 주소입니다.|  
 |`dwSidLen`|스레드 버퍼 바이트의 길이입니다.|  

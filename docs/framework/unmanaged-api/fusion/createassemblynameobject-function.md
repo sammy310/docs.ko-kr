@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd8609bedcea28c1cb8559d378b5e171f3ad568e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed26df6580aeaf2936bd50c9f1855a08ac68b90b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669964"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778427"
 ---
 # <a name="createassemblynameobject-function"></a>CreateAssemblyNameObject 함수
 한 인터페이스 포인터를 가져옵니다는 [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) 지정한 이름 가진 어셈블리의 고유 id를 나타내는 인스턴스입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT CreateAssemblyNameObject (  
     [out] LPASSEMBLYNAME  *ppAssemblyNameObj,  
     [in]  LPCWSTR         szAssemblyName,  

@@ -20,19 +20,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d2b82bc056acd2e620461081b5f8c9d45fc152c
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 74548df512f68761b006e064a6db968e82b03813
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490636"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779125"
 ---
 # <a name="coeeshutdowncom-function"></a>CoEEShutDownCOM 함수
 CLR (공용 언어 런타임) 런타임 호출 가능 래퍼 (RCW) 내에서 보유 하는 모든 인터페이스 포인터가 해제 되도록 합니다. 이 효과가 모든 RCW 캐시를 해제 합니다. 이 전역 함수는.NET Framework 4에서 사용 되지 않습니다. 대신, 특정 런타임에 대 한 진입점을 사용 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 void CoEEShutDownCOM ();  
 ```  
   

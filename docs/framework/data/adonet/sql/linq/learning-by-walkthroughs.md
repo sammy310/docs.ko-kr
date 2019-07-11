@@ -2,18 +2,18 @@
 title: 연습으로 학습
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: d5c8457bc1e484d3c7c2b57225261a3ef74023d1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e6b5f77d6d918ae1402074c9c3037ccadec8ac02
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582913"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743037"
 ---
 # <a name="learning-by-walkthroughs"></a>연습으로 학습
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 설명서에서는 여러 연습이 제공 됩니다. 이 항목에서는 몇 가지 일반적인 연습 문제와 해결 방법을 살펴보고 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]을 배울 수 있는 여러 초급 수준 연습에 대한 링크를 제공합니다.  
   
 > [!NOTE]
->  이 시작 단원의 연습에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 기술을 지원하는 기본 코드가 제공됩니다. 실제 작업에서는 일반적으로 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 및 Windows Forms 프로젝트를 사용하여 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 응용 프로그램을 구현합니다. [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] 설명서에는 이러한 목적을 위한 예제와 연습이 포함되어 있습니다.  
+>  이 시작 단원의 연습에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 기술을 지원하는 기본 코드가 제공됩니다. 실제 작업에서는 일반적으로 사용 하 여 개체 관계형 디자이너 및 Windows Forms 프로젝트를 구현 하 여 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 응용 프로그램입니다. O/R 디자이너 설명서는이 목적을 위해 예제 및 연습을 제공합니다.  
   
 ## <a name="getting-started-walkthroughs"></a>연습 시작  
  이 단원에서는 여러 연습을 사용할 수 있습니다. 이러한 연습은 샘플 Northwind 데이터베이스에 기반을 두며 복잡성을 최소화하여 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 기능을 천천히 배울 수 있도록 제공됩니다.  

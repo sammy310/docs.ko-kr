@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa10ae1cf67339a6719210f3162f19ac648e8ee5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5f38231eb6a5911527c21ee3304fc77cfcf8e90
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942352"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776524"
 ---
 # <a name="validatorflags-enumeration"></a>ValidatorFlags 열거형
 에 대 한 호출에서 수행 해야 하는 유효성 검사의 유형을 나타내는 값을 포함 합니다 [iclrvalidator:: Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) 메서드.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 enum ValidatorFlags {  
     VALIDATOR_EXTRA_VERBOSE =       0x00000001,  
     VALIDATOR_SHOW_SOURCE_LINES =   0x00000002,  
@@ -40,7 +40,7 @@ enum ValidatorFlags {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`VALIDATOR_CHECK_ILONLY`|만 MSIL (Microsoft intermediate language) 실행 파일의 유효성을 검사 해야 지정 합니다.|  
 |`VALIDATOR_CHECK_PEFORMAT_ONLY`|실행 파일의 형식에만 검사할지를 지정 합니다.|  

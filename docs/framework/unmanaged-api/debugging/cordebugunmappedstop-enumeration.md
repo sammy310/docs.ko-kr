@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1cea8adcd12ecb3078e4469e6b018ed49064e0b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2ea0bf215c0d2abfe9beb29d736f893073d3be8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723318"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739515"
 ---
 # <a name="cordebugunmappedstop-enumeration"></a>CorDebugUnmappedStop 열거형
 스텝퍼에 의해 코드 실행에서 중지를 트리거할 수 있는 매핑되지 않은 코드 형식을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorDebugUnmappedStop {  
     STOP_NONE               = 0x0,  
     STOP_PROLOG             = 0x01,  
@@ -42,7 +42,7 @@ typedef enum CorDebugUnmappedStop {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`STOP_NONE`|모든 종류의 매핑되지 않은 코드에서 중지 하지 마십시오.|  
 |`STOP_PROLOG`|프롤로그 코드에서 중지 합니다.|  

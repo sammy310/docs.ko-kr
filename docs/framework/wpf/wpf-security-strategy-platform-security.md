@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: f99a9f38d5fbb62732f157720ee544042e346469
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 5b40302d93ce1bfc378b86210ed7bb54732d294b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663558"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756763"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 보안 전략 - 플랫폼 보안
 운영 체제를 포함 하는 기본 플랫폼의 보안 기능도 활용 다양 한 보안 서비스를 제공 하는 Windows Presentation Foundation (WPF), 합니다 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], 및 [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]합니다. 이러한 계층이 결합되어 다음 그림과 같이 단일 실패 지점을 방지하는 강력한 심층 방어 보안 모델인 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]를 제공합니다.  
@@ -140,14 +140,14 @@ ms.locfileid: "67663558"
   
  ![CAS 권한 집합을 보여 주는 다이어그램입니다.](./media/wpf-security-strategy-platform-security/code-access-security-permissions-relationship.png)  
   
- 인터넷 영역 보안 샌드박스의 제한 사항은 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]이 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 비롯한 시스템 라이브러리에서 가져오는 모든 코드에 똑같이 적용됩니다. 이렇게 하면 코드의 모든 비트가 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]에서도 잠깁니다. 실행할 수 있으려면 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]에서 인터넷 영역 보안 샌드박스를 통해 사용할 수 있는 것보다 더 많은 권한이 필요한 기능을 실행해야 합니다.  
+ 인터넷 영역 보안 샌드박스 제한 사항은 XBAP 시스템 라이브러리에서 가져오는 모든 코드에 똑같이 적용 등 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]합니다. 이렇게 하면 코드의 모든 비트가 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]에서도 잠깁니다. 그러나 실행 수, XBAP 인터넷 영역 보안 샌드박스를 통해 사용할 수 있는 것 보다 더 많은 권한이 필요한 기능을 실행 해야 합니다.  
   
- 다음 페이지를 포함하는 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] 응용 프로그램을 고려해 보세요.  
+ 다음 페이지를 포함 하는 XBAP 응용 프로그램을 고려 합니다.  
   
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
- 이 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]을 실행하려면 다음을 포함하여 내부 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 코드에서 호출하는 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]이 사용할 수 있는 것보다 많은 기능을 실행해야 합니다.  
+ 기본이 XBAP를 실행 하려면 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 코드 호출 XBAP를 사용할 수 있는 것 보다 많은 기능을 실행 해야 포함:  
   
 - 렌더링에 대 한 창 핸들 (HWND) 만들기  
   
@@ -157,7 +157,7 @@ ms.locfileid: "67663558"
   
  샌드박스 애플리케이션에서 이러한 작업에 직접 액세스할 수 있도록 허용하면 보안상 치명적일 수 있습니다.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]는 샌드박스 응용 프로그램 대신 높은 권한으로 이러한 작업을 실행할 수 있도록 허용하여 이 상황에 대응합니다. 모든 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 작업은 응용 프로그램 도메인의 제한 된 인터넷 영역 보안 권한을 검사 합니다 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] (다른 시스템 라이브러리와 마찬가지로) 모든 가능한을 포함 하는 권한 집합이 부여 됩니다 사용 권한입니다.
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]는 샌드박스 응용 프로그램 대신 높은 권한으로 이러한 작업을 실행할 수 있도록 허용하여 이 상황에 대응합니다. 모든 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 작업의 XBAP 응용 프로그램 도메인의 제한 된 인터넷 영역 보안 권한에 검사할지 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] (다른 시스템 라이브러리와 마찬가지로) 모든 가능한 사용 권한을 포함 하는 권한 집합이 부여 됩니다.
   
  이 경우 해당 권한이 호스트 응용 프로그램 도메인의 인터넷 영역 권한 집합에 의해 제어되지 않도록 하는 동시에 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]가 높은 권한을 받아야 합니다.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "67663558"
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
- 합니다 **Assert** 에 필요한 무제한 권한이 기본적으로 방지 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 영역 권한에서 인터넷으로 제한 되는 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]합니다.  
+ 합니다 **Assert** 에 필요한 무제한 권한이 기본적으로 방지 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 에서 인터넷에 의해 제한 되 고 영역 XBAP 권한.  
   
  플랫폼 측면에서 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 를 사용 하 여 담당 **Assert** 제대로 잘못 사용 하면 **Assert** 악성 코드가 권한을 높일 수 있습니다. 따라서 것이 매우 중요 합니다만 호출 **Assert** 필요한 경우 그대로 유지 하는 샌드박스 제한 사항 및 합니다. 예를 들어 샌드박스 코드는 임의의 파일을 열 수 없지만 글꼴을 사용할 수 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 샌드박스 응용 프로그램 호출 하 여 글꼴 기능을 사용할 수 있도록 **Assert**, 한 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 샌드박스 응용 프로그램 대신 이러한 글꼴을 포함 한다고 알려져 파일을 읽을 수입니다.  
   
@@ -178,11 +178,11 @@ ms.locfileid: "67663558"
   
 <a name="Security_Critical_Methodology"></a>   
 ### <a name="security-critical-methodology"></a>보안에 중요한 방법론  
- 권한을 통해 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램에 대한 인터넷 영역 샌드박스를 사용할 수 있게 하는 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] 코드를 가능한 최고 수준의 보안 감사 및 제어로 유지해야 합니다. 이를 위해서,.NET Framework 권한을 상승 시키는 코드를 관리 하는 것에 대 한 새 지원의 제공 합니다. 특히를 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 권한을 상승 시키는 코드를 식별 하 고 사용 하 여 표시할 수 있습니다 합니다 <xref:System.Security.SecurityCriticalAttribute>;으로 표시 되지 않은 코드 <xref:System.Security.SecurityCriticalAttribute> 됩니다 *투명 한* 이 방법론을 사용 하 여 합니다. 반대로, <xref:System.Security.SecurityCriticalAttribute>로 표시되지 않은 관리 코드는 권한을 높일 수 있습니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 가능한 최고 수준의 보안 감사 및 제어를 보유 해야 하는 XBAP 응용 프로그램에 대 한 인터넷 영역 샌드박스를 사용 하도록 설정 하려면 사용 권한을 사용 하는 코드입니다. 이를 위해서,.NET Framework 권한을 상승 시키는 코드를 관리 하는 것에 대 한 새 지원의 제공 합니다. 특히를 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 권한을 상승 시키는 코드를 식별 하 고 사용 하 여 표시할 수 있습니다 합니다 <xref:System.Security.SecurityCriticalAttribute>;으로 표시 되지 않은 코드 <xref:System.Security.SecurityCriticalAttribute> 됩니다 *투명 한* 이 방법론을 사용 하 여 합니다. 반대로, <xref:System.Security.SecurityCriticalAttribute>로 표시되지 않은 관리 코드는 권한을 높일 수 있습니다.  
   
  보안에 중요 한 방법론 하면 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 코드에 대 한 권한을 상승 시키는 *보안에 중요 한 커널*를 투명 하 게 되 고 나머지입니다. 보안에 중요 한 코드를 격리 시키면 합니다 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 엔지니어링 팀이 집중할 보안에 중요 한 커널 표준 보안 방법 이상의 추가적인 보안 분석 및 소스 제어 (참조 [WPF 보안 전략 -보안 엔지니어링](wpf-security-strategy-security-engineering.md)).  
   
- .NET Framework 신뢰할 수 있는 코드를 확장할 수 있는지 확인 합니다 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] 개발자로 표시 되는 관리 되는 어셈블리를 작성 함으로써 인터넷 영역 샌드박스 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA)를 사용자의 전역 어셈블리 캐시 (gac에 배포 된). 어셈블리에 APTCA로 표시하는 경우 인터넷의 악성 코드를 비롯한 모든 코드에서 해당 어셈블리를 호출할 수 있으므로 중요한 보안 작업입니다. 이 작업을 수행할 때는 주의해서 최선의 방법을 사용해야 하며, 사용자가 해당 소프트웨어를 신뢰해야 설치됩니다.  
+ .NET Framework 신뢰할 수 있는 코드를 개발자로 표시 되는 관리 되는 어셈블리를 작성 함으로써 XBAP 인터넷 영역 샌드박스를 확장할 수 있는지 참고 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA)를 사용자의 전역 어셈블리 캐시 (gac에 배포 된). 어셈블리에 APTCA로 표시하는 경우 인터넷의 악성 코드를 비롯한 모든 코드에서 해당 어셈블리를 호출할 수 있으므로 중요한 보안 작업입니다. 이 작업을 수행할 때는 주의해서 최선의 방법을 사용해야 하며, 사용자가 해당 소프트웨어를 신뢰해야 설치됩니다.  
   
 <a name="Microsoft_Internet_Explorer_Security"></a>   
 ## <a name="microsoft-internet-explorer-security"></a>Microsoft Internet Explorer 보안  

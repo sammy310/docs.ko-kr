@@ -2,15 +2,15 @@
 title: 프로그래밍 가이드
 ms.date: 03/30/2017
 ms.assetid: ed1012d4-3ff2-4877-af27-93125c4180ea
-ms.openlocfilehash: 102d2ecba162e19258b707c1c902c29b0a7f2f02
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: c63fbedc1cf7484943614c50e7dd7554a2ddea0e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490038"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742929"
 ---
 # <a name="programming-guide"></a>프로그래밍 가이드
-이 단원에는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개체 모델을 생성하고 사용하는 방법에 대한 정보가 들어 있습니다. Visual Studio를 사용 하는 경우 사용할 수도 있습니다는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 이러한 동일한 작업을 수행 하도록 합니다.  
+이 단원에는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개체 모델을 생성하고 사용하는 방법에 대한 정보가 들어 있습니다. Visual Studio를 사용 하는 경우에 이와 동일한 작업을 수행 하려면 개체 관계형 디자이너를 사용할 수 있습니다.  
   
  Microsoft Docs 특정 문제를 검색할 수도 있습니다 및 참여할 수 있습니다 합니다 [LINQ 포럼](https://go.microsoft.com/fwlink/?LinkId=76488)전문가 함께 보다 복잡 한 주제를 자세히 논의할 수 있는, 합니다. 마지막으로, 합니다 [LINQ to SQL:.net language-integrated Query for Relational Data](https://go.microsoft.com/fwlink/?LinkId=93205) 백서에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 기술, Visual Basic 및 C# 코드 예제를 사용 하 여 완료 합니다.  
   

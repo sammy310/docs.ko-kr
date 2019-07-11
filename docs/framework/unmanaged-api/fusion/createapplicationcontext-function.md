@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d98829b29100824e5d606e23aaf287c9f6e81d69
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9853f974230ee755a33bc46ca6ba3e086051b236
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771919"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778473"
 ---
 # <a name="createapplicationcontext-function"></a>CreateApplicationContext 함수
 이 함수는.NET Framework 인프라를 지원 하며 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT CreateApplicationContext (  
     [in]  IAssemblyName  *pName,  
     [out] LPPAPPLICATIONCONTEXT  *ppCtx  

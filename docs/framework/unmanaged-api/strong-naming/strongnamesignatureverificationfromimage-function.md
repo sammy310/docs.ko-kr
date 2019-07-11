@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9eef4e1b1c9c82d8576c01dd124ee9ac68c2583
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df2eb9d454f2037ef5f2a09d1309d52a8365e715
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610036"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782682"
 ---
 # <a name="strongnamesignatureverificationfromimage-function"></a>StrongNameSignatureVerificationFromImage 함수
 메모리에 이미 매핑된 어셈블리가 연결된 공개 키에 유효한지 확인합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "64610036"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 BOOLEAN StrongNameSignatureVerificationFromImage (  
     [in]  BYTE    *pbBase,  
     [in]  DWORD   dwLength,  

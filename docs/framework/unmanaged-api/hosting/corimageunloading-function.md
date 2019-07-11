@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1cb5f9decbcdfb71f67a5132dc59773f1de8b0a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b488b6a887b0c66d8c17f8ea78f48f7d2ea31011
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985805"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758400"
 ---
 # <a name="corimageunloading-function"></a>_CorImageUnloading 함수
 관리 되는 모듈 이미지가 언로드될 때 로더에 알립니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "61985805"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 STDAPI (VOID) _CorImageUnloading(   
    [in] PVOID* ImageBase  
 );  

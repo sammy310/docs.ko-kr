@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91e253669b9f51e7c1d600ba11f13a9ce67fb58a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c7b512de76b5ada882b1d81c2968b4ead5c8c20
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905114"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775938"
 ---
 # <a name="imetadataassemblyimportenumassemblyrefs-method"></a>IMetaDataAssemblyImport::EnumAssemblyRefs 메서드
 열거는 `mdAssemblyRef` 어셈블리 매니페스트에 정의 된 인스턴스.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT EnumAssemblyRefs (  
     [in, out] HCORENUM        *phEnum,   
     [out]     mdAssemblyRef   rAssemblyRefs[],   
@@ -53,7 +53,7 @@ HRESULT EnumAssemblyRefs (
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|설명|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |`S_OK`|`EnumAssemblyRefs` 성공적으로 반환 합니다.|  
 |`S_FALSE`|열거할 토큰이 있습니다. 이 경우 `pcTokens` 0으로 설정 됩니다.|  

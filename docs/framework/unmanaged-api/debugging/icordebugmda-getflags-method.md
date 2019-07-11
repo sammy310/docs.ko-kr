@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a35e9f7cf43105db05408f285cd89dbd839a4cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 701d578a1d3af941923d68ddc0cb7c97dd0ca8ab
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969041"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761932"
 ---
 # <a name="icordebugmdagetflags-method"></a>ICorDebugMDA::GetFlags 메서드
 연결 된 MDA (관리 디버깅 도우미)으로 표시 된 플래그를 가져옵니다 [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetFlags (  
     [in] CorDebugMDAFlags *pFlags  
 );  

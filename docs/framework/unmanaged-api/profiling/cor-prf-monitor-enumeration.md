@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0fc3329d8b6d49c2924c991e4d606a437eff9d2d
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: b6916c223aee615fad0bb9e5a47691122db41c98
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268012"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752059"
 ---
 # <a name="corprfmonitor-enumeration"></a>COR_PRF_MONITOR 열거형
 프로파일러가 구독하려는 동작, 기능 또는 이벤트를 지정하는 데 사용되는 값을 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum {  
     COR_PRF_MONITOR_NONE                = 0x00000000,  
     COR_PRF_MONITOR_FUNCTION_UNLOADS    = 0x00000001,  
@@ -115,14 +115,14 @@ typedef enum {
 <a name="None"></a>   
 ### <a name="no-flags-set"></a>플래그 설정 없음  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`COR_PRF_MONITOR_NONE`|플래그가 설정되지 않았습니다.|  
   
 <a name="Callback"></a>   
 ### <a name="callback-flags"></a>콜백 플래그  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`COR_PRF_MONITOR_ALL`|모든 콜백 이벤트를 사용하도록 설정합니다.|  
 |`COR_PRF_MONITOR_APPDOMAIN_LOADS`|컨트롤의 `AppDomainCreation*` 및 `AppDomainShutdown*` 콜백을 합니다 [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) 인터페이스입니다.|  
@@ -153,8 +153,8 @@ typedef enum {
 |`COR_PRF_ENABLE_FRAME_INFO`|정확한를 검색할 수 있도록 `ClassID` 호출 하 여 제네릭 함수에 대 한는 [GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) 메서드를 `COR_PRF_FRAME_INFO` 에서 반환 된 값을 [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) 콜백 합니다.|  
 |`COR_PRF_ENABLE_FUNCTION_ARGS`|사용 하 여 사용 하도록 설정 인수 추적 합니다 [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) 콜백 또는 [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) 콜백 하며 [GetFunctionEnter3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) 메서드.|  
 |`COR_PRF_ENABLE_FUNCTION_RETVAL`|사용 하 여 반환 값은 추적 하도록 설정 합니다 [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) 콜백 또는 [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) 콜백 및 [GetFunctionLeave3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md) 메서드.|  
-|`COR_PRF_ENABLE_INPROC_DEBUGGING`|이 컴파일 옵션은 더 이상 사용되지 않습니다.<br /><br /> 프로세스 내 디버깅은 지원되지 않습니다. 이 플래그는 아무런 영향을 주지 않습니다.|  
-|`COR_PRF_ENABLE_JIT_MAPS`|이 컴파일 옵션은 더 이상 사용되지 않습니다.<br /><br /> 프로파일러를 사용 하 여 IL-네이티브 맵을 가져올 수 있습니다 [GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)합니다. .NET Framework 2.0부터는 런타임이 항상 IL-네이티브 맵을 추적하므로 이 플래그는 항상 설정되어 있는 것으로 간주됩니다.|  
+|`COR_PRF_ENABLE_INPROC_DEBUGGING`|더 이상 사용되지 않습니다.<br /><br /> 프로세스 내 디버깅은 지원되지 않습니다. 이 플래그는 아무런 영향을 주지 않습니다.|  
+|`COR_PRF_ENABLE_JIT_MAPS`|더 이상 사용되지 않습니다.<br /><br /> 프로파일러를 사용 하 여 IL-네이티브 맵을 가져올 수 있습니다 [GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)합니다. .NET Framework 2.0부터는 런타임이 항상 IL-네이티브 맵을 추적하므로 이 플래그는 항상 설정되어 있는 것으로 간주됩니다.|  
 |`COR_PRF_ENABLE_OBJECT_ALLOCATED`|프로파일러가 개체 할당 알림을 받고자 할 수 있음을 런타임에 알립니다. 이 플래그는 초기화 중에 설정해야 합니다. 프로파일러를 사용 하 여 이후에 허용 합니다 `COR_PRF_MONITOR_OBJECT_ALLOCATED` 받으려면 플래그 [ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md) 콜백을 합니다.|  
 |`COR_PRF_ENABLE_REJIT`|에 대 한 호출을 사용 하도록 설정 합니다 [RequestReJIT](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-requestrejit-method.md) 하 고 [RequestRevert](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-requestrevert-method.md) 메서드. 프로파일러는 시작 시 이 플래그를 설정해야 합니다.  프로파일러가 이 플래그를 지정하는 경우에는 `COR_PRF_DISABLE_ALL_NGEN_IMAGES`도 지정해야 합니다.|  
 |`COR_PRF_ENABLE_STACK_SNAPSHOT`|에 대 한 호출을 사용 하도록 설정 합니다 [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) 메서드.|  

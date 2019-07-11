@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a28cb9f1fd2e12cd750d4eeb8db6c2d7a181b414
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5b5f7ce6a4ce8f542b3c49fe4749bfde23ecf84
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697565"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744494"
 ---
 # <a name="iassemblynamegetversion-method"></a>IAssemblyName::GetVersion 메서드
 이 참조 되는 어셈블리에 대 한 버전 정보를 가져옵니다 [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetVersion (  
     [out] LPDWORD pdwVersionHi,  
     [out] LPDWORD pdwVersionLow  

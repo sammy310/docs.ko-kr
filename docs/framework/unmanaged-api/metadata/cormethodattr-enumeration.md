@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 249de91483117db6b497fa8eae6f97c3eb0a0587
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff298f73f02f148fc389f389ba86fd9a550998c7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045528"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781769"
 ---
 # <a name="cormethodattr-enumeration"></a>CorMethodAttr 열거형
 메서드의 기능을 설명 하는 값을 포함 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorMethodAttr {  
   
     mdMemberAccessMask          =   0x0007,  
@@ -66,7 +66,7 @@ typedef enum CorMethodAttr {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`mdMemberAccessMask`|멤버 액세스를 지정합니다.|  
 |`mdPrivateScope`|멤버를 참조할 수 없습니다 지정 합니다.|  
@@ -81,7 +81,7 @@ typedef enum CorMethodAttr {
 |`mdVirtual`|메서드를 재정의할 수 있음을 지정 합니다.|  
 |`mdHideBySig`|메서드 이름 대신 방금 이름과 시그니처를 여는 숨깁니다 지정 합니다.|  
 |`mdVtableLayoutMask`|가상 테이블 레이아웃을 지정합니다.|  
-|`mdReuseSlot`|가상 테이블에서이 메서드에 사용 되는 슬롯 재사용할 수를 지정 합니다. 이 값이 기본값입니다.|  
+|`mdReuseSlot`|가상 테이블에서이 메서드에 사용 되는 슬롯 재사용할 수를 지정 합니다. 기본값입니다.|  
 |`mdNewSlot`|가상 테이블의 새 슬롯이 메서드는 항상 가져옵니다 지정 합니다.|  
 |`mdCheckAccessOnOverride`|표시 되는 동일한 형식에서 메서드를 재정의할 수 있는지를 지정 합니다.|  
 |`mdAbstract`|메서드가 구현 되지 않았음을 지정 합니다.|  

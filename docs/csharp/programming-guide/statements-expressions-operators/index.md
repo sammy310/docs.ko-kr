@@ -10,12 +10,12 @@ helpviewer_keywords:
 - C# language, expressions
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-ms.openlocfilehash: 2f7505051cce3aee99e6b6ea88a6a94498926214
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 7073ddc50b47ff239e8b310c0a5a1fbd84504133
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609638"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743885"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>문, 식, 연산자(C# 프로그래밍 가이드)
 
@@ -32,12 +32,6 @@ ms.locfileid: "67609638"
 - [연산자](operators.md)
 
 - [익명 함수](anonymous-functions.md)
-
-- [변환 연산자](conversion-operators.md)
-
-  - [변환 연산자 사용](using-conversion-operators.md)
-
-  - [방법: 구조체 간의 사용자 정의 변환 구현](how-to-implement-user-defined-conversions-between-structs.md)
 
 - [같음 비교](equality-comparisons.md)
 

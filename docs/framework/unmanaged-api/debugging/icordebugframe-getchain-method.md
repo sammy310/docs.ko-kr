@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 032c1e3dcfe50cd30953ca581ff9f0d83b78518d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64de770676cdd02375e854acb8af7feecb28dfeb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995867"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754116"
 ---
 # <a name="icordebugframegetchain-method"></a>ICorDebugFrame::GetChain 메서드
 이 프레임의 일부인 체인에 대 한 포인터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetChain (  
     [out] ICorDebugChain     **ppChain  
 );  

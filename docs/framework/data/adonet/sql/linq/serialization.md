@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
-ms.openlocfilehash: ff2b2f6575c82f3769823431ec6363775bf9d698
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ff6f8b58e01c86ae1c1e2e1533b1997ba2eb6b0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616074"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742897"
 ---
 # <a name="serialization"></a>Serialization
 이 항목에서는 설명 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] serialization 기능입니다. 디자인 타임에 코드 생성 도중 serialization을 추가하는 방법과 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 클래스의 런타임 serialization 동작에 대한 정보가 제공됩니다.  
   
  다음 방법 중 하나로 디자인 타임에 serialization 코드를 추가할 수 있습니다.  
   
-- 에 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]를 변경 합니다 **Serialization 모드** 속성을 **Unidirectional**합니다.  
+- 개체 관계형 디자이너에서 변경 된 **Serialization 모드** 속성을 **Unidirectional**합니다.  
   
 - SQLMetal 명령줄에서 추가 된 **/serialization** 옵션입니다. 자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "64616074"
   
      단방향 serialization은 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 지원되는 유일한 serialization 형식입니다.  
   
-## <a name="code-example"></a>코드 예제  
+## <a name="code-example"></a>코드 예  
  다음 코드에서는 Northwind 샘플 데이터베이스의 일반 `Customer` 및 `Order` 클래스를 사용하고 이러한 클래스가 serialization 특성으로 데코레이팅되는 방법을 보여 줍니다.  
   
  [!code-csharp[DLinqSerialization#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#1)]

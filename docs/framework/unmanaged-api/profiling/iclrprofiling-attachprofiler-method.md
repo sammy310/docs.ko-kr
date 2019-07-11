@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0e3898fb836409df3b685d985d0d72ab63230a93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: efc097fd9b4da668aafce90ce601a3143ea57dc7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598696"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763176"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler 메서드
 지정한 프로파일러를 지정된 프로세스에 연결합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT AttachProfiler(  
   [in] DWORD dwProfileeProcessID,  
   [in] DWORD dwMillisecondsMax,                     // optional  
@@ -61,7 +61,7 @@ HRESULT AttachProfiler(
 ## <a name="return-value"></a>반환 값  
  이 메서드는 다음과 같은 HRESULT를 반환합니다.  
   
-|HRESULT|설명|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|지정된 프로파일러가 대상 프로세스에 성공적으로 연결했습니다.|  
 |CORPROF_E_PROFILER_ALREADY_ACTIVE|활성 상태이거나 대상 프로세스에 연결하는 프로파일러가 이미 있습니다.|  
