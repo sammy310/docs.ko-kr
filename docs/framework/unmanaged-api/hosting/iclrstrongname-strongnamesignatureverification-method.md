@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c15b8e416a5070f59a4df44b3e670e2eb9316b5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d269414346d8dcf4212fb5ee546cf22228cdd2b0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630541"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765903"
 ---
-# <a name="iclrstrongnamestrongnamesignatureverification-method"></a><span data-ttu-id="4c518-102">ICLRStrongName::StrongNameSignatureVerification 메서드</span><span class="sxs-lookup"><span data-stu-id="4c518-102">ICLRStrongName::StrongNameSignatureVerification Method</span></span>
-<span data-ttu-id="4c518-103">어셈블리 매니페스트에 제공 된 경로의 지정된 된 플래그에 따라 확인할 수 있는 강력한 이름 서명을 포함 되는지 여부를 나타내는 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="4c518-103">Gets a value that indicates whether the assembly manifest at the supplied path contains a strong name signature, which is verified according to the specified flags.</span></span>  
+# <a name="iclrstrongnamestrongnamesignatureverification-method"></a><span data-ttu-id="e8307-102">ICLRStrongName::StrongNameSignatureVerification 메서드</span><span class="sxs-lookup"><span data-stu-id="e8307-102">ICLRStrongName::StrongNameSignatureVerification Method</span></span>
+<span data-ttu-id="e8307-103">어셈블리 매니페스트에 제공 된 경로의 지정된 된 플래그에 따라 확인할 수 있는 강력한 이름 서명을 포함 되는지 여부를 나타내는 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="e8307-103">Gets a value that indicates whether the assembly manifest at the supplied path contains a strong name signature, which is verified according to the specified flags.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4c518-104">구문</span><span class="sxs-lookup"><span data-stu-id="4c518-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e8307-104">구문</span><span class="sxs-lookup"><span data-stu-id="e8307-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT StrongNameSignatureVerification (  
     [in]  LPCWSTR   wszFilePath,  
     [in]  DWORD     dwInFlags,  
@@ -37,43 +37,43 @@ HRESULT StrongNameSignatureVerification (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4c518-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="4c518-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e8307-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="e8307-105">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="4c518-106">[in] 이식 가능한 실행 파일 (.dll 또는.exe) 파일에 어셈블리 확인에 대 한 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="4c518-106">[in] The path to the portable executable (.dll or .exe) file for the assembly to verify.</span></span>  
+ <span data-ttu-id="e8307-106">[in] 이식 가능한 실행 파일 (.dll 또는.exe) 파일에 어셈블리 확인에 대 한 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="e8307-106">[in] The path to the portable executable (.dll or .exe) file for the assembly to verify.</span></span>  
   
  `dwInFlags`  
- <span data-ttu-id="4c518-107">[in] 확인 동작을 수정 하는 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="4c518-107">[in] Flags to modify the verification behavior.</span></span> <span data-ttu-id="4c518-108">다음 값이 지원 됩니다.</span><span class="sxs-lookup"><span data-stu-id="4c518-108">The following values are supported:</span></span>  
+ <span data-ttu-id="e8307-107">[in] 확인 동작을 수정 하는 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="e8307-107">[in] Flags to modify the verification behavior.</span></span> <span data-ttu-id="e8307-108">다음 값이 지원 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e8307-108">The following values are supported:</span></span>  
   
-- <span data-ttu-id="4c518-109">`SN_INFLAG_FORCE_VER` (0x00000001)-레지스트리 설정을 재정의 해야 하는 경우에 확인이 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c518-109">`SN_INFLAG_FORCE_VER` (0x00000001) - Forces verification even if it is necessary to override registry settings.</span></span>  
+- <span data-ttu-id="e8307-109">`SN_INFLAG_FORCE_VER` (0x00000001)-레지스트리 설정을 재정의 해야 하는 경우에 확인이 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="e8307-109">`SN_INFLAG_FORCE_VER` (0x00000001) - Forces verification even if it is necessary to override registry settings.</span></span>  
   
-- <span data-ttu-id="4c518-110">`SN_INFLAG_INSTALL` (0x00000002)-매니페스트를 확인 하는 첫 번째 시간 임을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c518-110">`SN_INFLAG_INSTALL` (0x00000002) - Specifies that this is the first time the manifest is verified.</span></span>  
+- <span data-ttu-id="e8307-110">`SN_INFLAG_INSTALL` (0x00000002)-매니페스트를 확인 하는 첫 번째 시간 임을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="e8307-110">`SN_INFLAG_INSTALL` (0x00000002) - Specifies that this is the first time the manifest is verified.</span></span>  
   
-- <span data-ttu-id="4c518-111">`SN_INFLAG_ADMIN_ACCESS` (0x00000004)-캐시는 관리 권한이 있는 사용자만 액세스할 수 있도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c518-111">`SN_INFLAG_ADMIN_ACCESS` (0x00000004) - Specifies that the cache will allow access only to users who have administrative privileges.</span></span>  
+- <span data-ttu-id="e8307-111">`SN_INFLAG_ADMIN_ACCESS` (0x00000004)-캐시는 관리 권한이 있는 사용자만 액세스할 수 있도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="e8307-111">`SN_INFLAG_ADMIN_ACCESS` (0x00000004) - Specifies that the cache will allow access only to users who have administrative privileges.</span></span>  
   
-- <span data-ttu-id="4c518-112">`SN_INFLAG_USER_ACCESS` (0x00000008)-어셈블리는 현재 사용자만 액세스할 수 있도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c518-112">`SN_INFLAG_USER_ACCESS` (0x00000008) - Specifies that the assembly will be accessible only to the current user.</span></span>  
+- <span data-ttu-id="e8307-112">`SN_INFLAG_USER_ACCESS` (0x00000008)-어셈블리는 현재 사용자만 액세스할 수 있도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="e8307-112">`SN_INFLAG_USER_ACCESS` (0x00000008) - Specifies that the assembly will be accessible only to the current user.</span></span>  
   
-- <span data-ttu-id="4c518-113">`SN_INFLAG_ALL_ACCESS` (0x00000010)-캐시의 액세스 제한이 않음을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c518-113">`SN_INFLAG_ALL_ACCESS` (0x00000010) - Specifies that the cache will provide no guarantees of access restriction.</span></span>  
+- <span data-ttu-id="e8307-113">`SN_INFLAG_ALL_ACCESS` (0x00000010)-캐시의 액세스 제한이 않음을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="e8307-113">`SN_INFLAG_ALL_ACCESS` (0x00000010) - Specifies that the cache will provide no guarantees of access restriction.</span></span>  
   
-- <span data-ttu-id="4c518-114">`SN_INFLAG_RUNTIME` (0x80000000)-내부 디버깅을 위해 예약 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4c518-114">`SN_INFLAG_RUNTIME` (0x80000000) - Reserved for internal debugging.</span></span>  
+- <span data-ttu-id="e8307-114">`SN_INFLAG_RUNTIME` (0x80000000)-내부 디버깅을 위해 예약 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e8307-114">`SN_INFLAG_RUNTIME` (0x80000000) - Reserved for internal debugging.</span></span>  
   
  `pdwOutFlags`  
- <span data-ttu-id="4c518-115">[out] 강력한 이름 서명을 확인 하는지 여부를 나타내는 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="4c518-115">[out] Flags indicating whether the strong name signature was verified.</span></span> <span data-ttu-id="4c518-116">다음 값을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4c518-116">The following value is supported:</span></span>  
+ <span data-ttu-id="e8307-115">[out] 강력한 이름 서명을 확인 하는지 여부를 나타내는 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="e8307-115">[out] Flags indicating whether the strong name signature was verified.</span></span> <span data-ttu-id="e8307-116">다음 값을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e8307-116">The following value is supported:</span></span>  
   
-- <span data-ttu-id="4c518-117">`SN_OUTFLAG_WAS_VERIFIED` (0x00000001)-이 값 설정할지 `false` 레지스트리 설정으로 인해 확인이 성공 했는지를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c518-117">`SN_OUTFLAG_WAS_VERIFIED` (0x00000001) - This value is set to `false` to specify that the verification succeeded due to registry settings.</span></span>  
+- <span data-ttu-id="e8307-117">`SN_OUTFLAG_WAS_VERIFIED` (0x00000001)-이 값 설정할지 `false` 레지스트리 설정으로 인해 확인이 성공 했는지를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="e8307-117">`SN_OUTFLAG_WAS_VERIFIED` (0x00000001) - This value is set to `false` to specify that the verification succeeded due to registry settings.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="4c518-118">반환 값</span><span class="sxs-lookup"><span data-stu-id="4c518-118">Return Value</span></span>  
- <span data-ttu-id="4c518-119">`S_OK` 메서드가 성공적으로 완료 하는 경우 그렇지 않으면 실패를 나타내는 HRESULT 값을 (참조 [일반적인 HRESULT 값](https://go.microsoft.com/fwlink/?LinkId=213878) 목록에 대 한).</span><span class="sxs-lookup"><span data-stu-id="4c518-119">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e8307-118">반환 값</span><span class="sxs-lookup"><span data-stu-id="e8307-118">Return Value</span></span>  
+ <span data-ttu-id="e8307-119">`S_OK` 메서드가 성공적으로 완료 하는 경우 그렇지 않으면 실패를 나타내는 HRESULT 값을 (참조 [일반적인 HRESULT 값](https://go.microsoft.com/fwlink/?LinkId=213878) 목록에 대 한).</span><span class="sxs-lookup"><span data-stu-id="e8307-119">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4c518-120">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4c518-120">Requirements</span></span>  
- <span data-ttu-id="4c518-121">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="4c518-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e8307-120">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e8307-120">Requirements</span></span>  
+ <span data-ttu-id="e8307-121">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="e8307-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4c518-122">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="4c518-122">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="e8307-122">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="e8307-122">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="4c518-123">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="4c518-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="e8307-123">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="e8307-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="4c518-124">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4c518-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="e8307-124">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e8307-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4c518-125">참고자료</span><span class="sxs-lookup"><span data-stu-id="4c518-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e8307-125">참고자료</span><span class="sxs-lookup"><span data-stu-id="e8307-125">See also</span></span>
 
-- [<span data-ttu-id="4c518-126">StrongNameSignatureVerificationEx 메서드</span><span class="sxs-lookup"><span data-stu-id="4c518-126">StrongNameSignatureVerificationEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)
-- [<span data-ttu-id="4c518-127">ICLRStrongName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4c518-127">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="e8307-126">StrongNameSignatureVerificationEx 메서드</span><span class="sxs-lookup"><span data-stu-id="e8307-126">StrongNameSignatureVerificationEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)
+- [<span data-ttu-id="e8307-127">ICLRStrongName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e8307-127">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

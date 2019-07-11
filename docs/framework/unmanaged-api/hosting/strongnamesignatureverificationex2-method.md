@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aab3b697a0bb2f58258816ce4f8133009b26f54a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb4e41f62f5f55969dadd47e80efc56e1c92c94f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043409"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768272"
 ---
-# <a name="strongnamesignatureverificationex2-method"></a><span data-ttu-id="cae76-102">StrongNameSignatureVerificationEx2 메서드</span><span class="sxs-lookup"><span data-stu-id="cae76-102">StrongNameSignatureVerificationEx2 Method</span></span>
-<span data-ttu-id="cae76-103">강력한 이름의 어셈블리의 서명을 확인 하 고 실제 키에 대 한 매핑을 ECMA 키에서를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="cae76-103">Verifies the signature of a strongly named assembly, and provides a mapping from the ECMA key to a real key.</span></span>  
+# <a name="strongnamesignatureverificationex2-method"></a><span data-ttu-id="04b3a-102">StrongNameSignatureVerificationEx2 메서드</span><span class="sxs-lookup"><span data-stu-id="04b3a-102">StrongNameSignatureVerificationEx2 Method</span></span>
+<span data-ttu-id="04b3a-103">강력한 이름의 어셈블리의 서명을 확인 하 고 실제 키에 대 한 매핑을 ECMA 키에서를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="04b3a-103">Verifies the signature of a strongly named assembly, and provides a mapping from the ECMA key to a real key.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cae76-104">구문</span><span class="sxs-lookup"><span data-stu-id="cae76-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="04b3a-104">구문</span><span class="sxs-lookup"><span data-stu-id="04b3a-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT StrongNameSignatureVerificationEx (  
     [in]  LPCWSTR   wszFilePath,  
     [in]  BOOLEAN   fForceVerification,    [in]  BYTE      *pbEcmaPublicKey,  
@@ -38,36 +38,36 @@ HRESULT StrongNameSignatureVerificationEx (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cae76-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="cae76-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="04b3a-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="04b3a-105">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="cae76-106">[in] 이식 가능한 실행 파일 (.exe 또는.dll) 파일에 확인할 어셈블리에 대 한 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="cae76-106">[in] The path to the portable executable (.exe or .dll) file for the assembly to be verified.</span></span>  
+ <span data-ttu-id="04b3a-106">[in] 이식 가능한 실행 파일 (.exe 또는.dll) 파일에 확인할 어셈블리에 대 한 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="04b3a-106">[in] The path to the portable executable (.exe or .dll) file for the assembly to be verified.</span></span>  
   
  `fForceVerification`  
- <span data-ttu-id="cae76-107">[in] `true` 것이 고, 그렇지 않으면 레지스트리 설정을 재정의 해야 하는 경우에 확인 하는 데 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="cae76-107">[in] `true` to perform verification, even if it is necessary to override registry settings; otherwise, `false`.</span></span>  
+ <span data-ttu-id="04b3a-107">[in] `true` 것이 고, 그렇지 않으면 레지스트리 설정을 재정의 해야 하는 경우에 확인 하는 데 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="04b3a-107">[in] `true` to perform verification, even if it is necessary to override registry settings; otherwise, `false`.</span></span>  
   
  `pbEcmaPublicKey`  
- <span data-ttu-id="cae76-108">[in] 확인에 대 한 실제 키 ECMA 공개 키에서 매핑에 대 한 포인터를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="cae76-108">[in] A pointer to the mapping from the ECMA public key to the real key used for verification.</span></span>  
+ <span data-ttu-id="04b3a-108">[in] 확인에 대 한 실제 키 ECMA 공개 키에서 매핑에 대 한 포인터를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="04b3a-108">[in] A pointer to the mapping from the ECMA public key to the real key used for verification.</span></span>  
   
  `cbEcmaPublicKey`  
- <span data-ttu-id="cae76-109">[in] 실제 ECMA 공개 키의 길이입니다.</span><span class="sxs-lookup"><span data-stu-id="cae76-109">[in] The length of the real ECMA public key.</span></span>  
+ <span data-ttu-id="04b3a-109">[in] 실제 ECMA 공개 키의 길이입니다.</span><span class="sxs-lookup"><span data-stu-id="04b3a-109">[in] The length of the real ECMA public key.</span></span>  
   
  `pfWasVerified`  
- <span data-ttu-id="cae76-110">[out] `true` 강력한 이름 서명을 확인 했으면이 고, 그렇지 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="cae76-110">[out] `true` if the strong name signature was verified; otherwise, `false`.</span></span> <span data-ttu-id="cae76-111">이 매개 변수는 또한 설정 `false` 레지스트리 설정으로 인해 성공 했는지 확인 하는 경우.</span><span class="sxs-lookup"><span data-stu-id="cae76-111">This parameter is also set to `false` if the verification was successful due to registry settings.</span></span>  
+ <span data-ttu-id="04b3a-110">[out] `true` 강력한 이름 서명을 확인 했으면이 고, 그렇지 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="04b3a-110">[out] `true` if the strong name signature was verified; otherwise, `false`.</span></span> <span data-ttu-id="04b3a-111">이 매개 변수는 또한 설정 `false` 레지스트리 설정으로 인해 성공 했는지 확인 하는 경우.</span><span class="sxs-lookup"><span data-stu-id="04b3a-111">This parameter is also set to `false` if the verification was successful due to registry settings.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="cae76-112">반환 값</span><span class="sxs-lookup"><span data-stu-id="cae76-112">Return Value</span></span>  
- <span data-ttu-id="cae76-113">`S_OK` 확인에 성공 하면 그렇지 않으면 실패를 나타내는 HRESULT 값을 (참조 [일반적인 HRESULT 값](https://go.microsoft.com/fwlink/?LinkId=213878) 목록에 대 한).</span><span class="sxs-lookup"><span data-stu-id="cae76-113">`S_OK` if the verification was successful; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="04b3a-112">반환 값</span><span class="sxs-lookup"><span data-stu-id="04b3a-112">Return Value</span></span>  
+ <span data-ttu-id="04b3a-113">`S_OK` 확인에 성공 하면 그렇지 않으면 실패를 나타내는 HRESULT 값을 (참조 [일반적인 HRESULT 값](https://go.microsoft.com/fwlink/?LinkId=213878) 목록에 대 한).</span><span class="sxs-lookup"><span data-stu-id="04b3a-113">`S_OK` if the verification was successful; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cae76-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="cae76-114">Requirements</span></span>  
- <span data-ttu-id="cae76-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="cae76-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="04b3a-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="04b3a-114">Requirements</span></span>  
+ <span data-ttu-id="04b3a-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="04b3a-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cae76-116">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="cae76-116">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="04b3a-116">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="04b3a-116">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="cae76-117">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="cae76-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="04b3a-117">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="04b3a-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="cae76-118">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cae76-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="04b3a-118">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="04b3a-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cae76-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="cae76-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="04b3a-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="04b3a-119">See also</span></span>
 
-- [<span data-ttu-id="cae76-120">StrongNameSignatureVerification 메서드</span><span class="sxs-lookup"><span data-stu-id="cae76-120">StrongNameSignatureVerification Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)
-- [<span data-ttu-id="cae76-121">StrongNameSignatureVerificationEx 메서드</span><span class="sxs-lookup"><span data-stu-id="cae76-121">StrongNameSignatureVerificationEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)
-- [<span data-ttu-id="cae76-122">ICLRStrongName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="cae76-122">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="04b3a-120">StrongNameSignatureVerification 메서드</span><span class="sxs-lookup"><span data-stu-id="04b3a-120">StrongNameSignatureVerification Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)
+- [<span data-ttu-id="04b3a-121">StrongNameSignatureVerificationEx 메서드</span><span class="sxs-lookup"><span data-stu-id="04b3a-121">StrongNameSignatureVerificationEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)
+- [<span data-ttu-id="04b3a-122">ICLRStrongName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="04b3a-122">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

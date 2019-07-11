@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd784cb3322423e9309e8a5632822831b4e44cdf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c3ced50457519d62be44712386bdabce176c44e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995121"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761318"
 ---
-# <a name="icordebugmanagedcallbackstepcomplete-method"></a><span data-ttu-id="6ec2e-102">ICorDebugManagedCallback::StepComplete 메서드</span><span class="sxs-lookup"><span data-stu-id="6ec2e-102">ICorDebugManagedCallback::StepComplete Method</span></span>
-<span data-ttu-id="6ec2e-103">단계가 완료 되었음을 디버거에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="6ec2e-103">Notifies the debugger that a step has completed.</span></span>  
+# <a name="icordebugmanagedcallbackstepcomplete-method"></a><span data-ttu-id="9978e-102">ICorDebugManagedCallback::StepComplete 메서드</span><span class="sxs-lookup"><span data-stu-id="9978e-102">ICorDebugManagedCallback::StepComplete Method</span></span>
+<span data-ttu-id="9978e-103">단계가 완료 되었음을 디버거에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="9978e-103">Notifies the debugger that a step has completed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6ec2e-104">구문</span><span class="sxs-lookup"><span data-stu-id="6ec2e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9978e-104">구문</span><span class="sxs-lookup"><span data-stu-id="9978e-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT StepComplete (  
     [in] ICorDebugAppDomain  *pAppDomain,  
     [in] ICorDebugThread     *pThread,  
@@ -38,31 +38,31 @@ HRESULT StepComplete (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6ec2e-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="6ec2e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9978e-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="9978e-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="6ec2e-106">[in] 단계를 완료 하는 스레드를 포함 하는 응용 프로그램 도메인을 나타내는 ICorDebugAppDomain 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="6ec2e-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the thread in which the step has completed.</span></span>  
+ <span data-ttu-id="9978e-106">[in] 단계를 완료 하는 스레드를 포함 하는 응용 프로그램 도메인을 나타내는 ICorDebugAppDomain 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="9978e-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the thread in which the step has completed.</span></span>  
   
  `pThread`  
- <span data-ttu-id="6ec2e-107">[in] 단계를 완료 하는 스레드를 나타내는 ICorDebugThread 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="6ec2e-107">[in] A pointer to an ICorDebugThread object that represents the thread in which the step has completed.</span></span>  
+ <span data-ttu-id="9978e-107">[in] 단계를 완료 하는 스레드를 나타내는 ICorDebugThread 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="9978e-107">[in] A pointer to an ICorDebugThread object that represents the thread in which the step has completed.</span></span>  
   
  `pStepper`  
- <span data-ttu-id="6ec2e-108">[in] 코드 실행 하는 단계를 나타내는 ICorDebugStepper 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="6ec2e-108">[in] A pointer to an ICorDebugStepper object that represents the step in code execution.</span></span>  
+ <span data-ttu-id="9978e-108">[in] 코드 실행 하는 단계를 나타내는 ICorDebugStepper 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="9978e-108">[in] A pointer to an ICorDebugStepper object that represents the step in code execution.</span></span>  
   
  `reason`  
- <span data-ttu-id="6ec2e-109">[in] 개별 단계의 결과 나타내는 CorDebugStepReason 열거형의 값입니다.</span><span class="sxs-lookup"><span data-stu-id="6ec2e-109">[in] A value of the CorDebugStepReason enumeration that indicates the outcome of an individual step.</span></span>  
+ <span data-ttu-id="9978e-109">[in] 개별 단계의 결과 나타내는 CorDebugStepReason 열거형의 값입니다.</span><span class="sxs-lookup"><span data-stu-id="9978e-109">[in] A value of the CorDebugStepReason enumeration that indicates the outcome of an individual step.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6ec2e-110">설명</span><span class="sxs-lookup"><span data-stu-id="6ec2e-110">Remarks</span></span>  
- <span data-ttu-id="6ec2e-111">스텝 퍼 단계별로 계속 필요한 경우 디버깅이 종료 되지 않는 한 데 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6ec2e-111">The stepper may be used to continue stepping if desired, unless the debugging is terminated.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9978e-110">설명</span><span class="sxs-lookup"><span data-stu-id="9978e-110">Remarks</span></span>  
+ <span data-ttu-id="9978e-111">스텝 퍼 단계별로 계속 필요한 경우 디버깅이 종료 되지 않는 한 데 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9978e-111">The stepper may be used to continue stepping if desired, unless the debugging is terminated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6ec2e-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="6ec2e-112">Requirements</span></span>  
- <span data-ttu-id="6ec2e-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="6ec2e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9978e-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9978e-112">Requirements</span></span>  
+ <span data-ttu-id="9978e-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="9978e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6ec2e-114">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6ec2e-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9978e-114">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9978e-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6ec2e-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6ec2e-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9978e-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9978e-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6ec2e-116">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6ec2e-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="9978e-116">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9978e-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6ec2e-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="6ec2e-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9978e-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="9978e-117">See also</span></span>
 
-- [<span data-ttu-id="6ec2e-118">ICorDebugManagedCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="6ec2e-118">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="9978e-118">ICorDebugManagedCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="9978e-118">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

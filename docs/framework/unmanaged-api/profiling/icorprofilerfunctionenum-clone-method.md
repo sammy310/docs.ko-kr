@@ -17,36 +17,36 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ffd1fcc36f0c6cc3c5f063c5a916e8918839566
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b6c1efe2a7d831f26556dbf501176f02588f2e0d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62041368"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780333"
 ---
-# <a name="icorprofilerfunctionenumclone-method"></a><span data-ttu-id="b2aac-102">ICorProfilerFunctionEnum::Clone 메서드</span><span class="sxs-lookup"><span data-stu-id="b2aac-102">ICorProfilerFunctionEnum::Clone Method</span></span>
-<span data-ttu-id="b2aac-103">이 복사본에 인터페이스 포인터를 가져옵니다 [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="b2aac-103">Gets an interface pointer to a copy of this [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) interface.</span></span>  
+# <a name="icorprofilerfunctionenumclone-method"></a><span data-ttu-id="0cf4f-102">ICorProfilerFunctionEnum::Clone 메서드</span><span class="sxs-lookup"><span data-stu-id="0cf4f-102">ICorProfilerFunctionEnum::Clone Method</span></span>
+<span data-ttu-id="0cf4f-103">이 복사본에 인터페이스 포인터를 가져옵니다 [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="0cf4f-103">Gets an interface pointer to a copy of this [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) interface.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b2aac-104">구문</span><span class="sxs-lookup"><span data-stu-id="b2aac-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0cf4f-104">구문</span><span class="sxs-lookup"><span data-stu-id="0cf4f-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT Clone([out] ICorProfilerFunctionEnum **ppEnum);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b2aac-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="b2aac-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0cf4f-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="0cf4f-105">Parameters</span></span>  
  `ppEnum`  
- <span data-ttu-id="b2aac-106">[out] 이 복사본을 가리키는 하는 인터페이스 포인터에 대 한 포인터 [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="b2aac-106">[out] A pointer to the interface pointer, which, in turn, points to the copy of this [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) interface.</span></span> <span data-ttu-id="b2aac-107">열거자의 복사본을이 열거자는 별도로 자체 열거형의 상태를 유지 관리합니다.</span><span class="sxs-lookup"><span data-stu-id="b2aac-107">The copy of the enumerator maintains its own enumeration state separately from this enumerator.</span></span> <span data-ttu-id="b2aac-108">그러나 복사본의 초기 커서 위치는이 열거자의 현재 커서 위치와 동일 합니다.</span><span class="sxs-lookup"><span data-stu-id="b2aac-108">However, the copy's initial cursor position is the same as this enumerator's current cursor position.</span></span>  
+ <span data-ttu-id="0cf4f-106">[out] 이 복사본을 가리키는 하는 인터페이스 포인터에 대 한 포인터 [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="0cf4f-106">[out] A pointer to the interface pointer, which, in turn, points to the copy of this [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) interface.</span></span> <span data-ttu-id="0cf4f-107">열거자의 복사본을이 열거자는 별도로 자체 열거형의 상태를 유지 관리합니다.</span><span class="sxs-lookup"><span data-stu-id="0cf4f-107">The copy of the enumerator maintains its own enumeration state separately from this enumerator.</span></span> <span data-ttu-id="0cf4f-108">그러나 복사본의 초기 커서 위치는이 열거자의 현재 커서 위치와 동일 합니다.</span><span class="sxs-lookup"><span data-stu-id="0cf4f-108">However, the copy's initial cursor position is the same as this enumerator's current cursor position.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b2aac-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b2aac-109">Requirements</span></span>  
- <span data-ttu-id="b2aac-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="b2aac-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0cf4f-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="0cf4f-109">Requirements</span></span>  
+ <span data-ttu-id="0cf4f-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="0cf4f-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b2aac-111">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b2aac-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="0cf4f-111">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0cf4f-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="b2aac-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b2aac-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0cf4f-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0cf4f-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b2aac-113">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b2aac-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="0cf4f-113">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0cf4f-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b2aac-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="b2aac-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0cf4f-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="0cf4f-114">See also</span></span>
 
-- [<span data-ttu-id="b2aac-115">ICorProfilerFunctionEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b2aac-115">ICorProfilerFunctionEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
-- [<span data-ttu-id="b2aac-116">프로파일링 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b2aac-116">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="0cf4f-115">ICorProfilerFunctionEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0cf4f-115">ICorProfilerFunctionEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
+- [<span data-ttu-id="0cf4f-116">프로파일링 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0cf4f-116">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
