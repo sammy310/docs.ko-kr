@@ -11,12 +11,12 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 70914d63773c6a94ad92cf6301a8e2bc1368e7a1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d2dc80ec689f3e9fd2f36c36c3847ec4e5d1a576
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592716"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783151"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>연습: Windows Api 호출 (Visual Basic)
 Windows Api는 Windows 운영 체제의 일부인 동적 연결 라이브러리 (Dll)입니다. 프로시저를 직접 작성 하기 어려운 경우 작업을 수행 하려면 사용할 수 있습니다. Windows 라는 함수를 제공 하는 예를 들어 `FlashWindowEx` 밝은 영역과 어두운 음영을 교대로 응용 프로그램의 제목 표시줄을 만들 수 있습니다.  
@@ -32,7 +32,7 @@ Windows Api는 Windows 운영 체제의 일부인 동적 연결 라이브러리 
 ## <a name="api-calls-using-declare"></a>API 호출을 사용 하 여 선언  
  Windows Api를 호출 하는 가장 일반적인 방법은 사용 하는 것은 `Declare` 문입니다.  
   
-#### <a name="to-declare-a-dll-procedure"></a>DLL 프로시저를 선언 하려면  
+### <a name="to-declare-a-dll-procedure"></a>DLL 프로시저를 선언 하려면  
   
 1. 를 호출 하려면 원하는 함수 및 인수, 인수 형식 이름을 확인 하 고 값 뿐만 아니라와 이름을 포함 하는 DLL의 위치를 반환 합니다.  
   
@@ -69,7 +69,7 @@ Windows Api는 Windows 운영 체제의 일부인 동적 연결 라이브러리 
 #### <a name="windows-api-constants"></a>Windows API 상수  
  일부 인수가 상수 조합에 설명 합니다. 예를 들어 합니다 `MessageBox` 라는 정수 인수를 허용 하는이 연습에서는 표시 된 API `Typ` 메시지 상자가 표시 되는 방식을 제어 하는 합니다. 이러한 상수는 숫자 값을 검사 하 여 확인할 수 있습니다는 `#define` WinUser.h 파일의 문입니다. 숫자 값 이므로 계산기를 추가 하 고 10 진수로 변환 하는 데 사용할 수 있습니다에 일반적으로 16 진수로 표시 됩니다. 예를 들어, 느낌표 스타일에 대 한 상수를 결합 하려는 경우 `MB_ICONEXCLAMATION` 0x00000030 Yes/스타일이 없습니다 `MB_YESNO` 0x00000004, 숫자를 추가 하 고 10 진수 0x00000034를 52 개 결과 가져옵니다. 상수 응용 프로그램에서 이러한 값을 선언 하 고 결합 하는 10 진수 결과 직접 사용할 수 있지만 사용 하는 `Or` 연산자입니다.  
   
-###### <a name="to-declare-constants-for-windows-api-calls"></a>Windows API 호출에 대 한 상수를 선언 하려면  
+##### <a name="to-declare-constants-for-windows-api-calls"></a>Windows API 호출에 대 한 상수를 선언 하려면  
   
 1. Windows 함수를 호출 하는 설명서를 참조 하세요. 이러한 상수에 대 한 숫자 값이 포함 된.h 파일의 이름과 상수를 사용 하 여 이름을 확인 합니다.  
   
@@ -94,7 +94,7 @@ Windows Api는 Windows 운영 체제의 일부인 동적 연결 라이브러리 
 #### <a name="data-marshaling"></a>데이터 마샬링  
  Visual Basic에는 자동으로 매개 변수 및 Windows API 호출에 대 한 반환 값의 데이터 형식 변환 하지만 사용할 수는 `MarshalAs` API 필요로 하는 관리 되지 않는 데이터 형식을 명시적으로 지정 하는 특성입니다. Interop 마샬링 하는 방법에 대 한 자세한 내용은 참조 하세요. [Interop 마샬링](../../../framework/interop/interop-marshaling.md)합니다.  
   
-###### <a name="to-use-declare-and-marshalas-in-an-api-call"></a>API 호출에 선언 하 고 MarshalAs를 사용 하려면  
+##### <a name="to-use-declare-and-marshalas-in-an-api-call"></a>API 호출에 선언 하 고 MarshalAs를 사용 하려면  
   
 1. 데이터 형식에 해당 인수, 호출 하려는 함수의 이름을 확인 하 고 값을 반환 합니다.  
   
@@ -111,7 +111,7 @@ Windows Api는 Windows 운영 체제의 일부인 동적 연결 라이브러리 
   
  사용할 수 있습니다 `DllImport` 대부분의 Windows API를 사용 하 여 공유 호출은으로 호출 (라고도 *정적*) 메서드. 클래스의 인스턴스를 필요로 하는 메서드를 사용할 수 없습니다. 와 달리 `Declare` 문 `DllImport` 호출을 사용할 수 없습니다는 `MarshalAs` 특성입니다.  
   
-#### <a name="to-call-a-windows-api-using-the-dllimport-attribute"></a>DllImport 특성을 사용 하 여 Windows API를 호출 하려면  
+### <a name="to-call-a-windows-api-using-the-dllimport-attribute"></a>DllImport 특성을 사용 하 여 Windows API를 호출 하려면  
   
 1. 클릭 하 여 새 Windows 응용 프로그램 프로젝트를 엽니다 **새로 만들기** 에 **파일** 메뉴에서을 클릭 한 다음 **프로젝트**합니다. **새 프로젝트** 대화 상자가 나타납니다.  
   

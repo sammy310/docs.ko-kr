@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [Visual Basic], type definition
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
-ms.openlocfilehash: c8696ef58e0177d2d2bc6e2d4731206be77a33af
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5f6486965d9e44524420975523e10ded32a135b7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753875"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755219"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>익명 형식 정의(Visual Basic)
 
@@ -52,7 +52,7 @@ Public Class $Anonymous1
 End Class
 ```
 
-또한 익명 형식 정의 기본 생성자를 포함 합니다. 생성자 매개 변수를 필요로 하는 허용 되지 않습니다.
+또한 익명 형식 정의 매개 변수가 없는 생성자를 포함 합니다. 생성자 매개 변수를 필요로 하는 허용 되지 않습니다.
 
 무명 형식 선언에 하나 이상의 키 속성이 포함 된 경우 형식 정의에서 상속 된 세 가지 멤버를 재정의 하는 <xref:System.Object>: <xref:System.Object.Equals%2A>하십시오 <xref:System.Object.GetHashCode%2A>, 및 <xref:System.Object.ToString%2A>합니다. 키 속성이 없는 선언 하는 경우에 <xref:System.Object.ToString%2A> 재정의 됩니다. 재정의 다음 기능을 제공 합니다.
 

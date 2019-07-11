@@ -7,17 +7,17 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
-ms.openlocfilehash: 775c40cbb62272f913297d5a58914a0c82c5a7d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 850e20fe8b5b6bfd392c80c87950a81a1a8a5c24
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780837"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755205"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>방법: 개체 이니셜라이저 (Visual Basic)를 사용 하 여 개체 선언
 개체 이니셜라이저를 사용 하 여 선언 하 고 단일 문으로 클래스의 인스턴스를 인스턴스화할 수 있습니다. 또한 매개 변수화 된 생성자를 호출 하지 않고 동시에, 하나 이상의 멤버 인스턴스를 초기화할 수 있습니다.  
   
- 개체 이니셜라이저를 사용 하 여 명명 된 형식의 인스턴스를 만들 때 지정한 순서에 지정 된 멤버의 초기화가 수행 클래스에 대 한 기본 생성자 호출 됩니다.  
+ 개체 이니셜라이저를 사용 하 여 명명 된 형식의 인스턴스를 만들 때 클래스에 대 한 매개 변수가 없는 생성자 라고 지정한 순서에 지정 된 멤버의 초기화가 수행 합니다.  
   
  다음 절차에는 인스턴스를 만드는 방법을 보여 줍니다는 `Student` 세 가지 방법으로 클래스입니다. 클래스 이름, 성 및 특히 클래스 year 속성에 있습니다. 새 인스턴스를 만들고 각 세 가지 선언 `Student`, 속성을 사용 하 여 `First` "Michael," 속성을로 `Last` "Tucker"로 설정 하 고 다른 모든 멤버를 기본값으로 설정 합니다. 프로시저의 각 선언 하면 개체 이니셜라이저를 사용 하지 않는 다음 예제와 같습니다.  
   

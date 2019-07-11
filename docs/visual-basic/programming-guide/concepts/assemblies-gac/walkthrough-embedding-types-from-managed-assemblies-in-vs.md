@@ -2,12 +2,12 @@
 title: '연습: Visual Studio에서 관리형 어셈블리의 형식 포함(Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-ms.openlocfilehash: 18f22a771ab7279f177fe39d8c372a8517056890
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0c0de529a0005c9dbaf1f8d0f25957b217280e31
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754822"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753015"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>연습: Visual Studio에서 관리형 어셈블리의 형식 포함(Visual Basic)
 
@@ -51,7 +51,7 @@ ms.locfileid: "64754822"
 
 ## <a name="creating-an-interface"></a>인터페이스 만들기
 
-#### <a name="to-create-the-type-equivalence-interface-project"></a>동등한 형식의 인터페이스 프로젝트를 만들려면
+### <a name="to-create-the-type-equivalence-interface-project"></a>동등한 형식의 인터페이스 프로젝트를 만들려면
 
 1. Visual Studio의 **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.
 
@@ -96,7 +96,7 @@ ms.locfileid: "64754822"
 
 ## <a name="creating-a-runtime-class"></a>런타임 클래스 만들기
 
-#### <a name="to-create-the-type-equivalence-runtime-project"></a>동등한 형식의 런타임 프로젝트를 만들려면
+### <a name="to-create-the-type-equivalence-runtime-project"></a>동등한 형식의 런타임 프로젝트를 만들려면
 
 1. Visual Studio의 **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.
 
@@ -142,7 +142,7 @@ ms.locfileid: "64754822"
 
 ## <a name="creating-a-client-project"></a>클라이언트 프로젝트 만들기
 
-#### <a name="to-create-the-type-equivalence-client-project"></a>동등한 형식의 클라이언트 프로젝트를 만들려면
+### <a name="to-create-the-type-equivalence-client-project"></a>동등한 형식의 클라이언트 프로젝트를 만들려면
 
 1. Visual Studio의 **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.
 
@@ -181,7 +181,7 @@ ms.locfileid: "64754822"
 
 ## <a name="modifying-the-interface"></a>인터페이스 수정
 
-#### <a name="to-modify-the-interface"></a>인터페이스를 수정하려면
+### <a name="to-modify-the-interface"></a>인터페이스를 수정하려면
 
 1. Visual Studio의 **파일** 메뉴에서 **열기**를 가리킨 다음 **프로젝트/솔루션**을 클릭합니다.
 
@@ -201,7 +201,7 @@ ms.locfileid: "64754822"
 
 ## <a name="modifying-the-runtime-class"></a>런타임 클래스 수정
 
-#### <a name="to-modify-the-runtime-class"></a>런타임 클래스를 수정하려면
+### <a name="to-modify-the-runtime-class"></a>런타임 클래스를 수정하려면
 
 1. Visual Studio의 **파일** 메뉴에서 **열기**를 가리킨 다음 **프로젝트/솔루션**을 클릭합니다.
 

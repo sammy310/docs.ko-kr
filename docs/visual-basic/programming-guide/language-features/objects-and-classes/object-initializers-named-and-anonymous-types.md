@@ -10,12 +10,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: bf608ebb36a2e8f29e8429b77e023eced67273e1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 151c2f6cbb560d83ef0fcfef518bc50cec246ca2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649767"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783247"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>개체 이니셜라이저: 명명 된 형식과 익명 형식 (Visual Basic)
 개체 이니셜라이저를 사용 하는 단일 식을 사용 하 여 복잡 한 개체에 대 한 속성을 지정할 수 있습니다. 명명 된 형식 및 무명 형식의 인스턴스를 만드는 데 사용할 수 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "64649767"
  요구 사항 및 두 가지 선언의 결과 동일 하지 않습니다. 에 대 한 `namedCust`, `Customer` 가 있는 클래스는 `Name` 속성이 이미 존재 해야 하며 선언을 해당 클래스의 인스턴스를 만듭니다. 에 대 한 `anonymousCust`, 한 속성을 호출 하는 문자열을 가진 새 클래스를 정의 하는 컴파일러 `Name`, 해당 클래스의 새 인스턴스를 만듭니다.  
   
 ## <a name="named-types"></a>명명 된 형식  
- 개체 이니셜라이저를 형식의 생성자를 호출 하 여 단일 문에서 일부 또는 모든 속성의 값을 설정 하는 간단한 방법을 제공 합니다. 문에 대 한 적절 한 생성자를 호출 하는 컴파일러: 인수에 제공 하는 경우 기본 생성자 또는 하나 이상의 인수를 전송 하는 경우 매개 변수화 된 생성자입니다. 그 후 지정된 된 속성은 이니셜라이저 목록에 표시 된 순서 대로 초기화 됩니다.  
+ 개체 이니셜라이저를 형식의 생성자를 호출 하 여 단일 문에서 일부 또는 모든 속성의 값을 설정 하는 간단한 방법을 제공 합니다. 문에 대 한 적절 한 생성자를 호출 하는 컴파일러: 하나 이상의 인수를 전송 하는 경우 매개 변수화 된 생성자 또는 매개 변수가 없는 생성자 인수에 제공 하는 경우. 그 후 지정된 된 속성은 이니셜라이저 목록에 표시 된 순서 대로 초기화 됩니다.  
   
  이니셜라이저 목록에서 각 초기화 클래스의 멤버에 초기 값을 할당 이루어져 있습니다. 클래스가 정의 되어 있는 경우 이름 및 멤버의 데이터 형식을 결정 됩니다. 다음 예제에서는 합니다 `Customer` 클래스 존재 해야 하며 라는 멤버가 있어야 `Name` 고 `City` 문자열 값을 받아들일 수 있는 합니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "64649767"
   
  [!code-vb[VbVbalrObjectInit#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#4)]  
   
- 각 이러한 선언을 만드는 다음 예제와 동일을 `Customer` 기본 생성자를 사용 하 여 개체 및 다음에 대 한 초기 값을 지정 합니다 `Name` 및 `City` 를 사용 하 여 속성을 `With` 문입니다.  
+ 각 이러한 선언을 만드는 다음 예제와 동일을 `Customer` 매개 변수가 없는 생성자를 사용 하 여 개체 및 다음에 대 한 초기 값을 지정 합니다 `Name` 및 `City` 를 사용 하 여 속성을 `With` 문입니다.  
   
  [!code-vb[VbVbalrObjectInit#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#5)]  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: 216de8f70e0ad6856bf5d708347a7e5f852fe4c6
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: dd2968f7ab528fa07ef0c5af85f2a7f07147a76e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591571"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755159"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Visual Basic의 개체 및 클래스
 
@@ -28,7 +28,7 @@ Visual Basic에서는 각 개체는 정의 되는 *클래스*합니다. 클래�
 
 해당 멤버에 액세스하려면 먼저 개체를 만들어야 합니다.
 
-#### <a name="to-create-an-object-from-a-class"></a>클래스에서 개체를 만들려면
+### <a name="to-create-an-object-from-a-class"></a>클래스에서 개체를 만들려면
 
 1. 개체를 만들려는 클래스를 결정합니다.
 
@@ -135,7 +135,7 @@ safetyTimer.Start()
 
 #### <a name="accessing-nonshared-members"></a>비공유 멤버 액세스
 
-###### <a name="to-access-a-nonshared-member-of-an-object"></a>개체의 비공유 멤버에 액세스하려면
+##### <a name="to-access-a-nonshared-member-of-an-object"></a>개체의 비공유 멤버에 액세스하려면
 
 1. 개체가 해당 클래스에서 생성되고 개체 변수에 할당되어 있는지 확인합니다.
 
@@ -151,7 +151,7 @@ safetyTimer.Start()
 
 #### <a name="accessing-shared-members"></a>공유 멤버 액세스
 
-###### <a name="to-access-a-shared-member-of-an-object"></a>개체의 공유 멤버에 액세스하려면
+##### <a name="to-access-a-shared-member-of-an-object"></a>개체의 공유 멤버에 액세스하려면
 
 - 클래스 이름 뒤에 *멤버-액세스 연산자*(`.`)를 지정한 다음 멤버 이름을 지정합니다. 항상 클래스 이름을 통해 직접적으로 개체의 `Shared` 멤버에 액세스해야 합니다.
 
@@ -204,7 +204,7 @@ End Sub
 
 다음 예제에서는 일반적인 <xref:System.Windows.Forms.Button>처럼 작동하지만 전경색 및 배경색을 거꾸로 뒤집는 메서드도 제공하는 특수한 종류의 <xref:System.Windows.Forms.Button>을 정의하려 한다고 가정합니다.
 
-##### <a name="to-define-a-class-is-derived-from-an-already-existing-class"></a>클래스가 기존 클래스에서 파생된다고 정의하려면
+#### <a name="to-define-a-class-is-derived-from-an-already-existing-class"></a>클래스가 기존 클래스에서 파생된다고 정의하려면
 
 1. [Class 문](../../../../visual-basic/language-reference/statements/class-statement.md)을 사용하여 필요한 개체를 만들 클래스를 정의합니다.
 
@@ -239,7 +239,7 @@ End Sub
 
 파생 클래스는 해당 클래스의 기준이 되는 클래스에서 멤버를 상속하므로 클래스 계층 구조가 점점 복잡해질 수 있습니다. 자세한 내용은 [상속 기본 사항](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)을 참조하세요.
 
-#### <a name="compiling-the-code"></a>코드 컴파일
+### <a name="compiling-the-code"></a>코드 컴파일
 
 컴파일러에서 새 클래스를 파생하려는 원본 클래스에 액세스할 수 있어야 합니다. 이것은 이름을 완전히 한정하거나 앞의 예제에서와 같이 [Imports 문(.NET 네임스페이스 및 형식)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)에서 해당 네임스페이스를 식별하는 것을 의미할 수 있습니다. 클래스가 다른 프로젝트에 있으면 해당 프로젝트에 대한 참조를 추가해야 할 수 있습니다. 자세한 내용은 [프로젝트의 참조 관리](/visualstudio/ide/managing-references-in-a-project)를 참조하세요.
 
