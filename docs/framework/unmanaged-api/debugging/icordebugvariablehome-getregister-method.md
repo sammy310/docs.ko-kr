@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 290647f0e0dcaeae53362762ed7f8e0c2f05a82c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f4b3b80546095b79dc5b551a9c5e92ec15c0dddb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993644"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771792"
 ---
 # <a name="icordebugvariablehomegetregister-method"></a>ICorDebugVariableHome::GetRegister 메서드
 위치 형식의 변수를 포함 하는 레지스터를 가져옵니다 `VLT_REGISTER`, 및 위치 형식의 변수에 대 한 기본 등록 `VLT_REGISTER_RELATIVE`합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetRegister(  
     [out] CorDebugRegister *pRegister  
 );  
@@ -42,7 +42,7 @@ HRESULT GetRegister(
 ## <a name="return-value"></a>반환 값  
  메서드는 다음 값을 반환 합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |`S_OK`|변수가 가리키는 레지스터는 `pRegister` 인수입니다.|  
 |`E_FAIL`|변수는 등록 또는 등록에 상대적인 위치에 없는 경우|  

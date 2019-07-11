@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cc5171b135facfbbe901b38a19fef9e9d47699b5
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 33762e08192fae379f3cd249f50cc544e1c89b5a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490723"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775746"
 ---
 # <a name="setting-up-a-profiling-environment"></a>프로파일링 환경 설정
 > [!NOTE]
@@ -29,7 +29,7 @@ ms.locfileid: "66490723"
   
 - COR_PROFILER: COR_ENABLE_PROFILING 패스를 확인 하는 경우 CLR이 CLSID 또는 ProgID 저장 되 었어야 이전에 레지스트리에 있는 프로파일러에 연결 합니다. COR_PROFILER 환경 변수는 다음 두 가지 예제와 같이 문자열로 정의됩니다.  
   
-    ```  
+    ```cpp  
     set COR_PROFILER={32E2F4DA-1BEA-47ea-88F9-C5DAF691C94A}  
     set COR_PROFILER="MyProfiler"  
     ```  
@@ -55,7 +55,7 @@ ms.locfileid: "66490723"
   
  Windows 서비스를 프로파일링할 경우 환경 변수를 설정하고 프로파일러 DLL을 등록하고 나서 컴퓨터를 다시 시작해야 합니다. 이러한 고려 사항에 대 한 자세한 내용은 섹션을 참조 하세요 [Windows 서비스 프로 파일링](#windows_service)합니다.  
   
-## <a name="additional-considerations"></a>추가 고려 사항  
+## <a name="additional-considerations"></a>기타 고려 사항  
   
 - 클래스에서 구현 하는 프로파일러를 [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) 하 고 [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) 인터페이스입니다. .NET Framework 버전 2.0에서 프로파일러는 `ICorProfilerCallback2`를 구현해야 합니다. 구현하지 않으면 `ICorProfilerCallback2`가 로드되지 않습니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66490723"
 ## <a name="initializing-the-profiler"></a>프로파일러 초기화  
  두 가지 환경 변수 확인을 모두 통과하면 CLR에서는 COM `CoCreateInstance` 함수와 비슷한 방식으로 프로파일러의 인스턴스를 만듭니다. 프로파일러는 직접 호출을 통해 `CoCreateInstance`에 로드되지 않습니다. 따라서 스레딩 모델을 설정해야 하는 `CoInitialize`가 호출되지 않습니다. CLR에서 호출 된 [icorprofilercallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) 프로파일러에서 메서드. 이 메서드의 서명은 다음과 같습니다.  
   
-```  
+```cpp  
 HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)  
 ```  
   
@@ -75,7 +75,7 @@ HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)
 ## <a name="setting-event-notifications"></a>이벤트 알림 설정  
  그런 다음 프로파일러를 호출 합니다 [icorprofilerinfo:: Seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) 알림 범주 관심을 지정 하는 방법입니다. 예를 들어 프로파일러가 함수 시작 및 종료 알림과 가비지 수집 알림에만 관심이 있으면 다음을 지정합니다.  
   
-```  
+```cpp  
 ICorProfilerInfo* pInfo;  
 pICorProfilerInfoUnk->QueryInterface(IID_ICorProfilerInfo, (void**)&pInfo);  
 pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)  

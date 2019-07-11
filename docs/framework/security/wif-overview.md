@@ -3,17 +3,17 @@ title: Windows Identity Foundation 4.5 개요
 ms.date: 03/30/2017
 ms.assetid: 5f723345-7270-49e2-b638-b3a34bd40517
 author: BrucePerlerMS
-ms.openlocfilehash: d3076bbda47ac4aac0c8f0b9f9c69d17f370e765
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eb896d2e702629e6339ee2b09ad6a1c96d64da33
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592410"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742426"
 ---
 # <a name="windows-identity-foundation-45-overview"></a>Windows Identity Foundation 4.5 개요
 Windows Identity Foundation 4.5는 응용 프로그램에서 클레임 기반 ID를 구현하기 위한 일련의 .NET Framework 클래스입니다. 이를 사용하면 클레임 인식 응용 프로그램과 서비스의 이점을 더욱 쉽게 활용할 수 있습니다. WIF 4.5는 .NET Framework 버전 4.5 이상을 사용하는 웹 서비스 또는 웹 응용 프로그램에서 사용할 수 있습니다. WIF는 개방형 표준에 따라 공유 산업 비전을 구현하는 Microsoft 페더레이션 ID 소프트웨어 제품군의 일부분일 뿐입니다. 페더레이션된 Id에는 세 가지 구성 요소가 구성 됩니다. [활성 Directory® Federation Services](https://go.microsoft.com/fwlink/?LinkID=247516) (AD FS) 2.0 [Windows Azure Access Control Services](https://go.microsoft.com/fwlink/?LinkID=247517) (ACS) 및 WIF 합니다. 이러한 세 가지 구성 요소가 모여 Microsoft의 새로운 클레임 기반 클라우드 ID 및 액세스 플랫폼의 핵심을 형성합니다.  
   
- WIF에 대 한 자세한 내용은 참조는 [Windows Identity Foundation 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=149009) msdn Security Developer Center에서. WIF를 사용 하 여 응용 프로그램 만들기 소개를 참조 하세요 [Windows Identity Foundation 프로그래밍](https://go.microsoft.com/fwlink/?LinkId=210158) Vittorio bertocci가 (Microsoft Press에서 게시) 합니다.  
+ WIF에 대 한 자세한 내용은 참조는 [Windows Identity Foundation 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=149009) msdn Security Developer Center에서. WIF를 사용 하 여 응용 프로그램 만들기 소개를 참조 하세요 [Windows Identity Foundation 프로그래밍](https://www.microsoftpressstore.com/store/programming-windows-identity-foundation-9780735627185) Vittorio bertocci가 (Microsoft Press에서 게시) 합니다.  
   
 ## <a name="wif-45-features"></a>WIF 4.5 기능  
  WIF 4.5는 ID 인식 응용 프로그램을 만드는 데 사용되는 프레임워크입니다. 프레임워크는 WS-Trust 및 WS-Federation 프로토콜을 추상화하고, 개발자에게 클레임 인식 응용 프로그램을 구축하기 위한 API를 제공하며, 필요한 경우 STS(보안 토큰 서비스)를 제공합니다. 응용 프로그램에서 WIF를 사용하여 ADFS 2.0 및 ACS와 같은 STS에서 발급한 토큰을 처리하고, 웹 응용 프로그램 또는 웹 서비스에서 ID를 기반으로 결정을 내립니다.  

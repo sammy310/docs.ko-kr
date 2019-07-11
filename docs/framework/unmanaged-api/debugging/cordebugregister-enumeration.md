@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 177f191d5f438cef106d835b0b9d204a9b19d1f0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bed3c461935c5a2bc912ed9ed16d147fddaf8a1a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616288"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739659"
 ---
 # <a name="cordebugregister-enumeration"></a>CorDebugRegister 열거형
 지정한 프로세서 아키텍처에 연결된 레지스터를 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorDebugRegister {  
   
     REGISTER_INSTRUCTION_POINTER = 0,  
@@ -116,7 +116,7 @@ typedef enum CorDebugRegister {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`REGISTER_INSTRUCTION_POINTER`|프로세서의 명령 포인터 레지스터입니다.|  
 |`REGISTER_STACK_POINTER`|프로세서의 스택 포인터 레지스터입니다.|  

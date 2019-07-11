@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03b8ecc996e14263510e2d0a658cec020696c263
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d6c417eec9583ff069c9d61fa31e9c14f3931130
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61914503"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778514"
 ---
 # <a name="assemblycomparisonresult-enumeration"></a>AssemblyComparisonResult 열거형
 상응 하는 두 개의 어셈블리 id 기준으로 나타냅니다 합니다 [CompareAssemblyIdentity](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md) 함수입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum _tagAssemblyComparisonResult {  
     ACR_Unknown,   
     ACR_EquivalentFullMatch,  
@@ -47,7 +47,7 @@ typedef enum _tagAssemblyComparisonResult {
   
 ## <a name="members"></a>멤버  
   
-|멤버 이름|설명|  
+|멤버 이름|Description|  
 |-----------------|-----------------|  
 |`ACR_EquivalentFullMatch`|모든 어셈블리 비교 일치 항목에 필드를 나타냅니다.|  
 |`ACR_EquivalentFXUnified`|어셈블리 동일 하다 고 간주 어셈블리 버전 번호는.NET Framework 버전 2.0의 공용 언어 런타임 버전 (CLR) 통합 기반을 나타냅니다.|  

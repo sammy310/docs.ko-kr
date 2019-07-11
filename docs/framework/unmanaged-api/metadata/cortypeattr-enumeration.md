@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f65c2f74ec5efda027d90b3ffda9a5da5c239122
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 5786f24f6543d4d262dd8a6389132aba02f9aacc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025723"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779205"
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr 열거형
 형식 메타데이터를 나타내는 값을 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorTypeAttr {  
   
     tdVisibilityMask        =   0x00000007,  
@@ -77,7 +77,7 @@ typedef enum CorTypeAttr {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`tdVisibilityMask`|형식 표시 유형 정보를 사용 합니다.|  
 |`tdNotPublic`|형식을 공용 범위에 있지 않음을 지정 합니다.|  

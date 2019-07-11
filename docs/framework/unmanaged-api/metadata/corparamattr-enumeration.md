@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 97f62b082db11a5f0bb930e33cb47acef76e7a04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bfa8f1b5df76c7fdfe2f25b637b157bfa4424f7a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906305"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781662"
 ---
 # <a name="corparamattr-enumeration"></a>CorParamAttr 열거형
 메서드 매개 변수의 메타데이터를 설명하는 값을 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorParamAttr {  
   
     pdIn                        =   0x0001,  
@@ -46,7 +46,7 @@ typedef enum CorParamAttr {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`pdIn`|매개 변수를 메서드 호출으로 전달 되도록 지정 합니다.|  
 |`pdOut`|매개 변수가 전달 되도록 메서드에서 반환을 지정 합니다.|  

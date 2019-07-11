@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1b189b79a02f04b7f795ff2524441f12b053cec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 45089d1b64264e000c07603808f0c5fb1263b042
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984635"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776578"
 ---
 # <a name="iclrmetahost-interface"></a>ICLRMetaHost 인터페이스
 해당 버전 번호를 기준으로 CLR (공용 언어 런타임)의 특정 버전을 반환, 모든 설치 된 Clr list, 지정된 된 프로세스에 로드 되는 모든 런타임 목록, 어셈블리로 컴파일, 프로세스를 종료 하는 데 CLR 버전을 검색 하는 메서드를 제공 합니다. 깨끗 한 런타임이 종료 및 레거시 API 바인딩을 쿼리 합니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|설명|  
+|메서드|Description|  
 |------------|-----------------|  
 |[EnumerateInstalledRuntimes 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-enumerateinstalledruntimes-method.md)|유효한 포함 하는 열거자를 반환 합니다 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) 컴퓨터에 설치 되어 있는 각 CLR 버전에 대 한 인터페이스 포인터입니다.|  
 |[EnumerateLoadedRuntimes 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-enumerateloadedruntimes-method.md)|유효한 포함 하는 열거자를 반환 합니다 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) 주어진된 프로세스에서 로드 되는 각 CLR에 대 한 인터페이스 포인터입니다. 이 메서드를 대체 [GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)합니다.|  
@@ -41,7 +41,7 @@ ms.locfileid: "61984635"
 ## <a name="remarks"></a>설명  
  호출 하 여이 인터페이스의 인스턴스를 가져올 유일한 방법은는 [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) 같이 함수:  
   
-```  
+```cpp  
 ICLRMetaHost *pMetaHost = NULL;  
 HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHost,  
                    IID_ICLRMetaHost, (LPVOID*)&pMetaHost);  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], arranging with FlowLayoutPanel
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
-ms.openlocfilehash: 8cfcdf8595733434cc56c621428c31238dd166dc
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: c9ee615a610c383c97b5d4f0de195cfc7422d3ec
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211164"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771656"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>연습: FlowLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬
 
@@ -55,7 +55,7 @@ ms.locfileid: "65211164"
 
  <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤은 부모 폼의 크기가 변경될 때 자식 컨트롤의 크기를 조정하거나 흐름을 변경할 수 있습니다.
 
-#### <a name="to-arrange-controls-horizontally-and-vertically-using-a-flowlayoutpanel"></a>FlowLayoutPanel을 사용하여 가로 및 세로로 컨트롤을 정렬하려면
+### <a name="to-arrange-controls-horizontally-and-vertically-using-a-flowlayoutpanel"></a>FlowLayoutPanel을 사용하여 가로 및 세로로 컨트롤을 정렬하려면
 
 1. <xref:System.Windows.Forms.FlowLayoutPanel> 도구 상자 **에서** 컨트롤을 폼으로 끌어다 놓습니다.
 
@@ -76,7 +76,7 @@ ms.locfileid: "65211164"
 ## <a name="changing-flow-direction"></a>흐름 방향 변경
  <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 속성을 사용하면 컨트롤이 정렬되는 방향을 변경할 수 있습니다. 왼쪽에서 오른쪽, 오른쪽에서 왼쪽, 위쪽에서 아래쪽 또는 아래쪽에서 위쪽으로 자식 컨트롤을 정렬할 수 있습니다.
 
-#### <a name="to-change-the-flow-direction-in-a-flowlayoutpanel"></a>FlowLayoutPanel에서 흐름 방향을 변경하려면
+### <a name="to-change-the-flow-direction-in-a-flowlayoutpanel"></a>FlowLayoutPanel에서 흐름 방향을 변경하려면
 
 1. <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 속성 값을 <xref:System.Windows.Forms.FlowDirection.TopDown>로 변경합니다. 컨트롤의 높이에 따라 자식 컨트롤이 하나 이상의 열에 다시 정렬됩니다.
 
@@ -85,7 +85,7 @@ ms.locfileid: "65211164"
 ## <a name="inserting-flow-breaks"></a>흐름 나누기 삽입
  <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤은 자식 컨트롤에 FlowBreak 속성을 제공합니다. FlowBreak 속성의 값을 `true` 로 설정하면 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤이 현재 흐름 방향에서 컨트롤 레이아웃을 중지하고 다음 행이나 열로 줄 바꿈합니다.
 
-#### <a name="to-insert-flow-breaks"></a>흐름 나누기를 삽입하려면
+### <a name="to-insert-flow-breaks"></a>흐름 나누기를 삽입하려면
 
 1. <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 속성 값을 <xref:System.Windows.Forms.FlowDirection.TopDown>로 변경합니다.
 
@@ -96,7 +96,7 @@ ms.locfileid: "65211164"
 ## <a name="positioning-controls-using-docking-and-anchoring"></a>도킹 및 고정 기능을 사용하여 컨트롤 위치 지정
  자식 컨트롤의 도킹 및 고정 동작은 다른 컨테이너 컨트롤의 동작과 다릅니다. 도킹 및 고정은 둘 다 흐름 방향에서 가장 큰 컨트롤을 기준으로 합니다.
 
-#### <a name="to-position-controls-using-docking-and-anchoring"></a>도킹 및 고정 기능을 사용하여 컨트롤 위치를 지정하려면
+### <a name="to-position-controls-using-docking-and-anchoring"></a>도킹 및 고정 기능을 사용하여 컨트롤 위치를 지정하려면
 
 1. <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤이 모두 열에 정렬될 때까지 <xref:System.Windows.Forms.Button> 의 크기를 늘립니다.
 
@@ -115,7 +115,7 @@ ms.locfileid: "65211164"
 
  <xref:System.Windows.Forms.Control.Margin%2A> 속성을 사용하면 컨트롤 사이의 간격을 제어할 수 있습니다.
 
-#### <a name="to-arrange-controls-using-the-padding-and-margin-properties"></a>안쪽 여백 및 여백 속성을 사용하여 컨트롤을 정렬하려면
+### <a name="to-arrange-controls-using-the-padding-and-margin-properties"></a>안쪽 여백 및 여백 속성을 사용하여 컨트롤을 정렬하려면
 
 1. <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 <xref:System.Windows.Forms.Control.Dock%2A> 속성 값을 <xref:System.Windows.Forms.DockStyle.Fill>로 변경합니다. 폼이 충분히 큰 경우 <xref:System.Windows.Forms.Button> 컨트롤이 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 첫 번째 열로 이동됩니다.
 
@@ -126,7 +126,7 @@ ms.locfileid: "65211164"
 ## <a name="inserting-controls-by-double-clicking-them-in-the-toolbox"></a>도구 상자에서 두 번 클릭하여 컨트롤 삽입
  <xref:System.Windows.Forms.FlowLayoutPanel> 도구 상자 **에서 컨트롤을 두 번 클릭하여**컨트롤을 채울 수 있습니다.
 
-#### <a name="to-insert-controls-by-double-clicking-in-the-toolbox"></a>도구 상자에서 두 번 클릭하여 컨트롤을 삽입하려면
+### <a name="to-insert-controls-by-double-clicking-in-the-toolbox"></a>도구 상자에서 두 번 클릭하여 컨트롤을 삽입하려면
 
 1. <xref:System.Windows.Forms.Button> 도구 상자 **에서**컨트롤 아이콘을 두 번 클릭합니다. 새 <xref:System.Windows.Forms.Button> 컨트롤이 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤에 표시됩니다.
 
@@ -135,7 +135,7 @@ ms.locfileid: "65211164"
 ## <a name="inserting-a-control-by-drawing-its-outline"></a>윤곽선을 그려 컨트롤 삽입
  <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤에 컨트롤을 삽입하고 셀에서 해당 윤곽선을 그려 크기를 지정합니다.
 
-#### <a name="to-insert-a-control-by-drawing-its-outline"></a>윤곽선을 그려 컨트롤을 삽입하려면
+### <a name="to-insert-a-control-by-drawing-its-outline"></a>윤곽선을 그려 컨트롤을 삽입하려면
 
 1. **도구 상자**에서 <xref:System.Windows.Forms.Button> 컨트롤 아이콘을 클릭합니다. 폼으로 끌어다 놓지 마세요.
 
@@ -148,7 +148,7 @@ ms.locfileid: "65211164"
 ## <a name="inserting-controls-using-the-insertion-bar"></a>삽입 막대를 사용하여 컨트롤 삽입
  <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 특정 위치에 컨트롤을 삽입할 수 있습니다. <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 클라이언트 영역으로 컨트롤을 끌어다 놓으면 삽입 막대가 나타나 컨트롤이 삽입될 위치를 표시합니다.
 
-#### <a name="to-insert-a-control-using-the-caret"></a>캐럿을 사용하여 컨트롤을 삽입하려면
+### <a name="to-insert-a-control-using-the-caret"></a>캐럿을 사용하여 컨트롤을 삽입하려면
 
 1. <xref:System.Windows.Forms.Button> 도구 상자 **에서** 컨트롤을 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤로 끌어다 놓고 두 <xref:System.Windows.Forms.Button> 컨트롤 사이의 공간을 가리킵니다. 삽입 막대가 그려집니다, 위치를 나타내는 합니다 <xref:System.Windows.Forms.Button> 놓을 때 배치 될는 <xref:System.Windows.Forms.FlowLayoutPanel> 제어 합니다. 새 <xref:System.Windows.Forms.Button> 컨트롤을 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤로 끌어다 놓기 전에 마우스 포인터를 움직여 삽입 막대가 어떻게 이동하는지 관찰합니다.
 
@@ -157,7 +157,7 @@ ms.locfileid: "65211164"
 ## <a name="reassigning-existing-controls-to-a-different-parent"></a>다른 부모에 기존 컨트롤 다시 할당
  폼에 있는 컨트롤을 새 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤에 할당할 수 있습니다.
 
-#### <a name="to-reparent-existing-controls"></a>기존 컨트롤의 부모를 재지정하려면
+### <a name="to-reparent-existing-controls"></a>기존 컨트롤의 부모를 재지정하려면
 
 1. <xref:System.Windows.Forms.Button> 도구 상자 **의 세** 컨트롤을 폼으로 끌어옵니다. 서로 정렬되지 않은 상태로 근처에 배치합니다.
 

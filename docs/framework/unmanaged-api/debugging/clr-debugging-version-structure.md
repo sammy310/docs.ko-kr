@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 87f938a7119abe4a88da65bd779a5f4a02499516
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e71a1538e42061c6cb949b22bb63fe6b17a0dfc9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996348"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741116"
 ---
 # <a name="clrdebuggingversion-structure"></a>CLR_DEBUGGING_VERSION 구조체
 디버깅용 CLR(공용 언어 런타임)의 제품 버전을 정의합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef struct _CLR_DEBUGGING_VERSION  
 {  
     WORD wStructVersion;
@@ -41,7 +41,7 @@ typedef struct _CLR_DEBUGGING_VERSION
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`wStructVersion`|구조 버전 번호|  
 |`wMajor`|주 버전 번호입니다.|  

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3debd3f13d78841188dd8c900f51c0110e1d4c67
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 41513d9b6f98743bfad95e4d9606cfb4927369e6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906375"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769784"
 ---
 # <a name="eapicategories-enumeration"></a>EApiCategories 열거형
 부분적으로 신뢰할 수 있는 코드에서 실행 되는 호스트를 차단할 수 있는 기능의 범주를 설명 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum {  
     eNoCategory               = 0,  
     eSynchronization          = 0x1,  
@@ -46,7 +46,7 @@ typedef enum {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`eAll`|관리 되는 모든 클래스 및 기타 적용 되는 멤버 지정 `EApiCategories` 필드에서 부분적으로 신뢰할 수 있는 코드 실행에서 차단 합니다.|  
 |`eExternalProcessMgmt`|관리 되는 클래스 및 멤버를 생성, 조작 및 외부 프로세스의 소멸을 사용 하면 부분적으로 신뢰할 수 있는 코드에서 실행 차단 수를 지정 합니다.|  

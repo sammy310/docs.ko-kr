@@ -2,18 +2,18 @@
 title: 웹 서비스를 사용하는 LINQ to SQL N 계층
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-ms.openlocfilehash: 7b13a0cd77925423a12c093b1b5ac9b63ad7e019
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4fafaa60dd75def98b486e18faa5bd3ecd1d6315
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033542"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743043"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>웹 서비스를 사용하는 LINQ to SQL N 계층
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 특히는 느슨하게 결합 된 DAL (데이터 액세스 계층) 웹 서비스 등에서 중간 계층에서 사용할 수 있도록 설계 되었습니다. 프레젠테이션 계층이 ASP.NET 웹 페이지인 경우에는 <xref:System.Web.UI.WebControls.LinqDataSource> 웹 서버 컨트롤을 사용하여 사용자 인터페이스와 중간 계층의 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 사이에 데이터 전송을 관리합니다. 그러나 프레젠테이션 계층이 ASP.NET 페이지가 아닌 경우에는 중간 계층과 프레젠테이션 계층 모두에서 데이터 serialization 및 deserialization을 관리하기 위해 추가적인 작업을 수행해야 합니다.  
   
 ## <a name="setting-up-linq-to-sql-on-the-middle-tier"></a>중간 계층에서 LINQ to SQL 설정  
- 웹 서비스 또는 n 계층 응용 프로그램의 중간 계층에는 데이터 컨텍스트와 엔터티 클래스가 들어 있습니다. 이러한 클래스는 수동으로 만들거나, 이 설명서의 다른 곳에 나와 있는 설명대로 SQLMetal.exe 또는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]를 사용하여 만들 수 있습니다. 디자인 타임에 엔터티 클래스를 serialize할 수 있습니다. 자세한 내용은 [방법: 엔터티를 직렬화 할 수 있도록 설정](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)합니다. 또는 serialize할 데이터를 캡슐화하는 별도의 클래스 집합을 만든 다음 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 쿼리에 데이터를 반환할 때 serialize 가능한 이러한 형식을 사용할 수도 있습니다.  
+ 웹 서비스 또는 n 계층 응용 프로그램의 중간 계층에는 데이터 컨텍스트와 엔터티 클래스가 들어 있습니다. 수동으로 또는 다른 곳에서 설명서에 설명 된 대로 SQLMetal.exe 또는 Object Relational Designer를 사용 하 여 이러한 클래스를 만들 수 있습니다. 디자인 타임에 엔터티 클래스를 serialize할 수 있습니다. 자세한 내용은 [방법: 엔터티를 직렬화 할 수 있도록 설정](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)합니다. 또는 serialize할 데이터를 캡슐화하는 별도의 클래스 집합을 만든 다음 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 쿼리에 데이터를 반환할 때 serialize 가능한 이러한 형식을 사용할 수도 있습니다.  
   
  그런 다음 클라이언트에서 데이터를 검색, 삽입 및 업데이트할 때 호출할 메서드를 사용하여 인터페이스를 정의합니다. 이 인터페이스 메서드는 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 쿼리를 래핑합니다. 원격 메서드 호출 및 데이터 serialization은 모든 종류의 serialization 메커니즘을 사용하여 처리할 수 있습니다. 단, 표준 Northwind 개체 모델의 Customers와 Orders의 관계와 같이 개체 모델에 순환 또는 양방향 관계가 있는 경우에는 이를 지원하는 serializer를 반드시 사용해야 합니다. WCF(Windows Communication Foundation) <xref:System.Runtime.Serialization.DataContractSerializer>는 양방향 관계를 지원하지만 WCF가 아닌 웹 서비스에 사용되는 XmlSerializer는 양방향 관계를 지원하지 않습니다. 따라서 XmlSerializer를 사용하도록 선택한 경우에는 개체 모델에 순환 관계가 없는지 반드시 확인해야 합니다.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62033542"
   
  프레젠테이션 계층에서 변경하는 내용이 많을수록 변경 사항을 추적하고 패키지화하여 중간 계층에 다시 보내기가 복잡해 집니다. 변경 사항 통신 메커니즘은 응용 프로그램에 따라 다르게 구현되지만 낙관적 동시성 검사에 필요한 원래 값을 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에 반드시 제공해야 한다는 점은 동일합니다.  
   
- 자세한 내용은 [데이터 검색 및 CUD 작업에서 N 계층 응용 프로그램 (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md)합니다.  
+ 자세한 내용은 [데이터 검색 및 CUD 작업에서 N 계층 애플리케이션 (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
 

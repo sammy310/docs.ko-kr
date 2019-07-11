@@ -2,12 +2,12 @@
 title: 문제 해결
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: c09871abcdfb9243b5170386ffe79012c9c3f71d
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 697432dce5f7698a8b4eabde3586bb4f77fd62de
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661856"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742751"
 ---
 # <a name="troubleshooting"></a>문제 해결
 다음은 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 응용 프로그램에서 발생할 수 있는 문제와 이러한 문제를 방지하거나 문제의 영향을 줄일 수 있는 방법에 대한 설명입니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "67661856"
  입력 파일 이름을 지정하려면 이름을 명령줄에 입력 파일로 추가합니다. **/conn** 옵션을 사용하여 연결 문자열에 파일 이름을 포함할 수는 없습니다. 자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요.  
   
 ## <a name="class-library-projects"></a>클래스 라이브러리 프로젝트  
- [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]에서는 프로젝트의 `app.config` 파일에 연결 문자열을 만듭니다. 클래스 라이브러리 프로젝트에는 `app.config` 파일이 사용되지 않으며 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 디자인 타임 파일에 제공되는 연결 문자열을 사용합니다. 따라서 `app.config`에서 값을 변경해도 응용 프로그램에서 연결하는 데이터베이스가 변경되지 않습니다.  
+ 개체 관계형 디자이너에서 연결 문자열을 만듭니다는 `app.config` 프로젝트의 파일입니다. 클래스 라이브러리 프로젝트에는 `app.config` 파일이 사용되지 않으며 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 디자인 타임 파일에 제공되는 연결 문자열을 사용합니다. 따라서 `app.config`에서 값을 변경해도 응용 프로그램에서 연결하는 데이터베이스가 변경되지 않습니다.  
   
 ## <a name="cascade-delete"></a>하위 삭제  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 하위 삭제 작업을 지원하거나 인식하지 않습니다. 제약 조건이 있는 테이블의 행을 삭제하려면 다음 작업 중 하나를 수행해야 합니다.  

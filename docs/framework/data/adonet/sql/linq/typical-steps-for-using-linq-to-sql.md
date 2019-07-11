@@ -2,17 +2,17 @@
 title: LINQ to SQL 사용을 위한 일반 단계
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
-ms.openlocfilehash: 0c472fcac0e664e17c1869ba7ffc61ed2b802e8e
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: cbcd8099fd085d0198e5ba77ee0a3e86c1ca70d0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063009"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742775"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>LINQ to SQL 사용을 위한 일반 단계
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 응용 프로그램을 구현하려면 이 항목에 설명된 단계를 따릅니다. 대부분의 단계는 선택 사항이며 고유한 개체 모델을 기본 상태에서 사용할 수 있습니다.  
   
- 빠른 시작을 위해 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]를 사용하여 개체 모델을 만들고 쿼리 코딩을 시작합니다.  
+ 빠른 시작을 Object Relational Designer 개체 모델을 만들고 쿼리 코딩을 시작 하려면 사용 합니다.  
   
 ## <a name="creating-the-object-model"></a>개체 모델 만들기  
  첫 번째 단계는 기존 관계형 데이터베이스의 메타데이터에서 개체 모델을 만드는 것입니다. 개체 모델은 개발자의 프로그래밍 언어에 따라 데이터베이스를 나타냅니다. 자세한 내용은 [LINQ to SQL 개체 모델](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)합니다.  
@@ -20,17 +20,17 @@ ms.locfileid: "65063009"
 ### <a name="1-select-a-tool-to-create-the-model"></a>1. 모델을 만들기 위한 도구를 선택합니다.  
  모델을 만들기 위한 세 가지 도구를 사용할 수 있습니다.  
   
-- [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
+- 개체 관계형 디자이너  
   
      이 디자이너는 기존 데이터베이스에서 개체 모델을 만들기 위한 풍부한 사용자 인터페이스를 제공합니다. 이 도구는 Visual Studio IDE의 일부 이며 소형 또는 중형 데이터베이스에 가장 적합 합니다.  
   
 - SQLMetal 코드 생성 도구  
   
-     이 명령줄 유틸리티는 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]와 약간 다른 옵션 집합을 제공합니다. 대규모 데이터베이스 모델링에는 이 도구를 사용하는 것이 가장 좋습니다. 자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요.  
+     이 명령줄 유틸리티는 O/R 디자이너에서 약간 다른 옵션 집합을 제공합니다. 대규모 데이터베이스 모델링에는 이 도구를 사용하는 것이 가장 좋습니다. 자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요.  
   
 - 코드 편집기  
   
-     Visual Studio 코드 편집기나 다른 편집기를 사용 하 여 사용자 고유의 코드를 작성할 수 있습니다. 그러나 기존 데이터베이스가 있고 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] 또는 SQLMetal 도구를 사용할 수 있는 경우 이 방법은 오류가 발생하기 쉽기 때문에 사용하지 않는 것이 좋습니다. 단, 다른 도구를 사용하여 이미 생성한 코드를 구체화하거나 수정하려는 경우 코드 편집기가 유용할 수 있습니다. 자세한 내용은 [방법: 코드 편집기를 사용 하 여 엔터티 클래스 사용자 지정](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)합니다.  
+     Visual Studio 코드 편집기나 다른 편집기를 사용 하 여 사용자 고유의 코드를 작성할 수 있습니다. 기존 데이터베이스 및 O/R 디자이너 또는 SQLMetal 도구를 사용할 수 하는 경우 오류가 발생 하기 쉬운 수는이 방법을 사용 하지 않는 것이 좋습니다. 단, 다른 도구를 사용하여 이미 생성한 코드를 구체화하거나 수정하려는 경우 코드 편집기가 유용할 수 있습니다. 자세한 내용은 [방법: 코드 편집기를 사용 하 여 엔터티 클래스 사용자 지정](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)합니다.  
   
 ### <a name="2-select-the-kind-of-code-you-want-to-generate"></a>2. 생성할 코드의 종류를 선택합니다.  
   
@@ -43,14 +43,14 @@ ms.locfileid: "65063009"
      이 방법을 사용하면 응용 프로그램 코드 외부에 매핑 메타데이터를 둘 수 있습니다. 자세한 내용은 [외부 매핑](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)합니다.  
   
     > [!NOTE]
-    >  [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]에서는 외부 매핑 파일의 생성이 지원되지 않습니다. SQLMetal 도구를 사용하여 이 기능을 구현해야 합니다.  
+    >  O/R 디자이너 외부 매핑 파일의 생성을 지원 하지 않습니다. SQLMetal 도구를 사용하여 이 기능을 구현해야 합니다.  
   
 - 최종 코드 파일을 생성하기 전에 수정할 수 있는 DBML 파일  
   
      이는 고급 기능에 해당합니다.  
   
 ### <a name="3-refine-the-code-file-to-reflect-the-needs-of-your-application"></a>3. 응용 프로그램의 요구 사항을 반영하도록 코드 파일을 구체화합니다.  
- 이 작업을 위해 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] 또는 코드 편집기를 사용할 수 있습니다.  
+ 이 작업을 위해 O/R 디자이너 또는 코드 편집기를 사용할 수 있습니다.  
   
 ## <a name="using-the-object-model"></a>개체 모델 사용  
  다음 그림에서는 2계층 시나리오에서 개발자와 데이터 간의 관계를 보여 줍니다. 다른 시나리오에 대 한 참조 [N 계층 응용 프로그램과 원격 linq to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)합니다.  

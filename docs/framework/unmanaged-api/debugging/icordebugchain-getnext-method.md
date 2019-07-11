@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ecb4f8a5519fb819161ed917ad03d2537bd9551
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 990786fbb3cc853f7f399d60fa686bb5d60018af
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645242"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745704"
 ---
 # <a name="icordebugchaingetnext-method"></a>ICorDebugChain::GetNext 메서드
 스레드에 대 한 다음 프레임 체인을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetNext (  
     [out] ICorDebugChain     **ppChain  
 );  

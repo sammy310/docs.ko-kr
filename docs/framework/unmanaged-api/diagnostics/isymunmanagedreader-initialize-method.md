@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 661c27b9c21f77104b8a86163d3c92d44f8a85df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1986ed730c6f0a1ba8a2d8e3c688e6872184da9d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669977"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736759"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize 메서드
 이 판독기가 모듈의 파일 이름과 함께, 연결 되는 메타 데이터 가져오기 인터페이스를 사용 하 여 기호 판독기를 초기화 합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "61669977"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT Initialize (  
     [in]  IUnknown     *importer,  
     [in]  const WCHAR  *filename,  
@@ -48,7 +48,7 @@ HRESULT Initialize (
  [in] 모듈의 파일 이름입니다. 사용할 수는 `pIStream` 매개 변수 대신 합니다.  
   
  `searchPath`  
- [in] 검색할 경로입니다. 이 매개 변수는 선택적 요소입니다.  
+ [in] 검색할 경로입니다. 이 매개 변수는 선택 사항입니다.  
   
  `pIStream`  
  [in] Filename 매개 변수에 대 안으로 사용 되는 파일 스트림.  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ec1a9968dbec10783c6f1383fb523e95ff79561e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f0643ba9e750e7c64d2dae8eb5744df7bc26931
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683905"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737795"
 ---
 # <a name="icordebugappdomain2getfunctionpointertype-method"></a>ICorDebugAppDomain2::GetFunctionPointerType 메서드
 지정 된 시그니처가 있는 함수에 대 한 포인터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetFunctionPointerType (  
     [in] ULONG32                             nTypeArgs,  
     [in, size_is(nTypeArgs)] ICorDebugType   *ppTypeArgs[],  

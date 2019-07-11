@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f0a9b9c149c86b4d9121275aa858dfdc0cdbac7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5039117c649943a1f05a91ecccf22eb4230e5e7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905920"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776384"
 ---
 # <a name="assemblymetadata-structure"></a>ASSEMBLYMETADATA 구조체
 해당 버전 및 해당 수준의 로캘, 프로세서 및 운영 체제에 대 한 지원 포함 한 참조 된 어셈블리에 대 한 정보를 포함 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef struct {  
     USHORT  usMajorVersion;  
     USHORT  usMinorVersion;  
@@ -45,7 +45,7 @@ typedef struct {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`usMajorVersion`|참조 된 어셈블리의 주 버전 번호입니다. 이 값은 0 일 수 없습니다. 하는 경우의 모든 비트가 `usMajorVersion` 주요 버전을 지정 하지 않으면 설정 됩니다.|  
 |`usMinorVersion`|참조 된 어셈블리의 부 버전 번호입니다. 이 값은 0 일 수 없습니다. 하는 경우의 모든 비트가 `usMinorVersion` 부 버전을 지정 하지 않으면 설정 됩니다.|  

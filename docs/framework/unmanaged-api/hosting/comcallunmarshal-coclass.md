@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f17a88a90905006432ae8c5dc040277124c947b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fde42e3ecfac81a168920bc152833be7ba72b995
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697292"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779089"
 ---
 # <a name="comcallunmarshal-coclass"></a>ComCallUnmarshal Coclass
 인터페이스 포인터의 마샬링을 관리에 대 한 인터페이스를 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 coclass ComCallUnmarshal {  
     [default] interface IMarshal;  
 };  

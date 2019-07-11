@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4a84fdfdba96c58671302c723b8a56848b70eb60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23f5a2b6b0970f3cb64ee339e6a1a409354a60e5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984128"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780960"
 ---
 # <a name="coinitiee-enumeration"></a>COINITIEE 열거형
 사용 하는 상수를 지정 [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) 공용 언어 런타임을 초기화할 때.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum tagCOINITEE {  
    COINITEE_DEFAULT = 0x0,  
    COINITEE_DLL     = 0x1,  
@@ -38,7 +38,7 @@ typedef enum tagCOINITEE {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`COINITEE_DEFAULT`|기본 초기화 모드입니다. 이 런타임을 초기화 하 고 기본 만듭니다 <xref:System.AppDomain>합니다.|  
 |`COINITEE_DLL`|관리 되는 DLL을 실행 하도록 초기화 합니다.|  

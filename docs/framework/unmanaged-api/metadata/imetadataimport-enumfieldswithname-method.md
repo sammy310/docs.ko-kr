@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cf624695136a9397937f05b28dec18493c8e12d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 71a2c7a61d573c1e17d0e8fefcd34d60e05ed3c5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62042707"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780479"
 ---
 # <a name="imetadataimportenumfieldswithname-method"></a>IMetaDataImport::EnumFieldsWithName 메서드
 지정한 이름을 가진 지정한 형식의 FieldDef 토큰을 열거합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT EnumFieldsWithName (  
    [in, out] HCORENUM    *phEnum,   
    [in]  mdTypeDef       cl,   
@@ -64,7 +64,7 @@ HRESULT EnumFieldsWithName (
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|설명|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |`S_OK`|`EnumFieldsWithName` 성공적으로 반환 합니다.|  
 |`S_FALSE`|열거 하는 필드가 있습니다. 이런 경우 `pcTokens` 0입니다.|  

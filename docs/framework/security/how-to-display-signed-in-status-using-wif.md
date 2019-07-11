@@ -3,12 +3,12 @@ title: '방법: WIF를 사용하여 로그인 상태 표시'
 ms.date: 03/30/2017
 ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
 author: BrucePerlerMS
-ms.openlocfilehash: a41f24faa5b535c02feef99ae0d592bd7d13db4e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6d81bd2023886799f939fc9851db516a00aa92df
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626092"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742446"
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>방법: WIF를 사용하여 로그인 상태 표시
 ## <a name="applies-to"></a>적용 대상  
@@ -54,7 +54,7 @@ ms.locfileid: "64626092"
 ## <a name="step-1--install-the-identity-and-access-extension"></a>1단계 – ID 및 액세스 도구 확장 설치  
  이 단계에서는 Visual Studio 2012에 대한 ID 및 액세스 확장을 구성하는 방법을 설명합니다. 이 확장은 STS 엔드포인트와 통신하도록 애플리케이션을 구성하는 프로세스를 자동화합니다.  
   
-#### <a name="to-install-the-identity-and-access-extension"></a>ID 및 액세스 확장을 설치하려면  
+### <a name="to-install-the-identity-and-access-extension"></a>ID 및 액세스 확장을 설치하려면  
   
 1. 관리자로 승격된 모드에서 Visual Studio를 시작합니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "64626092"
 ## <a name="step-2--create-a-relying-party-aspnet-application"></a>2단계 – 신뢰 당사자 ASP.NET 애플리케이션 만들기  
  이 단계에서는 WIF와 통합될 신뢰 당사자 ASP.NET Web Forms 애플리케이션을 만드는 방법을 설명합니다.  
   
-#### <a name="to-create-a-simple-aspnet-application"></a>간단한 ASP.NET 애플리케이션을 만들려면  
+### <a name="to-create-a-simple-aspnet-application"></a>간단한 ASP.NET 애플리케이션을 만들려면  
   
 1. Visual Studio를 시작하고 **파일**, **새로 만들기**, **프로젝트**를 차례로 클릭합니다.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "64626092"
 ## <a name="step-3--enable-local-development-sts-to-authenticate-users"></a>3단계 – 로컬 개발 STS를 사용하여 사용자 인증  
  이 단계에서는 애플리케이션에서 로컬 개발 STS를 사용하도록 설정하는 방법을 설명합니다. 로컬 개발 STS는 Visual Studio용 ID 및 액세스 확장을 통해 사용하도록 설정합니다.  
   
-#### <a name="to-enable-local-development-sts-in-your-aspnet-application"></a>ASP.NET 애플리케이션에서 로컬 개발 STS를 사용하도록 설정하려면  
+### <a name="to-enable-local-development-sts-in-your-aspnet-application"></a>ASP.NET 애플리케이션에서 로컬 개발 STS를 사용하도록 설정하려면  
   
 1. Visual Studio의 **솔루션 탐색기**에서 **TestApp** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **ID 및 액세스**를 선택합니다.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "64626092"
 ## <a name="step-4--modify-your-aspnet-application-to-display-sign-in-status"></a>4단계 – ASP.NET 애플리케이션을 수정하여 로그인 상태 표시  
  이 단계에서는 ASP.NET 애플리케이션을 수정하여 현재 사용자가 로그인되어 있는지 여부를 동적으로 표시하는 방법을 설명합니다. STS 공급자가 구성되면 WIF가 들어오는 클레임을 처리합니다. 이제 인증 결과를 표시하도록 애플리케이션 코드를 구성해야 합니다.  
   
-#### <a name="to-display-sign-in-status"></a>로그인 상태를 표시하려면  
+### <a name="to-display-sign-in-status"></a>로그인 상태를 표시하려면  
   
 1. Visual Studio의 **TestApp** 프로젝트에서 **Default.aspx** 파일을 엽니다.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "64626092"
 ## <a name="step-5--test-the-integration-between-wif-and-your-aspnet-application"></a>5단계 – WIF 및 ASP.NET 애플리케이션 간 통합 테스트  
  이 단계에서는 WIF 및 ASP.NET 애플리케이션 간 통합을 테스트하는 방법을 설명합니다.  
   
-#### <a name="to-test-the-integration-between-wif-and-aspnet"></a>WIF 및 ASP.NET 응용 프로그램 간 통합을 테스트하려면  
+### <a name="to-test-the-integration-between-wif-and-aspnet"></a>WIF 및 ASP.NET 응용 프로그램 간 통합을 테스트하려면  
   
 1. Visual Studio에서 **F5** 키를 눌러 애플리케이션 디버깅을 시작합니다. 오류가 발견되지 않으면 새 브라우저 창이 열립니다.  
   

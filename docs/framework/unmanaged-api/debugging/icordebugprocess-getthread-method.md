@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36070d5374a11daf4b7800481c86d61057989631
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d5cbdd19fa14a41d8bd2eadec80dbafcea7b720d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994450"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766435"
 ---
 # <a name="icordebugprocessgetthread-method"></a>ICorDebugProcess::GetThread 메서드
 지정 된 운영 체제 (OS) 스레드 ID가 있습니다.이 프로세스의이 스레드를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetThread(  
     [in] DWORD dwThreadId,  
     [out] ICorDebugThread **ppThread);  

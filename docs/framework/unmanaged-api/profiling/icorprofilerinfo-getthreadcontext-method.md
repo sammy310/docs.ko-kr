@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f26fd93d42a709249936815d3c29ae572482f427
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b8afe10563d61e3ddab93e8d1b57eee4b6765c7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992045"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766838"
 ---
 # <a name="icorprofilerinfogetthreadcontext-method"></a>ICorProfilerInfo::GetThreadContext 메서드
 현재 스레드와 연결 된 지정 된 컨텍스트 id를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetThreadContext(  
     [in]  ThreadID  threadId,  
     [out] ContextID *pContextId);  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 218279684304b766a9bf009f5891ac4910254a3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0d74da502492065dbffb5e5499581263760636c7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994385"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737073"
 ---
 # <a name="icordebugprocessreadmemory-method"></a>ICorDebugProcess::ReadMemory 메서드
 이 프로세스에 대 한 메모리의 지정된 된 영역을 읽습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT ReadMemory(  
     [in]  CORDB_ADDRESS address,   
     [in]  DWORD size,  

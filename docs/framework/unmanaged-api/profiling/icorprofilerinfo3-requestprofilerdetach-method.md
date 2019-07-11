@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1b04c0453d9ff8545f79f235e7d73095c55203e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab203fc054298971fadfd9abe4e787844313898b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049520"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765332"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>ICorProfilerInfo3::RequestProfilerDetach 메서드
 런타임에 프로파일러를 분리하도록 지시합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT RequestProfilerDetach(  
    [in] DWORD    dwExpectedCompletionMilliseconds);  
 ```  
@@ -41,7 +41,7 @@ HRESULT RequestProfilerDetach(
 ## <a name="return-value"></a>반환 값  
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
-|HRESULT|설명|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|분리 요청이 유효하고 분리 절차는 다른 스레드에서 계속 진행됩니다. 분리가 완료되면 `ProfilerDetachSucceeded` 이벤트가 발생합니다.|  
 |E_ CORPROF_E_CALLBACK3_REQUIRED|프로파일러 실패를 [iunknown:: Queryinterface](https://go.microsoft.com/fwlink/?LinkID=144867) 시도 하는 [ICorProfilerCallback3](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md) 분리 작업을 지원 하기 위해 구현 해야 하는 인터페이스입니다. 분리가 시도되지 않았습니다.|  

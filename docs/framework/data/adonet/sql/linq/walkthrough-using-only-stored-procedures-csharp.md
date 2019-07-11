@@ -2,12 +2,12 @@
 title: '연습: 저장 프로시저만 사용(C#)'
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-ms.openlocfilehash: f4c34252f7d92985dac94663c85d3cca0dc58ab3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f16cbdc1d22e7ec08237c0f13db9499ee2f9194f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655120"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742567"
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>연습: 저장 프로시저만 사용(C#)
 이 연습에서는 저장 프로시저만 실행하여 데이터에 액세스하기 위한 기본 종단 간 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 시나리오를 제공합니다. 일반적으로 데이터베이스 관리자는 데이터 저장소에 액세스하는 방법을 제한하기 위해 이 방법을 사용합니다.  
@@ -17,7 +17,7 @@ ms.locfileid: "64655120"
   
  이 연습에서는 Northwind 샘플 데이터베이스의 저장된 프로시저에 매핑된 두 개의 메서드 사용: CustOrdersDetail 및 CustOrderHist 합니다. SqlMetal 명령줄 도구를 실행하여 C# 파일을 생성할 경우 매핑이 발생합니다. 자세한 내용은 이 연습 뒷부분의 사전 요구 사항 단원을 참조하세요.  
   
- 이 연습에서는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]에 의존하지 않습니다. 개발자가 Visual Studio를 사용 하 여 사용할 수도 있습니다는 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] 저장된 프로시저 기능을 구현 합니다. 참조 [LINQ to SQL 도구 Visual Studio에서](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)합니다.  
+ 이 연습에서는 Object Relational Designer에 의존 하지 않습니다. 개발자가 Visual Studio를 사용 하 여 저장된 프로시저 기능을 구현 하는 O/R 디자이너를 이용할 수 있습니다. 참조 [LINQ to SQL 도구 Visual Studio에서](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)합니다.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -112,7 +112,7 @@ ms.locfileid: "64655120"
   
 #### <a name="to-set-up-the-user-interface"></a>사용자 인터페이스를 설정하려면  
   
-1. 반환 하는 Windows Forms 디자이너 (**Form1.cs[Design]**).  
+1. 반환 하는 Windows Forms 디자이너 (**Form1.cs[Design]** ).  
   
 2. **보기** 메뉴에서 **도구 상자**를 클릭합니다.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "64655120"
   
 5. 변경 된 **텍스트** 속성을 **label1** 에 **Enter OrderID:** 합니다.  
   
-6. 에 대 한 동일한 방식으로 **label2**를 변경 합니다 **텍스트** 속성을 **label2** 를 **Enter CustomerID:**.  
+6. 에 대 한 동일한 방식으로 **label2**를 변경 합니다 **텍스트** 속성을 **label2** 를 **Enter CustomerID:** .  
   
 7. 같은 방법으로 변경 합니다 **텍스트** 속성에 대 한 **button1** 에 **Order Details**합니다.  
   

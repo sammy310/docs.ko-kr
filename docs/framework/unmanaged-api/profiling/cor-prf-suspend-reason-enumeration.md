@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 21533b5173bcd91d0c944fbde4eafc9817de8315
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e084bc957eca9474078ed5ca3aef0276361dbe1b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598989"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745531"
 ---
 # <a name="corprfsuspendreason-enumeration"></a>COR_PRF_SUSPEND_REASON 열거형
 런타임이 일시 중단 되는 이유를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum {  
     COR_PRF_SUSPEND_OTHER                   = 0x00,  
     COR_PRF_SUSPEND_FOR_GC                  = 0x01,  
@@ -42,7 +42,7 @@ typedef enum {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`COR_PRF_FIELD_SUSPEND_OTHER`|런타임에 알 수 없는 이유로 일시 중단 됩니다.|  
 |`COR_PRF_FIELD_SUSPEND_FOR_GC`|런타임은은 가비지 컬렉션 요청 서비스를 일시 중단 됩니다.<br /><br /> 가비지 컬렉션 관련 콜백이 사이 발생 합니다 [icorprofilercallback:: Runtimesuspendfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) 및 [icorprofilercallback:: Runtimeresumestarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) 콜백 합니다.|  

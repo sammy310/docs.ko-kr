@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02a7bff021387f615c823b2df96615c1284cb82b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 74f515626f5001cbea1a25e8268338c588524bde
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617711"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740540"
 ---
 # <a name="corilmap-structure"></a>COR_IL_MAP 구조체
 함수의 상대 오프셋 변경 내용을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef struct _COR_IL_MAP {  
     ULONG32 oldOffset;   
     ULONG32 newOffset;   
@@ -38,7 +38,7 @@ typedef struct _COR_IL_MAP {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`oldOffset`|이전 Microsoft 중간 언어 (MSIL) 함수의 시작 부분에 상대적으로 오프셋입니다.|  
 |`newOffset`|함수 시작을 기준으로 새 MSIL 오프셋입니다.|  

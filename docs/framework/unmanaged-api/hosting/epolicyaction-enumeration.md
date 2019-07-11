@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 75bd7da67cbac958f0b34c8295454a719962c7ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 404cd5513a1cbd353faed41030a80ec2abef235f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61628719"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774203"
 ---
 # <a name="epolicyaction-enumeration"></a>EPolicyAction 열거형
 호스트에서 설명 하는 작업에 대해 설정할 정책 작업을 설명 [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) 에 정의 된 오류 [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum {  
     eNoAction,  
     eThrowException,  
@@ -45,7 +45,7 @@ typedef enum {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`eAbortThread`|CLR (공용 언어 런타임) 스레드를 정상적으로 중단 하도록 지정 합니다. 모든 실행 하려는 시도 포함 하는 정상적인 중단 `finally` 차단 된 `catch` 스레드 중단 및 종료자와 관련 된 블록입니다.|  
 |`eDisableRuntime`|CLR 사용 안 함된 상태를 시작 해야를 지정 합니다. 더 이상 영향을 받는 프로세스에서 관리 되는 코드를 실행할 수 있습니다 하 고 clr에서 스레드가 차단 됩니다.|  

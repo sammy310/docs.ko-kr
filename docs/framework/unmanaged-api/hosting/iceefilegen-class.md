@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb0e7a676fdbbe3cf04108266471833b28275b1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d6fb0b11c26ff65f74681d1e3bf7324bfb0e559d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985363"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766618"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen 클래스
 기본 이식 가능한 실행 파일 (PE) 파일을 만들기 위한 기능을 제공 합니다. 인터페이스를 실행 하는 컴파일된 출력을 생성 하려면 컴파일러에서 일반적으로 사용 됩니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "61985363"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 class ICeeFileGen {  
 public:  
     virtual HRESULT CreateCeeFile(HCEEFILE *ceeFile);  

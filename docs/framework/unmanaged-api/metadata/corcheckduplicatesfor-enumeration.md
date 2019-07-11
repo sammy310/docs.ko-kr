@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d04f5589ecffbcde59a6ffbe4f3d6c5f0b1040cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a82ce9709e008e092c5f31372a89bf9a16e1f88b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046048"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767020"
 ---
 # <a name="corcheckduplicatesfor-enumeration"></a>CorCheckDuplicatesFor 열거형
 중복 확인 되는 메타 데이터 토큰을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorCheckDuplicatesFor {  
   
     MDDupAll                    = 0xffffffff,  
@@ -68,7 +68,7 @@ typedef enum CorCheckDuplicatesFor {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`MDDupAll`|중복 항목에 대 한 모든 메타 데이터 토큰을 확인 합니다.|  
 |`MDDupENC`|사용되지 않습니다.|  

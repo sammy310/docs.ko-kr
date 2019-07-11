@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2972b87b2d0136f182f8e8223988953e1896f2bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5a3d06f72ed7163a414ef12e9bec650d8b20783
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986689"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774290"
 ---
 # <a name="icoreclrdebugtarget-interface"></a>ICoreClrDebugTarget 인터페이스
 참조 횟수를 제어, 프로세스, 열거 및 Macintosh Silverlight의 원격 대상에 연결 된 디버거를 사용 하 여 연결 된 메모리를 확보 하는 메서드를 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 class ICoreClrDebugTarget {  
       HRESULT EnumProcesses (  
           [out] DWORD*                    pcProcs,  
@@ -51,7 +51,7 @@ class ICoreClrDebugTarget {
   
 ## <a name="methods"></a>메서드  
   
-|메서드|설명|  
+|메서드|Description|  
 |------------|-----------------|  
 |[ICoreClrDebugTarget::EnumProcesses 메서드](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md)|원격 컴퓨터에서 실행 중인 프로세스를 열거합니다.|  
 |[ICoreClrDebugTarget::EnumRuntimes 메서드](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md)|원격 컴퓨터에서 지정된 된 프로세스에 공용 언어 런타임 (Clr)를 열거합니다.|  

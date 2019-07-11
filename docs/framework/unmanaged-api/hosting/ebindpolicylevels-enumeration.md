@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8f2b08662e719a3308a62ab5b60f5dc490f2a6a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e61acbb15844c5ddfc8b7aa98c41bb18c6e9ade5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985675"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769766"
 ---
 # <a name="ebindpolicylevels-enumeration"></a>EBindPolicyLevels 열거형
 어셈블리 정책 적용 또는 수정 하는 수준을 지정 하는 플래그를 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum {  
     ePolicyLevelNone         = 0x0,  
     ePolicyLevelRetargetable = 0x1,  
@@ -43,7 +43,7 @@ typedef enum {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`ePolicyLevelAdmin`|관리자 수준에서 정책이 적용 수를 지정 합니다.|  
 |`ePolicyLevelApp`|응용 프로그램 수준 정책이 적용 수를 지정 합니다.|  

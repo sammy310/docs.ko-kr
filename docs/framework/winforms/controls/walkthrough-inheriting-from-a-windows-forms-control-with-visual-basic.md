@@ -10,12 +10,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
-ms.openlocfilehash: b606de4b7cf4648fdc7ada3c1f6faec81342d02c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bcd65f231ab0e05da0ec152b05878233558f2cd9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792186"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772067"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>연습: Visual Basic을 사용하여 Windows Forms 컨트롤에서 상속
 Visual Basic을 사용 하 여을 통해 강력한 사용자 지정 컨트롤을 만들 수 있습니다 *상속*합니다. 상속을 통해 표준 Windows Forms 컨트롤의 모든 고유 기능을 유지하면서 사용자 지정 기능을 통합하는 컨트롤을 만들 수 있습니다. 이 연습에서는 `ValueButton`이라는 간단한 상속된 컨트롤을 만듭니다. 이 단추는 표준 Windows Forms에서 기능을 상속 <xref:System.Windows.Forms.Button> 컨트롤을 호출 하는 사용자 지정 속성을 노출 합니다 `ButtonValue`합니다.  
@@ -26,7 +26,7 @@ Visual Basic을 사용 하 여을 통해 강력한 사용자 지정 컨트롤을
 ## <a name="creating-the-project"></a>프로젝트 만들기  
  새 프로젝트를 만들 때는 루트 네임스페이스, 어셈블리 이름 및 프로젝트 이름을 설정하기 위해 이름을 지정하고 기본 구성 요소가 올바른 네임스페이스에 있는지 확인합니다.  
   
-#### <a name="to-create-the-valuebuttonlib-control-library-and-the-valuebutton-control"></a>ValueButtonLib 컨트롤 라이브러리 및 ValueButton 컨트롤을 만들려면  
+### <a name="to-create-the-valuebuttonlib-control-library-and-the-valuebutton-control"></a>ValueButtonLib 컨트롤 라이브러리 및 ValueButton 컨트롤을 만들려면  
   
 1. **파일** 메뉴에서 **새로 만들기**를 가리키고 **프로젝트**를 선택하여 **새 프로젝트** 대화 상자를 엽니다.  
   
@@ -54,7 +54,7 @@ Visual Basic을 사용 하 여을 통해 강력한 사용자 지정 컨트롤을
 ## <a name="adding-a-property-to-your-inherited-control"></a>상속된 컨트롤에 속성 추가  
  상속된 Windows Forms 컨트롤의 한 가지 가능한 용도는 표준 Windows Forms 컨트롤과 모양 및 동작(모양 및 느낌)이 동일하지만 사용자 지정 속성을 노출하는 컨트롤을 만드는 것입니다. 이 섹션에서는 `ButtonValue`라는 속성을 컨트롤에 추가합니다.  
   
-#### <a name="to-add-the-value-property"></a>Value 속성을 추가하려면  
+### <a name="to-add-the-value-property"></a>Value 속성을 추가하려면  
   
 1. **솔루션 탐색기**에서 **ValueButton.vb**를 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 **코드 보기**를 클릭합니다.  
   
@@ -84,13 +84,13 @@ Visual Basic을 사용 하 여을 통해 강력한 사용자 지정 컨트롤을
 ## <a name="testing-your-control"></a>컨트롤 테스트  
  컨트롤은 독립 실행형 프로젝트가 아니며 컨테이너에서 호스팅해야 합니다. 컨트롤을 테스트하려면 컨트롤을 실행할 테스트 프로젝트를 제공해야 합니다. 또한 컨트롤을 빌드(컴파일)하여 컨트롤에서 테스트 프로젝트에 액세스할 수 있도록 해야 합니다. 이 섹션에서는 컨트롤을 테스트하고 Windows Form에서 테스트합니다.  
   
-#### <a name="to-build-your-control"></a>컨트롤을 빌드하려면  
+### <a name="to-build-your-control"></a>컨트롤을 빌드하려면  
   
 1. **빌드** 메뉴에서 **솔루션 빌드**를 클릭합니다.  
   
      컴파일러 오류 또는 경고 없이 빌드에 성공해야 합니다.  
   
-#### <a name="to-create-a-test-project"></a>테스트 프로젝트를 만들려면  
+### <a name="to-create-a-test-project"></a>테스트 프로젝트를 만들려면  
   
 1. **파일** 메뉴에서 **추가**를 가리킨 후 **새 프로젝트**를 클릭하여 **새 프로젝트 추가** 대화 상자를 엽니다.  
   
@@ -108,7 +108,7 @@ Visual Basic을 사용 하 여을 통해 강력한 사용자 지정 컨트롤을
   
 8. **솔루션 탐색기**에서 **Test**를 마우스 오른쪽 단추로 클릭한 후 **빌드**를 선택합니다.  
   
-#### <a name="to-add-your-control-to-the-form"></a>폼에 컨트롤을 추가하려면  
+### <a name="to-add-your-control-to-the-form"></a>폼에 컨트롤을 추가하려면  
   
 1. **솔루션 탐색기**에서 **Form1.vb**를 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **뷰 디자이너**를 선택합니다.  
   

@@ -2,12 +2,12 @@
 title: '연습: 관계 간 쿼리(C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: d9233bc7501544fff04c1c9eae215bd981fa4bd0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f36f618cfcb82847f6763641ee64565dcdedd919
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64618022"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742640"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>연습: 관계 간 쿼리(C#)
 이 연습에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *연결* 데이터베이스에서 외래 키 관계를 나타내는입니다.  
@@ -16,7 +16,7 @@ ms.locfileid: "64618022"
   
  이 연습은 Visual C# 개발 설정을 사용하여 작성했습니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>필수 구성 요소  
  완료 해야 [연습: 간단한 개체 모델 및 쿼리 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)합니다. 이 연습은 c:\linqtest5에 있는 northwnd.mdf 파일을 비롯하여 해당 개체 모델 및 쿼리를 기반으로 합니다.  
   
 ## <a name="overview"></a>개요  
@@ -31,7 +31,7 @@ ms.locfileid: "64618022"
 ## <a name="mapping-relationships-across-tables"></a>테이블 간 관계 매핑  
  `Customer` 클래스 정의 후에 `Order`가 외래 키로 `Order.Customer`에 관련된다는 것을 나타내는 다음 코드가 포함된 `Customer.CustomerID` 엔터티 클래스 정의를 만듭니다.  
   
-#### <a name="to-add-the-order-entity-class"></a>Order 엔터티 클래스를 추가하려면  
+### <a name="to-add-the-order-entity-class"></a>Order 엔터티 클래스를 추가하려면  
   
 - `Customer` 클래스 뒤에 다음 코드를 입력하거나 붙여넣습니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "64618022"
 ## <a name="annotating-the-customer-class"></a>Customer 클래스에 주석 지정  
  이 단계에서는 `Customer` 클래스에 대한 관계를 나타내기 위해 `Order` 클래스에 주석을 지정합니다. 어느 방향으로든 관계를 정의하여 링크를 충분히 만들 수 있으므로 이 추가 작업이 반드시 필요한 것은 아닙니다. 그러나 이 주석을 추가하면 어느 방향으로나 개체를 쉽게 탐색할 수 있습니다.  
   
-#### <a name="to-annotate-the-customer-class"></a>Customer 클래스에 주석을 달려면  
+### <a name="to-annotate-the-customer-class"></a>Customer 클래스에 주석을 달려면  
   
 - `Customer` 클래스에 다음 코드를 입력하거나 붙여넣습니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "64618022"
 ## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>Customer 및 Order 관계에서 쿼리 만들기 및 실행  
  이제 `Order` 개체에서 `Customer` 개체를 직접 액세스하거나 그 반대 방향으로 액세스할 수 있습니다. 명시적인 않아도 *조인* customers와 orders 간의 합니다.  
   
-#### <a name="to-access-order-objects-by-using-customer-objects"></a>Customer 개체를 사용하여 Order 개체에 액세스하려면  
+### <a name="to-access-order-objects-by-using-customer-objects"></a>Customer 개체를 사용하여 Order 개체에 액세스하려면  
   
 1. 다음 코드를 `Main` 메서드에 입력하거나 붙여넣어 이 메서드를 수정합니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "64618022"
   
  다음 단계에서는 `Customers`를 데이터베이스의 Customers 테이블에 매핑되는 강력한 형식의 테이블로 만듭니다.  
   
-#### <a name="to-strongly-type-the-datacontext-object"></a>DataContext 개체를 강력한 형식으로 설정하려면  
+### <a name="to-strongly-type-the-datacontext-object"></a>DataContext 개체를 강력한 형식으로 설정하려면  
   
 1. `Customer` 클래스 선언 위에 다음 코드를 추가합니다.  
   

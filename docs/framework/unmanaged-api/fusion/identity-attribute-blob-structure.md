@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 074cca51cee2b0227e1d124f1d40a2ffc31e3c85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e478cb89821ce8666f1746e752e06d2caa3ad2bb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697357"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751583"
 ---
 # <a name="identityattributeblob-structure"></a>IDENTITY_ATTRIBUTE_BLOB 구조체
 어셈블리에서 단일 특성에 대 한 정보를 포함 하 고 세 개의 구성 `DWORD`s입니다. 각 `DWORD` 에서 생성 되는 문자 버퍼 오프셋 합니다 `CurrentIntoBuffer` 메서드는 [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) 인터페이스  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef struct _IDENTITY_ATTRIBUTE_BLOB {  
     DWORD  ofsNamespace;  
     DWORD  ofsName;  
@@ -46,7 +46,7 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 |`ofsName`|두 번째 문자 버퍼 오프셋입니다. 이 위치는 특성의 이름의 시작 부분을 표시합니다.|  
 |`ofsValue`|세 번째 문자 버퍼 오프셋입니다. 이 위치는 특성 값의 시작을 표시 합니다.|  
   
-## <a name="sample"></a>샘플  
+## <a name="sample"></a>예제  
  다음 예제에서는 결과적으로 채워진에 몇 가지 기본 단계를 보여 줍니다. `IDENTITY_ATTRIBUTE_BLOB` 구조:  
   
 1. 가져올는 [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) 어셈블리에 대 한 합니다.  
@@ -57,7 +57,7 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
   
 4. 호출 된 `CurrentIntoBuffer` 메서드는 `IEnumIDENTITY_ATTRIBUTE` 인터페이스입니다. 이 메서드는 특성을 복사 `Namespace`, `Name`, 및 `Value` 문자 버퍼입니다. 이러한 문자열에 대 한 세 가지 오프셋이에서 사용할 수 있게 됩니다는 `IDENTITY_ATTRIBUTE_BLOB` 구조입니다.  
   
-```  
+```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
   
 #include "stdafx.h"  

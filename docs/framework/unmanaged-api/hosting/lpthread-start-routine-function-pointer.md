@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a81e78c0a34f766e1598dd27506f62bd3132f348
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 577526536e07172070a1e8a65e73fd15646681fb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490164"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768341"
 ---
 # <a name="lpthreadstartroutine-function-pointer"></a>LPTHREAD_START_ROUTINE 함수 포인터
 스레드 실행을 시작 했음을 호스트에 알리는 함수를 가리킵니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "66490164"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef DWORD (__stdcall *LPTHREAD_START_ROUTINE) (  
     [in] LPVOID lpThreadParameter  
 );  
