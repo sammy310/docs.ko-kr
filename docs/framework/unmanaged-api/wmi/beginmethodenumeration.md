@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d6de2a5ff4d2743c7aca2e46b3af848138c15fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 46ef53acdfa06b0c2be9d2aa55e89ce8fa34dfb0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917360"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761745"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration 함수
 개체에 대해 사용할 수 있는 방법의 열거형을 시작합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "61917360"
     
 ## <a name="syntax"></a>구문  
   
-``` 
+```cpp 
 HRESULT BeginMethodEnumeration (
    [in] int               vFunc, 
    [in] IWbemClassObject* ptr, 
@@ -58,7 +58,7 @@ HRESULT BeginMethodEnumeration (
 
 이 함수에 의해 반환 되는 다음 값에 정의 된 합니다 *WbemCli.h* 헤더 파일에서 정의할 수 상수로 코드:
 
-|상수  |값  |설명  |
+|상수  |값  |Description  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags` 0이 아닌 값 이며 지정된 된 플래그 중 하나가 아닙니다. |
 |`WBEM_S_NO_ERROR` | 0 | 함수 호출이 성공 했습니다.  |

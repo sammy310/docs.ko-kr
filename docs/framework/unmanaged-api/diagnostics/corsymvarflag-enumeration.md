@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0c797378f5e13f39c1c786237a3a7b9cf577fccc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5b387ee7fd4cc0088c90d2b8278fbf18bb36f51
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763652"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755688"
 ---
 # <a name="corsymvarflag-enumeration"></a>CorSymVarFlag 열거형
 컴파일러에서 생성 된 변수 인지를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorSymVarFlag   
 {  
     VAR_IS_COMP_GEN = 1  
@@ -37,7 +37,7 @@ typedef enum CorSymVarFlag
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`VAR_IS_COMP_GEN`|컴파일러에서 생성 되는 지정 된 변수를 나타냅니다.|  
   

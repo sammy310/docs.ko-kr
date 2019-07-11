@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 602abdce11188bc2f2f3f3c02d3a73ba6f6b52e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 95b4e1762e5f7701bfce2edc4f7bd4f8cecb28b3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795956"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747404"
 ---
 # <a name="ecustomdumpitemkind-enumeration"></a>ECustomDumpItemKind 열거형
 향후 확장을 위한 예약 된 [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) 구조입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum {  
     DUMP_ITEM_None = 0  
 } ECustomDumpItemKind;  
@@ -36,9 +36,9 @@ typedef enum {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
-|`DUMP_ITEM_None`|나중에 사용하기 위해 예약되어 있습니다.|  
+|`DUMP_ITEM_None`|나중에 사용하도록 예약되어 있습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

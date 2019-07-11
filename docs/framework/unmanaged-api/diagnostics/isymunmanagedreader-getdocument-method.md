@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2a173c23ea33532f05e30d072677715e15d04018
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 32b7505a9e512f3c3e3e7a9fcbff40276e98ecf4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939479"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759355"
 ---
 # <a name="isymunmanagedreadergetdocument-method"></a>ISymUnmanagedReader::GetDocument 메서드
 문서를 찾습니다. 문서 언어, 공급 업체 및 형식에 대해서는 선택적입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetDocument (  
     [in]  WCHAR  *url,  
     [in]  GUID   language,  
@@ -43,13 +43,13 @@ HRESULT GetDocument (
  [in] 문서를 식별 하는 URL입니다.  
   
  `language`  
- [in] 문서 언어입니다. 이 매개 변수는 선택적 요소입니다.  
+ [in] 문서 언어입니다. 이 매개 변수는 선택 사항입니다.  
   
  `languageVendor`  
- [in] 문서 언어에 대 한 공급 업체의 id입니다. 이 매개 변수는 선택적 요소입니다.  
+ [in] 문서 언어에 대 한 공급 업체의 id입니다. 이 매개 변수는 선택 사항입니다.  
   
  `documentType`  
- [in] 문서의 형식입니다. 이 매개 변수는 선택적 요소입니다.  
+ [in] 문서의 형식입니다. 이 매개 변수는 선택 사항입니다.  
   
  `pRetVal`  
  [out] 반환 되는 인터페이스 포인터입니다.  

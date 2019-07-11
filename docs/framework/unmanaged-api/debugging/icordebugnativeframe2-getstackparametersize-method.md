@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47968d7550c3d16d201680caab705c0d7c85c784
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a5f0f767a7057064e285bf6ac9dcefc86eb9d79
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994580"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757209"
 ---
 # <a name="icordebugnativeframe2getstackparametersize-method"></a>ICorDebugNativeFrame2::GetStackParameterSize 메서드
 X86 운영 체제의 스택에 누적 크기 매개 변수를 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetStackParameterSize([out] ULONG32 * pSize)  
 ```  
   
@@ -40,7 +40,7 @@ HRESULT GetStackParameterSize([out] ULONG32 * pSize)
 ## <a name="return-value"></a>반환 값  
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
-|HRESULT|설명|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|스택 크기를 성공적으로 반환 되었습니다.|  
 |S_FALSE|`GetStackParameterSize` 비 x86 플랫폼에서 호출 되었습니다.|  

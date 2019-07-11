@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99bc65b0181a7c0ab7877273b3747ece91544f99
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ca510f30f0f38ae54eb83046b0e9d5541db882d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049260"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758681"
 ---
 # <a name="putmethod-function"></a>PutMethod 함수
 메서드를 만듭니다.
@@ -30,7 +30,7 @@ ms.locfileid: "62049260"
     
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT PutMethod (
    [in] int                vFunc, 
    [in] IWbemClassObject*  ptr, 
@@ -65,7 +65,7 @@ HRESULT PutMethod (
 
 이 함수에 의해 반환 되는 다음 값에 정의 된 합니다 *WbemCli.h* 헤더 파일에서 정의할 수 상수로 코드:
 
-|상수  |값  |설명  |
+|상수  |값  |Description  |
 |---------|---------|---------|
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 하나 이상의 매개 변수가 올바르지 않습니다. |
 | `WBEM_E_INVALID_DUPLICATE_PARAMETER` | 0x80041043 | `[in, out]` 둘 다 지정 하는 메서드 매개 변수를 *pInSignature* 하 고 *pOutSignature* 개체에 다른 한정자입니다.

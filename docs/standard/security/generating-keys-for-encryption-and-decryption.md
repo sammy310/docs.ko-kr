@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd6a5d710f4b42ae8d1bedb535abface7a053cbf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 52ec268df38a12dfe7dac469eed9901d7c0646a1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654397"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769610"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>암호화 및 해독용 키 생성
 키 만들기 및 관리는 암호화 프로세스의 중요한 부분입니다. 대칭 알고리즘을 사용할 때는 키와 IV(Initialization Vector)를 만들어야 합니다. 키는 데이터를 암호 해독해서는 안 되는 사람이 알 수 없도록 해야 합니다. IV는 기밀이어야 할 필요는 없지만 각 세션에서 변경되어야 합니다. 비대칭 알고리즘에서는 공개 키와 개인 키를 만들어야 합니다. 공개 키는 모든 사용자에게 공개될 수 있는 반면, 개인 키는 공개 키로 암호화된 데이터를 암호 해독하는 당사자만 알고 있어야 합니다. 이 섹션에서는 대칭 및 비대칭 알고리즘에 대한 키를 생성 및 관리하는 방법을 설명합니다.  
   
 ## <a name="symmetric-keys"></a>대칭 키  
- .NET Framework에서 제공하는 대칭 암호화 클래스가 데이터를 암호화 및 암호 해독하려면 키와 새 IV(초기화 벡터)가 필요합니다. 기본 생성자를 사용하여 관리되는 대칭 암호화 클래스 중 하나의 새 인스턴스를 만들 때마다 새 키와 IV가 자동으로 만들어집니다. 데이터를 암호 해독할 수 있도록 허용하는 모든 사용자는 동일한 키와 IV를 소유하고 동일한 알고리즘을 사용해야 합니다. 일반적으로 새 키와 IV는 각 세션에 대해 생성되어야 하며, 이후 세션을 위해 키와 IV를 저장하면 안 됩니다.  
+ .NET Framework에서 제공하는 대칭 암호화 클래스가 데이터를 암호화 및 암호 해독하려면 키와 새 IV(초기화 벡터)가 필요합니다. 매개 변수가 없는 생성자를 사용 하 여 관리 되는 대칭 암호화 클래스 중 하나의 새 인스턴스를 만들 때마다 새 키와 IV 자동으로 만들어집니다. 데이터를 암호 해독할 수 있도록 허용하는 모든 사용자는 동일한 키와 IV를 소유하고 동일한 알고리즘을 사용해야 합니다. 일반적으로 새 키와 IV는 각 세션에 대해 생성되어야 하며, 이후 세션을 위해 키와 IV를 저장하면 안 됩니다.  
   
  대칭 키와 IV를 위치상 떨어져 있는 사용자에게 전달하려면 대개 비대칭 암호화를 사용하여 대칭 키를 암호화합니다. 이 키를 암호화하지 않은 상태로 보안되지 않은 네트워크를 통해 보내면 다른 사람이 이 키 및 IV를 가로채어 데이터를 암호 해독할 수 있기 때문에 안전하지 않습니다. 암호화를 사용하여 데이터를 교환하는 방법에 대한 자세한 내용은 [암호화 체계 만들기](../../../docs/standard/security/creating-a-cryptographic-scheme.md)를 참조하세요.  
   
@@ -60,7 +60,7 @@ tdes.GenerateKey();
  이전 코드를 실행하면 **TripleDESCryptoServiceProvider** 의 새 인스턴스를 만들 때 키와 IV가 생성됩니다. **GenerateKey** 및 **GenerateIV** 메서드를 호출할 때 다른 키와 IV가 생성됩니다.  
   
 ## <a name="asymmetric-keys"></a>비대칭 키  
- .NET Framework에서는 비대칭 암호화를 위해 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 및 <xref:System.Security.Cryptography.DSACryptoServiceProvider> 클래스를 제공합니다. 이러한 클래스는 기본 생성자를 사용하여 새 인스턴스를 만들 때 공개/개인 키 쌍을 만듭니다. 비대칭 키는 여러 세션에서 사용하기 위해 저장하거나 하나의 세션에 대해서만 생성할 수 있습니다. 공개 키는 모든 사용자에게 공개될 수 있는 반면 개인 키는 엄격하게 보호해야 합니다.  
+ .NET Framework에서는 비대칭 암호화를 위해 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 및 <xref:System.Security.Cryptography.DSACryptoServiceProvider> 클래스를 제공합니다. 이러한 클래스는 매개 변수가 없는 생성자를 사용 하 여 새 인스턴스를 만들 때 공개/개인 키 쌍을 만듭니다. 비대칭 키는 여러 세션에서 사용하기 위해 저장하거나 하나의 세션에 대해서만 생성할 수 있습니다. 공개 키는 모든 사용자에게 공개될 수 있는 반면 개인 키는 엄격하게 보호해야 합니다.  
   
  공개/개인 키 쌍은 비대칭 알고리즘 클래스의 새 인스턴스를 만들 때마다 생성됩니다. 클래스의 새 인스턴스가 생성된 후 다음 두 메서드 중 하나를 사용하여 키 정보를 추출할 수 있습니다.  
   

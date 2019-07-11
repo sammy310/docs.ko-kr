@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 193caa894b8697a65e8821c01a63dde9cc5b5ccc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b21e08d3bf6845b9fc44d5a5edef0ea39b91da5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608946"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746528"
 ---
 # <a name="getmethodorigin-function"></a>GetMethodOrigin 함수
 메서드가 선언되는 클래스를 결정합니다.
@@ -30,7 +30,7 @@ ms.locfileid: "61608946"
     
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetMethodOrigin (
    [in] int                 vFunc, 
    [in] IWbemClassObject*   ptr, 
@@ -57,7 +57,7 @@ HRESULT GetMethodOrigin (
 
 이 함수에 의해 반환 되는 다음 값에 정의 된 합니다 *WbemCli.h* 헤더 파일에서 정의할 수 상수로 코드:
 
-|상수  |값  |설명  |
+|상수  |값  |Description  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 지정된 된 메서드를 찾을 수 없습니다. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 하나 이상의 매개 변수가 올바르지 않습니다. |

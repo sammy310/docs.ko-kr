@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: daf97f25b1adc30b173fcd81812a4b197915cdd1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f5a596608719889e6440e5cd42dafb82abaa074
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775052"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753716"
 ---
 # <a name="corprfgcreason-enumeration"></a>COR_PRF_GC_REASON 열거형
 가비지 컬렉션이 수행되는 이유를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum {  
     COR_PRF_GC_INDUCED = 1,  
     COR_PRF_GC_OTHER = 0  
@@ -37,7 +37,7 @@ typedef enum {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`COR_PRF_GC_INDUCED`|하는 가비지 수집이 발생 한 <xref:System.GC.Collect%2A> 메서드.|  
 |`COR_PRF_GC_OTHER`|이유 지정 되지 않습니다.|  

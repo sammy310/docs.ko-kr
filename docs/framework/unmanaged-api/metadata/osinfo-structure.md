@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0aba49fb4a60b2e471c541a8d8531a1cbc8627f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a36cd3c5fb638799a735e4b4a1a98959500300b5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775202"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761604"
 ---
 # <a name="osinfo-structure"></a>OSINFO 구조체
 어셈블리 또는 모듈에 대 한 운영 체제에 대 한 정보를 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef struct {  
     DWORD   dwOSPlatformId;  
     DWORD   dwOSMajorVersion;   
@@ -38,7 +38,7 @@ typedef struct {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`dwOSPlatformId`|Microsoft Windows 플랫폼 함수에 의해 정의 된 식별자 값 중 하나 `GetVersionEx`합니다. 다음 값이 지원 됩니다.<br /><br /> -VER_PLATFORM_WIN32s, 또는 0x0000, Microsoft Windows 3.1을 지정할 수 있습니다.<br />-VER_PLATFORM_WIN32_WINDOWS, 또는 0x0001, Windows 95, Windows 98 또는 운영 체제에서 나온 지정할 수 있습니다.<br />-VER_PLATFORM_WIN32_NT, 또는 0x0010, Windows NT 또는 운영 체제에서 나온 지정할 수 있습니다.|  
 |`dwOSMajorVersion`|운영 체제 주 버전 또는 모든 버전을 나타내는 NULL 값입니다.|  

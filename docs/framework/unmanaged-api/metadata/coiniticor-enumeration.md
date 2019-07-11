@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0a22f65206a33ecece1ec8a117db4bc838e9a350
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 89d2f9c9cfa7d4c2498710b36796f3e2605bcbf0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992747"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763654"
 ---
 # <a name="coiniticor-enumeration"></a>COINITICOR 열거형
 사용 하는 상수를 지정 [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) 공용 언어 런타임을 초기화할 때.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum tagCOINITCOR  
 {  
     COINITCOR = 0x0  
@@ -37,7 +37,7 @@ typedef enum tagCOINITCOR
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`COINITCOR`|기본 초기화 모드를 나타냅니다.|  
   

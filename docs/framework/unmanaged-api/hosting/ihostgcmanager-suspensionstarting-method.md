@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47ef5bb2539820d5a7bcd4ca6b4de86564290709
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00322a75c4a15e42c89ff5a8680171a168a37613
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984414"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758702"
 ---
 # <a name="ihostgcmanagersuspensionstarting-method"></a>IHostGCManager::SuspensionStarting 메서드
 CLR (공용 언어 런타임) 가비지 수집을 수행 하기 위해 작업 실행을 중단 하는 호스트에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT SuspensionStarting ();  
 ```  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 444390622ca68244661b91dc85814b05556b12a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d0f601c4b454b55edc5fa25eb2ee33d491009b9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994320"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760577"
 ---
 # <a name="icordebugstepperstep-method"></a>ICorDebugStepper::Step 메서드
 단일 단계로 포함 스레드를 통해를 필요에 따라이 ICorDebugStepper 하면 한 단계씩 스레드 내에서 호출 된 함수를 계속 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT Step (  
     [in] BOOL   bStepIn  
 );  

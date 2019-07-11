@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e57c622780f0bc92061fd2928ea861f904d9eb37
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6c52f96ad9458dfd5cdedc5cc73154aa570c6759
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599184"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751970"
 ---
 # <a name="corprfruntimetype-enumeration"></a>COR_PRF_RUNTIME_TYPE 열거형
 CLR (공용 언어 런타임)의 버전을 나타내는 값을 포함 합니다: 데스크톱 또는 silverlight에서는 CoreCLR 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum  
 {  
     COR_PRF_DESKTOP_CLR = 0x1,  
@@ -38,7 +38,7 @@ typedef enum
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`COR_PRF_DESKTOP_CLR`|CLR의 데스크톱 버전입니다.|  
 |`COR_PRF_CORE_CLR`|Silverlight에서 사용 되는 CLR의 core 버전입니다.|  

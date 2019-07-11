@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7fa90aff73d94baf2cbf7d01f41710cb2aa10213
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3695f150797e6a59a2fb1d58c99f233a35d687ce
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994008"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771838"
 ---
 # <a name="icordebugthreadgetobject-method"></a>ICorDebugThread::GetObject 메서드
 공용 언어 런타임 (CLR) 스레드에 대 한 인터페이스 포인터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetObject (  
     [out] ICorDebugValue   **ppObject  
 );  

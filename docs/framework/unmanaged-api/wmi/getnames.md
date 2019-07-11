@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f664edf29e5d2f9ec4e523aa7f7b204cf999e01b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e75bf9aab820216373f2f33fe8aa567f10befcb1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61724085"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746523"
 ---
 # <a name="getnames-function"></a>GetNames 함수
 개체 속성의 하위 집합 또는 모든 이름을 검색합니다. 
@@ -30,7 +30,7 @@ ms.locfileid: "61724085"
     
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetNames (
    [in] int                 vFunc, 
    [in] IWbemClassObject*   ptr, 
@@ -65,7 +65,7 @@ HRESULT GetNames (
 
 이 함수에 의해 반환 되는 다음 값에 정의 된 합니다 *WbemCli.h* 헤더 파일에서 정의할 수 상수로 코드:
 
-|상수  |값  |설명  |
+|상수  |값  |Description  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 일반 오류가 발생이 했습니다. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 하나 이상의 매개 변수가 잘못 된 경우 또는 플래그 및 매개 변수는 잘못 된 조합이 지정 되었습니다. |
@@ -94,7 +94,7 @@ HRESULT GetNames (
 |`WBEM_FLAG_KEYS_ONLY` | 0x4 | 키를 정의 하는 속성의 이름만 반환 합니다. |
 |`WBEM_FLAG_REFS_ONLY` | 0x8 | 반환 속성 이름만 개체 참조입니다. |
 
-| 그룹 3 플래그 |값  |설명  |
+| 그룹 3 플래그 |값  |Description  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 가장 많이 파생 된 클래스에 속하는 속성 이름만 반환 합니다. 부모 클래스에서 속성을 제외 합니다. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 부모 클래스에 속하는 속성 이름만 반환 합니다. |

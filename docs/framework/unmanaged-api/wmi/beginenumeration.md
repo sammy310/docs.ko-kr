@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 07396428dafbaa76e7771a4022bb493768f9f6c1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5ccf39c019094d896ca20534fccbbccf38ab1dd3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636798"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761811"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration 함수
 열거형의 시작 부분에 다시 열거자를 다시 설정합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "65636798"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT BeginEnumeration (
    [in] int               vFunc, 
    [in] IWbemClassObject* ptr, 
@@ -75,7 +75,7 @@ HRESULT BeginEnumeration (
 
 **그룹 2**
 
-상수  |값  |설명  |
+상수  |값  |Description  |
 |---------|---------|---------|
 |`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | 시스템 속성에 열거를 제한 합니다. |
 |`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | 로컬 및 전파 속성을 포함 하지만 열거의 시스템 속성을 제외 합니다. |
@@ -92,7 +92,7 @@ HRESULT BeginEnumeration (
 
 에 대 한 인스턴스:
 
-상수  |값  |설명  |
+상수  |값  |Description  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 열거형 클래스 자체에서 수정 되거나 정의 되는 속성을 제한 합니다. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 열거형 기본 클래스에서 상속 된 속성을 제한 합니다. |

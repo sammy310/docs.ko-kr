@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d19ca92db6f57a004dca54f6e22db10603c9498a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4bbd8476b7778de6d0023f3a8522a44be6626884
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697332"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751519"
 ---
 # <a name="ienumdefinitionidentity-interface"></a>IEnumDefinitionIdentity 인터페이스
 컬렉션의 열거자 역할을 `IDefinitionIdentity` 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 IEnumDefinitionIdentity : IUnknown {  
   
     HRESULT Clone (  
@@ -53,7 +53,7 @@ IEnumDefinitionIdentity : IUnknown {
   
 ## <a name="methods"></a>메서드  
   
-|메서드|설명|  
+|메서드|Description|  
 |------------|-----------------|  
 |`IEnumDefinitionIdentity::Clone`|새 인터페이스 포인터를 가져옵니다 `IEnumDefinitionIdentity` 이 동일한 멤버를 포함 하는 개체 `IEnumDefinitionIdentity`합니다.|  
 |`IEnumDefinitionIdentity::Next`|지정 된 수를 가져옵니다 `IDefinitionIdentity` 개체를 현재 위치에서 시작 합니다.|  

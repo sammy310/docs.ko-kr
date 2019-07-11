@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: a0b78afb653d3a47fa12b856de730131e5f8448e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c91fecf9e786f4a8e35486e7b30e9efe36c972e5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606422"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771649"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>연습: Windows Forms에서 맞춤선을 사용하여 컨트롤 정렬
 폼의 정확한 컨트롤 배치는 많은 응용 프로그램에서 우선 순위가 높습니다. Windows Forms 디자이너를 이렇게 하려면 여러 레이아웃 도구를 제공 합니다. 가장 중요 한 것은 <xref:System.Windows.Forms.Design.Behavior.SnapLine> 기능입니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "64606422"
 ## <a name="creating-the-project"></a>프로젝트 만들기  
  첫 번째 단계는 프로젝트를 만들고 폼을 설정하는 것입니다.  
   
-#### <a name="to-create-the-project"></a>프로젝트를 만들려면  
+### <a name="to-create-the-project"></a>프로젝트를 만들려면  
   
 1. "SnaplineExample" 이라는 Windows 기반 응용 프로그램 프로젝트를 만듭니다 (**파일** > **새로 만들기** > **프로젝트**  >  **Visual C#** 나 **Visual Basic** > **클래식 데스크톱** > **Windows Forms 응용 프로그램**).  
   
@@ -62,7 +62,7 @@ ms.locfileid: "64606422"
 ## <a name="spacing-and-aligning-controls-using-snaplines"></a>간격 조정 및 맞춤선을 사용 하 여 컨트롤 정렬  
  맞춤선 폼의 컨트롤을 정렬 하는 정확 하 고 직관적인 방법을 제공 합니다. 선택한 컨트롤 또는 컨트롤을 다른 컨트롤 또는 컨트롤 집합을 맞출 위치 근처 이동할 때 표시 됩니다. 선택 항목 "맞춰집니다" 제안된 된 위치에 다른 컨트롤을 지 나 이동 하면 됩니다.  
   
-#### <a name="to-arrange-controls-using-snaplines"></a>맞춤선을 사용 하 여 컨트롤을 정렬 하려면  
+### <a name="to-arrange-controls-using-snaplines"></a>맞춤선을 사용 하 여 컨트롤을 정렬 하려면  
   
 1. <xref:System.Windows.Forms.Button> 도구 상자 **에서** 컨트롤을 폼으로 끌어다 놓습니다.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "64606422"
 ## <a name="aligning-to-form-and-container-margins"></a>폼과 컨테이너 여백에 맞춤  
  맞춤선을 사용 하면 일관 된 방식으로 폼과 컨테이너의 여백으로 컨트롤을 맞출 수 있습니다.  
   
-#### <a name="to-align-controls-to-form-and-container-margins"></a>폼 및 컨테이너 여백에 컨트롤을 맞추려면  
+### <a name="to-align-controls-to-form-and-container-margins"></a>폼 및 컨테이너 여백에 컨트롤을 맞추려면  
   
 1. 중 하나를 선택 합니다 <xref:System.Windows.Forms.Button> 컨트롤과 맞춤선 나타날 때까지 폼의 오른쪽 테두리에 가깝게 이동 합니다. 맞춤선의 거리 오른쪽 테두리를 컨트롤의 합계인 <xref:System.Windows.Forms.Control.Margin%2A> 속성과 양식의 <xref:System.Windows.Forms.Control.Padding%2A> 속성 값입니다.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "64606422"
 ## <a name="aligning-to-grouped-controls"></a>그룹화 된 컨트롤에 맞춤  
  맞춤선을 사용 하 여 그룹화 된 컨트롤을 맞출 수 내에서 컨트롤 뿐만 <xref:System.Windows.Forms.GroupBox> 제어 합니다.  
   
-#### <a name="to-align-to-grouped-controls"></a>그룹화 된 컨트롤에 맞게  
+### <a name="to-align-to-grouped-controls"></a>그룹화 된 컨트롤에 맞게  
   
 1. 두 개의 폼의 컨트롤을 선택 합니다. 선택 영역을 이동 및 선택 항목 및 기타 컨트롤 사이 나타나는 맞춤선입니다.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "64606422"
 ## <a name="using-snaplines-to-place-a-control-by-outlining-its-size"></a>맞춤선을 사용 하 여 크기로 개요 여 컨트롤을 배치 하려면  
  맞춤선 정렬 때 처음 배치 하는 폼에서 제어 합니다.  
   
-#### <a name="to-use-snaplines-to-place-a-control-by-outlining-its-size"></a>맞춤선을 사용 하 여 크기로 개요 컨트롤을 배치에  
+### <a name="to-use-snaplines-to-place-a-control-by-outlining-its-size"></a>맞춤선을 사용 하 여 크기로 개요 컨트롤을 배치에  
   
 1. **도구 상자**에서 <xref:System.Windows.Forms.Button> 컨트롤 아이콘을 클릭합니다. 폼으로 끌어다 놓지 마세요.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "64606422"
 ## <a name="using-snaplines-when-dragging-a-control-from-the-toolbox"></a>도구 상자에서 컨트롤을 끌어 올 때 맞춤선을 사용 하 여  
  맞춤선 정렬 끌면에서 제어 합니다 **도구 상자** 폼입니다.  
   
-#### <a name="to-use-snaplines-when-dragging-a-control-from-the-toolbox"></a>도구 상자에서 컨트롤을 끌어 올 때 맞춤선을 사용 하려면  
+### <a name="to-use-snaplines-when-dragging-a-control-from-the-toolbox"></a>도구 상자에서 컨트롤을 끌어 올 때 맞춤선을 사용 하려면  
   
 1. 끌어서를 <xref:System.Windows.Forms.Button> 에서 제어를 **도구 상자** 폼에 끌어다 놓지 않습니다 마우스 단추입니다.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "64606422"
 ## <a name="resizing-controls-using-snaplines"></a>맞춤선을 사용 하 여 컨트롤의 크기 조정  
  맞춤선 도움이 크기를 조정할 때 컨트롤을 정렬 합니다.  
   
-#### <a name="to-resize-a-control-using-snaplines"></a>맞춤선을 사용 하는 컨트롤의 크기를 조정 하려면  
+### <a name="to-resize-a-control-using-snaplines"></a>맞춤선을 사용 하는 컨트롤의 크기를 조정 하려면  
   
 1. <xref:System.Windows.Forms.Button> 도구 상자 **에서** 컨트롤을 폼으로 끌어다 놓습니다.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "64606422"
 ## <a name="aligning-a-label-to-a-controls-text"></a>컨트롤의 텍스트에 레이블 맞춤  
  일부 컨트롤은 다른 컨트롤에 표시 된 텍스트를 정렬 하기 위해 맞춤선을 제공 합니다.  
   
-#### <a name="to-align-a-label-to-a-controls-text"></a>컨트롤의 텍스트 레이블을 맞출  
+### <a name="to-align-a-label-to-a-controls-text"></a>컨트롤의 텍스트 레이블을 맞출  
   
 1. <xref:System.Windows.Forms.TextBox> 도구 상자 **에서** 컨트롤을 폼으로 끌어다 놓습니다. 삭제할 경우는 <xref:System.Windows.Forms.TextBox> 폼에 컨트롤, 스마트 태그 문자 모양을 클릭 및 선택 합니다 **textBox1에 텍스트를 설정** 옵션. 세부 정보를 참조 하세요. [연습: Windows에서 스마트 태그를 사용 하 여 일반적인 작업을 수행 Forms 컨트롤](performing-common-tasks-using-smart-tags-on-wf-controls.md)합니다.  
   
@@ -178,7 +178,7 @@ ms.locfileid: "64606422"
 ## <a name="using-snaplines-with-keyboard-navigation"></a>맞춤선을 사용 하 여 키보드 탐색을 사용 하 여  
  맞춤선 정렬 키보드의 화살표 키를 사용 하 여 정렬할 때 제어 합니다.  
   
-#### <a name="to-use-snaplines-with-keyboard-navigation"></a>키보드 탐색을 사용 하 여 맞춤선을 사용 하려면  
+### <a name="to-use-snaplines-with-keyboard-navigation"></a>키보드 탐색을 사용 하 여 맞춤선을 사용 하려면  
   
 1. <xref:System.Windows.Forms.Button> 도구 상자 **에서** 컨트롤을 폼으로 끌어다 놓습니다. 폼의 왼쪽 위 모퉁이에 배치 합니다.  
   
@@ -199,7 +199,7 @@ ms.locfileid: "64606422"
 ## <a name="snaplines-and-layout-panels"></a>맞춤선 및 레이아웃 패널  
  맞춤선은 레이아웃 패널 내에서 사용할 수 없습니다.  
   
-#### <a name="to-selectively-disable-snaplines"></a>선택적으로 맞춤선을 사용 하지 않도록 설정  
+### <a name="to-selectively-disable-snaplines"></a>선택적으로 맞춤선을 사용 하지 않도록 설정  
   
 1. <xref:System.Windows.Forms.TableLayoutPanel> 도구 상자 **에서** 컨트롤을 폼으로 끌어다 놓습니다.  
   
@@ -214,13 +214,13 @@ ms.locfileid: "64606422"
 ## <a name="disabling-snaplines"></a>맞춤선을 사용 하지 않도록 설정  
  맞춤선은 기본적으로 켜 집니다. 맞춤선을 선택적으로 비활성화 하거나 디자인 환경에서 비활성화할 수 있습니다.  
   
-#### <a name="to-selectively-disable-snaplines"></a>선택적으로 맞춤선을 사용 하지 않도록 설정  
+### <a name="to-selectively-disable-snaplines"></a>선택적으로 맞춤선을 사용 하지 않도록 설정  
   
 - ALT 키를 누르고 형식 관련 컨트롤을 이동 하는 동안 합니다.  
   
      Note 없습니다 맞춤선이 표시 하는 제어 가능한 맞춤 위치 스냅 되지 않습니다.  
   
-#### <a name="to-disable-snaplines-in-the-design-environment"></a>디자인 환경에서 맞춤선을 사용 하지 않도록 설정  
+### <a name="to-disable-snaplines-in-the-design-environment"></a>디자인 환경에서 맞춤선을 사용 하지 않도록 설정  
   
 1. **도구** 메뉴를 열고 합니다 **옵션** 대화 상자. Windows Forms 디자이너 대화 상자를 엽니다. 자세한 내용은 참조 하세요 [Windows Forms 디자이너, 옵션 대화 상자, 일반](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))합니다.  
   

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 408e72eeaa1dac83c45488d186425f30c6043280
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef3f1d5e78efe37070bb2bdd6d2834178947af7b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786375"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740079"
 ---
 # <a name="cordebugexceptionunwindcallbacktype-enumeration"></a>CorDebugExceptionUnwindCallbackType 열거형
 해제 단계 중에 콜백에서 신호를 보내는 이벤트를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorDebugExceptionUnwindCallbackType {  
     DEBUG_EXCEPTION_UNWIND_BEGIN = 1,  
     DEBUG_EXCEPTION_INTERCEPTED  = 2  
@@ -37,7 +37,7 @@ typedef enum CorDebugExceptionUnwindCallbackType {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`DEBUG_EXCEPTION_UNWIND_BEGIN`|시작 해제 프로세스입니다.|  
 |`DEBUG_EXCEPTION_INTERCEPTED`|예외를 가로 챘 습니다.|  

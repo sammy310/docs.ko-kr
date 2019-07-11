@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 87ca5470fe5994d34d12a339c2d92a5f3917063d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 03bc5584d24efa790989f93426251f9f38e65904
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490228"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768529"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim 함수
 지정된 된 버전의.NET Framework 재배포 가능 패키지에 포함 된 DLL 로드 합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "66490228"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT LoadLibraryShim (  
     [in]  LPCWSTR  szDllName,  
     [in]  LPCWSTR  szVersion,  
@@ -48,7 +48,7 @@ HRESULT LoadLibraryShim (
  [in] 로드할 DLL의 버전을 나타내는 0으로 끝나는 문자열입니다. 경우 `szVersion` 가 null 인 로드 4 버전 보다 낮은 경우 지정된 된 DLL의 최신 버전에 대 한 선택한 버전입니다. 즉, 버전 4 보다 크거나 같은 버전을 모두 무시 됩니다 `szVersion` 가 null DLL을 로드 하지 없는 보다 낮은 버전이 버전 4가 설치 되어 있습니다. 이렇게 하면 기존 응용 프로그램 또는 구성 요소는.NET Framework 4 설치에 영향을 주지 않습니다. 항목을 참조 하세요 [In-proc SxS 및 마이그레이션 퀵스타트](https://go.microsoft.com/fwlink/?LinkId=200329) CLR 팀 블로그의 합니다.  
   
  `pvReserved`  
- 나중에 사용하기 위해 예약되어 있습니다.  
+ 나중에 사용하도록 예약되어 있습니다.  
   
  `phModDll`  
  [out] 모듈의 핸들에 대 한 포인터입니다.  

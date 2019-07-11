@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ab2b584b4a3e9bef17110f3084dc93efb2e5167
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d05002ecdb903a1adfeea88930083ba472164324
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989367"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745631"
 ---
 # <a name="icordebugchaingetthread-method"></a>ICorDebugChain::GetThread 메서드
 이 호출 체인은 실제 스레드에서의 부분을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetThread (  
     [out] ICorDebugThread    **ppThread  
 );  

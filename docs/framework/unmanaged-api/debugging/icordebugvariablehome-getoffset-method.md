@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 864cb893511bceabd61ce0064065b3866ce01dfe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0fdab81d499fe1508493cb0bf05a1787974a9d01
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986754"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774534"
 ---
 # <a name="icordebugvariablehomegetoffset-method"></a>ICorDebugVariableHome::GetOffset 메서드
 변수에 대 한 기본 등록에서 오프셋을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetOffset(  
     [out] LONG *pOffset  
 );  
@@ -42,7 +42,7 @@ HRESULT GetOffset(
 ## <a name="return-value"></a>반환 값  
  메서드는 다음 값을 반환 합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |`S_OK`|변수가 레지스터 상대 메모리 위치에 있습니다.|  
 |`E_FAIL`|변수를 레지스터 상대 메모리 위치에 없습니다.|  

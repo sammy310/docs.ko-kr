@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 392254efcd099aca60e58b3cc0bc61ca85aa2c66
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2093466c78b039a06a01e2d850b88ff4543d0ab3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986520"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752462"
 ---
 # <a name="variablelocationtype-enumeration"></a>VariableLocationType 열거형
 변수의 네이티브 위치 유형을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum VariableLocationType  
 {  
     VLT_REGISTER,               
@@ -39,7 +39,7 @@ typedef enum VariableLocationType
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`VLT_REGISTER`|변수가 레지스터에 있습니다.|  
 |`VLT_REGISTER_RELATIVE`|변수가 레지스터 상대 메모리 위치에 있습니다.|  

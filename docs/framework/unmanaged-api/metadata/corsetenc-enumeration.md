@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1fd903cb4a9ce664b7a1c958a3fef0c639d6845d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2796be32154275387da891683cc5053095f534af
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045320"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772319"
 ---
 # <a name="corsetenc-enumeration"></a>CorSetENC 열거형
 메타데이터 생성 중의 동작에 영향을 주는 데 사용되는 값을 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorSetENC {  
   
     MDSetENCOn                  = 0x00000001,  
@@ -46,10 +46,10 @@ typedef enum CorSetENC {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
-|`MDSetENCOn`|사용되지 않습니다.|  
-|`MDSetENCOff`|사용되지 않습니다.|  
+|`MDSetENCOn`|더 이상 사용되지 않습니다.|  
+|`MDSetENCOff`|더 이상 사용되지 않습니다.|  
 |`MDUpdateENC`|메타 데이터를 업데이트할 수 있지만 토큰은 이동할 수 없음을 나타냅니다.|  
 |`MDUpdateFull`|업데이트 하는 동안 토큰을 이동할 수 있는지를 나타냅니다.|  
 |`MDUpdateExtension`|업데이트 추가 이루어진 수를 나타냅니다. 토큰을 이동할 수 없습니다.|  

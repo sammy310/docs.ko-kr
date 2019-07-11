@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 58c9d4c66af0bb9f4e66d17b18ac78ef8271bc31
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2baefa45deb8c13e8c1e627724fbe271b210a9ce
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609609"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740876"
 ---
 # <a name="codechunkinfo-structure"></a>CodeChunkInfo 구조체
 
@@ -29,7 +29,7 @@ ms.locfileid: "61609609"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef struct _CodeChunkInfo {  
     CORDB_ADDRESS startAddr;  
     ULONG32       length;  
@@ -38,7 +38,7 @@ typedef struct _CodeChunkInfo {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`startAddr`|`CORDB_ADDRESS` 청크의 시작 주소를 지정 하는 값입니다.|  
 |`length`|청크의 바이트 크기입니다.|  

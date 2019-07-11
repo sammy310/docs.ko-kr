@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9bbff8bb1f095502f27b649639434010453ffe1
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 01b000ed3d75ddb6a7882cb8f03ff2cec64fb9fe
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423856"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767882"
 ---
 # <a name="eclroperation-enumeration"></a>EClrOperation 열거형
 호스트 정책 작업을 적용할 수 있는 작업 집합을 설명 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum {  
     OPR_ThreadAbort,  
     OPR_ThreadRudeAbortInNonCriticalRegion,  
@@ -42,7 +42,7 @@ typedef enum {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`OPR_AppDomainRudeUnload`|호스트 정책 작업을 수행할 때 지정할 수는 <xref:System.AppDomain> 정상적이 지 않은 (강제) 방식으로 언로드되는 합니다.|  
 |`OPR_AppDomainUnload`|호스트 정책 작업을 수행할 때 지정할 수는 <xref:System.AppDomain> 언로드됩니다.|  
