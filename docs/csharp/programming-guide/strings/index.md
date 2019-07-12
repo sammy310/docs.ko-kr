@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 668b3b927ac059acf160f5d96e8fbc614f57ddff
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 21ada083f69b0acf49490b331c5a416361a2ee84
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67503992"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802310"
 ---
 # <a name="strings-c-programming-guide"></a>문자열(C# 프로그래밍 가이드)
 문자열은 값이 텍스트인 <xref:System.String> 형식의 개체입니다. 내부적으로 텍스트는 <xref:System.Char> 개체의 순차적 읽기 전용 컬렉션으로 저장됩니다. C# 문자열의 끝에 null 종료 문자가 없으므로 C# 문자열에는 포함된 null 문자('\0')를 여러 개 사용할 수 있습니다. 문자열의 <xref:System.String.Length%2A> 속성은 유니코드 문자 수가 아닌 포함된 `Char` 개체 수를 나타냅니다. 문자열에서 개별 유니코드 코드 포인트에 액세스하려면 <xref:System.Globalization.StringInfo> 개체를 사용합니다.  
@@ -62,10 +62,10 @@ ms.locfileid: "67503992"
 |\n|줄 바꿈|0x000A|  
 |\r|캐리지 리턴|0x000D|  
 |\t|가로 탭|0x0009|  
-|\U|유니코드 이스케이프 시퀀스(UTF-32)|`\U00nnnnnn`(예: `\U0001F47D` = "&#x1F47D;")|  
-|\u|유니코드 이스케이프 시퀀스(UTF-16)|`\unnnn`(예: `\u0041` = "A")|  
 |\v|세로 탭|0x000B|  
-|\x|길이가 변하는 경우를 제외하고 "\u"와 유사한 유니코드 이스케이프 시퀀스합니다.|`\x0041` 또는 `\x41` = "A"|  
+|\u|유니코드 이스케이프 시퀀스(UTF-16)|`\uHHHH` (범위: 0000-FFFF; 예제: `\u00E7` “ç” =)|  
+|\U|유니코드 이스케이프 시퀀스(UTF-32)|`\U00HHHHHH` (범위: 000000-10FFFF; 예: `\U0001F47D` = “&#x1F47D;”)|  
+|\x|길이가 변하는 경우를 제외하고 “\u”와 유사한 유니코드 이스케이프 시퀀스합니다.|`\xH[H][H][H]` (범위: 0-FFFF; 예: `\x00E7` 나 `\x0E7` 또는 `\xE7` "ç" =)|  
   
 > [!WARNING]
 >  `\x` 이스케이프 시퀀스를 사용하고 4자리 미만의 16진수를 지정하는 경우, 이스케이프 시퀀스 바로 뒤에 있는 문자가 유효한 16진수(예: 0-9, A-F 및 a-f)이면 이스케이프 시퀀스의 일부로 해석됩니다. 예를 들어 `\xA1`은 코드 포인트 U+00A1인 "&#161;"을 생성합니다. 그러나 다음 문자가 "A" 또는 "a"이면 이스케이프 시퀀스는 `\xA1A`로 해석되어 코드 포인트 U+0A1A인 "&#x0A1A;"를 생성합니다. 이러한 경우 4자리 16진수(예: `\x00A1`)를 모두 지정하면 잘못된 해석을 방지할 수 있습니다.  

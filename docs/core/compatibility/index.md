@@ -4,12 +4,12 @@ description: .NET Core에서 개발자를 위해 .NET 버전 간의 호환성을
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/10/2019
-ms.openlocfilehash: b58edd9ff0bd56b12b861162cc92d484a3b36c8b
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: c68a19b8b98a98bb9c64f5b9fa60b378935e6e93
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307543"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736565"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>.NET Core의 호환성이 손상되는 변경 평가
 
@@ -107,7 +107,7 @@ ms.locfileid: "67307543"
 
 - **✔️ 이전에 클래스에 생성자가 없었던 경우 기본(매개 변수가 없는) 생성자와 함께 클래스에 생성자 추가**
 
-   단, 기본 생성자를 추가하지 ‘않고’ 이전에 생성자가 없었던 클래스에 생성자를 추가할 수는 없습니다. 
+   단, 매개 변수가 없는 생성자를 추가하지 ‘않고’ 이전에 생성자가 없었던 클래스에 생성자를 추가할 수는 없습니다. 
 
 - **✔️ 멤버를 [abstract](../../csharp/language-reference/keywords/abstract.md)에서 [virtual](../../csharp/language-reference/keywords/virtual.md)로 변경**
 
@@ -174,7 +174,7 @@ ms.locfileid: "67307543"
 
   이전 오버로드에 바인딩된 기존 클라이언트의 호환성이 손상됩니다. 예를 들어 클래스에 <xref:System.UInt32>를 허용하는 메서드의 단일 버전이 있는 경우, 기존 소비자가 <xref:System.Int32> 값을 전달할 때 해당 오버로드에 성공적으로 바인딩됩니다. 그러나 <xref:System.Int32>를 허용하는 오버로드를 추가하면, 다시 컴파일하거나 런타임에 바인딩을 사용할 때 이제 컴파일러가 새 오버로드에 바인딩됩니다. 다른 동작이 발생하는 경우 호환성이 손상되는 변경입니다.
 
-- **❌ 기본 생성자를 추가하지 않고 이전에 생성자가 없었던 클래스에 생성자 추가**
+- **❌ 매개 변수가 없는 생성자를 추가하지 않고 이전에 생성자가 없었던 클래스에 생성자 추가**
 
 - **❌️ 필드에 [readonly](../../csharp/language-reference/keywords/readonly.md) 추가**
 

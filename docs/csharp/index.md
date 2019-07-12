@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: fee2aad90485d3d06f1730d5937fd4e1240b4801
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 0bf9fe8124578ba9bd192e10d517e3b0df7e5982
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65064042"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744257"
 ---
 # <a name="c-guide"></a>C# 가이드
 
@@ -35,7 +35,7 @@ C# 가이드에는 여러 섹션이 있습니다. 순서대로 읽거나 가장 
 * [시작](getting-started/index.md)
   * 이 섹션에서는 기본 플랫폼에서 C# 개발 환경을 위해 설치해야 하는 항목을 소개합니다. 이 섹션의 다른 항목에서는 지원되는 다양한 환경에서 첫 번째 C# 프로그램을 만드는 방법을 설명합니다.
 
-* [C# 소개 자습서](tutorials/intro-to-csharp/index.md):
+* [C# 소개 자습서](tutorials/intro-to-csharp/index.md)
   * C# 소개 자습서는 완전 초보 개발자가 REPL(Read-Eval-Print Loop) 인터페이스를 사용하여 브라우저에서 C# 언어를 살펴보고 배울 수 있는 대화형 학습서를 제공합니다. 대화형 단원을 완료한 후 컴퓨터에서 같은 단원을 연습하여 코딩 기술을 향상할 수 있습니다.
 
 * [자습서](tutorials/index.md)
