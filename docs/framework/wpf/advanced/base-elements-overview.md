@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
-ms.openlocfilehash: 6fc34c02ab1add0710b65da7d63f444e1628cbc6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3dfcaaf040a766e07eb46a0b943b7e023564fa1c
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64657369"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859952"
 ---
 # <a name="base-elements-overview"></a>기본 요소 개요
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 클래스에는 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 설명서에서 일반적으로 기본 요소 클래스라고 하는 네 가지 클래스에서 파생된 클래스가 많습니다. 이러한 클래스는 <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>를 <xref:System.Windows.ContentElement>, 및 <xref:System.Windows.FrameworkContentElement>합니다. 합니다 <xref:System.Windows.DependencyObject> 둘 다의 공통 기본 클래스 이므로 클래스와도 관련 <xref:System.Windows.UIElement> 및 <xref:System.Windows.ContentElement>  
@@ -19,7 +19,7 @@ ms.locfileid: "64657369"
  둘 다 <xref:System.Windows.UIElement> 하 고 <xref:System.Windows.ContentElement> 에서 파생 된 <xref:System.Windows.DependencyObject>, 약간 다른 경로 통해. 이 수준에서 분할 방법을 사용 하 여 처리를 <xref:System.Windows.UIElement> 또는 <xref:System.Windows.ContentElement> 사용자 인터페이스 및 응용 프로그램에서 사용 목적 무엇에 사용 됩니다. <xref:System.Windows.UIElement> 역시 <xref:System.Windows.Media.Visual> 내부 하위 수준 그래픽 지원을 노출 하는 클래스는 해당 클래스 계층 구조는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]합니다. <xref:System.Windows.Media.Visual> 독립적인 직사각형 화면 영역을 정의 하 여 렌더링 프레임 워크를 제공 합니다. 실제로 <xref:System.Windows.UIElement> 대형 개체 모델을 지 원하는 요소 렌더링 하기 위한 것 이며 레이아웃 영역 직사각형 화면 영역으로 표현할 수 있는 콘텐츠 모델은 더 개방적 일 다른 있도록을입니다 요소의 조합을 나타냅니다. <xref:System.Windows.ContentElement> 파생 되지 않습니다 <xref:System.Windows.Media.Visual>;는 해당 모델을 <xref:System.Windows.ContentElement> 판독기 또는 다음 요소를 해석 및 전체를 생성 하는 뷰어와 같은 다른 작업에 의해 사용할 수 <xref:System.Windows.Media.Visual> 에 대 한 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 사용할 합니다. 특정 <xref:System.Windows.UIElement> 클래스 콘텐츠 호스트는: 하나 이상의 호스팅과 렌더링을 제고 <xref:System.Windows.ContentElement> 클래스 (<xref:System.Windows.Controls.DocumentViewer> 이러한 클래스의 예로). <xref:System.Windows.ContentElement> 다소 작은 개체 모델을 사용 하 여 요소에 대 한 기본 클래스와는 더 많이 처리 텍스트, 정보 또는 문서는 콘텐츠 내에서 호스팅될 수로 사용 됩니다.는 <xref:System.Windows.UIElement>합니다.  
   
 ### <a name="framework-level-and-core-level"></a>프레임워크 수준 및 코어 수준  
- <xref:System.Windows.UIElement> 에 대 한 기본 클래스로 사용 됩니다 <xref:System.Windows.FrameworkElement>, 및 <xref:System.Windows.ContentElement> 에 대 한 기본 클래스로 사용 됩니다 <xref:System.Windows.FrameworkContentElement>합니다. 이 다음 수준의 클래스를 사용하는 이유는 WPF 프레임워크 수준과 분리된 WPF 코어 수준을 지원하기 위한 것입니다. [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]가 PresentationCore 어셈블리와 PresentationFramework 어셈블리 간에 분할되는 방식에도 이러한 분할이 존재합니다. WPF 프레임워크 수준은 프레젠테이션을 위한 레이아웃 관리자의 구현을 포함하여 기본 애플리케이션 요구 사항을 충족하는 보다 완벽한 솔루션을 제공합니다. WPF 코어 수준은 추가 어셈블리의 오버헤드 없이 대부분의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 사용할 수 있습니다. 가장 일반적인 응용 프로그램 개발 시나리오의 경우 이러한 수준 간의 구분이 거의 문제가 되지 않습니다. 일반적으로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]를 전체적으로 고려하여 WPF 프레임워크 수준과 WPF 코어 수준을 구분하지 않아도 됩니다. 전체 솔루션에 이미 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 컴퍼지션 및 레이아웃 구현이 있는 경우와 같이 애플리케이션 디자인에서 WPF 프레임워크 수준 기능의 실질적인 상당한 부분을 대체하도록 선택하는 경우에는 이러한 수준 구분에 대해 알고 있어야 합니다.  
+ <xref:System.Windows.UIElement> 에 대 한 기본 클래스로 사용 됩니다 <xref:System.Windows.FrameworkElement>, 및 <xref:System.Windows.ContentElement> 에 대 한 기본 클래스로 사용 됩니다 <xref:System.Windows.FrameworkContentElement>합니다. 이 다음 수준의 클래스에 대 한 원인은 Api PresentationCore 및 PresentationFramework 어셈블리 간에 분할 되는 방법에 기존이 나누기를 사용 하 여 WPF 프레임 워크 수준에서 분리 된 WPF 코어 수준을 지원 하도록 합니다. WPF 프레임워크 수준은 프레젠테이션을 위한 레이아웃 관리자의 구현을 포함하여 기본 애플리케이션 요구 사항을 충족하는 보다 완벽한 솔루션을 제공합니다. WPF 코어 수준은 추가 어셈블리의 오버헤드 없이 대부분의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 사용할 수 있습니다. 이러한 구별 수준 매우 드물게 가장 일반적인 응용 프로그램 개발 시나리오에 대 한 문제 및 일반적을 고려 하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 전체적으로 Api 및 WPF 프레임 워크 수준과 WPF 코어 간의 차이점을 수준입니다. 전체 솔루션에 이미 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 컴퍼지션 및 레이아웃 구현이 있는 경우와 같이 애플리케이션 디자인에서 WPF 프레임워크 수준 기능의 실질적인 상당한 부분을 대체하도록 선택하는 경우에는 이러한 수준 구분에 대해 알고 있어야 합니다.  
   
 <a name="subclassing_elements"></a>   
 ## <a name="choosing-which-element-to-derive-from"></a>파생될 요소 선택  

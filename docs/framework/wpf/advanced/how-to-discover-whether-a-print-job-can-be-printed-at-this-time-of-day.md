@@ -10,19 +10,19 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: c68e6a69553f2cb14eb442c31e5138009f3c8411
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ee38caedc5d5a29d2221d6e5a6bf6cf74617bf8c
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619438"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859713"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>방법: 특정 시간에 인쇄 작업을 인쇄할 수 있는지 확인
 인쇄 대기열 항상 사용할 수 없는 하루 24 시간에 대 한 합니다. 하루 중 특정 시간에 사용할 수 없도록 설정할 수 있는 시작 및 종료 시간 속성을 갖습니다. 예를 들어, 오후 5 시 이후에 특정 부서 에서만 단독으로 사용에 대 한 프린터를 예약 합니다.이 기능은 사용할 수 있습니다. 해당 학과 사용 되는 다른 큐에서는 다른 부서에서 프린터를 처리 해야 합니다. 선호 하는 방식된 부서에 대 한 큐 수를 설정할 수 있지만 항상 사용 가능한, 다른 부서에 대 한 큐 오후 5 시 이후에 사용할 수 없게 설정할 수 됩니다.  
   
  또한 인쇄 작업 자체는 지정 된 기간 내 에서만 인쇄 가능 하도록 설정할 수 있습니다.  
   
- <xref:System.Printing.PrintQueue> 하 고 <xref:System.Printing.PrintSystemJobInfo> 에 클래스 노출는 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] Microsoft.NET Framework의 원격으로 현재 시간에 지정 된 큐에 지정된 된 인쇄 작업을 인쇄할 수 있는지를 확인 하기 위한 수단을 제공 합니다.  
+ 합니다 <xref:System.Printing.PrintQueue> 고 <xref:System.Printing.PrintSystemJobInfo> Api의 Microsoft.NET Framework에 노출 하는 클래스 원격으로 현재 시간에 지정 된 큐에 지정된 된 인쇄 작업을 인쇄할 수 있는지를 확인 하기 위한 수단을 제공 합니다.  
   
 ## <a name="example"></a>예제  
  아래 예제에는 인쇄 작업 문제를 진단할 수 있는 샘플입니다.  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 5b40302d93ce1bfc378b86210ed7bb54732d294b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d7b76365178c78d2b20b9541d5e52a605158a77
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756763"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859823"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 보안 전략 - 플랫폼 보안
 운영 체제를 포함 하는 기본 플랫폼의 보안 기능도 활용 다양 한 보안 서비스를 제공 하는 Windows Presentation Foundation (WPF), 합니다 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], 및 [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]합니다. 이러한 계층이 결합되어 다음 그림과 같이 단일 실패 지점을 방지하는 강력한 심층 방어 보안 모델인 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]를 제공합니다.  
@@ -196,11 +196,11 @@ ms.locfileid: "67756763"
   
 - 일부 웹 사이트의 수많은 보안 대화 상자  
   
- 경우에 따라 신뢰할 수 없는 웹 사이트가 설치 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]를 스푸핑하거나 사용자가 취소해도 [!INCLUDE[TLA#tla_actx](../../../includes/tlasharptla-actx-md.md)] 설치 대화 상자를 반복적으로 표시하여 사용자를 속이려고 합니다. 이러한 기술을 사용하면 다수의 사용자가 속아서 잘못된 결정을 내리고 스파이웨어 애플리케이션을 설치할 수 있습니다.  
+ 경우에 따라 신뢰할 수 없는 웹 사이트를 설치 하 여 사용자가 시도 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 또는 반복적으로 사용자 취소 하는 경우에 Microsoft ActiveX 설치 대화 상자를 표시 합니다. 이러한 기술을 사용하면 다수의 사용자가 속아서 잘못된 결정을 내리고 스파이웨어 애플리케이션을 설치할 수 있습니다.  
   
  [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]에는 사용자 시작의 개념을 중심으로 이러한 유형의 문제를 완화하는 여러 가지 기능이 포함되어있습니다. [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 라고 하는 동작 전에 링크 또는 페이지 요소에 사용자가 클릭 하는 경우를 검색 *사용자 시작*, 스크립트를 페이지에 의해 트리거되는 비슷한 동작이 처리 합니다. 예를 들어 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 통합을 **팝업 차단** 팝업을 만드는 페이지 전에 단추를 클릭할 경우를 검색 합니다. 이 기능을 통해 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]에서는 사용자가 요청하거나 원하지 않는 팝업을 차단하는 동시에 무해한 팝업을 대부분 허용할 수 있습니다. 차단 된 팝업은 새로운 아래에 트래핑 **알림 표시줄**, 사용자를 수동으로 차단을 무시 하 여 팝업을 볼 수 있습니다.  
   
- 동일한 사용자 시작 논리가에 적용 됩니다 **엽니다**/**저장** 보안 프롬프트. 이전에 설치된 컨트롤의 업그레이드를 나타내지 않는 경우 [!INCLUDE[TLA2#tla_actx](../../../includes/tla2sharptla-actx-md.md)] 설치 대화 상자는 항상 알림 표시줄 아래에 포착됩니다. 이러한 조치가 결합되어 사용자에게 더 안전하고 제어된 사용자 환경을 제공합니다. 사용자가 원하지 않는 소프트웨어나 악성 소프트웨어를 설치하도록 유인하는 사이트로부터 보호되기 때문입니다.  
+ 동일한 사용자 시작 논리가에 적용 됩니다 **엽니다**/**저장** 보안 프롬프트. ActiveX 설치 대화 상자는 이전에 설치 된 컨트롤에서 업그레이드를 나타내지 않는 경우에 항상 알림 표시줄 아래 포착 됩니다. 이러한 조치가 결합되어 사용자에게 더 안전하고 제어된 사용자 환경을 제공합니다. 사용자가 원하지 않는 소프트웨어나 악성 소프트웨어를 설치하도록 유인하는 사이트로부터 보호되기 때문입니다.  
   
  또한 이러한 기능은 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]를 사용하여 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램 다운로드 및 설치를 허용하는 웹 사이트를 검색하는 고객을 보호합니다. 특히, 이는 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]에서 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]를 포함하여 빌드에 사용된 기술에 관계없이 사용자가 악성 응용 프로그램이나 유해한 응용 프로그램을 설치할 가능성을 줄이는 보다 효율적인 사용자 환경을 제공하기 때문입니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]는 [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)]를 통해 인터넷에서 응용 프로그램을 쉽게 다운로드할 수 있게 하여 이러한 보호를 강화합니다. [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]은 인터넷 영역 보안 샌드박스 내에서 실행되므로 매끄럽게 시작할 수 있습니다. 반면, 독립 실행형 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 실행하려면 완전 신뢰가 필요합니다. 이러한 응용 프로그램의 경우 시작 프로세스 중에 [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)]에서 보안 대화 상자를 표시하여 응용 프로그램의 추가 보안 요구 사항 사용을 알립니다. 그러나 사용자가 시작해야 하고, 사용자가 시작한 논리에 의해 제어되며, 취소할 수 있습니다.  
   

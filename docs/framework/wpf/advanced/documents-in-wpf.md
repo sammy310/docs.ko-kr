@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: b83d9c972dbdadb721bae8b7d616c94a0c1c831f
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 020ea101ae38b9be854398a55ddd31e67b9fda35
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67804738"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859661"
 ---
 # <a name="documents-in-wpf"></a>WPF의 문서
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 이전 세대의 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]보다 더 쉽게 액세스하고 읽도록 설계된 고품질 콘텐츠를 만들 수 있는 다양한 문서 기능을 제공합니다. 고급 기능 및 품질 외에도 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 문서 표시, 패키징 및 보안을 위한 통합 서비스도 제공합니다. 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 문서 형식 및 문서 패키징을 소개합니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "67804738"
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>문서 패키징  
- 합니다 <xref:System.IO.Packaging> [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 응용 프로그램 데이터, 문서 콘텐츠 및 간단 하 게 액세스를 이식 가능 하 고 쉽게 배포할 수 있는 단일 컨테이너에 관련 된 리소스를 구성 하는 효율적인 방법을 제공 합니다. ZIP 파일의 한 예로 <xref:System.IO.Packaging.Package> 단일 단위로 여러 개체를 보유할 수 있는 형식입니다. 패키징 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 는 기본 제공 <xref:System.IO.Packaging.ZipPackage> 는 Open Packaging Conventions 표준 XML 및 ZIP 파일 아키텍처를 사용 하 여 사용 하 여 구현 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 패키징 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]를 사용하면 쉽게 패키지를 만들어 개체를 저장하고 액세스할 수 있습니다. 에 저장 된 개체를 <xref:System.IO.Packaging.Package> 라고는 <xref:System.IO.Packaging.PackagePart> ("파트"). 패키지에는 파트의 작성기를 식별하고 패키지의 콘텐츠가 수정되지 않았는지 유효성을 검사하는 데 사용할 수 있는 서명된 디지털 인증서도 포함될 수 있습니다.  패키지도 포함 된 <xref:System.IO.Packaging.PackageRelationship> 패키지에 추가 하거나 기존 파트의 콘텐츠를 실제로 수정 하지 않고도 특정 파트와 연결 된 추가 정보를 허용 하는 기능.  패키지 서비스에서는 [!INCLUDE[TLA#tla_rm](../../../../includes/tlasharptla-rm-md.md)]도 지원합니다.  
+ <xref:System.IO.Packaging> Api 응용 프로그램 데이터, 문서 콘텐츠 및 간단 하 게 액세스를 이식 가능 하 고 쉽게 배포할 수 있는 단일 컨테이너에 관련 된 리소스를 구성 하는 효율적인 방법을 제공 합니다. ZIP 파일의 한 예로 <xref:System.IO.Packaging.Package> 단일 단위로 여러 개체를 보유할 수 있는 형식입니다. 패키징 Api는 기본 제공 <xref:System.IO.Packaging.ZipPackage> 는 Open Packaging Conventions 표준 XML 및 ZIP 파일 아키텍처를 사용 하 여 사용 하 여 구현 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 패키징 Api를 사용 하면 간단한 패키지를 만들고 저장 하 고 그 안에 포함 개체에 액세스 합니다. 에 저장 된 개체를 <xref:System.IO.Packaging.Package> 라고는 <xref:System.IO.Packaging.PackagePart> ("파트"). 패키지에는 파트의 작성기를 식별하고 패키지의 콘텐츠가 수정되지 않았는지 유효성을 검사하는 데 사용할 수 있는 서명된 디지털 인증서도 포함될 수 있습니다.  패키지도 포함 된 <xref:System.IO.Packaging.PackageRelationship> 패키지에 추가 하거나 기존 파트의 콘텐츠를 실제로 수정 하지 않고도 특정 파트와 연결 된 추가 정보를 허용 하는 기능.  패키지 서비스에서는 [!INCLUDE[TLA#tla_rm](../../../../includes/tlasharptla-rm-md.md)]도 지원합니다.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 패키지 아키텍처는 다음과 같은 여러 주요 기술의 기반 역할을 합니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "67804738"
   
  패키징 Api에 기반을 <xref:System.Windows.Xps.Packaging.XpsDocument> 저장용 설계 된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 고정 콘텐츠 문서. <xref:System.Windows.Xps.Packaging.XpsDocument> 에 표시 되는 뷰어에서 열 수 있는 자체 포함 된 문서가 <xref:System.Windows.Controls.DocumentViewer> 컨트롤, 인쇄 스풀으로 라우팅되거나에 직접 출력을 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-호환 되는 프린터.  
   
- 다음 섹션에서 추가 정보를 제공 합니다 <xref:System.IO.Packaging.Package> 및 <xref:System.Windows.Xps.Packaging.XpsDocument> [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 제공 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다.  
+ 다음 섹션에서 추가 정보를 제공 합니다 <xref:System.IO.Packaging.Package> 하 고 <xref:System.Windows.Xps.Packaging.XpsDocument> Api와 함께 제공 되 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
 <a name="packages"></a>   
 ### <a name="package-components"></a>패키지 구성 요소  

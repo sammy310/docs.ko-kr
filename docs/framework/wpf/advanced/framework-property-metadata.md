@@ -5,15 +5,15 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: f0385280cf01502a5b2786541c3d959fca24d239
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 81c1941ffd95afb01dcb6ebda2634832a91cd876
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912456"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859855"
 ---
 # <a name="framework-property-metadata"></a>프레임워크 속성 메타데이터
-프레임워크 속성 메타데이터는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 아키텍처의 WPF 프레임워크 수준에 있는 것으로 간주되는 개체 요소의 속성용으로 보고됩니다. 일반적으로 WPF 프레임워크 수준 지정에서는 렌더링, 데이터 바인딩 및 속성 시스템 미세 조정과 같은 기능이 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프레젠테이션 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 및 실행 파일을 통해 처리됩니다. 이러한 시스템에서 프레임워크 속성 메타데이터를 쿼리하여 특정 요소 속성의 기능별 특성을 결정합니다.  
+프레임워크 속성 메타데이터는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 아키텍처의 WPF 프레임워크 수준에 있는 것으로 간주되는 개체 요소의 속성용으로 보고됩니다. 일반적 WPF 프레임 워크 수준 지정에서는 렌더링, 데이터 바인딩와 같은 해당 기능 및 속성 시스템 미세 조정과에서 처리 되는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프레젠테이션 Api 및 실행 합니다. 이러한 시스템에서 프레임워크 속성 메타데이터를 쿼리하여 특정 요소 속성의 기능별 특성을 결정합니다.  
 
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>필수 구성 요소  
@@ -32,7 +32,7 @@ ms.locfileid: "64912456"
     > [!NOTE]
     >  속성 값 컨텍스트에서 “상속”이라는 용어는 종속성 속성에 특정한 것입니다. 즉, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성 시스템의 WPF 프레임워크 수준 기능때문에 자식 요소가 부모 요소에서 실제 종속성 속성 값을 상속할 수 있습니다. 파생된 유형을 통한 멤버 상속 및 관리된 코드 유형과는 직접적인 관련이 없습니다. 자세한 내용은 [속성 값 상속](property-value-inheritance.md)을 참조하십시오.  
   
-- 보고 데이터 바인딩 특성 (<xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A>, <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>). 기본적으로 프레임워크의 종속성 속성은 단방향 바인딩 동작을 통한 데이터 바인딩을 지원합니다. 시나리오가 전혀 없는 경우 데이터 바인딩을 사용하지 않게 설정할 수 있습니다(유연하고 확장 가능해야 하므로 기본 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]에는 이러한 속성의 예가 많지 않음). 바인딩의 구성 요소 간에 컨트롤의 동작을 함께 연결 하는 속성에 대 한 양방향 기본값을 설정할 수 있습니다 (<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> 예로) 나 사용자에 대 한 일반적인 예상된 시나리오인 경우 양방향 바인딩 (<xref:System.Windows.Controls.TextBox.Text%2A> 예로). 데이터 바인딩 관련 메타데이터를 변경하면 기본값에만 영향을 미칩니다. 바인딩별 변경에서는 해당 기본값을 항상 변경할 수 있습니다. 바인딩 모드와 일반적인 바인딩에 대한 자세한 내용은 [데이터 바인딩 개요](../data/data-binding-overview.md)를 참조하세요.  
+- 보고 데이터 바인딩 특성 (<xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A>, <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>). 기본적으로 프레임워크의 종속성 속성은 단방향 바인딩 동작을 통한 데이터 바인딩을 지원합니다. 전혀 시나리오가 있다면 데이터 바인딩을 사용 하지 않도록 설정 될 수 있습니다 (기본에서 이러한 속성의 많은 예가 없는 이므로 이러한는 유연 하며 확장 가능 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Api). 바인딩의 구성 요소 간에 컨트롤의 동작을 함께 연결 하는 속성에 대 한 양방향 기본값을 설정할 수 있습니다 (<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> 예로) 나 사용자에 대 한 일반적인 예상된 시나리오인 경우 양방향 바인딩 (<xref:System.Windows.Controls.TextBox.Text%2A> 예로). 데이터 바인딩 관련 메타데이터를 변경하면 기본값에만 영향을 미칩니다. 바인딩별 변경에서는 해당 기본값을 항상 변경할 수 있습니다. 바인딩 모드와 일반적인 바인딩에 대한 자세한 내용은 [데이터 바인딩 개요](../data/data-binding-overview.md)를 참조하세요.  
   
 - 속성을 저널링을 지 원하는 서비스 또는 응용 프로그램에서 저널링 해야 할지 여부를 보고 (<xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>). 일반 요소에는 기본적으로 저널링을 사용하지 않지만, 특정 사용자 입력 컨트롤에 대해서는 선택적으로 사용합니다. 이 속성은 저널링의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 구현을 포함하여 저널링 서비스를 통해 읽어야 하며, 일반적으로 탐색 단계 간에 지속되어야 하는 목록의 사용자 선택 항목과 같은 사용자 컨트롤에 설정됩니다. 저널에 대한 자세한 내용은 [탐색 개요](../app-development/navigation-overview.md)를 참조하세요.  
   

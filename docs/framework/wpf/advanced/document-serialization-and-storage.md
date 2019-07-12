@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: a1a3d422ea4d9766e6a9f8dda079c3739be4a626
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: b60b3964ff8e1b1f05b6c0820c63ec06d9ea0f4c
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663674"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859649"
 ---
 # <a name="document-serialization-and-storage"></a>문서 serialization 및 스토리지
 
@@ -23,7 +23,7 @@ Microsoft.NET Framework는 만들고 고품질 문서를 표시 하기 위한 �
 
 원칙적으로 애플리케이션에서 문서를 메모리에서 serialize하고 다시 메모리로 deserialize하는 프로세스는 명확하게 수행됩니다.  애플리케이션에서는 serializer “write” 메서드를 호출하여 문서를 저장하는 한편, deserializer “read” 메서드는 데이터 저장소에 액세스하여 원래 인스턴스를 메모리에 다시 만듭니다.  serialize 및 deserialize 프로세스를 통해 원래 양식으로 문서를 다시 만드는 경우 데이터가 저장되는 특정 형식은 일반적으로 애플리케이션에서 문제가 되지 않습니다.
 
-대부분의 애플리케이션에서는 사용자가 여러 다른 매체 또는 다른 형식으로 문서를 저장할 수 있도록 하는 여러 serialization 옵션을 제공합니다.  예를 들어, 애플리케이션에서 “다른 이름으로 저장” 옵션을 제공하여 문서를 디스크 파일, 데이터베이스 또는 웹 서비스에 저장하도록 지원할 수 있습니다.  마찬가지로 서로 다른 serializer마다 HTML, RTF, XML, XPS 등의 다른 형식 또는 타사 형식으로 문서를 저장할 수 있습니다.  애플리케이션에서는 serialization을 통해 각 특정 serializer의 구현 작업에서 저장소 매체의 세부 정보를 격리하는 인터페이스를 정의합니다.  .NET Framework 저장소 세부 정보를 캡슐화 하는 이점 외에도 <xref:System.Windows.Documents.Serialization> [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 다른 몇 가지 중요 한 기능을 제공 합니다.
+대부분의 애플리케이션에서는 사용자가 여러 다른 매체 또는 다른 형식으로 문서를 저장할 수 있도록 하는 여러 serialization 옵션을 제공합니다.  예를 들어, 애플리케이션에서 “다른 이름으로 저장” 옵션을 제공하여 문서를 디스크 파일, 데이터베이스 또는 웹 서비스에 저장하도록 지원할 수 있습니다.  마찬가지로 서로 다른 serializer마다 HTML, RTF, XML, XPS 등의 다른 형식 또는 타사 형식으로 문서를 저장할 수 있습니다.  애플리케이션에서는 serialization을 통해 각 특정 serializer의 구현 작업에서 저장소 매체의 세부 정보를 격리하는 인터페이스를 정의합니다.  .NET Framework 저장소 세부 정보를 캡슐화 하는 이점 외에도 <xref:System.Windows.Documents.Serialization> Api는 다른 몇 가지 중요 한 기능을 제공 합니다.
 
 ### <a name="features-of-net-framework-30-document-serializers"></a>.NET Framework 3.0 문서 Serializer의 기능
 

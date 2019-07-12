@@ -14,12 +14,12 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-ms.openlocfilehash: 27554d7e0a7e980d240e0609fe0561c2138f0aa1
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 659497543d40c8eda18b55b4d98feac976c5abf5
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664055"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860241"
 ---
 # <a name="custom-dependency-properties"></a>사용자 지정 종속성 속성
 
@@ -87,7 +87,7 @@ ms.locfileid: "67664055"
 
 ### <a name="registering-the-property-with-the-property-system"></a>속성 시스템에 속성 등록
 
-속성이 종속성 속성이 되게 하려면 속성 시스템에서 유지하는 테이블에 해당 속성을 등록한 다음 나중에 속성 시스템 작업의 한정자로 사용되는 고유 식별자를 지정해야 합니다. 이러한 작업은 내부 작업이거나 속성 시스템 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]를 호출하는 자체 코드일 수 있습니다. 속성을 등록 하려면 호출을 <xref:System.Windows.DependencyProperty.Register%2A> 클래스 (클래스 내부 이지만 멤버 정의 외부)의 본문 내에서 메서드. 식별자 필드 여도 제공 됩니다는 <xref:System.Windows.DependencyProperty.Register%2A> 메서드 호출에서 반환 값으로. 이유는 합니다 <xref:System.Windows.DependencyProperty.Register%2A> 호출이 완료 될 다른 멤버 외부에서 정의 되므로이 반환 값을 사용 하 여 할당 하 고 만들기를 `public` `static` `readonly` 형식의 필드 <xref:System.Windows.DependencyProperty> 클래스의 일부로. 이 필드는 종속성 속성의 식별자가 됩니다.
+속성이 종속성 속성이 되게 하려면 속성 시스템에서 유지하는 테이블에 해당 속성을 등록한 다음 나중에 속성 시스템 작업의 한정자로 사용되는 고유 식별자를 지정해야 합니다. 이러한 작업에는 내부 작업 이거나 속성 시스템 Api를 호출 하는 사용자 고유의 코드 수 있습니다. 속성을 등록 하려면 호출을 <xref:System.Windows.DependencyProperty.Register%2A> 클래스 (클래스 내부 이지만 멤버 정의 외부)의 본문 내에서 메서드. 식별자 필드 여도 제공 됩니다는 <xref:System.Windows.DependencyProperty.Register%2A> 메서드 호출에서 반환 값으로. 이유는 합니다 <xref:System.Windows.DependencyProperty.Register%2A> 호출이 완료 될 다른 멤버 외부에서 정의 되므로이 반환 값을 사용 하 여 할당 하 고 만들기를 `public` `static` `readonly` 형식의 필드 <xref:System.Windows.DependencyProperty> 클래스의 일부로. 이 필드는 종속성 속성의 식별자가 됩니다.
 
 [!code-csharp[WPFAquariumSln#RegisterAG](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerag)]
 [!code-vb[WPFAquariumSln#RegisterAG](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerag)]
@@ -174,7 +174,7 @@ ms.locfileid: "67664055"
 
 ## <a name="dependency-property-security-considerations"></a>종속성 속성 보안 고려 사항
 
-종속성 속성은 공용 속성으로 선언해야 합니다. 종속성 속성 식별자 필드는 공용 정적 필드로 선언해야 합니다. 다른 액세스 수준(예: 보호됨)을 선언하려고 시도하더라도 속성 시스템 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]와 함께 식별자를 통해 종속성 속성에 항상 액세스할 수 있습니다. 메타 데이터 보고 또는 값 결정으로 인해도 보호 된 식별자 필드는 잠재적으로 액세스할 수 있습니다 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 의 일부인 속성 시스템에 같은 <xref:System.Windows.LocalValueEnumerator>합니다. 자세한 내용은 [종속성 속성 보안](dependency-property-security.md)을 참조하세요.
+종속성 속성은 공용 속성으로 선언해야 합니다. 종속성 속성 식별자 필드는 공용 정적 필드로 선언해야 합니다. 다른 액세스 수준 (예: 보호 됨)를 선언 하려고 하면 경우에 종속성 속성 시스템 Api와 함께 식별자를 통해 항상 액세스할 수 있습니다. 도 보호 된 식별자 필드는 메타 데이터 보고 또는 값 결정의 일부인 속성 시스템에 같은 Api로 인해 잠재적으로 액세스할 수 있는 <xref:System.Windows.LocalValueEnumerator>합니다. 자세한 내용은 [종속성 속성 보안](dependency-property-security.md)을 참조하세요.
 
 <a name="DPCtor"></a>
 

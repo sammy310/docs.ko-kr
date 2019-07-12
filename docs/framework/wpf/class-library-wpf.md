@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WPF class library [WPF]
 - Windows Presentation Foundation class library [WPF]
 ms.assetid: dcb35927-00ad-4141-a1ab-a7a524dd3f10
-ms.openlocfilehash: 1c806147d1dfb30bfd9fa73102ed4b65c776671a
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: d43b46be2e05561eadcba12c744368db056a3ce5
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489606"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859701"
 ---
 # <a name="class-library-wpf"></a>클래스 라이브러리(WPF)
-다음 링크를 포함 하는 네임 스페이스를 참조 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../includes/tlasharptla-apisharpplural-md.md)]합니다.  
+다음 링크를 포함 하는 네임 스페이스 참조 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] Api.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

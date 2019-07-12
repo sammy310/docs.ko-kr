@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - hybrid control [WPF interoperability]
 ms.assetid: 9e8aa6b6-112c-4579-98d1-c974917df499
-ms.openlocfilehash: 6b8fcfb6b2795b1b41b5292a3d2c61ecd017f173
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b2e0ee85a7edd07e7372b04c3a26a06416fb39d9
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662273"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859875"
 ---
 # <a name="wpf-and-windows-forms-interoperation"></a>WPF 및 Windows Forms 상호 운용성
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]에서는 응용 프로그램 인터페이스를 만들기 위한 두 개의 서로 다른 아키텍처를 제공합니다. <xref:System.Windows.Forms.Integration?displayProperty=nameWithType> 네임 스페이스는 일반 상호 운용성 시나리오를 사용 하도록 설정 하는 클래스를 제공 합니다. 상호 운용성 기능을 구현 하는 두 가지 주요 클래스는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 고 <xref:System.Windows.Forms.Integration.ElementHost>입니다. 이 항목에서는 지원되는 상호 운용성 시나리오와 지원되지 않는 시나리오를 설명합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "64662273"
   
 - [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 마스터 및 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 세부 정보를 사용하여 마스터/세부 정보 양식을 호스팅할 수 있습니다.  
   
-- 하나 이상의 [!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)] 컨트롤을 호스팅할 수 있습니다.  
+- 하나 이상의 ActiveX 컨트롤을 호스팅할 수 있습니다.  
   
 - 하나 이상의 복합 컨트롤을 호스팅할 수 있습니다.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "64662273"
 |보안|모든 상호 운용성 시나리오에는 완전 신뢰가 필요합니다.|부분 신뢰에서는 상호 운용성 시나리오가 허용되지 않습니다.|  
 |액세스 가능성|모든 접근성 시나리오가 지원됩니다. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]와 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤이 모두 포함된 하이브리드 응용 프로그램에 사용될 때 보조 기술 제품이 올바르게 작동합니다.|해당 사항 없음.|  
 |클립보드|모든 클립보드 작업이 정상적으로 작동합니다. 이 작업에는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]와 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤 간에 잘라내기 및 붙여넣기가 포함됩니다.|해당 사항 없음.|  
-|끌어서 놓기 기능|끌어서 놓기 작업이 모두 정상적으로 작동합니다. 이 작업에는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]와 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤 간의 작업이 포함됩니다.|해당 사항 없음.|  
+|끌어서 놓기 기능|끌어서 놓기 작업이 모두 정상적으로 작동합니다. 이 작업에는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]와 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤 간의 작업이 포함됩니다.|이 오류에는 이 작업을 적용할 수 없습니다.|  
   
 ## <a name="see-also"></a>참고자료
 

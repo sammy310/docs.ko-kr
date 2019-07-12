@@ -11,19 +11,19 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - short-circuit evaluation
 ms.assetid: bbc15191-b374-495b-9b8f-7b8c2f4388eb
-ms.openlocfilehash: 3876fd9c32d486b8ebecc9ee2428486a687a1624
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1cb4d372d3ac228f29c6fa45f124796e5dfb6709
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608322"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859893"
 ---
 # <a name="andalso-operator-visual-basic"></a>AndAlso 연산자(Visual Basic)
 두 식에 논리 결합을 단락 (short-circuiting)를 수행 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```vb
 result = expression1 AndAlso expression2  
 ```  
   
@@ -47,7 +47,8 @@ result = expression1 AndAlso expression2
 |`False`|(평가 되지 않음)|`False`|  
   
 ## <a name="data-types"></a>데이터 형식  
- `AndAlso` 연산자에 대해서만 정의 되는 [Boolean 데이터 형식](../../../visual-basic/language-reference/data-types/boolean-data-type.md)합니다. Visual Basic 변환 필요에 따라 각 피연산자 `Boolean` 완전히 작업을 수행 하 고 `Boolean`입니다. Visual Basic에서 변환 하는 숫자 형식으로 결과 할당 하는 경우 `Boolean` 해당 형식에 있습니다. 이 예기치 않은 동작이 발생할 수 있습니다. 예를 들어 `5 AndAlso 12` 발생 `–1` 변환할 때 `Integer`합니다.  
+ `AndAlso` 연산자에 대해서만 정의 되는 [Boolean 데이터 형식](../../../visual-basic/language-reference/data-types/boolean-data-type.md)합니다. Visual Basic 변환 필요에 따라 각 피연산자 `Boolean` 식을 계산 하기 전에 합니다. Visual Basic에서 변환 하는 숫자 형식으로 결과 할당 하는 경우 `Boolean` 해당 형식에는 `False` 됩니다 `0` 하 고 `True` 됩니다 `-1`합니다.
+자세한 내용은 참조 하세요. [부울 형식 변환](../data-types/boolean-data-type.md#type-conversions)
   
 ## <a name="overloading"></a>오버로딩  
  [및 연산자](../../../visual-basic/language-reference/operators/and-operator.md) 하며 [IsFalse 연산자](../../../visual-basic/language-reference/operators/isfalse-operator.md) 일 수 있습니다 *오버 로드 된*, 클래스 또는 구조체 수 할 해당 동작의 형식에 클래스 또는 구조입니다. 오버 로드는 `And` 하 고 `IsFalse` 연산자의 동작에 영향을 줍니다는 `AndAlso` 연산자입니다. 코드를 사용 하는 경우 `AndAlso` 클래스 또는 구조체에 오버 로드에서 `And` 및 `IsFalse`, 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  

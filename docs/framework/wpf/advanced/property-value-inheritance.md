@@ -6,12 +6,12 @@ helpviewer_keywords:
 - value inheritance [WPF]
 - properties [WPF], value inheritance
 ms.assetid: d7c338f9-f2bf-48ed-832c-7be58ac390e4
-ms.openlocfilehash: 48543d2cfc11fc33dff6239cdfd7bfcd946e986a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c5547955a1d5d20938e3896406631da0fae0c5d
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981918"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860042"
 ---
 # <a name="property-value-inheritance"></a>속성 값 상속
 속성 값 상속은 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 속성 시스템의 기능입니다. 속성 값 상속을 통해 요소 트리의 자식 요소가 부모 요소에서 특정 속성 값을 얻어 가장 근접한 부모 요소의 아무 곳에서나 설정되었을 때 해당 값을 상속합니다. 부모 요소는 속성 값 상속을 통해 값을 얻었을 수 있으므로 시스템이 완전히 페이지 루트로 되돌아갈 수 있습니다. 속성 값 상속은 기본 속성 시스템 동작이 아닙니다. 속성이 자식 요소에서 속성 값 상속을 시작하게 하려면 특정 메타데이터 설정을 사용하여 속성을 설정해야 합니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "61981918"
   
 <a name="Practical_Applications_of_Property_Value_Inheritance"></a>   
 ## <a name="practical-applications-of-property-value-inheritance"></a>속성 값 상속의 실제 애플리케이션  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]에는 속성 상속을 가능하게 하는 여러 속성이 포함됩니다. 일반적으로 이러한 속성은 페이지당 한 번만 속성을 설정하는 것이 적절하지만 해당 속성이 기본 요소 클래스 중 하나의 멤버이기도 하므로 대부분의 자식 요소에도 존재하는 속성을 포함합니다. 예를 들어를 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 속성 컨트롤 방향을 이동 콘텐츠 표시 및 페이지에 정렬 합니다. 일반적으로 모든 자식 요소에서 텍스트 흐름 개념을 일관성 있게 처리하려고 합니다. 어떤 이유로 사용자 또는 환경 작업에 의해 요소 트리의 몇몇 수준에서 다시 설정된 흐름 방향은 일반적으로 전체적으로 다시 설정되어야 합니다. 경우는 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 상속 하려고 속성, 값을 설정 하거나 응용 프로그램의 각 페이지의 표시 요구를 포함 하는 요소 트리의 수준에서 한 번 재설정만 필요 합니다. 초기 기본값도 이 방식으로 상속됩니다. 속성 값 상속 모델에서는 드물지만 다양한 흐름 방향을 의도적으로 포함하는 경우 개별 요소가 값을 다시 설정할 수 있습니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Api에 사용 하도록 설정 하는 속성 상속을 포함 하는 여러 속성이 포함 됩니다. 일반적으로 이러한 속성은 페이지당 한 번만 속성을 설정하는 것이 적절하지만 해당 속성이 기본 요소 클래스 중 하나의 멤버이기도 하므로 대부분의 자식 요소에도 존재하는 속성을 포함합니다. 예를 들어를 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 속성 컨트롤 방향을 이동 콘텐츠 표시 및 페이지에 정렬 합니다. 일반적으로 모든 자식 요소에서 텍스트 흐름 개념을 일관성 있게 처리하려고 합니다. 어떤 이유로 사용자 또는 환경 작업에 의해 요소 트리의 몇몇 수준에서 다시 설정된 흐름 방향은 일반적으로 전체적으로 다시 설정되어야 합니다. 경우는 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 상속 하려고 속성, 값을 설정 하거나 응용 프로그램의 각 페이지의 표시 요구를 포함 하는 요소 트리의 수준에서 한 번 재설정만 필요 합니다. 초기 기본값도 이 방식으로 상속됩니다. 속성 값 상속 모델에서는 드물지만 다양한 흐름 방향을 의도적으로 포함하는 경우 개별 요소가 값을 다시 설정할 수 있습니다.  
   
 <a name="Making_a_Custom_Property_Inheritable"></a>   
 ## <a name="making-a-custom-property-inheritable"></a>사용자 지정 속성을 상속 가능으로 설정  

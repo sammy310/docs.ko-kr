@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 374ab546cb0ba7a4b1fd789b13aca0158f22f686
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 6bccff6bf3bb061a430a9105d99f2fee3511c7fd
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662897"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859897"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 전역화 및 지역화 개요
 
@@ -82,13 +82,13 @@ ms.locfileid: "67662897"
 
 개발 하는 경우는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 지역화를 위한 빌드 프로세스는 다음과 같습니다.
 
-- 개발자가 만들고 전역화 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다. 프로젝트 파일에서 개발자 설정 `<UICulture>en-US</UICulture>` 응용 프로그램을 컴파일할 때 있도록 언어 중립적 주 어셈블리가 생성 됩니다. 이 어셈블리에는 지역화 가능한 모든 리소스가 포함된 위성 .resources.dll 파일이 있습니다. 필요에 따라 있습니다 수 소스 언어를 유지할 주 어셈블리에 있으므로 지역화 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 주 어셈블리에서의 추출을 지원 합니다.
+- 개발자가 만들고 전역화 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다. 프로젝트 파일에서 개발자 설정 `<UICulture>en-US</UICulture>` 응용 프로그램을 컴파일할 때 있도록 언어 중립적 주 어셈블리가 생성 됩니다. 이 어셈블리에는 지역화 가능한 모든 리소스가 포함된 위성 .resources.dll 파일이 있습니다. 필요에 따라 지역화 Api에는 주 어셈블리에서의 추출을 지원 하므로 주 어셈블리에 소스 언어를 유지할 수 있습니다.
 
 - 파일을 빌드, 컴파일될 때는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] XAML의 BAML 양식으로 변환 됩니다. 문화권에 중립적인 `MyDialog.exe` 와 문화권에 종속적인 (영어) `MyDialog.resources.dll` 파일이 영어권 고객에 게 릴리스됩니다.
 
 ### <a name="localization-workflow"></a>지역화 워크플로
 
-지역화 프로세스 시작 되지 않은 후 `MyDialog.resources.dll` 파일이 만들어집니다. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 요소 및 속성의 원래 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 를 사용 하 여 키-값 쌍으로 BAML 양식의 XAML에서 추출 된 합니다 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 에서 <xref:System.Windows.Markup.Localizer>합니다. 지역화 담당자는 키/값 쌍을 사용하여 애플리케이션을 지역화합니다. 지역화가 완료된 후 새 값에서 새 .resource.dll을 생성할 수 있습니다.
+지역화 프로세스 시작 되지 않은 후 `MyDialog.resources.dll` 파일이 만들어집니다. 합니다 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 요소 및 속성의 원래 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 에서 Api를 사용 하 여 키-값 쌍으로 BAML 양식의 XAML에서 추출 된 <xref:System.Windows.Markup.Localizer>합니다. 지역화 담당자는 키/값 쌍을 사용하여 애플리케이션을 지역화합니다. 지역화가 완료된 후 새 값에서 새 .resource.dll을 생성할 수 있습니다.
 
 키-값 쌍의 키는 `x:Uid` 원래에서 개발자가 배치 되는 값 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다. 이러한 `x:Uid` 값을 추적 하 고 지역화 도중 개발자와 지역화 담당자 간에 발생 하는 변경 내용을 병합 하는 API를 사용 하도록 설정 합니다. 예를 들어 개발자가 변경 된 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 지역화 담당자가 지역화를 시작한 후 손실 되는 최소한의 변환 작업을 이미 완료 된 지역화 작업과 개발 변경 내용을 병합할 수 있습니다.
 
@@ -130,9 +130,9 @@ ms.locfileid: "67662897"
 
 `<Grid x:Uid="Grid_1">`
 
-<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 속성에 대 한 순서에 필요한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 지역화 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 올바르게 작동 합니다.
+<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 속성에 대 한 순서에 필요한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 지역화 Api 제대로 작동 합니다.
 
-사용할 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 지역화 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 개발 및 지역화 간의 변경 내용을 추적 합니다 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]합니다. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 속성을 사용 하면 최신 버전의 병합 된 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 의 이전 지역화와는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]합니다. 추가 하는 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 실행 하 여 속성 `msbuild -t:updateuid RunDialog.csproj` 명령 셸에서 합니다. 추가 하는 권장 방법은 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 속성 이므로 수동으로 추가한 일반적으로 시간이 많이 걸리고 정확도 낮아집니다. 하는지 검사할 수 있습니다 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 실행 하 여 속성이 올바르게 설정 되어 `msbuild -t:checkuid RunDialog.csproj`입니다.
+사용할 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 지역화 Api 개발 및 지역화 간의 변경 내용을 추적 합니다 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]합니다. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 속성을 사용 하면 최신 버전의 병합 된 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 의 이전 지역화와는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]합니다. 추가 하는 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 실행 하 여 속성 `msbuild -t:updateuid RunDialog.csproj` 명령 셸에서 합니다. 추가 하는 권장 방법은 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 속성 이므로 수동으로 추가한 일반적으로 시간이 많이 걸리고 정확도 낮아집니다. 하는지 검사할 수 있습니다 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 실행 하 여 속성이 올바르게 설정 되어 `msbuild -t:checkuid RunDialog.csproj`입니다.
 
 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 를 사용 하 여 구조화 된 합니다 <xref:System.Windows.Controls.Grid> 자동 레이아웃의 이점을 활용 하는 유용한 컨트롤인 제어에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다. 대화 상자는 세 개의 행과 다섯 개의 열로 나뉩니다. 행 및 열 정의 크기가 고정; 따라서는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 각 셀에 배치 하는 요소 수 증가 맞게 지역화 하는 동안 크기가 감소 합니다.
 

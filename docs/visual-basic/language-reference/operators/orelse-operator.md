@@ -11,19 +11,19 @@ helpviewer_keywords:
 - short-circuit evaluation
 - OrElse operator [Visual Basic]
 ms.assetid: 253803d8-05b0-47d7-b213-abd222847779
-ms.openlocfilehash: 28d1481b71979936bb16a2ecfb1140d85a674ef7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 02be78c8f2b7529f1fb0e46e9fe610a3c66b0652
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054993"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860139"
 ---
 # <a name="orelse-operator-visual-basic"></a>OrElse 연산자(Visual Basic)
 두 식에 포함 논리합을 단락 (short-circuiting)를 수행 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```vb
 result = expression1 OrElse expression2  
 ```  
   
@@ -49,7 +49,8 @@ result = expression1 OrElse expression2
 |`False`|`False`|`False`|  
   
 ## <a name="data-types"></a>데이터 형식  
- `OrElse` 연산자에 대해서만 정의 되는 [Boolean 데이터 형식](../../../visual-basic/language-reference/data-types/boolean-data-type.md)합니다. Visual Basic 변환 필요에 따라 각 피연산자 `Boolean` 완전히 작업을 수행 하 고 `Boolean`입니다. Visual Basic에서 변환 하는 숫자 형식으로 결과 할당 하는 경우 `Boolean` 해당 형식에 있습니다. 이 예기치 않은 동작이 발생할 수 있습니다. 예를 들어 `5 OrElse 12` 발생 `–1` 변환할 때 `Integer`합니다.  
+ `OrElse` 연산자에 대해서만 정의 되는 [Boolean 데이터 형식](../../../visual-basic/language-reference/data-types/boolean-data-type.md)합니다. Visual Basic 변환 필요에 따라 각 피연산자 `Boolean` 식을 계산 하기 전에 합니다. Visual Basic에서 변환 하는 숫자 형식으로 결과 할당 하는 경우 `Boolean` 해당 형식에는 `False` 됩니다 `0` 하 고 `True` 됩니다 `-1`합니다.
+자세한 내용은 참조 하세요. [부울 형식 변환](../data-types/boolean-data-type.md#type-conversions)
   
 ## <a name="overloading"></a>오버로딩  
  [또는 연산자](../../../visual-basic/language-reference/operators/or-operator.md) 하며 [IsTrue 연산자](../../../visual-basic/language-reference/operators/istrue-operator.md) 수 *오버 로드 된*, 클래스 또는 구조체 수 할 해당 동작에 해당 클래스의 형식 또는 구조입니다. 오버 로드는 `Or` 하 고 `IsTrue` 연산자의 동작에 영향을 줍니다는 `OrElse` 연산자입니다. 코드를 사용 하는 경우 `OrElse` 클래스 또는 구조체에 오버 로드에서 `Or` 및 `IsTrue`, 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  

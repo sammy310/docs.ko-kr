@@ -5,18 +5,18 @@ helpviewer_keywords:
 - dependency properties [WPF], read-only
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
-ms.openlocfilehash: 327897d50bd23a739d015a4151459d9d4a6fc1a0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e74f7c2790a73211bcc8e6f13dcf2dfdc02e678b
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611803"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859973"
 ---
 # <a name="read-only-dependency-properties"></a>읽기 전용 종속성 속성
 이 항목에서는 기존 읽기 전용 종속성 속성과 사용자 지정 읽기 전용 종속성 속성을 만드는 시나리오 및 방법을 포함하여 읽기 전용 종속성 속성을 설명합니다.  
 
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 항목에서는 종속성 속성을 구현하는 기본 시나리오와 메타데이터가 사용자 지정 종속성 속성에 적용되는 방법을 이해하고 있다고 가정합니다. 컨텍스트는 [사용자 지정 종속성 속성](custom-dependency-properties.md) 및 [종속성 속성 메타데이터](dependency-property-metadata.md)를 참조하세요.  
   
 <a name="existing"></a>   
@@ -37,7 +37,7 @@ ms.locfileid: "64611803"
   
 - 읽기 전용 등록에서 반환 되는 개체 <xref:System.Windows.DependencyPropertyKey> 대신 <xref:System.Windows.DependencyProperty>합니다. 이 필드는 멤버로 저장해야 하지만 일반적으로 형식의 public 멤버로 설정하지 않습니다.  
   
- 지원하는 private 필드 또는 값이 무엇이든 관계없이 읽기 전용 종속성 속성은 결정한 논리가 무엇이든 이를 사용하여 충분히 쓰기 가능합니다. 하지만 처음에 또는 런타임 논리의 일부로 속성을 설정하는 가장 직관적인 방법은 속성 시스템을 우회하고 private 지원 필드를 직접 설정하는 것이 아니라 속성 시스템의 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]를 사용하는 것입니다. 특히는의 시그니처 <xref:System.Windows.DependencyObject.SetValue%2A> 형식의 매개 변수를 받아들이는 <xref:System.Windows.DependencyPropertyKey>합니다. 에 대 한 액세스를 설정 하려고 하는 방법에 영향이 방법 및 위치이 값을 설정한이 프로그래밍 방식으로 응용 프로그램 논리 내에서 <xref:System.Windows.DependencyPropertyKey> 종속성 속성을 처음 등록할 때 만들어집니다. private로 설정할 수 있는 클래스 내에서 이 논리를 모두 처리할 경우 또는 어셈블리의 다른 부분에서 클래스를 설정해야 하는 경우 이 클래스를 internal로 설정할 수 있습니다. 호출 하는 한 가지 방법은 <xref:System.Windows.DependencyObject.SetValue%2A> 저장된 된 속성 값을 변경 해야 하는 클래스 인스턴스에 알리는 관련 이벤트의 클래스 이벤트 처리기 내에서. 쌍을 이루는 사용 하 여 종속성 속성을 함께 연결 하는 또 다른 방법은 <xref:System.Windows.PropertyChangedCallback> 고 <xref:System.Windows.CoerceValueCallback> 등록 하는 동안 이러한 속성의 메타 데이터의 일부로 콜백 합니다.  
+ 지원하는 private 필드 또는 값이 무엇이든 관계없이 읽기 전용 종속성 속성은 결정한 논리가 무엇이든 이를 사용하여 충분히 쓰기 가능합니다. 그러나 처음에 또는 런타임 논리의 일부로 속성을 설정 하는 가장 간단한 방법은 속성 시스템의 Api를 대신 속성 시스템을 무시 하 고 private 지원 필드를 직접 설정 사용 하는 것입니다. 특히는의 시그니처 <xref:System.Windows.DependencyObject.SetValue%2A> 형식의 매개 변수를 받아들이는 <xref:System.Windows.DependencyPropertyKey>합니다. 에 대 한 액세스를 설정 하려고 하는 방법에 영향이 방법 및 위치이 값을 설정한이 프로그래밍 방식으로 응용 프로그램 논리 내에서 <xref:System.Windows.DependencyPropertyKey> 종속성 속성을 처음 등록할 때 만들어집니다. private로 설정할 수 있는 클래스 내에서 이 논리를 모두 처리할 경우 또는 어셈블리의 다른 부분에서 클래스를 설정해야 하는 경우 이 클래스를 internal로 설정할 수 있습니다. 호출 하는 한 가지 방법은 <xref:System.Windows.DependencyObject.SetValue%2A> 저장된 된 속성 값을 변경 해야 하는 클래스 인스턴스에 알리는 관련 이벤트의 클래스 이벤트 처리기 내에서. 쌍을 이루는 사용 하 여 종속성 속성을 함께 연결 하는 또 다른 방법은 <xref:System.Windows.PropertyChangedCallback> 고 <xref:System.Windows.CoerceValueCallback> 등록 하는 동안 이러한 속성의 메타 데이터의 일부로 콜백 합니다.  
   
  때문에 <xref:System.Windows.DependencyPropertyKey> 은 개인 프로필이 며 전파 되지 않습니다 코드 외부에서 속성 시스템에서 읽기 전용 종속성 속성에는 더 읽기-쓰기 종속성 속성 보다 보안을 설정 합니다. 읽기-쓰기 종속성 속성의 경우 식별 필드는 명시적 또는 암시적으로 public이므로 속성을 광범위하게 설정할 수 있습니다. 자세한 내용은 [종속성 속성 보안](dependency-property-security.md)을 참조하세요.  
   

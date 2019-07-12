@@ -6,12 +6,12 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: f9b507c874dfe0ab3feca19e7fcf79df5af93e10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 14ab9b5b36eee607679ee95423c2af912ed02310
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775000"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860010"
 ---
 # <a name="trees-in-wpf"></a>WPF의 트리
 대부분의 기술에서 요소와 구성 요소는 트리 구조로 구성됩니다. 이 트리 구조에서 개발자는 트리의 개체 노드를 직접 조작하여 애플리케이션의 동작이나 렌더링에 영향을 줍니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서도 여러 가지 트리 구조 메타포를 사용하여 프로그램 요소 간의 관계를 정의합니다. 대부분 경우 WPF 개발자는 개념적으로 개체 트리 메타포를 고려하면서 코드로 애플리케이션을 만들거나 XAML로 애플리케이션의 일부를 정의할 수 있지만 XML DOM에서 사용할 수 있는 몇 가지 일반적인 개체 트리 조작 API 대신 특정 API를 호출하거나 특정 태그를 사용하여 이 작업을 수행합니다. WPF 트리 메타포 보기를 제공 하는 두 개의 도우미 클래스를 노출 <xref:System.Windows.LogicalTreeHelper> 고 <xref:System.Windows.Media.VisualTreeHelper>입니다. 또한 WPF 설명서에서는 시각적 트리와 논리 트리라는 용어를 사용하는데 이러한 동일한 트리는 특정 주요 WPF 기능의 동작을 이해하는 데 유용하기 때문입니다. 이 항목에서는 시각적 트리와 논리 트리가 나타내는 항목 정의 전체 개체 트리 개념과 이러한 트리 관계에 대해 설명 하 고 소개 <xref:System.Windows.LogicalTreeHelper> 고 <xref:System.Windows.Media.VisualTreeHelper>s입니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "61775000"
   
 <a name="override_logical_tree"></a>   
 ### <a name="overriding-the-logical-tree"></a>논리 트리 재정의  
- 고급 컨트롤 작성자는 일반적인 개체 또는 콘텐츠 모델이 논리 트리 내에서 개체를 추가하거나 제거하는 방법을 정의하는 여러 가지 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]를 재정의하여 논리 트리를 재정의할 수 있습니다. 논리 트리를 재정의하는 방법에 대한 예제는 [논리 트리 재정의](how-to-override-the-logical-tree.md)를 참조하세요.  
+ 고급 컨트롤 작성자는 일반적인 개체 또는 콘텐츠 모델을 추가 하 또는 논리 트리 내에서 개체를 제거 하는 방법을 정의 하는 여러 가지 Api를 재정의 하 여 논리 트리를 재정의할 수 있습니다. 논리 트리를 재정의하는 방법에 대한 예제는 [논리 트리 재정의](how-to-override-the-logical-tree.md)를 참조하세요.  
   
 <a name="pvi"></a>   
 ### <a name="property-value-inheritance"></a>속성 값 상속  

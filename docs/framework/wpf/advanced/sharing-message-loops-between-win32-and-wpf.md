@@ -7,12 +7,12 @@ helpviewer_keywords:
 - sharing message loops [WPF]
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-ms.openlocfilehash: d2fe63ed4bdefc91e4847af799747219bd7b4a76
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 31efc6e514682502e91487565869285dad22cab0
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611722"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860018"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Win32와 WPF 간에 메시지 루프 공유
 이 항목에서는 상호 운용성을 위한 메시지 루프를 구현 하는 방법을 설명 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], 기존를 사용 하 여 메시지에 대 한 노출을 루프 <xref:System.Windows.Threading.Dispatcher> 또는에 별도 메시지 루프를 생성 하 여를 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 측의 상호 운용 코드입니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "64611722"
 ## <a name="componentdispatcher-and-the-message-loop"></a>ComponentDispatcher 및 메시지 루프  
  상호 운용성 및 키보드 이벤트 지원에 대 한 일반적인 시나리오를 구현 하는 것 <xref:System.Windows.Interop.IKeyboardInputSink>, 또는 이미 구현 하는 클래스에서 서브클래싱하 <xref:System.Windows.Interop.IKeyboardInputSink>와 같은 <xref:System.Windows.Interop.HwndSource> 또는 <xref:System.Windows.Interop.HwndHost>합니다. 그러나 키보드 싱크를 지 원하는 상호 운용 경계에 걸쳐 메시지를 주고받을 때 해야 하는 모든 가능한 메시지 루프 요구를 처리 하지 않습니다. 응용 프로그램 메시지 루프 아키텍처를 공식화 하는 데 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 제공 된 <xref:System.Windows.Interop.ComponentDispatcher> 수행 하는 메시지 루프에 대 한 간단한 프로토콜을 정의 하는 클래스입니다.  
   
- <xref:System.Windows.Interop.ComponentDispatcher> 여러 멤버를 노출 하는 정적 클래스입니다. 각 메서드의 범위는 호출 스레드를 암시적으로 연결 됩니다. 메시지 루프를 그 중 일부를 호출 해야 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] (다음 섹션에 정의 된)으로 중요 한 시점입니다.  
+ <xref:System.Windows.Interop.ComponentDispatcher> 여러 멤버를 노출 하는 정적 클래스입니다. 각 메서드의 범위는 호출 스레드를 암시적으로 연결 됩니다. 메시지 루프를 (다음 섹션에 정의 됨)으로 중요 한 시간에 해당 Api의 일부를 호출 해야 합니다.  
   
  <xref:System.Windows.Interop.ComponentDispatcher> 다른 구성 요소 (예: 키보드 싱크)에 대 한 수신 대기할 수 있는 이벤트를 제공 합니다. 합니다 <xref:System.Windows.Threading.Dispatcher> 적절 한 호출을 클래스 <xref:System.Windows.Interop.ComponentDispatcher> 메서드는 적절 한 순서로 합니다. 코드는 호출에 대 한 고유한 메시지 루프를 구현 하는 경우 <xref:System.Windows.Interop.ComponentDispatcher> 비슷한 방식으로 메서드.  
   

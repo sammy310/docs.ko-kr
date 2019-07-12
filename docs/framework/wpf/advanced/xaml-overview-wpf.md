@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: e0d277eb039c1fb1668f292d83ab9e7dbe4be70e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a067be444624ecffd8ab150f20740814dd9ee341
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762330"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859961"
 ---
 # <a name="xaml-overview-wpf"></a>XAML 개요 (WPF)
 이 항목에서는 XAML 언어의 기능을 설명하고 XAML을 사용하여 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 애플리케이션을 작성하는 방법을 보여 줍니다. 이 항목에서는 특히 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 구현된 XAML에 대해 자세히 설명합니다. XAML 자체는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]보다 큰 언어 개념입니다.  
@@ -301,7 +301,7 @@ ms.locfileid: "67762330"
   
 <a name="base_classes_and_xaml"></a>   
 ## <a name="base-types-and-xaml"></a>기본 형식 및 XAML  
- 내부 WPF XAML 및 해당 XAML 네임스페이스는 XAML의 태그 요소이자 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체에 해당하는 형식의 컬렉션입니다. 하지만 모든 클래스를 요소에 매핑할 수 있는 것은 아닙니다. 와 같은 추상 클래스를 <xref:System.Windows.Controls.Primitives.ButtonBase>, 및 특정 비추상 기본 클래스에서 상속 되는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체 모델입니다. 각각의 구체적인 XAML 요소는 계층 구조의 일부 기본 클래스에서 멤버를 상속하기 때문에 추상 클래스를 포함한 기본 클래스는 여전히 XAML 개발에 있어서 중요합니다. 이러한 멤버에는 대개 요소에서 특성으로 설정할 수 있는 속성 또는 처리될 수 있는 이벤트가 포함됩니다. <xref:System.Windows.FrameworkElement> 구체적 기본 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 클래스의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] WPF 프레임 워크 수준입니다. 디자인할 때 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], 다양 한 도형, 패널, 데코레이터를 사용할지 또는 모든 컨트롤 클래스에서 파생 <xref:System.Windows.FrameworkElement>합니다. 관련된 기본 클래스인 <xref:System.Windows.FrameworkContentElement>, 유동 레이아웃 표현에 잘 작동 하는 문서 지향 요소를 지원 사용 하 여 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 의도적으로 미러링 하는 합니다 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 에서 <xref:System.Windows.FrameworkElement>합니다. 요소 수준 및 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체 모델에서 특성의 조합은 특정 요소 및 해당 기본 형식에 관계없이 대부분의 구체적 XAML 요소에 설정할 수 있는 공통 속성 집합을 제공합니다.  
+ 내부 WPF XAML 및 해당 XAML 네임스페이스는 XAML의 태그 요소이자 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체에 해당하는 형식의 컬렉션입니다. 하지만 모든 클래스를 요소에 매핑할 수 있는 것은 아닙니다. 와 같은 추상 클래스를 <xref:System.Windows.Controls.Primitives.ButtonBase>, 및 특정 비추상 기본 클래스에서 상속 되는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체 모델입니다. 각각의 구체적인 XAML 요소는 계층 구조의 일부 기본 클래스에서 멤버를 상속하기 때문에 추상 클래스를 포함한 기본 클래스는 여전히 XAML 개발에 있어서 중요합니다. 이러한 멤버에는 대개 요소에서 특성으로 설정할 수 있는 속성 또는 처리될 수 있는 이벤트가 포함됩니다. <xref:System.Windows.FrameworkElement> 구체적 기본 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 클래스의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] WPF 프레임 워크 수준입니다. 디자인할 때 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], 다양 한 도형, 패널, 데코레이터를 사용할지 또는 모든 컨트롤 클래스에서 파생 <xref:System.Windows.FrameworkElement>합니다. 관련된 기본 클래스인 <xref:System.Windows.FrameworkContentElement>, 의도적으로 Api를 미러링 하는 Api를 사용 하 여, 유동 레이아웃 표현에 잘 작동 하는 문서 지향적 요소를 지 원하는 <xref:System.Windows.FrameworkElement>합니다. 요소 수준 및 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체 모델에서 특성의 조합은 특정 요소 및 해당 기본 형식에 관계없이 대부분의 구체적 XAML 요소에 설정할 수 있는 공통 속성 집합을 제공합니다.  
   
 <a name="xaml_security"></a>   
 ## <a name="xaml-security"></a>XAML 보안  

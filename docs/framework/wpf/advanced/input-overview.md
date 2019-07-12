@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 47d892db8418b44fffeec870e56b49d5f986b563
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 5835cfb633451025ed32c2a26228e33a1b24473e
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610474"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67857060"
 ---
 # <a name="input-overview"></a>입력 개요
 <a name="introduction"></a> 합니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 하위 시스템은 강력한 제공 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] 다양 한 장치에서에서 입력을 가져오는, 마우스, 키보드, 터치 및 스타일러스를 포함 합니다. 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]가 제공하는 서비스에 대해 설명하고 입력 시스템의 아키텍처를 살펴봅니다.
@@ -58,7 +58,7 @@ ms.locfileid: "67610474"
  합니다 <xref:System.Windows.Input.Mouse> 고 <xref:System.Windows.Input.Keyboard> 클래스는이 개요 항목에서 자세히 설명 되어 있습니다.
 
 ### <a name="stylus-input"></a>스타일러스 입력
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에 대 한 지원을 통합 합니다 <xref:System.Windows.Input.Stylus>합니다.  합니다 <xref:System.Windows.Input.Stylus> 에서 인기 있는 펜 입력을 [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]입니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 API에서 마우스를 사용 하 여 마우스 스타일러스 처리할 수 있지만 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 키보드 및 마우스와 비슷한 모델을 사용 하는 스타일러스 장치 추상화도 노출 합니다.  스타일러스와 관련된 모든 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]에는 “Stylus”라는 단어가 포함됩니다.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에 대 한 지원을 통합 합니다 <xref:System.Windows.Input.Stylus>합니다.  합니다 <xref:System.Windows.Input.Stylus> 에서 인기 있는 펜 입력을 [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]입니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 API에서 마우스를 사용 하 여 마우스 스타일러스 처리할 수 있지만 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 키보드 및 마우스와 비슷한 모델을 사용 하는 스타일러스 장치 추상화도 노출 합니다.  스타일러스와 관련 된 모든 Api는 "Stylus" 라는 단어를 포함 합니다.
 
  스타일러스는 마우스처럼 동작할 수 있으므로 마우스 입력만 지원하는 애플리케이션도 약간의 스타일러스 지원을 자동으로 받을 수 있습니다. 이러한 방식으로 스타일러스를 사용하는 경우 애플리케이션은 알맞은 스타일러스 이벤트를 처리한 다음 해당 마우스 이벤트를 처리할 수 있게 됩니다. 뿐만 아니라 스타일러스 디바이스 추상화를 통해 잉크 입력과 같은 높은 수준의 서비스도 사용할 수 있습니다.  잉크 입력에 대한 자세한 내용은 [잉크 시작](getting-started-with-ink.md)을 참조하세요.
 
@@ -354,7 +354,7 @@ ms.locfileid: "67610474"
 
 <a name="mouse_capture"></a>
 ## <a name="mouse-capture"></a>마우스 캡처
- 마우스 디바이스에는 마우스 캡처라고 하는 모달 특성이 있습니다. 마우스 캡처는 끌어서 놓기 작업이 시작될 때 전환되는 입력 상태를 유지함으로써 마우스 포인터의 명목상 화면 위치와 관련된 다른 작업이 발생할 필요가 없도록 하기 위해 사용됩니다. 마우스를 끄는 동안 끌어서 놓기 작업을 중단하지 않고는 클릭할 수 없으므로 끌기 원점에서 마우스 캡처를 보유하는 동안에는 대부분의 마우스 이동 동작이 적절하지 않게 됩니다. 입력 시스템은 마우스 캡처 상태를 확인할 수 있는 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]와 특정 요소에 마우스 캡처를 적용하거나 마우스 캡처 상태를 지울 수 있는 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]를 제공합니다. 끌어서 놓기 작업에 대한 자세한 내용은 [끌어서 놓기 개요](drag-and-drop-overview.md)를 참조하세요.
+ 마우스 디바이스에는 마우스 캡처라고 하는 모달 특성이 있습니다. 마우스 캡처는 끌어서 놓기 작업이 시작될 때 전환되는 입력 상태를 유지함으로써 마우스 포인터의 명목상 화면 위치와 관련된 다른 작업이 발생할 필요가 없도록 하기 위해 사용됩니다. 마우스를 끄는 동안 끌어서 놓기 작업을 중단하지 않고는 클릭할 수 없으므로 끌기 원점에서 마우스 캡처를 보유하는 동안에는 대부분의 마우스 이동 동작이 적절하지 않게 됩니다. 입력된 시스템에서 특정 요소에 마우스 캡처를 강제 하거나 마우스 캡처 상태를 지울 수 있는 Api 뿐만 아니라 마우스 캡처 상태를 확인할 수 있는 Api를 노출 합니다. 끌어서 놓기 작업에 대한 자세한 내용은 [끌어서 놓기 개요](drag-and-drop-overview.md)를 참조하세요.
 
 <a name="commands"></a>
 ## <a name="commands"></a>명령
@@ -395,4 +395,4 @@ ms.locfileid: "67610474"
 - [명령 개요](commanding-overview.md)
 - [라우트된 이벤트 개요](routed-events-overview.md)
 - [기본 요소 개요](base-elements-overview.md)
-- [속성](properties-wpf.md)
+- [Properties](properties-wpf.md)

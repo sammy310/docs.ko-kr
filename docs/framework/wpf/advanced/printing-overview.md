@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 2090c58369ed3c7bda5df1342291001d9550d48d
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: acfc252708bf8be7abacb1adc2968122501315a0
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610464"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860207"
 ---
 # <a name="printing-overview"></a>인쇄 개요
 Microsoft.NET Framework를 사용 하 여 Windows Presentation Foundation (WPF)를 사용 하 여 응용 프로그램 개발자는 새로운 풍부한 인쇄 및 인쇄 시스템 관리 Api. [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]에서는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램을 만드는 개발자와 비관리 코드를 사용하는 개발자도 이러한 인쇄 시스템 향상 기능을 일부 사용할 수 있습니다. 이 새로운 기능의 핵심은 새 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 파일 형식과 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 인쇄 경로입니다.  
@@ -75,7 +75,7 @@ Microsoft.NET Framework를 사용 하 여 Windows Presentation Foundation (WPF)�
  합니다 <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> 컨트롤에 대 한 단일 진입점을 제공 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], 구성 및 XPS 작업을 제출 합니다. 컨트롤을 인스턴스화하고 사용하는 방법에 대한 자세한 내용은 [인쇄 대화 상자 호출](how-to-invoke-a-print-dialog.md)을 참조하세요.  
   
 ### <a name="advanced-xps-printing"></a>고급 XPS 인쇄  
- XPS 기능의 전체 집합에 액세스 하려면 고급 인쇄 API는 사용 해야 합니다. 여러 관련 API는 아래에 자세히 설명 되어 있습니다. 전체 목록은 XPS 인쇄 경로 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]를 참조 합니다 <xref:System.Windows.Xps> 및 <xref:System.Printing> 네임 스페이스 참조 합니다.  
+ XPS 기능의 전체 집합에 액세스 하려면 고급 인쇄 API는 사용 해야 합니다. 여러 관련 API는 아래에 자세히 설명 되어 있습니다. XPS 인쇄 경로 Api의 전체 목록은 참조 하세요. 합니다 <xref:System.Windows.Xps> 고 <xref:System.Printing> 네임 스페이스 참조 합니다.  
   
 #### <a name="printticket-and-printcapabilities"></a>PrintTicket 및 PrintCapabilities  
  합니다 <xref:System.Printing.PrintTicket> 고 <xref:System.Printing.PrintCapabilities> 클래스 고급 XPS 기능의 기반이 됩니다. 두 유형의 개체는 모두 데이터 정렬, 양면 인쇄, 스테이플링 등과 같은 인쇄 지향 기능의 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 형식 구조체입니다. 이러한 구조체는 인쇄 스키마에서 정의됩니다. <xref:System.Printing.PrintTicket>은 인쇄 작업을 처리하는 방법을 프린터에 지시합니다. <xref:System.Printing.PrintCapabilities> 클래스는 프린터 기능을 정의합니다. 프린터 기능 쿼리를 통해 프린터에서 지원하는 기능을 완전히 활용하는 <xref:System.Printing.PrintTicket>을 만들 수 있습니다. 마찬가지로, 지원되지 않는 기능을 방지할 수 있습니다.  
@@ -87,7 +87,7 @@ Microsoft.NET Framework를 사용 하 여 Windows Presentation Foundation (WPF)�
  [!code-vb[xpscreate#PrinterCapabilities](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#printercapabilities)]  
   
 #### <a name="printserver-and-printqueue"></a>PrintServer 및 PrintQueue  
- <xref:System.Printing.PrintServer> 클래스는 네트워크 인쇄 서버를 나타내고 <xref:System.Printing.PrintQueue> 클래스는 프린터 및 프린터와 연결된 출력 작업 큐를 나타냅니다. 이러한 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]를 함께 사용하여 서버 인쇄 작업의 고급 관리를 수행할 수 있습니다. <xref:System.Printing.PrintServer> 또는 해당 파생 클래스 중 하나는 <xref:System.Printing.PrintQueue>를 관리하는 데 사용됩니다. <xref:System.Printing.PrintQueue.AddJob%2A> 메서드는 새 인쇄 작업을 대기열에 삽입하는 데 사용됩니다.  
+ <xref:System.Printing.PrintServer> 클래스는 네트워크 인쇄 서버를 나타내고 <xref:System.Printing.PrintQueue> 클래스는 프린터 및 프린터와 연결된 출력 작업 큐를 나타냅니다. 함께 이러한 Api 서버의 인쇄 작업의 고급 관리를 허용 합니다. <xref:System.Printing.PrintServer> 또는 해당 파생 클래스 중 하나는 <xref:System.Printing.PrintQueue>를 관리하는 데 사용됩니다. <xref:System.Printing.PrintQueue.AddJob%2A> 메서드는 새 인쇄 작업을 대기열에 삽입하는 데 사용됩니다.  
   
  다음 예제에서는 코드를 사용하여 <xref:System.Printing.LocalPrintServer>를 만들고 기본 <xref:System.Printing.PrintQueue>에 액세스하는 방법을 보여 줍니다.  
   

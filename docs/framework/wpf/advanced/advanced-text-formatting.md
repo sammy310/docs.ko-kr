@@ -9,15 +9,15 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: ef07e1acd250ceeb7c0e30f8a78dd8d7b196fdcd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4ed6dd33efd5fdc5e2c61df4173bec5cc2f0d807
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655537"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859693"
 ---
 # <a name="advanced-text-formatting"></a>고급 텍스트 서식 지정
-Windows Presentation Foundation (WPF)을 강력한 제공 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] 응용 프로그램에서 텍스트를 포함 합니다. 레이아웃 및 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]와 같은 <xref:System.Windows.Controls.TextBlock>자주 제공 하 고 일반 텍스트 표현에 대 한 요소를 사용 합니다. 그리기 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]와 같은 <xref:System.Windows.Media.GlyphRunDrawing> 고 <xref:System.Windows.Media.FormattedText>, 그리기에 서식 있는 텍스트를 포함 하는 방법을 제공 합니다. 고급 수준에서 가장 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 서식 지정 엔진 텍스트 저장소 관리, 텍스트 실행 서식 관리 및 포함 된 개체 관리와 같은 텍스트 표현의 모든 측면을 제어 하는 확장 가능한 텍스트를 제공 합니다.  
+Windows Presentation Foundation (WPF) 응용 프로그램에서 텍스트를 포함 하는 강력한 Api 집합을 제공 합니다. 레이아웃 및 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]Api와 같은 <xref:System.Windows.Controls.TextBlock>자주 제공 하 고 일반 텍스트 표현에 대 한 요소를 사용 합니다. Api와 같은 그리기 <xref:System.Windows.Media.GlyphRunDrawing> 고 <xref:System.Windows.Media.FormattedText>, 그리기에 서식 있는 텍스트를 포함 하는 방법을 제공 합니다. 고급 수준에서 가장 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 서식 지정 엔진 텍스트 저장소 관리, 텍스트 실행 서식 관리 및 포함 된 개체 관리와 같은 텍스트 표현의 모든 측면을 제어 하는 확장 가능한 텍스트를 제공 합니다.  
   
  이 항목에 대해 소개 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 텍스트 서식 지정 합니다. 클라이언트 구현 및 사용에 중점을 둡니다는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 텍스트 서식 지정 엔진입니다.  
   
@@ -25,8 +25,8 @@ Windows Presentation Foundation (WPF)을 강력한 제공 [!INCLUDE[TLA#tla_api#
 >  이 문서 내의 모든 코드 예제에서 확인할 수 있습니다 합니다 [고급 텍스트 서식 지정 샘플](https://go.microsoft.com/fwlink/?LinkID=159965)합니다.  
 
 <a name="prereq"></a>   
-## <a name="prerequisites"></a>전제 조건  
- 이 항목에서는 더 높은 수준으로 잘 알고 있다고 가정 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 텍스트 표현에 사용 합니다. 대부분의 사용자 시나리오에는 고급 텍스트 서식 지정 필요 하지 것입니다 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 이 항목에서 설명 합니다. 다양 한 텍스트에 대 한 소개 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]를 참조 하세요 [WPF의 문서](documents-in-wpf.md)합니다.  
+## <a name="prerequisites"></a>필수 구성 요소  
+ 이 항목에서는 텍스트 표현에 사용 되는 높은 수준의 Api를 사용 하 여 잘 알고 있다고 가정 합니다. 대부분의 사용자 시나리오의 고급 텍스트 서식이 항목에서 설명 하는 Api를 요구 하지 않습니다. 다양 한 텍스트 Api 소개를 참조 하세요 [WPF의 문서](documents-in-wpf.md)합니다.  
   
 <a name="section1"></a>   
 ## <a name="advanced-text-formatting"></a>고급 텍스트 서식 지정  

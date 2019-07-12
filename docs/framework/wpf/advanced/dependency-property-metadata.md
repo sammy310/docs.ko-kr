@@ -7,12 +7,12 @@ helpviewer_keywords:
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-ms.openlocfilehash: a4b2edce76bc5ab97e644ec8dbdf045931e87786
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 66628e8cc1e56bff2227721d6f6b3e511be7453e
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663427"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860054"
 ---
 # <a name="dependency-property-metadata"></a>종속성 속성 메타데이터
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 속성 시스템에는 리플렉션이나 일반적인 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 특성을 통해 속성에 대해 보고할 수 있는 수준을 넘어서는 메타데이터 보고 시스템이 포함됩니다. 또한 종속성 속성에 대한 메타데이터는 종속성 속성을 정의하는 클래스에서 고유하게 할당하고, 종속성 속성이 다른 클래스에 추가될 때 변경하며, 정의하는 기본 클래스에서 종속성 속성을 상속하는 모든 파생 클래스에서 구체적으로 재정의할 수 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "64663427"
 ## <a name="when-to-override-metadata-when-to-derive-a-class"></a>메타데이터를 재정의하는 경우, 클래스를 파생시키는 경우  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성 시스템은 종속성 속성의 일부 특성을 완전히 다시 구현할 필요 없이 변경하는 기능을 설정했습니다. 이 기능은 특정 형식에 있는 종속성 속성에 대한 속성 메타데이터의 다른 인스턴스를 생성하여 수행합니다. 대부분의 기존 종속성 속성은 가상 속성이 아닙니다. 따라서 엄밀히 말해 상속된 클래스에서 "다시 구현"하려면 기존 멤버를 숨겨야만 합니다.  
   
- 특정 형식에 있는 종속성 속성에 대해 사용하려는 시나리오를 기존 종속성 속성의 특성을 수정하여 수행할 수 없는 경우 파생 클래스를 만든 다음 해당 파생 클래스에서 사용자 지정 종속성 속성을 선언해야 할 수 있습니다. 사용자 지정 종속성 속성은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]에서 정의된 종속성 속성과 동일하게 동작합니다. 사용자 지정 종속성 속성에 대한 자세한 내용은 [사용자 지정 종속성 속성](custom-dependency-properties.md)을 참조하세요.  
+ 특정 형식에 있는 종속성 속성에 대해 사용하려는 시나리오를 기존 종속성 속성의 특성을 수정하여 수행할 수 없는 경우 파생 클래스를 만든 다음 해당 파생 클래스에서 사용자 지정 종속성 속성을 선언해야 할 수 있습니다. 사용자 지정 종속성 속성으로 정의 된 종속성 속성을 동일 하 게 동작 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Api. 사용자 지정 종속성 속성에 대한 자세한 내용은 [사용자 지정 종속성 속성](custom-dependency-properties.md)을 참조하세요.  
   
  재정의할 수 없는 종속성 속성의 주요 특성 한 가지는 해당 값 형식입니다. 필요한 유사한 동작을 수행하는 종속성 속성을 상속하려고 하는데 다른 형식이 필요한 경우 사용자 지정 종속성 속성을 구현하고 사용자 지정 클래스에서 형식 변환이나 다른 구현을 통해 속성을 연결해야 합니다. 기존 바꿀 수 없습니다는 또한 <xref:System.Windows.ValidateValueCallback>이 콜백을 등록 필드 자체에 해당 메타 데이터 내에 있지 있으므로, 합니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "64663427"
 ### <a name="overriding-metadata"></a>메타데이터 재정의  
  메타데이터 재정의의 용도는 특정 형식에 있는 종속성 속성에 적용되는 다양한 메타데이터 파생 동작을 변경할 수 있도록 하는 것입니다. 그 이유는 [메타데이터](#dp_metadata_contents) 섹션에 자세히 설명되어 있습니다. 몇 가지 코드 예제를 비롯한 자세한 내용은 [종속성 속성의 메타데이터 재정의](how-to-override-metadata-for-a-dependency-property.md)를 참조하세요.  
   
- 등록 호출 하는 동안 종속성 속성의 속성 메타 데이터를 제공할 수 있습니다 (<xref:System.Windows.DependencyProperty.Register%2A>). 그러나 대부분의 경우 해당 종속성 속성을 상속하는 클래스에 대해 형식별 메타데이터를 제공하려고 합니다. 호출 하 여이 수행할 수는 <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> 메서드.  예제는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], <xref:System.Windows.FrameworkElement> 클래스는 먼저 등록 하는 형식은 <xref:System.Windows.UIElement.Focusable%2A> 종속성 속성입니다. 하지만 <xref:System.Windows.Controls.Control> 변경에서 고유한 초기 기본값을 제공 하는 종속성 속성에 대 한 메타 데이터를 재정의 하는 클래스 `false` 에 `true`, 그렇지 않으면 원래를 다시 사용 및 <xref:System.Windows.UIElement.Focusable%2A> 구현 합니다.  
+ 등록 호출 하는 동안 종속성 속성의 속성 메타 데이터를 제공할 수 있습니다 (<xref:System.Windows.DependencyProperty.Register%2A>). 그러나 대부분의 경우 해당 종속성 속성을 상속하는 클래스에 대해 형식별 메타데이터를 제공하려고 합니다. 호출 하 여이 수행할 수는 <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> 메서드.  예제는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Api를 <xref:System.Windows.FrameworkElement> 클래스는 먼저 등록 하는 형식은 <xref:System.Windows.UIElement.Focusable%2A> 종속성 속성입니다. 하지만 <xref:System.Windows.Controls.Control> 변경에서 고유한 초기 기본값을 제공 하는 종속성 속성에 대 한 메타 데이터를 재정의 하는 클래스 `false` 에 `true`, 그렇지 않으면 원래를 다시 사용 및 <xref:System.Windows.UIElement.Focusable%2A> 구현 합니다.  
   
  메타데이터를 재정의하는 경우 서로 다른 메타데이터 특성이 병합되거나 대체됩니다.  
   

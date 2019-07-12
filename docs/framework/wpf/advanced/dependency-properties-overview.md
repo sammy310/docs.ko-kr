@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 443ea9ad56d13d26191231104ce3998b2691fc34
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 483710281feafdf97cfef9b72a67af035dcf0efa
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052939"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860168"
 ---
 # <a name="dependency-properties-overview"></a>종속성 속성 개요
 
@@ -78,11 +78,11 @@ XAML은 속성을 설정하는 다양한 구문 형식 지원 특정 속성에 �
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyget)]
  [!code-vb[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyget)]
 
-속성 시스템 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], <xref:System.Windows.DependencyObject.GetValue%2A> 및 <xref:System.Windows.DependencyObject.SetValue%2A>를 직접 호출할 수도 있습니다. 일반적으로 기존 속성을 사용하는 경우(래퍼가 더 편리하며 개발자 도구에 속성을 더 잘 노출시킴)에는 필요하지 않으며 특정 경우에는 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]를 직접 호출하는 것이 적합합니다.
+속성 시스템 Api를 호출할 수도 있습니다 <xref:System.Windows.DependencyObject.GetValue%2A> 고 <xref:System.Windows.DependencyObject.SetValue%2A> 직접. 이 Api를 직접 호출 하는 것은 특정 시나리오에 적합 하지만 기존 속성 (래퍼가 더 편리 하며 및 개발자 도구에 대 한 속성을 더 잘 노출 시킴)를 사용 하는 경우 일반적으로 필요 하지 않습니다.
 
 또한 속성은 XAML에서 설정한 다음 나중에 코드 숨김을 통해 코드에서 액세스할 수 있습니다. 자세한 내용은 [WPF의 코드 숨김 및 XAML](code-behind-and-xaml-in-wpf.md)을 참조하세요.
 
-## <a name="property-functionality-provided-by-a-dependency-property"></a>종속성 속성에서 제공하는 속성 기능
+## <a name="property-functionality-provided-by-a-dependency-property"></a>종속성 속성이 제공하는 속성 기능
 종속성 속성은 필드에서 지원하는 속성과 반대로 속성의 기능을 확장하는 기능을 제공합니다. 종종 이러한 기능은 다음과 같은 특정 기능 중 하나를 지원하거나 나타냅니다.
 
 - [리소스](#resources)
@@ -99,7 +99,7 @@ XAML은 속성을 설정하는 다양한 구문 형식 지원 특정 속성에 �
 
 - [WPF Designer 통합](#wpf-designer-integration)
 
-### <a name="resources"></a>자료
+### <a name="resources"></a>리소스
 종속성 속성 값은 리소스를 참조하여 설정할 수 있습니다. 일반적으로 리소스는 페이지 루트 요소 또는 애플리케이션의 `Resources` 속성 값으로 지정됩니다. 이러한 위치를 통해 리소스에 가장 편리하게 액세스할 수 있습니다. 다음 예제에서는 <xref:System.Windows.Media.SolidColorBrush> 리소스를 정의하는 방법을 보여 줍니다.
 
 [!code-xaml[PropertiesOvwSupport#ResourcesResource](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page2.xaml#resourcesresource)]
