@@ -9,7 +9,5 @@
       href: how-to-raise-base-class-events-in-derived-classes.md
     - name: '방법: 인터페이스 이벤트 구현'
       href: how-to-implement-interface-events.md
-    - name: '방법: 사전을 사용하여 이벤트 인스턴스 저장'
-      href: how-to-use-a-dictionary-to-store-event-instances.md
     - name: '방법: 사용자 지정 이벤트 접근자 구현'
       href: how-to-implement-custom-event-accessors.md

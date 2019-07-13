@@ -2,12 +2,12 @@
 title: 방법 문서(C# 가이드)
 description: 유용한 팁 및 간단하고 집중된 코드 샘플의 컬렉션
 ms.date: 12/20/2017
-ms.openlocfilehash: 011e2a8208e647fb2df2ea2e949bfe2d2274eb37
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63410d687bd09f95a5ce7ce9304f2281b2f8d334
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744270"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859540"
 ---
 # <a name="how-to-c"></a>방법(C#)
 
@@ -98,7 +98,6 @@ C# 가이드의 방법 섹션에서 일반적인 질문에 대한 빠른 답변�
 - [인터페이스에서 선언된 이벤트를 구현합니다](../programming-guide/events/how-to-implement-interface-events.md).
 - [코드가 이벤트를 게시할 때 .NET Framework 지침을 준수합니다](../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).
 - [파생된 클래스로부터 기본 클래스에서 정의된 이벤트를 발생시킵니다](../programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md).
-- [사전에 인스턴스를 저장합니다](../programming-guide/events/how-to-use-a-dictionary-to-store-event-instances.md).
 - [사용자 지정 이벤트 접근자를 구현합니다](../programming-guide/events/how-to-implement-custom-event-accessors.md).
 
 ## <a name="linq-practices"></a>LINQ 사례
