@@ -1,18 +1,19 @@
 ---
-ms.openlocfilehash: 8332aca6e72346c92e80ce28979b83eec496b0e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3b36bc1ed9c35722478bdb31b82a79bed1a18914
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804558"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67858535"
 ---
-### <a name="right-clicking-on-a-wpf-datagrid-row-header-changes-the-datagrid-selection"></a><span data-ttu-id="0b30e-101">WPF DataGrid 행 머리글에서 마우스 오른쪽 단추로 클릭하면 DataGrid 선택 항목이 변경</span><span class="sxs-lookup"><span data-stu-id="0b30e-101">Right clicking on a WPF DataGrid row header changes the DataGrid selection</span></span>
+### <a name="right-clicking-on-a-wpf-datagrid-row-header-changes-the-datagrid-selection"></a><span data-ttu-id="ca7eb-101">WPF DataGrid 행 머리글에서 마우스 오른쪽 단추로 클릭하면 DataGrid 선택 항목이 변경</span><span class="sxs-lookup"><span data-stu-id="ca7eb-101">Right clicking on a WPF DataGrid row header changes the DataGrid selection</span></span>
 
 |   |   |
 |---|---|
-|<span data-ttu-id="0b30e-102">세부 정보</span><span class="sxs-lookup"><span data-stu-id="0b30e-102">Details</span></span>|<span data-ttu-id="0b30e-103">여러 행을 선택한 상태에서 선택한 <xref:System.Windows.Controls.DataGrid?displayProperty=name> 행 머리글을 마우스 오른쪽 단추로 클릭하면 <xref:System.Windows.Controls.DataGrid?displayProperty=name>의 선택이 해당 행으로만 변경됩니다.</span><span class="sxs-lookup"><span data-stu-id="0b30e-103">Right-clicking a selected <xref:System.Windows.Controls.DataGrid?displayProperty=name> row header while multiple rows are selected results in the <xref:System.Windows.Controls.DataGrid?displayProperty=name>'s selection changing to only that row.</span></span>|
-|<span data-ttu-id="0b30e-104">제안 해결 방법</span><span class="sxs-lookup"><span data-stu-id="0b30e-104">Suggestion</span></span>|<span data-ttu-id="0b30e-105">이 문제는 .NET Framework 4.6에서 해결되었으며, 해당 버전의 .NET Framework로 업그레이드하여 해결할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0b30e-105">This issue has been fixed in the .NET Framework 4.6 and may be addressed by upgrading to that version of the .NET Framework.</span></span>|
-|<span data-ttu-id="0b30e-106">범위</span><span class="sxs-lookup"><span data-stu-id="0b30e-106">Scope</span></span>|<span data-ttu-id="0b30e-107">Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="0b30e-107">Edge</span></span>|
-|<span data-ttu-id="0b30e-108">버전</span><span class="sxs-lookup"><span data-stu-id="0b30e-108">Version</span></span>|<span data-ttu-id="0b30e-109">4.5</span><span class="sxs-lookup"><span data-stu-id="0b30e-109">4.5</span></span>|
-|<span data-ttu-id="0b30e-110">형식</span><span class="sxs-lookup"><span data-stu-id="0b30e-110">Type</span></span>|<span data-ttu-id="0b30e-111">런타임</span><span class="sxs-lookup"><span data-stu-id="0b30e-111">Runtime</span></span>|
-|<span data-ttu-id="0b30e-112">영향을 받는 API</span><span class="sxs-lookup"><span data-stu-id="0b30e-112">Affected APIs</span></span>|<ul><li><xref:System.Windows.Controls.DataGrid.%23ctor?displayProperty=nameWithType></li></ul>|
+|<span data-ttu-id="ca7eb-102">세부 정보</span><span class="sxs-lookup"><span data-stu-id="ca7eb-102">Details</span></span>|<span data-ttu-id="ca7eb-103">여러 행을 선택한 상태에서 선택한 <xref:System.Windows.Controls.DataGrid?displayProperty=name> 행 머리글을 마우스 오른쪽 단추로 클릭하면 <xref:System.Windows.Controls.DataGrid?displayProperty=name>의 선택이 해당 행으로만 변경됩니다.</span><span class="sxs-lookup"><span data-stu-id="ca7eb-103">Right-clicking a selected <xref:System.Windows.Controls.DataGrid?displayProperty=name> row header while multiple rows are selected results in the <xref:System.Windows.Controls.DataGrid?displayProperty=name>'s selection changing to only that row.</span></span>|
+|<span data-ttu-id="ca7eb-104">제안</span><span class="sxs-lookup"><span data-stu-id="ca7eb-104">Suggestion</span></span>|<span data-ttu-id="ca7eb-105">이 문제는 .NET Framework 4.6에서 해결되었으며, 해당 버전의 .NET Framework로 업그레이드하여 해결할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ca7eb-105">This issue has been fixed in the .NET Framework 4.6 and may be addressed by upgrading to that version of the .NET Framework.</span></span>|
+|<span data-ttu-id="ca7eb-106">범위</span><span class="sxs-lookup"><span data-stu-id="ca7eb-106">Scope</span></span>|<span data-ttu-id="ca7eb-107">Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="ca7eb-107">Edge</span></span>|
+|<span data-ttu-id="ca7eb-108">버전</span><span class="sxs-lookup"><span data-stu-id="ca7eb-108">Version</span></span>|<span data-ttu-id="ca7eb-109">4.5</span><span class="sxs-lookup"><span data-stu-id="ca7eb-109">4.5</span></span>|
+|<span data-ttu-id="ca7eb-110">형식</span><span class="sxs-lookup"><span data-stu-id="ca7eb-110">Type</span></span>|<span data-ttu-id="ca7eb-111">런타임</span><span class="sxs-lookup"><span data-stu-id="ca7eb-111">Runtime</span></span>|
+|<span data-ttu-id="ca7eb-112">영향을 받는 API</span><span class="sxs-lookup"><span data-stu-id="ca7eb-112">Affected APIs</span></span>|<ul><li><xref:System.Windows.Controls.DataGrid.%23ctor?displayProperty=nameWithType></li></ul>|
+
