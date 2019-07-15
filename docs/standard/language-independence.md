@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 79b74090a5a443c944df94f9df1c3f4d283df02f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: af266a551a194f55bc4951a8bdb0e9af6f823663
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214743"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662999"
 ---
 # <a name="language-independence-and-language-independent-components"></a>언어 독립성 및 언어 독립적 구성 요소
 
@@ -29,35 +29,35 @@ ms.locfileid: "59214743"
 
 * [CLS 준수 규칙](#cls-compliance-rules)
 
-    * [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures)
+  * [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures)
 
-    * [명명 규칙](#naming-conventions)
+  * [명명 규칙](#naming-conventions)
 
-    * [형식 변환](#type-conversion)
+  * [형식 변환](#type-conversion)
 
-    * [배열](#arrays)
+  * [배열](#arrays)
 
-    * [인터페이스](#interfaces)
+  * [인터페이스](#interfaces)
 
-    * [열거형](#enumerations)
+  * [열거형](#enumerations)
 
-    * [형식 멤버 일반 사항](#type-members-in-general)
+  * [형식 멤버 일반 사항](#type-members-in-general)
 
-    * [멤버 접근성](#member-accessibility)
+  * [멤버 접근성](#member-accessibility)
 
-    * [제네릭 형식 및 멤버](#generic-types-and-members)
+  * [제네릭 형식 및 멤버](#generic-types-and-members)
 
-    * [생성자](#constructors)
+  * [생성자](#constructors)
 
-    * [속성](#properties)
+  * [속성](#properties)
 
-    * [이벤트](#events)
+  * [이벤트](#events)
 
-    * [오버로드](#overloads)
+  * [오버로드](#overloads)
 
-    * [예외](#exceptions)
+  * [예외](#exceptions)
 
-    * [특성](#attributes)
+  * [특성](#attributes)
 
 * [CLSCompliantAttribute 특성](#the-clscompliantattribute-attribute)
 
@@ -154,7 +154,7 @@ CLS 규격의 규칙은 다음 표에 나와 있습니다. 규칙의 텍스트�
 
 범주 | 참조 | 규칙 | 규칙 번호
 -------- | --- | ---- | -----------
-액세스 가능성 | [멤버 접근성](#member-accessibility) | `family-or-assembly` 액세스 가능성을 갖는 다른 어셈블리에서 상속된 메서드를 재정의하는 경우를 제외하고는, 상속된 메서드를 재정의할 때 액세스 가능성이 변경되어서는 안 됩니다. 이 경우, 재정의는 `family` 액세스 가능성을 가져야 합니다. | 10
+접근성 | [멤버 접근성](#member-accessibility) | `family-or-assembly` 액세스 가능성을 갖는 다른 어셈블리에서 상속된 메서드를 재정의하는 경우를 제외하고는, 상속된 메서드를 재정의할 때 액세스 가능성이 변경되어서는 안 됩니다. 이 경우, 재정의는 `family` 액세스 가능성을 가져야 합니다. | 10
 액세스 가능성 | [멤버 접근성](#member-accessibility) | 형식과 멤버의 표시 유형 및 접근성은 해당 멤버가 표시되고 액세스 가능한 경우 모든 멤버의 시그니처에 있는 해당 형식이 표시되고 액세스 가능해야 합니다. 예를 들어 어셈블리 외부에 표시되는 공용 메서드는 어셈블리 내부에서만 표시되는 형식의 인수를 가질 수 없습니다. 해당 멤버가 표시되고 액세스 가능한 경우 모든 멤버의 시그니처에 사용된 인스턴스화된 제네릭 형식을 구성하는 형식의 표시 유형과 액세스 가능성은 표시되고 액세스 가능해야 합니다. 예를 들어 어셈블리 외부에 표시되는 멤버의 시그니처에 있는 인스턴스화된 제네릭 형식은 어셈블리 내부에서만 표시되는 형식의 제네릭 인수를 가질 수 없습니다. | 12
 배열 | [배열](#arrays) | 배열에는 CLS 규격 형식의 요소가 있어야 하며 배열의 모든 차원은 하한이 0이어야 합니다. 항목은 배열이며 이 배열의 요소 형식은 오버로드 간에 구분되어야 합니다. 오버로드가 2개 이상의 배열 형식에 기반하는 경우 요소 형식은 명명된 형식이어야 합니다. | 16
 특성 | [특성](#attributes) | 특성은 [System.Attribute](xref:System.Attribute) 형식 또는 이 형식에서 상속받는 형식입니다. | 41
@@ -190,17 +190,17 @@ CLS 규격의 규칙은 다음 표에 나와 있습니다. 규칙의 텍스트�
 오버로딩 | [오버로드](#overloads) | 속성 및 메서드만 오버로드될 수 있습니다. | 37
 오버로딩 | [오버로드](#overloads) |반환 형식에 따라서도 오버로드될 수 있는 이름이 `op_Implicit` 및 `op_Explicit`인 변환 연산자를 제외하고, 속성 및 메서드는 매개 변수의 형식과 수에 따라서만 오버로드될 수 있습니다. | 38
 오버로딩 | -- | 한 형식에서 선언된 둘 이상의 CLS 규격 메서드의 이름이 같고 형식 인스턴스화의 특정 집합에 대해 매개 변수와 반환 형식이 같다면 이러한 모든 메서드는 해당 형식 인스턴스화에서 의미상 동일합니다. | 48
-속성 | [속성](#properties) | 속성의 getter 및 setter 메서드를 구현하는 메서드는 메타데이터에서 `SpecialName`으로 표시됩니다. | 24
+properties | [속성](#properties) | 속성의 getter 및 setter 메서드를 구현하는 메서드는 메타데이터에서 `SpecialName`으로 표시됩니다. | 24
 속성 | [속성](#properties) | 속성의 접근자는 모두 static이거나 모두 virtual이거나 또는 모두 instance여야 합니다. | 26
 속성 | [속성](#properties) | 속성의 형식은 getter의 반환 형식이며 setter의 마지막 인수의 형식이어야 합니다. 속성의 매개 변수 형식은 getter의 매개 변수 형식 및 setter의 마지막 매개 변수 형식을 제외한 모든 형식이어야 합니다. 이들 형식은 모두 CLS 규격이어야 하며 관리되는 포인터일 수 없습니다. 즉, 참조로 전달될 수 없습니다. | 27
 속성 | [속성](#properties) | 속성은 특정 이름 지정 패턴을 따라야 합니다. CLS 규칙 24에서 참조되는 `SpecialName` 특성은 적절한 이름 비교에서 무시되고 식별자 규칙을 따릅니다. 속성에는 getter 메서드, setter 메서드 또는 둘 모두가 있어야 합니다. | 28
 형식 변환 | [형식 변환](#type-conversion) | op_Implicit 또는 op_Explicit가 제공되는 경우 강제 변환을 제공하는 대체 방법이 제공됩니다. | 39
-유형 | [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures) | boxed 값 형식은 CLS 규격이 아닙니다. | 3
-유형 | [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures) | 시그니처에 나타나는 모든 형식은 CLS 규격이어야 합니다. 인스턴스화된 제네릭 형식을 구성하는 모든 형식은 CLS 규격이어야 합니다. | 11
-유형 | [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures) | 형식화된 참조는 CLS 규격이 아닙니다. | 14
-유형 | [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures) | 관리되지 않는 포인터 형식은 CLS 규격이 아닙니다. | 17
-유형 | [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures) | CLS 규격 클래스, 값 형식 및 인터페이스에는 CLS 규격이 아닌 멤버 구현이 필요하지 않습니다. | 20
-유형 | [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures) | [System.Object](xref:System.Object)는 CLS 규격입니다. 다른 CLS 규격 클래스는 모두 CLS 규격 클래스에서 상속해야 합니다. | 23
+형식 | [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures) | boxed 값 형식은 CLS 규격이 아닙니다. | 3
+형식 | [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures) | 시그니처에 나타나는 모든 형식은 CLS 규격이어야 합니다. 인스턴스화된 제네릭 형식을 구성하는 모든 형식은 CLS 규격이어야 합니다. | 11
+형식 | [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures) | 형식화된 참조는 CLS 규격이 아닙니다. | 14
+형식 | [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures) | 관리되지 않는 포인터 형식은 CLS 규격이 아닙니다. | 17
+형식 | [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures) | CLS 규격 클래스, 값 형식 및 인터페이스에는 CLS 규격이 아닌 멤버 구현이 필요하지 않습니다. | 20
+형식 | [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures) | [System.Object](xref:System.Object)는 CLS 규격입니다. 다른 CLS 규격 클래스는 모두 CLS 규격 클래스에서 상속해야 합니다. | 23
 
 ### <a name="types-and-type-member-signatures"></a>형식 및 형식 멤버 시그니처
 
@@ -1307,11 +1307,11 @@ CLS 규격 열거형은 다음 규칙을 따라야 합니다.
 
 * 열거형에는 다음 두 가지 종류가 있습니다.
 
-    * 상호 배타적인 명명된 정수 값 집합을 나타내는 열거형. 이러한 유형의 열거형은 [System.FlagsAttribute](xref:System.FlagsAttribute) 사용자 지정 특성이 없는 것으로 표시됩니다.
+  * 상호 배타적인 명명된 정수 값 집합을 나타내는 열거형. 이러한 유형의 열거형은 [System.FlagsAttribute](xref:System.FlagsAttribute) 사용자 지정 특성이 없는 것으로 표시됩니다.
 
-    * 결합하여 명명되지 않은 값을 생성할 수 있는 비트 플래그 집합을 나타내는 열거형. 이러한 유형의 열거형은 [System.FlagsAttribute](xref:System.FlagsAttribute) 사용자 지정 특성이 있는 것으로 표시됩니다.
+  * 결합하여 명명되지 않은 값을 생성할 수 있는 비트 플래그 집합을 나타내는 열거형. 이러한 유형의 열거형은 [System.FlagsAttribute](xref:System.FlagsAttribute) 사용자 지정 특성이 있는 것으로 표시됩니다.
 
- 자세한 내용은 [Enum](xref:System.Enum) 구조체에 대한 설명서를 참조하세요.
+자세한 내용은 [Enum](xref:System.Enum) 구조체에 대한 설명서를 참조하세요.
 
 * 열거형의 값은 지정된 값의 범위로 제한되지 않습니다. 즉, 열거형의 값 범위는 기본 값의 범위입니다. `Enum.IsDefined` 메서드를 사용하여 지정된 값이 열거형 멤버인지 여부를 확인할 수 있습니다.
 
@@ -2048,7 +2048,7 @@ CLS 규격 클래스의 생성자와 구조체는 다음 규칙을 따라야 합
 
 * 개체 생성자는 개체를 만드는 경우를 제외하고는 호출할 수 없습니다. 또한 개체는 두 번 초기화할 수 없습니다. 예를 들어 `Object.MemberwiseClone`은 생성자를 호출해서는 안 됩니다.
 
-### <a name="properties"></a>속성
+### <a name="properties"></a>properties
 
 CLS 규격 형식의 속성은 다음 규칙을 따라야 합니다.
 
@@ -2582,7 +2582,7 @@ CLS 규격 특성의 속성 또는 생성자는 다음과 같은 형식만 노�
 
 * [String](xref:System.String)
 
-* [Type](xref:System.Type)
+* [형식](xref:System.Type)
 
 * 기본 형식이 `Byte`, `Int16`, `Int32` 또는 `Int64`인 열거형 형식입니다.
 

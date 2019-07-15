@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19d9752e1c7cfbc0a7c85e7cf8053c09c5baca7a
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: da73df97524b9e394fac795daf14a3f0fb1f4e3d
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425573"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661380"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework에서 내게 필요한 옵션의 새로운 기능
 
@@ -24,7 +24,7 @@ ms.locfileid: "67425573"
 
 .NET Framework 4.7 이전 버전을 대상으로 하지만 .NET Framework 4.7.1 이상에서 실행되는 경우 내게 필요한 옵션 기능으로 옵트인하도록 앱을 구성할 수 있습니다. .NET Framework 4.7.1 이상을 대상으로 하는 경우 레거시 기능(및 내게 필요한 옵션 기능을 활용하지 못하도록)을 사용하도록 앱을 구성할 수도 있습니다. 내게 필요한 옵션 기능을 포함하는 .NET Framework의 각 버전에는 애플리케이션의 구성 파일의 [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) 섹션에서 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소에 추가하는 버전별 내게 필요한 옵션 스위치가 있습니다. 다음은 지원되는 스위치입니다.
 
-|버전|스위치|
+|버전|Switch|
 |---|---|
 |.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
 |.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
@@ -257,39 +257,39 @@ Windows 10에는 애플리케이션에서 집합의 항목 수를 설명하는 �
 
 - 종속성 속성을 사용합니다.
 
-   WPF는 두 개의 새 종속성 속성(<xref:System.Windows.Automation.AutomationProperties.SizeOfSet?displayProperty=nameWithType> 및 <xref:System.Windows.Automation.AutomationProperties.PositionInSet?displayProperty=nameWithType>)을 추가합니다. 개발자는 XAML을 사용하여 해당 값을 설정할 수 있습니다.
+  WPF는 두 개의 새 종속성 속성(<xref:System.Windows.Automation.AutomationProperties.SizeOfSet?displayProperty=nameWithType> 및 <xref:System.Windows.Automation.AutomationProperties.PositionInSet?displayProperty=nameWithType>)을 추가합니다. 개발자는 XAML을 사용하여 해당 값을 설정할 수 있습니다.
 
-   ```xaml
-   <Button AutomationProperties.SizeOfSet="3"
-     AutomationProperties.PositionInSet="1">Button 1</Button>
+  ```xaml
+  <Button AutomationProperties.SizeOfSet="3"
+    AutomationProperties.PositionInSet="1">Button 1</Button>
 
-   <Button AutomationProperties.SizeOfSet="3"
-     AutomationProperties.PositionInSet="2">Button 2</Button>
+  <Button AutomationProperties.SizeOfSet="3"
+    AutomationProperties.PositionInSet="2">Button 2</Button>
 
-   <Button AutomationProperties.SizeOfSet="3"
-     AutomationProperties.PositionInSet="3">Button 3</Button>
-   ```
+  <Button AutomationProperties.SizeOfSet="3"
+    AutomationProperties.PositionInSet="3">Button 3</Button>
+  ```
 
 - AutomationPeer 가상 메서드를 재정의합니다.
 
-   <xref:System.Windows.Automation.Peers.AutomationPeer.GetSizeOfSetCore> 및 <xref:System.Windows.Automation.Peers.AutomationPeer.GetPositionInSetCore> 가상 메서드가 AutomationPeer 클래스에 추가되었습니다. 개발자는 다음 예제와 같이 이러한 메서드를 재정의하여 `SizeOfSet` 및 `PositionInSet`에 대한 값을 제공할 수 있습니다.
+  <xref:System.Windows.Automation.Peers.AutomationPeer.GetSizeOfSetCore> 및 <xref:System.Windows.Automation.Peers.AutomationPeer.GetPositionInSetCore> 가상 메서드가 AutomationPeer 클래스에 추가되었습니다. 개발자는 다음 예제와 같이 이러한 메서드를 재정의하여 `SizeOfSet` 및 `PositionInSet`에 대한 값을 제공할 수 있습니다.
 
-   ```csharp
-   public class MyButtonAutomationPeer : ButtonAutomationPeer
-   {
-      protected override int GetSizeOfSetCore()
-      {
-         // Call into your own logic to provide a value for SizeOfSet
-         return CalculateSizeOfSet();
-      }
+  ```csharp
+  public class MyButtonAutomationPeer : ButtonAutomationPeer
+  {
+    protected override int GetSizeOfSetCore()
+    {
+        // Call into your own logic to provide a value for SizeOfSet
+        return CalculateSizeOfSet();
+    }
 
-      protected override int GetPositionInSetCore()
-      {
-         // Call into your own logic to provide a value for PositionInSet
-         return CalculatePositionInSet();
-      }
-   }
-   ```
+    protected override int GetPositionInSetCore()
+    {
+        // Call into your own logic to provide a value for PositionInSet
+        return CalculatePositionInSet();
+    }
+  }
+  ```
 
 또한 <xref:System.Windows.Controls.ItemsControl> 인스턴스의 항목은 개발자의 추가 작업 없이 이러한 속성에 대한 값을 자동으로 제공합니다. <xref:System.Windows.Controls.ItemsControl>이 그룹화되면 그룹의 컬렉션이 집합으로 표시되고, 각 그룹은 별도의 집합으로 계산되며, 그룹 내의 각 항목은 해당 그룹 내에서의 위치뿐 아니라 그룹의 크기를 제공합니다. 자동 값은 가상화의 영향을 받지 않습니다. 항목이 실현되지 않더라도 여전히 집합의 전체 크기로 계산되며, 해당 형제 항목 세트의 위치에 영향을 줍니다.
 
@@ -447,10 +447,10 @@ NET Framework 4.7.2에서 이러한 시각적 개체는 이제 테마에서 더�
 
 - 다음 가능한 **LiveSetting** 값을 정의하는 <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType> 열거형
 
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. 라이브 영역의 콘텐츠가 변경된 경우 요소는 알림을 보내지 않습니다.
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>. 라이브 영역의 콘텐츠가 변경된 경우 요소는 비중단 알림을 보냅니다.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. 라이브 영역의 콘텐츠가 변경된 경우 요소는 알림을 보내지 않습니다.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>. 라이브 영역의 콘텐츠가 변경된 경우 요소는 비중단 알림을 보냅니다.
 
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. 라이브 영역의 콘텐츠가 변경된 경우 요소는 중단 알림을 보냅니다.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. 라이브 영역의 콘텐츠가 변경된 경우 요소는 중단 알림을 보냅니다.
 
 다음 예제와 같이 관심 있는 요소에 **AutomationProperties.LiveSetting** 속성을 설정하여 LiveRegion을 만들 수 있습니다.
 
@@ -474,85 +474,85 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 **고대비**
 
-.NET Framework 4.7.1부터 다양한 WPF 컨트롤에 고대비의 개선 사항이 만들어졌습니다. <xref:System.Windows.SystemParameters.HighContrast%2A> 테마가 설정된 경우 이제 표시됩니다. 여기에는 다음이 포함됩니다.
+.NET Framework 4.7.1부터 다양한 WPF 컨트롤에 고대비의 개선 사항이 만들어졌습니다. <xref:System.Windows.SystemParameters.HighContrast%2A> 테마가 설정된 경우 이제 표시됩니다. 내용은 다음과 같습니다.
 
 - <xref:System.Windows.Controls.Expander> 컨트롤
 
-    <xref:System.Windows.Controls.Expander> 컨트롤에 대한 포커스 시각적 개체는 이제 표시됩니다. <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.ListBox> 및 <xref:System.Windows.Controls.RadioButton> 컨트롤에 대한 키보드 시각적 개체도 표시됩니다. 예:
+  <xref:System.Windows.Controls.Expander> 컨트롤에 대한 포커스 시각적 개체는 이제 표시됩니다. <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.ListBox> 및 <xref:System.Windows.Controls.RadioButton> 컨트롤에 대한 키보드 시각적 개체도 표시됩니다. 예:
 
-    이전: 
+  이전: 
 
-    ![내게 필요한 옵션 개선 사항 이전의 포커스가 있는 Expander 컨트롤](media/expander-before.png)
+  ![내게 필요한 옵션 개선 사항 이전의 포커스가 있는 Expander 컨트롤](media/expander-before.png)
 
-    이후: 
+  이후: 
 
-    ![내게 필요한 옵션 개선 사항 이후의 포커스가 있는 Expander 컨트롤](media/expander-after.png)
+  ![내게 필요한 옵션 개선 사항 이후의 포커스가 있는 Expander 컨트롤](media/expander-after.png)
 
 - <xref:System.Windows.Controls.CheckBox> 및 <xref:System.Windows.Controls.RadioButton> 컨트롤
 
-    <xref:System.Windows.Controls.CheckBox> 및 <xref:System.Windows.Controls.RadioButton> 컨트롤의 텍스트는 이제 고대비 테마에서 선택하면 쉽게 볼 수 있습니다. 예:
+  <xref:System.Windows.Controls.CheckBox> 및 <xref:System.Windows.Controls.RadioButton> 컨트롤의 텍스트는 이제 고대비 테마에서 선택하면 쉽게 볼 수 있습니다. 예:
 
-    이전: 
+  이전: 
 
-    ![내게 필요한 옵션 개선 사항 이전의 포커스가 있는 고대비 라디오 단추](media/radio-button-before.png)
+  ![내게 필요한 옵션 개선 사항 이전의 포커스가 있는 고대비 라디오 단추](media/radio-button-before.png)
 
-    이후: 
+  이후: 
 
-    ![내게 필요한 옵션 개선 사항 이후의 포커스가 있는 고대비 라디오 단추](media/radio-button-after.png)
+  ![내게 필요한 옵션 개선 사항 이후의 포커스가 있는 고대비 라디오 단추](media/radio-button-after.png)
 
 - <xref:System.Windows.Controls.ComboBox> 컨트롤
 
-    .NET Framework 4.7.1부터 비활성화된 <xref:System.Windows.Controls.ComboBox> 컨트롤의 테두리는 비활성화된 텍스트와 동일한 색입니다. 예:
+  .NET Framework 4.7.1부터 비활성화된 <xref:System.Windows.Controls.ComboBox> 컨트롤의 테두리는 비활성화된 텍스트와 동일한 색입니다. 예:
 
-    이전: 
+  이전: 
 
-     ![내게 필요한 옵션 개선 사항 이전의 콤보 상자 비활성화된 테두리 및 텍스트](media/combo-disabled-before.png)
+  ![내게 필요한 옵션 개선 사항 이전의 콤보 상자 비활성화된 테두리 및 텍스트](media/combo-disabled-before.png)
 
-    이후:   
+  이후:   
 
-     ![내게 필요한 옵션 개선 사항 이후의 콤보 상자 비활성화된 테두리 및 텍스트](media/combo-disabled-after.png)
+  ![내게 필요한 옵션 개선 사항 이후의 콤보 상자 비활성화된 테두리 및 텍스트](media/combo-disabled-after.png)
 
-    또한 비활성화되고 포커스가 있는 단추는 올바른 테마 색을 사용합니다.
+  또한 비활성화되고 포커스가 있는 단추는 올바른 테마 색을 사용합니다.
 
-    이전:
+  이전:
 
-    ![내게 필요한 옵션 개선 사항 이전의 단추 테마 색](media/button-themes-before.png) 
+  ![내게 필요한 옵션 개선 사항 이전의 단추 테마 색](media/button-themes-before.png) 
 
-    이후: 
+  이후: 
 
-    ![내게 필요한 옵션 개선 사항 이후의 단추 테마 색](media/button-themes-after.png) 
+  ![내게 필요한 옵션 개선 사항 이후의 단추 테마 색](media/button-themes-after.png) 
 
-    마지막으로 .NET Framework 4.7 이전 버전에서 <xref:System.Windows.Controls.ComboBox> 컨트롤의 스타일을 `Toolbar.ComboBoxStyleKey`로 설정하면 드롭다운 화살표가 표시되지 않았습니다. 이 문제는 .NET Framework 4.7.1부터 수정되었습니다. 예:
+  마지막으로 .NET Framework 4.7 이전 버전에서 <xref:System.Windows.Controls.ComboBox> 컨트롤의 스타일을 `Toolbar.ComboBoxStyleKey`로 설정하면 드롭다운 화살표가 표시되지 않았습니다. 이 문제는 .NET Framework 4.7.1부터 수정되었습니다. 예:
 
-    이전: 
+  이전: 
 
-    ![내게 필요한 옵션 개선 사항 이전의 Toolbar.ComboBoxStyleKey](media/comboboxstylekey-before.png) 
+  ![내게 필요한 옵션 개선 사항 이전의 Toolbar.ComboBoxStyleKey](media/comboboxstylekey-before.png) 
 
-    이후: 
+  이후: 
 
-    ![내게 필요한 옵션 개선 사항 이후의 Toolbar.ComboBoxStyleKey](media/comboboxstylekey-after.png) 
+  ![내게 필요한 옵션 개선 사항 이후의 Toolbar.ComboBoxStyleKey](media/comboboxstylekey-after.png) 
 
 - <xref:System.Windows.Controls.DataGrid> 컨트롤
 
-    .NET Framework 4.7.1부터 <xref:System.Windows.Controls.DataGrid> 컨트롤의 정렬 표시기 화살표는 이제 올바른 테마 색을 사용합니다. 예:
+  .NET Framework 4.7.1부터 <xref:System.Windows.Controls.DataGrid> 컨트롤의 정렬 표시기 화살표는 이제 올바른 테마 색을 사용합니다. 예:
 
-    이전: 
+  이전: 
 
-    ![내게 필요한 옵션 개선 사항 이전의 정렬 표시기 화살표](media/sort-indicator-before.png) 
+  ![내게 필요한 옵션 개선 사항 이전의 정렬 표시기 화살표](media/sort-indicator-before.png) 
 
-    이후:   
+  이후:   
 
-    ![내게 필요한 옵션 개선 사항 이후의 정렬 표시기 화살표](media/sort-indicator-after.png) 
+  ![내게 필요한 옵션 개선 사항 이후의 정렬 표시기 화살표](media/sort-indicator-after.png) 
 
-    또한 .NET Framework 4.7 이전 버전에서 기본 링크 스타일은 고대비 모드의 마우스에서 잘못된 색으로 변경되었습니다. 이는 .NET Framework 4.7.1부터 해결되었습니다. 마찬가지로 <xref:System.Windows.Controls.DataGrid> 확인란 열은 .NET Framework 4.7.1부터 키보드 포커스 피드백에 대해 예상되는 색을 사용합니다.
+  또한 .NET Framework 4.7 이전 버전에서 기본 링크 스타일은 고대비 모드의 마우스에서 잘못된 색으로 변경되었습니다. 이는 .NET Framework 4.7.1부터 해결되었습니다. 마찬가지로 <xref:System.Windows.Controls.DataGrid> 확인란 열은 .NET Framework 4.7.1부터 키보드 포커스 피드백에 대해 예상되는 색을 사용합니다.
 
-    이전: 
+  이전: 
 
-    ![내게 필요한 옵션 개선 사항 이전의 DataGrid 기본 링크 스타일](media/default-link-style-before.png) 
+  ![내게 필요한 옵션 개선 사항 이전의 DataGrid 기본 링크 스타일](media/default-link-style-before.png) 
 
-    이후:    
+  이후:    
 
-    ![내게 필요한 옵션 개선 사항 이후의 DataGrid 기본 링크 스타일](media/default-link-style-after.png) 
+  ![내게 필요한 옵션 개선 사항 이후의 DataGrid 기본 링크 스타일](media/default-link-style-after.png) 
 
 .NET Framework 4.7.1에서 WPF 내게 필요한 옵션 개선 사항에 대한 자세한 내용은 [WPF의 내게 필요한 옵션 개선 사항](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf)을 참조하세요.
 
@@ -581,13 +581,13 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - 비활성화된 텍스트는 읽기가 쉽습니다. 예:
 
-    이전:
+  이전:
 
-    ![내게 필요한 옵션 개선 사항 이전의 비활성화된 텍스트](media/wf-disabled-before.png) 
+  ![내게 필요한 옵션 개선 사항 이전의 비활성화된 텍스트](media/wf-disabled-before.png) 
 
-    이후:
+  이후:
 
-    ![내게 필요한 옵션 개선 사항 이후의 비활성화된 텍스트](media/wf-disabled-after.png) 
+  ![내게 필요한 옵션 개선 사항 이후의 비활성화된 텍스트](media/wf-disabled-after.png) 
 
 - 스레드 예외 대화 상자의 고대비 개선 사항입니다.
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 85e7f10643c57837cf0b66613825241db94c0065
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 5171b9b9878331069e354eeb17ad57ca9bd594a8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423882"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773657"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 구현
 상당한 지연을 일으킬 수 있는 몇 가지 작업을 사용하여 클래스를 작성하는 경우 [이벤트 기반 비동기 패턴 개요](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)를 구현하여 비동기 기능을 부여하는 것을 고려할 수 있습니다.  
@@ -53,14 +53,14 @@ ms.locfileid: "66423882"
 ## <a name="creating-the-component"></a>구성 요소 만들기  
  첫 번째 단계는 이벤트 기반 비동기 패턴을 구현하는 구성 요소를 만드는 것입니다.  
   
-#### <a name="to-create-the-component"></a>구성 요소를 만들려면  
+### <a name="to-create-the-component"></a>구성 요소를 만들려면  
   
 - <xref:System.ComponentModel.Component>에서 상속되는 `PrimeNumberCalculator`라는 클래스를 만듭니다.  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>공용 비동기 이벤트 및 대리자 정의  
  구성 요소는 이벤트를 사용하는 클라이언트와 통신합니다. _MethodName_**Completed** 이벤트는 클라이언트에 비동기 작업의 완료를 알리고 _MethodName_**ProgressChanged** 이벤트는 클라이언트에 비동기 작업의 진행률을 알립니다.  
   
-#### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>구성 요소의 클라이언트에 대한 비동기 이벤트를 정의하려면:  
+### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>구성 요소의 클라이언트에 대한 비동기 이벤트를 정의하려면:  
   
 1. <xref:System.Threading?displayProperty=nameWithType> 및 <xref:System.Collections.Specialized?displayProperty=nameWithType> 네임스페이스를 파일 맨 위로 가져옵니다.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "66423882"
 ## <a name="checkpoint"></a>검사점  
  이때 구성 요소를 빌드할 수 있습니다.  
   
-#### <a name="to-test-your-component"></a>구성 요소를 테스트하려면  
+### <a name="to-test-your-component"></a>구성 요소를 테스트하려면  
   
 - 구성 요소를 컴파일합니다.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "66423882"
 ## <a name="defining-private-delegates"></a>전용 대리자 정의  
  `PrimeNumberCalculator` 구성 요소의 비동기 측면은 <xref:System.Threading.SendOrPostCallback>으로 알려진 특수 대리자를 사용하여 내부적으로 구현됩니다. <xref:System.Threading.SendOrPostCallback>은 <xref:System.Threading.ThreadPool> 스레드에서 실행되는 콜백 메서드를 나타냅니다. 콜백 메서드에는 <xref:System.Object> 형식의 단일 매개 변수를 사용하는 시그니처가 있어야 합니다. 즉, 래퍼 클래스의 대리자 간에 상태를 전달해야 합니다. 자세한 내용은 <xref:System.Threading.SendOrPostCallback>을 참조하세요.  
   
-#### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>구성 요소의 내부 비동기 동작을 구현하려면:  
+### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>구성 요소의 내부 비동기 동작을 구현하려면:  
   
 1. `PrimeNumberCalculator` 클래스에 <xref:System.Threading.SendOrPostCallback> 대리자를 선언하고 만듭니다. `InitializeDelegates`라는 유틸리티 메서드에서 <xref:System.Threading.SendOrPostCallback> 개체를 만듭니다.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "66423882"
 ## <a name="implementing-public-events"></a>공용 이벤트 구현  
  이벤트 기반 비동기 패턴을 구현하는 구성 요소는 이벤트를 사용하는 클라이언트와 통신합니다. 이러한 이벤트는 <xref:System.ComponentModel.AsyncOperation> 클래스를 통해 적절한 스레드에서 호출됩니다.  
   
-#### <a name="to-raise-events-to-your-components-clients"></a>구성 요소의 클라이언트에 이벤트를 발생시키려면:  
+### <a name="to-raise-events-to-your-components-clients"></a>구성 요소의 클라이언트에 이벤트를 발생시키려면:  
   
 1. 클라이언트에 보고할 공용 이벤트를 구현합니다. 각각 진행률 및 완료를 보고하기 위한 두 개의 이벤트가 필요합니다.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "66423882"
   
  `CompletionMethod` 시그니처는 비동기 작업의 결과를 설명하는 데 필요한 모든 상태를 포함해야 합니다. 이 시그니처는 이 특정 비동기 작업으로 테스트된 숫자의 상태, 숫자가 소수인지 여부 및 소수가 아닌 경우 첫 번째 제수의 값을 포함합니다. 또한 발생한 예외를 설명하는 상태 및 이 특정 작업에 해당하는 <xref:System.ComponentModel.AsyncOperation>을 포함합니다.  
   
-#### <a name="to-complete-an-asynchronous-operation"></a>비동기 작업을 완료하려면:  
+### <a name="to-complete-an-asynchronous-operation"></a>비동기 작업을 완료하려면:  
   
 - 완료 메서드를 구현합니다. 이 메서드는 클라이언트의 `CalculatePrimeCompletedEventHandler`를 통해 클라이언트로 반환되는 `CalculatePrimeCompletedEventArgs`를 채우는 데 사용할 6개의 매개 변수를 사용합니다. 이 메서드는 내부 컬렉션에서 클라이언트의 작업 ID 토큰을 제거하고 <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> 호출을 통해 비동기 작업 수명을 종료합니다. <xref:System.ComponentModel.AsyncOperation>은 애플리케이션 모델에 적합한 스레드 또는 컨텍스트에 대한 호출을 마샬링합니다.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "66423882"
 ## <a name="checkpoint"></a>검사점  
  이때 구성 요소를 빌드할 수 있습니다.  
   
-#### <a name="to-test-your-component"></a>구성 요소를 테스트하려면  
+### <a name="to-test-your-component"></a>구성 요소를 테스트하려면  
   
 - 구성 요소를 컴파일합니다.  
   
@@ -178,7 +178,7 @@ ms.locfileid: "66423882"
 > [!NOTE]
 >  진행률 보고는 `BuildPrimeNumberList` 메서드에서 구현됩니다. 빠른 컴퓨터에서는 `ProgressChanged` 이벤트가 연속적으로 발생할 수 있습니다. 이러한 이벤트가 발생하는 클라이언트 스레드에서 이 상황을 처리할 수 있어야 합니다. 사용자 인터페이스 코드가 메시지로 넘쳐 유지할 수 없어서 응답하지 않을 수 있습니다. 이 상황을 처리하는 예제 사용자 인터페이스는 [방법: 이벤트 기반 비동기 패턴의 클라이언트 구현](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)을 참조하세요.  
   
-#### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>소수 계산을 비동기적으로 실행하려면:  
+### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>소수 계산을 비동기적으로 실행하려면:  
   
 1. `TaskCanceled` 유틸리티 메서드를 구현합니다. 이 메서드는 지정된 작업 ID의 작업 수명 컬렉션을 확인하고 작업 ID를 찾을 수 없는 경우 `true`를 반환합니다.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "66423882"
 ## <a name="checkpoint"></a>검사점  
  이때 구성 요소를 빌드할 수 있습니다.  
   
-#### <a name="to-test-your-component"></a>구성 요소를 테스트하려면  
+### <a name="to-test-your-component"></a>구성 요소를 테스트하려면  
   
 - 구성 요소를 컴파일합니다.  
   
@@ -221,7 +221,7 @@ ms.locfileid: "66423882"
   
  해당 <xref:System.ComponentModel.AsyncOperation>에서 <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>를 호출하여 특정 보류 작업을 취소합니다. 이렇게 하면 해당 작업이 종료되고 이후에 <xref:System.ComponentModel.AsyncOperation>을 호출하면 예외가 throw됩니다.  
   
-#### <a name="to-implement-start-and-cancel-functionality"></a>시작 및 취소 기능을 구현하려면:  
+### <a name="to-implement-start-and-cancel-functionality"></a>시작 및 취소 기능을 구현하려면:  
   
 1. `CalculatePrimeAsync` 메서드를 구현합니다. 클라이언트 제공 토큰(작업 ID)이 현재 보류 중인 작업을 나타내는 모든 토큰에 관련해서 고유한지 확인합니다. 클라이언트가 고유하지 않은 토큰으로 전달되면 `CalculatePrimeAsync`가 예외를 발생시킵니다. 그렇지 않으면 토큰이 작업 ID 컬렉션에 추가됩니다.  
   
@@ -236,7 +236,7 @@ ms.locfileid: "66423882"
 ## <a name="checkpoint"></a>검사점  
  이때 구성 요소를 빌드할 수 있습니다.  
   
-#### <a name="to-test-your-component"></a>구성 요소를 테스트하려면  
+### <a name="to-test-your-component"></a>구성 요소를 테스트하려면  
   
 - 구성 요소를 컴파일합니다.  
   

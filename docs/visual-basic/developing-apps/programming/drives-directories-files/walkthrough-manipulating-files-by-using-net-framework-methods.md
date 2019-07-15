@@ -15,12 +15,12 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: f3fecf521ca4a9397bacffbb084c4107af97f5b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fc96baaff3b70fcb32e19e2ce08bdb0187c86c01
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345276"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783210"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>연습: .NET Framework 메서드를 사용하여 파일 조작(Visual Basic)
 이 연습에서는 <xref:System.IO.StreamReader> 클래스를 사용하여 파일을 열고 읽는 방법, 파일이 액세스되고 있는지 확인하는 방법, <xref:System.IO.StreamReader> 클래스의 인스턴스로 파일 읽기 내에서 문자열을 검색하는 방법, <xref:System.IO.StreamWriter> 클래스를 사용하여 파일에 쓰는 방법을 보여 줍니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "59345276"
 ## <a name="creating-the-application"></a>애플리케이션 작성  
  Visual Studio를 시작하고, 사용자가 지정된 파일에 작성하는 데 사용할 수 있는 양식을 만들어 프로젝트를 시작합니다.  
   
-#### <a name="to-create-the-project"></a>프로젝트를 만들려면  
+### <a name="to-create-the-project"></a>프로젝트를 만들려면  
   
 1. **파일** 메뉴에서 **새 프로젝트**를 선택합니다.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "59345276"
 ## <a name="writing-to-the-file"></a>파일에 쓰기  
  애플리케이션을 통해 파일에 쓰는 기능을 추가하려면 <xref:System.IO.StreamWriter> 클래스를 사용합니다. <xref:System.IO.StreamWriter>는 특정 인코딩에서 문자 출력용으로 설계된 반면, <xref:System.IO.Stream> 클래스는 바이트 입력 및 출력용으로 설계되었습니다. 표준 텍스트 파일에 정보의 줄을 쓰려면 <xref:System.IO.StreamWriter>를 사용합니다. <xref:System.IO.StreamWriter> 클래스에 대한 자세한 내용은 <xref:System.IO.StreamWriter>을 참조하세요.  
   
-#### <a name="to-add-writing-functionality"></a>쓰기 기능을 추가하려면  
+### <a name="to-add-writing-functionality"></a>쓰기 기능을 추가하려면  
   
 1. **보기** 메뉴에서 **코드**를 선택하여 코드 편집기를 엽니다.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "59345276"
 |<xref:System.Windows.Forms.Button>|**이름**<br /><br /> **Text**|`GetEntries`<br /><br /> **항목 가져오기**|  
 |<xref:System.Windows.Forms.ComboBox>|**이름**<br /><br /> **텍스트**<br /><br /> **사용**|`PickEntries`<br /><br /> **항목 선택**<br /><br /> `False`|  
   
-#### <a name="to-populate-the-combo-box"></a>콤보 상자를 채우려면  
+### <a name="to-populate-the-combo-box"></a>콤보 상자를 채우려면  
   
 1. `PickEntries`<xref:System.Windows.Forms.ComboBox>는 사용자가 특정 날짜의 항목을 선택할 수 있도록 사용자가 각 항목을 제출하는 날짜를 표시하는 데 사용됩니다. `GetEntries` 단추에 대한 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기를 만들어 다음 코드를 추가합니다.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "59345276"
   
 2. 코드를 테스트하려면 F5를 눌러 애플리케이션을 컴파일한 다음 **항목 가져오기**를 클릭합니다. <xref:System.Windows.Forms.ComboBox>에서 드롭다운 화살표를 클릭하여 항목 날짜를 표시합니다.  
   
-#### <a name="to-choose-and-display-individual-entries"></a>개별 항목을 선택하고 표시하려면  
+### <a name="to-choose-and-display-individual-entries"></a>개별 항목을 선택하고 표시하려면  
   
 1. `Display` 단추에 대한 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기를 만들어 다음 코드를 추가합니다.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "59345276"
 |<xref:System.Windows.Forms.Button>|**이름**<br /><br /> **텍스트**<br /><br /> **사용**|`EditEntry`<br /><br /> **항목 편집**<br /><br /> `False`|  
 |<xref:System.Windows.Forms.Button>|**이름**<br /><br /> **텍스트**<br /><br /> **Enabled**|`SubmitEdit`<br /><br /> **편집 제출**<br /><br /> `False`|  
   
-#### <a name="to-enable-deletion-and-modification-of-entries"></a>항목을 삭제 및 수정하도록 설정하려면  
+### <a name="to-enable-deletion-and-modification-of-entries"></a>항목을 삭제 및 수정하도록 설정하려면  
   
 1. 다음 코드를 `Display` 단추의 <xref:System.Windows.Forms.Control.Click> 이벤트에서 `DisplayEntry.Text = ReadString` 뒤에 추가합니다.  
   

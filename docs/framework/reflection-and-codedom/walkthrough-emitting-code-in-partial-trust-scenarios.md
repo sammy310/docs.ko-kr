@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7238edb35e7fd69c0161adbc3b80b122575bbf75
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: f13a07be13294cc408cd381bef6eec1f9095365f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690303"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742467"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>연습: 부분 신뢰 시나리오에서 코드 내보내기
 리플렉션 내보내기에는 완전 또는 부분 신뢰에서 동일한 API 집합이 사용되지만 일부 기능의 경우 부분적으로 신뢰할 수 있는 코드에 특수 권한이 필요합니다. 또한 리플렉션 내보내기에는 부분 신뢰와 함께 보안 투명 어셈블리에서 사용되도록 디자인된 익명으로 호스트되는 동적 메서드의 기능이 있습니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "66690303"
   
  다음 절차에서는 코드를 부분 신뢰로 실행하는 샌드박스가 적용된 애플리케이션 도메인을 만들어 내보낸 코드가 public 형식의 public 멤버에만 액세스할 수 있는 시나리오를 테스트합니다. 이후 절차에서는 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess>를 추가하여 내보낸 코드가 동일하거나 낮은 수준의 권한이 부여된 어셈블리의 public이 아닌 형식 및 멤버에 액세스할 수 있는 시나리오를 테스트하는 방법을 보여 줍니다.  
   
-##### <a name="to-create-an-application-domain-with-partial-trust"></a>부분 신뢰를 사용하여 애플리케이션 도메인을 만들려면  
+#### <a name="to-create-an-application-domain-with-partial-trust"></a>부분 신뢰를 사용하여 애플리케이션 도메인을 만들려면  
   
 1. 샌드박스가 적용된 애플리케이션 도메인에서 어셈블리에 부여할 권한 집합을 만듭니다. 이 경우 인터넷 영역의 권한 집합이 사용됩니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66690303"
 > [!NOTE]
 >  권한 상승을 방지하기 위해 익명으로 호스트된 동적 메서드가 생성될 때 내보내는 어셈블리에 대한 스택 정보가 포함됩니다. 메서드가 호출되면 스택 정보가 확인됩니다. 따라서 완전히 신뢰할 수 있는 코드에서 호출되는 익명으로 호스트된 동적 메서드는 계속해서 내보내는 어셈블리의 신뢰 수준으로 제한됩니다.  
   
-##### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>부분 신뢰 및 RMA를 사용하여 애플리케이션 도메인을 만들려면  
+#### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>부분 신뢰 및 RMA를 사용하여 애플리케이션 도메인을 만들려면  
   
 1. <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess>(RMA) 플래그가 있는 새 <xref:System.Security.Permissions.ReflectionPermission> 개체를 만들고 <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType> 메서드를 사용하여 권한 집합에 권한을 추가합니다.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "66690303"
     >  표시 유형 확인을 건너뛰는 제한된 기능은 익명으로 호스트된 동적 메서드의 기능입니다. 일반 동적 메서드가 JIT 표시 유형 확인을 건너뛸 경우 완전 신뢰가 부여되어야 합니다.  
   
 <a name="Example"></a>   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ### <a name="description"></a>설명  
  다음 코드 예제는 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> 플래그를 사용하여 대상 멤버가 코드를 내보내는 어셈블리와 같거나 낮은 신뢰 수준에 있는 경우에만 익명으로 호스트된 동적 메서드가 JIT 표시 유형 확인을 건너뛰도록 하는 방법을 보여 줍니다.  

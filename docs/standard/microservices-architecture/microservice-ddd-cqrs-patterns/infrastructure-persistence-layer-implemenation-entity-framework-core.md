@@ -2,12 +2,12 @@
 title: Entity Framework Core를 사용하여 인프라 지속성 레이어 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | Entity Framework Core를 사용하여 인프라 지속성 계층에 대한 구현 세부 정보를 탐색합니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: c6b0a022dfecb24c479a0fd3c84dbde719a390a8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7e3480999b115ac13f8d7ebcaed826b407aa7637
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639531"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778061"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Entity Framework Core를 사용하여 인프라 지속성 레이어 구현
 
@@ -21,7 +21,7 @@ EF(Entity Framework) Core는 널리 사용되는 Entity Framework 데이터 액�
 
 EF Core를 소개하는 내용은 이미 Microsoft 설명서에 있으므로 여기서는 간단하게 해당 정보에 대한 링크만 제공하겠습니다.
 
-#### <a name="additional-resources"></a>추가 자료
+### <a name="additional-resources"></a>추가 자료
 
 - **Entity Framework Core** \
   [https://docs.microsoft.com/ef/core/](/ef/core/)
@@ -230,7 +230,7 @@ builder.RegisterType<OrderRepository>()
 
 리포지토리에 singleton 수명을 사용하면 DbContext를 범위가 지정된(InstancePerLifetimeScope) 수명으로 설정(DBContext의 기본 수명)할 경우 심각한 동시성 문제가 발생할 수 있습니다.
 
-#### <a name="additional-resources"></a>추가 자료
+### <a name="additional-resources"></a>추가 자료
 
 - **ASP.NET MVC 애플리케이션에서 작업 패턴의 리포지토리 및 단위 구현** \
   <https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
@@ -447,7 +447,7 @@ public IEnumerable<T> List(ISpecification<T> spec)
 
 리포지토리에서 IQueryable을 반환하는 것을 권장하지는 않지만, 리포지토리 내에서 사용하여 결과 집합을 빌드하는 데 사용하는 것은 아무 문제 없습니다. 위의 List 메서드에 이 접근 방식이 사용된 것을 볼 수 있습니다. 중간 IQueryable 식을 사용하여 쿼리의 포함 목록을 빌드한 후 마지막 줄에서 사양의 기준을 사용하여 쿼리가 실행됩니다.
 
-#### <a name="additional-resources"></a>추가 자료
+### <a name="additional-resources"></a>추가 자료
 
 - **테이블 매핑** \
   [https://docs.microsoft.com/ef/core/modeling/relational/tables](/ef/core/modeling/relational/tables)

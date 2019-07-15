@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: bfe406161ac754124a2cc38c68a80c3b9fb2c7f6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 130c26b7d135db232eb40a2c466aa3bdb2481ace
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234232"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67858559"
 ---
 ### <a name="persian-calendar-now-uses-the-hijri-solar-algorithm"></a>이제 페르시아력이 회교식 양력 알고리즘을 사용합니다.
 
@@ -16,3 +16,4 @@ ms.locfileid: "59234232"
 |버전|4.6|
 |형식|런타임|
 |영향을 받는 API|<ul><li><xref:System.Globalization.PersianCalendar?displayProperty=nameWithType></li></ul>|
+

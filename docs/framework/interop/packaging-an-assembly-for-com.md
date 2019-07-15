@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6933aa5ee253f78806aba401749256934f490126
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: cb45fc253e24c9770436432d2734ba8fce249453
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833582"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662366"
 ---
 # <a name="packaging-an-assembly-for-com"></a>COM에서 사용할 어셈블리의 패키징
 
@@ -61,7 +61,7 @@ COM 개발자는 애플리케이션에 통합하려는 관리 형식에 대한 �
 
   선택하는 메커니즘에 관계없이 사용자가 제공하는 어셈블리에 정의된 공용 형식만 생성된 형식 라이브러리에 포함됩니다.
 
-  형식 라이브러리를 개별 파일로 패키지하거나 .NET 기반 애플리케이션에서 Win32 리소스 파일로 포함할 수 있습니다. Microsoft Visual Basic 6.0에서는 이 작업을 자동으로 수행합니다. 그러나 [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)]를 사용하는 경우 형식 라이브러리를 직접 포함시켜야 합니다. 자세한 내용은 [방법: .NET 기반 애플리케이션에 Win32 리소스로 형식 라이브러리 포함](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))을 참조하세요.
+자세한 내용은 [방법: .NET 기반 애플리케이션에 Win32 리소스로 형식 라이브러리 포함](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))을 참조하세요.
 
 <a name="cpconpackagingassemblyforcomanchor1"></a>
 

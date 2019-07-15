@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 439a4976482639cd2e4e17315ec1a53ca54aa477
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 107b34c7bd26e1396e8a6638d6929c15de92b8e4
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804600"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67803268"
 ---
 ### <a name="profiling-aspnet-mvc4-apps-can-lead-to-fatal-execution-engine-error"></a>ASP.Net MVC4 앱을 프로파일링하면 심각한 실행 엔진 오류가 발생할 수 있습니다.
 
@@ -15,3 +15,4 @@ ms.locfileid: "59804600"
 |범위|Microsoft Edge|
 |버전|4.5|
 |형식|런타임|
+
