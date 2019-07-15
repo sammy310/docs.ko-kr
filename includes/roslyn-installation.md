@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 72acd0029d0189de1c724856572957f111b9d18f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dab6b435a885d862d08f94dd31de79625f19bcc0
+ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675898"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67870502"
 ---
-## <a name="installation-instructions"></a>설치 지침 
+## <a name="installation-instructions---visual-studio-installer"></a>설치 지침 - Visual Studio 설치 관리자
 
 **Visual Studio 설치 관리자**에서 **.NET Compiler Platform SDK**를 찾는 두 가지 방법이 있습니다.
 
-### <a name="install-using-the-workloads-view"></a>워크로드 보기를 사용하여 설치
+### <a name="install-using-the-visual-studio-installer---workloads-view"></a>Visual Studio 설치 관리자를 사용한 설치 - 워크로드 보기
 
 .NET Compiler Platform SDK는 Visual Studio 확장 개발 워크로드의 일부로 자동으로 선택되지 않습니다. 선택적 구성 요소로 선택해야 합니다.
 
@@ -25,7 +25,7 @@ ms.locfileid: "61675898"
 1. 요약 트리에서 **개별 구성 요소** 노드를 엽니다.
 1. **DGML 편집기** 확인란을 선택합니다.
 
-### <a name="install-using-the-individual-components-tab"></a>개별 구성 요소 탭을 사용하여 설치합니다.
+### <a name="install-using-the-visual-studio-installer---individual-components-tab"></a>Visual Studio 설치 관리자를 사용한 설치 - 개별 구성 요소 탭
 
 1. **Visual Studio 설치 관리자**를 실행합니다. 
 1. **수정**을 선택합니다. 
