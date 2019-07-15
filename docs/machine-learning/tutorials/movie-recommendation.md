@@ -3,21 +3,21 @@ title: '자습서: 영화 추천기 빌드 - 행렬 인수분해'
 description: 이 자습서에서는 .NET Core 콘솔 애플리케이션에서 ML.NET으로 영화 추천기를 빌드하는 방법을 보여 줍니다. 이 단계에서는 C#과 Visual Studio 2019를 사용합니다.
 author: briacht
 ms.author: johalex
-ms.date: 05/06/2019
+ms.date: 07/09/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 512c8d663835da77c05fb24926ff85c56afd11ca
-ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
+ms.openlocfilehash: bf04f5a098bd2c378a2b73d7684eb74e16feb728
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66725419"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779044"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>자습서: ML.NET에서 행렬 인수분해를 사용하여 영화 추천기 빌드
 
 이 자습서에서는 .NET Core 콘솔 애플리케이션에서 ML.NET으로 영화 추천기를 빌드하는 방법을 보여 줍니다. 이 단계에서는 C#과 Visual Studio 2019를 사용합니다.
 
-이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
+이 자습서에서는 다음 방법에 대해 알아봅니다.
 > [!div class="checklist"]
 > * 기계 학습 알고리즘 선택
 > * 데이터 준비 및 로드
@@ -56,7 +56,7 @@ ms.locfileid: "66725419"
 
 3. **Microsoft.ML** 및 **Microsoft.ML.Recommender** NuGet 패키지를 설치합니다.
 
-    **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. “nuget.org”를 패키지 소스로 선택하고, **찾아보기** 탭을 선택하고, **Microsoft.ML**을 검색하고, 목록에서 **1.0.0** 패키지를 선택하고, **설치** 단추를 선택합니다. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다. **Microsoft.ML.Recommender v0.12.0**에 대해 이 단계를 반복합니다.
+    **솔루션 탐색기**에서 프로젝트의 이름을 마우스 오른쪽 단추를 클릭하고 **NuGet 패키지 관리**를 선택합니다. "nuget.org"를 패키지 소스로 선택하고, **찾아보기** 탭을 선택하고, **Microsoft.ML**을 검색하고, 목록에서 해당 패키지를 선택하고, **설치** 단추를 선택합니다. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다. **Microsoft.ML.Recommender**에 대해 이 단계를 반복합니다.
 
 4. *Program.cs* 파일 맨 위에 다음 `using` 문을 추가합니다.
 
@@ -350,7 +350,7 @@ Movie 10 is recommended for user 6
 다음 코드를 사용하여 `UseModelForSinglePrediction()` 메서드 바로 뒤에 `SaveModel()` 메서드를 만듭니다.
 
 ```csharp
-public static void SaveModel(MLContext mlContext, ITransformer model)
+public static void SaveModel(MLContext mlContext, DataViewSchema trainingDataViewSchema, ITransformer model)
 {
 
 }
@@ -405,13 +405,13 @@ Movie 10 is recommended for user 6
 =============== Saving the model to a file ===============
 ```
 
-지금까지 이제 영화 추천을 위한 기계 학습 모델을 성공적으로 빌드했습니다. [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation) 리포지토리에서 이 자습서의 소스 코드를 찾을 수 있습니다.
+축하합니다! 이제 영화 추천을 위한 기계 학습 모델을 성공적으로 빌드했습니다. [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation) 리포지토리에서 이 자습서의 소스 코드를 찾을 수 있습니다.
 
 ## <a name="improve-your-model"></a>모델 개선
 
 보다 정확한 예측을 할 수 있도록 모델의 성능을 개선할 수 있는 몇 가지 방법이 있습니다.
 
-### <a name="data"></a>데이터
+### <a name="data"></a>Data
 
 각 사용자 및 영화 id에 대한 충분한 샘플이 있는 학습 데이터를 추가하면 권장 모델의 품질을 개선하는 데 도움이 될 수 있습니다.
 
@@ -457,13 +457,13 @@ var options = new MatrixFactorizationTrainer.Options
 
 공동 작업 필터링의 일반적인 문제 중 하나는 추론을 도출할 이전 데이터가 없는 새로운 사용자가 있을 때 발생하는 콜드 시작 문제입니다. 이 문제는 종종 새로운 사용자에게 프로필을 만들고 이전에 시청한 영화를 평가하도록 요청함으로써 해결됩니다. 이 메서드는 사용자에 다소 부담을 주지만 등급 기록이 없는 새로운 사용자에 대한 일부 시작 데이터를 제공합니다.
 
-## <a name="resources"></a>자료
+## <a name="resources"></a>리소스
 
 이 자습서에 사용된 데이터는 [MovieLens 데이터 세트](http://files.grouplens.org/datasets/movielens/)에서 파생되었습니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-본 자습서에서는 다음 작업에 관한 방법을 학습했습니다.
+이 자습서에서는 다음 방법에 대해 알아보았습니다.
 
 > [!div class="checklist"]
 > * 기계 학습 알고리즘 선택

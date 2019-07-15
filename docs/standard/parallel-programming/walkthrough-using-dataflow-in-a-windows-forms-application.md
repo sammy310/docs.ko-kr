@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0c9447e53a874da856eb59932ec3871a9a1371d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f4f8e25edb7d61e21406a5f7719f6dc98f686a9e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654421"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755056"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>연습: Windows Forms 애플리케이션에서 데이터 흐름 사용
 이 문서에서는 Windows Forms 애플리케이션에서 이미지 처리를 수행하는 데이터 흐름 블록의 네트워크를 만드는 방법을 보여 줍니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "64654421"
 ## <a name="creating-the-windows-forms-application"></a>Windows Forms 애플리케이션 만들기  
  이 섹션에서는 기본 Windows Forms 애플리케이션을 만들고 기본 폼에 컨트롤을 추가하는 방법을 설명합니다.  
   
-#### <a name="to-create-the-windows-forms-application"></a>Windows Forms 애플리케이션을 만들려면  
+### <a name="to-create-the-windows-forms-application"></a>Windows Forms 애플리케이션을 만들려면  
   
 1. Visual Studio에서 Visual C# 또는 Visual Basic **Windows Forms 애플리케이션** 프로젝트를 만듭니다. 이 문서에서 프로젝트 이름은 `CompositeImages`입니다.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "64654421"
 ## <a name="creating-the-dataflow-network"></a>데이터 흐름 네트워크 만들기  
  이 섹션에서는 이미지 처리를 수행하는 데이터 흐름 네트워크를 만드는 방법을 설명합니다.  
   
-#### <a name="to-create-the-dataflow-network"></a>데이터 흐름 네트워크를 만들려면  
+### <a name="to-create-the-dataflow-network"></a>데이터 흐름 네트워크를 만들려면  
   
 1. 프로젝트에 System.Threading.Tasks.Dataflow.dll에 대한 참조를 추가합니다.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "64654421"
 ## <a name="connecting-the-dataflow-network-to-the-user-interface"></a>사용자 인터페이스에 데이터 흐름 네트워크 연결  
  이 섹션에서는 사용자 인터페이스에 데이터 흐름 네트워크를 연결하는 방법에 대해 설명합니다. 복합 이미지 생성 및 작업 취소는 **폴더 선택** 및 **취소** 단추에서 시작됩니다. 사용자가 이러한 단추 중 하나를 선택하면 해당 작업이 비동기식으로 시작됩니다.  
   
-#### <a name="to-connect-the-dataflow-network-to-the-user-interface"></a>사용자 인터페이스에 데이터 흐름 네트워크를 연결하려면  
+### <a name="to-connect-the-dataflow-network-to-the-user-interface"></a>사용자 인터페이스에 데이터 흐름 네트워크를 연결하려면  
   
 1. 기본 폼의 폼 디자이너에서 **폴더 선택** 단추에 대한 <xref:System.Windows.Forms.ToolStripItem.Click> 이벤트의 이벤트 처리기를 만듭니다.  
   
