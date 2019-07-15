@@ -3,12 +3,12 @@ title: C#의 숫자 - C# 소개 자습서
 description: 숫자 형식, 해당 속성 및 메서드를 살펴보면서 C#을 학습합니다.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 65b31c29fa9662619f92efb7977577f12d23fb30
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: d95d5ce16abadf441158b7f8af93acc73b154e99
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423416"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661061"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>C\#에서 정수 및 부동 소수점 수 조작
 
@@ -321,7 +321,7 @@ Console.WriteLine(c / d);
 다음 항목에서는 C#의 숫자에 대해 더 자세히 알아볼 수 있습니다.
 
 - [정수 형식](../../language-reference/builtin-types/integral-numeric-types.md)
-- [부동 소수점 형식 표](../../language-reference/keywords/floating-point-types-table.md)
+- [부동 소수점 형식 표](../../language-reference/builtin-types/floating-point-numeric-types.md)
 - [기본 제공 형식 표](../../language-reference/keywords/built-in-types-table.md)
 - [암시적 숫자 변환 표](../../language-reference/keywords/implicit-numeric-conversions-table.md)
 - [명시적 숫자 변환 표](../../language-reference/keywords/explicit-numeric-conversions-table.md)

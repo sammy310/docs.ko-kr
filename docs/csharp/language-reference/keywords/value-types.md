@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 9907811a43f408020e2ee76621d4975a53945570
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: fd865f2a9c4a6d2c17f79a21866103a2db982e5f
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424026"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661585"
 ---
 # <a name="value-types-c-reference"></a>값 형식(C# 참조)
 
@@ -41,7 +41,7 @@ ms.locfileid: "67424026"
 *단순 형식*은 C#에서 제공하는 미리 정의된 구조체 형식 세트이며, 다음과 같은 형식으로 구성됩니다.
 
 - [정수 형식](../builtin-types/integral-numeric-types.md): 정수 숫자 형식 및 [char](char.md) 형식
-- [부동 소수점 형식](floating-point-types-table.md)
+- [부동 소수점 형식](../builtin-types/floating-point-numeric-types.md)
 - [bool](bool.md)
 
 단순 형식은 키워드를 통해 식별되지만, 이러한 키워드는 단순히 <xref:System> 네임스페이스에 미리 정의된 구조체 형식의 별칭입니다. 예를 들어 [int](../builtin-types/integral-numeric-types.md)는 <xref:System.Int32?displayProperty=nameWithType>의 별칭입니다. 별칭의 전체 목록은 [기본 제공 형식 표](built-in-types-table.md)를 참조하세요.
@@ -93,7 +93,7 @@ int myInt = 0;
 사용자 정의 형식의 경우 [new](../operators/new-operator.md)를 사용하여 매개 변수 없는 생성자를 호출합니다. 예를 들어 다음 명령문은 `Point` 구조체의 매개 변수 없는 생성자를 호출합니다.
 
 ```csharp
-Point p = new Point(); // Invoke parameterless constructor for the struct.
+var p = new Point(); // Invoke parameterless constructor for the struct.
 ```
 
 이 호출 후에는 구조체가 한정적으로 할당된 것으로 간주됩니다. 즉, 모든 멤버가 기본값으로 초기화됩니다.

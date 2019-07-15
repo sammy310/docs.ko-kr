@@ -3,12 +3,12 @@ title: C# 형식 및 변수 - C# 언어 둘러보기
 description: C#에서 형식 정의 및 변수 선언에 대한 자세한 정보
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: a3f31eca296265c1e7f0c14a9540e267a2165ec1
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: f06894d986973e4394b0586906d67ef41a9d9152
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423450"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661063"
 ---
 # <a name="types-and-variables"></a>형식 및 변수
 
@@ -55,7 +55,7 @@ C#의 값 형식은 *단순 형식*, *열거형 형식*, *구조체 형식* 및 
 [DelegateTypes]: ../language-reference/keywords/delegate.md
 [ArrayTypes]: ../programming-guide/arrays/index.md
 
-숫자 형식에 대한 자세한 내용은 [정수 형식](../language-reference/builtin-types/integral-numeric-types.md) 및 [부동 소수점 형식 표](../language-reference/keywords/floating-point-types-table.md)를 참조하세요.
+숫자 형식에 대한 자세한 내용은 [정수 형식](../language-reference/builtin-types/integral-numeric-types.md) 및 [부동 소수점 형식 표](../language-reference/builtin-types/floating-point-numeric-types.md)를 참조하세요.
 
 C#의 `bool` 형식은 부울 값, 즉 `true` 또는 `false`를 나타내는 데 사용됩니다.
 

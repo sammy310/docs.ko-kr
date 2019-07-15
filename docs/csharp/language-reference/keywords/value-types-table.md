@@ -7,12 +7,12 @@ helpviewer_keywords:
 - types [C#], value types
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: 98829f30c2c25c0710cf3fe044359d3c7538fe76
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 2e2897ff647140b58b3a1812e153a44a6fcdaef7
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424045"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859568"
 ---
 # <a name="value-types-table-c-reference"></a>값 형식 표(C# 참조)
 
@@ -21,21 +21,20 @@ ms.locfileid: "67424045"
 |값 형식|범주|형식 접미사|
 |----------------|--------------|-----------------|
 |[bool](bool.md)|부울||
-|[byte](../builtin-types/integral-numeric-types.md)|부호 없음, 숫자, [정수](../builtin-types/integral-numeric-types.md)||
+|`byte`|부호 없음, 숫자, [정수](../builtin-types/integral-numeric-types.md)||
 |[char](char.md)|부호 없음, 숫자, [정수](../builtin-types/integral-numeric-types.md)
-)||
-|[decimal](decimal.md)|숫자, [부동 소수점](floating-point-types-table.md)|M 또는 m|
-|[double](double.md)|숫자, [부동 소수점](floating-point-types-table.md)|D 또는 d|
+|`decimal`|숫자, [부동 소수점](../builtin-types/floating-point-numeric-types.md)|M 또는 m|
+|`double`|숫자, [부동 소수점](../builtin-types/floating-point-numeric-types.md)|D 또는 d|
 |[enum](enum.md)|열거형||
-|[float](float.md)|숫자, [부동 소수점](floating-point-types-table.md)|F 또는 f|
-|[int](../builtin-types/integral-numeric-types.md)|부호 있음, 숫자, [정수](../builtin-types/integral-numeric-types.md)||
-|[long](../builtin-types/integral-numeric-types.md)|부호 있음, 숫자, [정수](../builtin-types/integral-numeric-types.md)|L 또는 l|
-|[sbyte](../builtin-types/integral-numeric-types.md)|부호 있음, 숫자, [정수](../builtin-types/integral-numeric-types.md)||
-|[short](../builtin-types/integral-numeric-types.md)|부호 있음, 숫자, [정수](../builtin-types/integral-numeric-types.md)||
+|`float`|숫자, [부동 소수점](../builtin-types/floating-point-numeric-types.md)|F 또는 f|
+|`int`|부호 있음, 숫자, [정수](../builtin-types/integral-numeric-types.md)||
+|`long`|부호 있음, 숫자, [정수](../builtin-types/integral-numeric-types.md)|L 또는 l|
+|`sbyte`|부호 있음, 숫자, [정수](../builtin-types/integral-numeric-types.md)||
+|`short`|부호 있음, 숫자, [정수](../builtin-types/integral-numeric-types.md)||
 |[struct](struct.md)|사용자 정의 구조||
-|[uint](../builtin-types/integral-numeric-types.md)|부호 없음, 숫자, [정수](../builtin-types/integral-numeric-types.md)|U 또는 u|
-|[ulong](../builtin-types/integral-numeric-types.md)|부호 없음, 숫자, [정수](../builtin-types/integral-numeric-types.md)|UL, Ul, uL, ul, LU, Lu, lU 또는 lu|
-|[ushort](../builtin-types/integral-numeric-types.md)|부호 없음, 숫자, [정수](../builtin-types/integral-numeric-types.md)||
+|`uint`|부호 없음, 숫자, [정수](../builtin-types/integral-numeric-types.md)|U 또는 u|
+|`ulong`|부호 없음, 숫자, [정수](../builtin-types/integral-numeric-types.md)|UL, Ul, uL, ul, LU, Lu, lU 또는 lu|
+|`ushort`|부호 없음, 숫자, [정수](../builtin-types/integral-numeric-types.md)||
 
 ## <a name="remarks"></a>설명
 

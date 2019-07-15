@@ -3,12 +3,12 @@ title: private protected - C# 참조
 ms.custom: seodec18
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: 35b7c6c4e271b7772968ad63926fe1e66b10a6fa
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c739dd0b5a5457a66c11962ed86bcd2ffbf811ab
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633344"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661685"
 ---
 # <a name="private-protected-c-reference"></a>private protected (C# Reference)
 
@@ -17,7 +17,7 @@ ms.locfileid: "65633344"
 > [!NOTE]
 > `private protected` 액세스 한정자는 C# 7.2 버전에서 유효합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 기본 클래스의 private protected 멤버는 변수의 정적 형식이 파생 클래스 형식인 경우에만 포함 어셈블리의 파생된 형식에서 액세스할 수 있습니다. 예를 들어 다음 코드 세그먼트를 고려하세요.  
 
@@ -33,7 +33,7 @@ public class DerivedClass1 : BaseClass
 {
     void Access()
     {
-        BaseClass baseObject = new BaseClass();
+        var baseObject = new BaseClass();
 
         // Error CS1540, because myValue can only be accessed by
         // classes derived from BaseClass.
