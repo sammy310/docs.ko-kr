@@ -2,12 +2,12 @@
 title: Azure 클라우드를 사용하여 기존.NET 응용 프로그램과 Windows 컨테이너를 최신으로 변경하기 (2 판)
 description: 리프트 앤 시프트 및 Azure 클라우드 및 이 전자책을 사용하여 컨테이너에 기존 응용 프로그램을 최신으로 변경하는 방법을 알아봅니다.
 ms.date: 04/28/2018
-ms.openlocfilehash: 79e06c64867a7e1bb6c5d7da718886a713cb3c4c
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 4e632fcfbb8904a9def3fdad992286055c5df4f0
+ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834004"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67870593"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Azure 클라우드와 Windows 컨테이너를 사용하여 기존.NET 응용 프로그램을 최신으로 변경하기 (2 판)
 
@@ -98,7 +98,7 @@ All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 �
 | **장점**|
 | <li>재설계, 새로운 코드 불필요 <li> 최소한의 작업으로 빠른 마이그레이션 가능 <li> Azure에서 지원되는 공통점 <li> 기본 가용성 보장 <li> 클라우드로 이동 후  아주 쉬운 최신화 | <li> 재설계 불필요 <li> 최소한의 코드 및 구성 변경 <li> 컨테이너로 인해 향상된 배포와 DevOps 릴리스 민첩성 <li> 밀도 증가 및 배포 비용 감소 <li> 앱 및 종속성의 이식성 <li> 호스트 대상의 유연성 : PaaS나 IaaS 방식 | <li> 클라우드용 설계, 클리우드에서 최고의 이득을 얻을 수 있으나 새로운 코드 필요 <li> 마이크로 서비스 클라우드 전용 접근법 <li> 최신 중요 업무용 응용 프로그램, 클라우드 복원력이 있는 매우 뛰어난 확장성 <li> 완벽하게 관리되는 서비스 <li> 규모에 최적화 <li> 하위 시스템에 의한 자율적인 민첩성 최적화 <li> 배포 및 DevOps 기반 |
 | **당면 과제** |
-| <li> 운영 비용이나 데이터 센터 폐쇄가 아닌 클라우드 가격 축소 <li> 관리가 어려움: OS나 미들웨어 패치 없음. Terraform이나 Spinnaker, Puppet 같은 인프라 솔루션을 사용할 수 있음. | <li> 컨테이너화는 개발자와 IT 운영에 대한 학습 곡선의 단계를 증가시킴 <li> DevOps 및 CI/CD 파이프라인은 일반적으로 이러한 방식에서 반드시 필요하며, 현재 조직에 없다면 추가적인 당면 과제입니다.| <li> 클라우드 네이티브 앱과 마이크로 서비스 아키텍처의 재개발이 필요하며 일반적으로 최신으로 변경하는 경우 상당한 코드 리팩터링이나 재작성이 필요합니다(시간 및 예산 증가). <li> DevOps 및 CI/CD 파이프라인은 일반적으로 이러한 방식에서 반드시 필요하며, 현재 조직에 없다면 추가적인 당면 과제입니다.|
+| <li> 운영 비용이나 데이터 센터 폐쇄가 아닌 클라우드 가격 축소 <li> 관리가 어려움: OS나 미들웨어 패치 없음. Terraform이나 Spinnaker, Puppet 같은 인프라 솔루션을 사용할 수 있음. | <li> 컨테이너화는 개발자와 IT 운영에 대한 학습 곡선의 단계를 증가시킴 <li> DevOps 및 CI/CD 파이프라인 야 하는 일반적으로 '는 '이 접근 방식에 대 한 합니다. 현재 조직에 없다면 추가적인 당면 과제입니다.| <li> 클라우드 네이티브 앱과 마이크로 서비스 아키텍처의 재개발이 필요하며 일반적으로 최신으로 변경하는 경우 상당한 코드 리팩터링이나 재작성이 필요합니다(시간 및 예산 증가).|
 > **표 1-1.** 기존 .NET 애플리케이션과 서비스를 최신으로 변경하는 방법의 이점 및 당면 과제
 
 ### <a name="key-technologies-and-architectures-by-maturity-level"></a>성숙도별 핵심 기술 및 아키텍처
