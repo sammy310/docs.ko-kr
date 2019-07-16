@@ -203,6 +203,14 @@
     - name: 자습서
       href: core/tutorials/index.md
       items:
+        - name: CLI용 템플릿
+          items:
+            - name: 1 - 항목 템플릿 만들기
+              href: core/tutorials/cli-templates-create-item-template.md
+            - name: 2 - 프로젝트 템플릿 만들기
+              href: core/tutorials/cli-templates-create-project-template.md
+            - name: 3 - 템플릿 팩 만들기
+              href: core/tutorials/cli-templates-create-template-pack.md
         - name: macOS에서 .NET Core 시작
           href: core/tutorials/using-on-macos.md
         - name: Mac용 Visual Studio를 사용하여 macOS에서 .NET Core 시작
@@ -219,8 +227,6 @@
           href: core/tutorials/aspnet-core.md
         - name: 네이티브 코드에서 .NET Core 호스팅
           href: core/tutorials/netcore-hosting.md
-        - name: dotnet new에 대한 사용자 지정 템플릿 만들기
-          href: core/tutorials/create-custom-template.md
     - name: '패키지, 메타패키지 및 프레임워크'
       href: core/packages.md
     - name: CLI의 변경 내용 개요

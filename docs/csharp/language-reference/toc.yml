@@ -34,16 +34,11 @@
                   href: keywords/reference-types.md
                 - name: 클래스
                   href: keywords/class.md
-                - name: 대리자(delegate)
-                  href: keywords/delegate.md
-                - name: dynamic
-                  href: keywords/dynamic.md
+                - name: 기본 제공 참조 형식
+                  displayName: 'object, delegate, dynamic, string'
+                  href: builtin-types/reference-types.md
                 - name: interface(인터페이스)
                   href: keywords/interface.md
-                - name: object
-                  href: keywords/object.md
-                - name: string
-                  href: keywords/string.md
             - name: void
               href: keywords/void.md
             - name: var
