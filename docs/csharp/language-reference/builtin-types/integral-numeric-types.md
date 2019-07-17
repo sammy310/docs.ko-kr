@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: bde0b7cea52951cd72bde6cfd7d8f1c7dbcb8f46
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 0a1ed01d9e6cb86ea177e8b947627f9dc02eedae
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425598"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744221"
 ---
 # <a name="integral-numeric-types--c-reference"></a>정수 숫자 형식(C# 참조)
 
@@ -76,14 +76,14 @@ var binaryLiteral = 0b_0010_1010;
 
 10진수 리터럴에는 어떤 접두사도 필요하지 않습니다. `x` 또는 `X` 접두사는 *16진수 리터럴*을 의미합니다. `b` 또는 `B` 접두사는 *이진 리터럴*을 의미합니다. `binaryLiteral`의 선언은 `_`을(를) *숫자 구분 기호*로 사용하는 것을 보여줍니다. 숫자 구분 기호는 모든 숫자 리터럴과 함께 사용할 수 있습니다. 이진 리터럴 및 숫자 구분 기호 `_`은(는) C# 7.0부터 지원됩니다.
 
-## <a name="literal-suffixes"></a>리터럴 접미사 
+### <a name="literal-suffixes"></a>리터럴 접미사 
 
-`l` 또는 `L` 접미사는 정수 리터럴이 `long` 유형이어야 함을 지정합니다. `ul` 또는 `UL` 접미사는 `ulong` 유형을 지정합니다. `L` 접미사가 9,223,372,036,854,775,807(`long`의 최댓값)보다 큰 리터럴에서 사용되는 경우 `ulong` 유형으로 변환됩니다. 정수 리터럴로 표시되는 값이 <xref:System.UInt64.MaxValue?displayProperty=nameWithType>를 초과하면 컴파일 오류 [CS1021](../../misc/cs1021.md)이 발생합니다. 
+`l` 또는 `L` 접미사는 정수 리터럴이 `long` 유형이어야 함을 지정합니다. `ul` 또는 `UL` 접미사는 `ulong` 유형을 지정합니다. `L` 접미사가 9,223,372,036,854,775,807(`long`의 최댓값)보다 큰 리터럴에서 사용되는 경우 `ulong` 유형으로 변환됩니다. 정수 리터럴로 표시되는 값이 <xref:System.UInt64.MaxValue?displayProperty=nameWithType>을 초과하면 컴파일 오류 [CS1021](../../misc/cs1021.md)이 발생합니다. 
 
 > [!NOTE]
 > 소문자 "l"을 접미사로 사용할 수 있습니다. 그러나 이렇게 하면 문자 "l"과 숫자 "1"을 혼동하기 쉬우므로 컴파일러 경고가 생성됩니다. 쉽게 구별할 수 있도록 "L"을 사용합니다.
 
-## <a name="type-of-an-integral-literal"></a>정수 리터럴 유형
+### <a name="type-of-an-integral-literal"></a>정수 리터럴 유형
 
 정수 리터럴에 접미사가 없는 경우 해당 형식은 값이 표현될 수 있는 다음 형식 중 첫 번째 형식입니다.
 
@@ -118,8 +118,16 @@ var anotherLong = (long)42;
 
 - [C# 언어 사양 - 정수 형식](~/_csharplang/spec/types.md#integral-types)
 - [C# 참조](../index.md)
-- [부동 소수점 형식 표](../keywords/floating-point-types-table.md)
+- [부동 소수점 형식](floating-point-numeric-types.md)
 - [기본값 표](../keywords/default-values-table.md)
 - [숫자 결과 형식 지정 표](../keywords/formatting-numeric-results-table.md)
 - [기본 제공 형식 표](../keywords/built-in-types-table.md)
 - [.NET의 숫자](../../../standard/numerics.md)
+- <xref:System.Byte?displayProperty=nameWithType>
+- <xref:System.SByte?displayProperty=nameWithType>
+- <xref:System.Int16?displayProperty=nameWithType>
+- <xref:System.UInt16?displayProperty=nameWithType>
+- <xref:System.Int32?displayProperty=nameWithType>
+- <xref:System.UInt32?displayProperty=nameWithType>
+- <xref:System.Int64?displayProperty=nameWithType>
+- <xref:System.UInt64?displayProperty=nameWithType>

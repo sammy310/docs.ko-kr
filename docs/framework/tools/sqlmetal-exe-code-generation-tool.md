@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: d2ee9537df540936e0a5ec448e6aaddbbbc162b1
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 56fed00ec049fd2746d5b07b9926b8abda998260
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610548"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742434"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe(코드 생성 도구)
 SqlMetal 명령줄 도구는 .NET Framework의 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 구성 요소에 사용할 코드 및 매핑을 생성합니다. 이 항목의 뒷부분에 나오는 옵션을 적용하면 SqlMetal을 통해 다음을 포함하는 다양한 작업을 수행할 수 있습니다.  
@@ -28,7 +28,7 @@ SqlMetal 명령줄 도구는 .NET Framework의 [!INCLUDE[vbtecdlinq](../../../in
  이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 기본적으로 이 파일은 `drive`:\Program Files\Microsoft SDKs\Windows\v`n.nn`\bin에 있습니다. Visual Studio를 설치하지 않으면 [Windows SDK](https://go.microsoft.com/fwlink/?LinkId=142225)를 다운로드하여 SQLMetal 파일도 가져올 수 있습니다.  
   
 > [!NOTE]
->  [!INCLUDE[vs_ordesigner_long](../../../includes/vs-ordesigner-long-md.md)] 를 사용하는 개발자는 Visual Studio를 사용하여 엔터티 클래스를 생성할 수도 있습니다. 명령줄 방식을 사용하면 대규모 데이터베이스에 대해 효율적으로 크기를 조정할 수 있습니다. SqlMetal은 명령줄 도구이므로 빌드 프로세스에서 사용할 수 있습니다.  
+>  Visual Studio를 사용하는 개발자는 개체 관계형 디자이너를 사용하여 엔터티 클래스를 생성할 수도 있습니다. 명령줄 방식을 사용하면 대규모 데이터베이스에 대해 효율적으로 크기를 조정할 수 있습니다. SqlMetal은 명령줄 도구이므로 빌드 프로세스에서 사용할 수 있습니다.  
   
  이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 참조하세요. 명령 프롬프트에 다음을 입력합니다.  
   
@@ -77,7 +77,7 @@ sqlmetal [options] [<input file>]
 |**/context:** *\<type>*|데이터 컨텍스트 클래스의 이름을 지정합니다. 기본값: 데이터베이스 이름에서 파생됩니다.|  
 |**/entitybase:** *\<type>*|생성된 코드에서 엔터티 클래스의 기본 클래스를 지정합니다. 기본값: 엔터티에 기본 클래스가 없습니다.|  
 |**/pluralize**|클래스 및 멤버 이름을 자동으로 복수 및 단수로 지정합니다.<br /><br /> 이 옵션은 미국에서만 사용할 수 있습니다. 영어 버전입니다.|  
-|**/serialization:** *\<option>*|serialize 가능한 클래스를 생성합니다.<br /><br /> Valid *\<option>* : None, Unidirectional. 기본값: 없음<br /><br /> 자세한 내용은 [Serialization](../../../docs/framework/data/adonet/sql/linq/serialization.md)을 참조하세요.|  
+|**/serialization:** *\<option>*|serialize 가능한 클래스를 생성합니다.<br /><br /> Valid *\<option>* : None, Unidirectional. 기본값: 없음.<br /><br /> 자세한 내용은 [Serialization](../../../docs/framework/data/adonet/sql/linq/serialization.md)을 참조하세요.|  
   
  **입력 파일**  
   
@@ -108,7 +108,7 @@ sqlmetal [options] [<input file>]
   
  입력 파일 이름을 지정하려면 이름을 명령줄에 입력 파일로 추가합니다. **/conn** 옵션을 사용하여 연결 문자열에 파일 이름을 포함할 수는 없습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  추출된 SQL 메타데이터를 포함하는 .dbml 파일을 생성합니다.  
   
  **sqlmetal /server:myserver /database:northwind /dbml:mymeta.dbml**  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: f9085f2a550dfacc670857a70f5b22de9e028107
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: ec2012a256214dc5f3fb144f1d828634553742c2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610596"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744092"
 ---
 # <a name="operator-overloading-c-reference"></a>연산자 오버로드(C# 참조)
 
@@ -27,6 +27,10 @@ ms.locfileid: "67610596"
 
 [!code-csharp[fraction example](~/samples/csharp/language-reference/operators/OperatorOverloading.cs)]
 
+암시적 변환을 `int`에서 `Fraction`으로 정의하여 앞의 예제를 확장할 수 있습니다. 그런 다음, 오버로드된 연산자는 해당 두 형식의 인수를 지원합니다. 즉, 분수에 정수를 추가하고 그 결과로 분수를 얻을 수 있습니다.
+
+또한 `operator` 키워드를 사용하여 사용자 지정 형식 변환을 정의합니다. 자세한 내용은 [사용자 정의 변환 연산자](user-defined-conversion-operators.md)를 참조하세요.
+
 ## <a name="overloadable-operators"></a>오버로드할 수 있는 연산자
 
 다음 표는 C# 연산자의 오버로드 가능성에 대한 정보를 제공합니다.
@@ -37,7 +41,7 @@ ms.locfileid: "67610596"
 |[+](addition-operator.md), [-](subtraction-operator.md), [\*](arithmetic-operators.md#multiplication-operator-), [/](arithmetic-operators.md#division-operator-), [%](arithmetic-operators.md#remainder-operator-), [&](boolean-logical-operators.md#logical-and-operator-), [&#124;](boolean-logical-operators.md#logical-or-operator-), [^](boolean-logical-operators.md#logical-exclusive-or-operator-), [\<\<](bitwise-and-shift-operators.md#left-shift-operator-), [>>](bitwise-and-shift-operators.md#right-shift-operator-), [==](equality-operators.md#equality-operator-), [!=](equality-operators.md#inequality-operator-), [\<](comparison-operators.md#less-than-operator-), [>](comparison-operators.md#greater-than-operator-), [\<=](comparison-operators.md#less-than-or-equal-operator-), [>=](comparison-operators.md#greater-than-or-equal-operator-)|이러한 이항 연산자는 오버로드할 수 있습니다. 특정 연산자는 쌍으로 오버로드되어야 합니다. 자세한 내용은 이 표 다음에 나오는 참고 사항을 참조하세요.|
 |[&&](boolean-logical-operators.md#conditional-logical-and-operator-), [&#124;&#124;](boolean-logical-operators.md#conditional-logical-or-operator-)|조건부 논리 연산자는 오버로드할 수 없습니다. 그러나 오버로드된 [`true` 및 `false` 연산자](true-false-operators.md)가 있는 형식도 특정 방식으로 `&` 또는 <code>&#124;</code> 연산자를 오버로드하는 경우, `&&` 또는 <code>&#124;&#124;</code> 연산자는 각각 해당 유형의 피연산자에 대해 평가될 수 있습니다. 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [사용자 정의 조건부 논리 연산자](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) 섹션을 참조하세요.|
 |[&#91;&#93;](member-access-operators.md#indexer-operator-)|요소 액세스는 오버로드 가능한 연산자로 간주되지 않지만 [인덱서](../../programming-guide/indexers/index.md)를 정의할 수 있습니다.|
-|[(T)x](type-testing-and-conversion-operators.md#cast-operator-)|캐스트 연산자는 오버로드할 수 없지만 새 변환 연산자를 정의할 수 있습니다([explicit](../keywords/explicit.md) 및 [implicit](../keywords/implicit.md) 참조).|
+|[(T)x](type-testing-and-conversion-operators.md#cast-operator-)|캐스트 연산자는 오버로드할 수 없지만 새 변환 연산자를 정의할 수 있습니다. 자세한 내용은 [사용자 정의 변환 연산자](user-defined-conversion-operators.md)를 참조하세요.|
 |[+=](arithmetic-operators.md#compound-assignment), [-=](arithmetic-operators.md#compound-assignment), [\*=](arithmetic-operators.md#compound-assignment), [/=](arithmetic-operators.md#compound-assignment), [%=](arithmetic-operators.md#compound-assignment), [&=](boolean-logical-operators.md#compound-assignment), [&#124;=](boolean-logical-operators.md#compound-assignment), [^=](boolean-logical-operators.md#compound-assignment), [\<\<=](bitwise-and-shift-operators.md#compound-assignment), [>>=](bitwise-and-shift-operators.md#compound-assignment)|복합 할당 연산자를 명시적으로 오버로드할 수 없습니다. 그러나 이항 연산자가 오버로드되면 해당 복합 할당 연산자(있는 경우)도 암시적으로 오버로드됩니다. 예를 들어 `+=`는 오버로드될 수 있는 `+`를 사용하여 계산됩니다.|
 |[=](assignment-operator.md), [.](member-access-operators.md#member-access-operator-), [?:](conditional-operator.md), [??](null-coalescing-operator.md), [->](pointer-related-operators.md#pointer-member-access-operator--), [=>](lambda-operator.md), [f(x)](member-access-operators.md#invocation-operator-), [as](type-testing-and-conversion-operators.md#as-operator), [checked](../keywords/checked.md), [unchecked](../keywords/unchecked.md), [default](../../programming-guide/statements-expressions-operators/default-value-expressions.md), [delegate](../../programming-guide/statements-expressions-operators/anonymous-methods.md), [is](type-testing-and-conversion-operators.md#is-operator), [nameof](../keywords/nameof.md), [new](new-operator.md), [sizeof](../keywords/sizeof.md), [typeof](type-testing-and-conversion-operators.md#typeof-operator)|이러한 연산자는 오버로드할 수 없습니다.|
 
@@ -59,4 +63,5 @@ ms.locfileid: "67610596"
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)
+- [사용자 정의 전환 연산자](user-defined-conversion-operators.md)
 - [Why are overloaded operators always static in C#?](https://blogs.msdn.microsoft.com/ericlippert/2007/05/14/why-are-overloaded-operators-always-static-in-c/)(오버로드된 연산자가 C#에서 항상 정적인 이유)

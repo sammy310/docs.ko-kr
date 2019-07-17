@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9bb3120887a1a42d01b8d8ddc3351d1209294ffc
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 5e77fac49db4a2faadb5785c4ef15e401f340d8b
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677567"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663978"
 ---
 # <a name="regular-expression-options"></a>정규식 옵션
 
 <a name="Top"></a> 기본적으로 입력 문자열을 정규식 패턴의 리터럴 문자와 비교할 때는 대/소문자를 구분하고, 정규식 패턴의 공백은 리터럴 공백 문자로 해석되며, 정규식의 캡처링 그룹은 명시적 및 암시적으로 명명됩니다. 정규식 옵션을 지정하여 기본 정규식 동작의 이러한 측면과 몇 가지 다른 측면을 수정할 수 있습니다. 다음 테이블에 나열되어 있는 이러한 옵션은 정규식 패턴의 일부로 인라인으로 포함되거나, <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 클래스 생성자 또는 정적 패턴 일치 메서드에 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 열거형 값으로 제공될 수 있습니다.
 
-|RegexOptions 멤버|인라인 문자|효과|
+|RegexOptions 멤버|인라인 문자|결과|
 |-------------------------|----------------------|------------|
 |<xref:System.Text.RegularExpressions.RegexOptions.None>|사용할 수 없음|기본 동작을 사용합니다. 자세한 내용은 [기본 옵션](#Default)을 참조하세요.|
 |<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>|`i`|대/소문자를 구분하지 않는 일치를 사용합니다. 자세한 내용은 [대/소문자를 구분하지 않는 일치](#Case)를 참조하세요.|
@@ -44,26 +44,26 @@ ms.locfileid: "57677567"
 
 - `options` 클래스 생성자 또는 정적(Visual Basic의 경우 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>) 패턴 일치 메서드(예: `Shared` 또는 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>)의 <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 매개 변수에 지정합니다. `options` 매개 변수는 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 열거형 값의 비트 OR 조합입니다.
 
-    클래스 생성자의 `options` 매개 변수를 사용하여 <xref:System.Text.RegularExpressions.Regex> 인스턴스에 옵션을 제공하면 해당 옵션이 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 속성에 할당됩니다. 그러나 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 속성은 정규식 패턴 자체에 인라인 옵션을 반영하지는 않습니다.
+  클래스 생성자의 `options` 매개 변수를 사용하여 <xref:System.Text.RegularExpressions.Regex> 인스턴스에 옵션을 제공하면 해당 옵션이 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 속성에 할당됩니다. 그러나 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 속성은 정규식 패턴 자체에 인라인 옵션을 반영하지는 않습니다.
 
-    다음 예제에서 이에 대해 설명합니다. 이 예제에서는 `options` 메서드의 <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 매개 변수를 사용하여 대/소문자를 구분하지 않는 일치를 사용하도록 설정하고 문자 "d"로 시작하는 단어를 식별할 때 패턴 공백을 무시합니다.
+  다음 예제에서 이에 대해 설명합니다. 이 예제에서는 `options` 메서드의 <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 매개 변수를 사용하여 대/소문자를 구분하지 않는 일치를 사용하도록 설정하고 문자 "d"로 시작하는 단어를 식별할 때 패턴 공백을 무시합니다.
 
-    [!code-csharp[Conceptual.Regex.Language.Options#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#6)]
-    [!code-vb[Conceptual.Regex.Language.Options#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#6)]
+  [!code-csharp[Conceptual.Regex.Language.Options#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#6)]
+  [!code-vb[Conceptual.Regex.Language.Options#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#6)]
 
 - `(?imnsx-imnsx)` 구문을 사용하여 정규식 패턴에 인라인 옵션을 적용합니다. 이 옵션은 옵션이 정의된 지점에서 패턴의 끝 부분까지 또는 다른 인라인 옵션에 의해 옵션이 정의되지 않은 지점까지 패턴에 적용됩니다. <xref:System.Text.RegularExpressions.Regex> 인스턴스의 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 속성은 이러한 인라인 옵션을 반영하지 않습니다. 자세한 내용은 [기타 구문](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md) 항목을 참조하세요.
 
-    다음 예제에서 이에 대해 설명합니다. 이 예제에서는 인라인 옵션을 사용하여 대/소문자를 구분하지 않는 일치를 사용하도록 설정하고 문자 "d"로 시작하는 단어를 식별할 때 패턴 공백을 무시합니다.
+  다음 예제에서 이에 대해 설명합니다. 이 예제에서는 인라인 옵션을 사용하여 대/소문자를 구분하지 않는 일치를 사용하도록 설정하고 문자 "d"로 시작하는 단어를 식별할 때 패턴 공백을 무시합니다.
 
-    [!code-csharp[Conceptual.Regex.Language.Options#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#7)]
-    [!code-vb[Conceptual.Regex.Language.Options#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#7)]
+  [!code-csharp[Conceptual.Regex.Language.Options#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#7)]
+  [!code-vb[Conceptual.Regex.Language.Options#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#7)]
 
 - `(?imnsx-imnsx:`*subexpression*`)` 구문을 사용하여 정규식 패턴의 특정 그룹화 구문에 인라인 옵션을 적용합니다. 옵션 집합 앞에 기호가 없으면 집합이 설정되고, 옵션 집합 앞에 빼기 기호가 있으면 집합이 해제됩니다. `?`는 옵션의 사용 여부에 따라 필요한 언어 구문의 고정 부분입니다. 이 옵션은 해당 그룹에만 적용됩니다. 자세한 내용은 [그룹화 구문](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)을 참조하세요.
 
-    다음 예제에서 이에 대해 설명합니다. 이 예제에서는 그룹화 구문에 인라인 옵션을 사용하여 대/소문자를 구분하지 않는 일치를 사용하도록 설정하고 문자 "d"로 시작하는 단어를 식별할 때 패턴 공백을 무시합니다.
+  다음 예제에서 이에 대해 설명합니다. 이 예제에서는 그룹화 구문에 인라인 옵션을 사용하여 대/소문자를 구분하지 않는 일치를 사용하도록 설정하고 문자 "d"로 시작하는 단어를 식별할 때 패턴 공백을 무시합니다.
 
-    [!code-csharp[Conceptual.Regex.Language.Options#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#8)]
-    [!code-vb[Conceptual.Regex.Language.Options#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#8)]
+  [!code-csharp[Conceptual.Regex.Language.Options#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#8)]
+  [!code-vb[Conceptual.Regex.Language.Options#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#8)]
 
 옵션이 인라인으로 지정된 경우 옵션 또는 옵션 집합 앞에 빼기 기호(`-`)가 있으면 해당 옵션이 해제됩니다. 예를 들어, 인라인 구문 `(?ix-ms)`는 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 및 <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> 옵션을 설정하고 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 및 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 옵션을 해제합니다. 모든 정규식 옵션은 기본적으로 해제되어 있습니다.
 
@@ -114,7 +114,7 @@ ms.locfileid: "57677567"
 
 ## <a name="default-options"></a>기본 옵션
 
-<xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> 옵션은 지정된 옵션이 없고 정규식 엔진에서 해당 기본 동작을 사용함을 나타냅니다. 여기에는 다음과 같은 사항이 포함됩니다.
+<xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> 옵션은 지정된 옵션이 없고 정규식 엔진에서 해당 기본 동작을 사용함을 나타냅니다. 이 제품에는 다음이 포함됩니다.
 
 - 패턴이 ECMAScript 정규식이 아니라 정식으로 해석됩니다.
 
@@ -172,7 +172,7 @@ ms.locfileid: "57677567"
 
 정규식 패턴 `^(\w+)\s(\d+)\r*$`는 다음 테이블과 같이 정의됩니다.
 
-|무늬|설명|
+|패턴|설명|
 |-------------|-----------------|
 |`^`|줄의 시작 부분에서 시작합니다.|
 |`(\w+)`|하나 이상의 단어 문자를 찾습니다. 이 그룹은 첫 번째 캡처링 그룹입니다.|
@@ -229,7 +229,7 @@ ms.locfileid: "57677567"
 
 정규식 패턴 `\b\(?((?>\w+),?\s?)+[\.!?]\)?`는 다음 표와 같이 정의됩니다.
 
-|무늬|설명|
+|패턴|설명|
 |-------------|-----------------|
 |`\b`|단어 경계에서 시작합니다.|
 |`\(?`|0개 또는 1개의 여는 괄호("(")를 찾습니다.|
@@ -296,9 +296,9 @@ ms.locfileid: "57677567"
 
 - 언어 요소를 도입하는 문자 시퀀스 내에는 공백이 허용되지 않습니다. 예:
 
-    - 언어 요소 `(?:`*subexpression*`)`는 비 캡처링 그룹을 나타내고, 요소의 `(?:` 부분은 공백을 포함할 수 없습니다. `(? :`*subexpression*`)` 패턴은 정규식 엔진이 패턴을 구문 분석할 수 없고 `( ?:`*subexpression*`)` 패턴이 *subexpression*과 일치하지 않으므로 런타임에 <xref:System.ArgumentException>을 throw합니다.
+  - 언어 요소 `(?:`*subexpression*`)`는 비 캡처링 그룹을 나타내고, 요소의 `(?:` 부분은 공백을 포함할 수 없습니다. `(? :`*subexpression*`)` 패턴은 정규식 엔진이 패턴을 구문 분석할 수 없고 `( ?:`*subexpression*`)` 패턴이 *subexpression*과 일치하지 않으므로 런타임에 <xref:System.ArgumentException>을 throw합니다.
 
-    - 유니코드 범주 또는 명명된 블록을 나타내는 언어 요소 `\p{`*name*`}`는 요소의 `\p{` 부분에 공백을 포함할 수 없습니다. 공백을 포함하는 경우 이 요소가 런타임에 <xref:System.ArgumentException>을 throw합니다.
+  - 유니코드 범주 또는 명명된 블록을 나타내는 언어 요소 `\p{`*name*`}`는 요소의 `\p{` 부분에 공백을 포함할 수 없습니다. 공백을 포함하는 경우 이 요소가 런타임에 <xref:System.ArgumentException>을 throw합니다.
 
 이 옵션을 사용하면 일반적으로 구문 분석 및 이해가 어려운 정규식을 단순화하는 데 도움이 됩니다. 이 옵션은 가독성을 향상시키고 정규식을 문서화할 수 있게 해줍니다.
 
@@ -339,7 +339,7 @@ lookahead 어설션(`(?=`*subexpression*`)` 언어 요소) 및 lookbehind 어설
 
 이 정규식 패턴은 다음 테이블과 같이 정의됩니다.
 
-|무늬|설명|
+|패턴|설명|
 |-------------|-----------------|
 |`(?<=\d{1,2}\s)`|일치 항목의 시작 부분 앞에는 한 개 또는 두 개의 10진수와 그 뒤에 공백이 하나 있어야 합니다.|
 |`\w+`|하나 이상의 단어 문자를 찾습니다.|
@@ -364,32 +364,32 @@ ECMAScript의 동작과 정식 정규식의 동작은 문자 클래스 구문, �
 
 - 문자 클래스 구문. 정식 정규식은 유니코드를 지원하는 반면 ECMAScript는 지원하지 않으므로, ECMAScript의 문자 클래스의 구문이 더 제한되어 있으며 일부 문자 클래스 언어 요소는 다른 의미를 지닙니다. 예를 들어, ECMAScript는 유니코드 범주 또는 블록 요소 `\p` 및 `\P`와 같은 언어 요소를 지원하지 않습니다. 마찬가지로, 단어 문자와 일치하는 `\w` 요소는 ECMAScript를 사용할 경우 `[a-zA-Z_0-9]` 문자 클래스와 동일하고 정식 동작을 사용할 경우 `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]`와 동일합니다. 자세한 내용은 [문자 클래스](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)를 참조하세요.
 
-    다음 예제에서는 정식 패턴 일치와 ECMAScript 패턴 일치 간의 차이점을 보여 줍니다. 이 예제에서는 뒤에 공백 문자가 있는 단어와 일치하는 정규식 `\b(\w+\s*)+`를 정의합니다. 입력은 두 개의 문자열로 구성되어 있는데, 한 문자열은 라틴 문자 집합을 사용하고 다른 문자열은 키릴 자모 문자 집합을 사용합니다. 출력에 표시된 것처럼, ECMAScript 일치를 사용하는 <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 메서드에 대한 호출은 키릴 자모 단어와 일치하지 않는 반면 정식 일치를 사용하는 메서드 호출은 이러한 단어와 일치합니다.
+  다음 예제에서는 정식 패턴 일치와 ECMAScript 패턴 일치 간의 차이점을 보여 줍니다. 이 예제에서는 뒤에 공백 문자가 있는 단어와 일치하는 정규식 `\b(\w+\s*)+`를 정의합니다. 입력은 두 개의 문자열로 구성되어 있는데, 한 문자열은 라틴 문자 집합을 사용하고 다른 문자열은 키릴 자모 문자 집합을 사용합니다. 출력에 표시된 것처럼, ECMAScript 일치를 사용하는 <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 메서드에 대한 호출은 키릴 자모 단어와 일치하지 않는 반면 정식 일치를 사용하는 메서드 호출은 이러한 단어와 일치합니다.
 
-    [!code-csharp[Conceptual.Regex.Language.Options#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/ecmascript1.cs#16)]
-    [!code-vb[Conceptual.Regex.Language.Options#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/ecmascript1.vb#16)]
+  [!code-csharp[Conceptual.Regex.Language.Options#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/ecmascript1.cs#16)]
+  [!code-vb[Conceptual.Regex.Language.Options#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/ecmascript1.vb#16)]
 
 - 자신을 참조하는 캡처링 그룹. 자신에 대한 역참조가 있는 정규식 캡처 클래스는 각 캡처 반복으로 업데이트되어야 합니다. 다음 예제에서 보여 주는 것처럼, 이 기능은 정규식 `((a+)(\1) ?)+`가 ECMAScript를 사용할 경우에는 입력 문자열 " aa aaaa aaaaaa "과 일치하고 정식 일치를 사용할 경우에는 일치하지 않도록 합니다.
 
-    [!code-csharp[Conceptual.Regex.Language.Options#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/ecmascript2.cs#21)]
-    [!code-vb[Conceptual.Regex.Language.Options#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/ecmascript2.vb#21)]
+  [!code-csharp[Conceptual.Regex.Language.Options#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/ecmascript2.cs#21)]
+  [!code-vb[Conceptual.Regex.Language.Options#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/ecmascript2.vb#21)]
 
-    정규식은 다음 테이블과 같이 정의됩니다.
+  정규식은 다음 테이블과 같이 정의됩니다.
 
-    |무늬|설명|
-    |-------------|-----------------|
-    |(a+)|문자 "a"를 1개 이상 찾습니다. 이 그룹은 두 번째 캡처링 그룹입니다.|
-    |(\1)|첫 번째 캡처링 그룹에 의해 캡처된 부분 문자열을 찾습니다. 이 그룹은 세 번째 캡처링 그룹입니다.|
-    |?|0개 또는 1개의 공백 문자를 찾습니다.|
-    |((a+)(\1) ?)+|하나 이상의 "a" 문자 다음에 첫 번째 캡처링 그룹과 일치하는 문자열이 있고 그 다음에 0개 또는 1개의 공백 문자가 한 번 이상 나타나는 패턴을 찾습니다. 이 그룹은 첫 번째 캡처링 그룹입니다.|
+  |패턴|설명|
+  |-------------|-----------------|
+  |(a+)|문자 "a"를 1개 이상 찾습니다. 이 그룹은 두 번째 캡처링 그룹입니다.|
+  |(\1)|첫 번째 캡처링 그룹에 의해 캡처된 부분 문자열을 찾습니다. 이 그룹은 세 번째 캡처링 그룹입니다.|
+  |?|0개 또는 1개의 공백 문자를 찾습니다.|
+  |((a+)(\1) ?)+|하나 이상의 "a" 문자 다음에 첫 번째 캡처링 그룹과 일치하는 문자열이 있고 그 다음에 0개 또는 1개의 공백 문자가 한 번 이상 나타나는 패턴을 찾습니다. 이 그룹은 첫 번째 캡처링 그룹입니다.|
 
 - 8진수 이스케이프와 역참조 간의 모호성 해결. 다음 테이블에는 정식 정규식과 ECMAScript 정규식에서 8진수 대 역참조 해석의 차이점이 요약되어 있습니다.
 
-    |정규식|정식 동작|ECMAScript 동작|
-    |------------------------|------------------------|-------------------------|
-    |`\0` 뒤에 0-2자리의 8진수|8진수로 해석됩니다. 예를 들어, `\044`는 항상 8진수 값으로 해석되며 "$"를 의미합니다.|동일한 동작입니다.|
-    |`\` 뒤에 1-9의 숫자 한 개, 그 뒤에 추가 10진수가 없음|역참조로 해석됩니다. 예를 들어, `\9`는 9번째 캡처링 그룹이 없더라도 항상 역참조 9를 의미합니다. 캡처링 그룹이 없는 경우 정규식 파서는 <xref:System.ArgumentException>을 throw합니다.|한 자리 10진수 캡처링 그룹이 있는 경우 해당 숫자를 역참조합니다. 그러지 않으면 값이 리터럴로 해석됩니다.|
-    |`\` 뒤에 1-9의 숫자 한 개, 그 뒤에 추가 10진수가 있음|숫자가 10진수 값으로 해석됩니다. 해당 캡처링 그룹이 있는 경우 식이 역참조로 해석됩니다.<br /><br /> 그러지 않으면 최대 8진수 377까지 선행 8진수가 해석됩니다. 즉, 값의 낮은 8비트만 고려합니다. 나머지 숫자는 리터럴로 해석됩니다. 예를 들어, `\3000` 식에서 캡처링 그룹 300이 있는 경우 역참조 300으로 해석됩니다. 캡처링 그룹 300이 없는 경우 8진수 300 뒤에 0이 있는 것으로 해석됩니다.|가능한 한 많은 숫자를 캡처를 참조할 수 있는 10진수 값으로 변환하여 역참조로 해석됩니다. 숫자를 변환할 수 없는 경우 최대 8진수 377까지 선행 8진수를 사용하여 8진수로 해석됩니다. 나머지 숫자는 리터럴로 해석됩니다.|
+  |정규식|정식 동작|ECMAScript 동작|
+  |------------------------|------------------------|-------------------------|
+  |`\0` 뒤에 0-2자리의 8진수|8진수로 해석됩니다. 예를 들어, `\044`는 항상 8진수 값으로 해석되며 "$"를 의미합니다.|동일한 동작입니다.|
+  |`\` 뒤에 1-9의 숫자 한 개, 그 뒤에 추가 10진수가 없음 | 역참조로 해석합니다. 예를 들어, `\9`는 9번째 캡처링 그룹이 없더라도 항상 역참조 9를 의미합니다. 캡처링 그룹이 없는 경우 정규식 파서는 <xref:System.ArgumentException>을 throw합니다.|한 자리 10진수 캡처링 그룹이 있는 경우 해당 숫자를 역참조합니다. 그러지 않으면 값이 리터럴로 해석됩니다.|
+  |`\` 뒤에 1-9의 숫자 한 개, 그 뒤에 추가 10진수가 있음 | 숫자를 10진수 값으로 해석합니다. 해당 캡처링 그룹이 있는 경우 식이 역참조로 해석됩니다.<br /><br /> 그러지 않으면 최대 8진수 377까지 선행 8진수가 해석됩니다. 즉, 값의 낮은 8비트만 고려합니다. 나머지 숫자는 리터럴로 해석됩니다. 예를 들어, `\3000` 식에서 캡처링 그룹 300이 있는 경우 역참조 300으로 해석됩니다. 캡처링 그룹 300이 없는 경우 8진수 300 뒤에 0이 있는 것으로 해석됩니다.|가능한 한 많은 숫자를 캡처를 참조할 수 있는 10진수 값으로 변환하여 역참조로 해석됩니다. 숫자를 변환할 수 없는 경우 최대 8진수 377까지 선행 8진수를 사용하여 8진수로 해석됩니다. 나머지 숫자는 리터럴로 해석됩니다.|
 
 [맨 위로 이동](#Top)
 

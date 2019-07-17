@@ -4,12 +4,12 @@ description: Windows, Linux 및 macOS에서 .NET Core 애플리케이션을 빌�
 author: thraka
 ms.author: adegeo
 ms.date: 06/27/2018
-ms.openlocfilehash: 2ec7f57250db8779552305b2ee69cbcf1db55d0c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b111d464b83f3bc6a4a0da86678c5364bf4a9537
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977177"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802294"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 시작
 
@@ -34,7 +34,7 @@ dotnet run --project sample1
 Hello World!
 ```
 
-지금까지 간단한 .NET Core 애플리케이션을 만들었습니다. 또한 [Visual Studio Code](tutorials/with-visual-studio-code.md), [Visual Studio 2017](tutorials/with-visual-studio.md)(Windows만 해당) 또는 [Mac용 Visual Studio](tutorials/using-on-mac-vs.md)(macOS만 해당)를 사용하여 .NET Core 애플리케이션을 만들 수도 있습니다.
+지금까지 간단한 .NET Core 애플리케이션을 만들었습니다. 또한 [Visual Studio Code](tutorials/with-visual-studio-code.md), [Visual Studio](tutorials/with-visual-studio.md)(Windows만 해당) 또는 [Mac용 Visual Studio](tutorials/using-on-mac-vs.md)(macOS만 해당)를 사용하여 .NET Core 애플리케이션을 만들 수도 있습니다.
 
 ## <a name="tutorials"></a>자습서
 

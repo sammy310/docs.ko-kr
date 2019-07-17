@@ -9,12 +9,12 @@ helpviewer_keywords:
 - return statement [C#]
 - return keyword [C#]
 ms.assetid: 6da6e152-5b58-4448-8f3f-470dd0617ecd
-ms.openlocfilehash: 3e89f2f854d1f66ca2d7bf1cfa5a507c267798f8
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: a845ce257bf7f0cf0e64d6815b2278f6cec946e7
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422716"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661610"
 ---
 # <a name="return-c-reference"></a>return(C# 참조)
 
@@ -22,9 +22,9 @@ ms.locfileid: "66422716"
 
  return 문이 `try` 블록 안에 있으면 `finally` 블록(있는 경우)은 제어가 호출 메서드로 반환되기 전에 실행됩니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
- 다음 예제에서 `CalculateArea()` 메서드는 `area` 로컬 변수를 [double](double.md) 값으로 반환합니다.
+ 다음 예제에서 `CalculateArea()` 메서드는 `area` 로컬 변수를 `double` 값으로 반환합니다.
 
 [!code-csharp[csrefKeywordsJump#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#6)]  
 

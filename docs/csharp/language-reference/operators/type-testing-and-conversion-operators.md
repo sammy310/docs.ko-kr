@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 4468bc86634ad97f2dfbdb5f842eb5206f957a79
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: a9e5139e6d650aa6935bff934ca25502fdc14775
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307517"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744078"
 ---
 # <a name="type-testing-and-conversion-operators-c-reference"></a>형식 테스트 및 변환 연산자(C# 참조)
 
@@ -109,7 +109,7 @@ E is T ? (T)(E) : (T)null
 
 [!code-csharp-interactive[cast expression](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#Cast)]
 
-지원되는 명시적 변환에 대한 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [명시적 변환](~/_csharplang/spec/conversions.md#explicit-conversions) 섹션을 참조하세요. 사용자 지정 명시적 또는 암시적 형식 변환을 정의하는 방법에 대한 자세한 내용은 [explicit](../keywords/explicit.md) 또는 [implicit](../keywords/implicit.md) 키워드 문서를 각각 참조하세요.
+지원되는 명시적 변환에 대한 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [명시적 변환](~/_csharplang/spec/conversions.md#explicit-conversions) 섹션을 참조하세요. 사용자 지정 명시적 또는 암시적 형식 변환을 정의하는 방법에 대한 자세한 내용은 [사용자 정의 변환 연산자](user-defined-conversion-operators.md)를 참조하세요.
 
 ### <a name="other-usages-of-"></a>다른 () 용도
 
@@ -139,7 +139,7 @@ E is T ? (T)(E) : (T)null
 
 `is`, `as` 및 `typeof` 연산자는 오버로드할 수 없습니다.
 
-사용자 정의 형식은 `()` 연산자를 오버로드할 수 없지만, 캐스트 식에서 수행할 수 있는 사용자 지정 형식 변환을 정의할 수 있습니다. 자세한 내용은 [explicit](../keywords/explicit.md) 및 [implicit](../keywords/implicit.md) 키워드 문서를 참조하세요.
+사용자 정의 형식은 `()` 연산자를 오버로드할 수 없지만, 캐스트 식에서 수행할 수 있는 사용자 지정 형식 변환을 정의할 수 있습니다. 자세한 내용은 [사용자 정의 변환 연산자](user-defined-conversion-operators.md)를 참조하세요.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 

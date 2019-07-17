@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: ef9c9bab5c1cebb06edf934254507180e2197349
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 1277b35723777760deebb6606ddc90bd21e654ec
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306563"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744110"
 ---
 # <a name="-operator-c-reference"></a>= 연산자(C# 참조)
 
@@ -64,7 +64,7 @@ x = x op y
 
 ## <a name="operator-overloadability"></a>연산자 오버로드 가능성
 
-사용자 정의 형식은 대입 연산자를 오버로드할 수 없습니다. 그러나 사용자 정의 형식은 다른 형식으로 암시적 변환을 정의할 수 있습니다. 이렇게 하면 사용자 정의 형식의 값을 다른 형식의 변수, 속성 또는 인덱서 요소에 할당할 수 있습니다. 자세한 내용은 [implicit](../keywords/implicit.md) 키워드 문서를 참조하세요.
+사용자 정의 형식은 대입 연산자를 오버로드할 수 없습니다. 그러나 사용자 정의 형식은 다른 형식으로 암시적 변환을 정의할 수 있습니다. 이렇게 하면 사용자 정의 형식의 값을 다른 형식의 변수, 속성 또는 인덱서 요소에 할당할 수 있습니다. 자세한 내용은 [사용자 정의 변환 연산자](user-defined-conversion-operators.md)를 참조하세요.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
