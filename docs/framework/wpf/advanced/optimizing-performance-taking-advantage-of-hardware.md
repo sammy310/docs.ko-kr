@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: d40d1636b510fcfe667ab3e728d1688ce38641d4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 13812fa5429bbe33341e51e4b3be14fbbcb361cb
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611941"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238446"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>성능 최적화: 하드웨어 활용
 내부 아키텍처 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 두 렌더링 파이프라인, 하드웨어 및 소프트웨어를 포함 합니다. 이 항목에서는 응용 프로그램의 성능 최적화에 대 한 결정을 내릴 수 있도록 이러한 렌더링 파이프라인에 대 한 정보를 제공 합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "64611941"
 ### <a name="graphics-rendering-tiers"></a>그래픽 렌더링 계층  
  응용 프로그램에서 실행 되는 하드웨어 구성을 예측 하기가 매우 어려울 수 있습니다. 그러나 응용 프로그램을 원활 하 게 전환 기능 다른 하드웨어에서 실행 하는 경우 각 다른 하드웨어 구성의 활용을 취할 수 있도록 허용 하는 디자인을 고려해 야 할 수 있습니다.  
   
- 이 위해 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 런타임 시 시스템의 그래픽 기능을 확인 하는 기능을 제공 합니다. 그래픽 기능 세 개의 기능 계층을 렌더링 중 하나로 비디오 카드를 범주화 하 여 결정 됩니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 표시는 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] 응용 프로그램의 렌더링 기능 계층을 쿼리할 수 있도록 합니다. 응용 프로그램 하드웨어에서 지 원하는 렌더링 계층에 따라 런타임 시 다른 코드 경로 취할 수 있습니다.  
+ 이 위해 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 런타임 시 시스템의 그래픽 기능을 확인 하는 기능을 제공 합니다. 그래픽 기능 세 개의 기능 계층을 렌더링 중 하나로 비디오 카드를 범주화 하 여 결정 됩니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램의 렌더링 기능 계층을 쿼리할 수 있는 API를 노출 합니다. 응용 프로그램 하드웨어에서 지 원하는 렌더링 계층에 따라 런타임 시 다른 코드 경로 취할 수 있습니다.  
   
  렌더링 계층 수준에 가장 큰 영향을 미치는 그래픽 하드웨어 기능은 다음과 같습니다.  
   

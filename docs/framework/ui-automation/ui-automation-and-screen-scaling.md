@@ -10,12 +10,12 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: 5b9af742558cd1a672c739040aef9e80dcaaabe5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4e101fffbd7e53cadce0b621d73ade2d1459ba00
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652202"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68237454"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI 자동화 및 화면 크기 조정
 > [!NOTE]
@@ -36,13 +36,13 @@ ms.locfileid: "64652202"
   
  화면 크기 조정 어떤 방식으로든 화면 좌표와 관련된 애플리케이션에 대한 새로운 문제를 만듭니다. 이제 화면에는 물리적 좌표와 논리적 좌표 두 개가 포함됩니다. 점의 물리적 좌표는 원점의 왼쪽 상단에서의 픽셀 단위의 실제 오프셋입니다. 논리적 좌표는 픽셀 자체의 크기가 조정된 경우 발생되는 오프셋입니다.  
   
- 좌표 (100, 48)에서 단추가 있는 대화 상자를 설계한다고 가정해 보세요. 이 대화 상자가 기본 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]에서 표시되면 단추는 물리적 좌표 (100, 48)에 위치합니다. 120 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]에서 표시되면 단추는 물리적 좌표 (125, 60)에 위치합니다. 논리적 좌표는 언제 든 동일 하지만 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 설정: (100, 48).  
+ 좌표 (100, 48)에서 단추가 있는 대화 상자를 설계한다고 가정해 보세요. 이 대화 상자가 기본 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]에서 표시되면 단추는 물리적 좌표 (100, 48)에 위치합니다. 120 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]에서 표시되면 단추는 물리적 좌표 (125, 60)에 위치합니다. 논리적 좌표는 언제 든 동일 하지만 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 설정: (100, 48)입니다.  
   
  논리적 좌표는 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 설정과 관계없이 운영 체제와 애플리케이션의 동작을 일관적으로 유지하기 때문에 중요합니다. 예를 들어, <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType> 은 일반적으로 논리적 좌표를 반환합니다. 대화 상자에서 요소 위에 커서를 놓으면 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 설정과 관계 없이 동일한 좌표가 반환됩니다. 좌표 (100, 100)에서 컨트롤을 그리면 논리적 좌표로 그려지고 모든 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 설정에서 동일한 상대적 위치를 차지합니다.  
   
 <a name="Scaling_in_UI_Automation_Clients"></a>   
 ## <a name="scaling-in-ui-automation-clients"></a>UI 자동화 클라이언트의 크기 조정  
-  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] 는 논리적 좌표를 사용하지 않습니다. 다음 메서드 및 속성은 물리적 좌표를 반환하거나 매개 변수로 간주합니다.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] API는 논리적 좌표를 사용 하지 않습니다. 다음 메서드 및 속성은 물리적 좌표를 반환하거나 매개 변수로 간주합니다.  
   
 - <xref:System.Windows.Automation.AutomationElement.GetClickablePoint%2A>  
   

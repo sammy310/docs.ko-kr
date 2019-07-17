@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: 4ed6dd33efd5fdc5e2c61df4173bec5cc2f0d807
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 0d3b44007524f502d8393d1dc1834142090a7a15
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859693"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238653"
 ---
 # <a name="advanced-text-formatting"></a>고급 텍스트 서식 지정
 Windows Presentation Foundation (WPF) 응용 프로그램에서 텍스트를 포함 하는 강력한 Api 집합을 제공 합니다. 레이아웃 및 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]Api와 같은 <xref:System.Windows.Controls.TextBlock>자주 제공 하 고 일반 텍스트 표현에 대 한 요소를 사용 합니다. Api와 같은 그리기 <xref:System.Windows.Media.GlyphRunDrawing> 고 <xref:System.Windows.Media.FormattedText>, 그리기에 서식 있는 텍스트를 포함 하는 방법을 제공 합니다. 고급 수준에서 가장 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 서식 지정 엔진 텍스트 저장소 관리, 텍스트 실행 서식 관리 및 포함 된 개체 관리와 같은 텍스트 표현의 모든 측면을 제어 하는 확장 가능한 텍스트를 제공 합니다.  
@@ -38,7 +38,7 @@ Windows Presentation Foundation (WPF) 응용 프로그램에서 텍스트를 포
 ## <a name="using-the-text-formatter"></a>텍스트 포맷터 사용  
  <xref:System.Windows.Media.TextFormatting.TextFormatter> 가 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 텍스트 서식 지정 엔진 및 서식 지정 및 텍스트 줄 바꿈을 위한 서비스를 제공 합니다. 텍스트 포맷터는 다양한 텍스트 문자 서식과 단락 스타일을 처리할 수 있으며 국제 텍스트 레이아웃에 대한 지원을 포함합니다.  
   
- 기존의 텍스트와 달리 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)], <xref:System.Windows.Media.TextFormatting.TextFormatter> 콜백 메서드 집합을 통해 텍스트 레이아웃 클라이언트와 상호 작용 합니다. 구현에서 이러한 메서드를 제공 하기 위해 클라이언트 필요는 <xref:System.Windows.Media.TextFormatting.TextSource> 클래스입니다. 다음 다이어그램에서는 클라이언트 응용 프로그램 간의 텍스트 레이아웃 상호 작용 및 <xref:System.Windows.Media.TextFormatting.TextFormatter>합니다.  
+ 기존 텍스트 API와 달리는 <xref:System.Windows.Media.TextFormatting.TextFormatter> 콜백 메서드 집합을 통해 텍스트 레이아웃 클라이언트와 상호 작용 합니다. 구현에서 이러한 메서드를 제공 하기 위해 클라이언트 필요는 <xref:System.Windows.Media.TextFormatting.TextSource> 클래스입니다. 다음 다이어그램에서는 클라이언트 응용 프로그램 간의 텍스트 레이아웃 상호 작용 및 <xref:System.Windows.Media.TextFormatting.TextFormatter>합니다.  
   
  ![텍스트 레이아웃 클라이언트 및 TextFormatter의 다이어그램](./media/advanced-text-formatting/text-layout-textformatter-interaction.png)  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: c47e1ba89179b38055244c01507318836c899fda
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a7784f37c9e8009adc3735974a6fb0423f24ea37
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637514"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238509"
 ---
 # <a name="how-to-run-a-workflow"></a>방법: 워크플로 실행
 이 항목에서는 Windows Workflow Foundation 초보자 자습서의 계속 이며 워크플로 호스트를 만들고 이전에 정의 된 워크플로 실행 하는 방법을 설명 [방법: 워크플로 만드는](how-to-create-a-workflow.md) 항목입니다.
@@ -30,7 +30,7 @@ ms.locfileid: "65637514"
     > [!TIP]
     >  **솔루션 탐색기** 창이 표시되어 있지 않으면 **보기** 메뉴에서 **솔루션 탐색기** 를 선택합니다.
 
-3. **설치됨** 노드에서 **Visual C#**, **워크플로** (또는 **Visual Basic**, **워크플로**)를 차례로 선택합니다.
+3. **설치됨** 노드에서 **Visual C#** , **워크플로** (또는 **Visual Basic**, **워크플로**)를 차례로 선택합니다.
 
     > [!NOTE]
     >  **설치됨** 노드의 **다른 언어** 노드 아래에는 Visual Studio에서 기본 언어로 구성된 프로그래밍 언어에 따라 **Visual C#** 또는 **Visual Basic** 노드가 표시될 수 있습니다.
@@ -51,13 +51,13 @@ ms.locfileid: "65637514"
      이 프로젝트는 **워크플로 콘솔 애플리케이션** 템플릿을 사용하여 만들었기 때문에 **Program.cs** 또는 **Module1.vb** 에 다음과 같은 기본 워크플로 호스팅 코드가 포함되어 있습니다.
 
     ```vb
-    ' Create and cache the workflow definition
-    Activity workflow1 = new Workflow1()
+    ' Create and cache the workflow definition.
+    Dim workflow1 As Activity = New Workflow1()
     WorkflowInvoker.Invoke(workflow1)
     ```
 
     ```csharp
-    // Create and cache the workflow definition
+    // Create and cache the workflow definition.
     Activity workflow1 = new Workflow1();
     WorkflowInvoker.Invoke(workflow1);
     ```

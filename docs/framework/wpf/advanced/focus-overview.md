@@ -8,12 +8,12 @@ helpviewer_keywords:
 - applications [WPF], focus
 - focus in applications [WPF]
 ms.assetid: 0230c4eb-0c8a-462b-ac4b-ae3e511659f4
-ms.openlocfilehash: 72b866d714e6a77020bdb74843c3aaa0ba0c3278
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8546516124b2156e02446e15d7bdcaf3cdbd717d
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703428"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238602"
 ---
 # <a name="focus-overview"></a>포커스 개요
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에는 포커스에 관한 두 가지 주요 개념이 있습니다. 즉, 키보드 포커스와 논리 포커스입니다.  키보드 포커스는 키보드 입력을 수신하는 요소를 나타내고 논리 포커스는 포커스가 있는 포커스 범위의 요소를 나타냅니다.  이러한 개념은 이 개요에서 자세히 설명합니다.  포커스를 얻을 수 있는 여러 영역이 있는 복잡한 애플리케이션을 작성할 때 이 개념의 차이를 이해하는 것이 중요합니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "61703428"
   
 <a name="Manipulating_Focus_Programmatically"></a>   
 ## <a name="navigating-focus-programmatically"></a>포커스를 프로그래밍 방식으로 탐색  
- 추가 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] 포커스는 작업할 <xref:System.Windows.UIElement.MoveFocus%2A> 고 <xref:System.Windows.UIElement.PredictFocus%2A>입니다.  
+ 추가 API 포커스를 사용 하 되 <xref:System.Windows.UIElement.MoveFocus%2A> 및 <xref:System.Windows.UIElement.PredictFocus%2A>합니다.  
   
  <xref:System.Windows.FrameworkElement.MoveFocus%2A> 응용 프로그램의 다음 요소로 포커스를 변경 합니다.  <xref:System.Windows.Input.TraversalRequest> 방향을 지정 하는 데 사용 됩니다.   합니다 <xref:System.Windows.Input.FocusNavigationDirection> 전달할 <xref:System.Windows.UIElement.MoveFocus%2A> 방향을 포커스를 이동할 수와 같은 지정 <xref:System.Windows.Input.FocusNavigationDirection.First>, <xref:System.Windows.Input.FocusNavigationDirection.Last>를 <xref:System.Windows.Input.FocusNavigationDirection.Up> 및 <xref:System.Windows.Input.FocusNavigationDirection.Down>합니다.  
   

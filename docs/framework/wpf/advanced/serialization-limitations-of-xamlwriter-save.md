@@ -6,15 +6,15 @@ helpviewer_keywords:
 - limitations of XamlWriter.Save
 - serialization limitations of XamlWriter.Save
 ms.assetid: f86acc91-2b67-4039-8555-505734491d36
-ms.openlocfilehash: bf752a5bd05d8a0601f3c1dcd53ab856315c0b84
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f743f3de505904854be8aab59e9d3ad14ee64581
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611757"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238615"
 ---
 # <a name="serialization-limitations-of-xamlwritersave"></a>XamlWriter.Save의 serialization 제한
-합니다 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] <xref:System.Windows.Markup.XamlWriter.Save%2A> 의 콘텐츠를 serialize 할 수는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램을 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 파일입니다. 하지만 정확히 serialize되는 항목에 대한 눈에 띄는 몇 가지 제한 사항이 있습니다. 이러한 제한 사항과 몇몇 일반적인 고려 사항은 이 항목에서 설명합니다.  
+API <xref:System.Windows.Markup.XamlWriter.Save%2A> 의 콘텐츠를 serialize 할 수는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램을 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 파일입니다. 하지만 정확히 serialize되는 항목에 대한 눈에 띄는 몇 가지 제한 사항이 있습니다. 이러한 제한 사항과 몇몇 일반적인 고려 사항은 이 항목에서 설명합니다.  
 
 <a name="Run_Time__Not_Design_Time_Representation"></a>   
 ## <a name="run-time-not-design-time-representation"></a>런타임으로, 디자인 타임 표현이 아님  

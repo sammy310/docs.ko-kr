@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: 79c539bd0117c712670601b7498c490fca76090e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: b2ef3c3dbbfbcef08f58c47948f76cb2c238b48a
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610512"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238522"
 ---
 # <a name="freezable-objects-overview"></a>Freezable 개체 개요
 이 항목에서는 효과적으로 사용 하 고 만드는 방법을 설명 <xref:System.Windows.Freezable> 응용 프로그램 성능을 개선 하는 데 도움이 되는 특별 한 기능을 제공 하는 개체입니다. Freezable 개체의 예로 브러시, 펜, 변환, 기 하 도형 및 애니메이션을 들 수 있습니다.  
@@ -148,7 +148,7 @@ mc:Ignorable="PresentationOptions"
   
  또한 다음 규칙에 액세스 하 고는 종속성 속성이 아닌 데이터 멤버에 쓰기를 준수 해야 합니다.  
   
-- 시작 부분에 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] 읽는 비 종속성 속성 데이터 멤버를 호출 합니다 <xref:System.Windows.Freezable.ReadPreamble%2A> 메서드.  
+- 비 종속성 속성 데이터 멤버를 읽는 모든 API의 시작 부분에서 호출 된 <xref:System.Windows.Freezable.ReadPreamble%2A> 메서드.  
   
 - 비 종속성 속성 데이터 멤버를 기록 하는 모든 API의 시작 부분에서 호출 된 <xref:System.Windows.Freezable.WritePreamble%2A> 메서드. (호출한 후 <xref:System.Windows.Freezable.WritePreamble%2A> 에서 API를 추가로 호출할 필요가 <xref:System.Windows.Freezable.ReadPreamble%2A> 비 종속성 속성 데이터 멤버를 읽은 경우.)  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 94937b2c3e6935474d337c62bfd6698441dfcc2e
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 98dc2899fd2c6a294f9f878ccbf87f60520bbe78
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860100"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238680"
 ---
 # <a name="typography-in-wpf"></a>WPF의 입력 체계
 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 주요 입력 체계 기능을 소개합니다. 이러한 기능에는 텍스트 렌더링의 향상된 품질 및 성능, [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 입력 체계 지원, 향상된 국가별 텍스트, 향상된 글꼴 지원 및 새 텍스트 API(응용 프로그래밍 인터페이스)가 포함됩니다.  
@@ -142,7 +142,7 @@ ClearType y 방향 앤티앨리어싱으로 표시된 텍스트
 ### <a name="advanced-text-formatting"></a>고급 텍스트 서식 지정  
  가장 고급 수준의 Api, 텍스트 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 를 사용 하 여 사용자 지정 텍스트 레이아웃을 만드는 기능을 제공 합니다 <xref:System.Windows.Media.TextFormatting.TextFormatter> 개체 및 기타 형식에서는 <xref:System.Windows.Media.TextFormatting> 네임 스페이스. <xref:System.Windows.Media.TextFormatting.TextFormatter> 및 문자 형식, 단락 스타일을 사용자 고유의 정의 지 원하는 사용자 지정 텍스트 레이아웃을 구현할 수 줄 바꿈 규칙 및 국가별 텍스트에 대 한 기타 레이아웃 기능 관련된 클래스를 사용 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 텍스트 레이아웃 지원의 기본 구현을 재정의하려는 경우는 거의 없습니다. 그러나 텍스트 편집 컨트롤이나 애플리케이션을 만들려는 경우 기본 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 구현이 아닌 다른 구현이 필요할 수 있습니다.  
   
- 기존의 텍스트와 달리 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)], <xref:System.Windows.Media.TextFormatting.TextFormatter> 콜백 메서드 집합을 통해 텍스트 레이아웃 클라이언트와 상호 작용 합니다. 구현에서 이러한 메서드를 제공 하기 위해 클라이언트 필요는 <xref:System.Windows.Media.TextFormatting.TextSource> 클래스입니다. 다음 다이어그램에서는 클라이언트 응용 프로그램 간의 텍스트 레이아웃 상호 작용 및 <xref:System.Windows.Media.TextFormatting.TextFormatter>합니다.  
+ 기존 텍스트 API와 달리는 <xref:System.Windows.Media.TextFormatting.TextFormatter> 콜백 메서드 집합을 통해 텍스트 레이아웃 클라이언트와 상호 작용 합니다. 구현에서 이러한 메서드를 제공 하기 위해 클라이언트 필요는 <xref:System.Windows.Media.TextFormatting.TextSource> 클래스입니다. 다음 다이어그램에서는 클라이언트 응용 프로그램 간의 텍스트 레이아웃 상호 작용 및 <xref:System.Windows.Media.TextFormatting.TextFormatter>합니다.  
   
  ![텍스트 레이아웃 클라이언트 및 TextFormatter의 다이어그램](./media/typography-in-wpf/text-layout-text-formatter-interaction.png)  
   

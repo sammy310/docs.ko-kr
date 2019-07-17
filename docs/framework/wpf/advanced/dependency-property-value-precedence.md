@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 4ea417b2a922574eb92a07aa845c360f6e843f17
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7d5ff09bb9cc8da45f44cf6fe952411e7cd3f4c4
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663408"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238535"
 ---
 # <a name="dependency-property-value-precedence"></a>종속성 속성 값 우선 순위
 <a name="introduction"></a> 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 속성 시스템의 작업 방식이 종속성 속성 값에 영향을 주는 방식을 설명하고 속성 시스템의 일면이 속성의 유효 값이 적용되는 우선 순위에 관해 설명합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "64663408"
   
 2. **활성 애니메이션 또는 보류 동작이 있는 애니메이션.** 속성 애니메이션이 실제로 효과를 발휘하려면 기준 값이 로컬로 설정된 경우에도 애니메이션되지 않은 기준 값보다 높은 우선 순위를 가질 수 있어야 합니다. 자세한 내용은 이 항목의 뒷부분에 있는 [강제 변환, 애니메이션 및 기준 값](#animations)을 참조하십시오.  
   
-3. **로컬 값.** 편리 하 게도 동일에서 특성 또는 속성 요소로 설정 하는 "래퍼" 속성을 통해 로컬 값을 설정할 수 있습니다 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], 또는를 호출 하 여 합니다 <xref:System.Windows.DependencyObject.SetValue%2A> [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] 특정 인스턴스의 속성을 사용 하 여 합니다. 바인딩이나 리소스를 사용하여 로컬 값을 설정하면 이들 각각은 직접 값을 설정한 것과 같은 우선 순위가 적용됩니다.  
+3. **로컬 값.** 편리 하 게도 동일에서 특성 또는 속성 요소로 설정 하는 "래퍼" 속성을 통해 로컬 값을 설정할 수 있습니다 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], 또는를 호출 하 여는 <xref:System.Windows.DependencyObject.SetValue%2A> 특정 인스턴스의 속성을 사용 하는 API입니다. 바인딩이나 리소스를 사용하여 로컬 값을 설정하면 이들 각각은 직접 값을 설정한 것과 같은 우선 순위가 적용됩니다.  
   
 4. **TemplatedParent 템플릿 속성.** 요소에는 <xref:System.Windows.FrameworkElement.TemplatedParent%2A> 템플릿의 일부로 만들어진 경우 (한 <xref:System.Windows.Controls.ControlTemplate> 또는 <xref:System.Windows.DataTemplate>). 적용 시기에 대한 자세한 내용은 이 항목의 뒷부분에 있는 [TemplatedParent](#templatedparent)를 참조하십시오. 템플릿 내에서는 다음과 같은 우선 순위가 적용됩니다.  
   

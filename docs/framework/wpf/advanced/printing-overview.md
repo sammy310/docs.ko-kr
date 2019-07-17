@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: acfc252708bf8be7abacb1adc2968122501315a0
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: bb3737ca879f3687b25b021348da0c50f663c58e
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860207"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238668"
 ---
 # <a name="printing-overview"></a>인쇄 개요
 Microsoft.NET Framework를 사용 하 여 Windows Presentation Foundation (WPF)를 사용 하 여 응용 프로그램 개발자는 새로운 풍부한 인쇄 및 인쇄 시스템 관리 Api. [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]에서는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램을 만드는 개발자와 비관리 코드를 사용하는 개발자도 이러한 인쇄 시스템 향상 기능을 일부 사용할 수 있습니다. 이 새로운 기능의 핵심은 새 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 파일 형식과 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 인쇄 경로입니다.  
@@ -69,7 +69,7 @@ Microsoft.NET Framework를 사용 하 여 Windows Presentation Foundation (WPF)�
  ![스크린샷은은 XPS 인쇄 시스템 보여 줍니다.](./media/printing-overview/xml-paper-specification-print-system.png)  
   
 ### <a name="basic-xps-printing"></a>기본 XPS 인쇄  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 기본 및 고급 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]를 둘 다 정의합니다. 광범위 한 인쇄 사용자 지정 또는 전체 XPS 기능에 대 한 액세스 필요 하지 않은 응용 프로그램 설정, 기본 인쇄 지원은 사용할 수 있습니다. 기본 인쇄 지원은 최소한의 구성이 필요하며 익숙한 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]를 제공하는 인쇄 대화 상자 컨트롤을 통해 노출됩니다. 많은 XPS 기능은 경우 정책이이 간소화 된 인쇄 모델을 사용 하 여 사용할 수 있습니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 기본 및 고급 API 모두를 정의합니다. 광범위 한 인쇄 사용자 지정 또는 전체 XPS 기능에 대 한 액세스 필요 하지 않은 응용 프로그램 설정, 기본 인쇄 지원은 사용할 수 있습니다. 기본 인쇄 지원은 최소한의 구성이 필요하며 익숙한 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]를 제공하는 인쇄 대화 상자 컨트롤을 통해 노출됩니다. 많은 XPS 기능은 경우 정책이이 간소화 된 인쇄 모델을 사용 하 여 사용할 수 있습니다.  
   
 #### <a name="printdialog"></a>PrintDialog  
  합니다 <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> 컨트롤에 대 한 단일 진입점을 제공 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], 구성 및 XPS 작업을 제출 합니다. 컨트롤을 인스턴스화하고 사용하는 방법에 대한 자세한 내용은 [인쇄 대화 상자 호출](how-to-invoke-a-print-dialog.md)을 참조하세요.  

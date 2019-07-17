@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 3e4438b309d4e443d07a6c2db2310733927fd38b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 86178f3e49dc25bee57b0896f2ebc2cf729b69bd
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625342"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238475"
 ---
 # <a name="data-binding-overview"></a>데이터 바인딩 개요
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 데이터 바인딩은 응용 프로그램이 데이터를 제공하고 상호 작용할 수 있는 간단하고 일관된 방법을 제공합니다. 다양한 데이터 소스에서 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체 및 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]의 형태로 데이터에 요소를 바인딩할 수 있습니다. <xref:System.Windows.Controls.ContentControl>같은 <xref:System.Windows.Controls.Button> 하 고 <xref:System.Windows.Controls.ItemsControl>같은 <xref:System.Windows.Controls.ListBox> 고 <xref:System.Windows.Controls.ListView> 단일 데이터 항목의 유연한 스타일 또는 데이터 항목의 컬렉션을 사용 하도록 설정 하는 기본 제공 기능이 있습니다. 데이터를 기반으로 정렬, 필터 및 그룹 보기를 생성할 수 있습니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "64625342"
 ## <a name="what-is-data-binding"></a>데이터 바인딩이란?  
  데이터 바인딩은 애플리케이션 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]와 비즈니스 논리를 연결하는 프로세스입니다. 바인딩 설정이 올바르고 데이터가 적절한 알림을 제공하는 경우에는 데이터의 값이 변경될 때 데이터에 바인딩된 요소에 변경 내용이 자동으로 반영됩니다. 또한 요소에서 데이터의 외부 표현이 변경되면 내부 데이터가 자동으로 업데이트되어 변경 내용이 반영될 수 있습니다. 예를 들어, 사용자가 값을 편집 하는 경우는 <xref:System.Windows.Controls.TextBox> 요소를 기본 데이터 값이 해당 변경 내용을 반영 하도록 자동으로 업데이트 됩니다.  
   
- 데이터 바인딩은 일반적으로 서버 또는 로컬 구성 데이터를 폼이나 기타 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 컨트롤에 배치하는 데 사용됩니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 이 개념은 광범위한 속성을 다양한 데이터 소스에 바인딩하는 기능을 포함하도록 확장됩니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 요소의 종속성 속성은 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체([!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] 개체 또는 웹 서비스와 웹 속성에 연결된 개체 포함) 및 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터에 바인딩될 수 있습니다.  
+ 데이터 바인딩은 일반적으로 서버 또는 로컬 구성 데이터를 폼이나 기타 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 컨트롤에 배치하는 데 사용됩니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 이 개념은 광범위한 속성을 다양한 데이터 소스에 바인딩하는 기능을 포함하도록 확장됩니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], 요소의 종속성 속성에 바인딩할 수 있습니다 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체 (ADO.NET 개체 또는 웹 서비스 및 웹 속성을 사용 하 여 연결 된 개체 포함) 및 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터입니다.  
   
  데이터 바인딩의 예는 [Data Binding Demo](https://go.microsoft.com/fwlink/?LinkID=163703)(데이터 바인딩 데모)에서 다음 애플리케이션 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]를 살펴보세요.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "64625342"
   
 - 대상 속성은 종속성 속성이어야 합니다. 대부분의 <xref:System.Windows.UIElement> 속성은 종속성 속성 및 읽기 전용으로 제외한 대부분의 종속성 속성을 기본적으로 데이터 바인딩을 지원 합니다. (만 <xref:System.Windows.DependencyObject> 종속성 속성 및 모든 형식을 정의할 수 있습니다 <xref:System.Windows.UIElement>에서 파생 <xref:System.Windows.DependencyObject>.)  
   
-- 그림에는 지정되지 않았지만 바인딩 소스 개체는 사용자 지정 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체로 제한되지 않습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 데이터 바인딩은 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체 및 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 형식의 데이터를 지원합니다. 바인딩 소스 수 몇 가지 예제를 제공 하기를 <xref:System.Windows.UIElement>, 목록 개체는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 연관 된 개체 [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] 포함 된 XmlNode 데이터 나 웹 서비스에 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터. 자세한 내용은 [바인딩 소스 개요](binding-sources-overview.md)를 참조하세요.  
+- 그림에는 지정되지 않았지만 바인딩 소스 개체는 사용자 지정 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체로 제한되지 않습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 데이터 바인딩은 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체 및 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 형식의 데이터를 지원합니다. 바인딩 소스 수를 제공 하기 위해 몇 가지 예는 <xref:System.Windows.UIElement>, 목록 개체를 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] ADO.NET 데이터 또는 웹 서비스와 연결 된 개체 또는 포함 된 XmlNode에 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터. 자세한 내용은 [바인딩 소스 개요](binding-sources-overview.md)를 참조하세요.  
   
  다른 [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] 항목을 읽을 때 바인딩을 설정하고 있다면 바인딩 소스*에* 바인딩 대상을 바인딩하고 있다는 것을 기억하세요. 예를 들어, 일부 기본 표시 하는 경우 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 에서 데이터를 <xref:System.Windows.Controls.ListBox> 바인딩하는 데이터 바인딩을 사용 하 여, 프로그램 <xref:System.Windows.Controls.ListBox> 에 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터.  
   

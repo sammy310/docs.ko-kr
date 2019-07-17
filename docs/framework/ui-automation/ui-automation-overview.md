@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: 02700c75152c32ebee3a0898de1e322ddf9b6e17
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: a914f2c54e5e5b368533b686b1926f7f7ef2e12a
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67802238"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68237332"
 ---
 # <a name="ui-automation-overview"></a>UI 자동화 개요
 > [!NOTE]
@@ -36,7 +36,7 @@ ms.locfileid: "67802238"
   
 |구성 요소|설명|  
 |---------------|-----------------|  
-|공급자 [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] (UIAutomationProvider.dll 및 UIAutomationTypes.dll)|UI 자동화 공급자가 구현하는 인터페이스 정의 집합으로서, [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 요소에 대한 정보를 제공하고 프로그래밍 방식으로 입력에 응답하는 개체입니다.|  
+|공급자 API (UIAutomationProvider.dll 및 UIAutomationTypes.dll)|UI 자동화 공급자가 구현하는 인터페이스 정의 집합으로서, [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 요소에 대한 정보를 제공하고 프로그래밍 방식으로 입력에 응답하는 개체입니다.|  
 |클라이언트 API(UIAutomationClient.dll 및 UIAutomationTypes.dll)|UI 자동화 클라이언트 애플리케이션이 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 에 대한 정보를 가져오고 입력을 컨트롤에 보내도록 하는 관리되는 코드의 형식 집합입니다.|  
 |UiAutomationCore.dll|공급자와 클라이언트 간의 통신을 처리하는 기본 코드입니다( [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 코어라고도 함).|  
 |UIAutomationClientsideProviders.dll|표준 레거시 컨트롤에 대한 UI 자동화 공급자의 집합입니다. ([!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 컨트롤에는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 기본 지원이 있습니다.) 이 지원은 클라이언트 응용 프로그램에서 자동으로 사용할 수 있습니다.|  

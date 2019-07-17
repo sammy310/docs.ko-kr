@@ -6,18 +6,18 @@ helpviewer_keywords:
 - masks [WPF], opacity
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
-ms.openlocfilehash: 3ee02eca9719f4ffa3ee0c165ad2541c9ffd085e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7554471d8b812b60e0b1aeb6dd3096b542ca44d6
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625264"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238415"
 ---
 # <a name="opacity-masks-overview"></a>불투명 마스크 개요
 불투명 마스크를 사용하여 요소 또는 시각적 개체의 부분을 투명하게 또는 부분적으로 투명하게 만들 수 있습니다. 적용할 불투명 마스크를 만들려면를 <xref:System.Windows.Media.Brush> 에 <xref:System.Windows.UIElement.OpacityMask%2A> 요소의 속성 또는 <xref:System.Windows.Media.Visual>합니다.  브러시가 요소 또는 시각적 개체에 매핑되고, 각 브러시 픽셀의 불투명도 값을 사용하여 요소 또는 시각적 개체의 각 해당 픽셀에 대한 결과 불투명도가 결정됩니다.  
   
 <a name="prereqs"></a>   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 개요에 잘 알고 있다고 가정 <xref:System.Windows.Media.Brush> 개체입니다. 브러시 사용에 대한 지침을 보려면 [단색 및 그라데이션을 사용한 그리기 개요](painting-with-solid-colors-and-gradients-overview.md)를 참조하세요. 에 대 한 자세한 <xref:System.Windows.Media.ImageBrush> 하 고 <xref:System.Windows.Media.DrawingBrush>를 참조 하십시오 [이미지, 그림 및 시각적 표시로 그리기](painting-with-images-drawings-and-visuals.md)합니다.  
   
 <a name="opacitymasks"></a>   
@@ -69,15 +69,15 @@ DrawingBrush 불투명 마스크 예제
 ## <a name="specifying-gradient-stops-for-an-opacity-mask"></a>불투명 마스크에 대한 그라데이션 중지점 지정  
  이전 예제에서는 시스템 정의 색 <xref:System.Windows.Media.Colors.Black%2A> 그라데이션의 시작 색으로 사용 됩니다. 때문에 모든 색을 <xref:System.Windows.Media.Colors> 클래스를 제외 하 고 <xref:System.Windows.Media.Colors.Transparent%2A>은 완전히 불투명 그라데이션 불투명 마스크에 대 한 시작 색을 정의 하기만 하면 사용할 수 있습니다.  
   
- 불투명 마스크를 정의할 때 알파 값을 추가로 제어 하기 위해 사용 하 여 색의 알파 채널을 지정할 수 있습니다 [!INCLUDE[TLA#tla_argb](../../../../includes/tlasharptla-argb-md.md)] 태그 또는 사용 하 여 16 진수 표기법을 <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> 메서드.  
+ 불투명 마스크를 정의할 때 알파 값을 추가로 제어 하기 위해 또는 태그에 ARGB 16 진수 표기법을 사용 하 여 색의 알파 채널을 지정할 수 있습니다는 <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> 메서드.  
   
 <a name="argbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-xaml"></a>"XAML"에서 색 불투명도 지정  
- [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]에서는 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 16진수 표기법을 사용하여 개별 색의 불투명도를 지정합니다. [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 16진수 표기법은 다음 구문을 사용합니다.  
+ [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], ARGB 16 진수 표기법을 사용 하 여 개별 색의 불투명도 지정 합니다. ARGB 16 진수 표기법으로 다음 구문을 사용합니다.  
   
  `#` **aa** *rrggbb*  
   
- 이전 줄의 *aa*는 색의 불투명도 지정하는 데 사용되는 2자리 16진수 값을 나타냅니다. *rr*, *gg* 및 *bb* 각각은 색에서 빨강, 녹색 및 파랑의 양을 지정하는 데 사용되는 2자리 16진수 값을 나타냅니다. 각 16진수 숫자는 0-9 또는 A-F의 값을 가질 수 있습니다. 0이 가장 작은 값이고 F가 가장 큰 값입니다. 알파 값 00은 완전히 투명한 색을 지정하지만 알파 값 FF는 완전히 불투명한 색을 만듭니다.  다음 예제에서는 16진수 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 표기법이 두 색을 지정하는 데 사용됩니다. 첫 번째는 완전히 불투명하고 두 번째는 완전히 투명합니다.  
+ 이전 줄의 *aa*는 색의 불투명도 지정하는 데 사용되는 2자리 16진수 값을 나타냅니다. *rr*, *gg* 및 *bb* 각각은 색에서 빨강, 녹색 및 파랑의 양을 지정하는 데 사용되는 2자리 16진수 값을 나타냅니다. 각 16진수 숫자는 0-9 또는 A-F의 값을 가질 수 있습니다. 0이 가장 작은 값이고 F가 가장 큰 값입니다. 알파 값 00은 완전히 투명한 색을 지정하지만 알파 값 FF는 완전히 불투명한 색을 만듭니다.  다음 예제에서는 16 진수 ARGB 표기법은 두 색을 지정 하려면 사용 됩니다. 첫 번째는 완전히 불투명하고 두 번째는 완전히 투명합니다.  
   
  [!code-xaml[OpacityMasksSnippet#AARRGGBBValueonOpacityMask](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]  
   

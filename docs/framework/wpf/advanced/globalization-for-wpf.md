@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: bfd901d10fe3158c1c5cb32c3a75f3bc15efd0ba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 46e7d9caf0bdf0be25a4ac76e96fe04d0e131ed1
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64640932"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238585"
 ---
 # <a name="globalization-for-wpf"></a>WPF의 전역화
 이 항목에서는 소개를 작성할 때 알고 있어야 하는 문제 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 글로벌 시장 용 응용 프로그램입니다. 전역화 프로그래밍 요소에 정의 된 [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] 에서 `System.Globalization`합니다.
@@ -111,7 +111,7 @@ ms.locfileid: "64640932"
 
 - 티베트어
 
- * 이 릴리스에서는 태국어 텍스트의 표시 및 편집이 지원되며, 단어 구분은 지원되지 않습니다.
+ \* 이 릴리스에서는 태국어 텍스트의 표시 및 편집이 지원되며, 단어 구분은 지원되지 않습니다.
 
  현재 지원되지 않는 스크립트는 다음과 같습니다.
 
@@ -156,7 +156,7 @@ ms.locfileid: "64640932"
 
 <a name="building_localizable_apps"></a>
 ### <a name="building-localizable-applications"></a>지역화 가능 애플리케이션 빌드
- 지역화에 맞게 의미를 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 를 다른 문화권입니다. 확인을 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 개발자가 지역화 가능한 리소스를 모두 리소스 어셈블리에 빌드해야 하는 데 필요한 지역화 합니다. 다른 언어로 지역화 된 리소스 어셈블리 및 코드 숨김에서는 리소스 관리 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] 를 로드 합니다. 에 필요한 파일 중 하나는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램은 프로젝트 파일 (.proj)입니다. 애플리케이션에서 사용하는 모든 리소스는 프로젝트 파일에 포함되어야 합니다. .csprop 파일의 다음 예에서는 이 작업을 수행하는 방법을 보여줍니다.
+ 지역화에 맞게 의미를 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 를 다른 문화권입니다. 확인을 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 개발자가 지역화 가능한 리소스를 모두 리소스 어셈블리에 빌드해야 하는 데 필요한 지역화 합니다. 다른 언어로 지역화 된 리소스 어셈블리 및 코드 숨김 리소스 관리 API를 사용 하 여 로드를 합니다. 에 필요한 파일 중 하나는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램은 프로젝트 파일 (.proj)입니다. 애플리케이션에서 사용하는 모든 리소스는 프로젝트 파일에 포함되어야 합니다. .csprop 파일의 다음 예에서는 이 작업을 수행하는 방법을 보여줍니다.
 
 ```xml
 <Resource Include="data\picture1.jpg"/>

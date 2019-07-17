@@ -24,15 +24,15 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 5835cfb633451025ed32c2a26228e33a1b24473e
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: defce7949bff47ef109e81d03894b13d95ba4c3d
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67857060"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238502"
 ---
 # <a name="input-overview"></a>입력 개요
-<a name="introduction"></a> 합니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 하위 시스템은 강력한 제공 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] 다양 한 장치에서에서 입력을 가져오는, 마우스, 키보드, 터치 및 스타일러스를 포함 합니다. 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]가 제공하는 서비스에 대해 설명하고 입력 시스템의 아키텍처를 살펴봅니다.
+<a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 하위 시스템에서 다양 한 장치, 마우스, 키보드, 터치 및 스타일러스를 포함 하 여 입력을 가져오기 위한 강력한 API를 제공 합니다. 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]가 제공하는 서비스에 대해 설명하고 입력 시스템의 아키텍처를 살펴봅니다.
 
 <a name="input_api"></a>
 ## <a name="input-api"></a>입력 API

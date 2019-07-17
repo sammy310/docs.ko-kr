@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - UI Automation
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
-ms.openlocfilehash: 8903b6a47aa2800ef4fa4fba2cd2537d2b3896e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b6d594a3d92a7b666e52c92221d60956e718b42
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033243"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68237534"
 ---
 # <a name="accessibility"></a>액세스 가능성
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "62033243"
   
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]는 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]에 대한 새로운 접근성 프레임워크입니다. [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]에 관한 정보에 대해 프로그래밍 방식의 액세스를 제공하여 보조 기술 제품 및 자동화된 테스트 프레임워크의 요구 사항을 해결합니다. 또한 컨트롤 및 애플리케이션 개발자는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]를 통해 해당 제품에 액세스할 수 있습니다.  
   
- 이 문서에서는 관리 코드용 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)]에 대해 설명합니다. C++의 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 프로그래밍에 대한 자세한 내용은 [UI Automation for Win32 Applications](/windows/desktop/winauto/windows-automation-api-portal)(Win32 애플리케이션용 UI 자동화)를 참조하세요.  
+ 이 문서에서는 설명의 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 관리 코드에 대 한 API입니다. C++의 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 프로그래밍에 대한 자세한 내용은 [UI Automation for Win32 Applications](/windows/desktop/winauto/windows-automation-api-portal)(Win32 애플리케이션용 UI 자동화)를 참조하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [접근성 모범 사례](../../../docs/framework/ui-automation/accessibility-best-practices.md)  
