@@ -115,7 +115,7 @@ else {
     }  
     ```  
   
-     다음과 같이 `lock` 메서드 대신 <xref:System.Threading.Interlocked.Increment%2A> 문을 사용하여 성능을 향상시킬 수 있습니다.  
+     다음과 같이 `lock` 문 대신 <xref:System.Threading.Interlocked.Increment%2A> 메서드를 사용하여 성능을 향상시킬 수 있습니다.  
   
     ```vb  
     System.Threading.Interlocked.Increment(myField)  
