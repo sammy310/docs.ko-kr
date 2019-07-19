@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 6dca154dc6ff560fe589ea56ee49d761a2622fe9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca00b4a0450539741719f5f5a56d241e4bebfcc2
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614549"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331710"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>WPF 애플리케이션 배포(WPF)
-Windows Presentation Foundation (WPF) 응용 프로그램을 빌드한 후 배포 해야 합니다. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 및.NET Framework에는 여러 가지 배포 기술을 포함 합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 배포하는 데 사용되는 배포 기술은 응용 프로그램 종류에 따라 달라집니다. 이 항목에서는 각 배포 기술과 해당 기술이 각 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션 종류의 배포 요구 사항과 함께 사용되는 방법에 대해 간략하게 설명합니다.  
+Windows Presentation Foundation (WPF) 응용 프로그램을 빌드한 후 배포 해야 합니다. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]및 .NET Framework에는 몇 가지 배포 기술이 포함 되어 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 배포하는 데 사용되는 배포 기술은 응용 프로그램 종류에 따라 달라집니다. 이 항목에서는 각 배포 기술과 해당 기술이 각 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션 종류의 배포 요구 사항과 함께 사용되는 방법에 대해 간략하게 설명합니다.  
 
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>배포 기술  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 및.NET Framework를 비롯 한 여러 가지 배포 기술을 다음과 같습니다.  
+ [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]및 .NET Framework에는 다음과 같은 몇 가지 배포 기술이 포함 되어 있습니다.  
   
 - XCopy 배포.  
   
@@ -43,7 +43,7 @@ Windows Presentation Foundation (WPF) 응용 프로그램을 빌드한 후 배�
   
  [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]에서는 응용 프로그램의 설치 및 제거가 간단하지만 설치된 응용 프로그램이 버전 관리 관점에서 최신 버전으로 유지되도록 보장하는 기능은 제공하지 않습니다.  
   
- Windows Installer에 대 한 자세한 내용은 참조 하세요. [Windows Installer 배포](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop)합니다.
+ Windows Installer에 대 한 자세한 내용은 [Windows Installer 배포](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop)를 참조 하세요.
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>ClickOnce 배포  
@@ -81,7 +81,7 @@ Windows Presentation Foundation (WPF) 응용 프로그램을 빌드한 후 배�
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션의 보안에 대한 자세한 내용은 [보안](../security-wpf.md)을 참조하세요.  
   
- 마크업 전용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지는 XCopy나 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]를 사용하여 로컬 파일 시스템에 설치할 수 있습니다. 이러한 페이지를 사용 하 여 볼 수 있습니다 [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] 또는 Windows 탐색기입니다.  
+ 마크업 전용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지는 XCopy나 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]를 사용하여 로컬 파일 시스템에 설치할 수 있습니다. 이러한 페이지는 또는 Windows 탐색기 [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] 를 사용 하 여 볼 수 있습니다.  
   
  XAML에 대한 자세한 내용은 [XAML 개요(WPF)](../advanced/xaml-overview-wpf.md)를 참조하세요.  
   
@@ -89,16 +89,16 @@ Windows Presentation Foundation (WPF) 응용 프로그램을 빌드한 후 배�
 ### <a name="deploying-xaml-browser-applications"></a>XAML 브라우저 애플리케이션 배포  
  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]는 배포하려면 다음과 같은 파일 세 개가 필요한 컴파일된 응용 프로그램입니다.  
   
-- *ApplicationName*.exe: 실행 가능한 어셈블리 응용 프로그램 파일입니다.  
+- *ApplicationName*.exe: 실행 파일 어셈블리 응용 프로그램 파일입니다.  
   
-- *ApplicationName*.xbap: 배포 매니페스트 합니다.  
+- *ApplicationName*xbap: 배포 매니페스트입니다.  
   
 - *ApplicationName*.exe.manifest: 애플리케이션 매니페스트입니다.  
   
 > [!NOTE]
 >  배포 및 애플리케이션 매니페스트에 대한 자세한 내용은 [WPF 애플리케이션 만들기](building-a-wpf-application-wpf.md)를 참조하세요.  
   
- 이러한 파일은 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]가 빌드될 때 생성됩니다. 자세한 내용은 [방법: 새 WPF 브라우저 응용 프로그램 프로젝트 만들기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))합니다. 마크업 전용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지처럼 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]는 일반적으로 웹 서버에 게시되며 [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)]를 사용하여 볼 수 있습니다.  
+ 이러한 파일은 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]가 빌드될 때 생성됩니다. 자세한 내용은 [방법: 새 WPF 브라우저 응용 프로그램 프로젝트](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))를 만듭니다. 마크업 전용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지처럼 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]는 일반적으로 웹 서버에 게시되며 [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)]를 사용하여 볼 수 있습니다.  
   
  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]는 배포 기술 중 하나를 사용하여 클라이언트에 배포할 수 있습니다. 그러나 다음과 같은 기능을 제공하는 [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]가 권장됩니다.  
   
@@ -112,13 +112,13 @@ Windows Presentation Foundation (WPF) 응용 프로그램을 빌드한 후 배�
   
 <a name="Installing__NET_Framework_3_0"></a>   
 ## <a name="installing-the-net-framework"></a>.NET Framework 설치  
- 실행 하는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 클라이언트에서 Microsoft.NET Framework를 설치 합니다. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] .NET Framework를 사용 하 여 클라이언트가 설치 되어 있는지 여부를 자동으로 검색 하면 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 브라우저에서 호스팅되는 응용 프로그램이 표시 됩니다. .NET Framework 설치 되어 있지 않으면 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 사용자 설치 하 라는 메시지가 표시 됩니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 실행 하려면 클라이언트에 Microsoft .NET 프레임 워크를 설치 해야 합니다. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]브라우저에서 호스트 되는 응용 프로그램을 볼 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 때 클라이언트가 .NET Framework와 함께 설치 되는지 여부를 자동으로 검색 합니다. .NET Framework 설치 되어 있지 않으면에서 사용자 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 에 게 설치 하 라는 메시지를 표시 합니다.  
   
- .NET Framework 설치 되어 있는지를 검색할 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 는 대체 (fallback)로 등록 된 부트스트래퍼 응용 프로그램이 [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] 확장명이 포함 된 콘텐츠 파일에 대 한 처리기:.xaml,.xps,.xbap 및.application입니다. 이러한 파일 형식으로 이동 하 고.NET Framework 클라이언트에 설치 되어 있지는 부트스트래퍼 응용 프로그램 설치 권한을 요청 합니다. 사용 권한을 제공 하지 않으면.NET Framework도 아니고 응용 프로그램이 설치 됩니다.  
+ .NET Framework 설치 되어 있는지 여부를 검색 하기 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 위해에는 확장명이 .xaml, .xps, xbap 및 [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] 응용 프로그램 인 콘텐츠 파일에 대 한 대체 처리기로 등록 된 부트스트래퍼 응용 프로그램이 포함 됩니다. 이러한 파일 형식으로 이동 하 여 클라이언트에 .NET Framework 설치 되어 있지 않으면 부트스트래퍼 응용 프로그램에서 설치 권한을 요청 합니다. 사용 권한이 제공 되지 않으면 .NET Framework 및 응용 프로그램은 설치 되지 않습니다.  
   
- 권한이 부여 되 면 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 다운로드 하 고 사용 하 여.NET Framework 설치는 [!INCLUDE[TLA#tla_bits](../../../../includes/tlasharptla-bits-md.md)]합니다. .NET Framework를 설치 하 고 나면 처음에 요청한 파일이 새 브라우저 창에서 열립니다.  
+ 사용 권한이 부여 되 면 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 에서 Microsoft Background Intelligent Transfer Service (BITS)를 사용 하 여 .NET Framework를 다운로드 하 고 설치 합니다. .NET Framework를 성공적으로 설치한 후에는 원래 요청한 파일이 새 브라우저 창에서 열립니다.  
   
- .NET framework 자동 검색은에서 사용할 수 있습니다 [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)], [!INCLUDE[TLA#tla_winxpsp2](../../../../includes/tlasharptla-winxpsp2-md.md)], 및 [!INCLUDE[TLA#tla_winnetsvrfamsp1](../../../../includes/tlasharptla-winnetsvrfamsp1-md.md)] 포함 하는 클라이언트 [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] 이상이 설치 되어 있습니다.  
+ .NET Framework 자동 [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)]검색은 [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] 이상 버전을 설치한 [!INCLUDE[TLA#tla_winxpsp2](../../../../includes/tlasharptla-winxpsp2-md.md)], 및 [!INCLUDE[TLA#tla_winnetsvrfamsp1](../../../../includes/tlasharptla-winnetsvrfamsp1-md.md)] 클라이언트에서 사용할 수 있습니다.  
   
  자세한 내용은 [.NET Framework 및 애플리케이션 배포](../../deployment/index.md)를 참조하세요.  
   

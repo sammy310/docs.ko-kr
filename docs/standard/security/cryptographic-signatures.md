@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15fd79a1289bd54b81db551abbdfcd63deef3e24
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 862d520073dde1b935510bc7c68782c1204c6111
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795254"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331646"
 ---
 # <a name="cryptographic-signatures"></a>암호화 서명
 
@@ -44,6 +44,8 @@ ms.locfileid: "61795254"
 ## <a name="generating-signatures"></a>서명 생성
 
 일반적으로 디지털 서명은 더 큰 데이터를 나타내는 해시 값에 적용됩니다. 다음 예제에서는 해시 값에 디지털 서명을 적용합니다. 먼저 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 클래스의 새 인스턴스는 public/private 키 쌍을 생성합니다. 다음으로 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 는 <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> 클래스의 새 인스턴스에 전달됩니다. 실제로 디지털 서명을 수행하는 <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>에 private 키를 전달합니다. 해시 코드에 서명하기 전에 사용할 해시 알고리즘을 지정해야 합니다. 이 예제에서는 SHA1 알고리즘을 사용합니다. 마지막으로 <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A> 메서드가 호출되어 서명을 수행합니다.
+
+S h a 1의 충돌 문제로 인해 s h a 1 이상을 권장 합니다.
 
 ```vb
 Imports System
@@ -145,7 +147,7 @@ rsaKeyInfo.Exponent = exponentData;
 
 <xref:System.Security.Cryptography.RSAParameters> 개체를 만든 후에 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 클래스의 새 인스턴스를 <xref:System.Security.Cryptography.RSAParameters>에 지정된 값으로 초기화할 수 있습니다. <xref:System.Security.Cryptography.RSACryptoServiceProvider> 가 다시 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 의 생성자에 전달되어 키를 전송합니다.
 
-다음 예제에서는 이 프로세스를 보여 줍니다. 이 예제에서 `hashValue` 및 `signedHashValue` 는 원격 당사자가 제공한 바이트 배열입니다. 원격 당사자는 `hashValue` 를 생성하는 SHA1 알고리즘을 사용하여 `signedHashValue`에 서명했습니다. 합니다 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> 메서드는 디지털 서명이 유효 하 고 서명에 사용 된 확인을 `hashValue`합니다.
+다음 예제에서는 이 프로세스를 보여 줍니다. 이 예제에서 `hashValue` 및 `signedHashValue` 는 원격 당사자가 제공한 바이트 배열입니다. 원격 당사자는 `hashValue` 를 생성하는 SHA1 알고리즘을 사용하여 `signedHashValue`에 서명했습니다. 메서드 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> 는 디지털 서명이 유효 하 고에 `hashValue`서명 하는 데 사용 되었는지 확인 합니다.
 
 ```vb
 Dim rsa As New RSACryptoServiceProvider()

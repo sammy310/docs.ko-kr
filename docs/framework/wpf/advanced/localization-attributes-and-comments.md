@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: a242dc1f69c79b2c1a67c1a9235d3e942553caf1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ef18802ab3568df00e29eb4ccaf717f4bdf4863
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598739"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68330989"
 ---
 # <a name="localization-attributes-and-comments"></a>지역화 특성 및 주석
 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 소스 코드 내의 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 지역화 주석은 속성이며 개발자에 의해 제공되어 지역화에 대한 규칙과 힌트를 제공합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 지역화 주석에는 두 가지 정보 집합(지역화 가능성 특성 및 자유 형식 지역화 주석)이 포함됩니다. 지역화 가능성 특성은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 지역화 API가 사용하여 지역화할 리소스를 나타냅니다. 자유 형식 주석은 애플리케이션 작성자가 포함하려고 하는 정보입니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "64598739"
   
     - **All** - 주석과 특성을 어셈블리에서 모두 제거하고 둘 다 별도의 LocFile에 둡니다.  
   
-4. 지역화 가능한 리소스가 [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)]에서 추출된 경우 지역화 가능성 특성을 [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] 지역화 API에서 준수합니다.  
+4. 지역화 가능한 리소스를 BAML에서 추출할 경우 지역화 가능성 특성은 BAML 지역화 API에 의해 적용 됩니다.  
   
 5. 자유 형식 주석만 포함하는 지역화 주석 파일은 나중에 지역화 프로세스에 통합됩니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "64598739"
   
  이러한 특성은 공백으로 구분하여 임의의 순서로 지정할 수 있습니다. 중복된 특성이 지정된 경우 마지막 특성이 이전 특성을 재정의합니다. 예를 들어 Localization.Attributes = “Unmodifiable Modifiable”은 Modifiability를 마지막 값인 Modifiable로 설정합니다.  
   
- Modifiability 및 Readability는 이름만으로도 해당 의미를 이해할 수 있습니다. Category 특성은 지역화 담당자가 텍스트를 번역할 때 도움이 되는 미리 정의된 범주를 제공합니다. Text, Label 및 Title과 같은 범주는 텍스트를 번역하는 방법에 대한 정보를 지역화 담당자에게 제공합니다. 또한 특수 범주가 있습니다. 상속을 무시 하 고, none, neverlocalize 합니다.  
+ Modifiability 및 Readability는 이름만으로도 해당 의미를 이해할 수 있습니다. Category 특성은 지역화 담당자가 텍스트를 번역할 때 도움이 되는 미리 정의된 범주를 제공합니다. Text, Label 및 Title과 같은 범주는 텍스트를 번역하는 방법에 대한 정보를 지역화 담당자에게 제공합니다. 특수 범주도 있습니다. None, Inherit, Ignore 및 NeverLocalize입니다.  
   
  다음 표에서는 특수한 범주의 의미를 보여 줍니다.  
   
