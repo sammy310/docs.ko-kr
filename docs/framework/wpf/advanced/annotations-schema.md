@@ -6,34 +6,34 @@ helpviewer_keywords:
 - Microsoft Annotations Framework [WPF]
 - documents [WPF], annotations
 ms.assetid: a893442b-e220-4603-bf6a-b01fefcb4b37
-ms.openlocfilehash: 503858b717ef541675b642a735289e3903b91fdc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1d11b0bb2086bb449c0ffc0ff89430a55096a28d
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777083"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364349"
 ---
 # <a name="annotations-schema"></a>주석 스키마
 
 이 항목에서는 사용자 주석 데이터를 저장하고 검색하기 위해 Microsoft Annotations Framework에서 사용하는 XSD(XML 스키마 정의)에 대해 설명합니다.
 
-[!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)]에서는 내부 표현의 주석 데이터를 XML 형식으로 직렬화합니다.  이 변환에 사용되는 XML 형식은 [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XSD 스키마로 설명됩니다.  스키마는 애플리케이션 간에 주석 데이터를 교환하는 데 사용할 수 있는 구현에 독립인적 XML 형식을 정의합니다.
+주석 프레임 워크는 내부 표현의 주석 데이터를 XML 형식으로 직렬화 합니다.  이 변환에 사용 되는 XML 형식은 annotation Framework XSD Schema에서 설명 합니다.  스키마는 애플리케이션 간에 주석 데이터를 교환하는 데 사용할 수 있는 구현에 독립인적 XML 형식을 정의합니다.
 
-[!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XML 스키마 정의는 다음 두 개의 하위 스키마로 구성됩니다.
+주석 프레임 워크 XML 스키마 정의는 두 개의 하위 스키마로 구성 됩니다.
 
 - 주석 XML 코어 스키마(코어 스키마)
 
 - 주석 XML 기본 스키마(기본 스키마)
 
-기본 XML 구조를 정의 하는 코어 스키마는 <xref:System.Windows.Annotations.Annotation>합니다.  코어 스키마에 정의 된 XML 요소의 대부분의 형식에 해당 하는 <xref:System.Windows.Annotations> 네임 스페이스입니다.  코어 스키마는 애플리케이션이 자체 XML 데이터를 추가할 수 있는 세 개의 확장 지점을 제공합니다.  이러한 확장 지점을 포함 합니다 <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, 및 "콘텐츠"입니다.  (요소 형식으로 제공 됩니다 콘텐츠는 <xref:System.Xml.XmlElement> 목록입니다.)
+핵심 스키마는의 <xref:System.Windows.Annotations.Annotation>기본 XML 구조를 정의 합니다.  핵심 스키마에 정의 된 대부분의 XML 요소는 <xref:System.Windows.Annotations> 네임 스페이스의 형식에 해당 합니다.  코어 스키마는 애플리케이션이 자체 XML 데이터를 추가할 수 있는 세 개의 확장 지점을 제공합니다.  이러한 확장 요소에는 <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>및 "Content"가 포함 됩니다.  콘텐츠 요소는 <xref:System.Xml.XmlElement> 목록 형식으로 제공 됩니다.
 
-이 항목에서 설명 하는 기본 스키마에 대 한 확장을 정의 합니다 <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, 및 Content 초기 Windows Presentation Foundation (WPF) 릴리스에 포함 된 형식입니다.
+이 항목에서 설명 하는 기본 스키마는 초기 Windows Presentation Foundation ( <xref:System.Windows.Annotations.Annotation.Authors%2A>WPF <xref:System.Windows.Annotations.ContentLocatorPart>) 릴리스에 포함 된, 및 콘텐츠 형식에 대 한 확장을 정의 합니다.
 
 <a name="CoreSchema"></a>
 
 ## <a name="annotations-xml-core-schema"></a>주석 XML 코어 스키마
 
-주석 XML 코어 스키마를 저장 하는 데 사용 되는 XML 구조를 정의 <xref:System.Windows.Annotations.Annotation> 개체입니다.
+주석 XML Core 스키마는 개체를 저장 <xref:System.Windows.Annotations.Annotation> 하는 데 사용 되는 xml 구조를 정의 합니다.
 
 ```xml
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"
@@ -187,7 +187,7 @@ ms.locfileid: "61777083"
 
 ## <a name="annotations-xml-base-schema"></a>주석 XML 기본 스키마
 
-기본 스키마는 코어 스키마에 정의 된 세 가지 추상 요소에 대 한 XML 구조를 정의 <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, 및 <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>합니다.
+기본 스키마는 핵심 스키마 <xref:System.Windows.Annotations.Annotation.Authors%2A>(, <xref:System.Windows.Annotations.ContentLocatorPart>및 <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>)에 정의 된 세 개의 추상 요소에 대 한 XML 구조를 정의 합니다.
 
 ```xml
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"
@@ -500,7 +500,7 @@ ms.locfileid: "61777083"
 
 ## <a name="sample-xml-produced-by-annotations-xmlstreamstore"></a>주석 XmlStreamStore에서 생성된 샘플 XML
 
-뒤에 오는 XML 주석의 출력을 보여 줍니다. <xref:System.Windows.Annotations.Storage.XmlStreamStore> 세 개의 주석 기능을 강조 표시는 텍스트 스티커 메모 및 잉크 스티커 메모를 포함 하는 샘플 파일의 구성 합니다.
+뒤에 나오는 XML은 주석 <xref:System.Windows.Annotations.Storage.XmlStreamStore> 출력과 세 개의 주석, 즉 강조 표시, 텍스트 스티커 메모 및 잉크 스틱 메모를 포함 하는 샘플 파일의 구성을 보여 줍니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

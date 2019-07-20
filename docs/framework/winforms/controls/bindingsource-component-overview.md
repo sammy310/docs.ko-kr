@@ -7,18 +7,18 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
-ms.openlocfilehash: 2237ba71487afc132f9164243a664b277397ccfa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c9c9fb574b9f3e687b2d8d5c4606bfb66ebfa64
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939111"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364457"
 ---
 # <a name="bindingsource-component-overview"></a>BindingSource 구성 요소 개요
 <xref:System.Windows.Forms.BindingSource> 구성 요소는 내부 데이터 소스에 컨트롤을 바인딩하는 프로세스를 간소화하도록 설계되었습니다. <xref:System.Windows.Forms.BindingSource> 구성 요소는 바인딩하는 다른 컨트롤에 대한 통로 및 데이터 소스 역할을 합니다. 내부 데이터 목록에 명령을 전달하는 동안 폼의 데이터 연결에 대한 추상화를 제공합니다. 또한 구성 요소 자체가 데이터 소스 역할을 하도록 데이터를 직접 추가할 수 있습니다.  
   
 ## <a name="bindingsource-component-as-an-intermediary"></a>중개자로 작동하는 BindingSource 구성 요소  
- <xref:System.Windows.Forms.BindingSource> 구성 요소는 폼의 일부 또는 모든 컨트롤에 대한 데이터 소스 역할을 합니다. Visual Studio에서의 <xref:System.Windows.Forms.BindingSource> 이용 하 여 컨트롤을 바인딩할 수 있습니다 합니다 `DataBindings` 속성에서 액세스할 수 있는 **속성** 창. 또한 참조 [방법: Windows Forms 컨트롤에 BindingSource 구성 요소 디자이너를 사용 하 여 바인딩](bind-wf-controls-with-the-bindingsource.md)합니다.  
+ <xref:System.Windows.Forms.BindingSource> 구성 요소는 폼의 일부 또는 모든 컨트롤에 대한 데이터 소스 역할을 합니다. Visual Studio <xref:System.Windows.Forms.BindingSource> 에서 속성은 **속성 창에서** 액세스할 수 있는 `DataBindings` 속성을 통해 컨트롤에 바인딩할 수 있습니다. 자세한 내용은 [다음을 참조 하세요. 디자이너](bind-wf-controls-with-the-bindingsource.md)를 사용 하 여 Windows Forms 컨트롤을 BindingSource 구성 요소와 바인딩합니다.  
   
  개체의 단순 속성이나 기본 컬렉션(예: <xref:System.Collections.ArrayList>)과 같은 간단한 데이터 소스 및 데이터베이스 테이블과 같은 복잡한 데이터 소스 둘 다에 <xref:System.Windows.Forms.BindingSource> 구성 요소를 바인딩할 수 있습니다. <xref:System.Windows.Forms.BindingSource> 구성 요소는 바인딩 및 통화 관리 서비스를 제공하는 중간자 역할을 합니다. 디자인 타임 또는 런타임에 해당 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 및 <xref:System.Windows.Forms.BindingSource.DataMember%2A> 속성을 각각 데이터베이스와 테이블로 설정하여 <xref:System.Windows.Forms.BindingSource> 구성 요소를 복잡한 데이터 소스에 바인딩할 수 있습니다. 다음 그림에서는 <xref:System.Windows.Forms.BindingSource> 구성 요소가 기존 데이터 바인딩 아키텍처에 들어가는 위치를 보여 줍니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "61939111"
 ## <a name="data-manipulation"></a>데이터 조작  
  <xref:System.Windows.Forms.BindingSource>는 모든 바인딩에 대한 <xref:System.Windows.Forms.CurrencyManager> 역할을 하므로 데이터 소스와 관련해서 통화 및 위치 정보에 대한 액세스를 제공합니다. 다음 표에서는 <xref:System.Windows.Forms.BindingSource> 구성 요소가 내부 데이터 액세스 및 조작을 위해 제공하는 멤버를 보여 줍니다.  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |<xref:System.Windows.Forms.BindingSource.Current%2A> 속성|데이터 소스의 현재 항목을 가져옵니다.|  
 |<xref:System.Windows.Forms.BindingSource.Position%2A> 속성|내부 목록에서 현재 위치를 가져오거나 설정합니다.|  
@@ -47,7 +47,7 @@ ms.locfileid: "61939111"
 |<xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> 메서드|목록에서 현재 항목을 제거합니다.|  
 |<xref:System.Windows.Forms.BindingSource.EndEdit%2A> 메서드|내부 데이터 소스에 보류 중인 변경 내용을 적용합니다.|  
 |<xref:System.Windows.Forms.BindingSource.CancelEdit%2A> 메서드|현재 편집 작업을 취소합니다.|  
-|<xref:System.Windows.Forms.BindingSource.AddNew%2A> 메서드|내부 목록에 새 항목을 추가합니다. 데이터 소스가 <xref:System.ComponentModel.IBindingList>를 구현하고 <xref:System.Windows.Forms.BindingSource.AddingNew> 이벤트에서 항목을 반환하는 경우 이 항목을 추가합니다. 그러지 않으면 요청이 목록의 <xref:System.ComponentModel.IBindingList.AddNew%2A> 메서드에 전달됩니다. 내부 목록이 <xref:System.ComponentModel.IBindingList>가 아닌 경우 public 기본 생성자를 통해 항목이 자동으로 만들어집니다.|  
+|<xref:System.Windows.Forms.BindingSource.AddNew%2A> 메서드|내부 목록에 새 항목을 추가합니다. 데이터 소스가 <xref:System.ComponentModel.IBindingList>를 구현하고 <xref:System.Windows.Forms.BindingSource.AddingNew> 이벤트에서 항목을 반환하는 경우 이 항목을 추가합니다. 그러지 않으면 요청이 목록의 <xref:System.ComponentModel.IBindingList.AddNew%2A> 메서드에 전달됩니다. 기본 목록이가 아닌 <xref:System.ComponentModel.IBindingList>경우에는 매개 변수가 없는 public 생성자를 통해 항목이 자동으로 생성 됩니다.|  
   
 ## <a name="sorting-and-filtering"></a>정렬 및 필터링  
  일반적으로 데이터 소스의 정렬 또는 필터링된 뷰를 사용해야 합니다. 다음 표에서는 <xref:System.Windows.Forms.BindingSource> 구성 요소 데이터 소스가 제공하는 멤버를 보여 줍니다.  

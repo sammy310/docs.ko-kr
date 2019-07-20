@@ -8,12 +8,12 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-ms.openlocfilehash: ce08dadb0fb7b986c0573b1514f9ecbbe2961c3a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5947808cd137fc4cd280ac683a3e9a14b0d4644d
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674573"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363870"
 ---
 # <a name="defaultproxy-element-network-settings"></a>\<defaultProxy > 요소 (네트워크 설정)
 HTTP(Hypertext Transfer Protocol) 프록시 서버를 구성합니다.  
@@ -61,13 +61,13 @@ HTTP(Hypertext Transfer Protocol) 프록시 서버를 구성합니다.
 ## <a name="remarks"></a>설명  
  DefaultProxy 요소 비어 있으면 Internet Explorer의 프록시 설정이 사용됩니다. 이 동작은 .NET Framework 버전 1.1과 다릅니다.  
   
- 경우 예외가 throw 됩니다 합니다 [모듈](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md) 요소는 public이 아닌 형식 지정, 형식에서 파생 하지 않거나는 <xref:System.Net.IWebProxy> 클래스를이 개체의 기본 생성자에서 예외가 발생 하거나 예외가 발생 했습니다 하는 동안 시스템 지정 기본 프록시를 검색합니다. 예외의 <xref:System.Exception.InnerException%2A> 속성에는 오류의 근본 원인에 대한 추가 정보가 있어야 합니다.  
+ [모듈](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md) 요소가 public이 아닌 형식을 지정 하거나, 형식이 <xref:System.Net.IWebProxy> 클래스에서 파생 되지 않거나,이 개체의 매개 변수가 없는 생성자에서 예외가 발생 했거나,를 검색 하는 동안 예외가 발생 한 경우 예외가 throw 됩니다. 시스템에서 지정한 기본 프록시입니다. 예외의 <xref:System.Exception.InnerException%2A> 속성에는 오류의 근본 원인에 대한 추가 정보가 있어야 합니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
  이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 Internet Explorer 프록시의 기본값을 사용 하 여 프록시 주소를 지정 하며 로컬 액세스 및 contoso.com에 대 한 프록시를 무시 합니다.  
+ 다음 예제에서는 Internet Explorer 프록시의 기본값을 사용 하 고, 프록시 주소를 지정 하 고, 로컬 액세스 및 contoso.com 프록시를 무시 합니다.  
   
 ```xml  
 <configuration>  

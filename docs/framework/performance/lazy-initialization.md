@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b19fbeb0144698c5091a9bbe6bce45c21c4f0d8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aef3105844ee61607bbc85332a76611c91a4198a
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616380"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364053"
 ---
 # <a name="lazy-initialization"></a>초기화 지연
 개체 *초기화 지연*은 개체를 처음 사용할 때까지 생성이 지연된다는 의미입니다. (이 항목의 경우 *초기화 지연*과 *인스턴스화 지연*은 동의어임). 초기화 지연은 기본적으로 성능을 향상시키는 데 사용하며, 불필요한 계산을 방지하고, 프로그램 메모리 요구 사항을 줄입니다. 다음은 가장 일반적인 시나리오입니다.  
@@ -27,14 +27,14 @@ ms.locfileid: "64616380"
   
  다음 표에는 다양한 시나리오에서 초기화 지연을 사용하도록 .NET Framework 버전 4에서 제공하는 유형이 나열되어 있습니다.  
   
-|형식|설명|  
+|형식|Description|  
 |----------|-----------------|  
 |<xref:System.Lazy%601>|클래스 라이브러리 또는 사용자 정의 형식에 대한 초기화 지연 의미 체계를 제공하는 래퍼 클래스입니다.|  
 |<xref:System.Threading.ThreadLocal%601>|스레드-로컬 기반으로 초기화 지연 의미 체계를 제공한다는 점을 제외하고는 <xref:System.Lazy%601>와 비슷합니다. 모든 스레드는 고유 값에 액세스할 수 있습니다.|  
 |<xref:System.Threading.LazyInitializer>|클래스의 오버헤드 없이 개체의 초기화 지연을 위한 고급 `static`(Visual Basic의 `Shared`) 메서드를 제공합니다.|  
   
 ## <a name="basic-lazy-initialization"></a>기본 초기화 지연  
- 초기화 지연 형식(예: `MyType`)을 지정하려면 다음 예에 표시된 대로 `Lazy<MyType>`(Visual Basic에서 `Lazy(Of MyType)`)을 사용하세요. <xref:System.Lazy%601> 생성자에 대리자가 전달되지 않으면 값 속성에 처음 액세스할 때 <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType>을 사용하여 래핑된 형식이 생성됩니다. 형식에 기본 생성자가 없는 경우 런타임 예외가 throw됩니다.  
+ 초기화 지연 형식(예: `MyType`)을 지정하려면 다음 예에 표시된 대로 `Lazy<MyType>`(Visual Basic에서 `Lazy(Of MyType)`)을 사용하세요. <xref:System.Lazy%601> 생성자에 대리자가 전달되지 않으면 값 속성에 처음 액세스할 때 <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType>을 사용하여 래핑된 형식이 생성됩니다. 형식에 매개 변수가 없는 생성자가 없는 경우 런타임 예외가 throw 됩니다.  
   
  다음 예에서 `Orders`는 데이터베이스에서 검색된 `Order` 개체의 배열을 포함하는 클래스라고 가정합니다. `Customer` 개체에는 `Orders`의 인스턴스가 포함되어 있지만 사용자 작업에 따라 `Orders` 개체의 데이터가 필요하지 않을 수 있습니다.  
   
@@ -78,8 +78,8 @@ ms.locfileid: "64616380"
 |개체의 스레드 보안|`LazyThreadSafetyMode` `mode` 매개 변수|부울 `isThreadSafe` 매개 변수|스레드 보안 매개 변수 없음|  
 |---------------------------------|---------------------------------------------|--------------------------------------|---------------------------------|  
 |완벽하게 스레드로부터 안전. 한 번에 하나의 스레드만 값을 초기화하려고 합니다.|<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>|`true`|예.|  
-|스레드로부터 안전하지 않음.|<xref:System.Threading.LazyThreadSafetyMode.None>|`false`|해당 사항 없음.|  
-|완벽하게 스레드로부터 안전. 스레드에서 값을 초기화하기 위해 경합합니다.|<xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>|해당 사항 없음.|해당 사항 없음.|  
+|스레드로부터 안전하지 않음.|<xref:System.Threading.LazyThreadSafetyMode.None>|`false`|이 오류에는 이 작업을 적용할 수 없습니다.|  
+|완벽하게 스레드로부터 안전. 스레드에서 값을 초기화하기 위해 경합합니다.|<xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>|이 오류에는 이 작업을 적용할 수 없습니다.|이 오류에는 이 작업을 적용할 수 없습니다.|  
   
  표에 표시된 바와 같이 `mode` 매개 변수에 대해 <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType>을 지정하면 `isThreadSafe` 매개 변수에 대해 `true`를 지정하는 것과 같으며 <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>을 지정하면 `false`를 지정하는 것과 같습니다.  
   
@@ -87,9 +87,9 @@ ms.locfileid: "64616380"
   
 <a name="ExceptionsInLazyObjects"></a>   
 ## <a name="exceptions-in-lazy-objects"></a>Lazy 개체의 예외  
- 앞에서 설명한 것처럼 <xref:System.Lazy%601> 개체는 항상 초기화 시와 동일한 개체 또는 값을 반환하므로 <xref:System.Lazy%601.Value%2A> 속성은 읽기 전용입니다. 예외 캐싱을 사용하도록 설정하면 이 불변성이 예외 동작까지 확장됩니다. 초기화 지연 개체에 예외 캐싱이 사용 및 해당 초기화 메서드에서 예외가 발생 하는 경우 때 합니다 <xref:System.Lazy%601.Value%2A> 속성에 처음 액세스할 액세스 하려고 할 때마다 다음에 동일한 예외가 throw 됩니다는 <xref:System.Lazy%601.Value%2A> 속성 . 즉, 다중 스레드 시나리오에서도 래핑된 형식의 생성자가 다시 호출되지 않습니다. 따라서 <xref:System.Lazy%601> 개체는 한 번의 액세스에서 예외 처리를 할 수 없으며 후속 액세스에서 값을 반환할 수 없습니다.  
+ 앞에서 설명한 것처럼 <xref:System.Lazy%601> 개체는 항상 초기화 시와 동일한 개체 또는 값을 반환하므로 <xref:System.Lazy%601.Value%2A> 속성은 읽기 전용입니다. 예외 캐싱을 사용하도록 설정하면 이 불변성이 예외 동작까지 확장됩니다. 지연 초기화 된 개체에 예외 캐싱이 설정 되어 있고 속성에 <xref:System.Lazy%601.Value%2A> 처음 액세스할 때 초기화 메서드에서 예외를 throw 하는 경우 모든 후속 시도에서 <xref:System.Lazy%601.Value%2A> 속성에 대 한 액세스를 다시 시도할 때마다 동일한 예외가 throw 됩니다. . 즉, 다중 스레드 시나리오에서도 래핑된 형식의 생성자가 다시 호출되지 않습니다. 따라서 <xref:System.Lazy%601> 개체는 한 번의 액세스에서 예외 처리를 할 수 없으며 후속 액세스에서 값을 반환할 수 없습니다.  
   
- 초기화 메서드(`valueFactory` 매개 변수)를 사용하는 <xref:System.Lazy%601?displayProperty=nameWithType> 생성자를 사용할 때 예외 캐싱이 사용됩니다. 예를 들어 `Lazy(T)(Func(T))` 생성자를 사용할 때 사용됩니다. 생성자에서 <xref:System.Threading.LazyThreadSafetyMode> 값(`mode` 매개 변수)도 사용하는 경우 <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> 또는 <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>을 지정하세요. 초기화 메서드를 지정하면 이 두 모드에 대해 예외 캐싱을 사용합니다. 초기화 메서드는 매우 간단할 수 있습니다. 예를 들어, `T`의 기본 생성자를 호출할 수 있습니다. C#의 경우 `new Lazy<Contents>(() => new Contents(), mode)` 또는 Visual Basic의 경우 `New Lazy(Of Contents)(Function() New Contents())`. 초기화 메서드를 지정하지 않는 <xref:System.Lazy%601?displayProperty=nameWithType> 생성자를 사용하는 경우 `T`에 대한 기본 생성자에서 발생한 예외가 캐시되지 않습니다. 자세한 내용은 <xref:System.Threading.LazyThreadSafetyMode> 열거형을 참조하세요.  
+ 초기화 메서드(`valueFactory` 매개 변수)를 사용하는 <xref:System.Lazy%601?displayProperty=nameWithType> 생성자를 사용할 때 예외 캐싱이 사용됩니다. 예를 들어 `Lazy(T)(Func(T))` 생성자를 사용할 때 사용됩니다. 생성자에서 <xref:System.Threading.LazyThreadSafetyMode> 값(`mode` 매개 변수)도 사용하는 경우 <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> 또는 <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>을 지정하세요. 초기화 메서드를 지정하면 이 두 모드에 대해 예외 캐싱을 사용합니다. 초기화 메서드는 매우 간단할 수 있습니다. `T`예를 들어, `new Lazy<Contents>(() => new Contents(), mode)` 에서 C#또는 `New Lazy(Of Contents)(Function() New Contents())` Visual Basic에 대해 매개 변수가 없는 생성자를 호출할 수 있습니다. 초기화 메서드를 지정 <xref:System.Lazy%601?displayProperty=nameWithType> 하지 않는 생성자를 사용 하는 경우에 대 한 `T` 매개 변수가 없는 생성자에서 throw 된 예외는 캐시 되지 않습니다. 자세한 내용은 <xref:System.Threading.LazyThreadSafetyMode> 열거형을 참조하세요.  
   
 > [!NOTE]
 >  `isThreadSafe` 생성자 매개 변수를 `false`로 설정하거나 `mode` 생성자 매개 변수를 <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>으로 설정하여 <xref:System.Lazy%601> 개체를 만들면 단일 스레드에서 <xref:System.Lazy%601> 개체에 액세스하거나 고유 동기화를 제공해야 합니다. 그러면 예외 캐싱을 포함하여 개체의 모든 요소에 적용됩니다.  

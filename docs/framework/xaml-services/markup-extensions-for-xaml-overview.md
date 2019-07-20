@@ -1,18 +1,18 @@
 ---
-title: XAML 태그 확장 개요
+title: XAML 태그 확장명 개요
 ms.date: 03/30/2017
 helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: ce626d9b75f2061ff024fa25ce005f952301603e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 29cf4e03c1e4f91cd4390b84dd62c07268fe0189
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617256"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364324"
 ---
-# <a name="markup-extensions-for-xaml-overview"></a>XAML 태그 확장 개요
+# <a name="markup-extensions-for-xaml-overview"></a>XAML 태그 확장명 개요
 태그 확장은 기본 형식이 나 특정 XAML 형식이 아닌 값을 가져오기 위한 XAML 기술입니다. 특성 사용과 관련하여 태그 확장은 여는 중괄호 `{` 의 알려진 문자 시퀀스를 사용하여 태그 확장 범위를 시작하고 닫는 중괄호 `}` 를 사용하여 종료합니다. .NET Framework XAML 서비스를 사용하는 경우 System.Xaml 어셈블리에서 미리 정의된 몇 가지 XAML 언어 태그 확장을 사용할 수 있습니다. System.Xaml에 정의된 <xref:System.Windows.Markup.MarkupExtension> 클래스에서 서브클래싱하고 고유한 태그 확장을 정의할 수도 있습니다. 또는 해당 프레임워크를 이미 참조하고 있는 경우 특정 프레임워크에 의해 정의된 태그 확장을 사용할 수 있습니다.  
   
  태그 확장 사용법에 액세스하는 경우 XAML 개체 작성기는 <xref:System.Windows.Markup.MarkupExtension> 재정의의 서비스 연결 지점을 통해 사용자 지정 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A?displayProperty=nameWithType> 클래스에 서비스를 제공할 수 있습니다. 이 서비스는 사용법, 개체 작성기의 특정 기능, XAML 스키마 컨텍스트 등에 대한 컨텍스트를 가져오는 데 사용할 수 있습니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "64617256"
  .NET Framework XAML 서비스는 XAML 언어 지원을 위해 여러 가지 태그 확장을 구현합니다. 이러한 태그 확장은 XAML 언어 사양의 일부에 해당합니다. 일반적인 사용법을 통해 알 수 있듯이 이러한 확장은 구문에서 `x:` 접두사로 식별할 수 있습니다. 이러한 XAML 언어 요소에 대한.NET Framework XAML 서비스 구현은 모두  <xref:System.Windows.Markup.MarkupExtension> 기본 클래스에서 파생됩니다.  
   
 > [!NOTE]
->  `x:` 접두사는 XAML 프로덕션의 루트 요소에서 XAML 언어 네임스페이스의 일반적인 XAML 네임스페이스 매핑에 사용됩니다. 다양 한 특정 프레임 워크에 대 한 Visual Studio 프로젝트 및 페이지 템플릿은이 사용 하 여 XAML 파일을 시작 하는 예를 들어 `x:` 매핑. 사용자 고유의 XAML 네임스페이스 매핑에서 다른 접두사 토큰을 선택할 수 있지만 이 설명서에서는 특정 프레임워크의 기본 XAML 네임스페이스나 다른 임의 CLR 또는 XML 네임스페이스와 달리 XAML 언어 XAML 네임 스페이스에서 정의된 부분인 해당 엔터티를 식별하는 방법으로 기본 `x:` 매핑을 가정합니다.  
+>  `x:` 접두사는 XAML 프로덕션의 루트 요소에서 XAML 언어 네임스페이스의 일반적인 XAML 네임스페이스 매핑에 사용됩니다. 예를 들어 다양 한 특정 프레임 워크에 대 한 Visual Studio 프로젝트 및 페이지 템플릿은이 `x:` 매핑을 사용 하 여 XAML 파일을 시작 합니다. 사용자 고유의 XAML 네임스페이스 매핑에서 다른 접두사 토큰을 선택할 수 있지만 이 설명서에서는 특정 프레임워크의 기본 XAML 네임스페이스나 다른 임의 CLR 또는 XML 네임스페이스와 달리 XAML 언어 XAML 네임 스페이스에서 정의된 부분인 해당 엔터티를 식별하는 방법으로 기본 `x:` 매핑을 가정합니다.  
   
 ### <a name="xtype"></a>x:Type  
  `x:Type` 은 명명된 형식에 <xref:System.Type> 개체를 제공합니다. 이 기능은 기본 CLR 형식 및 형식 파생을 그룹화 모니커 또는 식별자로 사용하는 지연 메커니즘에서 가장 자주 사용됩니다. WPF 스타일 및 템플릿, `TargetType` 속성의 용도는 특정 예제입니다. 자세한 내용은 [x:Type Markup Extension](x-type-markup-extension.md)을 참조하세요.  
@@ -39,8 +39,8 @@ ms.locfileid: "64617256"
 ### <a name="xreference"></a>x:Reference  
  `x:Reference` 는 원래(2006) 언어 집합의 확장인 XAML 2009의 일부입니다. `x:Reference` 는 개체 그래프에 있는 다른 기존 개체에 대한 참조를 나타냅니다. 해당 개체는 `x:Name`으로 식별됩니다. 자세한 내용은 [x:Reference Markup Extension](x-reference-markup-extension.md)을 참조하세요.  
   
-### <a name="other-x-constructs"></a>기타 x: 구문  
- XAML 언어 기능을 지원하는 다른 `x:` 구문도 있지만 이러한 구문은 태그 확장으로 구현되지 않습니다. 자세한 내용은 참조 하세요. [XAML Namespace (x:) 언어 기능](xaml-namespace-x-language-features.md)합니다.  
+### <a name="other-x-constructs"></a>기타 x: 만들고  
+ XAML 언어 기능을 지원하는 다른 `x:` 구문도 있지만 이러한 구문은 태그 확장으로 구현되지 않습니다. 자세한 내용은 XAML 네임 스페이스 [(x:)를 참조 하세요. 언어 기능](xaml-namespace-x-language-features.md).  
   
 <a name="the_markupextension_base_class"></a>   
 ## <a name="the-markupextension-base-class"></a>MarkupExtension 기본 클래스  
@@ -63,9 +63,9 @@ ms.locfileid: "64617256"
  태그 사용 관점에서 `Extension` 접미사를 사용의 일부로 포함하는 것이 좋습니다. 그러나 `Extension` 이 실제로 클래스 이름의 일부인 것처럼 동작하며, 지원 클래스에 `Extension` 접미사가 없는 경우 XAML 개체 작성기에서 해당 사용에 대한 태그 확장 지원 클래스를 확인하지 못합니다.  
   
 ### <a name="the-default-constructor"></a>기본 생성자  
- 모든 태그 확장 지원 형식에 대해 공용 기본 생서자를 노출해야 합니다. 기본 생성자는 XAML 개체 작성기가 개체 요소 사용에서 태그 확장을 인스턴스화하는 모든 경우에 필요합니다. 개체 요소 사용 지원은 태그 확장, 특히 serialization에 크게 기대하고 있습니다. 그러나 태그 확장의 특성 사용만 지원하려는 경우에는 public 생성자 없이 태그 확장을 구현할 수 있습니다.  
+ 모든 태그 확장 지원 형식에 대해 매개 변수가 없는 public 생성자를 노출 해야 합니다. XAML 개체 작성기가 개체 요소 사용에서 태그 확장을 인스턴스화하는 모든 경우에는 매개 변수가 없는 생성자가 필요 합니다. 개체 요소 사용 지원은 태그 확장, 특히 serialization에 크게 기대하고 있습니다. 그러나 태그 확장의 특성 사용만 지원하려는 경우에는 public 생성자 없이 태그 확장을 구현할 수 있습니다.  
   
- 태그 확장 사용에 인수가 없는 경우 사용을 지원하려면 기본 생성자가 필요합니다.  
+ 태그 확장 사용에 인수가 없는 경우 사용을 지원 하려면 매개 변수가 없는 생성자가 필요 합니다.  
   
 <a name="constructor_patterns_and_positional_arguments_for_a_custom_markup_extension"></a>   
 ## <a name="constructor-patterns-and-positional-arguments-for-a-custom-markup-extension"></a>사용자 지정 태그 확장에 대한 생성자 패턴 및 위치 인수  
@@ -81,7 +81,7 @@ public Collate(CollationMode collationMode) {...}
   
  개념적으로 처리는 태그 확장이 만들려는 개체인 것처럼 작동한 다음 해당 멤버 값이 설정됩니다. 설정하도록 지정된 각 속성은 XAML을 구문 분석할 때 만든 개체에서 지정된 멤버를 설정하는 방법과 유사하게 계산됩니다. 다음과 같은 두 가지 중요한 차이점이 있습니다.  
   
-- 앞에서 설명한 대로 태그 확장 지원 형식은 XAML에서 인스턴스화하기 위해 기본 생성자를 사용할 필요가 없습니다. 해당 개체 생성은 텍스트 구문에서 가능한 인수가 위치 인수나 명명된 인수로 토큰화되고 계산될 때까지 지연되고 그때 적절한 생성자가 호출됩니다.  
+- 앞에서 설명한 대로 태그 확장 지원 형식은 XAML에서 인스턴스화하기 위해 매개 변수가 없는 생성자를 가질 필요가 없습니다. 해당 개체 생성은 텍스트 구문에서 가능한 인수가 위치 인수나 명명된 인수로 토큰화되고 계산될 때까지 지연되고 그때 적절한 생성자가 호출됩니다.  
   
 - 태그 확장 사용은 중첩할 수 있습니다. 가장 안쪽의 태그 확장이 먼저 계산됩니다. 따라서 이러한 사용을 가정하고 생성 매개 변수 중 하나를 값 변환기(예: 태그 확장)에서 생성해야 하는 형식으로 선언할 수 있습니다.  
   
@@ -116,7 +116,7 @@ public Collate(CollationMode collationMode, object collateThis) {...}
 ## <a name="property-element-usage-of-a-markup-extension"></a>태그 확장의 속성 요소 사용  
  태그 확장 사용에 대한 시나리오는 종종 특성 사용에서 태그 확장을 사용하여 설계됩니다. 그러나 지원 클래스를 정의하여 속성 요소 사용을 지원할 수도 있습니다.  
   
- 태그 확장의 속성 요소 사용을 지원하려면 공용 기본 생성자를 정의합니다. 이 생성자는 정적 생성자가 아닌 인스턴스 생성자여야 합니다. 일반적으로 XAML 프로세서는 태그에서 처리하는 모든 개체 요소에서 기본 생성자를 호출해야 하기 때문에 이 생성자가 필요하며 여기에는 태그 확장 클래스가 개체 요소로 포함됩니다. 고급 시나리오의 경우 클래스에 대해 기본이 아닌 생성 경로를 정의할 수 있습니다. (자세한 내용은 [X:factorymethod 지시문](x-factorymethod-directive.md).) 그러나 이러한 패턴을 태그 확장명 용도로 사용하면 디자이너와 원시 태그 사용자 모두 사용 패턴을 검색하기가 훨씬 더 어려워지므로 그렇게 해서는 안 됩니다.  
+ 태그 확장의 속성 요소 사용을 지원 하려면 매개 변수가 없는 public 생성자를 정의 합니다. 이 생성자는 정적 생성자가 아닌 인스턴스 생성자여야 합니다. 일반적으로 XAML 프로세서는 태그에서 처리 하는 모든 개체 요소에서 매개 변수가 없는 생성자를 호출 해야 하기 때문에이 작업이 필요 합니다. 여기에는 태그 확장 클래스가 개체 요소로 포함 됩니다. 고급 시나리오의 경우 클래스에 대해 기본이 아닌 생성 경로를 정의할 수 있습니다. 자세한 내용은 [X:FactoryMethod 지시문](x-factorymethod-directive.md)을 참조 하세요. 그러나 이러한 패턴을 태그 확장명 용도로 사용하면 디자이너와 원시 태그 사용자 모두 사용 패턴을 검색하기가 훨씬 더 어려워지므로 그렇게 해서는 안 됩니다.  
   
 <a name="attributing_for_a_custom_markup_extension"></a>   
 ## <a name="attributing-for-a-custom-markup-extension"></a>사용자 지정 태그 확장에 대한 특성 지정  

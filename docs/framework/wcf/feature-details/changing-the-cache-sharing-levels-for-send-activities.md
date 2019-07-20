@@ -2,12 +2,12 @@
 title: Send 활동의 캐시 공유 수준 변경
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
-ms.openlocfilehash: 079eb037f074155aec3ad5473480bbf5d4d341b2
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: ac4f2e4fe85d6b243999add6bda65f4fb202f79c
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425163"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363847"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Send 활동의 캐시 공유 수준 변경
 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 확장을 사용하면 <xref:System.ServiceModel.Activities.Send> 메시징 활동을 사용하여 서비스 엔드포인트로 메시지를 전송하는 워크플로에 대한 채널 캐시 설정, 채널 팩터리 캐시 설정 및 캐시 공유 수준을 사용자 지정할 수 있습니다. 이러한 워크플로는 일반적으로 클라이언트 워크플로이지만 <xref:System.ServiceModel.WorkflowServiceHost>에서 호스팅되는 워크플로 서비스일 수도 있습니다. 채널 팩터리 캐시는 캐시된 <xref:System.ServiceModel.ChannelFactory%601> 개체를 포함하고, 채널 캐시는 캐시된 채널을 포함합니다.  
@@ -20,11 +20,11 @@ ms.locfileid: "67425163"
   
  워크플로의 <xref:System.ServiceModel.Activities.Send> 활동에 대해 사용할 수 있는 다양한 캐시 공유 수준과 권장 사용법은 다음과 같습니다.  
   
-- **호스트 수준**: 호스트 공유 수준에서에서 캐시를 워크플로 서비스 호스트에서 호스팅되는 워크플로 인스턴스에서만 에서만 사용할 수 있습니다. 또한 프로세스 수준 캐시에서 워크플로 서비스 호스트 간에 캐시를 공유할 수 있습니다.  
+- **호스트 수준**: 호스트 공유 수준에서는 워크플로 서비스 호스트에서 호스팅되는 워크플로 인스턴스에서만 캐시를 사용할 수 있습니다. 또한 프로세스 수준 캐시에서 워크플로 서비스 호스트 간에 캐시를 공유할 수 있습니다.  
   
-- **인스턴스 수준**: 인스턴스 공유 수준, 캐시를 사용할 수는 특정 워크플로 인스턴스 수명 내내 있지만 캐시는 다른 워크플로 인스턴스에서 사용할 수 없습니다.  
+- **인스턴스 수준**: 인스턴스 공유 수준에서는 특정 워크플로 인스턴스에서 해당 수명 동안 캐시를 사용할 수 있지만 다른 워크플로 인스턴스에서는 캐시를 사용할 수 없습니다.  
   
-- **캐시 없음**: 캐시 구성에 정의 된 끝점을 사용 하는 워크플로 해야 하는 경우 기본적으로 해제 되어 됩니다. 또한 이 경우 캐시를 설정하면 안전하지 않으므로 캐시를 해제된 상태로 두는 것이 좋습니다. 예를 들어 전송할 때마다 다른 ID(다른 자격 증명 또는 가장 사용)가 필요한 경우가 있습니다.  
+- **캐시 없음**: 구성에 정의 된 끝점을 사용 하는 워크플로가 있는 경우 기본적으로 캐시가 해제 됩니다. 또한 이 경우 캐시를 설정하면 안전하지 않으므로 캐시를 해제된 상태로 두는 것이 좋습니다. 예를 들어 전송할 때마다 다른 ID(다른 자격 증명 또는 가장 사용)가 필요한 경우가 있습니다.  
   
 ## <a name="changing-the-cache-sharing-level-for-a-client-workflow"></a>클라이언트 워크플로에 대한 캐시 공유 수준 변경  
  클라이언트 워크플로의 캐시 공유를 설정하려면 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 클래스의 인스턴스를 원하는 워크플로 인스턴스 집합에 확장으로 추가합니다. 그러면 모든 워크플로 인스턴스에서 캐시를 공유하게 됩니다. 다음 코드 예제에서는 이러한 단계를 수행하는 방법을 보여 줍니다.  
@@ -86,7 +86,7 @@ serviceHost.WorkflowExtensions.Add(() => new SendMessageChannelCache
 ```  
   
 ## <a name="customizing-cache-settings"></a>캐시 설정 사용자 지정  
- 채널 팩터리 캐시 및 채널 캐시에 대한 캐시 설정을 사용자 지정할 수 있습니다. 캐시 설정은 <xref:System.ServiceModel.Activities.ChannelCacheSettings> 클래스에서 정의됩니다. <xref:System.ServiceModel.Activities.SendMessageChannelCache> 클래스는 기본 생성자의 채널 캐시와 채널 팩터리 캐시에 대한 기본 캐시 설정을 정의합니다. 다음 표에서는 각 캐시 유형에 대한 이러한 캐시 설정의 기본값을 보여 줍니다.  
+ 채널 팩터리 캐시 및 채널 캐시에 대한 캐시 설정을 사용자 지정할 수 있습니다. 캐시 설정은 <xref:System.ServiceModel.Activities.ChannelCacheSettings> 클래스에서 정의됩니다. 클래스 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 는 매개 변수가 없는 생성자의 채널 팩터리 캐시 및 채널 캐시에 대 한 기본 캐시 설정을 정의 합니다. 다음 표에서는 각 캐시 유형에 대한 이러한 캐시 설정의 기본값을 보여 줍니다.  
   
 |설정|LeaseTimeout(분)|IdleTimeout(분)|MaxItemsInCache|  
 |-|-|-|-|  
@@ -150,7 +150,7 @@ SendMessageChannelCache customChannelCacheExtension =
 clientInstance.Extensions.Add(customChannelCacheExtension);  
 ```  
   
- 호스팅된 워크플로 서비스의 경우 응용 프로그램 구성 파일에서 팩터리 캐시 및 채널 캐시 설정을 지정할 수 있습니다. 이렇게 하려면 팩터리 및 채널 캐시의 캐시 설정을 포함하는 서비스 동작을 추가하고 이 서비스 동작을 서비스에 추가합니다. 다음 예제에서는 포함 된 구성 파일의 내용을 보여 줍니다는 `MyChannelCacheBehavior` 사용자 지정 팩터리 캐시 및 채널 캐시 설정을 사용 하 여 서비스 동작입니다. 이 서비스 동작은를 통해 서비스에 추가 된 `behaviorConfiguration` 특성입니다.  
+ 호스팅된 워크플로 서비스의 경우 응용 프로그램 구성 파일에서 팩터리 캐시 및 채널 캐시 설정을 지정할 수 있습니다. 이렇게 하려면 팩터리 및 채널 캐시의 캐시 설정을 포함하는 서비스 동작을 추가하고 이 서비스 동작을 서비스에 추가합니다. 다음 예제에서는 사용자 지정 팩터리 캐시 및 채널 캐시 설정을 사용 하 `MyChannelCacheBehavior` 여 서비스 동작을 포함 하는 구성 파일의 내용을 보여 줍니다. 이 서비스 동작은 특성을 `behaviorConfiguration` 통해 서비스에 추가 됩니다.  
   
 ```xml  
 <configuration>    
