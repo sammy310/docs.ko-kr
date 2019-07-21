@@ -3,12 +3,12 @@ title: Windows에서 .NET Core의 필수 구성 요소
 description: Windows 컴퓨터에서 .NET Core 애플리케이션을 개발 및 실행하기 위해 필요한 종속성이 무엇인지 살펴보세요.
 ms.custom: updateeachvsrelease
 ms.date: 04/08/2019
-ms.openlocfilehash: 9c4c15a08e0988955ecdf442307059868cb377d1
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 1921ef565c2d04624009f7684e439ddba1cdf57e
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539350"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331065"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows에서 .NET Core의 필수 구성 요소
 
@@ -19,18 +19,6 @@ ms.locfileid: "67539350"
 * [Visual Studio Code](https://code.visualstudio.com/)
 
 또한 Windows에서 Visual Studio 2017을 사용하여 개발하는 경우 [Visual Studio 2017 사용 시의 필수 조건](#prerequisites-with-visual-studio-2017) 섹션에서 .NET Core 개발에 지원되는 최소 버전에 대해 자세히 설명합니다.
-
-## <a name="net-core-supported-windows-versions"></a>.NET Core가 지원되는 Windows 버전
-
-.NET Core는 다음 버전에서 지원됩니다.
-
-* Windows 7 SP1
-* Windows 8.1
-* Windows 10 1주년 업데이트(버전 1607) 이상 버전
-* Windows Server 2008 R2 SP1(전체 서버 또는 Server Core)
-* Windows Server 2012 SP1(전체 서버 또는 Server Core)
-* Windows Server 2012 R2(전체 서버 또는 Server Core)
-* Windows Server 2016 이상 버전(전체 서버, Server Core 또는 Nano Server)
 
 ## <a name="net-core-supported-operating-systems"></a>.NET Core 지원 운영 체제
 
