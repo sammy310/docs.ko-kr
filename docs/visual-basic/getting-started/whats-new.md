@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 5b1547f596a0ff1c52a402f90457dced6ef604a0
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 49c39e12aa67b1f36fc46c21f5d2b23223b3264d
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611798"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238643"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic의 새로운 기능
 
@@ -122,7 +122,7 @@ Dim number As Integer = &H_C305_F860
 
 **추가 컴파일러 스위치**
 
-이제 Visual Basic 명령줄 컴파일러는 참조 어셈블리의 출력을 제어하기 위해 [**-refout**](../reference/command-line-compiler/refout-compiler-option.md) 및 [**-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) 컴파일러 옵션을 지원합니다. **-refout**는 참조 어셈블리의 출력 디렉터리를 정의하고 **-refonly**는 참조 어셈블리만 컴파일로 출력되도록 지정합니다.
+이제 Visual Basic 명령줄 컴파일러는 참조 어셈블리의 출력을 제어하기 위해 [ **-refout**](../reference/command-line-compiler/refout-compiler-option.md) 및 [ **-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) 컴파일러 옵션을 지원합니다. **-refout**는 참조 어셈블리의 출력 디렉터리를 정의하고 **-refonly**는 참조 어셈블리만 컴파일로 출력되도록 지정합니다.
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
@@ -174,7 +174,7 @@ C# 7.0부터 C#에서 참조 반환 값을 지원합니다. 즉, 호출하는 �
 
 ## <a name="visual-basic-14"></a>Visual Basic 14
 
-[Nameof](../../csharp/language-reference/keywords/nameof.md)
+[Nameof](../../csharp/language-reference/operators/nameof.md)
 
 문자열을 하드 코드하지 않고 오류 메시지에서 사용하기 위해 형식이나 멤버의 정규화되지 않은 문자열 이름을 가져올 수 있습니다.  이 기능을 사용하면 리팩터링할 때 코드를 올바르게 유지할 수 있습니다.  이 기능은 MVC(Model-View-Controller) 링크를 연결하고 속성 변경 이벤트를 발생시키는 데도 유용합니다.
 

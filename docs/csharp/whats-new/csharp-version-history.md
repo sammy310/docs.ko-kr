@@ -3,12 +3,12 @@ title: C#의 역사 - C# 가이드
 description: 이 언어의 초창기 버전은 어떤 모습이었으며 이후 어떻게 변했는가?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 351e4de01a7c3c50cb815a99f0bde546848a9e51
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 8230efcbcdd67cc99f321efc6509df3665d9f2f7
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423244"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363882"
 ---
 # <a name="the-history-of-c"></a>C\#의 역사
 
@@ -56,7 +56,7 @@ C# 버전 1.2는 Visual Studio 2003과 함께 제공됩니다. 여기에는 언�
 
 - [제네릭](../programming-guide/generics/index.md)
 - [부분 형식(Partial Type)](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
-- [무명 메서드](../programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [무명 메서드](../language-reference/operators/delegate-operator.md)
 - [Nullable 형식](../programming-guide/nullable-types/index.md)
 - [반복기](../programming-guide/concepts/iterators.md)
 - [공변성(Covariance) 및 반공변성(Contravariance)](../programming-guide/concepts/covariance-contravariance/index.md)

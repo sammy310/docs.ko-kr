@@ -18,12 +18,12 @@ ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 756d63be456dce10ca9e95963ed25602e6f4aec1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 61f1b93d2f54923f0dfc4832a79fe35dc319d0f6
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634783"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331747"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>정규식의 교체 구문
 <a name="top"></a> 교체 구문은 either/or 또는 조건부 일치를 허용하도록 정규식을 수정합니다. .NET에서는 다음 세 가지 교체 구문을 지원합니다.  
@@ -125,7 +125,7 @@ ms.locfileid: "64634783"
 |`\b`|단어 경계를 시작합니다.|  
 |`(?<n2>\d{2}-)?`|숫자 2개, 하이픈 순의 일치 항목 0개 또는 1개를 찾습니다. 이 캡처링 그룹의 이름을 `n2`로 지정합니다.|  
 |`(?(n2)`|`n2` 가 입력 문자열에서 일치하는지 여부를 테스트합니다.|  
-|`)\d{7}`|`n2` 가 일치하는 경우 일곱 개의 10진수를 일치시킵니다.|  
+|`\d{7}`|`n2` 가 일치하는 경우 일곱 개의 10진수를 일치시킵니다.|  
 |<code>&#124;\d{3}-\d{2}-\d{4}</code>|`n2` 가 일치하지 않는 경우 세 10진수, 하이픈, 두 10진수, 다른 하이픈 및 네 10진수를 일치시킵니다.|  
 |`\b`|단어 경계를 찾습니다.|  
   

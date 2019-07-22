@@ -6,12 +6,12 @@ helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
-ms.openlocfilehash: 8d3cecbaecc8cf5af1e06f29c9bb8a151523d3e8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 68428c097b4fc43617834c684ec6dc9705512597
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970950"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363938"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>대리자 비교: 명명된 메서드 및 무명 메서드(C# 프로그래밍 가이드)
 [대리자](../../../csharp/language-reference/keywords/delegate.md)는 명명된 메서드에 연결할 수 있습니다. 명명된 메서드를 사용하여 대리자를 인스턴스화하면 메서드가 매개 변수로 전달됩니다. 예를 들면 다음과 같습니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "56970950"
   
  이 코드는 명명된 메서드를 사용하여 호출됩니다. 명명된 메서드를 사용하여 생성된 대리자는 [정적](../../../csharp/language-reference/keywords/static.md) 메서드 또는 인스턴스 메서드를 캡슐화할 수 있습니다. 명명된 메서드는 이전 버전의 C#에서 대리자를 인스턴스화할 수 있는 유일한 방법입니다. 그러나 새 메서드 생성이 불필요한 오버헤드인 경우 C#에서 대리자를 인스턴스화하고 호출 시 대리자에서 처리할 코드 블록을 즉시 지정할 수 있습니다. 블록에는 람다 식 또는 무명 메서드가 포함될 수 있습니다. 자세한 내용은 [무명 함수](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)를 참조하세요.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  대리자 매개 변수로 전달하는 메서드에는 대리자 선언과 동일한 시그니처가 있어야 합니다.  
   
  대리자 인스턴스는 정적 또는 인스턴스 메서드를 캡슐화할 수 있습니다.  
@@ -41,6 +41,5 @@ ms.locfileid: "56970950"
 
 - [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
 - [대리자](../../../csharp/programming-guide/delegates/index.md)
-- [무명 메서드](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)
 - [방법: 대리자 조합(멀티캐스트 대리자)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
 - [이벤트](../../../csharp/programming-guide/events/index.md)
