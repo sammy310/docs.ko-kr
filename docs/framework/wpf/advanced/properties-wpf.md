@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], properties
 - properties [WPF]
 ms.assetid: d6e0197f-f2c4-48ed-b45b-b9cdb64aab1c
-ms.openlocfilehash: 8e65e89fb0406d9d2849e0a1be4b1aa764b935ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c685a5227f4339a094ae74af4e1314d4c47f7585
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62030348"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400874"
 ---
 # <a name="properties-wpf"></a>속성(WPF)
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 속성의 기능을 확장하는 데 사용할 수 있는 서비스 집합을 제공합니다. 일반적으로 이러한 서비스를 WPF 속성 시스템이라고 통칭합니다. [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 속성 시스템에서 지원하는 속성을 종속성 속성이라고 합니다.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 CLR (공용 언어 런타임) 속성의 기능을 확장 하는 데 사용할 수 있는 서비스 집합을 제공 합니다. 일반적으로 이러한 서비스를 WPF 속성 시스템이라고 통칭합니다. [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 속성 시스템에서 지원하는 속성을 종속성 속성이라고 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
 - [종속성 속성 개요](dependency-properties-overview.md)

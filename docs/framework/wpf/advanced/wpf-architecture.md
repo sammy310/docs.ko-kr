@@ -16,21 +16,21 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: c214cb39bf51dad2aafe4ec0c9050f355db5b2c5
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 987e48f163d35d27f6736464d7497451cca82c0c
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331676"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400853"
 ---
 # <a name="wpf-architecture"></a>WPF 아키텍처
 이 항목에서는 Windows Presentation Foundation (WPF) 클래스 계층 구조 둘러보기를 제공 합니다. 이 항목은 대부분의 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 주요 하위 시스템을 다루며 이들이 어떻게 상호 작용하는지를 설명하고, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 설계자가 선택한 몇 가지 사항에 대해서 자세히 설명합니다.  
 
 <a name="System_Object"></a>   
 ## <a name="systemobject"></a>System.Object  
- 기본 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 프로그래밍 모델은 관리 코드를 통해 노출됩니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 초기 디자인 단계에서는 시스템의 관리되는 구성 요소와 관리되지 않는 구성 요소를 정확하게 구분하는 방법에 대한 많은 논쟁이 있었습니다. [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]에서는 보다 생산적이며 강력한 개발 작업을 수행하는 데 유용한 여러 기능(메모리 관리, 오류 처리, 공용 형식 시스템 등)을 제공하지만 이러한 이점에는 대가가 따릅니다.  
+ 기본 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 프로그래밍 모델은 관리 코드를 통해 노출됩니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 초기 디자인 단계에서는 시스템의 관리되는 구성 요소와 관리되지 않는 구성 요소를 정확하게 구분하는 방법에 대한 많은 논쟁이 있었습니다. CLR은 개발 작업을 더 생산적이 고 강력한 기능을 제공 하는 많은 기능을 제공 합니다 (메모리 관리, 오류 처리, 공용 유형 시스템 등). 단,이 경우에는 비용이 듭니다.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 주요 구성 요소는 아래 그림에 설명되어 있습니다. 다이어그램의 빨간색 섹션(PresentationFramework, PresentationCore 및 milcore)은 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 주요 코드 부분입니다. 이 중에서 하나(milcore)만 관리되지 않는 구성 요소입니다. Milcore는 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]와의 긴밀한 통합을 위해 비관리 코드로 작성되어 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서의 모든 디스플레이는 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 엔진을 통해 수행되므로 효율적인 하드웨어 및 소프트웨어 렌더링을 허용합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에는 메모리 및 실행에 대한 세부적인 제어도 필요합니다. milcore에 있는 컴포지션 엔진은 성능의 영향을 크게 받으므로 성능을 높이기 위해 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]의 여러 이점을 포기해야 했습니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 주요 구성 요소는 아래 그림에 설명되어 있습니다. 다이어그램의 빨간색 섹션(PresentationFramework, PresentationCore 및 milcore)은 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 주요 코드 부분입니다. 이 중에서 하나(milcore)만 관리되지 않는 구성 요소입니다. Milcore는 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]와의 긴밀한 통합을 위해 비관리 코드로 작성되어 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서의 모든 디스플레이는 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 엔진을 통해 수행되므로 효율적인 하드웨어 및 소프트웨어 렌더링을 허용합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에는 메모리 및 실행에 대한 세부적인 제어도 필요합니다. Milcore의 컴퍼지션 엔진은 성능이 매우 중요 하므로 CLR의 많은 이점을 제공 하 여 성능을 향상 시킬 수 있습니다.  
   
  ![.NET Framework 내 WPF의 위치.](./media/wpf-architect1.PNG "wpf_architect1")  
   
@@ -44,13 +44,13 @@ ms.locfileid: "68331676"
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 디자인 단계에서 목표는 단일 실행 스레드로 이동하되 스레드가 아닌 "선호" 모델로 이동하는 것이었습니다. 스레드 선호도는 일부 형식의 상태를 저장하기 위해 구성 요소가 실행 스레드의 ID를 사용할 때 발생합니다. 이에 대한 가장 일반적인 형태는 TLS(스레드 로컬 저장소)를 사용하여 상태를 저장하는 것입니다. 스레드 선호도는 각 논리적 실행 스레드가 운영 체제에서 하나의 실제 스레드에만 소속될 수 있도록 합니다. 따라서 메모리를 많이 소비할 수 있습니다. 결국 WPF의 스레딩 모델은 스레드 선호도가 있는 단일 스레딩된 실행의 기존 User32 스레딩 모델과 계속 동기화됩니다. 이에 대한 주요 이유는 상호 운용성 때문입니다. [!INCLUDE[TLA2#tla_ole2.0](../../../../includes/tla2sharptla-ole2-0-md.md)], 클립보드, Internet Explorer 등의 시스템의 경우 모두 STA(단일 스레드 선호도) 실행이 필요합니다.  
   
- STA 스레딩이 포함된 개체가 있다면 스레드 간에 통신하고 올바른 스레드에 있는지를 확인할 수 있는 방법이 필요합니다. 여기에서 디스패처의 역할이 필요합니다. 디스패처는 우선 순위가 지정된 여러 개의 큐가 있는 기본 메시지 디스패치 시스템입니다. 메시지의 예로 원시 입력 알림(마우스 이동), 프레임워크 기능(레이아웃) 또는 사용자 명령(이 메서드 실행)을 들 수 있습니다. 에서 <xref:System.Windows.Threading.DispatcherObject>파생 하 여 STA 동작을 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 포함 하는 개체를 만들고 만들 때 디스패처에 대 한 포인터를 지정 합니다.  
+ STA 스레딩이 포함된 개체가 있다면 스레드 간에 통신하고 올바른 스레드에 있는지를 확인할 수 있는 방법이 필요합니다. 여기에서 디스패처의 역할이 필요합니다. 디스패처는 우선 순위가 지정된 여러 개의 큐가 있는 기본 메시지 디스패치 시스템입니다. 메시지의 예로 원시 입력 알림(마우스 이동), 프레임워크 기능(레이아웃) 또는 사용자 명령(이 메서드 실행)을 들 수 있습니다. 에서 <xref:System.Windows.Threading.DispatcherObject>파생 하 여 STA 동작을 포함 하는 CLR 개체를 만들고 만들 때 디스패처에 대 한 포인터를 지정 합니다.  
   
 <a name="System_Windows_DependencyObject"></a>   
 ## <a name="systemwindowsdependencyobject"></a>System.Windows.DependencyObject  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]를 빌드하는 데 사용된 기본 아키텍처 방법 중 하나는 메서드나 이벤트보다 속성을 선호하는 것이었습니다. 속성은 선언적이며 작업 대신 의도를 보다 쉽게 지정할 수 있습니다. 또한 모델 중심 또는 데이터 중심의 시스템을 지원하여 사용자 인터페이스 콘텐츠를 표시했습니다. 이 방법을 통해 애플리케이션의 동작을 보다 효과적으로 제어하기 위해 사용자가 바인딩할 수 있는 것보다 더 많은 속성을 의도적으로 만들 수 있었습니다.  
   
- 시스템에서 더 많은 부분을 속성에서 제어할 수 있게 만들기 위해 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]이 제공하는 것보다 다양한 속성 시스템이 필요했습니다. 간단한 예로 변경 알림을 들 수 있습니다. 양방향 바인딩을 사용하기 위해서는 바인드의 양쪽이 변경 알림을 지원해야 합니다. 동작이 속성 값에 연결되려면 속성 값이 변경될 때 알림을 받아야 합니다. Microsoft .NET 프레임 워크에는 개체가 변경 알림을 게시할 수 있도록 하는 **INotifyPropertyChange**인터페이스가 있습니다. 단,이 인터페이스는 선택 사항입니다.  
+ 속성으로 제어 되는 시스템을 더 확보 하려면 CLR에서 제공 하는 것 보다 더 다양 한 속성 시스템이 필요 합니다. 간단한 예로 변경 알림을 들 수 있습니다. 양방향 바인딩을 사용하기 위해서는 바인드의 양쪽이 변경 알림을 지원해야 합니다. 동작이 속성 값에 연결되려면 속성 값이 변경될 때 알림을 받아야 합니다. Microsoft .NET 프레임 워크에는 개체가 변경 알림을 게시할 수 있도록 하는 **INotifyPropertyChange**인터페이스가 있습니다. 단,이 인터페이스는 선택 사항입니다.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 <xref:System.Windows.DependencyObject> 형식에서 파생 된 다양 한 속성 시스템을 제공 합니다. 속성 시스템은 속성 식 간의 종속성을 추적하고 종속성이 변경될 때 속성 값의 유효성을 자동으로 다시 검사하는 면에서 진정한 "종속성" 속성 시스템입니다. 예를 들어를 상속 하는 속성 ( <xref:System.Windows.Controls.Control.FontSize%2A>예:)이 있는 경우 값을 상속 하는 요소의 부모에서 속성이 변경 되 면 시스템이 자동으로 업데이트 됩니다.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "68331676"
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 데이터 바인딩의 가장 흥미로운 기능 중 하나는 새로 도입된 데이터 템플릿입니다. 데이터 템플릿을 사용하면 어떤 데이터 조각을 시각화해야 하는지를 선언적으로 명시할 수 있습니다. 데이터에 바인딩할 수 있는 사용자 지정 사용자 인터페이스를 만드는 대신 역으로, 생성될 디스플레이를 데이터가 결정하도록 할 수 있습니다.  
   
- 스타일 지정은 실제로는 데이터 바인딩의 간단한 형태입니다. 스타일 지정을 사용하면 공유된 정의에 있는 속성 집합을 하나 이상의 요소 인스턴스에 바인딩할 수 있습니다. 스타일은 <xref:System.Windows.FrameworkElement.Style%2A> 속성을 설정 하 여 명시적 참조에 의해 또는 스타일 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 을 요소의 형식과 연결 하 여 암시적으로 요소에 적용 됩니다.  
+ 스타일 지정은 실제로는 데이터 바인딩의 간단한 형태입니다. 스타일 지정을 사용하면 공유된 정의에 있는 속성 집합을 하나 이상의 요소 인스턴스에 바인딩할 수 있습니다. 스타일은 <xref:System.Windows.FrameworkElement.Style%2A> 속성을 설정 하 여 명시적 참조를 통해 요소에 적용 되거나 스타일을 요소의 CLR 형식과 연결 하 여 암시적으로 적용 됩니다.  
   
 <a name="System_Windows_Controls_Control"></a>   
 ## <a name="systemwindowscontrolscontrol"></a>System.Windows.Controls.Control  

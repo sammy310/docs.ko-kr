@@ -15,15 +15,15 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: fcc5d3aa6d093f1fbf8af19c4f0c65036e1705d7
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 259db84c8ab3b9bbad809b9636ba18537dd6fe62
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364390"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400728"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 부분 신뢰 보안
-<a name="introduction"></a> 일반적으로 악의적인 손상을 방지하기 위해 중요한 시스템 리소스에 직접 액세스하지 않도록 인터넷 응용 프로그램을 제한해야 합니다. 기본적 [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] 으로 및 클라이언트 쪽 스크립팅 언어는 중요 한 시스템 리소스에 액세스할 수 없습니다. WPF (Windows Presentation Foundation) 브라우저에서 호스팅되는 응용 프로그램은 브라우저에서 실행할 수 있기 때문에 유사한 제한 사항을 준수 해야 합니다. 이러한 제한을 적용 하기 위해 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 는 CAS (코드 액세스 보안) 및 [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] ( [WPF 보안 전략-플랫폼 보안](wpf-security-strategy-platform-security.md)참조)를 모두 사용 합니다. 기본적으로 브라우저에서 호스트 된 응용 프로그램은 인터넷, 로컬 인트라넷 또는 로컬 컴퓨터에서 시작 되었는지 여부에 관계 없이 인터넷 영역 CA 사용 권한 집합을 요청 합니다. 전체 권한 집합보다 적은 권한으로 실행하는 애플리케이션은 부분 신뢰로 실행된다고 할 수 있습니다.  
+<a name="introduction"></a> 일반적으로 악의적인 손상을 방지하기 위해 중요한 시스템 리소스에 직접 액세스하지 않도록 인터넷 응용 프로그램을 제한해야 합니다. 기본적 [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] 으로 및 클라이언트 쪽 스크립팅 언어는 중요 한 시스템 리소스에 액세스할 수 없습니다. WPF (Windows Presentation Foundation) 브라우저에서 호스팅되는 응용 프로그램은 브라우저에서 실행할 수 있기 때문에 유사한 제한 사항을 준수 해야 합니다. 이러한 제한을 적용 하기 위해 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 는 CAS (코드 액세스 보안) 및 ClickOnce를 모두 사용 합니다 ( [WPF 보안 전략-플랫폼 보안](wpf-security-strategy-platform-security.md)참조). 기본적으로 브라우저에서 호스트 된 응용 프로그램은 인터넷, 로컬 인트라넷 또는 로컬 컴퓨터에서 시작 되었는지 여부에 관계 없이 인터넷 영역 CA 사용 권한 집합을 요청 합니다. 전체 권한 집합보다 적은 권한으로 실행하는 애플리케이션은 부분 신뢰로 실행된다고 할 수 있습니다.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]는 가능한 많은 기능을 부분 신뢰에서 안전 하 게 사용할 수 있도록 하는 다양 한 지원을 제공 하며, CA와 함께 부분 신뢰 프로그래밍에 대 한 추가 지원을 제공 합니다.  
   

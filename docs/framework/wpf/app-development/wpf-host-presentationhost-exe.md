@@ -5,25 +5,25 @@ helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-ms.openlocfilehash: 543076c3b00bf7946111df4c18d8c71928ce7ee2
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 16618042324387bfc15f4685f4759378c50a80b7
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487318"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401710"
 ---
 # <a name="wpf-host-presentationhostexe"></a>WPF 호스트(PresentationHost.exe)
-Windows Presentation Foundation (WPF) 호스트 (PresentationHost.exe)은 응용 프로그램입니다 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 호환 브라우저에서 호스팅 되도록 응용 프로그램 (포함 하 여 [!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)] 이상). 기본적으로 Windows Presentation Foundation (WPF) 호스트 셸로 등록 하 고 [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] 처리기에 대 한 브라우저에서 호스팅된 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 콘텐츠를 포함 하는:  
+WPF (Windows Presentation Foundation) 호스트 (presentationhost.exe)는 응용 프로그램을 호환 되는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 브라우저 (이상 버전 포함 [!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)] )에서 호스팅할 수 있도록 하는 응용 프로그램입니다. 기본적으로 Windows Presentation Foundation (WPF) 호스트는 브라우저에서 호스트 [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 되는 콘텐츠에 대 한 셸 및 처리기로 등록 됩니다. 여기에는 다음이 포함 됩니다.  
   
 - 느슨하게 압축되지 않은 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일(.xaml).  
   
 - [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)](.xbap).  
   
- Windows Presentation Foundation (WPF) 호스트 이러한 형식의 파일:  
+ 이러한 형식의 파일에 대해서는 WPF (Windows Presentation Foundation) 호스트:  
   
-- 등록 된 시작 [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] Windows Presentation Foundation (WPF) 콘텐츠를 호스트 하는 처리기.  
+- Windows Presentation Foundation (WPF [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] ) 콘텐츠를 호스팅하기 위해 등록 된 처리기를 시작 합니다.  
   
-- 필요한 올바른 버전을 로드 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 및 Windows Presentation Foundation (WPF) 어셈블리입니다.  
+- 필요한 CLR (공용 언어 런타임) 및 Windows Presentation Foundation (WPF) 어셈블리의 올바른 버전을 로드 합니다.  
   
 - 배포 영역에 대해 적절한 권한 수준이 설정되어 있는지 확인합니다.  
   
@@ -41,7 +41,7 @@ Windows Presentation Foundation (WPF) 호스트 (PresentationHost.exe)은 응용
 |-debugSecurityZoneURL \<url>|지정된 [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]에서 배포된 것처럼 애플리케이션이 디버깅되어야 함을 PresentationHost.exe에 알리기 위해 [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] 값과 함께 사용됩니다. 이를 통해 배포 영역과 원본 사이트가 모두 결정됩니다.|  
 |-embedding|OLE에 필요합니다. `-event` 또는 `-debug` 매개 변수가 지정된 경우 `-embedding` 매개 변수가 내부적으로 설정되기 때문에 해당 매개 변수를 지정할 필요가 없습니다.|  
 |-event \<eventname>|이 이름으로 이벤트를 연 다음 PresentationHost.exe가 초기화되고 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 콘텐츠를 호스팅할 준비가 되면 이 이벤트에 신호를 보냅니다. 이벤트가 아직 만들어지지 않은 등의 이유로 인해 이벤트를 여는 데 오류가 발생하면 PresentationHost.exe가 종료됩니다.|  
-|-launchApplication \<url>|독립 실행형 지정된 된 URL에서 ClickOnce 응용 프로그램을 시작합니다. .NET 응용 프로그램과 관련된 [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] 및 WinINet 보안 정책이 적용됩니다.|  
+|-launchApplication \<url>|지정 된 URL에서 독립 실행형 ClickOnce 응용 프로그램을 시작 합니다. .NET 응용 프로그램과 관련된 [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] 및 WinINet 보안 정책이 적용됩니다.|  
   
 ## <a name="scenarios"></a>시나리오  
   

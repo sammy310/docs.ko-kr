@@ -6,15 +6,15 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: c429df440f87110a9059b8f9c40cdf273952f581
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 8b47c43e897004a6c7eb3d2f8b2a2b9bb625e158
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364118"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400827"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>WPF에 대한 XAML 및 사용자 지정 클래스
-[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 프레임워크에서 구현된 XAML은 모든 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 언어로 사용자 지정 클래스 또는 구조체를 정의한 다음 XAML 태그를 사용하여 해당 클래스에 액세스하는 기능을 지원합니다. 일반적으로 사용자 지정 형식을 XAML 네임스페이스 접두사에 매핑하여 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 정의 형식과 사용자 지정 형식의 혼합을 동일한 태그 파일에서 함께 사용할 수 있습니다. 이 항목에서는 사용자 지정 클래스를 XAML 요소로 사용 가능하기 위해 만족해야 하는 요구 사항을 설명합니다.  
+CLR (공용 언어 런타임) 프레임 워크에서 구현 된 XAML은 CLR (공용 언어 런타임) 언어로 사용자 지정 클래스 또는 구조체를 정의 하 고 XAML 태그를 사용 하 여 해당 클래스에 액세스할 수 있는 기능을 지원 합니다. 일반적으로 사용자 지정 형식을 XAML 네임스페이스 접두사에 매핑하여 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 정의 형식과 사용자 지정 형식의 혼합을 동일한 태그 파일에서 함께 사용할 수 있습니다. 이 항목에서는 사용자 지정 클래스를 XAML 요소로 사용 가능하기 위해 만족해야 하는 요구 사항을 설명합니다.  
 
 <a name="Custom_Classes_in_Applications_vs__in_Assemblies"></a>   
 ## <a name="custom-classes-in-applications-or-assemblies"></a>애플리케이션 또는 어셈블리의 사용자 지정 클래스  
@@ -37,7 +37,7 @@ ms.locfileid: "68364118"
  개체 요소 구문을 사용하는 것 외에도 개체 정의에서 해당 개체를 값 형식으로 사용하는 다른 공용 속성에 대해서는 속성 요소 구문을 사용해야 합니다. 그 이유는 이제 개체가 개체 요소로 인스턴스화되어 이러한 속성의 속성 요소 값을 채울 수 있기 때문입니다.  
   
 ### <a name="structures"></a>구조체  
- 사용자 지정 형식으로 정의 하는 구조체는의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML에서 항상 생성할 수 있습니다. 이는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 컴파일러가 모든 속성 값을 기본값으로 초기화 하는 구조체에 대 한 매개 변수가 없는 생성자를 암시적으로 만들기 때문입니다. 경우에 따라서는 구조체의 기본 생성 동작 및/또는 개체 요소를 사용하는 것이 바람직하지 않습니다. 구조체가 값을 채우고 개념적으로 공용 구조체로 작동하기 때문일 수 있습니다. 이 경우 포함된 값의 해석이 서로 달라서 어느 속성도 설정할 수 없습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이러한<xref:System.Windows.GridLength>구조체의 예는입니다. 일반적으로 이러한 구조체는 구조체의 값에 대해 서로 다른 해석이나 모드를 만드는 문자열 규칙을 사용하여 값을 특성 형식으로 표현할 수 있도록 형식 변환기를 구현합니다. 또한 구조체는 매개 변수가 없는 생성자를 통해 코드 생성에 대해 비슷한 동작을 노출 해야 합니다.  
+ 사용자 지정 형식으로 정의 하는 구조체는의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML에서 항상 생성할 수 있습니다. 이는 CLR 컴파일러가 모든 속성 값을 기본값으로 초기화 하는 구조체에 대해 매개 변수가 없는 생성자를 암시적으로 만들기 때문입니다. 경우에 따라서는 구조체의 기본 생성 동작 및/또는 개체 요소를 사용하는 것이 바람직하지 않습니다. 구조체가 값을 채우고 개념적으로 공용 구조체로 작동하기 때문일 수 있습니다. 이 경우 포함된 값의 해석이 서로 달라서 어느 속성도 설정할 수 없습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이러한<xref:System.Windows.GridLength>구조체의 예는입니다. 일반적으로 이러한 구조체는 구조체의 값에 대해 서로 다른 해석이나 모드를 만드는 문자열 규칙을 사용하여 값을 특성 형식으로 표현할 수 있도록 형식 변환기를 구현합니다. 또한 구조체는 매개 변수가 없는 생성자를 통해 코드 생성에 대해 비슷한 동작을 노출 해야 합니다.  
   
 <a name="Requirements_for_Properties_of_a_Custom_Class_as_XAML"></a>   
 ## <a name="requirements-for-properties-of-a-custom-class-as-xaml-attributes"></a>사용자 지정 클래스의 속성을 XAML 특성으로 사용하기 위한 요구 사항  
@@ -57,7 +57,7 @@ ms.locfileid: "68364118"
  특성 구문이 허용 되지만 개체 요소를 포함 하는 속성 요소 구문이 XAML을 통해 허용 되지 않는 속성의 예로는 <xref:System.Windows.Input.Cursor> 형식을 사용 하는 다양 한 속성이 있습니다. 클래스 <xref:System.Windows.Input.Cursor> 에 전용 형식 변환기 <xref:System.Windows.Input.CursorConverter>가 있지만 매개 변수가 없는 생성자를 노출 하지 않기 때문에 실제 <xref:System.Windows.FrameworkElement.Cursor%2A> <xref:System.Windows.Input.Cursor> 형식이 참조 형식인 경우에도 특성 구문을 통해서만 속성을 설정할 수 있습니다.  
   
 ### <a name="per-property-type-converters"></a>속성별 형식 변환기  
- 또는 속성 자체가 속성 수준에서 형식 변환기를 선언할 수도 있습니다. 이렇게 하면 특성의 들어오는 문자열 값을 해당 형식에 따라 <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> 작업에 대 한 입력으로 처리 하 여 속성 형식의 개체를 인라인으로 인스턴스화하는 "미니 언어"를 사용할 수 있습니다. 일반적으로 이 작업은 XAML에서 속성을 설정할 수 있는 유일한 방법이 아니라 편리한 접근자를 제공하기 위해 수행합니다. 그러나 매개 변수가 없는 생성자 또는 특성 사용 형식 변환기를 제공 하지 않는 기존 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 형식을 사용 하려는 특성에 대해 형식 변환기를 사용할 수도 있습니다. API의 예제는 <xref:System.Globalization.CultureInfo> 형식을 사용 하는 특정 속성입니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이 경우 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기존 Microsoft .NET Framework <xref:System.Globalization.CultureInfo> 형식을 사용 하 여 이전 버전 <xref:System.Globalization.CultureInfo> 의 프레임 워크에서 사용 된 호환성 및 마이그레이션 시나리오를 더 잘 해결 했지만 형식이 필요한를 지원 하지 않았습니다. XAML 속성 값으로 직접 사용할 수 있는 생성자 또는 형식 수준 형식 변환입니다.  
+ 또는 속성 자체가 속성 수준에서 형식 변환기를 선언할 수도 있습니다. 이렇게 하면 특성의 들어오는 문자열 값을 해당 형식에 따라 <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> 작업에 대 한 입력으로 처리 하 여 속성 형식의 개체를 인라인으로 인스턴스화하는 "미니 언어"를 사용할 수 있습니다. 일반적으로 이 작업은 XAML에서 속성을 설정할 수 있는 유일한 방법이 아니라 편리한 접근자를 제공하기 위해 수행합니다. 그러나 매개 변수가 없는 생성자 또는 특성 사용 형식 변환기를 제공 하지 않는 기존 CLR 형식을 사용 하려는 특성에 대해 형식 변환기를 사용할 수도 있습니다. API의 예제는 <xref:System.Globalization.CultureInfo> 형식을 사용 하는 특정 속성입니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이 경우 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기존 Microsoft .NET Framework <xref:System.Globalization.CultureInfo> 형식을 사용 하 여 이전 버전 <xref:System.Globalization.CultureInfo> 의 프레임 워크에서 사용 된 호환성 및 마이그레이션 시나리오를 더 잘 해결 했지만 형식이 필요한를 지원 하지 않았습니다. XAML 속성 값으로 직접 사용할 수 있는 생성자 또는 형식 수준 형식 변환입니다.  
   
  따라서 컨트롤 작성자는 XAML을 사용하는 속성을 노출할 때마다 해당 속성에 종속성 속성을 지원하는 방법을 고려해야 합니다. 이는 백업을 사용 하 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.DependencyProperty> 여 성능을 향상 시킬 수 있으므로 XAML 프로세서의 기존 구현을 사용 하는 경우에 특히 그렇습니다. 종속성 속성은 XAML 액세스 가능 속성이 제공할 것으로 예상되는 속성 시스템의 기능을 노출합니다. 이러한 기능에는 애니메이션, 데이터 바인딩 및 스타일 지원 등이 포함됩니다. 자세한 내용은 [사용자 지정 종속성 속성](custom-dependency-properties.md) 및 [XAML 로드 및 종속성 속성](xaml-loading-and-dependency-properties.md)을 참조하세요.  
   
@@ -66,10 +66,10 @@ ms.locfileid: "68364118"
   
 <a name="Requirements_for_Events_of_a_Custom_Class_as_XAML"></a>   
 ## <a name="requirements-for-xaml-event-handler-attribute-syntax-on-events-of-a-custom-class"></a>사용자 지정 클래스의 이벤트에 XAML 이벤트 처리기 특성 구문을 사용하기 위한 요구 사항  
- 이벤트로 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 사용할 수 있도록 이벤트는 매개 변수가 없는 생성자를 지 원하는 클래스에서 공용 이벤트로 노출 되거나 파생 클래스에서 이벤트에 액세스할 수 있는 추상 클래스에 노출 되어야 합니다. 라우트된 이벤트 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 로 편리 하 게 사용 하기 위해 이벤트는 명시적 `add` 및 `remove` 메서드 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 를 구현 해야 합니다 .이 메서드는 이벤트 시그니처의 처리기를 추가 및 제거 하 고 해당 처리기 <xref:System.Windows.UIElement.AddHandler%2A>를에전달합니다. 및<xref:System.Windows.UIElement.RemoveHandler%2A> 메서드. 이 두 메서드는 이벤트가 연결된 인스턴스의 라우트된 이벤트 처리기 저장소에 처리기를 추가하거나 제거합니다.  
+ CLR 이벤트로 사용할 수 있도록 이벤트는 매개 변수가 없는 생성자를 지 원하는 클래스에서 공용 이벤트로 노출 되거나 파생 클래스에서 이벤트에 액세스할 수 있는 추상 클래스에 노출 되어야 합니다. 라우트된 이벤트로 편리 하 게 사용 하기 위해 clr 이벤트는 `add` 명시적 및 `remove` 메서드를 구현 해야 합니다 .이 메서드는 clr 이벤트 시그니처의 처리기를 추가 및 제거 하 고 해당 처리기 <xref:System.Windows.UIElement.AddHandler%2A> <xref:System.Windows.UIElement.RemoveHandler%2A> 를에 전달 합니다. 메서드. 이 두 메서드는 이벤트가 연결된 인스턴스의 라우트된 이벤트 처리기 저장소에 처리기를 추가하거나 제거합니다.  
   
 > [!NOTE]
->  를 사용 하 여 <xref:System.Windows.UIElement.AddHandler%2A>라우트된 이벤트에 대해 직접 처리기를 등록 하 고 라우트된 이벤트를 노출 하는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 이벤트를 의도적으로 정의 하지 않을 수 있습니다. 이벤트에서 연결 처리기에 대해 XAML 특성 구문을 사용하지 않으며 결과 클래스에서 해당 형식의 기능에 대해 투명도가 떨어지는 XAML 보기를 제공하므로, 이 방법은 일반적으로 권장되지 않습니다.  
+>  를 사용 하 여 <xref:System.Windows.UIElement.AddHandler%2A>라우트된 이벤트에 대해 직접 처리기를 등록 하 고 라우트된 이벤트를 노출 하는 CLR 이벤트를 의도적으로 정의 하지 않을 수 있습니다. 이벤트에서 연결 처리기에 대해 XAML 특성 구문을 사용하지 않으며 결과 클래스에서 해당 형식의 기능에 대해 투명도가 떨어지는 XAML 보기를 제공하므로, 이 방법은 일반적으로 권장되지 않습니다.  
   
 <a name="Collection_Properties"></a>   
 ## <a name="writing-collection-properties"></a>컬렉션 속성 작성  

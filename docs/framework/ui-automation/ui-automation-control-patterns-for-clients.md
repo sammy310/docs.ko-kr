@@ -5,16 +5,16 @@ helpviewer_keywords:
 - UI Automation, control patterns for clients
 - control patterns, UI Automation clients
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
-ms.openlocfilehash: 1b0d374c9dc3e24302a8acfbc56cd9468f41def5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f6fccf828552fbd4102c16bde7ffbaf394b69ac
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033100"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400685"
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>클라이언트용 UI 자동화 컨트롤 패턴
 > [!NOTE]
->  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 최신 정보에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]를 참조 하세요 [Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746)합니다.  
+>  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  이 개요에서는 UI 자동화 클라이언트에 대한 컨트롤 패턴을 소개합니다. UI 자동화 클라이언트에서 컨트롤 패턴을 사용하여 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]에 대한 정보에 액세스하는 방법도 소개합니다.  
   
@@ -34,9 +34,9 @@ ms.locfileid: "62033100"
   
 <a name="uiautomation_properties_on_control_patterns"></a>   
 ## <a name="retrieving-properties-on-control-patterns"></a>컨트롤 패턴에 대한 속성 검색  
- 클라이언트는 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> 또는 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> 를 호출하고 적절한 형식으로 반환되는 개체를 캐스팅하여 컨트롤 패턴에 대한 속성 값을 검색할 수 있습니다. 에 대 한 자세한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 참조 하세요 [클라이언트용 UI 자동화 속성](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)합니다.  
+ 클라이언트는 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> 또는 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> 를 호출하고 적절한 형식으로 반환되는 개체를 캐스팅하여 컨트롤 패턴에 대한 속성 값을 검색할 수 있습니다. 속성에 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 대 한 자세한 내용은 [클라이언트에 대 한 UI 자동화 속성](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)을 참조 하세요.  
   
- `GetPropertyValue` 접근자를 통해 [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] 메서드 외에 속성 값을 검색하여 패턴에 대한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성에 액세스할 수 있습니다.  
+ `GetPropertyValue` 메서드 외에도 CLR (공용 언어 런타임) 접근자를 통해 속성 값을 검색 하 여 패턴에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성에 액세스할 수 있습니다.  
   
 <a name="uiautomation_with_variable_patterns"></a>   
 ## <a name="controls-with-variable-patterns"></a>가변 패턴을 사용하는 컨트롤  
@@ -53,4 +53,4 @@ ms.locfileid: "62033100"
 - [UI 자동화 클라이언트에 대한 컨트롤 패턴 매핑](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
 - [TextPattern Insert 텍스트 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
 - [TextPattern 검색 및 선택 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FindText)
-- [InvokePattern, ExpandCollapsePattern, 및 TogglePattern 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InvokePattern)
+- [InvokePattern, ExpandCollapsePattern 및 TogglePattern 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InvokePattern)

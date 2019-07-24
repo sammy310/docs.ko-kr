@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 66158d14b7686f520260cd24fbf6c1b0e7dda1d4
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 2c4e7213ddcffdb026d3d6e6b339bfc91b3c27c6
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364101"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400778"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 구문 정보
 이 항목에서는 XAML 구문의 요소를 설명 하는 데 사용 되는 용어를 정의 합니다. 이러한 용어는이 설명서의 나머지 부분 전체에서 자주 사용 됩니다. WPF 설명서와 XAML을 사용 하는 다른 프레임 워크 또는 system.xaml 수준에서 XAML 언어 지원에 의해 설정 된 기본 XAML 개념에 대해 자주 사용 됩니다. 이 항목에서는 [XAML 개요 (WPF)](xaml-overview-wpf.md)항목에서 소개 하는 기본 용어를 확장 합니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "68364101"
   
 <a name="xaml_and_clr"></a>   
 ## <a name="xaml-and-clr"></a>XAML 및 CLR  
- XAML은 태그 언어입니다. 이름 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]으로 암시 된는 런타임 실행을 가능 하 게 합니다. XAML은 CLR 런타임에서 직접 사용 하는 공용 언어 중 하나가 아닙니다. 대신 XAML을 자체 형식 시스템을 지 원하는 것으로 간주할 수 있습니다. WPF에서 사용 되는 특정 XAML 구문 분석 시스템은 CLR 및 CLR 형식 시스템을 기반으로 합니다. WPF에 대 한 XAML이 구문 분석 될 때 런타임 표현을 인스턴스화하기 위해 XAML 형식이 CLR 형식에 매핑됩니다. 이러한 이유로이 문서의 구문에 대 한 나머지 부분에는 XAML 언어 사양의 동일한 구문 토론이 아닌 경우에도 CLR 형식 시스템에 대 한 참조가 포함 됩니다. Xaml 언어 사양 수준에 따라 XAML 형식은 다른 형식 시스템에 매핑될 수 있습니다. CLR 일 필요는 없지만 다른 XAML 파서의 생성 및 사용이 필요 합니다.  
+ XAML은 태그 언어입니다. 이름으로 암시 된 CLR (공용 언어 런타임)은 런타임 실행을 가능 하 게 합니다. XAML은 CLR 런타임에서 직접 사용 하는 공용 언어 중 하나가 아닙니다. 대신 XAML을 자체 형식 시스템을 지 원하는 것으로 간주할 수 있습니다. WPF에서 사용 되는 특정 XAML 구문 분석 시스템은 CLR 및 CLR 형식 시스템을 기반으로 합니다. WPF에 대 한 XAML이 구문 분석 될 때 런타임 표현을 인스턴스화하기 위해 XAML 형식이 CLR 형식에 매핑됩니다. 이러한 이유로이 문서의 구문에 대 한 나머지 부분에는 XAML 언어 사양의 동일한 구문 토론이 아닌 경우에도 CLR 형식 시스템에 대 한 참조가 포함 됩니다. Xaml 언어 사양 수준에 따라 XAML 형식은 다른 형식 시스템에 매핑될 수 있습니다. CLR 일 필요는 없지만 다른 XAML 파서의 생성 및 사용이 필요 합니다.  
   
 #### <a name="members-of-types-and-class-inheritance"></a>형식 및 클래스 상속의 멤버  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 형식의 XAML 멤버로 표시 되는 속성 및 이벤트는 기본 형식에서 상속 되는 경우가 많습니다. 예를 들어 다음 `<Button Background="Blue" .../>`예제를 참조 하세요. 클래스 정의, 리플렉션 결과 또는 설명서를 확인 하려는 <xref:System.Windows.Controls.Button> 경우 속성은클래스의바로선언된속성이아닙니다.<xref:System.Windows.Controls.Control.Background%2A> 대신는 기본 <xref:System.Windows.Controls.Control> 클래스에서 상속 됩니다. <xref:System.Windows.Controls.Control.Background%2A>  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 48df7083d990dde157c9b7b2a062c865954cf38a
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 9bb77146a55bae4aed17bdd3ef48eca7890d4807
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364210"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401443"
 ---
 # <a name="binding-sources-overview"></a>바인딩 소스 개요
 데이터 바인딩에서 바인딩 소스 개체는 데이터를 가져오는 개체를 의미합니다. 이 항목에서는 바인딩 소스로 사용할 수 있는 개체 형식에 대해 설명합니다.  
@@ -20,9 +20,9 @@ ms.locfileid: "68364210"
 ## <a name="binding-source-types"></a>바인딩 소스 형식  
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 데이터 바인딩은 다음 바인딩 소스 형식을 지원합니다.  
   
-|바인딩 소스|설명|  
+|바인딩 소스|Description|  
 |--------------------|-----------------|  
-|[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체|모든 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체의 공용 속성, 하위 속성 및 인덱서에 바인딩할 수 있습니다. 바인딩 엔진은 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 리플렉션을 사용하여 속성의 값을 가져옵니다. 또는를 구현 <xref:System.ComponentModel.ICustomTypeDescriptor> 하거나 등록 <xref:System.ComponentModel.TypeDescriptionProvider> 된을 포함 하는 개체도 바인딩 엔진을 사용 합니다.<br /><br /> 바인딩 소스로 사용할 수 있는 클래스를 구현하는 방법은 이 항목 뒷부분의 [바인딩 소스에 대한 클래스 구현](#classes)을 참조하세요.|  
+|CLR (공용 언어 런타임) 개체|공용 속성, 하위 속성 및 인덱서 뿐만 아니라 CLR (공용 언어 런타임) 개체의 공용 속성에 바인딩할 수 있습니다. 바인딩 엔진은 CLR 리플렉션을 사용 하 여 속성 값을 가져옵니다. 또는를 구현 <xref:System.ComponentModel.ICustomTypeDescriptor> 하거나 등록 <xref:System.ComponentModel.TypeDescriptionProvider> 된을 포함 하는 개체도 바인딩 엔진을 사용 합니다.<br /><br /> 바인딩 소스로 사용할 수 있는 클래스를 구현하는 방법은 이 항목 뒷부분의 [바인딩 소스에 대한 클래스 구현](#classes)을 참조하세요.|  
 |동적 개체|인터페이스를 <xref:System.Dynamic.IDynamicMetaObjectProvider> 구현 하는 개체의 사용 가능한 속성 및 인덱서를 바인딩할 수 있습니다. 코드의 멤버에 액세스할 수 있는 경우 바인딩할 수 있습니다. 예를 들어 동적 개체를 사용하여 `someObjet.AProperty`를 통해 코드의 멤버에 액세스할 수 있는 경우 바인딩 경로를 `AProperty`로 설정하여 바인딩할 수 있습니다.|  
 |ADO.NET 개체|과 <xref:System.Data.DataTable>같은 ADO.NET 개체에 바인딩할 수 있습니다. ADO.NET <xref:System.Data.DataView> 는 바인딩 엔진이 <xref:System.ComponentModel.IBindingList> 수신 하는 변경 알림을 제공 하는 인터페이스를 구현 합니다.|  
 |[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 개체|,<xref:System.Xml.XmlNode> `XPath` 또는 에<xref:System.Xml.XmlElement>바인딩하고 쿼리를실행할수있습니다.<xref:System.Xml.XmlDocument> 태그의 바인딩 소스인 데이터 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 에 쉽게 액세스 하는 방법은 <xref:System.Windows.Data.XmlDataProvider> 개체를 사용 하는 것입니다. 자세한 내용은 [XMLDataProvider 및 XPath 쿼리를 사용하여 XML 데이터에 바인딩](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)을 참조하세요.<br /><br /> <xref:System.Xml.Linq.XElement> 또는<xref:System.Xml.Linq.XDocument>에 바인딩하거나 LINQ to XML를 사용 하 여 이러한 형식의 개체에 대해 실행 되는 쿼리 결과에 바인딩할 수도 있습니다. LINQ to XML를 사용 하 여 태그의 바인딩 소스인 XML 데이터에 액세스 하는 편리한 방법은 <xref:System.Windows.Data.ObjectDataProvider> 개체를 사용 하는 것입니다. 자세한 내용은 [XDocument, XElement 또는 LINQ for XML 쿼리 결과에 바인딩](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)을 참조하세요.|  
@@ -33,9 +33,9 @@ ms.locfileid: "68364210"
  고유한 바인딩 소스를 만들 수 있습니다. 이 섹션에서는 바인딩 소스로 사용할 클래스를 구현하는 경우 알아야 할 내용을 설명합니다.  
   
 ### <a name="providing-change-notifications"></a>변경 알림 제공  
- 바인딩 소스 속성이 동적으로 <xref:System.Windows.Data.BindingMode.OneWay> 변경 <xref:System.Windows.Data.BindingMode.TwoWay> 될 때 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 를 업데이트 하려는 경우 또는 바인딩을 사용 하는 경우 적절 한 속성 변경 알림 메커니즘을 구현 해야 합니다. 또는 동적 클래스에서 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.ComponentModel.INotifyPropertyChanged> 인터페이스를 구현 하는 것이 좋습니다. 자세한 내용은 [속성 변경 알림 구현](how-to-implement-property-change-notification.md)을 참조하세요.  
+ 바인딩 소스 속성이 동적으로 <xref:System.Windows.Data.BindingMode.OneWay> 변경 <xref:System.Windows.Data.BindingMode.TwoWay> 될 때 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 를 업데이트 하려는 경우 또는 바인딩을 사용 하는 경우 적절 한 속성 변경 알림 메커니즘을 구현 해야 합니다. CLR 또는 동적 클래스에서 <xref:System.ComponentModel.INotifyPropertyChanged> 인터페이스를 구현 하는 것이 좋습니다. 자세한 내용은 [속성 변경 알림 구현](how-to-implement-property-change-notification.md)을 참조하세요.  
   
- 을 구현 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.ComponentModel.INotifyPropertyChanged>하지 않는 개체를 만드는 경우 바인딩에 사용 된 데이터가 최신 상태를 유지 하도록 사용자 고유의 알림 시스템에 대해를 정렬 해야 합니다. 변경 알림의 각 속성에 대해 `PropertyChanged` 패턴을 지원하여 변경 알림을 제공할 수 있습니다. 이 패턴을 지원하려면 각 속성에 대해 *PropertyName*Changed 이벤트를 정의합니다. 여기서 *PropertyName*은 속성의 이름입니다. 속성이 변경될 때마다 이 이벤트를 발생시킵니다.  
+ 을 구현 <xref:System.ComponentModel.INotifyPropertyChanged>하지 않는 CLR 개체를 만드는 경우 바인딩에 사용 된 데이터가 최신 상태를 유지 하도록 사용자 고유의 알림 시스템에 대해를 정렬 해야 합니다. 변경 알림의 각 속성에 대해 `PropertyChanged` 패턴을 지원하여 변경 알림을 제공할 수 있습니다. 이 패턴을 지원하려면 각 속성에 대해 *PropertyName*Changed 이벤트를 정의합니다. 여기서 *PropertyName*은 속성의 이름입니다. 속성이 변경될 때마다 이 이벤트를 발생시킵니다.  
   
  바인딩 소스가 이러한 알림 메커니즘 중 하나를 구현하는 경우 대상 업데이트가 자동으로 수행됩니다. 어떤 이유로 든 바인딩 소스에서 적절 한 속성 변경 알림을 제공 하지 않는 경우 메서드를 <xref:System.Windows.Data.BindingExpression.UpdateTarget%2A> 사용 하 여 대상 속성을 명시적으로 업데이트 하는 옵션이 있습니다.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "68364210"
   
  이 표에서는 데이터 바인딩의 사용 권한 요구 사항에 대한 다음 중요 사항을 설명합니다.  
   
-- [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 속성의 경우 바인딩 엔진이 리플렉션을 사용하여 바인딩 소스 속성에 액세스할 수 있는 한 데이터 바인딩이 작동됩니다. 그렇지 않은 경우 바인딩 엔진이 속성을 찾을 수 없다는 경고를 생성하고 대체 값 또는 기본값(사용 가능한 경우)을 사용합니다.  
+- CLR 속성의 경우 바인딩 엔진이 리플렉션을 사용 하 여 바인딩 소스 속성에 액세스할 수 있으면 데이터 바인딩이 작동 합니다. 그렇지 않은 경우 바인딩 엔진이 속성을 찾을 수 없다는 경고를 생성하고 대체 값 또는 기본값(사용 가능한 경우)을 사용합니다.  
   
 - 컴파일 타임 또는 런타임에 정의된 동적 개체의 속성에 바인딩할 수 있습니다.  
   

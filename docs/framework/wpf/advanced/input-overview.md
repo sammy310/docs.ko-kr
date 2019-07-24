@@ -24,84 +24,84 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: defce7949bff47ef109e81d03894b13d95ba4c3d
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 1149a70fc723a82144d13cbd079e3287b52ec4fb
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238502"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401478"
 ---
 # <a name="input-overview"></a>입력 개요
-<a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 하위 시스템에서 다양 한 장치, 마우스, 키보드, 터치 및 스타일러스를 포함 하 여 입력을 가져오기 위한 강력한 API를 제공 합니다. 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]가 제공하는 서비스에 대해 설명하고 입력 시스템의 아키텍처를 살펴봅니다.
+<a name="introduction"></a>하위 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 시스템은 마우스, 키보드, 터치 및 스타일러스를 비롯 한 다양 한 장치에서 입력을 얻기 위한 강력한 API를 제공 합니다. 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]가 제공하는 서비스에 대해 설명하고 입력 시스템의 아키텍처를 살펴봅니다.
 
 <a name="input_api"></a>
 ## <a name="input-api"></a>입력 API
- 기본 입력 기본 요소 클래스에 API 노출 됩니다. <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>를 <xref:System.Windows.FrameworkElement>, 및 <xref:System.Windows.FrameworkContentElement>합니다.  기본 요소에 대한 자세한 내용은 [기본 요소 개요](base-elements-overview.md)를 참조하세요.  이러한 클래스는 키 누르기, 마우스 단추, 마우스 휠, 마우스 이동, 포커스 관리, 마우스 캡처 등과 관련된 입력 이벤트를 위한 기능을 제공합니다. 입력된 아키텍처 대신 하 여 기본 요소 API 입력 배치 서비스로 모든 입력된 이벤트를 처리 하는 방법, ui에서 특정 개체에 의해 발생 하 고 가능해 집니다 둘 이상의 요소가 있는 opp 이벤트 라우팅 체계를 지원 하기 위해 입력된 이벤트를 사용 하면 ortunity 입력된 이벤트를 처리 하도록 합니다. 대부분의 입력 이벤트에는 연결된 이벤트 쌍이 있습니다.  예를 들어 키 누름 이벤트는 연관 된 <xref:System.Windows.Input.Keyboard.KeyDown> 및 <xref:System.Windows.Input.Keyboard.PreviewKeyDown> 이벤트.  이벤트마다 이벤트가 대상 요소로 라우트되는 방법이 다릅니다.  미리 보기 이벤트는 요소 트리의 루트 요소에서 대상 요소로 터널링됩니다.  버블링 이벤트는 대상 요소에서 루트 요소로 버블링됩니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 이벤트 라우팅에 대한 자세한 내용은 이 개요 항목의 이후 단원 및 [라우트된 이벤트 개요](routed-events-overview.md)에서 자세히 설명합니다.
+ 기본 입력 API 노출은 기본 <xref:System.Windows.UIElement>요소 클래스인 <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement>, 및 <xref:System.Windows.FrameworkContentElement>에 있습니다.  기본 요소에 대한 자세한 내용은 [기본 요소 개요](base-elements-overview.md)를 참조하세요.  이러한 클래스는 키 누르기, 마우스 단추, 마우스 휠, 마우스 이동, 포커스 관리, 마우스 캡처 등과 관련된 입력 이벤트를 위한 기능을 제공합니다. 입력 아키텍처는 모든 입력 이벤트를 서비스로 처리 하는 대신 기본 요소에 배치 하 여 입력 이벤트를 UI의 특정 개체에서 소싱 하 고 둘 이상의 요소에 opp가 있는 이벤트 라우팅 체계를 지원할 수 있도록 합니다. 입력 이벤트를 처리할 수 있습니다. 대부분의 입력 이벤트에는 연결된 이벤트 쌍이 있습니다.  예를 들어 key down 이벤트는 <xref:System.Windows.Input.Keyboard.KeyDown> 및 <xref:System.Windows.Input.Keyboard.PreviewKeyDown> 이벤트와 연결 됩니다.  이벤트마다 이벤트가 대상 요소로 라우트되는 방법이 다릅니다.  미리 보기 이벤트는 요소 트리의 루트 요소에서 대상 요소로 터널링됩니다.  버블링 이벤트는 대상 요소에서 루트 요소로 버블링됩니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 이벤트 라우팅에 대한 자세한 내용은 이 개요 항목의 이후 단원 및 [라우트된 이벤트 개요](routed-events-overview.md)에서 자세히 설명합니다.
 
 ### <a name="keyboard-and-mouse-classes"></a>키보드 및 마우스 클래스
- 기본 요소 클래스에 있는 입력 API 외에 <xref:System.Windows.Input.Keyboard> 클래스 및 <xref:System.Windows.Input.Mouse> 클래스 작업 키보드 및 마우스 입력을 위한 추가 API를 제공 합니다.
+ 기본 요소 클래스의 입력 api 외에도 클래스와 <xref:System.Windows.Input.Keyboard> <xref:System.Windows.Input.Mouse> 클래스는 키보드 및 마우스 입력을 사용 하기 위한 추가 api를 제공 합니다.
 
- 입력 API의 예제는 <xref:System.Windows.Input.Keyboard> 클래스를 <xref:System.Windows.Input.Keyboard.Modifiers%2A> 반환 하는 속성을 <xref:System.Windows.Input.ModifierKeys> 현재 누른 및 <xref:System.Windows.Input.Keyboard.IsKeyDown%2A> 지정된 된 키를 눌렀는지 여부를 결정 하는 메서드를 합니다.
+ <xref:System.Windows.Input.Keyboard> 클래스에 대 한 입력 API의 예로는 <xref:System.Windows.Input.Keyboard.Modifiers%2A> <xref:System.Windows.Input.ModifierKeys> 현재 누른을 <xref:System.Windows.Input.Keyboard.IsKeyDown%2A> 반환 하는 속성과 지정 된 키를 눌렀는지 여부를 결정 하는 메서드가 있습니다.
 
- 다음 예제에서는 합니다 <xref:System.Windows.Input.Keyboard.GetKeyStates%2A> 여부를 확인 하는 메서드를 <xref:System.Windows.Input.Key> 아래쪽 상태.
+ 다음 예제에서는 <xref:System.Windows.Input.Keyboard.GetKeyStates%2A> 메서드를 사용 하 여 <xref:System.Windows.Input.Key> 이 다운 상태 인지 여부를 확인 합니다.
 
  [!code-csharp[keyargssnippetsample#KeyEventArgsKeyBoardGetKeyStates](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyArgsSnippetSample/CSharp/Window1.xaml.cs#keyeventargskeyboardgetkeystates)]
  [!code-vb[keyargssnippetsample#KeyEventArgsKeyBoardGetKeyStates](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb#keyeventargskeyboardgetkeystates)]
 
- API 입력의 예는 <xref:System.Windows.Input.Mouse> 클래스 <xref:System.Windows.Input.Mouse.MiddleButton%2A>, 마우스 가운데 단추의 상태를 가져오는 및 <xref:System.Windows.Input.Mouse.DirectlyOver%2A>를 통해 중인 요소를 가져옵니다는 마우스 포인터입니다.
+ <xref:System.Windows.Input.Mouse> <xref:System.Windows.Input.Mouse.DirectlyOver%2A>클래스의 입력 API 예는 마우스 가운데 단추의 상태를 가져오는 이며 마우스 포인터가 현재 있는 요소를 가져오는입니다. <xref:System.Windows.Input.Mouse.MiddleButton%2A>
 
- 다음 예제에서는 확인 여부를 <xref:System.Windows.Input.Mouse.LeftButton%2A> 마우스가는 <xref:System.Windows.Input.MouseButtonState.Pressed> 상태입니다.
+ 다음 예에서는 마우스 <xref:System.Windows.Input.Mouse.LeftButton%2A> 의가 <xref:System.Windows.Input.MouseButtonState.Pressed> 상태에 있는지 여부를 확인 합니다.
 
  [!code-csharp[mouserelatedsnippets#MouseRelatedSnippetsGetLeftButtonMouse](~/samples/snippets/csharp/VS_Snippets_Wpf/MouseRelatedSnippets/CSharp/Window1.xaml.cs#mouserelatedsnippetsgetleftbuttonmouse)]
  [!code-vb[mouserelatedsnippets#MouseRelatedSnippetsGetLeftButtonMouse](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MouseRelatedSnippets/visualbasic/window1.xaml.vb#mouserelatedsnippetsgetleftbuttonmouse)]
 
- 합니다 <xref:System.Windows.Input.Mouse> 고 <xref:System.Windows.Input.Keyboard> 클래스는이 개요 항목에서 자세히 설명 되어 있습니다.
+ 이 개요 <xref:System.Windows.Input.Keyboard> 전체에서 및클래스에대해자세히설명합니다.<xref:System.Windows.Input.Mouse>
 
 ### <a name="stylus-input"></a>스타일러스 입력
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에 대 한 지원을 통합 합니다 <xref:System.Windows.Input.Stylus>합니다.  합니다 <xref:System.Windows.Input.Stylus> 에서 인기 있는 펜 입력을 [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]입니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 API에서 마우스를 사용 하 여 마우스 스타일러스 처리할 수 있지만 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 키보드 및 마우스와 비슷한 모델을 사용 하는 스타일러스 장치 추상화도 노출 합니다.  스타일러스와 관련 된 모든 Api는 "Stylus" 라는 단어를 포함 합니다.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에는 <xref:System.Windows.Input.Stylus>에 대 한 통합 지원이 있습니다.  는에서 인기 [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]있는 펜 입력 입니다.<xref:System.Windows.Input.Stylus>  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]응용 프로그램은 마우스 API를 사용 하 여 스타일러스를 마우스로 처리할 수 있지만 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 키보드 및 마우스와 유사한 모델을 사용 하는 스타일러스 장치 추상화도 노출 합니다.  모든 스타일러스 관련 Api는 "스타일러스" 라는 단어를 포함 합니다.
 
  스타일러스는 마우스처럼 동작할 수 있으므로 마우스 입력만 지원하는 애플리케이션도 약간의 스타일러스 지원을 자동으로 받을 수 있습니다. 이러한 방식으로 스타일러스를 사용하는 경우 애플리케이션은 알맞은 스타일러스 이벤트를 처리한 다음 해당 마우스 이벤트를 처리할 수 있게 됩니다. 뿐만 아니라 스타일러스 디바이스 추상화를 통해 잉크 입력과 같은 높은 수준의 서비스도 사용할 수 있습니다.  잉크 입력에 대한 자세한 내용은 [잉크 시작](getting-started-with-ink.md)을 참조하세요.
 
 <a name="event_routing"></a>
 ## <a name="event-routing"></a>이벤트 라우팅
- <xref:System.Windows.FrameworkElement> 요소 트리를 형성, 해당 콘텐츠 모델에 대 한 자식 요소로 다른 요소를 포함할 수 있습니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 부모 요소는 이벤트를 처리하여 해당 자식 요소 또는 다른 하위 요소를 대상으로 하는 입력에 참가할 수 있습니다. 이는 특히 더 작은 컨트롤에서 컨트롤을 빌드하는 “컨트롤 컴퍼지션” 또는 “합치기”라고 하는 프로세스에 유용합니다. 요소 트리 및 요소 트리와 이벤트 경로가 서로 어떻게 관련되는지에 대한 자세한 내용은 [WPF의 트리](trees-in-wpf.md)를 참조하세요.
+ 는 <xref:System.Windows.FrameworkElement> 다른 요소를 콘텐츠 모델의 자식 요소로 포함 하 여 요소의 트리를 형성할 수 있습니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 부모 요소는 이벤트를 처리하여 해당 자식 요소 또는 다른 하위 요소를 대상으로 하는 입력에 참가할 수 있습니다. 이는 특히 더 작은 컨트롤에서 컨트롤을 빌드하는 “컨트롤 컴퍼지션” 또는 “합치기”라고 하는 프로세스에 유용합니다. 요소 트리 및 요소 트리와 이벤트 경로가 서로 어떻게 관련되는지에 대한 자세한 내용은 [WPF의 트리](trees-in-wpf.md)를 참조하세요.
 
- 이벤트 라우팅은 이벤트를 여러 요소로 전달함으로써 경로 상의 특정 개체나 요소가 다른 요소에서 발생시킨 이벤트에 대해 이벤트 처리를 통해 의미 있는 응답을 제공할 수 있도록 하는 프로세스입니다.  라우트된 이벤트는 직접, 버블링, 터널링이라는 세 가지 라우팅 메커니즘 중 하나를 사용합니다.  직접 라우팅에서는 소스 요소만 이벤트에 대한 알림을 받으며 이벤트가 다른 요소로 라우트되지 않습니다. 하지만 직접 라우트된 이벤트도 표준 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 이벤트와는 달리 라우트된 이벤트에만 있는 몇몇 추가 기능을 제공합니다. 버블링은 먼저 이벤트에 대해 이벤트를 발생시킨 요소에 알린 다음 부모 요소 등에 알리는 순서로 요소 트리의 위쪽으로 작동합니다.  터널링은 요소 트리의 루트에서 시작하여 아래로 이동한 다음 원래 소스 요소에서 끝납니다.  라우트된 이벤트에 대한 자세한 내용은 [라우트된 이벤트 개요](routed-events-overview.md)를 참조하세요.
+ 이벤트 라우팅은 이벤트를 여러 요소로 전달함으로써 경로 상의 특정 개체나 요소가 다른 요소에서 발생시킨 이벤트에 대해 이벤트 처리를 통해 의미 있는 응답을 제공할 수 있도록 하는 프로세스입니다.  라우트된 이벤트는 직접, 버블링, 터널링이라는 세 가지 라우팅 메커니즘 중 하나를 사용합니다.  직접 라우팅에서는 소스 요소만 이벤트에 대한 알림을 받으며 이벤트가 다른 요소로 라우트되지 않습니다. 그러나 직접 라우트된 이벤트는 표준 CLR 이벤트와는 달리 라우트된 이벤트에 대해서만 제공 되는 몇 가지 추가 기능을 제공 합니다. 버블링은 먼저 이벤트에 대해 이벤트를 발생시킨 요소에 알린 다음 부모 요소 등에 알리는 순서로 요소 트리의 위쪽으로 작동합니다.  터널링은 요소 트리의 루트에서 시작하여 아래로 이동한 다음 원래 소스 요소에서 끝납니다.  라우트된 이벤트에 대한 자세한 내용은 [라우트된 이벤트 개요](routed-events-overview.md)를 참조하세요.
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 입력 이벤트는 일반적으로 터널링 이벤트와 버블링 이벤트의 쌍으로 구성되어 제공됩니다.  터널링 이벤트는 “Preview” 접두사가 있다는 점에서 버블링 이벤트와 다릅니다.  예를 들어 <xref:System.Windows.Input.Mouse.PreviewMouseMove> 마우스 이동 이벤트의 터널링 버전이 고 <xref:System.Windows.Input.Mouse.MouseMove> 이 이벤트의 버블링 버전입니다. 이 이벤트 쌍은 요소 수준에서 구현되는 규칙이며 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이벤트 시스템의 본질적인 기능은 아닙니다. 자세한 내용은 [라우트된 이벤트 개요](routed-events-overview.md)의 WPF 입력 이벤트 섹션을 참조하세요.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 입력 이벤트는 일반적으로 터널링 이벤트와 버블링 이벤트의 쌍으로 구성되어 제공됩니다.  터널링 이벤트는 “Preview” 접두사가 있다는 점에서 버블링 이벤트와 다릅니다.  예를 들어 <xref:System.Windows.Input.Mouse.PreviewMouseMove> 는 마우스 이동 이벤트의 터널링 버전 이며 <xref:System.Windows.Input.Mouse.MouseMove> 이 이벤트의 버블링 버전입니다. 이 이벤트 쌍은 요소 수준에서 구현되는 규칙이며 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이벤트 시스템의 본질적인 기능은 아닙니다. 자세한 내용은 [라우트된 이벤트 개요](routed-events-overview.md)의 WPF 입력 이벤트 섹션을 참조하세요.
 
 <a name="handling_input_events"></a>
 ## <a name="handling-input-events"></a>입력 이벤트 처리
- 요소에서 입력을 받으려면 특정 이벤트에 이벤트 처리기를 연결해야 합니다.  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서는 이 작업이 매우 간단합니다. 이 이벤트를 수신할 요소의 특성으로 이벤트 이름을 참조합니다.  그런 다음 대리자에 따라 정의하는 이벤트 처리기의 이름으로 특성 값을 설정하기만 하면 됩니다.  이벤트 처리기는 C#과 같은 코드 작성 해야 하 고 코드 숨김 파일에 포함 될 수 있습니다.
+ 요소에서 입력을 받으려면 특정 이벤트에 이벤트 처리기를 연결해야 합니다.  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서는 이 작업이 매우 간단합니다. 이 이벤트를 수신할 요소의 특성으로 이벤트 이름을 참조합니다.  그런 다음 대리자에 따라 정의하는 이벤트 처리기의 이름으로 특성 값을 설정하기만 하면 됩니다.  이벤트 처리기는와 C# 같은 코드에 작성 해야 하며 코드 숨김이 포함 된 파일에 포함 될 수 있습니다.
 
  키보드 이벤트는 키보드 포커스가 요소에 있는 동안 발생하는 키 동작을 운영 체제에서 보고할 때 발생합니다. 마우스 및 스타일러스 이벤트는 각각 요소를 기준으로 포인터 위치의 변경을 보고하는 이벤트와 디바이스 단추의 상태 변경을 보고하는 이벤트의 두 범주로 나뉩니다.
 
 ### <a name="keyboard-input-event-example"></a>키보드 입력 이벤트 예제
- 다음 예제에서는 왼쪽 화살표 키 누르기를 수신합니다.  A <xref:System.Windows.Controls.StackPanel> 만들어집니다에 <xref:System.Windows.Controls.Button>합니다.  왼쪽된 화살표 키 누름에 연결할 때 수신 하는 이벤트 처리기는 <xref:System.Windows.Controls.Button> 인스턴스.
+ 다음 예제에서는 왼쪽 화살표 키 누르기를 수신합니다.  이 있는가 만들어집니다 <xref:System.Windows.Controls.Button>. <xref:System.Windows.Controls.StackPanel>  왼쪽 화살표 키 누름을 수신 대기 하는 이벤트 처리기가 <xref:System.Windows.Controls.Button> 인스턴스에 연결 됩니다.
 
- 예제의 첫 번째 섹션을 만듭니다는 <xref:System.Windows.Controls.StackPanel> 하며 <xref:System.Windows.Controls.Button> 에 대 한 이벤트 처리기를 연결 하 고는 <xref:System.Windows.UIElement.KeyDown>.
+ 예제의 첫 번째 섹션에서는 <xref:System.Windows.Controls.StackPanel> <xref:System.Windows.Controls.Button> 및을 만들고에 대 한 <xref:System.Windows.UIElement.KeyDown>이벤트 처리기를 연결 합니다.
 
  [!code-xaml[InputOvw#Input_OvwKeyboardExampleXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml#input_ovwkeyboardexamplexaml)]
 
  [!code-csharp[InputOvw#Input_OvwKeyboardExampleUICodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwkeyboardexampleuicodebehind)]
  [!code-vb[InputOvw#Input_OvwKeyboardExampleUICodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwkeyboardexampleuicodebehind)]
 
- 코드로 작성된 두 번째 섹션은 이벤트 처리기를 정의합니다.  왼쪽된 화살표 키를 누를 때 및 <xref:System.Windows.Controls.Button> 키보드 포커스가 처리기가 실행 됩니다 및 <xref:System.Windows.Controls.Control.Background%2A> 의 색을 <xref:System.Windows.Controls.Button> 변경 됩니다.  왼쪽된 화살표 키를 것만 키를 누를 경우는 <xref:System.Windows.Controls.Control.Background%2A> 의 색을 <xref:System.Windows.Controls.Button> 다시 시작 색으로 변경 됩니다.
+ 코드로 작성된 두 번째 섹션은 이벤트 처리기를 정의합니다.  왼쪽 화살표 키를 누르면에 <xref:System.Windows.Controls.Button> 키보드 포커스가 있으면 처리기가 실행 <xref:System.Windows.Controls.Button> 되 <xref:System.Windows.Controls.Control.Background%2A> 고의 색이 변경 됩니다.  키를 누른 채 왼쪽 화살표 키 <xref:System.Windows.Controls.Control.Background%2A> 가 아닌 경우 <xref:System.Windows.Controls.Button> 의 색은 다시 시작 색으로 변경 됩니다.
 
  [!code-csharp[InputOvw#Input_OvwKeyboardExampleHandlerCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwkeyboardexamplehandlercodebehind)]
  [!code-vb[InputOvw#Input_OvwKeyboardExampleHandlerCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwkeyboardexamplehandlercodebehind)]
 
 ### <a name="mouse-input-event-example"></a>마우스 입력 이벤트 예제
- 다음 예에서 <xref:System.Windows.Controls.Control.Background%2A> 의 색을 <xref:System.Windows.Controls.Button> 마우스 포인터가 내부로 들어갈 때 변경 되는 <xref:System.Windows.Controls.Button>합니다.  <xref:System.Windows.Controls.Control.Background%2A> 마우스가 색이 복원 된 <xref:System.Windows.Controls.Button>합니다.
+ 다음 예제 <xref:System.Windows.Controls.Control.Background%2A> 에서는 마우스 포인터가로 들어가면 <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Button>의 색이 변경 됩니다.  이 <xref:System.Windows.Controls.Control.Background%2A> 색은 마우스가을 <xref:System.Windows.Controls.Button>벗어날 때 복원 됩니다.
 
- 예제의 첫 번째 섹션을 만듭니다는 <xref:System.Windows.Controls.StackPanel> 및 <xref:System.Windows.Controls.Button> 제어 하 고 연결에 대 한 이벤트 처리기를 <xref:System.Windows.UIElement.MouseEnter> 및 <xref:System.Windows.UIElement.MouseLeave> 이벤트는 <xref:System.Windows.Controls.Button>.
+ 예제의 첫 번째 <xref:System.Windows.Controls.StackPanel> 섹션에서는 <xref:System.Windows.Controls.Button> 및 컨트롤을 만들고 <xref:System.Windows.UIElement.MouseEnter> 및 <xref:System.Windows.UIElement.MouseLeave> 이벤트 <xref:System.Windows.Controls.Button>에 대 한 이벤트 처리기를에 연결 합니다.
 
  [!code-xaml[InputOvw#Input_OvwMouseExampleXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml#input_ovwmouseexamplexaml)]
 
  [!code-csharp[InputOvw#Input_OvwMouseExampleUICodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwmouseexampleuicodebehind)]
  [!code-vb[InputOvw#Input_OvwMouseExampleUICodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwmouseexampleuicodebehind)]
 
- 예제에서 코드로 작성된 두 번째 섹션은 이벤트 처리기를 정의합니다.  마우스를 가져가면를 <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Control.Background%2A> 의 색을 <xref:System.Windows.Controls.Button> 로 변경 됩니다 <xref:System.Windows.Media.Brushes.SlateGray%2A>합니다.  마우스가 벗어날 때를 <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Control.Background%2A> 의 색을 <xref:System.Windows.Controls.Button> 로 다시 변경 됩니다 <xref:System.Windows.Media.Brushes.AliceBlue%2A>합니다.
+ 예제에서 코드로 작성된 두 번째 섹션은 이벤트 처리기를 정의합니다.  마우스가에 <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Button> 들어가면의 <xref:System.Windows.Media.Brushes.SlateGray%2A>색이로 변경 됩니다. <xref:System.Windows.Controls.Control.Background%2A>  <xref:System.Windows.Controls.Button>마우스로 벗어나면 <xref:System.Windows.Controls.Control.Background%2A> 의 색 <xref:System.Windows.Controls.Button> 이 로<xref:System.Windows.Media.Brushes.AliceBlue%2A>다시 변경 됩니다.
 
  [!code-csharp[InputOvw#Input_OvwMouseExampleEneterHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwmouseexampleeneterhandler)]
  [!code-vb[InputOvw#Input_OvwMouseExampleEneterHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwmouseexampleeneterhandler)]
@@ -111,13 +111,13 @@ ms.locfileid: "68238502"
 
 <a name="text_input"></a>
 ## <a name="text-input"></a>텍스트 입력
- <xref:System.Windows.ContentElement.TextInput> 이벤트를 사용 하면 장치 독립적인 방식으로 텍스트 입력을 수신할 수 있습니다. 텍스트 입력에는 주로 키보드를 사용하지만 음성, 필기 및 기타 입력 디바이스를 통해서도 텍스트 입력을 생성할 수 있습니다.
+ 이벤트 <xref:System.Windows.ContentElement.TextInput> 를 사용 하면 장치 독립적 방식으로 텍스트 입력을 수신할 수 있습니다. 텍스트 입력에는 주로 키보드를 사용하지만 음성, 필기 및 기타 입력 디바이스를 통해서도 텍스트 입력을 생성할 수 있습니다.
 
- 키보드 입력에 대 한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 먼저 적절 한 보냅니다 <xref:System.Windows.ContentElement.KeyDown> / <xref:System.Windows.ContentElement.KeyUp> 이벤트입니다. 해당 이벤트가 처리 되지 않습니다 하 고 키가 (방향 화살표와 같은 제어 키) 또는 기능 키 대신 텍스트는 <xref:System.Windows.ContentElement.TextInput> 이벤트가 발생 합니다.  없는 항상 간의 간단한 일대일 매핑을 <xref:System.Windows.ContentElement.KeyDown> / <xref:System.Windows.ContentElement.KeyUp> 고 <xref:System.Windows.ContentElement.TextInput> 이벤트 여러 키 입력 텍스트 입력의 단일 문자를 생성할 수 있으며 단일 키 입력에서 다중 문자를 생성할 수 있으므로 문자열입니다.  이는 특히 각 언어의 알파벳으로 수천 개의 가능한 문자를 생성하는 데 [!INCLUDE[TLA#tla_ime#plural](../../../../includes/tlasharptla-imesharpplural-md.md)]를 사용하는 한국어, 중국어 및 일본어 등의 언어에서 더욱 그렇습니다.
+ 키보드 입력의 경우 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 는 먼저 적절 한 <xref:System.Windows.ContentElement.KeyDown> / <xref:System.Windows.ContentElement.KeyUp> 이벤트를 보냅니다. 이러한 이벤트가 처리 되지 않고 키가 방향 화살표 또는 기능 키 <xref:System.Windows.ContentElement.TextInput> 와 같은 컨트롤 키가 아닌 텍스트 이면 이벤트가 발생 합니다.  여러 키 입력에서 단일 텍스트 입력 문자를 생성할 수 있고 단일 <xref:System.Windows.ContentElement.KeyDown> 키 <xref:System.Windows.ContentElement.TextInput> 입력이 여러 문자를 생성할 수 있기 때문에 및 이벤트 간에 / <xref:System.Windows.ContentElement.KeyUp> 간단한 일대일 매핑이 항상 발생 하는 것은 아닙니다. 문자열일.  이는 특히 각 언어의 알파벳으로 수천 개의 가능한 문자를 생성하는 데 [!INCLUDE[TLA#tla_ime#plural](../../../../includes/tlasharptla-imesharpplural-md.md)]를 사용하는 한국어, 중국어 및 일본어 등의 언어에서 더욱 그렇습니다.
 
- 때 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 보냅니다를 <xref:System.Windows.ContentElement.KeyUp> / <xref:System.Windows.ContentElement.KeyDown> 이벤트 <xref:System.Windows.Input.KeyEventArgs.Key%2A> 로 설정 되어 <xref:System.Windows.Input.Key.System?displayProperty=nameWithType> 키의 일부가 될 수 있는 경우는 <xref:System.Windows.ContentElement.TextInput> 이벤트 (ALT + S를 누르면 예를 들어) 하는 경우. 코드를 사용 하면이 <xref:System.Windows.ContentElement.KeyDown> 확인 하려면 이벤트 처리기 <xref:System.Windows.Input.Key.System?displayProperty=nameWithType> 이후에 발생의 처리기에 대 한 처리를 찾을 수 있으면 <xref:System.Windows.ContentElement.TextInput> 이벤트입니다. 이러한 경우의 다양 한 속성에는 <xref:System.Windows.Input.TextCompositionEventArgs> 인수를 사용 하 여 원래 키 입력을 결정할 수 있습니다. 마찬가지로, 경우는 [!INCLUDE[TLA2#tla_ime](../../../../includes/tla2sharptla-ime-md.md)] 활성 <xref:System.Windows.Input.Key> 의 값은 <xref:System.Windows.Input.Key.ImeProcessed?displayProperty=nameWithType>, 및 <xref:System.Windows.Input.KeyEventArgs.ImeProcessedKey%2A> 원래 키 또는 키 입력을 제공 합니다.
+ 에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.ContentElement.KeyUp> <xref:System.Windows.Input.Key.System?displayProperty=nameWithType> 이벤트를 보낼때/ 키 입력이 이벤트<xref:System.Windows.ContentElement.TextInput> 의 일부가 될 수 있으면가로 설정 됩니다 (예: ALT + S를 누른 경우). <xref:System.Windows.ContentElement.KeyDown> <xref:System.Windows.Input.KeyEventArgs.Key%2A> 이를 통해 <xref:System.Windows.ContentElement.KeyDown> 이벤트 처리기의 코드에서를 <xref:System.Windows.Input.Key.System?displayProperty=nameWithType> 확인 하 고, 검색 된 경우 이후에 발생 <xref:System.Windows.ContentElement.TextInput> 한 이벤트 처리기에 대 한 처리를 유지할 수 있습니다. 이러한 경우 <xref:System.Windows.Input.TextCompositionEventArgs> 인수의 다양 한 속성을 사용 하 여 원래 키 입력을 확인할 수 있습니다. 마찬가지로 [!INCLUDE[TLA2#tla_ime](../../../../includes/tla2sharptla-ime-md.md)] 가 <xref:System.Windows.Input.Key.ImeProcessed?displayProperty=nameWithType> <xref:System.Windows.Input.KeyEventArgs.ImeProcessedKey%2A> 활성 상태 이면는의 값을 포함하고는원래키입력또는키입력을제공합니다.<xref:System.Windows.Input.Key>
 
- 다음 예제에 대 한 처리기를 정의 합니다 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트 및 처리기를 <xref:System.Windows.UIElement.KeyDown> 이벤트입니다.
+ 다음 예제에서는 이벤트에 대 한 처리기 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 및 <xref:System.Windows.UIElement.KeyDown> 이벤트에 대 한 처리기를 정의 합니다.
 
  코드 또는 태그의 첫 번째 세그먼트에서는 사용자 인터페이스를 만듭니다.
 
@@ -131,7 +131,7 @@ ms.locfileid: "68238502"
  [!code-csharp[InputOvw#Input_OvwTextInputHandlersCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwtextinputhandlerscodebehind)]
  [!code-vb[InputOvw#Input_OvwTextInputHandlersCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwtextinputhandlerscodebehind)]
 
- 입력된 이벤트는 이벤트 경로의 위쪽 버블링 때문에 <xref:System.Windows.Controls.StackPanel> 에 키보드 포커스가 있는 요소에 관계 없이 입력을 받습니다. <xref:System.Windows.Controls.TextBox> 컨트롤이 먼저 알림을 받습니다 및 `OnTextInputKeyDown` 경우에 처리기가 호출을 <xref:System.Windows.Controls.TextBox> 입력을 처리 하지 못했습니다. 경우는 <xref:System.Windows.UIElement.PreviewKeyDown> 이벤트 대신 사용 됩니다 합니다 <xref:System.Windows.UIElement.KeyDown> 이벤트는 `OnTextInputKeyDown` 처리기가 먼저 호출 됩니다.
+ 입력 이벤트는 이벤트 경로를 버블링 하기 때문에 <xref:System.Windows.Controls.StackPanel> 에서 키보드 포커스가 있는 요소에 관계 없이 입력을 받습니다. 컨트롤 <xref:System.Windows.Controls.TextBox> 에는 먼저 알림이 표시 되 `OnTextInputKeyDown` 고가 입력을 처리 하지 <xref:System.Windows.Controls.TextBox> 않은 경우에만 처리기가 호출 됩니다. 이벤트 대신 <xref:System.Windows.UIElement.PreviewKeyDown> <xref:System.Windows.UIElement.KeyDown> 이벤트를 사용 하 `OnTextInputKeyDown` 는 경우 처리기가 먼저 호출 됩니다.
 
  이 예제에서 처리 논리는 Ctrl+O에 대해 한 번, 그리고 단추의 클릭 이벤트에 대해 한 번으로 총 두 번 작성되었습니다. 입력 이벤트를 직접 처리하는 대신 명령을 사용하면 이를 간편하게 처리할 수 있습니다.  명령에 대해서는 이 개요 항목과 [명령 개요](commanding-overview.md)에서 설명합니다.
 
@@ -182,10 +182,10 @@ ms.locfileid: "68238502"
 
 - <xref:System.Windows.Controls.TreeView>
 
- 합니다 <xref:System.Windows.Controls.ScrollViewer> 정의 <xref:System.Windows.Controls.ScrollViewer.PanningMode%2A?displayProperty=nameWithType> 여부 터치 패닝을 가로, 세로, 가로 및 세로 또는 둘 다 지정할 수 있는 연결 된 속성입니다. <xref:System.Windows.Controls.ScrollViewer.PanningDeceleration%2A?displayProperty=nameWithType> 얼마나 빨리 스크롤 속도가 사용자가 터치 스크린에서 손가락을 뗄 때 속성을 지정 합니다. <xref:System.Windows.Controls.ScrollViewer.PanningRatio%2A?displayProperty=nameWithType> 조작 오프셋을 변환할 스크롤 오프셋의 비율을 지정 하는 연결 된 속성입니다.
+ 는 <xref:System.Windows.Controls.ScrollViewer> <xref:System.Windows.Controls.ScrollViewer.PanningMode%2A?displayProperty=nameWithType> 연결 된 속성을 정의 합니다 .이 속성을 사용 하면 터치식 이동을 가로, 세로, 둘 다 또는 둘 다 사용 하지 않을 지 여부를 지정할 수 있습니다. 속성 <xref:System.Windows.Controls.ScrollViewer.PanningDeceleration%2A?displayProperty=nameWithType> 은 사용자가 터치 스크린에서 손가락을 뗄 때 스크롤이 느려지는 속도를 지정 합니다. 연결 <xref:System.Windows.Controls.ScrollViewer.PanningRatio%2A?displayProperty=nameWithType> 된 속성은 조작 오프셋을 변환할 스크롤 오프셋의 비율을 지정 합니다.
 
 ### <a name="touch-events"></a>터치 이벤트
- 기본 클래스인 <xref:System.Windows.UIElement>, <xref:System.Windows.UIElement3D>, 및 <xref:System.Windows.ContentElement>, 응용 프로그램이 터치에 응답 하도록 구독할 수 있는 이벤트를 정의 합니다. 터치 이벤트는 애플리케이션이 터치를 개체 조작이 아닌 다른 것으로 해석할 때 유용합니다. 예를 들어 사용자가 하나 이상의 손가락으로 그릴 수 있는 애플리케이션은 터치 이벤트를 구독합니다.
+ 기본 클래스 <xref:System.Windows.UIElement> <xref:System.Windows.UIElement3D>,, 및 <xref:System.Windows.ContentElement>는 응용 프로그램에서 터치에 응답할 수 있도록 구독할 수 있는 이벤트를 정의 합니다. 터치 이벤트는 애플리케이션이 터치를 개체 조작이 아닌 다른 것으로 해석할 때 유용합니다. 예를 들어 사용자가 하나 이상의 손가락으로 그릴 수 있는 애플리케이션은 터치 이벤트를 구독합니다.
 
  세 클래스 모두 다음과 같은 이벤트를 정의합니다. 이 이벤트는 정의 클래스에 관계없이 유사하게 동작합니다.
 
@@ -209,28 +209,28 @@ ms.locfileid: "68238502"
 
 - <xref:System.Windows.UIElement.LostTouchCapture>
 
- 키보드 및 마우스 이벤트와 마찬가지로 터치 이벤트는 라우트된 이벤트입니다. `Preview`로 시작하는 이벤트는 터널링 이벤트이고 `Touch`로 시작하는 이벤트는 버블링 이벤트입니다. 라우트된 이벤트에 대한 자세한 내용은 [라우트된 이벤트 개요](routed-events-overview.md)를 참조하세요. 이러한 이벤트를 처리할 때 호출 하 여 모든 요소를 기준으로 입력의 위치를 얻을 수 있습니다 합니다 <xref:System.Windows.Input.TouchEventArgs.GetTouchPoint%2A> 또는 <xref:System.Windows.Input.TouchEventArgs.GetIntermediateTouchPoints%2A> 메서드.
+ 키보드 및 마우스 이벤트와 마찬가지로 터치 이벤트는 라우트된 이벤트입니다. `Preview`로 시작하는 이벤트는 터널링 이벤트이고 `Touch`로 시작하는 이벤트는 버블링 이벤트입니다. 라우트된 이벤트에 대한 자세한 내용은 [라우트된 이벤트 개요](routed-events-overview.md)를 참조하세요. 이러한 이벤트를 처리 하는 경우 <xref:System.Windows.Input.TouchEventArgs.GetTouchPoint%2A> 또는 <xref:System.Windows.Input.TouchEventArgs.GetIntermediateTouchPoints%2A> 메서드를 호출 하 여 모든 요소를 기준으로 하는 입력의 위치를 가져올 수 있습니다.
 
  터치 이벤트 간의 상호 작용을 이해하려면 사용자가 한 손가락을 요소 위에 놓고 손가락을 요소에서 움직인 다음 요소에서 손가락을 들어 올리는 시나리오를 고려해 보세요. 다음 그림에서는 버블링 이벤트를 실행하는 것을 보여 줍니다(단순하게 하기 위해 터널링 이벤트는 생략됨).
 
- ![터치 이벤트 시퀀스입니다. ](./media/ndp-touchevents.png "NDP_TouchEvents") 터치 이벤트
+ ![터치 이벤트의 시퀀스입니다.](./media/ndp-touchevents.png "NDP_TouchEvents") 터치 이벤트
 
  다음 목록은 앞의 그림에서 이벤트 시퀀스를 설명합니다.
 
-1. <xref:System.Windows.UIElement.TouchEnter> 이벤트 사용자가 요소에서 손가락을 놓고 하는 경우 한 번 발생 합니다.
+1. 이 <xref:System.Windows.UIElement.TouchEnter> 이벤트는 사용자가 요소에 손가락을 놓을 때 한 번 발생 합니다.
 
-2. <xref:System.Windows.UIElement.TouchDown> 이벤트가 한 번 발생 합니다.
+2. 이 <xref:System.Windows.UIElement.TouchDown> 이벤트는 한 번 발생 합니다.
 
-3. <xref:System.Windows.UIElement.TouchMove> 이벤트는 사용자가 손가락을 요소 내에서 여러 번 발생 합니다.
+3. 사용자가 요소 내에서 손가락을 움직이면 이벤트가여러번발생합니다.<xref:System.Windows.UIElement.TouchMove>
 
-4. <xref:System.Windows.UIElement.TouchUp> 이벤트는 사용자가 요소에서 손가락을 뗄 때 한 번 발생 합니다.
+4. 이 <xref:System.Windows.UIElement.TouchUp> 이벤트는 사용자가 요소에서 손가락을 뗄 때 한 번 발생 합니다.
 
-5. <xref:System.Windows.UIElement.TouchLeave> 이벤트가 한 번 발생 합니다.
+5. 이 <xref:System.Windows.UIElement.TouchLeave> 이벤트는 한 번 발생 합니다.
 
  3개 이상의 손가락이 사용되면 각 손가락마다 이벤트가 발생합니다.
 
 ### <a name="manipulation-events"></a>조작 이벤트
- 응용 프로그램 사용자가 개체를 조작할 수 있게 하는 위치 하는 경우는 <xref:System.Windows.UIElement> 클래스 조작 이벤트를 정의 합니다. 터치 위치를 단순히 보고하는 터치 이벤트와 달리 조작 이벤트는 입력을 해석할 수 있는 방법을 보고합니다. 변환, 확장 및 회전이라는 세 가지 형식의 조작이 있습니다. 다음 목록은 세 가지 형식의 조작을 호출하는 방법을 설명합니다.
+ 응용 프로그램에서 사용자가 개체를 조작할 수 있도록 하는 경우 클래스 <xref:System.Windows.UIElement> 는 조작 이벤트를 정의 합니다. 터치 위치를 단순히 보고하는 터치 이벤트와 달리 조작 이벤트는 입력을 해석할 수 있는 방법을 보고합니다. 변환, 확장 및 회전이라는 세 가지 형식의 조작이 있습니다. 다음 목록은 세 가지 형식의 조작을 호출하는 방법을 설명합니다.
 
 - 개체에 손가락을 대고 터치 스크린에서 손가락을 움직이면 변환 조작을 호출합니다. 그러면 일반적으로 개체를 이동합니다.
 
@@ -242,9 +242,9 @@ ms.locfileid: "68238502"
 
  개체가 조작에 응답하게 하면 개체에 관성이 있는 것처럼 보일 수 있습니다. 그러면 개체가 실제 세계를 시뮬레이트하게 만들 수 있습니다. 예를 들어 테이블에서 책을 밀 때 충분히 세게 밀면 책을 놓은 후에도 책이 계속 움직입니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]을 사용하면 사용자가 손가락을 개체에서 뗀 후 조작 이벤트를 발생시켜 이 동작을 시뮬레이트할 수 있습니다.
 
- 사용자가 이동, 크기 조정 및 개체를 회전할 수 있는 응용 프로그램을 만드는 방법에 대 한 자세한 내용은 참조 하세요. [연습: 첫 번째 터치 응용 프로그램을 만들어](walkthrough-creating-your-first-touch-application.md)합니다.
+ 사용자가 개체 [를 이동 하 고 크기를 조정 하 고 회전 하는 데 사용할 수 있는 응용 프로그램을 만드는 방법에 대 한 자세한 내용은 연습: 첫 번째 터치 응용 프로그램](walkthrough-creating-your-first-touch-application.md)만들기
 
- <xref:System.Windows.UIElement> 다음 조작 이벤트를 정의 합니다.
+ 는 <xref:System.Windows.UIElement> 다음과 같은 조작 이벤트를 정의 합니다.
 
 - <xref:System.Windows.UIElement.ManipulationStarting>
 
@@ -258,32 +258,32 @@ ms.locfileid: "68238502"
 
 - <xref:System.Windows.UIElement.ManipulationBoundaryFeedback>
 
- 기본적으로 <xref:System.Windows.UIElement> 이러한 조작 이벤트를 수신 하지 않습니다. 조작 이벤트를 수신 하는 <xref:System.Windows.UIElement>로 설정 <xref:System.Windows.UIElement.IsManipulationEnabled%2A?displayProperty=nameWithType> 에 `true`입니다.
+ 기본적으로는 <xref:System.Windows.UIElement> 이러한 조작 이벤트를 수신 하지 않습니다. 에서 <xref:System.Windows.UIElement>조작 이벤트를 수신 하려면를로 <xref:System.Windows.UIElement.IsManipulationEnabled%2A?displayProperty=nameWithType> `true`설정 합니다.
 
 #### <a name="the-execution-path-of-manipulation-events"></a>조작 이벤트 실행 경로
  사용자가 개체를 “throw”하는 시나리오를 고려해 보겠습니다. 사용자가 개체 위에 손가락을 놓고 터치 스크린에서 짧은 거리만큼 손가락을 이동한 다음 개체가 움직이는 동안 손가락을 뗍니다. 그 결과 사용자가 손가락을 뗀 후에도 개체가 사용자의 손가락 아래에서 계속 움직입니다.
 
  다음 그림에서는 조작 이벤트의 실행 경로 및 각 이벤트에 대한 중요한 정보를 보여 줍니다.
 
- ![조작 이벤트의 시퀀스입니다. ](./media/ndp-manipulationevents.png "NDP_ManipulationEvents") 조작 이벤트
+ ![조작 이벤트의 시퀀스입니다.](./media/ndp-manipulationevents.png "NDP_ManipulationEvents") 조작 이벤트
 
  다음 목록은 앞의 그림에서 이벤트 시퀀스를 설명합니다.
 
-1. <xref:System.Windows.UIElement.ManipulationStarting> 사용자 개체에 손가락을 배치 하면 오류가 발생 합니다. 무엇 보다도이 이벤트를 통해 설정 하는 데는 <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> 속성입니다. 후속 이벤트에서 조작의 위치에 상대적인 됩니다는 <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>합니다. 이외의 이벤트에서 <xref:System.Windows.UIElement.ManipulationStarting>,이 속성은 읽기 전용 이므로 <xref:System.Windows.UIElement.ManipulationStarting> 이벤트는에이 속성을 설정할 수 있습니다.
+1. 이 <xref:System.Windows.UIElement.ManipulationStarting> 이벤트는 사용자가 개체에 손가락을 놓을 때 발생 합니다. 무엇 보다도이 이벤트를 통해 <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> 속성을 설정할 수 있습니다. 이후 이벤트에서 조작의 위치는에 상대적 <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>입니다. 이외의 <xref:System.Windows.UIElement.ManipulationStarting>이벤트에서이 속성은 읽기 전용 <xref:System.Windows.UIElement.ManipulationStarting> 이므로이 속성을 설정할 수 있는 유일한 시간은 이벤트입니다.
 
-2. <xref:System.Windows.UIElement.ManipulationStarted> 이벤트가 발생 합니다. 이 이벤트는 조작의 출처를 보고합니다.
+2. 이 <xref:System.Windows.UIElement.ManipulationStarted> 이벤트는 다음에 발생 합니다. 이 이벤트는 조작의 출처를 보고합니다.
 
-3. <xref:System.Windows.UIElement.ManipulationDelta> 이벤트는 사용자의 터치 스크린에서 손가락을 움직일 때마다 여러 번 발생 합니다. <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A> 의 속성을 <xref:System.Windows.Input.ManipulationDeltaEventArgs> 클래스 조작이 이동, 확장 또는 변환으로 해석할지를 보고 합니다. 바로 여기서 개체 조작 작업의 대부분이 수행됩니다.
+3. 이벤트 <xref:System.Windows.UIElement.ManipulationDelta> 는 사용자가 터치 스크린에서 손가락을 움직일 때 여러 번 발생 합니다. 클래스의 속성은 <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A> 조작이 이동, 확장 또는 변환으로 해석 되는지 여부를 보고 합니다. <xref:System.Windows.Input.ManipulationDeltaEventArgs> 바로 여기서 개체 조작 작업의 대부분이 수행됩니다.
 
-4. <xref:System.Windows.UIElement.ManipulationInertiaStarting> 이벤트 개체를 사용 하 여 사용자의 손가락 연결이 끊어질 때 발생 합니다. 이 이벤트를 사용하면 관성이 발생하는 동안 수행되는 조작의 감속을 지정할 수 있습니다. 따라서 사용자가 선택한 여러 가지 실제 공간 또는 특성을 개체가 에뮬레이트할 수 있습니다. 예를 들어 애플리케이션에 실제 세계의 항목을 나타내는 개체가 두 개 있고 한 개체가 다른 개체보다 무거운 경우를 가정해 봅니다. 이 경우 무거운 개체가 가벼운 개체보다 더 빠르게 감속되도록 할 수 있습니다.
+4. 이 <xref:System.Windows.UIElement.ManipulationInertiaStarting> 이벤트는 사용자의 손가락이 개체와의 연결이 끊어질 때 발생 합니다. 이 이벤트를 사용하면 관성이 발생하는 동안 수행되는 조작의 감속을 지정할 수 있습니다. 따라서 사용자가 선택한 여러 가지 실제 공간 또는 특성을 개체가 에뮬레이트할 수 있습니다. 예를 들어 애플리케이션에 실제 세계의 항목을 나타내는 개체가 두 개 있고 한 개체가 다른 개체보다 무거운 경우를 가정해 봅니다. 이 경우 무거운 개체가 가벼운 개체보다 더 빠르게 감속되도록 할 수 있습니다.
 
-5. <xref:System.Windows.UIElement.ManipulationDelta> 관성 이벤트에 여러 번 발생 합니다. 이 이벤트는 사용자가 터치 스크린에서 손가락을 이동하고 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 관성을 시뮬레이트하는 경우에 발생합니다. 다시 말해 <xref:System.Windows.UIElement.ManipulationDelta> 이전 및 이후에 발생 합니다 <xref:System.Windows.UIElement.ManipulationInertiaStarting> 이벤트입니다. 합니다 <xref:System.Windows.Input.ManipulationDeltaEventArgs.IsInertial%2A?displayProperty=nameWithType> 속성 보고서 여부를 <xref:System.Windows.UIElement.ManipulationDelta> 속성을 확인 하 고 해당 값에 따라 다른 작업을 수행할 수 있도록 관성 도중 이벤트 발생 합니다.
+5. 이 <xref:System.Windows.UIElement.ManipulationDelta> 이벤트는 관성이 발생할 때 여러 번 발생 합니다. 이 이벤트는 사용자가 터치 스크린에서 손가락을 이동하고 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 관성을 시뮬레이트하는 경우에 발생합니다. 즉, <xref:System.Windows.UIElement.ManipulationDelta> 는 <xref:System.Windows.UIElement.ManipulationInertiaStarting> 이벤트 전후에 발생 합니다. 속성 <xref:System.Windows.Input.ManipulationDeltaEventArgs.IsInertial%2A?displayProperty=nameWithType> 은 관성 중에 <xref:System.Windows.UIElement.ManipulationDelta> 이벤트가 발생 하는지 여부를 보고 하므로 해당 속성을 확인 하 고 해당 값에 따라 다른 작업을 수행할 수 있습니다.
 
-6. <xref:System.Windows.UIElement.ManipulationCompleted> 이벤트가 조작 및 관성이 종료 될 때입니다. 즉, 이후 모든은 <xref:System.Windows.UIElement.ManipulationDelta> 이벤트가 발생할는 <xref:System.Windows.UIElement.ManipulationCompleted> 을 조작 완료 되었음을 알리는 이벤트가 발생 합니다.
+6. 이 <xref:System.Windows.UIElement.ManipulationCompleted> 이벤트는 조작과 모든 관성이 종료 될 때 발생 합니다. 즉, 모든 <xref:System.Windows.UIElement.ManipulationDelta> 이벤트가 발생 <xref:System.Windows.UIElement.ManipulationCompleted> 한 후 조작이 완료 되었음을 알리는 이벤트가 발생 합니다.
 
- 합니다 <xref:System.Windows.UIElement> 정의 <xref:System.Windows.UIElement.ManipulationBoundaryFeedback> 이벤트입니다. 이 이벤트가 발생할 때를 <xref:System.Windows.Input.ManipulationDeltaEventArgs.ReportBoundaryFeedback%2A> 메서드는 <xref:System.Windows.UIElement.ManipulationDelta> 이벤트. <xref:System.Windows.UIElement.ManipulationBoundaryFeedback> 이벤트를 사용 하면 응용 프로그램이 나 구성 요소는 개체가 경계에 닿을 때 시각적 피드백을 제공 합니다. 예를 들어를 <xref:System.Windows.Window> 핸들 클래스는 <xref:System.Windows.UIElement.ManipulationBoundaryFeedback> 가장자리 발견 될 때 약간 이동 하도록 창에 이벤트입니다.
+ 또한 <xref:System.Windows.UIElement> 는 이벤트를 <xref:System.Windows.UIElement.ManipulationBoundaryFeedback> 정의 합니다. 이 이벤트는 <xref:System.Windows.UIElement.ManipulationDelta> 이벤트에서 <xref:System.Windows.Input.ManipulationDeltaEventArgs.ReportBoundaryFeedback%2A> 메서드가 호출 될 때 발생 합니다. <xref:System.Windows.UIElement.ManipulationBoundaryFeedback> 이벤트를 사용 하면 개체가 경계에 도달할 때 응용 프로그램 또는 구성 요소가 시각적 피드백을 제공할 수 있습니다. 예를 들어, <xref:System.Windows.Window> 클래스는 해당 <xref:System.Windows.UIElement.ManipulationBoundaryFeedback> 가장자리가 나타날 때 창이 약간 이동 되도록 이벤트를 처리 합니다.
 
- 호출 하 여 조작을 취소할 수 있습니다 합니다 <xref:System.Windows.Input.ManipulationStartingEventArgs.Cancel%2A> 메서드를 제외한 모든 조작 이벤트에서 이벤트 인수 <xref:System.Windows.UIElement.ManipulationBoundaryFeedback> 이벤트입니다. 호출 하는 경우 <xref:System.Windows.Input.ManipulationStartingEventArgs.Cancel%2A>조작 이벤트가 더 이상 발생 하 고 터치에 대 한 마우스 이벤트가 발생 합니다. 다음 표에서는 조작이 취소되는 시점과 발생하는 마우스 이벤트 간의 관계에 대해 설명합니다.
+ 이벤트를 제외한 <xref:System.Windows.UIElement.ManipulationBoundaryFeedback> 모든 조작 이벤트의 이벤트 <xref:System.Windows.Input.ManipulationStartingEventArgs.Cancel%2A> 인수에서 메서드를 호출 하 여 조작을 취소할 수 있습니다. 를 호출 <xref:System.Windows.Input.ManipulationStartingEventArgs.Cancel%2A>하면 조작 이벤트가 더 이상 발생 하지 않고 터치를 위해 마우스 이벤트가 발생 합니다. 다음 표에서는 조작이 취소되는 시점과 발생하는 마우스 이벤트 간의 관계에 대해 설명합니다.
 
 |Cancel이 호출되는 이벤트|이미 발생한 입력에 대해 발생하는 마우스 이벤트|
 |----------------------------------------|-----------------------------------------------------------------|
@@ -291,35 +291,35 @@ ms.locfileid: "68238502"
 |<xref:System.Windows.UIElement.ManipulationDelta>|마우스 누름 및 마우스 이동 이벤트|
 |<xref:System.Windows.UIElement.ManipulationInertiaStarting> 및 <xref:System.Windows.UIElement.ManipulationCompleted>|마우스 누름, 마우스 이동 및 마우스 놓기 이벤트|
 
- 호출 하는 경우 사용자에 게 유의 <xref:System.Windows.Input.ManipulationStartingEventArgs.Cancel%2A> 조작이 관성의 경우 메서드가 반환 `false` 하며 입력 마우스 이벤트를 발생 하지 않습니다.
+ 조작이 관성에 있을 때 <xref:System.Windows.Input.ManipulationStartingEventArgs.Cancel%2A> 를 호출 하는 경우 메서드는을 반환 `false` 하 고 입력은 마우스 이벤트를 발생 시 키 지 않습니다.
 
 ### <a name="the-relationship-between-touch-and-manipulation-events"></a>터치 이벤트와 조작 이벤트의 관계
- <xref:System.Windows.UIElement> 항상 터치 이벤트를 받을 수 있습니다. 경우는 <xref:System.Windows.UIElement.IsManipulationEnabled%2A> 속성이 `true`, <xref:System.Windows.UIElement> 모두 터치 이벤트와 조작 이벤트를 받을 수 있습니다.  경우는 <xref:System.Windows.UIElement.TouchDown> 이벤트가 처리 되지 않은 (즉, 합니다 <xref:System.Windows.RoutedEventArgs.Handled%2A> 속성은 `false`), 조작 논리 요소에 터치를 캡처하고 조작 이벤트를 생성 합니다. 경우는 <xref:System.Windows.RoutedEventArgs.Handled%2A> 속성이 `true` 에 <xref:System.Windows.UIElement.TouchDown> 경우 조작 논리 조작 이벤트를 생성 하지 않습니다. 다음 그림에서는 터치 이벤트와 조작 이벤트의 관계를 보여 줍니다.
+ 는 <xref:System.Windows.UIElement> 항상 터치 이벤트를 받을 수 있습니다. 속성이로 `true`설정 된 경우는 <xref:System.Windows.UIElement> 터치 및 조작 이벤트를 모두 수신할 수 있습니다. <xref:System.Windows.UIElement.IsManipulationEnabled%2A>  이벤트가 처리 되지 않은 경우 (즉 <xref:System.Windows.RoutedEventArgs.Handled%2A> , 속성이 인 `false`경우) 조작 논리는 요소에 터치를 캡처하고 조작 이벤트를 생성 합니다. <xref:System.Windows.UIElement.TouchDown> 이벤트에서<xref:System.Windows.UIElement.TouchDown> 속성이로 `true` 설정 된 경우 조작 논리는 조작 이벤트를 생성 하지 않습니다. <xref:System.Windows.RoutedEventArgs.Handled%2A> 다음 그림에서는 터치 이벤트와 조작 이벤트의 관계를 보여 줍니다.
 
- ![터치 이벤트와 조작 이벤트 간의 관계](./media/ndp-touchmanipulateevents.png "NDP_TouchManipulateEvents") 터치 이벤트와 조작 이벤트
+ ![터치 이벤트와 조작 이벤트 간의 관계](./media/ndp-touchmanipulateevents.png "NDP_TouchManipulateEvents") 터치 및 조작 이벤트
 
  다음 목록에서는 앞의 그림에 나와 있는 터치 이벤트와 조작 이벤트의 관계에 대해 설명합니다.
 
-- 첫 번째 터치 장치가 생성 하는 경우는 <xref:System.Windows.UIElement.TouchDown> 이벤트에는 <xref:System.Windows.UIElement>, 조작 논리 호출 합니다 <xref:System.Windows.UIElement.CaptureTouch%2A> 생성 하는 방법을 <xref:System.Windows.UIElement.GotTouchCapture> 이벤트.
+- <xref:System.Windows.UIElement.TouchDown> 첫 번째 터치 장치가 <xref:System.Windows.UIElement>에서 이벤트를 생성 하는 경우 조작 논리 <xref:System.Windows.UIElement.CaptureTouch%2A> 는 <xref:System.Windows.UIElement.GotTouchCapture> 이벤트를 생성 하는 메서드를 호출 합니다.
 
-- 경우는 <xref:System.Windows.UIElement.GotTouchCapture> 발생 하면 조작 논리 호출 합니다 <xref:System.Windows.Input.Manipulation.AddManipulator%2A?displayProperty=nameWithType> 생성 하는 방법을 <xref:System.Windows.UIElement.ManipulationStarting> 이벤트입니다.
+- 이 발생 하는 경우 조작 논리는 <xref:System.Windows.UIElement.ManipulationStarting> 이벤트 <xref:System.Windows.Input.Manipulation.AddManipulator%2A?displayProperty=nameWithType> 를 생성 하는 메서드를 호출 합니다. <xref:System.Windows.UIElement.GotTouchCapture>
 
-- 경우는 <xref:System.Windows.UIElement.TouchMove> 이벤트 발생, 조작 논리에서 생성 합니다 <xref:System.Windows.UIElement.ManipulationDelta> 이벤트 전에 발생 하는 <xref:System.Windows.UIElement.ManipulationInertiaStarting> 이벤트.
+- 이벤트가 발생할 때 조작 논리는 <xref:System.Windows.UIElement.ManipulationInertiaStarting> 이벤트 이전에 발생 <xref:System.Windows.UIElement.ManipulationDelta> 하는 이벤트를 생성 합니다. <xref:System.Windows.UIElement.TouchMove>
 
-- 마지막 터치 장치가 요소 발생 합니다 <xref:System.Windows.UIElement.TouchUp> 경우 조작 논리에서 생성 된 <xref:System.Windows.UIElement.ManipulationInertiaStarting> 이벤트.
+- 요소의 마지막 터치 장치가 <xref:System.Windows.UIElement.TouchUp> 이벤트를 발생 시키면 조작 논리는 <xref:System.Windows.UIElement.ManipulationInertiaStarting> 이벤트를 생성 합니다.
 
 <a name="focus"></a>
 ## <a name="focus"></a>포커스
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에는 포커스와 관련된 두 가지 주요 개념인 키보드 포커스와 논리 포커스가 있습니다.
 
 ### <a name="keyboard-focus"></a>키보드 포커스
- 키보드 포커스는 키보드 입력을 받고 있는 요소를 말합니다.  키보드 포커스가 있는 전체 데스크탑에는 요소가 하나뿐이어야 합니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에 키보드 포커스가 있는 요소가 <xref:System.Windows.IInputElement.IsKeyboardFocused%2A> 로 `true`합니다.  정적 <xref:System.Windows.Input.Keyboard> 메서드 <xref:System.Windows.Input.Keyboard.FocusedElement%2A> 현재 키보드 포커스가 있는 요소를 반환 합니다.
+ 키보드 포커스는 키보드 입력을 받고 있는 요소를 말합니다.  키보드 포커스가 있는 전체 데스크탑에는 요소가 하나뿐이어야 합니다.  에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]키보드 포커스가 <xref:System.Windows.IInputElement.IsKeyboardFocused%2A> 있는 요소는을로 `true`설정 합니다.  정적 <xref:System.Windows.Input.Keyboard> 메서드<xref:System.Windows.Input.Keyboard.FocusedElement%2A> 는 현재 키보드 포커스가 있는 요소를 반환 합니다.
 
- 요소를 탭 하 여 또는 같은 특정 요소를 마우스로 클릭 하 여 키보드 포커스를 얻을 수 있습니다는 <xref:System.Windows.Controls.TextBox>합니다.  키보드 포커스를 사용 하 여 프로그래밍 방식으로 얻을 수도 있습니다는 <xref:System.Windows.Input.Keyboard.Focus%2A> 메서드는 <xref:System.Windows.Input.Keyboard> 클래스입니다.  <xref:System.Windows.Input.Keyboard.Focus%2A> 지정 된 요소가 키보드 포커스를 시도 합니다.  반환한 요소 <xref:System.Windows.Input.Keyboard.Focus%2A> 현재 키보드 포커스가 있는 요소입니다.
+ 키보드 포커스는 요소로 탭 이동 하거나 등의 특정 요소 <xref:System.Windows.Controls.TextBox>에서 마우스를 클릭 하 여 가져올 수 있습니다.  클래스의 메서드를 <xref:System.Windows.Input.Keyboard.Focus%2A> 사용 하 여 프로그래밍 방식으로 키보드 포커스를 가져올 수도 있습니다. <xref:System.Windows.Input.Keyboard>  <xref:System.Windows.Input.Keyboard.Focus%2A>지정 된 요소에 키보드 포커스를 지정 하려고 시도 합니다.  에서 <xref:System.Windows.Input.Keyboard.Focus%2A> 반환 하는 요소는 현재 키보드 포커스가 있는 요소입니다.
 
- 키보드 포커스를 요소에 대 한 순서로 합니다 <xref:System.Windows.UIElement.Focusable%2A> 속성 및 <xref:System.Windows.UIElement.IsVisible%2A> 속성으로 설정 되어 있어야 **true**합니다.  와 같은 일부 클래스 <xref:System.Windows.Controls.Panel>에 있는 <xref:System.Windows.UIElement.Focusable%2A> 로 설정 `false` 기본적으로 따라서 해야이 속성을 설정 `true` 해당 요소를 포커스를 얻을 수를 원하는 경우.
+ 요소가 키보드 포커스 <xref:System.Windows.UIElement.Focusable%2A> 를 가져오도록 하려면 속성 <xref:System.Windows.UIElement.IsVisible%2A> 및 속성을 **true**로 설정 해야 합니다.  등의 <xref:System.Windows.Controls.Panel>일부 클래스는 기본적으로로 `false` 설정 되어 <xref:System.Windows.UIElement.Focusable%2A> 있으므로 해당 요소에서 포커스를 얻을 수 있도록 하려면이 속성 `true` 을로 설정 해야 할 수 있습니다.
 
- 다음 예제에서는 <xref:System.Windows.Input.Keyboard.Focus%2A> 에서 키보드 포커스를 설정 하는 <xref:System.Windows.Controls.Button>합니다.  응용 프로그램에서 초기 포커스를 설정 하는 가장 좋은 위치는 <xref:System.Windows.FrameworkElement.Loaded> 이벤트 처리기입니다.
+ 다음 예제에서는를 <xref:System.Windows.Input.Keyboard.Focus%2A> 사용 하 여에 키보드 포커스 <xref:System.Windows.Controls.Button>를 설정 합니다.  응용 프로그램에서 초기 포커스를 설정 하는 데 권장 되는 <xref:System.Windows.FrameworkElement.Loaded> 위치가 이벤트 처리기에 있습니다.
 
  [!code-csharp[focussample#FocusSampleSetFocus](~/samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplesetfocus)]
  [!code-vb[focussample#FocusSampleSetFocus](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplesetfocus)]
@@ -327,46 +327,46 @@ ms.locfileid: "68238502"
  키보드 포커스에 대한 자세한 내용은 [포커스 개요](focus-overview.md)를 참조하세요.
 
 ### <a name="logical-focus"></a>논리 포커스
- 논리 포커스 참조는 <xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=nameWithType> 포커스 범위 내에서.  애플리케이션에 논리 포커스가 있는 요소는 여러 개일 수 있지만, 특정 포커스 범위에 논리 포커스가 있는 요소는 하나뿐일 수 있습니다.
+ 논리적 포커스는 포커스 범위 <xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=nameWithType> 에서을 참조 합니다.  애플리케이션에 논리 포커스가 있는 요소는 여러 개일 수 있지만, 특정 포커스 범위에 논리 포커스가 있는 요소는 하나뿐일 수 있습니다.
 
  포커스 범위는 추적 하는 컨테이너 요소는 <xref:System.Windows.Input.FocusManager.FocusedElement%2A> 해당 범위 내에서.  포커스가 포커스 범위를 벗어나면 포커스가 있는 요소에서 키보드 포커스를 잃지만 논리 포커스는 유지합니다.  포커스가 포커스 범위로 돌아오면 포커스가 있는 요소가 키보드 포커스를 갖습니다.  이렇게 하면 여러 포커스 범위 사이에서 키보드 포커스가 변경되더라도 포커스 범위 내에서 포커스가 있는 요소는 포커스가 다시 돌아올 때 포커스가 있는 상태로 유지됩니다.
 
- 요소에서 포커스 범위로 변환할 수 있습니다 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 설정 하 여는 <xref:System.Windows.Input.FocusManager> 연결 된 속성 <xref:System.Windows.Input.FocusManager.IsFocusScope%2A> 에 `true`, 또는 사용 하 여 연결된 된 속성을 설정 하 여 코드를 <xref:System.Windows.Input.FocusManager.SetIsFocusScope%2A> 메서드.
+ [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] <xref:System.Windows.Input.FocusManager> 에서 연결 된 속성 <xref:System.Windows.Input.FocusManager.IsFocusScope%2A> 을 <xref:System.Windows.Input.FocusManager.SetIsFocusScope%2A> 로 `true`설정 하거나 메서드를 사용 하 여 연결 된 속성을 설정 하 여 코드에서 요소를 포커스 범위로 설정할 수 있습니다.
 
- 다음 예에서는 <xref:System.Windows.Controls.StackPanel> 설정 하 여 포커스 범위로 <xref:System.Windows.Input.FocusManager.IsFocusScope%2A> 연결 된 속성입니다.
+ 다음 예제에서는 <xref:System.Windows.Input.FocusManager.IsFocusScope%2A> 연결 된 <xref:System.Windows.Controls.StackPanel> 속성을 설정 하 여을 포커스 범위로 만듭니다.
 
  [!code-xaml[MarkupSnippets#MarkupIsFocusScopeXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/MarkupSnippets/CSharp/Window1.xaml#markupisfocusscopexaml)]
 
  [!code-csharp[FocusSnippets#FocusSetIsFocusScope](~/samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focussetisfocusscope)]
  [!code-vb[FocusSnippets#FocusSetIsFocusScope](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focussetisfocusscope)]
 
- 클래스 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 는 기본적으로 포커스 범위인 <xref:System.Windows.Window>를 <xref:System.Windows.Controls.Menu>를 <xref:System.Windows.Controls.ToolBar>, 및 <xref:System.Windows.Controls.ContextMenu>합니다.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Menu> <xref:System.Windows.Controls.ToolBar> 기본적으로<xref:System.Windows.Controls.ContextMenu>포커스 범위에 해당 하는 클래스는 ,,및입니다.<xref:System.Windows.Window>
 
- 키보드 포커스가 있는 요소에는;에 속하기 포커스 범위에 대 한 논리 포커스 따라서 요소에 포커스를 설정 합니다 <xref:System.Windows.Input.Keyboard.Focus%2A> 메서드는 <xref:System.Windows.Input.Keyboard> 클래스 또는 기본 요소 클래스 요소에 키보드 포커스와 논리 포커스가 제공 하려고 합니다.
+ 키보드 포커스가 있는 요소에는 자신이 속한 포커스 범위에 대 한 논리 포커스가 있습니다. 따라서 <xref:System.Windows.Input.Keyboard> 클래스 또는 기본 요소 클래스의 메서드를 <xref:System.Windows.Input.Keyboard.Focus%2A> 사용 하 여 요소에 포커스를 설정 하면 요소에 키보드 포커스와 논리 포커스를 제공 하려고 합니다.
 
- 포커스 범위에서 포커스가 있는 요소를 확인 하려면 사용 하 여 <xref:System.Windows.Input.FocusManager.GetFocusedElement%2A>입니다. 포커스 범위에 대해 포커스가 있는 요소를 변경 하려면 사용 하 여 <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A>입니다.
+ 포커스 범위에서 포커스가 있는 요소를 확인 하려면를 사용 <xref:System.Windows.Input.FocusManager.GetFocusedElement%2A>합니다. 포커스 범위에 대 한 포커스가 있는 요소를 변경 하려면 <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A>를 사용 합니다.
 
  논리 포커스에 대한 자세한 내용은 [포커스 개요](focus-overview.md)를 참조하세요.
 
 <a name="mouse_position"></a>
 ## <a name="mouse-position"></a>마우스 위치
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 입력 API 좌표 공간과 관련 된 유용한 정보를 제공 합니다.  예를 들어 좌표 `(0,0)`은 좌표의 왼쪽 위를 나타냅니다. 그러나 트리에서 어떤 요소의 왼쪽 위인가요? 즉, 좌표가 나타내는 요소가 입력 대상인지 이벤트 처리기를 연결한 요소인지 또는 다른 요소인지 알 수 없습니다. 혼동을 피하기 위해는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 입력 API에서 마우스로 좌표를 사용 하 여 작업할 때 참조 프레임을 지정 해야 합니다. <xref:System.Windows.Input.Mouse.GetPosition%2A> 메서드는 지정 된 요소를 기준으로 마우스 포인터의 좌표를 반환 합니다.
+ 입력 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API는 좌표 공간에 관한 유용한 정보를 제공 합니다.  예를 들어 좌표 `(0,0)`은 좌표의 왼쪽 위를 나타냅니다. 그러나 트리에서 어떤 요소의 왼쪽 위인가요? 즉, 좌표가 나타내는 요소가 입력 대상인지 이벤트 처리기를 연결한 요소인지 또는 다른 요소인지 알 수 없습니다. 혼동을 피하기 위해 입력 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API는 마우스를 통해 얻은 좌표를 사용할 때 참조 프레임을 지정 해야 합니다. 메서드 <xref:System.Windows.Input.Mouse.GetPosition%2A> 는 지정 된 요소를 기준으로 마우스 포인터의 좌표를 반환 합니다.
 
 <a name="mouse_capture"></a>
 ## <a name="mouse-capture"></a>마우스 캡처
- 마우스 디바이스에는 마우스 캡처라고 하는 모달 특성이 있습니다. 마우스 캡처는 끌어서 놓기 작업이 시작될 때 전환되는 입력 상태를 유지함으로써 마우스 포인터의 명목상 화면 위치와 관련된 다른 작업이 발생할 필요가 없도록 하기 위해 사용됩니다. 마우스를 끄는 동안 끌어서 놓기 작업을 중단하지 않고는 클릭할 수 없으므로 끌기 원점에서 마우스 캡처를 보유하는 동안에는 대부분의 마우스 이동 동작이 적절하지 않게 됩니다. 입력된 시스템에서 특정 요소에 마우스 캡처를 강제 하거나 마우스 캡처 상태를 지울 수 있는 Api 뿐만 아니라 마우스 캡처 상태를 확인할 수 있는 Api를 노출 합니다. 끌어서 놓기 작업에 대한 자세한 내용은 [끌어서 놓기 개요](drag-and-drop-overview.md)를 참조하세요.
+ 마우스 디바이스에는 마우스 캡처라고 하는 모달 특성이 있습니다. 마우스 캡처는 끌어서 놓기 작업이 시작될 때 전환되는 입력 상태를 유지함으로써 마우스 포인터의 명목상 화면 위치와 관련된 다른 작업이 발생할 필요가 없도록 하기 위해 사용됩니다. 마우스를 끄는 동안 끌어서 놓기 작업을 중단하지 않고는 클릭할 수 없으므로 끌기 원점에서 마우스 캡처를 보유하는 동안에는 대부분의 마우스 이동 동작이 적절하지 않게 됩니다. 입력 시스템은 마우스 캡처 상태를 확인할 수 있는 Api 뿐만 아니라 특정 요소에 마우스 캡처를 적용 하거나 마우스 캡처 상태를 지울 수 있는 api를 노출 합니다. 끌어서 놓기 작업에 대한 자세한 내용은 [끌어서 놓기 개요](drag-and-drop-overview.md)를 참조하세요.
 
 <a name="commands"></a>
 ## <a name="commands"></a>명령
- 명령을 사용하면 디바이스 입력에 비해 보다 의미적 수준에서 입력을 처리할 수 있습니다.  명령은 `Cut`, `Copy`, `Paste` 또는 `Open`과 같은 단순한 지시문입니다.  명령은 명령 논리를 중앙 집중화하는 데 유용합니다.  동일한 명령에서 액세스할 수 있습니다는 <xref:System.Windows.Controls.Menu>의 <xref:System.Windows.Controls.ToolBar>, 또는 바로 가기 키입니다. 또한 명령은 명령을 사용할 수 없을 때 컨트롤을 비활성화하는 메커니즘도 제공합니다.
+ 명령을 사용하면 디바이스 입력에 비해 보다 의미적 수준에서 입력을 처리할 수 있습니다.  명령은 `Cut`, `Copy`, `Paste` 또는 `Open`과 같은 단순한 지시문입니다.  명령은 명령 논리를 중앙 집중화하는 데 유용합니다.  동일한 명령은에서 또는 바로 가기 키를 <xref:System.Windows.Controls.Menu>통해 액세스할 <xref:System.Windows.Controls.ToolBar>수 있습니다. 또한 명령은 명령을 사용할 수 없을 때 컨트롤을 비활성화하는 메커니즘도 제공합니다.
 
- <xref:System.Windows.Input.RoutedCommand> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 구현의 <xref:System.Windows.Input.ICommand>합니다.  경우는 <xref:System.Windows.Input.RoutedCommand> 실행 되는 <xref:System.Windows.Input.CommandManager.PreviewExecuted> 및 <xref:System.Windows.Input.CommandManager.Executed> 터널링 및 버블링 요소 트리를 통해 다른 입력과 마찬가지로 명령 대상에서 이벤트가 합니다.  명령 대상이 설정되어 있지 않으면 키보드 포커스가 있는 요소가 명령 대상이 됩니다.  에 연결 된 명령을 수행 하는 논리는 <xref:System.Windows.Input.CommandBinding>합니다.  경우는 <xref:System.Windows.Input.CommandManager.Executed> 이벤트가 도달할를 <xref:System.Windows.Input.CommandBinding> 해당 특정 명령에 대 한는 <xref:System.Windows.Input.ExecutedRoutedEventHandler> 에 <xref:System.Windows.Input.CommandBinding> 라고 합니다.  이 처리기는 명령의 작업을 수행합니다.
+ <xref:System.Windows.Input.RoutedCommand>는의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.ICommand>구현입니다.  가 실행 되 면 <xref:System.Windows.Input.CommandManager.Executed> 및 이벤트가 명령 대상에서 발생 하 고, 다른 입력과 마찬가지로 요소 트리를 통해 터널링 및 버블링 됩니다. <xref:System.Windows.Input.CommandManager.PreviewExecuted> <xref:System.Windows.Input.RoutedCommand>  명령 대상이 설정되어 있지 않으면 키보드 포커스가 있는 요소가 명령 대상이 됩니다.  명령을 수행 하는 논리는에 연결 <xref:System.Windows.Input.CommandBinding>됩니다.  <xref:System.Windows.Input.CommandBinding> 특정 명령 에<xref:System.Windows.Input.ExecutedRoutedEventHandler> 대 한 <xref:System.Windows.Input.CommandManager.Executed> 이벤트가에 도달 하면의 <xref:System.Windows.Input.CommandBinding> 가 호출 됩니다.  이 처리기는 명령의 작업을 수행합니다.
 
  명령에 대한 자세한 내용은 [명령 개요](commanding-overview.md)를 참조하세요.
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 구성 되는 공용 명령의 라이브러리를 제공 <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.MediaCommands>를 <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, 및 <xref:System.Windows.Documents.EditingCommands>를 만들거나 사용자 고유의 정의할 수 있습니다.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 <xref:System.Windows.Input.ApplicationCommands> ,<xref:System.Windows.Input.MediaCommands> ,,<xref:System.Windows.Documents.EditingCommands>및로 구성 된 일반적인 명령 라이브러리를 제공 하거나 사용자가 직접 정의할 수 있습니다. <xref:System.Windows.Input.ComponentCommands> <xref:System.Windows.Input.NavigationCommands>
 
- 다음 예제에서는 설정 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.MenuItem> 클릭 하면 해당 호출 하도록 합니다 <xref:System.Windows.Input.ApplicationCommands.Paste%2A> 명령을 <xref:System.Windows.Controls.TextBox>되었다고 가정 하 고는 <xref:System.Windows.Controls.TextBox> 키보드 포커스가 합니다.
+ 다음 예제에서는를 클릭 하면에서 키보드 포커스가 <xref:System.Windows.Controls.MenuItem> 있는 것 <xref:System.Windows.Controls.TextBox>으로 가정 <xref:System.Windows.Controls.TextBox> 하 여에 대 한 <xref:System.Windows.Input.ApplicationCommands.Paste%2A> 명령을 호출 하도록를 설정 하는 방법을 보여 줍니다.
 
  [!code-xaml[CommandingOverviewSnippets#CommandingOverviewSimpleCommand](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewsimplecommand)]
 
@@ -377,11 +377,11 @@ ms.locfileid: "68238502"
 
 <a name="the_input_system_and_base_elements"></a>
 ## <a name="the-input-system-and-base-elements"></a>입력 시스템 및 기본 요소
- 정의 하는 연결 된 이벤트와 같은 입력 이벤트를 <xref:System.Windows.Input.Mouse>, <xref:System.Windows.Input.Keyboard>, 및 <xref:System.Windows.Input.Stylus> 클래스는 입력된 시스템에서 발생 하 고 런타임에 시각적 트리를 테스트 하는 적중 횟수를 기반으로 개체 모델의 특정 위치에 삽입 합니다.
+ <xref:System.Windows.Input.Mouse> ,<xref:System.Windows.Input.Keyboard>및 클래스<xref:System.Windows.Input.Stylus> 에 의해 정의 된 연결 된 이벤트와 같은 입력 이벤트는 입력 시스템에서 발생 하 고 런타임에 시각적 트리의 적중 테스트를 기반으로 개체 모델의 특정 위치에 삽입 됩니다.
 
- 각 이벤트는 <xref:System.Windows.Input.Mouse>, <xref:System.Windows.Input.Keyboard>, 및 <xref:System.Windows.Input.Stylus> 정의 연결된 된 이벤트 다시 기본 요소 클래스에 의해 노출 됩니다 <xref:System.Windows.UIElement> 고 <xref:System.Windows.ContentElement> 새 라우트된 이벤트로 합니다. 기본 요소의 라우트된 이벤트는 원래 연결된 이벤트를 처리하고 이벤트 데이터를 다시 사용하는 클래스를 통해 생성됩니다.
+ , <xref:System.Windows.Input.Mouse> 및<xref:System.Windows.Input.Keyboard> <xref:System.Windows.UIElement> <xref:System.Windows.ContentElement> 가 연결 된 이벤트로 정의 하는 각 이벤트는 기본 요소 클래스 및 새로운 라우트된 이벤트로도 다시 노출 됩니다. <xref:System.Windows.Input.Stylus> 기본 요소의 라우트된 이벤트는 원래 연결된 이벤트를 처리하고 이벤트 데이터를 다시 사용하는 클래스를 통해 생성됩니다.
 
- 입력 이벤트가 해당 기본 요소 입력 이벤트 구현을 통해 특정 소스 요소와 연결되는 경우 이 입력 이벤트는 논리적 트리 개체 및 시각적 트리 개체의 조합을 기반으로 하는 이벤트 경로의 나머지 부분을 통해 전송할 수 있으며 애플리케이션 코드에서 처리할 수 있습니다.  일반적으로 것에서 라우트된 이벤트를 사용 하 여 이러한 장치 관련 입력된 이벤트를 처리 하는 편리한 <xref:System.Windows.UIElement> 하 고 <xref:System.Windows.ContentElement>직관적인 이벤트 처리기 구문을 모두에서 사용할 수 있으므로, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 및 코드. 대신 프로세스를 시작한 연결된 이벤트를 처리할 수도 있지만 이 경우 몇 가지 문제에 직면할 수 있습니다. 예를 들어 기본 요소 클래스 처리를 통해 연결된 이벤트가 처리된 것으로 표시될 수 있습니다. 또한 연결된 이벤트에 대한 처리기를 연결하기 위해 실제 이벤트 구문 대신 접근자 메서드를 사용해야 합니다.
+ 입력 이벤트가 해당 기본 요소 입력 이벤트 구현을 통해 특정 소스 요소와 연결되는 경우 이 입력 이벤트는 논리적 트리 개체 및 시각적 트리 개체의 조합을 기반으로 하는 이벤트 경로의 나머지 부분을 통해 전송할 수 있으며 애플리케이션 코드에서 처리할 수 있습니다.  일반적으로 및 코드에서 보다 직관적인 <xref:System.Windows.UIElement> [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 이벤트 처리기 구문을 사용할 수 있기 때문에 및 <xref:System.Windows.ContentElement>에서 라우트된 이벤트를 사용 하 여 이러한 장치 관련 입력 이벤트를 처리 하는 것이 더 편리 합니다. 대신 프로세스를 시작한 연결된 이벤트를 처리할 수도 있지만 이 경우 몇 가지 문제에 직면할 수 있습니다. 예를 들어 기본 요소 클래스 처리를 통해 연결된 이벤트가 처리된 것으로 표시될 수 있습니다. 또한 연결된 이벤트에 대한 처리기를 연결하기 위해 실제 이벤트 구문 대신 접근자 메서드를 사용해야 합니다.
 
 <a name="whats_next"></a>
 ## <a name="whats-next"></a>새로운 기능

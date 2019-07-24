@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 0b39fce8bfd89dd11a863993738ef9b4fa64ba91
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 42b1596082fe3e682a6fa806412ab5837b087bf9
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364425"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400716"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 보안 전략 - 플랫폼 보안
-Windows Presentation Foundation (WPF)는 다양 한 보안 서비스를 제공 하지만 운영 체제 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], 및 [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]를 포함 하는 기본 플랫폼의 보안 기능도 활용 합니다. 이러한 계층이 결합되어 다음 그림과 같이 단일 실패 지점을 방지하는 강력한 심층 방어 보안 모델인 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]를 제공합니다.  
+WPF (Windows Presentation Foundation)는 다양 한 보안 서비스를 제공 하지만 운영 체제, CLR 및 [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]를 포함 하는 기본 플랫폼의 보안 기능도 활용 합니다. 이러한 계층이 결합되어 다음 그림과 같이 단일 실패 지점을 방지하는 강력한 심층 방어 보안 모델인 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]를 제공합니다.  
   
  ![WPF 보안 모델을 보여 주는 다이어그램입니다.](./media/wpf-security-strategy-platform-security/windows-presentation-foundation-security.png)  
   
@@ -44,7 +44,7 @@ Windows Presentation Foundation (WPF)는 다양 한 보안 서비스를 제공 �
 - [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)].  
   
 #### <a name="gs-compilation"></a>/GS 컴파일  
- [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]에서는 버퍼 오버런 완화에 도움이 되도록 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]과 같은 모든 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 종속성을 포함하여 많은 핵심 시스템 라이브러리를 다시 컴파일하여 보호를 제공합니다. 이 작업을 위해 /GS 매개 변수와 C/C++ 명령줄 컴파일러를 함께 사용합니다. 버퍼 오버런을 명시적으로 피해야 하지만 /GS 컴파일은 실수 또는 악의적으로 만들어진 잠재적인 취약성에 대한 심층 방어의 예를 제공합니다.  
+ [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]는 CLR과 같은 모든 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 종속성을 포함 하 여 많은 핵심 시스템 라이브러리를 다시 컴파일하여 버퍼 오버런을 완화 하는 기능을 제공 합니다. 이 작업을 위해 /GS 매개 변수와 C/C++ 명령줄 컴파일러를 함께 사용합니다. 버퍼 오버런을 명시적으로 피해야 하지만 /GS 컴파일은 실수 또는 악의적으로 만들어진 잠재적인 취약성에 대한 심층 방어의 예를 제공합니다.  
   
  지금까지 버퍼 오버런은 많은 강력한 보안 익스플로이트의 원인이 되었습니다. 버퍼 오버런은 공격자는 버퍼의 경계를 지나서 쓰는 악성 코드의 삽입을 허용하는 코드 취약성을 활용하는 경우에 발생합니다. 이 경우 공격자의 코드가 실행되도록 함수의 반환 주소를 덮어써서 코드가 실행되는 프로세스를 공격자가 가로챌 수 있습니다. 그 결과, 가로챈 프로세스와 동일한 권한으로 임의 코드를 실행하는 악성 코드가 생깁니다.  
   
@@ -90,13 +90,13 @@ Windows Presentation Foundation (WPF)는 다양 한 보안 서비스를 제공 �
   
 <a name="Common_Language_Runtime_Security"></a>   
 ## <a name="common-language-runtime-security"></a>공용 언어 런타임 보안  
- 는 [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] 유효성 검사 및 확인, CAS (코드 액세스 보안) 및 보안에 중요 한 방법론을 포함 하는 다양 한 주요 보안 이점을 제공 합니다.  
+ CLR (공용 언어 런타임)은 유효성 검사 및 확인, CAS (코드 액세스 보안) 및 보안에 중요 한 방법론을 포함 하는 다양 한 주요 보안 이점을 제공 합니다.  
   
 <a name="Validation_and_Verification"></a>   
 ### <a name="validation-and-verification"></a>유효성 검사 및 검증  
- 어셈블리 격리와 무결성을 제공하기 위해 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]은 유효성 검사 프로세스를 사용합니다. [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 유효성 검사는 어셈블리 외부를 가리키는 주소에 대해 PE(이식 가능한 실행 파일) 파일 형식의 유효성을 검사하여 어셈블리가 격리되었는지 확인합니다. 또한 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 유효성 검사는 어셈블리 내에 포함된 메타데이터의 무결성을 확인합니다.  
+ 어셈블리 격리와 무결성을 제공 하기 위해 CLR은 유효성 검사 프로세스를 사용 합니다. CLR 유효성 검사는 어셈블리 외부를 가리키는 주소에 대해 PE (이식 가능한 실행) 파일 형식의 유효성을 검사 하 여 어셈블리가 격리 되도록 합니다. 또한 CLR 유효성 검사는 어셈블리 내에 포함 된 메타 데이터의 무결성에 대 한 유효성을 검사 합니다.  
   
- 형식 안전성을 보장 하기 위해 일반적인 보안 문제 (예: 버퍼 오버런)를 방지 하 고 하위 프로세스 격리를 통해 샌드 박싱 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 을 사용 하도록 설정 하면 보안에서 확인 개념을 사용 합니다.  
+ 형식 안전성을 보장 하기 위해 일반적인 보안 문제 (예: 버퍼 오버런)를 방지 하 고 하위 프로세스 격리를 통해 샌드 박싱을 사용 하도록 설정 하려면 CLR 보안에서 확인 개념을 사용 합니다.  
   
  관리되는 애플리케이션은 MSIL(Microsoft Intermediate Language)로 컴파일됩니다. 관리되는 애플리케이션의 메서드를 실행하면 해당 MSIL이 JIT(Just-In-Time) 컴파일을 통해 네이티브 코드로 컴파일됩니다. JIT 컴파일에는 코드에서 다음이 발생하지 않도록 하는 다양한 안정성 및 견고성 규칙을 적용하는 검증 프로세스가 포함됩니다.  
   
@@ -172,13 +172,13 @@ Windows Presentation Foundation (WPF)는 다양 한 보안 서비스를 제공 �
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>ClickOnce 배포  
- [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)]는 .NET Framework와 함께 제공 되는 포괄적인 배포 기술 이며와 [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] 통합 됩니다 (자세한 내용은 [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment) 참조). 브라우저에서 호스트된 응용 프로그램은 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]로 배포해야 하지만 독립 실행형 [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] 응용 프로그램은 [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]로 배포할 수 있습니다.  
+ Clickonce는 .NET Framework와 함께 제공 되는 포괄적인 배포 기술 이며와 [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] 통합 됩니다 (자세한 내용은 [clickonce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment) 참조). Clickonce [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 를 사용 하 여 독립 실행형 응용 프로그램을 배포할 수 있지만 브라우저에서 호스팅되는 응용 프로그램은 clickonce를 사용 하 여 배포 해야 합니다.  
   
- 를 사용 하 [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)] 여 배포 된 응용 프로그램에는 CAS (코드 액세스 보안)에 대 한 [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] 추가 보안 계층이 제공 됩니다. 기본적으로 배포 된 응용 프로그램은 필요한 사용 권한을 요청 합니다. 애플리케이션이 배포된 소스 영역에 대한 권한 집합을 초과하지 않는 경우에만 해당 권한이 부여됩니다. 시작 영역의 권한 집합에서 제공 하는 것 보다 작은 경우라도 사용 권한 집합을 필요한 권한 으로만 줄이면 응용 프로그램이 액세스할 수 있는 리소스 수가 최소한으로 줄어듭니다. 따라서 애플리케이션을 가로채는 경우 클라이언트 컴퓨터의 손상 가능성이 줄어듭니다.  
+ ClickOnce를 사용 하 여 배포 된 응용 프로그램에는 CAS (코드 액세스 보안)를 통해 추가 보안 계층이 제공 됩니다. 기본적으로 ClickOnce 배포 응용 프로그램은 필요한 사용 권한을 요청 합니다. 애플리케이션이 배포된 소스 영역에 대한 권한 집합을 초과하지 않는 경우에만 해당 권한이 부여됩니다. 시작 영역의 권한 집합에서 제공 하는 것 보다 작은 경우라도 사용 권한 집합을 필요한 권한 으로만 줄이면 응용 프로그램이 액세스할 수 있는 리소스 수가 최소한으로 줄어듭니다. 따라서 애플리케이션을 가로채는 경우 클라이언트 컴퓨터의 손상 가능성이 줄어듭니다.  
   
 <a name="Security_Critical_Methodology"></a>   
 ### <a name="security-critical-methodology"></a>보안에 중요한 방법론  
- 사용 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 권한을 사용 하 여 XBAP 응용 프로그램에 대 한 인터넷 영역 샌드박스를 사용 하도록 설정 하는 코드는 가능한 한 높은 수준의 보안 감사 및 제어로 유지 해야 합니다. 이러한 요구 사항을 용이 하 게 하기 위해 .NET Framework는 권한을 상승 시키는 코드를 관리 하기 위한 새로운 지원을 제공 합니다. 특히를 사용 하면 권한을 높이는 코드를 식별 하 고로 표시할 <xref:System.Security.SecurityCriticalAttribute> <xref:System.Security.SecurityCriticalAttribute> [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 수 있습니다 .로 표시 되지 않은 코드는이 방법론을 사용 하 여 *투명* 하 게 됩니다. 반대로, <xref:System.Security.SecurityCriticalAttribute>로 표시되지 않은 관리 코드는 권한을 높일 수 있습니다.  
+ 사용 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 권한을 사용 하 여 XBAP 응용 프로그램에 대 한 인터넷 영역 샌드박스를 사용 하도록 설정 하는 코드는 가능한 한 높은 수준의 보안 감사 및 제어로 유지 해야 합니다. 이러한 요구 사항을 용이 하 게 하기 위해 .NET Framework는 권한을 상승 시키는 코드를 관리 하기 위한 새로운 지원을 제공 합니다. 특히 CLR을 사용 하면 권한을 상승 하는 코드를 식별 하 고로 <xref:System.Security.SecurityCriticalAttribute>표시할 수 있습니다 .로 <xref:System.Security.SecurityCriticalAttribute> 표시 되지 않은 코드는이 방법론을 사용 하 여 *투명* 하 게 됩니다. 반대로, <xref:System.Security.SecurityCriticalAttribute>로 표시되지 않은 관리 코드는 권한을 높일 수 있습니다.  
   
  보안에 중요 한 방법론을 사용 하면 권한을 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 상승 하는 코드를 *보안에 중요 한 커널*로 구성 하 고 나머지는 투명 하 게 지정할 수 있습니다. 보안에 중요 한 코드를 격리 시키면 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 엔지니어링 팀이 보안에 중요 한 커널에 대 한 추가 보안 분석 및 소스 제어를 표준 보안 방법 이상으로 지정할 수 있습니다 ( [WPF 보안 전략-보안 참조). 엔지니어링](wpf-security-strategy-security-engineering.md)).  
   
@@ -202,7 +202,7 @@ Windows Presentation Foundation (WPF)는 다양 한 보안 서비스를 제공 �
   
  동일한 사용자 시작 논리가 동일한 사용자 시작 논리를 사용 하 여 **Open**/**security 프롬프트** 에도 적용 됩니다. 이전에 설치 된 컨트롤의 업그레이드를 나타내지 않는 한 ActiveX 설치 대화 상자는 항상 알림 표시줄 아래에 트래핑 됩니다. 이러한 조치가 결합되어 사용자에게 더 안전하고 제어된 사용자 환경을 제공합니다. 사용자가 원하지 않는 소프트웨어나 악성 소프트웨어를 설치하도록 유인하는 사이트로부터 보호되기 때문입니다.  
   
- 또한 이러한 기능은 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]를 사용하여 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램 다운로드 및 설치를 허용하는 웹 사이트를 검색하는 고객을 보호합니다. 특히, 이는 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]에서 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]를 포함하여 빌드에 사용된 기술에 관계없이 사용자가 악성 응용 프로그램이나 유해한 응용 프로그램을 설치할 가능성을 줄이는 보다 효율적인 사용자 환경을 제공하기 때문입니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]는 [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)]를 통해 인터넷에서 응용 프로그램을 쉽게 다운로드할 수 있게 하여 이러한 보호를 강화합니다. [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]은 인터넷 영역 보안 샌드박스 내에서 실행되므로 매끄럽게 시작할 수 있습니다. 반면, 독립 실행형 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 실행하려면 완전 신뢰가 필요합니다. 이러한 응용 프로그램의 경우 시작 프로세스 중에 [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)]에서 보안 대화 상자를 표시하여 응용 프로그램의 추가 보안 요구 사항 사용을 알립니다. 그러나 사용자가 시작해야 하고, 사용자가 시작한 논리에 의해 제어되며, 취소할 수 있습니다.  
+ 또한 이러한 기능은 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]를 사용하여 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램 다운로드 및 설치를 허용하는 웹 사이트를 검색하는 고객을 보호합니다. 특히, 이는 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]에서 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]를 포함하여 빌드에 사용된 기술에 관계없이 사용자가 악성 응용 프로그램이나 유해한 응용 프로그램을 설치할 가능성을 줄이는 보다 효율적인 사용자 환경을 제공하기 때문입니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]는 ClickOnce를 사용 하 여 인터넷을 통해 응용 프로그램을 쉽게 다운로드할 수 있도록 이러한 보호 기능에 추가 합니다. [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]은 인터넷 영역 보안 샌드박스 내에서 실행되므로 매끄럽게 시작할 수 있습니다. 반면, 독립 실행형 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 실행하려면 완전 신뢰가 필요합니다. 이러한 응용 프로그램의 경우 ClickOnce는 시작 프로세스 중에 보안 대화 상자를 표시 하 여 응용 프로그램의 추가 보안 요구 사항을 사용 하도록 알립니다. 그러나 사용자가 시작해야 하고, 사용자가 시작한 논리에 의해 제어되며, 취소할 수 있습니다.  
   
  [!INCLUDE[TLA2#tla_ie7](../../../includes/tla2sharptla-ie7-md.md)]에서는 보안을 위한 지속적인 노력의 일환으로 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]의 보안 기능을 통합하고 확장합니다.  
   

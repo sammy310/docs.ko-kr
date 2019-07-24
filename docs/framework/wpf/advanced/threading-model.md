@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: ebfbb2df3e931690f2ba12f0a2ad868da0212f5d
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 2667417c5d25821f2fed2101e1d485280e171eab
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331618"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400652"
 ---
 # <a name="threading-model"></a>스레딩 모델
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 개발자가 스레딩의 어려움을 해결하도록 디자인되어 있습니다. 결과적으로 대부분의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 개발자는 둘 이상의 스레드를 사용 하는 인터페이스를 작성할 필요가 없습니다. 다중 스레드 프로그램은 복잡하고 디버그하기 어려우므로 단일 스레드 솔루션이 있을 경우 피해야 합니다.  
@@ -203,15 +203,15 @@ ms.locfileid: "68331618"
  이 이벤트를 처리 `handler2` 하는 데 상당한 시간이 걸릴 수 있습니다. `handler2`는 시간 <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> 에 대해 반환 되지 않는 중첩 된 메시지 루프를 시작 하는 데 사용할 수 있습니다. 이 메시지 루프가 완료 될 때 에서이벤트를처리된것으로표시하지않으면이벤트는매우오래된경우에도트리위로전달됩니다.`handler2`  
   
 ### <a name="reentrancy-and-locking"></a>재입력 및 잠금  
- 의 잠금 메커니즘은 한 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 것 처럼 동작 하지 않습니다. 잠금을 요청할 때 스레드가 작업을 완전히 중단할 것으로 예측할 수 있습니다. 실제로 스레드는 우선 순위가 높은 메시지를 계속 수신하고 처리합니다. 이를 통해 교착 상태를 방지하고 인터페이스가 최소한으로 응답할 수 있지만 미묘한 버그가 발생할 수 있습니다.  대부분의 경우에 대 한 정보를 알 필요가 없지만 드문 경우 (일반적으로 창 메시지 또는 COM STA 구성 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 요소와 관련 됨)에는이 작업을 이해 하는 것이 좋습니다.  
+ CLR (공용 언어 런타임)의 잠금 메커니즘은 짐작할 수 있는 것과 동일 하 게 동작 하지 않습니다. 잠금을 요청할 때 스레드가 작업을 완전히 중단 하는 것으로 예측할 수 있습니다. 실제로 스레드는 우선 순위가 높은 메시지를 계속 수신하고 처리합니다. 이를 통해 교착 상태를 방지하고 인터페이스가 최소한으로 응답할 수 있지만 미묘한 버그가 발생할 수 있습니다.  대부분의 경우에 대 한 정보를 알 필요가 없지만 드문 경우 (일반적으로 창 메시지 또는 COM STA 구성 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 요소와 관련 됨)에는이 작업을 이해 하는 것이 좋습니다.  
   
  개발자는가 둘 이상의 스레드에서 액세스할 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 수 없다고 가정 하 여 대부분의 인터페이스는 스레드 보안을 염두에 두어야 합니다. 이 경우 단일 스레드는 예기치 않은 시간에 환경 변경을 수행 하 여 <xref:System.Windows.Threading.DispatcherObject> 상호 배제 메커니즘이 해결 될 것으로 예상 하는 효과를 일으킬 수 있습니다. 다음 의사 코드를 살펴보겠습니다.  
   
  ![스레딩 재진입을 보여 주는 다이어그램입니다.](./media/threading-model/threading-reentrancy.png "ThreadingReentrancy")  
   
- 가장 중요 한 것은 아니지만 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 예기치 않은 재진입으로 인해 문제가 발생 하는 경우도 있습니다. 따라서 특정 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 키 시간에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 는를 호출 <xref:System.Windows.Threading.Dispatcher.DisableProcessing%2A>하 여 일반적인 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 잠금 대신 재진입 해제 잠금을 사용 하도록 해당 스레드에 대 한 잠금 명령을 변경 합니다.  
+ 가장 중요 한 것은 아니지만 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 예기치 않은 재진입으로 인해 문제가 발생 하는 경우도 있습니다. 따라서 특정 키 시간 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 는를 호출 <xref:System.Windows.Threading.Dispatcher.DisableProcessing%2A>하 여 일반적인 CLR 잠금 대신 재진입 해제 잠금을 사용 하도록 해당 스레드에 대 한 잠금 명령을 변경 합니다.  
   
- 그렇다면 팀에서이 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 동작을 선택 하는 이유는 무엇 인가요? 이 팀은 COM STA 개체 및 종료 스레드를 사용해야 했습니다. 개체가 가비지 수집 되는 경우 해당 `Finalize` 메서드는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드가 아니라 전용 종료자 스레드에서 실행 됩니다. 스레드에 생성 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 된 COM STA 개체는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드에서만 삭제할 수 있기 때문에 문제가 발생 합니다. 는에 해당 하는 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> 를 사용 합니다 (이 경우 Win32's `SendMessage`사용). [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 그러나 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드가 사용 중인 경우 종료자 스레드가 중단 되 고 COM STA 개체를 삭제할 수 없으므로 심각한 메모리 누수가 발생 합니다. 따라서 팀 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 은 잠금이 작동 하는 방식에 대 한 어려운 호출을 수행 했습니다.  
+ 따라서 CLR 팀에서이 동작을 선택 하는 이유는 무엇 인가요? 이 팀은 COM STA 개체 및 종료 스레드를 사용해야 했습니다. 개체가 가비지 수집 되는 경우 해당 `Finalize` 메서드는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드가 아니라 전용 종료자 스레드에서 실행 됩니다. 스레드에 생성 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 된 COM STA 개체는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드에서만 삭제할 수 있기 때문에 문제가 발생 합니다. CLR은와 동일 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> 합니다 (이 경우 Win32's `SendMessage`사용). 그러나 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드가 사용 중인 경우 종료자 스레드가 중단 되 고 COM STA 개체를 삭제할 수 없으므로 심각한 메모리 누수가 발생 합니다. 따라서 CLR 팀은 잠금이 작동 하는 방식에 대 한 어려운 호출을 수행 했습니다.  
   
  의 작업은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 메모리 누수를 재 도입 하지 않고 예기치 않은 재진입을 방지 하는 것입니다 .이 경우에는 모든 위치에서 재진입을 차단 하지 않습니다.  
   

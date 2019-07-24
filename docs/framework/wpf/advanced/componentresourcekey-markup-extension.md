@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-ms.openlocfilehash: 93735d12426042fd6517c10a55d1a9bd32f906bb
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: b373b33fcc962e49aa220f31e24b1484a0a8cd98
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363066"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401597"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey 태그 확장
 외부 어셈블리에서 로드 되는 리소스에 대 한 키를 정의 하 고 참조 합니다. 이렇게 하면 리소스 조회가 어셈블리 또는 클래스의 명시적 리소스 사전이 아닌 어셈블리의 대상 형식을 지정할 수 있습니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "68363066"
   
 |||  
 |-|-|  
-|`targetTypeName`|리소스 어셈블리에 정의 된 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 공용 형식의 이름입니다.|  
+|`targetTypeName`|리소스 어셈블리에 정의 된 공용 CLR (공용 언어 런타임) 형식의 이름입니다.|  
 |`targetID`|리소스의 키입니다. 리소스가 조회 `targetID` 될 때는 리소스의 [x:Key 지시문](../../xaml-services/x-key-directive.md) 과 유사 합니다.|  
   
 ## <a name="remarks"></a>설명  
