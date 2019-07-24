@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: dd9b77a90030a96d17104c8c0e48964b6a85d165
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 546feb6f3c4515ceecdb5b5afa14c0fc99ab7020
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58125735"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363902"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>람다 식(C# 프로그래밍 가이드)
 
@@ -41,12 +41,10 @@ ms.locfileid: "58125735"
 [!code-csharp-interactive[lambda is argument](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Argument)]
 
 LINQ to Objects 및 LINQ to XML에서처럼 메서드 기반 구문을 사용하여 <xref:System.Linq.Enumerable?displayProperty=nameWithType> 클래스에서 <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> 메서드를 호출하는 경우 매개 변수는 대리자 형식 <xref:System.Func%602?displayProperty=nameWithType>입니다. 람다 식은 이러한 대리자를 만드는 가장 간단한 방법입니다. LINQ to SQL에서처럼 <xref:System.Linq.Queryable?displayProperty=nameWithType> 클래스에서 <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType> 메서드를 호출하는 경우 매개 변수 형식은 식 트리 형식 [`Expression<Func<TSource,TResult>>`](<xref:System.Linq.Expressions.Expression%601>)입니다. 이 경우에도 람다 식을 사용하면 식 트리를 간단하게 만들 수 있습니다. 람다 식은 `Select` 호출과 비슷하게 보일 수 있지만 실제로 람다 식을 통해 생성되는 개체 형식은 다릅니다.
-
-[무명 메서드](anonymous-methods.md)에 적용되는 모든 제한은 람다 식에도 적용됩니다.
   
 ## <a name="expression-lambdas"></a>식 람다
 
-`=>` 연산자의 오른쪽에 식이 있는 람다 식을 식 람다라고 합니다. 식 람다는 [식 트리](../concepts/expression-trees/index.md)를 만드는 데 광범위하게 사용됩니다. 식 람다는 식의 결과를 반환하며 기본 형식은 다음과 같습니다.
+`=>` 연산자의 오른쪽에 식이 있는 람다 식을 식 람다라고 합니다.  식 람다는 [식 트리](../concepts/expression-trees/index.md)를 만드는 데 광범위하게 사용됩니다. 식 람다는 식의 결과를 반환하며 기본 형식은 다음과 같습니다.
 
 ```csharp
 (input-parameters) => expression
@@ -82,7 +80,7 @@ LINQ to Objects 및 LINQ to XML에서처럼 메서드 기반 구문을 사용하
 
 [!code-csharp-interactive[statement lambda](~/samples/snippets/csharp/programming-guide/lambda-expressions/ExpressionAndStatementLambdas.cs#StatementLambda)]
 
-무명 메서드와 마찬가지로 문 람다는 식 트리를 만드는 데 사용할 수 없습니다.
+문 람다는 식 트리를 만드는 데 사용할 수 없습니다.
   
 ## <a name="async-lambdas"></a>비동기 람다
 
@@ -196,9 +194,9 @@ customers.Where(c => c.City == "London");
   
 공용 형식 시스템에는 “람다 식”이라는 개념이 기본적으로 포함되어 있지 않기 때문에 람다 식 자체에는 형식이 없습니다. 그러나 람다 식의 “형식”을 비공식적으로 언급해야 할 경우도 있는데 이 경우 형식은 대리자 형식 또는 람다 식이 변환되는 <xref:System.Linq.Expressions.Expression> 형식을 의미합니다.
 
-## <a name="variable-scope-in-lambda-expressions"></a>람다 식의 변수 범위
+## <a name="capture-of-outer-variables-and-variable-scope-in-lambda-expressions"></a>람다 식에서 외부 변수 및 변수 범위 캡처
 
-람다는 람다 식을 정의하는 메서드 범위 내에 있거나 람다 식을 포함하는 형식 범위 내에 있는 ‘외부 변수’([무명 메서드](anonymous-methods.md) 참조)를 참조할 수 있습니다. 이러한 방식으로 캡처되는 변수는 변수가 범위를 벗어나 가비지 수집되는 경우에도 람다 식에 사용할 수 있도록 저장됩니다. 외부 변수는 명확하게 할당해야만 람다 식에 사용할 수 있습니다. 다음 예제에서는 이러한 규칙을 보여 줍니다.
+람다는 *외부 변수*를 참조할 수 있습니다. 이러한 변수는 람다 식을 정의하는 메서드 범위 내에 있거나 람다 식을 포함하는 형식 범위 내에 있는 변수입니다. 이러한 방식으로 캡처되는 변수는 변수가 범위를 벗어나 가비지 수집되는 경우에도 람다 식에 사용할 수 있도록 저장됩니다. 외부 변수는 명확하게 할당해야만 람다 식에 사용할 수 있습니다. 다음 예제에서는 이러한 규칙을 보여 줍니다.
 
 [!code-csharp[variable scope](~/samples/snippets/csharp/programming-guide/lambda-expressions/VariableScopeWithLambdas.cs#VariableScope)]
 
@@ -220,13 +218,12 @@ customers.Where(c => c.City == "London");
 
 ## <a name="featured-book-chapter"></a>중요 설명서 장
 
-[C# 3.0 Cookbook, Third Edition: C# 3.0 프로그래머를 위한 250개가 넘는 솔루션](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)의 [대리자, 이벤트 및 Lambda 식](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29)  
+[대리자, Events, and Lambda Expressions](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29) 에 [ C# 3.0 Cookbook, Third Edition: 250 개 이상의 솔루션에 대 한 C# 3.0 프로그래머](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)  
   
 ## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [LINQ(Language-Integrated Query)](../concepts/linq/index.md)
-- [무명 메서드](anonymous-methods.md)
 - [식 트리](../concepts/expression-trees/index.md)
 - [로컬 함수 및 람다 식 비교](../../local-functions-vs-lambdas.md)
 - [암시적으로 형식화된 람다 식](../../implicitly-typed-lambda-expressions.md)

@@ -17,30 +17,39 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 738368abd9db75fbd97d1913324cab3b6e869c56
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 0d97b3ffd587e8398e5572706a47937716a6e709
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664193"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68236053"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>부동 소수점 숫자 형식(C# 참조)
 
 **부동 소수점 형식**은 **단순 형식**의 하위 집합이며 [*리터럴*](#floating-point-literals)을 사용하여 초기화할 수 있습니다. 모든 부동 소수점 형식도 값 형식입니다. 모든 부동 소수점 숫자 형식은 [산술](../operators/arithmetic-operators.md), [비교 및 같음](../operators/equality-operators.md) 연산자를 지원합니다.
 
-다음 표는 부동 소수점 형식의 자릿수와 근사 범위를 보여 줍니다.
+## <a name="characteristics-of-the-floating-point-types"></a>부동 소수점 형식의 특성
+
+C#은 다음과 같은 미리 정의된 부동 소수점 형식을 지원합니다.
   
-|형식|근사 범위|전체 자릿수|  
-|----------|-----------------------|---------------|  
-|`float`|±1.5 x 10<sup>−45</sup> ~ ±3.4 x 10<sup>38</sup>|~6-9개 자릿수|  
-|`double`|±5.0 × 10<sup>−324</sup> ~ ±1.7 × 10<sup>308</sup>|~15-17개 자릿수|  
-|`decimal`|±1.0 x 10<sup>-28</sup> ~ ±7.9228 x 10<sup>28</sup>|28-29개의 자릿수|  
+|C# 형식/키워드|근사 범위|전체 자릿수|.NET 형식|
+|----------|-----------------------|---------------|--------------|
+|`float`|±1.5 x 10<sup>−45</sup> ~ ±3.4 x 10<sup>38</sup>|~6-9개 자릿수|<xref:System.Single?displayProperty=nameWithType>|
+|`double`|±5.0 × 10<sup>−324</sup> ~ ±1.7 × 10<sup>308</sup>|~15-17개 자릿수|<xref:System.Double?displayProperty=nameWithType>|
+|`decimal`|±1.0 x 10<sup>-28</sup> ~ ±7.9228 x 10<sup>28</sup>|28-29개의 자릿수|<xref:System.Decimal?displayProperty=nameWithType>|
 
-모든 부동 소수점 형식의 기본값은 `0`입니다. 각 부동 소수점 형식에는 해당 형식의 최솟값과 최댓값에 대해 `MinValue` 및 `MaxValue`라는 상수가 있습니다. `float` 및 `double` 유형에는 `PositiveInfinity`, `NegativeInfinity` 및 `NaN`("숫자가 아님")에 대한 추가 상수가 있습니다. `decimal` 유형에는 `Zero`, `One` 및 `MinusOne`에 대한 상수가 포함됩니다.
+이전 표에서 맨 왼쪽 열의 각 C# 형식 키워드는 해당하는 .NET 형식의 별칭입니다. 서로 교환하여 사용할 수 있습니다. 예를 들어 다음 선언은 동일한 형식의 변수를 선언합니다.
 
-`decimal` 유형은 `float` 및 `double`보다 정밀도가 높고 범위가 작으므로 재무 및 통화 계산에 적합합니다.
+```csharp
+double a = 12.3;
+System.Double b = 12.3;
+```
 
-식에서 정수 형식과 부동 소수점 형식을 혼합할 수 있습니다. 이 경우 정수 형식이 부동 소수점 형식으로 변환됩니다. 식의 계산은 다음 규칙에 따라 수행됩니다.
+각 부동 소수점 형식의 기본값은 `0`입니다. 각 부동 소수점 형식에는 해당 형식의 최소 및 최대 유한값을 제공하는 `MinValue` 및 `MaxValue` 상수가 있습니다. 또한 `float` 및 `double` 형식은 숫자가 아닌 무한 값을 나타내는 상수를 제공합니다. 예를 들어 `double` 형식은 <xref:System.Double.NaN?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType> 및 <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>와 같은 상수를 제공합니다.
+
+`decimal` 형식은 `float` 및 `double`보다 정밀도가 높고 범위가 작으므로 재무 및 통화 계산에 적합합니다.
+
+식에서 [정수](integral-numeric-types.md) 형식과 부동 소수점 형식을 혼합할 수 있습니다. 이 경우 정수 형식이 부동 소수점 형식으로 변환됩니다. 식의 계산은 다음 규칙에 따라 수행됩니다.
 
 - 부동 소수점 형식 중 하나가 `double`인 경우 식은 관계형 비교 및 같음에 대한 비교에서 `double` 또는 [bool](../keywords/bool.md)로 계산됩니다.
 - 식에 `double` 형식이 없는 경우 식은 같음에 대한 관계형 비교 또는 비교에서 `float` 또는 [bool](../keywords/bool.md)로 계산됩니다.
@@ -77,7 +86,7 @@ myMoney = 400.75M;
 
 ## <a name="conversions"></a>변환
 
-`float` 값의 범위는 `double`의 적절한 하위 집합이고 `float`에서 `double`까지의 정밀도 손실이 없으므로 `float`에서 `double`로의 암시적 변환(*확대 변환*이라고 함)이 있습니다. 
+`float` 값의 범위는 `double`의 적절한 하위 집합이고 `float`에서 `double`까지의 정밀도 손실이 없으므로 `float`에서 `double`로의 암시적 변환(*확대 변환*이라고 함)이 있습니다.
 
 암시적 변환이 소스 유형에서 대상 유형으로 정의되지 않은 경우 명시적 캐스트를 사용하여 하나의 부동 소수점 형식을 다른 부동 소수점 형식으로 변환해야 합니다. 이를 *축소 변환*이라고 합니다. 변환이 데이터 손실을 초래할 수 있기 때문에 명시적인 사례가 필요합니다. `decimal` 유형은 `float` 또는 `double`보다 더 높은 정밀도를 가지므로 다른 부동 소수점 형식과 `decimal` 형식 간의 암시적 변환은 없습니다.
 
@@ -89,15 +98,11 @@ myMoney = 400.75M;
 
 - [C# 참조](../index.md)
 - [정수 형식](integral-numeric-types.md)
-- [기본값 표](../keywords/default-values-table.md)
-- [숫자 결과 형식 지정 표](../keywords/formatting-numeric-results-table.md)
 - [기본 제공 형식 표](../keywords/built-in-types-table.md)
 - [.NET의 숫자](../../../standard/numerics.md)
 - [캐스팅 및 형식 변환](../../programming-guide/types/casting-and-type-conversions.md)
 - [암시적 숫자 변환 표](../keywords/implicit-numeric-conversions-table.md)
 - [명시적 숫자 변환 표](../keywords/explicit-numeric-conversions-table.md)
-- <xref:System.Single?displayProperty=nameWithType>
-- <xref:System.Double?displayProperty=nameWithType>
-- <xref:System.Decimal?displayProperty=nameWithType>
 - <xref:System.Numerics.Complex?displayProperty=nameWithType>
+- [숫자 결과 형식 지정 표](../keywords/formatting-numeric-results-table.md)
 - [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)

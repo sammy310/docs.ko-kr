@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09eb37fd2c1bf77e981a2eb7952b1fff5110e977
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bed67019fdd3bb81585d08349715a895dfe5a681
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357302"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363954"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>특성을 사용하는 프로그래밍 모델 개요(MEF)
 
@@ -268,7 +268,7 @@ public class MyLogger : IMyAddin { }
 
 내보낸 MEF 파트는 일반적으로 일치하는 가져오기를 채우기 위한 필요성이나 직접 요청에 대한 응답으로 컴퍼지션 엔진에 의해 만들어집니다. 기본적으로 파트를 만들 때 컴퍼지션 엔진은 매개 변수가 없는 생성자를 사용합니다. 엔진이 다른 생성자를 사용하도록 하려면 해당 생성자에 `ImportingConstructor` 특성을 표시하면 됩니다.
 
-각 파트에는 컴퍼지션 엔진에서 사용될 생성자가 하나만 포함될 수 있습니다. 기본 생성자를 제공하지 않고 `ImportingConstructor` 특성을 제공하지 않거나, 둘 이상의 `ImportingConstructor` 특성을 제공하면 오류가 발생합니다.
+각 파트에는 컴퍼지션 엔진에서 사용될 생성자가 하나만 포함될 수 있습니다. 매개 변수가 없는 생성자를 제공하지 않고 `ImportingConstructor` 특성을 제공하지 않거나, 둘 이상의 `ImportingConstructor` 특성을 제공하면 오류가 발생합니다.
 
 `ImportingConstructor` 특성이 표시된 생성자의 매개 변수를 채우기 위해 모든 해당 매개 변수가 자동으로 가져오기로 선언됩니다. 이 방법은 파트 초기화 중에 사용되는 가져오기를 선언하는 편리한 방법입니다. 다음 클래스에서는 `ImportingConstructor` 를 사용하여 가져오기를 선언합니다.
 
@@ -277,7 +277,7 @@ Public Class MyClass1
 
     Private _theAddin As IMyAddin
 
-    'Default constructor will NOT be used
+    'Parameterless constructor will NOT be used
     'because the ImportingConstructor
     'attribute is present.
     Public Sub New()
@@ -300,7 +300,7 @@ public class MyClass
 {
     private IMyAddin _theAddin;
 
-    //Default constructor will NOT be
+    //Parameterless constructor will NOT be
     //used because the ImportingConstructor
     //attribute is present.
     public MyClass() { }

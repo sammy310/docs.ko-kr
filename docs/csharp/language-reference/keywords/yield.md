@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: 3e5bb96357293c42d4bd2161756260fd849cc099
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 0d2c3f67715b9b2161a6c908576ac9f964ff13d6
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267784"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363120"
 ---
 # <a name="yield-c-reference"></a>yield(C# 참조)
 
@@ -46,9 +46,9 @@ yield break;
 
 `yield` 또는 <xref:System.Collections.IEnumerable>를 반환하는 반복기의 <xref:System.Collections.IEnumerator> 형식은 `object`입니다.  반복기가 <xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Collections.Generic.IEnumerator%601>를 반환할 경우 `yield return` 문의 식 형식에서 제네릭 형식 매개 변수로 암시적 변환이 있어야 합니다.
 
-`yield return` 또는 `yield break` 문은 다음과 같은 특징이 있는 메서드에 사용할 수 없습니다.
+`yield return` 또는 `yield break` 식을
 
-- 무명 메서드 자세한 내용은 [무명 메서드](../../programming-guide/statements-expressions-operators/anonymous-methods.md)를 참조하세요.
+- [람다 식](../../programming-guide/statements-expressions-operators/lambda-expressions.md) 및 [무명 메서드](../operators/delegate-operator.md)에 포함할 수 없습니다.
 
 - 안전하지 않은 블록을 포함하는 메서드 자세한 내용은 [unsafe](unsafe.md)를 참조하세요.
 

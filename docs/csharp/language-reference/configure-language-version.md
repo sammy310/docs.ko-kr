@@ -2,12 +2,12 @@
 title: C# 언어 버전 관리 - C# 가이드
 description: 프로젝트에 따라 C# 언어 버전이 결정되는 방법과 수동으로 조정할 수 있는 다양한 값에 대해 알아봅니다.
 ms.date: 07/10/2019
-ms.openlocfilehash: 2d593ca0588f291c61cdf52fbc1eb60a1f3f7ecb
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: e35fdf2bcdb1a31b752c760f3f6df59232e498a4
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859600"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68236091"
 ---
 # <a name="c-language-versioning"></a>C# 언어 버전 관리
 
@@ -34,7 +34,7 @@ C# 버전을 명시적으로 지정해야 하는 경우 다음과 같은 여러 
 
 - [프로젝트 파일](#edit-the-project-file)을 수동으로 편집합니다.
 - [하위 디렉터리에 있는 여러 프로젝트의](#configure-multiple-projects) 언어 버전을 설정합니다.
-- [`-langversion` 컴파일러 옵션](#set-the-langversion-compiler-option)을 구성합니다.
+- [`-langversion` 컴파일러 옵션](compiler-options/langversion-compiler-option.md) 구성
 
 ### <a name="edit-the-project-file"></a>프로젝트 파일 편집
 

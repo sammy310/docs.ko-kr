@@ -7,12 +7,12 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: e770c305afe098e633700b039efb51770c77ada7
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 5db982c0a94814bfece087eb4db119a4df246094
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661443"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68330969"
 ---
 # <a name="built-in-types-table-c-reference"></a>기본 제공 형식 표(C# 참조)
 
@@ -40,7 +40,7 @@ ms.locfileid: "67661443"
 
 `object` 및 `string`을 제외하고 표에 있는 모든 형식을 단순 형식이라고 합니다.  
   
-C# 형식 키워드와 해당 별칭은 서로 바꿔서 사용할 수 있습니다. 예를 들어 다음 선언 중 하나를 사용하여 정수 변수를 선언할 수 있습니다.  
+.NET 형식 및 C# 형식 키워드 별칭은 서로 바꿔서 사용할 수 있습니다. 예를 들어 다음 선언 중 하나를 사용하여 정수 변수를 선언할 수 있습니다.  
 
 ```csharp
 int x = 123;

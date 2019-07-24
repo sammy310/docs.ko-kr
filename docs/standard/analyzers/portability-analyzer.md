@@ -1,15 +1,15 @@
 ---
 title: .NET 이식성 분석기 - .NET
 description: .NET 이식성 분석기 도구를 사용하여 .NET Core, .NET Standard, UWP 및 Xamarin을 비롯한 다양한 .NET 구현에서 코드가 얼마나 이식성이 있는지 평가하는 방법을 알아봅니다.
-ms.date: 07/10/2019
+ms.date: 07/18/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: f05d4f4a2fce8fa9a4d2e334f44190ea37335038
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 433936480aa1181370a6ebc2bd2ba9914a50dfa2
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859765"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331736"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET 이식성 분석기
 
@@ -52,7 +52,7 @@ Visual Studio에서 전체 프로젝트를 분석하려면 **솔루션 탐색기
 
 ![이식성 요약](./media/portability-analyzer/portabilitysummary.png)
 
-보고서의 이식성 요약 섹션에는 실행에 포함된 각 어셈블리에 대한 이식성 백분율이 표시됩니다. 이전 예제에서 `ConsoleAppFramework` 앱에 사용되는 .NET Framework API의 89.74%는 .NET Core + 플랫폼 확장 v2.2에서 사용할 수 있습니다. 여러 어셈블리에 대해 .NET Portability Analyzer 도구를 실행하는 경우 각 어셈블리에는 이식성 요약 보고서에 행이 있어야 합니다.
+보고서의 이식성 요약 섹션에는 실행에 포함된 각 어셈블리에 대한 이식성 백분율이 표시됩니다. 이전 예제에서 `svcutil` 앱에 사용되는 .NET Framework API의 71.24%는 .NET Core + 플랫폼 확장에서 사용할 수 있습니다. 여러 어셈블리에 대해 .NET Portability Analyzer 도구를 실행하는 경우 각 어셈블리에는 이식성 요약 보고서에 행이 있어야 합니다.
 
 #### <a name="details"></a>세부 정보
 
@@ -60,11 +60,11 @@ Visual Studio에서 전체 프로젝트를 분석하려면 **솔루션 탐색기
 
 보고서의 세부 정보 섹션에는 대상 플랫폼 중 하나에서 누락된 API가 나열되어 있습니다. 
 
- - 대상 유형: 형식에는 대상 플랫폼에서 API가 누락되어 있습니다. 
- - 대상 멤버: 메서드가 대상 플랫폼에서 누락되었습니다. 
- - 어셈블리 이름: 누락된 API가 거주하는 .NET Framework 어셈블리입니다. 
- - 선택한 각 대상 플랫폼은 ".NET Core"와 같은 하나의 열입니다. "지원되지 않음" 값은 API가 이 대상 플랫폼에서 지원되지 않음을 의미합니다. 
- - 권장 변경 내용: 변경할 권장 API 또는 기술입니다. 현재 이 필드는 많은 API에 대해 비어 있거나 만료되었습니다. 많은 수의 API 때문에 유지하는 데 큰 어려움을 겪고 있습니다. 고객에게 유용한 정보를 제공하기 위해 대체 솔루션을 찾고 있습니다.
+- 대상 유형: 형식에는 대상 플랫폼에서 API가 누락되어 있습니다. 
+- 대상 멤버: 메서드가 대상 플랫폼에서 누락되었습니다. 
+- 어셈블리 이름: 누락된 API가 거주하는 .NET Framework 어셈블리입니다. 
+- 선택한 각 대상 플랫폼은 ".NET Core"와 같은 하나의 열입니다. "지원되지 않음" 값은 API가 이 대상 플랫폼에서 지원되지 않음을 의미합니다. 
+- 권장 변경 내용: 변경할 권장 API 또는 기술입니다. 현재 이 필드는 많은 API에 대해 비어 있거나 만료되었습니다. 많은 수의 API 때문에 유지하는 데 큰 어려움을 겪고 있습니다. 고객에게 유용한 정보를 제공하기 위해 대체 솔루션을 찾고 있습니다.
 
 #### <a name="missing-assemblies"></a>어셈블리 누락
 
@@ -73,5 +73,3 @@ Visual Studio에서 전체 프로젝트를 분석하려면 **솔루션 탐색기
 보고서에서 누락된 어셈블리 섹션을 찾을 수 있습니다. 이 어셈블리 목록은 분석된 어셈블리에서 참조되고 분석되지 않았음을 알려줍니다. 사용자가 소유한 어셈블리인 경우 API 수준의 세부 이식성 보고서를 가져올 수 있도록 API 이식성 분석기 실행에 포함합니다. 타사 라이브러리인 경우 대상 플랫폼을 지원하는 최신 버전이 있는지 확인합니다. 그렇다면 최신 버전으로 이동하는 것이 좋습니다. 결국, 이 목록에는 앱이 사용하는 모든 타사 어셈블리가 포함되어 있으며 대상 플래폼을 지원하는 버전이 있음을 확인할 수 있습니다.  
 
 .NET 이식성 분석기에 대한 자세한 내용은 [GitHub 문서](https://github.com/Microsoft/dotnet-apiport#documentation) 및 [A Brief Look at the .NET Portability Analyzer](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer)(.NET 이식성 분석기 간단하게 살펴보기) Channel 9 비디오를 참조하세요.
-
-

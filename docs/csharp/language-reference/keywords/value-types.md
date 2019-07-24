@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: fd865f2a9c4a6d2c17f79a21866103a2db982e5f
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 72771ee494b6be7142ce3f9bec43dcb8aa8a8401
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661585"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363079"
 ---
 # <a name="value-types-c-reference"></a>값 형식(C# 참조)
 
@@ -88,7 +88,7 @@ int myInt = new int();
 int myInt = 0;
 ```
 
-[new](../operators/new-operator.md) 연산자를 사용하면 특정 형식의 매개 변수 없는 생성자가 호출되고 변수에 기본값이 할당됩니다. 앞의 예제에서는 매개 변수 없는 생성자가 `0` 값을 `myInt`에 할당했습니다. 기본 생성자를 호출하여 할당된 값에 대한 자세한 내용은 [기본값 표](default-values-table.md)를 참조하세요.
+[new](../operators/new-operator.md) 연산자를 사용하면 특정 형식의 매개 변수 없는 생성자가 호출되고 변수에 기본값이 할당됩니다. 앞의 예제에서는 매개 변수 없는 생성자가 `0` 값을 `myInt`에 할당했습니다. 매개 변수가 없는 생성자를 호출하여 할당된 값에 대한 자세한 내용은 [기본값 표](default-values-table.md)를 참조하세요.
 
 사용자 정의 형식의 경우 [new](../operators/new-operator.md)를 사용하여 매개 변수 없는 생성자를 호출합니다. 예를 들어 다음 명령문은 `Point` 구조체의 매개 변수 없는 생성자를 호출합니다.
 

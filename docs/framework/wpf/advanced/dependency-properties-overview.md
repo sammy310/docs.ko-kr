@@ -14,19 +14,19 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 483710281feafdf97cfef9b72a67af035dcf0efa
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: b7401cd3e9551b378983193f4c5e8e4107954b74
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860168"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401421"
 ---
 # <a name="dependency-properties-overview"></a>종속성 속성 개요
 
 WPF(Windows Presentation Foundation)에서는 형식의 [속성](../../../standard/base-types/common-type-system.md#Properties) 기능을 확장하는 데 사용할 수 있는 서비스 집합을 제공합니다. 일반적으로 이러한 서비스를 WPF 속성 시스템이라고 통칭합니다. WPF 속성 시스템에서 지원하는 속성을 종속성 속성이라고 합니다. 이 개요에서는 WPF 속성 시스템 및 종속성 속성의 기능에 대해 설명합니다. XAML 및 코드에서 기존 종속성 속성을 사용하는 방법도 설명합니다. 또한 이 개요에서는 종속성 속성 메타데이터 같은 종속성 속성의 특수한 측면과 사용자 지정 클래스에서 종속성 속성을 직접 만드는 방법을 소개합니다.
 
-## <a name="prerequisites"></a>전제 조건
-이 항목에서는 .NET 형식 시스템 및 개체 지향 프로그래밍에 대한 기본 지식이 있다고 가정합니다. 이 항목의 예제를 따르려면 XAML을 이해하고 WPF 애플리케이션을 작성하는 방법도 알아야 합니다. 자세한 내용은 [연습: 내 첫 WPF 데스크톱 응용 프로그램](../getting-started/walkthrough-my-first-wpf-desktop-application.md)합니다.  
+## <a name="prerequisites"></a>필수 구성 요소
+이 항목에서는 .NET 형식 시스템 및 개체 지향 프로그래밍에 대한 기본 지식이 있다고 가정합니다. 이 항목의 예제를 따르려면 XAML을 이해하고 WPF 애플리케이션을 작성하는 방법도 알아야 합니다. 자세한 내용은 [연습: 내 첫 번째 WPF 데스크톱](../getting-started/walkthrough-my-first-wpf-desktop-application.md)응용 프로그램입니다.  
   
 ## <a name="dependency-properties-and-clr-properties"></a>종속성 속성 및 CLR 속성
  WPF에서 속성은 일반적으로 표준 .NET [속성](../../../standard/base-types/common-type-system.md#Properties)으로 노출됩니다. 기본 수준에서는 이러한 속성을 직접 조작할 수 있으며 종속성 속성으로 구현되는지를 알 수 없습니다. 그러나 WPF 속성 시스템 기능의 일부 또는 전체를 잘 알고 있어야 이러한 기능을 활용할 수 있습니다.
@@ -40,11 +40,11 @@ SDK 참조에서는 속성에 대한 관리되는 참조 페이지에 [종속성
 
 다음은 종속성 속성에 사용되는 용어를 나열합니다.
 
-- **종속성 속성:** 지 원하는 속성을 <xref:System.Windows.DependencyProperty>입니다.
+- **종속성 속성:** 에 <xref:System.Windows.DependencyProperty>의해 지원 되는 속성입니다.
 
-- **종속성 속성 식별자:** <xref:System.Windows.DependencyProperty> 종속성 속성을 등록 하는 경우 반환 값으로 가져온 이며 클래스의 정적 멤버로 저장 하는 경우. 이 식별자는 WPF 속성 시스템과 상호 작용하는 많은 API에 대한 매개 변수로 사용됩니다.
+- **종속성 속성 식별자:** 종속성 속성을 등록할 때 반환 값으로 가져온 다음 클래스의 정적 멤버로 저장 되는 인스턴스입니다.<xref:System.Windows.DependencyProperty> 이 식별자는 WPF 속성 시스템과 상호 작용하는 많은 API에 대한 매개 변수로 사용됩니다.
 
-- **CLR "래퍼":** 실제 get 및 set 속성에 대 한 구현 합니다. 이러한 구현은 <xref:System.Windows.DependencyObject.GetValue%2A> 및 <xref:System.Windows.DependencyObject.SetValue%2A> 호출에서 종속성 속성 식별자를 사용하여 이 식별자를 통합하므로 WPF 속성 시스템을 사용하는 속성에 대한 지원을 제공합니다.
+- **CLR "래퍼":** 속성에 대 한 실제 get 및 set 구현입니다. 이러한 구현은 <xref:System.Windows.DependencyObject.GetValue%2A> 및 <xref:System.Windows.DependencyObject.SetValue%2A> 호출에서 종속성 속성 식별자를 사용하여 이 식별자를 통합하므로 WPF 속성 시스템을 사용하는 속성에 대한 지원을 제공합니다.
 
 다음 예제에서는 `IsSpinning` 종속성 속성을 정의하고 <xref:System.Windows.DependencyProperty> 식별자와 이 식별자가 지원하는 속성의 관계를 보여 줍니다.
 
@@ -68,7 +68,7 @@ XAML은 속성을 설정하는 다양한 구문 형식 지원 특정 속성에 �
 [!code-xaml[PropertiesOvwSupport#PESyntaxProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml#pesyntaxproperty)]
 
 ### <a name="setting-properties-in-code"></a>코드에서 속성 설정
- 코드에서 종속성 속성 값을 설정하려면 일반적으로 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] "래퍼"에 의해 노출되는 set 구현을 호출하면 됩니다.
+ 코드에서 종속성 속성 값을 설정 하는 것은 일반적으로 CLR "래퍼"에 의해 노출 되는 집합 구현에 대 한 호출입니다.
 
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertySet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyset)]
 [!code-vb[PropertiesOvwSupport#ProceduralPropertySet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyset)]
@@ -78,7 +78,7 @@ XAML은 속성을 설정하는 다양한 구문 형식 지원 특정 속성에 �
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyget)]
  [!code-vb[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyget)]
 
-속성 시스템 Api를 호출할 수도 있습니다 <xref:System.Windows.DependencyObject.GetValue%2A> 고 <xref:System.Windows.DependencyObject.SetValue%2A> 직접. 이 Api를 직접 호출 하는 것은 특정 시나리오에 적합 하지만 기존 속성 (래퍼가 더 편리 하며 및 개발자 도구에 대 한 속성을 더 잘 노출 시킴)를 사용 하는 경우 일반적으로 필요 하지 않습니다.
+속성 시스템 api <xref:System.Windows.DependencyObject.GetValue%2A> <xref:System.Windows.DependencyObject.SetValue%2A> 를 직접 호출할 수도 있습니다. 이는 일반적으로 기존 속성을 사용 하는 경우에는 필요 하지 않습니다 (래퍼가 더 편리 하 고 개발자 도구에 대 한 속성을 더 잘 제공 함). 그러나 Api를 직접 호출 하는 것이 특정 시나리오에 적합 합니다.
 
 또한 속성은 XAML에서 설정한 다음 나중에 코드 숨김을 통해 코드에서 액세스할 수 있습니다. 자세한 내용은 [WPF의 코드 숨김 및 XAML](code-behind-and-xaml-in-wpf.md)을 참조하세요.
 
@@ -190,7 +190,7 @@ XAML은 속성을 설정하는 다양한 구문 형식 지원 특정 속성에 �
 
 ## <a name="learning-more-about-dependency-properties"></a>종속성 속성에 대해 자세히 알아보기  
 
-- 연결된 속성은 XAML에서 특수한 구문을 지원하는 속성의 형식입니다. 연결된 속성은 종종 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 속성과 1:1 대응 관계가 없으며 반드시 종속성 속성은 아닙니다. 연결된 속성의 일반적인 용도는 부모 요소와 자식 요소가 클래스 멤버 목록의 일부로 해당 속성을 소유하지 않는 경우에도 자식 요소가 부모 요소에 속성 값을 보고할 수 있도록 허용하는 것입니다. 한 기본 시나리오는 자식 요소가 부모 요소에게 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]에 표시되는 방법(예를 들어 <xref:System.Windows.Controls.DockPanel.Dock%2A> 또는 <xref:System.Windows.Controls.Canvas.Left%2A> 참조)을 알려주게 하는 것입니다. 자세한 내용은 [연결된 속성 개요](attached-properties-overview.md)를 참조하세요.
+- 연결된 속성은 XAML에서 특수한 구문을 지원하는 속성의 형식입니다. 연결 된 속성에는 일반적으로 CLR (공용 언어 런타임) 속성과의 1:1 대응이 없으며 종속성 속성이 아닐 수도 있습니다. 연결된 속성의 일반적인 용도는 부모 요소와 자식 요소가 클래스 멤버 목록의 일부로 해당 속성을 소유하지 않는 경우에도 자식 요소가 부모 요소에 속성 값을 보고할 수 있도록 허용하는 것입니다. 한 기본 시나리오는 자식 요소가 부모 요소에게 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]에 표시되는 방법(예를 들어 <xref:System.Windows.Controls.DockPanel.Dock%2A> 또는 <xref:System.Windows.Controls.Canvas.Left%2A> 참조)을 알려주게 하는 것입니다. 자세한 내용은 [연결된 속성 개요](attached-properties-overview.md)를 참조하세요.
 
 - 구성 요소 개발자 또는 애플리케이션 개발자는 데이터 바인딩이나 스타일 지원과 같은 기능을 사용하거나 무효화 및 값 강제 변환을 지원하기 위해 종속성 속성을 직접 만들려고 할 수 있습니다. 자세한 내용은 [사용자 지정 종속성 속성](custom-dependency-properties.md)을 참조하세요.
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e018d8c83165b3e025ad4db7f3d59b6ba58b72a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 60f48422d23fc5db743eeb05e3eddeb732bff102
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616089"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364027"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe(강력하게 형식화된 관리 클래스 생성기)
 강력하게 형식화된 관리 클래스 생성기 도구를 사용하면 지정된 WMI(Windows Management Instrumentation) 클래스에 대해 초기 바인딩 관리되는 클래스를 신속하게 생성할 수 있습니다. 생성된 클래스는 WMI 클래스의 인스턴스에 액세스할 때 작성해야 하는 코드를 단순화합니다.  
@@ -45,7 +45,7 @@ WMIClass [options]
 |**/u**  *user name*|**/m** 옵션으로 지정된 컴퓨터에 로그온할 때 사용할 사용자 이름을 지정합니다.|  
 |**/?**|이 도구의 명령 구문 및 옵션을 표시합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  Mgmtclassgen.exe는 <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType> 메서드를 사용합니다. 따라서 사용자 지정 코드 공급자를 사용하여 C#, Visual Basic 및 JScript 이외의 관리되는 언어로 코드를 생성할 수 있습니다.  
   
  생성된 클래스는 생성 대상인 스키마에 바인딩됩니다. 기본 스키마가 변경되는 경우 스키마의 변경 사항을 클래스에 반영하려면 클래스를 다시 생성해야 합니다.  
@@ -83,7 +83,7 @@ WMIClass [options]
   
 - 숫자 속성은 지정된 허용 값으로만 설정될 수 있음을 나타내기 위해 **Values** 및 **ValueMaps** 한정자를 사용하여 한정될 수 있습니다. 열거형이 이러한 **Values** 및 **ValueMaps**와 함께 생성되며 속성은 이 열거형으로 매핑됩니다.  
   
-- WMI에서는 singleton이라는 용어를 사용하여 인스턴스를 하나만 갖는 클래스를 설명합니다. 따라서 singleton 클래스의 기본 생성자는 클래스를 해당 클래스의 유일한 인스턴스로 초기화합니다.  
+- WMI에서는 singleton이라는 용어를 사용하여 인스턴스를 하나만 갖는 클래스를 설명합니다. 따라서 singleton 클래스의 매개 변수가 없는 생성자는 클래스를 해당 클래스의 유일한 인스턴스로 초기화합니다.  
   
 - WMI 클래스에는 개체인 속성이 있을 수 있습니다. 이러한 유형의 WMI 클래스에 대한 강력한 형식의 클래스를 생성하는 경우 포함된 개체 속성의 형식에 대한 강력한 형식의 클래스를 생성할 것을 고려해야 합니다. 이렇게 하면 포함된 개체에 강력한 형식을 사용하여 액세스할 수 있습니다. 생성된 코드는 포함된 개체의 형식을 감지하지 못할 수도 있습니다. 이런 경우 이 문제를 알려 주는 주석이 생성된 코드 안에 작성됩니다. 따라서 생성된 코드를 수정하여 생성된 다른 클래스에 속성을 입력할 수 있습니다.  
   

@@ -2,14 +2,14 @@
 title: Mac용 Visual Studio를 사용하여 macOS에서 .NET Core 시작
 description: 이 항목에서는 Mac 및 .NET Core용 Visual Studio를 사용하여 간단한 콘솔 애플리케이션을 빌드하는 과정을 안내합니다.
 author: mairaw
-ms.date: 06/12/2017
+ms.date: 07/11/2019
 ms.custom: seodec18
-ms.openlocfilehash: 4467842c0b65ea536cc26601981d9fcc2bc68f2d
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: a6d58d2a54ce9742542a3f7e5c9378be89b8f89a
+ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67870539"
 ---
 # <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Mac용 Visual Studio를 사용하여 macOS에서 .NET Core 시작
 
@@ -24,21 +24,25 @@ Visual Studio for Mac은 .NET Core 애플리케이션 개발을 위해 필요한
 
 [Mac에서 .NET Core의 필수 구성 요소](../../core/macos-prerequisites.md) 항목을 참조하세요.
 
+[.NET Core 지원](https://docs.microsoft.com/visualstudio/mac/net-core-support?view=vsmac-2019) 가이드를 참조하여 지원되는 버전의 .NET Core를 사용 중인지 확인하세요.
+
 ## <a name="get-started"></a>시작
 
 필수 구성 요소와 Visual Studio for Mac을 이미 설치한 경우 이 섹션을 건너뛰고 [프로젝트 만들기](#creating-a-project)를 계속 진행합니다. 다음 단계에 따라 필수 구성 요소 및 Visual Studio for Mac을 설치합니다.
 
-[Visual Studio for Mac 설치 관리자](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)를 다운로드합니다. 설치 관리자를 실행합니다. 사용권 계약을 읽은 다음 동의합니다. 설치하는 동안 플랫폼 간 모바일 앱 개발 기술인 Xamarin을 설치할 기회가 제공됩니다. Xamarin 및 관련된 구성 요소의 설치는 .NET Core 개발에서 선택 사항입니다. Mac용 Visual Studio 설치 프로세스에 대한 연습을 진행하려면 [Mac용 Visual Studio 설명서](/visualstudio/mac/)를 참조하세요. 설치가 완료되면 Visual Studio for Mac IDE를 시작합니다.
+[Visual Studio for Mac 설치 관리자](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)를 다운로드합니다. 설치 관리자를 실행합니다. 사용권 계약을 읽은 다음 동의합니다. 설치하는 동안 .NET Core 설치 옵션을 선택합니다. 플랫폼 간 모바일 앱 개발 기술인 Xamarin을 설치할 기회가 제공됩니다. Xamarin 및 관련된 구성 요소의 설치는 .NET Core 개발에서 선택 사항입니다. Mac용 Visual Studio 설치 프로세스에 대한 연습을 진행하려면 [Mac용 Visual Studio 설명서](/visualstudio/mac/)를 참조하세요. 설치가 완료되면 Visual Studio for Mac IDE를 시작합니다.
 
 ## <a name="creating-a-project"></a>프로젝트 만들기
 
-1. 시작 화면에서 **새 프로젝트**를 선택합니다.
+1. [시작] 창에서 **새로 만들기**를 선택합니다.
 
-   ![Visual Studio for Mac 시작 화면의 새 프로젝트 단추](./media/using-on-mac-vs/visual-studio-mac-new-project.png)
+   ![Mac용 Visual Studio 시작 화면의 새로 만들기 단추](./media/using-on-mac-vs/visual-studio-mac-new-project.png)
 
 1. **새 프로젝트** 대화 상자에서 **.NET Core** 노드 아래에서 **앱**을 선택합니다. **콘솔 애플리케이션** 템플릿을 선택하고 **다음**을 선택합니다.
 
    ![새 프로젝트 템플릿 목록](./media/using-on-mac-vs/visual-studio-mac-new-dialog.png)
+
+1. 여러 버전의 .NET Core가 설치된 경우 프로젝트의 대상 프레임워크를 선택합니다.
 
 1. **프로젝트 이름**으로 "HelloWorld"를 입력합니다. **만들기**를 선택합니다.
 
@@ -50,7 +54,7 @@ Visual Studio for Mac은 .NET Core 애플리케이션 개발을 위해 필요한
 
 ## <a name="run-the-application"></a>애플리케이션 실행
 
-<kbd>F5</kbd> 키를 사용하여 디버그 모드에서 또는 <kbd>Ctrl</kbd>+<kbd>F5</kbd>를 사용하여 릴리스 모드에서 이 앱을 실행합니다.
+앱을 디버그 모드에서 실행하려면 ⌘ ↵(Command + Enter)를 사용하고 릴리스 모드에서 실행하려면 ⌥ ⌘ ↵(Option + Command + Enter)를 사용합니다.
 
 ![애플리케이션 출력 창에 Hello World!가 표시됩니다.](./media/using-on-mac-vs/visual-studio-mac-output.png)
 

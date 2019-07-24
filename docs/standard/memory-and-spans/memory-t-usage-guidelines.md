@@ -6,16 +6,16 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 380c0eef137eb5142c30e63f5446f5d60723087a
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 5aa778477abf3b91e32d9cb8ffdf50baaca5f001
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834051"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68362911"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Memory\<T> 및 Span\<T> 사용 지침
 
-.NET Core에는 메모리의 인접한 임의 영역을 나타내는 여러 형식이 포함되어 있습니다. .NET Core 2.0에서는 관리형 또는 비관리형 메모리로 지원할 수 있는 경량 메모리 버퍼인 <xref:System.Span%601> 및 <xref:System.ReadOnlySpan%601>이 도입되었습니다. 이러한 형식은 스택에 저장될 수 있기 때문에 비동기 메서드 호출을 포함한 여러 시나리오에 적합하지 않습니다. .NET Core 2.1에서는 <xref:System.Memory%601>, <xref:System.ReadOnlyMemory%601>, <xref:System.Buffers.IMemoryOwner%601> 및 <xref:System.Buffers.MemoryPool%601>을 포함한 여러 형식이 추가되었습니다. <xref:System.Span%601>과 마찬가지로, <xref:System.Memory%601> 및 관련 형식은 관리형 및 비관리형 메모리 둘 다로 지원할 수 있습니다. <xref:System.Span%601>과 달리, <xref:System.Memory%601>는 관리형 힙에만 저장할 수 있습니다.
+.NET Core에는 메모리의 인접한 임의 영역을 나타내는 여러 형식이 포함되어 있습니다. .NET Core 2.0에서는 관리형 또는 비관리형 메모리로 지원할 수 있는 경량 메모리 버퍼인 <xref:System.Span%601> 및 <xref:System.ReadOnlySpan%601>이 도입되었습니다. 이러한 형식은 스택에만 저장될 수 있기 때문에 비동기 메서드 호출을 포함한 여러 시나리오에 적합하지 않습니다. .NET Core 2.1에서는 <xref:System.Memory%601>, <xref:System.ReadOnlyMemory%601>, <xref:System.Buffers.IMemoryOwner%601> 및 <xref:System.Buffers.MemoryPool%601>을 포함한 여러 형식이 추가되었습니다. <xref:System.Span%601>과 마찬가지로, <xref:System.Memory%601> 및 관련 형식은 관리형 및 비관리형 메모리 둘 다로 지원할 수 있습니다. <xref:System.Span%601>과 달리, <xref:System.Memory%601>는 관리형 힙에 저장할 수 있습니다.
 
 <xref:System.Span%601> 및 <xref:System.Memory%601>는 둘 다 파이프라인에 사용할 수 있는 구조적 데이터의 버퍼입니다. 즉, 일부 또는 모든 데이터가 파이프라인의 구성 요소에 효율적으로 전달될 수 있도록 설계되었으며, 해당 구성 요소는 데이터를 처리하고 선택적으로 버퍼를 수정할 수 있습니다. <xref:System.Memory%601> 및 관련 형식은 여러 구성 요소나 여러 스레드에서 액세스할 수 있으므로 개발자가 몇 가지 표준 사용법 지침에 따라 강력한 코드를 생성하는 것이 중요합니다.
 

@@ -1,21 +1,21 @@
 ---
 title: ML.NET은 무엇이며 어떻게 작동하나요?
-description: ML.NET은 .NET 애플리케이션에 기계 학습을 추가할 수 있는 기능을 제공합니다. 이 기능을 사용하여 애플리케이션에 사용 가능한 데이터를 사용하여 자동 예측할 수 있습니다. 이 문서에서는 ML.NET에서 기계 학습의 기본 사항을 설명합니다.
-ms.date: 04/10/2019
+description: ML.NET은 온라인 또는 오프라인 시나리오에서 .NET 애플리케이션에 기계 학습을 추가할 수 있는 기능을 제공합니다. 이 기능을 사용하면 ML.NET을 사용하기 위해 네트워크에 연결할 필요 없이 애플리케이션에 사용 가능한 데이터를 사용하여 자동 예측할 수 있습니다. 이 문서에서는 ML.NET에서 기계 학습의 기본 사항을 설명합니다.
+ms.date: 07/17/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 30e96d85ecc04332bc5e6c8f57badd000f729904
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 23e71e86b75854042068b6a68f90cf995749ee58
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660644"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331588"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET은 무엇이며 어떻게 작동하나요?
 
-ML.NET은 .NET 애플리케이션에 기계 학습을 추가할 수 있는 기능을 제공합니다. 이 기능을 사용하여 애플리케이션에 사용 가능한 데이터를 사용하여 자동 예측할 수 있습니다. 이 문서에서는 ML.NET에서 기계 학습의 기본 사항을 설명합니다. 
+ML.NET은 온라인 또는 오프라인 시나리오에서 .NET 애플리케이션에 기계 학습을 추가할 수 있는 기능을 제공합니다. 이 기능을 사용하면 네트워크에 연결할 필요 없이 애플리케이션에 사용 가능한 데이터를 사용하여 자동 예측할 수 있습니다. 이 문서에서는 ML.NET에서 기계 학습의 기본 사항을 설명합니다. 
 
 ML.NET을 사용하여 수행할 수 있는 예측 유형은 다음과 같습니다.
 
@@ -169,11 +169,11 @@ ML.NET 애플리케이션은 <xref:Microsoft.ML.MLContext> 개체로 시작합�
 |데이터 준비||<xref:Microsoft.ML.TransformsCatalog>||
 |학습 알고리즘|이진 분류|<xref:Microsoft.ML.BinaryClassificationCatalog>||
 ||다중 클래스 분류|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
-||이상 감지|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
+||변칙 검색|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
 ||클러스터링|<xref:Microsoft.ML.ClusteringCatalog>||
 ||예측|<xref:Microsoft.ML.ForecastingCatalog>||
 ||순위 지정|<xref:Microsoft.ML.RankingCatalog>||
-||회귀|<xref:Microsoft.ML.RegressionCatalog>||
+||재발|<xref:Microsoft.ML.RegressionCatalog>||
 ||권장 사항|<xref:Microsoft.ML.RecommendationCatalog>|`Microsoft.ML.Recommender` NuGet 패키지 추가|
 ||TimeSeries|<xref:Microsoft.ML.TimeSeriesCatalog>|`Microsoft.ML.TimeSeries` NuGet 패키지 추가|
 |모델 사용 ||<xref:Microsoft.ML.ModelOperationsCatalog>||

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0536acbcc71ae7792ec668ac352e95e604bd979
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 05b1d80887186466044acdb088d7f45a386b37f7
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591360"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364037"
 ---
 # <a name="reflection-and-generic-types"></a>리플렉션 및 제네릭 형식
 <a name="top"></a> 리플렉션의 관점에서 제네릭 형식과 일반 형식 간 차이점은 제네릭 형식이 형식 매개 변수(제네릭 형식 정의인 경우) 또는 형식 인수(생성된 형식인 경우)의 집합과 연결되어 있다는 점입니다. 제네릭 메서드는 동일한 방식으로 일반 메서드와 다릅니다.  
@@ -134,7 +134,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
  형식 매개 변수가 공 분산인지 또는 반공 분산인지 확인하려면 <xref:System.Reflection.GenericParameterAttributes.VarianceMask?displayProperty=nameWithType> 마스크를 <xref:System.Reflection.GenericParameterAttributes> 속성에서 반환한 <xref:System.Type.GenericParameterAttributes%2A> 값에 적용합니다. 결과가 <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>인 경우 형식 매개 변수는 고정입니다. [공변성(Covariance) 및 반공변성(Contravariance)](../../../docs/standard/generics/covariance-and-contravariance.md)을 참조하세요.  
   
 #### <a name="special-constraints"></a>특별 제약 조건  
- 형식 매개 변수의 특별 제약 조건을 확인하려면 <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> 마스크를 <xref:System.Reflection.GenericParameterAttributes> 속성에서 반환한 <xref:System.Type.GenericParameterAttributes%2A> 값에 적용합니다. 결과가 <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>인 경우 특별 제약 조건이 없습니다. 형식 매개 변수는 참조 형식이어야 하고 Nullable이 아닌 값 형식이어야 하며 그리고 기본 생성자를 보유해야 하는 제약을 받습니다.  
+ 형식 매개 변수의 특별 제약 조건을 확인하려면 <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> 마스크를 <xref:System.Reflection.GenericParameterAttributes> 속성에서 반환한 <xref:System.Type.GenericParameterAttributes%2A> 값에 적용합니다. 결과가 <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>인 경우 특별 제약 조건이 없습니다. 형식 매개 변수는 참조 형식이어야 하고 Nullable이 아닌 값 형식이어야 하며 그리고 매개 변수가 없는 생성자를 보유해야 하는 제약을 받습니다.  
   
  [맨 위로 이동](#top)  
   

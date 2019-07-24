@@ -4,12 +4,12 @@ description: 이 자습서에서는 Docker를 사용하여 .NET Core 애플리�
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 16edb129be679179450c485ced2586cea9ed9763
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 81b3ce2d6ebb73648d9026c92f490dcc723014f6
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609291"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331049"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>자습서: .NET Core 앱 컨테이너화
 
@@ -174,10 +174,10 @@ myapp.deps.json  myapp.dll  myapp.pdb  myapp.runtimeconfig.json
 
 *Dockerfile* 파일은 `docker build` 명령에서 컨테이너 이미지를 만드는 데 사용됩니다. 이 파일은 확장명이 없는 *Dockerfile*이라는 일반 텍스트 파일입니다.
 
-터미널에서 시작 시에 생성한 작업 폴더로 디렉터리 위쪽으로 이동합니다. 작업 폴더에 *Dockerfile*이라는 파일을 만들고 텍스트 편집기에서 엽니다. 다음 명령을 파일의 첫 줄로 추가합니다.
+터미널에서 시작 시에 생성한 작업 폴더로 디렉터리를 위쪽으로 이동합니다. 작업 폴더에 *Dockerfile*이라는 파일을 만들고 텍스트 편집기에서 엽니다. 다음 명령을 파일의 첫 줄로 추가합니다.
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
+FROM mcr.microsoft.com/dotnet/core/runtime:2.2
 ```
 
 `FROM` 명령은 **mcr.microsoft.com/dotnet/core/runtime** 리포지토리에서 **2.2** 태그가 지정된 이미지를 풀하도록 Docker에 지시합니다. SDK에서 대상으로 지정된 런타임과 일치하는 .NET Core 런타임을 풀해야 합니다. 예를 들어 이전 섹션에서 만든 앱은 .NET Core 2.2 SDK를 사용하고 .NET Core 2.2를 대상으로 하는 앱을 만들었습니다. 따라서 *Dockerfile*에서 참조되는 기본 이미지에는 **2.2** 태그가 지정됩니다.
@@ -205,7 +205,13 @@ docker-working
     └───obj
 ```
 
-터미널에서 `docker build -t myimage -f Dockerfile .`를 실행하면 Docker가 *Dockerfile*에서 각 줄을 처리합니다. `docker build` 명령의 `.`는 *Dockerfile*을 찾는 데 현재 폴더를 사용하도록 Docker에 지시합니다. 이 명령은 이미지를 빌드하고 해당 이미지를 가리키는 **myimage**라는 로컬 리포지토리를 만듭니다. 이 명령이 완료된 후 `docker images`를 실행하여 설치된 이미지 목록을 확인합니다.
+터미널에서 다음 명령을 실행합니다.
+
+```console
+docker build -t myimage -f Dockerfile .
+```
+
+Docker가 *Dockerfile*에서 각 줄을 처리합니다. `docker build` 명령의 `.`는 *Dockerfile*을 찾는 데 현재 폴더를 사용하도록 Docker에 지시합니다. 이 명령은 이미지를 빌드하고 해당 이미지를 가리키는 **myimage**라는 로컬 리포지토리를 만듭니다. 이 명령이 완료된 후 `docker images`를 실행하여 설치된 이미지 목록을 확인합니다.
 
 ```console
 > docker images
@@ -241,7 +247,6 @@ Removing intermediate container f34da5c18e7c
  ---> ddcc6646461b
 Successfully built ddcc6646461b
 Successfully tagged myimage:latest
-
 
 > docker images
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE

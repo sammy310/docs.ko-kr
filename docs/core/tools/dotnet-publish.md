@@ -2,12 +2,12 @@
 title: dotnet publish 명령
 description: dotnet publish 명령은 .NET Core 프로젝트를 디렉터리에 게시합니다.
 ms.date: 05/29/2018
-ms.openlocfilehash: 24490bd0fbfca65692d7025b5ed2aea659c35473
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 8cefeae17e464e14abc54dce1feb414a72c44164
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611551"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331026"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -51,7 +51,7 @@ dotnet publish [-h|--help]
 
 * *dll* 확장과 함께 어셈블리의 IL(중간 언어) 코드
 * 프로젝트의 종속성을 모두 포함하는 *.deps.json* 파일
-* 런타임에 대한 기타 구성 옵션(예: 가비지 수집 유형)뿐만 아니라 애플리케이션에서 예상하는 공유 런타임을 지정하는 *.runtime.config.json* 파일
+* 런타임에 대한 기타 구성 옵션(예: 가비지 수집 유형)뿐만 아니라 애플리케이션에서 예상하는 공유 런타임을 지정하는 *.runtimeconfig.json* 파일
 * 애플리케이션의 종속성은 NuGet 캐시에서 출력 폴더로 복사됩니다.
 
 `dotnet publish` 명령의 출력이 실행을 위해 호스팅 시스템(예: 서버, PC, Mac, 랩톱)에 배포할 준비가 되었습니다. 이는 배포를 위해 애플리케이션을 준비하는 데 공식적으로 지원되는 유일한 방법입니다. 프로젝트에서 지정하는 배포 유형에 따라 호스팅 시스템에 .NET Core 공유 런타임이 설치되어 있을 수도 있고 그렇지 않을 수도 있습니다. 자세한 내용은 [.NET Core 애플리케이션 배포](../deploying/index.md)를 참조하세요. 게시된 애플리케이션의 디렉터리 구조에 대해서는 [디렉터리 구조](/aspnet/core/hosting/directory-structure)를 참조하세요.

@@ -3,12 +3,12 @@ title: .NET Core CLI 확장성 모델
 description: CLI(명령줄 인터페이스) 도구를 확장할 수 있는 방법을 알아봅니다.
 ms.date: 04/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: ca6bf30fb6aaf815a859a00bc391ef790566acaf
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 784eb50dfdbc0f88050a9f727ddbf53db34d3209
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675097"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331010"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI 도구 확장성 모델
 
@@ -69,7 +69,7 @@ CLI 도구는 세 가지 주요 방법으로 확장할 수 있습니다.
 도구를 빌드한 후에는 [`dotnet pack`](dotnet-pack.md) 명령을 사용하여 코드, 종속성에 대한 정보 등을 포함하는 NuGet 패키지(.nupkg 파일)를 만듭니다. 패키지 이름을 원하는 대로 지정할 수 있지만 애플리케이션 내부 실제 도구 이진이 `dotnet-<command>`의 규칙을 준수해야 `dotnet`에서 패키지를 호출할 수 있습니다.
 
 > [!NOTE]
-> .NET Core 명령줄 도구의 RC3 이전 버전에서는 `dotnet pack` 명령에 버그가 있어서 `runtime.config.json`이 도구로 압축되지 않았습니다. 해당 파일이 없으면 런타임 시 오류가 발생합니다. 이 문제가 발생하는 경우 최신 도구로 업데이트하고 `dotnet pack`을 다시 시도하세요.
+> .NET Core 명령줄 도구의 RC3 이전 버전에서는 `dotnet pack` 명령에 버그가 있어서 *.runtimeconfig.json*이 도구로 압축되지 않았습니다. 해당 파일이 없으면 런타임 시 오류가 발생합니다. 이 문제가 발생하는 경우 최신 도구로 업데이트하고 `dotnet pack`을 다시 시도하세요.
 
 도구는 이식 가능한 애플리케이션이므로 도구 사용자가 도구를 실행하려면 도구가 빌드된 버전의 .NET Core 라이브러리가 있어야 합니다. 도구에서 사용하고 .NET Core 라이브러리 내에서 포함되지 않은 다른 모든 종속성은 NuGet 캐시에서 복원되고 배치됩니다. 따라서 전체 도구는 .NET Core 라이브러리의 어셈블리뿐만 아니라 NuGet 캐시의 어셈블리를 사용하여 실행됩니다.
 
