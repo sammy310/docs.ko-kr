@@ -43,6 +43,8 @@
               href: keywords/void.md
             - name: var
               href: keywords/var.md
+            - name: 관리되지 않는 형식
+              href: builtin-types/unmanaged-types.md
             - name: 형식 참조 테이블
               items:
                 - name: 기본 제공 형식 표
