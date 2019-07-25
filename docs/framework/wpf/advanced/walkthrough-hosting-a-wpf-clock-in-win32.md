@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: 98e48060bbb82764e1e541797c666ca33f247c39
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 27e1a2e88beeacf8c2cd98f61b11542ee2341e8f
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400481"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433972"
 ---
 # <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>연습: Win32에서 WPF 시계 호스팅
 
@@ -85,7 +85,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
                      int       nCmdShow)
 ```
 
-이 특성은 CLR (공용 언어 런타임)이 초기화 [!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)]될 때 (및 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)])에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 필요한 STA (단일 스레드 아파트 모델)를 사용 해야 함을 알립니다.
+이 특성은 COM (구성 요소 개체 모델)을 초기화할 때 (및 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)])에 필요한 STA (단일 스레드 아파트 모델)를 사용 해야 하는 CLR (공용 언어 런타임)에 지시 합니다.
 
 ## <a name="create-a-windows-presentation-framework-page"></a>Windows Presentation Framework 페이지 만들기
 

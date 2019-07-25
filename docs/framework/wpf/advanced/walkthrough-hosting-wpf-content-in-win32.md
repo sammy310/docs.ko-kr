@@ -6,23 +6,23 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 02f0831b46b8087c48b86e83a4b20f94bf3b79d0
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 3a0a6d09fe34fed9f5b0d353252461fdffbeb5e1
+ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401585"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68484624"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>연습: Win32에서 WPF 콘텐츠 호스팅
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 응용 프로그램을 만들기 위한 다양한 환경을 제공합니다. 그러나 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 코드에 상당한 투자를 한 경우 원본 코드를 다시 작성하는 대신 응용 프로그램에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기능을 추가하는 것이 더 효과적일 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]창에서 콘텐츠를 호스트 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 하기 위한 간단한 메커니즘을 제공 합니다. [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]  
   
- 이 자습서에서는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 창에서 콘텐츠를 호스트 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 하는 샘플 응용 프로그램 ( [Win32 창에서 WPF 콘텐츠 호스팅 샘플](https://go.microsoft.com/fwlink/?LinkID=160004))을 작성 하는 방법을 설명 합니다. [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 창을 호스트하도록 이 샘플을 확장할 수 있습니다. 관리 코드와 비관리 코드를 혼합해서 사용하므로 응용 프로그램은 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]로 작성되었습니다.  
+ 이 자습서에서는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 창에서 콘텐츠를 호스트 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 하는 샘플 응용 프로그램 ( [Win32 창에서 WPF 콘텐츠 호스팅 샘플](https://go.microsoft.com/fwlink/?LinkID=160004))을 작성 하는 방법을 설명 합니다. [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 창을 호스트하도록 이 샘플을 확장할 수 있습니다. 관리 코드와 비관리 코드를 혼합 하 여 포함 하기 때문에 응용 C++프로그램은/cli로 작성 됩니다.  
 
 <a name="requirements"></a>   
 ## <a name="requirements"></a>요구 사항  
  이 자습서에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 프로그래밍에 대한 기본 지식이 있다고 가정합니다. 프로그래밍에 대 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 한 기본적인 소개는 [시작](../getting-started/index.md)을 참조 하세요. 프로그래밍에 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 대 한 소개를 보려면 특히 Charles Petzold의 *프로그래밍 창* 에서 주제에 대 한 다양 한 책을 참조 해야 합니다.  
   
- 이 자습서와 함께 제공 되는 샘플은에서 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]구현 되었으므로이 자습서에서는를 [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] 사용 하 여 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]API를 프로그래밍 하는 방법과 관리 코드 프로그래밍에 대해 잘 알고 있다고 가정 합니다. [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]에 대한 지식이 있으면 도움이 되지만 필수 사항은 아닙니다.  
+ 이 자습서와 함께 제공 되는 샘플은/Cli C++에서 구현 되었으므로이 자습서에서는를 사용 C++ 하 여 Windows API를 프로그래밍 하는 방법과 관리 코드 프로그래밍에 대해 잘 알고 있다고 가정 합니다. /Cli를 C++사용 하는 데 도움이 되지만 반드시 필요한 것은 아닙니다.  
   
 > [!NOTE]
 >  이 자습서에는 관련 샘플의 많은 코드 예제가 포함되어 있습니다. 그러나 가독성을 위해 전체 샘플 코드를 포함하지는 않습니다. 전체 샘플 코드는 [Win32 창에서 WPF 콘텐츠 호스팅 샘플](https://go.microsoft.com/fwlink/?LinkID=160004)을 참조 하세요.  
@@ -35,7 +35,7 @@ ms.locfileid: "68401585"
   
 1. 콘텐츠를 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 관리 되는 클래스로 구현 합니다.  
   
-2. [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]를 사용하여 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] 응용 프로그램을 구현합니다. 기존 응용 프로그램과 비관리 [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] 코드로 시작하는 경우 일반적으로 `/clr` 컴파일러 플래그를 포함하도록 프로젝트 설정을 변경하여 관리 코드를 호출할 수 있게 할 수 있습니다.  
+2. /Cli를 사용 하 여 C++Windows 응용 프로그램 구현 기존 응용 프로그램과 비관리 C++ 코드로 시작 하는 경우 일반적으로 `/clr` 컴파일러 플래그를 포함 하도록 프로젝트 설정을 변경 하 여 관리 코드를 호출할 수 있도록 설정할 수 있습니다.  
   
 3. 스레딩 모델을 STA(단일 스레드 아파트)로 설정합니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68401585"
 
 <a name="implementing_the_application"></a>
 ## <a name="implementing-the-host-application"></a>호스트 애플리케이션 구현
- 이 섹션에서는 기본 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 응용 프로그램에서 콘텐츠를 호스트 하는 방법을 설명 합니다. 콘텐츠 자체는 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]에서 관리되는 클래스로 구현됩니다. 대부분의 경우 간단한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프로그래밍입니다. 콘텐츠 구현의 주요 측면은 [WPF 콘텐츠 구현](#implementing_the_wpf_page)에서 설명 합니다.
+ 이 섹션에서는 기본 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 응용 프로그램에서 콘텐츠를 호스트 하는 방법을 설명 합니다. 콘텐츠 자체는/Cli에서 C++관리 되는 클래스로 구현 됩니다. 대부분의 경우 간단한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프로그래밍입니다. 콘텐츠 구현의 주요 측면은 [WPF 콘텐츠 구현](#implementing_the_wpf_page)에서 설명 합니다.
 
 <a name="autoNestedSectionsOUTLINE1"></a>
 - [기본 응용 프로그램](#the_basic_application)
@@ -79,7 +79,7 @@ ms.locfileid: "68401585"
 
 1. Visual Studio 2005을 열고 **파일** 메뉴에서 **새 프로젝트** 를 선택 합니다.
 
-2. [!INCLUDE[TLA2#tla_visualcpp](../../../../includes/tla2sharptla-visualcpp-md.md)] 프로젝트 형식 목록에서 **Win32** 를 선택 합니다. 기본 언어가가 아닌 [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)]경우 이러한 프로젝트 형식은 **다른 언어**아래에 있습니다.
+2. [!INCLUDE[TLA2#tla_visualcpp](../../../../includes/tla2sharptla-visualcpp-md.md)] 프로젝트 형식 목록에서 **Win32** 를 선택 합니다. 기본 언어가가 아닌 C++경우 이러한 프로젝트 형식은 **다른 언어**아래에 있습니다.
 
 3. **Win32 프로젝트** 템플릿을 선택 하 고 프로젝트에 이름을 할당 한 다음 **확인** 을 클릭 하 여 **win32 응용 프로그램 마법사**를 시작 합니다.
 
@@ -129,7 +129,7 @@ ms.locfileid: "68401585"
 
  응용 프로그램 창에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 직접 콘텐츠를 호스트할 수는 없습니다. <xref:System.Windows.Interop.HwndSource> 콘텐츠를 래핑할 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 개체를 먼저 만듭니다. 이 개체는 기본적으로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠를 호스트 하도록 설계 된 창입니다. 응용 프로그램의 <xref:System.Windows.Interop.HwndSource> 일부인 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 창의 자식으로 만들어 부모 창에서 개체를 호스트 합니다. <xref:System.Windows.Interop.HwndSource> 생성자 매개 변수에는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 자식 창을 만들 때 CreateWindow에 전달하는 것과 동일한 정보가 포함됩니다.
 
- 다음에는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠 개체의 인스턴스를 만듭니다. 이 경우 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠는 `WPFPage`를 사용하여 별도 클래스 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]로 구현됩니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]을 통해 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 콘텐츠를 구현할 수도 있습니다. 그러나 이렇게 하려면 별도의 프로젝트를 설정 하 고 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠를 [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]로 빌드해야 합니다. [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]에 대한 참조를 프로젝트에 추가하고 해당 참조를 사용하여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠의 인스턴스를 만들 수 있습니다.
+ 다음에는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠 개체의 인스턴스를 만듭니다. 이 경우 콘텐츠는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] /cli를 사용 하 여 `WPFPage` C++별도 클래스로 구현 됩니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]을 통해 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 콘텐츠를 구현할 수도 있습니다. 그러나 이렇게 하려면 별도의 프로젝트를 설정 하 고 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠를 [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]로 빌드해야 합니다. [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]에 대한 참조를 프로젝트에 추가하고 해당 참조를 사용하여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠의 인스턴스를 만들 수 있습니다.
 
  콘텐츠에 대 한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Interop.HwndSource.RootVisual%2A> 참조를의 속성 <xref:System.Windows.Interop.HwndSource>에 할당 하 여 자식 창에 콘텐츠를 표시 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]
 
@@ -167,7 +167,7 @@ ms.locfileid: "68401585"
 
 <a name="implementing_the_wpf_page"></a>
 ## <a name="implementing-the-wpf-page"></a>WPF 페이지 구현
- 실제 구현에 대 한 지식 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 없이 콘텐츠를 호스트 하 고 사용할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠가 별도[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]의에 패키지 된 경우 CLR (공용 언어 런타임) 언어로 빌드된 것일 수 있습니다. 다음은 샘플에서 사용된 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] 구현의 간단한 연습입니다. 이 섹션에는 다음 하위 섹션이 포함되어 있습니다.
+ 실제 구현에 대 한 지식 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 없이 콘텐츠를 호스트 하 고 사용할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠가 별도[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]의에 패키지 된 경우 CLR (공용 언어 런타임) 언어로 빌드된 것일 수 있습니다. 다음은 샘플에서 사용 되는 C++/cli 구현에 대 한 간단한 연습입니다. 이 섹션에는 다음 하위 섹션이 포함되어 있습니다.
 
 <a name="autoNestedSectionsOUTLINE2"></a>
 - [레이아웃](#page_layout)

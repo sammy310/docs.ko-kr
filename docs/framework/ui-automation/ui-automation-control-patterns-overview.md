@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 7587c8cd24197252506967208869bd454b4f27f2
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 6e2b5eaff3ee80434d5cdf39391273685da9faf0
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400678"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68434084"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI 자동화 컨트롤 패턴 개요
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.locfileid: "68400678"
   
 - 속성 및 이벤트는 컨트롤 상태에 대한 정보뿐만 아니라 컨트롤 패턴의 기능에 대한 정보를 제공합니다.  
   
- 인터페이스가 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 개체와 관련되는 것과 같이, 컨트롤 패턴은 [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] 와 관련됩니다. [!INCLUDE[TLA2#tla_com](../../../includes/tla2sharptla-com-md.md)]에서, 개체를 쿼리하여 개체가 지원하는 인터페이스를 확인하고 이러한 인터페이스를 사용하여 기능에 액세스할 수 있습니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서, UI 자동화 클라이언트는 컨트롤이 지원하는 컨트롤 패턴을 확인하고 지원되는 컨트롤 패턴이 노출하는 속성, 메서드, 이벤트 및 구조를 통해 컨트롤과 상호 작용할 수 있습니다. 예를 들어, 여러 줄 편집 상자에 대해 UI 자동화는 <xref:System.Windows.Automation.Provider.IScrollProvider>를 구현합니다. 클라이언트가 <xref:System.Windows.Automation.AutomationElement> 서 <xref:System.Windows.Automation.ScrollPattern> 컨트롤 패턴을 지원한다는 사실을 알고 있으면 클라이언트는 해당 컨트롤 패턴이 노출하는 속성, 메서드 및 이벤트를 사용하여 컨트롤을 조작하거나 컨트롤에 대한 정보에 액세스할 수 있습니다.  
+ 인터페이스 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 는 COM (구성 요소 개체 모델) 개체와 관련이 있으므로 컨트롤 패턴은와 관련 됩니다. COM에서 개체를 쿼리하여 개체에서 지 원하는 인터페이스를 확인 한 다음 이러한 인터페이스를 사용 하 여 기능에 액세스할 수 있습니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서, UI 자동화 클라이언트는 컨트롤이 지원하는 컨트롤 패턴을 확인하고 지원되는 컨트롤 패턴이 노출하는 속성, 메서드, 이벤트 및 구조를 통해 컨트롤과 상호 작용할 수 있습니다. 예를 들어, 여러 줄 편집 상자에 대해 UI 자동화는 <xref:System.Windows.Automation.Provider.IScrollProvider>를 구현합니다. 클라이언트가 <xref:System.Windows.Automation.AutomationElement> 서 <xref:System.Windows.Automation.ScrollPattern> 컨트롤 패턴을 지원한다는 사실을 알고 있으면 클라이언트는 해당 컨트롤 패턴이 노출하는 속성, 메서드 및 이벤트를 사용하여 컨트롤을 조작하거나 컨트롤에 대한 정보에 액세스할 수 있습니다.  
   
 <a name="uiautomation_control_pattern_client_provider"></a>   
 ## <a name="ui-automation-providers-and-clients"></a>UI 자동화 공급자 및 클라이언트  
