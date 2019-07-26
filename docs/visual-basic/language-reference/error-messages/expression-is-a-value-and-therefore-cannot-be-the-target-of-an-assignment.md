@@ -7,58 +7,59 @@ f1_keywords:
 helpviewer_keywords:
 - BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
-ms.openlocfilehash: 1c7fb92c963ea7fa4129cddf060fe7c0b0261fc7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d5aae4d30abbf9ed2af260412352a5e0452e0dcc
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665150"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68513032"
 ---
-# <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a><span data-ttu-id="9eaee-102">식이 값이므로 할당 대상일 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="9eaee-102">Expression is a value and therefore cannot be the target of an assignment</span></span>
-<span data-ttu-id="9eaee-103">문에서 식에 값을 할당 하려고 합니다.</span><span class="sxs-lookup"><span data-stu-id="9eaee-103">A statement attempts to assign a value to an expression.</span></span> <span data-ttu-id="9eaee-104">런타임 시 쓰기 가능한 변수, 속성 또는 배열 요소에만 값을 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9eaee-104">You can assign a value only to a writable variable, property, or array element at run time.</span></span> <span data-ttu-id="9eaee-105">다음 예제에서는이 오류는 발생 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9eaee-105">The following example illustrates how this error can occur.</span></span>  
-  
-```  
-Dim yesterday As Integer  
-ReadOnly maximum As Integer = 45  
-yesterday + 1 = DatePart(DateInterval.Day, Now)  
-' The preceding line is an ERROR because of an expression on the left.  
-maximum = 50  
-' The preceding line is an ERROR because maximum is declared ReadOnly.  
-```  
-  
- <span data-ttu-id="9eaee-106">비슷한 예는 속성 및 배열 요소에 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9eaee-106">Similar examples could apply to properties and array elements.</span></span>  
-  
- <span data-ttu-id="9eaee-107">**간접 액세스 합니다.**</span><span class="sxs-lookup"><span data-stu-id="9eaee-107">**Indirect Access.**</span></span> <span data-ttu-id="9eaee-108">값 형식을 통해 간접적으로 액세스는이 오류를 생성할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9eaee-108">Indirect access through a value type can also generate this error.</span></span> <span data-ttu-id="9eaee-109">다음 코드 예제 값을 설정 하려고 시도 하는 것이 좋습니다 <xref:System.Drawing.Point> 통해 간접적으로 액세스 하 여 <xref:System.Windows.Forms.Control.Location%2A>입니다.</span><span class="sxs-lookup"><span data-stu-id="9eaee-109">Consider the following code example, which attempts to set the value of <xref:System.Drawing.Point> by accessing it indirectly through <xref:System.Windows.Forms.Control.Location%2A>.</span></span>  
-  
-```  
-' Assume this code runs inside Form1.  
-Dim exitButton As New System.Windows.Forms.Button()  
-exitButton.Text = "Exit this form"  
-exitButton.Location.X = 140  
-' The preceding line is an ERROR because of no storage for Location.  
-```  
-  
- <span data-ttu-id="9eaee-110">위 예의 마지막 문이 실패에 대 한 임시 할당만 만들어지므로 합니다 <xref:System.Drawing.Point> 반환한 구조는 <xref:System.Windows.Forms.Control.Location%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="9eaee-110">The last statement of the preceding example fails because it creates only a temporary allocation for the <xref:System.Drawing.Point> structure returned by the <xref:System.Windows.Forms.Control.Location%2A> property.</span></span> <span data-ttu-id="9eaee-111">구조체는 값 형식 및 문을 실행 한 후에 임시 구조 유지 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9eaee-111">A structure is a value type, and the temporary structure is not retained after the statement runs.</span></span> <span data-ttu-id="9eaee-112">선언에 대 한 변수를 사용 하 여 문제가 해결 되 <xref:System.Windows.Forms.Control.Location%2A>에 대 한 더 영구적인 할당 만듭니다는 <xref:System.Drawing.Point> 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="9eaee-112">The problem is resolved by declaring and using a variable for <xref:System.Windows.Forms.Control.Location%2A>, which creates a more permanent allocation for the <xref:System.Drawing.Point> structure.</span></span> <span data-ttu-id="9eaee-113">다음 예제에서는 앞의 예제 시간의 마지막 문으로 대체할 수 있는 코드를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9eaee-113">The following example shows code that can replace the last statement of the preceding example.</span></span>  
-  
-```  
-Dim exitLocation as New System.Drawing.Point(140, exitButton.Location.Y)  
-exitButton.Location = exitLocation  
-```  
-  
- <span data-ttu-id="9eaee-114">**오류 ID:** BC30068</span><span class="sxs-lookup"><span data-stu-id="9eaee-114">**Error ID:** BC30068</span></span>  
-  
-## <a name="to-correct-this-error"></a><span data-ttu-id="9eaee-115">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="9eaee-115">To correct this error</span></span>  
-  
-- <span data-ttu-id="9eaee-116">문 값 식에 할당 하는 경우 쓰기 가능한 단일 변수, 속성 또는 배열 요소를 사용 하 여 식을 대체 합니다.</span><span class="sxs-lookup"><span data-stu-id="9eaee-116">If the statement assigns a value to an expression, replace the expression with a single writable variable, property, or array element.</span></span>  
-  
-- <span data-ttu-id="9eaee-117">문이 값 형식 (일반적으로 구조)를 통해 간접적으로 액세스 하는 경우 값 형식을 저장할 변수를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="9eaee-117">If the statement makes indirect access through a value type (usually a structure), create a variable to hold the value type.</span></span>  
-  
-- <span data-ttu-id="9eaee-118">변수에 적절 한 구조 (또는 다른 값 형식)를 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="9eaee-118">Assign the appropriate structure (or other value type) to the variable.</span></span>  
-  
-- <span data-ttu-id="9eaee-119">값을 할당 하는 속성에 액세스 하려면 변수를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="9eaee-119">Use the variable to access the property to assign it a value.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="9eaee-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="9eaee-120">See also</span></span>
+# <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a><span data-ttu-id="08462-102">식이 값이므로 할당 대상일 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="08462-102">Expression is a value and therefore cannot be the target of an assignment</span></span>
 
-- [<span data-ttu-id="9eaee-121">연산자 및 식</span><span class="sxs-lookup"><span data-stu-id="9eaee-121">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
-- [<span data-ttu-id="9eaee-122">문(C++)</span><span class="sxs-lookup"><span data-stu-id="9eaee-122">Statements</span></span>](../../../visual-basic/programming-guide/language-features/statements.md)
-- [<span data-ttu-id="9eaee-123">프로시저 문제 해결</span><span class="sxs-lookup"><span data-stu-id="9eaee-123">Troubleshooting Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
+<span data-ttu-id="08462-103">문에서 식에 값을 할당 하려고 합니다.</span><span class="sxs-lookup"><span data-stu-id="08462-103">A statement attempts to assign a value to an expression.</span></span> <span data-ttu-id="08462-104">런타임에 쓰기 가능한 변수, 속성 또는 배열 요소에만 값을 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="08462-104">You can assign a value only to a writable variable, property, or array element at run time.</span></span> <span data-ttu-id="08462-105">다음 예에서는이 오류가 발생할 수 있는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="08462-105">The following example illustrates how this error can occur.</span></span>
+
+```vb
+Dim yesterday As Integer
+ReadOnly maximum As Integer = 45
+yesterday + 1 = DatePart(DateInterval.Day, Now)
+' The preceding line is an ERROR because of an expression on the left.
+maximum = 50
+' The preceding line is an ERROR because maximum is declared ReadOnly.
+```
+
+<span data-ttu-id="08462-106">속성과 배열 요소에도 유사한 예제가 적용 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="08462-106">Similar examples could apply to properties and array elements.</span></span>
+
+<span data-ttu-id="08462-107">**간접 액세스.**</span><span class="sxs-lookup"><span data-stu-id="08462-107">**Indirect Access.**</span></span> <span data-ttu-id="08462-108">값 형식을 통해 간접적으로 액세스 하는 경우에도이 오류가 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="08462-108">Indirect access through a value type can also generate this error.</span></span> <span data-ttu-id="08462-109">를 통해 <xref:System.Drawing.Point> <xref:System.Windows.Forms.Control.Location%2A>간접적으로 액세스 하 여의 값을 설정 하려고 시도 하는 다음 코드 예제를 고려 합니다.</span><span class="sxs-lookup"><span data-stu-id="08462-109">Consider the following code example, which attempts to set the value of <xref:System.Drawing.Point> by accessing it indirectly through <xref:System.Windows.Forms.Control.Location%2A>.</span></span>
+
+```vb
+' Assume this code runs inside Form1.
+Dim exitButton As New System.Windows.Forms.Button()
+exitButton.Text = "Exit this form"
+exitButton.Location.X = 140
+' The preceding line is an ERROR because of no storage for Location.
+```
+
+<span data-ttu-id="08462-110">이전 예제의 마지막 문은 <xref:System.Drawing.Point> <xref:System.Windows.Forms.Control.Location%2A> 속성이 반환 하는 구조에 대 한 임시 할당만 만들기 때문에 실패 합니다.</span><span class="sxs-lookup"><span data-stu-id="08462-110">The last statement of the preceding example fails because it creates only a temporary allocation for the <xref:System.Drawing.Point> structure returned by the <xref:System.Windows.Forms.Control.Location%2A> property.</span></span> <span data-ttu-id="08462-111">구조체는 값 형식이 며 문이 실행 된 후에는 임시 구조가 유지 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="08462-111">A structure is a value type, and the temporary structure is not retained after the statement runs.</span></span> <span data-ttu-id="08462-112">에 대 <xref:System.Windows.Forms.Control.Location%2A>한 변수를 선언 하 고 사용 하 여 문제를 해결 하면 <xref:System.Drawing.Point> 구조에 대 한 보다 영구적인 할당을 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="08462-112">The problem is resolved by declaring and using a variable for <xref:System.Windows.Forms.Control.Location%2A>, which creates a more permanent allocation for the <xref:System.Drawing.Point> structure.</span></span> <span data-ttu-id="08462-113">다음 예제에서는 이전 예제의 마지막 문을 바꿀 수 있는 코드를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="08462-113">The following example shows code that can replace the last statement of the preceding example.</span></span>
+
+```vb
+Dim exitLocation as New System.Drawing.Point(140, exitButton.Location.Y)
+exitButton.Location = exitLocation
+```
+
+<span data-ttu-id="08462-114">**오류 ID:** BC30068</span><span class="sxs-lookup"><span data-stu-id="08462-114">**Error ID:** BC30068</span></span>
+
+## <a name="to-correct-this-error"></a><span data-ttu-id="08462-115">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="08462-115">To correct this error</span></span>
+
+- <span data-ttu-id="08462-116">문이 식에 값을 할당 하는 경우 식을 쓰기 가능한 단일 변수, 속성 또는 배열 요소로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="08462-116">If the statement assigns a value to an expression, replace the expression with a single writable variable, property, or array element.</span></span>
+
+- <span data-ttu-id="08462-117">문에서 값 형식 (일반적으로 구조체)을 통해 간접적으로 액세스 하는 경우 값 형식을 저장할 변수를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="08462-117">If the statement makes indirect access through a value type (usually a structure), create a variable to hold the value type.</span></span>
+
+- <span data-ttu-id="08462-118">적절 한 구조 (또는 다른 값 형식)를 변수에 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="08462-118">Assign the appropriate structure (or other value type) to the variable.</span></span>
+
+- <span data-ttu-id="08462-119">변수를 사용 하 여 속성에 액세스 하 고 값을 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="08462-119">Use the variable to access the property to assign it a value.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="08462-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="08462-120">See also</span></span>
+
+- [<span data-ttu-id="08462-121">연산자 및 식</span><span class="sxs-lookup"><span data-stu-id="08462-121">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [<span data-ttu-id="08462-122">문(C++)</span><span class="sxs-lookup"><span data-stu-id="08462-122">Statements</span></span>](../../../visual-basic/programming-guide/language-features/statements.md)
+- [<span data-ttu-id="08462-123">프로시저 문제 해결</span><span class="sxs-lookup"><span data-stu-id="08462-123">Troubleshooting Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
