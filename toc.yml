@@ -13,6 +13,9 @@
           tocHref: /dotnet/standard/
           topicHref: /dotnet/standard/index
           items:
+            - name: .NET 어셈블리
+              tocHref: /dotnet/standard/assembly
+              topicHref: /dotnet/standard/assembly/index
             - name: 오픈 소스 라이브러리 지침
               tocHref: /dotnet/standard/library-guidance/
               topicHref: /dotnet/standard/library-guidance/index
@@ -184,7 +187,7 @@
                         - name: LINQ to SQL
                           tocHref: /dotnet/framework/data/adonet/sql/linq/
                           topicHref: /dotnet/framework/data/adonet/sql/linq/index
-                - name: '트랜잭션 처리 '
+                - name: 트랜잭션 처리
                   tocHref: /dotnet/framework/data/transactions/
                   topicHref: /dotnet/framework/data/transactions/index
                 - name: WCF Data Services
