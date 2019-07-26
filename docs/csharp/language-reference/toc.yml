@@ -207,8 +207,6 @@
           items:
             - name: await
               href: keywords/await.md
-            - name: sizeof
-              href: keywords/sizeof.md
         - name: 액세스 키워드
           items:
             - name: base
@@ -340,6 +338,8 @@
           href: operators/nameof.md
         - name: new 연산자
           href: operators/new-operator.md
+        - name: sizeof 연산자
+          href: operators/sizeof.md
         - name: stackalloc 연산자
           href: operators/stackalloc.md
         - name: true 및 false 연산자

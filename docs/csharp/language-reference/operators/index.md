@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: b6a1cc3ced3205037eb5b83ac3841efbfbd1b5b9
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 13ad16ab768cdaee96cab29811e2ed058dee977a
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331222"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512246"
 ---
 # <a name="c-operators-c-reference"></a>C# 연산자(C# 참조)
 
@@ -65,7 +65,7 @@ C#은 기본 제공 형식에서 지원되는 미리 정의된 여러 연산자�
 
 [delegate](delegate-operator.md) – 대리자 인스턴스를 선언하고 반환합니다.
 
-[sizeof](../keywords/sizeof.md) – 형식 피연산자의 크기(바이트)를 반환합니다.
+[sizeof](sizeof.md) – 형식 피연산자의 크기(바이트)를 반환합니다.
 
 [stackalloc](stackalloc.md) - 스택의 메모리 블록을 할당합니다.
 
