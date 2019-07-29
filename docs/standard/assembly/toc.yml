@@ -1,0 +1,11 @@
+- name: .NET 어셈블리
+  href: index.md
+  items:
+    - name: Friend 어셈블리
+      items:
+        - name: 개요
+          href: friend-assemblies.md
+    - name: .NET 어셈블리 파일 형식
+      href: file-format.md
+    - name: .NET Core에서 어셈블리 언로드 기능을 사용하고 디버그하는 방법
+      href: unloadability-howto.md
