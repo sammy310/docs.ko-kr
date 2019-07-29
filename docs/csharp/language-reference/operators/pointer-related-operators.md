@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 03d6ed19ef01be7712ff2fdde0c1be2a6673e64f
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 830aef8546191df3df4a70e350ba561367a9e474
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401437"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512348"
 ---
 # <a name="pointer-related-operators-c-reference"></a>포인터 관련 연산자(C# 참조)
 
@@ -124,7 +124,7 @@ x->y
 - `p + n` 및 `n + p` 식 모두 `p`에서 지정한 주소에 `n * sizeof(T)`를 추가한 결과 `T*` 유형의 포인터를 생성합니다.
 - `p - n` 식은 `p`에 의해 지정된 주소에서 `n * sizeof(T)`를 뺀 결과 `T*` 유형의 포인터를 생성합니다.
 
-[`sizeof` 연산자](../keywords/sizeof.md)는 바이트 단위의 형식 크기를 가져옵니다.
+[`sizeof` 연산자](sizeof.md)는 바이트 단위의 형식 크기를 가져옵니다.
 
 다음 예제에서는 포인터로 `+` 연산자를 사용하는 방법을 보여줍니다.
 
@@ -193,4 +193,4 @@ x->y
 - [unsafe 키워드](../keywords/unsafe.md)
 - [fixed 키워드](../keywords/fixed-statement.md)
 - [stackalloc 연산자](stackalloc.md)
-- [sizeof 연산자](../keywords/sizeof.md)
+- [sizeof 연산자](sizeof.md)

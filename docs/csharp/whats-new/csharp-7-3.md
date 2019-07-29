@@ -2,12 +2,12 @@
 title: C# 7.3의 새로운 기능
 description: C# 7.3의 새로운 기능에 대한 개요입니다.
 ms.date: 05/16/2018
-ms.openlocfilehash: 768070ead2b180d5f4491ac87be6c248c39e9944
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: ca53073db1b61300186a483001f79bf0caa79169
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397788"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433519"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3의 새로운 기능
 
@@ -129,7 +129,7 @@ Span<int> arr = stackalloc [] {1, 2, 3};
 
 이제 형식 매개 변수에 대한 기본 클래스 제약 조건으로 <xref:System.Enum?displayProperty=nameWithType> 또는 <xref:System.Delegate?displayProperty=nameWithType> 형식을 지정할 수 있습니다.
 
-또한 새 `unmanaged` 제약 조건을 사용하여 형식 매개 변수가 **관리되지 않는 형식**이 되도록 지정할 수 있습니다. **관리되지 않는 형식**은 참조 형식이 아니고 모든 중첩 수준의 참조 형식을 포함하지 않는 형식입니다.
+또한 새 `unmanaged` 제약 조건을 사용하여 형식 매개 변수가 [관리되지 않는 형식](../language-reference/builtin-types/unmanaged-types.md)이 되도록 지정할 수 있습니다.
 
 자세한 내용은 [`where` 제네릭 제약 조건](../language-reference/keywords/where-generic-type-constraint.md) 및 [형식 매개 변수 제약 조건](../programming-guide/generics/constraints-on-type-parameters.md)에 대한 문서를 참조하세요.
 

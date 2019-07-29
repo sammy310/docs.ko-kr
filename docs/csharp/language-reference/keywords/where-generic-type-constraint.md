@@ -7,12 +7,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 3982c97bc56b42237700343b2572d1bba930bbbd
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: bccc22f5362b22540dadf08e6b21a07cbc578327
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422768"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433858"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where(제네릭 형식 제약 조건)(C# 참조)
 
@@ -33,7 +33,7 @@ ms.locfileid: "66422768"
 
 [!code-csharp[using the class and struct constraints](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
 
-`where` 절에 `unmanaged` 제약 조건이 포함될 수도 있습니다. `unmanaged` 제약 조건은 형식 매개 변수를 **관리되지 않는 형식**으로 알려진 형식으로 제한합니다. **관리되지 않는 형식**은 참조 형식이 아니며, 모든 중첩 수준에서 참조 형식 필드를 포함하지 않는 형식입니다. `unmanaged` 제약 조건을 사용하면 C#에서 하위 수준의 interop 코드를 더 쉽게 작성할 수 있습니다. 이 제약 조건을 통해 모든 관리되지 않는 형식에서 재사용 가능한 루틴을 사용할 수 있습니다. `unmanaged` 제약 조건은 `class` 또는 `struct` 제약 조건과 결합할 수 없습니다. `unmanaged` 제약 조건에 따라 형식이 `struct`이어야 합니다.
+`where` 절에 `unmanaged` 제약 조건이 포함될 수도 있습니다. `unmanaged` 제약 조건은 형식 매개 변수를 [관리되지 않는 형식](../builtin-types/unmanaged-types.md)으로 알려진 형식으로 제한합니다. `unmanaged` 제약 조건을 사용하면 C#에서 하위 수준의 interop 코드를 더 쉽게 작성할 수 있습니다. 이 제약 조건을 통해 모든 관리되지 않는 형식에서 재사용 가능한 루틴을 사용할 수 있습니다. `unmanaged` 제약 조건은 `class` 또는 `struct` 제약 조건과 결합할 수 없습니다. `unmanaged` 제약 조건에 따라 형식이 `struct`이어야 합니다.
 
 [!code-csharp[using the unmanaged constraint](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#4)]
 

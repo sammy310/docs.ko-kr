@@ -6,12 +6,12 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: f053a74fcb87971506b83ca8ca2076517ddddf56
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: f8924f5a1e93a616b114506f383242fd2fde615c
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307100"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433566"
 ---
 # <a name="static-constructors-c-programming-guide"></a>정적 생성자(C# 프로그래밍 가이드)
 정적 생성자는 [정적](../../../csharp/language-reference/keywords/static.md) 데이터를 초기화하거나 한 번만 수행해야 하는 특정 작업을 수행하는 데 사용됩니다. 첫 번째 인스턴스가 만들어지거나 정적 멤버가 참조되기 전에 자동으로 호출됩니다.  
@@ -67,4 +67,4 @@ ms.locfileid: "67307100"
 - [정적 클래스 및 정적 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
 - [종료자](../../../csharp/programming-guide/classes-and-structs/destructors.md)
 - [생성자 디자인 지침](../../../standard/design-guidelines/constructor.md#type-constructor-guidelines)
-- [보안 경고 - CA2121: 정적 생성자는 private이어야 합니다.](https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2121-static-constructors-should-be-private)
+- [보안 경고 - CA2121: 정적 생성자는 private이어야 합니다.](https://docs.microsoft.com/visualstudio/code-quality/ca2121-static-constructors-should-be-private)
