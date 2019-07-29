@@ -4,12 +4,12 @@ description: .NET 이식성 분석기 도구를 사용하여 .NET Core, .NET Sta
 ms.date: 07/18/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 433936480aa1181370a6ebc2bd2ba9914a50dfa2
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 32b4f980061b0975c413a8cde436074f76cfabc9
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331736"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433947"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET 이식성 분석기
 
@@ -29,7 +29,7 @@ Visual Studio에서 .NET 이식성 분석기 사용을 시작하려면 먼저 [V
 
 ![이식성 스크린샷](./media/portability-analyzer/portability-screenshot.png)
 
-ApiPort 콘솔 애플리케이션을 사용하여 [ApiPort 리포지토리](http://aka.ms/apiportdownload)에서 다운로드할 수도 있습니다. `listTargets` 명령 옵션을 사용하여 사용 가능한 대상 목록을 표시한 다음, `-t` 또는 `--target` 명령 옵션을 지정하여 대상 플랫폼을 선택할 수 있습니다. 
+ApiPort 콘솔 애플리케이션을 사용하여 [ApiPort 리포지토리](https://aka.ms/apiportdownload)에서 다운로드할 수도 있습니다. `listTargets` 명령 옵션을 사용하여 사용 가능한 대상 목록을 표시한 다음, `-t` 또는 `--target` 명령 옵션을 지정하여 대상 플랫폼을 선택할 수 있습니다. 
 
 ### <a name="analyze-portability"></a>이식성 분석
 Visual Studio에서 전체 프로젝트를 분석하려면 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **어셈블리 이식성 분석**을 선택합니다. 전체 프로젝트를 분석하지 않으려면 **분석** 메뉴로 이동한 다음 **어셈블리 이식성 분석**을 선택합니다. 여기서 프로젝트의 실행 파일 또는 DLL을 선택합니다.
