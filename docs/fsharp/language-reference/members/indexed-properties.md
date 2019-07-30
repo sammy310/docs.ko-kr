@@ -1,19 +1,19 @@
 ---
 title: 인덱싱된 속성
-description: 인덱싱된 속성에 대해 알아봅니다 F#를 정렬 된 데이터에 대 한 배열 유사 액세스를 허용 합니다.
+description: 정렬 된 데이터에 대 F#한 배열 유사 액세스를 허용 하는의 인덱싱된 속성에 대해 알아봅니다.
 ms.date: 10/17/2018
-ms.openlocfilehash: 7fc8f46e029255c6ed985a43b92c8f7c2908c428
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 379417e31b8e178d8c939e5b23dc144bfb17e562
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489482"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627563"
 ---
-# <a name="indexed-properties"></a><span data-ttu-id="f7837-103">인덱싱된 속성</span><span class="sxs-lookup"><span data-stu-id="f7837-103">Indexed Properties</span></span>
+# <a name="indexed-properties"></a><span data-ttu-id="8d082-103">인덱싱된 속성</span><span class="sxs-lookup"><span data-stu-id="8d082-103">Indexed Properties</span></span>
 
-<span data-ttu-id="f7837-104">순서가 지정 된 데이터에 대 한 추상화 하는 클래스를 정의 하는 경우 기본 구현에 노출 하지 않고 해당 데이터에 대 한 인덱싱된 액세스를 제공 하는 데 도움이 경우가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f7837-104">When defining a class that abstracts over ordered data, it can sometimes be helpful to provide indexed access to that data without exposing the underlying implementation.</span></span> <span data-ttu-id="f7837-105">그러려면는 `Item` 멤버입니다.</span><span class="sxs-lookup"><span data-stu-id="f7837-105">This is done with the `Item` member.</span></span>
+<span data-ttu-id="8d082-104">순서가 지정 된 데이터를 추상화 하는 클래스를 정의 하는 경우 기본 구현을 노출 하지 않고 해당 데이터에 대 한 인덱싱된 액세스를 제공 하는 것이 유용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8d082-104">When defining a class that abstracts over ordered data, it can sometimes be helpful to provide indexed access to that data without exposing the underlying implementation.</span></span> <span data-ttu-id="8d082-105">이 작업은 `Item` 멤버를 사용 하 여 수행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8d082-105">This is done with the `Item` member.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="f7837-106">구문</span><span class="sxs-lookup"><span data-stu-id="f7837-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="8d082-106">구문</span><span class="sxs-lookup"><span data-stu-id="8d082-106">Syntax</span></span>
 
 ```fsharp
 // Indexed property that can be read and written to
@@ -34,23 +34,23 @@ member self-identifier.Item
         set-member-body
 ```
 
-## <a name="remarks"></a><span data-ttu-id="f7837-107">설명</span><span class="sxs-lookup"><span data-stu-id="f7837-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="8d082-107">설명</span><span class="sxs-lookup"><span data-stu-id="8d082-107">Remarks</span></span>
 
-<span data-ttu-id="f7837-108">이전 구문 형식의 둘 다 있는 인덱싱된 속성을 정의 하는 방법을 보여 줍니다는 `get` 및 `set` 메서드를가 `get` 메서드만 있거나는 `set` 방법 으로만 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="f7837-108">The forms of the previous syntax show how to define indexed properties that have both a `get` and a `set` method, have a `get` method only, or have a `set` method only.</span></span> <span data-ttu-id="f7837-109">또한만 get 및 set만 나와 있는 구문에 대 한 표시 된 구문은 모두 결합 하 고 get 및 set를 둘 다 있는 속성을 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f7837-109">You can also combine both the syntax shown for get only and the syntax shown for set only, and produce a property that has both get and set.</span></span> <span data-ttu-id="f7837-110">이 두 번째 형식은 get에 다른 액세스 가능성 한정자 및 특성을 배치 하 고 방법을 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f7837-110">This latter form allows you to put different accessibility modifiers and attributes on the get and set methods.</span></span>
+<span data-ttu-id="8d082-108">이전 `get` 구문의 형식은 `set` 및 메서드를 모두 포함 하거나, `get` 메서드만 포함 하거나, `set` 메서드만 포함 하는 인덱싱된 속성을 정의 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8d082-108">The forms of the previous syntax show how to define indexed properties that have both a `get` and a `set` method, have a `get` method only, or have a `set` method only.</span></span> <span data-ttu-id="8d082-109">Get only에 표시 된 구문과 set only에 대 한 구문을 함께 사용할 수도 있으며 get 및 set이 모두 있는 속성을 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d082-109">You can also combine both the syntax shown for get only and the syntax shown for set only, and produce a property that has both get and set.</span></span> <span data-ttu-id="8d082-110">이 두 번째 형식을 사용 하면 get 및 set 메서드에 다른 액세스 가능성 한정자 및 특성을 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8d082-110">This latter form allows you to put different accessibility modifiers and attributes on the get and set methods.</span></span>
 
-<span data-ttu-id="f7837-111">이름을 사용 하 여 `Item`, 컴파일러는 인덱싱된 기본 속성으로 속성을 처리 합니다.</span><span class="sxs-lookup"><span data-stu-id="f7837-111">By using the name `Item`, the compiler treats the property as a default indexed property.</span></span> <span data-ttu-id="f7837-112">A *인덱싱된 기본 속성* 개체 인스턴스에서 배열 유사 구문을 사용 하 여 액세스할 수 있는 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="f7837-112">A *default indexed property* is a property that you can access by using array-like syntax on the object instance.</span></span> <span data-ttu-id="f7837-113">예를 들어 경우 `o` 구문은이 속성을 정의 하는 형식의 개체인 `o.[index]` 속성에 액세스 하는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f7837-113">For example, if `o` is an object of the type that defines this property, the syntax `o.[index]` is used to access the property.</span></span>
+<span data-ttu-id="8d082-111">컴파일러는 이름을 `Item`사용 하 여 속성을 인덱싱된 기본 속성으로 처리 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d082-111">By using the name `Item`, the compiler treats the property as a default indexed property.</span></span> <span data-ttu-id="8d082-112">*인덱싱된 기본 속성* 은 개체 인스턴스에서 배열 형식 구문을 사용 하 여 액세스할 수 있는 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="8d082-112">A *default indexed property* is a property that you can access by using array-like syntax on the object instance.</span></span> <span data-ttu-id="8d082-113">예를 들어가 `o` 이 속성을 정의 하는 형식의 개체 이면 구문은 `o.[index]` 속성에 액세스 하는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8d082-113">For example, if `o` is an object of the type that defines this property, the syntax `o.[index]` is used to access the property.</span></span>
 
-<span data-ttu-id="f7837-114">기본이 아닌 인덱싱된 속성에 액세스 하기 위한 구문은 속성 및 일반 멤버와 마찬가지로 괄호로 인덱스의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="f7837-114">The syntax for accessing a non-default indexed property is to provide the name of the property and the index in parentheses, just like a regular member.</span></span> <span data-ttu-id="f7837-115">예를 들어 경우 속성 `o` 라고 `Ordinal`, 작성 `o.Ordinal(index)` 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f7837-115">For example, if the property on `o` is called `Ordinal`, you write `o.Ordinal(index)` to access it.</span></span>
+<span data-ttu-id="8d082-114">기본이 아닌 인덱싱된 속성에 액세스 하기 위한 구문은 일반 멤버와 마찬가지로 속성의 이름과 인덱스를 괄호로 묶어 제공 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="8d082-114">The syntax for accessing a non-default indexed property is to provide the name of the property and the index in parentheses, just like a regular member.</span></span> <span data-ttu-id="8d082-115">예를 들어의 속성이 호출 `o` `Ordinal`되는 경우에는 해당 `o.Ordinal(index)` 속성에 액세스 하도록 작성 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d082-115">For example, if the property on `o` is called `Ordinal`, you write `o.Ordinal(index)` to access it.</span></span>
 
-<span data-ttu-id="f7837-116">사용 하는 폼에 관계 없이 항상 set 메서드 인덱싱된 속성에 대 한 커리 된 폼을 사용 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f7837-116">Regardless of which form you use, you should always use the curried form for the set method on an indexed property.</span></span> <span data-ttu-id="f7837-117">커리 된 함수에 대 한 자세한 내용은 [함수](../functions/index.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="f7837-117">For information about curried functions, see [Functions](../functions/index.md).</span></span>
+<span data-ttu-id="8d082-116">사용 하는 폼에 관계 없이 항상 인덱싱된 속성의 set 메서드에 대해 커리 된 형식을 사용 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d082-116">Regardless of which form you use, you should always use the curried form for the set method on an indexed property.</span></span> <span data-ttu-id="8d082-117">커리 되는 함수에 대 한 자세한 내용은 [함수](../functions/index.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="8d082-117">For information about curried functions, see [Functions](../functions/index.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="f7837-118">예제</span><span class="sxs-lookup"><span data-stu-id="f7837-118">Example</span></span>
+## <a name="example"></a><span data-ttu-id="8d082-118">예제</span><span class="sxs-lookup"><span data-stu-id="8d082-118">Example</span></span>
 
-<span data-ttu-id="f7837-119">다음 코드 예제에서는 정 및 기본 및 get 및 set 메서드는 기본이 아닌 인덱싱된 속성의 사용을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f7837-119">The following code example illustrates the definition and use of default and non-default indexed properties that have get and set methods.</span></span>
+<span data-ttu-id="8d082-119">다음 코드 예제에서는 get 및 set 메서드를 사용 하는 기본 및 기본이 아닌 인덱싱된 속성을 정의 하 고 사용 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8d082-119">The following code example illustrates the definition and use of default and non-default indexed properties that have get and set methods.</span></span>
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3301.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3301.fs)]
 
-## <a name="output"></a><span data-ttu-id="f7837-120">출력</span><span class="sxs-lookup"><span data-stu-id="f7837-120">Output</span></span>
+## <a name="output"></a><span data-ttu-id="8d082-120">출력</span><span class="sxs-lookup"><span data-stu-id="8d082-120">Output</span></span>
 
 ```console
 ONE two three four five six seven eight nine ten
@@ -58,11 +58,11 @@ ONE first two second three third four fourth five fifth six 6th
 seven seventh eight eighth nine ninth ten tenth
 ```
 
-## <a name="indexed-properties-with-multiple-index-values"></a><span data-ttu-id="f7837-121">여러 인덱스 값을 사용 하 여 인덱싱된 속성</span><span class="sxs-lookup"><span data-stu-id="f7837-121">Indexed Properties with multiple index values</span></span>
+## <a name="indexed-properties-with-multiple-index-values"></a><span data-ttu-id="8d082-121">여러 인덱스 값이 있는 인덱싱된 속성</span><span class="sxs-lookup"><span data-stu-id="8d082-121">Indexed Properties with multiple index values</span></span>
 
-<span data-ttu-id="f7837-122">인덱싱된 속성 둘 이상의 인덱스 값을 가질 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f7837-122">Indexed properties can have more than one index value.</span></span> <span data-ttu-id="f7837-123">이 경우 값 속성을 사용 하는 경우 쉼표로 구분 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f7837-123">In that case, the values are separated by commas when the property is used.</span></span> <span data-ttu-id="f7837-124">이러한 속성의 set 메서드에 두 개의 커리 된 인수는 첫 번째는 키가 포함 된 튜플 및는 두 번째 값을 설정 하는 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f7837-124">The set method in such a property must have two curried arguments, the first of which is a tuple containing the keys, and the second of which is the value to set.</span></span>
+<span data-ttu-id="8d082-122">인덱싱된 속성에는 두 개 이상의 인덱스 값이 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8d082-122">Indexed properties can have more than one index value.</span></span> <span data-ttu-id="8d082-123">이 경우 속성을 사용할 때 값은 쉼표로 구분 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8d082-123">In that case, the values are separated by commas when the property is used.</span></span> <span data-ttu-id="8d082-124">이러한 속성의 set 메서드에는 두 개의 커리 된 인수가 있어야 하 고, 첫 번째 인수는 키를 포함 하는 튜플이 고, 두 번째 인수는 설정 하려는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="8d082-124">The set method in such a property must have two curried arguments, the first of which is a tuple containing the keys, and the second of which is the value to set.</span></span>
 
-<span data-ttu-id="f7837-125">다음 코드는 여러 인덱스 값을 사용 하 여 인덱싱된 속성의 사용을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f7837-125">The following code demonstrates the use of an indexed property with multiple index values.</span></span>
+<span data-ttu-id="8d082-125">다음 코드에서는 여러 인덱스 값이 있는 인덱싱된 속성을 사용 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8d082-125">The following code demonstrates the use of an indexed property with multiple index values.</span></span>
 
 ```fsharp
 open System.Collections.Generic
@@ -82,6 +82,6 @@ for i in 1..1000 do
     sm.[i, i] <- float i * float i
 ```
 
-## <a name="see-also"></a><span data-ttu-id="f7837-126">참고자료</span><span class="sxs-lookup"><span data-stu-id="f7837-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8d082-126">참고자료</span><span class="sxs-lookup"><span data-stu-id="8d082-126">See also</span></span>
 
-- [<span data-ttu-id="f7837-127">멤버</span><span class="sxs-lookup"><span data-stu-id="f7837-127">Members</span></span>](index.md)
+- [<span data-ttu-id="8d082-127">멤버</span><span class="sxs-lookup"><span data-stu-id="8d082-127">Members</span></span>](index.md)
