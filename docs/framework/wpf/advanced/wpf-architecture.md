@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 987e48f163d35d27f6736464d7497451cca82c0c
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 440a6d76e5295613d2887c0a77d9a49e870e580b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400853"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629825"
 ---
 # <a name="wpf-architecture"></a>WPF 아키텍처
 이 항목에서는 Windows Presentation Foundation (WPF) 클래스 계층 구조 둘러보기를 제공 합니다. 이 항목은 대부분의 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 주요 하위 시스템을 다루며 이들이 어떻게 상호 작용하는지를 설명하고, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 설계자가 선택한 몇 가지 사항에 대해서 자세히 설명합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "68400853"
 ## <a name="systemobject"></a>System.Object  
  기본 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 프로그래밍 모델은 관리 코드를 통해 노출됩니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 초기 디자인 단계에서는 시스템의 관리되는 구성 요소와 관리되지 않는 구성 요소를 정확하게 구분하는 방법에 대한 많은 논쟁이 있었습니다. CLR은 개발 작업을 더 생산적이 고 강력한 기능을 제공 하는 많은 기능을 제공 합니다 (메모리 관리, 오류 처리, 공용 유형 시스템 등). 단,이 경우에는 비용이 듭니다.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 주요 구성 요소는 아래 그림에 설명되어 있습니다. 다이어그램의 빨간색 섹션(PresentationFramework, PresentationCore 및 milcore)은 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 주요 코드 부분입니다. 이 중에서 하나(milcore)만 관리되지 않는 구성 요소입니다. Milcore는 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]와의 긴밀한 통합을 위해 비관리 코드로 작성되어 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서의 모든 디스플레이는 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 엔진을 통해 수행되므로 효율적인 하드웨어 및 소프트웨어 렌더링을 허용합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에는 메모리 및 실행에 대한 세부적인 제어도 필요합니다. Milcore의 컴퍼지션 엔진은 성능이 매우 중요 하므로 CLR의 많은 이점을 제공 하 여 성능을 향상 시킬 수 있습니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 주요 구성 요소는 아래 그림에 설명되어 있습니다. 다이어그램의 빨간색 섹션(PresentationFramework, PresentationCore 및 milcore)은 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 주요 코드 부분입니다. 이 중에서 하나(milcore)만 관리되지 않는 구성 요소입니다. Milcore는 DirectX와 긴밀 하 게 통합 될 수 있도록 비관리 코드로 작성 됩니다. 의 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 모든 디스플레이는 DirectX 엔진을 통해 수행 되며 하드웨어 및 소프트웨어를 효율적으로 렌더링할 수 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에는 메모리 및 실행에 대한 세부적인 제어도 필요합니다. Milcore의 컴퍼지션 엔진은 성능이 매우 중요 하므로 CLR의 많은 이점을 제공 하 여 성능을 향상 시킬 수 있습니다.  
   
  ![.NET Framework 내 WPF의 위치.](./media/wpf-architect1.PNG "wpf_architect1")  
   

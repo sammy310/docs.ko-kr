@@ -5,15 +5,15 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: db7d6ec5663d657969e1508bd0b9f62c25e491b0
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.openlocfilehash: 8f1c4415a834f7eb7c3048a89ab81de6921b7bf6
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484687"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629932"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType 레지스트리 설정
-이 항목에서는 응용 프로그램에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 사용 되는 [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] 레지스트리 설정에 대 한 개요를 제공 합니다.  
+이 항목에서는 WPF 응용 프로그램에서 사용 되는 Microsoft ClearType 레지스트리 설정에 대 한 개요를 제공 합니다.  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>기술 개요  

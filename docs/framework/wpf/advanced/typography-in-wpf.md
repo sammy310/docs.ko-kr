@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: ffbd59cb398d417a36d75ff0ef9ef4ef143c30c0
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.openlocfilehash: 743b9ec45c138053fcfcb5cbb1ea9c8490ba919e
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484643"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629911"
 ---
 # <a name="typography-in-wpf"></a>WPF의 입력 체계
 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 주요 입력 체계 기능을 소개합니다. 이러한 기능에는 텍스트 렌더링의 향상된 품질 및 성능, [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 입력 체계 지원, 향상된 국가별 텍스트, 향상된 글꼴 지원 및 새 텍스트 API(응용 프로그래밍 인터페이스)가 포함됩니다.  
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>텍스트의 향상된 품질 및 성능  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 텍스트는 [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]을 사용하여 렌더링되어 텍스트의 명확성 및 가독성이 향상됩니다. ClearType은에서 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 개발한 소프트웨어 기술로 랩톱 화면, Pocket PC 화면, 평면 패널 모니터 등 기존 lcd (액체 크리스탈 디스플레이)의 텍스트 가독성을 향상 시킵니다. ClearType은 픽셀의 소수 부분에 문자를 정렬 하 여 텍스트를 진정한 모양으로 더 크게 표시할 수 있는 하위 픽셀 렌더링을 사용 합니다. 해상도를 더 세밀하게 지원할수록 텍스트의 미세한 부분까지 더 선명하게 표시되므로 오랫동안 더 쉽게 읽을 수 있습니다. 에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ClearType의 또 다른 향상 된 기능은 y 방향 앤티앨리어싱을 가지 며 텍스트 문자에서 단순 곡선의 위쪽 및 아래쪽을 곡선으로 만들고 있습니다. ClearType 기능에 대 한 자세한 내용은 [Cleartype 개요](cleartype-overview.md)를 참조 하세요.  
+ 의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 텍스트는 텍스트의 명확성 및 가독성을 향상 시키는 Microsoft ClearType을 사용 하 여 렌더링 됩니다. ClearType은에서 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 개발한 소프트웨어 기술로 랩톱 화면, Pocket PC 화면, 평면 패널 모니터 등 기존 lcd (액체 크리스탈 디스플레이)의 텍스트 가독성을 향상 시킵니다. ClearType은 픽셀의 소수 부분에 문자를 정렬 하 여 텍스트를 진정한 모양으로 더 크게 표시할 수 있는 하위 픽셀 렌더링을 사용 합니다. 해상도를 더 세밀하게 지원할수록 텍스트의 미세한 부분까지 더 선명하게 표시되므로 오랫동안 더 쉽게 읽을 수 있습니다. 에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ClearType의 또 다른 향상 된 기능은 y 방향 앤티앨리어싱을 가지 며 텍스트 문자에서 단순 곡선의 위쪽 및 아래쪽을 곡선으로 만들고 있습니다. ClearType 기능에 대 한 자세한 내용은 [Cleartype 개요](cleartype-overview.md)를 참조 하세요.  
   
  ![ClearType y 방향 앤티 앨리어싱을 사용한 텍스트](./media/typography-in-wpf/text-y-direction-antialiasing.gif)  
 ClearType y 방향 앤티앨리어싱으로 표시된 텍스트  

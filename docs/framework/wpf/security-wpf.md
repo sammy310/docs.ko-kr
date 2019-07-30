@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 8d01e018e570a1ab530f476368d80f4082a73bda
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: ec026fd9273e99c88ec2e30cf46c3147419ace94
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400797"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629804"
 ---
 # <a name="security-wpf"></a>보안(WPF)
 <a name="introduction"></a>Windows Presentation Foundation (WPF) 독립 실행형 및 브라우저에서 호스팅되는 응용 프로그램을 개발 하는 경우 보안 모델을 고려해 야 합니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]독립 실행형 응용 프로그램은 Windows Installer (.msi), XCopy 또는 ClickOnce를 사용 하 여 배포 되었는지와 상관 없이 무제한 권한 (CAS**FullTrust** 권한 집합)으로 실행 됩니다. ClickOnce를 포함한 부분 신뢰, 독립 실행형 WPF 애플리케이션 배포가 지원되지 않습니다. 그러나 완전 신뢰 호스트 응용 프로그램은 .NET Framework 추가 기능 모델을 사용 하 <xref:System.AppDomain> 여 부분 신뢰를 만들 수 있습니다. 자세한 내용은 [WPF 추가 기능 개요](./app-development/wpf-add-ins-overview.md)를 참조 하세요.  
@@ -216,9 +216,9 @@ ms.locfileid: "68400797"
   
 <a name="APTCA"></a>   
 ## <a name="disabling-aptca-assemblies-for-partially-trusted-client-applications"></a>부분적으로 신뢰할 수 있는 클라이언트 애플리케이션에 대한 APTCA 어셈블리를 사용하지 않도록 설정  
- 관리 되는 어셈블리를에 [!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]설치 하는 경우 사용자가 명시적으로 설치 하는 권한을 제공 해야 하므로 완전히 신뢰할 수 있게 됩니다. 완전히 신뢰할 수 있기 때문에 완전히 신뢰할 수 있는 관리 클라이언트 애플리케이션에서 사용할 수 있습니다. 부분적으로 신뢰할 수 있는 응용 프로그램에서 사용할 수 있도록 하려면 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA)로 표시 해야 합니다. 부분 신뢰로 실행하기에 안전한 것으로 테스트된 어셈블리만 이 특성으로 표시되어야 합니다.  
+ GAC (전역 어셈블리 캐시)에 관리 되는 어셈블리를 설치 하는 경우 사용자가 명시적으로 해당 어셈블리를 설치할 수 있는 권한을 제공 해야 하므로 완전히 신뢰할 수 있게 됩니다. 완전히 신뢰할 수 있기 때문에 완전히 신뢰할 수 있는 관리 클라이언트 애플리케이션에서 사용할 수 있습니다. 부분적으로 신뢰할 수 있는 응용 프로그램에서 사용할 수 있도록 하려면 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA)로 표시 해야 합니다. 부분 신뢰로 실행하기에 안전한 것으로 테스트된 어셈블리만 이 특성으로 표시되어야 합니다.  
   
- 그러나 APTCA 어셈블리는에 설치 [!INCLUDE[TLA2#tla_gac](../../../includes/tla2sharptla-gac-md.md)]된 후에 보안 결함을 나타낼 수 있습니다. 보안 결함이 발견되면 어셈블리 게시자는 기존 설치에서 문제를 해결하는 보안 업데이트를 생성할 수 있으며, 문제가 발견된 후 발생할 수 있는 설치를 방지할 수 있습니다. 업데이트에 대한 한 가지 옵션은 어셈블리를 제거하는 것이지만 어셈블리를 사용하는 완전히 신뢰할 수 있는 다른 클라이언트 애플리케이션이 중단될 수 있습니다.  
+ 그러나 APTCA 어셈블리는 GAC에 설치 된 후에 보안 결함을 나타낼 수 있습니다. 보안 결함이 발견되면 어셈블리 게시자는 기존 설치에서 문제를 해결하는 보안 업데이트를 생성할 수 있으며, 문제가 발견된 후 발생할 수 있는 설치를 방지할 수 있습니다. 업데이트에 대한 한 가지 옵션은 어셈블리를 제거하는 것이지만 어셈블리를 사용하는 완전히 신뢰할 수 있는 다른 클라이언트 애플리케이션이 중단될 수 있습니다.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]aptca 어셈블리를 제거 하지 않고 aptca 어셈블리를 부분적으로 신뢰할 [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] 수 있도록 비활성화할 수 있는 메커니즘을 제공 합니다.  
   
@@ -249,7 +249,7 @@ ms.locfileid: "68400797"
   
  그러나 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] <xref:System.Windows.Navigation.NavigationWindow> 또는 독립<xref:System.Windows.Controls.Frame> 실행형 응용 프로그램에서 느슨한 파일을 탐색 하는 경우에는 보안 동작이 다릅니다.  
   
- 두 경우 모두 탐색 되는 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 느슨한 파일은 해당 호스트 응용 프로그램의 사용 권한을 상속 합니다. 그러나이 동작은 보안 관점에서 바람직하지 않을 수 있습니다. 특히, 신뢰 되지 않거나 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 알 수 없는 엔터티에서 느슨한 파일이 생성 된 경우에는 특히 그렇습니다. 이 형식의 콘텐츠는 *외부 콘텐츠*라고 하며, 및 <xref:System.Windows.Controls.Frame> <xref:System.Windows.Navigation.NavigationWindow> 둘 다를 탐색할 때 격리 하도록 구성할 수 있습니다. 및 <xref:System.Windows.Controls.Frame>  에대한다음예제에표시된것처럼SandboxExternalContent속성을true로설정하여격리를구현<xref:System.Windows.Navigation.NavigationWindow>합니다.  
+ 두 경우 모두 탐색 되는 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 느슨한 파일은 해당 호스트 응용 프로그램의 사용 권한을 상속 합니다. 그러나이 동작은 보안 관점에서 바람직하지 않을 수 있습니다. 특히, 신뢰 되지 않거나 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 알 수 없는 엔터티에서 느슨한 파일이 생성 된 경우에는 특히 그렇습니다. 이 형식의 콘텐츠는 *외부 콘텐츠*라고 하며, 및 <xref:System.Windows.Controls.Frame> <xref:System.Windows.Navigation.NavigationWindow> 둘 다를 탐색할 때 격리 하도록 구성할 수 있습니다. 및 <xref:System.Windows.Controls.Frame> 에대한다음예제에표시된것처럼SandboxExternalContent속성을true로설정하여격리를구현<xref:System.Windows.Navigation.NavigationWindow>합니다.  
   
  [!code-xaml[SecurityOverviewSnippets#FrameMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window2.xaml#framemarkup)]  
   

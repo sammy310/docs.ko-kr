@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-ms.openlocfilehash: ca40e6c8dcba3da29bdb68b29c91c852e477f8f7
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 8313c2282a3b4b7b035f9f3b685a786c4471f53a
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512784"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630147"
 ---
 # <a name="char-data-type-visual-basic"></a>Char 데이터 형식(Visual Basic)
 
@@ -37,16 +37,22 @@ ms.locfileid: "68512784"
 
 Visual Basic는와 숫자 형식 사이 `Char` 에서 직접 변환 되지 않습니다. <xref:Microsoft.VisualBasic.Strings.Asc%2A> 또는 `Char` `Integer` 함수를 사용 하 여 값을 해당 코드 포인트를 나타내는로 변환할 수 있습니다. <xref:Microsoft.VisualBasic.Strings.AscW%2A> <xref:Microsoft.VisualBasic.Strings.Chr%2A> 또는 `Integer` `Char` 함수를 사용 하 여 값을 해당 코드 포인트가 있는로 변환할 수 있습니다. <xref:Microsoft.VisualBasic.Strings.ChrW%2A>
 
-형식 검사 스위치 ([Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md))가 on 인 경우 리터럴 형식 문자를 `Char` 데이터 형식으로 식별 하는 단일 문자 문자열 리터럴에 추가 해야 합니다. 다음은 이에 대한 예입니다.
+형식 검사 스위치 ( [Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md))가 on 인 경우 리터럴 형식 문자를 `Char` 데이터 형식으로 식별 하는 단일 문자 문자열 리터럴에 추가 해야 합니다. 다음은 이에 대한 예입니다. 가 on 이므로 `charVar` `Option Strict` 변수에 대 한 첫 번째 할당은 컴파일러 오류 [BC30512](../../misc/bc30512.md) 를 생성 합니다. 리터럴 형식 문자는 `c` 리터럴을 `Char` 값으로 식별 하기 때문에 두 번째는 성공적으로 컴파일됩니다.
 
 ```vb
 Option Strict On
-Dim charVar As Char
-' The following statement attempts to convert a String literal to Char.
-' Because Option Strict is On, it generates a compiler error.
-charVar = "Z"
-' The following statement succeeds because it specifies a Char literal.
-charVar = "Z"C
+
+Module CharType
+    Public Sub Main()
+        Dim charVar As Char
+
+        ' This statement generates compiler error BC30512 because Option Strict is On.  
+        charVar = "Z"  
+
+        ' The following statement succeeds because it specifies a Char literal.  
+        charVar = "Z"c
+    End Sub
+End Module
 ```
 
 ## <a name="programming-tips"></a>프로그래밍 팁
@@ -55,7 +61,7 @@ charVar = "Z"C
 
 - **Interop 고려 사항** .NET Framework 용으로 작성 되지 않은 구성 요소 (예: Automation 또는 COM 개체)와 상호 작용 하는 경우에는 다른 환경에서 문자 형식의 데이터 너비 (8 비트)가 서로 다를 수 있습니다. 이러한 구성 요소에 8 비트 인수를 전달 하는 경우 새 Visual Basic 코드 `Byte` `Char` 에서 대신로 선언 합니다.
 
-- **넓혀.** 데이터 형식이로 `String`확대 됩니다. `Char` 즉 `Char` `String`,로 변환할 수 있으며 오류가발생하지않습니다.<xref:System.OverflowException?displayProperty=nameWithType>
+- **넓혀.** 데이터 형식이로 `String`확대 됩니다. `Char` 즉,로 `Char` `String` 변환할 수 <xref:System.OverflowException?displayProperty=nameWithType>있으며이 발생 하지 않습니다.
 
 - **문자를 입력 합니다.** 리터럴 형식 문자 `C` 를 단일 문자 문자열 리터럴에 `Char` 추가 하면 데이터 형식이 됩니다. `Char`에는 식별자 형식 문자가 없습니다.
 

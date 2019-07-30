@@ -2,12 +2,12 @@
 title: Mac 용 Visual Studio에서 F# 시작
 description: Mac 용 Visual Studio에서 F#을 사용하는 방법을 알아봅니다.
 ms.date: 07/03/2018
-ms.openlocfilehash: a6997f139d7e6c5fdf77878442db0b0b75b3d727
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 679ed1ea28f5d0e0d910dbd407b38d1d2f0314f6
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949723"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629760"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Mac 용 Visual Studio에서 F# 시작
 
@@ -31,7 +31,7 @@ Mac 용 Visual Studio에서 가장 기본적인 프로젝트 중 하나는 콘�
 
 먼저 코드 작성으로 시작하세요.  `Program.fs` 파일을 열고 다음 내용으로 변경합니다.
 
-[!code-fsharp[HelloSquare](../../../samples/snippets/fsharp/getting-started/hello-square.fs)]
+[!code-fsharp[HelloSquare](~/samples/snippets/fsharp/getting-started/hello-square.fs)]
 
 이 코드 샘플에서는 입력으로 `x`를 가져와 자신과 곱셈하도록 정의된 `square`함수가 정의되어 있습니다.  F#에서는 [Typeinference](../language-reference/type-inference.md)를 사용하기 때문에 `x`의 형식을 지정할 필요가 없습니다.  F# 컴파일러는 곱셈에서 유효한 형식을 이해하고 `square`가 호출되는 방식에 따라 `x`의 형식을 할당합니다.  `square` 위로 마우스를 가져가면 다음과 같이 표시됩니다.
 

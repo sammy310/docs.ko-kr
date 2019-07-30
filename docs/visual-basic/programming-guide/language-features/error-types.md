@@ -10,28 +10,28 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], types of errors
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
-ms.openlocfilehash: 07db963ac3cf9d1c0d17c420480189d362cdaf2c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 030986111a50ab59c605a1d683fedc118d10b260
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973175"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626605"
 ---
 # <a name="error-types-visual-basic"></a>오류 형식(Visual Basic)
-Visual basic의 경우 오류 (라고도 *예외*) 세 가지 범주 중 하나에 속합니다: 구문 오류, 런타임 오류 및 논리 오류입니다.  
-  
-## <a name="syntax-errors"></a>구문 오류  
- *구문 오류* 는 코드를 작성 하는 동안 발생 하 합니다. Visual Basic에서 입력할 때 코드를 확인 합니다 **코드 편집기** 창 고 철자 부적절 하 게 언어 요소를 사용 하 여 등의 실수 한 경우 경고 합니다. 구문 오류는 오류의 가장 일반적인 형식입니다. 해결할 수 있습니다 이러한 쉽게 코딩 환경에서 발생 하는 즉시.  
-  
+Visual Basic 오류는 구문 오류, 런타임 오류 및 논리 오류의 세 가지 범주 중 하나에 속합니다.
+
+## <a name="syntax-errors"></a>구문 오류
+ *구문 오류* 는 코드를 작성 하는 동안 표시 되는 오류입니다. Visual Studio를 사용 하는 경우 코드 **편집기** 창에서 코드 Visual Basic를 입력할 때 코드를 확인 하 고 단어의 철자를 잘못 입력 하거나 언어 요소를 잘못 사용 하는 등 실수를 할 수 있습니다. 명령줄에서 컴파일하는 경우 Visual Basic 구문 오류에 대 한 정보와 함께 컴파일러 오류가 표시 됩니다. 구문 오류는 가장 일반적인 오류 유형입니다. 코딩 환경에서이를 쉽게 수정할 수 있습니다.
+
 > [!NOTE]
->  `Option Explicit` 문의 구문 오류를 방지 하는 한 가지 방법은 됩니다. 한다는 미리 응용 프로그램에서 사용할 모든 변수를 선언할 수 있습니다. 따라서 코드에서 해당 변수를 사용 하면 인쇄 오류 즉시 발생 및 해결할 수 있습니다.  
+>  문은 `Option Explicit` 구문 오류를 방지 하는 한 가지 방법입니다. 응용 프로그램에서 사용 되는 모든 변수를 미리 선언 합니다. 따라서 코드에서 이러한 변수를 사용 하는 경우에는 모든 입력 오류를 즉시 catch 하 고 수정할 수 있습니다.
+
+## <a name="run-time-errors"></a>런타임 오류
+ *런타임 오류* 는 코드를 컴파일하고 실행 한 후에만 표시 되는 오류입니다. 여기에는 구문 오류가 없지만 실행 되지 않는 것 처럼 보이는 코드가 포함 됩니다. 예를 들어 파일을 여는 코드 줄을 올바르게 작성할 수 있습니다. 그러나 파일이 없으면 응용 프로그램에서 파일을 열 수 없으며 예외를 throw 합니다. 잘못 된 코드를 다시 작성 하거나 [예외 처리](../../language-reference/statements/try-catch-finally-statement.md)를 사용 하 여 대부분의 런타임 오류를 수정한 다음 다시 컴파일하고 다시 실행할 수 있습니다.
   
-## <a name="run-time-errors"></a>런타임 오류  
- *런타임 오류* 는 컴파일 및 코드를 실행 한 후에 표시 되는 것입니다. 이러한 구문 오류가 없는지 되었지만 실행 되지 것입니다는 올바른 것으로 나타날 수 있는 코드를 포함 합니다. 예를 들어 파일을 여는 코드 줄을 올바르게 작성할 수 있습니다. 하지만 응용 프로그램이 수행할 수 없으면 파일 손상 된 경우는 `Open` 함수 및 해당 실행을 중지 합니다. 잘못 된 코드를 재작성 로컬 폴더를 컴파일하여 다시 실행 하 여 대부분의 런타임 오류를 해결할 수 있습니다.  
-  
-## <a name="logic-errors"></a>논리 오류  
- *논리 오류* 는 나타나는 응용 프로그램을 사용에서 합니다. 이들은 사용자 작업에 대 한 응답에서 대부분의 종종 원치 않거나 예기치 않은 결과입니다. 예를 들어, 키를 잘못 입력된 또는 기타 외부 요인 않이 예상된 매개 변수 내에서 작업을 중지 하려면 응용 프로그램 또는 완전히 합니다. 논리 오류는 일반적으로 아니므로 항상 지우기 시작 위치를 해결 하려면 가장 어려운 형식입니다.  
-  
+## <a name="logic-errors"></a>논리 오류
+ *논리 오류* 는 응용 프로그램을 사용 하 고 있는 경우 표시 되는 오류입니다. 대부분의 경우 개발자가 수행 하는 가장 일반적인 잘못 된 가정과 사용자 동작에 대 한 응답으로 원치 않거나 예기치 않은 결과가 발생 합니다. 예를 들어 잘못 입력 한 키는 메서드에 잘못 된 정보를 제공할 수 있으며, 그렇지 않은 경우에는 메서드에 올바른 값이 항상 제공 된다고 가정할 수 있습니다. [예외 처리](../../language-reference/statements/try-catch-finally-statement.md) 를 사용 하 여 논리 오류를 처리할 수 있지만 (예: 인수가 `Nothing` <xref:System.ArgumentNullException>인지 여부를 테스트 하는 경우), 가장 일반적으로 논리 오류를 수정 하 고 다시 컴파일하면 프로그램별.
+
 ## <a name="see-also"></a>참고자료
 
 - [Try...Catch...Finally 문](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1d55329fd64176ad0a366c4b80453c2be34c166e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6a7be97ef3184c6836cd67e47b4e9383214f1b5f
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614350"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629399"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>invalidApartmentStateChange MDA
 `invalidApartmentStateChange` MDA(관리 디버깅 도우미)는 다음 두 문제 중 하나가 발생하면 활성화됩니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "64614350"
   
 - 스레드의 COM 아파트 상태가 요청된 상태가 아닙니다. 이로 인해 현재 모델과 다른 스레딩 모델이 포함된 COM 구성 요소에 프록시가 사용될 수 있습니다. 이 사용으로 인해 아파트 간 마샬링에 사용하도록 설정되지 않은 인터페이스를 통해 COM 개체를 호출할 때 <xref:System.InvalidCastException>이 throw될 수 있습니다.  
   
-- 스레드의 COM 아파트 상태가 예상과 다릅니다. 이로 인해 RCW([런타임 호출 가능 래퍼](../../../docs/framework/interop/runtime-callable-wrapper.md))에서 호출할 경우 <xref:System.InvalidCastException> 및 RPC_E_WRONG_THREAD의 HRESULT에서 <xref:System.Runtime.InteropServices.COMException>이 발생할 수 있습니다. 또한 이로 인해 여러 스레드가 일부 단일 스레드 COM 구성 요소에 동시에 액세스할 수 있으므로 손상이나 데이터 손실이 발생할 수 있습니다.  
+- 스레드의 COM 아파트 상태가 예상과 다릅니다. 이로 인해 RCW([런타임 호출 가능 래퍼](../../../docs/standard/native-interop/runtime-callable-wrapper.md))에서 호출할 경우 <xref:System.InvalidCastException> 및 RPC_E_WRONG_THREAD의 HRESULT에서 <xref:System.Runtime.InteropServices.COMException>이 발생할 수 있습니다. 또한 이로 인해 여러 스레드가 일부 단일 스레드 COM 구성 요소에 동시에 액세스할 수 있으므로 손상이나 데이터 손실이 발생할 수 있습니다.  
   
 ## <a name="cause"></a>원인  
   

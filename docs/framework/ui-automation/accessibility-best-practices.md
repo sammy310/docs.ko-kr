@@ -5,12 +5,12 @@ helpviewer_keywords:
 - best practices for accessibility
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
-ms.openlocfilehash: 0fe09c0c261f36f1e9f241a6a6a8aacf3bf07d29
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: a29c31e93523e0843728d2fd7fa555946b139c55
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331490"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629605"
 ---
 # <a name="accessibility-best-practices"></a>액세스 가능성에 대한 유용한 정보
 > [!NOTE]
@@ -66,7 +66,7 @@ ms.locfileid: "68331490"
   
 <a name="Ensure_all_UI_Correctly_Scales_by_any_DPI_Setting"></a>   
 ### <a name="ensure-all-ui-correctly-scales-by-any-dpi-setting"></a>DPI 설정으로 모든 UI가 올바르게 크기 조정되는지 확인  
- 모든 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 가 [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] 설정으로 올바르게 크기 조정될 수 있는지 확인합니다. 또한 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 요소가 1024 x 768 화면에 120 [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)]로 맞춰지는지 확인합니다.  
+ 모든 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] dpi (인치당 도트 수) 설정에 따라 올바르게 크기를 조정할 수 있는지 확인 합니다. 또한 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 요소가 120 dpi (인치당 도트 수)로 1024 x 768 화면에 맞는지 확인 합니다.  
   
 <a name="Navigation"></a>   
 ## <a name="navigation"></a>탐색  

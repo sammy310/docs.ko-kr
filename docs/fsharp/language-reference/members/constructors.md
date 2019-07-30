@@ -2,12 +2,12 @@
 title: 생성자
 description: 에서 F# 생성자를 정의 하 고 사용 하 여 클래스 및 구조체 개체를 만들고 초기화 하는 방법에 대해 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: ef5dc134ad98179b6a365c4c34a9eca22fe5f7f6
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c25fdcb95c2873eb69a94f30c87735e5c04d391b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364365"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627600"
 ---
 # <a name="constructors"></a>생성자
 
@@ -23,7 +23,7 @@ ms.locfileid: "68364365"
 
 다음 코드는 생성자를 포함 하는 클래스와 개체를 만드는 다양 한 방법을 보여 줍니다.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3501.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3501.fs)]
 
 출력은 다음과 같습니다.
 
@@ -40,7 +40,7 @@ Initialized object that has coordinates (0, 0, 0)
 
 또한 구조체는 키워드를 `val` 사용 하 여 만든 필드를 포함 하는 경우가 많습니다. 클래스는 이러한 필드를 포함할 수도 있습니다. 다음 코드에 표시 된 것 처럼 키워드를 `val` 사용 하 여 정의 된 필드가 있는 구조체와 클래스는 레코드 식을 사용 하 여 추가 생성자에서 초기화 될 수도 있습니다.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3502.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3502.fs)]
 
 자세한 내용은 [명시적 필드: `val` 키워드](explicit-fields-the-val-keyword.md)입니다.
 
@@ -48,7 +48,7 @@ Initialized object that has coordinates (0, 0, 0)
 
 클래스의 기본 생성자는 `do` 바인딩에서 코드를 실행할 수 있습니다. 그러나 `do` 바인딩을 사용 하지 않고 추가 생성자에서 코드를 실행 해야 하는 경우는 어떻게 되나요? 이렇게 하려면 키워드를 `then` 사용 합니다.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3503.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3503.fs)]
 
 기본 생성자의 부작용은 계속 실행 됩니다. 따라서 출력은 다음과 같습니다.
 
@@ -62,11 +62,11 @@ Created an invalid person object.
 
 다른 멤버의 경우에는 각 멤버의 정의에서 현재 개체의 이름을 제공 합니다. 생성자 매개 변수 바로 뒤에 키워드를 `as` 사용 하 여 클래스 정의의 첫 번째 줄에 자체 식별자를 넣을 수도 있습니다. 다음 예제에서는이 구문을 보여 줍니다.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3504.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3504.fs)]
 
 추가 생성자에서 생성자 매개 변수 바로 뒤에 `as` 절을 추가 하 여 자체 식별자를 정의할 수도 있습니다. 다음 예제에서는이 구문을 보여 줍니다.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3505.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3505.fs)]
 
 개체를 완전히 정의 하기 전에 사용 하려고 하면 문제가 발생할 수 있습니다. 따라서 자체 식별자를 사용 하면 컴파일러에서 경고를 내보내고 추가 검사를 삽입 하 여 개체를 초기화 하기 전에 개체의 멤버에 액세스할 수 없도록 할 수 있습니다. 기본 생성자의 `do` 바인딩이나 추가 생성자의 `then` 키워드 뒤에 있는 자체 식별자만 사용 해야 합니다.
 
@@ -76,11 +76,11 @@ Created an invalid person object.
 
 생성자의 인수 목록에 폼 `property = value` 의 할당 목록을 추가 하 여 초기화 코드에서 클래스 개체의 속성에 값을 할당할 수 있습니다. 다음 코드 예제에서 이를 확인할 수 있습니다.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
 
 이전 코드의 다음 버전에서는 단일 생성자 호출에서 일반 인수, 선택적 인수 및 속성 설정의 조합을 보여 줍니다.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3507.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3507.fs)]
 
 ## <a name="constructors-in-inherited-class"></a>상속 된 클래스의 생성자
 

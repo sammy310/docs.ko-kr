@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
-ms.openlocfilehash: ee260d58cdb4dc971fc32ca5c889b459b6a48489
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.openlocfilehash: 10bdeae8fe46f78e60d278fdbe93883a1c6bd356
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484733"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629889"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>WPF에서 Win32 콘텐츠 호스팅
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 [WPF 및 Win32 상호 운용성을](wpf-and-win32-interoperation.md)참조 하세요.
 
@@ -48,11 +48,11 @@ virtual void DestroyWindowCore(HandleRef hwnd) override {
 
 그러나 코드가 자체 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 포함 되지 않는 것으로 가정 합니다. 그렇다면 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 대화 상자를 만들고 해당 내용을 더 큰 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램에 포함할 수 있습니다. 이 샘플은 다른 언어나 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 명령줄 C++에서이 작업을 수행할 수도 있지만 및에서는이를 보여 줍니다.
 
-[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] 프로젝트로 컴파일되 C++ 는 간단한 대화 상자에서 시작 합니다.
+C++ DLL 프로젝트로 컴파일되는 간단한 대화 상자를 사용 하 여 시작 합니다.
 
 다음으로 더 큰 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램에 대화 상자를 도입 합니다.
 
-- 관리 되 [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] 는 (`/clr`)로 컴파일
+- DLL을 관리 되는 (`/clr`)로 컴파일
 
 - 대화 상자를 컨트롤로 전환
 
@@ -120,7 +120,7 @@ public ref class MyHwndHost : public HwndHost, IKeyboardInputSink {
         }
 ```
 
-여기서는 `CreateDialog` 를 사용 하 여 실제 컨트롤 인 대화 상자를 만듭니다. 이는 내부 [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]에서 호출 되는 첫 번째 메서드 중 하나 이므로 나중에 정의 하 `InitializeGlobals()`는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 함수를 호출 하 여 표준 초기화를 수행 해야 합니다.
+여기서는 `CreateDialog` 를 사용 하 여 실제 컨트롤 인 대화 상자를 만듭니다. 이는 DLL 내에서 호출 되는 첫 번째 메서드 중 하나 이므로 나중에 정의 하는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 함수를 호출 하 여 표준 초기화 `InitializeGlobals()`를 수행 해야 합니다.
 
 ```cpp
 bool initialized = false;

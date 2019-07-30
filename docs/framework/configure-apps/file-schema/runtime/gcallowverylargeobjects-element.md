@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2988b054030df23ae8ccd8840f83c239f0401321
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70c60461f3ddd6bdabd151f60c7bc81eef18e650
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607258"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629475"
 ---
-# <a name="gcallowverylargeobjects-element"></a>\<gcAllowVeryLargeObjects > 요소
+# <a name="gcallowverylargeobjects-element"></a>\<Gcallowverylargeobjects> > 요소
 64비트 플랫폼에서 총 크기가 2GB보다 큰 배열을 사용하도록 설정합니다.  
   
- \<구성 > 요소  
+ \<configuration > 요소  
 \<런타임 > 요소  
-\<gcAllowVeryLargeObjects > 요소  
+\<Gcallowverylargeobjects> > 요소  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,14 +35,14 @@ ms.locfileid: "64607258"
   
 |특성|설명|  
 |---------------|-----------------|  
-|`enabled`|필수 특성입니다.<br /><br /> 64 비트 플랫폼에서 총 크기가 2GB 보다 큰 배열을 사용 되는지 여부를 지정 합니다.|  
+|`enabled`|필수 특성입니다.<br /><br /> 총 크기에서 2gb 보다 큰 배열을 64 비트 플랫폼에서 사용할 수 있는지 여부를 지정 합니다.|  
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
 |값|설명|  
 |-----------|-----------------|  
-|`false`|총 크기가 2GB 보다 큰 배열 사용 되지 않습니다. 이 값이 기본값입니다.|  
-|`true`|총 크기가 2GB 보다 큰 배열 64 비트 플랫폼에서 사용할 수 있습니다.|  
+|`false`|전체 크기의 2gb 보다 큰 배열은 사용할 수 없습니다. 이 값이 기본값입니다.|  
+|`true`|총 크기가 2gb 보다 큰 배열은 64 비트 플랫폼에서 사용 하도록 설정 됩니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -55,16 +55,16 @@ ms.locfileid: "64607258"
 |`runtime`|런타임 초기화 옵션에 대한 정보를 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 요소를 사용 하 여 응용 프로그램 구성 파일의 크기가 2GB 보다 큰 배열을 사용 하도록 설정 하지만 개체 크기 또는 배열 크기에 대 한 다른도 변경 되지 않습니다.  
+ 응용 프로그램 구성 파일에서이 요소를 사용 하면 크기가 2gb 보다 큰 배열은 가능 하지만 개체 크기나 배열 크기에 대 한 다른 제한은 변경 되지 않습니다.  
   
-- 배열에 있는 요소의 최대 수는 <xref:System.UInt32.MaxValue?displayProperty=nameWithType>합니다.  
+- 배열의 최대 요소 수는 <xref:System.UInt32.MaxValue?displayProperty=nameWithType>입니다.  
   
-- 임의의 단일 차원에 있는 최대 색인 2,147,483,591 바이트 배열 및 싱글바이트 구조의 배열에 대 한 (0x7FFFFFC7) 및 다른 유형의 2,146,435,071 (0X7FEFFFFF).  
+- 단일 차원의 최대 인덱스는 바이트 배열 및 단일 바이트 구조의 배열에 대해 2147483591 (0x7FFFFFC7)이 고 다른 형식의 경우 2146435071 (0X7FEFFFFF)입니다.  
   
-- 문자열 및 기타 비 배열 개체에 대 한 최대 크기 변경 되지 않습니다.  
+- 문자열 및 기타 배열 이외의 개체에 대 한 최대 크기는 변경 되지 않습니다.  
   
 > [!CAUTION]
->  이 기능을 사용 하기 전에 응용 프로그램 크기가 2GB 보다 작은 모든 배열은 가정 하는 안전 하지 않은 코드에 포함 되지 않습니다 확인 합니다. 예를 들어, 배열 2GB를 초과 하지 것입니다 가정 하에서 작성 된 경우 버퍼 배열을 사용 하는 안전 하지 않은 코드 버퍼 오버런에 취약할 수 있습니다.  
+>  이 기능을 사용 하도록 설정 하기 전에 모든 배열이 2gb 보다 작은 것으로 가정 하는 안전 하지 않은 코드가 응용 프로그램에 포함 되지 않도록 합니다. 예를 들어 배열을 버퍼로 사용 하는 안전 하지 않은 코드는 배열이 2gb를 초과 하지 않는다는 가정 하에 작성 되는 경우 버퍼 오버런에 취약할 수 있습니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 응용 프로그램에 대해이 기능을 사용 하도록 설정 하는 방법을 보여 줍니다.  
@@ -77,6 +77,10 @@ ms.locfileid: "64607258"
 </configuration>  
 ```  
   
+## <a name="supported-in"></a>다음에서 지원:
+
+.NET Framework 4.5 이상 버전
+
 ## <a name="see-also"></a>참고자료
 
 - [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)

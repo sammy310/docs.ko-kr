@@ -2,12 +2,12 @@
 title: Visual Studio에서 F# 시작
 description: Visual Studio에서 F#을 사용하는 방법을 알아봅니다.
 ms.date: 07/03/2018
-ms.openlocfilehash: 9b02a5d295f982b1911dab567213fa9a2b6c4304
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 24c9a81cfa61dc904db9b2213224677696d7eb9b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754870"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629775"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Visual Studio에서 F# 시작
 
@@ -31,7 +31,7 @@ Visual Studio에서 가장 기본적인 프로젝트 중 하나가 콘솔 응용
 
 먼저 코드 작성으로 시작하세요.  `Program.fs` 파일을 열고 다음 내용으로 변경합니다.
 
-[!code-fsharp[HelloSquare](../../../samples/snippets/fsharp/getting-started/hello-square.fs)]
+[!code-fsharp[HelloSquare](~/samples/snippets/fsharp/getting-started/hello-square.fs)]
 
 이 코드 샘플에서는 입력으로 `x`를 가져와 자신과 곱셈하도록 정의된 `square`함수가 정의되어 있습니다.  F#에서는 [Typeinference](../language-reference/type-inference.md)를 사용하기 때문에 `x`의 형식을 지정할 필요가 없습니다.  F# 컴파일러는 곱셈에서 유효한 형식을 이해하고 `square`가 호출되는 방식에 따라 `x`의 형식을 할당합니다.  `square` 위로 마우스를 가져가면 다음과 같이 표시됩니다.
 
@@ -47,19 +47,19 @@ val square: x:int -> int
 
 ## <a name="running-your-code"></a>코드 실행
 
-코드를 실행 하 고 키를 눌러 결과 볼 수 있습니다 **Ctrl**+**F5**합니다.  이 디버깅 하지 않고 프로그램을 실행 하 고 결과 볼 수 있습니다.  선택할 수 있습니다 합니다 **디버깅할** 최상위 메뉴 항목 Visual Studio에서 선택한 **디버깅 하지 않고 시작**합니다.
+**Ctrl**+**F5**를 눌러 코드를 실행 하 고 결과를 볼 수 있습니다.  이렇게 하면 프로그램을 디버깅 하지 않고 실행 하 고 결과를 볼 수 있습니다.  또는 Visual Studio에서 **디버그** 최상위 메뉴 항목을 선택 하 고 **디버깅 하지 않고 시작**을 선택할 수 있습니다.
 
-이제 Visual Studio를 나타나게 하는 콘솔 창에 출력 한 다음을 표시 됩니다.
+이제 Visual Studio가 표시 된 콘솔 창에 다음과 같이 출력 됩니다.
 
 ```
 12 squared is 144!
 ```
 
-지금까지  첫 번째 만든 F# 작성 된 Visual Studio에서 프로젝트를 F# 함수는 함수 및 일부 결과를 보려면 프로젝트를 실행 하는 호출의 결과 인쇄 합니다.
+지금까지  Visual Studio에서 첫 번째 F# 프로젝트를 만들고 함수를 작성 F# 하 여 해당 함수를 호출한 결과를 출력 하 고 프로젝트를 실행 하 여 일부 결과를 확인 했습니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-아직 확인하지 않았다면 F# 언어의 핵심 기능 중 일부를 다루는 [F# 둘러보기](../tour.md)를 확인해보세요.  기능 중 몇 가지를 간략하게 제공 합니다 F#, Visual Studio로 복사 하 고 실행할 수 있는 충분 한 코드 샘플을 제공 합니다.  [F# 가이드](../index.md)에서 소개된 훌륭한 외부 리소스도 있습니다.
+아직 확인하지 않았다면 F# 언어의 핵심 기능 중 일부를 다루는 [F# 둘러보기](../tour.md)를 확인해보세요.  의 F#기능 중 일부에 대 한 개요를 제공 하 고 Visual Studio로 복사 하 여 실행할 수 있는 충분 한 코드 샘플을 제공 합니다.  [F# 가이드](../index.md)에서 소개된 훌륭한 외부 리소스도 있습니다.
 
 ## <a name="see-also"></a>참고자료
 

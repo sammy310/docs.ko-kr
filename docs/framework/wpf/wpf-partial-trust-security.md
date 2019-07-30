@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: 259db84c8ab3b9bbad809b9636ba18537dd6fe62
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: b8234dcb33e9d429329c6d68900119382ff2f1cb
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400728"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629797"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 부분 신뢰 보안
 <a name="introduction"></a> 일반적으로 악의적인 손상을 방지하기 위해 중요한 시스템 리소스에 직접 액세스하지 않도록 인터넷 응용 프로그램을 제한해야 합니다. 기본적 [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] 으로 및 클라이언트 쪽 스크립팅 언어는 중요 한 시스템 리소스에 액세스할 수 없습니다. WPF (Windows Presentation Foundation) 브라우저에서 호스팅되는 응용 프로그램은 브라우저에서 실행할 수 있기 때문에 유사한 제한 사항을 준수 해야 합니다. 이러한 제한을 적용 하기 위해 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 는 CAS (코드 액세스 보안) 및 ClickOnce를 모두 사용 합니다 ( [WPF 보안 전략-플랫폼 보안](wpf-security-strategy-platform-security.md)참조). 기본적으로 브라우저에서 호스트 된 응용 프로그램은 인터넷, 로컬 인트라넷 또는 로컬 컴퓨터에서 시작 되었는지 여부에 관계 없이 인터넷 영역 CA 사용 권한 집합을 요청 합니다. 전체 권한 집합보다 적은 권한으로 실행하는 애플리케이션은 부분 신뢰로 실행된다고 할 수 있습니다.  
@@ -113,7 +113,7 @@ ms.locfileid: "68400728"
   
  대부분의 경우, 부분 신뢰 대체 항목을 찾을 수 있어야 됩니다.  
   
- 인트라넷과 같은 제어 되는 환경에서 사용자 지정 관리 프레임 워크는 클라이언트 기반 [!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]을 통해에 설치할 수 있습니다. 이러한 라이브러리는 완전 신뢰가 필요한 코드를 실행 하 고를 사용 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 하 여 부분 신뢰를 허용 하는 응용 프로그램에서 참조 될 수 있습니다. 자세한 내용은 [보안](security-wpf.md) 및 [WPF 보안 전략-플랫폼 보안](wpf-security-strategy-platform-security.md)을 참조 하세요.  
+ 인트라넷과 같은 제어 되는 환경에서 사용자 지정 관리 프레임 워크는 클라이언트 기반 전체에 GAC (전역 어셈블리 캐시)에 설치할 수 있습니다. 이러한 라이브러리는 완전 신뢰가 필요한 코드를 실행 하 고를 사용 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 하 여 부분 신뢰를 허용 하는 응용 프로그램에서 참조 될 수 있습니다. 자세한 내용은 [보안](security-wpf.md) 및 [WPF 보안 전략-플랫폼 보안](wpf-security-strategy-platform-security.md)을 참조 하세요.  
   
 <a name="Browser_Host_Detection"></a>   
 ### <a name="browser-host-detection"></a>브라우저 호스트 검색  
