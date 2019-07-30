@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 44ab9766bead15c97a1397ef1f47de75f72643a3
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: f09f93f27aa4f50cfb7e09b9d6d4f98f22e1ac9a
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423545"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433563"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>형식 매개 변수에 대한 제약 조건(C# 프로그래밍 가이드)
 
@@ -22,7 +22,7 @@ ms.locfileid: "66423545"
 |----------------|-----------------|
 |`where T : struct`|형식 인수는 값 형식이어야 합니다. <xref:System.Nullable%601>를 제외한 임의의 값 형식을 지정할 수 있습니다. nullable 형식에 대한 자세한 내용은 [Nullable 형식](../nullable-types/index.md)을 참조하세요.|
 |`where T : class`|형식 인수는 참조 형식이어야 합니다. 이 제약 조건은 모든 클래스, 인터페이스, 대리자 또는 배열 형식에도 적용됩니다.|
-|`where T : unmanaged`|형식 인수는 참조 형식일 수 없으며, 모든 중첩 수준에서 참조 형식 멤버를 포함할 수 없습니다.|
+|`where T : unmanaged`|형식 인수는 [비관리형 형식](../../language-reference/builtin-types/unmanaged-types.md)이어야 합니다.|
 |`where T : new()`|형식 인수에 매개 변수가 없는 public 생성자가 있어야 합니다. 다른 제약 조건과 함께 사용할 경우 `new()` 제약 조건을 마지막에 지정해야 합니다.|
 |`where T :` *\<기본 클래스 이름>*|형식 인수가 지정된 기본 클래스이거나 지정된 기본 클래스에서 파생되어야 합니다.|
 |`where T :` *\<인터페이스 이름>*|형식 인수가 지정된 인터페이스이거나 지정된 인터페이스를 구현해야 합니다. 여러 인터페이스 제약 조건을 지정할 수 있습니다. 제약 인터페이스가 제네릭일 수도 있습니다.|
@@ -78,7 +78,7 @@ ms.locfileid: "66423545"
 
 ## <a name="unmanaged-constraint"></a>관리되지 않는 제약 조건
 
-C# 7.3부터 `unmanaged` 제약 조건을 사용하여 형식 매개 변수가 **관리되지 않는 형식**이어야 한다고 지정할 수 있습니다. **관리되지 않는 형식**은 참조 형식이 아니며, 모든 중첩 수준에서 참조 형식 필드를 포함하지 않는 형식입니다. `unmanaged` 제약 조건을 사용하면 다음 예제와 같이 메모리 블록으로 조작할 수 있는 형식을 사용하도록 재사용 가능한 루틴을 작성할 수 있습니다.
+C# 7.3부터 `unmanaged` 제약 조건을 사용하여 형식 매개 변수가 [관리되지 않는 형식](../../language-reference/builtin-types/unmanaged-types.md)이어야 한다고 지정할 수 있습니다. `unmanaged` 제약 조건을 사용하면 다음 예제와 같이 메모리 블록으로 조작할 수 있는 형식을 사용하도록 재사용 가능한 루틴을 작성할 수 있습니다.
 
 [!code-csharp[using the unmanaged constraint](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#15)]
 

@@ -4,13 +4,13 @@ description: macOS 컴퓨터에서.NET Core 애플리케이션을 개발, 배포
 author: mairaw
 ms.author: adegeo
 ms.custom: updateeachvsrelease
-ms.date: 12/14/2018
-ms.openlocfilehash: 57346eb5cfdcc9f51c3aab173ed575067b124150
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.date: 07/13/2019
+ms.openlocfilehash: 5086b185ee2d49c7b569ed0cb62b4c8995f9982c
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66299980"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433904"
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a>macOS에서 .NET Core의 필수 구성 요소
 
@@ -41,9 +41,9 @@ ms.locfileid: "66299980"
 
 # <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
 
-.NET Core 3.0 미리 보기 3은 다음 macOS 버전에서 지원됩니다.
+.NET Core 3.0은 다음 macOS 버전에서 지원됩니다.
 
-* macOS 10.12 "Sierra" 이상 버전
+* macOS 10.13 “High Sierra” 이상 버전
 
 지원 OS 버전 중 .NET Core 3.0이 지원되는 운영 체제, 배포 및 버전, 수명 주기 정책 링크의 전체 목록은 [.NET Core 3.0이 지원되는 OS 버전](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)을 참조하세요.
 

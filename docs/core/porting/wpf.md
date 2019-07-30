@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/27/2019
 ms.custom: ''
-ms.openlocfilehash: 5c7e3aca0a473abb831693244d1b194985f2ef7f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 9885f666e68b795b9b6aba9cf31f9750e30fd170
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59342208"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512277"
 ---
 # <a name="how-to-port-a-wpf-desktop-app-to-net-core"></a>방법: WPF 데스크톱 앱을 .NET Core로 포트
 
@@ -25,6 +25,9 @@ ms.locfileid: "59342208"
 | **MyWPFCore.csproj** | 만들 새 .NET Core 프로젝트의 이름입니다. |
 | **MyAppCore.exe** | .NET Core WPF 앱은 실행 가능합니다. |
 
+>[!IMPORTANT]
+>이 문서에서는 C#을 대상 언어로 사용하지만 VB.NET의 경우 단계가 동일합니다. 단 VB.NET은 *.csproj*, *.cs* 파일 대신 각각 *.vbproj*, *.vb* 파일을 사용합니다.
+
 ## <a name="prerequisites"></a>전제 조건
 
 - 수행할 디자이너 작업용 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)
@@ -34,11 +37,10 @@ ms.locfileid: "59342208"
   - .NET 플랫폼 간 개발
 
 - 문제 없이 빌드하고 실행하는 솔루션에서 작동하는 WPF 프로젝트입니다.
-- 프로젝트는 C#으로 코딩되어야 합니다. 
 - 최신 [.NET Core 3.0](https://aka.ms/netcore3download) 미리 보기를 설치합니다.
 
 >[!NOTE]
->**Visual Studio 2017**은 .NET Core 3.0 프로젝트를 지원하지 않습니다. **Visual Studio 2019**는 .NET Core 3.0 프로젝트를 지원하지만 .NET Core 3.0 WPF 프로젝트의 시각적 디자이너는 아직 지원하지 않습니다. 시각적 디자이너를 사용하려면 .NET Core 프로젝트와 해당 파일을 공유하는 .NET WPF 프로젝트가 솔루션에 있어야 합니다.
+>**Visual Studio 2017**은 .NET Core 3.0 프로젝트를 지원하지 않습니다. **Visual Studio 2019**는 .NET Core 3.0 프로젝트를 지원하지만, .NET Core WPF 비주얼 디자이너에 대해서는 제한적으로 지원합니다. 완전히 지원되는 비주얼 디자이너를 사용하려면 .NET Core 프로젝트와 해당 파일을 공유하는 .NET Framework WPF 프로젝트가 솔루션에 있어야 합니다.
 
 ### <a name="consider"></a>Consider
 
@@ -218,10 +220,10 @@ dotnet add .\MyWPFAppCore\MyWPFCore.csproj package Microsoft.Windows.Compatibili
 이 문서에 설명된 대로, Visual Studio 2019만 .NET Framework 프로젝트의 WPF 디자이너를 지원합니다. 동시에 .NET Core 프로젝트를 만들면 .NET Framework 프로젝트를 사용하여 양식을 디자인하는 동안 .NET Core를 사용하여 프로젝트를 테스트할 수 있습니다. 솔루션 파일에는 .NET Framework 및 .NET Core 프로젝트가 모두 포함됩니다. .NET Framework 프로젝트에서 양식과 컨트롤을 추가 및 디자인합니다. 그러면 .NET Core 프로젝트에 추가한 파일 GLOB 패턴을 기반으로 새 파일이나 변경된 파일이 자동으로 .NET Core 프로젝트에 포함됩니다.
 
 Visual Studio 2019가 WPF 디자이너를 지원하면 .NET Core 프로젝트 파일의 콘텐츠를 .NET Framework 프로젝트 파일로 복사하여 붙여넣을 수 있습니다. 그런 다음, `<Source>` 및 `<EmbeddedResource>` 항목과 함께 추가된 파일 GLOB 패턴을 삭제합니다. 앱에서 사용하는 프로젝트 참조의 경로를 수정합니다. 이렇게 하면 .NET Framework 프로젝트가 .NET Core 프로젝트로 효과적으로 업그레이드됩니다.
- 
+
 ## <a name="next-steps"></a>다음 단계
 
-* [Windows 호환성 팩][compat-pack]에 대해 자세히 알아봅니다.
-* .NET Framework WPF 프로젝트를 .NET Core에 [포팅하는 방법에 대한 비디오](https://www.youtube.com/watch?v=5MomsgkWkVw&list=PLS__JrkRveTMiWxG-Lv4cBwYfMQ6m2gmt)을 시청하세요.
+- [Windows 호환성 팩][compat-pack]에 대해 자세히 알아봅니다.
+- .NET Framework WPF 프로젝트를 .NET Core에 [포팅하는 방법에 대한 비디오](https://www.youtube.com/watch?v=5MomsgkWkVw&list=PLS__JrkRveTMiWxG-Lv4cBwYfMQ6m2gmt)을 시청하세요.
 
 [compat-pack]: windows-compat-pack.md

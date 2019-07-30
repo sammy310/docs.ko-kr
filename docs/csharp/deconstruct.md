@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/18/2016
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: d7c5946f5df8a94bf8b54c10f33234b40338a622
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 5d37f9567570666c280be437aa0472a620a16c63
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348157"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400398"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>튜플 및 기타 형식 분해
 
@@ -64,9 +64,9 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
 [!code-csharp[Tuple-discard](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
-### <a name="deconstructing-user-defined-types"></a>사용자 정의 형식 분해
+## <a name="deconstructing-user-defined-types"></a>사용자 정의 형식 분해
 
-튜플이 아닌 형식은 기본적으로 무시 항목을 지원하지 않습니다. 그러나 클래스, 구조체 또는 인터페이스의 만든 이는 하나 이상의 `Deconstruct` 메서드를 구현하여 형식의 인스턴스를 분해하도록 허용할 수 있습니다. 이 메서드는 void를 반환하며 분해할 각 값은 메서드 시그니처에서 [out](language-reference/keywords/out-parameter-modifier.md) 매개 변수로 표시됩니다. 예를 들어 다음 `Person` 클래스의 `Deconstruct` 메서드는 이름, 중간 이름 및 성을 반환합니다.
+C#은 튜플이 아닌 형식의 분해에 대해 기본 제공 지원을 제공하지 않습니다. 그러나 클래스, 구조체 또는 인터페이스의 만든 이는 하나 이상의 `Deconstruct` 메서드를 구현하여 형식의 인스턴스를 분해하도록 허용할 수 있습니다. 이 메서드는 void를 반환하며 분해할 각 값은 메서드 시그니처에서 [out](language-reference/keywords/out-parameter-modifier.md) 매개 변수로 표시됩니다. 예를 들어 다음 `Person` 클래스의 `Deconstruct` 메서드는 이름, 중간 이름 및 성을 반환합니다.
 
 [!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class1.cs#1)]
 

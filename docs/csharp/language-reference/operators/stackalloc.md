@@ -6,16 +6,18 @@ f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc operator [C#]
-ms.openlocfilehash: 3be4e827e75e4e26a34d9ed70423af5aa317e7fb
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: f211acaa8c47ab42a1f7f06cff6c35570cd22b75
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025009"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433837"
 ---
 # <a name="stackalloc-operator-c-reference"></a>stackalloc 연산자(C# 참조)
 
 `stackalloc` 연산자는 스택의 메모리 블록을 할당합니다. 메서드 실행 중에 생성된 스택 할당 메모리 블록은 해당 메서드가 반환될 때 자동으로 삭제됩니다. `stackalloc` 연산자를 사용하여 할당된 메모리는 명시적으로 해제할 수 없습니다. 스택 할당 메모리 블록에는 [가비지 수집](../../../standard/garbage-collection/index.md)이 적용되지 않으며, [`fixed` 문](../keywords/fixed-statement.md)을 사용해서 고정하지 않아도 됩니다.
+
+`stackalloc T[E]` 식에서 `T`는 [비관리형 형식](../builtin-types/unmanaged-types.md)이어야 하고 `E`는 `int` 형식의 식이어야 합니다.
 
 `stackalloc` 연산자의 결과를 다음 형식 중 하나의 변수에 할당할 수 있습니다.
 
