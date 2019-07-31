@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: c9d86cadd5f2115d0214d9a1b1dce7e6682341e0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 405d06a8da8ec5c428c1565bcd08236de0f1fa88
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629733"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68672054"
 ---
 # <a name="cleartype-overview"></a>ClearType 개요
 이 항목에서는에서 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]확인할 수 있는 Microsoft ClearType 기술에 대해 간략하게 설명 합니다.  
@@ -19,11 +19,11 @@ ms.locfileid: "68629733"
 ## <a name="technology-overview"></a>기술 개요  
  ClearType은에서 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 개발한 소프트웨어 기술로 랩톱 화면, Pocket PC 화면, 평면 패널 모니터 등 기존 lcd (액체 크리스탈 디스플레이)의 텍스트 가독성을 향상 시킵니다.  ClearType은 LCD 화면의 모든 픽셀에서 개별 세로 색 줄무늬 요소에 액세스 하는 방식으로 작동 합니다. ClearType 이전에는 컴퓨터에 표시 될 수 있는 가장 낮은 수준의 세부 정보는 단일 픽셀 이지만 ClearType을 LCD 모니터에서 실행 하면 이제 텍스트의 기능을 픽셀의 픽셀 분수로 표시할 수 있습니다. 해상도를 더 세밀하게 지원할수록 텍스트의 미세한 부분까지 더 선명하게 표시되므로 오랫동안 더 쉽게 읽을 수 있습니다.  
   
- 에서 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 제공 되는 cleartype은에서 [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)]제공 되는 버전에 비해 몇 가지 개선 된 cleartype의 최신 세대입니다.  
+ 에서 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 제공 되는 cleartype은 Microsoft Windows 그래픽 장치 인터페이스 (GDI)에서 제공 하는 버전에 비해 몇 가지 개선 된 cleartype의 최신 세대입니다.  
   
 <a name="sub-pixel_positioning"></a>   
 ## <a name="sub-pixel-positioning"></a>하위 픽셀 위치 지정  
- 이전 버전의 ClearType에 비해 크게 향상 된 기능은 하위 픽셀 위치 지정을 사용 하는 것입니다. 에 있는 cleartype 구현과 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]달리에서 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 발견 된 cleartype은 픽셀의 시작 경계가 아니라 픽셀 내에서 문자를 시작할 수 있도록 허용 합니다. 문자 모양의 위치 지정에 적용되는 이처럼 세밀한 추가 해상도로 인해 문자 모양의 간격과 비율이 더욱 정확하고 일관성 있게 유지됩니다.  
+ 이전 버전의 ClearType에 비해 크게 향상 된 기능은 하위 픽셀 위치 지정을 사용 하는 것입니다. GDI에 있는 cleartype 구현과 달리에서 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 발견 된 cleartype은 픽셀의 시작 경계가 아니라 픽셀 내에서 문자를 시작할 수 있도록 허용 합니다. 문자 모양의 위치 지정에 적용되는 이처럼 세밀한 추가 해상도로 인해 문자 모양의 간격과 비율이 더욱 정확하고 일관성 있게 유지됩니다.  
   
  다음 두 예에서는 하위 픽셀 위치 지정을 사용할 때 문자 모양이 모든 하위 픽셀 경계에서 시작할 수 있는 방법을 보여 줍니다. 왼쪽의 예제는 하위 픽셀 위치 지정을 사용 하지 않은 이전 버전의 ClearType 렌더러를 사용 하 여 렌더링 됩니다. 오른쪽의 예제는 하위 픽셀 위치 지정을 사용 하 여 새 버전의 ClearType 렌더러를 사용 하 여 렌더링 됩니다. 오른쪽 이미지의 **e**와 **l**은 각각 서로 다른 하위 픽셀에서 시작하기 때문에 약간 다르게 렌더링됩니다. 화면에서 텍스트를 정상 크기로 볼 때는 문자 모양 이미지의 고대비로 인해 이 차이가 눈에 띄지 않습니다. 이는 ClearType에 통합 된 정교한 색 필터링 때문에 가능 합니다.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68629733"
   
 <a name="y-direction_antialiasing"></a>   
 ## <a name="y-direction-antialiasing"></a>y 방향 앤티 앨리어싱  
- 에서 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ClearType의 또 다른 향상 된 기능은 y 방향 앤티앨리어싱입니다. Y 방향 앤티앨리어싱을 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 사용 하지 않는의 ClearType은 x 축에 대해 더 나은 해상도를 제공 하지만 y 축은 지원 하지 않습니다. 얇은 곡선의 위쪽과 아래쪽에서 들쭉날쭉한 가장자리는 가독성을 떨어뜨립니다.  
+ 에서 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ClearType의 또 다른 향상 된 기능은 y 방향 앤티앨리어싱입니다. Y 방향 앤티앨리어싱을 사용 하지 않는 GDI의 ClearType은 x 축에서 해상도를 향상 하지만 y 축은 제공 하지 않습니다. 얇은 곡선의 위쪽과 아래쪽에서 들쭉날쭉한 가장자리는 가독성을 떨어뜨립니다.  
   
  다음 예는 y 방향 앤티 앨리어싱을 사용하지 않는 경우의 효과를 보여 줍니다. 이 경우 글자의 위쪽과 아래쪽의 들쭉날쭉한 가장자리가 분명하게 눈에 띕니다.  
   

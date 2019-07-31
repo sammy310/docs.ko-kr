@@ -21,25 +21,25 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: d1fcf15db750167a93344ff8efd5957933bed6c0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: b6fb530bbc4132b09cc17ad692e6e9e23cd75598
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629847"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671847"
 ---
 # <a name="imaging-overview"></a>이미징 개요
 이 항목에서는 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]를 소개합니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]를 사용하여 개발자는 이미지를 표시 및 변환하고 서식을 지정할 수 있습니다.  
 
 <a name="_wpfImaging"></a>   
 ## <a name="wpf-imaging-component"></a>WPF Imaging Component  
- [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]에서는 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 내에서 향상된 이미징 기능을 제공합니다. 비트맵을 표시하거나 공용 컨트롤에서 이미지를 사용하는 것과 같은 이미징 기능에는 이전에는 [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] 또는 [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)] 라이브러리가 필요했습니다. 이러한 API는 기본 이미징 기능을 제공 하지만 코덱 확장성 및 고화질 이미지 지원과 같은 기능을 제공 하지 않습니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]는 및 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)] 의 단점을 극복 하 고 응용 프로그램 내에서 이미지를 표시 하 고 사용할 수 있는 새로운 API 집합을 제공 하도록 설계 되었습니다.  
+ [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]에서는 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 내에서 향상된 이미징 기능을 제공합니다. 비트맵을 표시 하거나 공용 컨트롤에서 이미지를 사용 하는 등의 이미징 기능은 이전에 Microsoft Windows 그래픽 장치 인터페이스 (GDI) 또는 Microsoft Windows GDI + 라이브러리에 의존 했습니다. 이러한 API는 기본 이미징 기능을 제공 하지만 코덱 확장성 및 고화질 이미지 지원과 같은 기능을 제공 하지 않습니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]는 GDI 및 GDI +의 단점을 극복 하 고 응용 프로그램 내에서 이미지를 표시 하 고 사용할 수 있는 새로운 API 집합을 제공 하도록 설계 되었습니다.  
   
  [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] API, 관리 되는 구성 요소 및 관리 되지 않는 구성 요소에 액세스 하는 방법에는 두 가지가 있습니다. 관리되지 않는 구성 요소는 다음과 같은 기능을 제공합니다.  
   
 - 새롭거나 또는 독자적인 이미지 형식에 대한 확장성 모델  
   
-- 비트맵 (BMP),,,,, 및 아이콘 (.ico) [!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)]을 [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)] [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)] [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)] [!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)]포함 하 여 네이티브 이미지 형식에 대 한 향상 된 성능 및 보안.  
+- 비트맵 [!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)](BMP), [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)] [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)] ,,,,GIF(그래픽교환형식)및아이콘(.ico)을비롯한네이티브이미지형식에대한성능및보안이향상되었습니다.[!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)]  
   
 - 채널당 8비트(픽셀당 32비트)까지 높은 비트 수준의 이미지 데이터 보존  
   
@@ -57,11 +57,11 @@ ms.locfileid: "68629847"
   
 <a name="_imageformats"></a>   
 ## <a name="wpf-image-formats"></a>WPF 이미지 형식  
- 코덱은 특정 미디어 형식을 인코딩하거나 디코딩하는 데 사용됩니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]에는 BMP, [!INCLUDE[TLA2#tla_jpeg](../../../../includes/tla2sharptla-jpeg-md.md)], [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)], [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)], ,및아이콘이미지형식에대한코덱이포함되어있습니다.[!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)] 이러한 각 코덱을 사용하여 애플리케이션은 ICON을 제외한 해당 이미지 형식을 디코딩 및 인코딩할 수 있습니다.  
+ 코덱은 특정 미디어 형식을 인코딩하거나 디코딩하는 데 사용됩니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)][!INCLUDE[TLA2#tla_jpeg](../../../../includes/tla2sharptla-jpeg-md.md)]에는 BMP, [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)] [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)], ,,,GIF및아이콘이미지형식에대한코덱이포함되어있습니다.[!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] 이러한 각 코덱을 사용하여 애플리케이션은 ICON을 제외한 해당 이미지 형식을 디코딩 및 인코딩할 수 있습니다.  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>는 이미지의 디코딩 및 인코딩에 사용 되는 중요 한 클래스입니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 파이프라인의 기본 구성 요소이며 픽셀의 단일 상수 집합을 특정 크기 및 해상도로 나타냅니다. 는 <xref:System.Windows.Media.Imaging.BitmapSource> 다중 프레임 이미지의 개별 프레임이 될 수도 있고 <xref:System.Windows.Media.Imaging.BitmapSource>에서 수행 되는 변환의 결과일 수도 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 과<xref:System.Windows.Media.Imaging.BitmapFrame>같이 이미징에서 사용 되는 여러 기본 클래스의 부모입니다.  
   
- 는 <xref:System.Windows.Media.Imaging.BitmapFrame> 이미지 형식의 실제 비트맵 데이터를 저장 하는 데 사용 됩니다. 많은 이미지 형식은 단일 <xref:System.Windows.Media.Imaging.BitmapFrame>만 지원 하지만, [!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)] 와 [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] 같은 형식은 이미지 당 여러 프레임을 지원 합니다. 프레임은 디코더에서 입력 데이터로 사용되고 이미지 파일을 만들기 위해 인코더에 전달됩니다.  
+ 는 <xref:System.Windows.Media.Imaging.BitmapFrame> 이미지 형식의 실제 비트맵 데이터를 저장 하는 데 사용 됩니다. 많은 이미지 형식은 [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] GIF와 같은 형식을 <xref:System.Windows.Media.Imaging.BitmapFrame>지원 하지만 이미지 당 여러 프레임을 지원 합니다. 프레임은 디코더에서 입력 데이터로 사용되고 이미지 파일을 만들기 위해 인코더에 전달됩니다.  
   
  다음 예제에서는를 <xref:System.Windows.Media.Imaging.BitmapFrame> <xref:System.Windows.Media.Imaging.BitmapSource> 에서 만든 다음 [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] 이미지에 추가 하는 방법을 보여 줍니다.  
   

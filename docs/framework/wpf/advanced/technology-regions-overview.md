@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability [WPF], airspace
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
-ms.openlocfilehash: e2c93f4471db2d72851a5d5bd8806b59a3e5ee28
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a169064052a567694b1cbd1e2f8ac2f00b047a68
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629856"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671829"
 ---
 # <a name="technology-regions-overview"></a>기술 영역 개요
 애플리케이션에 WPF, Win32 또는 DirectX와 같은 여러 프레젠테이션 기술이 사용되는 경우 이러한 기술은 공통 최상위 창에서 렌더링 영역을 공유해야 합니다. 이 항목에서는 WPF 상호 운용 애플리케이션에 대한 프레젠테이션과 입력에 영향을 미칠 수 있는 문제를 설명합니다.  
@@ -52,13 +52,13 @@ ms.locfileid: "68629856"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]HRGNs; 지원 그러나이 기능에 대 한 관리 되는 Api는 없습니다. 플랫폼 호출 <xref:System.Windows.Interop.HwndSource> 을 사용 하 여 관련 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] api를 호출할 수 있습니다. 자세한 내용은 [관리 코드에서 네이티브 함수 호출](/cpp/dotnet/calling-native-functions-from-managed-code)을 참조하세요.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 창 겹침에는 다양한 운영 체제에 대한 여러 가지 기능이 포함됩니다. 이는 directx [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 를 사용 하 여 렌더링 하 고 계층화 된 창은 주로 directx [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 렌더링이 아닌 렌더링 용으로 설계 되었기 때문입니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 창 겹침에는 다양한 운영 체제에 대한 여러 가지 기능이 포함됩니다. 이는 directx [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 를 사용 하 여 렌더링 하 고 계층화 된 창은 주로 directx 렌더링이 아닌 GDI 렌더링 용으로 설계 되었기 때문입니다.  
   
 - [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] 이상에서 하드웨어 가속 창 겹침을 지원합니다. 하드웨어 가속 계층화 된 windows [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)] 의 경우 microsoft directx의 지원이 필요 하므로 기능은 해당 컴퓨터의 microsoft directx 버전에 따라 달라 집니다.  
   
 - [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 투명색 키를 지원하지 않습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 특히 렌더링이 하드웨어 가속될 경우 요청한 정확한 색을 렌더링하도록 보장할 수 없기 때문입니다.  
   
-- 응용 프로그램이에서 [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)]실행 되는 경우 directx 응용 프로그램이 렌더링 되 면 directx 표면 위에 계층화 된 창이 깜박입니다.  실제 렌더링 시퀀스는 계층화 된 창을 [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] 숨기고 DirectX를 그린 다음 [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] 계층화 된 창을 다시 배치 하는 것입니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]가 아닌 겹쳐진 창에는 이 제한 사항이 없습니다.  
+- 응용 프로그램이에서 [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)]실행 되는 경우 directx 응용 프로그램이 렌더링 되 면 directx 표면 위에 계층화 된 창이 깜박입니다.  실제 렌더링 순서는 Microsoft Windows 그래픽 장치 인터페이스 (GDI)에서 계층화 된 창을 숨기고 DirectX를 그린 다음 Microsoft Windows 그래픽 장치 인터페이스 (GDI)에서 계층화 된 창을 다시 배치 하는 것입니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]가 아닌 겹쳐진 창에는 이 제한 사항이 없습니다.  
   
 ## <a name="see-also"></a>참고자료
 

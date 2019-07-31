@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 440a6d76e5295613d2887c0a77d9a49e870e580b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 39cf4b60262afb1e3745a82c734391385669f5d3
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629825"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671916"
 ---
 # <a name="wpf-architecture"></a>WPF 아키텍처
 이 항목에서는 Windows Presentation Foundation (WPF) 클래스 계층 구조 둘러보기를 제공 합니다. 이 항목은 대부분의 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 주요 하위 시스템을 다루며 이들이 어떻게 상호 작용하는지를 설명하고, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 설계자가 선택한 몇 가지 사항에 대해서 자세히 설명합니다.  
@@ -76,9 +76,9 @@ ms.locfileid: "68629825"
   
  다이어그램에서 놓치기 쉬운 또 다른 중요한 정보는 시스템이 실제로 컴포지션을 수행하는 방법입니다.  
   
- User32 및 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]에서 시스템은 즉각적인 모드 클리핑 시스템으로 작동합니다. 구성 요소를 렌더링해야 할 때는 시스템이 구성 요소가 픽셀과 닿을 수 없는 곳의 바깥에 클리핑 경계를 설정한 다음 구성 요소가 해당 상자에서 픽셀을 그려야 합니다. 이 시스템은 무언가 변경될 때 영향을 받는 구성 요소만 처리하면 되기 때문에 메모리가 제약된 시스템에서 잘 작동합니다. 단일 픽셀의 색상에 두 개의 구성 요소가 관여하는 경우는 없습니다.  
+ User32.dll 및 GDI에서 시스템은 직접 실행 모드 클리핑 시스템에서 작동 합니다. 구성 요소를 렌더링해야 할 때는 시스템이 구성 요소가 픽셀과 닿을 수 없는 곳의 바깥에 클리핑 경계를 설정한 다음 구성 요소가 해당 상자에서 픽셀을 그려야 합니다. 이 시스템은 무언가 변경될 때 영향을 받는 구성 요소만 처리하면 되기 때문에 메모리가 제약된 시스템에서 잘 작동합니다. 단일 픽셀의 색상에 두 개의 구성 요소가 관여하는 경우는 없습니다.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 "페인터 알고리즘" 그리기 모델을 사용합니다. 즉, 각 구성 요소를 클리핑하는 대신 각 구성 요소가 디스플레이의 뒤쪽에서 앞쪽으로 렌더링해야 합니다. 따라서 각 구성 요소가 이전 구성 요소의 디스플레이에 그릴 수 있습니다. 이 모델의 장점은 복잡하고 부분적인 투명 모양이 가능하다는 것입니다. User32/ [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]를 만들었을 때와 달리 오늘날의 현대적인 그래픽 하드웨어에서는 이 모델이 상대적으로 빠릅니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 "페인터 알고리즘" 그리기 모델을 사용합니다. 즉, 각 구성 요소를 클리핑하는 대신 각 구성 요소가 디스플레이의 뒤쪽에서 앞쪽으로 렌더링해야 합니다. 따라서 각 구성 요소가 이전 구성 요소의 디스플레이에 그릴 수 있습니다. 이 모델의 장점은 복잡하고 부분적인 투명 모양이 가능하다는 것입니다. 오늘날의 최신 그래픽 하드웨어를 사용 하 여이 모델은 상대적으로 빠릅니다 (User32.dll/GDI를 만든 경우는 아님).  
   
  앞에서 언급했듯이 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 핵심 방법은 보다 선언적인 "속성 중심의" 프로그래밍 모델로 이동하는 것입니다. 시각적 시스템에서는 두 가지 흥미로운 장소에서 이러한 이동이 눈에 띕니다.  
   
