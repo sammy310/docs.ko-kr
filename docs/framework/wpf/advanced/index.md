@@ -9,27 +9,31 @@ helpviewer_keywords:
 - WPF programming model [WPF]
 - XAML [WPF], content models
 ms.assetid: 58843391-b28c-4d32-adf5-87acaf6578a1
-ms.openlocfilehash: 13225779cb3ed844e6ea8622ad559db83fadc166
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 800711df51326e09546f559a9d4d1d84af173d4c
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942807"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710206"
 ---
-# <a name="advanced-windows-presentation-foundation"></a><span data-ttu-id="ced98-102">고급(Windows Presentation Foundation)</span><span class="sxs-lookup"><span data-stu-id="ced98-102">Advanced (Windows Presentation Foundation)</span></span>
-<span data-ttu-id="ced98-103">이 섹션의 WPF에서 일부 고급 영역을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="ced98-103">This section describes some of the advanced areas in WPF.</span></span>  
+# <a name="advanced-windows-presentation-foundation"></a><span data-ttu-id="a7dee-102">고급(Windows Presentation Foundation)</span><span class="sxs-lookup"><span data-stu-id="a7dee-102">Advanced (Windows Presentation Foundation)</span></span>
+<span data-ttu-id="a7dee-103">이 섹션의 WPF에서 일부 고급 영역을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="a7dee-103">This section describes some of the advanced areas in WPF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ced98-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="ced98-104">In This Section</span></span>  
- [<span data-ttu-id="ced98-105">WPF 아키텍처</span><span class="sxs-lookup"><span data-stu-id="ced98-105">WPF Architecture</span></span>](wpf-architecture.md)  
- [<span data-ttu-id="ced98-106">기본 요소</span><span class="sxs-lookup"><span data-stu-id="ced98-106">Base Elements</span></span>](base-elements.md)  
- [<span data-ttu-id="ced98-107">요소 트리 및 Serialization</span><span class="sxs-lookup"><span data-stu-id="ced98-107">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
- [<span data-ttu-id="ced98-108">끌어서 놓기</span><span class="sxs-lookup"><span data-stu-id="ced98-108">Drag and Drop</span></span>](drag-and-drop.md)  
- [<span data-ttu-id="ced98-109">문서</span><span class="sxs-lookup"><span data-stu-id="ced98-109">Documents</span></span>](documents.md)  
- [<span data-ttu-id="ced98-110">전역화 및 지역화</span><span class="sxs-lookup"><span data-stu-id="ced98-110">Globalization and Localization</span></span>](globalization-and-localization.md)  
- [<span data-ttu-id="ced98-111">마이그레이션 및 상호 운용성</span><span class="sxs-lookup"><span data-stu-id="ced98-111">Migration and Interoperability</span></span>](migration-and-interoperability.md)  
- [<span data-ttu-id="ced98-112">성능</span><span class="sxs-lookup"><span data-stu-id="ced98-112">Performance</span></span>](performance.md)  
- [<span data-ttu-id="ced98-113">스레딩 모델</span><span class="sxs-lookup"><span data-stu-id="ced98-113">Threading Model</span></span>](threading-model.md)  
- [<span data-ttu-id="ced98-114">WPF 추가 기능 개요</span><span class="sxs-lookup"><span data-stu-id="ced98-114">WPF Add-Ins Overview</span></span>](../app-development/wpf-add-ins-overview.md)  
- [<span data-ttu-id="ced98-115">관리되지 않는 WPF API 참조</span><span class="sxs-lookup"><span data-stu-id="ced98-115">Unmanaged WPF API Reference</span></span>](wpf-unmanaged-api-reference.md)  
-  
-## <a name="related-sections"></a><span data-ttu-id="ced98-116">관련 단원</span><span class="sxs-lookup"><span data-stu-id="ced98-116">Related Sections</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="a7dee-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="a7dee-104">In This Section</span></span>
+
+[<span data-ttu-id="a7dee-105">WPF 아키텍처</span><span class="sxs-lookup"><span data-stu-id="a7dee-105">WPF Architecture</span></span>](wpf-architecture.md)  
+[<span data-ttu-id="a7dee-106">WPF의 XAML</span><span class="sxs-lookup"><span data-stu-id="a7dee-106">XAML in WPF</span></span>](xaml-in-wpf.md)  
+[<span data-ttu-id="a7dee-107">기본 요소 클래스</span><span class="sxs-lookup"><span data-stu-id="a7dee-107">Base Element Classes</span></span>](base-elements.md)  
+[<span data-ttu-id="a7dee-108">요소 트리 및 Serialization</span><span class="sxs-lookup"><span data-stu-id="a7dee-108">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
+[<span data-ttu-id="a7dee-109">WPF 속성 시스템</span><span class="sxs-lookup"><span data-stu-id="a7dee-109">WPF Property System</span></span>](properties-wpf.md)  
+[<span data-ttu-id="a7dee-110">WPF 이벤트</span><span class="sxs-lookup"><span data-stu-id="a7dee-110">Events in WPF</span></span>](events-wpf.md)  
+[<span data-ttu-id="a7dee-111">입력</span><span class="sxs-lookup"><span data-stu-id="a7dee-111">Input</span></span>](input-wpf.md)  
+[<span data-ttu-id="a7dee-112">끌어서 놓기</span><span class="sxs-lookup"><span data-stu-id="a7dee-112">Drag and Drop</span></span>](drag-and-drop.md)  
+[<span data-ttu-id="a7dee-113">리소스</span><span class="sxs-lookup"><span data-stu-id="a7dee-113">Resources</span></span>](resources-wpf.md)  
+[<span data-ttu-id="a7dee-114">문서</span><span class="sxs-lookup"><span data-stu-id="a7dee-114">Documents</span></span>](documents.md)  
+[<span data-ttu-id="a7dee-115">전역화 및 지역화</span><span class="sxs-lookup"><span data-stu-id="a7dee-115">Globalization and Localization</span></span>](globalization-and-localization.md)  
+[<span data-ttu-id="a7dee-116">레이아웃</span><span class="sxs-lookup"><span data-stu-id="a7dee-116">Layout</span></span>](layout.md)  
+[<span data-ttu-id="a7dee-117">마이그레이션 및 상호 운용성</span><span class="sxs-lookup"><span data-stu-id="a7dee-117">Migration and Interoperability</span></span>](migration-and-interoperability.md)  
+[<span data-ttu-id="a7dee-118">성능</span><span class="sxs-lookup"><span data-stu-id="a7dee-118">Performance</span></span>](performance.md)  
+[<span data-ttu-id="a7dee-119">스레딩 모델</span><span class="sxs-lookup"><span data-stu-id="a7dee-119">Threading Model</span></span>](threading-model.md)  
+[<span data-ttu-id="a7dee-120">관리되지 않는 WPF API 참조</span><span class="sxs-lookup"><span data-stu-id="a7dee-120">Unmanaged WPF API Reference</span></span>](wpf-unmanaged-api-reference.md)  
