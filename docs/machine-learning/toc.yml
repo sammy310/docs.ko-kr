@@ -23,6 +23,8 @@
       href: tutorials/image-classification.md
     - name: 제품 판매 분석(변칙 검색)
       href: tutorials/sales-anomaly-detection.md
+    - name: 이미지에서 개체 검색(개체 검색)
+      href: tutorials/object-detection-onnx.md
 - name: 방법 가이드
   items:
     - name: 데이터 로드

@@ -3,12 +3,12 @@ title: ML.NET 자습서
 description: 사용자 지정 AI 솔루션을 빌드하고 .NET 애플리케이션에 통합하는 방법을 알아보기 위해 ML.NET 자습서를 탐색합니다.
 ms.custom: seodec18
 ms.date: 07/08/2019
-ms.openlocfilehash: 16311a892f9b1da5d6de10f52bec2ad9410966b7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dfc4779a94ae74e35095f654571c6e7c43f295a0
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777961"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671890"
 ---
 # <a name="mlnet-tutorials"></a>ML.NET 자습서 
 
@@ -21,6 +21,7 @@ ms.locfileid: "67777961"
 - [추천](movie-recommendation.md): 이전 사용자 평가를 기준으로 영화 **추천**을 생성합니다.
 - [이미지 분류](image-classification.md): ML.NET을 사용하여 사용자 지정 이미지 분류자를 만들기 위해 기존 TensorFlow 모델을 재학습하는 방법을 보여 줍니다.
 - [변칙 검색](sales-anomaly-detection.md): 제품 판매 데이터 분석을 위해 변칙 검색 애플리케이션을 빌드하는 방법을 보여줍니다.
+- [이미지에서 개체 검색](object-detection-onnx.md): 미리 학습된 ONNX(Open Neural Network Exchange) 모델을 사용하여 이미지에서 개체를 검색하는 방법을 보여줍니다.
 
 ## <a name="next-steps"></a>다음 단계
 

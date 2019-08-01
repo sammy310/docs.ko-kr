@@ -19,19 +19,20 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: 4f3d8a9f275a41b96b6518d63552ce9873cca0fb
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: ee5318b8ba1284f2805b80b3e41fab3ae739158c
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400822"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68672003"
 ---
 # <a name="xaml-overview-wpf"></a>XAML 개요 (WPF)
+
 이 항목에서는 XAML 언어의 기능을 설명하고 XAML을 사용하여 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 애플리케이션을 작성하는 방법을 보여 줍니다. 이 항목에서는 특히 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 구현된 XAML에 대해 자세히 설명합니다. XAML 자체는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]보다 큰 언어 개념입니다.  
 
 <a name="what_is_xaml"></a>   
 ## <a name="what-is-xaml"></a>XAML이란?  
- XAML은 선언적 태그 언어입니다. .NET Framework 프로그래밍 모델에 적용 된 XAML은 .NET Framework 응용 프로그램 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 에 대 한 만들기를 간소화 합니다. 선언적 XAML 태그에 표시되는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 요소를 만든 다음 코드 숨김 파일을 사용하여 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 정의를 런타임 논리와 구분할 수 있습니다. 이 정의는 partial 클래스 정의를 통해 태그에 연결됩니다. XAML은 어셈블리에 정의된 특정 지원 형식 집합으로 개체의 인스턴스화를 직접 나타냅니다. 이는 지원 형식 시스템에 직접 연결되지 않고 해석되는 언어인 대부분의 다른 태그 언어와의 차이점입니다. XAML은 개별 대상이 잠재적으로 서로 다른 도구를 사용하여 애플리케이션의 논리와 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]에 대해 작업할 수 있는 워크플로를 가능하게 합니다.  
+ XAML은 선언적 태그 언어입니다. .NET Framework 프로그래밍 모델에 적용 된 XAML은 .NET Framework 응용 프로그램 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 에 대 한 만들기를 간소화 합니다. 선언적 XAML 태그에 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 표시 되는 요소를 만든 다음 partial 클래스 정의를 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 통해 태그에 조인 된 코드 파일을 사용 하 여 런타임 논리에서 정의를 구분할 수 있습니다. XAML은 어셈블리에 정의된 특정 지원 형식 집합으로 개체의 인스턴스화를 직접 나타냅니다. 이는 지원 형식 시스템에 직접 연결되지 않고 해석되는 언어인 대부분의 다른 태그 언어와의 차이점입니다. XAML은 개별 대상이 잠재적으로 서로 다른 도구를 사용하여 애플리케이션의 논리와 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]에 대해 작업할 수 있는 워크플로를 가능하게 합니다.  
   
  텍스트로 나타내는 경우 XAML 파일은 일반적으로 확장명이 `.xaml`인 XML 파일입니다. 이 파일은 모든 XML 인코딩 방식으로 인코딩될 수 있지만 일반적으로 UTF-8로 인코딩됩니다.  
   
@@ -104,7 +105,7 @@ ms.locfileid: "68400822"
   
  XAML 언어의 규칙에 따라 XAML 콘텐츠 속성의 값은 해당 개체 요소의 다른 모든 속성 요소의 맨 앞 또는 맨 뒤에 지정해야 합니다. 예를 들어, 다음 태그는 컴파일되지 않습니다.  
   
-```  
+```xaml
 <Button>I am a   
   <Button.Background>Blue</Button.Background>  
   blue button</Button>  
@@ -188,7 +189,7 @@ ms.locfileid: "68400822"
  [!code-xaml[XAMLOvwSupport#MarginVerbose](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#marginverbose)]  
   
 > [!NOTE]
->  또한 형식 자체에 매개 변수가 없는 생성자가 없기 때문에 형식 변환이 하위 클래스를 포함 하지 않고 속성을 해당 형식으로 설정 하는 유일한 public 방법인 제한 된 수의 개체가 있습니다. 예제입니다. <xref:System.Windows.Input.Cursor>  
+> 또한 형식 자체에 매개 변수가 없는 생성자가 없기 때문에 형식 변환이 하위 클래스를 포함 하지 않고 속성을 해당 형식으로 설정 하는 유일한 public 방법인 제한 된 수의 개체가 있습니다. 예제입니다. <xref:System.Windows.Input.Cursor>  
   
  형식 변환 및 특성 구문에 대한 사용이 지원되는 방법에 대한 자세한 내용은 [TypeConverters 및 XAML](typeconverters-and-xaml.md)을 참조하세요.  
   
@@ -214,7 +215,7 @@ ms.locfileid: "68400822"
   
 - [x:Class](../../xaml-services/x-class-directive.md): XAML 페이지에 대 한 코드를 제공 하는 클래스의 CLR 네임 스페이스와 클래스 이름을 지정 합니다. 이러한 클래스가 WPF 프로그래밍 모델에 대해 코드 숨김을 지원하도록 해야 하므로 리소스가 없는 경우에도 `x:`가 매핑된 것을 자주 보게 됩니다.  
   
-- [x:Name](../../xaml-services/x-name-directive.md): 개체 요소가 처리 된 후 런타임 코드에 존재 하는 인스턴스에 대 한 런타임 개체 이름을 지정 합니다. 일반적으로는 [x:Name](../../xaml-services/x-name-directive.md)에 대응하여 WPF에 정의된 속성을 자주 사용하게 됩니다. 이러한 속성은 특히 CLR 지원 속성에 매핑되므로 초기화된 XAML에서 명명된 요소를 찾기 위해 런타임 코드를 자주 사용하는 애플리케이션 작성에 보다 편리합니다. 가장 일반적인 속성 <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>은입니다. 해당 하는 WPF [](../../xaml-services/x-name-directive.md) 프레임 워크 수준 <xref:System.Windows.FrameworkElement.Name%2A> 속성이 특정 형식에서 지원 되지 않는 경우에는 x:Name을 계속 사용할 수 있습니다. 이는 특정 애니메이션 시나리오에서 볼 수 있는 상황입니다.  
+- [x:Name](../../xaml-services/x-name-directive.md): 개체 요소가 처리 된 후 런타임 코드에 존재 하는 인스턴스에 대 한 런타임 개체 이름을 지정 합니다. 일반적으로는 [x:Name](../../xaml-services/x-name-directive.md)에 대응하여 WPF에 정의된 속성을 자주 사용하게 됩니다. 이러한 속성은 특히 CLR 지원 속성에 매핑되므로 초기화된 XAML에서 명명된 요소를 찾기 위해 런타임 코드를 자주 사용하는 애플리케이션 작성에 보다 편리합니다. 가장 일반적인 속성 <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>은입니다. 해당 하는 WPF 프레임 워크 수준 <xref:System.Windows.FrameworkElement.Name%2A> 속성이 특정 형식에서 지원 되지 않는 경우에는 [x:Name](../../xaml-services/x-name-directive.md)을 계속 사용할 수 있습니다. 이는 특정 애니메이션 시나리오에서 볼 수 있는 상황입니다.  
   
 - [x:Static](../../xaml-services/x-static-markup-extension.md): 다른 경우에는 XAML 호환 속성이 아닌 정적 값을 반환 하는 참조를 사용 하도록 설정 합니다.  
   
@@ -228,7 +229,7 @@ ms.locfileid: "68400822"
   
  다음은 사용자 지정 접두사가 XAML 태그에서 작동하는 방식을 보여 주는 기본 예제입니다. 접두사 `custom`은 루트 요소 태그에 정의되고, 애플리케이션과 함께 패키지되고 사용 가능한 특정 어셈블리에 매핑됩니다. 이 어셈블리에는 일반적인 XAML 사용뿐 아니라 WPF XAML 콘텐츠 모델의 이 특정 시점에 삽입될 수 있는 클래스 상속 사용을 지원하도록 구현된 `NumericUpDown` 형식이 들어 있습니다. 이 `NumericUpDown` 컨트롤 인스턴스는 접두사를 사용하여 개체 요소로 선언되므로 XAML 파서에서 형식이 포함된 XAML 네임스페이스 및 형식 정의가 들어 있는 지원 어셈블리가 있는 위치를 알 수 있습니다.  
   
-```  
+```xaml
 <Page  
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"   
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"   
