@@ -1,15 +1,15 @@
 ---
-title: '방법: 특정 특성 (Visual Basic)으로 요소 찾기'
+title: '방법: 특정 특성으로 요소 찾기 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 59fb7c19-d42f-40eb-8cf8-f1d5b9658eb7
-ms.openlocfilehash: d4af129cdb7e9049be747b9eb29aaa26ef5d8188
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 615dc9bb4ee9b90c0e7b9ecb86d9342bc688f3b1
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855623"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710283"
 ---
-# <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a>방법: 특정 특성 (Visual Basic)으로 요소 찾기
+# <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a>방법: 특정 특성으로 요소 찾기 (Visual Basic)
 이 항목에서는 특정 값을 가진 특성이 포함된 요소를 찾는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
@@ -41,10 +41,10 @@ Next
 </Address>  
 ```  
   
- 이 예제에서 사용 하는 참고 합니다 [XML 자식 축 속성](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md), [XML 특성 축 속성](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md), 및 [XML 값 속성](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
+ 이 예에서는 xml [자식 축 속성](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md), [xml 특성 축 속성](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)및 [xml Value 속성](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)을 사용 합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다. 자세한 내용은 [XML 네임 스페이스 (Visual Basic)를 사용 하 여 작업](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)합니다.  
+ 다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다. 자세한 내용은 [네임 스페이스 개요 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)를 참조 하세요.  
   
  이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 네임스페이스에서 일반적인 구매 주문](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).  
   

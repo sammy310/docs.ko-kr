@@ -1,15 +1,15 @@
 ---
-title: '방법: (Visual Basic) 특정 자식 요소로 요소 찾기'
+title: '방법: 특정 자식 요소 (Visual Basic)를 사용 하 여 요소 찾기'
 ms.date: 07/20/2015
 ms.assetid: b0d0a463-6a85-46c3-8453-ad25b0ecf93c
-ms.openlocfilehash: 1b226f009776f397f73ab9ee7826484eb8869f28
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af8667b6aa6870accb62fa22bd5243ce029b32c9
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780603"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709065"
 ---
-# <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a>방법: (Visual Basic) 특정 자식 요소로 요소 찾기
+# <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a>방법: 특정 자식 요소 (Visual Basic)를 사용 하 여 요소 찾기
 이 항목에서는 지정된 값을 가진 자식 요소가 포함된 특정 요소를 찾는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
@@ -35,10 +35,10 @@ Next
 0006  
 ```  
   
- 이 예제에서 사용 하는 참고 합니다 [XML 자식 축 속성](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md), [XML 특성 축 속성](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md), 및 [XML 값 속성](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
+ 이 예에서는 xml [자식 축 속성](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md), [xml 특성 축 속성](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)및 [xml Value 속성](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)을 사용 합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다. 자세한 내용은 [XML 네임 스페이스 (Visual Basic)를 사용 하 여 작업](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)합니다.  
+ 다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다. 자세한 내용은 [네임 스페이스 개요 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)를 참조 하세요.  
   
  이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 네임스페이스에서 테스트 구성](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md).  
   

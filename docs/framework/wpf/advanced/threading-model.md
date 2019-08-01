@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 2667417c5d25821f2fed2101e1d485280e171eab
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 6bea25fbd321eead9137caaeb212b76a9d528e88
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400652"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710390"
 ---
 # <a name="threading-model"></a>스레딩 모델
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 개발자가 스레딩의 어려움을 해결하도록 디자인되어 있습니다. 결과적으로 대부분의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 개발자는 둘 이상의 스레드를 사용 하는 인터페이스를 작성할 필요가 없습니다. 다중 스레드 프로그램은 복잡하고 디버그하기 어려우므로 단일 스레드 솔루션이 있을 경우 피해야 합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "68400652"
   
 <a name="prime_number"></a>   
 ### <a name="a-single-threaded-application-with-a-long-running-calculation"></a>장기 실행 계산이 포함된 단일 스레드 애플리케이션  
- 사용자 [!INCLUDE[TLA#tla_gui#plural](../../../../includes/tlasharptla-guisharpplural-md.md)] 상호 작용에 대 한 응답으로 생성 되는 이벤트를 기다리는 동안 대부분의 시간이 유휴 상태로 유지 됩니다. 신중한 프로그래밍을 통해의 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]응답성에 영향을 주지 않고이 유휴 시간을 constructively 사용할 수 있습니다. 스레딩 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 모델에서는 입력이 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드에서 발생 하는 작업을 중단 하는 것을 허용 하지 않습니다. 즉, <xref:System.Windows.Threading.Dispatcher> 보류 중인 입력 이벤트를 주기적으로 처리 하 여 부실 하 게 하려면로 돌아가야 합니다.  
+ 대부분의 Gui (그래픽 사용자 인터페이스)는 사용자 상호 작용에 대 한 응답으로 생성 되는 이벤트를 기다리는 동안 유휴 시간의 상당 부분을 차지 합니다. 신중한 프로그래밍을 통해의 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]응답성에 영향을 주지 않고이 유휴 시간을 constructively 사용할 수 있습니다. 스레딩 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 모델에서는 입력이 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드에서 발생 하는 작업을 중단 하는 것을 허용 하지 않습니다. 즉, <xref:System.Windows.Threading.Dispatcher> 보류 중인 입력 이벤트를 주기적으로 처리 하 여 부실 하 게 하려면로 돌아가야 합니다.  
   
  다음 예제를 참조하세요.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "68400652"
   
 <a name="weather_sim"></a>   
 ### <a name="handling-a-blocking-operation-with-a-background-thread"></a>백그라운드 스레드를 사용하여 차단 작업 처리  
- 그래픽 애플리케이션에서 차단 작업을 처리하는 것은 어려울 수 있습니다. 애플리케이션이 고정된 것처럼 보이므로 이벤트 처리기에서 차단 메서드를 호출하려고 하지 않습니다. 개별 스레드를 사용 하 여 이러한 작업을 처리할 수 있지만 작업을 완료 하면 작업자 스레드에서를 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] [!INCLUDE[TLA2#tla_gui](../../../../includes/tla2sharptla-gui-md.md)] 직접 수정할 수 없으므로 스레드와 동기화 해야 합니다. 또는 <xref:System.Windows.Threading.Dispatcher.Invoke%2A> <xref:System.Windows.Threading.Dispatcher> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 를 사용 하 여 스레드의에 대리자를 삽입할 수 있습니다. <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> 결과적으로 이러한 대리자는 요소를 수정할 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 수 있는 권한을 사용 하 여 실행 됩니다.  
+ 그래픽 애플리케이션에서 차단 작업을 처리하는 것은 어려울 수 있습니다. 애플리케이션이 고정된 것처럼 보이므로 이벤트 처리기에서 차단 메서드를 호출하려고 하지 않습니다. 개별 스레드를 사용 하 여 이러한 작업을 처리할 수 있지만, 작업을 완료 하면 작업자 스레드에서 GUI를 직접 수정할 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 수 없으므로 스레드와 동기화 해야 합니다. 또는 <xref:System.Windows.Threading.Dispatcher.Invoke%2A> <xref:System.Windows.Threading.Dispatcher> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 를 사용 하 여 스레드의에 대리자를 삽입할 수 있습니다. <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> 결과적으로 이러한 대리자는 요소를 수정할 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 수 있는 권한을 사용 하 여 실행 됩니다.  
   
  이 예제에서는 날씨 예보를 검색하는 원격 프로시저 호출을 모방합니다. 별도의 작업자 스레드를 사용 하 여이 호출을 실행 하 고, 완료 되 면 <xref:System.Windows.Threading.Dispatcher> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드의에서 업데이트 메서드를 예약 합니다.  
   

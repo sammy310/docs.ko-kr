@@ -2,12 +2,12 @@
 title: '방법: 빈 쿼리 결과 집합 디버그 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
-ms.openlocfilehash: 076e7109dc89294ba0c1706bf9a66120e6a0b85d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cc6a370545b9e4d8c28e0096f5cff73f4d937bd3
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630983"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710438"
 ---
 # <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>방법: 빈 쿼리 결과 집합 디버그 (Visual Basic)
 
@@ -17,7 +17,7 @@ XML 트리를 쿼리할 때 가장 일반적인 문제 중 하나는 XML 트리�
 
 두 번째 예제 집합에서는 네임스페이스의 XML을 쿼리할 수 있도록 필요한 수정을 하는 방법을 보여 줍니다.
 
-자세한 내용은 [XML 네임 스페이스 작업 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)을 참조 하세요.
+자세한 내용은 [네임 스페이스 개요 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)를 참조 하세요.
 
 ## <a name="example"></a>예제
 

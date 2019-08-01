@@ -9,18 +9,18 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: 7acf5a3f48ac4987037873c63111d988ec3a4979
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a47a4aae785d817904c30fe7c865a1c033eb3cca
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629653"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709220"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>성능 최적화: 하드웨어 활용
 의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 내부 아키텍처에는 두 개의 렌더링 파이프라인 인 하드웨어와 소프트웨어가 있습니다. 이 항목에서는 응용 프로그램의 성능 최적화에 대 한 결정을 내리는 데 도움이 되는 이러한 렌더링 파이프라인에 대 한 정보를 제공 합니다.  
   
 ## <a name="hardware-rendering-pipeline"></a>하드웨어 렌더링 파이프라인  
- 성능을 결정 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 하는 데 가장 중요 한 요소 중 하나는 렌더링 바인딩되어 있음을 의미 합니다. 렌더링 해야 하는 픽셀 수가 많을 수록 성능 비용은 높아집니다. 그러나에 [!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)]오프 로드할 수 있는 렌더링을 많이 제공 하는 경우 얻을 수 있는 성능상의 이점이 증가 합니다. 응용 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프로그램 하드웨어 렌더링 파이프라인은 최소 microsoft directx 버전 7.0을 지 원하는 하드웨어에서 microsoft directx 기능을 최대한 활용 합니다. Microsoft DirectX 버전 7.0 및 Shadereffect 2.0 이상 기능을 지 원하는 하드웨어에서 추가 최적화를 얻을 수 있습니다.  
+ 성능을 결정 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 하는 데 가장 중요 한 요소 중 하나는 렌더링 바인딩되어 있음을 의미 합니다. 렌더링 해야 하는 픽셀 수가 많을 수록 성능 비용은 높아집니다. 그러나 GPU (그래픽 처리 장치)로 오프 로드할 수 있는 더 많은 렌더링으로 얻을 수 있는 성능상의 이점이 증가 합니다. 응용 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프로그램 하드웨어 렌더링 파이프라인은 최소 microsoft directx 버전 7.0을 지 원하는 하드웨어에서 microsoft directx 기능을 최대한 활용 합니다. Microsoft DirectX 버전 7.0 및 Shadereffect 2.0 이상 기능을 지 원하는 하드웨어에서 추가 최적화를 얻을 수 있습니다.  
   
 ## <a name="software-rendering-pipeline"></a>소프트웨어 렌더링 파이프라인  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 소프트웨어 렌더링 파이프라인은 완전히 CPU에 바인딩되어 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 CPU의 SSE 및 SSE2 명령 집합을 활용 하 여 최적화 되 고 완전 한 기능을 갖춘 소프트웨어 래스터 라이저를 구현 합니다. 소프트웨어에 대 한 대체는 하드웨어 렌더링 파이프라인을 사용 하 여 응용 프로그램 기능을 렌더링할 수 없을 때마다 원활 하 게 진행 됩니다.  

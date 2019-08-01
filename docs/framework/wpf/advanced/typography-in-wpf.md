@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 743b9ec45c138053fcfcb5cbb1ea9c8490ba919e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 818d013356c3ca8151e9b5bb675bce4726759f6c
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629911"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710342"
 ---
 # <a name="typography-in-wpf"></a>WPF의 입력 체계
 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 주요 입력 체계 기능을 소개합니다. 이러한 기능에는 텍스트 렌더링의 향상된 품질 및 성능, [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 입력 체계 지원, 향상된 국가별 텍스트, 향상된 글꼴 지원 및 새 텍스트 API(응용 프로그래밍 인터페이스)가 포함됩니다.  
@@ -73,7 +73,7 @@ ClearType y 방향 앤티앨리어싱으로 표시된 텍스트
 ## <a name="new-text-application-programming-interfaces-apis"></a>새 텍스트 API(응용 프로그래밍 인터페이스)  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 개발자가 응용 프로그램에 텍스트를 포함 하는 경우 사용할 수 있는 몇 가지 텍스트 Api를 제공 합니다. 이러한 Api는 다음과 같은 세 가지 범주로 그룹화 됩니다.  
   
-- **레이아웃 및 사용자 인터페이스**. [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)]에 대한 일반적인 텍스트 컨트롤입니다.  
+- **레이아웃 및 사용자 인터페이스**. GUI (그래픽 사용자 인터페이스)에 대 한 일반 텍스트 컨트롤입니다.  
   
 - **간단한 텍스트 그리기**. 개체에 직접 텍스트를 그릴 수 있습니다.  
   
