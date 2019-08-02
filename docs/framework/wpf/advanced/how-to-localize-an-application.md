@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 68bb3b8cd080e5b454776433e65027b7d18e7c3b
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 749ba2dd9318976289d9d4140cfadd711e0548d4
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331560"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629878"
 ---
 # <a name="how-to-localize-an-application"></a>방법: 애플리케이션 지역화
 이 자습서에서는 LocBaml 도구를 사용하여 지역화된 애플리케이션을 만드는 방법을 설명합니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "68331560"
 ## <a name="create-the-neutral-language-resources-satellite-assembly"></a>중립 언어 리소스 위성 어셈블리 만들기  
  애플리케이션이 중립 언어 리소스 위성 어셈블리를 생성하도록 구성된 후 애플리케이션을 빌드합니다. 그러면 지역화를 위해 LocBaml에 필요한 중립 언어 리소스 위성 어셈블리와 주 애플리케이션 어셈블리가 생성됩니다. 애플리케이션을 빌드하려면  
   
-1. HelloApp을 컴파일하여 [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)]을 만듭니다.  
+1. Helloapp.resources.dll를 컴파일하여 DLL (동적 연결 라이브러리)을 만듭니다.  
   
      **msbuild helloapp.csproj**  
   
@@ -91,7 +91,7 @@ ms.locfileid: "68331560"
   
 4. LocBaml을 실행할 때 지정할 수 있는 옵션은 다음과 같습니다.  
   
-    - **parse** 또는 **-p:** Baml, 리소스 또는 [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] 파일을 구문 분석 하 여 .csv 또는 .txt 파일을 생성 합니다.  
+    - **parse** 또는 **-p:** Baml, 리소스 또는 DLL 파일을 구문 분석 하 여 .csv 또는 .txt 파일을 생성 합니다.  
   
     - **생성** 또는 **-g:** 번역 된 파일을 사용 하 여 지역화 된 이진 파일을 생성 합니다.  
   
