@@ -2,12 +2,12 @@
 title: F# 형식
 description: 에서 F# 사용 되는 형식 및 형식 이름을 지정 하 F# 고 설명 하는 방법에 대해 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 44bd9d985e0ce1afa1bf2a8457dcd9470b13dfe1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 826bcb56aad3b50fbfcf8f807bb34e9cdcdecaf7
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630223"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733495"
 ---
 # <a name="f-types"></a>F# 형식
 
@@ -69,4 +69,4 @@ F#함수형 프로그래밍을 고려 하 여 디자인 된 유용한 컬렉션 
 |[대리자](delegates.md)|함수를 개체로 나타내는 대리자 형식을 설명 합니다.|
 |[열거형](enumerations.md)|값이 명명 된 값 집합에 속하는 열거형 형식에 대해 설명 합니다.|
 |[특성](attributes.md)|다른 형식에 대 한 메타 데이터를 지정 하는 데 사용 되는 특성을 설명 합니다.|
-|[예외 형식](/.exception-handling/exception-types.md)|오류 정보를 지정 하는 예외를 설명 합니다.|
+|[예외 형식](./exception-handling/exception-types.md)|오류 정보를 지정 하는 예외를 설명 합니다.|

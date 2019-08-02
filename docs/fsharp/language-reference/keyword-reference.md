@@ -2,12 +2,12 @@
 title: 키워드 참조
 description: 모든 F# 언어 키워드에 대 한 정보 링크를 찾습니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: f845db74fd7ffd4164cc74acd192e39df7d2d6b1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 680b270a99eff7aa98652579d2fd31b4b05080ca
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627624"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733477"
 ---
 # <a name="keyword-reference"></a>키워드 참조
 
@@ -17,7 +17,7 @@ ms.locfileid: "68627624"
 
 다음 표에서는 모든 F# 키워드를 사전순으로 보여 주고 추가 정보를 포함 하는 관련 항목에 대 한 링크와 간략 한 설명을 함께 보여 줍니다.
 
-|키워드|링크|설명|
+|키워드|링크|Description|
 |-------|----|-----------|
 |`abstract`|[멤버](./members/index.md)<br /><br />[추상 클래스](abstract-classes.md)|선언 된 형식에 구현이 없거나 가상 이며 기본 구현을 포함 하는 메서드를 나타냅니다.|
 |`and`|[`let`바인딩하](./functions/let-bindings.md)<br /><br />[레코드](records.md)<br /><br />[멤버](./members/index.md)<br /><br />[제약 조건](./generics/constraints.md)|상호 재귀 바인딩과 레코드, 속성 선언 및 제네릭 매개 변수에 대 한 여러 제약 조건에 사용 됩니다.|
@@ -35,10 +35,10 @@ ms.locfileid: "68627624"
 |`elif`|[조건식: `if...then...else`](conditional-expressions-if-then-else.md)|조건부 분기에 사용 됩니다. 의 `else if`약식입니다.|
 |`else`|[조건식: `if...then...else`](conditional-expressions-if-then-else.md)|조건부 분기에 사용 됩니다.|
 |`end`|[구조체](structures.md)<br /><br />[구별된 공용 구조체](discriminated-unions.md)<br /><br />[레코드](records.md)<br /><br />[형식 확장명](type-extensions.md)<br /><br />[자세한 구문](verbose-syntax.md)|형식 정의 및 형식 확장에서 멤버 정의 섹션의 끝을 나타냅니다.<br /><br />자세한 구문에서 `begin` 키워드로 시작 하는 코드 블록의 끝을 지정 하는 데 사용 됩니다.|
-|`exception`|[예외 처리](/.exception-handling/index.md)<br /><br />[예외 형식](/.exception-handling/exception-types.md)|예외 형식을 선언 하는 데 사용 됩니다.|
+|`exception`|[예외 처리](./exception-handling/index.md)<br /><br />[예외 형식](./exception-handling/exception-types.md)|예외 형식을 선언 하는 데 사용 됩니다.|
 |`extern`|[외부 함수](./functions/external-functions.md)|선언 된 프로그램 요소가 다른 이진 또는 어셈블리에 정의 되어 있음을 나타냅니다.|
 |`false`|[기본 형식](primitive-types.md)|부울 리터럴로 사용 됩니다.|
-|`finally`|[예외: `try...finally` 식입니다.](/.exception-handling/the-try-finally-expression.md)|와 `try` 함께 사용 되어 예외가 발생 하는지 여부에 관계 없이 실행 되는 코드 블록을 도입 합니다.|
+|`finally`|[예외: `try...finally` 식입니다.](./exception-handling/the-try-finally-expression.md)|와 `try` 함께 사용 되어 예외가 발생 하는지 여부에 관계 없이 실행 되는 코드 블록을 도입 합니다.|
 |`fixed`|[고정](fixed.md)|스택에서 포인터를 "고정" 하 여 가비지 수집을 방지 하는 데 사용 됩니다.|
 |`for`|[하며 `for...to`식](loops-for-to-expression.md)<br /><br />[루프: for...in 식](loops-for-in-expression.md)|루프 구문에 사용 됩니다.|
 |`fun`|[람다 식: `fun` 키워드](./functions/lambda-expressions-the-fun-keyword.md)|익명 함수 라고도 하는 람다 식에 사용 됩니다.|
@@ -62,7 +62,7 @@ ms.locfileid: "68627624"
 |`new`|[생성자](./members/constructors.md)<br /><br />[제약 조건](./generics/constraints.md)|를 만들거나 개체를 만들 수 있는 생성자를 선언, 정의 또는 호출 하는 데 사용 됩니다.<br /><br />제네릭 매개 변수 제약 조건에도 사용 되어 형식에 특정 생성자가 있어야 함을 표시 합니다.|
 |`not`|[기호 및 연산자 참조](./symbol-and-operator-reference/index.md)<br /><br />[제약 조건](./generics/constraints.md)|실제로 키워드가 아닙니다. 그러나를 `not struct` 조합 하 여 제네릭 매개 변수 제약 조건으로 사용 합니다.|
 |`null`|[Null 값](./values/null-values.md)<br /><br />[제약 조건](./generics/constraints.md)|개체가 없다는 것을 나타냅니다.<br /><br />제네릭 매개 변수 제약 조건에도 사용 됩니다.|
-|`of`|[구별된 공용 구조체](discriminated-unions.md)<br /><br />[대리자](delegates.md)<br /><br />[예외 형식](/.exception-handling/exception-types.md)|구분 된 공용 구조체에서 값 범주 형식 및 대리자 및 예외 선언에 사용 됩니다.|
+|`of`|[구별된 공용 구조체](discriminated-unions.md)<br /><br />[대리자](delegates.md)<br /><br />[예외 형식](./exception-handling/exception-types.md)|구분 된 공용 구조체에서 값 범주 형식 및 대리자 및 예외 선언에 사용 됩니다.|
 |`open`|[선언 가져오기: `open` 키워드](import-declarations-the-open-keyword.md)|네임 스페이스 또는 모듈의 콘텐츠를 한정자 없이 사용할 수 있도록 하는 데 사용 됩니다.|
 |`or`|[기호 및 연산자 참조](./symbol-and-operator-reference/index.md)<br /><br />[제약 조건](./generics/constraints.md)|부울 조건에 부울 `or` 연산자로 사용 됩니다. `||`와 같습니다.<br /><br />멤버 제약 조건에도 사용 됩니다.|
 |`override`|[멤버](./members/index.md)|기본 버전과 다른 추상 또는 가상 메서드의 버전을 구현 하는 데 사용 됩니다.|
@@ -77,7 +77,7 @@ ms.locfileid: "68627624"
 |`then`|[조건식: `if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[생성자](./members/constructors.md)|조건식에 사용 됩니다.<br /><br />개체 생성 후 의도 하지 않은 결과를 수행 하는 데도 사용 됩니다.|
 |`to`|[하며 `for...to`식](loops-for-to-expression.md)|범위를 `for` 나타내는 루프에 사용 됩니다.|
 |`true`|[기본 형식](primitive-types.md)|부울 리터럴로 사용 됩니다.|
-|`try`|[예외: Try ... with 식](/.exception-handling/the-try-with-expression.md)<br /><br />[예외: Try ... finally 식](/.exception-handling/the-try-finally-expression.md)|예외를 생성할 수 있는 코드 블록을 소개 하는 데 사용 됩니다. `with` 또는`finally`와 함께 사용 됩니다.|
+|`try`|[예외: Try ... with 식](./exception-handling/the-try-with-expression.md)<br /><br />[예외: Try ... finally 식](./exception-handling/the-try-finally-expression.md)|예외를 생성할 수 있는 코드 블록을 소개 하는 데 사용 됩니다. `with` 또는`finally`와 함께 사용 됩니다.|
 |`type`|[F# 형식](fsharp-types.md)<br /><br />[클래스](classes.md)<br /><br />[레코드](records.md)<br /><br />[구조체](structures.md)<br /><br />[열거형](enumerations.md)<br /><br />[구별된 공용 구조체](discriminated-unions.md)<br /><br />[형식 약어](type-abbreviations.md)<br /><br />[측정 단위](units-of-measure.md)|클래스, 레코드, 구조체, 구분 된 공용 구조체, 열거형 형식, 측정 단위 또는 형식 약어를 선언 하는 데 사용 됩니다.|
 |`upcast`|[캐스팅 및 변환](casting-and-conversions.md)|상속 체인에서 더 높은 형식으로 변환 하는 데 사용 됩니다.|
 |`use`|[리소스 관리: `use` 키워드](resource-management-the-use-keyword.md)|리소스를 해제 `let` 하기 위해 `Dispose` 를 호출 해야 하는 값에 대신 사용 됩니다.|
@@ -86,7 +86,7 @@ ms.locfileid: "68627624"
 |`void`|[기본 형식](primitive-types.md)|.Net `void` 유형을 나타냅니다. 다른 .NET 언어와 상호 작용할 때 사용 됩니다.|
 |`when`|[제약 조건](./generics/constraints.md)|패턴 일치에 대 한 부울 조건 (*가드*)에 사용 되며 제네릭 형식 매개 변수에 대 한 제약 조건 절을 도입 하는 데 사용 됩니다.|
 |`while`|[하며 `while...do`식](loops-while-do-expression.md)|루핑 구문을 소개 합니다.|
-|`with`|[일치 식](match-expressions.md)<br /><br />[개체 식](object-expressions.md)<br /><br />[레코드 식 복사 및 업데이트](copy-and-update-record-expressions.md)<br /><br />[형식 확장명](type-extensions.md)<br /><br />[예외: `try...with` 식입니다.](/.exception-handling/the-try-with-expression.md)|패턴 일치 식에서 `match` 키워드와 함께 사용 됩니다. 또한 개체 식에 사용 되 고, 레코드 복사 식 및 형식 확장을 사용 하 여 멤버 정의를 소개 하 고, 예외 처리기를 도입 합니다.|
+|`with`|[일치 식](match-expressions.md)<br /><br />[개체 식](object-expressions.md)<br /><br />[레코드 식 복사 및 업데이트](copy-and-update-record-expressions.md)<br /><br />[형식 확장명](type-extensions.md)<br /><br />[예외: `try...with` 식입니다.](./exception-handling/the-try-with-expression.md)|패턴 일치 식에서 `match` 키워드와 함께 사용 됩니다. 또한 개체 식에 사용 되 고, 레코드 복사 식 및 형식 확장을 사용 하 여 멤버 정의를 소개 하 고, 예외 처리기를 도입 합니다.|
 |`yield`|[시퀀스](sequences.md)|시퀀스에 대 한 값을 생성 하기 위해 시퀀스 식에 사용 됩니다.|
 |`yield!`|[계산 식](computation-expressions.md)<br /><br />[비동기 워크플로](asynchronous-workflows.md)|지정 된 계산 식의 결과를 포함 하는 계산 식의 결과 컬렉션에 추가 하기 위해 계산 식에 사용 됩니다.|
 

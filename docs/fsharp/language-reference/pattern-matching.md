@@ -2,12 +2,12 @@
 title: 패턴 일치
 description: 에서 F# 패턴을 사용 하 여 데이터를 논리적 구조와 비교 하거나 데이터를 구성 부분으로 분해 하거나 데이터에서 정보를 추출 하는 방법에 대해 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 156bb670e0c494a3d515eab03e2e4672d6743dec
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 60e0d6cd550724bc8448fddd7b163c2c9f1637be
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627304"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733473"
 ---
 # <a name="pattern-matching"></a>패턴 일치
 
@@ -15,7 +15,7 @@ ms.locfileid: "68627304"
 
 ## <a name="remarks"></a>설명
 
-패턴은 `match` 식과 같은 다양 한 언어 구문에서 사용 됩니다. 이러한 함수는 `let` 바인딩, 람다 식 및 `try...with` 식과 연결 된 예외 처리기의 함수에 대 한 인수를 처리할 때 사용 됩니다. 자세한 내용은 [일치 식](match-expressions.md), [let 바인딩](./functions/let-bindings.md), [람다 식을 참조 하세요. `fun` 키워드](./functions/lambda-expressions-the-fun-keyword.md)및 예외[: `try...with` 식](/.exception-handling/the-try-with-expression.md)입니다.
+패턴은 `match` 식과 같은 다양 한 언어 구문에서 사용 됩니다. 이러한 함수는 `let` 바인딩, 람다 식 및 `try...with` 식과 연결 된 예외 처리기의 함수에 대 한 인수를 처리할 때 사용 됩니다. 자세한 내용은 [일치 식](match-expressions.md), [let 바인딩](./functions/let-bindings.md), [람다 식을 참조 하세요. `fun` 키워드](./functions/lambda-expressions-the-fun-keyword.md)및 예외[: `try...with` 식](./exception-handling/the-try-with-expression.md)입니다.
 
 예를 들어 `match` 식에서 *패턴* 은 파이프 기호 뒤에 오는 것입니다.
 
@@ -29,7 +29,7 @@ match expression with
 
 다음 표에서는 지원 되는 패턴을 보여 줍니다. 런타임에 입력은 테이블에 나열 된 순서 대로 다음 각 패턴에 대해 테스트 되 고 패턴은 코드에 표시 되는 첫 번째부터 마지막으로, 각 줄의 패턴에 대해 왼쪽에서 오른쪽으로 적용 됩니다.
 
-|이름|설명|예제|
+|이름|Description|예제|
 |----|-----------|-------|
 |상수 패턴|모든 숫자, 문자 또는 문자열 리터럴, 열거형 상수 또는 정의 된 리터럴 식별자|`1.0`, `"test"`, `30`, `Color.Red`|
 |식별자 패턴|구분 된 공용 구조체, 예외 레이블 또는 활성 패턴 사례의 case 값|`Some(x)`<br /><br />`Failure(msg)`|
@@ -103,7 +103,7 @@ match shape with
 
 활성 패턴을 사용 하면 보다 복잡 한 사용자 지정 패턴 일치를 정의할 수 있습니다. 활성 패턴에 대 한 자세한 내용은 [활성 패턴](active-patterns.md)을 참조 하세요.
 
-식별자가 예외인 경우 예외 처리기의 컨텍스트에서 패턴 일치에 사용 됩니다. 예외 처리 [의 패턴 일치에 대 한 자세한 내용은 예외: `try...with` 식](/.exception-handling/the-try-with-expression.md)입니다.
+식별자가 예외인 경우 예외 처리기의 컨텍스트에서 패턴 일치에 사용 됩니다. 예외 처리 [의 패턴 일치에 대 한 자세한 내용은 예외: `try...with` 식](./exception-handling/the-try-with-expression.md)입니다.
 
 ## <a name="variable-patterns"></a>변수 패턴
 
