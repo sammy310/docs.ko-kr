@@ -4,15 +4,13 @@ description: dotnet test 및 xUnit을 사용하여 샘플 솔루션을 단계별
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-dev_langs:
-- fsharp
 ms.custom: seodec18
-ms.openlocfilehash: 9765c463bb427f79dcd0308e7e4fc643fdc06968
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 3a9744bfebd93c5004011819b8c6e739e84b97d0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745948"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626498"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>dotnet test 및 xUnit을 사용하여 .NET Core에서 F# 라이브러리 유닛 테스트
 
@@ -112,9 +110,9 @@ let ``Sequence of Evens returns empty collection`` () =
     Assert.Equal<Collections.Generic.IEnumerable<int>>(expected, actual)
 ```
 
-테스트가 실패합니다. 구현은 아직 만들지 않았습니다. `MathService` 클래스에서 작동하는 가장 간단한 코드를 작성하여 이 테스트를 만듭니다.
+테스트가 실패합니다. 구현은 아직 만들지 않았습니다. `MathService` 클래스에서 작동하는 가장 간단한 코드를 작성하여 이 테스트를 통과시킵니다.
 
-```csharp
+```fsharp
 let squaresOfOdds xs =
     Seq.empty<int>
 ```

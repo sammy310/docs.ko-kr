@@ -4,12 +4,12 @@ description: .NET Core에서 볼 수 있는 새로운 기능에 대해 알아봅
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 2d0f6a9faaec4d4438452054624751a40c96c8e5
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: f48b8e88a716df0f07a5626bdc8f66000cfaeed8
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464075"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626369"
 ---
 # <a name="whats-new-in-net-core-20"></a>.NET Core 2.0의 새로운 기능
 
@@ -156,8 +156,8 @@ Live Unit Testing이 코드를 수정하려면 언제든지 자동으로 백그�
 
 빌드하는 데 .NET을 사용하는 경우 [.NET 애플리케이션 아키텍처](https://www.microsoft.com/net/learn/architecture)는 지침, 모범 사례 및 애플리케이션 예제를 제공하는 전자책 집합에 액세스 권한을 부여합니다.
 
-- [마이크로 서비스 및 Docker 컨테이너](../../standard/microservices-architecture/index.md)
-- [ASP.NET을 사용하여 개발한 웹 애플리케이션](../../standard/modern-web-apps-azure-architecture/index.md)
+- [마이크로 서비스 및 Docker 컨테이너](../../architecture/microservices/index.md)
+- [ASP.NET을 사용하여 개발한 웹 애플리케이션](../../architecture/modern-web-apps-azure/index.md)
 - [Xamarin을 사용하는 모바일 애플리케이션](/xamarin/xamarin-forms/enterprise-application-patterns/index)
 - [Azure에서 클라우드에 배포되는 애플리케이션](/azure/architecture/reference-architectures/index)
 

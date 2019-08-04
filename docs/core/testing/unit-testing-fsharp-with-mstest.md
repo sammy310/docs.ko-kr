@@ -4,15 +4,13 @@ description: dotnet test 및 MSTest를 사용하여 샘플 솔루션을 단계�
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-dev_langs:
-- fsharp
 ms.custom: seodec18
-ms.openlocfilehash: 1765c16cb55857b83a8206ae97327d0fd2809019
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 3b93f4ed21d9d5eccf1dd02f253e7456aec02807
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747494"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626468"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>dotnet test 및 MSTest를 사용하여 .NET Core에서 F# 라이브러리 유닛 테스트
 
@@ -123,9 +121,9 @@ member this.TestEvenSequence() =
 
 `expected` 시퀀스가 목록으로 변환되었습니다. MSTest 라이브러리는 많은 표준 .NET 형식을 사용합니다. 해당 종속성으로 인해 공용 인터페이스 및 예상 결과에서 <xref:System.Collections.IEnumerable> 대신 <xref:System.Collections.ICollection>을 지원합니다.
 
-테스트를 실행하면 테스트가 실패합니다. 구현은 아직 만들지 않았습니다. `Mathservice` 클래스에서 작동하는 가장 간단한 코드를 작성하여 이 테스트를 만듭니다.
+테스트를 실행하면 테스트가 실패합니다. 구현은 아직 만들지 않았습니다. `Mathservice` 클래스에서 작동하는 가장 간단한 코드를 작성하여 이 테스트를 통과시킵니다.
 
-```csharp
+```fsharp
 let squaresOfOdds xs =
     Seq.empty<int> |> Seq.toList
 ```

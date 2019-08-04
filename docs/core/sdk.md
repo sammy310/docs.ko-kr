@@ -1,14 +1,14 @@
 ---
 title: .NET Core SDK 개요
 description: .NET Core 프로젝트를 만드는 데 사용되는 라이브러리 및 도구 집합인 .NET Core SDK에 관해 알아보세요.
-ms.date: 05/13/2019
+ms.date: 07/31/2019
 ms.technology: dotnet-cli
-ms.openlocfilehash: f56d7238eaaaa677db38430358ce94890632469e
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 0231c08f780455c4956c044815a2e80cef4d827e
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959234"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733387"
 ---
 # <a name="net-core-sdk-overview"></a>.NET Core SDK 개요
 
@@ -16,7 +16,7 @@ ms.locfileid: "65959234"
 
 - .NET Core CLI 도구.
 - .NET core 라이브러리 및 런타임.
-- `dotnet` [드라이버](/tools/index.md#driver).
+- `dotnet` [드라이버](tools/index.md#driver).
 
 ## <a name="acquiring-the-net-core-sdk"></a>.NET Core SDK 가져오기
 
@@ -29,11 +29,11 @@ ms.locfileid: "65959234"
 
 반면 설치 스크립트는 관리 권한이 필요하지 않습니다. 그러나 머신에 필수 구성 요소도 설치되지 않습니다. 모든 필수 구성 요소를 수동으로 설치해야 합니다. 스크립트는 대개 빌드 서버를 설정하거나 관리자 권한 없이 도구를 설치할 경우 사용됩니다(위의 필수 구성 요소 주의 사항 참조). 자세한 내용은 [스크립트 참조 설치](tools/dotnet-install-script.md) 문서에서 확인할 수 있습니다. CI 빌드 서버에서 SDK를 설정하는 방법에 관심이 있는 경우 [.NET Core SDK 및 CI(연속 통합)의 도구 사용](tools/using-ci-with-cli.md) 문서를 참조하세요.
 
-기본적으로 SDK는 "side-by-side"(SxS) 방식으로 설치되므로 여러 버전의 CLI 도구가 단일 머신에서 동시에 공존할 수 있습니다. CLI 명령을 실행할 때 버전이 선택되는 방법은 [사용할 .NET Core 버전 선택](/versions/selection.md) 문서에 매우 자세히 설명되어 있습니다.
+기본적으로 SDK는 "side-by-side"(SxS) 방식으로 설치되므로 여러 버전의 CLI 도구가 단일 머신에서 동시에 공존할 수 있습니다. CLI 명령을 실행할 때 버전이 선택되는 방법은 [사용할 .NET Core 버전 선택](versions/selection.md) 문서에 매우 자세히 설명되어 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 
 - [.NET Core CLI](tools/index.md)
-- [.NET Core 버전 관리 개요](/versions/index.md)
+- [.NET Core 버전 관리 개요](versions/index.md)
 - [.NET Core 런타임 및 SDK를 제거하는 방법](versions/remove-runtime-sdk-versions.md)
-- [사용할 .NET Core 버전 선택](/versions/selection.md)
+- [사용할 .NET Core 버전 선택](versions/selection.md)

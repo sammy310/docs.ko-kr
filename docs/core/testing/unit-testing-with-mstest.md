@@ -5,12 +5,12 @@ author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
 ms.custom: seodec18
-ms.openlocfilehash: 9d34b946dd13af4636b58a70c19721c5e381b69c
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.openlocfilehash: f6c1580d3f596c638969e668a87ee70d75e6d9bf
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484591"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626391"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>MSTest 및 .NET Core를 사용한 C# 유닛 테스트
 
@@ -37,7 +37,7 @@ namespace Prime.Services
     {
         public bool IsPrime(int candidate) 
         {
-            throw new NotImplementedException("Please create a test first");
+            throw new NotImplementedException("Please create a test first.");
         } 
     }
 }
@@ -112,7 +112,7 @@ namespace Prime.UnitTests.Services
         }
 
         [TestMethod]
-        public void ReturnFalseGivenValueOf1()
+        public void IsPrime_InputIs1_ReturnFalse()
         {
             var result = _primeService.IsPrime(1);
 
@@ -135,7 +135,7 @@ public bool IsPrime(int candidate)
     {
         return false;
     }
-    throw new NotImplementedException("Please create a test first");
+    throw new NotImplementedException("Please create a test first.");
 }
 ```
 
@@ -143,7 +143,7 @@ public bool IsPrime(int candidate)
 
 ## <a name="add-more-features"></a>더 많은 기능 추가
 
-이제 하나의 테스트를 통과했으므로 더 작성할 수 있습니다. 소수에 대한 몇 가지 다른 간단한 사례가 있습니다 (0, -1). 새 테스트를 [TestMethod 특성](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute)과 함께 추가할 수도 있지만, 이렇게 하면 금방 지루해질 수 있습니다. 비슷한 테스트 도구 모음을 작성하는 데 사용할 수 있는 다른 MSTest 특성이 있습니다.  [DataTestMethod 특성](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataTestMethodAttribute)은 같은 코드를 실행하지만 다른 입력 인수가 있는 테스트 도구 모음을 나타냅니다. [DataRow 특성](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataRowAttribute)을 사용하여 그러한 입력의 값을 지정할 수 있습니다.
+이제 하나의 테스트를 통과했으므로 더 작성할 수 있습니다. 소수에 대한 몇 가지 다른 간단한 사례가 있습니다 (0, -1). 새 테스트를 [TestMethod 특성](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute)과 함께 추가할 수도 있지만, 이렇게 하면 금방 지루해질 수 있습니다. 비슷한 테스트 모음을 작성하는 데 사용할 수 있는 다른 MSTest 특성이 있습니다.  [DataTestMethod 특성](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataTestMethodAttribute)은 같은 코드를 실행하지만 다른 입력 인수가 있는 테스트 도구 모음을 나타냅니다. [DataRow 특성](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataRowAttribute)을 사용하여 그러한 입력의 값을 지정할 수 있습니다.
 
 새 테스트를 만드는 대신 이러한 두 특성을 적용하여 단일 데이터 기반 테스트를 만듭니다. 이 데이터 기반 테스트는 가장 작은 소수인 2보다 작은 몇 가지 값을 테스트하는 메서드입니다.
 

@@ -4,12 +4,12 @@ description: dotnet test 및 NUnit을 사용하여 샘플 솔루션을 단계별
 author: rprouse
 ms.date: 08/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 53e8ebd6e4c3f07ace72df5e7dc916ecd30ce831
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 927facd271d6590cac2b0ce10790a16c88482020
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433927"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733410"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>NUnit 및 .NET Core를 사용한 C# 유닛 테스트
 
@@ -53,7 +53,7 @@ namespace Prime.Services
     {
         public bool IsPrime(int candidate)
         {
-            throw new NotImplementedException("Please create a test first");
+            throw new NotImplementedException("Please create a test first.");
         }
     }
 }
@@ -128,12 +128,8 @@ namespace Prime.UnitTests.Services
     [TestFixture]
     public class PrimeService_IsPrimeShould
     {
-        public PrimeService_IsPrimeShould()
-        {
-        }
-
         [Test]
-        public void ReturnFalseGivenValueOf1()
+        public void IsPrime_InputIs1_ReturnFalse()
         {
             PrimeService primeService = CreatePrimeService();
             var result = primeService.IsPrime(1);
@@ -147,7 +143,7 @@ namespace Prime.UnitTests.Services
         
         private PrimeService CreatePrimeService()
         {
-             return new PrimerService();
+             return new PrimeService();
         }
     }
 }
@@ -166,7 +162,7 @@ public bool IsPrime(int candidate)
     {
         return false;
     }
-    throw new NotImplementedException("Please create a test first");
+    throw new NotImplementedException("Please create a test first.");
 }
 ```
 
