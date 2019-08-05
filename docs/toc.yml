@@ -595,14 +595,16 @@
       items:
         - name: 'C# 형식 시스템'
           href: csharp/programming-guide/types/index.md
+        - name: nullable 참조 형식
+          href: csharp/nullable-references.md
+        - name: 특성과 제약 조건을 사용하여 Null을 허용하는 API를 설명하세요.
+          href: csharp/nullable-attributes.md
         - name: 네임스페이스
           href: csharp/programming-guide/namespaces/index.md
         - name: 기본 형식
           href: csharp/basic-types.md
         - name: 클래스
           href: csharp/programming-guide/classes-and-structs/classes.md
-        - name: nullable 참조 형식
-          href: csharp/nullable-references.md
         - name: 구조체
           href: csharp/structs.md
         - name: 튜플
