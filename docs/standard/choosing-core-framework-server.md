@@ -4,12 +4,12 @@ description: .NET에서 서버 앱을 구축할 때 고려해야 할 .NET 구현
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 3034f77fe8ee136011a523f6882ffa09ed2758d6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 6bdcb002c2e37f45c298259c2867a631b38152ca
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641151"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630856"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>서버 앱에 대해 .NET Core와 .NET Framework 중에 선택
 
@@ -42,11 +42,11 @@ ms.locfileid: "65641151"
 
 ### <a name="microservices-architecture"></a>마이크로 서비스 아키텍처
 
-마이크로 서비스 아키텍처를 사용하면 서비스 경계를 벗어나 여러 기술을 융합할 수 있습니다. 이러한 기술 융합을 통해 다른 마이크로 서비스나 서비스에서 작동하는 새로운 마이크로 서비스에 .NET Core를 점진적으로 적용할 수 있습니다.  예를 들어 .NET Framework, Java, Ruby 또는 다른 모놀리식 기술로 개발된 서비스나 마이크로 서비스를 융합할 수 있습니다.
+마이크로 서비스 아키텍처를 사용하면 서비스 경계를 벗어나 여러 기술을 융합할 수 있습니다. 이러한 기술 융합을 통해 다른 마이크로 서비스나 서비스에서 작동하는 새로운 마이크로 서비스에 .NET Core를 점진적으로 적용할 수 있습니다. 예를 들어 .NET Framework, Java, Ruby 또는 다른 모놀리식 기술로 개발된 서비스나 마이크로 서비스를 융합할 수 있습니다.
 
 사용 가능한 많은 인프라 플랫폼이 있습니다. [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)은 크고 복잡한 마이크로 서비스 시스템용으로 설계되었습니다. [Azure App Service](https://azure.microsoft.com/services/app-service/)는 상태 비저장 마이크로 서비스에 적합합니다. Docker를 바탕으로 하는 마이크로 서비스 대안의 경우 [컨테이너](#containers) 섹션에 설명된 대로 모든 종류의 마이크로 서비스 접근 방식과 맞습니다. 이러한 모든 플랫폼은 .NET Core를 지원하므로 마이크로 서비스를 호스팅하는 데 적합합니다.
 
-마이크로 서비스 아키텍처에 대한 자세한 내용은 [.NET 마이크로 서비스. 컨테이너화된 .NET 애플리케이션을 위한 아키텍처](microservices-architecture/index.md)를 참조하세요.
+마이크로 서비스 아키텍처에 대한 자세한 내용은 [.NET 마이크로 서비스. 컨테이너화된 .NET 애플리케이션을 위한 아키텍처](../architecture/microservices/index.md)를 참조하세요.
 
 ### <a name="containers"></a>컨테이너
 
@@ -110,4 +110,4 @@ Docker 컨테이너는 고유한 Linux 또는 Windows 인프라나 [Azure Kubern
 - [.NET Framework에서 .NET Core로 이식](../core/porting/index.md)
 - [.NET 및 Docker 소개](../core/docker/intro-net-docker.md)
 - [.NET 구성 요소 개요](components.md)
-- [.NET 마이크로 서비스. 컨테이너화된 .NET 애플리케이션을 위한 아키텍처](microservices-architecture/index.md)
+- [.NET 마이크로 서비스. 컨테이너화된 .NET 애플리케이션을 위한 아키텍처](../architecture/microservices/index.md)
