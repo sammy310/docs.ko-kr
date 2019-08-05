@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b7e9401cbd26c62f88ccb4a4b8c2caeb78768d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 69cc2459f1944c8101be9c58b1462217ee7ac78f
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119199"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629575"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows Forms ActiveX 컨트롤 가져오기)
 ActiveX 컨트롤 가져오기를 사용하면 ActiveX 컨트롤에 대한 COM 형식 라이브러리의 형식 정의를 Windows Forms 컨트롤로 변환할 수 있습니다.  
@@ -34,7 +34,7 @@ ActiveX 컨트롤 가져오기를 사용하면 ActiveX 컨트롤에 대한 COM �
 aximp [options]{file.dll | file.ocx}  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
   
 |인수|설명|  
 |--------------|-----------------|  
@@ -49,7 +49,7 @@ aximp [options]{file.dll | file.ocx}
 |`/nologo`|Microsoft 시작 배너를 표시하지 않습니다.|  
 |`/out:` *filename*|만들 어셈블리의 이름을 지정합니다.|  
 |`/publickey:` *filename*|*filename*에서 지정한 파일에 있는 공개 키를 사용하여 강력한 이름으로 결과 컨트롤에 서명합니다.|  
-|`/rcw:` *filename*|새로 생성하는 대신 지정된 런타임 호출 가능 래퍼를 사용합니다. 여러 인스턴스를 지정할 수 있습니다. 현재 디렉터리는 상대 경로에서 사용합니다. 자세한 내용은 [런타임 호출 가능 래퍼](../../../docs/framework/interop/runtime-callable-wrapper.md)를 참조하세요.|  
+|`/rcw:` *filename*|새로 생성하는 대신 지정된 런타임 호출 가능 래퍼를 사용합니다. 여러 인스턴스를 지정할 수 있습니다. 현재 디렉터리는 상대 경로에서 사용합니다. 자세한 내용은 [런타임 호출 가능 래퍼](../../../docs/standard/native-interop/runtime-callable-wrapper.md)를 참조하세요.|  
 |`/silent`|성공 메시지를 표시하지 않습니다.|  
 |`/source`|Windows Forms 래퍼에 대한 C# 소스 코드를 생성합니다.|  
 |`/verbose`|세부 정보 표시 모드를 지정합니다. 즉, 추가 진행 정보를 표시합니다.|  
@@ -72,7 +72,7 @@ aximp [options]{file.dll | file.ocx}
   
  shdocvw.dll과 함께 Aximp.exe를 사용하여 애플리케이션 개발에 사용할 .NET 어셈블리를 만드는 경우에도 문제가 발생할 수 있습니다. 이러한 경우 애플리케이션에서 shdocvw.dll의 시스템 버전과 생성된 버전을 모두 로드하고 시스템 버전을 우선 적용하게 됩니다. 이때 WebBrowser ActiveX 컬렉션 내에서 웹 페이지를 로드하려고 하면 사용자에게 열기/저장 대화 상자가 표시될 수 있습니다. 사용자가 **열기**를 클릭하면 웹 페이지가 Internet Explorer에서 열립니다. 이 문제는 Internet Explorer 버전 6 또는 이전 버전을 실행하는 컴퓨터에서만 발생합니다. 이 문제를 방지하려면 관리되는 <xref:System.Windows.Forms.WebBrowser> 컨트롤을 사용하거나 다음의 설명에 따라 Visual Studio를 사용하여 관리되는 shdocvw.dll을 생성합니다. [방법: 형식 라이브러리에 참조 추가](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md).  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 명령을 사용하여 Media Player 컨트롤 `msdxm.ocx`를 위한 MediaPlayer.dll 및 AxMediaPlayer.dll을 생성합니다.  
   
 ```  

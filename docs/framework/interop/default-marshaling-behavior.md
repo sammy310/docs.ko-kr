@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a057f872d15ca1fcd49d86d08606776a0c0bea0
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 13f1b2c3e3e651cb6c25b966d778cb436967509e
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063326"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629423"
 ---
 # <a name="default-marshaling-behavior"></a>기본 마샬링 동작
 Interop 마샬링은 메서드 매개 변수와 연결된 데이터가 관리되는 메모리와 관리되지 않는 메모리 간에 전달될 때 동작하는 방식을 제어하는 규칙에 따라 작동합니다. 이러한 기본 제공 규칙은 데이터 형식 변형, 호출 수신자가 전달된 데이터를 변경하고 해당 변경 내용을 호출자에게 반환할 수 있는지 여부 및 마샬러가 성능 최적화를 제공하는 상황과 같은 마샬링 작업을 제어합니다.  
@@ -44,7 +44,7 @@ BSTR MethodOne (BSTR b) {
  런타임은 항상 **CoTaskMemFree** 메서드를 사용하여 메모리를 해제합니다. 사용하는 메모리가 **CoTaskMemAlloc** 메서드를 통해 할당되지 않은 경우 **IntPtr**을 사용하고 적절한 메서드를 통해 수동으로 메모리를 해제해야 합니다. 마찬가지로, 커널 메모리에 대한 포인터를 반환하는 Kernel32.dll의 **GetCommandLine** 함수를 사용하는 경우와 같이 메모리가 해제되지 않아야 하는 상황에서는 자동 메모리 해제를 방지할 수 있습니다. 수동으로 메모리를 해제하는 방법에 대한 자세한 내용은 [Buffers 샘플](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100))을 참조하세요.  
   
 ## <a name="default-marshaling-for-classes"></a>클래스에 대한 기본 마샬링  
- 클래스는 COM interop에 의해서만 마샬링될 수 있으며 항상 인터페이스로 마샬링됩니다. 클래스를 마샬링하는 데 사용되는 인터페이스를 클래스 인터페이스라고 하는 경우도 있습니다. 선택한 인터페이스로 클래스 인터페이스를 재정의하는 방법에 대한 자세한 내용은 [클래스 인터페이스 소개](com-callable-wrapper.md#introducing-the-class-interface)를 참조하세요.  
+ 클래스는 COM interop에 의해서만 마샬링될 수 있으며 항상 인터페이스로 마샬링됩니다. 클래스를 마샬링하는 데 사용되는 인터페이스를 클래스 인터페이스라고 하는 경우도 있습니다. 선택한 인터페이스로 클래스 인터페이스를 재정의하는 방법에 대한 자세한 내용은 [클래스 인터페이스 소개](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)를 참조하세요.  
   
 ### <a name="passing-classes-to-com"></a>COM에 클래스 전달  
  관리되는 클래스를 COM에 전달하면 interop 마샬러가 자동으로 클래스를 COM 프록시로 래핑하고 프록시에 의해 생성된 클래스 인터페이스를 COM 메서드 호출에 전달합니다. 그런 다음 프록시는 클래스 인터페이스에 대한 모든 호출을 관리되는 개체에 다시 위임합니다. 또한 프록시는 클래스에 의해 명시적으로 구현되지 않은 다른 인터페이스를 노출합니다. 프록시는 클래스를 대신하여 **IUnknown** 및 **IDispatch**와 같은 인터페이스를 자동으로 구현합니다.  

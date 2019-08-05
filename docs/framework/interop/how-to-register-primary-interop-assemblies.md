@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55b859f109cc224ebf1a8fd62a1d3d3440cf906c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e599696b75ed1a0186276dfa47baef2cdf9d7097
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636096"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629382"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>방법: 주 Interop 어셈블리 등록
 
-클래스는 COM interop에 의해서만 마샬링될 수 있으며 항상 인터페이스로 마샬링됩니다. 클래스를 마샬링하는 데 사용되는 인터페이스를 클래스 인터페이스라고 하는 경우도 있습니다. 선택한 인터페이스로 클래스 인터페이스를 재정의하는 방법에 대한 자세한 내용은 [COM 호출 가능 래퍼](../../../docs/framework/interop/com-callable-wrapper.md)를 참조하세요.
+클래스는 COM interop에 의해서만 마샬링될 수 있으며 항상 인터페이스로 마샬링됩니다. 클래스를 마샬링하는 데 사용되는 인터페이스를 클래스 인터페이스라고 하는 경우도 있습니다. 선택한 인터페이스로 클래스 인터페이스를 재정의하는 방법에 대한 자세한 내용은 [COM 호출 가능 래퍼](../../../docs/standard/native-interop/com-callable-wrapper.md)를 참조하세요.
 
  .NET Framework 응용 프로그램에서 COM 형식을 사용하려는 모든 개발자가 interop 어셈블리를 생성할 수 있지만 이 경우 문제가 발생합니다. 개발자가 COM 형식 라이브러리를 가져오고 서명할 때마다 다른 개발자가 가져오고 서명한 형식과 호환되지 않는 고유한 형식 집합이 생성됩니다. 이러한 형식 비호환성 문제에 대한 해결 방법은 각 개발자가 공급업체에서 제공하고 서명한 주 interop 어셈블리를 가져오는 것입니다.
 
@@ -42,7 +42,7 @@ ms.locfileid: "65636096"
 
      이 명령에서 *assemblyname*은 등록된 어셈블리의 파일 이름입니다. Regasm.exe는 원래 형식 라이브러리와 동일한 레지스트리 키 아래에 주 interop 어셈블리에 대한 항목을 추가합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
  다음 예제에서는 `CompanyA.UtilLib.dll` 주 interop 어셈블리를 등록합니다.
 
 ```console
