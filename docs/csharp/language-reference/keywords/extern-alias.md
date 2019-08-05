@@ -9,42 +9,42 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: d2ecd566731c3d2d472034ecb6412432af24c847
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: cfb662203216aa6ca208ceec20d55164c65163dc
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422062"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626650"
 ---
-# <a name="extern-alias-c-reference"></a><span data-ttu-id="41f0c-102">extern alias(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="41f0c-102">extern alias (C# Reference)</span></span>
-<span data-ttu-id="41f0c-103">정규화된 형식 이름이 동일한 어셈블리의 두 버전을 참조해야 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41f0c-103">You might have to reference two versions of assemblies that have the same fully-qualified type names.</span></span> <span data-ttu-id="41f0c-104">예를 들어 동일한 애플리케이션에서 어셈블리 버전을 두 개 이상 사용해야 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41f0c-104">For example, you might have to use two or more versions of an assembly in the same application.</span></span> <span data-ttu-id="41f0c-105">외부 어셈블리 별칭을 사용하면 각 어셈블리의 네임스페이스를 별칭으로 명명된 루트 수준 네임스페이스 내에서 래핑하여 동일한 파일에서 사용하도록 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41f0c-105">By using an external assembly alias, the namespaces from each assembly can be wrapped inside root-level namespaces named by the alias, which enables them to be used in the same file.</span></span>  
+# <a name="extern-alias-c-reference"></a><span data-ttu-id="e050e-102">extern alias(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="e050e-102">extern alias (C# Reference)</span></span>
+<span data-ttu-id="e050e-103">정규화된 형식 이름이 동일한 어셈블리의 두 버전을 참조해야 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e050e-103">You might have to reference two versions of assemblies that have the same fully-qualified type names.</span></span> <span data-ttu-id="e050e-104">예를 들어 동일한 애플리케이션에서 어셈블리 버전을 두 개 이상 사용해야 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e050e-104">For example, you might have to use two or more versions of an assembly in the same application.</span></span> <span data-ttu-id="e050e-105">외부 어셈블리 별칭을 사용하면 각 어셈블리의 네임스페이스를 별칭으로 명명된 루트 수준 네임스페이스 내에서 래핑하여 동일한 파일에서 사용하도록 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e050e-105">By using an external assembly alias, the namespaces from each assembly can be wrapped inside root-level namespaces named by the alias, which enables them to be used in the same file.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="41f0c-106">[extern](../../../csharp/language-reference/keywords/extern.md) 키워드는 메서드 한정자로도 사용되어 비관리 코드로 작성된 메서드를 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="41f0c-106">The [extern](../../../csharp/language-reference/keywords/extern.md) keyword is also used as a method modifier, declaring a method written in unmanaged code.</span></span>  
+>  <span data-ttu-id="e050e-106">[extern](../../../csharp/language-reference/keywords/extern.md) 키워드는 메서드 한정자로도 사용되어 비관리 코드로 작성된 메서드를 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="e050e-106">The [extern](../../../csharp/language-reference/keywords/extern.md) keyword is also used as a method modifier, declaring a method written in unmanaged code.</span></span>  
   
- <span data-ttu-id="41f0c-107">정규화된 형식 이름이 동일한 두 어셈블리를 참조하려면 다음과 같이 명령 프롬프트에서 별칭을 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="41f0c-107">To reference two assemblies with the same fully-qualified type names, an alias must be specified at a command prompt, as follows:</span></span>  
+ <span data-ttu-id="e050e-107">정규화된 형식 이름이 동일한 두 어셈블리를 참조하려면 다음과 같이 명령 프롬프트에서 별칭을 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e050e-107">To reference two assemblies with the same fully-qualified type names, an alias must be specified at a command prompt, as follows:</span></span>  
   
  `/r:GridV1=grid.dll`  
   
  `/r:GridV2=grid20.dll`  
   
- <span data-ttu-id="41f0c-108">그러면 외부 별칭 `GridV1` 및 `GridV2`가 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="41f0c-108">This creates the external aliases `GridV1` and `GridV2`.</span></span> <span data-ttu-id="41f0c-109">프로그램 내에서 이러한 별칭을 사용하려면 `extern` 키워드를 사용하여 참조합니다.</span><span class="sxs-lookup"><span data-stu-id="41f0c-109">To use these aliases from within a program, reference them by using the `extern` keyword.</span></span> <span data-ttu-id="41f0c-110">예:</span><span class="sxs-lookup"><span data-stu-id="41f0c-110">For example:</span></span>  
+ <span data-ttu-id="e050e-108">그러면 외부 별칭 `GridV1` 및 `GridV2`가 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="e050e-108">This creates the external aliases `GridV1` and `GridV2`.</span></span> <span data-ttu-id="e050e-109">프로그램 내에서 이러한 별칭을 사용하려면 `extern` 키워드를 사용하여 참조합니다.</span><span class="sxs-lookup"><span data-stu-id="e050e-109">To use these aliases from within a program, reference them by using the `extern` keyword.</span></span> <span data-ttu-id="e050e-110">예:</span><span class="sxs-lookup"><span data-stu-id="e050e-110">For example:</span></span>  
   
  `extern alias GridV1;`  
   
  `extern alias GridV2;`  
   
- <span data-ttu-id="41f0c-111">각 extern alias 선언에서는 전역 네임스페이스와 병렬이지만 전역 네임스페이스 내에 있지 않는 추가 루트 수준 네임스페이스를 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="41f0c-111">Each extern alias declaration introduces an additional root-level namespace that parallels (but does not lie within) the global namespace.</span></span> <span data-ttu-id="41f0c-112">따라서 각 어셈블리의 형식은 적절한 namespace-alias에서 시작되는 정규화된 이름을 사용하여 명확하게 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41f0c-112">Thus types from each assembly can be referred to without ambiguity by using their fully qualified name, rooted in the appropriate namespace-alias.</span></span>  
+ <span data-ttu-id="e050e-111">각 extern alias 선언에서는 전역 네임스페이스와 병렬이지만 전역 네임스페이스 내에 있지 않는 추가 루트 수준 네임스페이스를 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="e050e-111">Each extern alias declaration introduces an additional root-level namespace that parallels (but does not lie within) the global namespace.</span></span> <span data-ttu-id="e050e-112">따라서 각 어셈블리의 형식은 적절한 namespace-alias에서 시작되는 정규화된 이름을 사용하여 명확하게 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e050e-112">Thus types from each assembly can be referred to without ambiguity by using their fully qualified name, rooted in the appropriate namespace-alias.</span></span>  
   
- <span data-ttu-id="41f0c-113">이전 예제에서 `GridV1::Grid`는 `grid.dll`의 표 컨트롤이 되고 `GridV2::Grid`는 `grid20.dll`의 표 컨트롤이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="41f0c-113">In the previous example, `GridV1::Grid` would be the grid control from `grid.dll`, and `GridV2::Grid` would be the grid control from `grid20.dll`.</span></span>  
+ <span data-ttu-id="e050e-113">이전 예제에서 `GridV1::Grid`는 `grid.dll`의 표 컨트롤이 되고 `GridV2::Grid`는 `grid20.dll`의 표 컨트롤이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e050e-113">In the previous example, `GridV1::Grid` would be the grid control from `grid.dll`, and `GridV2::Grid` would be the grid control from `grid20.dll`.</span></span>  
   
-## <a name="c-language-specification"></a><span data-ttu-id="41f0c-114">C# 언어 사양</span><span class="sxs-lookup"><span data-stu-id="41f0c-114">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="e050e-114">C# 언어 사양</span><span class="sxs-lookup"><span data-stu-id="e050e-114">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="41f0c-115">참고 항목</span><span class="sxs-lookup"><span data-stu-id="41f0c-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e050e-115">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e050e-115">See also</span></span>
 
-- [<span data-ttu-id="41f0c-116">C# 참조</span><span class="sxs-lookup"><span data-stu-id="41f0c-116">C# Reference</span></span>](../../../csharp/language-reference/index.md)
-- [<span data-ttu-id="41f0c-117">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="41f0c-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="41f0c-118">C# 키워드</span><span class="sxs-lookup"><span data-stu-id="41f0c-118">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
-- [<span data-ttu-id="41f0c-119">:: 연산자</span><span class="sxs-lookup"><span data-stu-id="41f0c-119">:: Operator</span></span>](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
-- [<span data-ttu-id="41f0c-120">/reference(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="41f0c-120">/reference (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)
+- [<span data-ttu-id="e050e-116">C# 참조</span><span class="sxs-lookup"><span data-stu-id="e050e-116">C# Reference</span></span>](../../../csharp/language-reference/index.md)
+- [<span data-ttu-id="e050e-117">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="e050e-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="e050e-118">C# 키워드</span><span class="sxs-lookup"><span data-stu-id="e050e-118">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
+- [<span data-ttu-id="e050e-119">:: 연산자</span><span class="sxs-lookup"><span data-stu-id="e050e-119">:: Operator</span></span>](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)
+- [<span data-ttu-id="e050e-120">/reference(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="e050e-120">/reference (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)
