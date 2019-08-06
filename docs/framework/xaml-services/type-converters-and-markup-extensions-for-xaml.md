@@ -8,12 +8,12 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-ms.openlocfilehash: 6d859f5f341eaf7c86573077ec56eab7b4cd7bb8
-ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
+ms.openlocfilehash: d31d970e8e95726aa789f853ac12c4830498a743
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66722551"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796835"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML을 위한 형식 변환기 및 태그 확장
 형식 변환기 및 태그 확장은 XAML 형식 시스템과 XAML 작성기가 개체 그래프 구성 요소를 생성하는 데 사용하는 두 가지 기술입니다. 일부 특징을 공유하지만 형식 변환기 및 태그 확장은 XAML 노드 스트림에서 다르게 표현됩니다. 이 설명서 집합에서는 때때로 형식 변환기, 태그 확장 및 유사한 구문을 총체적으로 값 변환기라고 합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "66722551"
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>형식 변환기  
- .NET Framework XAML 서비스 정의에서 형식 변환기는 CLR <xref:System.ComponentModel.TypeConverter> 클래스에서 파생되는 클래스입니다. <xref:System.ComponentModel.TypeConverter> XAML이 존재 하기 전에 Microsoft.NET Framework에 있던 클래스입니다. 원래 목적은 [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] 속성에 대해 속성 창 및 유사한 텍스트 기반 편집 기능을 지원하는 것이었습니다. .NET Framework에 XAML을 도입하는 경우 <xref:System.ComponentModel.TypeConverter> 를 사용하여 텍스트 구문(특성 값 또는 XAML 값 노드에 있음)을 개체로 변환합니다. <xref:System.ComponentModel.TypeConverter> 를 사용하여 개체 값을 텍스트 구문으로 직렬화할 수도 있습니다. <xref:System.ComponentModel.TypeConverter> Windows Presentation Foundation (WPF) 및 Windows Communication Foundation (WCF)의 이전 프레임 워크별 XAML 구현 에서도 사용 되었습니다. XAML의 <xref:System.ComponentModel.TypeConverter> 에 대한 자세한 내용은 [Type Converters for XAML Overview](type-converters-for-xaml-overview.md)의 이전 프레임워크별 XAML 구현에서도 사용되었습니다.  
+ .NET Framework XAML 서비스 정의에서 형식 변환기는 CLR <xref:System.ComponentModel.TypeConverter> 클래스에서 파생되는 클래스입니다. <xref:System.ComponentModel.TypeConverter>는 XAML이 존재 하기 전에 Microsoft .NET 프레임 워크에 있던 클래스입니다. 원래 용도는 IDE 속성에 대해 속성 창 및 유사한 텍스트 기반 편집 메타포를 지 원하는 것 이었습니다. .NET Framework에 XAML을 도입하는 경우 <xref:System.ComponentModel.TypeConverter> 를 사용하여 텍스트 구문(특성 값 또는 XAML 값 노드에 있음)을 개체로 변환합니다. <xref:System.ComponentModel.TypeConverter> 를 사용하여 개체 값을 텍스트 구문으로 직렬화할 수도 있습니다. <xref:System.ComponentModel.TypeConverter>는 Windows Presentation Foundation (WPF) 및 Windows Communication Foundation (WCF)의 이전 프레임 워크 관련 XAML 구현 에서도 사용 되었습니다. XAML의 <xref:System.ComponentModel.TypeConverter> 에 대한 자세한 내용은 [Type Converters for XAML Overview](type-converters-for-xaml-overview.md)의 이전 프레임워크별 XAML 구현에서도 사용되었습니다.  
   
 <a name="markup_extensions"></a>   
 ## <a name="markup-extensions"></a>태그 확장  
@@ -45,7 +45,7 @@ ms.locfileid: "66722551"
  XAML에 대한 태그 확장 구현 패턴에 대한 자세한 내용은 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Markup.MarkupExtension> 및 <xref:System.Windows.Markup.ValueSerializer> 형식은 둘 다 <xref:System.Windows.Markup> 네임스페이스에 있고 <xref:System.Xaml> 네임스페이스에는 없습니다. 이러한 유형은 문자열이 포함 된 CLR 네임 스페이스를 채우는 WPF 또는 Windows Forms 기술에 특정은 아닙니다 `Windows`합니다. <xref:System.Windows.Markup.MarkupExtension> 및 <xref:System.Windows.Markup.ValueSerializer> 는 System.Xaml 어셈블리에 있으며 특정 프레임워크 종속성이 없습니다. 이러한 형식은.NET Framework 3.0에 대 한 CLR 네임 스페이스에 있었으며 및 기존 WPF 프로젝트의 참조 손상을 방지 하기 위해.NET Framework 4에서 CLR 네임 스페이스에 유지 됩니다. 자세한 내용은 [Types Migrated from WPF to System.Xaml](types-migrated-from-wpf-to-system-xaml.md)을 참조하세요.  
+>  <xref:System.Windows.Markup.MarkupExtension> 및 <xref:System.Windows.Markup.ValueSerializer> 형식은 둘 다 <xref:System.Windows.Markup> 네임스페이스에 있고 <xref:System.Xaml> 네임스페이스에는 없습니다. 이는 이러한 형식이 문자열 `Windows`을 포함 하는 CLR 네임 스페이스를 채우는 WPF 또는 Windows Forms 기술에만 적용 되는 것을 의미 하지는 않습니다. <xref:System.Windows.Markup.MarkupExtension> 및 <xref:System.Windows.Markup.ValueSerializer> 는 System.Xaml 어셈블리에 있으며 특정 프레임워크 종속성이 없습니다. 이러한 형식은 .NET Framework 3.0에 대 한 CLR 네임 스페이스에 있었으며 .NET Framework 4의 CLR 네임 스페이스에 남아 있으므로 기존 WPF 프로젝트의 참조가 손상 되지 않습니다. 자세한 내용은 [Types Migrated from WPF to System.Xaml](types-migrated-from-wpf-to-system-xaml.md)을 참조하세요.  
   
 <a name="value_serializers"></a>   
 ## <a name="value-serializers"></a>값 직렬 변환기  

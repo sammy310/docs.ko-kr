@@ -24,18 +24,18 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 24b872fcf58db3ef0ef7d04165129804dc46d641
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: ee2f6050eeea6eec840156ed5dce9fb9b6172149
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364278"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796870"
 ---
 # <a name="navigation-overview"></a>탐색 개요
 
 WPF (Windows Presentation Foundation)에서는 두 가지 유형의 응용 프로그램 (독립 실행형 응용 프로그램 및 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)])에서 사용할 수 있는 브라우저 스타일 탐색을 지원 합니다. 탐색 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 을 위해 콘텐츠를 패키징하는 <xref:System.Windows.Controls.Page> 클래스를 제공 합니다. 를 사용 하거나를 사용 <xref:System.Windows.Controls.Page> 하 여 <xref:System.Windows.Navigation.NavigationService>프로그래밍 방식으로 한 개 <xref:System.Windows.Documents.Hyperlink>에서 다른 방식으로 탐색할 수 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 저널을 사용하여 탐색했던 페이지를 기억했다가 다시 해당 페이지로 돌아옵니다.
 
-<xref:System.Windows.Controls.Page>,, 및 저널은에서 제공 하 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 탐색 지원의 핵심을 형성 합니다. <xref:System.Windows.Documents.Hyperlink> <xref:System.Windows.Navigation.NavigationService> 이 개요에서는 느슨한 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 파일, [!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)] 파일 및 개체에 대 한 탐색을 포함 하는 고급 탐색 지원을 포함 하기 전에 이러한 기능을 자세히 살펴봅니다.
+<xref:System.Windows.Controls.Page>,, 및 저널은에서 제공 하 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 탐색 지원의 핵심을 형성 합니다. <xref:System.Windows.Documents.Hyperlink> <xref:System.Windows.Navigation.NavigationService> 이 개요에서는 느슨한 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 파일, HTML 파일 및 개체에 대 한 탐색이 포함 된 고급 탐색 지원을 포함 하기 전에 이러한 기능을 자세히 설명 합니다.
 
 > [!NOTE]
 > 이 항목에서 "browser" 라는 용어는 현재 및 Firefox를 포함 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] 하는 응용 프로그램을 호스팅할 수 있는 브라우저만 나타냅니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 특정 기능이 특정 브라우저 에서만 지원 되는 경우 브라우저 버전을 라고 합니다.
@@ -79,7 +79,7 @@ WPF (Windows Presentation Foundation)에서는 두 가지 유형의 응용 프�
 
 ### <a name="implementing-a-page"></a>페이지 구현
 
-에서 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].NET Framework 개체, 사용자 지정 개체, 열거형 값, 사용자 컨트롤, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일 및 [!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)] 파일을 포함 하는 여러 콘텐츠 형식으로 이동할 수 있습니다. 그러나를 사용 <xref:System.Windows.Controls.Page>하 여 콘텐츠를 가장 일반적이 고 편리한 방식으로 패키지할 수 있습니다. 또한에서는 <xref:System.Windows.Controls.Page> 탐색 관련 기능을 구현 하 여 모양을 개선 하 고 개발을 간소화 합니다.
+에서 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].NET Framework 개체, 사용자 지정 개체, 열거형 값, 사용자 컨트롤, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일 및 HTML 파일을 포함 하는 여러 콘텐츠 형식으로 이동할 수 있습니다. 그러나를 사용 <xref:System.Windows.Controls.Page>하 여 콘텐츠를 가장 일반적이 고 편리한 방식으로 패키지할 수 있습니다. 또한에서는 <xref:System.Windows.Controls.Page> 탐색 관련 기능을 구현 하 여 모양을 개선 하 고 개발을 간소화 합니다.
 
 를 <xref:System.Windows.Controls.Page>사용 하 여 다음과 같은 태그를 사용 하 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 여 탐색 가능한 콘텐츠 페이지를 선언적으로 구현할 수 있습니다.
 
@@ -133,7 +133,7 @@ WPF (Windows Presentation Foundation)에서는 두 가지 유형의 응용 프�
 는를 시작할 때 <xref:System.Windows.Controls.Page> <xref:System.Windows.Controls.Page> [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 자동으로로드되는인시작을지정하기위해[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 응용 프로그램 정의를 사용할 수 있습니다. 이렇게 하려면 원하는 <xref:System.Windows.Application.StartupUri%2A> [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] 에<xref:System.Windows.Controls.Page>대해 속성을로 설정 합니다.
 
 > [!NOTE]
-> 대부분의 경우는 <xref:System.Windows.Controls.Page> 응용 프로그램으로 컴파일되거나 응용 프로그램으로 배포 됩니다. 이러한 경우를 <xref:System.Windows.Controls.Page> 식별 하 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 는는 *pack 체계를* 준수 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]하는 인 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 팩입니다. Pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] 은 [WPF의 pack uri](pack-uris-in-wpf.md)에 자세히 설명 되어 있습니다. 아래에 설명된 http 체계를 사용하여 콘텐츠를 탐색할 수도 있습니다.
+> 대부분의 경우는 <xref:System.Windows.Controls.Page> 응용 프로그램으로 컴파일되거나 응용 프로그램으로 배포 됩니다. 이러한 경우 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 를 <xref:System.Windows.Controls.Page> 식별 하는는 pack 체계를 준수 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]하는 인 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 팩입니다. Pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] 은 [WPF의 pack uri](pack-uris-in-wpf.md)에 자세히 설명 되어 있습니다. 아래에 설명된 http 체계를 사용하여 콘텐츠를 탐색할 수도 있습니다.
 
 다음 예제와 <xref:System.Windows.Application.StartupUri%2A> 같이 태그에서 선언적으로 설정할 수 있습니다.
 
@@ -218,7 +218,7 @@ WPF (Windows Presentation Foundation)에서는 두 가지 유형의 응용 프�
 > 이 섹션에서는의 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]기본 조각 탐색 구현에 대해 설명 합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]를 사용 하면 <xref:System.Windows.Navigation.NavigationService.FragmentNavigation?displayProperty=nameWithType> 이벤트를 처리 해야 하는 사용자 고유의 조각 탐색 구성표를 구현할 수도 있습니다.
 
 > [!IMPORTANT]
-> [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 를 통해 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] `Page` 페이지 를탐색할수있는경우에만느슨한페이지의조각(루트요소로를사용하는태그전용파일)으로이동할수있습니다.[!INCLUDE[TLA2#tla_http](../../../../includes/tla2sharptla-http-md.md)]
+> HTTP를 통해 페이지를 검색할 수 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 있는 경우에만 느슨한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지 ( `Page` 루트 요소로 된 태그 전용 파일)의 조각으로 이동할 수 있습니다.
 >
 > 그러나 느슨한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지에서 자체 조각을 탐색할 수 있습니다.
 
@@ -371,12 +371,12 @@ WPF (Windows Presentation Foundation)에서는 두 가지 유형의 응용 프�
 
 ![뒤로 및 앞으로 단추](./media/navigation-overview/back-and-forward-navigation.png "뒤로 및 앞으로 단추를 사용 하 여 탐색 합니다.")
 
-[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]에서 호스팅하[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]는의 경우는 저널을의 탐색에 통합 합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 이를 통해 사용자는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 의  [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]뒤로, **앞**으로 및 **최근 페이지** 단추를 사용 하 여의 페이지를 탐색할 수 있습니다. 저널은 [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] 또는 Internet Explorer 8 [!INCLUDE[TLA2#tla_ie6](../../../../includes/tla2sharptla-ie6-md.md)] 과 동일한 방식으로에 통합 되지 않습니다. 대신는 대체 탐색 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]을 렌더링합니다.[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]
+[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]에서 호스팅하[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]는의 경우는 저널을의 탐색에 통합 합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 이를 통해 사용자는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 의 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]뒤로, **앞**으로 및 **최근 페이지** 단추를 사용 하 여의 페이지를 탐색할 수 있습니다. 저널은 [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] 또는 Internet Explorer 8 [!INCLUDE[TLA2#tla_ie6](../../../../includes/tla2sharptla-ie6-md.md)] 과 동일한 방식으로에 통합 되지 않습니다. 대신는 대체 탐색 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]을 렌더링합니다.[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]
 
 > [!IMPORTANT]
 > 에서 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]사용자가 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]로 이동 하는 경우, 연결 되지 않은 페이지에 대 한 저널 항목만 저널에 유지 됩니다. 페이지를 활성 상태로 유지 하는 방법에 대 한 설명은이 항목의 뒷부분에 나오는 [페이지 수명 및 저널](#PageLifetime) 을 참조 하세요.
 
-기본적으로의 <xref:System.Windows.Controls.Page>  [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 최근 페이지 <xref:System.Windows.Controls.Page>목록에 표시 되는 각에 대 한 텍스트는에 대한입니다.[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 대부분의 경우 이는 사용자에게 특히 의미가 없습니다. 다행히도 다음 옵션 중 하나를 사용하여 텍스트를 변경할 수 있습니다.
+기본적으로의 <xref:System.Windows.Controls.Page> [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 최근 페이지 <xref:System.Windows.Controls.Page>목록에 표시 되는 각에 대 한 텍스트는에 대한입니다.[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 대부분의 경우 이는 사용자에게 특히 의미가 없습니다. 다행히도 다음 옵션 중 하나를 사용하여 텍스트를 변경할 수 있습니다.
 
 1. 연결 `JournalEntry.Name` 된 특성 값입니다.
 
@@ -400,7 +400,7 @@ WPF (Windows Presentation Foundation)에서는 두 가지 유형의 응용 프�
 
 #### <a name="navigating-the-journal-using-wpf"></a>WPF를 사용하여 저널 탐색
 
-사용자는의 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]  [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]뒤로, **앞**으로 및 **최근 페이지** 를 사용 하 여 저널을 탐색할 수 있지만에서 제공 하는 선언적 및 프로그래밍 방식 메커니즘을 모두 사용 하 여 저널을 탐색할 수도 있습니다. 이 작업을 수행 하는 한 가지 이유는 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] 페이지에서 사용자 지정 탐색을 제공 하는 것입니다.
+사용자는의 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]뒤로, **앞**으로 및 **최근 페이지** 를 사용 하 여 저널을 탐색할 수 있지만에서 제공 하는 선언적 및 프로그래밍 방식 메커니즘을 모두 사용 하 여 저널을 탐색할 수도 있습니다. 이 작업을 수행 하는 한 가지 이유는 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] 페이지에서 사용자 지정 탐색을 제공 하는 것입니다.
 
 에 의해 <xref:System.Windows.Input.NavigationCommands>노출 된 탐색 명령을 사용 하 여 선언적으로 저널 탐색 지원을 추가할 수 있습니다. 다음 예제에서는 `BrowseBack` 탐색 명령을 사용 하는 방법을 보여 줍니다.
 
@@ -501,7 +501,7 @@ WPF (Windows Presentation Foundation)에서는 두 가지 유형의 응용 프�
 
 - <xref:System.Windows.Controls.TextBox>
 
-에서 <xref:System.Windows.Controls.Page> 이러한 컨트롤을 사용 하는 경우에는 다음 **그림** <xref:System.Windows.Controls.ListBox> 에 <xref:System.Windows.Controls.Page> 표시 된 것 처럼 탐색 전체에 데이터를 입력 합니다.
+에서 <xref:System.Windows.Controls.Page> 이러한 컨트롤을 사용 하는 경우에는 다음 그림 <xref:System.Windows.Controls.ListBox> 에 <xref:System.Windows.Controls.Page> 표시 된 것 처럼 탐색 전체에 데이터를 입력 합니다.
 
 ![상태를 기억할 컨트롤이 있는 페이지](./media/navigation-overview/data-remembered-across-page-navigations.png "입력 한 데이터는 페이지 탐색 사이에 저장 됩니다.")
 
@@ -539,7 +539,7 @@ WPF (Windows Presentation Foundation)에서는 두 가지 유형의 응용 프�
 
 - 동일한 도메인의 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]에서 쿠키를 만들고 공유할 수 있습니다.
 
-- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]그리고 [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] 동일한 도메인의 페이지에서 쿠키를 만들고 공유할 수 있습니다.
+- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]동일한 도메인의 및 HTML 페이지에서 쿠키를 만들고 공유할 수 있습니다.
 
 - 및 느슨한 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지에서 웹 요청을 만들 때 쿠키가 디스패치 됩니다.
 
@@ -683,7 +683,7 @@ WPF (Windows Presentation Foundation)에서는 두 가지 유형의 응용 프�
 
 이 항목 <xref:System.Windows.Controls.Page> 전체에서 및 팩 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 은의 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]다양 한 탐색 기능을 보여 주기 위해 사용 되었습니다. 그러나 응용 프로그램 <xref:System.Windows.Controls.Page> 으로 컴파일되는는 탐색할 수 있는 유일한 콘텐츠 형식이 아니라 pack [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 만 콘텐츠를 식별 하는 유일한 방법입니다.
 
-이 섹션에서 설명 하는 것 처럼 느슨한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일, [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] 파일 및 개체를 탐색할 수도 있습니다.
+이 단원에서 설명 하는 것 처럼 느슨한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일, HTML 파일 및 개체로 이동할 수도 있습니다.
 
 <a name="Navigating_to_Loose_XAML_Files"></a>
 
@@ -724,19 +724,19 @@ WPF (Windows Presentation Foundation)에서는 두 가지 유형의 응용 프�
 
 ### <a name="navigating-to-html-files-by-using-frame"></a>프레임을 사용하여 HTML 파일 탐색
 
-짐작할 수 있듯이로 [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]이동할 수도 있습니다. Http 체계를 사용 하는 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 를 제공 하기만 하면 됩니다. 예를 들어 다음 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 은 [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] 페이지를 <xref:System.Windows.Controls.Frame> 탐색 하는을 보여 줍니다.
+짐작할 수 있듯이 HTML로 이동할 수도 있습니다. Http 체계를 사용 하는 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 를 제공 하기만 하면 됩니다. 예를 들어 다음 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 은 HTML 페이지로 이동 하는을 <xref:System.Windows.Controls.Frame> 보여 줍니다.
 
 [!code-xaml[NavigationOverviewSnippets#FrameHtmlNavMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHTMLNavPage.xaml#framehtmlnavmarkup)]
 
-로 이동 [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] 하려면 특수 권한이 필요 합니다. 예를 들어 인터넷 영역 부분 신뢰 보안 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 샌드박스에서 실행 되는에서 탐색할 수 없습니다. 자세한 내용은 [WPF 부분 신뢰 보안](../wpf-partial-trust-security.md)을 참조하세요.
+HTML로 이동 하려면 특수 권한이 필요 합니다. 예를 들어 인터넷 영역 부분 신뢰 보안 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 샌드박스에서 실행 되는에서 탐색할 수 없습니다. 자세한 내용은 [WPF 부분 신뢰 보안](../wpf-partial-trust-security.md)을 참조하세요.
 
 <a name="Navigating_to_HTML_Files_Using_WebBrowser"></a>
 
 ### <a name="navigating-to-html-files-by-using-the-webbrowser-control"></a>WebBrowser 컨트롤을 사용하여 HTML 파일 탐색
 
-컨트롤 <xref:System.Windows.Controls.WebBrowser> 은 문서 [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] 호스팅, 탐색 및 스크립트/관리 코드 상호 운용성을 지원 합니다. <xref:System.Windows.Controls.WebBrowser> 컨트롤에 대 한 자세한 내용은을 참조 <xref:System.Windows.Controls.WebBrowser>하십시오.
+컨트롤 <xref:System.Windows.Controls.WebBrowser> 은 HTML 문서 호스팅, 탐색 및 스크립트/관리 코드 상호 운용성을 지원 합니다. <xref:System.Windows.Controls.WebBrowser> 컨트롤에 대 한 자세한 내용은을 참조 <xref:System.Windows.Controls.WebBrowser>하십시오.
 
-와 <xref:System.Windows.Controls.Frame>마찬가지로를 사용 [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] 하 <xref:System.Windows.Controls.WebBrowser> 여로 이동 하려면 특수 권한이 필요 합니다. 예를 들어 부분 신뢰 응용 프로그램에서는 원본 사이트에 있는로 [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] 만 이동할 수 있습니다. 자세한 내용은 [WPF 부분 신뢰 보안](../wpf-partial-trust-security.md)을 참조하세요.
+와 <xref:System.Windows.Controls.Frame>마찬가지로를 사용 하 여 <xref:System.Windows.Controls.WebBrowser> HTML로 이동 하려면 특수 권한이 필요 합니다. 예를 들어 부분 신뢰 응용 프로그램에서는 원본 사이트에 있는 HTML로만 이동할 수 있습니다. 자세한 내용은 [WPF 부분 신뢰 보안](../wpf-partial-trust-security.md)을 참조하세요.
 
 <a name="Navigating_to_Objects"></a>
 

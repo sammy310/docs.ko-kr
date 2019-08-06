@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 5b092f50ddff5c432fbd6396b5fedafe7a6acba0
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 932f56a9a277360b11c551aaa1faf819f8e07fe6
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512837"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796682"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>개체 수명: 개체를 만들고 제거 하는 방법 (Visual Basic)
 
@@ -41,7 +41,7 @@ ms.locfileid: "68512837"
 
 ### <a name="sub-new"></a>Sub New
 
-`Sub New` 생성자는 클래스를 만들 때 한 번만 실행할 수 있으며, 같은 클래스나 파생 클래스에서 다른 생성자의 첫 번째 코드 줄이 아닌 위치에서 명시적으로 호출할 수는 없습니다. 또한 `Sub New` 메서드의 코드는 항상 클래스의 다른 코드보다 먼저 실행됩니다. Visual Basic 이상 버전에서는 클래스에 대 `Sub New` 한 프로시저를 `Sub New` 명시적으로 정의 하지 않은 경우 런타임에 생성자를 암시적으로 만듭니다.
+`Sub New` 생성자는 클래스를 만들 때 한 번만 실행할 수 있으며, 같은 클래스나 파생 클래스에서 다른 생성자의 첫 번째 코드 줄이 아닌 위치에서 명시적으로 호출할 수는 없습니다. 또한 `Sub New` 메서드의 코드는 항상 클래스의 다른 코드보다 먼저 실행됩니다. 클래스에 대 한 `Sub New` 프로시저를 `Sub New` 명시적으로 정의 하지 않은 경우 런타임에는 런타임에 생성자를 암시적으로 만듭니다. Visual Basic
 
 클래스의 생성자를 만들려면 클래스 정의 내 임의의 위치에 `Sub New` 프로시저를 만듭니다. 매개 변수화된 생성자를 만들려면 다음 코드에 나와 있는 것처럼 다른 프로시저에 인수를 지정할 때와 마찬가지로 `Sub New`에 인수의 이름과 데이터 형식을 지정합니다.
 
@@ -64,7 +64,7 @@ CLR은 개체를 해제하기 전에 `Finalize` 프로시저를 정의하는 개
 
 `Finalize` 소멸자는 소멸자가 속한 클래스나 파생 클래스에서만 호출할 수 있는 보호된 메서드입니다. 시스템은 개체 소멸 시 `Finalize`를 자동으로 호출하므로 파생 클래스의 `Finalize` 구현 외부에서 `Finalize`를 명시적으로 호출해서는 안 됩니다.
 
-개체가 nothing으로 설정되는 즉시 실행되는 `Class_Terminate`와는 달리, 개체 범위가 손실되는 시점과 Visual Basic에서 `Finalize` 소멸자를 호출하는 시점 사이에는 대개 지연 시간이 생깁니다. Visual Basic 이상 버전에서는 언제 든 지 명시적으로 호출 하 여 <xref:System.IDisposable.Dispose%2A>리소스를 즉시 해제할 수 있는 두 번째 종류의 소멸자를 사용할 수 있습니다.
+개체가 nothing으로 설정되는 즉시 실행되는 `Class_Terminate`와는 달리, 개체 범위가 손실되는 시점과 Visual Basic에서 `Finalize` 소멸자를 호출하는 시점 사이에는 대개 지연 시간이 생깁니다. Visual Basic .net은 리소스를 즉시 해제 하기 위해 언제 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>든 지 명시적으로 호출할 수 있는 두 번째 종류의 소멸자를 허용 합니다.
 
 > [!NOTE]
 > `Finalize` 소멸자는 예외를 throw해서는 안 됩니다. 이러한 예외는 응용 프로그램에서 처리할 수 없으며 throw되는 경우 응용 프로그램이 종료되기 때문입니다.

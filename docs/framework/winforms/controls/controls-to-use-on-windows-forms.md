@@ -5,22 +5,22 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: 3d8e6d37a5c27eac6af303819fb50b28acd225c6
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 114b9a6db7b41c5aac24bcd1badcf5f5b4b2fb08
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589049"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796273"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Windows Forms에 사용할 수 있는 컨트롤
 다음은 사전순 목록 컨트롤 및 Windows Forms에서 사용할 수 있는 구성 요소입니다. 이 섹션에서 다루는 Windows Forms 컨트롤 외에 Windows Forms에 ActiveX 및 사용자 지정 컨트롤을 추가할 수 있습니다. 여기에 나열된 목록에서 사용자가 필요한 컨트롤을 찾을 수 없는 경우 직접 만들 수도 있습니다. 자세한 내용은 [디자인할 때 Windows Forms 컨트롤 개발](developing-windows-forms-controls-at-design-time.md)을 참조하십시오. 필요한 컨트롤을 선택하는 방법에 대한 자세한 내용은 [기능별 Windows Forms 컨트롤](windows-forms-controls-by-function.md)을 참조하십시오.  
   
 > [!NOTE]
->  Visual Basic 컨트롤은.NET Framework에서 제공 하는 클래스를 기반으로 합니다.  
+>  Visual Basic 컨트롤은 .NET Framework에서 제공 하는 클래스를 기반으로 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [기능별 Windows Forms 컨트롤](windows-forms-controls-by-function.md)  
- 나열 하 고.NET Framework를 기반으로 하는 Windows Forms 컨트롤에 설명 합니다.  
+ .NET Framework에 따라 Windows Forms 컨트롤을 나열 하 고 설명 합니다.  
   
  [소유자 그리기 지원이 기본 제공되는 컨트롤](controls-with-built-in-owner-drawing-support.md)  
  속성을 통해 사용할 수 없는 컨트롤의 모양의 측면을 변경하는 방법을 설명합니다.  
@@ -168,7 +168,7 @@ ms.locfileid: "65589049"
  사용자가 고정된 컨트롤의 크기를 조정할 수 있습니다.  
   
  [Splitter 컨트롤](splitter-control-windows-forms.md)  
- 도킹된 된 컨트롤의 크기를 조정할 수 있습니다 (.NET Framework 버전 1.x).  
+ 사용자가 도킹 된 컨트롤의 크기를 조정할 수 있습니다 (.NET Framework 버전 1.x).  
   
  [StatusBar 컨트롤](statusbar-control-windows-forms.md)  
  포커스가 있는 컨트롤에 관련된 상태 정보를 표시합니다. <xref:System.Windows.Forms.StatusStrip>은 이전 버전의 <xref:System.Windows.Forms.StatusBar> 컨트롤을 대체하고 확장하지만 이전 버전과의 호환성 및 앞으로의 사용 가능성을 고려하여 <xref:System.Windows.Forms.StatusBar>를 유지하도록 선택할 수 있습니다.  
@@ -195,13 +195,13 @@ ms.locfileid: "65589049"
  Windows Forms 애플리케이션에 사용자 지정 툴바와 메뉴를 만듭니다. 하지만 <xref:System.Windows.Forms.ToolStrip> 대체 하 고 기능을 추가 합니다 <xref:System.Windows.Forms.ToolBar> 이전 버전의 컨트롤 <xref:System.Windows.Forms.ToolBar> 선택 하면 이전 버전과 호환성 및 향후 사용을 위해 유지 됩니다.  
   
  [ToolStripContainer 컨트롤](toolstripcontainer-control.md)  
- 고정, 래프팅 및 정렬을 위한 폼의 양쪽 패널을 제공 <xref:System.Windows.Forms.ToolStrip> 컨트롤 및 중앙 <xref:System.Windows.Forms.ToolStripContentPanel> 기존 컨트롤에 대 한 합니다.  
+ 컨트롤을 도킹, 래프팅 (rafting) 및 정렬 <xref:System.Windows.Forms.ToolStrip> 하기 위한 폼의 양쪽 패널을 제공 하 고 기존 컨트롤에 대 한 중심 <xref:System.Windows.Forms.ToolStripContentPanel> 을 제공 합니다.  
   
  [ToolStripPanel 컨트롤](toolstrippanel-control.md)  
- 고정, 래프팅 및 정렬을 위한 하나의 패널을 제공 <xref:System.Windows.Forms.ToolStrip> 컨트롤입니다.  
+ 도킹, 래프팅 (rafting) 및 정렬 <xref:System.Windows.Forms.ToolStrip> 컨트롤에 대 한 패널을 제공 합니다.  
   
  [ToolStripProgressBar 컨트롤 개요](toolstripprogressbar-control-overview.md)  
- 완료될 동작의 진행 상태를 그래픽으로 나타냅니다. 합니다 <xref:System.Windows.Forms.ToolStripProgressBar> 에서 일반적으로 포함 되어는 <xref:System.Windows.Forms.StatusStrip>합니다.  
+ 완료될 동작의 진행 상태를 그래픽으로 나타냅니다. 는 일반적으로에 포함 <xref:System.Windows.Forms.StatusStrip> 되어있습니다.<xref:System.Windows.Forms.ToolStripProgressBar>  
   
  [ToolStripStatusLabel 컨트롤](toolstripstatuslabel-control.md)  
  <xref:System.Windows.Forms.StatusStrip> 컨트롤의 패널을 나타냅니다.  
@@ -229,7 +229,7 @@ ms.locfileid: "65589049"
  단계별 작업 항목에 대한 링크, 만들 컨트롤 종류에 대한 권장 사항 및 사용자 지정 컨트롤에 대한 기타 정보를 제공합니다.  
   
  [여러 언어 및 라이브러리에서 사용되는 컨트롤 및 프로그래밍 가능한 개체 비교](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))  
- Visual Basic 6.0의 컨트롤을 Visual Basic의 해당 컨트롤로 매핑되는 테이블을 제공 합니다. 컨트롤은 이제.NET Framework의 클래스를 참고 합니다.  
+ Visual Basic 6.0의 컨트롤을 Visual Basic .NET의 해당 컨트롤에 매핑하는 표를 제공 합니다. 이제 컨트롤은 .NET Framework의 클래스입니다.  
   
- [방법: Windows Forms에 ActiveX 컨트롤 추가](how-to-add-activex-controls-to-windows-forms.md)  
+ [방법: ActiveX 컨트롤을 Windows Forms에 추가](how-to-add-activex-controls-to-windows-forms.md)  
  Windows Forms에서 ActiveX 컨트롤을 사용하는 방법을 설명합니다.

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: ffb397c673333b26649a815fce7a5d4e63e5b987
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 519afa7f39f669b184ccc269546ef930c114c404
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401733"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796776"
 ---
 # <a name="wpf-windows-overview"></a>WPF 창 개요
 사용자는 Windows를 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프로그램과 상호 작용 합니다. 창의 기본 용도는 데이터를 시각화하는 콘텐츠를 호스트하고 사용자가 데이터와 상호 작용할 수 있도록 하는 것입니다. 독립 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 실행형 응용 프로그램은 클래스를 <xref:System.Windows.Window> 사용 하 여 자체 창을 제공 합니다. 이 항목에서는 <xref:System.Windows.Window> 독립 실행형 응용 프로그램에서 windows를 만들고 관리 하는 기본 사항을 다루기 전에 소개 합니다.  
@@ -167,7 +167,7 @@ ms.locfileid: "68401733"
   
 - 다른 창에 영향을 주지 않고 최소화, 최대화 및 복원합니다.  
   
- 일부 창은 해당 창을 여는 창과의 관계를 필요로 합니다. 예를 들어 [!INCLUDE[TLA#tla_ide](../../../../includes/tlasharptla-ide-md.md)] 응용 프로그램은 속성 창 및 도구 창을 열 수 있습니다 .이 창에는 일반적인 동작을 통해 해당 창이 생성 되는 창이 포함 됩니다. 또한 이러한 창은 항상 해당 창을 만든 창과 함께 닫히고, 최소화되고, 최대화되고, 복원되어야 합니다. 이러한 관계는 한 *창을 다른 창* 으로 만들고 <xref:System.Windows.Window.Owner%2A> *소유자*창에 대 한 참조로 *소유 창의* 속성을 설정 하 여 설정할 수 있습니다. 다음 예제에서 이를 확인할 수 있습니다.  
+ 일부 창은 해당 창을 여는 창과의 관계를 필요로 합니다. 예를 들어 IDE (통합 개발 환경) 응용 프로그램은 속성 창 및 도구 창을 열 수 있습니다 .이 창에서 일반적인 동작을 통해 해당 창을 만들 수 있습니다. 또한 이러한 창은 항상 해당 창을 만든 창과 함께 닫히고, 최소화되고, 최대화되고, 복원되어야 합니다. 이러한 관계는 한 창을 다른 창으로 만들고 *소유자*창에 대 한 참조로 *소유 창의* <xref:System.Windows.Window.Owner%2A> 속성을 설정 하 여 설정할 수 있습니다. 다음 예제에서 이를 확인할 수 있습니다.  
   
  [!code-csharp[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/CSharp/MainWindow.xaml.cs#setwindowownercode)]
  [!code-vb[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/visualbasic/mainwindow.xaml.vb#setwindowownercode)]  
@@ -372,7 +372,7 @@ ms.locfileid: "68401733"
 ## <a name="window-state"></a>창 상태  
  크기 조정 가능한 창의 수명은 표준, 최소화 및 최대화의 세 가지 상태를 가질 수 있습니다. *표준* 상태의 창은 창의 기본 상태입니다. 크기 조정 가능 창이 표준 상태인 경우 사용자는 크기 조정 그립이나 테두리를 사용하여 창을 이동하고 크기 조정할 수 있습니다.  
   
- 가로 <xref:System.Windows.Window.ShowInTaskbar%2A>  설정되어있으면최소화된상태의창이작업표시줄단추로축소되고,그렇지않으면가능한가장작은크기로축소하고바탕화면왼쪽아래에자신을다시할당할수`true`있습니다. 이러한 최소화된 창 유형은 테두리나 크기 조정 그립을 사용하여 크기 조정할 수 없습니다. 하지만 작업 표시줄에 표시되지 않은 최소화된 창은 바탕 화면에서 끌 수 있습니다.  
+ 가로 <xref:System.Windows.Window.ShowInTaskbar%2A> 설정되어있으면최소화된상태의창이작업표시줄단추로축소되고,그렇지않으면가능한가장작은크기로축소하고바탕화면왼쪽아래에자신을다시할당할수`true`있습니다. 이러한 최소화된 창 유형은 테두리나 크기 조정 그립을 사용하여 크기 조정할 수 없습니다. 하지만 작업 표시줄에 표시되지 않은 최소화된 창은 바탕 화면에서 끌 수 있습니다.  
   
  상태가 *최대화* 된 창은 최대 크기 (최대 크기)로 확장 됩니다. 즉 <xref:System.Windows.FrameworkElement.MaxWidth%2A>, <xref:System.Windows.FrameworkElement.MaxHeight%2A>, 및 <xref:System.Windows.Window.SizeToContent%2A> 속성에 따라 크기가 커질 수 있습니다. 최소화된 창과 마찬가지로 최대화된 창은 크기 조정 그립을 사용하거나 테두리를 끌어서 크기 조정할 수 없습니다.  
   
