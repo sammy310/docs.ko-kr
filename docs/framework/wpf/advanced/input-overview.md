@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 1149a70fc723a82144d13cbd079e3287b52ec4fb
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 8fa9f2dd668efca6a3108973ff792cc17b37b410
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401478"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68818045"
 ---
 # <a name="input-overview"></a>입력 개요
 <a name="introduction"></a>하위 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 시스템은 마우스, 키보드, 터치 및 스타일러스를 비롯 한 다양 한 장치에서 입력을 얻기 위한 강력한 API를 제공 합니다. 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]가 제공하는 서비스에 대해 설명하고 입력 시스템의 아키텍처를 살펴봅니다.
@@ -113,7 +113,7 @@ ms.locfileid: "68401478"
 ## <a name="text-input"></a>텍스트 입력
  이벤트 <xref:System.Windows.ContentElement.TextInput> 를 사용 하면 장치 독립적 방식으로 텍스트 입력을 수신할 수 있습니다. 텍스트 입력에는 주로 키보드를 사용하지만 음성, 필기 및 기타 입력 디바이스를 통해서도 텍스트 입력을 생성할 수 있습니다.
 
- 키보드 입력의 경우 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 는 먼저 적절 한 <xref:System.Windows.ContentElement.KeyDown> / <xref:System.Windows.ContentElement.KeyUp> 이벤트를 보냅니다. 이러한 이벤트가 처리 되지 않고 키가 방향 화살표 또는 기능 키 <xref:System.Windows.ContentElement.TextInput> 와 같은 컨트롤 키가 아닌 텍스트 이면 이벤트가 발생 합니다.  여러 키 입력에서 단일 텍스트 입력 문자를 생성할 수 있고 단일 <xref:System.Windows.ContentElement.KeyDown> 키 <xref:System.Windows.ContentElement.TextInput> 입력이 여러 문자를 생성할 수 있기 때문에 및 이벤트 간에 / <xref:System.Windows.ContentElement.KeyUp> 간단한 일대일 매핑이 항상 발생 하는 것은 아닙니다. 문자열일.  이는 특히 각 언어의 알파벳으로 수천 개의 가능한 문자를 생성하는 데 [!INCLUDE[TLA#tla_ime#plural](../../../../includes/tlasharptla-imesharpplural-md.md)]를 사용하는 한국어, 중국어 및 일본어 등의 언어에서 더욱 그렇습니다.
+ 키보드 입력의 경우 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 는 먼저 적절 한 <xref:System.Windows.ContentElement.KeyDown> / <xref:System.Windows.ContentElement.KeyUp> 이벤트를 보냅니다. 이러한 이벤트가 처리 되지 않고 키가 방향 화살표 또는 기능 키 <xref:System.Windows.ContentElement.TextInput> 와 같은 컨트롤 키가 아닌 텍스트 이면 이벤트가 발생 합니다.  여러 키 입력에서 단일 텍스트 입력 문자를 생성할 수 있고 단일 <xref:System.Windows.ContentElement.KeyDown> 키 <xref:System.Windows.ContentElement.TextInput> 입력이 여러 문자를 생성할 수 있기 때문에 및 이벤트 간에 / <xref:System.Windows.ContentElement.KeyUp> 간단한 일대일 매핑이 항상 발생 하는 것은 아닙니다. 문자열일.  이는 Ime (입력기)를 사용 하 여 해당 하는 알파벳에서 수천 개의 문자를 생성 하는 중국어, 일본어, 한국어 등의 언어에서 특히 그렇습니다.
 
  에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.ContentElement.KeyUp> <xref:System.Windows.Input.Key.System?displayProperty=nameWithType> 이벤트를 보낼때/ 키 입력이 이벤트<xref:System.Windows.ContentElement.TextInput> 의 일부가 될 수 있으면가로 설정 됩니다 (예: ALT + S를 누른 경우). <xref:System.Windows.ContentElement.KeyDown> <xref:System.Windows.Input.KeyEventArgs.Key%2A> 이를 통해 <xref:System.Windows.ContentElement.KeyDown> 이벤트 처리기의 코드에서를 <xref:System.Windows.Input.Key.System?displayProperty=nameWithType> 확인 하 고, 검색 된 경우 이후에 발생 <xref:System.Windows.ContentElement.TextInput> 한 이벤트 처리기에 대 한 처리를 유지할 수 있습니다. 이러한 경우 <xref:System.Windows.Input.TextCompositionEventArgs> 인수의 다양 한 속성을 사용 하 여 원래 키 입력을 확인할 수 있습니다. 마찬가지로 [!INCLUDE[TLA2#tla_ime](../../../../includes/tla2sharptla-ime-md.md)] 가 <xref:System.Windows.Input.Key.ImeProcessed?displayProperty=nameWithType> <xref:System.Windows.Input.KeyEventArgs.ImeProcessedKey%2A> 활성 상태 이면는의 값을 포함하고는원래키입력또는키입력을제공합니다.<xref:System.Windows.Input.Key>
 

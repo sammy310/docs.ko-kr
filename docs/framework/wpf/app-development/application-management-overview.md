@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: d8e26ff197e22ffa18b4acdd020b80879023c0f7
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: a5808261ec9fe957ee993177590446389f219609
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364084"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68818013"
 ---
 # <a name="application-management-overview"></a>애플리케이션 관리 개요
 모든 애플리케이션은 애플리케이션 구현 및 관리에 적용하는 일반적인 기능 집합을 공유하는 경향이 있습니다. 이 항목에서는 응용 프로그램을 만들고 관리 하기 위한 <xref:System.Windows.Application> 클래스의 기능에 대해 간략하게 설명 합니다.  
@@ -293,7 +293,7 @@ ms.locfileid: "68364084"
   
 - 에서 XBAP를 탐색 합니다.  
   
-- 에서 [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)]XBAP를 호스트 하는 탭이 닫혀 있을 때  
+- Internet Explorer에서 XBAP를 호스트 하는 탭이 닫혀 있는 경우  
   
 - 브라우저가 닫힌 경우  
   

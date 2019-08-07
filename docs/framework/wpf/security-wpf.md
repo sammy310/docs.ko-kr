@@ -13,17 +13,17 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: ec026fd9273e99c88ec2e30cf46c3147419ace94
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6bd597cd2719fb96b8633f724da46a76e416b454
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629804"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817899"
 ---
 # <a name="security-wpf"></a>보안(WPF)
 <a name="introduction"></a>Windows Presentation Foundation (WPF) 독립 실행형 및 브라우저에서 호스팅되는 응용 프로그램을 개발 하는 경우 보안 모델을 고려해 야 합니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]독립 실행형 응용 프로그램은 Windows Installer (.msi), XCopy 또는 ClickOnce를 사용 하 여 배포 되었는지와 상관 없이 무제한 권한 (CAS**FullTrust** 권한 집합)으로 실행 됩니다. ClickOnce를 포함한 부분 신뢰, 독립 실행형 WPF 애플리케이션 배포가 지원되지 않습니다. 그러나 완전 신뢰 호스트 응용 프로그램은 .NET Framework 추가 기능 모델을 사용 하 <xref:System.AppDomain> 여 부분 신뢰를 만들 수 있습니다. 자세한 내용은 [WPF 추가 기능 개요](./app-development/wpf-add-ins-overview.md)를 참조 하세요.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]브라우저에서 호스트 되는 응용 프로그램 [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] 은 또는 Firefox에서 호스팅되며, [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] 또는 느슨한 [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] 문서 일 수 있습니다. 자세한 내용은 [WPF XAML 브라우저 응용 프로그램 개요](./app-development/wpf-xaml-browser-applications-overview.md)를 참조 하세요.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]브라우저에서 호스트 되는 응용 프로그램은 Windows Internet Explorer 또는 Firefox에서 호스팅되며, [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] 또는 느슨한 [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] 문서 일 수 있습니다. 자세한 내용은 [WPF XAML 브라우저 응용 프로그램 개요](./app-development/wpf-xaml-browser-applications-overview.md)를 참조 하세요.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]브라우저에서 호스트 되는 응용 프로그램은 기본적으로 기본 CAS**인터넷** 영역 권한 집합으로 제한 되는 부분 신뢰 보안 샌드박스 내에서 실행 됩니다. 이렇게 하면 일반적인 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 웹 응용 프로그램을 격리 하는 것과 동일한 방식으로 브라우저에서 호스트 되는 응용 프로그램을 클라이언트 컴퓨터에서 효과적으로 격리할 수 있습니다. XBAP는 배포 URL 및 클라이언트의 보안 구성의 보안 영역에 따라 권한을 완전 신뢰까지 높일 수 있습니다. 자세한 내용은 [WPF 부분 신뢰 보안](wpf-partial-trust-security.md)을 참조하세요.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "68629804"
 ## <a name="web-browsing-software-security-settings"></a>웹 브라우징 소프트웨어 보안 설정  
  컴퓨터의 보안 설정은 웹 브라우징 소프트웨어 권한이 부여된 액세스 권한을 결정합니다. 웹 검색 소프트웨어에는 Internet Explorer 및 Presentationhost.exe를 비롯 한 [WinINet](https://go.microsoft.com/fwlink/?LinkId=179379) 또는 [urlmon.dll](https://go.microsoft.com/fwlink/?LinkId=179383) api를 사용 하는 응용 프로그램 또는 구성 요소가 포함 되어 있습니다.  
   
- [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]는 다음을 포함 하 여 또는에서 [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]실행할 수 있는 기능을 구성할 수 있는 메커니즘을 제공 합니다.  
+ Internet Explorer는 다음과 같은 방법으로 또는 Internet Explorer에서 실행할 수 있는 기능을 구성할 수 있는 메커니즘을 제공 합니다.  
   
 - .NET Framework 기반 구성 요소  
   
@@ -120,11 +120,11 @@ ms.locfileid: "68629804"
 > [!NOTE]
 >  Internet Explorer에서 인터넷 옵션 대화 상자에 액세스할 수도 있습니다. **도구** 를 클릭 한 다음 **인터넷 옵션**을 클릭 합니다.  
   
- [!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)]부터 .NET Framework에 대해 특별히 다음과 같은 보안 설정이 포함 됩니다.  
+ Windows Internet Explorer 7부터 .NET Framework에 대해 특별히 다음과 같은 보안 설정이 포함 됩니다.  
   
-- **느슨한 XAML**. 에서 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 파일 [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] 을 탐색할 수 있는지 여부를 제어 합니다. (설정, 해제 및 확인 옵션).  
+- **느슨한 XAML**. Internet Explorer에서 파일을 탐색 하 고 파일 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 을 느슨하게 할 수 있는지 여부를 제어 합니다. (설정, 해제 및 확인 옵션).  
   
-- **XAML 브라우저 응용 프로그램**. 에서로 [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] 이동 하 여 실행할 [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]수 있는지 여부를 제어 합니다. (설정, 해제 및 확인 옵션).  
+- **XAML 브라우저 응용 프로그램**. Internet Explorer에서로 이동 하 여 실행할 [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]수 있는지 여부를 제어 합니다. (설정, 해제 및 확인 옵션).  
   
  기본적으로 이러한 설정은 **인터넷**, **로컬 인트라넷**및 **신뢰할 수 있는 사이트** 영역에 대해 모두 사용 하도록 설정 되며 **제한 된 사이트** 영역에서 사용할 수 없습니다.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "68629804"
 |---------------------|  
 |FEATURE_ENABLE_SCRIPT_PASTE_URLACTION_IF_PROMPT|  
   
- 에서 [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] <xref:System.Windows.Controls.WebBrowser> wpf 컨트롤을포함하는부분신뢰를실행하는경우wpf는InternetExplorer프로세스의주소공간에서WebBrowserActiveX컨트롤을호스팅합니다.[!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] Webbrowser activex 컨트롤은 [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] 프로세스에서 호스트 되므로 Internet Explorer에 대 한 모든 기능 컨트롤은 webbrowser activex 컨트롤에도 사용할 수 있습니다.  
+ Windows internet explorer에서 wpf [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] <xref:System.Windows.Controls.WebBrowser> 컨트롤을 포함 하는 부분 신뢰를 실행 하는 경우 wpf는 internet explorer 프로세스의 주소 공간에서 WebBrowser ActiveX 컨트롤을 호스팅합니다. WebBrowser ActiveX 컨트롤은 Internet Explorer 프로세스에서 호스트 되므로 Internet Explorer에 대 한 모든 기능 컨트롤은 WebBrowser ActiveX 컨트롤에도 사용할 수 있습니다.  
   
  또한 Internet Explorer에서 실행하는 XBAP는 일반 독립 실행형 애플리케이션보다 추가된 보안 수준이 제공됩니다. 이 추가 보안은 Internet Explorer, 즉 WebBrowser ActiveX 컨트롤은 기본적으로 및 [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] [!INCLUDE[win7](../../../includes/win7-md.md)]에서 보호 모드로 실행 되기 때문입니다. 보호 된 모드에 대 한 자세한 내용은 [보호 모드 Internet Explorer 이해 및 작업](https://go.microsoft.com/fwlink/?LinkId=179393)을 참조 하세요.  
   

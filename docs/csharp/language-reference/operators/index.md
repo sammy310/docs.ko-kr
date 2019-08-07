@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 13ad16ab768cdaee96cab29811e2ed058dee977a
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: bc5e2c88314c2f590aeddcfd37bd04c3a7400804
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512246"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796486"
 ---
 # <a name="c-operators-c-reference"></a>C# 연산자(C# 참조)
 
@@ -59,7 +59,7 @@ C#은 기본 제공 형식에서 지원되는 미리 정의된 여러 연산자�
 
 [unchecked](../keywords/unchecked.md) – 정수 연산에 오버플로 검사를 사용하지 않도록 설정합니다. 이것은 기본 컴파일러 동작입니다.
 
-[default(T)](../../programming-guide/statements-expressions-operators/default-value-expressions.md) – T 형식의 기본값을 생성합니다.
+[default(T)](default.md) – T 형식의 기본값을 생성합니다.
 
 [nameof](nameof.md) - 변수, 형식 또는 멤버의 단순(정규화되지 않은) 이름을 상수 문자열로 가져옵니다.
 

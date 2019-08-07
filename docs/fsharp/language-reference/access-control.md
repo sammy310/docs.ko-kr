@@ -2,12 +2,12 @@
 title: 액세스 제어
 description: F# 프로그래밍 언어에서 형식, 메서드, 함수 등의 프로그래밍 요소에 대 한 액세스를 제어 하는 방법에 대해 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: ed77a09cf87aabf9a4134276e89e84aa42abd3c3
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 38f8f3fd4114c0428fbe8baca71594cd07740b2c
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629965"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817863"
 ---
 # <a name="access-control"></a>액세스 제어
 
@@ -40,7 +40,7 @@ ms.locfileid: "68629965"
 
 - 구분 된 공용 구조체의 개별 사례에 대 한 접근성은 구별 된 공용 구조체 자체의 접근성에 의해 결정 됩니다. 즉, 특정 공용 구조체 케이스는 union 자체 보다 액세스 하기 어렵습니다.
 
-- 레코드 형식의 개별 필드에 대 한 접근성은 레코드 자체의 접근성에 의해 결정 됩니다. 즉, 특정 레코드 레이블은 레코드 자체 보다 액세스 하기 어렵습니다.
+- 레코드 형식의 개별 필드에 대 한 액세스 가능성은 레코드 자체의 접근성에 의해 결정 됩니다. 즉, 특정 레코드 레이블은 레코드 자체 보다 액세스 하기 어렵습니다.
 
 ## <a name="example"></a>예제
 

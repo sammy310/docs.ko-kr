@@ -8,25 +8,25 @@ helpviewer_keywords:
 - history [WPF], navigating back
 - navigation [WPF], through navigation history (back)
 ms.assetid: 9343234b-d864-441d-b8a7-d895cba80a87
-ms.openlocfilehash: c489a1593b3d1f22fe1ad6e648d3f8a3f7a6cd44
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 86590c2794339ac22cbc8ec5e11224736133e870
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947786"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817970"
 ---
 # <a name="how-to-navigate-back-through-navigation-history"></a>방법: 탐색 기록을 뒤로 탐색
-이 예제에서는 탐색 기록에서 항목을 탐색 하는 방법을 보여 줍니다.  
+이 예제에서는 후방 탐색 기록에서 항목으로 이동 하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
- 호스트 되는 내용에서 실행 되는 코드를 <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame> 사용 하 여 <xref:System.Windows.Navigation.NavigationService>, 또는 [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)] 탐색 기록에서 한 번에 하나의 항목을 통해 다시 이동할 수 있습니다.  
+ 에서 호스트 <xref:System.Windows.Navigation.NavigationWindow> <xref:System.Windows.Controls.Frame> 되는 콘텐츠 (또는 Internet Explorer)에서 실행 되는 코드는 탐색 기록을 통해 다시 탐색할 수 있으며 한 번에 하나의 항목만 탐색할 수 있습니다. <xref:System.Windows.Navigation.NavigationService>  
   
- 탐색 한 항목이 먼저 검사 하 여 후방 탐색 기록에 항목이 있는지를 확인 해야 합니다 **CanGoBack** 속성을 호출 하 여 하나의 항목을 다시 이동 하기 전에 **GoBack** 메서드입니다. 이 다음 예제에 나와 있습니다.  
+ 한 항목을 뒤로 이동 하려면 먼저 **CanGoBack** 속성을 검사 하 여 후방 탐색 기록에 항목이 있는지 확인 하 고, **GoBack** 메서드를 호출 하 여 한 항목 뒤로 이동 합니다. 이는 다음 예제에 설명 되어 있습니다.  
   
  [!code-csharp[HOWTONavigationSnippets#NavigateBackCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/HomePage.xaml.cs#navigatebackcode)]
  [!code-vb[HOWTONavigationSnippets#NavigateBackCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/homepage.xaml.vb#navigatebackcode)]  
   
- **CanGoBack** 하 고 **GoBack** 하 여 구현 됩니다 <xref:System.Windows.Navigation.NavigationWindow>를 <xref:System.Windows.Controls.Frame>, 및 <xref:System.Windows.Navigation.NavigationService>합니다.  
+ **CanGoBack** 및 **GoBack** 은, <xref:System.Windows.Controls.Frame>및 <xref:System.Windows.Navigation.NavigationWindow> <xref:System.Windows.Navigation.NavigationService>에서 구현 됩니다.  
   
 > [!NOTE]
->  호출 하는 경우 **GoBack**, 후방 탐색 기록에 항목이 없음 및는 <xref:System.InvalidOperationException> 발생 합니다.
+>  **GoBack**을 호출 하 고 후방 탐색 기록 <xref:System.InvalidOperationException> 에 항목이 없는 경우이 발생 합니다.

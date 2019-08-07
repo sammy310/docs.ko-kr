@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 56dbdfd70dd335d32224d11c31a5e64abd3124af
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a988baa64025dd9c188e367949c07d861413c197
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655461"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817993"
 ---
 # <a name="application-development"></a>애플리케이션 개발
-<a name="introduction"></a> Windows Presentation Foundation (WPF)은 다음 유형의 응용 프로그램 개발에 사용할 수 있는 프레젠테이션 프레임 워크:  
+<a name="introduction"></a>WPF (Windows Presentation Foundation)는 다음과 같은 종류의 응용 프로그램을 개발 하는 데 사용할 수 있는 프레젠테이션 프레임 워크입니다.  
   
 - 독립 실행형 애플리케이션(클라이언트 컴퓨터에 설치되어 실행되는 실행 가능한 어셈블리로 빌드된 전형적인 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 애플리케이션)  
   
-- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)](실행 가능한 어셈블리로 빌드되고 [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] 또는 Mozilla Firefox와 같은 웹 브라우저에서 호스트하는 탐색 페이지로 구성된 응용 프로그램)  
+- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]실행 가능 어셈블리로 빌드되고 Microsoft Internet Explorer 또는 Mozilla Firefox와 같은 웹 브라우저에서 호스팅되는 탐색 페이지로 구성 된 응용 프로그램입니다.  
   
 - 사용자 지정 컨트롤 라이브러리(재사용 가능한 컨트롤을 포함하는 실행 불가능한 어셈블리)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "64655461"
   
 <a name="WPF_Application_Resource__Content__and_Data_Files"></a>   
 ## <a name="wpf-application-resource-content-and-data-files"></a>WPF 애플리케이션 리소스, 콘텐츠 및 데이터 파일  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 세 가지 실행 불가능 데이터 파일에 대 한 지원 사용 하 여 포함 된 리소스에 대 한 Microsoft.NET Framework의 핵심 지원을 확장: 리소스, 콘텐츠 및 데이터입니다. 자세한 내용은 [WPF 애플리케이션 리소스, 콘텐츠 및 데이터 파일](wpf-application-resource-content-and-data-files.md)을 참조하세요.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 포함 리소스에 대 한 Microsoft .NET 프레임 워크의 핵심 지원을 확장 하 여 세 가지 비실행 데이터 파일 (리소스, 콘텐츠 및 데이터)에 대 한 지원을 제공 합니다. 자세한 내용은 [WPF 애플리케이션 리소스, 콘텐츠 및 데이터 파일](wpf-application-resource-content-and-data-files.md)을 참조하세요.  
   
  WPF 실행 불가능 데이터 파일에 대한 지원의 핵심 구성 요소는 고유한 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]를 사용하여 이를 식별하고 로드하는 기능입니다. 자세한 내용은 [WPF의 Pack URI](pack-uris-in-wpf.md)를 참조하세요.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "64655461"
   
  <xref:System.Windows.Window>는 대화 상자로 알려진 특별한 유형의 창을 만드는 기능을 지원합니다. 모달 및 모덜리스 유형의 대화 상자를 모두 만들 수 있습니다.  
   
- 여러 응용 프로그램을 일관 된 사용자 환경 및 재사용성의 이점과 편의상에 대 한 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 세 가지 일반적인 Windows 대화 상자를 표시: <xref:Microsoft.Win32.OpenFileDialog>를 <xref:Microsoft.Win32.SaveFileDialog>, 및 <xref:System.Windows.Controls.PrintDialog>합니다.  
+ 편의를 위해 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램에 대 한 재사용 및 일관적인 사용자 환경의 이점은, 및 <xref:System.Windows.Controls.PrintDialog>의 세 가지 일반적인 Windows 대화 <xref:Microsoft.Win32.OpenFileDialog>상자 <xref:Microsoft.Win32.SaveFileDialog>를 노출 합니다.  
   
  메시지 상자는 중요한 텍스트 정보를 보여 주고 간단한 예/아니요/확인/취소 질문을 묻는 특별한 유형의 대화 상자입니다. <xref:System.Windows.MessageBox> 클래스를 사용하여 메시지 상자를 만들고 표시합니다.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "64655461"
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>호스팅  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]는 [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] 또는 Firefox에 호스트될 수 있습니다. 각 호스팅 모델에는 [호스팅](hosting-wpf-applications.md)에서 다루는 고유한 고려 사항 및 제약 조건 집합이 있습니다.  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]Microsoft Internet Explorer 또는 Firefox에서 호스팅될 수 있습니다. 각 호스팅 모델에는 [호스팅](hosting-wpf-applications.md)에서 다루는 고유한 고려 사항 및 제약 조건 집합이 있습니다.  
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>빌드 및 배포  

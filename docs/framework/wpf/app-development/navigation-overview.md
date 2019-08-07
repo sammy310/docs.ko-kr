@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: ee2f6050eeea6eec840156ed5dce9fb9b6172149
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 145c4e33bd601fa61750df56b949bda5d43cc372
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796870"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68818006"
 ---
 # <a name="navigation-overview"></a>탐색 개요
 
@@ -38,7 +38,7 @@ WPF (Windows Presentation Foundation)에서는 두 가지 유형의 응용 프�
 <xref:System.Windows.Controls.Page>,, 및 저널은에서 제공 하 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 탐색 지원의 핵심을 형성 합니다. <xref:System.Windows.Documents.Hyperlink> <xref:System.Windows.Navigation.NavigationService> 이 개요에서는 느슨한 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 파일, HTML 파일 및 개체에 대 한 탐색이 포함 된 고급 탐색 지원을 포함 하기 전에 이러한 기능을 자세히 설명 합니다.
 
 > [!NOTE]
-> 이 항목에서 "browser" 라는 용어는 현재 및 Firefox를 포함 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] 하는 응용 프로그램을 호스팅할 수 있는 브라우저만 나타냅니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 특정 기능이 특정 브라우저 에서만 지원 되는 경우 브라우저 버전을 라고 합니다.
+> 이 항목에서 "browser" 라는 용어는 현재 Microsoft Internet Explorer 및 Firefox를 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 포함 하는 응용 프로그램을 호스팅할 수 있는 브라우저만 나타냅니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 특정 기능이 특정 브라우저 에서만 지원 되는 경우 브라우저 버전을 라고 합니다.
 
 ## <a name="navigation-in-wpf-applications"></a>WPF 애플리케이션에서 탐색
 
@@ -180,7 +180,7 @@ WPF (Windows Presentation Foundation)에서는 두 가지 유형의 응용 프�
 
 ![하이퍼링크가 있는 페이지](./media/navigation-overview/xbap-with-a-page-with-a-hyperlink.png "그러면 하이퍼링크가 있는 페이지가 포함 된 XBAP가 표시 됩니다.")
 
-짐작할 수 <xref:System.Windows.Documents.Hyperlink> 있듯이을 클릭 하면에서 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] `NavigateUri` 특성으로 식별 된로 <xref:System.Windows.Controls.Page> 이동 합니다. 또한는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 의 <xref:System.Windows.Controls.Page> 최근[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]페이지 목록에 이전의 항목을 추가 합니다. 다음 그림에서 이를 확인할 수 있습니다.
+짐작할 수 <xref:System.Windows.Documents.Hyperlink> 있듯이을 클릭 하면에서 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] `NavigateUri` 특성으로 식별 된로 <xref:System.Windows.Controls.Page> 이동 합니다. 또한는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Internet Explorer의 최근 페이지 목록에 <xref:System.Windows.Controls.Page> 이전 항목을 추가 합니다. 다음 그림에서 이를 확인할 수 있습니다.
 
 ![뒤로 및 앞으로 단추](./media/navigation-overview/back-and-forward-navigation.png "뒤로 및 앞으로 단추를 사용 하 여 탐색 합니다.")
 
@@ -367,16 +367,16 @@ WPF (Windows Presentation Foundation)에서는 두 가지 유형의 응용 프�
 
 #### <a name="navigating-the-journal-from-internet-explorer"></a>Internet Explorer에서 저널 탐색
 
-개념적으로 저널은의 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] **뒤로** 및 **앞으로** 단추와 동일한 방식으로 작동 합니다. 다음 그림을 참조하세요.
+개념적으로 저널은 Internet Explorer의 **뒤로** 및 **앞으로** 단추와 동일한 방식으로 작동 합니다. 다음 그림을 참조하세요.
 
 ![뒤로 및 앞으로 단추](./media/navigation-overview/back-and-forward-navigation.png "뒤로 및 앞으로 단추를 사용 하 여 탐색 합니다.")
 
-[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]에서 호스팅하[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]는의 경우는 저널을의 탐색에 통합 합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 이를 통해 사용자는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 의 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]뒤로, **앞**으로 및 **최근 페이지** 단추를 사용 하 여의 페이지를 탐색할 수 있습니다. 저널은 [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] 또는 Internet Explorer 8 [!INCLUDE[TLA2#tla_ie6](../../../../includes/tla2sharptla-ie6-md.md)] 과 동일한 방식으로에 통합 되지 않습니다. 대신는 대체 탐색 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]을 렌더링합니다.[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]
+Internet [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] explorer에서 호스팅되는의 경우 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 는 저널을 internet explorer 탐색 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 에 통합 합니다. 이 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 를 통해 사용자는 Internet Explorer의 **뒤로**, **앞**으로 및 **최근 페이지** 단추를 사용 하 여의 페이지를 탐색할 수 있습니다.
 
 > [!IMPORTANT]
-> 에서 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]사용자가 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]로 이동 하는 경우, 연결 되지 않은 페이지에 대 한 저널 항목만 저널에 유지 됩니다. 페이지를 활성 상태로 유지 하는 방법에 대 한 설명은이 항목의 뒷부분에 나오는 [페이지 수명 및 저널](#PageLifetime) 을 참조 하세요.
+> Internet Explorer에서 사용자가로 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]이동 하는 경우, 활성 상태로 유지 되지 않은 페이지의 저널 항목만 저널에 유지 됩니다. 페이지를 활성 상태로 유지 하는 방법에 대 한 설명은이 항목의 뒷부분에 나오는 [페이지 수명 및 저널](#PageLifetime) 을 참조 하세요.
 
-기본적으로의 <xref:System.Windows.Controls.Page> [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 최근 페이지 <xref:System.Windows.Controls.Page>목록에 표시 되는 각에 대 한 텍스트는에 대한입니다.[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 대부분의 경우 이는 사용자에게 특히 의미가 없습니다. 다행히도 다음 옵션 중 하나를 사용하여 텍스트를 변경할 수 있습니다.
+기본적으로 <xref:System.Windows.Controls.Page> <xref:System.Windows.Controls.Page> InternetExplorer의최근페이지목록에표시되는각에대한텍스트는에대한[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 입니다. 대부분의 경우 이는 사용자에게 특히 의미가 없습니다. 다행히도 다음 옵션 중 하나를 사용하여 텍스트를 변경할 수 있습니다.
 
 1. 연결 `JournalEntry.Name` 된 특성 값입니다.
 
@@ -400,7 +400,7 @@ WPF (Windows Presentation Foundation)에서는 두 가지 유형의 응용 프�
 
 #### <a name="navigating-the-journal-using-wpf"></a>WPF를 사용하여 저널 탐색
 
-사용자는의 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]뒤로, **앞**으로 및 **최근 페이지** 를 사용 하 여 저널을 탐색할 수 있지만에서 제공 하는 선언적 및 프로그래밍 방식 메커니즘을 모두 사용 하 여 저널을 탐색할 수도 있습니다. 이 작업을 수행 하는 한 가지 이유는 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] 페이지에서 사용자 지정 탐색을 제공 하는 것입니다.
+사용자는 Internet Explorer에서 **뒤로**, **앞**으로 및 **최근 페이지** 를 사용 하 여 저널을 탐색할 수 있지만에서 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]제공 하는 선언적 및 프로그래밍 방식 메커니즘을 모두 사용 하 여 저널을 탐색할 수도 있습니다. 이 작업을 수행 하는 한 가지 이유는 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] 페이지에서 사용자 지정 탐색을 제공 하는 것입니다.
 
 에 의해 <xref:System.Windows.Input.NavigationCommands>노출 된 탐색 명령을 사용 하 여 선언적으로 저널 탐색 지원을 추가할 수 있습니다. 다음 예제에서는 `BrowseBack` 탐색 명령을 사용 하는 방법을 보여 줍니다.
 
@@ -547,7 +547,7 @@ WPF (Windows Presentation Foundation)에서는 두 가지 유형의 응용 프�
 
 - 의 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 쿠키 지원은 지원 되는 모든 브라우저에 대해 동일 합니다.
 
-- 에서 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]쿠키와 관련 된 P3P 정책은 특히 자사 및 타사 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]와 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]관련 하 여에서 적용 됩니다.
+- Internet Explorer에서 쿠키와 관련 된 P3P 정책은 특히 자사 및 타사 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]와 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]관련 하 여에서 적용 됩니다.
 
 <a name="Structured_Navigation"></a>
 
@@ -606,7 +606,7 @@ WPF (Windows Presentation Foundation)에서는 두 가지 유형의 응용 프�
 
 ![대화 상자](./media/navigation-overview/navigation-window-as-dialog-box.png "대화 상자로 서의 탐색 창")
 
-여기에서 볼 수 있듯이 <xref:System.Windows.Navigation.NavigationWindow> 사용자 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]가 저널을 탐색할 수 있도록 하는 스타일 **뒤로** 및 **앞으로** 단추를 표시 합니다. 이러한 단추는 다음 그림에 나와 있는 것처럼 동일한 사용자 환경을 제공합니다.
+여기에서 볼 수 있듯이 <xref:System.Windows.Navigation.NavigationWindow> 은 사용자가 저널을 탐색할 수 있는 Internet Explorer 스타일의 **뒤로** 및 **앞으로** 단추를 표시 합니다. 이러한 단추는 다음 그림에 나와 있는 것처럼 동일한 사용자 환경을 제공합니다.
 
 ![NavigationWindow의 뒤로 및 앞으로 단추](./media/navigation-overview/back-and-forward-buttons-in-navigation-window.png "탐색 창의 뒤로 및 앞으로 단추")
 
@@ -646,7 +646,7 @@ WPF (Windows Presentation Foundation)에서는 두 가지 유형의 응용 프�
 
 ![자체 저널을 사용 하는 프레임](./media/navigation-overview/frame-uses-its-own-journal.png "이는 자체 저널을 사용 하는 프레임 내에서 탐색의 효과를 보여 줍니다.")
 
-저널 항목은가 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]아닌의 탐색 <xref:System.Windows.Controls.Frame>에 의해 표시 됩니다.
+저널 항목은 Internet Explorer가 아닌의 탐색 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] <xref:System.Windows.Controls.Frame>에서 표시 됩니다.
 
 > [!NOTE]
 > 이에서 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]호스팅되는 콘텐츠의 일부인 경우는 자체 저널을 사용하므로자체탐색을표시합니다.<xref:System.Windows.Controls.Frame> <xref:System.Windows.Window> <xref:System.Windows.Controls.Frame>

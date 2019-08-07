@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 519afa7f39f669b184ccc269546ef930c114c404
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 6ab547951b00cc4a479034129254e4060486348d
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796776"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817949"
 ---
 # <a name="wpf-windows-overview"></a>WPF 창 개요
 사용자는 Windows를 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프로그램과 상호 작용 합니다. 창의 기본 용도는 데이터를 시각화하는 콘텐츠를 호스트하고 사용자가 데이터와 상호 작용할 수 있도록 하는 것입니다. 독립 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 실행형 응용 프로그램은 클래스를 <xref:System.Windows.Window> 사용 하 여 자체 창을 제공 합니다. 이 항목에서는 <xref:System.Windows.Window> 독립 실행형 응용 프로그램에서 windows를 만들고 관리 하는 기본 사항을 다루기 전에 소개 합니다.  
   
 > [!NOTE]
->  및 느슨한 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 페이지[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 를 포함 하 여 브라우저에서 호스팅되는 응용 프로그램은 자체 창을 제공 하지 않습니다. 대신,에서 제공 [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]하는 windows에서 호스팅됩니다. [WPF XAML 브라우저 응용 프로그램 개요](wpf-xaml-browser-applications-overview.md)를 참조 하세요.  
+>  및 느슨한 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 페이지[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 를 포함 하 여 브라우저에서 호스팅되는 응용 프로그램은 자체 창을 제공 하지 않습니다. 대신 Windows Internet Explorer에서 제공 하는 windows에서 호스팅됩니다. [WPF XAML 브라우저 응용 프로그램 개요](wpf-xaml-browser-applications-overview.md)를 참조 하세요.  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Window 클래스  
