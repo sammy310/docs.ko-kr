@@ -19,7 +19,7 @@ Docker를 사용할 때 앱 또는 서비스를 만들고 컨테이너 및 해�
 
 그림 1-4는 Docker의 이미지와 레지스트리가 다른 구성 요소와 어떤 관계가 있는지 보여줍니다. 그것은 또한 공급업체로부터 제공되는 여러 레지스트리를 보여줍니다.
 
-![Docker의 기본 분류: 레지스트리는 이미지가 저장되고 컨테이너를 빌드하여 서비스 또는 웹앱을 실행하기 위해 가져올 수 있는 책장과 같습니다. 온-프레미스 및 공용 클라우드의 프라이빗 Docker 레지스트리가 있습니다. Docker 허브는 엔터프라이즈급 솔루션인 Docker Trusted Registry와 함께 Docker에서 유지 관리되는 공용 레지스트리이며, Azure는 Azure Container Registry를 제공합니다. AWS, Google 등에도 컨테이너 레지스트리가 있습니다.](./media/image4.png)
+![Docker의 기본 분류: 레지스트리는 이미지가 저장되고 컨테이너를 빌드하여 서비스 또는 웹앱을 실행하기 위해 가져올 수 있는 책장과 같습니다. 온-프레미스 및 퍼블릭 클라우드의 프라이빗 Docker 레지스트리가 있습니다. Docker 허브는 엔터프라이즈급 솔루션인 Docker Trusted Registry와 함께 Docker에서 유지 관리되는 공용 레지스트리이며, Azure는 Azure Container Registry를 제공합니다. AWS, Google 등에도 컨테이너 레지스트리가 있습니다.](./media/image4.png)
 
 **그림 1-4**. Docker 용어 및 개념의 분류
 
