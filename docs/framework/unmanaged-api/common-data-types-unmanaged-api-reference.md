@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aab6dad369b751b1d6a61214569cbb7d79b0e11d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b56840ce68caa3eed50773668c64e2622a646ddf
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651638"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892086"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>공통 데이터 유형(관리되지 않는 API 참조)
 이 항목에서는 C/C++ `typedef` 문에 의해 정의되는 .NET Framework용 관리되지 않는 API에서 사용하는 단순 데이터 형식을 소개합니다. 이러한 데이터 형식은 보통 C/C++ 원시 데이터 형식의 별칭입니다. 일반적으로 이러한 데이터 형식의 값은 불투명합니다. 즉, 이러한 값은 수정하지 않고도 다른 함수나 메서드로 전달할 수 있도록 특정 함수나 메서드에서 반환됩니다.  
   
-|데이터 형식|정의|정의 위치|설명|  
+|데이터 형식|정의|정의 위치|Description|  
 |---------------|----------------|----------------|-----------------|  
 |AppDomainID|`typedef UINT_PTR AppDomainID;`|corprof.h|응용 프로그램 도메인의 식별자입니다.|  
 |AssemblyID|`typedef UINT_PTR AssemblyID;`|corprof.h|어셈블리의 식별자입니다.|  
 |ClassID|`typedef UINT_PTR ClassID;`|corprof.h|관리되는 클래스의 식별자입니다.|  
-|CLRDATA_ADDRESS|`typedef ULONG64 CLRDATA_ADDRESS;`|clrdata.h|64 비트 메모리 주소입니다.|
+|CLRDATA_ADDRESS|`typedef ULONG64 CLRDATA_ADDRESS;`|clrdata .h|64 비트 메모리 주소입니다.|
 |CLRDATA_ENUM|`typedef ULONG64 CLRDATA_ADDRESS;`|사용할 수 없음|64 비트 메모리 주소입니다.|
 |CONNID|`typedef DWORD CONNID;`|cordebug.h, mscoree.h|Microsoft SQL Server 인스턴스에 연결되는 스레드의 연결 식별자입니다.|  
 |ContextID|`typedef UINT_PTR ContextID;`|corprof.h|특정 관리되는 스레드와 연결된 컨텍스트의 식별자입니다.|  
@@ -31,12 +31,14 @@ ms.locfileid: "61651638"
 |FunctionID|`typedef UINT_PTR FunctionID;`|corprof.h|함수 또는 메서드의 식별자입니다.|  
 |GCHandleID|`typedef UINT_PTR GCHandleID;`|corprof.h|가비지 수집 핸들입니다.|  
 |mdMethodDef|`typedef mdToken mdMethodDef;`|cordebug.h|메서드 정의 토큰입니다.|
-|mdToken|`typedef UINT32 mdToken;`|corprof.h|메타 데이터 토큰 (메타 데이터 테이블의 행)입니다.|  
+|mdToken|`typedef UINT32 mdToken;`|corprof.h|메타 데이터 토큰 (메타 데이터 테이블의 행)|  
 |ModuleID|`typedef UINT_PTR ModuleID;`|corprof.h|어셈블리 모듈의 식별자입니다.|  
 |ObjectID|`typedef UINT_PTR ObjectID;`|corprof.h|개체의 식별자입니다.|  
+|PCCOR_SIGNATURE|`typedef SIZE_T PCCOR_SIGNATURE;`|cordebug.h|멤버 또는 메타 데이터 서명에 대 한 포인터입니다.|
 |ProcessID|`typedef UINT_PTR ProcessID;`|corprof.h|관리되는 프로세스의 식별자입니다.|  
 |ReJITID|`typedef UINT_PTR ReJITID;`|corprof.h|JIT된 함수의 식별자입니다.|  
-|TASKID|`typedef UINT64 TASKID;`|cordebug.h, mscoree.h|식별자를 [ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) 인스턴스.|  
+|SIZE_T|`typedef ULONG_PTR SIZE_T;`|corsym|64 비트 메모리 주소에 대 한 포인터입니다.|
+|TASKID|`typedef UINT64 TASKID;`|cordebug.h, mscoree.h|[ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) 인스턴스의 식별자입니다.|  
 |ThreadID|`typedef UINT_PTR ThreadID;`|corprof.h|관리되는 스레드의 식별자입니다.|  
   
 ## <a name="see-also"></a>참고자료

@@ -1,16 +1,16 @@
 ---
-title: Basic1
+title: 기본-WF
 ms.date: 03/30/2017
 ms.assetid: 84a315b6-3f96-4959-8306-49be37936a23
-ms.openlocfilehash: 6f16bed29928781ec809cb664ca9faae8e2bb08c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: be8dc4fc66a2adc337ddcd0bcfd0b67fdf9fae41
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637896"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869027"
 ---
 # <a name="basic"></a>Basic
-이 섹션에서는 기본 Windows WF (Workflow Foundation) 기능을 보여 주는 샘플을 제공 합니다.  
+이 섹션에서는 WF (기본 Windows Workflow Foundation) 기능을 보여 주는 샘플을 제공 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [기본 제공 작업](built-in-activities.md)  
@@ -19,7 +19,7 @@ ms.locfileid: "65637896"
  [사용자 지정 작업](custom-activities.md)  
  사용자 지정 활동을 만드는 방법을 보여 주는 샘플이 들어 있습니다.  
   
- [디자이너](designer.md)  
+ [Designer](designer.md)  
  [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)]를 사용하는 방법을 보여 주는 샘플이 들어 있습니다.  
   
  [디자이너 재호스팅](designer-rehosting.md)  

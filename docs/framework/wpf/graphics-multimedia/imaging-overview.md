@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 9adceb78f53d9c855ec05859a0b3449a1623e62b
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 845095567459fc486dd2f1c52e575444612c7bb8
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796846"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869129"
 ---
 # <a name="imaging-overview"></a>이미징 개요
 이 항목에서는 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]를 소개합니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]를 사용하여 개발자는 이미지를 표시 및 변환하고 서식을 지정할 수 있습니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "68796846"
   
 <a name="_imageformats"></a>   
 ## <a name="wpf-image-formats"></a>WPF 이미지 형식  
- 코덱은 특정 미디어 형식을 인코딩하거나 디코딩하는 데 사용됩니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)][!INCLUDE[TLA2#tla_jpeg](../../../../includes/tla2sharptla-jpeg-md.md)]에는 BMP, [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)] [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)], ,,,GIF및아이콘이미지형식에대한코덱이포함되어있습니다.[!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] 이러한 각 코덱을 사용하여 애플리케이션은 ICON을 제외한 해당 이미지 형식을 디코딩 및 인코딩할 수 있습니다.  
+ 코덱은 특정 미디어 형식을 인코딩하거나 디코딩하는 데 사용됩니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]BMP, JPEG, [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)] [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)],,, GIF 및 아이콘 이미지 형식에 대 한 코덱을 포함 합니다. 이러한 각 코덱을 사용하여 애플리케이션은 ICON을 제외한 해당 이미지 형식을 디코딩 및 인코딩할 수 있습니다.  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>는 이미지의 디코딩 및 인코딩에 사용 되는 중요 한 클래스입니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 파이프라인의 기본 구성 요소이며 픽셀의 단일 상수 집합을 특정 크기 및 해상도로 나타냅니다. 는 <xref:System.Windows.Media.Imaging.BitmapSource> 다중 프레임 이미지의 개별 프레임이 될 수도 있고 <xref:System.Windows.Media.Imaging.BitmapSource>에서 수행 되는 변환의 결과일 수도 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 과<xref:System.Windows.Media.Imaging.BitmapFrame>같이 이미징에서 사용 되는 여러 기본 클래스의 부모입니다.  
   

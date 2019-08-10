@@ -1,13 +1,13 @@
 ---
-title: '샘플 XML 파일: 1의 customers 및 Orders'
+title: '샘플 XML 파일: 네임스페이스의 Customers 및 Orders'
 ms.date: 07/20/2015
 ms.assetid: 9fe81dbb-e51f-4e80-a49b-e34ac0b1f980
-ms.openlocfilehash: ca12478ab81d114759c07b5d44749aee5a620bbb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 63bb6cf5065e2189380bbcd67812c5ae8d6dd372
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787084"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869109"
 ---
 # <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>샘플 XML 파일: 네임스페이스의 Customers 및 Orders
 다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다. 이 파일에는 고객과 주문이 포함되어 있습니다. XML은 네임스페이스에 있습니다.  
