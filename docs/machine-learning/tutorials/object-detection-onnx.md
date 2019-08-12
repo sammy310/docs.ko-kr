@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/01/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 3e5b6b482dfbd1ff06347883a93a561944200a9f
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: e44ea5795beb90bafe3faf0bafb463d49ba1fc41
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733406"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868719"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>자습서: ML.NET에서 ONNX를 사용하여 개체 검색
 
@@ -344,7 +344,6 @@ for-each 루프 외부에서 `outputDirectory`에 이미지를 저장하는 코�
     - `CELL_HEIGHT`는 이미지 그리드에 있는 한 셀의 높이입니다.
     - `channelStride`는 그리드에서 현재 셀의 시작 위치입니다.
 
-
     모델에서 이미지를 채점하는 경우 `416px x 416px` 입력을 `13 x 13` 크기에 해당하는 셀 그리드로 나눕니다. 포함된 각 셀은 `32px x 32px`입니다. 각 셀에는 각각 5개의 기능(x, y, 너비, 높이, 신뢰도)을 포함하는 5개의 경계 상자가 있습니다. 또한 각 경계 상자에는 각 클래스의 확률이 포함되며, 이 경우에는 20입니다. 따라서 각 셀에는 125개의 정보(5개의 기능 + 20개의 클래스 확률)가 포함됩니다. 
 
 `channelStride` 아래에 5개의 경계 상자 모두에 대한 고정 목록을 만듭니다.
@@ -654,7 +653,6 @@ for 루프 내에서 이미지 파일의 이름과 연결된 경계 상자를 �
 마지막으로 `LogDetectedObjects` 메서드를 사용하여 일부 로깅 로직을 추가합니다.
 
 [!code-csharp [LogPredictionsOutput](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L54)]
-
 
 try-catch 문 다음에 프로세스 실행이 완료되었음을 나타내는 추가 로직을 추가합니다.
 
