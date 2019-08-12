@@ -8,17 +8,19 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: bf194e207262ecea0511a0b67bbafeadd8d5d31d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 06ebb9edfaf4753b98c3305a90b52e93ee7b4486
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629500"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796641"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>네임스페이스 사용(C# 프로그래밍 가이드)
+
 네임스페이스는 C# 프로그램 내에서 두 가지 방법으로 많이 사용됩니다. 첫째, .NET Framework 클래스는 네임스페이스를 사용하여 많은 클래스를 구성합니다. 둘째, 고유한 네임스페이스를 선언하면 대규모 프로그래밍 프로젝트에서 클래스 및 메서드 이름의 범위를 제어할 수 있습니다.  
   
-## <a name="accessing-namespaces"></a>네임스페이스 액세스  
+## <a name="accessing-namespaces"></a>네임스페이스 액세스
+
  대부분의 C# 애플리케이션은 `using` 지시문 섹션으로 시작합니다. 이 섹션에는 애플리케이션이 자주 사용하는 네임스페이스가 나열되어, 프로그래머가 내부에 포함된 메서드를 사용할 때마다 정규화된 이름을 지정할 필요가 없도록 합니다.  
   
  예를 들어 다음 줄을 포함할 수 있습니다.  
@@ -33,17 +35,20 @@ ms.locfileid: "68629500"
   
  [!code-csharp[csProgGuide#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#30)]  
   
-## <a name="namespace-aliases"></a>네임스페이스 별칭  
- [using 지시문](../../../csharp/language-reference/keywords/using-directive.md)을 사용하여 [namespace](../../../csharp/language-reference/keywords/namespace.md)의 별칭을 만들 수도 있습니다. 예를 들어 중첩 네임스페이스가 포함된 이전에 작성한 네임스페이스를 사용하는 경우, 다음 예제와 같이 특정 네임스페이스를 약식으로 참조하는 별칭을 선언할 수 있습니다.  
+## <a name="namespace-aliases"></a>네임스페이스 별칭
+
+ [`using` 지시문](../../language-reference/keywords/using-directive.md)을 사용하여 네임스페이스에 대한 별칭을 만들 수도 있습니다. [네임스페이스 별칭 한정자`::`](../../language-reference/operators/namespace-alias-qualifier.md)를 사용하여 별칭이 지정된 네임스페이스의 구성원에 액세스합니다. 다음 예제에서는 네임스페이스 별칭을 만들고 사용하는 방법을 보여 줍니다.
   
- [!code-csharp[csProgGuideNamespaces#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces2.cs#7)]  
+[!code-csharp[csProgGuideNamespaces#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#5)]
   
-## <a name="using-namespaces-to-control-scope"></a>네임스페이스를 사용하여 범위 제어  
+## <a name="using-namespaces-to-control-scope"></a>네임스페이스를 사용하여 범위 제어
+
  `namespace` 키워드는 범위를 선언하는 데 사용됩니다. 프로젝트 내에서 범위를 만드는 기능은 코드 구성에 도움이 되며, 전역적으로 고유한 형식을 만들 수 있게 해줍니다. 다음 예제에서 `SampleClass`라는 클래스는 서로 중첩된 두 개의 네임스페이스에 정의되어 있습니다. [멤버 액세스 `.` 연산자](../../language-reference/operators/member-access-operators.md#member-access-operator-)는 호출되는 메서드를 구분하는 데 사용됩니다.  
   
  [!code-csharp[csProgGuideNamespaces#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#8)]  
   
-## <a name="fully-qualified-names"></a>정규화된 이름  
+## <a name="fully-qualified-names"></a>정규화된 이름
+
  네임스페이스 및 형식에는 논리적 계층 구조를 나타내는 정규화된 이름으로 설명된 고유한 제목이 있습니다. 예를 들어 `A.B` 문은 `A`는 네임스페이스 또는 형식의 이름이고 `B`는 그 안에 중첩됨을 암시합니다.  
   
  다음 예제에서는 중첩된 클래스 및 네임스페이스가 있습니다. 정규화된 이름이 각 엔터티 뒤에 주석으로 표시됩니다.  

@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 364ac31744d41d95ba20b598f8f137257ddbc608
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 64ffd57d8c0bce1d9f409adebd169b4fd3e17e06
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663651"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796852"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>가비지 수집 기본 사항
 
 <a name="top"></a> CLR(공용 언어 런타임)에서 가비지 수집은 자동 메모리 관리자 역할을 합니다. 가비지 수집은 다음과 같은 이점을 제공합니다.
 
-- 애플리케이션을 개발할 때 메모리를 해제할 필요가 없습니다.
+- 사용자가 만든 개체의 메모리를 수동으로 해제하지 않고도 응용 프로그램을 개발할 수 있습니다.
 
 - 관리되는 힙에 효율적으로 개체를 할당합니다.
 
@@ -140,7 +140,7 @@ CLR에 의해 가비지 수집기가 초기화되고 나면 가비지 수집기�
 |워크스테이션 GC|16MB|256 MB|
 |서버 GC|64MB|4 GB|
 |논리적 CPU 수가 4개를 초과하는 서버 GC|32MB|2GB|
-|논리적 CPU 수가 8개를 초과하는 서버 GC|16MB|1 GB|
+|논리적 CPU 수가 8개를 초과하는 서버 GC|16MB|1GB|
 
 임시 세그먼트에는 2세대 개체가 포함될 수 있습니다. 2세대 개체는 여러 세그먼트를 사용할 수 있습니다(프로세스에 필요하고 메모리가 허용하는 한도만큼).
 

@@ -4,12 +4,12 @@ description: CharSet의 여러 값을 통해 .NET에서 데이터를 네이티�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: c50c58ad639b1efb29c13e5124fe3c32e8af96fc
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: cac71c5d09514dfe1244d16224944e05826edfa9
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063332"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817845"
 ---
 # <a name="charsets-and-marshaling"></a>문자 집합 및 마샬링
 
@@ -19,7 +19,7 @@ ms.locfileid: "65063332"
 
 | `CharSet` 값 | Windows            | Unix에서 .NET Core 2.2 및 그 이전 | Unix에서 .NET core 3.0 이상 및 Mono |
 |-----------------|--------------------|-----------------------------------|------------------------------------------|
-| Ansi            | `char`(ANSI)      | `char`(UTF-8)                    | `char`(UTF-8)                           |
+| Ansi            | `char`(시스템 기본 [Windows(ANSI) 코드 페이지](/windows/win32/intl/code-pages))      | `char`(UTF-8)                    | `char`(UTF-8)                           |
 | 유니코드(Unicode)         | `wchar_t`(UTF-16) | `char16_t`(UTF-16)               | `char16_t`(UTF-16)                      |
 | 자동            | `wchar_t`(UTF-16) | `char16_t`(UTF-16)               | `char`(UTF-8)                           |
 

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: 4d1acc758f0121e7450351c63538fd47f28ef732
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 5577a5042ba77e133e3c6ee7760f7c3a4cce0537
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398059"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796589"
 ---
 # <a name="using-structs-c-programming-guide"></a>구조체 사용(C# 프로그래밍 가이드)
 `struct` 형식은 `Point`, `Rectangle`, `Color`등의 간단한 개체를 나타내는 데 적합합니다. 점을 [자동으로 구현된 속성](../../../csharp/language-reference/keywords/class.md) 이 있는 [클래스](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)로 표현할 수도 있지만 일부 시나리오에서는 [구조체](../../../csharp/language-reference/keywords/struct.md) 를 사용하는 것이 더 효율적일 수 있습니다. 예를 들어 1000개의 `Point` 개체가 있는 배열을 선언하는 경우에는 각 개체를 참조하기 위해 추가 메모리를 할당하게 되며, 이러한 경우 구조체가 보다 효율적입니다. .NET Framework에 <xref:System.Drawing.Point>라는 개체가 포함되어 있으므로 이 예제의 구조체 이름은 "Coords"로 지정되었습니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "67398059"
   
  [new](../../../csharp/language-reference/operators/new-operator.md) 연산자를 사용하여 구조체 개체를 생성할 경우 [생성자 시그니처](../../../csharp/programming-guide/classes-and-structs/constructors.md#constructor-syntax)에 따라 구조체 개체가 생성된 후에 적절한 생성자가 호출됩니다. 클래스와 달리 구조체는 `new` 연산자를 사용하지 않고 인스턴스화할 수 있습니다. 이런 경우에는 생성자를 호출하지 않으므로 할당이 더 효율적으로 이루어집니다. 하지만 필드가 할당되지 않은 상태로 남아 있게 되며 개체를 사용하려면 모든 필드를 초기화해야 합니다. 여기에는 속성을 통해 값을 가져오거나 설정할 수 없는 것도 포함됩니다.
 
- 매개 변수가 없는 기본 생성자를 사용하여 구조체 개체를 인스턴스화하는 경우 모든 멤버는 해당 [기본값](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md)에 따라 할당됩니다.
+ 매개 변수가 없는 기본 생성자를 사용하여 구조체 개체를 인스턴스화하는 경우 모든 멤버는 해당 [기본값](../../../csharp/language-reference/keywords/default-values-table.md)에 따라 할당됩니다.
   
  구조체에 대한 매개 변수를 사용하여 생성자를 작성할 때 모든 멤버를 명시적으로 초기화해야 합니다. 그렇지 않으면 하나 이상의 멤버가 할당되지 않은 상태로 유지되고 구조체를 사용할 수 없으므로 컴파일러 오류 CS0171이 발생합니다.  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 2717505a0a09b9ac1c6ad43153c52771c13f7b5c
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 923591634599a6bbac74d43b105f4e46b492fa1a
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025203"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796471"
 ---
 # <a name="-operator-c-reference"></a>?: 연산자(C# 참조)
 
@@ -72,7 +72,7 @@ condition ? ref consequent : ref alternative
 
 [!code-csharp-interactive[conditional ref](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalRef)]
 
-자세한 내용은 [기능 제안 노트](../../../../_csharplang/proposals/csharp-7.2/conditional-ref.md)를 참조하세요.
+자세한 내용은 [기능 제안 노트](~/_csharplang/proposals/csharp-7.2/conditional-ref.md)를 참조하세요.
 
 ## <a name="conditional-operator-and-an-ifelse-statement"></a>조건부 연산자 및 `if..else` 문
 

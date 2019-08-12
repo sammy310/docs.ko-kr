@@ -1,16 +1,17 @@
 ---
 title: CLI를 사용하여 .NET Core 시작
 description: .NET Core CLI(명령줄 인터페이스)를 사용하여 Windows, Linux 또는 macOS에서 .NET Core를 시작하는 방법을 보여 주는 단계별 자습서입니다.
-author: cartermp
-ms.date: 09/10/2018
+author: thraka
+ms.author: adegeo
+ms.date: 08/07/2019
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: 92ca5149ad5f0e4a50c809a316123fbf77d4152d
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 88e9501a776a026a311c5002674c15acf2324f2b
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545366"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868585"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>명령줄을 사용하여 Windows/Linux/macOS에서 .NET Core 시작
 
@@ -153,10 +154,23 @@ dotnet run
    377
    ```
 
-됐습니다! 이제 여기에서 배운 기본 개념을 활용하여 고유의 프로그램을 만들 수 있습니다.
+## <a name="publish-your-app"></a>앱 게시
 
-이 자습서에 나와 있는 애플리케이션 실행을 위한 명령과 단계는 개발하는 동안에만 사용됩니다. 앱을 배포할 준비가 되면 .NET Core 앱에 대한 여러 [배포 전략](../deploying/index.md) 및 [ `dotnet publish` ](../tools/dotnet-publish.md) 명령을 살펴볼 수 있습니다.
+앱을 배포할 준비가 되면 [`dotnet publish`](../tools/dotnet-publish.md) 명령을 사용하여 _bin\\debug\\netcoreapp2.1\\publish\\_ 에 _publish_ 폴더를 생성합니다(비 Windows 시스템의 경우 `/` 사용). 이미 dotnet 런타임을 설치한 경우에 _publish_ 폴더의 콘텐츠를 다른 플랫폼에 배포할 수 있습니다.
+
+[dotnet](../tools/dotnet.md) 명령으로 게시된 앱을 실행할 수 있습니다.
+
+```console
+$ dotnet bin\Debug\netcoreapp2.1\publish\Hello.dll
+Hello World!
+```
+
+## <a name="conclusion"></a>결론
+
+됐습니다! 이제 여기에서 배운 기본 개념을 활용하여 고유의 프로그램을 만들 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 
 - [.NET Core CLI 도구를 사용하여 프로젝트 구성 및 테스트](testing-with-cli.md)
+- [CLI를 사용하여 .NET Core 앱 게시](../deploying/deploy-with-cli.md)
+- [앱 배포에 대한 자세한 정보](../deploying/index.md)

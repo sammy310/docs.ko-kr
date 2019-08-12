@@ -2,12 +2,12 @@
 title: API 게이트웨이 패턴과 클라이언트-마이크로 서비스 간 직접 통신
 description: API 게이트웨이 패턴과 클라이언트-마이크로 서비스 간 직접 통신의 차이점 및 사용법을 이해합니다.
 ms.date: 01/07/2019
-ms.openlocfilehash: 4b169d5a9542b10726a36b65328bc6a3dc3839ef
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9ebd544bdc137a68f03d1ab38cf23bf0d02c420c
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673170"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892228"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API 게이트웨이 패턴과 클라이언트-마이크로 서비스 간 직접 통신
 
@@ -128,7 +128,7 @@ API 게이트웨이는 여러 기능을 제공할 수 있습니다. 제품에 �
 
 그림 4-14에 표시된 대로 [Azure API Management](https://azure.microsoft.com/services/api-management/)는 API 게이트웨이 요구 사항을 해결할 뿐만 아니라 API에서 인사이트를 수집하는 등의 기능을 제공합니다. API 관리 솔루션을 사용하는 경우 API 게이트웨이는 해당 전체 API 관리 솔루션 내의 구성 요소입니다.
 
-![Azure API Management에서는 로깅, 보안, 계량 등 API 게이트웨이 및 관리 요구를 모두 해결합니다.](./media/image14.png)
+![Azure API Management에서는 로깅, 보안, 계량 등 API 게이트웨이 및 관리 요구를 모두 해결합니다.](./media/api-gateway-azure-api-management.png)
 
 **그림 4-14**. API 게이트웨이에 Azure API Management 사용
 

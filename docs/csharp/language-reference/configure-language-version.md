@@ -2,12 +2,12 @@
 title: C# 언어 버전 관리 - C# 가이드
 description: 프로젝트에 따라 C# 언어 버전이 결정되는 방법과 수동으로 조정할 수 있는 다양한 값에 대해 알아봅니다.
 ms.date: 07/10/2019
-ms.openlocfilehash: e35fdf2bcdb1a31b752c760f3f6df59232e498a4
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 744cec0aac21f743648cccbdc93cf2977c32d644
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68236091"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796536"
 ---
 # <a name="c-language-versioning"></a>C# 언어 버전 관리
 
@@ -28,7 +28,7 @@ C# 컴파일러는 프로젝트의 대상 프레임워크를 기반으로 기본
 
 프로젝트가 해당 미리 보기 언어 버전이 있는 미리 보기 프레임워크를 대상으로 하는 경우 사용되는 언어 버전은 미리 보기 언어 버전입니다. 이렇게 하면 릴리스된 .NET Core 버전을 대상으로 하는 프로젝트에 영향을 주지 않고 모든 환경에서 해당 미리 보기로 작업할 수 있는 최신 기능을 사용할 수 있습니다.
 
-## <a name="overriding-a-default"></a>기본값 재정의
+## <a name="override-a-default"></a>기본값 재정의
 
 C# 버전을 명시적으로 지정해야 하는 경우 다음과 같은 여러 가지 방법으로 수행할 수 있습니다.
 
@@ -38,7 +38,7 @@ C# 버전을 명시적으로 지정해야 하는 경우 다음과 같은 여러 
 
 ### <a name="edit-the-project-file"></a>프로젝트 파일 편집
 
-프로젝트 파일에서 언어 버전을 설정할 수 있습니다. 예를 들어 미리 보기 기능에 명시적으로 액세스하려는 경우 다음과 같은 요소를 추가할 수 있습니다.
+프로젝트 파일에서 언어 버전을 설정할 수 있습니다. 예를 들어 미리 보기 기능에 명시적으로 액세스하려는 경우 다음과 같은 요소를 추가합니다.
 
 ```xml
 <PropertyGroup>
@@ -46,7 +46,7 @@ C# 버전을 명시적으로 지정해야 하는 경우 다음과 같은 여러 
 </PropertyGroup>
 ```
 
-값 `preview`는 컴파일러에서 지원하는 최신 미리 보기 C# 언어를 사용합니다.
+값 `preview`는 컴파일러에서 지원하는 사용 가능한 최신 미리 보기 C# 언어를 사용합니다.
 
 ### <a name="configure-multiple-projects"></a>여러 프로젝트 구성
 
