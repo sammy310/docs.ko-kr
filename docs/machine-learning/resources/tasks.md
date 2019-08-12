@@ -4,12 +4,12 @@ description: ML.NET에서 지원되는 다양한 기계 학습 작업 및 관련
 ms.custom: seodec18
 ms.date: 04/23/2019
 author: natke
-ms.openlocfilehash: ed6361fdcbca11c100ee5cae4ca76e152ddfba11
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: bcd967c11156ca9b837631560e78722b13fc7ae0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063538"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630060"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET의 기계 학습 작업
 
@@ -47,7 +47,7 @@ ms.locfileid: "65063538"
 
 ### <a name="binary-classification-inputs-and-outputs"></a>이진 분류 입력 및 출력
 
-이진 분류에서 최상의 결과를 내려면 학습 데이터의 균형이 이루어져야 합니다(즉 긍정 및 부정 학습 데이터 수 일치). 누락 및 값은 학습 전에 처리되어야 합니다.
+이진 분류에서 최상의 결과를 내려면 학습 데이터의 균형이 이루어져야 합니다(즉 긍정 및 부정 학습 데이터 수 일치). 누락 값은 학습 전에 처리되어야 합니다.
 
 입력 레이블 열 데이터는 <xref:System.Boolean>이어야 합니다.
 입력 기능 열 데이터는 고정 크기의 <xref:System.Single> 벡터여야 합니다.
@@ -70,7 +70,7 @@ ms.locfileid: "65063538"
 자세한 내용은 Wikipedia에서 [Multiclass classification](https://en.wikipedia.org/wiki/Multiclass_classification)(다중 클래스 분류) 문서를 참조하세요.
 
 >[!NOTE]
->일 대 다(One vs all)는 모든 [이진 분류 학습자](#binary-classification)를 다중 클래스 데이터 세트에서 작동하도록 업그레이드합니다. 자세한 내용은 [Wikipedia](https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest))를 참조하세요.
+>일 대 다(One vs all)는 모든 [이진 분류 학습자](#binary-classification)를 다중 클래스 데이터 세트에서 작동하도록 업그레이드합니다. 자세한 내용은 [Wikipedia](https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest) )를 참조하세요.
 
 ### <a name="multiclass-classification-trainers"></a>다중 클래스 분류 트레이너
 

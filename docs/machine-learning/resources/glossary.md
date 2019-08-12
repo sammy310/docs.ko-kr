@@ -2,13 +2,14 @@
 title: 기계 학습 용어집
 description: ML.NET에서 사용자 지정 모델을 빌드할 때 유용한 중요한 기계 학습 용어 모음입니다.
 ms.custom: seodec18
-ms.date: 05/09/2019
-ms.openlocfilehash: 7d098dc9d3dc6cb7bb08b5689b50afff01ba1d7f
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.topic: reference
+ms.date: 07/31/2019
+ms.openlocfilehash: 1c979d2c4567285146ab87f359116efb506815a1
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557973"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710533"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>중요한 용어가 포함된 기계 학습 용어집
 
@@ -77,7 +78,7 @@ ML.NET에서 카탈로그는 공통 목적에 따라 그룹화된 확장 함수�
 
 ## <a name="hyperparameter"></a>하이퍼 매개 변수
 
-기계 학습 알고리즘의 매개 변수입니다. 예로는 의사 결정 포리스트에서 학습할 트리 수 또는 그라데이션 하강 알고리즘의 단계 크기가 있습니다. ‘하이퍼 매개 변수’의 값은 모델 학습 전에 설정되고 예측 함수의 매개 변수(예: 의사 결정 트리의 비교 지점 또는 선형 회귀 모델의 가중치)를 찾는 프로세스를 관리합니다. 자세한 내용은 Wikipedia에서 [Hyperparameter](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning))(하이퍼 매개 변수) 문서를 참조하세요.
+기계 학습 알고리즘의 매개 변수입니다. 예로는 의사 결정 포리스트에서 학습할 트리 수 또는 그라데이션 하강 알고리즘의 단계 크기가 있습니다. ‘하이퍼 매개 변수’의 값은 모델 학습 전에 설정되고 예측 함수의 매개 변수(예: 의사 결정 트리의 비교 지점 또는 선형 회귀 모델의 가중치)를 찾는 프로세스를 관리합니다.  자세한 내용은 Wikipedia에서 [Hyperparameter](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning))(하이퍼 매개 변수) 문서를 참조하세요.
 
 ## <a name="label"></a>레이블
 
@@ -108,6 +109,10 @@ ML.NET에서 카탈로그는 공통 목적에 따라 그룹화된 확장 함수�
 ## <a name="n-gram"></a>N-gram
 
 텍스트 데이터에 대한 기능 추출 체계: N 단어 시퀀스가 [기능](#feature) 값으로 바뀝니다.
+
+## <a name="normalization"></a>표준화
+
+표준화는 부동 소수점 데이터를 0에서 1 사이의 값으로 조정하는 프로세스입니다. ML.NET에서 사용되는 대부분의 학습 알고리즘은 입력 기능 데이터를 표준화해야 합니다. ML.NET에서 일련의 [표준화 변환](transforms.md#normalization-and-scaling)을 제공
 
 ## <a name="numerical-feature-vector"></a>숫자 기능 벡터
 
@@ -147,6 +152,10 @@ ML.NET에서 카탈로그는 공통 목적에 따라 그룹화된 확장 함수�
 ## <a name="root-of-mean-squared-error-rmse"></a>RMSE(평균 제곱 오차의 제곱근)
 
 [회귀](#regression)에서 오차 제곱 평균의 제곱근인 평가 메트릭입니다.
+
+## <a name="scoring"></a>점수 매기기
+
+채점은 학습된 기계 학습 모델에 새 데이터를 적용하고 예측을 생성하는 프로세스입니다. 채점은 추론이라고도 합니다. 모델 유형에 따라 점수는 원시 값, 확률 또는 범주가 될 수 있습니다.
 
 ## <a name="supervised-machine-learning"></a>감독된 기계 학습
 

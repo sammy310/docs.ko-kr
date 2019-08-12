@@ -6,12 +6,12 @@ helpviewer_keywords:
 - properties [C#], vs. indexers
 - indexers [C#], vs. properties
 ms.assetid: 3358a89f-44a0-4a4d-bf8c-07237a90af39
-ms.openlocfilehash: 41b27905edb8a0e00a6af5a4cce38988161326d0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31e6b4b10a6ffec031a2e41a2bd16c843f802fb7
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537727"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671675"
 ---
 # <a name="comparison-between-properties-and-indexers-c-programming-guide"></a>속성 및 인덱서 비교(C# 프로그래밍 가이드)
 인덱서는 속성과 비슷합니다. 다음 표에 나와 있는 차이점을 제외하면 속성 접근자에 대해 정의된 모든 규칙이 인덱서 접근자에도 적용됩니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "54537727"
 |정적 또는 인스턴스 멤버일 수 있습니다.|인스턴스 멤버여야 합니다.|  
 |속성의 [get](../../../csharp/language-reference/keywords/get.md) 접근자에는 매개 변수가 없습니다.|인덱서의 `get` 접근자에는 인덱서와 동일한 형식 매개 변수 목록이 있습니다.|  
 |속성의 [set](../../../csharp/language-reference/keywords/set.md) 접근자에는 암시적 `value` 매개 변수가 포함되어 있습니다.|인덱서의 `set` 접근자에는 인덱서와 동일한 형식 매개 변수 목록이 있으며 [value](../../../csharp/language-reference/keywords/value.md) 매개 변수도 있습니다.|  
-|[자동으로 구현된 속성](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)을 사용하여 약식 구문을 지원합니다.|약식 구문을 지원하지 않습니다.|  
+|[자동으로 구현된 속성](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)을 사용하여 약식 구문을 지원합니다.|가져오기만 수행(Get only) 인덱서를 위한 식 본문 멤버를 지원합니다.|  
   
 ## <a name="see-also"></a>참고 항목
 

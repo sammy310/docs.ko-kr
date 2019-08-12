@@ -2,12 +2,12 @@
 title: dotnet restore 명령
 description: dotnet restore 명령을 사용하여 종속성 및 프로젝트 관련 도구를 복원하는 방법을 알아봅니다.
 ms.date: 05/29/2018
-ms.openlocfilehash: 3ddb9f679cfcab972483a4cb53ffe2b075867614
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 17bbbe33e7cb7b13d6fb1c0e44bb77dd2bbe7020
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613972"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626345"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -43,13 +43,29 @@ dotnet restore [-h|--help]
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-종속성을 복원하려면 NuGet에 패키지가 있는 피드가 필요합니다. 피드는 일반적으로 *NuGet.config* 구성 파일을 통해 제공됩니다. CLI 도구가 설치될 때 기본 구성 파일이 제공됩니다. 프로젝트 디렉터리에 고유한 *NuGet.config* 파일을 만들어 추가 피드를 지정합니다. 또한 명령 프롬프트에서 호출당 추가 피드를 지정합니다.
+종속성을 복원하려면 NuGet에 패키지가 있는 피드가 필요합니다. 피드는 일반적으로 *nuget.config* 구성 파일을 통해 제공됩니다. CLI 도구가 설치될 때 기본 구성 파일이 제공됩니다. 프로젝트 디렉터리에 고유한 *nuget.config* 파일을 만들어 추가 피드를 지정합니다. 또한 명령 프롬프트에서 호출당 추가 피드를 지정합니다.
 
 종속성의 경우 복원 작업 중 `--packages` 인수를 사용하여 복원된 패키지가 배치될 위치를 지정합니다. 지정하지 않으면 모든 운영 체제에서 사용자의 홈 디렉터리의 `.nuget/packages` 디렉터리에 있는 기본 NuGet 패키지 캐시가 사용됩니다. 예를 들어 Linux의 경우 */home/user1* 또는 Windows의 경우 *C:\Users\user1*입니다.
 
 프로젝트 관련 도구의 경우 `dotnet restore`는 먼저 도구가 압축된 패키지를 복원한 다음 프로젝트 파일에 지정된 대로 도구의 종속성을 계속 복원합니다.
 
-`dotnet restore` 명령의 동작은 *Nuget.Config* 파일(있는 경우)에 있는 일부 설정의 영향을 받습니다. 예를 들어 *NuGet.Config*의 `globalPackagesFolder`를 설정하면 복원된 NuGet 패키지가 지정한 폴더에 저장됩니다. `dotnet restore` 명령의 `--packages` 옵션을 지정하는 대신 이 방법을 사용할 수 있습니다. 자세한 내용은 [NuGet.Config 참조](/nuget/schema/nuget-config-file)를 참조하세요.
+### <a name="nugetconfig-differences"></a>nuget 구성 차이점
+
+`dotnet restore` 명령의 동작은 있는 경우 *nuget.config* 파일에 있는 일부 설정의 영향을 받습니다. 예를 들어 *nuget.config*의 `globalPackagesFolder`를 설정하면 복원된 NuGet 패키지가 지정한 폴더에 저장됩니다. `dotnet restore` 명령의 `--packages` 옵션을 지정하는 대신 이 방법을 사용할 수 있습니다. 자세한 내용은 [nuget.config 참조](/nuget/schema/nuget-config-file)를 참조하세요.
+
+`dotnet restore`에서 무시하는 3가지 특정 설정은 다음과 같습니다.
+
+* [bindingRedirects](/nuget/schema/nuget-config-file#bindingredirects-section)
+
+  바인딩 리디렉션은 `<PackageReference>` 요소에서 작동하지 않으며 .NET Core에서는 NuGet 패키지의 `<PackageReference>` 요소만 지원합니다.
+
+* [솔루션](/nuget/schema/nuget-config-file#solution-section)
+
+  이 설정은 Visual Studio에만 적용되며 .NET Core에는 적용되지 않습니다. .NET Core에서는 `packages.config` 파일을 사용하지 않고, 대신 NuGet 패키지의 `<PackageReference>` 요소를 사용합니다.
+
+* [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
+
+  신뢰할 수 있는 패키지의 [플랫폼 간 확인은 NuGet에서 지원하지 않기](https://github.com/NuGet/Home/issues/7939) 때문에 이 설정은 적용되지 않습니다.
 
 ## <a name="implicit-dotnet-restore"></a>암시적 `dotnet restore`
 
@@ -115,7 +131,7 @@ dotnet restore [-h|--help]
 
 `-s|--source <SOURCE>`
 
-복원 작업 중 사용할 NuGet 패키지 소스를 지정합니다. 이 설정은 *NuGet.config* 파일에 지정된 모든 소스를 재정의합니다. 이 옵션을 여러 번 지정하여 여러 소스를 제공할 수 있습니다.
+복원 작업 중 사용할 NuGet 패키지 소스를 지정합니다. 이 설정은 *nuget.config* 파일에 지정된 모든 소스를 재정의합니다. 이 옵션을 여러 번 지정하여 여러 소스를 제공할 수 있습니다.
 
 `--verbosity <LEVEL>`
 
@@ -161,7 +177,7 @@ dotnet restore [-h|--help]
 
 `-s|--source <SOURCE>`
 
-복원 작업 중 사용할 NuGet 패키지 소스를 지정합니다. 이 소스는 *NuGet.config* 파일에 지정된 모든 소스를 재정의합니다. 이 옵션을 여러 번 지정하여 여러 소스를 제공할 수 있습니다.
+복원 작업 중 사용할 NuGet 패키지 소스를 지정합니다. 이 소스는 *nuget.config* 파일에 지정된 모든 소스를 재정의합니다. 이 옵션을 여러 번 지정하여 여러 소스를 제공할 수 있습니다.
 
 `--verbosity <LEVEL>`
 

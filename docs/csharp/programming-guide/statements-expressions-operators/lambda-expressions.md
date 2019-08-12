@@ -1,7 +1,7 @@
 ---
 title: 람다 식 - C# 프로그래밍 가이드
 ms.custom: seodec18
-ms.date: 03/14/2019
+ms.date: 07/29/2019
 helpviewer_keywords:
 - lambda expressions [C#]
 - outer variables [C#]
@@ -9,38 +9,44 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 546feb6f3c4515ceecdb5b5afa14c0fc99ab7020
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 36dab520d67d08d1b3304f1453bfb2c07a2f1c32
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363902"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671702"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>람다 식(C# 프로그래밍 가이드)
 
-*람다 식*은 개체로 처리되는 코드 블록(식 또는 문 블록)입니다. 이 식은 인수로 메서드에 전달할 수 있으며 메서드 호출에서 반환될 수도 있습니다. 람다 식은 다음과 같은 경우에 광범위하게 사용됩니다.
+*람다 식*은 다음 두 형식의 식입니다.
 
-- 실행될 코드를 <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType>과 같은 비동기 메서드에 전달.
+- 식이 본문으로 포함된 [식 람다](#expression-lambdas):
 
-- [LINQ 쿼리 식](../../linq/index.md) 작성.
+  ```csharp
+  (input-parameters) => expression
+  ```
 
-- [식 트리](../concepts/expression-trees/index.md) 만들기.
+- 문 블록이 본문으로 포함된 [문 람다](#statement-lambdas):
 
-람다 식은 대리자로 나타내거나 대리자로 컴파일되는 식 트리로 나타낼 수 있는 코드입니다. 람다 식의 특정 대리자 형식은 해당 매개 변수 및 반환 값에 따라 달라집니다. 값을 반환하지 않는 람다 식은 해당 매개 변수의 개수에 따라 특정 `Action` 대리자에 해당하고, 값을 반환하는 람다 식은 해당 매개 변수의 개수에 따라 특정 `Func` 대리자에 해당합니다. 예를 들어 매개 변수는 두 개지만 값을 반환하지 않는 람다 식은 <xref:System.Action%602> 대리자에 해당합니다. 매개 변수가 하나이고 값을 반환하는 람다 식은 <xref:System.Func%602> 대리자에 해당합니다.
+  ```csharp  
+  (input-parameters) => { <sequence-of-statements> }
+  ```
 
-람다 식은 [람다 선언 연산자](../../language-reference/operators/lambda-operator.md) `=>`을 사용하여 람다의 매개 변수 목록을 실행 코드와 구분합니다. 람다 식을 만들려면 람다 연산자 왼쪽에 입력 매개 변수(있는 경우)를 지정하고 다른 쪽에 식이나 문 블록을 삽입합니다. 예를 들어 한 줄 람다 식 `x => x * x`는 이름이 `x`인 매개 변수를 지정하고 `x` 제곱 값을 반환합니다. 다음 예제와 같이 대리자 형식에 이 식을 할당할 수도 있습니다.
+[람다 선언 연산자`=>`](../../language-reference/operators/lambda-operator.md)를 사용하여 본문에서 람다의 매개 변수 목록을 구분합니다. 람다 식을 만들려면 람다 연산자 왼쪽에 입력 매개 변수를 지정하고(있는 경우) 다른 쪽에 식이나 문 블록을 지정합니다.
+
+람다 식은 [대리자](../../language-reference/builtin-types/reference-types.md#the-delegate-type) 형식으로 변환할 수 있습니다. 람다 식을 변환할 수 있는 대리자 형식은 해당 매개 변수 및 반환 값의 형식에 따라 정의됩니다. 람다 식에서 값을 반환하지 않는 경우 `Action` 대리자 형식 중 하나로 변환할 수 있습니다. 값을 반환하는 경우 `Func` 대리자 형식으로 변환할 수 있습니다. 예를 들어 매개 변수는 두 개지만 값을 반환하지 않는 람다 식은 <xref:System.Action%602> 대리자로 변환할 수 있습니다. 매개 변수가 하나이고 값을 반환하는 람다 식은 <xref:System.Func%602> 대리자로 변환할 수 있습니다. 다음 예제에서는 `x`라고 이름이 지정되고 `x` 제곱 값을 반환하는 매개 변수를 지정하는 람다 식 `x => x * x`는 대리자 형식의 변수에 할당됩니다.
 
 [!code-csharp-interactive[lambda is delegate](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Delegate)]
 
-다음과 같이 식 트리 형식에 람다 식을 할당할 수도 있습니다.
+다음 예제에 표시된 대로 식 람다는 [식 트리](../concepts/expression-trees/index.md) 형식으로도 변환할 수 있습니다.
 
 [!code-csharp-interactive[lambda is expression tree](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#ExpressionTree)]
 
-또는 메서드 인수로 직접 전달할 수 있습니다.
+대리자 형식이나 식 트리의 인스턴스가 필요한 코드에서 람다 식을 백그라운드에서 실행해야 하는 코드를 전달하는 <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType> 메서드의 인수 등으로 사용할 수 있습니다. 다음 예제에 표시된 대로 [LINQ 쿼리 식](../../linq/index.md)을 쓸 때도 람다 식을 사용할 수 있습니다.
 
-[!code-csharp-interactive[lambda is argument](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Argument)]
+[!code-csharp-interactive[lambda is argument in LINQ](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Argument)]
 
-LINQ to Objects 및 LINQ to XML에서처럼 메서드 기반 구문을 사용하여 <xref:System.Linq.Enumerable?displayProperty=nameWithType> 클래스에서 <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> 메서드를 호출하는 경우 매개 변수는 대리자 형식 <xref:System.Func%602?displayProperty=nameWithType>입니다. 람다 식은 이러한 대리자를 만드는 가장 간단한 방법입니다. LINQ to SQL에서처럼 <xref:System.Linq.Queryable?displayProperty=nameWithType> 클래스에서 <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType> 메서드를 호출하는 경우 매개 변수 형식은 식 트리 형식 [`Expression<Func<TSource,TResult>>`](<xref:System.Linq.Expressions.Expression%601>)입니다. 이 경우에도 람다 식을 사용하면 식 트리를 간단하게 만들 수 있습니다. 람다 식은 `Select` 호출과 비슷하게 보일 수 있지만 실제로 람다 식을 통해 생성되는 개체 형식은 다릅니다.
+예를 들어 LINQ to Objects 및 LINQ to XML에서 메서드 기반 구문을 사용하여 <xref:System.Linq.Enumerable?displayProperty=nameWithType> 클래스에서 <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> 메서드를 호출하는 경우 매개 변수는 대리자 형식 <xref:System.Func%602?displayProperty=nameWithType>입니다. 예를 들어 LINQ to SQL에서 <xref:System.Linq.Queryable?displayProperty=nameWithType> 클래스에서 <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType> 메서드를 호출하는 경우 매개 변수 형식은 식 트리 형식 [`Expression<Func<TSource,TResult>>`](<xref:System.Linq.Expressions.Expression%601>)입니다. 두 경우 모두 동일한 람다 식을 사용하여 매개 변수 값을 지정할 수 있습니다. 그러면 두 `Select` 호출이 비슷하게 보일 수 있지만 실제로 람다 식을 통해 생성되는 개체 형식은 다릅니다.
   
 ## <a name="expression-lambdas"></a>식 람다
 
@@ -73,7 +79,7 @@ LINQ to Objects 및 LINQ to XML에서처럼 메서드 기반 구문을 사용하
 문 람다는 다음과 같이 중괄호 안에 문을 지정한다는 점을 제외하면 식 람다와 비슷합니다.
 
 ```csharp  
-(input-parameters) => { statement; }
+(input-parameters) => { <sequence-of-statements> }
 ```
 
 문 람다의 본문에 지정할 수 있는 문의 개수에는 제한이 없지만 일반적으로 2-3개 정도만 지정합니다.

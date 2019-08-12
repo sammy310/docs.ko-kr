@@ -4,16 +4,21 @@ description: ML.NET에서 지원되는 기능 엔지니어링 구성 요소를 �
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: 7ea06e19b4651017079a6ae57136f033e0ce981c
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: cbcdef5b8f5f6334d5545f100976347ade9ee6fd
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65558021"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671867"
 ---
 # <a name="data-transformations"></a>데이터 변환
 
-데이터 변환은 모델 학습용 데이터를 준비하는 데 사용됩니다. 이 가이드의 변환은 [IEstimator](xref:Microsoft.ML.IEstimator%601) 인터페이스를 구현하는 클래스를 반환합니다. 데이터 변환은 함께 연결될 수 있습니다. 두 변환은 각각 연결된 참조 설명서에 지정된 특정 형식 및 형태의 데이터를 예측하고 생성합니다.
+데이터 변환은 다음 작업에 사용됩니다.
+- 모델 학습을 위한 데이터 준비
+- TensorFlow 또는 ONNX 형식으로 가져온 모델 적용
+- 모델을 통해 전달된 후 데이터 사후 처리
+
+이 가이드의 변환은 [IEstimator](xref:Microsoft.ML.IEstimator%601) 인터페이스를 구현하는 클래스를 반환합니다. 데이터 변환은 함께 연결될 수 있습니다. 두 변환은 각각 연결된 참조 설명서에 지정된 특정 형식 및 형태의 데이터를 예측하고 생성합니다.
 
 일부 데이터 변환의 경우 해당 매개 변수를 계산하려면 학습 데이터가 필요합니다. 예를 들어 <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> 변환기는 `Fit()` 작업 중에 학습 데이터의 평균 및 분산을 계산하고 해당 매개 변수를 `Transform()` 작업에서 사용합니다. 
 
@@ -78,6 +83,7 @@ ms.locfileid: "65558021"
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.ExtractPixels*> | 입력 이미지의 벡터를 숫자의 벡터로 변환 |
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.LoadImages*> | 폴더에서 메모리로 이미지 로드 |
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.ResizeImages*> | 이미지 크기 조정 |
+| <xref:Microsoft.ML.OnnxCatalog.DnnFeaturizeImage*> | 미리 학습된 심층 신경망(DNN) 모델을 적용하여 입력 이미지를 기능 벡터로 변환 |
 
 ## <a name="categorical-data-transformations"></a>범주별 데이터 변환
 
@@ -85,6 +91,17 @@ ms.locfileid: "65558021"
 | --- | --- |
 | <xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding*> | 하나 이상의 텍스트 열을 [원 핫(one-hot)](https://en.wikipedia.org/wiki/One-hot) 인코딩된 벡터로 변환 |
 | <xref:Microsoft.ML.CategoricalCatalog.OneHotHashEncoding*> | 하나 이상의 텍스트 열을 해시 기반 원 핫(one-hot) 인코딩된 벡터로 변환 |
+
+## <a name="time-series-data-transformations"></a>시계열 데이터 변환
+
+| 변형 | 정의 |
+| --- | --- |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectAnomalyBySrCnn*> | SR(Spectral Residual) 알고리즘을 사용하여 입력 시계열 데이터에서 변칙 검색 |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectChangePointBySsa*> | 단일 스펙트럼 분석(SSA)을 사용하여 시계열 데이터에서 변경점 검색 |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectIidChangePoint*> | 적응 커널 밀도 예측 및 마팅게일(martingale) 점수를 사용하여 개별적으로 동일하게 배포된(IID) 시계열 데이터에서 변경점 검색 |
+| <xref:Microsoft.ML.TimeSeriesCatalog.ForecastBySsa*> | 단일 스펙트럼 분석(SSA)을 사용하여 시계열 데이터 예측 |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectSpikeBySsa*> | 단일 스펙트럼 분석(SSA)을 사용하여 시계열 데이터에서 급증 검색 |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectIidSpike*> | 적응 커널 밀도 예측 및 마팅게일(martingale) 점수를 사용하여 개별적으로 동일하게 배포된(IID) 시계열 데이터에서 급증 검색 |
 
 ## <a name="missing-values"></a>누락 값
 
@@ -99,6 +116,35 @@ ms.locfileid: "65558021"
 | --- | --- |
 | <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnCount*> | 기본값이 아닌 값이 임계값보다 큰 기능 선택 |
 | <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnMutualInformation*> | 레이블 열의 데이터가 종속성이 가장 높은 기능 선택 |
+
+## <a name="feature-transformations"></a>기능 변환
+
+| 변형 | 정의 |
+| --- | --- |
+| <xref:Microsoft.ML.KernelExpansionCatalog.ApproximatedKernelMap*> | 기능을 선형 알고리즘의 입력으로 사용할 수 있도록 내부 제품에서 커널 함수에 가까운 낮은 차원 기능 영역에 각 입력 벡터를 매핑 |
+| <xref:Microsoft.ML.PcaCatalog.ProjectToPrincipalComponents*> | 보안 주체 구성 요소 분석 알고리즘을 적용하여 입력 기능 벡터의 차원 줄이기 |
+
+## <a name="explainability-transformations"></a>설명 가능성 변환
+
+| 변형 | 정의 |
+| --- | --- |
+| <xref:Microsoft.ML.ExplainabilityCatalog.CalculateFeatureContribution*> | 기능 벡터의 각 요소에 대한 기여 점수 계산 |
+
+## <a name="calibration-transformations"></a>보정 변환
+
+| 변형 | 정의 |
+| --- | --- |
+|<xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Platt%28System.String%2CSystem.String%2CSystem.String%29> | 학습 데이터를 사용하여 추정한 매개 변수가 있는 로지스틱 회귀 분석을 사용하여 이진 분류자 원시 점수를 클래스 확률로 변환 |
+| <xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Platt%28System.Double%2CSystem.Double%2CSystem.String%29> | 고정 매개 변수가 있는 로지스틱 회귀 분석을 사용하여 이진 분류자 원시 점수를 클래스 확률로 변환 |
+| <xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Naive*> | Bin에 점수를 할당하고 bin 간 분포를 기준으로 확률을 계산하여 이진 분류자 원시 점수를 클래스 확률로 변환 |
+| <xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Isotonic*> | 점수를 bin에 할당하여 이진 분류자 원시 점수를 클래스 확률로 변환합니다. 여기서 경계 위치와 bin 크기는 학습 데이터를 사용하여 추정함  |
+
+## <a name="deep-learning-transformations"></a>딥 러닝 변환
+
+| 변형 | 정의 |
+| --- | --- |
+| <xref:Microsoft.ML.OnnxCatalog.ApplyOnnxModel*> | 가져온 ONNX 모델을 사용하여 입력 데이터 변환 |
+| <xref:Microsoft.ML.TensorflowCatalog.LoadTensorFlowModel*> | 가져온 TensorFlow 모델을 사용하여 입력 데이터 변환 |
 
 ## <a name="custom-transformations"></a>사용자 지정 변환
 

@@ -1,15 +1,15 @@
 ---
 title: '자습서: 지원 문제 분류 - 다중 클래스 분류'
 description: 다중 클래스 분류 시나리오에서 ML.NET을 사용하여 GitHub 문제를 분류하여 지정된 영역에 할당하는 방법을 알아봅니다.
-ms.date: 05/16/2019
+ms.date: 07/31/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: da4f82c1b2c4ebdc8ccc8f307722c2719909cf56
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 3bb556cc591ee35fc14c548e7f53bad58a786e99
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195580"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710301"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>자습서: ML .NET에서 다중 클래스 분류를 사용하여 지원 문제 분류
 
@@ -285,6 +285,25 @@ public static void Evaluate(DataViewSchema trainingDataViewSchema)
 
 [!code-csharp[DisplayMetrics](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#DisplayMetrics)]
 
+### <a name="save-the-model-to-a-file"></a>모델을 파일에 저장
+
+모델이 만족스러운 경우 나중에 또는 다른 애플리케이션에서 예측을 수행하기 위해 모델을 파일에 저장합니다. `Evaluate` 메서드에 다음 코드를 추가합니다. 
+
+[!code-csharp[SnippetCallSaveModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetCallSaveModel)]
+
+`Evaluate` 메서드 아래 `SaveModelAsFile` 메서드를 만듭니다.
+
+```csharp
+private static void SaveModelAsFile(MLContext mlContext,DataViewSchema trainingDataViewSchema, ITransformer model)
+{
+
+}
+```
+
+`SaveModelAsFile` 메서드에 다음 코드를 추가합니다. 이 코드에서는 [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) 메서드를 사용하여 학습된 모델을 직렬화하고 zip 파일로 저장합니다.
+
+[!code-csharp[SnippetSaveModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetSaveModel)]
+
 ## <a name="deploy-and-predict-with-a-model"></a>모델을 통해 배포 및 예측
 
 다음 코드를 사용하여 `Evaluate` 메서드 호출 바로 아래에 `Main` 메서드의 새 메서드 호출을 추가합니다.
@@ -302,10 +321,15 @@ private static void PredictIssue()
 
 `PredictIssue` 메서드는 다음 작업을 실행합니다.
 
+* 저장된 모델 로드
 * 테스트 데이터의 단일 문제를 만듭니다.
 * 테스트 데이터를 기반으로 영역을 예측합니다.
 * 보고를 위해 테스트 데이터 및 예측을 결합합니다.
 * 예측 결과를 표시합니다.
+
+다음 코드를 `PredictIssue` 메서드에 추가하여 저장된 모델을 애플리케이션에 로드합니다.
+
+[!code-csharp[SnippetLoadModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetLoadModel)]
 
 `GitHubIssue`의 인스턴스를 만들어 GitHub 문제를 추가하여 `Predict` 메서드에서 학습된 모델의 예측을 테스트합니다.
 
