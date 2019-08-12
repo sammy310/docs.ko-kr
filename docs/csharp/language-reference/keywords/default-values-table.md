@@ -1,75 +1,62 @@
 ---
 title: 기본값 표 - C# 참조
 ms.custom: seodec18
-description: C# 값 형식의 기본 값은 무엇인지 알아봅니다.
-ms.date: 08/23/2018
+description: C# 형식의 기본값을 알아봅니다.
+ms.date: 07/29/2019
 helpviewer_keywords:
-- constructors [C#], return values
-- keywords [C#], new
+- default [C#]
 - parameterless constructor [C#]
-- defaults [C#]
-- value types [C#], initializing
-- variables [C#], value types
-- constructors [C#], parameterless constructor
-- types [C#], parameterless constructor return values
-ms.openlocfilehash: ec5fb4681f0e0562c5aefdf336841416f96bdf98
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 23fba8269670156000cb68b3aa07ae7c770eada1
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661408"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627746"
 ---
-# <a name="default-values-table-c-reference"></a><span data-ttu-id="97f03-103">기본값 표(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="97f03-103">Default values table (C# Reference)</span></span>
+# <a name="default-values-table-c-reference"></a><span data-ttu-id="f0ac8-103">기본값 표(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="f0ac8-103">Default values table (C# reference)</span></span>
 
-<span data-ttu-id="97f03-104">다음 표는 [값 형식](value-types.md)의 기본값을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="97f03-104">The following table shows the default values of [value types](value-types.md).</span></span>
+<span data-ttu-id="f0ac8-104">다음 표는 C# 형식의 기본값을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="f0ac8-104">The following table shows the default values of C# types:</span></span>
 
-|<span data-ttu-id="97f03-105">값 형식</span><span class="sxs-lookup"><span data-stu-id="97f03-105">Value type</span></span>|<span data-ttu-id="97f03-106">기본값</span><span class="sxs-lookup"><span data-stu-id="97f03-106">Default value</span></span>|
-|----------------|-------------------|
-|[<span data-ttu-id="97f03-107">bool</span><span class="sxs-lookup"><span data-stu-id="97f03-107">bool</span></span>](bool.md)|`false`|
-|[<span data-ttu-id="97f03-108">byte</span><span class="sxs-lookup"><span data-stu-id="97f03-108">byte</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="97f03-109">0</span><span class="sxs-lookup"><span data-stu-id="97f03-109">0</span></span>|
-|[<span data-ttu-id="97f03-110">char</span><span class="sxs-lookup"><span data-stu-id="97f03-110">char</span></span>](char.md)|<span data-ttu-id="97f03-111">'\0'</span><span class="sxs-lookup"><span data-stu-id="97f03-111">'\0'</span></span>|
-|[<span data-ttu-id="97f03-112">decimal</span><span class="sxs-lookup"><span data-stu-id="97f03-112">decimal</span></span>](../builtin-types/floating-point-numeric-types.md)|<span data-ttu-id="97f03-113">0M</span><span class="sxs-lookup"><span data-stu-id="97f03-113">0M</span></span>|
-|[<span data-ttu-id="97f03-114">double</span><span class="sxs-lookup"><span data-stu-id="97f03-114">double</span></span>](../builtin-types/floating-point-numeric-types.md)|<span data-ttu-id="97f03-115">0.0D</span><span class="sxs-lookup"><span data-stu-id="97f03-115">0.0D</span></span>|
-|[<span data-ttu-id="97f03-116">enum</span><span class="sxs-lookup"><span data-stu-id="97f03-116">enum</span></span>](enum.md)|<span data-ttu-id="97f03-117">식 `(E)0`로 생성한 값이며 여기서 `E`는 열거형 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="97f03-117">The value produced by the expression `(E)0`, where `E` is the enum identifier.</span></span>|
-|[<span data-ttu-id="97f03-118">float</span><span class="sxs-lookup"><span data-stu-id="97f03-118">float</span></span>](../builtin-types/floating-point-numeric-types.md)|<span data-ttu-id="97f03-119">0.0F</span><span class="sxs-lookup"><span data-stu-id="97f03-119">0.0F</span></span>|
-|[<span data-ttu-id="97f03-120">int</span><span class="sxs-lookup"><span data-stu-id="97f03-120">int</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="97f03-121">0</span><span class="sxs-lookup"><span data-stu-id="97f03-121">0</span></span>|
-|[<span data-ttu-id="97f03-122">long</span><span class="sxs-lookup"><span data-stu-id="97f03-122">long</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="97f03-123">0L</span><span class="sxs-lookup"><span data-stu-id="97f03-123">0L</span></span>|
-|[<span data-ttu-id="97f03-124">sbyte</span><span class="sxs-lookup"><span data-stu-id="97f03-124">sbyte</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="97f03-125">0</span><span class="sxs-lookup"><span data-stu-id="97f03-125">0</span></span>|
-|[<span data-ttu-id="97f03-126">short</span><span class="sxs-lookup"><span data-stu-id="97f03-126">short</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="97f03-127">0</span><span class="sxs-lookup"><span data-stu-id="97f03-127">0</span></span>|
-|[<span data-ttu-id="97f03-128">struct</span><span class="sxs-lookup"><span data-stu-id="97f03-128">struct</span></span>](struct.md)|<span data-ttu-id="97f03-129">모든 값 형식 필드를 기본값으로 설정하고 모든 참조 형식 필드를 `null`로 설정하여 생성한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="97f03-129">The value produced by setting all value-type fields to their default values and all reference-type fields to `null`.</span></span>|
-|[<span data-ttu-id="97f03-130">uint</span><span class="sxs-lookup"><span data-stu-id="97f03-130">uint</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="97f03-131">0</span><span class="sxs-lookup"><span data-stu-id="97f03-131">0</span></span>|
-|[<span data-ttu-id="97f03-132">ulong</span><span class="sxs-lookup"><span data-stu-id="97f03-132">ulong</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="97f03-133">0</span><span class="sxs-lookup"><span data-stu-id="97f03-133">0</span></span>|
-|[<span data-ttu-id="97f03-134">ushort</span><span class="sxs-lookup"><span data-stu-id="97f03-134">ushort</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="97f03-135">0</span><span class="sxs-lookup"><span data-stu-id="97f03-135">0</span></span>|
+|<span data-ttu-id="f0ac8-105">형식</span><span class="sxs-lookup"><span data-stu-id="f0ac8-105">Type</span></span>|<span data-ttu-id="f0ac8-106">기본값</span><span class="sxs-lookup"><span data-stu-id="f0ac8-106">Default value</span></span>|
+|---------|------------------|
+|<span data-ttu-id="f0ac8-107">임의 참조 형식</span><span class="sxs-lookup"><span data-stu-id="f0ac8-107">Any reference type</span></span>|`null`|
+|<span data-ttu-id="f0ac8-108">임의 [기본 제공 정수 숫자 유형](../builtin-types/integral-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="f0ac8-108">Any [built-in integral numeric type](../builtin-types/integral-numeric-types.md)</span></span>|<span data-ttu-id="f0ac8-109">0(영)</span><span class="sxs-lookup"><span data-stu-id="f0ac8-109">0 (zero)</span></span>|
+|<span data-ttu-id="f0ac8-110">임의 [기본 제공 부동 소수점 숫자 유형](../builtin-types/floating-point-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="f0ac8-110">Any [built-in floating-point numeric type](../builtin-types/floating-point-numeric-types.md)</span></span>|<span data-ttu-id="f0ac8-111">0(영)</span><span class="sxs-lookup"><span data-stu-id="f0ac8-111">0 (zero)</span></span>|
+|[<span data-ttu-id="f0ac8-112">bool</span><span class="sxs-lookup"><span data-stu-id="f0ac8-112">bool</span></span>](bool.md)|`false`|
+|[<span data-ttu-id="f0ac8-113">char</span><span class="sxs-lookup"><span data-stu-id="f0ac8-113">char</span></span>](char.md)|<span data-ttu-id="f0ac8-114">`'\0'`(U+0000)</span><span class="sxs-lookup"><span data-stu-id="f0ac8-114">`'\0'` (U+0000)</span></span>|
+|[<span data-ttu-id="f0ac8-115">enum</span><span class="sxs-lookup"><span data-stu-id="f0ac8-115">enum</span></span>](enum.md)|<span data-ttu-id="f0ac8-116">식 `(E)0`로 생성한 값이며 여기서 `E`는 열거형 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="f0ac8-116">The value produced by the expression `(E)0`, where `E` is the enum identifier.</span></span>|
+|[<span data-ttu-id="f0ac8-117">struct</span><span class="sxs-lookup"><span data-stu-id="f0ac8-117">struct</span></span>](struct.md)|<span data-ttu-id="f0ac8-118">모든 값 형식 필드를 기본값으로 설정하고 모든 참조 형식 필드를 `null`로 설정하여 생성한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="f0ac8-118">The value produced by setting all value-type fields to their default values and all reference-type fields to `null`.</span></span>|
+|<span data-ttu-id="f0ac8-119">Any [Null 허용 값 형식](../../programming-guide/nullable-types/index.md)</span><span class="sxs-lookup"><span data-stu-id="f0ac8-119">Any [nullable value type](../../programming-guide/nullable-types/index.md)</span></span>|<span data-ttu-id="f0ac8-120"><xref:System.Nullable%601.HasValue%2A> 속성은 `false`이고 <xref:System.Nullable%601.Value%2A> 속성은 정의되지 않은 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="f0ac8-120">An instance for which the <xref:System.Nullable%601.HasValue%2A> property is `false` and the <xref:System.Nullable%601.Value%2A> property is undefined.</span></span> <span data-ttu-id="f0ac8-121">이 기본값은 null 허용 값 형식의 *null* 값으로도 알려져 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f0ac8-121">That default value is also known as the *null* value of the nullable value type.</span></span>|
 
-## <a name="remarks"></a><span data-ttu-id="97f03-136">설명</span><span class="sxs-lookup"><span data-stu-id="97f03-136">Remarks</span></span>
-
-<span data-ttu-id="97f03-137">C#에서 초기화되지 않은 변수를 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="97f03-137">You cannot use uninitialized variables in C#.</span></span> <span data-ttu-id="97f03-138">해당 형식의 기본값을 사용하여 변수를 초기화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="97f03-138">You can initialize a variable with the default value of its type.</span></span> <span data-ttu-id="97f03-139">또한 형식의 기본 값을 사용하여 메서드의 [선택적 인수](../../programming-guide/classes-and-structs/named-and-optional-arguments.md#optional-arguments)의 기본값을 지정할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="97f03-139">You also can use the default value of a type to specify the default value of a method's [optional argument](../../programming-guide/classes-and-structs/named-and-optional-arguments.md#optional-arguments).</span></span>
-
-<span data-ttu-id="97f03-140">[기본값 식](../../programming-guide/statements-expressions-operators/default-value-expressions.md)을 사용하여 다음 예제와 같이 형식의 기본값을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="97f03-140">Use the [default value expression](../../programming-guide/statements-expressions-operators/default-value-expressions.md) to produce the default value of a type, as the following example shows:</span></span>
+<span data-ttu-id="f0ac8-122">[기본값 식](../../programming-guide/statements-expressions-operators/default-value-expressions.md)을 사용하여 다음 예제와 같이 형식의 기본값을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="f0ac8-122">Use the [default value expression](../../programming-guide/statements-expressions-operators/default-value-expressions.md) to produce the default value of a type, as the following example shows:</span></span>
 
 ```csharp
 int a = default(int);
 ```
 
-<span data-ttu-id="97f03-141">C# 7.1부터 [`default` 리터럴](../../programming-guide/statements-expressions-operators/default-value-expressions.md#default-literal-and-type-inference)을 사용하여 해당 형식의 기본값으로 변수를 초기화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="97f03-141">Beginning with C# 7.1, you can use the [`default` literal](../../programming-guide/statements-expressions-operators/default-value-expressions.md#default-literal-and-type-inference) to initialize a variable with the default value of its type:</span></span>
+<span data-ttu-id="f0ac8-123">C# 7.1부터 [`default` 리터럴](../../programming-guide/statements-expressions-operators/default-value-expressions.md#default-literal-and-type-inference)을 사용하여 해당 형식의 기본값으로 변수를 초기화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f0ac8-123">Beginning with C# 7.1, you can use the [`default` literal](../../programming-guide/statements-expressions-operators/default-value-expressions.md#default-literal-and-type-inference) to initialize a variable with the default value of its type:</span></span>
 
 ```csharp
 int a = default;
 ```
 
-<span data-ttu-id="97f03-142">매개 변수 없는 생성자 또는 암시적 매개 변수 없는 생성자를 사용하여 다음 예제와 같이 값 형식의 기본값을 생성할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="97f03-142">You also can use the parameterless constructor or the implicit parameterless constructor to produce the default value of a value type, as the following example shows.</span></span> <span data-ttu-id="97f03-143">생성자에 대한 자세한 내용은 [생성자](../../programming-guide/classes-and-structs/constructors.md) 문서를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="97f03-143">For more information about constructors, see the [Constructors](../../programming-guide/classes-and-structs/constructors.md) article.</span></span>
+<span data-ttu-id="f0ac8-124">값 형식의 경우 암시적 매개 변수 없는 생성자를 사용하여 다음 예제와 같은 형식의 기본값도 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f0ac8-124">For a value type, the implicit parameterless constructor also produces the default value of the type, as the following example shows:</span></span>
 
-```csharp
-int a = new int();
+```csharp-interactive
+var n = new System.Numerics.Complex();
+Console.WriteLine(n);  // output: (0, 0)
 ```
 
-<span data-ttu-id="97f03-144">모든 [참조 형식](reference-types.md)의 기본값은 `null`입니다.</span><span class="sxs-lookup"><span data-stu-id="97f03-144">The default value of any [reference type](reference-types.md) is `null`.</span></span> <span data-ttu-id="97f03-145">[nullable 형식](../../programming-guide/nullable-types/index.md)의 기본값은 <xref:System.Nullable%601.HasValue%2A> 속성은 `false`이고 <xref:System.Nullable%601.Value%2A> 속성은 정의되지 않은 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="97f03-145">The default value of a [nullable type](../../programming-guide/nullable-types/index.md) is an instance for which the <xref:System.Nullable%601.HasValue%2A> property is `false` and the <xref:System.Nullable%601.Value%2A> property is undefined.</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="f0ac8-125">C# 언어 사양</span><span class="sxs-lookup"><span data-stu-id="f0ac8-125">C# language specification</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="97f03-146">참고 항목</span><span class="sxs-lookup"><span data-stu-id="97f03-146">See also</span></span>
+<span data-ttu-id="f0ac8-126">자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 다음 섹션을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="f0ac8-126">For more information, see the following sections of the [C# language specification](~/_csharplang/spec/introduction.md):</span></span>
 
-- [<span data-ttu-id="97f03-147">C# 참조</span><span class="sxs-lookup"><span data-stu-id="97f03-147">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="97f03-148">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="97f03-148">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="97f03-149">C# 키워드</span><span class="sxs-lookup"><span data-stu-id="97f03-149">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="97f03-150">값 형식</span><span class="sxs-lookup"><span data-stu-id="97f03-150">Value types</span></span>](value-types.md)
-- [<span data-ttu-id="97f03-151">값 형식 표</span><span class="sxs-lookup"><span data-stu-id="97f03-151">Value types table</span></span>](value-types-table.md)
-- [<span data-ttu-id="97f03-152">기본 제공 형식 표</span><span class="sxs-lookup"><span data-stu-id="97f03-152">Built-in types table</span></span>](built-in-types-table.md)
+- [<span data-ttu-id="f0ac8-127">기본값</span><span class="sxs-lookup"><span data-stu-id="f0ac8-127">Default values</span></span>](~/_csharplang/spec/variables.md#default-values)
+- [<span data-ttu-id="f0ac8-128">기본 생성자</span><span class="sxs-lookup"><span data-stu-id="f0ac8-128">Default constructors</span></span>](~/_csharplang/spec/types.md#default-constructors)
+
+## <a name="see-also"></a><span data-ttu-id="f0ac8-129">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f0ac8-129">See also</span></span>
+
+- [<span data-ttu-id="f0ac8-130">C# 참조</span><span class="sxs-lookup"><span data-stu-id="f0ac8-130">C# reference</span></span>](../index.md)
+- [<span data-ttu-id="f0ac8-131">C# 키워드</span><span class="sxs-lookup"><span data-stu-id="f0ac8-131">C# keywords</span></span>](index.md)
+- [<span data-ttu-id="f0ac8-132">기본 제공 형식 표</span><span class="sxs-lookup"><span data-stu-id="f0ac8-132">Built-in types table</span></span>](built-in-types-table.md)
+- [<span data-ttu-id="f0ac8-133">생성자</span><span class="sxs-lookup"><span data-stu-id="f0ac8-133">Constructors</span></span>](../../programming-guide/classes-and-structs/constructors.md)

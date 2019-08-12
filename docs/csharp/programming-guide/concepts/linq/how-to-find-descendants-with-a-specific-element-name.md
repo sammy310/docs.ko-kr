@@ -2,18 +2,18 @@
 title: '방법: 특정 요소 이름으로 하위 항목 찾기(C#)'
 ms.date: 07/20/2015
 ms.assetid: f684da20-bee9-47f5-9607-7e3fd7e67470
-ms.openlocfilehash: c54b3c6a01459781b8ed9d5495bf9eb8937363fa
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: dbb955697e4d4b0ed5aad9c00c37e73bbd32b7b4
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486761"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709933"
 ---
-# <a name="how-to-find-descendants-with-a-specific-element-name-c"></a><span data-ttu-id="7c6b5-102">방법: 특정 요소 이름으로 하위 항목 찾기(C#)</span><span class="sxs-lookup"><span data-stu-id="7c6b5-102">How to: Find Descendants with a Specific Element Name (C#)</span></span>
-<span data-ttu-id="7c6b5-103">특정 이름을 가진 모든 하위 요소를 찾으려는 경우가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7c6b5-103">Sometimes you want to find all descendants with a particular name.</span></span> <span data-ttu-id="7c6b5-104">모든 하위 요소를 반복하는 코드를 작성할 수 있지만 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축을 사용하는 것이 더 쉽습니다.</span><span class="sxs-lookup"><span data-stu-id="7c6b5-104">You could write code to iterate through all of the descendants, but it is easier to use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>  
+# <a name="how-to-find-descendants-with-a-specific-element-name-c"></a><span data-ttu-id="c1cb1-102">방법: 특정 요소 이름으로 하위 항목 찾기(C#)</span><span class="sxs-lookup"><span data-stu-id="c1cb1-102">How to: Find Descendants with a Specific Element Name (C#)</span></span>
+<span data-ttu-id="c1cb1-103">특정 이름을 가진 모든 하위 요소를 찾으려는 경우가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c1cb1-103">Sometimes you want to find all descendants with a particular name.</span></span> <span data-ttu-id="c1cb1-104">모든 하위 요소를 반복하는 코드를 작성할 수 있지만 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축을 사용하는 것이 더 쉽습니다.</span><span class="sxs-lookup"><span data-stu-id="c1cb1-104">You could write code to iterate through all of the descendants, but it is easier to use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7c6b5-105">예제</span><span class="sxs-lookup"><span data-stu-id="7c6b5-105">Example</span></span>  
- <span data-ttu-id="7c6b5-106">다음 예제에서는 요소 이름에 따라 하위 요소를 찾는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="7c6b5-106">The following example shows how to find descendants based on the element name.</span></span>  
+## <a name="example"></a><span data-ttu-id="c1cb1-105">예</span><span class="sxs-lookup"><span data-stu-id="c1cb1-105">Example</span></span>  
+ <span data-ttu-id="c1cb1-106">다음 예제에서는 요소 이름에 따라 하위 요소를 찾는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c1cb1-106">The following example shows how to find descendants based on the element name.</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(@"<root>  
@@ -45,14 +45,14 @@ string str = textSegs.Aggregate(new StringBuilder(),
 Console.WriteLine(str);  
 ```  
   
- <span data-ttu-id="7c6b5-107">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="7c6b5-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="c1cb1-107">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="c1cb1-107">This code produces the following output:</span></span>  
   
 ```  
 Some text that is broken up into multiple segments.  
 ```  
   
-## <a name="example"></a><span data-ttu-id="7c6b5-108">예제</span><span class="sxs-lookup"><span data-stu-id="7c6b5-108">Example</span></span>  
- <span data-ttu-id="7c6b5-109">다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="7c6b5-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="7c6b5-110">자세한 내용은 [XML 네임스페이스 작업(C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="7c6b5-110">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="c1cb1-108">예</span><span class="sxs-lookup"><span data-stu-id="c1cb1-108">Example</span></span>  
+ <span data-ttu-id="c1cb1-109">다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c1cb1-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="c1cb1-110">자세한 내용은 [네임스페이스 개요(LINQ to XML)(C#)](namespaces-overview-linq-to-xml.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c1cb1-110">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(@"<root xmlns='http://www.adatum.com'>  
@@ -85,12 +85,12 @@ string str = textSegs.Aggregate(new StringBuilder(),
 Console.WriteLine(str);  
 ```  
   
- <span data-ttu-id="7c6b5-111">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="7c6b5-111">This code produces the following output:</span></span>  
+ <span data-ttu-id="c1cb1-111">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="c1cb1-111">This code produces the following output:</span></span>  
   
 ```  
 Some text that is broken up into multiple segments.  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7c6b5-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="7c6b5-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c1cb1-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c1cb1-112">See also</span></span>
 
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>

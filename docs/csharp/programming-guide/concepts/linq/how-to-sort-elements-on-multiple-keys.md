@@ -2,22 +2,22 @@
 title: '방법: 여러 키로 요소 정렬(C#)'
 ms.date: 07/20/2015
 ms.assetid: 3b2760b6-d607-4ac7-b784-5c6524e2a0e0
-ms.openlocfilehash: 5ea01055eae0c91fac274f8c38a1d8112c4aaa0a
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 2325417fa2ed8a6c3ca13504cada4d4e1a49be42
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690083"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709916"
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-c"></a><span data-ttu-id="9a7e2-102">방법: 여러 키로 요소 정렬(C#)</span><span class="sxs-lookup"><span data-stu-id="9a7e2-102">How to: Sort Elements on Multiple Keys (C#)</span></span>
+# <a name="how-to-sort-elements-on-multiple-keys-c"></a><span data-ttu-id="90ed4-102">방법: 여러 키로 요소 정렬(C#)</span><span class="sxs-lookup"><span data-stu-id="90ed4-102">How to: Sort Elements on Multiple Keys (C#)</span></span>
 
-<span data-ttu-id="9a7e2-103">이 항목에서는 여러 키에 대해 정렬하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9a7e2-103">This topic shows how to sort on multiple keys.</span></span>
+<span data-ttu-id="90ed4-103">이 항목에서는 여러 키에 대해 정렬하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="90ed4-103">This topic shows how to sort on multiple keys.</span></span>
 
-## <a name="example"></a><span data-ttu-id="9a7e2-104">예제</span><span class="sxs-lookup"><span data-stu-id="9a7e2-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="90ed4-104">예</span><span class="sxs-lookup"><span data-stu-id="90ed4-104">Example</span></span>
 
-<span data-ttu-id="9a7e2-105">이 예제에서 결과는 먼저 배송 우편 번호로 정렬된 다음 주문 날짜로 정렬됩니다.</span><span class="sxs-lookup"><span data-stu-id="9a7e2-105">In this example, the results are ordered first by the shipping postal code, then by the order date.</span></span>
+<span data-ttu-id="90ed4-105">이 예제에서 결과는 먼저 배송 우편 번호로 정렬된 다음 주문 날짜로 정렬됩니다.</span><span class="sxs-lookup"><span data-stu-id="90ed4-105">In this example, the results are ordered first by the shipping postal code, then by the order date.</span></span>
 
-<span data-ttu-id="9a7e2-106">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="9a7e2-106">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>
+<span data-ttu-id="90ed4-106">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="90ed4-106">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>
 
 ```csharp
 XElement co = XElement.Load("CustomersOrders.xml");
@@ -36,7 +36,7 @@ foreach (var r in sortedElements)
         r.CustomerID, r.EmployeeID, r.ShipPostalCode, r.OrderDate);
 ```
 
-<span data-ttu-id="9a7e2-107">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="9a7e2-107">This code produces the following output:</span></span>
+<span data-ttu-id="90ed4-107">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="90ed4-107">This code produces the following output:</span></span>
 
 ```
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997
@@ -63,11 +63,11 @@ CustomerID:LAZYK EmployeeID:1 ShipPostalCode:99362 OrderDate:3/21/1997
 CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 ```
 
-## <a name="example"></a><span data-ttu-id="9a7e2-108">예제</span><span class="sxs-lookup"><span data-stu-id="9a7e2-108">Example</span></span>
+## <a name="example"></a><span data-ttu-id="90ed4-108">예</span><span class="sxs-lookup"><span data-stu-id="90ed4-108">Example</span></span>
 
-<span data-ttu-id="9a7e2-109">다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9a7e2-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="9a7e2-110">자세한 내용은 [XML 네임스페이스 작업(C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9a7e2-110">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).</span></span>
+<span data-ttu-id="90ed4-109">다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="90ed4-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="90ed4-110">자세한 내용은 [네임스페이스 개요(LINQ to XML)(C#)](namespaces-overview-linq-to-xml.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="90ed4-110">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>
 
-<span data-ttu-id="9a7e2-111">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 네임스페이스의 Customers 및 Orders](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="9a7e2-111">This example uses the following XML document: [Sample XML File: Customers and Orders in a Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).</span></span>
+<span data-ttu-id="90ed4-111">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 네임스페이스의 Customers 및 Orders](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="90ed4-111">This example uses the following XML document: [Sample XML File: Customers and Orders in a Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).</span></span>
 
 ```csharp
 XElement co = XElement.Load("CustomersOrdersInNamespace.xml");
@@ -88,7 +88,7 @@ foreach (var r in sortedElements)
         r.CustomerID, r.EmployeeID, r.ShipPostalCode, r.OrderDate);
 ```
 
-<span data-ttu-id="9a7e2-112">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="9a7e2-112">This code produces the following output:</span></span>
+<span data-ttu-id="90ed4-112">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="90ed4-112">This code produces the following output:</span></span>
 
 ```
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997
