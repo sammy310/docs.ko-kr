@@ -6,24 +6,25 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 06/14/2019
-ms.openlocfilehash: b1dd243d754bfc3b682c084820547f6b7846f0ea
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.date: 07/25/2019
+ms.openlocfilehash: 29e62f01ab6a749c252aa488dfbccd5b27cb9dba
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484654"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733364"
 ---
-# <a name="whats-new-in-net-core-30-preview-6"></a>.NET Core 3.0(Preview 6)의 새로운 기능
+# <a name="whats-new-in-net-core-30-preview-7"></a>.NET Core 3.0(Preview 7)의 새로운 기능
 
-이 문서는 .NET Core 3.0(Preview 6)의 새로운 기능에 대해 설명합니다. 가장 중요한 개선 사항 중 하나는 Windows 데스크톱 애플리케이션에 대한 지원(Windows만 해당)입니다. .NET Core 3.0 SDK 구성 요소 Windows 데스크톱을 사용하여 Windows Forms 및 Windows Presentation Foundation(WPF) 애플리케이션을 포트할 수 있습니다. 분명히 말하지만, Windows 데스크톱 구성 요소는 Windows에서만 지원되고 포함됩니다. 자세한 내용은 이 문서 후반부의 [Windows 데스크톱](#windows-desktop) 섹션을 참조하세요.
+이 문서는 .NET Core 3.0(Preview 7)의 새로운 기능에 대해 설명합니다. 가장 중요한 개선 사항 중 하나는 Windows 데스크톱 애플리케이션에 대한 지원(Windows만 해당)입니다. .NET Core 3.0 SDK 구성 요소 Windows 데스크톱을 사용하여 Windows Forms 및 Windows Presentation Foundation(WPF) 애플리케이션을 포트할 수 있습니다. 분명히 말하지만, Windows 데스크톱 구성 요소는 Windows에서만 지원되고 포함됩니다. 자세한 내용은 이 문서 후반부의 [Windows 데스크톱](#windows-desktop) 섹션을 참조하세요.
 
 .NET Core 3.0에서는 C# 8.0에 대한 지원이 추가되었습니다. [Visual Studio 미리 보기 최신 릴리스](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview) 또는 OmniSharp 확장이 지원되는 Visual Studio Code를 사용하는 것이 매우 좋습니다.
 
-Windows, Mac 및 Linux에서 지금 바로 [.NET Core 3.0 Preview 6을 다운로드하여 시작](https://aka.ms/netcore3download)하세요.
+Windows, Mac 및 Linux에서 지금 바로 [.NET Core 3.0 Preview 7을 다운로드하여 시작](https://aka.ms/netcore3download)하세요.
 
 각 미리 보기 릴리스에 대한 자세한 내용은 다음 공지를 참조하세요.
 
+- [.NET Core 3.0 Preview 7 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
 - [.NET Core 3.0 Preview 6 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/)
 - [.NET Core 3.0 Preview 5 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-5/)
 - [.NET Core 3.0 Preview 4 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-4/)
@@ -31,9 +32,13 @@ Windows, Mac 및 Linux에서 지금 바로 [.NET Core 3.0 Preview 6을 다운로
 - [.NET Core 3.0 Preview 2 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
 - [.NET Core 3.0 Preview 1 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
 
+## <a name="production-supported-preview"></a>프로덕션 지원 미리 보기
+
+.NET Core Preview 7은 Microsoft에서 준비하는 프로덕션으로 간주되며 완벽하게 지원됩니다. Preview 7부터 릴리스는 새 기능을 추가하는 대신 .NET Core 3.0을 개선하는 데 집중합니다. Preview 7에서 변경된 내용에 관한 자세한 내용은 [Preview 7 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)을 참조하세요.
+
 ## <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Installer
 
-Windows용 MSI 설치 관리자는 .NET Core 3.0부터 변경되었습니다. 이제 SDK 설치 관리자는 준비된 SDK 기반 밴드 릴리스를 하려고 합니다. 기능 밴드는 번호 버전의 *패치* 섹션에서 *수백 개*의 그룹에 정의되어 있습니다. 예를 들어, **3.0._101_** 및 **3.0._201_** 은 두 가지 기능 밴드의 버전이며, **3.0._101_** 및 **3.0._199_** 는 동일한 기능 밴드에 있습니다. 그리고 .NET Core SDK **3.0._101_** 이 설치되어 있는 경우 .NET Core SDK**3.0._100_** 은 머신에서 제거됩니다. .NET Core SDK **3.0._200_** 이 동일한 머신에 설치되어 있는 경우 .NET Core SDK **3.0._101_** 은 제거되지 않습니다.
+Windows용 MSI 설치 관리자는 .NET Core 3.0부터 변경되었습니다. 이제 SDK 설치 관리자는 준비된 SDK 기반 밴드 릴리스를 하려고 합니다. 기능 밴드는 번호 버전의 *패치* 섹션에서 *수백 개*의 그룹에 정의되어 있습니다. 예를 들어, **3.0. _** 및 **3.0. _** 은 두 가지 기능 밴드의 버전이며, **3.0. _** 및 **3.0. _** 는 동일한 기능 밴드에 있습니다. 그리고 .NET Core SDK **3.0. _** 이 설치되어 있는 경우 .NET Core SDK**3.0. _** 은 머신에서 제거됩니다. .NET Core SDK **3.0. _** 이 동일한 머신에 설치되어 있는 경우 .NET Core SDK **3.0. _** 은 제거되지 않습니다.
 
 버전 관리에 대한 자세한 내용은 [.NET Core의 버전 관리 방법](../versions/index.md)을 참조하세요.
 
@@ -174,23 +179,23 @@ TC를 완전히 비활성화하려면 프로젝트 파일에서 다음 설정을
 
 R2R(ReadyToRun) 형식으로 애플리케이션 어셈블리를 컴파일하면 .NET Core 애플리케이의 시작 시간을 향상할 수 있습니다. R2R은 AOT(Ahead-Of-Time) 컴파일 양식입니다.
 
-R2R 이진 파일은 애플리케이션이 로드될 때 JIT(Just-In-Time) 컴파일러에서 수행해야 하는 작업량을 줄여 시작 성능을 향상합니다. 이진 파일에는 JIT에서 생성되는 코드와 비슷한 네이티브 코드가 포함되어 있습니다.
+R2R 이진 파일은 애플리케이션이 로드될 때 JIT(Just-In-Time) 컴파일러에서 수행해야 하는 작업량을 줄여 시작 성능을 향상합니다. 이진 파일에는 JIT에서 생성되는 코드와 비슷한 네이티브 코드가 포함되어 있습니다. 그러나 R2R 이진 파일은 일부 시나리오에서 필요한 IL(중간 언어) 코드와 동일한 코드의 네이티브 버전을 모두 포함하므로 크기가 더 큽니다. R2R은 Linux x64 또는 Windows x64와 같은 특정 런타임 환경(RID)을 대상으로 하는 자체 포함 앱을 게시하는 경우에만 사용할 수 있습니다.
 
-R2R 이진 파일에는 일부 시나리오에서 필요한 IL(중간 언어) 코드와 동일한 코드의 네이티브 버전이 모두 포함되므로 파일 크기가 더 큽니다. R2R은 Linux x64 또는 Windows x64와 같은 특정 런타임 환경(RID)을 대상으로 하는 자체 포함 앱을 게시하는 경우에만 사용할 수 있습니다.
+프로젝트를 ReadyToRun으로 컴파일하려면 다음을 수행합니다.
 
-앱을 R2R로 컴파일하려면 `<PublishReadyToRun>` 설정을 추가합니다.
+01. 프로젝트에 `<PublishReadyToRun>` 설정 추가
 
-```xml
-<PropertyGroup>
-  <PublishReadyToRun>true</PublishReadyToRun>
-</PropertyGroup>
-```
+    ```xml
+    <PropertyGroup>
+      <PublishReadyToRun>true</PublishReadyToRun>
+    </PropertyGroup>
+    ```
 
-자체 포함 앱을 게시합니다. 예를 들어 이 명령은 Windows 64비트 버전용 자체 포함 앱을 만듭니다.
+01. 자체 포함 앱을 게시합니다. 예를 들어 이 명령은 Windows 64비트 버전용 자체 포함 앱을 만듭니다.
 
-```console
-dotnet publish -c Release -r win-x64 --self-contained true
-```
+    ```console
+    dotnet publish -c Release -r win-x64 --self-contained true
+    ```
 
 ### <a name="cross-platformarchitecture-restrictions"></a>교차 플랫폼/아키텍처 제한 사항
 
@@ -406,7 +411,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 ### <a name="jsonserializer"></a>JsonSerializer
 
-<xref:System.Text.Json.Serialization.JsonSerializer?displayProperty=nameWithType>는 <xref:System.Text.Json.Utf8JsonReader> 및 <xref:System.Text.Json.Utf8JsonWriter>의 위에 빌드되어 JSON 문서 및 조각과 작동 시 빠른 저메모리 Serialization을 제공합니다.
+<xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType>는 <xref:System.Text.Json.Utf8JsonReader> 및 <xref:System.Text.Json.Utf8JsonWriter>의 위에 빌드되어 JSON 문서 및 조각과 작동 시 빠른 저메모리 Serialization을 제공합니다.
 
 검토: 이 문서에 포트할 예의 https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/docs/SerializerProgrammingModel.md
 
