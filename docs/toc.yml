@@ -267,6 +267,14 @@
           href: core/docker/build-container.md
         - name: Visual Studio의 컨테이너 도구
           href: /visualstudio/containers/overview
+    - name: 진단 도구
+      items:
+        - name: 개요
+          href: core/diagnostics/index.md
+        - name: 관리형 디버거
+          href: core/diagnostics/managed-debuggers.md
+        - name: 로깅 및 추적
+          href: core/diagnostics/logging-tracing.md
     - name: 단위 테스트
       href: core/testing/index.md
       items:
