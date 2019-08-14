@@ -6,12 +6,12 @@ title: .NET 설명서
 description: C#, Visual Basic 및 F#을 사용하는 모든 플랫폼에서 .NET을 사용하여 다양한 애플리케이션을 만드는 방법을 알아보세요. API 참조, 샘플 코드, 자습서 등을 찾아보세요.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 7cf46b0c4d88b7657a5c82c7aa0ae30655c9d5ce
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a6f6bc91a3055ffd0efe9f6b89ba0499921ed1d4
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589993"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972380"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -77,7 +77,7 @@ ms.locfileid: "65589993"
         <h1>.NET 설명서</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#docs">Docs</a>
+                <a data-default="true" href="#docs">문서</a>
                 <ul id="docs">
                     <li>
                         <a href="#getstarted">시작</a>
@@ -309,7 +309,7 @@ ms.locfileid: "65589993"
                                 </a>
                             </li>
                             <li>
-                                <a href="/aspnet/overview">
+                                <a href="/aspnet/core/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -319,8 +319,8 @@ ms.locfileid: "65589993"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>ASP.NET이란?</h3>
-                                                    <p>ASP.NET 웹 애플리케이션을 빌드하는 방법을 알아봅니다.</p>
+                                                    <h3>ASP.NET Core란?</h3>
+                                                    <p>ASP.NET Core 웹 애플리케이션을 빌드하는 방법을 알아봅니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -378,7 +378,7 @@ ms.locfileid: "65589993"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>플랫폼 간 ASP.NET Core 자습서</h3>
-                                                    <p>ASP.NET Core를 사용하여 웹앱 또는 Web API를 빌드하는 방법을 알아봅니다. </p>
+                                                    <p>ASP.NET Core를 사용하여 웹앱 또는 Web API를 빌드하는 방법을 알아봅니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -682,7 +682,7 @@ ms.locfileid: "65589993"
                         </ul>
                     </li>
                     <li>
-                        <a href="#ml-ai">Machine Learning 및 AI</a>
+                        <a href="#ml-ai">기계 학습 및 AI</a>
                         <ul id="ml-ai" class="cardsC">
                             <li>
                                 <a href="/dotnet/machine-learning">
