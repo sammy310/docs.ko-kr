@@ -3,12 +3,12 @@ title: '방법: 양식 기반 인증을 사용하여 클레임 인식 ASP.NET �
 ms.date: 03/30/2017
 ms.assetid: 98a3e029-1a9b-4e0c-b5d0-29d3f23f5b15
 author: BrucePerlerMS
-ms.openlocfilehash: ecaf1de0b806d5568d81fac2ddb2b39b697135ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75db96a621d7863ef445efb24814111b34da6960
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792752"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971844"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a>방법: 양식 기반 인증을 사용하여 클레임 인식 ASP.NET 애플리케이션 빌드
 
@@ -60,7 +60,7 @@ Forms로 인증된 모든 사용자는 클레임이 자동으로 연결되므로
 
 이 단계에서는 새로운 ASP.NET Web Forms 애플리케이션을 만듭니다.
 
-#### <a name="to-create-a-simple-aspnet-application"></a>간단한 ASP.NET 애플리케이션을 만들려면
+### <a name="to-create-a-simple-aspnet-application"></a>간단한 ASP.NET 애플리케이션을 만들려면
 
 1. Visual Studio를 시작하고 **파일**, **새로 만들기**, **프로젝트**를 차례로 클릭합니다.
 
@@ -72,7 +72,7 @@ Forms로 인증된 모든 사용자는 클레임이 자동으로 연결되므로
 
 이 단계에서는 *Web.config* 구성 파일에 구성 항목을 추가하고 *Default.aspx* 파일을 편집하여 계정에 대한 클레임 정보를 표시합니다.
 
-#### <a name="to-configure-aspnet-application-for-claims-using-forms-authentication"></a>Forms 인증을 사용하여 클레임에 대한 ASP.NET 애플리케이션을 구성하려면
+### <a name="to-configure-aspnet-application-for-claims-using-forms-authentication"></a>Forms 인증을 사용하여 클레임에 대한 ASP.NET 애플리케이션을 구성하려면
 
 1. *Default.aspx* 파일에서 기존 태그를 다음과 같이 바꿉니다.
 
@@ -126,7 +126,7 @@ Forms로 인증된 모든 사용자는 클레임이 자동으로 연결되므로
 
 이 단계에서는 ASP.NET Web Forms 애플리케이션을 테스트하고 사용자가 Forms 인증으로 로그인할 때 클레임이 제공되는지 확인합니다.
 
-#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Forms 인증을 사용하여 클레임에 대한 ASP.NET Web Forms 애플리케이션을 테스트하려면
+### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Forms 인증을 사용하여 클레임에 대한 ASP.NET Web Forms 애플리케이션을 테스트하려면
 
 1. **F5** 키를 눌러 응용 프로그램을 빌드하고 실행합니다. 페이지의 오른쪽 위에 **등록** 및 **로그인** 링크가 있는 *Default.aspx*가 제공되어야 합니다. **등록**을 클릭합니다.
 

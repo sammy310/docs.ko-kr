@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 924553bf457a6668143785c78871ebac6e01efa4
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 16a0436accfb031ddd0bb413e519d80e550786b4
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818032"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972263"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>WPF 애플리케이션 배포(WPF)
 Windows Presentation Foundation (WPF) 응용 프로그램을 빌드한 후 배포 해야 합니다. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]및 .NET Framework에는 몇 가지 배포 기술이 포함 되어 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 배포하는 데 사용되는 배포 기술은 응용 프로그램 종류에 따라 달라집니다. 이 항목에서는 각 배포 기술과 해당 기술이 각 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션 종류의 배포 요구 사항과 함께 사용되는 방법에 대해 간략하게 설명합니다.  
@@ -114,7 +114,7 @@ Windows Presentation Foundation (WPF) 응용 프로그램을 빌드한 후 배�
 ## <a name="installing-the-net-framework"></a>.NET Framework 설치  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 실행 하려면 클라이언트에 Microsoft .NET 프레임 워크를 설치 해야 합니다. Internet Explorer는 브라우저에서 호스트 되는 응용 프로그램을 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 볼 때 클라이언트가 .NET Framework 설치 되는지 여부를 자동으로 검색 합니다. .NET Framework 설치 되어 있지 않으면 Internet Explorer에서 사용자에 게 설치를 요청 합니다.  
   
- .NET Framework 설치 되어 있는지 여부를 검색 하기 위해 Internet Explorer에는 확장명이 .xaml, .xps, xbap 및 [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] 응용 프로그램 인 콘텐츠 파일에 대 한 대체 처리기로 등록 된 부트스트래퍼 응용 프로그램이 포함 되어 있습니다. 이러한 파일 형식으로 이동 하 여 클라이언트에 .NET Framework 설치 되어 있지 않으면 부트스트래퍼 응용 프로그램에서 설치 권한을 요청 합니다. 사용 권한이 제공 되지 않으면 .NET Framework 및 응용 프로그램은 설치 되지 않습니다.  
+ .NET Framework 설치 되어 있는지 여부를 검색 하기 위해 Internet Explorer에는 확장명이 .xaml 인 콘텐츠 파일에 대 한 MIME (대체 다목적 Internet Mail Extensions) 처리기로 등록 된 부트스트래퍼 응용 프로그램 (.xaml, .xps, xbap)이 포함 되어 있습니다. , 및. 응용 프로그램. 이러한 파일 형식으로 이동 하 여 클라이언트에 .NET Framework 설치 되어 있지 않으면 부트스트래퍼 응용 프로그램에서 설치 권한을 요청 합니다. 사용 권한이 제공 되지 않으면 .NET Framework 및 응용 프로그램은 설치 되지 않습니다.  
   
  사용 권한이 부여 된 경우 Internet Explorer는 Microsoft Background Intelligent Transfer Service (BITS)를 사용 하 여 .NET Framework를 다운로드 하 고 설치 합니다. .NET Framework를 성공적으로 설치한 후에는 원래 요청한 파일이 새 브라우저 창에서 열립니다.  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 6e2b5eaff3ee80434d5cdf39391273685da9faf0
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 259594858e96897cb377cde4104e17b748f902c4
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68434084"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971816"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI 자동화 컨트롤 패턴 개요
 > [!NOTE]
@@ -70,7 +70,7 @@ ms.locfileid: "68434084"
 |<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.Provider.IToggleProvider>|상태를 전환할 수 있는 컨트롤에 사용됩니다. 예를 들면, 확인란 및 선택 가능한 메뉴 항목입니다.|  
 |<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.Provider.ITransformProvider>|크기 조정, 이동 및 회전할 수 있는 컨트롤에 사용됩니다. Transform 컨트롤 패턴은 디자이너, 폼, 그래픽 편집기 및 그리기 애플리케이션에서 일반적으로 사용됩니다.|  
 |<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.Provider.IValueProvider>|클라이언트가 값 범위를 지원하지 않는 컨트롤에 값을 설정하거나 가져올 수 있습니다. 예를 들면, 날짜 시간 선택입니다.|  
-|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|창과 관련된 정보, 기초적인 개념을 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] 운영 체제에 노출합니다. 창 컨트롤에는 최상위 애플리케이션 창([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)], [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)], 등), [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] 자식 창, 대화 상자가 있습니다.|  
+|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|창과 관련된 정보, 기초적인 개념을 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] 운영 체제에 노출합니다. Windows 컨트롤의 예로는 최상위 응용 프로그램 창 ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)], [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]등), MDI (다중 문서 인터페이스) 자식 창 및 대화 상자가 있습니다.|  
   
 ## <a name="see-also"></a>참고자료
 
