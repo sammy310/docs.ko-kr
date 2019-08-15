@@ -7,26 +7,23 @@ helpviewer_keywords:
 - menu items [Windows Forms], disabling
 - menus [Windows Forms], disabling items
 ms.assetid: 985e311e-7d67-4205-b5a3-d045b68a4a03
-ms.openlocfilehash: 9965825458afcd50b29699c3b89ed506078e04d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fd80a6543c83ae957cd9c51b068d0702559f0925
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954247"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040266"
 ---
 # <a name="how-to-disable-toolstripmenuitems-using-the-designer"></a>방법: 디자이너를 사용하여 ToolStripMenuItems를 사용하지 않도록 설정
-제한 하거나 설정 및 사용자 활동에 대 한 응답에서 메뉴 항목을 사용 하지 않도록 설정 하 여 사용자가 수행 하는 명령을 확장할 수 있습니다. 메뉴 항목은 생성 하지만이 통해 조정할 수 있습니다 때 기본적으로 활성화 된 <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> 속성입니다. 디자인 타임에이 속성을 조작할 수 있습니다 합니다 **속성** 창 또는 코드에서 설정 하 여 프로그래밍 방식으로 합니다. 자세한 내용은 [방법: ToolStripMenuItems 사용 안 함](how-to-disable-toolstripmenuitems.md)합니다.  
-  
-> [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](/visualstudio/ide/personalizing-the-visual-studio-ide)을 참조하세요.  
-  
-### <a name="to-disable-a-menu-item-at-design-time"></a>디자인 타임에 메뉴 항목을 사용 하지 않도록 설정  
-  
-1. 폼에서 선택한 메뉴 항목을 설정 합니다 <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> 속성을 `false`입니다.  
-  
+사용자 활동에 대 한 응답으로 메뉴 항목을 사용 하거나 사용 하지 않도록 설정 하 여 사용자가 수행할 수 있는 명령을 제한 하거나 넓힐 수 있습니다. 메뉴 항목은 만들어질 때 기본적으로 사용 하도록 설정 되지만 속성을 <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> 통해 조정할 수 있습니다. 디자인 타임에 **속성** 창에서이 속성을 조작 하거나 코드에서이 속성을 설정 하 여 프로그래밍 방식으로 조작할 수 있습니다. 자세한 내용은 [방법: ToolStripMenuItems](how-to-disable-toolstripmenuitems.md)를 사용 하지 않도록 설정 합니다.
+
+## <a name="to-disable-a-menu-item-at-design-time"></a>디자인 타임에 메뉴 항목을 사용 하지 않도록 설정 하려면
+
+1. 폼에서 선택한 메뉴 항목을 사용 하 여 <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> 속성을로 `false`설정 합니다.
+
     > [!TIP]
-    >  메뉴의 첫 번째 또는 최상위 메뉴 항목을 사용 하지 않도록 설정 메뉴 내에 포함 된 모든 메뉴 항목이 사용 하지 않도록 설정 합니다. 마찬가지로, 하위 메뉴 항목이 포함 된 메뉴 항목을 사용 하지 않도록 하위 메뉴 항목입니다. 지정 된 메뉴에서 모든 명령, 사용자에 게 사용할 수 없으면이 정리 사용자 인터페이스를 제공 하는 대로 숨기고 [전체] 메뉴를 사용 하지 않도록 설정 하는 바람직한 프로그래밍 관행을 간주 됩니다. 숨기기와 숨기는 것 만으로도 바로 가기 키를 통해 메뉴 명령에 액세스 해도 대로 메뉴를 사용 하지 않도록 설정 해야 합니다. 설정 된 <xref:System.Windows.Forms.ToolStripItem.Visible%2A> 최상위 메뉴 항목의 속성 `false` 전체 메뉴를 숨기려면 합니다.  
-  
+    >  메뉴의 첫 번째 또는 최상위 메뉴 항목을 사용 하지 않도록 설정 하면 메뉴 내에 포함 된 모든 메뉴 항목이 비활성화 됩니다. 마찬가지로 하위 메뉴 항목이 있는 메뉴 항목을 사용 하지 않도록 설정 하면 하위 메뉴 항목이 비활성화 됩니다. 지정 된 메뉴의 모든 명령을 사용자가 사용할 수 없는 경우에는 완전 한 사용자 인터페이스를 제공 하므로 전체 메뉴를 숨기 거 나 사용 하지 않도록 설정 하는 것이 좋은 프로그래밍 습관 이라고 간주 됩니다. 메뉴를 숨기 거 나 사용 하지 않도록 설정 해야 합니다. 숨기 더라도 바로 가기 키를 통해 메뉴 명령에 대 한 액세스를 차단 하지 않습니다. 최상위 메뉴 항목의 `false` 속성을로설정하여전체메뉴를숨깁니다.<xref:System.Windows.Forms.ToolStripItem.Visible%2A>
+
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.Forms.MenuStrip>

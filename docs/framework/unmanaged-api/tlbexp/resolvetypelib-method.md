@@ -15,15 +15,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b6db8925fb966f4a8b2a213b0d6e340d0edf107
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0f274befe78e45be3e53335572fd9c1e0b401fd3
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756424"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040182"
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib 메서드
-해당 정규화 된 경로 반환 하 여 형식 라이브러리의 단순한 이름을 확인 합니다.  
+정규화 된 경로를 반환 하 여 형식 라이브러리의 단순 이름을 확인 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,37 +40,37 @@ HRESULT ResolveTypeLib(
   
 ## <a name="parameters"></a>매개 변수  
  `bstrSimpleName`  
- [in] A [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) 형식 라이브러리의 간단한 이름을 포함 하는 합니다.  
+ 진행 형식 라이브러리의 단순한 이름을 포함 하는 [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) 입니다.  
   
  `tlbid`  
- [in] 레지스트리에서 형식 라이브러리에 할당 된 GUID입니다.  
+ 진행 레지스트리의 형식 라이브러리에 할당 된 GUID입니다.  
   
  `lcid`  
- [in] 지역화 ID 형식 라이브러리입니다.  
+ 진행 형식 라이브러리의 지역화 ID입니다.  
   
  `wMajorVersion`  
- [in] 형식 라이브러리의 주 버전 번호입니다. 예를 들어 버전용 *x.y*, 주 버전 번호는 *x*합니다.  
+ 진행 형식 라이브러리의 주 버전 번호입니다. 예를 들어 버전 *x. y*의 경우 주 버전 번호는 *x*입니다.  
   
  `wMinorVersion`  
- [in] 형식 라이브러리의 부 버전 번호입니다. 버전에 대 한 예를 들어 *x.y*, 부 버전 번호가 *y*합니다.  
+ 진행 형식 라이브러리의 부 버전 번호입니다. 예를 들어 버전 *x. y*의 경우 부 버전 번호는 *y*입니다.  
   
  `syskind`  
- [in] A [SYSKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ne-oaidl-tagsyskind) 운영 환경을 식별 하는 플래그입니다. 일반적인 값은 SYS_WIN32 SYS_WIN64입니다.  
+ 진행 운영 환경을 식별 하는 [Syskind](https://docs.microsoft.com/windows/win32/api/oaidl/ne-oaidl-syskind) 플래그입니다. 일반적인 값은 SYS_WIN32 및 SYS_WIN64입니다.  
   
  `pbstrResolvedTlbName`  
- [out] 에 대 한 포인터를 [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) 에 명명 된 형식 라이브러리의 전체 경로 포함 하는 `bstrSimpleName` 매개 변수입니다.  
+ 제한이 `bstrSimpleName` 매개 변수에 이름이 지정 된 형식 라이브러리의 전체 경로를 포함 하는 [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) 에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
- 합니다 `ResolveTypeLib` 메서드를 호출 합니다 [LoadTypeLibWithResolver 함수](../../../../docs/framework/unmanaged-api/tlbexp/loadtypelibwithresolver-function.md) 하는 동안 [Tlbexp.exe (형식 라이브러리 내보내기)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) 처리 합니다.  
+ [Tlbexp.exe (형식 라이브러리 내보내기)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) 를 처리 하는 동안 [LoadTypeLibWithResolver 함수](../../../../docs/framework/unmanaged-api/tlbexp/loadtypelibwithresolver-function.md) 에서 메서드를호출합니다.`ResolveTypeLib`  
   
- 이 인터페이스의 사용자 지정 구현을 반환 해야 합니다는 [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) 에 명명 된 형식 라이브러리의 전체 경로 포함 하는 `bstrSimpleName` 매개 변수입니다.  
+ 이 인터페이스의 사용자 지정 구현은 `bstrSimpleName` 매개 변수에서 이름이 인 형식 라이브러리의 전체 경로를 포함 하는 [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) 을 반환 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** TlbRef.idl, TlbRef.h  
   
- **라이브러리:** TlbRef.lib  
+ **라이브러리** TlbRef.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

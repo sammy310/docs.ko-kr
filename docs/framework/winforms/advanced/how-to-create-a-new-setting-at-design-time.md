@@ -5,32 +5,37 @@ helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
-ms.openlocfilehash: e371c60e3fb674e4243cec008e1098172725d4cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 35a7cd8cc1daaf76a25977751ddc9ec0709e5947
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937724"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69037900"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>방법: 디자인 타임에 새 설정 만들기
-설정 디자이너를 사용 하 여 디자인 타임에 새 설정을 만들 수 있습니다. 설정 디자이너에 새 설정 만들기 및 해당 설정에 대 한 속성을 지정할 수 있는 모눈 스타일 인터페이스입니다. 이름, 값, 형식 및 새로운 설정에 대 한 범위를 지정 해야 합니다. 설정의 만든 후 코드에서 액세스할 수 있는 것입니다.  
-  
-### <a name="to-create-a-new-setting-at-design-time-in-c"></a>C에서 디자인 타임에 새 설정을 만들려면\#
-  
-1. **솔루션 탐색기**를 확장 합니다 **속성** 프로젝트의 노드.  
-  
-2. 새 설정을 추가 하려면 원하는.settings 파일을 두 번 클릭 합니다. 이 파일에 대 한 기본 이름이 생성 되는 Settings.settings 합니다.  
-  
-3. 설정 디자이너에서 이름, 값, 형식 및 설정에 대 한 범위를 설정 합니다. 각 행에는 단일 설정을 나타냅니다.  
-  
-### <a name="to-create-a-new-setting-at-design-time-in-visual-basic"></a>Visual Basic에서 디자인 타임에 새 설정을 만들려면  
-  
-1. **솔루션 탐색기**, 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 선택 **속성**합니다.  
-  
-2. **속성** 페이지에서 선택 합니다 **설정** 탭 합니다.  
-  
-3. 설정 디자이너에서 이름, 값, 형식 및 설정에 대 한 범위를 설정 합니다. 각 행에는 단일 설정을 나타냅니다.  
-  
+
+디자인 타임에 Visual Studio의 설정 디자이너를 사용 하 여 새 설정을 만들 수 있습니다. 설정 디자이너는 새 설정을 만들고 이러한 설정에 대 한 속성을 지정할 수 있는 그리드 스타일 인터페이스입니다. 새 설정의 이름, 값, 유형 및 범위를 지정 해야 합니다. 설정이 만들어지면 코드에서 액세스할 수 있습니다.
+
+## <a name="create-a-new-setting-at-design-time-in-c"></a>C에서 디자인 타임에 새 설정 만들기\#
+
+1. Visual Studio를 엽니다.
+
+2. **솔루션 탐색기**에서 프로젝트의 **속성** 노드를 확장 합니다.
+
+3. 새 설정을 추가할 settings 파일을 두 번 클릭 합니다. 이 파일의 기본 이름은 Settings입니다.
+
+4. 설정 디자이너에서 설정의 **이름**, **값**, **유형**및 **범위** 를 설정 합니다. 각 행은 단일 설정을 나타냅니다.
+
+## <a name="create-a-new-setting-at-design-time-in-visual-basic"></a>디자인 타임에 Visual Basic에 새 설정 만들기
+
+1. Visual Studio를 엽니다.
+
+2. **솔루션 탐색기**에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.
+
+3. **속성** 페이지에서 **설정** 탭을 선택 합니다.
+
+4. 설정 디자이너에서 설정의 **이름**, **값**, **유형**및 **범위** 를 설정 합니다. 각 행은 단일 설정을 나타냅니다.
+
 ## <a name="see-also"></a>참고자료
 
 - [응용 프로그램 설정 및 사용자 설정 사용](using-application-settings-and-user-settings.md)

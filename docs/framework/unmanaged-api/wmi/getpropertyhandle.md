@@ -1,6 +1,6 @@
 ---
 title: GetPropertyHandle 함수 (관리 되지 않는 API 참조)
-description: GetPropertyHandle 함수 속성을 식별 하는 고유한 핸들을 반환 합니다.
+description: GetPropertyHandle 함수는 속성을 식별 하는 고유 핸들을 반환 합니다.
 ms.date: 11/06/2017
 api_name:
 - GetPropertyHandle
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1397188b38066bac6375da0c76e7d66724a75d7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d6dc2792b572aae30e9989c81967b86f340d7b83
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636239"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038256"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle 함수
 
@@ -44,42 +44,42 @@ HRESULT GetPropertyHandle (
 ## <a name="parameters"></a>매개 변수
 
 `vFunc`\
-[in] 이 매개 변수 사용 되지 않습니다.
+진행 이 매개 변수는 사용 되지 않습니다.
 
 `ptr`\
-[in] 에 대 한 포인터를 [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) 인스턴스.
+진행 [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) 인스턴스에 대 한 포인터입니다.
 
 `wszPropertyName`\
-[in] Null로 끝나는 문자열로 UTF16 인코딩 문자 속성 이름을 포함 하는 합니다.
+진행 속성 이름을 포함 하는 UTF16 인코딩된 문자를 포함 하는 null로 끝나는 문자열입니다.
 
 `pType`\
-[out] 에 대 한 포인터를 [ `CIMTYPE` ](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration) 속성의 CIM 형식을 나타내는 열거형 멤버입니다.
+제한이 속성의 CIM 형식을 [`CIMTYPE`](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration) 나타내는 열거형 멤버에 대 한 포인터입니다.
 
 `pHandle`\
-[out] 속성 핸들을 포함 하는 정수에 대 한 포인터입니다.
+제한이 속성 핸들을 포함 하는 정수에 대 한 포인터입니다.
 
 ## <a name="return-value"></a>반환 값
 
-이 함수에 의해 반환 되는 다음 값에 정의 된 합니다 *WbemCli.h* 헤더 파일에서 정의할 수 상수로 코드:
+이 함수에서 반환 되는 다음 값은 *WbemCli* 헤더 파일에 정의 되어 있거나 코드에서 상수로 정의할 수 있습니다.
 
-|상수  |값  |설명  |
+|상수  |값  |Description  |
 |---------|---------|---------|
-|`WBEM_E_NOT_FOUND` | 0x80041002 | 지정된 된 속성 이름을 찾을 수 없습니다. |
+|`WBEM_E_NOT_FOUND` | 0x80041002 | 지정 된 속성 이름을 찾을 수 없습니다. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 매개 변수가 잘못 되었습니다. |
-|`WBEM_E_NOT_SUPPORTED` | 0x8004100c | 요청 된 속성이 형식의 됩니다 `CIM_OBJECT` 또는 `CIM_ARRAY`합니다. |
-|`WBEM_S_NO_ERROR` | 0 | 함수 호출이 성공 했습니다.  |
+|`WBEM_E_NOT_SUPPORTED` | 0x8004100c | 요청 된 속성이 `CIM_OBJECT` 또는 `CIM_ARRAY`형식입니다. |
+|`WBEM_S_NO_ERROR` | 0 | 함수 호출에 성공 했습니다.  |
 
 ## <a name="remarks"></a>설명
 
-이 함수에 대 한 호출을 래핑하는 [IWbemClassObject::GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle) 메서드.
+이 함수는 [IWbemClassObject:: GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle) 메서드에 대 한 호출을 래핑합니다.
 
-이 핸들을 사용 하 여 속성을 사용 하는 경우 식별 [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) 읽기 또는 쓰기 속성 값에 대 한 방법입니다.
+[IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) 메서드를 사용 하 여 속성 값을 읽거나 쓸 때이 핸들을 사용 하 여 속성을 식별할 수 있습니다.
 
-이외의 모든 데이터 형식의 속성에 대 한 검색할 수 핸들 `CIM_OBJECT` 고 `CIM_ARRAY`입니다. 클래스의 모든 인스턴스에서 처리 작업을 반환 합니다.
+`CIM_OBJECT` 및`CIM_ARRAY`이외의 모든 데이터 형식의 속성에 대해 핸들을 검색할 수 있습니다. 반환 된 핸들은 클래스의 모든 인스턴스에 대해 작동 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.
+**플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.
 
 **헤더:** WMINet_Utils.idl
 

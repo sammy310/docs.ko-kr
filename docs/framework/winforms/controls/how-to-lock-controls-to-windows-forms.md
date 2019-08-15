@@ -5,47 +5,44 @@ helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-ms.openlocfilehash: ac5fbf33564ed2dd1a030132a35b36164f777519
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cbf82f1481ee9779cec5cfbf3fb057b7ea399a1c
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638569"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039898"
 ---
 # <a name="how-to-lock-controls-to-windows-forms"></a>방법: Windows Forms에서 컨트롤 잠금
-Windows 응용 프로그램의 사용자 인터페이스 (UI)를 디자인할 때 수행 하지 않도록 이동 하거나 다른 속성을 설정 하는 경우 크기를 조정할 수 있도록 올바르게 배치 되 면 컨트롤을 잠글 수 있습니다.  
-  
- 또한 잠금 및 폼에 한 번에 여러 컨트롤을 사용 하 여 양식을 하는 데 도움이 되는 모든 컨트롤을 잠금 해제 하거나 개별 컨트롤을 잠금 해제할 수 있습니다. 하려는 양식의 모든 컨트롤을 배치 했으면, 잘못 된 이동을 방지 하기 위해 모든에서 잠급니다.  
-  
-> [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](/visualstudio/ide/personalizing-the-visual-studio-ide)을 참조하세요.  
-  
-### <a name="to-lock-a-control"></a>컨트롤을 잠그려면  
-  
-1. 에 **속성** 창 클릭 합니다 **잠금** 속성을 선택 `true`합니다. (이름을 두 번의 속성 설정을 전환 합니다.)  
-  
-     또는 컨트롤을 마우스 오른쪽 단추로 클릭 하 고 선택 **잠금 컨트롤**합니다.  
-  
+Windows 응용 프로그램의 UI (사용자 인터페이스)를 디자인할 때 컨트롤이 제대로 배치 되 면 컨트롤을 잠가 다른 속성을 설정할 때 실수로 이동 하거나 크기를 조정할 수 없습니다.
+
+ 또한 폼의 모든 컨트롤을 한 번에 잠그거나 잠금 해제할 수 있습니다 .이는 많은 컨트롤이 있는 폼에 유용 하거나 개별 컨트롤의 잠금을 해제할 수 있습니다. 폼에서 원하는 위치에 컨트롤을 모두 배치한 후에는 잘못 된 움직임을 방지 하기 위해 모든 컨트롤을 잠급니다.
+
+## <a name="to-lock-a-control"></a>컨트롤을 잠그려면
+
+1. **속성** 창에서 **잠김** 속성을 클릭 하 고를 선택 `true`합니다. (이름을 두 번 클릭 하면 속성 설정이 전환 됩니다.)
+
+     또는 컨트롤을 마우스 오른쪽 단추로 클릭 하 고 **컨트롤 잠금**을 선택 합니다.
+
     > [!NOTE]
-    >  컨트롤을 잠그면 디자인 화면에서 새 크기 또는 위치를 끌어 올 하 수 없습니다. 그러나 변경할 수 있습니다 크기를 이용 하 여 컨트롤의 위치를 **속성** 창 또는 코드입니다.  
-  
-### <a name="to-lock-all-the-controls-on-a-form"></a>양식의 모든 컨트롤을 잠그려면  
-  
-1. **형식** 메뉴 선택 **잠금 컨트롤**합니다.  
-  
+    >  컨트롤을 잠그면 디자인 화면의 새 크기 또는 위치로 끌어 올 수 없습니다. 그러나 **속성** 창이 나 코드를 통해 컨트롤의 크기나 위치를 변경할 수 있습니다.
+
+## <a name="to-lock-all-the-controls-on-a-form"></a>폼의 모든 컨트롤을 잠그려면
+
+1. **서식** 메뉴에서 **컨트롤 잠금**을 선택 합니다.
+
     > [!NOTE]
-    >  이 명령은 폼 컨트롤 이므로 폼의 크기를 뿐만 잠급니다.  
-  
-### <a name="to-unlock-all-locked-controls-on-a-form"></a>모두 잠금 해제 하려면 잠긴 폼의 컨트롤  
-  
-1. **형식** 메뉴 선택 **잠금 컨트롤**합니다.  
-  
-     양식에서 이전에 잠긴된 모든 컨트롤은 이제 잠금 해제 합니다.  
-  
-### <a name="to-unlock-locked-controls-individually"></a>잠긴된 컨트롤을 개별적으로 잠금을 해제 하려면  
-  
-1. 에 **속성** 창 클릭 합니다 **잠금** 속성을 선택 `false`합니다. (이름을 두 번의 속성 설정을 전환 합니다.)  
-  
+    >  이 명령은 폼이 컨트롤 이기 때문에 폼의 크기도 잠급니다.
+
+## <a name="to-unlock-all-locked-controls-on-a-form"></a>폼에서 잠긴 컨트롤의 잠금을 해제 하려면
+
+1. **서식** 메뉴에서 **컨트롤 잠금**을 선택 합니다.
+
+     이제 폼에서 모든 이전에 잠긴 컨트롤의 잠금이 해제 됩니다.
+
+## <a name="to-unlock-locked-controls-individually"></a>개별적으로 잠긴 컨트롤의 잠금을 해제 하려면
+
+1. **속성** 창에서 **잠김** 속성을 클릭 하 고를 선택 `false`합니다. (이름을 두 번 클릭 하면 속성 설정이 전환 됩니다.)
+
 ## <a name="see-also"></a>참고자료
 
 - [Windows Forms 컨트롤](index.md)

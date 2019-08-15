@@ -1,6 +1,6 @@
 ---
 title: GetCurrentApartmentType 함수 (관리 되지 않는 API 참조)
-description: GetCurrentApartmentType 함수 호출자가 실행 하는 아파트의 형식을 검색 합니다.
+description: GetCurrentApartmentType 함수는 호출자가 실행 중인 아파트의 유형을 검색 합니다.
 ms.date: 11/06/2017
 api_name:
 - GetCurrentApartmentType
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 76c852ac81126895ea3a2e1b40473722c8445201
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 68eb4ba653098d847022da45e610cb4fa5496a8c
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746561"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69037962"
 ---
 # <a name="getcurrentapartmenttype-function"></a>GetCurrentApartmentType 함수
 호출자가 실행 중인 아파트의 유형을 검색합니다.   
@@ -41,27 +41,27 @@ HRESULT GetCurrentApartmentType (
 ## <a name="parameters"></a>매개 변수
 
 `vFunc`  
-[in] 이 매개 변수 사용 되지 않습니다.
+진행 이 매개 변수는 사용 되지 않습니다.
 
 `ptr`  
-[in] 에 대 한 포인터를 [IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo) 인스턴스.
+진행 [IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo) 인스턴스에 대 한 포인터입니다.
 
 `aptType`  
-[out] 에 대 한 포인터를 [APTTYPE](/windows/desktop/api/objidlbase/ne-objidlbase-_apttype) 호출자의 아파트를 나타내는 열거형 값입니다.
+제한이 호출자의 아파트를 나타내는 [Apttype](/windows/win32/api/objidlbase/ne-objidlbase-apttype) 열거형 값에 대 한 포인터입니다.
 
 ## <a name="return-value"></a>반환 값
 
 |상수  |값  |설명  |
 |---------|---------|---------|
-| `S_OK` | 0 | 함수는 성공적으로 완료 되었습니다. |
-| `E_FAIL` | 0x80000008 | 호출자는 아파트에서 실행할 수 없습니다. |
+| `S_OK` | 0 | 함수가 성공적으로 완료 되었습니다. |
+| `E_FAIL` | 0x80000008 | 호출자가 아파트에서 실행 되 고 있지 않습니다. |
   
 ## <a name="remarks"></a>설명
 
-이 함수에 대 한 호출을 래핑하는 [IComThreadingInfo::GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) 메서드.
+이 함수는 [IComThreadingInfo:: GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) 메서드에 대 한 호출을 래핑합니다.
 
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** WMINet_Utils.idl  
   
