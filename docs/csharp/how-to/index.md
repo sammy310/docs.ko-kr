@@ -2,12 +2,12 @@
 title: 방법 문서(C# 가이드)
 description: 유용한 팁 및 간단하고 집중된 코드 샘플의 컬렉션
 ms.date: 12/20/2017
-ms.openlocfilehash: 09e39e3c9bea5d4b9240039e37d2a5998fe1ebf8
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 92f7e94d8003823c0b166cc617563e63aba78027
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400740"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038013"
 ---
 # <a name="how-to-c"></a>방법(C#)
 
@@ -19,7 +19,6 @@ C# 가이드의 방법 섹션에서 일반적인 질문에 대한 빠른 답변�
 
 - [개체 이니셜라이저를 사용하여 개체를 초기화합니다](../programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md).
 - [메서드에 구조체를 전달하는 것과 클래스를 전달하는 것의 차이점에 대해 알아보세요](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md).
-- [전역 네임스페이스 별칭을 사용하여 형식 이름 충돌을 해결합니다](../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).
 - [연산자 오버로드를 사용합니다](../language-reference/operators/operator-overloading.md).
 - [사용자 지정 확장 메서드를 구현하고 호출합니다](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).
 - C# 프로그래머조차도 [VB에서 `My` 네임스페이스를 사용](../programming-guide/namespaces/how-to-use-the-my-namespace.md)하려 할 수 있습니다.
