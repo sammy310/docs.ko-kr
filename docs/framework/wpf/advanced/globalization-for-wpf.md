@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 099d6b94f9094ac9baed25e5060d8a166e27573b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: bcd0a11aef2372cc6e5830892eb3b71fa841ba2f
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629929"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545258"
 ---
 # <a name="globalization-for-wpf"></a>WPF의 전역화
 이 항목에서는 글로벌 시장을 대상으로 응용 프로그램을 작성할 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 때 알아야 하는 문제를 소개 합니다. 전역화 프로그래밍 요소는의에 [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] `System.Globalization`정의 되어 있습니다.
@@ -123,9 +123,9 @@ ms.locfileid: "68629929"
 
 - 스리랑카어
 
- 모든 쓰기 시스템 엔진은 글꼴 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 을 지원 합니다. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]글꼴에는 글꼴 [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 작성자가 향상 된 국제 글꼴 및 고급 인쇄 글꼴을 디자인할 수 있도록 하는 레이아웃 테이블이 포함 될 수 있습니다. 글꼴 [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 레이아웃 표에는 문자 모양 대체, 문자 모양 위치 지정, 양쪽 맞춤 및 기준선 위치에 대 한 정보가 포함 되어 텍스트 처리 응용 프로그램이 텍스트 레이아웃을 향상 시킬 수 있도록 합니다.
+ 모든 쓰기 시스템 엔진은 OpenType 글꼴을 지원 합니다. OpenType 글꼴에는 글꼴 작성자가 향상 된 국제 글꼴 및 고급 인쇄 글꼴을 디자인할 수 있도록 하는 OpenType 레이아웃 테이블이 포함 될 수 있습니다. OpenType 글꼴 레이아웃 표에는 문자 모양 대체, 문자 모양 위치 지정, 양쪽 맞춤 및 기준선 위치에 대 한 정보가 포함 되어 텍스트 처리 응용 프로그램이 텍스트 레이아웃을 향상 시킬 수 있도록 합니다.
 
- [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]글꼴을 사용 하면 인코딩을 사용 하 여 [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] 긴 문자 모양 집합을 처리할 수 있습니다. 이러한 인코딩을 사용하면 글꼴 문자 모양 변형 외에도 광범위한 국가별 지원이 가능합니다.
+ OpenType 글꼴을 사용 하면 인코딩을 사용 하 여 [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] 긴 문자 모양 집합을 처리할 수 있습니다. 이러한 인코딩을 사용하면 글꼴 문자 모양 변형 외에도 광범위한 국가별 지원이 가능합니다.
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]텍스트 렌더링은 해상도 독립성을 지 원하는 Microsoft ClearType 하위 픽셀 기술에 의해 구동 됩니다. 이 기능을 통해 가독성이 크게 향상되며, 모든 스크립트에 대해 고품질 잡지 스타일 문서를 지원하는 기능을 제공합니다.
 

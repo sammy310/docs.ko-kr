@@ -9,23 +9,23 @@ helpviewer_keywords:
 - encoding image formats [WPF]
 - visuals [WPF], encoding to an image file
 ms.assetid: 2036385b-ea47-4d54-8027-5797f52c8149
-ms.openlocfilehash: 872c19af0cfcf4fc980643c37e9a6028457c03b3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 193b6a14e404d32bb49d6e0ef3cbd513166bcce2
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947578"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545297"
 ---
 # <a name="how-to-encode-a-visual-to-an-image-file"></a>방법: Visual을 이미지 파일에 인코딩
-인코딩하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Visual> 개체를 사용 하 여 이미지 파일에는 <xref:System.Windows.Media.Imaging.RenderTargetBitmap> 및 <xref:System.Windows.Media.Imaging.PngBitmapEncoder>합니다.  
+이 예제에서는 <xref:System.Windows.Media.Visual> <xref:System.Windows.Media.Imaging.RenderTargetBitmap> 및를 <xref:System.Windows.Media.Imaging.PngBitmapEncoder>사용 하 여 개체를 이미지 파일로 인코딩하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
- <xref:System.Windows.Media.DrawingVisual> 사용 하 여 만들어집니다를 <xref:System.Windows.Media.Imaging.BitmapImage> 하 고 <xref:System.Windows.Media.FormattedText> 으로 렌더링 되는 <xref:System.Windows.Media.Imaging.RenderTargetBitmap>합니다. 렌더링 된 비트맵은 만드는 데 다음을 <xref:System.Windows.Media.Imaging.BitmapFrame> 에 추가 되는 <xref:System.Windows.Media.Imaging.PngBitmapEncoder> 새 [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)] 파일입니다.  
+ 는로 <xref:System.Windows.Media.Imaging.BitmapImage> 렌더링되<xref:System.Windows.Media.FormattedText> 는 및를 사용 하 여 만들어집니다. <xref:System.Windows.Media.Imaging.RenderTargetBitmap> <xref:System.Windows.Media.DrawingVisual> 렌더링 된 비트맵은 새 png (이동식 네트워크 <xref:System.Windows.Media.Imaging.BitmapFrame> 그래픽) 파일을 만들기 <xref:System.Windows.Media.Imaging.PngBitmapEncoder> 위해에 추가 되는를 만드는 데 사용 됩니다.  
   
  [!code-csharp[ImagingSnippetGallery_procedural_snip#RTBEncodeInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/RenderTargetBitmapExample_Encode.cs#rtbencodeinline1)]
  [!code-vb[ImagingSnippetGallery_procedural_snip#RTBEncodeInline1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/RenderTargetBitmapExample_Encode.vb#rtbencodeinline1)]  
   
- A <xref:System.Windows.Media.Imaging.PngBitmapEncoder> 하지만 파생 된 모든이 예제에서 사용한 <xref:System.Windows.Media.Imaging.BitmapEncoder> 개체는 이미지 파일을 만드는 데 사용 수 있습니다.  
+ 이 <xref:System.Windows.Media.Imaging.PngBitmapEncoder> 예제에서는를 사용 했지만 이미지 파일을 만드는 데 <xref:System.Windows.Media.Imaging.BitmapEncoder> 파생 된 개체를 사용 했을 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
 

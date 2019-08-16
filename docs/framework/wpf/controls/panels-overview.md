@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 58dc070e1642773f39f9ab2a9037ca60175b27cf
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 4f54596e1ce3ed40f3a029ea6703147a97be992f
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401268"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545264"
 ---
 # <a name="panels-overview"></a>Panel 개요
 <xref:System.Windows.Controls.Panel>요소는 크기와 크기, 요소의 위치 및 자식 콘텐츠의 정렬 등 요소의 렌더링을 제어 하는 구성 요소입니다. 에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 미리 정의 <xref:System.Windows.Controls.Panel> 된 여러 요소 뿐만 아니라 사용자 지정 <xref:System.Windows.Controls.Panel> 요소를 생성 하는 기능도 제공 합니다.  
@@ -118,7 +118,7 @@ ms.locfileid: "68401268"
 ### <a name="dockpanel"></a>DockPanel  
  요소 <xref:System.Windows.Controls.DockPanel> 는 자식 콘텐츠 <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> 요소에 설정 된 연결 된 속성을 사용 하 여 컨테이너의 가장자리를 따라 콘텐츠를 배치 합니다. 가 <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> <xref:System.Windows.Controls.Dock.Top> 또는 로<xref:System.Windows.Controls.Dock.Bottom>설정 되 면 자식 요소를 서로 위나 아래에 배치 합니다. 가 <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> <xref:System.Windows.Controls.Dock.Left> 또는 로<xref:System.Windows.Controls.Dock.Right>설정 되 면 자식 요소를 서로 왼쪽 또는 오른쪽에 배치 합니다. 속성 <xref:System.Windows.Controls.DockPanel.LastChildFill%2A> 은<xref:System.Windows.Controls.DockPanel>의 자식으로 추가 된 최종 요소의 위치를 결정 합니다.  
   
- 를 사용 <xref:System.Windows.Controls.DockPanel> 하 여 일련의 단추와 같은 관련 컨트롤 그룹을 배치할 수 있습니다. [!INCLUDE[TLA#tla_outlook](../../../../includes/tlasharptla-outlook-md.md)]에 있는 UI처럼 "이동된" [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]를 만드는 데 사용할 수 있습니다.  
+ 를 사용 <xref:System.Windows.Controls.DockPanel> 하 여 일련의 단추와 같은 관련 컨트롤 그룹을 배치할 수 있습니다. 또는이를 사용 하 여 Microsoft Outlook에서 제공 되는 것 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]과 유사한 "가는"을 만들 수 있습니다.  
   
 #### <a name="sizing-to-content"></a>콘텐츠에 맞게 크기 조정  
  <xref:System.Windows.FrameworkElement.Height%2A> 및 속성<xref:System.Windows.FrameworkElement.Width%2A> 을 지정하지<xref:System.Windows.Controls.DockPanel> 않으면 크기가 해당 내용으로 조정 됩니다. 자식 요소의 크기를 수용하도록 크기가 증가 또는 감소할 수 있습니다. 그러나 이러한 속성을 지정 하 고 지정 된 다음 자식 요소 <xref:System.Windows.Controls.DockPanel> 에 대 한 공간이 더 이상 없는 경우에는 자식 요소 또는 후속 자식 요소를 표시 하지 않고 이후 자식 요소를 측정 하지 않습니다.  
@@ -232,7 +232,7 @@ ms.locfileid: "68401268"
   
  마찬가지로 <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> 및 메서드를 재정의 하 여 파생 클래스 (예: <xref:System.Windows.Controls.Canvas> 또는 <xref:System.Windows.Controls.Grid>)를 기반으로 하 <xref:System.Windows.FrameworkElement.MeasureOverride%2A> 는 사용자 지정 레이아웃 동작을 정의할 수 있습니다.  
   
- 다음 태그는 사용자 지정 <xref:System.Windows.Controls.Panel> 요소를 만드는 방법을 보여 줍니다. 로 <xref:System.Windows.Controls.Panel>  정의 된이 새로운는 하드 코드 된 x 및 y 좌표를 사용 하 여 자식 요소의 위치 지정을 지원 합니다. `PlotPanel` 이 예제 <xref:System.Windows.Shapes.Rectangle> 에서 요소 (표시 되지 않음)는 플롯 지점 50 (*x*) 및 50 (*y*)에 배치 됩니다.  
+ 다음 태그는 사용자 지정 <xref:System.Windows.Controls.Panel> 요소를 만드는 방법을 보여 줍니다. 로 <xref:System.Windows.Controls.Panel>정의 된이 새로운는 하드 코드 된 x 및 y 좌표를 사용 하 여 자식 요소의 위치 지정을 지원 합니다. `PlotPanel` 이 예제 <xref:System.Windows.Shapes.Rectangle> 에서 요소 (표시 되지 않음)는 플롯 지점 50 (*x*) 및 50 (*y*)에 배치 됩니다.  
   
  [!code-cpp[PlotPanel#1](~/samples/snippets/cpp/VS_Snippets_Wpf/PlotPanel/CPP/PlotPanel.cpp#1)]
  [!code-csharp[PlotPanel#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PlotPanel/CSharp/PlotPanel.cs#1)]

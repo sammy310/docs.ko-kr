@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: fcf5e8e68492f4d1ff75221384b08ffad2b939f3
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 6d3dce5c8a34257f8509f239ece4bae3efa02b84
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971957"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545371"
 ---
 # <a name="imaging-overview"></a>이미징 개요
 이 항목에서는 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]를 소개합니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]를 사용하여 개발자는 이미지를 표시 및 변환하고 서식을 지정할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "68971957"
   
 - 새롭거나 또는 독자적인 이미지 형식에 대한 확장성 모델  
   
-- 비트맵 (BMP), [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)] [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)] [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)],,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, 등의 네이티브 이미지 형식에 대 한 향상 된 성능 및 보안 기능  
+- 비트맵 (BMP), 접합 된 이미지, JPEG (이동식 네트워크 그래픽 [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)]),, [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)],,,,,,,,,,,,,,,,,, 및 아이콘 (.ico)을 비롯 한 네이티브 이미지 형식에 대 한 성능 및 보안이 향상 되었습니다.  
   
 - 채널당 8비트(픽셀당 32비트)까지 높은 비트 수준의 이미지 데이터 보존  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68971957"
   
 <a name="_imageformats"></a>   
 ## <a name="wpf-image-formats"></a>WPF 이미지 형식  
- 코덱은 특정 미디어 형식을 인코딩하거나 디코딩하는 데 사용됩니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]BMP, JPEG, [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)] [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)],,, GIF 및 아이콘 이미지 형식에 대 한 코덱을 포함 합니다. 이러한 각 코덱을 사용하여 애플리케이션은 ICON을 제외한 해당 이미지 형식을 디코딩 및 인코딩할 수 있습니다.  
+ 코덱은 특정 미디어 형식을 인코딩하거나 디코딩하는 데 사용됩니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]BMP, JPEG, PNG, [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)], [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)], GIF 및 아이콘 이미지 형식에 대 한 코덱을 포함 합니다. 이러한 각 코덱을 사용하여 애플리케이션은 ICON을 제외한 해당 이미지 형식을 디코딩 및 인코딩할 수 있습니다.  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>는 이미지의 디코딩 및 인코딩에 사용 되는 중요 한 클래스입니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 파이프라인의 기본 구성 요소이며 픽셀의 단일 상수 집합을 특정 크기 및 해상도로 나타냅니다. 는 <xref:System.Windows.Media.Imaging.BitmapSource> 다중 프레임 이미지의 개별 프레임이 될 수도 있고 <xref:System.Windows.Media.Imaging.BitmapSource>에서 수행 되는 변환의 결과일 수도 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 과<xref:System.Windows.Media.Imaging.BitmapFrame>같이 이미징에서 사용 되는 여러 기본 클래스의 부모입니다.  
   

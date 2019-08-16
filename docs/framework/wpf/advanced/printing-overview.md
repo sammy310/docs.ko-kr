@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 4f8fd92105bd5ae09e0c1daa2e0db48b74cde77c
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: be82b64581ee178b463950d4b8cdae1f98949161
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68672038"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545310"
 ---
 # <a name="printing-overview"></a>인쇄 개요
 Microsoft .NET 프레임 워크에서 Windows Presentation Foundation (WPF)를 사용 하는 응용 프로그램 개발자는 다양 한 새로운 인쇄 및 인쇄 시스템 관리 Api 집합을 사용할 수 있습니다. [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]에서는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램을 만드는 개발자와 비관리 코드를 사용하는 개발자도 이러한 인쇄 시스템 향상 기능을 일부 사용할 수 있습니다. 이 새로운 기능의 핵심은 새 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 파일 형식과 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 인쇄 경로입니다.  
@@ -29,7 +29,7 @@ Microsoft .NET 프레임 워크에서 Windows Presentation Foundation (WPF)를 �
   
 <a name="introduction_to_XPS"></a>   
 ## <a name="about-xps"></a>XPS 정보  
- XPS는 전자 문서 형식, 스풀 파일 형식 및 페이지 설명 언어입니다. [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], [!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)] 및 기타 산업 표준을 사용하여 플랫폼 간 문서를 만드는 공개 문서 형식입니다. XPS는 디지털 문서를 생성, 공유, 인쇄, 표시 및 보관 하는 프로세스를 간소화 합니다. XPS에 대 한 자세한 내용은 [Xps 문서](/windows/desktop/printdocs/documents)를 참조 하세요.  
+ XPS는 전자 문서 형식, 스풀 파일 형식 및 페이지 설명 언어입니다. , OPC (open 패키징 규칙) 및 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]기타 산업 표준을 사용 하 여 플랫폼 간 문서를 만드는 오픈 문서 형식입니다. XPS는 디지털 문서를 생성, 공유, 인쇄, 표시 및 보관 하는 프로세스를 간소화 합니다. XPS에 대 한 자세한 내용은 [Xps 문서](/windows/desktop/printdocs/documents)를 참조 하세요.  
   
  를 사용 하 여 xps 기반 콘텐츠를 인쇄 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 하는 여러 가지 기술은 [프로그래밍 방식으로 xps 파일 인쇄](how-to-programmatically-print-xps-files.md)에서 보여 줍니다. 이 항목에 포함된 내용을 검토하는 동안 이러한 예제를 참조하는 것이 유용할 수도 있습니다. 비관리 코드 개발자는 [MXDC_ESCAPE 함수](/windows/desktop/printdocs/mxdc-escape)에 대 한 설명서를 참조 해야 합니다. Windows Forms 개발자는 전체 <xref:System.Drawing.Printing> [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 인쇄 경로를 지원 하지 않지만 하이브리드 GDI-XPS 인쇄 경로를 지 원하는 네임 스페이스의 API를 사용 해야 합니다. 아래의 **인쇄 경로 아키텍처**를 참조하세요.  
   
