@@ -3,7 +3,5 @@
   items:
     - name: 네임스페이스 사용
       href: using-namespaces.md
-    - name: '방법: 글로벌 네임스페이스 별칭 사용'
-      href: how-to-use-the-global-namespace-alias.md
-    - name: '방법: 내 네임스페이스 사용'
+    - name: '방법: My 네임스페이스 사용'
       href: how-to-use-the-my-namespace.md

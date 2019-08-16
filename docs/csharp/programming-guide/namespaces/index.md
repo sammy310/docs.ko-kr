@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 79b7057b1f6a9cdba2215124160b28efb9a1c0be
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cf5a7f239cf7d3cd3a6e39f31d16adb830646afc
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629526"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039491"
 ---
 # <a name="namespaces-c-programming-guide"></a>네임스페이스(C# 프로그래밍 가이드)
 
@@ -44,13 +44,12 @@ ms.locfileid: "68629526"
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [네임스페이스](~/_csharplang/spec/namespaces.md) 섹션을 참조하세요.
   
 ## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [네임스페이스 사용](using-namespaces.md)
-- [방법: 전역 네임스페이스 별칭 사용](how-to-use-the-global-namespace-alias.md)
 - [방법: My 네임스페이스 사용](how-to-use-the-my-namespace.md)
 - [식별자 이름](../inside-a-program/identifier-names.md)
 - [using 지시문](../../language-reference/keywords/using-directive.md)
