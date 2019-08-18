@@ -13,18 +13,18 @@ helpviewer_keywords:
 - identifying changed property events [WPF]
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-ms.openlocfilehash: f8d0d5e65101ffda0edaaeabdea2870287ba0f1f
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 06056b492439531aa60becbb7bca250a439bfb68
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400847"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567432"
 ---
 # <a name="property-change-events"></a>속성 변경 이벤트
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 속성 값 변경에 대한 응답으로 발생하는 여러 이벤트를 정의합니다. 일반적으로 속성은 종속성 속성입니다. 이벤트 자체는 때때로 라우트된 이벤트 이며 표준 CLR (공용 언어 런타임) 이벤트입니다. 이벤트 정의는 시나리오에 따라 달라집니다. 일부 속성 변경은 요소 트리를 통해 더 적절하게 라우트되지만 다른 속성 변경은 일반적으로 해당 속성이 변경한 개체에만 영향을 미치기 때문입니다.  
   
 ## <a name="identifying-a-property-change-event"></a>속성 변경 이벤트 식별  
- 속성 변경을 보고하는 일부 이벤트는 시그니처 패턴 또는 명명 패턴 덕분에 속성 변경 이벤트로 명시적으로 식별되지 않습니다. 일반적으로 [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] 문서의 이벤트 설명은 이벤트가 속성 값 변경에 직접 연결되고 속성과 이벤트 간의 상호 참조를 제공하는지 여부를 나타냅니다.  
+ 속성 변경을 보고하는 일부 이벤트는 시그니처 패턴 또는 명명 패턴 덕분에 속성 변경 이벤트로 명시적으로 식별되지 않습니다. 일반적으로 SDK 설명서에서 이벤트에 대 한 설명은 이벤트가 속성 값 변경에 직접 연결 되었는지 여부를 나타내며 속성과 이벤트 간의 상호 참조를 제공 합니다.  
   
 ### <a name="routedpropertychanged-events"></a>RoutedPropertyChanged 이벤트  
  특정 이벤트에서는 속성 변경 이벤트에 명시적으로 사용되는 이벤트 데이터 형식 및 대리자를 사용합니다. 이벤트 데이터 형식이이 <xref:System.Windows.RoutedPropertyChangedEventArgs%601>고 대리자가 <xref:System.Windows.RoutedPropertyChangedEventHandler%601>입니다. 이벤트 데이터와 대리자는 둘 다 처리기를 정의할 때 변경 중인 속성의 실제 형식을 지정하는 데 사용되는 제네릭 형식 매개 변수를 포함합니다. 이벤트 데이터에는 이벤트 데이터의 <xref:System.Windows.RoutedPropertyChangedEventArgs%601.OldValue%2A> 형식 <xref:System.Windows.RoutedPropertyChangedEventArgs%601.NewValue%2A>인수로 전달 되는 및 라는 두 개의 속성이 포함 되어 있습니다.  

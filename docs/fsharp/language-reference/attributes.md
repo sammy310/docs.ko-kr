@@ -2,12 +2,12 @@
 title: 특성
 description: 특성을 F# 사용 하 여 프로그래밍 구문에 메타 데이터를 적용 하는 방법을 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 3f3c3469192c09aa51f31ef3f00aca0196e3c382
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c9691a13ff1e9e892e93a967136a99849da25f1f
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630080"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567509"
 ---
 # <a name="attributes"></a>특성
 
@@ -70,35 +70,34 @@ ms.locfileid: "68630080"
   </tr>
   <tr>
     <td>어셈블리(assembly)</td>
-    <td><pre lang="fsharp"><code>[&lt;assembly: AssemblyVersionAttribute("1.0.0.0")&gt;]<code></pre></td> 
+    <td><pre lang="fsharp"><code>[&lt;assembly: AssemblyVersionAttribute("1.0.0.0")&gt;]</code></pre></td> 
   </tr>
   <tr>
     <td>반환값(return)</td>
-    <td><pre lang="fsharp"><code>let function1 x : [&lt;return: Obsolete&gt;] int = x + 1<code></pre></td> 
+    <td><pre lang="fsharp"><code>let function1 x : [&lt;return: Obsolete&gt;] int = x + 1</code></pre></td> 
   </tr>
   <tr>
     <td>필드</td>
-    <td><pre lang="fsharp"><code>[&lt;field: DefaultValue&gt;] val mutable x: int<code></pre></td> 
+    <td><pre lang="fsharp"><code>[&lt;field: DefaultValue&gt;] val mutable x: int</code></pre></td> 
   </tr>
   <tr>
     <td>속성</td>
-    <td><pre lang="fsharp"><code>[&lt;property: Obsolete&gt;] this.MyProperty = x<code></pre></td> 
+    <td><pre lang="fsharp"><code>[&lt;property: Obsolete&gt;] this.MyProperty = x</code></pre></td> 
   </tr>
   <tr>
     <td>매개변수(param)</td>
-    <td><pre lang="fsharp"><code>member this.MyMethod([&lt;param: Out&gt;] x : ref&lt;int&gt;) = x := 10<code></pre></td> 
+    <td><pre lang="fsharp"><code>member this.MyMethod([&lt;param: Out&gt;] x : ref&lt;int&gt;) = x := 10</code></pre></td> 
   </tr>
   <tr>
     <td>type</td>
     <td>
         <pre lang="fsharp"><code>
-        [&lt;type: StructLayout(Sequential)&gt;] 
-        type MyStruct = 
-        struct 
-        x : byte
-        y : int
-        end
-        <code></pre>
+[&lt;type: StructLayout(Sequential)&gt;] 
+type MyStruct = 
+struct 
+x : byte
+y : int
+end</code></pre>
     </td>
   </tr>
 </table>

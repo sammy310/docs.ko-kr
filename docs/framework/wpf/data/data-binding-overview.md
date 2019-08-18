@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: e1fbb46c76fbc729818b6ff24b55c0d18f6b05df
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 44a35131273c6f191ab5da5bc1639d97bd961ff1
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400706"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567519"
 ---
 # <a name="data-binding-overview"></a>데이터 바인딩 개요
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 데이터 바인딩은 응용 프로그램이 데이터를 제공하고 상호 작용할 수 있는 간단하고 일관된 방법을 제공합니다. 요소는 CLR (공용 언어 런타임) 개체 및 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]의 형식으로 다양 한 데이터 소스의 데이터에 바인딩될 수 있습니다. <xref:System.Windows.Controls.ContentControl>및와 같은 및에는 단일 데이터 항목 또는 데이터 항목 컬렉션의 유연한 스타일을 사용할 수 있도록 하는 기본 제공 기능이 포함되어있습니다.<xref:System.Windows.Controls.ListView> <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.ItemsControl> <xref:System.Windows.Controls.ListBox> 데이터를 기반으로 정렬, 필터 및 그룹 보기를 생성할 수 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "68400706"
   
 - 사용자가 항목을 선택 하면에서 <xref:System.Windows.Controls.ContentControl> 선택한 항목의 세부 정보를 표시 합니다. 이를 *마스터-세부 시나리오*라고 합니다. [마스터-세부 시나리오Scenario](#master_detail_scenario) 섹션에서는 바인딩 시나리오 유형을 살펴봅니다.  
   
-- 날짜/ *시간 속성의* 형식은 밀리초 <xref:System.DateTime>에 대 한 시간을 포함 하는 날짜를 반환 하는입니다. 이 애플리케이션에는 더 짧은 날짜 문자열이 표시되도록 사용자 지정 변환기가 사용되었습니다. [데이터 변환](#data_conversion) 섹션에서는 변환기를 살펴봅니다.  
+- 날짜/시간 속성 의 형식은 밀리초 <xref:System.DateTime>에 대 한 시간을 포함 하는 날짜를 반환 하는입니다. 이 애플리케이션에는 더 짧은 날짜 문자열이 표시되도록 사용자 지정 변환기가 사용되었습니다. [데이터 변환](#data_conversion) 섹션에서는 변환기를 살펴봅니다.  
   
  사용자가 *Add Product* 단추를 클릭하면 다음과 같이 표시됩니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "68400706"
   
 - 그림에는 지정 되지 않았지만 바인딩 소스 개체는 사용자 지정 CLR 개체로 제한 되지 않습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]데이터 바인딩은 CLR 개체 및 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]형식의 데이터를 지원 합니다. 몇 가지 예를 제공 하기 위해 바인딩 소스는 <xref:System.Windows.UIElement>, 모든 목록 개체, ADO.NET 데이터 또는 웹 서비스와 연결 된 CLR 개체 또는 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터를 포함 하는 XmlNode 일 수 있습니다. 자세한 내용은 [바인딩 소스 개요](binding-sources-overview.md)를 참조하세요.  
   
- 다른 [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] 항목을 읽을 때 바인딩을 설정하고 있다면 바인딩 소스*에* 바인딩 대상을 바인딩하고 있다는 것을 기억하세요. 예 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 를 들어 데이터 바인딩을 <xref:System.Windows.Controls.ListBox> 사용 하 여에 일부 기본 데이터를 표시 하는 경우를 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터 <xref:System.Windows.Controls.ListBox> 에 바인딩합니다.  
+ 다른 SDK 항목을 읽을 때 바인딩을 설정 하는 경우 바인딩 대상을 바인딩 소스 *에* 바인딩하는 것을 기억해 야 합니다. 예 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 를 들어 데이터 바인딩을 <xref:System.Windows.Controls.ListBox> 사용 하 여에 일부 기본 데이터를 표시 하는 경우를 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터 <xref:System.Windows.Controls.ListBox> 에 바인딩합니다.  
   
  바인딩을 설정 하려면 <xref:System.Windows.Data.Binding> 개체를 사용 합니다. 이 항목의 나머지 부분에서는와 관련 된 몇 가지 개념과 <xref:System.Windows.Data.Binding> 개체의 속성 및 사용에 대해 설명 합니다.  
   
@@ -393,7 +393,7 @@ ms.locfileid: "68400706"
   
  ![데이터 바인딩 유효성 검사 오류](./media/databindingdemo-validation.PNG "DataBindingDemo_Validation")  
   
- 에 <xref:System.Windows.Data.Binding> 연결 된 유효성 검사 규칙이 있지만 바인딩된 컨트롤 <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> 에를 지정 하지 않은 경우 유효성 검사 오류가 있을 <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> 때 사용자에 게 알리는 기본값이 사용 됩니다. 기본값 <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> 은 표시기 계층에서 빨간색 테두리를 정의 하는 컨트롤 템플릿입니다. 기본 <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]  <xref:System.Windows.Controls.TextBox> 및를 사용 하는 경우 유효성 검사 오류가 발생 하면 StartPriceEntryForm의는 다음과 같습니다. <xref:System.Windows.Controls.ToolTip>  
+ 에 <xref:System.Windows.Data.Binding> 연결 된 유효성 검사 규칙이 있지만 바인딩된 컨트롤 <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> 에를 지정 하지 않은 경우 유효성 검사 오류가 있을 <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> 때 사용자에 게 알리는 기본값이 사용 됩니다. 기본값 <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> 은 표시기 계층에서 빨간색 테두리를 정의 하는 컨트롤 템플릿입니다. 기본 <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] <xref:System.Windows.Controls.TextBox> 및를 사용 하는 경우 유효성 검사 오류가 발생 하면 StartPriceEntryForm의는 다음과 같습니다. <xref:System.Windows.Controls.ToolTip>  
   
  ![데이터 바인딩 유효성 검사 오류](./media/databindingdemo-validationdefault.PNG "DataBindingDemo_ValidationDefault")  
   

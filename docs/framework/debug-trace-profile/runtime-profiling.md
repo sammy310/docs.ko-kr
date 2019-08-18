@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7214fa0342d0946044861c4e375c7797ad6a06b1
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: a31a42362e934d14b9cb66724618814e2b232c06
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833756"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567288"
 ---
 # <a name="runtime-profiling"></a>런타임 프로파일링
 프로파일링은 모든 개발 또는 배포 시나리오에서 성능 데이터를 수집하는 방법입니다. 이 섹션은 애플리케이션 성능에 대한 정보를 수집하려는 개발자 및 시스템 관리자를 위한 것입니다.  
   
 ## <a name="tracking-performance-using-the-performance-monitor-perfmonexe"></a>성능 모니터(Perfmon.exe)를 사용하여 성능 추적  
- 성능 모니터는.NET Framework 응용 프로그램 프로 파일링 하는 데 가장 쉬운 도구입니다. 성능 모니터를 공용 언어 런타임 및 Windows 소프트웨어 개발 키트 (SDK)를 사용 하 여 설치 된.NET Framework 성능 카운터에서 찾은 데이터를 그래픽으로 나타냅니다. 이러한 카운터를 사용하여 메모리 관리에서 JIT(just-in-time) 컴파일러 성능에 이르기까지 모든 것을 모니터링할 수 있습니다. 이렇게 하여 애플리케이션이 사용하는 리소스에 대해 알 수 있으며 이는 애플리케이션의 성능에 대한 간접적인 측정입니다. 이러한 카운터를 사용하여 애플리케이션이 내부적으로 작동하는 방식을 이해할 수 있습니다.  
+ 성능 모니터는 .NET Framework 응용 프로그램을 프로 파일링 하는 데 사용 하는 가장 쉬운 도구입니다. 성능 모니터는 공용 언어 런타임과 Windows SDK와 함께 설치 되는 .NET Framework 성능 카운터에 있는 데이터를 그래픽으로 나타냅니다. 이러한 카운터를 사용하여 메모리 관리에서 JIT(just-in-time) 컴파일러 성능에 이르기까지 모든 것을 모니터링할 수 있습니다. 이렇게 하여 애플리케이션이 사용하는 리소스에 대해 알 수 있으며 이는 애플리케이션의 성능에 대한 간접적인 측정입니다. 이러한 카운터를 사용하여 애플리케이션이 내부적으로 작동하는 방식을 이해할 수 있습니다.  
   
 #### <a name="to-run-perfmonexe-on-windows-vista-and-later-versions"></a>Windows Vista 이상 버전에서 Perfmon.exe를 실행하려면  
   
@@ -54,10 +54,10 @@ ms.locfileid: "66833756"
  특정 영역이나 원격 공유에 있는 어셈블리를 프로파일링하려면 성능 카운터를 실행하는 컴퓨터에서 원격 어셈블리를 완전히 신뢰해야 합니다. 어셈블리를 충분히 신뢰하지 않는 경우 성능 카운터가 작동하지 않습니다. 여러 다른 영역에 신뢰를 부여하는 데 관한 내용은 [Caspol.exe(코드 액세스 보안 정책 도구)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)를 참조하세요.  
   
 > [!NOTE]
->  .NET Framework 4가 설치 된 시스템에서 성능 모니터 표시 되지 성능 카운터에 대 한 데이터의 일부 범주와 같은 **.NET CLR 데이터** 하 고 **.NET CLR 네트워킹**에 대 한 .NET Framework 1.1을 사용 하 여 개발 된 응용 프로그램입니다. 이 경우, [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) 요소를 응용 프로그램의 구성 파일에 추가하여 성능 모니터가 이 데이터를 표시하도록 구성할 수 있습니다.  
+>  .NET Framework 4가 설치 된 시스템에서 .net을 사용 하 여 개발 된 응용 프로그램의 경우 성능 모니터는 **.NET Clr 데이터** 및 **.net clr 네트워킹**등 일부 범주의 성능 카운터에 대 한 데이터를 표시 하지 않을 수 있습니다. 프레임 워크 1.1. 이 경우, [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) 요소를 응용 프로그램의 구성 파일에 추가하여 성능 모니터가 이 데이터를 표시하도록 구성할 수 있습니다.  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>프로그래밍 방식으로 성능 카운터 읽기 및 만들기  
- .NET Framework 성능 콘솔에서 사용할 수 있는 동일한 성능 정보를 프로그래밍 방식으로 액세스 하 여 클래스를 제공 합니다. 또한 이러한 클래스를 사용하여 사용자 지정 성능 카운터를 만들 수도 있습니다. 다음 표에서 성능 모니터링.NET Framework에서 제공 되는 클래스의 일부를 설명 합니다.  
+ .NET Framework는 성능 콘솔에서 사용할 수 있는 것과 동일한 성능 정보를 프로그래밍 방식으로 액세스 하는 데 사용할 수 있는 클래스를 제공 합니다. 또한 이러한 클래스를 사용하여 사용자 지정 성능 카운터를 만들 수도 있습니다. 다음 표에서는 .NET Framework에서 제공 하는 일부 성능 모니터링 클래스에 대해 설명 합니다.  
   
 |클래스|설명|  
 |-----------|-----------------|  

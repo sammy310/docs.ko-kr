@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f046341b1b02c3552ecf8db7d38d2a0c7bc74fba
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 440debe875a0d00d240849ba4b60b548f46e2c0e
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306364"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567054"
 ---
 # <a name="serialization-and-metadata"></a>Serialization 및 메타데이터
 
@@ -39,7 +39,7 @@ ms.locfileid: "67306364"
   
 ### <a name="typeof-used-in-the-constructor"></a>생성자 내부에서 사용되는 typeof
 
- 이러한 serialization 클래스의 생성자를 호출 하 고 포함 된 C# [typeof](~/docs/csharp/language-reference/operators/type-testing-and-conversion-operators.md#typeof-operator) 메서드 호출 연산자 **추가 작업을 수행할 필요가 없습니다**합니다. 예를 들어 serialization 클래스 생성자에 대한 다음의 각 호출에서 `typeof` 키워드는 생성자에 전달되는 식의 일부로 사용됩니다.  
+ 이러한 serialization 클래스의 생성자를 호출 하 고 메서드 호출에 C# [typeof](~/docs/csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) 연산자를 포함 하는 경우에는 **추가 작업을 수행할 필요가 없습니다**. 예를 들어 serialization 클래스 생성자에 대한 다음의 각 호출에서 `typeof` 키워드는 생성자에 전달되는 식의 일부로 사용됩니다.  
   
  [!code-csharp[ProjectN#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#5)]  
   
@@ -47,7 +47,7 @@ ms.locfileid: "67306364"
   
 ### <a name="typeof-used-outside-the-constructor"></a>생성자 외부에서 사용되는 typeof
 
- 이러한 serialization 클래스의 생성자를 호출 하 고 사용 하 여는 C# [typeof](~/docs/csharp/language-reference/operators/type-testing-and-conversion-operators.md#typeof-operator) 생성자에 제공 된 식 외부 연산자 <xref:System.Type> 매개 변수에 다음 코드를.NET 네이티브 컴파일러 형식을 확인할 수 없습니다.  
+ 다음 코드와 같이 이러한 serialization 클래스의 생성자를 호출 하 C# 고 생성자의 <xref:System.Type> 매개 변수에 제공 된 식 외부에서 [typeof](~/docs/csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) 연산자를 사용 하는 경우 .NET 네이티브 컴파일러에서 형식을 확인할 수 없습니다.  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   
@@ -57,7 +57,7 @@ ms.locfileid: "67306364"
 <Type Name="DataSet" Browse="Required Public" />  
 ```  
   
- 마찬가지로,와 같은 생성자를 호출 하는 경우 <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> 배열을 추가 설명과 <xref:System.Type> 개체를 serialize 하는데, 다음 코드에서.NET 네이티브 컴파일러에는 해당이 형식을 확인할 수 없습니다.  
+ 마찬가지로 다음 코드와 같이와 같은 <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> 생성자를 호출 하 고 serialize 할 추가 <xref:System.Type> 개체의 배열을 제공 하는 경우 .NET 네이티브 컴파일러는 이러한 형식을 확인할 수 없습니다.  
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   

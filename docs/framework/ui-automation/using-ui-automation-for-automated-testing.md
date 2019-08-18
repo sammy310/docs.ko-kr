@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: 47cba2344071ecf9b85f4b0235e02ea88deb6498
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 3fb5d1107a2dacdc4dfd2210322c312becdfd90b
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710232"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566950"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>자동화된 테스트를 위해 UI 자동화 사용
 > [!NOTE]
@@ -103,7 +103,7 @@ ms.locfileid: "68710232"
 ## <a name="related-tools-and-technologies"></a>관련 도구 및 기술  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]을 통해 자동화된 테스트를 지원하는 다양한 관련 도구 및 기술이 있습니다.  
   
-- .Exe는 공급자와 클라이언트 개발 및 디버깅 모두에 대 한 정보를 수집 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 하는 데 사용할 수 있는 GUI (그래픽 사용자 인터페이스) 응용 프로그램입니다. .Exe는에 [!INCLUDE[TLA#tla_winfxsdk](../../../includes/tlasharptla-winfxsdk-md.md)]포함 되어 있습니다.  
+- .Exe는 공급자와 클라이언트 개발 및 디버깅 모두에 대 한 정보를 수집 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 하는 데 사용할 수 있는 GUI (그래픽 사용자 인터페이스) 응용 프로그램입니다. .Exe가 Windows SDK에 포함 되어 있는지 확인 합니다.  
   
 - Msaabridge은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클라이언트 Active Accessibility에 정보를 노출 합니다. Active Accessibility에 브리징 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 하는 주요 목표는 기존 Active Accessibility 클라이언트가 구현 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]된 모든 프레임 워크와 상호 작용 하는 기능을 허용 하는 것입니다.  
   
