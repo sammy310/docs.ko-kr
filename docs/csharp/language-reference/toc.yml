@@ -297,9 +297,9 @@
     - name: 멤버 액세스 연산자
       href: operators/member-access-operators.md
       displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation'
-    - name: 형식 테스트 및 변환 연산자
-      href: operators/type-testing-and-conversion-operators.md
-      displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), cast'
+    - name: 형식 테스트 및 캐스트 연산자
+      href: operators/type-testing-and-cast.md
+      displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), conversion'
     - name: 사용자 정의 전환 연산자
       href: operators/user-defined-conversion-operators.md
       displayName: 'implicit, explicit'
