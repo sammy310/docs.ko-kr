@@ -1,22 +1,22 @@
 ---
-title: '방법: CSV 텍스트 파일의 열 값 계산(LINQ)(C#)'
+title: '방법: CSV 텍스트 파일의 열 값 컴퓨팅(LINQ)(C#)'
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 07fb81b474bd967d73dc9ff6a08e0c67e6ec0122
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0bc212ab40bccf5612ef6dea85608c439d2105f4
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585809"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012939"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a><span data-ttu-id="b495e-102">방법: CSV 텍스트 파일의 열 값 계산(LINQ)(C#)</span><span class="sxs-lookup"><span data-stu-id="b495e-102">How to: Compute Column Values in a CSV Text File (LINQ) (C#)</span></span>
-<span data-ttu-id="b495e-103">이 예제에서는 .csv 파일의 열에 대해 Sum, Average, Min 및 Max 등의 집계 계산을 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b495e-103">This example shows how to perform aggregate computations such as Sum, Average, Min, and Max on the columns of a .csv file.</span></span> <span data-ttu-id="b495e-104">여기 표시된 예제 원칙은 다른 형식의 구조화된 텍스트에 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b495e-104">The example principles that are shown here can be applied to other types of structured text.</span></span>  
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a><span data-ttu-id="ad8a5-102">방법: CSV 텍스트 파일의 열 값 컴퓨팅(LINQ)(C#)</span><span class="sxs-lookup"><span data-stu-id="ad8a5-102">How to: Compute Column Values in a CSV Text File (LINQ) (C#)</span></span>
+<span data-ttu-id="ad8a5-103">이 예제에서는 .csv 파일의 열에 대해 Sum, Average, Min 및 Max 등의 집계 계산을 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ad8a5-103">This example shows how to perform aggregate computations such as Sum, Average, Min, and Max on the columns of a .csv file.</span></span> <span data-ttu-id="ad8a5-104">여기 표시된 예제 원칙은 다른 형식의 구조화된 텍스트에 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ad8a5-104">The example principles that are shown here can be applied to other types of structured text.</span></span>  
   
-### <a name="to-create-the-source-file"></a><span data-ttu-id="b495e-105">소스 파일을 만들려면</span><span class="sxs-lookup"><span data-stu-id="b495e-105">To create the source file</span></span>  
+## <a name="to-create-the-source-file"></a><span data-ttu-id="ad8a5-105">소스 파일을 만들려면</span><span class="sxs-lookup"><span data-stu-id="ad8a5-105">To create the source file</span></span>  
   
-1. <span data-ttu-id="b495e-106">다음 줄을 scores.csv 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="b495e-106">Copy the following lines into a file that is named scores.csv and save it in your project folder.</span></span> <span data-ttu-id="b495e-107">첫 번째 열은 학생 ID를 나타내고 후속 열은 4개 시험의 점수를 나타낸다고 가정합니다.</span><span class="sxs-lookup"><span data-stu-id="b495e-107">Assume that the first column represents a student ID, and subsequent columns represent scores from four exams.</span></span>  
+1. <span data-ttu-id="ad8a5-106">다음 줄을 scores.csv 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="ad8a5-106">Copy the following lines into a file that is named scores.csv and save it in your project folder.</span></span> <span data-ttu-id="ad8a5-107">첫 번째 열은 학생 ID를 나타내고 후속 열은 4개 시험의 점수를 나타낸다고 가정합니다.</span><span class="sxs-lookup"><span data-stu-id="ad8a5-107">Assume that the first column represents a student ID, and subsequent columns represent scores from four exams.</span></span>  
   
-    ```  
+    ```csv
     111, 97, 92, 81, 60  
     112, 75, 84, 91, 39  
     113, 88, 94, 65, 91  
@@ -31,7 +31,7 @@ ms.locfileid: "65585809"
     122, 94, 92, 91, 91  
     ```  
   
-## <a name="example"></a><span data-ttu-id="b495e-108">예제</span><span class="sxs-lookup"><span data-stu-id="b495e-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="ad8a5-108">예</span><span class="sxs-lookup"><span data-stu-id="ad8a5-108">Example</span></span>  
   
 ```csharp  
 class SumColumns  
@@ -156,12 +156,12 @@ class SumColumns
  */  
 ```  
   
- <span data-ttu-id="b495e-109">쿼리는 <xref:System.String.Split%2A> 메서드를 사용하여 텍스트의 각 줄을 배열로 변환하는 방식으로 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="b495e-109">The query works by using the <xref:System.String.Split%2A> method to convert each line of text into an array.</span></span> <span data-ttu-id="b495e-110">각 배열 요소는 열을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="b495e-110">Each array element represents a column.</span></span> <span data-ttu-id="b495e-111">마지막으로 각 열의 텍스트가 숫자 표현으로 변환됩니다.</span><span class="sxs-lookup"><span data-stu-id="b495e-111">Finally, the text in each column is converted to its numeric representation.</span></span> <span data-ttu-id="b495e-112">탭으로 구분된 파일인 경우 `Split` 메서드의 인수를 `\t`로 업데이트하세요.</span><span class="sxs-lookup"><span data-stu-id="b495e-112">If your file is a tab-separated file, just update the argument in the `Split` method to `\t`.</span></span>  
+ <span data-ttu-id="ad8a5-109">쿼리는 <xref:System.String.Split%2A> 메서드를 사용하여 텍스트의 각 줄을 배열로 변환하는 방식으로 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="ad8a5-109">The query works by using the <xref:System.String.Split%2A> method to convert each line of text into an array.</span></span> <span data-ttu-id="ad8a5-110">각 배열 요소는 열을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="ad8a5-110">Each array element represents a column.</span></span> <span data-ttu-id="ad8a5-111">마지막으로 각 열의 텍스트가 숫자 표현으로 변환됩니다.</span><span class="sxs-lookup"><span data-stu-id="ad8a5-111">Finally, the text in each column is converted to its numeric representation.</span></span> <span data-ttu-id="ad8a5-112">탭으로 구분된 파일인 경우 `Split` 메서드의 인수를 `\t`로 업데이트하세요.</span><span class="sxs-lookup"><span data-stu-id="ad8a5-112">If your file is a tab-separated file, just update the argument in the `Split` method to `\t`.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="b495e-113">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="b495e-113">Compiling the Code</span></span>  
- <span data-ttu-id="b495e-114">System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통해 C# 콘솔 애플리케이션 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="b495e-114">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="ad8a5-113">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="ad8a5-113">Compiling the Code</span></span>  
+ <span data-ttu-id="ad8a5-114">System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통해 C# 콘솔 애플리케이션 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="ad8a5-114">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b495e-115">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b495e-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ad8a5-115">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ad8a5-115">See also</span></span>
 
-- [<span data-ttu-id="b495e-116">LINQ 및 문자열(C#)</span><span class="sxs-lookup"><span data-stu-id="b495e-116">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="b495e-117">LINQ 및 파일 디렉터리(C#)</span><span class="sxs-lookup"><span data-stu-id="b495e-117">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="ad8a5-116">LINQ 및 문자열(C#)</span><span class="sxs-lookup"><span data-stu-id="ad8a5-116">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="ad8a5-117">LINQ 및 파일 디렉터리(C#)</span><span class="sxs-lookup"><span data-stu-id="ad8a5-117">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
