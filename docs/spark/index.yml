@@ -1,0 +1,33 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Apache Spark 용 .NET 설명서
+metadata:
+  document_id: na
+  title: 'Apache Spark 용 .NET 설명서-자습서, API 참조'
+  meta.description: 'Learn how to use .NET for Apache Spark, the .NET bindings for Spark written on the Spark interop layer. You can process batches of data, real-time streams, machine learning, and ad-hoc query with Apache Spark anywhere you write .NET code.'
+  ms.prod: dotnet-spark
+  ms.topic: landing-page
+  ms.date: 05/17/2019
+  ms.author: mamccrea
+  author: mamccrea
+abstract:
+  description: 'Spark interop 계층에 작성 된 Spark에 대 한 .NET 바인딩과 Apache Spark에 .NET을 사용 하는 방법에 대해 알아봅니다. .NET 코드를 작성 하는 모든 위치에서 Apache Spark 하 여 데이터, 실시간 스트림, 기계 학습 및 임시 쿼리의 일괄 처리를 처리할 수 있습니다. 자습서, 코드 예제, API 참조 및 기타 설명서에서 방법을 설명합니다.'
+sections:
+  - title: 단계별 자습서
+    items:
+      - type: paragraph
+        text: .NET 응용 프로그램에 Apache Spark의 기능을 활용 합니다.
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/dotnet/spark/tutorials/get-started">Apache Spark 용 .NET 시작</a>
+          - html: <a href="/dotnet/spark/tutorials/hdinsight-deployment">Azure HDInsight에 Apache Spark 용 .NET 응용 프로그램 배포</a>
+          - html: <a href="/dotnet/spark/tutorials/amazon-emr-spark-deployment">Amazon EMR Spark에 Apache Spark 용 .NET 응용 프로그램 배포</a>
+          - html: <a href="/dotnet/spark/tutorials/databricks-deployment">Databricks에 Apache Spark 용 .NET 응용 프로그램 배포</a>
+  - title: 참조 및 리소스
+    items:
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/dotnet/api/?view=spark-dotnet">Apache Spark API 용 .NET</a>
+          - html: '<a href="https://github.com/dotnet/spark">Git 허브의 Apache Spark에 대 한 .NET</a>'
