@@ -1,22 +1,22 @@
 ---
-title: '방법: CSV 텍스트 파일의 열 값 계산(LINQ)(C#)'
+title: '방법: CSV 텍스트 파일의 열 값 컴퓨팅(LINQ)(C#)'
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 07fb81b474bd967d73dc9ff6a08e0c67e6ec0122
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0bc212ab40bccf5612ef6dea85608c439d2105f4
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585809"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012939"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>방법: CSV 텍스트 파일의 열 값 계산(LINQ)(C#)
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>방법: CSV 텍스트 파일의 열 값 컴퓨팅(LINQ)(C#)
 이 예제에서는 .csv 파일의 열에 대해 Sum, Average, Min 및 Max 등의 집계 계산을 수행하는 방법을 보여 줍니다. 여기 표시된 예제 원칙은 다른 형식의 구조화된 텍스트에 적용할 수 있습니다.  
   
-### <a name="to-create-the-source-file"></a>소스 파일을 만들려면  
+## <a name="to-create-the-source-file"></a>소스 파일을 만들려면  
   
 1. 다음 줄을 scores.csv 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다. 첫 번째 열은 학생 ID를 나타내고 후속 열은 4개 시험의 점수를 나타낸다고 가정합니다.  
   
-    ```  
+    ```csv
     111, 97, 92, 81, 60  
     112, 75, 84, 91, 39  
     113, 88, 94, 65, 91  
@@ -31,7 +31,7 @@ ms.locfileid: "65585809"
     122, 94, 92, 91, 91  
     ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```csharp  
 class SumColumns  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: e46083a9b8261cf8635d07e3b16f9c291bcc69a4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ec18f9afed04882f26b5d2f34f64c25be042ed5
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743806"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566871"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>캐스팅 및 형식 변환(C# 프로그래밍 가이드)
 
@@ -83,7 +83,7 @@ Giraffe g2 = (Giraffe) a;
   
  [!code-csharp[csProgGuideTypes#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#41)]  
   
- C#에서는 실제로 캐스트를 수행하기 전에 호환성을 테스트할 수 있도록 [is](../../language-reference/operators/type-testing-and-conversion-operators.md#is-operator) 연산자를 제공합니다. 자세한 내용은 [방법: 패턴 일치, as 및 is 연산자를 사용하여 안전하게 캐스트](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)를 참조하세요.  
+ C#에서는 실제로 캐스트를 수행하기 전에 호환성을 테스트할 수 있도록 [is](../../language-reference/operators/type-testing-and-cast.md#is-operator) 연산자를 제공합니다. 자세한 내용은 [방법: 패턴 일치, as 및 is 연산자를 사용하여 안전하게 캐스트](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)를 참조하세요.  
   
 ## <a name="c-language-specification"></a>C# 언어 사양
 
@@ -93,7 +93,7 @@ Giraffe g2 = (Giraffe) a;
 
 - [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
 - [유형](../../../csharp/programming-guide/types/index.md)
-- [() 캐스트 연산자](../../../csharp/language-reference/operators/type-testing-and-conversion-operators.md#cast-operator-)
+- [() 캐스트 연산자](../../../csharp/language-reference/operators/type-testing-and-cast.md#cast-operator-)
 - [사용자 정의 전환 연산자](../../../csharp/language-reference/operators/user-defined-conversion-operators.md)
 - [일반화된 형식 변환](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
 - [방법: 문자열을 숫자로 변환](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)

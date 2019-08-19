@@ -4,12 +4,12 @@ description: 어떤 데이터가 수집되고 수집 기능을 사용하지 않�
 ms.topic: conceptual
 ms.date: 05/05/2019
 ms.custom: ''
-ms.openlocfilehash: eab1e37d7d0d47251c4f92422730b105cf2db265
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: b9f6ccf7ff76f0cf4ce806f39909b7607a20b9f6
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433789"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567498"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>ML.NET CLI의 원격 분석 수집
 
@@ -36,7 +36,7 @@ ms.locfileid: "68433789"
 
 ML.NET CLI 원격 분석 기능은 기본적으로 사용됩니다.
 
-`DOTNET_CLI_TELEMETRY_OPTOUT` 환경 변수를 `1` 또는 `true`로 설정하여 원격 분석 기능을 옵트아웃(opt out)합니다. 이 환경 변수는 .NET CLI 도구에 전역적으로 적용됩니다.
+`MLDOTNET_CLI_TELEMETRY_OPTOUT` 환경 변수를 `1` 또는 `true`로 설정하여 원격 분석 기능을 옵트아웃(opt out)합니다. 이 환경 변수는 .NET CLI 도구에 전역적으로 적용됩니다.
 
 ## <a name="data-points-collected"></a>데이터 포인트 수집
 

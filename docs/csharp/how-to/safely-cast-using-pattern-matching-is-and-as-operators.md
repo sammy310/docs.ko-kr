@@ -6,16 +6,16 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 2e81628930afaca62a8614df8ca0f458238c23d6
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 764a69869b8a5b8f76e2f58aced51761af73e50e
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306356"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566281"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>방법: 패턴 일치와 is 및 as 연산자를 사용하여 안전하게 캐스트
 
-개체는 다형성이기 때문에 기본 클래스 형식의 변수에 파생 [형식](../programming-guide/types/index.md)이 포함될 수 있습니다. 파생 형식의 인스턴스 멤버에 액세스하려면 값을 파생 형식으로 다시 [캐스팅](../programming-guide/types/casting-and-type-conversions.md)해야 합니다. 그러나 캐스트는 <xref:System.InvalidCastException>이 throw될 위험을 생성합니다. C#은 성공하는 경우에만 조건부로 캐스트를 수행하는 [패턴 일치](../pattern-matching.md) 문을 제공합니다. C#은 또한 값이 특정 형식인지 테스트하기 위해 [is](../language-reference/operators/type-testing-and-conversion-operators.md#is-operator) 및 [as](../language-reference/operators/type-testing-and-conversion-operators.md#as-operator) 연산자를 제공합니다.
+개체는 다형성이기 때문에 기본 클래스 형식의 변수에 파생 [형식](../programming-guide/types/index.md)이 포함될 수 있습니다. 파생 형식의 인스턴스 멤버에 액세스하려면 값을 파생 형식으로 다시 [캐스팅](../programming-guide/types/casting-and-type-conversions.md)해야 합니다. 그러나 캐스트는 <xref:System.InvalidCastException>이 throw될 위험을 생성합니다. C#은 성공하는 경우에만 조건부로 캐스트를 수행하는 [패턴 일치](../pattern-matching.md) 문을 제공합니다. C#은 또한 값이 특정 형식인지 테스트하기 위해 [is](../language-reference/operators/type-testing-and-cast.md#is-operator) 및 [as](../language-reference/operators/type-testing-and-cast.md#as-operator) 연산자를 제공합니다.
 
 다음 코드에서는 패턴 일치 `is` 문을 보여 줍니다. 메서드 인수를 테스트하여 가능한 파생 형식 집합 중 하나인지 확인하는 메서드가 포함되어 있습니다.
 

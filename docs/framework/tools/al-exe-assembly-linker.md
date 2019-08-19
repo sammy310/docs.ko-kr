@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 87fcf4221dc5b334c6e9342c2aaac04a417a9f46
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: d75412394ce42f786da88f3d334853b99f266aca
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832769"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567193"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe(어셈블리 링커)
 
@@ -108,7 +108,7 @@ al sources options
 |al1015|'alinkui.dll' 메시지 파일을 찾을 수 없습니다.<br /><br /> *Al.exe*를 사용하려면 *Alinkui.dll*이 필요합니다. 이 파일이 경로에 있는지 확인합니다. 필요한 경우 제품 CD에서 복사합니다.|
 |al1016|유효한 입력 파일을 지정하지 않았습니다.<br /><br /> *Al.exe*를 사용하려면 어셈블리 정보가 없는 입력 파일이 하나 이상 필요합니다.|
 |al1017|대상 파일 이름을 지정하지 않았습니다.<br /><br /> 대상 파일 이름을 지정하는 필수 **/out** 옵션이 없습니다.|
-|al1018|‘file’ 필수 파일을 로드할 수 없습니다.<br /><br /> 특정 DLL 파일을 로드할 수 없습니다. Visual Studio 또는 Windows SDK(소프트웨어 개발 키트)를 다시 설치합니다.|
+|al1018|‘file’ 필수 파일을 로드할 수 없습니다.<br /><br /> 특정 DLL 파일을 로드할 수 없습니다. Visual Studio 또는 Windows SDK를 다시 설치합니다.|
 |al1019|어셈블리를 만드는 동안 메타데이터 오류 발생 - reason<br /><br /> 지정된 이유로 어셈블리 생성이 중단되었습니다. 예를 들어 **/win32res** 옵션으로 지정한 파일을 찾을 수 없는 경우 이 오류가 발생합니다.|
 |al1020|포함된 어셈블리 'file'을 무시합니다.<br /><br /> 어셈블리를 포함하는 입력 파일을 지정했습니다. *Al.exe* 입력 파일은 어셈블리를 포함할 수 없습니다.|
 |al1021|'setting': 이전 설정 재정의<br /><br /> 모듈에 사용자 지정 특성을 통해 할당된 특정 설정 값이 있었습니다. 이 값이 *Al.exe* 명령줄 옵션을 사용하여 전달된 값으로 재정의되었습니다.|

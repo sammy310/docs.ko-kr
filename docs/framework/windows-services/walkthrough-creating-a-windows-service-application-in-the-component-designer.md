@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 8d30b7b98648e36a3008ac015f9560620f77b363
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df2a99b6fe288cfa8b8a5d60bb127849323ed3a9
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751828"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545315"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>자습서: Windows 서비스 앱 만들기
 
@@ -37,7 +37,7 @@ ms.locfileid: "64751828"
 
 3. **이름**에서 *MyNewService*를 입력한 다음, **확인**을 선택합니다.
 
-   **디자인** 탭이 표시됩니다(**Service1.cs [디자인]** 또는 **Service1.vb [디자인]**).
+   **디자인** 탭이 표시됩니다(**Service1.cs [디자인]** 또는 **Service1.vb [디자인]** ).
 
    프로젝트 템플릿은 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>에서 상속된 `Service1`이라는 구성 요소 클래스를 포함합니다. 여기에는 서비스를 시작하는 코드 등의 많은 기본 서비스 코드가 포함됩니다.
 
@@ -249,7 +249,7 @@ ms.locfileid: "64751828"
     ```
 
     > [!NOTE]
-    > 서비스 제어 관리자는 [SERVICE_STATUS 구조체](/windows/desktop/api/winsvc/ns-winsvc-_service_status)의 `dwWaitHint` 및 `dwCheckpoint` 멤버를 사용하여 Windows 서비스가 시작 또는 종료될 때까지 기다릴 시간을 결정합니다. `OnStart` 및 `OnStop` 메서드가 오랫동안 실행되는 경우 서비스는 증분된 `dwCheckPoint` 값을 포함하여 `SetServiceStatus`을(를) 다시 호출하여 시간을 더 요청할 수 있습니다.
+    > 서비스 제어 관리자는 [SERVICE_STATUS 구조체](/windows/win32/api/winsvc/ns-winsvc-service_status)의 `dwWaitHint` 및 `dwCheckpoint` 멤버를 사용하여 Windows 서비스가 시작 또는 종료될 때까지 기다릴 시간을 결정합니다. `OnStart` 및 `OnStop` 메서드가 오랫동안 실행되는 경우 서비스는 증분된 `dwCheckPoint` 값을 포함하여 `SetServiceStatus`을(를) 다시 호출하여 시간을 더 요청할 수 있습니다.
 
 3. `MyNewService` 클래스에서 [플랫폼 호출](../interop/consuming-unmanaged-dll-functions.md)을 사용하여 [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) 함수를 선언합니다.
 
@@ -538,7 +538,7 @@ Windows 서비스 앱이 더 이상 필요 없는 경우 제거할 수 있습니
 
 이제 서비스를 만들었으므로 다음을 수행할 수 있습니다.
 
-- 다른 사용자가 Windows 서비스를 설치하는 데 사용하는 독립 실행형 설치 프로그램을 만듭니다. [WiX 도구 집합](http://wixtoolset.org/)를 사용하여 Windows 서비스의 설치 관리자를 만들 수 있습니다. 다른 아이디어를 보려면 [설치 관리자 패키지 만들기](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop)를 참조하세요.
+- 다른 사용자가 Windows 서비스를 설치하는 데 사용하는 독립 실행형 설치 프로그램을 만듭니다. [WiX 도구 집합](https://wixtoolset.org/)를 사용하여 Windows 서비스의 설치 관리자를 만들 수 있습니다. 다른 아이디어를 보려면 [설치 관리자 패키지 만들기](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop)를 참조하세요.
 
 - 설치한 서비스에 명령을 보낼 수 있는 <xref:System.ServiceProcess.ServiceController> 구성 요소를 살펴보세요.
 

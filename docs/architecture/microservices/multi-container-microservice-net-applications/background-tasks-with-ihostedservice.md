@@ -2,12 +2,12 @@
 title: IHostedService 및 BackgroundService 클래스를 사용하여 마이크로 서비스에서 백그라운드 작업 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | IHostedService 및 BackgroundService를 사용하여 마이크로 서비스 .NET Core에서 백그라운드 작업을 구현하는 새 옵션을 이해합니다.
 ms.date: 01/07/2019
-ms.openlocfilehash: 958253a3b8ba9f30807f19dd72a6a363ec7e7af2
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: b3dca8db6568e6e8429645d6b433886d1d289b95
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676250"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038133"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>IHostedService 및 BackgroundService 클래스를 사용하여 마이크로 서비스에서 백그라운드 작업 구현
 
@@ -193,7 +193,7 @@ public class GracePeriodManagerService : BackgroundService
             _logger.LogDebug($"GracePeriod task doing background work.");
 
             // This eShopOnContainers method is querying a database table
-            // and publishing events into the Event Bus (RabbitMS / ServiceBus)
+            // and publishing events into the Event Bus (RabbitMQ / ServiceBus)
             CheckConfirmedGracePeriodOrders();
 
             await Task.Delay(_settings.CheckUpdateTime, stoppingToken);

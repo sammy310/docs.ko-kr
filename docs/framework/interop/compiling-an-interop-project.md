@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 153df821b0dacccdcbf279bd20bfb106580f3392
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 37dda10a3dcbcb0968674e04292c5dc1a79be66f
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733431"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69013010"
 ---
 # <a name="compiling-an-interop-project"></a>Interop 프로젝트 컴파일
 
@@ -44,6 +44,6 @@ ms.locfileid: "68733431"
 - [.NET Framework에 COM 구성 요소 노출](exposing-com-components.md)
 - [언어 독립성 및 언어 독립적 구성 요소](../../standard/language-independence-and-language-independent-components.md)
 - [관리 코드에서 COM 형식 사용](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
-- [연습: Visual Studio에서 관리형 어셈블리의 형식 포함(C#)](/docs/csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
-- [연습: Visual Studio에서 관리형 어셈블리의 형식 포함(Visual Basic)](/docs/visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
+- [연습: Visual Studio에서 관리형 어셈블리의 형식 포함(C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
+- [연습: Visual Studio에서 관리형 어셈블리의 형식 포함(Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
 - [형식 라이브러리를 어셈블리로 가져오기](importing-a-type-library-as-an-assembly.md)

@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 96609264044e531bcc8671cb226a02fdc1b962b8
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 7ae19e48467bf5feca115c993c2299c1ecbaadc7
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796461"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566339"
 ---
 # <a name="lock-statement-c-reference"></a>lock 문(C# 참조)
 
@@ -54,7 +54,7 @@ finally
 공유 리소스에 대한 스레드 액세스를 동기화하는 경우 전용 개체 인스턴스(예: `private readonly object balanceLock = new object();`) 또는 코드의 관련 없는 파트에서 잠금 개체로 사용되지 않을 가능성이 있는 다른 인스턴스를 잠급니다. 교착 상태 또는 잠금 경합이 발생할 수 있으므로 다른 공유 리소스에 대해 동일한 잠금 개체 인스턴스를 사용하지 마세요. 특히 다음을 잠금 개체로 사용하지 마세요.
 
 - `this`(호출자가 잠금으로 사용할 수 있음).
-- <xref:System.Type> 인스턴스([typeof](../operators/type-testing-and-conversion-operators.md#typeof-operator) 연산자 또는 리플렉션에서 획득할 수 있음).
+- <xref:System.Type> 인스턴스([typeof](../operators/type-testing-and-cast.md#typeof-operator) 연산자 또는 리플렉션에서 획득할 수 있음).
 - 문자열 인스턴스(문자열 리터럴 포함)([인터닝](/dotnet/api/system.string.intern#remarks)될 수 있음).
 
 ## <a name="example"></a>예제

@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 1d58f6ef590e798e52730d79e56b8c16830c1712
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: fd804176a7579fe7c5e226bf5b4feb457cb2df14
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675280"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971199"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC 앱 개발
 
@@ -67,7 +67,7 @@ public class HomeController : Controller
 [HttpGet] 및 유사한 특성에서 경로를 지정할 수 있으므로 [Route] 특성을 별도로 추가할 필요가 없습니다. 특성 경로는 토큰을 사용하여 아래 표시된 것처럼 컨트롤러 또는 작업 이름을 반복해야 하는 필요성을 줄입니다.
 
 ```csharp
-[Route("[controller\]")]
+[Route("[controller]")]
 public class ProductsController : Controller
 {
     [Route("")] // Matches 'Products'
@@ -131,7 +131,7 @@ public class Startup
         var builder = new ConfigurationBuilder()
         .SetBasePath(env.ContentRootPath)
         .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-        .AddJsonFile(\$"appsettings.{env.EnvironmentName}.json", optional: true);
+        .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
     }
 }
 ```
@@ -476,7 +476,7 @@ public class Program
         StartConnectionAsync();
         _connection.On("receiveMessage", (arguments) =>;
         {
-            Console.WriteLine(\$"{arguments\[0\]} said: {arguments\[1\]}");
+            Console.WriteLine($"{arguments[0]} said: {arguments[1]}");
         });
         Console.ReadLine();
         StopConnectionAsync();

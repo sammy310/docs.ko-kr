@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, ASP.NET
 - dynamic Web applications [ASP.NET]
 ms.assetid: b7861df0-690a-4a58-bd12-f9d0123e40df
-ms.openlocfilehash: 0b36c25742757f2606d103d6af05eee7bc175ea0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b058e9df6b8ba5a9dd0066f9df1f4b233a00e162
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697312"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69039393"
 ---
 # <a name="developing-web-apps-with-aspnet"></a>ASP.NET을 사용하여 웹앱 개발
 
@@ -31,7 +31,7 @@ ASP.NET Core는 ASP.NET 4.x를 새롭게 디자인한 것입니다. ASP.NET Core
 - 더 간결하고 더 모듈식인 도구입니다.
 - 웹 UI 및 웹 API를 동일한 과정으로 빌드합니다.
 
-추가 이점 목록을 보려면 [ASP.NET Core를 사용하는 이유는 무엇인가요?](/aspnet/core#why-use-aspnet-core)를 참조하세요.
+추가 이점 목록을 보려면 [ASP.NET Core를 사용하는 이유는 무엇인가요?](/aspnet/core#why-choose-aspnet-core)를 참조하세요.
 
 ASP.NET Core(/aspnet/core)에 대한 자세한 내용은 다음을 참조하세요.
 

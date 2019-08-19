@@ -6,12 +6,12 @@ ms.date: 09/24/2018
 helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-ms.openlocfilehash: 73017b8f4c4c046b428d5270a2ef0241c565b07d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 43a35874b8c9f52c4b98a93e1217994980e1b223
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307041"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567371"
 ---
 # <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>방법: nullable 형식 식별(C# 프로그래밍 가이드)
 
@@ -19,7 +19,7 @@ ms.locfileid: "67307041"
 
 [!code-csharp-interactive[whether Type is nullable](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#1)]
 
-예제에서 보여주는 것과 같이 [typeof](../../language-reference/operators/type-testing-and-conversion-operators.md#typeof-operator) 연산자를 사용하여 <xref:System.Type?displayProperty=nameWithType> 개체를 만듭니다.  
+예제에서 보여주는 것과 같이 [typeof](../../language-reference/operators/type-testing-and-cast.md#typeof-operator) 연산자를 사용하여 <xref:System.Type?displayProperty=nameWithType> 개체를 만듭니다.  
   
 인스턴스가 있는지 nullable 형식인지 여부를 확인하려는 경우 위의 코드로 테스트되도록 <xref:System.Type> 인스턴스를 가져오는 데 <xref:System.Object.GetType%2A?displayProperty=nameWithType> 메서드를 사용하지 마십시오. nullable 형식의 인스턴스에서 <xref:System.Object.GetType%2A?displayProperty=nameWithType> 메서드를 호출하는 경우 인스턴스는 <xref:System.Object>로 [boxing](using-nullable-types.md#boxing-and-unboxing)됩니다. nullable 형식의 Null이 아닌 인스턴스의 boxing은 기본 형식 값의 boxing과 동일하며, <xref:System.Object.GetType%2A>는 nullable 형식의 기본 형식을 나타내는 <xref:System.Type> 개체를 반환합니다.
 

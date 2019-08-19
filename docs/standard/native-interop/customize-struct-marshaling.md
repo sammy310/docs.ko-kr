@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: da36f2a703fe817c171e192b9c94e473c93447a3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 6e3dcaeb71ae32812d3b022fff2bdc4e3e0691bf
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065986"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040147"
 ---
 # <a name="customizing-structure-marshaling"></a>구조체 마샬링 사용자 지정
 
@@ -319,7 +319,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>10진 필드 마샬링 사용자 지정
 
-Windows에서 작업하는 경우 네이티브 [`CY` 또는 `CURRENCY`](/windows/desktop/api/wtypes/ns-wtypes-tagcy) 구조체를 사용하는 일부 API를 발견할 수 있습니다. 기본적으로 .NET `decimal` 형식은 네이티브 [ `DECIMAL`](/windows/desktop/api/wtypes/ns-wtypes-tagdec) 구조체로 마샬링됩니다. 그러나 <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> 값과 함께 <xref:System.Runtime.InteropServices.MarshalAsAttribute>를 사용하여 `decimal` 값을 네이티브 `CY` 값으로 변환하도록 마샬러에 지정할 수 있습니다.
+Windows에서 작업하는 경우 네이티브 [`CY` 또는 `CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1) 구조체를 사용하는 일부 API를 발견할 수 있습니다. 기본적으로 .NET `decimal` 형식은 네이티브 [ `DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) 구조체로 마샬링됩니다. 그러나 <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> 값과 함께 <xref:System.Runtime.InteropServices.MarshalAsAttribute>를 사용하여 `decimal` 값을 네이티브 `CY` 값으로 변환하도록 마샬러에 지정할 수 있습니다.
 
 ```csharp
 public struct Currency
@@ -339,7 +339,7 @@ struct Currency
 ## <a name="marshaling-systemobjects"></a>`System.Object` 마샬링
 
 Windows에서 `object` 형식 필드를 네이티브 코드로 마샬링할 수 있습니다. 이러한 필드는 다음 세 가지 형식 중 하나로 마샬링할 수 있습니다.
-- [`VARIANT`](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)
+- [`VARIANT`](/windows/win32/api/oaidl/ns-oaidl-variant)
 - [`IUnknown*`](/windows/desktop/api/unknwn/nn-unknwn-iunknown)
 - [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch)
 

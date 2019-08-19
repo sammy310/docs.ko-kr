@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: cb2dd26d3f111e8de0dc9c7904837d9b053d17bb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f3b0fe20ae9f6eb50f26d044f18e02214ce97757
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724715"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038470"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework를 사용한 TLS(전송 계층 보안) 모범 사례
 
@@ -86,7 +86,7 @@ TCP 소켓 네트워킹에 대해 .NET Framework 4.7 이상 버전을 대상으�
 
 WCF는 .NET Framework의 나머지와 동일한 네트워킹 스택을 사용합니다.
 
-4.7.1을 대상으로 지정하면 다음 위치에 명시적으로 구성되지 않은 경우에 한해 WCF는 OS에서 기본적으로 가장 적합한 보안 프로토콜을 선택할 수 있도록 구성됩니다.
+4\.7.1을 대상으로 지정하면 다음 위치에 명시적으로 구성되지 않은 경우에 한해 WCF는 OS에서 기본적으로 가장 적합한 보안 프로토콜을 선택할 수 있도록 구성됩니다.
 
 - 애플리케이션 구성 파일.
 - **또는**소스 코드의 애플리케이션.
@@ -242,7 +242,7 @@ Windows Registry Editor Version 5.00
 사용으로 설정된 경우(기본적으로, `AppContext` 스위치 또는 Windows 레지스트리에서) .NET Framework는 앱이 TLS 보안 프로토콜을 요청할 때 `SCH_USE_STRONG_CRYPTO` 플래그를 사용합니다. `SCH_USE_STRONG_CRYPTO` 플래그는 기본적으로 `AppContext` 스위치 또는 레지스트리와 함께 사용할 수 있습니다. OS는 플래그를 `Schannel`에 전달하여 상호 운용성 향상을 위해 사용하도록 설정될 수 있는, 알려진 약한 암호화 알고리즘, 암호 도구 모음 및 TLS/SSL 프로토콜 버전을 사용하지 않도록 설정하도록 지시합니다. 자세한 내용은 다음을 참조하세요.
 
 - [보안 채널](/windows/desktop/SecAuthN/secure-channel)
-- [SCHANNEL_CRED 구조체](/windows/desktop/api/schannel/ns-schannel-_schannel_cred)
+- [SCHANNEL_CRED 구조체](/windows/win32/api/schannel/ns-schannel-schannel_cred)
 
 <xref:System.Net.SecurityProtocolType> 또는 <xref:System.Security.Authentication.SslProtocols>의 `Tls`(TLS 1.0), `Tls11` 또는 `Tls12` 열거 값을 명시적으로 사용할 경우 `SCH_USE_STRONG_CRYPTO` 플래그가 `Schannel`에도 전달됩니다.
 
