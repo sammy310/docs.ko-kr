@@ -3,12 +3,12 @@ title: .NET Core CLI 확장성 모델
 description: CLI(명령줄 인터페이스) 도구를 확장할 수 있는 방법을 알아봅니다.
 ms.date: 04/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 784eb50dfdbc0f88050a9f727ddbf53db34d3209
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 400d47f9d5bca53a23d09eb4eb94519f9824b473
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331010"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012980"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI 도구 확장성 모델
 
@@ -79,7 +79,8 @@ CLI 도구는 세 가지 주요 방법으로 확장할 수 있습니다.
 동일한 리포지토리에서 [사용된 도구의 구현](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestPackages)도 확인할 수 있습니다.
 
 ## <a name="custom-targets"></a>사용자 지정 대상
-NuGet에는 [사용자 지정 MSBuild 대상 및 props 파일을 패키지](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package)하는 기능이 있습니다. .NET Core CLI 도구가 MSBuild를 사용하도록 이동하면서 이제 동일한 확장성 메커니즘이 .NET Core 프로젝트에 적용됩니다. 빌드 프로세스를 확장하거나 빌드 프로세스에서 생성된 파일과 같은 아티팩트에 액세스하거나 빌드 호출 시 구성을 검사하려는 경우 이 유형의 확장성을 사용하게 됩니다.
+
+NuGet에는 [사용자 지정 MSBuild 대상 및 props 파일을 패키지](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package)하는 기능이 있습니다. .NET Core CLI 도구가 MSBuild를 사용하도록 이동하면서 이제 동일한 확장성 메커니즘이 .NET Core 프로젝트에 적용됩니다. 빌드 프로세스를 확장하거나 빌드 프로세스에서 생성된 파일과 같은 아티팩트에 액세스하거나 빌드 호출 시 구성을 검사하려는 경우 이 유형의 확장성을 사용하게 됩니다.
 
 다음 예제에서는 `csproj` 구문을 사용하여 대상의 프로젝트 파일을 볼 수 있습니다. 이렇게 하면 [`dotnet pack`](dotnet-pack.md) 명령에 대상 파일 및 어셈블리를 패키지 내의 *빌드* 폴더에 배치하여 패키지할 항목이 지정됩니다. `Label` 속성이 `dotnet pack instructions`로 설정된 `<ItemGroup>` 요소 및 그 아래에 정의된 Target을 확인합니다.
 
