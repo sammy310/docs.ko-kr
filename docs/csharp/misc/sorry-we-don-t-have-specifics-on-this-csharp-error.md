@@ -882,33 +882,33 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 168e72e3f9f09c1f13e9d34cc1048f1dfacc2592
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 6f5a76e5d90a8d3b1cf6284af2e753f56494af74
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052765"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597377"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>죄송 합니다. 이 C# 오류에 대한 구체적인 정보가 없습니다.
-죄송합니다. 이 오류에 대한 구체적인 정보가 없습니다. 오류 번호와 메시지 텍스트를 검색하여 웹에서 정보를 찾을 수 있습니다. 또는 다음이 포럼 중 하나를 사용 하 여 다른 개발자에 게 요청할 수 있습니다.  
+죄송합니다. 이 오류에 대한 구체적인 정보가 없습니다. 오류 번호와 메시지 텍스트를 검색하여 웹에서 정보를 찾을 수 있습니다. 또는 다음 포럼 중 하나를 사용 하 여 다른 개발자에 게 요청할 수 있습니다.  
   
  [Visual C# 언어](https://social.msdn.microsoft.com/Forums/home?forum=csharplanguage)  
- 시각적 개체에 대 한 일반적인 토론 질문을 위한 포럼을 제공 C# 언어 구문 및 컴파일러.  
+ 시각적 C# 언어 구문 및 컴파일러와 관련 된 질문과 일반적인 토론을 위한 포럼을 제공 합니다.  
   
  [Visual C# IDE](https://social.msdn.microsoft.com/Forums/home?forum=csharpide)  
- Visual Studio 환경에서 작업 하는 방법에 대 한 질문에 대 한 포럼을 제공 합니다.  
+ Visual Studio 환경에서 작업 하는 방법에 대 한 질문을 위한 포럼을 제공 합니다.  
   
  [Visual C# 일반](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=csharpgeneral)  
- 에 대 한 질문을 위한 포럼을 제공 하 고 시각적 개체를 사용 하 여 문제 C# 다른 포럼에서 다루지 않습니다.  
+ 다른 포럼에서 다루지 않는 시각적 개체 C# 및 문제에 대 한 질문을 위한 포럼을 제공 합니다.  
   
  [스택 오버플로](https://stackoverflow.com/questions/tagged/c%23)  
- 에 대 한 질문을 위한 포럼을 제공 하 고 시각적 개체를 사용 하 여 문제 C#입니다.  
+ 시각적 개체 C#에 대 한 질문과 문제에 대 한 포럼을 제공 합니다.  
   
  다음 항목도 참조하세요.  
- [Visual C# 프로그래머를 위한 추가 리소스](../../csharp/getting-started/additional-resources.md)  
+ [Visual C# 프로그래머를 위한 추가 리소스](../getting-started/additional-resources.md)  
   
 ## <a name="see-also"></a>참고자료
 
-- [C# 프로그래밍 가이드](../../csharp/programming-guide/index.md)
-- [C# 참조](../../csharp/language-reference/index.md)
+- [C# 프로그래밍 가이드](../programming-guide/index.md)
+- [C# 참조](../language-reference/index.md)
 - [의견 보내기](/visualstudio/ide/talk-to-us)
