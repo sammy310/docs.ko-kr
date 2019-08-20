@@ -6,12 +6,12 @@ helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: 258ade63ab7c9008f6c892ed109bf5ea5ab974f3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 24c6d54c3fe92ada661e732adec582e87ab62417
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584603"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597525"
 ---
 # <a name="arrays-c-programming-guide"></a>배열(C# 프로그래밍 가이드)
 
@@ -27,7 +27,7 @@ ms.locfileid: "64584603"
 
  배열에는 다음과 같은 속성이 있습니다.  
   
-- 배열은 [단일 차원](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md), [다차원](../../../csharp/programming-guide/arrays/multidimensional-arrays.md) 또는 [가변](../../../csharp/programming-guide/arrays/jagged-arrays.md)일 수 있습니다.  
+- 배열은 [단일 차원](./single-dimensional-arrays.md), [다차원](./multidimensional-arrays.md) 또는 [가변](./jagged-arrays.md)일 수 있습니다.  
   
 - 차원 수와 각 차원의 길이는 배열 인스턴스를 만들 때 설정됩니다. 이러한 값은 인스턴스의 수명 동안 변경할 수 없습니다.  
   
@@ -39,15 +39,15 @@ ms.locfileid: "64584603"
   
 - 배열 요소 형식은 배열 형식을 비롯한 어떤 형식도 될 수 있습니다.  
   
-- 배열 형식은 <xref:System.Array> 추상 기본 형식에서 파생된 [참조 형식](../../../csharp/language-reference/keywords/reference-types.md)입니다. 이 형식은 <xref:System.Collections.IEnumerable> 및 <xref:System.Collections.Generic.IEnumerable%601>을 구현하므로 C#의 모든 배열에서 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 반복을 사용할 수 있습니다.  
+- 배열 형식은 <xref:System.Array> 추상 기본 형식에서 파생된 [참조 형식](../../language-reference/keywords/reference-types.md)입니다. 이 형식은 <xref:System.Collections.IEnumerable> 및 <xref:System.Collections.Generic.IEnumerable%601>을 구현하므로 C#의 모든 배열에서 [foreach](../../language-reference/keywords/foreach-in.md) 반복을 사용할 수 있습니다.  
   
 ## <a name="related-sections"></a>관련 단원  
   
-- [개체로 사용되는 배열](../../../csharp/programming-guide/arrays/arrays-as-objects.md)  
+- [개체로 사용되는 배열](./arrays-as-objects.md)  
   
-- [배열에 foreach 사용](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)  
+- [배열에 foreach 사용](./using-foreach-with-arrays.md)  
   
-- [인수로 배열 전달](../../../csharp/programming-guide/arrays/passing-arrays-as-arguments.md)  
+- [인수로 배열 전달](./passing-arrays-as-arguments.md)  
   
 ## <a name="c-language-specification"></a>C# 언어 사양
 
@@ -55,5 +55,5 @@ ms.locfileid: "64584603"
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [컬렉션](../../../csharp/programming-guide/concepts/collections.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [컬렉션](../concepts/collections.md)

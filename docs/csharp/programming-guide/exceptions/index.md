@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: 34357ac313e20c5bab5505984f92ea06df80a5c2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c2b991a45a53ce4a8295d6181da11cb09fda6ddb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595411"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590200"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>예외 및 예외 처리(C# 프로그래밍 가이드)
 C# 언어의 예외 처리 기능은 프로그램이 실행 중일 때 발생하는 예기치 않은 문제나 예외 상황을 처리하는 데 도움이 됩니다. 예외 처리는 `try`, `catch` 및 `finally` 키워드를 사용하여 실패했을 수 있는 작업을 시도하고, 실패를 처리하는 것이 적절하다고 판단될 때 처리하고, 리소스를 정리합니다. 예외는 CLR(공용 언어 런타임), .NET Framework, 타사 라이브러리 또는 애플리케이션 코드에서 생성될 수 있습니다. 예외는 `throw` 키워드를 사용하여 생성됩니다.  
@@ -49,17 +49,17 @@ C# 언어의 예외 처리 기능은 프로그램이 실행 중일 때 발생하
 ## <a name="related-sections"></a>관련 단원  
  예외 및 예외 처리에 대한 자세한 내용은 다음 항목을 참조하세요.  
   
-- [예외 사용](../../../csharp/programming-guide/exceptions/using-exceptions.md)  
+- [예외 사용](./using-exceptions.md)  
   
-- [예외 처리](../../../csharp/programming-guide/exceptions/exception-handling.md)  
+- [예외 처리](./exception-handling.md)  
   
-- [예외 만들기 및 Throw](../../../csharp/programming-guide/exceptions/creating-and-throwing-exceptions.md)  
+- [예외 만들기 및 Throw](./creating-and-throwing-exceptions.md)  
   
-- [컴파일러 생성 예외](../../../csharp/programming-guide/exceptions/compiler-generated-exceptions.md)  
+- [컴파일러 생성 예외](./compiler-generated-exceptions.md)  
   
-- [방법: try/catch를 사용하여 예외 처리(C# 프로그래밍 가이드)](../../../csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md)  
+- [방법: try/catch를 사용하여 예외 처리(C# 프로그래밍 가이드)](./how-to-handle-an-exception-using-try-catch.md)  
   
-- [방법: finally를 사용하여 정리 코드 실행](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
+- [방법: finally를 사용하여 정리 코드 실행](./how-to-execute-cleanup-code-using-finally.md)  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
 
@@ -68,10 +68,10 @@ C# 언어의 예외 처리 기능은 프로그램이 실행 중일 때 발생하
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.SystemException>
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [C# 키워드](../../../csharp/language-reference/keywords/index.md)
-- [throw](../../../csharp/language-reference/keywords/throw.md)
-- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)
-- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)
-- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [C# 키워드](../../language-reference/keywords/index.md)
+- [throw](../../language-reference/keywords/throw.md)
+- [try-catch](../../language-reference/keywords/try-catch.md)
+- [try-finally](../../language-reference/keywords/try-finally.md)
+- [try-catch-finally](../../language-reference/keywords/try-catch-finally.md)
 - [예외](../../../standard/exceptions/index.md)

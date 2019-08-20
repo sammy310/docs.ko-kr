@@ -8,12 +8,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: 0c97a5b843d27258f58d654d35420a262d5b741a
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: ba5d2a9fb74b877c9b847343a9012ccb9624335e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65062967"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69604229"
 ---
 # <a name="get-started-with-c"></a>C\# 시작
 
@@ -43,15 +43,15 @@ ms.locfileid: "65062967"
 
 ## <a name="related-sections"></a>관련 단원
 
-* [C# 프로그래밍 가이드](../../csharp/programming-guide/index.md)
+* [C# 프로그래밍 가이드](../programming-guide/index.md)
 
     C# 프로그래밍 개념에 대한 정보를 제공하고 C#에서 다양한 작업을 수행하는 방법을 설명합니다.
 
-* [C# 참조](../../csharp/language-reference/index.md)
+* [C# 참조](../language-reference/index.md)
 
     C# 키워드, 연산자, 전처리기 지시문, 컴파일러 옵션 및 컴파일러 오류와 경고에 대한 자세한 참조 정보를 제공합니다.
 
-* [연습](../../csharp/walkthroughs.md)
+* [연습](../walkthroughs.md)
 
     C#을 사용하는 프로그래밍 연습 및 각 연습에 대한 간단한 설명에 대한 링크를 제공합니다.
 

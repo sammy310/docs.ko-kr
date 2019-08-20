@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 0bf9fe8124578ba9bd192e10d517e3b0df7e5982
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2e820a4d08e938aaf21e4f57db63e6b4f1b5225a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744257"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608285"
 ---
 # <a name="c-guide"></a>C# 가이드
 
@@ -30,7 +30,7 @@ C# 가이드는 C# 언어에 대한 많은 리소스를 제공합니다. 이 사
 
 ## <a name="how-the-c-guide-is-organized"></a>C# 가이드의 구성 방식
 
-C# 가이드에는 여러 섹션이 있습니다. 순서대로 읽거나 가장 많이 관심이 가는 부분으로 직접 이동할 수 있습니다. 일부 섹션에서는 이 언어를 매우 깊이 있게 다룹니다. 다른 섹션에서는 C# 및 .NET Framework를 사용하여 만들 수 있는 프로그램 종류 중 일부를 보여 주는 종단 간 시나리오를 제공합니다.
+C# 가이드에는 여러 섹션이 있습니다. 순서대로 읽거나 가장 많이 관심이 가는 부분으로 직접 이동할 수 있습니다. 일부 섹션에서는 이 언어를 매우 깊이 있게 다룹니다. 다른 섹션에서는 C# 및 .NET Framework를 사용하여 만들 수 있는 프로그램 종류 중 일부를 보여 주는 엔드투엔드 시나리오를 제공합니다.
 
 * [시작](getting-started/index.md)
   * 이 섹션에서는 기본 플랫폼에서 C# 개발 환경을 위해 설치해야 하는 항목을 소개합니다. 이 섹션의 다른 항목에서는 지원되는 다양한 환경에서 첫 번째 C# 프로그램을 만드는 방법을 설명합니다.
@@ -39,7 +39,7 @@ C# 가이드에는 여러 섹션이 있습니다. 순서대로 읽거나 가장 
   * C# 소개 자습서는 완전 초보 개발자가 REPL(Read-Eval-Print Loop) 인터페이스를 사용하여 브라우저에서 C# 언어를 살펴보고 배울 수 있는 대화형 학습서를 제공합니다. 대화형 단원을 완료한 후 컴퓨터에서 같은 단원을 연습하여 코딩 기술을 향상할 수 있습니다.
 
 * [자습서](tutorials/index.md)
-  * 이 섹션에서는 설명 및 코드를 비롯하여 다양한 종단 간 시나리오를 제시합니다. 특정 코드 관용구가 선호되는 이유, 다양한 상황에서 가장 잘 작동하는 C# 기능 및 일반적인 작업에 대한 참조 구현을 보여 줍니다. 코드를 통해 최고의 모범 사례를 배우려면 이 섹션부터 시작하세요. 모든 코드를 다운로드하고 사용자 환경에서 테스트해볼 수도 있습니다.
+  * 이 섹션에서는 설명 및 코드를 비롯하여 다양한 엔드투엔드 시나리오를 제시합니다. 특정 코드 관용구가 선호되는 이유, 다양한 상황에서 가장 잘 작동하는 C# 기능 및 일반적인 작업에 대한 참조 구현을 보여 줍니다. 코드를 통해 최고의 모범 사례를 배우려면 이 섹션부터 시작하세요. 모든 코드를 다운로드하고 사용자 환경에서 테스트해볼 수도 있습니다.
 
 * [C# 둘러보기](tour-of-csharp/index.md)
   * 이 섹션에서는 이 언어의 개요를 살펴봅니다. C# 프로그램을 구성하는 요소와 이 언어의 기능을 다룹니다. C#의 모든 구문 요소를 포함하는 간단한 샘플을 보여 주고 주요 C# 언어 항목을 설명합니다.
@@ -52,16 +52,16 @@ C# 가이드에는 여러 섹션이 있습니다. 순서대로 읽거나 가장 
   * The .NET Compiler Platform SDK enables you to write components that analyze code, and suggest or make improvements to that code. In this section, you'll learn how the APIs are organized, and how you can create code that enables rules and practices for your team. You'll also see samples, end-to-end scenarios, and links to other libraries with more examples using these APIs.
 -->
 
-* [C# 프로그래밍 가이드](../csharp/programming-guide/index.md)
+* [C# 프로그래밍 가이드](./programming-guide/index.md)
   * C# 언어 구문을 사용하는 방법에 대해 설명하고 실제 예제를 제공합니다.
 
-* [연습](../csharp/walkthroughs.md)
+* [연습](./walkthroughs.md)
   * C#을 사용하는 프로그래밍 연습 및 각 연습에 대한 간단한 설명에 대한 링크를 제공합니다.
 
 * [언어 참조](language-reference/index.md)
   * 이 섹션에서는 C# 언어에 대한 참조 자료를 제공합니다. 이 자료는 C#의 구문 및 의미 체계를 이해하는 데 도움이 됩니다. 또한 형식, 연산자, 특성, 전처리기 지시문, 컴파일러 스위치, 컴파일러 오류 및 컴파일러 경고에 대한 참조 자료도 포함하고 있습니다.
 
-* [C# 언어 사양](../csharp/language-reference/language-specification/index.md)
+* [C# 언어 사양](./language-reference/language-specification/index.md)
   * C# 언어 사양의 최신 버전에 대한 링크를 제공합니다.
 
 ## <a name="see-also"></a>참고 항목

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 330e4e8b36f03b028786920422cd325b31d814e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 30c44b9f98bcc61d54b8103b6b40d14fd35715f4
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61711202"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589182"
 ---
 # <a name="interfaces-c-programming-guide"></a>인터페이스(C# 프로그래밍 가이드)
 
@@ -31,7 +31,7 @@ ms.locfileid: "61711202"
   
 추상 클래스에 대한 자세한 내용은 [추상 및 봉인 클래스와 클래스 멤버](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md)를 참조하세요.  
   
-인터페이스에는 메서드, 속성, 이벤트, 인덱서 또는 이러한 네 가지 멤버 형식의 조합이 포함될 수 있습니다. 예제에 대한 링크는[관련 단원](../interfaces/index.md#BKMK_RelatedSections)을 참조하세요. 인터페이스에는 상수, 필드, 연산자, 인스턴스 생성자, 종료자 또는 형식이 포함될 수 없습니다. 인터페이스 멤버는 자동으로 공용이 되며 액세스 한정자를 포함할 수 없습니다. 또한 멤버는 [정적](../../language-reference/keywords/static.md)일 수 없습니다.  
+인터페이스에는 메서드, 속성, 이벤트, 인덱서 또는 이러한 네 가지 멤버 형식의 조합이 포함될 수 있습니다. 예제에 대한 링크는[관련 단원](./index.md#BKMK_RelatedSections)을 참조하세요. 인터페이스에는 상수, 필드, 연산자, 인스턴스 생성자, 종료자 또는 형식이 포함될 수 없습니다. 인터페이스 멤버는 자동으로 공용이 되며 액세스 한정자를 포함할 수 없습니다. 또한 멤버는 [정적](../../language-reference/keywords/static.md)일 수 없습니다.  
   
 인터페이스 멤버를 구현하려면 구현 클래스의 해당 멤버가 공용이고 비정적이어야 하며 인터페이스 멤버와 동일한 이름 및 서명을 사용해야 합니다.  
   

@@ -6,27 +6,27 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 21ada083f69b0acf49490b331c5a416361a2ee84
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 1b80082d10ad9ee760a184f496793ad5c69202da
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "67802310"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588486"
 ---
 # <a name="strings-c-programming-guide"></a>문자열(C# 프로그래밍 가이드)
 문자열은 값이 텍스트인 <xref:System.String> 형식의 개체입니다. 내부적으로 텍스트는 <xref:System.Char> 개체의 순차적 읽기 전용 컬렉션으로 저장됩니다. C# 문자열의 끝에 null 종료 문자가 없으므로 C# 문자열에는 포함된 null 문자('\0')를 여러 개 사용할 수 있습니다. 문자열의 <xref:System.String.Length%2A> 속성은 유니코드 문자 수가 아닌 포함된 `Char` 개체 수를 나타냅니다. 문자열에서 개별 유니코드 코드 포인트에 액세스하려면 <xref:System.Globalization.StringInfo> 개체를 사용합니다.  
   
 ## <a name="string-vs-systemstring"></a>문자열과 System.String  
- C#에서 `string` 키워드는 <xref:System.String>의 별칭입니다. 따라서 `String` 및 `string`은 동일하며 원하는 명명 규칙을 사용할 수 있습니다. `String` 클래스는 문자열을 안전하게 작성, 조작 및 비교할 수 있도록 다양한 메서드를 제공합니다. 또한 C# 언어는 일반적인 문자열 작업을 간소화 하기 위해 일부 연산자를 오버로드합니다. 키워드에 대한 자세한 내용은 [string](../../../csharp/language-reference/keywords/string.md)을 참조하세요. 형식 및 메서드에 대한 자세한 내용은 <xref:System.String>을 참조하세요.  
+ C#에서 `string` 키워드는 <xref:System.String>의 별칭입니다. 따라서 `String` 및 `string`은 동일하며 원하는 명명 규칙을 사용할 수 있습니다. `String` 클래스는 문자열을 안전하게 작성, 조작 및 비교할 수 있도록 다양한 메서드를 제공합니다. 또한 C# 언어는 일반적인 문자열 작업을 간소화 하기 위해 일부 연산자를 오버로드합니다. 키워드에 대한 자세한 내용은 [string](../../language-reference/keywords/string.md)을 참조하세요. 형식 및 메서드에 대한 자세한 내용은 <xref:System.String>을 참조하세요.  
   
 ## <a name="declaring-and-initializing-strings"></a>문자열 선언 및 초기화  
  다음 예제에서와 같이 다양한 방법으로 문자열을 선언하고 초기화할 수 있습니다.  
   
  [!code-csharp[csProgGuideStrings#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#1)]  
   
- 문자 배열이 포함된 문자열을 초기화할 경우를 제외하고는 문자열 개체를 만들기 위해 [new](../../../csharp/language-reference/operators/new-operator.md) 연산자를 사용하지 않습니다.  
+ 문자 배열이 포함된 문자열을 초기화할 경우를 제외하고는 문자열 개체를 만들기 위해 [new](../../language-reference/operators/new-operator.md) 연산자를 사용하지 않습니다.  
   
- 문자열 길이가 0인 새 <xref:System.String> 개체를 만들려면 <xref:System.String.Empty> 상수 값이 포함된 문자열을 초기화하세요. 빈 문자열을 문자열 리터럴로 나타내면 ""로 표시됩니다. [null](../../../csharp/language-reference/keywords/null.md) 대신 <xref:System.String.Empty> 값이 포함된 문자열을 초기화하면 <xref:System.NullReferenceException> 발생을 줄일 수 있습니다. 액세스하기 전에 문자열의 값을 확인하려면 정적 <xref:System.String.IsNullOrEmpty%28System.String%29> 메서드를 사용하세요.  
+ 문자열 길이가 0인 새 <xref:System.String> 개체를 만들려면 <xref:System.String.Empty> 상수 값이 포함된 문자열을 초기화하세요. 빈 문자열을 문자열 리터럴로 나타내면 ""로 표시됩니다. [null](../../language-reference/keywords/null.md) 대신 <xref:System.String.Empty> 값이 포함된 문자열을 초기화하면 <xref:System.NullReferenceException> 발생을 줄일 수 있습니다. 액세스하기 전에 문자열의 값을 확인하려면 정적 <xref:System.String.IsNullOrEmpty%28System.String%29> 메서드를 사용하세요.  
   
 ## <a name="immutability-of-string-objects"></a>문자열 개체의 불변성  
  문자열 개체는 *변경할 수 없습니다*. 즉, 생성된 후에는 바꿀 수 없습니다. 실제로 문자열을 수정하는 것으로 나타나는 모든 <xref:System.String> 메서드 및 C# 연산자는 새로운 문자열 개체에 결과를 반환합니다. 다음 예제에서 `s1` 및 `s2`의 콘텐츠는 단일 문자열을 형성하도록 연결되며, 두 개의 원본 문자열은 변경되지 않습니다. `+=` 연산자는 결합된 콘텐츠를 포함하는 새 문자열을 만듭니다. 새 개체는 `s1` 변수에 할당되며, 참조를 유지하는 변수가 없으므로 `s1`에 할당된 원래 개체는 가비지 수집을 위해 해제됩니다.  
@@ -125,7 +125,7 @@ string s = String.Empty;
  [!code-csharp[TestStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/TestStringBuilder.cs)]
   
 ## <a name="strings-extension-methods-and-linq"></a>문자열, 확장 메서드 및 LINQ  
- <xref:System.String> 형식이 <xref:System.Collections.Generic.IEnumerable%601>을 구현하므로 문자열에서 <xref:System.Linq.Enumerable> 클래스에 정의된 확장 메서드를 사용할 수 있습니다. 시각적인 혼란을 방지하기 위해 <xref:System.String> 형식의 경우 이러한 메서드가 IntelliSense에서 제외되지만, 제외되더라도 사용할 수는 있습니다. 문자열에서 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 식을 사용할 수도 있습니다. 자세한 내용은 [LINQ 및 문자열](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)을 참조하세요.  
+ <xref:System.String> 형식이 <xref:System.Collections.Generic.IEnumerable%601>을 구현하므로 문자열에서 <xref:System.Linq.Enumerable> 클래스에 정의된 확장 메서드를 사용할 수 있습니다. 시각적인 혼란을 방지하기 위해 <xref:System.String> 형식의 경우 이러한 메서드가 IntelliSense에서 제외되지만, 제외되더라도 사용할 수는 있습니다. 문자열에서 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 식을 사용할 수도 있습니다. 자세한 내용은 [LINQ 및 문자열](../concepts/linq/linq-and-strings.md)을 참조하세요.  
   
 ## <a name="related-topics"></a>관련 항목  
   
@@ -136,12 +136,12 @@ string s = String.Empty;
 |[방법: 여러 문자열 연결](../../how-to/concatenate-multiple-strings.md)|여러 문자열을 하나로 조인하는 다양한 방법을 보여줍니다.|
 |[방법: String.Split을 사용하여 문자열 구문 분석](../../how-to/parse-strings-using-split.md)|`String.Split` 메서드를 사용하여 문자열을 구문 분석하는 방법을 보여주는 코드 예제가 포함되어 있습니다.|  
 |[방법: 검색 문자열](../../how-to/search-strings.md)|문자열에서 특정 텍스트 또는 패턴에 대해 검색을 사용하는 방법을 설명합니다.|  
-|[방법: 문자열이 숫자 값을 나타내는지 확인](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|문자열에 올바른 숫자 값이 있는지 여부를 확인할 수 있도록 문자열을 안전하게 구문 분석하는 방법을 보여 줍니다.|  
+|[방법: 문자열이 숫자 값을 나타내는지 확인](./how-to-determine-whether-a-string-represents-a-numeric-value.md)|문자열에 올바른 숫자 값이 있는지 여부를 확인할 수 있도록 문자열을 안전하게 구문 분석하는 방법을 보여 줍니다.|  
 |[문자열 보간](../../language-reference/tokens/interpolated.md)|문자열의 서식을 지정하는 편리한 구문을 제공하는 문자열 보간 기능에 대해 설명합니다.|
-|[기본적인 문자열 작업](../../../../docs/standard/base-types/basic-string-operations.md)|<xref:System.String?displayProperty=nameWithType> 및 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 메서드를 사용하여 기본적인 문자열 작업을 수행하는 항목에 대한 링크를 제공합니다.|  
+|[기본적인 문자열 작업](../../../standard/base-types/basic-string-operations.md)|<xref:System.String?displayProperty=nameWithType> 및 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 메서드를 사용하여 기본적인 문자열 작업을 수행하는 항목에 대한 링크를 제공합니다.|  
 |[Parsing Strings](../../../standard/base-types/parsing-strings.md)|.NET 기본 형식의 문자열 표현을 해당 형식의 인스턴스로 변환하는 방법에 대해 설명합니다.|  
 |[.NET에서 날짜 및 시간 문자열 구문 분석](../../../standard/base-types/parsing-datetime.md)|"01/24/2008"과 같은 문자열을 <xref:System.DateTime?displayProperty=nameWithType> 개체로 변환하는 방법을 보여 줍니다.|  
-|[문자열 비교](../../../../docs/standard/base-types/comparing.md)|문자열을 비교하는 방법에 대한 정보가 포함되어 있으며, C# 및 Visual Basic의 예제를 제공합니다.|  
+|[문자열 비교](../../../standard/base-types/comparing.md)|문자열을 비교하는 방법에 대한 정보가 포함되어 있으며, C# 및 Visual Basic의 예제를 제공합니다.|  
 |[StringBuilder 클래스 사용](../../../standard/base-types/stringbuilder.md)|<xref:System.Text.StringBuilder> 클래스를 사용하여 동적 문자열 개체를 만들고 수정하는 방법을 설명합니다.|  
-|[LINQ 및 문자열](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)|LINQ 쿼리를 사용하여 다양한 문자열 작업을 수행하는 방법에 대한 정보를 제공합니다.|  
-|[C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)|C#에서 프로그래밍 구문을 설명하는 항목에 대한 링크를 제공합니다.|  
+|[LINQ 및 문자열](../concepts/linq/linq-and-strings.md)|LINQ 쿼리를 사용하여 다양한 문자열 작업을 수행하는 방법에 대한 정보를 제공합니다.|  
+|[C# 프로그래밍 가이드](../index.md)|C#에서 프로그래밍 구문을 설명하는 항목에 대한 링크를 제공합니다.|  
