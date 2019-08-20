@@ -12,40 +12,40 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-ms.openlocfilehash: f1334ff7aa07f49139bfe684746ae9cc3cf8087c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c801facd95d93652414409549bb5ff2fa633748b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663165"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611533"
 ---
-# <a name="mod-operator-visual-basic"></a><span data-ttu-id="509a5-102">Mod 연산자 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="509a5-102">Mod operator (Visual Basic)</span></span>
-<span data-ttu-id="509a5-103">두 숫자를 나누고 나머지만 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-103">Divides two numbers and returns only the remainder.</span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="509a5-104">구문</span><span class="sxs-lookup"><span data-stu-id="509a5-104">Syntax</span></span>  
-  
-```  
-number1 Mod number2  
-```  
-  
-## <a name="parts"></a><span data-ttu-id="509a5-105">요소</span><span class="sxs-lookup"><span data-stu-id="509a5-105">Parts</span></span>  
- `number1`  
- <span data-ttu-id="509a5-106">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="509a5-106">Required.</span></span> <span data-ttu-id="509a5-107">임의의 숫자 식입니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-107">Any numeric expression.</span></span>  
-  
- `number2`  
- <span data-ttu-id="509a5-108">필수.</span><span class="sxs-lookup"><span data-stu-id="509a5-108">Required.</span></span> <span data-ttu-id="509a5-109">임의의 숫자 식입니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-109">Any numeric expression.</span></span>  
-  
-## <a name="supported-types"></a><span data-ttu-id="509a5-110">지원 되는 형식</span><span class="sxs-lookup"><span data-stu-id="509a5-110">Supported types</span></span>  
- <span data-ttu-id="509a5-111">모든 숫자 형식.</span><span class="sxs-lookup"><span data-stu-id="509a5-111">All numeric types.</span></span> <span data-ttu-id="509a5-112">여기에 부동 소수점 및 부호 없는 형식 및 `Decimal`합니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-112">This includes the unsigned and floating-point types and `Decimal`.</span></span>  
-  
-## <a name="result"></a><span data-ttu-id="509a5-113">결과</span><span class="sxs-lookup"><span data-stu-id="509a5-113">Result</span></span>
+# <a name="mod-operator-visual-basic"></a><span data-ttu-id="099ff-102">Mod 연산자 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="099ff-102">Mod operator (Visual Basic)</span></span>
+<span data-ttu-id="099ff-103">두 숫자를 나누고 나머지만 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-103">Divides two numbers and returns only the remainder.</span></span>
 
-<span data-ttu-id="509a5-114">결과 나머지 `number1` 나눈 `number2`합니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-114">The result is the remainder after `number1` is divided by `number2`.</span></span> <span data-ttu-id="509a5-115">예를 들어 식 `14 Mod 4` 2로 계산 합니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-115">For example, the expression `14 Mod 4` evaluates to 2.</span></span>  
+## <a name="syntax"></a><span data-ttu-id="099ff-104">구문</span><span class="sxs-lookup"><span data-stu-id="099ff-104">Syntax</span></span>
+
+```vb
+result = number1 Mod number2
+```
+  
+## <a name="parts"></a><span data-ttu-id="099ff-105">요소</span><span class="sxs-lookup"><span data-stu-id="099ff-105">Parts</span></span>  
+ <span data-ttu-id="099ff-106">`result` 필수입니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-106">`result` Required.</span></span> <span data-ttu-id="099ff-107">임의의 숫자 변수 또는 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-107">Any numeric variable or property.</span></span>
+
+ <span data-ttu-id="099ff-108">`number1` 필수입니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-108">`number1` Required.</span></span> <span data-ttu-id="099ff-109">임의의 숫자 식입니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-109">Any numeric expression.</span></span>
+
+ <span data-ttu-id="099ff-110">`number2` 필수입니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-110">`number2` Required.</span></span> <span data-ttu-id="099ff-111">임의의 숫자 식입니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-111">Any numeric expression.</span></span>
+
+## <a name="supported-types"></a><span data-ttu-id="099ff-112">지원 되는 형식</span><span class="sxs-lookup"><span data-stu-id="099ff-112">Supported types</span></span>
+ <span data-ttu-id="099ff-113">모든 숫자 형식.</span><span class="sxs-lookup"><span data-stu-id="099ff-113">All numeric types.</span></span> <span data-ttu-id="099ff-114">여기에는 부호 없는 및 부동 소수점 형식 및 `Decimal`가 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-114">This includes the unsigned and floating-point types and `Decimal`.</span></span>
+
+## <a name="result"></a><span data-ttu-id="099ff-115">결과</span><span class="sxs-lookup"><span data-stu-id="099ff-115">Result</span></span>
+
+<span data-ttu-id="099ff-116">결과는가로 `number1` `number2`나뉜 후의 나머지입니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-116">The result is the remainder after `number1` is divided by `number2`.</span></span> <span data-ttu-id="099ff-117">예를 들어 식은 `14 Mod 4` 2로 계산 됩니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-117">For example, the expression `14 Mod 4` evaluates to 2.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="509a5-116">간에 차이가 *나머지* 하 고 *모듈러스* 수학에서 음수 값에 대해 다른 결과 사용 하 여 합니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-116">There is a difference between *remainder* and *modulus* in mathematics, with different results for negative numbers.</span></span> <span data-ttu-id="509a5-117">합니다 `Mod` .NET Framework, Visual Basic의 연산자 `op_Modulus` 연산자 및 내부 [rem](<xref:System.Reflection.Emit.OpCodes.Rem>) 나머지 작업을 모두 수행 하는 IL 명령입니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-117">The `Mod` operator in Visual Basic, the .NET Framework `op_Modulus` operator, and the underlying [rem](<xref:System.Reflection.Emit.OpCodes.Rem>) IL instruction all perform a remainder operation.</span></span>
+> <span data-ttu-id="099ff-118">수학의 *나머지가* 서로 다르며 음수에 대해 다른 결과가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-118">There is a difference between *remainder* and *modulus* in mathematics, with different results for negative numbers.</span></span> <span data-ttu-id="099ff-119">Visual Basic `Mod` , .NET Framework `op_Modulus` 연산자 및 기본 [rem](<xref:System.Reflection.Emit.OpCodes.Rem>) IL 명령의 연산자는 모두 나머지 작업을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-119">The `Mod` operator in Visual Basic, the .NET Framework `op_Modulus` operator, and the underlying [rem](<xref:System.Reflection.Emit.OpCodes.Rem>) IL instruction all perform a remainder operation.</span></span>
 
-<span data-ttu-id="509a5-118">결과 `Mod` 는 피제수의 부호를 유지 하는 작업 `number1`, 이므로 양수 또는 음수일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-118">The result of a `Mod` operation retains the sign of the dividend, `number1`, and so it may be positive or negative.</span></span> <span data-ttu-id="509a5-119">결과 항상 범위 (-`number2`, `number2`), 배타적입니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-119">The result is always in the range (-`number2`, `number2`), exclusive.</span></span> <span data-ttu-id="509a5-120">예를 들어:</span><span class="sxs-lookup"><span data-stu-id="509a5-120">For example:</span></span>
+<span data-ttu-id="099ff-120">`Mod` 작업의 결과는 `number1`피제수의 부호를 유지 하므로 양수 또는 음수일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-120">The result of a `Mod` operation retains the sign of the dividend, `number1`, and so it may be positive or negative.</span></span> <span data-ttu-id="099ff-121">결과는 항상 (-`number2`, `number2`) (제외) 범위 내에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-121">The result is always in the range (-`number2`, `number2`), exclusive.</span></span> <span data-ttu-id="099ff-122">예를 들어:</span><span class="sxs-lookup"><span data-stu-id="099ff-122">For example:</span></span>
 
 ```vb
 Public Module Example
@@ -63,50 +63,52 @@ End Module
 '      -8 Mod -3 = -2
 ```
 
-## <a name="remarks"></a><span data-ttu-id="509a5-121">설명</span><span class="sxs-lookup"><span data-stu-id="509a5-121">Remarks</span></span>  
- <span data-ttu-id="509a5-122">이면 `number1` 또는 `number2` 값인 부동 소수점 나누기의 부동 소수점 나머지를 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-122">If either `number1` or `number2` is a floating-point value, the floating-point remainder of the division is returned.</span></span> <span data-ttu-id="509a5-123">결과의 데이터 형식은 변수의 데이터 형식과 나누기에서 발생 하는 모든 가능한 값을 보유할 수 있는 가장 작은 데이터 형식 `number1` 고 `number2`입니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-123">The data type of the result is the smallest data type that can hold all possible values that result from division with the data types of `number1` and `number2`.</span></span>  
-  
- <span data-ttu-id="509a5-124">하는 경우 `number1` 또는 `number2` 로 [Nothing](../../../visual-basic/language-reference/nothing.md)를 0으로 처리 됩니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-124">If `number1` or `number2` evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), it is treated as zero.</span></span>  
-  
- <span data-ttu-id="509a5-125">관련 된 연산자는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-125">Related operators include the following:</span></span>  
-  
-- <span data-ttu-id="509a5-126">합니다 [\ 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) 나눗셈 몫의 정수 몫을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-126">The [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) returns the integer quotient of a division.</span></span> <span data-ttu-id="509a5-127">예를 들어 식 `14 \ 4` 3 평가 합니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-127">For example, the expression `14 \ 4` evaluates to 3.</span></span>  
-  
-- <span data-ttu-id="509a5-128">합니다 [/ 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) 나머지 부분에서는 부동 소수점 숫자를 포함 하 여 전체 몫을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-128">The [/ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) returns the full quotient, including the remainder, as a floating-point number.</span></span> <span data-ttu-id="509a5-129">예를 들어 식 `14 / 4` 3.5로 계산 합니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-129">For example, the expression `14 / 4` evaluates to 3.5.</span></span>  
-  
-## <a name="attempted-division-by-zero"></a><span data-ttu-id="509a5-130">0으로 나누기</span><span class="sxs-lookup"><span data-stu-id="509a5-130">Attempted division by zero</span></span>  
- <span data-ttu-id="509a5-131">하는 경우 `number2` 의 동작을 0으로 계산 되는 `Mod` 연산자는 피연산자의 데이터 형식에 따라 달라 집니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-131">If `number2` evaluates to zero, the behavior of the `Mod` operator depends on the data type of the operands.</span></span> <span data-ttu-id="509a5-132">정수 나누기를 throw 한 <xref:System.DivideByZeroException> 예외입니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-132">An integral division throws a <xref:System.DivideByZeroException> exception.</span></span> <span data-ttu-id="509a5-133">부동 소수점 나누기 반환 <xref:System.Double.NaN>합니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-133">A floating-point division returns <xref:System.Double.NaN>.</span></span>  
-  
-## <a name="equivalent-formula"></a><span data-ttu-id="509a5-134">해당 하는 수식</span><span class="sxs-lookup"><span data-stu-id="509a5-134">Equivalent formula</span></span>  
- <span data-ttu-id="509a5-135">식 `a Mod b` 다음 수식 중 하나에 해당 합니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-135">The expression `a Mod b` is equivalent to either of the following formulas:</span></span>  
-  
- `a - (b * (a \ b))`  
-  
- `a - (b * Fix(a / b))`  
-  
-## <a name="floating-point-imprecision"></a><span data-ttu-id="509a5-136">부동 소수점 연산이</span><span class="sxs-lookup"><span data-stu-id="509a5-136">Floating-point imprecision</span></span>  
- <span data-ttu-id="509a5-137">부동 소수점 숫자를 사용 하 여 작업할 때 없다는 점에 주의 해야 하는 항상 정확한 10 진수 표현을 메모리에서.</span><span class="sxs-lookup"><span data-stu-id="509a5-137">When you work with floating-point numbers, remember that they do not always have a precise decimal representation in memory.</span></span> <span data-ttu-id="509a5-138">값 비교 등의 특정 작업에서 예기치 않은 결과가 발생할 수 있습니다 및 `Mod` 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-138">This can lead to unexpected results from certain operations, such as value comparison and the `Mod` operator.</span></span> <span data-ttu-id="509a5-139">자세한 내용은 [데이터 형식 문제 해결](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-139">For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).</span></span>  
-  
-## <a name="overloading"></a><span data-ttu-id="509a5-140">오버로딩</span><span class="sxs-lookup"><span data-stu-id="509a5-140">Overloading</span></span>  
- <span data-ttu-id="509a5-141">`Mod` 연산자 *오버 로드 된*, 즉, 클래스 또는 구조체의 동작을 재정의할 수는 있습니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-141">The `Mod` operator can be *overloaded*, which means that a class or structure can redefine its behavior.</span></span> <span data-ttu-id="509a5-142">코드에 적용 되는 경우 `Mod` 클래스 또는 이러한 오버 로드를 포함 하는 구조체의 인스턴스에 사용할 다시 정의 된 동작을 알고 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-142">If your code applies `Mod` to an instance of a class or structure that includes such an overload, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="509a5-143">자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="509a5-143">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="509a5-144">예제</span><span class="sxs-lookup"><span data-stu-id="509a5-144">Example</span></span>  
- <span data-ttu-id="509a5-145">다음 예제에서는 `Mod` 두 숫자를 나누고 나머지만 반환 하는 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-145">The following example uses the `Mod` operator to divide two numbers and return only the remainder.</span></span> <span data-ttu-id="509a5-146">부동 소수점 숫자로 번호 이거나을 사용 하는 경우 나머지를 나타내는 부동 소수점 숫자로 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-146">If either number is a floating-point number, the result is a floating-point number that represents the remainder.</span></span>  
-  
- [!code-vb[VbVbalrOperators#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#31)]  
-  
-## <a name="example"></a><span data-ttu-id="509a5-147">예제</span><span class="sxs-lookup"><span data-stu-id="509a5-147">Example</span></span>  
- <span data-ttu-id="509a5-148">다음 예제에서는 부동 소수점 피연산자의 잠재적 부정확성을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-148">The following example demonstrates the potential imprecision of floating-point operands.</span></span> <span data-ttu-id="509a5-149">피연산자가 첫 번째 문에서 `Double`, 0.2는 저장 된 값이 0.20000000000000001 인 무한 반복 이진 되 소수입니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-149">In the first statement, the operands are `Double`, and 0.2 is an infinitely repeating binary fraction with a stored value of 0.20000000000000001.</span></span> <span data-ttu-id="509a5-150">두 번째 문에 리터럴 형식 문자 `D` 대 한 두 피연산자를 강제로 `Decimal`, 0.2에 정확한 표현이 고 합니다.</span><span class="sxs-lookup"><span data-stu-id="509a5-150">In the second statement, the literal type character `D` forces both operands to `Decimal`, and 0.2 has a precise representation.</span></span>  
-  
- [!code-vb[VbVbalrOperators#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#32)]  
-  
-## <a name="see-also"></a><span data-ttu-id="509a5-151">참고자료</span><span class="sxs-lookup"><span data-stu-id="509a5-151">See also</span></span>
+## <a name="remarks"></a><span data-ttu-id="099ff-123">설명</span><span class="sxs-lookup"><span data-stu-id="099ff-123">Remarks</span></span>
+ <span data-ttu-id="099ff-124">`number1` 또는`number2` 가 부동 소수점 값인 경우 나누기의 부동 소수점 나머지가 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-124">If either `number1` or `number2` is a floating-point value, the floating-point remainder of the division is returned.</span></span> <span data-ttu-id="099ff-125">결과의 데이터 형식은 및 `number1` `number2`의 데이터 형식 나누기의 결과로 생성 되는 모든 가능한 값을 보유할 수 있는 가장 작은 데이터 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-125">The data type of the result is the smallest data type that can hold all possible values that result from division with the data types of `number1` and `number2`.</span></span>
+
+ <span data-ttu-id="099ff-126">또는 `number1` 가`number2` [Nothing](../../../visual-basic/language-reference/nothing.md)으로 계산 되 면 0으로 처리 됩니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-126">If `number1` or `number2` evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), it is treated as zero.</span></span>
+
+ <span data-ttu-id="099ff-127">관련 연산자는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-127">Related operators include the following:</span></span>
+
+- <span data-ttu-id="099ff-128">[\ 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) 는 나눗셈의 정수 몫을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-128">The [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) returns the integer quotient of a division.</span></span> <span data-ttu-id="099ff-129">예를 들어 식은 `14 \ 4` 3으로 계산 됩니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-129">For example, the expression `14 \ 4` evaluates to 3.</span></span>
+
+- <span data-ttu-id="099ff-130">[/연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) 는 나머지를 포함 하 여 전체 몫을 부동 소수점 숫자로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-130">The [/ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) returns the full quotient, including the remainder, as a floating-point number.</span></span> <span data-ttu-id="099ff-131">예를 들어 식은 `14 / 4` 3.5로 계산 됩니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-131">For example, the expression `14 / 4` evaluates to 3.5.</span></span>
+
+## <a name="attempted-division-by-zero"></a><span data-ttu-id="099ff-132">0으로 나누기 시도</span><span class="sxs-lookup"><span data-stu-id="099ff-132">Attempted division by zero</span></span>
+ <span data-ttu-id="099ff-133">가 `number2` 0으로 계산 되는 경우 `Mod` 연산자의 동작은 피연산자의 데이터 형식에 따라 달라 집니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-133">If `number2` evaluates to zero, the behavior of the `Mod` operator depends on the data type of the operands:</span></span>
+ - <span data-ttu-id="099ff-134">정수 나누기는 컴파일 시간 <xref:System.DivideByZeroException> 에을 `number2` 확인할 수 없는 경우 예외를 throw 하 고 컴파일 시간에가 0 `BC30542    Division by zero occurred while evaluating this expression` 으로 `number2` 계산 되는 경우 컴파일 시간 오류를 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-134">An integral division throws a <xref:System.DivideByZeroException> exception if `number2` cannot be determined in compile-time and generates a compile-time error `BC30542    Division by zero occurred while evaluating this expression` if `number2` is evaluated to zero at compile-time.</span></span>
+ - <span data-ttu-id="099ff-135">부동 소수점 나누기는를 반환 <xref:System.Double.NaN?displayProperty=nameWithType>합니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-135">A floating-point division returns <xref:System.Double.NaN?displayProperty=nameWithType>.</span></span>
+
+## <a name="equivalent-formula"></a><span data-ttu-id="099ff-136">동일한 수식</span><span class="sxs-lookup"><span data-stu-id="099ff-136">Equivalent formula</span></span>
+ <span data-ttu-id="099ff-137">식은 `a Mod b` 다음 수식 중 하에 해당 합니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-137">The expression `a Mod b` is equivalent to either of the following formulas:</span></span>
+
+ `a - (b * (a \ b))`
+
+ `a - (b * Fix(a / b))`
+
+## <a name="floating-point-imprecision"></a><span data-ttu-id="099ff-138">부동 소수점 부정확</span><span class="sxs-lookup"><span data-stu-id="099ff-138">Floating-point imprecision</span></span>
+ <span data-ttu-id="099ff-139">부동 소수점 숫자를 사용 하는 경우 메모리에 항상 정확한 10 진수가 없다는 것을 명심 하십시오.</span><span class="sxs-lookup"><span data-stu-id="099ff-139">When you work with floating-point numbers, remember that they do not always have a precise decimal representation in memory.</span></span> <span data-ttu-id="099ff-140">이로 인해 값 비교 및 `Mod` 연산자와 같은 특정 작업에서 예기치 않은 결과가 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-140">This can lead to unexpected results from certain operations, such as value comparison and the `Mod` operator.</span></span> <span data-ttu-id="099ff-141">자세한 내용은 [데이터 형식 문제 해결](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="099ff-141">For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).</span></span>
+
+## <a name="overloading"></a><span data-ttu-id="099ff-142">오버로딩</span><span class="sxs-lookup"><span data-stu-id="099ff-142">Overloading</span></span>
+ <span data-ttu-id="099ff-143">연산자를 오버 로드할 수 있습니다. 즉, 클래스 또는 구조체에서 해당 동작을 다시 정의할 수 있습니다. `Mod`</span><span class="sxs-lookup"><span data-stu-id="099ff-143">The `Mod` operator can be *overloaded*, which means that a class or structure can redefine its behavior.</span></span> <span data-ttu-id="099ff-144">코드가 이러한 오버 로드 `Mod` 를 포함 하는 클래스 또는 구조체의 인스턴스에 적용 되는 경우 다시 정의 된 동작을 이해 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-144">If your code applies `Mod` to an instance of a class or structure that includes such an overload, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="099ff-145">자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="099ff-145">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>
+
+## <a name="example"></a><span data-ttu-id="099ff-146">예제</span><span class="sxs-lookup"><span data-stu-id="099ff-146">Example</span></span>
+ <span data-ttu-id="099ff-147">다음 예에서는 `Mod` 연산자를 사용 하 여 두 숫자를 나누고 나머지만 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-147">The following example uses the `Mod` operator to divide two numbers and return only the remainder.</span></span> <span data-ttu-id="099ff-148">두 숫자 중 하나가 부동 소수점 숫자인 경우 결과는 나머지를 나타내는 부동 소수점 숫자입니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-148">If either number is a floating-point number, the result is a floating-point number that represents the remainder.</span></span>
+
+ [!code-vb[VbVbalrOperators#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#31)]
+
+## <a name="example"></a><span data-ttu-id="099ff-149">예제</span><span class="sxs-lookup"><span data-stu-id="099ff-149">Example</span></span>
+ <span data-ttu-id="099ff-150">다음 예제에서는 부동 소수점 피연산자의 잠재적 부정확을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-150">The following example demonstrates the potential imprecision of floating-point operands.</span></span> <span data-ttu-id="099ff-151">첫 번째 문에서 피연산자 `Double`는이 고, 0.2는 저장 된 값이 0.20000000000000001 인 무한 반복 이진 분수입니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-151">In the first statement, the operands are `Double`, and 0.2 is an infinitely repeating binary fraction with a stored value of 0.20000000000000001.</span></span> <span data-ttu-id="099ff-152">두 번째 문에서 리터럴 형식 문자 `D` 는 두 피연산자를 모두로 `Decimal`강제 적용 하며, 0.2에는 정확한 표현이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="099ff-152">In the second statement, the literal type character `D` forces both operands to `Decimal`, and 0.2 has a precise representation.</span></span>
+
+ [!code-vb[VbVbalrOperators#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#32)]
+
+## <a name="see-also"></a><span data-ttu-id="099ff-153">참고자료</span><span class="sxs-lookup"><span data-stu-id="099ff-153">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.Conversion.Int%2A>
 - <xref:Microsoft.VisualBasic.Conversion.Fix%2A>
-- [<span data-ttu-id="509a5-152">산술 연산자</span><span class="sxs-lookup"><span data-stu-id="509a5-152">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [<span data-ttu-id="509a5-153">Visual Basic에서의 연산자 우선 순위</span><span class="sxs-lookup"><span data-stu-id="509a5-153">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [<span data-ttu-id="509a5-154">기능별 연산자 목록</span><span class="sxs-lookup"><span data-stu-id="509a5-154">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [<span data-ttu-id="509a5-155">데이터 형식 문제 해결</span><span class="sxs-lookup"><span data-stu-id="509a5-155">Troubleshooting Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [<span data-ttu-id="509a5-156">Visual Basic의 산술 연산자</span><span class="sxs-lookup"><span data-stu-id="509a5-156">Arithmetic Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [<span data-ttu-id="509a5-157">\ 연산자 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="509a5-157">\ Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/integer-division-operator.md)
+- [<span data-ttu-id="099ff-154">산술 연산자</span><span class="sxs-lookup"><span data-stu-id="099ff-154">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [<span data-ttu-id="099ff-155">Visual Basic에서의 연산자 우선 순위</span><span class="sxs-lookup"><span data-stu-id="099ff-155">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [<span data-ttu-id="099ff-156">기능별 연산자 목록</span><span class="sxs-lookup"><span data-stu-id="099ff-156">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [<span data-ttu-id="099ff-157">데이터 형식 문제 해결</span><span class="sxs-lookup"><span data-stu-id="099ff-157">Troubleshooting Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [<span data-ttu-id="099ff-158">Visual Basic의 산술 연산자</span><span class="sxs-lookup"><span data-stu-id="099ff-158">Arithmetic Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [<span data-ttu-id="099ff-159">\ 연산자 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="099ff-159">\ Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/integer-division-operator.md)

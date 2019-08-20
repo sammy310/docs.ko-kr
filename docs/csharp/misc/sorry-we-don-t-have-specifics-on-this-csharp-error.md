@@ -882,33 +882,33 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 168e72e3f9f09c1f13e9d34cc1048f1dfacc2592
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 6f5a76e5d90a8d3b1cf6284af2e753f56494af74
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052765"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597377"
 ---
-# <a name="sorry-we-dont-have-specifics-on-this-c-error"></a><span data-ttu-id="9b2e1-102">죄송 합니다. 이 C# 오류에 대한 구체적인 정보가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="9b2e1-102">Sorry, we don't have specifics on this C# error</span></span>
-<span data-ttu-id="9b2e1-103">죄송합니다. 이 오류에 대한 구체적인 정보가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="9b2e1-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="9b2e1-104">오류 번호와 메시지 텍스트를 검색하여 웹에서 정보를 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9b2e1-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="9b2e1-105">또는 다음이 포럼 중 하나를 사용 하 여 다른 개발자에 게 요청할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9b2e1-105">Or you can ask other developers using one of these forums:</span></span>  
+# <a name="sorry-we-dont-have-specifics-on-this-c-error"></a><span data-ttu-id="6b1b8-102">죄송 합니다. 이 C# 오류에 대한 구체적인 정보가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="6b1b8-102">Sorry, we don't have specifics on this C# error</span></span>
+<span data-ttu-id="6b1b8-103">죄송합니다. 이 오류에 대한 구체적인 정보가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="6b1b8-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="6b1b8-104">오류 번호와 메시지 텍스트를 검색하여 웹에서 정보를 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6b1b8-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="6b1b8-105">또는 다음 포럼 중 하나를 사용 하 여 다른 개발자에 게 요청할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6b1b8-105">Or you can ask other developers using one of these forums:</span></span>  
   
- [<span data-ttu-id="9b2e1-106">Visual C# 언어</span><span class="sxs-lookup"><span data-stu-id="9b2e1-106">Visual C# Language</span></span>](https://social.msdn.microsoft.com/Forums/home?forum=csharplanguage)  
- <span data-ttu-id="9b2e1-107">시각적 개체에 대 한 일반적인 토론 질문을 위한 포럼을 제공 C# 언어 구문 및 컴파일러.</span><span class="sxs-lookup"><span data-stu-id="9b2e1-107">Provides a forum for questions about and general discussions of the Visual C# language syntax and compiler.</span></span>  
+ [<span data-ttu-id="6b1b8-106">Visual C# 언어</span><span class="sxs-lookup"><span data-stu-id="6b1b8-106">Visual C# Language</span></span>](https://social.msdn.microsoft.com/Forums/home?forum=csharplanguage)  
+ <span data-ttu-id="6b1b8-107">시각적 C# 언어 구문 및 컴파일러와 관련 된 질문과 일반적인 토론을 위한 포럼을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="6b1b8-107">Provides a forum for questions about and general discussions of the Visual C# language syntax and compiler.</span></span>  
   
- [<span data-ttu-id="9b2e1-108">Visual C# IDE</span><span class="sxs-lookup"><span data-stu-id="9b2e1-108">Visual C# IDE</span></span>](https://social.msdn.microsoft.com/Forums/home?forum=csharpide)  
- <span data-ttu-id="9b2e1-109">Visual Studio 환경에서 작업 하는 방법에 대 한 질문에 대 한 포럼을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="9b2e1-109">Provides a forum for questions about how to work in the Visual Studio environment.</span></span>  
+ [<span data-ttu-id="6b1b8-108">Visual C# IDE</span><span class="sxs-lookup"><span data-stu-id="6b1b8-108">Visual C# IDE</span></span>](https://social.msdn.microsoft.com/Forums/home?forum=csharpide)  
+ <span data-ttu-id="6b1b8-109">Visual Studio 환경에서 작업 하는 방법에 대 한 질문을 위한 포럼을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="6b1b8-109">Provides a forum for questions about how to work in the Visual Studio environment.</span></span>  
   
- [<span data-ttu-id="9b2e1-110">Visual C# 일반</span><span class="sxs-lookup"><span data-stu-id="9b2e1-110">Visual C# General</span></span>](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=csharpgeneral)  
- <span data-ttu-id="9b2e1-111">에 대 한 질문을 위한 포럼을 제공 하 고 시각적 개체를 사용 하 여 문제 C# 다른 포럼에서 다루지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9b2e1-111">Provides a forum for questions about and issues with Visual C# that are not discussed in other forums.</span></span>  
+ [<span data-ttu-id="6b1b8-110">Visual C# 일반</span><span class="sxs-lookup"><span data-stu-id="6b1b8-110">Visual C# General</span></span>](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=csharpgeneral)  
+ <span data-ttu-id="6b1b8-111">다른 포럼에서 다루지 않는 시각적 개체 C# 및 문제에 대 한 질문을 위한 포럼을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="6b1b8-111">Provides a forum for questions about and issues with Visual C# that are not discussed in other forums.</span></span>  
   
- [<span data-ttu-id="9b2e1-112">스택 오버플로</span><span class="sxs-lookup"><span data-stu-id="9b2e1-112">Stack Overflow</span></span>](https://stackoverflow.com/questions/tagged/c%23)  
- <span data-ttu-id="9b2e1-113">에 대 한 질문을 위한 포럼을 제공 하 고 시각적 개체를 사용 하 여 문제 C#입니다.</span><span class="sxs-lookup"><span data-stu-id="9b2e1-113">Provides a forum for questions about and issues with Visual C#.</span></span>  
+ [<span data-ttu-id="6b1b8-112">스택 오버플로</span><span class="sxs-lookup"><span data-stu-id="6b1b8-112">Stack Overflow</span></span>](https://stackoverflow.com/questions/tagged/c%23)  
+ <span data-ttu-id="6b1b8-113">시각적 개체 C#에 대 한 질문과 문제에 대 한 포럼을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="6b1b8-113">Provides a forum for questions about and issues with Visual C#.</span></span>  
   
- <span data-ttu-id="9b2e1-114">다음 항목도 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9b2e1-114">Also see:</span></span>  
- [<span data-ttu-id="9b2e1-115">Visual C# 프로그래머를 위한 추가 리소스</span><span class="sxs-lookup"><span data-stu-id="9b2e1-115">Additional Resources for Visual C# Programmers</span></span>](../../csharp/getting-started/additional-resources.md)  
+ <span data-ttu-id="6b1b8-114">다음 항목도 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="6b1b8-114">Also see:</span></span>  
+ [<span data-ttu-id="6b1b8-115">Visual C# 프로그래머를 위한 추가 리소스</span><span class="sxs-lookup"><span data-stu-id="6b1b8-115">Additional Resources for Visual C# Programmers</span></span>](../getting-started/additional-resources.md)  
   
-## <a name="see-also"></a><span data-ttu-id="9b2e1-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="9b2e1-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6b1b8-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="6b1b8-116">See also</span></span>
 
-- [<span data-ttu-id="9b2e1-117">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="9b2e1-117">C# Programming Guide</span></span>](../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="9b2e1-118">C# 참조</span><span class="sxs-lookup"><span data-stu-id="9b2e1-118">C# Reference</span></span>](../../csharp/language-reference/index.md)
-- [<span data-ttu-id="9b2e1-119">의견 보내기</span><span class="sxs-lookup"><span data-stu-id="9b2e1-119">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
+- [<span data-ttu-id="6b1b8-117">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="6b1b8-117">C# Programming Guide</span></span>](../programming-guide/index.md)
+- [<span data-ttu-id="6b1b8-118">C# 참조</span><span class="sxs-lookup"><span data-stu-id="6b1b8-118">C# Reference</span></span>](../language-reference/index.md)
+- [<span data-ttu-id="6b1b8-119">의견 보내기</span><span class="sxs-lookup"><span data-stu-id="6b1b8-119">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
