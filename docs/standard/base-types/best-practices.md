@@ -14,10 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: serodec18
 ms.openlocfilehash: c782ab0ce5886a95c8c914930d80d66b4839b9b8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "64634712"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET의 정규식에 대한 모범 사례
@@ -90,7 +90,7 @@ ms.locfileid: "64634712"
   
 - 특정 정규식과 밀접하게 연결된 특수 용도의 <xref:System.Text.RegularExpressions.Regex> 개체를 만들고, 컴파일하고, 독립 실행형 어셈블리에 저장할 수 있습니다. 이 작업은 <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> 메서드를 호출하여 수행합니다.  
   
- 정규식 일치 메서드를 호출하는 특정 방법마다 응용 프로그램에 중대한 영향을 줄 수 있습니다. 다음 단원에서는 응용 프로그램의 성능 향상을 위해 정적 메서드 호출, 해석된 정규식 및 컴파일된 정규식을 사용해야 하는 경우에 대해 설명합니다.  
+ 정규식 일치 메서드를 호출하는 특정 방법마다 애플리케이션에 중대한 영향을 줄 수 있습니다. 다음 단원에서는 애플리케이션의 성능 향상을 위해 정적 메서드 호출, 해석된 정규식 및 컴파일된 정규식을 사용해야 하는 경우에 대해 설명합니다.  
   
 > [!IMPORTANT]
 >  동일한 정규식을 메서드 호출에 반복해서 사용하거나 애플리케이션에 정규식 개체가 광범위하게 사용될 경우 메서드 호출의 형태(정적, 해석, 컴파일)는 성능에 영향을 줍니다.  
@@ -113,7 +113,7 @@ ms.locfileid: "64634712"
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/static2.cs#4)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/static2.vb#4)]  
   
- 기본적으로 가장 최근에 사용된 15개의 정적 정규식 패턴이 캐시됩니다. 캐시된 정적 정규식이 대량으로 필요한 응용 프로그램의 경우 <xref:System.Text.RegularExpressions.Regex.CacheSize%2A?displayProperty=nameWithType> 속성을 설정하여 캐시 크기를 조정할 수 있습니다.  
+ 기본적으로 가장 최근에 사용된 15개의 정적 정규식 패턴이 캐시됩니다. 캐시된 정적 정규식이 대량으로 필요한 애플리케이션의 경우 <xref:System.Text.RegularExpressions.Regex.CacheSize%2A?displayProperty=nameWithType> 속성을 설정하여 캐시 크기를 조정할 수 있습니다.  
   
  이 예제에서 사용된 정규식 `\p{Sc}+\s*\d+`는 입력 문자열에 통화 기호와 한 자릿수 이상의 숫자가 포함되었는지를 확인합니다. 패턴은 다음 표와 같이 정의됩니다.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "64634712"
   
  <xref:System.Text.RegularExpressions.RegexOptions.Compiled> 옵션의 사양을 통해 정규식 엔진에 바인딩된 정규식 패턴은 컴파일된 정규식입니다. 즉, 정규식 개체가 인스턴스화되거나 정적 정규식 메서드가 호출될 때 캐시에서 정규식을 찾을 수 없으면 정규식 엔진이 정규식을 중간 상태의 작업 코드 집합으로 변환하고 그런 다음 MSIL로 변환합니다. 메서드를 호출하면 JIT가 이 MSIL을 실행합니다. 해석된 정규식과는 달리 컴파일된 정규식은 시작 시간이 늘어나지만 개별 패턴 일치 메서드의 실행 속도가 빨라집니다. 따라서 정규식을 컴파일하여 얻을 수 있는 성능 이점은 정규식 메서드가 호출되는 횟수에 비례하여 증가합니다.  
   
- 요약하면, 특정 정규식에 대한 정규식 메서드 호출이 비교적 적게 수행될 경우 해석된 정규식을 사용하는 것이 좋으며, 특정 정규식에 대한 정규식 메서드 호출이 비교적 자주 수행될 경우 컴파일된 정규식을 사용해야 합니다. 해석된 정규식의 실행 속도 감소가 줄어든 시작 시간으로 인해 얻게 된 이점보다 더 커지거나, 컴파일된 정규식의 느려진 시작 시간이 빨라진 실행 속도의 이점보다 더 커지게 되는 정확한 임계점은 쉽게 결정할 수 없는 사항입니다. 이러한 임계점은 정규식의 복잡성과 정규식으로 처리되는 특정 데이터를 비롯한 다양한 요소들에 따라 달라집니다. 특정 응용 프로그램 시나리오에서 해석된 정규식과 컴파일된 정규식 중 어느 쪽의 성능이 더 좋은지 확인하기 위해 <xref:System.Diagnostics.Stopwatch> 클래스를 사용하여 각각의 실행 시간을 비교해 볼 수 있습니다.  
+ 요약하면, 특정 정규식에 대한 정규식 메서드 호출이 비교적 적게 수행될 경우 해석된 정규식을 사용하는 것이 좋으며, 특정 정규식에 대한 정규식 메서드 호출이 비교적 자주 수행될 경우 컴파일된 정규식을 사용해야 합니다. 해석된 정규식의 실행 속도 감소가 줄어든 시작 시간으로 인해 얻게 된 이점보다 더 커지거나, 컴파일된 정규식의 느려진 시작 시간이 빨라진 실행 속도의 이점보다 더 커지게 되는 정확한 임계점은 쉽게 결정할 수 없는 사항입니다. 이러한 임계점은 정규식의 복잡성과 정규식으로 처리되는 특정 데이터를 비롯한 다양한 요소들에 따라 달라집니다. 특정 애플리케이션 시나리오에서 해석된 정규식과 컴파일된 정규식 중 어느 쪽의 성능이 더 좋은지 확인하기 위해 <xref:System.Diagnostics.Stopwatch> 클래스를 사용하여 각각의 실행 시간을 비교해 볼 수 있습니다.  
   
  다음 예제에서는 Theodore Dreiser가 저술한 *The Financier* 책에서 처음 10개의 문장을 읽을 때와 모든 문장을 읽을 때 컴파일된 정규식과 해석된 정규식의 성능 차이를 비교해서 보여줍니다. 아래 예제의 결과에서와 같이 정규식 일치 메서드를 10번만 호출할 경우에는 해석된 정규식이 컴파일된 정규식보다 나은 성능을 제공합니다. 하지만 호출 횟수가 많은 경우에는(아래 예에서는 13,000번 이상) 컴파일된 정규식이 더 나은 성능을 제공합니다.  
   
