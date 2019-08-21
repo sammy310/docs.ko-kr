@@ -15,6 +15,10 @@
       href: tutorials/amazon-emr-spark-deployment.md
     - name: Databricks에 배포
       href: tutorials/databricks-deployment.md
+- name: 방법 가이드
+  items:
+    - name: 애플리케이션 디버그
+      href: how-to-guides/debug.md
 - name: 참조
   items:
     - name: API 참조
