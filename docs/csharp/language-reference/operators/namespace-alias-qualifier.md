@@ -1,51 +1,70 @@
 ---
 title: ':: 연산자 - C# 참조'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 08/09/2019
 f1_keywords:
 - ::_CSharpKeyword
+- global_CSharpKeyword
 helpviewer_keywords:
 - ':: operator [C#]'
-- 'namespaces [C#], :: operator'
-- namespace alias qualifier operator (::) [C#]
+- namespace alias qualifier [C#]
+- namespace [C#]
+- global keyword [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: c494e8dbb18f44ce5520b21800a21d3feb03da59
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2aceb51747708b12fb3059b097b72206c78a9d5d
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631367"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971235"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="3875c-102">:: 연산자(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="3875c-102">:: operator (C# reference)</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="0a0fb-102">:: 연산자(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="0a0fb-102">:: operator (C# reference)</span></span>
 
-<span data-ttu-id="3875c-103">네임스페이스 별칭 한정자(`::`)는 식별자를 조회하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="3875c-103">The namespace alias qualifier (`::`) is used to look up identifiers.</span></span> <span data-ttu-id="3875c-104">다음 예제와 같이 항상 두 식별자 사이에 옵니다.</span><span class="sxs-lookup"><span data-stu-id="3875c-104">It is always positioned between two identifiers, as in this example:</span></span>
+<span data-ttu-id="0a0fb-103">네임스페이스 별칭 한정자(`::`)를 사용하여 별칭이 지정된 네임스페이스의 구성원에 액세스합니다.</span><span class="sxs-lookup"><span data-stu-id="0a0fb-103">Use the namespace alias qualifier `::` to access members of an aliased namespace.</span></span> <span data-ttu-id="0a0fb-104">두 식별자 사이에 `::` 한정사를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="0a0fb-104">You use the `::` qualifier between two identifiers.</span></span> <span data-ttu-id="0a0fb-105">왼쪽 식별자는 다음 별칭 중 하나를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0a0fb-105">The left-hand identifier can be any of the following aliases:</span></span>
 
-[!code-csharp[csRefOperators#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#27)]
+- <span data-ttu-id="0a0fb-106">[별칭 지시문을 사용](../keywords/using-directive.md)하여 만든 네임스페이스 별칭:</span><span class="sxs-lookup"><span data-stu-id="0a0fb-106">A namespace alias created with the [using alias directive](../keywords/using-directive.md):</span></span>
+  
+  ```csharp
+  using forwinforms = System.Drawing;
+  using forwpf = System.Windows;
+  
+  public class Converters
+  {
+      public static forwpf::Point Convert(forwinforms::Point point) => new forwpf::Point(point.X, point.Y);
+  }
+  ```
 
-<span data-ttu-id="3875c-105">`::` 연산자는 *using 별칭 지시문*과 함께 사용할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3875c-105">The `::` operator can also be used with a *using alias directive*:</span></span>
+- <span data-ttu-id="0a0fb-107">[extern 별칭](../keywords/extern-alias.md)</span><span class="sxs-lookup"><span data-stu-id="0a0fb-107">An [extern alias](../keywords/extern-alias.md).</span></span>
+- <span data-ttu-id="0a0fb-108">전역 네임스페이스 별칭인 `global` 별칭.</span><span class="sxs-lookup"><span data-stu-id="0a0fb-108">The `global` alias, which is the global namespace alias.</span></span> <span data-ttu-id="0a0fb-109">전역 네임스페이스는 명명된 네임스페이스 내에 선언되지 않은 네임스페이스와 형식을 포함하는 네임스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="0a0fb-109">The global namespace is the namespace that contains namespaces and types that are not declared inside a named namespace.</span></span> <span data-ttu-id="0a0fb-110">`::` 한정자와 함께 사용하는 경우 `global` 별칭은 사용자 정의 `global` 네임 스페이스 별칭이 있더라도 항상 전역 네임 스페이스를 참조합니다.</span><span class="sxs-lookup"><span data-stu-id="0a0fb-110">When used with the `::` qualifier, the `global` alias always references the global namespace, even if there is the user-defined `global` namespace alias.</span></span>
+  
+  <span data-ttu-id="0a0fb-111">다음 예제에서는 `global` 별칭을 사용하여 전역 네임스페이스의 구성원인 .NET <xref:System> 네임 스페이스에 액세스합니다.</span><span class="sxs-lookup"><span data-stu-id="0a0fb-111">The following example uses the `global` alias to access the .NET <xref:System> namespace, which is a member of the global namespace.</span></span> <span data-ttu-id="0a0fb-112">`global` 별칭을 사용하지 않으면 `MyCompany.MyProduct` 네임스페이스의 구성원인 사용자 정의 `System` 네임스페이스에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0a0fb-112">Without the `global` alias, the user-defined `System` namespace, which is a member of the `MyCompany.MyProduct` namespace, would be accessed:</span></span>
 
-```csharp
-// using Col=System.Collections.Generic;
-var numbers = new Col::List<int> { 1, 2, 3 };
-```
+  ```csharp
+  namespace MyCompany.MyProduct.System
+  {
+      class Program
+      {
+          static void Main() => global::System.Console.WriteLine("Using global alias");
+      }
+  
+      class Console
+      {
+          string Suggestion => "Consider renaming this class";
+      }
+  }
+  ```
+  
+  > [!NOTE]
+  > <span data-ttu-id="0a0fb-113">`global` 키워드는 `::` 한정자의 왼쪽 식별자인 경우에만 전역 네임 스페이스 별칭입니다.</span><span class="sxs-lookup"><span data-stu-id="0a0fb-113">The `global` keyword is the global namespace alias only when it's the left-hand identifier of the `::` qualifier.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="3875c-106">설명</span><span class="sxs-lookup"><span data-stu-id="3875c-106">Remarks</span></span>
+<span data-ttu-id="0a0fb-114">또한 [구성원 액세스 `.` 연산자](member-access-operators.md#member-access-operator-)를 사용하여 별칭이 지정된 네임스페이스의 구성원에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0a0fb-114">You can also use the [member access `.` operator](member-access-operators.md#member-access-operator-) to access members of an aliased namespace.</span></span> <span data-ttu-id="0a0fb-115">그러나 `.` 연산자는 형식의 구성원에 액세스 하는 데도 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="0a0fb-115">However, the `.` operator is also used to access members of a type.</span></span> <span data-ttu-id="0a0fb-116">`::` 한정자는 이름이 같은 형식 또는 네임 스페이스가 있는 경우에도 해당 왼쪽 식별자가 항상 네임스페이스 별칭을 참조하는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="0a0fb-116">The `::` qualifier ensures that its left-hand identifier always references a namespace alias, even if there exists a type or namespace with the same name.</span></span>
 
-<span data-ttu-id="3875c-107">네임스페이스 별칭 한정자는 `global`일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3875c-107">The namespace alias qualifier can be `global`.</span></span> <span data-ttu-id="3875c-108">별칭이 지정된 네임스페이스가 아니라 전역 네임스페이스에서 조회를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="3875c-108">This invokes a lookup in the global namespace, rather than an aliased namespace.</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="0a0fb-117">C# 언어 사양</span><span class="sxs-lookup"><span data-stu-id="0a0fb-117">C# language specification</span></span>
 
-## <a name="for-more-information"></a><span data-ttu-id="3875c-109">추가 정보</span><span class="sxs-lookup"><span data-stu-id="3875c-109">For more information</span></span>
+<span data-ttu-id="0a0fb-118">자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [네임스페이스 별칭 한정자](~/_csharplang/spec/namespaces.md#namespace-alias-qualifiers) 섹션을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="0a0fb-118">For more information, see the [Namespace alias qualifiers](~/_csharplang/spec/namespaces.md#namespace-alias-qualifiers) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
 
-<span data-ttu-id="3875c-110">`::` 연산자를 사용하는 방법의 예는 다음 섹션을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="3875c-110">For an example of how to use the `::` operator, see the following section:</span></span>
+## <a name="see-also"></a><span data-ttu-id="0a0fb-119">참고 항목</span><span class="sxs-lookup"><span data-stu-id="0a0fb-119">See also</span></span>
 
-- [<span data-ttu-id="3875c-111">방법: 전역 네임스페이스 별칭 사용</span><span class="sxs-lookup"><span data-stu-id="3875c-111">How to: Use the Global Namespace Alias</span></span>](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
-
-## <a name="c-language-specification"></a><span data-ttu-id="3875c-112">C# 언어 사양</span><span class="sxs-lookup"><span data-stu-id="3875c-112">C# language specification</span></span>
-
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
-
-## <a name="see-also"></a><span data-ttu-id="3875c-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="3875c-113">See also</span></span>
-
-- [<span data-ttu-id="3875c-114">C# 참조</span><span class="sxs-lookup"><span data-stu-id="3875c-114">C# reference</span></span>](../index.md)
-- [<span data-ttu-id="3875c-115">C# 연산자</span><span class="sxs-lookup"><span data-stu-id="3875c-115">C# operators</span></span>](index.md)
-- [<span data-ttu-id="3875c-116">. 연산자</span><span class="sxs-lookup"><span data-stu-id="3875c-116">. operator</span></span>](member-access-operators.md#member-access-operator-)
-- [<span data-ttu-id="3875c-117">extern alias</span><span class="sxs-lookup"><span data-stu-id="3875c-117">extern alias</span></span>](../keywords/extern-alias.md)
+- [<span data-ttu-id="0a0fb-120">C# 참조</span><span class="sxs-lookup"><span data-stu-id="0a0fb-120">C# reference</span></span>](../index.md)
+- [<span data-ttu-id="0a0fb-121">C# 연산자</span><span class="sxs-lookup"><span data-stu-id="0a0fb-121">C# operators</span></span>](index.md)
+- [<span data-ttu-id="0a0fb-122">네임스페이스 사용</span><span class="sxs-lookup"><span data-stu-id="0a0fb-122">Using namespaces</span></span>](../../programming-guide/namespaces/using-namespaces.md)
