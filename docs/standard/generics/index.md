@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4f59bdb0537ab6ce404ed0623c40f9f3b31598d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 32a4f4f3735c8952cf1458c63655eb56a82fd18f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766829"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666441"
 ---
 # <a name="generics-in-net"></a>.NET의 제네릭
 
@@ -148,7 +148,7 @@ ms.locfileid: "67766829"
   
  공용 언어 런타임에서는 <xref:System.Reflection.Emit.OpCodes.Stelem>, <xref:System.Reflection.Emit.OpCodes.Ldelem>, <xref:System.Reflection.Emit.OpCodes.Unbox_Any>, <xref:System.Reflection.Emit.OpCodes.Constrained>, <xref:System.Reflection.Emit.OpCodes.Readonly>등의 MSIL(Microsoft Intermediate Language)에서 제네릭 형식을 지원하기 위한 새로운 opcode 및 접두사를 제공합니다.  
   
- Visual C++, C# 및 Visual Basic은 모두 제네릭 정의 및 사용을 위한 모든 지원을 제공합니다. 언어 지원에 대한 자세한 내용은 [Visual Basic의 제네릭 형식](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md), [제네릭 소개](~/docs/csharp/programming-guide/generics/index.md) 및 [Visual C++의 제네릭 개요](/cpp/windows/overview-of-generics-in-visual-cpp)를 참조하세요.  
+ Visual C++, C# 및 Visual Basic은 모두 제네릭 정의 및 사용을 위한 모든 지원을 제공합니다. 언어 지원에 대한 자세한 내용은 [Visual Basic의 제네릭 형식](../../visual-basic/programming-guide/language-features/data-types/generic-types.md), [제네릭 소개](../../csharp/programming-guide/generics/index.md) 및 [Visual C++의 제네릭 개요](/cpp/windows/overview-of-generics-in-visual-cpp)를 참조하세요.  
   
  [맨 위로 이동](#top)  
   
@@ -170,8 +170,8 @@ ms.locfileid: "67766829"
 |[일반적으로 사용되는 컬렉션 형식](../../../docs/standard/collections/commonly-used-collection-types.md)|제네릭 형식을 비롯하여 .NET의 컬렉션 형식 특성과 사용 시나리오에 대한 요약 정보를 제공합니다.|  
 |[제네릭 컬렉션 사용 기준](../../../docs/standard/collections/when-to-use-generic-collections.md)|제네릭 컬렉션 형식의 사용 시기를 결정하기 위한 일반 규칙을 설명합니다.|  
 |[방법: 리플렉션 내보내기를 사용하여 제네릭 형식 정의](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|제네릭 형식과 메서드가 포함된 동적 어셈블리를 생성하는 방법을 설명합니다.|  
-|[Generic Types in Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)|제네릭 형식 사용 및 정의에 대한 방법 항목을 포함하여 Visual Basic 사용자를 위한 제네릭 기능에 대해 설명합니다.|  
-|[제네릭 소개](~/docs/csharp/programming-guide/generics/index.md)|C# 사용자를 위한 제네릭 형식 사용 및 정의 방법을 간략하게 설명합니다.|  
+|[Visual Basic의 제네릭 형식](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)|제네릭 형식 사용 및 정의에 대한 방법 항목을 포함하여 Visual Basic 사용자를 위한 제네릭 기능에 대해 설명합니다.|  
+|[제네릭 소개](../../csharp/programming-guide/generics/index.md)|C# 사용자를 위한 제네릭 형식 사용 및 정의 방법을 간략하게 설명합니다.|  
 |[Visual C++의 제네릭 개요](/cpp/windows/overview-of-generics-in-visual-cpp)|제네릭과 템플릿 간의 차이점을 비롯하여 C++ 사용자를 위한 제네릭 기능에 대해 설명합니다.|  
   
 <a name="reference"></a>   

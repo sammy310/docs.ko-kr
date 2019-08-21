@@ -2,12 +2,12 @@
 title: 기존.NET 앱을 Azure IaaS(클라우드 인프라 지원)로 리프트 앤 시프트하기
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존.NET 응용 프로그램을 최신으로 변경합니다.
 ms.date: 04/28/2018
-ms.openlocfilehash: cda316ad01a58f26661395c804547de04e20d052
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e25ddbf9b6e62c264f3f4d4580d7df3553d262ea
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578396"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660747"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>기존.NET 앱을 Azure IaaS(클라우드 인프라 지원)로 리프트 앤 시프트하기
 
@@ -107,4 +107,4 @@ Site Recovery은 부분적으로 온-프레미스이 고 일부는 Azure에 있�
 
 >[!div class="step-by-step"]
 >[이전](index.md)
->[다음](migrate-your-relational-databases-to-azure.md)
+>[다음](migrate-your-relational-databases-to-azure.md) <!-- Next Chapter -->

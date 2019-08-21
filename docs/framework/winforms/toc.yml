@@ -35,8 +35,6 @@
           items:
             - name: '방법: Windows Forms 애플리케이션에서 글꼴 구성표 변경 내용에 대응'
               href: how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md
-            - name: Visual Studio에서 DPI 인식을 사용하지 않도록 설정
-              href: disable-dpi-awareness-visual-studio.md
         - name: Windows Forms의 높은 DPI 지원
           href: high-dpi-support-in-windows-forms.md
     - name: Windows Forms의 모양 변경
@@ -49,9 +47,9 @@
     - name: Windows Forms에 사용자 입력
       href: user-input-in-windows-forms.md
       items:
-        - name: Windows Forms 응용 프로그램의 사용자 입력
+        - name: Windows Forms 애플리케이션의 사용자 입력
           href: user-input-in-a-windows-forms-application.md
-        - name: Windows Forms 응용 프로그램의 키보드 입력
+        - name: Windows Forms 애플리케이션의 키보드 입력
           href: keyboard-input-in-a-windows-forms-application.md
           items:
             - name: 키보드 입력 작동 방식

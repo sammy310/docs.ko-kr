@@ -2,12 +2,12 @@
 title: 기술 개요와 실습
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 기술 개요와 실습
 ms.date: 04/28/2018
-ms.openlocfilehash: 81f7d9fbf596a23b83e2dc9251788b33a8817e16
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 190b33c4307b09bab0543d481e66ac9328074a0d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577856"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660893"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>기술 개요와 실습
 
@@ -308,4 +308,4 @@ GitHub wiki에서이 콘텐츠를 자세히 살펴보세요.<https://github.com/
 
 > [!div class="step-by-step"]
 > [이전](modernize-existing-apps-to-cloud-optimized/migrate-to-hybrid-cloud-scenarios.md)
-> [다음](conclusions.md)
+> [다음](conclusions.md) <!-- Next Chapter -->

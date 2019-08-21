@@ -2,12 +2,12 @@
 title: 관계형 데이터베이스를 azure로 마이그레이션
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 관계형 데이터베이스를 azure로 마이그레이션
 ms.date: 04/28/2018
-ms.openlocfilehash: 3d4f03e61144bb6a442a50916d7fd024d38ec611
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 982050d99aaa66cde1168a2f2fa64ed5f3e9163b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578376"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660726"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>관계형 데이터베이스를 azure로 마이그레이션
 
@@ -126,4 +126,4 @@ Azure Database Migration Service를 사용하여 데이터베이스를 마이그
 
 > [!div class="step-by-step"]
 > [이전](lift-and-shift-existing-apps-azure-iaas.md)
-> [다음](modernize-existing-apps-to-cloud-optimized/index.md)
+> [다음](modernize-existing-apps-to-cloud-optimized/index.md) <!-- Next Chapter -->
