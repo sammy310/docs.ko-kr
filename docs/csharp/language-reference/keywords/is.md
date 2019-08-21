@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 45e37dcb15e178fe37907e00cc14ef48c1bf230d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: a04105137fad7cd3a25b869c3aa7fcbe91ed20ab
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306587"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566315"
 ---
 # <a name="is-c-reference"></a>is(C# 참조)
 
-`is` 연산자는 식의 결과가 지정된 형식과 호환되는지 확인하거나, (C# 7.0부터) 패턴에 대해 식을 테스트합니다. 형식 테스트 `is` 연산자에 대한 자세한 내용은 [형식 테스트 및 변환 연산자](../operators/type-testing-and-conversion-operators.md) 문서의 [is 연산자](../operators/type-testing-and-conversion-operators.md#is-operator) 섹션을 참조하세요.
+`is` 연산자는 식의 결과가 지정된 형식과 호환되는지 확인하거나, (C# 7.0부터) 패턴에 대해 식을 테스트합니다. 형식 테스트 `is` 연산자에 대한 자세한 내용은 [형식 테스트 및 캐스트 연산자](../operators/type-testing-and-cast.md) 문서의 [is 연산자](../operators/type-testing-and-cast.md#is-operator) 섹션을 참조하세요.
 
 ## <a name="pattern-matching-with-is"></a>`is`를 사용한 패턴 일치
 
@@ -128,4 +128,4 @@ C# 7.1부터 *expr*은 제네릭 형식 매개 변수 및 해당 제약 조건�
 
 - [C# 참조](../index.md)
 - [C# 키워드](index.md)
-- [형식 테스트 및 변환 연산자](../operators/type-testing-and-conversion-operators.md)
+- [형식 테스트 및 캐스트 연산자](../operators/type-testing-and-cast.md)

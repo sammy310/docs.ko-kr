@@ -9,12 +9,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: df921ecc670bf12411dc8b0d828d6c19bb0a1aec
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 8cc1d1461a33ab94f8ae399d6ff40f26eaf7f74a
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422752"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039460"
 ---
 # <a name="namespace-c-reference"></a>namespace(C# 참조)
 
@@ -22,7 +22,7 @@ ms.locfileid: "66422752"
 
 [!code-csharp[csrefKeywordsNamespace#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#1)]
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 네임스페이스 내에서 다음 형식 중 0개 이상을 선언할 수 있습니다.
 
@@ -46,30 +46,21 @@ C# 소스 파일에서 네임스페이스를 명시적으로 선언하는지 여
 
 [!code-csharp[csrefKeywordsNamespace#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#2)]
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에서는 중첩된 네임스페이스에서 정적 메서드를 호출하는 방법을 보여 줍니다.
 
 [!code-csharp[csrefKeywordsNamespace#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#3)]
 
-## <a name="related-resources"></a>관련 참고 자료
-
-네임스페이스를 사용하는 방법에 대한 자세한 내용은 다음 항목을 참조하세요.
-
-- [네임스페이스](../../programming-guide/namespaces/index.md)
-
-- [네임스페이스 사용](../../programming-guide/namespaces/using-namespaces.md)
-
-- [방법: 전역 네임스페이스 별칭 사용](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
-
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [네임스페이스](~/_csharplang/spec/namespaces.md) 섹션을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 참조](../../language-reference/index.md)
-- [C# 프로그래밍 가이드](../../programming-guide/index.md)
+- [C# 참조](../index.md)
 - [C# 키워드](index.md)
 - [using](using-directive.md)
 - [using static](using-static.md)
+- [네임스페이스 별칭 한정자`::`](../operators/namespace-alias-qualifier.md)
+- [네임스페이스](../../programming-guide/namespaces/index.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a3ba9b86a1611408f510098726ac49f543f8451
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 5dcdf6a88b12d12e67056657fd532dfa28c40299
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832877"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566820"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>강력한 이름의 어셈블리 만들기 및 사용
 
@@ -38,7 +38,7 @@ ms.locfileid: "66832877"
 
     - 강력한 이름 만들기를 지원하는 개발 환경(예: Visual Studio)을 사용합니다.
 
-    - [Sn.exe(강력한 이름 도구)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)를 사용하여 암호화 키 쌍을 만들고 명령줄 컴파일러 또는 [Al.exe(어셈블리 링커)](../../../docs/framework/tools/al-exe-assembly-linker.md)를 사용하여 해당 키 쌍을 어셈블리에 할당합니다. Windows SDK(소프트웨어 개발 키트)는 Sn.exe와 Al.exe를 모두 제공합니다.
+    - [Sn.exe(강력한 이름 도구)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)를 사용하여 암호화 키 쌍을 만들고 명령줄 컴파일러 또는 [Al.exe(어셈블리 링커)](../../../docs/framework/tools/al-exe-assembly-linker.md)를 사용하여 해당 키 쌍을 어셈블리에 할당합니다. Windows SDK는 Sn.exe와 Al.exe를 모두 제공합니다.
 
 2. 개발 환경 또는 도구에서는 개발자 개인 키를 사용하여 어셈블리 매니페스트가 포함된 파일의 해시에 서명합니다. 이 디지털 서명은 어셈블리 A의 매니페스트가 포함된 PE(이식 가능한 실행) 파일에 저장됩니다.
 

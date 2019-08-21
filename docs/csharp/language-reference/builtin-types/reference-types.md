@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: 4bc93216d74e2732870e08edd4bdb9570391cf5f
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
+ms.openlocfilehash: fcfe2dafe588dce57628bff63e3519f70d7a7725
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67872171"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566260"
 ---
 # <a name="built-in-reference-types-c-reference"></a>기본 제공 참조 형식(C# 참조)
 
@@ -177,7 +177,7 @@ obj = obj + 3;
 - [문자열 사용에 대한 모범 사례](../../../standard/base-types/best-practices-strings.md)
 - [기본적인 문자열 작업](../../../standard/base-types/basic-string-operations.md)
 - [새 문자열 만들기](../../../standard/base-types/creating-new.md)
-- [형식 테스트 및 변환 연산자](../operators/type-testing-and-conversion-operators.md)
+- [형식 테스트 및 캐스트 연산자](../operators/type-testing-and-cast.md)
 - [방법: 패턴 일치, as 및 is 연산자를 사용하여 안전하게 캐스트](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
 - [연습: 동적 개체 만들기 및 사용](../../programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
 - <xref:System.Object?displayProperty=nameWithType>

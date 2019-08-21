@@ -8,18 +8,18 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b093f9bb633578cc0051cfca7b1362f8bf097d7
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 67b9b48587802b43e90a7f35ab8cbb3b2ee025b0
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662442"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567257"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>방법: Tlbimp.exe를 사용하여 주 Interop 어셈블리 생성
 
 주 interop 어셈블리를 생성하는 다음 두 가지 방법이 있습니다.
 
-- Windows SDK(소프트웨어 개발 키트)에서 제공하는 [형식 라이브러리 가져오기(Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 사용.
+- Windows SDK에서 제공하는 [형식 라이브러리 가져오기(Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 사용.
 
   주 interop 어셈블리를 생성하는 가장 간단한 방법은 [Tlbimp.exe(형식 라이브러리 가져오기)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)를 사용하는 것입니다. Tlbimp.exe는 다음과 같은 보호 기능을 제공합니다.
 
@@ -37,7 +37,7 @@ ms.locfileid: "67662442"
 
 ### <a name="to-generate-a-primary-interop-assembly-using-tlbimpexe"></a>Tlbimp.exe를 사용하여 주 Interop 어셈블리를 생성하려면
 
-1. 명령 프롬프트에 다음을 입력합니다.
+1. 명령 프롬프트에서 다음을 입력합니다.
 
     **tlbimp** *tlbfile*  **/primary /keyfile:** *filename* **/out:** *assemblyname*
 

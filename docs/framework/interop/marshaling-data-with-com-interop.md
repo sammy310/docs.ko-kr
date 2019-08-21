@@ -6,17 +6,17 @@ helpviewer_keywords:
 - marshaling data, COM interop
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d16f94e8b85a1bedb8b7791c2b7fcaf6d154ba1b
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 279310fe7aa17a73d129edf98f3477a00fd50767
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833531"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567250"
 ---
 # <a name="marshaling-data-with-com-interop"></a>COM Interop를 사용하여 데이터 마샬링
 COM interop는 관리 코드에서 COM 개체를 사용하고 관리되는 개체를 COM에 노출하는 기능을 모두 지원합니다. COM과의 데이터 마샬링 지원은 광범위하며 거의 항상 올바른 마샬링 동작을 제공합니다.  
   
- Windows SDK(소프트웨어 개발 키트)에는 다음과 같은 COM interop 도구가 포함되어 있습니다.  
+ Windows SDK에는 다음과 같은 COM interop 도구가 포함됩니다.  
   
 - [형식 라이브러리 가져오기(Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) - COM 형식 라이브러리를 interop 어셈블리로 변환합니다. 이 어셈블리에서 interop 마샬링 서비스는 관리되는 메모리와 관리되지 않는 메모리 간에 데이터 마샬링을 수행하는 래퍼를 생성합니다.  
   
@@ -42,7 +42,7 @@ COM interop는 관리 코드에서 COM 개체를 사용하고 관리되는 개�
  interop 어셈블리에서 형식의 마샬링 동작을 조정하는 방법 및 COM 형식을 수동으로 조정하는 방법을 설명합니다.  
   
  [고급 COM 상호 운용성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
- COM 구성 요소를 .NET Framework 응용 프로그램으로 통합하는 방법에 대한 추가정보 링크를 제공합니다.  
+ COM 구성 요소를 .NET Framework 애플리케이션으로 통합하는 방법에 대한 추가정보 링크를 제공합니다.  
   
  [어셈블리와 형식 라이브러리 간 변환 요약](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))  
  어셈블리에서 형식 라이브러리로 내보내기 변환 프로세스를 설명합니다.  

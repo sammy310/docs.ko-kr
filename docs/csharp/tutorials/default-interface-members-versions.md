@@ -3,12 +3,12 @@ title: C#에서 기본 인터페이스 멤버를 사용하여 안전하게 인�
 description: 이 고급 자습서에서는 해당 인터페이스를 구현하는 모든 클래스 및 구성 요소를 훼손하지 않고 기존 인터페이스 정의에 새 기능을 안전하게 추가할 수 있는 방법을 살펴봅니다.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 2daa40ead5902454c6d45390233e1491fe6d369b
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 2d7265b7705fc931d356a3b7fe3504ab7f21c0b3
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877912"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971432"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>자습서: C# 8.0에서 기본 인터페이스 멤버로 인터페이스 업데이트
 
@@ -87,6 +87,6 @@ C# 8.0 미리 보기 컴파일러를 포함해 .NET Core를 실행하도록 머�
 
 [!code-csharp[VersionTwoImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/SampleCustomer.cs?name=SnippetOverrideAndExtend)]
 
-[GitHub의 샘플 리포지토리]에서 완성된 전체 코드를 볼 수 있으며, [GitHub의 샘플 리포지토리](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/finished/customer-relationship)에서 시작 애플리케이션을 다운로드할 수 있습니다.
+[GitHub의 샘플 리포지토리](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/finished/customer-relationship)에서 완성된 전체 코드를 볼 수 있습니다. [GitHub의 샘플 리포지토리](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/starter/customer-relationship)에서 시작 애플리케이션을 다운로드할 수 있습니다.
 
 이러한 새 기능은 신규 멤버에 대한 합리적인 기본 구현이 있는 경우 인터페이스를 안전하게 업데이트할 수 있음을 의미합니다. 여러 클래스를 통해 구현할 수 있는 단일 기능 아이디어를 표현하려면 인터페이스를 신중하게 설계하세요. 이를 통해 동일한 기능 아이디어에 새로운 요구 사항이 발견될 경우 해당 인터페이스 정의를 훨씬 쉽게 업그레이드할 수 있습니다.

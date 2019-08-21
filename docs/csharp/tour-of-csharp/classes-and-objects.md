@@ -3,12 +3,12 @@ title: C#의 클래스 및 개체 - C# 언어 둘러보기
 description: C#을 처음 사용하시나요? 클래스, 개체 및 상속 개요 읽어보기
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 681ed03661bf54dcb1e7e70735a53a553763c95c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ff83a3198c6c9fb4c4a438d2486614a211c913ec
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750391"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971464"
 ---
 # <a name="classes-and-objects"></a>클래스 및 개체
 
@@ -256,7 +256,7 @@ set 접근자는 value라는 단일 매개 변수를 가지며 반환 형식이 
 
 ### <a name="indexers"></a>인덱서
 
-*인덱서*는 개체가 배열과 같은 방식으로 인덱싱될 수 있도록 하는 멤버입니다. 인덱서는 멤버 이름과 구분 기호 `[` 및 `]` 사이에 작성된 매개 변수 목록을 합쳐서 멤버 이름으로 사용한다는 점을 제외하고 속성처럼 선언됩니다. 매개 변수는 인덱서의 접근자에서 사용할 수 있습니다. 속성과 마찬가지로 인덱서는 읽기/쓰기, 읽기 전용 및 쓰기 전용일 수 있으며 인덱서의 접근자는 가상일 수 있습니다.
+*인덱서*는 개체가 배열과 같은 방식으로 인덱싱될 수 있도록 하는 멤버입니다. 인덱서는 `this`과(와) 구분 기호 `[` 및 `]` 사이에 작성된 매개 변수 목록을 합쳐서 구성원 이름으로 사용한다는 점을 제외하고 속성처럼 선언됩니다. 매개 변수는 인덱서의 접근자에서 사용할 수 있습니다. 속성과 마찬가지로 인덱서는 읽기/쓰기, 읽기 전용 및 쓰기 전용일 수 있으며 인덱서의 접근자는 가상일 수 있습니다.
 
 `MyList<T>` 클래스는 `int` 매개 변수를 사용하는 단일 읽기/쓰기 인덱서를 선언합니다. 인덱서는 `MyList<T>` 인스턴스를 `int` 값으로 인덱싱할 수 있도록 합니다. 예:
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78a601e8b2da4fda0951c1d4f7b565753f0ca03a
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 36de7dd2d97eb532717d52bd3903d3e5acd19d2d
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833897"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567060"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe(IL 어셈블러)
 
@@ -104,7 +104,7 @@ IL 어셈블러를 사용하면 런타임을 대상으로 하는 프로그래밍
 > [!NOTE]
 > *Ildasm.exe*는 디스크의 파일에 대해서만 작동하며, 전역 어셈블리 캐시에 설치된 파일에 대해서는 작동하지 않습니다.
 
-IL 문법에 대한 자세한 내용은 Windows SDK(소프트웨어 개발 키트)의 asmparse.grammar 파일을 참조하세요.
+IL 문법에 대한 자세한 내용은 Windows SDK에서 asmparse.grammar 파일을 참조하세요.
 
 ## <a name="version-information"></a>버전 정보
 
@@ -137,7 +137,7 @@ IL 문법에 대한 자세한 내용은 Windows SDK(소프트웨어 개발 키�
         Test(object A_1) cil managed
 ```
 
-IL 문법에 대한 자세한 내용은 Windows SDK(소프트웨어 개발 키트)의 asmparse.grammar 파일을 참조하세요.
+IL 문법에 대한 자세한 내용은 Windows SDK에서 asmparse.grammar 파일을 참조하세요.
 
 ## <a name="examples"></a>예제
 

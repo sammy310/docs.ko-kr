@@ -8,12 +8,12 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: a7fea9810cb02269278638ec71cd106463b029e9
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 3b3a5c2e96e92271da66cbd8f1039a9ec97544fa
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025020"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971227"
 ---
 # <a name="-operator-c-reference"></a>=> 연산자(C# 참조)
 
@@ -45,7 +45,7 @@ ms.locfileid: "67025020"
 member => expression;
 ```
 
-여기서 *expression*은 유효한 식입니다. *식*은 멤버의 반환 형식이 `void`이거나 멤버가 생성자, 종료자, 또는 속성 `set` 접근자인 경우에만 *명령문 식*일 수 있습니다.
+여기서 `expression`은(는) 유효한 식입니다. `expression`의 반환 형식은 구성원의 반환 형식으로 암시적으로 변환할 수 있어야 합니다. 구성원의 반환 형식이 `void`(이)거나 구성원이 생성자, 종료자 또는 속성 `set` 접근자인 경우 `expression`은(는) [*statement 식*](~/_csharplang/spec/statements.md#expression-statements)이어야 하며 모든 형식을 사용할 수 있습니다.
 
 다음 예제에서는 `Person.ToString` 메서드에 대한 식 본문 정의를 보여줍니다.
 

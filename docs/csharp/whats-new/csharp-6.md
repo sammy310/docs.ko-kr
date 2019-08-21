@@ -2,12 +2,12 @@
 title: C# 6의 새로운 기능 - C# 가이드
 description: C# 버전 6의 새로운 기능을 알아봅니다.
 ms.date: 12/12/2018
-ms.openlocfilehash: 49247109bd1acbf697f5700b5cfe9a2b85393b2c
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: da40b4c9d4af0094fdd907c542e971ba55086e0f
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68235714"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971377"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6의 새로운 기능
 
@@ -21,7 +21,7 @@ C#의 6.0 릴리스에는 개발자의 생산성을 개선하는 많은 기능�
 
 [!code-csharp[ReadOnlyAutoProperty](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadOnlyAutoProperty)]
 
-`FirstName` 및 `LastName` 속성은 생성자 본문에서만 설정할 수 있습니다.
+`FirstName` 및 `LastName` 속성은 동일한 클래스의 생성자 본문에서만 설정할 수 있습니다.
 
 [!code-csharp[ReadOnlyAutoPropertyConstructor](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadOnlyAutoPropertyConstructor)]
 

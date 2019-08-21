@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4472adf2c309803d4d5ac57f3522cc260782d85
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 230853abf73a368bfcd8b88375c216fdadfc7d46
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833668"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567267"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>.NET Framework에 COM 구성 요소 노출
 이 섹션에서는 프로세스를 기존 COM 구성 요소를 관리 코드에 노출하는 데 필요한 간략하게 설명합니다. .NET Framework와 강력하게 통합되는 COM 서버를 작성하는 방법에 대한 자세한 내용은 [상호 운용을 위한 디자인 고려 사항](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))을 참조하세요.
@@ -32,7 +32,7 @@ ms.locfileid: "66833668"
   
 3. [Interop 프로젝트를 컴파일합니다](compiling-an-interop-project.md).  
   
-     Windows SDK(소프트웨어 개발 키트)에서는 Visual Basic, C# 및 C++를 포함하여 CLS(공용 언어 사양)를 준수하는 여러 언어용 컴파일러를 제공합니다.  
+     Windows SDK에서는 Visual Basic, C# 및 C++를 포함하여 CLS(공용 언어 사양)와 호환되는 여러 언어용 컴파일러를 제공합니다.  
   
 4. [Interop 애플리케이션을 배포합니다](deploying-an-interop-application.md).  
   

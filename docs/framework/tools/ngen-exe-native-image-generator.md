@@ -20,16 +20,19 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd1773b184b9ea39b83b91c139acb09658beae11
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: fb7758a3e59806b246a98c343d78500263433efc
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832820"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971469"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe(네이티브 이미지 생성기)
 
 네이티브 이미지 생성기(Ngen.exe)는 관리되는 애플리케이션의 성능을 향상시키는 도구입니다. Ngen.exe는 컴파일된 프로세서별 컴퓨터 코드가 포함된 파일인 네이티브 이미지를 만들어서 로컬 컴퓨터의 네이티브 이미지 캐시에 설치합니다. 런타임은 JIT(Just-In-Time) 컴파일러를 사용하지 않고 캐시의 네이티브 이미지를 사용하여 원본 어셈블리를 컴파일할 수 있습니다.
+
+> [!NOTE]
+> Ngen.exe는 .NET Framework만을 대상으로 하는 어셈블리에 대한 네이티브 이미지를 컴파일합니다. .NET Core에 해당하는 네이티브 이미지 생성기는 [CrossGen](https://github.com/dotnet/coreclr/blob/master/Documentation/building/crossgen.md)입니다. 
 
 .NET Framework 버전 4에서 Ngen.exe로 변경합니다.
 
@@ -62,11 +65,11 @@ Ngen.exe 및 네이티브 이미지 서비스 사용에 대한 자세한 내용�
 
 ## <a name="syntax"></a>구문
 
-```
+```console
 ngen action [options]
 ```
 
-```
+```console
 ngen /? | /help
 ```
 
@@ -429,7 +432,7 @@ Ngen.exe는 네이티브 이미지를 생성할 때 이 정보를 기록합니�
 
 다음 명령은 현재 디렉터리에 있는 `ClientApp.exe`에 대한 네이티브 이미지를 생성하고 그 이미지를 네이티브 이미지 캐시에 저장합니다. 어셈블리에 대해 구성 파일이 존재하는 경우 Ngen.exe는 해당 파일을 사용합니다. 또한 `ClientApp.exe`에서 참조하는 모든 .dll 파일에 대한 네이티브 이미지가 생성됩니다.
 
-```
+```console
 ngen install ClientApp.exe
 ```
 
@@ -437,7 +440,7 @@ Ngen.exe로 설치된 이미지를 루트라고도 합니다. 루트는 애플�
 
 다음 명령은 지정된 경로를 사용하여 `MyAssembly.exe`의 네이티브 이미지를 생성합니다.
 
-```
+```console
 ngen install c:\myfiles\MyAssembly.exe
 ```
 
@@ -448,7 +451,7 @@ ngen install c:\myfiles\MyAssembly.exe
 
 예를 들어, 어셈블리에서 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 메서드를 사용하여 .dll 파일을 로드하면 종속성이 참조 없이 어셈블리에 포함될 수 있습니다. `/ExeConfig` 옵션을 사용하는 경우 애플리케이션 어셈블리에 대한 구성 정보를 사용하여 그러한 .dll 파일의 네이티브 이미지를 만들 수 있습니다. 다음 명령은 `MyLib.dll,`에서 구성 정보를 사용하여 `MyApp.exe`의 네이티브 이미지를 생성합니다.
 
-```
+```console
 ngen install c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ```
 
@@ -456,20 +459,20 @@ ngen install c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 
 종속성을 제거하려면 해당 어셈블리를 설치할 때 사용한 것과 동일한 명령줄 옵션을 사용합니다. 다음 명령은 이전 예제에서 `MyLib.dll`을 제거합니다.
 
-```
+```console
 ngen uninstall c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ```
 
 전역 어셈블리 캐시에 어셈블리에 대한 네이티브 이미지를 만들려면 어셈블리의 표시 이름을 사용합니다. 예:
 
-```
+```console
 ngen install "ClientApp, Version=1.0.0.0, Culture=neutral,
   PublicKeyToken=3c7ba247adcd2081, processorArchitecture=MSIL"
 ```
 
 NGen.exe는 설치하는 각 시나리오마다 별도의 이미지 집합을 생성합니다. 예를 들어, 다음 명령은 일반적인 작업을 위한 네이티브 이미지의 전체 집합, 디버깅을 위한 또 다른 전체 집합 및 프로파일링을 위한 집합을 설치합니다.
 
-```
+```console
 ngen install MyApp.exe
 ngen install MyApp.exe /debug
 ngen install MyApp.exe /profile
@@ -479,7 +482,7 @@ ngen install MyApp.exe /profile
 
 네이티브 이미지가 캐시에 설치된 후에는 Ngen.exe를 사용하여 표시할 수 있습니다. 다음 명령은 네이티브 이미지 캐시에서 모든 네이티브 이미지를 표시합니다.
 
-```
+```console
 ngen display
 ```
 
@@ -487,7 +490,7 @@ ngen display
 
 어셈블리의 단순한 이름을 사용하여 해당 어셈블리에 대한 정보만 표시합니다. 다음 명령은 부분 이름 `MyAssembly`에 일치하는 네이티브 이미지 캐시의 모든 네이티브 이미지, 해당 종속성, `MyAssembly`에서 종속성을 갖는 모든 루트를 표시합니다.
 
-```
+```console
 ngen display MyAssembly
 ```
 
@@ -495,13 +498,13 @@ ngen display MyAssembly
 
 어셈블리의 파일 확장명을 지정하는 경우 어셈블리가 포함된 디렉터리에서 경로를 지정하거나 Ngen.exe를 실행해야 합니다.
 
-```
+```console
 ngen display c:\myApps\MyAssembly.exe
 ```
 
 다음 명령은 이름이 `MyAssembly`이고 버전이 1.0.0.0인 네이티브 이미지 캐시의 네이티브 이미지를 모두 표시합니다.
 
-```
+```console
 ngen display "myAssembly, version=1.0.0.0"
 ```
 
@@ -509,13 +512,13 @@ ngen display "myAssembly, version=1.0.0.0"
 
 이미지는 일반적으로 공유 구성 요소가 업그레이드된 후에 업데이트됩니다. 변경되었거나 종속성이 변경된 네이티브 이미지를 모두 업데이트하려면 인수 없이 `update` 작업을 사용합니다.
 
-```
+```console
 ngen update
 ```
 
 모든 이미지를 업데이트하려면 시간이 많이 걸릴 수 있습니다. `/queue` 옵션을 사용하여 네이티브 이미지 서비스에서 실행할 업데이트를 큐에 대기시킬 수 있습니다. `/queue` 옵션 및 설치 우선 순위에 대한 자세한 내용은 [네이티브 이미지 서비스](#native-image-service)를 참조하세요.
 
-```
+```console
 ngen update /queue
 ```
 
@@ -525,13 +528,13 @@ Ngen.exe가 종속성 목록을 유지 관리하므로 공유 구성 요소는 �
 
 다음 명령은 루트 `ClientApp.exe`에 대한 시나리오를 모두 제거합니다.
 
-```
+```console
 ngen uninstall ClientApp
 ```
 
 `uninstall` 작업은 특정 시나리오를 제거할 때 사용할 수 있습니다. 다음 명령은 `ClientApp.exe`에 대한 모든 디버그 시나리오를 제거합니다.
 
-```
+```console
 ngen uninstall ClientApp /debug
 ```
 
@@ -540,13 +543,13 @@ ngen uninstall ClientApp /debug
 
 다음 명령은 `ClientApp.exe`의 특정 버전에 대한 시나리오를 모두 제거합니다.
 
-```
+```console
 ngen uninstall "ClientApp, Version=1.0.0.0"
 ```
 
 다음 명령은 `"ClientApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3c7ba247adcd2081, processorArchitecture=MSIL",`에 대한 모든 시나리오 또는 해당 어셈블리에 대한 디버그 시나리오만 제거합니다.
 
-```
+```console
 ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
   PublicKeyToken=3c7ba247adcd2081, processorArchitecture=MSIL"
 ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
@@ -591,19 +594,19 @@ Windows 8 이상에서 실행되는 경우 네이티브 이미지 작업은 .NET
 
 설치 또는 업그레이드를 시작하기 전에 서비스를 일시 중지하는 것이 좋습니다. 이렇게 하면 설치 관리자가 파일을 복사하거나 어셈블리를 전역 어셈블리 캐시에 저장하는 동안 서비스가 실행되지 않습니다. 다음 Ngen.exe 명령줄은 서비스를 일시 중지합니다.
 
-```
+```console
 ngen queue pause
 ```
 
 지연된 모든 작업이 큐에 대기되고 나면 다음 명령을 통해 서비스를 다시 시작할 수 있습니다.
 
-```
+```console
 ngen queue continue
 ```
 
 새 애플리케이션을 설치하거나 공유 구성 요소를 업데이트할 때 네이티브 이미지 생성을 지연시키려면 `install` 또는 `update` 작업과 함께 `/queue` 옵션을 사용합니다. 다음 Ngen.exe 명령줄은 공유 구성 요소에 대한 네이티브 이미지를 설치하고 영향을 받았을 수 있는 모든 루트의 업데이트를 수행합니다.
 
-```
+```console
 ngen install MyComponent /queue
 ngen update /queue
 ```
@@ -612,7 +615,7 @@ ngen update /queue
 
 애플리케이션이 많은 루트로 구성된 경우 지연된 작업의 우선 순위를 제어할 수 있습니다. 다음 명령은 세 가지 루트의 설치를 큐에 대기시킵니다. `Assembly1`은 유휴 시간을 기다리지 않고 첫 번째로 설치됩니다. `Assembly2`도 유휴 시간을 기다리지 않고 설치되지만 모든 우선 순위 1 작업이 완료된 후에 설치됩니다. `Assembly3`은 서비스에서 컴퓨터의 유휴 상태를 감지할 때 설치됩니다.
 
-```
+```console
 ngen install Assembly1 /queue:1
 ngen install Assembly2 /queue:2
 ngen install Assembly3 /queue:3
@@ -620,7 +623,7 @@ ngen install Assembly3 /queue:3
 
 `executeQueuedItems` 작업을 사용하여 큐에 대기 중인 작업이 동기적으로 발생하도록 강제할 수 있습니다. 선택적 우선 순위를 제공하는 경우 이 작업은 우선 순위가 같거나 낮은 대기 중인 작업에만 영향을 줍니다. 기본 우선 순위는 3이므로 다음 Ngen.exe 명령은 큐에 대기 중인 모든 작업을 즉시 처리하고 완료될 때까지 반환되지 않습니다.
 
-```
+```console
 ngen executeQueuedItems
 ```
 

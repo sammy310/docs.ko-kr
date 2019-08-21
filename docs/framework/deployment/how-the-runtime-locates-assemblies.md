@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d69fd06f4048667a05ddbfec571067c16f9e86a
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: ceae33501330719a27e2d0015c21249dca62d551
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833727"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566858"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>런타임에서 어셈블리를 찾는 방법
 .NET Framework 애플리케이션을 성공적으로 배포하려면 공용 언어 런타임이 애플리케이션을 구성하는 어셈블리를 찾아서 바인딩하는 방법을 이해해야 합니다. 기본적으로 런타임은 애플리케이션 빌드 시 사용된 정확한 버전의 어셈블리로 바인딩을 시도합니다. 이 기본 동작은 구성 파일 설정으로 재정의할 수 있습니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "66833727"
  공용 언어 런타임은 어셈블리를 찾아서 어셈블리 참조를 확인하려고 할 때 다양 한 단계를 수행합니다. 각 단계는 다음 섹션에서 설명합니다. 검색이라는 용어는 대개 런타임에서 어셈블리를 찾는 방법을 설명할 때 사용됩니다. 해당 이름 및 문화권에 따라 어셈블리를 찾는 데 사용되는 추론 집합을 가리킵니다.  
   
 > [!NOTE]
->  Windows SDK(소프트웨어 개발 키트)에 포함된 [어셈블리 바인딩 로그 뷰어(Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)를 사용하여 로그 파일의 바인딩 정보를 볼 수 있습니다.  
+>  Windows SDK에 포함된 [어셈블리 바인딩 로그 뷰어(Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)를 사용하여 로그 파일의 바인딩 정보를 볼 수 있습니다.  
   
 ## <a name="initiating-the-bind"></a>바인딩 시작  
  런타임에서 다른 어셈블리에 대한 참조를 확인하려고 시도하면 어셈블리를 찾아서 바인딩하는 프로세스가 시작됩니다. 이 참조는 정적이거나 동적일 수 있습니다. 컴파일러는 빌드 타임에 정적 참조를 어셈블리 매니페스트 메타데이터에 기록합니다. 동적 참조는 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>와 같은 다양한 메서드의 호출 결과로 즉석에서 생성됩니다.  

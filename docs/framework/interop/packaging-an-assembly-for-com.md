@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ca87d688d6802df967ea81b8297b099350f1c86
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 11777f21d34da8b529352122bbf185f1938d3eb5
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629331"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567238"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>COM용 .NET Framework 어셈블리 패키징
 
@@ -49,7 +49,7 @@ COM 개발자는 애플리케이션에 통합하려는 관리 형식에 대한 �
 
 - 형식 라이브러리 포함
 
-  COM 애플리케이션에서 사용할 때 대부분의 형식에는 형식 라이브러리가 필요합니다. 사용자가 형식 라이브러리를 생성하거나 COM 개발자가 이 작업을 수행할 수 있습니다. Windows SDK(소프트웨어 개발 키트)에서는 형식 라이브러리를 생성하기 위한 다음 옵션을 제공합니다.
+  COM 애플리케이션에서 사용할 때 대부분의 형식에는 형식 라이브러리가 필요합니다. 사용자가 형식 라이브러리를 생성하거나 COM 개발자가 이 작업을 수행할 수 있습니다. Windows SDK에서는 형식 라이브러리를 생성하기 위해 다음 옵션을 제공합니다.
 
   - [형식 라이브러리 내보내기](#cpconpackagingassemblyforcomanchor1)
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e657b8e2a0a9dbe8db703ce97d41a3767191a26f
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 1de17ec2537282fe87b5613a63e2a954383aeab6
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833861"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567326"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe(PEVerify 도구)
 PEVerify 도구를 사용하면 MSIL(Microsoft Intermediate Language)을 생성하는 개발자(컴파일러 작성자, 스크립트 엔진 개발자 등)는 MSIL 코드 및 관련 메타데이터가 형식 안전성 요구 사항을 충족시키는지 여부를 쉽게 확인할 수 있습니다. 일부 컴파일러에서는 특정 언어 구문을 사용하지 않는 경우에만 확인 가능한 형식 안전 코드가 생성됩니다. 이러한 컴파일러를 사용하는 개발자라면 해당 코드의 형식이 안전한지를 확인하려고 할 것입니다. 이런 경우, 해당 파일에 대해 PEVerify 도구를 실행하면 MSIL 및 메타데이터를 검사할 수 있습니다.  
@@ -61,7 +61,7 @@ peverify filename [options]
   
  **/md** 및 **/il** 옵션이 모두 지정되지 않은 경우 Peverify.exe를 사용하면 두 종류의 검사를 모두 수행할 수 있습니다. 먼저 **/md** 검사가 수행되고, 오류가 없으면 **/il** 검사가 수행됩니다. **/md** 및 **/il**을 모두 지정하면 메타데이터에 오류가 있는 경우에도 **/il** 검사가 수행됩니다. 따라서 메타데이터 오류가 없는 경우 **peverify** *filename*은 **peverify** *filename* **/md** **/il**과 같습니다.  
   
- Peverify.exe를 사용하여 데이터 흐름 분석과 올바른 메타데이터에 대한 수백 개의 규칙 목록에 따라 포괄적인 MSIL 확인 검사를 수행할 수 있습니다. Peverify.exe를 사용하여 수행하는 검사에 대한 자세한 내용은 Windows SDK(소프트웨어 개발 키트)의 Tools Developers Guide 폴더에 있는 “메타데이터 유효성 검사 사양” 및 “MSIL 명령 집합 사양”을 참조하세요.  
+ Peverify.exe를 사용하여 데이터 흐름 분석과 올바른 메타데이터에 대한 수백 개의 규칙 목록에 따라 포괄적인 MSIL 확인 검사를 수행할 수 있습니다. Peverify.exe를 사용하여 수행하는 검사에 대한 자세한 내용은 Windows SDK의 Tools Developers Guide 폴더에 있는 "메타데이터 유효성 검사 사양" 및 "MSIL 명령 집합 사양"을 참조하세요.  
   
  .NET Framework 버전 2.0 이상은 `byref`, `dup`, `ldsflda`, `ldflda`, `ldelema`, `call` 등의 MSIL 지침을 사용하여 지정된 확인할 수 있는 `unbox` 반환을 지원합니다.  
   
