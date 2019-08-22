@@ -47,22 +47,17 @@
           href: how-to-add-activex-controls-to-windows-forms.md
         - name: Windows Form에서 ActiveX 컨트롤을 호스팅할 때의 고려 사항
           href: considerations-when-hosting-an-activex-control-on-a-windows-form.md
-    - name: 개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공
-      href: labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md
+    - name: 컨트롤 레이블 지정 및 바로 가기 제공
       items:
-        - name: '방법: Windows Forms 컨트롤에 대한 선택키 만들기'
+        - name: 개요
+          href: labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md
+        - name: 컨트롤을 위한 액세스 키 만들기
           href: how-to-create-access-keys-for-windows-forms-controls.md
-        - name: '방법: 디자이너를 사용하여 Windows Forms 컨트롤에 대한 선택키 만들기'
-          href: how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md
-        - name: '방법: Windows Forms 컨트롤에서 표시하는 텍스트 설정'
+        - name: 컨트롤에 의해 표시되는 텍스트 설정
           href: how-to-set-the-text-displayed-by-a-windows-forms-control.md
-        - name: '방법: 디자이너를 사용하여 Windows Forms 컨트롤에서 표시하는 텍스트 설정'
-          href: how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md
-        - name: '방법: Windows Forms 컨트롤에서 표시하는 이미지 설정'
+        - name: 컨트롤에 의해 표시되는 이미지 설정
           href: how-to-set-the-image-displayed-by-a-windows-forms-control.md
-        - name: '방법: 디자이너를 사용하여 Windows Forms 컨트롤에서 표시하는 이미지 설정'
-          href: how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md
-        - name: Windows Form의 컨트롤에 내게 필요한 옵션 정보 제공
+        - name: 컨트롤에 대한 접근성 정보 제공
           href: providing-accessibility-information-for-controls-on-a-windows-form.md
     - name: Windows Forms에 사용할 수 있는 컨트롤
       href: controls-to-use-on-windows-forms.md
