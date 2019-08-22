@@ -8,21 +8,21 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: af290e4b9258a08425a15e297ff538502edea916
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2a3d0b182acad2351ed095934ca97c6194d344fc
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674430"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659127"
 ---
-# <a name="requestcaching-element-network-settings"></a><span data-ttu-id="832fb-102">\<requestCaching> 요소(네트워크 설정)</span><span class="sxs-lookup"><span data-stu-id="832fb-102">\<requestCaching> Element (Network Settings)</span></span>
-<span data-ttu-id="832fb-103">네트워크 요청에 대 한 캐싱 메커니즘을 제어합니다.</span><span class="sxs-lookup"><span data-stu-id="832fb-103">Controls the caching mechanism for network requests.</span></span>  
+# <a name="requestcaching-element-network-settings"></a><span data-ttu-id="f8315-102">\<requestCaching> 요소(네트워크 설정)</span><span class="sxs-lookup"><span data-stu-id="f8315-102">\<requestCaching> Element (Network Settings)</span></span>
+<span data-ttu-id="f8315-103">네트워크 요청에 대 한 캐싱 메커니즘을 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8315-103">Controls the caching mechanism for network requests.</span></span>  
   
- <span data-ttu-id="832fb-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="832fb-104">\<configuration></span></span>  
-<span data-ttu-id="832fb-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="832fb-105">\<system.net></span></span>  
-<span data-ttu-id="832fb-106">\<requestCaching></span><span class="sxs-lookup"><span data-stu-id="832fb-106">\<requestCaching></span></span>  
+ <span data-ttu-id="f8315-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="f8315-104">\<configuration></span></span>  
+<span data-ttu-id="f8315-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="f8315-105">\<system.net></span></span>  
+<span data-ttu-id="f8315-106">\<requestCaching></span><span class="sxs-lookup"><span data-stu-id="f8315-106">\<requestCaching></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="832fb-107">구문</span><span class="sxs-lookup"><span data-stu-id="832fb-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f8315-107">구문</span><span class="sxs-lookup"><span data-stu-id="f8315-107">Syntax</span></span>  
   
 ```xml  
 <requestCaching  
@@ -35,46 +35,46 @@ ms.locfileid: "61674430"
 </requestCaching>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="832fb-108">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="832fb-108">Attributes and Elements</span></span>  
- <span data-ttu-id="832fb-109">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="832fb-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f8315-108">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="f8315-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="f8315-109">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="f8315-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="832fb-110">특성</span><span class="sxs-lookup"><span data-stu-id="832fb-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="f8315-110">특성</span><span class="sxs-lookup"><span data-stu-id="f8315-110">Attributes</span></span>  
   
-|<span data-ttu-id="832fb-111">특성</span><span class="sxs-lookup"><span data-stu-id="832fb-111">Attribute</span></span>|<span data-ttu-id="832fb-112">설명</span><span class="sxs-lookup"><span data-stu-id="832fb-112">Description</span></span>|  
+|<span data-ttu-id="f8315-111">특성</span><span class="sxs-lookup"><span data-stu-id="f8315-111">Attribute</span></span>|<span data-ttu-id="f8315-112">Description</span><span class="sxs-lookup"><span data-stu-id="f8315-112">Description</span></span>|  
 |---------------|-----------------|  
-|`isPrivateCache`|<span data-ttu-id="832fb-113">캐시에 서로 다른 사용자의 정보 간에 격리 제공 하는지 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="832fb-113">Specifies whether the cache provides isolation between the information of different users.</span></span> <span data-ttu-id="832fb-114">기본값은 `true`입니다.</span><span class="sxs-lookup"><span data-stu-id="832fb-114">The default value is `true`.</span></span> <span data-ttu-id="832fb-115">이 값은 이어야 `false` 중간 계층 응용 프로그램에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="832fb-115">This value should be `false` for middle tier applications.</span></span>|  
-|`disableAllCaching`|<span data-ttu-id="832fb-116">모든 웹 응답의 경우 사용 하지 않으면 캐싱을 프로그래밍 방식으로 재정의할 수 없습니다 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="832fb-116">Specifies that caching is disabled for all Web responses, and cannot be overridden programmatically.</span></span>|  
-|`defaultPolicyLevel`|<span data-ttu-id="832fb-117"><xref:System.Net.Cache.RequestCacheLevel> 열거형에 값 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="832fb-117">One of the values in the <xref:System.Net.Cache.RequestCacheLevel> enumeration.</span></span> <span data-ttu-id="832fb-118">기본값은 `BypassCache`입니다.</span><span class="sxs-lookup"><span data-stu-id="832fb-118">The default value is `BypassCache`.</span></span>|  
-|`unspecifiedMaximumAge`|<span data-ttu-id="832fb-119">콘텐츠 만료 되기까지의 표시 기본 시간을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="832fb-119">Specifies the default time after which content is marked as expired.</span></span>|  
+|`isPrivateCache`|<span data-ttu-id="f8315-113">캐시에서 다른 사용자의 정보를 격리 하는지 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8315-113">Specifies whether the cache provides isolation between the information of different users.</span></span> <span data-ttu-id="f8315-114">기본값은 `true`입니다.</span><span class="sxs-lookup"><span data-stu-id="f8315-114">The default value is `true`.</span></span> <span data-ttu-id="f8315-115">중간 계층 응용 프로그램 `false` 의 경우이 값은 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8315-115">This value should be `false` for middle tier applications.</span></span>|  
+|`disableAllCaching`|<span data-ttu-id="f8315-116">모든 웹 응답에 대해 캐싱이 사용 되지 않도록 지정 하 고 프로그래밍 방식으로 재정의할 수 없도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8315-116">Specifies that caching is disabled for all Web responses, and cannot be overridden programmatically.</span></span>|  
+|`defaultPolicyLevel`|<span data-ttu-id="f8315-117"><xref:System.Net.Cache.RequestCacheLevel> 열거형에 값 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="f8315-117">One of the values in the <xref:System.Net.Cache.RequestCacheLevel> enumeration.</span></span> <span data-ttu-id="f8315-118">기본값은 `BypassCache`입니다.</span><span class="sxs-lookup"><span data-stu-id="f8315-118">The default value is `BypassCache`.</span></span>|  
+|`unspecifiedMaximumAge`|<span data-ttu-id="f8315-119">콘텐츠가 만료 된 것으로 표시 되는 기본 시간을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8315-119">Specifies the default time after which content is marked as expired.</span></span>|  
   
-## <a name="policylevel-attribute"></a><span data-ttu-id="832fb-120">policyLevel 특성</span><span class="sxs-lookup"><span data-stu-id="832fb-120">policyLevel Attribute</span></span>  
+## <a name="policylevel-attribute"></a><span data-ttu-id="f8315-120">policyLevel 특성</span><span class="sxs-lookup"><span data-stu-id="f8315-120">policyLevel Attribute</span></span>  
   
-|<span data-ttu-id="832fb-121">값</span><span class="sxs-lookup"><span data-stu-id="832fb-121">Value</span></span>|<span data-ttu-id="832fb-122">설명</span><span class="sxs-lookup"><span data-stu-id="832fb-122">Description</span></span>|  
+|<span data-ttu-id="f8315-121">값</span><span class="sxs-lookup"><span data-stu-id="f8315-121">Value</span></span>|<span data-ttu-id="f8315-122">Description</span><span class="sxs-lookup"><span data-stu-id="f8315-122">Description</span></span>|  
 |-----------|-----------------|  
-|`Default`|<span data-ttu-id="832fb-123">리소스 새로 고침, 콘텐츠 길이 정확 하 고, 이며 만료, 수정 및 콘텐츠 길이 특성이 있는 경우 캐시 된 리소스를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="832fb-123">Returns the cached resource if the resource is fresh, the content length is accurate, and the expiration, modification, and content length attributes are present.</span></span>|  
-|`BypassCache`|<span data-ttu-id="832fb-124">서버에서 리소스를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="832fb-124">Returns the resource from the server.</span></span>|  
-|`CacheOnly`|<span data-ttu-id="832fb-125">콘텐츠 길이가 있는지와 항목 크기와 일치 하는 경우 캐시 된 리소스를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="832fb-125">Returns the cached resource if the content length is present and matches the entry size.</span></span>|  
-|`CacheIfAvailable`|<span data-ttu-id="832fb-126">콘텐츠 길이 제공 하는 크기와 일치 항목; 경우 캐시 된 리소스를 반환 합니다. 그렇지 않은 경우 리소스 서버에서 다운로드 되 고 호출자에 게 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="832fb-126">Returns the cached resource if the content length is provided and matches the entry size; otherwise, the resource is downloaded from the server and is returned to the caller.</span></span>|  
-|`Revalidate`|<span data-ttu-id="832fb-127">캐시 된 리소스의 타임 스탬프 서버에서 리소스의 타임 스탬프와 동일한 경우 캐시 된 리소스를 반환 합니다. 그렇지 않으면 리소스 캐시에 저장 된 서버에서 다운로드 되 고 호출자에 게 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="832fb-127">Returns the cached resource if the timestamp of the cached resource is the same as the timestamp of the resource on the server; otherwise, the resource is downloaded from the server, stored in the cache, and is returned to the caller.</span></span>|  
-|`Reload`|<span data-ttu-id="832fb-128">서버에서 리소스를 다운로드, 캐시에 저장 하 고 호출자에 게 리소스를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="832fb-128">Downloads the resource from the server, stores it in the cache, and returns the resource to the caller.</span></span>|  
-|`NoCacheNoStore`|<span data-ttu-id="832fb-129">캐시 된 리소스가 있는 경우 삭제 됩니다.</span><span class="sxs-lookup"><span data-stu-id="832fb-129">If a cached resource exists, it is deleted.</span></span> <span data-ttu-id="832fb-130">리소스는 서버에서 다운로드 되 고 호출자에 게 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="832fb-130">The resource is downloaded from the server and is returned to the caller.</span></span>|  
-|`Revalidate`|<span data-ttu-id="832fb-131">타임 스탬프 서버에서 리소스의 타임 스탬프와 동일한 경우 리소스의 캐시 된 복사본을 사용 하 여 요청을 만족 시킵니다. 그렇지 않으면 리소스 호출자에 게 표시 되는 서버에서 다운로드 되 고 캐시에 저장 됩니다.</span><span class="sxs-lookup"><span data-stu-id="832fb-131">Satisfies a request by using the cached copy of the resource if the timestamp is the same as the timestamp of the resource on the server; otherwise, the resource is downloaded from the server, presented to the caller, and is stored in the cache,</span></span>|  
+|`Default`|<span data-ttu-id="f8315-123">리소스 새로 고침, 콘텐츠 길이 정확 하 고, 이며 만료, 수정 및 콘텐츠 길이 특성이 있는 경우 캐시 된 리소스를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8315-123">Returns the cached resource if the resource is fresh, the content length is accurate, and the expiration, modification, and content length attributes are present.</span></span>|  
+|`BypassCache`|<span data-ttu-id="f8315-124">서버에서 리소스를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="f8315-124">Returns the resource from the server.</span></span>|  
+|`CacheOnly`|<span data-ttu-id="f8315-125">콘텐츠 길이가 있고 항목 크기와 일치 하는 경우 캐시 된 리소스를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8315-125">Returns the cached resource if the content length is present and matches the entry size.</span></span>|  
+|`CacheIfAvailable`|<span data-ttu-id="f8315-126">콘텐츠 길이 제공 하는 크기와 일치 항목; 경우 캐시 된 리소스를 반환 합니다. 그렇지 않은 경우 리소스 서버에서 다운로드 되 고 호출자에 게 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f8315-126">Returns the cached resource if the content length is provided and matches the entry size; otherwise, the resource is downloaded from the server and is returned to the caller.</span></span>|  
+|`Revalidate`|<span data-ttu-id="f8315-127">캐시 된 리소스의 타임 스탬프가 서버에 있는 리소스의 타임 스탬프와 동일한 경우 캐시 된 리소스를 반환 합니다. 그렇지 않으면 리소스가 서버에서 다운로드 되어 캐시에 저장 되며 호출자에 게 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f8315-127">Returns the cached resource if the timestamp of the cached resource is the same as the timestamp of the resource on the server; otherwise, the resource is downloaded from the server, stored in the cache, and is returned to the caller.</span></span>|  
+|`Reload`|<span data-ttu-id="f8315-128">서버에서 리소스를 다운로드, 캐시에 저장 하 고 호출자에 게 리소스를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8315-128">Downloads the resource from the server, stores it in the cache, and returns the resource to the caller.</span></span>|  
+|`NoCacheNoStore`|<span data-ttu-id="f8315-129">캐시 된 리소스가 있는 경우 삭제 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f8315-129">If a cached resource exists, it is deleted.</span></span> <span data-ttu-id="f8315-130">리소스는 서버에서 다운로드 되 고 호출자에 게 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f8315-130">The resource is downloaded from the server and is returned to the caller.</span></span>|  
+|`Revalidate`|<span data-ttu-id="f8315-131">타임 스탬프가 서버의 리소스 타임 스탬프와 동일한 경우 캐시 된 리소스 복사본을 사용 하 여 요청을 만족 시킵니다. 그렇지 않으면 리소스가 서버에서 다운로드 되 고 호출자에 게 표시 되며 캐시에 저장 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f8315-131">Satisfies a request by using the cached copy of the resource if the timestamp is the same as the timestamp of the resource on the server; otherwise, the resource is downloaded from the server, presented to the caller, and is stored in the cache,</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="832fb-132">자식 요소</span><span class="sxs-lookup"><span data-stu-id="832fb-132">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="f8315-132">자식 요소</span><span class="sxs-lookup"><span data-stu-id="f8315-132">Child Elements</span></span>  
   
-|<span data-ttu-id="832fb-133">요소</span><span class="sxs-lookup"><span data-stu-id="832fb-133">Element</span></span>|<span data-ttu-id="832fb-134">설명</span><span class="sxs-lookup"><span data-stu-id="832fb-134">Description</span></span>|  
+|<span data-ttu-id="f8315-133">요소</span><span class="sxs-lookup"><span data-stu-id="f8315-133">Element</span></span>|<span data-ttu-id="f8315-134">설명</span><span class="sxs-lookup"><span data-stu-id="f8315-134">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="832fb-135">defaultHttpCachePolicy</span><span class="sxs-lookup"><span data-stu-id="832fb-135">defaultHttpCachePolicy</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/defaulthttpcachepolicy-element-network-settings.md)|<span data-ttu-id="832fb-136">선택적 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="832fb-136">Optional element.</span></span><br /><br /> <span data-ttu-id="832fb-137">HTTP 캐싱을 활성화 되어 있는지 여부를 나타내고 기본 캐싱 정책은 설명 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="832fb-137">Describes whether HTTP caching is active and describes the default caching policy.</span></span>|  
-|[<span data-ttu-id="832fb-138">\<defaultFtpCachePolicy > 요소 (네트워크 설정)</span><span class="sxs-lookup"><span data-stu-id="832fb-138">\<defaultFtpCachePolicy> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/defaultftpcachepolicy-element-network-settings.md)|<span data-ttu-id="832fb-139">선택적 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="832fb-139">Optional element.</span></span><br /><br /> <span data-ttu-id="832fb-140">FTP 캐싱 활성화 되어 있는지 여부를 나타내고 기본 캐싱 정책은 설명 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="832fb-140">Describes whether FTP caching is active and describes the default caching policy.</span></span>|  
+|[<span data-ttu-id="f8315-135">defaultHttpCachePolicy</span><span class="sxs-lookup"><span data-stu-id="f8315-135">defaultHttpCachePolicy</span></span>](defaulthttpcachepolicy-element-network-settings.md)|<span data-ttu-id="f8315-136">선택적 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="f8315-136">Optional element.</span></span><br /><br /> <span data-ttu-id="f8315-137">HTTP 캐싱이 활성 상태 인지 여부를 설명 하 고 기본 캐싱 정책을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8315-137">Describes whether HTTP caching is active and describes the default caching policy.</span></span>|  
+|[<span data-ttu-id="f8315-138">\<defaultFtpCachePolicy > 요소 (네트워크 설정)</span><span class="sxs-lookup"><span data-stu-id="f8315-138">\<defaultFtpCachePolicy> Element (Network Settings)</span></span>](defaultftpcachepolicy-element-network-settings.md)|<span data-ttu-id="f8315-139">선택적 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="f8315-139">Optional element.</span></span><br /><br /> <span data-ttu-id="f8315-140">FTP 캐싱이 활성 상태 인지 여부를 설명 하 고 기본 캐싱 정책을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8315-140">Describes whether FTP caching is active and describes the default caching policy.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="832fb-141">부모 요소</span><span class="sxs-lookup"><span data-stu-id="832fb-141">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="f8315-141">부모 요소</span><span class="sxs-lookup"><span data-stu-id="f8315-141">Parent Elements</span></span>  
   
-|<span data-ttu-id="832fb-142">요소</span><span class="sxs-lookup"><span data-stu-id="832fb-142">Element</span></span>|<span data-ttu-id="832fb-143">설명</span><span class="sxs-lookup"><span data-stu-id="832fb-143">Description</span></span>|  
+|<span data-ttu-id="f8315-142">요소</span><span class="sxs-lookup"><span data-stu-id="f8315-142">Element</span></span>|<span data-ttu-id="f8315-143">설명</span><span class="sxs-lookup"><span data-stu-id="f8315-143">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="832fb-144">system.net</span><span class="sxs-lookup"><span data-stu-id="832fb-144">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="832fb-145">.NET Framework의 네트워크 연결 방법을 지정하는 설정을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="832fb-145">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
+|[<span data-ttu-id="f8315-144">system.net</span><span class="sxs-lookup"><span data-stu-id="f8315-144">system.net</span></span>](system-net-element-network-settings.md)|<span data-ttu-id="f8315-145">.NET Framework의 네트워크 연결 방법을 지정하는 설정을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="f8315-145">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="832fb-146">예제</span><span class="sxs-lookup"><span data-stu-id="832fb-146">Example</span></span>  
- <span data-ttu-id="832fb-147">다음 예제에서는 모든 캐시를 사용 하지 않도록 설정 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="832fb-147">The following example shows how to disable all caching.</span></span>  
+## <a name="example"></a><span data-ttu-id="f8315-146">예제</span><span class="sxs-lookup"><span data-stu-id="f8315-146">Example</span></span>  
+ <span data-ttu-id="f8315-147">다음 예에서는 모든 캐싱을 사용 하지 않도록 설정 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f8315-147">The following example shows how to disable all caching.</span></span>  
   
 ```xml  
 <configuration>  
@@ -86,7 +86,7 @@ ms.locfileid: "61674430"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="832fb-148">참고자료</span><span class="sxs-lookup"><span data-stu-id="832fb-148">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f8315-148">참고자료</span><span class="sxs-lookup"><span data-stu-id="f8315-148">See also</span></span>
 
 - <xref:System.Net.Cache?displayProperty=nameWithType>
-- [<span data-ttu-id="832fb-149">네트워크 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="832fb-149">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [<span data-ttu-id="f8315-149">네트워크 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="f8315-149">Network Settings Schema</span></span>](index.md)
