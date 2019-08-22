@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1251f286a4e6168ef1d18b05288e0c5f353ad828
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 197ab9dbc1ec85bf8961f60bb26496eab788e63f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689873"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663696"
 ---
 # <a name="gccpugroup-element"></a>\<GCCpuGroup > 요소
 
@@ -43,8 +43,8 @@ ms.locfileid: "66689873"
 
 |값|설명|
 |-----------|-----------------|
-|`false`|가비지 수집에서 여러 CPU 그룹을 지원 하지 않습니다. 이 값이 기본값입니다.|
-|`true`|가비지 수집이 서버 가비지 수집을 사용 하는 경우 여러 CPU 그룹을 지원 합니다.|
+|`false`|가비지 수집은 여러 CPU 그룹을 지원 하지 않습니다. 이 값이 기본값입니다.|
+|`true`|서버 가비지 수집을 사용 하는 경우 가비지 수집은 여러 CPU 그룹을 지원 합니다.|
 
 ### <a name="child-elements"></a>자식 요소
 
@@ -59,14 +59,14 @@ ms.locfileid: "66689873"
 
 ## <a name="remarks"></a>설명
 
-컴퓨터에 여러 CPU 그룹이 시간과 서버 가비지 컬렉션이 설정 되었는지 (참조를 [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) 요소), 모든 CPU 그룹에 걸쳐 가비지 컬렉션을 확장 하 고 모든 코어에는이 요소를 사용 하도록 설정 계정 만들기 및 힙 분산 하는 경우입니다.
+컴퓨터에 여러 cpu 그룹이 있고 서버 가비지 수집이 사용 되는 경우 ( [ \<gcServer >](gcserver-element.md) 요소 참조)이 요소를 사용 하도록 설정 하면 모든 CPU 그룹에서 가비지 수집을 확장 하 고를 만들 때 모든 코어를 고려 합니다. 힙 분산.
 
 > [!NOTE]
-> 이 요소는 가비지 수집 스레드에만 적용 됩니다. 런타임이 모든 CPU 그룹에 사용자 스레드를 분산할 수 있도록 설정할 수도 있습니다는 [ \<Thread_UseAllCpuGroups >](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md) 요소입니다.
+> 이 요소는 가비지 수집 스레드에만 적용 됩니다. 런타임이 모든 CPU 그룹에 사용자 스레드를 배포할 수 있도록 하려면 [ \<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md) 요소도 사용 하도록 설정 해야 합니다.
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 여러 CPU 그룹에 대 한 가비지 수집을 사용 하도록 설정 하는 방법을 보여 줍니다.
+다음 예제에서는 여러 CPU 그룹에 대해 가비지 수집을 사용 하도록 설정 하는 방법을 보여 줍니다.
 
 ```xml
 <configuration>
@@ -79,7 +79,7 @@ ms.locfileid: "66689873"
 
 ## <a name="see-also"></a>참고자료
 
-- [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [동시 가비지 수집을 사용 하지 않도록 설정](gcconcurrent-element.md#to-disable-background-garbage-collection)
+- [런타임 설정 스키마](index.md)
+- [구성 파일 스키마](../index.md)
+- [동시 가비지 수집을 사용 하지 않도록 설정 하려면](gcconcurrent-element.md#to-disable-background-garbage-collection)
 - [워크스테이션 및 서버 가비지 수집](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)

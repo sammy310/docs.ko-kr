@@ -4,12 +4,12 @@ ms.date: 04/26/2017
 ms.assetid: c2cf97f0-9262-4f1f-a754-5568b51110ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a467599084f01b1a48c95c5e25fb1f869156dffa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d79479d1836963fcbdaaf8d40bfc3648b88c4a3
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673890"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663404"
 ---
 # <a name="uselegacyjit-element"></a>\<useLegacyJit> 요소
 
@@ -25,7 +25,7 @@ ms.locfileid: "61673890"
 <useLegacyJit enabled=0|1 />
 ```
 
-요소 이름을 `useLegacyJit` 대/소문자 구분 합니다.
+요소 이름은 `useLegacyJit` 대/소문자를 구분 합니다.
   
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
@@ -41,8 +41,8 @@ ms.locfileid: "61673890"
   
 | 값 | 설명                                                                                                         |  
 | ----- | ------------------------------------------------------------------------------------------------------------------- |  
-| 0     | 공용 언어 런타임은.NET Framework 4.6 및 이상 버전에 포함 된 새로운 64 비트 JIT 컴파일러를 사용 합니다. |  
-| 1     | 공용 언어 런타임에서 이전 64 비트 JIT 컴파일러를 사용합니다.                                                     |  
+| 0     | 공용 언어 런타임은 .NET Framework 4.6 이상 버전에 포함 된 새로운 64 비트 JIT 컴파일러를 사용 합니다. |  
+| 1     | 공용 언어 런타임에서는 이전 64 비트 JIT 컴파일러를 사용 합니다.                                                     |  
   
 ### <a name="child-elements"></a>자식 요소
 
@@ -57,32 +57,32 @@ ms.locfileid: "61673890"
   
 ## <a name="remarks"></a>설명  
 
-.NET Framework 4.6부터 공용 언어 런타임에서 사용 하 여 새 64 비트 컴파일러를 jit (JUST-IN-TIME) 컴파일에 기본적으로. 일부 경우에는 64 비트 JIT 컴파일러의 이전 버전에서 JIT-컴파일된 응용 프로그램 코드 로부터 동작의 차이에 따라서 수 있습니다. 설정 하 여 합니다 `enabled` 특성을 `<useLegacyJit>` 요소를 `1`, 새로운 64 비트 JIT 컴파일러를 사용 하지 않도록 설정 하 고 대신 레거시 64 비트 JIT 컴파일러를 사용 하 여 앱을 컴파일할 수 있습니다.  
+4\.6 .NET Framework부터 공용 언어 런타임은 기본적으로 JIT (Just-in-time) 컴파일에 새로운 64 비트 컴파일러를 사용 합니다. 일부 경우에는 이전 버전의 64 비트 JIT 컴파일러에 의해 JIT 컴파일된 응용 프로그램 코드의 동작이 달라질 수 있습니다. `enabled` 요소의 특성을 로`1`설정 하 여 새 64 비트 jit 컴파일러를 사용 하지 않도록 설정 하 고 대신 레거시 64 비트 jit 컴파일러를 사용 하 여 앱을 컴파일할 수 있습니다. `<useLegacyJit>`  
   
 > [!NOTE]
-> `<useLegacyJit>` 요소 64 비트 JIT 컴파일의 경우에 영향을 줍니다. 32 비트 JIT 컴파일러를 사용 하 여 컴파일 영향을 받지 않습니다.  
+> 요소 `<useLegacyJit>` 는 64 비트 JIT 컴파일에만 영향을 줍니다. 32 비트 JIT 컴파일러를 사용 하는 컴파일은 영향을 받지 않습니다.  
   
-구성 파일 설정을 사용 하는 대신 다른 두 가지 방법으로 레거시 64 비트 JIT 컴파일러를 사용할 수 있습니다.  
+구성 파일 설정을 사용 하는 대신 두 가지 다른 방법으로 레거시 64 비트 JIT 컴파일러를 사용 하도록 설정할 수 있습니다.  
   
-- 환경 변수를 설정합니다.
+- 환경 변수 설정
 
-  설정 된 `COMPLUS_useLegacyJit` 환경 변수를 하나 `0` (새로운 64 비트 JIT 컴파일러 사용) 또는 `1` (이전 64 비트 JIT 컴파일러 사용):
+  환경 변수 `COMPLUS_useLegacyJit` 를 `0` (새로운 64 비트 jit 컴파일러 사용) 또는 `1` (이전 64 비트 jit 컴파일러 사용)로 설정 합니다.
   
   ```  
   COMPLUS_useLegacyJit=0|1  
   ```  
   
-  환경 변수가 *전역 범위*, 즉, 영향을 주는 모든 응용 프로그램 컴퓨터에서 실행 됩니다. 경우 설정 재정의할 수 있습니다 응용 프로그램 구성 파일 설정에 따라 합니다. 환경 변수 이름이 대/소문자 구분 아닙니다.
+  환경 변수에는 *전역 범위가*있습니다. 즉, 컴퓨터에서 실행 되는 모든 응용 프로그램에 영향을 줍니다. 설정 하는 경우 응용 프로그램 구성 파일 설정으로 재정의할 수 있습니다. 환경 변수 이름은 대/소문자를 구분 하지 않습니다.
   
 - 레지스트리 키 추가
 
-  추가 하 여 레거시 64 비트 JIT 컴파일러를 사용할 수는 `REG_DWORD` 값 중 하나는 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` 또는 `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` 레지스트리 키. 값 이름은 `useLegacyJit`합니다. 값이 0 이면 새로운 컴파일러 사용 됩니다. 값이 1 이면 레거시 64 비트 JIT 컴파일러를 사용 합니다. 레지스트리 값 이름이 대/소문자 구분 합니다.
+  레지스트리의 `REG_DWORD` `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` 또는 키`HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` 중 하나에 값을 추가 하 여 레거시 64 비트 JIT 컴파일러를 사용 하도록 설정할 수 있습니다. 값의 이름은 `useLegacyJit`입니다. 값이 0 이면 새 컴파일러가 사용 됩니다. 값이 1 이면 레거시 64 비트 JIT 컴파일러를 사용할 수 있습니다. 레지스트리 값 이름에 대/소문자를 구분 하지 않습니다.
   
-  값을 추가 합니다 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` 키 컴퓨터에서 실행 되는 모든 앱에 영향을 줍니다. 값을 추가 합니다 `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` 키 현재 사용자가 실행 되는 모든 앱에 영향을 줍니다. 컴퓨터를 여러 사용자 계정으로 구성 된 경우 현재 사용자가 실행 하는 앱만 영향을 받습니다를 값으로 다른 사용자에 대 한 레지스트리 키를 추가 하지 않으면. 추가 된 `<useLegacyJit>` 요소 구성 파일에 있는 경우 레지스트리 설정을 재정의 합니다.  
+  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` 키에 값을 추가 하면 컴퓨터에서 실행 되는 모든 앱에 영향을 줍니다. `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` 키에 값을 추가 하면 현재 사용자가 실행 하는 모든 앱에 영향을 줍니다. 여러 사용자 계정을 사용 하 여 컴퓨터를 구성 하는 경우 다른 사용자에 대 한 레지스트리 키에 값을 추가 하지 않으면 현재 사용자가 실행 하는 앱만 영향을 받습니다. 구성 파일에 요소를 추가 하면 레지스트리 설정 (있는 경우)이 재정의 됩니다. `<useLegacyJit>`  
   
 ## <a name="example"></a>예제  
 
-다음 구성 파일 새 64 비트 JIT 컴파일러를 사용 하 여 컴파일 사용 하지 않도록 설정 하 고 대신 레거시 64 비트 JIT 컴파일러를 사용 합니다.  
+다음 구성 파일은 새 64 비트 JIT 컴파일러를 사용 하 여 컴파일을 사용 하지 않도록 설정 하 고 대신 레거시 64 비트 JIT 컴파일러를 사용 합니다.  
   
 ```xml  
 <?xml version ="1.0"?>  
@@ -95,6 +95,6 @@ ms.locfileid: "61673890"
   
 ## <a name="see-also"></a>참고 항목
 
-- [\<런타임 > 요소](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)
-- [\<configuration> 요소](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)
-- [완화: 새로운 64 비트 JIT 컴파일러](../../../../../docs/framework/migration-guide/mitigation-new-64-bit-jit-compiler.md)
+- [\<런타임 > 요소](runtime-element.md)
+- [\<configuration> 요소](../configuration-element.md)
+- [조치 새 64 비트 JIT 컴파일러](../../../migration-guide/mitigation-new-64-bit-jit-compiler.md)

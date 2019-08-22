@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a4741c6a4745bdba00fdb525b39b70d0b15e005
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4aa90a378630c9aff74923d8e8600aed15a77a5e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704858"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663497"
 ---
-# <a name="qualifyassembly-element"></a>\<qualifyAssembly > 요소
+# <a name="qualifyassembly-element"></a>\<B l y > 요소
 부분 이름이 사용될 때 동적으로 로드되어야 하는 어셈블리의 전체 이름을 지정합니다.  
   
  \<configuration>  
@@ -41,8 +41,8 @@ ms.locfileid: "61704858"
   
 |특성|설명|  
 |---------------|-----------------|  
-|`partialName`|필수 특성입니다.<br /><br /> 코드에 표시 된 대로 어셈블리의 부분 이름을 지정 합니다.|  
-|`fullName`|필수 특성입니다.<br /><br /> 전역 어셈블리 캐시에 표시 된 대로 어셈블리의 전체 이름을 지정 합니다.|  
+|`partialName`|필수 특성입니다.<br /><br /> 코드에 표시 되는 어셈블리의 부분 이름을 지정 합니다.|  
+|`fullName`|필수 특성입니다.<br /><br /> 전역 어셈블리 캐시에 표시 되는 어셈블리의 전체 이름을 지정 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -56,12 +56,12 @@ ms.locfileid: "61704858"
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
- 호출 된 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 부분 어셈블리 이름을 사용 하는 메서드를 사용 하면 응용 프로그램 기본 디렉터리에만 어셈블리에 대 한 확인을 공용 언어 런타임. 사용 된  **\<qualifyAssembly >** (이름, 버전, 공개 키 토큰 및 문화권)에 전체 어셈블리 정보를 제공 하 여 검색 하려면 공용 언어 런타임이 응용 프로그램 구성 파일의 요소 전역 어셈블리 캐시에서 어셈블리입니다.  
+ 부분 어셈블리 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 이름을 사용 하 여 메서드를 호출 하면 공용 언어 런타임이 응용 프로그램 기본 디렉터리 에서만 어셈블리를 검색 합니다. 응용 프로그램 구성 파일에서  **bly>요소를사용하여전체어셈블리정보(이름,버전,공개키토큰및문화권)를제공하고공용언어런타임에서어셈블리를검색합니다.\<** 전역 어셈블리 캐시입니다.  
   
- 합니다 **fullName** 특성의 어셈블리 id는 4 개의 필드를 포함 해야 합니다: 이름, 버전, 공개 키 토큰 및 문화권입니다. 합니다 **partialName** 특성 어셈블리를 부분적으로 참조 해야 합니다. 어셈블리의 텍스트 이름 (가장 일반적인 경우)를 하나 이상 지정 해야 하지만 버전, 공개 키 토큰 또는 culture (또는 일부 4의 조합)을 포함할 수도 있습니다. 합니다 **partialName** 호출에 지정 된 이름과 일치 해야 합니다. 예를 들어 지정할 수 없습니다 `"math"` 으로 **partialName** 호출 프로그램과 구성 파일의 특성 `Assembly.Load("math, Version=3.3.3.3")` 코드에서.  
+ **FullName** 특성에는 어셈블리 id의 네 가지 필드인 이름, 버전, 공개 키 토큰 및 문화권이 포함 되어야 합니다. **PartialName** 특성은 어셈블리를 부분적으로 참조 해야 합니다. 적어도 어셈블리의 텍스트 이름 (가장 일반적인 경우)을 지정 해야 하지만 버전, 공개 키 토큰 또는 문화권 (또는 4의 모든 조합)을 포함할 수도 있습니다. **PartialName** 은 호출에 지정 된 이름과 일치 해야 합니다. 예를 들어 구성 파일에서 `"math"` 를 **partialName** 특성으로 지정 하 고 코드에서를 `Assembly.Load("math, Version=3.3.3.3")` 호출할 수 없습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 호출을 논리적으로 변환 `Assembly.Load("math")` 에 `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`입니다.  
+ 다음 예제에서는에 대 한 호출 `Assembly.Load("math")` 을 `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`논리적으로 바꿉니다.  
   
 ```xml  
 <configuration>  
@@ -77,6 +77,6 @@ ms.locfileid: "61704858"
   
 ## <a name="see-also"></a>참고자료
 
-- [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [런타임에서 어셈블리를 찾는 방법](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [런타임 설정 스키마](index.md)
+- [런타임에서 어셈블리를 찾는 방법](../../../deployment/how-the-runtime-locates-assemblies.md)
 - [부분 어셈블리 참조](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))

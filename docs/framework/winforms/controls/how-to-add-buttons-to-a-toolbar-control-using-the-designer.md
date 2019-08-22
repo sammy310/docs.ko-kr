@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: e5069dd46a31a65f65a17d750b685d82762e3d11
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 4d7a49633599aabc96153e4793e50c1a4d6d092d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038200"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666211"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>방법: 디자이너를 사용하여 ToolBar 컨트롤에 단추 추가
 
@@ -23,7 +23,6 @@ ms.locfileid: "69038200"
 <xref:System.Windows.Forms.ToolBar> 컨트롤의 정수 부분은 컨트롤에 추가 하는 단추입니다. 메뉴 명령에 쉽게 액세스 하는 데 사용할 수 있습니다. 또는 메뉴 구조에서 사용할 수 없는 사용자에 게 명령을 노출 하기 위해 응용 프로그램의 사용자 인터페이스의 다른 영역에 배치할 수 있습니다.
 
 다음 절차에는 <xref:System.Windows.Forms.ToolBar> 컨트롤을 포함 하는 폼을 포함 하는 **Windows 응용 프로그램** 프로젝트가 필요 합니다. 이러한 프로젝트 [를 설정 하는 방법에 대 한 자세한 내용은 방법: Windows Forms 응용 프로그램 프로젝트](/visualstudio/ide/step-1-create-a-windows-forms-application-project) [를 만들고 방법: Windows Forms](how-to-add-controls-to-windows-forms.md)에 컨트롤을 추가 합니다.
-
 
 ### <a name="to-add-buttons-at-design-time"></a>디자인 타임에 단추를 추가 하려면
 

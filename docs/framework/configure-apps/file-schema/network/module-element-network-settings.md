@@ -8,15 +8,15 @@ helpviewer_keywords:
 - module element
 - <module> element
 ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
-ms.openlocfilehash: 0d108f2350d82666e3dc24f0f6854fe64ea4755f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 851a63b41dfb5d3b4058e1373148f48d47d9d6ae
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674491"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664078"
 ---
-# <a name="module-element-network-settings"></a>\<모듈 > 요소 (네트워크 설정)
-응용 프로그램에 새 프록시 모듈을 추가합니다.  
+# <a name="module-element-network-settings"></a>\<module > 요소 (네트워크 설정)
+애플리케이션에 새 프록시 모듈을 추가합니다.  
   
  \<configuration>  
 \<system.net>  
@@ -38,7 +38,7 @@ ms.locfileid: "61674491"
   
 |**특성**|**설명**|  
 |-------------------|---------------------|  
-|`type`|정규화 된 형식 이름을 (나타난 합니다 <xref:System.Type.FullName%2A> 속성)와 어셈블리 이름 (나타난는 <xref:System.Reflection.Assembly.FullName%2A> 속성) 프록시를 구현 하는 쉼표로 구분 합니다.|  
+|`type`|<xref:System.Type.FullName%2A> 속성으로 표시 되는 정규화 된 형식 이름 및 <xref:System.Reflection.Assembly.FullName%2A> 속성으로 표시 되는 어셈블리 이름 (속성으로 표시 됨)을 쉼표로 구분 하 여 프록시를 구현 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -47,18 +47,18 @@ ms.locfileid: "61674491"
   
 |**요소**|**설명**|  
 |-----------------|---------------------|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|HTTP(Hypertext Transfer Protocol) 프록시 서버를 구성합니다.|  
+|[defaultProxy](defaultproxy-element-network-settings.md)|HTTP(Hypertext Transfer Protocol) 프록시 서버를 구성합니다.|  
   
 ## <a name="remarks"></a>설명  
- 합니다 `module` 를 구현 하는 프록시 클래스를 등록 하는 요소는 <xref:System.Net.IWebProxy> 인터페이스입니다. 프록시 클래스를 등록한 다음에는 `module`을 사용하여 지원 프록시를 통해 정보를 요청할 수 있습니다.  
+ 요소 `module` 는 인터페이스를 <xref:System.Net.IWebProxy> 구현 하는 프록시 클래스를 등록 합니다. 프록시 클래스를 등록한 다음에는 `module`을 사용하여 지원 프록시를 통해 정보를 요청할 수 있습니다.  
   
- 에 대 한 값을 `type` 특성은 모듈의 클래스 이름과의 해당 해당 동적 링크 라이브러리 (DLL) 이름 이어야 합니다.  
+ `type` 특성의 값은 모듈의 클래스 이름과 해당 DLL (동적 연결 라이브러리)의 이름 이어야 합니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
  이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 사용자 지정 프록시 클래스를 등록합니다.  
+ 다음 예제에서는 사용자 지정 프록시 클래스를 등록 합니다.  
   
 ```xml  
 <configuration>  
@@ -75,4 +75,4 @@ ms.locfileid: "61674491"
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Net.IWebProxy?displayProperty=nameWithType>
-- [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [네트워크 설정 스키마](index.md)

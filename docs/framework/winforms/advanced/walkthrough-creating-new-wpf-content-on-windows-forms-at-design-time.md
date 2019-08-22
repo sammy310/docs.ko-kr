@@ -8,30 +8,23 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-ms.openlocfilehash: 889e81053d4e2264755468446a4e1681216ae22e
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: e3fb6e42270cc0a530646b656470ec99fcfc7f1f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040371"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666242"
 ---
 # <a name="walkthrough-create-new-wpf-content-on-windows-forms-at-design-time"></a>연습: 디자인 타임에 Windows Forms에서 새 WPF 콘텐츠 만들기
 
 이 문서에서는 Windows Forms 기반 응용 프로그램에서 사용할 WPF (Windows Presentation Foundation) 컨트롤을 만드는 방법을 보여 줍니다.
 
-이 연습에서는 다음 작업을 수행합니다.
-
-- 프로젝트를 만듭니다.
-
-- 새 WPF 컨트롤을 만듭니다.
-
-- 새 WPF 컨트롤을 Windows Form에 추가합니다. WPF 컨트롤이 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤에서 호스트됩니다.
-
 ## <a name="prerequisites"></a>전제 조건
 
-이 연습을 완료하려면 다음 구성 요소가 필요합니다.
-
-- Visual Studio
+이 연습을 완료하려면 Visual Studio가 필요합니다.
 
 ## <a name="create-the-project"></a>프로젝트를 만듭니다.
 
@@ -51,17 +44,17 @@ ms.locfileid: "69040371"
 
 1. **솔루션 탐색기**에서 새 **WPF 사용자 정의 컨트롤 라이브러리 (.NET Framework)** 프로젝트를 솔루션에 추가 합니다. 컨트롤 라이브러리의 기본 이름인 `WpfControlLibrary1`을 사용합니다. 기본 컨트롤 이름은 `UserControl1.xaml`입니다.
 
-     새 컨트롤을 추가 하면 다음과 같은 결과가 나타납니다.
+   새 컨트롤을 추가 하면 다음과 같은 결과가 나타납니다.
 
-    - UserControl1.xaml 파일이 추가됩니다.
+   - UserControl1.xaml 파일이 추가됩니다.
 
-    - UserControl1.xaml.cs 또는 UserControl1.xaml.vb 파일이 추가됩니다. 이 파일에는 이벤트 처리기 및 기타 구현에 대한 코드 숨김이 포함됩니다.
+   - UserControl1.xaml.cs (또는 UserControl1) 파일이 추가 됩니다. 이 파일에는 이벤트 처리기 및 기타 구현에 대한 코드 숨김이 포함됩니다.
 
-    - WPF 어셈블리에 대한 참조가 추가됩니다.
+   - WPF 어셈블리에 대한 참조가 추가됩니다.
 
-    - UserControl1.xaml 파일이 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)]에서 열립니다.
+   - 파일 UserControl1은 Visual Studio 용 WPF 디자이너에서 열립니다.
 
-2. 디자인 뷰에서 `UserControl1`이 선택되었는지 확인합니다. 자세한 내용은 [방법: Design Surface](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))에서 요소를 선택 하 고 이동 합니다.
+2. 디자인 뷰에서 `UserControl1`이 선택되었는지 확인합니다.
 
 3. **속성** 창에서 <xref:System.Windows.FrameworkElement.Width%2A> 및 <xref:System.Windows.FrameworkElement.Height%2A> 속성의 값을 **200**로 설정 합니다.
 
@@ -69,8 +62,8 @@ ms.locfileid: "69040371"
 
 5. **속성** 창에서 <xref:System.Windows.Controls.TextBox.Text%2A> 속성의 값을 **Hosted Content**로 설정 합니다.
 
-    > [!NOTE]
-    > 일반적으로 더 복잡한 WPF 콘텐츠를 호스트해야 합니다. <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> 컨트롤은 여기서 설명 목적으로만 사용됩니다.
+   > [!NOTE]
+   > 일반적으로 더 복잡한 WPF 콘텐츠를 호스트해야 합니다. <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> 컨트롤은 여기서 설명 목적으로만 사용됩니다.
 
 6. 프로젝트를 빌드합니다.
 

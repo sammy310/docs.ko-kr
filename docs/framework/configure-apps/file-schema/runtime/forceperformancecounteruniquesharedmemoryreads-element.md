@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 00af9cf60d0bd2bac60950617b1315579d1a5a4d
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 96d38abad37f9460230164de784a1258e7e937a4
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347342"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663718"
 ---
 # <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<forcePerformanceCounterUniqueSharedMemoryReads> Element
 PerfCounter.dll이 .NET Framework 버전 1.1 애플리케이션에서 CategoryOptions 레지스트리 설정을 사용하여 성능 카운터 데이터를 범주별 공유 메모리에서 로드할지 또는 전역 메모리에서 로드할지를 결정하도록 지정합니다.  
@@ -35,14 +35,14 @@ enabled="true|false"/>
   
 |특성|설명|  
 |---------------|-----------------|  
-|`enabled`|필수 특성입니다.<br /><br /> Perfcounter.dll이 성능 카운터 데이터를 범주별 공유 메모리 또는 전역 메모리에서 로드할지 여부를 확인 하려면 CategoryOptions 레지스트리 설정을 사용 하는지 여부를 나타냅니다.|  
+|`enabled`|필수 특성입니다.<br /><br /> PerfCounter가 CategoryOptions 레지스트리 설정을 사용 하 여 범주 특정 공유 메모리 또는 전역 메모리에서 성능 카운터 데이터를 로드할지 여부를 나타냅니다.|  
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
 |값|설명|  
 |-----------|-----------------|  
-|`false`|Perfcounter.dll이 CategoryOptions를 사용 하지 않는 레지스트리 설정의 기본값입니다.|  
-|`true`|Perfcounter.dll이 CategoryOptions 레지스트리 설정을 사용 하 여지 않습니다.|  
+|`false`|PerfCounter는 CategoryOptions 레지스트리 설정을 사용 하지 않습니다.|  
+|`true`|PerfCounter는 CategoryOptions 레지스트리 설정을 사용 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -55,21 +55,21 @@ enabled="true|false"/>
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
- Perfcounter.dll이 로드 된 버전이 프로세스에서 로드 된 런타임에 해당 하는.NET Framework 4 이전의.NET Framework의 버전입니다. 컴퓨터에.NET Framework 버전 1.1 및.NET Framework 2.0이 설치 되어 있으면,.NET Framework 1.1 응용 프로그램을 perfcounter.dll이.NET Framework 1.1 버전을 로드 됩니다. .NET Framework 4 부터는 perfcounter.dll이 설치 된 최신 버전이 로드 됩니다. 이 컴퓨터에.NET Framework 4를 설치 하는 경우.NET Framework 1.1 응용 프로그램을 perfcounter.dll이.NET Framework 4 버전이 로드 함을 의미 합니다.  
+ .NET Framework 4 이전의 .NET Framework 버전에서는 로드 된 PerfCounter의 버전이 프로세스에 로드 된 런타임으로 속하는지를. 컴퓨터에 .NET Framework 버전 1.1 및 .NET Framework 2.0이 모두 설치 되어 있는 경우 .NET Framework 1.1 응용 프로그램은 .NET Framework 1.1 버전의 PerfCounter를 로드 합니다. .NET Framework 4부터 설치 된 PerfCounter의 최신 버전이 로드 됩니다. 즉, 컴퓨터에 .NET Framework 4가 설치 된 경우 .NET Framework 1.1 응용 프로그램에서 PerfCounter의 .NET Framework 4 버전이 로드 됩니다.  
   
- Perfcounter.dll이.NET Framework 4부터 성능 카운터를 사용 하는 경우, 범주별 공유 메모리 또는 전역 공유 메모리에서 읽어야 하는지 여부를 확인 하려면 각 공급자에 대 한 CategoryOptions 레지스트리 항목을 확인 합니다. 범주별 공유 메모리를 인식 하지 않기 때문에.NET Framework 1.1 perfcounter.dll이 해당 레지스트리 항목을 읽지 못하는 항상 전역 공유 메모리에서 읽습니다.  
+ .NET Framework 4부터 성능 카운터를 사용할 때 PerfCounter는 각 공급자에 대 한 CategoryOptions 레지스트리 항목을 확인 하 여 범주 특정 공유 메모리 또는 전역 공유 메모리에서 읽어야 하는지 여부를 확인 합니다. .NET Framework 1.1 PerfCounter는 범주 관련 공유 메모리를 인식 하지 못하기 때문에 해당 레지스트리 항목을 읽지 않습니다. 전역 공유 메모리에서 항상 읽습니다.  
   
- 이전 버전과 호환성을 위해.NET Framework 4 perfcounter.dll이 확인 하지 않습니다 CategoryOptions 레지스트리 항목에서.NET Framework 1.1 응용 프로그램을 실행 하는 경우. 단순히.NET Framework 1.1 perfcounter.dll이 처럼 전역 공유 메모리를 사용합니다. 그러나 사용 하 여 레지스트리 설정을 확인 하려면.NET Framework 4 perfcounter.dll이 지시할 수 있습니다는 `<forcePerformanceCounterUniqueSharedMemoryReads>` 요소입니다.  
+ 이전 버전과의 호환성을 위해 .NET Framework 4 PerfCounter는 .NET Framework 1.1 응용 프로그램에서 실행 될 때 CategoryOptions 레지스트리 항목을 확인 하지 않습니다. .NET Framework 1.1 PerfCounter와 마찬가지로 전역 공유 메모리를 사용 하기만 하면 됩니다. 그러나 `<forcePerformanceCounterUniqueSharedMemoryReads>` 요소를 사용 하도록 설정 하 여 레지스트리 설정을 확인 하도록 .NET Framework 4 PerfCounter에 지시할 수 있습니다.  
   
 > [!NOTE]
->  사용 하도록 설정 된 `<forcePerformanceCounterUniqueSharedMemoryReads>` 요소 범주별 공유 메모리 사용 됨을 보장 하지 않습니다. 사용 하는 설정과 `true` 만 perfcounter.dll이 CategoryOptions 레지스트리 설정을 참조를 사용 하면 됩니다. CategoryOptions의 기본 설정은 범주별 공유 메모리를 사용 하는 것 그러나 전역 공유 메모리를 사용 해야 함을 나타내려면 CategoryOptions를 변경할 수 있습니다.  
+>  요소를 `<forcePerformanceCounterUniqueSharedMemoryReads>` 사용 하도록 설정 해도 범주 관련 공유 메모리가 사용 되는 것은 아닙니다. Enabled를로 `true` 설정 하면 PerfCounter가 categoryoptions 레지스트리 설정을 참조 하 게 됩니다. CategoryOptions의 기본 설정은 범주 관련 공유 메모리를 사용 하는 것입니다. 그러나 CategoryOptions를 변경 하 여 전역 공유 메모리를 사용 해야 함을 나타낼 수 있습니다.  
   
- CategoryOptions 설정을 포함 하는 레지스트리 키가 HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\\< categoryName\>\Performance 합니다. 기본적으로 CategoryOptions은 3으로 설정, perfcounter.dll이 지시 범주별 공유 메모리를 사용 하도록 합니다. CategoryOptions을 0으로 설정 하는 경우 perfcounter.dll이 전역 공유 메모리를 사용 합니다. 생성 되는 인스턴스의 이름을 다시 사용 되는 인스턴스와 동일한 경우에 인스턴스 데이터 집합이 재사용 됩니다. 모든 버전의 범주를 쓸 수 됩니다. CategoryOptions가 1로 설정 된 경우 전역 공유 메모리 크기를 사용 하지만 범주 이름을 다시 사용 되는 범주와 길이가 같은 경우에 인스턴스 데이터를 다시 사용할 수 있습니다.  
+ Categoryoptions 설정이 포함 된 레지스트리 키는 HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\\< 범주 \Performance.\> 기본적으로 CategoryOptions는 3으로 설정 되며,이는 PerfCounter에 범주 관련 공유 메모리를 사용 하도록 지시 합니다. CategoryOptions가 0으로 설정 된 경우 PerfCounter는 전역 공유 메모리를 사용 합니다. 인스턴스 데이터는 생성 중인 인스턴스의 이름이 다시 사용 중인 인스턴스와 동일한 경우에만 다시 사용 됩니다. 모든 버전은 범주에 쓸 수 있습니다. CategoryOptions를 1로 설정 하면 전역 공유 메모리가 사용 되지만 범주 이름이 다시 사용 하는 범주와 동일한 경우 인스턴스 데이터를 다시 사용할 수 있습니다.  
   
- 0과 1 설정을 메모리 누수 및 가득 찰 성능 카운터 메모리가 발생할 수 있습니다.  
+ 설정 0 및 1은 메모리 누수를 야기 하 고 성능 카운터 메모리를 채울 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 perfcounter.dll이 범주별 공유 메모리를 사용 해야 하는지 여부를 확인 하려면 CategoryOptions 레지스트리 항목을 참조 해야 하는지 지정 하는 방법을 보여 줍니다.  
+ 다음 예제에서는 PerfCounter에서 CategoryOptions 레지스트리 항목을 참조 하 여 범주 관련 공유 메모리를 사용 해야 하는지 여부를 확인 하도록 지정 하는 방법을 보여 줍니다.  
   
 ```xml  
 <configuration>  
@@ -81,5 +81,5 @@ enabled="true|false"/>
   
 ## <a name="see-also"></a>참고자료
 
-- [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [런타임 설정 스키마](index.md)
+- [구성 파일 스키마](../index.md)

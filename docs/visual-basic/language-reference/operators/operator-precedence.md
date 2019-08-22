@@ -14,12 +14,12 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-ms.openlocfilehash: c420a34a18f9e8fb55411a062e6a47ab38e98978
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: df40aced45442c9c7895c8d10ece64b21e292508
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611488"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659919"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Visual Basic에서의 연산자 우선 순위
 식에서 여러 연산이 수행 될 때 각 부분은 *연산자 우선 순위*라는 미리 결정 된 순서에 따라 평가 되 고 해결 됩니다.
@@ -50,7 +50,7 @@ ms.locfileid: "69611488"
 
  정수 나누기 (`\`)
 
- 모듈러스 산술 (`Mod`)
+ 모듈식 산술 (`Mod`)
 
  더하기 및 빼기 (`+`, `–`)
 

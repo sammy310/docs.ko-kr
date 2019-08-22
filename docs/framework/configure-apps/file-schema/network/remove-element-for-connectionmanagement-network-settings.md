@@ -10,15 +10,15 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-ms.openlocfilehash: d9c584fb2faa971e7ce1ca287a94c8c6129820fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8ab7a43fbb3e8df5bb0c99b5947f2fafb362399a
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705196"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664039"
 ---
-# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<제거 > connectionManagement (네트워크 설정)에 대 한 요소
-연결 관리 목록에서 IP 주소 또는 DNS 이름을 제거합니다.  
+# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<connectionManagement의 > 요소 제거 (네트워크 설정)
+연결 관리 목록에서 IP 주소 또는 DNS 이름을 제거 합니다.  
   
  \<configuration>  
 \<system.net>  
@@ -49,18 +49,18 @@ ms.locfileid: "61705196"
   
 |**요소**|**설명**|  
 |-----------------|---------------------|  
-|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|네트워크 호스트에 대한 최대 연결 수를 지정합니다.|  
+|[connectionManagement](connectionmanagement-element-network-settings.md)|네트워크 호스트에 대한 최대 연결 수를 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
- `remove` 요소가 지정된 된 서버 연결 관리 목록 항목을 제거 합니다.  
+ 요소 `remove` 는 지정 된 서버에 대 한 연결 관리 목록 항목을 제거 합니다.  
   
- 값을 `address` 특성 유효한 IP 주소 또는 호스트 이름 이어야 합니다.  
+ `address` 특성 값은 올바른 IP 주소 또는 호스트 이름 이어야 합니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
  이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 서버에 대 한 모든 연결 관리 목록 항목을 제거 `www.adventure-works.com` 한 다음 서버에 대 한 연결 4를 사용 하도록 응용 프로그램을 구성 `www.contoso.com` 및 다른 모든 서버에 두 개의 연결 합니다.  
+ 다음 예에서는 서버 `www.adventure-works.com` 에 대 한 연결 관리 목록 항목을 제거한 다음 서버 `www.contoso.com` 에 대 한 4 개의 연결과 다른 모든 서버에 대 한 두 개의 연결을 사용 하도록 응용 프로그램을 구성 합니다.  
   
 ```xml  
 <configuration>  
@@ -78,4 +78,4 @@ ms.locfileid: "61705196"
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [네트워크 설정 스키마](index.md)

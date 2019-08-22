@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: d6e31d55ab271376501064c3aa9a9ce38c14063d
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: b3a85f5f9e51dae50a40058b8f07f92976da66f2
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039732"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666168"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGrid 컨트롤 서식 지정
 
@@ -35,14 +35,13 @@ ms.locfileid: "69039732"
 
 다음 절차에는 <xref:System.Windows.Forms.DataGrid> 컨트롤을 포함 하는 폼을 포함 하는 **Windows 응용 프로그램** 프로젝트가 필요 합니다. 이러한 프로젝트 [를 설정 하는 방법에 대 한 자세한 내용은 방법: Windows Forms 응용 프로그램 프로젝트](/visualstudio/ide/step-1-create-a-windows-forms-application-project) [를 만들고 방법: Windows Forms](how-to-add-controls-to-windows-forms.md)에 컨트롤을 추가 합니다. Visual Studio 2005 <xref:System.Windows.Forms.DataGrid> 에서 컨트롤은 기본적으로 **도구 상자** 에 있지 않습니다. 자세한 내용은 [방법: 도구 상자](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100))에 항목을 추가 합니다.
 
-
 ### <a name="to-establish-a-default-style-for-the-datagrid-control"></a>DataGrid 컨트롤의 기본 스타일을 설정 하려면
 
 1. <xref:System.Windows.Forms.DataGrid> 컨트롤을 선택합니다.
 
 2. **속성** 창에서 다음 속성을 적절 하 게 설정 합니다.
 
-    |속성|설명|
+    |속성|Description|
     |--------------|-----------------|
     |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|속성 `BackColor` 은 표에 있는 짝수 번호 행의 색을 정의 합니다. <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> 속성을 다른 색으로 설정 하면 다른 모든 행이 새 색 (행 1, 3, 5 등)으로 설정 됩니다.|
     |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|표 형태에서 짝수 행의 배경색입니다 (행 0, 2, 4, 6 등).|

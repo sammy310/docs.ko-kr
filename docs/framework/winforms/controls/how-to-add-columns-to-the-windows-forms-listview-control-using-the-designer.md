@@ -5,19 +5,18 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding column headers
 - columns [Windows Forms], adding to ListView controls
 ms.assetid: 5b1a8b4d-587e-479a-95c1-f9b90884f13a
-ms.openlocfilehash: e82fbcf63047873ebc6e5c40b8b9fbeb14a672e5
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 10963fcb6d87ed74f73ecf4f1831a56eae5a392d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038178"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658453"
 ---
 # <a name="how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms ListView 컨트롤에 열 추가
 
 Windows Forms <xref:System.Windows.Forms.ListView> 컨트롤은 **자세히** 보기에서 각 목록 항목에 대해 여러 열을 표시할 수 있습니다. 열을 사용 하 여 각 목록 항목에 대 한 여러 유형의 정보를 표시할 수 있습니다. 예를 들어 파일 목록에 파일 이름, 파일 형식, 크기 및 파일을 마지막으로 수정한 날짜를 표시할 수 있습니다. 열을 만든 [후 해당 열을 채우는 방법에 대 한 자세한 내용은 방법: Windows Forms ListView 컨트롤](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)을 사용 하 여 열에 하위 항목을 표시 합니다.
 
 다음 절차에는 <xref:System.Windows.Forms.ListView> 컨트롤을 포함 하는 폼을 포함 하는 **Windows 응용 프로그램** 프로젝트가 필요 합니다. 이러한 프로젝트 [를 설정 하는 방법에 대 한 자세한 내용은 방법: Windows Forms 응용 프로그램 프로젝트](/visualstudio/ide/step-1-create-a-windows-forms-application-project) [를 만들고 방법: Windows Forms](how-to-add-controls-to-windows-forms.md)에 컨트롤을 추가 합니다.
-
 
 ### <a name="to-add-columns-in-the-designer"></a>디자이너에서 열을 추가 하려면
 

@@ -10,16 +10,16 @@ helpviewer_keywords:
 - bypasslist, remove element
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-ms.openlocfilehash: a04cca3e57af5cc422776c5b2444a140e86f98b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0fd8de9af00aa861d92c8c201ef89545e108c790
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674469"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659234"
 ---
-# <a name="remove-element-for-bypasslist-network-settings"></a>\<제거 > bypasslist (네트워크 설정)에 대 한 요소
+# <a name="remove-element-for-bypasslist-network-settings"></a>\<bypasslist에 대 한 > 요소 제거 (네트워크 설정)
 
-프록시 무시 목록에서 IP 주소 또는 DNS 이름을 제거합니다.
+프록시 바이패스 목록에서 IP 주소 또는 DNS 이름을 제거 합니다.
 
 \<configuration>\
 \<system.net>\
@@ -53,15 +53,15 @@ ms.locfileid: "61674469"
 
 |**요소**|**설명**|
 |-----------------|---------------------|
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|프록시를 사용 하지 않는 주소를 설명 하는 정규식 집합을 제공 합니다.|
+|[bypasslist](bypasslist-element-network-settings.md)|프록시를 사용 하지 않는 주소를 설명 하는 정규식 집합을 제공 합니다.|
 
 ## <a name="remarks"></a>설명
 
-`remove` 요소 IP 주소 또는 프록시 서버를 바이패스 하는 주소 목록에서 DNS 서버 이름을 설명 하는 정규식을 제거 합니다. 구성 계층 구조의 상위 수준 또는 구성 파일에서 주소를 이전 정의 되었습니다.
+요소 `remove` 는 프록시 서버를 우회 하는 주소 목록에서 IP 주소 또는 DNS 서버 이름을 설명 하는 정규식을 제거 합니다. 주소가 구성 파일에서 이전에 정의 되었거나 구성 계층 구조의 상위 수준에 정의 되어 있습니다.
 
-에 대 한 값을 `address` 특성에는 IP 주소 또는 호스트 이름 집합을 설명 하는 정규식을 사용 해야 합니다.
+`address` 특성 값은 IP 주소 또는 호스트 이름 집합을 설명 하는 정규식 이어야 합니다.
 
-정규식에 대 한 자세한 내용은 다음을 참조 하세요. [.NET framework 정규식](../../../../../docs/standard/base-types/regular-expressions.md)합니다.
+정규식에 대 한 자세한 내용은을 참조 하십시오. [정규식을 .NET Framework](../../../../../docs/standard/base-types/regular-expressions.md)합니다.
 
 ## <a name="configuration-files"></a>구성 파일
 
@@ -69,7 +69,7 @@ ms.locfileid: "61674469"
 
 ## <a name="example"></a>예제
 
-Adventure-works.com 도메인에 대 한 이전 정의 제거 하 고 바이패스 목록에 contoso.com 도메인을 추가 하는 다음 예제입니다.
+다음 예에서는 adventure-works.com 도메인에 대 한 이전 정의를 제거 하 고 contoso.com 도메인을 바이패스 목록에 추가 합니다.
 
 ```xml
 <configuration>
@@ -87,4 +87,4 @@ Adventure-works.com 도메인에 대 한 이전 정의 제거 하 고 바이패�
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [네트워크 설정 스키마](index.md)

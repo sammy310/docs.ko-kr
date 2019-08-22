@@ -2,12 +2,12 @@
 title: "'ReDim' Preserve 피연산자는 Nothing이 될 수 없습니다."
 ms.date: 07/20/2015
 ms.assetid: b857f313-3fc2-4262-a577-88df1718b811
-ms.openlocfilehash: 17f89270c524d4a2e16d44523e72b9eebc9895ca
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 37f46927cfdc36e7c56f3bff637f66a411caa297
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591863"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664381"
 ---
 # <a name="redim-preserve-operand-cannot-be-nothing"></a>'ReDim' Preserve 피연산자는 Nothing이 될 수 없습니다.
 `ReDim` 문에서 `Preserve` 키워드를 사용하여 마지막 차원이 아닌 배열의 차원을 변경하려고 했지만, 해당 피연산자에 대한 올바른 값을 제공하지 않았습니다.  
@@ -18,7 +18,7 @@ ms.locfileid: "64591863"
   
 ## <a name="see-also"></a>참고자료
 
-- [Visual Basic의 배열](~/docs/visual-basic/programming-guide/language-features/arrays/index.md)
-- [Visual Basic의 배열 크기](~/docs/visual-basic/programming-guide/language-features/arrays/array-dimensions.md)
+- [Visual Basic의 배열](../programming-guide/language-features/arrays/index.md)
+- [Visual Basic의 배열 차원](../programming-guide/language-features/arrays/array-dimensions.md)
 - [ReDim 문](../../visual-basic/language-reference/statements/redim-statement.md)
 - [Dim 문](../../visual-basic/language-reference/statements/dim-statement.md)

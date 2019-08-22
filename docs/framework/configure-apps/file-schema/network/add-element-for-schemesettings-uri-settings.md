@@ -2,15 +2,15 @@
 title: schemeSettings의 <add> 요소(URI 설정)
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
-ms.openlocfilehash: e7606a1185d406384a926ca4dcb7c42586461574
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 027c7aaffea7950739f532309255d77afa031ada
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674703"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659549"
 ---
-# <a name="add-element-for-schemesettings-uri-settings"></a>\<추가 > schemeSettings (Uri 설정)에 대 한
-스키마 이름에 대 한 스키마 설정을 추가합니다.  
+# <a name="add-element-for-schemesettings-uri-settings"></a>\<schemeSettings에 대 한 > 요소 추가 (Uri 설정)
+구성표 이름에 대 한 구성표 설정을 추가 합니다.  
   
  \<configuration>  
 \<uri>  
@@ -31,15 +31,15 @@ ms.locfileid: "61674703"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
-|name|이 설정은 적용 되는 체계 이름입니다. 이름과 "http"만 지원 되는 값 이름 = = "https"입니다.|  
+|name|이 설정이 적용 되는 체계 이름입니다. 유일 하 게 지원 되는 값은 name = "http" 및 name = "https"입니다.|  
   
-## <a name="attribute-name-attribute"></a>{0} 특성 이름} 특성  
+## <a name="attribute-name-attribute"></a>{Attribute name} 특성도  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
-|genericUriParserOptions|이 스키마에 대 한 파서 옵션을 지정 합니다. 지원 되는 값은 genericUriParserOptions만 = "DontUnescapePathDotsAndSlashes"입니다.|  
+|genericUriParserOptions|이 스키마에 대 한 파서 옵션입니다. 유일 하 게 지원 되는 값은 genericUriParserOptions = "DontUnescapePathDotsAndSlashes"입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -48,7 +48,7 @@ ms.locfileid: "61674703"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<schemeSettings> 요소 (URI 설정)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|특정 체계에 대해 <xref:System.Uri>가 구문 분석되는 방법을 지정합니다.|  
+|[\<schemeSettings> 요소 (URI 설정)](schemesettings-element-uri-settings.md)|특정 체계에 대해 <xref:System.Uri>가 구문 분석되는 방법을 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
  기본적으로 <xref:System.Uri?displayProperty=nameWithType> 클래스 이스케이프 해제 백분율로 인코딩된 경로 압축을 실행 하기 전에 경로 구분 기호입니다. 다음과 같은 공격에 대 한 보안 메커니즘으로 구현 되었습니다.  
@@ -63,13 +63,13 @@ ms.locfileid: "61674703"
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- SchemeSettings 구성 옵션을 사용 하 여 특정 스키마에 대 한 이스케이프 해제 백분율로 인코딩된 경로 구분 되지에이 기본 동작을 수정할 수 있습니다.  
+ 이 기본 동작은 특정 스키마에 대 한 schemeSettings 구성 옵션을 사용 하 여 인코딩된 경로 구분 기호를 이스케이프 해제 하지 않도록 수정할 수 있습니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
  이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서 사용 하는 구성을 보여 줍니다는 <xref:System.Uri> http 체계에 대 한 백분율로 인코딩된 경로 구분 기호를 이스케이프 하지 않아도 되도록 지원 하기 위해 클래스입니다.  
+ 다음 예제에서는 http 체계의 백분율 인코딩된 경로 <xref:System.Uri> 구분 기호를 이스케이프 하지 않도록 지원 하기 위해 클래스에서 사용 하는 구성을 보여 줍니다.  
   
 ```xml  
 <configuration>  
@@ -89,4 +89,4 @@ ms.locfileid: "61674703"
 - <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>
 - <xref:System.GenericUriParserOptions?displayProperty=nameWithType>
 - <xref:System.Uri?displayProperty=nameWithType>
-- [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [네트워크 설정 스키마](index.md)

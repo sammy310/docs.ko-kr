@@ -2,12 +2,12 @@
 title: 제네릭
 description: 코드를 반복 하지 F# 않고 다양 한 형식에서 작동 하는 코드를 작성할 수 있는 제네릭 함수 및 형식을 사용 하는 방법에 대해 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 47eed0b8e074cfb591e6d8e2c382b9ea6a6e97f0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5d6e57762095e44836425f90d21a6c1dc71edaaa
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630615"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666703"
 ---
 # <a name="generics"></a>제네릭
 
@@ -97,6 +97,6 @@ F# 프로그램에서 사용할 수 있는 두 가지 종류의 형식 매개 �
 - [언어 참조](../index.md)
 - [유형](../fsharp-types.md)
 - [정적으로 확인된 형식 매개 변수](statically-resolved-type-parameters.md)
-- [.NET Framework의 제네릭](~/docs/standard/generics/index.md)
+- [제네릭](../../../standard/generics/index.md)
 - [자동 일반화](automatic-generalization.md)
 - [제약 조건](constraints.md)

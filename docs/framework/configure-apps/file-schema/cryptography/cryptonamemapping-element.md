@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <cryptoNameMapping> element
 - cryptoNameMapping element
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
-ms.openlocfilehash: bcf7894dba66736fcc1a30af9b5557549ef25e7d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2652ac73c1d55f09a1f8511603003dc6d7291f9
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674768"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659638"
 ---
 # <a name="cryptonamemapping-element"></a>\<cryptoNameMapping > 요소
 이름에 대한 클래스의 매핑이 포함되어 있습니다.  
@@ -50,10 +50,10 @@ ms.locfileid: "61674768"
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`cryptographySettings`|암호화 설정이 포함되어 있습니다.|  
 |`cryptoNameMapping`|이름에 대한 클래스의 매핑이 포함되어 있습니다.|  
-|`mscorlib`|포함 된 \<cryptographySettings > 요소입니다.|  
+|`mscorlib`|Cryptographysettings > 요소를 \<포함 합니다.|  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 사용 하는 방법을 보여 줍니다 합니다  **\<cryptoNameMapping >** 암호화 클래스를 참조 하 고 런타임 구성 요소입니다. "RSA" 문자열을 전달할 수 있습니다는 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 메서드 및 사용법을 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 반환 하는 방법을 `MyCryptoRSAClass` 개체입니다.  
+ 다음 예제에서는  **\<cryptoNameMapping >** 요소를 사용 하 여 암호화 클래스를 참조 하 고 런타임을 구성 하는 방법을 보여 줍니다. 그런 다음 "RSA" <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 문자열을 메서드에 전달 하 고 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 메서드를 사용 하 여 `MyCryptoRSAClass` 개체를 반환할 수 있습니다.  
   
 ```xml  
 <configuration>  
@@ -76,7 +76,7 @@ ms.locfileid: "61674768"
   
 ## <a name="see-also"></a>참고자료
 
-- [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [암호화 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [구성 파일 스키마](../index.md)
+- [암호화 설정 스키마](index.md)
 - [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
-- [암호화 클래스 구성](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [암호화 클래스 구성](../../configure-cryptography-classes.md)

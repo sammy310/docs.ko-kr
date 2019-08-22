@@ -8,14 +8,14 @@ helpviewer_keywords:
 - settings element
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-ms.openlocfilehash: a1733803d1f5a5bf64aeb69d0360cef3de3b3a69
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12797e2f06d03aacd81700eae57d5776c1a6f354
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674417"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663990"
 ---
-# <a name="settings-element-network-settings"></a>\<설정 > 요소 (네트워크 설정)
+# <a name="settings-element-network-settings"></a>\<settings > 요소 (네트워크 설정)
 <xref:System.Net?displayProperty=nameWithType> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.  
   
  \<configuration>  
@@ -44,21 +44,21 @@ ms.locfileid: "61674417"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[httpListener](../../../../../docs/framework/configure-apps/file-schema/network/httplistener-element-network-settings.md)|매개 변수에서 사용 하는 사용자 지정을 <xref:System.Net.HttpListener> 클래스입니다.|  
-|[httpWebRequest](../../../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)|웹 요청 매개 변수를 지정합니다.|  
-|[ipv6](../../../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)|인터넷 프로토콜 버전 6(ipv6)을 지원 합니다.|  
-|[\<performanceCounter > 요소 (네트워크 설정)](../../../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)|네트워크 성능 카운터를 사용 하도록 설정 합니다.|  
-|[servicePointManager](../../../../../docs/framework/configure-apps/file-schema/network/servicepointmanager-element-network-settings.md)|네트워크 리소스에 대 한 연결을 구성합니다.|  
-|[socket](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|소켓 작업 완료 포트를 사용 하는지 여부를 지정 합니다.|  
-|[\<webProxyScript > 요소 (네트워크 설정)](../../../../../docs/framework/configure-apps/file-schema/network/webproxyscript-element-network-settings.md)|웹 프록시 검색에 사용 되는 스크립트의 특성을 구성 합니다.|  
+|[httpListener](httplistener-element-network-settings.md)|<xref:System.Net.HttpListener> 클래스에서 사용 하는 매개 변수를 사용자 지정 합니다.|  
+|[httpWebRequest](httpwebrequest-element-network-settings.md)|웹 요청 매개 변수를 사용자 지정 합니다.|  
+|[ipv6](ipv6-element-network-settings.md)|IPv6 (인터넷 프로토콜 버전 6) 지원을 사용 하도록 설정 합니다.|  
+|[\<performanceCounter > 요소 (네트워크 설정)](performancecounter-element-network-settings.md)|네트워크 성능 카운터를 사용 하도록 설정 합니다.|  
+|[servicePointManager](servicepointmanager-element-network-settings.md)|네트워크 리소스에 대 한 연결을 구성 합니다.|  
+|[socket](socket-element-network-settings.md)|소켓 작업에서 완료 포트를 사용 하는지 여부를 지정 합니다.|  
+|[\<webProxyScript > 요소 (네트워크 설정)](webproxyscript-element-network-settings.md)|웹 프록시를 검색 하는 데 사용 되는 스크립트의 특징을 구성 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|.NET Framework의 네트워크 연결 방법을 지정하는 설정을 포함합니다.|  
+|[system.net](system-net-element-network-settings.md)|.NET Framework의 네트워크 연결 방법을 지정하는 설정을 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
   
@@ -68,4 +68,4 @@ ms.locfileid: "61674417"
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Net?displayProperty=nameWithType>
-- [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [네트워크 설정 스키마](index.md)

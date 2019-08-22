@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c70a03e1ad443739f43dc50ab34021652017713d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aac7079d941e6774ca6c00fbece8ff72fbf3f0e1
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607418"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663878"
 ---
 # <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames> 요소
-완전 신뢰에 로드 되는 완전 신뢰 어셈블리에 강력한 이름의 유효성 검사를 건너뛸지 여부를 지정 <xref:System.AppDomain>합니다.  
+완전 신뢰 <xref:System.AppDomain>로 로드 된 완전 신뢰 어셈블리의 강력한 이름에 대 한 유효성 검사를 건너뛸지 여부를 지정 합니다.  
   
  \<configuration>  
 \<runtime>  
@@ -37,14 +37,14 @@ ms.locfileid: "64607418"
   
 |특성|설명|  
 |---------------|-----------------|  
-|`enabled`|필수 특성입니다.<br /><br /> 완전 신뢰 어셈블리에 대 한 강력한 이름 유효성 검사를 건너뛰는 기능 사용 되는지 여부를 지정 합니다. 이 기능을 사용 하는 경우 강력한 이름 유효성이 검사 되지 않습니다 정확성에 대 한 어셈블리가 로드 되는 경우. 기본값은 `true`입니다.|  
+|`enabled`|필수 특성입니다.<br /><br /> 완전 신뢰 어셈블리의 강력한 이름 유효성 검사를 방지 하는 바이패스 기능을 사용 하도록 설정할지 여부를 지정 합니다. 이 기능을 사용 하는 경우 어셈블리가 로드 될 때 강력한 이름의 유효성이 검사 되지 않습니다. 기본값은 `true`입니다.|  
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
 |값|설명|  
 |-----------|-----------------|  
-|`true`|완전 신뢰에는 어셈블리를 로드할 때 완전 신뢰 어셈블리에 강력한 이름 서명의 유효성이 검사 되지 않습니다 <xref:System.AppDomain>합니다. 이 값이 기본값입니다.|  
-|`false`|완전 신뢰 어셈블리에 강력한 이름 서명의 유효성을 검사 완전 신뢰에는 어셈블리를 로드할 때 <xref:System.AppDomain>합니다. 강력한 이름 서명을 검사 하면 서명 정확성;에 대해서만 일치 하는 다른 강력한 이름으로는 비교 되지 않습니다.|  
+|`true`|완전 신뢰 어셈블리의 강력한 이름 서명은 어셈블리가 완전 신뢰 <xref:System.AppDomain>로 로드 될 때 유효성이 검사 되지 않습니다. 이 값이 기본값입니다.|  
+|`false`|완전 신뢰 어셈블리의 강력한 이름 서명은 어셈블리가 완전 신뢰 <xref:System.AppDomain>로 로드 될 때 유효성이 검사 됩니다. 강력한 이름 시그니처는 서명 정확성에 대해서만 확인 됩니다. 일치 항목에 대 한 다른 강력한 이름과 비교 되지 않습니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -57,11 +57,11 @@ ms.locfileid: "64607418"
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
- 강력한 이름 건너뛰기 기능 완전 신뢰 어셈블리의 강력한 이름 서명 확인 하는 오버 헤드를 방지할 수 있습니다.  
+ 강력한 이름 건너뛰기 기능을 사용 하면 완전 신뢰 어셈블리의 강력한 이름 서명 확인의 오버 헤드가 방지 됩니다.  
   
  건너뛰기 기능은 강력한 이름으로 서명되었으며 다음과 같은 특징이 있는 모든 어셈블리에 적용됩니다.  
   
-- 없이 완전 신뢰를 <xref:System.Security.Policy.StrongName> 증거 (예를 들어에 `MyComputer` 영역 증거가).  
+- <xref:System.Security.Policy.StrongName> 증명 정보 없이 완전히 신뢰할 수 있는 경우 (예 `MyComputer` : 영역 증명 정보 포함)  
   
 - 완전히 신뢰할 수 있는 <xref:System.AppDomain>에 로드됨  
   
@@ -70,10 +70,10 @@ ms.locfileid: "64607418"
 - 서명이 연기되지 않음  
   
 > [!NOTE]
->  건너뛰기 기능은 껐습니다 컴퓨터의 모든 응용 프로그램에 대 한 레지스트리 키를 사용 하 여,이 구성 파일 설정은 효과가 없습니다. 자세한 내용은 [방법: 강력한 이름 건너뛰기 기능 비활성화](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)  
+>  레지스트리 키를 사용 하 여 컴퓨터의 모든 응용 프로그램에 대해 바이패스 기능이 꺼져 있는 경우이 구성 파일 설정은 적용 되지 않습니다. 자세한 내용은 [방법: 강력한 이름 건너뛰기 기능 비활성화](../../../app-domains/how-to-disable-the-strong-name-bypass-feature.md)  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 완전 신뢰 어셈블리에 강력한 이름 서명의 유효성을 검사 하는 동작을 지정 하는 방법을 보여 줍니다.  
+ 다음 예제에서는 완전 신뢰 어셈블리에서 강력한 이름 서명의 유효성을 검사 하는 동작을 지정 하는 방법을 보여 줍니다.  
   
 ```xml  
 <configuration>  
@@ -85,6 +85,6 @@ ms.locfileid: "64607418"
   
 ## <a name="see-also"></a>참고자료
 
-- [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [방법: 강력한 이름 건너뛰기 기능 비활성화](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)
+- [런타임 설정 스키마](index.md)
+- [구성 파일 스키마](../index.md)
+- [방법: 강력한 이름 건너뛰기 기능 비활성화](../../../app-domains/how-to-disable-the-strong-name-bypass-feature.md)

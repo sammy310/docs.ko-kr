@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: 733f22c122dd6acdad41371419375e55e977c016
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: c8d04725a576c9e24a4b7d4aec1251516a8c544c
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039925"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666225"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>연습: Visual Studio의 디자인 타임 기능을 활용하는 Windows Forms 컨트롤 만들기
 
@@ -63,14 +63,13 @@ ms.locfileid: "69039925"
 
 전체 코드 목록을 보려면 [방법: 디자인 타임 기능](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))을 활용 하는 Windows Forms 컨트롤을 만듭니다.
 
-
 ## <a name="prerequisites"></a>필수 구성 요소
 
 이 연습을 완료 하려면 Visual Studio가 필요 합니다.
 
 ## <a name="creating-the-project"></a>프로젝트 만들기
 
-첫 번째 단계는 응용 프로그램 프로젝트를 만드는 것입니다. 이 프로젝트를 사용 하 여 사용자 지정 컨트롤을 호스트 하는 응용 프로그램을 빌드합니다.
+첫 번째 단계에서는 애플리케이션 프로젝트를 만듭니다. 이 프로젝트를 사용 하 여 사용자 지정 컨트롤을 호스트 하는 응용 프로그램을 빌드합니다.
 
 Visual Studio를 열고 "MarqueeControlTest" (**파일** > **새로 만들기** > **프로젝트** > **Visual C#**  또는 **Visual Basic** 라는WindowsForms응용프로그램프로젝트를만듭니다. >  **클래식 바탕 화면** **Windows Forms 응용 프로그램).**  > 
 

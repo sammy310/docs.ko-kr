@@ -8,12 +8,12 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: febea73ddbc45276f97835eb4af7ee0d0d68dda5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 449146612938700f59f5e2ec761526d1dc66a3fc
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674339"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663952"
 ---
 # <a name="systemnet-element-network-settings"></a>\<system.Net> 요소(네트워크 설정)
 .NET Framework의 네트워크 연결 방법을 지정하는 설정을 포함합니다.  
@@ -38,25 +38,25 @@ ms.locfileid: "61674339"
   
 |**요소**|**설명**|  
 |-----------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|인터넷 요청을 인증 하는 데 사용 되는 모듈을 지정 합니다.|  
-|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|인터넷 호스트에 대 한 연결의 최대 수를 지정 합니다.|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|HTTP(Hypertext Transfer Protocol) 프록시 서버를 구성합니다.|  
-|[mailSettings](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|단순 메일 전송 프로토콜 (SMTP) 메일 보내기 옵션을 구성 합니다.|  
-|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|네트워크 요청에 대 한 캐싱 메커니즘을 제어합니다.|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|클래스에 대 한 기본 네트워크 옵션을 구성 합니다 <xref:System.Net> 및 관련 자식 네임 스페이스입니다.|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|인터넷 호스트의 정보를 요청 하는 데는 모듈을 지정 합니다.|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|인터넷 요청을 인증 하는 데 사용 되는 모듈을 지정 합니다.|  
+|[connectionManagement](connectionmanagement-element-network-settings.md)|인터넷 호스트에 대 한 최대 연결 수를 지정 합니다.|  
+|[defaultProxy](defaultproxy-element-network-settings.md)|HTTP(Hypertext Transfer Protocol) 프록시 서버를 구성합니다.|  
+|[mailSettings](mailsettings-element-network-settings.md)|SMTP (Simple Mail Transport Protocol) 메일 전송 옵션을 구성 합니다.|  
+|[requestCaching](requestcaching-element-network-settings.md)|네트워크 요청에 대 한 캐싱 메커니즘을 제어 합니다.|  
+|[settings](settings-element-network-settings.md)|<xref:System.Net> 및 관련 자식 네임 스페이스의 클래스에 대 한 기본 네트워크 옵션을 구성 합니다.|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|인터넷 호스트의 정보를 요청 하는 데 사용할 모듈을 지정 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
 |**요소**|**설명**|  
 |-----------------|---------------------|  
-|[configuration](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|모든 네임 스페이스에 대 한 설정을 포함합니다.|  
+|[configuration](../configuration-element.md)|모든 네임 스페이스에 대 한 설정을 포함 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 합니다 [ \<system.net >](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) 요소에는 클래스에 대 한 설정이 포함 되어 있습니다.는 <xref:System.Net> 및 관련 자식 네임 스페이스입니다. 설정을 인증 모듈, 연결 관리, 메일 설정, 프록시 서버 및 인터넷 호스트에서 정보를 받는 데 인터넷 요청 모듈을 구성합니다.  
+ [ \<System.web >](system-net-element-network-settings.md) 요소는 <xref:System.Net> 및 관련 된 하위 네임 스페이스의 클래스에 대 한 설정을 포함 합니다. 설정은 인터넷 호스트에서 정보를 수신 하기 위한 인증 모듈, 연결 관리, 메일 설정, 프록시 서버 및 인터넷 요청 모듈을 구성 합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서 사용 하는 일반적인 구성에서는 <xref:System.Net> 클래스입니다.  
+ 다음 예제에서는 클래스에서 <xref:System.Net> 사용 하는 일반적인 구성을 보여 줍니다.  
   
 ```xml  
 <configuration>  
@@ -94,4 +94,4 @@ ms.locfileid: "61674339"
   
 ## <a name="see-also"></a>참고자료
 
-- [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [네트워크 설정 스키마](index.md)

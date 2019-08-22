@@ -8,15 +8,15 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: 80564c5895e08884f78a4ec7c955ecdb11126e35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e01cdd942237141b8ef35495d3b74d6b2282a865
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705170"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664252"
 ---
 # <a name="oidmap-element"></a>\<oidMap > 요소
-ASN.1 클래스 개체 식별자 (OID) 매핑이 들어 있습니다.  
+클래스에 대 한 OID (개체 식별자) 매핑을 포함 합니다.  
   
  \<configuration>  
 \<mscorlib>  
@@ -40,7 +40,7 @@ ASN.1 클래스 개체 식별자 (OID) 매핑이 들어 있습니다.
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<oidEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|ASN.1 OID 이름에 매핑됩니다.|  
+|[\<oidEntry>](oidentry-element.md)|ASN OID를 친숙 한 이름에 매핑합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -48,10 +48,10 @@ ASN.1 클래스 개체 식별자 (OID) 매핑이 들어 있습니다.
 |-------------|-----------------|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`cryptographySettings`|암호화 설정이 포함되어 있습니다.|  
-|`mscorlib`|포함 된 `cryptographySettings` 요소입니다.|  
+|`mscorlib`|요소를 `cryptographySettings` 포함 합니다.|  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 사용 하는 방법을 보여 줍니다 합니다  **\<oidMap >** 해당 해시 알고리즘의 구현에 RIPEMD-160 해시 알고리즘의 OID의 매핑을 포함 하는 요소입니다.  
+ 다음 예제에서는  **\<oidMap >** 요소를 사용 하 여 해당 해시 알고리즘의 구현에 RIPEMD-160 해시 알고리즘에 대 한 OID 매핑을 포함 하는 방법을 보여 줍니다.  
   
 ```xml  
 <configuration>  
@@ -75,8 +75,8 @@ ASN.1 클래스 개체 식별자 (OID) 매핑이 들어 있습니다.
   
 ## <a name="see-also"></a>참고자료
 
-- [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [암호화 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [구성 파일 스키마](../index.md)
+- [암호화 설정 스키마](index.md)
 - [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
-- [암호화 클래스 구성](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
-- [개체 식별자를 암호화 알고리즘에 매핑](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+- [암호화 클래스 구성](../../configure-cryptography-classes.md)
+- [개체 식별자를 암호화 알고리즘에 매핑](../../map-object-identifiers-to-cryptography-algorithms.md)

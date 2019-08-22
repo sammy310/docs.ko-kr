@@ -9,12 +9,12 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: d848f38e-67f2-49d4-8e88-01c845c06c02
-ms.openlocfilehash: 5de7645ecbf2123df849046a152643cd629b4898
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 49e93f12bebbf409e6b3a06634556b9103c85f44
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038233"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666199"
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>방법: 디자이너를 사용하여 도구 모음 단추에 대한 아이콘 정의
 
@@ -24,7 +24,6 @@ ms.locfileid: "69038233"
 <xref:System.Windows.Forms.ToolBar>사용자가 쉽게 식별할 수 있도록 단추 내에 아이콘을 표시할 수 있습니다. 이는 <xref:System.Windows.Forms.ImageList> 구성 요소에 이미지를 추가 하 고 <xref:System.Windows.Forms.ToolBar> 컨트롤에 연결 하는 과정을 통해 이루어집니다.
 
 다음 절차에는 <xref:System.Windows.Forms.ToolBar> 컨트롤과 <xref:System.Windows.Forms.ImageList> 구성 요소를 포함 하는 폼을 포함 하는 **Windows 응용 프로그램** 프로젝트가 필요 합니다. 이러한 프로젝트 [를 설정 하는 방법에 대 한 자세한 내용은 방법: Windows Forms 응용 프로그램 프로젝트](/visualstudio/ide/step-1-create-a-windows-forms-application-project) [를 만들고 방법: Windows Forms](how-to-add-controls-to-windows-forms.md)에 컨트롤을 추가 합니다.
-
 
 ### <a name="to-set-an-icon-for-a-toolbar-button-at-design-time"></a>디자인 타임에 도구 모음 단추에 대 한 아이콘을 설정 하려면
 

@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <nameEntry> element
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-ms.openlocfilehash: 97521ba9073820beeea62f5fc7cab480b5422fb0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9270552245b3867f0f09741ded3f9da6a8b6c135
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705183"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664261"
 ---
-# <a name="nameentry-element"></a>\<m t r y > 요소
+# <a name="nameentry-element"></a>\<nameEntry > 요소
 클래스 이름을 알고리즘 이름에 매핑하며, 이를 통해 하나의 클래스가 여러 이름을 가질 수 있습니다.  
   
  \<configuration>  
@@ -37,8 +37,8 @@ ms.locfileid: "61705183"
   
 |특성|설명|  
 |---------------|-----------------|  
-|**name**|필수 특성입니다.<br /><br /> 암호화 클래스를 구현 하는 알고리즘의 이름을 지정 합니다.|  
-|**class**|필수 특성입니다.<br /><br /> 에 대 한 값을 지정 합니다 **이름** 특성을 [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) 요소입니다.|  
+|**name**|필수 특성입니다.<br /><br /> 암호화 클래스가 구현 하는 알고리즘의 이름을 지정 합니다.|  
+|**class**|필수 특성입니다.<br /><br /> Cryptoclass > 요소의 **name** 특성 [에 대 한 값을 지정 합니다. \<](cryptoclass-element.md)|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -51,10 +51,10 @@ ms.locfileid: "61705183"
 |`system.web`|ASP.NET 구성 섹션의 루트 요소를 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
- **이름을** 특성에 있는 추상 클래스 중 하나의 이름을 수는 <xref:System.Security.Cryptography> 네임 스페이스입니다. 호출 하는 경우는 **만들기** 추상 암호화 클래스에 메서드를 추상 클래스 이름에 전달 되는 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> 메서드. **CreateFromName** 하 여 지정 된 형식의 인스턴스를 반환 합니다 **클래스** 특성입니다. 경우는 **이름** 특성은 약식 이름, RSA와 같은 이름을 사용할 수 있습니다는 호출 하는 경우를 **CreateFromName** 메서드.  
+ **Name** 특성은 <xref:System.Security.Cryptography> 네임 스페이스에 있는 추상 클래스 중 하나의 이름일 수 있습니다. 추상 암호화 클래스에서 **Create** 메서드를 호출 하는 경우 추상 클래스 이름이 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> 메서드에 전달 됩니다. **Createfromname** 은 **클래스** 특성이 나타내는 형식의 인스턴스를 반환 합니다. **이름** 특성이 RSA와 같은 짧은 이름인 경우 **createfromname** 메서드를 호출할 때 해당 이름을 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 사용 하는 방법을 보여 줍니다 합니다  **\<m t r y >** 암호화 클래스를 참조 하 고 런타임 구성 요소입니다. "RSA" 문자열을 전달할 수 있습니다는 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 메서드 및 사용법을 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 반환 하는 방법을 `MyCryptoRSAClass` 개체입니다.  
+ 다음 예제에서는  **\<nameentry >** 요소를 사용 하 여 암호화 클래스를 참조 하 고 런타임을 구성 하는 방법을 보여 줍니다. 그런 다음 "RSA" <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 문자열을 메서드에 전달 하 고 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 메서드를 사용 하 여 `MyCryptoRSAClass` 개체를 반환할 수 있습니다.  
   
 ```xml  
 <configuration>  
@@ -77,7 +77,7 @@ ms.locfileid: "61705183"
   
 ## <a name="see-also"></a>참고자료
 
-- [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [암호화 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [구성 파일 스키마](../index.md)
+- [암호화 설정 스키마](index.md)
 - [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
-- [암호화 클래스 구성](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [암호화 클래스 구성](../../configure-cryptography-classes.md)

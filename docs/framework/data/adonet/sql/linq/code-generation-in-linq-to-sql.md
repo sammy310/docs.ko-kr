@@ -2,40 +2,40 @@
 title: LINQ to SQL에서 코드 생성
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: fbc70669b9c03b59468f4f6a67c1f73432883193
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63ac0f50b34a5e5d8739adbeb70f2412960227c3
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743608"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666123"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>LINQ to SQL에서 코드 생성
-데이터베이스를 나타내는 개체 관계형 디자이너 또는 SQLMetal 명령줄 도구를 사용 하 여 코드를 생성할 수 있습니다. 두 경우 모두 다음과 같은 세 단계로 코드가 생성됩니다.  
+개체 관계형 디자이너 또는 SQLMetal 명령줄 도구를 사용 하 여 데이터베이스를 나타내는 코드를 생성할 수 있습니다. 두 경우 모두 다음과 같은 세 단계로 코드가 생성됩니다.  
   
-1. 합니다 *DBML 추출기* 데이터베이스에서 스키마 정보를 추출 하 고 XML 형식의 DBML 파일에 다시 어셈블합니다.  
+1. *DBML 추출기* 는 데이터베이스에서 스키마 정보를 추출 하 고 XML 형식의 DBML 파일로 정보를 어셈블합니다 합니다.  
   
-2. DBML 파일에서 검색 되는 *DBML 유효성 검사기* 오류에 대 한 합니다.  
+2. Dbml *유효성 검사기* 에서 dbml 파일을 검사 하 여 오류가 발생 했습니다.  
   
 3. 유효성 검사 오류가 없으면 파일이 코드 생성기에 전달됩니다.  
   
- 자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요. Visual Studio를 사용 하 여 개발자가 코드를 생성할 Object Relational Designer를 이용할 수 있습니다. 참조 [LINQ to SQL 도구 Visual Studio에서](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)합니다.  
+ 자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요. Visual Studio를 사용 하는 개발자는 개체 관계형 디자이너을 사용 하 여 코드를 생성할 수도 있습니다. [Visual Studio의 LINQ to SQL 도구를](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)참조 하세요.  
   
 ## <a name="dbml-extractor"></a>DBML 추출기  
  DBML 추출기는 데이터베이스 메타데이터를 입력으로 사용하여 DMBL 파일을 출력하는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 구성 요소입니다.  
   
 ## <a name="code-generator"></a>코드 생성기  
- 코드 생성기가를 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] DBML 파일을 Visual Basic의 경우 변환 하는 구성 요소 C#, 또는 XML 매핑 파일입니다.  
+ 코드 생성기 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 는 DBML 파일을 Visual Basic, C#또는 XML 매핑 파일로 변환 하는 구성 요소입니다.  
   
 ## <a name="xml-schema-definition-file"></a>XML 스키마 정의 파일  
  DBML 파일은 다음 XSD 스키마 정의 파일에 대해 유효해야 합니다.  
   
- 이 스키마 정의 파일은 외부 매핑 파일의 유효성을 검사하는 데 사용하는 스키마 정의 파일과 다릅니다. 자세한 내용은 [외부 매핑](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)).  
+ 이 스키마 정의 파일은 외부 매핑 파일의 유효성을 검사하는 데 사용하는 스키마 정의 파일과 다릅니다. 자세한 내용은 [외부 매핑](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)을 참조 하세요.  
   
 > [!NOTE]
->  Visual Studio 사용자에 게 XML 스키마 대화 상자에서이 XSD 파일 "DbmlSchema.xsd"로 찾을 수 있습니다. DBML 파일의 유효성 검사에 대 한 XSD 파일을 올바르게 사용 하려면 참조 [방법: DBML 및 외부 매핑 파일 유효성 검사](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)합니다.  
+>  또한 Visual Studio 사용자는 XML 스키마 대화 상자에서이 XSD 파일을 "DbmlSchema .xsd"로 찾습니다. DBML 파일 [의 유효성을 검사 하는 데 XSD 파일을 제대로 사용 하려면 방법: DBML 및 외부 매핑 파일](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)의 유효성을 검사 합니다.  
   
-```  
-?<?xml version="1.0" encoding="utf-16"?>  
+```xml  
+<?xml version="1.0" encoding="utf-16"?>  
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.microsoft.com/linqtosql/dbml/2007" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007"  
 elementFormDefault="qualified" >  
   <xs:element name="Database" type="Database" />  
@@ -243,7 +243,7 @@ elementFormDefault="qualified" >
 ```  
   
 ## <a name="sample-dbml-file"></a>샘플 DBML 파일  
- 다음 코드에서는 Northwind 샘플 데이터베이스에서 만든 DBML 파일의 일부를 보여 줍니다. 사용 하 여 SQLMetal을 사용 하 여 전체 파일을 생성할 수 있습니다 합니다 **/xml** 옵션입니다. 자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요.  
+ 다음 코드에서는 Northwind 샘플 데이터베이스에서 만든 DBML 파일의 일부를 보여 줍니다. **/Xml** 옵션과 함께 SQLMetal을 사용 하 여 전체 파일을 생성할 수 있습니다. 자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -273,6 +273,6 @@ elementFormDefault="qualified" >
 
 - [배경 정보](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
 - [외부 매핑](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [방법: 외부 파일로 개체 모델 생성](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [방법: 개체 모델을 외부 파일로 생성](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
 - [샘플 데이터베이스 다운로드](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
 - [참조](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

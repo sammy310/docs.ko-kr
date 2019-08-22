@@ -10,15 +10,15 @@ helpviewer_keywords:
 - <clear> element, authenticationModules
 - authenticationModules, clear element
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
-ms.openlocfilehash: 3c018c7d474286f7a9cde2d070e4b54d164b5b40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12ac146926103b40073d34f48895b0645c8a8ed2
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674612"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659473"
 ---
-# <a name="clear-element-for-authenticationmodules-network-settings"></a>\<지우기 > authenticationModules (네트워크 설정)에 대 한 요소
-응용 프로그램에서 인증 모듈을 모두 지웁니다.  
+# <a name="clear-element-for-authenticationmodules-network-settings"></a>\<authenticationModules의 clear > 요소 (네트워크 설정)
+응용 프로그램에서 모든 인증 모듈을 지웁니다.  
   
  \<configuration>  
 \<system.net>  
@@ -44,16 +44,16 @@ ms.locfileid: "61674612"
   
 |**요소**|**설명**|  
 |-----------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|네트워크 요청을 인증 하는 데 사용 되는 모듈을 지정 합니다.|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|네트워크 요청을 인증 하는 데 사용 되는 모듈을 지정 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `clear` 요소 또는 구성 계층 구조의 상위 수준 구성 파일에서 이전에 정의 된 인증 모듈을 제거 합니다.  
+ 요소 `clear` 는 구성 파일 또는 구성 계층 구조에서 더 높은 수준에서 정의 된 모든 인증 모듈을 제거 합니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
  이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 모든 구성 된 인증 모듈을 제거합니다.  
+ 다음 예제에서는 구성 된 모든 인증 모듈을 제거 합니다.  
   
 ```xml  
 <configuration>  
@@ -69,4 +69,4 @@ ms.locfileid: "61674612"
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [네트워크 설정 스키마](index.md)

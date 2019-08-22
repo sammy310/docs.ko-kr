@@ -2,15 +2,15 @@
 title: <httpListener> 요소(네트워크 설정)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
-ms.openlocfilehash: 8257b0311e18a21fbc04185f8297ee8e5f38b86b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cb24dc7296e2f2f6ea292566330d3d6ae4f25f85
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592725"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664135"
 ---
 # <a name="httplistener-element-network-settings"></a>\<httpListener > 요소 (네트워크 설정)
-매개 변수에서 사용 하는 사용자 지정을 <xref:System.Net.HttpListener> 클래스입니다.  
+<xref:System.Net.HttpListener> 클래스에서 사용 하는 매개 변수를 사용자 지정 합니다.  
   
  \<configuration>  
 \<system.net>  
@@ -32,9 +32,9 @@ ms.locfileid: "64592725"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
-|unescapeRequestUrl|여부를 나타내는 부울 값을 <xref:System.Net.HttpListener> 인스턴스 변환 된 URI 대신 이스케이프 되지 않은 원시 URI를 사용 합니다.|  
+|unescapeRequestUrl|<xref:System.Net.HttpListener> 인스턴스가 변환 된 uri 대신 이스케이프 되지 않은 원시 uri를 사용 하는지 여부를 나타내는 부울 값입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -43,10 +43,10 @@ ms.locfileid: "64592725"
   
 |**요소**|**설명**|  
 |-----------------|---------------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<xref:System.Net> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.|  
+|[settings](settings-element-network-settings.md)|<xref:System.Net> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.|  
   
 ## <a name="remarks"></a>설명  
- 합니다 **unescapeRequestUrl** 하는 경우 특성을 나타냅니다 <xref:System.Net.HttpListener> 는 백분율로 인코딩된 값 변환 되 고 다른 정규화 단계에 따라 변환 된 URI 대신 이스케이프 되지 않은 원시 URI를 사용 합니다.  
+ **UnescapeRequestUrl** 특성은가 백분율 <xref:System.Net.HttpListener> 인코딩 값이 변환 되 고 다른 정규화 단계가 수행 되는 변환 된 uri 대신 이스케이프 되지 않은 원시 uri를 사용 하는지 여부를 나타냅니다.  
   
  경우는 <xref:System.Net.HttpListener> 인스턴스를 통해 요청을 수신 합니다 `http.sys` 제공한 URI 문자열의 인스턴스를 만들고 서비스를 `http.sys`,으로 노출를 <xref:System.Net.HttpListenerRequest.Url%2A?displayProperty=nameWithType> 속성.  
   
@@ -64,13 +64,13 @@ ms.locfileid: "64592725"
   
  제공 된 URI의 원시 `http.sys` 위에서 언급 한 요청에 "경로 /"입니다. 이 네트워크를 통해 전송 된 HTTP 동사를 다음 문자열을 나타냅니다.  
   
- `http.sys` 서비스는 HTTP 요청에서에서 제공 하는 URI를 사용 하 여 요청에 제공 된 정보에서 변환된 된 URI를 만듭니다 및 원본 서버에서 요청을 확인 하도록 호스트 헤더를 전달 해야 합니다. 이 등록 된 URI 접두사를 사용 하 여 요청에서 정보를 비교 하 여 이루어집니다. HTTP 서버 SDK 설명서 HTTP_COOKED_URL 구조는이 변환 된 URI를 나타냅니다.  
+ `http.sys` 서비스는 HTTP 요청에서에서 제공 하는 URI를 사용 하 여 요청에 제공 된 정보에서 변환된 된 URI를 만듭니다 및 원본 서버에서 요청을 확인 하도록 호스트 헤더를 전달 해야 합니다. 이 등록 된 URI 접두사를 사용 하 여 요청에서 정보를 비교 하 여 이루어집니다. HTTP 서버 SDK 설명서는 변환 된이 URI를 HTTP_COOKED_URL 구조체로 참조 합니다.  
   
  등록 된 URI 접두사를 사용 하 여 요청을 비교할 수 있도록 요청에 일부 정규화를 수행 해야 합니다. 변환 된 URI 위의 샘플은 다음과 같을 수 됩니다.  
   
  `http://www.contoso.com/path/`  
   
- 합니다 `http.sys` 결합 서비스는 <xref:System.Uri.Host%2A?displayProperty=nameWithType> 속성 값과 문자열을 변환된 된 URI를 만드는 요청 줄에 있습니다. 또한 `http.sys` 하며 <xref:System.Uri?displayProperty=nameWithType> 클래스는 다음을 수행 합니다.  
+ 합니다 `http.sys` 결합 서비스는 <xref:System.Uri.Host%2A?displayProperty=nameWithType> 속성 값과 문자열을 변환된 된 URI를 만드는 요청 줄에 있습니다. 또한 `http.sys` 및 클래스는 <xref:System.Uri?displayProperty=nameWithType> 다음을 수행 합니다.  
   
 - 이스케이프 해제 인코딩된 모든 백분율 값입니다.  
   
@@ -107,14 +107,14 @@ ms.locfileid: "64592725"
   
  요청을 보낸 사람의 의도 아닙니다.  
   
- 경우는 **unescapeRequestUrl** 특성이로 설정 된 **false**때 합니다 <xref:System.Net.HttpListener> 요청이 수신 원시 URI를 사용 하 여 변환 된 URI 대신 `http.sys` 합니다 대한입력으로<xref:System.Net.HttpListenerRequest.Url%2A> 속성입니다.  
+ **UnescapeRequestUrl** 특성이 **false** <xref:System.Net.HttpListener> 로 설정 된 경우에서 요청을 받으면에서 `http.sys` <xref:System.Net.HttpListenerRequest.Url%2A> 속성에 대 한 입력으로 변환 된 uri 대신 원시 uri를 사용 합니다.  
   
- 기본값은 **unescapeRequestUrl** 특성이 **true**합니다.  
+ **UnescapeRequestUrl** 특성의 기본값은 **true**입니다.  
   
- 합니다 <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A> 속성의 현재 값을 가져오는 데 사용할 수는 **unescapeRequestUrl** 해당 구성 파일에서 특성입니다.  
+ 속성을 사용 하 여 적용 가능한 구성 파일에서 unescapeRequestUrl 특성의 현재 값을 가져올 수 있습니다. <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A>  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 구성 방법을 보여 줍니다.는 <xref:System.Net.HttpListener> 클래스에서 변환 된 URI 대신 원시 URI를 사용 하는 요청을 받으면 `http.sys` 대 한 입력으로 <xref:System.Net.HttpListenerRequest.Url%2A> 속성입니다.  
+ 다음 예제에서는에서 <xref:System.Net.HttpListener> `http.sys` <xref:System.Net.HttpListenerRequest.Url%2A> 속성에 대 한 입력으로 변환 된 uri 대신 원시 uri를 사용 하는 요청을 받을 때 클래스를 구성 하는 방법을 보여 줍니다.  
   
 ```xml  
 <configuration>  
@@ -135,11 +135,11 @@ ms.locfileid: "64592725"
 |네임스페이스|System.Net|  
 |스키마 이름||  
 |유효성 검사 파일||  
-|비워 둘 수 있습니다.||  
+|비워 둘 수 있음||  
   
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Net.Configuration.HttpListenerElement>
 - <xref:System.Net.HttpListener>
 - <xref:System.Net.HttpListenerRequest.Url%2A>
-- [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [네트워크 설정 스키마](index.md)

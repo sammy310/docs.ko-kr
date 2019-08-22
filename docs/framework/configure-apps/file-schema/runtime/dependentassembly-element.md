@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac83a0b27a965721dabe1bdf2e05afbdc9b9c961
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4bf1a15ff27f4390f1985a2d2730b1acfcaab2c1
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704780"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663822"
 ---
 # <a name="dependentassembly-element"></a>\<dependentAssembly > 요소
-각 어셈블리에 대한 바인딩 정책 및 어셈블리 위치를 캡슐화합니다. 하나를 사용 하 여 `dependentAssembly` 각 어셈블리에 대 한 요소입니다.  
+각 어셈블리에 대한 바인딩 정책 및 어셈블리 위치를 캡슐화합니다. 각 어셈블리 `dependentAssembly` 에 대해 하나의 요소를 사용 합니다.  
   
  \<configuration>  
 \<runtime>  
@@ -43,8 +43,8 @@ ms.locfileid: "61704780"
   
 |요소|설명|  
 |-------------|-----------------|  
-|`assemblyIdentity`|어셈블리에 대 한 식별 정보를 포함합니다. 이 요소는 각각에 포함 되어야 합니다 `dependentAssembly` 요소입니다.|  
-|`codeBase`|런타임 컴퓨터에 설치 되지 않은 경우 공유 어셈블리를 찾을 수를 지정 합니다.|  
+|`assemblyIdentity`|어셈블리에 대 한 식별 정보를 포함 합니다. 이 요소는 각 `dependentAssembly` 요소에 포함 되어야 합니다.|  
+|`codeBase`|컴퓨터에 설치 되어 있지 않은 경우 런타임이 공유 어셈블리를 찾을 수 있는 위치를 지정 합니다.|  
 |`bindingRedirect`|어셈블리 버전을 다른 버전으로 리디렉션합니다.|  
 |`publisherPolicy`|런타임에서이 어셈블리에 대 한 게시자 정책을 적용할지 여부를 지정 합니다.|  
   
@@ -82,6 +82,6 @@ ms.locfileid: "61704780"
   
 ## <a name="see-also"></a>참고자료
 
-- [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [어셈블리 버전 리디렉션](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [런타임 설정 스키마](index.md)
+- [구성 파일 스키마](../index.md)
+- [어셈블리 버전 리디렉션](../../redirect-assembly-versions.md)

@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9402c9f28c123affb7b90fc189484bb1fd43db46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b00a5349e22feb3cce404ff504edd798ff9e304
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704611"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663532"
 ---
 # <a name="probing-element"></a>\<검색 > 요소
-공용 언어 런타임에서 어셈블리를 로드할 때 검색할 하위 응용 프로그램 기본 디렉터리를 지정 합니다.  
+어셈블리를 로드할 때 검색할 공용 언어 런타임에 대 한 응용 프로그램 기본 하위 디렉터리를 지정 합니다.  
   
  \<configuration>  
 \<runtime>  
@@ -39,7 +39,7 @@ ms.locfileid: "61704611"
   
 |특성|설명|  
 |---------------|-----------------|  
-|`privatePath`|필수 특성입니다.<br /><br /> 어셈블리를 포함할 수 있는 응용 프로그램의 기본 디렉터리의 하위 디렉터리를 지정 합니다. 각 하위 디렉터리를 세미콜론으로 구분 합니다.|  
+|`privatePath`|필수 특성입니다.<br /><br /> 어셈블리를 포함할 수 있는 응용 프로그램 기본 디렉터리의 하위 디렉터리를 지정 합니다. 각 하위 디렉터리를 세미콜론으로 구분 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -53,7 +53,7 @@ ms.locfileid: "61704611"
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 런타임에서 어셈블리에 대 한 검색 응용 프로그램 기본 하위 디렉터리를 지정 하는 방법을 보여 줍니다.  
+ 다음 예제에서는 런타임에서 어셈블리를 검색 해야 하는 응용 프로그램 기본 하위 디렉터리를 지정 하는 방법을 보여 줍니다.  
   
 ```xml  
 <configuration>  
@@ -67,7 +67,7 @@ ms.locfileid: "61704611"
   
 ## <a name="see-also"></a>참고자료
 
-- [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [어셈블리 위치 지정](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
-- [런타임에서 어셈블리를 찾는 방법](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [런타임 설정 스키마](index.md)
+- [구성 파일 스키마](../index.md)
+- [어셈블리 위치 지정](../../specify-assembly-location.md)
+- [런타임에서 어셈블리를 찾는 방법](../../../deployment/how-the-runtime-locates-assemblies.md)

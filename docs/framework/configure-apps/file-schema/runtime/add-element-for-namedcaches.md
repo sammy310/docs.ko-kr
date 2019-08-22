@@ -5,15 +5,15 @@ helpviewer_keywords:
 - add element for <namedCaches>
 - <add> element for <namedCaches>
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
-ms.openlocfilehash: b0487ba5025557f07d9991f911cd71a677a04e2c
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: fd6668a551663470a97b07ff131710dbe92a91f5
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423382"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659026"
 ---
-# <a name="add-element-for-namedcaches"></a>\<추가 > 요소에 대 한 \<namedCaches >
-추가 `namedCache` 항목을 `namedCaches` 메모리 캐시에 대 한 컬렉션입니다.  
+# <a name="add-element-for-namedcaches"></a>\<namedcaches > 요소 \<를 추가 >
+메모리 캐시 `namedCache` 의 `namedCaches` 컬렉션에 항목을 추가 합니다.  
   
  \<system.runtime.caching>  
 \<memoryCache>  
@@ -39,10 +39,10 @@ ms.locfileid: "67423382"
   
 |특성|설명|  
 |-|-|  
-|`CacheMemoryLimitMegabytes`|최대 허용 크기 (메가바이트 단위)를 지정 하는 정수 값은 인스턴스에 <xref:System.Runtime.Caching.MemoryCache> 증가할 수 있습니다. 기본값은 0으로, 즉는 <xref:System.Runtime.Caching.MemoryCache> 클래스의 자동 크기 조정 추론이 기본적으로 사용 됩니다.|  
+|`CacheMemoryLimitMegabytes`|인스턴스를 확장할 <xref:System.Runtime.Caching.MemoryCache> 수 있는 최대 허용 크기 (mb)를 지정 하는 정수 값입니다. 기본값은 0 이며,이는 기본적으로 <xref:System.Runtime.Caching.MemoryCache> 클래스의 자동 크기 조정 추론을 사용 함을 의미 합니다.|  
 |`Name`|캐시의 이름입니다.|  
-|`PhysicalMemoryLimitPercentage`|캐시에서 사용할 수 있는 물리적으로 설치 된 컴퓨터 메모리의 최대 백분율을 지정 하는 0과 100 사이의 정수 값입니다. 기본값은 0으로, 즉는 <xref:System.Runtime.Caching.MemoryCache> 클래스의 자동 크기 조정 추론이 기본적으로 사용 됩니다.|  
-|`PollingInterval`|캐시 구현이 현재 메모리 로드를 캐시 인스턴스에 대해 설정된 절대 및 백분율 기반 메모리 제한과 비교하기까지의 시간 간격을 나타내는 값입니다. 이 값은 "hh: mm:" 형식으로 입력 합니다.|  
+|`PhysicalMemoryLimitPercentage`|캐시에서 사용할 수 있는 물리적으로 설치 된 컴퓨터 메모리의 최대 백분율을 지정 하는 0에서 100 사이의 정수 값입니다. 기본값은 0 이며,이는 기본적으로 <xref:System.Runtime.Caching.MemoryCache> 클래스의 자동 크기 조정 추론을 사용 함을 의미 합니다.|  
+|`PollingInterval`|캐시 구현이 현재 메모리 로드를 캐시 인스턴스에 대해 설정된 절대 및 백분율 기반 메모리 제한과 비교하기까지의 시간 간격을 나타내는 값입니다. 이 값은 "HH: MM: SS" 형식으로 입력 됩니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  `None`  
@@ -51,13 +51,13 @@ ms.locfileid: "67423382"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|명명 된 구성 설정의 컬렉션을 포함 <xref:System.Runtime.Caching.MemoryCache> 인스턴스.|  
+|[\<namedCaches>](namedcaches-element-cache-settings.md)|명명 <xref:System.Runtime.Caching.MemoryCache> 된 인스턴스에 대 한 구성 설정의 컬렉션을 포함 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 합니다 `add` 항목을 추가 하는 요소는 `namedCaches` 메모리 캐시에 대 한 컬렉션입니다. 사용할 수는 [지우기](../../../../../docs/framework/configure-apps/file-schema/runtime/clear-element-for-namedcaches.md) 요소를 사용 하기 전에 `add` 요소는 다른 특정 명명 된 컬렉션에는 캐시 합니다. Web.config 파일 및 machine.config 파일에서이 요소를 사용할 수 있습니다.  
+ 요소 `add` 는 메모리 캐시의 `namedCaches` 컬렉션에 항목을 추가 합니다. `add` 요소를 사용 하기 전에 [clear](clear-element-for-namedcaches.md) 요소를 사용 하 여 컬렉션에 다른 명명 된 캐시가 없음을 확신할 수 있습니다. 이 요소는 machine.config 파일 및 web.config 파일에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 기본 설정을 정의 하는 방법을 보여 줍니다 `namedCache` 항목을 `namedCaches` 메모리 캐시에 대 한 컬렉션입니다.  
+ 다음 예제에서는 메모리 캐시의 `namedCache` `namedCaches` 컬렉션에 대 한 기본 항목에 대 한 설정을 정의 하는 방법을 보여 줍니다.  
   
 ```xml  
 <configuration>  
@@ -78,4 +78,4 @@ ms.locfileid: "67423382"
   
 ## <a name="see-also"></a>참고자료
 
-- [\<namedCaches > 요소 (캐시 설정)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+- [\<namedCaches > 요소 (캐시 설정)](namedcaches-element-cache-settings.md)

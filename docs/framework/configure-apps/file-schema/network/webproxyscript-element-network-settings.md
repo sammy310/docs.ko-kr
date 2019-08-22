@@ -8,15 +8,15 @@ helpviewer_keywords:
 - <webProxyScript> element
 - webProxyScript element
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
-ms.openlocfilehash: e73ba86cc17fa51cbf4030f2304ab9141fcc0f26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a77c2567401fd80e355bb7fcee17b6684653ebe
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674373"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659042"
 ---
 # <a name="webproxyscript-element-network-settings"></a>\<webProxyScript > 요소 (네트워크 설정)
-웹 프록시 검색에 사용 되는 스크립트의 특성을 구성 합니다.  
+웹 프록시를 검색 하는 데 사용 되는 스크립트의 특징을 구성 합니다.  
   
  \<configuration>  
 \<system.net>  
@@ -36,18 +36,18 @@ ms.locfileid: "61674373"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
-|`downloadTimeout`|스크립트 시간, 분 및 초를 다운로드 하는 최대 시간을 지정 합니다. 기본값은 1 분입니다.|  
+|`downloadTimeout`|스크립트를 다운로드 하는 최대 시간을 시간, 분, 초 단위로 지정 합니다. 기본값은 1 분입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<xref:System.Net> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.|  
+|[settings](settings-element-network-settings.md)|<xref:System.Net> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.|  
   
 ## <a name="remarks"></a>설명  
   
@@ -56,4 +56,4 @@ ms.locfileid: "61674373"
   
 ## <a name="see-also"></a>참고자료
 
-- [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [네트워크 설정 스키마](index.md)

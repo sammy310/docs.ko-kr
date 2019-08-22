@@ -8,12 +8,12 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-ms.openlocfilehash: ec3a5a73caa901a21e22dbec7500af9153e01ef4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 572a5856c9f92f105e727df1ecd8eb2e0a92fc09
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705222"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664279"
 ---
 # <a name="cryptographysettings-element"></a>\<cryptographySettings > 요소
 암호화 설정이 포함되어 있습니다.  
@@ -39,18 +39,18 @@ ms.locfileid: "61705222"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<cryptoNameMapping>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|이름에 대한 클래스의 매핑이 포함되어 있습니다.|  
-|[\<oidMap>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|ASN.1 클래스 개체 식별자 (OID) 매핑이 들어 있습니다.|  
+|[\<cryptoNameMapping>](cryptonamemapping-element.md)|이름에 대한 클래스의 매핑이 포함되어 있습니다.|  
+|[\<oidMap>](oidmap-element.md)|클래스에 대 한 OID (개체 식별자) 매핑을 포함 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
 |-------------|-----------------|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
-|`mscorlib`|포함 된 `cryptographySettings` 요소입니다.|  
+|`mscorlib`|요소를 `cryptographySettings` 포함 합니다.|  
   
 ## <a name="example"></a>예제  
- 다음 방법을 보여 주는 예제는  **\<cryptographySettings >** 암호화 이름 매핑 및 OID 매핑이 포함 하는 요소입니다. 이 예제에서는 런타임에 구성 있도록 <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> 반환을 `MyHashClass` 개체 및 `MyCryptoClass` 클래스 1.3.36.2.1 개체 식별자에 매핑됩니다.  
+ 다음 예에서는  **\<cryptographysettings >** 요소를 사용 하 여 암호화 이름 매핑과 OID 매핑을 포함 하는 방법을 보여 줍니다. 이 예제에서는가 <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> 개체를 `MyHashClass` 반환 하 고 `MyCryptoClass` 클래스가 개체 식별자 1.3.36.2.1에 매핑되도록 런타임을 구성 합니다.  
   
 ```xml  
 <configuration>  
@@ -78,6 +78,6 @@ ms.locfileid: "61705222"
   
 ## <a name="see-also"></a>참고자료
 
-- [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [암호화 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [구성 파일 스키마](../index.md)
+- [암호화 설정 스키마](index.md)
 - [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)

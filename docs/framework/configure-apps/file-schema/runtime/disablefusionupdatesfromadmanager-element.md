@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c96d5aea150c0dbb55889e9fc26417e7803a155
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a1923e70143ea2a158447eccdb35d347fe4f51ea
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487668"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663779"
 ---
 # <a name="disablefusionupdatesfromadmanager-element"></a>\<disableFusionUpdatesFromADManager > 요소
 런타임 호스트가 애플리케이션 도메인에 대한 구성 설정을 재정의할 수 있도록 허용하는 기본 동작을 사용하지 않도록 설정할지를 지정합니다.  
   
- \<구성 > 요소  
+ \<configuration > 요소  
 \<런타임 > 요소  
 \<disableFusionUpdatesFromADManager>  
   
@@ -34,14 +34,14 @@ ms.locfileid: "66487668"
   
 |특성|설명|  
 |---------------|-----------------|  
-|사용|필수 특성입니다.<br /><br /> Fusion 설정을 재정의 하는 기본 기능을 사용할 수 있는지 여부를 지정 합니다.|  
+|사용|필수 특성입니다.<br /><br /> Fusion 설정을 재정의 하는 기본 기능을 사용할 수 없는지 여부를 지정 합니다.|  
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
 |값|설명|  
 |-----------|-----------------|  
-|0|Fusion 설정을 재정의 하는 기능을 해제 하지 않습니다. 이 동작은 기본,.NET Framework 4를 사용 하 여 시작 합니다.|  
-|1|Fusion 설정을 재정의 하는 기능을 사용 하지 않도록 설정 합니다. 이.NET Framework의 이전 버전의 동작으로 돌아갑니다.|  
+|0|Fusion 설정을 재정의 하는 기능을 사용 하지 않도록 설정 하지 마십시오. 이는 .NET Framework 4부터 시작 하는 기본 동작입니다.|  
+|1|Fusion 설정을 재정의 하는 기능을 사용 하지 않도록 설정 합니다. 이는 이전 버전의 .NET Framework 동작으로 되돌아갑니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -54,18 +54,18 @@ ms.locfileid: "66487668"
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
- .NET Framework 4 부터는 기본 동작은 허용 하는 <xref:System.AppDomainManager> 개체를 사용 하 여 구성 설정을 재정의 하려면 합니다 <xref:System.AppDomainSetup.ConfigurationFile%2A> 속성 또는 <xref:System.AppDomainSetup.SetConfigurationBytes%2A> 메서드의 <xref:System.AppDomainSetup> 구현에 전달 되는 개체 <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> 의 서브 클래스에서 메서드를 <xref:System.AppDomainManager>입니다. 기본 응용 프로그램 도메인에 대 한 설정을 변경 하면 응용 프로그램 구성 파일에 지정 된 설정을 재정의 합니다. 에 전달 된 구성 설정을 다른 응용 프로그램 도메인에 대 한 재정의 <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> 또는 <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> 메서드.  
+ .NET Framework 4부터 기본 동작은 구현에 전달 <xref:System.AppDomainManager> 되는 <xref:System.AppDomainSetup> 개체의 <xref:System.AppDomainSetup.ConfigurationFile%2A> 속성 또는 <xref:System.AppDomainSetup.SetConfigurationBytes%2A> 메서드를 사용 하 여 개체가 구성 설정을 재정의할 수 있도록 하는 것입니다. 메서드의는의 <xref:System.AppDomainManager>서브 클래스에 있습니다. <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> 기본 응용 프로그램 도메인의 경우 변경 하는 설정이 응용 프로그램 구성 파일에 지정 된 설정을 재정의 합니다. 다른 응용 프로그램 도메인의 경우 <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> 또는 <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> 메서드에 전달 된 구성 설정을 재정의 합니다.  
   
- 새 구성 정보를 전달 하거나 null을 전달 (`Nothing` Visual Basic에서)에 전달 된 구성 정보를 제거 합니다.  
+ 새 구성 정보를 전달 하거나 null (`Nothing` Visual Basic)을 전달 하 여 전달 된 구성 정보를 제거할 수 있습니다.  
   
- 둘 다에 구성 정보를 전달 하지 마십시오 합니다 <xref:System.AppDomainSetup.ConfigurationFile%2A> 속성 및 <xref:System.AppDomainSetup.SetConfigurationBytes%2A> 메서드. 둘 다에 구성 정보를 전달 하는 경우 정보를 전달 하는 <xref:System.AppDomainSetup.ConfigurationFile%2A> 때문에 속성이 무시 됩니다는 <xref:System.AppDomainSetup.SetConfigurationBytes%2A> 메서드는 응용 프로그램 구성 파일에서 구성 정보를 재정의 합니다. 사용 하는 경우는 <xref:System.AppDomainSetup.ConfigurationFile%2A> 속성에 null을 전달할 수 (`Nothing` Visual Basic의)에 <xref:System.AppDomainSetup.SetConfigurationBytes%2A> 메서드 호출에 지정 된 모든 구성 바이트를 제거 하는 <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> 또는 <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> 메서드.  
+ 구성 정보 <xref:System.AppDomainSetup.ConfigurationFile%2A> 를 속성과 <xref:System.AppDomainSetup.SetConfigurationBytes%2A> 메서드에 전달 하지 마십시오. 구성 정보를 둘 다에 전달 하는 경우 <xref:System.AppDomainSetup.ConfigurationFile%2A> <xref:System.AppDomainSetup.SetConfigurationBytes%2A> 메서드가 응용 프로그램 구성 파일에서 구성 정보를 재정의 하기 때문에 속성에 전달 하는 정보는 무시 됩니다. 속성을 사용 하 <xref:System.AppDomainSetup.ConfigurationFile%2A> 는 경우 <xref:System.AppDomainSetup.SetConfigurationBytes%2A> 메서드에 null (`Nothing` Visual Basic)을 전달 하 여 <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> 또는 <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> 메서드에 대 한 호출에 지정 된 모든 구성 바이트를 제거할 수 있습니다.  
   
- 구성 정보 외에도 다음 설정에서 변경할 수 있습니다 합니다 <xref:System.AppDomainSetup> 의 구현에 전달 되는 개체를 <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> 메서드: <xref:System.AppDomainSetup.ApplicationBase%2A>, <xref:System.AppDomainSetup.ApplicationName%2A>를 <xref:System.AppDomainSetup.CachePath%2A>를 <xref:System.AppDomainSetup.DisallowApplicationBaseProbing%2A>, <xref:System.AppDomainSetup.DisallowBindingRedirects%2A> <xref:System.AppDomainSetup.DisallowCodeDownload%2A>, <xref:System.AppDomainSetup.DisallowPublisherPolicy%2A>, <xref:System.AppDomainSetup.DynamicBase%2A>, <xref:System.AppDomainSetup.LoaderOptimization%2A>를 <xref:System.AppDomainSetup.PrivateBinPath%2A>를 <xref:System.AppDomainSetup.PrivateBinPathProbe%2A>를 <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>, 및 <xref:System.AppDomainSetup.ShadowCopyFiles%2A>합니다.  
+ 구성 정보 <xref:System.AppDomainSetup> 외에도, <xref:System.AppDomainSetup.ApplicationBase%2A> <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> <xref:System.AppDomainSetup.ApplicationName%2A>, ,<xref:System.AppDomainSetup.DisallowApplicationBaseProbing%2A>, 메서드의구현에전달되는개체에서다음설정을변경할수있습니다.<xref:System.AppDomainSetup.DisallowBindingRedirects%2A> <xref:System.AppDomainSetup.CachePath%2A> <xref:System.AppDomainSetup.DisallowCodeDownload%2A> <xref:System.AppDomainSetup.DisallowPublisherPolicy%2A> ,,<xref:System.AppDomainSetup.ShadowCopyFiles%2A>,,,,, 및가 있습니다. <xref:System.AppDomainSetup.DynamicBase%2A> <xref:System.AppDomainSetup.LoaderOptimization%2A> <xref:System.AppDomainSetup.PrivateBinPath%2A> <xref:System.AppDomainSetup.PrivateBinPathProbe%2A> <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>  
   
- 사용 하 여 대 안으로 `<disableFusionUpdatesFromADManager>` 요소인 레지스트리 설정을 만들어 또는 환경 변수를 설정 하 여 기본 동작을 비활성화할 수 있습니다. 레지스트리에서 라는 dword를 만듭니다 `COMPLUS_disableFusionUpdatesFromADManager` 아래에서 `HKCU\Software\Microsoft\.NETFramework` 또는 `HKLM\Software\Microsoft\.NETFramework`, 값을 1로 설정 합니다. 명령줄에서 환경 변수를 설정 `COMPLUS_disableFusionUpdatesFromADManager` 1입니다.  
+ `<disableFusionUpdatesFromADManager>` 요소를 사용 하는 대신 레지스트리 설정을 만들거나 환경 변수를 설정 하 여 기본 동작을 사용 하지 않도록 설정할 수 있습니다. 레지스트리에서 또는 `COMPLUS_disableFusionUpdatesFromADManager` 아래`HKLM\Software\Microsoft\.NETFramework`에 라는 DWORD 값을 만들고 값을 1로 설정 합니다. `HKCU\Software\Microsoft\.NETFramework` 명령줄에서 환경 변수 `COMPLUS_disableFusionUpdatesFromADManager` 를 1로 설정 합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 사용 하 여 Fusion 설정을 재정의 하는 기능을 사용 하지 않도록 설정 하는 방법의 `<disableFusionUpdatesFromADManager>` 요소입니다.  
+ 다음 예제에서는 요소를 `<disableFusionUpdatesFromADManager>` 사용 하 여 Fusion 설정을 재정의 하는 기능을 사용 하지 않도록 설정 하는 방법을 보여 줍니다.  
   
 ```xml  
 <configuration>  
@@ -77,6 +77,6 @@ ms.locfileid: "66487668"
   
 ## <a name="see-also"></a>참고자료
 
-- [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [런타임에서 어셈블리를 찾는 방법](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [런타임 설정 스키마](index.md)
+- [구성 파일 스키마](../index.md)
+- [런타임에서 어셈블리를 찾는 방법](../../../deployment/how-the-runtime-locates-assemblies.md)

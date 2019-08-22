@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6191ee2169a85725f0367763874e60c0ceb1d7a4
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 2715548a40579375cebbdd5fb9003738a42ff714
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489428"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663661"
 ---
 # <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy > 요소
-공용 언어 런타임에서 액세스 위반 및 기타 손상 된 상태 예외를 catch 하는 관리 되는 코드를 허용 하는지 여부를 지정 합니다.  
+공용 언어 런타임에서 관리 코드에서 액세스 위반 및 기타 손상 된 상태 예외를 catch 할 수 있는지 여부를 지정 합니다.  
   
  \<configuration>  
 \<runtime>  
@@ -34,14 +34,14 @@ ms.locfileid: "66489428"
   
 |특성|설명|  
 |---------------|-----------------|  
-|`enabled`|필수 특성입니다.<br /><br /> 응용 프로그램은 catch 지정 액세스 위반과 같은 손상 된 상태 예외입니다.|  
+|`enabled`|필수 특성입니다.<br /><br /> 응용 프로그램에서 액세스 위반과 같은 손상 된 상태 예외 오류를 catch 하도록 지정 합니다.|  
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
 |값|설명|  
 |-----------|-----------------|  
-|`false`|응용 프로그램은 catch 하지 않습니다 액세스 위반과 같은 손상 된 상태 예외입니다. 이 값이 기본값입니다.|  
-|`true`|응용 프로그램을 포착 하는 액세스 위반과 같은 손상 된 상태 예외입니다.|  
+|`false`|응용 프로그램은 액세스 위반과 같은 손상 된 상태 예외 오류를 catch 하지 않습니다. 이 값이 기본값입니다.|  
+|`true`|응용 프로그램은 액세스 위반과 같은 손상 된 상태 예외 오류를 catch 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -54,20 +54,20 @@ ms.locfileid: "66489428"
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
- .NET Framework 버전 3.5 및 이전 버전에서 공용 언어 런타임 손상 된 프로세스 상태에서 발생 한 예외를 catch 하는 관리 되는 코드를 허용 합니다. 액세스 위반이 발생은 이러한 유형의 예외는 예제입니다.  
+ .NET Framework 버전 3.5 및 이전 버전에서 공용 언어 런타임에서는 관리 코드를 허용 하 여 손상 된 프로세스 상태에 의해 발생 한 예외를 catch 했습니다. 액세스 위반은 이러한 형식의 예외에 대 한 예입니다.  
   
- .NET Framework 4 부터는 관리 코드 더 이상 catch 이러한 유형의 예외 `catch` 블록입니다. 그러나 이러한 변경 내용을 재정의 하 고 두 가지 방법으로 손상 된 상태 예외 처리를 유지 관리할 수 있습니다.  
+ .NET Framework 4부터 관리 코드는 더 이상 블록에서 `catch` 이러한 형식의 예외를 catch 하지 않습니다. 그러나 다음과 같은 두 가지 방법으로이 변경을 재정의 하 고 손상 된 상태 예외 처리를 유지할 수 있습니다.  
   
-- 설정 된 `<legacyCorruptedStateExceptionsPolicy>` 요소의 `enabled` 특성을 `true`입니다. 이 구성 설정은 프로세스 전체에 적용된 되며 모든 메서드에 영향을 줍니다.  
+- 요소의 특성을 로`true`설정 합니다. `enabled` `<legacyCorruptedStateExceptionsPolicy>` 이 구성 설정은 processwide로 적용 되 고 모든 메서드에 영향을 줍니다.  
   
  또는  
   
-- 적용 된 <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> 특성을 메서드에 예외를 포함 하는 `catch` 블록입니다.  
+- <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> 예외`catch` 블록이 포함 된 메서드에 특성을 적용 합니다.  
   
- 이 구성 요소가 이상.NET Framework 4에만 사용할 수 있습니다.  
+ 이 구성 요소는 .NET Framework 4 이상 에서만 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 응용 프로그램이.NET Framework 4 이전 동작으로 되돌리려면 하 고 모든 손상 된 상태 예외 오류를 catch 해야를 지정 하는 방법을 보여 줍니다.  
+ 다음 예제에서는 응용 프로그램이 .NET Framework 4 이전의 동작으로 되돌아가고 모든 손상 상태 예외 오류를 catch 하도록 지정 하는 방법을 보여 줍니다.  
   
 ```xml  
 <configuration>  
@@ -80,5 +80,5 @@ ms.locfileid: "66489428"
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute>
-- [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [런타임 설정 스키마](index.md)
+- [구성 파일 스키마](../index.md)

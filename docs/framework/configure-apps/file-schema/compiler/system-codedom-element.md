@@ -9,18 +9,18 @@ helpviewer_keywords:
 - system.codedom element
 - <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
-ms.openlocfilehash: 0f47255bb4073007a847e4a8b85ccfd34100582b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2bbd81867b3c20d8ac16bdd79fcc9a3cc7bbb55c
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674801"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659693"
 ---
-# <a name="systemcodedom-element"></a>\<system.codedom > 요소
+# <a name="systemcodedom-element"></a>\<system.object > 요소
 사용 가능한 언어 공급자에 대한 컴파일러 구성 설정을 지정합니다.  
   
- \<구성 > 요소  
-\<system.codedom > 요소  
+ \<configuration > 요소  
+\<system.object > 요소  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,31 +40,31 @@ ms.locfileid: "61674801"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<compilers>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|컴파일러 구성 요소용 컨테이너입니다. 0개 이상의 [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) 요소가 포함되어 있습니다.|  
+|[\<compilers>](compilers-element.md)|컴파일러 구성 요소용 컨테이너입니다. 0개 이상의 [\<compiler>](compiler-element.md) 요소가 포함되어 있습니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<구성>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
+|[\<구성>](../configuration-element.md)|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
   
 ## <a name="remarks"></a>설명  
   
-## <a name="net-framework-version-20"></a>.NET Framework Version 2.0  
- 합니다 [ \<system.codedom >](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md) 요소와 같은.NET Framework와 함께 설치 되는 기본 공급자 외에도 컴퓨터에 설치 된 언어 공급자에 대 한 컴파일러 구성 설정을 포함 합니다 <xref:Microsoft.CSharp.CSharpCodeProvider> 하며 <xref:Microsoft.VisualBasic.VBCodeProvider>합니다. 합니다 [ \<컴파일러 >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) 요소에는 0 개 이상 포함 되어 [ \<컴파일러 >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) 요소입니다. 각 [ \<컴파일러 >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) 요소는 특정 언어 공급자에 대 한 컴파일러 구성 특성을 지정 합니다.  
+## <a name="net-framework-version-20"></a>.NET Framework 버전 2.0  
+ > 요소에는 <xref:Microsoft.CSharp.CSharpCodeProvider> 및와 같이 .NET Framework와 함께 설치 되는 기본 공급자 외에도 컴퓨터에 설치 된 언어 공급자에 대 한 컴파일러 구성 설정이 포함 되어 있습니다. [ \<](system-codedom-element.md) <xref:Microsoft.VisualBasic.VBCodeProvider>. 컴파일러 [ \<>](compilers-element.md) 요소는 0 개 이상의 [ \<컴파일러 >](compiler-element.md) 요소를 포함 합니다. [ 각\<컴파일러 >](compiler-element.md) 요소는 특정 언어 공급자에 대 한 컴파일러 구성 특성을 지정 합니다.  
   
- 개발자 및 컴파일러 공급 구성 설정을 추가할 수 컴퓨터 구성 파일 (Machine.config)에 새 <xref:System.CodeDom.Compiler.CodeDomProvider> 구현 합니다. 사용 된 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> 기본 언어 공급자 및 컴퓨터 컴파일러 구성 설정에 의해 식별 된 언어 공급자를 프로그래밍 방식으로 열거 하는 방법입니다.  
+ 개발자와 컴파일러 공급 업체는 새 <xref:System.CodeDom.Compiler.CodeDomProvider> 구현에 대 한 구성 설정을 컴퓨터 구성 파일 (machine.config)에 추가할 수 있습니다. 메서드를 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> 사용 하 여 컴퓨터의 컴파일러 구성 설정으로 식별 되는 기본 언어 공급자와 언어 공급자를 프로그래밍 방식으로 열거 합니다.  
   
 > [!NOTE]
->  .NET Framework 버전 1.0 및 1.1에서는.NET Framework에서 제공 하는 공급자에서 식별 된 기본 언어를 [ \<컴파일러 >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) 요소입니다. .NET framework 버전 2.0에서 기본 언어 공급자에서 식별 되지 않습니다 합니다 [ \<컴파일러 >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) 요소를 사용 하 여 열거할 수 있지만 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A> 메서드.  
+>  .NET Framework 버전 1.0 및 1.1에서는 .NET Framework에서 제공 하는 기본 언어 공급자가 [ \<컴파일러 >](compilers-element.md) 요소에서 식별 됩니다. .NET Framework 버전 2.0에서 기본 언어 공급자는 [ \<컴파일러 >](compilers-element.md) 요소에서 식별 되지 않지만 메서드를 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A> 사용 하 여 열거할 수 있습니다.  
   
-## <a name="net-framework-versions-10-and-11"></a>.NET framework 버전 1.0 및 1.1  
- 합니다 [ \<system.codedom >](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md) 요소는 컴퓨터의 언어 공급자에 대 한 컴파일러 구성 설정을 포함 합니다. 합니다 [ \<컴파일러 >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) 요소에는 0 개 이상 포함 되어 [ \<컴파일러 >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) 요소입니다. 각 [ \<컴파일러 >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) 요소는 특정 언어 공급자에 대 한 컴파일러 구성 특성을 지정 합니다.  
+## <a name="net-framework-versions-10-and-11"></a>.NET Framework 버전 1.0 및 1.1  
+ 시스템 codedom > 요소에는 컴퓨터의 언어 공급자에 대 한 컴파일러 구성 설정이 포함 되어 있습니다. [ \<](system-codedom-element.md) 컴파일러 [ \<>](compilers-element.md) 요소는 0 개 이상의 [ \<컴파일러 >](compiler-element.md) 요소를 포함 합니다. [ 각\<컴파일러 >](compiler-element.md) 요소는 특정 언어 공급자에 대 한 컴파일러 구성 특성을 지정 합니다.  
   
  .NET Framework는 컴퓨터 구성 파일(Machine.config)의 초기 컴파일러 설정을 정의합니다. 개발자 및 컴파일러 공급업체는 새로운 <xref:System.CodeDom.Compiler.CodeDomProvider> 구현에 대한 구성 설정을 추가할 수 있습니다. <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> 메서드를 사용하여 컴퓨터에서 언어 공급자 및 컴파일러 구성 설정을 프로그래밍 방식으로 열거할 수 있습니다.  
   
 ## <a name="configuration-file"></a>구성 파일  
- 컴퓨터 구성 파일 및 응용 프로그램 구성 파일에서이 요소를 사용할 수 있습니다.  
+ 이 요소는 컴퓨터 구성 파일 및 응용 프로그램 구성 파일에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 일반적인 컴파일러 구성을 보여 줍니다.  
@@ -91,6 +91,6 @@ ms.locfileid: "61674801"
 
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
-- [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [컴파일러 및 언어 공급자 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)
-- [\<compiler> 요소](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
+- [구성 파일 스키마](../index.md)
+- [컴파일러 및 언어 공급자 설정 스키마](index.md)
+- [\<compiler> 요소](compiler-element.md)

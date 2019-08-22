@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bcde1bbb5419de2c363b422c327d55c2ce9eea1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4a62bd3507c14e42798c903ae51edb0187e666c8
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607316"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663758"
 ---
 # <a name="enableampmparseadjustment-element"></a>\<EnableAmPmParseAdjustment > 요소
-날짜 및 시간 구문 분석 메서드에 일, 월, 시간 및 AM/PM 지정자를 포함 하는 날짜 문자열을 구문 분석 조정 된 규칙 집합을 사용할지 여부를 결정 합니다.  
+날짜 및 시간 구문 분석 메서드가 조정 된 규칙 집합을 사용 하 여 일, 월, 시간 및 AM/PM 지정자를 포함 하는 날짜 문자열을 구문 분석 하는지 여부를 결정 합니다.  
   
  \<configuration>  
  \<runtime>  
@@ -31,14 +31,14 @@ ms.locfileid: "64607316"
   
 |특성|설명|  
 |---------------|-----------------|  
-|`enabled`|필수 특성입니다.<br /><br /> 날짜 및 시간 구문 분석 메서드는 일, 월, 시간 및 AM/PM 지정자를 포함 하는 날짜 문자열을 구문 분석 조정 된 규칙 집합을 사용할지 여부를 지정 합니다.|  
+|`enabled`|필수 특성입니다.<br /><br /> 날짜 및 시간 구문 분석 메서드가 조정 된 규칙 집합을 사용 하 여 일, 월, 시간 및 AM/PM 지정자만 포함 하는 날짜 문자열을 구문 분석할 지 여부를 지정 합니다.|  
   
 ### <a name="enabled-attribute"></a>enabled 특성  
   
 |값|설명|  
 |-----------|-----------------|  
-|0|날짜 및 시간 구문 분석 메서드는 일, 월, 시간 및 AM/PM 지정자를 포함 하는 날짜 문자열을 구문 분석에 대 한 조정된 규칙을 사용 하지 마세요.|  
-|1|날짜 및 시간 구문 분석 메서드는 일, 월, 시간 및 AM/PM 지정자를 포함 하는 날짜 문자열을 구문 분석에 대 한 조정 된 규칙을 사용 합니다.|  
+|0|날짜 및 시간 구문 분석 메서드는 일, 월, 시간 및 AM/PM 지정자만 포함 하는 날짜 문자열을 구문 분석 하는 데 조정 된 규칙을 사용 하지 않습니다.|  
+|1|날짜 및 시간 구문 분석 메서드는 날짜, 월, 시간 및 AM/PM 지정자만 포함 하는 날짜 문자열을 구문 분석 하기 위해 조정 된 규칙을 사용 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -51,7 +51,7 @@ ms.locfileid: "64607316"
 |`runtime`|런타임 초기화 옵션에 대한 정보를 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
- `<EnableAmPmParseAdjustment>` 요소는 다음 방법 숫자 일 및 월을 시간 하 고 (예: "4 월 10 6 AM")는 AM/PM 지정자 뒤에 있는 날짜 문자열의 구문을 분석 하는 방법을 제어 합니다.  
+ 요소 `<EnableAmPmParseAdjustment>` 는 다음 메서드가 숫자 일과 월을 포함 하는 날짜 문자열과 시간 및 AM/PM 지정자 (예: "4/10 6 AM")를 포함 하는 날짜 문자열을 구문 분석 하는 방법을 제어 합니다.  
   
 - <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>  
   
@@ -63,25 +63,25 @@ ms.locfileid: "64607316"
   
 - <xref:System.Convert.ToDateTime%2A?displayProperty=nameWithType>  
   
- 다른 패턴이 없습니다 영향을 받습니다.  
+ 다른 패턴에는 영향을 주지 않습니다.  
   
- 합니다 `<EnableAmPmParseAdjustment>` 요소가 영향을 주지 않습니다 합니다 <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>, 및 <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> 메서드.  
+ 요소 `<EnableAmPmParseAdjustment>` <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>는,, 및 <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType> <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType> 메서드에영향을주지않습니다<xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> .  
   
 > [!IMPORTANT]
->  .NET Core 및.NET 네이티브에서는 조정 된 AM/PM 구문 분석 규칙은 기본적으로 활성화 됩니다.  
+>  .NET Core 및 .NET 네이티브에서 조정 된 AM/PM 구문 분석 규칙은 기본적으로 사용 하도록 설정 되어 있습니다.  
   
- 구문 분석 조정 규칙을 사용 하지 않는 문자열의 첫 번째 숫자는 12 시간제 시계 시간으로 해석 되 고 AM/PM 지정자를 제외 하 고 문자열의 나머지는 무시 됩니다. 날짜 및 시간 구문 분석 메서드에서 반환 된 현재 날짜 및 날짜 문자열에서 추출 된 날의 시간으로 구성 됩니다.  
+ 구문 분석 조정 규칙을 사용 하지 않는 경우 문자열의 첫 번째 숫자는 12 시간제의 시간으로 해석 되 고 AM/PM 지정자를 제외 하 고 문자열의 나머지는 무시 됩니다. 구문 분석 메서드에서 반환 되는 날짜 및 시간은 현재 날짜와 날짜 문자열에서 추출 된 날짜의 시간으로 구성 됩니다.  
   
- 구문 분석 조정 규칙을 사용 하는 경우 메서드를 구문 분석 일 및 월 현재 연도에 속하는 것으로 해석 하 고 12 시간제 시계 시간으로 시간을 해석 합니다.  
+ 구문 분석 조정 규칙을 사용 하는 경우 구문 분석 메서드는 현재 연도에 속하는 요일과 월을 해석 하 고 12 시간 형식의 시간으로 해석 합니다.  
   
- 다음 표에서 차이 보여 줍니다.는 <xref:System.DateTime> 경우이 값을 <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> 메서드 문자열을 구문 분석 하는 "" 4 월 10 6 AM "와 `<EnableAmPmParseAdjustment>` 요소의 `enabled` 속성이"0"또는"1"로 설정. 오늘 날짜가 2017 년 1 월 5 일 이며 지정된 된 문화권의 "G" 서식 문자열을 사용 하 여 형식이 처럼 날짜를 표시 가정 합니다.  
+ 다음 표에서는 <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> 메서드를 사용 하 여 <xref:System.DateTime> `<EnableAmPmParseAdjustment>` 요소 `enabled` 속성이 "0" 또는 "1"로 설정 된 "" 4/10 6 AM "문자열을 구문 분석할 때 값의 차이점을 보여 줍니다. 오늘 날짜가 2017 년 1 월 5 일 이라고 가정 하 고 지정 된 문화권의 "G" 형식 문자열을 사용 하 여 서식이 지정 된 것 처럼 날짜를 표시 합니다.  
   
 |문화권 이름|enabled="0"|enabled="1"|  
 |------------------|------------------|------------------|  
-|en-US|2017 년 1 월 5 오전 4 시|2017 년 4 월 10 6시: 00 AM|  
+|en-US|오전 1/5/2017 4:00:00|오전 4/10/2017 6:00:00|  
 |en-GB|5/1/2017 6:00:00|10/4/2017 6:00:00|  
   
 ## <a name="see-also"></a>참고자료
 
-- [\<런타임 > 요소](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)
-- [\<configuration> 요소](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)
+- [\<런타임 > 요소](runtime-element.md)
+- [\<configuration> 요소](../configuration-element.md)

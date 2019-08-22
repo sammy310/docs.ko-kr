@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c2ed46e1d26d829fbe832e44efb40844ae7d56f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ba74907e2f6fc2ca14e12a24113fa7654c9b967e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592719"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663793"
 ---
-# <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures> Element
-검색 하 여 어셈블리를 찾을 수 없습니다 때문에 발생 하는 바인딩 실패 캐싱을 비활성화할지 여부를 지정 합니다.  
+# <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures > 요소
+검색을 통해 어셈블리를 찾을 수 없기 때문에 발생 하는 바인딩 실패의 캐싱을 사용 하지 않도록 설정할지 여부를 지정 합니다.  
   
- \<구성 > 요소  
+ \<configuration > 요소  
 \<런타임 > 요소  
 \<disableCachingBindingFailures>  
   
@@ -39,14 +39,14 @@ ms.locfileid: "64592719"
   
 |특성|설명|  
 |---------------|-----------------|  
-|사용|필수 특성입니다.<br /><br /> 검색 하 여 어셈블리를 찾을 수 없습니다 때문에 발생 하는 바인딩 실패 캐싱을 비활성화할지 여부를 지정 합니다.|  
+|사용|필수 특성입니다.<br /><br /> 검색을 통해 어셈블리를 찾을 수 없기 때문에 발생 하는 바인딩 실패의 캐싱을 사용 하지 않도록 설정할지 여부를 지정 합니다.|  
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
 |값|설명|  
 |-----------|-----------------|  
-|0|검색 하 여 어셈블리를 찾을 수 없습니다 때문에 발생 하는 바인딩 실패 캐싱을 해제 하지 않습니다. 이.NET Framework 버전 2.0부터 기본 바인딩 동작입니다.|  
-|1|검색 하 여 어셈블리를 찾을 수 없습니다 때문에 발생 하는 바인딩 실패 캐싱을 사용 하지 않도록 설정 합니다. 이 설정은.NET Framework 버전 1.1의 바인딩 동작으로 돌아갑니다.|  
+|0|검색을 통해 어셈블리를 찾을 수 없기 때문에 발생 하는 바인딩 실패의 캐싱을 사용 하지 않도록 설정 하지 마십시오. 이는 .NET Framework 버전 2.0부터 시작 하는 기본 바인딩 동작입니다.|  
+|1|검색을 통해 어셈블리를 찾을 수 없기 때문에 발생 하는 바인딩 실패의 캐싱을 사용 하지 않도록 설정 합니다. 이 설정은 .NET Framework 버전 1.1의 바인딩 동작으로 되돌립니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -59,18 +59,18 @@ ms.locfileid: "64592719"
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
- .NET Framework 버전 2.0부터 어셈블리 로드에 대 한 기본 동작 모든 바인딩 및 로드 실패를 캐시 하는 것입니다. 즉, 어셈블리를 로드 하려는 시도가 실패 하면 동일한 어셈블리를 로드 하는 후속 요청 즉시 없이 실패 어셈블리를 찾으려고 시도 합니다. 이 요소는 검색 경로에서 어셈블리를 찾을 수 없습니다 때문에 발생 하는 바인딩 실패에 대 한 기본 동작을 해제 합니다. 이러한 오류를 throw <xref:System.IO.FileNotFoundException>합니다.  
+ .NET Framework 버전 2.0부터 어셈블리를 로드 하는 기본 동작은 모든 바인딩과 로드 오류를 캐시 하는 것입니다. 즉, 어셈블리를 로드 하지 못한 경우 어셈블리를 찾지 않고도 동일한 어셈블리를 로드 하는 후속 요청이 즉시 실패 합니다. 이 요소는 어셈블리를 검색 경로에서 찾을 수 없기 때문에 발생 하는 바인딩 실패에 대 한 기본 동작을 사용 하지 않도록 설정 합니다. 이러한 오류는 <xref:System.IO.FileNotFoundException>throw 됩니다.  
   
- 일부 바인딩 및 오류를 로드 합니다.이 요소에 의해 영향을 받지 않습니다 하 고 항상 캐시 된 합니다. 이러한 오류는 어셈블리를 찾았지만 로드할 수 없습니다 때문에 발생 합니다. Throw <xref:System.BadImageFormatException> 또는 <xref:System.IO.FileLoadException>합니다. 다음 목록은 이러한 오류의 몇 가지 예입니다.  
+ 일부 바인딩 및 로드 오류는이 요소의 영향을 받지 않으며 항상 캐시 됩니다. 이러한 오류는 어셈블리를 찾았지만 로드할 수 없기 때문에 발생 합니다. <xref:System.BadImageFormatException> 또는<xref:System.IO.FileLoadException>를 throw 합니다. 다음 목록에 이러한 오류의 몇 가지 예가 포함 되어 있습니다.  
   
-- 로드 하려는 파일이 유효한 어셈블리가 아닙니다 경우 올바른 어셈블리를 사용 하 여 잘못 된 파일은 대체 하는 경우에 어셈블리를 로드 하는 후속 하려고 하면 실패 합니다.  
+- 올바른 어셈블리가 아닌 파일을 로드 하려고 시도 하는 경우 잘못 된 파일이 올바른 어셈블리로 바뀐 경우에도 이후에 어셈블리를 로드 하려는 시도가 실패 합니다.  
   
-- 파일 시스템에 의해 잠겨 있는 어셈블리를 로드 하려는 경우 파일 시스템에서 어셈블리를 해제 한 후에 이후에 어셈블리를 로드 하는 데 실패 합니다.  
+- 파일 시스템에 의해 잠긴 어셈블리를 로드 하려고 하면 파일 시스템에서 어셈블리를 해제 한 후에도 이후에 어셈블리를 로드 하려는 시도가 실패 합니다.  
   
-- 하나 또는 여러 버전 로드 하려고 하는 어셈블리의 검색 경로 있지만 요청 하는 특정 버전 없는 그중에서 경우 올바른 버전 검색 경로로 이동 하는 경우에 이후에 해당 버전을 로드 하는 데 실패 합니다.  
+- 로드 하려는 하나 이상의 어셈블리 버전이 검색 경로에 있지만 요청 하는 특정 버전이 검색 경로에 없는 경우 올바른 버전이 검색 경로로 이동 되더라도 이후 버전의 로드 시도는 실패 하 게 됩니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 검색 하 여 어셈블리를 찾을 수 없습니다 때문에 발생 하는 어셈블리 바인딩 실패 캐싱을 사용 하지 않도록 설정 하는 방법을 보여 줍니다.  
+ 다음 예제에서는 어셈블리를 검색 하 여 찾을 수 없기 때문에 발생 하는 어셈블리 바인딩 실패의 캐싱을 사용 하지 않도록 설정 하는 방법을 보여 줍니다.  
   
 ```xml  
 <configuration>  
@@ -82,6 +82,6 @@ ms.locfileid: "64592719"
   
 ## <a name="see-also"></a>참고자료
 
-- [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [런타임에서 어셈블리를 찾는 방법](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [런타임 설정 스키마](index.md)
+- [구성 파일 스키마](../index.md)
+- [런타임에서 어셈블리를 찾는 방법](../../../deployment/how-the-runtime-locates-assemblies.md)
