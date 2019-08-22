@@ -2,12 +2,12 @@
 title: .NET 어셈블리
 ms.date: 07/10/2018
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
-ms.openlocfilehash: 4a92eea623abc8aaad170dafc4bc3c917a36a474
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 09dc44141a4eea7601df3f918e8740efdb99aeda
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61627826"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666597"
 ---
 # <a name="assemblies-in-net"></a>.NET 어셈블리
 
@@ -25,7 +25,7 @@ ms.locfileid: "61627826"
 
 - 리플렉션을 사용하여 프로그래밍 방식으로 어셈블리에 대한 정보를 얻을 수 있습니다. 자세한 내용은 [리플렉션(C#)](../../csharp/programming-guide/concepts/reflection.md) 또는 [Reflection(Visual Basic)](../../visual-basic/programming-guide/concepts/reflection.md)을 참조하세요.
 
-- 어셈블리를 호출하여 메소드 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType>을 검사할 수 있습니다.
+- <xref:System.Reflection.MetadataLoadContext> 클래스를 사용하여 검사할 어셈블리만 로드할 수 있습니다.
 
 ## <a name="assembly-manifest"></a>어셈블리 매니페스트
 
