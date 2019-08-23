@@ -2,27 +2,27 @@
 title: OracleType
 ms.date: 03/30/2017
 ms.assetid: 18143304-d5c7-4c95-9995-678088d0c142
-ms.openlocfilehash: eb45bc5b7bc317d04f5275afadbb1879117e3af0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2f3820a0a61241643894533cc431ecc88b58fcef
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586950"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938884"
 ---
-# <a name="oracletypes"></a><span data-ttu-id="5e2a4-102">OracleType</span><span class="sxs-lookup"><span data-stu-id="5e2a4-102">OracleTypes</span></span>
-<span data-ttu-id="5e2a4-103">.NET Framework Data Provider for Oracle에는 Oracle 데이터 형식으로 작업하는 데 사용할 수 있는 여러 가지 구조가 들어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5e2a4-103">The .NET Framework Data Provider for Oracle includes several structures you can use to work with Oracle data types.</span></span> <span data-ttu-id="5e2a4-104">여기에는 <xref:System.Data.OracleClient.OracleNumber> 및 <xref:System.Data.OracleClient.OracleString>이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="5e2a4-104">These include <xref:System.Data.OracleClient.OracleNumber> and <xref:System.Data.OracleClient.OracleString>.</span></span>  
+# <a name="oracletypes"></a><span data-ttu-id="951b9-102">OracleType</span><span class="sxs-lookup"><span data-stu-id="951b9-102">OracleTypes</span></span>
+<span data-ttu-id="951b9-103">.NET Framework Data Provider for Oracle에는 Oracle 데이터 형식으로 작업하는 데 사용할 수 있는 여러 가지 구조가 들어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="951b9-103">The .NET Framework Data Provider for Oracle includes several structures you can use to work with Oracle data types.</span></span> <span data-ttu-id="951b9-104">여기에는 <xref:System.Data.OracleClient.OracleNumber> 및 <xref:System.Data.OracleClient.OracleString>이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="951b9-104">These include <xref:System.Data.OracleClient.OracleNumber> and <xref:System.Data.OracleClient.OracleString>.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="5e2a4-105">이러한 구조의 전체 목록은 <xref:System.Data.OracleClient>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="5e2a4-105">For a complete list of these structures, see <xref:System.Data.OracleClient>.</span></span>  
+> <span data-ttu-id="951b9-105">이러한 구조의 전체 목록은 <xref:System.Data.OracleClient>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="951b9-105">For a complete list of these structures, see <xref:System.Data.OracleClient>.</span></span>  
   
- <span data-ttu-id="5e2a4-106">다음은 C# 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="5e2a4-106">The following C# examples:</span></span>  
+ <span data-ttu-id="951b9-106">다음은 C# 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="951b9-106">The following C# examples:</span></span>  
   
-- <span data-ttu-id="5e2a4-107">Oracle 테이블을 만들고 데이터와 함께 로드합니다.</span><span class="sxs-lookup"><span data-stu-id="5e2a4-107">Create an Oracle table and load it with data.</span></span>  
+- <span data-ttu-id="951b9-107">Oracle 테이블을 만들고 데이터와 함께 로드합니다.</span><span class="sxs-lookup"><span data-stu-id="951b9-107">Create an Oracle table and load it with data.</span></span>  
   
-- <span data-ttu-id="5e2a4-108"><xref:System.Data.OracleClient.OracleDataReader>를 사용하여 데이터에 액세스하고 여러 가지 <xref:System.Data.OracleClient.OracleType> 구조를 사용하여 데이터를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="5e2a4-108">Use an <xref:System.Data.OracleClient.OracleDataReader> to access the data, and use several <xref:System.Data.OracleClient.OracleType> structures to display the data.</span></span>  
+- <span data-ttu-id="951b9-108"><xref:System.Data.OracleClient.OracleDataReader>를 사용하여 데이터에 액세스하고 여러 가지 <xref:System.Data.OracleClient.OracleType> 구조를 사용하여 데이터를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="951b9-108">Use an <xref:System.Data.OracleClient.OracleDataReader> to access the data, and use several <xref:System.Data.OracleClient.OracleType> structures to display the data.</span></span>  
   
-## <a name="creating-an-oracle-table"></a><span data-ttu-id="5e2a4-109">Oracle 테이블 만들기</span><span class="sxs-lookup"><span data-stu-id="5e2a4-109">Creating an Oracle Table</span></span>  
- <span data-ttu-id="5e2a4-110">이 예제에서는 Oracle 테이블을 만들고 데이터와 함께 로드합니다.</span><span class="sxs-lookup"><span data-stu-id="5e2a4-110">This example creates an Oracle table and loads it with data.</span></span> <span data-ttu-id="5e2a4-111">반드시 이 예제를 실행한 후 다음 예제를 실행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="5e2a4-111">You must run this example before running the next example.</span></span>  
+## <a name="creating-an-oracle-table"></a><span data-ttu-id="951b9-109">Oracle 테이블 만들기</span><span class="sxs-lookup"><span data-stu-id="951b9-109">Creating an Oracle Table</span></span>  
+ <span data-ttu-id="951b9-110">이 예제에서는 Oracle 테이블을 만들고 데이터와 함께 로드합니다.</span><span class="sxs-lookup"><span data-stu-id="951b9-110">This example creates an Oracle table and loads it with data.</span></span> <span data-ttu-id="951b9-111">반드시 이 예제를 실행한 후 다음 예제를 실행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="951b9-111">You must run this example before running the next example.</span></span>  
   
 ```csharp  
 public void Setup(string connectionString)  
@@ -51,8 +51,8 @@ public void Setup(string connectionString)
 }  
 ```  
   
-## <a name="retrieving-data-from-the-oracle-table"></a><span data-ttu-id="5e2a4-112">Oracle 테이블에서 데이터 검색</span><span class="sxs-lookup"><span data-stu-id="5e2a4-112">Retrieving Data from the Oracle Table</span></span>  
- <span data-ttu-id="5e2a4-113">이 예제에서는 **OracleDataReader** 데이터에 액세스 하 고 몇 가지를 사용 하 여 **OracleType** 데이터를 표시 하는 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="5e2a4-113">This example uses an **OracleDataReader** to access the data, and uses several **OracleType** structures to display the data.</span></span>  
+## <a name="retrieving-data-from-the-oracle-table"></a><span data-ttu-id="951b9-112">Oracle 테이블에서 데이터 검색</span><span class="sxs-lookup"><span data-stu-id="951b9-112">Retrieving Data from the Oracle Table</span></span>  
+ <span data-ttu-id="951b9-113">이 예에서는 **OracleDataReader** 를 사용 하 여 데이터에 액세스 하 고 여러 **OracleType** 구조를 사용 하 여 데이터를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="951b9-113">This example uses an **OracleDataReader** to access the data, and uses several **OracleType** structures to display the data.</span></span>  
   
 ```csharp  
 public void ReadOracleTypesExample(string connectionString)  
@@ -115,7 +115,7 @@ public void ReadOracleTypesExample(string connectionString)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5e2a4-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="5e2a4-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="951b9-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="951b9-114">See also</span></span>
 
-- [<span data-ttu-id="5e2a4-115">Oracle 및 ADO.NET</span><span class="sxs-lookup"><span data-stu-id="5e2a4-115">Oracle and ADO.NET</span></span>](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [<span data-ttu-id="5e2a4-116">ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터</span><span class="sxs-lookup"><span data-stu-id="5e2a4-116">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="951b9-115">Oracle 및 ADO.NET</span><span class="sxs-lookup"><span data-stu-id="951b9-115">Oracle and ADO.NET</span></span>](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
+- [<span data-ttu-id="951b9-116">ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터</span><span class="sxs-lookup"><span data-stu-id="951b9-116">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

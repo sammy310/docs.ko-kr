@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7281f1aa0da417eba618b748ac68ba1fefb4907d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8c133338ec0edac19f49d435df41e3081c486f51
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780846"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948461"
 ---
-# <a name="icorprofilerinfo4getfunctionfromip2-method"></a><span data-ttu-id="3f351-102">ICorProfilerInfo4::GetFunctionFromIP2 메서드</span><span class="sxs-lookup"><span data-stu-id="3f351-102">ICorProfilerInfo4::GetFunctionFromIP2 Method</span></span>
-<span data-ttu-id="3f351-103">관리 코드 명령 포인터는 함수의 JIT 다시 컴파일된 버전에 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="3f351-103">Maps a managed code instruction pointer to the JIT-recompiled version of a function.</span></span>  
+# <a name="icorprofilerinfo4getfunctionfromip2-method"></a><span data-ttu-id="eec8c-102">ICorProfilerInfo4::GetFunctionFromIP2 메서드</span><span class="sxs-lookup"><span data-stu-id="eec8c-102">ICorProfilerInfo4::GetFunctionFromIP2 Method</span></span>
+<span data-ttu-id="eec8c-103">관리 되는 코드 명령 포인터를 함수의 JIT 다시 컴파일된 버전에 매핑합니다.</span><span class="sxs-lookup"><span data-stu-id="eec8c-103">Maps a managed code instruction pointer to the JIT-recompiled version of a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3f351-104">구문</span><span class="sxs-lookup"><span data-stu-id="3f351-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eec8c-104">구문</span><span class="sxs-lookup"><span data-stu-id="eec8c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetFunctionFromIP2(  
@@ -36,31 +36,31 @@ HRESULT GetFunctionFromIP2(
     [out] ReJITID *pReJitId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3f351-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="3f351-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="eec8c-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="eec8c-105">Parameters</span></span>  
  `ip`  
- <span data-ttu-id="3f351-106">[in] 관리 코드에서 명령 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="3f351-106">[in] The instruction pointer in managed code.</span></span>  
+ <span data-ttu-id="eec8c-106">진행 관리 코드의 명령 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="eec8c-106">[in] The instruction pointer in managed code.</span></span>  
   
  `pFunctionId`  
- <span data-ttu-id="3f351-107">[out] 함수 id입니다.</span><span class="sxs-lookup"><span data-stu-id="3f351-107">[out] The function ID.</span></span>  
+ <span data-ttu-id="eec8c-107">제한이 함수 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="eec8c-107">[out] The function ID.</span></span>  
   
  `pReJitId`  
- <span data-ttu-id="3f351-108">[out] 함수의 JIT 다시 컴파일된 버전의 id입니다.</span><span class="sxs-lookup"><span data-stu-id="3f351-108">[out] The identity of the JIT-recompiled version of the function.</span></span>  
+ <span data-ttu-id="eec8c-108">제한이 함수의 JIT 다시 컴파일된 버전 id입니다.</span><span class="sxs-lookup"><span data-stu-id="eec8c-108">[out] The identity of the JIT-recompiled version of the function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3f351-109">설명</span><span class="sxs-lookup"><span data-stu-id="3f351-109">Remarks</span></span>  
- <span data-ttu-id="3f351-110">`GetFunctionFromIP2` 비슷합니다 `GetFunctionFromIP`한다는 점을 제외 하는 지정 된 IP 주소를 포함 하는 함수의 함수 ID가 아닌 JIT 다시 컴파일된 ID를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="3f351-110">`GetFunctionFromIP2` is similar to `GetFunctionFromIP`, except that it gets the JIT-recompiled ID instead of the function ID of the function that contains the specified IP address.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="eec8c-109">설명</span><span class="sxs-lookup"><span data-stu-id="eec8c-109">Remarks</span></span>  
+ <span data-ttu-id="eec8c-110">`GetFunctionFromIP2`는 지정 된 `GetFunctionFromIP`IP 주소를 포함 하는 함수의 함수 ID 대신 JIT 다시 컴파일된 ID를 가져오는 점을 제외 하 고와 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="eec8c-110">`GetFunctionFromIP2` is similar to `GetFunctionFromIP`, except that it gets the JIT-recompiled ID instead of the function ID of the function that contains the specified IP address.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="3f351-111">`GetFunctionFromIP2` 반면 가비지 수집을 트리거할 수 `GetFunctionFromIP` 것입니다.</span><span class="sxs-lookup"><span data-stu-id="3f351-111">`GetFunctionFromIP2` can trigger a garbage collection, whereas `GetFunctionFromIP` will not.</span></span>  <span data-ttu-id="3f351-112">자세한 내용은 [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="3f351-112">For more information, see [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).</span></span>  
+> <span data-ttu-id="eec8c-111">`GetFunctionFromIP2`는 가비지 수집 `GetFunctionFromIP` 을 트리거할 수 있지만는 그렇지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="eec8c-111">`GetFunctionFromIP2` can trigger a garbage collection, whereas `GetFunctionFromIP` will not.</span></span>  <span data-ttu-id="eec8c-112">자세한 내용은 [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="eec8c-112">For more information, see [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3f351-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="3f351-113">Requirements</span></span>  
- <span data-ttu-id="3f351-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="3f351-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="eec8c-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="eec8c-113">Requirements</span></span>  
+ <span data-ttu-id="eec8c-114">**플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="eec8c-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3f351-115">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="3f351-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="eec8c-115">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="eec8c-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="3f351-116">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3f351-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="eec8c-116">**라이브러리** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="eec8c-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3f351-117">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3f351-117">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="eec8c-117">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eec8c-117">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3f351-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="3f351-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eec8c-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="eec8c-118">See also</span></span>
 
-- [<span data-ttu-id="3f351-119">ICorProfilerInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="3f351-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="eec8c-119">ICorProfilerInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="eec8c-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

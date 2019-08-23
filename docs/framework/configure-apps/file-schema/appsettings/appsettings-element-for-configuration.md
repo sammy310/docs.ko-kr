@@ -9,21 +9,21 @@ helpviewer_keywords:
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: e8f85be2efe972fc45230855d18649a89f2fbd61
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: a64db49b521651ccff8b928720fe3273f8600b68
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300814"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921340"
 ---
-# <a name="appsettings-element-for-configuration"></a><span data-ttu-id="33fee-102">\<appSettings > 요소에 대 한 \<구성 ></span><span class="sxs-lookup"><span data-stu-id="33fee-102">\<appSettings> element for \<configuration></span></span>
+# <a name="appsettings-element-for-configuration"></a><span data-ttu-id="43c21-102">\<구성 >에 대 \<한 appSettings > 요소</span><span class="sxs-lookup"><span data-stu-id="43c21-102">\<appSettings> element for \<configuration></span></span>
 
-<span data-ttu-id="33fee-103">사용자 지정 응용 프로그램 설정을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="33fee-103">Contains custom application settings.</span></span> <span data-ttu-id="33fee-104">.NET Framework에서 제공 하는 미리 정의 된 구성 섹션입니다.</span><span class="sxs-lookup"><span data-stu-id="33fee-104">This is a predefined configuration section provided by the .NET Framework.</span></span>
+<span data-ttu-id="43c21-103">사용자 지정 응용 프로그램 설정을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="43c21-103">Contains custom application settings.</span></span> <span data-ttu-id="43c21-104">.NET Framework에서 제공 하는 미리 정의 된 구성 섹션입니다.</span><span class="sxs-lookup"><span data-stu-id="43c21-104">This is a predefined configuration section provided by the .NET Framework.</span></span>
 
-<span data-ttu-id="33fee-105">[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="33fee-105">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="33fee-106">&nbsp;&nbsp; **\<appSettings>**</span><span class="sxs-lookup"><span data-stu-id="33fee-106">&nbsp;&nbsp;**\<appSettings>**</span></span>
+<span data-ttu-id="43c21-105">[ **\<configuration>** ](../configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="43c21-105">[**\<configuration>**](../configuration-element.md) </span></span>  
+<span data-ttu-id="43c21-106">&nbsp;&nbsp; **\<appSettings>**</span><span class="sxs-lookup"><span data-stu-id="43c21-106">&nbsp;&nbsp;**\<appSettings>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="33fee-107">구문</span><span class="sxs-lookup"><span data-stu-id="33fee-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="43c21-107">구문</span><span class="sxs-lookup"><span data-stu-id="43c21-107">Syntax</span></span>
 
 ```xml
 <appSettings>
@@ -31,37 +31,37 @@ ms.locfileid: "66300814"
 </appSettings>
 ```
 
-## <a name="attribute"></a><span data-ttu-id="33fee-108">특성</span><span class="sxs-lookup"><span data-stu-id="33fee-108">Attribute</span></span>
+## <a name="attribute"></a><span data-ttu-id="43c21-108">특성</span><span class="sxs-lookup"><span data-stu-id="43c21-108">Attribute</span></span>
 
-|           | <span data-ttu-id="33fee-109">설명</span><span class="sxs-lookup"><span data-stu-id="33fee-109">Description</span></span> |
+|           | <span data-ttu-id="43c21-109">설명</span><span class="sxs-lookup"><span data-stu-id="43c21-109">Description</span></span> |
 | --------- | ----------- |
-| <span data-ttu-id="33fee-110">**file**</span><span class="sxs-lookup"><span data-stu-id="33fee-110">**file**</span></span>  | <span data-ttu-id="33fee-111">선택적 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="33fee-111">Optional attribute.</span></span><br><br><span data-ttu-id="33fee-112">사용자 지정 응용 프로그램 구성 설정이 포함 된 외부 파일에 상대 경로 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="33fee-112">Specifies a relative path to an external file containing custom application configuration settings.</span></span> <span data-ttu-id="33fee-113">지정한 파일에 지정 된 설정의 동일한 종류에는  **\<추가 >** 를  **\<제거 >** , 및  **\<지우기 >** 요소와 해당 요소와 동일한 키/값 쌍 형식을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="33fee-113">The specified file contains the same kind of settings that are specified in the **\<add>**, **\<remove>**, and **\<clear>** elements and uses the same key/value pair format as those elements.</span></span><br><br><span data-ttu-id="33fee-114">지정 된 경로 기본 구성 파일에 상대적입니다.</span><span class="sxs-lookup"><span data-stu-id="33fee-114">The path specified is relative to the main configuration file.</span></span> <span data-ttu-id="33fee-115">Windows Forms 응용 프로그램의 경우 이진 폴더입니다 (같은 */bin/debug*), 응용 프로그램 구성 파일의 위치가 아닌 합니다.</span><span class="sxs-lookup"><span data-stu-id="33fee-115">For a Windows Forms application, this is the binary folder (such as */bin/debug*), not the location of the application configuration file.</span></span> <span data-ttu-id="33fee-116">Web Forms 응용 프로그램에 대 한 경로가 응용 프로그램 루트에 상대적인 위치를 *web.config* 파일이.</span><span class="sxs-lookup"><span data-stu-id="33fee-116">For Web Forms applications, the path is relative to the application root, where the *web.config* file is located.</span></span><br><br><span data-ttu-id="33fee-117">에서는 런타임에 지정된 된 파일을 찾을 수 없는 경우 특성을 무시 하는 note 합니다.</span><span class="sxs-lookup"><span data-stu-id="33fee-117">Note that the runtime ignores the attribute if the specified file can not be found.</span></span> |
+| <span data-ttu-id="43c21-110">**file**</span><span class="sxs-lookup"><span data-stu-id="43c21-110">**file**</span></span>  | <span data-ttu-id="43c21-111">선택적 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="43c21-111">Optional attribute.</span></span><br><br><span data-ttu-id="43c21-112">사용자 지정 응용 프로그램 구성 설정이 포함 된 외부 파일에 대 한 상대 경로를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="43c21-112">Specifies a relative path to an external file containing custom application configuration settings.</span></span> <span data-ttu-id="43c21-113">지정 된 파일에는  **\<추가 >** ,  **\<제거 >** 및  **\<clear >** 요소에 지정 된 것과 동일한 종류의 설정이 포함 되어 있으며, 이러한 요소와 동일한 키/값 쌍 형식을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="43c21-113">The specified file contains the same kind of settings that are specified in the **\<add>**, **\<remove>**, and **\<clear>** elements and uses the same key/value pair format as those elements.</span></span><br><br><span data-ttu-id="43c21-114">지정 된 경로는 기본 구성 파일을 기준으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="43c21-114">The path specified is relative to the main configuration file.</span></span> <span data-ttu-id="43c21-115">Windows Forms 응용 프로그램의 경우이 폴더는 응용 프로그램 구성 파일의 위치가 아니라 */so/debug*와 같은 이진 폴더입니다.</span><span class="sxs-lookup"><span data-stu-id="43c21-115">For a Windows Forms application, this is the binary folder (such as */bin/debug*), not the location of the application configuration file.</span></span> <span data-ttu-id="43c21-116">Web Forms 응용 프로그램의 경우 경로는 *web.config* 파일이 있는 응용 프로그램 루트를 기준으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="43c21-116">For Web Forms applications, the path is relative to the application root, where the *web.config* file is located.</span></span><br><br><span data-ttu-id="43c21-117">지정 된 파일을 찾을 수 없는 경우 런타임은 특성을 무시 합니다.</span><span class="sxs-lookup"><span data-stu-id="43c21-117">Note that the runtime ignores the attribute if the specified file can not be found.</span></span> |
 
-## <a name="parent-element"></a><span data-ttu-id="33fee-118">부모 요소</span><span class="sxs-lookup"><span data-stu-id="33fee-118">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="43c21-118">부모 요소</span><span class="sxs-lookup"><span data-stu-id="43c21-118">Parent element</span></span>
 
-|     | <span data-ttu-id="33fee-119">설명</span><span class="sxs-lookup"><span data-stu-id="33fee-119">Description</span></span> |
+|     | <span data-ttu-id="43c21-119">설명</span><span class="sxs-lookup"><span data-stu-id="43c21-119">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="33fee-120"> *\*\<구성 >** 요소</span><span class="sxs-lookup"><span data-stu-id="33fee-120">**\<configuration>** Element</span></span>](~/docs/framework/configure-apps/file-schema/configuration-element.md) | <span data-ttu-id="33fee-121">공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="33fee-121">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
+| [<span data-ttu-id="43c21-120"> **configuration>\<** 요소</span><span class="sxs-lookup"><span data-stu-id="43c21-120">**\<configuration>** Element</span></span>](../configuration-element.md) | <span data-ttu-id="43c21-121">공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="43c21-121">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="33fee-122">자식 요소</span><span class="sxs-lookup"><span data-stu-id="33fee-122">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="43c21-122">자식 요소</span><span class="sxs-lookup"><span data-stu-id="43c21-122">Child elements</span></span>
 
-|     | <span data-ttu-id="33fee-123">설명</span><span class="sxs-lookup"><span data-stu-id="33fee-123">Description</span></span> |
+|     | <span data-ttu-id="43c21-123">설명</span><span class="sxs-lookup"><span data-stu-id="43c21-123">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="33fee-124"> *\*\<add>** </span><span class="sxs-lookup"><span data-stu-id="33fee-124">**\<add>**</span></span>](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) | <span data-ttu-id="33fee-125">사용자 지정 응용 프로그램 설정을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="33fee-125">Adds a custom application setting.</span></span> |
-| [<span data-ttu-id="33fee-126"> *\*\<clear>** </span><span class="sxs-lookup"><span data-stu-id="33fee-126">**\<clear>**</span></span>](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md) | <span data-ttu-id="33fee-127">모든 이전에 정의 된 응용 프로그램 설정을 지웁니다.</span><span class="sxs-lookup"><span data-stu-id="33fee-127">Clears all previously defined application settings.</span></span> |
-| [<span data-ttu-id="33fee-128"> *\*\<remove>** </span><span class="sxs-lookup"><span data-stu-id="33fee-128">**\<remove>**</span></span>](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md) | <span data-ttu-id="33fee-129">이전에 정의 된 응용 프로그램 설정을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="33fee-129">Removes a previously defined application setting.</span></span> |
+| [<span data-ttu-id="43c21-124"> **\<add>** </span><span class="sxs-lookup"><span data-stu-id="43c21-124">**\<add>**</span></span>](add-element-for-appsettings.md) | <span data-ttu-id="43c21-125">사용자 지정 응용 프로그램 설정을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="43c21-125">Adds a custom application setting.</span></span> |
+| [<span data-ttu-id="43c21-126"> **\<clear>** </span><span class="sxs-lookup"><span data-stu-id="43c21-126">**\<clear>**</span></span>](clear-element-for-appsettings.md) | <span data-ttu-id="43c21-127">이전에 정의 된 모든 응용 프로그램 설정을 지웁니다.</span><span class="sxs-lookup"><span data-stu-id="43c21-127">Clears all previously defined application settings.</span></span> |
+| [<span data-ttu-id="43c21-128"> **\<remove>** </span><span class="sxs-lookup"><span data-stu-id="43c21-128">**\<remove>**</span></span>](remove-element-for-appsettings.md) | <span data-ttu-id="43c21-129">이전에 정의 된 응용 프로그램 설정을 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="43c21-129">Removes a previously defined application setting.</span></span> |
 
-## <a name="remarks"></a><span data-ttu-id="33fee-130">설명</span><span class="sxs-lookup"><span data-stu-id="33fee-130">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="43c21-130">설명</span><span class="sxs-lookup"><span data-stu-id="43c21-130">Remarks</span></span>
 
-<span data-ttu-id="33fee-131">합니다  **\<appSettings >** 데이터베이스 연결 문자열, 파일 경로, XML 웹 서비스 Url 또는 기타 사용자 지정 구성 정보와 같은 사용자 지정 응용 프로그램 구성 정보를 저장 하는 요소는 응용 프로그램입니다.</span><span class="sxs-lookup"><span data-stu-id="33fee-131">The **\<appSettings>** element stores custom application configuration information, such as database connection strings, file paths, XML Web service URLs, or any other custom configuration information for an application.</span></span> <span data-ttu-id="33fee-132">에 지정 된 키/값 쌍을  **\<appSettings >** 사용 하 여 코드에 액세스 하는 요소는 <xref:System.Configuration.ConfigurationSettings> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="33fee-132">The key/value pairs specified in the **\<appSettings>** element are accessed in code using the <xref:System.Configuration.ConfigurationSettings> class.</span></span>
+<span data-ttu-id="43c21-131">**\<AppSettings >** 요소는 데이터베이스 연결 문자열, 파일 경로, XML Web services url 또는 응용 프로그램에 대 한 기타 사용자 지정 구성 정보와 같은 사용자 지정 응용 프로그램 구성 정보를 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="43c21-131">The **\<appSettings>** element stores custom application configuration information, such as database connection strings, file paths, XML Web service URLs, or any other custom configuration information for an application.</span></span> <span data-ttu-id="43c21-132"><xref:System.Configuration.ConfigurationSettings>  **\<AppSettings >** 요소에 지정 된 키/값 쌍은 클래스를 사용 하 여 코드에서 액세스 됩니다.</span><span class="sxs-lookup"><span data-stu-id="43c21-132">The key/value pairs specified in the **\<appSettings>** element are accessed in code using the <xref:System.Configuration.ConfigurationSettings> class.</span></span>
 
-<span data-ttu-id="33fee-133">사용할 수는 **파일** 특성을  **\<appSettings >** 요소의 *Web.config* 및 응용 프로그램 구성 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="33fee-133">You can use the **file** attribute in the **\<appSettings>** element of the *Web.config* and application configuration files.</span></span> <span data-ttu-id="33fee-134">이 특성에 지정 된 설정을 재정의 또는 추가 설정을 제공 하는 구성 파일을 지정 합니다  **\<appSettings >** 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="33fee-134">This attribute specifies a configuration file that provides additional settings or overrides the settings specified in the **\<appSettings>** element.</span></span> <span data-ttu-id="33fee-135">합니다 **파일** 특성은 사용자가 응용 프로그램 구성 파일에 지정 된 프로젝트 설정 재정의 하려고 할 때와 같은 원본 제어 팀 개발 시나리오에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="33fee-135">The **file** attribute can be used in source control team development scenarios, such as when a user wants to override the project settings specified in an application configuration file.</span></span>
+<span data-ttu-id="43c21-133">Web.config 및 응용 프로그램 구성 파일의  **\<appSettings >** 요소에서 **file** 특성 을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="43c21-133">You can use the **file** attribute in the **\<appSettings>** element of the *Web.config* and application configuration files.</span></span> <span data-ttu-id="43c21-134">이 특성은 추가 설정을 제공 하거나  **\<appSettings >** 요소에 지정 된 설정을 재정의 하는 구성 파일을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="43c21-134">This attribute specifies a configuration file that provides additional settings or overrides the settings specified in the **\<appSettings>** element.</span></span> <span data-ttu-id="43c21-135">사용자가 응용 프로그램 구성 파일에 지정 된 프로젝트 설정을 재정의 하려는 경우와 같이 소스 제어 팀 개발 시나리오에서 **file** 특성을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="43c21-135">The **file** attribute can be used in source control team development scenarios, such as when a user wants to override the project settings specified in an application configuration file.</span></span>
 
-<span data-ttu-id="33fee-136">지정 된 구성 파일을 **파일** 특성의 루트 노드에 있어야 합니다.  **\<appSettings >** 대신  **\<구성 >** .</span><span class="sxs-lookup"><span data-stu-id="33fee-136">Configuration files specified by the **file** attribute must have a root node of **\<appSettings>** rather than **\<configuration>**.</span></span>
+<span data-ttu-id="43c21-136">**File** 특성에 지정 된 구성 파일에는  **\<구성 >** 이 아닌  **\<appSettings >** 의 루트 노드가 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="43c21-136">Configuration files specified by the **file** attribute must have a root node of **\<appSettings>** rather than **\<configuration>**.</span></span>
 
-## <a name="example"></a><span data-ttu-id="33fee-137">예제</span><span class="sxs-lookup"><span data-stu-id="33fee-137">Example</span></span>
+## <a name="example"></a><span data-ttu-id="43c21-137">예제</span><span class="sxs-lookup"><span data-stu-id="43c21-137">Example</span></span>
 
-<span data-ttu-id="33fee-138">다음 예제에서는 사용자 지정 애플리케이션 설정을 정의하는 외부 애플리케이션 설정 파일(*custom.config*)을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="33fee-138">The following example shows an external application settings file (*custom.config*) that defines a custom application setting:</span></span>
+<span data-ttu-id="43c21-138">다음 예제에서는 사용자 지정 애플리케이션 설정을 정의하는 외부 애플리케이션 설정 파일(*custom.config*)을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="43c21-138">The following example shows an external application settings file (*custom.config*) that defines a custom application setting:</span></span>
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -70,7 +70,7 @@ ms.locfileid: "66300814"
 </appSettings>
 ```
 
-<span data-ttu-id="33fee-139">다음 예제에서는 외부 설정 파일의 설정을 사용하고 자체의 애플리케이션 설정을 지정하는 애플리케이션 구성 파일을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="33fee-139">The following example shows an application configuration file that consumes the setting in the external settings file and sets an application setting of its own:</span></span>
+<span data-ttu-id="43c21-139">다음 예제에서는 외부 설정 파일의 설정을 사용하고 자체의 애플리케이션 설정을 지정하는 애플리케이션 구성 파일을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="43c21-139">The following example shows an application configuration file that consumes the setting in the external settings file and sets an application setting of its own:</span></span>
 
 ```xml
 <configuration>
@@ -80,10 +80,10 @@ ms.locfileid: "66300814"
 </configuration>
 ```
 
-## <a name="configuration-file"></a><span data-ttu-id="33fee-140">구성 파일</span><span class="sxs-lookup"><span data-stu-id="33fee-140">Configuration file</span></span>
+## <a name="configuration-file"></a><span data-ttu-id="43c21-140">구성 파일</span><span class="sxs-lookup"><span data-stu-id="43c21-140">Configuration file</span></span>
 
-<span data-ttu-id="33fee-141">응용 프로그램 구성 파일을 컴퓨터 구성 파일에서이 요소를 사용할 수 있습니다 (*Machine.config*), 및 *Web.config* 응용 프로그램 디렉터리 수준에서 포함 되지 않은 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="33fee-141">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
+<span data-ttu-id="43c21-141">이 요소는 응용 프로그램 구성 파일, 컴퓨터 구성 파일 (machine.config) 및응용 프로그램 디렉터리 수준에 없는 web.config 파일에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="43c21-141">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="33fee-142">참고자료</span><span class="sxs-lookup"><span data-stu-id="33fee-142">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="43c21-142">참고자료</span><span class="sxs-lookup"><span data-stu-id="43c21-142">See also</span></span>
 
-- [<span data-ttu-id="33fee-143">.NET Framework의 구성 파일 스키마</span><span class="sxs-lookup"><span data-stu-id="33fee-143">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="43c21-143">.NET Framework에 대 한 구성 파일 스키마</span><span class="sxs-lookup"><span data-stu-id="43c21-143">Configuration file schema for the .NET Framework</span></span>](../index.md)

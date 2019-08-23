@@ -16,24 +16,24 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56a34a8f185ce600f4792cf05c3e95623b70ad6c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e2735d3e0bbcb6326ca8ea87a3358824bca81108
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776531"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951183"
 ---
-# <a name="iclrmetahostpolicy-interface"></a><span data-ttu-id="9ae94-102">ICLRMetaHostPolicy 인터페이스</span><span class="sxs-lookup"><span data-stu-id="9ae94-102">ICLRMetaHostPolicy Interface</span></span>
-<span data-ttu-id="9ae94-103">제공 된 [GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) 메서드 정책 조건에 따라 공용 언어 런타임 (CLR) 인터페이스에 대 한 포인터를 반환 하는 어셈블리, 버전 및 구성 파일을 관리 합니다.</span><span class="sxs-lookup"><span data-stu-id="9ae94-103">Provides the [GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) method, which returns a pointer to a common language runtime (CLR) interface based on a policy criteria, managed assembly, version and configuration file.</span></span>  
+# <a name="iclrmetahostpolicy-interface"></a><span data-ttu-id="8c0c9-102">ICLRMetaHostPolicy 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8c0c9-102">ICLRMetaHostPolicy Interface</span></span>
+<span data-ttu-id="8c0c9-103">정책 기준, 관리 되는 어셈블리, 버전 및 구성 파일을 기반으로 CLR (공용 언어 런타임) 인터페이스에 대 한 포인터를 반환 하는 [GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) 메서드를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c0c9-103">Provides the [GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) method, which returns a pointer to a common language runtime (CLR) interface based on a policy criteria, managed assembly, version and configuration file.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="9ae94-104">메서드</span><span class="sxs-lookup"><span data-stu-id="9ae94-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="8c0c9-104">메서드</span><span class="sxs-lookup"><span data-stu-id="8c0c9-104">Methods</span></span>  
   
-|<span data-ttu-id="9ae94-105">메서드</span><span class="sxs-lookup"><span data-stu-id="9ae94-105">Method</span></span>|<span data-ttu-id="9ae94-106">Description</span><span class="sxs-lookup"><span data-stu-id="9ae94-106">Description</span></span>|  
+|<span data-ttu-id="8c0c9-105">메서드</span><span class="sxs-lookup"><span data-stu-id="8c0c9-105">Method</span></span>|<span data-ttu-id="8c0c9-106">Description</span><span class="sxs-lookup"><span data-stu-id="8c0c9-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="9ae94-107">GetRequestedRuntime 메서드</span><span class="sxs-lookup"><span data-stu-id="9ae94-107">GetRequestedRuntime Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)|<span data-ttu-id="9ae94-108">기본 CLR 인터페이스 정책 조건에 따라, 어셈블리, 버전 및 구성 파일을 관리를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="9ae94-108">Provides a preferred CLR interface based on a policy criteria, managed assembly, version, and configuration file.</span></span>|  
+|[<span data-ttu-id="8c0c9-107">GetRequestedRuntime 메서드</span><span class="sxs-lookup"><span data-stu-id="8c0c9-107">GetRequestedRuntime Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)|<span data-ttu-id="8c0c9-108">정책 기준, 관리 되는 어셈블리, 버전 및 구성 파일을 기반으로 기본 CLR 인터페이스를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c0c9-108">Provides a preferred CLR interface based on a policy criteria, managed assembly, version, and configuration file.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="9ae94-109">설명</span><span class="sxs-lookup"><span data-stu-id="9ae94-109">Remarks</span></span>  
- <span data-ttu-id="9ae94-110">호출 하 여이 인터페이스에 대 한 참조를 가져올 수 있습니다는 [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) 다음 코드 에서처럼 작동 합니다.</span><span class="sxs-lookup"><span data-stu-id="9ae94-110">You can get a reference to this interface by calling the [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) function as shown in the following code:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8c0c9-109">설명</span><span class="sxs-lookup"><span data-stu-id="8c0c9-109">Remarks</span></span>  
+ <span data-ttu-id="8c0c9-110">다음 코드와 같이 [Clrcreateinstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) 함수를 호출 하 여이 인터페이스에 대 한 참조를 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8c0c9-110">You can get a reference to this interface by calling the [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) function as shown in the following code:</span></span>  
   
 ```cpp  
 ICLRMetaHostPolicy *pMetaHostPolicy = NULL;  
@@ -42,21 +42,21 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHostPolicy,
 ```  
   
 > [!NOTE]
->  <span data-ttu-id="9ae94-111">이 인터페이스를 로드 하거나 CLR, 하지만 기본 CLR 버전 설치 되거나 로드 된 사용 가능한 버전에 따라 반환 단순히 활성화 실제로 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9ae94-111">This interface does not actually load or activate the CLR, but simply returns the preferred CLR version based on the available versions that are installed or loaded.</span></span>  
+> <span data-ttu-id="8c0c9-111">이 인터페이스는 실제로 CLR을 로드 하거나 활성화 하지 않지만 설치 또는 로드 된 사용 가능한 버전에 따라 기본 CLR 버전을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c0c9-111">This interface does not actually load or activate the CLR, but simply returns the preferred CLR version based on the available versions that are installed or loaded.</span></span>  
   
- <span data-ttu-id="9ae94-112">.NET Framework 4 호스팅 API는 특정 요구 사항이 있는 호스트 의도 하지 않은 저하를 초래 하지 않고 기본 기능을 사용할 수 있도록 정책을 통합 합니다.</span><span class="sxs-lookup"><span data-stu-id="9ae94-112">The .NET Framework 4 hosting API consolidates policies so that hosts with specific needs may use basic functionality without incurring unintended penalties.</span></span> <span data-ttu-id="9ae94-113">예를 들어 MSCorEE.dll 내보내기의 여러 바인딩될 특정 CLR 메서드 필요 하지 않을 있지만 논리적으로 해당 합니다.</span><span class="sxs-lookup"><span data-stu-id="9ae94-113">For example, many of the MSCorEE.dll exports will bind to a specific CLR, although a method might not logically require it.</span></span> <span data-ttu-id="9ae94-114">합니다 [METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) 열거형은 대부분의 호스트에 공통 되는 바인딩 정책을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="9ae94-114">The [METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) enumeration provides binding policies that are common to the majority of hosts.</span></span>  
+ <span data-ttu-id="8c0c9-112">.NET Framework 4 호스팅 API는 정책을 통합 하므로 특정 요구 사항이 있는 호스트에서 의도 하지 않은 페널티를 발생 시 키 지 않고 기본 기능을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8c0c9-112">The .NET Framework 4 hosting API consolidates policies so that hosts with specific needs may use basic functionality without incurring unintended penalties.</span></span> <span data-ttu-id="8c0c9-113">예를 들어, 대부분의 Mscoree.dll 내보내기는 특정 CLR에 바인딩되고, 메서드는 논리적으로이를 요구 하지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8c0c9-113">For example, many of the MSCorEE.dll exports will bind to a specific CLR, although a method might not logically require it.</span></span> <span data-ttu-id="8c0c9-114">[METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) 열거형은 대부분의 호스트에 공통 되는 바인딩 정책을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c0c9-114">The [METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) enumeration provides binding policies that are common to the majority of hosts.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9ae94-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9ae94-115">Requirements</span></span>  
- <span data-ttu-id="9ae94-116">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="9ae94-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8c0c9-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="8c0c9-115">Requirements</span></span>  
+ <span data-ttu-id="8c0c9-116">**플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="8c0c9-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9ae94-117">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="9ae94-117">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="8c0c9-117">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="8c0c9-117">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="9ae94-118">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="9ae94-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="8c0c9-118">**라이브러리** Mscoree.dll에 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8c0c9-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="9ae94-119">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9ae94-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="8c0c9-119">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8c0c9-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9ae94-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="9ae94-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8c0c9-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="8c0c9-120">See also</span></span>
 
-- [<span data-ttu-id="9ae94-121">.NET Framework 4 및 4.5에 추가된 CLR 호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="9ae94-121">CLR Hosting Interfaces Added in the .NET Framework 4 and 4.5</span></span>](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
-- [<span data-ttu-id="9ae94-122">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="9ae94-122">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="9ae94-123">호스팅</span><span class="sxs-lookup"><span data-stu-id="9ae94-123">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="8c0c9-121">.NET Framework 4 및 4.5에 추가된 CLR 호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8c0c9-121">CLR Hosting Interfaces Added in the .NET Framework 4 and 4.5</span></span>](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
+- [<span data-ttu-id="8c0c9-122">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8c0c9-122">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="8c0c9-123">호스팅</span><span class="sxs-lookup"><span data-stu-id="8c0c9-123">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

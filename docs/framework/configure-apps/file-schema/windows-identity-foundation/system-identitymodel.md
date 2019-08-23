@@ -3,48 +3,48 @@ title: <system.identityModel>
 ms.date: 03/30/2017
 ms.assetid: 210ce7e9-d07b-400c-800f-5f525dcf95e8
 author: BrucePerlerMS
-ms.openlocfilehash: 2f0040fb7084b9d53adbd1a114f1cfc62d58e5a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 286ae88946692e6894ca3c7ee9e1348415c84ade
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793759"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943595"
 ---
-# <a name="systemidentitymodel"></a><span data-ttu-id="ef454-102">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="ef454-102">\<system.identityModel></span></span>
-<span data-ttu-id="ef454-103">응용 프로그램에서 Windows Identity Foundation (WIF) 옵션을 사용 하도록 설정 하는 것에 대 한 구성을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="ef454-103">Provides configuration for enabling Windows Identity Foundation (WIF) options in applications.</span></span>  
+# <a name="systemidentitymodel"></a><span data-ttu-id="4bfab-102">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="4bfab-102">\<system.identityModel></span></span>
+<span data-ttu-id="4bfab-103">응용 프로그램에서 WIF (Windows Identity Foundation) 옵션을 사용 하도록 구성 하는 구성을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="4bfab-103">Provides configuration for enabling Windows Identity Foundation (WIF) options in applications.</span></span>  
   
- <span data-ttu-id="ef454-104">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="ef454-104">\<system.identityModel></span></span>  
+ <span data-ttu-id="4bfab-104">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="4bfab-104">\<system.identityModel></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ef454-105">구문</span><span class="sxs-lookup"><span data-stu-id="ef454-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4bfab-105">구문</span><span class="sxs-lookup"><span data-stu-id="4bfab-105">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="ef454-106">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="ef454-106">Attributes and Elements</span></span>  
- <span data-ttu-id="ef454-107">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="ef454-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="4bfab-106">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="4bfab-106">Attributes and Elements</span></span>  
+ <span data-ttu-id="4bfab-107">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="4bfab-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="ef454-108">특성</span><span class="sxs-lookup"><span data-stu-id="ef454-108">Attributes</span></span>  
- <span data-ttu-id="ef454-109">없음</span><span class="sxs-lookup"><span data-stu-id="ef454-109">None</span></span>  
+### <a name="attributes"></a><span data-ttu-id="4bfab-108">특성</span><span class="sxs-lookup"><span data-stu-id="4bfab-108">Attributes</span></span>  
+ <span data-ttu-id="4bfab-109">없음</span><span class="sxs-lookup"><span data-stu-id="4bfab-109">None</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="ef454-110">자식 요소</span><span class="sxs-lookup"><span data-stu-id="ef454-110">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="4bfab-110">자식 요소</span><span class="sxs-lookup"><span data-stu-id="4bfab-110">Child Elements</span></span>  
   
-|<span data-ttu-id="ef454-111">요소</span><span class="sxs-lookup"><span data-stu-id="ef454-111">Element</span></span>|<span data-ttu-id="ef454-112">설명</span><span class="sxs-lookup"><span data-stu-id="ef454-112">Description</span></span>|  
+|<span data-ttu-id="4bfab-111">요소</span><span class="sxs-lookup"><span data-stu-id="4bfab-111">Element</span></span>|<span data-ttu-id="4bfab-112">설명</span><span class="sxs-lookup"><span data-stu-id="4bfab-112">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="ef454-113">\<identityConfiguration></span><span class="sxs-lookup"><span data-stu-id="ef454-113">\<identityConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|<span data-ttu-id="ef454-114">서비스 수준 id 설정을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ef454-114">Specifies service-level identity settings.</span></span>|  
+|[<span data-ttu-id="4bfab-113">\<identityConfiguration></span><span class="sxs-lookup"><span data-stu-id="4bfab-113">\<identityConfiguration></span></span>](identityconfiguration.md)|<span data-ttu-id="4bfab-114">서비스 수준 id 설정을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="4bfab-114">Specifies service-level identity settings.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="ef454-115">부모 요소</span><span class="sxs-lookup"><span data-stu-id="ef454-115">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="4bfab-115">부모 요소</span><span class="sxs-lookup"><span data-stu-id="4bfab-115">Parent Elements</span></span>  
   
-|<span data-ttu-id="ef454-116">요소</span><span class="sxs-lookup"><span data-stu-id="ef454-116">Element</span></span>|<span data-ttu-id="ef454-117">설명</span><span class="sxs-lookup"><span data-stu-id="ef454-117">Description</span></span>|  
+|<span data-ttu-id="4bfab-116">요소</span><span class="sxs-lookup"><span data-stu-id="4bfab-116">Element</span></span>|<span data-ttu-id="4bfab-117">설명</span><span class="sxs-lookup"><span data-stu-id="4bfab-117">Description</span></span>|  
 |-------------|-----------------|  
-|`<configuration>`|<span data-ttu-id="ef454-118">공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="ef454-118">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`<configuration>`|<span data-ttu-id="4bfab-118">공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="4bfab-118">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ef454-119">설명</span><span class="sxs-lookup"><span data-stu-id="ef454-119">Remarks</span></span>  
- <span data-ttu-id="ef454-120">추가 된 `<system.identityModel>` 서비스나 Windows Identity Foundation (WIF)을 사용 하도록 응용 프로그램을 구성 하려면이 구성 파일 섹션입니다.</span><span class="sxs-lookup"><span data-stu-id="ef454-120">Add a `<system.identityModel>` section to the configuration file to configure a service or application to use Windows Identity Foundation (WIF).</span></span> <span data-ttu-id="ef454-121">합니다 `<system.identityModel>` 에서 요소가 표시 되는 <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="ef454-121">The `<system.identityModel>` element is represented by the <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> class.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4bfab-119">설명</span><span class="sxs-lookup"><span data-stu-id="4bfab-119">Remarks</span></span>  
+ <span data-ttu-id="4bfab-120">구성 파일 `<system.identityModel>` 에 섹션을 추가 하 여 WIF (Windows Identity Foundation)를 사용 하도록 서비스 또는 응용 프로그램을 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="4bfab-120">Add a `<system.identityModel>` section to the configuration file to configure a service or application to use Windows Identity Foundation (WIF).</span></span> <span data-ttu-id="4bfab-121">합니다 `<system.identityModel>` 에서 요소가 표시 되는 <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="4bfab-121">The `<system.identityModel>` element is represented by the <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> class.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ef454-122">예제</span><span class="sxs-lookup"><span data-stu-id="ef454-122">Example</span></span>  
- <span data-ttu-id="ef454-123">다음 예제에서는 추가 하는 방법을 보여 줍니다는 `<system.identityModel>` 구성 파일 섹션입니다.</span><span class="sxs-lookup"><span data-stu-id="ef454-123">The following example shows how to add a `<system.identityModel>` section to a configuration file.</span></span> <span data-ttu-id="ef454-124">아래에 있는 구성 섹션 및 네임 스페이스 선언을 추가 해야 합니다 `<configSections>` 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="ef454-124">You must first add the configuration section and namespace declaration under the `<configSections>` element.</span></span> <span data-ttu-id="ef454-125">추가할 수 있습니다는 `<system.IdentityModel>` 요소를 하나 이상의 id 구성을 지정 하 여 구성 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="ef454-125">Then you can add the `<system.IdentityModel>` element to your configuration file to specify one or more identity configurations.</span></span>  
+## <a name="example"></a><span data-ttu-id="4bfab-122">예제</span><span class="sxs-lookup"><span data-stu-id="4bfab-122">Example</span></span>  
+ <span data-ttu-id="4bfab-123">다음 예제에서는 구성 파일에 `<system.identityModel>` 섹션을 추가 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4bfab-123">The following example shows how to add a `<system.identityModel>` section to a configuration file.</span></span> <span data-ttu-id="4bfab-124">먼저 `<configSections>` 요소 아래에 구성 섹션과 네임 스페이스 선언을 추가 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4bfab-124">You must first add the configuration section and namespace declaration under the `<configSections>` element.</span></span> <span data-ttu-id="4bfab-125">그런 다음 구성 파일에 `<system.IdentityModel>` 요소를 추가 하 여 하나 이상의 id 구성을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4bfab-125">Then you can add the `<system.IdentityModel>` element to your configuration file to specify one or more identity configurations.</span></span>  
   
 ```xml  
 <configuration>  
@@ -75,6 +75,6 @@ ms.locfileid: "61793759"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ef454-126">참고자료</span><span class="sxs-lookup"><span data-stu-id="ef454-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4bfab-126">참고자료</span><span class="sxs-lookup"><span data-stu-id="4bfab-126">See also</span></span>
 
 - <xref:System.IdentityModel.Configuration.SystemIdentityModelSection>

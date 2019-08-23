@@ -7,8 +7,6 @@
       href: expressions.md
     - name: 식 본문 멤버
       href: expression-bodied-members.md
-    - name: 연산자
-      href: operators.md
     - name: 익명 함수
       items:
         - name: 개요
