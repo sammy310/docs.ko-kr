@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
-ms.openlocfilehash: 3038e35947cd8f97266d374a367a77380df440dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec4f0527b73a506b3c98675f77f8f49a1eeb1e1f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772179"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934448"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>DbDataAdapter로 데이터 수정
 <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> 개체의 <xref:System.Data.Common.DbProviderFactory> 메서드를 사용하면 팩터리를 만들 때 지정한 기본 데이터 공급자에 대해 강력한 형식의 <xref:System.Data.Common.DbDataAdapter> 개체를 얻을 수 있습니다. 그런 다음 <xref:System.Data.Common.DbCommandBuilder>를 사용하여 데이터를 <xref:System.Data.DataSet>에서 데이터 소스로 삽입하고, 업데이트하고, 삭제하는 명령을 만들 수 있습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "61772179"
  팩터리 모델은 매개 변수화된 `DbCommand` 및 `DbDataAdapter` 개체를 만들 때는 유용하지 않습니다. 코드에서 분기하여 데이터 공급자에 맞는 매개 변수를 만들어야 합니다.  
   
 > [!IMPORTANT]
->  문자열 연결을 사용하여 직접 SQL 문을 구성함으로써 공급자 특정 매개 변수를 사용하지 않는 것은 보안상 권장하지 않습니다. 매개 변수 대신 문자열 연결을 사용하면 응용 프로그램이 SQL 삽입 공격에 취약해집니다.  
+> 문자열 연결을 사용하여 직접 SQL 문을 구성함으로써 공급자 특정 매개 변수를 사용하지 않는 것은 보안상 권장하지 않습니다. 매개 변수 대신 문자열 연결을 사용하면 애플리케이션이 SQL 삽입 공격에 취약해집니다.  
   
 ## <a name="see-also"></a>참고자료
 

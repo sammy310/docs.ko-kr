@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 9bb77146a55bae4aed17bdd3ef48eca7890d4807
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: eee10cbf3bbfc6f66ec9e0c3f35b27fdc485764b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401443"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944688"
 ---
 # <a name="binding-sources-overview"></a>바인딩 소스 개요
 데이터 바인딩에서 바인딩 소스 개체는 데이터를 가져오는 개체를 의미합니다. 이 항목에서는 바인딩 소스로 사용할 수 있는 개체 형식에 대해 설명합니다.  
@@ -88,7 +88,7 @@ ms.locfileid: "68401443"
   
  [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 바인딩에 대한 사용 권한 요구 사항은 비슷합니다. 부분 신뢰 샌드박스에서 <xref:System.Windows.Data.XmlDataProvider> 는 지정 된 데이터에 대 한 액세스 권한이 없는 경우 실패 합니다.  
   
- 익명 형식 개체는 내부 개체입니다. 완전 신뢰 상태에서 실행 중인 경우에만 익명 형식의 속성에 바인딩할 수 있습니다. 익명 형식에 대한 자세한 내용은 [익명 형식(C# 프로그래밍 가이드)](~/docs/csharp/programming-guide/classes-and-structs/anonymous-types.md) 또는 [익명 형식(Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)(Visual Basic)을 참조하세요.  
+ 익명 형식 개체는 내부 개체입니다. 완전 신뢰 상태에서 실행 중인 경우에만 익명 형식의 속성에 바인딩할 수 있습니다. 익명 형식에 대한 자세한 내용은 [익명 형식(C# 프로그래밍 가이드)](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md) 또는 [익명 형식(Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)(Visual Basic)을 참조하세요.  
   
  부분 신뢰 보안에 대한 자세한 내용은 [WPF 부분 신뢰 보안](../wpf-partial-trust-security.md)을 참조하세요.  
   

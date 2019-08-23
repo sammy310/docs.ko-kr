@@ -6,20 +6,20 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: f888923736d384af2c6d955a126bacacb16113af
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a5fcceb3c39092deaa4a9dca258ba60117019c36
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651143"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961225"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>서버 쪽 UI 자동화 공급자 구현
 > [!NOTE]
->  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 최신 정보에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]를 참조 하세요 [Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746)합니다.  
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  이 섹션에서는 사용자 지정 컨트롤에 대한 서버 쪽 UI 자동화 공급자를 구현하는 방법을 설명합니다.  
   
- Windows Presentation Foundation (WPF) 요소에 대 한 및 비 구현-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 요소 (위해 설계 된 것과 같은 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) 근본적으로 다릅니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 요소는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 에서 파생 클래스를 통해 <xref:System.Windows.Automation.Peers.AutomationPeer>에 대해 지원합니다. 비[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 요소는 공급자 인터페이스의 구현을 통해 지원합니다.  
+ WPF (Windows Presentation Foundation) 요소 및[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 요소가 아닌 요소 (예: 용 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]으로 디자인 된 요소)의 구현은 근본적으로 다릅니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 요소는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 에서 파생 클래스를 통해 <xref:System.Windows.Automation.Peers.AutomationPeer>에 대해 지원합니다. 비[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 요소는 공급자 인터페이스의 구현을 통해 지원합니다.  
   
 <a name="Security_Considerations"></a>   
 ## <a name="security-considerations"></a>보안 고려 사항  
@@ -68,7 +68,7 @@ ms.locfileid: "64651143"
   
 |기능|구현|  
 |-------------------|--------------------|  
-| [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|제어 창에 전송된 WM_GETOBJECT 메시지에 대한 응답으로, <xref:System.Windows.Automation.Provider.IRawElementProviderSimple> 을 구현하는 개체(또는 파생된 인터페이스)를 반환합니다. 조각의 경우, 이는 조각 루트에 대한 공급자여야 합니다.|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|제어 창에 전송된 WM_GETOBJECT 메시지에 대한 응답으로, <xref:System.Windows.Automation.Provider.IRawElementProviderSimple> 을 구현하는 개체(또는 파생된 인터페이스)를 반환합니다. 조각의 경우, 이는 조각 루트에 대한 공급자여야 합니다.|  
 |속성 값 제공|<xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A> 를 구현하여 값을 제공하거나 재정의합니다.|  
 |클라이언트에서 컨트롤을 조작할 수 있게 설정|<xref:System.Windows.Automation.Provider.IInvokeProvider>와 같은 컨트롤 패턴을 지원하는 인터페이스를 구현합니다. 이러한 패턴 공급자를 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A>구현에서 반환합니다.|  
 |이벤트 발생|<xref:System.Windows.Automation.Provider.AutomationInteropProvider> 의 정적 메서드 중 하나를 호출하여 클라이언트가 수신할 수 있는 이벤트를 발생시킵니다.|  
@@ -102,7 +102,7 @@ ms.locfileid: "64651143"
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty>  
   
 > [!NOTE]
->  간단한 요소나 창에서 호스트되는 조각 루트의 <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> 는 창에서 가져옵니다. 그러나 루트 아래의 조각 요소(예: 목록 상자에 있는 목록 항목)는 고유 식별자를 제공해야 합니다. 자세한 내용은 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>을 참조하세요.  
+> 간단한 요소나 창에서 호스트되는 조각 루트의 <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> 는 창에서 가져옵니다. 그러나 루트 아래의 조각 요소(예: 목록 상자에 있는 목록 항목)는 고유 식별자를 제공해야 합니다. 자세한 내용은 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>을 참조하세요.  
 >   
 >  <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> 컨트롤에서 호스트되는 공급자에 대해 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 를 반환해야 합니다. 이 경우 기본 창 공급자가 올바른 값을 검색하지 못할 수 있습니다.  
 >   
@@ -134,7 +134,7 @@ ms.locfileid: "64651143"
  창에서 호스트되는 사용자 지정 단추(HWND)와 같은 간단한 컨트롤의 공급자는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 내의 탐색을 지원할 필요가 없습니다. 요소 및 요소 간 탐색은 호스트 창에 대한 기본 공급자가 처리하며, 이에 대해서는 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>구현에서 지정됩니다. 그러나 복잡한 사용자 지정 제어를 위한 공급자를 구현하는 경우에는 조각의 루트 노드와 해당 하위 항목 사이, 그리고 형제 노드 사이의 탐색을 지원해야 합니다.  
   
 > [!NOTE]
->  루트 이외의 조각 요소는 창에서 직접 호스트되지 않으며 기본 공급자가 이 요소에 대한 탐색을 지원할 수 없기 때문에 `null` 에서 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>참조를 반환해야 합니다.  
+> 루트 이외의 조각 요소는 창에서 직접 호스트되지 않으며 기본 공급자가 이 요소에 대한 탐색을 지원할 수 없기 때문에 `null` 에서 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>참조를 반환해야 합니다.  
   
  조각의 구조는 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A>의 구현에 따라 결정됩니다. 각 조각에서 가능한 각 방향에 대해, 이 메서드는 해당 방향에 있는 요소에 대한 공급자 개체를 반환합니다. 해당 방향에 요소가 없는 경우 메서드는 `null` 참조를 반환합니다.  
   

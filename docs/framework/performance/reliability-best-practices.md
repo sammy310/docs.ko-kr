@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b46404ee791855301611c1d883f26514b9b9d2f
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 2e24cd05bb1c1ed9425c9be8bc02cb92dc488005
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833794"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935726"
 ---
 # <a name="reliability-best-practices"></a>최선의 안정성 구현 방법
 
@@ -117,7 +117,7 @@ SQL Server에서 호스팅되는 라이브러리가 공유 상태를 올바르�
 
 스레드를 단지 중단하는 것이 아니라 <xref:System.AppDomain>을 손상시키는 경우를 파악하기 위해 CLR에서는 코드가 언제 잠금 상태인지를 알아야 합니다.  스레드를 중단하면 해당 스레드에서 조작하는 데이터가 일관되지 않은 상태가 될 수 있으므로 위험해질 수 있습니다. 따라서 전체 <xref:System.AppDomain>을 재활용해야 합니다.  잠금 상태를 파악하지 못하면 교착 상태나 잘못된 결과가 초래될 수 있습니다. <xref:System.Threading.Thread.BeginCriticalRegion%2A> 및 <xref:System.Threading.Thread.EndCriticalRegion%2A> 메서드를 사용하여 잠금 영역을 식별합니다.  이 메서드는 현재 스레드에만 적용되는 <xref:System.Threading.Thread> 클래스의 정적 메서드이므로, 한 스레드가 다른 스레드의 잠금 카운트를 편집하지 못하게 할 수 있습니다.
 
-<xref:System.Threading.Monitor.Enter%2A> 및 <xref:System.Threading.Monitor.Exit%2A>에는 이 CLR 알림이 기본으로 제공되므로, 이러한 메서드를 사용하는 [lock 문](~/docs/csharp/language-reference/keywords/lock-statement.md)뿐 아니라 이 알림을 사용하는 것이 좋습니다.
+<xref:System.Threading.Monitor.Enter%2A> 및 <xref:System.Threading.Monitor.Exit%2A>에는 이 CLR 알림이 기본으로 제공되므로, 이러한 메서드를 사용하는 [lock 문](../../csharp/language-reference/keywords/lock-statement.md)뿐 아니라 이 알림을 사용하는 것이 좋습니다.
 
 스핀 잠금 및 <xref:System.Threading.AutoResetEvent>와 같은 기타 잠금 메커니즘에서는 이러한 메서드를 호출하여 임계 영역으로 전환하고 있음을 CLR에 알려야 합니다.  이러한 메서드는 잠금을 사용하지 않습니다. 임계 영역에서 코드가 실행 중이며, 스레드를 중단하면 공유 상태가 일관되지 않게 될 수 있음을 CLR에 알립니다.  사용자 지정 <xref:System.Threading.ReaderWriterLock> 클래스와 같은 고유 잠금 형식을 정의한 경우 이러한 잠금 카운트 메서드를 사용합니다.
 
@@ -143,7 +143,7 @@ SQL Server에서 호스팅되는 라이브러리가 공유 상태를 올바르�
 
 ### <a name="locks-do-not-work-process-wide-or-between-application-domains"></a>프로세스 전체 또는 애플리케이션 도메인 간에는 잠금이 작동하지 않습니다.
 
-이전에는 <xref:System.Threading.Monitor.Enter%2A> 및 [lock 문](~/docs/csharp/language-reference/keywords/lock-statement.md)을 사용하여 전역 프로세스 잠금을 만들었습니다.  예를 들어, 이 동작은 <xref:System.AppDomain> agile 클래스에서 잠글 때 발생합니다(예: 비공유 어셈블리의 <xref:System.Type> 인스턴스, <xref:System.Threading.Thread> 개체, 인턴 지정 문자열 및 원격을 사용하여 애플리케이션 도메인 간에 공유하는 문자열).  이러한 잠금은 더 이상 프로세스 전체에 적용되지 않습니다.  프로세스 전체 응용 프로그램 도메인 간 잠금의 현재 상태를 파악하려면 잠금 내의 코드에서 디스크의 파일 또는 데이터베이스와 같은 외부 영구 리소스를 사용하는지 확인합니다.
+이전에는 <xref:System.Threading.Monitor.Enter%2A> 및 [lock 문](../../csharp/language-reference/keywords/lock-statement.md)을 사용하여 전역 프로세스 잠금을 만들었습니다.  예를 들어, 이 동작은 <xref:System.AppDomain> agile 클래스에서 잠글 때 발생합니다(예: 비공유 어셈블리의 <xref:System.Type> 인스턴스, <xref:System.Threading.Thread> 개체, 인턴 지정 문자열 및 원격을 사용하여 애플리케이션 도메인 간에 공유하는 문자열).  이러한 잠금은 더 이상 프로세스 전체에 적용되지 않습니다.  프로세스 전체 응용 프로그램 도메인 간 잠금의 현재 상태를 파악하려면 잠금 내의 코드에서 디스크의 파일 또는 데이터베이스와 같은 외부 영구 리소스를 사용하는지 확인합니다.
 
 <xref:System.AppDomain>에서 잠금을 사용하면 보호된 코드에서 외부 리소스를 사용하는 경우 문제가 발생할 수 있습니다. 해당 코드가 여러 응용 프로그램 도메인에서 동시에 실행될 수 있기 때문입니다.  그러면 한 로그 파일에 쓰거나 전체 프로세스를 위해 소켓에 바인딩할 때 문제가 될 수 있습니다.  이러한 변경은 명명된 <xref:System.Threading.Mutex> 또는 <xref:System.Threading.Semaphore> 인스턴스를 사용하는 방법 외에 관리 코드를 사용하여 프로세스-전역 잠금을 얻기가 쉽지 않다는 것을 나타냅니다.  두 애플리케이션 도메인에서 동시에 실행되지 않는 코드를 만들거나 <xref:System.Threading.Mutex> 또는 <xref:System.Threading.Semaphore> 클래스를 사용합니다.  기존 코드를 변경할 수 없으면 이 동기화를 달성하는 데 Win32 명명된 뮤텍스를 사용하지 마세요. 파이버 모드에서 실행하면 동일한 운영 체제 스레드가 뮤텍스를 확보하고 해제하지 못할 수도 있기 때문입니다.  비관리 코드를 사용하여 잠금을 동기화하는 대신 CLR에서 알고 있는 방식으로 코드 잠금을 동기화하려면 관리되는 <xref:System.Threading.Mutex> 클래스 또는 명명된 <xref:System.Threading.ManualResetEvent>, <xref:System.Threading.AutoResetEvent> 또는 <xref:System.Threading.Semaphore>를 사용해야 합니다.
 
@@ -241,11 +241,11 @@ SQL Server의 경우 동기화 또는 스레딩을 소개하는 데 사용한 �
 
 ### <a name="do-not-block-indefinitely-in-unmanaged-code"></a>비관리 코드에서 무기한 차단하지 않음
 
-관리 코드가 아니라 비관리 코드에서 차단하면 CLR에서 스레드를 중단할 수 없으므로 서비스 거부 공격이 발생할 수 있습니다.  스레드가 차단되면 극도로 안전하지 않은 작업을 수행하지 않고 CLR에서 <xref:System.AppDomain>을 언로드하는 것을 방지할 수 있습니다.  Windows를 사용 하 여 차단 동기화 기본 형식는 허용 되지의 지우기 예입니다.  에 대 한 호출에서 차단 `ReadFile` 소켓에서 피해 야 가능한 경우-Windows API 해야 이와 같은 작업의 시간 초과 대 한 메커니즘을 제공 하는 것이 좋습니다.
+관리 코드가 아니라 비관리 코드에서 차단하면 CLR에서 스레드를 중단할 수 없으므로 서비스 거부 공격이 발생할 수 있습니다.  스레드가 차단되면 극도로 안전하지 않은 작업을 수행하지 않고 CLR에서 <xref:System.AppDomain>을 언로드하는 것을 방지할 수 있습니다.  Windows 동기화 기본 형식을 사용 하 여 차단 하는 것은 허용 되지 않는 항목의 명확한 예입니다.  가능한 경우 소켓 `ReadFile` 에서 호출을 차단 하는 것은 피해 야 합니다. 즉, Windows API가 시간 초과와 같은 작업에 대 한 메커니즘을 제공 해야 합니다.
 
 네이티브를 호출하는 모든 메서드는 적절한 시간 제한 내에 Win32 호출을 사용해야 합니다.  사용자가 시간 제한을 지정할 수 있으면 특정 보안 권한이 없이는 무한 시간을 지정할 수 없어야 합니다.  참고로 메서드를 10초가 넘게 차단할 경우 시간 제한을 지원하는 버전을 사용하거나 추가 CLR 지원이 필요합니다.
 
-문제가 있는 Api의 몇 가지 예는 다음과 같습니다.  파이프(익명 파이프 및 명명된 파이프 모두)는 시간 제한을 지정하여 만들 수 있지만, 코드에서 NMPWAIT_WAIT_FOREVER를 사용하여 `CreateNamedPipe`와 `WaitNamedPipe`를 호출하지 않게 지정해야 합니다.  또한 시간 제한이 지정된 경우에도 예기치 않은 차단이 발생할 수 있습니다.  익명 파이프에서 수행되는 `WriteFile` 호출은 모든 바이트를 작성할 때까지 차단됩니다. 즉, 버퍼에 읽지 않은 데이터가 있으면 판독기에서 파이프 버퍼의 공간을 확보할 때까지 `WriteFile` 호출이 차단됩니다.  소켓에서는 시간 제한 메커니즘을 준수하는 API를 항상 사용해야 합니다.
+다음은 문제가 있는 Api의 몇 가지 예입니다.  파이프(익명 파이프 및 명명된 파이프 모두)는 시간 제한을 지정하여 만들 수 있지만, 코드에서 NMPWAIT_WAIT_FOREVER를 사용하여 `CreateNamedPipe`와 `WaitNamedPipe`를 호출하지 않게 지정해야 합니다.  또한 시간 제한이 지정된 경우에도 예기치 않은 차단이 발생할 수 있습니다.  익명 파이프에서 수행되는 `WriteFile` 호출은 모든 바이트를 작성할 때까지 차단됩니다. 즉, 버퍼에 읽지 않은 데이터가 있으면 판독기에서 파이프 버퍼의 공간을 확보할 때까지 `WriteFile` 호출이 차단됩니다.  소켓에서는 시간 제한 메커니즘을 준수하는 API를 항상 사용해야 합니다.
 
 #### <a name="code-analysis-rule"></a>코드 분석 규칙
 
@@ -265,7 +265,7 @@ COM STA(단일 스레드 아파트)를 사용하는 코드를 식별합니다.  
 
 ### <a name="avoid-unmanaged-memory-if-possible"></a>가능하면 관리되지 않는 메모리를 사용하지 않음
 
-운영 체제 핸들과 마찬가지로 관리되지 않는 메모리는 누출될 수 있습니다. 가능하면 [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md)를 사용하는 스택의 메모리, 고정된 관리 개체(예: [fixed 문](~/docs/csharp/language-reference/keywords/fixed-statement.md)) 또는 byte[]를 사용하는 <xref:System.Runtime.InteropServices.GCHandle>를 사용합니다. 결국 <xref:System.GC>에서 정리합니다. 그러나 관리되지 않는 메모리를 할당해야 하는 경우 <xref:System.Runtime.InteropServices.SafeHandle>에서 파생되는 클래스를 사용하여 메모리 할당을 래핑합니다.
+운영 체제 핸들과 마찬가지로 관리되지 않는 메모리는 누출될 수 있습니다. 가능하면 [stackalloc](../../csharp/language-reference/operators/stackalloc.md)를 사용하는 스택의 메모리, 고정된 관리 개체(예: [fixed 문](../../csharp/language-reference/keywords/fixed-statement.md)) 또는 byte[]를 사용하는 <xref:System.Runtime.InteropServices.GCHandle>를 사용합니다. 결국 <xref:System.GC>에서 정리합니다. 그러나 관리되지 않는 메모리를 할당해야 하는 경우 <xref:System.Runtime.InteropServices.SafeHandle>에서 파생되는 클래스를 사용하여 메모리 할당을 래핑합니다.
 
 <xref:System.Runtime.InteropServices.SafeHandle>이 적합하지 않은 경우가 하나 이상 있습니다.  메모리를 할당하거나 해제하는 COM 메서드 호출의 경우 한 DLL에서 `CoTaskMemAlloc`를 통해 메모리를 할당한 다음 다른 DLL에서 `CoTaskMemFree`로 메모리를 해제하는 것이 일반적입니다.  이러한 위치에서 <xref:System.Runtime.InteropServices.SafeHandle>을 사용하면 다른 DLL에서 메모리의 수명을 제어하도록 허용하지 않고 관리되지 않는 메모리의 수명을 <xref:System.Runtime.InteropServices.SafeHandle>의 수명과 연결하려고 하므로 적합하지 않습니다.
 
@@ -277,7 +277,7 @@ COM STA(단일 스레드 아파트)를 사용하는 코드를 식별합니다.  
 
 #### <a name="code-analysis-rule"></a>코드 분석 규칙
 
-관리 코드에서 모든 개체를 catch하거나 모든 예외를 catch하는 모든 catch 블록을 검토합니다.  C#를 둘 다에 플래그를 지정 하는 것이 즉 `catch` {} 하 고 `catch(Exception)` {}합니다.  예외 형식을 매우 구체적으로 만들거나 코드를 검토하여 예기치 않은 예외 형식을 catch하는 경우 잘못된 방식으로 작동하지 않게 합니다.
+관리 코드에서 모든 개체를 catch하거나 모든 예외를 catch하는 모든 catch 블록을 검토합니다.  에서 C#이 `catch` 는 {} 및 의플래그를{}나타냅니다. `catch(Exception)`  예외 형식을 매우 구체적으로 만들거나 코드를 검토하여 예기치 않은 예외 형식을 catch하는 경우 잘못된 방식으로 작동하지 않게 합니다.
 
 ### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>관리되는 스레드가 Win32 스레드라고 가정하지 않음 - 파이버임
 

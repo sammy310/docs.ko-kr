@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4686710c105ef002fe30f8b6e167d760088913ce
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: afc0929b8f1b12f4e0b4551d826b8a1d59990154
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586993"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952877"
 ---
 # <a name="functiontailcall-function"></a>FunctionTailcall 함수
-현재 실행 중인 함수에 대 한 다른 함수에 대 한 마무리 호출이 수행 하는 프로파일러에 알립니다.  
+현재 실행 중인 함수가 다른 함수에 대 한 마무리 호출을 수행 하려고 함을 프로파일러에 알립니다.  
   
 > [!NOTE]
->  `FunctionTailcall` 함수는.NET Framework 버전 2.0에서에서 사용 되지 않습니다. 계속 작동 하지만 성능이 저하 됩니다. 사용 된 [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) 함수를 대신 합니다.  
+> 함수 `FunctionTailcall` 는 .NET Framework 버전 2.0에서 더 이상 사용 되지 않습니다. 계속 작동 하지만 성능이 저하 됩니다. 대신 [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) 함수를 사용 해야 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,31 +39,31 @@ void __stdcall FunctionTailcall (
   
 ## <a name="parameters"></a>매개 변수  
  `funcID`  
- [in] 마무리 호출을 수행 하려고 하는 현재 실행 중인 함수의 식별자입니다.  
+ 진행 마무리 호출을 수행 하려고 하는 현재 실행 중인 함수의 식별자입니다.  
   
 ## <a name="remarks"></a>설명  
- 마무리 호출의 대상 함수는 현재 스택 프레임을 사용 하 고 마무리 호출을 수행한 함수 호출자에 게 직접 반환 됩니다. 즉, 한 [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md) 마무리 호출의 대상이 되는 함수에 대 한 콜백 발행 되지 것입니다.  
+ 마무리 호출의 대상 함수는 현재 스택 프레임을 사용 하며, 마무리 호출을 수행한 함수의 호출자에 게 직접 반환 됩니다. 즉, tail 호출의 대상인 함수에 대해 [Functionleave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md) 콜백이 실행 되지 않습니다.  
   
- `FunctionTailcall` 함수 콜백을 구현 해야 합니다. 구현을 사용 해야 합니다 `__declspec`(`naked`) 저장소 클래스 특성입니다.  
+ 함수 `FunctionTailcall` 는 콜백입니다. 함수를 구현 해야 합니다. 구현은 ( `__declspec``naked`) 저장소 클래스 특성을 사용 해야 합니다.  
   
- 실행 엔진은이 함수를 호출 하기 전에 모든 레지스터를 저장 하지 않습니다.  
+ 실행 엔진은이 함수를 호출 하기 전에 레지스터를 저장 하지 않습니다.  
   
-- 항목에는 부동 소수점 FPU (단위)에 포함 하 여 사용 하는 모든 레지스터를 저장 해야 합니다.  
+- 항목에서 FPU (부동 소수점 단위)의 항목을 포함 하 여 사용 하는 모든 레지스터를 저장 해야 합니다.  
   
-- 종료 시 스택의 호출자에 의해 푸시된 모든 매개 변수에 팝 하 여 복원 해야 합니다.  
+- 종료 시 호출자에 의해 푸시되는 모든 매개 변수를 팝 하 여 스택을 복원 해야 합니다.  
   
- 구현의 `FunctionTailcall` 가비지 수집 지연 될 수 있으므로 차단 하지 않아야 합니다. 구현 해야 스택의 가비지 컬렉션에 게 친숙 한 상태의 수 없을 수도 가비지 수집을 시도 하지 않습니다. 런타임이 될 때까지 차단 됩니다 가비지 수집을 시도 하는 경우 `FunctionTailcall` 반환 합니다.  
+ 의 `FunctionTailcall` 구현은 가비지 수집을 지연 하므로 차단 하면 안 됩니다. 스택이 가비지 컬렉션에 대 한 상태에 있지 않을 수 있기 때문에 구현에서 가비지 수집을 시도 하면 안 됩니다. 가비지 수집을 시도 하면 런타임이 반환 될 때까지 `FunctionTailcall` 차단 됩니다.  
   
- 또한는 `FunctionTailcall` 함수를 호출 해서는 안 관리 코드로 또는는 관리 되는 메모리를 할당 합니다.  
+ 또한 함수는 `FunctionTailcall` 관리 코드를 호출 하거나 관리 되는 메모리 할당을 발생 시 키 지 않아야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorProf.idl  
   
- **라이브러리:** CorGuids.lib  
+ **라이브러리** CorGuids.lib  
   
- **.NET framework 버전:** 1.1, 1.0  
+ **.NET Framework 버전:** 1.1, 1.0  
   
 ## <a name="see-also"></a>참고자료
 

@@ -3,12 +3,12 @@ title: '방법: WIF를 사용하여 클레임 인식 ASP.NET Web Forms 애플리
 ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
-ms.openlocfilehash: 0d334faabb342ea351c2418c79a86443cb0ce98d
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 82b0649a7324987581cc3c97570a0fc42ffdf6d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910583"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941292"
 ---
 # <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>방법: WIF를 사용하여 클레임 인식 ASP.NET Web Forms 애플리케이션 빌드
 ## <a name="applies-to"></a>적용 대상  
@@ -161,7 +161,7 @@ ms.locfileid: "64910583"
 2. **Default.aspx**를 저장하고 나서 **Default.aspx.cs**라는 코드 숨김 파일을 엽니다.  
   
     > [!NOTE]
-    >  **Default.aspx.cs**는 솔루션 탐색기에서 **Default.aspx** 아래에 숨겨질 수 있습니다. **Default.aspx.cs**가 표시되지 않으면 옆에 있는 삼각형을 클릭하여 **Default.aspx**를 확장합니다.  
+    > **Default.aspx.cs**는 솔루션 탐색기에서 **Default.aspx** 아래에 숨겨질 수 있습니다. **Default.aspx.cs**가 표시되지 않으면 옆에 있는 삼각형을 클릭하여 **Default.aspx**를 확장합니다.  
   
 3. **Default.aspx.cs**의 **Page_Load** 메서드에 있는 기존 코드를 다음 코드로 바꿉니다.  
   

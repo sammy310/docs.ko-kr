@@ -2,18 +2,18 @@
 title: Federation 샘플
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 0d3e9b3aa8d94136fae2d26b2b297776d5b7ea9e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 10087c4c18a4bc24dd36d814619fc265f9987c8c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650076"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961435"
 ---
 # <a name="federation-sample"></a>Federation 샘플
 이 샘플에서는 연결된 보안을 보여 줍니다.  
   
 ## <a name="sample-details"></a>샘플 세부 정보  
- Windows Communication Foundation (WCF)를 통해 페더레이션된 보안 아키텍처를 배포 하기 위한 지원을 제공 합니다 `wsFederationHttpBinding`합니다. `wsFederationHttpBinding`에서는 요청/회신 통신의 기본 전송 메커니즘으로 HTTP를 사용하고, 인코딩 통신 형식으로 텍스트/XML을 사용하는, 안전하고 안정적이며 상호 운용 가능한 바인딩을 제공합니다. WCF의 페더레이션에 대 한 자세한 내용은 참조 하세요. [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)합니다.  
+ WCF (Windows Communication Foundation)는을 `wsFederationHttpBinding`통해 페더레이션 보안 아키텍처를 배포 하기 위한 지원을 제공 합니다. `wsFederationHttpBinding`에서는 요청/회신 통신의 기본 전송 메커니즘으로 HTTP를 사용하고, 인코딩 통신 형식으로 텍스트/XML을 사용하는, 안전하고 안정적이며 상호 운용 가능한 바인딩을 제공합니다. WCF의 페더레이션에 대 한 자세한 내용은 [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)을 참조 하세요.  
   
  이 시나리오는 네 부분으로 구성되어 있습니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "64650076"
  이 샘플의 설치 및 실행 방법에 대해서는 다음 지침을 참조하십시오.  
   
 > [!NOTE]
->  에 대 한 쓰기 권한이 있어야 합니다 **wwwroot** 이 샘플을 실행 디렉터리로 합니다.  
+> 이 샘플을 실행 하려면 **wwwroot** 디렉터리에 대 한 쓰기 권한이 있어야 합니다.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
@@ -91,13 +91,13 @@ ms.locfileid: "64650076"
     > [!NOTE]
     >  Setup.bat 배치 파일은 Windows SDK 명령 프롬프트에서 실행되도록 디자인되었습니다. MSSDK 환경 변수는 SDK가 설치되는 디렉터리를 가리켜야 합니다. 이 환경 변수는 Windows SDK 명령 프롬프트 내에서 자동으로 설정됩니다. 설치에서 IIS 관리자 스크립트를 사용하므로 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 IIS 6.0 관리 호환성이 설치되었는지 확인해야 합니다. [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 설치 스크립트를 실행하려면 관리자 권한이 필요합니다.  
   
-2. Visual Studio에서 FederationSample.sln을 열고 선택 **솔루션 빌드** 에서 합니다 **빌드** 메뉴. 그러면 일반 프로젝트 파일, Bookstore 서비스, Bookstore STS 및 HomeRealm STS를 빌드하고 IIS에 배포합니다. 또한 Bookstore 클라이언트 응용 프로그램도 빌드하며, BookStoreClient.exe 실행 파일을 FederationSample\BookStoreClient\bin\Debug 폴더에 배치합니다.  
+2. Visual Studio에서 FederationSample을 열고 **빌드** 메뉴에서 **솔루션 빌드** 를 선택 합니다. 그러면 일반 프로젝트 파일, Bookstore 서비스, Bookstore STS 및 HomeRealm STS를 빌드하고 IIS에 배포합니다. 또한 Bookstore 클라이언트 애플리케이션도 빌드하며, BookStoreClient.exe 실행 파일을 FederationSample\BookStoreClient\bin\Debug 폴더에 배치합니다.  
   
 3. BookStoreClient.exe를 두 번 클릭합니다. BookStoreClient 창이 표시됩니다.  
   
-4. 클릭 하 여 점에서 책을 찾아볼 수 있습니다 **Browse Books**합니다.  
+4. **찾아보기 서적**을 클릭 하면 서 면에서 사용할 수 있는 책을 찾아볼 수 있습니다.  
   
-5. 특정 책을 구입 하려면 목록에서 책을 선택 하 고 클릭 **Buy Book**합니다. 응용 프로그램이 시작되고 Windows 인증과 HomeRealm 보안 토큰 서비스를 사용하여 인증합니다.  
+5. 특정 책을 구입 하려면 목록에서 책을 선택 하 고 **구매 서적**을 클릭 합니다. 애플리케이션이 시작되고 Windows 인증과 HomeRealm 보안 토큰 서비스를 사용하여 인증합니다.  
   
      이 샘플은 사용자가 가격이 $15 이하인 책을 구입할 수 있도록 구성되었습니다. $15보다 비싼 책을 구입하려고 하면 클라이언트는 Book Store 서비스로부터 액세스 거부 메시지를 받습니다.  
   
@@ -113,6 +113,6 @@ ms.locfileid: "64650076"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  

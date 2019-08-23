@@ -10,12 +10,12 @@ helpviewer_keywords:
 - progress [Windows Forms], reporting [Windows Forms]
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
-ms.openlocfilehash: 877df5139fd0e626cd2242e3790bc7100f6233aa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 84f0caace70f9877e84fdd01dc69216dc10fe485
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599336"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950570"
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>방법: 진행률을 보여 주는 Windows Forms 컨트롤 만들기
 다음 코드 예제에서는 사용자에게 수준 또는 애플리케이션의 진행률을 표시하는 데 사용할 수 있는 `FlashTrackBar`이라는 사용자 지정 컨트롤을 보여 줍니다. 그라데이션을 사용하여 진행률을 시각적으로 나타냅니다.  
@@ -26,9 +26,9 @@ ms.locfileid: "64599336"
   
 - 사용자 지정 이벤트 정의 `FlashTrackBar`은 `ValueChanged` 이벤트를 정의합니다.  
   
-- 재정의 <xref:System.Windows.Forms.Control.OnPaint%2A> 컨트롤을 그리는 논리를 제공 하는 방법입니다.  
+- <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드를 재정의 하 여 컨트롤을 그리는 논리를 제공 합니다.  
   
-- 영역 컨트롤을 그리는 데 사용 하 여 사용할 수 있는 컴퓨팅 해당 <xref:System.Windows.Forms.Control.ClientRectangle%2A> 속성입니다. `FlashTrackBar`은 해당 `OptimizedInvalidate` 메서드에서 이를 수행합니다.  
+- <xref:System.Windows.Forms.Control.ClientRectangle%2A> 속성을 사용 하 여 컨트롤을 그리는 데 사용할 수 있는 영역을 계산 합니다. `FlashTrackBar`은 해당 `OptimizedInvalidate` 메서드에서 이를 수행합니다.  
   
 - Windows Forms 디자이너에서 변경되는 경우 속성의 serialization 또는 지속성을 구현합니다. `FlashTrackBar`은 `StartColor` 및 `EndColor` 속성을 직렬화하는 `ShouldSerializeStartColor` 및 `ShouldSerializeEndColor` 메서드를 정의합니다.  
   
@@ -55,9 +55,9 @@ ms.locfileid: "64599336"
 |`OnValueChanged`|메서드는 `ValueChanged` 이벤트를 발생시킵니다.|  
   
 > [!NOTE]
->  `FlashTrackBar` 사용 하 여 <xref:System.EventArgs> 이벤트 데이터에 대 한 클래스 및 <xref:System.EventHandler> 이벤트 대리자에 대 한 합니다.  
+> `FlashTrackBar`이벤트 데이터 <xref:System.EventArgs> 및 <xref:System.EventHandler> 이벤트 대리자에 대해 클래스를 사용 합니다.  
   
- 해당 처리할 *EventName* 이벤트 `FlashTrackBar` 에서 상속 하는 다음 메서드를 재정의 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
+ 해당 *EventName* 이벤트 `FlashTrackBar` 를 처리 하기 위해은에서 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>상속 되는 다음 메서드를 재정의 합니다.  
   
 - <xref:System.Windows.Forms.Control.OnPaint%2A>  
   
@@ -69,7 +69,7 @@ ms.locfileid: "64599336"
   
 - <xref:System.Windows.Forms.Control.OnResize%2A>  
   
- 해당 속성 변경 이벤트를 처리할 `FlashTrackBar` 에서 상속 하는 다음 메서드를 재정의 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
+ 해당 속성 변경 이벤트 `FlashTrackBar` 를 처리 하기 위해은에서 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>상속 되는 다음 메서드를 재정의 합니다.  
   
 - <xref:System.Windows.Forms.Control.OnBackColorChanged%2A>  
   

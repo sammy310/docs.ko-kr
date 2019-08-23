@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c34f531d-4b9b-4071-b2d7-342c402aa586
-ms.openlocfilehash: 57f51ada00bf24617ca3e295a010aae64f0aa849
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c80294c4bc879e6a1df4c9d1170eef14b8b83de
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879868"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915807"
 ---
 # <a name="datarow-deletion"></a>DataRow 삭제
-두 가지 방법을 삭제 하는 데 사용할 수는 <xref:System.Data.DataRow> 에서 개체를 <xref:System.Data.DataTable> 개체:는 **제거** 메서드를 <xref:System.Data.DataRowCollection> 개체 및 <xref:System.Data.DataRow.Delete%2A> 메서드의 **DataRow**개체입니다. 반면 합니다 <xref:System.Data.DataRowCollection.Remove%2A> 메서드를 **DataRow** 에서 **DataRowCollection**, <xref:System.Data.DataRow.Delete%2A> 메서드는 삭제할 행을 표시만 합니다. 응용 프로그램 호출 때 실제 제거 합니다 **AcceptChanges** 메서드. <xref:System.Data.DataRow.Delete%2A>를 사용하면 행을 실제로 삭제하기 전에 삭제 표시된 행을 프로그래밍 방식으로 확인할 수 있습니다. 삭제 표시된 행의 <xref:System.Data.DataRow.RowState%2A> 속성은 <xref:System.Data.DataRow.Delete%2A>로 설정됩니다.  
+<xref:System.Data.DataRow> 개체 <xref:System.Data.DataRowCollection> <xref:System.Data.DataRow.Delete%2A> 에서 개체를 삭제 하는 데 사용할 수 있는 두 가지 방법은 개체의 Remove 메서드와 DataRow 개체의 메서드를 사용 하는 것입니다. <xref:System.Data.DataTable> 메서드가 DataRowCollection에서 DataRow를 삭제 하는반면 메서드는 <xref:System.Data.DataRow.Delete%2A> 행을 삭제 하도록 표시 합니다. <xref:System.Data.DataRowCollection.Remove%2A> 실제 제거는 응용 프로그램이 **AcceptChanges** 메서드를 호출할 때 발생 합니다. <xref:System.Data.DataRow.Delete%2A>를 사용하면 행을 실제로 삭제하기 전에 삭제 표시된 행을 프로그래밍 방식으로 확인할 수 있습니다. 삭제 표시된 행의 <xref:System.Data.DataRow.RowState%2A> 속성은 <xref:System.Data.DataRow.Delete%2A>로 설정됩니다.  
   
  <xref:System.Data.DataRow.Delete%2A> 개체를 반복하는 동안에는 foreach 루프에서 <xref:System.Data.DataRowCollection.Remove%2A> 또는 <xref:System.Data.DataRowCollection>가 호출되지 않아야 합니다. <xref:System.Data.DataRow.Delete%2A> 또는 <xref:System.Data.DataRowCollection.Remove%2A>는 컬렉션의 상태를 수정하지 않습니다.  
   
- 사용 하는 경우는 <xref:System.Data.DataSet> 또는 **DataTable** 와 함께에서 **DataAdapter** 및 관계형 데이터 원본을 사용 하 여를 **삭제** 메서드를  **DataRow** 행을 제거 합니다. **삭제** 메서드는 해당 행을 표시 **Deleted** 에 **데이터 집합** 또는 **DataTable** 되지만 제거 되지는 않습니다. 대신, 합니다 **DataAdapter** 로 표시 된 행을 발견 하면 **삭제 됨**, 실행 해당 **DeleteCommand** 데이터 원본에서 행을 삭제 하는 방법. 행 후 영구적으로 제거할 수를 사용 하 여 **AcceptChanges** 메서드. 사용 하는 경우 **제거할** 행을 삭제 하려면 해당 행이 테이블에서 완전히 제거 되지만 **DataAdapter** 데이터 소스에서 행을 삭제 하지 것입니다.  
+ DataAdapter 및 관계형 <xref:System.Data.DataSet> 데이터 원본과 함께 또는 **DataTable** 을 사용 하는 경우 **DataRow** 의 **Delete** 메서드를 사용 하 여 행을 제거 합니다. **Delete** 메서드는 **데이터 집합이** 나 **DataTable** 에서 행을 **삭제** 된 것으로 표시 하지만 제거 하지는 않습니다. 대신 **DataAdapter** 가 **Deleted**로 표시 된 행을 발견 하면 해당 **DeleteCommand** 메서드를 실행 하 여 데이터 소스에서 행을 삭제 합니다. 그런 다음 **AcceptChanges** 메서드를 사용 하 여 행을 영구적으로 제거할 수 있습니다. **제거** 를 사용 하 여 행을 삭제 하면 해당 행은 테이블에서 완전히 제거 되지만 **DataAdapter** 는 데이터 원본에서 행을 삭제 하지 않습니다.  
   
- **제거** 메서드를 **DataRowCollection** 사용을 **DataRow** 인수로 다음 예제에서와 같이 컬렉션에서 제거 합니다.  
+ **DataRowCollection** 의 **Remove** 메서드는 다음 예제와 같이 **DataRow** 를 인수로 사용 하 고 컬렉션에서 제거 합니다.  
   
 ```vb  
 workTable.Rows.Remove(workRow)  
@@ -29,7 +29,7 @@ workTable.Rows.Remove(workRow)
 workTable.Rows.Remove(workRow);  
 ```  
   
- 반면, 다음 예제에서는 호출 하는 방법에 설명 합니다 **삭제** 메서드를를 **DataRow** 변경 하려면 해당 **RowState** 를 **Deleted** .  
+ 반면, 다음 예제에서는 **DataRow** 에 대해 **Delete** 메서드를 호출 하 여 **RowState** 를 **deleted**로 변경 하는 방법을 보여 줍니다.  
   
 ```vb  
 workRow.Delete  
@@ -39,10 +39,10 @@ workRow.Delete
 workRow.Delete();  
 ```  
   
- 행 삭제로 표시 되 고 호출 하는 경우는 **AcceptChanges** 메서드의 **DataTable** 개체에서 행이 제거 되는 **DataTable**합니다. 반대로, 호출 하는 경우 **RejectChanges**의 **RowState** 행의 되돌아갑니다로 표시 되기 전에 **Deleted**합니다.  
+ 행이 삭제 되도록 표시 되 고 **datatable** 개체의 **AcceptChanges** 메서드를 호출 하면 **datatable**에서 해당 행이 제거 됩니다. 반면 **RejectChanges**를 호출 하면 행의 **RowState** 가 **삭제**된 것으로 표시 되기 전의 상태로 돌아갑니다.  
   
 > [!NOTE]
->  경우는 **RowState** 의 **DataRow** 은 **Added**, 테이블에만 추가 되었습니다 의미 및 것으로 표시 됩니다 **Deleted**, 것 테이블에서 제거 합니다.  
+> **DataRow** 의 **RowState** 이 **추가**되 면 테이블에 추가 된 것을 의미 하 고 **삭제**된 것으로 표시 되 면 테이블에서 제거 됩니다.  
   
 ## <a name="see-also"></a>참고자료
 

@@ -6,16 +6,16 @@ helpviewer_keywords:
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 85ca55e976a010a4875d260b3da30f5bc3cf2ffb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 611ad0a6f4ec8b8c63010938372b733a0ac66052
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723617"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955760"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>작업 병렬 라이브러리 및 PLINQ의 ETW 이벤트
 
-작업 병렬 라이브러리 및 PLINQ는 둘 다 Windows Performance Analyzer와 같은 도구를 사용하여 애플리케이션을 프로파일링하고 애플리케이션 문제를 해결하는 데 사용할 수 있는 ETW(Windows용 이벤트 추적) 이벤트를 생성합니다. 그러나 대부분의 시나리오에서 병렬 응용 프로그램 코드를 프로 파일링 하는 가장 좋은 방법은 사용 하는 것은 [동시성 시각화 도우미](/visualstudio/profiling/concurrency-visualizer) Visual Studio에서.
+작업 병렬 라이브러리 및 PLINQ는 둘 다 Windows Performance Analyzer와 같은 도구를 사용하여 애플리케이션을 프로파일링하고 애플리케이션 문제를 해결하는 데 사용할 수 있는 ETW(Windows용 이벤트 추적) 이벤트를 생성합니다. 그러나 대부분의 시나리오에서 병렬 응용 프로그램 코드를 프로 파일링 하는 가장 좋은 방법은 Visual Studio에서 [동시성 시각화 도우미](/visualstudio/profiling/concurrency-visualizer) 를 사용 하는 것입니다.
 
 ## <a name="task-parallel-library-etw-events"></a>작업 병렬 라이브러리 ETW 이벤트
 
@@ -121,5 +121,5 @@ EVENT_DESCRIPTOR.Id = 1
 ## <a name="see-also"></a>참고자료
 
 - [.NET Framework의 ETW 이벤트](../../../docs/framework/performance/etw-events.md)
-- [TPL(작업 병렬 라이브러리)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [PLINQ(병렬 LINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [TPL(작업 병렬 라이브러리)](../../standard/parallel-programming/task-parallel-library-tpl.md)
+- [PLINQ(병렬 LINQ)](../../standard/parallel-programming/parallel-linq-plinq.md)

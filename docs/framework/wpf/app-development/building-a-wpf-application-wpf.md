@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 02a86ea8d8d6b481044d6ca25d29df7edd2c73ee
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: a5254de07029e53dd6b72bd2c096c38525a661b6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401689"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958718"
 ---
 # <a name="building-a-wpf-application-wpf"></a>WPF 애플리케이션 빌드(WPF)
 
@@ -24,7 +24,7 @@ WPF (Windows Presentation Foundation) 응용 프로그램은 .NET Framework 실�
 
 다음과 같은 방법으로 WPF 애플리케이션을 컴파일할 수 있습니다.
 
-- 명령줄. 애플리케이션에 코드(XAML 없음)와 애플리케이션 정의 파일만 포함되어야 합니다. 자세한 내용은 [csc.exe를 사용한 명령줄 빌드](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) 또는 [명령줄에서 빌드(Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)를 참조하세요.
+- 명령줄. 애플리케이션에 코드(XAML 없음)와 애플리케이션 정의 파일만 포함되어야 합니다. 자세한 내용은 [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) 또는 [명령줄에서 빌드(Visual Basic)](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)를 참조하세요.
 
 - MSBuild(Microsoft Build Engine). 애플리케이션에 코드 및 XAML 파일 외에 MSBuild 프로젝트 파일이 포함되어야 합니다. 자세한 내용은 "MSBuild"를 참조하세요.
 
@@ -42,7 +42,7 @@ WPF (Windows Presentation Foundation) 응용 프로그램은 .NET Framework 실�
 
 ### <a name="pre-build-initializations"></a>빌드 전 초기화
 
-빌드하기 전에 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]는 다음과 같은 중요 도구 및 라이브러리의 위치를 결정합니다.
+빌드하기 전에 MSBuild는 다음을 포함 하 여 중요 한 도구 및 라이브러리의 위치를 결정 합니다.
 
 - .NET Framework입니다.
 
@@ -52,7 +52,7 @@ WPF (Windows Presentation Foundation) 응용 프로그램은 .NET Framework 실�
 
 - 어셈블리 검색 경로의 속성
 
-[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]가 어셈블리를 검색하는 첫 번째 위치는 참조 어셈블리 디렉터리(%ProgramFiles%\Reference Assemblies\Microsoft\Framework\v3.0\\)입니다. 이 단계에서 빌드 프로세스는 다양한 속성 및 항목 그룹을 초기화하고 필요한 정리 작업을 수행합니다.
+MSBuild에서 어셈블리를 검색 하는 첫 번째 위치는 참조 어셈블리 디렉터리 (%ProgramFiles%\Reference\\Assemblies\Microsoft\Framework\v3.0)입니다. 이 단계에서 빌드 프로세스는 다양한 속성 및 항목 그룹을 초기화하고 필요한 정리 작업을 수행합니다.
 
 <a name="Resolving_references"></a>
 
@@ -108,7 +108,7 @@ Public Sub InitializeComponent() _
 End Sub
 ```
 
-기본적으로 태그 컴파일은 <xref:System.AppDomain> [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 엔진과 동일 하 게 실행 됩니다. 따라서 성능이 크게 향상됩니다. 이 동작은 `AlwaysCompileMarkupFilesInSeparateDomain` 속성을 통해 전환할 수 있습니다. 이렇게 하면 별도 <xref:System.AppDomain>의를 언로드하여 모든 참조 어셈블리를 언로드할 때 이점이 있습니다.
+기본적으로 태그 컴파일은 MSBuild 엔진과 동일 <xref:System.AppDomain> 하 게 실행 됩니다. 따라서 성능이 크게 향상됩니다. 이 동작은 `AlwaysCompileMarkupFilesInSeparateDomain` 속성을 통해 전환할 수 있습니다. 이렇게 하면 별도 <xref:System.AppDomain>의를 언로드하여 모든 참조 어셈블리를 언로드할 때 이점이 있습니다.
 
 <a name="Pass_2_of_Markup_Compilation"></a>
 

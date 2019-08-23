@@ -2,12 +2,12 @@
 title: <messageLogging>
 ms.date: 03/30/2017
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
-ms.openlocfilehash: 70fb2df1d37af23d9ec19932806989ce3329bf3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f54028489ec5aa34ae38115d7a582b01b9da92f9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768916"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931407"
 ---
 # <a name="messagelogging"></a>\<messageLogging>
 이 요소는 WCF(Windows Communication Foundation)의 메시지 로깅 기능 설정을 정의합니다.  
@@ -51,13 +51,13 @@ ms.locfileid: "61768916"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |필터|`filters` 요소는 XPath 필터 컬렉션을 보유합니다. `logMessagesAtTransportLevel`이 `true`로 설정되어 전송 메시지 로깅을 사용할 경우 필터와 일치하는 메시지만 로깅됩니다.<br /><br /> 필터는 전송 레이어에서만 적용됩니다. 서비스 수준 및 잘못된 형식의 메시지 로깅은 필터의 영향을 받지 않습니다.<br /><br /> 이 요소의 유일한 특성인 `filter`는 XpathFilter입니다.<br /><br /> `<filters>     <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">/soap:Envelope</add> </filters>`|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |진단|관리자의 런타임 검사 및 제어를 위한 WCF 설정을 정의합니다.|  
   
@@ -127,4 +127,4 @@ ms.locfileid: "61768916"
 - <xref:System.ServiceModel.Diagnostics>
 - <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>
 - <xref:System.ServiceModel.Configuration.MessageLoggingElement>
-- [메시지 로깅 구성](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
+- [메시지 로깅 구성](../../../wcf/diagnostics/configuring-message-logging.md)

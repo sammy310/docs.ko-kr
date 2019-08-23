@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 6ab547951b00cc4a479034129254e4060486348d
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 16f4155cefea20868185febb3d2a566dc1524cc4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817949"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956279"
 ---
 # <a name="wpf-windows-overview"></a>WPF 창 개요
 사용자는 Windows를 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프로그램과 상호 작용 합니다. 창의 기본 용도는 데이터를 시각화하는 콘텐츠를 호스트하고 사용자가 데이터와 상호 작용할 수 있도록 하는 것입니다. 독립 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 실행형 응용 프로그램은 클래스를 <xref:System.Windows.Window> 사용 하 여 자체 창을 제공 합니다. 이 항목에서는 <xref:System.Windows.Window> 독립 실행형 응용 프로그램에서 windows를 만들고 관리 하는 기본 사항을 다루기 전에 소개 합니다.  
   
 > [!NOTE]
->  및 느슨한 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 페이지[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 를 포함 하 여 브라우저에서 호스팅되는 응용 프로그램은 자체 창을 제공 하지 않습니다. 대신 Windows Internet Explorer에서 제공 하는 windows에서 호스팅됩니다. [WPF XAML 브라우저 응용 프로그램 개요](wpf-xaml-browser-applications-overview.md)를 참조 하세요.  
+> 및 느슨한 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 페이지[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 를 포함 하 여 브라우저에서 호스팅되는 응용 프로그램은 자체 창을 제공 하지 않습니다. 대신 Windows Internet Explorer에서 제공 하는 windows에서 호스팅됩니다. [WPF XAML 브라우저 응용 프로그램 개요](wpf-xaml-browser-applications-overview.md)를 참조 하세요.  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Window 클래스  
@@ -88,14 +88,14 @@ ms.locfileid: "68817949"
   
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 태그 파일 및 코드 숨김이 함께 작동 하도록 설정 하려면 다음이 필요 합니다.  
   
-- 태그에서 요소는 `Window` `x:Class` 특성을 포함 해야 합니다. 응용 프로그램을 빌드할 `x:Class` 때 태그 [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] 파일에가 있으면에서 <xref:System.Windows.Window> 파생 되 고 `x:Class` 특성에 지정 `partial` 된 이름을 갖는 클래스가 생성 됩니다. 이렇게 하려면 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 스키마에 대 한 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 네임 스페이스 선언을 추가 해야 합니다 `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` (). 생성 `partial` 된 클래스는 이벤트 `InitializeComponent` 를 등록 하 고 태그에 구현 된 속성을 설정 하기 위해 호출 하는 메서드를 구현 합니다.  
+- 태그에서 요소는 `Window` `x:Class` 특성을 포함 해야 합니다. 응용 프로그램을 빌드할 때 `x:Class` 태그 파일에가 있으면 MSBuild (Microsoft build engine)가에서 <xref:System.Windows.Window> 파생 되 고 `x:Class` 특성으로 `partial` 지정 된 이름을 가진 클래스를 만듭니다. 이렇게 하려면 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 스키마에 대 한 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 네임 스페이스 선언을 추가 해야 합니다 `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` (). 생성 `partial` 된 클래스는 이벤트 `InitializeComponent` 를 등록 하 고 태그에 구현 된 속성을 설정 하기 위해 호출 하는 메서드를 구현 합니다.  
   
 - 코드를 사용할 `partial` 때 클래스는 태그의 `x:Class` 특성으로 지정 되는 동일한 이름의 클래스 여야 하며에서 <xref:System.Windows.Window>파생 되어야 합니다. 이렇게 하면 응용 프로그램을 빌드할 때 태그 파일에 대해 생성 `partial` 되는 클래스와 코드 숨김이 연결 될 수 있습니다 ( [WPF 응용 프로그램 빌드](building-a-wpf-application-wpf.md)참조).  
   
 - 코드 숨김으로 클래스는 <xref:System.Windows.Window> `InitializeComponent` 메서드를 호출 하는 생성자를 구현 해야 합니다. `InitializeComponent`는 태그 파일의 생성 `partial` 된 클래스에 의해 구현 되어 이벤트를 등록 하 고 태그에 정의 된 속성을 설정 합니다.  
   
 > [!NOTE]
->  를 사용 <xref:System.Windows.Window> [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]하 여 프로젝트에 새를 추가 하는 경우 <xref:System.Windows.Window> 는 태그와 코드 숨김으로 모두 사용 하 여 구현 되며, 태그와 코드 숨김으로 연결을 만드는 데 필요한 구성을 포함 합니다. 여기에서 설명 합니다.  
+> 를 사용 <xref:System.Windows.Window> [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]하 여 프로젝트에 새를 추가 하는 경우 <xref:System.Windows.Window> 는 태그와 코드 숨김으로 모두 사용 하 여 구현 되며, 태그와 코드 숨김으로 연결을 만드는 데 필요한 구성을 포함 합니다. 여기에서 설명 합니다.  
   
  이 구성을 적용 하면 창의 모양을 태그에 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 정의 하 고 코드 숨김으로 동작을 구현 하는 데 집중할 수 있습니다. 다음 예제에서는 태그에서 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 구현 된 단추와 코드 숨김으로 구현 된 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 단추의 이벤트에 대 한 이벤트 처리기가 있는 창을 보여 줍니다.  
   
@@ -106,13 +106,13 @@ ms.locfileid: "68817949"
   
 <a name="ConfiguringWindowForMSBuild"></a>   
 ## <a name="configuring-a-window-definition-for-msbuild"></a>MSBuild에 대해 창 정의 구성  
- 창을 구현 하는 방법에 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]따라 구성 방법이 결정 됩니다. 태그와 코드 숨김으로 모두 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 사용 하 여 정의 된 창의 경우:  
+ 창을 구현 하는 방법에 따라 MSBuild에 대해 구성 되는 방식이 결정 됩니다. 태그와 코드 숨김으로 모두 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 사용 하 여 정의 된 창의 경우:  
   
-- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]태그 파일은 항목으로 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` 구성 됩니다.  
+- XAML 태그 파일은 MSBuild `Page` 항목으로 구성 됩니다.  
   
-- 코드 숨겨진 파일은 항목으로 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` 구성 됩니다.  
+- 코드 숨겨진 파일은 MSBuild `Compile` 항목으로 구성 됩니다.  
   
- 다음 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 프로젝트 파일에 표시 됩니다.  
+ 이는 다음 MSBuild 프로젝트 파일에 표시 됩니다.  
   
 ```xml  
 <Project ...  
@@ -149,7 +149,7 @@ ms.locfileid: "68817949"
  를 호출 <xref:System.Windows.Window.Show%2A> 하 여 연 창은 모덜리스 창이 며,이 창은 응용 프로그램이 동일한 응용 프로그램에서 다른 창을 활성화할 수 있도록 하는 모드에서 작동 함을 의미 합니다.  
   
 > [!NOTE]
->  <xref:System.Windows.Window.ShowDialog%2A>대화 상자와 같은 창을 모달로 열기 위해가 호출 됩니다. 자세한 내용은 [대화 상자 개요](dialog-boxes-overview.md) 를 참조 하세요.  
+> <xref:System.Windows.Window.ShowDialog%2A>대화 상자와 같은 창을 모달로 열기 위해가 호출 됩니다. 자세한 내용은 [대화 상자 개요](dialog-boxes-overview.md) 를 참조 하세요.  
   
  가 <xref:System.Windows.Window.Show%2A> 호출 되 면 창에서 사용자 입력을 받을 수 있도록 하는 인프라를 설정 하기 전에 초기화 작업을 수행 합니다. 창이 초기화 <xref:System.Windows.Window.SourceInitialized> 되 면 이벤트가 발생 하 고 창이 표시 됩니다.  
   
@@ -205,7 +205,7 @@ ms.locfileid: "68817949"
  창이 처음 열리면 창이 활성 창이 됩니다 (를로 <xref:System.Windows.Window.ShowActivated%2A> `false`설정 하 여 표시 되지 않은 경우). *활성 창은* 키 입력 및 마우스 클릭과 같은 사용자 입력을 현재 캡처하는 창입니다. 창이 활성화 되 면 <xref:System.Windows.Window.Activated> 이벤트가 발생 합니다.  
   
 > [!NOTE]
->  창이 처음 열릴 <xref:System.Windows.FrameworkElement.Loaded> 때 및 <xref:System.Windows.Window.ContentRendered> 이벤트는 <xref:System.Windows.Window.Activated> 이벤트가 발생 한 후에만 발생 합니다. 이 점을 염두에 두면가 발생할 때 <xref:System.Windows.Window.ContentRendered> 창이 효과적으로 열린 것으로 간주 될 수 있습니다.  
+> 창이 처음 열릴 <xref:System.Windows.FrameworkElement.Loaded> 때 및 <xref:System.Windows.Window.ContentRendered> 이벤트는 <xref:System.Windows.Window.Activated> 이벤트가 발생 한 후에만 발생 합니다. 이 점을 염두에 두면가 발생할 때 <xref:System.Windows.Window.ContentRendered> 창이 효과적으로 열린 것으로 간주 될 수 있습니다.  
   
  창이 활성 창이 되면 사용자는 같은 애플리케이션의 다른 창을 활성화하거나 다른 애플리케이션을 활성화할 수 있습니다. 이 경우 현재 활성화 된 창이 비활성화 되 고 이벤트를 <xref:System.Windows.Window.Deactivated> 발생 시킵니다. 마찬가지로 사용자가 현재 비활성화 된 창을 선택 하면 창이 다시 활성화 되 고 <xref:System.Windows.Window.Activated> 발생 합니다.  
   
@@ -221,7 +221,7 @@ ms.locfileid: "68817949"
  백그라운드 작업이 완료 되 면 메서드를 호출 <xref:System.Windows.Window.Activate%2A> 하 여 사용자에 게 더 급하게 알림을 보낼 수 있습니다. 사용자가를 호출할 때 <xref:System.Windows.Window.Activate%2A> 활성화 된 다른 응용 프로그램과 상호 작용 하는 경우 창의 작업 표시줄 단추가 깜박입니다. 사용자가 현재 응용 프로그램과 상호 작용 하는 경우를 <xref:System.Windows.Window.Activate%2A> 호출 하면 창이 포그라운드로 전환 됩니다.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.Activated?displayProperty=nameWithType> 및<xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> 이벤트를 사용 하 여 응용 프로그램 범위 활성화를 처리할 수 있습니다.  
+> <xref:System.Windows.Application.Activated?displayProperty=nameWithType> 및<xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> 이벤트를 사용 하 여 응용 프로그램 범위 활성화를 처리할 수 있습니다.  
   
 <a name="Closing_a_Window"></a>   
 ### <a name="closing-a-window"></a>창 닫기  
@@ -262,9 +262,9 @@ ms.locfileid: "68817949"
  가 <xref:System.Windows.Window.Closing> 처리 되지 않거나 처리 되었지만 취소 되지 않은 경우 창이 닫힙니다. 창이 실제로 닫히기 직전에 <xref:System.Windows.Window.Closed> 이 발생 합니다. 이 시점에서는 창 닫기를 방지할 수 없습니다.  
   
 > [!NOTE]
->  주 응용 프로그램 창이 닫히거나 (참조 <xref:System.Windows.Application.MainWindow%2A>) 마지막 창이 닫히면 응용 프로그램은 자동으로 종료 되도록 구성할 수 있습니다. 자세한 내용은 <xref:System.Windows.Application.ShutdownMode%2A>를 참조하세요.  
+> 주 응용 프로그램 창이 닫히거나 (참조 <xref:System.Windows.Application.MainWindow%2A>) 마지막 창이 닫히면 응용 프로그램은 자동으로 종료 되도록 구성할 수 있습니다. 자세한 내용은 <xref:System.Windows.Application.ShutdownMode%2A>를 참조하세요.  
   
- 비클라이언트 및 클라이언트 영역에서 제공 하는 메커니즘을 통해 창을 명시적으로 닫을 수도 있지만 응용 프로그램의 다른 부분이 나 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]다음을 비롯 한 동작의 결과로 창이 암시적으로 닫힐 수도 있습니다.  
+ 비클라이언트 및 클라이언트 영역에서 제공 하는 메커니즘을 통해 창을 명시적으로 닫을 수 있지만, 다음을 포함 하 여 응용 프로그램이 나 창의 다른 부분에서 동작의 결과로 창이 암시적으로 닫힐 수도 있습니다.  
   
 - 사용자가 로그 오프 하거나 Windows를 종료 합니다.  
   
@@ -275,7 +275,7 @@ ms.locfileid: "68817949"
 - <xref:System.Windows.Application.Shutdown%2A>가 호출된 경우  
   
 > [!NOTE]
->  창을 닫은 뒤에는 다시 열 수 없습니다.  
+> 창을 닫은 뒤에는 다시 열 수 없습니다.  
   
 <a name="Window_Lifetime_Events"></a>   
 ### <a name="window-lifetime-events"></a>창 수명 이벤트  
@@ -377,7 +377,7 @@ ms.locfileid: "68817949"
  상태가 *최대화* 된 창은 최대 크기 (최대 크기)로 확장 됩니다. 즉 <xref:System.Windows.FrameworkElement.MaxWidth%2A>, <xref:System.Windows.FrameworkElement.MaxHeight%2A>, 및 <xref:System.Windows.Window.SizeToContent%2A> 속성에 따라 크기가 커질 수 있습니다. 최소화된 창과 마찬가지로 최대화된 창은 크기 조정 그립을 사용하거나 테두리를 끌어서 크기 조정할 수 없습니다.  
   
 > [!NOTE]
->  창의 <xref:System.Windows.Window.Top%2A> ,<xref:System.Windows.Window.Left%2A>, 및<xref:System.Windows.FrameworkElement.Height%2A> 속성 값은 창이 현재 최대화 되거나 최소화 된 경우에도 항상 표준 상태 값을 나타냅니다. <xref:System.Windows.FrameworkElement.Width%2A>  
+> 창의 <xref:System.Windows.Window.Top%2A> ,<xref:System.Windows.Window.Left%2A>, 및<xref:System.Windows.FrameworkElement.Height%2A> 속성 값은 창이 현재 최대화 되거나 최소화 된 경우에도 항상 표준 상태 값을 나타냅니다. <xref:System.Windows.FrameworkElement.Width%2A>  
   
  <xref:System.Windows.Window.WindowState%2A> 다음<xref:System.Windows.WindowState> 열거형 값 중 하나를 가질 수 있는 속성을 설정 하 여 창의 상태를 구성할 수 있습니다.  
   

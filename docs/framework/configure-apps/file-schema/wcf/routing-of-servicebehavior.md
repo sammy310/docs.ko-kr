@@ -2,14 +2,14 @@
 title: <serviceBehavior>의 <routing>
 ms.date: 03/30/2017
 ms.assetid: d8f9c844-4629-4a45-9599-856dc8f01794
-ms.openlocfilehash: b7a9be18395ef8878900d754b5aa5afdeee0cff8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73a610056f94efe144705968eaf97c8314c1ae0d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783060"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934192"
 ---
-# <a name="routing-of-servicebehavior"></a>\<라우팅 >의 \<serviceBehavior >
+# <a name="routing-of-servicebehavior"></a>\<serviceBehavior >의 \<라우팅 >
 라우팅 서비스에 대한 런타임 액세스를 제공하여 라우팅 구성의 동적 수정을 허용합니다.  
   
  \<system.ServiceModel>  
@@ -37,9 +37,9 @@ ms.locfileid: "61783060"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
-|filterTable|라우팅 서비스에서 평가할 필터를 포함하는 라우팅 테이블의 이름을 지정하는 문자열입니다. 이 값과 일치 해야 합니다는 `name` 특성을 [ \<filterTable >](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertable.md) 요소에는 [ \<filterTables >](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md) 섹션.|  
+|filterTable|라우팅 서비스에서 평가할 필터를 포함하는 라우팅 테이블의 이름을 지정하는 문자열입니다. 이 값은 `name` [filtertables > 섹션에 있는 filterTable > 요소의 특성과 일치 해야 합니다. \<](filtertables.md) [ \<](filtertable.md)|  
 |routeOnHeaderOnly|필터를 사용하여 메시지 본문과 헤더를 모두 검사할지 또는 헤더만 검사할지를 지정하는 부울 값입니다. 기본값은 `true`입니다.|  
 |soapProcessingEnabled|SOAP 처리가 발생해야 하는지 여부를 지정하는 부울 값입니다.|  
   
@@ -50,7 +50,7 @@ ms.locfileid: "61783060"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|동작 요소를 지정합니다.|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|동작 요소를 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
  이 구성 요소가 서비스 동작 구성에 추가되면 서비스에 대한 라우팅을 사용할 수 있습니다. 서비스에서 실제로 사용할 라우팅 테이블을 이 요소에서 지정할 수 있습니다.  

@@ -7,14 +7,14 @@ helpviewer_keywords:
 - <add> element for <switches>
 - add element for <switches>
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
-ms.openlocfilehash: d7500620aed1165ff365fee8529230ba252dbc4b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8fcd5cbe63a323a7509f5ff8c615364295c244d5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673812"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920557"
 ---
-# <a name="add-element-for-switches"></a>\<추가 > 요소에 대 한 \<스위치 >
+# <a name="add-element-for-switches"></a>\<스위치에 대 한 \<> 요소 추가 >
 추적 스위치를 설정하는 수준을 지정합니다.  
   
  \<configuration>  
@@ -36,8 +36,8 @@ ms.locfileid: "61673812"
   
 |특성|설명|  
 |---------------|-----------------|  
-|**name**|필수 특성입니다.<br /><br /> 스위치의 이름을 지정합니다. 이 특성의 값에 해당 합니다 *displayName* 전환 생성자에 전달 되는 매개 변수입니다.|  
-|**value**|필수 특성입니다.<br /><br /> 스위치의 수준을 지정합니다.|  
+|**name**|필수 특성입니다.<br /><br /> 스위치의 이름을 지정 합니다. 이 특성의 값은 switch 생성자에 전달 되는 *displayName* 매개 변수에 해당 합니다.|  
+|**value**|필수 특성입니다.<br /><br /> 스위치의 수준을 지정 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -51,10 +51,10 @@ ms.locfileid: "61673812"
 |`system.diagnostics`|메시지를 수집하고 저장하고 라우팅하는 추적 수신기를 지정하며, 추적 스위치가 설정되는 수준을 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
- 구성 파일에 배치 하 여 추적 스위치의 수준을 변경할 수 있습니다. 스위치가 <xref:System.Diagnostics.BooleanSwitch>를 켜거나 끌 수 있습니다. 스위치가 <xref:System.Diagnostics.TraceSwitch>, 추적의 유형을 지정 하 고 다른 수준을 할당할 수 있습니다 또는 디버그 메시지 응용 프로그램에서 출력 합니다.  
+ 구성 파일에 배치 하 여 추적 스위치의 수준을 변경할 수 있습니다. 스위치가 <xref:System.Diagnostics.BooleanSwitch>인 경우 설정 및 해제할 수 있습니다. 스위치가 <xref:System.Diagnostics.TraceSwitch>인 경우 다른 수준을 할당 하 여 응용 프로그램에서 출력 하는 추적 또는 디버그 메시지의 형식을 지정할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 사용 하는 방법을 보여 줍니다는  **\<추가 >** 설정할 요소입니다는 `General` 추적 스위치를를 <xref:System.Diagnostics.TraceLevel> 수준 및 사용을 `Data` Boolean 추적 스위치.  
+ 다음 예에서는  **\<add >** `General` 요소를 사용 하 여 추적 스위치를 <xref:System.Diagnostics.TraceLevel> 수준 `Data` 으로 설정 하 고 부울 추적 스위치를 사용 하도록 설정 하는 방법을 보여 줍니다.  
   
 ```xml  
 <configuration>  
@@ -72,4 +72,4 @@ ms.locfileid: "61673812"
 - <xref:System.Diagnostics.Switch>
 - <xref:System.Diagnostics.TraceSwitch>
 - <xref:System.Diagnostics.BooleanSwitch>
-- [추적 및 디버그 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [추적 및 디버그 설정 스키마](index.md)

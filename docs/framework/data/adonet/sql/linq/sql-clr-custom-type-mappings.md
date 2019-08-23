@@ -2,17 +2,17 @@
 title: SQL-CLR 사용자 지정 대/소문자 매핑
 ms.date: 03/30/2017
 ms.assetid: d916c7fb-4b56-4214-acbe-5e23365047b2
-ms.openlocfilehash: bc92d54cad6a977268ef3f000c684d5f195a933d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5aff9a78349cbf9443c5b663a41d7c13a109e625
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037052"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945052"
 ---
 # <a name="sql-clr-custom-type-mappings"></a>SQL-CLR 사용자 지정 대/소문자 매핑
 SQL Server와 CLR(공용 언어 런타임) 간의 형식 매핑은 SQLMetal 명령줄 도구 또는 개체 관계형 디자이너(O/R 디자이너)를 사용할 때 자동으로 지정됩니다.  
   
- 사용자 지정 된 매핑이 수행 되 면 이러한 도구 기본 형식 매핑을 할당에 설명 된 대로 [SQL-CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)합니다. 기본 매핑과 다른 형식 매핑을 사용하려는 경우에는 해당 형식 매핑을 사용자 지정해야 합니다.  
+ 사용자 지정 된 매핑이 수행 되지 않는 경우 이러한 도구는 [SQL CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)에 설명 된 대로 기본 형식 매핑을 할당 합니다. 기본 매핑과 다른 형식 매핑을 사용하려는 경우에는 해당 형식 매핑을 사용자 지정해야 합니다.  
   
  형식 매핑을 사용자 지정할 때는 중간 DBML 파일을 변경하는 것이 좋습니다. 그런 다음 SQLMetal 또는 O/R 디자이너에서 코드 및 매핑 파일을 만들 때 사용자 지정된 DBML 파일을 사용해야 합니다.  
   
@@ -21,10 +21,10 @@ SQL Server와 CLR(공용 언어 런타임) 간의 형식 매핑은 SQLMetal 명�
 ## <a name="customization-with-sqlmetal-or-or-designer"></a>SQLMetal 또는 O/R 디자이너 사용자 지정  
  SQLMetal 및 O/R 디자이너를 사용할 때 코드 파일 내부 또는 외부의 형식 매핑 정보를 포함하는 개체 모델을 자동으로 만들 수 있습니다. 이러한 파일은 SQLMetal 또는 O/R 디자이너에서 덮어쓰므로 매핑을 다시 만들 때마다 DBML 파일을 사용자 지정하여 사용자 형식 매핑을 지정하는 것이 좋습니다.  
   
- SQLMetal 또는 O/R 디자이너를 사용하여 형식 매핑을 사용자 지정하려면 먼저 DBML 파일을 생성합니다. 그런 다음 코드 파일 또는 매핑 파일을 생성하기 전에 DBML 파일을 수정하여 원하는 형식 매핑을 확인합니다. SQLMetal을 사용하는 경우 DBML 파일에서 `Type` 및 `DbType` 특성을 직접 변경하여 형식 매핑을 사용자 지정해야 합니다. O/R 디자이너를 사용하는 경우에는 디자이너 내부에서 변경할 수 있습니다. O/R 디자이너를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [LINQ to SQL 도구 Visual Studio에서](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)합니다.  
+ SQLMetal 또는 O/R 디자이너를 사용하여 형식 매핑을 사용자 지정하려면 먼저 DBML 파일을 생성합니다. 그런 다음 코드 파일 또는 매핑 파일을 생성하기 전에 DBML 파일을 수정하여 원하는 형식 매핑을 확인합니다. SQLMetal을 사용하는 경우 DBML 파일에서 `Type` 및 `DbType` 특성을 직접 변경하여 형식 매핑을 사용자 지정해야 합니다. O/R 디자이너를 사용하는 경우에는 디자이너 내부에서 변경할 수 있습니다. O/R 디자이너를 사용 하는 방법에 대 한 자세한 내용은 [LINQ to SQL Tools In Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)를 참조 하세요.  
   
 > [!NOTE]
->  일부 형식 매핑의 경우 데이터베이스 관련 변환 과정에서 오버플로 또는 데이터 손실 예외가 발생할 수 있습니다. 형식 매핑 런타임 동작 매트릭스를 주의 깊게 검토 [SQL-CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) 사용자 지정을 수행 하기 전에 합니다.  
+> 일부 형식 매핑의 경우 데이터베이스 관련 변환 과정에서 오버플로 또는 데이터 손실 예외가 발생할 수 있습니다. 사용자 지정을 수행 하기 전에 [SQL-CLR 형식 매핑의](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) 형식 매핑 런타임 동작 매트릭스를 신중 하 게 검토 합니다.  
   
  SQLMetal 또는 O/R 디자이너에서 형식 매핑 사용자 지정을 인식하게 하려면 코드 파일 또는 외부 매핑 파일을 생성할 때 사용자 지정 DBML 파일에 대한 경로가 이러한 도구에 제공되어야 합니다. 형식 매핑 사용자 지정을 위해 반드시 필요한 것은 아니지만, 항상 형식 매핑 정보를 코드 파일과 분리하고 추가 외부 형식 매핑 파일을 생성하는 것이 좋습니다. 이렇게 하면 유연성이 개선되어 코드 파일 재컴파일의 필요성이 줄어듭니다.  
   

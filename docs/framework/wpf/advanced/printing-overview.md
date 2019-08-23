@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: be82b64581ee178b463950d4b8cdae1f98949161
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 43b0ddc8f683e7069207bbb1c47af73976bc4a5a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545310"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958554"
 ---
 # <a name="printing-overview"></a>인쇄 개요
 Microsoft .NET 프레임 워크에서 Windows Presentation Foundation (WPF)를 사용 하는 응용 프로그램 개발자는 다양 한 새로운 인쇄 및 인쇄 시스템 관리 Api 집합을 사용할 수 있습니다. [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]에서는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램을 만드는 개발자와 비관리 코드를 사용하는 개발자도 이러한 인쇄 시스템 향상 기능을 일부 사용할 수 있습니다. 이 새로운 기능의 핵심은 새 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 파일 형식과 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 인쇄 경로입니다.  
@@ -35,11 +35,11 @@ Microsoft .NET 프레임 워크에서 Windows Presentation Foundation (WPF)를 �
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>XPS 인쇄 경로  
- XPS (XML Paper Specification) 인쇄 경로는 Windows 응용 프로그램 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 에서 인쇄를 처리 하는 방법을 다시 정의 하는 새로운 기능입니다. 는 문서 표시 언어 (예: RTF), 인쇄 스풀러 형식 (예: WMF) 및 페이지 설명 언어 (예: PCL 또는 포스트 스크립트)를 대체할 수있습니다.새로운인쇄경로는응용프로그램게시에서로XPS형식을유지관리합니다.[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 인쇄 드라이버 또는 장치의 최종 처리  
+ XPS (XML Paper Specification) 인쇄 경로는 Windows 응용 프로그램에서 인쇄를 처리 하는 방법을 다시 정의 하는 새로운 Windows 기능입니다. 는 문서 표시 언어 (예: RTF), 인쇄 스풀러 형식 (예: WMF) 및 페이지 설명 언어 (예: PCL 또는 포스트 스크립트)를 대체할 수있습니다.새로운인쇄경로는응용프로그램게시에서로XPS형식을유지관리합니다.[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 인쇄 드라이버 또는 장치의 최종 처리  
   
  Xps 인쇄 경로는 xps 프린터 드라이버 모델 (XPSDrv)을 기반으로 하며,이를 통해 인쇄, 향상 된 색 [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] 지원, 향상 된 인쇄 성능 등의 개발자에 게 몇 가지 이점을 제공 합니다. XPSDrv에 대 한 자세한 내용은 [Windows 드라이버 키트 설명서](/windows-hardware/drivers/)를 참조 하세요.  
   
- XPS 문서에 대 한 인쇄 스풀러 작업은 기본적으로 이전 버전의 Windows와 동일 합니다. 그러나 기존 GDI 인쇄 경로 외에도 XPS 인쇄 경로를 지원 하도록 향상 되었습니다. 새 인쇄 경로는 기본적으로 XPS 스풀 파일을 사용 합니다. 이전 버전의 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 용으로 작성 된 사용자 모드 프린터 드라이버는 계속 작동 하지만 xps 인쇄 경로를 사용 하려면 XPSDrv (xps 프린터 드라이버)가 필요 합니다.  
+ XPS 문서에 대 한 인쇄 스풀러 작업은 기본적으로 이전 버전의 Windows와 동일 합니다. 그러나 기존 GDI 인쇄 경로 외에도 XPS 인쇄 경로를 지원 하도록 향상 되었습니다. 새 인쇄 경로는 기본적으로 XPS 스풀 파일을 사용 합니다. 이전 버전의 Windows 용으로 작성 된 사용자 모드 프린터 드라이버는 계속 작동 하지만 XPS 인쇄 경로를 사용 하려면 XPSDrv (XPS 프린터 드라이버)가 필요 합니다.  
   
  XPS 인쇄 경로의 이점은 다음과 같습니다.  
   

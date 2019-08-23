@@ -17,12 +17,12 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: 983860c680b7c9bcf36406f61582a6b641fd26a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bd0010ccd3c7f6b2f4433fe8ce234bc806754260
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645299"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916237"
 ---
 # <a name="custom-serialization"></a>사용자 지정 serialization
 사용자 지정 serialization은 형식의 serialization 및 deserialization을 제어하는 프로세스입니다. serialization을 제어하면 형식의 핵심 기능에 영향을 주지 않고 다양한 형식 사이에 직렬화 및 deserialize할 수 있는 기능인 직렬화 호환성을 유지할 수 있습니다. 예를 들어 첫 번째 버전의 형식에는 두 개의 필드만 있을 수 있습니다. 다음 버전의 형식에는 몇 개의 필드가 더 추가될 수 있습니다. 하지만 응용 프로그램의 두 번째 버전에서는 여전히 두 형식을 모두 serialize 및 deserialize할 수 있어야 합니다. 다음 단원에서는 serialization을 제어하는 방법에 대해 설명합니다.
@@ -30,7 +30,7 @@ ms.locfileid: "64645299"
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
 > [!IMPORTANT]
->  .NET Framework 4.0 이전 버전에서는 부분적으로 신뢰할 수 있는 어셈블리의 사용자 지정 사용자 데이터를 serialization하는 데 GetObjectData가 사용되었습니다. 버전 4.0부터 이 메서드는 부분적으로 신뢰할 수 있는 어셈블리에서 실행하지 못하도록 하는 <xref:System.Security.SecurityCriticalAttribute> 특성으로 표시됩니다. 이 문제를 해결하려면 <xref:System.Runtime.Serialization.ISafeSerializationData> 인터페이스를 구현합니다.  
+> .NET Framework 4.0 이전 버전에서는 부분적으로 신뢰할 수 있는 어셈블리의 사용자 지정 사용자 데이터를 serialization하는 데 GetObjectData가 사용되었습니다. 버전 4.0부터 이 메서드는 부분적으로 신뢰할 수 있는 어셈블리에서 실행하지 못하도록 하는 <xref:System.Security.SecurityCriticalAttribute> 특성으로 표시됩니다. 이 문제를 해결하려면 <xref:System.Runtime.Serialization.ISafeSerializationData> 인터페이스를 구현합니다.  
   
 ## <a name="running-custom-methods-during-and-after-serialization"></a>serialization 도중 및 이후에 사용자 지정 메서드 실행  
  가장 효과적이고 쉬운 방법(.NET Framework의 버전 2.0에서 소개된 방법)은 serialization 도중과 이후에 데이터를 수정하는 데 사용되는 메서드에 다음 특성을 적용하는 것입니다.  

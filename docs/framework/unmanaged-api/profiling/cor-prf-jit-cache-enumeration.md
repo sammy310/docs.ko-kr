@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a62199563c620156885c941204207b185834beb4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 30500e8ea55f8298b9a980e34dc611b58a51bdcc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752153"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916395"
 ---
-# <a name="corprfjitcache-enumeration"></a>COR_PRF_JIT_CACHE 열거형
+# <a name="cor_prf_jit_cache-enumeration"></a>COR_PRF_JIT_CACHE 열거형
 캐시된 함수 검색의 결과를 나타냅니다.  
   
 > [!NOTE]
->  `COR_PRF_CACHED_FUNCTION_FOUND` 값이 0 이면 높으므로 `COR_PRF_JIT_CACHE` 를 부울 대신 사용할 수 없습니다.  
+> `COR_PRF_CACHED_FUNCTION_FOUND`의 값이 0 이므로 `COR_PRF_JIT_CACHE` 부울 서로게이트로 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,15 +42,15 @@ typedef enum {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`COR_PRF_FUNCTION_FOUND`|검색 함수를 찾을 수 있습니다.|  
-|`COR_PRF_FUNCTION_NOT_FOUND`|검색 함수를 찾을 수 없습니다.|  
+|`COR_PRF_FUNCTION_FOUND`|검색에서 함수를 찾았습니다.|  
+|`COR_PRF_FUNCTION_NOT_FOUND`|검색에서 함수를 찾지 못했습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
- **라이브러리:** CorGuids.lib  
+ **라이브러리** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

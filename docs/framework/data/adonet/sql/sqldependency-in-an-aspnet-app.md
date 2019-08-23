@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: 67c1307bb18b3e86e05b56f4853a39f6831ab9cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a93cb9da44985fa29a4975875564b384117ce76f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780291"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938462"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>ASP.NET 응용 프로그램에서 SqlDependency
 이 단원의 예제에서는 ASP.NET <xref:System.Data.SqlClient.SqlDependency> 개체를 활용하여 <xref:System.Web.Caching.SqlCacheDependency>를 간접적으로 사용하는 방법을 보여 줍니다. <xref:System.Web.Caching.SqlCacheDependency> 개체에서는 <xref:System.Data.SqlClient.SqlDependency>를 사용하여 알림을 수신하고 캐시를 올바르게 업데이트합니다.  
   
 > [!NOTE]
->  샘플 코드에서는 스크립트를 실행 하 여 쿼리 알림을 설정 했는지 [쿼리 알림을 사용 하도록 설정 하면](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)합니다.  
+> 이 샘플 코드에서는 [쿼리 알림을 사용 하도록 설정](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)하는 스크립트를 실행 하 여 쿼리 알림을 사용 하도록 설정 했다고 가정 합니다.  
   
 ## <a name="about-the-sample-application"></a>샘플 응용 프로그램 정보  
- 샘플 응용 프로그램 단일 ASP.NET 웹 페이지를 사용 하 여 제품 정보를 표시 합니다 **AdventureWorks** SQL Server 데이터베이스에는 <xref:System.Web.UI.WebControls.GridView> 컨트롤입니다. 페이지가 로드되면 코드에서 <xref:System.Web.UI.WebControls.Label> 컨트롤에 현재 시간을 씁니다. 그런 다음 <xref:System.Web.Caching.SqlCacheDependency> 개체를 정의하고 최대 3분 동안 캐시 데이터를 저장하도록 <xref:System.Web.Caching.Cache> 개체의 속성을 설정합니다. 그런 다음 코드에서는 데이터베이스에 연결하여 데이터를 검색합니다. 페이지가 로드되고 응용 프로그램이 실행되면 ASP.NET이 캐시에서 데이터를 검색합니다. 여기서 페이지의 시간이 변경되지 않는지를 보고 확인할 수 있습니다. 모니터링되는 데이터가 변경되면 ASP.NET은 캐시를 무효화한 다음 `GridView` 컨트롤을 새 데이터로 다시 채우고 `Label` 컨트롤에 표시된 시간을 업데이트합니다.  
+ 샘플 응용 프로그램은 단일 ASP.NET 웹 페이지를 사용 하 여 **AdventureWorks** SQL Server 데이터베이스의 제품 정보를 <xref:System.Web.UI.WebControls.GridView> 컨트롤에 표시 합니다. 페이지가 로드되면 코드에서 <xref:System.Web.UI.WebControls.Label> 컨트롤에 현재 시간을 씁니다. 그런 다음 <xref:System.Web.Caching.SqlCacheDependency> 개체를 정의하고 최대 3분 동안 캐시 데이터를 저장하도록 <xref:System.Web.Caching.Cache> 개체의 속성을 설정합니다. 그런 다음 코드에서는 데이터베이스에 연결하여 데이터를 검색합니다. 페이지가 로드되고 응용 프로그램이 실행되면 ASP.NET이 캐시에서 데이터를 검색합니다. 여기서 페이지의 시간이 변경되지 않는지를 보고 확인할 수 있습니다. 모니터링되는 데이터가 변경되면 ASP.NET은 캐시를 무효화한 다음 `GridView` 컨트롤을 새 데이터로 다시 채우고 `Label` 컨트롤에 표시된 시간을 업데이트합니다.  
   
 ## <a name="creating-the-sample-application"></a>샘플 응용 프로그램 만들기  
  샘플 응용 프로그램을 만들고 실행하려면 다음 단계를 따르세요.  
@@ -47,7 +47,7 @@ ms.locfileid: "61780291"
      [!code-csharp[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#1)]
      [!code-vb[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#1)]  
   
-5. `GetConnectionString` 및 `GetSQL`의 두 가지 도우미 메서드를 추가합니다. 정의된 연결 문자열은 통합 보안을 사용합니다. 사용 중인 계정에 필요한 데이터베이스 권한이 올바르며 있는지 확인 해야 샘플 데이터베이스 **AdventureWorks**, 알림을 사용 하도록 설정 했습니다.
+5. `GetConnectionString` 및 `GetSQL`의 두 가지 도우미 메서드를 추가합니다. 정의된 연결 문자열은 통합 보안을 사용합니다. 사용 중인 계정에 필요한 데이터베이스 권한이 있는지, 그리고 **AdventureWorks**샘플 데이터베이스에 알림이 설정 되어 있는지 확인 해야 합니다.
   
      [!code-csharp[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#2)]
      [!code-vb[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#2)]  

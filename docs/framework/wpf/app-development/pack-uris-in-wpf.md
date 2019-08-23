@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: f9ea4acfc7ba86d3424bb11af0de685651f99c61
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: ad928fb223ce22c65bb86a78c7d4cd006651a2d5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796748"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950752"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF의 Pack URI
 
@@ -85,7 +85,7 @@ pack://*authority*/*path*
 
 ## <a name="resource-file-pack-uris"></a>리소스 파일 Pack URI
 
-리소스 파일은 항목으로 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Resource` 구성 되 고 어셈블리로 컴파일됩니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]로컬 어셈블리로 컴파일되거나 로컬 어셈블리 [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] 에서 참조 되는 어셈블리로 컴파일되는 리소스 파일을 식별 하는 데 사용할 수 있는 pack 생성을 지원 합니다.
+리소스 파일은 MSBuild `Resource` 항목으로 구성 되 고 어셈블리로 컴파일됩니다. WPF는 로컬 어셈블리로 컴파일되거나 로컬 어셈블리에서 참조 되는 어셈블리로 컴파일되는 리소스 파일을 식별 하는 데 사용할 수 있는 pack Uri 생성을 지원 합니다.
 
 <a name="Local_Assembly_Resource_File"></a>
 
@@ -186,9 +186,9 @@ pack://*authority*/*path*
 
 ## <a name="page-files"></a>페이지 파일
 
-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]항목으로 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` 구성 된 파일은 리소스 파일과 같은 방식으로 어셈블리로 컴파일됩니다. 따라서 리소스 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 파일용 pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] 을 사용 하 여 항목을 `Page` 식별할 수 있습니다.
+MSBuild `Page` 항목으로 구성 된 XAML 파일은 리소스 파일과 같은 방식으로 어셈블리로 컴파일됩니다. 따라서 리소스 파일 `Page` 에 대 한 pack uri를 사용 하 여 MSBuild 항목을 식별할 수 있습니다.
 
-일반적으로 항목 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 으로 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` 구성 되는 파일 형식에는 다음 중 하나가 루트 요소로 포함 됩니다.
+일반적으로 MSBuild [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] `Page` 항목으로 구성 되는 파일 형식에는 다음 중 하나가 루트 요소로 포함 됩니다.
 
 - <xref:System.Windows.Window?displayProperty=nameWithType>
 

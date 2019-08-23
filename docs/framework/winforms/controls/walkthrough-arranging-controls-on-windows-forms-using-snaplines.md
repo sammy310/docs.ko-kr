@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: 3ce6c250fadbb56b341d5e8dec3a9cb9d28940fe
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 8ac1ba6b8121aabea3c992ca5b943f231fc19ce2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040249"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950068"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>연습: Windows Forms에서 맞춤선을 사용하여 컨트롤 정렬
 폼의 정확한 컨트롤 배치는 많은 애플리케이션에서 우선 순위가 높습니다. Windows Forms 디자이너는이를 위해 다양 한 레이아웃 도구를 제공 합니다. 가장 중요 <xref:System.Windows.Forms.Design.Behavior.SnapLine> 한 기능 중 하나는 기능입니다.
@@ -87,7 +87,7 @@ ms.locfileid: "69040249"
 1. <xref:System.Windows.Forms.Button> 컨트롤 중 하나를 선택 하 고 맞춤선이 나타날 때까지 폼의 오른쪽 테두리에 가깝게 이동 합니다. 오른쪽 테두리의 맞춤선 거리는 컨트롤의 <xref:System.Windows.Forms.Control.Margin%2A> 속성 및 폼의 <xref:System.Windows.Forms.Control.Padding%2A> 속성 값의 합입니다.
 
 > [!NOTE]
->  폼의 <xref:System.Windows.Forms.Control.Padding%2A> 속성이 0, 0, 0, 0으로 설정 된 경우 Windows Forms 디자이너는 폼에 9, 9, 9 <xref:System.Windows.Forms.Control.Padding%2A> , 9의 그림자 값을 제공 합니다. 이 동작을 재정의 하려면 0, 0, 0, 0이 아닌 값을 할당 합니다.
+> 폼의 <xref:System.Windows.Forms.Control.Padding%2A> 속성이 0, 0, 0, 0으로 설정 된 경우 Windows Forms 디자이너는 폼에 9, 9, 9 <xref:System.Windows.Forms.Control.Padding%2A> , 9의 그림자 값을 제공 합니다. 이 동작을 재정의 하려면 0, 0, 0, 0이 아닌 값을 할당 합니다.
 
 1. <xref:System.Windows.Forms.Button> **속성** 창에서 <xref:System.Windows.Forms.Control.Margin%2A> 항목을<xref:System.Windows.Forms.Control.Margin%2A> 확장 하 고 속성을0으로설정하여컨트롤의속성값을변경합니다.<xref:System.Windows.Forms.Padding.All%2A> 자세한 [내용은 연습: 안쪽 여백, 여백 및 AutoSize 속성](windows-forms-controls-padding-autosize.md)을 사용 하 여 Windows Forms 컨트롤 레이아웃
 

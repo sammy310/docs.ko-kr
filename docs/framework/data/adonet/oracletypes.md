@@ -2,18 +2,18 @@
 title: OracleType
 ms.date: 03/30/2017
 ms.assetid: 18143304-d5c7-4c95-9995-678088d0c142
-ms.openlocfilehash: eb45bc5b7bc317d04f5275afadbb1879117e3af0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2f3820a0a61241643894533cc431ecc88b58fcef
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586950"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938884"
 ---
 # <a name="oracletypes"></a>OracleType
 .NET Framework Data Provider for Oracle에는 Oracle 데이터 형식으로 작업하는 데 사용할 수 있는 여러 가지 구조가 들어 있습니다. 여기에는 <xref:System.Data.OracleClient.OracleNumber> 및 <xref:System.Data.OracleClient.OracleString>이 포함됩니다.  
   
 > [!NOTE]
->  이러한 구조의 전체 목록은 <xref:System.Data.OracleClient>를 참조하세요.  
+> 이러한 구조의 전체 목록은 <xref:System.Data.OracleClient>를 참조하세요.  
   
  다음은 C# 예제입니다.  
   
@@ -52,7 +52,7 @@ public void Setup(string connectionString)
 ```  
   
 ## <a name="retrieving-data-from-the-oracle-table"></a>Oracle 테이블에서 데이터 검색  
- 이 예제에서는 **OracleDataReader** 데이터에 액세스 하 고 몇 가지를 사용 하 여 **OracleType** 데이터를 표시 하는 구조입니다.  
+ 이 예에서는 **OracleDataReader** 를 사용 하 여 데이터에 액세스 하 고 여러 **OracleType** 구조를 사용 하 여 데이터를 표시 합니다.  
   
 ```csharp  
 public void ReadOracleTypesExample(string connectionString)  

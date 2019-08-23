@@ -3,15 +3,15 @@ title: <certificateReference>
 ms.date: 03/30/2017
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
 author: BrucePerlerMS
-ms.openlocfilehash: c7dc9cfff15e70eff0086cfd98a19f3360ab8bb0
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: da8ea128466457409334cd0b4ee3246a923f969a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423036"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941925"
 ---
 # <a name="certificatereference"></a>\<certificateReference>
-찾기 및 인증서 저장소에서 X.509 인증서의 유효성을 검사 하는 데 사용 되는 설정을 지정 합니다.  
+인증서 저장소에서 x.509 인증서를 찾고 유효성을 검사 하는 데 사용 되는 설정을 지정 합니다.  
   
  \<system.identityModel.services>  
 \<federationConfiguration>  
@@ -41,22 +41,22 @@ ms.locfileid: "67423036"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
 |storeName|X.509 인증서 저장소의 이름입니다. 기본값은 "My"입니다. 선택 사항입니다.|  
-|storeLocation|<xref:System.Security.Cryptography.X509Certificates.StoreLocation> X.509 인증서 저장소의 위치를 지정 하는 값입니다. 기본값은 "LocalMachine"입니다. 선택 사항입니다.|  
-|x509FindType|<xref:System.Security.Cryptography.X509Certificates.X509FindType> 를 실행 해야 하는 검색의 유형을 지정 하는 값입니다. 기본값은 "FindBySubjectDistinguishedName"입니다. 선택 사항입니다.|  
+|storeLocation|X.509 인증서 저장소의 위치를 지정 하는 값입니다.<xref:System.Security.Cryptography.X509Certificates.StoreLocation> 기본값은 "LocalMachine"입니다. 선택 사항입니다.|  
+|x509FindType|실행할 검색 유형을 지정 하는 값입니다.<xref:System.Security.Cryptography.X509Certificates.X509FindType> 기본값은 "FindBySubjectDistinguishedName"입니다. 선택 사항입니다.|  
 |findValue|X.509 인증서 저장소에서 검색할 값입니다. 선택 사항입니다.|  
-|isChainIncluded|인증서 체인을 사용 하 여 유효성 검사를 수행할지 여부를 지정 합니다. 기본값은 "true"; 유효성 검사 인증서 체인을 사용 하 여 수행 됩니다. 선택 사항입니다.|  
+|isChainIncluded|인증서 체인을 사용 하 여 유효성 검사를 수행할지 여부를 지정 합니다. 기본값은 "true"입니다. 유효성 검사는 인증서 체인을 사용 하 여 수행 됩니다. 선택 사항입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|암호화 및 토큰 암호 해독에 사용 되는 인증서를 구성 합니다.|  
+|[\<serviceCertificate>](servicecertificate.md)|토큰을 암호화 하 고 해독 하는 데 사용 되는 인증서를 구성 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `<certificateReference>` 요소 찾기 및 인증서 저장소에서 X.509 인증서의 유효성을 검사 하는 데 사용 되는 설정을 지정 합니다. 자식 요소로 지정 된 경우는 `<serviceCertificate>` 요소를 암호화 및 토큰 암호 해독에 사용 되는 X.509 인증서의 위치 및 인증 설정을 지정 합니다. 합니다 `<certificateReference>` 에서 요소가 표시 되는 <xref:System.ServiceModel.Configuration.CertificateReferenceElement> 클래스입니다.
+ 요소 `<certificateReference>` 는 인증서 저장소에서 x.509 인증서를 찾고 유효성을 검사 하는 데 사용 되는 설정을 지정 합니다. `<serviceCertificate>` 요소를 요소의 자식 요소로 지정 하면 토큰을 암호화 하 고 해독 하는 데 사용 되는 x.509 인증서의 위치 및 확인 설정을 지정 합니다. 합니다 `<certificateReference>` 에서 요소가 표시 되는 <xref:System.ServiceModel.Configuration.CertificateReferenceElement> 클래스입니다.

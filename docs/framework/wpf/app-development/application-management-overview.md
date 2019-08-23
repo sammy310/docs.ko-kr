@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: a5808261ec9fe957ee993177590446389f219609
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 448c212e4afe547dc6342b000fe06d5340db112c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818013"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958735"
 ---
 # <a name="application-management-overview"></a>애플리케이션 관리 개요
 모든 애플리케이션은 애플리케이션 구현 및 관리에 적용하는 일반적인 기능 집합을 공유하는 경향이 있습니다. 이 항목에서는 응용 프로그램을 만들고 관리 하기 위한 <xref:System.Windows.Application> 클래스의 기능에 대해 간략하게 설명 합니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "68818013"
 - 코드를 사용할 `partial` 때 클래스는 태그의 `x:Class` 특성으로 지정 되는 동일한 이름의 클래스 여야 하며에서 <xref:System.Windows.Application>파생 되어야 합니다. 이렇게 하면 응용 프로그램을 빌드할 때 태그 파일에 대해 생성 `partial` 되는 클래스와 코드 숨김이 연결 될 수 있습니다 ( [WPF 응용 프로그램 빌드](building-a-wpf-application-wpf.md)참조).  
   
 > [!NOTE]
->  Visual Studio를 사용 하 여 새 WPF 응용 프로그램 프로젝트 또는 WPF 브라우저 응용 프로그램 프로젝트를 만드는 경우 응용 프로그램 정의는 기본적으로 포함 되며 태그와 코드 숨김으로 모두 사용 하 여 정의 됩니다.  
+> Visual Studio를 사용 하 여 새 WPF 응용 프로그램 프로젝트 또는 WPF 브라우저 응용 프로그램 프로젝트를 만드는 경우 응용 프로그램 정의는 기본적으로 포함 되며 태그와 코드 숨김으로 모두 사용 하 여 정의 됩니다.  
   
  이 코드는 애플리케이션 정의를 구현하는 데 필요한 최소한의 코드이지만, 그러나 응용 프로그램을 빌드하고 실행 하기 전에 응용 프로그램 정의에 대 한 추가 MSBuild 구성을 설정 해야 합니다.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "68818013"
  [!code-vb[AppShowWindowHardSnippets#StartupEventCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AppShowWindowHardSnippets/VisualBasic/Application.xaml.vb#startupeventcodebehind)]  
   
 > [!NOTE]
->  독립 실행형 <xref:System.Windows.Window> 응용 프로그램에서 인스턴스화될 첫 번째는 기본적으로 주 응용 프로그램 창이 됩니다. 이 <xref:System.Windows.Window> 개체는 <xref:System.Windows.Application.MainWindow%2A?displayProperty=nameWithType> 속성에서 참조 됩니다. 처음 인스턴스화되 <xref:System.Windows.Application.MainWindow%2A> <xref:System.Windows.Window> 는 것과 다른 창이 주 창인 경우 속성 값을 프로그래밍 방식으로 변경할 수 있습니다.  
+> 독립 실행형 <xref:System.Windows.Window> 응용 프로그램에서 인스턴스화될 첫 번째는 기본적으로 주 응용 프로그램 창이 됩니다. 이 <xref:System.Windows.Window> 개체는 <xref:System.Windows.Application.MainWindow%2A?displayProperty=nameWithType> 속성에서 참조 됩니다. 처음 인스턴스화되 <xref:System.Windows.Application.MainWindow%2A> <xref:System.Windows.Window> 는 것과 다른 창이 주 창인 경우 속성 값을 프로그래밍 방식으로 변경할 수 있습니다.  
   
  처음으로 XBAP를 시작 하면로 <xref:System.Windows.Controls.Page>이동 하는 경우가 많습니다. 다음 코드에서 이를 확인할 수 있습니다.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "68818013"
  이 태그는 창을 여는 이전 코드와 같은 효과를 갖습니다.  
   
 > [!NOTE]
->  탐색에 대 한 자세한 내용은 [탐색 개요](navigation-overview.md)를 참조 하세요.  
+> 탐색에 대 한 자세한 내용은 [탐색 개요](navigation-overview.md)를 참조 하세요.  
   
  매개 변수가 없는 생성자를 <xref:System.Windows.Application.Startup> 사용 하 여 인스턴스화해야 <xref:System.Windows.Window> 하거나 해당 속성을 설정 하거나 표시 하기 전에 해당 이벤트를 구독 하거나 명령줄 인수를 처리 해야 하는 경우 이벤트를 처리 하 여를 열어야 합니다. 응용 프로그램이 시작 될 때 제공 된입니다.  
   
@@ -219,7 +219,7 @@ ms.locfileid: "68818013"
  을 <xref:System.Windows.Window> 활성화 하 고 비활성화할 수도 있습니다. 자세한 내용은 <xref:System.Windows.Window.Activated?displayProperty=nameWithType> 및 <xref:System.Windows.Window.Deactivated?displayProperty=nameWithType>를 참조하세요.  
   
 > [!NOTE]
->  Xbap에 <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> 대해서 도발생하지않습니다.<xref:System.Windows.Application.Activated?displayProperty=nameWithType>  
+> Xbap에 <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> 대해서 도발생하지않습니다.<xref:System.Windows.Application.Activated?displayProperty=nameWithType>  
   
 <a name="Application_Shutdown"></a>   
 ### <a name="application-shutdown"></a>애플리케이션 종료  
@@ -236,7 +236,7 @@ ms.locfileid: "68818013"
  응용 <xref:System.Windows.Application> 프로그램 종료를 관리 하는 데 도움이 <xref:System.Windows.Application.Shutdown%2A> 되도록는 메서드 <xref:System.Windows.Application.ShutdownMode%2A> , 속성 및 <xref:System.Windows.Application.SessionEnding> 및 <xref:System.Windows.Application.Exit> 이벤트를 제공 합니다.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.Shutdown%2A>가 <xref:System.Security.Permissions.UIPermission>있는 응용 프로그램 에서만를 호출할 수 있습니다. 독립 실행형 WPF 응용 프로그램에는 항상이 권한이 있습니다. 그러나 인터넷 영역 부분 신뢰 보안 샌드박스에서 실행 되는 Xbap는 그렇지 않습니다.  
+> <xref:System.Windows.Application.Shutdown%2A>가 <xref:System.Security.Permissions.UIPermission>있는 응용 프로그램 에서만를 호출할 수 있습니다. 독립 실행형 WPF 응용 프로그램에는 항상이 권한이 있습니다. 그러나 인터넷 영역 부분 신뢰 보안 샌드박스에서 실행 되는 Xbap는 그렇지 않습니다.  
   
 #### <a name="shutdown-mode"></a>종료 모드  
  대부분의 애플리케이션은 모든 창을 닫거나 주 창을 닫으면 종료됩니다. 하지만 다른 애플리케이션과 관련된 조건이 특정 애플리케이션의 종료 시점을 결정하는 경우가 있습니다. <xref:System.Windows.Application.ShutdownMode%2A> 다음<xref:System.Windows.ShutdownMode> 열거형 값 중 하나를 사용 하 여를 설정 하 여 응용 프로그램을 종료 하는 조건을 지정할 수 있습니다.  
@@ -254,7 +254,7 @@ ms.locfileid: "68818013"
  응용 프로그램별 종료 조건이 있는 경우를로 <xref:System.Windows.Application.ShutdownMode%2A> <xref:System.Windows.ShutdownMode.OnExplicitShutdown>설정 합니다. 이 경우 명시적으로 메서드를 <xref:System.Windows.Application.Shutdown%2A> 호출 하 여 응용 프로그램을 종료 하는 것은 사용자의 책임입니다. 그렇지 않으면 모든 창이 닫힌 경우에도 응용 프로그램이 계속 실행 됩니다. <xref:System.Windows.Application.ShutdownMode%2A> 가 또는 일<xref:System.Windows.ShutdownMode.OnMainWindowClose>경우 <xref:System.Windows.Application.Shutdown%2A>를암시적으로호출 합니다<xref:System.Windows.ShutdownMode.OnLastWindowClose> .  
   
 > [!NOTE]
->  <xref:System.Windows.Application.ShutdownMode%2A>는 XBAP에서 설정할 수 있지만 무시 됩니다. XBAP는 브라우저에서 벗어나거나 XBAP를 호스트 하는 브라우저가 닫히면 항상 종료 됩니다. 자세한 내용은 [탐색 개요](navigation-overview.md)를 참조하세요.  
+> <xref:System.Windows.Application.ShutdownMode%2A>는 XBAP에서 설정할 수 있지만 무시 됩니다. XBAP는 브라우저에서 벗어나거나 XBAP를 호스트 하는 브라우저가 닫히면 항상 종료 됩니다. 자세한 내용은 [탐색 개요](navigation-overview.md)를 참조하세요.  
   
 #### <a name="session-ending"></a>세션 종료  
  <xref:System.Windows.Application.ShutdownMode%2A> 속성에서 설명 하는 종료 조건은 응용 프로그램에만 적용 됩니다. 하지만 외부 조건에 따라 애플리케이션이 종료되는 경우도 있습니다. 가장 일반적인 외부 조건은 사용자가 다음 작업을 통해 Windows 세션을 종료할 때 발생 합니다.  
@@ -277,7 +277,7 @@ ms.locfileid: "68818013"
  이 예제에서 코드는 <xref:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding%2A> 속성을 검사 하 여 Windows 세션이 종료 되는 방법을 확인 합니다. 또한 이 값을 사용하여 사용자에게 확인 메시지를 표시합니다. 사용자가 세션을 종료 하지 않으려는 경우 코드는를로 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> `true` 설정 하 여 Windows 세션의 종료를 방지 합니다.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.SessionEnding>는 Xbap에 대해 발생 하지 않습니다.
+> <xref:System.Windows.Application.SessionEnding>는 Xbap에 대해 발생 하지 않습니다.
 
 #### <a name="exit"></a>종료  
  애플리케이션이 종료될 때 애플리케이션 상태 유지와 같은 몇 가지 최종 처리를 수행해야 할 경우가 있습니다. 이러한 상황에서는 이벤트 처리기가 다음 예제 <xref:System.Windows.Application.Exit> 에서 수행 하는 `App_Exit` 것 처럼 이벤트를 처리할 수 있습니다. 이 클래스는 *app.xaml* 파일에서 이벤트 처리기로 정의 됩니다. 해당 구현은 *App.xaml.cs* 및 *응용 프로그램 .xaml* 파일에서 강조 표시 됩니다.
@@ -301,7 +301,7 @@ ms.locfileid: "68818013"
  대부분의 경우 애플리케이션은 운영 체제에서 사용자 요청에 대한 응답으로 시작하게 됩니다. 하지만 다른 애플리케이션에서 일부 특정 작업을 수행하기 위해 애플리케이션을 시작할 수도 있습니다. 시작된 애플리케이션이 종료될 경우 시작하는 애플리케이션에서 시작된 애플리케이션이 종료되는 조건을 알고 싶을 수 있습니다. 이러한 상황에서 Windows는 응용 프로그램이 종료 될 때 응용 프로그램 종료 코드를 반환할 수 있도록 허용 합니다. 기본적으로 WPF 응용 프로그램은 종료 코드 값 0을 반환 합니다.  
   
 > [!NOTE]
->  Visual Studio에서 디버그할 때 응용 프로그램이 종료 되 면 **출력** 창에 다음과 같은 메시지에서 응용 프로그램 종료 코드가 표시 됩니다.  
+> Visual Studio에서 디버그할 때 응용 프로그램이 종료 되 면 **출력** 창에 다음과 같은 메시지에서 응용 프로그램 종료 코드가 표시 됩니다.  
 >   
 >  `The program '[5340] AWPFApp.vshost.exe: Managed' has exited with code 0 (0x0).`  
 >   
@@ -315,7 +315,7 @@ ms.locfileid: "68818013"
  <xref:System.Windows.Application.Exit> 이벤트를 처리 하 여 종료 코드의 값을 검색 하 고 변경할 수 있습니다. 이벤트 처리기는 <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A> 속성을 사용 <xref:System.Windows.ExitEventArgs> 하 여 종료 코드에 대 한 액세스를 제공 하는를 전달 합니다. <xref:System.Windows.Application.Exit> 자세한 내용은 <xref:System.Windows.Application.Exit>을 참조하세요.  
   
 > [!NOTE]
->  독립 실행형 응용 프로그램과 Xbap 모두에서 종료 코드를 설정할 수 있습니다. 그러나 Xbap의 종료 코드 값은 무시 됩니다.  
+> 독립 실행형 응용 프로그램과 Xbap 모두에서 종료 코드를 설정할 수 있습니다. 그러나 Xbap의 종료 코드 값은 무시 됩니다.  
   
 <a name="Unhandled_Exceptions"></a>   
 ### <a name="unhandled-exceptions"></a>처리되지 않은 예외  

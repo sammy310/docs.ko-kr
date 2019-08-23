@@ -6,12 +6,12 @@ helpviewer_keywords:
 - value inheritance [WPF]
 - properties [WPF], value inheritance
 ms.assetid: d7c338f9-f2bf-48ed-832c-7be58ac390e4
-ms.openlocfilehash: 1c5547955a1d5d20938e3896406631da0fae0c5d
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: eb757d039437d9954a2b648c5f758dffa3fee3d2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860042"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958358"
 ---
 # <a name="property-value-inheritance"></a>속성 값 상속
 속성 값 상속은 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 속성 시스템의 기능입니다. 속성 값 상속을 통해 요소 트리의 자식 요소가 부모 요소에서 특정 속성 값을 얻어 가장 근접한 부모 요소의 아무 곳에서나 설정되었을 때 해당 값을 상속합니다. 부모 요소는 속성 값 상속을 통해 값을 얻었을 수 있으므로 시스템이 완전히 페이지 루트로 되돌아갈 수 있습니다. 속성 값 상속은 기본 속성 시스템 동작이 아닙니다. 속성이 자식 요소에서 속성 값 상속을 시작하게 하려면 특정 메타데이터 설정을 사용하여 속성을 설정해야 합니다.  
@@ -22,22 +22,22 @@ ms.locfileid: "67860042"
   
 <a name="Practical_Applications_of_Property_Value_Inheritance"></a>   
 ## <a name="practical-applications-of-property-value-inheritance"></a>속성 값 상속의 실제 애플리케이션  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Api에 사용 하도록 설정 하는 속성 상속을 포함 하는 여러 속성이 포함 됩니다. 일반적으로 이러한 속성은 페이지당 한 번만 속성을 설정하는 것이 적절하지만 해당 속성이 기본 요소 클래스 중 하나의 멤버이기도 하므로 대부분의 자식 요소에도 존재하는 속성을 포함합니다. 예를 들어를 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 속성 컨트롤 방향을 이동 콘텐츠 표시 및 페이지에 정렬 합니다. 일반적으로 모든 자식 요소에서 텍스트 흐름 개념을 일관성 있게 처리하려고 합니다. 어떤 이유로 사용자 또는 환경 작업에 의해 요소 트리의 몇몇 수준에서 다시 설정된 흐름 방향은 일반적으로 전체적으로 다시 설정되어야 합니다. 경우는 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 상속 하려고 속성, 값을 설정 하거나 응용 프로그램의 각 페이지의 표시 요구를 포함 하는 요소 트리의 수준에서 한 번 재설정만 필요 합니다. 초기 기본값도 이 방식으로 상속됩니다. 속성 값 상속 모델에서는 드물지만 다양한 흐름 방향을 의도적으로 포함하는 경우 개별 요소가 값을 다시 설정할 수 있습니다.  
+ Api [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에는 속성 상속이 설정 된 여러 속성이 포함 되어 있습니다. 일반적으로 이러한 속성은 페이지당 한 번만 속성을 설정하는 것이 적절하지만 해당 속성이 기본 요소 클래스 중 하나의 멤버이기도 하므로 대부분의 자식 요소에도 존재하는 속성을 포함합니다. 예를 들어 속성 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 은 이동 된 콘텐츠가 페이지에 표시 되 고 정렬 되어야 하는 방향을 제어 합니다. 일반적으로 모든 자식 요소에서 텍스트 흐름 개념을 일관성 있게 처리하려고 합니다. 어떤 이유로 사용자 또는 환경 작업에 의해 요소 트리의 몇몇 수준에서 다시 설정된 흐름 방향은 일반적으로 전체적으로 다시 설정되어야 합니다. <xref:System.Windows.FrameworkElement.FlowDirection%2A> 속성이 상속 되 면 응용 프로그램의 각 페이지에 대 한 프레젠테이션 요구를 포함 하는 요소 트리의 수준에서 값을 한 번만 설정 하거나 다시 설정 해야 합니다. 초기 기본값도 이 방식으로 상속됩니다. 속성 값 상속 모델에서는 드물지만 다양한 흐름 방향을 의도적으로 포함하는 경우 개별 요소가 값을 다시 설정할 수 있습니다.  
   
 <a name="Making_a_Custom_Property_Inheritable"></a>   
 ## <a name="making-a-custom-property-inheritable"></a>사용자 지정 속성을 상속 가능으로 설정  
  사용자 지정 속성의 메타데이터를 변경하여 자체 사용자 지정 속성을 상속 가능으로 설정할 수도 있습니다. 하지만 속성을 상속 가능으로 지정할 경우 성능상 몇 가지 사항을 고려해야 합니다. 속성에 설정된 로컬 값이 없거나 스타일, 템플릿 또는 데이터 바인딩을 통해 얻은 값이 없는 경우 상속 가능 속성은 논리 트리에서 모든 자식 요소에 할당된 속성 값을 제공합니다.  
   
- 속성을 값 상속에 참여하도록 설정하려면 [연결된 속성 등록](how-to-register-an-attached-property.md)에 설명된 대로 사용자 지정 연결된 속성을 만듭니다. 메타 데이터를 사용 하 여 속성을 등록 (<xref:System.Windows.FrameworkPropertyMetadata>) 하 고 해당 메타 데이터 내의 옵션 설정에서 "Inherits" 옵션을 지정 합니다. 또한 속성에 설정된 기본값이 있는지 확인합니다. 이제 이 값이 상속되기 때문입니다. 속성을 연결된 속성으로 등록하더라도 "연결되지 않은" 종속성 속성의 경우처럼 소유자 형식에서 get/set 액세스에 대한 속성 “래퍼”를 만들어야 할 수 있습니다. 이렇게 하면 상속 가능한 속성을 설정할 수 있습니다 소유자 형식 또는 파생된 형식에서 직접 속성 래퍼를 사용 하 여에 연결된 된 속성 구문을 사용 하 여 설정할 수 있습니다 또는 <xref:System.Windows.DependencyObject>합니다.  
+ 속성을 값 상속에 참여하도록 설정하려면 [연결된 속성 등록](how-to-register-an-attached-property.md)에 설명된 대로 사용자 지정 연결된 속성을 만듭니다. 메타 데이터 (<xref:System.Windows.FrameworkPropertyMetadata>)를 사용 하 여 속성을 등록 하 고 해당 메타 데이터 내의 옵션 설정에서 "Inherits" 옵션을 지정 합니다. 또한 속성에 설정된 기본값이 있는지 확인합니다. 이제 이 값이 상속되기 때문입니다. 속성을 연결된 속성으로 등록하더라도 "연결되지 않은" 종속성 속성의 경우처럼 소유자 형식에서 get/set 액세스에 대한 속성 “래퍼”를 만들어야 할 수 있습니다. 이 작업을 수행한 후에는 소유자 형식이 나 파생 형식에 대 한 직접 속성 래퍼를 사용 하 여 상속 가능한 속성을 설정 하거나 연결 된 속성 구문을 <xref:System.Windows.DependencyObject>사용 하 여 설정할 수 있습니다.  
   
- 연결 된 속성은 전역 속성을 개념적으로 비슷합니다. 모든 값을 확인할 수 있습니다 <xref:System.Windows.DependencyObject> 유효한 결과 받고 있습니다. 연결 된 속성에 대 한 일반적인 시나리오는 자식 요소에 속성 값을 설정 및 해당 시나리오가 해당 속성에 연결된 된 속성은 항상 각 요소에 대해 연결된 된 속성으로 암시적으로 존재 하는 경우에 더 효과적입니다 (<xref:System.Windows.DependencyObject>) 트리에서 합니다.  
+ 연결 된 속성은 전역 속성과 개념적으로 유사 합니다. 에서 값을 확인 <xref:System.Windows.DependencyObject> 하 고 유효한 결과를 가져올 수 있습니다. 연결 된 속성에 대 한 일반적인 시나리오는 자식 요소에서 속성 값을 설정 하는 것입니다. 해당 하는 속성은 항상 각 요소<xref:System.Windows.DependencyObject>에대한연결된속성으로암시적으로존재하는연결된속성인경우더효과적입니다.  
   
 > [!NOTE]
->  속성 값 상속은 연결된 종속성 속성에도 적용되는 것처럼 보일 수 있지만 런타임 트리의 특정 요소 경계를 통한 연결되지 않은 속성에 대한 상속 동작은 정의되지 않습니다. 항상 사용 하 여 <xref:System.Windows.DependencyProperty.RegisterAttached%2A> 지정 하는 속성을 등록 하려면 <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A> 메타 데이터에서입니다.  
+> 속성 값 상속은 연결된 종속성 속성에도 적용되는 것처럼 보일 수 있지만 런타임 트리의 특정 요소 경계를 통한 연결되지 않은 속성에 대한 상속 동작은 정의되지 않습니다. 항상 사용 하 여 <xref:System.Windows.DependencyProperty.RegisterAttached%2A> 지정 하는 속성을 등록 하려면 <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A> 메타 데이터에서입니다.  
   
 <a name="InheritanceContext"></a>   
 ## <a name="inheriting-property-values-across-tree-boundaries"></a>트리 경계를 넘어 속성 값 상속  
- 속성 상속은 요소 트리를 통과하는 방식으로 수행됩니다. 이 트리는 일반적으로 논리 트리와 비슷합니다. 그러나 포함 하는 경우 WPF 핵심 수준 개체와 같은 요소 트리를 정의 하는 태그에는 <xref:System.Windows.Media.Brush>, 불연속적인 논리 트리를 만들었습니다. 실제 논리적 트리를 통해 개념적으로 확장 되지 않습니다는 <xref:System.Windows.Media.Brush>논리적 트리는 WPF 프레임 워크 수준 개념 이기 때문입니다. 메서드를 사용 하는 경우 결과에 반영이 나타나면 <xref:System.Windows.LogicalTreeHelper>합니다. 그러나 속성 값 상속 논리 트리에서 이러한 차이 극복 하는 수 고으로 상속 가능한 속성이 연결된 된 속성 없습니다 의도적인 상속 차단 경계와 등록 된 상속 된 값을 전달할 수 있습니다 ( 는같은<xref:System.Windows.Controls.Frame>)가 발생 했습니다.  
+ 속성 상속은 요소 트리를 통과하는 방식으로 수행됩니다. 이 트리는 일반적으로 논리 트리와 비슷합니다. 그러나와 <xref:System.Windows.Media.Brush>같이 요소 트리를 정의 하는 태그에 WPF 핵심 수준 개체를 포함할 때마다 불연속 논리 트리를 만들었습니다. 논리적 트리는 WPF 프레임 워크 수준 개념 이므로 진정한 <xref:System.Windows.Media.Brush>논리적 트리는를 통해 개념적으로 확장 되지 않습니다. 의 <xref:System.Windows.LogicalTreeHelper>메서드를 사용 하는 경우 결과에 반영 된이를 확인할 수 있습니다. 그러나 상속 가능한 속성이 연결 된 속성으로 등록 되 고 의도적인 상속 차단 경계 (예: <xref:System.Windows.Controls.Frame>)가없는한,속성값상속은논리적트리에서이차이를연결하고,상속된값은계속전달할수있습니다.)가 발견 되었습니다.  
   
 ## <a name="see-also"></a>참고자료
 

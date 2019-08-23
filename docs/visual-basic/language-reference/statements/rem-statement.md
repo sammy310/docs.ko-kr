@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Visual Basic code, comments
 - "' comment marker character [Visual Basic]"
 ms.assetid: 34126d7f-e0f9-476d-91e6-b31b398615dc
-ms.openlocfilehash: 3c63c5613b40cb2014c77a0a996e3acb2cc304d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16149ce42e3476cf07a62298f83734fee9ec7253
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783939"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957769"
 ---
 # <a name="rem-statement-visual-basic"></a>REM 문(Visual Basic)
-프로그램의 소스 코드에 설명 주석을 포함 하는 데 사용 합니다.  
+프로그램의 소스 코드에 설명 설명을 포함 하는 데 사용 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -32,18 +32,18 @@ REM comment
   
 ## <a name="parts"></a>요소  
  `comment`  
- 선택 사항입니다. 포함할 주석의 텍스트입니다. 공간이 사이 필요 합니다 `REM` 키워드 및 `comment`합니다.  
+ 선택 사항입니다. 포함 하려는 주석의 텍스트입니다. `REM` 키워드 와`comment`사이에 공백이 필요 합니다.  
   
 ## <a name="remarks"></a>설명  
- 넣을 수 있습니다는 `REM` 문만 줄에서 다른 문 다음에 줄에 넣을 수 있습니다. `REM` 문은 줄에서 마지막 문 이어야 합니다. 다른 문의 오는 `REM` 공백 사용 하 여 해당 문에서 구분 되어야 합니다.  
+ `REM` 문을 한 줄에 단독으로 사용할 수도 있고 다른 문 다음에 오는 줄에 배치할 수도 있습니다. `REM` 문은 줄의 마지막 문 이어야 합니다. 다른 문 뒤에 오면은 `REM` 공백으로 구분 해야 합니다.  
   
- 작은따옴표를 사용할 수 있습니다 (`'`) 대신 `REM`합니다. 의견 다른 문을 동일한 줄에 오거나 단독으로 줄에 마찬가지입니다.  
+ 대신 작은따옴표 (`'`)를 사용할 수 있습니다. `REM` 이는 주석이 동일한 줄에서 다른 문을 팔 로우 하거나 한 줄에만 적용 되는지 여부에 해당 합니다.  
   
 > [!NOTE]
->  계속할 수 없습니다는 `REM` 줄 연속 시퀀스를 사용 하 여 (`_`). 주석 시작 되 면 컴파일러는 특별 한 의미에 대 한 문자를 검사 하지 않습니다. 여러 줄 주석을 사용 하 여 다른 `REM` 문 또는 주석 기호 (`'`) 각 줄에 있습니다.  
+> 줄 연속 시퀀스 ( `REM` `_`)를 사용 하 여 문을 계속할 수 없습니다. 주석이 시작 되 면 컴파일러는 특수 한 의미에 대 한 문자를 검사 하지 않습니다. 여러 줄로 된 주석의 경우 각 줄에 `REM` 다른 문이나 주석 기호 (`'`)를 사용 합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제는 `REM` 프로그램에 설명 주석을 포함 하는 데 사용 되는 문입니다. 또한 단일 따옴표 문자를 사용 하는 방법도 보여 줍니다 (`'`) 대신 `REM`합니다.  
+ 다음 예에서는 프로그램에 `REM` 설명 설명을 포함 하는 데 사용 되는 문을 보여 줍니다. 대신 작은따옴표 문자 (`'`)를 사용 하는 대신 사용할 수도 있습니다.`REM`  
   
  [!code-vb[VbVbalrStatements#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#6)]  
   

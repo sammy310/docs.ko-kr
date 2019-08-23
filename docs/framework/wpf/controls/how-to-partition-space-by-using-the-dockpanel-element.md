@@ -10,18 +10,18 @@ helpviewer_keywords:
 - DockPanel control [WPF], partitioning space
 - partitioning space [WPF]
 ms.assetid: a219b9e5-b205-4438-89b5-0a137ac463ab
-ms.openlocfilehash: ab51270644bf370944ebc933c765b40c528681c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d22a808ce3ab95e3b351408bf4cc372a335da553
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052185"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960195"
 ---
 # <a name="how-to-partition-space-by-using-the-dockpanel-element"></a>방법: DockPanel 요소를 사용하여 공간 분할
-다음 예제에서는 간단한 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 프레임 워크를 사용 하는 <xref:System.Windows.Controls.DockPanel> 요소입니다. <xref:System.Windows.Controls.DockPanel> 자식 요소에 사용 가능한 공간을 분할 합니다.  
+다음 예제에서는 요소를 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] <xref:System.Windows.Controls.DockPanel> 사용 하 여 간단한 프레임 워크를 만듭니다. 해당 자식 요소에 사용할 수 있는 파티션공간입니다.<xref:System.Windows.Controls.DockPanel>  
   
 ## <a name="example"></a>예제  
- 이 예제에서는 <xref:System.Windows.Controls.DockPanel.Dock%2A> 속성, 동일한 두 도킹 하려면 연결된 된 속성, 즉 <xref:System.Windows.Controls.Border> 요소는 <xref:System.Windows.Controls.Dock.Top> 분할 된 공간의 합니다. 세 번째 <xref:System.Windows.Controls.Border> 요소를 도킹 된 <xref:System.Windows.Controls.Dock.Left>, 너비가 200 픽셀로 설정 된 합니다. 네 번째 <xref:System.Windows.Controls.Border> 도킹 되는 <xref:System.Windows.Controls.Dock.Bottom> 화면. 마지막 <xref:System.Windows.Controls.Border> 요소 나머지 공간을 자동으로 채웁니다.  
+ 이 예제에서는 연결 <xref:System.Windows.Controls.DockPanel.Dock%2A> 된 속성인 속성을 사용 하 여 분할 된 공간의에 <xref:System.Windows.Controls.Dock.Top> 동일한 <xref:System.Windows.Controls.Border> 두 개의 요소를 도킹 합니다. 세 번째 <xref:System.Windows.Controls.Border> 요소는에 도킹 <xref:System.Windows.Controls.Dock.Left>되며 너비는 200 픽셀로 설정 됩니다. 네 번째 <xref:System.Windows.Controls.Border> 는 화면의에 도킹 <xref:System.Windows.Controls.Dock.Bottom> 됩니다. 마지막 <xref:System.Windows.Controls.Border> 요소는 남은 공간을 자동으로 채웁니다.  
   
  [!code-cpp[DockPanelOvwSample#1](~/samples/snippets/cpp/VS_Snippets_Wpf/DockPanelOvwSample/CPP/DockPanel_Ovw_Sample.cpp#1)]
  [!code-csharp[DockPanelOvwSample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/DockPanelOvwSample/CSharp/DockPanel_Ovw_Sample.cs#1)]
@@ -29,7 +29,7 @@ ms.locfileid: "62052185"
  [!code-xaml[DockPanelOvwSample#1](~/samples/snippets/xaml/VS_Snippets_Wpf/DockPanelOvwSample/XAML/default.xaml#1)]  
   
 > [!NOTE]
->  기본적으로 마지막 자식은 <xref:System.Windows.Controls.DockPanel> 요소가 나머지 할당 되지 않은 공간을 입력 합니다. 이 동작을 원하지 않으면 `LastChildFill="False"`을 설정합니다.  
+> 기본적으로 <xref:System.Windows.Controls.DockPanel> 요소의 마지막 자식은 나머지 할당 되지 않은 공간을 채웁니다. 이 동작을 원하지 않으면 `LastChildFill="False"`을 설정합니다.  
   
  컴파일된 애플리케이션은 다음과 같은 새로운 UI를 생성합니다.  
   

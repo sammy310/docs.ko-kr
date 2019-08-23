@@ -16,42 +16,42 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 67fd1a9174b04e42b53f2b866a1dfdd504362aa9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 99bd3e9ae1faec1b71933681fadf4816b4789c98
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645619"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952218"
 ---
 # <a name="icordebugarrayvalue-interface"></a>ICorDebugArrayValue 인터페이스
 
-1 차원 또는 다차원 배열을 나타내는 ICorDebugHeapValue의 하위 클래스.  
+일차원 또는 다차원 배열을 나타내는 ICorDebugHeapValue의 서브 클래스입니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|설명|  
+|메서드|Description|  
 |------------|-----------------|  
-|[GetBaseIndicies 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getbaseindicies-method.md)|배열의 각 차원에 대 한 기본 인덱스를 가져옵니다.|  
+|[GetBaseIndicies 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getbaseindicies-method.md)|배열에 있는 각 차원의 기본 인덱스를 가져옵니다.|  
 |[GetCount 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getcount-method.md)|배열에 있는 요소의 총 수를 가져옵니다.|  
-|[GetDimensions 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getdimensions-method.md)|배열의 차수를 가져옵니다.|  
-|[GetElement 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getelement-method.md)|배열의 지정된 된 요소를 나타내는 값을 가져옵니다.|  
-|[GetElementAtPosition 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getelementatposition-method.md)|0부터 시작 하는 1 차원 배열로 간주 하 여 지정된 된 위치에서 요소를 가져옵니다.|  
-|[GetElementType 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getelementtype-method.md)|배열에서 간단한 형식의 요소를 가져옵니다.|  
+|[GetDimensions 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getdimensions-method.md)|배열의 크기를 가져옵니다.|  
+|[GetElement 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getelement-method.md)|배열에서 지정 된 요소를 나타내는 값을 가져옵니다.|  
+|[GetElementAtPosition 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getelementatposition-method.md)|배열을 0부터 시작 하는 1 차원 배열로 처리 하는 지정 된 위치에 있는 요소를 가져옵니다.|  
+|[GetElementType 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getelementtype-method.md)|배열에 있는 요소의 단순 형식을 가져옵니다.|  
 |[GetRank 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getrank-method.md)|배열의 차수를 가져옵니다.|  
-|[HasBaseIndicies 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-hasbaseindicies-method.md)|배열의 기본 인덱스에 있는지 여부를 결정 합니다.|  
+|[HasBaseIndicies 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-hasbaseindicies-method.md)|배열에 기본 인덱스가 있는지 여부를 확인 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `ICorDebugArrayValue` 1 차원 및 다차원 배열을 지원합니다.  
+ `ICorDebugArrayValue`는 1 차원 배열 및 다차원 배열을 모두 지원 합니다.  
   
 > [!NOTE]
->  이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
+> 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
- **라이브러리:** CorGuids.lib  
+ **라이브러리** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

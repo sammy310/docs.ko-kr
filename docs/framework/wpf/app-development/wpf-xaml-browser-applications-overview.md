@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 8017895450c989683b7fb246c9c1fb7c23fa9e5e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a83b3e68365cccc96cfe7eaa4baaabf8c991c98f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611478"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956045"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 브라우저 애플리케이션 개요
 <a name="introduction"></a>
@@ -40,7 +40,7 @@ ms.locfileid: "69611478"
  XBAP 프로젝트를 실행하면 독립 실행형 창이 아닌 브라우저 창에서 열립니다. Visual Studio에서 XBAP를 디버깅할 때 응용 프로그램은 인터넷 영역 권한으로 실행 되므로 이러한 사용 권한을 초과 하는 경우 보안 예외가 throw 됩니다. 자세한 내용은 [보안](../security-wpf.md) 및 [WPF 부분 신뢰 보안](../wpf-partial-trust-security.md)을 참조하세요.  
   
 > [!NOTE]
->  Visual Studio를 사용 하 여 개발 하지 않거나 프로젝트 파일에 대 한 자세한 내용을 보려면 [WPF 응용 프로그램 빌드](building-a-wpf-application-wpf.md)를 참조 하세요.  
+> Visual Studio를 사용 하 여 개발 하지 않거나 프로젝트 파일에 대 한 자세한 내용을 보려면 [WPF 응용 프로그램 빌드](building-a-wpf-application-wpf.md)를 참조 하세요.  
   
 <a name="deploying_a_xbap"></a>   
 ## <a name="deploying-an-xbap"></a>XBAP 배포  
@@ -174,7 +174,7 @@ ms.locfileid: "69611478"
 |인터넷|"신뢰할 수 없음"과 함께 실패|인증서로 XBAP를 서명합니다.|  
   
 > [!NOTE]
->  위의 표에 설명된 동작은 ClickOnce 신뢰 배포 모델을 따르지 않는 완전 신뢰 XBAP에 대한 것입니다.  
+> 위의 표에 설명된 동작은 ClickOnce 신뢰 배포 모델을 따르지 않는 완전 신뢰 XBAP에 대한 것입니다.  
   
  완전 신뢰 XBAP를 배포하는 데 ClickOnce 신뢰 배포 모델을 사용하는 것이 좋습니다. 이 모델을 통해 보안 영역에 관계없이 XBAP에 완전 신뢰를 자동으로 부여할 수 있으므로 사용자에게 확인 메시지가 표시되지 않습니다. 이 모델의 일부로, 신뢰할 수 있는 게시자의 인증서로 애플리케이션을 서명해야 합니다. 자세한 내용은 [신뢰할 수 있는 애플리케이션 배포 개요](/visualstudio/deployment/trusted-application-deployment-overview) 및 [코드 서명 소개](https://go.microsoft.com/fwlink/?LinkId=166327)를 참조하세요.  
   

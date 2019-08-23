@@ -8,12 +8,12 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-ms.openlocfilehash: 12b506e859579a0755c2e9842e792c59968c94a8
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 1de1ff4147ddb8cb3316795aefd38622de205a73
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666748"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950058"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>연습: Visual C를 사용 하 여 복합 컨트롤 작성\#
 
@@ -187,7 +187,7 @@ ms.locfileid: "69666748"
 5. 솔루션 탐색기에서 현재 프로젝트를 찾아봅니다.
 
     > [!NOTE]
-    >  **ctlAlarmClock.cs**라는 파일이 현재 프로젝트에 추가되었습니다.
+    > **ctlAlarmClock.cs**라는 파일이 현재 프로젝트에 추가되었습니다.
 
 ### <a name="adding-the-alarm-properties"></a>경보 속성 추가
 

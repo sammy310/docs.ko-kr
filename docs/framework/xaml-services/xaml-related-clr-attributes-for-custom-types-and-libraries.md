@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-ms.openlocfilehash: 2f907d097f52f13e733713d8ad68cc2390b051ed
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: a264ec3fa1232a058a3bfbabbe8b84712cf87322
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364235"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956405"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>사용자 지정 형식 및 라이브러리에 대한 XAML 관련 CLR 특성
 이 항목에서는 .NET Framework XAML 서비스에 의해 정의 되는 CLR (공용 언어 런타임) 특성에 대해 설명 합니다. 또한 응용 프로그램에 대 한 XAML 관련 시나리오를 포함 하는 .NET Framework에 정의 된 다른 CLR 특성도 어셈블리 또는 형식에 대해 설명 합니다. 이러한 CLR 특성을 사용 하 여 어셈블리, 형식 또는 멤버를 특성으로 사용 하면 형식과 관련 된 XAML 형식 시스템 정보를 제공 합니다. Xaml 노드 스트림을 직접 처리 하거나 전용 XAML 판독기와 XAML 작성기를 통해 .NET Framework XAML 서비스를 사용 하는 모든 XAML 소비자에 게 정보가 제공 됩니다.  
@@ -176,7 +176,7 @@ ms.locfileid: "68364235"
   
  **적용 대상:** 클래스, 속성  
   
- **인수의** 에서는 두 가지 특성 형식 형식 (문자열 또는 형식 <xref:System.Type>)을 지원 합니다. <xref:System.Windows.Markup.XamlDeferLoadAttribute>을 참조하세요.  
+ **인수의** 에서는 두 가지 특성 형식 형식 (문자열 또는 형식 <xref:System.Type>)을 지원 합니다. [https://docs.microsoft.com/azure/active-directory/develop/scenario-protected-web-api-overview](<xref:System.Windows.Markup.XamlDeferLoadAttribute>) 을 참조하세요.  
   
  클래스 또는 속성에 XAML에 대 한 지연 된 로드 사용법 (예: 템플릿 동작의 경우) 및 지연 동작 및 해당 대상/콘텐츠 형식을 지 원하는 클래스를 보고를 나타냅니다.  
   
@@ -266,7 +266,7 @@ ms.locfileid: "68364235"
 - 어셈블리에서 XAML 언어 지원을 정의 하 고에 대 한 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> `http://schemas.microsoft.com/winfx/2006/xaml`를 포함 합니다. 이 경우 일반적으로 접두사 `x`의 수준을 올립니다.  
   
 > [!NOTE]
->  .NET Framework XAML 서비스는 XAML 관련 특성도 <xref:System.Windows.Markup.RootNamespaceAttribute>정의 합니다. 이 특성은 프로젝트 시스템 지원에 대 한 어셈블리 수준 특성이 며 XAML 사용자 지정 형식과는 관련이 없습니다.  
+> .NET Framework XAML 서비스는 XAML 관련 특성도 <xref:System.Windows.Markup.RootNamespaceAttribute>정의 합니다. 이 특성은 프로젝트 시스템 지원에 대 한 어셈블리 수준 특성이 며 XAML 사용자 지정 형식과는 관련이 없습니다.  
   
 ## <a name="see-also"></a>참고자료
 

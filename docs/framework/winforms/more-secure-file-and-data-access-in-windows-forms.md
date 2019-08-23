@@ -13,12 +13,12 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 3389261fe9ed3d1653b92c90419033380a403387
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 94b165757de636b2570798a21fd7c483264e37c5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567420"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949946"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows Forms의 파일 및 데이터 액세스 추가 보안
 .NET Framework는 사용 권한을 사용 하 여 리소스와 데이터를 보호 합니다. 애플리케이션이 데이터를 일거나 쓸 수 있는 위치는 애플리케이션에 부여된 권한에 따라 달라집니다. 애플리케이션이 부분 신뢰 환경에서 실행되는 경우 데이터에 대한 액세스 권한이 없거나 데이터에 액세스하는 방법을 변경해야 할 수 있습니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "69567420"
  보안 제한이 발생할 경우 다음 두가지 옵션이 있습니다. 권한을 어설션(애플리케이션에 부여되었다고 가정)하거나 부분 신뢰에서 작동하도록 작성된 기능 버전을 사용합니다. 다음 섹션에서는 부분 신뢰 환경에서 실행 중인 애플리케이션에서 파일, 데이터베이스 및 레지스트리 액세스 작업을 수행하는 방법을 설명합니다.  
   
 > [!NOTE]
->  기본적으로 ClickOnce 배포를 생성 하는 도구는 해당 배포를 실행 하는 컴퓨터에서 완전 신뢰를 요청 하는 배포를 기본적으로 수행 합니다. 부분 신뢰로 실행 되는의 보안 이점을 강화 하려면 Visual Studio 또는 Windows SDK 도구 (Mage.exe 또는 Mageui.exe) 중 하나에서이 기본값을 변경 해야 합니다. Windows Forms 보안에 대 한 자세한 내용과 응용 프로그램의 적절 한 신뢰 수준을 결정 하는 방법에 대 한 자세한 내용은 [Windows Forms 개요의 보안](security-in-windows-forms-overview.md)을 참조 하세요.  
+> 기본적으로 ClickOnce 배포를 생성 하는 도구는 해당 배포를 실행 하는 컴퓨터에서 완전 신뢰를 요청 하는 배포를 기본적으로 수행 합니다. 부분 신뢰로 실행 되는의 보안 이점을 강화 하려면 Visual Studio 또는 Windows SDK 도구 (Mage.exe 또는 Mageui.exe) 중 하나에서이 기본값을 변경 해야 합니다. Windows Forms 보안에 대 한 자세한 내용과 응용 프로그램의 적절 한 신뢰 수준을 결정 하는 방법에 대 한 자세한 내용은 [Windows Forms 개요의 보안](security-in-windows-forms-overview.md)을 참조 하세요.  
   
 ## <a name="file-access"></a>파일 액세스  
  클래스 <xref:System.Security.Permissions.FileIOPermission> 는 .NET Framework에서 파일 및 폴더 액세스를 제어 합니다. 기본적으로 보안 시스템은 로컬 인트라넷 및 인터넷 영역과 같은 부분 신뢰 환경에 <xref:System.Security.Permissions.FileIOPermission>을 부여하지 않습니다. 그러나 애플리케이션의 디자인을 수정하거나 다른 메서드를 사용하여 파일에 액세스하는 경우 파일 액세스가 필요한 애플리케이션이 여전히 이러한 환경에서 작동할 수 있습니다. 기본적으로 로컬 인트라넷 영역에는 동일한 사이트 액세스 및 동일한 디렉터리 액세스를 포함하고, 원본 사이트에 다시 연결하고, 설치 디렉터리에서 읽을 수 있는 권한이 부여됩니다. 기본적으로 인터넷 영역에는 원본 사이트에 다시 연결할 수 있는 권한만 부여됩니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "69567420"
  파일 액세스 권한 없음을 처리하는 한 가지 방법은 <xref:System.Windows.Forms.OpenFileDialog> 또는 <xref:System.Windows.Forms.SaveFileDialog> 클래스를 통해 특정 파일 정보를 제공하라는 메시지를 사용자에게 표시하는 것입니다. 이 사용자 상호 작용은 애플리케이션이 악의적으로 개인 파일을 로드하거나 중요한 파일을 덮어쓸 수 없도록 합니다. <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> 및 <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> 메서드는 사용자가 지정한 파일에 대한 파일 스트림을 열어 읽기 및 쓰기 파일 액세스를 제공합니다. 메서드는 파일 경로가 표시되지 않도록 하여 사용자 파일 보호를 돕습니다.  
   
 > [!NOTE]
->  이러한 권한은 애플리케이션이 인터넷 영역 또는 인트라넷 영역에 있는지에 따라 달라집니다. 인터넷 영역 애플리케이션은 <xref:System.Windows.Forms.OpenFileDialog>만 사용할 수 있는 반면 인트라넷 애플리케이션은 무제한 파일 대화 상자 권한이 있습니다.  
+> 이러한 권한은 애플리케이션이 인터넷 영역 또는 인트라넷 영역에 있는지에 따라 달라집니다. 인터넷 영역 애플리케이션은 <xref:System.Windows.Forms.OpenFileDialog>만 사용할 수 있는 반면 인트라넷 애플리케이션은 무제한 파일 대화 상자 권한이 있습니다.  
   
  <xref:System.Security.Permissions.FileDialogPermission> 클래스는 애플리케이션에서 사용할 수 있는 파일 형식 대화 상자를 지정합니다. 다음 표에서는 각 <xref:System.Windows.Forms.FileDialog> 클래스를 사용하는 데 필요한 값을 보여 줍니다.  
   
@@ -45,14 +45,14 @@ ms.locfileid: "69567420"
 |<xref:System.Windows.Forms.SaveFileDialog>|<xref:System.Security.Permissions.FileDialogPermissionAccess.Save>|  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> 메서드가 실제로 호출될 때까지 특정 권한이 요청되지 않습니다.  
+> <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> 메서드가 실제로 호출될 때까지 특정 권한이 요청되지 않습니다.  
   
  파일 대화 상자를 표시할 수 있는 권한은 애플리케이션에 <xref:System.Windows.Forms.FileDialog>, <xref:System.Windows.Forms.OpenFileDialog> 및 <xref:System.Windows.Forms.SaveFileDialog> 클래스의 모든 멤버에 대한 모든 권한을 부여하지 않습니다. 각 메서드를 호출 하는 데 필요한 정확한 사용 권한은 .NET Framework 클래스 라이브러리 설명서에서 해당 메서드에 대 한 참조 항목을 참조 하세요.  
   
  다음 코드 예제에서는 <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> 메서드를 사용하여 사용자 지정 파일을 <xref:System.Windows.Forms.RichTextBox> 컨트롤에 엽니다. 예제를 사용하려면 <xref:System.Security.Permissions.FileDialogPermission> 및 연결된 <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A> 열거형 값이 필요합니다. 예제에서는 <xref:System.Security.SecurityException>을 처리하여 저장 기능을 사용하지 않도록 설정할지 여부를 확인하는 방법을 보여 줍니다. 이 예제를 사용하려면 <xref:System.Windows.Forms.Form>에 `ButtonOpen`이라는 <xref:System.Windows.Forms.Button> 컨트롤과 `RtfBoxMain`이라는 <xref:System.Windows.Forms.RichTextBox> 컨트롤이 있어야 합니다.  
   
 > [!NOTE]
->  저장 기능에 대한 프로그래밍 논리는 예제에 표시되어 있지 않습니다.  
+> 저장 기능에 대한 프로그래밍 논리는 예제에 표시되어 있지 않습니다.  
   
 ```vb  
 Private Sub ButtonOpen_Click(ByVal sender As System.Object, _  
@@ -133,7 +133,7 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 ```  
   
 > [!NOTE]
->  시각적 개체 C#에서 이벤트 처리기를 사용 하도록 설정 하는 코드를 추가 해야 합니다. 이전 예제의 코드를 사용하여 다음 코드에서는 이벤트 처리기 `this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`를 사용하도록 설정하는 방법을 보여 줍니다.  
+> 시각적 개체 C#에서 이벤트 처리기를 사용 하도록 설정 하는 코드를 추가 해야 합니다. 이전 예제의 코드를 사용하여 다음 코드에서는 이벤트 처리기 `this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`를 사용하도록 설정하는 방법을 보여 줍니다.  
   
 ### <a name="other-files"></a>Other Files  
  애플리케이션 설정을 유지해야 하는 경우와 같이 사용자가 지정하지 않는 파일을 읽거나 써야 하는 경우가 있습니다. 로컬 인트라넷 및 인터넷 영역에서는 로컬 파일에 데이터를 저장할 수 있는 권한이 애플리케이션에 없습니다. 그러나 애플리케이션은 격리된 스토리지에 데이터를 저장할 수 있습니다. 격리된 스토리지는 데이터가 저장된 실제 디렉터리 위치를 포함하는 하나 이상의 격리된 스토리지 파일(스토리지라고 함)이 포함된 추상 데이터 컴파트먼트(특정 스토리지 위치가 아님)입니다. <xref:System.Security.Permissions.FileIOPermission>과 같은 파일 액세스 권한은 필요하지 않습니다. 대신, <xref:System.Security.Permissions.IsolatedStoragePermission> 클래스는 격리된 스토리지에 대한 권한을 제어합니다. 기본적으로 로컬 인트라넷 및 인터넷 영역에서 실행 중인 애플리케이션은 격리된 스토리지를 사용하여 데이터를 저장할 수 있습니다. 그러나 디스크 할당량과 같은 설정이 달라질 수 있습니다. 격리 된 저장소에 대 한 자세한 내용은 [격리 된 저장소](../../standard/io/isolated-storage.md)를 참조 하세요.  

@@ -2,16 +2,16 @@
 title: '연습: 간단한 개체 모델 및 쿼리(C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: 43092eb7490d5629f1ababac1d8f8b3aff94299b
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 4661dffa037504d9157f30af12d4308a4d7644a2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971861"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946919"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>연습: 간단한 개체 모델 및 쿼리(C#)
 
-이 연습에서는 간단한 기본 종단 간 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 시나리오에 대해 설명합니다. 샘플 Northwind 데이터베이스의 Customers 테이블을 모델링하는 엔터티 클래스를 만듭니다. 그런 다음 단순 쿼리를 만들어 London에 있는 고객을 나열합니다.
+이 연습에서는 간단한 기본 엔드투엔드 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 시나리오에 대해 설명합니다. 샘플 Northwind 데이터베이스의 Customers 테이블을 모델링하는 엔터티 클래스를 만듭니다. 그런 다음 단순 쿼리를 만들어 London에 있는 고객을 나열합니다.
 
 이 연습은 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개념을 보여 주기 위한 코드를 중심으로 디자인되었습니다. 일반적으로 개체 관계형 디자이너를 사용 하 여 개체 모델을 만듭니다.
 
@@ -93,7 +93,7 @@ ms.locfileid: "68971861"
 
 - 데이터베이스의 기본 키 열을 나타내도록 `CustomerID` 속성을 지정합니다.
 
-- 전용 저장소에 `_CustomerID` 및 `_City` 필드를 지정합니다. 그러면 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 비즈니스 논리가 포함된 공용 접근자를 사용하는 대신 값을 직접 저장하고 검색할 수 있습니다.
+- 전용 스토리지에 `_CustomerID` 및 `_City` 필드를 지정합니다. 그러면 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 비즈니스 논리가 포함된 공용 접근자를 사용하는 대신 값을 직접 저장하고 검색할 수 있습니다.
 
 ### <a name="to-represent-characteristics-of-two-database-columns"></a>두 데이터베이스 열의 특징을 나타내려면
 
@@ -117,7 +117,7 @@ ms.locfileid: "68971861"
 
 ## <a name="creating-a-simple-query"></a>단순 쿼리 작성
 
-이 단계에서는 데이터베이스 Customers 테이블에서 London에 있는 고객을 찾는 쿼리를 만듭니다. 이 단계의 쿼리 코드는 쿼리를 설명하기만 하고 실행하지는 않습니다. 이 방법을 *지연 된 실행*이라고 합니다. 자세한 내용은 [LINQ 쿼리 소개(C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)를 참조하세요.
+이 단계에서는 데이터베이스 Customers 테이블에서 London에 있는 고객을 찾는 쿼리를 만듭니다. 이 단계의 쿼리 코드는 쿼리를 설명하기만 하고 실행하지는 않습니다. 이 방법을 *지연 된 실행*이라고 합니다. 자세한 내용은 [LINQ 쿼리 소개(C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)를 참조하세요.
 
 또한 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 생성하는 SQL 명령을 보여 주는 로그 출력을 만듭니다. <xref:System.Data.Linq.DataContext.Log%2A>를 사용하는 이 로깅 기능은 디버깅할 때와 데이터베이스로 전송되는 명령이 쿼리를 정확히 나타내는지 확인할 때 유용합니다.
 
@@ -137,10 +137,10 @@ ms.locfileid: "68971861"
 
      [!code-csharp[DLinqWalk1ACS#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1ACS/cs/Program.cs#6)]
 
-2. F5 키를 눌러 응용 프로그램을 디버깅합니다.
+2. F5 키를 눌러 애플리케이션을 디버깅합니다.
 
     > [!NOTE]
-    >  응용 프로그램에서 런타임 오류를 생성 하는 경우 [연습에서 학습](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)의 문제 해결 섹션을 참조 하세요.
+    > 응용 프로그램에서 런타임 오류를 생성 하는 경우 [연습에서 학습](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)의 문제 해결 섹션을 참조 하세요.
 
      콘솔 창의 쿼리 결과는 다음과 같습니다.
 
@@ -156,7 +156,7 @@ ms.locfileid: "68971861"
 
      `ID=SEVES, City=London`
 
-3. 콘솔 창에서 Enter 키를 눌러 응용 프로그램을 닫습니다.
+3. 콘솔 창에서 Enter 키를 눌러 애플리케이션을 닫습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

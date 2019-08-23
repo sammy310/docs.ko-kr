@@ -2,23 +2,23 @@
 title: '엔터티 데이터 모델: 기본 데이터 형식'
 ms.date: 03/30/2017
 ms.assetid: 7635168e-0566-4fdd-8391-7941b0d9f787
-ms.openlocfilehash: 044a0ed981bb9cda3550fb3a3a9f1cb9bff96f25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c58a3db1eb7ffdb65c7e603d9a76ac7f19f2230f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667134"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959281"
 ---
 # <a name="entity-data-model-primitive-data-types"></a>엔터티 데이터 모델: 기본 데이터 형식
-(EDM (엔터티 데이터 모델)을 정의 하는 데 사용 되는 추상 기본 데이터 형식 (예: 문자열, 부울, Int32, 및 등)의 집합을 지원 [속성](../../../../docs/framework/data/adonet/property.md) 개념적 모델에서. 이러한 기본 데이터 형식은 SQL Server 데이터베이스나 CLR(공용 언어 런타임)과 같은 저장소 또는 호스팅 환경에서 지원되는 실제 기본 데이터 형식의 프록시입니다. EDM에서는 기본 데이터 형식에 대한 작업 또는 변환의 의미 체계를 정의하지 않습니다. 이러한 의미 체계는 저장소 또는 호스팅 환경에서 정의됩니다. 일반적으로 EDM의 기본 데이터 형식은 저장소 또는 호스팅 환경에서 해당하는 기본 데이터 형식에 매핑됩니다. SQL Server 데이터 형식으로 Entity Framework는 EDM의 기본 형식에 매핑하는 방법에 대 한 자세한 내용은 [Entity FrameworkTypes 용 SqlClient](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)합니다.  
+EDM (엔터티 데이터 모델)은 개념적 모델에서 [속성](../../../../docs/framework/data/adonet/property.md) 을 정의 하는 데 사용 되는 추상 기본 데이터 형식 (예: 문자열, 부울, Int32 등) 집합을 지원 합니다. 이러한 기본 데이터 형식은 SQL Server 데이터베이스나 CLR(공용 언어 런타임)과 같은 스토리지 또는 호스팅 환경에서 지원되는 실제 기본 데이터 형식의 프록시입니다. EDM에서는 기본 데이터 형식에 대한 작업 또는 변환의 의미 체계를 정의하지 않습니다. 이러한 의미 체계는 스토리지 또는 호스팅 환경에서 정의됩니다. 일반적으로 EDM의 기본 데이터 형식은 스토리지 또는 호스팅 환경에서 해당하는 기본 데이터 형식에 매핑됩니다. Entity Framework EDM의 기본 형식을 SQL Server 데이터 형식에 매핑하는 방법에 대 한 자세한 내용은 [Entity frameworktypes 용 sqlclient의 SqlClient](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)를 참조 하세요.  
   
 > [!NOTE]
->  EDM에서는 기본 데이터 형식 컬렉션을 지원하지 않습니다.  
+> EDM에서는 기본 데이터 형식 컬렉션을 지원하지 않습니다.  
   
- EDM의 구조화 된 데이터 형식에 대 한 자세한 내용은 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md) 하 고 [복합 형식](../../../../docs/framework/data/adonet/complex-type.md)합니다.  
+ EDM의 구조화 된 데이터 형식에 대 한 자세한 내용은 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md) 및 [복합 형식](../../../../docs/framework/data/adonet/complex-type.md)을 참조 하세요.  
   
 ## <a name="primitive-data-types-supported-in-the-entity-data-model"></a>엔터티 데이터 모델에서 지원되는 기본 데이터 형식  
- 다음 표에서는 EDM에서 지원하는 기본 데이터 형식을 보여 줍니다. 또한 표에서 [패싯](../../../../docs/framework/data/adonet/facet.md) 각 기본 데이터 형식에 적용할 수 있는 합니다.  
+ 다음 표에서는 EDM에서 지원하는 기본 데이터 형식을 보여 줍니다. 테이블에는 각 기본 데이터 형식에 적용할 수 있는 [패싯이](../../../../docs/framework/data/adonet/facet.md) 나열 되어 있습니다.  
   
 |기본 데이터 형식|설명|적용 가능한 패싯|  
 |-------------------------|-----------------|-----------------------|  
@@ -35,7 +35,7 @@ ms.locfileid: "61667134"
 |Int32|부호 있는 32비트 정수 값을 포함합니다.|Precision, Nullable, Default|  
 |Int64|부호 있는 64비트 정수 값을 포함합니다.|Precision, Nullable, Default|  
 |SByte|부호 있는 8비트 정수 값을 포함합니다.|Precision, Nullable, Default|  
-|문자열|문자 데이터를 포함합니다.|Unicode, FixedLength, MaxLength, Collation, Precision, Nullable, Default|  
+|String|문자 데이터를 포함합니다.|Unicode, FixedLength, MaxLength, Collation, Precision, Nullable, Default|  
 |시간|시간을 포함합니다.|Precision, Nullable, Default|  
   
 ## <a name="see-also"></a>참고자료

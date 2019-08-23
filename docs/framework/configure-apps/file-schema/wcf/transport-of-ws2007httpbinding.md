@@ -2,14 +2,14 @@
 title: <ws2007HttpBinding>의 <transport>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: a1540b53d4af76141c1daee60a6bddbbecd9d6da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce8b2acb7d87b094958e20ca0b6cca9fc8266a8d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788299"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911982"
 ---
-# <a name="transport-of-ws2007httpbinding"></a>\<전송 >의 \<ws2007HttpBinding >
+# <a name="transport-of-ws2007httpbinding"></a>\<ws2007HttpBinding >의 \<전송 >
 HTTP 전송의 인증 설정을 정의합니다.  
   
  \<system.serviceModel>  
@@ -35,7 +35,7 @@ HTTP 전송의 인증 설정을 정의합니다.
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
 |`clientCredentialType`|클라이언트를 서비스에 인증할 때 사용되는 자격 증명을 지정합니다. 이 특성은 <xref:System.ServiceModel.HttpClientCredentialType> 형식입니다.|  
 |`proxyCredentialType`|클라이언트를 도메인 프록시에 인증할 때 사용되는 자격 증명을 지정합니다. 이 특성은 <xref:System.ServiceModel.HttpProxyCredentialType> 형식입니다.|  
@@ -50,7 +50,7 @@ HTTP 전송의 인증 설정을 정의합니다.
 |Digest|다이제스트 인증을 사용합니다.|  
 |Ntlm|Windows 도메인에 대한 대체(fallback)로 NTLM 인증을 사용합니다.|  
 |Windows|Windows 통합 인증을 사용합니다.|  
-|인증서|X.509 인증서를 사용하여 클라이언트를 인증합니다.|  
+|Certificate|X.509 인증서를 사용하여 클라이언트를 인증합니다.|  
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType 특성  
   
@@ -61,7 +61,7 @@ HTTP 전송의 인증 설정을 정의합니다.
 |Digest|다이제스트 인증을 사용합니다.|  
 |Ntlm|Windows 도메인에 대한 대체(fallback)로 NTLM을 사용합니다.|  
 |Windows|Windows 통합 인증을 사용합니다.|  
-|인증서|X.509 인증서를 사용하여 클라이언트를 인증합니다.|  
+|Certificate|X.509 인증서를 사용하여 클라이언트를 인증합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -70,7 +70,7 @@ HTTP 전송의 인증 설정을 정의합니다.
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|보안 기능을 나타내는 합니다 [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) 요소입니다.|  
+|[\<security>](security-of-ws2007httpbinding.md)|Ws2007HttpBinding > 요소의 보안 기능 [ \<](ws2007httpbinding.md) 을 나타냅니다.|  
   
 ## <a name="see-also"></a>참고자료
 
@@ -78,8 +78,8 @@ HTTP 전송의 인증 설정을 정의합니다.
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.WSHttpTransportSecurityElement>
-- [서비스 및 클라이언트에 보안 설정](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [바인딩](../../../../../docs/framework/wcf/bindings.md)
-- [시스템 제공 바인딩 구성](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [서비스 및 클라이언트에 보안 설정](../../../wcf/feature-details/securing-services-and-clients.md)
+- [바인딩](../../../wcf/bindings.md)
+- [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

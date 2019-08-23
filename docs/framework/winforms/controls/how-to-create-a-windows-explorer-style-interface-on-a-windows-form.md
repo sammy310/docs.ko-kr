@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: db2c5431dfb0156c1508a18ef13d2af80eb4981b
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 34a5cd735c350688d9e83003806668e213932c85
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039529"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960621"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>방법: Windows Form에 Windows 탐색기 스타일 인터페이스 만들기
 Windows 탐색기는 친숙 한 응용 프로그램에 대 한 일반적인 사용자 인터페이스 선택입니다.
@@ -35,7 +35,7 @@ Windows 탐색기는 친숙 한 응용 프로그램에 대 한 일반적인 사�
 3. CTRL 키를 누른 채 차례로 클릭 하 여 세 개의 컨트롤을 모두 선택 합니다. 컨트롤을 선택 하 <xref:System.Windows.Forms.SplitContainer> 는 경우 패널 대신 분할자 막대를 클릭 합니다.
 
     > [!NOTE]
-    >  **편집** 메뉴에서 **모두 선택** 명령을 사용 하지 마십시오. 이렇게 하면 다음 단계에 필요한 속성은 **속성** 창에 표시 되지 않습니다.
+    > **편집** 메뉴에서 **모두 선택** 명령을 사용 하지 마십시오. 이렇게 하면 다음 단계에 필요한 속성은 **속성** 창에 표시 되지 않습니다.
 
 4. **속성** 창에서 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Fill>로 설정합니다.
 
@@ -44,7 +44,7 @@ Windows 탐색기는 친숙 한 응용 프로그램에 대 한 일반적인 사�
      이 폼에는 Windows 탐색기와 유사한 두 부분으로 구성 된 사용자 인터페이스가 표시 됩니다.
 
     > [!NOTE]
-    >  분할자를 끌면 패널의 크기가 자동으로 조정 됩니다.
+    > 분할자를 끌면 패널의 크기가 자동으로 조정 됩니다.
 
 ## <a name="see-also"></a>참고자료
 

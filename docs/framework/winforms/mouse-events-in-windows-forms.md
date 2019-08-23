@@ -15,16 +15,16 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 818364ceddb03df51ed656c8ff7b69fd433ac86a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 181d01f6e688b94876f77155bf598aba129e9fbf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750885"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949906"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Windows Forms의 마우스 이벤트
 
-마우스 입력을 처리하는 경우 일반적으로 마우스 포인터의 위치와 마우스 단추의 상태를 알아야 합니다. 이 항목에서는 마우스 이벤트에서 이 정보를 가져오는 방법을 자세히 설명하고 Windows Forms 컨트롤에서 마우스 클릭 이벤트가 발생하는 순서를 설명합니다. 목록 및 설명은 모든 마우스 이벤트를 참조 하세요 [Windows Forms의 마우스 입력 방법](how-mouse-input-works-in-windows-forms.md)합니다.  도 참조 하세요 [이벤트 처리기 개요 (Windows Forms)](event-handlers-overview-windows-forms.md) 하 고 [이벤트 개요 (Windows Forms)](events-overview-windows-forms.md)합니다.
+마우스 입력을 처리하는 경우 일반적으로 마우스 포인터의 위치와 마우스 단추의 상태를 알아야 합니다. 이 항목에서는 마우스 이벤트에서 이 정보를 가져오는 방법을 자세히 설명하고 Windows Forms 컨트롤에서 마우스 클릭 이벤트가 발생하는 순서를 설명합니다. 모든 마우스 이벤트에 대 한 목록 및 설명은 [Windows Forms에서 마우스 입력이 작동 하는 방식](how-mouse-input-works-in-windows-forms.md)을 참조 하세요.  [이벤트 처리기 개요 (Windows Forms)](event-handlers-overview-windows-forms.md) 및 [이벤트 개요 (Windows Forms)](events-overview-windows-forms.md)도 참조 하세요.
 
 ## <a name="mouse-information"></a>마우스 정보
 
@@ -66,7 +66,7 @@ ms.locfileid: "64750885"
 
 8. <xref:System.Windows.Forms.Control.MouseUp> 이벤트
 
-클릭 이벤트는 마우스의 순서를 보여 주는 코드 예제에 대 한 내용은 [방법: 사용자 입력 처리 이벤트에 Windows Forms 컨트롤](how-to-handle-user-input-events-in-windows-forms-controls.md)합니다.
+마우스 클릭 이벤트의 순서를 보여 주는 코드 예제를 보려면 [방법: Windows Forms 컨트롤](how-to-handle-user-input-events-in-windows-forms-controls.md)에서 사용자 입력 이벤트를 처리 합니다.
 
 ### <a name="individual-controls"></a>개별 컨트롤
 
@@ -79,11 +79,11 @@ ms.locfileid: "64750885"
 
   - 마우스 왼쪽 단추 클릭: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
-  - 마우스 오른쪽 단추로 클릭 합니다. 클릭 이벤트를 발생 하지 않음
+  - 마우스 오른쪽 단추를 클릭 합니다. Click 이벤트가 발생 하지 않음
 
   - 마우스 왼쪽 단추 두 번 클릭: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>, <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
-  - 오른쪽 두 번 클릭 합니다. 클릭 이벤트를 발생 하지 않음
+  - 마우스 오른쪽 단추를 두 번 클릭 합니다. Click 이벤트가 발생 하지 않음
 
 - <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.RichTextBox>, <xref:System.Windows.Forms.ListBox>, <xref:System.Windows.Forms.MaskedTextBox>및 <xref:System.Windows.Forms.CheckedListBox> 컨트롤
 
@@ -92,11 +92,11 @@ ms.locfileid: "64750885"
 
   - 마우스 왼쪽 단추 클릭: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
-  - 마우스 오른쪽 단추로 클릭 합니다. 클릭 이벤트를 발생 하지 않음
+  - 마우스 오른쪽 단추를 클릭 합니다. Click 이벤트가 발생 하지 않음
 
   - 마우스 왼쪽 단추 두 번 클릭: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>, <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>
 
-  - 오른쪽 두 번 클릭 합니다. 클릭 이벤트를 발생 하지 않음
+  - 마우스 오른쪽 단추를 두 번 클릭 합니다. Click 이벤트가 발생 하지 않음
 
 - <xref:System.Windows.Forms.ListView> 컨트롤
 
@@ -145,7 +145,7 @@ ms.locfileid: "64750885"
 8. <xref:System.Windows.Forms.Control.MouseUp> 이벤트가 발생합니다.
 
     > [!NOTE]
-    >  사용자가 마우스 단추를 누른 동안 토글 컨트롤에서 포인터를 이동하는 경우(예: 누른 동안 <xref:System.Windows.Forms.Button> 컨트롤에서 마우스 이동) 토글 컨트롤이 올려진 상태로 그려지고 <xref:System.Windows.Forms.Control.MouseUp> 이벤트만 발생합니다. 이런 상황에서는 <xref:System.Windows.Forms.Control.Click> 또는 <xref:System.Windows.Forms.Control.MouseClick> 이벤트가 발생하지 않습니다.
+    > 사용자가 마우스 단추를 누른 동안 토글 컨트롤에서 포인터를 이동하는 경우(예: 누른 동안 <xref:System.Windows.Forms.Button> 컨트롤에서 마우스 이동) 토글 컨트롤이 올려진 상태로 그려지고 <xref:System.Windows.Forms.Control.MouseUp> 이벤트만 발생합니다. 이런 상황에서는 <xref:System.Windows.Forms.Control.Click> 또는 <xref:System.Windows.Forms.Control.MouseClick> 이벤트가 발생하지 않습니다.
 
 ## <a name="see-also"></a>참고자료
 

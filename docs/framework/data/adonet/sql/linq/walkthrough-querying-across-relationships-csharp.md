@@ -2,22 +2,22 @@
 title: '연습: 관계 간 쿼리(C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: f36f618cfcb82847f6763641ee64565dcdedd919
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a9e0583b14c07df2b1de23ba37fa88552a4c5c7c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742640"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946952"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>연습: 관계 간 쿼리(C#)
-이 연습에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *연결* 데이터베이스에서 외래 키 관계를 나타내는입니다.  
+이 연습에서는 *연결* 을 사용 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 하 여 데이터베이스에서 외래 키 관계를 나타내는 방법을 보여 줍니다.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
  이 연습은 Visual C# 개발 설정을 사용하여 작성했습니다.  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
- 완료 해야 [연습: 간단한 개체 모델 및 쿼리 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)합니다. 이 연습은 c:\linqtest5에 있는 northwnd.mdf 파일을 비롯하여 해당 개체 모델 및 쿼리를 기반으로 합니다.  
+ 연습을 완료 [해야 합니다. 간단한 개체 모델 및 쿼리 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md) 이 연습은 c:\linqtest5에 있는 northwnd.mdf 파일을 비롯하여 해당 개체 모델 및 쿼리를 기반으로 합니다.  
   
 ## <a name="overview"></a>개요  
  이 연습은 다음과 같은 세 가지 주요 작업으로 구성됩니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "67742640"
      [!code-csharp[DLinqWalk2CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#2)]  
   
 ## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>Customer 및 Order 관계에서 쿼리 만들기 및 실행  
- 이제 `Order` 개체에서 `Customer` 개체를 직접 액세스하거나 그 반대 방향으로 액세스할 수 있습니다. 명시적인 않아도 *조인* customers와 orders 간의 합니다.  
+ 이제 `Order` 개체에서 `Customer` 개체를 직접 액세스하거나 그 반대 방향으로 액세스할 수 있습니다. 고객과 주문 간에 명시적 *조인이* 필요 하지 않습니다.  
   
 ### <a name="to-access-order-objects-by-using-customer-objects"></a>Customer 개체를 사용하여 Order 개체에 액세스하려면  
   
@@ -55,10 +55,10 @@ ms.locfileid: "67742640"
   
      [!code-csharp[DLinqWalk2CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#3)]  
   
-2. F5 키를 눌러 응용 프로그램을 디버깅합니다.  
+2. F5 키를 눌러 애플리케이션을 디버깅합니다.  
   
     > [!NOTE]
-    >  `db.Log = Console.Out;`을 주석으로 처리하여 콘솔 창에서 SQL 코드를 제거할 수 있습니다.  
+    > `db.Log = Console.Out;`을 주석으로 처리하여 콘솔 창에서 SQL 코드를 제거할 수 있습니다.  
   
 3. 콘솔 창에서 Enter 키를 눌러 디버깅을 중지합니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "67742640"
   
      [!code-csharp[DLinqWalk2CS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#5)]  
   
-3. F5 키를 눌러 응용 프로그램을 디버깅합니다.  
+3. F5 키를 눌러 애플리케이션을 디버깅합니다.  
   
      콘솔 창 출력은 다음과 같습니다.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "67742640"
 4. 콘솔 창에서 Enter 키를 눌러 디버깅을 중지합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 다음 연습 ([연습: 데이터 조작 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) 데이터를 조작 하는 방법을 보여 줍니다. 다음 연습에서는 이미 완료한 이 시리즈의 연습 두 개를 저장할 필요가 없습니다.  
+ 다음 연습 ([연습: Data 조작 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md))은 데이터를 조작 하는 방법을 보여 줍니다. 다음 연습에서는 이미 완료한 이 시리즈의 연습 두 개를 저장할 필요가 없습니다.  
   
 ## <a name="see-also"></a>참고자료
 

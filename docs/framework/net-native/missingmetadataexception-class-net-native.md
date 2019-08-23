@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 079718c96a4818285c0b469da9f23213a6915c19
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: fb9300917f06ec8e48f2dd412e008efec4dc6917
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052512"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941663"
 ---
 # <a name="missingmetadataexception-class-net-native"></a>MissingMetadataException 클래스(.NET 네이티브)
 
-**Windows 10,.NET 네이티브 전용의 Windows 앱 용.NET**
+**Windows 10 용 Windows 앱 용 .NET, .NET 네이티브만**
 
 리플렉션을 사용하여 존재하지 않는 메타데이터를 검색하면 throw되는 예외입니다.
 
 **네임스페이스:** System.Reflection
 
 > [!IMPORTANT]
-> `MissingMetadataException` 클래스는.NET 네이티브 도구 체인에서 내부용 으로만 것입니다. 이 클래스는 타사 코드에서 사용하면 안 되고 응용 프로그램 코드에서 예외를 처리하면 안 됩니다. 대신, [런타임 지시문 파일](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)에 항목을 추가하여 예외를 제거합니다. 자세한 내용은 설명 섹션을 참조하세요.
+> 클래스 `MissingMetadataException` 는 .NET 네이티브 도구 체인에서 내부용 으로만 사용 됩니다. 이 클래스는 타사 코드에서 사용하면 안 되고 응용 프로그램 코드에서 예외를 처리하면 안 됩니다. 대신, [런타임 지시문 파일](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)에 항목을 추가하여 예외를 제거합니다. 자세한 내용은 설명 섹션을 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -34,8 +34,8 @@ ms.locfileid: "66052512"
 
 |생성자|설명|
 |-----------------|-----------------|
-|`public MissingMetadataException()`|오류를 설명하는 시스템 제공 메시지를 사용하여 `MissingMetadataException` 클래스의 새 인스턴스를 초기화합니다.<br /><br /> 이 생성자는 내부.NET 네이티브 도구 체인에만 사용 합니다.|
-|`public MissingMetadataException(String message)`|지정된 오류 메시지를 사용하여 `MissingMetadataException` 클래스의 새 인스턴스를 초기화합니다.<br /><br /> 이 생성자는 내부.NET 네이티브 도구 체인에만 사용 합니다.|
+|`public MissingMetadataException()`|오류를 설명하는 시스템 제공 메시지를 사용하여 `MissingMetadataException` 클래스의 새 인스턴스를 초기화합니다.<br /><br /> 이 생성자는 .NET 네이티브 도구 체인에서 내부용 으로만 사용 됩니다.|
+|`public MissingMetadataException(String message)`|지정된 오류 메시지를 사용하여 `MissingMetadataException` 클래스의 새 인스턴스를 초기화합니다.<br /><br /> 이 생성자는 .NET 네이티브 도구 체인에서 내부용 으로만 사용 됩니다.|
 
 ## <a name="properties"></a>속성
 
@@ -74,7 +74,7 @@ ms.locfileid: "66052512"
 
 리플렉션을 사용하여 어셈블리에서 제공되지 않는 메타데이터에 액세스하면 `MissingMetadataException` 예외가 throw됩니다.
 
-런타임에 앱이 사용할 수 있는 메타데이터는 런타임 지시문(XML 구성) 파일인 *.rd.xml을 통해 정의됩니다. 앱에서 이 예외가 throw되지 않도록 하려면 런타임에 존재해야 하는 메타데이터를 정의하도록 \*.rd.xml을 수정해야 합니다. \*.rd.xml 파일의 형식에 대한 자세한 내용은 [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)를 확인하세요.
+런타임에 응용 프로그램에 사용할 수 있는 메타 데이터는 런타임 지시문 (xml 구성) 파일 \*(app.config)에 의해 정의 됩니다. 앱에서 이 예외가 throw되지 않도록 하려면 런타임에 존재해야 하는 메타데이터를 정의하도록 \*.rd.xml을 수정해야 합니다. \*.rd.xml 파일의 형식에 대한 자세한 내용은 [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)를 확인하세요.
 
 > [!IMPORTANT]
 > 이 예외는 애플리케이션에 필요한 메타데이터를 런타임에 사용할 수 없음을 나타내므로 `try`/`catch` 블록에서 이 예외를 처리하면 안 됩니다. 대신 예외의 원인을 진단하고 런타임 지시문 파일을 사용하여 예외를 방지해야 합니다. 예외를 제거하는 런타임 지시문 파일에 추가할 수 있는 항목을 가져오려면 두 문제 해결사 중 하나를 사용할 수 있습니다.

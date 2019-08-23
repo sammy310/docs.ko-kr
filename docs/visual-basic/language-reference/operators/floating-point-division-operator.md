@@ -16,15 +16,15 @@ helpviewer_keywords:
 - / operator [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 335e97f2-c434-439e-9064-76973a051101
-ms.openlocfilehash: af2316f92e2904eee1e8c046b34b8147e40cb513
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d30d871d48bc87e050a072cd01a38065be20616c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778486"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933269"
 ---
 # <a name="-operator-visual-basic"></a>/ 연산자(Visual Basic)
-두 숫자를 나누고 부동 소수점 결과 반환 합니다.  
+두 숫자를 나누고 부동 소수점 결과를 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,49 +40,49 @@ expression1 / expression2
  필수. 임의의 숫자 식입니다.  
   
 ## <a name="supported-types"></a>지원 형식  
- 모든 숫자 형식, 부동 소수점 및 부호 없는 형식을 포함 하 고 `Decimal`입니다.  
+ 부호 없는 형식 및 부동 소수점 형식 및 `Decimal`를 포함 하는 모든 숫자 형식입니다.  
   
 ## <a name="result"></a>결과  
- 결과 전체 몫 `expression1` 나눈 `expression2`, 나머지 포함 합니다.  
+ 그 결과는 나머지를 포함 하 `expression1` 여로 `expression2`나눈 전체 몫입니다.  
   
- 합니다 [\ 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) 나머지 부분을 삭제 하는 정수 몫을 반환 합니다.  
+ [\ 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) 는 나머지를 삭제 하는 정수 몫을 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
- 데이터 형식의 결과 피연산자의 형식에 따라 달라 집니다. 다음 표에서 결과의 데이터 형식을 결정 하는 것입니다.  
+ 결과의 데이터 형식은 피연산자의 형식에 따라 달라 집니다. 다음 표에서는 결과의 데이터 형식을 결정 하는 방법을 보여 줍니다.  
   
-|피연산자 데이터 형식|결과 데이터 형식|  
+|피연산자 데이터 형식|Result 데이터 형식|  
 |------------------------|----------------------|  
-|두 식이 모두 정수 데이터 형식 ([SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)를 [바이트](../../../visual-basic/language-reference/data-types/byte-data-type.md)를 [짧은](../../../visual-basic/language-reference/data-types/short-data-type.md)를 [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md)를 [정수](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)하십시오 [긴](../../../visual-basic/language-reference/data-types/long-data-type.md)하십시오 [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md))|`Double`|  
-|한 식이 [단일](../../../visual-basic/language-reference/data-types/single-data-type.md) 데이터 형식과 다른 아닙니다는 [Double](../../../visual-basic/language-reference/data-types/double-data-type.md)|`Single`|  
-|한 식이 [10 진수](../../../visual-basic/language-reference/data-types/decimal-data-type.md) 데이터 형식과 다른 아닙니다를 [Single](../../../visual-basic/language-reference/data-types/single-data-type.md) 또는 [Double](../../../visual-basic/language-reference/data-types/double-data-type.md)|`Decimal`|  
-|두 식 중 하나가 [이중](../../../visual-basic/language-reference/data-types/double-data-type.md) 데이터 형식|`Double`|  
+|두 식은 모두 정수 데이터 형식 ([SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md), [Short](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md), [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md), [Long](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md))입니다.|`Double`|  
+|한 식은 [단일](../../../visual-basic/language-reference/data-types/single-data-type.md) 데이터 형식이 고 다른 하나는 [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) 이 아닙니다.|`Single`|  
+|한 식은 [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md) 데이터 형식이 고 다른 하나는 [단일](../../../visual-basic/language-reference/data-types/single-data-type.md) 또는 [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) 이 아닙니다.|`Decimal`|  
+|두 식이 모두 [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) 데이터 형식입니다.|`Double`|  
   
- 정수 계열 숫자 식이 모두로 확장 됩니다 나누기를 수행 하기 전에 `Double`입니다. Visual Basic에서 결과 변환 하려고 정수 데이터 형식으로 결과 할당 하는 경우 `Double` 해당 형식에 있습니다. 이 결과 해당 형식에 맞지 않는 경우 예외가 throw. 특히이 도움말 페이지에 "0으로 나누기"을 참조 하세요.  
+ 나누기를 수행 하기 전에 정수 계열 숫자 식이로 `Double`확장 됩니다. 정수 계열 데이터 형식에 결과를 할당 하는 경우 Visual Basic 결과 `Double` 를 해당 형식으로 변환 하려고 시도 합니다. 결과가 해당 형식에 맞지 않는 경우 예외를 throw 할 수 있습니다. 특히이 도움말 페이지의 "0으로 나누기 시도"를 참조 하십시오.  
   
- 하는 경우 `expression1` 또는 `expression2` 로 [Nothing](../../../visual-basic/language-reference/nothing.md)를 0으로 처리 됩니다.  
+ 또는 `expression1` 가`expression2` [Nothing](../../../visual-basic/language-reference/nothing.md)으로 계산 되 면 0으로 처리 됩니다.  
   
-## <a name="attempted-division-by-zero"></a>0으로 나누기  
- 하는 경우 `expression2` 0으로 계산 되는 `/` 연산자는 다양 한 피연산자 데이터 형식에 따라 다르게 동작 합니다. 다음 표에서 가능한 동작을 보여 줍니다.  
+## <a name="attempted-division-by-zero"></a>0으로 나누기 시도  
+ 가 `expression2` 0으로 계산 되는 `/` 경우 연산자는 피연산자 데이터 형식에 따라 다르게 동작 합니다. 다음 표에서는 가능한 동작을 보여 줍니다.  
   
-|피연산자 데이터 형식|동작 하는 경우 `expression2` 0|  
+|피연산자 데이터 형식|가 0 `expression2` 인 경우의 동작|  
 |------------------------|---------------------------------------|  
-|부동 소수점 (`Single` 또는 `Double`)|무한대를 반환 합니다 (<xref:System.Double.PositiveInfinity> 나 <xref:System.Double.NegativeInfinity>), 또는 <xref:System.Double.NaN> (숫자가 아님) 경우 `expression1` 0입니다|  
-|`Decimal`|Throw <xref:System.DivideByZeroException>|  
-|정수 (부호 있는 또는 부호 없음)|정수 계열 형식 throw로 다시 변환 하려고 <xref:System.OverflowException> 정수 계열 형식 받아들일 수 없습니다 때문 <xref:System.Double.PositiveInfinity>, <xref:System.Double.NegativeInfinity>, 또는 <xref:System.Double.NaN>|  
+|부동 소수점 (`Single` 또는 `Double`)|가 0 인<xref:System.Double.PositiveInfinity> 경우 <xref:System.Double.NaN> <xref:System.Double.NegativeInfinity> infinity`expression1` (또는) 또는 (숫자가 아님)을 반환 합니다.|  
+|`Decimal`|되거나<xref:System.DivideByZeroException>|  
+|정수 (부호 있음 또는 부호 없음)|정수 계열 형식에서, <xref:System.OverflowException> <xref:System.Double.NegativeInfinity>또는를 사용할 <xref:System.Double.PositiveInfinity>수 없으므로 정수 계열 형식으로 다시 변환 하려고 시도 했습니다.<xref:System.Double.NaN>|  
   
 > [!NOTE]
->  합니다 `/` 연산자 *오버 로드 된*, 클래스 또는 구조체 수 할 동작 피연산자에 해당 클래스 또는 구조체 형식의 경우. 이 연산자를 사용 하 여 이러한 클래스나 구조체에는 코드를 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
+> 연산자를 오버 로드할 수 있습니다. 즉, 피연산자가 해당 클래스 또는 구조체의 형식일 때 클래스 또는 구조체의 동작을 다시 정의할 수 있습니다. `/` 코드가 이러한 클래스 또는 구조체에서이 연산자를 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
- 이 예제에서는 `/` 부동 소수점 나누기를 수행 하는 연산자입니다. 결과는 두 피연산자의 몫입니다.  
+ 이 예제에서는 `/` 연산자를 사용 하 여 부동 소수점 나누기를 수행 합니다. 결과는 두 피연산자의 몫입니다.  
   
  [!code-vb[VbVbalrOperators#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#16)]  
   
- 앞의 예제에서 식에는 2.5 및 3.333333 값을 반환 합니다. 결과 항상 부동 소수점 (`Double`) 경우에 두 피연산자가 정수 상수입니다.  
+ 위의 예제에서 식은 2.5 및 3.333333의 값을 반환 합니다. 두 피연산자가 모두 정수 상수인 경우에도 결과`Double`는 항상 부동 소수점 ()입니다.  
   
 ## <a name="see-also"></a>참고자료
 
-- [/ = 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
+- [/= 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
 - [\ 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
 - [연산자 결과의 데이터 형식](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)
 - [산술 연산자](../../../visual-basic/language-reference/operators/arithmetic-operators.md)

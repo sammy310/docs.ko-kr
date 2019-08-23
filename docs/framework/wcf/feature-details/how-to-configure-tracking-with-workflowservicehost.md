@@ -2,19 +2,19 @@
 title: '방법: WorkflowServiceHost를 사용하여 추적 구성'
 ms.date: 03/30/2017
 ms.assetid: ed1485fe-7529-4351-bca3-8bb915260b17
-ms.openlocfilehash: e0631cdb47bc88f7f588f4dfe6c44ea3d44f4e60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5781878270272f5ef894c68dc23b9433029e1d41
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62039366"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968500"
 ---
 # <a name="how-to-configure-tracking-with-workflowservicehost"></a>방법: WorkflowServiceHost를 사용하여 추적 구성
 이 항목에서는 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]에서 호스트되는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 워크플로에 대해 추적을 구성하는 방법에 대해 설명합니다. 이러한 추적 기능은 Web.config 파일에서 서비스 동작을 지정하여 구성됩니다.  
   
 ### <a name="configure-tracking-in-configuration"></a>구성에서 추적 구성  
   
-1. 추가 합니다 <xref:System.Activities.Tracking.EtwTrackingParticipant> 를 사용 하 여는 <`behavior`> 다음 예제에서와 같이 구성 파일의 요소입니다.  
+1. 다음 예제 <xref:System.Activities.Tracking.EtwTrackingParticipant> 와 같이 구성`behavior`파일에 < > 요소를 사용 하 여를 추가 합니다.  
   
     ```xml  
     <behaviors>  
@@ -27,9 +27,9 @@ ms.locfileid: "62039366"
     ```  
   
     > [!NOTE]
-    >  위의 샘플에서 사용하는 구성은 단순화된 구성입니다. 자세한 내용은 [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md)합니다.  
+    > 위의 샘플에서 사용하는 구성은 단순화된 구성입니다. 자세한 내용은 [간소화 된 구성](../../../../docs/framework/wcf/simplified-configuration.md)을 참조 하세요.  
   
-     위의 구성 샘플에서는 <xref:System.Activities.Tracking.EtwTrackingParticipant>를 추가하고 추적 프로필 이름을 지정합니다. 추적 프로필에 생성 됩니다는 <`trackingProfile`> 내의 요소는 <`tracking`> 요소입니다. 추적 프로필에는 추적 참가자가 런타임에 워크플로 인스턴스 상태가 변경될 때 발생하는 워크플로 이벤트를 구독할 수 있도록 허용하는 추적 쿼리가 포함됩니다. 다음 예제에서는 추적 프로필을 만드는 방법을 보여 줍니다.  
+     위의 구성 샘플에서는 <xref:System.Activities.Tracking.EtwTrackingParticipant>를 추가하고 추적 프로필 이름을 지정합니다. 추적 프로필은 <`trackingProfile``tracking`> 요소 내의 < > 요소에 생성 됩니다. 추적 프로필에는 추적 참가자가 런타임에 워크플로 인스턴스 상태가 변경될 때 발생하는 워크플로 이벤트를 구독할 수 있도록 허용하는 추적 쿼리가 포함됩니다. 다음 예제에서는 추적 프로필을 만드는 방법을 보여 줍니다.  
   
     ```xml  
     <system.serviceModel>  
@@ -50,9 +50,9 @@ ms.locfileid: "62039366"
     </system.serviceModel>  
     ```  
   
-     추적 프로필에 대 한 자세한 내용은 참조 하세요. [추적 프로필](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)합니다.  
+     추적 프로필에 대 한 자세한 내용은 [추적 프로필](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)을 참조 하세요.  
   
-     일반적인 추적 하는 방법에 대 한 자세한 내용은 참조 하세요. [워크플로 추적 및 트레이싱](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)합니다.  
+     일반적으로 추적 하는 방법에 대 한 자세한 내용은 [워크플로 추적 및 추적](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)을 참조 하세요.  
   
 ### <a name="configure-tracking-in-code"></a>코드에서 추적 구성  
   
@@ -62,11 +62,11 @@ ms.locfileid: "62039366"
     host.Description.Behaviors.Add(new EtwTrackingBehavior { ProfileName = "Sample Tracking Profile" });  
     ```  
   
-     위의 코드 샘플에서는 <xref:System.Activities.Tracking.EtwTrackingParticipant>를 추가하고 추적 프로필 이름을 지정합니다. 추적 프로필에 생성 됩니다는 <`trackingProfile`> 내의 요소는 <`tracking`> 이전 섹션에 표시 된 대로 요소입니다.  
+     위의 코드 샘플에서는 <xref:System.Activities.Tracking.EtwTrackingParticipant>를 추가하고 추적 프로필 이름을 지정합니다. 추적 프로필은 이전 단원에 표시`trackingProfile`된 것 처럼 <`tracking`> 요소 내의 < > 요소에 생성 됩니다.  
   
-     추적 프로필에 대 한 자세한 내용은 참조 하세요. [추적 프로필](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)합니다.  
+     추적 프로필에 대 한 자세한 내용은 [추적 프로필](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)을 참조 하세요.  
   
-     일반적인 추적 하는 방법에 대 한 자세한 내용은 참조 하세요. [워크플로 추적 및 트레이싱](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)합니다. 프로그래밍 방식으로 추적을 구성 하는 예제를 참조 하세요. [워크플로에 대 한 추적 구성](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)합니다.  
+     일반적으로 추적 하는 방법에 대 한 자세한 내용은 [워크플로 추적 및 추적](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)을 참조 하세요. 프로그래밍 방식으로 추적을 구성 하는 예제는 [워크플로에 대 한 추적 구성](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고자료
 

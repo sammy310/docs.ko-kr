@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3680721c70ab69776c973913d929f7bdd9db3909
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ccd73963302ae99c7d5d1a7201bc77c4544363f5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779452"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937905"
 ---
 # <a name="ihostassemblymanagergetnonhoststoreassemblies-method"></a>IHostAssemblyManager::GetNonHostStoreAssemblies 메서드
-한 인터페이스 포인터를 가져옵니다는 [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) 호스트에서 예상 하는 CLR (공용 언어 런타임)를 로드 하는 어셈블리의 목록을 나타내는입니다.  
+호스트에서 CLR (공용 언어 런타임)을 로드 하는 데 필요한 어셈블리 목록을 나타내는 [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) 에 대 한 인터페이스 포인터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,42 +37,42 @@ HRESULT GetNonHostStoreAssemblies (
   
 ## <a name="parameters"></a>매개 변수  
  `ppReferenceList`  
- [out] 주소에 대 한 포인터는 `ICLRAssemblyReferenceList` 호스트 로드 하기 위해 CLR에서 예상 하는 어셈블리에 대 한 참조의 목록을 포함 하는 합니다.  
+ 제한이 호스트가 CLR에서 로드할 것으로 예상 `ICLRAssemblyReferenceList` 하는 어셈블리에 대 한 참조 목록을 포함 하는의 주소에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|설명|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|S_OK|`GetNonHostStoreAssemblies` 성공적으로 반환 합니다.|  
-|HOST_E_CLRNOTAVAILABLE|CLR이 로드 된 프로세스에 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  
+|S_OK|`GetNonHostStoreAssemblies`성공적으로 반환 되었습니다.|  
+|HOST_E_CLRNOTAVAILABLE|CLR이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자가 잠금을 소유 하지 않습니다.|  
-|HOST_E_ABANDONED|이벤트가 차단 된 스레드가 취소 된 또는 파이버를 대기 하 고 있습니다.|  
-|E_FAIL|알 수 없는 치명적인 오류가 발생 했습니다. 메서드 E_FAIL을 반환 하는 경우 CLR은 프로세스 내에서 사용할 수 없습니다. 메서드를 호스트 하는 데 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.|  
-|E_OUTOFMEMORY|요청 된 작업에 대 한 참조 목록을 만드는 데 사용할 수 있는 메모리가 충분 하지 않습니다 `ICLRAssemblyReferenceList`합니다.|  
+|HOST_E_ABANDONED|차단 된 스레드나 파이버에서 대기 하는 동안 이벤트를 취소 했습니다.|  
+|E_FAIL|알 수 없는 치명적인 오류가 발생 했습니다. 메서드가 E_FAIL을 반환 하는 경우 프로세스 내에서 더 이상 CLR을 사용할 수 없습니다. 호스팅 메서드에 대 한 후속 호출은 HOST_E_CLRNOTAVAILABLE을 반환 합니다.|  
+|E_OUTOFMEMORY|요청한 `ICLRAssemblyReferenceList`에 대 한 참조 목록을 만드는 데 사용할 수 있는 메모리가 부족 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 다음 지침을 사용 하 여 참조를 확인 하는 CLR:  
+ CLR은 다음 지침 집합을 사용 하 여 참조를 확인 합니다.  
   
-- 반환 하는 어셈블리 참조의 목록을 확인 먼저 `GetNonHostStoreAssemblies`합니다.  
+- 먼저에서 `GetNonHostStoreAssemblies`반환 하는 어셈블리 참조의 목록을 참조 합니다.  
   
-- 어셈블리 목록에 있으면 CLR에 정상적으로 바인딩합니다.  
+- 어셈블리가 목록에 표시 되 면 CLR은이를 정상적으로 바인딩합니다.  
   
-- 어셈블리 목록에 나타나지 않습니다 하 고 호스트의 구현을 제공 했습니다 [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md), CLR 호출 [ihostassemblystore:: Provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) 호스트가 제공 하는 바인딩할 어셈블리입니다.  
+- 어셈블리가 목록에 표시 되지 않고 호스트에서 [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)의 구현을 제공한 경우 CLR은 [IHostAssemblyStore::P rovideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) 를 호출 하 여 호스트가 바인딩할 어셈블리를 제공할 수 있도록 합니다.  
   
-- 그렇지 않으면 CLR 어셈블리에 바인딩할 실패 합니다.  
+- 그렇지 않으면 CLR이 어셈블리에 바인딩하지 못합니다.  
   
- 호스트 설정 하는 경우 `ppReferenceList` null이 고, CLR 첫 번째 프로브를 전역 어셈블리 캐시에는 다음과 같이 호출 됩니다. `ProvideAssembly`, 및 다음 어셈블리 참조를 확인 하는 응용 프로그램 기준 위치를 프로브 합니다.  
+ 호스트가 null로 설정 `ppReferenceList` 된 경우 CLR은 먼저 전역 어셈블리 캐시를 검색 하 고를 `ProvideAssembly`호출한 다음 응용 프로그램 기반을 검색 하 여 어셈블리 참조를 확인 합니다.  
   
 > [!NOTE]
->  초기화 하면 CLR은 호출 `GetNonHostStoreAssemblies` 한 번만 합니다. 메서드를 다시 호출 되지 않습니다.  
+> 초기화 되 면 CLR은 한 `GetNonHostStoreAssemblies` 번만 호출 합니다. 메서드가 다시 호출 되지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** MSCorEE.h  
   
- **라이브러리:** MSCorEE.dll에 리소스로 포함  
+ **라이브러리** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -8,26 +8,26 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-ms.openlocfilehash: 5c95272c672d9b35d61e2fca8cccdbc532ef6776
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 609fe4896a2b01b8a69ff8a3d0854c85ddbd6a26
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211293"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969087"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>ShouldSerialize 및 Reset 메서드를 사용하여 기본값 정의
-`ShouldSerialize` 및 `Reset` 가지가 선택적 속성에 대해 제공할 수 있는 속성에는 없는 경우는 간단한 기본 값입니다. 속성의 기본값에 하는 경우 적용 해야 합니다 <xref:System.ComponentModel.DefaultValueAttribute> 대신 특성 클래스 생성자에 기본값을 제공 합니다. 이러한 메커니즘 중 하나는 디자이너에서 다음 기능을 사용할 수 있습니다:
+`ShouldSerialize`및 `Reset` 는 속성에 단순 기본값이 없는 경우 속성에 대해 제공할 수 있는 선택적 메서드입니다. 속성에 단순 기본값이 있는 경우를 적용 <xref:System.ComponentModel.DefaultValueAttribute> 하 고 대신 특성 클래스 생성자에 기본값을 제공 해야 합니다. 이러한 메커니즘 중 하나를 통해 디자이너에서 다음 기능을 사용할 수 있습니다.
 
-- 속성이는 기본값에서 수정 된 경우 속성 브라우저에 시각적 표시를 제공 합니다.
+- 속성은 속성 브라우저가 기본값에서 수정 된 경우이를 시각적으로 표시 합니다.
 
-- 사용자 속성을 마우스 오른쪽 단추로 클릭 하 고 선택할 수 **재설정** 속성을 기본값으로 복원 합니다.
+- 사용자는 속성을 마우스 오른쪽 단추로 클릭 하 고 **다시 설정** 을 선택 하 여 속성을 기본값으로 복원할 수 있습니다.
 
-- 디자이너는 더 효율적인 코드를 생성합니다.
+- 디자이너가 보다 효율적인 코드를 생성 합니다.
 
     > [!NOTE]
-    >  적용 중 하나는 <xref:System.ComponentModel.DefaultValueAttribute> 바꾸거나 `Reset` *PropertyName* 및 `ShouldSerialize` *PropertyName* 메서드. 둘 다 사용 하지 마세요.
+    > 를 <xref:System.ComponentModel.DefaultValueAttribute> 적용 하거나 *propertyname* 및 `Reset` `ShouldSerialize` *propertyname* 메서드를 제공 합니다. 둘 다 사용 하지 마세요.
 
- 합니다 `Reset` *PropertyName* 메서드 다음 코드 조각에 표시 된 대로 속성을 해당 기본값으로 설정 합니다.
+ `Reset` *PropertyName* 메서드는 다음 코드 조각에 표시 된 것 처럼 속성을 기본값으로 설정 합니다.
 
 ```vb
 Public Sub ResetMyFont()
@@ -42,9 +42,9 @@ public void ResetMyFont() {
 ```
 
 > [!NOTE]
->  속성에 없는 경우를 `Reset` 메서드를 사용 하 여 표시 되지를 <xref:System.ComponentModel.DefaultValueAttribute>, 해당 선언에서 제공 되는 기본 값이 없는 `Reset` 바로 가기 메뉴에서는 해당 속성을 사용할 옵션는 **속성** Visual Studio에서 Windows Forms 디자이너의 창.
+> 속성 `Reset` 에 메서드가 없고로 표시 <xref:System.ComponentModel.DefaultValueAttribute>되어 있지 않고 해당 선언 `Reset` 에 기본값이 제공 되지 않은 경우 속성 창의 바로 가기 메뉴에서 해당 속성에 대 한 옵션을 사용할 수 없습니다. Visual Studio의 Windows Forms 디자이너입니다.
 
- Visual Studio와 같은 디자이너를 사용 합니다 `ShouldSerialize` *PropertyName* 속성이 기본값에서 변경 되었는지 여부를 확인 하 고 속성을 경우에만 폼에 코드를 작성 방법 변경 되 면 되므로 보다 효율적인 코드 세대입니다. 예를 들어:
+ Visual Studio와 같은 디자이너는 `ShouldSerialize` *PropertyName* 메서드를 사용 하 여 속성이 기본값에서 변경 되었는지 여부를 확인 하 고, 속성이 변경 된 경우에만 폼에 코드를 작성 하 여 보다 효율적인 코드 생성을 허용 합니다. 예를 들어:
 
 ```vb
 'Returns true if the font has changed; otherwise, returns false.
@@ -62,7 +62,7 @@ public bool ShouldSerializeMyFont() {
 }
 ```
 
- 전체 코드 예제와 같습니다.
+ 전체 코드 예제는 다음과 같습니다.
 
 ```vb
 Option Explicit
@@ -141,7 +141,7 @@ public class MyControl : Control {
 }
 ```
 
- 개인 변수의 값으로 액세스 하는 경우에이 경우에서는 `MyFont` 속성은 `null`, 속성 브라우저에 표시 되지 `null`대신 표시 합니다 <xref:System.Windows.Forms.Control.Font%2A> 있지 않으면 부모 `null`, 또는 기본 <xref:System.Windows.Forms.Control.Font%2A> 에 정의 된 값 <xref:System.Windows.Forms.Control>합니다. 에 대 한 기본값에 따라서 `MyFont` 간단히 설정할 수 없습니다 및 <xref:System.ComponentModel.DefaultValueAttribute> 이 속성에 적용할 수 없습니다. 대신 합니다 `ShouldSerialize` 및 `Reset` 에 대 한 메서드를 구현 해야 합니다 `MyFont` 속성입니다.
+ 이 `MyFont` 경우 속성에서 액세스 하는 private 변수의 값이 인 `null`경우에도 속성 브라우저는 표시 `null`되지 않습니다. 대신 부모의 <xref:System.Windows.Forms.Control.Font%2A> `null`속성을 표시 합니다. 또는에 <xref:System.Windows.Forms.Control.Font%2A> <xref:System.Windows.Forms.Control>정의 된 기본값입니다. 따라서의 `MyFont` 기본값은 간단히 설정할 수 없으며이 속성에를 <xref:System.ComponentModel.DefaultValueAttribute> 적용할 수 없습니다. 대신 속성에 대해 `Reset` 및메서드를구현해야합니다.`ShouldSerialize` `MyFont`
 
 ## <a name="see-also"></a>참고자료
 

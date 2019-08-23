@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1988b79c-3bfc-4c5c-a08a-86cf638bbe17
-ms.openlocfilehash: 429bca7501bd58440ee894345855141a2a2ed12c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ccd2e37457e686bc5faed6d8979c2b266d05c829
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033711"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943432"
 ---
 # <a name="how-to-resolve-conflicts-by-merging-with-database-values"></a>방법: 데이터베이스 값을 병합하여 충돌 해결
-변경 내용을 다시 제출하기 전에 예상 데이터베이스 값과 실제 데이터베이스 값의 차이점을 조정하려면 <xref:System.Data.Linq.RefreshMode.KeepChanges>를 사용하여 데이터베이스 값과 현재 클라이언트 멤버 값을 병합합니다. 자세한 내용은 참조 하세요. [낙관적 동시성: 개요](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)합니다.  
+변경 내용을 다시 제출하기 전에 예상 데이터베이스 값과 실제 데이터베이스 값의 차이점을 조정하려면 <xref:System.Data.Linq.RefreshMode.KeepChanges>를 사용하여 데이터베이스 값과 현재 클라이언트 멤버 값을 병합합니다. 자세한 내용은 [낙관적 동시성: 개요](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
   
 > [!NOTE]
->  모든 경우에 데이터베이스에서 업데이트된 데이터를 검색하여 클라이언트의 레코드를 먼저 새로 고칩니다. 이렇게 하면 다음 업데이트 시도는 동일한 동시성 검사에서 실패하지 않습니다.  
+> 모든 경우에 데이터베이스에서 업데이트된 데이터를 검색하여 클라이언트의 레코드를 먼저 새로 고칩니다. 이렇게 하면 다음 업데이트 시도는 동일한 동시성 검사에서 실패하지 않습니다.  
   
 ## <a name="example"></a>예제  
  이 시나리오에서는 User1이 변경 내용을 제출하려는 경우 User2가 그 동안에 Assistant 열과 Department 열을 변경했기 때문에 <xref:System.Data.Linq.ChangeConflictException> 예외가 throw됩니다. 다음 표에서는 상황을 보여 줍니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "62033711"
 ||관리자가|Assistant|Department|  
 |------|-------------|---------------|----------------|  
 |User1과 User2가 쿼리했을 때 원래 데이터베이스 상태|Alfreds|Maria|Sales|  
-|User1이 변경 내용 전송 준비|Alfred||Marketing|  
+|User1이 변경 내용 전송 준비|Alfred||마케팅|  
 |User2가 이미 변경 내용 전송||Mary|서비스|  
   
  User1이 데이터베이스 값을 현재 클라이언트 멤버 값과 병합하여 이 충돌을 해결하기로 결정합니다. 그 결과, 현재 변경 집합 역시 해당 값을 변경할 때에만 데이터베이스 값을 덮어씁니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "62033711"
   
 ||관리자가|Assistant|Department|  
 |------|-------------|---------------|----------------|  
-|충돌 해결 후 변경된 상태|Alfred<br /><br /> (User1이 전송한 값)|Mary<br /><br /> (User2가 전송한 값)|Marketing<br /><br /> (User1이 전송한 값)|  
+|충돌 해결 후 변경된 상태|Alfred<br /><br /> (User1이 전송한 값)|Mary<br /><br /> (User2가 전송한 값)|마케팅<br /><br /> (User1이 전송한 값)|  
   
  다음 예제에서는 클라이언트 역시 해당 값을 변경하지 않는 경우 데이터베이스 값과 현재 클라이언트 멤버 값을 병합하는 방법을 보여 줍니다. 검사 또는 개별 멤버 충돌에 대한 사용자 지정 처리 기능이 발생하지 않습니다.  
   
@@ -43,5 +43,5 @@ ms.locfileid: "62033711"
 ## <a name="see-also"></a>참고자료
 
 - [방법: 데이터베이스 값을 덮어써서 충돌 해결](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)
-- [방법: 데이터베이스 값을 유지 하 여 충돌을 해결 합니다.](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)
+- [방법: 데이터베이스 값을 보존 하 여 충돌 해결](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)
 - [방법: 변경 내용 충돌 관리](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

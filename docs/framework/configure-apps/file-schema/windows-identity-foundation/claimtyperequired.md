@@ -3,12 +3,12 @@ title: <claimTypeRequired>
 ms.date: 03/30/2017
 ms.assetid: c469d71f-6c77-4a24-97aa-53efa126ceef
 author: BrucePerlerMS
-ms.openlocfilehash: eafaf253e27db632f17acfce4445a07d18b109aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85f3954514fa8b532311b1fbfc34f32ebefa4099
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778458"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942821"
 ---
 # <a name="claimtyperequired"></a>\<claimTypeRequired>
 들어오는 보안 토큰에 대 한 필수 클레임 집합을 지정 합니다.  
@@ -36,12 +36,12 @@ ms.locfileid: "61778458"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<claimType>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtype.md)|들어오는 보안 토큰에 대 한 단일 옵션 또는 필요한 클레임을 지정합니다.|  
+|[\<claimType>](claimtype.md)|들어오는 보안 토큰에 대 한 단일 선택적 또는 필수 클레임을 지정 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|서비스 수준 id 설정을 지정합니다.|
+|[\<identityConfiguration>](identityconfiguration.md)|서비스 수준 id 설정을 지정 합니다.|

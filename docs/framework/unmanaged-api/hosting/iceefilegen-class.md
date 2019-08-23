@@ -16,20 +16,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6fb0b11c26ff65f74681d1e3bf7324bfb0e559d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 44241d02051c9bd54f93a19fa6044e4973fdef9e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766618"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950266"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen 클래스
-기본 이식 가능한 실행 파일 (PE) 파일을 만들기 위한 기능을 제공 합니다. 인터페이스를 실행 하는 컴파일된 출력을 생성 하려면 컴파일러에서 일반적으로 사용 됩니다.  
+네이티브 PE (이식 가능한 실행) 파일을 만드는 기능을 제공 합니다. 일반적으로이 인터페이스는 컴파일러에서 컴파일된 출력 실행 파일을 생성 하는 데 사용 됩니다.  
   
 > [!NOTE]
->  `ICeeFileGen` .NET Framework 인프라를 지원 하며 코드에서 직접 사용할 수 없습니다.  
+> `ICeeFileGen`는 .NET Framework 인프라를 지원 하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
- 이 인터페이스는 않으며 이후 릴리스에서 제거 됩니다.  
+ 이 인터페이스는 더 이상 사용 되지 않으며 이후 릴리스에서 제거 될 예정입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -237,11 +237,11 @@ public:
 ```  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** ICeeFileGen.h  
   
- **.NET framework 버전:** 1.0  
+ **.NET Framework 버전:** 1.0  
   
 ## <a name="see-also"></a>참고자료
 
