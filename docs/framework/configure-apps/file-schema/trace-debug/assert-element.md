@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <assert> element
 - assert element
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
-ms.openlocfilehash: 2f3823265e358976f970cdfa36772d2251894280
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ba781598542d271f41476b1a1e9d61faeb6ff74
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701361"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927190"
 ---
 # <a name="assert-element"></a>\<assert > 요소
 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> 메서드를 호출할 때 메시지 상자를 표시할지 여부를 지정합니다. 또한 메시지를 작성할 파일의 이름도 지정합니다.  
@@ -35,14 +35,14 @@ ms.locfileid: "61701361"
   
 |특성|설명|  
 |---------------|-----------------|  
-|`assertuienabled`|선택적 특성입니다.<br /><br /> 상자 메시지를 표시할 때 여부를 지정 합니다 **Debug.Assert** 메서드를 평가 **false**합니다.|  
-|`logfilename`|선택적 특성입니다.<br /><br /> 가 메시지를 쓸 파일의 이름을 지정 **Debug.Assert** 로 평가 **false**합니다.|  
+|`assertuienabled`|선택적 특성입니다.<br /><br /> **Debug. Assert** 메서드가 **false**로 평가 될 때 메시지 상자를 표시할지 여부를 지정 합니다.|  
+|`logfilename`|선택적 특성입니다.<br /><br /> 디버그가 인 경우 메시지를 쓸 파일의 이름을 지정 합니다 **. Assert** 가 **false**로 평가 됩니다.|  
   
 ## <a name="assertuienabled-attribute"></a>assertuienabled 특성  
   
 |값|설명|  
 |-----------|-----------------|  
-|`true`|메시지 상자를 표시합니다. 이 값이 기본값입니다.|  
+|`true`|메시지 상자를 표시 합니다. 이 값이 기본값입니다.|  
 |`false`|메시지 상자를 표시 하지 않습니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
@@ -56,10 +56,10 @@ ms.locfileid: "61701361"
 |`system.diagnostics`|메시지를 수집하고 저장하고 라우팅하는 추적 수신기를 지정하며, 추적 스위치가 설정되는 수준을 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
- 두 특성 모두에  **\<assert >** 요소는 선택 사항입니다. 메시지를 쓸 파일을 지정 하지 않고 메시지 상자를 비활성화할 수 있습니다 또는 메시지 상자가 활성화 된 상태에서 메시지를 쓸 파일을 지정할 수 있습니다.  
+ Assert > 요소의 두 특성  **\<** 은 모두 선택 사항입니다. 메시지를 쓸 파일을 지정 하지 않고 메시지 상자를 사용 하지 않도록 설정 하거나 메시지 상자를 활성화 한 상태로 메시지를 쓸 파일을 지정할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 호출 하는 경우 메시지 상자 표시를 사용 하지 않도록 설정 하는 방법을 보여 줍니다 **Debug.Assert** 메시지를 쓰고 `c:\log.txt`합니다.  
+ 다음 예제에서는 Debug를 호출할 때 메시지 상자를 표시 하지 않도록 설정 하는 방법을 보여 줍니다 **. Assert** 및 메시지를에 `c:\log.txt`씁니다.  
   
 ```xml  
 <configuration>  
@@ -72,4 +72,4 @@ ms.locfileid: "61701361"
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Diagnostics.Debug>
-- [추적 및 디버그 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [추적 및 디버그 설정 스키마](index.md)

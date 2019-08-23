@@ -2,12 +2,12 @@
 title: 이벤트
 description: 이벤트를 F# 사용 하 여 함수 호출을 GUI 프로그래밍에서 중요 한 사용자 동작에 연결 하는 방법을 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: eed2caff569638ea5aa972a000dfa71a3b64f60b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 7c3f16204b762609323fc2bcdc05f80e85a298e8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627573"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917286"
 ---
 # <a name="events"></a>이벤트
 
@@ -175,7 +175,7 @@ Application.Run(appForm)
 ## <a name="see-also"></a>참고자료
 
 - [멤버](index.md)
-- [이벤트 처리 및 발생](../../../../docs/standard/events/index.md)
+- [이벤트 처리 및 발생](../../../standard/events/index.md)
 - [람다 식: `fun` 키워드](../functions/lambda-expressions-the-fun-keyword.md)
 - [Control. 이벤트 모듈](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
 - [Control. Event&#60;&#62; 클래스](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)

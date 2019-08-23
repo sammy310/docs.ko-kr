@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3a73991e-fd4e-4610-93fb-7ced4dc6b7f9
-ms.openlocfilehash: ed440f3315fc25e82b648f21410acb7a2c2a08f9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e3f82c260a2cab85270a9f33a87eb9a9f04b72c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743674"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964150"
 ---
 # <a name="adding-business-logic-by-using-partial-methods"></a>Partial 메서드를 사용하여 비즈니스 논리 추가
-Visual Basic을 사용자 지정할 수 있습니다 하 고 C# 에서 생성 된 코드에 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 사용 하 여 프로젝트 *부분 메서드*합니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 생성한 코드에는 부분 메서드의 일부로 시그니처를 정의합니다. 메서드를 구현하려면 사용자 고유의 부분 메서드를 추가합니다. 사용자 고유의 구현을 추가하지 않으면 컴파일러에서는 부분 메서드 시그니처를 취소하고 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]의 기본 메서드를 호출합니다.  
+*부분 메서드*를 사용 하 C# 여 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 프로젝트에서 Visual Basic 및 생성 된 코드를 사용자 지정할 수 있습니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 생성한 코드에는 부분 메서드의 일부로 시그니처를 정의합니다. 메서드를 구현하려면 사용자 고유의 부분 메서드를 추가합니다. 사용자 고유의 구현을 추가하지 않으면 컴파일러에서는 부분 메서드 시그니처를 취소하고 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]의 기본 메서드를 호출합니다.  
   
 > [!NOTE]
->  Visual Studio를 사용 하는 경우에 유효성 검사 및 기타 사용자 지정 엔터티 클래스에 추가할 개체 관계형 디자이너를 사용할 수 있습니다.  
+> Visual Studio를 사용 하는 경우 개체 관계형 디자이너를 사용 하 여 엔터티 클래스에 유효성 검사 및 기타 사용자 지정 항목을 추가할 수 있습니다.  
   
  예를 들어 Northwind 샘플 데이터베이스의 `Customer` 클래스에 대한 기본 매핑에는 다음 부분 메서드가 포함됩니다.  
   
@@ -30,7 +30,7 @@ Visual Basic을 사용자 지정할 수 있습니다 하 고 C# 에서 생성 �
   
  이러한 접근 방식은 일반적으로 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 `Insert`, `Update` 및 `Delete`에 대한 기본 메서드를 재정의하고 개체 수명 주기 이벤트 동안 속성의 유효성을 검사하는 데 사용됩니다.  
   
- 자세한 내용은 [부분 메서드](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md) (Visual Basic) 또는 [partial (메서드) (C# 참조)](~/docs/csharp/language-reference/keywords/partial-method.md) (C#).  
+ 자세한 내용은 [부분 메서드](../../../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md) (Visual Basic) 또는 [부분 (메서드) (C# 참조)](../../../../../csharp/language-reference/keywords/partial-method.md) (C#)을 참조 하세요.  
   
 ## <a name="example"></a>예제  
   

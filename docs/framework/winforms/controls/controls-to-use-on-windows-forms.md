@@ -5,18 +5,18 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: 114b9a6db7b41c5aac24bcd1badcf5f5b4b2fb08
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: bedfaef9a3d0cc81641006d254926f7bf9861c10
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796273"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930199"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Windows Forms에 사용할 수 있는 컨트롤
 다음은 사전순 목록 컨트롤 및 Windows Forms에서 사용할 수 있는 구성 요소입니다. 이 섹션에서 다루는 Windows Forms 컨트롤 외에 Windows Forms에 ActiveX 및 사용자 지정 컨트롤을 추가할 수 있습니다. 여기에 나열된 목록에서 사용자가 필요한 컨트롤을 찾을 수 없는 경우 직접 만들 수도 있습니다. 자세한 내용은 [디자인할 때 Windows Forms 컨트롤 개발](developing-windows-forms-controls-at-design-time.md)을 참조하십시오. 필요한 컨트롤을 선택하는 방법에 대한 자세한 내용은 [기능별 Windows Forms 컨트롤](windows-forms-controls-by-function.md)을 참조하십시오.  
   
 > [!NOTE]
->  Visual Basic 컨트롤은 .NET Framework에서 제공 하는 클래스를 기반으로 합니다.  
+> Visual Basic 컨트롤은 .NET Framework에서 제공 하는 클래스를 기반으로 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [기능별 Windows Forms 컨트롤](windows-forms-controls-by-function.md)  

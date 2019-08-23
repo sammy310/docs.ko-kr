@@ -2,14 +2,14 @@
 title: <filters>의 <add>
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-ms.openlocfilehash: 399fc4e22a9253469a5494af61dac862e33814a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7975bea1435abdb77528628e7b96c65a72cbbc2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704546"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926694"
 ---
-# <a name="add-of-filters"></a>\<추가 >의 \<필터 >
+# <a name="add-of-filters"></a>\<\<필터 > 추가 >
 로깅할 메시지 종류를 지정하는 XPath 필터입니다.  
   
  \<system.ServiceModel>  
@@ -31,9 +31,9 @@ ms.locfileid: "61704546"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
-|필터|XPath 1.0 식에서 정의하는 XML 문서에 대한 쿼리를 지정하는 문자열입니다. 자세한 내용은 <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>을 참조하세요.|  
+|filter|XPath 1.0 식에서 정의하는 XML 문서에 대한 쿼리를 지정하는 문자열입니다. 자세한 내용은 <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>을 참조하세요.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -42,7 +42,7 @@ ms.locfileid: "61704546"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<필터>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|로깅할 메시지 종류를 제어하는 데 사용되는 XPath 필터 컬렉션을 포함합니다.|  
+|[\<필터>](filters.md)|로깅할 메시지 종류를 제어하는 데 사용되는 XPath 필터 컬렉션을 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
  필터는 전송 계층에서만 적용됩니다(`logMessagesAtTransportLevel` = `true`). 서비스 수준 및 잘못된 형식의 메시지 로깅은 필터의 영향을 받지 않습니다.  
@@ -79,5 +79,5 @@ ms.locfileid: "61704546"
 - <xref:System.ServiceModel.Configuration.MessageLoggingElement.Filters%2A>
 - <xref:System.ServiceModel.Configuration.XPathMessageFilterElement>
 - <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>
-- [메시지 로깅 구성](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
-- [\<messageLogging>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
+- [메시지 로깅 구성](../../../wcf/diagnostics/configuring-message-logging.md)
+- [\<messageLogging>](messagelogging.md)

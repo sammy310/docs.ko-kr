@@ -7,12 +7,12 @@ helpviewer_keywords:
 - cryptographic algorithms
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-ms.openlocfilehash: 49f4b5b4b3634df5e648b5208448d644168e9d19
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 513000169504473aa6dd46feaca214f58502ffd0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566727"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912862"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>알고리즘 이름을 암호화 클래스에 매핑
 개발자가 Windows SDK를 사용 하 여 암호화 개체를 만들 수 있는 네 가지 방법이 있습니다.  
@@ -58,16 +58,16 @@ ms.locfileid: "69566727"
 </configuration>  
 ```  
   
- [< Cryptoclass\> 요소](../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) 에서 특성의 이름을 지정할 수 있습니다. 이전 예제에서는 특성 `MySHA1Hash`의 이름을 지정 합니다. Cryptoclass > 요소에 있는  **\<** 특성의 값은 공용 언어 런타임에서 클래스를 찾는 데 사용 하는 문자열입니다. 정규화 된 [형식 이름 지정](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)에 지정 된 요구 사항을 충족 하는 모든 문자열을 사용할 수 있습니다.  
+ [< Cryptoclass\> 요소](./file-schema/cryptography/cryptoclass-element.md) 에서 특성의 이름을 지정할 수 있습니다. 이전 예제에서는 특성 `MySHA1Hash`의 이름을 지정 합니다. Cryptoclass > 요소에 있는  **\<** 특성의 값은 공용 언어 런타임에서 클래스를 찾는 데 사용 하는 문자열입니다. 정규화 된 [형식 이름 지정](../reflection-and-codedom/specifying-fully-qualified-type-names.md)에 지정 된 요구 사항을 충족 하는 모든 문자열을 사용할 수 있습니다.  
   
- 많은 알고리즘 이름을 동일한 클래스에 매핑할 수 있습니다. [ \<Nameentry > 요소](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) 는 클래스를 친숙 한 알고리즘 이름에 매핑합니다. **Name** 특성은 **CryptoConfig** 메서드를 호출할 때 사용 되는 문자열 이거나 <xref:System.Security.Cryptography> 네임 스페이스에 있는 추상 암호화 클래스의 이름일 수 있습니다. **Class** 특성의 값은  **\<cryptoclass >** 요소에 있는 특성의 이름입니다.  
+ 많은 알고리즘 이름을 동일한 클래스에 매핑할 수 있습니다. [ \<Nameentry > 요소](./file-schema/cryptography/nameentry-element.md) 는 클래스를 친숙 한 알고리즘 이름에 매핑합니다. **Name** 특성은 **CryptoConfig** 메서드를 호출할 때 사용 되는 문자열 이거나 <xref:System.Security.Cryptography> 네임 스페이스에 있는 추상 암호화 클래스의 이름일 수 있습니다. **Class** 특성의 값은  **\<cryptoclass >** 요소에 있는 특성의 이름입니다.  
   
 > [!NOTE]
->  또는 **CryptoConfig ("sha1")** 메서드를 <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> 호출 하 여 SHA1 알고리즘을 가져올 수 있습니다. 각 메서드는 SHA1 알고리즘을 구현 하는 개체만 반환 하도록 보장 합니다. 알고리즘의 각 식별 이름을 구성 파일의 동일한 클래스에 매핑할 필요가 없습니다.  
+> 또는 **CryptoConfig ("sha1")** 메서드를 <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> 호출 하 여 SHA1 알고리즘을 가져올 수 있습니다. 각 메서드는 SHA1 알고리즘을 구현 하는 개체만 반환 하도록 보장 합니다. 알고리즘의 각 식별 이름을 구성 파일의 동일한 클래스에 매핑할 필요가 없습니다.  
   
  기본 이름 및 매핑되는 클래스 목록은를 참조 <xref:System.Security.Cryptography.CryptoConfig>하십시오.  
   
 ## <a name="see-also"></a>참고자료
 
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
-- [암호화 클래스 구성](../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [Cryptographic Services](../../standard/security/cryptographic-services.md)
+- [암호화 클래스 구성](configure-cryptography-classes.md)

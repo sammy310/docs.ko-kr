@@ -2,12 +2,12 @@
 title: <reliableSession>
 ms.date: 03/30/2017
 ms.assetid: 129b4a59-37f0-4030-b664-03795d257d29
-ms.openlocfilehash: 324c46d88d084605dc2b873c65d2a7e7c7a2c4fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 548c4884ecd2f4b9a71fcc9d6647a9e258b183c1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783151"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934243"
 ---
 # <a name="reliablesession"></a>\<reliableSession>
 WS-Reliable Messaging 설정을 정의합니다. 이 요소가 사용자 지정 바인딩에 추가되면 그 결과로 만들어지는 채널에서 EOD(Exactly-Once Delivery) 보증을 지원할 수 있습니다.  
@@ -54,14 +54,14 @@ WS-Reliable Messaging 설정을 정의합니다. 이 요소가 사용자 지정 
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.|  
+|[\<binding>](../../../misc/binding.md)|사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.|  
   
 ## <a name="remarks"></a>설명  
  신뢰할 수 있는 세션은 신뢰할 수 있는 메시징 및 세션 기능을 제공합니다. 신뢰할 수 있는 메시징 기능은 실패 시 통신을 다시 시도하고 메시지 차례로 도착과 같은 배달 보증을 지정할 수 있게 합니다. 세션은 호출 간에 클라이언트의 상태를 유지합니다. 이 요소는 메시지를 순서대로 배달하는 기능을 선택적으로도 제공합니다. 이 구현된 세션은 SOAP 매개자 및 전송 매개자에 적용될 수 있습니다.  
   
  각 바인딩 요소는 메시지를 보내거나 받을 때의 처리 단계를 나타냅니다. 런타임에 바인딩 요소는 메시지를 주고 받는 데 필요한 나가는 채널 스택과 들어오는 채널 스택을 작성하기 위한 채널 팩터리 및 채널 수신기를 생성합니다. `reliableSession`는 끝점 간에 신뢰할 수 있는 세션을 설정하고 이 세션의 동작을 구성할 수 있는 선택적 계층을 스택에 제공합니다.  
   
- 자세한 내용은 [신뢰할 수 있는 세션](../../../../../docs/framework/wcf/feature-details/reliable-sessions.md)합니다.  
+ 자세한 내용은 [신뢰할 수 있는 세션](../../../wcf/feature-details/reliable-sessions.md)합니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 다양한 전송 및 메시지 인코딩 요소, 특히 신뢰할 수 있는 세션 사용 등을 통해 사용자 지정 바인딩을 구성하는 방법을 보여 줍니다. 이렇게 하면 클라이언트 상태가 유지되며 차례로 배달 보증이 지정됩니다. 이 기능은 클라이언트 및 서비스의 응용 프로그램 구성 파일에서 구성됩니다. 예제에서는 서비스 구성을 보여 줍니다.  
@@ -124,8 +124,8 @@ WS-Reliable Messaging 설정을 정의합니다. 이 요소가 사용자 지정 
 - <xref:System.ServiceModel.Configuration.ReliableSessionElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>
-- [신뢰할 수 있는 세션](../../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
-- [바인딩](../../../../../docs/framework/wcf/bindings.md)
-- [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [신뢰할 수 있는 세션](../../../wcf/feature-details/reliable-sessions.md)
+- [바인딩](../../../wcf/bindings.md)
+- [바인딩 확장](../../../wcf/extending/extending-bindings.md)
+- [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

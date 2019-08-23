@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bd74460c7d5d077686c723936d140b07ac21dd0
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f16a2bbd2470b4aec9e95ab67ccb0e736c4c6d02
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663402"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920683"
 ---
 # <a name="timespan_legacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode > 요소
 
@@ -64,7 +64,7 @@ ms.locfileid: "69663402"
 
 .NET Framework 4부터 구조는 <xref:System.TimeSpan?displayProperty=nameWithType> 인터페이스를 <xref:System.IFormattable> 구현 하 고 표준 및 사용자 지정 서식 문자열을 사용 하 여 서식 지정 작업을 지원 합니다. 구문 분석 메서드에서 지원 되지 않는 서식 지정자 또는 형식 문자열이 발견 되 면이 throw <xref:System.FormatException>됩니다.
 
-이전 버전의 .NET Framework에서 구조는 <xref:System.TimeSpan> 를 구현 <xref:System.IFormattable> 하지 않았으며 형식 문자열을 지원 하지 않았습니다. 그러나 대부분의 개발자는 형식 문자열 <xref:System.TimeSpan> 집합을 지원 하 고와 <xref:System.String.Format%2A?displayProperty=nameWithType>같은 메서드를 사용 하 여 [복합 형식 지정 작업](../../../../../docs/standard/base-types/composite-formatting.md) 에 사용 하는 것으로 잘못 된 것으로 가정 합니다. 일반적으로 형식이 형식 문자열을 <xref:System.IFormattable> 구현 하 고 지 원하는 경우 지원 되지 않는 형식 문자열을 사용 하 여 형식 <xref:System.FormatException>지정 메서드를 호출 하면 일반적으로이 throw 됩니다. 그러나가를 <xref:System.TimeSpan> 구현 <xref:System.IFormattable>하지 않았기 때문에 런타임은 형식 문자열을 무시 하 고 대신 메서드 <xref:System.TimeSpan.ToString?displayProperty=nameWithType> 를 호출 했습니다. 즉, 서식 문자열은 서식 지정 작업에 영향을 주지 않지만의 현재 상태는로 설정 되지 않습니다 <xref:System.FormatException>.
+이전 버전의 .NET Framework에서 구조는 <xref:System.TimeSpan> 를 구현 <xref:System.IFormattable> 하지 않았으며 형식 문자열을 지원 하지 않았습니다. 그러나 대부분의 개발자는 형식 문자열 <xref:System.TimeSpan> 집합을 지원 하 고와 <xref:System.String.Format%2A?displayProperty=nameWithType>같은 메서드를 사용 하 여 [복합 형식 지정 작업](../../../../standard/base-types/composite-formatting.md) 에 사용 하는 것으로 잘못 된 것으로 가정 합니다. 일반적으로 형식이 형식 문자열을 <xref:System.IFormattable> 구현 하 고 지 원하는 경우 지원 되지 않는 형식 문자열을 사용 하 여 형식 <xref:System.FormatException>지정 메서드를 호출 하면 일반적으로이 throw 됩니다. 그러나가를 <xref:System.TimeSpan> 구현 <xref:System.IFormattable>하지 않았기 때문에 런타임은 형식 문자열을 무시 하 고 대신 메서드 <xref:System.TimeSpan.ToString?displayProperty=nameWithType> 를 호출 했습니다. 즉, 서식 문자열은 서식 지정 작업에 영향을 주지 않지만의 현재 상태는로 설정 되지 않습니다 <xref:System.FormatException>.
 
 레거시 코드가 복합 서식 지정 메서드와 잘못 된 서식 문자열을 전달 하 고 해당 코드를 다시 컴파일할 수 없는 경우에는 `<TimeSpan_LegacyFormatMode>` 요소를 사용 하 여 레거시 <xref:System.TimeSpan> 동작을 복원할 수 있습니다. 이 `enabled` 요소의 특성을로 <xref:System.TimeSpan.ToString?displayProperty=nameWithType> `true`설정 하는 경우 복합 형식 지정 메서드는가 아닌에 대 <xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>한 호출을 발생 하 고 <xref:System.FormatException> 는 throw 되지 않습니다.
 

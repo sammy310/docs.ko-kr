@@ -9,18 +9,18 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 4d7271e792c96dd896d73a52a31ad136acc19e26
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: b3ad3d0c3223d5baf937ca22fd48d46a80979aac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666785"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913679"
 ---
 # <a name="how-to-localize-an-application"></a>방법: 애플리케이션 지역화
 이 자습서에서는 LocBaml 도구를 사용하여 지역화된 애플리케이션을 만드는 방법을 설명합니다.  
   
 > [!NOTE]
->  LocBaml 도구는 프로덕션용 애플리케이션이 아닙니다. 지역화 API 중 일부를 사용하며 지역화 도구를 작성하는 방법을 설명하는 샘플로 제공됩니다.  
+> LocBaml 도구는 프로덕션용 애플리케이션이 아닙니다. 지역화 API 중 일부를 사용하며 지역화 도구를 작성하는 방법을 설명하는 샘플로 제공됩니다.  
   
 <a name="Introduction"></a>   
 ## <a name="overview"></a>개요  
@@ -28,9 +28,9 @@ ms.locfileid: "69666785"
   
 <a name="Requirements"></a>   
 ## <a name="requirements"></a>요구 사항  
- 이 설명에서는 명령줄에서 실행되는 컴파일러인 [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]를 사용합니다.  
+ 이 설명에서는 명령줄에서 실행 되는 컴파일러 인 MSBuild (Microsoft build engine)를 사용 합니다.  
   
- 또한 프로젝트 파일을 사용하도록 지시됩니다. 및 프로젝트 파일을 사용 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 하는 방법에 대 한 지침은 [빌드 및 배포](../app-development/building-and-deploying-wpf-applications.md)를 참조 하세요.  
+ 또한 프로젝트 파일을 사용하도록 지시됩니다. MSBuild 및 프로젝트 파일을 사용 하는 방법에 대 한 지침은 [빌드 및 배포](../app-development/building-and-deploying-wpf-applications.md)를 참조 하세요.  
   
  이 설명의 모든 예제에서는 문화권으로 en-US(영어-미국)를 사용합니다. 이렇게 하면 다른 언어를 설치하지 않고 예제의 단계를 수행할 수 있습니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "69666785"
   
 1. 지역화를 시작하려는 지점까지 애플리케이션을 개발합니다.  
   
-2. [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]에서 주 어셈블리와 중립 언어 리소스가 포함될 위성 어셈블리(확장명이 .resources.dll인 파일)를 생성하도록 프로젝트 파일에서 개발 언어를 지정합니다. HelloApp 샘플의 프로젝트 파일은 HelloApp.csproj입니다. 해당 파일에서 다음과 같이 식별된 개발 언어를 찾을 수 있습니다.  
+2. MSBuild에서 중립 언어 리소스를 포함 하는 주 어셈블리와 위성 어셈블리 (.dll 확장명이 .resources 인 파일)를 생성 하도록 프로젝트 파일의 개발 언어를 지정 합니다. HelloApp 샘플의 프로젝트 파일은 HelloApp.csproj입니다. 해당 파일에서 다음과 같이 식별된 개발 언어를 찾을 수 있습니다.  
   
      `<UICulture>en-US</UICulture>`  
   
@@ -108,7 +108,7 @@ ms.locfileid: "69666785"
     - **구문** 자세한 정보 표시 모드 정보를 표시 합니다.  
   
     > [!NOTE]
-    >  도구를 실행할 때 옵션 목록이 필요한 경우 **LocBaml** 을 입력 하 고 enter 키를 누릅니다.  
+    > 도구를 실행할 때 옵션 목록이 필요한 경우 **LocBaml** 을 입력 하 고 enter 키를 누릅니다.  
   
 <a name="parse_dll"></a>   
 ## <a name="use-locbaml-to-parse-a-file"></a>LocBaml을 사용하여 파일 구문 분석  
@@ -121,7 +121,7 @@ ms.locfileid: "69666785"
      **LocBaml.exe /parse HelloApp.resources.dll /out:Hello.csv**  
   
     > [!NOTE]
-    >  입력 파일 HelloApp.resources.dll이 LocBaml.exe와 동일한 디렉터리에 없는 경우 두 파일이 동일한 디렉터리에 있도록 파일 중 하나를 이동합니다.  
+    > 입력 파일 HelloApp.resources.dll이 LocBaml.exe와 동일한 디렉터리에 없는 경우 두 파일이 동일한 디렉터리에 있도록 파일 중 하나를 이동합니다.  
   
 3. LocBaml을 실행하여 파일을 구문 분석하는 경우 출력은 쉼표(.csv 파일) 또는 탭(.txt 파일)으로 구분된 7개 필드로 구성됩니다. 다음은 HelloApp.resources.dll에 대해 구문 분석된 .csv 파일을 보여 줍니다.
 
@@ -172,7 +172,7 @@ ms.locfileid: "69666785"
      **LocBaml.exe /generate HelloApp.resources.dll /trans:Hello.csv /out:c:\ /cul:en-US**  
   
     > [!NOTE]
-    >  입력 파일 Hello.csv가 LocBaml.exe 실행 파일과 동일한 디렉터리에 없는 경우 두 파일이 동일한 디렉터리에 있도록 파일 중 하나를 이동합니다.  
+    > 입력 파일 Hello.csv가 LocBaml.exe 실행 파일과 동일한 디렉터리에 없는 경우 두 파일이 동일한 디렉터리에 있도록 파일 중 하나를 이동합니다.  
   
 2. C:\HelloApp\Bin\Debug\en-US\HelloApp.resources.dll 디렉터리에 있는 기존 HelloApp.resources.dll 파일을 새로 만든 HelloApp.resources.dll 파일로 바꿉니다.  
   

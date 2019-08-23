@@ -2,26 +2,26 @@
 title: <issuerChannelBehaviors>의 <add>
 ms.date: 03/30/2017
 ms.assetid: 50710506-e28f-45dd-ab7e-bff6f44173db
-ms.openlocfilehash: 5c9937cb6302a194228461f3e2e06ecdf4d43269
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 325d6b8111115384b18547bd11ccec8a4a8af711
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673617"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920120"
 ---
-# <a name="add-of-issuerchannelbehaviors"></a>\<추가 >의 \<issuerChannelBehaviors >
+# <a name="add-of-issuerchannelbehaviors"></a>\<\<issuerChannelBehaviors > > 추가
 
 STS와 통신할 때 사용할 엔드포인트 동작을 추가합니다.
 
 > [!NOTE]
-> 끝점 동작을 포함 하는 경우는 [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) 요소에서 예외가 throw 됩니다.
+> Endpoint behavior에 [ \<clientCredentials >](clientcredentials.md) 요소가 포함 되어 있으면 예외가 throw 됩니다.
 
 \<system.ServiceModel>\
 \<behaviors>\
-endpointBehaviors 섹션 \<동작 > \
+endpointbehaviors 섹션 \<동작 > \
 \<clientCredentials>\
 \<issuedToken>\
-\<issuerChannelBehaviors > Element\
+\<issuerChannelBehaviors > 요소 \
 \<add>
 
 ## <a name="syntax"></a>구문
@@ -50,11 +50,11 @@ endpointBehaviors 섹션 \<동작 > \
 
 |요소|설명|
 |-------------|-----------------|
-|[\<issuerChannelBehaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|지정한 서비스 토큰 서비스와 통신할 때 사용 되는 Windows Communication Foundation (WCF) 클라이언트 끝점 동작의 컬렉션을 포함 합니다.|
+|[\<issuerChannelBehaviors>](issuerchannelbehaviors-element.md)|지정 된 서비스 토큰 서비스와 통신할 때 사용할 WCF (Windows Communication Foundation) 클라이언트 끝점 동작의 컬렉션을 포함 합니다.|
 
 ## <a name="remarks"></a>설명
 
-`issuerAddress`는 클라이언트가 통신하려는 보안 토큰 서비스의 URI를 포함합니다. `behaviorConfiguration` 응용 프로그램 보안 토큰 서비스에서 발급 된 토큰을 가져오기 위해 Windows Communication Foundation (WCF)에서 만든 채널에서 사용 하는 끝점 동작을 가리킵니다.
+`issuerAddress`는 클라이언트가 통신하려는 보안 토큰 서비스의 URI를 포함합니다. `behaviorConfiguration`응용 프로그램이 보안 토큰 서비스에서 발급 된 토큰을 가져오기 위해 Windows Communication Foundation (WCF)에서 만든 채널에서 사용 하는 끝점 동작을 가리킵니다.
 
 ## <a name="see-also"></a>참고자료
 
@@ -62,12 +62,12 @@ endpointBehaviors 섹션 \<동작 > \
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElement>
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElementCollection>
 - <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuerChannelBehaviors%2A>
-- [서비스 ID 및 인증](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [보안 동작](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [페더레이션 및 발급된 토큰](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [서비스 및 클라이언트에 보안 설정](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [클라이언트에 보안 설정](../../../../../docs/framework/wcf/securing-clients.md)
-- [방법: 페더레이션된 클라이언트 만들기](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [방법: 로컬 발급자 구성](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
-- [페더레이션 및 발급된 토큰](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [\<issuerChannelBehaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)
+- [서비스 ID 및 인증](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [보안 동작](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [페더레이션 및 발급된 토큰](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [서비스 및 클라이언트에 보안 설정](../../../wcf/feature-details/securing-services-and-clients.md)
+- [클라이언트에 보안 설정](../../../wcf/securing-clients.md)
+- [방법: 페더레이션된 클라이언트 만들기](../../../wcf/feature-details/how-to-create-a-federated-client.md)
+- [방법: 로컬 발급자 구성](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [페더레이션 및 발급된 토큰](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [\<issuerChannelBehaviors>](issuerchannelbehaviors-element.md)

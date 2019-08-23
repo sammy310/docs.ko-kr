@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 96d38abad37f9460230164de784a1258e7e937a4
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 29fbe951b955c97e39ebaf80885729a45c1a3fd7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663718"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927389"
 ---
 # <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<forcePerformanceCounterUniqueSharedMemoryReads> Element
 PerfCounter.dll이 .NET Framework 버전 1.1 애플리케이션에서 CategoryOptions 레지스트리 설정을 사용하여 성능 카운터 데이터를 범주별 공유 메모리에서 로드할지 또는 전역 메모리에서 로드할지를 결정하도록 지정합니다.  
@@ -62,7 +62,7 @@ enabled="true|false"/>
  이전 버전과의 호환성을 위해 .NET Framework 4 PerfCounter는 .NET Framework 1.1 응용 프로그램에서 실행 될 때 CategoryOptions 레지스트리 항목을 확인 하지 않습니다. .NET Framework 1.1 PerfCounter와 마찬가지로 전역 공유 메모리를 사용 하기만 하면 됩니다. 그러나 `<forcePerformanceCounterUniqueSharedMemoryReads>` 요소를 사용 하도록 설정 하 여 레지스트리 설정을 확인 하도록 .NET Framework 4 PerfCounter에 지시할 수 있습니다.  
   
 > [!NOTE]
->  요소를 `<forcePerformanceCounterUniqueSharedMemoryReads>` 사용 하도록 설정 해도 범주 관련 공유 메모리가 사용 되는 것은 아닙니다. Enabled를로 `true` 설정 하면 PerfCounter가 categoryoptions 레지스트리 설정을 참조 하 게 됩니다. CategoryOptions의 기본 설정은 범주 관련 공유 메모리를 사용 하는 것입니다. 그러나 CategoryOptions를 변경 하 여 전역 공유 메모리를 사용 해야 함을 나타낼 수 있습니다.  
+> 요소를 `<forcePerformanceCounterUniqueSharedMemoryReads>` 사용 하도록 설정 해도 범주 관련 공유 메모리가 사용 되는 것은 아닙니다. Enabled를로 `true` 설정 하면 PerfCounter가 categoryoptions 레지스트리 설정을 참조 하 게 됩니다. CategoryOptions의 기본 설정은 범주 관련 공유 메모리를 사용 하는 것입니다. 그러나 CategoryOptions를 변경 하 여 전역 공유 메모리를 사용 해야 함을 나타낼 수 있습니다.  
   
  Categoryoptions 설정이 포함 된 레지스트리 키는 HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\\< 범주 \Performance.\> 기본적으로 CategoryOptions는 3으로 설정 되며,이는 PerfCounter에 범주 관련 공유 메모리를 사용 하도록 지시 합니다. CategoryOptions가 0으로 설정 된 경우 PerfCounter는 전역 공유 메모리를 사용 합니다. 인스턴스 데이터는 생성 중인 인스턴스의 이름이 다시 사용 중인 인스턴스와 동일한 경우에만 다시 사용 됩니다. 모든 버전은 범주에 쓸 수 있습니다. CategoryOptions를 1로 설정 하면 전역 공유 메모리가 사용 되지만 범주 이름이 다시 사용 하는 범주와 동일한 경우 인스턴스 데이터를 다시 사용할 수 있습니다.  
   

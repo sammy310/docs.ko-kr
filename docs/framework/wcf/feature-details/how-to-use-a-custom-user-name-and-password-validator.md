@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-ms.openlocfilehash: 593e3e97ad7e5ae65447d8618caacf22f762f9b4
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 57bd650caef831f3ee886c0422e13cc4149d3416
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960065"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968804"
 ---
 # <a name="how-to-use-a-custom-user-name-and-password-validator"></a>방법: 사용자 지정 사용자 이름 및 암호에 대한 유효성 검사기 사용
-기본적으로 사용자 이름 및 암호 인증을 위해 사용 되는 경우 Windows Communication Foundation (WCF)를 사용 하 여 Windows 사용자 이름 및 암호의 유효성을 검사 합니다. 그러나 WCF에서는 사용자 지정 사용자 이름 및 암호 인증 체계에 대 한 라고도 *유효성 검사기*합니다. 사용자 지정 사용자 이름 및 암호 유효성 검사기를 통합하려면 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>에서 파생되는 클래스를 만들어 구성합니다.  
+기본적으로 인증에 사용자 이름과 암호를 사용 하는 경우 WCF (Windows Communication Foundation)는 Windows를 사용 하 여 사용자 이름과 암호의 유효성을 검사 합니다. 그러나 WCF는 사용자 지정 사용자 이름 및 암호 인증 스키마 ( *유효성 검사기*라고도 함)를 허용 합니다. 사용자 지정 사용자 이름 및 암호 유효성 검사기를 통합하려면 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>에서 파생되는 클래스를 만들어 구성합니다.  
   
- 샘플 응용 프로그램을 참조 하세요 [사용자 이름 암호 유효성 검사기](../../../../docs/framework/wcf/samples/user-name-password-validator.md)합니다.  
+ 응용 프로그램 예제는 [사용자 이름 암호 유효성 검사기](../../../../docs/framework/wcf/samples/user-name-password-validator.md)를 참조 하세요.  
   
 ### <a name="to-create-a-custom-user-name-and-password-validator"></a>사용자 지정 사용자 이름 및 암호 유효성 검사기를 만들려면  
   
@@ -39,32 +39,32 @@ ms.locfileid: "65960065"
   
 1. HTTP(S)를 통해 전송 또는 전송 수준 보안에서 메시지 보안을 사용하는 바인딩을 구성합니다.  
   
-     메시지 보안을 사용 하는 경우 시스템 제공 바인딩 중 하나 같은 추가 된 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), 또는 [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) 지원 하는 메시지 보안 및 `UserName` 자격 증명 유형입니다.  
+     메시지 보안을 사용 하는 경우 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)와 같은 시스템 제공 바인딩 중 하나를 추가 하거나 `UserName` [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) 메시지 보안 및 자격 증명 형식을 지 원하는 customBinding >를 추가 합니다.  
   
-     전송 수준 보안 HTTP (S)를 통해 사용 하는 경우 추가 합니다 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 하거나 [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), [ \< netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) 또는 [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) HTTP (S)를 사용 하 고 `Basic` 인증 체계입니다.  
+     HTTP (S)를 통해 전송 수준 보안을 사용 하는 경우 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 또는 [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) [ \<basicHttpBinding >, netTcpBinding > 또는 customBinding을 추가 > ](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)HTTP (S) 및 `Basic` 인증 체계를 사용 하는입니다.  
   
     > [!NOTE]
-    >  [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 이상을 사용하는 경우 메시지 및 전송 보안과 함께 사용자 지정 사용자 이름 및 암호 유효성 검사기를 사용할 수 있습니다. WinFX를 사용 하 여 메시지 보안을 사용 하 여 사용자 지정 사용자 이름 및 암호 유효성 검사기만 사용할 수 있습니다.  
+    > [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 이상을 사용하는 경우 메시지 및 전송 보안과 함께 사용자 지정 사용자 이름 및 암호 유효성 검사기를 사용할 수 있습니다. WinFX를 사용 하면 사용자 지정 사용자 이름 및 암호 유효성 검사기를 메시지 보안과 함께 사용할 수 있습니다.  
   
     > [!TIP]
-    >  사용 하 여 대 한 자세한 내용은 \<netTcpBinding >이 컨텍스트에서 참조 [ \<보안 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)  
+    >  이 컨텍스트에서 netTcpBinding >를 \<사용 하는 방법에 대 한 자세한 내용은 보안을 참조 하세요 [ \<>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)  
   
-    1. 구성 파일에 아래 합니다 [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) 요소를 추가 [ \<바인딩 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) 요소.  
+    1. 구성 파일의 [ \<system.servicemodel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) 요소 아래에서 요소 > 바인딩을 추가 합니다.  
   
-    2. 추가 된 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 하거나 [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) 요소를 바인딩 섹션. WCF 바인딩 요소를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 구성에서 서비스 바인딩 지정](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)합니다.  
+    2. WsHttpBinding > 또는 [ basicHttpBinding>요소를바인딩섹션에추가합니다\<](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) . [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) WCF 바인딩 요소를 [만드는 방법에 대 한 자세한 내용은 방법: 구성](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)에서 서비스 바인딩을 지정 합니다.  
   
-    3. 설정 합니다 `mode` 특성을 [ \<보안 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) 또는 [ \<보안 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) 를 `Message`, `Transport`, 또는 `TransportWithMessageCredential`.  
+    3. `Message` 보안>`TransportWithMessageCredential`또는 `Transport` [보안 >의 특성을, 또는 \<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) 로 설정 합니다. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) `mode`  
   
-    4. 설정 합니다 `clientCredentialType` 특성을 [ \<메시지 >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md) 또는 [ \<전송 >](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md)합니다.  
+    4. 메시지 > `clientCredentialType` 또는 [전송 >의 특성을 설정 합니다. \<](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md)  
   
-         메시지 보안을 사용할 때 설정 합니다 `clientCredentialType` 특성을 [ \<메시지 >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md) 를 `UserName`.  
+         메시지 보안을 사용 하는 경우 `clientCredentialType` [ \<메시지](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md) 의 특성을로 `UserName`설정 > 합니다.  
   
-         HTTP (S)를 통해 전송 수준 보안 사용 하 여 설정 합니다 `clientCredentialType` 특성을 [ \<전송 >](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md) 또는 [ \<전송 >](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md) 에 `Basic`입니다.  
+         HTTP (S)를 통해 전송 수준 보안을 사용 하는 경우 `clientCredentialType` 전송 [ \<>](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md) 또는 [ \<전송 >](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md) 의 특성을로 `Basic`설정 합니다.  
   
         > [!NOTE]
         >  WCF 서비스에서 인터넷 정보 서비스 (IIS) 전송 수준 보안을 사용 하 여 호스팅된 경우 및 <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.UserNamePasswordValidationMode%2A> 속성이 <xref:System.ServiceModel.Security.UserNamePasswordValidationMode.Custom>, 사용자 지정 인증 체계는 Windows 인증의 하위 집합을 사용 합니다. 이것은 IIS이이 시나리오에서는 WCF 사용자 지정 인증자를 호출 하기 전에 Windows 인증을 수행 합니다.  
   
-     WCF 바인딩 요소를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 구성에서 서비스 바인딩 지정](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)합니다.  
+     WCF 바인딩 요소를 [만드는 방법에 대 한 자세한 내용은 방법: 구성](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)에서 서비스 바인딩을 지정 합니다.  
   
      다음 예제에서는 바인딩에 대한 구성 코드를 보여 줍니다.  
   
@@ -84,20 +84,20 @@ ms.locfileid: "65960065"
   
 2. 사용자 지정 사용자 이름 및 암호 유효성 검사기를 사용하여 들어오는 <xref:System.IdentityModel.Tokens.UserNameSecurityToken> 보안 토큰에 대한 사용자 이름과 암호 쌍의 유효성을 검사하도록 지정하는 동작을 구성합니다.  
   
-    1. 에 자식 항목으로 [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) 요소에 추가 [ \<동작 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) 요소입니다.  
+    1. [ \<System.servicemodel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) [ 요소에대한자식인동작>요소를추가합니다.\<](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
   
-    2. 추가 된 [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) 에 [ \<동작 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) 요소.  
+    2. Servicebehaviors >를 동작 > 요소에 추가 합니다. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
   
-    3. 추가 [ \<동작 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) 요소를 `name` 특성을 적절 한 값으로.  
+    3. [ \<동작 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) 요소를추가하고특성을적절한값으로설정합니다.`name`  
   
-    4. 추가 된 [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) 에 [ \<동작 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) 요소.  
+    4. 동작 > 요소에 [serviceCredentials >를 추가 합니다. \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
   
-    5. 추가 된 [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md) 에 [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)합니다.  
+    5. ServiceCredentials >에 [userNameAuthentication >를 추가 합니다. \<](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)  
   
     6. `userNamePasswordValidationMode`를 `Custom`으로 설정합니다.  
   
         > [!IMPORTANT]
-        >  경우는 `userNamePasswordValidationMode` 값 설정 하지 않으면, WCF 사용자 지정 사용자 이름 및 암호 유효성 검사기 대신 Windows 인증을 사용 합니다.  
+        >  `userNamePasswordValidationMode` 값을 설정 하지 않으면 WCF는 사용자 지정 사용자 이름 및 암호 유효성 검사기 대신 Windows 인증을 사용 합니다.  
   
     7. `customUserNamePasswordValidatorType`을 사용자 지정 사용자 이름 및 암호 유효성 검사기를 나타내는 형식으로 설정합니다.  
   

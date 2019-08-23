@@ -9,16 +9,16 @@ helpviewer_keywords:
 - UI Automation, invoking controls
 - controls, invoking
 ms.assetid: 5ee2de3f-256c-43ec-b64c-62ace91f9983
-ms.openlocfilehash: 19087cfaa22d166017bcf4e3ce5e6caf73ae5fe5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f17f3ad25f137bbf8d7cf88b43cc52dfdeeb3fd4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624547"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923732"
 ---
 # <a name="invoke-a-control-using-ui-automation"></a>UI 자동화를 사용하여 컨트롤 호출
 > [!NOTE]
->  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 최신 정보에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]를 참조 하세요 [Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746)합니다.  
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  이 항목에서는 다음 작업을 수행하는 방법을 보여 줍니다.  
   
@@ -40,4 +40,4 @@ ms.locfileid: "64624547"
   
 ## <a name="see-also"></a>참고자료
 
-- [InvokePattern, ExpandCollapsePattern, 및 TogglePattern 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InvokePattern)
+- [InvokePattern, ExpandCollapsePattern 및 TogglePattern 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InvokePattern)

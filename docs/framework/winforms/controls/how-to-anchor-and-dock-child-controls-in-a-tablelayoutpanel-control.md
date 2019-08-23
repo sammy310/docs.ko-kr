@@ -12,12 +12,12 @@ helpviewer_keywords:
 - child controls [Windows Forms], anchoring and docking
 - TableLayoutPanel control [Windows Forms], child controls
 ms.assetid: 0d267c35-25f1-49b8-8976-c64e8f0ddc0b
-ms.openlocfilehash: 7adbf9a98b25b237ee49d2689154e903d8fc0b5a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0e565b56c31d0776f6e89bbbe0b0681ae184758e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586178"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922820"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>방법: TableLayoutPanel 컨트롤에서 자식 컨트롤 고정 및 도킹
 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤은 자식 컨트롤의 <xref:System.Windows.Forms.Control.Anchor%2A> 및 <xref:System.Windows.Forms.Control.Dock%2A> 속성을 지원합니다.  
@@ -26,25 +26,25 @@ ms.locfileid: "65586178"
   
 1. 폼에 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 만듭니다.  
   
-2. 값을 설정 합니다 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의 <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A> 하 고 <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A> 속성을 **1**합니다.  
+2. <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의<xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A>및속성 값을 1로 설정 합니다. <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A>  
   
 3. <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤에 <xref:System.Windows.Forms.Button> 컨트롤을 만듭니다. <xref:System.Windows.Forms.Button>이 셀의 왼쪽 위 모퉁이에 배치됩니다.  
   
 4. <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Anchor%2A> 속성 값을 `Left`로 변경합니다. <xref:System.Windows.Forms.Button>이 이동하여 셀의 왼쪽 테두리에 맞춰집니다.  
   
     > [!NOTE]
-    >  이 동작은 다른 컨테이너 컨트롤의 동작과 다릅니다. 다른 컨테이너 컨트롤에서는 <xref:System.Windows.Forms.Control.Anchor%2A> 속성을 설정할 때 자식 컨트롤이 이동하지 않고 고정된 컨트롤과 부모 컨테이너 경계 간의 거리가 <xref:System.Windows.Forms.Control.Anchor%2A> 속성을 설정할 때 고정됩니다.  
+    > 이 동작은 다른 컨테이너 컨트롤의 동작과 다릅니다. 다른 컨테이너 컨트롤에서는 <xref:System.Windows.Forms.Control.Anchor%2A> 속성을 설정할 때 자식 컨트롤이 이동하지 않고 고정된 컨트롤과 부모 컨테이너 경계 간의 거리가 <xref:System.Windows.Forms.Control.Anchor%2A> 속성을 설정할 때 고정됩니다.  
   
 5. <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Anchor%2A> 속성 값을 `Top, Left`로 변경합니다. <xref:System.Windows.Forms.Button> 컨트롤이 이동하여 셀의 왼쪽 위 모퉁이에 배치됩니다.  
   
-6. 5 단계를 반복 값의 `Top, Right` 이동 하는 <xref:System.Windows.Forms.Button> 셀의 오른쪽 위 모퉁이에 컨트롤입니다. `Bottom, Left` 및 `Bottom, Right` 값으로 반복합니다.  
+6. 값 `Top, Right` 으로 5 단계를 반복 하 여 <xref:System.Windows.Forms.Button> 컨트롤을 셀의 오른쪽 위 모퉁이로 이동 합니다. `Bottom, Left` 및 `Bottom, Right` 값으로 반복합니다.  
   
 ### <a name="to-stretch-a-child-control-in-a-tablelayoutpanel-cell"></a>TableLayoutPanel 셀에서 자식 컨트롤을 늘이려면  
   
 1. <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Anchor%2A> 속성 값을 `Left, Right`로 변경합니다. <xref:System.Windows.Forms.Button> 컨트롤의 크기가 조정되어 셀에 가로로 늘여집니다.  
   
     > [!NOTE]
-    >  이 동작은 다른 컨테이너 컨트롤의 동작과 다릅니다. 다른 컨테이너 컨트롤의 자식 컨트롤이 아닙니다 경우 크기를 조정 합니다 <xref:System.Windows.Forms.Control.Anchor%2A> 속성이로 설정 되어 `Left, Right` 또는 `Top, Bottom`.  
+    > 이 동작은 다른 컨테이너 컨트롤의 동작과 다릅니다. 다른 컨테이너 컨트롤에서 <xref:System.Windows.Forms.Control.Anchor%2A> 속성이 또는 `Top, Bottom`로 `Left, Right` 설정 된 경우에는 자식 컨트롤의 크기가 조정 되지 않습니다.  
   
 2. <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Anchor%2A> 속성 값을 `Top, Bottom`로 변경합니다. <xref:System.Windows.Forms.Button> 컨트롤의 크기가 조정되어 셀의 맨 위에서 맨 아래까지 세로로 늘여집니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "65586178"
 5. <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Dock%2A> 속성 값을 <xref:System.Windows.Forms.DockStyle.Left>로 변경합니다. <xref:System.Windows.Forms.Button>이 이동하여 셀의 왼쪽 테두리에 맞춰집니다. <xref:System.Windows.Forms.Button> 컨트롤의 너비는 유지되지만 높이가 조정되어 셀을 세로로 채웁니다.  
   
     > [!NOTE]
-    >  이는 다른 컨테이너 컨트롤에서 발생하는 동작과 같습니다.  
+    > 이는 다른 컨테이너 컨트롤에서 발생하는 동작과 같습니다.  
   
 6. <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Dock%2A> 속성 값을 <xref:System.Windows.Forms.DockStyle.Fill>로 변경합니다. <xref:System.Windows.Forms.Button> 컨트롤의 크기가 조정되어 셀을 채웁니다.  
   

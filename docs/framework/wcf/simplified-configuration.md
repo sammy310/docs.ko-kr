@@ -2,18 +2,18 @@
 title: 단순화된 구성
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-ms.openlocfilehash: 13cf8bd46ef3aabb011cb2ddd207963235468662
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 5aaca8ae8c456e2377326ee2e9e22c3dcf6a21a7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967897"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923006"
 ---
 # <a name="simplified-configuration"></a>단순화된 구성
-Windows Communication Foundation (WCF) 서비스를 구성 하면 복잡 한 작업을 수 있습니다. 다양한 옵션이 있을 수 있고 경우에 따라 필요한 설정을 확인하는 것이 쉽지 않을 수도 있습니다. 구성 파일을 사용 하면 WCF 서비스의 유연성, 문제를 발견 하기가 그만큼 이들은입니다. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에서는 이러한 문제를 해결하고 서비스 구성의 크기와 복잡성을 줄일 수 있는 방법을 제공합니다.  
+WCF (Windows Communication Foundation) 서비스를 구성 하는 작업은 복잡할 수 있습니다. 다양한 옵션이 있을 수 있고 경우에 따라 필요한 설정을 확인하는 것이 쉽지 않을 수도 있습니다. 구성 파일은 WCF 서비스의 유연성을 향상 하지만 많은 문제를 찾기 위한 원본 이기도 합니다. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에서는 이러한 문제를 해결하고 서비스 구성의 크기와 복잡성을 줄일 수 있는 방법을 제공합니다.  
   
 ## <a name="simplified-configuration"></a>단순화된 구성  
- WCF 서비스 구성 파일에는 <`system.serviceModel`> 섹션에서는 <`service`> 호스트 된 각 서비스에 대 한 요소입니다. <`service`> 요소 컬렉션을 포함 <`endpoint`> 각 서비스 및 필요에 따라 서비스 동작의 집합에 대 한 노출 된 끝점을 지정 하는 요소입니다. <`endpoint`> 요소는 지정 된 주소, 바인딩 및 계약이 노출 끝점으로 이동 하 고 선택적으로 바인딩 구성과 끝점 동작도 합니다. <`system.serviceModel`> 섹션도 포함 되어 있습니다를 <`behaviors`> 요소는 서비스 또는 끝점 동작을 지정할 수 있습니다. 다음 예제는 <`system.serviceModel`> 구성 파일의 섹션입니다.  
+ WCF 서비스 구성 파일의 <`system.serviceModel`> 섹션에는 호스트 된 각 서비스에 대 한 <`service`> 요소가 포함 되어 있습니다. <`service`> 요소에는 각 서비스에 대해`endpoint`노출 된 끝점과 선택적으로 서비스 동작 집합을 지정 하는 < > 요소의 컬렉션이 포함 되어 있습니다. <`endpoint`> 요소는 끝점에서 노출 하는 주소, 바인딩 및 계약을 지정 하 고 선택적으로 바인딩 구성과 끝점 동작을 지정 합니다. 또한 <`system.serviceModel`> 섹션에는 서비스 또는`behaviors`끝점 동작을 지정할 수 있는 < > 요소가 포함 되어 있습니다. 다음 예제에서는 구성 파일의`system.serviceModel`< > 섹션을 보여 줍니다.  
   
 ```  
 <system.serviceModel>  
@@ -46,13 +46,13 @@ Windows Communication Foundation (WCF) 서비스를 구성 하면 복잡 한 작
 </system.serviceModel>  
 ```  
   
- [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 에 대 한 요구 사항을 제거 하 여 WCF 서비스를 보다 쉽게 구성할 수 있게 합니다 <`service`> 요소입니다. 추가 하지 않으면 경우는 <`service`> 섹션에 끝점을 추가 하거나를 <`service`> 섹션에 프로그래밍 방식으로 끝점을 정의 하지, 다음 서비스 마다 하나씩 기본 끝점 집합이 자동으로 추가 됩니다 서비스 기본 주소 및 서비스에 의해 구현 되는 각 계약에 대 한 합니다. 이러한 각 엔드포인트에서 엔드포인트 주소는 기본 주소에 해당하고, 바인딩은 기본 주소 스키마에 의해 결정되며, 계약은 서비스에 의해 구현되는 계약입니다. 엔드포인트 또는 서비스 동작을 지정하지 않아도 되거나 바인딩 설정을 변경하지 않아도 되는 경우에는 서비스 구성 파일을 지정하지 않아도 됩니다. 서비스에서 두 개의 계약을 구현하고 호스트에서 HTTP 전송과 TCP 전송을 둘 다 사용하는 경우 서비스 호스트에서 각 전송을 사용하여 각 계약마다 하나씩 네 개의 기본 엔드포인트를 만듭니다. 기본 엔드포인트를 만들려면 서비스 호스트에서 사용할 바인딩을 알고 있어야 합니다. 이러한 설정에 지정 된 된 <`protocolMappings`> 섹션 내의 합니다 <`system.serviceModel`> 섹션. <`protocolMappings`> 섹션에는 바인딩 형식에 매핑된 전송 프로토콜 스키마의 목록을 포함 합니다. 서비스 호스트는 이 목록에 전달된 기본 주소를 사용하여 사용할 바인딩을 결정합니다. 다음 예제에서는 합니다 <`protocolMappings`> 요소입니다.  
+ [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]<`service`> 요소에 대 한 요구 사항을 제거 하 여 WCF 서비스를 보다 쉽게 구성할 수 있도록 합니다. <`service`> 섹션을 추가 하지 않거나 <`service`> 섹션에서 끝점을 추가 하지 않고 서비스에서 프로그래밍 방식으로 끝점을 정의 하지 않는 경우에는 기본 끝점 집합이 서비스에 자동으로 추가 됩니다. 서비스 기준 주소 및 서비스에서 구현 하는 각 계약에 대 한입니다. 이러한 각 엔드포인트에서 엔드포인트 주소는 기본 주소에 해당하고, 바인딩은 기본 주소 스키마에 의해 결정되며, 계약은 서비스에 의해 구현되는 계약입니다. 엔드포인트 또는 서비스 동작을 지정하지 않아도 되거나 바인딩 설정을 변경하지 않아도 되는 경우에는 서비스 구성 파일을 지정하지 않아도 됩니다. 서비스에서 두 개의 계약을 구현하고 호스트에서 HTTP 전송과 TCP 전송을 둘 다 사용하는 경우 서비스 호스트에서 각 전송을 사용하여 각 계약마다 하나씩 네 개의 기본 엔드포인트를 만듭니다. 기본 엔드포인트를 만들려면 서비스 호스트에서 사용할 바인딩을 알고 있어야 합니다. 이러한 설정은 <`system.serviceModel`> 섹션 내의 <`protocolMappings`> 섹션에 지정 됩니다. <`protocolMappings`> 섹션에는 바인딩 형식에 매핑된 전송 프로토콜 스키마의 목록이 포함 되어 있습니다. 서비스 호스트는 이 목록에 전달된 기본 주소를 사용하여 사용할 바인딩을 결정합니다. 다음 예에서는 <`protocolMappings`> 요소를 사용 합니다.  
   
 > [!WARNING]
 >  바인딩 또는 동작과 같은 기본 구성 요소를 변경하면 구성 계층 구조의 낮은 수준에서 정의된 서비스에서 이러한 기본 바인딩 및 동작을 사용할 수도 있기 때문에 해당 서비스에 영향을 줄 수도 있습니다. 따라서 기본 바인딩 및 동작을 변경하는 경우 이러한 변경이 계층 구조의 다른 서비스에 영향을 줄 수도 있다는 점을 명심해야 합니다.  
   
 > [!NOTE]
->  IIS(인터넷 정보 서비스)나 WAS(Windows Process Activation Service)에서 호스트된 서비스는 가상 디렉터리를 기본 주소로 사용합니다.  
+> IIS(인터넷 정보 서비스)나 WAS(Windows Process Activation Service)에서 호스트된 서비스는 가상 디렉터리를 기본 주소로 사용합니다.  
   
 ```xml  
 <protocolMapping>  
@@ -65,9 +65,9 @@ Windows Communication Foundation (WCF) 서비스를 구성 하면 복잡 한 작
   
  이전 예제에서 "http" 체계로 시작하는 기본 주소를 가진 엔드포인트는 <xref:System.ServiceModel.BasicHttpBinding>을 사용하고, "net.tcp" 체계로 시작하는 기본 주소를 가진 있는 엔드포인트는 <xref:System.ServiceModel.NetTcpBinding>을 사용합니다. 로컬 App.config 또는 Web.config 파일의 설정은 재정의할 수 있습니다.  
   
- 내의 각 요소는 <`protocolMappings`> 섹션에는 스키마와 바인딩을 지정 해야 합니다. 선택적으로 지정할 수 있습니다는 `bindingConfiguration` 내에서 바인딩 구성을 지정 하는 특성의 <`bindings`> 구성 파일의 섹션입니다. `bindingConfiguration`을 지정하지 않으면 해당 바인딩 형식의 익명 바인딩 구성이 사용됩니다.  
+ <`protocolMappings`> 섹션 내의 각 요소는 스키마와 바인딩을 지정 해야 합니다. 선택적으로 구성 파일의 `bindingConfiguration` <`bindings`> 섹션 내에서 바인딩 구성을 지정 하는 특성을 지정할 수 있습니다. `bindingConfiguration`을 지정하지 않으면 해당 바인딩 형식의 익명 바인딩 구성이 사용됩니다.  
   
- 서비스 동작은 익명을 사용 하 여 기본 끝점에 대해 구성 된 <`behavior`> 섹션 내의 <`serviceBehaviors`> 섹션입니다. 명명 되지 않은 <`behavior`> 요소 내의 <`serviceBehaviors`> 서비스 동작을 구성 하는 데 사용 됩니다. 예를 들어 다음 구성 파일은 호스트 내의 모든 서비스에 대한 서비스 메타데이터 게시를 사용하도록 설정합니다.  
+ 서비스 동작은 <`behavior``serviceBehaviors`> 섹션 내에서 익명 < > 섹션을 사용 하 여 기본 끝점에 대해 구성 됩니다. `behavior`<`serviceBehaviors`> 내의 명명 되지 않은 < > 요소는 서비스 동작을 구성 하는 데 사용 됩니다. 예를 들어 다음 구성 파일은 호스트 내의 모든 서비스에 대한 서비스 메타데이터 게시를 사용하도록 설정합니다.  
   
 ```xml  
 <system.serviceModel>  
@@ -82,7 +82,7 @@ Windows Communication Foundation (WCF) 서비스를 구성 하면 복잡 한 작
  </system.serviceModel>  
 ```  
   
- 익명을 사용 하 여 구성 된 끝점 동작은 <`behavior`> 섹션 내의 <`serviceBehaviors`> 섹션입니다.  
+ 끝점 동작은 <`serviceBehaviors`> 섹션 내에서 익명`behavior`< > 섹션을 사용 하 여 구성 됩니다.  
   
  다음 예제에서는 이 항목의 시작 부분에 나온 구성 파일이 단순화된 구성 모델을 사용하는 것을 보여 줍니다.  
   
@@ -111,7 +111,7 @@ Windows Communication Foundation (WCF) 서비스를 구성 하면 복잡 한 작
 ```  
   
 > [!IMPORTANT]
->  이 기능은 클라이언트 구성이 아닌 WCF 서비스 구성에만 관련이 있습니다. 대부분, WCF 클라이언트 구성은 Visual Studio에서 서비스 참조를 추가하거나 svcutil.exe와 같은 도구에 의해 생성될 것입니다. WCF 클라이언트를 수동으로 구성 하는 경우 추가 해야 합니다는 \<클라이언트 > 요소를 구성 하 고 호출 하려는 끝점을 지정 합니다.  
+> 이 기능은 클라이언트 구성이 아닌 WCF 서비스 구성에만 관련이 있습니다. 대부분, WCF 클라이언트 구성은 Visual Studio에서 서비스 참조를 추가하거나 svcutil.exe와 같은 도구에 의해 생성될 것입니다. WCF 클라이언트를 수동으로 구성 하는 경우 클라이언트 > 요소를 \<구성에 추가 하 고 호출 하려는 모든 끝점을 지정 해야 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

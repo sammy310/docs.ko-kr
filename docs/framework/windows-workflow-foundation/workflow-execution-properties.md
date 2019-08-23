@@ -2,12 +2,12 @@
 title: 워크플로 실행 속성
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 0f87e58a034cbc11565fc74347e6b4362952093c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61bf53d9cab3ddefae3709958bd1e445fb4e69dd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669383"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913604"
 ---
 # <a name="workflow-execution-properties"></a>워크플로 실행 속성
 CLR은 TLS(스레드 로컬 스토리지)를 통해 각 스레드의 실행 컨텍스트를 유지 관리합니다. 이 실행 컨텍스트는 스레드 ID, 앰비언트 트랜잭션 및 현재 권한 집합과 같은 잘 알려진 스레드 속성은 물론 명명된 슬롯과 같은 사용자 정의 스레드 속성을 제어합니다.  
@@ -157,7 +157,7 @@ End default text.
 ```  
   
 > [!NOTE]
->  이전 출력에는 표시되지 않았지만 콘솔 창의 각 텍스트 행은 지정된 색상으로 표시됩니다.  
+> 이전 출력에는 표시되지 않았지만 콘솔 창의 각 텍스트 행은 지정된 색상으로 표시됩니다.  
   
  워크플로 실행 속성은 사용자 지정 활동 작성자가 사용할 수 있으며, <xref:System.ServiceModel.Activities.CorrelationScope> 및 <xref:System.Activities.Statements.TransactionScope> 활동과 같은 활동의 처리 관리 메커니즘도 제공합니다.  
   

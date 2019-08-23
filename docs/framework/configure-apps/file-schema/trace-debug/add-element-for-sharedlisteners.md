@@ -8,15 +8,15 @@ helpviewer_keywords:
 - <add> element for <sharedListeners>
 - add element for <sharedListeners>
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
-ms.openlocfilehash: e7934ed5e71005cfd28271298ff6ce1eb8829a0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4b83834fb7aaf64a696b85bd2c8da47cfba2397
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701374"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927206"
 ---
-# <a name="add-element-for-sharedlisteners"></a>\<추가 > 요소에 대 한 \<sharedListeners >
-`sharedListeners` 컬렉션에 수신기를 추가합니다. `sharedListeners` 이 수신기의 컬렉션인 모든 [ \<소스 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) 또는 [ \<추적 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md) 참조할 수 있습니다.  기본적으로 수신기에는 `sharedListeners` 컬렉션에 있지 않은지를 `Listeners` 컬렉션입니다. 이름으로 추가 해야 합니다 [ \<소스 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) 또는 [ \<추적 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)합니다. 수신기에서 가져올 수 없는 `sharedListeners` 런타임 시 코드의 컬렉션입니다.  
+# <a name="add-element-for-sharedlisteners"></a>\<sharedlisteners의 > \<요소를 추가 >
+`sharedListeners` 컬렉션에 수신기를 추가합니다. `sharedListeners`은 모든 [ \<원본 >](source-element.md) 또는 [ \<추적 >](trace-element.md) 에서 참조할 수 있는 수신기의 컬렉션입니다.  기본적으로 `sharedListeners` 컬렉션의 수신기는 `Listeners` 컬렉션에 배치 되지 않습니다. 이름으로 [ \<원본 >](source-element.md) 또는 [ \<추적 >](trace-element.md)에 추가 해야 합니다. 런타임에 코드에서 `sharedListeners` 컬렉션의 수신기를 가져올 수는 없습니다.  
   
  \<configuration>  
 &nbsp;&nbsp;\<system.diagnostics>  
@@ -40,16 +40,16 @@ ms.locfileid: "61701374"
   
 |특성|설명|  
 |---------------|-----------------|  
-|`name`|필수 특성입니다.<br /><br /> 공유 수신기를 추가 하는 데 사용 되는 수신기의 이름을 지정는 `Listeners` 컬렉션입니다.|  
-|`type`|필수 특성입니다.<br /><br /> 수신기의 형식을 지정합니다. 에 지정 된 요구 사항을 충족 하는 문자열을 사용 해야 합니다 [정규화 된 형식 이름 지정](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)합니다.|  
-|`initializeData`|선택적 특성입니다.<br /><br /> 지정된 된 클래스에 대 한 생성자에 전달 된 문자열입니다.|  
-|`traceOutputOptions`|선택적 특성입니다.<br/><br/>하나 이상의의 문자열 표현을 <xref:System.Diagnostics.TraceOptions> 추적 출력에 쓸 데이터를 나타내는 열거형 멤버입니다. 여러 항목은 쉼표로 구분 됩니다. 기본값은 "None"입니다.|
+|`name`|필수 특성입니다.<br /><br /> `Listeners` 컬렉션에 공유 수신기를 추가 하는 데 사용 되는 수신기의 이름을 지정 합니다.|  
+|`type`|필수 특성입니다.<br /><br /> 수신기의 유형을 지정 합니다. 정규화 된 [형식 이름 지정](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)에 지정 된 요구 사항을 충족 하는 문자열을 사용 해야 합니다.|  
+|`initializeData`|선택적 특성입니다.<br /><br /> 지정 된 클래스의 생성자에 전달 된 문자열입니다.|  
+|`traceOutputOptions`|선택적 특성입니다.<br/><br/>추적 출력에 쓸 데이터를 나타내는 <xref:System.Diagnostics.TraceOptions> 하나 이상의 열거형 멤버에 대 한 문자열 표현입니다. 여러 항목은 쉼표로 구분 됩니다. 기본값은 "None"입니다.|
 
 ### <a name="child-elements"></a>자식 요소  
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-sharedlisteners.md)|`sharedListeners` 컬렉션에 있는 수신기에 필터를 추가합니다.|  
+|[\<filter>](filter-element-for-add-for-sharedlisteners.md)|`sharedListeners` 컬렉션에 있는 수신기에 필터를 추가합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -60,27 +60,27 @@ ms.locfileid: "61701374"
 |`sharedListeners`|모든 소스 또는 추적 요소가 참조할 수 있는 수신기의 컬렉션입니다.|  
   
 ## <a name="remarks"></a>설명  
- .NET Framework와 함께 제공 되는 수신기 클래스에서 파생 된 <xref:System.Diagnostics.TraceListener> 클래스입니다. 에 대 한 값을 `name` 특성 공유 수신기를 추가 하는 데 사용 됩니다는 `Listeners` 추적 또는 추적 소스에 대 한 컬렉션입니다. 에 대 한 값을 `initializeData` 특성 만든 수신기의 형식에 따라 달라 집니다. 모든 추적 수신기에 지정 해야 `initializeData`합니다.  
+ .NET Framework와 함께 제공 되는 수신기 클래스는 <xref:System.Diagnostics.TraceListener> 클래스에서 파생 됩니다. `name` 특성 값은 추적 또는 추적 소스에 대 한 `Listeners` 컬렉션에 공유 수신기를 추가 하는 데 사용 됩니다. `initializeData` 특성의 값은 만드는 수신기의 형식에 따라 달라 집니다. 모든 추적 수신기에서을 지정 `initializeData`해야 하는 것은 아닙니다.  
   
 > [!NOTE]
->  사용 하는 경우는 `initializeData` 특성인 컴파일러 "'initializeData' 특성이 선언 되지 않았습니다." 경고를 발생할 수 있습니다 이 경고는 추상 기본 클래스에 대 한 구성 설정이 검증 되었으며 때문에 발생 <xref:System.Diagnostics.TraceListener>를 인식 하지 않습니다는 `initializeData` 특성입니다. 일반적으로 매개 변수를 사용 하는 생성자가 하는 추적 수신기 구현에 대 한이 경고를 무시할 수 있습니다.  
+> `initializeData` 특성을 사용 하는 경우 컴파일러 경고 "' initializedata ' 특성이 선언 되지 않았습니다." 라는 메시지가 표시 될 수 있습니다. 이 경고는 <xref:System.Diagnostics.TraceListener> `initializeData` 특성을 인식 하지 않는 추상 기본 클래스에 대해 구성 설정의 유효성을 검사 하기 때문에 발생 합니다. 일반적으로 매개 변수를 사용 하는 생성자가 있는 추적 수신기 구현에 대해서는이 경고를 무시할 수 있습니다.  
   
- 다음 표는.NET Framework에 포함 된 추적 수신기를 보여 주고 값을 설명 합니다 해당 `initializeData` 특성입니다.  
+ 다음 표에서는 .NET Framework에 포함 된 추적 수신기를 보여 주고 해당 `initializeData` 특성의 값을 설명 합니다.  
   
 |추적 수신기 클래스|initializeData 특성 값|  
 |--------------------------|------------------------------------|  
-|<xref:System.Diagnostics.ConsoleTraceListener>|합니다 `useErrorStream` 에 대 한 값을 <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> 생성자입니다.  설정 된 `initializeData` 특성을 "`true`"쓸 추적 및 디버그 출력을 표준 오류 스트림에;로 설정"`false`" 표준 출력 스트림에 쓸입니다.|  
+|<xref:System.Diagnostics.ConsoleTraceListener>|생성자에 대 한 `useErrorStream` <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> 값입니다.  표준 오류 스트림에 추적 및`true`디버그 출력을 쓰려면`false`특성을 ""로 설정 하 고, 표준 출력 스트림에 쓰려면 ""로 설정 합니다. `initializeData`|  
 |<xref:System.Diagnostics.DelimitedListTraceListener>|<xref:System.Diagnostics.DelimitedListTraceListener>가 쓸 파일 이름입니다.|  
 |<xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>|기존 이벤트 로그 소스의 이름입니다.|  
-|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|파일의 이름을는 <xref:System.Diagnostics.EventSchemaTraceListener> 를 씁니다.|  
-|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|파일의 이름을는 <xref:System.Diagnostics.TextWriterTraceListener> 를 씁니다.|  
-|<xref:System.Diagnostics.XmlWriterTraceListener>|파일의 이름을는 <xref:System.Diagnostics.XmlWriterTraceListener> 를 씁니다.|  
+|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|에서 <xref:System.Diagnostics.EventSchemaTraceListener> 쓰는 파일의 이름입니다.|  
+|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|에서 <xref:System.Diagnostics.TextWriterTraceListener> 쓰는 파일의 이름입니다.|  
+|<xref:System.Diagnostics.XmlWriterTraceListener>|에서 <xref:System.Diagnostics.XmlWriterTraceListener> 쓰는 파일의 이름입니다.|  
   
 ## <a name="configuration-file"></a>구성 파일  
- 이 요소는 응용 프로그램 구성 파일과 컴퓨터 구성 파일 (Machine.config)에서 사용할 수 있습니다.  
+ 이 요소는 컴퓨터 구성 파일 (machine.config) 및 응용 프로그램 구성 파일에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 사용 하는 방법을 보여 줍니다 `<add>` 요소를 추가 하는 <xref:System.Diagnostics.TextWriterTraceListener> `textListener` 에 `sharedListeners` 컬렉션입니다.   `textListener` 이름으로 추가 되는 `Listeners` 추적 소스에 대 한 컬렉션 `TraceSourceApp`합니다. `textListener` 수신기 파일 myListener.log에 추적 출력을 씁니다.  
+ 다음 예제에서는 요소 `<add>` 를 사용 하 여를 `sharedListeners` 컬렉션 `textListener` 에 <xref:System.Diagnostics.TextWriterTraceListener> 추가 하는 방법을 보여 줍니다.   `textListener`는 추적 소스 `TraceSourceApp`에 대 한 `Listeners` 컬렉션에 이름으로 추가 됩니다. 수신기 `textListener` 는 추적 출력을 mylistener .log 파일에 기록 합니다.  
   
 ```xml  
 <configuration>  
@@ -112,5 +112,5 @@ ms.locfileid: "61701374"
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>
-- [추적 및 디버그 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [추적 수신기](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [추적 및 디버그 설정 스키마](index.md)
+- [추적 수신기](../../../debug-trace-profile/trace-listeners.md)

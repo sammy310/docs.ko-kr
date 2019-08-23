@@ -2,15 +2,15 @@
 title: <allowAccounts>
 ms.date: 03/30/2017
 ms.assetid: 166923a9-a8ac-478f-92f9-529d9667f3a6
-ms.openlocfilehash: f9def3004b116afdc629de136cdfe0b0eb6e75c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c62f29c53d807cab397ff09c6163d924a71ea319
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673539"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926606"
 ---
 # <a name="allowaccounts"></a>\<allowAccounts>
-사용자 호스트 하는 Windows Communication Foundation (WCF) 서비스 프로세스에 대 한 계정 및 공유 서비스에 대 한 연결 액세스를 부여 하는 지정 하는 구성 요소의 컬렉션을 포함 합니다.  
+Windows Communication Foundation (WCF) 서비스를 호스팅하고 공유 서비스에 대 한 연결 액세스 권한이 부여 된 프로세스의 사용자 계정을 지정 하는 구성 요소 컬렉션을 포함 합니다.  
   
  \<system.serviceModel.activation>  
   
@@ -30,15 +30,15 @@ ms.locfileid: "61673539"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowaccounts.md)|WCF 서비스를 호스팅하고 공유 서비스에 대 한 연결 액세스 권한이 부여 된 프로세스에 대 한 사용자 계정을 추가 합니다.|  
+|[\<add>](add-of-allowaccounts.md)|WCF 서비스를 호스팅하고 공유 서비스에 대 한 연결 액세스 권한이 부여 된 프로세스에 대 한 사용자 계정을 추가 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<net. pipe >](../../../../../docs/framework/configure-apps/file-schema/wcf/net-pipe.md) 나 [ \<net.tcp >](../../../../../docs/framework/configure-apps/file-schema/wcf/net-tcp.md)|Net Pipe 또는 TCP 공유 서비스의 구성 설정을 지정합니다.|  
+|net.pipe > 또는 [ \<](net-pipe.md) [ net.tcp>\<](net-tcp.md)|Net Pipe 또는 TCP 공유 서비스의 구성 설정을 지정합니다.|  
   
 ## <a name="see-also"></a>참고자료
 

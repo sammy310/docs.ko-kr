@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: 4835fb42a8976d94be223d8306d1eb16e330f8f5
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 318972c20f6461489226e19b3e517ba0ac069b28
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68434018"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933360"
 ---
 # <a name="optimizing-performance-text"></a>성능 최적화: 텍스트
 
@@ -42,13 +42,13 @@ ms.locfileid: "68434018"
 
   - 장치 프린터 언어로서의 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]
 
-  - [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].
+  - Microsoft XPS Document Writer.
 
   - 이전 프린터 드라이버, [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 애플리케이션에서 고정된 형식으로의 출력
 
   - 인쇄 스풀 형식
 
-- 이전 버전의 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 및 기타 컴퓨팅 디바이스에 대한 클라이언트를 포함하는 고정된 형식 문서 표시
+- 이전 버전의 Windows 및 기타 컴퓨팅 장치에 대 한 클라이언트를 포함 하는 고정 형식 문서 표시입니다.
 
 > [!NOTE]
 > <xref:System.Windows.Documents.Glyphs>및 <xref:System.Windows.Media.GlyphRun> 은 고정 형식의 문서 프레젠테이션 및 인쇄 시나리오를 위해 설계 되었습니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 일반적인 레이아웃과 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] <xref:System.Windows.Controls.Label> 및 <xref:System.Windows.Controls.TextBlock>등의 시나리오에 대 한 여러 요소를 제공 합니다. 레이아웃 및 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 시나리오에 대한 자세한 내용은 [WPF의 입력 체계](typography-in-wpf.md)를 참조하세요.

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - switches element
 - trace switches, <switches> element
 ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
-ms.openlocfilehash: 44f5c918f19f84daf827ad4e8f3b6bfbc3e9f439
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92a1c8db43579048945d76082e3ebd2862efd7ed
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704507"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920437"
 ---
 # <a name="switches-element"></a>\<스위치 > 요소
 추적 스위치 및 추적 스위치가 설정된 수준이 포함되어 있습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "61704507"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-switches.md)|추적 스위치를 설정하는 수준을 지정합니다.|  
+|[\<add>](add-element-for-switches.md)|추적 스위치를 설정하는 수준을 지정합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -50,10 +50,10 @@ ms.locfileid: "61704507"
 |`System.diagnostics`|메시지를 수집하고 저장하고 라우팅하는 추적 수신기를 지정하며, 추적 스위치가 설정되는 수준을 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
- 구성 파일에 배치 하 여 추적 스위치의 수준을 변경할 수 있습니다. 스위치가 <xref:System.Diagnostics.BooleanSwitch>를 켜거나 끌 수 있습니다. 스위치가 <xref:System.Diagnostics.TraceSwitch>, 추적의 유형을 지정 하 고 다른 수준을 할당할 수 있습니다 또는 디버그 메시지 응용 프로그램에서 출력 합니다.  
+ 구성 파일에 배치 하 여 추적 스위치의 수준을 변경할 수 있습니다. 스위치가 <xref:System.Diagnostics.BooleanSwitch>인 경우 설정 및 해제할 수 있습니다. 스위치가 <xref:System.Diagnostics.TraceSwitch>인 경우 다른 수준을 할당 하 여 응용 프로그램에서 출력 하는 추적 또는 디버그 메시지의 형식을 지정할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 사용 하는 방법을 보여 줍니다는  **\<전환 >** 설정할 요소입니다를 `General` 추적 스위치를를 <xref:System.Diagnostics.TraceLevel> 수준 및 사용을 `Data` Boolean 추적 스위치.  
+ 다음 예에서는  **\<switch >** `General` 요소를 사용 하 여 추적 스위치를 <xref:System.Diagnostics.TraceLevel> 수준 `Data` 으로 설정 하 고 부울 추적 스위치를 사용 하도록 설정 하는 방법을 보여 줍니다.  
   
 ```xml  
 <configuration>  
@@ -71,4 +71,4 @@ ms.locfileid: "61704507"
 - <xref:System.Diagnostics.Switch>
 - <xref:System.Diagnostics.TraceSwitch>
 - <xref:System.Diagnostics.BooleanSwitch>
-- [추적 및 디버그 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [추적 및 디버그 설정 스키마](index.md)

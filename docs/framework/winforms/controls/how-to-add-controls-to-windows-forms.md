@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 5c57d86b2f08733dc4a729bf6091eab23c6035f2
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 7ee603fa5350ef81c6d32d2f22119bbe526295df
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039703"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912623"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>방법: Windows Forms에 컨트롤 추가
 대부분의 폼은 UI (사용자 인터페이스)를 정의 하기 위해 폼의 화면에 컨트롤을 추가 하 여 디자인 되었습니다. *컨트롤* 은 정보를 표시 하거나 사용자 입력을 수락 하는 데 사용 되는 폼의 구성 요소입니다. 컨트롤에 대 한 자세한 내용은 [Windows Forms controls](index.md)을 참조 하세요.
@@ -30,7 +30,7 @@ ms.locfileid: "69039703"
      지정 된 위치와 크기를 사용 하 여 컨트롤이 폼에 추가 됩니다.
 
     > [!NOTE]
-    >  각 컨트롤에는 기본 크기가 정의 되어 있습니다. 컨트롤을 **도구 상자** 에서 폼으로 끌어서 컨트롤의 기본 크기로 폼에 추가할 수 있습니다.
+    > 각 컨트롤에는 기본 크기가 정의 되어 있습니다. 컨트롤을 **도구 상자** 에서 폼으로 끌어서 컨트롤의 기본 크기로 폼에 추가할 수 있습니다.
 
 ## <a name="to-drag-a-control-to-a-form"></a>컨트롤을 폼으로 끌려면
 
@@ -41,12 +41,12 @@ ms.locfileid: "69039703"
      컨트롤이 기본 크기의 지정 된 위치에 폼에 추가 됩니다.
 
     > [!NOTE]
-    >  **도구 상자** 에서 컨트롤을 두 번 클릭 하 여 기본 크기로 폼의 왼쪽 위 모퉁이에 추가할 수 있습니다.
+    > **도구 상자** 에서 컨트롤을 두 번 클릭 하 여 기본 크기로 폼의 왼쪽 위 모퉁이에 추가할 수 있습니다.
 
      런타임에 컨트롤을 폼에 동적으로 추가할 수도 있습니다. 다음 코드 예제 <xref:System.Windows.Forms.TextBox> 에서는 컨트롤을 클릭할 <xref:System.Windows.Forms.Button> 때 폼에 컨트롤이 추가 됩니다.
 
     > [!NOTE]
-    >  다음 절차를 수행 하려면 **단추** 컨트롤이 `Button1`있는 폼이 이미 배치 되어 있어야 합니다.
+    > 다음 절차를 수행 하려면 **단추** 컨트롤이 `Button1`있는 폼이 이미 배치 되어 있어야 합니다.
 
 ## <a name="to-add-a-control-to-a-form-programmatically"></a>프로그래밍 방식으로 폼에 컨트롤을 추가 하려면
 
@@ -81,7 +81,7 @@ ms.locfileid: "69039703"
     ```
 
     > [!NOTE]
-    >  컨트롤의 다른 속성을 초기화 하는 코드를 추가할 수도 있습니다.
+    > 컨트롤의 다른 속성을 초기화 하는 코드를 추가할 수도 있습니다.
 
     > [!IMPORTANT]
     >  악의적인 `UserControl`을 참조 하 여 네트워크를 통해 로컬 컴퓨터를 보안 위험에 노출 시킬 수 있습니다. 악의적인 사용자가 손상 된 사용자 지정 컨트롤을 만든 다음 실수로 프로젝트에 추가 하는 경우에만이 문제가 발생 합니다.

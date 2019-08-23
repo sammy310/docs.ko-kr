@@ -2,12 +2,12 @@
 title: <entries>
 ms.date: 03/30/2017
 ms.assetid: 202e430c-c1b9-4343-abe2-ac78c181a3b7
-ms.openlocfilehash: 5561cf61cef2258ec61bd32770538add1c69f5c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 610ba29ec98f4b1f2a9b1db3542bcb3aefb46457
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704208"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925657"
 ---
 # <a name="entries"></a>\<entries>
 필터가 일치할 때 메시지를 보내기 위한 라우팅 필터와 대상 엔드포인트 간의 매핑을 포함하는 라우팅 항목입니다.  
@@ -45,13 +45,13 @@ ms.locfileid: "61704208"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<필터>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|이전에 정의된 클라이언트 엔드포인트에 필터를 매핑합니다. 이 필터와 일치하는 메시지가 해당 대상으로 전송됩니다.|  
+|[\<필터>](filters-of-routing.md)|이전에 정의된 클라이언트 엔드포인트에 필터를 매핑합니다. 이 필터와 일치하는 메시지가 해당 대상으로 전송됩니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|라우팅 테이블을 포함하는 구성 섹션입니다.|  
+|[\<routing>](routing.md)|라우팅 테이블을 포함하는 구성 섹션입니다.|  
   
 ## <a name="see-also"></a>참고자료
 

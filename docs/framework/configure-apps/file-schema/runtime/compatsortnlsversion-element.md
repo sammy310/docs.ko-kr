@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ebc4bf703bc22b642b0950fd60471342a615a5c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e3a348ac8da855e458b6208c51f9c51b48da3134
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663847"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927443"
 ---
 # <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion > 요소
 문자열 비교를 수행할 때 런타임에서 레거시 정렬 순서를 사용하도록 지정합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "69663847"
  .NET Framework 4의 <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> 클래스에서 수행 하는 문자열 비교, 정렬 및 대/소문자 구분 연산은 유니코드 5.1 표준을 따르기 때문에 <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> 및와 같은 문자열 비교 메서드의 결과는와 <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> 다를 수 있습니다. 이전 버전의 .NET Framework입니다. 응용 프로그램이 레거시 동작에 의존 하는 경우 응용 프로그램의 구성 파일에 요소를 `<CompatSortNLSVersion>` 포함 하 여 .NET Framework 3.5 이전 버전에서 사용 되는 문자열 비교 및 정렬 규칙을 복원할 수 있습니다.  
   
 > [!IMPORTANT]
->  레거시 문자열 비교 복원 및 정렬 규칙을 실행하려면 로컬 시스템에서 sort00001000.dll 동적 링크 라이브러리를 사용할 수 있어야 합니다.  
+> 레거시 문자열 비교 복원 및 정렬 규칙을 실행하려면 로컬 시스템에서 sort00001000.dll 동적 링크 라이브러리를 사용할 수 있어야 합니다.  
   
  응용 프로그램 도메인을 만들 때 "NetFx40_Legacy20SortingBehavior" 문자열을 <xref:System.AppDomainSetup.SetCompatibilitySwitches%2A> 메서드로 전달하여 특정 응용 프로그램 도메인에 레거시 문자열 정렬과 비교 규칙을 사용할 수도 있습니다.  
   

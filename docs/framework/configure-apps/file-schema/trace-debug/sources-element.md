@@ -9,14 +9,14 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-ms.openlocfilehash: 9104a4a302aa9c6094adbc13396074fdd4db4bbc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73d4eb2741bdbe5a07704ca0f3b2f779706e66dc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701270"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926951"
 ---
-# <a name="sources-element"></a>\<소스 > 요소
+# <a name="sources-element"></a>\<sources > 요소
 추적 메시지를 시작 하는 추적 소스를 지정 합니다.  
   
  \<configuration>  
@@ -41,7 +41,7 @@ ms.locfileid: "61701270"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|필수적 요소입니다.<br /><br /> 추적 메시지를 시작하는 추적 소스를 지정합니다.|  
+|[\<source>](source-element.md)|필수적 요소입니다.<br /><br /> 추적 메시지를 시작하는 추적 소스를 지정합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -51,10 +51,10 @@ ms.locfileid: "61701270"
 |`system.diagnostics`|메시지를 수집하고 저장하고 라우팅하는 추적 수신기를 지정하며, 추적 스위치가 설정되는 수준을 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 요소는 응용 프로그램 구성 파일과 컴퓨터 구성 파일 (Machine.config)에서 사용할 수 있습니다.  
+ 이 요소는 컴퓨터 구성 파일 (machine.config) 및 응용 프로그램 구성 파일에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 사용 하는 방법을 보여 줍니다 합니다 `<sources>` 추적 소스를 추가할 요소의 `mySource` 명명 된 소스 스위치의 수준을 설정 하 고 `sourceSwitch`입니다. 콘솔 추적 수신기는 추적 정보를 콘솔에 쓰는 추가 됩니다.  
+ 다음 예제에서는 `<sources>` 요소를 사용 하 여 추적 소스 `mySource` 를 추가 하 고 라는 `sourceSwitch`소스 스위치의 수준을 설정 하는 방법을 보여 줍니다. 콘솔에 추적 정보를 기록 하는 콘솔 추적 수신기가 추가 됩니다.  
   
 ```xml  
 <configuration>  
@@ -87,5 +87,5 @@ ms.locfileid: "61701270"
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.XmlWriterTraceListener>
-- [추적 및 디버그 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)
+- [추적 및 디버그 설정 스키마](index.md)
+- [\<source>](source-element.md)

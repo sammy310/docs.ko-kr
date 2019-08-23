@@ -16,31 +16,31 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a50f8b13979426b8ea04f1952216afe5de337386
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3fed44fe814ec873cffb1aa4006e11445f8e03db
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111672"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965767"
 ---
 # <a name="imaptoken-interface"></a>IMapToken 인터페이스
-어셈블리 간의 매핑 기능을 제공합니다.  
+어셈블리 간의 매핑 기능을 제공 합니다.  
   
 > [!NOTE]
->  `IMapToken` 클라이언트에서 인터페이스를 구현 해야 합니다.  
+> 인터페이스 `IMapToken` 는 클라이언트에 의해 구현 되어야 합니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|설명|  
+|메서드|Description|  
 |------------|-----------------|  
-|[Map 메서드](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|메타 데이터 서명을 사용 하 여 두 어셈블리 간에 관계를 매핑합니다.|  
+|[Map 메서드](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|메타 데이터 시그니처를 사용 하 여 두 어셈블리 간의 관계를 매핑합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
- **헤더:** Cor.h  
+ **헤더:** Cor  
   
- **라이브러리:** MsCorEE.dll에서 리소스로 사용  
+ **라이브러리** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

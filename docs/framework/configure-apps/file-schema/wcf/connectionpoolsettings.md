@@ -2,12 +2,12 @@
 title: <connectionPoolSettings>
 ms.date: 03/30/2017
 ms.assetid: 6fa7fa65-2c6e-4eab-b8cf-7690112c0be5
-ms.openlocfilehash: 0e56bb5c9e485559d712281a51e79f54c9661b5a
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 3c8d905a04f8f6d7ecff9b0ef9e7d3c8afa727e3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423129"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925970"
 ---
 # <a name="connectionpoolsettings"></a>\<connectionPoolSettings>
 명명된 파이프 바인딩의 추가 연결 풀 설정을 지정합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "67423129"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
 |`groupName`|나가는 채널에 사용되는 연결 풀의 이름을 정의하는 문자열입니다. 스트리밍 모드에서는 연결이 공유되지 않습니다. 즉 연결 풀링이 사용되지 않습니다. 기본값은 "default" 문자열입니다. 이 값을 수정하여 특정 클라이언트의 연결을 별도의 그룹으로 격리할 수 있습니다.|  
 |`idleTimeout`|연결이 끊어지기 전에 유휴 상태를 유지할 수 있는 최대 시간을 지정하는 <xref:System.TimeSpan>(양수)입니다. 기본값은 00:02:00입니다.|  
@@ -45,7 +45,7 @@ ms.locfileid: "67423129"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<namedPipeTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/namedpipetransport.md)|채널이 명명된 파이프를 사용하여 메시지를 전송하게 하는 전송을 정의합니다.|  
+|[\<namedPipeTransport>](namedpipetransport.md)|채널이 명명된 파이프를 사용하여 메시지를 전송하게 하는 전송을 정의합니다.|  
   
 ## <a name="see-also"></a>참고자료
 
@@ -54,9 +54,9 @@ ms.locfileid: "67423129"
 - <xref:System.ServiceModel.Channels.NamedPipeConnectionPoolSettings>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [전송](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [전송 선택](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
-- [바인딩](../../../../../docs/framework/wcf/bindings.md)
-- [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [전송](../../../wcf/feature-details/transports.md)
+- [전송 선택](../../../wcf/feature-details/choosing-a-transport.md)
+- [바인딩](../../../wcf/bindings.md)
+- [바인딩 확장](../../../wcf/extending/extending-bindings.md)
+- [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

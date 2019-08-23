@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: da9eaf127a4db02cddbb36e53a0d0ddb5b28b841
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 703fafad283c11e6ee5e6d9c9da3760ea4a36361
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818057"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966154"
 ---
 # <a name="threading-model"></a>스레딩 모델
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 개발자가 스레딩의 어려움을 해결하도록 디자인되어 있습니다. 결과적으로 대부분의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 개발자는 둘 이상의 스레드를 사용 하는 인터페이스를 작성할 필요가 없습니다. 다중 스레드 프로그램은 복잡하고 디버그하기 어려우므로 단일 스레드 솔루션이 있을 경우 피해야 합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "68818057"
  그러나 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 아키텍처는 잘 설계 된 방법에 관계 없이 모든 종류의 문제에 대해 단일 스레드 솔루션을 제공할 수 있는 것은 아닙니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 가까이 있지만 여러 스레드가 응답성 또는 응용 프로그램 성능을 향상 시키는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 경우는 여전히 발생 합니다. 일부 배경 자료를 설명한 후 이 문서에서는 이러한 상황 중 일부를 살펴보고 몇몇 하위 수준 세부 정보에 대한 설명으로 마무리 짓습니다.  
 
 > [!NOTE]
->  이 항목에서는 비동기 호출에 대 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> 한 메서드를 사용 하 여 스레딩을 설명 합니다. <xref:System.Action> <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A> 또는<xref:System.Func%601> 를 매개 변수로 사용 하는 메서드를 호출 하 여 비동기 호출을 수행할 수도 있습니다.  메서드 <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A> 는 속성 <xref:System.Windows.Threading.DispatcherOperation%601>을 <xref:System.Windows.Threading.DispatcherOperation> 포함<xref:System.Windows.Threading.DispatcherOperation.Task%2A> 하는 또는를 반환 합니다. 키워드는 `await` <xref:System.Windows.Threading.DispatcherOperation> 또는 연결 <xref:System.Threading.Tasks.Task>된와 함께 사용할 수 있습니다. 또는<xref:System.Windows.Threading.DispatcherOperation> <xref:System.Threading.Tasks.Task> 에서반환된<xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> 에 대해 동기적으로 대기 해야 하는 경우 확장 메서드를 호출 합니다. <xref:System.Windows.Threading.DispatcherOperation%601>  를 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 호출 하면 교착 상태가 발생 합니다. 를 사용 하 여 비동기 작업 <xref:System.Threading.Tasks.Task> 을 수행 하는 방법에 대 한 자세한 내용은 작업 병렬 처리를 참조 하세요.  또한 <xref:System.Windows.Threading.Dispatcher.Invoke%2A> 메서드는 <xref:System.Action> 또는<xref:System.Func%601> 를 매개 변수로 사용 하는 오버 로드를 포함 합니다.  <xref:System.Windows.Threading.Dispatcher.Invoke%2A> 메서드를 사용 하 여 대리자를 전달 하거나 <xref:System.Func%601>를 <xref:System.Action> 전달 하 여 동기 호출을 수행할 수 있습니다.  
+> 이 항목에서는 비동기 호출에 대 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> 한 메서드를 사용 하 여 스레딩을 설명 합니다. <xref:System.Action> <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A> 또는<xref:System.Func%601> 를 매개 변수로 사용 하는 메서드를 호출 하 여 비동기 호출을 수행할 수도 있습니다.  메서드 <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A> 는 속성 <xref:System.Windows.Threading.DispatcherOperation%601>을 <xref:System.Windows.Threading.DispatcherOperation> 포함<xref:System.Windows.Threading.DispatcherOperation.Task%2A> 하는 또는를 반환 합니다. 키워드는 `await` <xref:System.Windows.Threading.DispatcherOperation> 또는 연결 <xref:System.Threading.Tasks.Task>된와 함께 사용할 수 있습니다. 또는<xref:System.Windows.Threading.DispatcherOperation> <xref:System.Threading.Tasks.Task> 에서반환된<xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> 에 대해 동기적으로 대기 해야 하는 경우 확장 메서드를 호출 합니다. <xref:System.Windows.Threading.DispatcherOperation%601>  를 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 호출 하면 교착 상태가 발생 합니다. 를 사용 하 여 비동기 작업 <xref:System.Threading.Tasks.Task> 을 수행 하는 방법에 대 한 자세한 내용은 작업 병렬 처리를 참조 하세요.  또한 <xref:System.Windows.Threading.Dispatcher.Invoke%2A> 메서드는 <xref:System.Action> 또는<xref:System.Func%601> 를 매개 변수로 사용 하는 오버 로드를 포함 합니다.  <xref:System.Windows.Threading.Dispatcher.Invoke%2A> 메서드를 사용 하 여 대리자를 전달 하거나 <xref:System.Func%601>를 <xref:System.Action> 전달 하 여 동기 호출을 수행할 수 있습니다.  
   
 <a name="threading_overview"></a>   
 ## <a name="overview-and-the-dispatcher"></a>개요 및 디스패처  
@@ -43,7 +43,7 @@ ms.locfileid: "68818057"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램에서 큰 작업을 처리 하는 방법은 무엇 인가요? 코드에 큰 계산을 포함하거나 몇몇 원격 서버에서 데이터베이스를 쿼리해야 하면 어떻게 될까요? 일반적으로는 별도의 스레드에서 큰 작업을 처리 하는 것이 좋습니다. 스레드 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 는 <xref:System.Windows.Threading.Dispatcher> 큐에 있는 항목을 사용 하지 않는 상태로 유지 됩니다. 큰 작업이 완료 되 면 표시를 위해 결과를 다시 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드에 보고할 수 있습니다.  
   
- 지금까지 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 을 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 사용 하면 요소를 만든 스레드에서만 요소에 액세스할 수 있습니다. 즉, 일부 장기 실행 작업을 처리하는 백그라운드 스레드는 작업이 완료될 때 입력란을 업데이트할 수 없습니다. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)][!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 구성 요소의 무결성을 보장 하기 위해이를 수행 합니다. 목록 상자의 콘텐츠가 그리는 동안 백그라운드 스레드를 통해 업데이트되면 목록 상자가 이상하게 표시될 수 있습니다.  
+ 지금까지 Windows는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 요소를 만든 스레드에서만 요소에 액세스할 수 있도록 허용 합니다. 즉, 일부 장기 실행 작업을 처리하는 백그라운드 스레드는 작업이 완료될 때 입력란을 업데이트할 수 없습니다. Windows에서는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 구성 요소의 무결성을 보장 하기 위해이를 수행 합니다. 목록 상자의 콘텐츠가 그리는 동안 백그라운드 스레드를 통해 업데이트되면 목록 상자가 이상하게 표시될 수 있습니다.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에는 이 조정을 적용하는 기본 제공 상호 배제 메커니즘이 있습니다. 의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 대부분 클래스는에서 <xref:System.Windows.Threading.DispatcherObject>파생 됩니다. 생성 시는 <xref:System.Windows.Threading.DispatcherObject> 현재 실행 중인 스레드에 연결 된 <xref:System.Windows.Threading.Dispatcher> 에 대 한 참조를 저장 합니다. 실제로는 <xref:System.Windows.Threading.DispatcherObject> 이를 만드는 스레드와 연결 됩니다. 프로그램을 실행 하는 <xref:System.Windows.Threading.DispatcherObject> 동안은 해당 공용 <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> 메서드를 호출할 수 있습니다. <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>현재 스레드와 <xref:System.Windows.Threading.Dispatcher> 연결 된를 검사 하 고이를 생성 중 <xref:System.Windows.Threading.Dispatcher> 에 저장 된 참조와 비교 합니다. 일치 하지 않으면에서 <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> 예외를 throw 합니다. <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>는에 속한 <xref:System.Windows.Threading.DispatcherObject>모든 메서드의 시작 부분에서 호출 됩니다.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "68818057"
 ### <a name="multiple-windows-multiple-threads"></a>여러 Windows, 여러 스레드  
  일부 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램에는 여러 개의 최상위 창이 필요 합니다. 한 스레드/<xref:System.Windows.Threading.Dispatcher> 조합에서 여러 windows를 관리 하는 것은 완벽 하 게 허용 되지만 때로는 여러 스레드가 더 나은 작업을 수행 합니다. 특히 창 중 하나가 스레드를 독점할 가능성이 있는 경우 여러 스레드를 사용하는 것이 좋습니다.  
   
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 탐색기가 이 방식으로 작동합니다. 새로운 각 탐색기 창은 원래 프로세스에 속하지만 독립 스레드의 제어를 기반으로 만들어집니다.  
+ Windows 탐색기는 이런 방식으로 작동 합니다. 새로운 각 탐색기 창은 원래 프로세스에 속하지만 독립 스레드의 제어를 기반으로 만들어집니다.  
   
  <xref:System.Windows.Controls.Frame> 컨트롤을 사용 하 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 여 웹 페이지를 표시할 수 있습니다. 간단한 Internet Explorer 대체를 쉽게 만들 수 있습니다. 새 탐색기 창을 여는 중요한 기능으로 시작합니다. 사용자가 “새 창” 단추를 클릭하면 창 복사본을 별도의 스레드에서 시작합니다. 이렇게 하면 창 중 하나에 있는 장기 실행 또는 차단 작업으로 인해 모든 다른 창이 잠기지 않습니다.  
   

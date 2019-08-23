@@ -9,12 +9,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 60c238430d44371bbd3859c3864fd2ef73f70098
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: a6d000bc853046cffbc2bddc54d1f5faec689032
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69037922"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968609"
 ---
 # <a name="how-to-inherit-windows-forms"></a>방법: Windows Forms 상속
 
@@ -40,12 +40,12 @@ ms.locfileid: "69037922"
     public class Form2 : Namespace1.Form1
     ```
 
- 폼을 상속할 때 이벤트 처리기가 기본 클래스와 상속된 클래스에서 두 번 호출되는 문제가 발생할 수 있다는 점을 염두에 두어야 합니다. 이 문제를 방지하는 방법에 대한 자세한 내용은 [Visual Basic에서 상속된 이벤트 처리기 관련 문제 해결](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)을 참조하세요.
+ 폼을 상속할 때 이벤트 처리기가 기본 클래스와 상속된 클래스에서 두 번 호출되는 문제가 발생할 수 있다는 점을 염두에 두어야 합니다. 이 문제를 방지하는 방법에 대한 자세한 내용은 [Visual Basic에서 상속된 이벤트 처리기 관련 문제 해결](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)을 참조하세요.
 
 ## <a name="see-also"></a>참고자료
 
-- [Inherits 문](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
-- [Imports 문(.NET 네임스페이스 및 형식)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [using](~/docs/csharp/language-reference/keywords/using.md)
+- [Inherits 문](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [Imports 문(.NET 네임스페이스 및 형식)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [using](../../../csharp/language-reference/keywords/using.md)
 - [기본 폼의 모양 수정 효과](effects-of-modifying-base-form-appearance.md)
 - [Windows Forms 시각적 개체 상속](windows-forms-visual-inheritance.md)

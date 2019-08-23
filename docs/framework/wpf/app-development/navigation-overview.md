@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 145c4e33bd601fa61750df56b949bda5d43cc372
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 574449f95ee9632d37f277d61806802457494df0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818006"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964582"
 ---
 # <a name="navigation-overview"></a>탐색 개요
 
@@ -106,7 +106,7 @@ WPF (Windows Presentation Foundation)에서는 두 가지 유형의 응용 프�
 
 태그 파일 및 코드 숨김 파일을 함께 사용하려면 다음과 같은 구성이 필요합니다.
 
-- 태그에서 요소는 `Page` `x:Class` 특성을 포함 해야 합니다. 응용 프로그램을 빌드할 `x:Class` 때 태그 [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] 파일에가 있으면에서 <xref:System.Windows.Controls.Page> 파생 되 고 `x:Class` 특성에 지정 `partial` 된 이름을 갖는 클래스가 생성 됩니다. 이렇게 하려면 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 스키마에 대 한 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 네임 스페이스 선언을 추가 해야 합니다 `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` (). 생성 `partial` 된 클래스는 `InitializeComponent`이벤트를 등록 하 고 태그에 구현 된 속성을 설정 하기 위해 호출 되는를 구현 합니다.
+- 태그에서 요소는 `Page` `x:Class` 특성을 포함 해야 합니다. 응용 프로그램을 빌드할 때 `x:Class` 태그 파일에가 있으면 MSBuild (Microsoft build engine)가에서 <xref:System.Windows.Controls.Page> 파생 되 고 `x:Class` 특성으로 `partial` 지정 된 이름을 가진 클래스를 만듭니다. 이렇게 하려면 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 스키마에 대 한 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 네임 스페이스 선언을 추가 해야 합니다 `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` (). 생성 `partial` 된 클래스는 `InitializeComponent`이벤트를 등록 하 고 태그에 구현 된 속성을 설정 하기 위해 호출 되는를 구현 합니다.
 
 - 코드를 사용할 `partial` 때 클래스는 태그의 `x:Class` 특성으로 지정 되는 동일한 이름의 클래스 여야 하며에서 <xref:System.Windows.Controls.Page>파생 되어야 합니다. 이렇게 하면 응용 프로그램을 빌드할 때 태그 파일에 대해 생성 `partial` 되는 클래스와 코드 숨김이 연결 될 수 있습니다 ( [WPF 응용 프로그램 빌드](building-a-wpf-application-wpf.md)참조).
 
@@ -123,7 +123,7 @@ WPF (Windows Presentation Foundation)에서는 두 가지 유형의 응용 프�
 
 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]를 사용하려면 브라우저에 특정 규모의 응용 프로그램 인프라가 호스트되어야 합니다. 에서 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]클래스는 <xref:System.Windows.Application> 필요한 응용 프로그램 인프라를 설정 하는 응용 프로그램 정의의 일부입니다 ( [응용 프로그램 관리 개요](application-management-overview.md)참조).
 
-응용 프로그램 정의는 일반적으로 태그와 코드를 모두 사용 하 여 구현 되며 마크업 파일은 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `ApplicationDefinition` 항목으로 구성 됩니다. 다음은에 대 한 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]응용 프로그램 정의입니다.
+응용 프로그램 정의는 일반적으로 태그와 코드를 모두 사용 하 여 구현 되며 마크업 파일은 MSBuild`ApplicationDefinition` 항목으로 구성 됩니다. 다음은에 대 한 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]응용 프로그램 정의입니다.
 
 [!code-xaml[XBAPAppDefSnippets#XBAPApplicationDefinitionMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppDefSnippets/CSharp/App.xaml#xbapapplicationdefinitionmarkup)]
 
@@ -527,7 +527,7 @@ Internet [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbaps
 
 *이름* `=` *값* `; expires=DAY, DD-MMM-YYYY HH:MM:SS GMT`
 
-만료 날짜가 있는 쿠키는 쿠키가 만료 될 때까지 현재 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 설치의 임시 인터넷 파일 폴더에 저장 됩니다. 이러한 쿠키는 응용 프로그램 세션 간에 지속 되므로 *영구 쿠키* 라고 합니다.
+만료 날짜가 있는 쿠키는 쿠키가 만료 될 때까지 현재 Windows 설치의 임시 인터넷 파일 폴더에 저장 됩니다. 이러한 쿠키는 응용 프로그램 세션 간에 지속 되므로 *영구 쿠키* 라고 합니다.
 
 메서드를 호출 <xref:System.Windows.Application.GetCookie%2A> 하 여 <xref:System.Windows.Application.SetCookie%2A> 쿠키를 메서드로 설정한 위치의를 <xref:System.Uri> 전달 하 여 세션과 영구 쿠키를 모두 검색할 수 있습니다.
 

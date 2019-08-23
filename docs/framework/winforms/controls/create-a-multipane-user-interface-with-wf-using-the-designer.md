@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: f96124f7d97e733b1f0e2559320ce2e09ba5ff21
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 97888a77dfc731be591d5f0284e87f45ef7dc437
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039954"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930177"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms에서 다중 창 사용자 인터페이스 만들기
 다음 절차에서는 **폴더** 목록, **메시지** 창 및 **미리 보기** 창을 사용 하 여 Microsoft Outlook에서 사용 되는 것과 유사한 다중 창 사용자 인터페이스를 만듭니다. 이러한 정렬은 폼을 사용 하 여 도킹 컨트롤을 통해 주로 됩니다.
@@ -39,7 +39,7 @@ ms.locfileid: "69039954"
      이제 F5 키를 눌러 응용 프로그램을 실행 하는 경우 Microsoft Outlook의 경우와 유사한 세 부분으로 구성 된 사용자 인터페이스가 폼에 표시 됩니다.
 
     > [!NOTE]
-    >  <xref:System.Windows.Forms.SplitContainer> 컨트롤 내의 분할자 중 하나 위에 마우스 포인터를 놓으면 내부 차원의 크기를 조정할 수 있습니다.
+    > <xref:System.Windows.Forms.SplitContainer> 컨트롤 내의 분할자 중 하나 위에 마우스 포인터를 놓으면 내부 차원의 크기를 조정할 수 있습니다.
 
 응용 프로그램 개발의이 시점에서 정교한 사용자 인터페이스를 만들었습니다. 다음 단계는 <xref:System.Windows.Forms.TreeView> 컨트롤 및 <xref:System.Windows.Forms.ListView> 컨트롤을 일종의 데이터 소스에 연결 하 여 응용 프로그램 자체의 프로그래밍을 진행 합니다. 컨트롤을 데이터에 연결 하는 방법에 대 한 자세한 내용은 [데이터 바인딩 및 Windows Forms](../data-binding-and-windows-forms.md)를 참조 하세요.
 

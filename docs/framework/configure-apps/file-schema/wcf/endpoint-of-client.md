@@ -2,14 +2,14 @@
 title: <client>의 <endpoint>
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-ms.openlocfilehash: 3af41ad5b5681b08aac44d984372ab5ac66caf5e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2bf59972ff2f75995e94a3c1934e88944d65fcc7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673227"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919106"
 ---
-# <a name="endpoint-of-client"></a>\<끝점 >의 \<클라이언트 >
+# <a name="endpoint-of-client"></a>\<클라이언트 >의 \<끝점 >
 클라이언트에서 서버의 서비스 엔드포인트와 연결하는 데 사용하는 채널 엔드포인트의 contract, binding 및 address 속성을 지정합니다.  
   
  \<system.ServiceModel>  
@@ -39,7 +39,7 @@ ms.locfileid: "61673227"
 |---------------|-----------------|  
 |주소|필수 문자열 특성입니다.<br /><br /> 엔드포인트의 주소를 지정합니다. 기본값은 빈 문자열입니다. 주소는 절대 URI이어야 합니다.|  
 |behaviorConfiguration|엔드포인트를 인스턴스화할 때 사용할 동작의 이름을 포함하는 문자열입니다. 동작 이름은 서비스가 정의된 지점의 범위에 속해야 합니다. 기본값은 빈 문자열입니다.|  
-|바인딩|필수 문자열 특성입니다.<br /><br /> 사용할 바인딩의 형식을 나타내는 문자열입니다. 형식에 등록된 구성 섹션이 있어야 형식을 참조할 수 있습니다. 이 형식은 바인딩의 형식 이름 대신 섹션 이름으로 등록됩니다.|  
+|바인딩(binding)|필수 문자열 특성입니다.<br /><br /> 사용할 바인딩의 형식을 나타내는 문자열입니다. 형식에 등록된 구성 섹션이 있어야 형식을 참조할 수 있습니다. 이 형식은 바인딩의 형식 이름 대신 섹션 이름으로 등록됩니다.|  
 |bindingConfiguration|선택 사항입니다. 엔드포인트가 인스턴스화될 때 사용할 바인딩 구성의 이름을 포함하는 문자열입니다. 바인딩 구성은 엔드포인트가 정의된 지점의 범위에 속해야 합니다. 기본값은 빈 문자열입니다.<br /><br /> 이 특성은 구성 파일에서 특정 바인딩 구성을 참조하기 위해 `binding`과 함께 사용됩니다. 사용자 지정 바인딩을 사용하려는 경우 이 특성을 설정하세요. 그렇지 않으면 예외가 throw될 수 있습니다.|  
 |계약(contract)|필수 문자열 특성입니다.<br /><br /> 이 엔드포인트가 공개하는 계약을 나타내는 문자열입니다. 어셈블리는 계약 형식을 구현해야 합니다.|  
 |endpointConfiguration|이 표준 엔드포인트의 추가 구성 정보를 참조하는 `kind` 특성에 의해 설정되는 표준 엔드포인트의 이름을 지정하는 문자열입니다. 이와 동일한 이름이 `<standardEndpoints>` 섹션에서 정의되어야 합니다.|  
@@ -48,16 +48,16 @@ ms.locfileid: "61673227"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|주소 헤더 컬렉션입니다.|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|한 엔드포인트에서 다른 엔드포인트와 메시지를 교환할 때 상대 엔드포인트를 인증할 수 있도록 하는 ID입니다.|  
+|[\<headers>](headers.md)|주소 헤더 컬렉션입니다.|  
+|[\<identity>](identity.md)|한 엔드포인트에서 다른 엔드포인트와 메시지를 교환할 때 상대 엔드포인트를 인증할 수 있도록 하는 ID입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<client>](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|클라이언트가 연결할 수 있는 엔드포인트의 목록을 정의하는 구성 섹션입니다.|  
+|[\<client>](client.md)|클라이언트가 연결할 수 있는 엔드포인트의 목록을 정의하는 구성 섹션입니다.|  
   
 ## <a name="example"></a>예제  
  이것은 채널 엔드포인트 구성의 예제입니다.  
@@ -78,5 +78,5 @@ ms.locfileid: "61673227"
 - <xref:System.ServiceModel.Configuration.ChannelEndpointElementCollection>
 - <xref:System.ServiceModel.Configuration.ClientSection.Endpoints%2A>
 - <xref:System.ServiceModel.Configuration.ChannelEndpointElement>
-- [WCF 클라이언트 구성](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
-- [클라이언트](../../../../../docs/framework/wcf/feature-details/clients.md)
+- [WCF 클라이언트 구성](../../../wcf/feature-details/client-configuration.md)
+- [클라이언트](../../../wcf/feature-details/clients.md)

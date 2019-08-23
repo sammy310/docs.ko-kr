@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aac7079d941e6774ca6c00fbece8ff72fbf3f0e1
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 92873277b4b25e4c1c5981628187078ac7cb5704
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663878"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920897"
 ---
 # <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames> 요소
 완전 신뢰 <xref:System.AppDomain>로 로드 된 완전 신뢰 어셈블리의 강력한 이름에 대 한 유효성 검사를 건너뛸지 여부를 지정 합니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "69663878"
 - 서명이 연기되지 않음  
   
 > [!NOTE]
->  레지스트리 키를 사용 하 여 컴퓨터의 모든 응용 프로그램에 대해 바이패스 기능이 꺼져 있는 경우이 구성 파일 설정은 적용 되지 않습니다. 자세한 내용은 [방법: 강력한 이름 건너뛰기 기능 비활성화](../../../app-domains/how-to-disable-the-strong-name-bypass-feature.md)  
+> 레지스트리 키를 사용 하 여 컴퓨터의 모든 응용 프로그램에 대해 바이패스 기능이 꺼져 있는 경우이 구성 파일 설정은 적용 되지 않습니다. 자세한 내용은 [방법: 강력한 이름 건너뛰기 기능 비활성화](../../../app-domains/how-to-disable-the-strong-name-bypass-feature.md)  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 완전 신뢰 어셈블리에서 강력한 이름 서명의 유효성을 검사 하는 동작을 지정 하는 방법을 보여 줍니다.  

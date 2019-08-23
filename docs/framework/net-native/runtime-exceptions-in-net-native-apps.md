@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3b682d4b43ece406ee320d6d4f96ed5cda5f17c3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6472f02cf2633d936252bfd2a8daa3ff711a4db8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650361"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967872"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>.NET 네이티브 앱의 런타임 예외
 디버그 및 릴리스 구성이 완전히 다르므로 해당 대상 플랫폼에서 유니버설 Windows 플랫폼 앱의 릴리스 빌드를 테스트하는 것이 중요합니다. 기본적으로 디버그 구성에서는 .NET 핵심 런타임을 사용하여 앱을 컴파일하지만 릴리스 구성에서는 .NET 네이티브를 사용하여 앱을 네이티브 코드로 컴파일합니다.  
   
 > [!IMPORTANT]
->  처리 하는 방법은 합니다 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)를 [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), 및 [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 할 예외 앱의 릴리스 버전을 테스트할 때 발생할 내용은 "4 단계: 누락 된 메타 데이터를 수동으로 해결:에 [Getting Started](../../../docs/framework/net-native/getting-started-with-net-native.md) 항목인 뿐만 [리플렉션 및.NET 네이티브](../../../docs/framework/net-native/reflection-and-net-native.md) 및 [런타임 지시문 (rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
+> 앱의 릴리스 버전을 테스트할 때 발생할 수 있는 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)및 [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 예외를 처리 하는 방법에 대 한 자세한 내용은 "4 단계: [시작](../../../docs/framework/net-native/getting-started-with-net-native.md) 항목에서 [리플렉션 및 .NET 네이티브](../../../docs/framework/net-native/reflection-and-net-native.md) 및 [런타임 지시문 (Rd .xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)를 비롯 하 여 수동으로 누락 된 메타 데이터를 확인 합니다.  
   
 ## <a name="debug-and-release-builds"></a>디버그 및 릴리스 빌드  
  디버그 빌드가 .NET 핵심 런타임에 대해 실행될 때 네이티브 코드로 컴파일되지 않았습니다. 그러므로 일반적으로 모든 서비스가 앱에서 사용 가능한 런타임에 의해 제공됩니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "64650361"
 - 코드가 매우 최적화됩니다. 이는 가능할 때마다 인라인 처리가 사용된다는 의미입니다. 인라인 처리는 외부 루틴에서 호출 루틴으로 코드를 이동합니다.   .NET 네이티브가 특수 런타임을 제공하고 적극적인 인라인 처리를 구현한다는 사실은 디버깅 시 표시되는 호출 스택에 영향을 줍니다.  자세한 내용은 [Runtime call stack](#CallStack) 섹션을 참조하세요.  
   
 > [!NOTE]
->  **.NET 네이티브 도구 체인을 사용하여 컴파일** 상자를 선택하거나 선택을 취소하여 디버그 및 릴리스 빌드가 .NET 네이티브 도구 체인을 사용하여 컴파일되는지 제어할 수 있습니다.   단, Windows 스토어는 항상 .NET 네이티브 도구 체인을 사용하여 프로덕션 버전의 앱을 컴파일합니다.  
+> **.NET 네이티브 도구 체인을 사용하여 컴파일** 상자를 선택하거나 선택을 취소하여 디버그 및 릴리스 빌드가 .NET 네이티브 도구 체인을 사용하여 컴파일되는지 제어할 수 있습니다.   단, Windows 스토어는 항상 .NET 네이티브 도구 체인을 사용하여 프로덕션 버전의 앱을 컴파일합니다.  
   
 <a name="Messages"></a>   
 ## <a name="runtime-exception-messages"></a>Runtime exception messages  
@@ -61,5 +61,5 @@ Additional information: Value does not fall within the expected range.
   
 ## <a name="see-also"></a>참고자료
 
-- [.NET 네이티브 Windows 유니버설 앱 디버깅](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/)
+- [Windows 유니버설 앱 .NET 네이티브 디버깅](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/)
 - [시작](../../../docs/framework/net-native/getting-started-with-net-native.md)

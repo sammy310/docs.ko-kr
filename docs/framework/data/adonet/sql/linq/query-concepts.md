@@ -2,12 +2,12 @@
 title: 쿼리 개념
 ms.date: 03/30/2017
 ms.assetid: 9a125749-ccb5-49d5-999d-d2db7171d74d
-ms.openlocfilehash: 62af37399cda5220c429fae2d9ab619989050b00
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be564ae6fe6dc887b77ea4ae213d56d11f309369
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767522"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938568"
 ---
 # <a name="query-concepts"></a>쿼리 개념
 이 단원에서는 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]의 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 쿼리 다지인에 대한 주요 개념을 설명합니다.  
@@ -32,5 +32,5 @@ ms.locfileid: "61767522"
  [개체 ID](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]의 개체 ID에 대한 개념을 설명합니다.  
   
- [LINQ 쿼리 소개(C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
+ [LINQ 쿼리 소개(C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
  [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]의 쿼리 작업에 대해 소개합니다.

@@ -2,27 +2,27 @@
 title: 집계 쿼리
 ms.date: 03/30/2017
 ms.assetid: 13ec5580-05ce-4a1f-9d3d-8660be7891a2
-ms.openlocfilehash: 8a3dd4b80ee8bb09dc0b5a06b6fa603f4b74fdf8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b7b38306903313825056c02fc3c3fb8c98e07e17
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610153"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964116"
 ---
 # <a name="aggregate-queries"></a>집계 쿼리
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 `Average`, `Count`, `Max`, `Min` 및 `Sum` 집계 연산자가 지원됩니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 집계 연산자의 다음과 같은 특징에 유의하세요.  
   
 - 집계 쿼리는 즉시 실행됩니다.  
   
-     자세한 내용은 [LINQ 쿼리 소개(C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)를 참조하세요.  
+     자세한 내용은 [LINQ 쿼리 소개(C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)를 참조하세요.  
   
 - 집계 쿼리는 일반적으로 컬렉션 대신 숫자를 반환합니다.  
   
-     자세한 내용은 [집계 작업](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546138(v=vs.120))합니다.  
+     자세한 내용은 [집계 작업](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546138(v=vs.120))을 참조 하세요.  
   
 - 익명 형식에 대해서 집계를 호출할 수 없습니다.  
   
- 다음 항목의 예제에서는 Northwind 샘플 데이터베이스를 사용합니다. 자세한 내용은 [샘플 데이터베이스 다운로드](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)합니다.  
+ 다음 항목의 예제에서는 Northwind 샘플 데이터베이스를 사용합니다. 자세한 내용은 [샘플 데이터베이스 다운로드](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)를 참조 하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [숫자 시퀀스에서 평균 값 반환](../../../../../../docs/framework/data/adonet/sql/linq/return-the-average-value-from-a-numeric-sequence.md)  
@@ -47,5 +47,5 @@ ms.locfileid: "64610153"
  [쿼리 개념](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
  [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]의 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 쿼리 설계 개념을 설명하는 항목에 대한 링크를 제공합니다.  
   
- [LINQ 쿼리 소개(C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
+ [LINQ 쿼리 소개(C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
  [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]의 쿼리 작동 방식을 설명합니다.

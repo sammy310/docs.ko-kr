@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 0fd851ac413b54769bf6606b2220cf38934902be
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 8db9f2051a0401e01f233f9c959e015eb657bdac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401433"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965473"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>방법: 만들기 및 ObservableCollection에 바인딩
 이 예제에서는 항목을 추가 하거나 제거할 때 알림을 제공 하는 컬렉션 클래스인 <xref:System.Collections.ObjectModel.ObservableCollection%601> 클래스에서 파생 되는 컬렉션을 만들고 바인딩하는 방법을 보여 줍니다.  
@@ -136,7 +136,7 @@ End Class
  `NameItemTemplate`의 정의는 여기에 나와 있지 않습니다.  
   
 > [!NOTE]
->  컬렉션의 개체는 [바인딩 소스 개요](binding-sources-overview.md)에 설명된 요구 사항을 충족해야 합니다. 특히 또는 <xref:System.Windows.Data.BindingMode.OneWay> <xref:System.Windows.Data.BindingMode.TwoWay> 를 사용 하는 경우 ( [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 예: 소스 속성이 동적으로 변경 될 때를 업데이트 하려는 경우)에는 <xref:System.ComponentModel.INotifyPropertyChanged>와같은적절한속성변경알림메커니즘을구현해야합니다.인터페이스.  
+> 컬렉션의 개체는 [바인딩 소스 개요](binding-sources-overview.md)에 설명된 요구 사항을 충족해야 합니다. 특히 또는 <xref:System.Windows.Data.BindingMode.OneWay> <xref:System.Windows.Data.BindingMode.TwoWay> 를 사용 하는 경우 ( [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 예: 소스 속성이 동적으로 변경 될 때를 업데이트 하려는 경우)에는 <xref:System.ComponentModel.INotifyPropertyChanged>와같은적절한속성변경알림메커니즘을구현해야합니다.인터페이스.  
   
  자세한 내용은 [데이터 바인딩 개요](data-binding-overview.md)에서 컬렉션에 바인딩 단원을 참조하세요.  
   

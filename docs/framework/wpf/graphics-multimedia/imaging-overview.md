@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 6d3dce5c8a34257f8509f239ece4bae3efa02b84
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 13d5ea2735a799332edd8e552198de0f2b970dad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545371"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914097"
 ---
 # <a name="imaging-overview"></a>이미징 개요
 이 항목에서는 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]를 소개합니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]를 사용하여 개발자는 이미지를 표시 및 변환하고 서식을 지정할 수 있습니다.  
@@ -99,7 +99,7 @@ ms.locfileid: "69545371"
  다음 예제에서는 코드를 사용하여 200픽셀 너비의 이미지를 렌더링하는 방법을 보여 줍니다.  
   
 > [!NOTE]
->  <xref:System.Windows.Media.Imaging.BitmapImage> 구현 된 <xref:System.ComponentModel.ISupportInitialize> 여러 속성에 대해 초기화를 최적화 하는 인터페이스입니다. 개체 초기화 동안에만 속성 변경이 발생할 수 있습니다. 호출 <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> 초기화가 시작 되었음을 알리기 위해 및 <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> 초기화가 완료 되었음을 알립니다. 일단 초기화되면 속성 변경은 무시됩니다.  
+> <xref:System.Windows.Media.Imaging.BitmapImage> 구현 된 <xref:System.ComponentModel.ISupportInitialize> 여러 속성에 대해 초기화를 최적화 하는 인터페이스입니다. 개체 초기화 동안에만 속성 변경이 발생할 수 있습니다. 호출 <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> 초기화가 시작 되었음을 알리기 위해 및 <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> 초기화가 완료 되었음을 알립니다. 일단 초기화되면 속성 변경은 무시됩니다.  
   
  [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
@@ -185,7 +185,7 @@ ms.locfileid: "69545371"
  확장성 API에 대 한 샘플은 [Win32 샘플 코덱](https://go.microsoft.com/fwlink/?LinkID=160052)을 참조 하세요. 이 샘플에는 사용자 지정 이미지 형식용 디코더 및 인코더를 만드는 방법을 보여 줍니다.  
   
 > [!NOTE]
->  시스템이 코덱을 인식하려면 디지털로 서명되어야 합니다.  
+> 시스템이 코덱을 인식하려면 디지털로 서명되어야 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

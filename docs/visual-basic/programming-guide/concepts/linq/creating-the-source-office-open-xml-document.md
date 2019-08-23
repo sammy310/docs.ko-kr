@@ -1,15 +1,15 @@
 ---
-title: 원본 Office Open XML 문서 (Visual Basic) 만들기
+title: 원본 Office Open XML 문서 만들기 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-ms.openlocfilehash: 83cb7d0a325e11c9669f1331e57bed7bf09f27c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d01755442a9b64e0577ace4eb05c6818dac9a824
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923424"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965249"
 ---
-# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>원본 Office Open XML 문서 (Visual Basic) 만들기
+# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>원본 Office Open XML 문서 만들기 (Visual Basic)
 이 항목에서는 이 자습서의 다른 예제에서 사용하는 Office Open XML WordprocessingML 문서를 만드는 방법을 보여 줍니다. 이러한 지침을 따르는 경우 출력은 각 예제에서 제공되는 출력과 일치합니다.  
   
  그러나 이 자습서의 예제는 모든 유효한 WordprocessingML 문서와 함께 작동합니다.  
@@ -51,8 +51,8 @@ ms.locfileid: "61923424"
 6. 문서를 저장하고 SampleDoc.docx로 이름을 지정합니다.  
   
     > [!NOTE]
-    >  Microsoft Word 2003을 사용하는 경우 **파일 형식** 드롭다운 목록에서 **Word 2007 문서**를 선택합니다.  
+    > Microsoft Word 2003을 사용하는 경우 **파일 형식** 드롭다운 목록에서 **Word 2007 문서**를 선택합니다.  
   
 ## <a name="see-also"></a>참고자료
 
-- [자습서: (Visual Basic) WordprocessingML 문서에서 내용 조작](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [자습서: WordprocessingML 문서에서 내용 조작 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

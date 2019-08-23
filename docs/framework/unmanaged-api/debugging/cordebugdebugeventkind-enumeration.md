@@ -12,15 +12,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be8d860f508644e68bf69892a63e145e7ffd5b90
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d2e01a5cf2b2aa25e91ebf0f8e3927858b12bea3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740240"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967566"
 ---
 # <a name="cordebugdebugeventkind-enumeration"></a>CorDebugDebugEventKind 열거형
-정보를 가져올 디코딩되는 이벤트의 형식을 나타내는 합니다 [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) 메서드.  
+[DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) 메서드가 정보를 디코딩하는 이벤트의 유형을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,17 +47,17 @@ typedef enum CorDebugDebugEventKind {
 |`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_UNHANDLED`|처리되지 않은 예외입니다.|  
   
 ## <a name="remarks"></a>설명  
- 멤버는 `CorDebugDebugEventKind` 열거형이 호출 하 여 반환 합니다 [icordebugdebugevent:: Geteventkind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) 메서드.  
+ `CorDebugDebugEventKind` [ICorDebugDebugEvent:: geteventkind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) 메서드를 호출 하 여 열거형의 멤버를 반환 합니다.  
   
 > [!NOTE]
->  이 열거형은 .NET 네이티브 디버깅 시나리오에서만 사용됩니다.  
+> 이 열거형은 .NET 네이티브 디버깅 시나리오에서만 사용됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
- **라이브러리:** CorGuids.lib  
+ **라이브러리** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

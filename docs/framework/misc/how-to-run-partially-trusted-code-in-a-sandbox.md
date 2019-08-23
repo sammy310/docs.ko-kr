@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ff750e6140b1eda8f6537c2f51b9f4769c1d892c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a439e02046e04d8628415237d6717a74b9922371
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645554"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910940"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>방법: 샌드박스에서 부분적으로 신뢰할 수 있는 코드 실행
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -24,9 +24,9 @@ ms.locfileid: "64645554"
   
  샌드박싱을 사용하여 부분적으로 신뢰할 수 있는 환경에서 실행하고 배포할 코드를 테스트할 수도 있습니다.  
   
- <xref:System.AppDomain>은 관리되는 응용 프로그램에 대한 샌드박스를 제공하는 효과적인 방법입니다. 부분적으로 신뢰할 수 있는 코드에 사용되는 응용 프로그램 도메인에는 해당 <xref:System.AppDomain> 내에서 실행할 때 사용할 수 있는 보호된 리소스를 정의하는 권한이 있습니다. <xref:System.AppDomain> 내부에서 실행되는 코드는 <xref:System.AppDomain>과 연결된 권한으로 바인딩되고 지정된 리소스에만 액세스하도록 허용됩니다. <xref:System.AppDomain>에는 완전히 신뢰된 코드로 로드될 어셈블리를 구별하는 데 사용되는 <xref:System.Security.Policy.StrongName> 배열이 포함됩니다. 이를 통해 <xref:System.AppDomain> 작성자는 특정 도우미 어셈블리를 완전히 신뢰할 수 있도록 하는 새 샌드박싱 도메인을 시작할 수 있습니다. 어셈블리를 완전히 신뢰된 코드로 로드하는 다른 옵션은 어셈블리를 전역 어셈블리 캐시에 배치하는 것입니다. 하지만 이렇게 하면 어셈블리는 해당 컴퓨터에서 만들어진 모든 응용 프로그램 도메인에서 완전히 신뢰된 코드로 로드됩니다. 강력한 이름 목록은 더 제한적인 결정을 제공하는 <xref:System.AppDomain>별 결정을 지원합니다.  
+ <xref:System.AppDomain>은 관리되는 애플리케이션에 대한 샌드박스를 제공하는 효과적인 방법입니다. 부분적으로 신뢰할 수 있는 코드에 사용되는 애플리케이션 도메인에는 해당 <xref:System.AppDomain> 내에서 실행할 때 사용할 수 있는 보호된 리소스를 정의하는 권한이 있습니다. <xref:System.AppDomain> 내부에서 실행되는 코드는 <xref:System.AppDomain>과 연결된 권한으로 바인딩되고 지정된 리소스에만 액세스하도록 허용됩니다. <xref:System.AppDomain>에는 완전히 신뢰된 코드로 로드될 어셈블리를 구별하는 데 사용되는 <xref:System.Security.Policy.StrongName> 배열이 포함됩니다. 이를 통해 <xref:System.AppDomain> 작성자는 특정 도우미 어셈블리를 완전히 신뢰할 수 있도록 하는 새 샌드박싱 도메인을 시작할 수 있습니다. 어셈블리를 완전히 신뢰된 코드로 로드하는 다른 옵션은 어셈블리를 전역 어셈블리 캐시에 배치하는 것입니다. 하지만 이렇게 하면 어셈블리는 해당 컴퓨터에서 만들어진 모든 애플리케이션 도메인에서 완전히 신뢰된 코드로 로드됩니다. 강력한 이름 목록은 더 제한적인 결정을 제공하는 <xref:System.AppDomain>별 결정을 지원합니다.  
   
- <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> 메서드 오버로드를 사용하여 샌드박스에서 실행되는 응용 프로그램에 대한 권한 집합을 지정할 수 있습니다. 이 오버로드를 사용하여 원하는 정확한 코드 액세스 보안 수준을 지정할 수 있습니다. 이 오버로드를 사용하여 <xref:System.AppDomain>에 로드된 어셈블리는 지정된 권한 집합만 포함하거나 완전히 신뢰될 수 있습니다. 어셈블리가 전역 어셈블리 캐시에 있거나 `fullTrustAssemblies`(<xref:System.Security.Policy.StrongName>) 배열 매개 변수에 나열되면 어셈블리에 완전 신뢰가 제공됩니다. 완전히 신뢰된 코드로 알려진 어셈블리만 `fullTrustAssemblies` 목록에 추가해야 합니다.  
+ <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> 메서드 오버로드를 사용하여 샌드박스에서 실행되는 애플리케이션에 대한 권한 집합을 지정할 수 있습니다. 이 오버로드를 사용하여 원하는 정확한 코드 액세스 보안 수준을 지정할 수 있습니다. 이 오버로드를 사용하여 <xref:System.AppDomain>에 로드된 어셈블리는 지정된 권한 집합만 포함하거나 완전히 신뢰될 수 있습니다. 어셈블리가 전역 어셈블리 캐시에 있거나 `fullTrustAssemblies`(<xref:System.Security.Policy.StrongName>) 배열 매개 변수에 나열되면 어셈블리에 완전 신뢰가 제공됩니다. 완전히 신뢰된 코드로 알려진 어셈블리만 `fullTrustAssemblies` 목록에 추가해야 합니다.  
   
  오버로드에는 다음 서명이 있습니다.  
   
@@ -38,17 +38,17 @@ AppDomain.CreateDomain( string friendlyName,
                         params StrongName[] fullTrustAssemblies);  
 ```  
   
- <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29> 메서드 오버로드에 대한 매개 변수는 <xref:System.AppDomain> 이름, <xref:System.AppDomain>에 대한 증거, 샌드박스에 대한 응용 프로그램 기준 위치를 나타내는 <xref:System.AppDomainSetup> 개체, 사용할 권한 집합, 완전히 신뢰할 수 있는 어셈블리의 강력한 이름을 지정합니다.  
+ <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29> 메서드 오버로드에 대한 매개 변수는 <xref:System.AppDomain> 이름, <xref:System.AppDomain>에 대한 증거, 샌드박스에 대한 애플리케이션 기준 위치를 나타내는 <xref:System.AppDomainSetup> 개체, 사용할 권한 집합, 완전히 신뢰할 수 있는 어셈블리의 강력한 이름을 지정합니다.  
   
- 보안상 이유로 `info` 매개 변수에 지정된 응용 프로그램 기준 위치는 호스팅 응용 프로그램에 사용되는 응용 프로그램 기준 위치와 달라야 합니다.  
+ 보안상 이유로 `info` 매개 변수에 지정된 애플리케이션 기준 위치는 호스팅 애플리케이션에 사용되는 애플리케이션 기준 위치와 달라야 합니다.  
   
  `grantSet` 매개 변수에 대해 명시적으로 만든 권한 집합을 지정하거나 <xref:System.Security.SecurityManager.GetStandardSandbox%2A> 메서드에서 만들어진 표준 권한 집합을 지정할 수 있습니다.  
   
- 대부분 <xref:System.AppDomain> 로드와 달리 `securityInfo` 매개 변수에서 제공되는 <xref:System.AppDomain>에 대한 증거는 부분적으로 신뢰할 수 있는 어셈블리에 대한 권한 집합을 결정하는 데 사용되지 않습니다. 대신에 `grantSet` 매개 변수를 통해 독립적으로 지정됩니다. 그러나 격리된 저장소 범위를 결정하는 것과 같은 다른 용도에는 이 증거를 사용할 수 있습니다.  
+ 대부분 <xref:System.AppDomain> 로드와 달리 `securityInfo` 매개 변수에서 제공되는 <xref:System.AppDomain>에 대한 증거는 부분적으로 신뢰할 수 있는 어셈블리에 대한 권한 집합을 결정하는 데 사용되지 않습니다. 대신에 `grantSet` 매개 변수를 통해 독립적으로 지정됩니다. 그러나 격리된 스토리지 범위를 결정하는 것과 같은 다른 용도에는 이 증거를 사용할 수 있습니다.  
   
-### <a name="to-run-an-application-in-a-sandbox"></a>샌드박스에서 응용 프로그램을 실행하려면 다음을 수행합니다.  
+### <a name="to-run-an-application-in-a-sandbox"></a>샌드박스에서 애플리케이션을 실행하려면 다음을 수행합니다.  
   
-1. 신뢰할 수 없는 응용 프로그램에 부여할 권한 집합을 만듭니다. 부여할 수 있는 최소 권한은 <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> 권한입니다. 신뢰할 수 없는 코드에 대해 안전하다고 판단되는 추가적인 권한을 부여할 수도 있습니다(예: <xref:System.Security.Permissions.IsolatedStorageFilePermission>). 다음 코드에서는 <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> 권한만 포함된 새로운 권한 집합을 만듭니다.  
+1. 신뢰할 수 없는 애플리케이션에 부여할 권한 집합을 만듭니다. 부여할 수 있는 최소 권한은 <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> 권한입니다. 신뢰할 수 없는 코드에 대해 안전하다고 판단되는 추가적인 권한을 부여할 수도 있습니다(예: <xref:System.Security.Permissions.IsolatedStorageFilePermission>). 다음 코드에서는 <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> 권한만 포함된 새로운 권한 집합을 만듭니다.  
   
     ```csharp
     PermissionSet permSet = new PermissionSet(PermissionState.None);  
@@ -65,7 +65,7 @@ AppDomain.CreateDomain( string friendlyName,
   
      <xref:System.Security.SecurityManager.GetStandardSandbox%2A> 메서드는 증거의 영역에 따라 `Internet` 권한 집합 또는 `LocalIntranet` 권한 집합을 반환합니다. <xref:System.Security.SecurityManager.GetStandardSandbox%2A>는 참조로 전달되는 일부 증거 개체에 대한 ID 권한을 생성합니다.  
   
-2. 신뢰할 수 없는 코드를 호출하는 호스팅 클래스(이 예제에서 이름은 `Sandboxer`)가 포함된 어셈블리에 서명합니다. 어셈블리에 서명하는 데 사용된 <xref:System.Security.Policy.StrongName>을 <xref:System.AppDomain.CreateDomain%2A> 호출에 대한 `fullTrustAssemblies` 매개 변수의 <xref:System.Security.Policy.StrongName> 배열에 추가합니다. 부분 신뢰 코드를 실행할 수 있게 하거나 부분 신뢰 응용 프로그램에 서비스를 제공하려면 호스팅 클래스가 완전히 신뢰된 코드로 실행되어야 합니다. 어셈블리의 <xref:System.Security.Policy.StrongName>을 읽는 방법은 다음과 같습니다.  
+2. 신뢰할 수 없는 코드를 호출하는 호스팅 클래스(이 예제에서 이름은 `Sandboxer`)가 포함된 어셈블리에 서명합니다. 어셈블리에 서명하는 데 사용된 <xref:System.Security.Policy.StrongName>을 <xref:System.AppDomain.CreateDomain%2A> 호출에 대한 `fullTrustAssemblies` 매개 변수의 <xref:System.Security.Policy.StrongName> 배열에 추가합니다. 부분 신뢰 코드를 실행할 수 있게 하거나 부분 신뢰 애플리케이션에 서비스를 제공하려면 호스팅 클래스가 완전히 신뢰된 코드로 실행되어야 합니다. 어셈블리의 <xref:System.Security.Policy.StrongName>을 읽는 방법은 다음과 같습니다.  
   
     ```csharp
     StrongName fullTrustAssembly = typeof(Sandboxer).Assembly.Evidence.GetHostEvidence<StrongName>();  
@@ -73,14 +73,14 @@ AppDomain.CreateDomain( string friendlyName,
   
      mscorlib 및 System.dll과 같은 .NET Framework 어셈블리는 전역 어셈블리 캐시에서 완전 신뢰된 코드로 로드되므로 완전 신뢰 목록에 추가하면 안 됩니다.  
   
-3. <xref:System.AppDomain.CreateDomain%2A> 메서드의 <xref:System.AppDomainSetup> 매개 변수를 초기화합니다. 이 매개 변수를 사용하여 새 <xref:System.AppDomain>의 설정을 대부분 제어할 수 있습니다. <xref:System.AppDomainSetup.ApplicationBase%2A> 속성은 중요한 설정이고 호스팅 응용 프로그램의 <xref:System.AppDomain>에 대한 <xref:System.AppDomainSetup.ApplicationBase%2A> 속성과 달라야 합니다. <xref:System.AppDomainSetup.ApplicationBase%2A> 설정이 같으면 부분 신뢰 응용 프로그램이 호스팅 응용 프로그램에 연결되어 부분 신뢰 응용 프로그램이 정의한 예외를 완전 신뢰된 코드로 로드하므로 부분 신뢰 응용 프로그램이 악용될 수 있습니다. 이는 catch(예외)를 권장하지 않는 또 다른 이유입니다. 호스트의 응용 프로그램 기준 위치를 샌드박싱된 응용 프로그램의 응용 프로그램 기준 위치와 다르게 설정하면 악용의 위험이 완화됩니다.  
+3. <xref:System.AppDomain.CreateDomain%2A> 메서드의 <xref:System.AppDomainSetup> 매개 변수를 초기화합니다. 이 매개 변수를 사용하여 새 <xref:System.AppDomain>의 설정을 대부분 제어할 수 있습니다. <xref:System.AppDomainSetup.ApplicationBase%2A> 속성은 중요한 설정이고 호스팅 애플리케이션의 <xref:System.AppDomain>에 대한 <xref:System.AppDomainSetup.ApplicationBase%2A> 속성과 달라야 합니다. <xref:System.AppDomainSetup.ApplicationBase%2A> 설정이 같으면 부분 신뢰 애플리케이션이 호스팅 애플리케이션에 연결되어 부분 신뢰 애플리케이션이 정의한 예외를 완전 신뢰된 코드로 로드하므로 부분 신뢰 애플리케이션이 악용될 수 있습니다. 이는 catch(예외)를 권장하지 않는 또 다른 이유입니다. 호스트의 애플리케이션 기준 위치를 샌드박싱된 애플리케이션의 애플리케이션 기준 위치와 다르게 설정하면 악용의 위험이 완화됩니다.  
   
     ```csharp
     AppDomainSetup adSetup = new AppDomainSetup();  
     adSetup.ApplicationBase = Path.GetFullPath(pathToUntrusted);  
     ```  
   
-4. <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29> 메서드 오버로드를 호출하여 지정한 매개 변수를 통해 응용 프로그램 도메인을 만듭니다.  
+4. <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29> 메서드 오버로드를 호출하여 지정한 매개 변수를 통해 애플리케이션 도메인을 만듭니다.  
   
      이 메서드에 대한 서명은 다음과 같습니다.  
   
@@ -92,7 +92,7 @@ AppDomain.CreateDomain( string friendlyName,
   
      추가 정보:  
   
-    - 이는 <xref:System.Security.PermissionSet>을 매개 변수로 사용하는 <xref:System.AppDomain.CreateDomain%2A> 메서드의 유일한 오버로드이므로 부분 신뢰 설정에서 응용 프로그램을 로드하도록 하는 유일한 오버로드입니다.  
+    - 이는 <xref:System.Security.PermissionSet>을 매개 변수로 사용하는 <xref:System.AppDomain.CreateDomain%2A> 메서드의 유일한 오버로드이므로 부분 신뢰 설정에서 애플리케이션을 로드하도록 하는 유일한 오버로드입니다.  
   
     - `evidence` 매개 변수는 권한 집합을 계산하는 데 사용되지 않으며, .NET Framework의 기타 기능을 통한 식별에 사용됩니다.  
   
@@ -100,7 +100,7 @@ AppDomain.CreateDomain( string friendlyName,
   
     - `fullTrustAssemblies` 매개 변수에는 <xref:System.Security.Policy.StrongName> 배열을 만드는 데 필요하지 않음을 의미하는 `params` 키워드가 있습니다. 0, 1 또는 더 강력한 이름을 매개 변수로 전달할 수 있습니다.  
   
-    - 응용 프로그램 도메인을 만드는 코드는 다음과 같습니다.  
+    - 애플리케이션 도메인을 만드는 코드는 다음과 같습니다.  
   
     ```csharp
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
@@ -142,7 +142,7 @@ AppDomain.CreateDomain( string friendlyName,
     newDomainInstance.ExecuteUntrustedCode(untrustedAssembly, untrustedClass, entryPoint, parameters);  
     ```  
   
-     이 호출은 제한된 권한을 가진 샌드박싱된 응용 프로그램 도메인에서 실행됩니다.  
+     이 호출은 제한된 권한을 가진 샌드박싱된 애플리케이션 도메인에서 실행됩니다.  
   
     ```csharp
     public void ExecuteUntrustedCode(string assemblyName, string typeName, string entryPoint, Object[] parameters)  
@@ -198,7 +198,7 @@ namespace UntrustedCode
 }  
 ```  
   
- 다음 예제에서는 신뢰할 수 없는 코드를 실행하는 `Sandboxer` 응용 프로그램 코드를 보여 줍니다.  
+ 다음 예제에서는 신뢰할 수 없는 코드를 실행하는 `Sandboxer` 애플리케이션 코드를 보여 줍니다.  
   
 ```csharp
 using System;  
@@ -275,4 +275,4 @@ class Sandboxer : MarshalByRefObject
   
 ## <a name="see-also"></a>참고자료
 
-- [보안 코딩 지침](../../../docs/standard/security/secure-coding-guidelines.md)
+- [보안 코딩 지침](../../standard/security/secure-coding-guidelines.md)

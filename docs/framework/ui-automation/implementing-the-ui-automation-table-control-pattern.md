@@ -6,16 +6,16 @@ helpviewer_keywords:
 - control patterns, Table
 - TableControl pattern
 ms.assetid: 880cd85c-aa8c-4fb5-9369-45491d34bb78
-ms.openlocfilehash: d66e65b340ceb9cbfe95d9f0d6ff82e84d33487f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0852e904414ac4af6777b9476b4b6ad504a09ef3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649478"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935702"
 ---
 # <a name="implementing-the-ui-automation-table-control-pattern"></a>UI 자동화 Table 컨트롤 패턴 구현
 > [!NOTE]
->  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 최신 정보에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]를 참조 하세요 [Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746)합니다.  
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  이 항목에서는 속성, 메서드 및 이벤트에 대한 정보를 포함하여 <xref:System.Windows.Automation.Provider.ITableProvider>를 구현하기 위한 지침 및 규칙을 제공합니다. 추가 참조에 대한 링크는 개요의 끝에 나열되어 있습니다.  
   
@@ -32,14 +32,14 @@ ms.locfileid: "64649478"
 - 열 및 행 헤더에는 모든 지원 헤더는 물론 기본 헤더가 포함될 수 있습니다.  
   
 > [!NOTE]
->  이 개념은 사용자가 "이름" 열을 정의한 [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] 스프레드시트에서 확실하게 알 수 있습니다. 이제 이 열에는 사용자가 정의한 "이름" 헤더와 응용 프로그램에서 할당한 해당 열의 영숫자 지정 두 개의 헤더가 있습니다.  
+> 이 개념은 사용자가 "이름" 열을 정의한 [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] 스프레드시트에서 확실하게 알 수 있습니다. 이제 이 열에는 사용자가 정의한 &quot;이름&quot; 헤더와 애플리케이션에서 할당한 해당 열의 영숫자 지정 두 개의 헤더가 있습니다.  
   
-- 참조 [UI 자동화 Grid 컨트롤 패턴 구현](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md) 관련된 표 기능에 대 한 합니다.  
+- 관련 그리드 기능에 대 한 [UI 자동화 Grid 컨트롤 패턴 구현](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md) 을 참조 하세요.  
   
- ![복잡 한 헤더 항목이 있는 테이블입니다. ](../../../docs/framework/ui-automation/media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
+ ![복합 헤더 항목을 포함 하는 테이블입니다.](../../../docs/framework/ui-automation/media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
 복잡한 열 헤더가 있는 테이블의 예  
   
- ![모호한 RowOrColumnMajor 속성이 있는 테이블입니다. ](../../../docs/framework/ui-automation/media/uia-tablepattern-roworcolumnmajorproperty.PNG "UIA_TablePattern_RowOrColumnMajorProperty")  
+ ![모호한 RowOrColumnMajor 속성이 있는 테이블입니다.](../../../docs/framework/ui-automation/media/uia-tablepattern-roworcolumnmajorproperty.PNG "UIA_TablePattern_RowOrColumnMajorProperty")  
 모호한 RowOrColumnMajor 속성이 있는 테이블  
   
 <a name="Required_Members_for_ITableProvider"></a>   

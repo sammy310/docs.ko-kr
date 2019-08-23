@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: 51e18555a322e32f0877167d42cd30776068c746
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 609878416be26786ce865168c996c78e18b1897f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040032"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917886"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에 데이터 바인딩
 디자이너를 사용 하 여 데이터베이스, 비즈니스 <xref:System.Windows.Forms.DataGridView> 개체 또는 웹 서비스를 비롯 한 다양 한 종류의 데이터 소스에 컨트롤을 연결할 수 있습니다. 디자이너를 사용 하 여 컨트롤을 데이터 소스에 바인딩하면 컨트롤이 데이터 소스를 나타내는 <xref:System.Windows.Forms.BindingSource> 구성 요소에 자동으로 바인딩됩니다. 또한 열은 데이터 소스에서 제공하는 스키마 정보와 일치하는 컨트롤에 자동으로 생성됩니다.
@@ -39,7 +39,7 @@ ms.locfileid: "69040032"
 6. 마스터/세부 관계를 만들려면 두 번째 <xref:System.Windows.Forms.DataGridView> 컨트롤에 대 한 **데이터 소스 선택** 드롭다운 창에서 부모 테이블에 대해 만든를 <xref:System.Windows.Forms.BindingSource> 확장 한 다음 표시 된 목록에서 관련 자식 테이블을 선택 합니다.
 
     > [!NOTE]
-    >  프로젝트에 데이터 소스가 이미 있으면 **데이터 소스** 창을 사용하여 데이터 양식을 만들 수도 있습니다. 자세한 내용은 [데이터 소스 창](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))을 참조하세요.
+    > 프로젝트에 데이터 소스가 이미 있으면 **데이터 소스** 창을 사용하여 데이터 양식을 만들 수도 있습니다. 자세한 내용은 [데이터 소스 창](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))을 참조하세요.
 
 ## <a name="see-also"></a>참고자료
 

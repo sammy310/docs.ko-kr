@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 440debe875a0d00d240849ba4b60b548f46e2c0e
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 937577f86ec854f5a458fe6067836a85a540695a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567054"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913798"
 ---
 # <a name="serialization-and-metadata"></a>Serialization 및 메타데이터
 
@@ -39,7 +39,7 @@ ms.locfileid: "69567054"
   
 ### <a name="typeof-used-in-the-constructor"></a>생성자 내부에서 사용되는 typeof
 
- 이러한 serialization 클래스의 생성자를 호출 하 고 메서드 호출에 C# [typeof](~/docs/csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) 연산자를 포함 하는 경우에는 **추가 작업을 수행할 필요가 없습니다**. 예를 들어 serialization 클래스 생성자에 대한 다음의 각 호출에서 `typeof` 키워드는 생성자에 전달되는 식의 일부로 사용됩니다.  
+ 이러한 serialization 클래스의 생성자를 호출 하 고 메서드 호출에 C# [typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) 연산자를 포함 하는 경우에는 **추가 작업을 수행할 필요가 없습니다**. 예를 들어 serialization 클래스 생성자에 대한 다음의 각 호출에서 `typeof` 키워드는 생성자에 전달되는 식의 일부로 사용됩니다.  
   
  [!code-csharp[ProjectN#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#5)]  
   
@@ -47,7 +47,7 @@ ms.locfileid: "69567054"
   
 ### <a name="typeof-used-outside-the-constructor"></a>생성자 외부에서 사용되는 typeof
 
- 다음 코드와 같이 이러한 serialization 클래스의 생성자를 호출 하 C# 고 생성자의 <xref:System.Type> 매개 변수에 제공 된 식 외부에서 [typeof](~/docs/csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) 연산자를 사용 하는 경우 .NET 네이티브 컴파일러에서 형식을 확인할 수 없습니다.  
+ 다음 코드와 같이 이러한 serialization 클래스의 생성자를 호출 하 C# 고 생성자의 <xref:System.Type> 매개 변수에 제공 된 식 외부에서 [typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) 연산자를 사용 하는 경우 .NET 네이티브 컴파일러에서 형식을 확인할 수 없습니다.  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   

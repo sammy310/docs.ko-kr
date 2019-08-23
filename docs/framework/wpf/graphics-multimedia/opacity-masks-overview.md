@@ -6,12 +6,12 @@ helpviewer_keywords:
 - masks [WPF], opacity
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
-ms.openlocfilehash: 76ec595b1d2cc732e1c8bc2dc2ca6def904bf94c
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: d0fea1aac4efb17811404ce45769615bb2e7234f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545348"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929657"
 ---
 # <a name="opacity-masks-overview"></a>불투명 마스크 개요
 불투명 마스크를 사용하여 요소 또는 시각적 개체의 부분을 투명하게 또는 부분적으로 투명하게 만들 수 있습니다. 불투명 마스크를 만들려면 요소 또는 <xref:System.Windows.Media.Brush> <xref:System.Windows.Media.Visual>의 <xref:System.Windows.UIElement.OpacityMask%2A> 속성에를 적용 합니다.  브러시가 요소 또는 시각적 개체에 매핑되고, 각 브러시 픽셀의 불투명도 값을 사용하여 요소 또는 시각적 개체의 각 해당 픽셀에 대한 결과 불투명도가 결정됩니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "69545348"
  불투명 마스크는 요소 또는 시각적 개체에 콘텐츠를 매핑하여 작동합니다. 그런 후 각 브러시의 픽셀의 알파 채널을 사용하여 요소 또는 시각적 개체의 해당 픽셀에 대한 결과 불투명도를 결정하며 브러시의 실제 색은 무시됩니다. 브러시의 특정 부분이 투명하면 요소 또는 시각적 개체의 해당 부분도 투명해 집니다. 브러시의 특정 부분이 불투명하면 요소 또는 시각적 개체의 해당 부분에 대한 불투명도는 달라지지 않습니다. 불투명 마스크로 지정된 불투명도는 요소 또는 시각적 개체의 불투명도 설정과 조합됩니다. 예를 들어 요소가 25% 불투명하고 완전 불투명에서 완전 투명으로 전환되는 불투명 마스크가 적용되면 요소는 25% 불투명에서 완전 투명으로 전환됩니다.  
   
 > [!NOTE]
->  이 개요의 예제에서는 이미지 요소에 불투명 마스크를 사용 하는 방법을 보여 주지만, 패널 및 컨트롤을 비롯 한 모든 요소 <xref:System.Windows.Media.Visual>에 불투명 마스크를 적용할 수 있습니다.  
+> 이 개요의 예제에서는 이미지 요소에 불투명 마스크를 사용 하는 방법을 보여 주지만, 패널 및 컨트롤을 비롯 한 모든 요소 <xref:System.Windows.Media.Visual>에 불투명 마스크를 적용할 수 있습니다.  
   
  불투명 마스크는 보기에서 페이드되는 이미지나 단추를 만들거나, 요소에 질감을 추가하거나, 그라데이션을 조합하여 유리같은 표면을 생성하는 등의 흥미로운 시각 효과를 만드는 데 사용됩니다. 다음 그림에서는 불투명 마스크의 사용을 보여 줍니다. 마스크의 투명한 부분을 표시하는 데 바둑판 배경이 사용됩니다.  
   

@@ -2,15 +2,15 @@
 title: <backupList>
 ms.date: 03/30/2017
 ms.assetid: a3d9d1f9-4a53-45e9-a880-86c8bee0b833
-ms.openlocfilehash: b0a6c604b5741c1355c35fca510cd10544dab9f3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d5feab6cb374f98e683cf15f797de4f478e23131
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704429"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919918"
 ---
 # <a name="backuplist"></a>\<backupList>
-원하는 경우 기본 끝점에 연결할 수 없습니다를 사용 하도록 라우팅 서비스는 끝점 집합을 열거 하는 백업 목록을 정의 하기 위한 구성 섹션을 나타냅니다. 목록의 첫 번째 엔드포인트가 다운되는 경우 라우팅 서비스는 자동으로 목록의 다음 엔드포인트로 장애 조치(failover)됩니다.  따라서 복잡한 패턴을 처리하는 방법이나 모든 서비스가 배포되는 위치를 클라이언트 응용 프로그램에 지정할 필요 없이 응용 프로그램의 안정성을 빠르게 향상시킬 수 있습니다.  
+기본 끝점에 연결할 수 없는 경우 라우팅 서비스에서 사용할 끝점 집합을 열거 하는 백업 목록을 정의 하기 위한 구성 섹션을 나타냅니다. 목록의 첫 번째 엔드포인트가 다운되는 경우 라우팅 서비스는 자동으로 목록의 다음 엔드포인트로 장애 조치(failover)됩니다.  따라서 복잡한 패턴을 처리하는 방법이나 모든 서비스가 배포되는 위치를 클라이언트 애플리케이션에 지정할 필요 없이 애플리케이션의 안정성을 빠르게 향상시킬 수 있습니다.  
   
  \<system.serviceModel>  
 \<라우팅 >  
@@ -42,18 +42,18 @@ ms.locfileid: "61704429"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<filter>](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md)||  
+|[\<filter>](filter.md)||  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|백업 엔드포인트의 목록입니다.|  
+|[\<routing>](routing.md)|백업 엔드포인트의 목록입니다.|  
   
 ## <a name="remarks"></a>설명  
  이 섹션에는 기본 엔드포인트로 메시지를 보낼 때 통신 예외가 발생하면 이 메시지를 전송할 엔드포인트의 정렬된 컬렉션이 포함됩니다.  
   
- 에 나열 된 기본 끝점으로 송신 하는 경우는 `endpointName` 의 특성 [ \<추가 >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-entries.md) 통신 예외로 인해 실패 하면 라우팅 서비스는이 첫 번째 끝점에 메시지를 보내려고 시도 구성 섹션입니다. 이것도 통신 예외가 발생하여 실패하는 경우 라우팅 서비스는 보내기가 성공할 때까지, 통신 예외가 아닌 다른 원인으로 보내기가 실패할 때까지 또는 컬렉션의 모든 엔드포인트에 대한 보내기가 실패할 때까지 이 섹션에 포함된 다음 엔드포인트로 메시지를 보내려고 시도합니다.  
+ `endpointName` [ \<추가 >](add-of-entries.md) 의 특성에 나열 된 기본 끝점으로의 보내기가 통신 예외와 함께 실패 하는 경우 라우팅 서비스는이 구성 섹션에 있는 첫 번째 끝점으로 메시지를 보내려고 시도 합니다. 이것도 통신 예외가 발생하여 실패하는 경우 라우팅 서비스는 보내기가 성공할 때까지, 통신 예외가 아닌 다른 원인으로 보내기가 실패할 때까지 또는 컬렉션의 모든 엔드포인트에 대한 보내기가 실패할 때까지 이 섹션에 포함된 다음 엔드포인트로 메시지를 보내려고 시도합니다.  
   
  다음 예제에서는 "Destination" 이라는 기본 끝점으로 송신 통신 예외가 반환 하는 경우 서비스를 "alternateservicequeue"로 메시지를 보낼 시도 됩니다. 이 시도에 대해서도 통신 예외가 반환되면 라우팅 서비스는 컬렉션의 다음 엔드포인트로 메시지를 보내려고 시도합니다.  
   

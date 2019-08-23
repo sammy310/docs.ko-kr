@@ -2,22 +2,22 @@
 title: 전송 보안 포함한 기본 바인딩
 ms.date: 03/30/2017
 ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
-ms.openlocfilehash: adc6d7c2a2784e0552587761a291e647239897d3
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 8904c9460e6a54f092d60b4f735c8afe34466f11
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880215"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968738"
 ---
 # <a name="basicbinding-with-transport-security"></a>전송 보안 포함한 기본 바인딩
-이 샘플에서는 기본 바인딩이 있는 SSL 전송 보안을 사용하는 방법을 보여 줍니다. 이 샘플은 기반 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) 계산기 서비스를 구현 하는 합니다.  
+이 샘플에서는 기본 바인딩이 있는 SSL 전송 보안을 사용하는 방법을 보여 줍니다. 이 샘플은 계산기 서비스를 구현 하는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 을 기반으로 합니다.  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\TransportSecurity`  
   
@@ -25,9 +25,9 @@ ms.locfileid: "65880215"
  기본적으로 기본 바인딩은 HTTP 통신을 지원합니다. 이 샘플에서는 기본 바인딩에 대해 전송 보안을 사용하는 방법을 보여 줍니다. 샘플을 실행하려면 먼저 웹 서버 인증서 마법사를 사용하여 인증서를 만들고 할당해야 합니다.  
   
 > [!NOTE]
->  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
+> 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
- 샘플에서 프로그램 코드는 동일 합니다는 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) 서비스입니다. 다음 샘플 구성과 같이 구성 파일 설정의 엔드포인트 정의 및 바인딩 정의를 수정하여 보안 통신을 사용하도록 설정합니다.  
+ 샘플의 프로그램 코드는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 서비스의 코드와 동일 합니다. 다음 샘플 구성과 같이 구성 파일 설정의 엔드포인트 정의 및 바인딩 정의를 수정하여 보안 통신을 사용하도록 설정합니다.  
   
 ```xml  
 <system.serviceModel>  
@@ -54,7 +54,7 @@ ms.locfileid: "65880215"
 </system.serviceModel>  
 ```  
   
- HTTPS에 액세스 하려고 할 때 보안 경고가 나타납니다이 샘플에 사용 된 인증서는 Makecert.exe를 사용 하 여 만든 테스트 인증서 이므로:와 같은 브라우저에서 주소 https://localhost/servicemodelsamples/service.svc합니다. 테스트 인증서를 사용 하려면 Windows Communication Foundation (WCF) 클라이언트를 허용 하려면 일부 추가 코드는 보안 경고를 표시 하지 않으려면 클라이언트에 추가 됩니다. 실제 인증서를 사용할 때는 이 코드 및 함께 사용되는 클래스가 필요하지 않습니다.  
+ 이 샘플에 사용 된 인증서는 Makecert.exe를 사용 하 여 만든 테스트 인증서 이므로 브라우저에서와 https://localhost/servicemodelsamples/service.svc 같은 HTTPS: 주소에 액세스 하려고 하면 보안 경고가 나타납니다. WCF (Windows Communication Foundation) 클라이언트에서 테스트 인증서를 사용할 수 있도록 하기 위해 일부 추가 코드를 클라이언트에 추가 하 여 보안 경고를 표시 하지 않습니다. 실제 인증서를 사용할 때는 이 코드 및 함께 사용되는 클래스가 필요하지 않습니다.  
 
 ```csharp
 // This code is required only for test certificates such as those   
@@ -81,10 +81,10 @@ Press <ENTER> to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. 수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
+2. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.  
   
-3. 수행 했는지 확인 합니다 [인터넷 정보 서비스 (IIS) 서버 인증서 설치 지침](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)합니다.  
+3. [인터넷 정보 서비스 (IIS) 서버 인증서 설치 지침](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)을 수행 했는지 확인 합니다.  
   
 4. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
   
-5. 단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
+5. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.  

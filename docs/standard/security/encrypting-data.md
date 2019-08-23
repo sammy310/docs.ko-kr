@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eeb92845d9b4eb40eef496ffaf5b35e38ed91423
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: fd74da9be6d6b02817c8969befdc292f6e814628
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301163"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968701"
 ---
 # <a name="encrypting-data"></a>데이터 암호화
 대칭 암호화와 비대칭 암호화는 서로 다른 프로세스를 사용하여 수행됩니다. 대칭 암호화는 스트림에서 수행되므로 많은 양의 데이터를 암호화하는 데 유용합니다. 비대칭 암호화는 적은 수의 바이트에서 수행되므로 적은 양의 데이터에만 유용합니다.  
@@ -43,7 +43,7 @@ CryptoStream cryptStream = new CryptoStream(myStream, rmCrypto.CreateEncryptor()
  다음 예제에서는 스트림을 만들고, 스트림을 암호화하고, 스트림에 쓰고, 스트림을 닫는 전체 프로세스를 보여 줍니다. 이 예제에서는 **CryptoStream** 클래스 및 **RijndaelManaged** 클래스를 사용하여 암호화된 네트워크 스트림을 만듭니다. <xref:System.IO.StreamWriter> 클래스를 사용하여 암호화된 스트림에 메시지가 기록됩니다.  
   
 > [!NOTE]
->  이 예제를 사용하여 파일에 쓸 수도 있습니다. 이렇게 하려면 <xref:System.Net.Sockets.TcpClient> 참조를 삭제하고 <xref:System.Net.Sockets.NetworkStream> 을 <xref:System.IO.FileStream>으로 바꿉니다.  
+> 이 예제를 사용하여 파일에 쓸 수도 있습니다. 이렇게 하려면 <xref:System.Net.Sockets.TcpClient> 참조를 삭제하고 <xref:System.Net.Sockets.NetworkStream> 을 <xref:System.IO.FileStream>으로 바꿉니다.  
   
 ```vb  
 Imports System  

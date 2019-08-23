@@ -1,19 +1,19 @@
 ---
-title: <activityStateQueries> WCF의
+title: <activityStateQueries>WCF의
 ms.date: 10/08/2018
 ms.assetid: 9e45db49-ed85-4fdf-bd65-0d5477e31823
-ms.openlocfilehash: c9c78b6929b4550204a22fe2e2786891b516a818
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 415cd4a75ecab725f91bcd298f8a7966ea6079d1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701088"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920293"
 ---
-# <a name="activitystatequeries-of-wcf"></a>\<activityStateQueries > WCF의
+# <a name="activitystatequeries-of-wcf"></a>\<WCF의 activityStateQueries >
 
-워크플로 인스턴스를 구성하는 활동의 수명 주기 변경 내용을 추적하는 데 사용되는 쿼리의 컬렉션을 나타냅니다. 예를 들어 다음 워크플로 인스턴스 내에 "전자 메일 보내기" 활동이 완료 될 때마다 추적 하는 것이 좋습니다. 추적 참가자가 활동 상태 레코드 개체를 구독하려면 이 쿼리가 필요합니다. 구독하기 위해 사용 가능한 상태는 ActivityStates에서 지정됩니다.
+워크플로 인스턴스를 구성하는 활동의 수명 주기 변경 내용을 추적하는 데 사용되는 쿼리의 컬렉션을 나타냅니다. 예를 들어, 워크플로 인스턴스 내에서 "전자 메일 보내기" 작업이 완료 될 때마다 추적 해야 할 수 있습니다. 추적 참가자가 활동 상태 레코드 개체를 구독하려면 이 쿼리가 필요합니다. 구독하기 위해 사용 가능한 상태는 ActivityStates에서 지정됩니다.
 
-추적 프로필 쿼리에 대 한 자세한 내용은 참조 하세요. [추적 프로필](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)합니다.
+추적 프로필 쿼리에 대 한 자세한 내용은 [추적 프로필](../../../windows-workflow-foundation/tracking-profiles.md)을 참조 하세요.
 
 \<system.serviceModel>  
 \<tracking>  
@@ -58,7 +58,7 @@ ms.locfileid: "61701088"
 
 ### <a name="child-elements"></a>자식 요소
 
-|요소|설명|
+|요소|Description|
 |-------------|-----------------|
 |[\<activityStateQuery>](activitystatequery-of-wcf.md)|활동 내에서 발생하는 오류의 처리를 추적하는 데 사용되는 쿼리입니다.  이 이벤트는 FaultHandler가 오류를 처리할 때마다 발생합니다.|
 
@@ -66,11 +66,11 @@ ms.locfileid: "61701088"
 
 |요소|설명|
 |-------------|-----------------|
-|[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|`activityDefinitionId` 속성에 의해 식별되는 특정 워크플로에 대한 모든 쿼리를 포함하는 구성 요소입니다.|
+|[\<workflow>](../windows-workflow-foundation/workflow.md)|`activityDefinitionId` 속성에 의해 식별되는 특정 워크플로에 대한 모든 쿼리를 포함하는 구성 요소입니다.|
 
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElementCollection>
 - <xref:System.Activities.Tracking.ActivityStateQuery>
-- [워크플로 추적](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [추적 프로필](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [워크플로 추적](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [추적 프로필](../../../windows-workflow-foundation/tracking-profiles.md)

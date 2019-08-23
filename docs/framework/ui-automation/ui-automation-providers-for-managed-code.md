@@ -8,18 +8,18 @@ helpviewer_keywords:
 - UI Automation, custom user interface (UI) elements
 - providers, UI Automation
 ms.assetid: 5f82f731-f1b5-4c8b-b47c-d11279a02574
-ms.openlocfilehash: fc182a5bd16e892a693a3a6d4013473cba483b27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8829afda1b2b8c2b82ed9f7d569d1c2357a7b0e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032331"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914376"
 ---
 # <a name="ui-automation-providers-for-managed-code"></a>관리 코드에 대한 UI 자동화 공급자
 > [!NOTE]
->  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 최신 정보에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]를 참조 하세요 [Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746)합니다.  
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- 이 섹션에서는 개요 및 작성 하는 방법을 설명 하는 방법 도움말 항목 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 사용자 지정에 대 한 공급자 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 요소입니다.  
+ 이 섹션에서는 사용자 지정 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 요소에 대 한 공급자를 작성 하는 방법을 설명 하는 개요 및 방법 항목을 제공 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [서버 쪽 UI 자동화 공급자 구현](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  

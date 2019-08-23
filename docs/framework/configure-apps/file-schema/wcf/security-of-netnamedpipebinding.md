@@ -2,14 +2,14 @@
 title: <netNamedPipeBinding>의 <security>
 ms.date: 03/30/2017
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
-ms.openlocfilehash: fa31dda3274c9768694bdf5232f31554899e1d82
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0996a98438dc344d96d640abced52ac99709adbf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670523"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936683"
 ---
-# <a name="security-of-netnamedpipebinding"></a>\<보안 >의 \<netNamedPipeBinding >
+# <a name="security-of-netnamedpipebinding"></a>\<netNamedPipeBinding >의 \<보안 >
 바인딩에 대한 보안 설정을 정의합니다.  
   
  \<system.ServiceModel>  
@@ -35,9 +35,9 @@ ms.locfileid: "61670523"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
-|모드|이 바인딩에 적용되는 보안 형식을 지정합니다. 유효한 값은 다음과 같습니다.<br /><br /> -None. 이렇게 하면 보안이 해제 합니다.<br />-전송 합니다. 기본 전송 기반 보안을 사용 하 여 보안이 유지 됩니다. 이 모드에서는 보호 수준을 제어할 수 있습니다.<br />-기본값은 Transport입니다. 이 특성은 <xref:System.ServiceModel.NetNamedPipeSecurityMode> 형식입니다.|  
+|모드|이 바인딩에 적용되는 보안 형식을 지정합니다. 유효한 값은 다음과 같습니다.<br /><br /> 없음을 이렇게 하면 보안이 해제 됩니다.<br />트랜스포트가 보안은 기본 전송 기반 보안을 사용 하 여 제공 됩니다. 이 모드에서는 보호 수준을 제어할 수 있습니다.<br />-기본값은 Transport입니다. 이 특성은 <xref:System.ServiceModel.NetNamedPipeSecurityMode> 형식입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
@@ -47,9 +47,9 @@ ms.locfileid: "61670523"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|바인딩|바인딩 요소를 [ \<netNamedPipeBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)합니다.|  
+|바인딩(binding)|[ \<NetNamedPipeBinding >](netnamedpipebinding.md)의 바인딩 요소입니다.|  
   
 ## <a name="see-also"></a>참고자료
 
@@ -57,9 +57,9 @@ ms.locfileid: "61670523"
 - <xref:System.ServiceModel.NetNamedPipeBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement>
-- [서비스 및 클라이언트에 보안 설정](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [자격 증명 형식 선택](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
-- [바인딩](../../../../../docs/framework/wcf/bindings.md)
-- [시스템 제공 바인딩 구성](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [서비스 및 클라이언트에 보안 설정](../../../wcf/feature-details/securing-services-and-clients.md)
+- [자격 증명 형식 선택](../../../wcf/feature-details/selecting-a-credential-type.md)
+- [바인딩](../../../wcf/bindings.md)
+- [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

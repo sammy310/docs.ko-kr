@@ -6,20 +6,20 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
-ms.openlocfilehash: bf0a74bd010a188f38cf1a2088a449d97405fa0f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 14ea550715c1b224945137f123eed3b53e56cead
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626381"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918646"
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>데이터 서비스 클라이언트 라이브러리 생성(WCF Data Services)
-구현 하는 데이터 서비스를 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 에 의해 노출 되는 데이터 모델을 설명 하는 서비스 메타 데이터 문서를 반환할 수는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드 합니다. 자세한 내용은 참조 하세요. [OData: 서비스 메타 데이터 문서](https://go.microsoft.com/fwlink/?LinkId=186070)합니다. 사용할 수는 **서비스 참조 추가** 에 대 한 참조를 추가 하려면 Visual Studio에서 대화를 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-기반 서비스입니다. 반환 된 메타 데이터에 대 한 참조를 추가 하려면이 도구를 사용 하는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 다음 작업을 수행 클라이언트 프로젝트에서 피드:  
+을 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 구현 하는 데이터 서비스는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드에서 노출 하는 데이터 모델을 설명 하는 서비스 메타 데이터 문서를 반환할 수 있습니다. 자세한 내용은 [OData: 서비스 메타 데이터](https://go.microsoft.com/fwlink/?LinkId=186070)문서. Visual Studio의 **서비스 참조 추가** 대화 상자를 사용 하 여 기반 서비스에 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]대 한 참조를 추가할 수 있습니다. 이 도구를 사용 하 여 클라이언트 프로젝트의 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드에서 반환 하는 메타 데이터에 대 한 참조를 추가 하는 경우 다음 작업을 수행 합니다.  
   
 - 데이터 서비스에서 서비스 메타데이터 문서를 요청하고 반환된 메타데이터를 해석합니다.  
   
     > [!NOTE]
-    >  반환된 메타데이터는 클라이언트 프로젝트에 .edmx 파일로 저장됩니다. 이 .edmx 파일은 Entity Framework에서 사용되는 .edmx 파일과 동일한 형식을 사용하지 않기 때문에 엔터티 데이터 모델 디자이너를 사용하여 열 수 없습니다. XML 편집기나 텍스트 편집기를 사용하여 이 메타데이터 파일을 볼 수 있습니다. 자세한 내용은 참조는 [ \[MC-EDMX\]: Data Services 패키징 형식의 엔터티 데이터 모델](https://go.microsoft.com/fwlink/?LinkID=178833) 사양  
+    > 반환된 메타데이터는 클라이언트 프로젝트에 .edmx 파일로 저장됩니다. 이 .edmx 파일은 Entity Framework에서 사용되는 .edmx 파일과 동일한 형식을 사용하지 않기 때문에 엔터티 데이터 모델 디자이너를 사용하여 열 수 없습니다. XML 편집기나 텍스트 편집기를 사용하여 이 메타데이터 파일을 볼 수 있습니다. 자세한 내용은 [ \[MC-EDMX\]를 참조 하세요. Data Services 패키징 형식](https://go.microsoft.com/fwlink/?LinkID=178833) 지정 엔터티 데이터 모델  
   
 - <xref:System.Data.Services.Client.DataServiceContext>에서 상속된 엔터티 컨테이너 클래스로 서비스 표현을 생성합니다. 생성된 이 엔터티 컨테이너 클래스는 엔터티 데이터 모델 도구에서 생성하는 엔터티 컨테이너와 유사합니다. 자세한 내용은 [개체 서비스 개요(Entity Framework)](https://docs.microsoft.com/previous-versions/bb386871(v=vs.100))를 참조하세요.  
   
@@ -27,12 +27,12 @@ ms.locfileid: "64626381"
   
 - 프로젝트에 `System.Data.Services.Client` 어셈블리 참조를 추가합니다.  
   
- 자세한 내용은 [방법: 데이터 서비스 참조 추가](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)합니다.  
+ 자세한 내용은 [방법: 데이터 서비스 참조](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)를 추가 합니다.  
   
- 클라이언트 데이터 서비스 클래스를 사용 하 여 생성할 수도 있습니다는 [DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) 명령 프롬프트 도구입니다. 자세한 내용은 [방법: 수동으로 클라이언트 데이터 서비스 클래스 생성](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)합니다.  
+ 클라이언트 데이터 서비스 클래스는 명령 프롬프트에서 [datasvcutil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) 도구를 사용 하 여 생성할 수도 있습니다. 자세한 내용은 [방법: 클라이언트 데이터 서비스 클래스](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)를 수동으로 생성 합니다.  
   
 ## <a name="client-data-type-mapping"></a>클라이언트 데이터 형식 매핑  
- 사용 하는 경우는 **서비스 참조 추가** Visual Studio의 대화 상자 또는 `DataSvcUtil.exe` 기반으로 하는 클라이언트 데이터 클래스를 생성 하는 도구는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드,.NET Framework 데이터 형식에서 기본 형식에 매핑된 합니다 데이터 모델 다음과 같습니다.  
+ Visual Studio에서 **서비스 참조 추가** 대화 상자를 사용 하거나 `DataSvcUtil.exe` 도구를 사용 하 여 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드를 기반으로 하는 클라이언트 데이터 클래스를 생성 하는 경우 .NET Framework 데이터 형식은 다음과 같이 데이터 모델의 기본 형식에 매핑됩니다.  
   
 |데이터 모델 형식|.NET Framework 데이터 형식|  
 |---------------------|------------------------------|  
@@ -50,7 +50,7 @@ ms.locfileid: "64626381"
 |`Edm.Single`|<xref:System.Single>|  
 |`Edm.String`|<xref:System.String>|  
   
- 자세한 내용은 참조 하세요. [OData: 기본 데이터 형식을](https://go.microsoft.com/fwlink/?LinkId=186072)합니다.  
+ 자세한 내용은 [OData: 기본 데이터 형식](https://go.microsoft.com/fwlink/?LinkId=186072)입니다.  
   
 ## <a name="see-also"></a>참고자료
 

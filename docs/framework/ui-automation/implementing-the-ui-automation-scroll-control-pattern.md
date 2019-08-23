@@ -6,22 +6,22 @@ helpviewer_keywords:
 - control patterns, Scroll
 - Scroll control pattern
 ms.assetid: 73d64242-6cbb-424c-92dd-dc69530b7899
-ms.openlocfilehash: dadce167de31ad033e5e062c57f1d735af75648d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 22bb78040b023a59fd46f0a2be45659d6d7220b8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626026"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914519"
 ---
 # <a name="implementing-the-ui-automation-scroll-control-pattern"></a>UI 자동화 Scroll 컨트롤 패턴 구현
 > [!NOTE]
->  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 최신 정보에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]를 참조 하세요 [Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746)합니다.  
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  이 항목에서는 이벤트 및 속성에 대한 정보를 포함하여 <xref:System.Windows.Automation.Provider.IScrollProvider>를 구현하기 위한 지침 및 규칙을 제공합니다. 추가 참조에 대한 링크는 항목 끝에 나열되어 있습니다.  
   
  <xref:System.Windows.Automation.ScrollPattern> 컨트롤 패턴은 자식 개체의 컬렉션에 대해 스크롤할 수 있는 컨테이너 역할을 하는 컨트롤을 지원하는 데 사용됩니다. 이 컨트롤은 스크롤 기능을 지원하기 위해 스크롤 막대를 사용할 필요는 없지만 일반적으로는 스크롤 막대를 사용합니다.  
   
- ![스크롤 막대 없는 scroll 컨트롤입니다. ](../../../docs/framework/ui-automation/media/uia-scrollpattern-without-scrollbars.PNG "UIA_ScrollPattern_Without_Scrollbars")  
+ ![스크롤 막대를 사용 하지 않고 컨트롤을 스크롤합니다.](../../../docs/framework/ui-automation/media/uia-scrollpattern-without-scrollbars.PNG "UIA_ScrollPattern_Without_Scrollbars")  
 스크롤 막대를 사용하지 않는 스크롤 컨트롤의 예제  
   
  이 컨트롤을 구현하는 컨트롤의 예제를 보려면 [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)을 참조하세요.  
@@ -38,7 +38,7 @@ ms.locfileid: "64626026"
   
 - <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> 및 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> 는 <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>와 관계가 없습니다.  
   
-- 하는 경우 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty>  =  `false` 한 다음 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> 100%로 설정 해야 하 고 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> 로 설정 해야 <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>합니다. 마찬가지로, <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> = `false` 일 경우 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> 는 100%로 설정되어야 하며 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> 는 <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>를 참조하세요. 따라서 클라이언트가 원하지 않는 스크롤 방향이 활성화되어 있는 경우 UI 자동화 클라이언트는 <xref:System.Windows.Automation.ScrollPattern.SetScrollPercent%2A> 경합 상태 [를 방지하면서](https://support.microsoft.com/default.aspx?scid=kb;en-us;317723) 메서드 내에서 이러한 속성 값을 사용할 수 있습니다.  
+- <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> 이면`false` 를 100%로 설정 하 고<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> 를 로<xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>설정 해야 합니다.  =  <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> 마찬가지로, <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> = `false` 일 경우 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> 는 100%로 설정되어야 하며 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> 는 <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>를 참조하세요. 따라서 클라이언트가 원하지 않는 스크롤 방향이 활성화되어 있는 경우 UI 자동화 클라이언트는 <xref:System.Windows.Automation.ScrollPattern.SetScrollPercent%2A> 경합 상태 [를 방지하면서](https://support.microsoft.com/default.aspx?scid=kb;en-us;317723) 메서드 내에서 이러한 속성 값을 사용할 수 있습니다.  
   
 - <xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A> 는 로캘과 관련됩니다. HorizontalScrollPercent = 100.0으로 설정하는 경우 왼쪽에서 오른쪽으로 읽는 언어(예: 영어)에서 컨트롤의 스크롤 위치는 맨 오른쪽 위치에 해당하는 값으로 설정해야 합니다. 또는 오른쪽에서 왼쪽으로 읽는 언어(예: 아랍어)의 경우 HorizontalScrollPercent = 100.0으로 설정할 경우 스크롤 위치는 맨 왼쪽 위치로 설정해야 합니다.  
   

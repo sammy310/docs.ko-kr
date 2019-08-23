@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: c922b7d4-44e5-45e4-aef3-cc9c35a0be80
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6aff2686830290e38df3d3a79b2bea6fa0b4a280
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 23637055e493c008db36b23515001895450d6ab9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774886"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967897"
 ---
 # <a name="icordebugvariablesymbolgetname-method"></a>ICorDebugVariableSymbol::GetName 메서드
 변수의 이름을 가져옵니다.  
@@ -37,14 +37,14 @@ HRESULT GetName(
 ## <a name="remarks"></a>설명  
   
 > [!NOTE]
->  이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.  
+> 이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
- **라이브러리:** CorGuids.lib  
+ **라이브러리** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

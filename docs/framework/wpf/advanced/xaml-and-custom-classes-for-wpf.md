@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: 8b47c43e897004a6c7eb3d2f8b2a2b9bb625e158
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 9fe53ed4d677f5604911c02d0426ed1b567d51e1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400827"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917316"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>WPF에 대한 XAML 및 사용자 지정 클래스
 CLR (공용 언어 런타임) 프레임 워크에서 구현 된 XAML은 CLR (공용 언어 런타임) 언어로 사용자 지정 클래스 또는 구조체를 정의 하 고 XAML 태그를 사용 하 여 해당 클래스에 액세스할 수 있는 기능을 지원 합니다. 일반적으로 사용자 지정 형식을 XAML 네임스페이스 접두사에 매핑하여 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 정의 형식과 사용자 지정 형식의 혼합을 동일한 태그 파일에서 함께 사용할 수 있습니다. 이 항목에서는 사용자 지정 클래스를 XAML 요소로 사용 가능하기 위해 만족해야 하는 요구 사항을 설명합니다.  
@@ -69,7 +69,7 @@ CLR (공용 언어 런타임) 프레임 워크에서 구현 된 XAML은 CLR (공
  CLR 이벤트로 사용할 수 있도록 이벤트는 매개 변수가 없는 생성자를 지 원하는 클래스에서 공용 이벤트로 노출 되거나 파생 클래스에서 이벤트에 액세스할 수 있는 추상 클래스에 노출 되어야 합니다. 라우트된 이벤트로 편리 하 게 사용 하기 위해 clr 이벤트는 `add` 명시적 및 `remove` 메서드를 구현 해야 합니다 .이 메서드는 clr 이벤트 시그니처의 처리기를 추가 및 제거 하 고 해당 처리기 <xref:System.Windows.UIElement.AddHandler%2A> <xref:System.Windows.UIElement.RemoveHandler%2A> 를에 전달 합니다. 메서드. 이 두 메서드는 이벤트가 연결된 인스턴스의 라우트된 이벤트 처리기 저장소에 처리기를 추가하거나 제거합니다.  
   
 > [!NOTE]
->  를 사용 하 여 <xref:System.Windows.UIElement.AddHandler%2A>라우트된 이벤트에 대해 직접 처리기를 등록 하 고 라우트된 이벤트를 노출 하는 CLR 이벤트를 의도적으로 정의 하지 않을 수 있습니다. 이벤트에서 연결 처리기에 대해 XAML 특성 구문을 사용하지 않으며 결과 클래스에서 해당 형식의 기능에 대해 투명도가 떨어지는 XAML 보기를 제공하므로, 이 방법은 일반적으로 권장되지 않습니다.  
+> 를 사용 하 여 <xref:System.Windows.UIElement.AddHandler%2A>라우트된 이벤트에 대해 직접 처리기를 등록 하 고 라우트된 이벤트를 노출 하는 CLR 이벤트를 의도적으로 정의 하지 않을 수 있습니다. 이벤트에서 연결 처리기에 대해 XAML 특성 구문을 사용하지 않으며 결과 클래스에서 해당 형식의 기능에 대해 투명도가 떨어지는 XAML 보기를 제공하므로, 이 방법은 일반적으로 권장되지 않습니다.  
   
 <a name="Collection_Properties"></a>   
 ## <a name="writing-collection-properties"></a>컬렉션 속성 작성  
@@ -92,7 +92,7 @@ CLR (공용 언어 런타임) 프레임 워크에서 구현 된 XAML은 CLR (공
  CLR의 각 형식에는 개체 그래프를 만들 때 XAML 프로세서에서 기본 컬렉션에 항목을 추가하는 데 사용하는 `Add` 메서드가 있습니다.  
   
 > [!NOTE]
->  제네릭 `List` 및 `Dictionary` 인터페이스 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (<xref:System.Collections.Generic.IList%601> 및 )는XAML프로세서의컬렉션검색에대해지원되지않습니다.<xref:System.Collections.Generic.IDictionary%602> 그러나 클래스는 <xref:System.Collections.Generic.List%601> 직접 <xref:System.Collections.Generic.Dictionary%602> 을 <xref:System.Collections.IList> 구현<xref:System.Collections.IDictionary> 하기 때문에 클래스를 기본 클래스로 사용할 수 있습니다.  
+> 제네릭 `List` 및 `Dictionary` 인터페이스 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (<xref:System.Collections.Generic.IList%601> 및 )는XAML프로세서의컬렉션검색에대해지원되지않습니다.<xref:System.Collections.Generic.IDictionary%602> 그러나 클래스는 <xref:System.Collections.Generic.List%601> 직접 <xref:System.Collections.Generic.Dictionary%602> 을 <xref:System.Collections.IList> 구현<xref:System.Collections.IDictionary> 하기 때문에 클래스를 기본 클래스로 사용할 수 있습니다.  
   
  컬렉션을 사용하는 속성을 선언하는 경우 해당 형식의 새 인스턴스에서 속성 값이 초기화되는 방법에 유의하세요. 속성을 종속성 속성으로 구현하지 않는 경우에는 속성이 컬렉션 형식 생성자를 호출하는 지원 필드를 사용하도록 설정하는 것이 좋습니다. 속성이 종속성 속성인 경우에는 기본 형식 생성자의 일부로 컬렉션 속성을 초기화해야 할 수 있습니다. 그 이유는 종속성 속성이 속성의 기본값을 메타데이터에서 가져오는데, 개발자는 일반적으로 컬렉션 속성의 초기 값을 정적 공유 컬렉션에 사용하지 않으려고 하기 때문입니다. 형식 인스턴스를 포함하는 경우마다 컬렉션 인스턴스가 있어야 합니다. 자세한 내용은 [사용자 지정 종속성 속성](custom-dependency-properties.md)을 참조하세요.  
   

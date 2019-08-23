@@ -2,17 +2,17 @@
 title: 작업 포맷터와 작업 선택기
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: 06f6d3e79844f719efc33788b6ea3bd5326e736b
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 977a759b2c3f6d803879fc640439cd0b3465ffbf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424980"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965585"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>작업 포맷터와 작업 선택기
-이 샘플에서는 WCF에 필요한 것에서 다른 형식으로 메시지 데이터를 허용 하도록 Windows Communication Foundation (WCF) 확장성 요소를 사용할 수 있는 방법을 보여 줍니다. 기본적으로 WCF 포맷터는 메서드 매개 변수 아래에 포함 되도록 예상 합니다 `soap:body` 요소입니다. 이 샘플에서는 대신 HTTP GET 쿼리 문자열의 매개 변수 데이터를 구문 분석하고 이 데이터를 사용하여 메서드를 호출하는 사용자 지정 작업 포맷터를 구현하는 방법을 보여 줍니다.  
+이 샘플에서는 wcf (Windows Communication Foundation) 확장 요소를 사용 하 여 WCF에서 예상 하는 것과 다른 형식의 메시지 데이터를 허용 하는 방법을 보여 줍니다. 기본적으로 WCF 포맷터는 메서드 매개 변수를 `soap:body` 요소 아래에 포함 해야 합니다. 이 샘플에서는 대신 HTTP GET 쿼리 문자열의 매개 변수 데이터를 구문 분석하고 이 데이터를 사용하여 메서드를 호출하는 사용자 지정 작업 포맷터를 구현하는 방법을 보여 줍니다.  
   
- 샘플을 기반으로 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)를 구현 하는 `ICalculator` 서비스 계약입니다. 이 샘플에서는 클라이언트에서 서버로 보내는 요청에 대해 HTTP GET를 사용하고 서버에서 클라이언트로 보내는 응답에 대해 POX 메시지가 포함된 HTTP POST를 사용하도록 Add, Subtract, Multiply 및 Divide 메시지를 변경하는 방법을 보여 줍니다.  
+ 이 샘플은 `ICalculator` 서비스 계약을 구현 하는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)을 기반으로 합니다. 이 샘플에서는 클라이언트에서 서버로 보내는 요청에 대해 HTTP GET를 사용하고 서버에서 클라이언트로 보내는 응답에 대해 POX 메시지가 포함된 HTTP POST를 사용하도록 Add, Subtract, Multiply 및 Divide 메시지를 변경하는 방법을 보여 줍니다.  
   
  이를 위해 이 샘플에서는 다음을 제공합니다.  
   
@@ -24,13 +24,13 @@ ms.locfileid: "67424980"
   
 - 런타임에 새 작업 포맷터를 삽입하는 방법을 보여 줍니다.  
   
-- 이 샘플에서 클라이언트와 서비스는 모두 콘솔 응용 프로그램(.exe)입니다.  
+- 이 샘플에서 클라이언트와 서비스는 모두 콘솔 애플리케이션(.exe)입니다.  
   
 > [!NOTE]
->  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
+> 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
 ## <a name="key-concepts"></a>주요 개념  
- `QueryStringFormatter` -작업 포맷터는 매개 변수 개체의 배열을 메시지로 매개 변수 개체의 배열에는 메시지를 변환 하는 일을 담당 하는 wcf 구성 요소입니다. 이 작업은 클라이언트에서는 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> 인터페이스를 사용하고 서버에서는 <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> 인터페이스를 사용하여 수행됩니다. 사용자는 이러한 인터페이스를 사용하여 `Serialize` 및 `Deserialize` 메서드에서 요청 및 응답 메시지를 가져올 수 있습니다.  
+ `QueryStringFormatter`-작업 포맷터는 메시지를 매개 변수 개체의 배열로 변환 하 고 매개 변수 개체의 배열을 메시지로 변환 하는 작업을 담당 하는 WCF의 구성 요소입니다. 이 작업은 클라이언트에서는 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> 인터페이스를 사용하고 서버에서는 <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> 인터페이스를 사용하여 수행됩니다. 사용자는 이러한 인터페이스를 사용하여 `Serialize` 및 `Deserialize` 메서드에서 요청 및 응답 메시지를 가져올 수 있습니다.  
   
  이 샘플에서 `QueryStringFormatter`는 이 두 가지 인터페이스를 모두 구현하며, 클라이언트와 서버에서 구현됩니다.  
   
@@ -54,16 +54,16 @@ ms.locfileid: "67424980"
  `SelectOperation` 메서드는 들어오는 메시지를 받아 메시지 속성에서 `Via` URI를 조회합니다. 그런 다음 URI에서 작업 이름 접미사를 추출하고 내부 테이블을 조회하여 메시지를 디스패치할 작업 이름을 가져온 다음 이 작업 이름을 반환합니다.  
   
 ### <a name="enablehttpgetrequestsbehavior-class"></a>EnableHttpGetRequestsBehavior 클래스  
- `UriPathSuffixOperationSelector` 구성 요소는 프로그래밍 방식으로 설치하거나 엔드포인트 동작을 통해 설치할 수 있습니다. 이 샘플에서는 서비스의 응용 프로그램 구성 파일에 지정된 `EnableHttpGetRequestsBehavior` 동작을 구현합니다.  
+ `UriPathSuffixOperationSelector` 구성 요소는 프로그래밍 방식으로 설치하거나 엔드포인트 동작을 통해 설치할 수 있습니다. 이 샘플에서는 서비스의 애플리케이션 구성 파일에 지정된 `EnableHttpGetRequestsBehavior` 동작을 구현합니다.  
   
  서버측:  
   
  <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A>는 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 구현으로 설정됩니다.  
   
- 기본적으로 WCF는 정확히 일치 하는 주소 필터를 사용 합니다. 들어오는 메시지의 URI는 작업 이름 접미사와, 그 뒤에 매개 변수 데이터가 포함된 쿼리 문자열로 구성되므로 엔드포인트 동작은 주소 필터를 접미사 일치 필터가 되도록 변경합니다. WCF를 사용 하 여<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> 이 목적입니다.  
+ 기본적으로 WCF는 정확히 일치 하는 주소 필터를 사용 합니다. 들어오는 메시지의 URI는 작업 이름 접미사와, 그 뒤에 매개 변수 데이터가 포함된 쿼리 문자열로 구성되므로 엔드포인트 동작은 주소 필터를 접미사 일치 필터가 되도록 변경합니다. 이를 위해 WCF<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> 를 사용 합니다.  
   
 ### <a name="installing-operation-formatters"></a>작업 포맷터 설치  
- 포맷터를 지정하는 작업 동작은 고유합니다. 이러한 동작은 모든 작업이 필요한 작업 포맷터를 만들 수 있도록 항상 기본적으로 구현됩니다. 그러나 이러한 동작은 단지 다른 작업 동작과 유사하게 보이며 다른 특성으로도 식별할 수 없습니다. 대체 동작을 설치 하려면 구현 바꾸시겠습니까 WCF 형식 로더에서 기본적으로 설치 되는 특정 포맷터 동작에 대 한 확인 하거나 기본 동작 이후에 실행 될 호환 동작을 추가 해야 합니다.  
+ 포맷터를 지정하는 작업 동작은 고유합니다. 이러한 동작은 모든 작업이 필요한 작업 포맷터를 만들 수 있도록 항상 기본적으로 구현됩니다. 그러나 이러한 동작은 단지 다른 작업 동작과 유사하게 보이며 다른 특성으로도 식별할 수 없습니다. 대체 동작을 설치 하려면 구현은 기본적으로 WCF 형식 로더에 의해 설치 되는 특정 포맷터 동작을 검색 하 고이를 대체 하거나 기본 동작 후에 실행할 호환 되는 동작을 추가 해야 합니다.  
   
  이러한 작업 포맷터 동작은 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType>을 호출하기 전에 프로그래밍 방식으로 설치하거나, 기본 동작 이후에 실행되는 작업 동작을 지정하여 설치할 수 있습니다. 그러나 동작 모델에서는 동작이 다른 동작을 대체하거나 설명 트리를 수정하는 것을 허용하지 않기 때문에 이러한 작업 포맷터 동작을 엔드포인트 동작이나 구성을 통해 쉽게 설치할 수 없습니다.  
   
@@ -166,14 +166,14 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Formatters\QueryStringFormatter`  
   
 ##### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1. 수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
+1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.  
   
-2. 지침에 따라 솔루션을 빌드하려면 [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.  
+2. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따르세요.  
   
-3. 단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
+3. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.  

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - List control type
 - UI Automation, List control type
 ms.assetid: 0e959fcb-50f2-413b-948d-7167d279bc11
-ms.openlocfilehash: 7811efd680bbeb299a4e37b74768f7462b808e9a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e0214e454754ac09f1271770f6975c00180a4584
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783047"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964233"
 ---
 # <a name="ui-automation-support-for-the-list-control-type"></a>List 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]
->  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 최신 정보에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]를 참조 하세요 [Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746)합니다.  
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  이 항목에서는 List 컨트롤 형식에 대한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 지원 정보를 제공합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서, 컨트롤 형식은 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 속성을 사용하기 위해 컨트롤이 충족해야 하는 조건 집합입니다. 이 조건에는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 값, 컨트롤 패턴에 대한 특정 지침이 포함됩니다.  
   
@@ -25,26 +25,26 @@ ms.locfileid: "61783047"
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>필요한 UI 자동화 트리 구조  
- 다음 표는 목록 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 두 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다. 컨트롤 뷰에는 컨트롤인 요소만 포함되며, 콘텐츠 뷰에서는 트리와 중복되는 정보가 제거됩니다. 예를 들어, 콤보 상자에 레이블을 지정하는 데 사용되는 텍스트 컨트롤은 `ComboBox NameProperty`로 노출됩니다. 하지만 텍스트 컨트롤이 컨트롤 뷰에서 이 방법으로 이미 노출되므로 두 번 노출시킬 필요는 없습니다. 따라서 콘텐츠 보기에서 제거됩니다. 에 대 한 자세한 합니다 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리를 참조 하십시오 [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)합니다.  
+ 다음 표는 목록 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 두 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다. 컨트롤 뷰에는 컨트롤인 요소만 포함되며, 콘텐츠 뷰에서는 트리와 중복되는 정보가 제거됩니다. 예를 들어, 콤보 상자에 레이블을 지정하는 데 사용되는 텍스트 컨트롤은 `ComboBox NameProperty`로 노출됩니다. 하지만 텍스트 컨트롤이 컨트롤 뷰에서 이 방법으로 이미 노출되므로 두 번 노출시킬 필요는 없습니다. 따라서 콘텐츠 보기에서 제거됩니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 대 한 자세한 내용은 [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)를 참조 하세요.  
   
 |컨트롤 뷰|콘텐츠 뷰|  
 |------------------|------------------|  
 |컨트롤에 해당하는 요소를 포함합니다.|최종 사용자에게 의미 있는 가장 작은 정보 집합에서 보조 기술이 작동되도록 트리에서 중복되는 정보를 제거합니다.|  
-|목록<br /><br /> -DataItem (0 개 이상)<br />-ListItem (0 개 이상)<br />-그룹 (0 개 이상)<br />-ScrollBar (0, 1 또는 2)|목록<br /><br /> -DataItem (0 개 이상)<br />-ListItem (0 개 이상)<br />-그룹 (0 개 이상)|  
+|목록<br /><br /> -DataItem (0 개 이상)<br />-ListItem (0 개 이상)<br />-Group (0 개 이상)<br />-ScrollBar (0, 1 또는 2)|목록<br /><br /> -DataItem (0 개 이상)<br />-ListItem (0 개 이상)<br />-Group (0 개 이상)|  
   
  List 컨트롤 형식(예: 목록 컨트롤)을 구현하는 컨트롤의 컨트롤 뷰는 다음과 같이 구성되어 있습니다.  
   
-- (항목 목록 Item 또는 Data Item 컨트롤 형식에 기반 할 수 있습니다) 목록 컨트롤 내에서 0 개 이상의 항목입니다.
+- 목록 컨트롤 내에 있는 0 개 이상의 항목 (항목은 List Item 또는 Data Item 컨트롤 형식에 따라 달라 집니다.)
   
-- 목록 컨트롤 내에서 0 개 이상의 그룹 컨트롤입니다.
+- 목록 컨트롤 내에서 0 개 이상의 그룹 컨트롤
   
-- 0, 1 개 또는 두 스크롤 막대 컨트롤입니다.
+- 0, 1 또는 2 개의 스크롤 막대 컨트롤입니다.
   
 List 컨트롤 형식(예: 목록 컨트롤)을 구현하는 컨트롤의 콘텐츠 뷰는 다음과 같이 구성되어 있습니다.  
   
-- (항목 목록 Item 또는 Data Item 컨트롤 형식에 기반 할 수 있습니다) 목록 컨트롤 내에서 0 개 이상의 항목입니다.
+- 목록 컨트롤 내에 있는 0 개 이상의 항목 (항목은 List Item 또는 Data Item 컨트롤 형식에 따라 달라 집니다.)
   
-- 목록 컨트롤 내에서 0 개 이상의 그룹입니다.
+- 목록 컨트롤 내에서 0 개 이상의 그룹
 
 함께 그룹화된 항목 외에 계층 관계가 있는 항목은 목록 컨트롤 항목에 포함되지 않아야 합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 항목의 자식이 있는 경우 목록 컨테이너는 Tree 컨트롤 형식을 기반으로 해야 합니다.  
   
@@ -52,13 +52,13 @@ List 컨트롤 형식(예: 목록 컨트롤)을 구현하는 컨트롤의 콘텐
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>필요한 UI 자동화 속성  
- 다음 표에서는 값 또는 정의가 목록 컨트롤과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여 줍니다. 에 대 한 자세한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 참조 하세요 [클라이언트용 UI 자동화 속성](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)합니다.  
+ 다음 표에서는 값 또는 정의가 목록 컨트롤과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여 줍니다. 속성에 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 대 한 자세한 내용은 [클라이언트에 대 한 UI 자동화 속성](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)을 참조 하세요.  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성|값|노트|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|메모를 참조하세요.|이 속성의 값은 애플리케이션의 모든 컨트롤에서 고유해야 합니다.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|메모를 참조하세요.|전체 컨트롤이 포함된 가장 바깥쪽 사각형입니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|메모를 참조하세요.|목록 컨트롤에 클릭 가능한 지점(클릭하여 목록에서 포커스를 받을 수 있도록 하는 지점)이 있는 경우, 해당 지점은 이 속성을 통해 노출되어야 합니다.<br /><br /> 경우의 값을 `IsOffScreen` 속성이 true 이면 해당 <xref:System.Windows.Automation.NoClickablePointException> 발생 합니다.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|메모를 참조하세요.|목록 컨트롤에 클릭 가능한 지점(클릭하여 목록에서 포커스를 받을 수 있도록 하는 지점)이 있는 경우, 해당 지점은 이 속성을 통해 노출되어야 합니다.<br /><br /> `IsOffScreen` 속성의 값이 true <xref:System.Windows.Automation.NoClickablePointException> 이면이 발생 합니다.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|메모를 참조하세요.|컨트롤이 키보드 포커스를 받을 수 있으면 해당 컨트롤은 이 속성을 지원해야 합니다.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|메모를 참조하세요.|목록 컨트롤의 Name 속성 값은 사용자에게 선택하라고 요청하는 옵션의 범주를 전달해야 합니다. 이 속성은 일반적으로 정적 텍스트 레이블에서 이름을 가져옵니다. 정적 텍스트 레이블이 없는 경우 애플리케이션 개발자 Name 속성의 값을 노출해야 합니다.<br /><br /> 컨트롤이 다른 컨트롤의 하위 트리 내에 사용되는 경우에만 이 속성이 목록 컨트롤에 필요하지 않습니다.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|메모를 참조하세요.|정적 텍스트 레이블이 있는 경우 이 속성은 해당 컨트롤에 대한 참조를 노출해야 합니다.|  
