@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91a97807d45d3cafdac0c0608dc9590533b185dc
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 67ead643afd34b4c3422d85e6f7876879de477ba
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663441"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927237"
 ---
 # <a name="systemruntimecaching-element-cache-settings"></a>\<system.object > 요소 (캐시 설정)
 
@@ -55,7 +55,7 @@ ms.locfileid: "69663441"
 이 네임스페이스의 클래스는 ASP.NET에 있는 것 같은 캐싱 기능을 사용하는(그러나 `System.Web` 어셈블리에 의존하지 않음) 방법을 제공합니다. 자세한 내용은 [Caching in .NET Framework Applications](../../../performance/caching-in-net-framework-applications.md)을 참조하십시오.  
   
 > [!NOTE]
->  <xref:System.Runtime.Caching> 네임 스페이스의 출력 캐싱 기능 및 형식은 .NET Framework 4의 새로운 기능입니다.  
+> <xref:System.Runtime.Caching> 네임 스페이스의 출력 캐싱 기능 및 형식은 .NET Framework 4의 새로운 기능입니다.  
   
 ## <a name="example"></a>예제
 

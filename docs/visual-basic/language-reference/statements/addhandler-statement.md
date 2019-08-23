@@ -8,15 +8,15 @@ f1_keywords:
 helpviewer_keywords:
 - AddHandler statement [Visual Basic]
 ms.assetid: cfe69799-2a0f-42c0-a99e-09fed954da01
-ms.openlocfilehash: 1e8d8f512f163d82f074a5ad53fbb38a10904dfa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a9913cd682e52562422ba140e27187d37c592684
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054304"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928947"
 ---
 # <a name="addhandler-statement"></a>AddHandler 문
-런타임에 이벤트 처리기를 사용 하 여 이벤트를 연결합니다.  
+런타임에 이벤트를 이벤트 처리기와 연결 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -27,19 +27,19 @@ AddHandler event, AddressOf eventhandler
 ## <a name="parts"></a>요소  
 |||
 |---|---|
-|이벤트(event)|처리할 이벤트의 이름입니다.|  
+|이벤트|처리할 이벤트의 이름입니다.|  
 |`eventhandler`|이벤트를 처리 하는 프로시저의 이름입니다.|
 |||
   
 ## <a name="remarks"></a>설명  
- 합니다 `AddHandler` 고 `RemoveHandler` 문을 시작 하 고 프로그램 실행 중 언제 든 지 이벤트 처리를 중지할 수 있습니다.  
+ `AddHandler` 및`RemoveHandler` 문을 사용 하면 프로그램을 실행 하는 동안 언제 든 지 이벤트 처리를 시작 하 고 중지할 수 있습니다.  
   
- 서명의 합니다 `eventhandler` 프로시저는 이벤트의 시그니처와 일치 해야 `event`합니다.  
+ `eventhandler` 프로시저의 서명은 이벤트 `event`의 시그니처와 일치 해야 합니다.  
   
- `Handles` 키워드와 `AddHandler` 문 모두 특정 프로시저에서 특정 이벤트를 처리하도록 지정하는 데 사용할 수 있지만 차이가 있습니다. `AddHandler` 문은 런타임에 프로시저를 이벤트에 연결합니다. 특정 이벤트를 처리하도록 지정하는 프로시저를 정의할 때 `Handles` 키워드를 사용합니다. 자세한 내용은 [처리](../../../visual-basic/language-reference/statements/handles-clause.md)합니다.  
+ `Handles` 키워드와 `AddHandler` 문 모두 특정 프로시저에서 특정 이벤트를 처리하도록 지정하는 데 사용할 수 있지만 차이가 있습니다. `AddHandler` 문은 런타임에 프로시저를 이벤트에 연결합니다. 특정 이벤트를 처리하도록 지정하는 프로시저를 정의할 때 `Handles` 키워드를 사용합니다. 자세한 내용은 [핸들](../../../visual-basic/language-reference/statements/handles-clause.md)을 참조 하세요.  
   
 > [!NOTE]
->  사용자 지정 이벤트에 대 한 합니다 `AddHandler` 문은 호출 이벤트의 `AddHandler` 접근자입니다. 사용자 지정 이벤트에 대 한 자세한 내용은 참조 하세요. [이벤트 연결 문으로](../../../visual-basic/language-reference/statements/event-statement.md)합니다.  
+> 사용자 지정 이벤트 `AddHandler` 의 경우 문은 이벤트의 `AddHandler` 접근자를 호출 합니다. 사용자 지정 이벤트에 대 한 자세한 내용은 [이벤트 문](../../../visual-basic/language-reference/statements/event-statement.md)을 참조 하십시오.  
   
 ## <a name="example"></a>예제  
  [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  

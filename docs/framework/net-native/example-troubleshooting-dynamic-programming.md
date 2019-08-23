@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e482303e684813574a092f0a2d5812445ed7fa6e
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: fef5894f7452bd32cc4e43433aa60166db241a12
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052614"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910610"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>예제: 동적 프로그래밍 문제 해결
 > [!NOTE]
->  이 항목은 시험판 소프트웨어인 .NET Native Developer Preview를 참조합니다. 이 Preview 버전은 [Microsoft Connect 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=394611)에서 다운로드할 수 있습니다(등록 필요).  
+> 이 항목은 시험판 소프트웨어인 .NET Native Developer Preview를 참조합니다. 이 Preview 버전은 [Microsoft Connect 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=394611)에서 다운로드할 수 있습니다(등록 필요).  
   
- 예외는.NET 네이티브 도구 체인 결과 사용 하 여 개발 하는 앱의 모든 메타 데이터 조회 오류입니다.  앱에서 예기치 않은 방식으로 나타나는 오류도 있습니다.  다음 예제에서는 null 개체를 참조하여 발생하는 액세스 위반을 보여 줍니다.  
+ .NET 네이티브 도구 체인을 사용 하 여 개발 된 앱에서 일부 메타 데이터 조회 실패가 발생 하면 예외가 발생 합니다.  앱에서 예기치 않은 방식으로 나타나는 오류도 있습니다.  다음 예제에서는 null 개체를 참조하여 발생하는 액세스 위반을 보여 줍니다.  
   
 ```  
 Access violation - code c0000005 (first chance)  
@@ -52,7 +52,7 @@ AppViewModel.Current.LayoutVM.PageMap
   
  이 경우 `App.Core.ViewModels`에 대해 런타임 지시문을 추가하면 문제가 해결됩니다. 근본 원인은 <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType> 메서드에 대한 API 호출에서 **null**이 반환된 것이며, 앱은 충돌이 해결될 때까지 문제를 자동으로 무시합니다.  
   
- 동적 프로그래밍에서는 리플렉션 Api에서.NET 네이티브를 사용 하는 경우 좋습니다 사용 하는 것은 <xref:System.Type.GetType%2A?displayProperty=nameWithType> 실패 시 예외를 throw 하는 오버 로드 합니다.  
+ 동적 프로그래밍에서 .NET 네이티브에서 리플렉션 api를 사용할 때는 오류 발생 시 예외를 throw 하 <xref:System.Type.GetType%2A?displayProperty=nameWithType> 는 오버 로드를 사용 하는 것이 좋습니다.  
   
 ## <a name="is-this-an-isolated-case"></a>사례의 격리 여부 확인  
  `App.Core.ViewModels` 사용 시에는 다른 문제도 발생할 수 있습니다.  따라서 각 메타데이터 누락 예외를 파악하여 수정할지 아니면 시간 절약을 위해 대형 형식 클래스에 대한 지시문을 추가할지를 결정해야 합니다.  여기서는 생성되는 출력 바이너리의 크기가 증가해도 문제가 없다면 `dynamic`에 대해 `App.Core.ViewModels` 메타데이터를 추가하는 것이 가장 효율적인 방법입니다.  
@@ -63,4 +63,4 @@ AppViewModel.Current.LayoutVM.PageMap
 ## <a name="see-also"></a>참고자료
 
 - [시작](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [예제: 데이터를 바인딩하는 경우 예외를 처리](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
+- [예제: 데이터를 바인딩할 때 예외 처리](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)

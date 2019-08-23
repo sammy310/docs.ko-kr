@@ -10,12 +10,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
-ms.openlocfilehash: 0891b64fdb26953ab90f3da931f04513ac9e8bcf
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 378d7b0c67791e6c48e9859e0546594df3ccc85e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040219"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931015"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>연습: Visual Basic을 사용하여 Windows Forms 컨트롤에서 상속
 Visual Basic를 사용 하 여 *상속*을 통해 강력한 사용자 지정 컨트롤을 만들 수 있습니다. 상속을 통해 표준 Windows Forms 컨트롤의 모든 고유 기능을 유지하면서 사용자 지정 기능을 통합하는 컨트롤을 만들 수 있습니다. 이 연습에서는 `ValueButton`이라는 간단한 상속된 컨트롤을 만듭니다. 이 단추는 표준 Windows Forms <xref:System.Windows.Forms.Button> 컨트롤에서 기능을 상속 하 고 라는 `ButtonValue`사용자 지정 속성을 노출 합니다.
@@ -29,7 +29,7 @@ Visual Basic를 사용 하 여 *상속*을 통해 강력한 사용자 지정 컨
 
 2. Visual Basic 프로젝트 목록에서 **Windows Forms 컨트롤 라이브러리** 프로젝트 템플릿을 선택 하 고 **이름** 상자에을 `ValueButtonLib` 입력 합니다.
 
-     프로젝트 이름, `ValueButtonLib`는 기본적으로 루트 네임스페이스에도 할당됩니다. 루트 네임스페이스는 어셈블리에서 구성 요소의 이름을 정규화하는 데 사용됩니다. 예를 들어 두 어셈블리에서 `ValueButton`이라는 구성 요소를 제공하면 `ValueButtonLib.ValueButton`을 사용하여 `ValueButton` 구성 요소를 지정할 수 있습니다. 자세한 내용은 [Visual Basic의 네임스페이스](~/docs/visual-basic/programming-guide/program-structure/namespaces.md)를 참조하세요.
+     프로젝트 이름, `ValueButtonLib`는 기본적으로 루트 네임스페이스에도 할당됩니다. 루트 네임스페이스는 어셈블리에서 구성 요소의 이름을 정규화하는 데 사용됩니다. 예를 들어 두 어셈블리에서 `ValueButton`이라는 구성 요소를 제공하면 `ValueButtonLib.ValueButton`을 사용하여 `ValueButton` 구성 요소를 지정할 수 있습니다. 자세한 내용은 [Visual Basic의 네임스페이스](../../../visual-basic/programming-guide/program-structure/namespaces.md)를 참조하세요.
 
 3. **솔루션 탐색기**에서 **UserControl1.vb**를 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 **이름 바꾸기**를 선택합니다. 파일 이름을 `ValueButton.vb`로 변경합니다. 코드 요소 'UserControl1'에 대한 모든 참조 이름을 변경할지 묻는 메시지가 표시되면 **예** 단추를 클릭합니다.
 
@@ -46,7 +46,7 @@ Visual Basic를 사용 하 여 *상속*을 통해 강력한 사용자 지정 컨
      비주얼 디자이너는 더 이상 사용할 수 없습니다. 컨트롤은 <xref:System.Windows.Forms.Button> 자체적으로 그리기를 수행 하므로 디자이너에서 모양을 수정할 수 없습니다. 시각적 표시는 코드에서 수정 되지 않는 한, 상속 된 클래스 (즉, <xref:System.Windows.Forms.Button>)와 정확히 동일 합니다.
 
 > [!NOTE]
->  UI 요소가 없는 구성 요소를 디자인 화면에 계속 추가할 수 있습니다.
+> UI 요소가 없는 구성 요소를 디자인 화면에 계속 추가할 수 있습니다.
 
 ## <a name="adding-a-property-to-your-inherited-control"></a>상속된 컨트롤에 속성 추가
  상속된 Windows Forms 컨트롤의 한 가지 가능한 용도는 표준 Windows Forms 컨트롤과 모양 및 동작(모양 및 느낌)이 동일하지만 사용자 지정 속성을 노출하는 컨트롤을 만드는 것입니다. 이 섹션에서는 `ButtonValue`라는 속성을 컨트롤에 추가합니다.
@@ -148,4 +148,4 @@ Visual Basic를 사용 하 여 *상속*을 통해 강력한 사용자 지정 컨
 - [연습: Visual Basic를 사용 하 여 복합 컨트롤 작성](walkthrough-authoring-a-composite-control-with-visual-basic.md)
 - [방법: 도구 상자 항목 선택 대화 상자에 컨트롤 표시](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
 - [.NET Framework에서 사용자 지정 Windows Forms 컨트롤 개발](developing-custom-windows-forms-controls.md)
-- [상속 기본 사항(Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [상속 기본 사항(Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

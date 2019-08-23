@@ -2,12 +2,12 @@
 title: <discoveryEndpoint>
 ms.date: 03/30/2017
 ms.assetid: fae2f48b-a635-4e4b-859d-a1432ac37e1c
-ms.openlocfilehash: d1a3371872f5587a682b8242c29b71808508ca3d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6bb5be09ea598296f01e186280c45757dee9405d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704058"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919140"
 ---
 # <a name="discoveryendpoint"></a>\<discoveryEndpoint>
 
@@ -39,7 +39,7 @@ ms.locfileid: "61704058"
 
 | 특성        | 설명 |  
 | ---------------- | ----------- |  
-| discoveryMode    | 검색 프로토콜의 모드를 지정하는 문자열입니다. 유효한 값은 "Adhoc" 및 "Managed"입니다. 관리 모드에서는 프로토콜이 검색 가능한 서비스의 리포지토리로 작동하는 검색 프록시를 사용하고, 애드혹 모드에서는 프로토콜이 UDP 멀티캐스트 메커니즘을 사용하여 사용 가능한 서비스를 찾아야 합니다. 속성에 대 한 자세한 내용은 참조 하세요. <xref:System.ServiceModel.Discovery.DiscoveryEndpoint.DiscoveryMode%2A>합니다. |  
+| discoveryMode    | 검색 프로토콜의 모드를 지정하는 문자열입니다. 유효한 값은 "임시" 및 "관리"입니다. 관리 모드에서는 프로토콜이 검색 가능한 서비스의 리포지토리로 작동하는 검색 프록시를 사용하고, 애드혹 모드에서는 프로토콜이 UDP 멀티캐스트 메커니즘을 사용하여 사용 가능한 서비스를 찾아야 합니다. 속성에 대 한 자세한 내용은을 참조 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint.DiscoveryMode%2A>하십시오. |  
 | discoveryVersion | WS-Discovery 프로토콜의 두 버전 중 하나를 지정하는 문자열입니다. 유효한 값은 WSDiscovery11 및 WSDiscoveryApril2005입니다. 이 값은 <xref:System.ServiceModel.Discovery.DiscoveryVersion> 형식입니다. |  
 | maxResponseDelay | 검색 프로토콜이 Probe Match 또는 Resolve Match 같은 특정 메시지가 전송될 때까지 대기하는 최대 지연 값을 지정하는 Timespan 값입니다.<br /><br /> 모든 Probe Match가 동시에 전송되는 경우 네트워크 폭주가 발생할 수 있습니다. 이러한 현상이 발생하는 것을 방지하기 위해 각 Probe Match 사이에 임의의 지연 간격을 두고 Probe Match가 전송됩니다. 0에서 이 특성에 의해 설정되는 값까지의 범위 내에서 임의의 지연 간격이 설정됩니다. 이 특성이 0으로 설정되면 Probe Match 메시지가 지연 간격 없이 연속하여 전송됩니다. 그렇지 않으면 모든 Probe Match 메시지를 보내는 데 걸리는 총 시간이 maxResponseDelay를 초과하지 않는 범위 내에서 Probe Match 메시지가 약간의 임의의 지연 간격을 두고 전송됩니다. 이 값은 서비스에만 관련된 것으로 클라이언트에서 사용되는 값은 아닙니다. |  
 | `name`           | 표준 엔드포인트의 구성 이름을 지정하는 문자열입니다. 이 이름은 서비스 엔드포인트의 `endpointConfiguration` 특성에서 표준 엔드포인트를 해당 구성에 연결하기 위해 사용됩니다. |  
@@ -50,9 +50,9 @@ ms.locfileid: "61704058"
   
 ### <a name="parent-elements"></a>부모 요소
 
-| 요소 | 설명 |  
+| 요소 | Description |  
 | ------- | ----------- |  
-| [\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md) | 하나 이상의 속성(주소, 바인딩, 계약)이 고정된 미리 정의된 엔드포인트인 표준 엔드포인트의 컬렉션입니다. |  
+| [\<standardEndpoints>](standardendpoints.md) | 하나 이상의 속성(주소, 바인딩, 계약)이 고정된 미리 정의된 엔드포인트인 표준 엔드포인트의 컬렉션입니다. |  
   
 ## <a name="example"></a>예제
 

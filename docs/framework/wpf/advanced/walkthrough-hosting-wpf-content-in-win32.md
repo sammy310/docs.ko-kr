@@ -6,12 +6,12 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 9ab046c6f7c070ade9d3e474309b33afbf78370e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 03a35d26fd1917d926f9a26d25ae8a8e32c476f4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629641"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917638"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>연습: Win32에서 WPF 콘텐츠 호스팅
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 응용 프로그램을 만들기 위한 다양한 환경을 제공합니다. 그러나 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 코드에 상당한 투자를 한 경우 원본 코드를 다시 작성하는 대신 응용 프로그램에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기능을 추가하는 것이 더 효과적일 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]창에서 콘텐츠를 호스트 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 하기 위한 간단한 메커니즘을 제공 합니다. [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]  
@@ -25,7 +25,7 @@ ms.locfileid: "68629641"
  이 자습서와 함께 제공 되는 샘플은/Cli C++에서 구현 되었으므로이 자습서에서는를 사용 C++ 하 여 Windows API를 프로그래밍 하는 방법과 관리 코드 프로그래밍에 대해 잘 알고 있다고 가정 합니다. /Cli를 C++사용 하는 데 도움이 되지만 반드시 필요한 것은 아닙니다.  
   
 > [!NOTE]
->  이 자습서에는 관련 샘플의 많은 코드 예제가 포함되어 있습니다. 그러나 가독성을 위해 전체 샘플 코드를 포함하지는 않습니다. 전체 샘플 코드는 [Win32 창에서 WPF 콘텐츠 호스팅 샘플](https://go.microsoft.com/fwlink/?LinkID=160004)을 참조 하세요.  
+> 이 자습서에는 관련 샘플의 많은 코드 예제가 포함되어 있습니다. 그러나 가독성을 위해 전체 샘플 코드를 포함하지는 않습니다. 전체 샘플 코드는 [Win32 창에서 WPF 콘텐츠 호스팅 샘플](https://go.microsoft.com/fwlink/?LinkID=160004)을 참조 하세요.  
   
 <a name="basic_procedure"></a>   
 ## <a name="the-basic-procedure"></a>기본 절차  
@@ -58,7 +58,7 @@ ms.locfileid: "68629641"
 8. 정적 필드에 저장된 참조를 통해 속성 등을 설정하여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠와 통신합니다.  
   
 > [!NOTE]
->  를 사용 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 하 여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠를 구현할 수도 있습니다. 그러나 dll (동적 연결 라이브러리)로 별도로 컴파일하고 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 응용 프로그램에서 해당 dll을 참조 해야 합니다. 프로시저의 나머지 부분은 위에서 설명한 것과 비슷합니다.
+> 를 사용 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 하 여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠를 구현할 수도 있습니다. 그러나 dll (동적 연결 라이브러리)로 별도로 컴파일하고 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 응용 프로그램에서 해당 dll을 참조 해야 합니다. 프로시저의 나머지 부분은 위에서 설명한 것과 비슷합니다.
 
 <a name="implementing_the_application"></a>
 ## <a name="implementing-the-host-application"></a>호스트 애플리케이션 구현
@@ -106,7 +106,7 @@ ms.locfileid: "68629641"
 4. 드롭다운 목록 상자에서 **공용 언어 런타임 지원 (/clr)** 을 선택 합니다.
 
 > [!NOTE]
->  이 컴파일러 플래그를 통해 애플리케이션에서 관리 코드를 사용할 수 있지만 비관리 코드는 계속 이전처럼 컴파일됩니다.
+> 이 컴파일러 플래그를 통해 애플리케이션에서 관리 코드를 사용할 수 있지만 비관리 코드는 계속 이전처럼 컴파일됩니다.
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 STA(단일 스레드 아파트) 스레딩 모델을 사용합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠 코드에서 제대로 작동 하려면 진입점에 특성을 적용 하 여 응용 프로그램의 스레딩 모델을 STA로 설정 해야 합니다.
 
@@ -123,7 +123,7 @@ ms.locfileid: "68629641"
  메서드 `GetHwnd` 는 크기 및 위치 정보와 부모 창 핸들을 사용 하 고 호스트 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 된 콘텐츠의 창 핸들을 반환 합니다.
 
 > [!NOTE]
->  `#using` 네임스페이스에는 `System::Windows::Interop` 지시문을 사용할 수 없습니다. 사용할 경우 해당 네임스페이스의 <xref:System.Windows.Interop.MSG> 구조와 winuser.h에 선언된 MSG 구조 간에 이름 충돌이 생깁니다. 대신 정규화된 이름을 사용하여 해당 네임스페이스의 내용에 액세스해야 합니다.
+> `#using` 네임스페이스에는 `System::Windows::Interop` 지시문을 사용할 수 없습니다. 사용할 경우 해당 네임스페이스의 <xref:System.Windows.Interop.MSG> 구조와 winuser.h에 선언된 MSG 구조 간에 이름 충돌이 생깁니다. 대신 정규화된 이름을 사용하여 해당 네임스페이스의 내용에 액세스해야 합니다.
 
  [!code-cpp[Win32HostingWPFPage#GetHwnd](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#gethwnd)]
 

@@ -2,12 +2,12 @@
 title: <dispatcherSynchronization>
 ms.date: 03/30/2017
 ms.assetid: cc030f9c-4e38-4b14-94dc-9a0e41ec8e2d
-ms.openlocfilehash: 6be9752e8102a5d4db4fed31aae8ff6d56fdd24e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7336c9f7d8a117f9a9bfd338e47941eeb648fa51
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673409"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925849"
 ---
 # <a name="dispatchersynchronization"></a>\<dispatcherSynchronization>
   
@@ -35,7 +35,7 @@ ms.locfileid: "61673409"
   
 ### <a name="attributes"></a>특성
 
-| 특성               | 설명       |
+| 특성               | Description       |
 | ----------------------- | ----------------- |
 | asynchronousSendEnabled | 비동기 보내기 동작 사용 여부를 나타내는 부울입니다. |
 | `maxPendingReceives`    | 채널에서 발급할 수 있는 동시 수신의 수를 지정하는 정수입니다.<br /><br /> 이 값은 서비스 스로틀 동작을 제대로 구성한 후에 구성해야 합니다. |
@@ -48,7 +48,7 @@ ms.locfileid: "61673409"
 
 | 요소 | 설명 |  
 | ------- | ----------- |  
-| [\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|엔드포인트 동작을 지정합니다. |
+| [\<behavior>](behavior-of-endpointbehaviors.md)|엔드포인트 동작을 지정합니다. |
 
 ## <a name="see-also"></a>참고자료
 

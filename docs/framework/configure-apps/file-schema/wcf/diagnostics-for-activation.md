@@ -1,16 +1,16 @@
 ---
-title: <diagnostics> 정품 인증
+title: <diagnostics>활성화
 ms.date: 03/30/2017
 ms.assetid: 1486e0eb-fe2a-46c3-b584-c924889477dd
-ms.openlocfilehash: 30456963a7d74a93e39bb1fddc0910daae97f039
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 543c41936921eda39017e07f1c97294b268a9141
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704260"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919214"
 ---
-# <a name="diagnostics-for-activation"></a>\<진단 > 활성화
-Windows Communication Foundation (WCF) 수신기의 진단 기능을 구성합니다.  
+# <a name="diagnostics-for-activation"></a>\<정품 인증을 위한 진단 >
+WCF (Windows Communication Foundation) 수신기의 진단 기능을 구성 합니다.  
   
  \<system.serviceModel.activation>  
 \<diagnostics>  
@@ -42,9 +42,9 @@ Windows Communication Foundation (WCF) 수신기의 진단 기능을 구성합�
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|수신기 프로세스 SMSvcHost.exe에 대한 구성 설정을 포함합니다.|  
+|[\<system.serviceModel.activation>](system-servicemodel-activation.md)|수신기 프로세스 SMSvcHost.exe에 대한 구성 설정을 포함합니다.|  
   
 ## <a name="see-also"></a>참고자료
 

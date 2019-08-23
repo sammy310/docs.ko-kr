@@ -9,15 +9,15 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], hit tests on visual objects [WPF]
 ms.assetid: 6c8bdbf2-19e0-4fbb-bf89-c1252b2ebc61
-ms.openlocfilehash: 73420d6ae1386676ed900e91b3951df9e0934db8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8bed7784b00f49178c9a87def74b62f7ce620ec7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947366"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923400"
 ---
 # <a name="how-to-hit-test-using-geometry-as-a-parameter"></a>방법: 기하 도형을 매개 변수로 사용하여 적중 테스트
-사용 하 여 시각적 개체에서 적중 횟수 테스트를 수행 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Geometry> 적중 테스트 매개 변수입니다.  
+이 예제에서는를 <xref:System.Windows.Media.Geometry> 적중 테스트 매개 변수로 사용 하 여 시각적 개체에 대해 적중 테스트를 수행 하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 사용 하 여 적중된 테스트를 설정 하는 방법을 보여 줍니다 <xref:System.Windows.Media.GeometryHitTestParameters> 에 대 한는 <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 메서드. <xref:System.Windows.Point> 에 전달 되는 값을 `OnMouseDown` 메서드는 만드는 데는 <xref:System.Windows.Media.Geometry> 적중 횟수 테스트의 범위를 확대 하기 위해 개체입니다.  
@@ -29,13 +29,13 @@ ms.locfileid: "61947366"
   
  ![적중 테스트에 사용 되는 IntersectionDetail를 보여 주는 다이어그램입니다.](./media/how-to-hit-test-using-geometry-as-a-parameter/intersectiondetail-hit-test.png)  
   
- 다음 예제에서는 적중된 테스트 콜백을 구현 하는 때를 <xref:System.Windows.Media.Geometry> 적중된 테스트 매개 변수로 사용 됩니다. `result` 캐스팅할 매개 변수를 <xref:System.Windows.Media.GeometryHitTestResult> 의 값을 검색 하기 위해는 <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A> 속성입니다. 속성 값을 사용 하면 여부를 확인 하는 <xref:System.Windows.Media.Geometry> 적중된 테스트 매개 변수는 적중된 테스트 대상의 렌더링된 된 콘텐츠 내에서 완전히 또는 부분적으로 포함 합니다. 이 경우 샘플 코드는 대상 경계 내에 완전히 포함된 시각적 개체 목록에 적중 테스트 결과를 추가하기만 합니다.  
+ 다음 예제에서는 <xref:System.Windows.Media.Geometry> 가 적중 테스트 매개 변수로 사용 될 때 적중 테스트 콜백을 구현 하는 방법을 보여 줍니다. 매개 `result` 변수는 <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A> 속성의 값 <xref:System.Windows.Media.GeometryHitTestResult> 을 검색 하기 위해로 캐스팅 됩니다. 속성 값을 사용 하면 <xref:System.Windows.Media.Geometry> 적중 횟수 테스트 매개 변수가 적중 테스트 대상의 렌더링 된 콘텐츠 내에 완전히 포함 되는지 아니면 부분적으로 포함 되는지를 확인할 수 있습니다. 이 경우 샘플 코드는 대상 경계 내에 완전히 포함된 시각적 개체 목록에 적중 테스트 결과를 추가하기만 합니다.  
   
  [!code-csharp[HitTestingOverview#HitTestingOverviewSnippet11](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/GeometryHitTest.cs#hittestingoverviewsnippet11)]
  [!code-vb[HitTestingOverview#HitTestingOverviewSnippet11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/geometryhittest.vb#hittestingoverviewsnippet11)]  
   
 > [!NOTE]
->  합니다 <xref:System.Windows.Media.HitTestResult> 교차 세부 사항이 때 콜백이 호출 되지 해야 <xref:System.Windows.Media.IntersectionDetail.Empty>합니다.  
+> 교차 세부 정보가 인 <xref:System.Windows.Media.IntersectionDetail.Empty>경우에는 콜백을호출하면안됩니다.<xref:System.Windows.Media.HitTestResult>  
   
 ## <a name="see-also"></a>참고자료
 

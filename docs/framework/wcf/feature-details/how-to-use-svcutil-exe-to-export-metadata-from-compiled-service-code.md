@@ -2,12 +2,12 @@
 title: '방법: Svcutil.exe를 사용하여 컴파일된 서비스 코드에서 메타데이터 내보내기'
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: 40c684cbc1b14bf14d3ca23cbc044020e36b85f1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b8ddbaf896ee4c6ea8b6f8e8ce7d0ecef28140ea
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650224"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932566"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>방법: Svcutil.exe를 사용하여 컴파일된 서비스 코드에서 메타데이터 내보내기
 Svcutil.exe에서는 다음과 같이 컴파일된 어셈블리에 있는 서비스, 계약 및 데이터 형식에 대한 메타데이터를 내보낼 수 있습니다.  
@@ -19,7 +19,7 @@ Svcutil.exe에서는 다음과 같이 컴파일된 어셈블리에 있는 서비
 - 어셈블리 집합 내의 모든 데이터 계약 형식을 내보내려면 `/dataContractOnly` 옵션을 사용합니다.  
   
 > [!NOTE]
->  종속 어셈블리의 파일 경로를 지정하려면 `/reference` 옵션을 사용합니다.  
+> 종속 어셈블리의 파일 경로를 지정하려면 `/reference` 옵션을 사용합니다.  
   
 ### <a name="to-export-metadata-for-compiled-service-contracts"></a>컴파일된 서비스 계약에 대한 메타데이터를 내보내려면  
   
@@ -28,7 +28,7 @@ Svcutil.exe에서는 다음과 같이 컴파일된 어셈블리에 있는 서비
 2. Svcutil.exe를 컴파일된 어셈블리에서 실행합니다.  
   
     > [!NOTE]
-    >  종속 어셈블리의 파일 경로를 지정하려면 `/reference` 스위치를 사용해야 할 수 있습니다.  
+    > 종속 어셈블리의 파일 경로를 지정하려면 `/reference` 스위치를 사용해야 할 수 있습니다.  
   
     ```  
     svcutil.exe Contracts.dll  
@@ -56,7 +56,7 @@ Svcutil.exe에서는 다음과 같이 컴파일된 어셈블리에 있는 서비
 3. 서비스의 구성 이름을 지정하려면 `/serviceName` 스위치를 사용하여 Svcutil.exe를 컴파일된 서비스 실행 파일에서 실행합니다.  
   
     > [!NOTE]
-    >  종속 어셈블리의 파일 경로를 지정하려면 `/reference` 스위치를 사용해야 할 수 있습니다.  
+    > 종속 어셈블리의 파일 경로를 지정하려면 `/reference` 스위치를 사용해야 할 수 있습니다.  
   
     ```  
     svcutil.exe /serviceName:MyService Service.exe /reference:path/Contracts.dll  
@@ -69,7 +69,7 @@ Svcutil.exe에서는 다음과 같이 컴파일된 어셈블리에 있는 서비
 2. 데이터 계약의 메타데이터만 생성되어야 함을 지정하려면 `/dataContract` 스위치를 사용하여 Svcutil.exe를 컴파일된 어셈블리에서 실행합니다.  
   
     > [!NOTE]
-    >  종속 어셈블리의 파일 경로를 지정하려면 `/reference` 스위치를 사용해야 할 수 있습니다.  
+    > 종속 어셈블리의 파일 경로를 지정하려면 `/reference` 스위치를 사용해야 할 수 있습니다.  
   
     ```  
     svcutil.exe /dataContractOnly Contracts.dll  

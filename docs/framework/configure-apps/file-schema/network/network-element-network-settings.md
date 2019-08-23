@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <network> element
 - network element
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
-ms.openlocfilehash: 40d89f7bd7a1f4a38a1c4030a86405e09c497899
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ee60b990bc749dbb9c5d0e7426c57e9392ddf9d4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659309"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920969"
 ---
 # <a name="network-element-network-settings"></a>\<network > 요소 (네트워크 설정)
 외부 SMTP (Simple Mail Transport Protocol) 서버에 대 한 네트워크 옵션을 구성 합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "69659309"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[\<smtp > 요소 (네트워크 설정)](smtp-element-network-settings.md)|SMTP (Simple Mail Transport Protocol) 메일 전송 옵션을 구성 합니다.|  
   
@@ -70,7 +70,7 @@ ms.locfileid: "69659309"
  기본 인증 (사용자 이름 및 암호)을 사용 하 여 SMTP 서버에 대해 자신을 인증할 수도 있습니다. 이 옵션을 사용 하려면 지정 된 SMTP 서버에 대 한 유효한 사용자 이름 및 암호를 지정 해야 합니다.  
   
 > [!NOTE]
->  기본 인증에서는 `userName` 암호화 되지 `password` 않은 서버에 및 값을 보냅니다. 네트워크 트래픽을 모니터링 하는 모든 자격 증명을 확인 하 고 하는 서버에 연결 하는 데 사용할 수 있습니다. Kerberos 또는 NT LAN Manager (NTLM)와 같은 보다 안전한 인증 메커니즘을 사용 하는 것을 고려해 야 합니다. `defaultCredentials` 가`true`이면 서버에서 이러한 프로토콜을 지 원하는 경우 Kerberos 또는 NTLM이 사용 됩니다.  
+> 기본 인증에서는 `userName` 암호화 되지 `password` 않은 서버에 및 값을 보냅니다. 네트워크 트래픽을 모니터링 하는 모든 자격 증명을 확인 하 고 하는 서버에 연결 하는 데 사용할 수 있습니다. Kerberos 또는 NT LAN Manager (NTLM)와 같은 보다 안전한 인증 메커니즘을 사용 하는 것을 고려해 야 합니다. `defaultCredentials` 가`true`이면 서버에서 이러한 프로토콜을 지 원하는 경우 Kerberos 또는 NTLM이 사용 됩니다.  
   
  기본 인증 및 기본 네트워크 자격 증명 옵션은 함께 사용할 수 없습니다. 을로 `defaultCredentials` `true` 설정 하 고 사용자 이름과 암호를 지정 하면 기본 네트워크 자격 증명이 사용 되 고 기본 인증 데이터는 무시 됩니다.  
   

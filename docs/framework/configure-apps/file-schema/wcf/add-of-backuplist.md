@@ -2,12 +2,12 @@
 title: <backupList>의 <add>
 ms.date: 03/30/2017
 ms.assetid: bc5939fc-314a-4ea4-a533-c96958da7173
-ms.openlocfilehash: 53af01a519c244376b262db1f6515a438dcc554f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: c590dbd671807b32e08ad5d871d376a0dc51e611
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663366"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926871"
 ---
 # <a name="add-of-backuplist"></a>\<\<backupList > > 추가
 백업 엔드포인트 요소를 정의하는 구성 요소를 나타냅니다.  
@@ -44,9 +44,9 @@ ms.locfileid: "69663366"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|기본 끝점에 연결할 수 없는 경우 라우팅 서비스에서 사용할 끝점 목록을 포함 합니다.|  
+|[\<routing>](routing.md)|기본 끝점에 연결할 수 없는 경우 라우팅 서비스에서 사용할 끝점 목록을 포함 합니다.|  
   
 ## <a name="see-also"></a>참고자료
 

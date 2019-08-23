@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3adeb57e853d26415c53b5ac2579f14187e45969
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 5a71277c6e5183f855ef07a6fc3a20e29b06998f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658982"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920916"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > 요소
 <xref:System.AppContext> 클래스에 사용되는 스위치를 하나 이상 정의하여 새 기능의 옵트아웃 메커니즘을 제공합니다.  
@@ -138,7 +138,7 @@ ms.locfileid: "69658982"
 |`System.Xml.`<br /><br /> `IgnoreEmptyKeySequences`|복합 키의 빈 키 시퀀스가 XSD 스키마 유효성 검사에서 무시 되는지 여부를 제어 합니다. 자세한 내용은 [완화: XML 스키마 유효성](../../../migration-guide/mitigation-xml-schema-validation.md)검사|.NET Framework 4.6|  
   
 > [!NOTE]
->  응용 프로그램 구성 파일 `AppContextSwitchOverrides` 에 요소를 추가 하는 대신 (에서 C#) `Shared` 또는 (Visual Basic) <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> 메서드를 `static` 호출 하 여 스위치를 프로그래밍 방식으로 설정할 수도 있습니다.  
+> 응용 프로그램 구성 파일 `AppContextSwitchOverrides` 에 요소를 추가 하는 대신 (에서 C#) `Shared` 또는 (Visual Basic) <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> 메서드를 `static` 호출 하 여 스위치를 프로그래밍 방식으로 설정할 수도 있습니다.  
   
  라이브러리 개발자는 호출자가 이후 버전의 라이브러리에 도입 된 변경 된 기능을 옵트아웃 (opt out) 할 수 있도록 사용자 지정 스위치를 정의할 수도 있습니다. 자세한 내용은 <xref:System.AppContext> 클래스를 참조하세요.  
   

@@ -2,20 +2,20 @@
 title: <routing>의 <filters>
 ms.date: 03/30/2017
 ms.assetid: 7993cf90-9afd-4c3c-9608-184d5da1105c
-ms.openlocfilehash: 8b2c735a19c4cece16dcb77e3ec548eb2d39ec18
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba60958ad33b46b40285f3f70001273bb3af3a63
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701036"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925608"
 ---
-# <a name="filters-of-routing"></a>\<필터 >의 \<라우팅 >
+# <a name="filters-of-routing"></a>\<라우팅 > > \<를 필터링 합니다.
 
-Windows Communication Foundation (WCF)의 형식을 결정 하는 라우팅 필터 집합을 정의 하기 위한 구성 섹션을 나타냅니다 <xref:System.ServiceModel.Dispatcher.MessageFilter> 들어오는 메시지를 평가할 때 사용 되는 합니다.
+들어오는 메시지를 평가할 때 사용할 WCF (Windows Communication Foundation 형식) <xref:System.ServiceModel.Dispatcher.MessageFilter> 를 결정 하는 라우팅 필터 집합을 정의 하기 위한 구성 섹션을 나타냅니다.
 
-[**\<system.serviceModel>**](system-servicemodel.md)   
-&nbsp;&nbsp;[**\<routing>**](routing.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<filters>**
+[ **\<system.serviceModel>** ](system-servicemodel.md)   
+&nbsp;&nbsp;[ **\<routing>** ](routing.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<filters>**
   
 ## <a name="syntax"></a>구문  
   
@@ -42,15 +42,15 @@ Windows Communication Foundation (WCF)의 형식을 결정 하는 라우팅 필�
 
 ### <a name="child-elements"></a>자식 요소
 
-|     | 설명 |
+|     | Description |
 | --- | ----------- |
-| [**\<filter>**](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | Windows Communication Foundation (WCF)의 형식을 결정 하는 라우팅 필터를 포함<xref:System.ServiceModel.Dispatcher.MessageFilter> 들어오는 메시지를 평가할 때 사용 됩니다. |
+| [ **\<filter>** ](filter.md) | 들어오는 메시지를 평가할 때 사용할 WCF (Windows Communication Foundation 형식)<xref:System.ServiceModel.Dispatcher.MessageFilter> 를 결정 하는 라우팅 필터를 포함 합니다. |
 
 ### <a name="parent-elements"></a>부모 요소
 
 |     | 설명 |
 | --- | ----------- |
-| [**\<routing>**](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Windows Communication Foundation (WCF)의 형식을 결정 하는 라우팅 필터 집합을 정의 하기 위한 구성 섹션을 나타냅니다<xref:System.ServiceModel.Dispatcher.MessageFilter> 사용할 대상 끝점을 정의 하는 들어오는 메시지를 평가할 수 있을 뿐만 아니라 라우팅 테이블 필터가 일치할 때에 메시지를 보냅니다. |
+| [ **\<routing>** ](routing.md) | 들어오는 메시지를 평가할 때 사용 되는 WCF<xref:System.ServiceModel.Dispatcher.MessageFilter> (Windows Communication Foundation 형식 및 대상 끝점을 정의 하는 라우팅 테이블을 결정 하는 라우팅 필터 집합을 정의 하기 위한 구성 섹션을 나타냅니다. 필터가 일치 하는 경우에 메시지를 보냅니다. |
 
 ## <a name="see-also"></a>참고자료
 

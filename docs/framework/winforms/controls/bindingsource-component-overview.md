@@ -7,25 +7,25 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
-ms.openlocfilehash: 9c9c9fb574b9f3e687b2d8d5c4606bfb66ebfa64
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: bd1b38b434f9932a575745d7a1761ff18b009115
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364457"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917820"
 ---
 # <a name="bindingsource-component-overview"></a>BindingSource 구성 요소 개요
 <xref:System.Windows.Forms.BindingSource> 구성 요소는 내부 데이터 소스에 컨트롤을 바인딩하는 프로세스를 간소화하도록 설계되었습니다. <xref:System.Windows.Forms.BindingSource> 구성 요소는 바인딩하는 다른 컨트롤에 대한 통로 및 데이터 소스 역할을 합니다. 내부 데이터 목록에 명령을 전달하는 동안 폼의 데이터 연결에 대한 추상화를 제공합니다. 또한 구성 요소 자체가 데이터 소스 역할을 하도록 데이터를 직접 추가할 수 있습니다.  
   
 ## <a name="bindingsource-component-as-an-intermediary"></a>중개자로 작동하는 BindingSource 구성 요소  
- <xref:System.Windows.Forms.BindingSource> 구성 요소는 폼의 일부 또는 모든 컨트롤에 대한 데이터 소스 역할을 합니다. Visual Studio <xref:System.Windows.Forms.BindingSource> 에서 속성은 **속성 창에서** 액세스할 수 있는 `DataBindings` 속성을 통해 컨트롤에 바인딩할 수 있습니다. 자세한 내용은 [다음을 참조 하세요. 디자이너](bind-wf-controls-with-the-bindingsource.md)를 사용 하 여 Windows Forms 컨트롤을 BindingSource 구성 요소와 바인딩합니다.  
+ <xref:System.Windows.Forms.BindingSource> 구성 요소는 폼의 일부 또는 모든 컨트롤에 대한 데이터 소스 역할을 합니다. Visual Studio <xref:System.Windows.Forms.BindingSource> 에서 속성은 속성 창에서 액세스할 수 있는 `DataBindings` 속성을 통해 컨트롤에 바인딩할 수 있습니다. 자세한 내용은 [다음을 참조 하세요. 디자이너](bind-wf-controls-with-the-bindingsource.md)를 사용 하 여 Windows Forms 컨트롤을 BindingSource 구성 요소와 바인딩합니다.  
   
  개체의 단순 속성이나 기본 컬렉션(예: <xref:System.Collections.ArrayList>)과 같은 간단한 데이터 소스 및 데이터베이스 테이블과 같은 복잡한 데이터 소스 둘 다에 <xref:System.Windows.Forms.BindingSource> 구성 요소를 바인딩할 수 있습니다. <xref:System.Windows.Forms.BindingSource> 구성 요소는 바인딩 및 통화 관리 서비스를 제공하는 중간자 역할을 합니다. 디자인 타임 또는 런타임에 해당 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 및 <xref:System.Windows.Forms.BindingSource.DataMember%2A> 속성을 각각 데이터베이스와 테이블로 설정하여 <xref:System.Windows.Forms.BindingSource> 구성 요소를 복잡한 데이터 소스에 바인딩할 수 있습니다. 다음 그림에서는 <xref:System.Windows.Forms.BindingSource> 구성 요소가 기존 데이터 바인딩 아키텍처에 들어가는 위치를 보여 줍니다.  
   
  ![BindingSource 및 데이터 바인딩 아키텍처](./media/net-bindsrcdatabindarch.gif "NET_BindSrcDataBindArch")  
   
 > [!NOTE]
->  디자인 타임에 데이터 창에서 빈 폼으로 데이터베이스 테이블 끌기와 같은 일부 작업은 <xref:System.Windows.Forms.BindingSource> 구성 요소를 만들고, 내부 데이터 소스에 바인딩한 다음 하나의 작업에서 모든 데이터 인식 컨트롤을 추가합니다. [Visual Studio에서 데이터에 Windows Forms 컨트롤 바인딩](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)을 참조하세요.  
+> 디자인 타임에 데이터 창에서 빈 폼으로 데이터베이스 테이블 끌기와 같은 일부 작업은 <xref:System.Windows.Forms.BindingSource> 구성 요소를 만들고, 내부 데이터 소스에 바인딩한 다음 하나의 작업에서 모든 데이터 인식 컨트롤을 추가합니다. [Visual Studio에서 데이터에 Windows Forms 컨트롤 바인딩](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)을 참조하세요.  
   
 ## <a name="bindingsource-component-as-a-data-source"></a>데이터 소스로 작동하는 BindingSource 구성 요소  
  먼저 바인딩할 목록을 지정하지 않고 <xref:System.Windows.Forms.BindingSource> 구성 요소에 항목 추가를 시작하는 경우 구성 요소는 목록 스타일 데이터 소스처럼 작동하며 이러한 추가된 항목을 수락합니다.  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - system.codedom element
 - <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
-ms.openlocfilehash: 2bbd81867b3c20d8ac16bdd79fcc9a3cc7bbb55c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 43bc3c40bfc0b0ce4c0b18683092faf8b67e1c04
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659693"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927688"
 ---
 # <a name="systemcodedom-element"></a>\<system.object > 요소
 사용 가능한 언어 공급자에 대한 컴파일러 구성 설정을 지정합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "69659693"
  개발자와 컴파일러 공급 업체는 새 <xref:System.CodeDom.Compiler.CodeDomProvider> 구현에 대 한 구성 설정을 컴퓨터 구성 파일 (machine.config)에 추가할 수 있습니다. 메서드를 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> 사용 하 여 컴퓨터의 컴파일러 구성 설정으로 식별 되는 기본 언어 공급자와 언어 공급자를 프로그래밍 방식으로 열거 합니다.  
   
 > [!NOTE]
->  .NET Framework 버전 1.0 및 1.1에서는 .NET Framework에서 제공 하는 기본 언어 공급자가 [ \<컴파일러 >](compilers-element.md) 요소에서 식별 됩니다. .NET Framework 버전 2.0에서 기본 언어 공급자는 [ \<컴파일러 >](compilers-element.md) 요소에서 식별 되지 않지만 메서드를 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A> 사용 하 여 열거할 수 있습니다.  
+> .NET Framework 버전 1.0 및 1.1에서는 .NET Framework에서 제공 하는 기본 언어 공급자가 [ \<컴파일러 >](compilers-element.md) 요소에서 식별 됩니다. .NET Framework 버전 2.0에서 기본 언어 공급자는 [ \<컴파일러 >](compilers-element.md) 요소에서 식별 되지 않지만 메서드를 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A> 사용 하 여 열거할 수 있습니다.  
   
 ## <a name="net-framework-versions-10-and-11"></a>.NET Framework 버전 1.0 및 1.1  
  시스템 codedom > 요소에는 컴퓨터의 언어 공급자에 대 한 컴파일러 구성 설정이 포함 되어 있습니다. [ \<](system-codedom-element.md) 컴파일러 [ \<>](compilers-element.md) 요소는 0 개 이상의 [ \<컴파일러 >](compiler-element.md) 요소를 포함 합니다. [ 각\<컴파일러 >](compiler-element.md) 요소는 특정 언어 공급자에 대 한 컴파일러 구성 특성을 지정 합니다.  

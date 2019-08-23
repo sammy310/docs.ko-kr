@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: b5d5a4456bef925cd8093fe9c696145aff83660e
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: c3858cfab59b63761f43f6b3eaad9bf8ca4c1dbc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039413"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916703"
 ---
 # <a name="application-settings-architecture"></a>애플리케이션 설정 아키텍처
 이 항목에서는 애플리케이션 설정 아키텍처가 작동하는 방식과 그룹화된 설정 및 설정 키와 같은 고급 아키텍처 기능에 대해 설명합니다.
@@ -142,7 +142,7 @@ ms.locfileid: "69039413"
  한 공급자를 여러 스레드에서 동시에 호출할 수 있지만, 공급자가 항상 동일한 저장소 위치에 쓰므로 애플리케이션 아키텍처는 공급자 클래스의 단일 인스턴스만 인스턴스화합니다.
 
 > [!IMPORTANT]
->  공급자가 스레드로부터 안전하며 구성 파일에 쓸 수 있는 스레드를 한 번에 하나씩 허용하는지 확인해야 합니다.
+> 공급자가 스레드로부터 안전하며 구성 파일에 쓸 수 있는 스레드를 한 번에 하나씩 허용하는지 확인해야 합니다.
 
  공급자는 <xref:System.Configuration?displayProperty=nameWithType> 네임 스페이스에 정의 된 모든 설정 특성을 지원할 필요는 없지만 최소한의 지원 <xref:System.Configuration.ApplicationScopedSettingAttribute> 및 <xref:System.Configuration.UserScopedSettingAttribute>에서 지원 해야 하 고도 지원 <xref:System.Configuration.DefaultSettingValueAttribute>해야 합니다. 지원하지 않는 특성에 대해서는 공급자가 알림 없이 실패해야 하며 예외를 throw하면 안됩니다. 그러나 settings 클래스에서 특성의 잘못 된 조합을 사용 하는 경우 (예: <xref:System.Configuration.ApplicationScopedSettingAttribute> 같은 <xref:System.Configuration.UserScopedSettingAttribute> 설정에 및 적용) 공급자는 예외를 throw 하 고 작업을 중단 해야 합니다.
 

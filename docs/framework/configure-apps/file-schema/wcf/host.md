@@ -2,12 +2,12 @@
 title: <host>
 ms.date: 03/30/2017
 ms.assetid: be566d55-9d50-4b2e-985d-52a5cc26cbbb
-ms.openlocfilehash: 3d1f7774f61060880a5c3b0327bdd6c2cc4dd74e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21d53df12c2b2d703b771e2b9cb5ee87dafc410e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746744"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918714"
 ---
 # <a name="host"></a>\<host>
 서비스 호스트의 설정을 지정합니다.  
@@ -40,19 +40,19 @@ ms.locfileid: "61746744"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<baseAddresses>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)|서비스 호스트에서 사용하는 기본 주소를 지정하는 `baseAddress` 요소 컬렉션입니다.|  
-|[\<timeOuts>](../../../../../docs/framework/configure-apps/file-schema/wcf/timeouts.md)|서비스 호스트가 열리거나 닫히는 데 허용되는 시간 간격을 지정하는 구성 요소입니다.|  
+|[\<baseAddresses>](baseaddresses.md)|서비스 호스트에서 사용하는 기본 주소를 지정하는 `baseAddress` 요소 컬렉션입니다.|  
+|[\<timeOuts>](timeouts.md)|서비스 호스트가 열리거나 닫히는 데 허용되는 시간 간격을 지정하는 구성 요소입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<service>](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|Windows Communication Foundation (WCF) 서비스에 대 한 설정을 지정합니다.|  
+|[\<service>](service.md)|WCF (Windows Communication Foundation) 서비스의 설정을 지정 합니다.|  
   
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.ServiceModel.Configuration.HostElement>
 - <xref:System.ServiceModel.ServiceHost>
-- [호스팅](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [호스팅](../../../wcf/feature-details/hosting.md)

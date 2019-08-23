@@ -8,25 +8,25 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: 275041372bd5e7da5dd0b32dc0a3d70a38bd0dcd
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 786a92d99f5e7a0c27f502efa9a5fe617ac4d4d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063762"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923750"
 ---
 # <a name="how-to-create-thumbnail-images"></a>방법: 썸네일 이미지 만들기
-축소판 그림 이미지를 이미지의 작은 버전이 있습니다. 호출 하 여 썸네일 이미지를 만들 수 있습니다 합니다 <xref:System.Drawing.Image.GetThumbnailImage%2A> 메서드는 <xref:System.Drawing.Image> 개체입니다.  
+축소판 이미지는 이미지의 작은 버전입니다. 개체의 메서드를 <xref:System.Drawing.Image.GetThumbnailImage%2A> 호출 하 여 미리 보기 이미지를 만들 수 있습니다. <xref:System.Drawing.Image>  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 생성 된 <xref:System.Drawing.Image> JPG 파일에서 개체입니다. 원래 이미지 640 픽셀 너비, 높이 479 픽셀로 있습니다. 코드는 100 픽셀 너비와 높이가 100 픽셀의 축소판 그림 이미지를 만듭니다.  
+ 다음 예제에서는 JPG 파일 <xref:System.Drawing.Image> 에서 개체를 생성 합니다. 원래 이미지의 너비는 640 픽셀이 고 높이는 479 픽셀입니다. 이 코드는 너비가 100 픽셀이 고 높이가 100 픽셀인 축소판 이미지를 만듭니다.  
   
- 다음 그림에서는 미리 보기 이미지를 보여 줍니다.  
+ 다음 그림은 축소판 이미지를 보여 줍니다.  
   
- ![출력 미리 보기를 보여 주는 스크린샷.](./media/how-to-create-thumbnail-images/construct-thumbnail-image.png)  
+ ![출력 축소판 그림을 보여 주는 스크린샷](./media/how-to-create-thumbnail-images/construct-thumbnail-image.png)  
   
 > [!NOTE]
->  이 예제에서는 콜백 메서드를 선언 되었지만 사용 되지 않습니다. 이 GDI +의 모든 버전을 지원합니다.  
+> 이 예제에서는 콜백 메서드가 선언 되었지만 사용 되지 않았습니다. 모든 버전의 GDI +를 지원 합니다.  
   
  [!code-csharp[System.Drawing.WorkingWithImages#71](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#71)]
  [!code-vb[System.Drawing.WorkingWithImages#71](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#71)]  
@@ -36,19 +36,19 @@ ms.locfileid: "65063762"
   
 1. 새 Windows Forms 애플리케이션을 만듭니다.  
   
-2. 예제 코드를 양식에 추가 합니다.  
+2. 예제 코드를 폼에 추가 합니다.  
   
-3. 폼에 대 한 처리기를 만들고 <xref:System.Windows.Forms.Control.Paint> 이벤트  
+3. 폼의 <xref:System.Windows.Forms.Control.Paint> 이벤트에 대 한 처리기 만들기  
   
-4. 에 <xref:System.Windows.Forms.Control.Paint> 처리기를 호출 합니다 `GetThumbnail` 메서드와 전달 `e` 에 대 한 <xref:System.Windows.Forms.PaintEventArgs>합니다.  
+4. 처리기에서 `GetThumbnail` 메서드를 호출 하 고에 대해 `e` <xref:System.Windows.Forms.PaintEventArgs>를 전달 합니다. <xref:System.Windows.Forms.Control.Paint>  
   
-5. 미리 보기를 확인 하려는 이미지 파일을 찾습니다.  
+5. 축소판 그림으로 만들 이미지 파일을 찾습니다.  
   
-6. 에 `GetThumbnail` 메서드, 경로 지정 하 고 파일 이름 이미지입니다.  
+6. `GetThumbnail` 메서드에서 이미지에 대 한 경로와 파일 이름을 지정 합니다.  
   
 7. F5 키를 눌러 예제를 실행 합니다.  
   
-     100 여 100 축소판 그림 이미지를 폼에 표시 됩니다.  
+     100 x 100 축소판 이미지는 폼에 표시 됩니다.  
   
 ## <a name="see-also"></a>참고자료
 

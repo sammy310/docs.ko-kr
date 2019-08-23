@@ -11,29 +11,29 @@ helpviewer_keywords:
 ms.assetid: 6e4cc793-c526-4007-b4e9-37d56295f2cb
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: c7559a95099608ea462c838591ddb43e18d8f80c
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 120733873a7ea29303fe7f82c4c324d411532897
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301227"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921202"
 ---
 # <a name="configuration-sections-schema"></a>구성 섹션 스키마
 
-구성 섹션 스키마 구성 파일에서 사용자 지정 설정을 정의 하는 요소를 포함 합니다. 구성 파일 및 스키마에 대 한 일반적인 내용은 참조 하세요. [.NET Framework의 구성 파일 스키마](~/docs/framework/configure-apps/file-schema/index.md)합니다.
+구성 섹션 스키마에는 구성 파일의 사용자 지정 설정을 정의 하는 요소가 포함 되어 있습니다. 구성 파일 및 스키마에 대 한 일반적인 내용은 [.NET Framework 구성 파일 스키마](index.md)를 참조 하세요.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-[ **\<clear>** ](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md)   
-[ **\<remove>** ](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md)   
-[ **\<section>** ](~/docs/framework/configure-apps/file-schema/section-element.md)   
-[ **\<sectionGroup>** ](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md)
+[ **\<configuration>** ](configuration-element.md)   
+[ **\<configSections>** ](configsections-element-for-configuration.md)   
+[ **\<clear>** ](clear-element-for-configsections.md)   
+[ **\<remove>** ](remove-element-for-configsections.md)   
+[ **\<section>** ](section-element.md)   
+[ **\<sectionGroup>** ](sectiongroup-element-for-configsections.md)
 
-|     | 설명 |
+|     | Description |
 | --- | ----------- |
-| [ **\<지우기 >** 에 대 한  **\<configSections >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | 모든 이전에 정의 된 섹션 및 섹션 그룹을 지웁니다. |
-| [ **\<clear>** ](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | 모든 이전에 정의 된 섹션 및 섹션 그룹을 지웁니다. |
-| [ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 구성 섹션 및 네임 스페이스 선언을 포함합니다. |
-| [ **\<제거 >** 에 대 한  **\<configSections >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | 미리 정의 된 섹션 또는 섹션 그룹을 제거합니다. |
-| [ **\<섹션 >** 에 대 한  **\<configSections >** 하 고  **\<sectionGroup >** ](~/docs/framework/configure-apps/file-schema/section-element.md) | 구성 섹션 선언을 포함합니다. |
-| [ **\<sectionGroup >** 에 대 한  **\<configSections >** ](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | 구성 섹션에 대 한 네임 스페이스를 정의합니다. |
+| [configsections에 대 한 >를  **\<지웁니다 >**  **\<** ](clear-element-for-configsections.md) | 이전에 정의 된 모든 섹션과 섹션 그룹을 지웁니다. |
+| [ **\<clear>** ](clear-element-for-configsections.md) | 이전에 정의 된 모든 섹션과 섹션 그룹을 지웁니다. |
+| [ **\<configSections>** ](configsections-element-for-configuration.md) | 구성 섹션과 네임 스페이스 선언을 포함 합니다. |
+| [configsections에 대 한  **\<> 제거**  **\<>** ](remove-element-for-configsections.md) | 미리 정의 된 섹션 또는 섹션 그룹을 제거 합니다. |
+| [**configsections \<** 에 대 한 섹션 > > 및  **\<sectionGroup >**  **\<** ](section-element.md) | 구성 섹션 선언을 포함 합니다. |
+| [configsections에 대 한  **\<sectionGroup >**  **\<>** ](sectiongroup-element-for-configsections.md) | 구성 섹션에 대 한 네임 스페이스를 정의 합니다. |

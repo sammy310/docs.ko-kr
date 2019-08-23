@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4cf997c8ff13e0a6a4664ea3b538ac0def1baacf
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: da01d0dac2e67d6c0131a2b5965472bbd19213fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663634"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927323"
 ---
 # <a name="legacyimpersonationpolicy-element"></a>\<legacyImpersonationPolicy > 요소
 현재 스레드의 실행 컨텍스트 흐름 설정과 관계없이 Windows ID가 비동기 지점 간을 흐르지 않도록 지정합니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "69663634"
  .NET Framework 2.0부터 `<legacyImpersonationPolicy>` 요소를 사용 하 여 <xref:System.Security.Principal.WindowsIdentity> 가 비동기 요소 간에 이동 하지 않도록 지정할 수 있습니다.  
   
 > [!NOTE]
->  CLR (공용 언어 런타임)는 Win32 함수를 직접 호출을 통해 관리 되지 않는 코드와 같은 플랫폼을 통해 관리 되는 코드 외부에서 수행 된 가장의 관리 되는 코드만 사용 하 여 수행 되는 작업 호출이 가장 인식 합니다. 요소가 true <xref:System.Security.Principal.WindowsIdentity> (`<alwaysFlowImpersonationPolicy enabled="true"/>`)로 설정 되지 않은 경우 관리 되는 개체만 비동기 요소를 통해 흐를 수 있습니다. `alwaysFlowImpersonationPolicy` 요소를 `alwaysFlowImpersonationPolicy` true로 설정 하면 가장 수행 된 방법에 관계 없이 Windows id가 항상 비동기 요소를 통해 이동 합니다. 비동기 시점에서 관리 되지 않는 가장을 흐르는 방법에 대 한 자세한 내용은 [ \<alwaysFlowImpersonationPolicy > 요소](alwaysflowimpersonationpolicy-element.md)를 참조 하세요.  
+> CLR (공용 언어 런타임)는 Win32 함수를 직접 호출을 통해 관리 되지 않는 코드와 같은 플랫폼을 통해 관리 되는 코드 외부에서 수행 된 가장의 관리 되는 코드만 사용 하 여 수행 되는 작업 호출이 가장 인식 합니다. 요소가 true <xref:System.Security.Principal.WindowsIdentity> (`<alwaysFlowImpersonationPolicy enabled="true"/>`)로 설정 되지 않은 경우 관리 되는 개체만 비동기 요소를 통해 흐를 수 있습니다. `alwaysFlowImpersonationPolicy` 요소를 `alwaysFlowImpersonationPolicy` true로 설정 하면 가장 수행 된 방법에 관계 없이 Windows id가 항상 비동기 요소를 통해 이동 합니다. 비동기 시점에서 관리 되지 않는 가장을 흐르는 방법에 대 한 자세한 내용은 [ \<alwaysFlowImpersonationPolicy > 요소](alwaysflowimpersonationpolicy-element.md)를 참조 하세요.  
   
  다른 두 가지 방법으로이 기본 동작을 변경할 수 있습니다.  
   

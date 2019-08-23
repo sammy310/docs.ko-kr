@@ -2,12 +2,12 @@
 title: <transactedBatching>
 ms.date: 03/30/2017
 ms.assetid: 2f790a0d-8f03-4b86-81b5-ce1bc1a6c575
-ms.openlocfilehash: 43415d9eac5e61f42006aecb3248dec9811eb3e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12369f1053638583a3864fab396869d0e7045732
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758134"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918673"
 ---
 # <a name="transactedbatching"></a>\<transactedBatching>
 
@@ -31,7 +31,7 @@ ms.locfileid: "61758134"
 
 ### <a name="attributes"></a>특성
 
-|특성|설명|
+|특성|Description|
 |---------------|-----------------|
 |`maxBatchSize`|트랜잭션 한 번으로 일괄 처리할 수 있는 받기 작업의 최대 수를 지정하는 정수입니다. 기본값은 0입니다.|
 
@@ -43,7 +43,7 @@ ms.locfileid: "61758134"
 
 |요소|설명|
 |-------------|-----------------|
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|엔드포인트 동작을 지정합니다.|
+|[\<behavior>](behavior-of-endpointbehaviors.md)|엔드포인트 동작을 지정합니다.|
 
 ## <a name="remarks"></a>설명
 

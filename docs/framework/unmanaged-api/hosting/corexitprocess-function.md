@@ -20,17 +20,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7aaa0e83de1b1c3e2ce436de04a36addef16c057
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6e1104a98afb32dea687949e9c723124014c1e62
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758523"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925309"
 ---
 # <a name="corexitprocess-function"></a>CorExitProcess 함수
-현재 관리 되지 않는 프로세스를 종료합니다.  
+현재 관리 되지 않는 프로세스를 종료 합니다.  
   
- .NET Framework 4에서이 함수에 사용 되지 않습니다. 사용 된 [iclrmetahost:: Exitprocess](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md) 메서드 대신 합니다.  
+ 이 함수는 .NET Framework 4에서 더 이상 사용 되지 않습니다. 대신 [ICLRMetaHost:: ExitProcess](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md) 메서드를 사용 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,14 +47,14 @@ void STDMETHODCALLTYPE CorExitProcess (
 ## <a name="remarks"></a>설명  
   
 > [!NOTE]
->  .NET Framework 4 부터는 `CorExitProcess` 레거시 Api가 바인딩된 런타임 뿐 아니라 프로세스에서 모든 시작된 된 런타임을 종료 합니다.  
+> .NET Framework 4 `CorExitProcess` 부터는 기존 api가 바인딩된 런타임 뿐만 아니라 프로세스에서 시작 된 모든 런타임을 종료 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** MSCorEE.h  
   
- **라이브러리:** MSCorEE.dll  
+ **라이브러리** MSCorEE.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

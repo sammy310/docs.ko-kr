@@ -9,29 +9,29 @@ helpviewer_keywords:
 - fonts [WPF], system fonts
 - classes [WPF], SystemFonts
 ms.assetid: 3f46a4ec-2225-408a-8123-8838a8f7057a
-ms.openlocfilehash: 5976bc0cb8b34e68d5e89dd70a608d7e52ded332
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 7438705a82faee464649b5f6f577627a379e9a8c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216784"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918358"
 ---
 # <a name="how-to-use-systemfonts"></a>방법: SystemFonts 사용
-정적 리소스를 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.SystemFonts> 스타일 또는 단추를 사용자 지정 하기 위해 클래스입니다.  
+이 예제에서는 <xref:System.Windows.SystemFonts> 클래스의 정적 리소스를 사용 하 여 단추에 스타일을 지정 하거나 사용자 지정 하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
- 시스템 설정과 일관된 시각적 효과를 만들도록 지원하기 위해 시스템 리소스는 몇 가지 시스템이 결정하는 값을 리소스와 속성 모두로 노출합니다. <xref:System.Windows.SystemFonts> 정적 속성 및 런타임 시 이러한 값을 동적으로 액세스를 사용할 수 있는 리소스 키를 참조 하는 속성으로 모두 시스템 글꼴 값을 포함 하는 클래스입니다. 예를 들어 <xref:System.Windows.SystemFonts.CaptionFontFamily%2A> 은 <xref:System.Windows.SystemFonts> 값 및 <xref:System.Windows.SystemFonts.CaptionFontFamilyKey%2A> 는 해당 리소스 키입니다.  
+ 시스템 설정과 일관된 시각적 효과를 만들도록 지원하기 위해 시스템 리소스는 몇 가지 시스템이 결정하는 값을 리소스와 속성 모두로 노출합니다. <xref:System.Windows.SystemFonts>는 시스템 글꼴 값을 정적 속성으로 포함 하는 클래스이 고, 런타임에 이러한 값에 동적으로 액세스 하는 데 사용할 수 있는 리소스 키를 참조 하는 속성입니다. 예 <xref:System.Windows.SystemFonts.CaptionFontFamily%2A> 를 들어 <xref:System.Windows.SystemFonts> 은 값이 고 <xref:System.Windows.SystemFonts.CaptionFontFamilyKey%2A> 은 해당 리소스 키입니다.  
   
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서의 멤버를 사용할 수 있습니다 <xref:System.Windows.SystemFonts> 정적 속성 또는 동적 리소스 참조 (정적 속성 값을 키로). 애플리케이션이 실행되는 동안 글꼴 메트릭을 자동으로 업데이트하려면 동적 리소스 참조를 사용하고 자동으로 업데이트하지 않으려면 정적 값 참조를 사용합니다.  
+ 에서는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 의<xref:System.Windows.SystemFonts> 멤버를 정적 속성 또는 동적 리소스 참조 (정적 속성 값을 키로 사용 하는)로 사용할 수 있습니다. 애플리케이션이 실행되는 동안 글꼴 메트릭을 자동으로 업데이트하려면 동적 리소스 참조를 사용하고 자동으로 업데이트하지 않으려면 정적 값 참조를 사용합니다.  
   
 > [!NOTE]
->  리소스 키의 경우 속성 이름 뒤에 “Key”라는 접미사가 붙습니다.  
+> 리소스 키의 경우 속성 이름 뒤에 “Key”라는 접미사가 붙습니다.  
   
- 다음 예제에서는 액세스의 속성을 사용 하는 방법 <xref:System.Windows.SystemFonts> 스타일을 지정 하거나 단추를 사용자 지정 하기 위해 정적 값으로. 이 태그 예제에서는 할당 <xref:System.Windows.SystemFonts> 단추에는 값입니다.  
+ 다음 예제에서는 단추에 스타일을 지정 하거나 사용자 지정 하기 <xref:System.Windows.SystemFonts> 위해의 속성을 정적 값으로 액세스 하 고 사용 하는 방법을 보여 줍니다. 이 태그 예제에서는 <xref:System.Windows.SystemFonts> 단추에 값을 할당 합니다.  
   
  [!code-xaml[SystemRes_snip#FontStaticResources](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml#fontstaticresources)]  
   
- 값을 사용 하도록 <xref:System.Windows.SystemFonts> 코드에서 필요가 없습니다 정적 값 또는 동적 리소스 참조를 사용 합니다. 대신 키가 아닌 속성을 사용 합니다 <xref:System.Windows.SystemFonts> 클래스입니다. 키가 아닌 속성이 정적 속성의 런타임 동작으로 정의 된 것 이지만 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에서 호스팅될 때 시스템 속성에서 실시간으로 다시 평가 하 고 시스템 값을 사용자가 수행한 변경 작업을 제대로 고려 합니다. 다음 예제에서는 단추의 글꼴 설정을 지정하는 방법을 보여 줍니다.  
+ 코드에서의 <xref:System.Windows.SystemFonts> 값을 사용 하려면 정적 값 또는 동적 리소스 참조를 사용할 필요가 없습니다. 대신 <xref:System.Windows.SystemFonts> 클래스의 키가 아닌 속성을 사용 합니다. 키가 아닌 속성이 정적 속성으로 정의 된 경우에도 시스템에서 호스팅되는의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 런타임 동작은 속성을 실시간으로 다시 평가 하 고 시스템 값에 대 한 사용자 기반 변경을 적절 하 게 고려 합니다. 다음 예제에서는 단추의 글꼴 설정을 지정하는 방법을 보여 줍니다.  
   
  [!code-csharp[SystemRes_snip#FontResourcesCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml.cs#fontresourcescode)]
  [!code-vb[SystemRes_snip#FontResourcesCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#fontresourcescode)]  

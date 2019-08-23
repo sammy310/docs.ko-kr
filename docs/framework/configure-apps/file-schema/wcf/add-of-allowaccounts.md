@@ -2,15 +2,15 @@
 title: <allowAccounts>의 <add>
 ms.date: 03/30/2017
 ms.assetid: 763c7b1f-e7b0-4d99-a42c-4506fcb8da00
-ms.openlocfilehash: 1c6764b37b2aa5349b8ccf63e6b7c2bc580b69b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1ed0b5025ab969c45d7440f2a209426c5c87f549
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701140"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920282"
 ---
-# <a name="add-of-allowaccounts"></a>\<추가 >의 \<allowAccounts >
-WCF 서비스를 호스팅하고 공유 서비스에 대 한 연결 액세스 권한이 부여 된 프로세스에 대 한 사용자 계정을 지정 합니다.  
+# <a name="add-of-allowaccounts"></a>\<allowaccounts의 \<> 추가 >
+WCF 서비스를 호스팅하고 공유 서비스에 대 한 연결 액세스 권한이 부여 된 프로세스의 사용자 계정을 지정 합니다.  
   
  \<system.serviceModel.activation>  
   
@@ -27,7 +27,7 @@ WCF 서비스를 호스팅하고 공유 서비스에 대 한 연결 액세스 �
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
 |securityIdentifier|사용자 계정을 식별하는 데 사용하는 고유 식별자를 지정하는 문자열입니다. 반환되는 기본값은 LocalSystem, Administrators, NS, LS 및 IIS_USRS입니다.|  
   
@@ -36,9 +36,9 @@ WCF 서비스를 호스팅하고 공유 서비스에 대 한 연결 액세스 �
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|포함 된 구성 요소의 컬렉션을 `securityIdentifier` WCF 서비스를 호스팅하고 공유 서비스에 대 한 연결 액세스 권한이 부여 된 프로세스에 대 한 사용자 계정을 지정 하는 특성입니다.|  
+|[\<allowAccounts>](allowaccounts.md)|WCF 서비스를 호스팅하고 공유 서비스에 대 `securityIdentifier` 한 연결 액세스 권한이 부여 된 프로세스의 사용자 계정을 지정 하는 특성을 포함 하는 구성 요소 컬렉션입니다.|  
   
 ## <a name="example"></a>예제  
  다음 구성 예제에서는 사용자 계정에 대한 다섯 가지 기본 식별자를 이 컬렉션에 추가합니다.  

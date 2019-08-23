@@ -2,15 +2,15 @@
 title: <endToEndTracing>
 ms.date: 03/30/2017
 ms.assetid: 5034f5de-bb60-4157-9ad4-58aaade094e0
-ms.openlocfilehash: 266b33e9b0386d0346a86ba8bd82cc65def4f0c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b23728451a051f21ad3863b9a29e6290c3c837a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673058"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919009"
 ---
 # <a name="endtoendtracing"></a>\<endToEndTracing>
-서비스 응용 프로그램 실행 중에 종단 간 추적의 다양한 측면을 사용하거나 사용하지 않도록 설정할 수 있는 구성 요소입니다.  
+서비스 애플리케이션 실행 중에 엔드투엔드 추적의 다양한 측면을 사용하거나 사용하지 않도록 설정할 수 있는 구성 요소입니다.  
   
  \<system.ServiceModel>  
 \<diagnostic>  
@@ -33,7 +33,7 @@ ms.locfileid: "61673058"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
 |`activityTracing`|활동 추적 사용 여부를 지정하는 부울 값입니다.|  
 |`messageFlowTracing`|메시지 흐름 추적 사용 여부를 지정하는 부울 값입니다.|  
@@ -46,7 +46,7 @@ ms.locfileid: "61673058"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<diagnostics>](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)|관리자의 런타임 검사 및 제어를 위한 WCF 설정을 정의합니다.|  
+|[\<diagnostics>](diagnostics.md)|관리자의 런타임 검사 및 제어를 위한 WCF 설정을 정의합니다.|  
   
 ## <a name="see-also"></a>참고자료
 
@@ -54,4 +54,4 @@ ms.locfileid: "61673058"
 - <xref:System.ServiceModel.Diagnostics>
 - <xref:System.ServiceModel.Configuration.DiagnosticSection.EndToEndTracing%2A>
 - <xref:System.ServiceModel.Configuration.EndToEndTracingElement>
-- [종단 간 추적](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)
+- [엔드투엔드 추적](../../../wcf/diagnostics/tracing/end-to-end-tracing.md)

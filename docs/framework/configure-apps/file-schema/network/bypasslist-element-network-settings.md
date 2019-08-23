@@ -8,12 +8,12 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-ms.openlocfilehash: 10d2a025096579c6bed64f82cc955deb0542717c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: bd746f07b4c4eb08bf34b01d555b5799d9af0cf3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664200"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927472"
 ---
 # <a name="bypasslist-element-network-settings"></a>\<bypasslist > 요소 (네트워크 설정)
 프록시를 사용 하지 않는 주소를 설명 하는 정규식 집합을 제공 합니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "69664200"
   
  이 요소에 대 한 정규식을 지정할 때는 주의 해야 합니다. 정규식 "[a-z] +\\\\. .com"은 contoso.com 도메인의 모든 호스트와 일치 하지만 contoso.com.cpandl.com 도메인의 모든 호스트와 일치 합니다. Contoso.com 도메인의 호스트만 일치 시키려면 앵커 ("$"): "[a-z] +\\. contoso\\$"를 사용 합니다.  
   
- 정규식에 대 한 자세한 내용은을 참조 하십시오. [정규식을 .NET Framework](../../../../../docs/standard/base-types/regular-expressions.md)합니다.  
+ 정규식에 대 한 자세한 내용은을 참조 하십시오. [정규식을 .NET Framework](../../../../standard/base-types/regular-expressions.md)합니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
  이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  

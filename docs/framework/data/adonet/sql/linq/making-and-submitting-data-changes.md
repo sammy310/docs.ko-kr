@@ -2,29 +2,29 @@
 title: 데이터 변경 및 변경 내용 전송
 ms.date: 03/30/2017
 ms.assetid: d68c2dc3-99b3-49ab-b547-2ca5b386429a
-ms.openlocfilehash: 23dc45c990763e69b41608f6c3ec15a8db17bf23
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dd0a8288ca924cb17bdacdeeb94f81c3d27d3e4e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743015"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915770"
 ---
 # <a name="making-and-submitting-data-changes"></a>데이터 변경 및 변경 내용 전송
 이 단원의 항목에서는 데이터베이스에 변경 내용을 만들고 전송하는 방법과 낙관적 동시성 충돌을 처리하는 방법에 대해 설명합니다.  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], `Insert` 및 `Update` 데이터베이스 작업에 대한 `Delete` 기본 메서드를 재정의할 수 있습니다. 자세한 내용은 [사용자 지정 Insert, Update 및 Delete 작업](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)합니다.  
+> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], `Insert` 및 `Update` 데이터베이스 작업에 대한 `Delete` 기본 메서드를 재정의할 수 있습니다. 자세한 내용은 [삽입, 업데이트 및 삭제 작업 사용자 지정](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)을 참조 하세요.  
 >   
->  Visual Studio를 사용 하는 개발자 Object Relational Designer를 사용 같은 목적을 위해 저장된 프로시저를 개발할 수 있습니다.  
+>  Visual Studio를 사용 하는 개발자는 개체 관계형 디자이너을 사용 하 여 동일한 목적으로 저장 프로시저를 개발할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [방법: 데이터베이스에 행 삽입](../../../../../../docs/framework/data/adonet/sql/linq/how-to-insert-rows-into-the-database.md)  
  개체 모델에 개체를 추가하여 데이터베이스에 행을 삽입하는 방법에 대해 설명합니다.  
   
- [방법: 데이터베이스에서 행 업데이트](../../../../../../docs/framework/data/adonet/sql/linq/how-to-update-rows-in-the-database.md)  
+ [방법: 데이터베이스의 행 업데이트](../../../../../../docs/framework/data/adonet/sql/linq/how-to-update-rows-in-the-database.md)  
  개체 모델에 개체를 업데이트하여 데이터베이스에 행을 업데이트하는 방법에 대해 설명합니다.  
   
- [방법: 데이터베이스에서 행을 삭제 합니다.](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md)  
+ [방법: 데이터베이스에서 행 삭제](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md)  
  개체 모델에서 개체를 삭제하여 데이터베이스의 행을 삭제하는 방법에 대해 설명합니다.  
   
  [방법: 데이터베이스에 변경 내용 전송](../../../../../../docs/framework/data/adonet/sql/linq/how-to-submit-changes-to-the-database.md)  

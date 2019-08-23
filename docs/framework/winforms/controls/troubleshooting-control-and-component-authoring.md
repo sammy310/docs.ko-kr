@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: 6494a154b9b4bd5bf29fc0e2fbd0b4e5e84550ff
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c05e849705f851b51a362d3a1d1d3f81a9eaf0e4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364170"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923605"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>컨트롤 및 구성 요소 제작 문제 해결
 이 항목에서는 구성 요소와 컨트롤을 개발할 때 발생하는 다음과 같은 일반적인 문제를 나열합니다. 자세한 내용은 [구성 요소를 사용한 프로그래밍](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120))을 참조하세요.  
@@ -96,7 +96,7 @@ ms.locfileid: "68364170"
  디버깅 하는 방법에 대 한 자세한 내용은 [Visual Studio의 디버깅](/visualstudio/debugger/debugging-in-visual-studio) 및 [연습: 디자인 타임](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)에 사용자 지정 Windows Forms 컨트롤 디버깅  
   
 ## <a name="event-is-raised-twice-in-inherited-control-or-component"></a>상속된 컨트롤 또는 구성 요소에서 이벤트가 두 번 발생합니다.  
- 중복된 `Handles` 절 때문일 수 있습니다. 자세한 내용은 [Visual Basic에서 상속된 이벤트 처리기 관련 문제 해결](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)을 참조하세요.  
+ 중복된 `Handles` 절 때문일 수 있습니다. 자세한 내용은 [Visual Basic에서 상속된 이벤트 처리기 관련 문제 해결](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)을 참조하세요.  
   
 ## <a name="design-time-error-failed-to-create-component-component-name"></a>디자인 타임 오류: "구성 요소 ' 구성 요소 이름 '을 만들지 못했습니다."  
  구성 요소나 컨트롤은 매개 변수가 없는 매개 변수가 없는 생성자를 제공 해야 합니다. 디자인 환경에서 구성 요소 또는 컨트롤의 인스턴스를 만드는 경우 매개 변수를 사용하는 생성자 오버로드에 매개 변수를 제공하려고 하지 않습니다.  

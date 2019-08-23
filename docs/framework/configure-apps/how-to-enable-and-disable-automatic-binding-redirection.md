@@ -5,12 +5,12 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-ms.openlocfilehash: d914310559403fba2f1fe8e4a60469ec3a867c24
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 178d5070dd7018bbc0fce474cdd0b31ba3d17f77
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733445"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913042"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>방법: 자동 바인딩 리디렉션 사용 설정 및 해제
 
@@ -91,15 +91,15 @@ Visual Studio 2017 버전 15.7 이상이 있는 경우 프로젝트의 속성 �
 
 1. Visual Studio에서 응용 프로그램을 컴파일하고 빌드 경고를 확인합니다.
 
-   ![어셈블리 참조 충돌에 대 한 빌드 경고](../../../docs/framework/configure-apps/media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
+   ![어셈블리 참조 충돌에 대 한 빌드 경고](./media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
 
 2. 어셈블리 바인딩 충돌이 있을 경우 경고가 나타납니다. 경고를 두 번 클릭 하거나 경고를 선택 하 고 enter키를 누릅니다.
 
    필요한 바인딩 리디렉션을 소스 web.config 파일에 자동으로 추가할 수 있는 대화 상자가 나타납니다.
 
-   ![바인딩 리디렉션 권한 대화 상자](../../../docs/framework/configure-apps/media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
+   ![바인딩 리디렉션 권한 대화 상자](./media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
 
 ## <a name="see-also"></a>참고자료
 
-- [\<bindingRedirect > 요소](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)
-- [어셈블리 버전 리디렉션](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [\<bindingRedirect > 요소](./file-schema/runtime/bindingredirect-element.md)
+- [어셈블리 버전 리디렉션](redirect-assembly-versions.md)

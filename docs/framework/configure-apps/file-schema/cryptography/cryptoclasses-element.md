@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <cryptoClasses> element
 - cryptoClasses element
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
-ms.openlocfilehash: dbe46e0b36d247005f933c82ee83687886b283d1
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 87e64ecd79ebc54a669d33550790781c87b5917c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659647"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921127"
 ---
 # <a name="cryptoclasses-element"></a>\<cryptoClasses > 요소
 [\<nameEntry>](nameentry-element.md) 요소에 있는 이름에 매핑되는 암호화 클래스의 목록이 포함되어 있습니다.  
@@ -81,6 +81,6 @@ ms.locfileid: "69659647"
 - <xref:System.Security.Cryptography>
 - [구성 파일 스키마](../index.md)
 - [암호화 설정 스키마](index.md)
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
+- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
 - [System.Security.Cryptography.CryptoConfig.CreateFromName](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)
 - [암호화 클래스 구성](../../configure-cryptography-classes.md)

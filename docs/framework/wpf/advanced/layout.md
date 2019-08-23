@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 648adb34664ccb2a475e32aba4d0d76d99cf49d8
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: eb254503f5ce2240a03179da693c66f7ada876be
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666760"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918294"
 ---
 # <a name="layout"></a>레이아웃
 이 항목에서는 Windows Presentation Foundation (WPF) 레이아웃 시스템에 대해 설명 합니다. WPF에서 사용자 인터페이스를 만드는 데는 레이아웃 계산이 발생 하는 방법과 시기를 이해 하는 것이 중요 합니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "69666760"
  그런 다음에 <xref:System.Windows.FrameworkElement> 정의 된 프레임 워크 속성이 처리 되어의 `constraintSize`값에 영향을 줍니다. 이러한 속성은 <xref:System.Windows.UIElement>일반적으로 <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.Width%2A> <xref:System.Windows.FrameworkElement.Margin%2A> ,,등의기본에대한크기조정특성<xref:System.Windows.FrameworkElement.Style%2A>을 설명 합니다. 이러한 각 속성은 요소를 표시하는 데 필요한 공간을 변경할 수 있습니다. <xref:System.Windows.FrameworkElement.MeasureOverride%2A>는를 매개 변수로 `constraintSize` 사용 하 여 호출 됩니다.  
   
 > [!NOTE]
->  <xref:System.Windows.FrameworkElement.Height%2A> 및<xref:System.Windows.FrameworkElement.Width%2A>의속성과 와의 속성 간에는 차이가 있습니다. <xref:System.Windows.FrameworkElement.ActualWidth%2A> <xref:System.Windows.FrameworkElement.ActualHeight%2A> 예를 들어 <xref:System.Windows.FrameworkElement.ActualHeight%2A> 속성은 다른 높이 입력 및 레이아웃 시스템을 기반으로 하는 계산 된 값입니다. 값은 실제 렌더링 패스를 기준으로 레이아웃 시스템 자체에 의해 설정 되므로 입력 변경의 기준이 되는와 <xref:System.Windows.FrameworkElement.Height%2A>같은 속성의 설정 값 보다 약간 지연 될 수 있습니다.  
+> <xref:System.Windows.FrameworkElement.Height%2A> 및<xref:System.Windows.FrameworkElement.Width%2A>의속성과 와의 속성 간에는 차이가 있습니다. <xref:System.Windows.FrameworkElement.ActualWidth%2A> <xref:System.Windows.FrameworkElement.ActualHeight%2A> 예를 들어 <xref:System.Windows.FrameworkElement.ActualHeight%2A> 속성은 다른 높이 입력 및 레이아웃 시스템을 기반으로 하는 계산 된 값입니다. 값은 실제 렌더링 패스를 기준으로 레이아웃 시스템 자체에 의해 설정 되므로 입력 변경의 기준이 되는와 <xref:System.Windows.FrameworkElement.Height%2A>같은 속성의 설정 값 보다 약간 지연 될 수 있습니다.  
 >   
 >  때문에 <xref:System.Windows.FrameworkElement.ActualHeight%2A> 은 계산된 된 값 수는 여러 개 있을 수 있습니다 또는 보고 변경 하 여 다양 한 작업의 결과로 레이아웃 시스템에서. 레이아웃 시스템은 자식 요소에 필요한 측정 공간, 부모 요소에 의한 제약 조건 등을 계산할 수도 있습니다.  
   

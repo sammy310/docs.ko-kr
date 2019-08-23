@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 2114efcc4d39cb4d2ea9ca33d7ff244c81a7097f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 97df0bee10440dd03f07b980589d9dda85ce121e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650571"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69909877"
 ---
 # <a name="large-udts"></a>큰 UDT
 개발자는 UDT(사용자 정의 형식)를 통해 SQL Server 데이터베이스에 CLR(공용 언어 런타임) 개체를 저장하여 서버의 스칼라 형식 시스템을 확장할 수 있습니다. UDT에는 단일 SQL Server 시스템 데이터 형식으로 구성된 일반적인 별칭 데이터 형식과는 달리 여러 요소 및 동작이 포함될 수 있습니다.  
   
 > [!NOTE]
->  큰 UDT에 대한 지원이 향상된 SqlClient를 활용하려면 .NET Framework 3.5 SP1 이상을 설치해야 합니다.  
+> 큰 UDT에 대한 지원이 향상된 SqlClient를 활용하려면 .NET Framework 3.5 SP1 이상을 설치해야 합니다.  
   
  이전에는 UDT의 최대 크기가 8KB로 제한되었습니다. 그러나 SQL Server 2008에서는 <xref:Microsoft.SqlServer.Server.Format.UserDefined> 형식인 UDT에 대해 이 제한이 제거되었습니다.  
   
@@ -27,7 +27,7 @@ ms.locfileid: "64650571"
 1. [CLR 사용자 정의 형식](https://go.microsoft.com/fwlink/?LinkId=98366)  
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>GetSchema를 사용하여 UDT 스키마 검색  
- <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>의 <xref:System.Data.SqlClient.SqlConnection> 메서드는 데이터베이스 스키마 정보를 <xref:System.Data.DataTable>에 반환합니다. 자세한 내용은 [SQL Server 스키마 컬렉션](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md)합니다.  
+ <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>의 <xref:System.Data.SqlClient.SqlConnection> 메서드는 데이터베이스 스키마 정보를 <xref:System.Data.DataTable>에 반환합니다. 자세한 내용은 [SQL Server 스키마 컬렉션](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md)을 참조 하세요.  
   
 ### <a name="getschematable-column-values-for-udts"></a>UDT의 GetSchemaTable 열 값  
  <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A>의 <xref:System.Data.SqlClient.SqlDataReader> 메서드는 열 메타데이터를 설명하는 <xref:System.Data.DataTable>을 반환합니다. 다음 표에서는 SQL Server 2005와 SQL Server 2008 간의 큰 UDT 열 메타데이터 차이점에 대해 설명합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "64650571"
 |`ProviderSpecificDataType`|`SqlTypes.SqlBinary`|UDT 인스턴스|  
 |`ProviderType`|21 (`SqlDbType.VarBinary`)|29 (`SqlDbType.Udt`)|  
 |`NonVersionedProviderType`|29 (`SqlDbType.Udt`)|29 (`SqlDbType.Udt`)|  
-|`DataTypeName`|`SqlDbType.VarBinary`|세 부분으로 지정 된 이름이 *Database.SchemaName.TypeName*합니다.|  
+|`DataTypeName`|`SqlDbType.VarBinary`|세 부분으로 구성 된 이름이 *데이터베이스. SchemaName. TypeName*.|  
 |`IsLong`|경우에 따라 다름|경우에 따라 다름|  
   
 ## <a name="sqldatareader-considerations"></a>SqlDataReader 고려 사항  
@@ -70,7 +70,7 @@ ms.locfileid: "64650571"
 ## <a name="specifying-sqlparameters"></a>SqlParameter 지정  
  다음 <xref:System.Data.SqlClient.SqlParameter> 속성은 큰 UDT로 작업할 수 있도록 확장되었습니다.  
   
-|SqlParameter   |설명|  
+|SqlParameter|설명|  
 |---------------------------|-----------------|  
 |<xref:System.Data.SqlClient.SqlParameter.Value%2A>|매개 변수의 값을 나타내는 개체를 가져오거나 설정합니다. 기본값은 null입니다. 이 속성은 `SqlBinary`, `Byte[]` 또는 관리 개체일 수 있습니다.|  
 |<xref:System.Data.SqlClient.SqlParameter.SqlValue%2A>|매개 변수의 값을 나타내는 개체를 가져오거나 설정합니다. 기본값은 null입니다. 이 속성은 `SqlBinary`, `Byte[]` 또는 관리 개체일 수 있습니다.|  

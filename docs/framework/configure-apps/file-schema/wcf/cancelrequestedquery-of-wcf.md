@@ -1,19 +1,19 @@
 ---
-title: <cancelRequestedQuery> WCF의
+title: <cancelRequestedQuery>WCF의
 ms.date: 03/30/2017
 ms.assetid: b690d870-02eb-4c56-8bc3-e5ca99d7097b
-ms.openlocfilehash: bd6157e63761efa954744ab08ea6c66535def514
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7952520edbf799e5fab6864e50962c6ec2860928
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673363"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919643"
 ---
-# <a name="cancelrequestedquery-of-wcf"></a>\<cancelRequestedQuery > WCF의
+# <a name="cancelrequestedquery-of-wcf"></a>\<WCF의 cancelRequestedQuery >
 
 부모 활동에 의한 자식 활동 취소 요청을 추적하는 데 사용되는 쿼리를 나타냅니다. 추적 참가자가 취소 요청 레코드 개체를 구독하려면 쿼리가 필요합니다.  
   
-추적 프로필 쿼리에 대 한 자세한 내용은 참조 하세요. [추적 프로필](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)합니다.
+추적 프로필 쿼리에 대 한 자세한 내용은 [추적 프로필](../../../windows-workflow-foundation/tracking-profiles.md)을 참조 하세요.
   
 \<system.serviceModel>  
 \<tracking>  
@@ -46,7 +46,7 @@ ms.locfileid: "61673363"
 
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
 |`activityName`|취소를 요청하는 활동의 이름을 지정하는 문자열입니다.|  
 |`childActivityName`|취소가 요청된 자식 활동의 이름을 지정하는 문자열입니다.|  
@@ -65,5 +65,5 @@ ms.locfileid: "61673363"
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.CancelRequestedQueryElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.CancelRequestedQuery?displayProperty=nameWithType>
-- [워크플로 추적](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [추적 프로필](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [워크플로 추적](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [추적 프로필](../../../windows-workflow-foundation/tracking-profiles.md)

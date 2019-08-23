@@ -1,5 +1,5 @@
 ---
-title: <remove> 요소에 대 한 <listeners> 에 대 한 <trace>
+title: <remove>의에 <listeners> 대 한 요소<trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/remove
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - remove element
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-ms.openlocfilehash: adf00394bc0bfe808836e74214003cd2078204e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c5c9efb8a22d26ea5d4467f9628af5935d6dbad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673682"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920479"
 ---
-# <a name="remove-element-for-listeners-for-trace"></a>\<제거 > 요소에 대 한 \<수신기 >에 대 한 \<추적 >
-수신기를 제거 합니다 **수신기** 컬렉션입니다.  
+# <a name="remove-element-for-listeners-for-trace"></a>\<추적 >에 \<대 \<한 수신기 > > 요소를 제거 합니다.
+수신기 컬렉션에서 수신기를 제거 합니다.  
   
  \<configuration>  
 \<system.diagnostics>  
@@ -36,7 +36,7 @@ ms.locfileid: "61673682"
   
 |특성|설명|  
 |---------------|-----------------|  
-|**name**|필수 특성입니다.<br /><br /> 제거할 수신기의 이름을 합니다 **수신기** 컬렉션입니다.|  
+|**name**|필수 특성입니다.<br /><br /> **Listeners** 컬렉션에서 제거할 수신기의 이름입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -46,17 +46,17 @@ ms.locfileid: "61673682"
 |요소|설명|  
 |-------------|-----------------|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
-|`listeners`|저장소를 수집 하는 수신기를 지정 하 고 메시지를 라우팅합니다. 수신기는 추적 출력을 적절 한 대상입니다.|  
+|`listeners`|메시지를 수집, 저장 및 라우팅하는 수신기를 지정 합니다. 수신기는 추적 출력을 적절 한 대상으로 보냅니다.|  
 |`system.diagnostics`|메시지를 수집하고 저장하고 라우팅하는 추적 수신기를 지정하며, 추적 스위치가 설정되는 수준을 지정합니다.|  
 |`trace`|ASP.NET 추적 서비스를 구성합니다.|  
   
 ## <a name="remarks"></a>설명  
   
 > [!NOTE]
->  제거는 <xref:System.Diagnostics.DefaultTraceListener> 에서 `Listeners` 의 동작을 변경 하는 컬렉션의 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>를 <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, 및 <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> 메서드. 하지만 호출을 `Assert` 또는 `Fail` 메서드는 메시지 상자를 표시 하는 경우에 메시지 상자가 표시 되지 않습니다 일반적으로 결과 <xref:System.Diagnostics.DefaultTraceListener> 에 없는 경우는 `Listeners` 컬렉션입니다.  
+> <xref:System.Diagnostics.DefaultTraceListener> <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>컬렉션에서를 제거 하면 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, ,및<xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> 메서드의 동작이 변경 됩니다. <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType> `Listeners` 또는 메서드를 호출 하면 일반적으로 메시지 상자가 표시 되지만 <xref:System.Diagnostics.DefaultTraceListener> 가 `Listeners` 컬렉션에 없으면 메시지 상자가 표시 되지 않습니다. `Fail` `Assert`  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 추적에서 기본 추적 수신기를 제거 하는 방법을 보여 줍니다 **수신기** 컬렉션입니다.  
+ 다음 예제에서는 추적 **수신기** 컬렉션에서 기본 추적 수신기를 제거 하는 방법을 보여 줍니다.  
   
 ```xml  
 <configuration>  
@@ -76,4 +76,4 @@ ms.locfileid: "61673682"
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
-- [추적 및 디버그 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [추적 및 디버그 설정 스키마](index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: caec297f8d0f6febad5cf46adb0a2658960c6bb1
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: a5314fe5927abf2d3855acb45c763507ab6cb3c8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663666"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920756"
 ---
 # <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence > 요소
 런타임에서 CAS (코드 액세스 <xref:System.Security.Policy.Publisher> 보안)에 대 한 증명 정보를 만들지 여부를 지정 합니다.  
@@ -57,12 +57,12 @@ ms.locfileid: "69663666"
 ## <a name="remarks"></a>설명  
   
 > [!NOTE]
->  .NET Framework 4 이상에서이 요소는 어셈블리 로드 시간에 영향을 주지 않습니다. 자세한 내용은 [보안 변경 내용](../../../security/security-changes.md)의 "보안 정책 단순화" 섹션을 참조 하세요.  
+> .NET Framework 4 이상에서이 요소는 어셈블리 로드 시간에 영향을 주지 않습니다. 자세한 내용은 [보안 변경 내용](../../../security/security-changes.md)의 "보안 정책 단순화" 섹션을 참조 하세요.  
   
  CLR (공용 언어 런타임)은 로드할 때 Authenticode 서명을 확인 하 여 어셈블리에 대 한 <xref:System.Security.Policy.Publisher> 증명 정보를 만듭니다. 그러나 대부분의 응용 프로그램에는 기본적으로 증명 <xref:System.Security.Policy.Publisher> 정보가 필요 하지 않습니다. 표준 CAS 정책은를 <xref:System.Security.Policy.PublisherMembershipCondition>사용 하지 않습니다. 응용 프로그램이 사용자 지정 CAS 정책을 사용 하는 컴퓨터에서 실행 되지 않거나 부분 신뢰 환경에서에 대 한 <xref:System.Security.Permissions.PublisherIdentityPermission> 요구를 충족 하는 경우에만 게시자 서명 확인에 관련 된 불필요 한 시작 비용을 피해 야 합니다. (Id 권한 요구는 항상 완전 신뢰 환경에서 성공 합니다.)  
   
 > [!NOTE]
->  서비스에서 요소를 `<generatePublisherEvidence>` 사용 하 여 시작 성능을 향상 시키는 것이 좋습니다.  이 요소를 사용 하면 시간 초과 및 서비스 시작 취소가 발생할 수 있는 지연을 방지할 수도 있습니다.  
+> 서비스에서 요소를 `<generatePublisherEvidence>` 사용 하 여 시작 성능을 향상 시키는 것이 좋습니다.  이 요소를 사용 하면 시간 초과 및 서비스 시작 취소가 발생할 수 있는 지연을 방지할 수도 있습니다.  
   
 ## <a name="configuration-file"></a>구성 파일  
  이 요소는 응용 프로그램 구성 파일에만 사용할 수 있습니다.  

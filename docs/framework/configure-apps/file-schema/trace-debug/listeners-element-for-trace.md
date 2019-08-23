@@ -7,20 +7,20 @@ helpviewer_keywords:
 - <listeners> element
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
-ms.openlocfilehash: f9f12d9e61e2472b897169727bbb4fbf9833efd6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4550d4c4cd9ff37c5937ad366cccf91387c0e3f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701348"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927016"
 ---
-# <a name="listeners-element-for-trace"></a>\<수신기 > 요소에 대 한 \<추적 >
-저장소를 수집 하는 수신기를 지정 하 고 메시지를 라우팅합니다. 수신기는 추적 출력을 적절 한 대상입니다.  
+# <a name="listeners-element-for-trace"></a>\<trace >의 \<리스너 > 요소
+메시지를 수집, 저장 및 라우팅하는 수신기를 지정 합니다. 수신기는 추적 출력을 적절 한 대상으로 보냅니다.  
   
- \<구성 > 요소  
-\<system.diagnostics> Element  
-\<추적 > 요소  
-\<수신기 > 요소에 대 한 \<추적 >  
+ \<configuration > 요소  
+\<시스템 진단 > 요소  
+\<trace > 요소  
+\<trace >의 \<리스너 > 요소  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,9 +42,9 @@ ms.locfileid: "61701348"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|`Listeners` 컬렉션에 수신기를 추가합니다.|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md)|추적의 `Listeners` 컬렉션을 지웁니다.|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)|수신기를 제거 합니다 `Listeners` 컬렉션입니다.|  
+|[\<add>](add-element-for-listeners-for-trace.md)|`Listeners` 컬렉션에 수신기를 추가합니다.|  
+|[\<clear>](clear-element-for-listeners-for-trace.md)|추적의 `Listeners` 컬렉션을 지웁니다.|  
+|[\<remove>](remove-element-for-listeners-for-trace.md)|`Listeners` 컬렉션에서 수신기를 제거 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -55,13 +55,13 @@ ms.locfileid: "61701348"
 |`trace`|추적 메시지를 수집하고 저장하고 라우팅하는 수신기가 포함되어 있습니다.|  
   
 ## <a name="remarks"></a>설명  
- 합니다 <xref:System.Diagnostics.Debug> 하 고 <xref:System.Diagnostics.Trace> 클래스에 동일한 공유 **수신기** 컬렉션입니다. 이러한 클래스 중 하나에서 컬렉션에 수신기 개체를 추가 하는 경우 다른 클래스는 같은 수신기를 사용 합니다. .NET Framework와 함께 제공 되는 수신기 클래스에서 파생 된 <xref:System.Diagnostics.TraceListener> 클래스입니다.  
+ 및 <xref:System.Diagnostics.Debug> 클래스<xref:System.Diagnostics.Trace> 는 동일한 **Listeners** 컬렉션을 공유 합니다. 이러한 클래스 중 하나에서 컬렉션에 수신기 개체를 추가 하는 경우 다른 클래스는 동일한 수신기를 사용 합니다. .NET Framework와 함께 제공 되는 수신기 클래스는 <xref:System.Diagnostics.TraceListener> 클래스에서 파생 됩니다.  
   
 ## <a name="configuration-file"></a>구성 파일  
- 이 요소는 응용 프로그램 구성 파일과 컴퓨터 구성 파일 (Machine.config)에서 사용할 수 있습니다.  
+ 이 요소는 컴퓨터 구성 파일 (machine.config) 및 응용 프로그램 구성 파일에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 사용 하는 방법을 보여 줍니다 합니다  **\<수신기 >** 수신기에 추가할 요소 `MyListener` 및 `MyEventListener` 에 **수신기** 컬렉션입니다. `MyListener` 라는 파일을 만들고 `MyListener.log` 출력 파일에 씁니다. `MyEventListener` 이벤트 로그에 항목을 만듭니다.  
+ 다음 예제에서는 수신기  **\<>** 요소를 사용 하 여 수신기 `MyListener` 및 `MyEventListener` 수신기 컬렉션에 추가 하는 방법을 보여 줍니다. `MyListener`이라는 `MyListener.log` 파일을 만들고 출력을 파일에 씁니다. `MyEventListener`이벤트 로그에 항목을 만듭니다.  
   
 ```xml  
 <configuration>  
@@ -87,4 +87,4 @@ ms.locfileid: "61701348"
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Diagnostics.TraceListener>
-- [추적 및 디버그 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [추적 및 디버그 설정 스키마](index.md)
