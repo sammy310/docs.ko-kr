@@ -16,38 +16,38 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f15b9f5961699f905e765426576bdf6f3416793
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed09b4f9be71c7f85714b9ee26d45018410fda42
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651651"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917073"
 ---
-# <a name="icordebugfunctionbreakpoint-interface"></a><span data-ttu-id="31a1c-102">ICorDebugFunctionBreakpoint 인터페이스</span><span class="sxs-lookup"><span data-stu-id="31a1c-102">ICorDebugFunctionBreakpoint Interface</span></span>
+# <a name="icordebugfunctionbreakpoint-interface"></a><span data-ttu-id="0b150-102">ICorDebugFunctionBreakpoint 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0b150-102">ICorDebugFunctionBreakpoint Interface</span></span>
 
-<span data-ttu-id="31a1c-103">ICorDebugBreakpoint 인터페이스 함수에서 중단점을 지원 하도록 확장 합니다.</span><span class="sxs-lookup"><span data-stu-id="31a1c-103">Extends the ICorDebugBreakpoint interface to support breakpoints within functions.</span></span>  
+<span data-ttu-id="0b150-103">ICorDebugBreakpoint 인터페이스를 확장 하 여 함수 내에서 중단점을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="0b150-103">Extends the ICorDebugBreakpoint interface to support breakpoints within functions.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="31a1c-104">메서드</span><span class="sxs-lookup"><span data-stu-id="31a1c-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="0b150-104">메서드</span><span class="sxs-lookup"><span data-stu-id="0b150-104">Methods</span></span>  
   
-|<span data-ttu-id="31a1c-105">메서드</span><span class="sxs-lookup"><span data-stu-id="31a1c-105">Method</span></span>|<span data-ttu-id="31a1c-106">설명</span><span class="sxs-lookup"><span data-stu-id="31a1c-106">Description</span></span>|  
+|<span data-ttu-id="0b150-105">메서드</span><span class="sxs-lookup"><span data-stu-id="0b150-105">Method</span></span>|<span data-ttu-id="0b150-106">Description</span><span class="sxs-lookup"><span data-stu-id="0b150-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="31a1c-107">GetFunction 메서드</span><span class="sxs-lookup"><span data-stu-id="31a1c-107">GetFunction Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getfunction-method.md)|<span data-ttu-id="31a1c-108">중단점이 설정 된 함수를 참조 하는 ICorDebugFunction에 대 한 인터페이스 포인터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="31a1c-108">Gets an interface pointer to an ICorDebugFunction that references the function in which the breakpoint is set.</span></span>|  
-|[<span data-ttu-id="31a1c-109">GetOffset 메서드</span><span class="sxs-lookup"><span data-stu-id="31a1c-109">GetOffset Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getoffset-method.md)|<span data-ttu-id="31a1c-110">함수 내에서 중단점의 오프셋을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="31a1c-110">Gets the offset of the breakpoint within the function.</span></span>|  
+|[<span data-ttu-id="0b150-107">GetFunction 메서드</span><span class="sxs-lookup"><span data-stu-id="0b150-107">GetFunction Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getfunction-method.md)|<span data-ttu-id="0b150-108">중단점이 설정 된 함수를 참조 하는 ICorDebugFunction에 대 한 인터페이스 포인터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="0b150-108">Gets an interface pointer to an ICorDebugFunction that references the function in which the breakpoint is set.</span></span>|  
+|[<span data-ttu-id="0b150-109">GetOffset 메서드</span><span class="sxs-lookup"><span data-stu-id="0b150-109">GetOffset Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getoffset-method.md)|<span data-ttu-id="0b150-110">함수 내에서 중단점의 오프셋을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="0b150-110">Gets the offset of the breakpoint within the function.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="31a1c-111">설명</span><span class="sxs-lookup"><span data-stu-id="31a1c-111">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0b150-111">설명</span><span class="sxs-lookup"><span data-stu-id="0b150-111">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="31a1c-112">이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="31a1c-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="0b150-112">이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="0b150-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="31a1c-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="31a1c-113">Requirements</span></span>  
- <span data-ttu-id="31a1c-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="31a1c-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0b150-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="0b150-113">Requirements</span></span>  
+ <span data-ttu-id="0b150-114">**플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="0b150-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="31a1c-115">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="31a1c-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="0b150-115">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0b150-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="31a1c-116">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="31a1c-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0b150-116">**라이브러리** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0b150-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="31a1c-117">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="31a1c-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="0b150-117">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0b150-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="31a1c-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="31a1c-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0b150-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="0b150-118">See also</span></span>
 
-- [<span data-ttu-id="31a1c-119">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="31a1c-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="0b150-119">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0b150-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

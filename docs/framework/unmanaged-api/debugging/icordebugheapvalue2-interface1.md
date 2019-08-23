@@ -16,37 +16,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 870de1d3db1e415792437e9763dc13bf8066913f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fa872453ed72a3095c135aa25e81284610ad2436
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700919"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910217"
 ---
-# <a name="icordebugheapvalue2-interface"></a><span data-ttu-id="fffa0-102">ICorDebugHeapValue2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="fffa0-102">ICorDebugHeapValue2 Interface</span></span>
+# <a name="icordebugheapvalue2-interface"></a><span data-ttu-id="c6b2e-102">ICorDebugHeapValue2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c6b2e-102">ICorDebugHeapValue2 Interface</span></span>
 
-<span data-ttu-id="fffa0-103">CLR (공용 언어 런타임) 처리에 대 한 지원을 제공 하는 ICorDebugHeapValue의 확장입니다.</span><span class="sxs-lookup"><span data-stu-id="fffa0-103">An extension of ICorDebugHeapValue that provides support for common language runtime (CLR) handles.</span></span>  
+<span data-ttu-id="c6b2e-103">CLR (공용 언어 런타임) 핸들에 대 한 지원을 제공 하는 ICorDebugHeapValue의 확장입니다.</span><span class="sxs-lookup"><span data-stu-id="c6b2e-103">An extension of ICorDebugHeapValue that provides support for common language runtime (CLR) handles.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="fffa0-104">메서드</span><span class="sxs-lookup"><span data-stu-id="fffa0-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="c6b2e-104">메서드</span><span class="sxs-lookup"><span data-stu-id="c6b2e-104">Methods</span></span>  
   
-|<span data-ttu-id="fffa0-105">메서드</span><span class="sxs-lookup"><span data-stu-id="fffa0-105">Method</span></span>|<span data-ttu-id="fffa0-106">설명</span><span class="sxs-lookup"><span data-stu-id="fffa0-106">Description</span></span>|  
+|<span data-ttu-id="c6b2e-105">메서드</span><span class="sxs-lookup"><span data-stu-id="c6b2e-105">Method</span></span>|<span data-ttu-id="c6b2e-106">Description</span><span class="sxs-lookup"><span data-stu-id="c6b2e-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="fffa0-107">CreateHandle 메서드</span><span class="sxs-lookup"><span data-stu-id="fffa0-107">CreateHandle Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|<span data-ttu-id="fffa0-108">이 대 한 지정 된 형식의 핸들을 만들고 `ICorDebugHeapValue2` 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="fffa0-108">Creates a handle of the specified type for this `ICorDebugHeapValue2` object.</span></span>|  
+|[<span data-ttu-id="c6b2e-107">CreateHandle 메서드</span><span class="sxs-lookup"><span data-stu-id="c6b2e-107">CreateHandle Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|<span data-ttu-id="c6b2e-108">이 `ICorDebugHeapValue2` 개체에 대해 지정 된 형식의 핸들을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="c6b2e-108">Creates a handle of the specified type for this `ICorDebugHeapValue2` object.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="fffa0-109">설명</span><span class="sxs-lookup"><span data-stu-id="fffa0-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c6b2e-109">설명</span><span class="sxs-lookup"><span data-stu-id="c6b2e-109">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="fffa0-110">이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fffa0-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="c6b2e-110">이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c6b2e-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fffa0-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="fffa0-111">Requirements</span></span>  
- <span data-ttu-id="fffa0-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="fffa0-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c6b2e-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c6b2e-111">Requirements</span></span>  
+ <span data-ttu-id="c6b2e-112">**플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="c6b2e-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fffa0-113">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fffa0-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c6b2e-113">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c6b2e-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="fffa0-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fffa0-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c6b2e-114">**라이브러리** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c6b2e-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="fffa0-115">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fffa0-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c6b2e-115">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c6b2e-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fffa0-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="fffa0-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c6b2e-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="c6b2e-116">See also</span></span>
 
-- [<span data-ttu-id="fffa0-117">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="fffa0-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="c6b2e-117">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c6b2e-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

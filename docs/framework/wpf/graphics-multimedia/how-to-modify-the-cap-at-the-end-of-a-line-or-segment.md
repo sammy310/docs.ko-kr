@@ -6,27 +6,27 @@ helpviewer_keywords:
 - Shape elements [WPF], caps
 - graphics [WPF], Shape caps
 ms.assetid: f4bf3416-b3d8-4568-b98e-3eda8f6dbf7a
-ms.openlocfilehash: 462e32520393a1c23809cce8eb3c130c13bc882f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 53487417636dae8d855fe70b7b9255351a2dfb1e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947266"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916127"
 ---
-# <a name="how-to-modify-the-cap-at-the-end-of-a-line-or-segment"></a><span data-ttu-id="39519-102">방법: 줄 또는 세그먼트의 끝 모양 수정</span><span class="sxs-lookup"><span data-stu-id="39519-102">How to: Modify the Cap at the End of a Line or Segment</span></span>
-<span data-ttu-id="39519-103">이 예제에는 시작 또는 끝 개방적이 고의 모양을 수정 하는 방법을 보여 줍니다 <xref:System.Windows.Shapes.Shape> 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="39519-103">This example shows how to modify the shape at the start or end of an open <xref:System.Windows.Shapes.Shape> element.</span></span> <span data-ttu-id="39519-104">개방적이 고 시작 부분에도 변경 하려면 <xref:System.Windows.Shapes.Shape>를 사용 하 여 해당 <xref:System.Windows.Shapes.Shape.StrokeStartLineCap%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="39519-104">To change the cap at the beginning of an open <xref:System.Windows.Shapes.Shape>, use its <xref:System.Windows.Shapes.Shape.StrokeStartLineCap%2A> property.</span></span> <span data-ttu-id="39519-105">개방적이 고 끝에도 변경 하려면 <xref:System.Windows.Shapes.Shape>를 사용 하 여 해당 <xref:System.Windows.Shapes.Shape.StrokeEndLineCap%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="39519-105">To change the cap at the end of an open <xref:System.Windows.Shapes.Shape>, use its <xref:System.Windows.Shapes.Shape.StrokeEndLineCap%2A> property.</span></span> <span data-ttu-id="39519-106">사용할 수 있는 선 끝이 보려면 참조는 <xref:System.Windows.Media.PenLineCap> 열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="39519-106">To view the available line caps, see the <xref:System.Windows.Media.PenLineCap> enumeration.</span></span>  
+# <a name="how-to-modify-the-cap-at-the-end-of-a-line-or-segment"></a><span data-ttu-id="9d32e-102">방법: 줄 또는 세그먼트의 끝 모양 수정</span><span class="sxs-lookup"><span data-stu-id="9d32e-102">How to: Modify the Cap at the End of a Line or Segment</span></span>
+<span data-ttu-id="9d32e-103">이 예제에서는 열린 <xref:System.Windows.Shapes.Shape> 요소의 시작 또는 끝에서 셰이프를 수정 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9d32e-103">This example shows how to modify the shape at the start or end of an open <xref:System.Windows.Shapes.Shape> element.</span></span> <span data-ttu-id="9d32e-104">열린 <xref:System.Windows.Shapes.Shape>의 시작 부분에 있는 캡을 변경 하려면 해당 <xref:System.Windows.Shapes.Shape.StrokeStartLineCap%2A> 속성을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="9d32e-104">To change the cap at the beginning of an open <xref:System.Windows.Shapes.Shape>, use its <xref:System.Windows.Shapes.Shape.StrokeStartLineCap%2A> property.</span></span> <span data-ttu-id="9d32e-105">열린 <xref:System.Windows.Shapes.Shape>의 끝에 있는 캡을 변경 하려면 해당 <xref:System.Windows.Shapes.Shape.StrokeEndLineCap%2A> 속성을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="9d32e-105">To change the cap at the end of an open <xref:System.Windows.Shapes.Shape>, use its <xref:System.Windows.Shapes.Shape.StrokeEndLineCap%2A> property.</span></span> <span data-ttu-id="9d32e-106">사용 가능한 선 끝 모양을 보려면 <xref:System.Windows.Media.PenLineCap> 열거를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="9d32e-106">To view the available line caps, see the <xref:System.Windows.Media.PenLineCap> enumeration.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="39519-107">이 속성이 영향을 주는지는 열린 모양을 같은 <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Polyline>, 또는 열린 <xref:System.Windows.Shapes.Path> 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="39519-107">This property only affects an open shape, such as a <xref:System.Windows.Shapes.Line>, a <xref:System.Windows.Shapes.Polyline>, or an open <xref:System.Windows.Shapes.Path> element.</span></span>  
+> <span data-ttu-id="9d32e-107">이 속성은 <xref:System.Windows.Shapes.Line> <xref:System.Windows.Shapes.Polyline>, 또는 열린 <xref:System.Windows.Shapes.Path> 요소와 같은 열린 도형에만 영향을 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9d32e-107">This property only affects an open shape, such as a <xref:System.Windows.Shapes.Line>, a <xref:System.Windows.Shapes.Polyline>, or an open <xref:System.Windows.Shapes.Path> element.</span></span>  
   
- <span data-ttu-id="39519-108">다음 예제에서는 네 개의 <xref:System.Windows.Shapes.Polyline> 요소 각각의 끝에 다양 한 셰이프를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="39519-108">The following example draws four <xref:System.Windows.Shapes.Polyline> elements and uses a different set of shapes on the ends of each.</span></span>  
+ <span data-ttu-id="9d32e-108">다음 예제에서는 4 개의 <xref:System.Windows.Shapes.Polyline> 요소를 그린 다음 각의 끝에 서로 다른 모양 집합을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="9d32e-108">The following example draws four <xref:System.Windows.Shapes.Polyline> elements and uses a different set of shapes on the ends of each.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="39519-109">예제</span><span class="sxs-lookup"><span data-stu-id="39519-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="9d32e-109">예제</span><span class="sxs-lookup"><span data-stu-id="9d32e-109">Example</span></span>  
  [!code-xaml[drawingwithshapeelements#ShapeLineCaps1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/linecapsandjoinsexample.xaml#shapelinecaps1)]  
   
- <span data-ttu-id="39519-110">이 예제는 더 큰 샘플;의 일부 전체 샘플을 참조 하세요 [도형 요소 샘플](https://go.microsoft.com/fwlink/?LinkID=160037)합니다.</span><span class="sxs-lookup"><span data-stu-id="39519-110">This example is part of a larger sample; for the complete sample, see [Shape Elements Sample](https://go.microsoft.com/fwlink/?LinkID=160037).</span></span>  
+ <span data-ttu-id="9d32e-110">이 예제는 더 큰 샘플의 일부입니다. 전체 샘플은 [셰이프 요소 샘플](https://go.microsoft.com/fwlink/?LinkID=160037)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="9d32e-110">This example is part of a larger sample; for the complete sample, see [Shape Elements Sample](https://go.microsoft.com/fwlink/?LinkID=160037).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="39519-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="39519-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9d32e-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="9d32e-111">See also</span></span>
 
 - <xref:System.Windows.Shapes.Polyline>
 - <xref:System.Windows.Media.PenLineCap>
