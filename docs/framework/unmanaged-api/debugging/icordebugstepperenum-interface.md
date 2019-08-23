@@ -16,36 +16,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 89552a099241f1bec61f9aa8a8321ef9932e886c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7336f958019c2f696a9b1a26b075c076cfc84f5d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987443"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953014"
 ---
-# <a name="icordebugstepperenum-interface"></a><span data-ttu-id="5fbcf-102">ICorDebugStepperEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5fbcf-102">ICorDebugStepperEnum Interface</span></span>
-<span data-ttu-id="5fbcf-103">ICorDebugEnum 메서드를 구현 하 고 ICorDebugStepper 배열을 열거 합니다.</span><span class="sxs-lookup"><span data-stu-id="5fbcf-103">Implements ICorDebugEnum methods, and enumerates ICorDebugStepper arrays.</span></span>  
+# <a name="icordebugstepperenum-interface"></a><span data-ttu-id="ebd3a-102">ICorDebugStepperEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ebd3a-102">ICorDebugStepperEnum Interface</span></span>
+<span data-ttu-id="ebd3a-103">ICorDebugEnum 메서드를 구현 하 고 ICorDebugStepper 배열을 열거 합니다.</span><span class="sxs-lookup"><span data-stu-id="ebd3a-103">Implements ICorDebugEnum methods, and enumerates ICorDebugStepper arrays.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="5fbcf-104">메서드</span><span class="sxs-lookup"><span data-stu-id="5fbcf-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="ebd3a-104">메서드</span><span class="sxs-lookup"><span data-stu-id="ebd3a-104">Methods</span></span>  
   
-|<span data-ttu-id="5fbcf-105">메서드</span><span class="sxs-lookup"><span data-stu-id="5fbcf-105">Method</span></span>|<span data-ttu-id="5fbcf-106">설명</span><span class="sxs-lookup"><span data-stu-id="5fbcf-106">Description</span></span>|  
+|<span data-ttu-id="ebd3a-105">메서드</span><span class="sxs-lookup"><span data-stu-id="ebd3a-105">Method</span></span>|<span data-ttu-id="ebd3a-106">Description</span><span class="sxs-lookup"><span data-stu-id="ebd3a-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="5fbcf-107">Next 메서드</span><span class="sxs-lookup"><span data-stu-id="5fbcf-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstepperenum-next-method.md)|<span data-ttu-id="5fbcf-108">지정 된 수를 가져옵니다 `ICorDebugStepper` 인스턴스는 열거형에서 현재 위치에서 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="5fbcf-108">Gets the specified number of `ICorDebugStepper` instances from the enumeration, starting at the current position.</span></span>|  
+|[<span data-ttu-id="ebd3a-107">Next 메서드</span><span class="sxs-lookup"><span data-stu-id="ebd3a-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstepperenum-next-method.md)|<span data-ttu-id="ebd3a-108">현재 위치에서 시작 하 `ICorDebugStepper` 여 열거형에서 지정 된 수의 인스턴스를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="ebd3a-108">Gets the specified number of `ICorDebugStepper` instances from the enumeration, starting at the current position.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="5fbcf-109">설명</span><span class="sxs-lookup"><span data-stu-id="5fbcf-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ebd3a-109">설명</span><span class="sxs-lookup"><span data-stu-id="ebd3a-109">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="5fbcf-110">이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="5fbcf-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="ebd3a-110">이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ebd3a-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5fbcf-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5fbcf-111">Requirements</span></span>  
- <span data-ttu-id="5fbcf-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="5fbcf-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ebd3a-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ebd3a-111">Requirements</span></span>  
+ <span data-ttu-id="ebd3a-112">**플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="ebd3a-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5fbcf-113">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5fbcf-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ebd3a-113">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ebd3a-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5fbcf-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5fbcf-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ebd3a-114">**라이브러리** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ebd3a-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5fbcf-115">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5fbcf-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ebd3a-115">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ebd3a-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5fbcf-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="5fbcf-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ebd3a-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="ebd3a-116">See also</span></span>
 
-- [<span data-ttu-id="5fbcf-117">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5fbcf-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="ebd3a-117">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ebd3a-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

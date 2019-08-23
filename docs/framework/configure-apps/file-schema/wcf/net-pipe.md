@@ -2,20 +2,20 @@
 title: <net.pipe>
 ms.date: 03/30/2017
 ms.assetid: 6a0f0318-f8f6-466c-9fae-199d7274a82e
-ms.openlocfilehash: 885cfad7be42f7c48b4c061f3293d667eb5d4ad8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7d868d84318db8c9fe188293154dc275060a3952
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772348"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933178"
 ---
-# <a name="netpipe"></a><span data-ttu-id="eeb76-102">\<net.pipe></span><span class="sxs-lookup"><span data-stu-id="eeb76-102">\<net.pipe></span></span>
-<span data-ttu-id="eeb76-103">명명된 파이프 연결의 수명을 관리하고 명명된 파이프을 통해 수신되는 활성화 요청을 처리하는 Named Pipe Activation Service의 구성 설정을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="eeb76-103">Specifies configuration settings for the Named Pipe Activation Service, which manages the lifetime of the named pipe connection, and handles activation requests that arrive over named pipes.</span></span>  
+# <a name="netpipe"></a><span data-ttu-id="ef7c6-102">\<net.pipe></span><span class="sxs-lookup"><span data-stu-id="ef7c6-102">\<net.pipe></span></span>
+<span data-ttu-id="ef7c6-103">명명된 파이프 연결의 수명을 관리하고 명명된 파이프을 통해 수신되는 활성화 요청을 처리하는 Named Pipe Activation Service의 구성 설정을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ef7c6-103">Specifies configuration settings for the Named Pipe Activation Service, which manages the lifetime of the named pipe connection, and handles activation requests that arrive over named pipes.</span></span>  
   
- <span data-ttu-id="eeb76-104">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="eeb76-104">\<system.serviceModel.activation></span></span>  
-<span data-ttu-id="eeb76-105">\<net.pipe></span><span class="sxs-lookup"><span data-stu-id="eeb76-105">\<net.pipe></span></span>  
+ <span data-ttu-id="ef7c6-104">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="ef7c6-104">\<system.serviceModel.activation></span></span>  
+<span data-ttu-id="ef7c6-105">\<net.pipe></span><span class="sxs-lookup"><span data-stu-id="ef7c6-105">\<net.pipe></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="eeb76-106">구문</span><span class="sxs-lookup"><span data-stu-id="eeb76-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ef7c6-106">구문</span><span class="sxs-lookup"><span data-stu-id="ef7c6-106">Syntax</span></span>  
   
 ```xml  
 <configuration>
@@ -40,32 +40,32 @@ ms.locfileid: "61772348"
 </configuration>
 ```  
   
-## <a name="type"></a><span data-ttu-id="eeb76-107">형식</span><span class="sxs-lookup"><span data-stu-id="eeb76-107">Type</span></span>  
+## <a name="type"></a><span data-ttu-id="ef7c6-107">형식</span><span class="sxs-lookup"><span data-stu-id="ef7c6-107">Type</span></span>  
  `Type`  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="eeb76-108">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="eeb76-108">Attributes and Elements</span></span>  
- <span data-ttu-id="eeb76-109">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="eeb76-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ef7c6-108">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="ef7c6-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="ef7c6-109">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="ef7c6-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="eeb76-110">특성</span><span class="sxs-lookup"><span data-stu-id="eeb76-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="ef7c6-110">특성</span><span class="sxs-lookup"><span data-stu-id="ef7c6-110">Attributes</span></span>  
   
-|<span data-ttu-id="eeb76-111">특성</span><span class="sxs-lookup"><span data-stu-id="eeb76-111">Attribute</span></span>|<span data-ttu-id="eeb76-112">설명</span><span class="sxs-lookup"><span data-stu-id="eeb76-112">Description</span></span>|  
+|<span data-ttu-id="ef7c6-111">특성</span><span class="sxs-lookup"><span data-stu-id="ef7c6-111">Attribute</span></span>|<span data-ttu-id="ef7c6-112">Description</span><span class="sxs-lookup"><span data-stu-id="ef7c6-112">Description</span></span>|  
 |---------------|-----------------|  
-|`maxPendingAccepts`|<span data-ttu-id="eeb76-113">공유 서비스에 대한 수신 엔드포인트에서 동시에 수용할 수 있는 활성 스레드의 최대 수를 지정하는 정수입니다.</span><span class="sxs-lookup"><span data-stu-id="eeb76-113">An integer that specifies the maximum outstanding concurrent accepting threads on the listening endpoint for the sharing service.</span></span> <span data-ttu-id="eeb76-114">기본값은 2입니다.</span><span class="sxs-lookup"><span data-stu-id="eeb76-114">The default is 2.</span></span>|  
-|`maxPendingConnections`|<span data-ttu-id="eeb76-115">디스패치를 대기할 수 있는 최대 연결 수를 지정하는 정수입니다.</span><span class="sxs-lookup"><span data-stu-id="eeb76-115">An integer that specifies the maximum number of connections that can wait for dispatch.</span></span> <span data-ttu-id="eeb76-116">기본값은 100입니다.</span><span class="sxs-lookup"><span data-stu-id="eeb76-116">The default is 100.</span></span>|  
-|`receiveTimeout`|<span data-ttu-id="eeb76-117">프레이밍 데이터를 읽고 내부 연결에서 연결 디스패치를 수행하는 데 대한 제한 시간을 지정하는 <xref:System.TimeSpan>입니다.</span><span class="sxs-lookup"><span data-stu-id="eeb76-117">A <xref:System.TimeSpan> that specifies the timeout for reading the framing data and performing connection dispatching from the underlining connections.</span></span> <span data-ttu-id="eeb76-118">기본값은 "00:00:10"입니다.</span><span class="sxs-lookup"><span data-stu-id="eeb76-118">The default is "00:00:10"</span></span>|  
+|`maxPendingAccepts`|<span data-ttu-id="ef7c6-113">공유 서비스에 대한 수신 엔드포인트에서 동시에 수용할 수 있는 활성 스레드의 최대 수를 지정하는 정수입니다.</span><span class="sxs-lookup"><span data-stu-id="ef7c6-113">An integer that specifies the maximum outstanding concurrent accepting threads on the listening endpoint for the sharing service.</span></span> <span data-ttu-id="ef7c6-114">기본값은 2입니다.</span><span class="sxs-lookup"><span data-stu-id="ef7c6-114">The default is 2.</span></span>|  
+|`maxPendingConnections`|<span data-ttu-id="ef7c6-115">디스패치를 대기할 수 있는 최대 연결 수를 지정하는 정수입니다.</span><span class="sxs-lookup"><span data-stu-id="ef7c6-115">An integer that specifies the maximum number of connections that can wait for dispatch.</span></span> <span data-ttu-id="ef7c6-116">기본값은 100입니다.</span><span class="sxs-lookup"><span data-stu-id="ef7c6-116">The default is 100.</span></span>|  
+|`receiveTimeout`|<span data-ttu-id="ef7c6-117">프레이밍 데이터를 읽고 내부 연결에서 연결 디스패치를 수행하는 데 대한 제한 시간을 지정하는 <xref:System.TimeSpan>입니다.</span><span class="sxs-lookup"><span data-stu-id="ef7c6-117">A <xref:System.TimeSpan> that specifies the timeout for reading the framing data and performing connection dispatching from the underlining connections.</span></span> <span data-ttu-id="ef7c6-118">기본값은 "00:00:10"입니다.</span><span class="sxs-lookup"><span data-stu-id="ef7c6-118">The default is "00:00:10"</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="eeb76-119">자식 요소</span><span class="sxs-lookup"><span data-stu-id="eeb76-119">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="ef7c6-119">자식 요소</span><span class="sxs-lookup"><span data-stu-id="ef7c6-119">Child Elements</span></span>  
   
-|<span data-ttu-id="eeb76-120">요소</span><span class="sxs-lookup"><span data-stu-id="eeb76-120">Element</span></span>|<span data-ttu-id="eeb76-121">설명</span><span class="sxs-lookup"><span data-stu-id="eeb76-121">Description</span></span>|  
+|<span data-ttu-id="ef7c6-120">요소</span><span class="sxs-lookup"><span data-stu-id="ef7c6-120">Element</span></span>|<span data-ttu-id="ef7c6-121">Description</span><span class="sxs-lookup"><span data-stu-id="ef7c6-121">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="eeb76-122">\<allowAccounts></span><span class="sxs-lookup"><span data-stu-id="eeb76-122">\<allowAccounts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|<span data-ttu-id="eeb76-123">포함 된 구성 요소의 컬렉션을 `securityIdentifier` WCF 서비스를 호스팅하고 공유 서비스에 대 한 연결 액세스 권한이 부여 된 프로세스에 대 한 사용자 계정을 지정 하는 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="eeb76-123">A collection of configuration elements that contain a `securityIdentifier` attribute to specify user accounts for processes that host WCF services, and are granted connection access to the sharing service.</span></span>|  
+|[<span data-ttu-id="ef7c6-122">\<allowAccounts></span><span class="sxs-lookup"><span data-stu-id="ef7c6-122">\<allowAccounts></span></span>](allowaccounts.md)|<span data-ttu-id="ef7c6-123">WCF 서비스를 호스팅하고 공유 서비스에 대 `securityIdentifier` 한 연결 액세스 권한이 부여 된 프로세스의 사용자 계정을 지정 하는 특성을 포함 하는 구성 요소 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="ef7c6-123">A collection of configuration elements that contain a `securityIdentifier` attribute to specify user accounts for processes that host WCF services, and are granted connection access to the sharing service.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="eeb76-124">부모 요소</span><span class="sxs-lookup"><span data-stu-id="eeb76-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="ef7c6-124">부모 요소</span><span class="sxs-lookup"><span data-stu-id="ef7c6-124">Parent Elements</span></span>  
   
-|<span data-ttu-id="eeb76-125">요소</span><span class="sxs-lookup"><span data-stu-id="eeb76-125">Element</span></span>|<span data-ttu-id="eeb76-126">설명</span><span class="sxs-lookup"><span data-stu-id="eeb76-126">Description</span></span>|  
+|<span data-ttu-id="ef7c6-125">요소</span><span class="sxs-lookup"><span data-stu-id="ef7c6-125">Element</span></span>|<span data-ttu-id="ef7c6-126">Description</span><span class="sxs-lookup"><span data-stu-id="ef7c6-126">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="eeb76-127">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="eeb76-127">\<system.serviceModel.activation></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|<span data-ttu-id="eeb76-128">수신기 프로세스 SMSvcHost.exe에 대한 구성 설정을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="eeb76-128">Contains configuration settings for the listener process SMSvcHost.exe.</span></span>|  
+|[<span data-ttu-id="ef7c6-127">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="ef7c6-127">\<system.serviceModel.activation></span></span>](system-servicemodel-activation.md)|<span data-ttu-id="ef7c6-128">수신기 프로세스 SMSvcHost.exe에 대한 구성 설정을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="ef7c6-128">Contains configuration settings for the listener process SMSvcHost.exe.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="eeb76-129">참고자료</span><span class="sxs-lookup"><span data-stu-id="eeb76-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ef7c6-129">참고자료</span><span class="sxs-lookup"><span data-stu-id="ef7c6-129">See also</span></span>
 
 - <xref:System.ServiceModel.Activation.Configuration.NetPipeSection>
