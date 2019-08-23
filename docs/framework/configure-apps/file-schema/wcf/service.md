@@ -2,12 +2,12 @@
 title: <service>
 ms.date: 03/30/2017
 ms.assetid: 13123dd6-c4a9-4a04-a984-df184b851788
-ms.openlocfilehash: 68bddc01b02d9885b3f0fc4c2cbc5c3249de03f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69f3c70514fc2bcab1b4ef6a45036de98d1af7b7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670402"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936520"
 ---
 # <a name="service"></a>\<service>
 `service` 요소에는 WCF(Windows Communication Foundation) 서비스 설정이 포함되어 있습니다. 이 요소에는 서비스를 공개하는 엔드포인트도 포함되어 있습니다.  
@@ -29,23 +29,23 @@ ms.locfileid: "61670402"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
 |behaviorConfiguration|서비스 인스턴스화에 사용할 동작의 동작 이름을 포함하는 문자열입니다. 동작 이름은 서비스가 정의된 지점의 범위에 속해야 합니다. 기본값은 빈 문자열입니다.|  
 |name|인스턴스화할 서비스 형식을 지정하는 필수 문자열 특성입니다. 이 설정은 유효한 형식을 사용해야 하며, Namespace.Class`Namespace.Class.` 형식이어야 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)|이 서비스를 공개하는 `endpoint` 요소의 컬렉션입니다.|  
-|[\<host>](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|이 서비스 인스턴스의 호스트를 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.HostElement> 형식입니다.|  
+|[\<endpoint>](endpoint-element.md)|이 서비스를 공개하는 `endpoint` 요소의 컬렉션입니다.|  
+|[\<host>](host.md)|이 서비스 인스턴스의 호스트를 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.HostElement> 형식입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<services>](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)|모든 WCF 구성 요소의 루트 요소입니다.|  
+|[\<services>](services.md)|모든 WCF 구성 요소의 루트 요소입니다.|  
   
 ## <a name="remarks"></a>설명  
  서비스는 구성 파일의 `services` 섹션에 정의됩니다. 어셈블리에는 여러 개의 서비스가 포함될 수 있습니다. 서비스별로 해당 `service` 구성 섹션이 있습니다. 이 단원 및 내용에서는 특정 서비스의 서비스 계약, 동작 및 엔드포인트를 정의합니다.  
@@ -71,4 +71,4 @@ ms.locfileid: "61670402"
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.ServiceModel.Configuration.ServiceElement>
-- [서비스 구성](../../../../../docs/framework/wcf/configuring-services.md)
+- [서비스 구성](../../../wcf/configuring-services.md)

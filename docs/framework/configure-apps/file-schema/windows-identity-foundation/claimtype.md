@@ -3,15 +3,15 @@ title: <claimType>
 ms.date: 03/30/2017
 ms.assetid: d17b5831-9a2c-45c4-b0d1-68f48e72e861
 author: BrucePerlerMS
-ms.openlocfilehash: 6bc185572528d4229ee53f1421eaa5bf27b053e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4253aec961b812b6893ee201861d2ab38048032a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667225"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942874"
 ---
 # <a name="claimtype"></a>\<claimType>
-들어오는 보안 토큰에 대 한 단일 옵션 또는 필요한 클레임을 지정합니다.  
+들어오는 보안 토큰에 대 한 단일 선택적 또는 필수 클레임을 지정 합니다.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -36,10 +36,10 @@ ms.locfileid: "61667225"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
 |type|클레임 형식입니다. 일반적으로 URI입니다. 필수 요소.|  
-|선택적|클레임 형식이 선택 사항 인지 여부를 지정 하는 부울 값입니다. 선택 사항입니다.|  
+|선택적|클레임 형식이 선택적인 지 여부를 지정 하는 부울 값입니다. 선택 사항입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -48,4 +48,4 @@ ms.locfileid: "61667225"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<claimTypeRequired>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|들어오는 보안 토큰에 대 한 필수 클레임 집합을 지정 합니다.|
+|[\<claimTypeRequired>](claimtyperequired.md)|들어오는 보안 토큰에 대 한 필수 클레임 집합을 지정 합니다.|

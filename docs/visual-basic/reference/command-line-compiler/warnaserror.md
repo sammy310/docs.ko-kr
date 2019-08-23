@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /warnaserror compiler option [Visual Basic]
 - -warnaserror compiler option [Visual Basic]
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
-ms.openlocfilehash: c06326a250fba0de2f63e13672b4fffbfa8a07f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4382ec8feda2df1e83fd2fdc509abb66984e501f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796177"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937248"
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror(Visual Basic)
 컴파일러가 첫 번째 발생하는 경고를 오류로 처리하도록 만듭니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "61796177"
  몇 개의 특정 경고만 오류로 처리하려는 경우 오류로 처리할 경고 번호의 쉼표로 구분된 목록을 지정할 수 있습니다.  
   
 > [!NOTE]
->  `-warnaserror` 옵션은 경고가 표시되는 방법을 제어하지 않습니다. 경고를 사용하지 않도록 설정하려면 [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md) 옵션을 사용합니다.  
+> `-warnaserror` 옵션은 경고가 표시되는 방법을 제어하지 않습니다. 경고를 사용하지 않도록 설정하려면 [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md) 옵션을 사용합니다.  
   
 |Visual Studio IDE에서 모든 경고를 오류로 처리하도록 -warnaserror을 설정하려면|  
 |---|  

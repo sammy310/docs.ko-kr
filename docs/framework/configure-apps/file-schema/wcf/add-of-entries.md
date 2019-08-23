@@ -2,12 +2,12 @@
 title: <entries>의 <add>
 ms.date: 03/30/2017
 ms.assetid: 3af4805b-dc72-4f68-b168-da4fba8c6170
-ms.openlocfilehash: 3052a7570d1d93836603454817be921b37d26060
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 690fd07159e07b7e037f7330b31fdcba423e80f9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658833"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920124"
 ---
 # <a name="add-of-entries"></a>\<\<항목 > 추가 >
 이전에 정의된 클라이언트 엔드포인트에 필터를 매핑하는 라우팅 항목을 나타냅니다. 이 필터와 일치하는 메시지가 해당 대상으로 전송됩니다.  
@@ -53,9 +53,9 @@ ms.locfileid: "69658833"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|라우팅 매핑 항목을 포함하는 구성 섹션입니다.|  
+|[\<routing>](routing.md)|라우팅 매핑 항목을 포함하는 구성 섹션입니다.|  
   
 ## <a name="see-also"></a>참고자료
 

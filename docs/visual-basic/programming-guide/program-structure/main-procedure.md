@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: b6c8ec4052d834d410df7fef12e59434f5fdfb44
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 19c6fcb04a373d782db3deafc732f69bf20e7f0e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039976"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962769"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Visual Basic의 Main 프로시저
 모든 Visual Basic 응용 프로그램은 라는 `Main`프로시저를 포함 해야 합니다. 이 절차는 응용 프로그램에 대 한 시작 지점 및 전반적인 제어 역할을 합니다. .NET Framework는 응용 프로그램 `Main` 을 로드 하 고 제어를 전달할 준비가 되었을 때 프로시저를 호출 합니다. Windows Forms 응용 프로그램을 만드는 경우를 제외 하 고 자체적으로 `Main` 실행 되는 응용 프로그램에 대 한 프로시저를 작성 해야 합니다.
@@ -33,7 +33,7 @@ ms.locfileid: "69039976"
  프로시저를 `Main` 선언 하는 방법에는 네 가지가 있습니다. 인수를 사용할 수 있으며 값을 반환할 수 있습니다.
 
 > [!NOTE]
->  클래스에서를 `Main` 선언 하는 경우 키워드를 `Shared` 사용 해야 합니다. 모듈 `Main` 에서는 일 `Shared`필요가 없습니다.
+> 클래스에서를 `Main` 선언 하는 경우 키워드를 `Shared` 사용 해야 합니다. 모듈 `Main` 에서는 일 `Shared`필요가 없습니다.
 
 - 가장 간단한 방법은 인수를 사용 하지 `Sub` 않거나 값을 반환 하지 않는 프로시저를 선언 하는 것입니다.
 

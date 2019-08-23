@@ -2,12 +2,12 @@
 title: CAST(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: 743c90cd9bc77a89051c59a217befa4275b28572
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 253dcf092deadd1049d0556af4ea0630602110d0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489954"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935823"
 ---
 # <a name="cast-entity-sql"></a>CAST(Entity SQL)
 데이터 형식의 식을 다른 형식의 식으로 변환합니다.  
@@ -29,7 +29,7 @@ CAST ( expression AS data_type )
  `data_type`와 동일한 값을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- Cast 식은 Transact SQL 변환 식으로 유사한 의미 체계를 있습니다. CAST 식은 한 형식의 값을 다른 형식의 값으로 변환하는 데 사용됩니다.  
+ Cast 식의 의미 체계가 Transact-sql CONVERT 식의 의미 체계와 유사 합니다. CAST 식은 한 형식의 값을 다른 형식의 값으로 변환하는 데 사용됩니다.  
   
 ```  
 CAST( e as T )  
@@ -48,12 +48,12 @@ CAST( e as T )
  CAST 식 사용은 명시적인 변환으로 간주되며, 명시적인 변환이 발생하면 데이터가 잘리거나 전체 자릿수가 손실될 수 있습니다.  
   
 > [!NOTE]
->  CAST는 기본 형식 및 열거형 멤버 형식에 대해서만 지원됩니다.  
+> CAST는 기본 형식 및 열거형 멤버 형식에 대해서만 지원됩니다.  
   
 ## <a name="example"></a>예제  
  다음 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 쿼리에서는 CAST 연산자를 사용하여 한 데이터 형식의 식을 다른 데이터 형식의 식으로 캐스팅합니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  
   
-1. 절차에 따라 [방법: PrimitiveType 결과 반환 하는 쿼리 실행](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)합니다.  
+1. [방법: PrimitiveType 결과](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)를 반환 하는 쿼리를 실행 합니다.  
   
 2. 다음 쿼리를 `ExecutePrimitiveTypeQuery` 메서드에 인수로 전달합니다.  
   

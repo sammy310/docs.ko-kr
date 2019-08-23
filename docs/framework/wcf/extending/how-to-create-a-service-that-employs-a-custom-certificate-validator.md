@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-ms.openlocfilehash: b7e8e4a750aadd8a84a57cdf22c01f6b91e6256c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 156d661fd5602333fae8066f3062b442a1df19af
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767158"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951701"
 ---
 # <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>방법: 사용자 지정 인증서 유효성 검사기를 사용하는 서비스 만들기
 이 항목에서는 사용자 지정 인증서 유효성 검사기를 구현하는 방법과 클라이언트 또는 서비스 자격 증명을 구성하여 기본 인증서 유효성 검사 논리를 사용자 지정 인증서 유효성 검사기로 바꾸는 방법을 보여 줍니다.  
   
- X.509 인증서를 클라이언트 또는 서비스 인증을 사용 하는 경우 기본적으로 Windows Communication Foundation (WCF) 사용 하 여 Windows 인증서 저장소와 Crypto API 인증서의 유효성을 검사 하는 데 신뢰할 수 있는 것을 확인 합니다. 기본 제공 인증서 유효성 검사 기능으로 충분하지 않은 경우에는 변경해야 합니다. WCF는 사용자 지정 인증서 유효성 검사기를 추가 하는 사용자를 허용 하 여 유효성 검사 논리를 변경 하는 쉬운 방법을 제공 합니다. 사용자 지정 인증서 유효성 검사기를 지정 된 경우 WCF는 기본 제공 인증서 유효성 검사 논리를 사용 하지 않습니다 하지만 대신 사용자 지정 유효성 검사기에 의존 합니다.  
+ X.509 인증서가 클라이언트 또는 서비스를 인증 하는 데 사용 되는 경우 기본적으로 WCF (Windows Communication Foundation)는 Windows 인증서 저장소 및 Crypto API를 사용 하 여 인증서의 유효성을 검사 하 고 신뢰할 수 있는지 확인 합니다. 기본 제공 인증서 유효성 검사 기능으로 충분하지 않은 경우에는 변경해야 합니다. WCF는 사용자가 사용자 지정 인증서 유효성 검사기를 추가할 수 있도록 하 여 유효성 검사 논리를 쉽게 변경 하는 방법을 제공 합니다. 사용자 지정 인증서 유효성 검사기가 지정 된 경우 WCF는 기본 제공 인증서 유효성 검사 논리를 사용 하지 않고 대신 사용자 지정 유효성 검사기를 사용 합니다.  
   
 ## <a name="procedures"></a>절차  
   
@@ -28,22 +28,22 @@ ms.locfileid: "61767158"
 2. 추상 <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> 메서드를 구현합니다. 유효성을 검사해야 하는 인증서는 인수로 메서드에 전달됩니다. 전달된 인증서가 유효성 검사 논리에 따라 유효하지 않은 경우 이 메서드는 <xref:System.IdentityModel.Tokens.SecurityTokenValidationException>을 throw합니다. 인증서가 유효하면 메서드가 호출자에게 반환됩니다.  
   
     > [!NOTE]
-    >  인증 오류를 다시 클라이언트에 반환하려면 <xref:System.ServiceModel.FaultException> 메서드에서 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A>을 throw합니다.  
+    > 인증 오류를 다시 클라이언트에 반환하려면 <xref:System.ServiceModel.FaultException> 메서드에서 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A>을 throw합니다.  
   
  [!code-csharp[c_CustomCertificateValidator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcertificatevalidator/cs/source.cs#2)]
  [!code-vb[c_CustomCertificateValidator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcertificatevalidator/vb/source.vb#2)]  
   
 #### <a name="to-specify-a-custom-certificate-validator-in-service-configuration"></a>서비스 구성에 사용자 지정 인증서 유효성 검사기를 지정하려면  
   
-1. 추가 [ \<동작 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) 요소와 [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) 하는 [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) 요소.  
+1. 비헤이비어의 > 요소와 [ \<servicebehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) 를 [ \<system.servicemodel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) 요소에 추가 합니다. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
   
-2. 추가 [ \<동작 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) 설정 하 고는 `name` 특성을 적절 한 값으로.  
+2. 동작 > 추가 하 고 `name` 특성을 적절 한 값으로 설정 합니다. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)  
   
-3. 추가 된 [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) 에 `<behavior>` 요소.  
+3. 요소에 [ \<serviceCredentials](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) `<behavior>` >를 추가 합니다.  
   
 4. `<clientCertificate>` 요소를 `<serviceCredentials>` 요소에 추가합니다.  
   
-5. 추가 [ \<인증 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) 에 `<clientCertificate>` 요소입니다.  
+5. 요소에`<clientCertificate>`인증> 을 추가 합니다. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)  
   
 6. `customCertificateValidatorType` 특성을 유효성 검사기 형식으로 설정합니다. 다음 예제에서는 특성을 형식의 네임스페이스 및 이름으로 설정합니다.  
   
@@ -69,17 +69,17 @@ ms.locfileid: "61767158"
   
 #### <a name="to-specify-a-custom-certificate-validator-using-configuration-on-the-client"></a>클라이언트에 구성을 사용하여 사용자 지정 인증서 유효성 검사기를 지정하려면  
   
-1. 추가 [ \<동작 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) 요소와 [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) 하는 [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) 요소.  
+1. 비헤이비어의 > 요소와 [ \<servicebehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) 를 [ \<system.servicemodel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) 요소에 추가 합니다. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
   
-2. 추가 된 [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) 요소입니다.  
+2. [ \<Endpointbehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) 요소를 추가 합니다.  
   
 3. `<behavior>` 요소를 추가하고 `name` 특성을 적절한 값으로 설정합니다.  
   
-4. 추가 된 [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) 요소입니다.  
+4. [ \<ClientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) 요소를 추가 합니다.  
   
-5. 추가 된 [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)합니다.  
+5. [ \<ServiceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)를 추가 합니다.  
   
-6. 추가 된 [ \<인증 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) 다음 예제와 같이 합니다.  
+6. 다음 예제와 같이 [ 인증>을추가합니다.\<](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
 7. `customCertificateValidatorType` 특성을 유효성 검사기 형식으로 설정합니다.  
   
@@ -116,13 +116,13 @@ ms.locfileid: "61767158"
   
 #### <a name="to-specify-a-custom-certificate-validator-using-code-on-the-client"></a>클라이언트에 코드를 사용하여 사용자 지정 인증서 유효성 검사기를 지정하려면  
   
-1. <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> 속성을 사용하여 사용자 지정 인증서 유효성 검사기를 지정합니다. <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> 속성을 사용하여 클라이언트 자격 증명에 액세스할 수 있습니다. (생성 된 클라이언트 클래스 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 항상에서 파생 되는 <xref:System.ServiceModel.ClientBase%601> 클래스입니다.)  
+1. <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> 속성을 사용하여 사용자 지정 인증서 유효성 검사기를 지정합니다. <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> 속성을 사용하여 클라이언트 자격 증명에 액세스할 수 있습니다. [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 에서 생성 된 클라이언트 클래스는 항상 <xref:System.ServiceModel.ClientBase%601> 클래스에서 파생 됩니다.  
   
 2. <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> 속성을 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>으로 설정합니다.  
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>설명  
+### <a name="description"></a>Description  
  다음 샘플에서는 서비스에 사용자 지정 인증서 유효성 검사기를 구현하고 사용하는 방법을 보여 줍니다.  
   
 ### <a name="code"></a>코드  

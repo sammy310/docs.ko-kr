@@ -9,18 +9,18 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: f92b35757feed0dbe75394f183420780a1366ced
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 220b86c0de57e60036527bb49f2d8de46390a9ed
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661852"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929787"
 ---
 # <a name="how-to-validate-application-settings"></a>방법: 애플리케이션 설정 업데이트
 
 이 항목에서는 애플리케이션 설정이 유지되기 전에 유효성을 검사하는 방법을 설명합니다.
 
-애플리케이션 설정이 강력한 형식이기 때문에 사용자가 지정된 설정에 잘못된 형식의 데이터를 할당할 수 없다는 점이 어느 정도 보장됩니다. 그러나 사용자가 설정에 허용 가능한 범위 밖의 값을 할당하려고 시도할 수 있습니다(예: 미래의 생년월일 제공). <xref:System.Configuration.ApplicationSettingsBase>에서 모든 응용 프로그램 설정 클래스의 부모 클래스는 이러한 범위 검사를 사용 하도록 설정 하려면 4 개의 이벤트를 노출 합니다. 이러한 이벤트를 처리하면 모든 유효성 검사 코드를 프로젝트 전체에 분산하지 않고 단일 위치에 배치합니다.
+애플리케이션 설정이 강력한 형식이기 때문에 사용자가 지정된 설정에 잘못된 형식의 데이터를 할당할 수 없다는 점이 어느 정도 보장됩니다. 그러나 사용자가 설정에 허용 가능한 범위 밖의 값을 할당하려고 시도할 수 있습니다(예: 미래의 생년월일 제공). <xref:System.Configuration.ApplicationSettingsBase>모든 응용 프로그램 설정 클래스의 부모 클래스인는 이러한 범위 검사를 사용 하도록 설정 하는 네 개의 이벤트를 노출 합니다. 이러한 이벤트를 처리하면 모든 유효성 검사 코드를 프로젝트 전체에 분산하지 않고 단일 위치에 배치합니다.
 
 다음 표에 설명된 대로 사용할 이벤트는 설정의 유효성을 검사해야 하는 경우에 따라 다릅니다.
 
@@ -31,7 +31,7 @@ ms.locfileid: "67661852"
 |<xref:System.Configuration.ApplicationSettingsBase.PropertyChanged>|단일 설정 속성의 값이 변경된 후에 발생합니다.<br /><br /> 이 이벤트를 사용하여 단일 속성을 변경한 후에 유효성을 검사합니다. 이 이벤트는 시간이 오래 걸리는 비동기 유효성 검사 프로세스가 필요한 경우가 아니면 거의 유효성 검사에 사용되지 않습니다.|
 |<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>|설정 속성 그룹이 저장되기 전에 발생합니다.<br /><br /> 이 이벤트를 사용하여 전체 속성 그룹 값을 디스크에 유지하기 전에 유효성을 검사합니다.|
 
-일반적으로 유효성을 검사하기 위해 동일한 애플리케이션 내에서 이러한 모든 이벤트를 사용하지 않습니다. 예를 들어 것만 처리 하 여 모든 유효성 검사 요구 사항을 충족할 수는 <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> 이벤트입니다.
+일반적으로 유효성을 검사하기 위해 동일한 애플리케이션 내에서 이러한 모든 이벤트를 사용하지 않습니다. 예를 들어 <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> 이벤트를 처리 하 여 모든 유효성 검사 요구 사항을 충족할 수 있습니다.
 
 이벤트 처리기가 잘못된 값을 감지하면 일반적으로 다음 작업 중 하나를 수행합니다.
 
@@ -39,11 +39,11 @@ ms.locfileid: "67661852"
 
 - 정보에 대한 서버 코드의 사용자를 다시 쿼리합니다.
 
-- 와 같은 관련된 된 작업 전에 발생 하는 이벤트에 대 한 <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> 하 고 <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>를 사용 하 여는 <xref:System.ComponentModel.CancelEventArgs> 작업을 취소 하는 인수.
+- 및 <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> <xref:System.ComponentModel.CancelEventArgs> 와 같이 관련 된 작업 이전에 발생 한 이벤트의 경우 인수를 사용 하 여 작업을 취소 합니다. <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>
 
 이벤트를 처리하는 방법에 대한 자세한 내용은 [이벤트 처리기 개요](../event-handlers-overview-windows-forms.md)를 참조하세요.
 
-다음 절차 중 하나를 사용 하 여 올바른 생년월일을 테스트 하는 방법을 표시 합니다 <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> 또는 <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> 이벤트입니다. 프로시저는 애플리케이션 설정을 이미 만들었다는 가정 하에서 작성되었습니다. 이 예제에서는 `DateOfBirth`라는 설정에 대한 범위 검사를 수행합니다. 설정을 만드는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 응용 프로그램 설정 만들기](how-to-create-application-settings.md)합니다.
+다음 절차에서는 <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> 또는 이벤트를 사용 하 여 유효한 생년월일을 테스트 하는 방법을 보여 줍니다. 프로시저는 애플리케이션 설정을 이미 만들었다는 가정 하에서 작성되었습니다. 이 예제에서는 `DateOfBirth`라는 설정에 대한 범위 검사를 수행합니다. 설정을 [만드는 방법에 대 한 자세한 내용은 방법: 응용 프로그램 설정을](how-to-create-application-settings.md)만듭니다.
 
 ### <a name="to-obtain-the-application-settings-object"></a>애플리케이션 설정 개체를 가져오려면
 
@@ -61,11 +61,11 @@ ms.locfileid: "67661852"
 
     -또는-
 
-  - 사용자가 Visual Basic 개발자이며 프로젝트 디자이너를 사용하여 애플리케이션 설정을 만든 경우 [My.Settings 개체](~/docs/visual-basic/language-reference/objects/my-settings-object.md)를 사용하여 설정을 검색할 수 있습니다.
+  - 사용자가 Visual Basic 개발자이며 프로젝트 디자이너를 사용하여 애플리케이션 설정을 만든 경우 [My.Settings 개체](../../../visual-basic/language-reference/objects/my-settings-object.md)를 사용하여 설정을 검색할 수 있습니다.
 
     -또는-
 
-  - 파생 하 여 설정을 만든 경우 <xref:System.Configuration.ApplicationSettingsBase> 직접 클래스를 수동으로 인스턴스화해야 해야 합니다.
+  - 에서 <xref:System.Configuration.ApplicationSettingsBase> 직접 파생 시켜 설정을 만든 경우 클래스를 수동으로 인스턴스화해야 합니다.
 
     ```csharp
     MyCustomSettings settings = new MyCustomSettings();
@@ -79,7 +79,7 @@ ms.locfileid: "67661852"
 
 ### <a name="to-validate-application-settings-when-a-setting-is-changing"></a>설정이 변경될 때 애플리케이션 설정 유효성을 검사하려면
 
-1. 경우는 C# 양식이 나 컨트롤의 개발자 `Load` 이벤트에 대 한 이벤트 처리기를 추가 합니다 <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> 이벤트입니다.
+1. 폼 이나 컨트롤의 C# `Load` 이벤트에서 개발자 인 경우 <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> 이벤트에 대 한 이벤트 처리기를 추가 합니다.
 
     -또는-
 
@@ -127,7 +127,7 @@ ms.locfileid: "67661852"
 
 ### <a name="to-validate-application-settings-when-a-save-occurs"></a>저장이 발생할 때 애플리케이션 설정의 유효성을 검사하려면
 
-1. 양식이 나 컨트롤의 `Load` 이벤트에 대 한 이벤트 처리기를 추가 합니다 <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> 이벤트입니다.
+1. 양식이 나 컨트롤 `Load` 의 이벤트에서 이벤트 <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> 에 대 한 이벤트 처리기를 추가 합니다.
 
     ```csharp
     public void Form1_Load(Object sender, EventArgs e)

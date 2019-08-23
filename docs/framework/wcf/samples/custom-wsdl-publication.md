@@ -2,12 +2,12 @@
 title: 사용자 지정 WSDL 게시
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: 6b83f225c7c410c3f7dc86f39978b5fef32ae3f5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc0731276fcf9178403fd434e03a0666d11ac1f0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650160"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953585"
 ---
 # <a name="custom-wsdl-publication"></a>사용자 지정 WSDL 게시
 이 샘플을 통해 다음을 수행하는 방법을 알 수 있습니다.  
@@ -18,10 +18,10 @@ ms.locfileid: "64650160"
   
 - 사용자 지정 계약 동작과 사용자 지정 작업 동작에 각각 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> 및 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType>을 구현하여 가져온 주석을 가져온 계약 및 작업의 CodeDOM에 주석으로 씁니다.  
   
-- 사용 하 여는 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> WSDL을 다운로드 하는 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> 사용자 지정 WSDL 가져오기를 사용 하 여 WSDL을 가져오려면 및 <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> / / /으로 WSDL 주석 사용 하 여 Windows Communication Foundation (WCF) 클라이언트 코드를 생성 및 ' ' 주석 C# 및 Visual 기본입니다.  
+- 을 사용 하 여 wsdl을 다운로드 하 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> 고,를 사용 하 여 사용자 지정 wsdl 가져오기를 사용 하 여 wsdl을 가져오고,를 사용 하 여 및에서 C# wsdl 주석이///및 ' ' ' 주석으로 Windows Communication Foundation (WCF) 클라이언트 코드를 생성 합니다 <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType>. <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> Visual Basic.  
   
 > [!NOTE]
->  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
+> 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
 ## <a name="service"></a>서비스  
  이 샘플의 서비스에는 두 개의 사용자 지정 특성이 표시되어 있습니다. 첫 특성인 `WsdlDocumentationAttribute`에서는 생성자의 문자열을 받으며 적용하면 사용을 설명하는 문자열에 계약 인터페이스 또는 작업을 제공할 수 있습니다. 둘째 특성인 `WsdlParamOrReturnDocumentationAttribute`는 적용하면 작업의 값을 설명하는 값 또는 매개 변수를 반환할 수 있습니다. 다음 예에서는 이 특성을 사용하여 설명한 서비스 계약인 `ICalculator`가 표시됩니다.  
@@ -215,8 +215,8 @@ public void GenerateOperation(OperationContractGenerationContext context)
 }  
 ```  
   
-## <a name="the-client-application"></a>클라이언트 응용 프로그램  
- 클라이언트 응용 프로그램에서는 응용 프로그램 구성 파일에 사용자 지정 WSDL 가져오기를 지정하여 로드합니다.  
+## <a name="the-client-application"></a>클라이언트 애플리케이션  
+ 클라이언트 애플리케이션에서는 애플리케이션 구성 파일에 사용자 지정 WSDL 가져오기를 지정하여 로드합니다.  
   
 ```xml  
 <client>  
@@ -231,7 +231,7 @@ public void GenerateOperation(OperationContractGenerationContext context)
 </client>  
 ```  
   
- WCF 메타 데이터 시스템에 사용자 지정 가져오기를 로드 사용자 지정 가져오기를 지정 되 면 <xref:System.ServiceModel.Description.WsdlImporter> 해당 용도로 작성 합니다. 이 샘플에서는 <xref:System.ServiceModel.Description.MetadataExchangeClient>를 사용하여 메타데이터를 다운로드하고, 올바르게 구성된 <xref:System.ServiceModel.Description.WsdlImporter>를 사용하여 샘플로 만든 사용자 지정 가져오기를 통해 메타데이터를 가져오고, <xref:System.ServiceModel.Description.ServiceContractGenerator>를 사용하여 Visual Studio에서 Intellisense 지원을 위해 사용하거나 XML 문서에 컴파일할 수 있는 Visual Basic 및 C# 클라이언트 코드로 수정된 계약 정보를 컴파일합니다.  
+ 사용자 지정 가져오기가 지정 된 후에는 WCF 메타 데이터 시스템에서 사용자 지정 가져오기를 해당 목적 <xref:System.ServiceModel.Description.WsdlImporter> 으로 만든에 로드 합니다. 이 샘플에서는 <xref:System.ServiceModel.Description.MetadataExchangeClient>를 사용하여 메타데이터를 다운로드하고, 올바르게 구성된 <xref:System.ServiceModel.Description.WsdlImporter>를 사용하여 샘플로 만든 사용자 지정 가져오기를 통해 메타데이터를 가져오고, <xref:System.ServiceModel.Description.ServiceContractGenerator>를 사용하여 Visual Studio에서 Intellisense 지원을 위해 사용하거나 XML 문서에 컴파일할 수 있는 Visual Basic 및 C# 클라이언트 코드로 수정된 계약 정보를 컴파일합니다.  
   
 ```  
 /// From WSDL Documentation:  
@@ -289,17 +289,17 @@ public interface ICalculator
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1. 수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
+1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.  
   
 2. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
   
-3. 단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
+3. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\WsdlDocumentation`  

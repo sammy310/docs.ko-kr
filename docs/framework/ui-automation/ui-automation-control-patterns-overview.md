@@ -5,23 +5,23 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 259594858e96897cb377cde4104e17b748f902c4
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 30e8619e70da46cb510fbe28ab2e8bcf27621e19
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971816"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963307"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI 자동화 컨트롤 패턴 개요
 > [!NOTE]
->  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  이 개요에서는 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 컨트롤 패턴을 소개합니다. 컨트롤 패턴은 컨트롤 형식 및 컨트롤의 모양에 관계없이 컨트롤의 기능을 분류하고 노출하는 방법을 제공합니다.  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 은 컨트롤 패턴을 사용하여 공통된 컨트롤 동작을 나타냅니다. 예를 들어, 호출할 수 있는 컨트롤(예: 단추)에 대해 Invoke 컨트롤 패턴을 사용하고 스크롤 막대가 있는 컨트롤(예: 목록 상자, 목록 뷰 또는 콤보 상자)에 대해 Scroll 컨트롤 패턴을 사용합니다. 각 컨트롤 패턴은 별도 기능을 나타내므로 컨트롤 패턴을 조합하여 특정 컨트롤에서 지원하는 기능의 전체 집합을 설명할 수 있습니다.  
   
 > [!NOTE]
->  부모 컨트롤이 노출한 기능에 대한 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 를 제공하는 하위 컨트롤을 사용하여 빌드된 집계 컨트롤은 각 하위 컨트롤과 정상적으로 연결된 모든 컨트롤 패턴을 구현해야 합니다. 따라서 이러한 동일한 컨트롤 패턴을 하위 컨트롤이 구현할 필요가 없습니다.  
+> 부모 컨트롤이 노출한 기능에 대한 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 를 제공하는 하위 컨트롤을 사용하여 빌드된 집계 컨트롤은 각 하위 컨트롤과 정상적으로 연결된 모든 컨트롤 패턴을 구현해야 합니다. 따라서 이러한 동일한 컨트롤 패턴을 하위 컨트롤이 구현할 필요가 없습니다.  
   
 <a name="uiautomation_control_pattern_includes"></a>   
 ## <a name="ui-automation-control-pattern-components"></a>UI 자동화 컨트롤 패턴 구성 요소  

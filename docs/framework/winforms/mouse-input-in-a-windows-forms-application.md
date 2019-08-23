@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, mouse input
 ms.assetid: 743c2f3c-219e-4a52-b6b8-2657096a2da6
-ms.openlocfilehash: 3b4e9eff3f5c4c032e75ded0913ce2cc6051498d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91bbf61029d52cf1d434136ee72ef389ca499ebc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800739"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949894"
 ---
 # <a name="mouse-input-in-a-windows-forms-application"></a>Windows Forms 애플리케이션의 마우스 입력
 Windows Forms에는 다양한 마우스 이벤트 및 사용자 지정된 마우스 커서, 마우스 캡처 및 끌어서 놓기 동작에 대한 추가 지원이 포함되어 있습니다.  
@@ -21,7 +21,7 @@ Windows Forms에는 다양한 마우스 이벤트 및 사용자 지정된 마우
  [Windows Forms의 마우스 이벤트](mouse-events-in-windows-forms.md)  
  마우스 이벤트가 발생하는 순서 및 특정 컨트롤 내에서 마우스 이벤트가 발생되는 방법에 대한 정보를 제공합니다.  
   
- [방법: 클릭 사이의 구분과 두 번 클릭](how-to-distinguish-between-clicks-and-double-clicks.md)  
+ [방법: 클릭과 두 번 클릭 간 구별](how-to-distinguish-between-clicks-and-double-clicks.md)  
  한 번 클릭과 두 번 클릭을 사용하여 호환되지 않는 작업을 시작하는 방법을 보여 줍니다.  
   
  [Windows Forms의 마우스 포인터](mouse-pointers-in-windows-forms.md)  
@@ -34,5 +34,5 @@ Windows Forms에는 다양한 마우스 이벤트 및 사용자 지정된 마우
  끌어서 놓기 동작을 구현하는 방법을 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [마우스에 액세스](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md)  
+ [마우스에 액세스](../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md)  
  Visual Basic을 사용하여 마우스에 액세스에 대한 항목을 나열합니다.

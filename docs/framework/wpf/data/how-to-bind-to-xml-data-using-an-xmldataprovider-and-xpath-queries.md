@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: dc4fb2d5f0c48c077d2ff7ca5e5269ce5cba71e5
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 4833e024fcd352094a2163f11df8572aa4c241f8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400492"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944644"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>방법: XMLDataProvider 및 XPath 쿼리를 사용하여 XML 데이터에 바인딩
 이 예제에서는를 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] <xref:System.Windows.Data.XmlDataProvider>사용 하 여 데이터에 바인딩하는 방법을 보여 줍니다.  
@@ -22,13 +22,13 @@ ms.locfileid: "68400492"
  다음 예제에서 데이터는 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] <xref:System.Windows.FrameworkElement.Resources%2A> 섹션 내에서 *데이터 아일랜드* 로 직접 포함 됩니다. [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터 고립 영역은 `<x:XData>` 태그로 래핑되어야 하며, 항상 단일 루트 노드가 있어야 합니다. 이 예에서는 *인벤토리*입니다.  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터의 루트 노드에는 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 네임스페이스를 빈 문자열로 설정하는 **xmlns** 특성이 있습니다. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지에 인라인인 데이터 고립 영역에 XPath 쿼리를 적용하기 위한 요구 사항입니다. 이 인라인 사례 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서 데이터 아일랜드는 <xref:System.Windows> 네임 스페이스를 상속 합니다. 이 때문에 XPath 쿼리를 <xref:System.Windows> 네임 스페이스로 정규화 하지 않고 쿼리를 잘못 전달 하기 위해 네임 스페이스를 비워 두어야 합니다.  
+> [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터의 루트 노드에는 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 네임스페이스를 빈 문자열로 설정하는 **xmlns** 특성이 있습니다. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지에 인라인인 데이터 고립 영역에 XPath 쿼리를 적용하기 위한 요구 사항입니다. 이 인라인 사례 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서 데이터 아일랜드는 <xref:System.Windows> 네임 스페이스를 상속 합니다. 이 때문에 XPath 쿼리를 <xref:System.Windows> 네임 스페이스로 정규화 하지 않고 쿼리를 잘못 전달 하기 위해 네임 스페이스를 비워 두어야 합니다.  
   
  [!code-xaml[XMLDataSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource/CS/Window1.xaml#1)]  
   
  이 예에 표시된 대로 특성 구문에서 동일한 바인딩 선언을 만들기 위해 특수 문자를 적절하게 이스케이프 처리해야 합니다. 자세한 내용은 [XML 문자 엔터티 및 XAML](../../xaml-services/xml-character-entities-and-xaml.md)을 참조하세요.  
   
- 는 <xref:System.Windows.Controls.ListBox> 이 예제가 실행 될 때 다음 항목을 표시 합니다. *재고* 값이 “*out*”이거나 *숫자* 값이 3이상 또는 8과 동일한 *책* 아래에 있는 모든 요소의 *제목*입니다. 에 설정 된  <xref:System.Windows.Data.XmlDataProvider.XPath%2A> <xref:System.Windows.Data.XmlDataProvider> 값은 *Books* 요소만 노출 되어야 함을 나타내므로 (기본적으로 필터 설정) CD 항목은 반환 되지 않습니다.  
+ 는 <xref:System.Windows.Controls.ListBox> 이 예제가 실행 될 때 다음 항목을 표시 합니다. *재고* 값이 “*out*”이거나 *숫자* 값이 3이상 또는 8과 동일한 *책* 아래에 있는 모든 요소의 *제목*입니다. 에 설정 된 <xref:System.Windows.Data.XmlDataProvider.XPath%2A> <xref:System.Windows.Data.XmlDataProvider> 값은 *Books* 요소만 노출 되어야 함을 나타내므로 (기본적으로 필터 설정) CD 항목은 반환 되지 않습니다.  
   
  ![4 권의 책의 제목을 보여 주는 XPath 예제의 스크린샷](./media/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries/xpath-example-listbox-details.png)  
   

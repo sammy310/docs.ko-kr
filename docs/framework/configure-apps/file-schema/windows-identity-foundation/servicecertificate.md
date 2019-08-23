@@ -3,15 +3,15 @@ title: <serviceCertificate>
 ms.date: 03/30/2017
 ms.assetid: 42c7f291-2ec3-43c5-8872-35897ff3c660
 author: BrucePerlerMS
-ms.openlocfilehash: 328d074f9edc5ddf871308a7e3d694bf94adea78
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3aba5618855f7225dc8a427516eaa72b45f6e8b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793824"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942408"
 ---
 # <a name="servicecertificate"></a>\<serviceCertificate>
-암호화 및 토큰 암호 해독에 사용 되는 X.509 인증서를 구성 합니다.  
+토큰을 암호화 하 고 해독 하는 데 사용 되는 x.509 인증서를 구성 합니다.  
   
  \<system.identityModel.services>  
 \<federationConfiguration>  
@@ -36,18 +36,18 @@ ms.locfileid: "61793824"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<certificateReference>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatereference.md)|찾기 및 인증서 저장소에서 X.509 인증서의 유효성을 검사 하는 데 사용 되는 설정을 지정 합니다.|  
+|[\<certificateReference>](certificatereference.md)|인증서 저장소에서 x.509 인증서를 찾고 유효성을 검사 하는 데 사용 되는 설정을 지정 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|구성 설정이 포함 된 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) 및 <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM).|  
+|[\<federationConfiguration>](federationconfiguration.md)|<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (Wsfam) <xref:System.IdentityModel.Services.SessionAuthenticationModule> 및 (SAM)을 구성 하는 설정을 포함 합니다.|  
   
 ## <a name="example"></a>예제  
- 다음 XML의 사용을 보여 줍니다.는 \<serviceCertificate > 요소입니다. XML에서 가져온 것은 `CustomToken` 샘플입니다.  
+ 다음 XML에서는 \<serviceCertificate > 요소를 사용 하는 방법을 보여 줍니다. XML은 `CustomToken` 샘플에서 가져옵니다.  
   
 ```xml  
 <serviceCertificate>  

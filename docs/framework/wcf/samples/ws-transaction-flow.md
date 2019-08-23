@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: 8c021e3b3de1dbe000ab328f7a09d79a4bc966fe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e6fd84d9cc1f7df397e26e41c55f51d45406228d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592224"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942163"
 ---
 # <a name="ws-transaction-flow"></a>WS Transaction Flow
-이 샘플에서는 클라이언트에서 조정하는 트랜잭션의 사용법과 WS-Atomic Transaction 또는 OleTransactions 프로토콜을 사용하는 트랜잭션 흐름의 클라이언트 및 서버 옵션을 보여 줍니다. 이 샘플은 기반 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) 계산기 서비스를 구현 하는 하지만 작업의 사용을 보여 줍니다에 소요 되는 `TransactionFlowAttribute` 사용 하 여 합니다 **TransactionFlowOption** 트랜잭션 흐름 사용 하도록 설정 된 확인 하는 열거형입니다. 흐름이 지정된 트랜잭션의 범위 내에서는 요청한 작업에 대한 로그가 데이터베이스에 기록되고 클라이언트에서 조정하는 트랜잭션이 완료될 때까지 유지됩니다. 클라이언트 트랜잭션이 완료되지 않으면 웹 서비스 트랜잭션에서 데이터베이스에 적합한 업데이트가 커밋되지 않도록 합니다.  
+이 샘플에서는 클라이언트에서 조정하는 트랜잭션의 사용법과 WS-Atomic Transaction 또는 OleTransactions 프로토콜을 사용하는 트랜잭션 흐름의 클라이언트 및 서버 옵션을 보여 줍니다. 이 샘플은 계산기 서비스를 구현 하는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 을 기반으로 하지만 작업에는 `TransactionFlowAttribute` **TransactionFlowOption** 열거형과 함께를 사용 하 여 어느 정도를 결정 하는 방법을 보여 줍니다. 트랜잭션 흐름을 사용할 수 있습니다. 흐름이 지정된 트랜잭션의 범위 내에서는 요청한 작업에 대한 로그가 데이터베이스에 기록되고 클라이언트에서 조정하는 트랜잭션이 완료될 때까지 유지됩니다. 클라이언트 트랜잭션이 완료되지 않으면 웹 서비스 트랜잭션에서 데이터베이스에 적합한 업데이트가 커밋되지 않도록 합니다.  
   
 > [!NOTE]
->  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
+> 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
  서비스 및 트랜잭션에 대한 연결을 시작하면 클라이언트에서 여러 가지 서비스 작업에 액세스합니다. 서비스에 대한 계약은 서로 다른 `TransactionFlowOption` 설정을 보여 주는 각 작업을 사용하여 다음과 같이 정의됩니다.  
 
@@ -47,7 +47,7 @@ public interface ICalculator
   
 - `Divide` 연산 요청에는`TransactionFlow` 특성을 생략하여 흐름이 지정된 트랜잭션을 포함하지 않아야 합니다.  
   
- 트랜잭션 흐름을 사용 하 여 바인딩을 사용 하도록 설정 합니다 [ \<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) 적절 한 작업 특성 외에도 사용 하도록 설정 하는 속성을 사용 해야 합니다. 이 샘플의 서비스 구성에서는 메타데이터 교환 엔드포인트뿐만 아니라 TCP 엔드포인트와 HTTP 엔드포인트를 노출합니다. TCP 끝점과 HTTP 끝점에 모두, 다음 바인딩을 사용 합니다 [ \<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) 속성을 사용 합니다.  
+ 트랜잭션 흐름을 사용 하도록 설정 하려면 적절 한 작업 특성 외에 [ \<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) 속성을 사용 하는 바인딩을 사용 해야 합니다. 이 샘플의 서비스 구성에서는 메타데이터 교환 엔드포인트뿐만 아니라 TCP 엔드포인트와 HTTP 엔드포인트를 노출합니다. TCP 끝점과 HTTP 끝점은 [ \<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) 속성이 활성화 된 다음 바인딩을 사용 합니다.  
   
 ```xml  
 <bindings>  
@@ -64,12 +64,12 @@ public interface ICalculator
 ```  
   
 > [!NOTE]
->  시스템 제공 netTcpBinding을 사용하면 transactionProtocol을 지정할 수 있지만 시스템 제공 wsHttpBinding에서는 상호 운용성이 보다 뛰어난 WSAtomicTransactionOctober2004 프로토콜만 사용합니다. Windows Communication Foundation (WCF) 클라이언트에서 사용 하 여는 OleTransactions 프로토콜에만 제공 됩니다.  
+> 시스템 제공 netTcpBinding을 사용하면 transactionProtocol을 지정할 수 있지만 시스템 제공 wsHttpBinding에서는 상호 운용성이 보다 뛰어난 WSAtomicTransactionOctober2004 프로토콜만 사용합니다. OleTransactions 프로토콜은 WCF (Windows Communication Foundation) 클라이언트 에서만 사용할 수 있습니다.  
   
  `ICalculator` 인터페이스를 구현하는 클래스에 대한 모든 메서드의 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 속성은 `true`로 설정되어 있습니다. 이 설정은 메서드 내에서 수행되는 모든 작업이 트랜잭션의 범위 내에서 발생하도록 선언합니다. 이 경우 수행되는 작업에는 로그 데이터베이스에 기록하는 작업이 포함됩니다. 작업 요청에 흐름이 지정된 트랜잭션이 포함되면 들어오는 트랜잭션의 범위 내에서 작업이 발생하거나 새 트랜잭션 범위가 자동으로 생성됩니다.  
   
 > [!NOTE]
->  <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 속성은 서비스 메서드 구현에 로컬인 동작을 정의하며 트랜잭션 흐름에 대한 클라이언트의 기능이나 요구 사항은 정의하지 않습니다.  
+> <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 속성은 서비스 메서드 구현에 로컬인 동작을 정의하며 트랜잭션 흐름에 대한 클라이언트의 기능이나 요구 사항은 정의하지 않습니다.  
 
 ```csharp
 // Service class that implements the service contract.  
@@ -108,7 +108,7 @@ public class CalculatorService : ICalculator
 }  
 ```
 
- 클라이언트에서 작업에 대한 서비스의 `TransactionFlowOption`설정은`ICalculator` 인터페이스에 대해 클라이언트에서 생성한 정의에 반영됩니다. 또한 서비스의 `transactionFlow` 속성 설정은 클라이언트의 응용 프로그램 구성에 반영됩니다. 클라이언트는 다음과 같이 적합한 `endpointConfigurationName`을 선택하여 전송 및 프로토콜을 선택할 수 있습니다.  
+ 클라이언트에서 작업에 대한 서비스의 `TransactionFlowOption`설정은`ICalculator` 인터페이스에 대해 클라이언트에서 생성한 정의에 반영됩니다. 또한 서비스의 `transactionFlow` 속성 설정은 클라이언트의 애플리케이션 구성에 반영됩니다. 클라이언트는 다음과 같이 적합한 `endpointConfigurationName`을 선택하여 전송 및 프로토콜을 선택할 수 있습니다.  
 
 ```csharp
 // Create a client using either wsat or oletx endpoint configurations  
@@ -117,7 +117,7 @@ CalculatorClient client = new CalculatorClient("WSAtomicTransaction_endpoint");
 ```
 
 > [!NOTE]
->  이 샘플의 실제 동작은 선택한 프로토콜이나 전송에 관계없이 동일합니다.  
+> 이 샘플의 실제 동작은 선택한 프로토콜이나 전송에 관계없이 동일합니다.  
   
  서비스에 대한 연결을 시작하면 클라이언트는 다음과 같이 서비스 작업에 대한 호출에 따라 `TransactionScope`를 만듭니다.  
 
@@ -223,60 +223,60 @@ Press <ENTER> to terminate the service.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1. 지침에 따라 C# 또는 Visual Basic.NET 버전의 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)  
+1. C# 또는 Visual Basic .net 버전의 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md) 의 지침을 따르세요.  
   
-2. SQL Server Express Edition 또는 SQL Server를 설치했고 연결 문자열이 서비스의 응용 프로그램 구성 파일에서 올바르게 설정되었는지 확인합니다. 데이터베이스를 사용하지 않고 샘플을 실행하려면 서비스의 응용 프로그램 구성 파일에서 `usingSql` 값을 `false`로 설정합니다.  
+2. SQL Server Express Edition 또는 SQL Server를 설치했고 연결 문자열이 서비스의 애플리케이션 구성 파일에서 올바르게 설정되었는지 확인합니다. 데이터베이스를 사용하지 않고 샘플을 실행하려면 서비스의 애플리케이션 구성 파일에서 `usingSql` 값을 `false`로 설정합니다.  
   
-3. 단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
+3. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.  
   
     > [!NOTE]
-    >  다중 컴퓨터 구성의 경우 아래의 지침을 사용하여 DTC(Distributed Transaction Coordinator)를 사용하도록 설정하고 Windows SDK에서 WsatConfig.exe 도구를 사용하여 WCF 트랜잭션 네트워크 지원을 사용하도록 설정합니다. 참조 [Ws-atomic Transaction 지원 구성](https://go.microsoft.com/fwlink/?LinkId=190370) WsatConfig.exe 설정에 대 한 정보에 대 한 합니다.  
+    >  다중 컴퓨터 구성의 경우 아래의 지침을 사용하여 DTC(Distributed Transaction Coordinator)를 사용하도록 설정하고 Windows SDK에서 WsatConfig.exe 도구를 사용하여 WCF 트랜잭션 네트워크 지원을 사용하도록 설정합니다. Wsatconfig.exe를 설정 하는 방법에 대 한 자세한 내용은 [WS 원자성 트랜잭션 지원 구성](https://go.microsoft.com/fwlink/?LinkId=190370) 을 참조 하세요.  
   
- 동일한 컴퓨터 또는 다른 컴퓨터에서 샘플을 실행 하는지 여부를 MSDTC Microsoft Distributed Transaction Coordinator () 네트워크 트랜잭션 흐름을 사용 하 여 WsatConfig.exe 도구를 사용 하 여 WCF 트랜잭션 네트워크 지원을 사용 하도록 구성 해야 합니다.  
+ 샘플을 동일한 컴퓨터나 다른 컴퓨터에서 실행 하는 경우에는 네트워크 트랜잭션 흐름을 사용 하도록 MSDTC (Microsoft DTC(Distributed Transaction Coordinator))를 구성 하 고 Wsatconfig.exe 도구를 사용 하 여 WCF 트랜잭션 네트워크 지원을 사용 하도록 설정 해야 합니다.  
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample"></a>샘플을 실행할 수 있도록 MSDTC(Microsoft Distributed Transaction Coordinator)를 구성하려면  
   
 1. Windows Server 2003 또는 Windows XP를 실행하는 서비스 컴퓨터에서 다음 지침에 따라 들어오는 네트워크 트랜잭션을 허용하도록 MSDTC를 구성합니다.  
   
-    1. **시작** 메뉴에서 이동할 **제어판**, 다음 **관리 도구**를 차례로 **구성 요소 서비스**.  
+    1. **시작** 메뉴에서 **제어판**, **관리 도구**, **구성 요소 서비스**로 차례로 이동 합니다.  
   
-    2. 확장 **구성 요소 서비스**합니다. 엽니다는 **컴퓨터** 폴더입니다.  
+    2. **구성 요소 서비스**를 확장 합니다. **컴퓨터** 폴더를 엽니다.  
   
-    3. 마우스 오른쪽 단추로 클릭 **내 컴퓨터** 선택한 **속성**합니다.  
+    3. **내 컴퓨터** 를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.  
   
-    4. 에 **MSDTC** 탭을 클릭 **보안 구성**합니다.  
+    4. **MSDTC** 탭에서 **보안 구성**을 클릭 합니다.  
   
-    5. 확인할 **네트워크 DTC 액세스** 하 고 **허용 인바운드**합니다.  
+    5. **네트워크 DTC 액세스** 를 확인 하 고 **인바운드를 허용**합니다.  
   
-    6. 클릭 **확인**, 클릭 **예** MSDTC 서비스를 다시 시작 합니다.  
+    6. **확인**을 클릭 한 다음 **예** 를 클릭 하 여 MSDTC 서비스를 다시 시작 합니다.  
   
     7. **확인** 을 클릭하여 대화 상자를 닫습니다.  
   
 2. Windows Server 2008 또는 Windows Vista를 실행하는 서비스 컴퓨터에서 다음 지침에 따라 들어오는 네트워크 트랜잭션을 허용하도록 MSDTC를 구성합니다.  
   
-    1. **시작** 메뉴에서 이동할 **제어판**, 다음 **관리 도구**를 차례로 **구성 요소 서비스**.  
+    1. **시작** 메뉴에서 **제어판**, **관리 도구**, **구성 요소 서비스**로 차례로 이동 합니다.  
   
-    2. 확장 **구성 요소 서비스**합니다. 엽니다는 **컴퓨터** 폴더입니다. 선택 **Distributed Transaction Coordinator**합니다.  
+    2. **구성 요소 서비스**를 확장 합니다. **컴퓨터** 폴더를 엽니다. **DTC(Distributed Transaction Coordinator)** 를 선택 합니다.  
   
-    3. 마우스 오른쪽 단추로 클릭 **DTC Coordinator** 선택한 **속성**합니다.  
+    3. **DTC 코디네이터** 를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.  
   
-    4. 에 **보안** 탭 **네트워크 DTC 액세스** 하 고 **인바운드 허용**합니다.  
+    4. **보안** 탭에서 **네트워크 DTC 액세스** 및 **인바운드 허용**을 선택 합니다.  
   
-    5. 클릭 **확인**, 클릭 **예** MSDTC 서비스를 다시 시작 합니다.  
+    5. **확인**을 클릭 한 다음 **예** 를 클릭 하 여 MSDTC 서비스를 다시 시작 합니다.  
   
     6. **확인** 을 클릭하여 대화 상자를 닫습니다.  
   
 3. 클라이언트 컴퓨터에서 나가는 네트워크 트랜잭션을 허용하도록 MSDTC를 구성합니다.  
   
-    1. **시작** 메뉴에서 이동할 `Control Panel`, 다음 **관리 도구**를 차례로 **구성 요소 서비스**.  
+    1. **시작** 메뉴에서로 `Control Panel`이동한 다음 **관리 도구**, **구성 요소 서비스**를 차례로 클릭 합니다.  
   
-    2. 마우스 오른쪽 단추로 클릭 **내 컴퓨터** 선택한 **속성**합니다.  
+    2. **내 컴퓨터** 를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.  
   
-    3. 에 **MSDTC** 탭을 클릭 **보안 구성**합니다.  
+    3. **MSDTC** 탭에서 **보안 구성**을 클릭 합니다.  
   
-    4. 확인할 **네트워크 DTC 액세스** 하 고 **아웃 바운드 허용**합니다.  
+    4. **네트워크 DTC 액세스** 를 확인 하 고 **아웃 바운드를 허용**합니다.  
   
-    5. 클릭 **확인**, 클릭 **예** MSDTC 서비스를 다시 시작 합니다.  
+    5. **확인**을 클릭 한 다음 **예** 를 클릭 하 여 MSDTC 서비스를 다시 시작 합니다.  
   
     6. **확인** 을 클릭하여 대화 상자를 닫습니다.  
   
@@ -285,6 +285,6 @@ Press <ENTER> to terminate the service.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\TransactionFlow`

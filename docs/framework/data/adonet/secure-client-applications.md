@@ -2,12 +2,12 @@
 title: 안전한 클라이언트 응용 프로그램
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-ms.openlocfilehash: 0c14089247e916b91cb385c7d715cce54acee57c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1312ddc079bdf8f08aebe8eb27e4bab9bf914fa8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664209"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963161"
 ---
 # <a name="secure-client-applications"></a>안전한 클라이언트 응용 프로그램
 일반적으로 응용 프로그램은 데이터 손실을 야기하거나 시스템을 손상시킬 수 있는 취약성으로부터 보호되어야 하는 다양한 부분으로 구성됩니다. 안전한 사용자 인터페이스를 만들면 공격자가 데이터나 시스템 리소스에 액세스하기 전에 이를 차단함으로써 여러 가지 문제를 예방할 수 있습니다.  
@@ -16,9 +16,9 @@ ms.locfileid: "61664209"
  데이터에 액세스하는 응용 프로그램을 만들 경우 유효성이 입증되기 전에는 모든 사용자 입력을 악의적인 것으로 간주해야 합니다. 그렇지 않으면 응용 프로그램이 공격에 취약해질 수 있습니다. .NET Framework에서는 입력할 수 있는 문자 수를 제한하는 등 입력 컨트롤에 대한 값 범위를 설정할 수 있게 해 주는 클래스가 포함되어 있으며, 값의 유효성을 검사하는 프로시저를 작성하기 위한 이벤트 후크도 제공합니다. 사용자 입력 데이터에 대해 유효성을 검사하고 강력한 형식을 지정함으로써 응용 프로그램이 스크립트나 SQL 삽입 공격에 노출되지 않도록 할 수 있습니다.  
   
 > [!IMPORTANT]
->  클라이언트 응용 프로그램뿐만 아니라 데이터 소스에서도 사용자 입력의 유효성을 검사해야 합니다. 공격자가 응용 프로그램에 침투하여 데이터 소스를 직접 공격하는 방식을 선택할 수도 있습니다.  
+> 클라이언트 응용 프로그램뿐만 아니라 데이터 소스에서도 사용자 입력의 유효성을 검사해야 합니다. 공격자가 응용 프로그램에 침투하여 데이터 소스를 직접 공격하는 방식을 선택할 수도 있습니다.  
   
- [보안 및 사용자 입력](../../../../docs/standard/security/security-and-user-input.md)  
+ [보안 및 사용자 입력](../../../standard/security/security-and-user-input.md)  
  사용자 입력과 관련하여 잠재적 위험이 있는 버그를 처리하는 방법에 대해 설명합니다.  
   
  [ASP.NET 웹 페이지에서 사용자 입력 유효성 검사](https://docs.microsoft.com/previous-versions/aspnet/7kh55542(v=vs.100))  
@@ -27,7 +27,7 @@ ms.locfileid: "61664209"
  [Windows Forms에 사용자 입력](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
  Windows Forms 응용 프로그램의 마우스 및 키보드 입력에 대한 유효성 검사와 관련된 정보 및 링크를 제공합니다.  
   
- [.NET Framework 정규식](../../../../docs/standard/base-types/regular-expressions.md)  
+ [.NET Framework 정규식](../../../standard/base-types/regular-expressions.md)  
  <xref:System.Text.RegularExpressions.Regex> 클래스를 사용하여 사용자 입력의 유효성을 검사하는 방법에 대해 설명합니다.  
   
 ## <a name="windows-applications"></a>Windows 애플리케이션  
@@ -49,12 +49,12 @@ ms.locfileid: "61664209"
   
  자세한 내용은 다음 리소스를 참조하세요.  
   
-|리소스|설명|  
+|리소스|Description|  
 |--------------|-----------------|  
 |[ASP.NET 웹 사이트 보안](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))|ASP.NET 응용 프로그램의 보안을 유지하는 방법을 설명합니다.|  
-|[ASP.NET을 사용 하 여 만든 XML Web Services 보안](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))|ASP.NET 웹 서비스의 보안을 구현하는 방법을 설명합니다.|  
+|[ASP.NET를 사용 하 여 만든 XML Web Services 보안](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))|ASP.NET 웹 서비스의 보안을 구현하는 방법을 설명합니다.|  
 |[스크립트 악용 개요](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|악의적인 문자를 웹 페이지에 삽입하려고 시도하는 스크립트 기반 공격을 차단하는 방법에 대해 설명합니다.|  
-|[웹 응용 프로그램에 대 한 기본 보안 사례](https://docs.microsoft.com/previous-versions/aspnet/zdh19h94(v=vs.100))|일반 보안 관련 정보와 추가 정보에 대한 링크를 제공합니다.|  
+|[웹 응용 프로그램에 대 한 기본 보안 방법](https://docs.microsoft.com/previous-versions/aspnet/zdh19h94(v=vs.100))|일반 보안 관련 정보와 추가 정보에 대한 링크를 제공합니다.|  
   
 ## <a name="remoting"></a>원격 통신  
  .NET Remoting을 사용하면 응용 프로그램 구성 요소가 모두 한 컴퓨터에 있는지 또는 전 세계에 분산되어 있는지 여부에 관계없이 다양한 영역에 배포되는 응용 프로그램을 쉽게 만들 수 있습니다. 같은 컴퓨터 또는 해당 네트워크를 통해 연결할 수 있는 다른 모든 컴퓨터에 있는 다른 프로세스의 개체를 사용하는 클라이언트 응용 프로그램을 빌드할 수 있습니다. 또한 .NET Remoting을 사용하면 동일한 프로세스에 있는 다른 응용 프로그램 도메인과 통신할 수도 있습니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "61664209"
 |--------------|-----------------|  
 |[원격 응용 프로그램 구성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b8tysty8(v=vs.100))|자주 발생하는 문제를 피할 수 있도록 원격 응용 프로그램을 구성하는 방법에 대해 설명합니다.|  
 |[원격 서비스의 보안](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9hwst9th(v=vs.100))|인증 및 암호화에 대해 설명하고 원격 통신과 관련한 추가 보안 항목을 제공합니다.|  
-|[보안 및 원격 서비스 고려 사항](../../../../docs/framework/misc/security-and-remoting-considerations.md)|보호되는 개체 및 응용 프로그램 도메인 간의 보안 문제에 대해 설명합니다.|  
+|[보안 및 원격 기능 고려 사항](../../../../docs/framework/misc/security-and-remoting-considerations.md)|보호되는 개체 및 응용 프로그램 도메인 간의 보안 문제에 대해 설명합니다.|  
   
 ## <a name="see-also"></a>참고자료
 

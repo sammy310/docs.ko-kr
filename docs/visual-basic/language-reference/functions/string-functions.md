@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 645d19219481d22ade90f44aaecb62471eb915d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f6203fd6ae69315e7efaaa3c17bb4132bd175d8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802003"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930852"
 ---
 # <a name="string-functions-visual-basic"></a>문자열 함수(Visual Basic)
-다음 표에서 검색 문자열을 조작 하는 Visual Basic 함수를 나열 합니다.  
+다음 표에서는 문자열을 검색 하 고 조작 하는 Visual Basic 제공 하는 함수를 나열 합니다.  
   
-|.NET framework 메서드|설명|  
+|.NET Framework 메서드|Description|  
 |---------------------------|-----------------|  
 |<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|반환 된 `Integer` 문자에 해당 하는 문자 코드를 나타내는 값입니다.|  
 |<xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|지정 된 문자 코드와 연관 된 문자를 반환 합니다.|  
@@ -31,22 +31,22 @@ ms.locfileid: "61802003"
 |<xref:Microsoft.VisualBasic.Strings.Left%2A>|지정 된 개수의 문자열의 왼쪽에서 문자를 포함 하는 문자열을 반환 합니다.|  
 |<xref:Microsoft.VisualBasic.Strings.Len%2A>|문자열의 문자 수를 포함 하는 정수를 반환 합니다.|  
 |<xref:Microsoft.VisualBasic.Strings.LSet%2A>|지정 된 길이에 맞게 조정 하는 지정된 된 문자열을 포함 하는 왼쪽 맞춤 문자열을 반환 합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.LTrim%2A>|선행 공백 없이 지정된 된 문자열의 복사본을 포함 하는 문자열을 반환 합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.Mid%2A>|지정 된 수의 문자열에서 문자를 포함 하는 문자열을 반환 합니다.|  
+|<xref:Microsoft.VisualBasic.Strings.LTrim%2A>|선행 공백 없이 지정 된 문자열의 복사본을 포함 하는 문자열을 반환 합니다.|  
+|<xref:Microsoft.VisualBasic.Strings.Mid%2A>|문자열에서 지정 된 수의 문자를 포함 하는 문자열을 반환 합니다.|  
 |<xref:Microsoft.VisualBasic.Strings.Replace%2A>|문자열의 지정된 된 부분 문자열에 바뀌는 다른 반환 된 지정 된 횟수 만큼 부분 문자열입니다.|  
 |<xref:Microsoft.VisualBasic.Strings.Right%2A>|지정 된 문자열의 오른쪽에 있는 문자 수를 포함 하는 문자열을 반환 합니다.|  
 |<xref:Microsoft.VisualBasic.Strings.RSet%2A>|지정 된 길이에 맞게 조정 하는 지정된 된 문자열을 포함 하는 오른쪽 맞춤 문자열을 반환 합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.RTrim%2A>|후행 공백 없이 지정된 된 문자열의 복사본을 포함 하는 문자열을 반환 합니다.|  
+|<xref:Microsoft.VisualBasic.Strings.RTrim%2A>|후행 공백 없이 지정 된 문자열의 복사본을 포함 하는 문자열을 반환 합니다.|  
 |<xref:Microsoft.VisualBasic.Strings.Space%2A>|지정 된 수 만큼의 공백으로 구성 된 문자열을 반환 합니다.|  
 |<xref:Microsoft.VisualBasic.Strings.Split%2A>|부분 문자열의 지정된 된 수를 포함 하는 0부터 시작 하는 1 차원 배열을 반환 합니다.|  
 |<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|-1, 0 또는 1, 문자열 비교의 결과 기반으로 반환 합니다.|  
 |<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|지정 된 대로 변환 된 문자열을 반환 합니다.|  
 |<xref:Microsoft.VisualBasic.Strings.StrDup%2A>|문자열 또는 지정된 된 문자도 이루어진 개체를 반복 횟수가 지정 된 횟수를 반환 합니다.|  
 |<xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|지정된 된 문자열의 문자 순서를 역순 문자열을 반환 합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.Trim%2A>|선행 또는 후행 공백 없이 지정된 된 문자열의 복사본을 포함 하는 문자열을 반환 합니다.|  
+|<xref:Microsoft.VisualBasic.Strings.Trim%2A>|선행 또는 후행 공백이 없는 지정 된 문자열의 복사본을 포함 하는 문자열을 반환 합니다.|  
 |<xref:Microsoft.VisualBasic.Strings.UCase%2A>|문자열 또는 문자를 대문자로 변환 된 지정 된 문자열을 반환 합니다.|  
   
- 사용할 수는 [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) 시스템의 로캘에 따라 결정 되는 순서를 정렬 하는 문 텍스트를 대/소문자를 사용 하 여 문자열 비교 작동 하는지를 설정 하려면 (`Text`) 또는 문자 (의 내부 이진 표현 `Binary`). 기본 텍스트 비교 방법은 `Binary`입니다.  
+ [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) 문을 사용 하 여 문자열을 대/소문자를 구분 하지 않는 텍스트 정렬 순서를 사용 하 여 비교할 수 있습니다 ().`Text`시스템의 로캘 () 또는 문자 (`Binary`)의 내부 이진 표현에 따라 결정 됩니다. 기본 텍스트 비교 방법은 `Binary`입니다.  
   
 ## <a name="example"></a>예제  
  이 예제에서는 `UCase` 함수는 문자열의 대문자 버전을 반환 합니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "61802003"
  [!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]  
   
 ## <a name="example"></a>예제  
- 이 예제에서는 `Mid` 문자열에서 지정한 개수의 문자를 반환 하는 함수입니다.  
+ 이 예에서는 `Mid` 함수를 사용 하 여 문자열에서 지정 된 수의 문자를 반환 합니다.  
   
  [!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]  
   
@@ -77,7 +77,7 @@ ms.locfileid: "61802003"
  다양 한 용도 보여 주는이 예제는 `Format` 둘 다를 사용 하 여 값 형식 함수 `String` 형식 및 사용자 정의 형식입니다. 날짜 구분 기호 (`/`)을 시간 구분 기호 (`:`), 및 AM/PM 표시기 (`t` 및 `tt`), 체제에 의해 표시 된 실제 형식이 지정 된 출력 코드를 사용 하 여 로캘 설정에 따라 달라 집니다. 경우 시간 및 개발 환경에서 표시 되는 날짜, 간단한 시간 형식 및 코드 로캘의 간단한 날짜 서식을 사용 됩니다.  
   
 > [!NOTE]
->  24 시간 시계를 AM/PM 표시기를 사용 하는 로캘의 (`t` 고 `tt`) 아무 것도 표시 합니다.  
+> 24 시간 시계를 AM/PM 표시기를 사용 하는 로캘의 (`t` 고 `tt`) 아무 것도 표시 합니다.  
   
  [!code-vb[VbVbalrStrings#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#27)]  
   

@@ -1,5 +1,5 @@
 ---
-title: -링크 (Visual Basic)
+title: -link (Visual Basic)
 ms.date: 03/10/2018
 helpviewer_keywords:
 - l compiler option [Visual Basic]
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: b13d8266d0702d831a0f5ebb3a9586864fe22ccb
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: fbce22755b3732896a226c00bbf8e068dc1f098e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586534"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929393"
 ---
-# <a name="-link-visual-basic"></a>-링크 (Visual Basic)
+# <a name="-link-visual-basic"></a>-link (Visual Basic)
 컴파일러에서 지정된 어셈블리의 COM 형식 정보를 현재 컴파일하고 있는 프로젝트에 사용할 수 있도록 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -43,7 +43,7 @@ ms.locfileid: "65586534"
  `-link` 옵션은 인터페이스, 구조체 및 대리자만 포함합니다. COM 클래스는 포함할 수 없습니다.  
   
 > [!NOTE]
->  코드에서 포함된 COM 형식의 인스턴스를 만드는 경우 적절한 인터페이스를 사용하여 인스턴스를 만들어야 합니다. CoClass를 사용하여 포함된 COM 형식의 인스턴스를 만들려고 하면 오류가 발생합니다.  
+> 코드에서 포함된 COM 형식의 인스턴스를 만드는 경우 적절한 인터페이스를 사용하여 인스턴스를 만들어야 합니다. CoClass를 사용하여 포함된 COM 형식의 인스턴스를 만들려고 하면 오류가 발생합니다.  
   
  Visual Studio에서 `-link` 옵션을 설정하려면 어셈블리 참조를 추가하고 `Embed Interop Types` 속성을 **true**로 설정합니다. `Embed Interop Types` 속성의 기본값은 **false**입니다.  
   
@@ -53,9 +53,9 @@ ms.locfileid: "65586534"
   
 - 어셈블리 B의 반환 형식이나 매개 변수 형식을 사용하는 필드, 속성, 이벤트 또는 메서드가 호출됩니다.  
   
- 사용 하 여 [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) 어셈블리 참조 중 하나 이상이 있는 디렉터리를 지정 합니다.  
+ 하나 이상의 어셈블리 참조가 있는 디렉터리를 지정 하려면 [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) 을 사용 합니다.  
   
- 같은 [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) 컴파일러 옵션을를 `-link` 컴파일러 옵션은 Vbc.rsp 지시 파일을 참조 하는 자주 사용 되는.NET Framework 어셈블리를 사용 합니다. 사용 된 [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) Vbc.rsp 파일을 사용 하도록 컴파일러에 원하지 않는 경우 컴파일러 옵션입니다.  
+ [/Reference](../../../visual-basic/reference/command-line-compiler/reference.md) 컴파일러 옵션과 마찬가지로 컴파일러 옵션은 `-link` 자주 사용 되는 .NET Framework 어셈블리를 참조 하는 vbc.exe 지시 파일을 사용 합니다. 컴파일러가 Vbc.rsp 파일을 사용 하지 않도록 하려면 [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) 컴파일러 옵션을 사용 합니다.  
   
  `-link`의 약식은 `-l`입니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "65586534"
  [!code-vb[VbLinkCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/module1.vb#5)]  
   
 ## <a name="example"></a>예제  
- 다음 명령줄은 소스 파일을 컴파일하 `OfficeApp.vb` 참조 어셈블리 및 `COMData1.dll` 하 고 `COMData2.dll` 되려면 `OfficeApp.exe`합니다.  
+ 다음 `OfficeApp.vb` 명령줄은 `COMData1.dll` 에서생성`OfficeApp.exe`하는 소스 파일과 참조 어셈블리를 컴파일합니다. `COMData2.dll`  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  
@@ -89,7 +89,7 @@ vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb
 
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
 - [연습: 관리되는 어셈블리의 형식 포함](../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
-- [-참조 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [-reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)
 - [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

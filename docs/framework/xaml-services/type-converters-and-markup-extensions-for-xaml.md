@@ -8,12 +8,12 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-ms.openlocfilehash: d31d970e8e95726aa789f853ac12c4830498a743
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: dee5ec65993cf20cb57377694f61af092b0ccf26
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796835"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939696"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML을 위한 형식 변환기 및 태그 확장
 형식 변환기 및 태그 확장은 XAML 형식 시스템과 XAML 작성기가 개체 그래프 구성 요소를 생성하는 데 사용하는 두 가지 기술입니다. 일부 특징을 공유하지만 형식 변환기 및 태그 확장은 XAML 노드 스트림에서 다르게 표현됩니다. 이 설명서 집합에서는 때때로 형식 변환기, 태그 확장 및 유사한 구문을 총체적으로 값 변환기라고 합니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "68796835"
  XAML에 대한 태그 확장 구현 패턴에 대한 자세한 내용은 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Markup.MarkupExtension> 및 <xref:System.Windows.Markup.ValueSerializer> 형식은 둘 다 <xref:System.Windows.Markup> 네임스페이스에 있고 <xref:System.Xaml> 네임스페이스에는 없습니다. 이는 이러한 형식이 문자열 `Windows`을 포함 하는 CLR 네임 스페이스를 채우는 WPF 또는 Windows Forms 기술에만 적용 되는 것을 의미 하지는 않습니다. <xref:System.Windows.Markup.MarkupExtension> 및 <xref:System.Windows.Markup.ValueSerializer> 는 System.Xaml 어셈블리에 있으며 특정 프레임워크 종속성이 없습니다. 이러한 형식은 .NET Framework 3.0에 대 한 CLR 네임 스페이스에 있었으며 .NET Framework 4의 CLR 네임 스페이스에 남아 있으므로 기존 WPF 프로젝트의 참조가 손상 되지 않습니다. 자세한 내용은 [Types Migrated from WPF to System.Xaml](types-migrated-from-wpf-to-system-xaml.md)을 참조하세요.  
+> <xref:System.Windows.Markup.MarkupExtension> 및 <xref:System.Windows.Markup.ValueSerializer> 형식은 둘 다 <xref:System.Windows.Markup> 네임스페이스에 있고 <xref:System.Xaml> 네임스페이스에는 없습니다. 이는 이러한 형식이 문자열 `Windows`을 포함 하는 CLR 네임 스페이스를 채우는 WPF 또는 Windows Forms 기술에만 적용 되는 것을 의미 하지는 않습니다. <xref:System.Windows.Markup.MarkupExtension> 및 <xref:System.Windows.Markup.ValueSerializer> 는 System.Xaml 어셈블리에 있으며 특정 프레임워크 종속성이 없습니다. 이러한 형식은 .NET Framework 3.0에 대 한 CLR 네임 스페이스에 있었으며 .NET Framework 4의 CLR 네임 스페이스에 남아 있으므로 기존 WPF 프로젝트의 참조가 손상 되지 않습니다. 자세한 내용은 [Types Migrated from WPF to System.Xaml](types-migrated-from-wpf-to-system-xaml.md)을 참조하세요.  
   
 <a name="value_serializers"></a>   
 ## <a name="value-serializers"></a>값 직렬 변환기  

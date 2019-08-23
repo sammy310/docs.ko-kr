@@ -6,16 +6,16 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: 3fb5d1107a2dacdc4dfd2210322c312becdfd90b
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: d973dd59c1f0612962b89775e1fb2cf6bdd756ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566950"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953922"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>자동화된 테스트를 위해 UI 자동화 사용
 > [!NOTE]
->  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  이 개요에서는 자동화된 테스트 시나리오에서 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 이 프레임워크로서 프로그래밍 방식 액세스에 얼마나 유용한지에 대해 설명합니다.  
   
@@ -26,7 +26,7 @@ ms.locfileid: "69566950"
  공급자와 클라이언트 모두 자동화된 테스트 도구로 유용하게 사용할 수 있도록 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 을 구현해야 합니다. UI 자동화 공급자는 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] 운영 체제를 기반으로 하는 Microsoft Word, Excel 및 타사 애플리케이션 또는 컨트롤입니다. UI 자동화 클라이언트에는 자동화된 테스트 스크립트 및 보조 기술 애플리케이션이 포함됩니다.  
   
 > [!NOTE]
->  이 개요는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]의 새로운 기능 및 향상된 자동화 테스트 기능을 보여주기 위한 것입니다. 이 개요는 접근성 기능에 대한 정보를 제공하기 위한 것이 아니며, 필요한 경우가 아니면 접근성을 다루지 않습니다.  
+> 이 개요는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]의 새로운 기능 및 향상된 자동화 테스트 기능을 보여주기 위한 것입니다. 이 개요는 접근성 기능에 대한 정보를 제공하기 위한 것이 아니며, 필요한 경우가 아니면 접근성을 다루지 않습니다.  
   
 <a name="Using_UI_Automation_During_Development"></a>   
 ## <a name="ui-automation-in-a-provider"></a>공급자의 UI 자동화  
@@ -35,7 +35,7 @@ ms.locfileid: "69566950"
  이러한 주요 작업이 확인되면, 해당 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴(즉, [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 요소의 기능 및 동작을 미러링하는 컨트롤 패턴)을 컨트롤에 구현해야 합니다. 예를 들어, 콤보 상자 컨트롤의 사용자 상호 작용에는(예:대화 상자 실행) 일반적으로 콤보 상자를 확장 또는 축소하여 항목 목록을 숨기거나 표시하고, 목록에서 항목을 선택하고, 키보드 입력을 통해 새로운 값을 추가하는 작업이 포함됩니다.  
   
 > [!NOTE]
->  다른 접근성 모델에서, 개발자는 개별 단추, 메뉴 또는 다른 컨트롤에서 직접 정보를 수집해야 합니다. 그러나 모든 컨트롤 형식은 수십 개의 작은 변형과 함께 제공됩니다. 즉, 누름 단추의 변형 10개가 동일한 방법으로 작동되고 동일한 기능을 수행한다고 해도 이들 모두는 고유한 컨트롤로 처리되어야 합니다. 이러한 컨트롤이 기능적으로 동일한지 알 수 있는 방법은 없습니다. 컨트롤 패턴은 이러한 공통적인 컨트롤 동작을 나타내기 위해 개발되었습니다. 자세한 내용은 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)을 참조하세요.  
+> 다른 접근성 모델에서, 개발자는 개별 단추, 메뉴 또는 다른 컨트롤에서 직접 정보를 수집해야 합니다. 그러나 모든 컨트롤 형식은 수십 개의 작은 변형과 함께 제공됩니다. 즉, 누름 단추의 변형 10개가 동일한 방법으로 작동되고 동일한 기능을 수행한다고 해도 이들 모두는 고유한 컨트롤로 처리되어야 합니다. 이러한 컨트롤이 기능적으로 동일한지 알 수 있는 방법은 없습니다. 컨트롤 패턴은 이러한 공통적인 컨트롤 동작을 나타내기 위해 개발되었습니다. 자세한 내용은 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)을 참조하세요.  
   
 <a name="Implementing_UI_Automation"></a>   
 ### <a name="implementing-ui-automation"></a>UI 자동화 구현  
@@ -79,7 +79,7 @@ ms.locfileid: "69566950"
  형제 항목에서 자동화 요소를 고유하게 식별합니다. 제품이 여러 언어로 제공되는 경우, 일반적으로 지역화되는<xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 와 같은 속성과 달리 <xref:System.Windows.Automation.AutomationElement.NameProperty> 는 지역화되지 않습니다. [Use the AutomationID Property](../../../docs/framework/ui-automation/use-the-automationid-property.md)을 참조하세요.  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 에서는 자동화 트리 전체에서 고유한 ID를 보장하지 않습니다. 예를 들어, 애플리케이션에는 여러 개의 최상위 메뉴가 있는 메뉴 컨트롤과 여러 개의 자식 메뉴 항목이 포함될 수 있습니다. 이러한 보조 메뉴 항목은 "Item1, Item 2, Item3 등"과 같이 일반적인 체계로 식별되어 최상위 메뉴 항목에서 자식에 대한 중복 식별자가 허용될 수 있습니다.  
+> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 에서는 자동화 트리 전체에서 고유한 ID를 보장하지 않습니다. 예를 들어, 애플리케이션에는 여러 개의 최상위 메뉴가 있는 메뉴 컨트롤과 여러 개의 자식 메뉴 항목이 포함될 수 있습니다. 이러한 보조 메뉴 항목은 "Item1, Item 2, Item3 등"과 같이 일반적인 체계로 식별되어 최상위 메뉴 항목에서 자식에 대한 중복 식별자가 허용될 수 있습니다.  
   
 #### <a name="controltype"></a>ControlType  
  자동화 요소가 나타내는 컨트롤 형식을 식별합니다. 컨트롤 형식에 대한 지식에서 중요한 정보를 유추할 수 있습니다. [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)을 참조하세요.  

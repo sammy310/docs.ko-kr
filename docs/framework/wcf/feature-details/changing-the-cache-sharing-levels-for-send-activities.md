@@ -2,18 +2,18 @@
 title: Send 활동의 캐시 공유 수준 변경
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
-ms.openlocfilehash: ac4f2e4fe85d6b243999add6bda65f4fb202f79c
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 587440bd343513aeff51f1ed0947573fbe612f22
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363847"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952585"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Send 활동의 캐시 공유 수준 변경
 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 확장을 사용하면 <xref:System.ServiceModel.Activities.Send> 메시징 활동을 사용하여 서비스 엔드포인트로 메시지를 전송하는 워크플로에 대한 채널 캐시 설정, 채널 팩터리 캐시 설정 및 캐시 공유 수준을 사용자 지정할 수 있습니다. 이러한 워크플로는 일반적으로 클라이언트 워크플로이지만 <xref:System.ServiceModel.WorkflowServiceHost>에서 호스팅되는 워크플로 서비스일 수도 있습니다. 채널 팩터리 캐시는 캐시된 <xref:System.ServiceModel.ChannelFactory%601> 개체를 포함하고, 채널 캐시는 캐시된 채널을 포함합니다.  
   
 > [!NOTE]
->  워크플로에서 <xref:System.ServiceModel.Activities.Send> 메시징 활동을 사용하여 메시지 또는 매개 변수를 보낼 수 있습니다. 워크플로 런타임에서는 <xref:System.ServiceModel.Channels.IRequestChannel> 활동을 <xref:System.ServiceModel.Activities.ReceiveReply> 활동과 함께 사용할 경우 <xref:System.ServiceModel.Activities.Send> 형식 채널을 만드는 캐시에 채널 팩터리를 추가하고, <xref:System.ServiceModel.Channels.IOutputChannel> 없이 <xref:System.ServiceModel.Activities.Send> 활동만 사용할 경우 <xref:System.ServiceModel.Activities.ReceiveReply> 형식 채널을 만드는 캐시에 채널 팩터리를 추가합니다.  
+> 워크플로에서 <xref:System.ServiceModel.Activities.Send> 메시징 활동을 사용하여 메시지 또는 매개 변수를 보낼 수 있습니다. 워크플로 런타임에서는 <xref:System.ServiceModel.Channels.IRequestChannel> 활동을 <xref:System.ServiceModel.Activities.ReceiveReply> 활동과 함께 사용할 경우 <xref:System.ServiceModel.Activities.Send> 형식 채널을 만드는 캐시에 채널 팩터리를 추가하고, <xref:System.ServiceModel.Channels.IOutputChannel> 없이 <xref:System.ServiceModel.Activities.Send> 활동만 사용할 경우 <xref:System.ServiceModel.Activities.ReceiveReply> 형식 채널을 만드는 캐시에 채널 팩터리를 추가합니다.  
   
 ## <a name="the-cache-sharing-levels"></a>캐시 공유 수준  
  기본적으로 <xref:System.ServiceModel.WorkflowServiceHost>에서 호스팅되는 워크플로에서 <xref:System.ServiceModel.Activities.Send> 메시징 활동에 사용되는 캐시는 <xref:System.ServiceModel.WorkflowServiceHost>의 모든 워크플로 인스턴스에서 공유됩니다(호스트 수준 캐싱). <xref:System.ServiceModel.WorkflowServiceHost>에서 호스팅되지 않는 클라이언트 워크플로의 경우 워크플로 인스턴스에서만 캐시를 사용할 수 있습니다(인스턴스 수준 캐싱). 안전하지 않은 캐싱을 사용하지 않는 경우 구성에 정의된 엔드포인트를 사용하지 않는 <xref:System.ServiceModel.Activities.Send> 활동에 대해서만 캐시를 사용할 수 있습니다.  
@@ -150,7 +150,7 @@ SendMessageChannelCache customChannelCacheExtension =
 clientInstance.Extensions.Add(customChannelCacheExtension);  
 ```  
   
- 호스팅된 워크플로 서비스의 경우 응용 프로그램 구성 파일에서 팩터리 캐시 및 채널 캐시 설정을 지정할 수 있습니다. 이렇게 하려면 팩터리 및 채널 캐시의 캐시 설정을 포함하는 서비스 동작을 추가하고 이 서비스 동작을 서비스에 추가합니다. 다음 예제에서는 사용자 지정 팩터리 캐시 및 채널 캐시 설정을 사용 하 `MyChannelCacheBehavior` 여 서비스 동작을 포함 하는 구성 파일의 내용을 보여 줍니다. 이 서비스 동작은 특성을 `behaviorConfiguration` 통해 서비스에 추가 됩니다.  
+ 호스팅된 워크플로 서비스의 경우 애플리케이션 구성 파일에서 팩터리 캐시 및 채널 캐시 설정을 지정할 수 있습니다. 이렇게 하려면 팩터리 및 채널 캐시의 캐시 설정을 포함하는 서비스 동작을 추가하고 이 서비스 동작을 서비스에 추가합니다. 다음 예제에서는 사용자 지정 팩터리 캐시 및 채널 캐시 설정을 사용 하 `MyChannelCacheBehavior` 여 서비스 동작을 포함 하는 구성 파일의 내용을 보여 줍니다. 이 서비스 동작은 특성을 `behaviorConfiguration` 통해 서비스에 추가 됩니다.  
   
 ```xml  
 <configuration>    

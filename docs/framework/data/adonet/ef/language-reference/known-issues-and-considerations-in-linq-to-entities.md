@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: d7d87a3e95cf66efb91b71f6ff3c7c9bb1fbb311
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 66af3395d7ba7271323ad6461e8e1fb8c823a1c6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662144"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913909"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities에서 알려진 문제 및 고려 사항
-이 섹션에서는 LINQ to Entities 쿼리에서 알려진된 문제에 대 한 정보를 제공 합니다.  
+이 섹션에서는 LINQ to Entities 쿼리의 알려진 문제에 대 한 정보를 제공 합니다.  
   
-- [LINQ 쿼리는 캐시할 수 없습니다.](#LINQQueriesThatAreNotCached)  
+- [캐시할 수 없는 LINQ 쿼리](#LINQQueriesThatAreNotCached)  
   
 - [순서 정보 손실](#OrderingInfoLost)  
   
-- [부호 없는 정수 지원 되지 않음](#UnsignedIntsUnsupported)  
+- [부호 없는 정수는 지원 되지 않습니다.](#UnsignedIntsUnsupported)  
   
 - [형식 변환 오류](#TypeConversionErrors)  
   
-- [지원 되지 않는 스칼라가 아닌 변수 참조](#RefNonScalarClosures)  
+- [지원 되지 않는 비 스칼라 변수 참조](#RefNonScalarClosures)  
   
-- [SQL Server 2000 사용 하 여 중첩된 쿼리가 실패할 수 있습니다.](#NestedQueriesSQL2000)  
+- [중첩 쿼리는 SQL Server 2000를 사용 하 여 실패할 수 있습니다.](#NestedQueriesSQL2000)  
   
 - [익명 형식으로 프로젝션](#ProjectToAnonymousType)  
   
@@ -35,14 +35,14 @@ ms.locfileid: "67662144"
   
 <a name="OrderingInfoLost"></a>   
 ## <a name="ordering-information-lost"></a>순서 정보 손실  
- 익명 형식으로 열을 프로젝션 손실 호환성 수준 "80"으로 설정 된 SQL Server 2005 데이터베이스에 대해 실행 되는 일부 쿼리에서 순서 정보가 발생 합니다.  이런 현상은 다음 예제와 같이 정렬 순서 목록에 있는 열 이름이 선택기의 열 이름과 일치할 때 발생합니다.  
+ 열을 익명 형식으로 프로젝션 하면 호환성 수준 "80"로 설정 된 SQL Server 2005 데이터베이스에 대해 실행 되는 일부 쿼리에서 순서 정보가 손실 됩니다.  이런 현상은 다음 예제와 같이 정렬 순서 목록에 있는 열 이름이 선택기의 열 이름과 일치할 때 발생합니다.  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt543840)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt543840)]  
   
 <a name="UnsignedIntsUnsupported"></a>   
 ## <a name="unsigned-integers-not-supported"></a>부호 없는 정수 지원되지 않음  
- Linq to Entities 쿼리에서 부호 없는 정수를 지정 하기 때문에 지원 되지 않습니다는 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 부호 없는 정수를 지원 하지 않습니다. 부호 없는 정수를 지정 하는 경우는 <xref:System.ArgumentException> 다음 예와에서 같이 쿼리 식 변환 도중 예외가 throw 됩니다. 다음 예제에서는 ID 48000인 주문을 쿼리합니다.  
+ 에서 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 부호 없는 정수를 지원 하지 않으므로 LINQ to Entities 쿼리에 부호 없는 정수 형식을 지정할 수 없습니다. 부호 없는 정수를 <xref:System.ArgumentException> 지정 하는 경우 다음 예제와 같이 쿼리 식 변환 중에 예외가 throw 됩니다. 다음 예제에서는 ID 48000인 주문을 쿼리합니다.  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  
@@ -58,7 +58,7 @@ ms.locfileid: "67662144"
  엔터티와 같이 스칼라가 아닌 변수를 쿼리에서 참조할 수 없습니다. 이러한 쿼리가 실행되면 <xref:System.NotSupportedException> 예외가 throw되고 "`EntityType` 형식의 상수 값을 만들 수 없습니다. 이 컨텍스트에서는 기본 형식('Int32, String 및 Guid')만 지원됩니다."라는 메시지가 표시됩니다.  
   
 > [!NOTE]
->  스칼라 변수 컬렉션 참조가 지원됨  
+> 스칼라 변수 컬렉션 참조가 지원됨  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT555877](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt555877)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT555877](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt555877)]  

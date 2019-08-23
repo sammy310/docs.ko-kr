@@ -13,12 +13,12 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
-ms.openlocfilehash: abfb91c61ef72bfc1626b4cc4dcea42b75e2ab35
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: cb54ef372e6da551b95f1edf61e3844b9dcba4c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040237"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950035"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>연습: Visual Basic을 사용하여 복합 컨트롤 작성
 복합 컨트롤은 사용자 지정 그래픽 인터페이스를 만들고 재사용할 수 있는 방법을 제공합니다. 복합 컨트롤은 기본적으로 시각적 표현이 있는 구성 요소입니다. 따라서 사용자 입력의 유효성을 검사하고 표시 속성을 수정하거나 작성자가 요구하는 다른 작업을 수행하여 기능을 확장할 수 있는 하나 이상의 Windows Forms 컨트롤, 구성 요소 또는 코드 블록으로 구성할 수 있습니다. 복합 컨트롤은 다른 컨트롤과 동일한 방식으로 Windows Forms에 배치할 수 있습니다. 이 연습의 첫 번째 부분에서는 `ctlClock`이라는 간단한 복합 컨트롤을 만듭니다. 두 번째 부분에서는 상속을 통해 `ctlClock`의 기능을 확장합니다.
@@ -37,7 +37,7 @@ ms.locfileid: "69040237"
 3. 솔루션 탐색기에서 **UserControl1.vb**를 마우스 오른쪽 단추로 클릭한 다음 **이름 바꾸기**를 클릭합니다. 파일 이름을 `ctlClock.vb`로 변경합니다. 코드 요소 “UserControl1”에 대한 모든 참조 이름을 변경할지 묻는 메시지가 표시되면 **예** 단추를 클릭합니다.
 
     > [!NOTE]
-    >  기본적으로 복합 컨트롤은 시스템에서 제공 하 <xref:System.Windows.Forms.UserControl> 는 클래스에서 상속 됩니다. 클래스 <xref:System.Windows.Forms.UserControl> 는 모든 복합 컨트롤에 필요한 기능을 제공 하 고 표준 메서드 및 속성을 구현 합니다.
+    > 기본적으로 복합 컨트롤은 시스템에서 제공 하 <xref:System.Windows.Forms.UserControl> 는 클래스에서 상속 됩니다. 클래스 <xref:System.Windows.Forms.UserControl> 는 모든 복합 컨트롤에 필요한 기능을 제공 하 고 표준 메서드 및 속성을 구현 합니다.
 
 4. **파일** 메뉴에서 **모두 저장**을 클릭하여 프로젝트를 저장합니다.
 
@@ -184,7 +184,7 @@ ms.locfileid: "69040237"
 5. 솔루션 탐색기에서 현재 프로젝트를 찾아봅니다.
 
     > [!NOTE]
-    >  **ctlAlarmClock.vb**라는 파일이 현재 프로젝트에 추가되었습니다.
+    > **ctlAlarmClock.vb**라는 파일이 현재 프로젝트에 추가되었습니다.
 
 ### <a name="adding-the-alarm-properties"></a>경보 속성 추가
  속성은 복합 컨트롤에 추가된 것과 같은 방식으로 상속된 컨트롤에 추가됩니다. 이제 속성 선언 구문을 사용하여 컨트롤에 두 가지 속성, 즉 경보가 꺼지는 날짜와 시간 값을 저장하는 `AlarmTime`과 경보가 설정되는지 여부를 나타내는 `AlarmSet`을 추가합니다.
@@ -230,10 +230,10 @@ ms.locfileid: "69040237"
 2. `lblDisplay`(컨트롤의 표시 부분)를 클릭하고 속성 창을 확인합니다.
 
     > [!NOTE]
-    >  모든 속성이 표시되는 동안 흐리게 표시됩니다. 이것은 이러한 속성이 `lblDisplay`의 기본 속성이며 속성 창에서 수정하거나 액세스할 수 없음을 나타냅니다. 기본적으로 복합 컨트롤에 포함된 컨트롤은 `Private`이며 해당 속성은 어떤 방법으로도 액세스할 수 없습니다.
+    > 모든 속성이 표시되는 동안 흐리게 표시됩니다. 이것은 이러한 속성이 `lblDisplay`의 기본 속성이며 속성 창에서 수정하거나 액세스할 수 없음을 나타냅니다. 기본적으로 복합 컨트롤에 포함된 컨트롤은 `Private`이며 해당 속성은 어떤 방법으로도 액세스할 수 없습니다.
 
     > [!NOTE]
-    >  복합 컨트롤의 후속 사용자가 내부 컨트롤에 액세스할 수 있도록 하려면 이를 `Public` 또는 `Protected`로 선언합니다. 이렇게 하면 적절한 코드를 사용하여 복합 컨트롤 내에 포함된 컨트롤의 속성을 설정 및 수정할 수 있습니다.
+    > 복합 컨트롤의 후속 사용자가 내부 컨트롤에 액세스할 수 있도록 하려면 이를 `Public` 또는 `Protected`로 선언합니다. 이렇게 하면 적절한 코드를 사용하여 복합 컨트롤 내에 포함된 컨트롤의 속성을 설정 및 수정할 수 있습니다.
 
 3. 복합 컨트롤에 컨트롤을 추가 합니다. <xref:System.Windows.Forms.Label>
 
@@ -298,7 +298,7 @@ ms.locfileid: "69040237"
      이 코드를 추가하려면 여러 작업을 수행할 수 있습니다. `Overrides` 문은 기본 컨트롤에서 상속된 메서드 대신, 이 메서드를 사용하도록 컨트롤에 지시합니다. 이 메서드가 호출되면 `MyBase.Timer1_Tick` 문을 호출하여 이를 재정의하는 메서드를 호출하여 원래 컨트롤에 통합된 모든 기능이 이 컨트롤에서 재현되도록 합니다. 그런 다음 경보 기능을 통합하는 추가 코드를 실행합니다. 경보가 발생하면 깜박이는 레이블 컨트롤이 나타나고 신호음이 울립니다.
 
     > [!NOTE]
-    >  상속된 이벤트 처리기를 재정의하므로 `Handles` 키워드로 이벤트를 지정할 필요가 없습니다. 이벤트가 이미 후크되었습니다. 재정의하는 모든 내용은 처리기의 구현입니다.
+    > 상속된 이벤트 처리기를 재정의하므로 `Handles` 키워드로 이벤트를 지정할 필요가 없습니다. 이벤트가 이미 후크되었습니다. 재정의하는 모든 내용은 처리기의 구현입니다.
 
      알람 시계 컨트롤이 거의 완료되었습니다. 이제 해제하는 방법을 구현하는 것만 남았습니다. 이를 위해서는 `lblAlarm_Click` 메서드에 코드를 추가합니다.
 

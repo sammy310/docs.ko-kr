@@ -2,18 +2,18 @@
 title: Custom Token
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 11b89f6d4f2800f079ba6576801b39c85324f6e0
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 7203b55b01f51851fa94fedc4950a05343b792bd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425076"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953571"
 ---
 # <a name="custom-token"></a>Custom Token
-이 샘플에는 Windows Communication Foundation (WCF) 응용 프로그램에 사용자 지정 토큰 구현을 추가 하는 방법을 보여 줍니다. 이 예제에서는 클라이언트 신용 카드에 대한 정보를 서비스에 안전하게 전달하기 위해 `CreditCardToken`을 사용합니다. 이 토큰은 WS-Security 메시지 헤더로 전달되고 메시지 본문 및 다른 메시지 헤더와 함께 대칭 보안 바인딩 요소를 사용하여 서명 및 암호화됩니다. 이 방법은 기본 제공 토큰이 충분하지 않은 경우 유용합니다. 이 샘플에서는 기본 제공 토큰 중 하나를 사용하는 대신 사용자 지정 보안 토큰을 서비스에 제공하는 방법을 보여 줍니다. 이 서비스는 요청-회신 통신 패턴을 정의하는 계약을 구현합니다.
+이 샘플에서는 WCF (Windows Communication Foundation) 응용 프로그램에 사용자 지정 토큰 구현을 추가 하는 방법을 보여 줍니다. 이 예제에서는 클라이언트 신용 카드에 대한 정보를 서비스에 안전하게 전달하기 위해 `CreditCardToken`을 사용합니다. 이 토큰은 WS-Security 메시지 헤더로 전달되고 메시지 본문 및 다른 메시지 헤더와 함께 대칭 보안 바인딩 요소를 사용하여 서명 및 암호화됩니다. 이 방법은 기본 제공 토큰이 충분하지 않은 경우 유용합니다. 이 샘플에서는 기본 제공 토큰 중 하나를 사용하는 대신 사용자 지정 보안 토큰을 서비스에 제공하는 방법을 보여 줍니다. 이 서비스는 요청-회신 통신 패턴을 정의하는 계약을 구현합니다.
 
 > [!NOTE]
->  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.
+> 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.
 
  즉, 이 샘플에서는 다음 방법을 보여 줍니다.
 
@@ -21,7 +21,7 @@ ms.locfileid: "67425076"
 
 - 서비스가 사용자 지정 보안 토큰을 사용하고 유효성을 검사하는 방법
 
-- 어떻게 WCF 서비스 코드를 사용자 지정 보안 토큰을 포함 하는 수신된 된 보안 토큰에 대 한 정보를 가져올 수 있습니다.
+- WCF 서비스 코드에서 사용자 지정 보안 토큰을 비롯 하 여 수신 된 보안 토큰에 대 한 정보를 얻을 수 있는 방법입니다.
 
 - 서버의 X.509 인증서를 사용하여 메시지 암호화 및 서명에 사용되는 대칭 키를 보호하는 방법
 
@@ -115,7 +115,7 @@ channelFactory.Close();
 ## <a name="custom-security-token-implementation"></a>사용자 지정 보안 토큰 구현
  WCF에서 사용자 지정 보안 토큰을 사용 하도록 설정 하려면 사용자 지정 보안 토큰의 개체 표현을 만듭니다. 이 샘플에서는 `CreditCardToken` 클래스에 이 표현이 있습니다. 개체 표현은 모든 관련 보안 토큰 정보를 보유하고 보안 토큰에 포함된 보안 키의 목록을 제공합니다. 이 경우에는 신용 카드 보안 토큰에 보안 키가 포함되지 않습니다.
 
- 다음 섹션 네트워크를 통해 전송 하도록 사용자 지정 토큰을 사용 하도록 설정 하려면 수행 및 WCF 끝점을 사용 해야 무엇을 설명 합니다.
+ 다음 섹션에서는 사용자 지정 토큰을 유선을 통해 전송 하 고 WCF 끝점에서 사용할 수 있도록 하기 위해 수행 해야 하는 작업에 대해 설명 합니다.
 
 ```csharp
 class CreditCardToken : SecurityToken
@@ -153,7 +153,7 @@ class CreditCardToken : SecurityToken
 ```
 
 ## <a name="getting-the-custom-credit-card-token-to-and-from-the-message"></a>사용자 지정 신용 카드 토큰을 메시지로 가져가거나 메시지에서 가져오기
- WCF의 보안 토큰 serializer는 xml 메시지에서 보안 토큰의 개체 표현을 만들고 보안 토큰의 XML 양식을 작성 하는 일을 담당 합니다. 또한 이러한 serializer는 보안 토큰을 가리키는 읽기 및 쓰기 키 식별자와 같은 다른 기능을 수행하지만 이 예제에서는 보안 토큰 관련 기능만 사용합니다. 사용자 지정 토큰을 사용하도록 설정하려면 고유한 보안 토큰 serializer를 구현해야 합니다. 이 샘플에서는 이를 위해 `CreditCardSecurityTokenSerializer` 클래스를 사용합니다.
+ WCF의 보안 토큰 serializer는 메시지의 XML에서 보안 토큰의 개체 표현을 만들고 보안 토큰의 XML 양식을 만드는 역할을 담당 합니다. 또한 이러한 serializer는 보안 토큰을 가리키는 읽기 및 쓰기 키 식별자와 같은 다른 기능을 수행하지만 이 예제에서는 보안 토큰 관련 기능만 사용합니다. 사용자 지정 토큰을 사용하도록 설정하려면 고유한 보안 토큰 serializer를 구현해야 합니다. 이 샘플에서는 이를 위해 `CreditCardSecurityTokenSerializer` 클래스를 사용합니다.
 
  서비스에서 사용자 지정 serializer는 사용자 지정 토큰의 XML 양식을 읽고 이로부터 사용자 지정 토큰 개체 표현을 만듭니다.
 
@@ -584,24 +584,24 @@ string GetCallerCreditCardNumber()
     ```
 
 > [!NOTE]
->  Setup.bat 배치 파일은 Visual Studio 2012 명령 프롬프트에서 실행 되도록 설계 되었습니다. 경로 환경 변수 집합을 Visual Studio 2012 명령 프롬프트 내에서 Setup.bat 스크립트에 필요한 실행 파일이 포함 된 디렉터리를 가리킵니다.
+> 설치 .bat 배치 파일은 Visual Studio 2012 명령 프롬프트에서 실행 되도록 디자인 되었습니다. Visual Studio 2012 명령 프롬프트 내에서 설정 된 PATH 환경 변수는 Setup. .bat 스크립트에 필요한 실행 파일을 포함 하는 디렉터리를 가리킵니다.
 
 #### <a name="to-set-up-and-build-the-sample"></a>샘플을 설치하고 빌드하려면
 
-1. 수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.
+1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.
 
-2. 지침에 따라 솔루션을 빌드하려면 [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.
+2. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따르세요.
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>단일 컴퓨터 구성에서 샘플을 실행하려면
 
-1. 관리자 권한으로 Visual Studio 2012 명령 프롬프트 창을 열고 샘플 설치 폴더에서 Setup.bat를 실행. 이 작업은 샘플 실행에 필요한 모든 인증서를 설치합니다. Makecert.exe가 있는 폴더가 경로에 포함되는지 확인합니다.
+1. 관리자 권한으로 Visual Studio 2012 명령 프롬프트 창을 열고 샘플 설치 폴더에서 Setup.exe를 실행 합니다. 이 작업은 샘플 실행에 필요한 모든 인증서를 설치합니다. Makecert.exe가 있는 폴더가 경로에 포함되는지 확인합니다.
 
 > [!NOTE]
->  샘플 사용을 마쳤으면 Cleanup.bat를 실행하여 인증서를 제거해야 합니다. 다른 보안 샘플에도 동일한 인증서가 사용됩니다.  
+> 샘플 사용을 마쳤으면 Cleanup.bat를 실행하여 인증서를 제거해야 합니다. 다른 보안 샘플에도 동일한 인증서가 사용됩니다.  
   
 1. client\bin 디렉터리에서 Client.exe를 실행합니다. 클라이언트 콘솔 애플리케이션에 클라이언트 동작이 표시됩니다.  
   
-2. 클라이언트와 서비스가 통신할 수 없는 경우 참조 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))합니다.  
+2. 클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))을 참조 하세요.  
   
 #### <a name="to-run-the-sample-across-computer"></a>다중 컴퓨터 구성에서 샘플을 실행하려면  
   
@@ -609,7 +609,7 @@ string GetCallerCreditCardNumber()
   
 2. 서비스 프로그램 파일을 서비스 컴퓨터의 서비스 디렉터리에 복사합니다. CreditCardFile.txt를 복사해야 합니다. 그렇지 않으면 클라이언트에서 보내진 신용 카드 정보의 유효성을 신용 카드 인증자에서 검사할 수 없습니다. Setup.bat 및 Cleanup.bat 파일도 서비스 컴퓨터로 복사합니다.  
   
-3. 컴퓨터의 정규화된 도메인 이름을 포함하는 주체 이름을 가진 서버 인증서가 있어야 합니다. `%SERVER_NAME%` 변수를 서비스가 호스트되는 컴퓨터의 정규화된 이름으로 변경할 경우 Setup.bat를 사용하여 이러한 서버 인증서를 만들 수 있습니다. Setup.bat 파일을 실행 해야 하는 개발자 명령 프롬프트에서 Visual Studio에 대 한 참고 관리자 권한으로 열립니다.  
+3. 컴퓨터의 정규화된 도메인 이름을 포함하는 주체 이름을 가진 서버 인증서가 있어야 합니다. `%SERVER_NAME%` 변수를 서비스가 호스트되는 컴퓨터의 정규화된 이름으로 변경할 경우 Setup.bat를 사용하여 이러한 서버 인증서를 만들 수 있습니다. Setup.exe 파일은 관리자 권한으로 연 Visual Studio 용 개발자 명령 프롬프트에서 실행 해야 합니다.  
   
 4. 서버 인증서를 클라이언트의 CurrentUser-TrustedPeople 저장소에 복사합니다. 신뢰할 수 있는 발급자에 의해 서버 인증서가 발급되지 않은 경우에만 이 작업을 수행해야 합니다.  
   
@@ -623,7 +623,7 @@ string GetCallerCreditCardNumber()
   
 9. 클라이언트 컴퓨터의 명령 프롬프트 창에서 Client.exe를 실행합니다.  
   
-10. 클라이언트와 서비스가 통신할 수 없는 경우 참조 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))합니다.  
+10. 클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))을 참조 하세요.  
   
 #### <a name="to-clean-up-after-the-sample"></a>샘플 실행 후 정리를 수행하려면  
   

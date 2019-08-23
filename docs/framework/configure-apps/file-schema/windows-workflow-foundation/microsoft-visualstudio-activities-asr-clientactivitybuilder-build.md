@@ -9,12 +9,12 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: d83033b0-a4cb-4d40-835e-5c1a176cde5b
-ms.openlocfilehash: 5518ea3ae5ff07e3105075f84f5b44596c8a76c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a01f77ea6fab7bab94f79bd8a059b133db9200e0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794539"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945742"
 ---
 # <a name="microsoftvisualstudioactivitiesasrclientactivitybuilderbuild"></a>Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder.Build
 워크플로 활동의 데이터를 제공하는 <xref:System.Activities.ActivityBuilder> 개체를 만들고 구성합니다.  
@@ -30,4 +30,4 @@ public ActivityBuilder Build();
   
 ## <a name="see-also"></a>참고자료
 
-- [Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder.md)
+- [Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder](microsoft-visualstudio-activities-asr-clientactivitybuilder.md)

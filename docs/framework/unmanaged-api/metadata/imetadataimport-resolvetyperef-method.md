@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cb8c232e63d1f3066737ff755d5911c185abe6fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f323e91e60c9735a51e955eaab6673ca167f294d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755375"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951873"
 ---
 # <a name="imetadataimportresolvetyperef-method"></a>IMetaDataImport::ResolveTypeRef 메서드
-확인을 <xref:System.Type> 지정한 TypeRef 토큰이 나타내는 참조 합니다.  
+지정 된 <xref:System.Type> TypeRef 토큰이 나타내는 참조를 확인 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,32 +40,32 @@ HRESULT ResolveTypeRef (
   
 ## <a name="parameters"></a>매개 변수  
  `tr`  
- [in] 에 대 한 참조 된 형식 정보를 반환 하는 TypeRef 메타 데이터 토큰입니다.  
+ 진행 참조 된 형식 정보를 반환할 TypeRef 메타 데이터 토큰입니다.  
   
  `riid`  
- [in] 반환할 인터페이스의 IID `ppIScope`합니다. 일반적으로이 IID_IMetaDataImport 것입니다.  
+ 진행 에서 `ppIScope`반환할 인터페이스의 IID입니다. 일반적으로이는 IID_IMetaDataImport입니다.  
   
  `ppIScope`  
- [out] 인터페이스 참조 형식이 정의 되어 있는 모듈 범위입니다.  
+ 제한이 참조 된 형식이 정의 된 모듈 범위에 대 한 인터페이스입니다.  
   
  `ptd`  
- [out] 참조 된 형식을 나타내는 TypeDef 토큰에 대 한 포인터입니다.  
+ 제한이 참조 된 형식을 나타내는 TypeDef 토큰에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
   
 > [!IMPORTANT]
->  여러 응용 프로그램 도메인이 로드 된 경우에이 메서드를 사용 하지 마십시오. 메서드는 응용 프로그램 도메인 경계를 고려 하지 않습니다. 여러 버전의 어셈블리가 로드 되 고 동일한 네임 스페이스를 사용 하 여 동일한 형식 포함을 하는 경우 메서드를 찾으면 첫 번째 유형은 모듈 범위를 반환 합니다.  
+> 여러 응용 프로그램 도메인을 로드 하는 경우에는이 메서드를 사용 하지 마십시오. 이 메서드는 응용 프로그램 도메인 경계를 고려 하지 않습니다. 어셈블리의 여러 버전이 로드 되 고 동일한 네임 스페이스를 가진 동일한 형식을 포함 하는 경우 메서드는 찾은 첫 번째 형식의 모듈 범위를 반환 합니다.  
   
- `ResolveTypeRef` 메서드는 다른 모듈에서 형식 정의 검색 합니다. 형식 정의 있으면 `ResolveTypeRef` 인터페이스 형식에 대 한 TypeDef 토큰 뿐만 아니라 해당 모듈 범위를 반환 합니다.  
+ 메서드 `ResolveTypeRef` 는 다른 모듈의 형식 정의를 검색 합니다. 형식 정의가 있으면에서 `ResolveTypeRef` 해당 모듈 범위에 대 한 인터페이스와 형식에 대 한 TypeDef 토큰을 반환 합니다.  
   
- 형식 참조를 해결 해야 할 해결 범위가 AssemblyRef를 하는 경우는 `ResolveTypeRef` 메서드 중 하나를 호출 하 여 이미 열려 있는 메타 데이터 범위에만 일치 항목을 검색 합니다 [imetadatadispenser:: Openscope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)메서드 또는 [imetadatadispenser:: Openscopeonmemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) 메서드. 왜냐하면 `ResolveTypeRef` AssemblyRef 범위만 디스크 또는 전역 어셈블리 캐시에 어셈블리 저장 위치에서 확인할 수 없습니다.  
+ 확인할 형식 참조의 확인 범위가 AssemblyRef 인 경우이 메서드는 `ResolveTypeRef` [IMetaDataDispenser:: openscope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) 메서드 또는 [을 호출 하 여 이미 열려 있는 메타 데이터 범위 에서만 일치 하는 항목을 검색 합니다. IMetaDataDispenser:: OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) 메서드 이는에서 `ResolveTypeRef` 디스크 또는 전역 어셈블리 캐시에서 어셈블리가 저장 된 AssemblyRef 범위만 확인할 수 없기 때문입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
- **헤더:** Cor.h  
+ **헤더:** Cor  
   
- **라이브러리:** MsCorEE.dll에 리소스로 포함  
+ **라이브러리** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

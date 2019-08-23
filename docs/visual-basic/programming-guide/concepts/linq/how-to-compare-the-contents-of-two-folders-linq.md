@@ -1,15 +1,15 @@
 ---
-title: '방법: 두 개의 폴더 (LINQ) (Visual Basic)의 내용 비교'
+title: '방법: 두 폴더의 내용 비교 (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-ms.openlocfilehash: 75283faf25e7a26055b1122eb45e23c510fc6b39
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5db73b57cfa21de4f1d14299ed7956a322876898
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593012"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940675"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>방법: 두 개의 폴더 (LINQ) (Visual Basic)의 내용 비교
+# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>방법: 두 폴더의 내용 비교 (LINQ) (Visual Basic)
 이 예제에서는 두 파일 목록을 비교하는 세 가지 방법을 보여 줍니다.  
   
 - 두 파일 목록이 똑같은지 여부를 지정하는 부울 값 쿼리.  
@@ -19,7 +19,7 @@ ms.locfileid: "65593012"
 - 두 개 중 한 폴더에만 있는 파일을 검색하기 위해 차집합 쿼리.  
   
     > [!NOTE]
-    >  여기 표시된 방법은 형식에 관계없이 개체의 시퀀스를 비교하도록 조정될 수 있습니다.  
+    > 여기 표시된 방법은 형식에 관계없이 개체의 시퀀스를 비교하도록 조정될 수 있습니다.  
   
  여기 표시된 `FileComparer` 클래스는 표준 쿼리 연산자와 함께 사용자 지정 비교자 클래스를 사용하는 방법을 보여 줍니다. 이 클래스는 실제 시나리오에서 사용되지 않습니다. 단지 각 파일의 이름 및 길이(바이트)를 사용하여 각 폴더의 내용이 똑같은지 여부를 확인합니다. 실제 시나리오에서는 더 엄격한 일치 검사를 수행하도록 이 비교자를 수정해야 합니다.  
   
@@ -114,7 +114,7 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- VB.NET 콘솔 응용 프로그램 프로젝트를 만듭니다는 `Imports` System.Linq 네임 스페이스에 대 한 문입니다.
+ VB.NET 네임 스페이스에 대 한 `Imports` 문을 사용 하 여 콘솔 응용 프로그램 프로젝트를 만듭니다.
  
 ## <a name="see-also"></a>참고자료
 

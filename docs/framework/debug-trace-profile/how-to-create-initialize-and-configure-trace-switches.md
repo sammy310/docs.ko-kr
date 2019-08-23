@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c947dcd3fa3a71d5bbfdf742b106bf56d8444fc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b1575d484c58afa3558d9f5b446473b4c89bc51
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596741"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948006"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>방법: 추적 스위치 만들기, 초기화 및 구성
 추적 스위치를 사용하여 추적 출력을 활성화, 비활성화 및 필터링할 수 있습니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "64596741"
  구성할 스위치의 이름을 지정하는 것은 물론 스위치의 값도 지정해야 합니다. 이 값은 정수입니다. <xref:System.Diagnostics.BooleanSwitch>에서 값 0은 **끄기**에 해당하고 0이 아닌 값은 **켜기**에 해당합니다. <xref:System.Diagnostics.TraceSwitch>에서 0, 1, 2, 3, 4는 각각 **끄기**, **오류**, **경고**, **정보** 및 **동사**에 해당합니다. 4보다 큰 숫자는 **동사**로 처리되고 0보다 작은 숫자는 **끄기**로 처리됩니다.  
   
 > [!NOTE]
->  .NET Framework 버전 2.0에서는 텍스트를 사용하여 스위치의 값을 지정할 수 있습니다. 예를 들어 <xref:System.Diagnostics.BooleanSwitch>에 대한 `true` 또는 <xref:System.Diagnostics.TraceSwitch>에 대한 열거형 값을 나타내는 텍스트(예: `Error`)가 있습니다. `<add name="myTraceSwitch" value="Error" />` 줄은 `<add name="myTraceSwitch" value="1" />`과 같습니다.  
+> .NET Framework 버전 2.0에서는 텍스트를 사용하여 스위치의 값을 지정할 수 있습니다. 예를 들어 <xref:System.Diagnostics.BooleanSwitch>에 대한 `true` 또는 <xref:System.Diagnostics.TraceSwitch>에 대한 열거형 값을 나타내는 텍스트(예: `Error`)가 있습니다. `<add name="myTraceSwitch" value="Error" />` 줄은 `<add name="myTraceSwitch" value="1" />`과 같습니다.  
   
  최종 사용자가 응용 프로그램의 추적 스위치를 구성할 수 있으려면 응용 프로그램에서 스위치에 대한 자세한 설명서를 제공해야 합니다. 어떤 스위치가 어떤 기능을 제어하는지 및 설정/해제하는 방법을 세부적으로 설정해야 합니다. 또한 주석에 적절한 도움말이 있는 .config 파일을 최종 사용자에게 제공해야 합니다.  
   
@@ -75,11 +75,11 @@ ms.locfileid: "64596741"
   
 2. 프로젝트에 구성 파일(app.config 또는 Web.config)이 없는 경우 **프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.  
   
-    - **Visual Basic:** 에 **새 항목 추가** 대화 상자에서 **응용 프로그램 구성 파일**합니다.  
+    - **Visual Basic:** **새 항목 추가** 대화 상자에서 **응용 프로그램 구성 파일**을 선택 합니다.  
   
          응용 프로그램 구성 파일이 만들어져 열립니다. 이 파일은 루트 요소가 `<configuration>.`인 XML 문서입니다.  
   
-    - **Visual C#:** 에 **새 항목 추가** 대화 상자에서 **XML 파일**합니다. 이 파일 이름을 **app.config**로 지정합니다. XML 편집기에서 XML 선언 뒤에 다음 XML을 추가합니다.  
+    - **Visual C#:** **새 항목 추가** 대화 상자에서 **XML 파일**을 선택 합니다. 이 파일 이름을 **app.config**로 지정합니다. XML 편집기에서 XML 선언 뒤에 다음 XML을 추가합니다.  
   
         ```xml  
         <configuration>  

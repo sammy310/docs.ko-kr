@@ -9,28 +9,28 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: dc297bd35d7bfdb25fc50135b8e684e1b9452cb2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 054beab97a77bd466d2c3d8c734e37f8ded7eb62
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592575"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945267"
 ---
 # <a name="data-contract-known-types"></a>데이터 계약 알려진 형식
 <xref:System.Runtime.Serialization.KnownTypeAttribute> 클래스를 사용하면 고려 사항에 포함해야 하는 형식을 deserialization을 수행하는 동안 미리 지정할 수 있습니다. 작업 예제는 [Known Types](../../../../docs/framework/wcf/samples/known-types.md) 예제를 참조하십시오.  
   
  일반적으로 클라이언트와 서비스 간에 매개 변수와 반환 값을 전달할 때 두 끝점은 전송할 데이터의 모든 데이터 계약을 공유합니다. 그러나 다음과 같은 경우는 그렇지 않습니다.  
   
-- 보낸 데이터 계약은 필요한 데이터 계약에서 파생됩니다. 자세한 내용은의 상속에 대 한 섹션을 참조 하세요. [데이터 계약 동등성](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)). 이 경우 전송한 데이터에는 수신하는 끝점에서 필요한 것과 동일한 데이터 계약이 없습니다.  
+- 보낸 데이터 계약은 필요한 데이터 계약에서 파생됩니다. 자세한 내용은 [데이터 계약 동등성](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)의 상속에 대 한 섹션을 참조 하세요. 이 경우 전송한 데이터에는 수신하는 끝점에서 필요한 것과 동일한 데이터 계약이 없습니다.  
   
 - 전송할 정보에 대해 선언된 형식은 클래스, 구조체 또는 열거형이 아니라 인터페이스입니다. 따라서 인터페이스를 구현하는 형식을 실제로 보냈는지 미리 알 수 없으므로 수신하는 끝점에서 전송된 데이터에 대한 데이터 계약을 미리 확인할 수 없습니다.  
   
-- 전송할 정보에 대해 선언된 형식은 <xref:System.Object>입니다. 모든 형식은 <xref:System.Object>에서 상속되며 실제로 보낸 형식을 미리 알 수 없으므로 수신하는 끝점에서 전송된 데이터에 대한 데이터 계약을 미리 확인할 수 없습니다. 첫 번째 항목의 특별 한 경우 다음과 같습니다. 에 대해 생성 된 빈 데이터 계약인 기본값에서 파생 되는 모든 데이터 계약은 <xref:System.Object>합니다.  
+- 전송할 정보에 대해 선언된 형식은 <xref:System.Object>입니다. 모든 형식은 <xref:System.Object>에서 상속되며 실제로 보낸 형식을 미리 알 수 없으므로 수신하는 끝점에서 전송된 데이터에 대한 데이터 계약을 미리 확인할 수 없습니다. 이는 첫 번째 항목의 특별 한 경우입니다. 모든 데이터 계약은에 대해 <xref:System.Object>생성 되는 빈 데이터 계약 인 기본값에서 파생 됩니다.  
   
-- .NET Framework 형식을 포함 하는 일부 형식은 앞의 세 가지 범주 중 하나에 속한 멤버를 갖습니다. 예를 들어 <xref:System.Collections.Hashtable> 은 <xref:System.Object> 를 사용하여 해시 테이블에 실제 개체를 저장합니다. 이러한 형식을 serialize할 때 받는 쪽에서 이러한 멤버에 대한 데이터 계약을 미리 확인할 수 없습니다.  
+- .NET Framework 형식을 포함 하는 일부 형식에는 앞의 세 범주 중 하나에 있는 멤버가 있습니다. 예를 들어 <xref:System.Collections.Hashtable> 은 <xref:System.Object> 를 사용하여 해시 테이블에 실제 개체를 저장합니다. 이러한 형식을 serialize할 때 받는 쪽에서 이러한 멤버에 대한 데이터 계약을 미리 확인할 수 없습니다.  
   
 ## <a name="the-knowntypeattribute-class"></a>KnownTypeAttribute 클래스  
- 데이터를 수신 하는 끝점에 도착 하는 경우 WCF 런타임은 데이터의 공용 언어 런타임 (CLR) 형식 인스턴스를 deserialize 하려고 시도 합니다. deserialization을 위해 인스턴스화되는 형식은 메시지 내용이 따르는 데이터 계약을 확인하도록 들어오는 메시지를 먼저 검사하여 선택됩니다. 그런 다음 deserialization 엔진은 메시지 내용과 호환되는 데이터 계약을 구현하는 CLR 형식을 찾습니다. 이 프로세스 중에 deserialization 엔진에서 허용하는 후보 형식 집합을 deserializer의 "알려진 형식" 집합이라고 합니다.  
+ 데이터가 수신 끝점에 도착 하면 WCF 런타임에서는 CLR (공용 언어 런타임) 형식의 인스턴스로 데이터를 deserialize 하려고 합니다. deserialization을 위해 인스턴스화되는 형식은 메시지 내용이 따르는 데이터 계약을 확인하도록 들어오는 메시지를 먼저 검사하여 선택됩니다. 그런 다음 deserialization 엔진은 메시지 내용과 호환되는 데이터 계약을 구현하는 CLR 형식을 찾습니다. 이 프로세스 중에 deserialization 엔진에서 허용하는 후보 형식 집합을 deserializer의 "알려진 형식" 집합이라고 합니다.  
   
  deserialization 엔진에 형식을 알리는 한 가지 방법은 <xref:System.Runtime.Serialization.KnownTypeAttribute>를 사용하는 것입니다. 특성은 개별 데이터 멤버에 적용될 수 없고 전체 데이터 계약 형식에만 적용될 수 있습니다. 특성은 클래스 또는 구조체일 수 있는 *외부 형식* 에 적용됩니다. 가장 기본적인 사용법에서 특성을 적용하면 형식이 "알려진 형식"으로 지정됩니다. 이렇게 하면 외부 형식의 개체 또는 해당 멤버를 통해 참조되는 개체가 deserialize될 때마다 알려진 형식이 알려진 형식 집합의 일부가 됩니다. 두 개 이상의 <xref:System.Runtime.Serialization.KnownTypeAttribute> 특성을 같은 형식에 적용할 수 있습니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "65592575"
  기본 형식과 기본 형식으로 처리되는 특정 형식(예: <xref:System.DateTime> 및 <xref:System.Xml.XmlElement>)은 항상 "알려진" 형식이므로 이 메커니즘을 통해 추가되지 않아도 됩니다. 그러나 기본 형식 배열은 명시적으로 추가되어야 합니다. 대부분의 컬렉션은 배열과 동일한 것으로 간주됩니다. 제네릭이 아닌 컬렉션은 <xref:System.Object>의 배열과 동일한 것으로 간주됩니다. 기본 형식, 기본 배열 및 기본 컬렉션 사용 예제는 예제 4를 참조하십시오.  
   
 > [!NOTE]
->  다른 기본 형식과 달리 <xref:System.DateTimeOffset> 구조체는 기본적으로 알려진 형식이 아니므로 이 형식을 알려진 형식 목록에 수동으로 추가해야 합니다.  
+> 다른 기본 형식과 달리 <xref:System.DateTimeOffset> 구조체는 기본적으로 알려진 형식이 아니므로 이 형식을 알려진 형식 목록에 수동으로 추가해야 합니다.  
   
 ## <a name="examples"></a>예제  
  다음 예제에서는 사용 중인 <xref:System.Runtime.Serialization.KnownTypeAttribute> 클래스를 보여 줍니다.  
@@ -100,7 +100,7 @@ ms.locfileid: "65592575"
 ## <a name="known-types-using-open-generic-methods"></a>개방형 제네릭 메서드를 사용한 알려진 형식  
  제네릭 형식을 알려진 형식으로 추가해야 할 수 있습니다. 하지만 개방형 제네릭 형식은 `KnownTypeAttribute` 특성에 대한 매개 변수로 전달될 수 없습니다.  
   
- 대체 메커니즘을 사용 하 여이 문제를 해결할 수 있습니다. 알려진된 형식 컬렉션에 추가할 형식 목록을 반환 하는 메서드를 작성 합니다. 그런 다음 몇 가지 제한 사항으로 인해 이 메서드 이름이 `KnownTypeAttribute` 특성에 대한 문자열 인수로 지정됩니다.  
+ 이 문제는 대체 메커니즘을 사용 하 여 해결할 수 있습니다. 알려진 형식 컬렉션에 추가할 형식 목록을 반환 하는 메서드를 작성 합니다. 그런 다음 몇 가지 제한 사항으로 인해 이 메서드 이름이 `KnownTypeAttribute` 특성에 대한 문자열 인수로 지정됩니다.  
   
  이 메서드는 `KnownTypeAttribute` 특성이 적용되는 형식에 있어야 하고, static 메서드여야 하며, 매개 변수를 취하지 않아야 하고, <xref:System.Collections.IEnumerable> 의 <xref:System.Type>에 할당될 수 있는 개체를 반환해야 합니다.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "65592575"
  [!code-vb[C_KnownTypeAttribute#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#10)]  
   
 ## <a name="additional-ways-to-add-known-types"></a>알려진 형식을 추가하는 다른 방법  
- 또한 구성 파일을 통해 알려진 형식을 추가할 수 있습니다. 타사를 사용 하 여 라이브러리와 Windows Communication Foundation (WCF)을 입력 하는 경우와 같은 적합 한 deserialization에 알려진된 형식이 필요한 형식을 제어할 수 없는 경우에 유용 합니다.  
+ 또한 구성 파일을 통해 알려진 형식을 추가할 수 있습니다. 이는 WCF (Windows Communication Foundation)에서 타사 형식 라이브러리를 사용 하는 경우와 같이 적절 한 deserialization에 알려진 형식이 필요한 형식을 제어 하지 않을 때 유용 합니다.  
   
  다음 구성 파일에서는 구성 파일에 알려진 형식을 지정하는 방법을 보여 줍니다.  
   

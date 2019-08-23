@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: f4399d8548eff76aaa4effae6da7239cd3b0284b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a7a2475891488d1fdd60f0db4a483c144a73f0d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966926"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947842"
 ---
 # <a name="how-to-send-data-to-the-active-mdi-child"></a>방법: 활성 MDI 자식으로 데이터 보내기
-컨텍스트 내에서 종종 [다중 문서 MDI (인터페이스) 응용 프로그램](multiple-document-interface-mdi-applications.md), 사용자 데이터를 클립보드에서 MDI 응용 프로그램에 붙여 넣는 같은 활성 자식 창에 데이터를 전송 해야 합니다.  
+[Mdi (다중 문서 인터페이스) 응용 프로그램](multiple-document-interface-mdi-applications.md)의 컨텍스트 내에서 사용자가 클립보드의 데이터를 mdi 응용 프로그램으로 붙여넣을 때 처럼 활성 자식 창에 데이터를 보내야 하는 경우가 종종 있습니다.  
   
 > [!NOTE]
->  자식 창에 포커스가 확인 하 고 해당 콘텐츠를 클립보드에 전송 하는 방법에 대 한 내용은 [활성 MDI 자식 확인](how-to-determine-the-active-mdi-child.md)합니다.  
+> 포커스가 있는 자식 창을 확인 하 고 해당 콘텐츠를 클립보드로 보내는 방법에 대 한 자세한 내용은 [활성 MDI 자식 확인](how-to-determine-the-active-mdi-child.md)을 참조 하세요.  
   
-### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>클립보드에서 활성 MDI 자식 창에 데이터를 보내도록  
+### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>클립보드의 활성 MDI 자식 창에 데이터를 보내려면  
   
-1. 메서드를 활성 자식 폼의 활성 컨트롤을 클립보드에 텍스트를 복사 합니다.  
+1. 메서드 내에서 클립보드의 텍스트를 활성 자식 폼의 활성 컨트롤로 복사 합니다.  
   
     > [!NOTE]
-    >  이 예제에서는 가정 MDI 부모 폼 (`Form1`) 포함 된 하나 이상의 MDI 자식 창에 있는 <xref:System.Windows.Forms.RichTextBox> 제어 합니다. 자세한 내용은 [MDI 부모 폼 만들기](how-to-create-mdi-parent-forms.md)합니다.  
+    > 이 예제에서는 컨트롤을`Form1` <xref:System.Windows.Forms.RichTextBox> 포함 하는 mdi 자식 창이 하나 이상 있는 mdi 부모 폼 ()이 있다고 가정 합니다. 자세한 내용은 [MDI 부모 폼 만들기](how-to-create-mdi-parent-forms.md)를 참조 하세요.  
   
     ```vb  
     Public Sub mniPaste_Click(ByVal sender As Object, _  

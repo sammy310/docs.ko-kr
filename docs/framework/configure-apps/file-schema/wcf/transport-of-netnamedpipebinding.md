@@ -2,14 +2,14 @@
 title: <netNamedPipeBinding>의 <transport>
 ms.date: 03/30/2017
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
-ms.openlocfilehash: a6d3dd2c24e90bdcdc6520e62dcc1dbe7ce797f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e76d0962ea7b4714ef6ca1f9d4c4c3e23df5b6f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788351"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934681"
 ---
-# <a name="transport-of-netnamedpipebinding"></a>\<전송 >의 \<netNamedPipeBinding >
+# <a name="transport-of-netnamedpipebinding"></a>\<netNamedPipeBinding >의 \<전송 >
 명명된 파이프에 대한 전송 보안 설정을 정의합니다.  
   
  \<system.ServiceModel>  
@@ -38,7 +38,7 @@ ms.locfileid: "61788351"
   
 |특성|설명|  
 |---------------|-----------------|  
-|protectionLevel|명명된 파이프의 보호 수준을 정의합니다. 메시지에 서명하면 전송 중인 메시지를 제3자가 손상할 위험을 줄일 수 있습니다. 암호화는 전송 중에 데이터 수준에서 개인 정보를 보호합니다. 유효한 값은 다음과 같습니다.<br /><br /> -None. 보호되지 않습니다.<br />기호: 메시지가 서명됩니다.<br />-   EncryptAndSign: 메시지가 암호화되고 서명됩니다.<br /><br /> 기본값은 EncryptAndSign입니다.|  
+|protectionLevel|명명된 파이프의 보호 수준을 정의합니다. 메시지에 서명하면 전송 중인 메시지를 제3자가 손상할 위험을 줄일 수 있습니다. 암호화는 전송 중에 데이터 수준에서 개인 정보를 보호합니다. 유효한 값은 다음과 같습니다.<br /><br /> 없음을 보호되지 않습니다.<br />로그인 메시지가 서명됩니다.<br />-   EncryptAndSign: 메시지가 암호화되고 서명됩니다.<br /><br /> 기본값은 EncryptAndSign입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -47,7 +47,7 @@ ms.locfileid: "61788351"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netnamedpipebinding.md)|바인딩에 대한 보안 설정을 정의합니다.|  
+|[\<security>](security-of-netnamedpipebinding.md)|바인딩에 대한 보안 설정을 정의합니다.|  
   
 ## <a name="see-also"></a>참고자료
 
@@ -55,8 +55,8 @@ ms.locfileid: "61788351"
 - <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.NetNamedPipeSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>
-- [서비스 및 클라이언트에 보안 설정](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [바인딩](../../../../../docs/framework/wcf/bindings.md)
-- [시스템 제공 바인딩 구성](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [서비스 및 클라이언트에 보안 설정](../../../wcf/feature-details/securing-services-and-clients.md)
+- [바인딩](../../../wcf/bindings.md)
+- [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

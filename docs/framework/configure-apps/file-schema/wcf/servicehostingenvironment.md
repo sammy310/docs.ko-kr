@@ -2,12 +2,12 @@
 title: <serviceHostingEnvironment>
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-ms.openlocfilehash: 16dacee89576b4ede0f2f80255ba8a0dcbc8c0dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b81c9f3c4260f415f057cd74b6f113d88f635978
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610180"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936283"
 ---
 # <a name="servicehostingenvironment"></a>\<serviceHostingEnvironment>
 이 요소는 특정 전송을 위해 서비스 호스팅 환경에서 인스턴스화하는 형식을 정의합니다. 이 요소가 비어 있으면 기본 형식이 사용됩니다. 이 요소는 응용 프로그램이나 컴퓨터 수준 구성 파일에서만 사용할 수 있습니다.  
@@ -42,17 +42,17 @@ ms.locfileid: "64610180"
   
 |특성|설명|  
 |---------------|-----------------|  
-|aspNetCompatibilityEnabled|현재 응용 프로그램에 ASP.NET 호환 모드를 설정했는지 여부를 나타내는 부울 값입니다. 기본값은 `false`입니다.<br /><br /> 이 특성 설정 된 경우 `true`, ASP.NET HTTP 파이프라인을 통해 Windows Communication Foundation (WCF) 서비스에 대 한 요청 흐름 및 HTTP가 아닌 프로토콜을 통한 통신이 허용 되지 않습니다. 자세한 내용은 [WCF 서비스 및 ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)합니다.|  
-|minFreeMemoryPercentageToActivateService|WCF 서비스를 활성화할 수 있습니다 시스템에 사용할 수 있는 사용 가능한 메모리의 최소 크기를 지정 하는 정수입니다. **주의:**  WCF 서비스의 web.config 파일에서 부분 신뢰와 함께이 특성을 지정 하면를 <xref:System.Security.SecurityException> 서비스가 실행 되는 경우.|  
-|multipleSiteBindingsEnabled|사이트별로 여러 IIS 바인딩을 사용할 수 있는지 여부를 지정하는 부울 값입니다.<br /><br /> IIS는 가상 디렉터리를 포함하는 가상 애플리케이션의 컨테이너인 웹 사이트로 구성됩니다. 사이트의 애플리케이션은 하나 이상의 IIS 바인딩을 통해 액세스될 수 있습니다. 하나의 IIS 바인딩은 바인딩 프로토콜과 바인딩 정보라는 두 가지 정보를 제공합니다. 바인딩 프로토콜은 통신이 이루어지는 체계를 정의하며, 바인딩 정보는 사이트에 액세스하는 데 사용되는 정보입니다. 바인딩 프로토콜의 예로는 HTTP가 있으며 바인딩 정보에는 IP 주소, 포트, 호스트 헤더 등이 포함될 수 있습니다.<br /><br /> IIS에서는 사이트별로 여러 개의 IIS 바인딩을 지정할 수 있으므로, 체계별로 여러 개의 기본 주소가 생성됩니다. 그러나 사이트에서 호스팅되는 Windows Communication Foundation (WCF) 서비스에는 체계 별로 하나의 baseAddress에 바인딩할 수 있습니다.<br /><br /> Windows Communication Foundation (WCF) 서비스에 대해 사이트별으로 여러 IIS 바인딩을 사용할 수 있도록,이 속성을 설정 `true`합니다. 여러 사이트 바인딩은 HTTP 프로토콜에 대해서만 지원됩니다. 구성 파일의 끝점 주소는 전체 URI여야 합니다.|  
+|aspNetCompatibilityEnabled|현재 응용 프로그램에 ASP.NET 호환 모드를 설정했는지 여부를 나타내는 부울 값입니다. 기본값은 `false`입니다.<br /><br /> 이 특성이로 `true`설정 되 면 WCF (Windows Communication Foundation 요청) 서비스가 ASP.NET http 파이프라인을 통해 전달 되 고, http가 아닌 프로토콜을 통한 통신이 허용 되지 않습니다. 자세한 내용은 [WCF 서비스 및 ASP.NET](../../../wcf/feature-details/wcf-services-and-aspnet.md)를 참조 하세요.|  
+|minFreeMemoryPercentageToActivateService|WCF 서비스를 활성화할 수 있습니다 시스템에 사용할 수 있는 사용 가능한 메모리의 최소 크기를 지정 하는 정수입니다. **주의:**  WCF 서비스의 web.config 파일에서 부분 신뢰와 함께이 특성을 지정 하면 서비스가 실행 <xref:System.Security.SecurityException> 될 때이 발생 합니다.|  
+|multipleSiteBindingsEnabled|사이트별로 여러 IIS 바인딩을 사용할 수 있는지 여부를 지정하는 부울 값입니다.<br /><br /> IIS는 가상 디렉터리를 포함하는 가상 애플리케이션의 컨테이너인 웹 사이트로 구성됩니다. 사이트의 애플리케이션은 하나 이상의 IIS 바인딩을 통해 액세스될 수 있습니다. 하나의 IIS 바인딩은 바인딩 프로토콜과 바인딩 정보라는 두 가지 정보를 제공합니다. 바인딩 프로토콜은 통신이 이루어지는 체계를 정의하며, 바인딩 정보는 사이트에 액세스하는 데 사용되는 정보입니다. 바인딩 프로토콜의 예로는 HTTP가 있으며 바인딩 정보에는 IP 주소, 포트, 호스트 헤더 등이 포함될 수 있습니다.<br /><br /> IIS에서는 사이트별로 여러 개의 IIS 바인딩을 지정할 수 있으므로, 체계별로 여러 개의 기본 주소가 생성됩니다. 그러나 사이트에서 호스팅되는 Windows Communication Foundation (WCF) 서비스에는 체계 별로 하나의 baseAddress에 바인딩할 수 있습니다.<br /><br /> Windows Communication Foundation (WCF) 서비스에 대해 사이트별로 여러 IIS 바인딩을 사용 하도록 설정 하려면이 특성을 `true`로 설정 합니다. 여러 사이트 바인딩은 HTTP 프로토콜에 대해서만 지원됩니다. 구성 파일의 끝점 주소는 전체 URI여야 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<baseAddressPrefixFilters>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|서비스 호스트에서 사용하는 기본 주소에 대한 접두사 필터를 지정하는 구성 요소 컬렉션입니다.|  
-|[\<serviceActivations>](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceactivations.md)|활성화 설정을 설명하는 구성 섹션입니다.|  
-|[\<transportConfigurationTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|특정 전송의 형식을 식별하는 구성 요소의 컬렉션입니다.|  
+|[\<baseAddressPrefixFilters>](baseaddressprefixfilters.md)|서비스 호스트에서 사용하는 기본 주소에 대한 접두사 필터를 지정하는 구성 요소 컬렉션입니다.|  
+|[\<serviceActivations>](serviceactivations.md)|활성화 설정을 설명하는 구성 섹션입니다.|  
+|[\<transportConfigurationTypes>](transportconfigurationtypes.md)|특정 전송의 형식을 식별하는 구성 요소의 컬렉션입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -96,5 +96,5 @@ ms.locfileid: "64610180"
 
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>
-- [호스팅](../../../../../docs/framework/wcf/feature-details/hosting.md)
-- [WCF 서비스 및 ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
+- [호스팅](../../../wcf/feature-details/hosting.md)
+- [WCF 서비스 및 ASP.NET](../../../wcf/feature-details/wcf-services-and-aspnet.md)

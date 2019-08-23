@@ -2,12 +2,12 @@
 title: Version Tolerant Serialization 기술 샘플
 ms.date: 03/30/2017
 ms.assetid: 2a183664-bfbf-4ff0-96f6-c836284ea916
-ms.openlocfilehash: 6c30c39848be02785b6b808ecf4af711c0c9e95d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 317a47d46b839417e01eed9deca2459a96aaa201
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483001"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960775"
 ---
 # <a name="version-tolerant-serialization-technology-sample"></a>Version Tolerant Serialization 기술 샘플
 [샘플 다운로드](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
@@ -43,7 +43,7 @@ ms.locfileid: "66483001"
  새 실행 파일이 있는 디렉터리로 이동한 다음 하나씩 순서대로 실행할 수도 있습니다.  
   
 > [!NOTE]
->  이 샘플에서는 콘솔 응용 프로그램을 빌드합니다. 출력을 보려면 응용 프로그램을 명령 프롬프트 창에서 시작하고 실행해야 합니다.  
+> 이 샘플에서는 콘솔 응용 프로그램을 빌드합니다. 출력을 보려면 응용 프로그램을 명령 프롬프트 창에서 시작하고 실행해야 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

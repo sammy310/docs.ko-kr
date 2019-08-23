@@ -8,18 +8,18 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
-ms.openlocfilehash: 77596d682af6f2579ca512b0a6de1694452e025b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 222fda180923cdc7b0d7b7ab413c151c69add259
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928962"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950975"
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a>방법: ProtectionLevel 속성 설정
 적절한 특성을 적용하고 속성을 설정하여 보호 수준을 설정할 수 있습니다. 각 메시지의 모든 부분에 영향을 주도록 서비스 수준에서 보호를 설정하거나 메서드에서 메시지 부분으로 점차 세부적인 수준에서 보호를 설정할 수 있습니다. 에 대 한 자세한 내용은 합니다 `ProtectionLevel` 속성을 참조 하세요 [보호 수준 이해](../../../docs/framework/wcf/understanding-protection-level.md)합니다.  
   
 > [!NOTE]
->  구성이 아닌 코드에서만 보호 수준을 설정할 수 있습니다.  
+> 구성이 아닌 코드에서만 보호 수준을 설정할 수 있습니다.  
   
 ### <a name="to-sign-all-messages-for-a-service"></a>서비스의 모든 메시지를 서명하려면  
   
@@ -42,7 +42,7 @@ ms.locfileid: "61928962"
      [!code-vb[C_ProtectionLevel#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#2)]  
   
 ## <a name="protecting-fault-messages"></a>오류 메시지 보호  
- 서비스에서 throw된 예외는 클라이언트에 SOAP 오류로 전송될 수 있습니다. 강력 하 게 만드는 방법에 대 한 자세한 내용은 형식의 오류를 참조 하세요 [지정 및 계약 및 서비스에서 오류 처리](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md) 고 [방법: 서비스 계약에 오류 선언](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)합니다.  
+ 서비스에서 throw된 예외는 클라이언트에 SOAP 오류로 전송될 수 있습니다. 강력한 형식의 오류를 만드는 방법에 대 한 자세한 내용은 [계약 및 서비스에서 오류 지정 및 처리](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md) 및 [방법: 서비스 계약](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)에서 오류를 선언 합니다.  
   
 #### <a name="to-protect-a-fault-message"></a>오류 메시지를 보호하려면  
   
@@ -61,7 +61,7 @@ ms.locfileid: "61928962"
      [!code-vb[C_ProtectionLevel#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#4)]  
   
 ## <a name="protecting-message-parts"></a>메시지 부분 보호  
- 메시지 계약을 사용하여 메시지의 일부분을 보호합니다. 메시지 계약에 대 한 자세한 내용은 참조 하세요. [Using Message Contracts](../../../docs/framework/wcf/feature-details/using-message-contracts.md)합니다.  
+ 메시지 계약을 사용하여 메시지의 일부분을 보호합니다. 메시지 계약에 대 한 자세한 내용은 [메시지 계약 사용](../../../docs/framework/wcf/feature-details/using-message-contracts.md)을 참조 하세요.  
   
 #### <a name="to-protect-a-message-body"></a>메시지 본문을 보호하려면  
   
@@ -71,7 +71,7 @@ ms.locfileid: "61928962"
   
 3. <xref:System.ServiceModel.MessageHeaderAttribute> 특성을 메시지 헤더로 표시될 필드에 적용하고 `ProtectionLevel` 특성을 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>으로 설정합니다.  
   
-4. 적용은 <xref:System.ServiceModel.MessageBodyMemberAttribute> 메시지 본문의 일부로 표현 되며 설정 하는 모든 필드에는 `ProtectionLevel` 속성을 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>다음 예제에서와 같이 합니다.  
+4. 다음 예제와 같이를 메시지 본문의 일부로 표시 될 필드 `ProtectionLevel` <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> <xref:System.ServiceModel.MessageBodyMemberAttribute> 에 적용 하 고 속성을로 설정 합니다.  
   
      [!code-csharp[C_ProtectionLevel#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#5)]
      [!code-vb[C_ProtectionLevel#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#5)]  

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: f0510b9e3f31686e22532f21989cb95905522286
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a29efbc1b4d886afe4329df011b522e4d589e2ee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879888"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949500"
 ---
 # <a name="connection-string-builders"></a>연결 문자열 작성기
-이전 버전의 ADO.NET에서는 연결 된 문자열 값을 사용 하 여 연결 문자열을 확인 하는 컴파일 타임 발생 하지 않은, 런타임 시 잘못 된 키워드가 생성 되도록는 <xref:System.ArgumentException>합니다. 서로 다른 구문을 어렵게 유효한 연결 문자열 생성 작업은 수동으로 수행 하는 경우 연결 문자열 키워드에 대 한 지원 되는.NET Framework 데이터 공급자의 각. 이 문제를 해결 하기 위해 ADO.NET 2.0에는 각.NET Framework 데이터 공급자에 대 한 새로운 연결 문자열 작성기를 도입 되었습니다. 각 데이터 공급자에는 <xref:System.Data.Common.DbConnectionStringBuilder>에서 상속되는 강력한 형식의 연결 문자열 작성기 클래스가 있습니다. 다음 표에서.NET Framework 데이터 공급자 및 해당 연결 문자열 작성기 클래스를 나열합니다.  
+이전 버전의 ADO.NET에서는 연결 된 문자열 값이 있는 연결 문자열의 컴파일 타임 검사가 수행 되지 않으므로 런타임에 잘못 된 키워드에서을 (를) 생성 <xref:System.ArgumentException>했습니다. 각 .NET Framework 데이터 공급자는 연결 문자열 키워드에 대해 서로 다른 구문을 지원 합니다 .이 키워드는 수동으로 수행 하는 경우 유효한 연결 문자열을 구성 하기가 어렵습니다. 이 문제를 해결 하기 위해 ADO.NET 2.0에는 각 .NET Framework 데이터 공급자에 대 한 새로운 연결 문자열 작성기가 도입 되었습니다. 각 데이터 공급자에는 <xref:System.Data.Common.DbConnectionStringBuilder>에서 상속되는 강력한 형식의 연결 문자열 작성기 클래스가 있습니다. 다음 표에서는 .NET Framework 데이터 공급자와 연결 된 연결 문자열 작성기 클래스를 보여 줍니다.  
   
 |공급자|ConnectionStringBuilder 클래스|  
 |--------------|-----------------------------------|  
@@ -59,7 +59,7 @@ initial catalog="AdventureWorks;NewValue=Bad"
  연결 문자열 작성기의 오버로드된 생성자 중 하나는 <xref:System.String>을 인수로 사용하므로 작성기를 사용하면 부분 연결 문자열을 제공하여 이러한 사용자 입력을 통해 연결 문자열을 완성하는 것이 가능합니다. 이 부분 연결 문자열을 구성 파일에 저장한 후 런타임에 검색할 수 있습니다.  
   
 > [!NOTE]
->  <xref:System.Configuration> 네임스페이스를 사용하면 <xref:System.Web.Configuration.WebConfigurationManager>(웹 응용 프로그램의 경우) 및 <xref:System.Configuration.ConfigurationManager>(Windows 응용 프로그램의 경우)를 통해 구성 파일에 프로그래밍 방식으로 액세스할 수 있습니다. 연결 문자열 및 구성 파일을 사용 하 여 작업에 대 한 자세한 내용은 참조 하세요. [연결 문자열 및 구성 파일](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)합니다.  
+> <xref:System.Configuration> 네임스페이스를 사용하면 <xref:System.Web.Configuration.WebConfigurationManager>(웹 애플리케이션의 경우) 및 <xref:System.Configuration.ConfigurationManager>(Windows 애플리케이션의 경우)를 통해 구성 파일에 프로그래밍 방식으로 액세스할 수 있습니다. 연결 문자열 및 구성 파일을 사용 하는 방법에 대 한 자세한 내용은 [연결 문자열 및 구성 파일](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)을 참조 하세요.  
   
 ### <a name="example"></a>예제  
  이 예제에서는 구성 파일에서 부분 연결 문자열을 검색한 후 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A>의 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserID%2A>, <xref:System.Data.SqlClient.SqlConnectionStringBuilder.Password%2A> 및 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 속성을 설정하여 완성하는 방법을 보여 줍니다. 구성 파일은 다음과 같이 정의됩니다.  
@@ -74,7 +74,7 @@ initial catalog="AdventureWorks;NewValue=Bad"
 ```  
   
 > [!NOTE]
->  코드를 실행하려면 프로젝트에서 `System.Configuration.dll`에 대한 참조를 설정해야 합니다.  
+> 코드를 실행하려면 프로젝트에서 `System.Configuration.dll`에 대한 참조를 설정해야 합니다.  
   
  [!code-csharp[DataWorks SqlConnectionStringBuilder.UserNamePwd#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.UserNamePwd/CS/source.cs#1)]
  [!code-vb[DataWorks SqlConnectionStringBuilder.UserNamePwd#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.UserNamePwd/VB/source.vb#1)]  

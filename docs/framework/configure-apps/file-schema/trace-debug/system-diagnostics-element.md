@@ -1,5 +1,5 @@
 ---
-title: < System.diagnostics > 요소
+title: < diagnostics > 요소
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.diagnostics
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <system.diagnostics> element
 - system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
-ms.openlocfilehash: 026805ffb9b89aa55e84cf9a5c4afb8ed63cec09
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3b4238a8d7028d47122a420526b38ee4f327332
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673695"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926941"
 ---
-# <a name="systemdiagnostics-element"></a>\<system.diagnostics> Element
+# <a name="systemdiagnostics-element"></a>\<시스템 진단 > 요소
 메시지를 수집하고 저장하고 라우팅하는 추적 수신기를 지정하며, 추적 스위치가 설정되는 수준을 지정합니다.  
   
  \<configuration>  
@@ -38,12 +38,12 @@ ms.locfileid: "61673695"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<assert>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/assert-element.md)|<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> 메서드를 호출할 때 메시지 상자를 표시할지 여부를 지정합니다. 또한 메시지를 작성할 파일의 이름도 지정합니다.|  
-|[\<performanceCounters>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/performancecounters-element.md)|성능 카운터에서 공유하는 전역 메모리의 크기를 지정합니다.|  
-|[\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)|소스 또는 추적 요소가 참조할 수 있는 수신기가 포함되어 있습니다. 공유 수신기로 식별 하는 수신기 이름으로 추적 소스를 추가할 수 있습니다.|  
-|[\<sources>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|추적 메시지를 시작 하는 추적 소스를 지정 합니다.|  
-|[\<switches>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|추적 스위치 및 추적 스위치가 설정 되어 있는 수준에 포함 되어 있습니다.|  
-|[\<trace>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|추적 메시지를 수집하고 저장하고 라우팅하는 수신기가 포함되어 있습니다.|  
+|[\<assert>](assert-element.md)|<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> 메서드를 호출할 때 메시지 상자를 표시할지 여부를 지정합니다. 또한 메시지를 작성할 파일의 이름도 지정합니다.|  
+|[\<performanceCounters>](performancecounters-element.md)|성능 카운터에서 공유하는 전역 메모리의 크기를 지정합니다.|  
+|[\<sharedListeners>](sharedlisteners-element.md)|소스 또는 추적 요소가 참조할 수 있는 수신기가 포함되어 있습니다. 공유 수신기로 식별 된 수신기는 이름으로 원본 또는 추적에 추가할 수 있습니다.|  
+|[\<sources>](sources-element.md)|추적 메시지를 시작 하는 추적 소스를 지정 합니다.|  
+|[\<switches>](switches-element.md)|추적 스위치 및 추적 스위치가 설정 된 수준을 포함 합니다.|  
+|[\<trace>](trace-element.md)|추적 메시지를 수집하고 저장하고 라우팅하는 수신기가 포함되어 있습니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -52,10 +52,10 @@ ms.locfileid: "61673695"
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 추적 스위치 및 내부 추적 수신기를 포함 하는  **\<system.diagnostics >** 요소입니다. 합니다 `General` 추적 스위치가 설정 된는 <xref:System.Diagnostics.TraceLevel> 수준입니다. 추적 수신기 `myListener` 라는 파일을 만들고 `MyListener.log` 출력 파일에 씁니다.  
+ 다음 예제에서는 trace 스위치 및 추적 수신기를  **\<시스템 진단 >** 요소 내에 포함 하는 방법을 보여 줍니다. 추적 스위치는 <xref:System.Diagnostics.TraceLevel> 수준으로 설정 됩니다. `General` 추적 수신기 `myListener` 는 라는 `MyListener.log` 파일을 만들고 출력을 파일에 씁니다.  
   
 > [!NOTE]
->  .NET Framework 버전 2.0에서는 텍스트를 사용하여 스위치의 값을 지정할 수 있습니다. 예를 들어 지정할 수 있습니다 `true` 에 대 한는 <xref:System.Diagnostics.BooleanSwitch> 와 같은 열거형 값을 나타내는 텍스트를 사용 하거나 `Error` 에 대 한는 <xref:System.Diagnostics.TraceSwitch>합니다. `<add name="myTraceSwitch" value="Error" />` 줄은 `<add name="myTraceSwitch" value="1" />`과 같습니다.  
+> .NET Framework 버전 2.0에서는 텍스트를 사용하여 스위치의 값을 지정할 수 있습니다. `true` 예를 들어에 <xref:System.Diagnostics.BooleanSwitch> 대해를 지정 하거나에 대해와 `Error` 같이 열거형 <xref:System.Diagnostics.TraceSwitch>값을 나타내는 텍스트를 사용할 수 있습니다. `<add name="myTraceSwitch" value="Error" />` 줄은 `<add name="myTraceSwitch" value="1" />`과 같습니다.  
   
 ```xml  
 <configuration>  
@@ -76,4 +76,4 @@ ms.locfileid: "61673695"
 
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.Debug>
-- [추적 및 디버그 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [추적 및 디버그 설정 스키마](index.md)

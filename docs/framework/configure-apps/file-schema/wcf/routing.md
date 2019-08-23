@@ -2,19 +2,19 @@
 title: <routing>
 ms.date: 03/30/2017
 ms.assetid: a210c209-3940-4288-9a8e-39b1e62606bc
-ms.openlocfilehash: cc7c1a64f9481a7ab41cf35241ade04bd690dae0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c7e9cb1284ab55c8dd199d9fb47a223698814f0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786388"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934133"
 ---
 # <a name="routing"></a>\<라우팅 >
 
-Windows Communication Foundation (WCF)의 형식을 결정 하는 라우팅 필터 집합을 정의 하기 위한 구성 섹션을 나타냅니다 <xref:System.ServiceModel.Dispatcher.MessageFilter> 사용할 대상 끝점을 정의 하는 들어오는 메시지를 평가할 수 있을 뿐만 아니라 라우팅 테이블 필터가 일치할 때에 메시지를 보냅니다.
+들어오는 메시지를 평가할 때 사용 되는 WCF <xref:System.ServiceModel.Dispatcher.MessageFilter> (Windows Communication Foundation 형식 및 대상 끝점을 정의 하는 라우팅 테이블을 결정 하는 라우팅 필터 집합을 정의 하기 위한 구성 섹션을 나타냅니다. 필터가 일치 하는 경우에 메시지를 보냅니다.
 
-[**\<system.serviceModel>**](system-servicemodel.md)   
-&nbsp;&nbsp;**\<routing>**
+[ **\<system.serviceModel>** ](system-servicemodel.md)   
+&nbsp;&nbsp; **\<routing>**
   
 ## <a name="syntax"></a>구문  
   
@@ -50,10 +50,10 @@ Windows Communication Foundation (WCF)의 형식을 결정 하는 라우팅 필�
 
 ### <a name="child-elements"></a>자식 요소
 
-|     | 설명 |
+|     | Description |
 | --- | ----------- |
-| [**\<filters>**](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md) | 들어오는 메시지를 평가할 때 Windows Communication Foundation (WCF) messagefilter 형식을 사용할지를 결정 하는 라우팅 필터 집합을 포함 합니다. |
-| [**\<filterTables>**](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md) | 필터가 일치할 때 사용할 엔드포인트를 지정하기 위한 라우팅 필터와 대상 엔드포인트 간의 매핑을 포함합니다. |
+| [ **\<filters>** ](filters-of-routing.md) | 들어오는 메시지를 평가할 때 사용 되는 Windows Communication Foundation (WCF) MessageFilter 유형을 결정 하는 라우팅 필터 집합을 포함 합니다. |
+| [ **\<filterTables>** ](filtertables.md) | 필터가 일치할 때 사용할 엔드포인트를 지정하기 위한 라우팅 필터와 대상 엔드포인트 간의 매핑을 포함합니다. |
 
 ### <a name="parent-elements"></a>부모 요소
 

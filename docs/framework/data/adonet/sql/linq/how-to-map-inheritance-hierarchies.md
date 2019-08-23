@@ -5,18 +5,18 @@ ms.assetid: b27c779b-9355-4dc7-b95f-7dfd504b6e48
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: e0ff3fe98fcd9ced0063d2bec85928504ea19bab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 618abc8e681a6f43a1054d0ca2cec2fbdec853f5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743196"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943568"
 ---
 # <a name="how-to-map-inheritance-hierarchies"></a>방법: 상속 계층 구조 매핑
-[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]에서 상속 매핑을 구현하려면 다음 단계의 설명과 같이 상속 계층 구조의 루트 클래스에 특성 및 특성 속성을 지정해야 합니다. Visual Studio를 사용 하는 개발자 Object Relational Designer를 사용 하 여 상속 계층 구조를 매핑할 수 있습니다. [방법: O/R 디자이너를 사용하여 상속 구성](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)을 참조하세요.  
+[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]에서 상속 매핑을 구현하려면 다음 단계의 설명과 같이 상속 계층 구조의 루트 클래스에 특성 및 특성 속성을 지정해야 합니다. Visual Studio를 사용 하는 개발자는 개체 관계형 디자이너을 사용 하 여 상속 계층 구조를 매핑할 수 있습니다. [방법: O/R 디자이너를 사용하여 상속 구성](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)을 참조하세요.  
   
 > [!NOTE]
->  서브클래스에는 특수 특성 또는 속성이 필요 없습니다. 특히 서브클래스에는 <xref:System.Data.Linq.Mapping.TableAttribute> 특성이 없습니다.  
+> 서브클래스에는 특수 특성 또는 속성이 필요 없습니다. 특히 서브클래스에는 <xref:System.Data.Linq.Mapping.TableAttribute> 특성이 없습니다.  
   
 ### <a name="to-map-an-inheritance-hierarchy"></a>상속 계층 구조를 매핑하려면  
   
@@ -34,7 +34,7 @@ ms.locfileid: "67743196"
   
 5. <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> 특성 중 하나의 특성에만 <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A> 속성을 추가합니다.  
   
-     지정 하는 데 사용 되는이 속성을 *대체* 판별자 값을 데이터베이스 테이블에서 모든 일치 하지 않는 경우 매핑 <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> 상속 매핑의 값입니다.  
+     이 속성은 데이터베이스 테이블의 판별자 값이 상속 매핑의 어떠한 <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> 값 과도 일치 하지 않는 경우 *대체 (fallback)* 매핑을 지정 하는 데 사용 됩니다.  
   
 6. <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A> 특성에 대해 <xref:System.Data.Linq.Mapping.ColumnAttribute> 속성을 추가합니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67743196"
 ## <a name="example"></a>예제  
   
 > [!NOTE]
->  Visual Studio를 사용 하는 경우에 상속을 구성 하려면 개체 관계형 디자이너를 사용할 수 있습니다. [방법: O/R 디자이너를 사용하여 상속 구성](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)  
+> Visual Studio를 사용 하는 경우 개체 관계형 디자이너를 사용 하 여 상속을 구성할 수 있습니다. [방법: O/R 디자이너를 사용하여 상속 구성](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)  
   
  다음 코드 예제에서는 `Vehicle`이 루트 클래스로 정의되어 있으며 이전 단계는 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]의 계층 구조를 설명하기 위해 구현되었습니다.  
   

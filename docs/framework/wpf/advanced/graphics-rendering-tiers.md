@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: fa59621aaf73922af957961af5401170c2872aa9
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 9da519f8d258673498f45a425c13863437cac597
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972340"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937527"
 ---
 # <a name="graphics-rendering-tiers"></a>그래픽 렌더링 계층
 렌더링 계층은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 실행하는 디바이스의 그래픽 하드웨어 기능과 성능 수준을 정의합니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "68972340"
 ### <a name="rendering-tier-1-and-rendering-tier-2"></a>렌더링 계층 1 및 렌더링 계층 2  
   
 > [!NOTE]
->  .NET Framework 4부터 렌더링 계층 1은 DirectX 9.0 이상을 지 원하는 그래픽 하드웨어만 포함 하도록 다시 정의 되었습니다. DirectX 7 또는 8을 지 원하는 그래픽 하드웨어는 이제 렌더링 계층 0으로 정의 됩니다.  
+> .NET Framework 4부터 렌더링 계층 1은 DirectX 9.0 이상을 지 원하는 그래픽 하드웨어만 포함 하도록 다시 정의 되었습니다. DirectX 7 또는 8을 지 원하는 그래픽 하드웨어는 이제 렌더링 계층 0으로 정의 됩니다.  
   
  렌더링 계층 값이 1 또는 2이면 필요한 시스템 리소스가 사용 가능하며 소진되지 않은 경우 대부분의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 그래픽 기능에서 하드웨어 가속을 사용합니다. 9\.0 보다 크거나 같은 DirectX 버전에 해당 합니다.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "68972340"
 |**필수 비디오 드라이버 날짜 설정**|시스템에서 2004년 11월 이전에 릴리스된 드라이버의 하드웨어 가속을 사용하지 않게 설정할지 지정합니다.|  
 |**참조 래스터라이저 옵션 사용**|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 참조 래스터라이저를 사용해야 하는지 지정합니다.|  
   
- 이러한 설정은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레지스트리 설정을 참조하는 방법을 아는 외부 구성 유틸리티에서 액세스할 수 있습니다. 이러한 설정은 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 레지스트리 편집기를 통해 직접 값에 액세스하여 만들거나 수정할 수도 있습니다. 자세한 내용은 [그래픽 렌더링 레지스트리 설정](../graphics-multimedia/graphics-rendering-registry-settings.md)을 참조하세요.  
+ 이러한 설정은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레지스트리 설정을 참조하는 방법을 아는 외부 구성 유틸리티에서 액세스할 수 있습니다. 이러한 설정은 Windows 레지스트리 편집기를 사용 하 여 값에 직접 액세스 하 여 만들거나 수정할 수도 있습니다. 자세한 내용은 [그래픽 렌더링 레지스트리 설정](../graphics-multimedia/graphics-rendering-registry-settings.md)을 참조하세요.  
   
 ### <a name="wpf-performance-profiling-tools"></a>WPF 성능 프로파일링 도구  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 응용 프로그램의 런타임 동작을 분석할 수 있고 적용할 수 있는 성능 최적화 형식을 판별하는 성능 프로파일링 도구 제품군을 제공합니다. 다음 표에서는 Windows SDK 도구인 WPF 성능 제품군에 포함 된 성능 프로 파일링 도구를 보여 줍니다.  

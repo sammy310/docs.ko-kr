@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-ms.openlocfilehash: b9a43c5f5141e364ab9aac1cfdff577a8fb8a161
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 41a638afa93e605221d5ef8172e243b1c61676bf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486675"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941379"
 ---
 # <a name="systemweb-element-web-settings"></a>\<system.web > 요소 (웹 설정)
-ASP.NET 호스팅 계층 프로세스 전반 동작을 관리 하는 방법에 대 한 정보를 포함 합니다.  
+ASP.NET 호스팅 계층이 프로세스 전체 동작을 관리 하는 방법에 대 한 정보를 포함 합니다.  
   
  \<configuration>  
 \<system.web > 요소 (웹 설정)  
@@ -38,19 +38,19 @@ ASP.NET 호스팅 계층 프로세스 전반 동작을 관리 하는 방법에 �
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<applicationPool>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|Aspnet.config 파일에서 IIS 응용 프로그램 풀에 대 한 구성 설정을 지정합니다.|  
+|[\<applicationPool>](applicationpool-element-web-settings.md)|Aspnet .config 파일의 IIS 응용 프로그램 풀에 대 한 구성 설정을 지정 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<구성>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|공용 언어 런타임과.NET Framework 응용 프로그램에서 사용 되는 모든 구성 파일의 루트 요소를 지정 합니다.|  
+|[\<구성>](../configuration-element.md)|공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용 하는 모든 구성 파일의 루트 요소를 지정 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 합니다 `system.web` 요소와 해당 자식의 `applicationPool` 요소가.NET Framework 3.5 SP1부터.NET Framework에 추가 되었습니다. 통합된 모드의 IIS 7.0 또는 이후 버전을 실행 하면이 요소 조합을 사용 하 여 ASP.NET 스레드를 관리 하는 방법 및 ASP.NET 응용 프로그램 IIS 풀에 호스팅되는 경우 요청 큐 하는 방법을 구성 합니다. ISAPI 또는 클래식 모드에서 IIS 7.0 또는 이후 버전을 실행 하는 경우 이러한 설정이 무시 됩니다.  
+ 요소와 해당 자식 `applicationPool` 요소가 .NET Framework 3.5 s p 1의 .NET Framework에 추가 되었습니다. `system.web` 통합 모드에서 IIS 7.0 이상 버전을 실행 하는 경우이 요소 조합을 사용 하면 ASP.NET에서 스레드를 관리 하는 방법 및 ASP.NET가 IIS 응용 프로그램 풀에서 호스팅되는 경우 요청을 큐에 대기 하는 방법을 구성할 수 있습니다. 클래식 또는 ISAPI 모드에서 IIS 7.0 이상 버전을 실행 하는 경우 이러한 설정은 무시 됩니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 ASP.NET 응용 프로그램 IIS 풀에 호스팅되는 경우 aspnet.config 파일에서 ASP.NET 프로세스 전반 동작을 구성 하는 방법을 보여 줍니다. 이 예제에서는 IIS 통합 모드에서 실행 되 고 있는지 가정 모드 및 응용 프로그램은.NET Framework 3.5 SP1 이상을 사용 하는 합니다. 이 동작은.NET Framework 3.5 SP1 이전의.NET Framework의 버전에서 발생 하지 않습니다. 예제에서 값은 기본값입니다.  
+ 다음 예제에서는 ASP.NET가 IIS 응용 프로그램 풀에서 호스팅될 때 ASP.NET 파일에서 프로세스 차원의 동작을 구성 하는 방법을 보여 줍니다. 이 예제에서는 IIS가 통합 모드로 실행 중이 고 응용 프로그램에서 .NET Framework 3.5 SP1 이상 버전을 사용 하 고 있다고 가정 합니다. 이 동작은 .NET Framework 3.5 s p 1 이전의 .NET Framework 버전에서 발생 하지 않습니다. 이 예제의 값은 기본값입니다.  
   
 ```xml  
 <configuration>  
@@ -70,8 +70,8 @@ ASP.NET 호스팅 계층 프로세스 전반 동작을 관리 하는 방법에 �
 |네임스페이스||  
 |스키마 이름||  
 |유효성 검사 파일||  
-|비워 둘 수 있습니다.||  
+|비워 둘 수 있음||  
   
 ## <a name="see-also"></a>참고자료
 
-- [\<applicationPool> 요소(웹 설정)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)
+- [\<applicationPool> 요소(웹 설정)](applicationpool-element-web-settings.md)

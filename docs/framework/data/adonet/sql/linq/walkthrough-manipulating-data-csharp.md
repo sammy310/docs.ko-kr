@@ -2,15 +2,15 @@
 title: '연습: 데이터 조작(C#)'
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: 2d45861569bc4a8b57427b01e107f87809203e11
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7921f0aa7582e70967f7fec633f37ef0dbc766de
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742739"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946970"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>연습: 데이터 조작(C#)
-이 연습에서는 데이터베이스의 데이터를 추가, 수정 및 삭제하기 위한 기본 종단 간 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 시나리오를 제공합니다. Northwind 샘플 데이터베이스의 복사본을 사용하여 고객을 추가하고, 고객의 이름을 변경하고, 주문을 삭제합니다.  
+이 연습에서는 데이터베이스의 데이터를 추가, 수정 및 삭제하기 위한 기본 엔드투엔드 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 시나리오를 제공합니다. Northwind 샘플 데이터베이스의 복사본을 사용하여 고객을 추가하고, 고객의 이름을 변경하고, 주문을 삭제합니다.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -23,7 +23,7 @@ ms.locfileid: "67742739"
   
 - Northwind 샘플 데이터베이스  
   
-     이 데이터베이스가 개발 컴퓨터에 없는 경우 Microsoft 다운로드 사이트에서 다운로드할 수 있습니다. 자세한 내용은 [샘플 데이터베이스 다운로드](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)합니다. 이 데이터베이스를 다운로드한 후 northwnd.mdf 파일을 c:\linqtest6 폴더에 복사합니다.  
+     이 데이터베이스가 개발 컴퓨터에 없는 경우 Microsoft 다운로드 사이트에서 다운로드할 수 있습니다. 지침은 [샘플 데이터베이스 다운로드](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)를 참조 하세요. 이 데이터베이스를 다운로드한 후 northwnd.mdf 파일을 c:\linqtest6 폴더에 복사합니다.  
   
 - Northwind 데이터베이스에서 생성된 C# 코드 파일  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67742739"
 ## <a name="overview"></a>개요  
  이 연습은 다음과 같은 여섯 가지 주요 작업으로 구성됩니다.  
   
-- 만들기는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio에서 솔루션입니다.  
+- Visual Studio [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 에서 솔루션을 만듭니다.  
   
 - 데이터베이스 코드 파일을 프로젝트에 추가  
   
@@ -49,19 +49,19 @@ ms.locfileid: "67742739"
 - 이러한 변경 내용을 Northwind 데이터베이스로 전송  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>LINQ to SQL 솔루션 만들기  
- 빌드 및 실행에 필요한 참조를 포함 하는 Visual Studio 솔루션을 만든이 첫 번째 태스크는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 프로젝트입니다.  
+ 이 첫 번째 작업에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 프로젝트를 빌드하고 실행 하는 데 필요한 참조를 포함 하는 Visual Studio 솔루션을 만듭니다.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>LINQ to SQL 솔루션을 만들려면  
   
-1. Visual studio **파일** 메뉴에서 **새로 만들기**를 클릭 하 고 **프로젝트**합니다.  
+1. Visual Studio **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭 합니다.  
   
-2. 에 **프로젝트 형식** 창에는 **새 프로젝트** 대화 상자에서 클릭 **Visual C#** .  
+2. **새 프로젝트** 대화 상자의 **프로젝트 형식** 창에서 **C#시각적 개체**를 클릭 합니다.  
   
 3. **템플릿** 창에서 **콘솔 애플리케이션**을 클릭합니다.  
   
-4. 에 **이름을** 상자에 입력 **LinqDataManipulationApp**합니다.  
+4. **이름** 상자에 **linqdatamanipulationapp 입력**을 입력 합니다.  
   
-5. 에 **위치** 상자, 프로젝트 파일을 저장할 위치를 확인 합니다.  
+5. **위치** 상자에서 프로젝트 파일을 저장할 위치를 확인 합니다.  
   
 6. **확인**을 클릭합니다.  
   
@@ -70,9 +70,9 @@ ms.locfileid: "67742739"
   
 #### <a name="to-add-systemdatalinq"></a>System.Data.Linq를 추가하려면  
   
-1. **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 **참조**를 클릭 하 고 **참조 추가**합니다.  
+1. **솔루션 탐색기**에서 **참조**를 마우스 오른쪽 단추로 클릭 한 다음 **참조 추가**를 클릭 합니다.  
   
-2. 에 **참조 추가** 대화 상자, 클릭 **.NET**, 필자는 System.Data.Linq 어셈블리를 클릭 한 다음 클릭 **확인**합니다.  
+2. **참조 추가** 대화 상자에서 **.net**을 클릭 하 고 system.xml 어셈블리를 클릭 한 다음 **확인**을 클릭 합니다.  
   
      어셈블리가 프로젝트에 추가됩니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "67742739"
   
 1. **프로젝트** 메뉴에서 **기존 항목 추가**를 클릭합니다.  
   
-2. 에 **기존 항목 추가** 대화 상자에서 c:\linqtest6\northwind.cs로 이동 하 고 클릭 **추가**합니다.  
+2. **기존 항목 추가** 대화 상자에서 c:\linqtest6\ northwind.cs으로 이동한 다음 **추가**를 클릭 합니다.  
   
      northwind.cs 파일이 프로젝트에 추가됩니다.  
   
@@ -100,11 +100,11 @@ ms.locfileid: "67742739"
   
      [!code-csharp[DLinqWalk3CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#2)]  
   
-2. 이때 F5 키를 눌러 응용 프로그램을 테스트합니다.  
+2. 이때 F5 키를 눌러 애플리케이션을 테스트합니다.  
   
-     A **콘솔** 창이 열립니다.  
+     **콘솔** 창이 열립니다.  
   
-     Enter 키를 눌러 응용 프로그램을 닫을 수 있습니다 합니다 **콘솔** 창에서 클릭 하 여 **디버깅 중지** Visual studio **디버그** 메뉴.  
+     **콘솔** 창에서 enter 키를 누르거나 Visual Studio **디버그** 메뉴에서 **디버깅 중지** 를 클릭 하 여 응용 프로그램을 닫을 수 있습니다.  
   
 ## <a name="creating-a-new-entity"></a>새 엔터티 만들기  
  새 엔터티를 만드는 과정은 단순합니다. `Customer` 키워드를 사용하여 개체(예: `new`)를 만들 수 있습니다.  
@@ -119,7 +119,7 @@ ms.locfileid: "67742739"
   
 2. F5 키를 눌러 솔루션을 디버깅합니다.  
   
-3. Enter 키를 눌러 합니다 **콘솔** 창 디버깅을 중지 하 고 연습을 계속 합니다.  
+3. **콘솔** 창에서 enter 키를 눌러 디버깅을 중지 하 고 연습을 계속 합니다.  
   
 ## <a name="updating-an-entity"></a>엔터티 업데이트  
  다음 단계에서는 `Customer` 개체를 검색하고 해당 속성 중 하나를 수정합니다.  
@@ -156,10 +156,10 @@ ms.locfileid: "67742739"
   
 3. F5 키를 눌러 솔루션을 디버깅합니다.  
   
-4. Enter 키를 눌러에 **콘솔** 창 응용 프로그램을 닫습니다.  
+4. **콘솔** 창에서 enter 키를 눌러 응용 프로그램을 닫습니다.  
   
 > [!NOTE]
->  변경 내용을 전송하여 새 고객을 추가한 후에는 이 솔루션을 있는 그대로 다시 실행할 수 없습니다. 솔루션을 다시 실행하려면 추가할 고객의 이름과 고객 ID를 변경합니다.  
+> 변경 내용을 전송하여 새 고객을 추가한 후에는 이 솔루션을 있는 그대로 다시 실행할 수 없습니다. 솔루션을 다시 실행하려면 추가할 고객의 이름과 고객 ID를 변경합니다.  
   
 ## <a name="see-also"></a>참고자료
 

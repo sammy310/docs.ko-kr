@@ -8,12 +8,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-ms.openlocfilehash: df88f9ae0b32ecd3b79686f3271e09b92ad7d4fd
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: c06639ef2f2ced8bd128adea636efe8be1715764
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040186"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931020"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>연습: Visual C를 사용 하 여 Windows Forms 컨트롤에서 상속\#
 시각적 개체 C#를 사용 하면 *상속*을 통해 강력한 사용자 지정 컨트롤을 만들 수 있습니다. 상속을 통해 표준 Windows Forms 컨트롤의 모든 고유 기능을 유지하면서 사용자 지정 기능을 통합하는 컨트롤을 만들 수 있습니다. 이 연습에서는 `ValueButton`이라는 간단한 상속된 컨트롤을 만듭니다. 이 단추는 표준 Windows Forms <xref:System.Windows.Forms.Button> 컨트롤에서 기능을 상속 하 고 라는 `ButtonValue`사용자 지정 속성을 노출 합니다.
@@ -42,7 +42,7 @@ ms.locfileid: "69040186"
 8. **파일** 메뉴에서 **모두 저장**을 선택하여 프로젝트를 저장합니다.
 
     > [!NOTE]
-    >  비주얼 디자이너는 더 이상 사용할 수 없습니다. 컨트롤은 <xref:System.Windows.Forms.Button> 자체적으로 그리기를 수행 하므로 디자이너에서 모양을 수정할 수 없습니다. 시각적 표시는 코드에서 수정 되지 않는 한, 상속 된 클래스 (즉, <xref:System.Windows.Forms.Button>)와 정확히 동일 합니다. UI 요소가 없는 구성 요소를 디자인 화면에 계속 추가할 수 있습니다.
+    > 비주얼 디자이너는 더 이상 사용할 수 없습니다. 컨트롤은 <xref:System.Windows.Forms.Button> 자체적으로 그리기를 수행 하므로 디자이너에서 모양을 수정할 수 없습니다. 시각적 표시는 코드에서 수정 되지 않는 한, 상속 된 클래스 (즉, <xref:System.Windows.Forms.Button>)와 정확히 동일 합니다. UI 요소가 없는 구성 요소를 디자인 화면에 계속 추가할 수 있습니다.
 
 ## <a name="adding-a-property-to-your-inherited-control"></a>상속된 컨트롤에 속성 추가
  상속된 Windows Forms 컨트롤의 한 가지 가능한 용도는 표준 Windows Forms 컨트롤과 모양 및 느낌이 동일하지만 사용자 지정 속성을 노출하는 컨트롤을 만드는 것입니다. 이 섹션에서는 `ButtonValue`라는 속성을 컨트롤에 추가합니다.

@@ -2,12 +2,12 @@
 title: <serviceThrottling>
 ms.date: 03/30/2017
 ms.assetid: a337d064-1e64-4209-b4a9-db7fdb7e3eaf
-ms.openlocfilehash: 995ff9979096757225c9241e977f86f755955945
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 77ed5e91f09d9e658deeb7996baaca445b4e0c90
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758108"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937104"
 ---
 # <a name="servicethrottling"></a>\<serviceThrottling>
 WCF(Windows Communication Foundation) 서비스의 스로틀 메커니즘을 지정합니다.  
@@ -44,7 +44,7 @@ WCF(Windows Communication Foundation) 서비스의 스로틀 메커니즘을 지
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|동작 요소를 지정합니다.|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|동작 요소를 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
  스로틀은 리소스가 과도하게 사용되는 것을 방지하기 위해 동시 호출, 인스턴스 또는 세션 수를 제한합니다.  
@@ -52,7 +52,7 @@ WCF(Windows Communication Foundation) 서비스의 스로틀 메커니즘을 지
  특성 값에 도달할 때마다 추적이 기록되며 첫 번째 추적이 경고로 기록됩니다.  
   
 ## <a name="example"></a>예제  
- 다음 구성 예제에서는 서비스가 최대 동시 호출 수를 2로 제한하고 최대 동시 인스턴스 수를 10으로 제한하도록 지정합니다. 이 예제를 실행 하는 자세한 예제를 보려면 [제한](../../../../../docs/framework/wcf/samples/throttling.md)합니다.  
+ 다음 구성 예제에서는 서비스가 최대 동시 호출 수를 2로 제한하고 최대 동시 인스턴스 수를 10으로 제한하도록 지정합니다. 이 예제를 실행 하는 방법에 대 한 자세한 예제는 [제한](../../../wcf/samples/throttling.md)을 참조 하세요.  
   
 ```xml  
 <behaviors>
@@ -72,4 +72,4 @@ WCF(Windows Communication Foundation) 서비스의 스로틀 메커니즘을 지
 
 - <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>
 - <xref:System.ServiceModel.Configuration.ServiceThrottlingElement>
-- [ServiceThrottlingBehavior를 사용하여 WCF 서비스 성능 제어](../../../../../docs/framework/wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)
+- [ServiceThrottlingBehavior를 사용하여 WCF 서비스 성능 제어](../../../wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)

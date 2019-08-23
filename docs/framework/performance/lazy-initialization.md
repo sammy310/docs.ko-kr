@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aef3105844ee61607bbc85332a76611c91a4198a
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 1c13445b8b7c72d1c66efe5a9db3aaa027001ecf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364053"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943814"
 ---
 # <a name="lazy-initialization"></a>초기화 지연
 개체 *초기화 지연*은 개체를 처음 사용할 때까지 생성이 지연된다는 의미입니다. (이 항목의 경우 *초기화 지연*과 *인스턴스화 지연*은 동의어임). 초기화 지연은 기본적으로 성능을 향상시키는 데 사용하며, 불필요한 계산을 방지하고, 프로그램 메모리 요구 사항을 줄입니다. 다음은 가장 일반적인 시나리오입니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "68364053"
   
  다음 표에는 다양한 시나리오에서 초기화 지연을 사용하도록 .NET Framework 버전 4에서 제공하는 유형이 나열되어 있습니다.  
   
-|형식|Description|  
+|형식|설명|  
 |----------|-----------------|  
 |<xref:System.Lazy%601>|클래스 라이브러리 또는 사용자 정의 형식에 대한 초기화 지연 의미 체계를 제공하는 래퍼 클래스입니다.|  
 |<xref:System.Threading.ThreadLocal%601>|스레드-로컬 기반으로 초기화 지연 의미 체계를 제공한다는 점을 제외하고는 <xref:System.Lazy%601>와 비슷합니다. 모든 스레드는 고유 값에 액세스할 수 있습니다.|  
@@ -62,7 +62,7 @@ ms.locfileid: "68364053"
  기본적으로 <xref:System.Lazy%601> 개체는 스레드로부터 안전합니다. 즉, 생성자가 스레드 보안 유형을 지정하지 않으면 생성된 <xref:System.Lazy%601> 개체는 스레드로부터 안전합니다. 다중 스레드 시나리오에서 스레드로부터 안전한 <xref:System.Lazy%601> 개체의 <xref:System.Lazy%601.Value%2A> 속성에 액세스하는 첫 번째 스레드가 모든 스레드에서의 모든 후속 액세스를 위해 개체를 초기화하고 모든 스레드에서 동일한 데이터를 공유합니다. 따라서 어떤 스레드가 개체를 초기화하는지는 중요하지 않으며 경합 상태는 심각하지 않습니다.  
   
 > [!NOTE]
->  예외 캐싱을 사용하여 이러한 일관성을 오류 조건까지 확장할 수 있습니다. 자세한 내용은 다음 섹션인 [Lazy 개체의 예외](../../../docs/framework/performance/lazy-initialization.md#ExceptionsInLazyObjects)를 참조하세요.  
+> 예외 캐싱을 사용하여 이러한 일관성을 오류 조건까지 확장할 수 있습니다. 자세한 내용은 다음 섹션인 [Lazy 개체의 예외](../../../docs/framework/performance/lazy-initialization.md#ExceptionsInLazyObjects)를 참조하세요.  
   
  다음 예에서는 동일한 `Lazy<int>` 인스턴스에서는 개별 스레드의 값이 동일함을 보여 줍니다.  
   
@@ -89,10 +89,10 @@ ms.locfileid: "68364053"
 ## <a name="exceptions-in-lazy-objects"></a>Lazy 개체의 예외  
  앞에서 설명한 것처럼 <xref:System.Lazy%601> 개체는 항상 초기화 시와 동일한 개체 또는 값을 반환하므로 <xref:System.Lazy%601.Value%2A> 속성은 읽기 전용입니다. 예외 캐싱을 사용하도록 설정하면 이 불변성이 예외 동작까지 확장됩니다. 지연 초기화 된 개체에 예외 캐싱이 설정 되어 있고 속성에 <xref:System.Lazy%601.Value%2A> 처음 액세스할 때 초기화 메서드에서 예외를 throw 하는 경우 모든 후속 시도에서 <xref:System.Lazy%601.Value%2A> 속성에 대 한 액세스를 다시 시도할 때마다 동일한 예외가 throw 됩니다. . 즉, 다중 스레드 시나리오에서도 래핑된 형식의 생성자가 다시 호출되지 않습니다. 따라서 <xref:System.Lazy%601> 개체는 한 번의 액세스에서 예외 처리를 할 수 없으며 후속 액세스에서 값을 반환할 수 없습니다.  
   
- 초기화 메서드(`valueFactory` 매개 변수)를 사용하는 <xref:System.Lazy%601?displayProperty=nameWithType> 생성자를 사용할 때 예외 캐싱이 사용됩니다. 예를 들어 `Lazy(T)(Func(T))` 생성자를 사용할 때 사용됩니다. 생성자에서 <xref:System.Threading.LazyThreadSafetyMode> 값(`mode` 매개 변수)도 사용하는 경우 <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> 또는 <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>을 지정하세요. 초기화 메서드를 지정하면 이 두 모드에 대해 예외 캐싱을 사용합니다. 초기화 메서드는 매우 간단할 수 있습니다. `T`예를 들어, `new Lazy<Contents>(() => new Contents(), mode)` 에서 C#또는 `New Lazy(Of Contents)(Function() New Contents())` Visual Basic에 대해 매개 변수가 없는 생성자를 호출할 수 있습니다. 초기화 메서드를 지정 <xref:System.Lazy%601?displayProperty=nameWithType> 하지 않는 생성자를 사용 하는 경우에 대 한 `T` 매개 변수가 없는 생성자에서 throw 된 예외는 캐시 되지 않습니다. 자세한 내용은 <xref:System.Threading.LazyThreadSafetyMode> 열거형을 참조하세요.  
+ 초기화 메서드(`valueFactory` 매개 변수)를 사용하는 <xref:System.Lazy%601?displayProperty=nameWithType> 생성자를 사용할 때 예외 캐싱이 사용됩니다. 예를 들어 `Lazy(T)(Func(T))` 생성자를 사용할 때 사용됩니다. 생성자에서 <xref:System.Threading.LazyThreadSafetyMode> 값(`mode` 매개 변수)도 사용하는 경우 <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> 또는 <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>을 지정하세요. 초기화 메서드를 지정하면 이 두 모드에 대해 예외 캐싱을 사용합니다. 초기화 메서드는 매우 간단할 수 있습니다. `T`예를 들어, `new Lazy<Contents>(() => new Contents(), mode)` 에서 C#또는 `New Lazy(Of Contents)(Function() New Contents())` Visual Basic에 대해 매개 변수가 없는 생성자를 호출할 수 있습니다. 초기화 메소드를 지정하지 않는 <xref:System.Lazy%601?displayProperty=nameWithType> 생성자를 사용하는 경우 `T`의 매개 변수가 없는 생성자가 throw하는 예외는 캐싱되지 않습니다. 자세한 내용은 <xref:System.Threading.LazyThreadSafetyMode> 열거형을 참조하세요.  
   
 > [!NOTE]
->  `isThreadSafe` 생성자 매개 변수를 `false`로 설정하거나 `mode` 생성자 매개 변수를 <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>으로 설정하여 <xref:System.Lazy%601> 개체를 만들면 단일 스레드에서 <xref:System.Lazy%601> 개체에 액세스하거나 고유 동기화를 제공해야 합니다. 그러면 예외 캐싱을 포함하여 개체의 모든 요소에 적용됩니다.  
+> `isThreadSafe` 생성자 매개 변수를 `false`로 설정하거나 `mode` 생성자 매개 변수를 <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>으로 설정하여 <xref:System.Lazy%601> 개체를 만들면 단일 스레드에서 <xref:System.Lazy%601> 개체에 액세스하거나 고유 동기화를 제공해야 합니다. 그러면 예외 캐싱을 포함하여 개체의 모든 요소에 적용됩니다.  
   
  이전 섹션에서 설명한 대로 <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly?displayProperty=nameWithType>을 지정하여 만든 <xref:System.Lazy%601> 개체는 예외를 다르게 처리합니다. <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>를 사용하면 여러 스레드에서 <xref:System.Lazy%601> 인스턴스를 초기화하기 위해 경쟁할 수 있습니다. 이 경우 예외가 캐시되지 않고, 초기화에 성공할 때까지 <xref:System.Lazy%601.Value%2A> 속성에 계속 액세스하려고 시도할 수 있습니다.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "68364053"
  [!code-vb[Lazy#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#9)]  
   
 ## <a name="thread-local-variables-in-parallelfor-and-foreach"></a>Parallel.For 및 ForEach의 스레드 지역 변수  
- <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 메서드 또는 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 메서드를 사용하여 데이터 소스를 병렬로 반복할 때 스레드 로컬 데이터 지원을 기본으로 제공하는 오버로드를 사용할 수 있습니다. 이러한 메서드에서는 데이터를 만들고 액세스하며 정리하기 위해 로컬 대리자를 사용하여 스레드 국부성을 달성합니다. 자세한 내용은 [방법: 스레드 로컬 변수를 사용하는 Parallel.For 루프 작성](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) 및 [방법: 파티션 로컬 변수를 사용하는 Parallel.ForEach 루프 작성](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)을 참조하세요.  
+ <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 메서드 또는 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 메서드를 사용하여 데이터 소스를 병렬로 반복할 때 스레드 로컬 데이터 지원을 기본으로 제공하는 오버로드를 사용할 수 있습니다. 이러한 메서드에서는 데이터를 만들고 액세스하며 정리하기 위해 로컬 대리자를 사용하여 스레드 국부성을 달성합니다. 자세한 내용은 [방법: 스레드 로컬 변수를 사용하는 Parallel.For 루프 작성](../../standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) 및 [방법: 파티션 로컬 변수를 사용하는 Parallel.ForEach 루프 작성](../../standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)을 참조하세요.  
   
 ## <a name="using-lazy-initialization-for-low-overhead-scenarios"></a>오버헤드가 적은 시나리오에 초기화 지연 사용  
  다수의 개체를 초기화 지연해야 하는 시나리오에서는 <xref:System.Lazy%601>의 각 개체를 래핑하는 데 너무 많은 메모리 또는 너무 많은 계산 리소스가 필요한지 판별할 수 있습니다. 또는 초기화 지연 노출 방법에 대한 엄격한 요구 사항이 있을 수 있습니다. 이 경우 <xref:System.Threading.LazyInitializer?displayProperty=nameWithType> 클래스의 `static`(Visual Basic에서 `Shared`) 메서드를 사용하여 <xref:System.Lazy%601> 인스턴스에 래핑하지 않고 각 개체의 초기화를 지연할 수 있습니다.  
@@ -154,7 +154,7 @@ ms.locfileid: "68364053"
   
 ## <a name="see-also"></a>참고자료
 
-- [관리되는 스레딩 기본 사항](../../../docs/standard/threading/managed-threading-basics.md)
-- [스레드 및 스레딩](../../../docs/standard/threading/threads-and-threading.md)
-- [TPL(작업 병렬 라이브러리)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [관리되는 스레딩 기본 사항](../../standard/threading/managed-threading-basics.md)
+- [스레드 및 스레딩](../../standard/threading/threads-and-threading.md)
+- [TPL(작업 병렬 라이브러리)](../../standard/parallel-programming/task-parallel-library-tpl.md)
 - [방법: 개체의 초기화 지연 수행](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

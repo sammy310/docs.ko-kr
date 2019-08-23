@@ -10,12 +10,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 - BindingSource [Windows Forms], using with multiple forms
 ms.assetid: a1a49630-db9c-4485-b888-1f62a373a4f7
-ms.openlocfilehash: 28eceaec72053d70885d54bc09179cff743ff71c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: aa497194fd4ac65f48773a45175333a1d862b453
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591441"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956070"
 ---
 # <a name="how-to-share-bound-data-across-forms-using-the-bindingsource-component"></a>방법: BindingSource 구성 요소를 사용하여 양식 간에 바인딩된 데이터 공유
 <xref:System.Windows.Forms.BindingSource> 구성 요소를 사용하여 폼 간에 데이터를 쉽게 공유할 수 있습니다. 예를 들어 데이터 소스 데이터를 요약하는 하나의 읽기 전용 폼과 데이터 소스에서 현재 선택한 항목에 대한 세부 정보가 포함된 다른 편집 가능한 폼을 표시할 수 있습니다. 이 예제에서는 이 시나리오를 보여 줍니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "65591441"
  다음 코드 예제에서는 <xref:System.Windows.Forms.BindingSource> 및 바인딩된 데이터를 폼 간에 공유하는 방법을 보여 줍니다. 이 예제에서는 공유 <xref:System.Windows.Forms.BindingSource>는 자식 폼의 생성자에 전달됩니다. 자식 폼을 통해 사용자는 기본 폼에서 현재 선택한 항목에 대한 데이터를 편집할 수 있습니다.  
   
 > [!NOTE]
->  예제에서는 <xref:System.Windows.Forms.BindingSource> 구성 요소에 대한 <xref:System.Windows.Forms.BindingSource.BindingComplete> 이벤트를 처리하여 두 폼을 동기화된 상태로 유지합니다. 내용은 이유에 대 한 자세한 내용은 이루어집니다 [방법: 여러 컨트롤을 확인 동일한 데이터 소스에 바인딩된 동기화 된 상태로 유지](../multiple-controls-bound-to-data-source-synchronized.md)합니다.  
+> 예제에서는 <xref:System.Windows.Forms.BindingSource> 구성 요소에 대한 <xref:System.Windows.Forms.BindingSource.BindingComplete> 이벤트를 처리하여 두 폼을 동기화된 상태로 유지합니다. 이 작업을 수행 [하는 이유에 대 한 자세한 내용은 방법: 동일한 데이터 소스에 바인딩된 여러 컨트롤이 동기화](../multiple-controls-bound-to-data-source-synchronized.md)된 상태를 유지 하는지 확인 합니다.  
   
  [!code-csharp[System.Windows.Forms.BindingSourceMultipleForms#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleForms/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.BindingSourceMultipleForms#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleForms/VB/Form1.vb#1)]  
@@ -38,4 +38,4 @@ ms.locfileid: "65591441"
 
 - [BindingSource 구성 요소](bindingsource-component.md)
 - [Windows Forms 데이터 바인딩](../windows-forms-data-binding.md)
-- [방법: 오류 및 데이터 바인딩에서 발생 하는 예외 처리](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
+- [방법: 데이터 바인딩에서 발생 하는 오류 및 예외 처리](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)

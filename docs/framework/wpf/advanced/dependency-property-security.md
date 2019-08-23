@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-ms.openlocfilehash: 2f9de32eb8637e58c17aba2309eed33dcfdd42a7
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: d9dd9306980b80f7845c10e8c0ccb59f29821245
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400761"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940834"
 ---
 # <a name="dependency-property-security"></a>종속성 속성 보안
 종속성 속성은 일반적으로 public 속성으로 간주됩니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 속성 시스템의 특성으로 인해 종속성 속성 값에 대한 보안을 보장할 수 없습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "68400761"
  사용자 지정 종속성 속성의 경우 속성을 읽기 전용 종속성 속성으로 등록할 수 있으며,이는 해당 속성 <xref:System.Windows.DependencyPropertyKey> 에 대 한 참조를 보유 하지 않는 사용자가 속성을 설정 하는 것을 방지 하는 효과적인 방법을 제공 합니다. 자세한 내용은 [읽기 전용 종속성 속성](read-only-dependency-properties.md)을 참조하세요.  
   
 > [!NOTE]
->  <xref:System.Windows.DependencyProperty> 식별자 필드 private를 선언 하는 것은 사용할 수 없으며, 사용자 지정 클래스의 즉시 노출 되는 네임 스페이스를 줄이는 데 사용할 수 있습니다. 그러나 이러한 속성은 공용 언어와 동일한 의미에서 "private"으로 간주 되어서는 안 됩니다. 런타임 (CLR) 언어 정의는 다음 섹션에 설명 된 이유로 해당 액세스 수준을 정의 합니다.  
+> <xref:System.Windows.DependencyProperty> 식별자 필드 private를 선언 하는 것은 사용할 수 없으며, 사용자 지정 클래스의 즉시 노출 되는 네임 스페이스를 줄이는 데 사용할 수 있습니다. 그러나 이러한 속성은 공용 언어와 동일한 의미에서 "private"으로 간주 되어서는 안 됩니다. 런타임 (CLR) 언어 정의는 다음 섹션에 설명 된 이유로 해당 액세스 수준을 정의 합니다.  
   
 <a name="PropertySystemExposure"></a>   
 ## <a name="property-system-exposure-of-dependency-properties"></a>종속성 속성의 속성 시스템 노출  

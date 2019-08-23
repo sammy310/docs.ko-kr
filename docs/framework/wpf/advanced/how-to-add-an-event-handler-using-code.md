@@ -8,12 +8,12 @@ helpviewer_keywords:
 - event handlers [WPF], adding
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
-ms.openlocfilehash: 00b12d9dc25e0704eb73d8bc727ae6647493f494
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 017b32dc07f62cc4553a84f7b91687fb34a53c65
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401175"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937468"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>방법: 코드를 사용하여 이벤트 처리기 추가
 이 예제에서는 코드를 사용 하 여 요소에 이벤트 처리기를 추가 하는 방법을 보여 줍니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "68401175"
  [!code-vb[RoutedEventAddRemoveHandler#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/VisualBasic/default.xaml.vb#handler)]  
   
 > [!NOTE]
->  처음에 구문 분석 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 된 페이지에서 이벤트 처리기를 추가 하는 것이 훨씬 더 간단 합니다. 이벤트 처리기를 추가 하려는 개체 요소 내에서 처리할 이벤트의 이름과 일치 하는 특성을 추가 합니다. 그런 다음 해당 특성의 값을 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지의 코드 파일에 정의 된 이벤트 처리기 메서드의 이름으로 지정 합니다. 자세한 내용은 [XAML 개요 (WPF)](xaml-overview-wpf.md) 또는 [라우트된 이벤트 개요](routed-events-overview.md)를 참조 하세요.  
+> 처음에 구문 분석 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 된 페이지에서 이벤트 처리기를 추가 하는 것이 훨씬 더 간단 합니다. 이벤트 처리기를 추가 하려는 개체 요소 내에서 처리할 이벤트의 이름과 일치 하는 특성을 추가 합니다. 그런 다음 해당 특성의 값을 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지의 코드 파일에 정의 된 이벤트 처리기 메서드의 이름으로 지정 합니다. 자세한 내용은 [XAML 개요 (WPF)](xaml-overview-wpf.md) 또는 [라우트된 이벤트 개요](routed-events-overview.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고자료
 

@@ -2,12 +2,12 @@
 title: System.TimeSpan 메서드
 ms.date: 03/30/2017
 ms.assetid: 9333fee8-1454-4374-855b-8c14c002f48f
-ms.openlocfilehash: dd693a64550293d6894e1d2abc3f651a53fc17fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec27f8f17a6709efef1a8230b521778095ae1257
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917438"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947086"
 ---
 # <a name="systemtimespan-methods"></a>System.TimeSpan 메서드
 <xref:System.TimeSpan?displayProperty=nameWithType>에 대한 멤버 지원은 사용 중인 .NET Framework 및 Microsoft SQL Server의 버전에 따라 크게 다릅니다.  
@@ -17,7 +17,7 @@ ms.locfileid: "61917438"
 ## <a name="previous-limitations"></a>기존의 제한  
  .NET Framework 3.5 SP1보다 낮은 버전의 .NET Framework과 함께 LINQ to SQL을 사용하는 경우 SQL Server 데이터베이스 필드를 <xref:System.TimeSpan?displayProperty=nameWithType>에 매핑할 수 없습니다. 그러나 <xref:System.TimeSpan> 값은 <xref:System.TimeSpan> 빼기에서 반환되거나 리터럴 또는 바인딩된 변수로 식에 삽입될 수 있기 때문에 <xref:System.DateTime>에 대한 연산은 지원됩니다.  
   
-## <a name="supported-systemtimespan-member-support"></a>지원 되는 System.TimeSpan 멤버 지원
+## <a name="supported-systemtimespan-member-support"></a>지원 되는 시스템. TimeSpan 멤버 지원
 
  다음 LINQ to SQL에서 지원하는 메서드, 연산자 및 속성을 LINQ to SQL 쿼리에 사용할 수 있습니다. 개체 모델 또는 외부 매핑 파일에 매핑되면 LINQ to SQL을 사용하여 LINQ to SQL 쿼리 내부의 <xref:System.TimeSpan?displayProperty=nameWithType> 멤버 대부분을 호출할 수 있습니다.  
   
@@ -31,10 +31,10 @@ ms.locfileid: "61917438"
 ||<xref:System.TimeSpan.op_LessThanOrEqual%2A>|<xref:System.TimeSpan.MinValue>|  
   
 > [!NOTE]
->  LINQ to SQL을 사용하여 <xref:System.TimeSpan?displayProperty=nameWithType>을 SQL `TIME` 열에 매핑하려면 .NET Framework 3.5 SP1 이상이 필요합니다. SQL `TIME` 데이터 형식은 Microsoft SQL Server 2008 이상에서만 사용할 수 있습니다.  
+> LINQ to SQL을 사용하여 <xref:System.TimeSpan?displayProperty=nameWithType>을 SQL `TIME` 열에 매핑하려면 .NET Framework 3.5 SP1 이상이 필요합니다. SQL `TIME` 데이터 형식은 Microsoft SQL Server 2008 이상에서만 사용할 수 있습니다.  
   
 ### <a name="addition-and-subtraction"></a>더하기 및 빼기  
- CLR <xref:System.TimeSpan?displayProperty=nameWithType> 형식은 더하기와 빼기를 지원하지만 SQL `TIME` 형식은 그렇지 않습니다. 이 때문에 LINQ to SQL 쿼리에서 SQL `TIME` 형식에 매핑할 때 더하기와 빼기를 시도할 경우 오류가 발생합니다. SQL 날짜 및 시간 형식 사용에 대해 기타 고려를 찾을 수 있습니다 [SQL-CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)합니다.  
+ CLR <xref:System.TimeSpan?displayProperty=nameWithType> 형식은 더하기와 빼기를 지원하지만 SQL `TIME` 형식은 그렇지 않습니다. 이 때문에 LINQ to SQL 쿼리에서 SQL `TIME` 형식에 매핑할 때 더하기와 빼기를 시도할 경우 오류가 발생합니다. Sql의 날짜 및 시간 형식에 대 한 작업에 대 한 기타 고려 사항은 [SQL CLR 형식 매핑에서](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)확인할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
 

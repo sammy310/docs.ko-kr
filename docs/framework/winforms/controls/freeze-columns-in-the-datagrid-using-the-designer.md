@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column freezing
 - data [Windows Forms], displaying
 ms.assetid: 87412dd2-478f-4751-af87-dafc591fc215
-ms.openlocfilehash: d38c8d73bc70e7e521b476ca78c8f102d003c538
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 7ebdf7a1598ac3cd61005ae607e5bfbe7cb49059
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040331"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933711"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열 고정
 사용자가 Windows Forms <xref:System.Windows.Forms.DataGridView> 컨트롤에 표시된 데이터를 볼 때 단일 열이나 열 집합을 자주 참조해야 하는 경우가 있습니다. 예를 들어 많은 열이 포함 된 고객 정보 테이블을 표시 하는 경우 다른 열을 표시 영역 밖으로 스크롤할 수 있도록 하는 동시에 고객 이름을 항상 표시 하는 것이 유용 합니다.
@@ -30,7 +30,7 @@ ms.locfileid: "69040331"
 3. **열 속성** 표에서 <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A> 속성을로 `true`설정 합니다.
 
     > [!NOTE]
-    >  **열 추가** 대화 상자에서 **고정** 상자를 선택 하 여 열을 추가 하는 경우에도 열을 고정할 수 있습니다.
+    > **열 추가** 대화 상자에서 **고정** 상자를 선택 하 여 열을 추가 하는 경우에도 열을 고정할 수 있습니다.
 
 ## <a name="see-also"></a>참고자료
 

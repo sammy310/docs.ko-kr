@@ -10,16 +10,16 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: a59223bfbe9506aa0028933d55b74e24d5595c32
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9f6c82144031cb2bf4824985b8211453bb7f51ea
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629543"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959177"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI 자동화 및 화면 크기 조정
 > [!NOTE]
->  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]사용자가 dpi (인치당 도트 수) 설정을 변경 하 여 화면에 있는 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 대부분의 요소가 더 크게 나타나도록 합니다. 이 기능은 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]에서 오래 전부터 사용할 수 있었지만, 이전 버전에서는 크기 조정을 애플리케이션에서 구현해야 했습니다. [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]에서 바탕 화면 창 관리자는 자체 크기 조정을 처리하지 않는 모든 응용 프로그램에 기본 크기 조정을 수행합니다. UI 자동화 클라이언트 애플리케이션에서는 이 기능을 고려해야 합니다.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "68629543"
  실제로 사용자가 배율 인수를 120 dpi로 설정 하면 화면의 세로 또는 가로 인치가 25% 더 커집니다. 그에 따라 모든 치수가 적절하게 조정됩니다. 화면 위쪽에서 왼쪽 가장자리까지 애플리케이션 창의 오프셋이 25% 늘어납니다. 응용 프로그램 크기 조정을 사용 하 고 응용 프로그램에서 dpi를 인식 하지 못하는 경우 창의 크기는 포함 된 모든 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 요소의 오프셋과 크기와 함께 동일한 비율로 늘어납니다.  
   
 > [!NOTE]
->  기본적으로, 사용자가 dpi를 120로 설정 하는 경우에는 비 dpi 인식 응용 프로그램에 대 한 크기 조정을 수행 하지 않지만 dpi가 사용자 지정 값 144 이상으로 설정 된 경우에는이를 수행 합니다. 그러나 사용자는 기본 동작을 재정의할 수 있습니다.  
+> 기본적으로, 사용자가 dpi를 120로 설정 하는 경우에는 비 dpi 인식 응용 프로그램에 대 한 크기 조정을 수행 하지 않지만 dpi가 사용자 지정 값 144 이상으로 설정 된 경우에는이를 수행 합니다. 그러나 사용자는 기본 동작을 재정의할 수 있습니다.  
   
  화면 크기 조정 어떤 방식으로든 화면 좌표와 관련된 애플리케이션에 대한 새로운 문제를 만듭니다. 이제 화면에는 물리적 좌표와 논리적 좌표 두 개가 포함됩니다. 점의 물리적 좌표는 원점의 왼쪽 상단에서의 픽셀 단위의 실제 오프셋입니다. 논리적 좌표는 픽셀 자체의 크기가 조정된 경우 발생되는 오프셋입니다.  
   

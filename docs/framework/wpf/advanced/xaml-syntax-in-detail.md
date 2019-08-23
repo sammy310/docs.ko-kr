@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 2c4e7213ddcffdb026d3d6e6b339bfc91b3c27c6
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 3ac7d79660830601ca69951e56763fc923692b0e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400778"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958794"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 구문 정보
 이 항목에서는 XAML 구문의 요소를 설명 하는 데 사용 되는 용어를 정의 합니다. 이러한 용어는이 설명서의 나머지 부분 전체에서 자주 사용 됩니다. WPF 설명서와 XAML을 사용 하는 다른 프레임 워크 또는 system.xaml 수준에서 XAML 언어 지원에 의해 설정 된 기본 XAML 개념에 대해 자주 사용 됩니다. 이 항목에서는 [XAML 개요 (WPF)](xaml-overview-wpf.md)항목에서 소개 하는 기본 용어를 확장 합니다.  
@@ -86,7 +86,7 @@ ms.locfileid: "68400778"
  특성 구문은 기존 개체 요소에 특성을 선언 하 여 속성에 대 한 값을 설정 하는 XAML 태그 구문입니다. 특성 이름은 관련 개체 요소를 지 원하는 클래스의 속성에 대 한 CLR 멤버 이름과 일치 해야 합니다. 특성 이름 다음에는 할당 연산자 (=)가 나옵니다. 특성 값은 따옴표로 묶인 문자열 이어야 합니다.  
   
 > [!NOTE]
->  교대로 반복 되는 따옴표를 사용 하 여 특성 안에 리터럴 따옴표를 추가할 수 있습니다. 예를 들어 큰따옴표를 사용 하 여 큰따옴표 문자를 포함 하는 문자열을 선언할 수 있습니다. 작은따옴표 또는 큰따옴표를 사용 하는 경우에는 일치 하는 쌍을 사용 하 여 특성 값 문자열을 열고 닫아야 합니다. 특정 XAML 구문에 적용 되는 문자 제한을 해결 하는 데 사용할 수 있는 이스케이프 시퀀스 또는 기타 기술도 있습니다. [XML 문자 엔터티 및 XAML을](../../xaml-services/xml-character-entities-and-xaml.md)참조 하세요.  
+> 교대로 반복 되는 따옴표를 사용 하 여 특성 안에 리터럴 따옴표를 추가할 수 있습니다. 예를 들어 큰따옴표를 사용 하 여 큰따옴표 문자를 포함 하는 문자열을 선언할 수 있습니다. 작은따옴표 또는 큰따옴표를 사용 하는 경우에는 일치 하는 쌍을 사용 하 여 특성 값 문자열을 열고 닫아야 합니다. 특정 XAML 구문에 적용 되는 문자 제한을 해결 하는 데 사용할 수 있는 이스케이프 시퀀스 또는 기타 기술도 있습니다. [XML 문자 엔터티 및 XAML을](../../xaml-services/xml-character-entities-and-xaml.md)참조 하세요.  
   
  특성 구문을 통해 설정 하려면 속성이 public 이어야 하며 쓰기 가능 해야 합니다. 지원 형식 시스템의 속성 값은 값 형식 이어야 하며, 관련 된 지원 형식에 액세스할 때 XAML 프로세서가 인스턴스화하거나 참조할 수 있는 참조 형식 이어야 합니다.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "68400778"
  암시적 컬렉션 요소는 태그에 요소로 나타나지 않는 경우에도 논리적 트리 표현에서 멤버를 만듭니다. 일반적으로 부모 형식의 생성자는 해당 속성 중 하나인 컬렉션에 대해 인스턴스화를 수행 하 고 처음에는 빈 컬렉션이 개체 트리의 일부가 됩니다.  
   
 > [!NOTE]
->  제네릭 목록 및 사전 인터페이스 (<xref:System.Collections.Generic.IList%601> 및 <xref:System.Collections.Generic.IDictionary%602>)는 컬렉션 검색에 대해 지원 되지 않습니다. 그러나 클래스는 <xref:System.Collections.Generic.List%601> 직접 <xref:System.Collections.Generic.Dictionary%602> 을 <xref:System.Collections.IList> 구현<xref:System.Collections.IDictionary> 하기 때문에 클래스를 기본 클래스로 사용할 수 있습니다.  
+> 제네릭 목록 및 사전 인터페이스 (<xref:System.Collections.Generic.IList%601> 및 <xref:System.Collections.Generic.IDictionary%602>)는 컬렉션 검색에 대해 지원 되지 않습니다. 그러나 클래스는 <xref:System.Collections.Generic.List%601> 직접 <xref:System.Collections.Generic.Dictionary%602> 을 <xref:System.Collections.IList> 구현<xref:System.Collections.IDictionary> 하기 때문에 클래스를 기본 클래스로 사용할 수 있습니다.  
   
  컬렉션 형식에 대 한 .NET 참조 페이지에서 컬렉션에 대 한 개체 요소를 의도적으로 생략 하는이 구문은 XAML 구문 섹션에서 암시적 컬렉션 구문으로 표시 되기도 합니다.  
   

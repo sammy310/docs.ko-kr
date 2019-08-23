@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: b68148b08cf6b5f980bc09e497e845558ae882fb
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: c3ec6ca6feba975517a9f982bb58e4b061516a61
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567526"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962810"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 부분 신뢰 보안
 <a name="introduction"></a> 일반적으로 악의적인 손상을 방지하기 위해 중요한 시스템 리소스에 직접 액세스하지 않도록 인터넷 응용 프로그램을 제한해야 합니다. 기본적으로 HTML 및 클라이언트 쪽 스크립팅 언어는 중요 한 시스템 리소스에 액세스할 수 없습니다. WPF (Windows Presentation Foundation) 브라우저에서 호스팅되는 응용 프로그램은 브라우저에서 실행할 수 있기 때문에 유사한 제한 사항을 준수 해야 합니다. 이러한 제한을 적용 하기 위해 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 는 CAS (코드 액세스 보안) 및 ClickOnce를 모두 사용 합니다 ( [WPF 보안 전략-플랫폼 보안](wpf-security-strategy-platform-security.md)참조). 기본적으로 브라우저에서 호스트 된 응용 프로그램은 인터넷, 로컬 인트라넷 또는 로컬 컴퓨터에서 시작 되었는지 여부에 관계 없이 인터넷 영역 CA 사용 권한 집합을 요청 합니다. 전체 권한 집합보다 적은 권한으로 실행하는 애플리케이션은 부분 신뢰로 실행된다고 할 수 있습니다.  
@@ -87,7 +87,7 @@ ms.locfileid: "69567526"
 |인터넷|"신뢰할 수 없음"과 함께 실패|인증서로 XBAP에 로그인합니다.|  
   
 > [!NOTE]
->  위의 표에 설명된 동작은 ClickOnce 신뢰 배포 모델을 따르지 않는 완전 신뢰 XBAP에 대한 것입니다.  
+> 위의 표에 설명된 동작은 ClickOnce 신뢰 배포 모델을 따르지 않는 완전 신뢰 XBAP에 대한 것입니다.  
   
  일반적으로 허용되는 권한을 초과하는 코드는, 독립 실행형 애플리케이션과 브라우저에서 호스트된 애플리케이션 간에 공유되는 일반적인 코드일 수 있습니다. CAS 및 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 에서는이 시나리오를 관리 하기 위한 몇 가지 방법을 제공 합니다.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "69567526"
  CA를 사용 하 여 사용 권한을 확인 하는 것은 권한 별로 확인 해야 하는 경우에 적합 한 기술입니다. 이 기술은 일반적인 프로세스의 일부인 예외 감지에 영향을 받으며, 일반적으로 권장되지 않고 성능 문제를 일으킬 수 있습니다. 대신이 인터넷 영역 [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] 샌드박스 내 에서만 실행 되는 경우에 대해 [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)]true를 반환 <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> 하는 속성을 사용할 수 있습니다.  
   
 > [!NOTE]
->  <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A>응용 프로그램을 실행 하는 데 사용 되는 권한 집합이 아니라 브라우저에서 응용 프로그램을 실행 하 고 있는지만 구분 합니다.  
+> <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A>응용 프로그램을 실행 하는 데 사용 되는 권한 집합이 아니라 브라우저에서 응용 프로그램을 실행 하 고 있는지만 구분 합니다.  
   
 <a name="Managing_Permissions"></a>   
 ## <a name="managing-permissions"></a>권한 관리  
@@ -149,7 +149,7 @@ ms.locfileid: "69567526"
 |웹 브라우저|HTML 안전 프레임 탐색|예|예|  
   
 > [!NOTE]
->  잘라내기 및 붙여넣기는 사용자가 시작한 경우 부분 신뢰에서만 허용됩니다.  
+> 잘라내기 및 붙여넣기는 사용자가 시작한 경우 부분 신뢰에서만 허용됩니다.  
   
  권한을 높이는 경우 프로젝트 설정 및 ClickOnce 애플리케이션 매니페스트를 변경해야 합니다. 자세한 내용은 [WPF XAML 브라우저 애플리케이션 개요](./app-development/wpf-xaml-browser-applications-overview.md)를 참조하세요. 다음 문서도 유용할 수 있습니다.  
   

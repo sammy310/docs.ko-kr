@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: 8063f239123ec1a2f2650adf9d76f7ceaaa50673
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 561ebd7ac6948fa42f73ebb4f1eb97c574e6d7e7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664262"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963172"
 ---
-# <a name="retrieve-data-using-a-datareader"></a>DataReader를 사용 하 여 데이터를 검색 합니다.
-사용 하 여 데이터를 검색 하는 **DataReader**의 인스턴스를 만듭니다 합니다 **명령** 개체를 만든 다음을 **DataReader** 호출 하 여 **Command.ExecuteReader**  데이터 원본에서 행을 검색 합니다. 합니다 **DataReader** 절차적 논리 없이 효율적으로 데이터 소스에서 결과 순차적으로 처리할 수 있도록 데이터를 버퍼링 되지 않은 스트림을 제공 합니다. 합니다 **DataReader** 데이터가 메모리에 캐시 되지 않기 때문에 많은 양의 데이터를 검색 하는 경우 적합 합니다.
+# <a name="retrieve-data-using-a-datareader"></a>DataReader를 사용 하 여 데이터 검색
+**DataReader**를 사용 하 여 데이터를 검색 하려면 **command** 개체의 인스턴스를 만든 다음 **ExecuteReader** 를 호출 하 여 데이터 원본에서 행을 검색 하 여 **DataReader** 를 만듭니다. **DataReader** 는 데이터 원본에서 순차적으로 결과를 효율적으로 처리 하는 절차적 논리를 허용 하는 버퍼링 되지 않은 데이터 스트림을 제공 합니다. **DataReader** 는 데이터가 메모리에 캐시 되지 않기 때문에 대량의 데이터를 검색 하는 경우에 적합 합니다.
 
-다음 예제를 사용 하는 **DataReader**여기서 `reader` 올바른 DataReader를 나타내는 및 `command` 올바른 Command 개체를 나타냅니다.  
+다음 예제에서는 **datareader**를 사용 하는 방법을 `reader` 보여 줍니다. 여기서은 `command` 유효한 datareader를 나타내고는 유효한 명령 개체를 나타냅니다.  
 
 ```csharp
 reader = command.ExecuteReader();  
@@ -25,39 +25,39 @@ reader = command.ExecuteReader();
 reader = command.ExecuteReader()
 ```  
 
-사용 된 **DataReader.Read** 메서드는 쿼리 결과에서 행을 가져오려고 합니다. 이름 또는 열의 서 수 번호를 전달 하 여 반환된 된 행의 각 열에 액세스할 수 있습니다 합니다 **DataReader**합니다. 최상의 성능을 위해 합니다 **DataReader** 일련의 네이티브 데이터 형식으로 열 값에 액세스할 수 있도록 하는 메서드를 제공 (**GetDateTime**, **GetDouble**하십시오 **GetGuid**를 **GetInt32**등). 데이터 공급자별으로 형식화 된 접근자 메서드 목록을 **DataReaders**를 참조 하십시오 <xref:System.Data.OleDb.OleDbDataReader> 및 <xref:System.Data.SqlClient.SqlDataReader>합니다. 기본 데이터를 알고 있는 경우에 형식화 된 접근자 메서드를 사용 하 여 형식 열 값을 검색할 때 필요한 형식 변환의 크기를 줄입니다.  
+**DataReader** 메서드를 사용 하 여 쿼리 결과에서 행을 가져옵니다. 열의 이름 또는 서 수를 **DataReader**에 전달 하 여 반환 된 행의 각 열에 액세스할 수 있습니다. 그러나 최상의 성능을 위해 **DataReader** 는 네이티브 데이터 형식 (**getdatetime**, **getdatetime**, **getdatetime**, **GetInt32**등)의 열 값에 액세스할 수 있도록 하는 일련의 메서드를 제공 합니다. 데이터 공급자별 데이터 **판독기**의 형식화 된 접근자 메서드 목록은 및 <xref:System.Data.OleDb.OleDbDataReader> <xref:System.Data.SqlClient.SqlDataReader>를 참조 하십시오. 기본 데이터 형식을 알고 있는 경우 형식화 된 접근자 메서드를 사용 하면 열 값을 검색할 때 필요한 형식 변환의 양이 줄어듭니다.  
   
- 다음 예제에서는 반복을 **DataReader** 개체 및 각 행에서 두 개의 열을 반환 합니다.  
+ 다음 예에서는 **DataReader** 개체를 반복 하 고 각 행에서 두 개의 열을 반환 합니다.  
   
  [!code-csharp[DataWorks SqlClient.HasRows#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.HasRows/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.HasRows#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.HasRows/VB/source.vb#1)]  
   
 ## <a name="closing-the-datareader"></a>DataReader 닫기  
- 항상 호출 합니다 **닫기** 메서드를 사용 하 여 완료 한 후 합니다 **DataReader** 개체입니다.  
+ **DataReader** 개체 사용을 완료 한 후에는 항상 **Close** 메서드를 호출 합니다.  
   
- 경우에 **명령** 출력이 포함 값까지 사용할 수 없는 매개 변수 또는 반환 값을 **DataReader** 닫혀 합니다.  
+ **명령** 에 출력 매개 변수 또는 반환 값이 포함 된 경우 **DataReader** 를 닫을 때까지 해당 값을 사용할 수 없습니다.  
   
- 하는 동안를 **DataReader** 열려 있는 경우 합니다 **연결** 에서 단독으로 사용 중인 **DataReader**합니다. 에 대해 어떤 명령도 실행할 수 없습니다는 **연결**, 등 다른 **DataReader**, 원래 될 때까지 **DataReader** 닫혀 있습니다.  
+ **Datareader** 가 열려 있는 동안에는 해당 **datareader**에서 단독으로 **연결** 을 사용 합니다. 원본 **datareader** 가 닫힐 때까지 다른 **datareader**만들기를 포함 하 여 **연결**에 대 한 명령을 실행할 수 없습니다.  
   
 > [!NOTE]
->  호출 하지 마세요 **닫기** 또는 **Dispose** 에 **연결**, **DataReader**, 또는 다른 관리 개체에는 **Finalize**  클래스의 메서드. 종료자에서는 클래스에 직접 속한 관리되지 않는 리소스만 해제합니다. 클래스는 관리 되지 않는 리소스를 소유 하지 않습니다, 경우 포함 되지 않습니다는 **Finalize** 클래스 정의에 메서드. 자세한 내용은 [가비지 수집](../../../../docs/standard/garbage-collection/index.md)합니다.  
+> 클래스의 **Finalize** 메서드에서 **Connection**, **DataReader**또는 기타 관리 되는 개체에 대해 **Close** 또는 **Dispose** 를 호출 하지 마세요. 종료자에서는 클래스에 직접 속한 관리되지 않는 리소스만 해제합니다. 클래스는 관리 되지 않는 리소스를 소유 하지 않습니다, 경우 포함 되지 않습니다는 **Finalize** 클래스 정의에 메서드. 자세한 내용은 [가비지 수집](../../../standard/garbage-collection/index.md)합니다.  
   
-## <a name="retrieving-multiple-result-sets-using-nextresult"></a>NextResult를 사용 하 여 집합 여러 결과 검색 합니다.  
- 경우는 **DataReader** 호출 여러 결과 집합을 반환 합니다 **NextResult** 결과 반복 하는 메서드를 순차적으로 설정 합니다. 다음 예제에서는 <xref:System.Data.SqlClient.SqlDataReader>가 <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> 메서드를 사용하여 두 가지 SELECT 문 결과를 처리하는 방법을 보여 줍니다.  
+## <a name="retrieving-multiple-result-sets-using-nextresult"></a>NextResult를 사용 하 여 여러 결과 집합 검색  
+ **DataReader** 에서 여러 결과 집합을 반환 하는 경우 **nextresult** 메서드를 호출 하 여 결과 집합을 순차적으로 반복 합니다. 다음 예제에서는 <xref:System.Data.SqlClient.SqlDataReader>가 <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> 메서드를 사용하여 두 가지 SELECT 문 결과를 처리하는 방법을 보여 줍니다.  
   
  [!code-csharp[DataWorks SqlClient.NextResult#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.NextResult/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.NextResult#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.NextResult/VB/source.vb#1)]  
   
 ## <a name="getting-schema-information-from-the-datareader"></a>DataReader에서 스키마 정보 가져오기  
- 하는 동안를 **DataReader** 가 열기를 가져오면 현재 결과 사용 하 여 집합에 대 한 스키마 정보를 **GetSchemaTable** 메서드. **GetSchemaTable** 반환을 <xref:System.Data.DataTable> 현재 결과 집합에 대 한 스키마 정보를 포함 하는 행과 열으로 채워진 개체입니다. 합니다 **DataTable** 결과 집합의 각 열에 대해 하나의 행을 포함 합니다. 스키마 테이블의 각 열에 반환 된 열의 속성에 매핑됩니다 있는 결과의 행을 설정 합니다 **ColumnName** 속성의 이름이 며 열의 값은 속성의 값입니다. 다음 예제에 대 한 스키마 정보를 씁니다 **DataReader**합니다.  
+ **DataReader** 가 열려 있는 동안에는 **getschematable** 수 있는 메서드를 사용 하 여 현재 결과 집합에 대 한 스키마 정보를 검색할 수 있습니다. **Getschematable** 은 현재 <xref:System.Data.DataTable> 결과 집합에 대 한 스키마 정보를 포함 하는 행과 열로 채워진 개체를 반환 합니다. **DataTable** 은 결과 집합의 각 열에 대해 하나의 행을 포함 합니다. 스키마 테이블의 각 열은 결과 집합의 행에 반환 된 열의 속성에 매핑됩니다. 여기서 **ColumnName** 은 속성의 이름이 고 열 값은 속성의 값입니다. 다음 예제에서는 **DataReader**의 스키마 정보를 작성 합니다.  
   
  [!code-csharp[DataWorks SqlClient.GetSchemaTable#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.GetSchemaTable/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.GetSchemaTable#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.GetSchemaTable/VB/source.vb#1)]  
   
-## <a name="working-with-ole-db-chapters"></a>OLE DB 장 사용  
- 계층적 행 집합 또는 장 (OLE DB 형식 **DBTYPE_HCHAPTER**, ADO 형식 **adChapter**)를 사용 하 여 검색할 수는 <xref:System.Data.OleDb.OleDbDataReader>합니다. 장을 포함 하는 쿼리로 반환 될 때를 **DataReader**의 열으로 반환 되는 **DataReader** 으로 노출 되는 **DataReader** 개체.  
+## <a name="working-with-ole-db-chapters"></a>OLE DB 챕터 사용  
+ 계층적 행 집합 또는 챕터 (OLE DB 형식 **DBTYPE_HCHAPTER**, ADO 유형 **adchapter**)는를 <xref:System.Data.OleDb.OleDbDataReader>사용 하 여 검색할 수 있습니다. 챕터를 포함 하는 쿼리가 **datareader**로 반환 되는 경우이 장은 **datareader** 에서 열로 반환 되 고 **datareader** 개체로 노출 됩니다.  
   
- ADO.NET **데이터 집합** 테이블 간의 부모-자식 관계를 사용 하 여 계층적 행 집합을 나타내는 데 사용할 수도 있습니다. 자세한 내용은 [Dataset, Datatable 및 Dataview](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)합니다.  
+ ADO.NET **데이터 집합** 을 사용 하 여 테이블 간 부모-자식 관계를 사용 하 여 계층적 행 집합을 나타낼 수도 있습니다. 자세한 내용은 [데이터 집합, datatable 및 DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)를 참조 하세요.  
   
  다음 코드 예제에서는 MSDataShape 공급자를 사용하여 고객 목록에 있는 각 고객의 주문에 대해 장 열을 생성합니다.  
   
@@ -133,14 +133,14 @@ using (OleDbConnection connection = new OleDbConnection(
 }
 ```  
   
-## <a name="returning-results-with-oracle-ref-cursors"></a>Oracle REF Cursor를 사용 하 여 결과 반환합니다.  
+## <a name="returning-results-with-oracle-ref-cursors"></a>Oracle REF Cursor를 사용 하 여 결과 반환  
  .NET Framework Data Provider for Oracle을 사용하면 Oracle REF CURSOR를 사용하여 쿼리 결과를 반환할 수 있습니다. Oracle REF CURSOR는 <xref:System.Data.OracleClient.OracleDataReader>로 반환됩니다.  
   
- 검색할 수 있습니다는 <xref:System.Data.OracleClient.OracleDataReader> 를 사용 하 여 Oracle REF CURSOR를 나타내는 개체를 <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A> 메서드. 지정할 수도 있습니다는 <xref:System.Data.OracleClient.OracleCommand> 으로 하나 이상의 Oracle REF Cursor를 반환 하는 합니다 **SelectCommand** 에 대 한는 <xref:System.Data.OracleClient.OracleDataAdapter> 채우는 데는 <xref:System.Data.DataSet>.  
+ 메서드를 <xref:System.Data.OracleClient.OracleDataReader> <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A> 사용 하 여 Oracle REF CURSOR를 나타내는 개체를 검색할 수 있습니다. 하나 이상의 Oracle REF cursor <xref:System.Data.OracleClient.OracleCommand> 를를 <xref:System.Data.DataSet>채우는 <xref:System.Data.OracleClient.OracleDataAdapter> 데 사용 되는의 **SelectCommand** 로 반환 하는를 지정할 수도 있습니다.  
   
- Oracle 데이터 원본에서 반환 하는 REF CURSOR에 액세스 하려면 만듭니다는 <xref:System.Data.OracleClient.OracleCommand> 쿼리에 대 한 REF CURSOR를 참조 하는 출력 매개 변수를 추가 합니다 <xref:System.Data.OracleClient.OracleCommand.Parameters> 의 컬렉션에 <xref:System.Data.OracleClient.OracleCommand>합니다. 매개 변수 이름은 쿼리의 REF CURSOR 매개 변수 이름과 일치해야 합니다. 매개 변수의 형식을 설정 <xref:System.Data.OracleClient.OracleType.Cursor?displayProperty=nameWithType>합니다. <xref:System.Data.OracleClient.OracleCommand.ExecuteReader?displayProperty=nameWithType> 메서드의 하 <xref:System.Data.OracleClient.OracleCommand> 반환는 <xref:System.Data.OracleClient.OracleDataReader> REF CURSOR에 대 한 합니다.  
+ Oracle 데이터 원본에서 반환 된 ref 커서에 액세스 하려면 쿼리에 <xref:System.Data.OracleClient.OracleCommand> 대해를 만들고 ref 커서를 참조 하는 출력 매개 변수를의 <xref:System.Data.OracleClient.OracleCommand.Parameters> <xref:System.Data.OracleClient.OracleCommand>컬렉션에 추가 합니다. 매개 변수 이름은 쿼리의 REF CURSOR 매개 변수 이름과 일치해야 합니다. 매개 변수의 형식을로 <xref:System.Data.OracleClient.OracleType.Cursor?displayProperty=nameWithType>설정 합니다. 의 메서드는 <xref:System.Data.OracleClient.OracleCommand.ExecuteReader?displayProperty=nameWithType> REF 커서 <xref:System.Data.OracleClient.OracleDataReader> 에 대해를 반환합니다.<xref:System.Data.OracleClient.OracleCommand>  
   
- 경우에 <xref:System.Data.OracleClient.OracleCommand> 여러 REF CURSOR를 반환 합니다. 여러 출력 매개 변수를 추가 합니다. 호출 하 여 서로 다른 REF Cursor에 액세스할 수 있습니다는 <xref:System.Data.OracleClient.OracleCommand.ExecuteReader?displayProperty=nameWithType> 메서드. 에 대 한 호출 <xref:System.Data.OracleClient.OracleCommand.ExecuteReader> 반환을 <xref:System.Data.OracleClient.OracleDataReader> 하면 첫 REF CURSOR를 참조 합니다. 호출할 수 있습니다는 <xref:System.Data.OracleClient.OracleDataReader.NextResult?displayProperty=nameWithType> REF Cursor에 액세스 하는 방법입니다. 하지만 매개 변수 프로그램 <xref:System.Data.OracleClient.OracleCommand.Parameters?displayProperty=nameWithType> 이름별로 컬렉션 일치 REF CURSOR 출력 매개 변수를 <xref:System.Data.OracleClient.OracleDataReader> 에 추가 된 순서 대로 액세스는 <xref:System.Data.OracleClient.OracleCommand.Parameters> 컬렉션.  
+ 에서 <xref:System.Data.OracleClient.OracleCommand> 여러 REF cursor를 반환 하는 경우 여러 출력 매개 변수를 추가 합니다. 메서드를 <xref:System.Data.OracleClient.OracleCommand.ExecuteReader?displayProperty=nameWithType> 호출 하 여 다른 REF cursor에 액세스할 수 있습니다. 를 호출 하면 <xref:System.Data.OracleClient.OracleCommand.ExecuteReader> 첫 번째 <xref:System.Data.OracleClient.OracleDataReader> REF 커서를 참조 하는이 반환 됩니다. 그런 다음 메서드를 <xref:System.Data.OracleClient.OracleDataReader.NextResult?displayProperty=nameWithType> 호출 하 여 후속 REF 커서에 액세스할 수 있습니다. <xref:System.Data.OracleClient.OracleCommand.Parameters?displayProperty=nameWithType> 컬렉션의 매개 변수가 이름으로 REF CURSOR 출력 매개 변수와 일치 하더라도는 <xref:System.Data.OracleClient.OracleCommand.Parameters> 컬렉션에 <xref:System.Data.OracleClient.OracleDataReader> 추가 된 순서 대로 해당 매개 변수를 액세스 합니다.  
   
  예를 들어, 다음과 같은 Oracle 패키지 및 패키지 본문이 있을 수 있습니다.  
   
@@ -162,7 +162,7 @@ CREATE OR REPLACE PACKAGE BODY CURSPKG AS
 END CURSPKG;   
 ```  
   
- 다음 코드는 <xref:System.Data.OracleClient.OracleCommand> 형식의 두 매개 변수를 추가 하 여 이전 Oracle 패키지에서 REF Cursor를 반환 하는 <xref:System.Data.OracleClient.OracleType.Cursor?displayProperty=nameWithType> 에 <xref:System.Data.OracleClient.OracleCommand.Parameters?displayProperty=nameWithType> 컬렉션입니다.  
+ 다음 코드에서는 <xref:System.Data.OracleClient.OracleCommand> <xref:System.Data.OracleClient.OracleCommand.Parameters?displayProperty=nameWithType> 컬렉션에 형식의 <xref:System.Data.OracleClient.OracleType.Cursor?displayProperty=nameWithType> 매개 변수 두 개를 추가 하 여 이전 Oracle 패키지에서 REF cursor를 반환 하는를 만듭니다.  
   
 ```vb  
 Dim cursCmd As OracleCommand = New OracleCommand("CURSPKG.OPEN_TWO_CURSORS", oraConn)  
@@ -176,7 +176,7 @@ cursCmd.Parameters.Add("EMPCURSOR", OracleType.Cursor).Direction = ParameterDire
 cursCmd.Parameters.Add("DEPTCURSOR", OracleType.Cursor).Direction = ParameterDirection.Output;  
 ```  
   
- 다음 코드를 사용 하 여 이전 명령 결과 반환 합니다 <xref:System.Data.OracleClient.OracleDataReader.Read> 및 <xref:System.Data.OracleClient.OracleDataReader.NextResult> 의 메서드는 <xref:System.Data.OracleClient.OracleDataReader>합니다. REF CURSOR 매개 변수가 순서대로 반환됩니다.  
+ 다음 코드는의 <xref:System.Data.OracleClient.OracleDataReader.Read> <xref:System.Data.OracleClient.OracleDataReader.NextResult> 및 메서드를 사용 하 여 이전 명령의 결과를 반환 합니다 <xref:System.Data.OracleClient.OracleDataReader>. REF CURSOR 매개 변수가 순서대로 반환됩니다.  
   
 ```vb  
 oraConn.Open()  
@@ -232,7 +232,7 @@ reader.Close();
 oraConn.Close();  
 ```  
   
- 다음 예제에서는 명령을 사용 하 여 이전 채우기는 <xref:System.Data.DataSet> Oracle 패키지의 결과입니다.  
+ 다음 예에서는 이전 명령을 사용 하 여를 <xref:System.Data.DataSet> Oracle 패키지의 결과로 채웁니다.  
   
 ```vb  
 Dim ds As DataSet = New DataSet()  
@@ -255,7 +255,7 @@ adapter.Fill(ds);
 ```
 
 > [!NOTE]
->  않으려면를 **OverflowException**, 모든 변환할 Oracle NUMBER 형식 유효한.NET Framework 형식으로 값을 저장 하기 전에 처리 하는 것이 좋습니다는 <xref:System.Data.DataRow>합니다. 사용할 수는 <xref:System.Data.Common.DataAdapter.FillError> 여부를 확인 하는 이벤트를 **OverflowException** 발생 했습니다. 에 대 한 자세한 합니다 <xref:System.Data.Common.DataAdapter.FillError> 이벤트를 참조 하세요 [DataAdapter 이벤트 처리](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)합니다.  
+> **OverflowException**을 방지 하려면에 <xref:System.Data.DataRow>값을 저장 하기 전에 Oracle 숫자 형식에서 유효한 .NET Framework 형식으로의 변환을 처리 하는 것이 좋습니다. 이벤트를 <xref:System.Data.Common.DataAdapter.FillError> 사용 하 여 **OverflowException** 발생 했는지 여부를 확인할 수 있습니다. <xref:System.Data.Common.DataAdapter.FillError> 이벤트에 대 한 자세한 내용은 [DataAdapter 이벤트 처리](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고자료
 

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 170cc4a42eda0b54d1e252104a702e008af7a336
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: df2bd232a870e17eeb5106cf0b60a9e77641969d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671818"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963538"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error 문(Visual Basic)
 오류 처리 루틴을 사용 하도록 설정 하 고 프로시저 내에서 루틴의 위치를 지정 합니다. 를 사용 하 여 오류 처리 루틴을 사용 하지 않도록 설정할 수도 있습니다. `On Error` 문은 비구조적 오류 처리에 사용 되며 구조적 예외 처리 대신 사용할 수 있습니다. [구조적 예외 처리](../../../standard/exceptions/index.md) 는 .net에 기본 제공 되며, 일반적으로 더 효율적 이므로 응용 프로그램에서 런타임 오류를 처리할 때 권장 됩니다.
@@ -35,7 +35,7 @@ ms.locfileid: "68671818"
  오류 처리 또는 예외 처리를 사용 하지 않을 경우 발생 하는 런타임 오류는 심각한 오류입니다. 오류 메시지가 표시 되 고 실행이 중지 됩니다.
 
 > [!NOTE]
->  키워드는 이전 버전과의 호환성을 위해 지원 되는 [오류 문에서](../../../visual-basic/language-reference/statements/error-statement.md)도 사용 됩니다. `Error`
+> 키워드는 이전 버전과의 호환성을 위해 지원 되는 [오류 문에서](../../../visual-basic/language-reference/statements/error-statement.md)도 사용 됩니다. `Error`
 
 ## <a name="syntax"></a>구문
 
@@ -55,7 +55,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## <a name="remarks"></a>설명
 
 > [!NOTE]
->  구조화 되지 않은 예외 처리 및 `On Error` 문을 사용 하는 대신 가능한 경우 코드에서 구조적 예외 처리를 사용 하는 것이 좋습니다. 자세한 내용은 [Try...Catch...Finally 문](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)을 참조하세요.
+> 구조화 되지 않은 예외 처리 및 `On Error` 문을 사용 하는 대신 가능한 경우 코드에서 구조적 예외 처리를 사용 하는 것이 좋습니다. 자세한 내용은 [Try...Catch...Finally 문](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)을 참조하세요.
 
  "활성화 된" 오류 처리기는 `On Error` 문에 의해 설정 되는 오류 처리기입니다. "활성" 오류 처리기는 오류를 처리 하는 프로세스에 있는 활성화 된 처리기입니다.
 
@@ -66,7 +66,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  오류 처리기가 호출 프로시저로 제어를 다시 전달할 때마다 해당 프로시저는 현재 프로시저가 됩니다. 프로시저의 오류 처리기에서 오류를 처리 한 후에는 `Resume` 문에 지정 된 지점에서 현재 프로시저의 실행이 다시 시작 됩니다.
   
 > [!NOTE]
->  오류 처리 루틴은 `Sub` 프로시저 `Function` 또는 프로시저가 아닙니다. 줄 레이블이나 줄 번호로 표시 되는 코드 섹션입니다.
+> 오류 처리 루틴은 `Sub` 프로시저 `Function` 또는 프로시저가 아닙니다. 줄 레이블이나 줄 번호로 표시 되는 코드 섹션입니다.
   
 ## <a name="number-property"></a>Number 속성
  오류 처리 루틴은 `Number` `Err` 개체의 속성 값을 사용 하 여 오류의 원인을 확인 합니다. 루틴은 다른 오류가 발생 하기 전이나 오류를 발생 시킬 `Err` 수 있는 프로시저를 호출 하기 전에 개체의 관련 속성 값을 테스트 하거나 저장 해야 합니다. `Err` 개체의 속성 값에는 가장 최근의 오류만 반영 됩니다. 와 `Err.Number` 관련 된 오류 메시지는에 `Err.Description`포함 되어 있습니다.  
@@ -82,7 +82,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  `On Error Resume Next`실행 시 오류가 발생 한 문 바로 다음에 오는 문을 실행 하거나 문을 포함 하 `On Error Resume Next` 는 프로시저에서 가장 최근의 호출 바로 다음에 오는 문으로 실행을 계속 합니다. 이 문을 사용 하면 런타임 오류에도 불구 하 고 실행을 계속할 수 있습니다. 프로시저 내의 다른 위치로 제어를 전송 하는 대신 오류가 발생 하는 오류 처리 루틴을 저장할 수 있습니다. 다른 프로시저가 호출 될 때 `On Error Resume Next` 문이비활성화되므로해당루틴내에서인라인오류를처리하려는경우호출된각루틴에서문을실행해야합니다.`On Error Resume Next`
   
 > [!NOTE]
->  합니다 `On Error Resume Next` 구문에 더 적합할 수 있습니다 `On Error GoTo` 다른 개체에 액세스 하는 동안 발생 한 오류를 처리 하는 경우. 개체 `Err` 와의 각 상호 작용 후에 확인 하면 코드에서 액세스 된 개체에 대 한 모호성을 제거 합니다. 오류 코드 `Err.Number`를 배치 하는 개체와 원래 오류를 생성 한 개체 (에 `Err.Source`지정 된 개체)를 확인할 수 있습니다.
+> 합니다 `On Error Resume Next` 구문에 더 적합할 수 있습니다 `On Error GoTo` 다른 개체에 액세스 하는 동안 발생 한 오류를 처리 하는 경우. 개체 `Err` 와의 각 상호 작용 후에 확인 하면 코드에서 액세스 된 개체에 대 한 모호성을 제거 합니다. 오류 코드 `Err.Number`를 배치 하는 개체와 원래 오류를 생성 한 개체 (에 `Err.Source`지정 된 개체)를 확인할 수 있습니다.
 
 ## <a name="on-error-goto-0"></a>On Error GoTo 0
  `On Error GoTo 0`현재 프로시저에서 오류 처리를 사용 하지 않도록 설정 합니다. 오류 처리 코드의 시작으로 줄 0을 지정 하지 않습니다. 프로시저에 번호가 0 인 줄이 포함 된 경우에도 마찬가지입니다. `On Error GoTo 0` 문이 없으면 프로시저 종료 시 오류 처리기가 자동으로 비활성화 됩니다.

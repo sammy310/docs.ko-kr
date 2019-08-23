@@ -3,12 +3,12 @@ title: '방법: WIF를 사용하여 로그인 상태 표시'
 ms.date: 03/30/2017
 ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
 author: BrucePerlerMS
-ms.openlocfilehash: 6d81bd2023886799f939fc9851db516a00aa92df
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e44dc80260e46b81ac723ada32085390a18a153a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742446"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945694"
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>방법: WIF를 사용하여 로그인 상태 표시
 ## <a name="applies-to"></a>적용 대상  
@@ -117,7 +117,7 @@ ms.locfileid: "67742446"
 3. **Default.aspx**를 저장하고 나서 **Default.aspx.cs**라는 코드 숨김 파일을 엽니다.  
   
     > [!NOTE]
-    >  **Default.aspx.cs**는 솔루션 탐색기에서 **Default.aspx** 아래에 숨겨질 수 있습니다. **Default.aspx.cs**가 표시되지 않으면 옆에 있는 삼각형을 클릭하여 **Default.aspx**를 확장합니다.  
+    > **Default.aspx.cs**는 솔루션 탐색기에서 **Default.aspx** 아래에 숨겨질 수 있습니다. **Default.aspx.cs**가 표시되지 않으면 옆에 있는 삼각형을 클릭하여 **Default.aspx**를 확장합니다.  
   
 4. **Default.aspx.cs**의 기존 코드를 다음 코드로 바꿉니다.  
   
@@ -153,4 +153,4 @@ ms.locfileid: "67742446"
   
 1. Visual Studio에서 **F5** 키를 눌러 애플리케이션 디버깅을 시작합니다. 오류가 발견되지 않으면 새 브라우저 창이 열립니다.  
   
-2. 브라우저가 요청을 STS로 자동으로 리디렉션하고 나서 Default.aspx 페이지를 엽니다. WIF가 제대로 구성 하는 경우에 다음 텍스트를 표시 하는 사이트를 표시 됩니다. **"로그인"** 합니다.
+2. 브라우저가 요청을 STS로 자동으로 리디렉션하고 나서 Default.aspx 페이지를 엽니다. WIF이 제대로 구성 된 경우 사이트에 다음 텍스트가 표시 됩니다. **"사용자가 로그인**했습니다."

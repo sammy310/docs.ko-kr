@@ -1,16 +1,16 @@
 ---
-title: < system.serviceModel > 워크플로
+title: 워크플로의 >를 < 합니다.
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-ms.openlocfilehash: 5580bf570c4c728b526bd62109b48c3ccc18943a
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: faa8154c4d7ac5c6aa2f9f1707cf8f0d39eefad5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422884"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947357"
 ---
-# <a name="systemservicemodel-of-workflow"></a>\<system.serviceModel > 워크플로
+# <a name="systemservicemodel-of-workflow"></a>\<워크플로의 System.servicemodel >
 이 구성 섹션에는 모든 워크플로 구성 요소가 포함됩니다.  
   
 ## <a name="syntax"></a>구문  
@@ -99,10 +99,10 @@ ms.locfileid: "67422884"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<behaviors>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behaviors-of-workflow.md)|이 섹션에서는 정의 된 **serviceBehaviors** 컬렉션입니다.  컬렉션의 각 요소는 서비스에서 사용하는 동작 요소를 정의합니다. 각 동작 요소는 고유한으로 식별 되 **이름을** 특성입니다.|  
-|[\<tracking>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|워크플로 서비스에 대한 추적 설정을 정의하기 위한 구성 섹션을 나타냅니다.<br /><br /> 워크플로 추적 및 해당 구성에 대 한 자세한 내용은 참조 하세요. [워크플로 추적 및 트레이싱](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) 하 고 [워크플로에 대 한 추적 구성](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)합니다.|  
+|[\<behaviors>](behaviors-of-workflow.md)|이 섹션은 **Servicebehaviors** 컬렉션을 정의 합니다.  컬렉션의 각 요소는 서비스에서 사용하는 동작 요소를 정의합니다. 각 동작 요소는 고유한 **이름** 특성으로 식별 됩니다.|  
+|[\<tracking>](tracking.md)|워크플로 서비스에 대한 추적 설정을 정의하기 위한 구성 섹션을 나타냅니다.<br /><br /> 워크플로 추적 및 해당 구성에 대 한 자세한 내용은 워크플로 [추적 및](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) 추적 및 [워크플로에 대 한 추적 구성](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md)을 참조 하세요.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   

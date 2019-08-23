@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: c2e6a955a151e0e11bcf189085dc24e7815fb747
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
-ms.translationtype: MT
+ms.openlocfilehash: d9c3492e50a5eba741fa6e241f6b2c57fde35ef0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582734"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952933"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>동기 및 비동기 작업
 이 항목에서는 비동기 서비스 작업의 구현 및 호출에 대해 설명합니다.  
@@ -110,11 +110,11 @@ public class AsyncExample
  이벤트 기반 비동기 패턴에 대한 자세한 내용은 [이벤트 기반 비동기 패턴](https://go.microsoft.com/fwlink/?LinkId=232515)을 참조하세요.  
   
 #### <a name="iasyncresult-asynchronous-pattern"></a>IAsyncResult 비동기 패턴  
- 서비스 작업을 비동기 방식으로 표시 및.NET Framework 비동기 프로그래밍 패턴을 사용 하 여 구현할 수 있습니다 합니다 `<Begin>` 메서드를 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 속성이로 설정 `true`합니다. 이 경우 비동기 작업은 동기 작업으로 동일한 형태로 메타 데이터에 노출 됩니다. 이 요청 메시지 및 상관 관계가 지정 된 응답 메시지를 사용 하 여 단일 작업으로 노출 됩니다. 그런 다음 클라이언트 프로그래밍 모델에서는 둘 중 하나를 선택할 수 있습니다. 즉, 서비스가 호출될 때 요청-응답 메시지 교환이 발생하는 한 이 패턴을 동기 작업이나 비동기 작업으로 나타낼 수 있습니다.  
+ 비동기 방식으로 .NET Framework 비동기 프로그래밍 패턴을 사용 하 여 서비스 작업을 구현 하 고 `<Begin>` <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 속성을 `true`로 설정 하 여 메서드를 표시할 수 있습니다. 이 경우 비동기 작업은 동기 작업과 동일한 형식으로 메타 데이터에 노출 됩니다. 요청 메시지 및 상관 관계가 지정 된 응답 메시지를 사용 하 여 단일 작업으로 노출 됩니다. 그런 다음 클라이언트 프로그래밍 모델에서는 둘 중 하나를 선택할 수 있습니다. 즉, 서비스가 호출될 때 요청-응답 메시지 교환이 발생하는 한 이 패턴을 동기 작업이나 비동기 작업으로 나타낼 수 있습니다.  
   
  일반적으로 시스템의 비동기 특성을 사용하는 경우 스레드에 대한 종속성을 사용하지 않아야 합니다.  작업 디스패치 처리의 다양한 단계에 데이터를 전달하는 가장 안정적인 방법은 확장을 사용하는 것입니다.  
   
- 예는 [방법: 비동기 서비스 작업 구현](../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)합니다.  
+ 예는 [방법: 비동기 서비스 작업](../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)을 구현 합니다.  
   
  클라이언트 응용 프로그램에서 호출되는 방식에 관계없이 비동기적으로 실행되는 계약 작업 `X`를 정의하려면 다음을 수행합니다.  
   
@@ -155,7 +155,7 @@ Function EndDoWork(ByRef inout As String, ByRef outonly As String, ByVal result 
 ```  
   
 > [!NOTE]
->  <xref:System.ServiceModel.OperationContractAttribute> 특성은 `BeginDoWork` 메서드에만 적용됩니다. 결과 계약에는 `DoWork`라는 하나의 WSDL 작업이 포함됩니다.  
+> <xref:System.ServiceModel.OperationContractAttribute> 특성은 `BeginDoWork` 메서드에만 적용됩니다. 결과 계약에는 `DoWork`라는 하나의 WSDL 작업이 포함됩니다.  
   
 ### <a name="client-side-asynchronous-invocations"></a>클라이언트측 비동기 호출  
  WCF 클라이언트 애플리케이션은 위에서 설명한 세 가지 비동기 호출 모델 중 하나를 사용할 수 있습니다.  
@@ -172,7 +172,7 @@ await simpleServiceClient.SampleMethodTaskAsync("hello, world");
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Version35  
 ```  
   
- 그러면 Svcutil.exe는 호출 애플리케이션이 응답을 받고 적절한 작업을 수행하기 위한 이벤트 처리기를 구현하고 할당할 수 있는 이벤트 인프라를 사용하여 WCF 클라이언트 클래스를 생성합니다. 전체 예제는 [방법: 서비스 작업을 비동기적으로 호출](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)합니다.  
+ 그러면 Svcutil.exe는 호출 애플리케이션이 응답을 받고 적절한 작업을 수행하기 위한 이벤트 처리기를 구현하고 할당할 수 있는 이벤트 인프라를 사용하여 WCF 클라이언트 클래스를 생성합니다. 전체 예제는 [방법: 서비스 작업을 비동기적](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)으로 호출 합니다.  
   
  그러나 이벤트 기반 비동기 모델은 [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)]에서만 사용할 수 있으며, <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>를 사용하여 WCF 클라이언트 채널이 만들어진 경우에는 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]에서도 지원되지 않습니다. WCF 클라이언트 채널 개체가 있는 경우 <xref:System.IAsyncResult?displayProperty=nameWithType> 개체를 사용하여 작업을 비동기적으로 호출해야 합니다. 이 방법을 사용하려면 다음 예제와 같이 [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)에서 **/async** 명령 옵션을 지정합니다.  
   
@@ -180,7 +180,7 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Versio
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async   
 ```  
   
- 그러면 각 작업이 `<Begin>` 속성이 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A>로 설정된 `true` 메서드와 해당 `<End>` 메서드로 모델링되는 서비스 계약이 생성됩니다. 사용 하는 전체 예제는 <xref:System.ServiceModel.ChannelFactory%601>를 참조 하세요 [방법: 채널 팩터리를 사용 하 여 비동기로 작업 호출](../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md)합니다.  
+ 그러면 각 작업이 `<Begin>` 속성이 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A>로 설정된 `true` 메서드와 해당 `<End>` 메서드로 모델링되는 서비스 계약이 생성됩니다. 을 <xref:System.ServiceModel.ChannelFactory%601>사용 하는 전체 예제를 보려면 [방법: 채널 팩터리](../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md)를 사용 하 여 작업을 비동기적으로 호출 합니다.  
   
  두 경우 모두 응용 프로그램은 서비스가 동기적으로 구현되더라도 동일한 패턴을 사용하여 로컬 동기 메서드를 비동기적으로 호출하는 것과 같은 방식으로 작업을 비동기적으로 호출할 수 있습니다. 작업이 구현되는 방식은 클라이언트에게 중요하지 않습니다. 응답 메시지가 도착하면 메시지 내용이 클라이언트의 비동기 <`End`> 메서드에 디스패치되고 클라이언트는 정보를 검색합니다.  
   
