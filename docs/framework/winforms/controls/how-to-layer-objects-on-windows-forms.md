@@ -12,27 +12,27 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-ms.openlocfilehash: 80973e16445079876e01c89f20b5ecbdca602eb8
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 818f36633575b248d92da475c462cc0f211fe969
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039721"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966534"
 ---
-# <a name="how-to-layer-objects-on-windows-forms"></a><span data-ttu-id="2e42b-102">방법: Windows Forms에서 개체 계층화</span><span class="sxs-lookup"><span data-stu-id="2e42b-102">How to: Layer Objects on Windows Forms</span></span>
-<span data-ttu-id="2e42b-103">복잡 한 사용자 인터페이스를 만들거나 MDI (다중 문서 인터페이스) 폼을 사용 하는 경우 더 복잡 한 UI (사용자 인터페이스)를 만들기 위해 컨트롤 및 자식 폼을 모두 계층화 하는 경우가 많습니다.</span><span class="sxs-lookup"><span data-stu-id="2e42b-103">When you create a complex user interface, or work with a multiple document interface (MDI) form, you will often want to layer both controls and child forms to create more complex user interfaces (UI).</span></span> <span data-ttu-id="2e42b-104">그룹의 컨텍스트 내에서 컨트롤과 창을 이동 하 고 추적 하려면 z 순서를 조작 합니다.</span><span class="sxs-lookup"><span data-stu-id="2e42b-104">To move and keep track of controls and windows within the context of a group, you manipulate their z-order.</span></span> <span data-ttu-id="2e42b-105">*Z 순서* 는 양식의 z 축 (깊이)을 따라 폼에 있는 컨트롤의 시각적 계층화입니다.</span><span class="sxs-lookup"><span data-stu-id="2e42b-105">*Z-order* is the visual layering of controls on a form along the form's z-axis (depth).</span></span> <span data-ttu-id="2e42b-106">Z 순서의 맨 위에 있는 창은 다른 모든 창과 겹칩니다.</span><span class="sxs-lookup"><span data-stu-id="2e42b-106">The window at the top of the z-order overlaps all other windows.</span></span> <span data-ttu-id="2e42b-107">다른 모든 창은 z 순서의 맨 아래에 있는 창과 겹칩니다.</span><span class="sxs-lookup"><span data-stu-id="2e42b-107">All other windows overlap the window at the bottom of the z-order.</span></span>
+# <a name="how-to-layer-objects-on-windows-forms"></a><span data-ttu-id="08d84-102">방법: Windows Forms에서 개체 계층화</span><span class="sxs-lookup"><span data-stu-id="08d84-102">How to: Layer Objects on Windows Forms</span></span>
+<span data-ttu-id="08d84-103">복잡 한 사용자 인터페이스를 만들거나 MDI (다중 문서 인터페이스) 폼을 사용 하는 경우 더 복잡 한 UI (사용자 인터페이스)를 만들기 위해 컨트롤 및 자식 폼을 모두 계층화 하는 경우가 많습니다.</span><span class="sxs-lookup"><span data-stu-id="08d84-103">When you create a complex user interface, or work with a multiple document interface (MDI) form, you will often want to layer both controls and child forms to create more complex user interfaces (UI).</span></span> <span data-ttu-id="08d84-104">그룹의 컨텍스트 내에서 컨트롤과 창을 이동 하 고 추적 하려면 z 순서를 조작 합니다.</span><span class="sxs-lookup"><span data-stu-id="08d84-104">To move and keep track of controls and windows within the context of a group, you manipulate their z-order.</span></span> <span data-ttu-id="08d84-105">*Z 순서* 는 양식의 z 축 (깊이)을 따라 폼에 있는 컨트롤의 시각적 계층화입니다.</span><span class="sxs-lookup"><span data-stu-id="08d84-105">*Z-order* is the visual layering of controls on a form along the form's z-axis (depth).</span></span> <span data-ttu-id="08d84-106">Z 순서의 맨 위에 있는 창은 다른 모든 창과 겹칩니다.</span><span class="sxs-lookup"><span data-stu-id="08d84-106">The window at the top of the z-order overlaps all other windows.</span></span> <span data-ttu-id="08d84-107">다른 모든 창은 z 순서의 맨 아래에 있는 창과 겹칩니다.</span><span class="sxs-lookup"><span data-stu-id="08d84-107">All other windows overlap the window at the bottom of the z-order.</span></span>
 
-## <a name="to-layer-controls-at-design-time"></a><span data-ttu-id="2e42b-108">디자인 타임에 컨트롤을 계층화 하려면</span><span class="sxs-lookup"><span data-stu-id="2e42b-108">To layer controls at design time</span></span>
+## <a name="to-layer-controls-at-design-time"></a><span data-ttu-id="08d84-108">디자인 타임에 컨트롤을 계층화 하려면</span><span class="sxs-lookup"><span data-stu-id="08d84-108">To layer controls at design time</span></span>
 
-1. <span data-ttu-id="2e42b-109">계층화 하려는 컨트롤을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="2e42b-109">Select a control that you want to layer.</span></span>
+1. <span data-ttu-id="08d84-109">계층화 하려는 컨트롤을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="08d84-109">Select a control that you want to layer.</span></span>
 
-2. <span data-ttu-id="2e42b-110">**서식** 메뉴에서 **순서**를 가리킨 다음 맨 **앞으로 가져오기** 또는 **맨 뒤로 보내기**를 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="2e42b-110">On the **Format** menu, point to **Order**, and then click **Bring To Front** or **Send To Back**.</span></span>
+2. <span data-ttu-id="08d84-110">**서식** 메뉴에서 **순서**를 가리킨 다음 맨 **앞으로 가져오기** 또는 **맨 뒤로 보내기**를 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="08d84-110">On the **Format** menu, point to **Order**, and then click **Bring To Front** or **Send To Back**.</span></span>
 
-## <a name="to-layer-controls-programmatically"></a><span data-ttu-id="2e42b-111">프로그래밍 방식으로 컨트롤을 계층화 하려면</span><span class="sxs-lookup"><span data-stu-id="2e42b-111">To layer controls programmatically</span></span>
+## <a name="to-layer-controls-programmatically"></a><span data-ttu-id="08d84-111">프로그래밍 방식으로 컨트롤을 계층화 하려면</span><span class="sxs-lookup"><span data-stu-id="08d84-111">To layer controls programmatically</span></span>
 
-- <span data-ttu-id="2e42b-112"><xref:System.Windows.Forms.Control.BringToFront%2A> 및<xref:System.Windows.Forms.Control.SendToBack%2A> 메서드를 사용 하 여 컨트롤의 z 순서를 조작 합니다.</span><span class="sxs-lookup"><span data-stu-id="2e42b-112">Use the <xref:System.Windows.Forms.Control.BringToFront%2A> and <xref:System.Windows.Forms.Control.SendToBack%2A> methods to manipulate the z-order of the controls.</span></span>
+- <span data-ttu-id="08d84-112"><xref:System.Windows.Forms.Control.BringToFront%2A> 및<xref:System.Windows.Forms.Control.SendToBack%2A> 메서드를 사용 하 여 컨트롤의 z 순서를 조작 합니다.</span><span class="sxs-lookup"><span data-stu-id="08d84-112">Use the <xref:System.Windows.Forms.Control.BringToFront%2A> and <xref:System.Windows.Forms.Control.SendToBack%2A> methods to manipulate the z-order of the controls.</span></span>
 
-     <span data-ttu-id="2e42b-113">예를 들어, <xref:System.Windows.Forms.TextBox> `txtFirstName`컨트롤이 다른 컨트롤 아래에 있는 경우 맨 위에 표시 하려면 다음 코드를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="2e42b-113">For example, if a <xref:System.Windows.Forms.TextBox> control, `txtFirstName`, is underneath another control and you want to have it on top, use the following code:</span></span>
+     <span data-ttu-id="08d84-113">예를 들어, <xref:System.Windows.Forms.TextBox> `txtFirstName`컨트롤이 다른 컨트롤 아래에 있는 경우 맨 위에 표시 하려면 다음 코드를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="08d84-113">For example, if a <xref:System.Windows.Forms.TextBox> control, `txtFirstName`, is underneath another control and you want to have it on top, use the following code:</span></span>
 
     ```vb
     txtFirstName.BringToFront()
@@ -47,12 +47,12 @@ ms.locfileid: "69039721"
     ```
 
 > [!NOTE]
->  <span data-ttu-id="2e42b-114">Windows Forms는 *제어 제약*을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="2e42b-114">Windows Forms supports *control containment*.</span></span> <span data-ttu-id="2e42b-115">컨트롤 포함에는 <xref:System.Windows.Forms.RadioButton> <xref:System.Windows.Forms.GroupBox> 컨트롤 내의 많은 컨트롤과 같이 포함 하는 컨트롤 내에 많은 컨트롤을 배치 하는 작업이 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2e42b-115">Control containment involves placing a number of controls within a containing control, such as a number of <xref:System.Windows.Forms.RadioButton> controls within a <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="2e42b-116">그런 다음 포함 하는 컨트롤 내에서 컨트롤을 계층화 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2e42b-116">You can then layer the controls within the containing control.</span></span> <span data-ttu-id="2e42b-117">그룹 상자를 이동 하면 컨트롤이 내부에 포함 되어 있기 때문에 컨트롤도 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="2e42b-117">Moving the group box moves the controls as well, because they are contained inside it.</span></span>
+> <span data-ttu-id="08d84-114">Windows Forms는 *제어 제약*을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="08d84-114">Windows Forms supports *control containment*.</span></span> <span data-ttu-id="08d84-115">컨트롤 포함에는 <xref:System.Windows.Forms.RadioButton> <xref:System.Windows.Forms.GroupBox> 컨트롤 내의 많은 컨트롤과 같이 포함 하는 컨트롤 내에 많은 컨트롤을 배치 하는 작업이 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="08d84-115">Control containment involves placing a number of controls within a containing control, such as a number of <xref:System.Windows.Forms.RadioButton> controls within a <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="08d84-116">그런 다음 포함 하는 컨트롤 내에서 컨트롤을 계층화 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="08d84-116">You can then layer the controls within the containing control.</span></span> <span data-ttu-id="08d84-117">그룹 상자를 이동 하면 컨트롤이 내부에 포함 되어 있기 때문에 컨트롤도 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="08d84-117">Moving the group box moves the controls as well, because they are contained inside it.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="2e42b-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="2e42b-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="08d84-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="08d84-118">See also</span></span>
 
-- [<span data-ttu-id="2e42b-119">Windows Forms 컨트롤</span><span class="sxs-lookup"><span data-stu-id="2e42b-119">Windows Forms Controls</span></span>](index.md)
-- [<span data-ttu-id="2e42b-120">Windows Forms에서 컨트롤 정렬</span><span class="sxs-lookup"><span data-stu-id="2e42b-120">Arranging Controls on Windows Forms</span></span>](arranging-controls-on-windows-forms.md)
-- [<span data-ttu-id="2e42b-121">개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공</span><span class="sxs-lookup"><span data-stu-id="2e42b-121">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [<span data-ttu-id="2e42b-122">Windows Forms에 사용할 수 있는 컨트롤</span><span class="sxs-lookup"><span data-stu-id="2e42b-122">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
-- [<span data-ttu-id="2e42b-123">기능별 Windows Forms 컨트롤</span><span class="sxs-lookup"><span data-stu-id="2e42b-123">Windows Forms Controls by Function</span></span>](windows-forms-controls-by-function.md)
+- [<span data-ttu-id="08d84-119">Windows Forms 컨트롤</span><span class="sxs-lookup"><span data-stu-id="08d84-119">Windows Forms Controls</span></span>](index.md)
+- [<span data-ttu-id="08d84-120">Windows Forms에서 컨트롤 정렬</span><span class="sxs-lookup"><span data-stu-id="08d84-120">Arranging Controls on Windows Forms</span></span>](arranging-controls-on-windows-forms.md)
+- [<span data-ttu-id="08d84-121">개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공</span><span class="sxs-lookup"><span data-stu-id="08d84-121">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [<span data-ttu-id="08d84-122">Windows Forms에 사용할 수 있는 컨트롤</span><span class="sxs-lookup"><span data-stu-id="08d84-122">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
+- [<span data-ttu-id="08d84-123">기능별 Windows Forms 컨트롤</span><span class="sxs-lookup"><span data-stu-id="08d84-123">Windows Forms Controls by Function</span></span>](windows-forms-controls-by-function.md)

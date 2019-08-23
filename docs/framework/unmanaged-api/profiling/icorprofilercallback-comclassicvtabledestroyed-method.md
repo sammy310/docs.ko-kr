@@ -17,20 +17,20 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8043ae8a3d384ab0936ae96e39174a7afc80a636
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f74e06ea4cb4d7a8eace8c7852f487bbdcbcd875
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776214"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964625"
 ---
-# <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a><span data-ttu-id="7f886-102">ICorProfilerCallback::COMClassicVTableDestroyed 메서드</span><span class="sxs-lookup"><span data-stu-id="7f886-102">ICorProfilerCallback::COMClassicVTableDestroyed Method</span></span>
-<span data-ttu-id="7f886-103">COM interop vtable 소멸 되 고 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="7f886-103">Notifies the profiler that a COM interop vtable is being destroyed.</span></span>  
+# <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a><span data-ttu-id="c6dd5-102">ICorProfilerCallback::COMClassicVTableDestroyed 메서드</span><span class="sxs-lookup"><span data-stu-id="c6dd5-102">ICorProfilerCallback::COMClassicVTableDestroyed Method</span></span>
+<span data-ttu-id="c6dd5-103">COM interop vtable이 제거 중임을 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="c6dd5-103">Notifies the profiler that a COM interop vtable is being destroyed.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="7f886-104">이 콜백은 vtable의 소멸 종료 되는 시점과 매우 발생 하기 때문에 발생 하지 않습니다 가능성이 높습니다.</span><span class="sxs-lookup"><span data-stu-id="7f886-104">This callback is likely never to occur, because the destruction of vtables occurs very close to shutdown.</span></span>  
+> <span data-ttu-id="c6dd5-104">Vtables의 소멸이 종료와 매우 근접 하 게 발생 하기 때문에이 콜백은 발생 하지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c6dd5-104">This callback is likely never to occur, because the destruction of vtables occurs very close to shutdown.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7f886-105">구문</span><span class="sxs-lookup"><span data-stu-id="7f886-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c6dd5-105">구문</span><span class="sxs-lookup"><span data-stu-id="c6dd5-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT COMClassicVTableDestroyed(  
@@ -39,31 +39,31 @@ HRESULT COMClassicVTableDestroyed(
     [in] void    *pVTable);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7f886-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="7f886-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c6dd5-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="c6dd5-106">Parameters</span></span>  
  `wrappedClassId`  
- <span data-ttu-id="7f886-107">[in] 이 vtable 생성 된 클래스의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="7f886-107">[in] The ID of the class for which this vtable was created.</span></span>  
+ <span data-ttu-id="c6dd5-107">진행 이 vtable이 생성 된 클래스의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="c6dd5-107">[in] The ID of the class for which this vtable was created.</span></span>  
   
  `implementedIID`  
- <span data-ttu-id="7f886-108">[in] 클래스에 의해 구현 된 인터페이스의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="7f886-108">[in] The ID of the interface implemented by the class.</span></span> <span data-ttu-id="7f886-109">인터페이스 내부용 으로만 사용 되는 경우이 값은 NULL 일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7f886-109">This value may be NULL if the interface is internal only.</span></span>  
+ <span data-ttu-id="c6dd5-108">진행 클래스에서 구현 하는 인터페이스의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="c6dd5-108">[in] The ID of the interface implemented by the class.</span></span> <span data-ttu-id="c6dd5-109">인터페이스가 내부 전용 이면이 값은 NULL 일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c6dd5-109">This value may be NULL if the interface is internal only.</span></span>  
   
  `pVTable`  
- <span data-ttu-id="7f886-110">[in] Vtable의 시작 부분에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="7f886-110">[in] A pointer to the start of the vtable.</span></span>  
+ <span data-ttu-id="c6dd5-110">진행 Vtable의 시작에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="c6dd5-110">[in] A pointer to the start of the vtable.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7f886-111">설명</span><span class="sxs-lookup"><span data-stu-id="7f886-111">Remarks</span></span>  
- <span data-ttu-id="7f886-112">가비지 수집을 허용 하는 상태가 스택의 되었을 수 있으므로이 메서드의 구현에서 프로파일러 차단 되지 않아야 하 고 따라서 preemptive 가비지 수집을 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="7f886-112">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="7f886-113">프로파일러 여기 차단 하는 경우 가비지 수집을 시도 하 고, 런타임이이 콜백에서 반환 될 때까지 차단 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7f886-113">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c6dd5-111">설명</span><span class="sxs-lookup"><span data-stu-id="c6dd5-111">Remarks</span></span>  
+ <span data-ttu-id="c6dd5-112">스택은 가비지 수집을 허용 하는 상태가 아닐 수 있으므로 선점형 가비지 수집을 사용 하도록 설정할 수 없기 때문에 프로파일러는이 메서드의 구현에서 차단 해서는 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c6dd5-112">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="c6dd5-113">프로파일러가 여기에서 차단 되 고 가비지 수집이 시도 되는 경우이 콜백이 반환 될 때까지 런타임이 차단 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c6dd5-113">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
   
- <span data-ttu-id="7f886-114">이 메서드 구현은 프로파일러의 관리 되는 메모리 할당에서 또는 관리 코드를 호출 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="7f886-114">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span></span>  
+ <span data-ttu-id="c6dd5-114">이 메서드의 프로파일러 구현은 관리 코드를 호출 하거나 관리 되는 메모리 할당을 발생 시 키 지 않아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c6dd5-114">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7f886-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="7f886-115">Requirements</span></span>  
- <span data-ttu-id="7f886-116">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="7f886-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c6dd5-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c6dd5-115">Requirements</span></span>  
+ <span data-ttu-id="c6dd5-116">**플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="c6dd5-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7f886-117">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="7f886-117">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="c6dd5-117">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c6dd5-117">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="7f886-118">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7f886-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c6dd5-118">**라이브러리** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c6dd5-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7f886-119">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7f886-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c6dd5-119">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c6dd5-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7f886-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="7f886-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c6dd5-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="c6dd5-120">See also</span></span>
 
-- [<span data-ttu-id="7f886-121">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="7f886-121">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="7f886-122">COMClassicVTableCreated 메서드</span><span class="sxs-lookup"><span data-stu-id="7f886-122">COMClassicVTableCreated Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtablecreated-method.md)
+- [<span data-ttu-id="c6dd5-121">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c6dd5-121">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="c6dd5-122">COMClassicVTableCreated 메서드</span><span class="sxs-lookup"><span data-stu-id="c6dd5-122">COMClassicVTableCreated Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtablecreated-method.md)

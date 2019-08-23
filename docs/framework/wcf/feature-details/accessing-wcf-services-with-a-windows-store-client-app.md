@@ -2,27 +2,27 @@
 title: Windows 스토어 클라이언트 응용 프로그램을 사용하여 WCF 서비스에 액세스
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: a7d87e6014f26842c35b0d1bf5028682a4cf69e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: a2f1ef37914c932801699bb2f9c2323dd0408e7f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784321"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964962"
 ---
-# <a name="accessing-wcf-services-with-a-windows-store-client-app"></a><span data-ttu-id="0d7cd-102">Windows 스토어 클라이언트 응용 프로그램을 사용하여 WCF 서비스에 액세스</span><span class="sxs-lookup"><span data-stu-id="0d7cd-102">Accessing WCF Services with a Windows Store Client App</span></span>
-<span data-ttu-id="0d7cd-103">Windows 8에서는 Windows 스토어 애플리케이션이라는 새로운 형식의 애플리케이션을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-103">Windows 8 introduces a new type of application called Windows Store applications.</span></span> <span data-ttu-id="0d7cd-104">이러한 애플리케이션은 터치 스크린 인터페이스를 바탕으로 설계되었습니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-104">These applications are designed around a touch screen interface.</span></span> <span data-ttu-id="0d7cd-105">.NET Framework 4.5에서는 Windows 스토어 애플리케이션을 사용하여 WCF 서비스를 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-105">.NET Framework 4.5 enables Windows Store applications to call WCF services.</span></span>  
+# <a name="accessing-wcf-services-with-a-windows-store-client-app"></a><span data-ttu-id="9c988-102">Windows 스토어 클라이언트 응용 프로그램을 사용하여 WCF 서비스에 액세스</span><span class="sxs-lookup"><span data-stu-id="9c988-102">Accessing WCF Services with a Windows Store Client App</span></span>
+<span data-ttu-id="9c988-103">Windows 8에서는 Windows 스토어 애플리케이션이라는 새로운 형식의 애플리케이션을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-103">Windows 8 introduces a new type of application called Windows Store applications.</span></span> <span data-ttu-id="9c988-104">이러한 애플리케이션은 터치 스크린 인터페이스를 바탕으로 설계되었습니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-104">These applications are designed around a touch screen interface.</span></span> <span data-ttu-id="9c988-105">.NET Framework 4.5에서는 Windows 스토어 애플리케이션을 사용하여 WCF 서비스를 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-105">.NET Framework 4.5 enables Windows Store applications to call WCF services.</span></span>  
   
-## <a name="wcf-support-in-windows-store-applications"></a><span data-ttu-id="0d7cd-106">Windows 스토어 애플리케이션의 WCF 지원</span><span class="sxs-lookup"><span data-stu-id="0d7cd-106">WCF Support in Windows Store Applications</span></span>  
- <span data-ttu-id="0d7cd-107">Windows 스토어 애플리케이션 내에서 일부 WCF 기능을 사용할 수 있습니다. 자세한 내용은 다음 단원을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-107">A subset of WCF functionality is available from within a Windows Store application, see the following sections for more details.</span></span>  
+## <a name="wcf-support-in-windows-store-applications"></a><span data-ttu-id="9c988-106">Windows 스토어 애플리케이션의 WCF 지원</span><span class="sxs-lookup"><span data-stu-id="9c988-106">WCF Support in Windows Store Applications</span></span>  
+ <span data-ttu-id="9c988-107">Windows 스토어 애플리케이션 내에서 일부 WCF 기능을 사용할 수 있습니다. 자세한 내용은 다음 단원을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9c988-107">A subset of WCF functionality is available from within a Windows Store application, see the following sections for more details.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="0d7cd-108">WCF에서 노출하는 API 대신 WinRT 배포 API를 사용하세요.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-108">Use the WinRT syndication APIs instead of those exposed by WCF.</span></span> <span data-ttu-id="0d7cd-109">자세한 내용은 [WinRT 배포 API](https://go.microsoft.com/fwlink/?LinkId=236265)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-109">For more information see, [WinRT Syndication API](https://go.microsoft.com/fwlink/?LinkId=236265)</span></span>  
+> <span data-ttu-id="9c988-108">WCF에서 노출하는 API 대신 WinRT 배포 API를 사용하세요.</span><span class="sxs-lookup"><span data-stu-id="9c988-108">Use the WinRT syndication APIs instead of those exposed by WCF.</span></span> <span data-ttu-id="9c988-109">자세한 내용은 [WinRT 배포 API](https://go.microsoft.com/fwlink/?LinkId=236265)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9c988-109">For more information see, [WinRT Syndication API](https://go.microsoft.com/fwlink/?LinkId=236265)</span></span>  
   
 > [!WARNING]
->  <span data-ttu-id="0d7cd-110">서비스 참조 추가 기능을 사용하여 Windows 런타임 구성 요소에 웹 서비스 참조를 추가할 수는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-110">Using Add Service Reference to add a web service reference to a Windows Runtime Component isn’t supported.</span></span>  
+>  <span data-ttu-id="9c988-110">서비스 참조 추가 기능을 사용하여 Windows 런타임 구성 요소에 웹 서비스 참조를 추가할 수는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-110">Using Add Service Reference to add a web service reference to a Windows Runtime Component isn’t supported.</span></span>  
   
-### <a name="supported-bindings"></a><span data-ttu-id="0d7cd-111">지원되는 바인딩</span><span class="sxs-lookup"><span data-stu-id="0d7cd-111">Supported Bindings</span></span>  
- <span data-ttu-id="0d7cd-112">Windows 스토어 애플리케이션에서는 다음과 같은 WCF 바인딩이 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-112">The following WCF bindings are supported in Windows Store Applications:</span></span>  
+### <a name="supported-bindings"></a><span data-ttu-id="9c988-111">지원되는 바인딩</span><span class="sxs-lookup"><span data-stu-id="9c988-111">Supported Bindings</span></span>  
+ <span data-ttu-id="9c988-112">Windows 스토어 애플리케이션에서는 다음과 같은 WCF 바인딩이 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-112">The following WCF bindings are supported in Windows Store Applications:</span></span>  
   
 1. <xref:System.ServiceModel.BasicHttpBinding>  
   
@@ -32,7 +32,7 @@ ms.locfileid: "61784321"
   
 4. <xref:System.ServiceModel.Channels.CustomBinding>
   
- <span data-ttu-id="0d7cd-113">Windows 스토어 애플리케이션에서는 다음과 같은 바인딩 요소가 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-113">The following binding elements are supported in Windows Store Applications</span></span>  
+ <span data-ttu-id="9c988-113">Windows 스토어 애플리케이션에서는 다음과 같은 바인딩 요소가 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-113">The following binding elements are supported in Windows Store Applications</span></span>  
   
 1. <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
   
@@ -52,19 +52,19 @@ ms.locfileid: "61784321"
   
 9. <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
   
- <span data-ttu-id="0d7cd-114">텍스트 인코딩과 이진 인코딩 모두가 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-114">Both Text and Binary encodings are supported.</span></span> <span data-ttu-id="0d7cd-115">모든 WCF 전송 모드가 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-115">All WCF transfer modes are supported.</span></span> <span data-ttu-id="0d7cd-116">자세한 내용은 [Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-116">For more information see, [Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md).</span></span>  
+ <span data-ttu-id="9c988-114">텍스트 인코딩과 이진 인코딩 모두가 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-114">Both Text and Binary encodings are supported.</span></span> <span data-ttu-id="9c988-115">모든 WCF 전송 모드가 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-115">All WCF transfer modes are supported.</span></span> <span data-ttu-id="9c988-116">자세한 내용은 [Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9c988-116">For more information see, [Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md).</span></span>  
   
-### <a name="add-service-reference"></a><span data-ttu-id="0d7cd-117">서비스 참조 추가</span><span class="sxs-lookup"><span data-stu-id="0d7cd-117">Add Service Reference</span></span>  
- <span data-ttu-id="0d7cd-118">Windows 스토어 애플리케이션에서 WCF 서비스를 호출하려면 Visual Studio 2012의 서비스 참조 추가 기능을 사용하세요.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-118">To call a WCF service from a Windows Store application, use the Add Service Reference feature of Visual Studio 2012.</span></span> <span data-ttu-id="0d7cd-119">Windows 스토어 애플리케이션 내에서 서비스 참조 추가 기능이 완료될 때 몇 가지 변경 내용을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-119">You will notice a few changes in the functionality of Add Service Reference when done within a Windows Store application.</span></span> <span data-ttu-id="0d7cd-120">먼저, 구성 파일이 생성되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-120">First no configuration file is generated.</span></span> <span data-ttu-id="0d7cd-121">Windows 스토어 애플리케이션은 구성 파일을 사용하지 않으므로 코드로 구성되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-121">Windows Store applications do not use configuration files, so they must be configured in code.</span></span> <span data-ttu-id="0d7cd-122">이 구성 코드는 서비스 참조 추가를 통해 생성된 References.cs 파일에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-122">This configuration code can be found in the References.cs file generated by Add Service Reference.</span></span> <span data-ttu-id="0d7cd-123">이 파일을 보려면 솔루션 탐색기에서 "모든 파일 표시"를 선택 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-123">To see this file, make sure to select "Show All Files" in the solution explorer.</span></span> <span data-ttu-id="0d7cd-124">해당 파일은 프로젝트 내의 서비스 참조 노드 및 Reference.svcmap 노드 아래에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-124">The file will be located under the Service References and then Reference.svcmap nodes within the project.</span></span> <span data-ttu-id="0d7cd-125">Windows 스토어 애플리케이션 내의 WCF 서비스에 대해 생성된 모든 작업은 태스크 기반 비동기 패턴을 사용하여 비동기화됩니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-125">All operations generated for WCF services within a Windows Store application will be asynchronous using the Task-based asynchronous pattern.</span></span> <span data-ttu-id="0d7cd-126">자세한 내용은 [비동기 작업-태스크를 사용한 비동기 프로그래밍 간소화](https://msdn.microsoft.com/magazine/ff959203.aspx)합니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-126">For more information, see [Async Tasks - Simplify Asynchronous Programming with Tasks](https://msdn.microsoft.com/magazine/ff959203.aspx).</span></span>  
+### <a name="add-service-reference"></a><span data-ttu-id="9c988-117">서비스 참조 추가</span><span class="sxs-lookup"><span data-stu-id="9c988-117">Add Service Reference</span></span>  
+ <span data-ttu-id="9c988-118">Windows 스토어 애플리케이션에서 WCF 서비스를 호출하려면 Visual Studio 2012의 서비스 참조 추가 기능을 사용하세요.</span><span class="sxs-lookup"><span data-stu-id="9c988-118">To call a WCF service from a Windows Store application, use the Add Service Reference feature of Visual Studio 2012.</span></span> <span data-ttu-id="9c988-119">Windows 스토어 애플리케이션 내에서 서비스 참조 추가 기능이 완료될 때 몇 가지 변경 내용을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-119">You will notice a few changes in the functionality of Add Service Reference when done within a Windows Store application.</span></span> <span data-ttu-id="9c988-120">먼저, 구성 파일이 생성되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-120">First no configuration file is generated.</span></span> <span data-ttu-id="9c988-121">Windows 스토어 애플리케이션은 구성 파일을 사용하지 않으므로 코드로 구성되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-121">Windows Store applications do not use configuration files, so they must be configured in code.</span></span> <span data-ttu-id="9c988-122">이 구성 코드는 서비스 참조 추가를 통해 생성된 References.cs 파일에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-122">This configuration code can be found in the References.cs file generated by Add Service Reference.</span></span> <span data-ttu-id="9c988-123">이 파일을 보려면 솔루션 탐색기에서 "모든 파일 표시"를 선택 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-123">To see this file, make sure to select "Show All Files" in the solution explorer.</span></span> <span data-ttu-id="9c988-124">해당 파일은 프로젝트 내의 서비스 참조 노드 및 Reference.svcmap 노드 아래에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-124">The file will be located under the Service References and then Reference.svcmap nodes within the project.</span></span> <span data-ttu-id="9c988-125">Windows 스토어 애플리케이션 내의 WCF 서비스에 대해 생성된 모든 작업은 태스크 기반 비동기 패턴을 사용하여 비동기화됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-125">All operations generated for WCF services within a Windows Store application will be asynchronous using the Task-based asynchronous pattern.</span></span> <span data-ttu-id="9c988-126">자세한 내용은 비동기 [작업-작업을 사용 하 여 비동기 프로그래밍 단순화](https://msdn.microsoft.com/magazine/ff959203.aspx)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="9c988-126">For more information, see [Async Tasks - Simplify Asynchronous Programming with Tasks](https://msdn.microsoft.com/magazine/ff959203.aspx).</span></span>  
   
- <span data-ttu-id="0d7cd-127">이제 구성이 코드로 생성되므로 서비스 참조가 업데이트될 때마다 Reference.cs 파일의 모든 변경 내용을 덮어쓰게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-127">Because configuration is now generated in code, any changes made in the Reference.cs file would be overwritten every time the service reference is updated.</span></span> <span data-ttu-id="0d7cd-128">이러한 문제를 해결하기 위해 구성 코드는 부분 메서드(Partial Method) 내에서 생성됩니다. 부분 메서드는 클라이언트 프록시 클래스에서 구현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-128">To remedy this situation the configuration code is generated within a partial method, which you can implement in your client proxy class.</span></span> <span data-ttu-id="0d7cd-129">부분 메서드는 다음과 같이 선언됩니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-129">The partial method is declared as follows:</span></span>  
+ <span data-ttu-id="9c988-127">이제 구성이 코드로 생성되므로 서비스 참조가 업데이트될 때마다 Reference.cs 파일의 모든 변경 내용을 덮어쓰게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-127">Because configuration is now generated in code, any changes made in the Reference.cs file would be overwritten every time the service reference is updated.</span></span> <span data-ttu-id="9c988-128">이러한 문제를 해결하기 위해 구성 코드는 부분 메서드(Partial Method) 내에서 생성됩니다. 부분 메서드는 클라이언트 프록시 클래스에서 구현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-128">To remedy this situation the configuration code is generated within a partial method, which you can implement in your client proxy class.</span></span> <span data-ttu-id="9c988-129">부분 메서드는 다음과 같이 선언됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-129">The partial method is declared as follows:</span></span>  
   
 ```csharp  
 static partial void Configure(System.ServiceModel.Description.ServiceEndpoint serviceEndpoint,  
             System.ServiceModel.Description.ClientCredentials clientCredentials);  
 ```  
   
- <span data-ttu-id="0d7cd-130">이 부분 메서드를 구현하고 다음과 같이 클라이언트 프록시 클래스에서 바인딩 또는 엔드포인트를 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-130">You can then implement this partial method and change the binding or endpoint in your client proxy class as follows:</span></span>  
+ <span data-ttu-id="9c988-130">이 부분 메서드를 구현하고 다음과 같이 클라이언트 프록시 클래스에서 바인딩 또는 엔드포인트를 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-130">You can then implement this partial method and change the binding or endpoint in your client proxy class as follows:</span></span>  
   
 ```csharp  
 public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfClient.ServiceRefMultiEndpt.IService1>, MetroWcfClient.ServiceRefMultiEndpt.IService1  
@@ -94,21 +94,21 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
     }  
 ```  
   
-### <a name="serialization"></a><span data-ttu-id="0d7cd-131">Serialization</span><span class="sxs-lookup"><span data-stu-id="0d7cd-131">Serialization</span></span>  
- <span data-ttu-id="0d7cd-132">Windows 스토어 애플리케이션에서는 다음과 같은 serializer가 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-132">The following serializers are supported in Windows Store applications:</span></span>  
+### <a name="serialization"></a><span data-ttu-id="9c988-131">Serialization</span><span class="sxs-lookup"><span data-stu-id="9c988-131">Serialization</span></span>  
+ <span data-ttu-id="9c988-132">Windows 스토어 애플리케이션에서는 다음과 같은 serializer가 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-132">The following serializers are supported in Windows Store applications:</span></span>  
   
-1. <span data-ttu-id="0d7cd-133">DataContractSerializer</span><span class="sxs-lookup"><span data-stu-id="0d7cd-133">DataContractSerializer</span></span>  
+1. <span data-ttu-id="9c988-133">DataContractSerializer</span><span class="sxs-lookup"><span data-stu-id="9c988-133">DataContractSerializer</span></span>  
   
-2. <span data-ttu-id="0d7cd-134">DataContractJsonSerializer</span><span class="sxs-lookup"><span data-stu-id="0d7cd-134">DataContractJsonSerializer</span></span>  
+2. <span data-ttu-id="9c988-134">DataContractJsonSerializer</span><span class="sxs-lookup"><span data-stu-id="9c988-134">DataContractJsonSerializer</span></span>  
   
-3. <span data-ttu-id="0d7cd-135">XmlSerializer</span><span class="sxs-lookup"><span data-stu-id="0d7cd-135">XmlSerializer</span></span>  
+3. <span data-ttu-id="9c988-135">XmlSerializer</span><span class="sxs-lookup"><span data-stu-id="9c988-135">XmlSerializer</span></span>  
   
 > [!WARNING]
->  <span data-ttu-id="0d7cd-136">이제 XmlDictionaryWriter.Write(DateTime)는 DateTime 개체를 문자열로 씁니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-136">XmlDictionaryWriter.Write(DateTime) now writes the DateTime object as a string.</span></span>  
+>  <span data-ttu-id="9c988-136">이제 XmlDictionaryWriter.Write(DateTime)는 DateTime 개체를 문자열로 씁니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-136">XmlDictionaryWriter.Write(DateTime) now writes the DateTime object as a string.</span></span>  
   
-### <a name="security"></a><span data-ttu-id="0d7cd-137">보안</span><span class="sxs-lookup"><span data-stu-id="0d7cd-137">Security</span></span>  
+### <a name="security"></a><span data-ttu-id="9c988-137">보안</span><span class="sxs-lookup"><span data-stu-id="9c988-137">Security</span></span>  
 
-<span data-ttu-id="0d7cd-138">다음 보안 모드는 Windows 스토어 응용 프로그램에서 지원 됩니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-138">The following security modes are supported in Windows Store applications:</span></span>
+<span data-ttu-id="9c988-138">Windows 스토어 응용 프로그램에서 지원 되는 보안 모드는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-138">The following security modes are supported in Windows Store applications:</span></span>
   
 1. <xref:System.ServiceModel.SecurityMode.None>  
   
@@ -118,31 +118,31 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
   
 4. <xref:System.ServiceModel.SecurityMode.Message>
   
-<span data-ttu-id="0d7cd-139">클라이언트 자격 증명 유형은 Windows 스토어 응용 프로그램에서 지원 됩니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-139">The following client credential types are supported in Windows Store applications:</span></span>
+<span data-ttu-id="9c988-139">Windows 스토어 응용 프로그램에서는 다음과 같은 클라이언트 자격 증명 형식이 지원 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-139">The following client credential types are supported in Windows Store applications:</span></span>
   
-1. <span data-ttu-id="0d7cd-140">없음</span><span class="sxs-lookup"><span data-stu-id="0d7cd-140">None</span></span>  
+1. <span data-ttu-id="9c988-140">없음</span><span class="sxs-lookup"><span data-stu-id="9c988-140">None</span></span>  
   
-2. <span data-ttu-id="0d7cd-141">Basic</span><span class="sxs-lookup"><span data-stu-id="0d7cd-141">Basic</span></span>  
+2. <span data-ttu-id="9c988-141">Basic</span><span class="sxs-lookup"><span data-stu-id="9c988-141">Basic</span></span>  
   
-3. <span data-ttu-id="0d7cd-142">Digest</span><span class="sxs-lookup"><span data-stu-id="0d7cd-142">Digest</span></span>  
+3. <span data-ttu-id="9c988-142">Digest</span><span class="sxs-lookup"><span data-stu-id="9c988-142">Digest</span></span>  
   
-4. <span data-ttu-id="0d7cd-143">Negotiate</span><span class="sxs-lookup"><span data-stu-id="0d7cd-143">Negotiate</span></span>  
+4. <span data-ttu-id="9c988-143">Negotiate</span><span class="sxs-lookup"><span data-stu-id="9c988-143">Negotiate</span></span>  
   
-5. <span data-ttu-id="0d7cd-144">NTLM</span><span class="sxs-lookup"><span data-stu-id="0d7cd-144">NTLM</span></span>  
+5. <span data-ttu-id="9c988-144">NTLM</span><span class="sxs-lookup"><span data-stu-id="9c988-144">NTLM</span></span>  
   
-6. <span data-ttu-id="0d7cd-145">Windows</span><span class="sxs-lookup"><span data-stu-id="0d7cd-145">Windows</span></span>  
+6. <span data-ttu-id="9c988-145">Windows</span><span class="sxs-lookup"><span data-stu-id="9c988-145">Windows</span></span>  
   
-7. <span data-ttu-id="0d7cd-146">Username(메시지 보안)</span><span class="sxs-lookup"><span data-stu-id="0d7cd-146">Username (Message Security)</span></span>  
+7. <span data-ttu-id="9c988-146">Username(메시지 보안)</span><span class="sxs-lookup"><span data-stu-id="9c988-146">Username (Message Security)</span></span>  
   
-8. <span data-ttu-id="0d7cd-147">Windows(전송 보안)</span><span class="sxs-lookup"><span data-stu-id="0d7cd-147">Windows (Transport Security)</span></span>  
+8. <span data-ttu-id="9c988-147">Windows(전송 보안)</span><span class="sxs-lookup"><span data-stu-id="9c988-147">Windows (Transport Security)</span></span>  
   
- <span data-ttu-id="0d7cd-148">Windows 스토어 애플리케이션이 기본 Windows 자격 증명에 액세스하여 이를 보내도록 하려면 Package.appmanifest 파일 내에서 이 기능을 사용하도록 설정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-148">In order for Windows Store applications to access and send default Windows credentials, you must enable this functionality within the Package.appmanifest file.</span></span> <span data-ttu-id="0d7cd-149">이 파일을 열고 기능 탭을 선택 "기본 Windows 자격 증명"을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-149">Open this file and select the Capabilities tab and select "Default Windows Credentials".</span></span> <span data-ttu-id="0d7cd-150">그러면 도메인 자격 증명이 필요한 인트라넷 리소스에 애플리케이션을 연결할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-150">This allows the application to connect to intranet resources that require domain credentials.</span></span>  
+ <span data-ttu-id="9c988-148">Windows 스토어 애플리케이션이 기본 Windows 자격 증명에 액세스하여 이를 보내도록 하려면 Package.appmanifest 파일 내에서 이 기능을 사용하도록 설정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-148">In order for Windows Store applications to access and send default Windows credentials, you must enable this functionality within the Package.appmanifest file.</span></span> <span data-ttu-id="9c988-149">이 파일을 열고 기능 탭을 선택한 다음 "기본 Windows 자격 증명"을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-149">Open this file and select the Capabilities tab and select "Default Windows Credentials".</span></span> <span data-ttu-id="9c988-150">그러면 도메인 자격 증명이 필요한 인트라넷 리소스에 애플리케이션을 연결할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-150">This allows the application to connect to intranet resources that require domain credentials.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="0d7cd-151">컴퓨터 간 호출을 위해 Windows 스토어 응용 프로그램에 대 한 순서 대로 "홈/회사 네트워킹" 라는 다른 기능을 활성화 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-151">In order for Windows Store applications to make cross machine calls you must enable another capability called "Home/Work Networking".</span></span> <span data-ttu-id="0d7cd-152">이 설정은 Package.appmanifest 파일의 기능 탭 아래에도 있습니다. 홈/회사 네트워킹 확인란을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-152">This setting is also in the Package.appmanifest file under the Capabilities tab. Select the Home/Work Networking checkbox.</span></span> <span data-ttu-id="0d7cd-153">그러면 집이나 회사와 같이 사용자가 신뢰할 수 있는 장소의 네트워크에 대한 인바운드 및 아웃바운드 액세스 권한이 애플리케이션에 부여됩니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-153">This gives your application inbound and outbound access to the networks of the user’s trusted places like home and work.</span></span> <span data-ttu-id="0d7cd-154">중요한 인바운드 포트는 항상 차단됩니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-154">Inbound critical ports are always blocked.</span></span> <span data-ttu-id="0d7cd-155">인터넷의 서비스에 액세스하려면 인터넷(클라이언트) 기능도 사용하도록 설정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-155">For accessing services on the internet you must also enable Internet (Client) capability.</span></span>  
+> <span data-ttu-id="9c988-151">Windows 스토어 응용 프로그램이 컴퓨터 간 호출을 수행 하도록 하려면 "홈/회사 네트워킹" 이라는 다른 기능을 사용 하도록 설정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-151">In order for Windows Store applications to make cross machine calls you must enable another capability called "Home/Work Networking".</span></span> <span data-ttu-id="9c988-152">이 설정은 Package.appmanifest 파일의 기능 탭 아래에도 있습니다. 홈/회사 네트워킹 확인란을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-152">This setting is also in the Package.appmanifest file under the Capabilities tab. Select the Home/Work Networking checkbox.</span></span> <span data-ttu-id="9c988-153">그러면 집이나 회사와 같이 사용자가 신뢰할 수 있는 장소의 네트워크에 대한 인바운드 및 아웃바운드 액세스 권한이 애플리케이션에 부여됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-153">This gives your application inbound and outbound access to the networks of the user’s trusted places like home and work.</span></span> <span data-ttu-id="9c988-154">중요한 인바운드 포트는 항상 차단됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-154">Inbound critical ports are always blocked.</span></span> <span data-ttu-id="9c988-155">인터넷의 서비스에 액세스하려면 인터넷(클라이언트) 기능도 사용하도록 설정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-155">For accessing services on the internet you must also enable Internet (Client) capability.</span></span>  
   
-### <a name="misc"></a><span data-ttu-id="0d7cd-156">기타</span><span class="sxs-lookup"><span data-stu-id="0d7cd-156">Misc</span></span>  
- <span data-ttu-id="0d7cd-157">Windows 스토어 애플리케이션에 는 다음 클래스를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-157">The use of the following classes is supported for Windows Store Applications:</span></span>  
+### <a name="misc"></a><span data-ttu-id="9c988-156">기타</span><span class="sxs-lookup"><span data-stu-id="9c988-156">Misc</span></span>  
+ <span data-ttu-id="9c988-157">Windows 스토어 애플리케이션에 는 다음 클래스를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-157">The use of the following classes is supported for Windows Store Applications:</span></span>  
   
 1. <xref:System.ServiceModel.ChannelFactory>  
   
@@ -150,14 +150,14 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
   
 3. <xref:System.ServiceModel.CallbackBehaviorAttribute>  
   
-### <a name="defining-service-contracts"></a><span data-ttu-id="0d7cd-158">서비스 계약 정의</span><span class="sxs-lookup"><span data-stu-id="0d7cd-158">Defining Service Contracts</span></span>  
- <span data-ttu-id="0d7cd-159">태스크 기반 비동기 패턴을 사용하여 비동기 서비스 작업만 정의하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-159">We recommend only defining asynchronous service operations using the task-based async pattern.</span></span> <span data-ttu-id="0d7cd-160">그러면 서비스 작업을 호출하는 동안 Windows 스토어 애플리케이션이 응답을 유지합니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-160">This ensures Windows Store applications remain responsive while calling a service operation.</span></span>  
+### <a name="defining-service-contracts"></a><span data-ttu-id="9c988-158">서비스 계약 정의</span><span class="sxs-lookup"><span data-stu-id="9c988-158">Defining Service Contracts</span></span>  
+ <span data-ttu-id="9c988-159">태스크 기반 비동기 패턴을 사용하여 비동기 서비스 작업만 정의하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-159">We recommend only defining asynchronous service operations using the task-based async pattern.</span></span> <span data-ttu-id="9c988-160">그러면 서비스 작업을 호출하는 동안 Windows 스토어 애플리케이션이 응답을 유지합니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-160">This ensures Windows Store applications remain responsive while calling a service operation.</span></span>  
   
 > [!WARNING]
->  <span data-ttu-id="0d7cd-161">동기 작업을 정의하더라도 예외가 throw되지는 않지만 비동기 작업만 정의하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-161">While no exception will be thrown if you define a synchronous operation, it is strongly recommended to only define asynchronous operations.</span></span>  
+>  <span data-ttu-id="9c988-161">동기 작업을 정의하더라도 예외가 throw되지는 않지만 비동기 작업만 정의하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-161">While no exception will be thrown if you define a synchronous operation, it is strongly recommended to only define asynchronous operations.</span></span>  
   
-### <a name="calling-wcf-services-from-windows-store-applications"></a><span data-ttu-id="0d7cd-162">Windows 스토어 애플리케이션에서 WCF 서비스 호출</span><span class="sxs-lookup"><span data-stu-id="0d7cd-162">Calling WCF Services from Windows Store Applications</span></span>  
- <span data-ttu-id="0d7cd-163">앞에서 설명한 것처럼 모든 구성은 생성된 프록시 클래스의 GetBindingForEndpoint 메서드에서 코드로 수행되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-163">As mentioned before all configuration must be done in code in the GetBindingForEndpoint method in the generated proxy class.</span></span> <span data-ttu-id="0d7cd-164">서비스 작업 호출은 다음 코드 조각과 같이 태스크 기반 비동기 메서드를 호출할 때와 동일한 방법으로 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-164">Calling a service operation is done the same as calling any task-based asynchronous method as shown in the following code snippet.</span></span>  
+### <a name="calling-wcf-services-from-windows-store-applications"></a><span data-ttu-id="9c988-162">Windows 스토어 애플리케이션에서 WCF 서비스 호출</span><span class="sxs-lookup"><span data-stu-id="9c988-162">Calling WCF Services from Windows Store Applications</span></span>  
+ <span data-ttu-id="9c988-163">앞에서 설명한 것처럼 모든 구성은 생성된 프록시 클래스의 GetBindingForEndpoint 메서드에서 코드로 수행되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-163">As mentioned before all configuration must be done in code in the GetBindingForEndpoint method in the generated proxy class.</span></span> <span data-ttu-id="9c988-164">서비스 작업 호출은 다음 코드 조각과 같이 태스크 기반 비동기 메서드를 호출할 때와 동일한 방법으로 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-164">Calling a service operation is done the same as calling any task-based asynchronous method as shown in the following code snippet.</span></span>  
   
 ```csharp  
 void async SomeMethod()  
@@ -172,13 +172,13 @@ void async SomeMethod()
 }  
 ```  
   
- <span data-ttu-id="0d7cd-165">비동기 호출을 수행하는 메서드에서는 async 키워드가 사용되고 비동기 메서드를 호출할 때는 await 키워드가 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="0d7cd-165">Notice the use of the async keyword on the method making the asynchronous call and the await keyword when calling the asynchronous method.</span></span>  
+ <span data-ttu-id="9c988-165">비동기 호출을 수행하는 메서드에서는 async 키워드가 사용되고 비동기 메서드를 호출할 때는 await 키워드가 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c988-165">Notice the use of the async keyword on the method making the asynchronous call and the await keyword when calling the asynchronous method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0d7cd-166">참고자료</span><span class="sxs-lookup"><span data-stu-id="0d7cd-166">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9c988-166">참고자료</span><span class="sxs-lookup"><span data-stu-id="9c988-166">See also</span></span>
 
-- [<span data-ttu-id="0d7cd-167">Windows 스토어 앱 블로그의 WCF</span><span class="sxs-lookup"><span data-stu-id="0d7cd-167">WCF in Windows Store Apps Blog</span></span>](https://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)
-- [<span data-ttu-id="0d7cd-168">WCF Windows 스토어 클라이언트 및 보안</span><span class="sxs-lookup"><span data-stu-id="0d7cd-168">WCF Windows Store Clients and Security</span></span>](https://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)
-- [<span data-ttu-id="0d7cd-169">Windows 스토어 앱 및 컴퓨터 간 호출</span><span class="sxs-lookup"><span data-stu-id="0d7cd-169">Windows Store Apps and Cross Machine Calls</span></span>](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
-- [<span data-ttu-id="0d7cd-170">Windows 스토어 앱에서 Azure에 배포 된 WCF 서비스 호출</span><span class="sxs-lookup"><span data-stu-id="0d7cd-170">Calling a WCF Service Deployed in Azure from a Windows Store App</span></span>](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
-- [<span data-ttu-id="0d7cd-171">WCF 보안 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="0d7cd-171">Programming WCF Security</span></span>](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
-- [<span data-ttu-id="0d7cd-172">바인딩</span><span class="sxs-lookup"><span data-stu-id="0d7cd-172">Bindings</span></span>](../../../../docs/framework/wcf/bindings.md)
+- [<span data-ttu-id="9c988-167">Windows 스토어 앱의 WCF 블로그</span><span class="sxs-lookup"><span data-stu-id="9c988-167">WCF in Windows Store Apps Blog</span></span>](https://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)
+- [<span data-ttu-id="9c988-168">WCF Windows 스토어 클라이언트 및 보안</span><span class="sxs-lookup"><span data-stu-id="9c988-168">WCF Windows Store Clients and Security</span></span>](https://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)
+- [<span data-ttu-id="9c988-169">Windows 스토어 앱 및 컴퓨터 간 호출</span><span class="sxs-lookup"><span data-stu-id="9c988-169">Windows Store Apps and Cross Machine Calls</span></span>](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [<span data-ttu-id="9c988-170">Windows 스토어 앱에서 Azure에 배포 된 WCF 서비스 호출</span><span class="sxs-lookup"><span data-stu-id="9c988-170">Calling a WCF Service Deployed in Azure from a Windows Store App</span></span>](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [<span data-ttu-id="9c988-171">WCF 보안 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="9c988-171">Programming WCF Security</span></span>](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+- [<span data-ttu-id="9c988-172">바인딩</span><span class="sxs-lookup"><span data-stu-id="9c988-172">Bindings</span></span>](../../../../docs/framework/wcf/bindings.md)

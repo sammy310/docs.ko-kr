@@ -10,21 +10,21 @@ helpviewer_keywords:
 - text [WPF], drawing to visuals
 - drawing [WPF], text to visuals
 ms.assetid: fee4003c-e8a6-46ec-babd-2c7f4231a101
-ms.openlocfilehash: 1ea31540ad59ab419e209e4133bcb88640cc01fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bd760a06150098d0fff17dbdce95b55a0e5fe713
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61776170"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963844"
 ---
-# <a name="how-to-draw-text-to-a-visual"></a><span data-ttu-id="3c1ed-102">방법: 시각적 개체에 텍스트 그리기</span><span class="sxs-lookup"><span data-stu-id="3c1ed-102">How to: Draw Text to a Visual</span></span>
-<span data-ttu-id="3c1ed-103">다음 예제에서는 텍스트를 그리는 방법에는 <xref:System.Windows.Media.DrawingVisual> 를 사용 하 여를 <xref:System.Windows.Media.DrawingContext> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="3c1ed-103">The following example shows how to draw text to a <xref:System.Windows.Media.DrawingVisual> using a <xref:System.Windows.Media.DrawingContext> object.</span></span> <span data-ttu-id="3c1ed-104">그리기 컨텍스트 호출에서 반환 되는 <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A> 메서드는 <xref:System.Windows.Media.DrawingVisual> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="3c1ed-104">A drawing context is returned by calling the <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A> method of a <xref:System.Windows.Media.DrawingVisual> object.</span></span> <span data-ttu-id="3c1ed-105">그리기 컨텍스트에 그래픽 및 텍스트를 그릴 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3c1ed-105">You can draw graphics and text into a drawing context.</span></span>  
+# <a name="how-to-draw-text-to-a-visual"></a><span data-ttu-id="2cb27-102">방법: 시각적 개체에 텍스트 그리기</span><span class="sxs-lookup"><span data-stu-id="2cb27-102">How to: Draw Text to a Visual</span></span>
+<span data-ttu-id="2cb27-103">다음 예제에서는 <xref:System.Windows.Media.DrawingVisual> <xref:System.Windows.Media.DrawingContext> 개체를 사용 하 여에 텍스트를 그리는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="2cb27-103">The following example shows how to draw text to a <xref:System.Windows.Media.DrawingVisual> using a <xref:System.Windows.Media.DrawingContext> object.</span></span> <span data-ttu-id="2cb27-104">그리기 컨텍스트 호출에서 반환 되는 <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A> 메서드는 <xref:System.Windows.Media.DrawingVisual> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="2cb27-104">A drawing context is returned by calling the <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A> method of a <xref:System.Windows.Media.DrawingVisual> object.</span></span> <span data-ttu-id="2cb27-105">그리기 컨텍스트에 그래픽과 텍스트를 그릴 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2cb27-105">You can draw graphics and text into a drawing context.</span></span>  
   
- <span data-ttu-id="3c1ed-106">텍스트를 그리려면 그리기 컨텍스트에 사용 합니다 <xref:System.Windows.Media.DrawingContext.DrawText%2A> 메서드를 <xref:System.Windows.Media.DrawingContext> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="3c1ed-106">To draw text into the drawing context, use the <xref:System.Windows.Media.DrawingContext.DrawText%2A> method of a <xref:System.Windows.Media.DrawingContext> object.</span></span> <span data-ttu-id="3c1ed-107">그리기 컨텍스트에 콘텐츠 그리기 작업을 완료 하는 경우 호출 된 <xref:System.Windows.Media.DrawingContext.Close%2A> 그리기 컨텍스트에 닫고 콘텐츠를 유지 하는 메서드.</span><span class="sxs-lookup"><span data-stu-id="3c1ed-107">When you are finished drawing content into the drawing context, call the <xref:System.Windows.Media.DrawingContext.Close%2A> method to close the drawing context and persist the content.</span></span>  
+ <span data-ttu-id="2cb27-106">그리기 컨텍스트에 텍스트를 그리려면 <xref:System.Windows.Media.DrawingContext.DrawText%2A> <xref:System.Windows.Media.DrawingContext> 개체의 메서드를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="2cb27-106">To draw text into the drawing context, use the <xref:System.Windows.Media.DrawingContext.DrawText%2A> method of a <xref:System.Windows.Media.DrawingContext> object.</span></span> <span data-ttu-id="2cb27-107">그리기 컨텍스트에 콘텐츠 그리기를 완료 한 경우 <xref:System.Windows.Media.DrawingContext.Close%2A> 메서드를 호출 하 여 그리기 컨텍스트를 닫고 콘텐츠를 유지 합니다.</span><span class="sxs-lookup"><span data-stu-id="2cb27-107">When you are finished drawing content into the drawing context, call the <xref:System.Windows.Media.DrawingContext.Close%2A> method to close the drawing context and persist the content.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3c1ed-108">예제</span><span class="sxs-lookup"><span data-stu-id="3c1ed-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="2cb27-108">예제</span><span class="sxs-lookup"><span data-stu-id="2cb27-108">Example</span></span>  
  [!code-csharp[DrawingVisualSample#110](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#110)]
  [!code-vb[DrawingVisualSample#110](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#110)]  
   
 > [!NOTE]
->  <span data-ttu-id="3c1ed-109">위의 코드 예제가 발췌된 전체 코드 샘플을 보려면 [DrawingVisuals를 사용하여 적중 테스트 샘플](https://go.microsoft.com/fwlink/?LinkID=159994)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="3c1ed-109">For the complete code sample from which the preceding code example was extracted, see [Hit Test Using DrawingVisuals Sample](https://go.microsoft.com/fwlink/?LinkID=159994).</span></span>
+> <span data-ttu-id="2cb27-109">위의 코드 예제가 발췌된 전체 코드 샘플을 보려면 [DrawingVisuals를 사용하여 적중 테스트 샘플](https://go.microsoft.com/fwlink/?LinkID=159994)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="2cb27-109">For the complete code sample from which the preceding code example was extracted, see [Hit Test Using DrawingVisuals Sample](https://go.microsoft.com/fwlink/?LinkID=159994).</span></span>
