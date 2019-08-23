@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc8cd20a4183ffd002f1399b6b50c8956208a21b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 95dbaddc59a80b4f499a629dd00a52be678b4665
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868806"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910882"
 ---
-# <a name="securing-exception-handling"></a><span data-ttu-id="ddbec-102">예외 처리 보안</span><span class="sxs-lookup"><span data-stu-id="ddbec-102">Securing Exception Handling</span></span>
-<span data-ttu-id="ddbec-103">시각적 개체의 C++ 하기 전에 Visual Basic의 경우 스택에서 추가 필터 식을 실행 **마지막** 문입니다.</span><span class="sxs-lookup"><span data-stu-id="ddbec-103">In Visual C++ and Visual Basic, a filter expression further up the stack runs before any **finally** statement.</span></span> <span data-ttu-id="ddbec-104">**catch** 블록에 연결 된 후 실행 되는 필터는 **마지막으로** 문.</span><span class="sxs-lookup"><span data-stu-id="ddbec-104">The **catch** block associated with that filter runs after the **finally** statement.</span></span> <span data-ttu-id="ddbec-105">자세한 내용은 [사용자 필터 예외](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ddbec-105">For more information, see [Using User-Filtered Exceptions](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md).</span></span> <span data-ttu-id="ddbec-106">이 섹션에서는이 주문의 보안 문제를 검사합니다.</span><span class="sxs-lookup"><span data-stu-id="ddbec-106">This section examines the security implications of this order.</span></span> <span data-ttu-id="ddbec-107">필터 문 순서를 보여 주는 다음 의사 코드 예제 및 **마지막** 문을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="ddbec-107">Consider the following pseudocode example that illustrates the order in which filter statements and **finally** statements run.</span></span>  
+# <a name="securing-exception-handling"></a><span data-ttu-id="2f51f-102">예외 처리 보안</span><span class="sxs-lookup"><span data-stu-id="2f51f-102">Securing Exception Handling</span></span>
+<span data-ttu-id="2f51f-103">시각적 개체 C++ 와 Visual Basic에서 스택의 추가 필터 식은 **finally** 문 보다 먼저 실행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2f51f-103">In Visual C++ and Visual Basic, a filter expression further up the stack runs before any **finally** statement.</span></span> <span data-ttu-id="2f51f-104">해당 필터와 연결 된 **catch** 블록은 **finally** 문 다음에 실행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2f51f-104">The **catch** block associated with that filter runs after the **finally** statement.</span></span> <span data-ttu-id="2f51f-105">자세한 내용은 [사용자 필터 예외 사용](../../standard/exceptions/using-user-filtered-exception-handlers.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="2f51f-105">For more information, see [Using User-Filtered Exceptions](../../standard/exceptions/using-user-filtered-exception-handlers.md).</span></span> <span data-ttu-id="2f51f-106">이 섹션에서는이 주문의 보안 의미를 검사 합니다.</span><span class="sxs-lookup"><span data-stu-id="2f51f-106">This section examines the security implications of this order.</span></span> <span data-ttu-id="2f51f-107">필터 문과 **finally** 문이 실행 되는 순서를 보여 주는 다음과 같은 의사 코드 예를 고려해 보세요.</span><span class="sxs-lookup"><span data-stu-id="2f51f-107">Consider the following pseudocode example that illustrates the order in which filter statements and **finally** statements run.</span></span>  
   
 ```cpp  
 void Main()   
@@ -51,7 +51,7 @@ void Sub()
 }                        
 ```  
   
- <span data-ttu-id="ddbec-108">이 코드에서는 다음이 출력 합니다.</span><span class="sxs-lookup"><span data-stu-id="ddbec-108">This code prints the following.</span></span>  
+ <span data-ttu-id="2f51f-108">이 코드는 다음을 출력 합니다.</span><span class="sxs-lookup"><span data-stu-id="2f51f-108">This code prints the following.</span></span>  
   
 ```  
 Throw  
@@ -60,7 +60,7 @@ Finally
 Catch  
 ```  
   
- <span data-ttu-id="ddbec-109">필터가 먼저 실행 합니다 **마지막** 되므로 보안 문제가 될 수 있는 다른 코드를 실행 하는 데 이용 변경 상태를 수행 하면 문입니다.</span><span class="sxs-lookup"><span data-stu-id="ddbec-109">The filter runs before the **finally** statement, so security issues can be introduced by anything that makes a state change where execution of other code could take advantage.</span></span> <span data-ttu-id="ddbec-110">예를 들어:</span><span class="sxs-lookup"><span data-stu-id="ddbec-110">For example:</span></span>  
+ <span data-ttu-id="2f51f-109">필터는 **finally** 문 보다 먼저 실행 되므로 다른 코드를 실행 하는 데 사용 될 수 있는 상태를 변경 하는 모든 항목에 의해 보안 문제가 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2f51f-109">The filter runs before the **finally** statement, so security issues can be introduced by anything that makes a state change where execution of other code could take advantage.</span></span> <span data-ttu-id="2f51f-110">예를 들어:</span><span class="sxs-lookup"><span data-stu-id="2f51f-110">For example:</span></span>  
   
 ```cpp  
 try   
@@ -79,7 +79,7 @@ finally
 }  
 ```  
   
- <span data-ttu-id="ddbec-111">이 의사 코드 필터를 스택의 상위에 임의의 코드를 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ddbec-111">This pseudocode allows a filter higher up the stack to run arbitrary code.</span></span> <span data-ttu-id="ddbec-112">다른 비슷한 효과 포함 하는 작업의 예로 임시 일부 보안 검사를 우회 하는 내부 플래그를 설정 하는 다른 id 가장 하거나 스레드와 연결 된 문화권을 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="ddbec-112">Other examples of operations that would have a similar effect are temporary impersonation of another identity, setting an internal flag that bypasses some security check, or changing the culture associated with the thread.</span></span> <span data-ttu-id="ddbec-113">권장 되는 방법은 호출자의 필터 블록에서 스레드 상태를 코드 변경 내용을 격리 하는 예외 처리기를 소개 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="ddbec-113">The recommended solution is to introduce an exception handler to isolate the code's changes to thread state from callers' filter blocks.</span></span> <span data-ttu-id="ddbec-114">그러나 예외 처리기의 도입이 제대로 될 중요 한 나이 문제를 해결할 수는 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ddbec-114">However, it is important that the exception handler be properly introduced or this problem will not be fixed.</span></span> <span data-ttu-id="ddbec-115">다음 예제에서는 UI culture를 전환 하지만 모든 종류의 스레드 상태 변경 마찬가지로 노출 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ddbec-115">The following example switches the UI culture, but any kind of thread state change could be similarly exposed.</span></span>  
+ <span data-ttu-id="2f51f-111">이 의사 코드는 스택의 상위 필터에서 임의 코드를 실행할 수 있도록 허용 합니다.</span><span class="sxs-lookup"><span data-stu-id="2f51f-111">This pseudocode allows a filter higher up the stack to run arbitrary code.</span></span> <span data-ttu-id="2f51f-112">유사한 효과가 있는 작업의 다른 예로는 다른 id의 임시 가장, 일부 보안 검사를 우회 하는 내부 플래그 설정 또는 스레드와 연결 된 문화권 변경 등이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2f51f-112">Other examples of operations that would have a similar effect are temporary impersonation of another identity, setting an internal flag that bypasses some security check, or changing the culture associated with the thread.</span></span> <span data-ttu-id="2f51f-113">권장 되는 해결 방법은 코드의 변경 내용을 호출자의 필터 블록에서 스레드 상태로 격리 하는 예외 처리기를 도입 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="2f51f-113">The recommended solution is to introduce an exception handler to isolate the code's changes to thread state from callers' filter blocks.</span></span> <span data-ttu-id="2f51f-114">그러나 예외 처리기를 올바르게 도입 하거나이 문제를 해결할 수 있는 것은 중요 합니다.</span><span class="sxs-lookup"><span data-stu-id="2f51f-114">However, it is important that the exception handler be properly introduced or this problem will not be fixed.</span></span> <span data-ttu-id="2f51f-115">다음 예제에서는 UI 문화권을 전환 하지만 모든 종류의 스레드 상태 변경이 비슷한 방식으로 노출 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2f51f-115">The following example switches the UI culture, but any kind of thread state change could be similarly exposed.</span></span>  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -116,7 +116,7 @@ Thread.CurrentThread.CurrentUICulture)
 End Class  
 ```  
   
- <span data-ttu-id="ddbec-116">올바른 해결이 경우 기존 래핑할 **시도**/**마지막** 블록에 **시도**/**catch** 블록입니다.</span><span class="sxs-lookup"><span data-stu-id="ddbec-116">The correct fix in this case is to wrap the existing **try**/**finally** block in a **try**/**catch** block.</span></span> <span data-ttu-id="ddbec-117">간단히 소개를 **catch throw** 기존 절 **시도**/**마지막** 다음 예와에서 같이 블록 문제를 해결 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ddbec-117">Simply introducing a **catch-throw** clause into the existing **try**/**finally** block does not fix the problem, as shown in the following example.</span></span>  
+ <span data-ttu-id="2f51f-116">이 경우 올바른 픽스는 **try**/**catch** 블록에서 기존 **try**/**finally** 블록을 래핑하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="2f51f-116">The correct fix in this case is to wrap the existing **try**/**finally** block in a **try**/**catch** block.</span></span> <span data-ttu-id="2f51f-117">다음 예제와 같이 **catch throw** 절을 기존 **try**/**finally** 블록에 도입 하면 문제가 해결 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2f51f-117">Simply introducing a **catch-throw** clause into the existing **try**/**finally** block does not fix the problem, as shown in the following example.</span></span>  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -136,9 +136,9 @@ YourObject.YourMethod()
 }  
 ```  
   
- <span data-ttu-id="ddbec-118">때문에 문제가 해결 되지 않으면이 **마지막** 하기 전에 문이 실행 되지 않은 `FilterFunc` 컨트롤을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="ddbec-118">This does not fix the problem because the **finally** statement has not run before the `FilterFunc` gets control.</span></span>  
+ <span data-ttu-id="2f51f-118">이는이 컨트롤을 `FilterFunc` 가져오기 전에 **finally** 문이 실행 되지 않았기 때문에 문제가 해결 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2f51f-118">This does not fix the problem because the **finally** statement has not run before the `FilterFunc` gets control.</span></span>  
   
- <span data-ttu-id="ddbec-119">확인 하 여 문제를 해결 하는 다음 예제에서는 합니다 **마지막** 절이 호출자의 예외 필터 블록에 예외를 제공 하기 전에 실행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ddbec-119">The following example fixes the problem by ensuring that the **finally** clause has executed before offering an exception up the callers' exception filter blocks.</span></span>  
+ <span data-ttu-id="2f51f-119">다음 예제에서는 호출자의 예외 필터 블록에 예외를 제공 하기 전에 **finally** 절이 실행 되도록 하 여 문제를 해결 합니다.</span><span class="sxs-lookup"><span data-stu-id="2f51f-119">The following example fixes the problem by ensuring that the **finally** clause has executed before offering an exception up the callers' exception filter blocks.</span></span>  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -160,6 +160,6 @@ YourObject.YourMethod()
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ddbec-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="ddbec-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2f51f-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="2f51f-120">See also</span></span>
 
-- [<span data-ttu-id="ddbec-121">보안 코딩 지침</span><span class="sxs-lookup"><span data-stu-id="ddbec-121">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)
+- [<span data-ttu-id="2f51f-121">보안 코딩 지침</span><span class="sxs-lookup"><span data-stu-id="2f51f-121">Secure Coding Guidelines</span></span>](../../standard/security/secure-coding-guidelines.md)
