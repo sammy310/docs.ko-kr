@@ -6,64 +6,64 @@ helpviewer_keywords:
 - bugreport compiler option [Visual Basic]
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
-ms.openlocfilehash: 440e583b55765d680ee72f8574f929e335e10cdb
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 75c3e5842447a8f0812d5a90d7157f7a6a496936
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590636"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962440"
 ---
-# <a name="-bugreport"></a><span data-ttu-id="61c05-102">-bugreport</span><span class="sxs-lookup"><span data-stu-id="61c05-102">-bugreport</span></span>
-<span data-ttu-id="61c05-103">버그 보고서를 파일로 작성할 때는 사용할 수 있는 파일을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="61c05-103">Creates a file that you can use when you file a bug report.</span></span>  
+# <a name="-bugreport"></a><span data-ttu-id="4ad84-102">-bugreport</span><span class="sxs-lookup"><span data-stu-id="4ad84-102">-bugreport</span></span>
+<span data-ttu-id="4ad84-103">버그 보고서를 작성할 때 사용할 수 있는 파일을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4ad84-103">Creates a file that you can use when you file a bug report.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="61c05-104">구문</span><span class="sxs-lookup"><span data-stu-id="61c05-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4ad84-104">구문</span><span class="sxs-lookup"><span data-stu-id="4ad84-104">Syntax</span></span>  
   
 ```  
 -bugreport:file  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="61c05-105">인수</span><span class="sxs-lookup"><span data-stu-id="61c05-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="4ad84-105">인수</span><span class="sxs-lookup"><span data-stu-id="4ad84-105">Arguments</span></span>  
   
-|<span data-ttu-id="61c05-106">용어</span><span class="sxs-lookup"><span data-stu-id="61c05-106">Term</span></span>|<span data-ttu-id="61c05-107">정의</span><span class="sxs-lookup"><span data-stu-id="61c05-107">Definition</span></span>|  
+|<span data-ttu-id="4ad84-106">용어</span><span class="sxs-lookup"><span data-stu-id="4ad84-106">Term</span></span>|<span data-ttu-id="4ad84-107">정의</span><span class="sxs-lookup"><span data-stu-id="4ad84-107">Definition</span></span>|  
 |---|---|  
-|`file`|<span data-ttu-id="61c05-108">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="61c05-108">Required.</span></span> <span data-ttu-id="61c05-109">버그 보고서를 포함 하는 파일의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="61c05-109">The name of the file that will contain your bug report.</span></span> <span data-ttu-id="61c05-110">파일 이름을 따옴표로 묶습니다 ("") 이름에 공백이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="61c05-110">Enclose the file name in quotation marks (" ") if the name contains a space.</span></span>|  
+|`file`|<span data-ttu-id="4ad84-108">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="4ad84-108">Required.</span></span> <span data-ttu-id="4ad84-109">버그 보고서를 포함할 파일의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="4ad84-109">The name of the file that will contain your bug report.</span></span> <span data-ttu-id="4ad84-110">이름에 공백이 포함 된 경우 파일 이름을 따옴표 ("")로 묶습니다.</span><span class="sxs-lookup"><span data-stu-id="4ad84-110">Enclose the file name in quotation marks (" ") if the name contains a space.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="61c05-111">설명</span><span class="sxs-lookup"><span data-stu-id="61c05-111">Remarks</span></span>  
- <span data-ttu-id="61c05-112">다음 정보를 추가할 `file`:</span><span class="sxs-lookup"><span data-stu-id="61c05-112">The following information is added to `file`:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4ad84-111">설명</span><span class="sxs-lookup"><span data-stu-id="4ad84-111">Remarks</span></span>  
+ <span data-ttu-id="4ad84-112">에 `file`추가 되는 정보는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="4ad84-112">The following information is added to `file`:</span></span>  
   
-- <span data-ttu-id="61c05-113">컴파일할 때 모든 소스 코드 파일의 복사본입니다.</span><span class="sxs-lookup"><span data-stu-id="61c05-113">A copy of all source-code files in the compilation.</span></span>  
+- <span data-ttu-id="4ad84-113">컴파일할 때 모든 소스 코드 파일의 복사본입니다.</span><span class="sxs-lookup"><span data-stu-id="4ad84-113">A copy of all source-code files in the compilation.</span></span>  
   
-- <span data-ttu-id="61c05-114">컴파일에 사용 된 컴파일러 옵션의 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="61c05-114">A list of the compiler options used in the compilation.</span></span>  
+- <span data-ttu-id="4ad84-114">컴파일에 사용 된 컴파일러 옵션 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="4ad84-114">A list of the compiler options used in the compilation.</span></span>  
   
-- <span data-ttu-id="61c05-115">컴파일러, 공용 언어 런타임 및 운영 체제에 대 한 버전 정보입니다.</span><span class="sxs-lookup"><span data-stu-id="61c05-115">Version information about your compiler, common language runtime, and operating system.</span></span>  
+- <span data-ttu-id="4ad84-115">컴파일러, 공용 언어 런타임 및 운영 체제에 대 한 버전 정보입니다.</span><span class="sxs-lookup"><span data-stu-id="4ad84-115">Version information about your compiler, common language runtime, and operating system.</span></span>  
   
-- <span data-ttu-id="61c05-116">컴파일러 출력입니다(있는 경우).</span><span class="sxs-lookup"><span data-stu-id="61c05-116">Compiler output, if any.</span></span>  
+- <span data-ttu-id="4ad84-116">컴파일러 출력입니다(있는 경우).</span><span class="sxs-lookup"><span data-stu-id="4ad84-116">Compiler output, if any.</span></span>  
   
-- <span data-ttu-id="61c05-117">메시지가 표시 되는 문제를 설명입니다.</span><span class="sxs-lookup"><span data-stu-id="61c05-117">A description of the problem, for which you are prompted.</span></span>  
+- <span data-ttu-id="4ad84-117">메시지가 표시 되는 문제에 대 한 설명입니다.</span><span class="sxs-lookup"><span data-stu-id="4ad84-117">A description of the problem, for which you are prompted.</span></span>  
   
-- <span data-ttu-id="61c05-118">메시지가 표시 되는 문제를 생각 하는 방법에 대 한 설명을 수정 되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="61c05-118">A description of how you think the problem should be fixed, for which you are prompted.</span></span>  
+- <span data-ttu-id="4ad84-118">문제를 해결 하는 방법에 대 한 설명입니다.</span><span class="sxs-lookup"><span data-stu-id="4ad84-118">A description of how you think the problem should be fixed, for which you are prompted.</span></span>  
   
- <span data-ttu-id="61c05-119">모든 소스 코드 파일의 복사본에 포함 되어 있으므로 `file`을 최대한 짧은 프로그램에 코드 결함을 재현 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="61c05-119">Because a copy of all source-code files is included in `file`, you may want to reproduce the (suspected) code defect in the shortest possible program.</span></span>  
+ <span data-ttu-id="4ad84-119">모든 소스 코드 파일의 복사본은에 `file`포함 되어 있으므로 가능한 짧은 프로그램에서 (의심 스러운) 코드 결함을 재현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4ad84-119">Because a copy of all source-code files is included in `file`, you may want to reproduce the (suspected) code defect in the shortest possible program.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="61c05-120">`-bugreport` 옵션은 잠재적으로 중요 한 정보가 포함 된 파일을 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="61c05-120">The `-bugreport` option produces a file that contains potentially sensitive information.</span></span> <span data-ttu-id="61c05-121">이 현재 시간, 컴파일러 버전,.NET Framework 버전, OS 버전, 사용자 이름, 명령줄 인수는 컴파일러를 실행 하면서 모든 소스 코드 및 모든 참조 된 어셈블리의 이진 형식을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="61c05-121">This includes current time, compiler version, .NET Framework version, OS version, user name, the command-line arguments with which the compiler was run, all source code, and the binary form of any referenced assembly.</span></span> <span data-ttu-id="61c05-122">이 옵션은 ASP.NET 응용 프로그램의 서버 쪽 컴파일에 Web.config 파일에서 명령줄 옵션을 지정 하 여 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="61c05-122">This option can be accessed by specifying command-line options in the Web.config file for a server-side compilation of an ASP.NET application.</span></span> <span data-ttu-id="61c05-123">이 방지 하려면 사용자가 서버에서 컴파일하지 합니다 Machine.config 파일을 수정 합니다.</span><span class="sxs-lookup"><span data-stu-id="61c05-123">To prevent this, modify the Machine.config file to disallow users from compiling on the server.</span></span>  
+> <span data-ttu-id="4ad84-120">옵션 `-bugreport` 은 잠재적으로 중요 한 정보를 포함 하는 파일을 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="4ad84-120">The `-bugreport` option produces a file that contains potentially sensitive information.</span></span> <span data-ttu-id="4ad84-121">여기에는 현재 시간, 컴파일러 버전, .NET Framework 버전, OS 버전, 사용자 이름, 컴파일러가 실행 된 명령줄 인수, 모든 소스 코드, 참조 된 어셈블리의 이진 형식 등이 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="4ad84-121">This includes current time, compiler version, .NET Framework version, OS version, user name, the command-line arguments with which the compiler was run, all source code, and the binary form of any referenced assembly.</span></span> <span data-ttu-id="4ad84-122">ASP.NET 응용 프로그램의 서버 쪽 컴파일에 대해 web.config 파일에서 명령줄 옵션을 지정 하 여이 옵션에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4ad84-122">This option can be accessed by specifying command-line options in the Web.config file for a server-side compilation of an ASP.NET application.</span></span> <span data-ttu-id="4ad84-123">이를 방지 하려면 machine.config 파일을 수정 하 여 사용자가 서버에서 컴파일하지 못하도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="4ad84-123">To prevent this, modify the Machine.config file to disallow users from compiling on the server.</span></span>  
   
- <span data-ttu-id="61c05-124">이 옵션을 사용 하 여 사용 하는 경우 `-errorreport:prompt`, `-errorreport:queue`, 또는 `-errorreport:send`, 응용 프로그램에서 정보를 내부 컴파일러 오류를 발견 한 `file` Microsoft Corporation에 전송 됩니다.</span><span class="sxs-lookup"><span data-stu-id="61c05-124">If this option is used with `-errorreport:prompt`, `-errorreport:queue`, or `-errorreport:send`, and your application encounters an internal compiler error, the information in `file` is sent to Microsoft Corporation.</span></span> <span data-ttu-id="61c05-125">이 정보는 Microsoft 엔지니어가 오류의 원인을 파악 하는 데 도움이 되며 Visual Basic의 다음 릴리스를 개선 하는 데 도움이 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="61c05-125">That information will help Microsoft engineers identify the cause of the error and may help improve the next release of Visual Basic.</span></span> <span data-ttu-id="61c05-126">기본적으로 정보가 Microsoft로 전송 됩니다.</span><span class="sxs-lookup"><span data-stu-id="61c05-126">By default, no information is sent to Microsoft.</span></span> <span data-ttu-id="61c05-127">그러나 컴파일하는 경우 응용 프로그램 사용 하 여 `-errorreport:queue`기본적으로 설정 되는, 응용 프로그램은 해당 오류 보고서를 수집 합니다.</span><span class="sxs-lookup"><span data-stu-id="61c05-127">However, when you compile an application by using `-errorreport:queue`, which is enabled by default, the application collects its error reports.</span></span> <span data-ttu-id="61c05-128">그런 다음 컴퓨터의 관리자가 로그인 할 때 오류 보고 시스템 관리자 로그온 이후 발생 한 모든 오류를 보고 하는 Microsoft로 전달할 수 있도록 하는 팝업 창을 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="61c05-128">Then, when the computer's administrator logs in, the error reporting system displays a pop-up window that enables the administrator to forward to Microsoft any error reports that occurred since the logon.</span></span>  
+ <span data-ttu-id="4ad84-124">, `-errorreport:prompt` `file` 또는 와`-errorreport:send`함께이 옵션을 사용 하는 경우 응용 프로그램에 내부 컴파일러 오류가 발생 하면의 정보가 Microsoft Corporation에 전송 됩니다. `-errorreport:queue`</span><span class="sxs-lookup"><span data-stu-id="4ad84-124">If this option is used with `-errorreport:prompt`, `-errorreport:queue`, or `-errorreport:send`, and your application encounters an internal compiler error, the information in `file` is sent to Microsoft Corporation.</span></span> <span data-ttu-id="4ad84-125">이 정보는 Microsoft 엔지니어가 오류의 원인을 파악 하는 데 도움이 되며 Visual Basic의 다음 릴리스를 개선 하는 데 도움이 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4ad84-125">That information will help Microsoft engineers identify the cause of the error and may help improve the next release of Visual Basic.</span></span> <span data-ttu-id="4ad84-126">기본적으로 Microsoft로 전송 되는 정보는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4ad84-126">By default, no information is sent to Microsoft.</span></span> <span data-ttu-id="4ad84-127">그러나 기본적으로 사용 되는를 사용 `-errorreport:queue`하 여 응용 프로그램을 컴파일하면 응용 프로그램에서 오류 보고서를 수집 합니다.</span><span class="sxs-lookup"><span data-stu-id="4ad84-127">However, when you compile an application by using `-errorreport:queue`, which is enabled by default, the application collects its error reports.</span></span> <span data-ttu-id="4ad84-128">그러면 컴퓨터의 관리자가 로그인 할 때 오류 보고 시스템에 로그온 한 이후에 발생 한 오류 보고서를 Microsoft에 전달할 수 있는 팝업 창이 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="4ad84-128">Then, when the computer's administrator logs in, the error reporting system displays a pop-up window that enables the administrator to forward to Microsoft any error reports that occurred since the logon.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="61c05-129">`/bugreport` 옵션은 Visual Studio 개발 환경 내에서 사용할 수 없는 경우 즉, 사용 가능한 명령줄에서 컴파일할 때만 합니다.</span><span class="sxs-lookup"><span data-stu-id="61c05-129">The `/bugreport` option is not available from within the Visual Studio development environment; it is available only when you compile from the command line.</span></span>  
+> <span data-ttu-id="4ad84-129">이 `/bugreport` 옵션은 Visual Studio 개발 환경에서 사용할 수 없습니다. 명령줄에서 컴파일하는 경우에만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4ad84-129">The `/bugreport` option is not available from within the Visual Studio development environment; it is available only when you compile from the command line.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="61c05-130">예제</span><span class="sxs-lookup"><span data-stu-id="61c05-130">Example</span></span>  
- <span data-ttu-id="61c05-131">다음 예제에서는 컴파일합니다 `T2.vb` 파일에서 모든 버그 보고 정보를 저장 하 고 `Problem.txt`입니다.</span><span class="sxs-lookup"><span data-stu-id="61c05-131">The following example compiles `T2.vb` and puts all bug-reporting information in the file `Problem.txt`.</span></span>  
+## <a name="example"></a><span data-ttu-id="4ad84-130">예제</span><span class="sxs-lookup"><span data-stu-id="4ad84-130">Example</span></span>  
+ <span data-ttu-id="4ad84-131">다음 예제에서는 모든 `T2.vb` 버그 보고 정보를 컴파일하여 파일 `Problem.txt`에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="4ad84-131">The following example compiles `T2.vb` and puts all bug-reporting information in the file `Problem.txt`.</span></span>  
   
 ```  
 vbc -bugreport:problem.txt t2.vb  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="61c05-132">참고자료</span><span class="sxs-lookup"><span data-stu-id="61c05-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4ad84-132">참고자료</span><span class="sxs-lookup"><span data-stu-id="4ad84-132">See also</span></span>
 
-- [<span data-ttu-id="61c05-133">Visual Basic 명령줄 컴파일러</span><span class="sxs-lookup"><span data-stu-id="61c05-133">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="61c05-134">-디버그 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="61c05-134">-debug (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/debug.md)
-- [<span data-ttu-id="61c05-135">-errorreport</span><span class="sxs-lookup"><span data-stu-id="61c05-135">-errorreport</span></span>](../../../visual-basic/reference/command-line-compiler/errorreport.md)
-- [<span data-ttu-id="61c05-136">샘플 컴파일 명령줄</span><span class="sxs-lookup"><span data-stu-id="61c05-136">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- <span data-ttu-id="61c05-137">[securityPolicy (ASP.NET 설정 스키마)에 대 한 trustLevel 요소](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as399f0x(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="61c05-137">[trustLevel Element for securityPolicy (ASP.NET Settings Schema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as399f0x(v=vs.100))</span></span>
+- [<span data-ttu-id="4ad84-133">Visual Basic 명령줄 컴파일러</span><span class="sxs-lookup"><span data-stu-id="4ad84-133">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="4ad84-134">-debug (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4ad84-134">-debug (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/debug.md)
+- [<span data-ttu-id="4ad84-135">-errorreport</span><span class="sxs-lookup"><span data-stu-id="4ad84-135">-errorreport</span></span>](../../../visual-basic/reference/command-line-compiler/errorreport.md)
+- [<span data-ttu-id="4ad84-136">샘플 컴파일 명령줄</span><span class="sxs-lookup"><span data-stu-id="4ad84-136">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- <span data-ttu-id="4ad84-137">[Ws-securitypolicy에 대 한 trustLevel 요소 (ASP.NET Settings 스키마)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as399f0x(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="4ad84-137">[trustLevel Element for securityPolicy (ASP.NET Settings Schema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as399f0x(v=vs.100))</span></span>
