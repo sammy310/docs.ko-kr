@@ -17,42 +17,42 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f3f61caf0f4993c49d2956a37068aa826c4ac29
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e11628f9c20160899f37e62472547eaa98ea60b8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772118"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962648"
 ---
-# <a name="icorprofilerinfoseteventmask-method"></a><span data-ttu-id="735b5-102">ICorProfilerInfo::SetEventMask 메서드</span><span class="sxs-lookup"><span data-stu-id="735b5-102">ICorProfilerInfo::SetEventMask Method</span></span>
-<span data-ttu-id="735b5-103">프로파일러가 CLR(공용 언어 런타임)에서 알림을 받고 싶은 이벤트 형식을 지정하는 값을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="735b5-103">Sets a value that specifies the types of events for which the profiler wants to receive notification from the common language runtime (CLR).</span></span>  
+# <a name="icorprofilerinfoseteventmask-method"></a><span data-ttu-id="b1bc5-102">ICorProfilerInfo::SetEventMask 메서드</span><span class="sxs-lookup"><span data-stu-id="b1bc5-102">ICorProfilerInfo::SetEventMask Method</span></span>
+<span data-ttu-id="b1bc5-103">프로파일러가 CLR(공용 언어 런타임)에서 알림을 받고 싶은 이벤트 형식을 지정하는 값을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="b1bc5-103">Sets a value that specifies the types of events for which the profiler wants to receive notification from the common language runtime (CLR).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="735b5-104">구문</span><span class="sxs-lookup"><span data-stu-id="735b5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b1bc5-104">구문</span><span class="sxs-lookup"><span data-stu-id="b1bc5-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetEventMask(  
     [in] DWORD dwEvents);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="735b5-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="735b5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b1bc5-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="b1bc5-105">Parameters</span></span>  
  `dwEvents`  
- <span data-ttu-id="735b5-106">[in] 이벤트 범주를 지정하는 4바이트 값입니다.</span><span class="sxs-lookup"><span data-stu-id="735b5-106">[in] A 4-byte value that specifies the categories of events.</span></span> <span data-ttu-id="735b5-107">각 비트는 서로 다른 기능, 동작 또는 이벤트 형식을 제어합니다.</span><span class="sxs-lookup"><span data-stu-id="735b5-107">Each bit controls a different capability, behavior, or type of event.</span></span> <span data-ttu-id="735b5-108">설명 하는 비트를 [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) 열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="735b5-108">The bits are described in the [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeration.</span></span>  
+ <span data-ttu-id="b1bc5-106">[in] 이벤트 범주를 지정하는 4바이트 값입니다.</span><span class="sxs-lookup"><span data-stu-id="b1bc5-106">[in] A 4-byte value that specifies the categories of events.</span></span> <span data-ttu-id="b1bc5-107">각 비트는 서로 다른 기능, 동작 또는 이벤트 형식을 제어합니다.</span><span class="sxs-lookup"><span data-stu-id="b1bc5-107">Each bit controls a different capability, behavior, or type of event.</span></span> <span data-ttu-id="b1bc5-108">비트는 [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) 열거형에 설명 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1bc5-108">The bits are described in the [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeration.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="735b5-109">설명</span><span class="sxs-lookup"><span data-stu-id="735b5-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b1bc5-109">설명</span><span class="sxs-lookup"><span data-stu-id="b1bc5-109">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="735b5-110">호출 해야 합니다 [SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) 이 메서드 대신 메서드.</span><span class="sxs-lookup"><span data-stu-id="735b5-110">You should call the [SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) method instead of this method.</span></span> <span data-ttu-id="735b5-111">하지만 합니다 `SetEventMask` 메서드는 계속 지원 될 [SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) 추가 기능을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="735b5-111">Although the `SetEventMask` method continues to be supported, [SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) provides additional functionality.</span></span>  
+> <span data-ttu-id="b1bc5-110">이 메서드 대신 [SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) 메서드를 호출 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1bc5-110">You should call the [SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) method instead of this method.</span></span> <span data-ttu-id="b1bc5-111">메서드는 `SetEventMask` 계속 지원 되지만 [SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) 는 추가 기능을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1bc5-111">Although the `SetEventMask` method continues to be supported, [SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) provides additional functionality.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="735b5-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="735b5-112">Requirements</span></span>  
- <span data-ttu-id="735b5-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="735b5-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b1bc5-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b1bc5-112">Requirements</span></span>  
+ <span data-ttu-id="b1bc5-113">**플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="b1bc5-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="735b5-114">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="735b5-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="b1bc5-114">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b1bc5-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="735b5-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="735b5-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b1bc5-115">**라이브러리** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b1bc5-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="735b5-116">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="735b5-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b1bc5-116">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b1bc5-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="735b5-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="735b5-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b1bc5-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="b1bc5-117">See also</span></span>
 
-- [<span data-ttu-id="735b5-118">ICorProfilerInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="735b5-118">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="735b5-119">SetEventMask2 메서드</span><span class="sxs-lookup"><span data-stu-id="735b5-119">SetEventMask2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)
+- [<span data-ttu-id="b1bc5-118">ICorProfilerInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b1bc5-118">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="b1bc5-119">SetEventMask2 메서드</span><span class="sxs-lookup"><span data-stu-id="b1bc5-119">SetEventMask2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)
