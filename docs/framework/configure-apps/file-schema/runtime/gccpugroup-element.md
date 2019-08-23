@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 197ab9dbc1ec85bf8961f60bb26496eab788e63f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ee56b23b6d5fca6d0527d509c9b6a6fc6dd82336
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663696"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920778"
 ---
 # <a name="gccpugroup-element"></a>\<GCCpuGroup > 요소
 
@@ -82,4 +82,4 @@ ms.locfileid: "69663696"
 - [런타임 설정 스키마](index.md)
 - [구성 파일 스키마](../index.md)
 - [동시 가비지 수집을 사용 하지 않도록 설정 하려면](gcconcurrent-element.md#to-disable-background-garbage-collection)
-- [워크스테이션 및 서버 가비지 수집](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)
+- [워크스테이션 및 서버 가비지 수집](../../../../standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)

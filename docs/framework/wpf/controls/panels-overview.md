@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 4f54596e1ce3ed40f3a029ea6703147a97be992f
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 5fe464f2b79fa1f7b0674c049110d32f2ad32335
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545264"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944813"
 ---
 # <a name="panels-overview"></a>Panel 개요
 <xref:System.Windows.Controls.Panel>요소는 크기와 크기, 요소의 위치 및 자식 콘텐츠의 정렬 등 요소의 렌더링을 제어 하는 구성 요소입니다. 에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 미리 정의 <xref:System.Windows.Controls.Panel> 된 여러 요소 뿐만 아니라 사용자 지정 <xref:System.Windows.Controls.Panel> 요소를 생성 하는 기능도 제공 합니다.  
@@ -149,7 +149,7 @@ ms.locfileid: "69545264"
  내에서 <xref:System.Windows.Controls.Grid> 정의 된 열과 행은 <xref:System.Windows.GridUnitType.Star> 크기에 비례하여 남은 공간을 분산 하기 위해 크기 조정을 활용할 수 있습니다. 행 <xref:System.Windows.GridUnitType.Star> 또는 열의 높이나 너비로를 선택 하면 해당 열 또는 행이 사용 가능한 나머지 공간의 가중치 비율을 받습니다. 이는 열 또는 행 <xref:System.Windows.GridUnitType.Auto>내의 콘텐츠 크기에 따라 공간을 균등 하 게 분산 하는와는 대조적입니다. 이 값은 `*` 또는 `2*`([!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]을 사용할 경우)로 표현됩니다. 첫 번째 경우에 행 또는 열에는 사용 가능한 공간의 1배가 할당되고, 두 번째 경우에는 2배가 할당됩니다. 이 기법을 결합 하 여 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 및 <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> 값 `Stretch` 을 사용 하 여 공간을 비례적으로 분산 하는 것은 화면 공간의 백분율을 기준으로 레이아웃 공간을 분할할 수 있습니다. <xref:System.Windows.Controls.Grid> 이 방식으로 공간을 배분할 수 있는 유일한 레이아웃 패널 이며  
   
 #### <a name="defining-and-using-a-grid"></a>그리드 정의 및 사용  
- 다음 예제에서는 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] [시작] 메뉴에 제공되는 [실행] 대화 상자에 있는 UI와 같이 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]를 빌드하는 방법을 보여 줍니다.  
+ 다음 예제에서는 Windows 시작 메뉴에서 사용할 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 수 있는 실행 대화 상자에 있는와 비슷한을 빌드하는 방법을 보여 줍니다.  
   
  [!code-csharp[GridRunDialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
  [!code-vb[GridRunDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  

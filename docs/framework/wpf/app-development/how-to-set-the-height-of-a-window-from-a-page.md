@@ -6,20 +6,20 @@ helpviewer_keywords:
 - pages [WPF], setting window height from
 - height of window [WPF], setting from a page
 ms.assetid: 4e4488ff-ab5c-4ee9-81a4-e1addb55c5cc
-ms.openlocfilehash: c99ea134478635f368b71443f43e4d8f772cb5aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1041af88241011b51c96d7b61423344a32b25ca
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007328"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940796"
 ---
 # <a name="how-to-set-the-height-of-a-window-from-a-page"></a>방법: 페이지에서 창 높이 설정
-이 예제에서 창의 높이 설정 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.Page>합니다.  
+이 예제에서는에서 <xref:System.Windows.Controls.Page>창의 높이를 설정 하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
- A <xref:System.Windows.Controls.Page> 설정 하 여 해당 호스트 창의 높이 설정할 수 있습니다 <xref:System.Windows.Controls.Page.WindowHeight%2A>합니다. 이 속성을 사용 하면를 <xref:System.Windows.Controls.Page> 를 호스팅하는 창의 유형에 대 한 명시적 정보가 없습니다.  
+ 는 <xref:System.Windows.Controls.Page> 를 설정 <xref:System.Windows.Controls.Page.WindowHeight%2A>하 여 호스트 창의 높이를 설정할 수 있습니다. 이 속성을 사용 <xref:System.Windows.Controls.Page> 하면에서 호스트 하는 창의 형식을 명시적으로 알지 못합니다.  
   
 > [!NOTE]
->  사용 하 여 창 높이 설정 하려면 <xref:System.Windows.Controls.Page.WindowHeight%2A>, <xref:System.Windows.Controls.Page> 창의 자식 이어야 합니다.  
+> 을 사용 하 여 <xref:System.Windows.Controls.Page.WindowHeight%2A>창의 높이를 설정 하려면가 <xref:System.Windows.Controls.Page> 창의 자식 이어야 합니다.  
   
  [!code-xaml[HOWTONavigationSnippets#SetPageWindowHeightXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/SetWindowHeightPage.xaml#setpagewindowheightxaml)]

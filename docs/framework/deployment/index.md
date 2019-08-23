@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b7380556e13e17e26ffb2f8c5fbbc7136a1fb5e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7da023c5ab9247cde0ccd1126d4d639c6f355e7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771867"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910965"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>.NET Framework 및 애플리케이션 배포
 
-이 문서는 애플리케이션과 함께 .NET Framework 배포를 시작하는 데 도움이 됩니다. 대부분의 정보는 개발자, OEM 및 엔터프라이즈 관리자를 위한 것입니다. 컴퓨터에 .NET Framework를 설치하려는 사용자는 [.NET Framework 설치](~/docs/framework/install/index.md)를 읽어야 합니다.
+이 문서는 애플리케이션과 함께 .NET Framework 배포를 시작하는 데 도움이 됩니다. 대부분의 정보는 개발자, OEM 및 엔터프라이즈 관리자를 위한 것입니다. 컴퓨터에 .NET Framework를 설치하려는 사용자는 [.NET Framework 설치](../install/index.md)를 읽어야 합니다.
 
 ## <a name="key-deployment-resources"></a>주요 배포 리소스
 
@@ -32,9 +32,9 @@ ms.locfileid: "61771867"
 
   - 설치 관리자 옵션:
 
-    - [웹 설치 관리자](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [웹 설치 관리자](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
-    - [오프라인 설치 관리자](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [오프라인 설치 관리자](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
   - 설치 모드:
 
@@ -44,7 +44,7 @@ ms.locfileid: "61771867"
 
   - [.NET Framework 4.5를 설치하는 동안 시스템 다시 시작 줄이기](../../../docs/framework/deployment/reducing-system-restarts.md)
 
-  - [차단된 .NET Framework 설치 및 제거 문제 해결](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+  - [차단된 .NET Framework 설치 및 제거 문제 해결](../install/troubleshoot-blocked-installations-and-uninstallations.md)
 
 - 클라이언트 애플리케이션과 함께 .NET Framework 배포(개발자용):
 

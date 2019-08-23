@@ -2,12 +2,12 @@
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 1101d021f3c7436c4f45a22a48e50f6d1553f753
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c9dbec13dd0d71ba1b92ea971d067540013b6f9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769748"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940313"
 ---
 # <a name="websocketsettings"></a>\<webSocketSettings>
 WebSocket 설정을 지정하는 데 사용되는 구성 요소입니다.  
@@ -62,12 +62,12 @@ WebSocket 설정을 지정하는 데 사용되는 구성 요소입니다.
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |\<netHttpBinding>|NetHttpBinding을 지정합니다.|  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 사용 하는 방법의 \<webSocketSettings > 요소입니다.  
+ 다음 예제에서는 \<webSocketSettings > 요소를 사용 하는 방법을 보여 줍니다.  
   
 ```xml  
 <netHttpBinding>
@@ -90,7 +90,7 @@ WebSocket 설정을 지정하는 데 사용되는 구성 요소입니다.
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>
-- [바인딩](../../../../../docs/framework/wcf/bindings.md)
-- [시스템 제공 바인딩 구성](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [바인딩](../../../wcf/bindings.md)
+- [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

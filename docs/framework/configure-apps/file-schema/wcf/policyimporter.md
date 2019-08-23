@@ -2,12 +2,12 @@
 title: <policyImporter>
 ms.date: 03/30/2017
 ms.assetid: b0d03456-546f-44bb-ab12-1b2ce7f98fca
-ms.openlocfilehash: 81f38d2a163163ca7255ca546bbddbbb58fa3a1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 273bd0d5e68a661c639b82264b440b83d8127427
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783188"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933786"
 ---
 # <a name="policyimporter"></a>\<policyImporter>
 바인딩에 대한 사용자 지정 정책 어설션의 가져오기를 제어하는 정책 가져오기를 지정합니다.  
@@ -42,9 +42,9 @@ ms.locfileid: "61783188"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<policyImporters>](../../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)|바인딩에 대한 사용자 지정 정책 어설션의 가져오기를 제어하는 모든 정책 가져오기를 지정합니다.|  
+|[\<policyImporters>](policyimporters.md)|바인딩에 대한 사용자 지정 정책 어설션의 가져오기를 제어하는 모든 정책 가져오기를 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
  정책 가져오기는, 바인딩 기능에 대한 사용자 지정 정책 어설션을 검색하거나 어설션에서 요구하는 기능을 구현하는 사용자 지정 바인딩 요소를 연결하는 데 사용됩니다.  
@@ -55,5 +55,5 @@ ms.locfileid: "61783188"
 - <xref:System.ServiceModel.Configuration.PolicyImporterElement>
 - <xref:System.ServiceModel.Configuration.MetadataElement>
 - <xref:System.ServiceModel.Description.MetadataImporter>
-- [WCF 클라이언트 구성](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
-- [클라이언트](../../../../../docs/framework/wcf/feature-details/clients.md)
+- [WCF 클라이언트 구성](../../../wcf/feature-details/client-configuration.md)
+- [클라이언트](../../../wcf/feature-details/clients.md)

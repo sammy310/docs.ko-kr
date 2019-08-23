@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c830b7097d12017348d8669071ec6d7c122bfe44
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
-ms.translationtype: HT
+ms.openlocfilehash: ac21e8aa67eabcb3e837cb5eca02d1145b765946
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68364070"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941728"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Windows 스토어 앱을 .NET 네이티브로 마이그레이션
 
@@ -55,7 +55,7 @@ ms.locfileid: "68364070"
 
 예를 들어 데이터 바인딩을 사용하려면 앱이 속성 이름을 함수에 매핑할 수 있어야 합니다. Windows 스토어 앱용 .NET에서는 공용 언어 런타임이 리플렉션을 자동으로 사용하여 관리되는 형식 및 공개적으로 사용 가능한 네이티브 형식에 대해 이 기능을 제공합니다. .NET 네이티브에서 컴파일러는 데이터를 바인딩할 형식에 대 한 메타 데이터를 자동으로 포함 합니다.
 
-.NET 네이티브 컴파일러는 힌트 또는 지시문을 요구 하지 않고 작동 하 <xref:System.Collections.Generic.List%601> 는 <xref:System.Collections.Generic.Dictionary%602>및와 같은 일반적으로 사용 되는 제네릭 형식을 처리할 수도 있습니다. [동적](~/docs/csharp/language-reference/keywords/dynamic.md) 키워드도 일정한 제한 내에서 지원됩니다.
+.NET 네이티브 컴파일러는 힌트 또는 지시문을 요구 하지 않고 작동 하 <xref:System.Collections.Generic.List%601> 는 <xref:System.Collections.Generic.Dictionary%602>및와 같은 일반적으로 사용 되는 제네릭 형식을 처리할 수도 있습니다. [동적](../../csharp/language-reference/keywords/dynamic.md) 키워드도 일정한 제한 내에서 지원됩니다.
 
 > [!NOTE]
 > 앱을 .NET 네이티브로 이식할 때 모든 동적 코드 경로를 철저 하 게 테스트 해야 합니다.
@@ -129,7 +129,7 @@ Windows 스토어 앱 용 .NET과 .NET 네이티브 간의 동작에는 다양 �
 
 - 동적으로 다차원 배열을 만들 수 없습니다. 이러한 배열은 대개 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 매개 변수를 포함하는 `lengths` 메서드의 오버로드 또는 <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> 메서드를 호출하여 만듭니다.
 
-- 차원이 4개 이상(해당 <xref:System.Array.Rank%2A?displayProperty=nameWithType> 속성 값이 4 이상)인 다차원 배열은 지원되지 않습니다. 이러한 경우에는 [가변 배열](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) (배열의 배열)을 대신 사용합니다. 예를 들어 `array[x,y,z]` 는 유효하지 않지만 `array[x][y][z]` 는 유효합니다.
+- 차원이 4개 이상(해당 <xref:System.Array.Rank%2A?displayProperty=nameWithType> 속성 값이 4 이상)인 다차원 배열은 지원되지 않습니다. 이러한 경우에는 [가변 배열](../../csharp/programming-guide/arrays/jagged-arrays.md) (배열의 배열)을 대신 사용합니다. 예를 들어 `array[x,y,z]` 는 유효하지 않지만 `array[x][y][z]` 는 유효합니다.
 
 - 다차원 배열에는 가변성(variance)이 지원되지 않으며, 가변성(variance)을 적용하는 경우 런타임에 <xref:System.InvalidCastException> 예외가 발생합니다.
 
@@ -668,4 +668,4 @@ Windows 스토어 앱 프로젝트에 대 한 단위 테스트 라이브러리�
 - [시작](../../../docs/framework/net-native/getting-started-with-net-native.md)
 - [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Windows 스토어 앱 용 .NET 개요](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
-- [Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

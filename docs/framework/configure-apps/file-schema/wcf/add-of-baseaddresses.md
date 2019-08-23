@@ -2,14 +2,14 @@
 title: <baseAddresses>의 <add>
 ms.date: 03/30/2017
 ms.assetid: 1bd7426f-5f4f-43fc-b8e9-de842219aa32
-ms.openlocfilehash: fbcb3a07bf40c96a4cd1b2ec87277b6fefdfb89d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a94c5144d907c26e6f5eef09b1a17b17eb6c9e0f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704455"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920215"
 ---
-# <a name="add-of-baseaddresses"></a>\<추가 >의 \<baseAddresses >
+# <a name="add-of-baseaddresses"></a>\<baseaddresses의 \<> 추가 >
 서비스 호스트에서 사용하는 기본 주소를 지정하는 구성 요소를 나타냅니다.  
   
  \<system.ServiceModel>  
@@ -33,7 +33,7 @@ ms.locfileid: "61704455"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
 |`baseAddress`|서비스 호스트에서 사용하는 기본 주소를 지정하는 문자열입니다.|  
   
@@ -42,13 +42,13 @@ ms.locfileid: "61704455"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<baseAddresses>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)|`baseAddress` 요소의 컬렉션입니다.|  
+|[\<baseAddresses>](baseaddresses.md)|`baseAddress` 요소의 컬렉션입니다.|  
   
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.ServiceModel.Configuration.HostElement>
 - <xref:System.ServiceModel.ServiceHost>
 - <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A>
-- [호스팅](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [호스팅](../../../wcf/feature-details/hosting.md)

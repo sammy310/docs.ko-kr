@@ -1,5 +1,5 @@
 ---
-title: <remove> 요소에 대 한 <listeners> 에 대 한 <source>
+title: <remove>의에 <listeners> 대 한 요소<source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/remove
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - remove element for <listeners> for <source>
 - <remove> element for <listeners> for <source>
 ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
-ms.openlocfilehash: 4809c471deb51e0560b438b5a2c8849daad34ca0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: edd27dd262004aead7db4d81db8ecab0e831dac1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701608"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926989"
 ---
-# <a name="remove-element-for-listeners-for-source"></a>\<제거 > 요소에 대 한 \<수신기 >에 대 한 \<소스 >
+# <a name="remove-element-for-listeners-for-source"></a>\<소스 >에 대 \<한 \<수신기 > > 요소를 제거 합니다.
 추적 소스의 `Listeners` 컬렉션에서 수신기를 제거합니다.  
   
  \<configuration>  
@@ -37,7 +37,7 @@ ms.locfileid: "61701608"
   
 |특성|설명|  
 |---------------|-----------------|  
-|`name`|필수 특성입니다.<br /><br /> 제거할 수신기의 이름을 합니다 `Listeners` 컬렉션입니다.|  
+|`name`|필수 특성입니다.<br /><br /> `Listeners` 컬렉션에서 제거할 수신기의 이름입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -50,17 +50,17 @@ ms.locfileid: "61701608"
 |`system.diagnostics`|메시지를 수집하고 저장하고 라우팅하는 추적 수신기를 지정하며, 추적 스위치가 설정되는 수준을 지정합니다.|  
 |`sources`|추적 메시지를 시작하는 추적 소스가 포함되어 있습니다.|  
 |`source`|추적 메시지를 시작하는 추적 소스를 지정합니다.|  
-|`listeners`|수집, 저장 하 고 메시지를 라우팅하는 수신기를 지정 합니다.|  
+|`listeners`|메시지를 수집, 저장 및 라우팅하는 수신기를 지정 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 합니다 `<remove>` 요소에서 지정 된 수신기를 제거 합니다 `Listeners` 추적 소스에 대 한 컬렉션입니다.  
+ 요소 `<remove>` 는 추적 소스에 대 한 `Listeners` 컬렉션에서 지정 된 수신기를 제거 합니다.  
   
- 요소를 제거할 수 있습니다는 `Listeners` 호출 하 여 프로그래밍 방식으로 추적 소스에 대 한 컬렉션을 <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> 메서드를 <xref:System.Diagnostics.TraceSource.Listeners%2A> 의 속성을 <xref:System.Diagnostics.TraceSource> 인스턴스.  
+ 인스턴스의 속성에서 메서드를 <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> 호출 하 `Listeners` 여 프로그래밍 방식으로 추적 소스에 대 한 컬렉션에서 요소를 제거할 수 있습니다. <xref:System.Diagnostics.TraceSource.Listeners%2A> <xref:System.Diagnostics.TraceSource>  
   
- 이 요소는 응용 프로그램 구성 파일과 컴퓨터 구성 파일 (Machine.config)에서 사용할 수 있습니다.  
+ 이 요소는 컴퓨터 구성 파일 (machine.config) 및 응용 프로그램 구성 파일에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 사용 하는 방법을 보여 줍니다는 `<remove>` 요소를 사용 하기 전에 `<add>` 수신기를 추가 하는 요소 `console` 에 `Listeners` 추적 소스에 대 한 컬렉션 `TraceSourceApp`합니다.  
+ 다음 예제에서는 `<add>` 요소를 사용 하 여 `<remove>` 추적 소스 `TraceSourceApp`에 대 한 `Listeners` 컬렉션에 수신기 `console` 를 추가 하기 전에 요소를 사용 하는 방법을 보여 줍니다.  
   
 ```xml  
 <configuration>  
@@ -83,6 +83,6 @@ ms.locfileid: "61701608"
 
 - <xref:System.Diagnostics.TraceSource.Listeners%2A>
 - <xref:System.Diagnostics.TraceSource>
-- [추적 및 디버그 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)
-- [추적 수신기](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [추적 및 디버그 설정 스키마](index.md)
+- [\<clear>](clear-element-for-listeners-for-source.md)
+- [추적 수신기](../../../debug-trace-profile/trace-listeners.md)

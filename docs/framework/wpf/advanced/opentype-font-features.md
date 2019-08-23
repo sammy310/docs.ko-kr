@@ -9,12 +9,12 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: 580f9ce81e9b3652a9defec25dfd05f47e296d7a
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 7d73176a68d8b4b19b6c980ef52e1f47408127fb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545383"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933683"
 ---
 # <a name="opentype-font-features"></a>OpenType 글꼴 기능
 
@@ -37,7 +37,7 @@ ms.locfileid: "69545383"
 - 고급 입력 체계 컨트롤을 위한 폭넓은 지원  
   
 > [!NOTE]
->  Windows SDK에는 응용 프로그램과 함께 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 사용할 수 있는 샘플 OpenType 글꼴 집합이 포함 되어 있습니다. 이 글꼴에서는 이 항목의 나머지 부분에서 보여 주는 대부분의 기능이 제공됩니다. 자세한 내용은 [샘플 OpenType 글꼴 팩](sample-opentype-font-pack.md)을 참조하세요.  
+> Windows SDK에는 응용 프로그램과 함께 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 사용할 수 있는 샘플 OpenType 글꼴 집합이 포함 되어 있습니다. 이 글꼴에서는 이 항목의 나머지 부분에서 보여 주는 대부분의 기능이 제공됩니다. 자세한 내용은 [샘플 OpenType 글꼴 팩](sample-opentype-font-pack.md)을 참조하세요.  
   
  OpenType 글꼴 형식에 대 한 자세한 내용은 [Opentype 사양](https://go.microsoft.com/fwlink/?LinkId=96731) 을 참조 하십시오.  
   

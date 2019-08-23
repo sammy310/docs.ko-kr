@@ -8,12 +8,12 @@ helpviewer_keywords:
 - history [WPF], navigating back
 - navigation [WPF], through navigation history (back)
 ms.assetid: 9343234b-d864-441d-b8a7-d895cba80a87
-ms.openlocfilehash: 86590c2794339ac22cbc8ec5e11224736133e870
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 53b32e145390d7052262042c7a793699c163b373
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817970"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969347"
 ---
 # <a name="how-to-navigate-back-through-navigation-history"></a>방법: 탐색 기록을 뒤로 탐색
 이 예제에서는 후방 탐색 기록에서 항목으로 이동 하는 방법을 보여 줍니다.  
@@ -29,4 +29,4 @@ ms.locfileid: "68817970"
  **CanGoBack** 및 **GoBack** 은, <xref:System.Windows.Controls.Frame>및 <xref:System.Windows.Navigation.NavigationWindow> <xref:System.Windows.Navigation.NavigationService>에서 구현 됩니다.  
   
 > [!NOTE]
->  **GoBack**을 호출 하 고 후방 탐색 기록 <xref:System.InvalidOperationException> 에 항목이 없는 경우이 발생 합니다.
+> **GoBack**을 호출 하 고 후방 탐색 기록 <xref:System.InvalidOperationException> 에 항목이 없는 경우이 발생 합니다.

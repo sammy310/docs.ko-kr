@@ -7,12 +7,12 @@ helpviewer_keywords:
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-ms.openlocfilehash: 800bf80e5ba3e697c122bcf4b1bc0f302357d087
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 154a2543c62de545e8b2df711d6ad51989d0689d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401621"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964844"
 ---
 # <a name="dependency-property-metadata"></a>종속성 속성 메타데이터
 속성 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 시스템에는 리플렉션 또는 일반 CLR (공용 언어 런타임) 특성을 통해 속성에 대해 보고할 수 있는 것 이상의 메타 데이터 보고 시스템이 포함 되어 있습니다. 또한 종속성 속성에 대한 메타데이터는 종속성 속성을 정의하는 클래스에서 고유하게 할당하고, 종속성 속성이 다른 클래스에 추가될 때 변경하며, 정의하는 기본 클래스에서 종속성 속성을 상속하는 모든 파생 클래스에서 구체적으로 재정의할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "68401621"
  그런 <xref:System.Windows.PropertyMetadata> 다음 클래스는에서 파생 되므로 WPF 프레임 워크 수준 클래스와 같은 아키텍처 디비전에 대해 보다 구체적인 메타 데이터를 제공 합니다. <xref:System.Windows.UIPropertyMetadata>애니메이션 보고를 추가 하 <xref:System.Windows.FrameworkPropertyMetadata> 고 이전 섹션에서 설명한 WPF 프레임 워크 수준 속성을 제공 합니다. 종속성 속성을 등록 하면 이러한 <xref:System.Windows.PropertyMetadata> 파생 클래스에 등록할 수 있습니다. 메타 데이터를 검사할 때 기본 <xref:System.Windows.PropertyMetadata> 형식을 파생 클래스로 캐스팅 하 여 보다 구체적인 속성을 검사할 수 있습니다.  
   
 > [!NOTE]
->  에서 <xref:System.Windows.FrameworkPropertyMetadata> 지정할 수 있는 속성 특성은이 설명서에서 "flags" 라고도 합니다. 종속성 속성 등록 또는 메타 데이터 재정의에서 사용할 새 메타 데이터 인스턴스를 만들 때 플래그 열거 <xref:System.Windows.FrameworkPropertyMetadataOptions> 를 사용 하 여 이러한 값을 지정한 다음 열거형의 연결 된 값을 <xref:System.Windows.FrameworkPropertyMetadata> 생성자. 그러나 생성 된 이러한 옵션 특징은 생성 열거형 값이 아닌 <xref:System.Windows.FrameworkPropertyMetadata> 일련의 부울 속성으로 내에 표시 됩니다. 부울 속성을 사용하면 플래그 열거형 값에 마스크를 적용하여 관심 있는 정보를 가져오는 대신 각 조건을 확인할 수 있습니다. 생성자는 연결 <xref:System.Windows.FrameworkPropertyMetadataOptions> 된를 사용 하 여 생성자 시그니처의 길이를 적절 하 게 유지 하는 반면, 실제 생성 된 메타 데이터는 불연속 속성을 노출 하 여 메타 데이터 쿼리를 보다 직관적으로 만듭니다.  
+> 에서 <xref:System.Windows.FrameworkPropertyMetadata> 지정할 수 있는 속성 특성은이 설명서에서 "flags" 라고도 합니다. 종속성 속성 등록 또는 메타 데이터 재정의에서 사용할 새 메타 데이터 인스턴스를 만들 때 플래그 열거 <xref:System.Windows.FrameworkPropertyMetadataOptions> 를 사용 하 여 이러한 값을 지정한 다음 열거형의 연결 된 값을 <xref:System.Windows.FrameworkPropertyMetadata> 생성자. 그러나 생성 된 이러한 옵션 특징은 생성 열거형 값이 아닌 <xref:System.Windows.FrameworkPropertyMetadata> 일련의 부울 속성으로 내에 표시 됩니다. 부울 속성을 사용하면 플래그 열거형 값에 마스크를 적용하여 관심 있는 정보를 가져오는 대신 각 조건을 확인할 수 있습니다. 생성자는 연결 <xref:System.Windows.FrameworkPropertyMetadataOptions> 된를 사용 하 여 생성자 시그니처의 길이를 적절 하 게 유지 하는 반면, 실제 생성 된 메타 데이터는 불연속 속성을 노출 하 여 메타 데이터 쿼리를 보다 직관적으로 만듭니다.  
   
 <a name="override_or_subclass"></a>   
 ## <a name="when-to-override-metadata-when-to-derive-a-class"></a>메타데이터를 재정의하는 경우, 클래스를 파생시키는 경우  
@@ -78,7 +78,7 @@ ms.locfileid: "68401621"
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 연결된 속성은 종속성 속성으로 구현됩니다. 즉, 이러한 속성에는 개별 클래스에서 재정의할 수 있는 속성 메타데이터도 있습니다. 에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 연결 된 속성에 대 한 범위 지정 고려 사항은 일반적 <xref:System.Windows.DependencyObject> 으로에 연결 된 속성을 설정할 수 있습니다. 따라서 모든 <xref:System.Windows.DependencyObject> 파생 클래스는 클래스의 인스턴스에 설정 될 수 있으므로 연결 된 속성에 대 한 메타 데이터를 재정의할 수 있습니다. 기본값, 콜백 또는 WPF 프레임워크 수준 특성 보고 속성을 재정의할 수 있습니다. 연결된 속성이 클래스의 인스턴스에서 설정된 경우 해당 속성 메타데이터 재정의 특성이 적용됩니다. 예를 들어 재정의 값이 클래스의 인스턴스에서 연결된 속성의 값으로 보고되도록 속성이 다르게 설정되지 않을 때마다 기본값을 재정의할 수 있습니다.  
   
 > [!NOTE]
->  속성 <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A> 은 연결 된 속성과는 관련이 없습니다.  
+> 속성 <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A> 은 연결 된 속성과는 관련이 없습니다.  
   
 <a name="dp_add_owner"></a>   
 ### <a name="adding-a-class-as-an-owner-of-an-existing-dependency-property"></a>기존 종속성 속성의 소유자로 클래스 추가  

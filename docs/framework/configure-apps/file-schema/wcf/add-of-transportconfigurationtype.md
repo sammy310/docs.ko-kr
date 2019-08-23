@@ -2,14 +2,14 @@
 title: <transportConfigurationType>의 <add>
 ms.date: 03/30/2017
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
-ms.openlocfilehash: c71a58b13e89bedb5eed24d784c82fb1525f7625
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 483ede53df13c896b88171910031dbe9793d66dc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701439"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920042"
 ---
-# <a name="add-of-transportconfigurationtype"></a>\<추가 >의 \<transportConfigurationType >
+# <a name="add-of-transportconfigurationtype"></a>\<\<transportConfigurationType > > 추가
 이 요소는 특정 전송 형식을 식별하는 키/값 쌍입니다.  
   
  \<system.ServiceModel>  
@@ -45,7 +45,7 @@ ms.locfileid: "61701439"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<transportConfigurationTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|특정 전송을 구현하는 형식의 컬렉션입니다.|  
+|[\<transportConfigurationTypes>](transportconfigurationtypes.md)|특정 전송을 구현하는 형식의 컬렉션입니다.|  
   
 ## <a name="example"></a>예제  
   
@@ -63,4 +63,4 @@ ms.locfileid: "61701439"
 - <xref:System.ServiceModel.Configuration.TransportConfigurationTypeElement>
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>
-- [호스팅](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [호스팅](../../../wcf/feature-details/hosting.md)

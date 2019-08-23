@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 4ff006099dd2fa706cb575eec18e135d6e74ad46
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
-ms.translationtype: HT
+ms.openlocfilehash: 8407958ec76be7e402025ece57371e67581e5291
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972313"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942125"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic 및 WPF 이벤트 처리
 특히 Microsoft Visual Basic .net 언어의 경우 특성을 사용 하 여 이벤트 처리기를 `Handles` 연결 하거나 <xref:System.Windows.UIElement.AddHandler%2A> 메서드를 사용 하는 대신 언어별 키워드를 사용 하 여 이벤트 처리기를 인스턴스와 연결할 수 있습니다. 그러나 처리기를 인스턴스에 연결하는 `Handles` 기술에는 몇 가지 제한 사항이 있습니다. 이는 `Handles` 구문이 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이벤트 시스템의 특정 라우트된 이벤트 기능 중 일부를 지원할 수 없기 때문입니다.  
@@ -34,13 +34,13 @@ ms.locfileid: "68972313"
  `Handles`는 처리된 것으로 이미 표시된 이벤트에 대해 호출되는 처리기를 연결할 수 없습니다. 대신 코드를 사용 하 고의 `handledEventsToo` <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>오버 로드를 호출 해야 합니다.  
   
 > [!NOTE]
->  XAML에서 동일한 이벤트 `Handles` 에 대 한 이벤트 처리기를 지정 하는 경우 Visual Basic 코드에서 구문을 사용 하지 마세요. 이 경우 이벤트 처리기가 두 번 호출됩니다.  
+> XAML에서 동일한 이벤트 `Handles` 에 대 한 이벤트 처리기를 지정 하는 경우 Visual Basic 코드에서 구문을 사용 하지 마세요. 이 경우 이벤트 처리기가 두 번 호출됩니다.  
   
 ## <a name="how-wpf-implements-handles-functionality"></a>WPF에서 "Handles" 기능을 구현하는 방법  
  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 페이지가 컴파일되면 중간 파일은 <xref:System.Windows.FrameworkContentElement.Name%2A>속성 집합이 있거나 [x:Name 지시문](../../xaml-services/x-name-directive.md)이 선언 된 페이지의 모든 요소에 대 한 `Friend` `WithEvents`참조를 선언 합니다. 각 명명된 인스턴스는 `Handles`를 통해 처리기에 할당할 수 있는 요소일 수 있습니다.  
   
 > [!NOTE]
->  내 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]에서 IntelliSense는 페이지의 `Handles` 참조에 사용할 수 있는 요소에 대 한 완료를 표시할 수 있습니다. 그러나 이렇게 하려면 중간 파일에서 모든 `Friends` 참조를 채울 수 있도록 하나의 컴파일 패스가 필요할 수 있습니다.  
+> 내 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]에서 IntelliSense는 페이지의 `Handles` 참조에 사용할 수 있는 요소에 대 한 완료를 표시할 수 있습니다. 그러나 이렇게 하려면 중간 파일에서 모든 `Friends` 참조를 채울 수 있도록 하나의 컴파일 패스가 필요할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
 
