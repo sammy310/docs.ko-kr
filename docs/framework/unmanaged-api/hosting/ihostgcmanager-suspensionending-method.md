@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a815d1a5e8b40aee84ca2b9971ae4be7fb2c725
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9f65f924b872195000f73bf29b267d1fc30b74f1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763734"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937727"
 ---
-# <a name="ihostgcmanagersuspensionending-method"></a><span data-ttu-id="f47b5-102">IHostGCManager::SuspensionEnding 메서드</span><span class="sxs-lookup"><span data-stu-id="f47b5-102">IHostGCManager::SuspensionEnding Method</span></span>
-<span data-ttu-id="f47b5-103">CLR (공용 언어 런타임) 가비지 수집을 위해 중단 된 스레드의 작업을 다시 시작 하는 호스트에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="f47b5-103">Notifies the host that the common language runtime (CLR) is resuming execution of tasks on threads that had been suspended for a garbage collection.</span></span>  
+# <a name="ihostgcmanagersuspensionending-method"></a><span data-ttu-id="ff985-102">IHostGCManager::SuspensionEnding 메서드</span><span class="sxs-lookup"><span data-stu-id="ff985-102">IHostGCManager::SuspensionEnding Method</span></span>
+<span data-ttu-id="ff985-103">CLR (공용 언어 런타임)에서 가비지 컬렉션에 대해 일시 중단 된 스레드의 작업 실행을 다시 시작 하 고 있음을 호스트에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="ff985-103">Notifies the host that the common language runtime (CLR) is resuming execution of tasks on threads that had been suspended for a garbage collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f47b5-104">구문</span><span class="sxs-lookup"><span data-stu-id="f47b5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ff985-104">구문</span><span class="sxs-lookup"><span data-stu-id="ff985-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SuspensionEnding (  
@@ -35,40 +35,40 @@ HRESULT SuspensionEnding (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f47b5-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f47b5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ff985-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ff985-105">Parameters</span></span>  
  `generation`  
- <span data-ttu-id="f47b5-106">[in] 이제는 가비지 컬렉션 세대는 스레드가 다시 시작 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f47b5-106">[in] The garbage collection generation that is just finishing, from which the thread is resuming.</span></span>  
+ <span data-ttu-id="ff985-106">진행 스레드를 다시 시작 하는 방금 완료 된 가비지 컬렉션 생성입니다.</span><span class="sxs-lookup"><span data-stu-id="ff985-106">[in] The garbage collection generation that is just finishing, from which the thread is resuming.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f47b5-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="f47b5-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ff985-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="ff985-107">Return Value</span></span>  
   
-|<span data-ttu-id="f47b5-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="f47b5-108">HRESULT</span></span>|<span data-ttu-id="f47b5-109">설명</span><span class="sxs-lookup"><span data-stu-id="f47b5-109">Description</span></span>|  
+|<span data-ttu-id="ff985-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="ff985-108">HRESULT</span></span>|<span data-ttu-id="ff985-109">Description</span><span class="sxs-lookup"><span data-stu-id="ff985-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="f47b5-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="f47b5-110">S_OK</span></span>|<span data-ttu-id="f47b5-111">`SuspensionEnding` 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="f47b5-111">`SuspensionEnding` returned successfully.</span></span>|  
-|<span data-ttu-id="f47b5-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="f47b5-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="f47b5-113">CLR이 로드 된 프로세스에 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="f47b5-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="f47b5-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="f47b5-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="f47b5-115">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="f47b5-115">The call timed out.</span></span>|  
-|<span data-ttu-id="f47b5-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="f47b5-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="f47b5-117">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f47b5-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="f47b5-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="f47b5-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="f47b5-119">이벤트가 차단 된 스레드가 취소 된 또는 파이버를 대기 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f47b5-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="f47b5-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="f47b5-120">E_FAIL</span></span>|<span data-ttu-id="f47b5-121">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="f47b5-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="f47b5-122">메서드 E_FAIL을 반환 하는 경우 CLR은 프로세스 내에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="f47b5-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="f47b5-123">메서드를 호스트 하는 데 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="f47b5-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="ff985-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="ff985-110">S_OK</span></span>|<span data-ttu-id="ff985-111">`SuspensionEnding`성공적으로 반환 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="ff985-111">`SuspensionEnding` returned successfully.</span></span>|  
+|<span data-ttu-id="ff985-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="ff985-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="ff985-113">CLR이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ff985-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="ff985-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="ff985-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="ff985-115">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="ff985-115">The call timed out.</span></span>|  
+|<span data-ttu-id="ff985-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="ff985-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="ff985-117">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ff985-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="ff985-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="ff985-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="ff985-119">차단 된 스레드나 파이버에서 대기 하는 동안 이벤트를 취소 했습니다.</span><span class="sxs-lookup"><span data-stu-id="ff985-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="ff985-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="ff985-120">E_FAIL</span></span>|<span data-ttu-id="ff985-121">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="ff985-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="ff985-122">메서드가 E_FAIL을 반환 하는 경우 프로세스 내에서 더 이상 CLR을 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="ff985-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="ff985-123">호스팅 메서드에 대 한 후속 호출은 HOST_E_CLRNOTAVAILABLE을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="ff985-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f47b5-124">설명</span><span class="sxs-lookup"><span data-stu-id="f47b5-124">Remarks</span></span>  
- <span data-ttu-id="f47b5-125">CLR에서는 `SuspensionEnding` 후 스레드가 실행을 다시 시작 되는 호스트에 알리기 위해 가비지 수집을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="f47b5-125">The CLR calls `SuspensionEnding` after it performs a garbage collection, to inform the host that the thread is resuming execution.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ff985-124">설명</span><span class="sxs-lookup"><span data-stu-id="ff985-124">Remarks</span></span>  
+ <span data-ttu-id="ff985-125">CLR은 가비지 `SuspensionEnding` 수집을 수행한 후를 호출 하 여 스레드가 실행을 다시 시작 한다는 사실을 호스트에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="ff985-125">The CLR calls `SuspensionEnding` after it performs a garbage collection, to inform the host that the thread is resuming execution.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="f47b5-126">메서드 호출에서 수행 하는 스레드 일정을 재조정 마십시오.</span><span class="sxs-lookup"><span data-stu-id="f47b5-126">Do not reschedule the thread the method call was made from.</span></span>  
+> <span data-ttu-id="ff985-126">메서드 호출이 수행 된 스레드를 다시 예약 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ff985-126">Do not reschedule the thread the method call was made from.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f47b5-127">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f47b5-127">Requirements</span></span>  
- <span data-ttu-id="f47b5-128">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="f47b5-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ff985-127">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ff985-127">Requirements</span></span>  
+ <span data-ttu-id="ff985-128">**플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="ff985-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f47b5-129">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f47b5-129">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="ff985-129">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ff985-129">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="f47b5-130">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="f47b5-130">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="ff985-130">**라이브러리** Mscoree.dll에 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ff985-130">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="f47b5-131">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f47b5-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ff985-131">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ff985-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f47b5-132">참고자료</span><span class="sxs-lookup"><span data-stu-id="f47b5-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ff985-132">참고자료</span><span class="sxs-lookup"><span data-stu-id="ff985-132">See also</span></span>
 
-- [<span data-ttu-id="f47b5-133">ICLRTask 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f47b5-133">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [<span data-ttu-id="f47b5-134">ICLRTaskManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f47b5-134">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [<span data-ttu-id="f47b5-135">IHostTask 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f47b5-135">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [<span data-ttu-id="f47b5-136">IHostTaskManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f47b5-136">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
-- [<span data-ttu-id="f47b5-137">IHostGCManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f47b5-137">IHostGCManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md)
+- [<span data-ttu-id="ff985-133">ICLRTask 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ff985-133">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [<span data-ttu-id="ff985-134">ICLRTaskManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ff985-134">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [<span data-ttu-id="ff985-135">IHostTask 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ff985-135">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [<span data-ttu-id="ff985-136">IHostTaskManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ff985-136">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [<span data-ttu-id="ff985-137">IHostGCManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ff985-137">IHostGCManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md)

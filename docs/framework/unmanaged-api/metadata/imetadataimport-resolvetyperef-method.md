@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cb8c232e63d1f3066737ff755d5911c185abe6fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f323e91e60c9735a51e955eaab6673ca167f294d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755375"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951873"
 ---
-# <a name="imetadataimportresolvetyperef-method"></a><span data-ttu-id="fa065-102">IMetaDataImport::ResolveTypeRef 메서드</span><span class="sxs-lookup"><span data-stu-id="fa065-102">IMetaDataImport::ResolveTypeRef Method</span></span>
-<span data-ttu-id="fa065-103">확인을 <xref:System.Type> 지정한 TypeRef 토큰이 나타내는 참조 합니다.</span><span class="sxs-lookup"><span data-stu-id="fa065-103">Resolves a <xref:System.Type> reference represented by the specified TypeRef token.</span></span>  
+# <a name="imetadataimportresolvetyperef-method"></a><span data-ttu-id="590a7-102">IMetaDataImport::ResolveTypeRef 메서드</span><span class="sxs-lookup"><span data-stu-id="590a7-102">IMetaDataImport::ResolveTypeRef Method</span></span>
+<span data-ttu-id="590a7-103">지정 된 <xref:System.Type> TypeRef 토큰이 나타내는 참조를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="590a7-103">Resolves a <xref:System.Type> reference represented by the specified TypeRef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fa065-104">구문</span><span class="sxs-lookup"><span data-stu-id="fa065-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="590a7-104">구문</span><span class="sxs-lookup"><span data-stu-id="590a7-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ResolveTypeRef (  
@@ -38,38 +38,38 @@ HRESULT ResolveTypeRef (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fa065-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="fa065-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="590a7-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="590a7-105">Parameters</span></span>  
  `tr`  
- <span data-ttu-id="fa065-106">[in] 에 대 한 참조 된 형식 정보를 반환 하는 TypeRef 메타 데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="fa065-106">[in] The TypeRef metadata token to return the referenced type information for.</span></span>  
+ <span data-ttu-id="590a7-106">진행 참조 된 형식 정보를 반환할 TypeRef 메타 데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="590a7-106">[in] The TypeRef metadata token to return the referenced type information for.</span></span>  
   
  `riid`  
- <span data-ttu-id="fa065-107">[in] 반환할 인터페이스의 IID `ppIScope`합니다.</span><span class="sxs-lookup"><span data-stu-id="fa065-107">[in] The IID of the interface to return in `ppIScope`.</span></span> <span data-ttu-id="fa065-108">일반적으로이 IID_IMetaDataImport 것입니다.</span><span class="sxs-lookup"><span data-stu-id="fa065-108">Typically, this would be IID_IMetaDataImport.</span></span>  
+ <span data-ttu-id="590a7-107">진행 에서 `ppIScope`반환할 인터페이스의 IID입니다.</span><span class="sxs-lookup"><span data-stu-id="590a7-107">[in] The IID of the interface to return in `ppIScope`.</span></span> <span data-ttu-id="590a7-108">일반적으로이는 IID_IMetaDataImport입니다.</span><span class="sxs-lookup"><span data-stu-id="590a7-108">Typically, this would be IID_IMetaDataImport.</span></span>  
   
  `ppIScope`  
- <span data-ttu-id="fa065-109">[out] 인터페이스 참조 형식이 정의 되어 있는 모듈 범위입니다.</span><span class="sxs-lookup"><span data-stu-id="fa065-109">[out] An interface to the module scope in which the referenced type is defined.</span></span>  
+ <span data-ttu-id="590a7-109">제한이 참조 된 형식이 정의 된 모듈 범위에 대 한 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="590a7-109">[out] An interface to the module scope in which the referenced type is defined.</span></span>  
   
  `ptd`  
- <span data-ttu-id="fa065-110">[out] 참조 된 형식을 나타내는 TypeDef 토큰에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="fa065-110">[out] A pointer to a TypeDef token that represents the referenced type.</span></span>  
+ <span data-ttu-id="590a7-110">제한이 참조 된 형식을 나타내는 TypeDef 토큰에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="590a7-110">[out] A pointer to a TypeDef token that represents the referenced type.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="fa065-111">설명</span><span class="sxs-lookup"><span data-stu-id="fa065-111">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="590a7-111">설명</span><span class="sxs-lookup"><span data-stu-id="590a7-111">Remarks</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="fa065-112">여러 응용 프로그램 도메인이 로드 된 경우에이 메서드를 사용 하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="fa065-112">Do not use this method if multiple application domains are loaded.</span></span> <span data-ttu-id="fa065-113">메서드는 응용 프로그램 도메인 경계를 고려 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fa065-113">The method does not respect application domain boundaries.</span></span> <span data-ttu-id="fa065-114">여러 버전의 어셈블리가 로드 되 고 동일한 네임 스페이스를 사용 하 여 동일한 형식 포함을 하는 경우 메서드를 찾으면 첫 번째 유형은 모듈 범위를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="fa065-114">If multiple versions of an assembly are loaded, and they contain the same type with the same namespace, the method returns the module scope of the first type it finds.</span></span>  
+> <span data-ttu-id="590a7-112">여러 응용 프로그램 도메인을 로드 하는 경우에는이 메서드를 사용 하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="590a7-112">Do not use this method if multiple application domains are loaded.</span></span> <span data-ttu-id="590a7-113">이 메서드는 응용 프로그램 도메인 경계를 고려 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="590a7-113">The method does not respect application domain boundaries.</span></span> <span data-ttu-id="590a7-114">어셈블리의 여러 버전이 로드 되 고 동일한 네임 스페이스를 가진 동일한 형식을 포함 하는 경우 메서드는 찾은 첫 번째 형식의 모듈 범위를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="590a7-114">If multiple versions of an assembly are loaded, and they contain the same type with the same namespace, the method returns the module scope of the first type it finds.</span></span>  
   
- <span data-ttu-id="fa065-115">`ResolveTypeRef` 메서드는 다른 모듈에서 형식 정의 검색 합니다.</span><span class="sxs-lookup"><span data-stu-id="fa065-115">The `ResolveTypeRef` method searches for the type definition in other modules.</span></span> <span data-ttu-id="fa065-116">형식 정의 있으면 `ResolveTypeRef` 인터페이스 형식에 대 한 TypeDef 토큰 뿐만 아니라 해당 모듈 범위를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="fa065-116">If the type definition is found, `ResolveTypeRef` returns an interface to that module scope as well as the TypeDef token for the type.</span></span>  
+ <span data-ttu-id="590a7-115">메서드 `ResolveTypeRef` 는 다른 모듈의 형식 정의를 검색 합니다.</span><span class="sxs-lookup"><span data-stu-id="590a7-115">The `ResolveTypeRef` method searches for the type definition in other modules.</span></span> <span data-ttu-id="590a7-116">형식 정의가 있으면에서 `ResolveTypeRef` 해당 모듈 범위에 대 한 인터페이스와 형식에 대 한 TypeDef 토큰을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="590a7-116">If the type definition is found, `ResolveTypeRef` returns an interface to that module scope as well as the TypeDef token for the type.</span></span>  
   
- <span data-ttu-id="fa065-117">형식 참조를 해결 해야 할 해결 범위가 AssemblyRef를 하는 경우는 `ResolveTypeRef` 메서드 중 하나를 호출 하 여 이미 열려 있는 메타 데이터 범위에만 일치 항목을 검색 합니다 [imetadatadispenser:: Openscope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)메서드 또는 [imetadatadispenser:: Openscopeonmemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="fa065-117">If the type reference to be resolved has a resolution scope of AssemblyRef, the `ResolveTypeRef` method searches for a match only in the metadata scopes that have already been opened with calls to either the [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) method or the [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) method.</span></span> <span data-ttu-id="fa065-118">왜냐하면 `ResolveTypeRef` AssemblyRef 범위만 디스크 또는 전역 어셈블리 캐시에 어셈블리 저장 위치에서 확인할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="fa065-118">This is because `ResolveTypeRef` cannot determine from only the AssemblyRef scope where on disk or in the global assembly cache the assembly is stored.</span></span>  
+ <span data-ttu-id="590a7-117">확인할 형식 참조의 확인 범위가 AssemblyRef 인 경우이 메서드는 `ResolveTypeRef` [IMetaDataDispenser:: openscope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) 메서드 또는 [을 호출 하 여 이미 열려 있는 메타 데이터 범위 에서만 일치 하는 항목을 검색 합니다. IMetaDataDispenser:: OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) 메서드</span><span class="sxs-lookup"><span data-stu-id="590a7-117">If the type reference to be resolved has a resolution scope of AssemblyRef, the `ResolveTypeRef` method searches for a match only in the metadata scopes that have already been opened with calls to either the [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) method or the [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) method.</span></span> <span data-ttu-id="590a7-118">이는에서 `ResolveTypeRef` 디스크 또는 전역 어셈블리 캐시에서 어셈블리가 저장 된 AssemblyRef 범위만 확인할 수 없기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="590a7-118">This is because `ResolveTypeRef` cannot determine from only the AssemblyRef scope where on disk or in the global assembly cache the assembly is stored.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fa065-119">요구 사항</span><span class="sxs-lookup"><span data-stu-id="fa065-119">Requirements</span></span>  
- <span data-ttu-id="fa065-120">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="fa065-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="590a7-119">요구 사항</span><span class="sxs-lookup"><span data-stu-id="590a7-119">Requirements</span></span>  
+ <span data-ttu-id="590a7-120">**플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="590a7-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fa065-121">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="fa065-121">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="590a7-121">**헤더:** Cor</span><span class="sxs-lookup"><span data-stu-id="590a7-121">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="fa065-122">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="fa065-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="590a7-122">**라이브러리** Mscoree.dll에 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="590a7-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="fa065-123">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fa065-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="590a7-123">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="590a7-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fa065-124">참고자료</span><span class="sxs-lookup"><span data-stu-id="fa065-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="590a7-124">참고자료</span><span class="sxs-lookup"><span data-stu-id="590a7-124">See also</span></span>
 
-- [<span data-ttu-id="fa065-125">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="fa065-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="fa065-126">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="fa065-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="590a7-125">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="590a7-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="590a7-126">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="590a7-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

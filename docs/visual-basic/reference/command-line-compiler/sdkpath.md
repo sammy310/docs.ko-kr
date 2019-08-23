@@ -9,44 +9,44 @@ helpviewer_keywords:
 - /sdkpath compiler option [Visual Basic]
 - sdkpath compiler option [Visual Basic]
 ms.assetid: fec8a3f1-b791-4a37-8af7-344859f8212d
-ms.openlocfilehash: 91f64756b2fbf14dc96550420cd936973e6bec87
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 25368d23c398fb3674d5c2d75d4997f917a1c3d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268298"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937349"
 ---
-# <a name="-sdkpath"></a><span data-ttu-id="cf322-102">-sdkpath</span><span class="sxs-lookup"><span data-stu-id="cf322-102">-sdkpath</span></span>
-<span data-ttu-id="cf322-103">Mscorlib.dll 및 Microsoft.VisualBasic.dll의 위치를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="cf322-103">Specifies the location of mscorlib.dll and Microsoft.VisualBasic.dll.</span></span>  
+# <a name="-sdkpath"></a><span data-ttu-id="e05c3-102">-sdkpath</span><span class="sxs-lookup"><span data-stu-id="e05c3-102">-sdkpath</span></span>
+<span data-ttu-id="e05c3-103">Mscorlib.dll 및 Microsoft.visualbasic의 위치를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="e05c3-103">Specifies the location of mscorlib.dll and Microsoft.VisualBasic.dll.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cf322-104">구문</span><span class="sxs-lookup"><span data-stu-id="cf322-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e05c3-104">구문</span><span class="sxs-lookup"><span data-stu-id="e05c3-104">Syntax</span></span>  
   
 ```  
 -sdkpath:path  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="cf322-105">인수</span><span class="sxs-lookup"><span data-stu-id="cf322-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="e05c3-105">인수</span><span class="sxs-lookup"><span data-stu-id="e05c3-105">Arguments</span></span>  
  `path`  
- <span data-ttu-id="cf322-106">Mscorlib.dll 및 Microsoft.VisualBasic.dll 컴파일에 사용할의 버전이 포함 된 디렉터리입니다.</span><span class="sxs-lookup"><span data-stu-id="cf322-106">The directory containing the versions of mscorlib.dll and Microsoft.VisualBasic.dll to use for compilation.</span></span> <span data-ttu-id="cf322-107">이 경로 로드 될 때까지 확인 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="cf322-107">This path is not verified until it is loaded.</span></span> <span data-ttu-id="cf322-108">디렉터리 이름을 따옴표로 묶습니다 ("")에 공백이 있는 경우.</span><span class="sxs-lookup"><span data-stu-id="cf322-108">Enclose the directory name in quotation marks (" ") if it contains a space.</span></span>  
+ <span data-ttu-id="e05c3-106">컴파일에 사용할 mscorlib.dll 및 Microsoft.visualbasic 버전을 포함 하는 디렉터리입니다.</span><span class="sxs-lookup"><span data-stu-id="e05c3-106">The directory containing the versions of mscorlib.dll and Microsoft.VisualBasic.dll to use for compilation.</span></span> <span data-ttu-id="e05c3-107">이 경로는 로드 될 때까지 확인 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e05c3-107">This path is not verified until it is loaded.</span></span> <span data-ttu-id="e05c3-108">공백을 포함 하는 경우 디렉터리 이름을 큰따옴표 ("")로 묶습니다.</span><span class="sxs-lookup"><span data-stu-id="e05c3-108">Enclose the directory name in quotation marks (" ") if it contains a space.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cf322-109">설명</span><span class="sxs-lookup"><span data-stu-id="cf322-109">Remarks</span></span>  
- <span data-ttu-id="cf322-110">이 옵션을 Visual Basic 컴파일러가 기본이 아닌 위치에서 mscorlib.dll 및 Microsoft.VisualBasic.dll 파일을 로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="cf322-110">This option tells the Visual Basic compiler to load the mscorlib.dll and Microsoft.VisualBasic.dll files from a non-default location.</span></span> <span data-ttu-id="cf322-111">합니다 `-sdkpath` 옵션은 사용 하도록 설계 되었습니다 [-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="cf322-111">The `-sdkpath` option was designed to be used with [-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md).</span></span> <span data-ttu-id="cf322-112">이러한.NET Compact Framework는 다양 한 버전의 형식 및 장치에 없는 언어 기능을 사용 하지 않는 라이브러리를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="cf322-112">The .NET Compact Framework uses different versions of these support libraries to avoid the use of types and language features not found on the devices.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e05c3-109">설명</span><span class="sxs-lookup"><span data-stu-id="e05c3-109">Remarks</span></span>  
+ <span data-ttu-id="e05c3-110">이 옵션은 Visual Basic 컴파일러가 기본 위치가 아닌 위치에서 mscorlib.dll 및 Microsoft.visualbasic 파일을 로드 하도록 지시 합니다.</span><span class="sxs-lookup"><span data-stu-id="e05c3-110">This option tells the Visual Basic compiler to load the mscorlib.dll and Microsoft.VisualBasic.dll files from a non-default location.</span></span> <span data-ttu-id="e05c3-111">옵션 `-sdkpath` 은 [-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)와 함께 사용 하도록 설계 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="e05c3-111">The `-sdkpath` option was designed to be used with [-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md).</span></span> <span data-ttu-id="e05c3-112">.NET Compact Framework는 이러한 지원 라이브러리의 다른 버전을 사용 하 여 장치에서 찾을 수 없는 형식 및 언어 기능을 사용 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e05c3-112">The .NET Compact Framework uses different versions of these support libraries to avoid the use of types and language features not found on the devices.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="cf322-113">`-sdkpath` 옵션은 Visual Studio 개발 환경 내에서 사용할 수 있는 명령줄에서 컴파일할 경우에 사용할 수 있는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="cf322-113">The `-sdkpath` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span> <span data-ttu-id="cf322-114">`-sdkpath` Visual Basic 장치 프로젝트를 로드 하면 옵션이 설정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="cf322-114">The `-sdkpath` option is set when a Visual Basic device project is loaded.</span></span>  
+> <span data-ttu-id="e05c3-113">이 `-sdkpath` 옵션은 Visual Studio 개발 환경에서 사용할 수 없습니다. 명령줄에서 컴파일하는 경우에만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e05c3-113">The `-sdkpath` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span> <span data-ttu-id="e05c3-114">이 `-sdkpath` 옵션은 Visual Basic 장치 프로젝트가 로드 될 때 설정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e05c3-114">The `-sdkpath` option is set when a Visual Basic device project is loaded.</span></span>  
   
- <span data-ttu-id="cf322-115">컴파일러를 사용 하 여 Visual Basic 런타임 라이브러리에 대 한 참조 없이 컴파일하도록 할지 지정할 수 있습니다는 `-vbruntime` 컴파일러 옵션입니다.</span><span class="sxs-lookup"><span data-stu-id="cf322-115">You can specify that the compiler should compile without a reference to the Visual Basic Runtime Library by using the `-vbruntime` compiler option.</span></span> <span data-ttu-id="cf322-116">자세한 내용은 [-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="cf322-116">For more information, see [-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md).</span></span>  
+ <span data-ttu-id="e05c3-115">컴파일러 옵션을 사용 하 `-vbruntime` 여 컴파일러에서 Visual Basic 런타임 라이브러리에 대 한 참조 없이 컴파일하도록 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e05c3-115">You can specify that the compiler should compile without a reference to the Visual Basic Runtime Library by using the `-vbruntime` compiler option.</span></span> <span data-ttu-id="e05c3-116">자세한 내용은 [-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="e05c3-116">For more information, see [-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cf322-117">예제</span><span class="sxs-lookup"><span data-stu-id="cf322-117">Example</span></span>  
- <span data-ttu-id="cf322-118">다음 코드에서는 `Myfile.vb` .NET Compact Framework를 사용 하 여 C 드라이브에.NET Compact Framework의 기본 설치 디렉터리에서 찾을 Mscorlib.dll 및 Microsoft.VisualBasic.dll의 버전을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="cf322-118">The following code compiles `Myfile.vb` with the .NET Compact Framework, using the versions of Mscorlib.dll and Microsoft.VisualBasic.dll found in the default installation directory of the .NET Compact Framework on the C drive.</span></span> <span data-ttu-id="cf322-119">일반적으로.NET Compact Framework의 최신 버전을 사용 하면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="cf322-119">Typically, you would use the most recent version of the .NET Compact Framework.</span></span>  
+## <a name="example"></a><span data-ttu-id="e05c3-117">예제</span><span class="sxs-lookup"><span data-stu-id="e05c3-117">Example</span></span>  
+ <span data-ttu-id="e05c3-118">다음 코드는 C `Myfile.vb` 드라이브에 있는 .NET Compact Framework의 기본 설치 디렉터리에 있는 mscorlib.dll 및 microsoft.visualbasic 버전을 사용 하 여 .NET Compact Framework로 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="e05c3-118">The following code compiles `Myfile.vb` with the .NET Compact Framework, using the versions of Mscorlib.dll and Microsoft.VisualBasic.dll found in the default installation directory of the .NET Compact Framework on the C drive.</span></span> <span data-ttu-id="e05c3-119">일반적으로 .NET Compact Framework의 최신 버전을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="e05c3-119">Typically, you would use the most recent version of the .NET Compact Framework.</span></span>  
   
 ```console
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="cf322-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="cf322-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e05c3-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="e05c3-120">See also</span></span>
 
-- [<span data-ttu-id="cf322-121">Visual Basic 명령줄 컴파일러</span><span class="sxs-lookup"><span data-stu-id="cf322-121">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="cf322-122">샘플 컴파일 명령줄</span><span class="sxs-lookup"><span data-stu-id="cf322-122">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [<span data-ttu-id="cf322-123">-netcf</span><span class="sxs-lookup"><span data-stu-id="cf322-123">-netcf</span></span>](../../../visual-basic/reference/command-line-compiler/netcf.md)
-- [<span data-ttu-id="cf322-124">-vbruntime</span><span class="sxs-lookup"><span data-stu-id="cf322-124">-vbruntime</span></span>](../../../visual-basic/reference/command-line-compiler/vbruntime.md)
+- [<span data-ttu-id="e05c3-121">Visual Basic 명령줄 컴파일러</span><span class="sxs-lookup"><span data-stu-id="e05c3-121">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="e05c3-122">샘플 컴파일 명령줄</span><span class="sxs-lookup"><span data-stu-id="e05c3-122">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [<span data-ttu-id="e05c3-123">-netcf</span><span class="sxs-lookup"><span data-stu-id="e05c3-123">-netcf</span></span>](../../../visual-basic/reference/command-line-compiler/netcf.md)
+- [<span data-ttu-id="e05c3-124">-vbruntime</span><span class="sxs-lookup"><span data-stu-id="e05c3-124">-vbruntime</span></span>](../../../visual-basic/reference/command-line-compiler/vbruntime.md)
