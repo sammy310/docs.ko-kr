@@ -5,10 +5,10 @@ ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c830b7097d12017348d8669071ec6d7c122bfe44
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
-ms.translationtype: MT
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
+ms.lasthandoff: 07/26/2019
 ms.locfileid: "68364070"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Windows 스토어 앱을 .NET 네이티브로 마이그레이션
@@ -159,7 +159,7 @@ Windows 스토어 앱 용 .NET과 .NET 네이티브 간의 동작에는 다양 �
 
 **기타 API**
 
-- 특성이 형식에 적용 되지 않으면 <xref:System.PlatformNotSupportedException> [](xref:System.Type.GUID) TypeInfo 속성이 예외를 throw 합니다. <xref:System.Runtime.InteropServices.GuidAttribute> GUID는 주로 COM 지원을 위해 사용됩니다.
+- 특성이 형식에 <xref:System.PlatformNotSupportedException>적용 되지 않으면<xref:System.Runtime.InteropServices.GuidAttribute> [TypeInfo.GUID](xref:System.Type.GUID) 속성이 예외를 throw 합니다. GUID는 주로 COM 지원을 위해 사용됩니다.
 
 - 메서드 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 는 .NET 네이티브에서 짧은 날짜를 포함 하는 문자열을 올바르게 구문 분석 합니다. 그러나 Microsoft 기술 자료 문서 [KB2803771](https://support.microsoft.com/kb/2803771) 및 [KB2803755](https://support.microsoft.com/kb/2803755)에서 설명하는 날짜 및 시간 구문 분석 변경 내용과의 호환성은 유지되지 않습니다.
 

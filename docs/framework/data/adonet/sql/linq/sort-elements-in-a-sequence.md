@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
-ms.openlocfilehash: 8f645232d2ae9d9bad8c26a5b9fec2243c6cf9d0
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: f6f112a63dd976a1d6ae91f2fafd6678a9f40846
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380018"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945085"
 ---
 # <a name="sort-elements-in-a-sequence"></a>시퀀스의 요소 정렬
 <xref:System.Linq.Enumerable.OrderBy%2A> 연산자를 사용하여 하나 이상의 키에 따른 시퀀스를 정렬합니다.  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 `string`, `int` 등과 같이 간단한 기본 형식에 따라 순서를 지원하도록 디자인되었습니다. 익명 형식과 같이 복잡한 다중값 클래스에 대한 순서는 지원되지 않습니다. 또한 `byte` 데이터 형식을 지원하지 않습니다.  
+> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 `string`, `int` 등과 같이 간단한 기본 형식에 따라 순서를 지원하도록 디자인되었습니다. 익명 형식과 같이 복잡한 다중값 클래스에 대한 순서는 지원되지 않습니다. 또한 `byte` 데이터 형식을 지원하지 않습니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 고용 날짜 기준으로 `Employees`를 정렬합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "66380018"
  [!code-vb[DLinqQueryExamples#24](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#24)]  
   
 ## <a name="example"></a>예제  
- 다음 예제에서 주문을 정렬 `EmployeeID 1` 여 `ShipCountry`, 내림차순 freight 기준입니다.  
+ 다음 예에서는를 `EmployeeID 1` 기준 `ShipCountry`으로 순서를 정렬 한 다음 최고 운송비에서 가장 낮은 운송비로 정렬 합니다.  
   
  [!code-csharp[DLinqQueryExamples#25](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#25)]
  [!code-vb[DLinqQueryExamples#25](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#25)]  

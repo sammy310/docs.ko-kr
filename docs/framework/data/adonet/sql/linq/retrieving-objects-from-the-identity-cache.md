@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
-ms.openlocfilehash: a8e4fc9b83e11aef4347ab4765f6a2e75c526387
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: ef771d924d9b508c29061f75a45808b5f81abb53
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910749"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963829"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>ID 캐시에서 개체 검색
 이 항목은 <xref:System.Data.Linq.DataContext>에서 관리하는 ID 캐시에서 개체를 반환하는 LINQ to SQL 쿼리의 형식에 대해 설명합니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "64910749"
  일반적으로 LINQ to SQL 쿼리의 경우 ID 캐시에서 개체를 반환하려면 쿼리가 개체의 기본 키를 기반으로 해야 하며 단일 개체를 반환해야 합니다. 특히 쿼리는 아래에 나와 있는 일반적인 형태 중 하나여야 합니다.  
   
 > [!NOTE]
->  미리 컴파일된 쿼리는 ID 캐시에서 개체를 반환하지 않습니다. 미리 컴파일된 쿼리에 대 한 자세한 내용은 참조 하세요. <xref:System.Data.Linq.CompiledQuery> 고 [방법: 저장 및 쿼리를 다시 사용](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md)합니다.  
+> 미리 컴파일된 쿼리는 ID 캐시에서 개체를 반환하지 않습니다. 미리 컴파일된 쿼리에 <xref:System.Data.Linq.CompiledQuery> 대 한 자세한 내용은 및 [방법: 쿼리](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md)를 저장 하 고 다시 사용 합니다.  
   
  ID 캐시에서 개체를 검색하려면 쿼리는 다음과 같은 일반적인 형태 중 하나로 되어 있어야 합니다.  
   

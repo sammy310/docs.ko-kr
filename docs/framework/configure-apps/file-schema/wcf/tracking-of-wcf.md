@@ -1,18 +1,18 @@
 ---
-title: <tracking> WCF의
+title: <tracking>WCF의
 ms.date: 03/30/2017
 ms.assetid: 70cfaf24-a91c-4e56-ac47-d2ed87a963b3
-ms.openlocfilehash: 4aac9f28de746e2a75a079cbaf774f01f4a08fca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad4f85139ff0a0f587bc47f63334fe97e25440b0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758147"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932372"
 ---
-# <a name="tracking-of-wcf"></a>\<추적 > WCF의
+# <a name="tracking-of-wcf"></a>\<WCF의 > 추적
 워크플로 서비스에 대한 추적 설정을 정의하기 위한 구성 섹션을 나타냅니다.  
   
- 워크플로 추적 및 해당 구성에 대 한 자세한 내용은 참조 하세요. [워크플로 추적 및 트레이싱](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) 하 고 [워크플로에 대 한 추적 구성](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)합니다.  
+ 워크플로 추적 및 해당 구성에 대 한 자세한 내용은 워크플로 [추적 및](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) 추적 및 [워크플로에 대 한 추적 구성](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md)을 참조 하세요.  
   
  \<system.serviceModel>  
 \<tracking>  
@@ -83,10 +83,10 @@ ms.locfileid: "61758147"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<participants>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|추적 레코드를 구독 하는 참가자를 정의 하는 구성 요소의 컬렉션입니다. 추적 참가자에는 추적 레코드에서 페이로드를 처리하기 위한 논리가 포함됩니다. 예를 들어 파일에 기록하도록 선택할 수 있습니다.|  
-|[\<trackingProfile>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/trackingprofile.md)|워크플로 인스턴스에서 내보내지는 추적 레코드를 필터링하기 위한 추적 프로필입니다.|  
+|[\<participants>](../windows-workflow-foundation/participants.md)|추적 레코드를 구독 하는 참가자를 정의 하는 구성 요소 컬렉션입니다. 추적 참가자에는 추적 레코드에서 페이로드를 처리하기 위한 논리가 포함됩니다. 예를 들어 파일에 기록하도록 선택할 수 있습니다.|  
+|[\<trackingProfile>](../windows-workflow-foundation/trackingprofile.md)|워크플로 인스턴스에서 내보내지는 추적 레코드를 필터링하기 위한 추적 프로필입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -100,4 +100,4 @@ ms.locfileid: "61758147"
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection?displayProperty=nameWithType>
-- [워크플로 추적](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [워크플로 추적](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)

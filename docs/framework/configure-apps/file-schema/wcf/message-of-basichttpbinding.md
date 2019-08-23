@@ -2,15 +2,15 @@
 title: <basicHttpBinding>의 <message>
 ms.date: 03/30/2017
 ms.assetid: 51cdd329-6461-471a-8747-56c2299b61e5
-ms.openlocfilehash: 746acd91074863029211a1ca2584743c464c9ce1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 320aca16bde9fc27aa35cad27286d402745e4710
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768981"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931566"
 ---
-# <a name="message-of-basichttpbinding"></a>\<메시지 >의 \<basicHttpBinding >
-메시지 수준 보안 설정을 정의 합니다 [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)합니다.  
+# <a name="message-of-basichttpbinding"></a>\<basicHttpBinding >의 \<메시지 >
+[ \<BasicHttpBinding >](basichttpbinding.md)의 메시지 수준 보안 설정을 정의 합니다.  
   
  \<system.ServiceModel>  
 \<bindings>  
@@ -33,15 +33,15 @@ ms.locfileid: "61768981"
   
 |특성|설명|  
 |---------------|-----------------|  
-|algorithmSuite|메시지 암호화 및 키 래핑 알고리즘을 설정합니다. 이 특성은 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 형식이며 알고리즘 및 키 크기를 지정합니다. 이러한 알고리즘은 WS-SecurityPolicy(Security Policy Language) 사양에 지정된 알고리즘에 매핑됩니다.<br /><br /> 기본값은 `Basic256`입니다.|  
+|algorithmSuite|메시지 암호화 및 키 래핑 알고리즘을 설정합니다. 이 특성은 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 형식이며 알고리즘 및 키 크기를 지정합니다. 이러한 알고리즘은 보안 정책 언어(WS-SecurityPolicy) 사양에 지정된 알고리즘에 매핑됩니다.<br /><br /> 기본값은 `Basic256`입니다.|  
 |clientCredentialType|메시지 기반 보안을 사용하여 클라이언트 인증을 수행할 때 사용되는 자격 증명의 형식을 지정합니다. 기본값은 `UserName`입니다.|  
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 특성  
   
 |값|설명|  
 |-----------|-----------------|  
-|UserName|-UserName 자격 증명을 사용 하 여 서버에 클라이언트 인증에 필요 합니다. 이 자격 증명을 사용 하 여 지정 해야 합니다 [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)합니다.<br />WCF에서는 암호 다이제스트를 보내거나 암호를 사용 하 고 메시지 보안에 이러한 키를 사용 하 여 키를 파생 없습니다. 따라서 WCF 사용자 이름 자격 증명을 사용 하는 경우 전송에 보안을 적용 합니다. `basicHttpBinding`의 경우 SSL 채널을 설정해야 합니다.|  
-|인증서|클라이언트가 인증서를 사용하여 서버의 인증을 받도록 요구합니다. 클라이언트 자격 증명을 사용 하 여 지정 해야이 예제의 [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) 하며 [ \<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)합니다. 또한 메시지 보안 모드를 사용하는 경우 서비스 인증서를 사용하여 클라이언트를 구축해야 합니다. 서비스 자격 증명은이 예에서 사용 하 여 지정 해야 합니다 <xref:System.ServiceModel.Description.ClientCredentials> 클래스 또는 `ClientCredentials` 동작 요소 및 서비스를 지정 합니다. 인증서를 사용 하 여 [ \<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)합니다.|  
+|UserName|-사용자 이름 자격 증명을 사용 하 여 서버에 대해 클라이언트를 인증 해야 합니다. 이 자격 증명은 [ \<clientCredentials >](clientcredentials.md)를 사용 하 여 지정 해야 합니다.<br />-WCF는 암호 다이제스트를 보내거나 암호를 사용 하 여 키를 파생 하 고 메시지 보안에 이러한 키를 사용 하는 것을 지원 하지 않습니다. 따라서 WCF는 사용자 이름 자격 증명을 사용할 때 전송에 보안을 적용 합니다. `basicHttpBinding`의 경우 SSL 채널을 설정해야 합니다.|  
+|Certificate|클라이언트가 인증서를 사용하여 서버의 인증을 받도록 요구합니다. 이 경우 [ \<clientCredentials](clientcredentials.md) [ >및clientCertificate>를사용하여클라이언트자격증명을지정해야합니다.\<](clientcertificate-of-servicecredentials.md) 또한 메시지 보안 모드를 사용하는 경우 서비스 인증서를 사용하여 클라이언트를 구축해야 합니다. 이 경우 클래스 또는 <xref:System.ServiceModel.Description.ClientCredentials> `ClientCredentials` 동작 요소를 사용 하 여 서비스 자격 증명을 지정 하 고 [ \<serviceCertificate >](servicecertificate-of-servicecredentials.md)를 사용 하 여 서비스 인증서를 지정 해야 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -50,10 +50,10 @@ ms.locfileid: "61768981"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|에 대 한 보안 기능을 정의 합니다 [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)합니다.|  
+|[\<security>](security-of-basichttpbinding.md)|[ \<BasicHttpBinding >](basichttpbinding.md)의 보안 기능을 정의 합니다.|  
   
 ## <a name="example"></a>예제  
- 이 샘플에서는 basicHttpBinding 및 메시지 보안을 사용하는 응용 프로그램을 구현하는 방법을 보여 줍니다. 다음 서비스 구성 예제에서 엔드포인트 정의는 basicHttpBinding을 지정하고 `Binding1`이라는 바인딩 구성을 참조합니다. 서비스가 클라이언트에게 자신을 인증하는 데 사용하는 인증서는 구성 파일의 `behaviors` 섹션에 있는 `serviceCredentials` 요소 아래에 설정됩니다. 클라이언트가 서비스에 자신을 인증하는 데 사용하는 인증서에 적용되는 유효성 검사 모드 또한 `behaviors` 섹션에서 `clientCertificate` 요소 아래에 설정됩니다.  
+ 이 샘플에서는 basicHttpBinding 및 메시지 보안을 사용하는 애플리케이션을 구현하는 방법을 보여 줍니다. 다음 서비스 구성 예제에서 엔드포인트 정의는 basicHttpBinding을 지정하고 `Binding1`이라는 바인딩 구성을 참조합니다. 서비스가 클라이언트에게 자신을 인증하는 데 사용하는 인증서는 구성 파일의 `behaviors` 섹션에 있는 `serviceCredentials` 요소 아래에 설정됩니다. 클라이언트가 서비스에 자신을 인증하는 데 사용하는 인증서에 적용되는 유효성 검사 모드 또한 `behaviors` 섹션에서 `clientCertificate` 요소 아래에 설정됩니다.  
   
  동일한 바인딩 및 보안 세부 정보가 클라이언트 구성 파일에 지정됩니다.  
   
@@ -125,8 +125,8 @@ ms.locfileid: "61768981"
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.BasicHttpSecurity.Message%2A>
 - <xref:System.ServiceModel.Configuration.BasicHttpMessageSecurityElement>
-- [서비스 및 클라이언트에 보안 설정](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [바인딩](../../../../../docs/framework/wcf/bindings.md)
-- [시스템 제공 바인딩 구성](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [서비스 및 클라이언트에 보안 설정](../../../wcf/feature-details/securing-services-and-clients.md)
+- [바인딩](../../../wcf/bindings.md)
+- [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

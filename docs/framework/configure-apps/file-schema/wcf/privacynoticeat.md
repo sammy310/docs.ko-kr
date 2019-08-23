@@ -2,12 +2,12 @@
 title: <privacyNoticeAt>
 ms.date: 03/30/2017
 ms.assetid: 4cc96942-4eb9-4241-b2fd-45aa239915e8
-ms.openlocfilehash: e2ce2111e4bb26cc6a51b4a772b1d8a4d3238c70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f7349bf61082c5d8e5bd4249e01b8835a1861cb9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783164"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934263"
 ---
 # <a name="privacynoticeat"></a>\<privacyNoticeAt>
 `wsFederationHttp` 바인딩에 사용되는 개인 정보 알림을 지정하는 구성 요소를 나타냅니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "61783164"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
 |`url`|개인 정보 알림이 있는 URI를 지정하는 문자열입니다.|  
 |`version`|이 개인 정보 알림의 버전을 지정하는 정수입니다.|  
@@ -45,14 +45,14 @@ ms.locfileid: "61783164"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.|  
+|[\<binding>](../../../misc/binding.md)|사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.|  
   
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.ServiceModel.Configuration.PrivacyNoticeElement>
 - <xref:System.ServiceModel.Channels.PrivacyNoticeBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [바인딩](../../../../../docs/framework/wcf/bindings.md)
-- [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [바인딩](../../../wcf/bindings.md)
+- [바인딩 확장](../../../wcf/extending/extending-bindings.md)
+- [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

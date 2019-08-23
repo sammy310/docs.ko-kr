@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 061d98b2-baa7-4336-8ad2-c14de8134d91
-ms.openlocfilehash: efb7b86c3add99e596e6798c8267c09689899d56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21ed620ab5b7a78fc4f396cc474e7c62b70f1ddd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923931"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946616"
 ---
 # <a name="what-you-can-do-with-linq-to-sql"></a>LINQ to SQL을- 사용하여 할 수 있는 작업
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 에서는 SQL 개발자가 필요로 하는 모든 주요 기능을 지원합니다. 정보를 쿼리하고 테이블에 정보를 삽입, 업데이트 및 삭제할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "61923931"
  항목을 `Delete` 하려면 항목이 속해 있는 컬렉션에서 항목을 제거한 다음 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 에서 <xref:System.Data.Linq.DataContext> 를 호출하여 변경 내용을 커밋합니다.  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 에서는 하위 삭제 작업을 인식하지 못합니다. 제약 조건이 있는 테이블의 행을 삭제 하려는 경우, 참조 [방법: 데이터베이스에서 행을 삭제할](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md)합니다.  
+> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 에서는 하위 삭제 작업을 인식하지 못합니다. 제약 조건이 [있는 테이블의 행을 삭제 하려면 방법: 데이터베이스](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md)에서 행을 삭제 합니다.  
   
  다음 예제에서는 `CustomerID` 가 `98128` 인 고객이 데이터베이스에서 검색됩니다. 그런 다음 고객 열이 검색되었는지 확인한 후 <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> 이 호출되어 컬렉션에서 개체가 제거됩니다. 마지막으로 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 가 호출되어 삭제 내용을 데이터베이스로 보냅니다.  
   

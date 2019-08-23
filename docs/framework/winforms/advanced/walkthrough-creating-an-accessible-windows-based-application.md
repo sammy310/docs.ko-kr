@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 7dec86c724479fde78fcb2e2881dce40b1bf747a
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 5768177401504f4776a34e499d07b7600597175a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877110"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957189"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>연습: 내게 필요한 옵션이 지원되는 Windows 기반 애플리케이션 만들기
 
@@ -43,7 +43,7 @@ ms.locfileid: "65877110"
 
 #### <a name="to-begin-making-the-application"></a>애플리케이션 만들기를 시작하려면
 
-- Visual Basic 또는 시각적 개체에서 새 Windows 응용 프로그램 만들기 C#입니다. 프로젝트 이름을 **PizzaOrder**로 지정합니다. 자세한 내용은 [새 솔루션 및 프로젝트 만들기](/visualstudio/ide/creating-solutions-and-projects)를 참조하세요.
+- Visual Basic 또는 시각적 개체 C#에서 새 Windows 응용 프로그램을 만듭니다. 프로젝트 이름을 **PizzaOrder**로 지정합니다. 자세한 내용은 [새 솔루션 및 프로젝트 만들기](/visualstudio/ide/creating-solutions-and-projects)를 참조하세요.
 
 ## <a name="adding-the-controls-to-the-form"></a>폼에 컨트롤 추가
 
@@ -140,13 +140,13 @@ ms.locfileid: "65877110"
    |MenuItem|이름|exitApp|
    ||텍스트|끝내기(&X)|
 
-   폼은 다음 이미지와 같이 표시 됩니다.
+   폼은 다음 이미지와 유사 하 게 표시 됩니다.
 
-   ![이름 텍스트 상자 및 크기와 토 핑 선택 하 여 피자 주문 양식입니다.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)
+   ![이름 텍스트 상자와 크기 및 토 핑 선택이 있는 피자 주문 폼입니다.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)
 
 ## <a name="supporting-high-contrast-mode"></a>고대비 모드 지원
 
-고대비 모드는 시각 장애가 있는 사용자에게 도움이 되는 대비 색과 글꼴 크기를 사용하여 가독성을 향상시키는 Windows 시스템 설정입니다. <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> 속성 고대비 모드가 설정 되어 있는지 확인 하기 위해 제공 됩니다.
+고대비 모드는 시각 장애가 있는 사용자에게 도움이 되는 대비 색과 글꼴 크기를 사용하여 가독성을 향상시키는 Windows 시스템 설정입니다. <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> 속성은 고대비 모드가 설정 되어 있는지 여부를 확인 하기 위해 제공 됩니다.
 
 SystemInformation.HighContrast가 `true`이면 애플리케이션에서 다음을 수행해야 합니다.
 
@@ -158,7 +158,7 @@ SystemInformation.HighContrast가 `true`이면 애플리케이션에서 다음�
 
 응용 프로그램이 시작되고 시스템 이벤트 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>에 응답할 때 응용 프로그램에서 <xref:System.Windows.Forms.SystemInformation.HighContrast%2A>의 설정을 확인해야 합니다. <xref:System.Windows.Forms.SystemInformation.HighContrast%2A>의 값이 변경되면 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 이벤트가 발생합니다.
 
-이 애플리케이션에서 색 시스템 설정을 사용하지 않는 요소는 `lblCompanyName`뿐입니다. <xref:System.Drawing.SystemColors> 클래스 레이블의 색 설정을 사용자가 선택한 시스템 색을 변경 하는 데 사용 됩니다.
+이 애플리케이션에서 색 시스템 설정을 사용하지 않는 요소는 `lblCompanyName`뿐입니다. <xref:System.Drawing.SystemColors> 클래스는 레이블의 색 설정을 사용자가 선택한 시스템 색으로 변경 하는 데 사용 됩니다.
 
 #### <a name="to-enable-high-contrast-mode-in-an-effective-way"></a>효과적인 방법으로 고대비 모드를 사용하도록 설정하려면
 
@@ -303,7 +303,7 @@ SystemInformation.HighContrast가 `true`이면 애플리케이션에서 다음�
 
 #### <a name="to-supply-information-by-some-other-means-than-sound"></a>소리가 아닌 다른 수단으로 정보를 제공하려면
 
-1. Windows API 함수 FlashWindow를 사용하여 제목 표시줄을 깜박이게 만듭니다. Windows API 함수를 호출 하는 방법의 예제를 참조 하세요. [연습: Windows Api 호출](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)합니다.
+1. Windows API 함수 FlashWindow를 사용하여 제목 표시줄을 깜박이게 만듭니다. Windows API 함수를 호출 하는 방법에 대 한 예제 [를 보려면 연습: Windows Api](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)를 호출 합니다.
 
     > [!NOTE]
     > 사용자가 Windows 소리 탐지 서비스를 사용하도록 설정했을 수도 있습니다. 이 서비스는 컴퓨터의 기본 제공 스피커를 통해 시스템 소리가 재생될 때 창도 깜박이게 합니다.

@@ -10,21 +10,21 @@ helpviewer_keywords:
 - reserved words, Visual Basic keywords
 - Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: e00cb8579ba2692acdfbf3fd349e08bb8647e2d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61dc57b2e44e7b98fbce85e81491c76736c7ad78
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801567"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959960"
 ---
 # <a name="keywords-visual-basic"></a>키워드(Visual Basic)
-다음 표에서 모든 Visual Basic 언어 키워드를 보여 줍니다.  
+다음 표에는 모든 Visual Basic 언어 키워드가 나와 있습니다.  
   
 ## <a name="reserved-keywords"></a>예약 키워드  
  다음 키워드는 *예약*되어 있습니다. 즉, 이러한 키워드를 변수 또는 프로시저와 같은 프로그래밍 요소의 이름으로 사용할 수 없습니다. 이름을 대괄호(`[]`)로 묶으면 이 제한을 무시할 수 있습니다. 자세한 내용은 [선언 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)에서 "이스케이프 이름"을 참조하세요.  
   
 > [!NOTE]
->  이스케이프 이름을 사용하면 코드를 읽기 힘들어 사소한 오류를 찾기 어려울 수 있으므로 이스케이프 이름을 사용하지 않는 것이 좋습니다.  
+> 이스케이프 이름을 사용하면 코드를 읽기 힘들어 사소한 오류를 찾기 어려울 수 있으므로 이스케이프 이름을 사용하지 않는 것이 좋습니다.  
   
 |||||  
 |---|---|---|---|  
@@ -77,7 +77,7 @@ ms.locfileid: "61801567"
 |[>> 연산자](../../../visual-basic/language-reference/operators/right-shift-operator.md)|[>>= 연산자](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)|[<<](../../../visual-basic/language-reference/operators/left-shift-operator.md)|[<\<=](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)|  
   
 > [!NOTE]
->  `EndIf`하십시오 `GoSub`, `Variant`, 및 `Wend` Visual Basic에서 더 이상 사용 되지 않지만 예약 키워드로 유지 됩니다. `Let` 키워드의 의미가 변경되었습니다. `Let`은 이제 LINQ 쿼리에서 사용됩니다. 자세한 내용은 [Let 절](../../../visual-basic/language-reference/queries/let-clause.md)을 참조하세요.  
+> `EndIf`, `GoSub`, 및`Wend` 는 Visual Basic에서 더 이상 사용 되지 않지만 예약 된 키워드로 유지 됩니다. `Variant` `Let` 키워드의 의미가 변경되었습니다. `Let`은 이제 LINQ 쿼리에서 사용됩니다. 자세한 내용은 [Let 절](../../../visual-basic/language-reference/queries/let-clause.md)을 참조하세요.  
   
 ## <a name="unreserved-keywords"></a>예약되지 않은 키워드  
  다음 키워드는 예약되어 있지 않습니다. 즉, 이러한 키워드를 프로그래밍 요소의 이름으로 사용할 수 있습니다. 하지만 이렇게 하면 코드를 읽기 힘들어 사소한 오류를 찾기 어려울 수 있으므로 권장하지 않습니다.  

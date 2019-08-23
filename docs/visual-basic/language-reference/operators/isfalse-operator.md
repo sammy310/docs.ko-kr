@@ -7,25 +7,25 @@ helpviewer_keywords:
 - AndAlso operator [Visual Basic]
 - IsFalse operator [Visual Basic]
 ms.assetid: 37fc9dbf-e5cc-4570-b93f-7213447974df
-ms.openlocfilehash: 9f25c406038486224c2c4708c86ef86889c44c15
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49b8493575685a220808df1522ce16835b3ce0ed
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013545"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917152"
 ---
 # <a name="isfalse-operator-visual-basic"></a>IsFalse 연산자(Visual Basic)
-식이 인지 결정 `False`합니다.  
+식이 인지 여부를 확인 `False`합니다.  
   
- 호출할 수 없습니다 `IsFalse` 명시적으로 코드 에서만 Visual Basic 컴파일러는 데 사용할 수에서 코드를 생성할 `AndAlso` 절. 클래스 또는 구조체 정의 다음에 있는 해당 유형의 변수를 사용 하는 경우는 `AndAlso` 정의 해야 절 `IsFalse` 해당 클래스 또는 구조체에서 합니다.  
+ 코드에서 명시적 `IsFalse` 으로 호출할 수는 없지만 Visual Basic 컴파일러는이를 사용 하 여 절에서 `AndAlso` 코드를 생성할 수 있습니다. 클래스 또는 구조체를 정의한 다음 해당 형식의 변수를 `AndAlso` 절에서 사용 하는 경우 해당 클래스 또는 구조체에 대해를 정의 `IsFalse` 해야 합니다.  
   
- 컴파일러에서 고려 하는 `IsFalse` 및 `IsTrue` 연산자는 *일치 하는 쌍*합니다. 이 그 중 하나를 정의 하는 경우 정의 해야 합니다도 다른 것을 의미 합니다.  
+ 컴파일러는 및 `IsTrue` 연산자 `IsFalse` 를 일치 하는 *쌍*으로 간주 합니다. 즉, 이러한 항목 중 하나를 정의 하는 경우 다른 항목을 정의 해야 합니다.  
   
 > [!NOTE]
->  합니다 `IsFalse` 연산자 *오버 로드 된*, 클래스 또는 구조체 수 할 동작 피연산자에 해당 클래스 또는 구조체 형식의 경우. 이 연산자를 사용 하 여 이러한 클래스나 구조체에는 코드를 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
+> 연산자를 오버 로드할 수 있습니다. 즉, 해당 피연산자의 형식이 해당 클래스 또는 구조체의 형식인 경우 클래스 또는 구조체에서 해당 동작을 다시 정의할 수 있습니다. `IsFalse` 코드가 이러한 클래스 또는 구조체에서이 연산자를 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
- 다음 코드 예제에 대 한 정의 포함 하는 구조체의 윤곽선을 정의 합니다 `IsFalse` 고 `IsTrue` 연산자입니다.  
+ 다음 코드 예제에서는 `IsFalse` 및 `IsTrue` 연산자에 대 한 정의를 포함 하는 구조체의 개요를 정의 합니다.  
   
  [!code-vb[VbVbalrOperators#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#28)]  
   

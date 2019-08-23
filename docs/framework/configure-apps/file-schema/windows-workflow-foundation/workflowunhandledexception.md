@@ -3,12 +3,12 @@ title: <workflowUnhandledException>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 57adeab5-f06a-44b2-916b-0e177cf0f4a6
-ms.openlocfilehash: cfe3350ac42d1e0e837b79f25753f62dc2051dd2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c46d1fb9eb853e57c7ad1b97eb9a22556cdfb7d8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613393"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913107"
 ---
 # <a name="workflowunhandledexception"></a>\<workflowUnhandledException>
 워크플로 서비스 내에서 처리되지 않은 예외가 발생할 때 수행할 동작을 지정할 수 있는 서비스 동작입니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "61613393"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
 |action|처리되지 않은 예외가 발생했을 때 수행할 동작을 지정하는 문자열입니다. 이 특성은 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction> 형식입니다.|  
   
@@ -45,9 +45,9 @@ ms.locfileid: "61613393"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<동작 >의 \<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|동작 요소를 지정합니다.|  
+|[\<servicebehaviors의 \<동작 > >](behavior-of-servicebehaviors-of-workflow.md)|동작 요소를 지정합니다.|  
   
 ## <a name="see-also"></a>참고자료
 

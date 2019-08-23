@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e40e314c-eb30-4f44-a054-41e511e35832
-ms.openlocfilehash: 1064e4f8d4fce16d0505eb79b5e862be7c2e4ce6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0795784f4090fca02c89cdfb396d217620b1ba68
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760547"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948233"
 ---
 # <a name="method-based-query-syntax-examples-filtering"></a>메서드 기반 쿼리 구문 예제: 필터링
-이 항목의 예제에 사용 하는 방법을 보여 줍니다 합니다 `Where` 하 고 `Where…Contains` 쿼리 하는 메서드는 [AdventureWorks Sales 모델](https://archive.codeplex.com/?p=msftdbprodsamples) 메서드 기반 쿼리 구문을 사용 하 여. 참고로 위치...`Contains` 일부로 사용할 수 없습니다는 [컴파일된 쿼리](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)합니다.  
+이 항목의 예제에서는 메서드 기반 쿼리 구문을 사용 `Where` 하 `Where…Contains` 여 [AdventureWorks Sales 모델](https://archive.codeplex.com/?p=msftdbprodsamples) 을 쿼리 하기 위해 및 메서드를 사용 하는 방법을 보여 줍니다. 참고 ...`Contains` 는 [컴파일된 쿼리의](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)일부로 사용할 수 없습니다.  
   
  이 예제에서 사용하는 AdventureWorks Sales 모델에서는 AdventureWorks 샘플 데이터베이스의 Contact, Address, Product, SalesOrderHeader 및 SalesOrderDetail 테이블을 사용합니다.  
   
- 이 항목의 예제에서는 다음을 사용 `using` / `Imports` 문:  
+ 이 항목의 예제에서는 다음 `using` / `Imports` 문을 사용 합니다.  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
@@ -57,7 +57,7 @@ ms.locfileid: "61760547"
  [!code-vb[DP L2E ArraysAndListsInQueries#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e arraysandlistsinqueries/vb/module1.vb#3)]  
   
 > [!NOTE]
->  `Where…Contains` 절에 있는 조건자의 일부로 <xref:System.Array>, <xref:System.Collections.Generic.List%601> 또는 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스를 구현하는 형식의 컬렉션을 사용할 수 있습니다. LINQ to Entities 쿼리 내에서 컬렉션을 선언하고 초기화할 수도 있습니다. 자세한 내용은 다음 예제를 참조하세요.  
+> `Where…Contains` 절에 있는 조건자의 일부로 <xref:System.Array>, <xref:System.Collections.Generic.List%601> 또는 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스를 구현하는 형식의 컬렉션을 사용할 수 있습니다. LINQ to Entities 쿼리 내에서 컬렉션을 선언하고 초기화할 수도 있습니다. 자세한 내용은 다음 예제를 참조하세요.  
   
 ### <a name="example"></a>예제  
  다음 예제에서는 배열을 `Where…Contains` 절에서 선언하고 초기화하여 `ProductModelID` 또는 `Size`가 배열의 값과 일치하는 모든 제품을 찾습니다.  

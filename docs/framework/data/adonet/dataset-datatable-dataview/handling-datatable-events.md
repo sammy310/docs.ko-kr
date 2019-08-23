@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 414be4a5bdbd1fe5d65475efcd5e72606b73685f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 4007a04bf3bd2b130e978415722b0e5b7769cc25
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034309"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953259"
 ---
 # <a name="handling-datatable-events"></a>DataTable 이벤트 처리
-<xref:System.Data.DataTable> 개체는 응용 프로그램에서 처리할 수 있는 일련의 이벤트를 제공합니다. 다음 표에서는 `DataTable` 이벤트에 대해 설명합니다.  
+<xref:System.Data.DataTable> 개체는 애플리케이션에서 처리할 수 있는 일련의 이벤트를 제공합니다. 다음 표에서는 `DataTable` 이벤트에 대해 설명합니다.  
   
-|이벤트(event)|설명|  
+|이벤트|설명|  
 |-----------|-----------------|  
 |<xref:System.Data.DataTable.Initialized>|<xref:System.Data.DataTable.EndInit%2A>의 `DataTable` 메서드가 호출된 후에 발생합니다. 이 이벤트는 기본적으로 디자인 타임 시나리오를 지원하는 데 사용됩니다.|  
 |<xref:System.Data.DataTable.ColumnChanged>|<xref:System.Data.DataColumn>에서 값이 성공적으로 변경된 후에 발생합니다.|  
@@ -30,7 +30,7 @@ ms.locfileid: "62034309"
 |<xref:System.ComponentModel.MarshalByValueComponent.Disposed>|`DataTable`이 `Disposed`가 될 때 발생합니다. <xref:System.ComponentModel.MarshalByValueComponent>에서 상속됩니다.|  
   
 > [!NOTE]
->  행을 추가하거나 삭제하는 대부분의 작업은 `ColumnChanged` 및 `ColumnChanging` 이벤트를 발생시키지 않습니다. 그러나 `ReadXml` 메서드는 `ColumnChanged` 및 `ColumnChanging` 이벤트를 발생시킵니다. 단, 읽고 있는 XML 문서가 `XmlReadMode`이고 `DiffGram`가 `Auto` 또는 `DiffGram`로 설정되어 있는 경우는 예외입니다.  
+> 행을 추가하거나 삭제하는 대부분의 작업은 `ColumnChanged` 및 `ColumnChanging` 이벤트를 발생시키지 않습니다. 그러나 `ReadXml` 메서드는 `ColumnChanged` 및 `ColumnChanging` 이벤트를 발생시킵니다. 단, 읽고 있는 XML 문서가 `XmlReadMode`이고 `DiffGram`가 `Auto` 또는 `DiffGram`로 설정되어 있는 경우는 예외입니다.  
   
 > [!WARNING]
 >  `DataSet` 이벤트가 발생한 `RowChanged`에서 데이터를 수정하면 데이터가 손상될 수 있습니다. 이와 같은 데이터 손상이 발생하면 예외가 발생하지 않습니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "62034309"
 10. 식 열의 제약 조건을 검사합니다.  
   
 > [!NOTE]
->  식 열이 변경되는 경우에는 `DataTable` 이벤트가 발생하지 않습니다. 식 열이 변경되면 `DataView` 및 `DataRowView` 이벤트만 발생합니다. 식 열은 다른 여러 열에 종속될 수 있으므로 단일 `DataRow` 작업 중 여러 번 계산될 수 있습니다. 식을 계산할 때마다 이벤트가 발생합니다. 또한 식 열이 변경되는 경우 동일한 식 열에 대한 여러 이벤트를 포함하여 단일 `DataRow` 작업에서 여러 `ListChanged` 및 `PropertyChanged` 이벤트가 발생할 수 있습니다.  
+> 식 열이 변경되는 경우에는 `DataTable` 이벤트가 발생하지 않습니다. 식 열이 변경되면 `DataView` 및 `DataRowView` 이벤트만 발생합니다. 식 열은 다른 여러 열에 종속될 수 있으므로 단일 `DataRow` 작업 중 여러 번 계산될 수 있습니다. 식을 계산할 때마다 이벤트가 발생합니다. 또한 식 열이 변경되는 경우 동일한 식 열에 대한 여러 이벤트를 포함하여 단일 `DataRow` 작업에서 여러 `ListChanged` 및 `PropertyChanged` 이벤트가 발생할 수 있습니다.  
   
 > [!WARNING]
 >  <xref:System.NullReferenceException> 이벤트 처리기 내에서 `RowChanged`을 throw하지 마세요. <xref:System.NullReferenceException>이 `RowChanged`의 `DataTable` 이벤트 내에서 throw되면 `DataTable`이 손상됩니다.  
