@@ -10,33 +10,33 @@ helpviewer_keywords:
 - properties [Visual Basic], read-only
 - read-only variables
 ms.assetid: e868185d-6142-4359-a2fd-a7965cadfce8
-ms.openlocfilehash: 1a486d0fadce8135fe01d9eecd611081c986bfae
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 01c441576cb4247933c053f2043296733f99fdeb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647696"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965415"
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly(Visual Basic)
-변수 또는 속성을 읽을 수 있지만 기록 되지 않습니다 지정 합니다.  
+변수 또는 속성을 읽을 수 있지만 쓸 수는 없도록 지정 합니다.  
   
 ## <a name="remarks"></a>설명  
   
 ## <a name="rules"></a>규칙  
   
-- **선언 컨텍스트입니다.** `ReadOnly`는 모듈 수준에서만 사용할 수 있습니다. 즉, 선언 컨텍스트는 `ReadOnly` 요소 클래스, 구조체 또는 모듈 이어야 하며 원본 파일, 네임 스페이스 또는 프로시저 수는 없습니다.  
+- **선언 컨텍스트입니다.** `ReadOnly`는 모듈 수준에서만 사용할 수 있습니다. 즉, `ReadOnly` 요소에 대 한 선언 컨텍스트는 클래스, 구조체 또는 모듈 이어야 하며 소스 파일, 네임 스페이스 또는 프로시저일 수 없습니다.  
   
-- **결합 된 한정자입니다.** 지정할 수 없습니다 `ReadOnly` 와 함께 `Static` 같은 선언에 있습니다.  
+- **결합 된 한정자입니다.** `ReadOnly` 을`Static` 동일한 선언에 함께 지정할 수 없습니다.  
   
-- **값을 할당 합니다.** 사용 하는 코드는 `ReadOnly` 속성의 값을 설정할 수 없습니다. 하지만 기본 저장소에 액세스할 수 있는 코드에 할당 하거나 언제 든 지 값을 변경할 수 있습니다.  
+- **값 할당** 속성을 사용 `ReadOnly` 하는 코드는 해당 값을 설정할 수 없습니다. 하지만 기본 저장소에 대 한 액세스 권한이 있는 코드는 언제 든 지 값을 할당 하거나 변경할 수 있습니다.  
   
-     값을 할당할 수 있습니다는 `ReadOnly` 변수 선언 또는 클래스 또는 구조체 정의 되어 있는 생성자만 합니다.  
+     `ReadOnly` 변수에 값을 할당 하거나 선언 된 클래스 또는 구조체의 생성자 에서만 값을 할당할 수 있습니다.  
   
-## <a name="when-to-use-a-readonly-variable"></a>읽기 전용 변수를 사용 하는 경우  
- 경우에는 사용할 수 없습니다는 [Const 문](../../../visual-basic/language-reference/statements/const-statement.md) 선언 및 상수 값을 할당 합니다. 예를 들어를 `Const` 문을 할당 하려는 데이터 형식이 허용 되지 않거나 상수 식 사용 하 여 컴파일 타임에 값을 계산할 수 있습니다. 모를 수도 있습니다도 값을 컴파일 시간에 있습니다. 이러한 경우에 사용할 수는 `ReadOnly` 상수 값을 보유할 변수로 대체 합니다.  
+## <a name="when-to-use-a-readonly-variable"></a>ReadOnly 변수를 사용 하는 경우  
+ 상수 값을 선언 하 고 할당 하는 데 [Const 문을](../../../visual-basic/language-reference/statements/const-statement.md) 사용할 수 없는 경우가 있습니다. 예를 들어, `Const` 문이 할당 하려는 데이터 형식을 허용 하지 않거나, 컴파일 시간에 상수 식으로 값을 계산 하지 못할 수 있습니다. 컴파일 시간에 값을 알 수 없습니다. 이러한 경우 `ReadOnly` 변수를 사용 하 여 상수 값을 저장할 수 있습니다.  
   
 > [!IMPORTANT]
->  변수 자체는 경우에 해당 멤버를 변경할 수 있습니다 변수의 데이터 형식은 참조 형식, 배열 또는 클래스 인스턴스를 같은 경우 `ReadOnly`합니다. 다음은 이에 대한 예입니다.  
+> 변수의 데이터 형식이 배열 또는 클래스 인스턴스와 같은 참조 형식이 면 변수 자체가 인 `ReadOnly`경우에도 해당 멤버를 변경할 수 있습니다. 다음은 이에 대한 예입니다.  
   
  `ReadOnly characterArray() As Char = {"x"c, "y"c, "z"c}`  
   
@@ -46,12 +46,12 @@ ms.locfileid: "64647696"
   
  `End Sub`  
   
- 를 초기화할 때 배열을 가리키는 `characterArray()` 포함 "x", "y" 및 "z"입니다. 때문에 변수의 `characterArray` 는 `ReadOnly`초기화 된 후;는 해당 값을 변경할 수 없습니다, 새 배열을 할당할 수 없습니다. 그러나 하나 이상의 배열 멤버의 값을 변경할 수 있습니다. 다음 절차에 대 한 호출 `changeArrayElement`를 가리키는 배열 `characterArray()` 포함 "x", "M" 및 "z"입니다.  
+ 초기화 될 때가 `characterArray()` 가리키는 배열은 "x", "y" 및 "z"를 포함 합니다. `characterArray` 변수`ReadOnly`는 이기 때문에 초기화 된 후에는 해당 값을 변경할 수 없습니다. 즉, 새 배열을 할당할 수 없습니다. 그러나 하나 이상의 배열 멤버의 값을 변경할 수 있습니다. 프로시저 `changeArrayElement`를 호출 하 고,가 `characterArray()` 가리키는 배열은 "x", "M" 및 "z"를 포함 합니다.  
   
- 이 프로시저 매개 변수를 선언 비슷합니다 [ByVal](../../../visual-basic/language-reference/modifiers/byval.md)를 하면 프로시저가 호출 인수 자체를 변경할 수 있지만 해당 멤버를 변경할 수 있습니다.  
+ 프로시저 매개 변수를 [ByVal](../../../visual-basic/language-reference/modifiers/byval.md)로 선언 하는 것과 유사 합니다. 그러면 프로시저에서 호출 인수 자체를 변경 하는 것이 아니라 해당 멤버를 변경할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 정의 `ReadOnly` 직원 고용 날짜에 대 한 속성입니다. 속성 값을 내부적으로 클래스 저장소는 `Private` 변수와 유일한 코드 클래스 내에서 해당 값을 변경할 수 있습니다. 그러나 속성은 `Public`, 클래스에 액세스할 수 있는 모든 코드는 속성을 읽을 수 있습니다.  
+ 다음 예에서는 직원이 고용 `ReadOnly` 된 날짜에 대 한 속성을 정의 합니다. 클래스는 내부적 `Private` 으로 속성 값을 변수로 저장 하 고 클래스 내의 코드만이 값을 변경할 수 있습니다. 그러나 속성 `Public`은 이며 클래스에 액세스할 수 있는 모든 코드는 속성을 읽을 수 있습니다.  
   
  [!code-vb[VbVbalrKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#4)]  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0bc333a828a9d18cd5ad98af42a91c1d53c2569b
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 4c7ffa98aec115db2d8c9a40e977f8cb7d33441a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816201"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962987"
 ---
 # <a name="thread-safe-collections"></a>스레드로부터 안전한 컬렉션
 .NET Framework 4에서는 네임스페이스는 스레드로부터 안전하면서 확장 가능한 몇 가지 컬렉션 클래스를 포함하는 <xref:System.Collections.Concurrent?displayProperty=nameWithType> 네임스페이스를 도입합니다. 여러 스레드는 사용자 코드에서 추가로 동기화할 필요없이 이러한 컬렉션으로부터 안전하고 효율적으로 항목을 추가하거나 제거할 수 있습니다. 새 코드를 작성하는 경우 여러 스레드가 컬렉션에 동시에 작성될 때마다 동시 컬렉션 클래스를 사용합니다. 공유 컬렉션에서 읽기만 하는 경우에 <xref:System.Collections.Generic?displayProperty=nameWithType> 네임스페이스에서 클래스를 사용할 수 있습니다. .NET Framework 1.1 또는 이전 런타임을 대상으로 해야 하는 경우가 아니면 1.0 컬렉션 클래스를 사용하지 않는 것이 좋습니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "66816201"
  <xref:System.Collections.Concurrent.ConcurrentQueue%601> 및 <xref:System.Collections.Concurrent.ConcurrentStack%601> 클래스는 잠금을 전혀 사용하지 않습니다. 대신, 스레드로부터의 안전성을 달성하기 위해 <xref:System.Threading.Interlocked> 작업을 사용합니다.  
   
 > [!NOTE]
->  동시 컬렉션 클래스가 <xref:System.Collections.ICollection>을 지원하기 때문에 이러한 속성이 관련되지 않은 경우에도 <xref:System.Collections.ICollection.IsSynchronized%2A> 및 <xref:System.Collections.ICollection.SyncRoot%2A> 속성에 대한 구현을 제공합니다. `IsSynchronized`는 항상 `false`를 반환하고 `SyncRoot`는 항상 `null`(Visual Basic의 `Nothing`)입니다.  
+> 동시 컬렉션 클래스가 <xref:System.Collections.ICollection>을 지원하기 때문에 이러한 속성이 관련되지 않은 경우에도 <xref:System.Collections.ICollection.IsSynchronized%2A> 및 <xref:System.Collections.ICollection.SyncRoot%2A> 속성에 대한 구현을 제공합니다. `IsSynchronized`는 항상 `false`를 반환하고 `SyncRoot`는 항상 `null`(Visual Basic의 `Nothing`)입니다.  
   
  다음 테이블에서는 <xref:System.Collections.Concurrent?displayProperty=nameWithType> 네임스페이스의 컬렉션 형식을 나열합니다.  
   

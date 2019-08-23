@@ -8,12 +8,12 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
-ms.openlocfilehash: 535827db660ab1113a25a01b7a0553a1c4414c74
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 0cb63be6774fd82cd94a1bc59b8a1025efa47df5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69037785"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966576"
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>방법: Control 클래스에서 상속
 Windows Form에서 사용할 완전히 사용자 지정 컨트롤을 만들려면 <xref:System.Windows.Forms.Control> 클래스에서 상속 해야 합니다. <xref:System.Windows.Forms.Control> 클래스에서 상속 하는 동안 추가 계획 및 구현을 수행 해야 하는 반면, 가장 큰 범위의 옵션도 제공 됩니다. 에서 <xref:System.Windows.Forms.Control>상속 하는 경우 컨트롤이 작동 하 게 하는 매우 기본적인 기능을 상속 합니다. <xref:System.Windows.Forms.Control> 클래스에 내재 된 기능은 키보드와 마우스를 통해 사용자 입력을 처리 하 고, 컨트롤의 범위와 크기를 정의 하 고, windows 핸들을 제공 하 고, 메시지 처리 및 보안을 제공 합니다. 이 경우에는 컨트롤의 그래픽 인터페이스의 실제 렌더링인 그리기를 통합하거나 특정 사용자 상호 작용 기능을 통합하지 않습니다. 사용자 지정 코드를 통해 이러한 모든 사항을 제공해야 합니다.
@@ -46,5 +46,5 @@ Windows Form에서 사용할 완전히 사용자 지정 컨트롤을 만들려�
 - [방법: UserControl 클래스에서 상속](how-to-inherit-from-the-usercontrol-class.md)
 - [방법: 기존 Windows Forms 컨트롤에서 상속](how-to-inherit-from-existing-windows-forms-controls.md)
 - [방법: Windows Forms에 대 한 Author 컨트롤](how-to-author-controls-for-windows-forms.md)
-- [Visual Basic에서 상속된 이벤트 처리기 관련 문제 해결](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [Visual Basic에서 상속된 이벤트 처리기 관련 문제 해결](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
 - [디자인 타임에 Windows Forms 컨트롤 개발](developing-windows-forms-controls-at-design-time.md)

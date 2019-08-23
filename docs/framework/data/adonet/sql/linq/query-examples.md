@@ -2,18 +2,18 @@
 title: 쿼리 예제
 ms.date: 03/30/2017
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
-ms.openlocfilehash: 74664dd98ac067153894edc934c8f15eec407261
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7be01abf568ed089089b1bc25d2a175f78ae7f7f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783112"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962737"
 ---
 # <a name="query-examples"></a>쿼리 예제
-이 섹션에서는 일반적인 Visual Basic 및 C# 예제 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 쿼리 합니다. Visual Studio를 사용 하는 개발자 샘플 섹션에 제공 하는 샘플 솔루션에서 더 많은 예제를 찾을 수 있습니다. 자세한 내용은 [샘플](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)합니다.  
+이 섹션에서는 일반적인 C# [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 쿼리의 Visual Basic와 예제를 제공 합니다. Visual Studio를 사용 하는 개발자는 샘플 섹션에서 제공 하는 샘플 솔루션에서 더 많은 예제를 찾을 수 있습니다. 자세한 내용은 [샘플](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)을 참조 하세요.  
   
 > [!IMPORTANT]
->  *db* 의 코드 예제에서는 흔히 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 설명서. *db* 의 인스턴스로 간주 됩니다는 *Northwind* 클래스에서 상속 되는 <xref:System.Data.Linq.DataContext>합니다.  
+> *db* 는 설명서의 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 코드 예제에서 자주 사용 됩니다. *db* 는에서 <xref:System.Data.Linq.DataContext>상속 되는 *Northwind* 클래스의 인스턴스로 간주 됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [집계 쿼리](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
@@ -62,14 +62,14 @@ ms.locfileid: "61783112"
  `from`, `where` 및 `select` 절에서 외래 키 탐색 사용 예제를 제공합니다.  
   
  [프로젝션 작성](../../../../../../docs/framework/data/adonet/sql/linq/formulate-projections.md)  
- 결합 예제를 제공 `select` 다른 기능과 함께 (예를 들어 *무명 형식을*) 쿼리 투영 합니다.  
+ 다른 기능 (예 `select` : *익명 형식*)을 결합 하 여 쿼리 프로젝션을 구성 하는 예제를 제공 합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
  [표준 쿼리 연산자 개요(C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- 사용 하 여 표준 쿼리 연산자의 개념을 설명 C#입니다.  
+ 을 사용 하 C#는 표준 쿼리 연산자의 개념에 대해 설명 합니다.  
   
  [표준 쿼리 연산자 개요(Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- Visual Basic을 사용 하 여 표준 쿼리 연산자의 개념을 설명 합니다.  
+ Visual Basic 사용 하는 표준 쿼리 연산자의 개념에 대해 설명 합니다.  
   
  [쿼리 개념](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 사용 개념이 쿼리에 어떻게 적용되는지 설명합니다.  

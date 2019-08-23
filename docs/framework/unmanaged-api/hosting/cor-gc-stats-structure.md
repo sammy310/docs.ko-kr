@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 630c365c8710388ae3e913bedece0fb710da7cd9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1085bec812d797d3fbe4ea63ef447d4c466149f2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768141"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965051"
 ---
-# <a name="corgcstats-structure"></a>COR_GC_STATS 구조체
-CLR (공용 언어 런타임)의 가비지 수집 메커니즘에 대 한 통계를 제공합니다.  
+# <a name="cor_gc_stats-structure"></a>COR_GC_STATS 구조체
+CLR (공용 언어 런타임)의 가비지 수집 메커니즘에 대 한 통계를 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,26 +46,26 @@ typedef struct _COR_GC_STATS {
   
 ## <a name="members"></a>멤버  
   
-|멤버|Description|  
+|멤버|설명|  
 |------------|-----------------|  
-|`Flags`|계산 고 반환 하는 필드 값을 나타냅니다.|  
-|`ExplicitGCCount`|외부 요청에서 강제 된 가비지 수집 횟수를 나타냅니다.|  
-|`GenCollectionsTaken`|각 세대에 대해 수행 하는 가비지 수집 횟수를 나타냅니다.|  
-|`CommittedKBytes`|모든 힙에서 커밋 (킬로바이트)의 총 수입니다.|  
-|`ReservedKBytes`|(킬로바이트) 모든 힙의 예약의 총 수입니다.|  
-|`Gen0HeapSizeKBytes`|(킬로바이트) 0 세대 힙의 크기입니다.|  
-|`Gen1HeapSizeKBytes`|(킬로바이트)의 1 세대 힙의 크기입니다.|  
-|`Gen2HeapSizeKBytes`|(킬로바이트)의 2 세대 힙의 크기입니다.|  
-|`LargeObjectHeapSizeKBytes`|(킬로바이트)의 대형 개체 힙의 크기입니다.|  
-|`KBytesPromotedFromGen0`|(킬로바이트) 0 세대에서 1 세대로 승격 된 개체의 크기입니다.|  
-|`KBytesPromotedFromGen1`|(킬로바이트) 1 세대에서 2 세대로 승격 된 개체의 크기입니다.|  
+|`Flags`|계산 되 고 반환 되어야 하는 필드 값을 나타냅니다.|  
+|`ExplicitGCCount`|외부 요청에 의해 강제 적용 된 가비지 수집 수를 나타냅니다.|  
+|`GenCollectionsTaken`|각 세대에 대해 수행 되는 가비지 컬렉션 수를 나타냅니다.|  
+|`CommittedKBytes`|모든 힙에서 커밋된 총 kb 수입니다.|  
+|`ReservedKBytes`|모든 힙에서 예약 된 총 kb 수입니다.|  
+|`Gen0HeapSizeKBytes`|0 세대 힙의 크기 (kb)입니다.|  
+|`Gen1HeapSizeKBytes`|1 세대 힙의 크기 (kb)입니다.|  
+|`Gen2HeapSizeKBytes`|2 세대 힙의 크기 (kb)입니다.|  
+|`LargeObjectHeapSizeKBytes`|큰 개체 힙의 크기 (kb)입니다.|  
+|`KBytesPromotedFromGen0`|0 세대에서 1 세대로 수준이 올려진 개체의 크기 (kb)입니다.|  
+|`KBytesPromotedFromGen1`|1 세대에서 2 세대로 수준이 올려진 개체의 크기 (kb)입니다.|  
   
 ## <a name="remarks"></a>설명  
- [iclrgcmanager:: Getstats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) 메서드를 사용 하려면 합니다 `Flags` 필드를 `COR_GC_STATS` 구조체의 하나 이상의 값으로 설정 됩니다는 [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) 를 지정 하는 열거형 통계가 설정 해야 합니다.  
+ [ICLRGCManager:: getstats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) 메서드를 사용 하려면 `Flags` `COR_GC_STATS` 구조체의 필드를 [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) 열거형의 하나 이상의 값으로 설정 하 여 설정할 통계를 지정 해야 합니다.  
   
- 다음 표에서이 구조를 두 개의 제공 하는 통계 [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) 열거형 값 `COR_GC_COUNTS` 고 `COR_GC_MEMORYUSAGE`입니다.  
+ 다음 표에서는이 구조체에 의해 제공 되는 통계를 두 [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) 열거형 값 `COR_GC_COUNTS` `COR_GC_MEMORYUSAGE`에 매핑합니다.  
   
-|지정 된 COR_GC_COUNTS|지정 된 COR_GC_MEMORYUSAGE|  
+|COR_GC_COUNTS에서 지정|COR_GC_MEMORYUSAGE에서 지정|  
 |----------------------------------|---------------------------------------|  
 |`ExplicitGCCount`<br /><br /> `GenCollectionsTaken`|`CommittedKBytes`<br /><br /> `ReservedKBytes`<br /><br /> `Gen0HeapSizeKBytes`<br /><br /> `Gen1HeapSizeKBytes`<br /><br /> `Gen2HeapSizeKBytes`<br /><br /> `LargeObjectHeapSizeKBytes`<br /><br /> `KBytesPromotedFromGen0`<br /><br /> `KBytesPromotedFromGen1`|  
   
@@ -78,16 +78,16 @@ pCLRGCManager->GetStats(&GCStats);
 ```  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** GCHost.idl  
   
- **라이브러리:** MSCorEE.dll에 리소스로 포함  
+ **라이브러리** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
 
 - [호스팅 구조체](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
-- [자동 메모리 관리](../../../../docs/standard/automatic-memory-management.md)
-- [가비지 수집](../../../../docs/standard/garbage-collection/index.md)
+- [자동 메모리 관리](../../../standard/automatic-memory-management.md)
+- [가비지 수집](../../../standard/garbage-collection/index.md)

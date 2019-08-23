@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: d2b35a50d9d09bffd69ae8b8217d6e778ce66ea0
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: b009c2503c7cbf6aca847fc7318135842a060f69
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796407"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965049"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF의 양방향 기능 개요
 다른 개발 플랫폼과 달리에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 는 양방향 콘텐츠를 신속 하 게 개발할 수 있는 많은 기능이 있습니다. 예를 들어, 왼쪽에서 오른쪽으로, 오른쪽에서 왼쪽으로의 데이터를 동일한 문서에 혼합할 수 있습니다. 동시에는 아랍어, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 히브리어 등의 양방향 기능을 필요로 하는 사용자에 게 뛰어난 환경을 만듭니다.  
@@ -154,9 +154,9 @@ ms.locfileid: "68796407"
   
 <a name="NumberSubstitution"></a>   
 ## <a name="number-substitution"></a>숫자 대체  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 지금까지는 동일한 숫자에 대해 서로 다른 문화권 셰이프를 표현할 수 있도록 허용 하는 동시에 숫자 대체가 지원 됩니다. 예를 들어 숫자는 여러 로캘 간에 통합 됩니다. 잘 알려진 16 진수 값 0x40, 0x41 및 선택한 언어에 따라 표시 됩니다.  
+ 지금까지 Windows는 동일한 숫자에 대해 다양 한 문화권 셰이프를 표현할 수 있도록 허용 하는 동시에 숫자 대체를 지원 합니다. 예를 들어 숫자는 서로 다른 로캘 간에 통합 되어 있습니다. 잘 알려진 16 진수 값 0x40, 0x41, 선택한 언어에 따라 표시 됩니다.  
   
- 이렇게 하면 응용 프로그램에서 한 언어에서 다른 언어로 변환할 필요 없이 숫자 값을 처리할 수 있습니다. 예를 들어 사용자가 지역화 된 [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)] 아랍어 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 에서 스프레드시트를 열고 아랍어로 표시 되는 숫자를 볼 수 있지만에서 열 수 있습니다. 및의 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 유럽 버전에서는 동일한 숫자의 유럽 표현을 볼 수 있습니다. 보통 동일한 문서에서 숫자와 같이 표시되기 때문에 쉼표 구분 기호와 백분율 기호와 같은 다른 기호에도 필요합니다.  
+ 이렇게 하면 응용 프로그램에서 한 언어에서 다른 언어로 변환할 필요 없이 숫자 값을 처리할 수 있습니다. 예를 들어 사용자가 지역화 된 [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)] 아랍어 창에서 스프레드시트를 열고 아랍어로 표시 된 숫자를 볼 수 있지만에서 열 수 있습니다. 유럽 버전의 Windows를 통해 동일한 숫자의 유럽 표현을 볼 수 있습니다. 보통 동일한 문서에서 숫자와 같이 표시되기 때문에 쉼표 구분 기호와 백분율 기호와 같은 다른 기호에도 필요합니다.  
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 동일한 기능을 계속 유지하며 대체가 사용되는 시기와 방법을 사용자가 더 많이 제어할 수 있도록 이 기능에 대한 지원을 추가합니다. 이 기능은 모든 언어를 대상으로 하지만, 애플리케이션을 실행하는 다양한 문화권 때문에 특정 언어에 대한 숫자 모양을 애플리케이션 개발자가 지정하기 어려운 양방향 콘텐츠에서 더욱 유용합니다.  
   
@@ -190,7 +190,7 @@ ms.locfileid: "68796407"
   
 - <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>: 숫자는 숫자 문화권에 대 한 기존 숫자를 사용 하 여 렌더링 됩니다. 대부분의 문화권에서이는와 <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>동일 합니다. 그러나는 <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational> 일부 아랍어 문화권의 경우 라틴 숫자를 반환 하는 반면,이 값을 사용할 경우 모든 아랍어 문화권에 대해 아랍어 숫자가 생성 됩니다.  
   
- 이 값은 양방향 콘텐츠 개발자에게 무슨 의미입니까? 대부분의 경우 개발자는와 <xref:System.Windows.FlowDirection> 각 텍스트 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 요소의 언어를 정의 하기만 하면 됩니다. 예 `Language="ar-SA"` 를 들어 논리는 <xref:System.Windows.Media.NumberSubstitution> 올바른 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]에 따라 숫자를 표시 합니다. 다음 예제에서는 아랍어 버전의 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]에서 실행 되는 응용 프로그램에서 아랍어 및 영어 숫자를 사용 하는 방법을 보여 줍니다.  
+ 이 값은 양방향 콘텐츠 개발자에게 무슨 의미입니까? 대부분의 경우 개발자는와 <xref:System.Windows.FlowDirection> 각 텍스트 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 요소의 언어를 정의 하기만 하면 됩니다. 예 `Language="ar-SA"` 를 들어 논리는 <xref:System.Windows.Media.NumberSubstitution> 올바른 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]에 따라 숫자를 표시 합니다. 다음 예제에서는 아랍어 버전의 Windows에서 실행 되는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램에서 아랍어 및 영어 숫자를 사용 하는 방법을 보여 줍니다.  
   
  [!code-xaml[Numbers#Numbers](~/samples/snippets/csharp/VS_Snippets_Wpf/Numbers/CS/Window1.xaml#numbers)]  
   

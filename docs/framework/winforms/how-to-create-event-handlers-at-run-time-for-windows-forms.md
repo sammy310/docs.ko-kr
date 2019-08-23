@@ -12,16 +12,16 @@ helpviewer_keywords:
 - examples [Windows Forms], event handling
 - Button control [Windows Forms], event handlers
 ms.assetid: 2e7c9e1a-61fe-444d-8113-3c5bacf1c8cb
-ms.openlocfilehash: 4d2290622e648030f150d9bb06ce1f3000145759
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 440086bfd5384fc46aec2997dbdd9937f7a1b65f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211466"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964326"
 ---
 # <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>방법: 런타임 시 Windows Forms의 이벤트 처리기 만들기
 
-Visual Studio에서 Windows Forms 디자이너를 사용 하 여 이벤트를 생성할 뿐만 아니라 런타임에 이벤트 처리기도 만들 수 있습니다. 이렇게 하면 프로그램이 처음 시작될 때 이벤트 처리기를 연결하는 대신 런타임에 코드를 사용하여 조건에 따라 이벤트 처리기를 연결할 수 있습니다.
+Visual Studio에서 Windows Forms 디자이너 사용 하 여 이벤트를 만드는 것 외에도 런타임에 이벤트 처리기를 만들 수 있습니다. 이렇게 하면 프로그램이 처음 시작될 때 이벤트 처리기를 연결하는 대신 런타임에 코드를 사용하여 조건에 따라 이벤트 처리기를 연결할 수 있습니다.
 
 ## <a name="create-an-event-handler-at-run-time"></a>런타임에 이벤트 처리기 만들기
 
@@ -29,7 +29,7 @@ Visual Studio에서 Windows Forms 디자이너를 사용 하 여 이벤트를 �
 
 2. 처리할 이벤트의 메서드 시그니처가 있는 양식에 메서드를 추가합니다.
 
-     예를 들어 처리 하는 경우는 <xref:System.Windows.Forms.Control.Click> 의 이벤트를 <xref:System.Windows.Forms.Button> 컨트롤 같은 메서드를 만듭니다.
+     예를 들어, <xref:System.Windows.Forms.Control.Click> <xref:System.Windows.Forms.Button> 컨트롤의 이벤트를 처리 하는 경우 다음과 같은 메서드를 만듭니다.
 
     ```vb
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As EventArgs)
@@ -57,7 +57,7 @@ Visual Studio에서 Windows Forms 디자이너를 사용 하 여 이벤트를 �
 
 4. 이벤트 처리기를 만들 양식 또는 컨트롤을 결정합니다.
 
-5. 양식의 클래스에 있는 메서드에 이벤트를 처리할 이벤트 처리기를 지정하는 코드를 추가합니다. 다음 코드에서는 이벤트 처리기를 지정 하는 예를 들어 `button1_Click` 핸들을 <xref:System.Windows.Forms.Control.Click> 이벤트를 <xref:System.Windows.Forms.Button> 제어:
+5. 양식의 클래스에 있는 메서드에 이벤트를 처리할 이벤트 처리기를 지정하는 코드를 추가합니다. 예를 들어 다음 코드는 이벤트 처리기 `button1_Click` 가 <xref:System.Windows.Forms.Button> 컨트롤의 이벤트 <xref:System.Windows.Forms.Control.Click> 를 처리 하도록 지정 합니다.
 
     ```vb
     AddHandler Button1.Click, AddressOf Button1_Click
@@ -71,10 +71,10 @@ Visual Studio에서 Windows Forms 디자이너를 사용 하 여 이벤트를 �
     button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);
     ```
 
-     <xref:System.ComponentModel.EventHandlerList.AddHandler%2A> 위의 Visual Basic 코드에서 설명 하는 방법에는 단추의 click 이벤트 처리기를 설정 합니다.
+     위의 <xref:System.ComponentModel.EventHandlerList.AddHandler%2A> Visual Basic 코드에 설명 된 메서드는 단추에 대 한 click 이벤트 처리기를 설정 합니다.
 
 ## <a name="see-also"></a>참고자료
 
 - [Windows Forms에서 이벤트 처리기 만들기](creating-event-handlers-in-windows-forms.md)
 - [이벤트 처리기 개요](event-handlers-overview-windows-forms.md)
-- [Visual Basic에서 상속된 이벤트 처리기 관련 문제 해결](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [Visual Basic에서 상속된 이벤트 처리기 관련 문제 해결](../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)

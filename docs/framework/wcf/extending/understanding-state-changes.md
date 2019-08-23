@@ -2,12 +2,12 @@
 title: 상태 변경 이해
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 549620ee5317e68735b392ce35b73c92f2474eab
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 154f49e7da059d20d0751a73c664aa2a0f89be12
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363949"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963081"
 ---
 # <a name="understanding-state-changes"></a>상태 변경 이해
 이 항목에서는 채널에 있는 상태와 전이, 채널 상태의 구조 지정에 사용되는 형식, 그리고 구현 방법에 대해 설명합니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "68363949"
   
  다음 다이어그램은 <xref:System.ServiceModel.ICommunicationObject> 상태 및 상태 전이를 보여 줍니다. 상태 전환은 다음 세 가지 방법 중 하나를 호출 하 여 발생할 수 있습니다. 중단, 열기 또는 닫기. 다른 구현 관련 메서드를 호출하여 일으킬 수도 있습니다. Faulted 상태로의 전이는 통신 개체를 여는 도중이나 열고 난 후에 오류가 발생한 경우 일어날 수 있습니다.  
   
- 모든 <xref:System.ServiceModel.ICommunicationObject>는 만듦 상태로 시작합니다. 이 상태에서는 응용 프로그램이 속성을 설정하여 개체를 구성할 수 있습니다. 개체가 Created 외의 상태가 되면 변경할 수 없는 것으로 간주됩니다.  
+ 모든 <xref:System.ServiceModel.ICommunicationObject>는 만듦 상태로 시작합니다. 이 상태에서는 애플리케이션이 속성을 설정하여 개체를 구성할 수 있습니다. 개체가 Created 외의 상태가 되면 변경할 수 없는 것으로 간주됩니다.  
   
  ![채널 상태 전환](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
 그림 1. ICommunicationObject 상태 시스템.  
@@ -58,7 +58,7 @@ ms.locfileid: "68363949"
  <xref:System.ServiceModel.Channels.CommunicationObject>에서는 Abort, Close 및 Open의 구현을 제공합니다. 또한 Faulted 상태로 상태 전이를 일으키는 Fault 메서드도 제공합니다. 그림 2는 전이를 일으키는 각 메서드가 레이블로 표시된 <xref:System.ServiceModel.ICommunicationObject> 상태 시스템을 보여 줍니다. 레이블이 없는 전이는 레이블이 있는 마지막 전이를 일으킨 메서드의 구현 내에서 이루어집니다.  
   
 > [!NOTE]
->  통신 상태 가져오기/설정의 모든 <xref:System.ServiceModel.Channels.CommunicationObject> 구현은 스레드로 동기화됩니다.  
+> 통신 상태 가져오기/설정의 모든 <xref:System.ServiceModel.Channels.CommunicationObject> 구현은 스레드로 동기화됩니다.  
   
  생성자  
   
@@ -137,7 +137,7 @@ ms.locfileid: "68363949"
   
 |State|Abort 호출 여부|예외|  
 |-----------|----------------------------|---------------|  
-|만든 날짜|해당 사항 없음|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
+|만든 날짜|N/A|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Opening|해당 사항 없음|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Opened|해당 사항 없음|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Closing|예|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  

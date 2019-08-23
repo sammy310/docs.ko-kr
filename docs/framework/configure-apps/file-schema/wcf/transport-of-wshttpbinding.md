@@ -2,14 +2,14 @@
 title: <wsHttpBinding>의 <transport>
 ms.date: 03/30/2017
 ms.assetid: 21e38acf-450a-4bda-82b6-de305e1f7cd8
-ms.openlocfilehash: ea025751020d6d98292f6bc3ecfe9421af0cb793
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 384267e3d018d714f95356461eb303bc9ec0cb3e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788221"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934634"
 ---
-# <a name="transport-of-wshttpbinding"></a>\<전송 >의 \<wsHttpBinding >
+# <a name="transport-of-wshttpbinding"></a>\<wsHttpBinding >의 \<전송 >
 
 HTTP 전송의 인증 설정을 정의합니다.
 
@@ -70,7 +70,7 @@ HTTP 전송의 인증 설정을 정의합니다.
 
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType 특성
 
-|값|설명|
+|값|Description|
 |-----------|-----------------|
 |`None`|보안이 해제되어 있습니다.|
 |`Basic`|기본 인증을 사용합니다.|
@@ -87,7 +87,7 @@ HTTP 전송의 인증 설정을 정의합니다.
 
 |요소|설명|
 |-------------|-----------------|
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|보안 기능을 나타내는 합니다 [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)합니다.|
+|[\<security>](security-of-wshttpbinding.md)|[ \<WsHttpBinding >](wshttpbinding.md)의 보안 기능을 나타냅니다.|
 
 ## <a name="see-also"></a>참고자료
 
@@ -95,8 +95,8 @@ HTTP 전송의 인증 설정을 정의합니다.
 - <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.WSHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
-- [서비스 및 클라이언트에 보안 설정](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [바인딩](../../../../../docs/framework/wcf/bindings.md)
-- [시스템 제공 바인딩 구성](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [서비스 및 클라이언트에 보안 설정](../../../wcf/feature-details/securing-services-and-clients.md)
+- [바인딩](../../../wcf/bindings.md)
+- [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

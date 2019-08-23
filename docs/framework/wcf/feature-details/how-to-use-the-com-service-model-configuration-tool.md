@@ -4,32 +4,32 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 6f677d067ea0a93310036b13dba90e43731e8094
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 9677e516ef6c91ef344e10bc8f608a397a4ed157
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606491"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966131"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>방법: COM+ 서비스 모델 구성 도구 사용
-적절한 호스팅 모드를 선택한 다음 COM+ 서비스 모델 구성 명령줄 도구(ComSvcConfig.exe)를 사용하여 웹 서비스로 노출될 응용 프로그램 인터페이스를 구성합니다.  
+적절한 호스팅 모드를 선택한 다음 COM+ 서비스 모델 구성 명령줄 도구(ComSvcConfig.exe)를 사용하여 웹 서비스로 노출될 애플리케이션 인터페이스를 구성합니다.  
   
 > [!NOTE]
->  다음 작업을 수행하려면 컴퓨터의 관리자여야 합니다.  
+> 다음 작업을 수행하려면 컴퓨터의 관리자여야 합니다.  
   
  Windows 7 컴퓨터에서 ComSvcConfig.exe를 사용하여 웹 서비스가 최신 서비스 모델 버전(현재 v4.5)을 사용하도록 구성하려면 다음 단계를 따르십시오.  
   
-1. 레지스트리 키 설정 `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` DWORD 값 0x00000001  
+1. 레지스트리 키 `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` 를 DWORD 값 0x00000001로 설정 합니다.  
   
 2. Comsvcconfig.exe를 실행합니다.  
   
 3. 1단계에서 추가한 레지스트리 키를 원래 값으로 되돌리거나, 원래 값이 없었던 경우에는 삭제합니다.  
   
 > [!IMPORTANT]
->  이 레지스트리 키를 되돌리는 것은 중요합니다. 이 키는 호환성 키이므로 변경 내용을 되돌리지 않으면 컴퓨터에서 실행 중인 다른 .NET 응용 프로그램에 문제가 발생할 수 있습니다.  
+> 이 레지스트리 키를 되돌리는 것은 중요합니다. 이 키는 호환성 키이므로 변경 내용을 되돌리지 않으면 컴퓨터에서 실행 중인 다른 .NET 애플리케이션에 문제가 발생할 수 있습니다.  
   
 > [!WARNING]
->  ComSvcConfig.exe를 사용 하는 경우 Windows 8 컴퓨터 대화 상자에서 /install 라는 메시지가 표시 됩니다 "PC에서 앱 필요한 Windows 기능:.NET Framework 3.5 (.NET 2.0 및.NET 3.0 포함".NET Framework 3.5를 설치 하지 않은 경우. 이 대화 상자는 무시해도 됩니다. 또는 OnlyUseLatestCLR 레지스트리 키를 DWORD 값 0x00000001로 설정해도 됩니다.  
+>  Windows 8 컴퓨터에서 Comsvcconfig.exe/install을 사용 하는 경우 ".NET Framework 3.5이 설치 되어 있지 않으면 PC의 앱에 다음 Windows 기능이 필요 합니다. .NET Framework 3.5 (.NET 2.0 및 .NET 3.0 포함)을 나타내는 대화 상자가 표시 됩니다. 이 대화 상자는 무시해도 됩니다. 또는 OnlyUseLatestCLR 레지스트리 키를 DWORD 값 0x00000001로 설정해도 됩니다.  
   
 ### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a>COM+ 호스팅 모드를 사용하여 웹 서비스로 노출될 인터페이스 집합에 인터페이스를 추가하려면  
   
@@ -39,7 +39,7 @@ ms.locfileid: "64606491"
     ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus /verbose  
     ```  
   
-     이 명령은 OnlineStore COM+ 응용 프로그램에 있는 `IFinances` 구성 요소의 `ItemOrders.IFinancial` 인터페이스를 웹 서비스로 노출될 인터페이스 집합에 추가합니다. 이 서비스는 COM+ 호스팅 모드를 사용하므로 명시적으로 응용 프로그램을 활성화해야 합니다.  
+     이 명령은 OnlineStore COM+ 애플리케이션에 있는 `IFinances` 구성 요소의 `ItemOrders.IFinancial` 인터페이스를 웹 서비스로 노출될 인터페이스 집합에 추가합니다. 이 서비스는 COM+ 호스팅 모드를 사용하므로 명시적으로 애플리케이션을 활성화해야 합니다.  
   
      와일드카드 별표(*) 문자를 구성 요소 및 인터페이스에 사용할 수 있지만 선택한 기능만 웹 서비스로 노출하려는 경우가 있을 수도 있으므로 사용하지 마십시오. 이 구성 요소의 다음 버전으로 실행하는 경우 와일드카드를 사용하면 구성 구문을 확인했을 때 표시되지 않은 인터페이스를 실수로 노출할 수도 있습니다.  
   
@@ -65,9 +65,9 @@ ms.locfileid: "64606491"
     ComSvcConfig.exe /install /application:OnlineWarehouse /contract:ItemInventory.Warehouse,IStockLevels /hosting:was /webDirectory:root/OnlineWarehouse /mex /verbose  
     ```  
   
-     이 명령은 OnlineWarehouse COM+ 응용 프로그램에 있는 `IStockLevels` 구성 요소의 `ItemInventory.Warehouse` 인터페이스를 웹 서비스로 노출될 인터페이스의 집합에 추가합니다. 이 서비스는 COM+가 아닌 IIS의 OnlineWarehouse 가상 디렉터리에서 웹 호스팅되므로 필요한 경우 응용 프로그램이 자동으로 활성화됩니다.  
+     이 명령은 OnlineWarehouse COM+ 애플리케이션에 있는 `IStockLevels` 구성 요소의 `ItemInventory.Warehouse` 인터페이스를 웹 서비스로 노출될 인터페이스의 집합에 추가합니다. 이 서비스는 COM+가 아닌 IIS의 OnlineWarehouse 가상 디렉터리에서 웹 호스팅되므로 필요한 경우 애플리케이션이 자동으로 활성화됩니다.  
   
-     웹 호스팅 in-process 구성을 사용하려면 구성 요소 서비스 관리 콘솔을 사용하여 서버 응용 프로그램이 아닌 라이브러리 응용 프로그램으로 실행되도록 COM+ 응용 프로그램을 구성해야 합니다. 서버 응용 프로그램으로 구성된 응용 프로그램은 표준 웹 호스팅 모드를 사용하고 프로세스 홉을 수행하여 각 요청을 처리합니다.  
+     웹 호스팅 in-process 구성을 사용하려면 구성 요소 서비스 관리 콘솔을 사용하여 서버 애플리케이션이 아닌 라이브러리 애플리케이션으로 실행되도록 COM+ 애플리케이션을 구성해야 합니다. 서버 애플리케이션으로 구성된 애플리케이션은 표준 웹 호스팅 모드를 사용하고 프로세스 홉을 수행하여 각 요청을 처리합니다.  
   
      `/mex` 옵션은 같은 전송을 응용 프로그램의 서비스 끝점으로 사용하는 MEX(메타데이터 교환) 서비스 끝점을 추가하여 서비스에서 계약 정의를 검색하려는 클라이언트를 지원합니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "64606491"
     ComSvcConfig.exe /uninstall /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus  
     ```  
   
-     이 명령은 OnlineStore COM+ 응용 프로그램의 `IFinances` 구성 요소에서 `ItemOrders.Financial` 인터페이스를 제거합니다.  
+     이 명령은 OnlineStore COM+ 애플리케이션의 `IFinances` 구성 요소에서 `ItemOrders.Financial` 인터페이스를 제거합니다.  
   
 ### <a name="to-list-currently-exposed-interfaces"></a>현재 노출된 인터페이스를 나열하려면  
   
@@ -99,7 +99,7 @@ ms.locfileid: "64606491"
     ComSvcConfig.exe /list /application:OnlineStore /hosting:complus  
     ```  
   
-     이 명령은 현재 노출된 COM+ 호스팅 인터페이스와 함께 로컬 컴퓨터의 OnlineStore COM+ 응용 프로그램에 대한 해당 주소 및 바인딩 세부 내용을 나열합니다.  
+     이 명령은 현재 노출된 COM+ 호스팅 인터페이스와 함께 로컬 컴퓨터의 OnlineStore COM+ 애플리케이션에 대한 해당 주소 및 바인딩 세부 내용을 나열합니다.  
   
 ### <a name="to-display-help-on-the-options-that-can-be-used-with-the-utility"></a>유틸리티에 사용할 수 있는 옵션에 대한 도움말을 표시하려면  
   

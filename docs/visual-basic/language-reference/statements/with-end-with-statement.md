@@ -15,12 +15,12 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-ms.openlocfilehash: 38a34a4662d969fd526963744b8bd493952d9cff
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3d26932c23299c6fbcb53b1389abd7694f529eef
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615079"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963325"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With 문(Visual Basic)
 개체 또는 구문의 멤버에 액세스할 때 문에서 단순화된 구문을 사용할 수 있도록 단일 개체를 반복적으로 참조하는 일련의 문을 실행합니다.  구조체를 사용하면 멤버 또는 호출 메서드의 값을 읽을 수만 있으며, `With...End With` 문에서 사용된 구조체의 멤버에 값을 할당하도록 시도하는 경우 오류가 발생합니다.  
@@ -62,10 +62,10 @@ End With
   
  블록 외부에서 `With` 문 블록으로 분기할 수 없습니다.  
   
- 블록에 루프가 없으면 문이 한 번만 실행됩니다. 다른 종류의 제어 구조를 중첩할 수 있습니다. 자세한 내용은 [중첩 제어 구조](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)합니다.  
+ 블록에 루프가 없으면 문이 한 번만 실행됩니다. 다른 종류의 제어 구조를 중첩할 수 있습니다. 자세한 내용은 [중첩 컨트롤 구조](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)를 참조 하세요.  
   
 > [!NOTE]
->  개체 이니셜라이저에서도 `With` 키워드를 사용할 수 있습니다. 자세한 내용 및 예제를 참조 하세요. [개체 이니셜라이저: 명명 된 형식과 익명 형식](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) 하 고 [무명 형식을](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)합니다.  
+> 개체 이니셜라이저에서도 `With` 키워드를 사용할 수 있습니다. 자세한 내용 및 예제를 보려면 [개체 이니셜라이저: 명명 된 형식과 익명](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) 형식 및 [익명 형식](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)입니다.  
 >   
 >  인스턴스화한 개체의 필드 또는 속성을 초기화하기 위해서만 `With` 블록을 사용하는 경우 대신 개체 이니셜라이저를 사용할 것을 고려하십시오.  
   

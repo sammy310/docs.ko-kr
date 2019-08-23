@@ -30,12 +30,12 @@ helpviewer_keywords:
 - Is operator [Visual Basic]
 - comparison operators [Visual Basic], Visual Basic
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
-ms.openlocfilehash: 10558563b528ce0bae3f77f31a97a217018f455f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ddb07bdf5f67e281847082ba4487568e9ba3c9f5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666834"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962241"
 ---
 # <a name="comparison-operators-visual-basic"></a>비교 연산자(Visual Basic)
 다음은 Visual Basic에 정의 된 비교 연산자입니다.
@@ -100,7 +100,7 @@ result = string Like pattern
 |`<>`(같지 않음)|`expression1` <> `expression2`|`expression1` = `expression2`|
 
 > [!NOTE]
->  [= 연산자](../../../visual-basic/language-reference/operators/assignment-operator.md) 는 할당 연산자로도 사용 됩니다.
+> [= 연산자](../../../visual-basic/language-reference/operators/assignment-operator.md) 는 할당 연산자로도 사용 됩니다.
 
  연산자, 연산자 및`Like` 연산자에는 위의 표에 있는 연산자와 다른 특정 비교 기능이 있습니다. `IsNot` `Is`
 

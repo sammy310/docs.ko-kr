@@ -17,15 +17,15 @@ helpviewer_keywords:
 - operators [Visual Basic], negation
 - minus operator [Visual Basic]
 ms.assetid: bff2c368-662d-4c92-ac87-1d9bdfd3426a
-ms.openlocfilehash: 1a5c47a2f1bc8a8b9e1b0263b90006a0e58e17bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb34b34986613f36b624c43c04f98390ffba4fe0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013480"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965859"
 ---
 # <a name="--operator-visual-basic"></a>- 연산자(Visual Basic)
-두 숫자 식 또는 숫자 식의 음수 값 간의 차이 반환합니다.  
+두 숫자 식의 차이를 반환 하거나 숫자 식의 음수 값을 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,32 +40,32 @@ ms.locfileid: "62013480"
  필수 요소. 임의의 숫자 식입니다.  
   
  `expression2`  
- 필수 하지 않는 경우는 `–` 연산자가 음수 값을 계산 합니다. 임의의 숫자 식입니다.  
+ `–` 연산자가 음수 값을 계산 하지 않는 경우 필요 합니다. 임의의 숫자 식입니다.  
   
 ## <a name="result"></a>결과  
- 결과 차이점은 `expression1` 하 고 `expression2`, 또는의 부정된 값 `expression1`합니다.  
+ 결과는 `expression1` 와 `expression2`의 차이 또는의 `expression1`부정 값입니다.  
   
- 결과 데이터 형식은 데이터 유형에 대 한 적절 한 숫자 형식 `expression1` 고 `expression2`입니다. "정수 산술" 표를 참조 하십시오 [연산자 결과의 데이터 형식](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)합니다.  
+ 결과 데이터 형식은 및 `expression1` `expression2`의 데이터 형식에 적합 한 숫자 형식입니다. [연산자 결과의 데이터 형식](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)에서 "정수 산술 연산" 표를 참조 하세요.  
   
 ## <a name="supported-types"></a>지원 형식  
- 모든 숫자 형식. 여기에 부동 소수점 및 부호 없는 형식 및 `Decimal`합니다.  
+ 모든 숫자 형식. 여기에는 부호 없는 및 부동 소수점 형식 및 `Decimal`가 포함 됩니다.  
   
 ## <a name="remarks"></a>설명  
- 이전에 표시 된 구문에 나오는 첫 번째 사용 합니다 `–` 연산자가 합니다 *이진* 두 숫자 식의 차이점에 대해 빼기 산술 연산자.  
+ 앞 `–` 에 표시 된 구문에 표시 된 첫 번째 사용에서 연산자는 두 숫자 식의 차이에 대 한 *이진* 산술 빼기 연산자입니다.  
   
- 이전에 표시 된 구문에 표시 된 두 번째 사용에서 합니다 `–` 연산자가는 *단항* 부정 연산자 식의 음수 값입니다. 부호를 반대로 하는 부정은 이런 점에서 `expression1` 결과 양수 경우 `expression1` 음수입니다.  
+ 앞 `–` 에 표시 된 구문에 표시 된 두 번째 사용에서 연산자는 식의 음수 값에 대 한 *단항* 부정 연산자입니다. 이러한 의미에서 부정은의 `expression1` 부호를 반대로 하 여가 음수인 경우 `expression1` 결과가 양수인 것으로 구성 됩니다.  
   
- 두 식이 [아무](../../../visual-basic/language-reference/nothing.md), `–` 연산자 0으로 처리 합니다.  
+ 두 식이 모두 [Nothing](../../../visual-basic/language-reference/nothing.md)으로 계산 되는 `–` 경우 연산자는이 값을 0으로 처리 합니다.  
   
 > [!NOTE]
->  합니다 `–` 연산자 *오버 로드 된*, 클래스 또는 구조체 수 할 동작 피연산자에 해당 클래스 또는 구조체 형식의 경우. 이 연산자를 사용 하 여 이러한 클래스나 구조체에는 코드를 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
+> 연산자를 오버 로드할 수 있습니다. 즉, 피연산자가 해당 클래스 또는 구조체의 형식일 때 클래스 또는 구조체의 동작을 다시 정의할 수 있습니다. `–` 코드가 이러한 클래스 또는 구조체에서이 연산자를 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 `–` 연산자가 두 숫자 간의 차이 반환 하 고 계산 및 숫자를 부정 합니다.  
+ 다음 예에서는 `–` 연산자를 사용 하 여 두 숫자 간의 차이를 계산 하 고 반환한 다음 숫자를 부정 합니다.  
   
  [!code-vb[VbVbalrOperators#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#10)]  
   
- 이러한 문 실행 한 후 다음 `binaryResult` 124.45 포함 및 `unaryResult` –334.90을 포함 합니다.  
+ 이러한 문을 실행 한 후에는 `binaryResult` 124.45이 포함 `unaryResult` 되 고-334.90가 포함 됩니다.  
   
 ## <a name="see-also"></a>참고자료
 

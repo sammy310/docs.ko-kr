@@ -16,31 +16,31 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37f1f6055ec8fa68fe804780d2893d20c978e6bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 277b93267f0537c8e499a8d8f3b456c4396a975c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663745"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966349"
 ---
 # <a name="imetadataerror-interface"></a>IMetaDataError 인터페이스
-메타 데이터를 병합 하는 동안 오류를 보고 하는 콜백 메커니즘을 제공 합니다.  
+메타 데이터 병합 중에 오류를 보고 하는 콜백 메커니즘을 제공 합니다.  
   
 > [!NOTE]
->  `IMetaDataError` 클라이언트에서 인터페이스를 구현 해야 합니다.  
+> 인터페이스 `IMetaDataError` 는 클라이언트에 의해 구현 되어야 합니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|설명|  
+|메서드|Description|  
 |------------|-----------------|  
-|[OnError 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|메타 데이터를 병합 하는 동안 발생 하는 오류에 대 한 알림을 제공 합니다.|  
+|[OnError 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|메타 데이터 병합 중에 발생 하는 오류에 대 한 알림을 제공 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
- **헤더:** Cor.h  
+ **헤더:** Cor  
   
- **라이브러리:** MsCorEE.dll에서 리소스로 사용  
+ **라이브러리** Mscoree.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

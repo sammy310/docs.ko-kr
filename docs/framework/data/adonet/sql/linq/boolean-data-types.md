@@ -2,12 +2,12 @@
 title: Boolean 데이터 형식
 ms.date: 03/30/2017
 ms.assetid: 57f7376b-4b11-4b35-98a9-780382053ceb
-ms.openlocfilehash: 2535d72a89691466b977e1d4c460ff73e3b93dc2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f200445d2ba7846f9dc467c7f06bce4225c88865
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877398"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964075"
 ---
 # <a name="boolean-data-types"></a>Boolean 데이터 형식
 부울 연산자는 단락(short-circuiting) 동작이 변환되지 않는 것을 제외하고 CLR(공용 언어 런타임)에서 예상대로 동작합니다. 예를 들어 Visual Basic `AndAlso` 연산자는 `And` 연산자와 같이 동작합니다. C# `&&` 연산자는 `&` 연산자와 같이 동작합니다.  
@@ -16,12 +16,12 @@ ms.locfileid: "61877398"
   
 |Visual Basic|C#|  
 |------------------|---------|  
-|[And 연산자](~/docs/visual-basic/language-reference/operators/and-operator.md)|[& 연산자](~/docs/csharp/language-reference/operators/boolean-logical-operators.md#logical-and-operator-)|  
-|[AndAlso 연산자](~/docs/visual-basic/language-reference/operators/andalso-operator.md)|[&& 연산자](~/docs/csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-)|  
-|[Or 연산자](~/docs/visual-basic/language-reference/operators/or-operator.md)|[&#124;연산자](~/docs/csharp/language-reference/operators/boolean-logical-operators.md#logical-or-operator-)|  
-|[OrElse 연산자](~/docs/visual-basic/language-reference/operators/orelse-operator.md)|[&#124;&#124;연산자](~/docs/csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-)|  
-|[Xor 연산자](~/docs/visual-basic/language-reference/operators/xor-operator.md)|[^ 연산자](~/docs/csharp/language-reference/operators/boolean-logical-operators.md#logical-exclusive-or-operator-)|  
-|[Not 연산자](~/docs/visual-basic/language-reference/operators/not-operator.md)|[\! 연산자](~/docs/csharp/language-reference/operators/boolean-logical-operators.md#logical-negation-operator-)|  
+|[And 연산자](../../../../../visual-basic/language-reference/operators/and-operator.md)|[& 연산자](../../../../../csharp/language-reference/operators/boolean-logical-operators.md#logical-and-operator-)|  
+|[AndAlso 연산자](../../../../../visual-basic/language-reference/operators/andalso-operator.md)|[&& 연산자](../../../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-)|  
+|[Or 연산자](../../../../../visual-basic/language-reference/operators/or-operator.md)|[&#124;연산자](../../../../../csharp/language-reference/operators/boolean-logical-operators.md#logical-or-operator-)|  
+|[OrElse 연산자](../../../../../visual-basic/language-reference/operators/orelse-operator.md)|[&#124;&#124;연산자](../../../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-)|  
+|[Xor 연산자](../../../../../visual-basic/language-reference/operators/xor-operator.md)|[^ 연산자](../../../../../csharp/language-reference/operators/boolean-logical-operators.md#logical-exclusive-or-operator-)|  
+|[Not 연산자](../../../../../visual-basic/language-reference/operators/not-operator.md)|[\! 연산자](../../../../../csharp/language-reference/operators/boolean-logical-operators.md#logical-negation-operator-)|  
   
 ## <a name="see-also"></a>참고자료
 

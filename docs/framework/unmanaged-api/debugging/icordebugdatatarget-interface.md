@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f9a87ae4381ec5bc0d8c416ef4ee4c13b04a862f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0c6a8ee1bcc65e640ef871e57acdeef21acd7896
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606893"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930831"
 ---
 # <a name="icordebugdatatarget-interface"></a>ICorDebugDataTarget 인터페이스
 특정 대상 프로세스에 대한 액세스를 제공하는 콜백 인터페이스를 제공합니다.  
@@ -30,32 +30,32 @@ ms.locfileid: "64606893"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetPlatform 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)|프로세서 아키텍처와 대상 프로세스가 실행 되는 운영 체제를 포함 하 여 플랫폼에 대 한 정보를 제공 합니다.|  
-|[ReadVirtual 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-readvirtual-method.md)|지정된 된 주소에서 시작 하는 인접 한 메모리 블록을 가져옵니다 제공된 된 버퍼에 반환 합니다.|  
-|[GetThreadContext 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getthreadcontext-method.md)|지정 된 스레드에 대 한 현재 스레드 컨텍스트를 요청합니다.|  
+|[GetPlatform 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)|대상 프로세스가 실행 되는 프로세서 아키텍처 및 운영 체제를 포함 하 여 플랫폼에 대 한 정보를 제공 합니다.|  
+|[ReadVirtual 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-readvirtual-method.md)|지정 된 주소에서 시작 하는 연속 메모리 블록을 가져와 제공 된 버퍼에 반환 합니다.|  
+|[GetThreadContext 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getthreadcontext-method.md)|지정 된 스레드에 대 한 현재 스레드 컨텍스트를 요청 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `ICorDebugDataTarget` 및 해당 메서드는 다음과 같은 특징이 있습니다.  
+ `ICorDebugDataTarget`및 해당 메서드의 특성은 다음과 같습니다.  
   
-- 디버깅 서비스는 메모리 및 대상 프로세스에서 다른 데이터에 액세스 하는이 인터페이스의 메서드를 호출 합니다.  
+- 디버깅 서비스는이 인터페이스의 메서드를 호출 하 여 대상 프로세스의 메모리 및 기타 데이터에 액세스 합니다.  
   
-- 디버거 클라이언트는 특정 대상 (예를 들어 활성 프로세스 또는 덤프 메모리)에 대해 적절 하 게이 인터페이스를 구현 해야 합니다.  
+- 디버거 클라이언트는 특정 대상에 적합 하 게이 인터페이스를 구현 해야 합니다 (예: 라이브 프로세스 또는 메모리 덤프).  
   
-- 합니다 `ICorDebugDataTarget` 메서드를 다른 구현 된 메서드 내 에서만 호출할 수 있습니다 `ICorDebug*` 인터페이스입니다. 이렇게 하면 디버거 클라이언트에는 스레드를 통해 호출 시기를 제어 합니다.  
+- 메서드 `ICorDebugDataTarget` 는 다른 `ICorDebug*` 인터페이스에 구현 된 메서드 내 에서만 호출할 수 있습니다. 이렇게 하면 디버거 클라이언트에서 호출 되는 스레드 및 시기를 제어할 수 있습니다.  
   
-- `ICorDebugDataTarget` 구현 항상 대상에 대 한 최신 정보를 반환 해야 합니다.  
+- `ICorDebugDataTarget` 구현은 항상 대상에 대 한 최신 정보를 반환 해야 합니다.  
   
- 대상 프로세스를 중지 하는 동안 어떤 방식으로든에서 변경 되지 `ICorDebug*` 인터페이스 (및 따라서 `ICorDebugDataTarget` 메서드) 호출 합니다. 활성 프로세스 및 해당 상태의 변경 내용을 대상 경우 합니다 [iclrdebugging:: Openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) 대체 ICorDebugProcess 인스턴스를 제공 하기 위해 다시 호출 될 메서드가 있습니다.  
+ 인터페이스 ( `ICorDebug*` `ICorDebugDataTarget` 및 메서드)를 호출 하는 동안에는 대상 프로세스를 중지 하 고 변경 하지 않아야 합니다. 대상이 라이브 프로세스이 고 상태가 변경 되 면 [ICLRDebugging:: OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) 메서드를 다시 호출 하 여 대체 ICorDebugProcess 인스턴스를 제공 해야 합니다.  
   
 > [!NOTE]
->  이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
+> 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
- **라이브러리:** CorGuids.lib  
+ **라이브러리** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

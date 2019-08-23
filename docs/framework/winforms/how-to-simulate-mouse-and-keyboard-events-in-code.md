@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: 1d2e837ec13e6a0b507d004cd75c2f77ae0008dc
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 13ed0e5268f8bcfe2a504040803f3f96909657eb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583394"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964257"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>방법: 코드에서 마우스 및 키보드 이벤트 시뮬레이션
 Windows Forms는 프로그래밍 방식으로 마우스 및 키보드 입력을 시뮬레이션하기 위한 여러 가지 옵션을 제공합니다. 이 항목에서는 이러한 옵션에 대해 간략하게 설명합니다.  
@@ -42,7 +42,7 @@ Windows Forms는 프로그래밍 방식으로 마우스 및 키보드 입력을 
 >  다양한 키보드를 통해 전 세계에서 사용하기 위한 응용 프로그램인 경우 <xref:System.Windows.Forms.SendKeys.Send%2A?displayProperty=nameWithType>를 사용하면 예기치 않은 결과가 발생할 수 있으며 피해야 합니다.  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.SendKeys> 클래스는 Windows Vista에서 실행되는 응용 프로그램에서 사용할 수 있도록 .NET Framework 3.0에서 업데이트되었습니다. Windows Vista의 향상된 보안(사용자 계정 컨트롤 또는 UAC라고 함) 때문에 이전 구현이 예상대로 작동하지 않습니다.  
+> <xref:System.Windows.Forms.SendKeys> 클래스는 Windows Vista에서 실행되는 응용 프로그램에서 사용할 수 있도록 .NET Framework 3.0에서 업데이트되었습니다. Windows Vista의 향상된 보안(사용자 계정 컨트롤 또는 UAC라고 함) 때문에 이전 구현이 예상대로 작동하지 않습니다.  
 >   
 >  <xref:System.Windows.Forms.SendKeys> 클래스는 타이밍 문제에 취약하며, 이를 해결하기 위해 일부 개발자가 노력해야 했습니다. 업데이트된 구현도 타이밍 문제에 취약하지만 약간 더 빠르며 해결 방법에 대한 변경이 필요할 수도 있습니다. <xref:System.Windows.Forms.SendKeys> 클래스는 먼저 이전 구현을 사용하려고 시도하며, 실패할 경우 새 구현을 사용합니다. 따라서 <xref:System.Windows.Forms.SendKeys> 클래스는 운영 체제마다 다르게 동작할 수 있습니다. 또한 <xref:System.Windows.Forms.SendKeys> 클래스가 새 구현을 사용하는 경우 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 메서드는 다른 프로세스로 전송된 메시지가 처리될 때까지 기다리지 않습니다.  
 >   
@@ -69,7 +69,7 @@ Windows Forms는 프로그래밍 방식으로 마우스 및 키보드 입력을 
 1. 키 입력을 수신할 애플리케이션 창을 활성화한 다음 <xref:System.Windows.Forms.SendKeys.Send%2A> 또는 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 메서드를 호출합니다. 다른 애플리케이션을 활성화할 관리되는 메서드가 없으므로 네이티브 Windows 메서드를 사용하여 다른 애플리케이션에 포커스를 강제로 설정해야 합니다. 다음 코드 예제에서는 플랫폼 호출을 통해 `FindWindow` 및 `SetForegroundWindow` 메서드를 호출하여 계산기 애플리케이션 창을 활성화한 다음 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 를 호출하여 계산기 애플리케이션에 일련의 계산을 실행합니다.  
   
     > [!NOTE]
-    >  계산기 애플리케이션을 찾는 `FindWindow` 호출의 올바른 매개 변수는 Windows 버전에 따라 달라집니다.  다음 코드에서는 [!INCLUDE[win7](../../../includes/win7-md.md)]에서 계산기 애플리케이션을 찾습니다. [!INCLUDE[windowsver](../../../includes/windowsver-md.md)]에서 첫 번째 매개 변수를 "SciCalc"로 변경합니다. Visual Studio에 포함된 Spy++ 도구를 사용하여 올바른 매개 변수를 확인할 수 있습니다.  
+    > 계산기 애플리케이션을 찾는 `FindWindow` 호출의 올바른 매개 변수는 Windows 버전에 따라 달라집니다.  다음 코드에서는 [!INCLUDE[win7](../../../includes/win7-md.md)]에서 계산기 애플리케이션을 찾습니다. [!INCLUDE[windowsver](../../../includes/windowsver-md.md)]에서 첫 번째 매개 변수를 "SciCalc"로 변경합니다. Visual Studio에 포함된 Spy++ 도구를 사용하여 올바른 매개 변수를 확인할 수 있습니다.  
   
      [!code-cpp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#5)]
      [!code-csharp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#5)]

@@ -9,26 +9,26 @@ helpviewer_keywords:
 - data grids [Windows Forms], customizing rows
 - DataGridView control [Windows Forms], customizing rows
 ms.assetid: 6db61607-7e57-4a84-8d63-9d6a7ed7f9ff
-ms.openlocfilehash: 1f6312f9ac8520b2131e1d2d7a7fb996aee6060e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0dba318e6aa35761f4e9471fdb13b65644747b57
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651589"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966498"
 ---
 # <a name="how-to-use-the-row-template-to-customize-rows-in-the-windows-forms-datagridview-control"></a>방법: 행 템플릿을 사용하여 Windows Forms DataGridView 컨트롤에서 행 사용자 지정
-<xref:System.Windows.Forms.DataGridView> 컨트롤은 데이터 바인딩을 통해 또는 호출 하는 경우 컨트롤에 추가 하는 모든 행에 대 한 기준으로 행 템플릿을 사용 합니다 <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType> 메서드를 사용 하 여 기존 행을 지정 하지 않고 있습니다.  
+컨트롤 <xref:System.Windows.Forms.DataGridView> 은 데이터 바인딩을 통해 또는 사용할 기존 행을 지정 하지 않고 <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType> 메서드를 호출 하는 경우 컨트롤에 추가 되는 모든 행의 기준으로 행 템플릿을 사용 합니다.  
   
- 행 템플릿을 큰 세부적으로 제어할 모양 및 동작 행 보다는 <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> 속성을 제공 합니다. 행 템플릿을 사용 하 여 설정할 수 있습니다 <xref:System.Windows.Forms.DataGridViewRow> 속성을 포함 하 여 <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A>입니다.  
+ 행 템플릿을 사용 하면 속성이 제공 하 <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> 는 것 보다 행의 모양과 동작을 보다 효율적으로 제어할 수 있습니다. 행 템플릿을 사용 하면를 포함 <xref:System.Windows.Forms.DataGridViewRow> <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A>하 여 모든 속성을 설정할 수 있습니다.  
   
- 특정 효과 달성 하기 위해 행 템플릿을 사용 해야 하는 몇 가지 경우가 있습니다. 예를 들어에 행 높이 정보를 저장할 수 없습니다는 <xref:System.Windows.Forms.DataGridViewCellStyle>이므로 모든 행에서 사용 하는 기본 높이 변경 하려면 행 템플릿을 사용 해야 합니다. 행 템플릿을 유용에서 파생 된 고유한 클래스를 만들 때 <xref:System.Windows.Forms.DataGridViewRow> 하려는 컨트롤에 새 행을 추가할 때 사용 되는 사용자 지정 형식입니다.  
+ 특정 효과를 얻기 위해 행 템플릿을 사용 해야 하는 경우도 있습니다. 예를 들어 행 높이 정보를에 저장할 <xref:System.Windows.Forms.DataGridViewCellStyle>수 없기 때문에 모든 행에 사용 되는 기본 높이를 변경 하려면 행 템플릿을 사용 해야 합니다. 행 템플릿은에서 <xref:System.Windows.Forms.DataGridViewRow> 파생 된 고유한 클래스를 만들고 새 행이 컨트롤에 추가 될 때 사용자 지정 형식을 사용 하려는 경우에도 유용 합니다.  
   
 > [!NOTE]
->  행 템플릿은 행을 추가 하는 경우에 사용 됩니다. 행 템플릿을 변경 하 여 기존 행을 변경할 수 없습니다.  
+> 행을 추가 하는 경우에만 행 템플릿이 사용 됩니다. 행 템플릿을 변경 하 여 기존 행을 변경할 수 없습니다.  
   
-### <a name="to-use-the-row-template"></a>행 템플릿을 사용 하 여  
+### <a name="to-use-the-row-template"></a>행 템플릿을 사용 하려면  
   
-- 검색 된 개체의 속성을 설정 합니다 <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType> 속성입니다.  
+- <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType> 속성에서 검색 된 개체에 대 한 속성을 설정 합니다.  
   
      [!code-cpp[System.Windows.Forms.DataGridView.RowTemplate#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.RowTemplate/CPP/datagridviewrowtemplate.cpp#1)]
      [!code-csharp[System.Windows.Forms.DataGridView.RowTemplate#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.RowTemplate/CS/datagridviewrowtemplate.cs#1)]

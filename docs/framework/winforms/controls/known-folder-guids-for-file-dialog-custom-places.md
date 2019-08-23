@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: 09c51341a2b81c21804bcca3b244bbebdb7342b6
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: ae4b89eb45a82299b6f35827eb576968f6cc5bae
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758770"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962590"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>파일 대화 상자의 사용자 지정 위치에 대한 알려진 폴더 GUID
-사용할를 <xref:System.Guid> 지정 하는 [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] 알려진 폴더에 폴더를 추가 하는 경우는 <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> 컬렉션입니다. 알려진된 폴더 Guid는 대/소문자 구분 하지 않으며 Windows SDK의 KnownFolders.h 파일에서 정의 됩니다.  
+를 <xref:System.Guid> 사용 하 여 폴더를 [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> 컬렉션에 추가할 때 알려진 폴더를 지정 합니다. 알려진 폴더 Guid는 대/소문자를 구분 하지 않으며 Windows SDK의 KnownFolders .h 파일에 정의 됩니다.  
   
 > [!NOTE]
->  일부 경우에는 알려진 폴더에 추가 합니다 <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> 에 표시 되지 것입니다는 **즐겨찾기 링크** 영역입니다. 예를 들어, 지정된 된 알려진 폴더를 응용 프로그램을 실행 하는 컴퓨터에 없는 경우에 알려진 폴더 표시 되지 않습니다.  
+> 일부 경우에는 <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> 에 추가 된 알려진 폴더가 **즐겨 찾는 링크** 영역에 표시 되지 않습니다. 예를 들어, 응용 프로그램을 실행 하는 컴퓨터에 지정 된 알려진 폴더가 없으면 알려진 폴더가 표시 되지 않습니다.  
   
-## <a name="list-of-guids"></a>Guid의 목록  
- 다음 표에서 [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] 알려진 폴더 및 이와 관련 된 <xref:System.Guid>합니다.  
+## <a name="list-of-guids"></a>Guid 목록  
+ 다음 표에서는 알려진 [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] 폴더와 해당 폴더에 <xref:System.Guid>대 한 연결을 보여 줍니다.  
   
  AddNewPrograms  
  DE61D971-5EBC-4F02-A3A9-6C82895E5C04  
@@ -34,7 +34,7 @@ ms.locfileid: "66758770"
  AppUpdates  
  A305CE99-F527-492B-8B1A-7E76FA98D6E4  
   
- CDBurning  
+ Cdburto  
  9E52AB10-F80D-49DF-ACB8-4330F5687855  
   
  ChangeRemovePrograms  
@@ -58,19 +58,19 @@ ms.locfileid: "66758770"
  CommonTemplates  
  B94237E7-57AC-4347-9151-B08C6C32D1F7  
   
- 컴퓨터  
+ Computer  
  0AC0837C-BBF8-452A-850D-79D08E667CA7  
   
- 충돌  
+ 약속  
  4BFEFB45-347D-4006-A5BE-AC0CB0567192  
   
- 연결  
+ Connections  
  6F0CD92B-2E97-45D1-88FF-B0D186B8DEDD  
   
  연락처  
  56784854-C6CB-462B-8169-88E350ACB882  
   
- ControlPanel  
+ 제어판  
  82A74AEB-AEB4-465C-A014-D097EE346D63  
   
  쿠키  
@@ -127,13 +127,13 @@ ms.locfileid: "66758770"
  OriginalImages  
  2C36C0AA-5812-4B87-BFD0-4CD0DFB19B39  
   
- PhotoAlbums  
+ 사진 앨범  
  69D2CF90-FC33-4FB7-9A0C-EBB0F0FCB43C  
   
  사진  
  33E28130-4E1E-4676-835A-98395C3BC3BB  
   
- 재생 목록  
+ 목록과  
  DE92C1C7-837F-4F69-A3BB-86E631204A23  
   
  프린터  
@@ -244,13 +244,13 @@ ms.locfileid: "66758770"
  SidebarDefaultParts  
  7B396E54-9EC5-4300-BE0A-2482EBAE1A26  
   
- SidebarParts  
+ 구성 요소 구성 요소  
  A75D362E-50FC-4FB7-AC2C-A8BEAA314493  
   
  StartMenu  
  625B53C3-AB48-4EC1-BA1F-A1EF4146FC19  
   
- Startup 클래스  
+ 시작  
  B97D20BB-F46A-4C97-BA10-5E3608430854  
   
  SyncManager  
@@ -289,4 +289,4 @@ ms.locfileid: "66758770"
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.Forms.FileDialogCustomPlace>
-- [방법: 파일 대화 상자에 사용자 지정 위치 추가](how-to-add-a-custom-place-to-a-file-dialog-box.md)
+- [방법: 파일에 사용자 지정 장소 추가 대화 상자](how-to-add-a-custom-place-to-a-file-dialog-box.md)

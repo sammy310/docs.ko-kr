@@ -2,12 +2,12 @@
 title: <serviceTimeouts>
 ms.date: 03/30/2017
 ms.assetid: ada536cf-97dc-4cd7-89ec-ed1466c1c557
-ms.openlocfilehash: 5c2f0ef7ad509eb5d6c686802c3fe5a75ea1a258
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1792fec4f86c9ac31107c043b976cfafcfa4c13
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758095"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937090"
 ---
 # <a name="servicetimeouts"></a>\<serviceTimeouts>
 서비스에 대한 제한 시간을 지정합니다.  
@@ -32,9 +32,9 @@ ms.locfileid: "61758095"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
-|`transactionTimeout`|클라이언트에서 서버로 트랜잭션을 전달해야 하는 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다. 기본값은 "00: 00:00"입니다.|  
+|`transactionTimeout`|클라이언트에서 서버로 트랜잭션을 전달해야 하는 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다. 기본값은 "00:00:00"입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -43,7 +43,7 @@ ms.locfileid: "61758095"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|동작 요소를 지정합니다.|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|동작 요소를 지정합니다.|  
   
 ## <a name="see-also"></a>참고자료
 

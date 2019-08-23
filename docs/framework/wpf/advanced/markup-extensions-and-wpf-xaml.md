@@ -15,12 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: 25f6cbbc1df8a4a2b4ad9025b2381d26153e4b66
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: f0eb4a90b09f49ced45fa8453356e1d6fb3b4af1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364434"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965272"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>태그 확장명 및 WPF XAML
 이 항목에서는 XAML 태그 확장의 구문 규칙, 용도, 기반이 되는 클래스 개체 모델 등을 비롯한 개념에 대해 소개합니다. 태그 확장은 XAML 언어의 일반적 기능이며 XAML 서비스에 대한 .NET 구현의 일반적 기능입니다. 이 항목에서는 WPF XAML에서 사용할 태그 확장에 대해 자세히 설명합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "68364434"
 - `x:Array`는 WPF 기본 요소 및 컨트롤 모델에서 제공하는 컬렉션 지원이 의도적으로 사용되지 않는 경우 XAML 구문에서 일반적인 배열 만들기를 지원합니다. 자세한 내용은 [x:Array 태그 확장](../../xaml-services/x-array-markup-extension.md)을 참조하세요.  
   
 > [!NOTE]
->  `x:` 접두사는 XAML 파일 또는 프로덕션의 루트 요소에서 XAML 언어 내장 형식의 일반적인 XAML 네임스페이스 매핑에 사용됩니다. 예를 들어, WPF 응용 프로그램에 대 한 Visual Studio 템플릿은이 `x:` 매핑을 사용 하 여 XAML 파일을 시작 합니다. 사용자 고유의 XAML 네임스페이스 매핑에서 다른 접두사 토큰을 선택할 수 있지만 이 설명서에서는 특정 프레임워크와 관련되지 않은 WPF 기본 네임스페이스나 다른 XAML 네임스페이스와 달리 XAML 언어의 XAML 네임스페이스에서 정의된 부분인 해당 엔터티를 식별하는 방법으로 기본 `x:` 매핑을 가정합니다.  
+> `x:` 접두사는 XAML 파일 또는 프로덕션의 루트 요소에서 XAML 언어 내장 형식의 일반적인 XAML 네임스페이스 매핑에 사용됩니다. 예를 들어, WPF 응용 프로그램에 대 한 Visual Studio 템플릿은이 `x:` 매핑을 사용 하 여 XAML 파일을 시작 합니다. 사용자 고유의 XAML 네임스페이스 매핑에서 다른 접두사 토큰을 선택할 수 있지만 이 설명서에서는 특정 프레임워크와 관련되지 않은 WPF 기본 네임스페이스나 다른 XAML 네임스페이스와 달리 XAML 언어의 XAML 네임스페이스에서 정의된 부분인 해당 엔터티를 식별하는 방법으로 기본 `x:` 매핑을 가정합니다.  
   
 <a name="WPF_Specific_Markup_Extensions"></a>   
 ## <a name="wpf-specific-markup-extensions"></a>WPF 관련 태그 확장  
@@ -71,7 +71,7 @@ ms.locfileid: "68364434"
 - `ComponentResourceKey` 및 `ThemeDictionary`는 리소스 조회, 특히 사용자 지정 컨트롤과 함께 패키지된 리소스 및 테마를 지원합니다. 자세한 내용은 [ComponentResourceKey 태그 확장](componentresourcekey-markup-extension.md), [ThemeDictionary 태그 확장](themedictionary-markup-extension.md) 또는 [컨트롤 제작 개요](../controls/control-authoring-overview.md)를 참조하세요.  
   
 <a name="StarExtension"></a>   
-## <a name="extension-classes"></a>*Extension 클래스  
+## <a name="extension-classes"></a>\*확장 클래스  
  일반 xaml 언어 및 WPF 관련 태그 확장의 경우 각 태그 확장의 동작은에서 `*Extension` <xref:System.Windows.Markup.MarkupExtension>파생 되는 클래스를 통해 XAML 프로세서로 식별 되며,의 <xref:System.Windows.Markup.StaticExtension.ProvideValue%2A> 구현을 제공 합니다. 방법이. 각 확장에서 이 메서드는 태그 확장이 평가될 때 반환되는 개체를 제공합니다. 반환되는 개체는 대개 태그 확장에 전달된 다양한 문자열 토큰을 기반으로 평가됩니다.  
   
  예를 들어, <xref:System.Windows.StaticResourceExtension> 클래스는 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> 구현에서 요청 된 개체를 반환 하 고, 해당 구현에 대 한 입력을 사용 하는 문자열이 되도록 실제 리소스 조회의 표면 구현을 제공 합니다. 에서 리소스를 조회 `x:Key`합니다. 기존 태그 확장을 사용할 때에는 이러한 구현 세부 사항이 중요하지 않습니다.  
@@ -88,7 +88,7 @@ ms.locfileid: "68364434"
 - 구분된 개별 토큰에 등호가 포함되지 않은 경우 각 토큰은 생성자 인수로 처리됩니다. 각 생성자 매개 변수는 해당 시그니처에 필요한 형식과 순서로 지정되어야 합니다.  
   
     > [!NOTE]
-    >  XAML 프로세서는 여러 쌍 중 인수 수가 일치하는 생성자를 호출해야 합니다. 이러한 이유로 사용자 지정 태그 확장을 구현 하는 경우 동일한 인수 개수로 여러 생성자를 제공 하지 마십시오. 매개 변수 수가 동일한 태그 확장 생성자 경로가 둘 이상 있을 때의 XAML 프로세서 동작은 정의되어 있지 않지만, 태그 확장 형식 정의에 이 상황이 있는 경우 XAML 프로세서에서 사용에 대한 예외를 throw할 수 있다고 예상해야 합니다.  
+    > XAML 프로세서는 여러 쌍 중 인수 수가 일치하는 생성자를 호출해야 합니다. 이러한 이유로 사용자 지정 태그 확장을 구현 하는 경우 동일한 인수 개수로 여러 생성자를 제공 하지 마십시오. 매개 변수 수가 동일한 태그 확장 생성자 경로가 둘 이상 있을 때의 XAML 프로세서 동작은 정의되어 있지 않지만, 태그 확장 형식 정의에 이 상황이 있는 경우 XAML 프로세서에서 사용에 대한 예외를 throw할 수 있다고 예상해야 합니다.  
   
 - 구분 된 개별 토큰에 등호가 포함 된 경우 XAML 프로세서는 먼저 태그 확장에 대해 매개 변수가 없는 생성자를 호출 합니다. 그런 다음 각 이름=값 쌍이 태그 확장에 존재하는 속성 이름과 해당 속성에 할당할 값으로 해석됩니다.  
   

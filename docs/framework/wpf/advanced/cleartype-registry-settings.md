@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 8f1c4415a834f7eb7c3048a89ab81de6921b7bf6
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f4b5a0c3764c173afe03adb67fd3df9d17d9fdcb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629932"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964887"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType 레지스트리 설정
 이 항목에서는 WPF 응용 프로그램에서 사용 되는 Microsoft ClearType 레지스트리 설정에 대 한 개요를 제공 합니다.  
@@ -36,12 +36,12 @@ ms.locfileid: "68629932"
 |픽셀 구조체|디스플레이 디바이스의 픽셀 배치를 설명합니다.|  
 |텍스트 대비 수준|표시되는 텍스트의 대비 수준을 설명합니다.|  
   
- 이러한 설정은 식별 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]된 ClearType 레지스트리 설정을 참조 하는 방법을 알고 있는 외부 구성 유틸리티에서 액세스할 수 있습니다. 이러한 설정은 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 레지스트리 편집기를 통해 직접 값에 액세스하여 만들거나 수정할 수도 있습니다.  
+ 이러한 설정은 식별 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]된 ClearType 레지스트리 설정을 참조 하는 방법을 알고 있는 외부 구성 유틸리티에서 액세스할 수 있습니다. 이러한 설정은 Windows 레지스트리 편집기를 사용 하 여 값에 직접 액세스 하 여 만들거나 수정할 수도 있습니다.  
   
- ClearType 레지스트리 설정 (기본 상태)이 설정 되지 않은 경우 응용 프로그램은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 글꼴 다듬기 설정에 대 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 한 시스템 매개 변수 정보를 쿼리 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
+ ClearType 레지스트리 설정 (기본 상태)이 설정 되어 있지 않으면 응용 프로그램은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Windows 시스템 매개 변수 정보에서 글꼴 다듬기 설정을 쿼리 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
   
 > [!NOTE]
->  표시 장치 이름을 열거 하는 `SystemParametersInfo` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 방법에 대 한 자세한 내용은 함수를 참조 하세요.  
+> 표시 장치 이름을 열거 하는 `SystemParametersInfo` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 방법에 대 한 자세한 내용은 함수를 참조 하세요.  
   
 <a name="ClearType_level"></a>   
 ## <a name="cleartype-level"></a>ClearType 수준  
@@ -59,7 +59,7 @@ ms.locfileid: "68629932"
  ![레지스트리 편집기의 ClearType 설정](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]응용 프로그램은 ClearType을 사용 하거나 사용 하지 않고 두 가지 모드 중 하나로 텍스트를 렌더링 합니다. ClearType 없이 텍스트를 렌더링 하는 경우 회색조 렌더링 이라고 합니다.  
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]응용 프로그램은 ClearType을 사용 하거나 사용 하지 않고 두 가지 모드 중 하나로 텍스트를 렌더링 합니다. ClearType 없이 텍스트를 렌더링 하는 경우 회색조 렌더링 이라고 합니다.  
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>감마 수준  
@@ -89,7 +89,7 @@ ms.locfileid: "68629932"
  픽셀 구조체는 0에서 2까지의 정수 값에 해당합니다. 기본 수준은 플랫 픽셀 구조체를 나타내는 0입니다.  
   
 > [!NOTE]
->  표시 장치 이름을 열거 하는 `EnumDisplayDevices` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 방법에 대 한 자세한 내용은 함수를 참조 하세요.  
+> 표시 장치 이름을 열거 하는 `EnumDisplayDevices` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 방법에 대 한 자세한 내용은 함수를 참조 하세요.  
   
 ### <a name="registry-setting"></a>레지스트리 설정  
  픽셀 구조체에 대한 레지스트리 설정 위치는 특정 디스플레이 디바이스 이름에 해당하는 로컬 컴퓨터 설정입니다.  

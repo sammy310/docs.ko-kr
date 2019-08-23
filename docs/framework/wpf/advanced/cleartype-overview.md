@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 405d06a8da8ec5c428c1565bcd08236de0f1fa88
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 11019d564e7e658b745aec4254ad9a0c582b8416
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68672054"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964924"
 ---
 # <a name="cleartype-overview"></a>ClearType 개요
 이 항목에서는에서 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]확인할 수 있는 Microsoft ClearType 기술에 대해 간략하게 설명 합니다.  
@@ -55,7 +55,7 @@ ClearType y 방향 앤티앨리어싱으로 표시된 텍스트
 ## <a name="hardware-acceleration"></a>하드웨어 가속  
  의 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ClearType은 성능 향상을 위해 하드웨어 가속 기능을 활용 하 고 CPU 부하 및 시스템 메모리 요구 사항을 줄일 수 있습니다. ClearType은 그래픽 카드의 픽셀 셰이더 및 비디오 메모리를 사용 하 여 특히 애니메이션을 사용 하는 경우 텍스트의 렌더링 속도를 향상 합니다.  
   
- 의 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] cleartype은 시스템 차원의 cleartype 설정을 수정 하지 않습니다. 에서 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ClearType을 사용 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 하지 않도록 설정 하면 앤티 앨리어싱 모드로 앤티앨리어싱 모드가 설정 됩니다. 또한 cleartype [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 은 [cleartype 튜너 PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)의 설정을 수정 하지 않습니다.  
+ 의 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] cleartype은 시스템 차원의 cleartype 설정을 수정 하지 않습니다. Windows에서 ClearType을 사용 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 하지 않도록 설정 하면 앤티 앨리어싱 모드로 앤티 앨리어싱 됩니다. 또한 cleartype [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 은 [cleartype 튜너 PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)의 설정을 수정 하지 않습니다.  
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 아키텍처 디자인과 관련된 결정 중 하나는 더 광범위하게 보급되고 있는 고해상도 DPI 모니터를 더 효과적으로 지원하기 위해 해상도의 영향을 받지 않는 레이아웃이 있어야 한다는 것입니다. 이에 따라 일부 동아시아 글꼴의 앨리어싱된 텍스트 렌더링과 비트맵이 모두 해상도의 영향을 받기 때문에 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 이러한 렌더링과 비트맵을 지원하지 않습니다.  
   
