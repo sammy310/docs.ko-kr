@@ -3,12 +3,12 @@ title: WIF 및 웹 팜
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: 656e7b116b9da68dbb38a5a2fc3d1ed90fda576a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e6806971bd2260785d66bfdb54a3e2938043c746
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592274"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967185"
 ---
 # <a name="wif-and-web-farms"></a>WIF 및 웹 팜
 WIF(Windows Identity Foundation)를 사용하여 웹 팜에 배포된 RP(신뢰 당사자) 애플리케이션의 리소스를 보호하는 경우 특정 단계를 수행하여 WIF가 팜의 여러 컴퓨터에서 실행되는 RP 애플리케이션 인스턴스의 토큰을 처리할 수 있도록 해야 합니다. 이 처리에는 세션 토큰 시그니처의 유효성 검사, 세션 토큰 암호화 및 암호 해독, 세션 토큰 캐싱 및 재생된 보안 토큰 검색이 포함됩니다.  
@@ -55,10 +55,10 @@ WIF(Windows Identity Foundation)를 사용하여 웹 팜에 배포된 RP(신뢰 
 - 응용 프로그램이 재생된 토큰을 검색하는 경우 <xref:System.IdentityModel.Tokens.TokenReplayCache>에서 파생하고 [\<tokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) 구성 요소의 토큰 재생 캐싱 서비스를 가리켜 토큰 재생 캐시에 대한 유사한 분산 캐싱 전략을 따라야 합니다.  
   
 > [!IMPORTANT]
->  만들어진 모든 예제 XML 및이 항목의 코드를 [ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408) 샘플입니다.  
+> 이 항목의 모든 예제 XML 및 코드는 [ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408) 샘플에서 가져온 것입니다.  
   
 > [!IMPORTANT]
->  이 항목의 예제는 현재 상태대로 제공되며 수정 없이 프로덕션 코드에서 사용할 수 없습니다.  
+> 이 항목의 예제는 현재 상태대로 제공되며 수정 없이 프로덕션 코드에서 사용할 수 없습니다.  
   
 <a name="BKMK_TheWCFCachingService"></a>   
 ## <a name="the-wcf-caching-service"></a>WCF 캐싱 서비스  

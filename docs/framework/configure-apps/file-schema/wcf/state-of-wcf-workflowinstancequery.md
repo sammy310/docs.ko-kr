@@ -1,18 +1,18 @@
 ---
-title: <state> WCF의 <workflowInstanceQuery>
+title: <state>WCF의<workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: 40f21055-766c-4be9-86c4-d1d899007098
-ms.openlocfilehash: 1615c83ffe0735d9e55e822f2651da41d02b1610
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 99387a8f60e96beb2ec7706d9abf4bb6ae84b868
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757965"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938217"
 ---
-# <a name="state-of-wcf-workflowinstancequery"></a>\<상태 > WCF의 \<workflowInstanceQuery >
+# <a name="state-of-wcf-workflowinstancequery"></a>\<WCF, \<workflowInstanceQuery >의 상태 >
 추적 레코드가 만들어질 때 추적된 워크플로 인스턴스에서 구독된 상태의 컬렉션을 나타냅니다.  
   
- 추적 프로필 쿼리에 대 한 자세한 내용은 참조 하세요. [추적 프로필](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ 추적 프로필 쿼리에 대 한 자세한 내용은 [추적 프로필](../../../windows-workflow-foundation/tracking-profiles.md) 을 참조 하세요.  
   
 \<system.serviceModel>  
 \<tracking>  
@@ -60,7 +60,7 @@ ms.locfileid: "61757965"
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[\<states>](states-of-wcf-workflowinstancequery.md)|추적 레코드가 만들어질 때 추적된 워크플로 인스턴스에서 구독된 상태의 컬렉션입니다.|  
   
@@ -70,7 +70,7 @@ ms.locfileid: "61757965"
   
 가능한 상태 값은 다음 표에 설명 되어 있습니다.
   
-|상태|설명|  
+|State|설명|  
 |-----------|-----------------|  
 |Aborted|워크플로 인스턴스가 중단되었습니다.|  
 |Completed|워크플로 인스턴스가 완료되었습니다.|  
@@ -105,5 +105,5 @@ ms.locfileid: "61757965"
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
-- [워크플로 추적](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [추적 프로필](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [워크플로 추적](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [추적 프로필](../../../windows-workflow-foundation/tracking-profiles.md)

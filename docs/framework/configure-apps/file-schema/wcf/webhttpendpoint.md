@@ -2,15 +2,15 @@
 title: <webHttpEndpoint>
 ms.date: 03/30/2017
 ms.assetid: ecaaeb6f-ebd0-411d-8b53-92477cd45347
-ms.openlocfilehash: 6fb31fca6ac38f6cb92ef087cc277a4d5066521c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 866be522cb1c64142227a8d6a1a8f88551ca9105
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769774"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940478"
 ---
 # <a name="webhttpendpoint"></a>\<webHttpEndpoint>
-이 구성 요소에는 고정 된 표준 끝점을 정의 [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) 자동으로 바인딩을 추가 합니다 [ \<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) 동작 합니다. REST 서비스를 작성할 때는 이 엔드포인트를 사용합니다.  
+이 구성 요소는 [ \<webhttp >](webhttp.md) 동작을 자동으로 추가 하는 고정 [ \<된 webHttpBinding >](webhttpbinding.md) 바인딩이 있는 표준 끝점을 정의 합니다. REST 서비스를 작성할 때는 이 엔드포인트를 사용합니다.  
   
 \<system.ServiceModel>  
 \<standardEndpoints>  
@@ -35,7 +35,7 @@ ms.locfileid: "61769774"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
 |automaticFormatSelectionEnabled|자동 서식 선택을 사용하는지 여부를 나타내는 부울 값입니다.<br /><br /> 자동 서식 선택을 사용하면 인프라에서 요청 메시지의 `Accept` 헤더를 구문 분석하여 가장 적합한 응답 형식을 결정합니다. `Accept` 헤더에서 적합한 응답 형식을 지정하지 않는 경우 인프라에서 요청 메시지의 `Content-Type`이나 작업의 기본 응답 형식을 사용합니다.|  
 |defaultOutgoingResponseFormat|나가는 응답의 기본 형식을 지정하는 특성입니다. 이 특성은 <xref:System.ServiceModel.Web.WebMessageFormat> 형식입니다.|  
@@ -47,9 +47,9 @@ ms.locfileid: "61769774"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|하나 이상의 속성(주소, 바인딩, 계약)이 고정된 미리 정의된 엔드포인트인 표준 엔드포인트의 컬렉션입니다.|  
+|[\<standardEndpoints>](standardendpoints.md)|하나 이상의 속성(주소, 바인딩, 계약)이 고정된 미리 정의된 엔드포인트인 표준 엔드포인트의 컬렉션입니다.|  
   
 ## <a name="see-also"></a>참고자료
 

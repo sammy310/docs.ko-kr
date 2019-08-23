@@ -2,18 +2,18 @@
 title: SQL Server에서 소유권 및 사용자와 스키마 분리
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 2702f56e8b3b339487ffacf7bc1ceb077d4d8b30
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 520772acc5edd812f64c61cc7fdda9db3441c87c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645726"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961104"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>SQL Server에서 소유권 및 사용자와 스키마 분리
 SQL Server 보안의 주요 개념은 개체 소유자에게 취소할 수 없는 개체 관리 권한이 있다는 것입니다. 개체 소유자의 권한을 제거할 수 없으며 사용자가 데이터베이스의 개체를 소유하는 경우 데이터베이스에서 사용자를 삭제할 수 없습니다.  
   
 ## <a name="user-schema-separation"></a>사용자 스키마 분리  
- 사용자 스키마 분리를 통해 데이터베이스 개체 권한을 더욱 유연하게 관리할 수 있습니다. A *스키마* 컨테이너인 명명 된 데이터베이스 개체에 대해 별도 네임 스페이스에 그룹 개체에 있습니다. 예를 들어, AdventureWorks 샘플 데이터베이스에는 Production, Sales 및 HumanResources에 대한 스키마가 들어 있습니다.  
+ 사용자 스키마 분리를 통해 데이터베이스 개체 권한을 더욱 유연하게 관리할 수 있습니다. *스키마* 는 개체를 별도의 네임 스페이스로 그룹화 할 수 있도록 하는 데이터베이스 개체에 대 한 명명 된 컨테이너입니다. 예를 들어, AdventureWorks 샘플 데이터베이스에는 Production, Sales 및 HumanResources에 대한 스키마가 들어 있습니다.  
   
  개체를 참조하는 4부분으로 구성된 명명 구문은 스키마 이름을 지정합니다.  
   
@@ -40,7 +40,7 @@ Server.Database.DatabaseSchema.DatabaseObject
  모델 데이터베이스에서 스키마를 삭제하면 해당 스키마가 새 데이터베이스에 나타나지 않습니다.  
   
 > [!NOTE]
->  `sys` 및 `INFORMATION_SCHEMA` 스키마는 시스템 개체용으로 예약되어 있습니다. 이러한 스키마의 개체는 만들거나 삭제할 수 없습니다.  
+> `sys` 및 `INFORMATION_SCHEMA` 스키마는 시스템 개체용으로 예약되어 있습니다. 이러한 스키마의 개체는 만들거나 삭제할 수 없습니다.  
   
 #### <a name="the-dbo-schema"></a>dbo 스키마  
  `dbo` 스키마는 새로 만든 데이터베이스의 기본 스키마입니다. `dbo` 스키마는 `dbo` 사용자 계정에서 소유합니다. CREATE USER Transact-SQL 명령을 사용하여 만들어진 사용자는 기본적으로 `dbo`를 기본 스키마로 가집니다.  
@@ -48,14 +48,14 @@ Server.Database.DatabaseSchema.DatabaseObject
  `dbo` 스키마에 할당된 사용자에게는 `dbo` 사용자 계정의 권한이 상속되지 않습니다. 사용자에게는 스키마의 권한이 상속되지 않고 스키마에 포함된 데이터베이스 개체의 스키마 권한이 상속됩니다.  
   
 > [!NOTE]
->  한 부분으로 구성된 이름을 사용하여 데이터베이스 개체를 참조할 때 SQL Server에서는 먼저 사용자의 기본 스키마를 찾습니다. 개체를 기본 스키마에서 찾을 수 없으면 SQL Server는 `dbo` 스키마에서 찾습니다. 개체가 `dbo` 스키마에 없는 경우 오류가 반환됩니다.  
+> 한 부분으로 구성된 이름을 사용하여 데이터베이스 개체를 참조할 때 SQL Server에서는 먼저 사용자의 기본 스키마를 찾습니다. 개체를 기본 스키마에서 찾을 수 없으면 SQL Server는 `dbo` 스키마에서 찾습니다. 개체가 `dbo` 스키마에 없는 경우 오류가 반환됩니다.  
   
 ## <a name="external-resources"></a>외부 리소스  
  개체 소유권 및 스키마에 대한 자세한 내용은 다음 리소스를 참조하세요.  
   
-|리소스|설명|  
+|리소스|Description|  
 |--------------|-----------------|  
-|[사용자와 스키마 분리](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|사용자 스키마 분리에서 도입된 변경 내용을 설명합니다. 새 동작, 소유권에 대한 영향, 카탈로그 뷰 및 권한이 포함되어 있습니다.|  
+|[사용자 스키마 분리](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|사용자 스키마 분리에서 도입된 변경 내용을 설명합니다. 새 동작, 소유권에 대한 영향, 카탈로그 뷰 및 권한이 포함되어 있습니다.|  
   
 ## <a name="see-also"></a>참고자료
 

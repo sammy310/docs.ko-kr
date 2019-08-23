@@ -2,14 +2,14 @@
 title: <webHttpBinding>의 <transport>
 ms.date: 03/30/2017
 ms.assetid: f150fb19-7de1-44af-81f4-86cad881cd05
-ms.openlocfilehash: 8dcd51cd248dbba3ccf60295cb1712167684328e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f78add5397644dc40bfd22f10bd84aa5c5eb29e6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788273"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923206"
 ---
-# <a name="transport-of-webhttpbinding"></a>\<전송 >의 \<webHttpBinding >
+# <a name="transport-of-webhttpbinding"></a>\<webHttpBinding >의 \<전송 >
 HTTP 요청을 수신하도록 구성된 서비스 엔드포인트의 전송 수준 보안 설정을 정의합니다.  
   
  \<system.ServiceModel>  
@@ -47,7 +47,7 @@ HTTP 요청을 수신하도록 구성된 서비스 엔드포인트의 전송 수
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
 |`clientCredentialType`|클라이언트를 서비스에 인증할 때 사용되는 자격 증명을 지정합니다. 이 특성은 <xref:System.ServiceModel.HttpClientCredentialType> 형식입니다.|  
 |`proxyCredentialType`|클라이언트를 도메인 프록시에 인증할 때 사용되는 자격 증명을 지정합니다. 이 특성은 <xref:System.ServiceModel.HttpProxyCredentialType> 형식입니다.|  
@@ -56,7 +56,7 @@ HTTP 요청을 수신하도록 구성된 서비스 엔드포인트의 전송 수
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 특성  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |`None`|보안이 해제되어 있습니다.|  
 |`Basic`|기본 인증을 사용합니다.|  
@@ -67,7 +67,7 @@ HTTP 요청을 수신하도록 구성된 서비스 엔드포인트의 전송 수
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType 특성  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |`None`|보안이 해제되어 있습니다.|  
 |`Basic`|기본 인증을 사용합니다.|  
@@ -82,7 +82,7 @@ HTTP 요청을 수신하도록 구성된 서비스 엔드포인트의 전송 수
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-webhttpbinding.md)|보안 기능을 나타내는 합니다 [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 요소입니다.|  
+|[\<security>](security-of-webhttpbinding.md)|WsHttpBinding > 요소의 보안 기능 [ \<](wshttpbinding.md) 을 나타냅니다.|  
   
 ## <a name="see-also"></a>참고자료
 
@@ -90,9 +90,9 @@ HTTP 요청을 수신하도록 구성된 서비스 엔드포인트의 전송 수
 - <xref:System.ServiceModel.Configuration.WebHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.WebHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
-- [서비스 및 클라이언트에 보안 설정](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [바인딩](../../../../../docs/framework/wcf/bindings.md)
-- [시스템 제공 바인딩 구성](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
-- [WCF 웹 HTTP 프로그래밍 모델](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [서비스 및 클라이언트에 보안 설정](../../../wcf/feature-details/securing-services-and-clients.md)
+- [바인딩](../../../wcf/bindings.md)
+- [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)
+- [WCF 웹 HTTP 프로그래밍 모델](../../../wcf/feature-details/wcf-web-http-programming-model.md)

@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 16a0436accfb031ddd0bb413e519d80e550786b4
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: cfb617fde514c93596d52b0ca70da39c6e5be301
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972263"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958644"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>WPF 애플리케이션 배포(WPF)
-Windows Presentation Foundation (WPF) 응용 프로그램을 빌드한 후 배포 해야 합니다. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]및 .NET Framework에는 몇 가지 배포 기술이 포함 되어 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 배포하는 데 사용되는 배포 기술은 응용 프로그램 종류에 따라 달라집니다. 이 항목에서는 각 배포 기술과 해당 기술이 각 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션 종류의 배포 요구 사항과 함께 사용되는 방법에 대해 간략하게 설명합니다.  
+Windows Presentation Foundation (WPF) 응용 프로그램을 빌드한 후 배포 해야 합니다. Windows 및 .NET Framework에는 몇 가지 배포 기술이 포함 되어 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 배포하는 데 사용되는 배포 기술은 응용 프로그램 종류에 따라 달라집니다. 이 항목에서는 각 배포 기술과 해당 기술이 각 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션 종류의 배포 요구 사항과 함께 사용되는 방법에 대해 간략하게 설명합니다.  
 
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>배포 기술  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]및 .NET Framework에는 다음과 같은 몇 가지 배포 기술이 포함 되어 있습니다.  
+ Windows 및 .NET Framework에는 다음과 같은 몇 가지 배포 기술이 포함 되어 있습니다.  
   
 - XCopy 배포.  
   
@@ -39,7 +39,7 @@ Windows Presentation Foundation (WPF) 응용 프로그램을 빌드한 후 배�
   
 <a name="Windows_Installer"></a>   
 ### <a name="windows-installer"></a>Windows Installer  
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]를 사용하면 클라이언트에 쉽게 배포하고 실행할 수 있는 자체 포함 실행 파일로 응용 프로그램을 패키지할 수 있습니다. 또한 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]는 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]와 함께 설치되며 데스크톱, 시작 메뉴 및 프로그램 제어판과의 통합을 가능하게 합니다.  
+ [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]를 사용하면 클라이언트에 쉽게 배포하고 실행할 수 있는 자체 포함 실행 파일로 응용 프로그램을 패키지할 수 있습니다. 뿐만 아니라 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 는 Windows와 함께 설치 되며 바탕 화면, 시작 메뉴 및 프로그램 제어판과 통합할 수 있습니다.  
   
  [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]에서는 응용 프로그램의 설치 및 제거가 간단하지만 설치된 응용 프로그램이 버전 관리 관점에서 최신 버전으로 유지되도록 보장하는 기능은 제공하지 않습니다.  
   
@@ -96,7 +96,7 @@ Windows Presentation Foundation (WPF) 응용 프로그램을 빌드한 후 배�
 - *ApplicationName*.exe.manifest: 애플리케이션 매니페스트입니다.  
   
 > [!NOTE]
->  배포 및 애플리케이션 매니페스트에 대한 자세한 내용은 [WPF 애플리케이션 만들기](building-a-wpf-application-wpf.md)를 참조하세요.  
+> 배포 및 애플리케이션 매니페스트에 대한 자세한 내용은 [WPF 애플리케이션 만들기](building-a-wpf-application-wpf.md)를 참조하세요.  
   
  이러한 파일은 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]가 빌드될 때 생성됩니다. 자세한 내용은 [방법: 새 WPF 브라우저 응용 프로그램 프로젝트](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))를 만듭니다. 태그 전용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 페이지와 같이 일반적으로 웹 서버에 게시 되 고 Internet Explorer를 사용 하 여 볼 수 있습니다.  
   

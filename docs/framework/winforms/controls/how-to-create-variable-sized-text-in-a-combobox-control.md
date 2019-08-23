@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms], examples [C#]
 - ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
-ms.openlocfilehash: 1fa9b04063d8f606f674cc54190dad5a669adbeb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7c0dc40f6cac0af1f88e72089865caa3a17fcf2a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666415"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914743"
 ---
 # <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>방법: ComboBox 컨트롤에서 가변 크기 텍스트 만들기
-이 예제에서는 텍스트에 대 한 사용자 지정 그리기를 <xref:System.Windows.Forms.ComboBox> 제어 합니다. 특정 기준을 충족 하는 항목, 하는 경우 더 큰 글꼴로 그릴 이며 빨간색을 설정 합니다.  
+이 예제에서는 <xref:System.Windows.Forms.ComboBox> 컨트롤의 텍스트에 대 한 사용자 지정 그리기를 보여 줍니다. 특정 조건을 충족 하는 항목은 더 큰 글꼴로 그려지고 빨간색으로 설정 됩니다.  
   
 ## <a name="example"></a>예제  
   
@@ -60,10 +60,10 @@ End Sub
   
 - Windows 폼입니다.  
   
-- A <xref:System.Windows.Forms.ComboBox> 라는 컨트롤 `ListBox1` 의 세 가지 항목과 <xref:System.Windows.Forms.ComboBox.Items%2A> 속성입니다. 이 예제에서는 세 개 항목 이름은 `"One", Two", and Three"`합니다. 합니다 <xref:System.Windows.Forms.ComboBox.DrawMode%2A> 속성을 `ComboBox1` 로 변경 해야 <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>합니다.  
+- 속성에 세 `ListBox1` 개의 항목이 <xref:System.Windows.Forms.ComboBox> 있는 이라는 <xref:System.Windows.Forms.ComboBox.Items%2A> 컨트롤입니다. 이 예제에서는 세 개의 항목에 이름이 지정 `"One", Two", and Three"`됩니다. 의 <xref:System.Windows.Forms.ComboBox.DrawMode%2A> <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>속성은로 설정 해야 합니다. `ComboBox1`  
   
     > [!NOTE]
-    >  이 기술에도 적용 됩니다는 <xref:System.Windows.Forms.ListBox> 컨트롤-대체할 수 있습니다를 <xref:System.Windows.Forms.ListBox> 에 대 한는 <xref:System.Windows.Forms.ComboBox>합니다.  
+    > 이 기술은 <xref:System.Windows.Forms.ListBox> 컨트롤에도 적용 됩니다 <xref:System.Windows.Forms.ComboBox>.를로 <xref:System.Windows.Forms.ListBox> 대체할 수 있습니다.  
   
 - <xref:System.Windows.Forms?displayProperty=nameWithType> 및 <xref:System.Drawing?displayProperty=nameWithType> 네임스페이스에 대한 참조  
   
