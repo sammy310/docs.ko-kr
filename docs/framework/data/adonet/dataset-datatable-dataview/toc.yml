@@ -1,9 +1,9 @@
 - name: 'DataSets, DataTables 및 DataViews'
   href: index.md
   items:
-    - name: 데이터 집합 만들기
+    - name: 데이터 세트 만들기
       href: creating-a-dataset.md
-    - name: 데이터 집합에 DataTable 추가
+    - name: 데이터 세트에 DataTable 추가
       href: adding-a-datatable-to-a-dataset.md
     - name: DataRelation 추가
       href: adding-datarelations.md
@@ -11,16 +11,16 @@
       href: navigating-datarelations.md
     - name: DataSet 콘텐츠 병합
       href: merging-dataset-contents.md
-    - name: 데이터 집합 콘텐츠 복사
+    - name: 데이터 세트 콘텐츠 복사
       href: copying-dataset-contents.md
     - name: 데이터 세트 이벤트 처리
       href: handling-dataset-events.md
-    - name: 형식화된 데이터 집합
+    - name: 형식화된 데이터 세트
       href: typed-datasets.md
       items:
         - name: 강력한 형식의 DataSets 생성
           href: generating-strongly-typed-datasets.md
-        - name: 형식화된 데이터 집합에 주석 지정
+        - name: 형식화된 데이터 세트에 주석 지정
           href: annotating-typed-datasets.md
     - name: DataTables
       href: datatables.md
@@ -89,43 +89,43 @@
           href: managing-dataviews.md
         - name: DataView에서 DataTable 만들기
           href: creating-a-datatable-from-a-dataview.md
-    - name: 데이터 집합에서 XML 사용
+    - name: 데이터 세트에서 XML 사용
       href: using-xml-in-a-dataset.md
       items:
         - name: DiffGram
           href: diffgrams.md
-        - name: XML에서 데이터 집합 로드
+        - name: XML에서 데이터 세트 로드
           href: loading-a-dataset-from-xml.md
-        - name: 데이터 집합 콘텐츠를 XML 데이터로 작성
+        - name: 데이터 세트 콘텐츠를 XML 데이터로 작성
           href: writing-dataset-contents-as-xml-data.md
-        - name: XML에서 데이터 집합 스키마 정보 로드
+        - name: XML에서 데이터 세트 스키마 정보 로드
           href: loading-dataset-schema-information-from-xml.md
-        - name: 데이터 집합 스키마 정보를 XSD로 작성
+        - name: 데이터 세트 스키마 정보를 XSD로 작성
           href: writing-dataset-schema-information-as-xsd.md
-        - name: 데이터 집합 및 XmlDataDocument 동기화
+        - name: 데이터 세트 및 XmlDataDocument 동기화
           href: dataset-and-xmldatadocument-synchronization.md
           items:
-            - name: XmlDataDocument로 데이터 집합 동기화
+            - name: XmlDataDocument로 데이터 세트 동기화
               href: synchronizing-a-dataset-with-an-xmldatadocument.md
-            - name: 데이터 집합에서 XPath 쿼리 수행
+            - name: 데이터 세트에서 XPath 쿼리 수행
               href: performing-an-xpath-query-on-a-dataset.md
             - name: XSLT 변형을 DataSet에 적용
               href: applying-an-xslt-transform-to-a-dataset.md
         - name: DataRelation 중첩
           href: nesting-datarelations.md
-        - name: XML 스키마에서 데이터 집합 관계형 구조 파생(XSD)
+        - name: XML 스키마에서 데이터 세트 관계형 구조 파생(XSD)
           href: deriving-dataset-relational-structure-from-xml-schema-xsd.md
           items:
-            - name: 데이터 집합 제약 조건에 XSD(XML 스키마) 제약 조건 매핑
+            - name: 데이터 세트 제약 조건에 XSD(XML 스키마) 제약 조건 매핑
               href: mapping-xml-schema-xsd-constraints-to-dataset-constraints.md
               items:
-                - name: 데이터 집합 제약 조건에 고유 XSD(XML 스키마) 제약 조건 매핑
+                - name: 데이터 세트 제약 조건에 고유 XSD(XML 스키마) 제약 조건 매핑
                   href: map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md
-                - name: 데이터 집합 제약 조건에 키 XSD(XML 스키마) 제약 조건 매핑
+                - name: 데이터 세트 제약 조건에 키 XSD(XML 스키마) 제약 조건 매핑
                   href: map-key-xml-schema-xsd-constraints-to-dataset-constraints.md
-                - name: 데이터 집합 제약 조건에 keyref XSD(XML 스키마) 제약 조건 매핑
+                - name: 데이터 세트 제약 조건에 keyref XSD(XML 스키마) 제약 조건 매핑
                   href: map-keyref-xml-schema-xsd-constraints-to-dataset-constraints.md
-            - name: XSD(XML 스키마)에서 데이터 집합 관계 생성
+            - name: XSD(XML 스키마)에서 데이터 세트 관계 생성
               href: generating-dataset-relations-from-xml-schema-xsd.md
               items:
                 - name: 중첩된 스키마 요소 사이에 암시적 관계 매핑
@@ -136,10 +136,10 @@
                   href: specify-relations-between-elements-with-no-nesting.md
             - name: XML 스키마 제약 조건 및 관계
               href: xml-schema-constraints-and-relationships.md
-        - name: XML에서 데이터 집합 관계형 구조 유추
+        - name: XML에서 데이터 세트 관계형 구조 유추
           href: inferring-dataset-relational-structure-from-xml.md
           items:
-            - name: 데이터 집합 스키마 유추 프로세스 요약
+            - name: 데이터 세트 스키마 유추 프로세스 요약
               href: summary-of-the-dataset-schema-inference-process.md
             - name: 테이블 유추
               href: inferring-tables.md
@@ -151,5 +151,5 @@
               href: inferring-element-text.md
             - name: 유추 제한
               href: inference-limitations.md
-    - name: XML Web Service에서 데이터 집합 사용
+    - name: XML Web Service에서 데이터 세트 사용
       href: consuming-a-dataset-from-an-xml-web-service.md
