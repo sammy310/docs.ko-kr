@@ -9,20 +9,20 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61753349"
 ---
-# <a name="3390---clientsendpreamblestop"></a><span data-ttu-id="8431a-102">3390 - ClientSendPreambleStop</span><span class="sxs-lookup"><span data-stu-id="8431a-102">3390 - ClientSendPreambleStop</span></span>
-## <a name="properties"></a><span data-ttu-id="8431a-103">속성</span><span class="sxs-lookup"><span data-stu-id="8431a-103">Properties</span></span>  
+# <a name="3390---clientsendpreamblestop"></a><span data-ttu-id="fbdd9-102">3390 - ClientSendPreambleStop</span><span class="sxs-lookup"><span data-stu-id="fbdd9-102">3390 - ClientSendPreambleStop</span></span>
+## <a name="properties"></a><span data-ttu-id="fbdd9-103">속성</span><span class="sxs-lookup"><span data-stu-id="fbdd9-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="8431a-104">ID</span><span class="sxs-lookup"><span data-stu-id="8431a-104">ID</span></span>|<span data-ttu-id="8431a-105">3390</span><span class="sxs-lookup"><span data-stu-id="8431a-105">3390</span></span>|  
-|<span data-ttu-id="8431a-106">키워드</span><span class="sxs-lookup"><span data-stu-id="8431a-106">Keywords</span></span>|<span data-ttu-id="8431a-107">채널</span><span class="sxs-lookup"><span data-stu-id="8431a-107">Channel</span></span>|  
-|<span data-ttu-id="8431a-108">수준</span><span class="sxs-lookup"><span data-stu-id="8431a-108">Level</span></span>|<span data-ttu-id="8431a-109">자세히</span><span class="sxs-lookup"><span data-stu-id="8431a-109">Verbose</span></span>|  
-|<span data-ttu-id="8431a-110">채널</span><span class="sxs-lookup"><span data-stu-id="8431a-110">Channel</span></span>|<span data-ttu-id="8431a-111">Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그</span><span class="sxs-lookup"><span data-stu-id="8431a-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="fbdd9-104">ID</span><span class="sxs-lookup"><span data-stu-id="fbdd9-104">ID</span></span>|<span data-ttu-id="fbdd9-105">3390</span><span class="sxs-lookup"><span data-stu-id="fbdd9-105">3390</span></span>|  
+|<span data-ttu-id="fbdd9-106">키워드</span><span class="sxs-lookup"><span data-stu-id="fbdd9-106">Keywords</span></span>|<span data-ttu-id="fbdd9-107">채널</span><span class="sxs-lookup"><span data-stu-id="fbdd9-107">Channel</span></span>|  
+|<span data-ttu-id="fbdd9-108">수준</span><span class="sxs-lookup"><span data-stu-id="fbdd9-108">Level</span></span>|<span data-ttu-id="fbdd9-109">자세히</span><span class="sxs-lookup"><span data-stu-id="fbdd9-109">Verbose</span></span>|  
+|<span data-ttu-id="fbdd9-110">채널</span><span class="sxs-lookup"><span data-stu-id="fbdd9-110">Channel</span></span>|<span data-ttu-id="fbdd9-111">Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그</span><span class="sxs-lookup"><span data-stu-id="fbdd9-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="8431a-112">설명</span><span class="sxs-lookup"><span data-stu-id="8431a-112">Description</span></span>  
- <span data-ttu-id="8431a-113">이 이벤트는 클라이언트 전송 프리앰블 중지 시 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="8431a-113">This event is emitted on the client sending preamble stop.</span></span>  
+## <a name="description"></a><span data-ttu-id="fbdd9-112">설명</span><span class="sxs-lookup"><span data-stu-id="fbdd9-112">Description</span></span>  
+ <span data-ttu-id="fbdd9-113">이 이벤트는 클라이언트 전송 프리앰블 중지 시 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="fbdd9-113">This event is emitted on the client sending preamble stop.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="8431a-114">메시지</span><span class="sxs-lookup"><span data-stu-id="8431a-114">Message</span></span>  
- <span data-ttu-id="8431a-115">클라이언트 전송 프리앰블이 중지됩니다.</span><span class="sxs-lookup"><span data-stu-id="8431a-115">Client sending preamble stop.</span></span>  
+## <a name="message"></a><span data-ttu-id="fbdd9-114">메시지</span><span class="sxs-lookup"><span data-stu-id="fbdd9-114">Message</span></span>  
+ <span data-ttu-id="fbdd9-115">클라이언트 전송 프리앰블이 중지됩니다.</span><span class="sxs-lookup"><span data-stu-id="fbdd9-115">Client sending preamble stop.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="8431a-116">설명</span><span class="sxs-lookup"><span data-stu-id="8431a-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="fbdd9-116">설명</span><span class="sxs-lookup"><span data-stu-id="fbdd9-116">Details</span></span>

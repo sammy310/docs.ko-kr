@@ -15,15 +15,15 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 08/21/2019
 ms.locfileid: "69659149"
 ---
-# <a name="servicepointmanager-element-network-settings"></a><span data-ttu-id="09188-102">\<servicePointManager > 요소 (네트워크 설정)</span><span class="sxs-lookup"><span data-stu-id="09188-102">\<servicePointManager> Element (Network Settings)</span></span>
-<span data-ttu-id="09188-103">네트워크 리소스에 대 한 연결을 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="09188-103">Configures connections to network resources.</span></span>  
+# <a name="servicepointmanager-element-network-settings"></a><span data-ttu-id="adcd5-102">\<servicePointManager > 요소 (네트워크 설정)</span><span class="sxs-lookup"><span data-stu-id="adcd5-102">\<servicePointManager> Element (Network Settings)</span></span>
+<span data-ttu-id="adcd5-103">네트워크 리소스에 대 한 연결을 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="adcd5-103">Configures connections to network resources.</span></span>  
   
- <span data-ttu-id="09188-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="09188-104">\<configuration></span></span>  
-<span data-ttu-id="09188-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="09188-105">\<system.net></span></span>  
-<span data-ttu-id="09188-106">\<settings></span><span class="sxs-lookup"><span data-stu-id="09188-106">\<settings></span></span>  
-<span data-ttu-id="09188-107">\<servicePointManager></span><span class="sxs-lookup"><span data-stu-id="09188-107">\<servicePointManager></span></span>  
+ <span data-ttu-id="adcd5-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="adcd5-104">\<configuration></span></span>  
+<span data-ttu-id="adcd5-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="adcd5-105">\<system.net></span></span>  
+<span data-ttu-id="adcd5-106">\<settings></span><span class="sxs-lookup"><span data-stu-id="adcd5-106">\<settings></span></span>  
+<span data-ttu-id="adcd5-107">\<servicePointManager></span><span class="sxs-lookup"><span data-stu-id="adcd5-107">\<servicePointManager></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="09188-108">구문</span><span class="sxs-lookup"><span data-stu-id="09188-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="adcd5-108">구문</span><span class="sxs-lookup"><span data-stu-id="adcd5-108">Syntax</span></span>  
   
 ```xml  
 <servicePointManager  
@@ -37,37 +37,37 @@ ms.locfileid: "69659149"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="09188-109">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="09188-109">Attributes and Elements</span></span>  
- <span data-ttu-id="09188-110">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="09188-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="adcd5-109">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="adcd5-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="adcd5-110">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="adcd5-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="09188-111">특성</span><span class="sxs-lookup"><span data-stu-id="09188-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="adcd5-111">특성</span><span class="sxs-lookup"><span data-stu-id="adcd5-111">Attributes</span></span>  
   
-|<span data-ttu-id="09188-112">**특성**</span><span class="sxs-lookup"><span data-stu-id="09188-112">**Attribute**</span></span>|<span data-ttu-id="09188-113">**설명**</span><span class="sxs-lookup"><span data-stu-id="09188-113">**Description**</span></span>|  
+|<span data-ttu-id="adcd5-112">**특성**</span><span class="sxs-lookup"><span data-stu-id="adcd5-112">**Attribute**</span></span>|<span data-ttu-id="adcd5-113">**설명**</span><span class="sxs-lookup"><span data-stu-id="adcd5-113">**Description**</span></span>|  
 |-------------------|---------------------|  
-|`checkCertificateName`|<span data-ttu-id="09188-114">인증서를 사용 하기 전에 시스템에서 인증서의 이름이 서버 호스트 이름과 일치 하는지 확인 해야 하는지 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="09188-114">Specifies whether the system should verify that the name on the certificate matches the server host name before using the certificate.</span></span> <span data-ttu-id="09188-115">기본값은 `true`입니다.</span><span class="sxs-lookup"><span data-stu-id="09188-115">The default value is `true`.</span></span>|  
-|`checkCertificateRevocationList`|<span data-ttu-id="09188-116">인증서를 사용 하기 전에 시스템에서 인증서가 해지 되었는지 여부를 확인 해야 하는지 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="09188-116">Specifies whether the system should check whether the certificate has been revoked before using the certificate.</span></span> <span data-ttu-id="09188-117">기본값은 `false`입니다.</span><span class="sxs-lookup"><span data-stu-id="09188-117">The default value is `false`.</span></span>|  
-|`dnsRefreshTimeout`|<span data-ttu-id="09188-118">Dns 라운드 로빈 옵션과 함께 DNS (Domain Name Service) 확인이 캐시 되는 시간 (밀리초)을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="09188-118">Specifies how long Domain Name Service (DNS) resolutions are cached in conjunction with the DNS Round Robin option, in milliseconds.</span></span> <span data-ttu-id="09188-119">기본값은 120,000밀리초(2분)입니다.</span><span class="sxs-lookup"><span data-stu-id="09188-119">The default value is 120,000 milliseconds (two minutes).</span></span>|  
-|`enableDnsRoundRobin`|<span data-ttu-id="09188-120">IP (인터넷 프로토콜) 주소가 여러 개인 호스트 이름에 대 한 DNS 확인이 모든 주소를 반환할지 아니면 첫 번째 주소를 반환할지를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="09188-120">Specifies whether DNS resolutions of host names with multiple Internet Protocol (IP) addresses return all the addresses, or just the first one.</span></span> <span data-ttu-id="09188-121">기본값은 `false`입니다.</span><span class="sxs-lookup"><span data-stu-id="09188-121">The default value is `false`.</span></span>|  
-|`encryptionPolicy`|<span data-ttu-id="09188-122"><xref:System.Net.ServicePointManager> 인스턴스의 SSL/TLS 세션에 적용 되는 암호화 정책을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="09188-122">Specifies the encryption policy applied to an SSL/TLS session on a <xref:System.Net.ServicePointManager> instance.</span></span> <span data-ttu-id="09188-123">가능한 값은 <xref:System.Net.Security.EncryptionPolicy> 열거형의 값과 동일 합니다.</span><span class="sxs-lookup"><span data-stu-id="09188-123">The possible values are equivalent to the values for the <xref:System.Net.Security.EncryptionPolicy> enumeration.</span></span> <span data-ttu-id="09188-124">암호화 정책이로 <xref:System.Security.Authentication.CipherAlgorithmType.Null> `NoEncryption`설정 된 경우에는를 사용 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="09188-124">The use of <xref:System.Security.Authentication.CipherAlgorithmType.Null> is required when the encryption policy is set to `NoEncryption`.</span></span> <span data-ttu-id="09188-125">기본값은 `RequireEncryption`입니다.</span><span class="sxs-lookup"><span data-stu-id="09188-125">The default value is `RequireEncryption`.</span></span>|  
-|`expect100Continue`|<span data-ttu-id="09188-126">POST 메서드가 서버에서 `100-continue` 응답을 받을 것으로 간주 하는지 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="09188-126">Specifies whether POST methods should expect to receive a `100-continue` response from the server.</span></span> <span data-ttu-id="09188-127">기본값은 `true`입니다.</span><span class="sxs-lookup"><span data-stu-id="09188-127">The default value is `true`.</span></span>|  
-|`useNagleAlgorithm`|<span data-ttu-id="09188-128">서비스 지점 관리자에서 제어 하는 연결에 Nagle 알고리즘을 사용할지 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="09188-128">Specifies whether connections controlled by the service point manager use the Nagle algorithm.</span></span> <span data-ttu-id="09188-129">기본값은 `true`입니다.</span><span class="sxs-lookup"><span data-stu-id="09188-129">The default value is `true`.</span></span>|  
+|`checkCertificateName`|<span data-ttu-id="adcd5-114">인증서를 사용 하기 전에 시스템에서 인증서의 이름이 서버 호스트 이름과 일치 하는지 확인 해야 하는지 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="adcd5-114">Specifies whether the system should verify that the name on the certificate matches the server host name before using the certificate.</span></span> <span data-ttu-id="adcd5-115">기본값은 `true`입니다.</span><span class="sxs-lookup"><span data-stu-id="adcd5-115">The default value is `true`.</span></span>|  
+|`checkCertificateRevocationList`|<span data-ttu-id="adcd5-116">인증서를 사용 하기 전에 시스템에서 인증서가 해지 되었는지 여부를 확인 해야 하는지 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="adcd5-116">Specifies whether the system should check whether the certificate has been revoked before using the certificate.</span></span> <span data-ttu-id="adcd5-117">기본값은 `false`입니다.</span><span class="sxs-lookup"><span data-stu-id="adcd5-117">The default value is `false`.</span></span>|  
+|`dnsRefreshTimeout`|<span data-ttu-id="adcd5-118">Dns 라운드 로빈 옵션과 함께 DNS (Domain Name Service) 확인이 캐시 되는 시간 (밀리초)을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="adcd5-118">Specifies how long Domain Name Service (DNS) resolutions are cached in conjunction with the DNS Round Robin option, in milliseconds.</span></span> <span data-ttu-id="adcd5-119">기본값은 120,000밀리초(2분)입니다.</span><span class="sxs-lookup"><span data-stu-id="adcd5-119">The default value is 120,000 milliseconds (two minutes).</span></span>|  
+|`enableDnsRoundRobin`|<span data-ttu-id="adcd5-120">IP (인터넷 프로토콜) 주소가 여러 개인 호스트 이름에 대 한 DNS 확인이 모든 주소를 반환할지 아니면 첫 번째 주소를 반환할지를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="adcd5-120">Specifies whether DNS resolutions of host names with multiple Internet Protocol (IP) addresses return all the addresses, or just the first one.</span></span> <span data-ttu-id="adcd5-121">기본값은 `false`입니다.</span><span class="sxs-lookup"><span data-stu-id="adcd5-121">The default value is `false`.</span></span>|  
+|`encryptionPolicy`|<span data-ttu-id="adcd5-122"><xref:System.Net.ServicePointManager> 인스턴스의 SSL/TLS 세션에 적용 되는 암호화 정책을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="adcd5-122">Specifies the encryption policy applied to an SSL/TLS session on a <xref:System.Net.ServicePointManager> instance.</span></span> <span data-ttu-id="adcd5-123">가능한 값은 <xref:System.Net.Security.EncryptionPolicy> 열거형의 값과 동일 합니다.</span><span class="sxs-lookup"><span data-stu-id="adcd5-123">The possible values are equivalent to the values for the <xref:System.Net.Security.EncryptionPolicy> enumeration.</span></span> <span data-ttu-id="adcd5-124">암호화 정책이로 <xref:System.Security.Authentication.CipherAlgorithmType.Null> `NoEncryption`설정 된 경우에는를 사용 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="adcd5-124">The use of <xref:System.Security.Authentication.CipherAlgorithmType.Null> is required when the encryption policy is set to `NoEncryption`.</span></span> <span data-ttu-id="adcd5-125">기본값은 `RequireEncryption`입니다.</span><span class="sxs-lookup"><span data-stu-id="adcd5-125">The default value is `RequireEncryption`.</span></span>|  
+|`expect100Continue`|<span data-ttu-id="adcd5-126">POST 메서드가 서버에서 `100-continue` 응답을 받을 것으로 간주 하는지 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="adcd5-126">Specifies whether POST methods should expect to receive a `100-continue` response from the server.</span></span> <span data-ttu-id="adcd5-127">기본값은 `true`입니다.</span><span class="sxs-lookup"><span data-stu-id="adcd5-127">The default value is `true`.</span></span>|  
+|`useNagleAlgorithm`|<span data-ttu-id="adcd5-128">서비스 지점 관리자에서 제어 하는 연결에 Nagle 알고리즘을 사용할지 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="adcd5-128">Specifies whether connections controlled by the service point manager use the Nagle algorithm.</span></span> <span data-ttu-id="adcd5-129">기본값은 `true`입니다.</span><span class="sxs-lookup"><span data-stu-id="adcd5-129">The default value is `true`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="09188-130">자식 요소</span><span class="sxs-lookup"><span data-stu-id="09188-130">Child Elements</span></span>  
- <span data-ttu-id="09188-131">없음</span><span class="sxs-lookup"><span data-stu-id="09188-131">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="adcd5-130">자식 요소</span><span class="sxs-lookup"><span data-stu-id="adcd5-130">Child Elements</span></span>  
+ <span data-ttu-id="adcd5-131">없음</span><span class="sxs-lookup"><span data-stu-id="adcd5-131">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="09188-132">부모 요소</span><span class="sxs-lookup"><span data-stu-id="09188-132">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="adcd5-132">부모 요소</span><span class="sxs-lookup"><span data-stu-id="adcd5-132">Parent Elements</span></span>  
   
-|<span data-ttu-id="09188-133">**요소**</span><span class="sxs-lookup"><span data-stu-id="09188-133">**Element**</span></span>|<span data-ttu-id="09188-134">**설명**</span><span class="sxs-lookup"><span data-stu-id="09188-134">**Description**</span></span>|  
+|<span data-ttu-id="adcd5-133">**요소**</span><span class="sxs-lookup"><span data-stu-id="adcd5-133">**Element**</span></span>|<span data-ttu-id="adcd5-134">**설명**</span><span class="sxs-lookup"><span data-stu-id="adcd5-134">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="09188-135">설정</span><span class="sxs-lookup"><span data-stu-id="09188-135">Settings</span></span>](settings-element-network-settings.md)|<span data-ttu-id="09188-136"><xref:System.Net> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="09188-136">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
+|[<span data-ttu-id="adcd5-135">설정</span><span class="sxs-lookup"><span data-stu-id="adcd5-135">Settings</span></span>](settings-element-network-settings.md)|<span data-ttu-id="adcd5-136"><xref:System.Net> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="adcd5-136">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="09188-137">설명</span><span class="sxs-lookup"><span data-stu-id="09188-137">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="adcd5-137">설명</span><span class="sxs-lookup"><span data-stu-id="adcd5-137">Remarks</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="09188-138">구성 파일</span><span class="sxs-lookup"><span data-stu-id="09188-138">Configuration Files</span></span>  
- <span data-ttu-id="09188-139">이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="09188-139">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="adcd5-138">구성 파일</span><span class="sxs-lookup"><span data-stu-id="adcd5-138">Configuration Files</span></span>  
+ <span data-ttu-id="adcd5-139">이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="adcd5-139">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="09188-140">참고자료</span><span class="sxs-lookup"><span data-stu-id="09188-140">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="adcd5-140">참고자료</span><span class="sxs-lookup"><span data-stu-id="adcd5-140">See also</span></span>
 
 - <xref:System.Net.ServicePointManager>
 - <xref:System.Net.Security.EncryptionPolicy>
-- [<span data-ttu-id="09188-141">네트워크 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="09188-141">Network Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="adcd5-141">네트워크 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="adcd5-141">Network Settings Schema</span></span>](index.md)

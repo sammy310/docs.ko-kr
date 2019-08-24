@@ -180,7 +180,7 @@
           href: load-balancing.md
         - name: 리소스 사용 제어 및 성능 향상
           href: controlling-resource-consumption-and-improving-performance.md
-        - name: ClickOnce를 사용하여 WCF 응용 프로그램 배포
+        - name: ClickOnce를 사용하여 WCF 애플리케이션 배포
           href: deploying-wcf-applications-with-clickonce.md
     - name: 관리 및 진단
       href: diagnostics/

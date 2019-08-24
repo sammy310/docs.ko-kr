@@ -9,20 +9,20 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61971485"
 ---
-# <a name="3347---socketacceptclosed"></a><span data-ttu-id="37b6c-102">3347 - SocketAcceptClosed</span><span class="sxs-lookup"><span data-stu-id="37b6c-102">3347 - SocketAcceptClosed</span></span>
-## <a name="properties"></a><span data-ttu-id="37b6c-103">속성</span><span class="sxs-lookup"><span data-stu-id="37b6c-103">Properties</span></span>  
+# <a name="3347---socketacceptclosed"></a><span data-ttu-id="0c852-102">3347 - SocketAcceptClosed</span><span class="sxs-lookup"><span data-stu-id="0c852-102">3347 - SocketAcceptClosed</span></span>
+## <a name="properties"></a><span data-ttu-id="0c852-103">속성</span><span class="sxs-lookup"><span data-stu-id="0c852-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="37b6c-104">ID</span><span class="sxs-lookup"><span data-stu-id="37b6c-104">ID</span></span>|<span data-ttu-id="37b6c-105">3347</span><span class="sxs-lookup"><span data-stu-id="37b6c-105">3347</span></span>|  
-|<span data-ttu-id="37b6c-106">키워드</span><span class="sxs-lookup"><span data-stu-id="37b6c-106">Keywords</span></span>|<span data-ttu-id="37b6c-107">TCP</span><span class="sxs-lookup"><span data-stu-id="37b6c-107">TCP</span></span>|  
-|<span data-ttu-id="37b6c-108">수준</span><span class="sxs-lookup"><span data-stu-id="37b6c-108">Level</span></span>|<span data-ttu-id="37b6c-109">자세히</span><span class="sxs-lookup"><span data-stu-id="37b6c-109">Verbose</span></span>|  
-|<span data-ttu-id="37b6c-110">채널</span><span class="sxs-lookup"><span data-stu-id="37b6c-110">Channel</span></span>|<span data-ttu-id="37b6c-111">Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그</span><span class="sxs-lookup"><span data-stu-id="37b6c-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="0c852-104">ID</span><span class="sxs-lookup"><span data-stu-id="0c852-104">ID</span></span>|<span data-ttu-id="0c852-105">3347</span><span class="sxs-lookup"><span data-stu-id="0c852-105">3347</span></span>|  
+|<span data-ttu-id="0c852-106">키워드</span><span class="sxs-lookup"><span data-stu-id="0c852-106">Keywords</span></span>|<span data-ttu-id="0c852-107">TCP</span><span class="sxs-lookup"><span data-stu-id="0c852-107">TCP</span></span>|  
+|<span data-ttu-id="0c852-108">수준</span><span class="sxs-lookup"><span data-stu-id="0c852-108">Level</span></span>|<span data-ttu-id="0c852-109">자세히</span><span class="sxs-lookup"><span data-stu-id="0c852-109">Verbose</span></span>|  
+|<span data-ttu-id="0c852-110">채널</span><span class="sxs-lookup"><span data-stu-id="0c852-110">Channel</span></span>|<span data-ttu-id="0c852-111">Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그</span><span class="sxs-lookup"><span data-stu-id="0c852-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="37b6c-112">설명</span><span class="sxs-lookup"><span data-stu-id="37b6c-112">Description</span></span>  
- <span data-ttu-id="37b6c-113">이 이벤트는 소켓 수락이 종료될 때 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="37b6c-113">This event is emitted when the socket accept is closed.</span></span>  
+## <a name="description"></a><span data-ttu-id="0c852-112">설명</span><span class="sxs-lookup"><span data-stu-id="0c852-112">Description</span></span>  
+ <span data-ttu-id="0c852-113">이 이벤트는 소켓 수락이 종료될 때 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="0c852-113">This event is emitted when the socket accept is closed.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="37b6c-114">메시지</span><span class="sxs-lookup"><span data-stu-id="37b6c-114">Message</span></span>  
- <span data-ttu-id="37b6c-115">소켓 수락이 종료되었습니다.</span><span class="sxs-lookup"><span data-stu-id="37b6c-115">Socket accept closed.</span></span>  
+## <a name="message"></a><span data-ttu-id="0c852-114">메시지</span><span class="sxs-lookup"><span data-stu-id="0c852-114">Message</span></span>  
+ <span data-ttu-id="0c852-115">소켓 수락이 종료되었습니다.</span><span class="sxs-lookup"><span data-stu-id="0c852-115">Socket accept closed.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="37b6c-116">설명</span><span class="sxs-lookup"><span data-stu-id="37b6c-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="0c852-116">설명</span><span class="sxs-lookup"><span data-stu-id="0c852-116">Details</span></span>

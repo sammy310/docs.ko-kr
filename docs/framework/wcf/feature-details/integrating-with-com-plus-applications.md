@@ -1,5 +1,5 @@
 ---
-title: COM+ 응용 프로그램과 통합
+title: COM+ 애플리케이션과 통합
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF, reusing code
@@ -16,25 +16,25 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62046933"
 ---
-# <a name="integrating-with-com-applications"></a><span data-ttu-id="544bc-102">COM+ 응용 프로그램과 통합</span><span class="sxs-lookup"><span data-stu-id="544bc-102">Integrating with COM+ Applications</span></span>
-<span data-ttu-id="544bc-103">Windows Communication Foundation (WCF)는 분산된 응용 프로그램을 만들기 위한 풍부한 환경을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="544bc-103">Windows Communication Foundation (WCF) provides a rich environment for creating distributed applications.</span></span> <span data-ttu-id="544bc-104">COM +에서 호스팅되는 구성 요소 기반 응용 프로그램 논리에 상당한 투자를 한 경우 다시 작성 하지 않고 기존 논리를 확장 하려면 WCF를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="544bc-104">If you have a substantial investment in component-based application logic hosted in COM+, you can use WCF to extend your existing logic rather than having to rewrite it.</span></span> <span data-ttu-id="544bc-105">이 단원의 항목에서는 WCF를 사용 하 여 COM +를 사용 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="544bc-105">The topics within this section describe how to use COM+ with WCF.</span></span>  
+# <a name="integrating-with-com-applications"></a><span data-ttu-id="865b5-102">COM+ 애플리케이션과 통합</span><span class="sxs-lookup"><span data-stu-id="865b5-102">Integrating with COM+ Applications</span></span>
+<span data-ttu-id="865b5-103">Windows Communication Foundation (WCF)는 분산된 응용 프로그램을 만들기 위한 풍부한 환경을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="865b5-103">Windows Communication Foundation (WCF) provides a rich environment for creating distributed applications.</span></span> <span data-ttu-id="865b5-104">COM +에서 호스팅되는 구성 요소 기반 응용 프로그램 논리에 상당한 투자를 한 경우 다시 작성 하지 않고 기존 논리를 확장 하려면 WCF를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="865b5-104">If you have a substantial investment in component-based application logic hosted in COM+, you can use WCF to extend your existing logic rather than having to rewrite it.</span></span> <span data-ttu-id="865b5-105">이 단원의 항목에서는 WCF를 사용 하 여 COM +를 사용 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="865b5-105">The topics within this section describe how to use COM+ with WCF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="544bc-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="544bc-106">In This Section</span></span>  
- [<span data-ttu-id="544bc-107">COM+ 애플리케이션과 통합 개요</span><span class="sxs-lookup"><span data-stu-id="544bc-107">Integrating with COM+ Applications Overview</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
- <span data-ttu-id="544bc-108">COM+ 구성 요소를 통합하는 시기 및 방법에 대한 개요를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="544bc-108">Gives an overview of when and how to integrate COM+ components.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="865b5-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="865b5-106">In This Section</span></span>  
+ [<span data-ttu-id="865b5-107">COM+ 애플리케이션과 통합 개요</span><span class="sxs-lookup"><span data-stu-id="865b5-107">Integrating with COM+ Applications Overview</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
+ <span data-ttu-id="865b5-108">COM+ 구성 요소를 통합하는 시기 및 방법에 대한 개요를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="865b5-108">Gives an overview of when and how to integrate COM+ components.</span></span>  
   
- [<span data-ttu-id="544bc-109">방법: COM + 서비스 모델 구성 도구를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="544bc-109">How to: Use the COM+ Service Model Configuration Tool</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)  
- <span data-ttu-id="544bc-110">COM + 서비스 모델 구성 명령줄 도구 (ComSvcConfig.exe)를 사용 하 여 WCF 서비스로 노출 하려는 응용 프로그램 인터페이스를 구성 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="544bc-110">Explains how to use the COM+ Service Model Configuration command-line tool (ComSvcConfig.exe) to configure the application interfaces that you want exposed as WCF services.</span></span>  
+ [<span data-ttu-id="865b5-109">방법: COM + 서비스 모델 구성 도구를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="865b5-109">How to: Use the COM+ Service Model Configuration Tool</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)  
+ <span data-ttu-id="865b5-110">COM + 서비스 모델 구성 명령줄 도구 (ComSvcConfig.exe)를 사용 하 여 WCF 서비스로 노출 하려는 응용 프로그램 인터페이스를 구성 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="865b5-110">Explains how to use the COM+ Service Model Configuration command-line tool (ComSvcConfig.exe) to configure the application interfaces that you want exposed as WCF services.</span></span>  
   
- [<span data-ttu-id="544bc-111">방법: COM + 서비스 설정 구성</span><span class="sxs-lookup"><span data-stu-id="544bc-111">How to: Configure COM+ Service Settings</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
- <span data-ttu-id="544bc-112">COM + 개체를 WCF 서비스로 구성 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="544bc-112">Explains how to configure a COM+ object as a WCF service.</span></span>  
+ [<span data-ttu-id="865b5-111">방법: COM + 서비스 설정 구성</span><span class="sxs-lookup"><span data-stu-id="865b5-111">How to: Configure COM+ Service Settings</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
+ <span data-ttu-id="865b5-112">COM + 개체를 WCF 서비스로 구성 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="865b5-112">Explains how to configure a COM+ object as a WCF service.</span></span>  
   
- [<span data-ttu-id="544bc-113">방법: COM + 통합 응용 프로그램 배포</span><span class="sxs-lookup"><span data-stu-id="544bc-113">How to: Deploy a COM+ Integration Application</span></span>](../../../../docs/framework/wcf/feature-details/how-to-deploy-a-com-integration-application.md)  
- <span data-ttu-id="544bc-114">COM+ 통합 응용 프로그램을 이동하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="544bc-114">Explains how to move a COM+ integration application.</span></span>  
+ [<span data-ttu-id="865b5-113">방법: COM + 통합 응용 프로그램 배포</span><span class="sxs-lookup"><span data-stu-id="865b5-113">How to: Deploy a COM+ Integration Application</span></span>](../../../../docs/framework/wcf/feature-details/how-to-deploy-a-com-integration-application.md)  
+ <span data-ttu-id="865b5-114">COM+ 통합 애플리케이션을 이동하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="865b5-114">Explains how to move a COM+ integration application.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="544bc-115">참조</span><span class="sxs-lookup"><span data-stu-id="544bc-115">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="865b5-115">참조</span><span class="sxs-lookup"><span data-stu-id="865b5-115">Reference</span></span>  
  <xref:System.ServiceModel>  
   
-## <a name="see-also"></a><span data-ttu-id="544bc-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="544bc-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="865b5-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="865b5-116">See also</span></span>
 
-- [<span data-ttu-id="544bc-117">COM 애플리케이션과 통합</span><span class="sxs-lookup"><span data-stu-id="544bc-117">Integrating with COM Applications</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)
+- [<span data-ttu-id="865b5-117">COM 애플리케이션과 통합</span><span class="sxs-lookup"><span data-stu-id="865b5-117">Integrating with COM Applications</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)

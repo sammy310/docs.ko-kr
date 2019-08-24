@@ -9,20 +9,20 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61753311"
 ---
-# <a name="710---httpcontextbeforeprocessauthentication"></a><span data-ttu-id="09fdb-102">710 - HttpContextBeforeProcessAuthentication</span><span class="sxs-lookup"><span data-stu-id="09fdb-102">710 - HttpContextBeforeProcessAuthentication</span></span>
-## <a name="properties"></a><span data-ttu-id="09fdb-103">속성</span><span class="sxs-lookup"><span data-stu-id="09fdb-103">Properties</span></span>  
+# <a name="710---httpcontextbeforeprocessauthentication"></a><span data-ttu-id="30654-102">710 - HttpContextBeforeProcessAuthentication</span><span class="sxs-lookup"><span data-stu-id="30654-102">710 - HttpContextBeforeProcessAuthentication</span></span>
+## <a name="properties"></a><span data-ttu-id="30654-103">속성</span><span class="sxs-lookup"><span data-stu-id="30654-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="09fdb-104">ID</span><span class="sxs-lookup"><span data-stu-id="09fdb-104">ID</span></span>|<span data-ttu-id="09fdb-105">710</span><span class="sxs-lookup"><span data-stu-id="09fdb-105">710</span></span>|  
-|<span data-ttu-id="09fdb-106">키워드</span><span class="sxs-lookup"><span data-stu-id="09fdb-106">Keywords</span></span>|<span data-ttu-id="09fdb-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="09fdb-107">ServiceModel</span></span>|  
-|<span data-ttu-id="09fdb-108">수준</span><span class="sxs-lookup"><span data-stu-id="09fdb-108">Level</span></span>|<span data-ttu-id="09fdb-109">자세히</span><span class="sxs-lookup"><span data-stu-id="09fdb-109">Verbose</span></span>|  
-|<span data-ttu-id="09fdb-110">채널</span><span class="sxs-lookup"><span data-stu-id="09fdb-110">Channel</span></span>|<span data-ttu-id="09fdb-111">Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석</span><span class="sxs-lookup"><span data-stu-id="09fdb-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="30654-104">ID</span><span class="sxs-lookup"><span data-stu-id="30654-104">ID</span></span>|<span data-ttu-id="30654-105">710</span><span class="sxs-lookup"><span data-stu-id="30654-105">710</span></span>|  
+|<span data-ttu-id="30654-106">키워드</span><span class="sxs-lookup"><span data-stu-id="30654-106">Keywords</span></span>|<span data-ttu-id="30654-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="30654-107">ServiceModel</span></span>|  
+|<span data-ttu-id="30654-108">수준</span><span class="sxs-lookup"><span data-stu-id="30654-108">Level</span></span>|<span data-ttu-id="30654-109">자세히</span><span class="sxs-lookup"><span data-stu-id="30654-109">Verbose</span></span>|  
+|<span data-ttu-id="30654-110">채널</span><span class="sxs-lookup"><span data-stu-id="30654-110">Channel</span></span>|<span data-ttu-id="30654-111">Microsoft-Windows-애플리케이션 서버-애플리케이션/분석</span><span class="sxs-lookup"><span data-stu-id="30654-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="09fdb-112">설명</span><span class="sxs-lookup"><span data-stu-id="09fdb-112">Description</span></span>  
- <span data-ttu-id="09fdb-113">이 이벤트는 메시지 디스패치에 대한 인증이 시작될 때 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="09fdb-113">This event is emitted when authentication for message dispatching is started.</span></span>  
+## <a name="description"></a><span data-ttu-id="30654-112">설명</span><span class="sxs-lookup"><span data-stu-id="30654-112">Description</span></span>  
+ <span data-ttu-id="30654-113">이 이벤트는 메시지 디스패치에 대한 인증이 시작될 때 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="30654-113">This event is emitted when authentication for message dispatching is started.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="09fdb-114">메시지</span><span class="sxs-lookup"><span data-stu-id="09fdb-114">Message</span></span>  
- <span data-ttu-id="09fdb-115">메시지 디스패치를 위한 인증을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="09fdb-115">Start authentication for message dispatching</span></span>  
+## <a name="message"></a><span data-ttu-id="30654-114">메시지</span><span class="sxs-lookup"><span data-stu-id="30654-114">Message</span></span>  
+ <span data-ttu-id="30654-115">메시지 디스패치를 위한 인증을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="30654-115">Start authentication for message dispatching</span></span>  
   
-## <a name="details"></a><span data-ttu-id="09fdb-116">설명</span><span class="sxs-lookup"><span data-stu-id="09fdb-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="30654-116">설명</span><span class="sxs-lookup"><span data-stu-id="30654-116">Details</span></span>

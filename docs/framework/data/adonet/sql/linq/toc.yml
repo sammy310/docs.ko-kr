@@ -120,7 +120,7 @@
                       href: find-the-maximum-value-in-a-numeric-sequence.md
                     - name: 숫자 시퀀스에서 최소값 찾기
                       href: find-the-minimum-value-in-a-numeric-sequence.md
-                    - name: 숫자 시퀀스에서 값의 합계 계산
+                    - name: 숫자 시퀀스에서 값의 합계 컴퓨팅
                       href: compute-the-sum-of-values-in-a-numeric-sequence.md
                 - name: 시퀀스의 첫 번째 요소 반환
                   href: return-the-first-element-in-a-sequence.md
@@ -221,7 +221,7 @@
               href: inheritance-support.md
             - name: 로컬 메서드 호출
               href: local-method-calls.md
-            - name: LINQ to SQL을 사용한 N 계층 및 원격 응용 프로그램
+            - name: LINQ to SQL을 사용한 N 계층 및 원격 애플리케이션
               href: n-tier-and-remote-applications-with-linq-to-sql.md
               items:
                 - name: ASP.NET을 사용하는 LINQ to SQL N 계층
@@ -230,7 +230,7 @@
                   href: linq-to-sql-n-tier-with-web-services.md
                 - name: N 계층 비즈니스 논리 구현
                   href: implementing-business-logic-linq-to-sql.md
-                - name: N 계층 응용 프로그램에서 데이터 검색 및 CUD 작업(LINQ to SQL)
+                - name: N 계층 애플리케이션에서 데이터 검색 및 CUD 작업(LINQ to SQL)
                   href: data-retrieval-and-cud-operations-in-n-tier-applications.md
             - name: 개체 ID
               href: object-identity.md

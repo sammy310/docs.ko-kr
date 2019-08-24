@@ -75,7 +75,7 @@
               href: configuring-system-provided-bindings.md
             - name: 바인딩에 시간 제한 값 구성
               href: configuring-timeout-values-on-a-binding.md
-            - name: UDP 전송을 사용하여 멀티캐스트 응용 프로그램 만들기
+            - name: UDP 전송을 사용하여 멀티캐스트 애플리케이션 만들기
               href: creating-multicasting-applications-using-the-udp-transport.md
         - name: 계약
           href: contracts.md
@@ -248,7 +248,7 @@
               items:
                 - name: 서비스 엔드포인트 및 큐 주소 지정
                   href: service-endpoints-and-queue-addressing.md
-                - name: 대기 중인 응용 프로그램 웹 호스팅
+                - name: 대기 중인 애플리케이션 웹 호스팅
                   href: web-hosting-a-queued-application.md
             - name: '방법: WCF 엔드포인트와 대기 중인 메시지 교환'
               href: how-to-exchange-queued-messages-with-wcf-endpoints.md
@@ -290,7 +290,7 @@
               href: enabling-transaction-flow.md
             - name: '방법: 트랜잭션 서비스 만들기'
               href: how-to-create-a-transactional-service.md
-            - name: 트랜잭션 응용 프로그램 진단
+            - name: 트랜잭션 애플리케이션 진단
               href: diagnosing-transactional-applications.md
             - name: COM+ 및 ServiceModel의 트랜잭션 비교
               href: comparing-transactions-in-com-and-servicemodel.md
@@ -311,7 +311,7 @@
           items:
             - name: WCF에서 사용되는 보안 개념
               href: security-concepts-used-in-wcf.md
-            - name: 분산 응용 프로그램 보안
+            - name: 분산 애플리케이션 보안
               href: distributed-application-security.md
             - name: 보안 용어
               href: wcf-security-terminology.md
@@ -552,16 +552,16 @@
               items:
                 - name: 'CustomPeerResolverService 내: 클라이언트 등록'
                   href: inside-the-custompeerresolverservice-client-registrations.md
-        - name: 피어 채널 응용 프로그램 빌드
+        - name: 피어 채널 애플리케이션 빌드
           href: building-a-peer-channel-application.md
           items:
-            - name: NetTcpBinding 응용 프로그램을 피어 채널 응용 프로그램으로 변환
+            - name: NetTcpBinding 애플리케이션을 피어 채널 애플리케이션으로 변환
               href: converting-a-nettcpbinding-application-to-a-peer-channel-application.md
             - name: 메시지 분포 제한
               href: limiting-message-distribution.md
             - name: 온라인 및 오프라인 상태 추가
               href: adding-online-and-offline-status.md
-            - name: 피어 채널 응용 프로그램 보안
+            - name: 피어 채널 애플리케이션 보안
               href: securing-peer-channel-applications.md
     - name: 메타데이터
       href: metadata.md
@@ -633,7 +633,7 @@
               href: channel-factory-and-caching.md
             - name: '방법: 비동기적으로 서비스 작업 호출'
               href: how-to-call-wcf-service-operations-asynchronously.md
-            - name: 중간 계층 클라이언트 응용 프로그램
+            - name: 중간 계층 클라이언트 애플리케이션
               href: middle-tier-client-applications.md
             - name: '방법: 채널 팩터리를 사용하여 비동기적으로 작업 호출'
               href: how-to-call-operations-asynchronously-using-a-channel-factory.md
@@ -670,7 +670,7 @@
               href: how-to-install-and-configure-wcf-activation-components.md
             - name: '방법: WAS에서 WCF 서비스 호스팅'
               href: how-to-host-a-wcf-service-in-was.md
-        - name: Windows 서비스 응용 프로그램에서의 호스팅
+        - name: Windows 서비스 애플리케이션에서의 호스팅
           href: hosting-in-a-windows-service-application.md
           items:
             - name: '방법: 관리형 Windows 서비스에서 WCF 서비스 호스팅'
@@ -722,10 +722,10 @@
               href: context-exchange-protocol.md
             - name: 페더레이션 시나리오에서 혼합 트러스트 프로토콜
               href: mixing-trust-protocols-in-federated-scenarios.md
-        - name: COM+ 응용 프로그램과 통합
+        - name: COM+ 애플리케이션과 통합
           href: integrating-with-com-plus-applications.md
           items:
-            - name: COM+ 응용 프로그램과 통합 개요
+            - name: COM+ 애플리케이션과 통합 개요
               href: integrating-with-com-plus-applications-overview.md
             - name: '방법: COM+ 서비스 모델 구성 도구 사용'
               href: how-to-use-the-com-service-model-configuration-tool.md
@@ -733,10 +733,10 @@
               href: how-to-configure-com-service-settings.md
             - name: '방법: COM+ 통합 애플리케이션 배포'
               href: how-to-deploy-a-com-integration-application.md
-        - name: COM 응용 프로그램과 통합
+        - name: COM 애플리케이션과 통합
           href: integrating-with-com-applications.md
           items:
-            - name: COM 응용 프로그램과 통합 개요
+            - name: COM 애플리케이션과 통합 개요
               href: integrating-with-com-applications-overview.md
             - name: '방법: 서비스 모니커 등록 및 구성'
               href: how-to-register-and-configure-a-service-moniker.md
@@ -748,7 +748,7 @@
               href: how-to-use-a-service-moniker-with-metadata-exchange-contracts.md
             - name: '방법: 채널 보안 자격 증명 지정'
               href: how-to-specify-channel-security-credentials.md
-        - name: .NET Remoting 응용 프로그램을 WCF로 마이그레이션
+        - name: .NET Remoting 애플리케이션을 WCF로 마이그레이션
           href: migrating-net-remoting-applications-to-wcf.md
         - name: Web Services Enhancements 3.0과의 상호 운용성
           href: interoperability-with-web-services-enhancements-3-0.md
