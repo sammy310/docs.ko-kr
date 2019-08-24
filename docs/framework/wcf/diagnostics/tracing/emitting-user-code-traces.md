@@ -111,7 +111,7 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
 
 이 섹션에서는 실행 하 여 생성 된 추적의 스크린 샷을 합니다 [추적 확장](../../../../../docs/framework/wcf/samples/extending-tracing.md) 샘플을 사용 하 여 볼 때 합니다 [Service Trace Viewer 도구 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)합니다.
 
-다음 다이어그램에서는 이전에 만든 "추가 요청" 활동 왼쪽된 패널에서 선택 되었습니다. 응용 프로그램 클라이언트 프로그램을 구성하는 세 개의 수학 연산 동작(나누기, 빼기, 곱하기)으로 나열됩니다. 다른 요청에서 발생할 수 있는 잠재적 오류를 격리시키기 위해 사용자 코드에서 작업별로 하나의 새로운 동작을 정의했습니다.
+다음 다이어그램에서는 이전에 만든 "추가 요청" 활동 왼쪽된 패널에서 선택 되었습니다. 애플리케이션 클라이언트 프로그램을 구성하는 세 개의 수학 연산 동작(나누기, 빼기, 곱하기)으로 나열됩니다. 다른 요청에서 발생할 수 있는 잠재적 오류를 격리시키기 위해 사용자 코드에서 작업별로 하나의 새로운 동작을 정의했습니다.
 
 전송의 사용을 보여 합니다 [추적 확장](../../../../../docs/framework/wcf/samples/extending-tracing.md) 샘플에서는 네 작업 요청을 캡슐화 하는 계산기 동작도 생성 됩니다. 각 요청에는 계산기 동작과 요청 동작 사이에 주고 받는 전송이 있습니다. 추적은 그림의 오른쪽 위 패널에 강조 표시되어 있습니다.
 

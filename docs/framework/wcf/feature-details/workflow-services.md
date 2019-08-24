@@ -23,7 +23,7 @@ ms.locfileid: "61929703"
  메시징 활동을 사용하여 워크플로 서비스를 만드는 방법에 대해 설명합니다.  
   
  [방법: 워크플로 응용 프로그램에서 서비스에 액세스](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md)  
- 워크플로 응용 프로그램에서 서비스를 호출하는 방법에 대해 설명합니다.  
+ 워크플로 애플리케이션에서 서비스를 호출하는 방법에 대해 설명합니다.  
   
  [상관 관계](../../../../docs/framework/wcf/feature-details/correlation.md)  
  상관 관계를 사용하여 메시지를 서로 매핑하거나 인스턴스에 매핑하는 방법에 대해 설명합니다.  

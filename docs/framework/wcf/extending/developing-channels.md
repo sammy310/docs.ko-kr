@@ -21,9 +21,9 @@ Windows Communication Foundation (WCF)를 사용 하 여 사용할 수 있는 �
   
 3. 네트워크 관련 예외가 <xref:System.TimeoutException?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.CommunicationException>의 올바른 파생 클래스로 정규화되는지 확인합니다. 자세한 내용은 참조 하세요 [예외 처리 및 오류](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)합니다.  
   
-4. 응용 프로그램 계층에서 사용할 수 있도록 하려면 사용자 지정 채널을 채널 스택에 추가하는 <xref:System.ServiceModel.Channels.BindingElement>를 추가합니다. 자세한 내용은 [BindingElement 만들기](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md)합니다.  
+4. 애플리케이션 계층에서 사용할 수 있도록 하려면 사용자 지정 채널을 채널 스택에 추가하는 <xref:System.ServiceModel.Channels.BindingElement>를 추가합니다. 자세한 내용은 [BindingElement 만들기](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md)합니다.  
   
- 응용 프로그램 계층에서 좀 더 완벽한 지원이 가능하게 하려면 다음의 단계를 추가로 수행해야 합니다.  
+ 애플리케이션 계층에서 좀 더 완벽한 지원이 가능하게 하려면 다음의 단계를 추가로 수행해야 합니다.  
   
 1. 새 바인딩 요소가 구성 시스템에 노출되도록 바인딩 요소 확장명 섹션을 추가합니다. 자세한 내용은 [구성 및 메타 데이터 지원을](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)합니다.  
   

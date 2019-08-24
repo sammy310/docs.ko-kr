@@ -25,7 +25,7 @@ ms.locfileid: "61991213"
  MEX 메타데이터 엔드포인트에서 표준 MEX 바인딩과 다른 바인딩을 사용하는 경우 코드를 사용하거나 <xref:System.ServiceModel.Description.MetadataExchangeClient> 클라이언트 엔드포인트 구성을 제공하여 <xref:System.ServiceModel.Description.IMetadataExchange>에서 사용하는 바인딩을 구성할 수 있습니다. Svcutil.exe 도구는 메타데이터 엔드포인트 주소의 URI 스키마와 이름이 같은 <xref:System.ServiceModel.Description.IMetadataExchange> 클라이언트 엔드포인트 구성을 구성 파일에서 자동으로 로드합니다.  
   
 ## <a name="security"></a>보안  
- 사용자 지정 바인딩을 통해 메타데이터를 게시하는 경우 바인딩에서 메타데이터가 필요로 하는 보안 지원을 제공하는지 확인합니다. 예를 들어, 정보 공개를 방지하고 클라이언트에 메타데이터를 가져올 권한이 있는지 확인하려면 인증 및 암호화가 필요한 <xref:System.ServiceModel.Description.IMetadataExchange> 엔드포인트를 구성하여 메타데이터 및 응용 프로그램의 보안을 더욱 향상시킬 수 있습니다. 샘플 [사용자 지정 보안 메타 데이터 끝점](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) 이 시나리오를 보여 줍니다.  
+ 사용자 지정 바인딩을 통해 메타데이터를 게시하는 경우 바인딩에서 메타데이터가 필요로 하는 보안 지원을 제공하는지 확인합니다. 예를 들어, 정보 공개를 방지하고 클라이언트에 메타데이터를 가져올 권한이 있는지 확인하려면 인증 및 암호화가 필요한 <xref:System.ServiceModel.Description.IMetadataExchange> 엔드포인트를 구성하여 메타데이터 및 애플리케이션의 보안을 더욱 향상시킬 수 있습니다. 샘플 [사용자 지정 보안 메타 데이터 끝점](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) 이 시나리오를 보여 줍니다.  
   
 ## <a name="see-also"></a>참고자료
 

@@ -17,10 +17,10 @@ ms.locfileid: "62008657"
 |ID|1002|  
 |키워드|WFRuntime|  
 |수준|정보|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
- 워크플로 응용 프로그램에 예외가 발생하여 오류 상태로 종료되었음을 나타냅니다.  
+ 워크플로 애플리케이션에 예외가 발생하여 오류 상태로 종료되었음을 나타냅니다.  
   
 ## <a name="message"></a>메시지  
  WorkflowApplication Id: '%1'이(가) 종료되었습니다. 예외가 발생하여 오류 상태로 완료되었습니다.  
@@ -29,6 +29,6 @@ ms.locfileid: "62008657"
   
 |데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  
-|WorkflowApplicationId|`xs:string`|워크플로 응용 프로그램 ID|  
+|WorkflowApplicationId|`xs:string`|워크플로 애플리케이션 ID|  
 |예외|`xs:string`|예외에 대한 예외 정보|  
 |AppDomain|`xs:string`|AppDomain.CurrentDomain.FriendlyName에서 반환되는 문자열입니다.|

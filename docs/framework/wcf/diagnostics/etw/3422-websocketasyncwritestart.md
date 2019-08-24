@@ -17,7 +17,7 @@ ms.locfileid: "61797555"
 |ID|3422|  
 |키워드|HTTP|  
 |수준|자세히|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  이 이벤트는 WebSocket 비동기 쓰기가 시작되었을 때 내보내집니다.  

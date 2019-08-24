@@ -17,7 +17,7 @@ ms.locfileid: "61781643"
 |ID|222|  
 |키워드|EndToEndMonitoring, HealthMonitoring, 문제 해결, ServiceModel|  
 |수준|경고|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
 ## <a name="description"></a>설명  
  이 이벤트는 서비스 모델의 기본 `OperationInvoker`에서 해당 메서드를 호출하는 동안 예외가 발생하면 내보내집니다. `FaultException`에서 파생되는 예외가 발생할 경우에는 이 이벤트가 내보내지지 않습니다.  

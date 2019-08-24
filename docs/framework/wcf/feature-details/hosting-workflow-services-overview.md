@@ -10,7 +10,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61855896"
 ---
 # <a name="hosting-workflow-services-overview"></a>워크플로 서비스 호스팅 개요
-워크플로 서비스를 실행하려면 호스팅해야 합니다. <xref:System.ServiceModel.WorkflowServiceHost>는 여러 인스턴스, 구성 및 WCF 메시징(워크플로가 호스팅되기 위해 메시징을 사용할 필요는 없지만)을 지원하는 즉시 사용 가능한 워크플로 호스트로,  서비스 동작의 집합을 통해 지속성, 추적 및 인스턴스 제어와 통합됩니다.  WCF의 <xref:System.ServiceModel.ServiceHost>와 마찬가지로 <xref:System.ServiceModel.WorkflowServiceHost>는 모든 관리되는 .NET 응용 프로그램에서 자체 호스팅되거나 IIS/WAS에서 .xamlx 파일로 웹 호스팅될 수 있습니다.  이 단원의 항목에서는 워크플로 서비스를 호스팅하는 방법에 대해 설명합니다.  
+워크플로 서비스를 실행하려면 호스팅해야 합니다. <xref:System.ServiceModel.WorkflowServiceHost>는 여러 인스턴스, 구성 및 WCF 메시징(워크플로가 호스팅되기 위해 메시징을 사용할 필요는 없지만)을 지원하는 즉시 사용 가능한 워크플로 호스트로,  서비스 동작의 집합을 통해 지속성, 추적 및 인스턴스 제어와 통합됩니다.  WCF의 <xref:System.ServiceModel.ServiceHost>와 마찬가지로 <xref:System.ServiceModel.WorkflowServiceHost>는 모든 관리되는 .NET 애플리케이션에서 자체 호스팅되거나 IIS/WAS에서 .xamlx 파일로 웹 호스팅될 수 있습니다.  이 단원의 항목에서는 워크플로 서비스를 호스팅하는 방법에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [워크플로 서비스 호스팅](../../../../docs/framework/wcf/feature-details/hosting-workflow-services.md)  

@@ -17,7 +17,7 @@ ms.locfileid: "61945940"
 |ID|3552|  
 |키워드|할당량, WFServices|  
 |수준|경고|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
 ## <a name="description"></a>설명  
  스로틀 'MaxPendingMessagesPerChannel' 한도에 도달했음을 나타냅니다.  

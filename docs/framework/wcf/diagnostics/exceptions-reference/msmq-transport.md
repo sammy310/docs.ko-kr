@@ -18,7 +18,7 @@ ms.locfileid: "61959421"
 |-------------------|---------------------|  
 |MsmqActiveDirectoryRequiresNativeTransfer|메시지에 대한 바인딩을 확인하지 못했습니다. 클라이언트가 메시지를 보낼 수 없습니다. 바인딩 속성의 충돌로 인해 이 오류가 발생했습니다. UseActiveDirectory가 true로 설정되고 QueueTransferProtocol이 Native로 설정됩니다. 충돌을 해결하려면 이러한 속성 중 하나를 수정하십시오.|  
 |MsmqAuthNoneRequiresProtectionNone|서비스에 대한 바인딩 유효성 검사에 실패했습니다. 서비스 엔드포인트 또는 클라이언트를 시작할 수 없습니다. 바인딩 속성의 충돌로 인해 이 오류가 발생했습니다. MsmqAuthenticationMode가 None으로 설정되고 MsmqProtectionLevel이 None으로 설정되지 않습니다. 충돌을 해결하려면 이러한 속성 중 하나를 수정하십시오.|  
-|MsmqCustomRequiresPerAddDLQ|메시지에 대한 바인딩을 확인하지 못했습니다. 클라이언트가 메시지를 보낼 수 없습니다. DeadLetterQueue가 Custom으로 설정되었으나 CustomDeadLetterQueue가 지정되지 않았습니다. CustomDeadLetterQueue 속성에서 각 응용 프로그램에 대해 배달 못 한 편지 큐의 URI를 지정합니다.|  
+|MsmqCustomRequiresPerAddDLQ|메시지에 대한 바인딩을 확인하지 못했습니다. 클라이언트가 메시지를 보낼 수 없습니다. DeadLetterQueue가 Custom으로 설정되었으나 CustomDeadLetterQueue가 지정되지 않았습니다. CustomDeadLetterQueue 속성에서 각 애플리케이션에 대해 배달 못 한 편지 큐의 URI를 지정합니다.|  
 |MsmqDeserializationError|XML 메시지를 deserialize하는 동안 오류가 발생했습니다. 메시지를 받을 수 없으며 삭제됩니다.|  
 |MsmqDLQNotWriteable|클라이언트에 대한 바인딩을 확인하지 못했습니다. 클라이언트가 메시지를 보낼 수 없습니다. 지정된 배달 못 한 편지 큐가 없거나 쓸 수 없습니다. 쓰기 위한 적절한 권한이 있는 큐가 있는지 확인합니다.|  
 |MsmqGetPrivateComputerInformationError|지정된 오류로 인해 버전을 검사하지 못했습니다. MSMQ의 버전을 검색할 수 없습니다. 대기 중인 채널의 모든 작업이 실패합니다. MSMQ가 설치되었으며 사용할 수 있는지 확인하십시오.|  

@@ -17,7 +17,7 @@ ms.locfileid: "61999624"
 |ID|504|  
 |키워드|WebHost|  
 |수준|정보|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  이 이벤트는 ServiceHostFactory 만들기가 종료될 때 내보내집니다.  

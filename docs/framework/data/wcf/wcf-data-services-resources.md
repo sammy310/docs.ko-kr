@@ -54,7 +54,7 @@ ms.locfileid: "61875136"
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]의 이점에 대한 보다 높은 수준의 정보를 제공하는 백서입니다.  
   
  [Microsoft WCF Data Services 사용](https://go.microsoft.com/fwlink/?LinkID=131075)  
- 클라이언트 응용 프로그램에서 데이터 서비스를 만들고 액세스하는 방법에 대한 추가 정보와 예제를 제공하는 백서입니다.  
+ 클라이언트 애플리케이션에서 데이터 서비스를 만들고 액세스하는 방법에 대한 추가 정보와 예제를 제공하는 백서입니다.  
   
  [The Entity-Relationship Model: 데이터의 통합 된 뷰에](https://go.microsoft.com/fwlink/?LinkId=91909) Peter Pin-shan Chen, Massachusetts Institute of Technology에서  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에서 구현하는 엔터티 관계형 모델의 기초에 대해 설명합니다. 1976년에 작성되었으며 컴퓨터 분야에서 가장 흔히 인용되는 논문 중 하나입니다.  

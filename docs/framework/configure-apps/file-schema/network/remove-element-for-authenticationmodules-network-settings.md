@@ -57,7 +57,7 @@ ms.locfileid: "69664047"
  `type` 특성 값은 올바른 클래스 이름 이어야 합니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
- 이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
+ 이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
  다음 예에서는 인증 모듈을 제거 합니다.  

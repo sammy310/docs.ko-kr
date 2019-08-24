@@ -12,7 +12,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61949593"
 ---
 # <a name="ienumrawinputdevicclone"></a>IEnumRAWINPUTDEVIC:Clone
-현재 열거자와 동일한 상태인 다른 원시 입력 장치 열거자를 만들어 동일한 목록을 반복합니다.  
+현재 열거자와 동일한 상태인 다른 원시 입력 디바이스 열거자를 만들어 동일한 목록을 반복합니다.  
   
 ## <a name="syntax"></a>구문  
   

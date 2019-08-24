@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: c66ca9356d1db157688349dfeea4270001513e0b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: a6bbc2fe4bf68b50153075a251d23deebda78de5
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949213"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988654"
 ---
 # <a name="serialization-and-deserialization"></a>Serialization 및 Deserialization
 WCF (Windows Communication Foundation)에는 <xref:System.Runtime.Serialization.DataContractSerializer>새로운 serialization 엔진인가 포함 되어 있습니다. 는 <xref:System.Runtime.Serialization.DataContractSerializer> .NET Framework 개체와 XML을 양방향으로 변환 합니다. 이 항목에서는 serializer가 작동하는 방식에 대해 설명합니다.  
@@ -22,7 +22,7 @@ WCF (Windows Communication Foundation)에는 <xref:System.Runtime.Serialization.
  WCF에는 <xref:System.Runtime.Serialization.NetDataContractSerializer>도우미 serializer 인도 포함 되어 있습니다. 는 <xref:System.Runtime.Serialization.NetDataContractSerializer> serialize 된 데이터의 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 일부로 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> .NET Framework 형식 이름도 내보내기 때문에 및 serializer와 유사 합니다. 그리고 serialize 측과 deserialize 측에서 동일한 형식을 공유할 때 사용됩니다. <xref:System.Runtime.Serialization.DataContractSerializer> 및 <xref:System.Runtime.Serialization.NetDataContractSerializer> 는 모두 공통 기본 클래스인 <xref:System.Runtime.Serialization.XmlObjectSerializer>에서 파생됩니다.  
   
 > [!WARNING]
->  <xref:System.Runtime.Serialization.DataContractSerializer> 는 20 미만의 16진수 값이 있는 제어 문자를 포함하는 문자열을 XML 엔터티로 serialize합니다. 이렇게 하면 wcf 서비스에 이러한 데이터를 보낼 때 WCF가 아닌 클라이언트에서 문제가 발생할 수 있습니다.  
+> <xref:System.Runtime.Serialization.DataContractSerializer> 는 20 미만의 16진수 값이 있는 제어 문자를 포함하는 문자열을 XML 엔터티로 serialize합니다. 이렇게 하면 wcf 서비스에 이러한 데이터를 보낼 때 WCF가 아닌 클라이언트에서 문제가 발생할 수 있습니다.  
   
 ## <a name="creating-a-datacontractserializer-instance"></a>DataContractSerializer 인스턴스 만들기  
  <xref:System.Runtime.Serialization.DataContractSerializer> 의 인스턴스를 구성하는 작업은 중요한 단계입니다. 구성한 후에는 어떤 설정도 변경할 수 없습니다.  

@@ -17,7 +17,7 @@ ms.locfileid: "61923970"
 |ID|114|  
 |키워드|HealthMonitoring, WFTracking|  
 |수준|정보|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
 ## <a name="description"></a>설명  
  워크플로 인스턴스가 워크플로 상태의 workflowinstancerecord를 내보내면 ETW 추적 참가자가이 이벤트를 내보냅니다. 시작, Resumed, Persisted, 유휴 상태, 삭제, 완료, 취소, 언로드, 일시 중단을 해제 합니다.  

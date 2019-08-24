@@ -2,18 +2,18 @@
 title: <baseAddressPrefixFilters>
 ms.date: 03/30/2017
 ms.assetid: 8cab2a9a-c51f-4283-bb60-2ad0c274fd46
-ms.openlocfilehash: 8a59f651318e18411b1485fc4eebeb7a550afca0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 55ffcfb5c0c84d68033d082cbe451696bd3c9dc2
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919851"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988357"
 ---
 # <a name="baseaddressprefixfilters"></a>\<baseAddressPrefixFilters>
 IIS에서 WCF (Windows Communication Foundation) 응용 프로그램을 호스팅할 때 적절 한 IIS (인터넷 정보 서비스) 바인딩을 선택 하는 메커니즘을 제공 하는 통과 필터를 지정 하는 구성 요소 컬렉션을 나타냅니다.  
   
 > [!WARNING]
->  \<baseAddressPrefixFilters > "localhost"를 인식 하지 않습니다. 대신 정규화 된 컴퓨터 이름을 사용 하십시오.  
+> \<baseAddressPrefixFilters > "localhost"를 인식 하지 않습니다. 대신 정규화 된 컴퓨터 이름을 사용 하십시오.  
   
  \<system.ServiceModel>  
 \<ServiceHostingEnvironment>  
@@ -42,7 +42,7 @@ IIS에서 WCF (Windows Communication Foundation) 응용 프로그램을 호스�
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<serviceHostingEnvironment>](servicehostingenvironment.md)|특정 전송을 위해 서비스 호스팅 환경에서 인스턴스화하는 형식을 정의합니다.|  
   

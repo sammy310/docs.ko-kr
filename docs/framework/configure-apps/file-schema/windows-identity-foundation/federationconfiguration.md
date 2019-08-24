@@ -3,12 +3,12 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: 53d6bdb34ded52e49fcc8c5de98fcd45ddabadaa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: c4dbb31bb7961f0d33df9d1faee8fe36ecb520a3
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942772"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988333"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 Ws-federation 프로토콜 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 을 통해 페더레이션된 인증을 사용 하 <xref:System.IdentityModel.Services.SessionAuthenticationModule> 는 경우 (wsfam) 및 (SAM)을 구성 합니다. <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> <xref:System.Security.Claims.ClaimsAuthorizationManager> 또는<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> 클래스를 사용 하 여 클레임 기반 액세스 제어를 제공 하는 경우를 구성 합니다.  
@@ -74,7 +74,7 @@ Ws-federation 프로토콜 <xref:System.IdentityModel.Services.WSFederationAuthe
  다음 XML에서는 wsfam에 대 한 설정을 지정 하 고 SAM에서 기본 쿠키 처리기 ( `<federationConfiguration>` <xref:System.IdentityModel.Services.ChunkedCookieHandler> 클래스의 인스턴스)를 사용 하도록 지정 하는 요소를 보여 줍니다.  
   
 > [!WARNING]
->  이 예제에서는 HTTPS를 사용 하는 데 쿠키 처리기와 WSFAM이 모두 필요 하지 않습니다. `requireHttps` 이는 `<wsFederation>` 요소의 특성과의`<cookieHandlerElement>` 특성이 이기 때문입니다. `false` `requireSsl` 이러한 설정은 보안 위험을 초래할 수 있으므로 대부분의 프로덕션 환경에는 권장 되지 않습니다.  
+> 이 예제에서는 HTTPS를 사용 하는 데 쿠키 처리기와 WSFAM이 모두 필요 하지 않습니다. `requireHttps` 이는 `<wsFederation>` 요소의 특성과의`<cookieHandlerElement>` 특성이 이기 때문입니다. `false` `requireSsl` 이러한 설정은 보안 위험을 초래할 수 있으므로 대부분의 프로덕션 환경에는 권장 되지 않습니다.  
   
 ```xml  
 <system.identityModel.services>  

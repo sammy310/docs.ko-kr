@@ -1,5 +1,5 @@
 ---
-title: 데이터 집합 제약 조건에 고유 XSD(XML 스키마) 제약 조건 매핑
+title: 데이터 세트 제약 조건에 고유 XSD(XML 스키마) 제약 조건 매핑
 ms.date: 03/30/2017
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
 ms.openlocfilehash: 650cd6b8b8149529f115f22a11d19178fbd6d302
@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61785375"
 ---
-# <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>데이터 집합 제약 조건에 고유 XSD(XML 스키마) 제약 조건 매핑
+# <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>데이터 세트 제약 조건에 고유 XSD(XML 스키마) 제약 조건 매핑
 XML 스키마 정의 언어 (XSD) 스키마에는 **고유** 요소는 요소나 특성에 고유성 제약 조건을 지정 합니다. XML 스키마를 관계형 스키마로 변환하는 과정에서, XML 스키마의 요소나 특성에 지정된 UNIQUE 제약 조건은 생성된 해당 <xref:System.Data.DataTable>에 있는 <xref:System.Data.DataSet>의 UNIQUE 제약 조건에 매핑됩니다.  
   
  다음 표에 간략하게 설명 합니다 **msdata** 에서 지정할 수 있는 특성을 **고유** 요소.  

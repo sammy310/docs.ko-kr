@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: d9c3492e50a5eba741fa6e241f6b2c57fde35ef0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 14bf9c89fd7142746b93cc45af6c2152e8700571
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952933"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988539"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>동기 및 비동기 작업
 이 항목에서는 비동기 서비스 작업의 구현 및 호출에 대해 설명합니다.  
@@ -76,7 +76,7 @@ public class SampleService:ISampleService
  논리 연산에서는 문자열을 반환하므로 SampleMethodTaskAsync 작업은 Task\<string>을 반환합니다. 작업 기반 비동기 패턴에 대한 자세한 내용은 [작업 기반 비동기 패턴](https://go.microsoft.com/fwlink/?LinkId=232504)을 참조하세요.  
   
 > [!WARNING]
->  작업 기반 비동기 패턴을 사용할 경우 작업 완료를 대기하는 동안 예외가 발생하면 T:System.AggregateException이 throw될 수 있습니다. 클라이언트 또는 서비스에서 이 예외가 발생할 수 있습니다.  
+> 작업 기반 비동기 패턴을 사용할 경우 작업 완료를 대기하는 동안 예외가 발생하면 T:System.AggregateException이 throw될 수 있습니다. 클라이언트 또는 서비스에서 이 예외가 발생할 수 있습니다.  
   
 #### <a name="event-based-asynchronous-pattern"></a>이벤트 기반 비동기 패턴  
  이벤트 기반 비동기 패턴을 지원하는 서비스에는 MethodNameAsync라는 작업이 하나 이상 있습니다. 이러한 메서드는 현재 스레드에서 동일한 작업을 수행하는 동기 버전을 미러링할 수 있습니다. 또한 이 클래스에는 MethodNameCompleted 이벤트가 있을 수 있고 MethodNameAsyncCancel 메서드가 있거나 단순히 CancelAsync 메서드가 있을 수 있습니다. 작업을 호출하려는 클라이언트는 작업이 완료될 때 호출할 이벤트 처리기를 정의합니다.  

@@ -17,7 +17,7 @@ ms.locfileid: "61774415"
 |ID|39458|  
 |키워드|WFTracking|  
 |수준|경고|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  추적 레코드가 잘렸음을 나타냅니다. 변수/주석/사용자 데이터가 제거되었습니다.  

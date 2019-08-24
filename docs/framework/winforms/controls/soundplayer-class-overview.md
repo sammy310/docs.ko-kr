@@ -14,7 +14,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61972005"
 ---
 # <a name="soundplayer-class-overview"></a>SoundPlayer 클래스 개요
-<xref:System.Media.SoundPlayer> 클래스를 사용하여 응용 프로그램에 소리를 쉽게 포함할 수 있습니다.  
+<xref:System.Media.SoundPlayer> 클래스를 사용하여 애플리케이션에 소리를 쉽게 포함할 수 있습니다.  
   
  <xref:System.Media.SoundPlayer> 클래스 UNC 또는 HTTP 위치 또는 리소스에서.wav 형식의 사운드 파일을 재생할 수 있습니다. 또한는 <xref:System.Media.SoundPlayer> 클래스를 사용 하면 비동기적으로 소리를 재생 하거나 로드할 수 있습니다.  
   

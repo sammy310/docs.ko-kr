@@ -37,7 +37,7 @@ ms.locfileid: "54574926"
 
 ## <a name="matrix-and-stopwatch-example"></a>행렬 및 스톱워치 예제
 
-이 예제에서는 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 메서드를 사용하여 두 행렬의 곱을 계산합니다. 또한 <xref:System.Diagnostics.Stopwatch?displayProperty=nameWithType> 클래스를 사용하여 병렬 루프와 비병렬 루프의 성능을 비교하는 방법을 보여 줍니다. 대용량의 출력을 생성할 수 있으므로 예제에서는 출력을 파일로 리디렉션할 수 있도록 합니다.
+이 예제에서는 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 메서드를 사용하여 두 행렬의 곱을 컴퓨팅합니다. 또한 <xref:System.Diagnostics.Stopwatch?displayProperty=nameWithType> 클래스를 사용하여 병렬 루프와 비병렬 루프의 성능을 비교하는 방법을 보여 줍니다. 대용량의 출력을 생성할 수 있으므로 예제에서는 출력을 파일로 리디렉션할 수 있도록 합니다.
 
 [!code-csharp[TPL_Parallel#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/simpleparallelfor.cs#01)]
 [!code-vb[TPL_Parallel#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/simpleparallelfor.vb#01)]

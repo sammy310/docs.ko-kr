@@ -14,7 +14,7 @@ ms.locfileid: "61969489"
 ---
 # <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>방법: 실행 중인 워크플로 인스턴스의 정의 업데이트
 
-동적 업데이트는 워크플로 응용 프로그램 개발자가 지속형 워크플로 인스턴스의 워크플로 정의를 업데이트하기 위한 메커니즘을 제공합니다. 필요한 변경을 통해 버그 수정 또는 새 요구 사항을 구현하거나 예기치 않은 변경 내용을 수용할 수 있습니다. 이 자습서의에서이 단계에서는 동적 업데이트를 사용 하 여 지속형된 인스턴스를 수정 하는 방법에 설명 합니다 `v1` 에 도입 된 새 기능에 맞게 숫자 추측 워크플로의 [방법: 여러 버전을 워크플로-Side-by-side의 호스트](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)합니다.
+동적 업데이트는 워크플로 애플리케이션 개발자가 지속형 워크플로 인스턴스의 워크플로 정의를 업데이트하기 위한 메커니즘을 제공합니다. 필요한 변경을 통해 버그 수정 또는 새 요구 사항을 구현하거나 예기치 않은 변경 내용을 수용할 수 있습니다. 이 자습서의에서이 단계에서는 동적 업데이트를 사용 하 여 지속형된 인스턴스를 수정 하는 방법에 설명 합니다 `v1` 에 도입 된 새 기능에 맞게 숫자 추측 워크플로의 [방법: 여러 버전을 워크플로-Side-by-side의 호스트](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)합니다.
 
 > [!NOTE]
 > 완료 된 버전을 다운로드 하거나이 자습서의 비디오 연습을 보려면을 참조 하세요 [Windows Workflow Foundation(wf45 ()-초보자를 위한 자습서](https://go.microsoft.com/fwlink/?LinkID=248976)합니다.
@@ -639,7 +639,7 @@ ms.locfileid: "61969489"
 
 2. 마우스 오른쪽 단추로 클릭 **CreateUpdateMaps** 에 **솔루션 탐색기** 선택한 **시작 프로젝트로 설정**합니다.
 
-3. Ctrl+Shift+B를 눌러 솔루션을 빌드하고 Ctrl+F5를 눌러 `CreateUpdateMaps` 응용 프로그램을 실행합니다.
+3. Ctrl+Shift+B를 눌러 솔루션을 빌드하고 Ctrl+F5를 눌러 `CreateUpdateMaps` 애플리케이션을 실행합니다.
 
     > [!NOTE]
     > `CreateUpdateMaps` 응용 프로그램 확인 하면 하지만 실행 하는 동안 어떠한 상태 정보도 표시 하지 않습니다는 **NumberGuessWorkflowActivities_du** 폴더와 **PreviousVersions** 폴더 표시 됩니다 업데이트 된 워크플로 정의 파일과 업데이트 맵을 합니다.
@@ -1411,72 +1411,72 @@ ms.locfileid: "61969489"
 
 20. 마우스 오른쪽 단추로 클릭 **ApplyDynamicUpdate** 에 **솔루션 탐색기** 선택한 **시작 프로젝트로 설정**합니다.
 
-21. Ctrl+Shift+B를 눌러 솔루션을 빌드하고 Ctrl+F5를 눌러 `ApplyDynamicUpdate` 응용 프로그램을 실행한 다음 지속형 워크플로 인스턴스를 업데이트합니다. 다음과 유사한 출력이 표시됩니다. 버전 1.0.0.0 워크플로는 버전 1.5.0.0으로 업데이트되는 반면에 버전 2.0.0.0 워크플로는 업데이트되지 않습니다.
+21. Ctrl+Shift+B를 눌러 솔루션을 빌드하고 Ctrl+F5를 눌러 `ApplyDynamicUpdate` 애플리케이션을 실행한 다음 지속형 워크플로 인스턴스를 업데이트합니다. 다음과 유사한 출력이 표시됩니다. 버전 1.0.0.0 워크플로는 버전 1.5.0.0으로 업데이트되는 반면에 버전 2.0.0.0 워크플로는 업데이트되지 않습니다.
 
     **검사 합니다. StateMachineNumberGuessWorkflow; Version=1.0.0.0**\
-    **업데이트: StateMachineNumberGuessWorkflow; 버전 1.5.0.0 =**\
+    **업데이트: StateMachineNumberGuessWorkflow; 버전 1.5.0.0 =** \
     **검사 합니다. StateMachineNumberGuessWorkflow; Version=1.0.0.0**\
-    **업데이트: StateMachineNumberGuessWorkflow; 버전 1.5.0.0 =**\
-    **검사 합니다. FlowchartNumberGuessWorkflow; 버전 1.0.0.0 =**\
-    **업데이트: FlowchartNumberGuessWorkflow; 버전 1.5.0.0 =**\
-    **검사 합니다. FlowchartNumberGuessWorkflow; 버전 1.0.0.0 =**\
-    **업데이트: FlowchartNumberGuessWorkflow; 버전 1.5.0.0 =**\
-    **검사 합니다. SequentialNumberGuessWorkflow; 버전 1.0.0.0 =**\
-    **업데이트: SequentialNumberGuessWorkflow; 버전 1.5.0.0 =**\
-    **검사 합니다. SequentialNumberGuessWorkflow; 버전 1.0.0.0 =**\
-    **업데이트: SequentialNumberGuessWorkflow; 버전 1.5.0.0 =**\
-    **검사 합니다. SequentialNumberGuessWorkflow; 버전 1.0.0.0 =**\
-    **업데이트: SequentialNumberGuessWorkflow; 버전 1.5.0.0 =**\
+    **업데이트: StateMachineNumberGuessWorkflow; 버전 1.5.0.0 =** \
+    **검사 합니다. FlowchartNumberGuessWorkflow; 버전 1.0.0.0 =** \
+    **업데이트: FlowchartNumberGuessWorkflow; 버전 1.5.0.0 =** \
+    **검사 합니다. FlowchartNumberGuessWorkflow; 버전 1.0.0.0 =** \
+    **업데이트: FlowchartNumberGuessWorkflow; 버전 1.5.0.0 =** \
+    **검사 합니다. SequentialNumberGuessWorkflow; 버전 1.0.0.0 =** \
+    **업데이트: SequentialNumberGuessWorkflow; 버전 1.5.0.0 =** \
+    **검사 합니다. SequentialNumberGuessWorkflow; 버전 1.0.0.0 =** \
+    **업데이트: SequentialNumberGuessWorkflow; 버전 1.5.0.0 =** \
+    **검사 합니다. SequentialNumberGuessWorkflow; 버전 1.0.0.0 =** \
+    **업데이트: SequentialNumberGuessWorkflow; 버전 1.5.0.0 =** \
     **검사 합니다. StateMachineNumberGuessWorkflow; Version=1.0.0.0**\
-    **업데이트: StateMachineNumberGuessWorkflow; 버전 1.5.0.0 =**\
-    **검사 합니다. FlowchartNumberGuessWorkflow; 버전 1.0.0.0 =**\
-    **업데이트: FlowchartNumberGuessWorkflow; 버전 1.5.0.0 =**\
+    **업데이트: StateMachineNumberGuessWorkflow; 버전 1.5.0.0 =** \
+    **검사 합니다. FlowchartNumberGuessWorkflow; 버전 1.0.0.0 =** \
+    **업데이트: FlowchartNumberGuessWorkflow; 버전 1.5.0.0 =** \
     **검사 합니다. StateMachineNumberGuessWorkflow; Version=2.0.0.0**\
     **검사 합니다. StateMachineNumberGuessWorkflow; Version=2.0.0.0**\
-    **검사 합니다. FlowchartNumberGuessWorkflow; 버전 2.0.0.0 =**\
-    **검사 합니다. FlowchartNumberGuessWorkflow; 버전 2.0.0.0 =**\
-    **검사 합니다. SequentialNumberGuessWorkflow; 버전 2.0.0.0 =**\
-    **검사 합니다. SequentialNumberGuessWorkflow; 버전 2.0.0.0 =**\
+    **검사 합니다. FlowchartNumberGuessWorkflow; 버전 2.0.0.0 =** \
+    **검사 합니다. FlowchartNumberGuessWorkflow; 버전 2.0.0.0 =** \
+    **검사 합니다. SequentialNumberGuessWorkflow; 버전 2.0.0.0 =** \
+    **검사 합니다. SequentialNumberGuessWorkflow; 버전 2.0.0.0 =** \
     **계속 하려면 아무 키나 누르세요...**
 
 ### <a name="BKMK_BuildAndRun"></a> 업데이트 된 워크플로 사용 하 여 응용 프로그램을 실행 하려면
 
 1. 마우스 오른쪽 단추로 클릭 **NumberGuessWorkflowHost** 에 **솔루션 탐색기** 선택한 **시작 프로젝트로 설정**합니다.
 
-2. Ctrl+F5를 눌러 응용 프로그램을 실행합니다.
+2. Ctrl+F5를 눌러 애플리케이션을 실행합니다.
 
 3. 클릭 **New Game** 새 워크플로 시작 하 고 워크플로 나타내는 상태 창이 버전 정보 아래를 확인 하는 `v2` 워크플로.
 
 4. 중 하나를 선택 합니다 `v1` 의 시작 부분에서 시작 하는 워크플로 [방법: 여러 버전을 워크플로-Side-by-side의 호스트](how-to-host-multiple-versions-of-a-workflow-side-by-side.md) 항목입니다. 상태 창 아래에서 버전 정보를 나타내는 버전은 참고 **1.5.0.0** 워크플로. 추측 값이 너무 높거나 너무 낮은지 여부 외에도 이전 추측 값에 대해 표시된 정보가 없는지 확인합니다.
 
-    **1과 10 사이의 숫자를 입력 하세요.**\
+    **1과 10 사이의 숫자를 입력 하세요.** \
     **사용자의 추측이 너무 낮습니다.**
 
 5. `InstanceId`를 적어 두고 워크플로가 완료될 때까지 추측 값을 입력합니다. `WriteLine` 활동은 동적 업데이트에 의해 업데이트되었으므로 상태 창에는 추측 내용에 대한 정보가 표시됩니다.
 
-    **1과 10 사이의 숫자를 입력 하세요.**\
-    **사용자의 추측이 너무 낮습니다.**\
-    **1과 10 사이의 숫자를 입력 하세요.**\
-    **5 너무 낮습니다.**\
-    **1과 10 사이의 숫자를 입력 하세요.**\
-    **7 너무 높습니다.**\
-    **1과 10 사이의 숫자를 입력 하세요.**\
+    **1과 10 사이의 숫자를 입력 하세요.** \
+    **사용자의 추측이 너무 낮습니다.** \
+    **1과 10 사이의 숫자를 입력 하세요.** \
+    **5 너무 낮습니다.** \
+    **1과 10 사이의 숫자를 입력 하세요.** \
+    **7 너무 높습니다.** \
+    **1과 10 사이의 숫자를 입력 하세요.** \
     **축, 4 결과적으로 숫자를 추측 합니다.**
 
 6. Windows 탐색기를 열고로 이동 합니다 **NumberGuessWorkflowHost\bin\debug** 폴더 (또는 **bin\release** 프로젝트 설정에 따라) 해당 하는 메모장을 사용 하 여 추적 파일을 엽니다 완료 된 워크플로. 기록해 수행 하지 않았다면를 `InstanceId` 를 사용 하 여 올바른 추적 파일을 식별할 수는 **수정한 날짜** Windows 탐색기에서 정보. 추적 정보의 마지막 줄에는 새로 추가된 `WriteLine` 활동의 출력이 포함됩니다.
 
-    **1과 10 사이의 숫자를 입력 하세요.**\
-    **사용자의 추측이 너무 낮습니다.**\
-    **1과 10 사이의 숫자를 입력 하세요.**\
-    **5 너무 낮습니다.**\
-    **1과 10 사이의 숫자를 입력 하세요.**\
-    **7 너무 높습니다.**\
-    **1과 10 사이의 숫자를 입력 하세요.**\
+    **1과 10 사이의 숫자를 입력 하세요.** \
+    **사용자의 추측이 너무 낮습니다.** \
+    **1과 10 사이의 숫자를 입력 하세요.** \
+    **5 너무 낮습니다.** \
+    **1과 10 사이의 숫자를 입력 하세요.** \
+    **7 너무 높습니다.** \
+    **1과 10 사이의 숫자를 입력 하세요.** \
     **6이 올바릅니다. 결과적으로 4 모르겠군요.**
 
 ### <a name="BKMK_StartPreviousVersions"></a> 이전 버전의 워크플로 시작 하도록 설정 하려면
 
-업데이트할 워크플로가 모두 실행된 경우 이전 버전의 워크플로를 시작하도록 `NumberGuessWorkflowHost` 응용 프로그램을 수정할 수 있습니다.
+업데이트할 워크플로가 모두 실행된 경우 이전 버전의 워크플로를 시작하도록 `NumberGuessWorkflowHost` 애플리케이션을 수정할 수 있습니다.
 
 1. 두 번 클릭 **WorkflowHostForm** 에 **솔루션 탐색기**를 선택 합니다 **WorkflowType** 콤보 상자.
 

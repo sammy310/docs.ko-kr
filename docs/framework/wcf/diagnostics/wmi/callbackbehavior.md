@@ -79,7 +79,7 @@ class CallbackBehavior : Behavior
   
  액세스 형식: 읽기 전용  
   
- 시스템 또는 응용 프로그램에서 SOAP MustUnderstand 헤더 처리를 적용할지 여부를 지정합니다.  
+ 시스템 또는 애플리케이션에서 SOAP MustUnderstand 헤더 처리를 적용할지 여부를 지정합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   

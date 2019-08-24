@@ -59,7 +59,7 @@ Windows Communication Foundation (WCF)를 사용 하면 클라이언트 웹 사�
   
 ### <a name="to-host-the-service-in-internet-information-services-without-configuration"></a>구성 없이 인터넷 정보 서비스에서 서비스를 호스팅하려면  
   
-1. 응용 프로그램에서 .svc 확장명이 있는 service라는 새 파일을 만듭니다. 적절 한 추가 하 여이 파일을 편집 [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) 서비스에 대 한 지시문 정보입니다. 지정는 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> 에서 사용 되는 [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) 자동으로 ASP.NET AJAX 끝점을 구성 하는 지시문입니다.  
+1. 애플리케이션에서 .svc 확장명이 있는 service라는 새 파일을 만듭니다. 적절 한 추가 하 여이 파일을 편집 [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) 서비스에 대 한 지시문 정보입니다. 지정는 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> 에서 사용 되는 [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) 자동으로 ASP.NET AJAX 끝점을 구성 하는 지시문입니다.  
   
     ```  
     <%@ServiceHost   

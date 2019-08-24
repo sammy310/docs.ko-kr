@@ -17,7 +17,7 @@ ms.locfileid: "61774259"
 |ID|4210|  
 |키워드|WFInstanceStore|  
 |수준|경고|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  SQL 예외가 catch되었음을 나타냅니다.  

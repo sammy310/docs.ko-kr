@@ -32,7 +32,7 @@ Windows forms에서 강력한 Windows 기반 응용 프로그램을 만들 수 �
  크기 및 Windows Forms의 크기를 조정 하는 방법을 보여주는 항목에 대 한 링크가 포함 되어 있습니다.  
   
  [Windows Forms의 모양 변경](changing-the-appearance-of-windows-forms.md)  
- Windows Forms 응용 프로그램의 모양을 변경하는 방법을 보여 주는 항목의 링크를 포함합니다.  
+ Windows Forms 애플리케이션의 모양을 변경하는 방법을 보여 주는 항목의 링크를 포함합니다.  
   
  [Windows Forms 컨트롤](./controls/index.md)  
  에 대해 설명 하 고 Windows Forms 컨트롤 및 구성 요소를 사용 하는 방법을 보여 주는 항목에 대 한 링크가 포함 되어 있습니다.  

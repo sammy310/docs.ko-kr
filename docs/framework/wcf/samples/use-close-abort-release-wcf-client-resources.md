@@ -12,14 +12,14 @@ ms.locfileid: "62007580"
 ---
 # <a name="close-and-abort-release-resources-safely-when-network-connections-have-dropped"></a>닫기 및 네트워크 연결을 삭제 한 경우에 안전 하 게 중단 릴리스 리소스
 
-이 샘플에서는 합니다 `Close` 고 `Abort` 형식화 된 클라이언트를 사용 하는 경우에 리소스를 정리 하는 방법입니다. `using` 문을 네트워크 연결이 안정적이 지 않습니다 때 예외를 발생 합니다. 이 샘플은 기반 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) 계산기 서비스를 구현 하는 합니다. 이 샘플에서 클라이언트는 콘솔 응용 프로그램(.exe)이고 서비스는 IIS(인터넷 정보 서비스)를 통해 호스트됩니다.
+이 샘플에서는 합니다 `Close` 고 `Abort` 형식화 된 클라이언트를 사용 하는 경우에 리소스를 정리 하는 방법입니다. `using` 문을 네트워크 연결이 안정적이 지 않습니다 때 예외를 발생 합니다. 이 샘플은 기반 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) 계산기 서비스를 구현 하는 합니다. 이 샘플에서 클라이언트는 콘솔 애플리케이션(.exe)이고 서비스는 IIS(인터넷 정보 서비스)를 통해 호스트됩니다.
 
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.
 
 이 샘플에서는 형식화된 클라이언트와 함께 C# "using" 문을 사용할 경우 발생하는 일반적인 두 가지 문제와 예외 발생 후 올바르게 정리되는 코드를 보여 줍니다.
 
-C# "using" 문을 사용하면 결과적으로 `Dispose`()가 호출됩니다. 이는 네트워크 오류 발생 시에 예외를 throw할 수 있는 `Close`()와 동일합니다. "using" 블록의 닫는 중괄호에서 `Dispose`() 호출이 암시적으로 발생하므로 이 예외 원인은 코드를 작성하는 사용자와 읽는 사용자 모두가 알아차리지 못합니다. 이로 인해 응용 프로그램 오류가 발생할 가능성이 있습니다.
+C# "using" 문을 사용하면 결과적으로 `Dispose`()가 호출됩니다. 이는 네트워크 오류 발생 시에 예외를 throw할 수 있는 `Close`()와 동일합니다. "using" 블록의 닫는 중괄호에서 `Dispose`() 호출이 암시적으로 발생하므로 이 예외 원인은 코드를 작성하는 사용자와 읽는 사용자 모두가 알아차리지 못합니다. 이로 인해 애플리케이션 오류가 발생할 가능성이 있습니다.
 
 `DemonstrateProblemUsingCanThrow` 메서드에서 나타나는 첫 번째 문제는 닫는 중괄호로 인해 예외가 throw되고 닫는 중괄호 뒤의 코드가 실행되지 않는다는 것입니다.
 
@@ -73,7 +73,7 @@ catch (Exception e)
 ```
 
 > [!NOTE]
-> using 문 및 ServiceHost: 대부분의 자체 호스팅 응용 프로그램 서비스를 호스트 약간 넘는 않는 및 이러한 응용 프로그램을 사용 하 여 안전 하 게 사용할 수 있도록 거의 ServiceHost.Close에서 예외를 throw ServiceHost로 문입니다. 그러나 ServiceHost.Close에서 `CommunicationException`을 throw할 수 있으므로 ServiceHost를 닫은 후 응용 프로그램이 계속될 경우 using 문을 사용하지 않아야 하고 위에 제공된 패턴을 따라야 합니다.
+> using 문 및 ServiceHost: 대부분의 자체 호스팅 응용 프로그램 서비스를 호스트 약간 넘는 않는 및 이러한 응용 프로그램을 사용 하 여 안전 하 게 사용할 수 있도록 거의 ServiceHost.Close에서 예외를 throw ServiceHost로 문입니다. 그러나 ServiceHost.Close에서 `CommunicationException`을 throw할 수 있으므로 ServiceHost를 닫은 후 애플리케이션이 계속될 경우 using 문을 사용하지 않아야 하고 위에 제공된 패턴을 따라야 합니다.
 
 샘플을 실행하면 작업 응답 및 예외가 클라이언트 콘솔 창에 표시됩니다.
 

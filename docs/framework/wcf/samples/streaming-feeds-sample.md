@@ -97,7 +97,7 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
 }  
 ```  
   
- 따라서 `ReadItems()`의 결과를 이동하는 클라이언트 응용 프로그램에서 사용 준비를 마칠 때까지는 네트워크에서 각 항목을 읽지 않습니다. 에 중단점을 설정 하면이 동작을 확인할 수 있습니다 합니다 `yield return` 안에 문을 `StreamedAtom10FeedFormatter.DelayReadItems()` 호출 후 처음으로이 중단점이 발생 하는 확인 및 `ReadFrom()` 완료 합니다.  
+ 따라서 `ReadItems()`의 결과를 이동하는 클라이언트 애플리케이션에서 사용 준비를 마칠 때까지는 네트워크에서 각 항목을 읽지 않습니다. 에 중단점을 설정 하면이 동작을 확인할 수 있습니다 합니다 `yield return` 안에 문을 `StreamedAtom10FeedFormatter.DelayReadItems()` 호출 후 처음으로이 중단점이 발생 하는 확인 및 `ReadFrom()` 완료 합니다.  
   
  다음 지침에서는 샘플을 빌드하고 실행하는 방법을 보여 줍니다. 클라이언트에서 10개의 항목을 읽고 나면 서버에서 항목 생성을 중지하지만 출력에는 클라이언트에서 10개 항목보다 훨씬 많은 항목을 읽는 것으로 표시됩니다. 이는 샘플에서 사용되는 네트워킹 바인딩에서 데이터를 4KB 단위의 세그먼트로 전송하기 때문입니다. 따라서 클라이언트는 한 항목을 읽을 기회가 생기기도 전에 4KB의 항목 데이터를 받습니다. 이는 정상적인 동작입니다. 스트리밍된 HTTP 데이터를 적절한 크기의 세그먼트로 보내면 성능이 향상됩니다.  
   

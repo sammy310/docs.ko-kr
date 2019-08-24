@@ -10,10 +10,10 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61932823"
 ---
 # <a name="troubleshooting-correlation"></a>상관 관계 문제 해결
-상관 관계는 워크플로 서비스 메시지를 서로 연결하거나 올바른 워크플로 인스턴스에 연결하는 데 사용되지만, 제대로 구성되지 않으면 메시지가 수신되지 않고 응용 프로그램이 올바르게 작동하지 않습니다. 이 항목에서는 상관 관계 문제를 해결하기 위한 몇 가지 방법을 간략히 설명하고 상관 관계를 사용할 때 발생할 수 있는 일반적인 문제도 설명합니다.
+상관 관계는 워크플로 서비스 메시지를 서로 연결하거나 올바른 워크플로 인스턴스에 연결하는 데 사용되지만, 제대로 구성되지 않으면 메시지가 수신되지 않고 애플리케이션이 올바르게 작동하지 않습니다. 이 항목에서는 상관 관계 문제를 해결하기 위한 몇 가지 방법을 간략히 설명하고 상관 관계를 사용할 때 발생할 수 있는 일반적인 문제도 설명합니다.
 
 ## <a name="handle-the-unknownmessagereceived-event"></a>UnknownMessageReceived 이벤트 처리
- <xref:System.ServiceModel.ServiceHostBase.UnknownMessageReceived> 이벤트는 서비스에서 기존 인스턴스와 연결할 수 없는 메시지를 포함하여 알 수 없는 메시지를 받을 경우에 발생합니다. 자체 호스팅 서비스의 경우 이 이벤트는 호스트 응용 프로그램에서 처리할 수 있습니다.
+ <xref:System.ServiceModel.ServiceHostBase.UnknownMessageReceived> 이벤트는 서비스에서 기존 인스턴스와 연결할 수 없는 메시지를 포함하여 알 수 없는 메시지를 받을 경우에 발생합니다. 자체 호스팅 서비스의 경우 이 이벤트는 호스트 애플리케이션에서 처리할 수 있습니다.
 
 ```csharp
 host.UnknownMessageReceived += delegate(object sender, UnknownMessageReceivedEventArgs e)

@@ -174,7 +174,7 @@ public class CalculatorService : ICalculator
 </system.serviceModel>
 ```
 
-클라이언트가 지정된 된 계약 형식에서 생성 되는 클라이언트 클래스를 사용 하 여 통신 합니다 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)합니다. 생성된 이 클라이언트는 generatedClient.cs 또는 generatedClient.vb 파일에 포함됩니다. 이 유틸리티는 지정된 서비스에 대한 메타데이터를 검색하고 지정된 계약 형식으로 통신하기 위해 클라이언트 응용 프로그램에 사용되는 클라이언트를 생성합니다. 업데이트된 메타데이터를 검색하는 데 호스트된 서비스가 사용되므로 클라이언트 코드를 생성하기 위해 해당 서비스를 사용할 수 있어야 합니다.
+클라이언트가 지정된 된 계약 형식에서 생성 되는 클라이언트 클래스를 사용 하 여 통신 합니다 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)합니다. 생성된 이 클라이언트는 generatedClient.cs 또는 generatedClient.vb 파일에 포함됩니다. 이 유틸리티는 지정된 서비스에 대한 메타데이터를 검색하고 지정된 계약 형식으로 통신하기 위해 클라이언트 애플리케이션에 사용되는 클라이언트를 생성합니다. 업데이트된 메타데이터를 검색하는 데 호스트된 서비스가 사용되므로 클라이언트 코드를 생성하기 위해 해당 서비스를 사용할 수 있어야 합니다.
 
  클라이언트 디렉터리의 SDK 명령 프롬프트에서 다음 명령을 실행하여 형식화된 프록시를 생성합니다.
 

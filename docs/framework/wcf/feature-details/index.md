@@ -33,7 +33,7 @@ Windows Communication Foundation (WCF) 응용 프로그램의 메시징 기능�
  채널 스택의 가장 낮은 수준인 전송 수준을 구성하는 방법에 대해 설명합니다.  
   
  [큐 및 신뢰할 수 있는 세션](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)  
- 수신 응용 프로그램을 대신하여 송신 응용 프로그램의 메시지를 저장하여 이 메시지를 수신 응용 프로그램에 나중에 전달하는 큐에 대해 설명합니다.  
+ 수신 애플리케이션을 대신하여 송신 애플리케이션의 메시지를 저장하여 이 메시지를 수신 애플리케이션에 나중에 전달하는 큐에 대해 설명합니다.  
   
  [트랜잭션](../../../../docs/framework/wcf/feature-details/transactions-in-wcf.md)  
  필요한 경우 롤백할 수 있는 트랜잭션 처리된 작업을 만드는 방법에 대해 설명합니다.  
@@ -51,7 +51,7 @@ Windows Communication Foundation (WCF) 응용 프로그램의 메시징 기능�
  서비스에 액세스하는 여러 클라이언트를 만드는 방법에 대해 설명합니다.  
   
  [호스팅](../../../../docs/framework/wcf/feature-details/hosting.md)  
- 호스팅에 대해 설명합니다. 서비스는 다른 응용 프로그램에 의해 호스팅되거나 자체적으로 호스팅될 수 있습니다.  
+ 호스팅에 대해 설명합니다. 서비스는 다른 애플리케이션에 의해 호스팅되거나 자체적으로 호스팅될 수 있습니다.  
   
  [상호 운용성 및 통합](../../../../docs/framework/wcf/feature-details/interoperability-and-integration.md)  
  WCF를 사용 하 여 COM +에서 호스팅되는 구성 요소 기반 응용 프로그램 논리에 상당한 투자를 한 경우 다시 작성 하지 않고 기존 논리를 확장 하는 방법에 설명 합니다.  

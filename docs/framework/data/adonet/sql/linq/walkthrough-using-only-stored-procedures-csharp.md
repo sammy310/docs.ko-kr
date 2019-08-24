@@ -11,10 +11,10 @@ ms.locfileid: "68971773"
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>연습: 저장 프로시저만 사용(C#)
 
-이 연습에서는 저장 프로시저만 실행하여 데이터에 액세스하기 위한 기본 종단 간 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 시나리오를 제공합니다. 일반적으로 데이터베이스 관리자는 데이터 저장소에 액세스하는 방법을 제한하기 위해 이 방법을 사용합니다.
+이 연습에서는 저장 프로시저만 실행하여 데이터에 액세스하기 위한 기본 엔드투엔드 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 시나리오를 제공합니다. 일반적으로 데이터베이스 관리자는 데이터 저장소에 액세스하는 방법을 제한하기 위해 이 방법을 사용합니다.
 
 > [!NOTE]
-> 또한 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 응용 프로그램에서 저장 프로시저를 사용하여 특히 `Create`, `Update` 및 `Delete` 프로세스의 경우에 기본 동작을 재정의할 수 있습니다. 자세한 내용은 [삽입, 업데이트 및 삭제 작업 사용자 지정](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)을 참조 하세요.
+> 또한 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 애플리케이션에서 저장 프로시저를 사용하여 특히 `Create`, `Update` 및 `Delete` 프로세스의 경우에 기본 동작을 재정의할 수 있습니다. 자세한 내용은 [삽입, 업데이트 및 삭제 작업 사용자 지정](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)을 참조 하세요.
 
 이 연습에서는 Northwind 샘플 데이터베이스의 저장 프로시저에 매핑되는 두 개의 메서드를 사용 합니다. CustOrdersDetail 및 CustOrderHist. SqlMetal 명령줄 도구를 실행하여 C# 파일을 생성할 경우 매핑이 발생합니다. 자세한 내용은 이 연습 뒷부분의 사전 요구 사항 단원을 참조하세요.
 
@@ -56,7 +56,7 @@ ms.locfileid: "68971773"
 
 - 사용자 인터페이스 설정
 
-- 응용 프로그램 실행 및 테스트
+- 애플리케이션 실행 및 테스트
 
 ## <a name="creating-a-linq-to-sql-solution"></a>LINQ to SQL 솔루션 만들기
 
@@ -80,7 +80,7 @@ ms.locfileid: "68971773"
 
 ## <a name="adding-the-linq-to-sql-assembly-reference"></a>LINQ to SQL 어셈블리 참조 추가
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 어셈블리는 표준 Windows Forms 응용 프로그램 템플릿에 포함되어 있지 않습니다. 다음 단계에 설명된 대로 이 어셈블리를 직접 추가해야 합니다.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 어셈블리는 표준 Windows Forms 애플리케이션 템플릿에 포함되어 있지 않습니다. 다음 단계에 설명된 대로 이 어셈블리를 직접 추가해야 합니다.
 
 ### <a name="to-add-systemdatalinqdll"></a>System.Data.Linq.dll을 추가하려면
 
@@ -116,7 +116,7 @@ ms.locfileid: "68971773"
 
 ## <a name="setting-up-the-user-interface"></a>사용자 인터페이스 설정
 
-이 작업에서는 사용자가 저장 프로시저를 실행하여 데이터베이스의 데이터에 액세스할 수 있도록 인터페이스를 설정합니다. 이 연습을 사용하여 개발하는 응용 프로그램에서 사용자는 응용 프로그램에 포함된 저장 프로시저를 통해서만 데이터베이스의 데이터에 액세스할 수 있습니다.
+이 작업에서는 사용자가 저장 프로시저를 실행하여 데이터베이스의 데이터에 액세스할 수 있도록 인터페이스를 설정합니다. 이 연습을 사용하여 개발하는 애플리케이션에서 사용자는 애플리케이션에 포함된 저장 프로시저를 통해서만 데이터베이스의 데이터에 액세스할 수 있습니다.
 
 ### <a name="to-set-up-the-user-interface"></a>사용자 인터페이스를 설정하려면
 
@@ -161,7 +161,7 @@ ms.locfileid: "68971773"
 
 ## <a name="testing-the-application"></a>애플리케이션 테스트
 
-이제 응용 프로그램을 테스트할 차례입니다. 데이터 저장소와의 연결은 두 개의 저장 프로시저가 수행할 수 있는 작업으로 제한됩니다. 이러한 작업은 입력한 orderID에 대한 포함된 제품을 반환하거나 입력한 CustomerID에 대한 주문된 제품의 기록을 반환하는 것입니다.
+이제 애플리케이션을 테스트할 차례입니다. 데이터 저장소와의 연결은 두 개의 저장 프로시저가 수행할 수 있는 작업으로 제한됩니다. 이러한 작업은 입력한 orderID에 대한 포함된 제품을 반환하거나 입력한 CustomerID에 대한 주문된 제품의 기록을 반환하는 것입니다.
 
 ### <a name="to-test-the-application"></a>애플리케이션을 테스트하려면
 

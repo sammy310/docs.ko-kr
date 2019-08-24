@@ -20,7 +20,7 @@ ms.locfileid: "61943964"
  클라이언트가 WCF를 사용 하 여 서비스에 참조 매개 변수를 전달할 수 있습니다 하는 방법을 보여 줍니다.  
   
  [채널 팩터리](../../../../docs/framework/wcf/samples/channel-factory.md)  
- 클라이언트 응용 프로그램에서 생성된 클라이언트 대신 <xref:System.ServiceModel.ChannelFactory> 클래스가 있는 채널을 만드는 방법을 보여 줍니다.  
+ 클라이언트 애플리케이션에서 생성된 클라이언트 대신 <xref:System.ServiceModel.ChannelFactory> 클래스가 있는 채널을 만드는 방법을 보여 줍니다.  
   
  [예상되는 예외](../../../../docs/framework/wcf/samples/expected-exceptions.md)  
  형식화된 클라이언트를 사용할 때 예상된 예외를 catch하는 방법을 보여 줍니다.  

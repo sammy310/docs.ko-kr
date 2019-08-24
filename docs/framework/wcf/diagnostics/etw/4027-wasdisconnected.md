@@ -17,7 +17,7 @@ ms.locfileid: "61943158"
 |ID|4027|  
 |키워드|ActivationServices|  
 |수준|자세히|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
 ## <a name="description"></a>설명  
  이 이벤트는 Windows Activation Service 연결이 해제될 때 내보내집니다.  

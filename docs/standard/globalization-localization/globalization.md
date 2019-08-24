@@ -38,7 +38,7 @@ ms.locfileid: "56442479"
 
 기본적으로 .NET에서는 유니코드 문자열을 사용합니다. 유니코드 문자열은 0 또는 하나 이상의 <xref:System.Char> 개체로 구성되며, 각 개체는 UTF-16 코드 단위를 나타냅니다. 전세계에서 사용되는 모든 문자 집합의 거의 모든 문자에 대해서는 유니코드 표현이 있습니다.
 
-Windows 운영 체제를 비롯한 많은 응용 프로그램과 운영 체제는 코드 페이지를 사용하여 문자 집합을 나타낼 수도 있습니다. 일반적으로 코드 페이지는 0x00부터 0x7F까지 표준 ASCII 값을 포함하며 다른 문자를 0x80부터 0xFF까지 나머지 값에 매핑합니다. 0x80부터 0xFF까지 값에 대한 해석은 특정 코드 페이지에 따라 달라집니다. 이 때문에 전역화된 앱에서 가능하면 코드 페이지 사용을 피해야 합니다.
+Windows 운영 체제를 비롯한 많은 애플리케이션과 운영 체제는 코드 페이지를 사용하여 문자 집합을 나타낼 수도 있습니다. 일반적으로 코드 페이지는 0x00부터 0x7F까지 표준 ASCII 값을 포함하며 다른 문자를 0x80부터 0xFF까지 나머지 값에 매핑합니다. 0x80부터 0xFF까지 값에 대한 해석은 특정 코드 페이지에 따라 달라집니다. 이 때문에 전역화된 앱에서 가능하면 코드 페이지 사용을 피해야 합니다.
 
 다음 예제는 시스템의 기본 코드 페이지가 데이터가 저장된 코드 페이지와 다른 경우 코드 페이지 데이터 해석의 위험을 보여줍니다. (이 시나리오를 시뮬레이션하기 위해, 예제에 다른 코드 페이지를 명시적으로 지정합니다.) 우선, 예제에 그리스어 알파벳의 대문자로 구성된 배열을 정의합니다. 이것을 코드 페이지 737(MS-DOS Greek이라고도 함)을 사용하여 바이트 배열로 인코딩하고 바이트 배열을 파일로 저장합니다. 파일을 가져와서 코드 페이지 737을 사용하여 바이트 배열을 디코딩하면, 원래 문자가 복원됩니다. 하지만, 파일을 가져와서 코드 페이지 1252(또는 라틴 알파벳 문자를 나타내는Windows-1252)를 사용하여 바이트 배열을 디코딩하면, 원래 문자가 손실됩니다.
 
@@ -85,8 +85,7 @@ Windows 운영 체제를 비롯한 많은 응용 프로그램과 운영 체제�
 
 같음 비교에 <xref:System.String.Equals%2A?displayProperty=nameWithType> 메서드에 대한 호출이 아닌 검색 또는 부분 문자열 비교를 수반하는 경우가 있습니다. 경우에 따라, 부분 문자열이 다른 문자열과 같은지를 판단하기 위해 부분 문자열 검색을 사용할 수 있습니다. 비교의 목적이 비언어적인 경우, 검색은 문화권 구분이 아닌 서수여야 합니다.
 
-다음 예제는 비언어적인 데이터에 대한 문화권 구분 검색의 위험을 설명합니다. 
-  `AccessesFileSystem` 메서드는 "FILE"이라는 부분 문자열로 시작되는 URI에 대한 파일 시스템 액세스를 금지하도록 설계되었습니다. 이를 위해, URI의 시작 부분을 "FILE"이라는 문자열과 문화권을 구분하고 대/소문자를 구분하지 않는 비교를 수행합니다. 파일 시스템에 액세스하는 URI는 “FILE:” 또는 “file:”로 시작되기 때문에 “i”(U+0069)는 언제나 “I”(U+0049)에 해당하는 소문자라는 암묵적인 가정이 있습니다. 하지만 터키어 및 아제르바이잔어에서 "i"의 대문자 버전은 "İ"(U+0130)입니다. 이러한 불일치로 인해, 문화권 구분 비교는 파일 시스템 액세스를 금지해야 하는 경우에 액세스를 허용합니다.
+다음 예제는 비언어적인 데이터에 대한 문화권 구분 검색의 위험을 설명합니다. `AccessesFileSystem` 메서드는 "FILE"이라는 부분 문자열로 시작되는 URI에 대한 파일 시스템 액세스를 금지하도록 설계되었습니다. 이를 위해, URI의 시작 부분을 "FILE"이라는 문자열과 문화권을 구분하고 대/소문자를 구분하지 않는 비교를 수행합니다. 파일 시스템에 액세스하는 URI는 “FILE:” 또는 “file:”로 시작되기 때문에 “i”(U+0069)는 언제나 “I”(U+0049)에 해당하는 소문자라는 암묵적인 가정이 있습니다. 하지만 터키어 및 아제르바이잔어에서 "i"의 대문자 버전은 "İ"(U+0130)입니다. 이러한 불일치로 인해, 문화권 구분 비교는 파일 시스템 액세스를 금지해야 하는 경우에 액세스를 허용합니다.
 
 [!code-csharp[Conceptual.Globalization#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/equals1.cs#12)]
 [!code-vb[Conceptual.Globalization#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/equals1.vb#12)]
@@ -103,8 +102,7 @@ Windows 운영 체제를 비롯한 많은 응용 프로그램과 운영 체제�
 [!code-csharp[Conceptual.Globalization#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/sort1.cs#14)]
 [!code-vb[Conceptual.Globalization#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/sort1.vb#14)]
 
-문화권 구분 문자열 비교는 <xref:System.Globalization.CompareInfo> 개체로 정의되며, 이것은 각 문화권의 <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> 속성에 의해 반환됩니다. 
-  <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드 오버로드를 사용하는 문화권 구분 문자열 비교는 <xref:System.Globalization.CompareInfo> 개체도 사용합니다.
+문화권 구분 문자열 비교는 <xref:System.Globalization.CompareInfo> 개체로 정의되며, 이것은 각 문화권의 <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> 속성에 의해 반환됩니다. <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드 오버로드를 사용하는 문화권 구분 문자열 비교는 <xref:System.Globalization.CompareInfo> 개체도 사용합니다.
 
 .NET에서는 테이블을 사용하여 문자열 데이터에 대해 문화권 구분 정렬을 수행합니다. 이러한 테이블의 내용에는 정렬 가중치 및 문자열 정규화에 대한 데이터가 포함되며, 이것은 특정한 .NET 버전에서 구현되는 유니코드 표준 버전에 의해 결정됩니다. 다음 테이블에는 지정된 .NET Framework 버전 및 .NET Core로 구현되는 유니코드 버전이 나열되어 있습니다. 지원되는 유니코드 버전 목록은 문자 비교 및 정렬에만 적용되며 범주에 따른 유니코드 문자의 분류에는 적용되지 않습니다. 자세한 내용은 <xref:System.String> 항목의 “문자열과 유니코드 표준” 섹션을 참조하세요.
 
@@ -305,8 +303,7 @@ Windows 운영 체제를 비롯한 많은 응용 프로그램과 운영 체제�
 
 - 숫자를 이진 형식이 아닌 문자열 형식으로 serialize합니다.
 
-다음 예제에서 마지막 방법을 보여 줍니다. 
-  <xref:System.Double> 값의 배열을 serialize한 다음 deserialize하고 영어(미국) 및 프랑스어(프랑스) 문화권의 서식 규칙을 사용하여 나타냅니다.
+다음 예제에서 마지막 방법을 보여 줍니다. <xref:System.Double> 값의 배열을 serialize한 다음 deserialize하고 영어(미국) 및 프랑스어(프랑스) 문화권의 서식 규칙을 사용하여 나타냅니다.
 
 [!code-csharp[Conceptual.Globalization#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/numbers3.cs#7)]
 [!code-vb[Conceptual.Globalization#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/numbers3.vb#7)]
@@ -341,8 +338,7 @@ Windows 운영 체제를 비롯한 많은 응용 프로그램과 운영 체제�
 
 - .NET은 대체 문화권을 지원합니다. 이 때문에 기존의 표준 문화권을 보완하거나 완전히 대체하는 새로운 사용자 지정 문화권을 정의하는 것이 가능합니다.
 
-- Windows 시스템에서 사용자는 제어판의 **국가 및 언어** 앱을 사용하여 문화권별 설정을 사용자 지정할 수 있습니다. 
-  <xref:System.Globalization.CultureInfo> 개체를 인스턴스화할 때, <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 생성자를 호출하여 사용자 지정을 반영할지 여부를 결정할 수 있습니다. 일반적으로 최종 사용자 앱에 대해서는 사용자가 예상하는 서식으로 사용자에게 데이터가 표시되도록 사용자 기본 설정을 고려해야 합니다.
+- Windows 시스템에서 사용자는 제어판의 **국가 및 언어** 앱을 사용하여 문화권별 설정을 사용자 지정할 수 있습니다. <xref:System.Globalization.CultureInfo> 개체를 인스턴스화할 때, <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 생성자를 호출하여 사용자 지정을 반영할지 여부를 결정할 수 있습니다. 일반적으로 최종 사용자 앱에 대해서는 사용자가 예상하는 서식으로 사용자에게 데이터가 표시되도록 사용자 기본 설정을 고려해야 합니다.
 
 ## <a name="see-also"></a>참고 항목
 

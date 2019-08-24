@@ -20,7 +20,7 @@ ms.locfileid: "61698397"
   
 ## <a name="in-this-section"></a>섹션 내용  
  [CorpubPublish Coclass](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)  
- 응용 프로그램 도메인 및 프로세스에 대한 정보를 게시하기 위한 인터페이스를 제공합니다.  
+ 애플리케이션 도메인 및 프로세스에 대한 정보를 게시하기 위한 인터페이스를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
  [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  

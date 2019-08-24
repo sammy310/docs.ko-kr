@@ -10,7 +10,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61606643"
 ---
 # <a name="development-and-deployment-considerations"></a>개발 및 배포 고려 사항
-이 단원의 항목에서는 ADO.NET Entity Framework를 기반으로 하는 응용 프로그램을 개발하거나 배포할 때 고려해야 할 문제를 다룹니다.  
+이 단원의 항목에서는 ADO.NET Entity Framework를 기반으로 하는 애플리케이션을 개발하거나 배포할 때 고려해야 할 문제를 다룹니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [보안 고려 사항](../../../../../docs/framework/data/adonet/ef/security-considerations.md)  

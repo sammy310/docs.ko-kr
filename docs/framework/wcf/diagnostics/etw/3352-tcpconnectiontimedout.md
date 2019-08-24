@@ -17,7 +17,7 @@ ms.locfileid: "61971433"
 |ID|3352|  
 |키워드|TCP|  
 |수준|Error|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
 ## <a name="description"></a>설명  
  이 이벤트는 TCP 연결 제한 시간이 초과될 때 내보내집니다.  

@@ -145,7 +145,7 @@ void idleTimer_Elapsed(object sender, ElapsedEventArgs args)
 이 샘플에서는 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider>을 구현하여 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 메서드에 대한 호출을 가로채고 이를 `CustomLeaseExtension`에 라우트합니다. <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 구현은 `CustomLifetimeLease` 클래스에 포함됩니다. <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 메서드는 WCF 서비스 인스턴스를 해제 하려고 할 때 호출 됩니다. 그러나 ServiceBehavior의 `ISharedSessionInstance` 컬렉션에는 특정 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 구현의 인스턴스가 하나만 있습니다. 즉, 알 수 없으므로 합니다 <xref:System.ServiceModel.InstanceContext> WCF 확인 시 닫혀는 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 메서드. 따라서이 샘플에서는 스레드 잠금을 요청을 직렬화 하는 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 메서드.
 
 > [!IMPORTANT]
-> serialization은 응용 프로그램의 성능에 큰 영향을 주므로 스레드 잠금은 사용하지 않는 것이 좋습니다.
+> serialization은 애플리케이션의 성능에 큰 영향을 주므로 스레드 잠금은 사용하지 않는 것이 좋습니다.
 
 전용 멤버 필드에 사용 됩니다는 `CustomLifetimeLease` 유휴 상태를 추적 하는 클래스 및에서 반환 되는 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 메서드. 때마다 합니다 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 메서드를 호출 합니다 `isIdle` 필드를 반환 하 고 다시 설정 `false`합니다.  디스패처에서 `false` 메서드를 호출할 수 있도록 하려면 이 값을 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.NotifyIdle%2A>로 설정해야 합니다.
 

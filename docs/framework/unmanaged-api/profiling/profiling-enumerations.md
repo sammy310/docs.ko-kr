@@ -59,7 +59,7 @@ ms.locfileid: "61757575"
  공용 언어 런타임의 버전을 나타내는 값을 포함합니다.  
   
  [COR_PRF_SNAPSHOT_INFO 열거형](../../../../docs/framework/unmanaged-api/profiling/cor-prf-snapshot-info-enumeration.md)  
- 프로파일러 `StackSnapshotCallback` 함수에 대한 각 호출에서 스택 스냅숏과 함께 다시 전달할 데이터의 양을 지정합니다.  
+ 프로파일러 `StackSnapshotCallback` 함수에 대한 각 호출에서 스택 스냅샷과 함께 다시 전달할 데이터의 양을 지정합니다.  
   
  [COR_PRF_STATIC_TYPE 열거형](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md)  
  필드가 정적인지 여부와 정적인 경우 필드에 적용될 정적 품질을 나타냅니다.  

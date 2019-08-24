@@ -1,11 +1,11 @@
 - name: Windows 서비스 애플리케이션
   href: index.md
   items:
-    - name: Windows 서비스 응용 프로그램 소개
+    - name: Windows 서비스 애플리케이션 소개
       href: introduction-to-windows-service-applications.md
     - name: '연습: Windows 서비스 앱 만들기'
       href: walkthrough-creating-a-windows-service-application-in-the-component-designer.md
-    - name: 서비스 응용 프로그램 프로그래밍 아키텍처
+    - name: 서비스 애플리케이션 프로그래밍 아키텍처
       href: service-application-programming-architecture.md
     - name: '방법: Windows 서비스 만들기'
       href: how-to-create-windows-services.md

@@ -18,13 +18,13 @@ Windows Forms <xref:System.Windows.Forms.Timer>는 일정한 간격마다 이벤
   
 ## <a name="in-this-section"></a>섹션 내용  
  [Timer 구성 요소 개요](timer-component-overview-windows-forms.md)  
- 정기적인 이벤트에 응답하도록 응용 프로그램을 설정할 수 있게 해주는 <xref:System.Windows.Forms.Timer> 구성 요소의 일반적인 개념을 소개합니다.  
+ 정기적인 이벤트에 응답하도록 애플리케이션을 설정할 수 있게 해주는 <xref:System.Windows.Forms.Timer> 구성 요소의 일반적인 개념을 소개합니다.  
   
  [Windows Forms Timer 구성 요소의 Interval 속성에 대한 제한 사항](limitations-of-the-timer-component-interval-property.md)  
  사용 방법에 영향을 줄 수 있는 타이머 간격의 알려진 제한 사항을 설명합니다.  
   
  [방법: Windows Forms Timer 구성 요소를 사용 하 여 설정 된 간격 프로시저를 실행 합니다.](run-procedures-at-set-intervals-with-wf-timer-component.md)  
- Windows 기반 응용 프로그램에서 정기적인 간격에 반응하는 방법을 설명합니다.  
+ Windows 기반 애플리케이션에서 정기적인 간격에 반응하는 방법을 설명합니다.  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> 클래스  

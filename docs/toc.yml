@@ -2010,7 +2010,7 @@
               href: visual-basic/language-reference/error-messages/delegate-class-classname-has-no-invoke-method.md
             - name: 파생 클래스는 기본 클래스 이벤트를 발생시킬 수 없습니다.
               href: visual-basic/language-reference/error-messages/derived-classes-cannot-raise-base-class-events.md
-            - name: 장치 입/출력(I/O) 오류입니다.
+            - name: 디바이스 입/출력(I/O) 오류입니다.
               href: visual-basic/language-reference/error-messages/device-i-o-error.md
             - name: '''Dir'' 함수는 처음에 ''Pathname'' 인수를 사용하여 호출해야 합니다.'
               href: visual-basic/language-reference/error-messages/dir-function-must-first-be-called-with-a-pathname-argument.md

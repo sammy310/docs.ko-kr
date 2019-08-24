@@ -16,7 +16,7 @@ ms.locfileid: "61991629"
  현재 활성 세션을 닫고 트랜잭션이 완료되지 않았으며 TransactionAutoCompleteOnSessionClose가 `false`로 설정된 경우 추적됩니다.  
   
 ## <a name="troubleshooting"></a>문제 해결  
- 이 추적은 조사해야 하는 발생 가능한 응용 프로그램 버그를 나타냅니다.  
+ 이 추적은 조사해야 하는 발생 가능한 애플리케이션 버그를 나타냅니다.  
   
 ## <a name="see-also"></a>참고자료
 

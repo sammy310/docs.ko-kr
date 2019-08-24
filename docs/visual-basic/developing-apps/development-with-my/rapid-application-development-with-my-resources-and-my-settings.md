@@ -1,5 +1,5 @@
 ---
-title: My.Resources 및 My.Settings를 사용한 신속한 응용 프로그램 개발(Visual Basic)
+title: My.Resources 및 My.Settings를 사용한 신속한 애플리케이션 개발(Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Settings object [Visual Basic], developing applications
@@ -14,7 +14,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62014442"
 ---
-# <a name="rapid-application-development-with-myresources-and-mysettings-visual-basic"></a>My.Resources 및 My.Settings를 사용한 신속한 응용 프로그램 개발(Visual Basic)
+# <a name="rapid-application-development-with-myresources-and-mysettings-visual-basic"></a>My.Resources 및 My.Settings를 사용한 신속한 애플리케이션 개발(Visual Basic)
 `My.Resources` 개체 응용 프로그램의 리소스에 대 한 액세스를 제공 하며, 응용 프로그램에 대 한 리소스를 동적으로 검색할 수 있습니다.  
   
 ## <a name="retrieving-resources"></a>리소스 검색  

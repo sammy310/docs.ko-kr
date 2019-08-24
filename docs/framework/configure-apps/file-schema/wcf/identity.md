@@ -2,12 +2,12 @@
 title: <identity>
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: d5d06953c67b90e8367f2c0d01a670a46f487526
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 262ac9be6d5ce6466cf9aff33c0c2791c0e149dd
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925421"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988376"
 ---
 # <a name="identity"></a>\<identity>
 ID 요소를 사용하면 클라이언트 개발자가 서비스에 필요한 ID를 디자인 타임에 지정할 수 있습니다. 클라이언트와 서비스 간의 핸드셰이크 프로세스에서 WCF (Windows Communication Foundation) 인프라는 예상 되는 서비스의 id가이 요소의 값과 일치 하는지 확인 하므로 인증 될 수 있습니다. 자세한 내용은 [서비스 Id 및 인증](../../../wcf/feature-details/service-identity-and-authentication.md)합니다.  
@@ -29,7 +29,7 @@ ID 요소를 사용하면 클라이언트 개발자가 서비스에 필요한 ID
   <dns value="String" />
   <rsa value="String" />
   <servicePrincipalName value="String" />
-  <usePrincipalName value="String" />
+  <userPrincipalName value="String" />
 </identity>
 ```  
   
@@ -41,7 +41,7 @@ ID 요소를 사용하면 클라이언트 개발자가 서비스에 필요한 ID
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |인증서(certificate)|X.509 인증서의 설정을 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.CertificateElement> 형식입니다. 이 요소에는 이 인증서로 인코딩된 값을 지정하는 문자열인 `encodedValue` 특성이 포함되어 있습니다.|  
 |certificateReference|X.509 인증서 유효성 검사의 설정을 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.CertificateReferenceElement> 형식입니다.|  
@@ -52,7 +52,7 @@ ID 요소를 사용하면 클라이언트 개발자가 서비스에 필요한 ID
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[\<custom>](custom.md)|netPeerTcpBinding에 대한 사용자 지정 피어 확인자를 지정합니다.|  
 |[\<endpoint>](endpoint-element.md)|서비스 끝점을 구성 합니다.|  

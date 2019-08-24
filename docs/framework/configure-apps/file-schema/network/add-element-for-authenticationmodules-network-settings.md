@@ -57,7 +57,7 @@ ms.locfileid: "69664241"
  `type` 특성 값은 쉼표로 구분 된 유효한 형식 이름 및 해당 어셈블리 이름 이어야 합니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
- 이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
+ 이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
  다음 예에서는 기본 인증 모듈을 사용 하도록 설정 합니다. Version 및 PublicKeyToken의 값을 지정 된 모듈의 올바른 값으로 바꾸어야 합니다.  

@@ -436,7 +436,7 @@ for (int row = 0; row < ROW_COUNT; row++)
 
 [!code-csharp [ExtractClasses](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L174)]
 
-그런 다음 `GetTopResult` 메서드를 사용하여 현재 상자의 확률이 가장 높은 클래스 값과 색인을 가져오고 해당 점수를 계산합니다.
+그런 다음 `GetTopResult` 메서드를 사용하여 현재 상자의 확률이 가장 높은 클래스 값과 색인을 가져오고 해당 점수를 컴퓨팅합니다.
 
 [!code-csharp [GetTopResult](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L176-L177)]
 

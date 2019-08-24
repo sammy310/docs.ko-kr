@@ -2,12 +2,12 @@
 title: Windows 스토어 클라이언트 응용 프로그램을 사용하여 WCF 서비스에 액세스
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: a2f1ef37914c932801699bb2f9c2323dd0408e7f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 9316a46f809eec21f73e8eeadb49baf1748c6ca0
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964962"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988246"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Windows 스토어 클라이언트 응용 프로그램을 사용하여 WCF 서비스에 액세스
 Windows 8에서는 Windows 스토어 애플리케이션이라는 새로운 형식의 애플리케이션을 제공합니다. 이러한 애플리케이션은 터치 스크린 인터페이스를 바탕으로 설계되었습니다. .NET Framework 4.5에서는 Windows 스토어 애플리케이션을 사용하여 WCF 서비스를 호출할 수 있습니다.  
@@ -19,7 +19,7 @@ Windows 8에서는 Windows 스토어 애플리케이션이라는 새로운 형�
 > WCF에서 노출하는 API 대신 WinRT 배포 API를 사용하세요. 자세한 내용은 [WinRT 배포 API](https://go.microsoft.com/fwlink/?LinkId=236265)를 참조하세요.  
   
 > [!WARNING]
->  서비스 참조 추가 기능을 사용하여 Windows 런타임 구성 요소에 웹 서비스 참조를 추가할 수는 없습니다.  
+> 서비스 참조 추가 기능을 사용하여 Windows 런타임 구성 요소에 웹 서비스 참조를 추가할 수는 없습니다.  
   
 ### <a name="supported-bindings"></a>지원되는 바인딩  
  Windows 스토어 애플리케이션에서는 다음과 같은 WCF 바인딩이 지원됩니다.  
@@ -104,7 +104,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 3. XmlSerializer  
   
 > [!WARNING]
->  이제 XmlDictionaryWriter.Write(DateTime)는 DateTime 개체를 문자열로 씁니다.  
+> 이제 XmlDictionaryWriter.Write(DateTime)는 DateTime 개체를 문자열로 씁니다.  
   
 ### <a name="security"></a>보안  
 
@@ -154,7 +154,7 @@ Windows 스토어 응용 프로그램에서는 다음과 같은 클라이언트 
  태스크 기반 비동기 패턴을 사용하여 비동기 서비스 작업만 정의하는 것이 좋습니다. 그러면 서비스 작업을 호출하는 동안 Windows 스토어 애플리케이션이 응답을 유지합니다.  
   
 > [!WARNING]
->  동기 작업을 정의하더라도 예외가 throw되지는 않지만 비동기 작업만 정의하는 것이 좋습니다.  
+> 동기 작업을 정의하더라도 예외가 throw되지는 않지만 비동기 작업만 정의하는 것이 좋습니다.  
   
 ### <a name="calling-wcf-services-from-windows-store-applications"></a>Windows 스토어 애플리케이션에서 WCF 서비스 호출  
  앞에서 설명한 것처럼 모든 구성은 생성된 프록시 클래스의 GetBindingForEndpoint 메서드에서 코드로 수행되어야 합니다. 서비스 작업 호출은 다음 코드 조각과 같이 태스크 기반 비동기 메서드를 호출할 때와 동일한 방법으로 수행됩니다.  

@@ -16,7 +16,7 @@ ms.locfileid: "68892086"
   
 |데이터 형식|정의|정의 위치|Description|  
 |---------------|----------------|----------------|-----------------|  
-|AppDomainID|`typedef UINT_PTR AppDomainID;`|corprof.h|응용 프로그램 도메인의 식별자입니다.|  
+|AppDomainID|`typedef UINT_PTR AppDomainID;`|corprof.h|애플리케이션 도메인의 식별자입니다.|  
 |AssemblyID|`typedef UINT_PTR AssemblyID;`|corprof.h|어셈블리의 식별자입니다.|  
 |ClassID|`typedef UINT_PTR ClassID;`|corprof.h|관리되는 클래스의 식별자입니다.|  
 |CLRDATA_ADDRESS|`typedef ULONG64 CLRDATA_ADDRESS;`|clrdata .h|64 비트 메모리 주소입니다.|

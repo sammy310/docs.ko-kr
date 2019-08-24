@@ -80,7 +80,7 @@ foreach (SyndicationItem i in feed.Items)
   
 2. 솔루션을 빌드합니다.  
   
-3. 콘솔 응용 프로그램을 실행합니다.  
+3. 콘솔 애플리케이션을 실행합니다.  
   
 4. 콘솔 응용 프로그램 실행 되는 동안 이동할 `http://localhost:8000/diagnostics/feed/?format=atom` 또는 `http://localhost:8000/diagnostics/feed/?format=rss` RSS 인식 브라우저를 사용 합니다.  
   

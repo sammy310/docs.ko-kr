@@ -59,7 +59,7 @@ ms.locfileid: "69659337"
  기본적으로 .NET Framework는 URI 구문 분석에 대해 RFC 2616를 엄격 하 게 적용 합니다. 일부 서버 응답에는 <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> <xref:System.Net.WebException>허용 되지 않는 필드의 제어 문자가 포함 될 수 있으며,이로 인해 메서드에서이 throw 됩니다. <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> **Useunsafeheaderparsing 분석이** **true**로 설정 된 경우이 경우가 throw 되지 않지만 응용 프로그램은 다양 한 형식의 URI 구문 분석 공격에 취약 합니다. 가장 좋은 방법은 응답에 제어 문자가 포함 되지 않도록 서버를 변경 하는 것입니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
- 이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
+ 이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 표준 최대 헤더 길이 보다 큰를 지정 하는 방법을 보여 줍니다.  

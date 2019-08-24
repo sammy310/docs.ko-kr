@@ -17,7 +17,7 @@ ms.locfileid: "61924438"
 |ID|1019|  
 |키워드|WFRuntime|  
 |수준|자세히|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  CancelActivityWorkItem이 완료되었음을 나타냅니다.  

@@ -17,7 +17,7 @@ ms.locfileid: "62049234"
 |ID|3334|  
 |키워드|보안 ServiceModel|  
 |수준|자세히|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  이 이벤트는 들어오는 메시지가 확인되었을 때 내보내집니다.  

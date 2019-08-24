@@ -17,7 +17,7 @@ ms.locfileid: "61952960"
 |ID|603|  
 |키워드|RoutingServices|  
 |수준|자세히|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  이 이벤트는 들어오는 요청이 주소가 %1인 Asp.Net 경로에 정의된 WCF 서비스와 일치할 때 내보내집니다.  

@@ -17,7 +17,7 @@ ms.locfileid: "62009840"
 |ID|3507|  
 |키워드|WFServices|  
 |수준|정보|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
 ## <a name="description"></a>설명  
  서비스 엔드포인트가 추가되었음을 나타냅니다.  

@@ -2,12 +2,12 @@
 title: WCF 웹 HTTP 서비스에 대한 캐싱 지원
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: a6a03f20fa6a853f813dc9eff3a4202ab18cad90
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 655e8807a78d542cd7fa586eca3750507891f74b
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952666"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988766"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>WCF 웹 HTTP 서비스에 대한 캐싱 지원
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]WCF 웹 HTTP 서비스의 ASP.NET에서 이미 사용할 수 있는 선언적 캐싱 메커니즘을 사용할 수 있습니다. 이렇게 하면 WCF 웹 HTTP 서비스 작업의 응답을 캐시할 수 있습니다. 사용자가 캐시용으로 구성된 서비스에 HTTP GET을 보내면 ASP.NET이 캐시된 응답을 다시 보내고 서비스 메서드가 호출되지 않습니다. 캐시가 만료되면 다음에 사용자가 HTTP GET을 보낼 때 서비스 메서드가 호출되고 응답이 다시 한 번 캐시됩니다. ASP.NET 캐싱에 대 한 자세한 내용은 [ASP.NET 캐싱 개요](https://go.microsoft.com/fwlink/?LinkId=152534) 를 참조 하세요.  
@@ -40,7 +40,7 @@ public class Service
 ```
   
 > [!WARNING]
->  ASP.NET 호환성 모드가 사용되도록 설정되어 있지 않은 경우 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>를 사용하면 예외가 throw됩니다.  
+> ASP.NET 호환성 모드가 사용되도록 설정되어 있지 않은 경우 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>를 사용하면 예외가 throw됩니다.  
   
  <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>에 지정된 캐시 프로필 이름은 Web.config 구성 파일에 추가되는 캐시 프로필을 식별합니다. 캐시 프로필은 다음 구성 예제에 표시 된`outputCacheSetting`것 처럼 < > 요소에서로 정의 됩니다.  
   

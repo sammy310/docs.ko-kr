@@ -17,7 +17,7 @@ ms.locfileid: "61774480"
 |ID|3333|  
 |키워드|보안|  
 |수준|자세히|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  이 이벤트는 보내는 메시지의 보안이 설정되었을 때 내보내집니다.  

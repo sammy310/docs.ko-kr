@@ -11,7 +11,7 @@ ms.locfileid: "61945641"
 ---
 # <a name="how-to-create-a-custom-instance-store"></a>방법: 사용자 지정 인스턴스 저장소 만들기
 
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에는 SQL Server을 사용하여 워크플로 데이터를 유지하는 인스턴스 저장소인 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>가 있습니다. 응용 프로그램에서 워크플로 데이터를 다른 매체(예: 다른 데이터베이스 또는 파일 시스템)에 유지해야 할 경우 사용자 지정 인스턴스 저장소를 구현할 수 있습니다. 사용자 지정 인스턴스 저장소는 추상 <xref:System.Runtime.DurableInstancing.InstanceStore> 클래스를 확장하고 구현에 필요한 메서드를 구현하여 만듭니다. 사용자 지정 인스턴스 저장소의 완전 한 구현에 대 한 참조를 [기업 구매 프로세스](./samples/corporate-purchase-process.md) 샘플입니다.
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에는 SQL Server을 사용하여 워크플로 데이터를 유지하는 인스턴스 저장소인 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>가 있습니다. 애플리케이션에서 워크플로 데이터를 다른 매체(예: 다른 데이터베이스 또는 파일 시스템)에 유지해야 할 경우 사용자 지정 인스턴스 스토리지를 구현할 수 있습니다. 사용자 지정 인스턴스 저장소는 추상 <xref:System.Runtime.DurableInstancing.InstanceStore> 클래스를 확장하고 구현에 필요한 메서드를 구현하여 만듭니다. 사용자 지정 인스턴스 저장소의 완전 한 구현에 대 한 참조를 [기업 구매 프로세스](./samples/corporate-purchase-process.md) 샘플입니다.
 
 ## <a name="implementing-the-begintrycommand-method"></a>BeginTryCommand 메서드 구현
 
@@ -43,7 +43,7 @@ ms.locfileid: "61945641"
     childInstance.AddInitialInstanceValues(new Dictionary<XName, object>() { { WorkflowHostTypeName, WFInstanceScopeName } });
     ```
 
-- <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>: 지 속성 엔진은 잠금 소유자의 인스턴스 ID를 인스턴스 저장소에서 제거할 수 있습니다 하는 경우이 명령을 인스턴스 저장소에 보냅니다. <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>를 사용하기 때문에 잠금 소유자의 ID를 응용 프로그램에 제공해야 합니다.
+- <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>: 지 속성 엔진은 잠금 소유자의 인스턴스 ID를 인스턴스 저장소에서 제거할 수 있습니다 하는 경우이 명령을 인스턴스 저장소에 보냅니다. <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>를 사용하기 때문에 잠금 소유자의 ID를 애플리케이션에 제공해야 합니다.
 
      다음 코드 조각에서는 <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>를 사용하여 잠금을 해제하는 방법에 대해 설명합니다.
 

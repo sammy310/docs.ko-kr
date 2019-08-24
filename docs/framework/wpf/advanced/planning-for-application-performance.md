@@ -1,5 +1,5 @@
 ---
-title: 응용 프로그램 성능 계획
+title: 애플리케이션 성능 계획
 ms.date: 03/30/2017
 helpviewer_keywords:
 - applications [WPF], optimizing
@@ -12,7 +12,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62032866"
 ---
-# <a name="planning-for-application-performance"></a>응용 프로그램 성능 계획
+# <a name="planning-for-application-performance"></a>애플리케이션 성능 계획
 성능 목표를 달성 하는 성공 성능 전략을 개발 하는 정도에 따라 달라 집니다. 계획은 모든 제품 개발의 첫 번째 단계입니다. 이 항목에서는 적절 한 성능을 전략을 개발 하기 위한 몇 가지 간단한 규칙을 설명 합니다.  
   
 ## <a name="think-in-terms-of-scenarios"></a>시나리오 측면에서 생각 합니다.  

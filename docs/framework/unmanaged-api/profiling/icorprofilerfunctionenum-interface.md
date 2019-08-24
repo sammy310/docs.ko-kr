@@ -31,7 +31,7 @@ ms.locfileid: "61991967"
 |메서드|설명|  
 |------------|-----------------|  
 |[Clone 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-clone-method.md)|이 `ICorProfilerFunctionEnum` 인터페이스의 복사본에 대한 인터페이스 포인터를 가져옵니다.|  
-|[GetCount 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-getcount-method.md)|응용 프로그램에서 로드했거나 프로파일러에서 강제로 로드한 함수 개수를 가져옵니다.|  
+|[GetCount 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-getcount-method.md)|애플리케이션에서 로드했거나 프로파일러에서 강제로 로드한 함수 개수를 가져옵니다.|  
 |[Next 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-next-method.md)|시퀀스에서 열거자의 현재 위치부터 시작하여 순차적 함수 컬렉션에서 지정된 개수의 연속 함수를 가져옵니다.|  
 |[Reset 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-reset-method.md)|열거자의 커서를 시퀀스의 시작 위치로 이동합니다.|  
 |[Skip 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-skip-method.md)|지정한 개수의 요소를 건너뛰도록 현재 위치에서 열거자의 커서를 진행합니다.|  

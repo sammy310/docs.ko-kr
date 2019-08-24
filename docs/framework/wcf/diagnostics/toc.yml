@@ -23,7 +23,7 @@
       href: wmi/
     - name: 예외 참조
       href: exceptions-reference/
-- name: 응용 프로그램 구성
+- name: 애플리케이션 구성
   href: configuring-your-application.md
 - name: ServiceModel 등록 도구
   href: servicemodel-registration-tool.md

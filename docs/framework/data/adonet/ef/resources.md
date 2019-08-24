@@ -10,7 +10,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61879335"
 ---
 # <a name="entity-framework-resources"></a>Entity Framework 리소스
-다음 외부 리소스는 Entity Framework 응용 프로그램을 만들기 위한 정보와 지원을 제공합니다.  
+다음 외부 리소스는 Entity Framework 애플리케이션을 만들기 위한 정보와 지원을 제공합니다.  
   
  [데이터 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=213876)  
  Microsoft 기술을 사용한 데이터 개발을 위한 중심적인 위치입니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "61879335"
  이후 Entity Framework 버전의 디자인에 대해 논의하고 관련 기능을 미리 볼 수 있습니다.  
   
  [데이터 플랫폼 어떻게 할까요? 비디오: Entity Framework 시리즈](https://go.microsoft.com/fwlink/?LinkId=124600)  
- 다양한 Entity Framework 구성 요소를 사용하여 응용 프로그램을 빌드하는 방법을 보여 주는 일련의 비디오 화면 캐스트가 포함되어 있습니다.  
+ 다양한 Entity Framework 구성 요소를 사용하여 애플리케이션을 빌드하는 방법을 보여 주는 일련의 비디오 화면 캐스트가 포함되어 있습니다.  
   
  [Entity Framework FAQ](https://social.technet.microsoft.com/wiki/contents/articles/3737.entity-framework-faq.aspx)  
  Wiki 섹션 포함 된 자주 묻는 질문 Entity Framework에 대 한 합니다.  

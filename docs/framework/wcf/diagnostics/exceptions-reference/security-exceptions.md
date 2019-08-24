@@ -111,7 +111,7 @@ ms.locfileid: "61780863"
 |SecureConversationRequiredByReliableSession|보안 대화 없이 신뢰할 수 있는 세션을 설정할 수 없습니다. 보안 대화를 사용하도록 설정하십시오.|  
 |SecurityAuditFailToLoadDll|지정된 동적 연결 라이브러리(dll)를 로드할 수 없습니다.|  
 |SecurityAuditNotSupportedOnChannelFactory|SecurityAuditBehavior가 채널 팩터리에서 지원되지 않습니다.|  
-|SecurityAuditPlatformNotSupported|감사 메시지를 보안 로그에 쓰는 것이 현재 플랫폼에서 지원되지 않습니다. 감사 메시지는 응용 프로그램 로그에 써야 합니다.|  
+|SecurityAuditPlatformNotSupported|감사 메시지를 보안 로그에 쓰는 것이 현재 플랫폼에서 지원되지 않습니다. 감사 메시지는 애플리케이션 로그에 써야 합니다.|  
 |SecurityBindingElementCannotBeExpressedInConfig|엔드포인트에 대한 보안 정책을 가져왔습니다. Windows Communication Foundation 구성에서 나타낼 수 없는 요구 사항이 보안 정책에 포함되어 있습니다. 생성된 구성 파일에서 필요한 SecurityBindingElement 매개 변수에 대한 설명을 확인하십시오. 코드를 사용하여 올바른 바인딩 요소를 만드십시오. 구성 파일에 있는 바인딩 구성은 보안되지 않습니다.|  
 |SecurityBindingSupportsOneWayOnly|지정된 계약의 지정된 바인딩에 대한 SecurityBinding은 OneWay 작업만 지원합니다.|  
 |SecurityContextDoesNotAllowImpersonation|지정된 동작을 가진 요청 메시지의 UltimateReceiver 역할에 대한 SecurityContext가 Windows ID에 매핑되지 않기 때문에 가장을 시작할 수 없습니다.|  
@@ -119,7 +119,7 @@ ms.locfileid: "61780863"
 |SecurityListenerClosingFaultReason|서버를 닫는 중이기 때문에 새 보안 대화를 서버에서 수락하지 않습니다. 나중에 다시 시도하십시오.|  
 |SecurityProtocolFactoryShouldBeSetBeforeThisOperation|이 작업을 수행하기 전에 보안 프로토콜 팩터리를 설정해야 합니다.|  
 |SecuritySessionAbortedFaultReason|보안 세션이 종료되었습니다. 이것은 세션에서 메시지가 너무 오래 수신되지 않았기 때문일 수 있습니다|  
-|SecuritySessionKeyIsStale|세션 키가 응용 프로그램 메시지를 보안할 수 있으려면 먼저 세션 키를 갱신해야 합니다.|  
+|SecuritySessionKeyIsStale|세션 키가 애플리케이션 메시지를 보안할 수 있으려면 먼저 세션 키를 갱신해야 합니다.|  
 |SecuritySessionLimitReached|보안 세션을 만들 수 없습니다 나중에 다시 시도하십시오.|  
 |SecuritySessionNotPending|지정된 ID가 있는 보안 세션 중 보류 중인 세션이 없습니다.|  
 |SecurityTokenParametersHasIncompatibleInclusionMode|지정된 바인딩이 호환되지 않는 지정된 보안 토큰 포함 모드를 가지는 보안 토큰 매개 변수로 구성되었습니다. 대체 보안 토큰 포함 모드를 지정하십시오.|  

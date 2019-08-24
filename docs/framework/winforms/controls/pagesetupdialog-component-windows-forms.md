@@ -27,7 +27,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "62012700"
 ---
 # <a name="pagesetupdialog-component-windows-forms"></a>PageSetupDialog 구성 요소(Windows Forms)
-Windows Forms <xref:System.Windows.Forms.PageSetupDialog> 구성 요소는 Windows 기반 응용 프로그램에서 인쇄를 위한 페이지 세부 정보를 설정 하는 데 사용 되는 미리 구성 된 대화 상자. 사용 하 여 응용 프로그램 내에서 Windows 기반 간단한 솔루션으로 사용자에 대 한 고유한 대화 상자를 구성 하는 대신 페이지 기본 설정. 테두리 및 여백, 머리글 및 바닥글 및 세로 또는 가로 방향 설정 하는 사용자를 사용할 수 있습니다. 표준 Windows 대화 상자를 사용하여 기본 기능이 사용자에게 익숙한 응용 프로그램을 만듭니다.  
+Windows Forms <xref:System.Windows.Forms.PageSetupDialog> 구성 요소는 Windows 기반 응용 프로그램에서 인쇄를 위한 페이지 세부 정보를 설정 하는 데 사용 되는 미리 구성 된 대화 상자. 사용 하 여 응용 프로그램 내에서 Windows 기반 간단한 솔루션으로 사용자에 대 한 고유한 대화 상자를 구성 하는 대신 페이지 기본 설정. 테두리 및 여백, 머리글 및 바닥글 및 세로 또는 가로 방향 설정 하는 사용자를 사용할 수 있습니다. 표준 Windows 대화 상자를 사용하여 기본 기능이 사용자에게 익숙한 애플리케이션을 만듭니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [PageSetupDialog 구성 요소 개요](pagesetupdialog-component-overview-windows-forms.md)  
@@ -45,7 +45,7 @@ Windows Forms <xref:System.Windows.Forms.PageSetupDialog> 구성 요소는 Windo
  사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.  
   
  [대화 상자 컨트롤 및 구성 요소](dialog-box-controls-and-components-windows-forms.md)  
- 사용자가 응용 프로그램이나 시스템에서 표준 조작을 수행할 수 있도록 하는 컨트롤 및 구성 요소 집합에 대해 설명합니다.  
+ 사용자가 애플리케이션이나 시스템에서 표준 조작을 수행할 수 있도록 하는 컨트롤 및 구성 요소 집합에 대해 설명합니다.  
   
  [Windows Forms 대화 상자의 필수 코드](https://go.microsoft.com/fwlink/?LinkID=102575)  
  Windows Forms 대화 상자 컨트롤 및 구성 요소와 기본 함수를 실행하는 데 필요한 코드에 대해 설명합니다. (MSDN Online Library 기술 문서)

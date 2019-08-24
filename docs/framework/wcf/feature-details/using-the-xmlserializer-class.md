@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: 966c3c17c3c42e20ad55681e1c17b13d3f466fa3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 665ede5b5a46c4093382bed5ed28a0d2bba979be
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967812"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988601"
 ---
 # <a name="using-the-xmlserializer-class"></a>XmlSerializer 클래스 사용
 WCF (Windows Communication Foundation)에서는 두 가지 serialization 기술을 사용 하 여 응용 프로그램의 데이터를 클라이언트와 서비스 간에 전송 되는 XML로 변환할 수 있습니다 .이 프로세스를 serialization 이라고 합니다.  
@@ -97,7 +97,7 @@ WCF (Windows Communication Foundation)에서는 두 가지 serialization 기술�
  `IXmlSerializable` 인터페이스를 구현하는 형식은 `DataContractSerializer`에서 완전히 지원됩니다. 이러한 형식의 스키마를 제어하려면 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 특성을 항상 이러한 형식에 적용해야 합니다.  
   
 > [!WARNING]
->  다형 형식을 serialize하는 경우에는 올바른 형식이 serialize되도록 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>를 형식에 적용해야 합니다.  
+> 다형 형식을 serialize하는 경우에는 올바른 형식이 serialize되도록 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>를 형식에 적용해야 합니다.  
   
  `IXmlSerializable`을 구현하는 형식에는 임의의 콘텐츠를 나타내는 형식, 단일 요소를 나타내는 형식 및 레거시 <xref:System.Data.DataSet> 형식 등 세 가지가 있습니다.  
   

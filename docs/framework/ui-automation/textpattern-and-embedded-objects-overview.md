@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
 ms.openlocfilehash: c8dc4ba5a17ca6a950d7ef3e0835f31463979bd3
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61983230"
@@ -43,13 +43,13 @@ ms.locfileid: "61983230"
   
  텍스트 범위의 내용을 이동해야 하는 경우 <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> 메서드가 성공적으로 실행되려면 백그라운드에서 일련의 단계를 거쳐야 합니다.  
   
-1. 텍스트 범위가 정규화됩니다. 다시 말해서, 텍스트 범위가 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> 엔드포인트에서 중복 제거 범위로 축소되어 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 엔드포인트가 불필요해집니다. 이 단계는 텍스트 범위에 걸쳐 있는 경우 모호성을 제거 하는 데 필요한 <xref:System.Windows.Automation.Text.TextUnit> 경계: 예를 들어 `{The URL https://www.microsoft.com is embedded in text` 위치 "{0}" 및 "}"는 텍스트 범위 끝점입니다.  
+1. 텍스트 범위가 정규화됩니다. 다시 말해서, 텍스트 범위가 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> 엔드포인트에서 중복 제거 범위로 축소되어 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 엔드포인트이 불필요해집니다. 이 단계는 텍스트 범위에 걸쳐 있는 경우 모호성을 제거 하는 데 필요한 <xref:System.Windows.Automation.Text.TextUnit> 경계: 예를 들어 `{The URL https://www.microsoft.com is embedded in text` 위치 "{0}" 및 "}"는 텍스트 범위 끝점입니다.  
   
 2. 결과 범위가 <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> 내에서 뒤쪽으로 옮겨져 요청된 <xref:System.Windows.Automation.Text.TextUnit> 경계의 시작 부분으로 이동하게 됩니다.  
   
 3. 범위가 요청된 <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> 경계 수만큼 <xref:System.Windows.Automation.Text.TextUnit> 내에서 앞이나 뒤로 이동합니다.  
   
-4. 그런 다음, 요청된 <xref:System.Windows.Automation.Text.TextUnit> 경계 하나만큼 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 엔드포인트를 이동하여 중복 제거 범위 상태이던 범위가 확장됩니다.  
+4. 그런 다음, 요청된 <xref:System.Windows.Automation.Text.TextUnit> 경계 하나만큼 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 엔드포인트을 이동하여 중복 제거 범위 상태이던 범위가 확장됩니다.  
   
  ![Move & ExpandToEnclosingUnit으로 범위 조정](../../../docs/framework/ui-automation/media/uia-textpattern-moveandexpand-examples.png "UIA_TextPattern_MoveAndExpand_Examples")  
 Move() 및 ExpandToEnclosingUnit()에 따라 텍스트 범위가 조정되는 방법의 예  

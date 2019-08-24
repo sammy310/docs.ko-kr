@@ -20,7 +20,7 @@ ms.locfileid: "61879279"
 ## <a name="association-type"></a>연결 형식  
  [연결 형식](../../../../docs/framework/data/adonet/association-type.md) (연결이 라고도 함)는 엔터티 데이터 모델에서 관계를 설명 하기 위한 기본적인 빌딩 블록입니다. 개념적 모델에서 연결은 두 엔터티 형식(예: Customer 및 Order) 간의 관계를 나타냅니다. 각 연결에는 두 개의 [연결 end](../../../../docs/framework/data/adonet/association-end.md) 연결과 관련 된 엔터티 형식을 지정 하는 합니다. 각 연결 end도 지정 된 [연결 end 복합성](../../../../docs/framework/data/adonet/association-end-multiplicity.md) 연결의 해당 end에 있을 수 있는 엔터티의 수를 나타내는입니다. 연결 End의 복합성 값은 한 개(1), 0개 또는 한 개(0..1) 또는 다수(*)일 수 있습니다. 연결의 한쪽 end에 엔터티를 통해 액세스할 수 있습니다 [탐색 속성](../../../../docs/framework/data/adonet/navigation-property.md), 또는 엔터티 형식에서 노출 된 경우 외래 키입니다. 자세한 내용은 [외래 키 속성](../../../../docs/framework/data/adonet/foreign-key-property.md)합니다.  
   
- 응용 프로그램에서 연결 인스턴스는 특정 연결(예: 고객 인스턴스와 주문 인스턴스 간의 연결)을 나타냅니다. 연결 인스턴스는 논리적으로 그룹화 되는 [연결 집합](../../../../docs/framework/data/adonet/association-set.md)합니다. 연결 집합 (및 [엔터티 집합](../../../../docs/framework/data/adonet/entity-set.md))에 논리적으로 그룹화 되는 [엔터티 컨테이너](../../../../docs/framework/data/adonet/entity-container.md)합니다.  
+ 애플리케이션에서 연결 인스턴스는 특정 연결(예: 고객 인스턴스와 주문 인스턴스 간의 연결)을 나타냅니다. 연결 인스턴스는 논리적으로 그룹화 되는 [연결 집합](../../../../docs/framework/data/adonet/association-set.md)합니다. 연결 집합 (및 [엔터티 집합](../../../../docs/framework/data/adonet/entity-set.md))에 논리적으로 그룹화 되는 [엔터티 컨테이너](../../../../docs/framework/data/adonet/entity-container.md)합니다.  
   
 ## <a name="property"></a>속성  
  [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md) 포함할 [속성](../../../../docs/framework/data/adonet/property.md) 는 구조와 특징을 정의 하는 합니다. 예를 들어, Customer 엔터티 형식에는 CustomerId, Name, Address 등의 속성이 있을 수 있습니다.  

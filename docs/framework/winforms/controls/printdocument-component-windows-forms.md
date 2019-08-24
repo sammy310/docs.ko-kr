@@ -13,11 +13,11 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "62012609"
 ---
 # <a name="printdocument-component-windows-forms"></a>PrintDocument 구성 요소(Windows Forms)
-Windows Forms `PrintDocument` 구성 요소는 인쇄 대상을 설명하는 속성을 설정한 다음 Windows 기반 응용 프로그램 내에서 문서를 인쇄하는 데 사용됩니다. 모든 문서 인쇄 측면의 명령에 포함되도록 <xref:System.Windows.Forms.PrintDialog> 구성 요소와 함께 사용할 수 있습니다.  
+Windows Forms `PrintDocument` 구성 요소는 인쇄 대상을 설명하는 속성을 설정한 다음 Windows 기반 애플리케이션 내에서 문서를 인쇄하는 데 사용됩니다. 모든 문서 인쇄 측면의 명령에 포함되도록 <xref:System.Windows.Forms.PrintDialog> 구성 요소와 함께 사용할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [PrintDocument 구성 요소 개요](printdocument-component-overview-windows-forms.md)  
- 인쇄 대상을 설명하는 속성을 설정할 수 있게 해주고 Windows 기반 응용 프로그램에서 인쇄를 시작하는 `PrintDocument` 구성 요소의 일반적인 개념을 소개합니다.  
+ 인쇄 대상을 설명하는 속성을 설정할 수 있게 해주고 Windows 기반 애플리케이션에서 인쇄를 시작하는 `PrintDocument` 구성 요소의 일반적인 개념을 소개합니다.  
   
 ## <a name="reference"></a>참조  
  <xref:System.Drawing.Printing.PrintDocument>  

@@ -24,14 +24,14 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "62040939"
 ---
 # <a name="icorprofilermoduleenum-interface"></a>ICorProfilerModuleEnum 인터페이스
-응용 프로그램이나 프로파일러가 로드한 모듈 컬렉션을 순서대로 반복하는 메서드를 제공합니다.  
+애플리케이션이나 프로파일러가 로드한 모듈 컬렉션을 순서대로 반복하는 메서드를 제공합니다.  
   
 ## <a name="methods"></a>메서드  
   
 |메서드|설명|  
 |------------|-----------------|  
 |[Clone 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-clone-method.md)|이 `ICorProfilerModuleEnum` 인터페이스의 복사본에 대한 인터페이스 포인터를 가져옵니다.|  
-|[GetCount 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-getcount-method.md)|응용 프로그램에 로드된 관리되는 모듈 수를 가져옵니다.|  
+|[GetCount 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-getcount-method.md)|애플리케이션에 로드된 관리되는 모듈 수를 가져옵니다.|  
 |[Next 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-next-method.md)|시퀀스에서 열거자의 현재 위치부터 시작하여 순차적 개체 컬렉션에서 지정된 개수의 연속 모듈을 가져옵니다.|  
 |[Reset 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-reset-method.md)|열거자의 커서를 시퀀스의 시작 위치로 이동합니다.|  
 |[Skip 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-skip-method.md)|지정한 개수의 요소를 건너뛰도록 열거자의 커서 위치를 진행합니다.|  

@@ -84,7 +84,7 @@ ms.locfileid: "69663981"
  속성을 사용 하 여 적용 가능한 구성 파일에서 `ipProtectionLevel` 특성의 현재 값을 가져올 수 있습니다. <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A>  
   
 ## <a name="configuration-files"></a>구성 파일  
- 이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
+ 이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
  다음 예에서는 완료 포트를 사용 하도록 지정 하는 방법과 기본값 <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> 을 제한 하지 않아야 함을 지정 하는 방법을 보여 줍니다.  

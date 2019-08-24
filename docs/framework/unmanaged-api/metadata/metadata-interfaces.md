@@ -65,7 +65,7 @@ ms.locfileid: "62049819"
  디스크에 있는 파일에서 메모리로의 메타데이터 매핑에 대한 정보를 가져오는 메서드를 제공합니다.  
   
  [IMetaDataTables 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- 테이블에서 메타데이터 정보를 저장 및 검색하는 메서드를 제공합니다.  
+ 테이블에서 메타데이터 정보를 스토리지 및 검색하는 메서드를 제공합니다.  
   
  [IMetaDataTables2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)  
  메타데이터 스트림 작업을 수행하는 메서드를 포함하도록 `IMetaDataTables`를 확장합니다.  

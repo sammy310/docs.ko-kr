@@ -1,5 +1,5 @@
 ---
-title: COM+ 응용 프로그램과 통합
+title: COM+ 애플리케이션과 통합
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF, reusing code
@@ -16,7 +16,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62046933"
 ---
-# <a name="integrating-with-com-applications"></a>COM+ 응용 프로그램과 통합
+# <a name="integrating-with-com-applications"></a>COM+ 애플리케이션과 통합
 Windows Communication Foundation (WCF)는 분산된 응용 프로그램을 만들기 위한 풍부한 환경을 제공 합니다. COM +에서 호스팅되는 구성 요소 기반 응용 프로그램 논리에 상당한 투자를 한 경우 다시 작성 하지 않고 기존 논리를 확장 하려면 WCF를 사용할 수 있습니다. 이 단원의 항목에서는 WCF를 사용 하 여 COM +를 사용 하는 방법에 설명 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF)는 분산된 응용 프로그램을 만�
  COM + 개체를 WCF 서비스로 구성 하는 방법에 설명 합니다.  
   
  [방법: COM + 통합 응용 프로그램 배포](../../../../docs/framework/wcf/feature-details/how-to-deploy-a-com-integration-application.md)  
- COM+ 통합 응용 프로그램을 이동하는 방법에 대해 설명합니다.  
+ COM+ 통합 애플리케이션을 이동하는 방법에 대해 설명합니다.  
   
 ## <a name="reference"></a>참조  
  <xref:System.ServiceModel>  

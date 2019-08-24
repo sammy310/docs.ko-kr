@@ -2,9 +2,15 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
+ms.openlocfilehash: 4105aaba92c73206e7a162415e3bc245507f40e3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667086"
 ---
 # <a name="adonet"></a>ADO.NET
-ADO.NET은 .NET Framework 프로그래머에게 데이터 액세스 서비스를 노출하는 클래스 집합입니다. ADO.NET은 분산된 데이터 공유 응용 프로그램을 만들기 위한 다양한 구성 요소를 제공합니다. 또한 관계형, XML 및 응용 프로그램 데이터에 대한 액세스를 제공하는 .NET Framework의 핵심 부분입니다. ADO.NET은 응용 프로그램, 도구, 언어 또는 인터넷 브라우저에서 사용되는 중간 계층 비즈니스 개체 및 프런트 엔드 데이터베이스 클라이언트 만들기를 포함하여 다양한 개발 요구 사항을 지원합니다.  
+ADO.NET은 .NET Framework 프로그래머에게 데이터 액세스 서비스를 노출하는 클래스 집합입니다. ADO.NET은 분산된 데이터 공유 애플리케이션을 만들기 위한 다양한 구성 요소를 제공합니다. 또한 관계형, XML 및 애플리케이션 데이터에 대한 액세스를 제공하는 .NET Framework의 핵심 부분입니다. ADO.NET은 애플리케이션, 도구, 언어 또는 인터넷 브라우저에서 사용되는 중간 계층 비즈니스 개체 및 프런트 엔드 데이터베이스 클라이언트 만들기를 포함하여 다양한 개발 요구 사항을 지원합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [ADO.NET의 새로운 기능](../../../../docs/framework/data/adonet/whats-new.md)  
@@ -14,7 +20,7 @@ ADO.NET은 .NET Framework 프로그래머에게 데이터 액세스 서비스를
  ADO.NET의 디자인 및 구성 요소에 대해 소개합니다.  
   
  [Entity Framework](https://go.microsoft.com/fwlink/?LinkID=213876)  
- Entity Framework를 사용하여 응용 프로그램을 만드는 방법에 대해 설명합니다.  
+ Entity Framework를 사용하여 애플리케이션을 만드는 방법에 대해 설명합니다.  
   
  [ADO.NET 응용 프로그램 보안](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  ADO.NET을 사용할 때 보안 코드를 작성하는 방법에 대해 설명합니다.  

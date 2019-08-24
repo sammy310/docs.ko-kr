@@ -10,7 +10,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "62034335"
 ---
 # <a name="dataviews"></a>데이터 보기
-<xref:System.Data.DataView>는 데이터 바인딩 응용 프로그램에서 자주 사용되는 기능으로, 이 기능을 사용하면 <xref:System.Data.DataTable>에 저장되어 있는 데이터에 대해 서로 다른 뷰를 만들 수 있습니다. 사용 하는 **DataView**, 서로 다른 정렬 순서를 사용 하 여 테이블의 데이터를 노출 시킬 수 있으며 행 상태 또는 필터 식을 기반으로 데이터를 필터링 할 수 있습니다.  
+<xref:System.Data.DataView>는 데이터 바인딩 애플리케이션에서 자주 사용되는 기능으로, 이 기능을 사용하면 <xref:System.Data.DataTable>에 저장되어 있는 데이터에 대해 서로 다른 뷰를 만들 수 있습니다. 사용 하는 **DataView**, 서로 다른 정렬 순서를 사용 하 여 테이블의 데이터를 노출 시킬 수 있으며 행 상태 또는 필터 식을 기반으로 데이터를 필터링 할 수 있습니다.  
   
  A **DataView** 데이터 원본에 대 한 동적 뷰를 제공 **DataTable**: 콘텐츠, 순서 및 멤버 발생 하는 변경 내용을 반영 합니다. 다르게이 동작 합니다 **선택** 메서드의 **DataTable**를 반환 하는 <xref:System.Data.DataRow> 특정 필터 및/또는 정렬 순서를 기준으로 테이블에서 배열:이 콘텐츠는 변경 내용을 반영를 기본 테이블, 하지만 해당 멤버 및 순서 정적으로 유지 됩니다. 동적 기능은 합니다 **DataView** 데이터 바인딩 응용 프로그램에 적합 합니다.  
   
@@ -45,10 +45,10 @@ ms.locfileid: "62034335"
   
 ## <a name="related-sections"></a>관련 단원  
  [ASP.NET 웹 응용 프로그램](https://docs.microsoft.com/previous-versions/655cec97(v=vs.100))  
- ASP.NET 응용 프로그램, Web Forms 및 Web Services를 만들기 위한 개요 및 자세한 단계별 절차를 제공합니다.  
+ ASP.NET 애플리케이션, Web Forms 및 Web Services를 만들기 위한 개요 및 자세한 단계별 절차를 제공합니다.  
   
  [Windows 응용 프로그램](https://docs.microsoft.com/previous-versions/ms184421(v=vs.100))  
- Windows Forms 및 콘솔 응용 프로그램 작업에 대한 자세한 내용을 제공합니다.  
+ Windows Forms 및 콘솔 애플리케이션 작업에 대한 자세한 내용을 제공합니다.  
   
  [DataSet, DataTable 및 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  에 대해 설명 합니다 **데이터 집합** 개체 및 사용 하 여 응용 프로그램 데이터를 관리 하는 방법을 합니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "62034335"
  에 대해 설명 합니다 **DataTable** 개체와 사용 하 여 자체적으로 또는의 일부로 응용 프로그램 데이터를 관리 하는 방법을 **데이터 집합**합니다.  
   
  [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
- ADO.NET 아키텍처 및 구성 요소에 대해 설명하고, ADO.NET을 사용하여 기존 데이터 소스에 액세스하고 응용 프로그램 데이터를 관리하는 방법을 설명합니다.  
+ ADO.NET 아키텍처 및 구성 요소에 대해 설명하고, ADO.NET을 사용하여 기존 데이터 소스에 액세스하고 애플리케이션 데이터를 관리하는 방법을 설명합니다.  
   
 ## <a name="see-also"></a>참고자료
 

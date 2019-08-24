@@ -88,7 +88,7 @@ ms.locfileid: "69567519"
   
 - <xref:System.Windows.Data.BindingMode.OneWayToSource>는 <xref:System.Windows.Data.BindingMode.OneWay> 바인딩의 반대 이며, 대상 속성이 변경 될 때 소스 속성을 업데이트 합니다. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]에서 소스 값을 다시 평가하면 되는 경우가 한 가지 예제 시나리오입니다.  
   
-- 이 그림에는 표시 되지 <xref:System.Windows.Data.BindingMode.OneTime> 않습니다 .이는 원본 속성이 대상 속성을 초기화 하는 것을 유발 하지만 후속 변경 내용은 전파 되지 않습니다. 이는 데이터 컨텍스트가 변경되고 있거나 데이터 컨텍스트의 개체가 변경될 경우 변경 내용이 대상 속성에 반영되지 않습니다. 이 바인딩 유형은 현재 상태의 스냅숏이 사용하기에 적절하거나 데이터가 실제로 정적인 상황에서 데이터를 사용하는 경우에 적합합니다. 또한 이 바인딩 유형은 원본 속성의 일부 값으로 대상 속성을 초기화하려고 하며 데이터 컨텍스트가 사전에 알려지지 않은 경우에도 유용합니다. 이는 기본적으로 원본 값이 변경되지 않은 경우에 더 나은 성능을 제공하는 <xref:System.Windows.Data.BindingMode.OneWay> 바인딩의 더 간단한 형태입니다.  
+- 이 그림에는 표시 되지 <xref:System.Windows.Data.BindingMode.OneTime> 않습니다 .이는 원본 속성이 대상 속성을 초기화 하는 것을 유발 하지만 후속 변경 내용은 전파 되지 않습니다. 이는 데이터 컨텍스트가 변경되고 있거나 데이터 컨텍스트의 개체가 변경될 경우 변경 내용이 대상 속성에 반영되지 않습니다. 이 바인딩 유형은 현재 상태의 스냅샷이 사용하기에 적절하거나 데이터가 실제로 정적인 상황에서 데이터를 사용하는 경우에 적합합니다. 또한 이 바인딩 유형은 원본 속성의 일부 값으로 대상 속성을 초기화하려고 하며 데이터 컨텍스트가 사전에 알려지지 않은 경우에도 유용합니다. 이는 기본적으로 원본 값이 변경되지 않은 경우에 더 나은 성능을 제공하는 <xref:System.Windows.Data.BindingMode.OneWay> 바인딩의 더 간단한 형태입니다.  
   
  원본 변경 내용 ( <xref:System.Windows.Data.BindingMode.OneWay> 및 <xref:System.Windows.Data.BindingMode.TwoWay> 바인딩에 적용 됨)을 검색 하려면 소스가와 <xref:System.ComponentModel.INotifyPropertyChanged>같은 적절 한 속성 변경 알림 메커니즘을 구현 해야 합니다. <xref:System.ComponentModel.INotifyPropertyChanged> 구현에 대 한 예제는 [속성 변경 알림 구현](how-to-implement-property-change-notification.md) 을 참조 하세요.  
   

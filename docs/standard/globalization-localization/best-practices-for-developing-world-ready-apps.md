@@ -19,11 +19,11 @@ ms.locfileid: "59310540"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>지역화 대비 애플리케이션 개발을 위한 모범 사례
 
-이 단원에서는 지역화 대비 응용 프로그램을 개발할 때 따라야 할 최선의 구현 방법을 소개합니다.
+이 단원에서는 지역화 대비 애플리케이션을 개발할 때 따라야 할 최선의 구현 방법을 소개합니다.
 
 ## <a name="globalization-best-practices"></a>세계화 모범 사례
 
-1. 응용 프로그램에서 내부적으로 유니코드를 사용합니다.
+1. 애플리케이션에서 내부적으로 유니코드를 사용합니다.
 
 2. <xref:System.Globalization> 네임스페이스에서 제공하는 문화권 인식 클래스를 사용하여 데이터를 조작하고 형식을 지정합니다.
 
@@ -39,7 +39,7 @@ ms.locfileid: "59310540"
 
 3. <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> 클래스에서 제공하는 문화권 속성 설정을 적절한 상황에서 사용합니다. 날짜 및 시간 또는 숫자 형식 지정과 같은 형식 지정 작업에는 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 속성을 사용합니다. 리소스를 검색하려면 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> 속성을 사용합니다. `CurrentCulture` 및 `CurrentUICulture` 속성을 스레드별로 설정할 수 있습니다.
 
-4. 응용 프로그램에서 <xref:System.Text> 네임스페이스의 인코딩 클래스를 사용하여 다양한 인코딩 간에 데이터를 읽고 쓸 수 있도록 합니다. ASCII 데이터가 입력될 것으로 예상하지 말고, 사용자가 텍스트를 입력할 수 있는 모든 위치에 국제 문자가 제공될 것으로 가정합니다. 예를 들어, 응용 프로그램에서는 서버 이름, 디렉터리, 파일 이름, 사용자 이름 및 URL에서 국제 문자를 사용할 수 있습니다.
+4. 애플리케이션에서 <xref:System.Text> 네임스페이스의 인코딩 클래스를 사용하여 다양한 인코딩 간에 데이터를 읽고 쓸 수 있도록 합니다. ASCII 데이터가 입력될 것으로 예상하지 말고, 사용자가 텍스트를 입력할 수 있는 모든 위치에 국제 문자가 제공될 것으로 가정합니다. 예를 들어, 애플리케이션에서는 서버 이름, 디렉터리, 파일 이름, 사용자 이름 및 URL에서 국제 문자를 사용할 수 있습니다.
 
 5. <xref:System.Text.UTF8Encoding> 클래스를 사용할 때는 보안상의 이유로 이 클래스가 제공하는 오류 검색 기능을 사용합니다. 오류 검색 기능을 설정하려면 `throwOnInvalidBytes` 매개 변수를 사용하는 생성자를 사용하여 클래스의 인스턴스를 만들고 이 매개 변수의 값을 `true`로 설정합니다.
 
@@ -49,7 +49,7 @@ ms.locfileid: "59310540"
 
 8. 운영 체제 간에 일관성을 유지하려면 사용자 설정에 따라 <xref:System.Globalization.CultureInfo>가 재정의되지 않게 합니다. `CultureInfo` 매개 변수를 사용하는 `useUserOverride` 생성자를 사용하여 `false`로 설정합니다.
 
-9. 국제 데이터를 사용하여 국제 운영 체제 버전에서 응용 프로그램의 기능을 테스트합니다.
+9. 국제 데이터를 사용하여 국제 운영 체제 버전에서 애플리케이션의 기능을 테스트합니다.
 
 10. 문자열 비교 또는 대/소문자 변경 작업의 결과에 따라 보안을 결정하는 경우 문화권을 구분하지 않는 문자열 작업을 사용합니다. 이러한 구현 방법을 사용하면 결과가 `CultureInfo.CurrentCulture` 값의 영향을 받지 않습니다. 문화권을 구분하지 않는 문자열 비교로 인해 어떻게 일관되지 않은 결과가 나타날 수 있는지를 보여주는 예제는 [문자열 사용에 대한 모범 사례](../../../docs/standard/base-types/best-practices-strings.md)의 ["현재 문화권을 사용하는 문자열 비교"](../../../docs/standard/base-types/best-practices-strings.md#string-comparisons-that-use-the-current-culture) 섹션을 참조하세요.
 
@@ -65,7 +65,7 @@ ms.locfileid: "59310540"
 
 5. "Empty Folder"와 같이 문자열이 문자열 구성 요소의 문법적 역할에 따라 다르게 변환될 수 있는 애매한 구문은 피합니다. 예를 들어, "empty"는 동사나 형용사로 사용할 수 있으므로 이탈리아어나 프랑스어와 같은 언어에서는 다르게 번역될 수 있습니다.
 
-6. 응용 프로그램에서 텍스트가 들어 있는 이미지나 아이콘은 사용하지 않도록 합니다. 이러한 경우에는 지역화 비용이 많이 듭니다.
+6. 애플리케이션에서 텍스트가 들어 있는 이미지나 아이콘은 사용하지 않도록 합니다. 이러한 경우에는 지역화 비용이 많이 듭니다.
 
 7. 사용자 인터페이스에서 문자열 길이를 확장할 수 있도록 충분한 공간을 둡니다. 일부 언어에서는 다른 언어와 비교하여 구에 50-75%의 공간이 더 필요합니다.
 
@@ -79,9 +79,9 @@ ms.locfileid: "59310540"
 
 ## <a name="globalization-best-practices-for-aspnet-applications"></a>ASP.NET 애플리케이션에 대한 세계화 모범 사례
 
-1. 응용 프로그램에서 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> 및 <xref:System.Globalization.CultureInfo.CurrentCulture%2A> 속성을 명시적으로 설정합니다. 기본값을 사용하지 마십시오.
+1. 애플리케이션에서 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> 및 <xref:System.Globalization.CultureInfo.CurrentCulture%2A> 속성을 명시적으로 설정합니다. 기본값을 사용하지 마십시오.
 
-2. ASP.NET 응용 프로그램은 관리되는 응용 프로그램이므로 다른 응용 프로그램의 경우와 같은 클래스를 사용하여 문화권 관련 정보를 검색, 표시 및 조작할 수 있습니다.
+2. ASP.NET 애플리케이션은 관리되는 애플리케이션이므로 다른 애플리케이션의 경우와 같은 클래스를 사용하여 문화권 관련 정보를 검색, 표시 및 조작할 수 있습니다.
 
 3. ASP.NET에 다음 세 가지 인코딩을 지정할 수 있습니다.
 
@@ -91,13 +91,13 @@ ms.locfileid: "59310540"
 
     - fileEncoding은 aspx, .asmx 및 .asax 파일 구문 분석의 기본 인코딩을 지정합니다.
 
-4. ASP.NET 응용 프로그램의 다음 세 위치에서 requestEncoding, responseEncoding, fileEncoding, culture 및 uiCulture 특성의 값을 지정합니다.
+4. ASP.NET 애플리케이션의 다음 세 위치에서 requestEncoding, responseEncoding, fileEncoding, culture 및 uiCulture 특성의 값을 지정합니다.
 
-    - Web.config 파일의 전역화 섹션에서. 이 파일은 ASP.NET 응용 프로그램에 대해 외부 파일입니다. 자세한 내용은 [\<globalization> 요소](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hy4kkhe0(v=vs.100))를 참조하세요.
+    - Web.config 파일의 전역화 섹션에서. 이 파일은 ASP.NET 애플리케이션에 대해 외부 파일입니다. 자세한 내용은 [\<globalization> 요소](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hy4kkhe0(v=vs.100))를 참조하세요.
 
-    - 페이지 지시문에서. 응용 프로그램이 페이지에 있는 경우 파일이 이미 읽혀진 것입니다. 따라서 너무 늦었으므로 fileEncoding 및 requestEncoding을 지정할 수 없습니다. uiCulture, Culture 및 responseEncoding만 페이지 지시문에 지정할 수 있습니다.
+    - 페이지 지시문에서. 애플리케이션이 페이지에 있는 경우 파일이 이미 읽혀진 것입니다. 따라서 너무 늦었으므로 fileEncoding 및 requestEncoding을 지정할 수 없습니다. uiCulture, Culture 및 responseEncoding만 페이지 지시문에 지정할 수 있습니다.
 
-    - 프로그램 방식으로 응용 프로그램 코드에서. 이 설정은 요청마다 다를 수 있습니다. 페이지 지시문의 경우와 마찬가지로 해당 응용 프로그램 코드에 도달되면 이미 너무 늦었으므로 fileEncoding 및 requestEncoding을 지정할 수 없습니다. uiCulture, Culture 및 responseEncoding만 응용 프로그램 코드에 지정할 수 있습니다.
+    - 프로그램 방식으로 애플리케이션 코드에서. 이 설정은 요청마다 다를 수 있습니다. 페이지 지시문의 경우와 마찬가지로 해당 애플리케이션 코드에 도달되면 이미 너무 늦었으므로 fileEncoding 및 requestEncoding을 지정할 수 없습니다. uiCulture, Culture 및 responseEncoding만 애플리케이션 코드에 지정할 수 있습니다.
 
 5. uiCulture 값은 브라우저 허용 언어로 설정될 수 있습니다.
 

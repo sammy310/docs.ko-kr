@@ -37,7 +37,7 @@ WCF 메시지에서 MSMQ 메시지를 변환 하려면 MSMQ 통합 바인딩을 
 
 4. 구성된 바인딩을 사용하는 <xref:System.ServiceModel.ServiceHost> 개체를 인스턴스화합니다.  
 
-### <a name="to-create-a-wcf-client-that-sends-messages-to-a-msmq-receiver-application"></a>MSMQ 수신자 응용 프로그램에 메시지를 보내는 WCF 클라이언트를 만들려면  
+### <a name="to-create-a-wcf-client-that-sends-messages-to-a-msmq-receiver-application"></a>MSMQ 수신자 애플리케이션에 메시지를 보내는 WCF 클라이언트를 만들려면  
   
 1. 다음 예제 코드와 같이 대기 중인 MSMQ 수신자에 게 메시지를 보냅니다는 WCF 클라이언트에 대 한 서비스 계약을 정의 하는 인터페이스를 정의 합니다.  
   

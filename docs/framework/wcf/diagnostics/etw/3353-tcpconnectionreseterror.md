@@ -17,7 +17,7 @@ ms.locfileid: "61962190"
 |ID|3353|  
 |키워드|TCP|  
 |수준|경고|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
 ## <a name="description"></a>설명  
  이 이벤트는 TCP 연결 재설정 오류 시에 내보내집니다.  

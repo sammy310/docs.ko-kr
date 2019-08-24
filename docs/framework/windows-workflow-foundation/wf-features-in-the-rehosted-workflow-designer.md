@@ -2,12 +2,12 @@
 title: 재호스팅된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대한 지원
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 69c3577c82c7a0899fb94461255721f4b2ab3ecd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 20623c8d2f6bf66d2668fd07b0acae67865a3235
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913700"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987237"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>재호스팅된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대한 지원
 .NET Framework 4.5의 WF (Windows Workflow Foundation)에는 여러 가지 새로운 기능이 도입 되었습니다. 여기에는 Workflow designer 환경의 몇 가지 향상 된 기능이 포함 되어 있습니다. 이 항목에서는 이러한 기능 중 재호스트된 디자이너에서 지원되는 기능과 현재 지원되지 않는 기능을 자세히 설명합니다.
@@ -22,7 +22,7 @@ ms.locfileid: "69913700"
  .NET Framework 4.5 이전에는 워크플로의 모든 식을 Visual Basic 으로만 작성할 수 있었습니다. .NET Framework 4.5에서 Visual Basic 식은 Visual Basic를 사용 하 여 만든 프로젝트에만 사용 됩니다. Visual C# 프로젝트는 이제 식에 C#을 사용합니다. Visual Studio 2012에서 워크플로를 제작할 때 문법 강조 표시 C# 및 intellisense와 같은 기능을 제공 하는 기능을 갖춘 식 편집기가 제공 됩니다. 이전 버전에서 만들어졌으며 Visual Basic 식을 사용하는 C# 워크플로 프로젝트는 계속 작동합니다.
 
 > [!WARNING]
->  재호스트된 디자이너에서는 C# 식이 지원되지 않습니다.
+> 재호스트된 디자이너에서는 C# 식이 지원되지 않습니다.
 
 ## <a name="new-designer-capabilities"></a>새로운 디자이너 기능
 
@@ -30,7 +30,7 @@ ms.locfileid: "69913700"
  .NET Framework 4.5에 도입 된 [빠른 찾기](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) 및 [파일에서 찾기](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) 기능은 재 호스트 된 디자이너에서 지원 되지 않습니다. `Toolbox` 검색은 재호스트된 디자이너에서 지원됩니다. 이러한 기능에 대 한 자세한 내용은 [디자이너 검색](whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch)을 참조 하세요.
 
 > [!WARNING]
->  [빠른 찾기](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) 및 [파일에서 찾기](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) 는 재 호스트 된 디자이너에서 지원 되지 않습니다.
+> [빠른 찾기](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) 및 [파일에서 찾기](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) 는 재 호스트 된 디자이너에서 지원 되지 않습니다.
 
 ### <a name="delete-context-menu-item-in-variable-and-argument-designer"></a>변수 및 인수 디자이너에서 상황에 맞는 메뉴에 표시되는 삭제 항목
  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서는 디자이너에서 키보드로만 변수 및 인수를 삭제할 수 있었습니다. .NET Framework 4.5부터 변수 및 인수는 상황에 맞는 메뉴를 사용 하 여 삭제할 수 있습니다. 이 기능은 재호스트된 디자이너에서 지원됩니다.
@@ -103,7 +103,7 @@ ms.locfileid: "69913700"
  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서는 워크플로 프로젝트를 빌드하는 동안 워크플로 유효성 검사 오류가 빌드 오류로 간주되지 않았습니다. 따라서 워크플로 유효성 검사 오류가 있더라도 워크플로 프로젝트를 성공적으로 빌드할 수 있었습니다. .NET Framework 4.5에서 워크플로 유효성 검사 오류로 인해 빌드가 실패 합니다.
 
 > [!WARNING]
->  빌드 타임 유효성 검사는 재호스트된 디자이너에서 지원되지 않습니다.  
+> 빌드 타임 유효성 검사는 재호스트된 디자이너에서 지원되지 않습니다.  
   
 ### <a name="design-time-background-validation"></a>디자인 타임 백그라운드 유효성 검사  
  에서 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]워크플로는 포그라운드 프로세스로 유효성을 검사 했기 때문에 복잡 하거나 시간이 많이 걸리는 유효성 검사 프로세스 중에 UI를 차단할 수도 있습니다. 이제는 백그라운드 스레드에서 워크플로 유효성 검사를 수행하므로 UI가 차단되지 않습니다.  
@@ -142,4 +142,4 @@ ms.locfileid: "69913700"
  개발자는 계약 중심 워크플로 개발 도구를 사용 하 여 코드에서 계약을 먼저 디자인 한 다음 Visual Studio에서 몇 번의 클릭으로 각 작업을 나타내는 도구 상자에 활동 템플릿을 자동으로 생성할 수 있습니다. 그런 다음 이러한 활동은 계약에서 정의한 작업을 구현하는 워크플로를 만드는 데 사용됩니다. 워크플로 디자이너는 워크플로 서비스의 유효성을 검사하여 이러한 작업을 구현하고 워크플로의 서명이 계약 서명과 일치하도록 합니다. 개발자는 워크플로 서비스와 구현된 계약 컬렉션을 연결할 수도 있습니다. 계약 중심 워크플로 서비스 개발 [에 대 한 자세한 내용은 방법: 기존 서비스 계약](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)을 사용 하는 워크플로 서비스를 만듭니다.  
   
 > [!WARNING]
->  계약 중심 워크플로 개발은 워크플로 디자이너에서 지원되지 않습니다.
+> 계약 중심 워크플로 개발은 워크플로 디자이너에서 지원되지 않습니다.

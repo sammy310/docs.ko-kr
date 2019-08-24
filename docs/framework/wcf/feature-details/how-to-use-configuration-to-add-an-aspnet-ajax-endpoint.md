@@ -88,7 +88,7 @@ Windows Communication Foundation (WCF)를 사용 하면 클라이언트 웹 사�
   
 ### <a name="to-host-the-service-in-iis"></a>IIS에서 서비스를 호스팅하려면  
   
-1. IIS에서 서비스를 호스팅하려면 응용 프로그램에서 .svc 확장명을 가진 새 파일 서비스를 만듭니다. 적절 한 추가 하 여이 파일을 편집 [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) 서비스에 대 한 지시문 정보입니다. 예를 들어 `CalculatorService` 샘플에 대한 서비스 파일의 내용에는 다음 정보가 포함되어 있습니다.  
+1. IIS에서 서비스를 호스팅하려면 애플리케이션에서 .svc 확장명을 가진 새 파일 서비스를 만듭니다. 적절 한 추가 하 여이 파일을 편집 [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) 서비스에 대 한 지시문 정보입니다. 예를 들어 `CalculatorService` 샘플에 대한 서비스 파일의 내용에는 다음 정보가 포함되어 있습니다.  
   
     ```  
     <%@ServiceHost   

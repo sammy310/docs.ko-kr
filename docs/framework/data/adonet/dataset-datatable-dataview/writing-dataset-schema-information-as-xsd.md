@@ -1,5 +1,5 @@
 ---
-title: 데이터 집합 스키마 정보를 XSD로 작성
+title: 데이터 세트 스키마 정보를 XSD로 작성
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,7 +12,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61607051"
 ---
-# <a name="writing-dataset-schema-information-as-xsd"></a>데이터 집합 스키마 정보를 XSD로 작성
+# <a name="writing-dataset-schema-information-as-xsd"></a>데이터 세트 스키마 정보를 XSD로 작성
 <xref:System.Data.DataSet>의 스키마를 XSD(XML 스키마 정의 언어) 스키마로 작성하여, 작성한 스키마를 관련된 데이터와 함께 또는 데이터 없이 XML 문서에서 전송할 수 있습니다. XML 스키마 파일, 스트림, 쓸 수는 <xref:System.Xml.XmlWriter>, 문자열 또는 강력한 형식의 생성 하는 데 유용 **데이터 집합**합니다. 에 대 한 자세한 내용은 강력한 **데이터 집합** 개체를 참조 하십시오 [형식화 된 데이터 집합](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)합니다.  
   
  XML 스키마에서 테이블의 열을 표현 하는 방법을 지정할 수 있습니다를 사용 하 여는 **ColumnMapping** 의 속성을 <xref:System.Data.DataColumn> 개체입니다. 자세한 내용은 "열을 XML 요소, 특성 및 텍스트에 매핑"를 참조 하세요 [쓰기 데이터 집합 콘텐츠를 XML 데이터로](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)합니다.  

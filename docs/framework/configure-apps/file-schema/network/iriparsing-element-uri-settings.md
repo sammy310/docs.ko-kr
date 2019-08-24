@@ -61,7 +61,7 @@ IRI(International Resource Identifier) 구문 분석이 <xref:System.Uri>에 적
  IRI 구분 분석 (iriParsing 사용 = `true`) 문자 검사가 최신 IRI 규칙 RFC 3987 및 정규화를 수행 합니다. 기본값 `false` 은 이며 rfc 2396 및 rfc 3986 (IPv6 리터럴의 경우)에 따라 정규화 및 문자 검사를 수행 합니다.  
   
 ### <a name="configuration-files"></a>구성 파일  
- 이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
+ 이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
   

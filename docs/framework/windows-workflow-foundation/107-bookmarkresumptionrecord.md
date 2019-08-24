@@ -17,7 +17,7 @@ ms.locfileid: "62052848"
 |ID|107|  
 |키워드|EndToEndMonitoring, 문제 해결, HealthMonitoring, WFTracking|  
 |수준|정보|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
 ## <a name="description"></a>설명  
  워크플로 인스턴스가 BookmarkResumptionRecord를 내보내면 ETW 추적 참가자가 이 이벤트를 내보냅니다.  

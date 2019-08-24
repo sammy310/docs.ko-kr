@@ -12,7 +12,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61947916"
 ---
 # <a name="getrawinputdevices"></a>GetRawInputDevices
-PresentationHost.exe가 호스트 응용 프로그램과 관련된 원시 입력 장치(휴먼 인터페이스 장치)를 검색할 수 있게 합니다.  
+PresentationHost.exe가 호스트 애플리케이션과 관련된 원시 입력 디바이스(휴먼 인터페이스 디바이스)를 검색할 수 있게 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -33,9 +33,9 @@ HRESULT GetRawInputDevices( [out] IEnumRAWINPUTDEVICE **ppEnum );
  E_NOTIMPL  
   
 ## <a name="remarks"></a>설명  
- 원시 입력 장치는 키보드, 마우스 및 리모콘과 같은 덜 일반적인 장치를 포함하는 입력 장치 집합입니다.  
+ 원시 입력 디바이스는 키보드, 마우스 및 리모콘과 같은 덜 일반적인 디바이스를 포함하는 입력 디바이스 집합입니다.  
   
- 원시 입력 장치 목록이 검색된 후 PresentationHost.exe는 WM_INPUT 알림 메시지를 받을 장치를 등록합니다.  
+ 원시 입력 디바이스 목록이 검색된 후 PresentationHost.exe는 WM_INPUT 알림 메시지를 받을 디바이스를 등록합니다.  
   
 ## <a name="see-also"></a>참고자료
 

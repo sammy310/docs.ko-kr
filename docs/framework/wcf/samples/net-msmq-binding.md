@@ -35,4 +35,4 @@ ms.locfileid: "61972382"
  HTTP를 통해 MSMQ(메시지 큐)를 사용하여 큐에 있는 트랜잭션된 통신을 수행하는 방법을 보여 줍니다.  
   
  [메시지 큐에 대한 메시지 보안](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
- MSMQ를 통해 서버의 X.509v3 인증서를 사용하는 서버 인증을 요구하고 클라이언트에 대해 X.509v3 인증서 인증과 함께 WS-Security를 사용하는 응용 프로그램을 구현하는 방법을 보여 줍니다.
+ MSMQ를 통해 서버의 X.509v3 인증서를 사용하는 서버 인증을 요구하고 클라이언트에 대해 X.509v3 인증서 인증과 함께 WS-Security를 사용하는 애플리케이션을 구현하는 방법을 보여 줍니다.

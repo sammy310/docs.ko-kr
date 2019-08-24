@@ -34,7 +34,7 @@ Windows Forms에는 관련된 Windows 메시지를 처리하는 동안 발생한
  대부분의 사용자 입력 이벤트를 처리하고 각 이벤트에 대한 정보를 보고하는 코드 예제를 제공합니다.  
   
  [Windows Forms에서 사용자 입력 유효성 검사](user-input-validation-in-windows-forms.md)  
- Windows Forms 응용 프로그램에서 사용자 입력의 유효성을 검사하는 방법을 설명합니다.  
+ Windows Forms 애플리케이션에서 사용자 입력의 유효성을 검사하는 방법을 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
  도 참조 하세요 [Windows Forms에서 이벤트 처리기 만들기](creating-event-handlers-in-windows-forms.md)합니다.

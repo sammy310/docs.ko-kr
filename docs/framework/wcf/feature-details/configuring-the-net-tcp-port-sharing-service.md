@@ -2,12 +2,12 @@
 title: Net.TCP Port Sharing Service 구성
 ms.date: 03/30/2017
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
-ms.openlocfilehash: c5dc80391ec5f655fadd31c59eef76015b9965d8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 70ebaeb8b41b0191e0352b5ef6a4b1913994100c
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949611"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988222"
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>Net.TCP Port Sharing Service 구성
 Net.TCP 전송을 사용하는 자체 호스팅 서비스는 네트워크 통신에 사용되는 기본 TCP 소켓의 동작을 제어하는 `ListenBacklog` 및 `MaxPendingAccepts` 등 여러 고급 설정을 제어할 수 있습니다. 그러나 전송 바인딩이 기본적으로 활성화되는 포트 공유를 사용할 수 없도록 설정한 경우 각 소켓에 대한 이러한 설정은 바인딩 수준에서만 적용됩니다.  
@@ -59,7 +59,7 @@ Net.TCP 전송을 사용하는 자체 호스팅 서비스는 네트워크 통신
 > UAC(사용자 계정 컨트롤)가 활성화된 상태의 [!INCLUDE[wv](../../../../includes/wv-md.md)] 시스템에서 로컬 사용자는 해당 계정이 Administrators 그룹의 구성원인 경우에도 상승된 권한이 필요합니다. 이러한 사용자가 권한 상승 없이 포트 공유 서비스를 사용할 수 있게 하려면 사용자의 sid (또는 사용자가 구성원 인 그룹의 sid)가 smsvchost.exe의 \<allowaccounts > 섹션에 명시적으로 추가 되어야 합니다.  
   
 > [!WARNING]
->  기본 SMSvcHost.exe.config 파일은 사용자 지정 `etwProviderId`를 지정하여 SMSvcHost.exe 추적이 서비스 추적을 방해하지 않도록 합니다.  
+> 기본 SMSvcHost.exe.config 파일은 사용자 지정 `etwProviderId`를 지정하여 SMSvcHost.exe 추적이 서비스 추적을 방해하지 않도록 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

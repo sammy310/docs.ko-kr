@@ -3,12 +3,12 @@ title: <cookieHandler>
 ms.date: 03/30/2017
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
 author: BrucePerlerMS
-ms.openlocfilehash: 6c62100b2445ae10a83ebd9e7d154a6e2aa14e0b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 1c044f7346fabc77d7744f42c5bfd3d86d72402e
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942795"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988337"
 ---
 # <a name="cookiehandler"></a>\<cookieHandler>
 (SAM <xref:System.IdentityModel.Services.CookieHandler> )에서 <xref:System.IdentityModel.Services.SessionAuthenticationModule> 쿠키를 읽고 쓰는 데 사용 하는를 구성 합니다.  
@@ -53,14 +53,14 @@ ms.locfileid: "69942795"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<chunkedCookieHandler>](chunkedcookiehandler.md)|를 <xref:System.IdentityModel.Services.ChunkedCookieHandler>구성 합니다. `mode` 요소의 특성이`<cookieHandler>` "Default" 또는 "청크 분할" 인 경우에만이 요소가 있을 수 있습니다.|  
 |[\<customCookieHandler>](customcookiehandler.md)|사용자 지정 쿠키 처리기 형식을 설정 합니다. `mode` 요소의 특성이`<cookieHandler>` "Custom" 이면이 요소가 있어야 합니다. `mode` 특성의 다른 값에 대해서는 사용할 수 없습니다. 사용자 지정 형식은 <xref:System.IdentityModel.Services.CookieHandler> 클래스에서 파생 되어야 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[\<federationConfiguration>](federationconfiguration.md)|<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (Wsfam) <xref:System.IdentityModel.Services.SessionAuthenticationModule> 및 (SAM)을 구성 하는 설정을 포함 합니다.|  
   
@@ -77,7 +77,7 @@ ms.locfileid: "69942795"
  다음 XML에서는 요소를 `<cookieHandler>` 보여 줍니다. 이 예제에서는 `mode` 특성을 지정 하지 않았기 때문에 SAM에서 기본 쿠키 처리기를 사용 합니다. <xref:System.IdentityModel.Services.ChunkedCookieHandler> 클래스의 인스턴스입니다. `<chunkedCookieHandler>` 자식 요소가 지정 되지 않았기 때문에 기본 청크 크기가 사용 됩니다. `requireSsl` 특성이 설정`false`되었으므로 HTTPS가 필요 하지 않습니다.  
   
 > [!WARNING]
->  이 예제에서는 세션 쿠키를 작성 하는 데 HTTPS가 필요 하지 않습니다. 이는 `requireSsl` `<cookieHandler>` 요소의 특성이로 `false`설정 되어 있기 때문입니다. 이 설정은 보안 위험을 초래할 수 있으므로 대부분의 프로덕션 환경에는 권장 되지 않습니다.  
+> 이 예제에서는 세션 쿠키를 작성 하는 데 HTTPS가 필요 하지 않습니다. 이는 `requireSsl` `<cookieHandler>` 요소의 특성이로 `false`설정 되어 있기 때문입니다. 이 설정은 보안 위험을 초래할 수 있으므로 대부분의 프로덕션 환경에는 권장 되지 않습니다.  
   
 ```xml  
 <cookieHandler requireSsl="false" />  

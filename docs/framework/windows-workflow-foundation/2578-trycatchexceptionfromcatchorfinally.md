@@ -17,7 +17,7 @@ ms.locfileid: "61755612"
 |ID|2578|  
 |키워드|WFActivities|  
 |수준|경고|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  Catch 또는 Finally 작업에서 예외가 throw되었음을 나타냅니다.  

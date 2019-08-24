@@ -17,7 +17,7 @@ ms.locfileid: "61943224"
 |ID|3383|  
 |키워드|채널|  
 |수준|정보|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  이 이벤트는 ReliableSessionChannel에 오류가 발생할 경우 내보내집니다.  

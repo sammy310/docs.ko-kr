@@ -30,7 +30,7 @@ ms.locfileid: "68971963"
 4. 오류 조건을 클라이언트에 전달하는 계약의 모든 작업에 대해 2단계와 3단계를 반복합니다.
 
 ## <a name="implementing-an-operation-to-return-a-specified-soap-fault"></a>지정한 SOAP 오류를 반환하는 작업 구현
- 앞의 절차와 같이 특정 SOAP 오류를 반환하여 오류 조건을 호출 응용 프로그램에 전달할 수 있도록 작업에서 지정하고 나면 다음 단계로 해당 사양을 구현합니다.
+ 앞의 절차와 같이 특정 SOAP 오류를 반환하여 오류 조건을 호출 애플리케이션에 전달할 수 있도록 작업에서 지정하고 나면 다음 단계로 해당 사양을 구현합니다.
 
 ### <a name="throw-the-specified-soap-fault-in-the-operation"></a>작업에서 지정한 SOAP 오류 throw
 

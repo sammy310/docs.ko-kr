@@ -11,12 +11,12 @@ ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: e3fb6e42270cc0a530646b656470ec99fcfc7f1f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 5e5112aa0b025648ce68a93f0f3da026ec99fe89
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666242"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987142"
 ---
 # <a name="walkthrough-create-new-wpf-content-on-windows-forms-at-design-time"></a>연습: 디자인 타임에 Windows Forms에서 새 WPF 콘텐츠 만들기
 
@@ -28,7 +28,7 @@ ms.locfileid: "69666242"
 
 ## <a name="create-the-project"></a>프로젝트를 만듭니다.
 
-첫 번째 단계에서는 Windows Forms 프로젝트를 만듭니다. Visual Studio를 열고 Visual Basic 또는 시각적 개체 C# `HostingWpf`에 새 **Windows Forms 앱 (.NET Framework)** 프로젝트를 만듭니다.
+Visual Studio를 열고 Visual Basic 또는 시각적 개체 C# `HostingWpf`에 새 **Windows Forms 앱 (.NET Framework)** 프로젝트를 만듭니다.
 
 > [!NOTE]
 > WPF 콘텐츠를 호스트하는 경우 C# 및 Visual Basic 프로젝트만 지원됩니다.

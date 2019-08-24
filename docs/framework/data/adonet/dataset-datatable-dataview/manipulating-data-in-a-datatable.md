@@ -32,7 +32,7 @@ ms.locfileid: "61785426"
  테이블에서 행을 삭제하는 방법을 설명합니다.  
   
  [행 오류 정보](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)  
- 응용 프로그램 내의 데이터에서 발생하는 문제의 해결에 유용하도록 행마다 오류 정보를 삽입하는 방법을 설명합니다.  
+ 애플리케이션 내의 데이터에서 발생하는 문제의 해결에 유용하도록 행마다 오류 정보를 삽입하는 방법을 설명합니다.  
   
  [AcceptChanges 및 RejectChanges](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)  
  행의 변경된 내용을 승인하거나 거부하는 방법을 설명합니다.  
