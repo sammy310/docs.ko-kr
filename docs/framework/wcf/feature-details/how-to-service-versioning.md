@@ -2,22 +2,22 @@
 title: '방법: 서비스 버전 관리'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: 4e2f5cb01ac2c7f49bf93538b3c4b1f0fb4fab2b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 5ce9e7fc896f1ebc46dd25777fc629532339cbe2
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654535"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988702"
 ---
 # <a name="how-to-service-versioning"></a>방법: 서비스 버전 관리
 이 항목에서는 메시지를 동일한 서비스의 여러 버전에 라우트하는 라우팅 구성을 만드는 데 필요한 기본 단계에 대해 간략하게 설명합니다. 이 예제에서 메시지는 계산기 서비스의 서로 다른 두 버전인 `roundingCalc`(v1)와 `regularCalc`(v2)에 라우트됩니다. 두 구현 모두 같은 연산을 지원하지만 이전 버전인 `roundingCalc` 서비스에서는 반환 전에 가장 가까운 정수 값으로 모든 계산을 반올림합니다. 클라이언트 애플리케이션에서는 새 버전인 `regularCalc` 서비스를 사용할지 여부를 나타낼 수 있어야 합니다.  
   
 > [!WARNING]
->  메시지를 특정 서비스 버전에 라우트하려면 라우팅 서비스에서 메시지 내용을 기반으로 메시지 대상을 확인할 수 있어야 합니다. 아래에서 설명하는 방법에서는 클라이언트가 메시지 헤더에 정보를 삽입하여 버전을 지정합니다. 그러나 클라이언트가 추가 데이터를 전달하지 않아도 서비스 버전을 관리할 수 있는 방법이 있습니다. 예를 들어 최신 또는 가장 호환성이 뛰어난 버전의 서비스에 메시지를 라우트할 수 있거나 라우터에서 표준 SOAP 봉투의 일부를 사용할 수 있습니다.  
+> 메시지를 특정 서비스 버전에 라우트하려면 라우팅 서비스에서 메시지 내용을 기반으로 메시지 대상을 확인할 수 있어야 합니다. 아래에서 설명하는 방법에서는 클라이언트가 메시지 헤더에 정보를 삽입하여 버전을 지정합니다. 그러나 클라이언트가 추가 데이터를 전달하지 않아도 서비스 버전을 관리할 수 있는 방법이 있습니다. 예를 들어 최신 또는 가장 호환성이 뛰어난 버전의 서비스에 메시지를 라우트할 수 있거나 라우터에서 표준 SOAP 봉투의 일부를 사용할 수 있습니다.  
   
  두 서비스에 의해 노출되는 연산은 다음과 같습니다.  
   
-- Add  
+- 추가  
   
 - 빼기  
   
@@ -69,7 +69,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </client>  
     ```  
   
-2. 대상 엔드포인트에 메시지를 라우트하는 데 사용되는 필터를 정의합니다.  예를 들어 XPath 필터는 메시지를 라우팅해야 하는 버전을 확인 하려면 "CalcVer" 사용자 지정 헤더의 값을 검색할 사용 됩니다. XPath 필터는 "CalcVer" 헤더가 없는 메시지를 검색 하려면도 사용 됩니다. 다음 예제에서는 필요한 필터 및 네임스페이스 테이블을 정의합니다.  
+2. 대상 엔드포인트에 메시지를 라우트하는 데 사용되는 필터를 정의합니다.  이 예에서는 XPath 필터를 사용 하 여 "CalcVer" 사용자 지정 헤더의 값을 검색 하 여 메시지를 라우팅해야 하는 버전을 결정 합니다. XPath 필터는 "CalcVer" 헤더를 포함 하지 않는 메시지를 검색 하는 데도 사용 됩니다. 다음 예제에서는 필요한 필터 및 네임스페이스 테이블을 정의합니다.  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -94,9 +94,9 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
     > [!NOTE]
-    > S12 네임 스페이스 접두사를 네임 스페이스 테이블에는 기본적으로 정의 되 고 네임 스페이스를 나타내는 `http://www.w3.org/2003/05/soap-envelope`합니다.
+    > S 12 네임 스페이스 접두사는 네임 스페이스 테이블에서 기본적으로 정의 되며 네임 스페이스 `http://www.w3.org/2003/05/soap-envelope`를 나타냅니다.
   
-3. 각 엔드포인트를 클라이언트 엔드포인트와 연결하는 필터 테이블을 정의합니다. 값이 1 인 "CalcVer" 헤더를 포함 하는 메시지를 regularCalc 서비스에 보내집니다. 값이 2이면 메시지가 roundingCalc 서비스에 보내집니다. 헤더가 없으면 메시지가 regularCalc에 라우트됩니다.  
+3. 각 엔드포인트를 클라이언트 엔드포인트와 연결하는 필터 테이블을 정의합니다. 메시지에 값이 1 인 "CalcVer" 헤더가 포함 되어 있으면 regularCalc 서비스로 전송 됩니다. 값이 2이면 메시지가 roundingCalc 서비스에 보내집니다. 헤더가 없으면 메시지가 regularCalc에 라우트됩니다.  
   
      다음 예제에서는 필터 테이블을 정의하고 앞에서 정의한 필터를 추가합니다.  
   
@@ -117,7 +117,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4. 필터 테이블에 포함된 필터에 대해 들어오는 메시지를 평가하려면 라우팅 동작을 사용하여 필터 테이블을 서비스 엔드포인트와 연결해야 합니다. 다음 예제에서는 연결을 보여 줍니다. `filterTable1` 서비스 끝점을 사용 하 여:  
+4. 필터 테이블에 포함된 필터에 대해 들어오는 메시지를 평가하려면 라우팅 동작을 사용하여 필터 테이블을 서비스 엔드포인트와 연결해야 합니다. 다음 예제에서는 서비스 끝점과 `filterTable1` 연결 하는 방법을 보여 줍니다.  
   
     ```xml  
     <behaviors>  
