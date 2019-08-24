@@ -1,5 +1,5 @@
 ---
-title: 형식화된 데이터 집합에 주석 지정
+title: 형식화된 데이터 세트에 주석 지정
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,7 +12,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62034512"
 ---
-# <a name="annotating-typed-datasets"></a>형식화된 데이터 집합에 주석 지정
+# <a name="annotating-typed-datasets"></a>형식화된 데이터 세트에 주석 지정
 주석을 사용하면 원본으로 사용하는 스키마를 수정하지 않고 형식화된 <xref:System.Data.DataSet>의 요소 이름을 수정할 수 있습니다. 기본 스키마의 요소 이름 수정 형식화 된 없었다는 **데이터 집합** 수행 하지는 데이터 원본에 없는 뿐만 아니라 데이터 원본에 없는 개체에 대 한 참조를 손실 하는 개체를 가리킵니다.  
   
  주석을 사용 하면 사용자 지정할 수 있습니다 개체의 이름을 형식화 된 **데이터 집합** 더 의미 있는 이름을 사용 하 여 보다 읽기 쉬운 코드와 형식화 된 있도록 **데이터 집합** 그대로 유지 하면서 사용 하도록 클라이언트를 더 쉽게 기본 스키마를 그대로 유지 됩니다. 에 대 한 다음 스키마 요소 예를 들어 합니다 **고객** 목차를 **Northwind** 데이터베이스를 **DataRow** 의 개체 이름  **CustomersRow** 와 <xref:System.Data.DataRowCollection> 라는 **고객**합니다.  

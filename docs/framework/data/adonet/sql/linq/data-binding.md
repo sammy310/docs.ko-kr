@@ -108,7 +108,7 @@ System.Windows.Forms.BindingSource를 사용 하 고 BindingSource.DataMember �
 
 ## <a name="troubleshooting"></a>문제 해결
 
-이 단원에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 데이터 바인딩 응용 프로그램의 문제를 해결하는 데 도움이 되는 몇 가지 항목을 설명합니다.
+이 단원에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 데이터 바인딩 애플리케이션의 문제를 해결하는 데 도움이 되는 몇 가지 항목을 설명합니다.
 
 - 속성을 사용해야 합니다. 필드만 사용하는 것으로는 충분하지 않습니다. Windows Forms에는 이러한 사용법이 필요합니다.
 
