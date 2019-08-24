@@ -13,7 +13,7 @@ ms.lasthandoff: 04/28/2019
 ms.locfileid: "64619612"
 ---
 # <a name="how-to-create-a-custom-claim"></a>방법: 사용자 지정 클레임 만들기
-Windows Communication Foundation (WCF)에서 Id 모델 인프라를 만들기 위한 기본 제공 클레임 형식 및 도우미 함수를 사용 하 여 권한 집합을 제공 <xref:System.IdentityModel.Claims.Claim> 해당 형식과 권한 인스턴스. 이러한 기본 제공 클레임은 기본적으로 지 원하는 WCF 클라이언트 자격 증명 형식에 있는 정보를 모델링 설계 되었습니다. 일반적으로 기본 제공 클레임으로 충분하지만 일부 응용 프로그램에는 사용자 지정 클레임이 필요할 수 있습니다. 클레임은 클레임 형식, 클레임이 적용되는 리소스 및 해당 리소스에 대해 어설션되는 권한으로 구성됩니다. 이 항목에서는 사용자 지정 클레임을 만드는 방법에 대해 설명합니다.  
+Windows Communication Foundation (WCF)에서 Id 모델 인프라를 만들기 위한 기본 제공 클레임 형식 및 도우미 함수를 사용 하 여 권한 집합을 제공 <xref:System.IdentityModel.Claims.Claim> 해당 형식과 권한 인스턴스. 이러한 기본 제공 클레임은 기본적으로 지 원하는 WCF 클라이언트 자격 증명 형식에 있는 정보를 모델링 설계 되었습니다. 일반적으로 기본 제공 클레임으로 충분하지만 일부 애플리케이션에는 사용자 지정 클레임이 필요할 수 있습니다. 클레임은 클레임 형식, 클레임이 적용되는 리소스 및 해당 리소스에 대해 어설션되는 권한으로 구성됩니다. 이 항목에서는 사용자 지정 클레임을 만드는 방법에 대해 설명합니다.  
   
 ### <a name="to-create-a-custom-claim-that-is-based-on-a-primitive-data-type"></a>기본 데이터 형식을 기반으로 사용자 지정 클레임을 만들려면  
   

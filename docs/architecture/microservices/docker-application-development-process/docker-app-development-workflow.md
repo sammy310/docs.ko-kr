@@ -33,7 +33,7 @@ ms.locfileid: "68674820"
 
 이 섹션에서는 전체 프로세스를 자세히 설명하고 모든 주요 단계는 Visual Studio 환경을 중심으로 설명합니다.
 
-편집기/CLI 개발 접근 방식을 사용하는 경우(예: macOS 또는 Windows에서 Visual Studio Code와 Docker CLI 사용) 일반적으로 Visual Studio를 사용할 때보다 모든 단계를 더 자세히 알아야 합니다. CLI 환경에서 작업하는 방법에 대한 자세한 내용은 전자책 [컨테이너화된 Docker 애플리케이션 수명 주기와 Microsoft 플랫폼 및 도구](https://aka.ms/dockerlifecycleebook/)를 참조하세요.
+편집기/CLI 개발 접근 방식을 사용하는 경우(예: macOS 또는 Windows에서 Visual Studio Code와 Docker CLI 사용) 일반적으로 Visual Studio를 사용할 때보다 모든 단계를 더 자세히 알아야 합니다. CLI 환경에서 작업하는 방법에 대한 자세한 내용은 eBook [컨테이너화된 Docker 애플리케이션 수명 주기와 Microsoft 플랫폼 및 도구](https://aka.ms/dockerlifecycleebook/)를 참조하세요.
 
 Visual Studio 2017을 사용하는 경우 이러한 단계의 상당 부분이 자동으로 처리되므로 생산성이 대폭 향상됩니다. Visual Studio 2017을 사용하고 다중 컨테이너 애플리케이션을 대상으로 하는 경우에 특히 그렇습니다. 예를 들어 마우스 클릭 한 번이면 Visual Studio가 애플리케이션의 구성을 사용하여 Dockerfile 및 docker-compose.yml 파일을 프로젝트에 추가합니다. Visual Studio에서 애플리케이션을 실행하면 Visual Studio가 Docker 이미지를 작성하고 Docker에서 바로 다중 컨테이너 애플리케이션을 실행하며, 심지어 여러 컨테이너를 한꺼번에 디버깅할 수도 있습니다. 이러한 기능은 개발 속도를 향상합니다.
 

@@ -32,7 +32,7 @@ ms.locfileid: "62003108"
  이 샘플의 클라이언트는 일반 WCF 클라이언트는 서비스에서 아무 것도 가정 하지 않습니다. 서비스는 일반 WCF에서 가져온 것에 맞게 특별히 고안 된 따라서<xref:System.ServiceModel.ServiceHost> 구현 합니다. 결과적으로 클라이언트에는 서비스 계약만 필요합니다.  
   
 ## <a name="using-the-sample"></a>샘플 사용  
- 클라이언트 응용 프로그램을 직접 실행하면 다음과 같이 출력됩니다.  
+ 클라이언트 애플리케이션을 직접 실행하면 다음과 같이 출력됩니다.  
   
 ```Output  
 Client is talking to a request/reply WCF service.   

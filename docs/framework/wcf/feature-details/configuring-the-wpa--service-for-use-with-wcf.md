@@ -16,7 +16,7 @@ ms.locfileid: "67487000"
   
 - 사용할 네트워크 프로토콜 바인딩으로 WAS 사이트를 만들거나 새 프로토콜 바인딩을 기존 사이트에 추가합니다.  
   
-- 서비스를 호스팅할 응용 프로그램을 만들고 이 응용 프로그램에서 필요한 네트워크 프로토콜을 사용하도록 설정합니다.  
+- 서비스를 호스팅할 애플리케이션을 만들고 이 애플리케이션에서 필요한 네트워크 프로토콜을 사용하도록 설정합니다.  
   
 - HTTP가 아닌 끝점을 노출 하는 WCF 서비스를 빌드하십시오.  
   
@@ -45,8 +45,8 @@ appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInf
 </sites>  
 ```  
   
-## <a name="enabling-an-application-to-use-non-http-protocols"></a>HTTP가 아닌 프로토콜을 사용하도록 응용 프로그램 설정  
- 개별 네트워크 protocolsat 응용 프로그램 수준을 사용 하지 않도록 설정 하거나 설정할 수 있습니다. 다음 명령은 `Default Web Site`에서 실행되는 응용 프로그램에 대한 HTTP 및 net.tcp 프로토콜을 모두 사용하도록 설정하는 방법을 보여 줍니다.  
+## <a name="enabling-an-application-to-use-non-http-protocols"></a>HTTP가 아닌 프로토콜을 사용하도록 애플리케이션 설정  
+ 개별 네트워크 protocolsat 응용 프로그램 수준을 사용 하지 않도록 설정 하거나 설정할 수 있습니다. 다음 명령은 `Default Web Site`에서 실행되는 애플리케이션에 대한 HTTP 및 net.tcp 프로토콜을 모두 사용하도록 설정하는 방법을 보여 줍니다.  
   
 ```console  
 appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp  

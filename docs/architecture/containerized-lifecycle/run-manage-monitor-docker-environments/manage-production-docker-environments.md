@@ -17,7 +17,7 @@ ms.locfileid: "68673470"
 
 Container Service는 인기 있는 오픈 소스 컨테이너 클러스터링 및 오케스트레이션 솔루션을 신속하게 배포할 수 있습니다. Container Service는 Docker 이미지를 사용하여 애플리케이션 컨테이너를 완벽하게 이식할 수 있습니다. Container Service를 사용하면 Azure Resource Manager 템플릿 또는 Azure Portal에서 DC/OS(Mesosphere 및 Apache Mesos 기반) 및 Docker Swarm 클러스터를 배포하여 애플리케이션 규모를 컨테이너 수천, 심지어 수만 개로 확장할 수 있습니다.
 
-Azure Virtual Machine Scale Sets를 사용하여 이러한 클러스터를 배포하면 클러스터가 Azure 네트워킹 및 저장소 기능을 활용합니다. Container Service에 액세스하려면 Azure 구독이 필요합니다. Container Service를 사용하면 오케스트레이션 레이어 포함되는 애플리케이션 이식성을 유지하면서도 Azure의 엔터프라이즈급 기능을 활용할 수 있습니다.
+Azure Virtual Machine Scale Sets를 사용하여 이러한 클러스터를 배포하면 클러스터가 Azure 네트워킹 및 스토리지 기능을 활용합니다. Container Service에 액세스하려면 Azure 구독이 필요합니다. Container Service를 사용하면 오케스트레이션 레이어 포함되는 애플리케이션 이식성을 유지하면서도 Azure의 엔터프라이즈급 기능을 활용할 수 있습니다.
 
 표 6-1에는 오케스트레이터, 스케줄러 및 클러스터링 플랫폼과 관련된 일반적인 관리 도구가 나열되어 있습니다.
 

@@ -13,7 +13,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61902332"
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>방법: 사용자 지정 권한 부여 정책 만들기
-Id 모델 인프라에 Windows Communication Foundation (WCF) 클레임 기반 권한 부여 모델을 지원합니다. 클레임은 토큰에서 추출되어 사용자 지정 권한 부여 정책에 의해 선택적으로 처리된 다음,이후에 권한 부여를 결정하기 위해 검사할 수 있는 <xref:System.IdentityModel.Policy.AuthorizationContext>에 배치됩니다. 사용자 지정 정책은 들어오는 토큰을 응용 프로그램에서 필요로 하는 클레임으로 변형하는 데 사용할 수 있습니다. 이러한 방식으로 응용 프로그램 계층 수 영향을 받지 않도록 WCF가 지 원하는 다른 토큰 형식으로 제공 되는 서로 다른 클레임에 대 한 세부 정보에서. 이 항목에서는 사용자 지정 권한 부여 정책을 구현하는 방법과 이 정책을 서비스에 사용된 정책 컬렉션에 추가하는 방법에 대해 설명합니다.  
+Id 모델 인프라에 Windows Communication Foundation (WCF) 클레임 기반 권한 부여 모델을 지원합니다. 클레임은 토큰에서 추출되어 사용자 지정 권한 부여 정책에 의해 선택적으로 처리된 다음,이후에 권한 부여를 결정하기 위해 검사할 수 있는 <xref:System.IdentityModel.Policy.AuthorizationContext>에 배치됩니다. 사용자 지정 정책은 들어오는 토큰을 애플리케이션에서 필요로 하는 클레임으로 변형하는 데 사용할 수 있습니다. 이러한 방식으로 응용 프로그램 계층 수 영향을 받지 않도록 WCF가 지 원하는 다른 토큰 형식으로 제공 되는 서로 다른 클레임에 대 한 세부 정보에서. 이 항목에서는 사용자 지정 권한 부여 정책을 구현하는 방법과 이 정책을 서비스에 사용된 정책 컬렉션에 추가하는 방법에 대해 설명합니다.  
   
 ### <a name="to-implement-a-custom-authorization-policy"></a>사용자 지정 권한 부여 정책을 구현하려면  
   
@@ -21,7 +21,7 @@ Id 모델 인프라에 Windows Communication Foundation (WCF) 클레임 기반 �
   
 2. 클래스에 대해 생성자에서 고유 문자열을 생성하고 속성에 액세스할 때마다 해당 문자열을 반환하여 읽기 전용 <xref:System.IdentityModel.Policy.IAuthorizationComponent.Id%2A> 속성을 구현합니다.  
   
-3. 정책 발급자를 나타내는<xref:System.IdentityModel.Policy.IAuthorizationPolicy.Issuer%2A>를 반환하여 읽기 전용 <xref:System.IdentityModel.Claims.ClaimSet> 속성을 구현합니다. 이는 응용 프로그램을 나타내는 `ClaimSet`이거나 기본 제공된`ClaimSet`(예를 들면 정적 `ClaimSet` 속성에 의해 반환된 <xref:System.IdentityModel.Claims.ClaimSet.System%2A>)일 수 있습니다.  
+3. 정책 발급자를 나타내는<xref:System.IdentityModel.Policy.IAuthorizationPolicy.Issuer%2A>를 반환하여 읽기 전용 <xref:System.IdentityModel.Claims.ClaimSet> 속성을 구현합니다. 이는 애플리케이션을 나타내는 `ClaimSet`이거나 기본 제공된`ClaimSet`(예를 들면 정적 `ClaimSet` 속성에 의해 반환된 <xref:System.IdentityModel.Claims.ClaimSet.System%2A>)일 수 있습니다.  
   
 4. 다음 절차에 따라 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> 메서드를 구현합니다.  
   

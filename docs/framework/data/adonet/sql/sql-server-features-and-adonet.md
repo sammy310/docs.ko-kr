@@ -10,7 +10,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "62037184"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server 기능 및 ADO.NET
-이 단원의 항목에서는 ADO.NET을 사용하여 데이터베이스 응용 프로그램을 개발하는 데 사용할 수 있는 SQL Server 기능에 대해 설명합니다.  
+이 단원의 항목에서는 ADO.NET을 사용하여 데이터베이스 애플리케이션을 개발하는 데 사용할 수 있는 SQL Server 기능에 대해 설명합니다.  
   
  자세한 내용은 다음 표에 나타난 대로 현재 사용 중인 SQL Server 버전에 해당하는 SQL Server 온라인 설명서를 참조하세요.  
   
@@ -35,10 +35,10 @@ ms.locfileid: "62037184"
  SQL Server의 CLR(공용 언어 런타임) 데이터베이스 개체 내에서 데이터에 액세스하는 방법을 설명합니다.  
   
  [SQL Server에서 쿼리 알림](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
- 데이터 변경 시 .NET Framework 응용 프로그램에서 SQL Server로부터 알림을 요청하는 방법을 설명합니다.  
+ 데이터 변경 시 .NET Framework 애플리케이션에서 SQL Server로부터 알림을 요청하는 방법을 설명합니다.  
   
- [SQL Server의 스냅숏 격리](../../../../../docs/framework/data/adonet/sql/snapshot-isolation-in-sql-server.md)  
- 트랜잭션 응용 프로그램에서 블로킹을 줄이기 위해 디자인된 행 버전 관리 메커니즘인 스냅샷 격리 지원에 대해 설명합니다.  
+ [SQL Server의 스냅샷 격리](../../../../../docs/framework/data/adonet/sql/snapshot-isolation-in-sql-server.md)  
+ 트랜잭션 애플리케이션에서 블로킹을 줄이기 위해 디자인된 행 버전 관리 메커니즘인 스냅샷 격리 지원에 대해 설명합니다.  
   
  [고가용성 및 재해 복구에 대한 SqlClient 지원](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)  
  고가용성, 재해 복구(AlwaysOn) 가용성 그룹을 위한 SqlClient 지원에 대해 설명합니다.  

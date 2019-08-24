@@ -16,7 +16,7 @@ ms.locfileid: "61749542"
   
 ## <a name="in-this-section"></a>이 섹션의 내용  
  [보안을 위한 최선의 방법](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)  
- 응용 프로그램의 보안을 유지하는 데 도움이 되는 권장 사항입니다.  
+ 애플리케이션의 보안을 유지하는 데 도움이 되는 권장 사항입니다.  
   
  [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
  WCF 응용 프로그램을 만들 때 고려해 야 할 항목입니다.  

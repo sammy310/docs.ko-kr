@@ -50,7 +50,7 @@ Visual Basic 명령줄 컴파일러는 Visual Studio IDE (통합 개발 환경)�
 |[-nologo](../../../visual-basic/reference/command-line-compiler/nologo.md)|컴파일러 배너 정보를 표시하지 않습니다.|  
 |[-nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|컴파일러에서 표준 라이브러리를 참조하지 않도록 합니다.|  
 |[-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)|컴파일러에서 경고를 생성하지 않도록 합니다.|  
-|[-nowin32manifest](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)|실행 파일에 응용 프로그램 매니페스트를 포함하지 않도록 컴파일러에 지시합니다.|  
+|[-nowin32manifest](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)|실행 파일에 애플리케이션 매니페스트를 포함하지 않도록 컴파일러에 지시합니다.|  
 |[-optimize](../../../visual-basic/reference/command-line-compiler/optimize.md)|코드 최적화를 사용하거나 사용하지 않도록 설정합니다.|  
 |[-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)|문자열 비교가 이진인지 또는 로캘별 텍스트 의미 체계를 사용해야 하는지를 지정합니다.|  
 |[-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)|명시적 변수 선언이 있어야 합니다.|  
@@ -77,7 +77,7 @@ Visual Basic 명령줄 컴파일러는 Visual Studio IDE (통합 개발 환경)�
 |[-verbose](../../../visual-basic/reference/command-line-compiler/verbose.md)|컴파일하는 동안 추가 정보를 출력합니다.|  
 |[-warnaserror](../../../visual-basic/reference/command-line-compiler/warnaserror.md)|경고를 오류로 승격합니다.|  
 |[-win32icon](../../../visual-basic/reference/command-line-compiler/win32icon.md)|출력 파일에 .ico 파일을 삽입합니다.|  
-|[-win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|프로젝트의 PE(포팅 가능한 실행 파일) 파일에 포함할 사용자 정의 Win32 응용 프로그램 매니페스트 파일을 식별합니다.|  
+|[-win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|프로젝트의 PE(포팅 가능한 실행 파일) 파일에 포함할 사용자 정의 Win32 애플리케이션 매니페스트 파일을 식별합니다.|  
 |[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)|출력 파일에 Win32 리소스를 삽입합니다.|  
   
 ## <a name="see-also"></a>참고자료

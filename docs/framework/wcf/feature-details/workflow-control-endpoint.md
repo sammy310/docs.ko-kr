@@ -4,7 +4,7 @@ ms.date: 03/30/2017
 ms.assetid: 1b883334-1590-4fbb-b0d6-65197efe0700
 ms.openlocfilehash: 781a7cefaeeb8cd9cd21298471c59de2e7815244
 ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/31/2019
 ms.locfileid: "66424024"
@@ -21,7 +21,7 @@ ms.locfileid: "66424024"
  워크플로 인스턴스의 상태는 다음 중 하나일 수 있습니다.  
   
  활성  
- 워크플로 인스턴스가 완료됨 상태에 도달하기 전이고 일시 중단됨 상태에 있지 않는 상태입니다. 이 상태 동안에는 워크플로 인스턴스가 실행되어 응용 프로그램 메시지를 처리합니다.  
+ 워크플로 인스턴스가 완료됨 상태에 도달하기 전이고 일시 중단됨 상태에 있지 않는 상태입니다. 이 상태 동안에는 워크플로 인스턴스가 실행되어 애플리케이션 메시지를 처리합니다.  
   
  일시 중단됨  
  이 상태 동안에는 실행이 시작되지 않았거나 부분적으로 실행된 동작이 있는 경우에도 워크플로 인스턴스가 실행되지 않습니다.  

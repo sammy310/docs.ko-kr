@@ -11,11 +11,11 @@ ms.locfileid: "61641608"
 ---
 # <a name="store-extensibility"></a>저장소 확장성
 
-<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>를 사용하면 사용자가 지속성 데이터베이스의 인스턴스를 쿼리하는 데 사용할 수 있는 응용 프로그램별 사용자 지정 속성을 승격할 수 있습니다. 속성을 승격하면 값을 데이터베이스의 특수 뷰 내에서 사용할 수 있습니다. 사용자 쿼리에 사용할 수 있는 이러한 승격된 속성은 단순 형식(예: Guid, String, DateTime 등)이거나 serialize된 이진 형식(byte[])일 수 있습니다.
+<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>를 사용하면 사용자가 지속성 데이터베이스의 인스턴스를 쿼리하는 데 사용할 수 있는 애플리케이션별 사용자 지정 속성을 승격할 수 있습니다. 속성을 승격하면 값을 데이터베이스의 특수 뷰 내에서 사용할 수 있습니다. 사용자 쿼리에 사용할 수 있는 이러한 승격된 속성은 단순 형식(예: Guid, String, DateTime 등)이거나 serialize된 이진 형식(byte[])일 수 있습니다.
 
-<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 클래스에는 속성을 쿼리에서 사용할 수 있는 속성으로 승격시키는 데 사용할 수 있는 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.Promote%2A> 메서드가 있습니다. 다음은 저장소 확장에 대한 종단 간 예제입니다.
+<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 클래스에는 속성을 쿼리에서 사용할 수 있는 속성으로 승격시키는 데 사용할 수 있는 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.Promote%2A> 메서드가 있습니다. 다음은 스토리지 확장에 대한 엔드투엔드 예제입니다.
 
-1. 이 예제 시나리오에서 DP(문서 처리) 응용 프로그램에는 문서 처리를 위해 사용자 지정 활동을 사용하는 워크플로가 있습니다. 이러한 워크플로에는 최종 사용자에게 표시되어야 하는 상태 변수 집합이 있습니다. 이를 위해 DP 응용 프로그램은 활동에서 상태 변수를 제공하는 데 사용되는 <xref:System.Activities.Persistence.PersistenceParticipant> 형식의 인스턴스 확장을 제공합니다.
+1. 이 예제 시나리오에서 DP(문서 처리) 애플리케이션에는 문서 처리를 위해 사용자 지정 활동을 사용하는 워크플로가 있습니다. 이러한 워크플로에는 최종 사용자에게 표시되어야 하는 상태 변수 집합이 있습니다. 이를 위해 DP 애플리케이션은 활동에서 상태 변수를 제공하는 데 사용되는 <xref:System.Activities.Persistence.PersistenceParticipant> 형식의 인스턴스 확장을 제공합니다.
 
     ```csharp
     class DocumentStatusExtension : PersistenceParticipant
@@ -94,7 +94,7 @@ ms.locfileid: "61641608"
 
     이 승격 정보를 기반으로 **SqlWorkflowInstanceStore** 의 열에 데이터 속성을 배치 합니다 [InstancePromotedProperties](#InstancePromotedProperties) 보기.
 
-6. 승격 테이블에서 데이터 하위 집합을 쿼리하기 위해 DP 응용 프로그램은 승격 뷰의 맨 위에 사용자 지정된 뷰를 추가합니다.
+6. 승격 테이블에서 데이터 하위 집합을 쿼리하기 위해 DP 애플리케이션은 승격 뷰의 맨 위에 사용자 지정된 뷰를 추가합니다.
 
     ```sql
     create view [dbo].[DocumentStatus] with schemabinding

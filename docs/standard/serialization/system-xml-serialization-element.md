@@ -46,7 +46,7 @@ XML serialization을 제어하기 위한 최상위 요소입니다. 구성 파�
 
 |요소|설명|
 |-------------|-----------------|
-|[\<configuration> 요소](../../../docs/framework/configure-apps/file-schema/configuration-element.md)|공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소입니다.|
+|[\<configuration> 요소](../../../docs/framework/configure-apps/file-schema/configuration-element.md)|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|
 
 ## <a name="example"></a>예제
 

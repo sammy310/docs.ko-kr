@@ -17,7 +17,7 @@ ms.locfileid: "61781539"
 |ID|3339|  
 |키워드|ServiceModel|  
 |수준|자세히|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  이 이벤트는 채널 팩터리가 생성되었을 때 내보내집니다.  

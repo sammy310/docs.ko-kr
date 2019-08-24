@@ -1,5 +1,5 @@
 ---
-title: XSD(XML 스키마)에서 데이터 집합 관계 생성
+title: XSD(XML 스키마)에서 데이터 세트 관계 생성
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
 ms.openlocfilehash: 2cf6d2ed949a3efa39c0f1c049bc03e7a5b0eb0b
@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64621076"
 ---
-# <a name="generating-dataset-relations-from-xml-schema-xsd"></a>XSD(XML 스키마)에서 데이터 집합 관계 생성
+# <a name="generating-dataset-relations-from-xml-schema-xsd"></a>XSD(XML 스키마)에서 데이터 세트 관계 생성
 <xref:System.Data.DataSet>에서는 부모-자식 관계를 만들어 둘 이상의 열을 연결시킵니다. 나타내는 세 가지는 **데이터 집합** XML 스키마 정의 언어 (XSD) 스키마 내의 관계:  
   
 - 중첩된 복합 형식을 지정합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "64621076"
 </xs:element>  
 ```  
   
- XML 스키마 매핑 프로세스에 테이블을 만듭니다는 **데이터 집합** 스키마에서 중첩된 된 복합 형식에 해당 하는 합니다. 또한 부모로 사용 되는 추가 열을 만듭니다**-** 생성된 된 테이블에 대 한 자식 열입니다. 이러한 부모 보면**-** 자식 열에서는 없는 기본 키/외래 키 제약 조건을 지정 하는 것과 관계를 지정 합니다.  
+ XML 스키마 매핑 프로세스에 테이블을 만듭니다는 **데이터 집합** 스키마에서 중첩된 된 복합 형식에 해당 하는 합니다. 또한 부모로 사용 되는 추가 열을 만듭니다 **-** 생성된 된 테이블에 대 한 자식 열입니다. 이러한 부모 보면 **-** 자식 열에서는 없는 기본 키/외래 키 제약 조건을 지정 하는 것과 관계를 지정 합니다.  
   
 ## <a name="msdatarelationship-annotation"></a>msdata:Relationship 주석  
  합니다 **msdata: relationship** 주석을 사용 하면 명시적으로 중첩 되지 않은 스키마의 요소 간의 부모-자식 관계를 지정할 수 있습니다. 다음 예제에서는의 구조를 표시 합니다 **관계** 요소.  

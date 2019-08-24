@@ -12,7 +12,7 @@
     - name: Docker 애플리케이션 수명 주기 소개
       href: Docker-application-lifecycle/index.md
       items:
-        - name: DevOps 공동 작업의 기반으로 사용되는 컨테이너
+        - name: DevOps 협업의 기반으로 사용되는 컨테이너
           href: Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md
     - name: 컨테이너화된 앱을 위한 Microsoft 플랫폼 및 도구 소개
       href: Microsoft-platform-tools-containerized-apps/index.md

@@ -1,5 +1,5 @@
 ---
-title: 종단 간 추적 시나리오
+title: 엔드투엔드 추적 시나리오
 ms.date: 03/30/2017
 ms.assetid: f83b7d53-6061-4362-a9a3-ee1daf6542be
 ms.openlocfilehash: 18fbd1e9733d55d60d7aa21f2fe8ac259b3da51b
@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64650367"
 ---
-# <a name="end-to-end-tracing-scenarios"></a>종단 간 추적 시나리오
+# <a name="end-to-end-tracing-scenarios"></a>엔드투엔드 추적 시나리오
 이 단원에는 추적에 사용하는 다양한 시나리오를 설명하는 항목이 있습니다.  
   
  다음을 사용하여 회신/응답, 단방향 및 이중 시나리오에 대한 활동 추적을 구현합니다.  
@@ -41,4 +41,4 @@ ms.locfileid: "64650367"
 ## <a name="see-also"></a>참고자료
 
 - [추적을 사용하여 애플리케이션 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [종단 간 추적](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)
+- [엔드투엔드 추적](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)

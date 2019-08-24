@@ -1,5 +1,5 @@
 ---
-title: 트랜잭션 응용 프로그램 진단
+title: 트랜잭션 애플리케이션 진단
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
 ms.openlocfilehash: 9a4f064d903092b04f8885fb00b56e18c9cfeb74
@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64751123"
 ---
-# <a name="diagnosing-transactional-applications"></a>트랜잭션 응용 프로그램 진단
+# <a name="diagnosing-transactional-applications"></a>트랜잭션 애플리케이션 진단
 이 항목에서는 트랜잭션 응용 프로그램 문제를 해결 하려면 Windows Communication Foundation (WCF) 관리 및 진단 기능을 사용 하는 방법을 설명 합니다.  
   
 ## <a name="performance-counters"></a>성능 카운터  
@@ -85,7 +85,7 @@ ms.locfileid: "64751123"
 |TransactionFlowOption|유효한 <xref:System.ServiceModel.TransactionFlowOption> 열거형 값이 들어 있는 문자열입니다.|트랜잭션 이동이 필요한 범위를 지정합니다.|  
   
 ## <a name="tracing"></a>추적  
- 추적을 사용하면 트랜잭션 응용 프로그램의 오류를 모니터링하고 분석할 수 있습니다. 다음 방법을 사용하여 추적을 사용할 수 있습니다.  
+ 추적을 사용하면 트랜잭션 애플리케이션의 오류를 모니터링하고 분석할 수 있습니다. 다음 방법을 사용하여 추적을 사용할 수 있습니다.  
   
 - 표준 WCF 추적  
   
@@ -97,7 +97,7 @@ ms.locfileid: "64751123"
   
 - `System.Transactions` 추적  
   
-     OleTransactions 프로토콜을 사용하는 경우 프로토콜 메시지를 추적할 수 없습니다. <xref:System.Transactions> 인프라가 제공하는 추적 지원(OleTransactions 사용)을 통해 사용자는 트랜잭션에 발생된 이벤트를 확인할 수 있습니다. <xref:System.Transactions> 응용 프로그램에 대한 추적을 사용하기 위해 다음 코드를 `App.config` 구성 파일에 포함합니다.  
+     OleTransactions 프로토콜을 사용하는 경우 프로토콜 메시지를 추적할 수 없습니다. <xref:System.Transactions> 인프라가 제공하는 추적 지원(OleTransactions 사용)을 통해 사용자는 트랜잭션에 발생된 이벤트를 확인할 수 있습니다. <xref:System.Transactions> 애플리케이션에 대한 추적을 사용하기 위해 다음 코드를 `App.config` 구성 파일에 포함합니다.  
   
     ```xml  
     <configuration>  

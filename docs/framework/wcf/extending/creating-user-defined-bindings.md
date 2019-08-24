@@ -14,7 +14,7 @@ ms.locfileid: "64587293"
 # <a name="creating-user-defined-bindings"></a>사용자 정의 바인딩 만들기
 시스템에서 제공하지 않는 바인딩은 다음과 같은 여러 가지 방법으로 만들 수 있습니다.  
   
-- 바인딩 요소로 채워지는 컨테이너인 <xref:System.ServiceModel.Channels.CustomBinding> 클래스에 따라 사용자 지정 바인딩을 만듭니다. 그런 다음 사용자 지정 바인딩을 서비스 엔드포인트에 추가합니다. 프로그램 방식이나 응용 프로그램 구성 파일을 통해 사용자 지정 바인딩을 만들 수 있습니다. 응용 프로그램 구성 파일에서 바인딩 요소를 사용하려면 바인딩 요소가 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>를 확장해야 합니다. 사용자 지정 바인딩에 대 한 자세한 내용은 참조 하세요. [사용자 지정 바인딩을](../../../../docs/framework/wcf/extending/custom-bindings.md) 고 <xref:System.ServiceModel.Channels.CustomBinding>입니다.  
+- 바인딩 요소로 채워지는 컨테이너인 <xref:System.ServiceModel.Channels.CustomBinding> 클래스에 따라 사용자 지정 바인딩을 만듭니다. 그런 다음 사용자 지정 바인딩을 서비스 엔드포인트에 추가합니다. 프로그램 방식이나 애플리케이션 구성 파일을 통해 사용자 지정 바인딩을 만들 수 있습니다. 애플리케이션 구성 파일에서 바인딩 요소를 사용하려면 바인딩 요소가 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>를 확장해야 합니다. 사용자 지정 바인딩에 대 한 자세한 내용은 참조 하세요. [사용자 지정 바인딩을](../../../../docs/framework/wcf/extending/custom-bindings.md) 고 <xref:System.ServiceModel.Channels.CustomBinding>입니다.  
   
 - 표준 바인딩에서 파생되는 클래스를 만들 수 있습니다. 예를 들어, <xref:System.ServiceModel.WSHttpBinding>에서 클래스를 파생하고 <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A> 메서드를 재정의하여 바인딩 요소를 가져온 후 사용자 지정 바인딩 요소를 삽입하거나 특정 보안 값을 설정할 수 있습니다.  
   
@@ -42,12 +42,12 @@ ms.locfileid: "64587293"
 |Encoding|텍스트, 이진, MTOM, 사용자 지정|예*|  
 |전송|TCP, 명명된 파이프, HTTP, HTTPS, MSMQ, 사용자 지정|예|  
   
- * 인코딩은 이므로 각 바인딩의 필수적 요소는 인코딩이 지정 되지 않은 경우, WCF는 기본 인코딩을 추가 합니다. 기본값은 HTTP 및 HTTPS 전송의 경우 텍스트/XML이고 그렇지 않은 경우 이진입니다.  
+ \* 인코딩은 이므로 각 바인딩의 필수적 요소는 인코딩이 지정 되지 않은 경우, WCF는 기본 인코딩을 추가 합니다. 기본값은 HTTP 및 HTTPS 전송의 경우 텍스트/XML이고 그렇지 않은 경우 이진입니다.  
   
 ## <a name="creating-a-new-binding-element"></a>새 바인딩 요소 만들기  
  파생 된 형식 외에도 <xref:System.ServiceModel.Channels.BindingElement> 된 제공 WCF 바인딩 요소를 만들 수 있습니다. 따라서 바인딩 스택을 만드는 방법 및 스택에서 기타 시스템 제공 형식으로 구성할 수 있는 <xref:System.ServiceModel.Channels.BindingElement>를 만들어 이 스택에 삽입되는 구성 요소를 사용자 지정할 수 있습니다.  
   
- 예를 들어, 메시지를 데이터베이스에 기록하는 기능을 제공하는 `LoggingBindingElement`를 구현하는 경우 채널 스택의 전송 채널 위에 요소를 배치해야 합니다. 이 경우 응용 프로그램은 다음 예제에서처럼 `LoggingBindingElement`로 `TcpTransportBindingElement`를 구성한 사용자 지정 바인딩을 만듭니다.  
+ 예를 들어, 메시지를 데이터베이스에 기록하는 기능을 제공하는 `LoggingBindingElement`를 구현하는 경우 채널 스택의 전송 채널 위에 요소를 배치해야 합니다. 이 경우 애플리케이션은 다음 예제에서처럼 `LoggingBindingElement`로 `TcpTransportBindingElement`를 구성한 사용자 지정 바인딩을 만듭니다.  
   
 ```csharp  
 Binding customBinding = new CustomBinding(  
@@ -61,7 +61,7 @@ Binding customBinding = new CustomBinding(
 ## <a name="creating-a-new-binding"></a>새 바인딩 만들기  
  사용자가 만든 바인딩 요소는 두 가지 방법으로 사용할 수 있습니다. 이전 단원에서는 사용자 지정 바인딩을 통해 사용하는 첫 번째 방법을 보여 줍니다. 사용자 지정 바인딩에서는 사용자가 만든 바인딩을 비롯한 임의의 바인딩 요소 집합에 따라 직접 바인딩을 만들 수 있습니다.  
   
- 둘 이상의 응용 프로그램에서 바인딩을 사용하는 경우 직접 바인딩을 만들어 <xref:System.ServiceModel.Channels.Binding>을 확장합니다. 이렇게 하면 사용할 때마다 사용자 지정 바인딩을 수동으로 만들지 않아도 됩니다. 사용자 정의 바인딩을 사용하여 바인딩의 동작을 정의하고 사용자 정의 바인딩 요소를 포함시킬 수 있습니다. 이므로 *미리 패키징*: 사용할 때마다 바인딩을 다시 필요가 없습니다.  
+ 둘 이상의 애플리케이션에서 바인딩을 사용하는 경우 직접 바인딩을 만들어 <xref:System.ServiceModel.Channels.Binding>을 확장합니다. 이렇게 하면 사용할 때마다 사용자 지정 바인딩을 수동으로 만들지 않아도 됩니다. 사용자 정의 바인딩을 사용하여 바인딩의 동작을 정의하고 사용자 정의 바인딩 요소를 포함시킬 수 있습니다. 이므로 *미리 패키징*: 사용할 때마다 바인딩을 다시 필요가 없습니다.  
   
  최소한 사용자 정의 바인딩은 <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> 메서드 및 <xref:System.ServiceModel.Channels.Binding.Scheme%2A> 속성을 구현해야 합니다.  
   

@@ -29,7 +29,7 @@ ms.locfileid: "67425250"
 
 ### <a name="discoveryversionwsdiscoveryapril2005"></a>DiscoveryVersion.WSDiscoveryApril2005
 
-제공 <xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscoveryApril2005> 생성자 매개 변수는 Ws-discovery 프로토콜의 April2005 버전을 사용 하 여 구현 합니다. 이 버전은 WS-Discovery 프로토콜 사양의 게시된 버전에 해당합니다. WS-Discovery의 April2005 버전을 사용하는 레거시 응용 프로그램과 상호 운용하려면 이 버전을 사용해야 합니다.
+제공 <xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscoveryApril2005> 생성자 매개 변수는 Ws-discovery 프로토콜의 April2005 버전을 사용 하 여 구현 합니다. 이 버전은 WS-Discovery 프로토콜 사양의 게시된 버전에 해당합니다. WS-Discovery의 April2005 버전을 사용하는 레거시 애플리케이션과 상호 운용하려면 이 버전을 사용해야 합니다.
 
 ### <a name="discoveryversionwsdiscovery11"></a>DiscoveryVersion.WSDiscovery11
 

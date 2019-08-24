@@ -14,7 +14,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61789013"
 ---
 # <a name="-nowin32manifest-visual-basic"></a>-nowin32manifest(Visual Basic)
-실행 파일에 응용 프로그램 매니페스트를 포함하지 않도록 컴파일러에 지시합니다.  
+실행 파일에 애플리케이션 매니페스트를 포함하지 않도록 컴파일러에 지시합니다.  
   
 ## <a name="syntax"></a>구문  
   

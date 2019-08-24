@@ -17,7 +17,7 @@ ms.locfileid: "62052822"
   
 ## <a name="in-this-section"></a>섹션 내용  
  [Windows 워크플로 개요](overview.md)  
- [!INCLUDE[wv](../../../includes/wv-md.md)], [!INCLUDE[wxp](../../../includes/wxp-md.md)], [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 및 [!INCLUDE[lserver](../../../includes/lserver-md.md)] 운영 체제용으로 작성된 응용 프로그램에서 시스템 또는 인적 워크플로를 만들 수 있는 기초에 대해 설명합니다.  
+ [!INCLUDE[wv](../../../includes/wv-md.md)], [!INCLUDE[wxp](../../../includes/wxp-md.md)], [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 및 [!INCLUDE[lserver](../../../includes/lserver-md.md)] 운영 체제용으로 작성된 애플리케이션에서 시스템 또는 인적 워크플로를 만들 수 있는 기초에 대해 설명합니다.  
   
  [기본 Windows 워크플로 개념](fundamental-concepts.md)  
  일부 개발자에 게 생소 하는 Windows Workflow Foundation 개발에 사용 되는 기본 개념을 설명 합니다.  

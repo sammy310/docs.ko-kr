@@ -1,5 +1,5 @@
 ---
-title: ADO.NET 데이터 집합
+title: ADO.NET 데이터 세트
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
 ms.openlocfilehash: da6fb7bbe82e37787615518fa74a0d84bf95758f
@@ -9,8 +9,8 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/02/2019
 ms.locfileid: "67504265"
 ---
-# <a name="adonet-datasets"></a>ADO.NET 데이터 집합
-<xref:System.Data.DataSet> 개체는 지원의 핵심으로 연결이 끊긴 분산 데이터 시나리오 ADO.NET 사용 합니다. 합니다 **데이터 집합** 데이터 소스에 관계 없이 일관성 있는 관계형 프로그래밍 모델을 제공 하는 데이터는 메모리 상주 표현입니다. 이 개체는 다양한 여러 데이터 소스에 사용하거나 XML 데이터에 사용할 수 있을 뿐 아니라 이 개체를 사용하여 응용 프로그램의 로컬 데이터를 관리할 수도 있습니다. 합니다 **데이터 집합** 관련된 테이블, 제약 조건 및 테이블 간의 관계를 포함 하 여 데이터의 전체 집합을 나타냅니다. 다음 그림에 표시 된 **데이터 집합** 개체 모델입니다.  
+# <a name="adonet-datasets"></a>ADO.NET 데이터 세트
+<xref:System.Data.DataSet> 개체는 지원의 핵심으로 연결이 끊긴 분산 데이터 시나리오 ADO.NET 사용 합니다. 합니다 **데이터 집합** 데이터 소스에 관계 없이 일관성 있는 관계형 프로그래밍 모델을 제공 하는 데이터는 메모리 상주 표현입니다. 이 개체는 다양한 여러 데이터 소스에 사용하거나 XML 데이터에 사용할 수 있을 뿐 아니라 이 개체를 사용하여 애플리케이션의 로컬 데이터를 관리할 수도 있습니다. 합니다 **데이터 집합** 관련된 테이블, 제약 조건 및 테이블 간의 관계를 포함 하 여 데이터의 전체 집합을 나타냅니다. 다음 그림에 표시 된 **데이터 집합** 개체 모델입니다.  
   
  ![ADO.Net graphic](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
 DataSet 개체 모델  
@@ -25,7 +25,7 @@ DataSet 개체 모델
  **DataTable** 에 정의 된 <xref:System.Data> 네임 스페이스 되며 메모리 상주형 데이터의 단일 테이블을 나타냅니다. 여기에는 <xref:System.Data.DataColumnCollection>에 의해 표현되는 열의 컬렉션과 <xref:System.Data.ConstraintCollection>에 의해 표현되는 제약 조건의 컬렉션이 포함됩니다. 이 두 컬렉션은 테이블의 스키마를 정의합니다. A **DataTable** 나타내는 행의 컬렉션도 포함 합니다 <xref:System.Data.DataRowCollection>, 테이블의 데이터를 포함 하는 합니다. 이와 함께 <xref:System.Data.DataRow>는 현재 버전과 원래 버전을 모두 보유하므로 행에 저장된 값에 대한 변경 사항을 식별할 수 있습니다.  
   
 ## <a name="the-dataview-class"></a>DataView 클래스  
- <xref:System.Data.DataView>는 데이터 바인딩 응용 프로그램에서 자주 사용되는 기능으로, 이 기능을 사용하면 <xref:System.Data.DataTable>에 저장되어 있는 데이터에 대해 서로 다른 뷰를 만들 수 있습니다. <xref:System.Data.DataView>를 사용하면 테이블의 데이터를 여러 정렬 순서로 노출시킬 수 있으며 행 상태에 따라 또는 필터 식을 기준으로 데이터를 필터링할 수 있습니다. 자세한 내용은 [Dataview](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)합니다.  
+ <xref:System.Data.DataView>는 데이터 바인딩 애플리케이션에서 자주 사용되는 기능으로, 이 기능을 사용하면 <xref:System.Data.DataTable>에 저장되어 있는 데이터에 대해 서로 다른 뷰를 만들 수 있습니다. <xref:System.Data.DataView>를 사용하면 테이블의 데이터를 여러 정렬 순서로 노출시킬 수 있으며 행 상태에 따라 또는 필터 식을 기준으로 데이터를 필터링할 수 있습니다. 자세한 내용은 [Dataview](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)합니다.  
   
 ## <a name="the-datarelationcollection"></a>DataRelationCollection  
  A **데이터 집합** 의 관계를 포함 합니다. 해당 <xref:System.Data.DataRelationCollection> 개체입니다. 표현 되는 관계는 <xref:System.Data.DataRelation> 개체를 연결 행에 대 한 **DataTable** 의 다른 행과 **DataTable**. 이 관계는 관계형 데이터베이스의 기본 키 열과 외래 키 열 간에 존재하는 조인 경로와 유사합니다. A **DataRelation** 의 두 테이블에 일치 하는 열을 식별 하는 **데이터 집합**합니다.  

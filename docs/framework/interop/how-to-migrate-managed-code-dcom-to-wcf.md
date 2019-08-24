@@ -155,7 +155,7 @@ public class CustomerService: ICustomerManager
 </configuration>  
 ```  
   
- 다음에는 서비스에서 지정된 바인딩 정보와 일치하도록 클라이언트를 구성해야 합니다. 이렇게 하려면 클라이언트의 응용 프로그램 구성 파일(app.config)에 다음을 추가합니다.  
+ 다음에는 서비스에서 지정된 바인딩 정보와 일치하도록 클라이언트를 구성해야 합니다. 이렇게 하려면 클라이언트의 애플리케이션 구성 파일(app.config)에 다음을 추가합니다.  
   
 ```xml  
 <configuration>  
@@ -170,7 +170,7 @@ public class CustomerService: ICustomerManager
 ```  
   
 ### <a name="step-5-run-the-service"></a>5단계: 서비스 실행  
- 끝으로, 서비스 앱에 다음 줄을 추가하고 앱을 시작하여 콘솔 응용 프로그램에서 자체 호스트할 수 있습니다. WCF 서비스 애플리케이션을 호스트하는 다른 방법에 대한 자세한 내용은 [호스팅 서비스](../../../docs/framework/wcf/hosting-services.md)를 참조하세요.  
+ 끝으로, 서비스 앱에 다음 줄을 추가하고 앱을 시작하여 콘솔 애플리케이션에서 자체 호스트할 수 있습니다. WCF 서비스 애플리케이션을 호스트하는 다른 방법에 대한 자세한 내용은 [호스팅 서비스](../../../docs/framework/wcf/hosting-services.md)를 참조하세요.  
   
 ```csharp  
 ServiceHost customerServiceHost = new ServiceHost(typeof(CustomerService));  
@@ -357,7 +357,7 @@ public class SessionBoundFactory : ISessionBoundFactory
 </configuration>  
 ```  
   
- 서비스를 자체 호스트하고 앱을 시작하려면 콘솔 응용 프로그램에 다음 줄을 추가합니다.  
+ 서비스를 자체 호스트하고 앱을 시작하려면 콘솔 애플리케이션에 다음 줄을 추가합니다.  
   
 ```csharp  
 ServiceHost factoryHost = new ServiceHost(typeof(SessionBoundFactory));  
@@ -369,7 +369,7 @@ sessionBoundServiceHost.Open();
 ```  
   
 ### <a name="step-4-configure-the-client-and-call-the-service"></a>4단계: 클라이언트 구성 및 서비스 호출  
- 프로젝트의 응용 프로그램 구성 파일(app.config)에 다음 항목을 만들어 WCF 서비스와 통신하도록 클라이언트를 구성합니다.  
+ 프로젝트의 애플리케이션 구성 파일(app.config)에 다음 항목을 만들어 WCF 서비스와 통신하도록 클라이언트를 구성합니다.  
   
 ```xml  
 <configuration>  

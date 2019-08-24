@@ -1,5 +1,5 @@
 ---
-title: 대기 핸들을 사용한 ASP.NET 응용 프로그램
+title: 대기 핸들을 사용한 ASP.NET 애플리케이션
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,8 +12,8 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61877762"
 ---
-# <a name="aspnet-applications-using-wait-handles"></a>대기 핸들을 사용한 ASP.NET 응용 프로그램
-응용 프로그램에서 비동기 작업을 한 번에 하나씩만 처리할 경우 비동기 작업 처리를 위한 콜백 및 폴링 모델이 유용합니다. Wait 모델을 사용하면 여러 개의 비동기 작업을 보다 유연한 방식으로 처리할 수 있습니다. Wait 모델에는 Wait(Any) 모델과 Wait(All) 모델의 두 가지가 있으며 이를 구현하는 데 사용되는 <xref:System.Threading.WaitHandle> 메서드에 대해 이름이 지정됩니다.  
+# <a name="aspnet-applications-using-wait-handles"></a>대기 핸들을 사용한 ASP.NET 애플리케이션
+애플리케이션에서 비동기 작업을 한 번에 하나씩만 처리할 경우 비동기 작업 처리를 위한 콜백 및 폴링 모델이 유용합니다. Wait 모델을 사용하면 여러 개의 비동기 작업을 보다 유연한 방식으로 처리할 수 있습니다. Wait 모델에는 Wait(Any) 모델과 Wait(All) 모델의 두 가지가 있으며 이를 구현하는 데 사용되는 <xref:System.Threading.WaitHandle> 메서드에 대해 이름이 지정됩니다.  
   
  어떤 Wait 모델을 사용하든 <xref:System.IAsyncResult.AsyncWaitHandle%2A>, <xref:System.IAsyncResult> 또는 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> 메서드에 의해 반환되는 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> 개체의 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> 속성을 사용해야 합니다. <xref:System.Threading.WaitHandle.WaitAny%2A> 및 <xref:System.Threading.WaitHandle.WaitAll%2A> 메서드에서는 <xref:System.Threading.WaitHandle> 개체를 배열에 그룹화하여 인수로 보내야 합니다.  
   
@@ -22,7 +22,7 @@ ms.locfileid: "61877762"
  Wait 모델의 이점은 서로 다른 서버에서 일정한 길이의 여러 작업을 실행해야 하거나 서버의 성능이 모든 쿼리를 동시에 처리할 수 있을 만큼 강력한 경우에 가장 두드러지게 나타납니다. 여기에 소개된 예제에서 세 개의 쿼리가 다양한 길이의 WAITFOR 명령을 중요하지 않은 SELECT 쿼리에 추가하여 긴 프로세스를 에뮬레이션합니다.  
   
 ## <a name="example-wait-any-model"></a>예제: Wait(Any) 모델  
- 다음 예제에서는 Wait(Any) 모델에 대해 설명합니다. 세 개의 비동기 프로세스를 시작하면 <xref:System.Threading.WaitHandle.WaitAny%2A> 메서드가 호출되어 이들 중 하나가 완료되기를 기다립니다. 각 프로세스가 완료되면 <xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A> 메서드가 호출되고 결과 <xref:System.Data.SqlClient.SqlDataReader> 개체를 읽습니다. 여기서 실제 응용 프로그램의 경우에는 <xref:System.Data.SqlClient.SqlDataReader>를 사용하여 페이지의 일부를 채우게 됩니다. 이 간단한 예제에서는 프로세스가 완료된 시간이 프로세스에 해당하는 텍스트 상자에 추가됩니다. 전체적으로 볼 때, 텍스트 상자의 시간은 시점을 보여 줍니다. 코드에는 프로세스가 완료 될 때마다 실행 됩니다.  
+ 다음 예제에서는 Wait(Any) 모델에 대해 설명합니다. 세 개의 비동기 프로세스를 시작하면 <xref:System.Threading.WaitHandle.WaitAny%2A> 메서드가 호출되어 이들 중 하나가 완료되기를 기다립니다. 각 프로세스가 완료되면 <xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A> 메서드가 호출되고 결과 <xref:System.Data.SqlClient.SqlDataReader> 개체를 읽습니다. 여기서 실제 애플리케이션의 경우에는 <xref:System.Data.SqlClient.SqlDataReader>를 사용하여 페이지의 일부를 채우게 됩니다. 이 간단한 예제에서는 프로세스가 완료된 시간이 프로세스에 해당하는 텍스트 상자에 추가됩니다. 전체적으로 볼 때, 텍스트 상자의 시간은 시점을 보여 줍니다. 코드에는 프로세스가 완료 될 때마다 실행 됩니다.  
   
  이 예제를 설정하려면 새 ASP.NET 웹 사이트 프로젝트를 만듭니다. 해당 페이지에 <xref:System.Web.UI.WebControls.Button> 컨트롤과 네 개의 <xref:System.Web.UI.WebControls.TextBox> 컨트롤의 위치를 지정합니다. 각 컨트롤의 이름은 기본 이름을 사용합니다.  
   

@@ -20,7 +20,7 @@ ms.locfileid: "65639103"
 ---
 # <a name="binary-serialization"></a>이진 Serialization
 
-serialization은 개체의 상태를 저장 매체에 저장하는 프로세스로 정의됩니다. 이 프로세스 도중 클래스가 포함된 어셈블리를 포함하여 개체의 public 및 private 필드와 클래스의 이름을 바이트의 스트림으로 변환한 다음 데이터 스트림에 씁니다. 그런 다음 개체가 deserialize되면 원본 개체의 정확한 복제본이 만들어집니다.
+serialization은 개체의 상태를 스토리지 매체에 스토리지하는 프로세스로 정의됩니다. 이 프로세스 도중 클래스가 포함된 어셈블리를 포함하여 개체의 public 및 private 필드와 클래스의 이름을 바이트의 스트림으로 변환한 다음 데이터 스트림에 씁니다. 그런 다음 개체가 deserialize되면 원본 개체의 정확한 복제본이 만들어집니다.
 
 개체 지향적 환경에서 serialization 메커니즘을 구현할 때는 사용 편의성과 유연성 사이에서 균형을 조정해야 합니다. 프로세스를 충분히 제어할 수 있으면 프로세스의 많은 부분을 자동화할 수 있습니다. 예를 들어 단순한 이진 serialization로 충분하지 않거나 클래스의 필드를 serialize해야 하는 것으로 결정할 특별한 이유가 있는 상황이 발생할 수 있습니다. 다음 섹션에서는 .NET에서 제공하는 강력한 serialization 메커니즘을 살펴보고 프로세스를 필요에 따라 사용자 지정할 수 있는 몇 가지 중요한 기능을 강조합니다.
 
@@ -339,7 +339,7 @@ serialization은 개체의 상태를 저장 매체에 저장하는 프로세스�
 ## <a name="in-this-section"></a>단원 내용
 
 - [Serialization 개념](../../../docs/standard/serialization/serialization-concepts.md)\
-serialization이 유용하게 사용되는 두 가지 경우, 즉 저장소에 데이터를 유지할 경우와 응용 프로그램 도메인에 개체를 전달할 경우에 대해 설명합니다.
+serialization이 유용하게 사용되는 두 가지 경우, 즉 스토리지에 데이터를 유지할 경우와 애플리케이션 도메인에 개체를 전달할 경우에 대해 설명합니다.
 
 - [기본 serialization](../../../docs/standard/serialization/basic-serialization.md)\
 이진 및 SOAP 포맷터를 사용하여 개체를 serialize하는 방법을 설명합니다.
@@ -354,7 +354,7 @@ serialization이 유용하게 사용되는 두 가지 경우, 즉 저장소에 �
 포맷터에서 <xref:System.Runtime.Serialization.Formatter.Serialize%2A> 메서드가 호출될 때 serialization이 수행하는 작업을 설명합니다.
 
 - [버전 독립적 Serialization](../../../docs/standard/serialization/version-tolerant-serialization.md)\
-응용 프로그램에서 예외가 throw되는 것을 방지하면서 시간 경과에 따라 수정할 수 있는 serialize 가능 형식을 만드는 방법을 설명합니다.
+애플리케이션에서 예외가 throw되는 것을 방지하면서 시간 경과에 따라 수정할 수 있는 serialize 가능 형식을 만드는 방법을 설명합니다.
 
 - [Serialization 지침](../../../docs/standard/serialization/serialization-guidelines.md)\
 개체를 serialize하는 시점을 결정하기 위한 일반 지침을 제공합니다.

@@ -40,7 +40,7 @@ ms.locfileid: "64645136"
  설명 된 시스템 제공 바인딩의 전체 목록을 참조 하세요 [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)합니다.  
   
 ## <a name="custom-bindings"></a>사용자 지정 바인딩  
- 시스템 제공 바인딩 컬렉션에 서비스 응용 프로그램에서 필요로 하는 기능의 올바른 조합이 포함되지 않은 경우 <xref:System.ServiceModel.Channels.CustomBinding> 바인딩을 만들 수 있습니다. 요소에 대 한 자세한를 <xref:System.ServiceModel.Channels.CustomBinding> 바인딩을 참조 [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) 하 고 [사용자 지정 바인딩](../../../docs/framework/wcf/extending/custom-bindings.md)합니다.  
+ 시스템 제공 바인딩 컬렉션에 서비스 애플리케이션에서 필요로 하는 기능의 올바른 조합이 포함되지 않은 경우 <xref:System.ServiceModel.Channels.CustomBinding> 바인딩을 만들 수 있습니다. 요소에 대 한 자세한를 <xref:System.ServiceModel.Channels.CustomBinding> 바인딩을 참조 [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) 하 고 [사용자 지정 바인딩](../../../docs/framework/wcf/extending/custom-bindings.md)합니다.  
   
 ## <a name="using-bindings"></a>바인딩 사용  
  바인딩 사용은 다음 두 가지 기본 단계로 이루어집니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "64645136"
 2. 이 바인딩을 사용하는 엔드포인트를 만듭니다.  
   
 ## <a name="code-and-configuration"></a>코드 및 구성  
- 코드 또는 구성을 통해 바인딩을 정의하거나 구성할 수 있습니다. 이러한 두 방법은 사용되는 바인딩 형식에 관계가 없습니다. 예를 들어 시스템 제공 바인딩 또는 <xref:System.ServiceModel.Channels.CustomBinding> 바인딩을 사용하는지에 관계가 없습니다. 일반적으로 코드를 사용하면 컴파일 시 바인딩 정의를 완전히 제어할 수 있습니다. 시스템 관리자 또는 WCF 서비스 또는 바인딩 매개 변수를 변경 하는 클라이언트의 사용자 허용 반면에 구성을 사용 합니다. 특정 컴퓨터 요구를 예측 하 고 네트워크에 WCF 응용 프로그램을 배포 하는 상태를 방법이 없기 때문에이 유연성은 바람직한 경우가 많습니다. 바인딩(및 주소 지정) 정보를 코드와 구분하면 관리자가 응용 프로그램을 다시 컴파일하거나 다시 배포할 필요 없이 바인딩 세부 정보를 변경할 수 있습니다. 바인딩이 코드에서 정의된 경우 구성 파일에서 수행된 구성 기반 정의를 재정의합니다. 이러한 방법의 예는 다음 항목을 참조하세요.  
+ 코드 또는 구성을 통해 바인딩을 정의하거나 구성할 수 있습니다. 이러한 두 방법은 사용되는 바인딩 형식에 관계가 없습니다. 예를 들어 시스템 제공 바인딩 또는 <xref:System.ServiceModel.Channels.CustomBinding> 바인딩을 사용하는지에 관계가 없습니다. 일반적으로 코드를 사용하면 컴파일 시 바인딩 정의를 완전히 제어할 수 있습니다. 시스템 관리자 또는 WCF 서비스 또는 바인딩 매개 변수를 변경 하는 클라이언트의 사용자 허용 반면에 구성을 사용 합니다. 특정 컴퓨터 요구를 예측 하 고 네트워크에 WCF 응용 프로그램을 배포 하는 상태를 방법이 없기 때문에이 유연성은 바람직한 경우가 많습니다. 바인딩(및 주소 지정) 정보를 코드와 구분하면 관리자가 애플리케이션을 다시 컴파일하거나 다시 배포할 필요 없이 바인딩 세부 정보를 변경할 수 있습니다. 바인딩이 코드에서 정의된 경우 구성 파일에서 수행된 구성 기반 정의를 재정의합니다. 이러한 방법의 예는 다음 항목을 참조하세요.  
   
 - [방법: 관리 되는 응용 프로그램에서 WCF 서비스 호스팅](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md) 코드에서 바인딩을 만드는 방법의 예제를 제공 합니다.  
   

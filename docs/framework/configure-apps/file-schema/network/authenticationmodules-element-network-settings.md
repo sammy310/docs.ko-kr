@@ -53,7 +53,7 @@ ms.locfileid: "69659481"
  요소 `authenticationModule` 는 서버를 사용 하 여 인증 프로세스를 수행 하는 인증 모듈을 지정 합니다. 인증 모듈은 인터페이스를 <xref:System.Net.IAuthenticationModule> 구현 해야 합니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
- 이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
+ 이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
  다음 예에서는 인증 모듈을 사용 하도록 설정 합니다. Version 및 PublicKeyToken의 값을 지정 된 모듈의 올바른 값으로 바꾸어야 합니다.  

@@ -13,7 +13,7 @@ ms.locfileid: "61785959"
 System.ServiceModel.Channels.MsmqMatchedApplicationFound  
   
 ## <a name="description"></a>설명  
- MSMQ 정품 인증 서비스가 큐와 일치하는 응용 프로그램을 찾았습니다.  
+ MSMQ 정품 인증 서비스가 큐와 일치하는 애플리케이션을 찾았습니다.  
   
 ## <a name="see-also"></a>참고자료
 

@@ -23,9 +23,9 @@ ms.lasthandoff: 04/28/2019
 ms.locfileid: "64654386"
 ---
 # <a name="how-to-access-hardware-encryption-devices"></a>방법: 하드웨어 암호화 디바이스에 액세스
-<xref:System.Security.Cryptography.CspParameters> 클래스를 사용하여 하드웨어 암호화 장치에 액세스할 수 있습니다. 예를 들어 이 클래스를 사용하여 스마트 카드, 하드웨어 난수 생성기 또는 특정 암호화 알고리즘의 하드웨어 구현과 응용 프로그램을 통합할 수 있습니다.  
+<xref:System.Security.Cryptography.CspParameters> 클래스를 사용하여 하드웨어 암호화 디바이스에 액세스할 수 있습니다. 예를 들어 이 클래스를 사용하여 스마트 카드, 하드웨어 난수 생성기 또는 특정 암호화 알고리즘의 하드웨어 구현과 애플리케이션을 통합할 수 있습니다.  
   
- <xref:System.Security.Cryptography.CspParameters> 클래스는 제대로 설치된 하드웨어 암호화 장치에 액세스하는 CSP(암호화 서비스 공급자)를 만듭니다.  레지스트리 편집기 (Regedit.exe)를 사용 하 여 다음 레지스트리 키를 검사 하 여 CSP의 가용성을 확인할 수 있습니다.  HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Defaults\Provider.  
+ <xref:System.Security.Cryptography.CspParameters> 클래스는 제대로 설치된 하드웨어 암호화 디바이스에 액세스하는 CSP(암호화 서비스 공급자)를 만듭니다.  레지스트리 편집기 (Regedit.exe)를 사용 하 여 다음 레지스트리 키를 검사 하 여 CSP의 가용성을 확인할 수 있습니다.  HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Defaults\Provider.  
   
 ### <a name="to-sign-data-using-a-key-card"></a>키 카드를 사용하여 데이터에 서명하려면  
   

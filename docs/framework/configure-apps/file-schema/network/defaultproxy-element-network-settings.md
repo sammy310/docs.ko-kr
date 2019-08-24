@@ -64,7 +64,7 @@ HTTP(Hypertext Transfer Protocol) 프록시 서버를 구성합니다.
  [모듈](module-element-network-settings.md) 요소가 public이 아닌 형식을 지정 하거나, 형식이 <xref:System.Net.IWebProxy> 클래스에서 파생 되지 않거나,이 개체의 매개 변수가 없는 생성자에서 예외가 발생 했거나,를 검색 하는 동안 예외가 발생 한 경우 예외가 throw 됩니다. 시스템에서 지정한 기본 프록시입니다. 예외의 <xref:System.Exception.InnerException%2A> 속성에는 오류의 근본 원인에 대한 추가 정보가 있어야 합니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
- 이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
+ 이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 Internet Explorer 프록시의 기본값을 사용 하 고, 프록시 주소를 지정 하 고, 로컬 액세스 및 contoso.com 프록시를 무시 합니다.  

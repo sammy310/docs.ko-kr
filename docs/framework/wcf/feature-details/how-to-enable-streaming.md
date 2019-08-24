@@ -44,7 +44,7 @@ Windows Communication Foundation (WCF) 버퍼링 또는 스트리밍 전송을 �
   
      `BasicHttpBinding`은 `TransferMode` 및 `NetTcpBinding`과 같이 바인딩에 `NetNamedPipeBinding` 속성을 노출합니다. `TransferMode` 속성은 전송 바인딩 요소에서 설정하고 사용자 지정 바인딩에서 사용할 수도 있습니다.  
   
-     다음 샘플에서는 코드를 사용하거나 구성 파일을 변경하여 `TransferMode`를 설정하는 방법에 대해 보여 줍니다. 또한 이 샘플에서는 두 방법 모두 `maxReceivedMessageSize` 속성을 64MB로 설정하여 받을 수 있는 최대 메시지 크기를 설정합니다. 기본 `maxReceivedMessageSize`는 64KB이며, 이는 스트리밍 시나리오에서는 일반적으로 너무 낮은 수준입니다. 이 할당량을 응용 프로그램이 받을 최대 메시지 크기에 따라 적절히 설정합니다. 또한 `maxBufferSize`는 버퍼링되는 최대 크기를 제어하고 이를 적절히 설정합니다.  
+     다음 샘플에서는 코드를 사용하거나 구성 파일을 변경하여 `TransferMode`를 설정하는 방법에 대해 보여 줍니다. 또한 이 샘플에서는 두 방법 모두 `maxReceivedMessageSize` 속성을 64MB로 설정하여 받을 수 있는 최대 메시지 크기를 설정합니다. 기본 `maxReceivedMessageSize`는 64KB이며, 이는 스트리밍 시나리오에서는 일반적으로 너무 낮은 수준입니다. 이 할당량을 애플리케이션이 받을 최대 메시지 크기에 따라 적절히 설정합니다. 또한 `maxBufferSize`는 버퍼링되는 최대 크기를 제어하고 이를 적절히 설정합니다.  
   
     1. 샘플 중 다음 구성 조각은 `TransferMode` 및 사용자 지정 HTTP 바인딩에서 `basicHttpBinding` 속성을 스트리밍으로 설정하는 방법에 대해 보여 줍니다.  
   

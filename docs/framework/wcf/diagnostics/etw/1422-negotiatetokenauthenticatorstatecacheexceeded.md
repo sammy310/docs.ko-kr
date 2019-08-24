@@ -17,7 +17,7 @@ ms.locfileid: "61782189"
 |ID|1422|  
 |키워드|할당량|  
 |수준|Error|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
 ## <a name="description"></a>설명  
  이 이벤트는 협상 토큰 인증자 상태 캐시가 초과될 때 내보내집니다.  

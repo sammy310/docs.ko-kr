@@ -4,7 +4,7 @@ ms.date: 03/30/2017
 ms.assetid: c8a3e10a-8bc2-4a78-8d86-a562ba6e65fa
 ms.openlocfilehash: c53c22e388ec352b1275018c0b945c9608565084
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61932524"
@@ -15,7 +15,7 @@ IDN(Internationalized Domain Name)을 사용하는 WCF 서비스에 대한 지�
 ## <a name="systemuri-and-idn"></a>System.Uri 및 IDN  
  <xref:System.Uri>에는 <xref:System.Uri.Host%2A>와 <xref:System.Uri.DnsSafeHost%2A>라는 두 가지 속성이 있습니다. 이러한 속성에는 IDN 구성 설정에 따라 유니코드 또는 Punycode 값이 들어 있습니다.  
   
- IDN은 다음 XML을 사용하여 응용 프로그램의 구성 파일에서 사용할 수 있습니다.  
+ IDN은 다음 XML을 사용하여 애플리케이션의 구성 파일에서 사용할 수 있습니다.  
   
 ```xml  
 <configuration>  

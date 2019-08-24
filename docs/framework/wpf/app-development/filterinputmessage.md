@@ -33,10 +33,10 @@ HRESULT FilterInputMessage( [in] MSG* pMsg ) ;
   
  S_FALSE - 필터가 이 메시지를 처리했으며 추가 처리가 발생하면 안 됩니다.  
   
- E_NOTIMPL-이 값이 반환 되 면 [FilterInputMessage](filterinputmessage.md) 다시 호출 되지 않습니다. 이 값은 사용자 지정 진행률 및 오류 사용자 인터페이스를 PresentationHost.exe에 제공하는 것에만 관심이 있고 PresentationHost.exe에서 원시 입력 메시지를 전달받지 않으려는 호스트 응용 프로그램에서 반환될 수 있습니다.  
+ E_NOTIMPL-이 값이 반환 되 면 [FilterInputMessage](filterinputmessage.md) 다시 호출 되지 않습니다. 이 값은 사용자 지정 진행률 및 오류 사용자 인터페이스를 PresentationHost.exe에 제공하는 것에만 관심이 있고 PresentationHost.exe에서 원시 입력 메시지를 전달받지 않으려는 호스트 애플리케이션에서 반환될 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
- PresentationHost.exe는 키보드, 마우스 및 리모컨을 비롯한 다양한 원시 입력 장치의 대상입니다. 호스트 응용 프로그램의 동작이 그러지 않은 경우 PresentationHost.exe에서 사용되는 입력에 따라 달라지는 경우도 있습니다. 예를 들어 호스트 응용 프로그램은 특정 입력 메시지를 수신하여 특정 사용자 인터페이스 요소를 표시할지 여부를 확인할 수 있습니다.  
+ PresentationHost.exe는 키보드, 마우스 및 리모컨을 비롯한 다양한 원시 입력 디바이스의 대상입니다. 호스트 애플리케이션의 동작이 그러지 않은 경우 PresentationHost.exe에서 사용되는 입력에 따라 달라지는 경우도 있습니다. 예를 들어 호스트 애플리케이션은 특정 입력 메시지를 수신하여 특정 사용자 인터페이스 요소를 표시할지 여부를 확인할 수 있습니다.  
   
  이러한 동작을 제공 하는 데 필요한 입력된 메시지를 수신 하는 호스트 응용 프로그램을 허용 하려면 PresentationHost.exe를 호출 하 여 호스 티 드 응용 프로그램에 적절 한 원시 입력된 메시지를 전달 [FilterInputMessage](filterinputmessage.md)합니다.  
   

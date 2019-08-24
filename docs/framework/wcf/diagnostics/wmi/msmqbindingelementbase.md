@@ -42,7 +42,7 @@ class MsmqBindingElementBase : TransportBindingElement
   
  액세스 형식: 읽기 전용  
   
- 응용 프로그램별 배달 못 한 편지 큐의 위치를 포함하는 URI입니다. 이 큐에는 만료되었거나 전송 또는 전달하지 못한 메시지가 보관됩니다.  
+ 애플리케이션별 배달 못 한 편지 큐의 위치를 포함하는 URI입니다. 이 큐에는 만료되었거나 전송 또는 전달하지 못한 메시지가 보관됩니다.  
   
 ### <a name="deadletterqueue"></a>DeadLetterQueue  
  데이터 형식: string  
@@ -70,7 +70,7 @@ class MsmqBindingElementBase : TransportBindingElement
   
  액세스 형식: 읽기 전용  
   
- 수신 응용 프로그램으로 메시지 전달을 시도하는 최대 재시도 주기 수입니다.  
+ 수신 애플리케이션으로 메시지 전달을 시도하는 최대 재시도 주기 수입니다.  
   
 ### <a name="receiveerrorhandling"></a>ReceiveErrorHandling  
  데이터 형식: string  
@@ -84,7 +84,7 @@ class MsmqBindingElementBase : TransportBindingElement
   
  액세스 형식: 읽기 전용  
   
- 응용 프로그램 큐에서 읽은 메시지에 대해 즉시 재시도하는 최대 횟수입니다.  
+ 애플리케이션 큐에서 읽은 메시지에 대해 즉시 재시도하는 최대 횟수입니다.  
   
 ### <a name="retrycycledelay"></a>RetryCycleDelay  
  데이터 형식: datetime  

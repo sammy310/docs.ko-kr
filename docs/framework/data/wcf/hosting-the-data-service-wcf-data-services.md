@@ -32,11 +32,11 @@ WCF Data Services를 사용 하 여 데이터를 노출 하는 서비스를 만�
 
 - ASP.NET 응용 프로그램입니다.
 
-- 자체 호스팅 WCF 서비스를 지원하는 관리되는 응용 프로그램에서
+- 자체 호스팅 WCF 서비스를 지원하는 관리되는 애플리케이션에서
 
 - 다른 사용자 지정 데이터 서비스 호스트에서
 
-## <a name="hosting-a-data-service-in-an-aspnet-application"></a>ASP.NET 응용 프로그램에서 데이터 서비스 호스팅
+## <a name="hosting-a-data-service-in-an-aspnet-application"></a>ASP.NET 애플리케이션에서 데이터 서비스 호스팅
 
 사용 하는 경우는 **새 항목 추가** 도구 ASP.NET 응용 프로그램에서 데이터 서비스를 정의 하려면 Visual Studio 2015의 대화 상자는 프로젝트에서 두 개의 새 파일을 생성 합니다. 첫 번째 파일은 확장명이 `.svc`이고 데이터 서비스를 인스턴스화하는 방법을 WCF 런타임에 지시합니다. 다음은 완료할 때 만들었던 Northwind 샘플 데이터 서비스에 대 한이 파일의 예는 [퀵 스타트](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md):
 
@@ -48,7 +48,7 @@ WCF Data Services를 사용 하 여 데이터를 노출 하는 서비스를 만�
     Service="NorthwindService.Northwind" %>
 ```
 
- 이 지시문은 <xref:System.Data.Services.DataServiceHostFactory> 클래스를 사용하여 명명된 데이터 서비스 클래스에 대한 서비스 호스트를 만들도록 응용 프로그램에 지시합니다.
+ 이 지시문은 <xref:System.Data.Services.DataServiceHostFactory> 클래스를 사용하여 명명된 데이터 서비스 클래스에 대한 서비스 호스트를 만들도록 애플리케이션에 지시합니다.
 
  `.svc` 파일의 코드 숨김 페이지에는 Northwind 샘플 데이터 서비스에 대해 다음과 같이 정의된 데이터 서비스 자체의 구현인 클래스가 포함되어 있습니다.
 

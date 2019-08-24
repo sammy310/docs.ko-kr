@@ -32,7 +32,7 @@ ms.locfileid: "57367507"
 
 공급자 스레드를 통한 항목 추가 순서와 항목 열거 순서는 같지 않을 수 있습니다.
 
-컬렉션을 수정하지 않고 열거하려면 <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A> 메서드 없이 `foreach`(`For Each`)만 사용하면 됩니다. 그러나 이와 같이 열거한 결과는 특정 시점의 컬렉션을 나타내는 스냅숏에 불과하다는 사실을 이해할 필요가 있습니다. 루프를 실행하는 동시에 다른 스레드를 통해 항목을 추가하거나 제거하고 있는 경우에는 루프에서 컬렉션의 실제 상태를 나타내지 않을 수 있습니다.
+컬렉션을 수정하지 않고 열거하려면 <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A> 메서드 없이 `foreach`(`For Each`)만 사용하면 됩니다. 그러나 이와 같이 열거한 결과는 특정 시점의 컬렉션을 나타내는 스냅샷에 불과하다는 사실을 이해할 필요가 있습니다. 루프를 실행하는 동시에 다른 스레드를 통해 항목을 추가하거나 제거하고 있는 경우에는 루프에서 컬렉션의 실제 상태를 나타내지 않을 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c6f1a2d23d5f33ba7e4f0d51f795e75d7cf785e
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 7545e1d7079664fd8706bdddac2ff3c8ebc27c7f
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052445"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988297"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>런타임 지시문(rd.xml) 구성 파일 참조
 
@@ -17,19 +17,19 @@ ms.locfileid: "66052445"
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
-<Application>
-  <Namespace Name="Contoso.Cloud.AppServices" Serialize="Required Public" />
-  <Namespace Name="ContosoClient.ViewModels" Serialize="Required Public" />
-  <Namespace Name="ContosoClient.DataModel" Serialize="Required Public" />
-  <Namespace Name="Contoso.Reader.UtilityLib" Serialize="Required Public" />
+  <Application>
+    <Namespace Name="Contoso.Cloud.AppServices" Serialize="Required Public" />
+    <Namespace Name="ContosoClient.ViewModels" Serialize="Required Public" />
+    <Namespace Name="ContosoClient.DataModel" Serialize="Required Public" />
+    <Namespace Name="Contoso.Reader.UtilityLib" Serialize="Required Public" />
 
-  <Namespace Name="System.Collections.ObjectModel" >
-    <TypeInstantiation Name="ObservableCollection"
-          Arguments="ContosoClient.DataModel.ProductItem" Serialize="Public" />
-    <TypeInstantiation Name="ReadOnlyObservableCollection"
-          Arguments="ContosoClient.DataModel.ProductGroup" Serialize="Public" />
-  </Namespace>
-</Application>
+    <Namespace Name="System.Collections.ObjectModel" >
+      <TypeInstantiation Name="ObservableCollection"
+            Arguments="ContosoClient.DataModel.ProductItem" Serialize="Public" />
+      <TypeInstantiation Name="ReadOnlyObservableCollection"
+            Arguments="ContosoClient.DataModel.ProductGroup" Serialize="Public" />
+    </Namespace>
+  </Application>
 </Directives>
 ```
 
@@ -41,27 +41,27 @@ ms.locfileid: "66052445"
 
 참조 정보를 확인하려면 다음 구조체의 요소를 선택하거나 [런타임 지시문 요소](../../../docs/framework/net-native/runtime-directive-elements.md)를 참조하세요. 다음 계층 구조에서 줄임표는 재귀 구조를 표시합니다. 괄호 안의 정보는 해당 요소가 필수 항목인지 선택적 항목인지와 요소가 사용되는 경우 허용되는 인스턴스 수(하나 또는 여러 개)를 나타냅니다.
 
-[지시문](../../../docs/framework/net-native/directives-element-net-native.md) [1:1] [응용 프로그램](../../../docs/framework/net-native/application-element-net-native.md) [0:1] [어셈블리](../../../docs/framework/net-native/assembly-element-net-native.md) [0: m] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: m]. . .
-[형식](../../../docs/framework/net-native/type-element-net-native.md) [0: m]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: m]. . .
-[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: m] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: m]. . .
-[형식](../../../docs/framework/net-native/type-element-net-native.md) [0: m]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: m]. . .
-[형식](../../../docs/framework/net-native/type-element-net-native.md) [0: m] [하위](../../../docs/framework/net-native/subtypes-element-net-native.md) (포함 형식의 하위 클래스) [O:1] [형식](../../../docs/framework/net-native/type-element-net-native.md) [0: m]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: m]. . .
-[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (포함 형식이 특성 임) [O:1] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: m] [메서드](../../../docs/framework/net-native/method-element-net-native.md) [0: m] [매개 변수](../../../docs/framework/net-native/parameter-element-net-native.md) [0: m] [ TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0: m] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: m] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (생성 된 제네릭 메서드) [0: m] [속성](../../../docs/framework/net-native/property-element-net-native.md) [0: m] [필드](../../../docs/framework/net-native/field-element-net-native.md) [0: m] [이벤트](../../../docs/framework/net-native/event-element-net-native.md) [0: m] [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: m] [형식](../../../docs/framework/net-native/type-element-net-native.md) [0: m]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: m]. . .
-[메서드](../../../docs/framework/net-native/method-element-net-native.md) [0: m] [매개 변수](../../../docs/framework/net-native/parameter-element-net-native.md) [0: m] [TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0: m] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: m] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) ( 생성 된 제네릭 메서드) [0: m] [속성](../../../docs/framework/net-native/property-element-net-native.md) [0: m] [필드](../../../docs/framework/net-native/field-element-net-native.md) [0: m] [Event](../../../docs/framework/net-native/event-element-net-native.md) [0: m] [라이브러리](../../../docs/framework/net-native/library-element-net-native.md) [0: m] [어셈블리](../../../docs/framework/net-native/assembly-element-net-native.md) [0: m] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: m]. . .
-[형식](../../../docs/framework/net-native/type-element-net-native.md) [0: m]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: m]. . .
-[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: m] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: m]. . .
-[형식](../../../docs/framework/net-native/type-element-net-native.md) [0: m]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: m]. . .
-[형식](../../../docs/framework/net-native/type-element-net-native.md) [0: m] [하위](../../../docs/framework/net-native/subtypes-element-net-native.md) (포함 형식의 하위 클래스) [O:1] [형식](../../../docs/framework/net-native/type-element-net-native.md) [0: m]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: m]. . .
-[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (포함 형식이 특성 임) [O:1] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: m] [메서드](../../../docs/framework/net-native/method-element-net-native.md) [0: m] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (생성 된 제네릭 메서드) [0: m] [속성](../../../docs/framework/net-native/property-element-net-native.md) [0: m] [필드](../../../docs/framework/net-native/field-element-net-native.md) [0: m] [Event](../../../docs/framework/net-native/event-element-net-native.md) [0: m] [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M] [형식](../../../docs/framework/net-native/type-element-net-native.md) [0: m]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: m]. . .
-[메서드](../../../docs/framework/net-native/method-element-net-native.md) [0: m] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (생성 된 제네릭 메서드) [0: m] [속성](../../../docs/framework/net-native/property-element-net-native.md) [0: m] [필드](../../../docs/framework/net-native/field-element-net-native.md) [0: m] [이벤트](../../../docs/framework/net-native/event-element-net-native.md)[0: m]
+[지시문](../../../docs/framework/net-native/directives-element-net-native.md) [1:1] [응용 프로그램](../../../docs/framework/net-native/application-element-net-native.md) [0:1] [어셈블리](../../../docs/framework/net-native/assembly-element-net-native.md) [0: m] [네임 스페이스](../../../docs/framework/net-native/namespace-element-net-native.md) [0: m]. 을 선택합니다. 을 선택합니다.
+[유형](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
+[Typeinstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
+[네임 스페이스](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M] [네임 스페이스](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
+[유형](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
+[Typeinstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
+[유형](../../../docs/framework/net-native/type-element-net-native.md) [0: M] [하위 유형](../../../docs/framework/net-native/subtypes-element-net-native.md) (포함 형식의 하위 클래스) O:1 [유형](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
+[Typeinstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
+[Attributeimplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (형식이 포함 된 특성) O:1 [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [메서드](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [매개 변수](../../../docs/framework/net-native/parameter-element-net-native.md) [0: M] [Typeparameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0: M] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [Methodinstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (생성 된 제네릭 메서드) [0: M] [속성](../../../docs/framework/net-native/property-element-net-native.md) [0: M] [필드](../../../docs/framework/net-native/field-element-net-native.md) [0: M] [이벤트](../../../docs/framework/net-native/event-element-net-native.md) [0: M] [Typeinstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M] [유형](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
+[Typeinstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
+[메서드](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [매개 변수](../../../docs/framework/net-native/parameter-element-net-native.md) [0: M] [Typeparameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0: M] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [Methodinstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (생성 된 제네릭 메서드) [0: M] [속성](../../../docs/framework/net-native/property-element-net-native.md) [0: M] [필드](../../../docs/framework/net-native/field-element-net-native.md) [0: M] [이벤트](../../../docs/framework/net-native/event-element-net-native.md) [0: M] [라이브러리](../../../docs/framework/net-native/library-element-net-native.md) [0: M] [어셈블리](../../../docs/framework/net-native/assembly-element-net-native.md) [0: M] [네임 스페이스](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
+[유형](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
+[Typeinstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
+[네임 스페이스](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M] [네임 스페이스](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
+[유형](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
+[Typeinstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
+[유형](../../../docs/framework/net-native/type-element-net-native.md) [0: M] [하위 유형](../../../docs/framework/net-native/subtypes-element-net-native.md) (포함 형식의 하위 클래스) O:1 [유형](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
+[Typeinstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
+[Attributeimplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (형식이 포함 된 특성) O:1 [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [메서드](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [Methodinstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (생성 된 제네릭 메서드) [0: M] [속성](../../../docs/framework/net-native/property-element-net-native.md) [0: M] [필드](../../../docs/framework/net-native/field-element-net-native.md) [0: M] [이벤트](../../../docs/framework/net-native/event-element-net-native.md) [0: M] [Typeinstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M] [유형](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
+[Typeinstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
+[메서드](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [Methodinstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (생성 된 제네릭 메서드) [0: M] [속성](../../../docs/framework/net-native/property-element-net-native.md) [0: M] [필드](../../../docs/framework/net-native/field-element-net-native.md) [0: M] [이벤트](../../../docs/framework/net-native/event-element-net-native.md) [0: M]
 
 [Application](../../../docs/framework/net-native/application-element-net-native.md) 요소는 특성을 포함할 수 없거나 [런타임 지시문 및 정책 섹션](#Directives)에서 설명하는 정책 특성을 포함할 수 있습니다.
 
@@ -403,9 +403,9 @@ ms.locfileid: "66052445"
 
 - 필드의 형식이 `Serialize` 정책으로 표시됩니다.
 
-#### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a>XmlSerializer, DataContractSerializer 및 DataContractJsonSerializer 정책의 효과
+#### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a>XmlSerializer, DataContractSerializer 및 DataContractJsonSerializer 정책의 영향
 
-와 달리를 `Serialize` 리플렉션 기반 serializer를 위한 정책 합니다 <xref:System.Xml.Serialization.XmlSerializer>, <xref:System.Runtime.Serialization.DataContractSerializer>, 및 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 정책을 사용 하는.NET 네이티브 도구 체인으로 알려져 serializer의 집합을 사용 하도록 설정 합니다. 이러한 serializer는 리플렉션을 사용하여 구현되지 않으며 런타임에 serialize할 수 있는 형식 집합은 리플렉션 가능한 형식과 비슷한 방식으로 결정됩니다.
+리플렉션 기반 serializer <xref:System.Xml.Serialization.XmlSerializer>에 사용 되는 <xref:System.Runtime.Serialization.DataContractSerializer> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> `Serialize` 정책과 달리, 및 정책은 .NET 네이티브 도구 체인에 알려진 일련의 직렬 변환기를 사용 하도록 설정 하는 데 사용 됩니다. 이러한 serializer는 리플렉션을 사용하여 구현되지 않으며 런타임에 serialize할 수 있는 형식 집합은 리플렉션 가능한 형식과 비슷한 방식으로 결정됩니다.
 
 이러한 정책 중 하나를 형식에 적용하면 일치하는 serializer를 사용하여 형식을 serialize할 수 있습니다. 또한 serialization 엔진이 serialization을 수행해야 한다고 정적으로 확인할 수 있는 모든 형식도 serialize할 수 있습니다.
 

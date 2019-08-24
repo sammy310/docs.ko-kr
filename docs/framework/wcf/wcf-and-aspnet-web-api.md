@@ -10,7 +10,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61791271"
 ---
 # <a name="wcf-and-aspnet-web-api"></a>WCF 및 ASP.NET Web API
-WCF는 서비스 기반 응용 프로그램을 빌드하기 위한 Microsoft의 통합 프로그래밍 모델이며, 이를 통해 개발자는 플랫폼 간에 통합되고 기존 투자와 상호 운용할 수 있는 안정적인 보안 트랜잭션된 솔루션을 빌드할 수 있습니다. [ASP.NET Web API](https://www.asp.net/web-api) 쉽고 광범위 한 브라우저 및 모바일 장치를 비롯 하 여 클라이언트를 연결 하는 HTTP 서비스를 구축할 수 있는 프레임 워크입니다. ASP.NET Web API는 .NET Framework에서 RESTful 응용 프로그램을 빌드하는 데 이상적인 플랫폼입니다. 이 항목에서는 요구 사항에 가장 적합한 기술을 결정하는 데 도움이 되는 몇 가지 지침을 제공합니다.  
+WCF는 서비스 기반 애플리케이션을 빌드하기 위한 Microsoft의 통합 프로그래밍 모델이며, 이를 통해 개발자는 플랫폼 간에 통합되고 기존 투자와 상호 운용할 수 있는 안정적인 보안 트랜잭션된 솔루션을 빌드할 수 있습니다. [ASP.NET Web API](https://www.asp.net/web-api) 쉽고 광범위 한 브라우저 및 모바일 장치를 비롯 하 여 클라이언트를 연결 하는 HTTP 서비스를 구축할 수 있는 프레임 워크입니다. ASP.NET Web API는 .NET Framework에서 RESTful 애플리케이션을 빌드하는 데 이상적인 플랫폼입니다. 이 항목에서는 요구 사항에 가장 적합한 기술을 결정하는 데 도움이 되는 몇 가지 지침을 제공합니다.  
   
 ## <a name="choosing-which-technology-to-use"></a>사용할 기술 선택  
  다음 표에서는 각 기술의 주요 기능에 대해 설명합니다.  

@@ -23,7 +23,7 @@ ms.locfileid: "61787545"
  순환 버퍼 추적 수신기의 구현 방법을 보여 줍니다.  
   
  [ETW 추적](../../../../docs/framework/wcf/samples/etw-tracing.md)  
- ETW(Windows용 이벤트 추적)를 사용하여 E2E(종단 간) 추적을 구현하는 방법을 보여 줍니다.  
+ ETW(Windows용 이벤트 추적)를 사용하여 E2E(엔드투엔드) 추적을 구현하는 방법을 보여 줍니다.  
   
  [추적 확장](../../../../docs/framework/wcf/samples/extending-tracing.md)  
  클라이언트 및 서비스 코드에 사용자 정의 동작 추적을 작성 하 여 WCF 추적 기능을 확장 하는 방법을 보여 줍니다.  

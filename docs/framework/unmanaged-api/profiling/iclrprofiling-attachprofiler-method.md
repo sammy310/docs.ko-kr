@@ -68,7 +68,7 @@ HRESULT AttachProfiler(
 |CORPROF_E_PROFILER_NOT_ATTACHABLE|지정된 프로파일러가 연결을 지원하지 않습니다. 트리거 프로세스가 다른 프로파일러를 연결하려고 시도할 수 있습니다.|  
 |CORPROF_E_PROFILEE_INCOMPATIBLE_WITH_TRIGGER|대상 프로세스 버전이 `AttachProfiler`를 호출하는 현재 프로세스와 호환되지 않으므로 프로파일러 연결을 요청할 수 없습니다.|  
 |HRESULT_FROM_WIN32(ERROR_ACCESS_DENIED)|트리거 프로세스의 사용자에게 대상 프로세스에 액세스할 수 있는 권한이 없습니다.|  
-|HRESULT_FROM_WIN32(ERROR_PRIVILEGE_NOT_HELD)|트리거 프로세스의 사용자에게 프로파일러를 지정된 대상 프로세스에 연결하는 데 필요한 권한이 없습니다. 응용 프로그램 이벤트 로그에 자세한 정보가 포함될 수 있습니다.|  
+|HRESULT_FROM_WIN32(ERROR_PRIVILEGE_NOT_HELD)|트리거 프로세스의 사용자에게 프로파일러를 지정된 대상 프로세스에 연결하는 데 필요한 권한이 없습니다. 애플리케이션 이벤트 로그에 자세한 정보가 포함될 수 있습니다.|  
 |CORPROF_E_IPC_FAILED|대상 프로세스와 통신할 때 오류가 발생했습니다. 이 문제는 일반적으로 대상 프로세스를 종료하는 경우에 발생합니다.|  
 |HRESULT_FROM_WIN32(ERROR_FILE_NOT_FOUND)|대상 프로세스가 없거나 연결을 지원하는 CLR을 실행하지 않습니다. 이는 런타임 열거형 메서드 호출 이후에 CLR가 언로드되었음을 나타낼 수 있습니다.|  
 |HRESULT_FROM_WIN32(ERROR_TIMEOUT)|프로파일러 로드를 시작하지 않고 시간 제한이 만료되었습니다. 연결 작업을 다시 시도할 수 있습니다. 시간 초과는 대상 프로세스의 종료자가 시간 제한 값보다 오래 실행되는 경우에 발생합니다.|  

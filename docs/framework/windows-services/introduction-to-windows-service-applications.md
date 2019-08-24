@@ -1,5 +1,5 @@
 ---
-title: Windows 서비스 응용 프로그램 소개
+title: Windows 서비스 애플리케이션 소개
 ms.date: 03/30/2017
 f1_keywords:
 - ServiceController
@@ -29,7 +29,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64599880"
 ---
-# <a name="introduction-to-windows-service-applications"></a>Windows 서비스 응용 프로그램 소개
+# <a name="introduction-to-windows-service-applications"></a>Windows 서비스 애플리케이션 소개
 과거에 NT 서비스라고 불리던 Microsoft Windows 서비스를 사용하면 고유한 Windows 세션에서 장시간 실행되는 애플리케이션을 만들 수 있습니다. 이러한 서비스는 컴퓨터가 부팅될 때 자동으로 시작될 수 있고, 일시 중지 및 다시 시작할 수 있으며, 사용자 인터페이스를 표시하지 않습니다. 이러한 특징 때문에 서버에서 사용하거나 같은 컴퓨터에서 작업하는 다른 사용자를 방해하지 않는 장기 실행 기능이 필요한 경우 유용합니다. 로그온한 사용자나 기본 컴퓨터 계정과 다른 특정 사용자 계정의 보안 컨텍스트에서 서비스를 실행할 수도 있습니다. 서비스 및 Windows 세션에 대한 자세한 내용은 Windows SDK 설명서를 참조하세요.  
   
  서비스로 설치되는 애플리케이션을 만들어 서비스를 쉽게 만들 수 있습니다. 예를 들어 성능 카운터 데이터를 모니터링하고 임계값에 대응하려 한다고 가정합니다. 이 경우 성능 카운터 데이터를 수신하고, 애플리케이션을 배포하고, 데이터 수집 및 분석을 시작하는 Windows 서비스 애플리케이션을 만들 수 있습니다.  

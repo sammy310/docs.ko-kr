@@ -44,10 +44,10 @@ ms.locfileid: "67025936"
  데이터 액세스 서비스 계층에서 대상 프로세스의 어셈블리 메타데이터를 찾는 데 사용되는 인터페이스입니다.  
   
  [ICorDebug 인터페이스](icordebug-interface.md)\
- 개발자가 CLR 환경에서 응용 프로그램을 디버깅하는 데 사용할 수 있는 메서드를 제공합니다.  
+ 개발자가 CLR 환경에서 애플리케이션을 디버깅하는 데 사용할 수 있는 메서드를 제공합니다.  
   
  [ICorDebugAppDomain 인터페이스](icordebugappdomain-interface.md)\
- 응용 프로그램 도메인 디버깅에 사용하는 메서드를 제공합니다.  
+ 애플리케이션 도메인 디버깅에 사용하는 메서드를 제공합니다.  
   
  [ICorDebugAppDomain2 인터페이스](icordebugappdomain2-interface.md)\
  배열, 포인터, 함수 포인터 및 ByRef 형식에 사용할 수 있는 메서드를 제공합니다. 이 인터페이스는 `ICorDebugAppDomain` 인터페이스의 확장입니다.  
@@ -335,7 +335,7 @@ ms.locfileid: "67025936"
  시작할 수 있거나 원격 대상 프로세스에 관리되는 디버거를 연결할 수 있는 기능을 제공합니다.  
   
  [ICorDebugRemoteTarget 인터페이스](icordebugremotetarget-interface.md)\
- CLR 환경에서 Silverlight 기반 응용 프로그램을 디버깅하는 데 사용할 수 있는 메서드를 제공합니다.  
+ CLR 환경에서 Silverlight 기반 애플리케이션을 디버깅하는 데 사용할 수 있는 메서드를 제공합니다.  
   
  [ICorDebugRuntimeUnwindableFrame 인터페이스](icordebugruntimeunwindableframe-interface.md)\
  프레임을 해제하는 데 CLR(공용 언어 런타임)을 필요로 하는 관리되지 않는 메서드에 대한 지원을 제공합니다.  
@@ -422,7 +422,7 @@ ms.locfileid: "67025936"
  게시 프로세스에 대한 일반적인 인터페이스로 사용합니다.  
   
  [ICorPublishAppDomain 인터페이스](icorpublishappdomain-interface.md)\
- 응용 프로그램 도메인을 나타내고 응용 프로그램 도메인에 대한 정보를 제공합니다.  
+ 애플리케이션 도메인을 나타내고 애플리케이션 도메인에 대한 정보를 제공합니다.  
   
  [ICorPublishAppDomainEnum 인터페이스](icorpublishappdomainenum-interface.md)\
  프로세스 내에 현재 있는 `ICorPublishAppDomain` 개체의 컬렉션을 이동하는 메서드를 제공합니다.  

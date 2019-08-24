@@ -19,7 +19,7 @@ ms.lasthandoff: 07/20/2019
 ms.locfileid: "68364219"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>방법: 명령줄에서 Windows Forms 응용 프로그램 만들기
-다음 절차에서는 명령줄에서 Windows Forms 응용 프로그램을 만들고 실행하기 위해 완료해야 하는 기본 단계를 설명합니다. Visual Studio에서는 이러한 절차가 광범위하게 지원됩니다.  [또한 연습: WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)에서 Windows Forms 컨트롤 호스팅.  
+다음 절차에서는 명령줄에서 Windows Forms 애플리케이션을 만들고 실행하기 위해 완료해야 하는 기본 단계를 설명합니다. Visual Studio에서는 이러한 절차가 광범위하게 지원됩니다.  [또한 연습: WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)에서 Windows Forms 컨트롤 호스팅.  
   
 ## <a name="procedure"></a>프로시저  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68364219"
      [!code-csharp[System.Windows.Forms.BasicForm#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.BasicForm#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#5)]  
   
-#### <a name="to-compile-and-run-the-application"></a>응용 프로그램을 컴파일하고 실행하려면  
+#### <a name="to-compile-and-run-the-application"></a>애플리케이션을 컴파일하고 실행하려면  
   
 1. .NET Framework 명령 프롬프트에서 `Form1` 클래스를 만든 디렉터리로 이동합니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "68364219"
 ## <a name="adding-a-control-and-handling-an-event"></a>컨트롤 추가 및 이벤트 처리  
  이전 절차의 단계에서는 컴파일 및 실행되는 기본 Windows Form을 만드는 방법만 보여 주었습니다. 다음 절차에서는 컨트롤을 만들고 폼에 추가한 다음 컨트롤에 대한 이벤트를 처리하는 방법을 보여 줍니다. Windows Forms에 추가할 수 있는 컨트롤에 대 한 자세한 내용은 [Windows Forms 컨트롤](./controls/index.md)을 참조 하세요.  
   
- Windows Forms 응용 프로그램을 만드는 방법을 이해하는 것은 물론 이벤트 기반 프로그래밍 및 사용자 입력을 처리하는 방법도 이해해야 합니다. 자세한 내용은 [Windows Forms에서 이벤트 처리기 만들기](creating-event-handlers-in-windows-forms.md)및 [사용자 입력 처리](./controls/handling-user-input.md) 를 참조 하세요.  
+ Windows Forms 애플리케이션을 만드는 방법을 이해하는 것은 물론 이벤트 기반 프로그래밍 및 사용자 입력을 처리하는 방법도 이해해야 합니다. 자세한 내용은 [Windows Forms에서 이벤트 처리기 만들기](creating-event-handlers-in-windows-forms.md)및 [사용자 입력 처리](./controls/handling-user-input.md) 를 참조 하세요.  
   
 #### <a name="to-declare-a-button-control-and-handle-its-click-event"></a>단추 컨트롤을 선언하고 해당 click 이벤트를 처리하려면  
   
@@ -101,7 +101,7 @@ ms.locfileid: "68364219"
      [!code-csharp[System.Windows.Forms.FormWithButton#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.FormWithButton#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#4)]  
   
-7. 이전 절차에서 설명한 대로 응용 프로그램을 컴파일 및 실행합니다.  
+7. 이전 절차에서 설명한 대로 애플리케이션을 컴파일 및 실행합니다.  
   
 ## <a name="example"></a>예제  
  다음 코드 예제는 이전 절차의 전체 예제입니다.  

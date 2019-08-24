@@ -90,7 +90,7 @@ namespace Metadata.Samples
 </configuration>  
 ```  
   
-### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a>응용 프로그램 구성 파일을 사용하여 WCF 서비스의 메타데이터를 게시하려면  
+### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a>애플리케이션 구성 파일을 사용하여 WCF 서비스의 메타데이터를 게시하려면  
   
 1. App.config 파일 내에서 `</services>` 요소를 닫은 후`<behaviors>` 요소를 만듭니다.  
 
@@ -150,13 +150,13 @@ namespace Metadata.Samples
   
 8. 이전 단계에 추가된 메타데이터 엔드포인트에 대해 주소를 다음과 같이 설정합니다.  
   
-    - 기본 주소가 메타데이터 바인딩과 동일한 경우 호스트 응용 프로그램의 기본 주소를 게시 지점으로 사용하는 빈 문자열  
+    - 기본 주소가 메타데이터 바인딩과 동일한 경우 호스트 애플리케이션의 기본 주소를 게시 지점으로 사용하는 빈 문자열  
   
-    - 호스트 응용 프로그램에 기본 주소가 있는 경우 상대 주소  
+    - 호스트 애플리케이션에 기본 주소가 있는 경우 상대 주소  
   
     - 절대 경로  
   
-9. 콘솔 응용 프로그램을 빌드하고 실행합니다.  
+9. 콘솔 애플리케이션을 빌드하고 실행합니다.  
   
 10. Internet Explorer를 사용 하 여 서비스의 기본 주소 (http://localhost:8001/MetadataSample 이 예제의) 및 메타 데이터 게시 기능이 켜져 있는지 확인 합니다. 그렇지 않은 경우에 결과 페이지의 맨 위에 있는 메시지가 표시 됩니다. "이이 서비스에 대 한 메타 데이터 게시는 현재 사용할 수 없습니다."  
   

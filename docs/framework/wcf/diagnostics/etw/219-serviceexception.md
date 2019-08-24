@@ -17,7 +17,7 @@ ms.locfileid: "61781734"
 |ID|219|  
 |키워드|EndToEndMonitoring, HealthMonitoring, 문제 해결, ServiceModel|  
 |수준|Error|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
 ## <a name="description"></a>설명  
  이 이벤트는 WCF 서비스에서 처리되지 않은 예외가 발생할 때 내보내집니다. 이러한 처리되지 않은 예외로는 활성화 중에 발생한 예외, 메시지 처리 중에 발생한 예외 및 사용자 코드에서 발생한 예외가 있습니다.  

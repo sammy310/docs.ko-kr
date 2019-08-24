@@ -34,7 +34,7 @@ ms.lasthandoff: 04/28/2019
 ms.locfileid: "64582906"
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim 문(Visual Basic)
-배열 변수의 저장 공간을 다시 할당합니다.  
+배열 변수의 스토리지 공간을 다시 할당합니다.  
   
 ## <a name="syntax"></a>구문  
   

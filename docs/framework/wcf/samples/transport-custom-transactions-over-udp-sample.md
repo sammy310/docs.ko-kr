@@ -219,9 +219,9 @@ if (transaction != null)
        adding 4 + 8  
     ```  
   
-6. 서비스 응용 프로그램은 클라이언트가 보낸, `The client transaction has flowed to the service` 작업의 `clientTransactionId` 매개 변수에 포함된 트랜잭션 식별자를 서비스 트랜잭션의 식별자와 일치시킬 수 있는 경우 `CalculatorService.Add()`라는 메시지를 표시합니다. 이 두 식별자는 클라이언트 트랜잭션이 서비스로 이동한 경우에만 일치합니다.  
+6. 서비스 애플리케이션은 클라이언트가 보낸, `The client transaction has flowed to the service` 작업의 `clientTransactionId` 매개 변수에 포함된 트랜잭션 식별자를 서비스 트랜잭션의 식별자와 일치시킬 수 있는 경우 `CalculatorService.Add()`라는 메시지를 표시합니다. 이 두 식별자는 클라이언트 트랜잭션이 서비스로 이동한 경우에만 일치합니다.  
   
-7. 구성을 사용하여 게시된 엔드포인트에 대해 클라이언트 응용 프로그램을 실행하려면 서비스 응용 프로그램 창에서 Enter 키를 누른 다음 테스트 클라이언트를 다시 실행합니다. 서비스에서 다음과 같이 출력되어야 합니다.  
+7. 구성을 사용하여 게시된 엔드포인트에 대해 클라이언트 애플리케이션을 실행하려면 서비스 애플리케이션 창에서 Enter 키를 누른 다음 테스트 클라이언트를 다시 실행합니다. 서비스에서 다음과 같이 출력되어야 합니다.  
   
     ```  
     Testing Udp From Config.  
@@ -231,7 +231,7 @@ if (transaction != null)
   
 8. 서비스에 대해 클라이언트를 실행하면 이전과 비슷한 출력이 표시됩니다.  
   
-9. Svcutil.exe를 사용하여 클라이언트 코드 및 구성을 다시 생성하려면 서비스 응용 프로그램을 시작한 다음 샘플의 루트 디렉터리에서 다음 Svcutil.exe 명령을 실행합니다.  
+9. Svcutil.exe를 사용하여 클라이언트 코드 및 구성을 다시 생성하려면 서비스 애플리케이션을 시작한 다음 샘플의 루트 디렉터리에서 다음 Svcutil.exe 명령을 실행합니다.  
   
     ```  
     svcutil http://localhost:8000/udpsample/ /reference:UdpTransport\bin\UdpTransport.dll /svcutilConfig:svcutil.exe.config  

@@ -15,7 +15,7 @@ ASP.NET을 사용 하 여 개발을 계속 기존 응용 프로그램을 유지 
 
 새 WCF 응용 프로그램은 기존 ASP.NET 웹 서비스와 동일한 컴퓨터에 배포할 수 있습니다. 기존 ASP.NET 웹 서비스의.NET Framework 버전 2.0 이전 버전을 사용 하는 경우 선택적으로 호스트 해야 하는 새 WCF 응용 프로그램에는 IIS 응용 프로그램에.NET Framework 2.0을 배포 하려면 ASP.NET IIS 등록 도구를 사용할 수 있습니다. 해당 도구에 설명 되어 있습니다 [ASP.NET IIS Registration Tool (Aspnet_regiis.exe)](https://go.microsoft.com/fwlink/?LinkId=94687), IIS 6.0 관리 콘솔에 사용자 인터페이스를 작성 합니다.
 
-WCF는 IIS의 기존 ASP.NET 웹 서비스 응용 프로그램에 ASP.NET 호환 모드에서 실행 되도록 구성 하는 WCF 서비스를 추가 하 여 기존 ASP.NET 웹 서비스에 새 기능을 추가 하려면 사용할 수 있습니다. ASP.NET 호환성 모드로 인해 새 WCF 서비스에 대 한 코드 액세스를 사용 하 여 기존 ASP.NET 코드와 동일한 응용 프로그램 상태 정보를 업데이트 합니다 <xref:System.Web.HttpContext> 클래스입니다. 또한 응용 프로그램은 동일한 클래스 라이브러리를 공유할 수도 있습니다.
+WCF는 IIS의 기존 ASP.NET 웹 서비스 응용 프로그램에 ASP.NET 호환 모드에서 실행 되도록 구성 하는 WCF 서비스를 추가 하 여 기존 ASP.NET 웹 서비스에 새 기능을 추가 하려면 사용할 수 있습니다. ASP.NET 호환성 모드로 인해 새 WCF 서비스에 대 한 코드 액세스를 사용 하 여 기존 ASP.NET 코드와 동일한 응용 프로그램 상태 정보를 업데이트 합니다 <xref:System.Web.HttpContext> 클래스입니다. 또한 애플리케이션은 동일한 클래스 라이브러리를 공유할 수도 있습니다.
 
 WCF 클라이언트는 ASP.NET 웹 서비스를 사용할 수 있습니다. 구성 된 WCF 서비스는 <xref:System.ServiceModel.BasicHttpBinding> ASP.NET 웹 서비스 클라이언트에서 사용할 수 있습니다. ASP.NET 웹 서비스는 WCF 응용 프로그램과 공존할 수 있습니다 및 WCF을 사용 하 여 기존 ASP.NET 웹 서비스에 기능을 추가할 수도 있습니다. 모든는 WCF 및 ASP.NET 웹 서비스 함께 사용할 수 있는 다음과 같은 방법이으로, 있습니다 싶을 WCF 및 없습니다 ASP.NET 웹 서비스에서 제공 하는 기능을 사용 해야 하는 경우에 ASP.NET 웹 서비스를 WCF로 마이그레이션하려면입니다.
 

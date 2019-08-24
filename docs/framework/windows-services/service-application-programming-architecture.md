@@ -1,5 +1,5 @@
 ---
-title: 서비스 응용 프로그램 프로그래밍 아키텍처
+title: 서비스 애플리케이션 프로그래밍 아키텍처
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -22,7 +22,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64599275"
 ---
-# <a name="service-application-programming-architecture"></a>서비스 응용 프로그램 프로그래밍 아키텍처
+# <a name="service-application-programming-architecture"></a>서비스 애플리케이션 프로그래밍 아키텍처
 Windows 서비스 애플리케이션은 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 클래스에서 상속되는 클래스를 기반으로 합니다. 이 클래스의 메서드를 재정의하고 이 메서드에서 서비스 동작 방식을 결정하는 기능을 정의합니다.  
   
  서비스 만들기와 관련된 기본 클래스는 다음과 같습니다.  

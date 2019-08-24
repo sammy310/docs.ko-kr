@@ -30,7 +30,7 @@ ms.locfileid: "64606355"
   
 - 검사자를 삽입하는 서비스 동작  
   
-- 서비스 응용 프로그램에서 동작을 로드 및 실행하는 구성 파일  
+- 서비스 애플리케이션에서 동작을 로드 및 실행하는 구성 파일  
   
  [!code-csharp[Interceptors#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/interceptors.cs#7)]
  [!code-vb[Interceptors#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/interceptors.vb#7)]  

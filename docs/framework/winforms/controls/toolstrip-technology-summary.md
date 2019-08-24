@@ -58,7 +58,7 @@ ms.locfileid: "64654704"
 |프레젠테이션 및 렌더링|<xref:System.Windows.Forms.ToolStripManager><br /><br /> <xref:System.Windows.Forms.ToolStripRenderer><br /><br /> <xref:System.Windows.Forms.ToolStripProfessionalRenderer><br /><br /> <xref:System.Windows.Forms.ToolStripRenderMode><br /><br /> <xref:System.Windows.Forms.ToolStripManagerRenderMode>|  
   
 ## <a name="toolstrip-design-time-features"></a>ToolStrip 디자인 타임 기능  
- 컨트롤의 <xref:System.Windows.Forms.ToolStrip> 패밀리는 작업 응용 프로그램을 빠르게 만들 수 있도록 사용자 인터페이스의 기본 사항을 내부 편집하고 정의하기 위한 다양한 도구 및 템플릿 집합을 제공합니다.  
+ 컨트롤의 <xref:System.Windows.Forms.ToolStrip> 패밀리는 작업 애플리케이션을 빠르게 만들 수 있도록 사용자 인터페이스의 기본 사항을 내부 편집하고 정의하기 위한 다양한 도구 및 템플릿 집합을 제공합니다.  
   
 ### <a name="task-dialog-boxes"></a>작업 대화 상자  
  Visual Studio에서는 디자이너의 컨트롤에서 스마트 태그를 클릭하면 자주 사용되는 대부분 명령에 편리하게 액세스할 수 있는 작업 목록이 표시됩니다.  
@@ -94,7 +94,7 @@ ms.locfileid: "64654704"
   
  <xref:System.Windows.Forms.ToolStrip> 및 여기에 포함된 모든 <xref:System.Windows.Forms.ToolStripItem> 개체에 스타일을 적용하려면 각 항목에 대한 <xref:System.Windows.Forms.ToolStripItem.Paint> 이벤트를 처리할 필요가 없습니다. 대신에 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 속성을 <xref:System.Windows.Forms.ToolStripRenderMode.Custom>이 아닌 <xref:System.Windows.Forms.ToolStripRenderMode> 값의 하나로 설정할 수 있습니다. 또는 <xref:System.Windows.Forms.ToolStrip.Renderer%2A>를 직접 <xref:System.Windows.Forms.ToolStripRenderer> 클래스에서 상속되는 클래스로 설정할 수 있습니다. 이 속성을 설정하면 자동으로 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>가 설정됩니다.  
   
- <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>를 <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>로 설정하거나 <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A> 또는 <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> 속성을 각각 원하는 <xref:System.Windows.Forms.ToolStripManagerRenderMode> 또는 <xref:System.Windows.Forms.ToolStripRenderer> 값으로 설정하여 같은 응용 프로그램의 여러 <xref:System.Windows.Forms.ToolStrip> 개체에 같은 스타일을 적용할 수 있습니다.  
+ <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>를 <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>로 설정하거나 <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A> 또는 <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> 속성을 각각 원하는 <xref:System.Windows.Forms.ToolStripManagerRenderMode> 또는 <xref:System.Windows.Forms.ToolStripRenderer> 값으로 설정하여 같은 애플리케이션의 여러 <xref:System.Windows.Forms.ToolStrip> 개체에 같은 스타일을 적용할 수 있습니다.  
   
  렌더링의 예 참조 [방법: 만들기 및 ToolStrip 컨트롤에 Windows Forms에 대 한 사용자 지정 렌더러를 설정](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)합니다.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "64654704"
   
  대부분 <xref:System.Windows.Forms.ToolStrip> 컨트롤은 래프팅을 사용하는 대신 다른 컨트롤 같이 폼에 도킹될 수 있습니다. <xref:System.Windows.Forms.ToolStrip> 컨트롤을 <xref:System.Windows.Forms.ToolStripContainer>에서 제거하고 해당 `Dock` 속성을 `None`으로 설정하여 해당 컨트롤이 폼에 자유롭게 배치되도록 지정하거나, 각 <xref:System.Windows.Forms.Control.Location%2A> 속성을 설정하여 절대 위치를 지정할 수 있습니다. [방법: 폼에 ToolStripContainer의 ToolStrip 이동](how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)합니다.  
   
- 더 큰 유연성, 특히 MDI(다중 문서 인터페이스) 응용 프로그램을 위해 또는 <xref:System.Windows.Forms.ToolStripContainer>가 필요하지 않을 경우 <xref:System.Windows.Forms.ToolStripPanel> 컨트롤을 하나 이상 사용합니다. <xref:System.Windows.Forms.ToolStripPanel>에서는 <xref:System.Windows.Forms.ToolStrip> 컨트롤을 배치 및 래프팅할 도킹 가능한 공간을 제공하지만 기존 컨트롤에 사용할 공간을 제공하지 않습니다. 기본적으로 <xref:System.Windows.Forms.ToolStripPanel> 디자이너에 표시 되지 않습니다 **도구 상자**를 마우스 오른쪽 단추로 클릭 하 여 하를 전환할 수 있습니다 하지만 **도구 상자**, 클릭 하 고 **항목 선택**합니다. 다른 클래스처럼 <xref:System.Windows.Forms.ToolStripPanel>에 프로그래밍 방식으로 액세스할 수도 있습니다.  
+ 더 큰 유연성, 특히 MDI(다중 문서 인터페이스) 애플리케이션을 위해 또는 <xref:System.Windows.Forms.ToolStripContainer>가 필요하지 않을 경우 <xref:System.Windows.Forms.ToolStripPanel> 컨트롤을 하나 이상 사용합니다. <xref:System.Windows.Forms.ToolStripPanel>에서는 <xref:System.Windows.Forms.ToolStrip> 컨트롤을 배치 및 래프팅할 도킹 가능한 공간을 제공하지만 기존 컨트롤에 사용할 공간을 제공하지 않습니다. 기본적으로 <xref:System.Windows.Forms.ToolStripPanel> 디자이너에 표시 되지 않습니다 **도구 상자**를 마우스 오른쪽 단추로 클릭 하 여 하를 전환할 수 있습니다 하지만 **도구 상자**, 클릭 하 고 **항목 선택**합니다. 다른 클래스처럼 <xref:System.Windows.Forms.ToolStripPanel>에 프로그래밍 방식으로 액세스할 수도 있습니다.  
   
  <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip> 및 <xref:System.Windows.Forms.StatusStrip>을 통해 항목이 오버플로될 수 있습니다. 이는 이들 항목이 Microsoft Office 도구 모음에서 동작하는 방식과 비슷합니다.  
   

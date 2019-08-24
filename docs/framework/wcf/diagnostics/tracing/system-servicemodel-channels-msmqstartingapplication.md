@@ -13,7 +13,7 @@ ms.locfileid: "61779719"
 System.ServiceModel.Channels.MsmqStartingApplication  
   
 ## <a name="description"></a>설명  
- MSMQ 정품 인증 서비스가 응용 프로그램을 시작했습니다.  
+ MSMQ 정품 인증 서비스가 애플리케이션을 시작했습니다.  
   
 ## <a name="see-also"></a>참고자료
 

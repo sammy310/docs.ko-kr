@@ -45,7 +45,7 @@ public class ForEach : NativeActivity
  반복되는 요소의 컬렉션입니다. 컬렉션의 모든 요소가 호환 가능한 형식인지 확인하는 작업은 런타임에 수행됩니다.  
   
 ## <a name="example-of-using-foreach"></a>ForEach 사용 예제  
- 다음 코드에서는 응용 프로그램에서 ForEach 활동을 사용하는 방법을 보여 줍니다.  
+ 다음 코드에서는 애플리케이션에서 ForEach 활동을 사용하는 방법을 보여 줍니다.  
   
 ```  
 string[] names = { "bill", "steve", "ray" };  

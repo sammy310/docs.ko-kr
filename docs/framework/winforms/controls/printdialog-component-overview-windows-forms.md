@@ -16,7 +16,7 @@ ms.locfileid: "65211750"
 ---
 # <a name="printdialog-component-overview-windows-forms"></a>PrintDialog 구성 요소 개요(Windows Forms)
 
-Windows Forms [PrintDialog](printdialog-component-windows-forms.md) 구성 요소는 미리 구성 된 대화 상자, 프린터를 선택 하 고, 인쇄할 페이지를 선택 하 고, Windows 기반 응용 프로그램에서 다른 인쇄 관련 설정을 결정 하는 데 사용 합니다. 고유한 대화 상자를 구성하는 대신 이 대화 상자를 프린터 및 인쇄 관련 설정 선택을 위한 간단한 솔루션으로 사용합니다. 사용자가 해당 문서의 많은 부분을 인쇄 하도록 설정할 수 있습니다: 모든, 선택한 페이지 범위 인쇄 또는 인쇄를 선택 합니다. 표준 Windows 대화 상자를 사용하여 기본 기능이 사용자에게 익숙한 응용 프로그램을 만듭니다. 합니다 <xref:System.Windows.Forms.PrintDialog> 구성 요소에서 상속 된 <xref:System.Windows.Forms.CommonDialog> 클래스입니다.
+Windows Forms [PrintDialog](printdialog-component-windows-forms.md) 구성 요소는 미리 구성 된 대화 상자, 프린터를 선택 하 고, 인쇄할 페이지를 선택 하 고, Windows 기반 응용 프로그램에서 다른 인쇄 관련 설정을 결정 하는 데 사용 합니다. 고유한 대화 상자를 구성하는 대신 이 대화 상자를 프린터 및 인쇄 관련 설정 선택을 위한 간단한 솔루션으로 사용합니다. 사용자가 해당 문서의 많은 부분을 인쇄 하도록 설정할 수 있습니다: 모든, 선택한 페이지 범위 인쇄 또는 인쇄를 선택 합니다. 표준 Windows 대화 상자를 사용하여 기본 기능이 사용자에게 익숙한 애플리케이션을 만듭니다. 합니다 <xref:System.Windows.Forms.PrintDialog> 구성 요소에서 상속 된 <xref:System.Windows.Forms.CommonDialog> 클래스입니다.
 
 ## <a name="working-with-the-component"></a>구성 요소 작업
 

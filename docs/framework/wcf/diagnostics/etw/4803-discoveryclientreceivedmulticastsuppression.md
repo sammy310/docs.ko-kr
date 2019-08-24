@@ -17,7 +17,7 @@ ms.locfileid: "61943067"
 |ID|4803|  
 |키워드|검색|  
 |수준|정보|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  이 이벤트는 DiscoveryClient가 DiscoveryProxy로부터 멀티캐스트 비표시 오류(Suppression) 메시지를 받았을 때 내보내집니다.  

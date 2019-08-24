@@ -1,5 +1,5 @@
 ---
-title: Windows Forms 응용 프로그램의 사용자 입력
+title: Windows Forms 애플리케이션의 사용자 입력
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, user input
@@ -11,7 +11,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61800141"
 ---
-# <a name="user-input-in-a-windows-forms-application"></a>Windows Forms 응용 프로그램의 사용자 입력
+# <a name="user-input-in-a-windows-forms-application"></a>Windows Forms 애플리케이션의 사용자 입력
 Windows Forms에서 사용자 입력은 Windows 메시지 형식으로의 응용 프로그램에 전송 됩니다. 일련의 재정의 가능한 메서드를 폼을 응용 프로그램에서 이러한 메시지를 처리 하 고 수준을 제어 합니다. 이러한 메서드는 마우스 및 키보드 메시지를 수신 하는 경우 입력 키보드 또는 마우스에 대 한 정보를 처리할 수 있는 이벤트를 발생 시킵니다. 대부분의 경우에서 Windows Forms 응용 프로그램은 이러한 이벤트를 처리 하면 모든 사용자 입력을 처리할 수 됩니다. 다른 경우에 응용 프로그램에 응용 프로그램, 폼 또는 컨트롤에 의해 수신 되기 전에 특정 메시지를 차단 하기 위해 메시지를 처리 하는 방법 중 하나를 재정의 해야 합니다.  
   
 ## <a name="mouse-and-keyboard-events"></a>마우스 및 키보드 이벤트  

@@ -37,7 +37,7 @@ SQL 워크플로 인스턴스 저장소는 정기적으로 다시 시작되어 �
   
  SQL 워크플로 인스턴스 저장소로 ActivationType 매개 변수의 값을 사용 하 여 일반 호스트를 지원 하는 현재 **WAS**합니다. ActivationType이 WAS로 설정되어 있지 않으면 SQL 워크플로 인스턴스 저장소는 <xref:System.Runtime.DurableInstancing.InstancePersistenceException>을 throw합니다. Windows Server appfabric 호스팅 기능을 사용 하 여 제공 되는 워크플로 관리 서비스는로 정품 인증 유형을 포함 하는 일반 호스트 **WAS**합니다.  
   
- WAS 활성화를 위해 일반 호스트에는 새 호스트를 활성화할 수 있는 엔드포인트 주소를 파생하는 활성화 매개 변수 집합이 필요합니다. WAS 활성화를 위한 활성화 매개 변수는 사이트 이름, 사이트에 상대적인 응용 프로그램 경로 및 응용 프로그램에 상대적인 서비스 경로입니다. SQL 워크플로 인스턴스 저장소는 <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>를 실행하는 동안 이러한 활성화 매개 변수를 저장합니다.  
+ WAS 활성화를 위해 일반 호스트에는 새 호스트를 활성화할 수 있는 엔드포인트 주소를 파생하는 활성화 매개 변수 집합이 필요합니다. WAS 활성화를 위한 활성화 매개 변수는 사이트 이름, 사이트에 상대적인 애플리케이션 경로 및 애플리케이션에 상대적인 서비스 경로입니다. SQL 워크플로 인스턴스 저장소는 <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>를 실행하는 동안 이러한 활성화 매개 변수를 저장합니다.  
   
 ## <a name="runnable-instances-detection-period"></a>실행 가능한 인스턴스 검색 기간  
  합니다 **실행 가능한 인스턴스 검색 기간** SQL 워크플로 인스턴스 저장소를 실행 가능 하거나 활성화 가능한 워크플로 검색 하는 검색 작업을 실행 하는 기간을 지정 하는 SQL 워크플로 인스턴스 저장소의 속성 이전 검색 주기 후 지 속성 데이터베이스의 인스턴스. 참조 [실행 가능한 인스턴스 검색 기간](runnable-instances-detection-period.md) 이 속성에 대 한 자세한 내용은 합니다.

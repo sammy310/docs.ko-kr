@@ -43,7 +43,7 @@ ms.locfileid: "64585780"
 |`MaxOutboundConnectionsPerEndpoint`|정수|1|10|특정 엔드포인트에 연결할 수 있는 나가는 연결의 최대 수입니다.<br /><br /> 이 설정은 풀 연결에만 적용됩니다.|  
 |`MaxOutputDelay`|TimeSpan|0|200밀리초|단일 작업에서 추가 메시지를 일괄 처리하기 위한 전송 작업 후 기다리는 최대 시간입니다. 메시지는 기본 전송 버퍼가 가득 차기 전에 전송됩니다. 추가 메시지를 전송하더라도 지연 기간이 다시 설정되지 않습니다.|  
 |`MaxPendingAccepts`|정수|1|1|수신기에서 수락될 때까지 대기할 수 있는 최대 채널 수입니다.<br /><br /> 수락 완료 및 새 수락 시작 사이에 시간 간격이 있습니다. 이 컬렉션 크기가 증가하면 이 간격 동안 연결된 클라이언트가 연결이 끊기지 않도록 할 수 있습니다.|  
-|`MaxPendingConnections`|정수|1|10|응용 프로그램에서 수락할 때까지 수신기에서 기다릴 수 있는 최대 연결 수입니다. 이 할당량 값을 초과하면 새 들어 오는 연결은 수락될 때까지 기다리지 않고 연결이 끊깁니다.<br /><br /> 메시지 보안과 같은 연결 기능을 통해 클라이언트가 둘 이상의 연결을 열 수 있습니다. 서비스 관리자는 이 할당량 값을 설정할 때 이러한 추가 연결을 고려해야 합니다.|  
+|`MaxPendingConnections`|정수|1|10|애플리케이션에서 수락할 때까지 수신기에서 기다릴 수 있는 최대 연결 수입니다. 이 할당량 값을 초과하면 새 들어 오는 연결은 수락될 때까지 기다리지 않고 연결이 끊깁니다.<br /><br /> 메시지 보안과 같은 연결 기능을 통해 클라이언트가 둘 이상의 연결을 열 수 있습니다. 서비스 관리자는 이 할당량 값을 설정할 때 이러한 추가 연결을 고려해야 합니다.|  
 |`MaxReceivedMessageSize`|Long|1|64KB|전송에서 예외가 발생하기 전에 헤더를 포함하여 받은 메시지의 최대 크기(바이트)입니다.|  
 |`OpenTimeout`|TimeSpan|0|1분|전송에서 예외가 발생되기 전에 연결을 설정할 때까지 기다리는 최대 시간입니다.|  
 |`ReceiveTimeout`|TimeSpan|0|10분|전송에서 예외가 발생되기 전에 읽기 작업이 완료될 때까지 기다리는 최대 시간입니다.|  
@@ -52,7 +52,7 @@ ms.locfileid: "64585780"
  전송 할당량 `MaxPendingConnections` 및 `MaxOutboundConnectionsPerEndpoint`는 바인딩 또는 구성을 통해 설정될 때 `MaxConnections`라는 단일 전송 할당량에 결합됩니다. 바인딩 요소만 이러한 할당량 값을 개별적으로 설정할 수 있습니다. `MaxConnections` 전송 할당량의 최소값 및 기본값은 동일합니다.  
   
 ## <a name="setting-transport-quotas"></a>전송 할당량 설정  
- 전송 할당량은 전송 바인딩 요소, 전송 바인딩, 응용 프로그램 구성 또는 호스트 정책을 통해 설정됩니다. 이 문서에서는 호스트 정책을 통한 전송 설정에 대해서는 설명하지 않습니다. 호스트 정책 할당량에 대한 설정에 대해서는 기본 전송 설명서를 참조하십시오. 합니다 [HTTP 및 HTTPS 구성](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md) Http.sys 드라이버에 대 한 할당량 설정에 설명 합니다. HTTP, TCP/IP 및 명명된 파이프 연결과 관련하여 Windows 제한 구성에 대한 자세한 내용은 Microsoft 기술 자료를 검색하십시오.  
+ 전송 할당량은 전송 바인딩 요소, 전송 바인딩, 애플리케이션 구성 또는 호스트 정책을 통해 설정됩니다. 이 문서에서는 호스트 정책을 통한 전송 설정에 대해서는 설명하지 않습니다. 호스트 정책 할당량에 대한 설정에 대해서는 기본 전송 설명서를 참조하십시오. 합니다 [HTTP 및 HTTPS 구성](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md) Http.sys 드라이버에 대 한 할당량 설정에 설명 합니다. HTTP, TCP/IP 및 명명된 파이프 연결과 관련하여 Windows 제한 구성에 대한 자세한 내용은 Microsoft 기술 자료를 검색하십시오.  
   
  기타 유형의 할당량은 전송에 간접적으로 적용됩니다. 메시지를 바이트로 변형하기 위해 전송에서 사용하는 메시지 인코더에서 자체 할당량 설정을 구성할 수 있습니다. 그러나 이러한 할당량은 사용하는 전송 형식에 독립적입니다.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "64585780"
 2. 전송 할당량 `MaxPendingConnections` 및 `MaxOutboundConnectionsPerEndpoint`는 `MaxConnections`라는 단일 전송 할당량에 결합됩니다.  
   
 ### <a name="controlling-transport-quotas-from-configuration"></a>구성에서 전송 할당량 제어  
- 응용 프로그램 구성 시 바인딩의 속성에 직접 액세스할 때와 동일한 전송 할당량을 설정할 수 있습니다. 구성 파일에서 전송 할당량의 이름은 항상 소문자로 시작합니다. 예를 들어 바인딩의 `CloseTimeout` 속성은 구성에서 `closeTimeout` 설정에 해당하고 바인딩의 `MaxConnections` 속성은 구성의 `maxConnections` 설정에 해당합니다.  
+ 애플리케이션 구성 시 바인딩의 속성에 직접 액세스할 때와 동일한 전송 할당량을 설정할 수 있습니다. 구성 파일에서 전송 할당량의 이름은 항상 소문자로 시작합니다. 예를 들어 바인딩의 `CloseTimeout` 속성은 구성에서 `closeTimeout` 설정에 해당하고 바인딩의 `MaxConnections` 속성은 구성의 `maxConnections` 설정에 해당합니다.  
   
 ## <a name="see-also"></a>참고자료
 

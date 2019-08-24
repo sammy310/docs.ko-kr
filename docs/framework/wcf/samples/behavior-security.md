@@ -23,4 +23,4 @@ ms.locfileid: "65880152"
  이 샘플을 사용 하는 방법에 설명 합니다 [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) 사용 하도록 설정 하려면는 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 서비스 작업에 대 한 액세스 권한을 부여 하는 특성입니다.  
   
  [클라이언트 가장](../../../../docs/framework/wcf/samples/impersonating-the-client.md)  
- 이 샘플에서는 서비스가 호출자를 대신하여 시스템 리소스에 액세스할 수 있도록 서비스에서 호출자 응용 프로그램을 가장하는 방법을 보여 줍니다.
+ 이 샘플에서는 서비스가 호출자를 대신하여 시스템 리소스에 액세스할 수 있도록 서비스에서 호출자 애플리케이션을 가장하는 방법을 보여 줍니다.

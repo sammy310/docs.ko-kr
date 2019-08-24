@@ -11,7 +11,7 @@ ms.locfileid: "68673430"
 ---
 # <a name="what-is-docker"></a>Docker란?
 
-[Docker](https://www.docker.com/)는 클라우드 또는 온-프레미스로 실행될 수 있는 이식 가능하고 문제를 스스로 해결할 수 있는 컨테이너로서 애플리케이션 배포를 자동화하기 위한 [오픈 소스 프로젝트](https://github.com/docker/docker)입니다. Docker는 Microsoft를 비롯한 클라우드, Linux 및 Windows 공급 업체와 공동 작업하여 이 기술을 장려하고 발전시키는 [회사](https://www.docker.com/)이기도 합니다.
+[Docker](https://www.docker.com/)는 클라우드 또는 온-프레미스로 실행될 수 있는 이식 가능하고 문제를 스스로 해결할 수 있는 컨테이너로서 애플리케이션 배포를 자동화하기 위한 [오픈 소스 프로젝트](https://github.com/docker/docker)입니다. Docker는 Microsoft를 비롯한 클라우드, Linux 및 Windows 공급 업체와 협업하여 이 기술을 장려하고 발전시키는 [회사](https://www.docker.com/)이기도 합니다.
 
 ![Docker 컨테이너는 고객 데이터 센터의 온-프레미스, 외부 서비스 공급자 또는 Azure의 클라우드에서, 어디서나 실행할 수 있습니다.](./media/image2.png)
 

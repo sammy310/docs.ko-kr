@@ -20,7 +20,7 @@ ms.locfileid: "67742707"
   
 - .NET Framework 메서드에서 지원 되는 함수입니다.  
   
- 이 단원의 항목에서는 코드를 사용자가 직접 작성하는 경우 응용 프로그램에서 이러한 메서드를 만들어 호출하는 방법을 보여 줍니다. 일반적으로 개발자가 Visual Studio를 사용 하 여 사용자 정의 함수에 매핑할 개체 관계형 디자이너를 사용 합니다.  
+ 이 단원의 항목에서는 코드를 사용자가 직접 작성하는 경우 애플리케이션에서 이러한 메서드를 만들어 호출하는 방법을 보여 줍니다. 일반적으로 개발자가 Visual Studio를 사용 하 여 사용자 정의 함수에 매핑할 개체 관계형 디자이너를 사용 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [방법: 스칼라 반환 사용자 정의 함수를 사용 합니다.](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-scalar-valued-user-defined-functions.md)  

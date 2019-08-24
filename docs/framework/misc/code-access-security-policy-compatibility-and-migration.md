@@ -114,7 +114,7 @@ ms.locfileid: "66690288"
 
 ### <a name="determining-an-assemblys-trust-level"></a>어셈블리의 신뢰 수준 결정
 
-CAS 정책은 대체로 어셈블리 또는 응용 프로그램 도메인의 권한 부여 집합이나 신뢰 수준을 결정하는 데 사용됩니다. .NET Framework 4는 보안 정책을 확인 하는 필요 하지 않은 다음과 같은 유용한 속성을 노출 합니다.
+CAS 정책은 대체로 어셈블리 또는 애플리케이션 도메인의 권한 부여 집합이나 신뢰 수준을 결정하는 데 사용됩니다. .NET Framework 4는 보안 정책을 확인 하는 필요 하지 않은 다음과 같은 유용한 속성을 노출 합니다.
 
 - <xref:System.Reflection.Assembly.PermissionSet%2A?displayProperty=nameWithType>
 
@@ -124,9 +124,9 @@ CAS 정책은 대체로 어셈블리 또는 응용 프로그램 도메인의 권
 
 - <xref:System.AppDomain.IsFullyTrusted%2A?displayProperty=nameWithType>
 
-### <a name="application-domain-sandboxing"></a>응용 프로그램 도메인 샌드박싱
+### <a name="application-domain-sandboxing"></a>애플리케이션 도메인 샌드박싱
 
-<xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> 메서드는 일반적으로 응용 프로그램 도메인에 어셈블리를 샌드박싱하는 데 사용됩니다. .NET Framework 4를 사용 하지 않은 멤버를 노출 <xref:System.Security.Policy.PolicyLevel> 이 목적입니다. 자세한 내용은 [방법: 샌드박스에서 부분적으로 신뢰할 수 있는 코드 실행](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)의 설명대로 신뢰할 수 없는 코드에 별도의 폴더를 사용합니다.
+<xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> 메서드는 일반적으로 애플리케이션 도메인에 어셈블리를 샌드박싱하는 데 사용됩니다. .NET Framework 4를 사용 하지 않은 멤버를 노출 <xref:System.Security.Policy.PolicyLevel> 이 목적입니다. 자세한 내용은 [방법: 샌드박스에서 부분적으로 신뢰할 수 있는 코드 실행](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)의 설명대로 신뢰할 수 없는 코드에 별도의 폴더를 사용합니다.
 
 ### <a name="determining-a-safe-or-reasonable-permission-set-for-partially-trusted-code"></a>부분적으로 신뢰할 수 있는 코드에 대한 안전하거나 적절한 권한 집합 결정
 

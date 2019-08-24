@@ -17,7 +17,7 @@ ms.locfileid: "61767418"
 |ID|3358|  
 |키워드|ActivationServices|  
 |수준|자세히|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  이 이벤트는 포트 공유 소켓이 중복될 때 내보내집니다.  

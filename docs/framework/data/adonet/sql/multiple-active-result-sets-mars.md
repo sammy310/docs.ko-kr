@@ -17,7 +17,7 @@ MARS(Multiple Active Result Sets)는 단일 연결에서 여러 배치를 실행
  SQL Server에서 MARS를 사용하는 방법에 대해 설명합니다.  
   
  [데이터 조작](../../../../../docs/framework/data/adonet/sql/manipulating-data.md)  
- MARS 응용 프로그램의 코딩 예제를 제공합니다.  
+ MARS 애플리케이션의 코딩 예제를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
  [비동기 작업](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  

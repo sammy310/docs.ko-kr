@@ -35,7 +35,7 @@ ms.locfileid: "65877582"
 
 3. <xref:System.IServiceProvider> 인터페이스를 구현하는 데이터 서비스를 정의합니다. 데이터 서비스는 <xref:System.IServiceProvider.GetService%2A> 구현을 사용하여 스트리밍 데이터 공급자 구현에 액세스합니다. 이 메서드는 적절한 스트리밍 공급자 구현을 반환합니다.
 
-4. 웹 응용 프로그램 구성에서 큰 메시지 스트림을 사용하도록 설정합니다.
+4. 웹 애플리케이션 구성에서 큰 메시지 스트림을 사용하도록 설정합니다.
 
 5. 서버나 데이터 소스의 이진 리소스에 대한 액세스를 사용하도록 설정합니다.
 
@@ -88,7 +88,7 @@ ms.locfileid: "65877582"
 
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>호스팅 환경에서 큰 이진 스트림 사용
 
-ASP.NET 웹 응용 프로그램에서 데이터 서비스를 만들 때 Windows Communication Foundation (WCF)는 HTTP 프로토콜 구현을 제공 하기 위해 사용 됩니다. 기본적으로 WCF는 HTTP 메시지의 크기를 65K바이트로 제한합니다. 데이터 서비스에서 보내고 받는 큰 이진 데이터를 스트리밍할 수 있으려면 큰 이진 파일을 사용할 수 있고 전송에 스트림을 사용하도록 웹 응용 프로그램도 구성해야 합니다. 이렇게 하려면 응용 프로그램의 Web.config 파일에 있는 `<configuration />` 요소에 다음을 추가합니다.
+ASP.NET 웹 응용 프로그램에서 데이터 서비스를 만들 때 Windows Communication Foundation (WCF)는 HTTP 프로토콜 구현을 제공 하기 위해 사용 됩니다. 기본적으로 WCF는 HTTP 메시지의 크기를 65K바이트로 제한합니다. 데이터 서비스에서 보내고 받는 큰 이진 데이터를 스트리밍할 수 있으려면 큰 이진 파일을 사용할 수 있고 전송에 스트림을 사용하도록 웹 애플리케이션도 구성해야 합니다. 이렇게 하려면 애플리케이션의 Web.config 파일에 있는 `<configuration />` 요소에 다음을 추가합니다.
 
 > [!NOTE]
 > 사용 해야는 <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> 전송 모드는 요청 및 응답 메시지의 이진 데이터 스트림 되 고 WCF로 버퍼링 되지 않습니다.
@@ -97,7 +97,7 @@ ASP.NET 웹 응용 프로그램에서 데이터 서비스를 만들 때 Windows 
 
 기본적으로 인터넷 정보 서비스(IIS)는 요청 크기를 4MB로 제한합니다. 데이터 서비스가 IIS에서 실행 하는 경우 4MB 보다 큰 스트림을 받을 수 있도록 설정 해야 합니다 `maxRequestLength` 특성을 [httpRuntime 요소 (ASP.NET 설정 스키마)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) 에 `<system.web />` 구성 섹션으로 다음 예제와 같이:
 
-## <a name="using-data-streams-in-a-client-application"></a>클라이언트 응용 프로그램에서 데이터 스트림 사용
+## <a name="using-data-streams-in-a-client-application"></a>클라이언트 애플리케이션에서 데이터 스트림 사용
 
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리를 사용하면 클라이언트에서 이진 스트림으로 노출된 이러한 리소스를 검색하고 업데이트할 수 있습니다. 자세한 내용은 [이진 데이터 작업](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)합니다.
 

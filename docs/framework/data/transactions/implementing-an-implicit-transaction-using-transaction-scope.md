@@ -13,7 +13,7 @@ ms.lasthandoff: 06/21/2019
 ms.locfileid: "67306210"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>트랜잭션 범위를 사용하여 암시적 트랜잭션 구현
-<xref:System.Transactions.TransactionScope> 클래스는 트랜잭션 자체와 상호 작용할 필요 없이 코드 블록을 트랜잭션에 참여하는 것으로 표시하는 단순한 방법을 제공합니다. 트랜잭션 범위는 자동으로 앰비언트 트랜잭션을 선택하고 관리할 수 있습니다. 사용하기 쉽고 효율적이므로 트랜잭션 응용 프로그램을 개발할 때는 <xref:System.Transactions.TransactionScope> 클래스를 사용하는 것이 좋습니다.  
+<xref:System.Transactions.TransactionScope> 클래스는 트랜잭션 자체와 상호 작용할 필요 없이 코드 블록을 트랜잭션에 참여하는 것으로 표시하는 단순한 방법을 제공합니다. 트랜잭션 범위는 자동으로 앰비언트 트랜잭션을 선택하고 관리할 수 있습니다. 사용하기 쉽고 효율적이므로 트랜잭션 애플리케이션을 개발할 때는 <xref:System.Transactions.TransactionScope> 클래스를 사용하는 것이 좋습니다.  
   
  또한 트랜잭션을 사용하여 명시적으로 리소스를 등록할 필요가 없습니다. <xref:System.Transactions> 리소스 관리자(예: SQL Server 2005)는 범위에서 만든 앰비언트 트랜잭션이 있는지 감지하고 자동으로 등록할 수 있습니다.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "67306210"
  <xref:System.Transactions.TransactionScope>를 시작하면 트랜잭션 관리자는 참가할 트랜잭션을 결정합니다. 일단 결정되면 범위는 항상 해당 트랜잭션에 참여합니다. 두 가지 요소를 기반으로 하는 결정: 앰비언트 트랜잭션이 있는지 여부 및 값을 **transactionscopeoption을** 생성자에 매개 변수입니다. 앰비언트 트랜잭션은 코드가 실행되는 트랜잭션입니다. <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> 클래스의 정적 <xref:System.Transactions.Transaction> 속성을 호출하여 앰비언트 트랜잭션에 대한 참조를 가져올 수 있습니다. 이 매개 변수를 사용 하는 방법에 대 한 자세한 내용은 참조는 [transactionscopeoption을 사용 하 여 트랜잭션 흐름을 관리](#ManageTxFlow) 이 항목의 섹션입니다.  
   
 ## <a name="completing-a-transaction-scope"></a>트랜잭션 범위 완료  
- 응용 프로그램이 트랜잭션에서 수행할 작업을 모두 완료하면 <xref:System.Transactions.TransactionScope.Complete%2A?displayProperty=nameWIthType> 메서드를 한 번만 호출하여 트랜잭션 커밋이 허용됨을 트랜잭션 관리자에게 알려야 합니다. 호출 하는 매우 것이 좋습니다 <xref:System.Transactions.TransactionScope.Complete%2A> 의 마지막 문으로 합니다 **사용 하 여** 블록입니다.  
+ 애플리케이션이 트랜잭션에서 수행할 작업을 모두 완료하면 <xref:System.Transactions.TransactionScope.Complete%2A?displayProperty=nameWIthType> 메서드를 한 번만 호출하여 트랜잭션 커밋이 허용됨을 트랜잭션 관리자에게 알려야 합니다. 호출 하는 매우 것이 좋습니다 <xref:System.Transactions.TransactionScope.Complete%2A> 의 마지막 문으로 합니다 **사용 하 여** 블록입니다.  
   
  트랜잭션 관리자에이 시스템 오류나 트랜잭션 범위 내에서 throw 된 예외에 해당으로 해석 하기 때문에 트랜잭션이 중단이 메서드를 호출 하는 데 실패 합니다. 그러나 이 메서드를 호출해도 반드시 트랜잭션이 커밋되지는 않습니다. 이 메서드를 호출하는 것은 트랜잭션 관리자에게 상태를 알리는 수단일 뿐입니다. <xref:System.Transactions.TransactionScope.Complete%2A> 메서드를 호출한 후에는 더 이상 <xref:System.Transactions.Transaction.Current%2A> 속성을 통해 앰비언트 트랜잭션에 액세스할 수 없으며 액세스를 시도하면 예외가 throw됩니다.  
   
@@ -154,7 +154,7 @@ using(TransactionScope scope1 = new TransactionScope())
 ## <a name="setting-the-transactionscope-timeout"></a>TransactionScope 시간 제한 설정  
  <xref:System.Transactions.TransactionScope>의 오버로드된 생성자 중 일부는 트랜잭션의 시간 제한을 제어하는 데 사용되는 <xref:System.TimeSpan> 형식의 값을 받아들입니다. 시간 제한을 0으로 설정하면 시간 제한이 없음을 의미합니다. 무한 시간 제한은 대체로 코드를 단계별로 실행하여 비즈니스 논리의 문제를 격리하고 문제를 찾는 동안 디버그가 시간 초과되지 않도록 하려는 경우 디버깅에 유용합니다. 무한 시간 제한 값은 트랜잭션 교착 상태에 대한 안전 장치를 재정의하므로 다른 모든 경우에서는 사용 시 주의해야 합니다.  
   
- 일반적으로 두 가지 경우에서 <xref:System.Transactions.TransactionScope> 시간 제한을 기본값이 아닌 값으로 설정합니다. 첫 번째는 개발 중으로, 응용 프로그램이 중단된 트랜잭션을 처리하는 방법을 테스트하려는 경우입니다. 시간 제한을 더 작은 값(예: 1밀리초)으로 설정하여 트랜잭션이 실패하게 하고 오류 처리 코드를 확인할 수 있습니다. 이 값을 기본 시간 제한보다 작은 값으로 설정하는 두 번째 경우는 범위가 리소스 충돌과 관련되어 교착 상태가 발생한다고 생각하는 경우입니다. 이 경우 가능한 한 빨리 트랜잭션을 중단하고 기본 시간 제한이 만료될 때까지 기다리지 않으려고 합니다.  
+ 일반적으로 두 가지 경우에서 <xref:System.Transactions.TransactionScope> 시간 제한을 기본값이 아닌 값으로 설정합니다. 첫 번째는 개발 중으로, 애플리케이션이 중단된 트랜잭션을 처리하는 방법을 테스트하려는 경우입니다. 시간 제한을 더 작은 값(예: 1밀리초)으로 설정하여 트랜잭션이 실패하게 하고 오류 처리 코드를 확인할 수 있습니다. 이 값을 기본 시간 제한보다 작은 값으로 설정하는 두 번째 경우는 범위가 리소스 충돌과 관련되어 교착 상태가 발생한다고 생각하는 경우입니다. 이 경우 가능한 한 빨리 트랜잭션을 중단하고 기본 시간 제한이 만료될 때까지 기다리지 않으려고 합니다.  
   
  범위가 앰비언트 트랜잭션에 참여하지만 앰비언트 트랜잭션이 설정된 시간 제한보다 작은 시간 제한을 지정하는 경우 <xref:System.Transactions.TransactionScope> 개체에 더 짧은 새 시간 제한이 적용되고 범위가 지정된 중첩 시간 내에 종료되어야 합니다. 그렇지 않으면 트랜잭션이 자동으로 중단됩니다. 중첩된 범위의 시간 제한이 앰비언트 트랜잭션의 시간 제한보다 크면 영향을 주지 않습니다.  
   

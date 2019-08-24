@@ -22,13 +22,13 @@ ms.locfileid: "67662861"
 
 - "축소" 또는 "확장" 뷰를 사용 하 여 활동 디자이너를 만드는 중입니다.
 
-- 다시 호스트된 응용 프로그램에서 기본 디자이너 재정의
+- 다시 호스트된 애플리케이션에서 기본 디자이너 재정의
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면
 
 1. 엽니다는 **UsingWorkflowItemsPresenter.sln** Visual Studio 2010에서 VB 또는 C#에 대 한 샘플 솔루션.
 
-2. 솔루션을 빌드하고 실행합니다. 다시 호스트된 Workflow Designer 응용 프로그램이 열리며 여기에서 활동을 캔버스로 끌어 올 수 있습니다.
+2. 솔루션을 빌드하고 실행합니다. 다시 호스트된 Workflow Designer 애플리케이션이 열리며 여기에서 활동을 캔버스로 끌어 올 수 있습니다.
 
 ## <a name="sample-highlights"></a>샘플의 중요 사항
 

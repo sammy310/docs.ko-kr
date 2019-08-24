@@ -1,5 +1,5 @@
 ---
-title: 데이터 집합 콘텐츠 복사
+title: 데이터 세트 콘텐츠 복사
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,7 +12,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64626148"
 ---
-# <a name="copying-dataset-contents"></a>데이터 집합 콘텐츠 복사
+# <a name="copying-dataset-contents"></a>데이터 세트 콘텐츠 복사
 복사본을 만들 수 있습니다는 <xref:System.Data.DataSet> 원래 데이터는 영향을 주지 않고 데이터로 작업 하거나 사용할 수 있도록 데이터의 하위 집합으로는 **데이터 집합**합니다. 복사 하는 경우는 **데이터 집합**를 할 수 있습니다.  
   
 - 정확한 복사본을 만듭니다는 **데이터 집합**, 스키마, 데이터, 행 상태 정보 및 행 버전을 포함 합니다.  

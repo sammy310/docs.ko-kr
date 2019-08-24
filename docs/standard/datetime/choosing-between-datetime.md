@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4c86ab618f6434a6a9ce4f056eeb001cacc84bc
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 9d2ae7430c10254274eed6fb8a602aa8bc11bffb
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709195"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988496"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>DateTime, DateTimeOffset, TimeSpan 및 TimeZoneInfo 중 선택
 
@@ -43,7 +43,7 @@ ms.locfileid: "68709195"
 .Net에는 <xref:System.DateTime>날짜 및 <xref:System.TimeSpan>시간을 사용 하는 응용 프로그램을 빌드하는 데 사용할 수 있는, <xref:System.DateTimeOffset>, 및 <xref:System.TimeZoneInfo> 형식이 포함 되어 있습니다.
 
 > [!NOTE]
-> 네 번째 형식 <xref:System.TimeZone>은 해당 기능이 <xref:System.TimeZoneInfo> 클래스에 거의 완전히 통합되었으므로 이 항목에서 설명하지 않습니다. 가능한 경우 개발자는 항상 <xref:System.TimeZoneInfo> 클래스 대신 <xref:System.TimeZone> 클래스를 사용해야 합니다.
+> 해당 기능이 <xref:System.TimeZoneInfo> 클래스에 <xref:System.TimeZone> 거의 완전히 통합 되었기 때문에이 항목에서는 설명 하지 않습니다. 가능 하면 사용 합니다 <xref:System.TimeZoneInfo> 대신 클래스는 <xref:System.TimeZone> 클래스입니다.
 
 ## <a name="the-datetime-structure"></a>DateTime 구조체
 

@@ -11,7 +11,7 @@ ms.locfileid: "66490068"
 ---
 # <a name="filestream-data"></a>FILESTREAM 데이터
 
-FILESTREAM 저장소 특성은 varbinary(max) 열에 저장된 이진(BLOB) 데이터에 사용됩니다. FILESTREAM 이전에는 이진 데이터를 저장하려면 특별한 처리가 필요했습니다. 텍스트 문서, 이미지 및 비디오 같이 구조화되지 않은 데이터는 대개 데이터베이스의 외부에 저장되어 관리가 어렵습니다.
+FILESTREAM 스토리지 특성은 varbinary(max) 열에 저장된 이진(BLOB) 데이터에 사용됩니다. FILESTREAM 이전에는 이진 데이터를 저장하려면 특별한 처리가 필요했습니다. 텍스트 문서, 이미지 및 비디오 같이 구조화되지 않은 데이터는 대개 데이터베이스의 외부에 저장되어 관리가 어렵습니다.
 
 > [!NOTE]
 > SqlClient에서 FILESTREAM 데이터로 작업하려면 .NET Framework 3.5 SP1 이상을 설치해야 합니다.
@@ -24,7 +24,7 @@ varbinary(max) 열에 FILESTREAM 특성을 지정하면 SQL Server에서는 데�
 
 ### <a name="creating-the-sql-server-table"></a>SQL Server 테이블 만들기
 
-다음 Transact-SQL 문은 employees라는 테이블을 만들어 데이터 행을 삽입합니다. FILESTREAM 저장소를 설정한 후에는 다음에 나오는 코드 예제와 함께 이 테이블을 사용할 수 있습니다. SQL Server 온라인 설명서의 리소스 링크는이 항목의 끝에 나와 있습니다.
+다음 Transact-SQL 문은 employees라는 테이블을 만들어 데이터 행을 삽입합니다. FILESTREAM 스토리지를 설정한 후에는 다음에 나오는 코드 예제와 함께 이 테이블을 사용할 수 있습니다. SQL Server 온라인 설명서의 리소스 링크는이 항목의 끝에 나와 있습니다.
 
 ```sql
 CREATE TABLE employees
@@ -179,7 +179,7 @@ FILESTREAM에 대 한 전체 설명서는 SQL Server 온라인 설명서의 다�
 
 |항목|설명|
 |-----------|-----------------|
-|[FILESTREAM (SQL Server)](/sql/relational-databases/blob/filestream-sql-server)|FILESTREAM 저장소를 사용해야 하는 경우 및 FILESTREAM 저장소가 SQL Server 데이터베이스 엔진을 NTFS 파일 시스템과 통합하는 방법에 대해 설명합니다.|
+|[FILESTREAM (SQL Server)](/sql/relational-databases/blob/filestream-sql-server)|FILESTREAM 스토리지를 사용해야 하는 경우 및 FILESTREAM 스토리지가 SQL Server 데이터베이스 엔진을 NTFS 파일 시스템과 통합하는 방법에 대해 설명합니다.|
 |[FILESTREAM 데이터용 클라이언트 응용 프로그램 만들기](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|FILESTREAM 데이터로 작업 하기 위한 Windows API 함수를 설명 합니다.|
 |[FILESTREAM 및 기타 SQL Server 기능](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|SQL Server의 다른 기능과 함께 FILESTREAM 데이터를 사용할 경우의 고려 사항, 지침 및 제한 사항을 제공합니다.|
 

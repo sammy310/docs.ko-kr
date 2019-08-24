@@ -10,7 +10,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61650507"
 ---
 # <a name="performance-considerations"></a>성능 고려 사항
-응용 프로그램을 빌드할 때 성능 고려 사항은 항상 중요합니다. 이 단원에는 성능 및 보안과 관련된 항목이 들어 있습니다.  
+애플리케이션을 빌드할 때 성능 고려 사항은 항상 중요합니다. 이 단원에는 성능 및 보안과 관련된 항목이 들어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [ID 모델을 사용하여 클레임 및 권한 부여 관리](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  

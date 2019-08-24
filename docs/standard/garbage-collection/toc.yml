@@ -25,7 +25,7 @@
           href: optimization-for-shared-web-hosting.md
         - name: 가비지 컬렉션 알림
           href: notifications.md
-        - name: 응용 프로그램 도메인 리소스 모니터링
+        - name: 애플리케이션 도메인 리소스 모니터링
           href: app-domain-resource-monitoring.md
         - name: 약한 참조
           href: weak-references.md

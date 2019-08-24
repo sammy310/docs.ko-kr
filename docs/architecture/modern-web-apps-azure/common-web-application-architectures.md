@@ -97,7 +97,7 @@ Azure에서 웹 애플리케이션을 확장하는 가장 간단한 방법은 �
 
 ## <a name="clean-architecture"></a>클린 아키텍처
 
-종속성 반전 원칙과 DDD(도메인 중심 디자인) 원칙을 따르는 애플리케이션은 비슷한 아키텍처에 도달하는 경향이 있습니다. 이 아키텍처는 수년 동안 여러 가지 이름으로 불렸습니다. 첫 번째 이름 중 하나는 육각형 아키텍처이고, 그 다음은 포트 및 어댑터(Ports-and-Adapters)였습니다. 최근에는 [양파형 아키텍처](https://jeffreypalermo.com/blog/the-onion-architecture-part-1/) 또는 [클린 아키텍처](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html)로 불렸습니다. 두 번째 이름인 클린 아키텍처는 이 전자책에서 이 아키텍처에 대한 이름으로 사용됩니다.
+종속성 반전 원칙과 DDD(도메인 중심 디자인) 원칙을 따르는 애플리케이션은 비슷한 아키텍처에 도달하는 경향이 있습니다. 이 아키텍처는 수년 동안 여러 가지 이름으로 불렸습니다. 첫 번째 이름 중 하나는 육각형 아키텍처이고, 그 다음은 포트 및 어댑터(Ports-and-Adapters)였습니다. 최근에는 [양파형 아키텍처](https://jeffreypalermo.com/blog/the-onion-architecture-part-1/) 또는 [클린 아키텍처](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html)로 불렸습니다. 두 번째 이름인 클린 아키텍처는 이 eBook에서 이 아키텍처에 대한 이름으로 사용됩니다.
 
 > [!NOTE]
 > 클린 아키텍처라는 용어는 DDD 원칙을 사용하여 빌드되는 애플리케이션은 물론이고 DDD 원칙을 사용하지 않는 애플리케이션에도 적용할 수 있습니다. 전자의 경우 이 조합을 "클린 DDD 아키텍처"라고 부를 수 있습니다.
@@ -230,7 +230,7 @@ Docker 이미지로 업데이트를 배포하는 것이 훨씬 더 빠르고 네
 
 둘째, 저렴한 비용으로 컨테이너화된 애플리케이션을 확장할 수 있습니다. 컨테이너 환경에서는 기존의 VM 환경보다 더 많은 리소스를 공유할 수 있습니다.
 
-마지막으로, 애플리케이션을 컨테이너화하면 비즈니스 논리와 저장소 서버 사이에서 강제 분할이 발생합니다. 애플리케이션이 확장되면 여러 컨테이너는 모두 단일 실제 저장소 매체를 사용하게 됩니다. 이 스토리지 미디엄은 일반적으로 SQL Server 데이터베이스를 실행하는 고가용성의 서버입니다.
+마지막으로, 애플리케이션을 컨테이너화하면 비즈니스 논리와 스토리지 서버 사이에서 강제 분할이 발생합니다. 애플리케이션이 확장되면 여러 컨테이너는 모두 단일 실제 스토리지 매체를 사용하게 됩니다. 이 스토리지 미디엄은 일반적으로 SQL Server 데이터베이스를 실행하는 고가용성의 서버입니다.
 
 ## <a name="docker-support"></a>Docker 지원
 
@@ -300,7 +300,7 @@ Visual Studio를 사용하여 애플리케이션에 Docker 지원을 추가하�
 >   <https://deviq.com/repository-pattern/>
 > - **클린 아키텍처 솔루션 샘플**  
 >   <https://github.com/ardalis/cleanarchitecture>
-> - **마이크로 서비스 설계 전자책**  
+> - **마이크로 서비스 설계 eBook**  
 >   <https://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]

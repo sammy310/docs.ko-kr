@@ -24,7 +24,7 @@ ms.lasthandoff: 04/18/2019
 ms.locfileid: "59171394"
 ---
 # <a name="using-client-sockets"></a>클라이언트 소켓 사용
-<xref:System.Net.Sockets.Socket>을 통해 대화를 시작하려면 먼저 애플리케이션과 원격 장치 간에 데이터 파이프를 만들어야 합니다. 다른 네트워크 주소 패밀리 및 프로토콜이 있어도 이 예제에서는 원격 서비스에 대한 TCP/IP 연결을 만드는 방법을 보여 줍니다.  
+<xref:System.Net.Sockets.Socket>을 통해 대화를 시작하려면 먼저 애플리케이션과 원격 디바이스 간에 데이터 파이프를 만들어야 합니다. 다른 네트워크 주소 패밀리 및 프로토콜이 있어도 이 예제에서는 원격 서비스에 대한 TCP/IP 연결을 만드는 방법을 보여 줍니다.  
   
  TCP/IP는 네트워크 주소와 서비스 포트 번호를 사용하여 서비스를 고유하게 식별합니다. 네트워크 주소는 네트워크에서 특정 디바이스를 식별하고, 포트 번호는 연결할 해당 디바이스의 특정 서비스를 식별합니다. 네트워크 주소와 서비스 포트의 조합을 엔드포인트가라고 하며, .NET Framework에서는 <xref:System.Net.EndPoint> 클래스로 표현됩니다. **EndPoint**의 하위 항목이 지원되는 각 주소 패밀리에 대해 정의되고, IP 주소 패밀리에 대한 클래스는 <xref:System.Net.IPEndPoint>입니다.  
   
@@ -50,7 +50,7 @@ Dim ipe As New IPEndPoint(ipAddress, 11000)
 IPEndPoint ipe = new IPEndPoint(ipAddress,11000);  
 ```  
   
- 원격 장치의 주소를 결정하고 연결에 사용할 포트를 선택하면 애플리케이션이 원격 장치에 대한 연결을 시도할 수 있습니다. 다음 예제에서는 기존 **IPEndPoint**를 사용하여 원격 디바이스에 연결하고 throw되는 예외를 catch합니다.  
+ 원격 디바이스의 주소를 결정하고 연결에 사용할 포트를 선택하면 애플리케이션이 원격 디바이스에 대한 연결을 시도할 수 있습니다. 다음 예제에서는 기존 **IPEndPoint**를 사용하여 원격 디바이스에 연결하고 throw되는 예외를 catch합니다.  
   
 ```vb  
 Try  

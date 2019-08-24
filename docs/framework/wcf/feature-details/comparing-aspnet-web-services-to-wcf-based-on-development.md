@@ -170,7 +170,7 @@ public class LineItem
 
 - 형식을 XML로 표현하는 방식에 대해 많은 제어를 허용하지 않기 때문에 <xref:System.Runtime.Serialization.DataContractSerializer>에 대해 serialization 프로세스의 예측이 매우 쉽고, 따라서 최적화가 더 용이합니다. <xref:System.Runtime.Serialization.DataContractSerializer> 디자인의 실질적 이점은 약 10% 정도의 성능 향상에 있습니다.
 
-- <xref:System.Xml.Serialization.XmlSerializer>에서 사용하는 특성은 XML로 serialize될 형식의 필드 또는 속성을 표시하지 않지만, <xref:System.Runtime.Serialization.DataMemberAttribute>에서 사용하는 <xref:System.Runtime.Serialization.DataContractSerializer>는 serialize될 필드 또는 속성을 명시적으로 보여 줍니다. 따라서 데이터 계약은 응용 프로그램에서 보내고 받을 데이터의 구조에 대한 명시적 계약이라고 할 수 있습니다.
+- <xref:System.Xml.Serialization.XmlSerializer>에서 사용하는 특성은 XML로 serialize될 형식의 필드 또는 속성을 표시하지 않지만, <xref:System.Runtime.Serialization.DataMemberAttribute>에서 사용하는 <xref:System.Runtime.Serialization.DataContractSerializer>는 serialize될 필드 또는 속성을 명시적으로 보여 줍니다. 따라서 데이터 계약은 애플리케이션에서 보내고 받을 데이터의 구조에 대한 명시적 계약이라고 할 수 있습니다.
 
 - <xref:System.Xml.Serialization.XmlSerializer>는 .NET 개체의 public 멤버만 XML로 변환할 수 있지만 <xref:System.Runtime.Serialization.DataContractSerializer>는 개체 멤버의 액세스 한정자에 관계없이 이러한 멤버를 XML로 변환할 수 있습니다.
 
@@ -180,9 +180,9 @@ public class LineItem
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>는 버전 관리를 위한 일부 지원을 통합합니다.
 
-  - <xref:System.Runtime.Serialization.DataMemberAttribute>에는 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 속성이 있습니다. 이 속성에는 새 버전의 데이터 계약에 추가된, 이전 버전에는 없었던 멤버에 대해 false 값을 할당할 수 있기 때문에 새 버전의 계약이 있는 응용 프로그램에서 이전 버전을 처리할 수 있습니다.
+  - <xref:System.Runtime.Serialization.DataMemberAttribute>에는 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 속성이 있습니다. 이 속성에는 새 버전의 데이터 계약에 추가된, 이전 버전에는 없었던 멤버에 대해 false 값을 할당할 수 있기 때문에 새 버전의 계약이 있는 애플리케이션에서 이전 버전을 처리할 수 있습니다.
 
-  - 데이터 계약에서 <xref:System.Runtime.Serialization.IExtensibleDataObject> 인터페이스를 구현하도록 함으로써 <xref:System.Runtime.Serialization.DataContractSerializer>가 새 버전의 데이터 계약에 정의된 멤버를 이전 버전의 계약을 사용하는 응용 프로그램을 통해 전달하도록 허용할 수 있습니다.
+  - 데이터 계약에서 <xref:System.Runtime.Serialization.IExtensibleDataObject> 인터페이스를 구현하도록 함으로써 <xref:System.Runtime.Serialization.DataContractSerializer>가 새 버전의 데이터 계약에 정의된 멤버를 이전 버전의 계약을 사용하는 애플리케이션을 통해 전달하도록 허용할 수 있습니다.
 
 이러한 모든 차이점에도 불구하고 <xref:System.Xml.Serialization.XmlSerializer>에서 기본적으로 형식을 serialize하는 XML은 해당 XML에 대한 네임스페이스가 명시적으로 정의되어 있는 경우 <xref:System.Runtime.Serialization.DataContractSerializer>에서 형식을 serialize하는 XML과 의미상 동일합니다. 두 serializer 사용에 대 한 특성에는 다음 클래스는 의미상 동일한 XML로 변환 합니다 <xref:System.Xml.Serialization.XmlSerializer> 및는 <xref:System.Runtime.Serialization.DataContractAttribute>:
 
@@ -291,7 +291,7 @@ public class Service : IEcho
 </configuration>
 ```
 
-바인딩은 응용 프로그램과의 통신을 위한 프로토콜 집합을 지정합니다. 다음 표에서는 일반 옵션을 나타내는 시스템 제공 바인딩을 보여 줍니다.
+바인딩은 애플리케이션과의 통신을 위한 프로토콜 집합을 지정합니다. 다음 표에서는 일반 옵션을 나타내는 시스템 제공 바인딩을 보여 줍니다.
 
 |이름|용도|
 |----------|-------------|
@@ -316,7 +316,7 @@ WCF 응용 프로그램에 대 한 사용자 지정 바인딩은 WCF 개별 프�
 public class DerivativesCalculatorServiceType: IDerivativesCalculator
 ```
 
-<xref:System.ServiceModel.ServiceBehaviorAttribute>와 같은 일부 동작은 특성입니다. 관리자가 설정할 수 있는 속성이 있는 다른 동작은 응용 프로그램의 구성에서 수정할 수 있습니다.
+<xref:System.ServiceModel.ServiceBehaviorAttribute>와 같은 일부 동작은 특성입니다. 관리자가 설정할 수 있는 속성이 있는 다른 동작은 애플리케이션의 구성에서 수정할 수 있습니다.
 
 서비스 유형 프로그래밍에서는 <xref:System.ServiceModel.OperationContext> 클래스가 자주 사용됩니다. 이 클래스의 정적 <xref:System.ServiceModel.OperationContext.Current%2A> 속성은 작업이 실행되고 있는 컨텍스트의 정보에 대한 액세스를 제공합니다. 따라서 <xref:System.ServiceModel.OperationContext>는 <xref:System.Web.HttpContext> 및 <xref:System.EnterpriseServices.ContextUtil> 클래스와 모두 비슷합니다.
 
@@ -328,7 +328,7 @@ ASP.NET 웹 서비스는 클래스 라이브러리 어셈블리로 컴파일됩�
 <%@ WebService Language="C#" Class="Service,ServiceAssembly" %>
 ```
 
-서비스 파일은 IIS(인터넷 정보 서비스)의 ASP.NET 응용 프로그램 루트에 복사되고, 어셈블리는 이 응용 프로그램 루트의 \bin 하위 디렉터리에 복사됩니다. 그런 다음 응용 프로그램 루트에 있는 서비스 파일의 URL(Uniform Resource Locator)을 사용하여 이 응용 프로그램에 액세스할 수 있습니다.
+서비스 파일은 IIS(인터넷 정보 서비스)의 ASP.NET 애플리케이션 루트에 복사되고, 어셈블리는 이 애플리케이션 루트의 \bin 하위 디렉터리에 복사됩니다. 그런 다음 애플리케이션 루트에 있는 서비스 파일의 URL(Uniform Resource Locator)을 사용하여 이 애플리케이션에 액세스할 수 있습니다.
 
 IIS 5.1 또는 6.0, Windows 프로세스 활성화 서비스 (WAS)는 IIS 7.0의 일부로 제공 되는 및 모든.NET 응용 프로그램 내에서 WCF 서비스 쉽게 호스트할 수 있습니다. IIS 5.1 또는 6.0에서 서비스를 호스트하려면 이 서비스가 HTTP를 통신 전송 프로토콜로 사용해야 합니다.
 
@@ -346,7 +346,7 @@ IIS 5.1, 6.0 또는 WAS에서 서비스를 호스트하려면 다음 단계를 �
 
 4. 구성 파일을 가상 디렉터리에 복사하고 파일 이름을 Web.config로 지정합니다.
 
-그러면 응용 프로그램 루트에 있는 서비스 파일의 URL을 사용하여 해당 응용 프로그램에 액세스할 수 있습니다.
+그러면 애플리케이션 루트에 있는 서비스 파일의 URL을 사용하여 해당 애플리케이션에 액세스할 수 있습니다.
 
 .NET 응용 프로그램 내에서 WCF 서비스를 호스트 하려면 서비스 유형을 응용 프로그램에서 참조 하는 클래스 라이브러리 어셈블리로 컴파일하고 사용 하 여 서비스 호스트 응용 프로그램을 프로그래밍 합니다 <xref:System.ServiceModel.ServiceHost> 클래스입니다. 다음은 필요한 기본 프로그래밍 예제입니다.
 
@@ -385,7 +385,7 @@ IIS 또는 WAS 하도록 구성 된 http를 전송 프로토콜로 배타적으�
     public class DerivativesCalculatorServiceType: IDerivativesCalculator
     ```
 
-2. 관리자는 ASP.NET 호환 모드를 사용하도록 응용 프로그램을 구성해야 합니다.
+2. 관리자는 ASP.NET 호환 모드를 사용하도록 애플리케이션을 구성해야 합니다.
 
     ```xml
     <configuration>
@@ -553,7 +553,7 @@ public interface IEcho
 
 ASP.NET에서 서비스에 대해 생성하는 WSDL을 사용자 지정할 수 있습니다. <xref:System.Web.Services.Description.ServiceDescriptionFormatExtension>의 파생 클래스를 만들어 WSDL에 항목을 추가함으로써 사용자 지정합니다.
 
-6\.0 또는 WAS WCF 서비스를 설명 하는 WSDL로 응답 하면 내 IIS 5.1에서 호스팅되는 HTTP 끝점이 있는 WCF 서비스의.svc 파일에 대해 쿼리 WSDL 사용 하 여 HTTP GET 요청을 발급 합니다. httpGetEnabled가 true로 설정된 경우 .NET 응용 프로그램에서 호스트되는 서비스의 HTTP 기본 주소에 대해 쿼리 WSDL을 사용하여 HTTP GET 요청을 실행해도 동일한 효과가 나타납니다.
+6\.0 또는 WAS WCF 서비스를 설명 하는 WSDL로 응답 하면 내 IIS 5.1에서 호스팅되는 HTTP 끝점이 있는 WCF 서비스의.svc 파일에 대해 쿼리 WSDL 사용 하 여 HTTP GET 요청을 발급 합니다. httpGetEnabled가 true로 설정된 경우 .NET 애플리케이션에서 호스트되는 서비스의 HTTP 기본 주소에 대해 쿼리 WSDL을 사용하여 HTTP GET 요청을 실행해도 동일한 효과가 나타납니다.
 
 그러나 WCF는 또한 생성 하는 서비스를 설명 하는 WSDL 사용 하 여 Ws-metadataexchange 요청에 응답 합니다. ASP.NET 웹 서비스는 WS-MetadataExchange 요청에 대한 지원을 기본적으로 제공하지 않습니다.
 
@@ -679,7 +679,7 @@ void ITradingService.AddTrade(Trade trade)
 
 ## <a name="security"></a>보안
 
-ASP.NET 웹 서비스의 보안을 유지하기 위한 옵션은 IIS 응용 프로그램의 보안을 유지하는 옵션과 같습니다. IIS 내에서 뿐만 아니라.NET 실행 파일 내에서 WCF 응용 프로그램을 호스팅할 수 있습니다, 되므로 WCF 응용 프로그램 보안에 대 한 옵션 이루어져야 iis 기능과 별도로 합니다. 그러나 ASP.NET 웹 서비스에 제공 되는 기능은 ASP.NET 호환 모드에서 실행 되는 WCF 서비스에 대해 사용할 수 있습니다.
+ASP.NET 웹 서비스의 보안을 유지하기 위한 옵션은 IIS 애플리케이션의 보안을 유지하는 옵션과 같습니다. IIS 내에서 뿐만 아니라.NET 실행 파일 내에서 WCF 응용 프로그램을 호스팅할 수 있습니다, 되므로 WCF 응용 프로그램 보안에 대 한 옵션 이루어져야 iis 기능과 별도로 합니다. 그러나 ASP.NET 웹 서비스에 제공 되는 기능은 ASP.NET 호환 모드에서 실행 되는 WCF 서비스에 대해 사용할 수 있습니다.
 
 ### <a name="security-authentication"></a>보안: 인증
 
@@ -761,7 +761,7 @@ WCF 보안의 모든 종류의 클레임을 자동으로 조합는 토큰은 매
 
 ### <a name="security-confidentiality"></a>보안: 기밀성
 
-IIS에서 응용 프로그램이 HTTPS(Secure Hypertext Transfer Protocol)를 사용하도록 구성하여 ASP.NET 웹 서비스와 교환되는 메시지의 기밀성을 전송 수준에서 보장할 수 있습니다. 동일한 IIS에서 호스트 되는 WCF 응용 프로그램에 대해 수행할 수 있습니다. 그러나 IIS 외부에서 호스팅되는 WCF 응용 프로그램 보안 전송 프로토콜을 사용 하도 구성할 수 있습니다. 더욱 중요 한 메시지 보안에 Ws-security 프로토콜을 사용 하 여, 전송 되기 전에 WCF 응용 프로그램을 구성할 수도 있습니다. WS-Security를 사용하여 메시지 본문의 보안을 유지하면 메시지가 최종 목적지에 도달하기 전에 중간 단계를 통해 기밀 상태로 전송할 수 있습니다.
+IIS에서 애플리케이션이 HTTPS(Secure Hypertext Transfer Protocol)를 사용하도록 구성하여 ASP.NET 웹 서비스와 교환되는 메시지의 기밀성을 전송 수준에서 보장할 수 있습니다. 동일한 IIS에서 호스트 되는 WCF 응용 프로그램에 대해 수행할 수 있습니다. 그러나 IIS 외부에서 호스팅되는 WCF 응용 프로그램 보안 전송 프로토콜을 사용 하도 구성할 수 있습니다. 더욱 중요 한 메시지 보안에 Ws-security 프로토콜을 사용 하 여, 전송 되기 전에 WCF 응용 프로그램을 구성할 수도 있습니다. WS-Security를 사용하여 메시지 본문의 보안을 유지하면 메시지가 최종 목적지에 도달하기 전에 중간 단계를 통해 기밀 상태로 전송할 수 있습니다.
 
 ## <a name="globalization"></a>전역화
 

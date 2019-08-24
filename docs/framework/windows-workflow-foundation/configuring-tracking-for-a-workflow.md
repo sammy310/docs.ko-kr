@@ -21,11 +21,11 @@ ms.locfileid: "66690570"
 
 워크플로 호스팅 옵션에 따라 코드 또는 구성 파일을 통해 추적 참가자를 추가할 수 있습니다. 이 항목에서는 <xref:System.Activities.WorkflowApplication> 및 <xref:System.ServiceModel.Activities.WorkflowServiceHost>에 추적 참가자를 추가하여 추적을 구성하는 방법과 <xref:System.Activities.WorkflowInvoker>를 사용할 때 추적을 활성화하는 방법에 대해 설명합니다.
 
-## <a name="configuring-workflow-application-tracking"></a>워크플로 응용 프로그램 추적 구성
+## <a name="configuring-workflow-application-tracking"></a>워크플로 애플리케이션 추적 구성
 
-<xref:System.Activities.WorkflowApplication> 클래스를 사용하여 워크플로를 실행할 수 있습니다. 이 항목에서는 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 워크플로 호스트에 추적 참가자를 추가하여 <xref:System.Activities.WorkflowApplication> 워크플로 응용 프로그램에 대해 추적을 구성하는 방법을 보여 줍니다. 이 경우 워크플로는 워크플로 응용 프로그램으로 실행됩니다. 구성 파일을 사용하는 대신 코드를 통해 워크플로 응용 프로그램을 구성하면 이 워크플로 응용 프로그램은 <xref:System.Activities.WorkflowApplication> 클래스를 사용하는 자체 호스팅 .exe 파일이 됩니다. 추적 참가자는 <xref:System.Activities.WorkflowApplication> 인스턴스에 확장으로 추가됩니다. 이 작업은 WorkflowApplication 인스턴스에 대한 확장 컬렉션에 <xref:System.Activities.Tracking.TrackingParticipant>를 추가하여 수행됩니다.
+<xref:System.Activities.WorkflowApplication> 클래스를 사용하여 워크플로를 실행할 수 있습니다. 이 항목에서는 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 워크플로 호스트에 추적 참가자를 추가하여 <xref:System.Activities.WorkflowApplication> 워크플로 애플리케이션에 대해 추적을 구성하는 방법을 보여 줍니다. 이 경우 워크플로는 워크플로 애플리케이션으로 실행됩니다. 구성 파일을 사용하는 대신 코드를 통해 워크플로 애플리케이션을 구성하면 이 워크플로 애플리케이션은 <xref:System.Activities.WorkflowApplication> 클래스를 사용하는 자체 호스팅 .exe 파일이 됩니다. 추적 참가자는 <xref:System.Activities.WorkflowApplication> 인스턴스에 확장으로 추가됩니다. 이 작업은 WorkflowApplication 인스턴스에 대한 확장 컬렉션에 <xref:System.Activities.Tracking.TrackingParticipant>를 추가하여 수행됩니다.
 
-워크플로 응용 프로그램의 경우 다음 코드와 같이 <xref:System.Activities.Tracking.EtwTrackingParticipant> 동작 확장을 추가할 수 있습니다.
+워크플로 애플리케이션의 경우 다음 코드와 같이 <xref:System.Activities.Tracking.EtwTrackingParticipant> 동작 확장을 추가할 수 있습니다.
 
 ```csharp
 LogActivity activity = new LogActivity();
@@ -50,7 +50,7 @@ instance.Extensions.Add(trackingParticipant);
 
 ### <a name="configuring-workflow-service-tracking"></a>워크플로 서비스 추적 구성
 
-워크플로 호스트 된 WCF 서비스로 노출 될 수 있습니다는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 서비스 호스트입니다. <xref:System.ServiceModel.Activities.WorkflowServiceHost>는 워크플로 기반 서비스에 대한 특수 .NET ServiceHost 구현입니다. 이 단원에서는 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]에서 실행되는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 워크플로 서비스에 대해 추적을 구성하는 방법에 대해 설명합니다. 이러한 추적 기능은 Web.config 파일(웹 호스팅 서비스의 경우) 또는 App.config 파일(콘솔 응용 프로그램과 같은 독립 실행형 응용 프로그램에서 호스트되는 서비스의 경우)을 통해 서비스 동작을 지정하거나, 코드를 통해 서비스 호스트에 대한 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 컬렉션에 추적별 동작을 추가하여 구성됩니다.
+워크플로 호스트 된 WCF 서비스로 노출 될 수 있습니다는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 서비스 호스트입니다. <xref:System.ServiceModel.Activities.WorkflowServiceHost>는 워크플로 기반 서비스에 대한 특수 .NET ServiceHost 구현입니다. 이 단원에서는 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]에서 실행되는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 워크플로 서비스에 대해 추적을 구성하는 방법에 대해 설명합니다. 이러한 추적 기능은 Web.config 파일(웹 호스팅 서비스의 경우) 또는 App.config 파일(콘솔 애플리케이션과 같은 독립 실행형 애플리케이션에서 호스트되는 서비스의 경우)을 통해 서비스 동작을 지정하거나, 코드를 통해 서비스 호스트에 대한 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 컬렉션에 추적별 동작을 추가하여 구성됩니다.
 
 워크플로 서비스에서 호스트 되는 <xref:System.ServiceModel.WorkflowServiceHost>를 추가할 수 있습니다를 <xref:System.Activities.Tracking.EtwTrackingParticipant> 를 사용 하 여를 <`behavior`> 다음 예제에서와 같이 구성 파일에서 요소입니다.
 
@@ -151,7 +151,7 @@ invoker.Invoke();
 
 ### <a name="viewing-tracking-records-in-event-viewer"></a>이벤트 뷰어에서 추적 레코드 보기
 
-WF 실행을 추적할 때 특별히 관심을 두고 확인할 이벤트 뷰어 로그 두 가지는 분석 로그와 디버그 로그입니다. 둘 다 Microsoft&#124;Windows&#124;응용 프로그램 서버-응용 프로그램 노드. 이 섹션의 로그에는 전체 시스템에 영향을 미치는 이벤트가 아닌 단일 응용 프로그램의 이벤트가 있습니다.
+WF 실행을 추적할 때 특별히 관심을 두고 확인할 이벤트 뷰어 로그 두 가지는 분석 로그와 디버그 로그입니다. 둘 다 Microsoft&#124;Windows&#124;응용 프로그램 서버-응용 프로그램 노드. 이 섹션의 로그에는 전체 시스템에 영향을 미치는 이벤트가 아닌 단일 애플리케이션의 이벤트가 있습니다.
 
 디버그 추적 이벤트는 디버그 로그에 기록됩니다. 이벤트 뷰어에서 WF 디버그 추적 이벤트를 수집하려면 디버그 로그를 사용합니다.
 
@@ -163,7 +163,7 @@ WF 실행을 추적할 때 특별히 관심을 두고 확인할 이벤트 뷰어
 
 4. 마우스 오른쪽 단추로 클릭 합니다 **디버그** 노드에서 **응용 프로그램 서버-응용 프로그램** 노드를 선택한 **로그 사용**합니다.
 
-5. 추적이 설정된 응용 프로그램을 실행하여 추적 이벤트를 생성합니다.
+5. 추적이 설정된 애플리케이션을 실행하여 추적 이벤트를 생성합니다.
 
 6. 마우스 오른쪽 단추로 클릭 합니다 **디버그** 노드와 선택 **새로 고침 합니다.** 가운데 창에 추적 이벤트가 표시됩니다.
 
@@ -179,7 +179,7 @@ WF 4는 추적 레코드를 ETW(Windows용 이벤트 추적) 세션에 기록하
 
 4. 마우스 오른쪽 단추로 클릭 합니다 **분석** 노드에서 **응용 프로그램 서버-응용 프로그램** 노드를 선택한 **로그 사용**합니다.
 
-5. 추적이 설정된 응용 프로그램을 실행하여 추적 레코드를 생성합니다.
+5. 추적이 설정된 애플리케이션을 실행하여 추적 레코드를 생성합니다.
 
 6. 마우스 오른쪽 단추로 클릭 합니다 **분석** 노드와 선택 **새로 고침 합니다.** 가운데 창에 추적 레코드가 표시됩니다.
 
@@ -187,11 +187,11 @@ WF 4는 추적 레코드를 ETW(Windows용 이벤트 추적) 세션에 기록하
 
 ![추적 레코드 이벤트 뷰어에서 보여 주는 스크린샷.](./media/configuring-tracking-for-a-workflow/tracking-event-viewer.png)
 
-### <a name="registering-an-application-specific-provider-id"></a>응용 프로그램별 공급자 ID 등록
+### <a name="registering-an-application-specific-provider-id"></a>애플리케이션별 공급자 ID 등록
 
-이벤트를 특정 응용 프로그램 로그에 기록해야 하는 경우 아래 단계에 따라 새 공급자 매니페스트를 등록합니다.
+이벤트를 특정 애플리케이션 로그에 기록해야 하는 경우 아래 단계에 따라 새 공급자 매니페스트를 등록합니다.
 
-1. 응용 프로그램 구성 파일에 공급자 ID를 선언합니다.
+1. 애플리케이션 구성 파일에 공급자 ID를 선언합니다.
 
     ```xml
     <system.serviceModel>

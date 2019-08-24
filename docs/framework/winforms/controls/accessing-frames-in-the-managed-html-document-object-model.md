@@ -36,7 +36,7 @@ ms.locfileid: "67487296"
 ## <a name="frames-and-security"></a>프레임 및 보안  
  프레임에 대 한 액세스를 관리 되는 HTML DOM으로 이라는 보안 조치를 구현 한다는 사실을 복잡 *프레임 간 스크립팅 보안*합니다. 서로 다른 도메인에 `FRAME`이 두 개 이상 있는 `FRAMESET`이 문서에 포함되면 이들 `FRAME`이 서로 상호 작용할 수 없습니다. 즉, 한 `FRAME` 웹 사이트의 콘텐츠를 표시 된 정보에 액세스할 수 없습니다는 `FRAME` 와 같은 타사 사이트를 호스팅하는 `http://www.adatum.com/`합니다. 이 보안은 <xref:System.Windows.Forms.HtmlWindow> 클래스 수준에서 구현됩니다. 해당 URL과 같은 또 다른 웹 사이트를 호스트하는 `FRAME`에 대한 일반적인 정보를 가져올 수 있지만, <xref:System.Windows.Forms.HtmlWindow.Document%2A>에 액세스하거나 호스트 `FRAME` 또는 `IFRAME`의 크기나 위치를 변경할 수 없습니다.  
   
- <xref:System.Windows.Forms.HtmlWindow.Open%2A> 및 <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> 메서드를 사용하여 연 창에도 이 규칙이 적용됩니다. <xref:System.Windows.Forms.WebBrowser> 컨트롤에 호스트된 페이지와 다른 도메인에 있는 창을 열면 해당 창을 이동하거나 콘텐츠를 검사할 수 없습니다. <xref:System.Windows.Forms.WebBrowser> 컨트롤을 통해 Windows Forms 기반 응용 프로그램을 배포하는 데 사용된 웹 사이트를 표시하는 경우에도 이들 제한 사항이 적용됩니다. ClickOnce 배포 기술을 사용 하 여 웹 사이트 A에서에서 응용 프로그램을 설치 및 사용 하는 경우는 <xref:System.Windows.Forms.WebBrowser> 웹 사이트 B에 표시할 수 없게 됩니다 액세스 웹 사이트 B의 데이터입니다.  
+ <xref:System.Windows.Forms.HtmlWindow.Open%2A> 및 <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> 메서드를 사용하여 연 창에도 이 규칙이 적용됩니다. <xref:System.Windows.Forms.WebBrowser> 컨트롤에 호스트된 페이지와 다른 도메인에 있는 창을 열면 해당 창을 이동하거나 콘텐츠를 검사할 수 없습니다. <xref:System.Windows.Forms.WebBrowser> 컨트롤을 통해 Windows Forms 기반 애플리케이션을 배포하는 데 사용된 웹 사이트를 표시하는 경우에도 이들 제한 사항이 적용됩니다. ClickOnce 배포 기술을 사용 하 여 웹 사이트 A에서에서 응용 프로그램을 설치 및 사용 하는 경우는 <xref:System.Windows.Forms.WebBrowser> 웹 사이트 B에 표시할 수 없게 됩니다 액세스 웹 사이트 B의 데이터입니다.  
   
 ## <a name="see-also"></a>참고자료
 

@@ -1,5 +1,5 @@
 ---
-title: 분산 응용 프로그램 보안
+title: 분산 애플리케이션 보안
 ms.date: 03/30/2017
 helpviewer_keywords:
 - distributed application security [WCF]
@@ -12,7 +12,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/01/2019
 ms.locfileid: "67486857"
 ---
-# <a name="distributed-application-security"></a>분산 응용 프로그램 보안
+# <a name="distributed-application-security"></a>분산 애플리케이션 보안
 Windows Communication Foundation (WCF) 보안 세 가지 주요 기능 영역으로 나뉩니다: 전송 보안, 액세스 제어 및 감사 합니다. 전송 보안은 무결성, 기밀성 및 인증을 제공합니다. 전송 보안은 전송 보안, 메시지 보안, `TransportWithMessageCredential` 중 하나를 통해 제공됩니다.  
   
  WCF 메시지 보안의 개요를 보려면 [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)합니다. WCF 보안의 다른 두 영역에 대 한 자세한 내용은 참조 하세요. [권한 부여](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) 하 고 [감사](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)합니다.  
@@ -27,7 +27,7 @@ Windows Communication Foundation (WCF) 보안 세 가지 주요 기능 영역으
 - 인증서를 사용하여 전송을 보안합니다. WCF 클라이언트 및 서비스를 공용 인터넷을 통해 작동 하도록 개발 해야 합니다. 클라이언트와 서비스에는 모두 메시지를 보안하는 데 사용되는 인증서가 있습니다. 클라이언트와 서비스는 인터넷을 사용하여 서로 통신하고 메시지 무결성, 기밀성 및 상호 인증을 필요로 하는 높은 가치의 트랜잭션을 수행합니다.  
   
 ## <a name="integrity-confidentiality-and-authentication"></a>무결성, 기밀성 및 인증  
- 세 함수(무결성, 기밀성, 인증)를 총칭하여 전송 보안이라고 합니다. 전송 보안은 분산 응용 프로그램에 대한 위협을 줄이는 데 도움이 되는 함수를 제공합니다. 다음 표에서는 전송 보안을 구성하는 세 함수에 대해 간략하게 설명합니다.  
+ 세 함수(무결성, 기밀성, 인증)를 총칭하여 전송 보안이라고 합니다. 전송 보안은 분산 애플리케이션에 대한 위협을 줄이는 데 도움이 되는 함수를 제공합니다. 다음 표에서는 전송 보안을 구성하는 세 함수에 대해 간략하게 설명합니다.  
   
 |함수|설명|  
 |--------------|-----------------|  
@@ -60,7 +60,7 @@ Windows Communication Foundation (WCF) 보안 세 가지 주요 기능 영역으
  프로그래밍에 대 한 자세한 내용은 전송 보안 및 자격 증명을 지정할 [바인딩 및 보안](../../../../docs/framework/wcf/feature-details/bindings-and-security.md) 하 고 [보안 동작](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)합니다.  
   
 ### <a name="transport-client-credential-types"></a>전송 클라이언트 자격 증명 형식  
- 다음 표에서는 전송 보안을 사용하는 응용 프로그램을 만들 때 사용할 수 있는 값을 보여 줍니다. 이러한 값은 코드 또는 바인딩 설정에 사용할 수 있습니다.  
+ 다음 표에서는 전송 보안을 사용하는 애플리케이션을 만들 때 사용할 수 있는 값을 보여 줍니다. 이러한 값은 코드 또는 바인딩 설정에 사용할 수 있습니다.  
   
 |설정|설명|  
 |-------------|-----------------|  
@@ -72,7 +72,7 @@ Windows Communication Foundation (WCF) 보안 세 가지 주요 기능 영역으
 |인증서|인증서(일반적으로 X.509)를 사용하여 클라이언트 인증을 수행합니다.|  
   
 ### <a name="message-client-credential-types"></a>메시지 클라이언트 자격 증명 형식  
- 다음 표에서는 메시지 보안을 사용하는 응용 프로그램을 만들 때 사용할 수 있는 값을 보여 줍니다. 이러한 값은 코드 또는 바인딩 설정에 사용할 수 있습니다.  
+ 다음 표에서는 메시지 보안을 사용하는 애플리케이션을 만들 때 사용할 수 있는 값을 보여 줍니다. 이러한 값은 코드 또는 바인딩 설정에 사용할 수 있습니다.  
   
 |설정|설명|  
 |-------------|-----------------|  

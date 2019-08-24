@@ -24,7 +24,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61986676"
 ---
 # <a name="icorpublishappdomain-interface"></a>ICorPublishAppDomain 인터페이스
-응용 프로그램 도메인을 나타내고 응용 프로그램 도메인에 대한 정보를 제공합니다.  
+애플리케이션 도메인을 나타내고 애플리케이션 도메인에 대한 정보를 제공합니다.  
   
 ## <a name="methods"></a>메서드  
   

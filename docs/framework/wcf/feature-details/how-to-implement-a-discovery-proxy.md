@@ -20,11 +20,11 @@ ms.locfileid: "64635271"
 
 - 검색 프록시 호스팅
 
-### <a name="to-create-a-new-console-application-project"></a>새 콘솔 응용 프로그램 프로젝트를 만들려면
+### <a name="to-create-a-new-console-application-project"></a>새 콘솔 애플리케이션 프로젝트를 만들려면
 
 1. Start Visual Studio 2012.
 
-2. 콘솔 응용 프로그램 프로젝트를 새로 만듭니다. 프로젝트 이름을 `DiscoveryProxy`로 지정하고 솔루션 이름을 `DiscoveryProxyExample`로 지정합니다.
+2. 콘솔 애플리케이션 프로젝트를 새로 만듭니다. 프로젝트 이름을 `DiscoveryProxy`로 지정하고 솔루션 이름을 `DiscoveryProxyExample`로 지정합니다.
 
 3. 프로젝트에 대한 다음 참조를 추가합니다.
 
@@ -319,7 +319,7 @@ ms.locfileid: "64635271"
     }
     ```
 
- OnBegin. / OnEnd. 메서드는 후속 검색 작업에 대한 논리를 제공합니다. 예를 들어 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> 및 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> 메서드는 검색 프록시에 대한 찾기 논리를 구현합니다. 검색 프록시가 프로브 메시지를 받으면 클라이언트에 응답을 보내기 위해 이러한 메서드가 실행됩니다. 찾기 논리는 원하는 대로 수정할 수 있습니다. 예를 들어 찾기 작업의 일부로 알고리즘 또는 응용 프로그램별 XML 메타데이터 구문 분석을 통해 사용자 지정 범위 일치를 통합할 수 있습니다.
+ OnBegin. / OnEnd. 메서드는 후속 검색 작업에 대한 논리를 제공합니다. 예를 들어 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> 및 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> 메서드는 검색 프록시에 대한 찾기 논리를 구현합니다. 검색 프록시가 프로브 메시지를 받으면 클라이언트에 응답을 보내기 위해 이러한 메서드가 실행됩니다. 찾기 논리는 원하는 대로 수정할 수 있습니다. 예를 들어 찾기 작업의 일부로 알고리즘 또는 애플리케이션별 XML 메타데이터 구문 분석을 통해 사용자 지정 범위 일치를 통합할 수 있습니다.
 
 ### <a name="to-implement-the-asyncresult-class"></a>AsyncResult 클래스를 구현하려면
 

@@ -20,7 +20,7 @@ ms.locfileid: "64599605"
   
 - [탐색 속성](../../../../docs/framework/data/adonet/navigation-property.md) 간에 탐색할 수 있도록 [끝](../../../../docs/framework/data/adonet/association-end.md) 의 [연결](../../../../docs/framework/data/adonet/association-type.md) 다른 end로 합니다. 이 매개 변수는 선택 사항입니다.  
   
- 응용 프로그램에서 엔터티 형식의 인스턴스는 특정 고객 또는 주문과 같은 특정 개체를 나타냅니다. 엔터티 형식의 각 인스턴스는 고유 해야 [엔터티 키](../../../../docs/framework/data/adonet/entity-key.md) 안에 [엔터티 집합](../../../../docs/framework/data/adonet/entity-set.md)합니다.  
+ 애플리케이션에서 엔터티 형식의 인스턴스는 특정 고객 또는 주문과 같은 특정 개체를 나타냅니다. 엔터티 형식의 각 인스턴스는 고유 해야 [엔터티 키](../../../../docs/framework/data/adonet/entity-key.md) 안에 [엔터티 집합](../../../../docs/framework/data/adonet/entity-set.md)합니다.  
   
  두 엔터티 형식 인스턴스는 형식이 동일하고 해당 엔터티 키 값이 동일한 경우에만 동일한 것으로 간주됩니다.  
   

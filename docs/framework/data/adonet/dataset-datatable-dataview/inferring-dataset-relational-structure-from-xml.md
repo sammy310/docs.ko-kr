@@ -1,5 +1,5 @@
 ---
-title: XML에서 데이터 집합 관계형 구조 유추
+title: XML에서 데이터 세트 관계형 구조 유추
 ms.date: 03/30/2017
 ms.assetid: cd2f41c6-6785-420e-aa43-3ceb0bdccdce
 ms.openlocfilehash: 9a9dc7d94728ea797a8930d3f77068fdd3ebfb5c
@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62034244"
 ---
-# <a name="inferring-dataset-relational-structure-from-xml"></a>XML에서 데이터 집합 관계형 구조 유추
+# <a name="inferring-dataset-relational-structure-from-xml"></a>XML에서 데이터 세트 관계형 구조 유추
 <xref:System.Data.DataSet>의 관계형 구조 또는 스키마는 테이블, 열, 제약 조건 및 관계로 구성됩니다. XML에서 <xref:System.Data.DataSet>을 로드할 때 로드되는 XML에서 스키마를 명시적으로 또는 유추를 통해 미리 정의하거나 만들 수 있습니다. 내용과 스키마를 로드 하는 방법에 대 한 자세한 내용은 <xref:System.Data.DataSet> XML에서 참조 [XML에서 데이터 집합을 로드](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) 하 고 [XML에서 데이터 집합 스키마 정보 로드](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)합니다.  
   
  하는 경우의 스키마를 <xref:System.Data.DataSet> 만들어지는 두 XML 스키마 정의 언어 (XSD)를 사용 하 여 스키마를 명시적으로 지정 하는 방법이 XML에서 (에 설명 된 대로 [파생 데이터 집합 관계형 구조에서 XSD (XML 스키마) ](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md))는 Xml-data Reduced (XDR) 또는 합니다. XML에서 XML 스키마나 XDR 스키마를 사용할 수 없으면 <xref:System.Data.DataSet>의 스키마는 XML 요소 및 특성의 구조로부터 유추할 수 있습니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "62034244"
  XSD(XML 스키마 정의 언어) 스키마에서 만들어지는 <xref:System.Data.DataSet>의 관계 구조 또는 스키마에 대해 설명합니다.  
   
  [ADO.NET 개요](../../../../../docs/framework/data/adonet/ado-net-overview.md)  
- ADO.NET 아키텍처 및 구성 요소에 대해 설명하고, 이를 사용하여 기존 데이터 소스에 액세스하고 응용 프로그램 데이터를 관리하는 방법을 설명합니다.  
+ ADO.NET 아키텍처 및 구성 요소에 대해 설명하고, 이를 사용하여 기존 데이터 소스에 액세스하고 애플리케이션 데이터를 관리하는 방법을 설명합니다.  
   
 ## <a name="see-also"></a>참고자료
 

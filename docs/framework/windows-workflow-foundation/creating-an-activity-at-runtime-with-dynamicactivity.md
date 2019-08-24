@@ -66,7 +66,7 @@ ms.locfileid: "61774077"
                 Console.ReadLine();  
     ```  
   
-6. 응용 프로그램을 실행합니다. 텍스트 "Hello World!"를 사용 하 여 콘솔 창 표시 합니다.  
+6. 애플리케이션을 실행합니다. 텍스트 "Hello World!"를 사용 하 여 콘솔 창 표시 합니다.  
   
 #### <a name="to-create-an-activity-at-runtime-using-xaml"></a>XAML을 사용하여 런타임에 활동을 만들려면  
   
@@ -92,7 +92,7 @@ ms.locfileid: "61774077"
     Console.ReadLine();  
     ```  
   
-7. 응용 프로그램을 실행합니다. 텍스트 "Hello World!"를 사용 하 여 콘솔 창 표시 됩니다.  
+7. 애플리케이션을 실행합니다. 텍스트 "Hello World!"를 사용 하 여 콘솔 창 표시 됩니다.  
   
 8. Workflow1.xaml 파일을 마우스 오른쪽 단추로 클릭 합니다 **솔루션 탐색기** 선택한 **코드 보기**합니다. 활동 클래스가 `x:Class`를 사용하여 만들어지고 속성은 `x:Property`를 사용하여 만들어집니다.  
   

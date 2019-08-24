@@ -45,9 +45,9 @@ ms.locfileid: "64650181"
   
      이 사용자 지정 논리는 서비스에 있는 각 엔드포인트의 모든 범위에 적용됩니다. 엔드포인트의 범위가 클라이언트에서 제공한 범위와 일치하면 검색 서비스에서는 클라이언트로 다시 보내는 응답에 해당 엔드포인트를 추가합니다.  
   
-3. **CustomDiscoveryExtension.cs**: 검색 서비스를 구현 하는 마지막 단계를 사용자 지정이 구현에 연결할 서비스 호스트에 서비스를 검색 합니다. 여기에 사용되는 도우미 클래스는 `CustomDiscoveryExtension` 클래스입니다. 이 클래스는 <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> 클래스를 확장합니다. 사용자는 <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> 메서드를 재정의해야 합니다. 이 경우 메서드는 이전에 생성된 사용자 지정 검색 서비스의 인스턴스를 반환합니다. `PublishedEndpoints`는 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>에 추가된 모든 응용 프로그램 엔드포인트를 포함하는 <xref:System.ServiceModel.ServiceHost>입니다. 사용자 지정 검색 서비스에서는 이를 사용하여 해당 내부 목록을 채웁니다. 사용자가 다른 엔드포인트 메타데이터를 추가할 수도 있습니다.  
+3. **CustomDiscoveryExtension.cs**: 검색 서비스를 구현 하는 마지막 단계를 사용자 지정이 구현에 연결할 서비스 호스트에 서비스를 검색 합니다. 여기에 사용되는 도우미 클래스는 `CustomDiscoveryExtension` 클래스입니다. 이 클래스는 <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> 클래스를 확장합니다. 사용자는 <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> 메서드를 재정의해야 합니다. 이 경우 메서드는 이전에 생성된 사용자 지정 검색 서비스의 인스턴스를 반환합니다. `PublishedEndpoints`는 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>에 추가된 모든 애플리케이션 엔드포인트를 포함하는 <xref:System.ServiceModel.ServiceHost>입니다. 사용자 지정 검색 서비스에서는 이를 사용하여 해당 내부 목록을 채웁니다. 사용자가 다른 엔드포인트 메타데이터를 추가할 수도 있습니다.  
   
- 마지막으로 Program.cs를 엽니다. <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>와 `CustomDiscoveryExtension`이 모두 호스트에 추가되어 있습니다. 이 작업이 수행되고 호스트에 검색 메시지를 받는 데 사용할 엔드포인트가 있으면 응용 프로그램에서 사용자 지정 검색 서비스를 사용할 수 있습니다.  
+ 마지막으로 Program.cs를 엽니다. <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>와 `CustomDiscoveryExtension`이 모두 호스트에 추가되어 있습니다. 이 작업이 수행되고 호스트에 검색 메시지를 받는 데 사용할 엔드포인트가 있으면 애플리케이션에서 사용자 지정 검색 서비스를 사용할 수 있습니다.  
   
  클라이언트에서 주소를 모르고도 서비스를 찾을 수 있는지 확인합니다.  
   
@@ -57,9 +57,9 @@ ms.locfileid: "64650181"
   
 2. 프로젝트를 빌드합니다.  
   
-3. 서비스 응용 프로그램을 실행합니다.  
+3. 서비스 애플리케이션을 실행합니다.  
   
-4. 클라이언트 응용 프로그램을 실행합니다.  
+4. 클라이언트 애플리케이션을 실행합니다.  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  

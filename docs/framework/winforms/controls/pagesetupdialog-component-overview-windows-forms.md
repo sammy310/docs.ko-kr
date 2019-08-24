@@ -16,7 +16,7 @@ ms.locfileid: "65211736"
 ---
 # <a name="pagesetupdialog-component-overview-windows-forms"></a>PageSetupDialog 구성 요소 개요(Windows Forms)
 
-Windows Forms <xref:System.Windows.Forms.PageSetupDialog> 구성 요소는 Windows 기반 응용 프로그램에서 인쇄를 위한 페이지 세부 정보를 설정 하는 데 사용 되는 미리 구성 된 대화 상자. 사용 하 여 응용 프로그램 내에서 Windows 기반 간단한 솔루션으로 사용자에 대 한 고유한 대화 상자를 구성 하는 대신 페이지 기본 설정. 테두리 및 여백, 머리글 및 바닥글 및 세로 또는 가로 방향이 설정 하는 사용자를 사용할 수 있습니다. 표준 Windows 대화 상자를 사용하여 기본 기능이 사용자에게 익숙한 응용 프로그램을 만듭니다.
+Windows Forms <xref:System.Windows.Forms.PageSetupDialog> 구성 요소는 Windows 기반 응용 프로그램에서 인쇄를 위한 페이지 세부 정보를 설정 하는 데 사용 되는 미리 구성 된 대화 상자. 사용 하 여 응용 프로그램 내에서 Windows 기반 간단한 솔루션으로 사용자에 대 한 고유한 대화 상자를 구성 하는 대신 페이지 기본 설정. 테두리 및 여백, 머리글 및 바닥글 및 세로 또는 가로 방향이 설정 하는 사용자를 사용할 수 있습니다. 표준 Windows 대화 상자를 사용하여 기본 기능이 사용자에게 익숙한 애플리케이션을 만듭니다.
 
 ## <a name="key-properties-and-methods"></a>키 속성 및 메서드
 

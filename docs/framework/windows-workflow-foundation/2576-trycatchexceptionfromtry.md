@@ -17,7 +17,7 @@ ms.locfileid: "61755651"
 |ID|2576|  
 |키워드|WFActivities|  
 |수준|정보|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  TryCatch 작업에서 예외를 catch했음을 나타냅니다.  

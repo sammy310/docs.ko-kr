@@ -23,7 +23,7 @@ ms.locfileid: "61754715"
 `dirtyCastAndCallOnInterface` MDA(관리 디버깅 도우미)는 런타임에만 바인딩됨으로 표시된 클래스 인터페이스에 대해 vtable을 통해 초기에 바인딩된 호출을 시도할 때 활성화됩니다.  
   
 ## <a name="symptoms"></a>증상  
- COM을 통해 초기에 바인딩된 호출을 CLR에 배치하는 경우 응용 프로그램에서 액세스 위반이나 예기치 않은 동작이 발생합니다.  
+ COM을 통해 초기에 바인딩된 호출을 CLR에 배치하는 경우 애플리케이션에서 액세스 위반이나 예기치 않은 동작이 발생합니다.  
   
 ## <a name="cause"></a>원인  
  코드에서 런타임에만 바인딩되는 클래스 인터페이스에 대해 vtable을 통해 초기에 바인딩된 호출을 시도 중입니다. 기본적으로 클래스 인터페이스는 런타임에만 바인딩됨으로 식별됩니다. <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> 특성에 <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch> 값(`[ClassInterface(ClassInterfaceType.AutoDispatch)]`)을 사용하여 런타임에 바인딩됨으로 식별할 수도 있습니다.  

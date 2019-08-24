@@ -23,7 +23,7 @@ ms.locfileid: "67504100"
 xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace  
 ```  
   
- 이 구문에서은 `/d` 지시문은 생성 하는 도구를 **데이터 집합**, 및 `/l:` 도구 (예: C# 또는 Visual Basic.NET) 사용 하는 언어를 알려 줍니다. 선택적 `/eld` 지시문에 대해 생성 된 쿼리를 LINQ to DataSet 사용할 수 있도록 지정 **데이터 집합입니다.** 이 옵션은 `/d` 옵션도 함께 지정한 경우에 사용합니다. 자세한 내용은 [형식화 된 데이터 집합 쿼리](../../../../../docs/framework/data/adonet/querying-typed-datasets.md)합니다. 선택적 `/n:` 지시문은 또한 네임 스페이스를 생성 하는 도구를 **데이터 집합** 호출 **XSDSchema.Namespace**합니다. 이 명령을 실행하면 XSDSchemaFileName.cs가 생성되며, 이 파일을 컴파일하여 ADO.NET 응용 프로그램에서 사용할 수 있습니다. 생성된 코드는 라이브러리나 모듈로 컴파일할 수 있습니다.  
+ 이 구문에서은 `/d` 지시문은 생성 하는 도구를 **데이터 집합**, 및 `/l:` 도구 (예: C# 또는 Visual Basic.NET) 사용 하는 언어를 알려 줍니다. 선택적 `/eld` 지시문에 대해 생성 된 쿼리를 LINQ to DataSet 사용할 수 있도록 지정 **데이터 집합입니다.** 이 옵션은 `/d` 옵션도 함께 지정한 경우에 사용합니다. 자세한 내용은 [형식화 된 데이터 집합 쿼리](../../../../../docs/framework/data/adonet/querying-typed-datasets.md)합니다. 선택적 `/n:` 지시문은 또한 네임 스페이스를 생성 하는 도구를 **데이터 집합** 호출 **XSDSchema.Namespace**합니다. 이 명령을 실행하면 XSDSchemaFileName.cs가 생성되며, 이 파일을 컴파일하여 ADO.NET 애플리케이션에서 사용할 수 있습니다. 생성된 코드는 라이브러리나 모듈로 컴파일할 수 있습니다.  
   
  다음 코드는 생성된 코드를 C# 컴파일러(csc.exe)를 사용하여 라이브러리로 컴파일하는 구문을 보여 줍니다.  
   
@@ -31,9 +31,9 @@ xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace
 csc.exe /t:library XSDSchemaFileName.cs /r:System.dll /r:System.Data.dll  
 ```  
   
- `/t:` 지시문은 도구에 라이브러리로 컴파일하라는 것을, `/r:` 지시문은 컴파일에 필요한 종속 라이브러리를 지정합니다. 이 명령을 실행하면 XSDSchemaFileName.dll이 생성되며, 이 dll은 `/r:` 지시문으로 ADO.NET 응용 프로그램을 컴파일할 때 컴파일러로 전달할 수 있습니다.  
+ `/t:` 지시문은 도구에 라이브러리로 컴파일하라는 것을, `/r:` 지시문은 컴파일에 필요한 종속 라이브러리를 지정합니다. 이 명령을 실행하면 XSDSchemaFileName.dll이 생성되며, 이 dll은 `/r:` 지시문으로 ADO.NET 애플리케이션을 컴파일할 때 컴파일러로 전달할 수 있습니다.  
   
- 다음 코드는 ADO.NET 응용 프로그램에서 XSD.exe로 전달된 네임스페이스에 액세스하는 구문을 보여 줍니다.  
+ 다음 코드는 ADO.NET 애플리케이션에서 XSD.exe로 전달된 네임스페이스에 액세스하는 구문을 보여 줍니다.  
   
 ```vb  
 Imports XSDSchema.Namespace  

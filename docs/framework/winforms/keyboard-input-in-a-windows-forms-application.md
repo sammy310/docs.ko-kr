@@ -1,5 +1,5 @@
 ---
-title: Windows Forms 응용 프로그램의 키보드 입력
+title: Windows Forms 애플리케이션의 키보드 입력
 ms.date: 03/30/2017
 helpviewer_keywords:
 - keyboard input [Windows Forms], using in Windows Forms
@@ -13,7 +13,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61800843"
 ---
-# <a name="keyboard-input-in-a-windows-forms-application"></a>Windows Forms 응용 프로그램의 키보드 입력
+# <a name="keyboard-input-in-a-windows-forms-application"></a>Windows Forms 애플리케이션의 키보드 입력
 Windows Forms에 사용 하면 특정 키 누름에 응답 하 고 가로채 수정 및 양식 응용 프로그램에서 키 누름을 사용 하 고 수준을 제어 하는 방법을 제공 하는 표준 키보드 이벤트가 포함 됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  

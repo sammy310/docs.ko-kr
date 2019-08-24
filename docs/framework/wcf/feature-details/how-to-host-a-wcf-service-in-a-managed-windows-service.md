@@ -18,7 +18,7 @@ ms.locfileid: "65636486"
 
 Windows 서비스는 MMC(Microsoft Management Console)의 Microsoft.ManagementConsole.SnapIn을 통해 관리되고 시스템 부팅 시 자동으로 시작되도록 구성될 수 있습니다. 서비스의 프로세스 수명은 SCM에 의해 서비스 제어 관리자 () Windows 서비스에 대 한 제어 됩니다 있도록 WCF 서비스를 관리 되는 Windows 서비스로 호스팅하는 응용 프로그램 도메인 (AppDomain) 등록이 호스팅 옵션으로 구성 됩니다.
 
-서비스 코드에는 서비스 계약에 대한 서비스 구현, Windows 서비스 클래스 및 설치 관리자 클래스가 포함됩니다. 서비스 구현 클래스 `CalculatorService`, WCF 서비스입니다. `CalculatorWindowsService`는 Windows 서비스입니다. Windows 서비스로 정규화하기 위해 클래스가 `ServiceBase`에서 상속되고 `OnStart` 및 `OnStop` 메서드를 구현합니다. `OnStart`에서 <xref:System.ServiceModel.ServiceHost> 형식에 대한 `CalculatorService`가 만들어지고 열립니다. `OnStop`에서 서비스가 중지되고 삭제됩니다. 또한 호스트는 응용 프로그램 설정에서 구성된 대로 기본 주소를 서비스 호스트에 제공합니다. <xref:System.Configuration.Install.Installer>에서 상속되는 설치 관리자 클래스를 사용하면 프로그램을 Installutil.exe 도구를 통해 Windows 서비스로 설치할 수 있습니다.
+서비스 코드에는 서비스 계약에 대한 서비스 구현, Windows 서비스 클래스 및 설치 관리자 클래스가 포함됩니다. 서비스 구현 클래스 `CalculatorService`, WCF 서비스입니다. `CalculatorWindowsService`는 Windows 서비스입니다. Windows 서비스로 정규화하기 위해 클래스가 `ServiceBase`에서 상속되고 `OnStart` 및 `OnStop` 메서드를 구현합니다. `OnStart`에서 <xref:System.ServiceModel.ServiceHost> 형식에 대한 `CalculatorService`가 만들어지고 열립니다. `OnStop`에서 서비스가 중지되고 삭제됩니다. 또한 호스트는 애플리케이션 설정에서 구성된 대로 기본 주소를 서비스 호스트에 제공합니다. <xref:System.Configuration.Install.Installer>에서 상속되는 설치 관리자 클래스를 사용하면 프로그램을 Installutil.exe 도구를 통해 Windows 서비스로 설치할 수 있습니다.
 
 ## <a name="construct-the-service-and-provide-the-hosting-code"></a>서비스 생성 및 호스팅 코드 제공
 
@@ -73,7 +73,7 @@ Windows 서비스는 MMC(Microsoft Management Console)의 Microsoft.ManagementCo
 
 12. 프로젝트를 만들 때 생성된 `Service` 클래스를 제거합니다.
 
-13. 프로젝트에 응용 프로그램 구성 파일을 추가합니다. 파일의 내용을 다음 구성 XML로 바꿉니다.
+13. 프로젝트에 애플리케이션 구성 파일을 추가합니다. 파일의 내용을 다음 구성 XML로 바꿉니다.
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -131,7 +131,7 @@ Windows 서비스는 MMC(Microsoft Management Console)의 Microsoft.ManagementCo
 [!code-csharp[c_HowTo_HostInNTService#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#8)]
 [!code-vb[c_HowTo_HostInNTService#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#8)]
 
-"자체 호스팅" 옵션과 같이 Windows 서비스 호스팅 환경에서는 일부 호스팅 코드를 응용 프로그램의 일부로 작성해야 합니다. 서비스는 콘솔 응용 프로그램으로 구현되고 자체 호스팅 코드가 포함됩니다. 다른 호스팅 환경의 경우 IIS(인터넷 정보 서비스)의 WAS(Windows Process Activation Service) 호스팅과 같이 개발자가 호스팅 코드를 작성할 필요가 없습니다.
+"자체 호스팅" 옵션과 같이 Windows 서비스 호스팅 환경에서는 일부 호스팅 코드를 응용 프로그램의 일부로 작성해야 합니다. 서비스는 콘솔 애플리케이션으로 구현되고 자체 호스팅 코드가 포함됩니다. 다른 호스팅 환경의 경우 IIS(인터넷 정보 서비스)의 WAS(Windows Process Activation Service) 호스팅과 같이 개발자가 호스팅 코드를 작성할 필요가 없습니다.
 
 ## <a name="see-also"></a>참고자료
 

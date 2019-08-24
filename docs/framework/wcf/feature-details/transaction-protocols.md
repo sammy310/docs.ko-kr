@@ -17,7 +17,7 @@ Windows Communication Foundation (WCF) Ws-atomic Transaction 및 Ws-coordination
 |WS-Coordination|1.0<br /><br /> 1.1|<https://go.microsoft.com/fwlink/?LinkId=96104><br /><br /> [https://go.microsoft.com/fwlink/?LinkId=96079](https://go.microsoft.com/fwlink/?LinkId=96079)|  
 |WS-AtomicTransaction|1.0<br /><br /> 1.1|<https://go.microsoft.com/fwlink/?LinkId=96080><br /><br /> https://go.microsoft.com/fwlink/?LinkId=96081|  
   
- 이러한 프로토콜 사양에서의 상호 운용성은 응용 프로그램 간 및 트랜잭션 관리자 간 이렇게 두 가지 수준에서 필요합니다(다음 그림 참조) 사양은 두 가지 수준의 상호 운용성을 위한 메시지 형식 및 메시지 교환을 상세하게 설명합니다. 응용 프로그램 간의 교환을 위한 보안, 안정성 및 인코딩은 일반적인 응용 프로그램 교환을 위해 수행되는 것과 같은 방식으로 적용됩니다. 그러나 트랜잭션 관리자 간의 상호 운용성을 위해서는 특정한 바인딩에 대한 동의가 필요합니다. 이러한 부분은 일반적으로 사용자가 구성하지 않기 때문입니다.  
+ 이러한 프로토콜 사양에서의 상호 운용성은 애플리케이션 간 및 트랜잭션 관리자 간 이렇게 두 가지 수준에서 필요합니다(다음 그림 참조) 사양은 두 가지 수준의 상호 운용성을 위한 메시지 형식 및 메시지 교환을 상세하게 설명합니다. 애플리케이션 간의 교환을 위한 보안, 안정성 및 인코딩은 일반적인 애플리케이션 교환을 위해 수행되는 것과 같은 방식으로 적용됩니다. 그러나 트랜잭션 관리자 간의 상호 운용성을 위해서는 특정한 바인딩에 대한 동의가 필요합니다. 이러한 부분은 일반적으로 사용자가 구성하지 않기 때문입니다.  
   
  이 항목에서는 WS-AT(WS-Atomic Transaction) 사양과 보안의 조합에 대해 설명하고, 트랜잭션 관리자 간 통신을 위해 사용하는 보안이 설정된 바인딩에 대해 설명합니다. 이 문서에서 설명하는 방식은 IBM, IONA, Sun Microsystems 등에서 WS-AT 및 WS-Coordination의 다른 구현과 함께 성공적으로 테스트되었습니다.  
   
@@ -51,7 +51,7 @@ Windows Communication Foundation (WCF) Ws-atomic Transaction 및 Ws-coordination
   
 - 프로토콜 메시지(준비, 롤백, 커밋, 중단 등)  
   
-- 응용 프로그램 메시지  
+- 애플리케이션 메시지  
   
  처음 세 개의 메시지 클래스는 트랜잭션 관리자 메시지로 간주되며, 해당 바인딩 구성은 이 항목의 뒷부분에 있는 "응용 프로그램 메시지 교환"에서 설명합니다. 네 번째 메시지는 응용 프로그램 간 메시지이며, 이 항목의 뒷부분에 있는 "메시지 예제" 단원에서 설명합니다. 이 섹션에서는 이러한 각 클래스에 대 한 WCF에서 사용 된 프로토콜 바인딩을 설명 합니다.  
   
@@ -72,7 +72,7 @@ Windows Communication Foundation (WCF) Ws-atomic Transaction 및 Ws-coordination
   
  R1002: WS-AT 1.1 트랜잭션에 참여 하는 트랜잭션 관리자는 Ws-atomic Transaction 및 Ws-coordination 메시지 교환을 위해 SOAP 1.1과 Ws-addressing 2005/08를 사용 해야 합니다.  
   
- 응용 프로그램 메시지는 이러한 바인딩에 제한되지 않으며, 이에 대해서는 나중에 설명합니다.  
+ 애플리케이션 메시지는 이러한 바인딩에 제한되지 않으며, 이에 대해서는 나중에 설명합니다.  
   
 ### <a name="transaction-manager-https-binding"></a>트랜잭션 관리자 HTTPS 바인딩  
  트랜잭션 관리자 HTTPS 바인딩은 전송 보안에만 전적으로 의존하여 보안을 수행하며, 트랜잭션 트리에 있는 각 발신자-수신자 쌍 간의 신뢰를 설정합니다.  
@@ -99,7 +99,7 @@ Windows Communication Foundation (WCF) Ws-atomic Transaction 및 Ws-coordination
  X.509 인증서는 트랜잭션 관리자 ID를 설정하는 데 사용합니다. 클라이언트/서버 인증이 필요하며, 클라이언트/서버 권한 부여는 구현 정보로 유지됩니다.  
   
 #### <a name="activation-message-binding-configuration"></a>활성화 메시지 바인딩 구성  
- 활성화 메시지는 일반적으로 응용 프로그램과 해당 로컬 트랜잭션 관리자 간에 발생하기 때문에 대개 상호 운용성에 관여하지 않습니다.  
+ 활성화 메시지는 일반적으로 애플리케이션과 해당 로컬 트랜잭션 관리자 간에 발생하기 때문에 대개 상호 운용성에 관여하지 않습니다.  
   
  B1221: WCF에서는 이중 HTTPS 바인딩 (에서 설명한 [메시징 프로토콜](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) 활성화 메시지에 대 한 합니다. 요청 및 회신 메시지는 WS-AT 1.0용 WS-Addressing 2004/08 및 WS-AT 1.1용 WS-Addressing 2005/08을 사용하여 상호 관련됩니다.  
   
@@ -125,8 +125,8 @@ Windows Communication Foundation (WCF) Ws-atomic Transaction 및 Ws-coordination
   
  B1241: 구현에서 지원 해야 `wsa:ReferenceParameters` WCF의 2PC 메시지 상관 관계를 달성 하기 위해 Ws-addressing에서 설명 된 대로 합니다.  
   
-## <a name="application-message-exchange"></a>응용 프로그램 메시지 교환  
- 바인딩이 다음 보안 요구 사항을 만족하는 경우, 응용 프로그램에서는 응용 프로그램 간 메시지에 대해 특정 바인딩을 자유롭게 사용할 수 있습니다.  
+## <a name="application-message-exchange"></a>애플리케이션 메시지 교환  
+ 바인딩이 다음 보안 요구 사항을 만족하는 경우, 애플리케이션에서는 애플리케이션 간 메시지에 대해 특정 바인딩을 자유롭게 사용할 수 있습니다.  
   
 - R2001: 응용 프로그램 간 메시지 전달 해야 합니다 `t:IssuedTokens` 헤더와 함께 `CoordinationContext` 메시지의 헤더에 합니다.  
   
@@ -590,10 +590,10 @@ xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-u
 </s:Envelope>  
 ```  
   
-### <a name="application-messages"></a>응용 프로그램 메시지  
- 다음 메시지는 응용 프로그램 메시지입니다.  
+### <a name="application-messages"></a>애플리케이션 메시지  
+ 다음 메시지는 애플리케이션 메시지입니다.  
   
-#### <a name="application-message-request"></a>응용 프로그램 메시지-요청  
+#### <a name="application-message-request"></a>애플리케이션 메시지-요청  
   
 ```xml  
 <s:Envelope>  

@@ -25,7 +25,7 @@ ms.lasthandoff: 07/10/2019
 ms.locfileid: "67756972"
 ---
 # <a name="icorprofilerinfo3enummodules-method"></a>ICorProfilerInfo3::EnumModules 메서드
-응용 프로그램에 로드되는 관리 모듈 컬렉션을 순차적으로 반복하는 메서드를 제공하는 열거자를 반환합니다.  
+애플리케이션에 로드되는 관리 모듈 컬렉션을 순차적으로 반복하는 메서드를 제공하는 열거자를 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   

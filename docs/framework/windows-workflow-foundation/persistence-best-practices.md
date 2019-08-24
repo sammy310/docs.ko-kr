@@ -19,7 +19,7 @@ ms.locfileid: "64592115"
   
  워크플로 인스턴스가 유지되지 않은 경우 호스트나 컴퓨터에서 오류가 발생하면 워크플로 인스턴스를 복구할 수 없습니다. 일반적으로 워크플로의 수명 주기 초반에 워크플로 인스턴스를 유지하는 것이 좋습니다.  
   
- 워크플로가 오랫동안 작업을 수행하는 경우 작업 중인 기간 동안 워크플로 인스턴스를 주기적으로 유지하는 것이 좋습니다. 이렇게 하려면 워크플로 인스턴스가 계속 작업을 수행하도록 하는 일련의 활동 전반에서 <xref:System.Activities.Statements.Persist> 활동을 추가하면 됩니다. 이에 따라 응용 프로그램 도메인 재활용, 호스트 오류 또는 컴퓨터 오류가 발생해도 시스템이 작업 중인 기간의 시작으로 롤백되지 않습니다. <xref:System.Activities.Statements.Persist> 활동을 워크플로에 추가하면 성능이 저하될 수 있으므로 주의하세요.  
+ 워크플로가 오랫동안 작업을 수행하는 경우 작업 중인 기간 동안 워크플로 인스턴스를 주기적으로 유지하는 것이 좋습니다. 이렇게 하려면 워크플로 인스턴스가 계속 작업을 수행하도록 하는 일련의 활동 전반에서 <xref:System.Activities.Statements.Persist> 활동을 추가하면 됩니다. 이에 따라 애플리케이션 도메인 재활용, 호스트 오류 또는 컴퓨터 오류가 발생해도 시스템이 작업 중인 기간의 시작으로 롤백되지 않습니다. <xref:System.Activities.Statements.Persist> 활동을 워크플로에 추가하면 성능이 저하될 수 있으므로 주의하세요.  
   
  Windows Server AppFabric은 지속성의 구성과 사용을 크게 단순화합니다. 자세한 내용은 참조 하세요. [Windows Server App Fabric 지 속성](https://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
   
@@ -69,7 +69,7 @@ ms.locfileid: "64592115"
  이 매개 변수는 워크플로 인스턴스 상태를 압축하도록 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>에 지시합니다. 압축을 하면 지속성 데이터베이스에 저장된 데이터의 양이 줄어들고 지속성 데이터베이스가 전용 데이터베이스 서버에 있는 경우 네트워크 트래픽이 줄어듭니다. 압축을 사용하는 경우 인스턴스 상태를 압축하고 추출할 계산 리소스가 필요합니다. 대부분의 경우 압축을 통해 성능이 향상됩니다.  
   
  <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.InstanceCompletionAction%2A>  
- 이 매개 변수는 완료된 인스턴스를 유지하거나 삭제하도록 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>에 지시합니다. 완료된 인스턴스를 유지하면 지속성 데이터베이스 저장소 요구 사항이 증가하고 테이블이 커지며 테이블 조회 시간도 늘어납니다. 완료된 인스턴스가 디버깅이나 감사에 필요하지 않으면 완료된 인스턴스를 삭제하도록 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>에 지시하는 것이 좋습니다. 삭제된 인스턴스는 사용자가 해당 인스턴스를 결국 제거하는 프로세스를 설정하는 경우에만 유지되어야 합니다. 완료된 워크플로 인스턴스가 인스턴스 저장소에 있는 한 상관 관계 키를 다시 사용할 수 없습니다.  
+ 이 매개 변수는 완료된 인스턴스를 유지하거나 삭제하도록 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>에 지시합니다. 완료된 인스턴스를 유지하면 지속성 데이터베이스 스토리지 요구 사항이 증가하고 테이블이 커지며 테이블 조회 시간도 늘어납니다. 완료된 인스턴스가 디버깅이나 감사에 필요하지 않으면 완료된 인스턴스를 삭제하도록 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>에 지시하는 것이 좋습니다. 삭제된 인스턴스는 사용자가 해당 인스턴스를 결국 제거하는 프로세스를 설정하는 경우에만 유지되어야 합니다. 완료된 워크플로 인스턴스가 인스턴스 저장소에 있는 한 상관 관계 키를 다시 사용할 수 없습니다.  
   
  <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.RunnableInstancesDetectionPeriod%2A>  
  이 매개 변수는 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>가 <xref:System.Activities.Statements.Delay> 활동이 만료될 때 로드되어야 하는 인스턴스를 지속성 데이터베이스에서 폴링하는 최대 간격을 정의합니다. <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>가 다음 폴링 간격에서 만료될 타이머를 찾는 경우 타이머가 만료된 직후에 다음 폴링이 발생하도록 폴링 간격을 단축합니다. 이러한 방식으로 SQL 워크플로 인스턴스 저장소는 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.RunnableInstancesDetectionPeriod%2A>보다 길게 실행되는 타이머의 높은 정확도를 달성합니다.  

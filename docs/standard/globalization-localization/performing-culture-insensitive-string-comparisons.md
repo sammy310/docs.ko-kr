@@ -32,7 +32,7 @@ ms.locfileid: "66053205"
   
  <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드에서 지원하는 문화권을 구분하지 않는 문자열 비교는 언어적(고정 문화권의 정렬 규칙 기반)이거나 비언어적(문자열에 있는 문자의 서수 값 기반)입니다. 대부분의 문화권을 구분하지 않는 문자열 비교는 비언어적입니다. 이러한 비교의 경우 <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> 또는 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 열거형 값을 `comparisonType` 매개 변수로 지정합니다. 예를 들어 사용자 이름 또는 암호 비교와 같은 보안 결정이 문자열 비교의 결과를 기반으로 하는 경우 결과가 특정 문화권 또는 언어 규칙의 영향을 받지 않도록 작업이 문화권을 구분하지 않고 비언어적이어야 합니다.  
   
- 여러 문화권의 언어적으로 관련된 문자열을 일관성 있게 처리하려면 문화권을 구분하지 않는 언어적 문자열 비교를 사용합니다. 예를 들어 응용 프로그램에서 목록 상자에 여러 문자 집합을 사용하는 단어를 표시하는 경우 현재 문화권에 관계없이 동일한 순서로 단어를 표시하려고 할 수 있습니다. 문화권을 구분하지 않는 언어적 비교의 경우 .NET Framework에서는 영어의 언어적 규칙을 기반으로 하는 고정 문화권을 정의합니다. 문화권을 구분하지 않는 언어적 비교를 수행하려면 <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> 또는 <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType>를 `comparisonType` 매개 변수로 지정합니다.  
+ 여러 문화권의 언어적으로 관련된 문자열을 일관성 있게 처리하려면 문화권을 구분하지 않는 언어적 문자열 비교를 사용합니다. 예를 들어 애플리케이션에서 목록 상자에 여러 문자 집합을 사용하는 단어를 표시하는 경우 현재 문화권에 관계없이 동일한 순서로 단어를 표시하려고 할 수 있습니다. 문화권을 구분하지 않는 언어적 비교의 경우 .NET Framework에서는 영어의 언어적 규칙을 기반으로 하는 고정 문화권을 정의합니다. 문화권을 구분하지 않는 언어적 비교를 수행하려면 <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> 또는 <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType>를 `comparisonType` 매개 변수로 지정합니다.  
   
  다음 예제에서는 문화권을 구분하지 않는 비언어적 문자열 비교를 두 가지 수행합니다. 첫 번째 비교는 대/소문자를 구분하지만 두 번째 비교는 대/소문자를 구분하지 않습니다.  
   

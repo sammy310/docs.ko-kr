@@ -10,17 +10,17 @@ ms.lasthandoff: 05/19/2019
 ms.locfileid: "65877204"
 ---
 # <a name="adonet-overview"></a>ADO.NET 개요
-ADO.NET은 OLE DB 및 ODBC를 통해 노출되는 데이터 소스, SQL Server 및 XML과 같은 데이터 소스에 대한 일관성 있는 액세스를 제공합니다. 데이터 공유 소비자 응용 프로그램은 ADO.NET을 통해 이러한 데이터 소스에 연결하여 포함된 데이터를 검색, 처리 및 업데이트할 수 있습니다.  
+ADO.NET은 OLE DB 및 ODBC를 통해 노출되는 데이터 소스, SQL Server 및 XML과 같은 데이터 소스에 대한 일관성 있는 액세스를 제공합니다. 데이터 공유 소비자 애플리케이션은 ADO.NET을 통해 이러한 데이터 소스에 연결하여 포함된 데이터를 검색, 처리 및 업데이트할 수 있습니다.  
   
- ADO.NET은 데이터 조작에 따른 데이터 액세스를 각각의 구성 요소로 구분하여 개별적으로 또는 차례대로 사용할 수 있게 해 줍니다. ADO.NET에는 데이터베이스에 연결하고 명령을 실행하며 결과를 검색하는 데 사용되는 .NET Framework 데이터 공급자가 포함됩니다. 검색된 결과는 곧바로 처리되거나 ADO.NET <xref:System.Data.DataSet> 개체에 저장되어 특별한 방식으로 사용자에게 노출되거나 여러 소스의 데이터와 함께 사용되거나 계층 간에 전달됩니다. `DataSet` 개체는 또한 .NET Framework 데이터 공급자를 독립적으로 사용하여 응용 프로그램에 로컬인 데이터 또는 XML에서 가져온 데이터를 관리할 수 있습니다.  
+ ADO.NET은 데이터 조작에 따른 데이터 액세스를 각각의 구성 요소로 구분하여 개별적으로 또는 차례대로 사용할 수 있게 해 줍니다. ADO.NET에는 데이터베이스에 연결하고 명령을 실행하며 결과를 검색하는 데 사용되는 .NET Framework 데이터 공급자가 포함됩니다. 검색된 결과는 곧바로 처리되거나 ADO.NET <xref:System.Data.DataSet> 개체에 저장되어 특별한 방식으로 사용자에게 노출되거나 여러 소스의 데이터와 함께 사용되거나 계층 간에 전달됩니다. `DataSet` 개체는 또한 .NET Framework 데이터 공급자를 독립적으로 사용하여 애플리케이션에 로컬인 데이터 또는 XML에서 가져온 데이터를 관리할 수 있습니다.  
   
  ADO.NET 클래스는 System.Data.dll에 있으며 System.Xml.dll에 있는 XML 클래스와 통합됩니다. 데이터베이스에 연결 하는 샘플 코드에서 데이터를 검색 한 다음 콘솔 창에서 해당 데이터를 표시에 대 한 참조 [ADO.NET 코드 예제에서는](../../../../docs/framework/data/adonet/ado-net-code-examples.md)합니다.  
   
- ADO.NET은 관리 코드를 작성하는 개발자에게 ADO(ActiveX Data Objects)에서 네이티브 COM(Component Object Model) 개발자를 대상으로 제공하는 기능과 유사한 기능을 제공합니다. .NET 응용 프로그램에서 데이터에 액세스할 때 ADO가 아니라 ADO.NET을 사용하는 것이 좋습니다.  
+ ADO.NET은 관리 코드를 작성하는 개발자에게 ADO(ActiveX Data Objects)에서 네이티브 COM(Component Object Model) 개발자를 대상으로 제공하는 기능과 유사한 기능을 제공합니다. .NET 애플리케이션에서 데이터에 액세스할 때 ADO가 아니라 ADO.NET을 사용하는 것이 좋습니다.  
   
  ADO.NET은 .NET Framework 내에서 가장 직접적인 데이터 액세스 방법을 제공합니다. 응용 프로그램의 기본 저장소 모델 대신 개념적 모델에 대해 작동 하는 데는 더 높은 수준의 추상화에 대 한 참조를 [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)합니다.  
   
- **개인정보취급방침**: 사용자의 System.Data.dll, System.Data.Design.dll, System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, System.Data.SqlServerCe.dll 및 System.Data.DataSetExtensions.dll 어셈블리를 구분 하지 않습니다. 개인 데이터 및 private이 아닌 데이터입니다.  이러한 어셈블리는 사용자의 개인 데이터를 수집, 저장 및 전송하지 않습니다. 하지만 타사 응용 프로그램에서 이러한 어셈블리를 사용하여 사용자의 개인 데이터를 수집, 저장 및 전송할 수 있습니다.  
+ **개인정보취급방침**: 사용자의 System.Data.dll, System.Data.Design.dll, System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, System.Data.SqlServerCe.dll 및 System.Data.DataSetExtensions.dll 어셈블리를 구분 하지 않습니다. 개인 데이터 및 private이 아닌 데이터입니다.  이러한 어셈블리는 사용자의 개인 데이터를 수집, 저장 및 전송하지 않습니다. 하지만 타사 애플리케이션에서 이러한 어셈블리를 사용하여 사용자의 개인 데이터를 수집, 저장 및 전송할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [ADO.NET 아키텍처](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
@@ -39,7 +39,7 @@ ADO.NET은 OLE DB 및 ODBC를 통해 노출되는 데이터 소스, SQL Server �
  `DataSet` 디자인 및 구성 요소의 개요를 제공합니다.  
   
  [ADO.NET에서 Side-by-Side 실행](../../../../docs/framework/data/adonet/side-by-side-execution.md)  
- ADO.NET 버전의 차이를 설명하고 이 차이가 side-by-side 실행 및 응용 프로그램 호환성에 미치는 영향에 대해 살펴봅니다.  
+ ADO.NET 버전의 차이를 설명하고 이 차이가 side-by-side 실행 및 애플리케이션 호환성에 미치는 영향에 대해 살펴봅니다.  
   
  [ADO.NET 코드 예제](../../../../docs/framework/data/adonet/ado-net-code-examples.md)  
  ADO.NET 데이터 공급자를 사용하여 데이터를 검색하는 코드 샘플을 제공합니다.  

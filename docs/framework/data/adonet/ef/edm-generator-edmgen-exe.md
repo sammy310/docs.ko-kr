@@ -13,7 +13,7 @@ ms.locfileid: "65584582"
 
 EdmGen.exe는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 모델 및 매핑 파일 작업에 사용되는 명령줄 도구입니다. EdmGen.exe 도구를 사용하여 다음을 수행할 수 있습니다.
 
-- 데이터 소스 관련 .NET Framework 데이터 공급자를 사용하여 데이터 소스에 연결하고 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에서 사용되는 개념적 모델(.csdl), 저장소 모델(.ssdl) 및 매핑(.msl) 파일을 생성합니다. 자세한 내용은 [방법: EdmGen.exe를 사용 하 여 모델 및 매핑 파일 생성](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)합니다.
+- 데이터 소스 관련 .NET Framework 데이터 공급자를 사용하여 데이터 소스에 연결하고 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에서 사용되는 개념적 모델(.csdl), 스토리지 모델(.ssdl) 및 매핑(.msl) 파일을 생성합니다. 자세한 내용은 [방법: EdmGen.exe를 사용 하 여 모델 및 매핑 파일 생성](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)합니다.
 
 - 기존 모델의 유효성을 검사합니다. 자세한 내용은 [방법: EdmGen.exe를 사용 하 여 모델 및 매핑 파일 유효성을 검사 하려면](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)합니다.
 

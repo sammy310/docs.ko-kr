@@ -17,7 +17,7 @@ Windows Communication Foundation (WCF) 서비스를 호스트 하는 한 가지 
 ## <a name="versions-of-iis"></a>IIS 버전  
  WCF는 다음 운영 체제의 다음 버전의 IIS에서 호스팅할 수 있습니다.  
   
-- [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)]의 IIS 5.1. 이 환경은 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]과 같은 서버 운영 체제에서 나중에 배포되는 IIS에서 호스트되는 응용 프로그램의 설계 및 개발에 유용합니다.  
+- [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)]의 IIS 5.1. 이 환경은 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]과 같은 서버 운영 체제에서 나중에 배포되는 IIS에서 호스트되는 애플리케이션의 설계 및 개발에 유용합니다.  
   
 - IIS 6.0에서 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]합니다. IIS 6.0은 향상 된 확장성, 안정성 및 응용 프로그램 격리를 제공 하는 고급 프로세스 모델을 제공 합니다. 이 환경은 HTTP 통신을 단독으로 사용 하는 WCF 서비스의 프로덕션 배포에 적합 합니다.  
   
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) 서비스를 호스트 하는 한 가지 
   
 - IIS에서 호스팅되는 WCF 서비스 배포 및 다른 유형의 IIS 응용 프로그램을 ASP.NET 응용 프로그램 및 ASMX를 비롯 한 같은 관리 합니다.  
   
-- IIS는 프로세스 활성화, 상태 관리 및 재활용 기능을 제공하여 호스트된 응용 프로그램의 신뢰성이 향상됩니다.  
+- IIS는 프로세스 활성화, 상태 관리 및 재활용 기능을 제공하여 호스트된 애플리케이션의 신뢰성이 향상됩니다.  
   
 - ASP.NET과 같은 ASP.NET에서 호스팅되는 WCF 서비스 활용 ASP.NET 공유 호스팅 모델을 여러 응용 프로그램 향상 된 서버 밀도 및 확장성에 대 한 공통 작업자 프로세스에 상주 합니다.  
   

@@ -56,7 +56,7 @@ public static void Main()
   
  이제 사용자 지정 논리를 다양한 호스트 실행 파일에 쉽게 다시 사용할 수 있는 명확하고 추상적인 개념으로 캡슐화했습니다.  
   
- IIS(인터넷 정보 서비스) 또는 WAS(Windows Process Activation Service) 내부에서 이 사용자 지정 <xref:System.ServiceModel.ServiceHost>를 사용하는 방법이 확실하지 않습니다. 호스팅 환경은 응용 프로그램 대신 <xref:System.ServiceModel.ServiceHost>를 인스턴스화하는 환경이기 때문에 이러한 환경은 자체 호스팅 환경과는 다릅니다. IIS 및 WAS 호스팅 인프라에서는 사용자 지정 <xref:System.ServiceModel.ServiceHost> 지시문에 대한 어떠한 정보도 알 수 없습니다.  
+ IIS(인터넷 정보 서비스) 또는 WAS(Windows Process Activation Service) 내부에서 이 사용자 지정 <xref:System.ServiceModel.ServiceHost>를 사용하는 방법이 확실하지 않습니다. 호스팅 환경은 애플리케이션 대신 <xref:System.ServiceModel.ServiceHost>를 인스턴스화하는 환경이기 때문에 이러한 환경은 자체 호스팅 환경과는 다릅니다. IIS 및 WAS 호스팅 인프라에서는 사용자 지정 <xref:System.ServiceModel.ServiceHost> 지시문에 대한 어떠한 정보도 알 수 없습니다.  
   
  <xref:System.ServiceModel.Activation.ServiceHostFactory>는 IIS 또는 WAS 내에서 사용자 지정 <xref:System.ServiceModel.ServiceHost>에 액세스할 때의 문제를 해결하도록 설계되었습니다. <xref:System.ServiceModel.ServiceHost>에서 파생되는 사용자 지정 호스트는 동적으로 구성되고 잠재적으로 다양한 형식이기 때문에 호스팅 환경은 이러한 호스트를 직접 인스턴스화하지 않습니다. 대신 WCF 호스팅 환경과 구체적인 형식의 서비스 간의 간접 참조 계층을 제공 하는 팩터리 패턴을 사용 합니다. 이러한 경우가 아닌 한 <xref:System.ServiceModel.Activation.ServiceHostFactory>의 인스턴스를 반환하는 <xref:System.ServiceModel.ServiceHost>의 기본 구현을 사용합니다. 에 팩터리 구현의 CLR 형식 이름을 지정 하 여 파생된 호스트를 반환 하는 사용자의 고유 팩토리를 제공할 수도 있습니다 하지만 @ServiceHost 지시문입니다.  
   

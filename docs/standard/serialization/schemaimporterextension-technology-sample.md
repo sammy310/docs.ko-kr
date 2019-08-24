@@ -12,7 +12,7 @@ ms.locfileid: "66490860"
 # <a name="schemaimporterextension-technology-sample"></a>SchemaImporterExtension 기술 샘플
 [샘플 다운로드](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/SchemaImporterExtension.zip.exe)  
   
- 이 샘플에서는 XML 스키마를 가져올 때의 코드 생성을 자세히 제어할 수 있는 사용자 지정 <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension>을 보여 줍니다. 이 응용 프로그램에서는 이러한 확장을 빌드, 등록 및 호출하는 방법을 보여 줍니다.  
+ 이 샘플에서는 XML 스키마를 가져올 때의 코드 생성을 자세히 제어할 수 있는 사용자 지정 <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension>을 보여 줍니다. 이 애플리케이션에서는 이러한 확장을 빌드, 등록 및 호출하는 방법을 보여 줍니다.  
   
 ### <a name="to-build-the-sample-using-the-command-prompt"></a>명령 프롬프트를 사용하여 샘플을 빌드하려면  
   
@@ -28,7 +28,7 @@ ms.locfileid: "66490860"
   
 3. **빌드** 메뉴에서 **솔루션 빌드**를 클릭합니다.  
   
- 응용 프로그램이 기본 \bin 또는 \bin\Debug 디렉터리에 빌드됩니다.  
+ 애플리케이션이 기본 \bin 또는 \bin\Debug 디렉터리에 빌드됩니다.  
   
 ### <a name="to-run-the-sample"></a>이 샘플을 실행하려면  
   

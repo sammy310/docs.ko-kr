@@ -17,7 +17,7 @@ ms.locfileid: "61764818"
 |ID|3405|  
 |키워드|보안|  
 |수준|자세히|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  이 이벤트는 암호화된 데이터 처리가 시작된 경우에 내보내집니다.  

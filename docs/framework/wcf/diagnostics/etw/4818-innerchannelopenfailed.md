@@ -17,7 +17,7 @@ ms.locfileid: "61957432"
 |ID|4818|  
 |키워드|검색|  
 |수준|경고|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  이 이벤트는 DiscoveryClientChannel이 검색된 엔드포인트로 채널을 열지 못할 경우 내보내집니다. DiscoveryClientChannel은 이제 사용 가능한 다음 엔드포인트로 검색된 엔드포인트를 사용하게 됩니다.  

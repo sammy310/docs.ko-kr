@@ -17,7 +17,7 @@ ms.locfileid: "61774350"
 |ID|4203|  
 |키워드|WFInstanceStore|  
 |수준|Error|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  잠금 만료가 이미 지났거나 잠금 소유자가 삭제되었기 때문에 SQL 공급자가 잠금 만료를 연장하지 못했음을 나타냅니다. SqlWorkflowInstanceStore가 중단됩니다.  

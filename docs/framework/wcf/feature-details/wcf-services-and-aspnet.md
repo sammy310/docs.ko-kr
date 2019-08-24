@@ -87,9 +87,9 @@ public class CalculatorService : ICalculatorSession
 {//Implement calculator service methods.}
 ```
 
-다음 표에서는 응용 프로그램 수준의 호환 모드 설정이 개별 서비스에 명시된 지원 수준과 상호 작용하는 방법을 보여 줍니다.
+다음 표에서는 애플리케이션 수준의 호환 모드 설정이 개별 서비스에 명시된 지원 수준과 상호 작용하는 방법을 보여 줍니다.
 
-|응용 프로그램 수준의 호환 모드 설정|[AspNetCompatibilityRequirementsMode]<br /><br /> 설정|확인된 결과|
+|애플리케이션 수준의 호환 모드 설정|[AspNetCompatibilityRequirementsMode]<br /><br /> 설정|확인된 결과|
 |--------------------------------------------------|---------------------------------------------------------|---------------------|
 |aspNetCompatibilityEnabled = "`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|서비스가 활성화됩니다.|
 |aspNetCompatibilityEnabled = "`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|서비스가 활성화됩니다.|

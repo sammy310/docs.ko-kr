@@ -17,7 +17,7 @@ ms.locfileid: "61774363"
 |ID|4201|  
 |키워드|WFInstanceStore|  
 |수준|자세히|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  SQL 명령이 실행을 완료했음을 나타냅니다.  

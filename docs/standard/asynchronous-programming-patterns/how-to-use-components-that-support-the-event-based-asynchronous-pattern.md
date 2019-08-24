@@ -56,7 +56,7 @@ ms.locfileid: "59330885"
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#4)]  
   
-4. 응용 프로그램을 실행합니다.  
+4. 애플리케이션을 실행합니다.  
   
      이미지 다운로드가 진행되면 폼을 자유롭게 이동하고, 최소화하고, 최대화할 수 있습니다.  
   

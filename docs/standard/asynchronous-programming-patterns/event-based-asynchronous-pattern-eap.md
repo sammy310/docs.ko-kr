@@ -38,7 +38,7 @@ ms.locfileid: "54513492"
  [APM(비동기 프로그래밍 모델)](asynchronous-programming-model-apm.md)에서 나타내는 <xref:System.IAsyncResult> 패턴 대신 이벤트 기반 비동기 패턴을 구현하도록 선택해야 하는 경우를 결정하는 방법을 설명합니다.
   
  [방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 구현](component-that-supports-the-event-based-asynchronous-pattern.md)  
- 이벤트 기반 비동기 패턴을 구현하는 구성 요소를 만드는 방법을 설명합니다. 구성 요소가 모든 응용 프로그램 모델에서 올바르게 작동하도록 하는 <xref:System.ComponentModel?displayProperty=nameWithType> 네임스페이스의 도우미 클래스를 사용하는 것이 좋습니다.  
+ 이벤트 기반 비동기 패턴을 구현하는 구성 요소를 만드는 방법을 설명합니다. 구성 요소가 모든 애플리케이션 모델에서 올바르게 작동하도록 하는 <xref:System.ComponentModel?displayProperty=nameWithType> 네임스페이스의 도우미 클래스를 사용하는 것이 좋습니다.  
 
  [방법: 이벤트 기반 비동기 패턴의 클라이언트 구현](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)  
  이벤트 기반 비동기 패턴을 구현하는 구성 요소를 사용하는 클라이언트를 만드는 방법을 설명합니다.

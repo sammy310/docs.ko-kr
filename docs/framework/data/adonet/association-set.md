@@ -10,7 +10,7 @@ ms.lasthandoff: 04/28/2019
 ms.locfileid: "64592579"
 ---
 # <a name="association-set"></a>연결 집합(association set)
-*연결 집합* 는 대 한 논리적 컨테이너 [연결](../../../../docs/framework/data/adonet/association-type.md) 동일한 형식의 인스턴스. 연결 집합은 데이터 모델링 구문이 아니므로 데이터 또는 관계의 구조를 설명하지 않습니다. 대신 연결 집합은 연결 인스턴스를 그룹화하여 데이터 저장소에 매핑할 수 있도록 호스팅 또는 저장소 환경(예: 공용 언어 런타임 또는 SQL Server 데이터베이스)에 대한 구문을 제공합니다.  
+*연결 집합* 는 대 한 논리적 컨테이너 [연결](../../../../docs/framework/data/adonet/association-type.md) 동일한 형식의 인스턴스. 연결 집합은 데이터 모델링 구문이 아니므로 데이터 또는 관계의 구조를 설명하지 않습니다. 대신 연결 집합은 연결 인스턴스를 그룹화하여 데이터 스토리지에 매핑할 수 있도록 호스팅 또는 스토리지 환경(예: 공용 언어 런타임 또는 SQL Server 데이터베이스)에 대한 구문을 제공합니다.  
   
  연결 집합 내에 정의 되어는 [엔터티 컨테이너](../../../../docs/framework/data/adonet/entity-container.md)의 논리적 그룹인 [엔터티 집합](../../../../docs/framework/data/adonet/entity-set.md) 및 연결 집합입니다.  
   

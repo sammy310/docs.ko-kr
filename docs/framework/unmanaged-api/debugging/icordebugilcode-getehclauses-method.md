@@ -37,7 +37,7 @@ HRESULT GetEHClauses(
   
 ## <a name="parameters"></a>매개 변수  
  `cClauses`  
- [in] `clauses` 배열의 저장소 용량입니다. 자세한 내용은 설명 부분을 참조하세요.  
+ [in] `clauses` 배열의 스토리지 용량입니다. 자세한 내용은 설명 부분을 참조하세요.  
   
  `pcClauses`  
  [out] `clauses` 배열에 관련 정보가 기록되는 절의 수입니다.  
@@ -46,7 +46,7 @@ HRESULT GetEHClauses(
  [out] 배열을 [CorDebugEHClause](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md) 예외 처리 절이이 IL에 대 한 정의 대 한 정보를 포함 하는 개체입니다.  
   
 ## <a name="remarks"></a>설명  
- 하는 경우 `cClauses` 가 0 및 `pcClauses` 이 아닌**null**, `pcClauses` 사용 가능한 예외 처리 절의 수로 설정 됩니다. `cClauses`은 값이 0이 아닌 경우 `clauses` 배열의 저장소 용량을 나타냅니다. 메서드가 반환될 때 `clauses`는 `cClauses` 항목의 최대값을 포함하며 `pcClauses`는 `clauses` 배열에 실제로 기록된 절의 수로 설정됩니다.  
+ 하는 경우 `cClauses` 가 0 및 `pcClauses` 이 아닌**null**, `pcClauses` 사용 가능한 예외 처리 절의 수로 설정 됩니다. `cClauses`은 값이 0이 아닌 경우 `clauses` 배열의 스토리지 용량을 나타냅니다. 메서드가 반환될 때 `clauses`는 `cClauses` 항목의 최대값을 포함하며 `pcClauses`는 `clauses` 배열에 실제로 기록된 절의 수로 설정됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

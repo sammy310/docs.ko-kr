@@ -37,7 +37,7 @@ ms.locfileid: "61667017"
      [!code-csharp[DP Custom CopyToDataTable Examples#CustomCopyToDataTableMethods](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#customcopytodatatablemethods)]
      [!code-vb[DP Custom CopyToDataTable Examples#CustomCopyToDataTableMethods](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#customcopytodatatablemethods)]  
   
-3. 응용 프로그램에 `ObjectShredder<T>` 클래스 및 `CopyToDataTable<T>` 확장명 메서드를 추가합니다.  
+3. 애플리케이션에 `ObjectShredder<T>` 클래스 및 `CopyToDataTable<T>` 확장명 메서드를 추가합니다.  
   
 ```vb  
 Module Module1  

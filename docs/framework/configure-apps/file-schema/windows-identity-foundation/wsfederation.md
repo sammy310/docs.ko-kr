@@ -3,12 +3,12 @@ title: <wsFederation>
 ms.date: 03/30/2017
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
 author: BrucePerlerMS
-ms.openlocfilehash: 57a1513f6de7f7bd9ea441b6cbc3db6a06d76fc2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ace76475b67245a6ac5ef9f5b61db5023ffa0c1f
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940271"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988311"
 ---
 # <a name="wsfederation"></a>\<wsFederation>
 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (Wsfam)에 대 한 구성을 제공 합니다.  
@@ -72,7 +72,7 @@ ms.locfileid: "69940271"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<federationConfiguration>](federationconfiguration.md)|<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (Wsfam) <xref:System.IdentityModel.Services.SessionAuthenticationModule> 및 (SAM)을 구성 하는 설정을 포함 합니다.|  
   
@@ -85,7 +85,7 @@ ms.locfileid: "69940271"
  다음 XML에서는 wsfam에 대 한 설정을 지정 하는 요소를 `<wsFederation>` 보여 줍니다.  
   
 > [!WARNING]
->  이 예에서 WSFAM은 HTTPS를 사용 하는 데 필요 하지 않습니다. 이는 `requireHttps` `<wsFederation>` 요소의 특성이 설정 `false`되었기 때문입니다. 이 설정은 보안 위험을 초래할 수 있으므로 대부분의 프로덕션 환경에는 권장 되지 않습니다.  
+> 이 예에서 WSFAM은 HTTPS를 사용 하는 데 필요 하지 않습니다. 이는 `requireHttps` `<wsFederation>` 요소의 특성이 설정 `false`되었기 때문입니다. 이 설정은 보안 위험을 초래할 수 있으므로 대부분의 프로덕션 환경에는 권장 되지 않습니다.  
   
 ```xml
 <wsFederation passiveRedirectEnabled="true"   

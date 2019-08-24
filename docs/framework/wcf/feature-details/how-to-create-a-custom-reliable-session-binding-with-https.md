@@ -51,7 +51,7 @@ ms.locfileid: "62039535"
 
    [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1221)]
 
-1. 또한 생성된 클라이언트 응용 프로그램에는 `ClientCalculator`의 구현이 포함되어 있습니다. 서비스 구현 내 주소 및 바인딩 정보는 지정 되지 참고 합니다. 구성 파일에서 주소 및 바인딩 정보를 검색 하는 코드를 작성 하는 데 필요한 아닙니다.
+1. 또한 생성된 클라이언트 애플리케이션에는 `ClientCalculator`의 구현이 포함되어 있습니다. 서비스 구현 내 주소 및 바인딩 정보는 지정 되지 참고 합니다. 구성 파일에서 주소 및 바인딩 정보를 검색 하는 코드를 작성 하는 데 필요한 아닙니다.
 
    [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1222)]
 
@@ -59,7 +59,7 @@ ms.locfileid: "62039535"
 
    [!code-xml[C_HowTo_CreateReliableSessionHTTPS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/app.config#2211)]
 
-1. 응용 프로그램에서 `ClientCalculator`의 인스턴스를 만든 다음 서비스 작업을 호출합니다.
+1. 애플리케이션에서 `ClientCalculator`의 인스턴스를 만든 다음 서비스 작업을 호출합니다.
 
    [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1223](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1223)]
 

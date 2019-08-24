@@ -154,7 +154,7 @@ Live Unit Testing이 코드를 수정하려면 언제든지 자동으로 백그�
 
 ### <a name="net-application-architecture"></a>.NET 애플리케이션 아키텍처
 
-빌드하는 데 .NET을 사용하는 경우 [.NET 애플리케이션 아키텍처](https://www.microsoft.com/net/learn/architecture)는 지침, 모범 사례 및 애플리케이션 예제를 제공하는 전자책 집합에 액세스 권한을 부여합니다.
+빌드하는 데 .NET을 사용하는 경우 [.NET 애플리케이션 아키텍처](https://www.microsoft.com/net/learn/architecture)는 지침, 모범 사례 및 애플리케이션 예제를 제공하는 eBook 집합에 액세스 권한을 부여합니다.
 
 - [마이크로 서비스 및 Docker 컨테이너](../../architecture/microservices/index.md)
 - [ASP.NET을 사용하여 개발한 웹 애플리케이션](../../architecture/modern-web-apps-azure/index.md)

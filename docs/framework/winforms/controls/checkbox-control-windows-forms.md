@@ -24,7 +24,7 @@ Windows Forms `CheckBox` 컨트롤은 특정 조건이 설정 또는 해제되�
  이 컨트롤의 정의와 주요 기능 및 속성을 설명합니다.  
   
  [방법: Windows Forms CheckBox 클릭에 응답](how-to-respond-to-windows-forms-checkbox-clicks.md)  
- 확인란을 사용하여 응용 프로그램의 동작을 결정하는 방법을 설명합니다.  
+ 확인란을 사용하여 애플리케이션의 동작을 결정하는 방법을 설명합니다.  
   
  [방법: Windows Forms CheckBox 컨트롤을 사용 하 여 옵션 설정](how-to-set-options-with-windows-forms-checkbox-controls.md)  
  확인란을 사용하여 개체의 속성과 같은 옵션을 설정하는 방법을 설명합니다.  

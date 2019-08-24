@@ -41,9 +41,9 @@ LINQ (언어 통합 쿼리)는 쿼리 기능을 Visual Basic에 추가 하 고 �
 |공급자|설명|  
 |---|---|  
 |LINQ to Objects|LINQ to Objects 공급자를 사용하면 메모리 내 컬렉션 및 배열을 쿼리할 수 있습니다. 개체가 <xref:System.Collections.IEnumerable> 또는 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스를 지원하는 경우 LINQ to Objects 공급자를 사용하면 개체를 쿼리할 수 있습니다.<br /><br /> 모든 Visual Basic 프로젝트에 대해 기본적으로 가져오는 <xref:System.Linq> 네임 스페이스를 가져와서 LINQ to Objects 공급자를 사용 하도록 설정할 수 있습니다.<br /><br /> LINQ to Objects 공급자에 대 한 자세한 내용은 [LINQ to Objects](../../concepts/linq/linq-to-objects.md)을 참조 하십시오.|  
-|LINQ to SQL|LINQ to SQL 공급자를 사용하면 SQL Server 데이터베이스의 데이터를 쿼리하고 수정할 수 있습니다. 이렇게 하면 응용 프로그램의 개체 모델을 데이터베이스의 테이블 및 개체에 쉽게 매핑할 수 있습니다.<br /><br /> Visual Basic를 사용 하면 개체 관계형 디자이너 (O/R 디자이너)를 포함 하 여 LINQ to SQL을 보다 쉽게 사용할 수 있습니다. 이 디자이너는 데이터베이스의 개체에 매핑되는 응용 프로그램의 개체 모델을 만드는 데 사용됩니다. 또한 O/R 디자이너는 데이터베이스와의 통신을 관리 하 고 낙관적 동시성 <xref:System.Data.Linq.DataContext> 검사에 대 한 상태를 저장 하는 개체에 저장 프로시저 및 함수를 매핑하는 기능을 제공 합니다.<br /><br /> LINQ to SQL 공급자에 대 한 자세한 내용은 [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)을 참조 하십시오. 개체 관계형 디자이너에 대 한 자세한 내용은 [Visual Studio의 LINQ to SQL 도구](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)를 참조 하세요.|  
+|LINQ to SQL|LINQ to SQL 공급자를 사용하면 SQL Server 데이터베이스의 데이터를 쿼리하고 수정할 수 있습니다. 이렇게 하면 애플리케이션의 개체 모델을 데이터베이스의 테이블 및 개체에 쉽게 매핑할 수 있습니다.<br /><br /> Visual Basic를 사용 하면 개체 관계형 디자이너 (O/R 디자이너)를 포함 하 여 LINQ to SQL을 보다 쉽게 사용할 수 있습니다. 이 디자이너는 데이터베이스의 개체에 매핑되는 애플리케이션의 개체 모델을 만드는 데 사용됩니다. 또한 O/R 디자이너는 데이터베이스와의 통신을 관리 하 고 낙관적 동시성 <xref:System.Data.Linq.DataContext> 검사에 대 한 상태를 저장 하는 개체에 저장 프로시저 및 함수를 매핑하는 기능을 제공 합니다.<br /><br /> LINQ to SQL 공급자에 대 한 자세한 내용은 [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)을 참조 하십시오. 개체 관계형 디자이너에 대 한 자세한 내용은 [Visual Studio의 LINQ to SQL 도구](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)를 참조 하세요.|  
 |LINQ to XML|LINQ to XML 공급자를 사용하면 XML을 쿼리하고 수정할 수 있습니다. 메모리 내 XML을 수정하거나 XML을 파일에서 로드하고 파일에 저장할 수 있습니다.<br /><br /> 또한 LINQ to XML 공급자를 사용 하면 xml 리터럴 및 xml 축 속성을 사용 하 여 Visual Basic 코드에서 직접 XML을 작성할 수 있습니다. 자세한 내용은 [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)을 참조 하세요.|  
-|LINQ to DataSet|LINQ to DataSet 공급자를 사용 하 여 ADO.NET 데이터 집합의 데이터를 쿼리하고 업데이트할 수 있습니다. 데이터 집합의 데이터를 쿼리, 집계 및 업데이트하는 기능을 단순화하고 확장하기 위해 데이터 집합을 사용하는 응용 프로그램에 LINQ의 기능을 추가할 수 있습니다.<br /><br /> 자세한 내용은 [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)을 참조하세요.|  
+|LINQ to DataSet|LINQ to DataSet 공급자를 사용 하 여 ADO.NET 데이터 집합의 데이터를 쿼리하고 업데이트할 수 있습니다. 데이터 세트의 데이터를 쿼리, 집계 및 업데이트하는 기능을 단순화하고 확장하기 위해 데이터 세트을 사용하는 애플리케이션에 LINQ의 기능을 추가할 수 있습니다.<br /><br /> 자세한 내용은 [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)을 참조하세요.|  
   
 ## <a name="structure-of-a-linq-query"></a>LINQ 쿼리 구조  
  *쿼리 식*이라고 하는 LINQ 쿼리는 데이터 원본을 식별 하는 쿼리 절의 조합 및 쿼리의 반복 변수를 조합 하 여 구성 됩니다. 쿼리 식에는 소스 데이터에 적용할 정렬, 필터링, 그룹화 및 조인 또는 계산을 위한 명령도 포함될 수 있습니다. 쿼리 식 구문은 SQL의 구문과 유사하므로 구문의 상당 부분이 익숙하게 느껴질 수 있습니다.  
@@ -72,7 +72,7 @@ LINQ (언어 통합 쿼리)는 쿼리 기능을 Visual Basic에 추가 하 고 �
   
 ## <a name="visual-basic-linq-query-operators"></a>Visual Basic LINQ 쿼리 연산자  
 
-<xref:System.Linq> 네임스페이스와 LINQ 쿼리를 지원하는 다른 네임스페이스의 클래스에는 응용 프로그램의 요구 사항에 따라 쿼리를 만들고 구체화하기 위해 호출할 수 있는 메서드가 포함되어 있습니다. Visual Basic에는 다음과 같은 일반적인 쿼리 절에 대 한 키워드가 포함 되어 있습니다. Visual Basic 쿼리 절에 대 한 자세한 내용은 [쿼리](../../../language-reference/queries/index.md)를 참조 하세요.
+<xref:System.Linq> 네임스페이스와 LINQ 쿼리를 지원하는 다른 네임스페이스의 클래스에는 애플리케이션의 요구 사항에 따라 쿼리를 만들고 구체화하기 위해 호출할 수 있는 메서드가 포함되어 있습니다. Visual Basic에는 다음과 같은 일반적인 쿼리 절에 대 한 키워드가 포함 되어 있습니다. Visual Basic 쿼리 절에 대 한 자세한 내용은 [쿼리](../../../language-reference/queries/index.md)를 참조 하세요.
 
 ### <a name="from-clause"></a>원본 절
 

@@ -49,4 +49,4 @@ ms.locfileid: "65583430"
  다른 컴퓨터에 설치할 완성된 애플리케이션 또는 구성 요소를 배포하는 프로세스를 설명합니다.  
   
  [콘솔 응용 프로그램 만들기](../../standard/building-console-apps.md)  
- <xref:System.Console> 클래스를 사용하여 콘솔 응용 프로그램 만드는 방법의 기본 사항을 설명합니다.
+ <xref:System.Console> 클래스를 사용하여 콘솔 애플리케이션 만드는 방법의 기본 사항을 설명합니다.

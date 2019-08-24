@@ -13,7 +13,7 @@ ms.lasthandoff: 04/28/2019
 ms.locfileid: "64623975"
 ---
 # <a name="menustrip-control-windows-forms"></a>MenuStrip 컨트롤(Windows Forms)
-이 컨트롤은 응용 프로그램 명령을 그룹화하고 더 쉽게 액세스할 수 있도록 설정합니다.  
+이 컨트롤은 애플리케이션 명령을 그룹화하고 더 쉽게 액세스할 수 있도록 설정합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [MenuStrip 컨트롤 개요](menustrip-control-overview-windows-forms.md)  

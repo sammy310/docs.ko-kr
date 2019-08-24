@@ -17,7 +17,7 @@ ms.locfileid: "61753077"
 |ID|717|  
 |키워드|HTTP|  
 |수준|정보|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
 ## <a name="description"></a>설명  
  이 이벤트는 HTTP 전송 스트리밍 메시지가 시작될 때 내보내집니다.  

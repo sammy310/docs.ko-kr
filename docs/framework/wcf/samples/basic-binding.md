@@ -14,7 +14,7 @@ ms.locfileid: "61955009"
   
 ## <a name="in-this-section"></a>섹션 내용  
  [메시지 보안 샘플](../../../../docs/framework/wcf/samples/message-security-sample.md)  
- `basicHttpBinding` 및 메시지 보안을 사용하는 응용 프로그램을 구현하는 방법을 보여 줍니다.  
+ `basicHttpBinding` 및 메시지 보안을 사용하는 애플리케이션을 구현하는 방법을 보여 줍니다.  
   
  [전송 보안을 포함한 기본 바인딩](../../../../docs/framework/wcf/samples/basicbinding-with-transport-security.md)  
  기본 바인딩과 함께 SSL 전송 보안을 사용하는 방법을 보여 줍니다.  

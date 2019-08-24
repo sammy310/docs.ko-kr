@@ -73,7 +73,7 @@ HRESULT GetMetadata(
  [out] 반환 되는 메타 데이터의 크기입니다.  
   
 ## <a name="remarks"></a>설명  
- 이 메서드는 디버깅 응용 프로그램의 작성자가 구현합니다.  
+ 이 메서드는 디버깅 애플리케이션의 작성자가 구현합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

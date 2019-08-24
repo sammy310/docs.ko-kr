@@ -10,7 +10,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61957075"
 ---
 # <a name="serviceappdomain"></a>ServiceAppDomain
-서비스를 응용 프로그램 도메인에 매핑합니다.  
+서비스를 애플리케이션 도메인에 매핑합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,7 +34,7 @@ class ServiceAppDomain
   
  액세스 형식: 읽기 전용  
   
- 이 응용 프로그램 도메인의 서비스입니다.  
+ 이 애플리케이션 도메인의 서비스입니다.  
   
 ### <a name="ref"></a>ref  
  데이터 형식: AppDomainInfo  
@@ -42,7 +42,7 @@ class ServiceAppDomain
   
  액세스 형식: 읽기 전용  
   
- 응용 프로그램 도메인의 속성을 포함합니다.  
+ 애플리케이션 도메인의 속성을 포함합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   

@@ -24,7 +24,7 @@ WCF 응용 프로그램을 만드는 다음 작업을 WCF 서비스에서 메타
 > [!NOTE]
 > 대신 사용 합니다 [ServiceModel Metadata 유틸리티 도구](#servicemodel-metadata-utility-tool) 프록시 클래스와 구성 파일을 생성 하기 위해 Visual Studio 대신 합니다.
 
-클라이언트 응용 프로그램은 생성된 프록시 클래스를 사용하여 서비스와 통신합니다. 이 절차에 설명 되어 [자습서: 클라이언트를 사용 하 여](how-to-use-a-wcf-client.md)입니다.
+클라이언트 애플리케이션은 생성된 프록시 클래스를 사용하여 서비스와 통신합니다. 이 절차에 설명 되어 [자습서: 클라이언트를 사용 하 여](how-to-use-a-wcf-client.md)입니다.
 
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 > [!div class="checklist"]

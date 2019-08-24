@@ -22,11 +22,11 @@ ms.locfileid: "64624245"
 ## <a name="self-hosting-vs-web-hosting"></a>자체 호스팅 및 웹 호스팅  
  웹 호스팅 서비스에 대 한 WCF의 분석 추적은 추적을 내보내는 서비스를 식별 하는 데 사용 되는 "HostReference" 라는 필드를 제공 합니다. 확장 가능한 사용자 추적이 이 모델에 관여할 수 있으며 이 샘플에서는 이 작업을 수행하기 위한 최선의 방법을 보여 줍니다. 웹 호스트의 형식을 참조할 때 파이프를 '&#124;' 문자는 실제로 결과 표시 문자열에는 다음 중 하나일 수 있습니다.  
   
-- 응용 프로그램이 루트에 없는 경우  
+- 애플리케이션이 루트에 없는 경우  
   
      \<SiteName>\<ApplicationVirtualPath>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
-- 응용 프로그램이 루트에 있는 경우  
+- 애플리케이션이 루트에 있는 경우  
   
      \<SiteName>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   

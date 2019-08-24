@@ -18,11 +18,11 @@ ms.locfileid: "61780304"
 
 ## <a name="creating-the-notification-request"></a>Notification 요청 만들기
 
-<xref:System.Data.Sql.SqlNotificationRequest> 개체를 사용하여 `SqlCommand`개체에 바인딩하여 알림 요청을 만들 수 있습니다. 요청이 만들어지면 `SqlNotificationRequest` 개체는 더 이상 필요하지 않습니다. 알림에 대해 큐를 쿼리하여 적절하게 응답할 수 있습니다. 응용 프로그램이 종료된 후 나중에 다시 시작하더라도 알림이 발생할 수 있습니다.
+<xref:System.Data.Sql.SqlNotificationRequest> 개체를 사용하여 `SqlCommand`개체에 바인딩하여 알림 요청을 만들 수 있습니다. 요청이 만들어지면 `SqlNotificationRequest` 개체는 더 이상 필요하지 않습니다. 알림에 대해 큐를 쿼리하여 적절하게 응답할 수 있습니다. 애플리케이션이 종료된 후 나중에 다시 시작하더라도 알림이 발생할 수 있습니다.
 
 연결된 알림에 대한 명령이 실행될 때 원래 결과 집합에 대한 변경 사항이 있으면 알림 요청에 구성되어 있는 SQL Server 큐로 메시지를 보내는 작업이 트리거됩니다.
 
-SQL Server 큐를 폴링하고 메시지를 해석하는 방법은 응용 프로그램에 따라 다릅니다. 응용 프로그램에서는 큐를 폴링하고 메시지의 내용에 따라 반응하는 작업을 수행합니다.
+SQL Server 큐를 폴링하고 메시지를 해석하는 방법은 애플리케이션에 따라 다릅니다. 애플리케이션에서는 큐를 폴링하고 메시지의 내용에 따라 반응하는 작업을 수행합니다.
 
 > [!NOTE]
 > <xref:System.Data.SqlClient.SqlDependency>를 사용하여 SQL Server 알림 요청을 사용하는 경우 기본 서비스 이름을 사용하는 대신 사용자 고유의 큐 이름을 만드세요.

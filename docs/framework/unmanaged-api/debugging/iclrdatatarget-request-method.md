@@ -60,7 +60,7 @@ HRESULT Request (
 ## <a name="remarks"></a>설명  
  `Request` 메서드를 용이 하 게 지정 되지 않은 사용자 지정 작업을 추가 합니다. 즉,이 메서드는 인터페이스 정의 수정할 필요 없이 확장성을 제공 합니다.  
   
- 이 메서드는 디버깅 응용 프로그램의 작성자가 구현합니다.  
+ 이 메서드는 디버깅 애플리케이션의 작성자가 구현합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

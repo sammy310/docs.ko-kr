@@ -51,7 +51,7 @@ ms.locfileid: "67169768"
 |요소|설명|
 |-------------|-----------------|
 |[\<requiredRuntime>](requiredruntime-element.md)|애플리케이션에서 1.0 버전의 공용 언어 런타임만 지원하도록 지정합니다. 런타임 버전 1.1 이상으로 빌드된 응용 프로그램을 사용 해야 합니다  **\<supportedRuntime >** 요소입니다.|
-|[\<supportedRuntime>](supportedruntime-element.md)|응용 프로그램이 지원하는 공용 언어 런타임 버전을 지정합니다.|
+|[\<supportedRuntime>](supportedruntime-element.md)|애플리케이션이 지원하는 공용 언어 런타임 버전을 지정합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 

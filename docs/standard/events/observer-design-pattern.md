@@ -27,7 +27,7 @@ ms.locfileid: "67663573"
 
 ## <a name="applying-the-pattern"></a>패턴 적용
 
-관찰자 디자인 패턴은 데이터 소스(비즈니스 논리) 계층 및 사용자 인터페이스(표시) 계층과 같은 두 가지 구성 요소 또는 응용 프로그램 계층의 명확한 구분을 지원하기 때문에 분산된 푸시 기반 알림에 적합합니다. 공급자가 콜백을 사용하여 해당 클라이언트에 현재 정보를 제공할 때마다 패턴을 구현할 수 있습니다.
+관찰자 디자인 패턴은 데이터 소스(비즈니스 논리) 계층 및 사용자 인터페이스(표시) 계층과 같은 두 가지 구성 요소 또는 애플리케이션 계층의 명확한 구분을 지원하기 때문에 분산된 푸시 기반 알림에 적합합니다. 공급자가 콜백을 사용하여 해당 클라이언트에 현재 정보를 제공할 때마다 패턴을 구현할 수 있습니다.
 
 패턴을 구현하려면 다음을 제공해야 합니다.
 
@@ -41,7 +41,7 @@ ms.locfileid: "67663573"
 
   - <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> - 공급자가 알림 전송을 완료했음을 나타냅니다.
 
-- 공급자가 관찰자를 추적할 수 있게 해주는 메커니즘. 일반적으로 공급자는 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 개체와 같은 컨테이너 개체를 사용하여 알림을 구독한 <xref:System.IObserver%601> 구현에 대한 참조를 보유합니다. 이 목적으로 저장소 컨테이너를 사용하면 공급자가 0개에서 무한대 개수까지 관찰자를 처리할 수 있습니다. 관찰자가 알림을 수신하는 순서는 정의되지 않습니다. 공급자가 임의 메서드를 사용하여 순서를 결정할 수 있습니다.
+- 공급자가 관찰자를 추적할 수 있게 해주는 메커니즘. 일반적으로 공급자는 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 개체와 같은 컨테이너 개체를 사용하여 알림을 구독한 <xref:System.IObserver%601> 구현에 대한 참조를 보유합니다. 이 목적으로 스토리지 컨테이너를 사용하면 공급자가 0개에서 무한대 개수까지 관찰자를 처리할 수 있습니다. 관찰자가 알림을 수신하는 순서는 정의되지 않습니다. 공급자가 임의 메서드를 사용하여 순서를 결정할 수 있습니다.
 
 - 알림이 완료될 때 공급자가 관찰자를 제거할 수 있도록 하는 <xref:System.IDisposable> 구현. 관찰자는 <xref:System.IObservable%601.Subscribe%2A> 메서드로부터 <xref:System.IDisposable> 구현에 대한 참조를 수신하므로 공급자가 알림 전송을 완료하기 전에 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 메서드를 호출하여 구독을 취소할 수도 있습니다.
 
@@ -86,7 +86,7 @@ ms.locfileid: "67663573"
 
 `ArrivalsMonitor` 클래스에는 `Subscribe` 및 `Unsubscribe` 메서드가 포함됩니다. `Subscribe` 메서드를 통해 클래스는 <xref:System.IObservable%601.Subscribe%2A> 호출에서 반환된 <xref:System.IDisposable> 구현을 전용 변수에 저장할 수 있습니다. `Unsubscribe` 메서드를 통해 클래스는 공급자의 <xref:System.IDisposable.Dispose%2A> 구현을 호출하여 알림 구독을 취소할 수 있습니다. `ArrivalsMonitor`에서는 <xref:System.IObserver%601.OnNext%2A>, <xref:System.IObserver%601.OnError%2A> 및 <xref:System.IObserver%601.OnCompleted%2A> 메서드의 구현도 제공합니다. <xref:System.IObserver%601.OnNext%2A> 구현에만 상당한 양의 코드가 포함됩니다. 메서드는 도착 항공편의 출발 공항 및 수하물을 찾을 수 있는 컨베이어 벨트에 대한 정보를 유지 관리하는 private, sorted, generic <xref:System.Collections.Generic.List%601> 개체로 작동합니다. `BaggageHandler` 클래스가 새 항공편 도착을 보고하면 <xref:System.IObserver%601.OnNext%2A> 메서드 구현에서 해당 항공편에 대한 정보를 목록에 추가합니다. `BaggageHandler` 클래스가 항공편의 수하물을 내렸다고 보고하면 <xref:System.IObserver%601.OnNext%2A> 메서드가 목록에서 해당 항공편을 제거합니다. 변경될 때마다 목록이 정렬되고 콘솔에 표시됩니다.
 
-다음 예제에는 `BaggageHandler` 클래스를 인스턴스화하는 응용 프로그램 진입점과 `ArrivalsMonitor` 클래스의 두 인스턴스가 포함되어 있으며, `BaggageHandler.BaggageStatus` 메서드를 사용하여 도착 항공편에 대한 정보를 추가하고 제거합니다. 각각의 경우에서 관찰자는 업데이트를 수신하고 수하물을 찾는 곳 정보를 올바르게 표시합니다.
+다음 예제에는 `BaggageHandler` 클래스를 인스턴스화하는 애플리케이션 진입점과 `ArrivalsMonitor` 클래스의 두 인스턴스가 포함되어 있으며, `BaggageHandler.BaggageStatus` 메서드를 사용하여 도착 항공편에 대한 정보를 추가하고 제거합니다. 각각의 경우에서 관찰자는 업데이트를 수신하고 수하물을 찾는 곳 정보를 올바르게 표시합니다.
 
 [!code-csharp[Conceptual.ObserverDesignPattern#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesignpattern/cs/program.cs#5)]
 [!code-vb[Conceptual.ObserverDesignPattern#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesignpattern/vb/module1.vb#5)]
@@ -95,6 +95,6 @@ ms.locfileid: "67663573"
 
 |제목|설명|
 |-----------|-----------------|
-|[관찰자 디자인 패턴 유용한 정보](../../../docs/standard/events/observer-design-pattern-best-practices.md)|관찰자 디자인 패턴을 구현하는 응용 프로그램을 개발할 때 채택할 모범 사례를 설명합니다.|
-|[방법: 공급자 구현](../../../docs/standard/events/how-to-implement-a-provider.md)|온도 모니터링 응용 프로그램에 대한 공급자의 단계별 구현을 제공합니다.|
-|[방법: 관찰자 구현](../../../docs/standard/events/how-to-implement-an-observer.md)|온도 모니터링 응용 프로그램에 대한 관찰자의 단계별 구현을 제공합니다.|
+|[관찰자 디자인 패턴 유용한 정보](../../../docs/standard/events/observer-design-pattern-best-practices.md)|관찰자 디자인 패턴을 구현하는 애플리케이션을 개발할 때 채택할 모범 사례를 설명합니다.|
+|[방법: 공급자 구현](../../../docs/standard/events/how-to-implement-a-provider.md)|온도 모니터링 애플리케이션에 대한 공급자의 단계별 구현을 제공합니다.|
+|[방법: 관찰자 구현](../../../docs/standard/events/how-to-implement-an-observer.md)|온도 모니터링 애플리케이션에 대한 관찰자의 단계별 구현을 제공합니다.|

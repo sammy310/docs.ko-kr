@@ -98,11 +98,11 @@ ms.locfileid: "65881906"
 |프로젝트|설명|  
 |-------------|-----------------|  
 |ContosoHR|데이터 계약, 비즈니스 개체 및 리포지토리 클래스를 포함합니다.|  
-|HiringRequestService|채용 요청 프로세스 워크플로의 정의를 포함합니다.<br /><br /> 이 프로젝트는 워크플로(xaml 파일)를 서비스로 자체 호스트하는 콘솔 응용 프로그램으로 구현됩니다.|  
+|HiringRequestService|채용 요청 프로세스 워크플로의 정의를 포함합니다.<br /><br /> 이 프로젝트는 워크플로(xaml 파일)를 서비스로 자체 호스트하는 콘솔 애플리케이션으로 구현됩니다.|  
 |ResumeRequestService|마감 시한이 되거나 담당자가 프로세스를 중지할 때까지 채용 후보로부터 이력서를 접수하는 워크플로 서비스입니다.<br /><br /> 이 프로젝트는 선언적 워크플로 서비스(xamlx)로 구현됩니다.|  
 |OrgService|조직 정보(직원, 직무, 직무 종류 및 부서)를 노출하는 서비스입니다. 이 서비스는 ERP(Enterprise Resource Plan)의 회사 조직 모듈로 생각하면 됩니다.<br /><br /> 이 프로젝트는 Windows Communication Foundation (WCF) 서비스를 노출 하는 콘솔 응용 프로그램으로 구현 됩니다.|  
-|InboxService|직원이 조치 가능한 작업이 들어 있는 받은 편지함입니다.<br /><br /> 이 프로젝트는 WCF 서비스를 노출하는 콘솔 응용 프로그램으로 구현됩니다.|  
-|InternalClient|프로세스와 상호 작용하기 위한 웹 응용 프로그램입니다. 사용자는 HiringProcess 워크플로를 시작하고 참여하고 볼 수 있습니다. 사용자는 이 응용 프로그램을 사용하여 ResumeRequest 프로세스를 시작하고 모니터링할 수도 있습니다.<br /><br /> 이 사이트는 Contoso의 인트라넷에 내부적으로 구현되고 이 프로젝트는 ASP.NET 웹 사이트로 구현됩니다.|  
+|InboxService|직원이 조치 가능한 작업이 들어 있는 받은 편지함입니다.<br /><br /> 이 프로젝트는 WCF 서비스를 노출하는 콘솔 애플리케이션으로 구현됩니다.|  
+|InternalClient|프로세스와 상호 작용하기 위한 웹 애플리케이션입니다. 사용자는 HiringProcess 워크플로를 시작하고 참여하고 볼 수 있습니다. 사용자는 이 애플리케이션을 사용하여 ResumeRequest 프로세스를 시작하고 모니터링할 수도 있습니다.<br /><br /> 이 사이트는 Contoso의 인트라넷에 내부적으로 구현되고 이 프로젝트는 ASP.NET 웹 사이트로 구현됩니다.|  
 |CareersWebSite|Contoso의 채용 정보를 노출하는 외부 웹 사이트입니다. 지원 의사가 있는 후보는 누구나 이 사이트로 이동하여 이력서를 제출할 수 있습니다.|  
   
 ## <a name="feature-summary"></a>기능 요약  
@@ -111,7 +111,7 @@ ms.locfileid: "65881906"
 |기능|설명|프로젝트|  
 |-------------|-----------------|-------------|  
 |Flowchart|비즈니스 프로세스는 순서도로 표현되며, 이 순서도 설명은 화이트보드에 비즈니스를 그리는 방식과 동일하게 프로세스를 표현합니다.|HiringRequestService|  
-|워크플로 서비스|프로세스 정의가 포함된 순서도는 서비스에서 호스트됩니다. 이 예에서는 서비스가 콘솔 응용 프로그램에서 호스트됩니다.|HiringRequestService|  
+|워크플로 서비스|프로세스 정의가 포함된 순서도는 서비스에서 호스트됩니다. 이 예에서는 서비스가 콘솔 애플리케이션에서 호스트됩니다.|HiringRequestService|  
 |메시징 활동|순서도는 다음 두 가지 방식으로 메시징 활동을 사용합니다.<br /><br /> 사용자 (각 승인 단계에서의 결정과 관련된 정보를 수신)에 게에서 정보를 가져옵니다 간.<br />-하려면 (InboxService 및 OrgDataService, 서비스 참조를 통해 사용) 다른 기존 서비스와 상호 작용 합니다.|HiringRequestService|  
 |내용 기반 상관 관계|승인 메시지는 채용 요청의 ID 속성과 상관 관계가 있습니다.<br /><br /> -프로세스가 시작 될 때 상관 관계 핸들이 요청 ID를 사용 하 여 초기화 됩니다.<br />-해당 id (각 승인 메시지의 첫 번째 매개 변수는 요청의 ID) 들어오는 승인 메시지 상호 연결 합니다.|HiringRequestService/ResumeRequestService|  
 |사용자 지정 활동(선언적 및 코드 기반)|이 샘플에는 다음과 같은 몇 가지 사용자 지정 활동이 있습니다.<br /><br /> -   `SaveActionTracking`: 이 활동에서 사용자 지정 <xref:System.Activities.Tracking.TrackingRecord> (사용 하 여 <xref:System.Activities.NativeActivityContext.Track%2A>). 이 활동은 <xref:System.Activities.NativeActivity>를 확장하는 명령적 코드를 사용하여 작성되었습니다.<br />-   `GetEmployeesByPositionTypes`: 이 작업의 직무 종류 Id 목록을 받고 Contoso에서 해당 직무를가지고 있는 직원의 목록을 반환 합니다. 이 활동은 활동 디자이너를 사용하여 선언적으로 작성되었습니다.<br />-   `SaveHiringRequestInfo`: 이 작업의 정보를 저장 한 `HiringRequest` (사용 하 여 `HiringRequestRepository.Save`). 이 활동은 <xref:System.Activities.CodeActivity>를 확장하는 명령적 코드를 사용하여 작성되었습니다.|HiringRequestService|  
@@ -128,7 +128,7 @@ ms.locfileid: "65881906"
 |트랜잭션|사용자 지정 지속성 참가자(`HiringRequestPersistenceParticipant`)와 사용자 지정 추적 참가자(`HistoryFileTrackingParticipant`)는 같은 트랜잭션을 사용합니다.|HiringRequestService|  
 |사용 하 여 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ASP.NET 응용 프로그램에서 합니다.|워크플로 두 개의 ASP.NET 응용 프로그램에서 액세스 됩니다.|InternalClient/CareersWebSite|  
   
-## <a name="data-storage"></a>데이터 저장소  
+## <a name="data-storage"></a>데이터 스토리지  
  데이터는 `ContosoHR`이라는 SQL Server 데이터베이스에 저장되며, 이 데이터베이스를 만드는 데 사용되는 스크립트는 `DbSetup` 폴더에 있습니다. 워크플로 인스턴스는 `InstanceStore`라는 SQL Server 데이터베이스에 저장되며, 인스턴스 저장소를 만드는 데 사용되는 스크립트는 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 배포의 일부입니다.  
   
  Visual Studio 용 개발자 명령 프롬프트에서 Setup.cmd 스크립트를 실행 하 여 두 데이터베이스가 만들어집니다.  

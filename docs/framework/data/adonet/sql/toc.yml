@@ -18,7 +18,7 @@
           href: data-encryption-in-sql-server.md
         - name: SQL Server의 CLR 통합 보안
           href: clr-integration-security-in-sql-server.md
-    - name: SQL Server의 응용 프로그램 보안 시나리오
+    - name: SQL Server의 애플리케이션 보안 시나리오
       href: application-security-scenarios-in-sql-server.md
       items:
         - name: SQL Server에서 저장 프로시저를 사용하여 권한 관리
@@ -31,7 +31,7 @@
           href: customizing-permissions-with-impersonation-in-sql-server.md
         - name: SQL Server에서 행 수준 권한 부여
           href: granting-row-level-permissions-in-sql-server.md
-        - name: SQL Server에서 응용 프로그램 역할 만들기
+        - name: SQL Server에서 애플리케이션 역할 만들기
           href: creating-application-roles-in-sql-server.md
         - name: SQL Server에서 데이터베이스간 액세스 활성화
           href: enabling-cross-database-access-in-sql-server.md
@@ -90,11 +90,11 @@
     - name: 비동기 작업
       href: asynchronous-operations.md
       items:
-        - name: 콜백을 사용하는 Windows 응용 프로그램
+        - name: 콜백을 사용하는 Windows 애플리케이션
           href: windows-applications-using-callbacks.md
-        - name: 대기 핸들을 사용한 ASP.NET 응용 프로그램
+        - name: 대기 핸들을 사용한 ASP.NET 애플리케이션
           href: aspnet-apps-using-wait-handles.md
-        - name: 콘솔 응용 프로그램에서 폴링
+        - name: 콘솔 애플리케이션에서 폴링
           href: polling-in-console-applications.md
     - name: 테이블 반환 매개 변수
       href: table-valued-parameters.md
@@ -131,13 +131,13 @@
       items:
         - name: 쿼리 알림 사용
           href: enabling-query-notifications.md
-        - name: ASP.NET 응용 프로그램에서 SqlDependency
+        - name: ASP.NET 애플리케이션에서 SqlDependency
           href: sqldependency-in-an-aspnet-app.md
         - name: SqlDependency로 변경 내용 감지
           href: detecting-changes-with-sqldependency.md
         - name: SqlNotificationRequest를 사용하여 SqlCommand 실행
           href: sqlcommand-execution-with-a-sqlnotificationrequest.md
-    - name: SQL Server의 스냅숏 격리
+    - name: SQL Server의 스냅샷 격리
       href: snapshot-isolation-in-sql-server.md
     - name: 고가용성 및 재해 복구에 대한 SqlClient 지원
       href: sqlclient-support-for-high-availability-disaster-recovery.md

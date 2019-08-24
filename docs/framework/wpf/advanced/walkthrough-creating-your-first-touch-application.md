@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
 ms.openlocfilehash: a915b8e238550eb3d9c1bcbe72d0d05a83a8312c
 ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64605802"
@@ -31,7 +31,7 @@ ms.locfileid: "64605802"
   
 ## <a name="creating-the-application"></a>애플리케이션 작성  
   
-#### <a name="to-create-the-application"></a>응용 프로그램을 만들려면  
+#### <a name="to-create-the-application"></a>애플리케이션을 만들려면  
   
 1. Visual Basic 또는 Visual C#에서 `BasicManipulation`이라는 새 WPF 애플리케이션 프로젝트를 만듭니다. 자세한 내용은 [연습: 내 첫 WPF 데스크톱 응용 프로그램](../getting-started/walkthrough-my-first-wpf-desktop-application.md)합니다.  
   

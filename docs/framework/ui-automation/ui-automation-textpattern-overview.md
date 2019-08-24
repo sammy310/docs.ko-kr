@@ -33,7 +33,7 @@ ms.locfileid: "67660779"
 
 [!INCLUDE[TLA#tla_tsf](../../../includes/tlasharptla-tsf-md.md)]는 데스크톱 및 응용 프로그램 내에서 자연 언어 서비스 및 고급 텍스트 입력을 사용할 수 있게 해주는 간단하고 확장 가능한 시스템 프레임워크입니다. 애플리케이션에서 해당 텍스트 저장소를 노출하는 인터페이스를 제공할 뿐 아니라 해당 텍스트 저장소에 대한 메타데이터를 지원합니다.
 
-그러나 [!INCLUDE[TLA2#tla_tsf](../../../includes/tla2sharptla-tsf-md.md)] 는 컨텍스트 인식 시나리오에 입력을 삽입해야 하는 응용 프로그램용으로 설계된 반면, <xref:System.Windows.Automation.TextPattern> 은 화면 읽기 프로그램 및 브라유 점자 디바이스용 텍스트 저장소에 최적화된 액세스를 제공하기 위한 읽기 전용 솔루션(위에서 언급한 제한된 해결 방법 사용)입니다.
+그러나 [!INCLUDE[TLA2#tla_tsf](../../../includes/tla2sharptla-tsf-md.md)] 는 컨텍스트 인식 시나리오에 입력을 삽입해야 하는 애플리케이션용으로 설계된 반면, <xref:System.Windows.Automation.TextPattern> 은 화면 읽기 프로그램 및 브라유 점자 디바이스용 텍스트 스토리지에 최적화된 액세스를 제공하기 위한 읽기 전용 솔루션(위에서 언급한 제한된 해결 방법 사용)입니다.
 
 간단히 말해, 텍스트 저장소에 대한 읽기 전용 액세스가 필요한 액세스 가능 기술은 <xref:System.Windows.Automation.TextPattern>을 사용할 수 있지만 컨텍스트 인식 입력의 경우 [!INCLUDE[TLA2#tla_tsf](../../../includes/tla2sharptla-tsf-md.md)] 의 더 복잡한 기능이 필요합니다.
 

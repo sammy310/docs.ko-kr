@@ -17,7 +17,7 @@ ms.locfileid: "61595896"
 |ID|3306|  
 |키워드|ServiceModel|  
 |수준|정보|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  이 이벤트는 캐시가 해당 한도에 도달했기 때문에 채널 팩터리가 캐시에서 만료되면 내보내집니다.  

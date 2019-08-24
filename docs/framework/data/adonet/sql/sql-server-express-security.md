@@ -33,7 +33,7 @@ Microsoft SQL Server Express Edition(SQL Server Express)은 Microsoft SQL Server
 |-|-|  
 |[Microsoft SQL Server 2005 Express Edition Books Online](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|SQL Server 2005 Express Edition의 전체 설명서가 있습니다.|  
 |[비관리자 용 사용자 인스턴스](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) SQL Server 온라인 설명서의|사용자 인스턴스를 만들고 배포하는 방법을 설명합니다.|  
-|[SQL Server Express 사용자 인스턴스](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|ADO.NET 응용 프로그램에서 사용할 수 있는 사용자 인스턴스 기능에 대해 설명합니다. 사용자 인스턴스를 사용하는 방법, <xref:System.Data.SqlClient.SqlConnection>을 통해 사용자 인스턴스에 연결하는 방법, 사용자 인스턴스 수명 및 사용자 인스턴스 시나리오에 대해 설명합니다.|  
+|[SQL Server Express 사용자 인스턴스](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|ADO.NET 애플리케이션에서 사용할 수 있는 사용자 인스턴스 기능에 대해 설명합니다. 사용자 인스턴스를 사용하는 방법, <xref:System.Data.SqlClient.SqlConnection>을 통해 사용자 인스턴스에 연결하는 방법, 사용자 인스턴스 수명 및 사용자 인스턴스 시나리오에 대해 설명합니다.|  
   
 ## <a name="see-also"></a>참고자료
 

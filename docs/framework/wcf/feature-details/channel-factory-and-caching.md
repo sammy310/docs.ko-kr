@@ -10,7 +10,7 @@ ms.lasthandoff: 04/28/2019
 ms.locfileid: "64645411"
 ---
 # <a name="channel-factory-and-caching"></a>채널 팩터리 및 캐싱
-WCF 클라이언트 응용 프로그램에서는 <xref:System.ServiceModel.ChannelFactory%601> 클래스를 사용하여 WCF 서비스와의 통신 채널을 만듭니다.  <xref:System.ServiceModel.ChannelFactory%601> 인스턴스를 만들 때는 다음 작업이 필요하기 때문에 약간의 오버헤드가 발생합니다.  
+WCF 클라이언트 애플리케이션에서는 <xref:System.ServiceModel.ChannelFactory%601> 클래스를 사용하여 WCF 서비스와의 통신 채널을 만듭니다.  <xref:System.ServiceModel.ChannelFactory%601> 인스턴스를 만들 때는 다음 작업이 필요하기 때문에 약간의 오버헤드가 발생합니다.  
   
 - 생성 된 <xref:System.ServiceModel.Description.ContractDescription> 트리  
   

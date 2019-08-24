@@ -255,7 +255,7 @@
               href: tracking-participants.md
             - name: 워크플로 추적 구성
               href: configuring-tracking-for-a-workflow.md
-            - name: 추적을 사용하여 응용 프로그램 문제 해결
+            - name: 추적을 사용하여 애플리케이션 문제 해결
               href: using-tracking-to-troubleshoot-applications.md
             - name: 워크플로 추적
               href: workflow-tracing.md

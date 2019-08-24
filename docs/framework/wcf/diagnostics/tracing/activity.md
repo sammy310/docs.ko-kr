@@ -38,14 +38,14 @@ ms.locfileid: "64656287"
 ## <a name="defining-the-scope-of-an-activity"></a>동작 범위 정의  
  동작은 디자인 타임에 정의되며 작업의 논리 단위를 나타냅니다. 동일한 동작 식별자로 내보낸 추적은 동일한 동작의 일부이므로 직접적으로 관련됩니다. 동작(요청)이 엔드포인트 경계를 넘나들 수 있기 때문에 동작에 대해 두 가지 범위가 정의됩니다.  
   
-- 응용 프로그램별 `Global` 범위. 이 범위에서는 동작이 128비트 gAId(Globally Unique Activity Identifier)에 의해 식별됩니다. gAid는 엔드포인트 간에 전파됩니다.  
+- 애플리케이션별 `Global` 범위. 이 범위에서는 동작이 128비트 gAId(Globally Unique Activity Identifier)에 의해 식별됩니다. gAid는 엔드포인트 간에 전파됩니다.  
   
 - 엔드포인트별 `Local` 범위. 이 범위에서는 동작이 동작 추적 및 프로세스 ID를 내보내는 추적 소스 이름과 함께 gAId에 의해 식별됩니다. 이 세 가지가 로컬 동작 ID인 lAId를 구성합니다. lAId는 동작의 (로컬) 경계를 정의하는 데 사용합니다.  
   
 ## <a name="trace-schema"></a>추적 스키마  
  추적은 Microsoft 플랫폼을 통해 스키마를 사용하여 내보낼 수 있습니다. 이때 "e2e"("종단" ("종단 간")에 대 한 자주 사용 되는 스키마입니다. 이 스키마에는 128비트 식별자(gAId), 추적 소스 이름 및 프로세스 ID가 포함됩니다. 관리 코드에서는 <xref:System.Diagnostics.XmlWriterTraceListener>가 E2E 스키마에서 추적을 내보냅니다.  
   
- 개발자는 TLS(스레드 로컬 저장소)에서 Guid를 사용하여 <xref:System.Diagnostics.CorrelationManager.ActivityId%2A> 속성을 설정함으로써 추적과 함께 내보내는 AID를 설정할 수 있습니다. 다음은 이에 대한 예입니다.  
+ 개발자는 TLS(스레드 로컬 스토리지)에서 Guid를 사용하여 <xref:System.Diagnostics.CorrelationManager.ActivityId%2A> 속성을 설정함으로써 추적과 함께 내보내는 AID를 설정할 수 있습니다. 다음은 이에 대한 예입니다.  
   
 ```csharp
 // set the current Activity ID to a new GUID.  
@@ -101,6 +101,6 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
 
 - [추적 구성](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
-- [종단 간 추적 시나리오](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [엔드투엔드 추적 시나리오](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
 - [Service Trace Viewer 도구(SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [사용자 코드 추적 내보내기](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)

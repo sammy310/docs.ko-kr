@@ -18,7 +18,7 @@ ms.lasthandoff: 05/14/2019
 ms.locfileid: "65586558"
 ---
 # <a name="how-to-create-a-professionally-styled-toolstrip-control"></a>방법: 전문적인 스타일의 ToolStrip 컨트롤 만들기
-<xref:System.Windows.Forms.ToolStripProfessionalRenderer> 형식에서 파생된 고유한 클래스를 작성하여 응용 프로그램의 <xref:System.Windows.Forms.ToolStrip> 컨트롤에 전문적인 모양과 동작(모양 및 느낌)을 제공할 수 있습니다.  
+<xref:System.Windows.Forms.ToolStripProfessionalRenderer> 형식에서 파생된 고유한 클래스를 작성하여 애플리케이션의 <xref:System.Windows.Forms.ToolStrip> 컨트롤에 전문적인 모양과 동작(모양 및 느낌)을 제공할 수 있습니다.  
   
  Visual Studio에서이 기능에 대해 폭넓게 지원이 됩니다.  
   

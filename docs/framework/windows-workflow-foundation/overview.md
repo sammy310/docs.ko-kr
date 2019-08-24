@@ -21,7 +21,7 @@ ms.locfileid: "65876149"
   
 - 다중 인스턴스 시나리오에서 메시지 기반 상호 작용에 사용하는 <xref:System.ServiceModel.WorkflowServiceHost>  
   
- 이 클래스는 각각 활동 실행을 담당하는 <xref:System.Activities.ActivityInstance>로 표현되는 코어 활동 런타임을 래핑합니다. 응용 프로그램 도메인 내에는 동시에 실행되는 여러 <xref:System.Activities.ActivityInstance> 개체가 있을 수 있습니다.  
+ 이 클래스는 각각 활동 실행을 담당하는 <xref:System.Activities.ActivityInstance>로 표현되는 코어 활동 런타임을 래핑합니다. 애플리케이션 도메인 내에는 동시에 실행되는 여러 <xref:System.Activities.ActivityInstance> 개체가 있을 수 있습니다.  
   
  위의 세 가지 호스트 상호 작용 개체는 각각 워크플로 프로그램이라는 활동 트리에서 만들어집니다. 이러한 형식 또는 래핑하는 사용자 지정 호스트를 사용 하 여 <xref:System.Activities.ActivityInstance>, 워크플로 콘솔 응용 프로그램, 폼 기반 응용 프로그램, Windows 서비스, ASP.NET 웹 사이트 및 Windows Communication Foundation (WCF)를 포함 하 여 모든 Windows 프로세스 내에서 실행할 수 있습니다 서비스입니다.  
   

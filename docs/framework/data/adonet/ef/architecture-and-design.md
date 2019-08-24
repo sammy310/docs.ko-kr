@@ -45,7 +45,7 @@ internal interface ISqlFragment {
 
 #### <a name="sqlbuilder"></a>SqlBuilder
 
-SqlBuilder는 StringBuilder와 마찬가지로 최종 SQL 문자열의 수집 장치입니다. SqlBuilder는 문자열로 변환될 수 있는 ISqlFragment와 함께 최종 SQL을 구성하는 문자열로 구성되어 있습니다.
+SqlBuilder는 StringBuilder와 마찬가지로 최종 SQL 문자열의 수집 디바이스입니다. SqlBuilder는 문자열로 변환될 수 있는 ISqlFragment와 함께 최종 SQL을 구성하는 문자열로 구성되어 있습니다.
 
 ```csharp
 internal sealed class SqlBuilder : ISqlFragment {

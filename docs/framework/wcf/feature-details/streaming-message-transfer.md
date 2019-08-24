@@ -44,7 +44,7 @@ Windows Communication Foundation (WCF) 전송 메시지를 전송 하기 위한 
  SOAP 헤더는 전송 모드가 스트리밍으로 설정되어 있더라도 항상 버퍼링됩니다. 메시지 헤더는 `MaxBufferSize` 전송 할당량 크기를 초과할 수 없습니다. 이 설정에 대 한 자세한 내용은 참조 하세요. [전송 할당량](../../../../docs/framework/wcf/feature-details/transport-quotas.md)합니다.  
   
 ## <a name="differences-between-buffered-and-streamed-transfers"></a>버퍼링 전송과 스트리밍 전송 사이의 차이점  
- 전송 모드를 버퍼링 전송에서 스트리밍 전송으로 변경하면 TCP 및 명명된 파이프 전송의 기본 채널 셰이프도 함께 변경됩니다. 버퍼링 전송의 기본 채널 셰이프는 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>입니다. 스트리밍 전송의 기본 채널은 <xref:System.ServiceModel.Channels.IRequestChannel> 및 <xref:System.ServiceModel.Channels.IReplyChannel>입니다. 서비스 계약을 통하지 않고 이러한 전송을 직접 사용하는 기존 응용 프로그램에서 전송 모드를 변경하려면 채널 팩터리 및 수신기에 대한 예상 채널 셰이프를 변경해야 합니다.  
+ 전송 모드를 버퍼링 전송에서 스트리밍 전송으로 변경하면 TCP 및 명명된 파이프 전송의 기본 채널 셰이프도 함께 변경됩니다. 버퍼링 전송의 기본 채널 셰이프는 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>입니다. 스트리밍 전송의 기본 채널은 <xref:System.ServiceModel.Channels.IRequestChannel> 및 <xref:System.ServiceModel.Channels.IReplyChannel>입니다. 서비스 계약을 통하지 않고 이러한 전송을 직접 사용하는 기존 애플리케이션에서 전송 모드를 변경하려면 채널 팩터리 및 수신기에 대한 예상 채널 셰이프를 변경해야 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

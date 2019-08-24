@@ -14,10 +14,10 @@ ms.locfileid: "61967871"
   
 ## <a name="in-this-section"></a>섹션 내용  
  [문서 승인 프로세스](document-approval-process.md)  
- LOB(Line-Of-Business) 응용 프로그램에서 워크플로를 사용하는 방법을 보여 줍니다.  
+ LOB(Line-Of-Business) 애플리케이션에서 워크플로를 사용하는 방법을 보여 줍니다.  
   
  [기업 구매 프로세스](corporate-purchase-process.md)  
- 창 호스팅 및 웹 호스팅 응용 프로그램에서 워크플로를 사용하는 방법을 보여 줍니다.  
+ 창 호스팅 및 웹 호스팅 애플리케이션에서 워크플로를 사용하는 방법을 보여 줍니다.  
   
  [채용 프로세스](hiring-process.md)  
  메시징 활동과 워크플로 서비스로 호스트되는 두 개의 워크플로를 사용하여 비즈니스 프로세스를 구현하는 방법을 보여 줍니다.  

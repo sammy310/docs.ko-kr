@@ -37,7 +37,7 @@ ms.locfileid: "66490780"
   
  ![CancellationTokenSource 및 취소 토큰](../../../docs/standard/threading/media/vs-cancellationtoken.png "VS_CancellationToken")  
   
- 새 취소 모델을 통해 취소 인식 응용 프로그램 및 라이브러리를 더 쉽게 만들 수 있고 이 모델은 다음 기능을 지원합니다.  
+ 새 취소 모델을 통해 취소 인식 애플리케이션 및 라이브러리를 더 쉽게 만들 수 있고 이 모델은 다음 기능을 지원합니다.  
   
 - 취소는 협조적이고 수신기에 적용되지 않습니다. 수신기는 취소 요청에 대한 응답으로 정상적으로 종료하는 방법을 결정합니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66490780"
  <xref:System.Threading.Tasks.Task> 클래스는 이 방식으로 <xref:System.OperationCanceledException>을 처리합니다. 자세한 내용은 [작업 취소](../../../docs/standard/parallel-programming/task-cancellation.md)를 참조하세요.  
   
 ### <a name="listening-by-polling"></a>폴링으로 수신 대기  
- 루핑되거나 재귀적으로 사용되는 장기 실행 계산의 경우 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A?displayProperty=nameWithType> 속성 값을 주기적으로 폴링하여 취소 요청을 수신 대기할 수 있습니다. 값이 `true`이면 메서드가 가능한 한 빠르게 정리 및 종료되어야 합니다. 최적 폴링 빈도는 응용 프로그램 형식에 따라 다릅니다. 특정 프로그램에 대한 최적 폴링 빈도는 개발자가 결정할 수 있습니다. 폴링 자체는 성능에 큰 영향을 미치지 않습니다. 다음 예제에서는 한 가지 가능한 폴링 방법을 보여 줍니다.  
+ 루핑되거나 재귀적으로 사용되는 장기 실행 계산의 경우 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A?displayProperty=nameWithType> 속성 값을 주기적으로 폴링하여 취소 요청을 수신 대기할 수 있습니다. 값이 `true`이면 메서드가 가능한 한 빠르게 정리 및 종료되어야 합니다. 최적 폴링 빈도는 애플리케이션 형식에 따라 다릅니다. 특정 프로그램에 대한 최적 폴링 빈도는 개발자가 결정할 수 있습니다. 폴링 자체는 성능에 큰 영향을 미치지 않습니다. 다음 예제에서는 한 가지 가능한 폴링 방법을 보여 줍니다.  
   
  [!code-csharp[Cancellation#3](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex11.cs#3)]
  [!code-vb[Cancellation#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex11.vb#3)]  

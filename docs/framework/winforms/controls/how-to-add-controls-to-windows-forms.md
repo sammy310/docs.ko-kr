@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 7ee603fa5350ef81c6d32d2f22119bbe526295df
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: d20afc6e8a950035cc3c0bf010504d42f401bfbb
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912623"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987513"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>방법: Windows Forms에 컨트롤 추가
 대부분의 폼은 UI (사용자 인터페이스)를 정의 하기 위해 폼의 화면에 컨트롤을 추가 하 여 디자인 되었습니다. *컨트롤* 은 정보를 표시 하거나 사용자 입력을 수락 하는 데 사용 되는 폼의 구성 요소입니다. 컨트롤에 대 한 자세한 내용은 [Windows Forms controls](index.md)을 참조 하세요.
@@ -89,7 +89,6 @@ ms.locfileid: "69912623"
 ## <a name="see-also"></a>참고자료
 
 - [Windows Forms 컨트롤](index.md)
-- [Windows Forms에서 컨트롤 정렬](arranging-controls-on-windows-forms.md)
 - [방법: Windows Forms에서 컨트롤 크기 조정](how-to-resize-controls-on-windows-forms.md)
 - [방법: Windows Forms 컨트롤에 표시 되는 텍스트 설정](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)

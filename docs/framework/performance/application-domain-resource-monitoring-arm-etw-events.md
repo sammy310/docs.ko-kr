@@ -1,5 +1,5 @@
 ---
-title: ARM(응용 프로그램 도메인 리소스 모니터링) ETW 이벤트
+title: ARM(애플리케이션 도메인 리소스 모니터링) ETW 이벤트
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ETW, application domain monitoring events
@@ -14,7 +14,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64616628"
 ---
-# <a name="application-domain-resource-monitoring-arm-etw-events"></a>ARM(응용 프로그램 도메인 리소스 모니터링) ETW 이벤트
+# <a name="application-domain-resource-monitoring-arm-etw-events"></a>ARM(애플리케이션 도메인 리소스 모니터링) ETW 이벤트
 <a name="top"></a> 이들 이벤트는 응용 프로그램 도메인 상태에 대한 자세한 진단 정보를 제공합니다. 이들 이벤트를 사용하거나 애플리케이션 도메인 리소스 모니터링(ARM) 기능을 사용하여 같은 정보를 얻을 수 있습니다.  
   
  이 범주는 다음 이벤트로 구성됩니다.  

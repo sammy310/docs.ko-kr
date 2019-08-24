@@ -322,7 +322,7 @@ ms.locfileid: "66250811"
 ### <a name="arraysort-and-arraybinarysearch"></a>Array.Sort 및 Array.BinarySearch  
  기본 해석: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.  
   
- 컬렉션에 데이터를 저장하거나 영구 데이터를 파일이나 데이터베이스에서 컬렉션으로 읽을 때 현재 문화권을 전환하면 컬렉션에서 고정이 무효화될 수 있습니다. <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> 메서드는 검색할 배열의 요소가 이미 정렬되었다고 가정합니다. 배열에서 문자열 요소를 정렬하려고 <xref:System.Array.Sort%2A?displayProperty=nameWithType> 메서드는 <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드를 호출하여 개별 요소의 순서를 지정합니다. 배열이 정렬된 시간과 콘텐츠가 검색된 시간 사이에 문화권이 변경될 경우 문화권 구분 비교자 사용이 위험할 수 있습니다. 예를 들어 다음 코드에서 저장 및 검색은 `Thread.CurrentThread.CurrentCulture` 속성에 의해 암시적으로 제공되는 비교자에서 작동합니다. `StoreNames` 및 `DoesNameExist`에 대한 호출 사이에 문화권이 변경되고 특히 배열 콘텐츠가 두 메서드 호출 사이에 지속되면 이진 검색이 실패할 수 있습니다.  
+ 컬렉션에 데이터를 저장하거나 영구 데이터를 파일이나 데이터베이스에서 컬렉션으로 읽을 때 현재 문화권을 전환하면 컬렉션에서 고정이 무효화될 수 있습니다. <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> 메서드는 검색할 배열의 요소가 이미 정렬되었다고 가정합니다. 배열에서 문자열 요소를 정렬하려고 <xref:System.Array.Sort%2A?displayProperty=nameWithType> 메서드는 <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드를 호출하여 개별 요소의 순서를 지정합니다. 배열이 정렬된 시간과 콘텐츠가 검색된 시간 사이에 문화권이 변경될 경우 문화권 구분 비교자 사용이 위험할 수 있습니다. 예를 들어 다음 코드에서 스토리지 및 검색은 `Thread.CurrentThread.CurrentCulture` 속성에 의해 암시적으로 제공되는 비교자에서 작동합니다. `StoreNames` 및 `DoesNameExist`에 대한 호출 사이에 문화권이 변경되고 특히 배열 콘텐츠가 두 메서드 호출 사이에 지속되면 이진 검색이 실패할 수 있습니다.  
   
  [!code-csharp[Conceptual.Strings.BestPractices#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect1.cs#7)]
  [!code-vb[Conceptual.Strings.BestPractices#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect1.vb#7)]  

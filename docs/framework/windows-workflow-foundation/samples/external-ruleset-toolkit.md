@@ -11,7 +11,7 @@ ms.locfileid: "62005487"
 ---
 # <a name="external-ruleset-toolkit"></a>External RuleSet Toolkit
 
-일반적으로 워크플로 응용 프로그램 내에서 규칙이 사용될 경우 해당 규칙은 어셈블리의 일부입니다. 일부 시나리오에서는 워크플로 어셈블리를 다시 빌드하고 배포하지 않고도 RuleSet을 업데이트할 수 있도록 어셈블리와 별도로 RuleSet을 유지할 수 있습니다. 이 샘플에서는 데이터베이스에 있는 RuleSet을 관리하고 편집하며 런타임에 워크플로에서 이러한 RuleSet에 액세스할 수 있습니다. 따라서 워크플로 인스턴스를 실행하여 RuleSet 변경 내용을 자동으로 통합할 수 있습니다.
+일반적으로 워크플로 애플리케이션 내에서 규칙이 사용될 경우 해당 규칙은 어셈블리의 일부입니다. 일부 시나리오에서는 워크플로 어셈블리를 다시 빌드하고 배포하지 않고도 RuleSet을 업데이트할 수 있도록 어셈블리와 별도로 RuleSet을 유지할 수 있습니다. 이 샘플에서는 데이터베이스에 있는 RuleSet을 관리하고 편집하며 런타임에 워크플로에서 이러한 RuleSet에 액세스할 수 있습니다. 따라서 워크플로 인스턴스를 실행하여 RuleSet 변경 내용을 자동으로 통합할 수 있습니다.
 
 External RuleSet Toolkit 샘플에는 데이터베이스에서 RuleSet 버전을 관리하고 편집하는 데 사용할 수 있는 Windows Forms 기반 도구가 포함되어 있으며, 해당 규칙을 실행하는 호스트 서비스 및 활동도 포함되어 있습니다.
 
@@ -24,7 +24,7 @@ Visual Studio는 Windows Workflow Foundation (WF)의 일부로 규칙 집합 편
 
 - 데이터베이스에서 RuleSet 버전을 편집하고 관리하는 데 사용할 수 있는 RuleSet 그래픽 사용자 인터페이스
 
-- 호스트 응용 프로그램에서 구성되고 데이터베이스에서 RuleSet에 액세스하는 RuleSet 서비스
+- 호스트 애플리케이션에서 구성되고 데이터베이스에서 RuleSet에 액세스하는 RuleSet 서비스
 
 - RuleSet 서비스에서 RuleSet을 요청하고 워크플로에 대해 RuleSet을 실행하는 `ExternalPolicy` 활동
 
@@ -43,7 +43,7 @@ Visual Studio는 Windows Workflow Foundation (WF)의 일부로 규칙 집합 편
 
 ## <a name="ruleset-tool"></a>RuleSet 도구
 
-다음 이미지는 RuleSet 도구의 스크린 샷을입니다. **규칙 저장소** 메뉴, 데이터베이스에서 사용 가능한 Ruleset을 로드 하 고 수정 된 Ruleset을 저장소에 다시 저장 합니다. 응용 프로그램 구성 파일에서는 RuleSet 데이터베이스에 대한 데이터베이스 연결 문자열을 제공합니다. 도구를 시작하면 구성된 데이터베이스에서 RuleSet이 자동으로 로드됩니다.
+다음 이미지는 RuleSet 도구의 스크린 샷을입니다. **규칙 저장소** 메뉴, 데이터베이스에서 사용 가능한 Ruleset을 로드 하 고 수정 된 Ruleset을 저장소에 다시 저장 합니다. 애플리케이션 구성 파일에서는 RuleSet 데이터베이스에 대한 데이터베이스 연결 문자열을 제공합니다. 도구를 시작하면 구성된 데이터베이스에서 RuleSet이 자동으로 로드됩니다.
 
 ![규칙 집합 브라우저를 보여주는 스크린샷.](./media/external-ruleset-toolkit/ruleset-browser-dialog.gif)
 
@@ -89,17 +89,17 @@ Windows Workflow Foundation에 대 한 Visual Studio 추가 기능의 일부인 
 
 이 서비스는 데이터베이스에서 RuleSet 버전을 검색하고 호출 활동에 반환합니다. 앞에서 설명한 대로 `GetRuleSet` 호출에서 전달된 주 버전 및 부 버전 값이 둘 다 0이면 서비스에서는 최신 버전을 검색합니다. 이때 RuleSet 정의나 인스턴스의 캐시가 없으며 마찬가지로 RuleSet 버전을 "배포됨"으로 표시하여 진행 중인 RuleSet과 구분하는 기능도 없습니다.
 
-서비스에서 액세스할 데이터베이스는 응용 프로그램 구성 파일을 사용하여 호스트에서 구성해야 합니다.
+서비스에서 액세스할 데이터베이스는 애플리케이션 구성 파일을 사용하여 호스트에서 구성해야 합니다.
 
 #### <a name="to-run-the-tool"></a>도구를 실행하려면
 
 1. 도구 및 서비스에서 사용하는 RuleSet 테이블을 설정하는 폴더에 Setup.sql 파일이 포함되어 있습니다. Setup.cmd 배치 파일을 실행하여 SQL Express에 규칙 데이터베이스를 만들고 RuleSet 테이블을 설정할 수 있습니다.
 
-2. 배치 파일이나 Setup.sql을 편집하고 SQL Express를 사용하지 않거나 `Rules`가 아닌 다른 이름의 데이터베이스에 테이블을 배치하도록 지정할 경우 RuleSet 도구와 `UsageSample` 프로젝트의 응용 프로그램 구성 파일을 같은 정보로 편집해야 합니다.
+2. 배치 파일이나 Setup.sql을 편집하고 SQL Express를 사용하지 않거나 `Rules`가 아닌 다른 이름의 데이터베이스에 테이블을 배치하도록 지정할 경우 RuleSet 도구와 `UsageSample` 프로젝트의 애플리케이션 구성 파일을 같은 정보로 편집해야 합니다.
 
 3. Setup.sql 스크립트를 실행한 후에는 `ExternalRuleSetToolkit` 솔루션을 빌드하고 ExternalRuleSetTool 프로젝트에서 RuleSet 도구를 시작할 수 있습니다.
 
-4. `RuleSetToolkitUsageSample` 순차 워크플로 콘솔 응용 프로그램에는 샘플 워크플로가 포함되어 있습니다. 워크플로는 대상 RuleSet이 실행되는 `PolicyFromService` 활동 및 두 가지 변수인 `orderValue`와 `discount`로 구성되어 있습니다.
+4. `RuleSetToolkitUsageSample` 순차 워크플로 콘솔 애플리케이션에는 샘플 워크플로가 포함되어 있습니다. 워크플로는 대상 RuleSet이 실행되는 `PolicyFromService` 활동 및 두 가지 변수인 `orderValue`와 `discount`로 구성되어 있습니다.
 
 5. 샘플을 사용하려면 `RuleSetToolkitUsageSample` 솔루션을 빌드합니다. RuleSet 도구 주 메뉴에서 클릭 **데이터 가져오기** RuleSetToolkitUsageSample 폴더의 DiscountRuleSet.rules 파일을 가리킵니다. 클릭 합니다 **규칙 저장소-저장** 데이터베이스로 가져온된 RuleSet을 저장 하려면 메뉴 옵션입니다.
 
@@ -115,7 +115,7 @@ Windows Workflow Foundation에 대 한 Visual Studio 추가 기능의 일부인 
 
     - 이제 활동에서 도구 상자에 표시 합니다 **RuleSetToolkitUsageSample 구성 요소** 범주입니다.
 
-7. RuleSet 서비스는 Program.cs에서 다음 문을 사용하여 콘솔 응용 프로그램 호스트에 이미 구성되어 있습니다.
+7. RuleSet 서비스는 Program.cs에서 다음 문을 사용하여 콘솔 애플리케이션 호스트에 이미 구성되어 있습니다.
 
     ```csharp
     workflowRuntime.AddService(new RuleSetService());
@@ -123,9 +123,9 @@ Windows Workflow Foundation에 대 한 Visual Studio 추가 기능의 일부인 
 
 8. 구성 파일을 사용하여 호스트에 서비스를 구성할 수도 있습니다. 자세한 내용은 SDK 설명서를 참조하세요.
 
-9. 응용 프로그램 구성 파일이 워크플로 프로젝트에 추가되어 서비스에서 사용할 데이터베이스에 대한 연결 문자열을 지정합니다. 이 문자열은 RuleSet 도구에서 사용하는 연결 문자열과 동일해야 합니다. RuleSet 도구에서 사용하는 연결 문자열은 RuleSet 테이블을 포함하는 데이터베이스를 가리킵니다.
+9. 애플리케이션 구성 파일이 워크플로 프로젝트에 추가되어 서비스에서 사용할 데이터베이스에 대한 연결 문자열을 지정합니다. 이 문자열은 RuleSet 도구에서 사용하는 연결 문자열과 동일해야 합니다. RuleSet 도구에서 사용하는 연결 문자열은 RuleSet 테이블을 포함하는 데이터베이스를 가리킵니다.
 
-10. 이제 다른 모든 워크플로 콘솔 응용 프로그램처럼 `RuleSetToolkitUsageSample` 프로젝트를 실행할 수 있습니다. F5 또는 Ctrl + f5를 눌러 Visual Studio 내에서 누르거나 RuleSetToolkitUsageSample.exe 파일을 직접 실행 합니다.
+10. 이제 다른 모든 워크플로 콘솔 애플리케이션처럼 `RuleSetToolkitUsageSample` 프로젝트를 실행할 수 있습니다. F5 또는 Ctrl + f5를 눌러 Visual Studio 내에서 누르거나 RuleSetToolkitUsageSample.exe 파일을 직접 실행 합니다.
 
     > [!NOTE]
     > RuleSet 도구에서는 사용 샘플 어셈블리를 로드하므로 사용 샘플을 다시 컴파일하려면 도구를 닫아야 합니다.

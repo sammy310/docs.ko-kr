@@ -361,7 +361,7 @@ ms.locfileid: "61753038"
 |[5607 - PrincipalSettingFromSessionTokenSuccess](../../../../../docs/framework/wcf/diagnostics/etw/5607-principalsettingfromsessiontokensuccess.md)|자세히|세션 토큰에서 보안 주체 설정에 성공했습니다.|보안|  
 |[57393 - AppDomainUnload](../../../../../docs/framework/wcf/diagnostics/etw/57393-appdomainunload.md)|정보|AppDomain을 언로드하고 있습니다. AppDomain.FriendlyName %1, ProcessName %2, ProcessId %3.|인프라|  
 |[57394 - HandledException](../../../../../docs/framework/wcf/diagnostics/etw/57394-handledexception.md)|정보|예외를 처리하는 중입니다.|인프라|  
-|[57395 - ShipAssertExceptionMessage](../../../../../docs/framework/wcf/diagnostics/etw/57395-shipassertexceptionmessage.md)|Error|예기치 않은 오류가 발생했습니다. 이 오류는 응용 프로그램에서 처리할 수 없습니다. 오류와 관련된 다음 메시지가 진단용으로 제공됩니다. %1.|인프라|  
+|[57395 - ShipAssertExceptionMessage](../../../../../docs/framework/wcf/diagnostics/etw/57395-shipassertexceptionmessage.md)|Error|예기치 않은 오류가 발생했습니다. 이 오류는 애플리케이션에서 처리할 수 없습니다. 오류와 관련된 다음 메시지가 진단용으로 제공됩니다. %1.|인프라|  
 |[57396 - ThrowingException](../../../../../docs/framework/wcf/diagnostics/etw/57396-throwingexception.md)|경고|예외를 throw하고 있습니다. 원본: %1.|인프라|  
 |[57397 - UnhandledException](../../../../../docs/framework/wcf/diagnostics/etw/57397-unhandledexception.md)|중요|처리되지 않은 예외가 발생했습니다.|인프라|  
 |[57399 - TraceCodeEventLogCritical](../../../../../docs/framework/wcf/diagnostics/etw/57399-tracecodeeventlogcritical.md)|중요|EventLog에 기록합니다.|인프라|  

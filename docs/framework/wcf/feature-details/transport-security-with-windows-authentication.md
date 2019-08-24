@@ -15,7 +15,7 @@ ms.locfileid: "64635132"
 # <a name="transport-security-with-windows-authentication"></a>Windows 인증을 사용하는 전송 보안
 다음 시나리오에서는 Windows Communication Foundation (WCF) 클라이언트와 Windows 보안으로 보호 하는 서비스를 보여 줍니다. 프로그래밍에 대 한 자세한 내용은 참조 하세요. [방법: Windows 자격 증명을 사용 하 여 서비스를 보호](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)합니다.  
   
- 인트라넷 웹 서비스는 인사 정보를 표시합니다. 클라이언트는 Windows Form 응용 프로그램입니다. 응용프로그램은 도메인을 보호하는 Kerberos 컨트롤러와 함께 도메인에 배포됩니다.  
+ 인트라넷 웹 서비스는 인사 정보를 표시합니다. 클라이언트는 Windows Form 애플리케이션입니다. 애플리케이션은 도메인을 보호하는 Kerberos 컨트롤러와 함께 도메인에 배포됩니다.  
   
  ![Windows 인증을 사용하는 전송 보안](./media/transport-security-with-windows-authentication/secured-windows-authentication.gif)  
   

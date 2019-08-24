@@ -31,7 +31,7 @@ ms.locfileid: "61857651"
  [!code-csharp[c_CertificateValidationDifferences#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_certificatevalidationdifferences/cs/source.cs#2)]
  [!code-vb[c_CertificateValidationDifferences#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_certificatevalidationdifferences/vb/source.vb#2)]  
   
- `ValidateServerCertificate`를 구현하면 클라이언트 응용 프로그램 개발자가 서비스 인증서의 유효성을 검사하는 데 필요하다고 판단하는 확인 사항을 수행할 수 있습니다.  
+ `ValidateServerCertificate`를 구현하면 클라이언트 애플리케이션 개발자가 서비스 인증서의 유효성을 검사하는 데 필요하다고 판단하는 확인 사항을 수행할 수 있습니다.  
   
 ## <a name="validation-of-client-certificates-in-ssl-over-tcp-or-soap-security"></a>TCP를 통한 SSL 또는 SOAP 보안에서 클라이언트 인증서 유효성 검사  
  TCP를 통한 SSL(Secure Sockets Layer) 또는 SOAP 메시지 보안을 사용하는 경우 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A> 클래스의 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 속성 값에 따라 클라이언트 인증서의 유효성을 검사합니다. 속성은 <xref:System.ServiceModel.Security.X509CertificateValidationMode> 값 중 하나로 설정됩니다. <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.RevocationMode%2A> 클래스의 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 속성 값에 따라 해지 확인을 수행합니다. 속성은 <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> 값 중 하나로 설정됩니다.  

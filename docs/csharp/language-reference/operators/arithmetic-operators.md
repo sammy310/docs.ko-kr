@@ -127,7 +127,7 @@ ms.locfileid: "67661540"
 
 [!code-csharp-interactive[integer remainder](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerRemainder)]
 
-<xref:System.Math.DivRem%2A?displayProperty=nameWithType> 메서드를 사용하여 정수 나누기 및 나머지 결과를 모두 계산합니다.
+<xref:System.Math.DivRem%2A?displayProperty=nameWithType> 메서드를 사용하여 정수 나누기 및 나머지 결과를 모두 컴퓨팅합니다.
 
 ### <a name="floating-point-remainder"></a>부동 소수점 나머지
 

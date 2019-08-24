@@ -17,7 +17,7 @@ ms.locfileid: "61757419"
 |ID|4600|  
 |키워드|WCFMessageLogging|  
 |수준|경고|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  이 이벤트는 ETW 이벤트 크기를 초과하여 메시지를 기록할 수 없을 때 내보내집니다.  

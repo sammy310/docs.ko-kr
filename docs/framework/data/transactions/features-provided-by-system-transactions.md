@@ -10,12 +10,12 @@ ms.lasthandoff: 04/28/2019
 ms.locfileid: "64645721"
 ---
 # <a name="features-provided-by-systemtransactions"></a>System.Transactions에서 제공하는 기능
-이 섹션에서는 <xref:System.Transactions> 네임스페이스에서 제공하는 기능을 사용하여 고유한 트랜잭션 응용 프로그램과 리소스 관리자를 작성하는 방법에 대해 설명합니다. 특히 이 섹션에서는 하나 또는 여러 참석자가 있는 트랜잭션(로컬 또는 분산)을 만들고 이에 참여하는 방법에 대해 설명합니다.  
+이 섹션에서는 <xref:System.Transactions> 네임스페이스에서 제공하는 기능을 사용하여 고유한 트랜잭션 애플리케이션과 리소스 관리자를 작성하는 방법에 대해 설명합니다. 특히 이 섹션에서는 하나 또는 여러 참석자가 있는 트랜잭션(로컬 또는 분산)을 만들고 이에 참여하는 방법에 대해 설명합니다.  
   
 ## <a name="overview-of-systemtransactions"></a>System.Transactions 개요  
  <xref:System.Transactions> 네임스페이스의 클래스가 제공하는 인프라는 SQL Server, ADO.NET, MSMQ(메시지 큐) 및 MSDTC(Microsoft Distributed Transaction Coordinator)에서 시작된 트랜잭션을 지원하여 트랜잭션 프로그래밍을 단순하고 효율적으로 만듭니다. <xref:System.Transactions> 네임스페이스는 <xref:System.Transactions.Transaction> 클래스 기반의 명시적 프로그래밍 모델과 <xref:System.Transactions.TransactionScope> 클래스를 사용하는 암시적 프로그래밍 모델을 둘 다 제공합니다. 후자의 경우 인프라에서 자동으로 트랜잭션을 관리합니다. 이러한 두 모델을 사용 하 여 트랜잭션 응용 프로그램을 만드는 방법에 대 한 자세한 내용은 참조 하세요. [트랜잭션 응용 프로그램을 작성](../../../../docs/framework/data/transactions/writing-a-transactional-application.md)합니다.  
   
- <xref:System.Transactions> 네임스페이스는 리소스 관리자를 구현하는 데 사용할 수 있는 형식도 제공합니다. 리소스 관리자는 트랜잭션에 사용되는 영구적 데이터나 일시적 데이터를 관리하고 트랜잭션 관리자와 함께 작업하여 응용 프로그램에 원자성 및 격리를 보장합니다. <xref:System.Transactions> 인프라에서 제공하는 트랜잭션 관리자는 여러 개의 일시적인 리소스나 하나의 지속적인 리소스와 관련된 트랜잭션을 지원합니다. 리소스 관리자 구현에 대 한 자세한 내용은 참조 하세요. [리소스 관리자 구현](../../../../docs/framework/data/transactions/implementing-a-resource-manager.md)합니다.  
+ <xref:System.Transactions> 네임스페이스는 리소스 관리자를 구현하는 데 사용할 수 있는 형식도 제공합니다. 리소스 관리자는 트랜잭션에 사용되는 영구적 데이터나 일시적 데이터를 관리하고 트랜잭션 관리자와 함께 작업하여 애플리케이션에 원자성 및 격리를 보장합니다. <xref:System.Transactions> 인프라에서 제공하는 트랜잭션 관리자는 여러 개의 일시적인 리소스나 하나의 지속적인 리소스와 관련된 트랜잭션을 지원합니다. 리소스 관리자 구현에 대 한 자세한 내용은 참조 하세요. [리소스 관리자 구현](../../../../docs/framework/data/transactions/implementing-a-resource-manager.md)합니다.  
   
  또한 트랜잭션 관리자는 영속적 리소스 관리자가 추가로 트랜잭션에 참여하는 경우 DTC와 같은 디스크 기반 트랜잭션 관리자를 통해 조정하여 로컬 트랜잭션을 분산 트랜잭션으로 투명하게 에스컬레이션합니다. <xref:System.Transactions> 인프라에서 성능을 향상시키는 두 가지 주요 방법은 다음과 같습니다.  
   
@@ -27,8 +27,8 @@ ms.locfileid: "64645721"
   
 ## <a name="in-this-section"></a>단원 내용  
   
-### <a name="writing-a-transactional-application"></a>트랜잭션 응용 프로그램 작성  
- <xref:System.Transactions> 네임스페이스에서는 트랜잭션 응용 프로그램을 만드는 두 가지 모델을 제공합니다. [트랜잭션 범위를 사용 하 여 암시적 트랜잭션 구현](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) 에 대해 설명 하는 방법을 <xref:System.Transactions> 네임 스페이스를 사용 하 여 암시적 트랜잭션을 만드는 지원는 <xref:System.Transactions.TransactionScope> 클래스입니다.  
+### <a name="writing-a-transactional-application"></a>트랜잭션 애플리케이션 작성  
+ <xref:System.Transactions> 네임스페이스에서는 트랜잭션 애플리케이션을 만드는 두 가지 모델을 제공합니다. [트랜잭션 범위를 사용 하 여 암시적 트랜잭션 구현](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) 에 대해 설명 하는 방법을 <xref:System.Transactions> 네임 스페이스를 사용 하 여 암시적 트랜잭션을 만드는 지원는 <xref:System.Transactions.TransactionScope> 클래스입니다.  
   
  [CommittableTransaction을 사용 하 여 명시적 트랜잭션 구현](../../../../docs/framework/data/transactions/implementing-an-explicit-transaction-using-committabletransaction.md) 에 대해 설명 하는 방법을 <xref:System.Transactions> 네임 스페이스를 사용 하 여 명시적 트랜잭션을 만들 수 있도록 지원 합니다 <xref:System.Transactions.CommittableTransaction> 클래스입니다.  
   

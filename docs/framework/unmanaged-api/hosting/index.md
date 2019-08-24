@@ -16,7 +16,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61672941"
 ---
 # <a name="hosting-unmanaged-api-reference"></a>호스팅(관리되지 않는 API 참조)
-호스팅 API는 관리되지 않는 호스트가 CLR(공용 언어 런타임)을 응용 프로그램에 통합할 수 있게 해줍니다.  
+호스팅 API는 관리되지 않는 호스트가 CLR(공용 언어 런타임)을 애플리케이션에 통합할 수 있게 해줍니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [호스팅 Coclass](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  
@@ -29,7 +29,7 @@ ms.locfileid: "61672941"
  호스팅 API가 사용하는 관리되지 않는 전역 정적 함수를 설명합니다.  
   
  [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- 런타임 호스트가 CLR을 관리되지 않는 응용 프로그램에 통합할 수 있게 해주는 관리되지 않는 인터페이스를 설명합니다.  
+ 런타임 호스트가 CLR을 관리되지 않는 애플리케이션에 통합할 수 있게 해주는 관리되지 않는 인터페이스를 설명합니다.  
   
  [호스팅 구조체](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
  호스팅 API가 사용하는 관리되지 않는 구조체를 설명합니다.  

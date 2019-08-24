@@ -13,9 +13,9 @@ ms.lasthandoff: 07/20/2019
 ms.locfileid: "68363851"
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>방법: 사용자 지정 정책 어설션 가져오기
-정책 어설션은 서비스 엔드포인트의 기능 및 요구 사항에 대해 설명합니다.  클라이언트 응용 프로그램은 서비스 메타데이터에서 정책 어설션을 사용하여 서비스 엔드포인트에 대해 서비스 계약을 사용자 지정하거나 클라이언트 바인딩을 구성할 수 있습니다.  
+정책 어설션은 서비스 엔드포인트의 기능 및 요구 사항에 대해 설명합니다.  클라이언트 애플리케이션은 서비스 메타데이터에서 정책 어설션을 사용하여 서비스 엔드포인트에 대해 서비스 계약을 사용자 지정하거나 클라이언트 바인딩을 구성할 수 있습니다.  
   
- <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> 인터페이스를 구현하고 해당 개체를 메타데이터 시스템에 전달하거나 응용 프로그램 구성 파일에 구현 형식을 등록하면 사용자 지정 정책 어설션을 가져올 수 있습니다.  <xref:System.ServiceModel.Description.IPolicyImportExtension> 인터페이스 구현에서는 매개 변수가 없는 생성자를 제공 해야 합니다.  
+ <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> 인터페이스를 구현하고 해당 개체를 메타데이터 시스템에 전달하거나 애플리케이션 구성 파일에 구현 형식을 등록하면 사용자 지정 정책 어설션을 가져올 수 있습니다.  <xref:System.ServiceModel.Description.IPolicyImportExtension> 인터페이스 구현에서는 매개 변수가 없는 생성자를 제공 해야 합니다.  
   
 ### <a name="to-import-custom-policy-assertions"></a>사용자 지정 정책 어설션을 가져오려면  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68363851"
   
      [!code-xml[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]   
   
-2. 클라이언트 응용 프로그램에서 <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>를 사용하여 메타데이터를 확인하면 해당 가져오기가 자동으로 호출됩니다.  
+2. 클라이언트 애플리케이션에서 <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>를 사용하여 메타데이터를 확인하면 해당 가져오기가 자동으로 호출됩니다.  
   
      [!code-csharp[CustomPolicySample#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.cs#10)]
      [!code-vb[CustomPolicySample#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/client.vb#10)]  

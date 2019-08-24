@@ -30,7 +30,7 @@ ms.locfileid: "54709015"
   
  파일을 만들려면 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateFile%2A?displayProperty=nameWithType> 메서드를 사용합니다.  
   
- Windows 운영 체제에서 격리된 저장소 파일 및 디렉터리 이름은 대/소문자를 구분하지 않습니다. 즉, `ThisFile.txt`라는 파일을 만든 다음 `THISFILE.TXT`라는 다른 파일을 만들면 한 파일만 만들어집니다. 파일 이름은 표시를 위해 원래 대소문자를 유지합니다.  
+ Windows 운영 체제에서 격리된 스토리지 파일 및 디렉터리 이름은 대/소문자를 구분하지 않습니다. 즉, `ThisFile.txt`라는 파일을 만든 다음 `THISFILE.TXT`라는 다른 파일을 만들면 한 파일만 만들어집니다. 파일 이름은 표시를 위해 원래 대소문자를 유지합니다.  
   
 ## <a name="example"></a>예제  
  다음 코드 예제는 분리된 저장소에서 파일 및 디렉터리를 만드는 방법을 보여줍니다.  

@@ -59,7 +59,7 @@ Windows 서비스 프로젝트 템플릿을 사용하지 않으려는 경우 상
   
 6. 사용자 지정 처리를 정의할 다른 메서드를 재정의하고 각 경우에 서비스가 수행할 작업을 결정하는 코드를 작성합니다.  
   
-7. 서비스 응용 프로그램에 필요한 설치 관리자를 추가합니다. 자세한 내용은 [방법: 서비스 애플리케이션에 설치 관리자 추가](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)를 참조하세요.  
+7. 서비스 애플리케이션에 필요한 설치 관리자를 추가합니다. 자세한 내용은 [방법: 서비스 애플리케이션에 설치 관리자 추가](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)를 참조하세요.  
   
 8. **빌드** 메뉴에서 **솔루션 빌드**를 선택하여 프로젝트를 빌드합니다.  
   

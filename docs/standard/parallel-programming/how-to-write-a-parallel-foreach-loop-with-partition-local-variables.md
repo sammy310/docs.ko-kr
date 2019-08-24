@@ -27,7 +27,7 @@ ms.locfileid: "67661667"
 
 ## <a name="example"></a>예
 
-다음 예제에서는 <xref:System.Threading.Tasks.Parallel.ForEach%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%601%7D%2CSystem.Func%7B%60%600%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%601%2C%60%601%7D%2CSystem.Action%7B%60%601%7D%29?displayProperty=nameWithType> 오버로드를 호출하여 1백만 개의 요소가 포함된 배열의 합계를 계산합니다. 이 오버로드에는 다음과 같은 4개의 매개 변수가 있습니다.
+다음 예제에서는 <xref:System.Threading.Tasks.Parallel.ForEach%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%601%7D%2CSystem.Func%7B%60%600%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%601%2C%60%601%7D%2CSystem.Action%7B%60%601%7D%29?displayProperty=nameWithType> 오버로드를 호출하여 1백만 개의 요소가 포함된 배열의 합계를 컴퓨팅합니다. 이 오버로드에는 다음과 같은 4개의 매개 변수가 있습니다.
 
 - `source`: 데이터 소스이며, <xref:System.Collections.Generic.IEnumerable%601>를 구현해야 합니다. 이 예제에서 데이터 소스는 `IEnumerable<Int32>` 메서드에서 반환된 1백만 개의 멤버 <xref:System.Linq.Enumerable.Range%2A?displayProperty=nameWithType> 개체입니다.
 

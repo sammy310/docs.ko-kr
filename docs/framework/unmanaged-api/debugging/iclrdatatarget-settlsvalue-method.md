@@ -48,7 +48,7 @@ HRESULT SetTLSValue (
  [in] `CLRDATA_ADDRESS` 지정된 TLS 위치에 넣을 값을 지정 하는 값입니다.  
   
 ## <a name="remarks"></a>설명  
- 이 메서드는 디버깅 응용 프로그램의 작성자가 구현합니다.  
+ 이 메서드는 디버깅 애플리케이션의 작성자가 구현합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

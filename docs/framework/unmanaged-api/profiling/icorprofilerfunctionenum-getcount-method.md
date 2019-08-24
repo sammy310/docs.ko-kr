@@ -25,7 +25,7 @@ ms.lasthandoff: 07/10/2019
 ms.locfileid: "67780312"
 ---
 # <a name="icorprofilerfunctionenumgetcount-method"></a>ICorProfilerFunctionEnum::GetCount 메서드
-응용 프로그램에서 로드했거나 프로파일러에서 강제로 로드한 함수 개수를 가져옵니다.  
+애플리케이션에서 로드했거나 프로파일러에서 강제로 로드한 함수 개수를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   

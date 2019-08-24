@@ -2,6 +2,12 @@
 title: Serialization(Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 67379a76-5465-4af8-a781-0b0b25a62d9a
+ms.openlocfilehash: 947b38e8166ba05d871aafbaba5766aa9dab21f4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751108"
 ---
 # <a name="serialization-visual-basic"></a>Serialization(Visual Basic)
 Serialization은 개체를 저장하거나 메모리, 데이터베이스 또는 파일로 전송하기 위해 개체를 바이트 스트림으로 변환하는 프로세스입니다. 주 목적은 필요할 때 다시 만들 수 있도록 개체의 상태를 저장하는 것입니다. 역 프로세스를 deserialization이라고 합니다.  
@@ -14,7 +20,7 @@ Serialization은 개체를 저장하거나 메모리, 데이터베이스 또는 
  개체는 스트림으로 serialize되어 데이터 뿐만 아니라 버전, 문화권 및 어셈블리 이름과 같은 개체 형식에 대한 정보를 운반합니다. 해당 스트림에서 데이터베이스, 파일 또는 메모리에 저장될 수 있습니다.  
   
 ### <a name="uses-for-serialization"></a>serialization의 용도  
- Serialization을 사용하여 개발자는 개체의 상태를 저장하고 필요할 때 다시 만들어 개체 교환 뿐 아니라 개체의 스토리지 기능도 제공할 수 있습니다. Serialization을 통해 개발자는 웹 서비스를 통해 원격 애플리케이션에 개체를 전송하거나, 한 도메인에서 다른 도메인으로 개체를 전달하거나, 방화벽을 통해 XML 문자열로 개체를 전달하거나, 애플리케이션 간에 보안 또는 사용자별 정보를 유지 관리하는 등의 작업을 수행할 수 있습니다.  
+ Serialization은 개발자에게 개체의 상태를 스토리지하고 필요할 때 다시 만들 수 있도록 해줍니다. 또한 데이터를 교환하는 기능뿐만 아니라 개체를 스토리지하는 기능도 제공합니다. Serialization을 통해 개발자는 웹 서비스를 통해 원격 애플리케이션에 개체를 전송하거나, 한 도메인에서 다른 도메인으로 개체를 전달하거나, 방화벽을 통해 XML 문자열로 개체를 전달하거나, 애플리케이션 간에 보안 또는 사용자별 정보를 유지 관리하는 등의 작업을 수행할 수 있습니다.  
   
 ### <a name="making-an-object-serializable"></a>개체를 Serialize 가능하게 만들기  
  개체를 직렬화하려면 직렬화할 개체, 직렬화된 개체를 포함할 스트림 및 <xref:System.Runtime.Serialization.Formatter>가 필요합니다. <xref:System.Runtime.Serialization>은 개체를 직렬화하거나 deserialize하는 데 사용할 수 있는 클래스를 포함합니다.  

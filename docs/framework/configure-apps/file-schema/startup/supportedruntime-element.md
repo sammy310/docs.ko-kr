@@ -34,8 +34,8 @@ ms.locfileid: "66489305"
 
 |특성|설명|
 |---------------|-----------------|
-|**version**|선택적 특성입니다.<br /><br /> 응용 프로그램이 지원하는 공용 언어 런타임(CLR) 버전을 지정하는 문자열 값입니다. 유효한 값에 대 한는 `version` 특성을 참조 합니다 ["런타임 버전" 값](#version) 섹션. **참고:**  .NET Framework 3.5를 통해를 "*런타임 버전*" 형식으로 지정 *주요*. *사소한*. *빌드*합니다. 주 및 부 버전 번호는 필수.NET Framework 4부터 (즉, "v4.0" 대신 "v4.0.30319"). 짧은 문자열이 권장됩니다.|
-|**sku**|선택적 특성입니다.<br /><br /> 이 응용 프로그램이 지원하는 .NET Framework 버전을 지정하는 SKU(Stock Keeping Unit)를 지정하는 문자열 값입니다.<br /><br /> .NET Framework 4.0을 시작할 때에는 `sku` 특성을 사용하는 것이 좋습니다.  존재한다면 앱이 대상으로 하는 .NET Framework의 버전을 나타냅니다.<br /><br /> Sku 특성의 유효한 값에 대 한 참조를 ["sku id" 값](#sku) 섹션입니다.|
+|**version**|선택적 특성입니다.<br /><br /> 애플리케이션이 지원하는 공용 언어 런타임(CLR) 버전을 지정하는 문자열 값입니다. 유효한 값에 대 한는 `version` 특성을 참조 합니다 ["런타임 버전" 값](#version) 섹션. **참고:**  .NET Framework 3.5를 통해를 "*런타임 버전*" 형식으로 지정 *주요*. *사소한*. *빌드*합니다. 주 및 부 버전 번호는 필수.NET Framework 4부터 (즉, "v4.0" 대신 "v4.0.30319"). 짧은 문자열이 권장됩니다.|
+|**sku**|선택적 특성입니다.<br /><br /> 이 애플리케이션이 지원하는 .NET Framework 버전을 지정하는 SKU(Stock Keeping Unit)를 지정하는 문자열 값입니다.<br /><br /> .NET Framework 4.0을 시작할 때에는 `sku` 특성을 사용하는 것이 좋습니다.  존재한다면 앱이 대상으로 하는 .NET Framework의 버전을 나타냅니다.<br /><br /> Sku 특성의 유효한 값에 대 한 참조를 ["sku id" 값](#sku) 섹션입니다.|
 
 ## <a name="remarks"></a>설명
 
@@ -53,7 +53,7 @@ ms.locfileid: "66489305"
 > [!NOTE]
 > 응용 프로그램에서는 사용 레거시 활성화 경로 같은 합니다 [CorBindToRuntimeEx 함수](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), 해당 경로 이전 버전 대신 CLR 버전 4를 활성화 하 고.NET Framework를 사용 하 여 응용 프로그램을 빌드할 경우 또는 하지만 정품이 4 이전 버전의.NET Framework를 사용 하 여 빌드된 혼합 모드 어셈블리에 없는 지원 되는 런타임 목록에서.NET Framework 4를 지정 하는 데 충분 합니다. 또한 합니다 [ \<시작 > 요소](../startup/startup-element.md) 구성 파일에서 설정 해야 합니다 `useLegacyV2RuntimeActivationPolicy` 특성을 `true`입니다. 하지만이 특성을 설정 `true` 빌드될 때 사용 된 런타임 대신.NET Framework 4를 사용 하 여 이전 버전의.NET Framework를 사용 하 여 빌드된 모든 구성 요소가 실행 되는 것을 의미 합니다.
 
-실행할 수 있는 모든 .NET Framework 버전을 사용하여 응용 프로그램을 테스트하는 것이 좋습니다.
+실행할 수 있는 모든 .NET Framework 버전을 사용하여 애플리케이션을 테스트하는 것이 좋습니다.
 
 <a name="version"></a> 
 ## <a name="runtime-version-values"></a>"런타임 버전" 값
@@ -107,7 +107,7 @@ ms.locfileid: "66489305"
 
 ## <a name="configuration-file"></a>구성 파일
 
-이 요소는 응용 프로그램 구성 파일에 사용할 수 있습니다.
+이 요소는 애플리케이션 구성 파일에 사용할 수 있습니다.
 
 ## <a name="see-also"></a>참고자료
 

@@ -108,7 +108,7 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
 
 1. Visual Studio 2010을 엽니다.
 
-2. 새 워크플로 콘솔 응용 프로그램을 만듭니다.
+2. 새 워크플로 콘솔 애플리케이션을 만듭니다.
 
 3. 몇 가지 활동을 끌어 캔버스에 놓습니다.
 

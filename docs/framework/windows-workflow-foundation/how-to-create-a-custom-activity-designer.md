@@ -51,7 +51,7 @@ ms.locfileid: "67170673"
 
 11. 선택 된 **창 (WPF)** 템플릿을 이름을 `RehostingWFDesigner`, 클릭 **추가**합니다.
 
-12. RehostingWFDesigner.xaml 파일을 열고 다음 코드를 붙여 넣어 응용 프로그램의 UI를 정의합니다.
+12. RehostingWFDesigner.xaml 파일을 열고 다음 코드를 붙여 넣어 애플리케이션의 UI를 정의합니다.
 
     ```xml
     <Window x:Class=" UsingWorkflowItemPresenter.RehostingWFDesigner"
@@ -250,7 +250,7 @@ ms.locfileid: "67170673"
 
 ### <a name="to-create-a-custom-activity-designer-using-workflowitemspresenter"></a>WorkflowItemsPresenter를 사용하여 사용자 지정 활동 디자이너를 만들려면
 
-1. 두 번째 사용자 지정 활동 디자이너에 대 한 절차는 두 번째 응용 프로그램 이름을 지정 하는 몇 가지 수정 하는 중 첫 번째를 사용 하 여 첫 번째는 parallels `UsingWorkflowItemsPresenter`합니다. 또한 이 응용 프로그램은 새 사용자 지정 활동을 정의하지 않습니다.
+1. 두 번째 사용자 지정 활동 디자이너에 대 한 절차는 두 번째 응용 프로그램 이름을 지정 하는 몇 가지 수정 하는 중 첫 번째를 사용 하 여 첫 번째는 parallels `UsingWorkflowItemsPresenter`합니다. 또한 이 애플리케이션은 새 사용자 지정 활동을 정의하지 않습니다.
 
 2. 주요 차이점은 CustomParallelDesigner.xaml 및 RehostingWFDesigner.xaml.cs 파일에 있습니다. UI를 정의 하는 CustomParallelDesigner.xaml 파일의 코드는 다음과 같습니다.
 

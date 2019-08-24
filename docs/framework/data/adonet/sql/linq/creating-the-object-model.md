@@ -38,4 +38,4 @@ ms.locfileid: "67743581"
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개체 모델에 대한 정보를 제공합니다.  
   
  [LINQ to SQL 사용을 위한 일반 단계](../../../../../../docs/framework/data/adonet/sql/linq/typical-steps-for-using-linq-to-sql.md)  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 응용 프로그램을 구현하는 일반적인 단계를 설명합니다.
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 애플리케이션을 구현하는 일반적인 단계를 설명합니다.

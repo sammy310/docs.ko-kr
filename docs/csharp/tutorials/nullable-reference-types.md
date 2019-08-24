@@ -12,7 +12,7 @@ ms.locfileid: "66195830"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>자습서: nullable 참조 형식 및 nullable이 아닌 참조 형식을 사용하여 디자인 의도를 보다 명확하게 표현
 
-C# 8에서는 nullable 값 형식이 값 형식을 보완하는 것과 동일한 방식으로 참조 형식을 보완하는 **nullable 참조 형식**이 도입되었습니다. 형식에 `?`를 추가하여 변수를 **nullable 참조 형식**으로 선언합니다. 예를 들어 `string?`는 nullable `string`을 나타냅니다. 이러한 새 형식을 사용하여 디자인 의도를 보다 명확하게 표현할 수 있습니다. ‘항상 값이 있어야 하는’ 변수도 있고, ‘값이 누락될 수 있는’ 변수도 있습니다.
+C# 8에서는 nullable 값 형식이 값 형식을 보완하는 것과 동일한 방식으로 참조 형식을 보완하는 **nullable 참조 형식**이 도입되었습니다. 형식에 `?`를 추가하여 변수를 **nullable 참조 형식**으로 선언합니다. 예를 들어 `string?`는 nullable `string`을 나타냅니다. 이러한 새 형식을 사용하여 디자인 의도를 보다 명확하게 표현할 수 있습니다. ‘항상 값이 있어야 하는’ 변수도 있고, ‘값이 누락될 수 있는’ 변수도 있습니다.  
 
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 알아봅니다.
 
@@ -36,7 +36,7 @@ C# 8.0 베타 컴파일러를 포함하여 .NET Core를 실행하도록 머신�
 
 ## <a name="create-the-application-and-enable-nullable-reference-types"></a>애플리케이션을 만들고 nullable 참조 형식을 사용하도록 설정
 
-Visual Studio 또는 `dotnet new console`을 사용하여 명령줄에서 새로운 콘솔 애플리케이션을 만듭니다. 응용 프로그램 이름을 `NullableIntroduction`으로 지정합니다. 애플리케이션을 만든 후에는 C# 8 베타 기능을 사용하도록 설정해야 합니다. `csproj` 파일을 열고 `PropertyGroup` 요소에 `LangVersion` 요소를 추가합니다. C# 8 프로젝트에서도 **nullable 참조 형식** 기능을 옵트인해야 합니다. 기능이 켜지고 나면 기존 참조 변수 선언이 **nullable이 아닌 참조 형식**으로 바뀌기 때문입니다. 이러한 의사 결정은 기존 코드에 적절한 null 확인이 없는 문제를 찾는 데 도움이 되지만 원래 디자인 의도를 정확하게 반영하지 않을 수 있습니다. `Nullable`요소를 `enable`로 설정하여 이 기능을 켭니다.
+Visual Studio 또는 `dotnet new console`을 사용하여 명령줄에서 새로운 콘솔 애플리케이션을 만듭니다. 애플리케이션 이름을 `NullableIntroduction`으로 지정합니다. 애플리케이션을 만든 후에는 C# 8 베타 기능을 사용하도록 설정해야 합니다. `csproj` 파일을 열고 `PropertyGroup` 요소에 `LangVersion` 요소를 추가합니다. C# 8 프로젝트에서도 **nullable 참조 형식** 기능을 옵트인해야 합니다. 기능이 켜지고 나면 기존 참조 변수 선언이 **nullable이 아닌 참조 형식**으로 바뀌기 때문입니다. 이러한 의사 결정은 기존 코드에 적절한 null 확인이 없는 문제를 찾는 데 도움이 되지만 원래 디자인 의도를 정확하게 반영하지 않을 수 있습니다. `Nullable`요소를 `enable`로 설정하여 이 기능을 켭니다.
 
 ```xml
 <LangVersion>8.0</LangVersion>

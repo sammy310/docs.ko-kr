@@ -17,7 +17,7 @@ ms.locfileid: "61774220"
 |ID|4212|  
 |키워드|WFInstanceStore|  
 |수준|경고|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  SQL 공급자에서 인스턴스 잠금을 얻으려는 중 시간 초과가 발생했습니다.  

@@ -100,7 +100,7 @@ public class MyClass
 var serializer = new System.Xml.Serialization.XmlSerializer(typeof(MyClass));
 ```
 
-### <a name="build-and-run-the-application"></a>응용 프로그램 빌드 및 실행
+### <a name="build-and-run-the-application"></a>애플리케이션 빌드 및 실행
 
 *MyApp* 폴더 내에서 [`dotnet run`](../tools/dotnet-run.md)을(를) 통해 애플리케이션을 실행하면 런타임에 미리 생성된 serializer가 자동으로 로드되어 사용됩니다.
 

@@ -17,7 +17,7 @@ ms.locfileid: "61755625"
 |ID|2577|  
 |키워드|WFActivities|  
 |수준|경고|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  취소하는 동안 TryCatch 작업의 자식 작업에서 예외가 throw되었음을 나타냅니다.  

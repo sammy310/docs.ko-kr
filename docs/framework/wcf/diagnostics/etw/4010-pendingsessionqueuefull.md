@@ -17,7 +17,7 @@ ms.locfileid: "61672590"
 |ID|4010|  
 |키워드|ActivationServices|  
 |수준|경고|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
 ## <a name="description"></a>설명  
  이 이벤트는 보류 중인 세션 큐가 꽉 차서 세션 디스패치가 실패한 경우에 내보내집니다.  

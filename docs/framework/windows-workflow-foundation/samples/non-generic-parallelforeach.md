@@ -57,7 +57,7 @@ CompletionCondition (옵션) \
 
 ## <a name="example-of-using-parallelforeach"></a>ParallelForEach 사용 예제
 
-다음 코드에서는 응용 프로그램에서 ParallelForEach 활동을 사용하는 방법을 보여 줍니다.
+다음 코드에서는 애플리케이션에서 ParallelForEach 활동을 사용하는 방법을 보여 줍니다.
 
 ```csharp
 string[] names = { "bill", "steve", "ray" };

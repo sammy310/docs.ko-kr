@@ -22,7 +22,7 @@ ms.locfileid: "67169962"
   
 2. <xref:System.Activities.Presentation.View.IExpressionEditorInstance> 인터페이스를 구현합니다. 이 인터페이스는 식 편집 UI용 UI를 구현합니다.  
   
-3. 다시 호스트된 워크플로 응용 프로그램에 <xref:System.Activities.Presentation.View.IExpressionEditorService>를 게시합니다.  
+3. 다시 호스트된 워크플로 애플리케이션에 <xref:System.Activities.Presentation.View.IExpressionEditorService>를 게시합니다.  
   
 ## <a name="implementing-a-custom-expression-editor-in-a-class-library"></a>클래스 라이브러리의 사용자 지정 식 편집기 구현  
  다음 샘플 코드에서는 MyExpressionEditorService 라이브러리 프로젝트에 포함된 `MyEditorService` 인터페이스를 구현하는 <xref:System.Activities.Presentation.View.IExpressionEditorService> 클래스를 보여 줍니다.  

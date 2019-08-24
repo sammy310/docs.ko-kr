@@ -3,12 +3,12 @@ title: WSFederation 인증 모듈 개요
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 0873e878fca3fe9723c23f78d647aa443f6d0152
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 9ade6b0d9e4aadb353ca148f868d548fbaacfbc3
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915510"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987708"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 인증 모듈 개요
 WIF(Windows Identity Foundation)에는 WS-FAM( WS-Federated Authentication Module)을 통한 ASP.NET 애플리케이션의 페더레이션된 인증 지원이 포함되어 있습니다. 이 항목은 페더레이션된 인증의 작동 방식과 사용 방법을 이해하는 데 도움이 됩니다.  
@@ -99,7 +99,7 @@ WIF(Windows Identity Foundation)에는 WS-FAM( WS-Federated Authentication Modul
  다음 XML에서는 ASP.NET RP(신뢰 당사자) 애플리케이션의 구성을 보여 줍니다. <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> 및 <xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> 구성 섹션은 `<configSections>` 요소 아래에 추가됩니다. SAM 및 WS-FAM은 HTTP 모듈의 `<system.webServer>`/`<modules>` 요소 아래에 추가됩니다. 최종적으로, WIF 구성 요소는 `<system.identityModel>`/`<identityConfiguration>` 및 `<system.identityModel.services>`/`<federationConfiguration>` 요소 아래에 구성됩니다. 이 구성은 기본 쿠키 처리기이고 `<cookieHandler>` 요소에 지정된 쿠키 처리기 유형이 없기 때문에 청크 분할된 쿠키 처리기를 지정합니다.  
   
 > [!WARNING]
->  다음 예제에서 `<wsFederation>` 요소의 `requireHttps` 특성과 `<cookieHandler>` 요소의 `requireSsl` 특성은 둘 다 `false`입니다. 이 경우 보안 위협이 발생할 수 있습니다. 프로덕션에서는 이러한 두 값을 모두 `true`로 설정해야 합니다.  
+> 다음 예제에서 `<wsFederation>` 요소의 `requireHttps` 특성과 `<cookieHandler>` 요소의 `requireSsl` 특성은 둘 다 `false`입니다. 이 경우 보안 위협이 발생할 수 있습니다. 프로덕션에서는 이러한 두 값을 모두 `true`로 설정해야 합니다.  
   
 ```xml  
 <configuration>  

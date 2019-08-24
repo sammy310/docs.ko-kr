@@ -50,7 +50,7 @@ ms.locfileid: "61780759"
 |NoChannelBuilderAvailable|바인딩에 TransportBindingElement가 없기 때문에 바인딩을 사용하여 채널 팩터리 또는 채널 수신기를 만들 수 없습니다. 모든 바인딩에는 TransportBindingElement에서 파생되는 하나 이상의 바인딩 요소가 있어야 합니다.|  
 |NotAllBindingElementsBuilt|채널 팩터리 및 채널 수신기를 작성할 때 이 바인딩의 바인딩 요소 중 일부가 사용되지 않았습니다. 바인딩 요소의 순서가 잘못되었습니다. 바인딩 요소에 대 한 권장 되는 순서는 다음과 같습니다. TransactionFlow, ReliableSession, Security, CompositeDuplex, OneWay, StreamSecurity, MessageEncoding, 전송 합니다.  TransportBindingElement가 마지막에 와야 합니다. 지정된 바인딩 요소가 빌드되지 않았습니다.|  
 |RuntimeRequiresInvoker0|디스패치 작업에 호출자가 필요합니다.|  
-|ServiceHasZeroAppEndpoints|지정된 서비스에 응용 프로그램(비인프라) 엔드포인트가 없습니다. 응용 프로그램에 대해 구성 파일이 없거나, 서비스 이름과 일치하는 서비스 요소가 구성 파일에 없거나, 아니면 서비스 요소에 엔드포인트가 정의되지 않았기 때문입니다.|  
+|ServiceHasZeroAppEndpoints|지정된 서비스에 애플리케이션(비인프라) 엔드포인트가 없습니다. 애플리케이션에 대해 구성 파일이 없거나, 서비스 이름과 일치하는 서비스 요소가 구성 파일에 없거나, 아니면 서비스 요소에 엔드포인트가 정의되지 않았기 때문입니다.|  
 |SFxActionMismatch|동작이 일치하지 않아서 형식화된 메시지를 만들 수 없습니다. 지정된 동작이 필요한데 다른 동작이 있습니다.|  
 |SFxAnonymousTypeNotSupported|유형이 익명이므로 지정된 메시지의 지정된 파트를 RPC로 내보내거나 인코딩할 수 없습니다.|  
 |SFxBadMetadataLocationNoAppropriateBaseAddress|구성 섹션의 serviceMetadata 섹션에서 ExternalMetadataLocation 속성 또는 externalMetadataLocation 특성을 통해 ServiceMetadataBehavior에 제공된 URL이 상대적 URL이며, 이 URL을 확인할 수 있는 기본 주소가 없습니다.|  

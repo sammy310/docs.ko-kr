@@ -12,7 +12,7 @@ ms.locfileid: "64614810"
 # <a name="understanding-http-authentication"></a>HTTP 인증 이해
 인증은 클라이언트가 리소스에 액세스할 자격이 있는지 여부를 식별하는 프로세스입니다. HTTP 프로토콜에서는 보안 리소스에 대한 액세스를 협상하기 위해 인증을 지원합니다.  
   
- 일반적으로 클라이언트의 초기 요청은 익명 요청으로 인증 정보가 포함되어 있지 않습니다. HTTP 서버 응용 프로그램은 인증이 필요함을 나타내는 동안 익명 요청을 거부할 수 있습니다. 서버 응용 프로그램에서는 지원되는 인증 스키마를 나타내기 위해 WWW-Authentication 헤더를 보냅니다. 이 문서는 HTTP에 대 한 여러 인증 체계를 설명 하 고 지원을 Windows Communication Foundation (WCF)에서 설명 합니다.  
+ 일반적으로 클라이언트의 초기 요청은 익명 요청으로 인증 정보가 포함되어 있지 않습니다. HTTP 서버 애플리케이션은 인증이 필요함을 나타내는 동안 익명 요청을 거부할 수 있습니다. 서버 애플리케이션에서는 지원되는 인증 스키마를 나타내기 위해 WWW-Authentication 헤더를 보냅니다. 이 문서는 HTTP에 대 한 여러 인증 체계를 설명 하 고 지원을 Windows Communication Foundation (WCF)에서 설명 합니다.  
   
 ## <a name="http-authentication-schemes"></a>HTTP 인증 스키마  
  서버는 클라이언트에서 선택할 여러 인증 체계를 지정할 수 있습니다. 다음 표에서 Windows 응용 프로그램에서 흔히 발견 되는 인증 체계를 설명 합니다.  

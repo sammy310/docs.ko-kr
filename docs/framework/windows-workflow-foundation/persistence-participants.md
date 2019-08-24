@@ -10,7 +10,7 @@ ms.lasthandoff: 04/28/2019
 ms.locfileid: "64592141"
 ---
 # <a name="persistence-participants"></a>지속성 참석자
-지속성 참가자는 응용 프로그램 호스트에서 트리거된 지속성 작업(저장 또는 로드)에 참가할 수 있습니다. 합니다 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 두 가지 추상 클래스와 함께 제공 되 **PersistenceParticipant** 하 고 **PersistenceIOParticipant**, 지 속성 참가자를 만드는 데 사용할 수 있는 합니다. 지속성 참가자는 이 클래스 중 하나에서 파생되고 관련 메서드를 구현한 다음 클래스의 인스턴스를 <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A>의 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 컬렉션에 추가합니다. 응용 프로그램 호스트는 워크플로 인스턴스를 지속할 때 이 워크플로 확장을 검색하고 적당한 시간에 지속성 참가자에서 해당 메서드를 호출합니다.  
+지속성 참가자는 애플리케이션 호스트에서 트리거된 지속성 작업(저장 또는 로드)에 참가할 수 있습니다. 합니다 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 두 가지 추상 클래스와 함께 제공 되 **PersistenceParticipant** 하 고 **PersistenceIOParticipant**, 지 속성 참가자를 만드는 데 사용할 수 있는 합니다. 지속성 참가자는 이 클래스 중 하나에서 파생되고 관련 메서드를 구현한 다음 클래스의 인스턴스를 <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A>의 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 컬렉션에 추가합니다. 애플리케이션 호스트는 워크플로 인스턴스를 지속할 때 이 워크플로 확장을 검색하고 적당한 시간에 지속성 참가자에서 해당 메서드를 호출합니다.  
   
  다음 목록에서는 유지(저장) 작업의 여러 단계에서 지속성 하위 시스템이 수행하는 작업을 설명합니다. 지속성 참가자는 세 번째 단계와 네 번째 단계에서 사용됩니다. 참가자는 I/O 참가자 (또한 I/O 작업에 참여 하는 지 속성 참가자) 인 경우 참가자도 여섯 번째 단계에서 사용 됩니다.  
   

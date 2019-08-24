@@ -25,7 +25,7 @@ ms.locfileid: "65592295"
  미리 정의된 대화 상자 컨트롤을 나열합니다.  
   
  [Windows Forms의 모양 변경](changing-the-appearance-of-windows-forms.md)  
- Windows Forms 응용 프로그램의 모양을 변경하는 방법에 대해 설명하는 항목의 링크가 들어 있습니다.  
+ Windows Forms 애플리케이션의 모양을 변경하는 방법에 대해 설명하는 항목의 링크가 들어 있습니다.  
   
  [TabControl 컨트롤 개요](./controls/tabcontrol-control-overview-windows-forms.md)  
  탭 컨트롤을 대화 상자에 통합하는 방법을 설명합니다.

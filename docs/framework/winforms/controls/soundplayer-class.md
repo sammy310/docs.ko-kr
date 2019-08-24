@@ -14,7 +14,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61756405"
 ---
 # <a name="soundplayer-class"></a>SoundPlayer 클래스
-`SoundPlayer` 클래스를 사용하여 응용 프로그램에 소리를 쉽게 포함할 수 있습니다.  
+`SoundPlayer` 클래스를 사용하여 애플리케이션에 소리를 쉽게 포함할 수 있습니다.  
   
  <xref:System.Media.SystemSounds> 클래스를 사용하여 경고음을 포함한 일반적인 시스템 소리를 재생할 수 있습니다.  
   

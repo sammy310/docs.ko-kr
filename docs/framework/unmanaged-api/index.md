@@ -17,7 +17,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61984167"
 ---
 # <a name="unmanaged-api-reference"></a>관리되지 않는 API 참조
-이 섹션에는 런타임 호스트, 컴파일러, 디스어셈블러, 난독 처리기, 디버거, 프로파일러 등의 관리 코드 관련 응용 프로그램에서 사용할 수 있는 관리되지 않는 API에 대한 정보가 포함되어 있습니다.  
+이 섹션에는 런타임 호스트, 컴파일러, 디스어셈블러, 난독 처리기, 디버거, 프로파일러 등의 관리 코드 관련 애플리케이션에서 사용할 수 있는 관리되지 않는 API에 대한 정보가 포함되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [공통 데이터 형식](../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)  
@@ -42,10 +42,10 @@ ms.locfileid: "61984167"
  컴파일러가 디버거에 사용되는 기호 정보를 생성할 수 있도록 하는 진단 기호 저장소 API에 대해 설명합니다.  
   
  [Fusion](../../../docs/framework/unmanaged-api/fusion/index.md)  
- 런타임 호스트가 응용 프로그램 리소스의 속성에 액세스하여 응용 프로그램용으로 해당 리소스의 정확한 버전을 찾을 수 있도록 하는 Fusion API에 대해 설명합니다.  
+ 런타임 호스트가 애플리케이션 리소스의 속성에 액세스하여 애플리케이션용으로 해당 리소스의 정확한 버전을 찾을 수 있도록 하는 Fusion API에 대해 설명합니다.  
   
  [호스팅](../../../docs/framework/unmanaged-api/hosting/index.md)  
- 관리되지 않는 호스트가 CLR을 응용 프로그램에 통합할 수 있도록 하는 호스팅 API에 대해 설명합니다.  
+ 관리되지 않는 호스트가 CLR을 애플리케이션에 통합할 수 있도록 하는 호스팅 API에 대해 설명합니다.  
   
  [메타데이터](../../../docs/framework/unmanaged-api/metadata/index.md)  
  컴파일러 등의 클라이언트가 CLR에 형식을 로드하지 않아도 구성 요소 메타데이터를 생성하거나 액세스할 수 있도록 하는 메타데이터 API에 대해 설명합니다.  

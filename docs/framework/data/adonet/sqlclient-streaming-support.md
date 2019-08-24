@@ -15,10 +15,10 @@ SQL Server 및 응용 프로그램 (.NET Framework 4.5의 새로운) 간의 스�
 
 완벽 하 게 더 적은 메모리 오버플로 예외가 발생 하는 메모리에 데이터를 로드 하지 않고도 응용 프로그램 작성 해당 스트림 데이터를 간소화의 스트리밍 지원은 SQL Server에서 합니다.
 
-또한 스트리밍 지원을 통해 중간 계층 응용 프로그램의 확장성이 높아질 수 있습니다. 특히 대형 BLOB를 전송, 검색 및 조작하기 위해 비즈니스 개체를 SQL Azure에 연결하는 시나리오에서는 더욱 그렇습니다.
+또한 스트리밍 지원을 통해 중간 계층 애플리케이션의 확장성이 높아질 수 있습니다. 특히 대형 BLOB를 전송, 검색 및 조작하기 위해 비즈니스 개체를 SQL Azure에 연결하는 시나리오에서는 더욱 그렇습니다.
 
 > [!WARNING]
-> 응용 프로그램에서 `Context Connection` 연결 문자열 키워드도 사용하는 경우에는 비동기 호출이 지원되지 않습니다.
+> 애플리케이션에서 `Context Connection` 연결 문자열 키워드도 사용하는 경우에는 비동기 호출이 지원되지 않습니다.
 >
 > 스트리밍을 지원하기 위해 추가된 멤버는 쿼리에서 데이터를 검색하고 쿼리 및 저장 프로시저에 매개 변수를 전달하는 데 사용됩니다. 스트리밍 기능은 기본 OLTP 및 데이터 마이그레이션 시나리오를 처리하며 온-프레미스 및 오프-프레미스 데이터 마이그레이션 환경에 적용할 수 있습니다.
 
@@ -52,7 +52,7 @@ SQL Server 및 응용 프로그램 (.NET Framework 4.5의 새로운) 간의 스�
 
 새로운 기능에서는 SQL Server로의 스트리밍 지원은 합니다 <xref:System.Data.SqlClient.SqlParameter> 수락 하 고에 대응할 수 있도록 클래스 <xref:System.Xml.XmlReader>를 <xref:System.IO.Stream>, 및 <xref:System.IO.TextReader> 개체입니다. <xref:System.Data.SqlClient.SqlParameter>는 쿼리 및 저장 프로시저에 매개 변수를 전달하는 데 사용됩니다.
 
-<xref:System.Data.SqlClient.SqlCommand> 개체를 삭제하거나 <xref:System.Data.SqlClient.SqlCommand.Cancel%2A>을 호출할 때는 모든 스트리밍 작업이 취소되어야 합니다. 응용 프로그램에서 <xref:System.Threading.CancellationToken>을 전송하면 취소되지 않을 수 있습니다.
+<xref:System.Data.SqlClient.SqlCommand> 개체를 삭제하거나 <xref:System.Data.SqlClient.SqlCommand.Cancel%2A>을 호출할 때는 모든 스트리밍 작업이 취소되어야 합니다. 애플리케이션에서 <xref:System.Threading.CancellationToken>을 전송하면 취소되지 않을 수 있습니다.
 
 다음 <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 형식에서는 <xref:System.Data.SqlClient.SqlParameter.Value%2A>의 <xref:System.IO.Stream>를 받아들입니다.
 

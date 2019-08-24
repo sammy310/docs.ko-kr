@@ -28,7 +28,7 @@ Windows Forms <xref:System.Windows.Forms.OpenFileDialog> 구성 요소는 미리
   
 ## <a name="related-sections"></a>관련 단원  
  [대화 상자 컨트롤 및 구성 요소](dialog-box-controls-and-components-windows-forms.md)  
- 사용자가 응용 프로그램이나 시스템에서 표준 조작을 수행할 수 있도록 하는 컨트롤 및 구성 요소 집합에 대해 설명합니다.  
+ 사용자가 애플리케이션이나 시스템에서 표준 조작을 수행할 수 있도록 하는 컨트롤 및 구성 요소 집합에 대해 설명합니다.  
   
  [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)  
  사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.  

@@ -57,7 +57,7 @@ ms.locfileid: "64586239"
   
 ### <a name="to-host-the-service"></a>서비스를 호스트하려면  
   
-1. 서비스를 호스트할 콘솔 응용 프로그램을 만듭니다.  
+1. 서비스를 호스트할 콘솔 애플리케이션을 만듭니다.  
   
     ```  
     class Program  

@@ -28,7 +28,7 @@ ms.locfileid: "54671293"
 * [WPF(Windows Presentation Foundation)](../../docs/framework/wpf/index.md)
 * [Windows Forms](../../docs/framework/winforms/index.md)
 
-이 섹션에는 Windows Presentation Foundation 또는 Windows Forms를 사용하여 Windows 기반 애플리케이션을 만드는 방법을 설명하는 항목이 포함되어 있습니다. 그러나 .NET Framework를 사용하여 dnpq 애플리케이션을 만들고 Microsoft 스토어를 통해 사용할 수 있는 컴퓨터 또는 장치용 클라이언트 애플리케이션을 만들 수 있습니다.
+이 섹션에는 Windows Presentation Foundation 또는 Windows Forms를 사용하여 Windows 기반 애플리케이션을 만드는 방법을 설명하는 항목이 포함되어 있습니다. 그러나 .NET Framework를 사용하여 dnpq 애플리케이션을 만들고 Microsoft 스토어를 통해 사용할 수 있는 컴퓨터 또는 디바이스용 클라이언트 애플리케이션을 만들 수 있습니다.
  
 ## <a name="in-this-section"></a>단원 내용
 

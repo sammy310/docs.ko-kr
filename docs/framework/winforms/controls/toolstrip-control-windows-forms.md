@@ -13,7 +13,7 @@ ms.lasthandoff: 04/28/2019
 ms.locfileid: "64654780"
 ---
 # <a name="toolstrip-control-windows-forms"></a>ToolStrip 컨트롤(Windows Forms)
-<xref:System.Windows.Forms.ToolStrip> 컨트롤은 Windows Forms 응용 프로그램에서 메뉴, 컨트롤 및 사용자 정의 컨트롤을 호스트할 수 있는 도구 모음입니다.  
+<xref:System.Windows.Forms.ToolStrip> 컨트롤은 Windows Forms 애플리케이션에서 메뉴, 컨트롤 및 사용자 정의 컨트롤을 호스트할 수 있는 도구 모음입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [ToolStrip 컨트롤 개요](toolstrip-control-overview-windows-forms.md)  

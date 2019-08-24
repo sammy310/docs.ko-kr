@@ -72,11 +72,11 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
   
 2. 솔루션을 빌드합니다.  
   
-3. client.exe 응용 프로그램을 실행합니다.  
+3. client.exe 애플리케이션을 실행합니다.  
   
-4. service.exe 응용 프로그램을 실행합니다. 그러면 클라이언트에서는 온라인 알림을 받습니다.  
+4. service.exe 애플리케이션을 실행합니다. 그러면 클라이언트에서는 온라인 알림을 받습니다.  
   
-5. service.exe 응용 프로그램을 닫습니다. 그러면 클라이언트에서는 오프라인 알림을 받습니다.  
+5. service.exe 애플리케이션을 닫습니다. 그러면 클라이언트에서는 오프라인 알림을 받습니다.  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  

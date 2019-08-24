@@ -16,9 +16,9 @@ ms.locfileid: "61605784"
   
  사용자 지정 함수를 호출하는 과정은 다음의 기본적인 세 단계로 이루어집니다.  
   
-1. 개념적 모델에서 함수를 정의하거나 저장소 모델에서 함수를 선언합니다.  
+1. 개념적 모델에서 함수를 정의하거나 스토리지 모델에서 함수를 선언합니다.  
   
-2. 응용 프로그램에 메서드를 추가하고 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>를 사용하여 이 메서드를 모델의 함수에 매핑합니다.  
+2. 애플리케이션에 메서드를 추가하고 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>를 사용하여 이 메서드를 모델의 함수에 매핑합니다.  
   
 3. LINQ to Entities 쿼리에서 함수를 호출합니다.  
   

@@ -17,7 +17,7 @@ ms.locfileid: "61781825"
 |ID|213|  
 |키워드|EndToEndMonitoring, HealthMonitoring, 문제 해결, ServiceHost|  
 |수준|LogAlways|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
 ## <a name="description"></a>설명  
  이 이벤트는 웹 호스팅 호스트가 시작될 때 내보내집니다. 일반적으로 이러한 경우는 서비스가 메시지에 의해 활성화될 때 발생하며, 서비스가 자동으로 시작되도록 구성된 경우에도 발생할 수 있습니다.  

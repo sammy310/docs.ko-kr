@@ -12,11 +12,11 @@ ms.locfileid: "65589406"
 # <a name="wmi-provider"></a>WMI Provider
 이 샘플에는 WCF에 빌드되는 Windows Management Instrumentation (WMI) 공급자를 사용 하 여 런타임에 Windows Communication Foundation (WCF) 서비스에서 데이터를 수집 하는 방법을 보여 줍니다. 또한 사용자 정의 WMI 개체를 서비스에 추가하는 방법도 보여 줍니다. 샘플에 대 한 WMI 공급자를 활성화 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) 에서 데이터를 수집 하는 방법에 설명 하 고를 `ICalculator` 런타임에 서비스.  
   
- WMI는 Microsoft에서 구현한 WBEM(Web-Based Enterprise Management) 표준입니다. WMI SDK에 대 한 자세한 내용은 참조 하세요. [Windows Management Instrumentation](/windows/desktop/WmiSdk/wmi-start-page)합니다. WBEM은 응용 프로그램에서 외부 관리 도구에 관리 계측을 노출하는 방법을 지정하는 산업 표준입니다.  
+ WMI는 Microsoft에서 구현한 WBEM(Web-Based Enterprise Management) 표준입니다. WMI SDK에 대 한 자세한 내용은 참조 하세요. [Windows Management Instrumentation](/windows/desktop/WmiSdk/wmi-start-page)합니다. WBEM은 애플리케이션에서 외부 관리 도구에 관리 계측을 노출하는 방법을 지정하는 산업 표준입니다.  
   
  WCF는 WMI 공급자를 WBEM 호환 인터페이스를 통해 런타임으로 계측을 노출 하는 구성 요소를 구현 합니다. 관리 도구는 런타임에 인터페이스를 통해 서비스에 연결될 수 있습니다. WCF 주소, 바인딩, 동작 및 수신기와 같은 서비스 특성을 노출합니다.  
   
- 기본 제공 WMI 공급자는 응용 프로그램의 구성 파일에서 활성화합니다. 이렇게를 `wmiProviderEnabled` 특성을 [ \<진단 >](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) 에 [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) 섹션에서 다음 샘플 에서처럼 구성:  
+ 기본 제공 WMI 공급자는 애플리케이션의 구성 파일에서 활성화합니다. 이렇게를 `wmiProviderEnabled` 특성을 [ \<진단 >](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) 에 [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) 섹션에서 다음 샘플 에서처럼 구성:  
   
 ```xml  
 <system.serviceModel>  
@@ -26,13 +26,13 @@ ms.locfileid: "65589406"
 </system.serviceModel>  
 ```  
   
- 이 구성 항목은 WMI 인터페이스를 노출합니다. 관리 응용 프로그램이 이 인터페이스를 통해 연결하여 응용 프로그램의 관리 계측에 액세스할 수 있습니다.  
+ 이 구성 항목은 WMI 인터페이스를 노출합니다. 관리 애플리케이션이 이 인터페이스를 통해 연결하여 애플리케이션의 관리 계측에 액세스할 수 있습니다.  
   
 ## <a name="custom-wmi-object"></a>사용자 지정 WMI 개체  
- 서비스에 WMI 개체를 추가하면 기본 제공 WMI 공급자 정보와 함께 사용자 정의 정보를 표시할 수 있습니다. 그러려면 Installutil.exe 응용 프로그램을 사용하여 WMI에 서비스의 스키마를 게시합니다. 이 작업을 수행하기 위한 지침과 자세한 설명은 항목 끝 부분에 있는 설치 지침을 참조하십시오.  
+ 서비스에 WMI 개체를 추가하면 기본 제공 WMI 공급자 정보와 함께 사용자 정의 정보를 표시할 수 있습니다. 그러려면 Installutil.exe 애플리케이션을 사용하여 WMI에 서비스의 스키마를 게시합니다. 이 작업을 수행하기 위한 지침과 자세한 설명은 항목 끝 부분에 있는 설치 지침을 참조하십시오.  
   
 ## <a name="accessing-wmi-information"></a>WMI 정보 액세스  
- 다양한 방식으로 WMI 데이터에 액세스할 수 있습니다. 스크립트를 Visual Basic 응용 프로그램에 대 한 WMI Api를 제공 하는 Microsoft C++ 응용 프로그램 및.NET Framework (https://docs.microsoft.com/windows/desktop/wmisdk/using-wmi)합니다.  
+ 다양한 방식으로 WMI 데이터에 액세스할 수 있습니다. 스크립트를 Visual Basic 응용 프로그램에 대 한 WMI Api를 제공 하는 Microsoft C++ 응용 프로그램 및.NET Framework (https://docs.microsoft.com/windows/desktop/wmisdk/using-wmi) 합니다.  
   
  이 샘플에서는 두 개의 Java 스크립트를 사용합니다. 하나는 컴퓨터에서 실행 중인 서비스를 속성과 함께 나열하고, 다른 하나는 사용자 정의 WMI 데이터를 표시합니다. 스크립트에서는 WMI 공급자에 대한 연결을 열고, 데이터를 구문 분석하고, 수집된 데이터를 표시합니다.  
   

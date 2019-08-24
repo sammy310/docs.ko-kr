@@ -17,7 +17,7 @@ ms.locfileid: "61789365"
 |ID|3803|  
 |키워드|RoutingServices|  
 |수준|Error|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  이 이벤트는 엔드포인트에서 메시지를 처리하는 동안 라우팅 서비스가 실패할 때 내보내집니다.  

@@ -68,7 +68,7 @@ LINQ를 사용하여 문자열 및 문자열 컬렉션을 쿼리하고 변환할
   
   단일 파일을 데이터 소스로 사용하여 새 파일을 만드는 방법을 보여 줍니다.
 
-- [방법: CSV 텍스트 파일의 열 값 계산(LINQ)(C#)](how-to-compute-column-values-in-a-csv-text-file-linq.md)
+- [방법: CSV 텍스트 파일의 열 값 컴퓨팅(LINQ)(C#)](how-to-compute-column-values-in-a-csv-text-file-linq.md)
   
   .csv 파일의 텍스트 데이터에 대해 수학적 계산을 수행하는 방법을 보여 줍니다.
 

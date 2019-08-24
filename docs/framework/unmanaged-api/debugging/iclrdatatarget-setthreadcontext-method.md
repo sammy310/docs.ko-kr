@@ -51,7 +51,7 @@ HRESULT SetThreadContext (
  데이터를 `context` Win32 형식의 버퍼 됩니다 `CONTEXT` 구조입니다. 컨텍스트 프로세서별 등록 데이터를 지정 하므로 Win32 정의 `CONTEXT` 구조는 프로세서 아키텍처에 따라 달라 집니다. Win32의 정의 대 한 WinNT.h 헤더 파일 참조 `CONTEXT` 구조입니다.  
   
 ## <a name="remarks"></a>설명  
- 이 메서드는 디버깅 응용 프로그램의 작성자가 구현합니다.  
+ 이 메서드는 디버깅 애플리케이션의 작성자가 구현합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

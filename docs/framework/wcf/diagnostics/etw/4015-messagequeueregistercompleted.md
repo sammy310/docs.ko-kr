@@ -17,7 +17,7 @@ ms.locfileid: "61942261"
 |ID|4015|  
 |키워드|ActivationServices|  
 |수준|정보|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
 ## <a name="description"></a>설명  
  이 이벤트는 메시지 큐 등록이 완료될 경우 내보내집니다.  

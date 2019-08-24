@@ -24,7 +24,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61645183"
 ---
 # <a name="imetadatatables-interface"></a>IMetaDataTables 인터페이스
-테이블에서 메타데이터 정보를 저장 및 검색하는 메서드를 제공합니다.  
+테이블에서 메타데이터 정보를 스토리지 및 검색하는 메서드를 제공합니다.  
   
 ## <a name="methods"></a>메서드  
   

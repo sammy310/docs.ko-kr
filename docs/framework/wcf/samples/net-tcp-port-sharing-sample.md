@@ -10,7 +10,7 @@ ms.lasthandoff: 05/19/2019
 ms.locfileid: "65876373"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Net.TCP Port Sharing 샘플
-TCP/IP 프로토콜은 포트라는 16비트 숫자를 사용하여 동일한 컴퓨터에서 실행되는 여러 네트워크 응용 프로그램에 대한 연결을 구분합니다. 응용 프로그램이 포트에서 수신 대기 중이면 이 포트의 모든 TCP 트래픽이 해당 응용 프로그램으로 이동합니다. 다른 응용 프로그램이 동시에 이 포트에서 수신 대기할 수는 없습니다.  
+TCP/IP 프로토콜은 포트라는 16비트 숫자를 사용하여 동일한 컴퓨터에서 실행되는 여러 네트워크 애플리케이션에 대한 연결을 구분합니다. 애플리케이션이 포트에서 수신 대기 중이면 이 포트의 모든 TCP 트래픽이 해당 애플리케이션으로 이동합니다. 다른 애플리케이션이 동시에 이 포트에서 수신 대기할 수는 없습니다.  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
@@ -21,11 +21,11 @@ TCP/IP 프로토콜은 포트라는 16비트 숫자를 사용하여 동일한 �
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
   
- 대부분의 프로토콜은 표준 또는 기본 포트 번호를 사용합니다. 예를 들어 HTTP 프로토콜은 보통 TCP 포트 80을 사용합니다. IIS(인터넷 정보 서비스)에는 여러 HTTP 응용 프로그램 간에 포트를 공유하는 수신기가 있습니다. IIS는 직접 포트에서 수신 대기하고 메시지 스트림에 있는 정보에 따라 적절한 응용 프로그램으로 메시지를 전달합니다. 이렇게 하면 여러 HTTP 응용 프로그램이 메시지 수신 포트를 확보하기 위해 경쟁하지 않고 같은 포트 번호를 사용할 수 있습니다.  
+ 대부분의 프로토콜은 표준 또는 기본 포트 번호를 사용합니다. 예를 들어 HTTP 프로토콜은 보통 TCP 포트 80을 사용합니다. IIS(인터넷 정보 서비스)에는 여러 HTTP 애플리케이션 간에 포트를 공유하는 수신기가 있습니다. IIS는 직접 포트에서 수신 대기하고 메시지 스트림에 있는 정보에 따라 적절한 애플리케이션으로 메시지를 전달합니다. 이렇게 하면 여러 HTTP 애플리케이션이 메시지 수신 포트를 확보하기 위해 경쟁하지 않고 같은 포트 번호를 사용할 수 있습니다.  
   
  NetTcp 포트 공유 비슷하게 여러 네트워크 응용 프로그램이 하나의 포트를 공유할 수 있도록 하는 Windows Communication Foundation (WCF) 기능입니다. NetTcp 포트 공유 서비스는 net.tcp 프로토콜을 사용하여 연결을 받은 다음 대상 주소를 기준으로 메시지를 전달합니다.  
   
- NetTcp 포트 공유 서비스는 기본적으로 사용되지 않습니다. 이 샘플을 실행하기 전에 수동으로 이 서비스를 사용하도록 설정해야 합니다. 자세한 내용은 [방법: Net.TCP port Sharing Service](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)합니다. 서비스를 사용하지 않으면 서버 응용 프로그램이 시작될 때 예외가 throw됩니다.  
+ NetTcp 포트 공유 서비스는 기본적으로 사용되지 않습니다. 이 샘플을 실행하기 전에 수동으로 이 서비스를 사용하도록 설정해야 합니다. 자세한 내용은 [방법: Net.TCP port Sharing Service](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)합니다. 서비스를 사용하지 않으면 서버 애플리케이션이 시작될 때 예외가 throw됩니다.  
   
 ```  
 Unhandled Exception: System.ServiceModel.CommunicationException: The TransportManager failed to listen on the supplied URI using the NetTcpPortSharing service: failed to start the service because it is disabled. An administrator can enable it by running 'sc.exe config NetTcpPortSharing start= demand'.. ---> System.InvalidOperationException: Cannot start service NetTcpPortSharing on computer '.'. ---> System.ComponentModel.Win32Exception: The service cannot be started, either because it is disabled or because it has no enabled devices associated with it  
@@ -34,7 +34,7 @@ Unhandled Exception: System.ServiceModel.CommunicationException: The TransportMa
  포트 공유는 <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> 바인딩 또는 <xref:System.ServiceModel.NetTcpBinding> 바인딩 요소의 <xref:System.ServiceModel.Channels.TcpTransportBindingElement> 속성을 설정하여 서버에서 사용하도록 설정합니다. 클라이언트는 서버에서 포트 공유를 사용하도록 구성된 방식에 대해 몰라도 관계 없습니다.  
   
 ## <a name="enabling-port-sharing"></a>포트 공유 사용  
- 다음 코드에서는 서버에서 포트 공유를 사용하는 방법을 보여 줍니다. 여기서는 임의의 URI 경로가 있는 고정 포트에서 `ICalculator` 서비스의 인스턴스를 시작합니다. 두 서비스에서 같은 포트를 공유할 수 있더라도, NetTcp 포트 공유 서비스에서 올바른 응용 프로그램에 메시지를 라우트할 수 있도록 전체 엔드포인트 주소가 고유해야 합니다.  
+ 다음 코드에서는 서버에서 포트 공유를 사용하는 방법을 보여 줍니다. 여기서는 임의의 URI 경로가 있는 고정 포트에서 `ICalculator` 서비스의 인스턴스를 시작합니다. 두 서비스에서 같은 포트를 공유할 수 있더라도, NetTcp 포트 공유 서비스에서 올바른 애플리케이션에 메시지를 라우트할 수 있도록 전체 엔드포인트 주소가 고유해야 합니다.  
 
 ```csharp
 // Configure a binding with TCP port sharing enabled  

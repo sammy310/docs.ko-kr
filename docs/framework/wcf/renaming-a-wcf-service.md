@@ -28,7 +28,7 @@ ms.locfileid: "64651059"
 </system.servicemodel>  
 ```  
   
-- 서비스가 WebHosted인 경우 *.svc 파일을 사용합니다. svc 파일을 열고 다음 예제에 표시된 대로 서비스 이름을 수정합니다. svc 파일이 없는 경우 이 단계는 자체 호스팅 응용 프로그램에 필요하지 않습니다.  
+- 서비스가 WebHosted인 경우 *.svc 파일을 사용합니다. svc 파일을 열고 다음 예제에 표시된 대로 서비스 이름을 수정합니다. svc 파일이 없는 경우 이 단계는 자체 호스팅 애플리케이션에 필요하지 않습니다.  
   
 ```  
 <%@ ServiceHost Service="WcfService.NewName">  

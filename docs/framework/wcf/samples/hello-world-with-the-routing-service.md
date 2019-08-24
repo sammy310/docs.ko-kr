@@ -19,7 +19,7 @@ ms.locfileid: "64650036"
 2. F5 또는 Ctrl+Shift+B를 누릅니다.
 
     > [!NOTE]
-    >  F5 키를 누르면 계산기 클라이언트가 자동으로 시작됩니다. Ctrl+Shift+B(빌드)를 누를 경우에는 다음 응용 프로그램을 직접 시작해야 합니다.
+    >  F5 키를 누르면 계산기 클라이언트가 자동으로 시작됩니다. Ctrl+Shift+B(빌드)를 누를 경우에는 다음 애플리케이션을 직접 시작해야 합니다.
     >
     > 1. 계산기 클라이언트(./CalculatorClient/bin/client.exe)
     > 2. 계산기 서비스(./CalculatorService/bin/service.exe)

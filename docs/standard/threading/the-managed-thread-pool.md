@@ -20,7 +20,7 @@ ms.locfileid: "54665268"
 ---
 # <a name="the-managed-thread-pool"></a>관리되는 스레드 풀
 
-<xref:System.Threading.ThreadPool?displayProperty=nameWithType> 클래스는 시스템에서 관리하는 작업자 스레드 풀을 응용 프로그램에 제공하여 스레드 관리 대신 응용 프로그램 작업에 집중할 수 있게 해줍니다. 후순위 처리가 필요한 간단한 작업이 있는 경우 관리되는 스레드 풀을 통해 쉽게 여러 스레드를 활용할 수 있습니다. 스레드 풀 스레드에서 비동기 작업을 수행하는 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 개체를 만들 수 있으므로 Framework 4 이상에서는 스레드 풀의 사용이 훨씬 쉬워집니다.  
+<xref:System.Threading.ThreadPool?displayProperty=nameWithType> 클래스는 시스템에서 관리하는 작업자 스레드 풀을 애플리케이션에 제공하여 스레드 관리 대신 애플리케이션 작업에 집중할 수 있게 해줍니다. 후순위 처리가 필요한 간단한 작업이 있는 경우 관리되는 스레드 풀을 통해 쉽게 여러 스레드를 활용할 수 있습니다. 스레드 풀 스레드에서 비동기 작업을 수행하는 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 개체를 만들 수 있으므로 Framework 4 이상에서는 스레드 풀의 사용이 훨씬 쉬워집니다.  
   
 .NET에서는 [TPL(작업 병렬 라이브러리)](../parallel-programming/task-parallel-library-tpl.md) 작업, 비동기 I/O 완료, [타이머](timers.md) 콜백, 등록된 대기 작업, 대리자를 사용한 비동기 메서드 호출 및 <xref:System.Net?displayProperty=nameWithType> 소켓 연결을 비롯한 다양한 용도로 스레드 풀 스레드를 사용합니다.  
 

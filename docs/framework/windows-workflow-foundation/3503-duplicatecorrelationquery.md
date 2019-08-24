@@ -17,7 +17,7 @@ ms.locfileid: "61755599"
 |ID|3503|  
 |키워드|WFServices|  
 |수준|경고|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
 ## <a name="description"></a>설명  
  중복 CorrelationQuery를 찾았음을 나타냅니다. 중복 쿼리는 상관 관계를 계산할 때 사용되지 않습니다.  

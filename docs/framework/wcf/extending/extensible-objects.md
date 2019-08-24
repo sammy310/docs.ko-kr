@@ -42,7 +42,7 @@ where T : IExtensibleObject<T>
 
 <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> 또는 <xref:System.ServiceModel.IExtensionCollection%601.Find%2A>에 전달된 개체가 <xref:System.ServiceModel.IExtension%601>일 필요는 없지만(예를 들어 아무 개체나 전달할 수 있음) 반환되는 확장은 <xref:System.ServiceModel.IExtension%601>입니다.
 
-확장명이 컬렉션에 없는 경우는 <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> null을 반환 하 고 <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> 빈 컬렉션을 반환 합니다. 여러 확장을 구현 하는 경우 <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> 그 중 하나를 반환 합니다. <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A>에서 반환되는 값은 스냅숏입니다.
+확장명이 컬렉션에 없는 경우는 <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> null을 반환 하 고 <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> 빈 컬렉션을 반환 합니다. 여러 확장을 구현 하는 경우 <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> 그 중 하나를 반환 합니다. <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A>에서 반환되는 값은 스냅샷입니다.
 
 두 가지 주요 시나리오가 있습니다. 첫 번째 시나리오에서는 <xref:System.ServiceModel.IExtensibleObject%601.Extensions%2A> 속성을 개체에 상태를 삽입하는 형식 기반 사전으로 사용하여 다른 구성 요소에서 해당 형식으로 개체를 조회할 수 있게 합니다.
 

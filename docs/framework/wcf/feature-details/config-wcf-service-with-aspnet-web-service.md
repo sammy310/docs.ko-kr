@@ -25,7 +25,7 @@ ASP.NET 웹 서비스 클라이언트와 상호 운용이 가능 하도록 Windo
   
 2. 바인딩의 보안 모드를 <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>로 설정하여 이 서비스 엔드포인트 바인딩에 대한 전송 보안을 선택적으로 사용할 수 있습니다. 세부 정보를 참조 하세요 [전송 보안](../../../../docs/framework/wcf/feature-details/transport-security.md)합니다.  
   
-3. 방금 만든 바인딩 인스턴스를 사용하여 새 응용 프로그램 엔드포인트를 서비스 호스트에 추가합니다. 코드에서 서비스 끝점을 추가 하는 방법에 대 한 자세한 내용은 참조는 [방법: 코드에서 서비스 끝점을 만드는](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)합니다.  
+3. 방금 만든 바인딩 인스턴스를 사용하여 새 애플리케이션 엔드포인트를 서비스 호스트에 추가합니다. 코드에서 서비스 끝점을 추가 하는 방법에 대 한 자세한 내용은 참조는 [방법: 코드에서 서비스 끝점을 만드는](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)합니다.  
   
 4. 서비스에 대해 HTTP/GET 메타데이터 엔드포인트를 사용합니다. 자세한 내용은 참조 하십시오 [방법: 코드를 사용 하는 서비스의 메타 데이터 게시](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)합니다.  
   
@@ -35,7 +35,7 @@ ASP.NET 웹 서비스 클라이언트와 상호 운용이 가능 하도록 Windo
   
 2. 바인딩의 보안 모드를 <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>로 설정하여 이 서비스 엔드포인트 바인딩 구성에 대한 전송 보안을 선택적으로 사용할 수 있습니다. 자세한 내용은 참조 하세요 [전송 보안](../../../../docs/framework/wcf/feature-details/transport-security.md)합니다.  
   
-3. 방금 만든 바인딩 구성을 사용하여 서비스에 대한 새 응용 프로그램 엔드포인트를 구성합니다. 구성 파일에서 서비스 끝점을 추가 하는 방법에 대 한 자세한 내용은 참조는 [방법: 구성에서 서비스 끝점을 만드는](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)합니다.  
+3. 방금 만든 바인딩 구성을 사용하여 서비스에 대한 새 애플리케이션 엔드포인트를 구성합니다. 구성 파일에서 서비스 끝점을 추가 하는 방법에 대 한 자세한 내용은 참조는 [방법: 구성에서 서비스 끝점을 만드는](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)합니다.  
   
 4. 서비스에 대해 HTTP/GET 메타데이터 엔드포인트를 사용합니다. 자세한 내용은 참조 하십시오는 [방법: 구성 파일을 사용 하는 서비스의 메타 데이터 게시](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)합니다.  
   

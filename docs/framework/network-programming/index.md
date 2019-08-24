@@ -67,8 +67,8 @@ Microsoft .NET Framework는 더 빠르고 쉽게 애플리케이션에 통합할
  [피어 이름 확인 프로토콜](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)  
  버전 3.5에서 PNRP(Peer Name Resolution Protocol), 서버가 없는 동적 이름 등록 및 이름 확인 프로토콜을 지원하기 위해 추가된 지원 기능을 설명합니다. 이런 새로운 기능은 <xref:System.Net.PeerToPeer?displayProperty=nameWithType> 네임스페이스에 의해 지원됩니다.  
   
- [피어 투 피어 공동 작업](../../../docs/framework/network-programming/peer-to-peer-collaboration.md)  
- PNRP를 기반으로 빌드되는 피어 투 피어 공동 작업을 지원하기 위해 버전 3.5에 추가된 지원 기능을 설명합니다. 이런 새로운 기능은 <xref:System.Net.PeerToPeer.Collaboration?displayProperty=nameWithType> 네임스페이스에 의해 지원됩니다.  
+ [피어 투 피어 협업](../../../docs/framework/network-programming/peer-to-peer-collaboration.md)  
+ PNRP를 기반으로 빌드되는 피어 투 피어 협업을 지원하기 위해 버전 3.5에 추가된 지원 기능을 설명합니다. 이런 새로운 기능은 <xref:System.Net.PeerToPeer.Collaboration?displayProperty=nameWithType> 네임스페이스에 의해 지원됩니다.  
   
  [버전 3.5 SP1에서 HttpWebRequest에 대한 NTLM 인증 변경 내용](../../../docs/framework/network-programming/changes-to-ntlm-authentication-for-httpwebrequest-in-version-3-5-sp1.md)  
  버전 3.5 SP1에서 <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>, <xref:System.Net.HttpListener?displayProperty=nameWithType>, <xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType>및 System.Net 네임스페이스의 관련 클래스에 의해 통합 Windows 인증이 처리되는 방식에 영향을 미치는 보안 변경 사항을 설명합니다.  
@@ -114,7 +114,7 @@ Microsoft .NET Framework는 더 빠르고 쉽게 애플리케이션에 통합할
  개발자를 위한 PNRP(피어 이름 확인 프로토콜)의 관리되는 구현을 제공합니다.  
   
  <xref:System.Net.PeerToPeer.Collaboration?displayProperty=nameWithType>  
- 개발자를 위한 피어-투-피어 공동 작업 인터페이스의 관리되는 구현을 제공합니다.  
+ 개발자를 위한 피어-투-피어 협업 인터페이스의 관리되는 구현을 제공합니다.  
   
  <xref:System.Net.Security?displayProperty=nameWithType>  
  호스트 간의 보안 통신을 위한 네트워크 스트림을 제공하는 클래스입니다.  

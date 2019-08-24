@@ -55,7 +55,7 @@ Windows Communication Foundation (WCF) 채널 스택은 메시지를 처리 하�
 ## <a name="programming-with-the-channel-stack"></a>채널 스택을 사용한 프로그래밍  
  채널 스택은 일반적으로 바인딩을 통해 채널 스택이 만들어지는 팩터리 패턴을 사용하여 만들어집니다. 보내는 쪽에서 바인딩을 사용하여 <xref:System.ServiceModel.ChannelFactory>를 빌드하는데, 이를 통해 채널 스택을 차례로 빌드하고 스택의 맨 위 채널에 참조를 반환합니다. 그러면 애플리케이션에서 이 채널을 사용하여 메시지를 보낼 수 있습니다. 자세한 내용은 [클라이언트 채널 수준 프로그래밍](../../../../docs/framework/wcf/extending/client-channel-level-programming.md)합니다.  
   
- 받는 쪽에서는 바인딩을 사용하여 <xref:System.ServiceModel.Channels.IChannelListener>를 빌드하는데, 이를 통해 들어오는 메시지를 수신 대기합니다. <xref:System.ServiceModel.Channels.IChannelListener>에서는 채널 스택을 만들고 맨 위 채널에 응용 프로그램 참조를 전달하여 메시지를 수신 대기 응용 프로그램에 제공합니다. 그러면 애플리케이션에서 이 채널을 사용하여, 들어오는 메시지를 받습니다. 자세한 내용은 [서비스 채널 수준 프로그래밍](../../../../docs/framework/wcf/extending/service-channel-level-programming.md)합니다.  
+ 받는 쪽에서는 바인딩을 사용하여 <xref:System.ServiceModel.Channels.IChannelListener>를 빌드하는데, 이를 통해 들어오는 메시지를 수신 대기합니다. <xref:System.ServiceModel.Channels.IChannelListener>에서는 채널 스택을 만들고 맨 위 채널에 애플리케이션 참조를 전달하여 메시지를 수신 대기 애플리케이션에 제공합니다. 그러면 애플리케이션에서 이 채널을 사용하여, 들어오는 메시지를 받습니다. 자세한 내용은 [서비스 채널 수준 프로그래밍](../../../../docs/framework/wcf/extending/service-channel-level-programming.md)합니다.  
   
 ## <a name="the-channel-object-model"></a>채널 개체 모델  
  채널 개체 모델은 채널, 채널 수신기 및 채널 팩터리를 구현하는 데 필요한 핵심 인터페이스 집합입니다. 또한 사용자 지정 구현을 도와 주는 몇 가지 기본 클래스도 있습니다.  
@@ -72,9 +72,9 @@ Windows Communication Foundation (WCF) 채널 스택은 메시지를 처리 하�
   
 |항목|설명|  
 |-----------|-----------------|  
-|[서비스: 채널 수신기 및 채널](../../../../docs/framework/wcf/extending/service-channel-listeners-and-channels.md)|서비스 응용 프로그램에서 들어오는 채널을 수신 대기하는 채널 수신기에 대해 설명합니다.|  
-|[클라이언트: 채널 팩터리 및 채널](../../../../docs/framework/wcf/extending/client-channel-factories-and-channels.md)|서비스 응용 프로그램에 연결할 채널을 만드는 채널 팩터리에 대해 설명합니다.|  
+|[서비스: 채널 수신기 및 채널](../../../../docs/framework/wcf/extending/service-channel-listeners-and-channels.md)|서비스 애플리케이션에서 들어오는 채널을 수신 대기하는 채널 수신기에 대해 설명합니다.|  
+|[클라이언트: 채널 팩터리 및 채널](../../../../docs/framework/wcf/extending/client-channel-factories-and-channels.md)|서비스 애플리케이션에 연결할 채널을 만드는 채널 팩터리에 대해 설명합니다.|  
 |[상태 변경 이해](../../../../docs/framework/wcf/extending/understanding-state-changes.md)|<xref:System.ServiceModel.ICommunicationObject?displayProperty=nameWithType> 인터페이스 모델 상태가 채널에서 어떻게 바뀌는지에 대해 설명합니다.|  
 |[메시지 교환 패턴 선택](../../../../docs/framework/wcf/extending/choosing-a-message-exchange-pattern.md)|채널에서 지원할 수 있는 여섯 가지의 기본 메시지 교환 패턴에 대해 설명합니다.|  
 |[예외 및 오류 처리](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)|사용자 지정 채널에서 오류 및 예외를 처리하는 방법에 대해 설명합니다.|  
-|[구성 및 메타데이터 지원](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)|응용 프로그램 모델에서 사용자 지정 채널을 사용할 수 있도록 지원하는 방법과 바인딩 및 바인딩 요소를 사용하여 메타데이터를 가져오거나 내보내는 방법에 대해 설명합니다.|
+|[구성 및 메타데이터 지원](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)|애플리케이션 모델에서 사용자 지정 채널을 사용할 수 있도록 지원하는 방법과 바인딩 및 바인딩 요소를 사용하여 메타데이터를 가져오거나 내보내는 방법에 대해 설명합니다.|

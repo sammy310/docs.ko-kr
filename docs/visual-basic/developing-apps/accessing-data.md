@@ -31,7 +31,7 @@ Visual Basic에는 데이터에 액세스하는 애플리케이션 개발을 지
  [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)(Visual Studio의 LINQ to SQL 도구)  
  애플리케이션에서 [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md) 개체 모델을 만드는 방법에 대한 항목의 링크를 제공합니다.  
   
- [n 계층 응용 프로그램에서 데이터 집합 작업](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
+ [n 계층 애플리케이션에서 데이터 세트 작업](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
  다중 계층 데이터 애플리케이션을 만드는 방법에 대한 항목의 링크를 제공합니다.  
      
  [새 연결 추가](/visualstudio/data-tools/add-new-connections)  

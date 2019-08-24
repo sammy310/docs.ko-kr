@@ -1,5 +1,5 @@
 ---
-title: 데이터 집합 및 XmlDataDocument 동기화
+title: 데이터 세트 및 XmlDataDocument 동기화
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,10 +12,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64623389"
 ---
-# <a name="dataset-and-xmldatadocument-synchronization"></a>데이터 집합 및 XmlDataDocument 동기화
+# <a name="dataset-and-xmldatadocument-synchronization"></a>데이터 세트 및 XmlDataDocument 동기화
 ADO.NET <xref:System.Data.DataSet>으로 데이터의 관계형 표현을 사용할 수 있습니다. 계층적으로 데이터에 액세스하기 위해 .NET Framework에서 사용 가능한 XML 클래스를 사용할 수 있습니다. 지금까지는 데이터의 이와 같은 두 가지 표현이 별도로 사용되어 왔습니다. 그러나.NET Framework를 통해 데이터의 관계형 및 계층적 표현에 대 한 실시간 및 동기적 액세스를 통해 합니다 **데이터 집합** 개체 및 <xref:System.Xml.XmlDataDocument> 개체를 각각.  
   
- 경우는 **데이터 집합** 와 동기화 되는 **XmlDataDocument**, 개체를 모두 단일 데이터 집합을 사용 하는 합니다. 즉 변경 하려고 하는 경우는 **데이터 집합**, 변경에 반영 됩니다는 **XmlDataDocument**, 그 반대로 합니다. 관계는 **데이터 집합** 하며 **XmlDataDocument** 빌드된 서비스의 전체 모음 액세스 하는 단일 데이터 집합을 사용 하 여 단일 응용 프로그램을 허용 하 여 뛰어난 유연성을 만듭니다 관련 된 **데이터 집합** (예: Web Forms 및 Windows Forms 컨트롤 및 Visual Studio.NET 디자이너) 언어 XSL (Extensible Stylesheet), XSL Transformations (XSLT) 및 XML 경로 포함 하 여 XML 서비스의 모음 뿐만 아니라 언어 (XPath)입니다. 두 서비스를 모두 사용할 수 있으므로 응용 프로그램의 대상이 될 서비스 집합을 선택할 필요도 없습니다.  
+ 경우는 **데이터 집합** 와 동기화 되는 **XmlDataDocument**, 개체를 모두 단일 데이터 집합을 사용 하는 합니다. 즉 변경 하려고 하는 경우는 **데이터 집합**, 변경에 반영 됩니다는 **XmlDataDocument**, 그 반대로 합니다. 관계는 **데이터 집합** 하며 **XmlDataDocument** 빌드된 서비스의 전체 모음 액세스 하는 단일 데이터 집합을 사용 하 여 단일 응용 프로그램을 허용 하 여 뛰어난 유연성을 만듭니다 관련 된 **데이터 집합** (예: Web Forms 및 Windows Forms 컨트롤 및 Visual Studio.NET 디자이너) 언어 XSL (Extensible Stylesheet), XSL Transformations (XSLT) 및 XML 경로 포함 하 여 XML 서비스의 모음 뿐만 아니라 언어 (XPath)입니다. 두 서비스를 모두 사용할 수 있으므로 애플리케이션의 대상이 될 서비스 집합을 선택할 필요도 없습니다.  
   
  동기화 할 수 있는 여러 가지는 **데이터 집합** 사용 하 여는 **XmlDataDocument**합니다. 다음과 같은 작업을 수행할 수 있습니다.  
   

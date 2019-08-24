@@ -14,7 +14,7 @@ ms.locfileid: "64626980"
 
 ### <a name="to-define-the-service-contract"></a>서비스 계약을 정의하려면
 
-1. `DiscoveryProxyExample` 솔루션에 `Service`라는 새 콘솔 응용 프로그램 프로젝트를 추가합니다.
+1. `DiscoveryProxyExample` 솔루션에 `Service`라는 새 콘솔 애플리케이션 프로젝트를 추가합니다.
 
 2. 다음 어셈블리에 대한 참조를 추가합니다.
 

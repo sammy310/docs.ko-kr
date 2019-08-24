@@ -17,7 +17,7 @@ ms.locfileid: "61774935"
 |ID|499|  
 |키워드|문제 해결, UserEvents, EndToEndMonitoring, ServiceModel, WFTracking, ServiceHost, WCFMessageLogging|  
 |수준|LogAlways|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
 ## <a name="description"></a>설명  
  전송 이벤트가 발생하는 경우 이 이벤트를 내보냅니다.  

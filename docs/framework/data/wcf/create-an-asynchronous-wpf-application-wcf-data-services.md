@@ -15,12 +15,12 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61765866"
 ---
 # <a name="how-to-create-an-asynchronous-windows-presentation-framework-application-wcf-data-services"></a>방법: 비동기 Windows Presentation Framework 응용 프로그램 (WCF Data Services) 만들기
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하면 데이터 서비스에서 가져온 데이터를 WPF(Windows Presentation Framework) 응용 프로그램의 UI 요소에 바인딩할 수 있습니다. 자세한 내용은 [컨트롤에 데이터 바인딩](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)합니다. 또한 응용 프로그램을 데이터 서비스 요청에 응답을 기다리는 동안 계속 응답할 수 있도록 하는 비동기 방식으로 데이터 서비스에 대 한 작업을 실행할 수 있습니다. 데이터 서비스에 비동기적으로 액세스하려면 Silverlight용 응용 프로그램이 필요합니다. 자세한 내용은 [비동기 작업](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)합니다.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하면 데이터 서비스에서 가져온 데이터를 WPF(Windows Presentation Framework) 애플리케이션의 UI 요소에 바인딩할 수 있습니다. 자세한 내용은 [컨트롤에 데이터 바인딩](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)합니다. 또한 응용 프로그램을 데이터 서비스 요청에 응답을 기다리는 동안 계속 응답할 수 있도록 하는 비동기 방식으로 데이터 서비스에 대 한 작업을 실행할 수 있습니다. 데이터 서비스에 비동기적으로 액세스하려면 Silverlight용 애플리케이션이 필요합니다. 자세한 내용은 [비동기 작업](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)합니다.  
   
- 이 항목에서는 데이터 서비스에 비동기적으로 액세스하고 그 결과를 WPF 응용 프로그램의 요소에 바인딩하는 방법을 보여 줍니다. 이 항목의 예제에서는 Northwind 샘플 데이터 서비스 및 자동 생성된 클라이언트 데이터 서비스 클래스를 사용합니다. 이 서비스 및 클라이언트 데이터 클래스를 수행할 때 생성 됩니다는 [WCF Data Services 퀵 스타트](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)합니다.  
+ 이 항목에서는 데이터 서비스에 비동기적으로 액세스하고 그 결과를 WPF 애플리케이션의 요소에 바인딩하는 방법을 보여 줍니다. 이 항목의 예제에서는 Northwind 샘플 데이터 서비스 및 자동 생성된 클라이언트 데이터 서비스 클래스를 사용합니다. 이 서비스 및 클라이언트 데이터 클래스를 수행할 때 생성 됩니다는 [WCF Data Services 퀵 스타트](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)합니다.  
   
 ## <a name="example"></a>예제  
- 다음 XAML에서는 WPF 응용 프로그램의 창을 정의합니다.  
+ 다음 XAML에서는 WPF 애플리케이션의 창을 정의합니다.  
   
  [!code-xaml[Astoria Northwind Client#WpfDataBindingAsyncXaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerordersasync.xaml#wpfdatabindingasyncxaml)]  
   

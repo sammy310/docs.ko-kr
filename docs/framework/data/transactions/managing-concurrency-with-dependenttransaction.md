@@ -21,7 +21,7 @@ ms.locfileid: "64662955"
   
 - 반면 <xref:System.Transactions.DependentCloneOption.RollbackIfNotComplete>는 <xref:System.Transactions.CommittableTransaction.Commit%2A>가 호출되기 전에 부모 트랜잭션에서 <xref:System.Transactions.DependentTransaction.Complete%2A>이 호출되는 경우 자동으로 중단되는 종속 트랜잭션을 만듭니다. 이 경우 종속 트랜잭션에서 수행된 모든 작업이 하나의 트랜잭션 수명 내에서 그대로 유지되며 아무도 작업의 일부만 커밋할 수 없습니다.  
   
- <xref:System.Transactions.DependentTransaction.Complete%2A> 메서드는 응용 프로그램이 종속 트랜잭션에서 작업을 완료할 때 한 번만 호출되어야 합니다. 그렇지 않으면 <xref:System.InvalidOperationException>이 throw됩니다. 이 메서드를 호출한 후에는 트랜잭션에서 추가 작업을 시도하지 말아야 합니다. 그렇지 않으면 예외가 throw됩니다.  
+ <xref:System.Transactions.DependentTransaction.Complete%2A> 메서드는 애플리케이션이 종속 트랜잭션에서 작업을 완료할 때 한 번만 호출되어야 합니다. 그렇지 않으면 <xref:System.InvalidOperationException>이 throw됩니다. 이 메서드를 호출한 후에는 트랜잭션에서 추가 작업을 시도하지 말아야 합니다. 그렇지 않으면 예외가 throw됩니다.  
   
  다음 코드 예제에서는 종속 트랜잭션을 복제하고 작업자 스레드로 전달함으로써 종속 트랜잭션을 만들어 두 개의 동시 작업을 관리하는 방법을 보여 줍니다.  
   

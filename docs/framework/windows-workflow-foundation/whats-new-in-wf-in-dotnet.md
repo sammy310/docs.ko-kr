@@ -23,7 +23,7 @@ Windows WF (Workflow Foundation).NET Framework 4.5의 새 활동, 디자이너 �
 
 ## <a name="BKMK_Versioning"></a> 워크플로 버전 관리
 
-.NET framework 4.5를 기반으로 새로운 몇 가지 새로운 버전 관리 기능을 도입 <xref:System.Activities.WorkflowIdentity> 클래스입니다. <xref:System.Activities.WorkflowIdentity>는 워크플로 응용 프로그램 작성자에게 지속형 워크플로 인스턴스를 해당 정의와 매핑하는 메커니즘을 제공합니다.
+.NET framework 4.5를 기반으로 새로운 몇 가지 새로운 버전 관리 기능을 도입 <xref:System.Activities.WorkflowIdentity> 클래스입니다. <xref:System.Activities.WorkflowIdentity>는 워크플로 애플리케이션 작성자에게 지속형 워크플로 인스턴스를 해당 정의와 매핑하는 메커니즘을 제공합니다.
 
 - <xref:System.Activities.WorkflowApplication> 호스팅을 사용하는 개발자는 <xref:System.Activities.WorkflowIdentity>를 사용하여 여러 버전의 워크플로를 함께 호스트할 수 있습니다. 새로운 <xref:System.Activities.WorkflowApplicationInstance> 클래스를 사용하여 지속형 워크플로 인스턴스를 로드할 수 있으며, 그런 다음 호스트에서는 <xref:System.Activities.WorkflowApplicationInstance.DefinitionIdentity%2A>를 사용하여 <xref:System.Activities.WorkflowApplication>을 인스턴스화할 때 올바른 버전의 워크플로 정의를 제공할 수 있습니다. 자세한 내용은 [를 사용 하 여 WorkflowIdentity 및 버전 관리](using-workflowidentity-and-versioning.md) 고 [방법: 여러 버전을 워크플로-Side-by-side의 호스트](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)합니다.
 
@@ -51,7 +51,7 @@ Windows WF (Workflow Foundation).NET Framework 4.5의 새 활동, 디자이너 �
 
 ## <a name="support-for-partial-trust"></a>부분 신뢰에 대한 지원
 
-[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]의 워크플로에는 완전히 신뢰할 수 있는 응용 프로그램 도메인이 필요합니다. .NET Framework 4.5에서는 워크플로 부분 신뢰 환경에서 작동할 수 있습니다. 부분 신뢰 환경에서는 호스트 리소스에 대한 전체 액세스 권한을 부여하지 않고 타사 구성 요소를 사용할 수 있습니다. 워크플로를 부분 신뢰 상태로 실행할 때는 다음과 같은 몇 가지 사항을 고려해야 합니다.
+[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]의 워크플로에는 완전히 신뢰할 수 있는 애플리케이션 도메인이 필요합니다. .NET Framework 4.5에서는 워크플로 부분 신뢰 환경에서 작동할 수 있습니다. 부분 신뢰 환경에서는 호스트 리소스에 대한 전체 액세스 권한을 부여하지 않고 타사 구성 요소를 사용할 수 있습니다. 워크플로를 부분 신뢰 상태로 실행할 때는 다음과 같은 몇 가지 사항을 고려해야 합니다.
 
 1. <xref:System.Activities.Statements.Interop> 활동에 포함된 규칙 등의 레거시 구성 요소는 부분 신뢰 상태로 사용할 수 없습니다.
 
@@ -212,7 +212,7 @@ C# 식에 대 한 자세한 내용은 참조 하십시오 [C# 식을](csharp-exp
 
 ### <a name="BKMK_BackwardCompatRehostedDesigner"></a> 재 호스트 된 디자이너에서 Workflow 4.5 기능 용 옵트인
 
-이전 버전과 호환성을 유지 하기 위해.NET Framework 4.5에 포함 된 새 기능 몇 가지는 재 호스트 된 디자이너에서 기본적으로 사용할 수 없습니다. 따라서 재호스트된 디자이너를 사용하는 기존 응용 프로그램은 최신 버전으로 업데이트해도 차단되지 않습니다. 재호스트된 디자이너에서 새로운 기능을 사용하려면 <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A>을 ".NET Framework 4.5"로 설정하거나 <xref:System.Activities.Presentation.DesignerConfigurationService>의 개별 멤버를 설정하여 개별 기능을 사용하도록 설정합니다.
+이전 버전과 호환성을 유지 하기 위해.NET Framework 4.5에 포함 된 새 기능 몇 가지는 재 호스트 된 디자이너에서 기본적으로 사용할 수 없습니다. 따라서 재호스트된 디자이너를 사용하는 기존 애플리케이션은 최신 버전으로 업데이트해도 차단되지 않습니다. 재호스트된 디자이너에서 새로운 기능을 사용하려면 <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A>을 ".NET Framework 4.5"로 설정하거나 <xref:System.Activities.Presentation.DesignerConfigurationService>의 개별 멤버를 설정하여 개별 기능을 사용하도록 설정합니다.
 
 ## <a name="BKMK_NewWFModels"></a> 새로운 워크플로 개발 모델
 

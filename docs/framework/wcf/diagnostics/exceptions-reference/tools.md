@@ -96,7 +96,7 @@ ms.locfileid: "61780746"
 |ErrInvalidInputPath|지정된 입력 경로가 기존 파일을 참조하지 않으며 유효한 URI가 아닙니다.|  
 |ErrUnableToLoadInputs|로드된 메타데이터를 읽는 동안 오류가 발생했습니다.|  
 |GeneratingSerializer|XML serializer 생성 중...|  
-|HelpToolConfig|응용 프로그램 구성 파일 대신에 사용할 사용자 지정 구성 파일입니다. 이 파일을 사용하면 도구의 구성 파일을 바꾸지 않고 구성 확장을 등록하거나 메타데이터 구성을 변경할 수 있습니다.|  
+|HelpToolConfig|애플리케이션 구성 파일 대신에 사용할 사용자 지정 구성 파일입니다. 이 파일을 사용하면 도구의 구성 파일을 바꾸지 않고 구성 확장을 등록하거나 메타데이터 구성을 변경할 수 있습니다.|  
 |ErrValidateInvalidUse|지정된 옵션과 지정된 또 다른 옵션은 함께 사용할 수 없습니다.|  
 |WrnWSMExFailed|지정된 URI에 WS-Metadata Exchange 오류가 발생했습니다.|  
 |HelpNoconfig|구성을 생성하지 않습니다.|  

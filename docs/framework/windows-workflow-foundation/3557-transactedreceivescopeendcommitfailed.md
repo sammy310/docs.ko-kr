@@ -17,7 +17,7 @@ ms.locfileid: "61774454"
 |ID|3557|  
 |키워드|WFServices|  
 |수준|정보|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
 ## <a name="description"></a>설명  
  CommittableTransaction에 대한 EndCommit 호출에서 TransactionException이 발생했음을 나타냅니다.  

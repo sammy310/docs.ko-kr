@@ -10,7 +10,7 @@ ms.lasthandoff: 04/28/2019
 ms.locfileid: "64664954"
 ---
 # <a name="tracing"></a>추적
-Windows Communication Foundation (WCF) 오류 모니터링 및 분석을 위해 응용 프로그램 계측 및 진단 데이터를 제공합니다. 응용 프로그램의 작동 방법 또는 오류 발생 원인을 이해하기 위해 디버거 대신 추적을 사용할 수 있습니다. 종단 간 환경을 제공하기 위해 전체 구성 요소에서의 오류와 처리를 연결할 수도 있습니다.  
+Windows Communication Foundation (WCF) 오류 모니터링 및 분석을 위해 응용 프로그램 계측 및 진단 데이터를 제공합니다. 애플리케이션의 작동 방법 또는 오류 발생 원인을 이해하기 위해 디버거 대신 추적을 사용할 수 있습니다. 엔드투엔드 환경을 제공하기 위해 전체 구성 요소에서의 오류와 처리를 연결할 수도 있습니다.  
   
  WCF 진단 추적에 대 한 다음 데이터를 출력합니다.  
   
@@ -23,13 +23,13 @@ Windows Communication Foundation (WCF) 오류 모니터링 및 분석을 위해 
   
  이 항목에서는 특정 요구를 충족하기 위해 여러 수준에서 추적을 구성할 수 있는 방법에 대해 설명합니다.  
   
- [종단 간 추적](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)  
+ [엔드투엔드 추적](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)  
   
- 이 단원에서는 디버깅을 지원하기 위해 종단 간 상관 관계에 대한 동작 추적 및 전파를 사용할 수 있는 방법에 대해 설명합니다.  
+ 이 단원에서는 디버깅을 지원하기 위해 엔드투엔드 상관 관계에 대한 동작 추적 및 전파를 사용할 수 있는 방법에 대해 설명합니다.  
   
  [추적을 사용하여 애플리케이션 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
   
- 이 단원에서는 응용 프로그램을 디버깅하기 위해 추적을 사용할 수 있는 방법에 대해 설명합니다.  
+ 이 단원에서는 애플리케이션을 디버깅하기 위해 추적을 사용할 수 있는 방법에 대해 설명합니다.  
   
  [보안 고려 사항 및 추적에 대한 유용한 정보](../../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)  
   

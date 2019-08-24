@@ -23,11 +23,11 @@ Microsoft.NET Framework는 만들고 고품질 문서를 표시 하기 위한 �
 
 원칙적으로 애플리케이션에서 문서를 메모리에서 serialize하고 다시 메모리로 deserialize하는 프로세스는 명확하게 수행됩니다.  애플리케이션에서는 serializer “write” 메서드를 호출하여 문서를 저장하는 한편, deserializer “read” 메서드는 데이터 저장소에 액세스하여 원래 인스턴스를 메모리에 다시 만듭니다.  serialize 및 deserialize 프로세스를 통해 원래 양식으로 문서를 다시 만드는 경우 데이터가 저장되는 특정 형식은 일반적으로 애플리케이션에서 문제가 되지 않습니다.
 
-대부분의 애플리케이션에서는 사용자가 여러 다른 매체 또는 다른 형식으로 문서를 저장할 수 있도록 하는 여러 serialization 옵션을 제공합니다.  예를 들어, 애플리케이션에서 “다른 이름으로 저장” 옵션을 제공하여 문서를 디스크 파일, 데이터베이스 또는 웹 서비스에 저장하도록 지원할 수 있습니다.  마찬가지로 서로 다른 serializer마다 HTML, RTF, XML, XPS 등의 다른 형식 또는 타사 형식으로 문서를 저장할 수 있습니다.  애플리케이션에서는 serialization을 통해 각 특정 serializer의 구현 작업에서 저장소 매체의 세부 정보를 격리하는 인터페이스를 정의합니다.  .NET Framework 저장소 세부 정보를 캡슐화 하는 이점 외에도 <xref:System.Windows.Documents.Serialization> Api는 다른 몇 가지 중요 한 기능을 제공 합니다.
+대부분의 애플리케이션에서는 사용자가 여러 다른 매체 또는 다른 형식으로 문서를 저장할 수 있도록 하는 여러 serialization 옵션을 제공합니다.  예를 들어, 애플리케이션에서 “다른 이름으로 저장” 옵션을 제공하여 문서를 디스크 파일, 데이터베이스 또는 웹 서비스에 저장하도록 지원할 수 있습니다.  마찬가지로 서로 다른 serializer마다 HTML, RTF, XML, XPS 등의 다른 형식 또는 타사 형식으로 문서를 저장할 수 있습니다.  애플리케이션에서는 serialization을 통해 각 특정 serializer의 구현 작업에서 스토리지 매체의 세부 정보를 격리하는 인터페이스를 정의합니다.  .NET Framework 저장소 세부 정보를 캡슐화 하는 이점 외에도 <xref:System.Windows.Documents.Serialization> Api는 다른 몇 가지 중요 한 기능을 제공 합니다.
 
 ### <a name="features-of-net-framework-30-document-serializers"></a>.NET Framework 3.0 문서 Serializer의 기능
 
-- 전반적인 문서 개체(논리적 트리 및 시각적 개체)에 직접 액세스하면 페이지를 매긴 콘텐츠, 2D/3D 요소, 이미지, 매체, 하이퍼링크, 주석 및 기타 지원 콘텐츠를 효율적으로 저장할 수 있습니다.
+- 전반적인 문서 개체(논리적 트리 및 시각적 개체)에 직접 액세스하면 페이지를 매긴 콘텐츠, 2D/3D 요소, 이미지, 매체, 하이퍼링크, 주석 및 기타 지원 콘텐츠를 효율적으로 스토리지할 수 있습니다.
 
 - 동기 및 비동기 작업.
 
@@ -51,7 +51,7 @@ Microsoft.NET Framework [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptl
 
 <xref:System.Windows.Documents.Serialization> Api 응용 프로그램에서 개별적으로 설치 되는 연결된 serializer와 플러그 인 serializer에 대 한 지원을 제공, 런타임 시 바인딩 및 사용 하 여 액세스 되는 <xref:System.Windows.Documents.Serialization.SerializerProvider> 검색 메커니즘입니다.  플러그 인 serializer는 쉽게 배포하여 시스템 전체에서 사용할 수 있는 향상된 이점을 제공합니다.  플러그 인 serializer에 액세스할 수 없는 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 등의 부분 신뢰 환경용으로도 연결된 serializer를 구현할 수 있습니다.  연결 된 serializer의 파생 된 구현에 기반한는 <xref:System.Windows.Documents.Serialization.SerializerWriter> 클래스, 컴파일하고 하는 응용 프로그램에 직접 연결 합니다.  플러그 인 serializer와 연결된 serializer는 모두 동일한 공용 메서드와 이벤트를 통해 작동하므로 동일한 애플리케이션에서 두 serializer 유형 중 하나 또는 둘 다를 쉽게 사용할 수 있습니다.
 
-플러그 인 serializer는 빌드 시 가능한 모든 형식에 맞게 직접 코딩할 필요가 없는 확장된 새로운 저장소 디자인과 파일 형식을 제공하여 애플리케이션 개발자를 지원합니다.  플러그 인 serializer는 사용자 지정 또는 독점 파일 형식에 맞게 시스템에서 액세스 가능한 플러그 인을 배포, 설치 및 업데이트하는 표준화된 방식을 제공하여 타사 개발자에게도 이점을 제공합니다.
+플러그 인 serializer는 빌드 시 가능한 모든 형식에 맞게 직접 코딩할 필요가 없는 확장된 새로운 스토리지 디자인과 파일 형식을 제공하여 애플리케이션 개발자를 지원합니다.  플러그 인 serializer는 사용자 지정 또는 독점 파일 형식에 맞게 시스템에서 액세스 가능한 플러그 인을 배포, 설치 및 업데이트하는 표준화된 방식을 제공하여 타사 개발자에게도 이점을 제공합니다.
 
 ### <a name="using-a-plug-in-serializer"></a>플러그 인 Serializer 사용
 

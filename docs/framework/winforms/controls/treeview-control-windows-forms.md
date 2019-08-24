@@ -28,7 +28,7 @@ Windows Forms `TreeView` 컨트롤은 Windows 운영 체제에서 Windows 탐색
  목록 뷰에서 항목을 파생시키거나 트리 뷰에서 노드를 파생시켜 필요한 필드, 메서드 또는 생성자를 추가하는 방법에 대한 지침을 제공합니다.  
   
  [방법: 클릭 한 TreeView 노드 확인](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)  
- 응용 프로그램이 적절하게 응답할 수 있도록 트리 뷰에서 클릭한 노드를 확인하는 방법에 대한 지침을 제공합니다.  
+ 애플리케이션이 적절하게 응답할 수 있도록 트리 뷰에서 클릭한 노드를 확인하는 방법에 대한 지침을 제공합니다.  
   
  [방법: Windows Forms TreeView 컨트롤의 노드 전체 반복](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)  
  트리 뷰에서 모든 노드를 검사하는 방법에 대한 지침을 제공합니다.  

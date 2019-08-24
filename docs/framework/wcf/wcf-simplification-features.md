@@ -11,7 +11,7 @@ ms.locfileid: "61791185"
 ---
 # <a name="wcf-simplification-features"></a>WCF 단순화 기능
 
-이 항목에서는 WCF 응용 프로그램을 더 간단하게 작성할 수 있는 새로운 기능에 대해 설명합니다.
+이 항목에서는 WCF 애플리케이션을 더 간단하게 작성할 수 있는 새로운 기능에 대해 설명합니다.
 
 ## <a name="simplified-generated-configuration-files"></a>단순화되어 생성된 구성 파일
 
@@ -78,7 +78,7 @@ WCF는 이제 계약 중심 개발을 지원합니다. Svcutil.exe 도구에 WSD
 
 ## <a name="add-service-reference-from-a-portable-subset-project"></a>이식 가능한 하위 집합 프로젝트의 서비스 참조 추가
 
-이식 가능한 하위 집합 프로젝트는.NET 어셈블리 프로그래머가 하나의 소스 트리를 유지 관리 하 고 여러.NET 구현 (예: 데스크톱, Silverlight, Windows Phone 및 XBOX)를 계속 지원 하면서 빌드 시스템을 사용 하도록 설정 합니다. 이식 가능한 하위 집합 프로젝트는 모든.NET 구현에서 사용할 수 있는.NET framework 어셈블리는.NET 이식 가능한 라이브러리만 참조 합니다. 개발자 환경은 다른 WCF 클라이언트 응용 프로그램에 서비스 참조를 추가하는 것과 동일합니다. 자세한 내용은 [이식 가능한 하위 집합 프로젝트의 서비스 참조 추가](../../../docs/framework/wcf/add-service-reference-in-a-portable-subset-project.md)합니다.
+이식 가능한 하위 집합 프로젝트는.NET 어셈블리 프로그래머가 하나의 소스 트리를 유지 관리 하 고 여러.NET 구현 (예: 데스크톱, Silverlight, Windows Phone 및 XBOX)를 계속 지원 하면서 빌드 시스템을 사용 하도록 설정 합니다. 이식 가능한 하위 집합 프로젝트는 모든.NET 구현에서 사용할 수 있는.NET framework 어셈블리는.NET 이식 가능한 라이브러리만 참조 합니다. 개발자 환경은 다른 WCF 클라이언트 애플리케이션에 서비스 참조를 추가하는 것과 동일합니다. 자세한 내용은 [이식 가능한 하위 집합 프로젝트의 서비스 참조 추가](../../../docs/framework/wcf/add-service-reference-in-a-portable-subset-project.md)합니다.
 
 ## <a name="aspnet-compatibility-mode-default-changed"></a>ASP.NET 호환 모드 기본값 변경
 

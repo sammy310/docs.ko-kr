@@ -13,7 +13,7 @@ ms.lasthandoff: 04/28/2019
 ms.locfileid: "64637226"
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>데이터 계약의 XML 및 ADO.NET 형식
-Windows Communication Foundation (WCF) 데이터 계약 모델에는 직접 XML을 나타내는 특정 형식을 지원 합니다. 이러한 형식이 XML에 serialize되면 serializer는 추가 처리 없이 이러한 형식의 XML 콘텐츠를 씁니다. 지원되는 형식에는 <xref:System.Xml.XmlElement>을 구현하는 형식, <xref:System.Xml.XmlNode> 및 `XmlNode`의 배열이 있습니다. 단, <xref:System.Xml.Serialization.IXmlSerializable> 형식 자체는 지원되지 않습니다. <xref:System.Data.DataSet> 및 <xref:System.Data.DataTable> 형식은 형식화된 데이터 집합과 마찬가지로 데이터베이스 프로그래밍에 자주 사용됩니다. 이러한 형식은 `IXmlSerializable` 인터페이스를 구현하므로 데이터 계약 모델에서 serialize할 수 있습니다. 이러한 형식에 대한 몇 가지 특별한 고려 사항은 이 항목의 끝부분에 나와 있습니다.  
+Windows Communication Foundation (WCF) 데이터 계약 모델에는 직접 XML을 나타내는 특정 형식을 지원 합니다. 이러한 형식이 XML에 serialize되면 serializer는 추가 처리 없이 이러한 형식의 XML 콘텐츠를 씁니다. 지원되는 형식에는 <xref:System.Xml.XmlElement>을 구현하는 형식, <xref:System.Xml.XmlNode> 및 `XmlNode`의 배열이 있습니다. 단, <xref:System.Xml.Serialization.IXmlSerializable> 형식 자체는 지원되지 않습니다. <xref:System.Data.DataSet> 및 <xref:System.Data.DataTable> 형식은 형식화된 데이터 세트과 마찬가지로 데이터베이스 프로그래밍에 자주 사용됩니다. 이러한 형식은 `IXmlSerializable` 인터페이스를 구현하므로 데이터 계약 모델에서 serialize할 수 있습니다. 이러한 형식에 대한 몇 가지 특별한 고려 사항은 이 항목의 끝부분에 나와 있습니다.  
   
 ## <a name="xml-types"></a>XML 형식  
   
@@ -122,7 +122,7 @@ Windows Communication Foundation (WCF) 데이터 계약 모델에는 직접 XML�
   
 - 요소 형식은 `IXmlSerializable` 형식이 루트 요소 이름을 제어해야 하는 경우에 사용됩니다. 형식을 요소 형식으로 표시하려면 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute.IsAny%2A> 특성의 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 속성을 `true`로 설정하거나 스키마 공급자 메서드의 null을 반환합니다. 스키마 공급자 메서드 사용은 요소 형식의 옵션이며 `XmlSchemaProviderAttribute`에 메서드 이름 대신 null을 지정할 수 있습니다. 그러나 `IsAny`가 `true`이고 스키마 공급자 메서드가 지정된 경우 메서드는 null을 반환해야 합니다.  
   
-- 레거시 <xref:System.Data.DataSet> 형식은 `IXmlSerializable` 특성으로 표시되지 않은 `XmlSchemaProviderAttribute` 형식입니다. 대신 이러한 형식은 스키마 생성 시 <xref:System.Xml.Serialization.IXmlSerializable.GetSchema%2A> 메서드를 사용합니다. 이 패턴은 `DataSet` 형식에 사용되고 해당 형식화된 데이터 집합은 이전 버전의 .NET Framework에서는 클래스를 파생하지만 현재는 더 이상 사용되지 않으며 레거시 용도로만 지원됩니다. 이 패턴을 사용하는 대신 `XmlSchemaProviderAttribute`를 항상 `IXmlSerializable` 형식에 적용하세요.  
+- 레거시 <xref:System.Data.DataSet> 형식은 `IXmlSerializable` 특성으로 표시되지 않은 `XmlSchemaProviderAttribute` 형식입니다. 대신 이러한 형식은 스키마 생성 시 <xref:System.Xml.Serialization.IXmlSerializable.GetSchema%2A> 메서드를 사용합니다. 이 패턴은 `DataSet` 형식에 사용되고 해당 형식화된 데이터 세트은 이전 버전의 .NET Framework에서는 클래스를 파생하지만 현재는 더 이상 사용되지 않으며 레거시 용도로만 지원됩니다. 이 패턴을 사용하는 대신 `XmlSchemaProviderAttribute`를 항상 `IXmlSerializable` 형식에 적용하세요.  
   
 ### <a name="ixmlserializable-content-types"></a>IXmlSerializable 콘텐츠 형식  
  이전에 정의한 콘텐츠 형식이며 `IXmlSerializable`을 구현하는 형식의 데이터 멤버를 serialize할 때 serializer는 데이터 멤버의 래퍼 요소를 쓰고 제어를 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> 메서드에 전달합니다. <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> 구현은 특성을 래퍼 요소에 추가하는 것을 포함하여 모든 XML을 쓸 수 있습니다. `WriteXml`이 완료되면 serializer는 요소를 닫습니다.  
@@ -143,7 +143,7 @@ Windows Communication Foundation (WCF) 데이터 계약 모델에는 직접 XML�
   
  또한 전역 요소 선언이 형식에 대해 내보내집니다. 형식에 <xref:System.Xml.Serialization.XmlRootAttribute> 특성이 적용되지 않은 경우 요소가 데이터 계약과 동일한 이름 및 네임스페이스를 갖게 되며 "nillable" 속성이 true가 됩니다. 유일한 예외는 스키마 네임 스페이스 ("http://www.w3.org/2001/XMLSchema")-스키마 네임 스페이스에 새 요소를 추가할 수는 없으므로 해당 전역 요소가 빈 네임 스페이스에는 형식의 데이터 계약이이 네임 스페이스의 경우. 형식에 `XmlRootAttribute` 특성이 적용되어 있으면 전역 요소 선언이 <xref:System.Xml.Serialization.XmlRootAttribute.ElementName%2A>, <xref:System.Xml.Serialization.XmlRootAttribute.Namespace%2A> 및 <xref:System.Xml.Serialization.XmlRootAttribute.IsNullable%2A> 속성을 사용하여 내보내집니다. `XmlRootAttribute`가 적용된 경우의 기본값은 데이터 계약 이름, 빈 네임스페이스 및 true인 "nillable"입니다.  
   
- 레거시 데이터 집합 형식에도 동일한 전역 요소 선언 규칙이 적용됩니다. `XmlRootAttribute`는 사용자 지정 코드를 통해 추가된, 즉 스키마 공급자 메서드를 사용하거나 레거시 데이터 집합 형식의 경우 `XmlSchemaSet`를 통해 `GetSchema`에 추가된 전역 요소 선언을 재정의할 수 없습니다.  
+ 레거시 데이터 세트 형식에도 동일한 전역 요소 선언 규칙이 적용됩니다. `XmlRootAttribute`는 사용자 지정 코드를 통해 추가된, 즉 스키마 공급자 메서드를 사용하거나 레거시 데이터 세트 형식의 경우 `XmlSchemaSet`를 통해 `GetSchema`에 추가된 전역 요소 선언을 재정의할 수 없습니다.  
   
 ### <a name="ixmlserializable-element-types"></a>IXmlSerializable 요소 형식  
  `IXmlSerializable` 요소 형식은 `IsAny` 속성이 `true`로 설정되어 있거나 스키마 공급자 메서드가 `null`을 반환하도록 합니다.  
@@ -169,7 +169,7 @@ Windows Communication Foundation (WCF) 데이터 계약 모델에는 직접 XML�
   
 - 데이터 계약 모델에서 `IsAny`가 true일 때는 스키마 공급자 메서드가 호출되지만 `XmlSerializer`를 사용할 때는 호출되지 않습니다.  
   
-- 콘텐츠 또는 레거시 데이터 집합 형식에 `XmlRootAttribute` 특성이 없으면 `XmlSerializer`는 빈 네임스페이스에 전역 요소 선언을 내보냅니다. 데이터 계약 모델에서 사용되는 네임스페이스는 일반적으로 앞에서 설명한 데이터 계약 네임스페이스입니다.  
+- 콘텐츠 또는 레거시 데이터 세트 형식에 `XmlRootAttribute` 특성이 없으면 `XmlSerializer`는 빈 네임스페이스에 전역 요소 선언을 내보냅니다. 데이터 계약 모델에서 사용되는 네임스페이스는 일반적으로 앞에서 설명한 데이터 계약 네임스페이스입니다.  
   
  두 가지 serialization 기술에서 모두 사용할 형식을 만드는 경우 이러한 차이에 주의하세요.  
   
@@ -196,11 +196,11 @@ Windows Communication Foundation (WCF) 데이터 계약 모델에는 직접 XML�
 ## <a name="using-dataset-typed-dataset-and-datatable"></a>DataSet, 형식화된 DataSet 및 DataTable 사용  
  이러한 형식 사용은 데이터 계약 모델에서 완전히 지원됩니다. 이 형식을 사용할 때는 다음 사항을 고려하세요.  
   
-- 이러한 형식에 대 한 스키마 (특히 <xref:System.Data.DataSet> 및 해당 형식화 된 파생 클래스) 일부 WCF 이외의 플랫폼과 상호 운용 가능한 수 없거나 이러한 플랫폼과 함께 사용할 때 유용성이 저하 될 수 있습니다. 또한 `DataSet` 형식을 사용하면 성능에 영향을 줄 수도 있습니다. 마지막으로 이후에 응용 프로그램의 버전 관리가 더 어려워질 수 있습니다. 계약에 `DataSet` 형식 대신 명시적으로 정의된 데이터 계약 형식을 사용하세요.  
+- 이러한 형식에 대 한 스키마 (특히 <xref:System.Data.DataSet> 및 해당 형식화 된 파생 클래스) 일부 WCF 이외의 플랫폼과 상호 운용 가능한 수 없거나 이러한 플랫폼과 함께 사용할 때 유용성이 저하 될 수 있습니다. 또한 `DataSet` 형식을 사용하면 성능에 영향을 줄 수도 있습니다. 마지막으로 이후에 애플리케이션의 버전 관리가 더 어려워질 수 있습니다. 계약에 `DataSet` 형식 대신 명시적으로 정의된 데이터 계약 형식을 사용하세요.  
   
-- `DataSet` 또는 `DataTable` 스키마를 가져올 때는 이러한 형식을 참조하는 것이 중요합니다. Svcutil.exe 명령줄 도구를 사용 하 여 이렇게 System.Data.dll 어셈블리 이름을 전달 하 여는 `/reference` 전환 합니다. 형식화된 데이터 집합 스키마를 가져오는 경우 형식화된 데이터 집합의 형식을 참조해야 합니다. Svcutil.exe를 사용 하 여 형식화 된 데이터 집합의 어셈블리의 위치를 전달 합니다 `/reference` 전환 합니다. 참조 형식에 대 한 자세한 내용은 참조는 [스키마를 생성 하는 클래스를 가져와서](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)합니다.  
+- `DataSet` 또는 `DataTable` 스키마를 가져올 때는 이러한 형식을 참조하는 것이 중요합니다. Svcutil.exe 명령줄 도구를 사용 하 여 이렇게 System.Data.dll 어셈블리 이름을 전달 하 여는 `/reference` 전환 합니다. 형식화된 데이터 세트 스키마를 가져오는 경우 형식화된 데이터 세트의 형식을 참조해야 합니다. Svcutil.exe를 사용 하 여 형식화 된 데이터 집합의 어셈블리의 위치를 전달 합니다 `/reference` 전환 합니다. 참조 형식에 대 한 자세한 내용은 참조는 [스키마를 생성 하는 클래스를 가져와서](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)합니다.  
   
- 데이터 계약 모델에서 형식화된 데이터 집합에 대한 지원은 제한되어 있습니다. 형식화된 데이터 집합은 serialize 및 deserialize할 수 있으며 스키마를 내보낼 수 있습니다. 하지만 데이터 계약 스키마 가져오기에서는 스키마로부터 형식화된 데이터 집합 형식을 새로 생성할 수 없고 기존 형식을 다시 사용할 수만 있습니다. Svcutil.exe에 `/r` 스위치를 사용하면 형식화된 기존 데이터 집합을 가리킬 수 있습니다. 형식화된 데이터 집합을 사용하는 서비스에서 `/r` 스위치 없이 Svcutil.exe를 사용하려 하면 대체 serializer(XmlSerializer)가 자동으로 선택됩니다. DataContractSerializer를 사용해야 하며 스키마에서 데이터 집합을 생성해야 하는 경우에는 다음 절차를 사용할 수 있습니다. 서비스에서 `/d` 스위치와 함께 Xsd.exe 도구를 사용하여 형식화된 데이터 집합 형식을 생성한 다음 Svcutil.exe에서 `/r` 스위치를 사용하여 가리킵니다.  
+ 데이터 계약 모델에서 형식화된 데이터 세트에 대한 지원은 제한되어 있습니다. 형식화된 데이터 세트은 serialize 및 deserialize할 수 있으며 스키마를 내보낼 수 있습니다. 하지만 데이터 계약 스키마 가져오기에서는 스키마로부터 형식화된 데이터 세트 형식을 새로 생성할 수 없고 기존 형식을 다시 사용할 수만 있습니다. Svcutil.exe에 `/r` 스위치를 사용하면 형식화된 기존 데이터 세트을 가리킬 수 있습니다. 형식화된 데이터 세트을 사용하는 서비스에서 `/r` 스위치 없이 Svcutil.exe를 사용하려 하면 대체 serializer(XmlSerializer)가 자동으로 선택됩니다. DataContractSerializer를 사용해야 하며 스키마에서 데이터 세트을 생성해야 하는 경우에는 다음 절차를 사용할 수 있습니다. 서비스에서 `/d` 스위치와 함께 Xsd.exe 도구를 사용하여 형식화된 데이터 세트 형식을 생성한 다음 Svcutil.exe에서 `/r` 스위치를 사용하여 가리킵니다.  
   
 ## <a name="see-also"></a>참고자료
 

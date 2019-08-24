@@ -23,11 +23,11 @@ ms.locfileid: "64649408"
   
 - <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 속성을 설정합니다.  
   
-- 서비스 응용 프로그램에 필요한 설치 관리자를 만듭니다.  
+- 서비스 애플리케이션에 필요한 설치 관리자를 만듭니다.  
   
 - <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 및 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 메서드의 코드를 재정의 및 지정하여 서비스 동작 방식을 사용자 지정합니다.  
   
-### <a name="to-create-a-windows-service-application"></a>Windows 서비스 응용 프로그램을 만들려면  
+### <a name="to-create-a-windows-service-application"></a>Windows 서비스 애플리케이션을 만들려면  
   
 1. **Windows 서비스** 프로젝트를 만듭니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "64649408"
     |<xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>|서비스가 활성화되어 있는 컴퓨터가 종료될 때 서비스에서 알림을 수신하여 `True` 프로시저를 호출할 수 있도록 설정할 것임을 나타내려면 <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A>로 설정합니다.|  
     |<xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>|서비스가 실행 일시 중지 또는 다시 시작 요청을 수락함을 나타내려면 `True`로 설정하고 서비스 일시 중지 및 다시 시작을 차단하려면 `false`로 설정합니다.|  
     |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|서비스가 컴퓨터의 전원 상태 변경 알림을 처리할 수 있음을 나타내려면 `True`로 설정하고 이러한 변경에 대한 알림을 받지 않도록 하려면 `false`로 설정합니다.|  
-    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|서비스에서 작업을 수행할 때 응용 프로그램 이벤트 로그에 정보 항목을 기록하려면 `True`로 설정하고 이 기능을 사용하지 않도록 설정하려면 `false`로 설정합니다. 자세한 내용은 [방법: 서비스에 대한 정보 로깅](../../../docs/framework/windows-services/how-to-log-information-about-services.md)을 참조하세요. **참고:**  기본적으로 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A>는 `true`로 설정됩니다.|  
+    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|서비스에서 작업을 수행할 때 애플리케이션 이벤트 로그에 정보 항목을 기록하려면 `True`로 설정하고 이 기능을 사용하지 않도록 설정하려면 `false`로 설정합니다. 자세한 내용은 [방법: 서비스에 대한 정보 로깅](../../../docs/framework/windows-services/how-to-log-information-about-services.md)을 참조하세요. **참고:**  기본적으로 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A>는 `true`로 설정됩니다.|  
   
     > [!NOTE]
     >  <xref:System.ServiceProcess.ServiceBase.CanStop%2A> 또는 <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>가 `false`로 설정되면 **서비스 제어 관리자**가 서비스를 중지, 일시 중지 또는 계속하도록 하는 해당 메뉴 옵션을 사용하지 않도록 설정합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "64649408"
   
 5. 기능을 정의할 다른 메서드를 재정의합니다.  
   
-6. 서비스 응용 프로그램에 필요한 설치 관리자를 추가합니다. 자세한 내용은 [방법: 서비스 애플리케이션에 설치 관리자 추가](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)를 참조하세요.  
+6. 서비스 애플리케이션에 필요한 설치 관리자를 추가합니다. 자세한 내용은 [방법: 서비스 애플리케이션에 설치 관리자 추가](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)를 참조하세요.  
   
 7. **빌드** 메뉴에서 **솔루션 빌드**를 선택하여 프로젝트를 빌드합니다.  
   

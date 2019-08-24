@@ -17,7 +17,7 @@ ms.locfileid: "61774194"
 |ID|4213|  
 |키워드|WFInstanceStore|  
 |수준|Error|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  예외로 인해 실행 가능한 인스턴스를 검색하지 못했습니다.  

@@ -1,5 +1,5 @@
 ---
-title: XmlDataDocument로 데이터 집합 동기화
+title: XmlDataDocument로 데이터 세트 동기화
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,7 +12,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61607497"
 ---
-# <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>XmlDataDocument로 데이터 집합 동기화
+# <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>XmlDataDocument로 데이터 세트 동기화
 이 단원에서는 <xref:System.Data.DataSet>와 동기화된 강력한 형식의 <xref:System.Xml.XmlDataDocument>을 사용하여 구매 주문을 처리하는 한 가지 단계를 보여 줍니다. 다음 예제에서는 한 **데이터 집합** 소스 XML 문서의 일부만 일치 하는 스키마가 최소화 된 합니다. 예제에서는 사용를 **XmlDataDocument** 소스 XML 문서의 신뢰도 유지 하기 위해 사용 하도록 설정 합니다 **데이터 집합** XML 문서의 하위 집합을 노출 하는 데 사용할 합니다.  
   
  다음 XML 문서에는 고객 정보, 주문한 품목 및 배송 정보 등 구매 주문과 관련된 모든 정보가 들어 있습니다.  

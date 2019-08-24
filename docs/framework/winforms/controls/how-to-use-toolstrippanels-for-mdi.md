@@ -17,7 +17,7 @@ ms.lasthandoff: 05/14/2019
 ms.locfileid: "65591557"
 ---
 # <a name="how-to-use-toolstrippanels-for-mdi"></a>방법: MDI에 ToolStripPanels 사용
-<xref:System.Windows.Forms.ToolStripPanel>에서는 <xref:System.Windows.Forms.ToolStripPanel.Join%2A> 메서드를 사용하여 MDI(다중 문서 인터페이스) 응용 프로그램에 대한 유연성을 제공합니다.  
+<xref:System.Windows.Forms.ToolStripPanel>에서는 <xref:System.Windows.Forms.ToolStripPanel.Join%2A> 메서드를 사용하여 MDI(다중 문서 인터페이스) 애플리케이션에 대한 유연성을 제공합니다.  
   
 ## <a name="example"></a>예제  
  다음 코드 예제에서는 MDI에 대해 <xref:System.Windows.Forms.ToolStripPanel> 컨트롤을 사용하는 방법을 보여 줍니다.  

@@ -16,7 +16,7 @@ ms.locfileid: "62012830"
 ---
 # <a name="layout-in-windows-forms-controls"></a>Windows Forms 컨트롤의 레이아웃
 
-폼의 정확한 컨트롤 배치는 많은 응용 프로그램에서 우선 순위가 높습니다. <xref:System.Windows.Forms?displayProperty=nameWithType> 네임 스페이스 이렇게 하려면 여러 레이아웃 도구를 제공 합니다.
+폼의 정확한 컨트롤 배치는 많은 애플리케이션에서 우선 순위가 높습니다. <xref:System.Windows.Forms?displayProperty=nameWithType> 네임 스페이스 이렇게 하려면 여러 레이아웃 도구를 제공 합니다.
 
 ## <a name="in-this-section"></a>섹션 내용
 

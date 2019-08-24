@@ -52,7 +52,7 @@ ms.locfileid: "61767080"
        }  
     ```  
   
-2. 사용자 지정 WSDL 가져오기를 사용하도록 클라이언트 응용 프로그램을 구성합니다. Svcutil.exe를 사용하는 경우 Svcutil.exe(Svcutil.exe.config)의 구성 파일에 이 구성을 추가해야 합니다.  
+2. 사용자 지정 WSDL 가져오기를 사용하도록 클라이언트 애플리케이션을 구성합니다. Svcutil.exe를 사용하는 경우 Svcutil.exe(Svcutil.exe.config)의 구성 파일에 이 구성을 추가해야 합니다.  
   
     ```xml  
     <system.serviceModel>  

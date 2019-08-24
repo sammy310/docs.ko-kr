@@ -51,7 +51,7 @@ Visual Basic 사용자는 이러한 클래스를 사용하는 것 외에도, 파
 
 ## <a name="streams"></a>스트림
 
-추상 기본 클래스 <xref:System.IO.Stream>은 바이트 읽기 및 쓰기를 지원합니다. 스트림을 나타내는 모든 클래스는 <xref:System.IO.Stream> 클래스로부터 상속됩니다. <xref:System.IO.Stream> 클래스와 이 클래스에서 파생되는 클래스는 데이터 소스와 리포지토리의 일반 뷰를 제공하고, 이때 프로그래머는 운영 체제 및 내부 장치의 세부 사항에서 격리됩니다.
+추상 기본 클래스 <xref:System.IO.Stream>은 바이트 읽기 및 쓰기를 지원합니다. 스트림을 나타내는 모든 클래스는 <xref:System.IO.Stream> 클래스로부터 상속됩니다. <xref:System.IO.Stream> 클래스와 이 클래스에서 파생되는 클래스는 데이터 소스와 리포지토리의 일반 뷰를 제공하고, 이때 프로그래머는 운영 체제 및 내부 디바이스의 세부 사항에서 격리됩니다.
 
 스트림에는 다음의 세 가지 기본 작업이 포함됩니다.
 
@@ -67,7 +67,7 @@ Visual Basic 사용자는 이러한 클래스를 사용하는 것 외에도, 파
 
 - <xref:System.IO.FileStream> – 파일을 읽고 쓰는 데 사용됩니다.
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> – 격리된 저장소의 파일을 읽고 파일에 기록하는 데 사용됩니다.
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> – 격리된 스토리지의 파일을 읽고 파일에 기록하는 데 사용됩니다.
 
 - <xref:System.IO.MemoryStream> – 메모리를 백업 저장소로 읽고 여기에 기록하는 데 사용됩니다.
 
@@ -127,17 +127,17 @@ Visual Basic 사용자는 이러한 클래스를 사용하는 것 외에도, 파
 
 ## <a name="isolated-storage"></a>격리된 스토리지
 
-격리된 스토리지는 코드와 저장된 데이터를 연결하는 표준화된 방법을 정의하여 격리와 안전을 제공하는 데이터 스토리지 메커니즘입니다. 스토리지는 사용자, 어셈블리 및 도메인(옵션)에 의해 격리된 가상 파일 시스템을 제공합니다. 격리된 저장소는 애플리케이션에 사용자 파일을 액세스할 수 있는 권한이 없는 경우 특히 유용합니다. 컴퓨터의 보안 정책에 의해 제어되는 방식으로 애플리케이션에 대한 설정이나 파일을 저장할 수 있습니다.
+격리된 스토리지는 코드와 저장된 데이터를 연결하는 표준화된 방법을 정의하여 격리와 안전을 제공하는 데이터 스토리지 메커니즘입니다. 스토리지는 사용자, 어셈블리 및 도메인(옵션)에 의해 격리된 가상 파일 시스템을 제공합니다. 격리된 스토리지는 애플리케이션에 사용자 파일을 액세스할 수 있는 권한이 없는 경우 특히 유용합니다. 컴퓨터의 보안 정책에 의해 제어되는 방식으로 애플리케이션에 대한 설정이나 파일을 저장할 수 있습니다.
 
-격리된 저장소는 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]앱에 사용할 수 없습니다. 대신 <xref:Windows.Storage?displayProperty=nameWithType>네임스페이스의 애플리케이션 데이터 클래스를 사용합니다. 자세한 내용은 [애플리케이션 데이터](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29)를 참조하세요.
+격리된 스토리지는 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]앱에 사용할 수 없습니다. 대신 <xref:Windows.Storage?displayProperty=nameWithType>네임스페이스의 애플리케이션 데이터 클래스를 사용합니다. 자세한 내용은 [애플리케이션 데이터](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29)를 참조하세요.
 
 다음의 클래스는 격리된 스토리지를 구현할 때 자주 사용됩니다.
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorage> – 격리된 저장소 구현을 위한 기본 클래스를 제공합니다.
+- <xref:System.IO.IsolatedStorage.IsolatedStorage> – 격리된 스토리지 구현을 위한 기본 클래스를 제공합니다.
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile> – 파일 및 디렉터리를 포함하는 격리된 저장소 영역을 제공합니다.
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile> – 파일 및 디렉터리를 포함하는 격리된 스토리지 영역을 제공합니다.
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> - 격리된 저장소 내에서 파일을 노출시킵니다.
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> - 격리된 스토리지 내에서 파일을 노출시킵니다.
 
 [격리된 스토리지](isolated-storage.md)를 참조하세요.
 
@@ -149,7 +149,7 @@ Visual Basic 사용자는 이러한 클래스를 사용하는 것 외에도, 파
 
 - 특히 파일 작업에 관련된 형식(예: <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> 및 <xref:System.IO.DirectoryInfo>)은 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]에 포함되지 않습니다. 대신 <xref:Windows.Storage.StorageFile> 및 <xref:Windows.Storage.StorageFolder> 등 Windows 런타임의 <xref:Windows.Storage?displayProperty=nameWithType> 네임스페이스에 있는 유형을 사용합니다.
 
-- 격리된 저장소는 사용할 수 없습니다. 대신에 [애플리케이션 데이터](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))를 사용합니다.
+- 격리된 스토리지는 사용할 수 없습니다. 대신에 [애플리케이션 데이터](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))를 사용합니다.
 
 - 비동기 메서드(예: <xref:System.IO.Stream.ReadAsync%2A> 및 <xref:System.IO.Stream.WriteAsync%2A>)를 사용하여 UI 스레드를 차단하지 못하게 합니다.
 
@@ -163,7 +163,7 @@ Visual Basic 사용자는 이러한 클래스를 사용하는 것 외에도, 파
 
 <xref:System.IO?displayProperty=nameWithType> 네임스페이스에서 클래스를 사용할 때, 파일 및 디렉터리에 대한 액세스를 제어하기 위해 액세스 제어 목록(ACL)과 같은 운영 체제 보안 요구 사항을 따라야 합니다. <xref:System.Security.Permissions.FileIOPermission> 요구 사항에 이 요구 사항이 추가됩니다. ACL은 프로그래밍 방식으로 관리할 수 있습니다. 자세한 내용은 [방법: 액세스 제어 목록 항목 추가 또는 제거](how-to-add-or-remove-access-control-list-entries.md)를 참조하세요.
 
-기본 보안 정책은 인터넷 또는 인트라넷 애플리케이션에서 사용자의 컴퓨터에 있는 파일의 액세스를 방지합니다. 따라서 실제 파일의 경로를 인터넷이나 인트라넷을 통해 다운로드되는 코드를 작성할 때 필요한 I/O 클래스를 사용하지 마세요. 대신에 기존의 .NET Framework 애플리케이션의 경우 [격리된 저장소](isolated-storage.md)를 사용하거나 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 애플리케이션의 경우 [애플리케이션 데이터](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))를 사용합니다.
+기본 보안 정책은 인터넷 또는 인트라넷 애플리케이션에서 사용자의 컴퓨터에 있는 파일의 액세스를 방지합니다. 따라서 실제 파일의 경로를 인터넷이나 인트라넷을 통해 다운로드되는 코드를 작성할 때 필요한 I/O 클래스를 사용하지 마세요. 대신에 기존의 .NET Framework 애플리케이션의 경우 [격리된 스토리지](isolated-storage.md)를 사용하거나 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 애플리케이션의 경우 [애플리케이션 데이터](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))를 사용합니다.
 
 스트림이 생성될 때만 보안 검사가 수행됩니다. 따라서 스트림을 열지 말고, 이것을 신뢰할 수 없는 코드 또는 애플리케이션 도메인으로 전달합니다.
 

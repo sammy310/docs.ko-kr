@@ -15,7 +15,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61763665"
 ---
 # <a name="silverlight-debugging"></a>Silverlight 디버깅
-이 섹션의 항목에서는 CLR(공용 언어 런타임)이 Windows 운영 체제나 Macintosh 플랫폼에서 실행 중인 Silverlight 기반 응용 프로그램 디버그를 지원하기 위해 제공하는 환경 및 인터페이스를 설명합니다.  
+이 섹션의 항목에서는 CLR(공용 언어 런타임)이 Windows 운영 체제나 Macintosh 플랫폼에서 실행 중인 Silverlight 기반 애플리케이션 디버그를 지원하기 위해 제공하는 환경 및 인터페이스를 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [EnumerateCLRs 함수](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)  

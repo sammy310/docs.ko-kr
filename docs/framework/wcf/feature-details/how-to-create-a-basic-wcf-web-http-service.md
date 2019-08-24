@@ -65,7 +65,7 @@ Windows Communication Foundation (WCF)를 사용 하면 웹 끝점을 노출 하
      [!code-csharp[htBasicService#5](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/snippets.cs#5)]
      [!code-vb[htBasicService#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/snippets.vb#5)]
 
-     이 샘플에서는 콘솔 응용 프로그램에서 웹 스타일 서비스를 호스팅하는 방법을 보여 줍니다. IIS 내에서도 이러한 서비스를 호스팅할 수 있습니다. 이 작업을 수행하려면 다음 코드에서처럼 .svc 파일에서 <xref:System.ServiceModel.Activation.WebServiceHostFactory> 클래스를 지정합니다.
+     이 샘플에서는 콘솔 애플리케이션에서 웹 스타일 서비스를 호스팅하는 방법을 보여 줍니다. IIS 내에서도 이러한 서비스를 호스팅할 수 있습니다. 이 작업을 수행하려면 다음 코드에서처럼 .svc 파일에서 <xref:System.ServiceModel.Activation.WebServiceHostFactory> 클래스를 지정합니다.
 
     ```
     <%ServiceHost

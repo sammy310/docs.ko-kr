@@ -12,8 +12,8 @@ ms.locfileid: "61785491"
 # <a name="protocolmapping"></a>\<protocolMapping>
 전송 프로토콜 체계 (예: http, net.tcp, net.pipe 등) 및 WCF 바인딩 간의 기본 프로토콜 매핑 집합을 정의 하기 위한 구성 섹션을 나타냅니다. 런타임에 기본 끝점을 만들 때 Windows Communication Foundation (WCF) 구성 된 매핑을 살펴봅니다 및 바인딩을 사용 하 여 특정 기본 주소를 결정 합니다.  
   
-[**\<system.serviceModel>**](system-servicemodel.md)  
-&nbsp;&nbsp;**\<protocolMapping>**  
+[ **\<system.serviceModel>** ](system-servicemodel.md)  
+&nbsp;&nbsp; **\<protocolMapping>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,7 +44,7 @@ ms.locfileid: "61785491"
 |[\<system.serviceModel>](system-servicemodel.md)|모든 WCF 구성 요소의 루트 요소입니다.|  
   
 ## <a name="example"></a>예제  
- 다음 구성 예제는 machine.config 파일의 기본 프로토콜 매핑을 보여 줍니다. machine.config 파일을 수정하여 컴퓨터 수준에서 기본 매핑을 재정의할 수 있습니다. 또는 응용 프로그램 범위 내에서 기본 매핑을 재정의하려는 경우 해당 응용 프로그램 구성 파일 내에서 이 섹션을 재정의하고 개별 프로토콜 체계에 대한 매핑을 변경할 수 있습니다.  
+ 다음 구성 예제는 machine.config 파일의 기본 프로토콜 매핑을 보여 줍니다. machine.config 파일을 수정하여 컴퓨터 수준에서 기본 매핑을 재정의할 수 있습니다. 또는 애플리케이션 범위 내에서 기본 매핑을 재정의하려는 경우 해당 애플리케이션 구성 파일 내에서 이 섹션을 재정의하고 개별 프로토콜 체계에 대한 매핑을 변경할 수 있습니다.  
   
 ```xml  
 <protocolMapping>

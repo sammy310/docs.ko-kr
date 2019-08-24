@@ -303,7 +303,7 @@ Where Col1 + Col2 > 4
     -- Cannot use the index for column Col1 for some implementations.
     ```
 
-의미 체계의 차이 외에 SQL Server 및 CLR 형식 시스템을 거치는 동안 성능에 미치는 영향도 고려해야 합니다. 큰 데이터 집합의 경우 이러한 성능 문제에 따라 응용 프로그램의 배포 가능 여부가 결정될 수 있습니다.
+의미 체계의 차이 외에 SQL Server 및 CLR 형식 시스템을 거치는 동안 성능에 미치는 영향도 고려해야 합니다. 큰 데이터 세트의 경우 이러한 성능 문제에 따라 애플리케이션의 배포 가능 여부가 결정될 수 있습니다.
 
 ## <a name="see-also"></a>참고자료
 

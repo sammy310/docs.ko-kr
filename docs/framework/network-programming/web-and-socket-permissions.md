@@ -23,7 +23,7 @@ ms.lasthandoff: 04/18/2019
 ms.locfileid: "59166857"
 ---
 # <a name="web-and-socket-permissions"></a>웹 및 소켓 사용 권한
-<xref:System.Net> 네임스페이스를 사용하는 애플리케이션에 대한 인터넷 보안은 <xref:System.Net.WebPermission> 및 <xref:System.Net.SocketPermission> 클래스에서 제공됩니다. **WebPermission** 클래스는 URI의 데이터를 요청하거나 인터넷에 URI를 제공하는 애플리케이션의 권한을 제어합니다. **SocketPermission** 클래스는 <xref:System.Net.Sockets.Socket>을 사용하여 로컬 포트에서 데이터를 허용하거나 호스트, 포트 번호 및 전송 프로토콜에 따라 다른 주소에서 전송 프로토콜을 사용하여 원격 장치에 연결하는 애플리케이션의 권한을 제어합니다.  
+<xref:System.Net> 네임스페이스를 사용하는 애플리케이션에 대한 인터넷 보안은 <xref:System.Net.WebPermission> 및 <xref:System.Net.SocketPermission> 클래스에서 제공됩니다. **WebPermission** 클래스는 URI의 데이터를 요청하거나 인터넷에 URI를 제공하는 애플리케이션의 권한을 제어합니다. **SocketPermission** 클래스는 <xref:System.Net.Sockets.Socket>을 사용하여 로컬 포트에서 데이터를 허용하거나 호스트, 포트 번호 및 전송 프로토콜에 따라 다른 주소에서 전송 프로토콜을 사용하여 원격 디바이스에 연결하는 애플리케이션의 권한을 제어합니다.  
   
  사용하는 권한 클래스는 애플리케이션 유형에 따라 달라집니다. <xref:System.Net.WebRequest> 및 해당 하위 항목을 사용하는 애플리케이션은 **WebPermission** 클래스를 사용하여 권한을 관리해야 합니다. 소켓 수준 액세스를 사용하는 애플리케이션은 **SocketPermission** 클래스를 사용하여 권한을 관리해야 합니다.  
   

@@ -231,9 +231,9 @@ Creating new service instance...
 
     6. **확인** 을 클릭하여 대화 상자를 닫습니다.
 
-2. 서비스 컴퓨터와 클라이언트 컴퓨터에서 예외 응용 프로그램 목록에 Microsoft Distributed Transaction Coordinator(MSDTC)가 포함되도록 Windows 방화벽을 구성합니다.
+2. 서비스 컴퓨터와 클라이언트 컴퓨터에서 예외 애플리케이션 목록에 Microsoft Distributed Transaction Coordinator(MSDTC)가 포함되도록 Windows 방화벽을 구성합니다.
 
-    1. 제어판에서 Windows 방화벽 응용 프로그램을 실행합니다.
+    1. 제어판에서 Windows 방화벽 애플리케이션을 실행합니다.
 
     2. **예외** 탭을 클릭 **추가 프로그램**합니다.
 

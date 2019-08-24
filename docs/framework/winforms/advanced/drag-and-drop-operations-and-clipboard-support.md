@@ -14,16 +14,16 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61756431"
 ---
 # <a name="drag-and-drop-operations-and-clipboard-support"></a>끌어서 놓기 작업 및 클립보드 지원
-일련의 이벤트, 특히 <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave> 및 <xref:System.Windows.Forms.Control.DragDrop> 이벤트를 처리하여 Windows 기반 응용 프로그램에서 사용자 끌어서 놓기 작업을 사용하도록 설정할 수 있습니다.  
+일련의 이벤트, 특히 <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave> 및 <xref:System.Windows.Forms.Control.DragDrop> 이벤트를 처리하여 Windows 기반 애플리케이션에서 사용자 끌어서 놓기 작업을 사용하도록 설정할 수 있습니다.  
   
- 간단한 메서드 호출을 사용하여 Windows 기반 응용 프로그램 내에서 클립보드로 사용자 데이터 전송 및 사용자 잘라내기/복사/붙여넣기 지원을 구현할 수도 있습니다.  
+ 간단한 메서드 호출을 사용하여 Windows 기반 애플리케이션 내에서 클립보드로 사용자 데이터 전송 및 사용자 잘라내기/복사/붙여넣기 지원을 구현할 수도 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [연습: Windows Forms에서 끌어서 놓기 작업 수행](walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)  
  끌어서 놓기 작업을 시작하는 방법을 설명합니다.  
   
  [방법: 응용 프로그램 간에 끌어서 놓기 작업 수행](how-to-perform-drag-and-drop-operations-between-applications.md)  
- 응용 프로그램 간에 끌어서 놓기 작업을 수행하는 방법을 보여 줍니다.  
+ 애플리케이션 간에 끌어서 놓기 작업을 수행하는 방법을 보여 줍니다.  
   
  [방법: 클립보드에 데이터 추가](how-to-add-data-to-the-clipboard.md)  
  프로그래밍 방식으로 클립보드에 정보를 삽입하는 방법을 설명합니다.  

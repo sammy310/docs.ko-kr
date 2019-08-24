@@ -71,7 +71,7 @@ ms.locfileid: "65469712"
  관리되는 서버를 내보내려는 경우 COM 클라이언트가 서버의 아파트를 결정하는 것에 주의합니다. MTA로 초기화된 COM 클라이언트에서 호출하는 관리되는 서버는 스레드로부터 안전해야 합니다.  
   
 ### <a name="managed-clients-and-com-servers"></a>관리되는 클라이언트 및 COM 서버  
- 관리되는 클라이언트 아파트에 대한 기본 설정은 MTA입니다. 그러나 .NET 클라이언트의 응용 프로그램 형식을 통해 기본 설정을 변경할 수 있습니다. 예를 들어 Visual Basic 클라이언트 아파트 설정은 STA입니다. <xref:System.STAThreadAttribute?displayProperty=nameWithType>, <xref:System.MTAThreadAttribute?displayProperty=nameWithType>, <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> 속성 또는 <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> 속성을 사용하여 관리되는 클라이언트의 아파트 설정을 검사하고 변경할 수 있습니다.  
+ 관리되는 클라이언트 아파트에 대한 기본 설정은 MTA입니다. 그러나 .NET 클라이언트의 애플리케이션 형식을 통해 기본 설정을 변경할 수 있습니다. 예를 들어 Visual Basic 클라이언트 아파트 설정은 STA입니다. <xref:System.STAThreadAttribute?displayProperty=nameWithType>, <xref:System.MTAThreadAttribute?displayProperty=nameWithType>, <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> 속성 또는 <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> 속성을 사용하여 관리되는 클라이언트의 아파트 설정을 검사하고 변경할 수 있습니다.  
   
  구성 요소의 작성자가 COM 서버의 스레드 선호도를 설정합니다. 다음 표에서는 .NET 클라이언트 및 COM 서버에 대한 아파트 설정의 조합을 보여 줍니다. 또한 조합에 대한 마샬링 요구 사항을 보여 줍니다.  
   
@@ -147,7 +147,7 @@ SOAP 또는 TcpChannel 클래스를 사용하는 방화벽을 통한 원격 호�
 |[방법: HRESULT 및 예외 매핑](how-to-map-hresults-and-exceptions.md)|사용자 지정 예외를 HRESULT에 매핑하는 방법을 설명하고 각 HRESULT와 .NET Framework에 있는 해당 예외 클래스 간의 전체 매핑을 제공합니다.|  
 |[제네릭 형식을 통한 상호 운용](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|COM 상호 운용성을 위해 제네릭 형식을 사용할 때 지원되는 작업을 설명합니다.|  
 |[비관리 코드와의 상호 운용](index.md)|공용 언어 런타임에서 제공하는 상호 운용성 서비스를 설명합니다.|  
-|[고급 COM 상호 운용성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|COM 구성 요소를 .NET Framework 응용 프로그램으로 통합하는 방법에 대한 추가정보 링크를 제공합니다.|  
+|[고급 COM 상호 운용성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|COM 구성 요소를 .NET Framework 애플리케이션으로 통합하는 방법에 대한 추가정보 링크를 제공합니다.|  
 |[상호 운용을 위한 디자인 고려 사항](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|통합된 COM 구성 요소를 작성하기 위한 팁을 제공합니다.|  
   
  [맨 위로 이동](#top)  

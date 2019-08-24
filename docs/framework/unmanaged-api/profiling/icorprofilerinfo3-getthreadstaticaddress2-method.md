@@ -25,7 +25,7 @@ ms.lasthandoff: 07/10/2019
 ms.locfileid: "67779848"
 ---
 # <a name="icorprofilerinfo3getthreadstaticaddress2-method"></a>ICorProfilerInfo3::GetThreadStaticAddress2 메서드
-지정된 스레드 및 응용 프로그램 도메인의 범위에 있는 지정된 Thread 정적 필드의 주소를 가져옵니다.  
+지정된 스레드 및 애플리케이션 도메인의 범위에 있는 지정된 Thread 정적 필드의 주소를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,7 +46,7 @@ HRESULT GetThreadStaticAddress2(
  [in] 요청 된 thread 정적 필드에 대 한 메타 데이터 토큰입니다.  
   
  `appDomainId`  
- [in] 응용 프로그램 도메인의 ID입니다.  
+ [in] 애플리케이션 도메인의 ID입니다.  
   
  `threadId`  
  [in] 요청 된 정적 필드에 대 한 범위는 스레드의 ID입니다.  

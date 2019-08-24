@@ -90,7 +90,7 @@ Console.WriteLine(builder.GetUpdateCommand().CommandText)
 Console.WriteLine(builder.GetUpdateCommand().CommandText);
 ```
   
- 다음 예제에서는 `Customers` 데이터 집합에 `custDS` 테이블을 다시 만듭니다. 합니다 **RefreshSchema** 메서드는 자동으로 생성된 된 명령을 새 열 정보를 사용 하 여 새로 고칩니다.  
+ 다음 예제에서는 `Customers` 데이터 세트에 `custDS` 테이블을 다시 만듭니다. 합니다 **RefreshSchema** 메서드는 자동으로 생성된 된 명령을 새 열 정보를 사용 하 여 새로 고칩니다.  
   
 ```vb  
 ' Assumes an open SqlConnection and SqlDataAdapter inside of a Using block.  

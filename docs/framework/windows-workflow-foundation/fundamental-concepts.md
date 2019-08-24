@@ -63,4 +63,4 @@ ms.locfileid: "64650943"
   
 - 워크플로 데이터를 유지하고 워크플로를 언로드한 다음 특정 워크플로의 <xref:System.Activities.Bookmark> 개체 재시작에 응답하여 워크플로를 다시 로드하여 활성화할 수 있는 기능  
   
- 워크플로에서는 더 이상 실행할 활동이 없거나 현재 실행 중인 모든 활동이 입력 대기 중일 때까지 활동을 계속 실행합니다. 후자의 입력 대기 상태에서는 워크플로가 유휴 상태가 됩니다. 일반적으로 호스트는 유휴 상태인 워크플로를 언로드한 다음 계속 실행하라는 메시지를 받으면 해당 워크플로를 다시 로드합니다. <xref:System.ServiceModel.Activities.WorkflowServiceHost>는 이를 위한 기능과 확장 가능한 언로드 정책을 제공합니다. 별도로 유지할 수 없는 일시적 상태 또는 데이터를 사용하는 실행 블록의 경우 활동에서 <xref:System.Activities.NoPersistHandle>를 사용하여 호스트에 이를 유지하지 않도록 지시할 수 있습니다. 또한 워크플로에서는 <xref:System.Activities.Statements.Persist> 활동을 사용하여 데이터를 영구 저장 매체에 명시적으로 유지할 수 있습니다.
+ 워크플로에서는 더 이상 실행할 활동이 없거나 현재 실행 중인 모든 활동이 입력 대기 중일 때까지 활동을 계속 실행합니다. 후자의 입력 대기 상태에서는 워크플로가 유휴 상태가 됩니다. 일반적으로 호스트는 유휴 상태인 워크플로를 언로드한 다음 계속 실행하라는 메시지를 받으면 해당 워크플로를 다시 로드합니다. <xref:System.ServiceModel.Activities.WorkflowServiceHost>는 이를 위한 기능과 확장 가능한 언로드 정책을 제공합니다. 별도로 유지할 수 없는 일시적 상태 또는 데이터를 사용하는 실행 블록의 경우 활동에서 <xref:System.Activities.NoPersistHandle>를 사용하여 호스트에 이를 유지하지 않도록 지시할 수 있습니다. 또한 워크플로에서는 <xref:System.Activities.Statements.Persist> 활동을 사용하여 데이터를 영구 스토리지 매체에 명시적으로 유지할 수 있습니다.

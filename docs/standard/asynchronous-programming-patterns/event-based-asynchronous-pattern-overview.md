@@ -24,9 +24,9 @@ ms.lasthandoff: 05/31/2019
 ms.locfileid: "66423860"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>이벤트 기반 비동기 패턴 개요
-많은 작업을 동시에 수행하면서 사용자 상호 작용에 대해 응답성을 유지하는 응용 프로그램에는 일반적으로 여러 스레드를 사용하는 디자인이 필요합니다. <xref:System.Threading> 네임스페이스는 고성능 다중 스레드 응용 프로그램을 만드는 데 필요한 모든 도구를 제공하지만 이러한 도구를 효과적으로 사용하려면 다중 스레드 소프트웨어 엔지니어링에 대한 풍부한 경험이 필요합니다. 비교적 단순한 다중 스레드 응용 프로그램의 경우 <xref:System.ComponentModel.BackgroundWorker> 구성 요소가 간단한 솔루션을 제공합니다. 보다 정교한 비동기 응용 프로그램의 경우 이벤트 기반 비동기 패턴을 준수하는 클래스 구현을 고려하세요.  
+많은 작업을 동시에 수행하면서 사용자 상호 작용에 대해 응답성을 유지하는 애플리케이션에는 일반적으로 여러 스레드를 사용하는 디자인이 필요합니다. <xref:System.Threading> 네임스페이스는 고성능 다중 스레드 애플리케이션을 만드는 데 필요한 모든 도구를 제공하지만 이러한 도구를 효과적으로 사용하려면 다중 스레드 소프트웨어 엔지니어링에 대한 풍부한 경험이 필요합니다. 비교적 단순한 다중 스레드 애플리케이션의 경우 <xref:System.ComponentModel.BackgroundWorker> 구성 요소가 간단한 솔루션을 제공합니다. 보다 정교한 비동기 애플리케이션의 경우 이벤트 기반 비동기 패턴을 준수하는 클래스 구현을 고려하세요.  
   
- 이벤트 기반 비동기 패턴은 다중 스레드 디자인에 본질적으로 존재하는 복잡한 여러 가지 문제를 숨기면서 다중 스레드 응용 프로그램의 장점을 이용할 수 있게 해줍니다. 이 패턴을 지원하는 클래스를 사용하면 다음이 가능합니다.  
+ 이벤트 기반 비동기 패턴은 다중 스레드 디자인에 본질적으로 존재하는 복잡한 여러 가지 문제를 숨기면서 다중 스레드 애플리케이션의 장점을 이용할 수 있게 해줍니다. 이 패턴을 지원하는 클래스를 사용하면 다음이 가능합니다.  
   
 - 응용 프로그램을 중단하지 않고 "백그라운드에서" 다운로드 및 데이터베이스 작업과 같은 시간이 많이 걸리는 작업을 수행할 수 있습니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66423860"
   
  <xref:System.Windows.Forms.PictureBox>는 이벤트 기반 비동기 패턴을 지원하는 일반적인 구성 요소입니다. 해당 <xref:System.Windows.Forms.PictureBox.Load%2A> 메서드를 호출하여 이미지를 동기적으로 다운로드할 수 있지만 이미지가 크거나 네트워크 연결이 느린 경우 다운로드 작업이 완료되고 <xref:System.Windows.Forms.PictureBox.Load%2A>에 대한 호출이 반환될 때까지 애플리케이션이 응답을 중지합니다.  
   
- 이미지가 로드되는 동안 응용 프로그램이 계속 실행되도록 하려면 <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> 메서드를 호출하고 다른 모든 이벤트를 처리하는 것처럼 <xref:System.Windows.Forms.PictureBox.LoadCompleted> 이벤트를 처리하면 됩니다. <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> 메서드를 호출하면 별도의 스레드에서("백그라운드에서") 다운로드가 진행되는 동안 응용 프로그램이 계속 실행됩니다. 이미지 로드 작업이 완료되면 이벤트 처리기가 호출되고, 이벤트 처리기는 <xref:System.ComponentModel.AsyncCompletedEventArgs> 매개 변수를 검토하여 다운로드가 성공적으로 완료되었는지 확인할 수 있습니다.  
+ 이미지가 로드되는 동안 애플리케이션이 계속 실행되도록 하려면 <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> 메서드를 호출하고 다른 모든 이벤트를 처리하는 것처럼 <xref:System.Windows.Forms.PictureBox.LoadCompleted> 이벤트를 처리하면 됩니다. <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> 메서드를 호출하면 별도의 스레드에서("백그라운드에서") 다운로드가 진행되는 동안 응용 프로그램이 계속 실행됩니다. 이미지 로드 작업이 완료되면 이벤트 처리기가 호출되고, 이벤트 처리기는 <xref:System.ComponentModel.AsyncCompletedEventArgs> 매개 변수를 검토하여 다운로드가 성공적으로 완료되었는지 확인할 수 있습니다.  
   
  이벤트 기반 비동기 패턴을 사용하려면 비동기 작업을 취소할 수 있어야 하며, <xref:System.Windows.Forms.PictureBox> 컨트롤이 해당 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 메서드에 대해 이 요구 사항을 지원해야 합니다. <xref:System.Windows.Forms.PictureBox.CancelAsync%2A>를 호출하면 보류 중인 다운로드를 중지하기 위한 요청이 전송되고, 작업이 취소되면 <xref:System.Windows.Forms.PictureBox.LoadCompleted> 이벤트가 발생합니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66423860"
 ## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>이벤트 기반 비동기 패턴의 특징  
  이벤트 기반 비동기 패턴은 특정 클래스에서 지원하는 작업의 복잡성에 따라 여러 가지 형식을 취할 수 있습니다. 가장 단순한 클래스는 단일 _MethodName_**Async** 메서드 및 해당 _MethodName_**Completed** 이벤트를 포함할 수 있습니다. 더 복잡한 클래스는 여러 _MethodName_**Async** 메서드, 각 해당 _MethodName_**Completed** 이벤트 및 이러한 메서드의 동기 버전을 포함할 수 있습니다. 클래스는 선택적으로 각 비동기 메서드에 대해 취소, 진행률 보고 및 증분 결과를 지원할 수 있습니다.  
   
- 또한 비동기 메서드는 보류 중인 여러 호출(여러 동시 호출)을 지원하여 비동기 메서드가 보류 중인 다른 작업을 완료하기 전에 코드에서 비동기 메서드를 원하는 만큼 호출할 수 있습니다. 이 상황을 올바르게 처리하기 위해서는 응용 프로그램이 각 작업의 완료를 추적해야 할 수 있습니다.  
+ 또한 비동기 메서드는 보류 중인 여러 호출(여러 동시 호출)을 지원하여 비동기 메서드가 보류 중인 다른 작업을 완료하기 전에 코드에서 비동기 메서드를 원하는 만큼 호출할 수 있습니다. 이 상황을 올바르게 처리하기 위해서는 애플리케이션이 각 작업의 완료를 추적해야 할 수 있습니다.  
   
 ### <a name="examples-of-the-event-based-asynchronous-pattern"></a>이벤트 기반 비동기 패턴의 예  
  <xref:System.Media.SoundPlayer> 및 <xref:System.Windows.Forms.PictureBox> 구성 요소는 이벤트 기반 비동기 패턴의 간단한 구현을 나타냅니다. <xref:System.Net.WebClient> 및 <xref:System.ComponentModel.BackgroundWorker> 구성 요소는 이벤트 기반 비동기 패턴의 보다 복잡한 구현을 나타냅니다.  

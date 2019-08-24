@@ -12,7 +12,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61640422"
 ---
 # <a name="changing-the-appearance-of-windows-forms"></a>Windows Forms의 모양 변경
-테두리, 불투명도, 도형, 스타일 변경이나 Windows Forms 응용 프로그램에 대한 배경 이미지 설정과 같은 다양한 방법으로 Windows Forms 응용 프로그램의 모양을 사용자 지정할 수 있습니다.  
+테두리, 불투명도, 도형, 스타일 변경이나 Windows Forms 애플리케이션에 대한 배경 이미지 설정과 같은 다양한 방법으로 Windows Forms 애플리케이션의 모양을 사용자 지정할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [방법: Windows Forms의 테두리 변경](how-to-change-the-borders-of-windows-forms.md)  

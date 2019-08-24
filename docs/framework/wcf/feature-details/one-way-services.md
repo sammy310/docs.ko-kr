@@ -52,7 +52,7 @@ public interface IOneWayCalculator
   
  이 문제는 클라이언트 개체와 클라이언트 전송의 보내기 작업 사이에 버퍼를 삽입하여 어느 정도 해결할 수 있습니다. 예를 들어, 비동기 호출을 사용하거나 메모리 내 메시지 큐를 사용하면 클라이언트 개체가 빠르게 반환되도록 합니다. 두 방법 모두 기능을 향상시키지만 스레드 풀과 메시지 큐의 크기가 제한됩니다.  
   
- 따라서 서비스와 클라이언트의 여러 가지 컨트롤을 검사한 다음 응용 프로그램 시나리오를 테스트하여 서비스 또는 클라이언트에 대한 최상의 구성을 결정하는 것이 좋습니다. 예를 들어, 세션 사용으로 인해 서비스에서 메시지 처리가 차단되는 경우 각 메시지가 다른 서비스 인스턴스에 의해 처리될 수 있도록 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 속성을 <xref:System.ServiceModel.InstanceContextMode.PerCall>로 설정하고, 한 번에 둘 이상의 스레드에서 메시지를 디스패치할 수 있도록 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>를 <xref:System.ServiceModel.ConcurrencyMode.Multiple>로 설정합니다. 또 다른 방법은 서비스 및 클라이언트 바인딩의 읽기 할당량을 늘리는 것입니다.  
+ 따라서 서비스와 클라이언트의 여러 가지 컨트롤을 검사한 다음 애플리케이션 시나리오를 테스트하여 서비스 또는 클라이언트에 대한 최상의 구성을 결정하는 것이 좋습니다. 예를 들어, 세션 사용으로 인해 서비스에서 메시지 처리가 차단되는 경우 각 메시지가 다른 서비스 인스턴스에 의해 처리될 수 있도록 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 속성을 <xref:System.ServiceModel.InstanceContextMode.PerCall>로 설정하고, 한 번에 둘 이상의 스레드에서 메시지를 디스패치할 수 있도록 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>를 <xref:System.ServiceModel.ConcurrencyMode.Multiple>로 설정합니다. 또 다른 방법은 서비스 및 클라이언트 바인딩의 읽기 할당량을 늘리는 것입니다.  
   
 ## <a name="see-also"></a>참고자료
 

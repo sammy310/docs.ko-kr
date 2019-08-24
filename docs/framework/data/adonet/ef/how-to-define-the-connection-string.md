@@ -18,7 +18,7 @@ ms.locfileid: "67306380"
 
 ## <a name="to-define-the-entity-framework-connection-string"></a>Entity Framework 연결 문자열을 정의하려면
 
-- 프로젝트의 응용 프로그램 구성 파일(app.config)을 열고 다음 연결 문자열을 추가합니다.
+- 프로젝트의 애플리케이션 구성 파일(app.config)을 열고 다음 연결 문자열을 추가합니다.
 
 ```xml
 <connectionStrings>

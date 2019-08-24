@@ -17,7 +17,7 @@ ms.locfileid: "61943107"
 |ID|4801|  
 |키워드|검색|  
 |수준|경고|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  이 이벤트는 DiscoveryClientChannel 내에 만들어진 DiscoveryClient를 닫지 못해 중단되었을 때 내보내집니다.  

@@ -51,13 +51,13 @@ ms.locfileid: "64622906"
   
  입력 개체는 일부 개체 표현의 루트 개체여야 합니다. 비즈니스 개체의 단일 루트일 수 있으며 또는 UI 시나리오의 페이지, 디자인 도구의 작업 편집 화면 또는 시나리오에 적합한 기타 루트 개체 개념 등에 대한 개체 트리의 루트일 수 있습니다.  
   
- 대부분의 시나리오에서 저장하는 개체 트리는 <xref:System.Xaml.XamlServices.Load%2A>을 사용하거나 프레임워크/응용 프로그램 모델에 의해 구현된 다른 API를 사용해 XAML을 로드했던 원래 작업과 관련이 있습니다. 상태 변경, 응용 프로그램이 사용자로부터 런타임 설정을 캡처한 변경, 응용 프로그램이 XAML 디자인 화면이기 때문에 일어난 XAML 변경 등으로 인해 개체 트리에서 포착되는 차이점이 있을 수 있습니다. 변경이 있든 그렇지 않든 상관없이, 먼저 태그에서 XAML을 로드한 다음 이를 다시 저장하여 두 XAML 태그 형식을 비교하는 개념을 때때로 XAML 라운드트립 표현이라고 합니다.  
+ 대부분의 시나리오에서 저장하는 개체 트리는 <xref:System.Xaml.XamlServices.Load%2A> 을 사용하거나 프레임워크/애플리케이션 모델에 의해 구현된 다른 API를 사용해 XAML을 로드했던 원래 작업과 관련이 있습니다. 상태 변경, 응용 프로그램이 사용자로부터 런타임 설정을 캡처한 변경, 응용 프로그램이 XAML 디자인 화면이기 때문에 일어난 XAML 변경 등으로 인해 개체 트리에서 포착되는 차이점이 있을 수 있습니다. 변경이 있든 그렇지 않든 상관없이, 먼저 태그에서 XAML을 로드한 다음 이를 다시 저장하여 두 XAML 태그 형식을 비교하는 개념을 때때로 XAML 라운드트립 표현이라고 합니다.  
   
  태그 형식으로 설정된 복합 개체를 저장하고 직렬화할 때 문제는, 정보 손실 없는 완전한 표현과 사용자가 읽기 어려운 세부 표시 정도의 XAML 사이에 균형을 이루는 것입니다. 또한 XAML을 사용하는 다양한 고객들이 이런 균형을 찾을 방법에 대해 서로 다른 정의나 기대치를 가질 수 있습니다. <xref:System.Xaml.XamlServices.Save%2A> API는 이러한 균형에 대한 하나의 정의를 나타냅니다. <xref:System.Xaml.XamlServices.Save%2A> API는 사용 가능한 XAML 스키마 컨텍스트와 <xref:System.Xaml.XamlType>, <xref:System.Xaml.XamlMember>, 기타 XAML 내장/XAML 형식 시스템 개념의 기본 CLR 기반 특성을 사용하여 특정 XAML 노드 스트림 구문이 다시 태그에 저장될 때 최적화될 수 있는 위치를 결정할 수 있습니다. 예를 들어 <xref:System.Xaml.XamlServices> 저장 경로는 CLR 기반 기본 XAML 스키마 컨텍스트를 사용하여 개체에 대한 <xref:System.Xaml.XamlType>을 확인할 수 있으며 <xref:System.Xaml.XamlType.ContentProperty%2A?displayProperty=nameWithType>를 확인한 후 개체의 XAML 콘텐츠에 속성을 쓸 때 속성 요소 태그를 생략할 수 있습니다.  
   
 <a name="transform"></a>   
 ## <a name="transform"></a>변환  
- <xref:System.Xaml.XamlServices.Transform%2A> 는 로드 경로와 저장 경로를 단일 작업으로 연결하여 XAML을 변환합니다.  <xref:System.Xaml.XamlReader> 및 <xref:System.Xaml.XamlWriter>에 대해 다른 스키마 컨텍스트 또는 다른 지원 형식 시스템을 사용할 수 있으며, 이에 따라 결과 XAML이 변환되는 방식이 달라집니다. 광범위한 변환 작업에 효율적입니다.  
+ <xref:System.Xaml.XamlServices.Transform%2A> 는 로드 경로와 저장 경로를 단일 작업으로 연결하여 XAML을 변환합니다. <xref:System.Xaml.XamlReader> 및 <xref:System.Xaml.XamlWriter>에 대해 다른 스키마 컨텍스트 또는 다른 지원 형식 시스템을 사용할 수 있으며, 이에 따라 결과 XAML이 변환되는 방식이 달라집니다. 광범위한 변환 작업에 효율적입니다.  
   
  XAML 노드 스트림의 각 노드를 검사해야 하는 작업의 경우 일반적으로 <xref:System.Xaml.XamlServices.Transform%2A>를 사용하지 않습니다. 대신, 고유한 로드 경로-저장 경로 작업 계열을 정의하고 고유한 논리를 삽입해야 합니다. 경로 중 하나에서 고유한 노드 루프를 중심으로 XAML 판독기/XAML 기록기 쌍을 사용합니다. 예를 들어 <xref:System.Xaml.XamlXmlReader> 를 사용하여 초기 XAML을 로드하고 연속된 <xref:System.Xaml.XamlXmlReader.Read%2A> 호출을 사용하여 노드를 한 단계씩 실행합니다. XAML 노드 스트림 수준에서 작동하므로 이제 변환을 적용하도록 개별 노드(형식, 멤버, 다른 노드)를 조정하거나 노드를 그대로 둘 수 있습니다. 그런 다음, `Write` 의 관련 <xref:System.Xaml.XamlObjectWriter> API에 노드를 보내고 개체를 작성합니다. 자세한 내용은 [Understanding XAML Node Stream Structures and Concepts](understanding-xaml-node-stream-structures-and-concepts.md)을 참조하십시오.  
   

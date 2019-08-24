@@ -10,7 +10,7 @@ ms.lasthandoff: 07/09/2019
 ms.locfileid: "67662121"
 ---
 # <a name="sqlclient-for-entity-frameworktypes"></a>Entity FrameworkTypes용 SqlClient
-.NET Framework Data Provider for SQL Server(SqlClient) 공급자 매니페스트 파일에는 공급자 기본 형식의 목록, 각 형식의 패싯, 개념적 모델과 저장소 모델 기본 형식 간의 매핑, 개념적 모델과 저장소 모델 기본 형식 간의 승격과 변환 규칙이 포함되어 있습니다.  
+.NET Framework Data Provider for SQL Server(SqlClient) 공급자 매니페스트 파일에는 공급자 기본 형식의 목록, 각 형식의 패싯, 개념적 모델과 스토리지 모델 기본 형식 간의 매핑, 개념적 모델과 스토리지 모델 기본 형식 간의 승격과 변환 규칙이 포함되어 있습니다.  
   
  다음 표에서 SQL Server 2008, SQL Server 2005 및 SQL Server 2000 데이터베이스 및 이러한 형식을 개념적 모델 형식으로 매핑하는 방법에 대 한 형식을 설명 합니다. 이후 버전의 SQL Server에서 도입된 몇 가지 새로운 형식은 이전 버전의 SQL Server에서는 지원되지 않습니다. 해당 형식은 다음 표에 나와 있습니다.  
   

@@ -67,7 +67,7 @@ Svcutil을 사용하여 STS(보안 토큰 서비스)에 대한 참조가 있는 
 
 ### <a name="code-generation"></a>코드 생성
 
-Svcutil.exe를 사용하여 메타데이터 문서에서 서비스 계약, 클라이언트 및 데이터 형식에 대한 코드를 생성할 수 있습니다. 이러한 메타데이터 문서는 지속적인 저장소에 있거나 온라인으로 검색할 수 있습니다. 온라인 검색은 WS-Metadata Exchange 프로토콜이나 DISCO 프로토콜을 따릅니다. 자세한 내용은 메타데이터 다운로드 단원을 참조하십시오.
+Svcutil.exe를 사용하여 메타데이터 문서에서 서비스 계약, 클라이언트 및 데이터 형식에 대한 코드를 생성할 수 있습니다. 이러한 메타데이터 문서는 지속적인 스토리지에 있거나 온라인으로 검색할 수 있습니다. 온라인 검색은 WS-Metadata Exchange 프로토콜이나 DISCO 프로토콜을 따릅니다. 자세한 내용은 메타데이터 다운로드 단원을 참조하십시오.
 
 사용할 수는 *SvcUtil.exe* 는 미리 정의 된 WSDL 문서를 기반으로 하는 서비스 및 데이터 계약을 생성 하는 도구입니다. /serviceContract 스위치를 사용하고 WSDL 문서를 다운로드하거나 찾을 수 있는 URL 또는 파일 위치를 지정합니다. 이 불만 서비스를 구현 하는 데 사용할 수 있는 WSDL 문서에 정의 된 서비스 및 데이터 계약을 생성 합니다. 자세한 내용은 [방법: 메타 데이터 검색 및 규격 서비스 구현](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)합니다.
 
@@ -101,7 +101,7 @@ BasicHttpContextBinding 끝점이 있는 서비스에 대 한 *Svcutil.exe* Basi
 |/noConfig|구성 파일을 생성하지 않습니다.|
 |/noStdLib|표준 라이브러리를 참조하지 않습니다.<br /><br /> 기본값: Mscorlib.dll 및 System.servicemodel.dll 참조 됩니다.|
 |/out:\<file>|생성된 코드에 대한 파일 이름을 지정합니다.<br /><br /> 기본값: WSDL 정의 이름에서 파생 된, WSDL 서비스 이름 또는 스키마 중 하나의 대상 네임 스페이스입니다.<br /><br /> 약식: `/o`|
-|참조:\<파일 경로 >|지정한 어셈블리에서 형식을 참조합니다. 클라이언트를 생성할 때 이 옵션을 사용하여 가져오는 메타데이터를 나타내는 형식이 포함될 수 있는 어셈블리를 지정합니다.<br /><br /> 이 스위치를 사용하여 메시지 계약 및 <xref:System.Xml.Serialization.XmlSerializer> 형식을 지정할 수 없습니다.<br /><br /> <xref:System.DateTimeOffset>을 참조하는 경우 새 형식을 생성하는 대신 이 형식을 사용합니다. [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]를 사용하여 응용 프로그램이 작성되는 경우 SvcUtil.exe는 <xref:System.DateTimeOffset>을 자동으로 참조합니다.<br /><br /> 약식: `/r`|
+|참조:\<파일 경로 >|지정한 어셈블리에서 형식을 참조합니다. 클라이언트를 생성할 때 이 옵션을 사용하여 가져오는 메타데이터를 나타내는 형식이 포함될 수 있는 어셈블리를 지정합니다.<br /><br /> 이 스위치를 사용하여 메시지 계약 및 <xref:System.Xml.Serialization.XmlSerializer> 형식을 지정할 수 없습니다.<br /><br /> <xref:System.DateTimeOffset>을 참조하는 경우 새 형식을 생성하는 대신 이 형식을 사용합니다. [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]를 사용하여 애플리케이션이 작성되는 경우 SvcUtil.exe는 <xref:System.DateTimeOffset>을 자동으로 참조합니다.<br /><br /> 약식: `/r`|
 |/serializable|Serializable 특성으로 표시된 클래스를 생성합니다.<br /><br /> 약식: `/s`|
 |/serviceContract|서비스 계약에만 해당하는 코드를 생성합니다. 클라이언트 클래스 및 구성이 생성되지 않습니다.<br /><br /> 약식: `/sc`|
 |/serializer:Auto|Serializer를 자동으로 선택 합니다. 이 데이터 계약 serializer를 사용 하려고 하며 실패할 경우 XmlSerializer를 사용 합니다.<br /><br /> 약식: `/ser`|
@@ -171,12 +171,12 @@ Svcutil은 다음 메타데이터 요청을 생성하고 동시에 메타데이�
 
 ### <a name="xmlserializer-type-generation"></a>XmlSerializer 형식 생성
 
-<xref:System.Xml.Serialization.XmlSerializer>를 사용하여 serialize할 수 있는 데이터 형식을 사용하는 서비스 및 클라이언트 응용 프로그램은 런타임에 해당 데이터 형식에 대한 serialization 코드를 생성하고 컴파일합니다. 이로 인해 시작 시 성능이 저하될 수 있습니다.
+<xref:System.Xml.Serialization.XmlSerializer>를 사용하여 serialize할 수 있는 데이터 형식을 사용하는 서비스 및 클라이언트 애플리케이션은 런타임에 해당 데이터 형식에 대한 serialization 코드를 생성하고 컴파일합니다. 이로 인해 시작 시 성능이 저하될 수 있습니다.
 
 > [!NOTE]
-> 미리 생성된 serialization 코드는 서비스가 아닌 클라이언트 응용 프로그램에서만 사용할 수 있습니다.
+> 미리 생성된 serialization 코드는 서비스가 아닌 클라이언트 애플리케이션에서만 사용할 수 있습니다.
 
-Svcutil.exe를 사용하면 응용 프로그램에 대해 컴파일된 어셈블리에서 필요한 C# serialization 코드를 생성할 수 있으므로 이러한 응용 프로그램의 시작 성능을 향상시킬 수 있습니다. 자세한 내용은 [방법: 시작 시간의 WCF 클라이언트 응용 프로그램 개선 XmlSerializer를 사용 하 여](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)입니다.
+Svcutil.exe를 사용하면 애플리케이션에 대해 컴파일된 어셈블리에서 필요한 C# serialization 코드를 생성할 수 있으므로 이러한 애플리케이션의 시작 성능을 향상시킬 수 있습니다. 자세한 내용은 [방법: 시작 시간의 WCF 클라이언트 응용 프로그램 개선 XmlSerializer를 사용 하 여](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)입니다.
 
 > [!NOTE]
 > Svcutil.exe는 입력 어셈블리에 있는 서비스 계약에서 사용하는 형식의 코드만 생성합니다.
@@ -236,7 +236,7 @@ Svcutil.exe를 사용하면 응용 프로그램에 대해 컴파일된 어셈블
 
 svcutil을 사용하여 서비스에 대해 메타데이터를 생성할 때는 다음 메시지가 나타날 수 있습니다.
 
-오류: 메타 데이터를 가져올 수 없습니다 `http://localhost:8000/somesservice/mex` XML 데이터를 읽는 동안 최대 nametable 문자 수 할당량 (16384) 초과 합니다. nametable은 XML 처리 도중에 발견된 문자열을 저장하는 데 사용되는 데이터 구조입니다. 반복되지 않는 요소 이름, 특성 이름 및 특성 값을 가지는 긴 XML 문서로 인해 이 할당량이 트리거될 수 있습니다.  XML 판독기를 만들 때 사용되는 XmlDictionaryReaderQuotas 개체에서 MaxNameTableCharCount 속성을 변경하여 이 할당량을 늘릴 수 있습니다.
+오류: 메타 데이터를 가져올 수 없습니다 `http://localhost:8000/somesservice/mex` XML 데이터를 읽는 동안 최대 nametable 문자 수 할당량 (16384) 초과 합니다. nametable은 XML 처리 도중에 발견된 문자열을 저장하는 데 사용되는 데이터 구조입니다. 반복되지 않는 요소 이름, 특성 이름 및 특성 값을 가지는 긴 XML 문서로 인해 이 할당량이 트리거될 수 있습니다. XML 판독기를 만들 때 사용되는 XmlDictionaryReaderQuotas 개체에서 MaxNameTableCharCount 속성을 변경하여 이 할당량을 늘릴 수 있습니다.
 
 이 오류는 큰 WSDL 파일의 메타데이터를 요청하면 해당 파일을 반환하는 서비스에서 발생할 수 있습니다. svcutil.exe 도구에 대한 문자 할당량이 초과되어 문제가 발생합니다. 이 값은 서비스 거부(dos) 공격을 방지하기 위해 설정됩니다. svcutil에 대해 다음 구성 파일을 지정하여 이 할당량을 늘릴 수 있습니다.
 
@@ -274,7 +274,7 @@ svcutil.exe.config 파일을 새로 만들고 XML 예제 코드를 파일 안에
 
 또한 보안이 손상 될 가능성을 최소화 하려면 신뢰할 수 없는 시스템의 일부 이거나 신뢰할 수 없는 코드 공급자를 사용 하 여 Svcutil.exe를 사용 하 여 확장 하지 추가 해야 합니다.
 
-마지막으로 응용 프로그램의 중간 계층에서 이 도구를 사용하면 현재 프로세스에 서비스 거부가 발생할 수 있으므로 사용하면 안 됩니다.
+마지막으로 애플리케이션의 중간 계층에서 이 도구를 사용하면 현재 프로세스에 서비스 거부가 발생할 수 있으므로 사용하면 안 됩니다.
 
 ## <a name="see-also"></a>참고자료
 

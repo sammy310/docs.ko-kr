@@ -13,7 +13,7 @@ ms.locfileid: "64600027"
 Windows Communication Foundation (WCF) 추적 모델의 동작 전파에 설명 합니다.  
   
 ## <a name="using-propagation-to-correlate-activities-across-endpoints"></a>전파를 통해 엔드포인트 내의 동작 상호 연결  
- 전파는 사용자에게 응용 프로그램 엔드포인트를 통해 동일한 처리 단위(예: 요청)에 대한 오류 추적의 직접적인 상관 관계를 제공합니다. 동일한 처리 단위에 대해 다른 엔드포인트에서 내보내진 오류는 응용 프로그램 도메인에서도 동일한 동작에서 그룹화됩니다. 이는 메시지 헤더에서 동작 ID의 전파를 통해 수행됩니다. 그러므로 서버의 내부 오류로 인해 클라이언트의 시간이 초과되면 두 오류 모두 직접 상관 관계에 대해 동일한 동작에서 표시됩니다.  
+ 전파는 사용자에게 애플리케이션 엔드포인트를 통해 동일한 처리 단위(예: 요청)에 대한 오류 추적의 직접적인 상관 관계를 제공합니다. 동일한 처리 단위에 대해 다른 엔드포인트에서 내보내진 오류는 애플리케이션 도메인에서도 동일한 동작에서 그룹화됩니다. 이는 메시지 헤더에서 동작 ID의 전파를 통해 수행됩니다. 그러므로 서버의 내부 오류로 인해 클라이언트의 시간이 초과되면 두 오류 모두 직접 상관 관계에 대해 동일한 동작에서 표시됩니다.  
   
  이 작업을 수행하려면 앞의 예제에서 설명한 대로 `ActivityTracing` 설정을 사용하세요. 또한 모든 엔드포인트에서 `propagateActivity` 추적 소스에 대해 `System.ServiceModel` 특성을 설정하세요.  
   
@@ -80,5 +80,5 @@ Windows Communication Foundation (WCF) 추적 모델의 동작 전파에 설명 
 
 - [추적 구성](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
-- [종단 간 추적 시나리오](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [엔드투엔드 추적 시나리오](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
 - [Service Trace Viewer 도구(SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

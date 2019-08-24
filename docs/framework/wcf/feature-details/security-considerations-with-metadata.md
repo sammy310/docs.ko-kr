@@ -21,22 +21,22 @@ ms.locfileid: "61748371"
  또한 메타데이터 엔드포인트에 보안을 설정하면 변조나 스푸핑의 위험 없이 안전하게 서비스 메타데이터를 검색하는 방법이 제공됩니다.  
   
 ## <a name="using-only-trusted-metadata"></a>신뢰할 수 있는 메타데이터만 사용  
- 서비스 메타데이터를 사용하여 서비스를 호출하는 데 필요한 런타임 구성 요소를 자동으로 생성할 수 있습니다. 디자인 타임에 메타데이터를 사용하여 클라이언트 응용 프로그램을 개발하거나 런타임에 클라이언트가 서비스 호출에 사용하는 바인딩을 동적으로 업데이트할 수도 있습니다.  
+ 서비스 메타데이터를 사용하여 서비스를 호출하는 데 필요한 런타임 구성 요소를 자동으로 생성할 수 있습니다. 디자인 타임에 메타데이터를 사용하여 클라이언트 애플리케이션을 개발하거나 런타임에 클라이언트가 서비스 호출에 사용하는 바인딩을 동적으로 업데이트할 수도 있습니다.  
   
  서비스 메타데이터를 보안되지 않은 방식으로 검색하면 해당 서비스 메타데이터가 변조되거나 스푸핑될 수 있습니다. 조작된 메타데이터는 클라이언트를 악의적인 서비스로 리디렉션하거나, 손상된 보안 설정을 포함하거나, 악의적인 XML 구조를 포함할 수 있습니다. 메타데이터 문서는 클 수 있으며 자주 파일 시스템에 저장됩니다. 변조 및 스푸핑으로부터 보호하려면 가능한 경우 보안 바인딩을 사용하여 서비스 메타데이터를 요청합니다.  
   
 ## <a name="using-safe-techniques-for-processing-metadata"></a>안전한 메타데이터 처리 기술 사용  
  서비스 메타데이터는 WS-MEX(MetadataExchange) 등의 표준화된 프로토콜을 사용하여 네트워크를 통해 서비스에서 자주 검색됩니다. 많은 메타데이터 형식에는 추가 메타데이터를 가리키는 참조 메커니즘이 있습니다. <xref:System.ServiceModel.Description.MetadataExchangeClient> 형식은 WSDL(웹 서비스 기술 언어) 문서, XML 스키마 및 MEX 문서의 참조를 자동으로 처리합니다. 검색된 메타데이터로 만든 <xref:System.ServiceModel.Description.MetadataSet> 개체의 크기는 사용된 <xref:System.ServiceModel.Description.MetadataExchangeClient.MaximumResolvedReferences%2A> 인스턴스의 <xref:System.ServiceModel.Description.MetadataExchangeClient> 값과 해당 `MaxReceivedMessageSize` 인스턴스에서 사용하는 바인딩의 <xref:System.ServiceModel.Description.MetadataExchangeClient> 값에 정비례합니다. 이 할당량을 시나리오에 적합한 값으로 설정합니다.  
   
- Wcf에서 서비스 메타 데이터는 XML로 처리 됩니다. 응용 프로그램이 XML 문서를 처리할 때 악의적인 XML 구조로부터 보호되어야 합니다. 사용 된 <xref:System.Xml.XmlDictionaryReader> 사용 하 여 XML을 처리할 때 적절 한 할당량을 설정할 수도 합니다 <xref:System.Xml.XmlTextReader.DtdProcessing%2A> 속성을 <xref:System.Xml.DtdProcessing.Prohibit>.  
+ Wcf에서 서비스 메타 데이터는 XML로 처리 됩니다. 애플리케이션이 XML 문서를 처리할 때 악의적인 XML 구조로부터 보호되어야 합니다. 사용 된 <xref:System.Xml.XmlDictionaryReader> 사용 하 여 XML을 처리할 때 적절 한 할당량을 설정할 수도 합니다 <xref:System.Xml.XmlTextReader.DtdProcessing%2A> 속성을 <xref:System.Xml.DtdProcessing.Prohibit>.  
   
- WCF의 메타 데이터 시스템은 확장 가능 하 고 응용 프로그램 구성 파일에서 메타 데이터 확장을 등록할 수 있습니다 (참조 [메타 데이터 시스템 확장](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)). 메타데이터 확장에서 임의 코드를 실행할 수 있으므로 적절한 ACL(액세스 제어 목록)로 응용 프로그램 구성 파일을 보호하고 신뢰할 수 있는 메타데이터 확장 구현만 등록해야 합니다.  
+ WCF의 메타 데이터 시스템은 확장 가능 하 고 응용 프로그램 구성 파일에서 메타 데이터 확장을 등록할 수 있습니다 (참조 [메타 데이터 시스템 확장](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)). 메타데이터 확장에서 임의 코드를 실행할 수 있으므로 적절한 ACL(액세스 제어 목록)로 애플리케이션 구성 파일을 보호하고 신뢰할 수 있는 메타데이터 확장 구현만 등록해야 합니다.  
   
 ## <a name="validating-generated-clients"></a>생성된 클라이언트의 유효성 검사  
- 신뢰할 수 없는 소스에서 검색된 메타데이터로 클라이언트 코드를 생성하는 경우 해당 클라이언트 코드의 유효성을 검사하여 생성된 클라이언트가 클라이언트 응용 프로그램 보안 정책을 준수하는지 확인합니다. 유효성 검사 동작을 사용하여 클라이언트 바인딩의 설정을 확인하거나 도구에서 생성된 코드를 눈으로 보면서 검사할 수 있습니다. 동작의 유효성을 검사 하는 클라이언트를 구현 하는 방법의 예제를 참조 하세요 [클라이언트 유효성 검사](../../../../docs/framework/wcf/samples/client-validation.md)합니다.  
+ 신뢰할 수 없는 소스에서 검색된 메타데이터로 클라이언트 코드를 생성하는 경우 해당 클라이언트 코드의 유효성을 검사하여 생성된 클라이언트가 클라이언트 애플리케이션 보안 정책을 준수하는지 확인합니다. 유효성 검사 동작을 사용하여 클라이언트 바인딩의 설정을 확인하거나 도구에서 생성된 코드를 눈으로 보면서 검사할 수 있습니다. 동작의 유효성을 검사 하는 클라이언트를 구현 하는 방법의 예제를 참조 하세요 [클라이언트 유효성 검사](../../../../docs/framework/wcf/samples/client-validation.md)합니다.  
   
-## <a name="protecting-application-configuration-files"></a>응용 프로그램 구성 파일 보호  
- 서비스의 응용 프로그램 구성 파일은 메타데이터 게시 방법과 게시 여부를 제어할 수 있습니다. 적절한 ACL로 응용 프로그램 구성 파일을 보호하여 공격자가 이러한 설정을 수정할 수 없도록 하는 것이 좋습니다.  
+## <a name="protecting-application-configuration-files"></a>애플리케이션 구성 파일 보호  
+ 서비스의 애플리케이션 구성 파일은 메타데이터 게시 방법과 게시 여부를 제어할 수 있습니다. 적절한 ACL로 애플리케이션 구성 파일을 보호하여 공격자가 이러한 설정을 수정할 수 없도록 하는 것이 좋습니다.  
   
 ## <a name="see-also"></a>참고자료
 

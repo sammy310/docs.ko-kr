@@ -2,20 +2,26 @@
 title: WCF 확장
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'WCF, extensibility'
-  - 'extensibility [WCF]'
-  - 'Windows Communication Foundation, extensibility'
+- WCF, extensibility
+- extensibility [WCF]
+- Windows Communication Foundation, extensibility
 ms.assetid: c145e2f6-f402-41f5-8b5a-eee03978737b
+ms.openlocfilehash: 24ad74f04a3ac31d0b0d0d87f0d74f88c0521f50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768721"
 ---
 # <a name="extending-wcf"></a>WCF 확장
 Windows Communication Foundation (WCF)를 사용 하 고 수정 하 고, 정확 하 게 제어 런타임 구성 요소를 확장 하 고, 서비스 기반 응용 프로그램을 확장할 수 있습니다. 이 섹션의 항목에서는 확장성 아키텍처에 대해 자세히 설명합니다. 기본 프로그래밍에 대 한 자세한 내용은 참조 하세요. [기본 WCF 프로그래밍](../../../../docs/framework/wcf/basic-wcf-programming.md)합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [ServiceHost 및 서비스 모델 계층 확장](../../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)  
- 서비스 모델 계층은 기본 채널에서 들어오는 메시지를 끌어와서 응용 프로그램 코드에서 이를 메서드 호출로 변환하여 결과를 다시 호출자에게 보내는 역할을 합니다.  서비스 모델 확장은 디스패처 기능, 사용자 지정 동작, 메시지 및 매개 변수 가로채기 그리고 다른 확장명 기능이 포함된 통신 동작 및 기능 또는 실행을 수정하거나 구현합니다.  
+ 서비스 모델 계층은 기본 채널에서 들어오는 메시지를 끌어와서 애플리케이션 코드에서 이를 메서드 호출로 변환하여 결과를 다시 호출자에게 보내는 역할을 합니다.  서비스 모델 확장은 디스패처 기능, 사용자 지정 동작, 메시지 및 매개 변수 가로채기 그리고 다른 확장명 기능이 포함된 통신 동작 및 기능 또는 실행을 수정하거나 구현합니다.  
   
  [바인딩 확장](../../../../docs/framework/wcf/extending/extending-bindings.md)  
- 바인딩은 엔드포인트에 연결하는 데 필요한 통신 세부 사항을 설명하는 개체입니다. 바인딩 확장이나 사용자 지정 바인딩은 응용 프로그램 기능을 지원하는 데 필요한 사용자 지정 통신 기능을 구현합니다.  
+ 바인딩은 엔드포인트에 연결하는 데 필요한 통신 세부 사항을 설명하는 개체입니다. 바인딩 확장이나 사용자 지정 바인딩은 애플리케이션 기능을 지원하는 데 필요한 사용자 지정 통신 기능을 구현합니다.  
   
  [채널 계층 확장](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md)  
  채널 계층은 서비스 모델 계층 아래에 있고 클라이언트와 서비스 간의 메시지 교환을 담당합니다. 채널 확장은 보안 등의 새 프로토콜 기능을 구현할 수 있습니다. 또한 채널 확장은 SOAP 메시지를 전달할 새 네트워크 전송 구현 같은 전송 기능을 구현합니다.  

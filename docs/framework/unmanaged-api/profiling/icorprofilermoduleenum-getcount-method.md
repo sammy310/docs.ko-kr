@@ -25,7 +25,7 @@ ms.lasthandoff: 07/10/2019
 ms.locfileid: "67775205"
 ---
 # <a name="icorprofilermoduleenumgetcount-method"></a>ICorProfilerModuleEnum::GetCount 메서드
-응용 프로그램에 로드된 관리되는 모듈 수를 가져옵니다.  
+애플리케이션에 로드된 관리되는 모듈 수를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   

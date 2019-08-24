@@ -63,7 +63,7 @@ ms.locfileid: "67504507"
      이러한 파일을 다른 드라이브나 디렉터리에 설치한 경우에는 `sp_attach_db` 저장 프로시저를 실행하기 전에 경로를 올바르게 수정해야 합니다.  
   
 ## <a name="downloading-sql-server-express-edition"></a>SQL Server Express Edition 다운로드  
- 샘플 및 연습 데이터 집합 섹션에는 LINQ의 데이터 저장소로 SQL Server 2005를 사용 하지만 SQL Server Express Edition을 대신 사용 하도록 수정할 수 있습니다. SQL Server Express Edition은 무료로 제공되며 응용 프로그램과 함께 재배포할 수 있습니다. Visual Studio를 사용 하는 경우 SQL Server Express Edition이 Pro 이상의 에디션에 포함 됩니다.  
+ 샘플 및 연습 데이터 집합 섹션에는 LINQ의 데이터 저장소로 SQL Server 2005를 사용 하지만 SQL Server Express Edition을 대신 사용 하도록 수정할 수 있습니다. SQL Server Express Edition은 무료로 제공되며 애플리케이션과 함께 재배포할 수 있습니다. Visual Studio를 사용 하는 경우 SQL Server Express Edition이 Pro 이상의 에디션에 포함 됩니다.  
   
 #### <a name="to-download-and-install-sql-server-express-edition"></a>SQL Server Express Edition을 다운로드하여 설치하려면  
   

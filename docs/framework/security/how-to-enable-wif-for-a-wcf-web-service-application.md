@@ -18,7 +18,7 @@ ms.locfileid: "64626084"
 - Microsoft® Windows® Communication Foundation(WCF)  
   
 ## <a name="summary"></a>요약  
- 이 방법 설명에서는 WCF 웹 서비스에서 WIF를 사용하기 위한 자세한 단계별 절차를 소개합니다. 또한, 응용 프로그램이 실행될 때 웹 서비스가 클레임을 올바로 표시하는지 확인하기 위해 응용 프로그램을 테스트하는 방법에 대한 지침을 제공합니다. 이 방법 설명에 보안 토큰 서비스(STS)를 만들기 위한 자세한 지침은 없으며, 그 대신 ID 및 액세스 도구와 함께 제공되는 개발 STS를 사용합니다. 개발 STS가 실제 인증을 수행하는 것은 아니며, 테스트 목적으로만 사용됩니다. 이 방법을 완료하려면 ID 및 액세스 도구를 설치해야 합니다. 다음 위치에서 다운로드할 수 있습니다. [Id 및 액세스 도구](https://go.microsoft.com/fwlink/?LinkID=245849)  
+ 이 방법 설명에서는 WCF 웹 서비스에서 WIF를 사용하기 위한 자세한 단계별 절차를 소개합니다. 또한, 애플리케이션이 실행될 때 웹 서비스가 클레임을 올바로 표시하는지 확인하기 위해 애플리케이션을 테스트하는 방법에 대한 지침을 제공합니다. 이 방법 설명에 보안 토큰 서비스(STS)를 만들기 위한 자세한 지침은 없으며, 그 대신 ID 및 액세스 도구와 함께 제공되는 개발 STS를 사용합니다. 개발 STS가 실제 인증을 수행하는 것은 아니며, 테스트 목적으로만 사용됩니다. 이 방법을 완료하려면 ID 및 액세스 도구를 설치해야 합니다. 다음 위치에서 다운로드할 수 있습니다. [Id 및 액세스 도구](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>목차  
   
@@ -30,7 +30,7 @@ ms.locfileid: "64626084"
   
 - 1단계 - 간단한 WCF 서비스 만들기  
   
-- 2단계 - WCF 서비스용 클라이언트 응용 프로그램 만들기  
+- 2단계 - WCF 서비스용 클라이언트 애플리케이션 만들기  
   
 - 3단계 - 솔루션 테스트  
   
@@ -57,7 +57,7 @@ ms.locfileid: "64626084"
   
 - 1단계 - 간단한 WCF 서비스 만들기  
   
-- 2단계 - WCF 서비스용 클라이언트 응용 프로그램 만들기  
+- 2단계 - WCF 서비스용 클라이언트 애플리케이션 만들기  
   
 - 3단계 - 솔루션 테스트  
   
@@ -133,10 +133,10 @@ ms.locfileid: "64626084"
     > [!IMPORTANT]
     >  다음 단계에서 클라이언트 애플리케이션에 서비스 참조를 추가할 때 **TestService**와 **LocalSTS**가 모두 실행 중이어야 합니다.  
   
-## <a name="step-2--create-a-client-application-for-the-wcf-service"></a>2단계 - WCF 서비스용 클라이언트 응용 프로그램 만들기  
- 이 단계에서는 개발 STS를 사용하여 이전 단계에서 만든 WCF 서비스로 인증하는 콘솔 응용 프로그램을 만듭니다.  
+## <a name="step-2--create-a-client-application-for-the-wcf-service"></a>2단계 - WCF 서비스용 클라이언트 애플리케이션 만들기  
+ 이 단계에서는 개발 STS를 사용하여 이전 단계에서 만든 WCF 서비스로 인증하는 콘솔 애플리케이션을 만듭니다.  
   
-#### <a name="to-create-a-client-application"></a>클라이언트 응용 프로그램을 만들려면  
+#### <a name="to-create-a-client-application"></a>클라이언트 애플리케이션을 만들려면  
   
 1. Visual Studio에서 솔루션을 마우스 오른쪽 단추로 클릭하고, **추가**, **새 프로젝트**를 차례로 클릭합니다.  
   
@@ -232,9 +232,9 @@ ms.locfileid: "64626084"
 8. 솔루션을 빌드합니다.  
   
 ## <a name="step-3--test-your-solution"></a>3단계 - 솔루션 테스트  
- 이 단계에서 WIF를 사용하는 WCF 응용 프로그램을 테스트하고 클레임이 표시되는지 확인합니다.  
+ 이 단계에서 WIF를 사용하는 WCF 애플리케이션을 테스트하고 클레임이 표시되는지 확인합니다.  
   
-#### <a name="to-test-your-wif-enabled-wcf-application-for-claims"></a>클레임에 대해 WIF를 사용하는 WCF 응용 프로그램을 테스트하려면  
+#### <a name="to-test-your-wif-enabled-wcf-application-for-claims"></a>클레임에 대해 WIF를 사용하는 WCF 애플리케이션을 테스트하려면  
   
 1. **F5** 키를 눌러 응용 프로그램을 빌드하고 실행합니다. 콘솔 창에서 다음 텍스트와 표시: **서비스, 응용 프로그램을 종료 하려면 아무 키나를 호출 하려면 Enter 키를 누릅니다.**  
   

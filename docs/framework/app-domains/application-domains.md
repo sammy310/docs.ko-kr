@@ -1,5 +1,5 @@
 ---
-title: 응용 프로그램 도메인
+title: 애플리케이션 도메인
 ms.date: 03/30/2017
 helpviewer_keywords:
 - process boundaries for isolation
@@ -21,7 +21,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64607915"
 ---
-# <a name="application-domains"></a>응용 프로그램 도메인
+# <a name="application-domains"></a>애플리케이션 도메인
 
 운영 체제와 런타임 환경은 일반적으로 애플리케이션 간에 몇 가지 형식의 격리를 제공합니다. 예를 들어 Windows에서는 프로세스를 사용하여 애플리케이션을 격리합니다. 격리는 한 애플리케이션에서 실행 중인 코드가 서로 관련 없는 다른 애플리케이션에 나쁜 영향을 주지 않도록 하기 위해 필요합니다.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "64607915"
   
 - 코드에 부여된 권한은 해당 코드가 실행 중인 애플리케이션 도메인에서 제어할 수 있습니다.  
   
-## <a name="application-domains-and-assemblies"></a>응용 프로그램 도메인 및 어셈블리
+## <a name="application-domains-and-assemblies"></a>애플리케이션 도메인 및 어셈블리
 
  이 섹션에서는 애플리케이션 도메인과 어셈블리 사이의 관계에 대해 설명합니다. 어셈블리에 포함되어 있는 코드를 실행하려면 먼저 해당 어셈블리를 애플리케이션 도메인에 로드해야 합니다. 일반적으로 애플리케이션을 실행하면 여러 어셈블리가 애플리케이션 도메인에 로드됩니다.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "64607915"
   
  또한 공용 언어 런타임 호스팅 인터페이스 사양에 설명되어 있는 관리되지 않는 인터페이스를 사용하여 애플리케이션 도메인에 액세스할 수도 있습니다. 런타임 호스트는 비관리 코드에서 인터페이스를 사용하여 프로세스 내에서 애플리케이션 도메인을 만들고 액세스할 수 있습니다.  
   
-## <a name="the-complusloaderoptimization-environment-variable"></a>COMPLUS_LoaderOptimization 환경 변수
+## <a name="the-complus_loaderoptimization-environment-variable"></a>COMPLUS_LoaderOptimization 환경 변수
 
  실행 가능한 애플리케이션의 기본 로더 최적화 정책을 설정하는 환경 변수입니다.  
   

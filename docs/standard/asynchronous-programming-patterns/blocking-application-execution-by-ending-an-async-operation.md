@@ -1,5 +1,5 @@
 ---
-title: 비동기 작업을 종료하여 응용 프로그램 실행 차단
+title: 비동기 작업을 종료하여 애플리케이션 실행 차단
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -20,7 +20,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64629021"
 ---
-# <a name="blocking-application-execution-by-ending-an-async-operation"></a>비동기 작업을 종료하여 응용 프로그램 실행 차단
+# <a name="blocking-application-execution-by-ending-an-async-operation"></a>비동기 작업을 종료하여 애플리케이션 실행 차단
 비동기 작업의 결과를 기다리는 동안 다른 작업을 계속 수행할 수 없는 애플리케이션은 작업이 완료될 때까지 차단되어야 합니다. 다음 옵션 중 하나를 사용하여 비동기 작업이 완료될 때까지 대기하는 동안 애플리케이션의 기본 스레드를 차단합니다.  
   
 - 비동기 작업 **End**_OperationName_ 메서드를 호출합니다. 이 항목에서 이 방법을 설명합니다.  

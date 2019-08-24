@@ -64,7 +64,7 @@ ms.locfileid: "61857521"
    </service>  
 ```  
   
- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> 동작은 특정 엔드포인트의 검색을 사용하거나 사용하지 않도록 설정하는 데 사용됩니다.  다음 예제에서는 하나는 검색이 가능하고 다른 하나는 검색이 가능하지 않은 두 개의 응용 프로그램 엔드포인트가 있는 서비스를 구성합니다. 각 엔드포인트에는 <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> 동작이 추가됩니다.  
+ <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> 동작은 특정 엔드포인트의 검색을 사용하거나 사용하지 않도록 설정하는 데 사용됩니다.  다음 예제에서는 하나는 검색이 가능하고 다른 하나는 검색이 가능하지 않은 두 개의 애플리케이션 엔드포인트가 있는 서비스를 구성합니다. 각 엔드포인트에는 <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> 동작이 추가됩니다.  
   
 ```xml  
 <system.serviceModel>  
@@ -140,7 +140,7 @@ ms.locfileid: "61857521"
  에 대 한 자세한 내용은 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 하 고 <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> 참조 [WCF 검색 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)합니다.  
   
 ## <a name="binding-element-configuration"></a>바인딩 요소 구성  
- 바인딩 요소 구성은 클라이언트측에서 가장 흥미로운 부분입니다. 구성을 사용하면 WCF 클라이언트 응용 프로그램에서 서비스를 검색하는 데 사용되는 찾기 조건을 지정할 수 있습니다.  다음 예제에서는 <xref:System.ServiceModel.Discovery.DiscoveryClient> 채널을 사용하여 사용자 지정 바인딩을 만들고 형식과 범위가 포함된 찾기 조건을 지정합니다. 또한 이 예제에서는 <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> 및 <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> 속성의 값도 지정합니다.  
+ 바인딩 요소 구성은 클라이언트측에서 가장 흥미로운 부분입니다. 구성을 사용하면 WCF 클라이언트 애플리케이션에서 서비스를 검색하는 데 사용되는 찾기 조건을 지정할 수 있습니다.  다음 예제에서는 <xref:System.ServiceModel.Discovery.DiscoveryClient> 채널을 사용하여 사용자 지정 바인딩을 만들고 형식과 범위가 포함된 찾기 조건을 지정합니다. 또한 이 예제에서는 <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> 및 <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> 속성의 값도 지정합니다.  
   
 ```xml  
 <bindings>  

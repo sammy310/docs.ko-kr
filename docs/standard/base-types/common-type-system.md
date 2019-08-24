@@ -35,7 +35,7 @@ ms.locfileid: "67782627"
   
 - 다양한 언어로 작성된 개체 간에 상호 작용할 수 있도록 언어에서 따라야 할 규칙을 정의합니다.  
   
-- 응용 프로그램 개발에 사용되는 기본 데이터 형식(예: <xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.Int32> 및 <xref:System.UInt64>)이 포함된 라이브러리를 제공합니다.  
+- 애플리케이션 개발에 사용되는 기본 데이터 형식(예: <xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.Int32> 및 <xref:System.UInt64>)이 포함된 라이브러리를 제공합니다.  
   
  이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   

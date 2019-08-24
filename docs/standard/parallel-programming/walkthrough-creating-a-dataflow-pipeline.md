@@ -44,7 +44,7 @@ ms.locfileid: "59299009"
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
- 프로젝트에 다음 코드를 추가하여 기본 응용 프로그램을 만듭니다.  
+ 프로젝트에 다음 코드를 추가하여 기본 애플리케이션을 만듭니다.  
   
  [!code-csharp[TPLDataflow_Palindromes#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#2)]
  [!code-vb[TPLDataflow_Palindromes#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromesemptymain.vb#2)]  
@@ -87,7 +87,7 @@ ms.locfileid: "59299009"
  [!code-csharp[TPLDataflow_Palindromes#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#7)]
  [!code-vb[TPLDataflow_Palindromes#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#7)]  
   
- 이 예제에서는 처리할 URL을 데이터 흐름 파이프라인을 통해 보냅니다. 파이프라인을 통해 둘 이상의 입력을 보내는 경우 모든 입력을 제출한 후 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A?displayProperty=nameWithType> 메서드를 호출합니다. 데이터를 더 이상 사용할 수 없는 지점이 응용 프로그램에 잘 정의되어 있지 않거나 파이프라인이 완료될 때까지 응용 프로그램이 대기할 필요가 없는 경우 이 단계를 생략할 수 있습니다.  
+ 이 예제에서는 처리할 URL을 데이터 흐름 파이프라인을 통해 보냅니다. 파이프라인을 통해 둘 이상의 입력을 보내는 경우 모든 입력을 제출한 후 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A?displayProperty=nameWithType> 메서드를 호출합니다. 데이터를 더 이상 사용할 수 없는 지점이 애플리케이션에 잘 정의되어 있지 않거나 파이프라인이 완료될 때까지 애플리케이션이 대기할 필요가 없는 경우 이 단계를 생략할 수 있습니다.  
   
 ## <a name="waiting-for-the-pipeline-to-finish"></a>파이프라인이 완료될 때까지 대기  
  다음 코드를 추가하여 파이프라인이 완료될 때까지 대기합니다. 파이프라인의 꼬리가 완료되면 전체 작업이 완료됩니다.  
@@ -104,7 +104,7 @@ ms.locfileid: "59299009"
  [!code-vb[TPLDataflow_Palindromes#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#1)]  
   
 ## <a name="next-steps"></a>다음 단계  
- 이 예제에서는 처리할 URL을 데이터 흐름 파이프라인을 통해 보냅니다. 파이프라인을 통해 둘 이상의 입력 값을 보내는 경우, 부품들이 자동차 공장에서 이동할 수 있는 방법과 유사한 형태의 병렬 처리를 응용 프로그램에 적용할 수 있습니다. 파이프라인의 첫 번째 구성원이 결과를 두 번째 구성원에 보내는 경우, 두 번째 구성원이 첫 번째 결과를 처리할 때 첫 번째 구성원은 다른 항목을 병렬로 처리할 수 있습니다.  
+ 이 예제에서는 처리할 URL을 데이터 흐름 파이프라인을 통해 보냅니다. 파이프라인을 통해 둘 이상의 입력 값을 보내는 경우, 부품들이 자동차 공장에서 이동할 수 있는 방법과 유사한 형태의 병렬 처리를 애플리케이션에 적용할 수 있습니다. 파이프라인의 첫 번째 구성원이 결과를 두 번째 구성원에 보내는 경우, 두 번째 구성원이 첫 번째 결과를 처리할 때 첫 번째 구성원은 다른 항목을 병렬로 처리할 수 있습니다.  
   
  데이터 흐름 파이프라인을 사용하여 실현되는 병렬 처리는 일반적으로 더 적은 수의 보다 큰 작업으로 구성되어 있기 때문에 *정교하지 않은 병렬 처리*라고 합니다. 데이터 흐름 파이프라인에서 보다 작고 짧게 실행되는 작업의 *세부적인 병렬 처리*를 더 많이 사용할 수도 있습니다. 이 예제에서 파이프라인의 `findReversedWords` 구성원은 [PLINQ](parallel-linq-plinq.md)를 사용하여 작업 목록의 여러 항목을 병렬로 처리합니다. 정교하지 않은 파이프라인에서 세분화된 병렬 처리를 사용하면 전반적인 처리량이 향상될 수 있습니다.  
   

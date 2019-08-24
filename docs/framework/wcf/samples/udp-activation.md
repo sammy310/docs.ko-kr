@@ -14,7 +14,7 @@ ms.locfileid: "65881001"
   
  이 샘플은 크게 세 부분으로 구성됩니다.  
   
-- UDP 프로토콜 활성기(활성화할 응용 프로그램을 대신하여 UDP 메시지를 수신하는 독립 실행형 프로세스)  
+- UDP 프로토콜 활성기(활성화할 애플리케이션을 대신하여 UDP 메시지를 수신하는 독립 실행형 프로세스)  
   
 - UDP 사용자 지정 전송을 사용하여 메시지를 보내는 클라이언트  
   
@@ -25,12 +25,12 @@ ms.locfileid: "65881001"
   
 - WAS LA(수신기 어댑터) - 들어오는 메시지에 대한 응답으로 WAS와 공동 작업하여 프로세스를 활성화합니다.  
   
-- UDP 프로토콜 수신기 - 활성화할 응용 프로그램을 대신하여 UDP 메시지를 수락합니다.  
+- UDP 프로토콜 수신기 - 활성화할 애플리케이션을 대신하여 UDP 메시지를 수락합니다.  
   
- 활성기는 서버 컴퓨터에서 독립 실행형 프로그램으로 실행되어야 합니다. 일반적으로 NetTcpActivator 및 NetPipeActivator와 같은 WAS 수신기 어댑터는 장기간 실행되는 Windows 서비스에서 구현됩니다. 그러나 이 샘플에서는 단순성을 위해 프로토콜 활성기를 독립 실행형 응용 프로그램으로 구현합니다.  
+ 활성기는 서버 컴퓨터에서 독립 실행형 프로그램으로 실행되어야 합니다. 일반적으로 NetTcpActivator 및 NetPipeActivator와 같은 WAS 수신기 어댑터는 장기간 실행되는 Windows 서비스에서 구현됩니다. 그러나 이 샘플에서는 단순성을 위해 프로토콜 활성기를 독립 실행형 애플리케이션으로 구현합니다.  
   
 ### <a name="was-listener-adapter"></a>WAS 수신기 어댑터  
- UDP용 WAS 수신기 어댑터는 `UdpListenerAdapter` 클래스에서 구현됩니다. 이는 WAS와 상호 작용하여 UDP 프로토콜의 응용 프로그램 활성화를 수행하는 모듈입니다. 이 작업은 다음과 같은 Webhost API를 호출하여 수행됩니다.  
+ UDP용 WAS 수신기 어댑터는 `UdpListenerAdapter` 클래스에서 구현됩니다. 이는 WAS와 상호 작용하여 UDP 프로토콜의 애플리케이션 활성화를 수행하는 모듈입니다. 이 작업은 다음과 같은 Webhost API를 호출하여 수행됩니다.  
   
 - `WebhostRegisterProtocol`  
   
@@ -40,11 +40,11 @@ ms.locfileid: "65881001"
   
 - `WebhostCloseAllListenerChannelInstances`  
   
- 처음에 `WebhostRegisterProtocol`을 호출한 후 수신기 어댑터는 %windir%\system32\inetsrv에 있는 applicationHost.config에 등록된 모든 응용 프로그램에 대해 WAS로부터 `ApplicationCreated` 콜백을 수신합니다. 이 샘플에서는 UDP 프로토콜(프로토콜 ID: "net.udp")을 사용하는 응용 프로그램만 처리합니다. 다른 구현에서는 응용 프로그램의 동적 구성 변경 사항(예: 사용 안 함에서 사용으로의 응용 프로그램 전환)에 응답하는 경우 이를 다르게 처리할 수 있습니다.  
+ 처음에 `WebhostRegisterProtocol`을 호출한 후 수신기 어댑터는 %windir%\system32\inetsrv에 있는 applicationHost.config에 등록된 모든 응용 프로그램에 대해 WAS로부터 `ApplicationCreated` 콜백을 수신합니다. 이 샘플에서는 UDP 프로토콜(프로토콜 ID: "net.udp")을 사용하는 응용 프로그램만 처리합니다. 다른 구현에서는 애플리케이션의 동적 구성 변경 사항(예: 사용 안 함에서 사용으로의 애플리케이션 전환)에 응답하는 경우 이를 다르게 처리할 수 있습니다.  
   
  `ConfigManagerInitializationCompleted` 콜백이 수신되면 이는 WAS가 프로토콜의 초기화에 대한 모든 알림을 완료했음을 나타냅니다. 이때 수신기 어댑터는 활성화 요청을 처리할 준비가 되어 있습니다.  
   
- 응용 프로그램에 대해 처음으로 새 요청이 들어올 때 수신기 어댑터는 `WebhostOpenListenerChannelInstance`를 WAS로 호출하고 WAS는 작업자 프로세스를 시작합니다(아직 시작되지 않은 경우). 그런 다음 프로토콜 처리기가 로드되고 수신기 어댑터와 가상 응용 프로그램 간의 통신이 시작될 수 있습니다.  
+ 애플리케이션에 대해 처음으로 새 요청이 들어올 때 수신기 어댑터는 `WebhostOpenListenerChannelInstance`를 WAS로 호출하고 WAS는 작업자 프로세스를 시작합니다(아직 시작되지 않은 경우). 그런 다음 프로토콜 처리기가 로드되고 수신기 어댑터와 가상 애플리케이션 간의 통신이 시작될 수 있습니다.  
   
  수신기 어댑터에서 %SystemRoot%\System32\inetsrv\ApplicationHost.config에 등록 되는 <`listenerAdapters`> 다음과 같은 섹션:  
   
@@ -53,13 +53,13 @@ ms.locfileid: "65881001"
 ```  
   
 ### <a name="protocol-listener"></a>프로토콜 수신기  
- UDP 프로토콜 수신기는 가상 응용 프로그램을 대신하여 UDP 엔드포인트에서 수신 대기하는 프로토콜 활성기 내에 있는 모듈입니다. 이 수신기는 `UdpSocketListener` 클래스에서 구현됩니다. 엔드포인트는 사이트의 프로토콜 바인딩에서 포트 번호가 추출되는 `IPEndpoint`로 표시됩니다.  
+ UDP 프로토콜 수신기는 가상 애플리케이션을 대신하여 UDP 엔드포인트에서 수신 대기하는 프로토콜 활성기 내에 있는 모듈입니다. 이 수신기는 `UdpSocketListener` 클래스에서 구현됩니다. 엔드포인트는 사이트의 프로토콜 바인딩에서 포트 번호가 추출되는 `IPEndpoint`로 표시됩니다.  
   
 ### <a name="control-service"></a>제어 서비스  
  이 샘플에서는 활성기와 WAS 작업자 프로세스 간의 통신에 WCF 사용 합니다. 활성기에 상주하는 서비스를 제어 서비스라고 합니다.  
   
 ## <a name="protocol-handlers"></a>프로토콜 처리기  
- 수신기 어댑터가 `WebhostOpenListenerChannelInstance`를 호출한 후 WAS 프로세스 관리자는 작업자 프로세스를 시작합니다(시작되지 않은 경우). 그런 다음 작업자 프로세스 내부의 응용 프로그램 관리자는 해당 `ListenerChannelId`에 대한 요청과 함께 UDP PPH(프로세스 프로토콜 처리기)를 로드합니다. 호출에서 PPH `IAdphManager`합니다.`StartAppDomainProtocolListenerChannel` UDP AppDomain 프로토콜 처리기 (ADPH)를 시작 합니다.  
+ 수신기 어댑터가 `WebhostOpenListenerChannelInstance`를 호출한 후 WAS 프로세스 관리자는 작업자 프로세스를 시작합니다(시작되지 않은 경우). 그런 다음 작업자 프로세스 내부의 애플리케이션 관리자는 해당 `ListenerChannelId`에 대한 요청과 함께 UDP PPH(프로세스 프로토콜 처리기)를 로드합니다. 호출에서 PPH `IAdphManager`합니다.`StartAppDomainProtocolListenerChannel` UDP AppDomain 프로토콜 처리기 (ADPH)를 시작 합니다.  
   
 ## <a name="hostedudptransportconfiguration"></a>HostedUDPTransportConfiguration  
  이 정보는 다음과 같이 Web.config에 등록됩니다.  
@@ -107,7 +107,7 @@ ms.locfileid: "65881001"
   
 - UDPActivation.dll: 모든 주요 UDP 구현이 포함된 라이브러리입니다.  
   
-- Service.dll: 서비스 코드입니다. 이 파일은 가상 응용 프로그램 ServiceModelSamples의 \bin 디렉터리에 복사됩니다. 서비스 파일은 Service.svc이고 구성 파일은 Web.config입니다. 컴파일 후 이러한 파일은 %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples 위치에 복사됩니다.  
+- Service.dll: 서비스 코드입니다. 이 파일은 가상 애플리케이션 ServiceModelSamples의 \bin 디렉터리에 복사됩니다. 서비스 파일은 Service.svc이고 구성 파일은 Web.config입니다. 컴파일 후 이러한 파일은 %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples 위치에 복사됩니다.  
   
 - WasNetActivator: UDP 활성기 프로그램입니다.  
   

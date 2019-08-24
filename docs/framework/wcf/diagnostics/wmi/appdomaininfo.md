@@ -10,7 +10,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61964257"
 ---
 # <a name="appdomaininfo"></a>AppDomainInfo
-응용 프로그램 도메인 정보  
+애플리케이션 도메인 정보  
   
 ## <a name="syntax"></a>구문  
   

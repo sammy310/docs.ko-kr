@@ -189,7 +189,7 @@ Press <ENTER> to terminate client.
 
         이 명령은 기본 웹 사이트에 net.pipe 사이트 바인딩을 추가합니다.
 
-    2. 사이트 내의 모든 응용 프로그램에서 공통된 net.pipe 바인딩을 공유하지만 각 응용 프로그램에서 net.pipe 지원을 개별적으로 사용하도록 설정할 수 있습니다. /servicemodelsamples 응용 프로그램에서 net.pipe를 사용하도록 설정하려면 권한이 높은 명령 프롬프트에서 다음 명령을 실행합니다.
+    2. 사이트 내의 모든 애플리케이션에서 공통된 net.pipe 바인딩을 공유하지만 각 애플리케이션에서 net.pipe 지원을 개별적으로 사용하도록 설정할 수 있습니다. /servicemodelsamples 애플리케이션에서 net.pipe를 사용하도록 설정하려면 권한이 높은 명령 프롬프트에서 다음 명령을 실행합니다.
 
         ```
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http,net.pipe

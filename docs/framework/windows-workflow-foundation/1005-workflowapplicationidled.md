@@ -17,10 +17,10 @@ ms.locfileid: "62008605"
 |ID|1005|  
 |키워드|WFRuntime|  
 |수준|정보|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
- 워크플로 응용 프로그램은 유휴 상태임을 나타냅니다.  
+ 워크플로 애플리케이션은 유휴 상태임을 나타냅니다.  
   
 ## <a name="message"></a>메시지  
  WorkflowApplication Id: '%1'이(가) 유휴 상태가 되었습니다.  
@@ -29,5 +29,5 @@ ms.locfileid: "62008605"
   
 |데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  
-|WorkflowInstanceId|`xs:string`|워크플로 응용 프로그램 ID|  
+|WorkflowInstanceId|`xs:string`|워크플로 애플리케이션 ID|  
 |AppDomain|`xs:string`|AppDomain.CurrentDomain.FriendlyName에서 반환되는 문자열입니다.|

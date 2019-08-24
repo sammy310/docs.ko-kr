@@ -17,7 +17,7 @@ ms.locfileid: "61767542"
 |[SQL-CLR 형식 불일치](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)|두 가지 상태 CLR (공용 언어 런타임) 및 3 단계 SQL 부울 대 설명을 포함 하는이 항목의 "Null 의미 체계" 단원 <xref:System.Boolean>, 리터럴 `Nothing` (Visual Basic) 및 `null` (C#), 및 다른 유사한 문제가 있습니다.|  
 |[표준 쿼리 연산자 변환](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)|이 항목의 "Null 의미 체계" 단원에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]의 null을 의미론적으로 비교 설명합니다.|  
 |[System.String 메서드](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md)|이 항목의 ".NET과의 차이점" 단원에서는 문자열이 null인 것을 의미할 수도 있고 찾은 위치가 0인 것을 의미할 수도 있는 <xref:System.String.LastIndexOf%2A> 의 반환 값 0에 대해 설명합니다.|  
-|[숫자 시퀀스에서 값의 합계 계산](../../../../../../docs/framework/data/adonet/sql/linq/compute-the-sum-of-values-in-a-numeric-sequence.md)|에 대해 설명 하는 방법을 <xref:System.Linq.Enumerable.Sum%2A> 연산자를 계산 하 고 `null` (`Nothing` Visual basic에서) null만 들어 있는 시퀀스 또는 빈 시퀀스의 0 대신 합니다.|  
+|[숫자 시퀀스에서 값의 합계 컴퓨팅](../../../../../../docs/framework/data/adonet/sql/linq/compute-the-sum-of-values-in-a-numeric-sequence.md)|에 대해 설명 하는 방법을 <xref:System.Linq.Enumerable.Sum%2A> 연산자를 계산 하 고 `null` (`Nothing` Visual basic에서) null만 들어 있는 시퀀스 또는 빈 시퀀스의 0 대신 합니다.|  
   
 ## <a name="see-also"></a>참고자료
 

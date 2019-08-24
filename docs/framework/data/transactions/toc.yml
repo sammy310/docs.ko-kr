@@ -1,4 +1,4 @@
-- name: '트랜잭션 처리 '
+- name: 트랜잭션 처리
   href: index.md
   items:
     - name: 트랜잭션 기본 사항
@@ -6,7 +6,7 @@
     - name: System.Transactions에서 제공하는 기능
       href: features-provided-by-system-transactions.md
       items:
-        - name: 트랜잭션 응용 프로그램 작성
+        - name: 트랜잭션 애플리케이션 작성
           href: writing-a-transactional-application.md
           items:
             - name: 트랜잭션 범위를 사용하여 암시적 트랜잭션 구현

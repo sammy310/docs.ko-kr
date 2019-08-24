@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: 345b5028ccc5c24bd60cf7ecbd2610b27f44b8b9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 463d2fc374870661185a625a0b07a102aa54498c
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968678"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988619"
 ---
 # <a name="transport-security-overview"></a>전송 보안 개요
 WCF (Windows Communication Foundation)의 전송 보안 메커니즘은 사용 되는 바인딩 및 전송에 따라 달라 집니다. 예를 들어 <xref:System.ServiceModel.WSHttpBinding> 클래스를 사용할 경우 전송은 HTTP이며, 전송 보안을 위한 기본 메커니즘은 HTTPS라고 알려진 HTTP를 통한 SSL(Secure Sockets Layer)입니다. 이 항목에서는 WCF 시스템에서 제공 하는 바인딩에 사용 되는 주요 전송 보안 메커니즘에 대해 설명 합니다.  
@@ -19,7 +19,7 @@ WCF (Windows Communication Foundation)의 전송 보안 메커니즘은 사용 �
 > .NET Framework 3.5 이상에서 SSL 보안을 사용 하는 경우 WCF 클라이언트는 인증서 저장소의 중간 인증서와 SSL 협상 중에 받은 중간 인증서를 모두 사용 하 여 서비스에서 인증서 체인 유효성 검사를 수행 합니다. 인증서. .NET Framework 3.0은 로컬 인증서 저장소에 설치된 중간 인증서만 사용합니다.  
   
 > [!WARNING]
->  전송 보안이 사용되는 경우에는 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 속성이 덮어쓰일 수 있습니다. 이러한 상황이 발생 하지 않도록 하려면 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType> 를로 <xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>설정 합니다. <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>는 서비스 설명에 설정할 수 있는 서비스 동작입니다.  
+> 전송 보안이 사용되는 경우에는 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 속성이 덮어쓰일 수 있습니다. 이러한 상황이 발생 하지 않도록 하려면 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType> 를로 <xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>설정 합니다. <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>는 서비스 설명에 설정할 수 있는 서비스 동작입니다.  
   
 ## <a name="basichttpbinding"></a>BasicHttpBinding  
  기본적으로 <xref:System.ServiceModel.BasicHttpBinding> 클래스는 보안을 제공하지 않습니다. 이 바인딩은 보안을 구현하지 않는 웹 서비스 공급자와의 상호 운용성을 위해 디자인되었습니다. 하지만 <xref:System.ServiceModel.BasicHttpSecurity.Mode%2A> 속성을 <xref:System.ServiceModel.BasicHttpSecurityMode.None> 이외의 값으로 설정하여 보안으로 전환할 수 있습니다. 전송 보안을 사용하려면 속성을 <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>로 설정합니다.  

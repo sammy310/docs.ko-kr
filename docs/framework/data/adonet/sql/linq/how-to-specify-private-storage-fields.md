@@ -14,7 +14,7 @@ ms.locfileid: "61902722"
   
  코드 예는 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>를 참조하세요.  
   
-### <a name="to-specify-the-name-of-an-underlying-storage-field"></a>기본 저장소 필드의 이름을 지정하려면  
+### <a name="to-specify-the-name-of-an-underlying-storage-field"></a>기본 스토리지 필드의 이름을 지정하려면  
   
 1. <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> 특성에 <xref:System.Data.Linq.Mapping.ColumnAttribute> 속성을 추가합니다.  
   

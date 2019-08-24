@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 9677e516ef6c91ef344e10bc8f608a397a4ed157
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 9dabb5e1410427940db911299e66f82ec009cce9
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966131"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988681"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>방법: COM+ 서비스 모델 구성 도구 사용
 적절한 호스팅 모드를 선택한 다음 COM+ 서비스 모델 구성 명령줄 도구(ComSvcConfig.exe)를 사용하여 웹 서비스로 노출될 애플리케이션 인터페이스를 구성합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "69966131"
 > 이 레지스트리 키를 되돌리는 것은 중요합니다. 이 키는 호환성 키이므로 변경 내용을 되돌리지 않으면 컴퓨터에서 실행 중인 다른 .NET 애플리케이션에 문제가 발생할 수 있습니다.  
   
 > [!WARNING]
->  Windows 8 컴퓨터에서 Comsvcconfig.exe/install을 사용 하는 경우 ".NET Framework 3.5이 설치 되어 있지 않으면 PC의 앱에 다음 Windows 기능이 필요 합니다. .NET Framework 3.5 (.NET 2.0 및 .NET 3.0 포함)을 나타내는 대화 상자가 표시 됩니다. 이 대화 상자는 무시해도 됩니다. 또는 OnlyUseLatestCLR 레지스트리 키를 DWORD 값 0x00000001로 설정해도 됩니다.  
+> Windows 8 컴퓨터에서 Comsvcconfig.exe/install을 사용 하는 경우 ".NET Framework 3.5이 설치 되어 있지 않으면 PC의 앱에 다음 Windows 기능이 필요 합니다. .NET Framework 3.5 (.NET 2.0 및 .NET 3.0 포함)을 나타내는 대화 상자가 표시 됩니다. 이 대화 상자는 무시해도 됩니다. 또는 OnlyUseLatestCLR 레지스트리 키를 DWORD 값 0x00000001로 설정해도 됩니다.  
   
 ### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a>COM+ 호스팅 모드를 사용하여 웹 서비스로 노출될 인터페이스 집합에 인터페이스를 추가하려면  
   

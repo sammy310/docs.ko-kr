@@ -13,19 +13,19 @@
           tocHref: /dotnet/architecture/
           topicHref: /dotnet/architecture/index
           items:
-            - name: 현대식 ASP.NET 웹 애플리케이션 전자책
+            - name: 현대식 ASP.NET 웹 애플리케이션 eBook
               tocHref: /dotnet/architecture/modern-web-apps-azure/
               topicHref: /dotnet/architecture/modern-web-apps-azure/index
-            - name: .NET 마이크로 서비스 - 아키텍처 전자책
+            - name: .NET 마이크로 서비스 - 아키텍처 eBook
               tocHref: /dotnet/architecture/microservices/
               topicHref: /dotnet/architecture/microservices/index
-            - name: .NET 앱 현대화 전자책
+            - name: .NET 앱 현대화 eBook
               tocHref: /dotnet/architecture/modernize-with-azure-containers/
               topicHref: /dotnet/architecture/modernize-with-azure-containers/index
-            - name: .NET 마이크로 서비스 - DevOps 전자책
+            - name: .NET 마이크로 서비스 - DevOps eBook
               tocHref: /dotnet/architecture/containerized-lifecycle/
               topicHref: /dotnet/architecture/containerized-lifecycle/index
-            - name: 서버를 사용하지 않는 앱 전자책
+            - name: 서버를 사용하지 않는 앱 eBook
               tocHref: /dotnet/architecture/serverless/
               topicHref: /dotnet/architecture/serverless/index
         - name: .NET 가이드

@@ -25,7 +25,7 @@ ms.lasthandoff: 07/10/2019
 ms.locfileid: "67782174"
 ---
 # <a name="icorprofilerinfo3getappdomainscontainingmodule-method"></a>ICorProfilerInfo3::GetAppDomainsContainingModule 메서드
-지정된 모듈이 로드된 응용 프로그램 도메인의 식별자를 가져옵니다.  
+지정된 모듈이 로드된 애플리케이션 도메인의 식별자를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -49,7 +49,7 @@ HRESULT GetAppDomainsContainingModule(
  [out] 반환된 요소의 총수에 대한 포인터입니다.  
   
  `appDomainIds`  
- [out] 응용 프로그램 도메인 ID 값의 배열입니다.  
+ [out] 애플리케이션 도메인 ID 값의 배열입니다.  
   
 ## <a name="remarks"></a>설명  
  메서드는 호출자 할당 버퍼를 사용합니다.  

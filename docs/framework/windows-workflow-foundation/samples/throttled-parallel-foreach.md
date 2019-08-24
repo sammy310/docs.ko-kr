@@ -18,7 +18,7 @@ ms.locfileid: "65637768"
 |**ProjectName**|**설명**|**기본 파일**|
 |-|-|-|
 |ThrottledParallelForEach|`ThrottledParallelForEach` 활동과 이 활동의 디자이너가 들어 있습니다.|ThrottledParallelForEach.cs<br /><br /> `ThrottledParallelForEach` 활동 정의입니다.|
-|CodeTestClient|명령적 코드를 사용하여 `ThrottledParallelForEach`가 있는 워크플로를 구성 및 실행하는 샘플 클라이언트 응용 프로그램입니다.|Program.cs<br /><br /> 샘플 워크플로의 인스턴스를 정의하고 실행합니다.|
+|CodeTestClient|명령적 코드를 사용하여 `ThrottledParallelForEach`가 있는 워크플로를 구성 및 실행하는 샘플 클라이언트 애플리케이션입니다.|Program.cs<br /><br /> 샘플 워크플로의 인스턴스를 정의하고 실행합니다.|
 
 ## <a name="to-use-this-sample"></a>이 샘플을 사용하려면
 

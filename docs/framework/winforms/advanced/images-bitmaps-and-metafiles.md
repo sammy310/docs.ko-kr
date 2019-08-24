@@ -39,4 +39,4 @@ ms.locfileid: "67505704"
   
 ## <a name="related-sections"></a>관련 단원  
  [이미지, 비트맵, 아이콘 및 메타파일 사용](working-with-images-bitmaps-icons-and-metafiles.md)  
- 응용 프로그램에서 이미지를 사용하는 방법을 설명하는 항목의 링크를 포함합니다.
+ 애플리케이션에서 이미지를 사용하는 방법을 설명하는 항목의 링크를 포함합니다.

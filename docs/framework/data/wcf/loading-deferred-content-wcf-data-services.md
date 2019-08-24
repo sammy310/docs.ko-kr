@@ -17,7 +17,7 @@ ms.lasthandoff: 04/28/2019
 ms.locfileid: "64645599"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>지연 콘텐츠 로드(WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 기본적으로 쿼리에서 반환되는 데이터 양을 제한합니다. 그러나 필요한 경우 데이터 서비스에서 관련 엔터티, 페이징 응답 데이터 및 이진 데이터 스트림을 포함한 추가 데이터를 명시적으로 로드할 수 있습니다. 이 항목에서는 이러한 지연된 콘텐츠를 응용 프로그램에 로드하는 방법을 설명합니다.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 기본적으로 쿼리에서 반환되는 데이터 양을 제한합니다. 그러나 필요한 경우 데이터 서비스에서 관련 엔터티, 페이징 응답 데이터 및 이진 데이터 스트림을 포함한 추가 데이터를 명시적으로 로드할 수 있습니다. 이 항목에서는 이러한 지연된 콘텐츠를 애플리케이션에 로드하는 방법을 설명합니다.  
   
 ## <a name="related-entities"></a>관련 엔터티  
  쿼리를 실행하면 주소가 지정된 엔터티 집합의 엔터티만 반환됩니다. 예를 들어, Northwind 데이터 서비스에 대한 쿼리가 `Customers` 엔터티를 반환하는 경우 `Orders` 및 `Customers` 간에 관계가 있어도 기본적으로 관련 `Orders` 엔터티가 반환되지 않습니다. 또한 데이터 서비스에서 페이징을 사용하도록 설정한 경우 서비스에서 이후 데이터 페이지를 명시적으로 로드해야 합니다. 관련 엔터티를 로드하는 방법에는 다음 두 가지가 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "64645599"
      [!code-csharp[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#loadrelatedorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#loadrelatedorderdetailsspecific)]  
   
- 사용할 옵션을 고려할 때는 데이터 서비스에 대한 요청 수와 하나의 응답으로 반환되는 데이터 양이 서로 상쇄되는 관계임을 염두에 두어야 합니다. 응용 프로그램에 연결된 개체가 필요하지만 이러한 개체의 명시적 검색 요청에서 추가적인 지연이 발생하는 것을 피하려는 경우 즉시 로드를 사용합니다. 그러나 응용 프로그램에 특정 관련 엔터티 인스턴스에 대한 데이터만 필요한 경우 <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> 메서드를 호출하여 이러한 엔터티를 명시적으로 로드하는 것을 고려해야 합니다. 자세한 내용은 [방법: 관련된 엔터티 로드](../../../../docs/framework/data/wcf/how-to-load-related-entities-wcf-data-services.md)합니다.  
+ 사용할 옵션을 고려할 때는 데이터 서비스에 대한 요청 수와 하나의 응답으로 반환되는 데이터 양이 서로 상쇄되는 관계임을 염두에 두어야 합니다. 애플리케이션에 연결된 개체가 필요하지만 이러한 개체의 명시적 검색 요청에서 추가적인 지연이 발생하는 것을 피하려는 경우 즉시 로드를 사용합니다. 그러나 애플리케이션에 특정 관련 엔터티 인스턴스에 대한 데이터만 필요한 경우 <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> 메서드를 호출하여 이러한 엔터티를 명시적으로 로드하는 것을 고려해야 합니다. 자세한 내용은 [방법: 관련된 엔터티 로드](../../../../docs/framework/data/wcf/how-to-load-related-entities-wcf-data-services.md)합니다.  
   
 ## <a name="paged-content"></a>페이징 콘텐츠  
  데이터 서비스에서 페이징을 사용하도록 설정한 경우 데이터 서비스가 반환하는 피드의 항목 수는 데이터 서비스의 구성에 의해 제한됩니다. 페이지 제한은 각 엔터티 집합에 대해 별도로 설정할 수 있습니다. 자세한 내용은 [데이터 서비스 구성](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)합니다. 페이징을 사용하도록 설정하면 피드의 최종 항목에 다음 데이터 페이지에 대한 링크가 포함됩니다. 이 링크는 <xref:System.Data.Services.Client.DataServiceQueryContinuation%601> 개체에 포함됩니다. <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A>를 실행할 때 반환되는 <xref:System.Data.Services.Client.QueryOperationResponse%601>의 <xref:System.Data.Services.Client.DataServiceQuery%601> 메서드를 호출하여 다음 데이터 페이지의 URI를 가져옵니다. 반환된 <xref:System.Data.Services.Client.DataServiceQueryContinuation%601> 개체는 다음 결과 페이지를 로드하는 데 사용됩니다. <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> 메서드를 호출하기 전에 쿼리 결과를 열거해야 합니다. `do…while` 루프를 사용하여 쿼리 결과를 먼저 열거한 후 다음 `non-null` 링크 값을 확인하는 것이 좋습니다. <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> 메서드에서 `null`(Visual Basic에서는 `Nothing`)을 반환하면 원래 쿼리에 대한 추가 결과 페이지가 없습니다. 다음 예제에서는 Northwind 샘플 데이터 서비스에서 페이징 고객 데이터를 로드하는 `do…while` 루프를 보여 줍니다.  

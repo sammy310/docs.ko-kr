@@ -31,7 +31,7 @@ ms.locfileid: "66379981"
 
 - 때 `TrustServerCertificate` isfalse 및 `Encrypt` 가 true 이면 연결 문자열에 지정 된 서버 이름 (또는 IP 주소)는 SQL Server SSL 인증서의 서버 이름 (또는 IP 주소) 정확히 일치 해야 합니다. 그렇지 않으면 연결을 시도할 경우 실패합니다. 자세한 내용은 `Encrypt`의 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 연결 옵션에 대한 설명을 참조하세요.
 
-  이러한 변경으로 인해 기존 응용 프로그램이 더 이상 연결되지 않는 경우 다음 중 하나를 사용하여 응용 프로그램을 수정하면 됩니다.
+  이러한 변경으로 인해 기존 애플리케이션이 더 이상 연결되지 않는 경우 다음 중 하나를 사용하여 애플리케이션을 수정하면 됩니다.
 
   - CN(일반 이름) 또는 SAN(주체 대체 이름) 필드에 약식 이름을 지정하는 인증서를 발급합니다. 이 방법은 데이터베이스 미러링에 적용됩니다.
 
@@ -45,9 +45,9 @@ ms.locfileid: "66379981"
 
 - `Type System Version=SQL Server 2012;`는 `Type System Version` 연결 속성에 전달되는 새로운 값입니다. `Type System Version=Latest;` 값은 더 이상 사용되지 않으며 `Type System Version=SQL Server 2008;`과 동일해졌습니다. 자세한 내용은 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>을 참조하세요.
 
-- SqlClient에서는 SQL Server 2008에 추가된 기능인 스파스 열에 대한 추가 지원을 제공합니다. 응용 프로그램이 이미 스파스 열을 사용하는 테이블의 데이터에 액세스하는 경우 성능이 향상됩니다. <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A>의 IsColumnSet 열은 해당 열이 열 집합의 멤버인 스파스 열인지 여부를 나타냅니다. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> 열이 스파스 열인지 여부를 나타냅니다 (참조 [SQL Server 스키마 컬렉션](../../../../docs/framework/data/adonet/sql-server-schema-collections.md) 자세한). 스파스 열에 대 한 자세한 내용은 참조 하십시오 [스파스 열 사용](https://go.microsoft.com/fwlink/?LinkId=224244)합니다.
+- SqlClient에서는 SQL Server 2008에 추가된 기능인 스파스 열에 대한 추가 지원을 제공합니다. 애플리케이션이 이미 스파스 열을 사용하는 테이블의 데이터에 액세스하는 경우 성능이 향상됩니다. <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A>의 IsColumnSet 열은 해당 열이 열 집합의 멤버인 스파스 열인지 여부를 나타냅니다. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> 열이 스파스 열인지 여부를 나타냅니다 (참조 [SQL Server 스키마 컬렉션](../../../../docs/framework/data/adonet/sql-server-schema-collections.md) 자세한). 스파스 열에 대 한 자세한 내용은 참조 하십시오 [스파스 열 사용](https://go.microsoft.com/fwlink/?LinkId=224244)합니다.
 
-- 공간 데이터 형식이 포함되어 있는 Microsoft.SqlServer.Types.dll 어셈블리가 버전 10.0에서 버전 11.0으로 업그레이드되었습니다. 이 어셈블리를 참조하는 응용 프로그램은 제대로 실행되지 않을 수 있습니다. 자세한 내용은 [데이터베이스 엔진 기능의 주요 변경 내용](https://go.microsoft.com/fwlink/?LinkId=224367)합니다.
+- 공간 데이터 형식이 포함되어 있는 Microsoft.SqlServer.Types.dll 어셈블리가 버전 10.0에서 버전 11.0으로 업그레이드되었습니다. 이 어셈블리를 참조하는 애플리케이션은 제대로 실행되지 않을 수 있습니다. 자세한 내용은 [데이터베이스 엔진 기능의 주요 변경 내용](https://go.microsoft.com/fwlink/?LinkId=224367)합니다.
 
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework
 

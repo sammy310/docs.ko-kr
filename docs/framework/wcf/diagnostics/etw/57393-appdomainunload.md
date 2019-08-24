@@ -17,7 +17,7 @@ ms.locfileid: "61767337"
 |ID|57393|  
 |키워드|인프라|  
 |수준|정보|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  이 이벤트는 AppDomain 언로드 시 내보내집니다.  

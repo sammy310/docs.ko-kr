@@ -91,7 +91,7 @@ ms.locfileid: "64616684"
   
  이 지시문은 `Explicit`의 인스턴스화에 정의된 `Dynamic` 정책 설정이 없으면 아무런 영향을 주지 않습니다. 예를 들어 `Explicit<Int32>`의 경우 `Implicit<Int32>`는 공용 멤버가 루트에 있는 상태로 인스턴스화되며 동적 프로그래밍을 위해 해당 메타데이터에 액세스할 수 있습니다.  
   
- 다음은 하나 이상의 serializer에 적용되는 실제 예제입니다. 지시문은 `IList<`*something*`>`으로 형식화된 항목을 반영하는 동시에 응용 프로그램별 주석이 없어도 해당 `List<`*something*`>` 형식도 반영해야 하는 요구 사항을 캡처합니다.  
+ 다음은 하나 이상의 serializer에 적용되는 실제 예제입니다. 지시문은 `IList<`*something*`>`으로 형식화된 항목을 반영하는 동시에 애플리케이션별 주석이 없어도 해당 `List<`*something*`>` 형식도 반영해야 하는 요구 사항을 캡처합니다.  
   
 ```xml  
 <Type Name="System.Collections.Generic.IList{T}">  

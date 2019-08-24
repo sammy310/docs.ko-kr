@@ -12,7 +12,7 @@ ms.locfileid: "64613375"
 # <a name="generating-a-wcf-client-from-service-metadata"></a>서비스 메타데이터에서 WCF 클라이언트 생성
 이 항목에서는 Svcutil.exe의 여러 가지 스위치를 사용하여 메타데이터 문서에서 클라이언트를 생성하는 방법에 대해 설명합니다.  
   
- 메타데이터 문서는 지속적인 저장소에 있거나 온라인으로 검색할 수 있습니다. 온라인 검색은 WS-MetadataExchange 프로토콜이나 Microsoft Discovery(DISCO) 프로토콜을 따릅니다. Svcutil.exe는 다음 메타데이터 요청을 생성하고 동시에 메타데이터를 검색합니다.  
+ 메타데이터 문서는 지속적인 스토리지에 있거나 온라인으로 검색할 수 있습니다. 온라인 검색은 WS-MetadataExchange 프로토콜이나 Microsoft Discovery(DISCO) 프로토콜을 따릅니다. Svcutil.exe는 다음 메타데이터 요청을 생성하고 동시에 메타데이터를 검색합니다.  
   
 - 제공된 주소에 대한 WS-MetadataExchange(MEX) 요청  
   

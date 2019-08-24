@@ -53,7 +53,7 @@ ms.locfileid: "69664096"
  이 <xref:System.Net.Dns> 설정은 ,<xref:System.Net.Dns.EndGetHostByName%2A> ,,<xref:System.Net.Dns.BeginGetHostByName%2A>,, 및<xref:System.Net.Dns.Resolve%2A>클래스의 사용 되지 않는 멤버에 대 한 IPv6 지원을 사용 하도록 설정 합니다. <xref:System.Net.Dns.BeginResolve%2A> <xref:System.Net.Dns.EndResolve%2A> <xref:System.Net.Dns.GetHostByAddress%2A> <xref:System.Net.Dns.GetHostByName%2A> <xref:System.Net?displayProperty=nameWithType> 네임 스페이스의 다른 구성원의 경우 ipv6 주소가 운영 체제에서 사용 하도록 설정 된 경우 ipv6 주소가 반환 될 수 있습니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
- 이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
+ 이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 <xref:System.Net.Dns> 클래스에 대 한 IPv6 지원을 사용 하도록 설정 하는 방법을 보여 줍니다.  

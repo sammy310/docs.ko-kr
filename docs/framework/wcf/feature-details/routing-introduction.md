@@ -2,12 +2,12 @@
 title: 라우팅 소개
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: cc9298c96a5d1dc60ae1f9982b21ce7a160aacbd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: eaf09c0d724521c3c69fde0e90ecd7cd5aadb253
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933966"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988662"
 ---
 # <a name="routing-introduction"></a>라우팅 소개
 라우팅 서비스는 메시지 내용에 따라 메시지를 라우트할 수 있는 제네릭 플러그형 SOAP 매개자를 제공합니다. 라우팅 서비스를 사용하면 서비스 집계, 서비스 버전 관리, 우선 순위 라우팅 및 멀티캐스트 라우팅과 같은 시나리오를 구현할 수 있도록 하는 복합적인 라우팅 논리를 만들 수 있습니다. 또한 라우팅 서비스는 오류 처리 기능을 제공하므로 기본 대상 엔드포인트로 메시지를 보내는 중 오류가 발생할 경우 이 기능을 통해 메시지를 보낼 백업 엔드포인트 목록을 설정할 수 있습니다.  
@@ -395,7 +395,7 @@ using (ServiceHost serviceHost =
  라우팅 서비스에서 가장을 사용하려면 ASP.NET 호환 모드에서 ASP.NET 가장을 사용하거나 가장을 허용하도록 구성된 Windows 자격 증명을 사용해야 합니다. ASP.NET 호환 모드에 대 한 자세한 내용은 [WCF 서비스 및 ASP.NET](wcf-services-and-aspnet.md)를 참조 하세요.  
   
 > [!WARNING]
->  WCF 라우팅 서비스는 기본 인증의 가장을 지원하지 않습니다.  
+> WCF 라우팅 서비스는 기본 인증의 가장을 지원하지 않습니다.  
   
  라우팅 서비스에서 ASP.NET 가장을 사용하려면 서비스 호스팅 환경에서 ASP.NET 호환 모드를 활성화해야 합니다. 라우팅 서비스는 이미 ASP.NET 호환 모드를 허용하는 것으로 표시되었으며 가장이 자동으로 사용됩니다. 가장은 라우팅 서비스에서 유일하게 지원되는 ASP.NET 통합 사용 방식입니다.  
   

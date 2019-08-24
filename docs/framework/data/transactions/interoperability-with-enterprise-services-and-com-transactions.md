@@ -29,7 +29,7 @@ ms.locfileid: "64596865"
   
  <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> 다음 요구 사항을 지정합니다.  
   
-- <xref:System.Transactions.Transaction.Current%2A>를 선택하면 <xref:System.Transactions>에서 기본 컨텍스트가 아닌 컨텍스트에서 실행 중인 COM+ 컨텍스트의 트랜잭션을 지원해야 합니다. 기본 컨텍스트에는 트랜잭션이 포함될 수 없습니다. 따라서 기본 컨텍스트에서는 <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>을 사용하는 경우에도 <xref:System.Transactions>에 대해 <xref:System.Transactions.Transaction.Current%2A>가 사용하는 스레드 로컬 저장소에 저장된 트랜잭션이 반환됩니다.  
+- <xref:System.Transactions.Transaction.Current%2A>를 선택하면 <xref:System.Transactions>에서 기본 컨텍스트가 아닌 컨텍스트에서 실행 중인 COM+ 컨텍스트의 트랜잭션을 지원해야 합니다. 기본 컨텍스트에는 트랜잭션이 포함될 수 없습니다. 따라서 기본 컨텍스트에서는 <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>을 사용하는 경우에도 <xref:System.Transactions>에 대해 <xref:System.Transactions.Transaction.Current%2A>가 사용하는 스레드 로컬 스토리지에 저장된 트랜잭션이 반환됩니다.  
   
 - 기본 컨텍스트가 아닌 컨텍스트에서 새 <xref:System.Transactions.TransactionScope> 개체를 만드는 경우 <xref:System.Transactions.TransactionScope> 개체에 대한 최신 트랜잭션이 COM+에 반영되어야 합니다. 이 경우 <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>은 새 COM+ 컨텍스트를 만든다는 점에서 <xref:System.Transactions.EnterpriseServicesInteropOption.Full>처럼 동작합니다.  
   
@@ -43,9 +43,9 @@ ms.locfileid: "64596865"
   
     - 범위가 있으면 처음에 범위를 만들 때 전달된 <xref:System.Transactions.EnterpriseServicesInteropOption> 열거형 값이 검사됩니다.  
   
-    - <xref:System.Transactions.EnterpriseServicesInteropOption> 열거가 <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>으로 설정된 경우 COM+ 트랜잭션(<xref:System.EnterpriseServices> 트랜잭션)이 관리되는 스레드 로컬 저장소의 <xref:System.Transactions> 트랜잭션보다 우선합니다.  
+    - <xref:System.Transactions.EnterpriseServicesInteropOption> 열거가 <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>으로 설정된 경우 COM+ 트랜잭션(<xref:System.EnterpriseServices> 트랜잭션)이 관리되는 스레드 로컬 스토리지의 <xref:System.Transactions> 트랜잭션보다 우선합니다.  
   
-         값이 <xref:System.Transactions.EnterpriseServicesInteropOption.None>으로 설정된 경우 관리되는 스레드 로컬 저장소의 <xref:System.Transactions> 트랜잭션이 우선합니다.  
+         값이 <xref:System.Transactions.EnterpriseServicesInteropOption.None>으로 설정된 경우 관리되는 스레드 로컬 스토리지의 <xref:System.Transactions> 트랜잭션이 우선합니다.  
   
          값이 <xref:System.Transactions.EnterpriseServicesInteropOption.Full>로 설정된 경우 COM+ 트랜잭션 하나만 있습니다.  
   

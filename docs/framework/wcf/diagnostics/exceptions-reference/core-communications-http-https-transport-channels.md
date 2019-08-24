@@ -22,8 +22,8 @@ ms.locfileid: "61998753"
 |HttpAuthSchemeAndClientCert|HTTPS 수신기 팩터리가 클라이언트 인증서 및 지정된 인증 스키마를 요구하도록 구성되었습니다. 그러나, 한 번에 한 가지 형태의 클라이언트 인증만 요구할 수 있습니다.|  
 |HttpReceiveFailure|지정된 대상에 대한 HTTP 응답을 수신하는 동안 오류가 발생했습니다. 서비스 엔드포인트 바인딩에서 HTTP 프로토콜을 사용하지 않고 있을 수 있습니다. 또한 서비스 종료로 인해 서버에서 HTTP 요청 컨텍스트가 종료되었을 수 있습니다. 자세한 내용은 서버 로그를 참조하십시오.|  
 |HttpRegistrationAccessDenied|HTTP가 지정된 URL을 등록할 수 없습니다. 프로세스에이 네임 스페이스에 대 한 액세스 권한이 없는 (참조 [Namespace 예약, 등록 및 라우팅](/windows/desktop/http/namespace-reservations-registrations-and-routing) 세부 정보에 대 한).|  
-|HttpRegistrationAlreadyExists|HTTP가 지정된 URL을 등록할 수 없습니다. 다른 응용 프로그램에서 이미 HTTP.SYS를 통해 이 URL을 등록했습니다.|  
-|HttpRegistrationPortInUse|지정된 TCP 포트를 다른 응용 프로그램에서 사용 중이므로 HTTP가 지정된 URL을 등록할 수 없습니다.|  
+|HttpRegistrationAlreadyExists|HTTP가 지정된 URL을 등록할 수 없습니다. 다른 애플리케이션에서 이미 HTTP.SYS를 통해 이 URL을 등록했습니다.|  
+|HttpRegistrationPortInUse|지정된 TCP 포트를 다른 애플리케이션에서 사용 중이므로 HTTP가 지정된 URL을 등록할 수 없습니다.|  
 |HttpSendFailure|지정된 대상에 대한 HTTP 요청을 수행하는 동안 오류가 발생했습니다. 보안 바인딩 불일치가 원인이 아닌지 확인합니다. 또한 Secure Sockets Layer에 대해 서비스가 구성되어 있지 않은지 확인합니다.|  
 |MessageXmlProtocolError|네트워크에서 수신한 XML에 문제가 있습니다. 자세한 내용은 내부 예외를 참조하십시오.|  
 |MissingContentType|지정된 대상에 대한 요청에 콘텐츠 형식이 없다는 것을 나타내는 오류를 수신자가 반환했습니다. 자세한 내용은 내부 예외를 참조하세요.|  

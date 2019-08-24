@@ -17,7 +17,7 @@ ms.locfileid: "61757692"
 |ID|451|  
 |키워드|문제 해결, WCFMessageLogging|  
 |수준|정보|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
 ## <a name="description"></a>설명  
  이 이벤트는 메시지 로그 정보가 전송될 때 내보내집니다.  

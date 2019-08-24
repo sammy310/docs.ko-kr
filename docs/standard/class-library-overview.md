@@ -82,7 +82,7 @@ ms.locfileid: "65593498"
   
 ## <a name="system-namespace"></a>System 네임스페이스
 
- <xref:System> 네임스페이스는 .NET의 기본 형식에 대한 루트 네임스페이스입니다. 이 네임스페이스에는 모든 응용 프로그램에서 사용하는 <xref:System.Object>(상속 계층 구조의 루트), <xref:System.Byte>, <xref:System.Char>, <xref:System.Array>, <xref:System.Int32>, <xref:System.String> 등의 기본 데이터 형식을 나타내는 클래스가 포함됩니다. 이 형식의 대부분은 프로그래밍 언어에서 사용하는 기본 데이터 형식에 해당합니다. .NET Framework 형식을 사용하여 코드를 작성할 때 .NET Framework의 기본 데이터 형식이 필요하면 사용 중인 프로그래밍 언어의 해당 키워드를 사용할 수 있습니다.  
+ <xref:System> 네임스페이스는 .NET의 기본 형식에 대한 루트 네임스페이스입니다. 이 네임스페이스에는 모든 애플리케이션에서 사용하는 <xref:System.Object>(상속 계층 구조의 루트), <xref:System.Byte>, <xref:System.Char>, <xref:System.Array>, <xref:System.Int32>, <xref:System.String> 등의 기본 데이터 형식을 나타내는 클래스가 포함됩니다. 이 형식의 대부분은 프로그래밍 언어에서 사용하는 기본 데이터 형식에 해당합니다. .NET Framework 형식을 사용하여 코드를 작성할 때 .NET Framework의 기본 데이터 형식이 필요하면 사용 중인 프로그래밍 언어의 해당 키워드를 사용할 수 있습니다.  
   
  다음 표에서는 .NET에서 제공하는 기본 형식 목록을 보여 주며 각 형식에 대해 간단히 설명한 다음 Visual Basic, C#, C++ 및 F#의 해당 형식을 나타냅니다.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "65593498"
 ||<xref:System.Object>|개체 계층 구조의 루트임|**개체**|**object**|**Object^**|**obj**|  
 ||<xref:System.String>|유니코드 문자로 구성된 변경할 수 없는 고정 길이의 문자열|**String**|**string**|**String^**|**string**|  
   
- 기본 데이터 형식 외에도 <xref:System> 네임 스페이스에는 100 개 이상의 클래스를 응용 프로그램 도메인 및 가비지 수집기와 같은 핵심 런타임 개념을 다루는 클래스에 대 한 예외를 처리 하는 클래스를 포함 합니다. 또한 <xref:System> 네임스페이스에는 2차 네임스페이스도 많이 들어 있습니다.  
+ <xref:System> 네임스페이스에는 기본 데이터 형식 외에도 예외를 처리하는 클래스에서 애플리케이션 도메인 및 가비지 수집기 등의 핵심 런타임 개념을 다루는 클래스에 이르는 100개 이상의 클래스가 들어 있습니다. 또한 <xref:System> 네임스페이스에는 2차 네임스페이스도 많이 들어 있습니다.  
   
  네임스페이스에 대한 자세한 내용은 [.NET API 브라우저](https://docs.microsoft.com/dotnet/api) 를 사용하여 .NET 클래스 라이브러리를 참조하세요. API 참조 설명서는 각 네임스페이스, 해당 유형 및 해당 멤버의 각각에 대한 설명서를 제공합니다.  
   

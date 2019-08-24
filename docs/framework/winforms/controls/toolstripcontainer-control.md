@@ -16,14 +16,14 @@ ms.locfileid: "62009515"
 # <a name="toolstripcontainer-control"></a>ToolStripContainer 컨트롤
 <xref:System.Windows.Forms.ToolStrip> 컨트롤은 <xref:System.Windows.Forms.ToolStripContainer>를 사용하여 기본 제공 래프팅(도킹된 경우 도구 영역 내에서 가로 또는 세로 공간 공유)을 지원합니다.  
   
- 이 섹션의 항목에서는 <xref:System.Windows.Forms.ToolStripContainer> 기능을 응용 프로그램에 빌드하는 데 사용할 수 있는 개념 및 기술을 설명합니다.  
+ 이 섹션의 항목에서는 <xref:System.Windows.Forms.ToolStripContainer> 기능을 애플리케이션에 빌드하는 데 사용할 수 있는 개념 및 기술을 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [ToolStripContainer 컨트롤 개요](toolstripcontainer-control-overview.md)  
  Windows Forms <xref:System.Windows.Forms.ToolStripContainer> 컨트롤의 용도와 주요 개념을 설명하는 항목을 제공합니다.  
   
  [방법: 폼에 ToolStripContainer 추가](how-to-add-a-toolstripcontainer-to-a-form.md)  
- 응용 프로그램에 <xref:System.Windows.Forms.ToolStripContainer>를 추가하고 <xref:System.Windows.Forms.ToolStripContainer>의 특정 패널에 컨트롤을 추가하는 방법을 설명합니다.  
+ 애플리케이션에 <xref:System.Windows.Forms.ToolStripContainer>를 추가하고 <xref:System.Windows.Forms.ToolStripContainer>의 특정 패널에 컨트롤을 추가하는 방법을 설명합니다.  
   
  [방법: ToolStripContentPanel에 컨트롤 추가](how-to-add-a-control-to-a-toolstripcontentpanel.md)  
  <xref:System.Windows.Forms.ToolStripContentPanel>에 컨트롤을 추가하는 방법을 설명합니다.  

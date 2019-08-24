@@ -16,7 +16,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61793577"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>데이터 서비스 리소스에 액세스(WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 지원 된 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Uri로 주소를 지정할 수 있는 리소스를 사용 하 여 피드로 데이터를 노출 하 합니다. 이러한 리소스의 엔터티-관계 규칙에 따라 표시 됩니다는 [엔터티 데이터 모델](../../../../docs/framework/data/adonet/entity-data-model.md)합니다. 이 모델에서 엔터티는 고객, 주문, 항목 및 제품과 같이 응용 프로그램 도메인의 데이터 형식인 데이터 운영 단위를 나타냅니다. REST(Representational State Transfer)의 의미 체계, 특히 GET, PUT, POST, DELETE 등의 표준 HTTP 동사를 사용하여 엔터티 데이터에 액세스하고 변경합니다.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 지원 된 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Uri로 주소를 지정할 수 있는 리소스를 사용 하 여 피드로 데이터를 노출 하 합니다. 이러한 리소스의 엔터티-관계 규칙에 따라 표시 됩니다는 [엔터티 데이터 모델](../../../../docs/framework/data/adonet/entity-data-model.md)합니다. 이 모델에서 엔터티는 고객, 주문, 항목 및 제품과 같이 애플리케이션 도메인의 데이터 형식인 데이터 운영 단위를 나타냅니다. REST(Representational State Transfer)의 의미 체계, 특히 GET, PUT, POST, DELETE 등의 표준 HTTP 동사를 사용하여 엔터티 데이터에 액세스하고 변경합니다.  
   
 ## <a name="addressing-resources"></a>리소스 처리  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]에서는 URI를 사용하여 데이터 모델에서 노출하는 모든 데이터에 주소를 지정합니다. 예를 들어, 다음 URI는 Customer 엔터티 형식의 모든 인스턴스에 대 한 항목을 포함 하는 고객 엔터티 집합에는 피드를 반환 합니다.  

@@ -11,7 +11,7 @@ ms.locfileid: "64662853"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결
 
-이 항목에서는 추적 데이터 형식, 추적 데이터를 보는 방법 및 Service Trace Viewer를 사용하여 응용 프로그램 문제를 해결하는 방법에 대해 설명합니다.
+이 항목에서는 추적 데이터 형식, 추적 데이터를 보는 방법 및 Service Trace Viewer를 사용하여 애플리케이션 문제를 해결하는 방법에 대해 설명합니다.
 
 ## <a name="using-the-service-trace-viewer-tool"></a>Service Trace Viewer 도구 사용
 
@@ -40,7 +40,7 @@ Windows Communication Foundation (WCF) Service Trace Viewer 도구를 사용 하
  오른쪽 위 패널 또는 Service Trace Viewer에서에서 볼 수 있습니다 이러한 모든 합니다 **기본 정보** 추적을 선택할 때 오른쪽 아래 패널의 서식이 지정 된 보기에는 섹션입니다.
 
 > [!NOTE]
-> 클라이언트와 서비스가 동일한 컴퓨터에 있는 경우 두 응용 프로그램에 대한 추적이 있습니다. 이러한 필터링 할 수 있습니다 사용 하 여 **프로세스 이름** 열.
+> 클라이언트와 서비스가 동일한 컴퓨터에 있는 경우 두 애플리케이션에 대한 추적이 있습니다. 이러한 필터링 할 수 있습니다 사용 하 여 **프로세스 이름** 열.
 
 서식이 지정된 보기에서는 사용 가능한 경우 추적 및 추가 세부 정보에 대한 설명을 볼 수도 있습니다. 추가 세부 정보에는 예외 형식 및 메시지, 호출 스택, 메시지 동작, 보낸 사람/받는 사람 필드 및 기타 예외 정보가 포함될 수 있습니다.
 
@@ -190,7 +190,7 @@ Process action Add 동작 왼쪽된 패널에서 두 번 클릭, 추가 관련 �
 
 ## <a name="troubleshooting-using-the-service-trace-viewer"></a>Service Trace Viewer를 사용하여 문제 해결
 
-Service Trace Viewer 도구에서 추적 파일을 로드하면 왼쪽 패널에서 빨간색 또는 노란색 동작을 선택하여 응용 프로그램에서 문제의 원인을 추적할 수 있습니다. 000 동작에는 일반적으로 사용자에게 버블링되는 처리되지 않은 예외가 있습니다.
+Service Trace Viewer 도구에서 추적 파일을 로드하면 왼쪽 패널에서 빨간색 또는 노란색 동작을 선택하여 애플리케이션에서 문제의 원인을 추적할 수 있습니다. 000 동작에는 일반적으로 사용자에게 버블링되는 처리되지 않은 예외가 있습니다.
 
 다음 이미지에는 문제 원인을 찾으려면 빨간색 또는 노란색 작업을 선택 하는 방법을 보여 줍니다.
 ![문제 원인을 찾기 위한 빨간색 또는 노란색 작업의 스크린샷.](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/service-trace-viewer.gif)
@@ -213,6 +213,6 @@ ServiceModel `ActivityTracing`이 해제되어 있지만 ServiceModel 추적이 
 
 ## <a name="see-also"></a>참고자료
 
-- [종단 간 추적 시나리오](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [엔드투엔드 추적 시나리오](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
 - [Service Trace Viewer 도구(SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

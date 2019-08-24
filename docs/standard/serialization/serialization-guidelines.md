@@ -28,7 +28,7 @@ ms.locfileid: "64645057"
 |XML Serialization|<xref:System.Xml.Serialization.XmlSerializer>|XML 형식 <br />모든 권한 포함|  
 |런타임 -Serialization(이진 및 SOAP)|<xref:System.SerializableAttribute><br /><br /> <xref:System.Runtime.Serialization.ISerializable><br /><br /> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter><br /><br /> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>|.NET Remoting|  
   
- 새로운 형식을 디자인할 때 이러한 기술 중 해당 형식(있는 경우)이 지원해야 하는 기술을 결정해야 합니다. 다음 지침은 이러한 기술을 선택하는 방법과 해당 지원을 제공하는 방법에 대해 설명합니다. 이 지침은 응용 프로그램 또는 라이브러리를 구현하는 데 사용해야 하는 serialization 기술을 선택하는 데 도움을 주기 위해 만든 것은 아닙니다. 이 지침은 API 디자인과 직접 관련되어 있지 않으므로 이 항목의 범위 내에 포함되어 있지 않습니다.  
+ 새로운 형식을 디자인할 때 이러한 기술 중 해당 형식(있는 경우)이 지원해야 하는 기술을 결정해야 합니다. 다음 지침은 이러한 기술을 선택하는 방법과 해당 지원을 제공하는 방법에 대해 설명합니다. 이 지침은 애플리케이션 또는 라이브러리를 구현하는 데 사용해야 하는 serialization 기술을 선택하는 데 도움을 주기 위해 만든 것은 아닙니다. 이 지침은 API 디자인과 직접 관련되어 있지 않으므로 이 항목의 범위 내에 포함되어 있지 않습니다.  
   
 ## <a name="guidelines"></a>지침  
   

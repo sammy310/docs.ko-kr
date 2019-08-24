@@ -1,5 +1,5 @@
 ---
-title: .NET 응용 프로그램 배포를 지원하기 위한 Firefox 추가 기능
+title: .NET 애플리케이션 배포를 지원하기 위한 Firefox 추가 기능
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Firefox add-ons for .NET application deployment
@@ -14,7 +14,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 06/11/2019
 ms.locfileid: "66833921"
 ---
-# <a name="firefox-add-ons-to-support-net-application-deployment"></a>.NET 응용 프로그램 배포를 지원하기 위한 Firefox 추가 기능
+# <a name="firefox-add-ons-to-support-net-application-deployment"></a>.NET 애플리케이션 배포를 지원하기 위한 Firefox 추가 기능
 Windows Presentation Foundation (WPF) Firefox 및 Firefox에 대 한.NET Framework Assistant에 대 한 플러그 인을 사용 하도록 설정 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]느슨한, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], 및 Mozilla Firefox 브라우저를 사용 하 여 ClickOnce 응용 프로그램입니다.  
   
 ## <a name="wpf-plug-in-for-firefox"></a>Firefox 용 WPF 플러그  

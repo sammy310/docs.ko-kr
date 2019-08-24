@@ -28,9 +28,9 @@ ms.locfileid: "64622771"
   
 - 시스템에 운영 체제에서 메모리 부족 알림을 받습니다.  
   
-- 응용 프로그램 코드는 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 메서드를 호출하고 `generation` 매개 변수에 대해 2를 지정하여 수집을 줄입니다.  
+- 애플리케이션 코드는 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 메서드를 호출하고 `generation` 매개 변수에 대해 2를 지정하여 수집을 줄입니다.  
   
- 다음 표에서는 <xref:System.Runtime.GCLatencyMode> 값을 사용하는 응용 프로그램 시나리오를 보여 줍니다.  
+ 다음 표에서는 <xref:System.Runtime.GCLatencyMode> 값을 사용하는 애플리케이션 시나리오를 보여 줍니다.  
   
 |대기 시간 모드|애플리케이션 시나리오|  
 |------------------|---------------------------|  

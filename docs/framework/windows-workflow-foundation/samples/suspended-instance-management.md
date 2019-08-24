@@ -58,7 +58,7 @@ ms.locfileid: "64622416"
 
 4. 이제 샘플을 실행합니다.
 
-    1. Visual Studio 2010에서는 SampleWorkflowApp 프로젝트를 다시 실행 키를 눌러 디버깅 하지 않고 **ctrl+f5**합니다. 두 엔드포인트 주소가 콘솔 창에 출력됩니다. 이 주소 중 하나를 응용 프로그램 엔드포인트에 대한 주소이고, 다른 하나는 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>의 주소입니다. 그런 다음 워크플로 인스턴스가 만들어지고, 해당 인스턴스에 대한 추적 레코드가 콘솔 창에 나타납니다. 워크플로 인스턴스를 예외를 throw하며, 인스턴스가 일시 중단되고 중단됩니다.
+    1. Visual Studio 2010에서는 SampleWorkflowApp 프로젝트를 다시 실행 키를 눌러 디버깅 하지 않고 **ctrl+f5**합니다. 두 엔드포인트 주소가 콘솔 창에 출력됩니다. 이 주소 중 하나를 애플리케이션 엔드포인트에 대한 주소이고, 다른 하나는 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>의 주소입니다. 그런 다음 워크플로 인스턴스가 만들어지고, 해당 인스턴스에 대한 추적 레코드가 콘솔 창에 나타납니다. 워크플로 인스턴스를 예외를 throw하며, 인스턴스가 일시 중단되고 중단됩니다.
 
     2. 명령줄 유틸리티를 사용하여 모든 인스턴스에 대해 추가 동작을 수행할 수 있습니다. 명령줄 인수에 대한 구문은 다음과 같습니다.
 

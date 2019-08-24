@@ -20,7 +20,7 @@ ms.locfileid: "64581383"
  [!code-csharp[DLinqQueryConcepts#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#1)]
  [!code-vb[DLinqQueryConcepts#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#1)]  
   
- 반대의 경우도 마찬가지입니다. 고객과 주문 데이터를 동시에 확인해야 하는 응용 프로그램이 있는 경우 두 데이터 집합이 모두 필요합니다. 결과를 얻으면 바로 응용 프로그램에 각 고객에 대한 주문 정보가 필요합니다. 각 고객의 주문에 대한 쿼리를 개별적으로 전송하는 것은 바람직하지 않습니다. 이 경우에는 고객과 주문 데이터를 함께 검색하는 것이 좋습니다.  
+ 반대의 경우도 마찬가지입니다. 고객과 주문 데이터를 동시에 확인해야 하는 애플리케이션이 있는 경우 두 데이터 집합이 모두 필요합니다. 결과를 얻으면 바로 애플리케이션에 각 고객에 대한 주문 정보가 필요합니다. 각 고객의 주문에 대한 쿼리를 개별적으로 전송하는 것은 바람직하지 않습니다. 이 경우에는 고객과 주문 데이터를 함께 검색하는 것이 좋습니다.  
   
  [!code-csharp[DLinqQueryConcepts#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#2)]
  [!code-vb[DLinqQueryConcepts#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#2)]  

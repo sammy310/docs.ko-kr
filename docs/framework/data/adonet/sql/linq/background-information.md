@@ -12,7 +12,7 @@ ms.locfileid: "65878703"
 # <a name="background-information"></a>배경 정보
 이 단원의 항목은 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 사용에 대한 개념 및 기본 사용법을 확장하는 절차와 관련되어 있습니다.  
   
- 다음 단계를 수행하여 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 코드와 응용 프로그램의 추가 예제를 찾습니다.  
+ 다음 단계를 수행하여 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 코드와 애플리케이션의 추가 예제를 찾습니다.  
   
 - 특정 문제에 대 한 Microsoft 문서를 검색 합니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "65878703"
  로컬 메서드 호출에 대한 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 지원에 대해 설명합니다.  
   
  [LINQ to SQL을 사용한 N 계층 및 원격 응용 프로그램](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]을 사용하는 다중 계층 응용 프로그램에 대한 자세한 정보를 제공합니다.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]을 사용하는 다중 계층 애플리케이션에 대한 자세한 정보를 제공합니다.  
   
  [개체 ID](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개체 모델에서의 개체 식별 기능 및 데이터베이스에서의 개체 식별 기능과의 차이점에 대해 설명합니다.  
@@ -64,10 +64,10 @@ ms.locfileid: "65878703"
  데이터베이스 연결 보안에 대한 올바른 접근 방식을 설명합니다.  
   
  [serialization](../../../../../../docs/framework/data/adonet/sql/linq/serialization.md)  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 응용 프로그램의 serialization 프로세스에 대해 설명합니다.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 애플리케이션의 serialization 프로세스에 대해 설명합니다.  
   
  [저장 프로시저](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
- 디자인 타임에 저장 프로시저를 매핑하는 방법과 응용 프로그램에서 저장 프로시저를 호출하는 방법에 대해 설명합니다.  
+ 디자인 타임에 저장 프로시저를 매핑하는 방법과 애플리케이션에서 저장 프로시저를 호출하는 방법에 대해 설명합니다.  
   
  [트랜잭션 지원](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 지원하는 세 가지의 변환 모델에 대해 간략하게 설명합니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "65878703"
  형식 매핑 사용자 지정에 대한 지침을 제공합니다.  
   
  [사용자 정의 함수](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)  
- 디자인 타임에 사용자 정의 함수를 매핑하여 응용 프로그램에서 해당 함수를 호출하는 방법에 대해 설명합니다.  
+ 디자인 타임에 사용자 정의 함수를 매핑하여 애플리케이션에서 해당 함수를 호출하는 방법에 대해 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
  [프로그래밍 가이드](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  

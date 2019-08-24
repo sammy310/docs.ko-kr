@@ -42,7 +42,7 @@ ADO.NET을 사용할 수 있습니다 **DataReader** 데이터베이스에서 �
  `DataAdapter` 이벤트와 이벤트 사용 방법을 설명합니다.  
   
  [DataAdapter를 사용하여 일괄 작업 수행](../../../../docs/framework/data/adonet/performing-batch-operations-using-dataadapters.md)  
- `DataSet`의 업데이트를 적용할 때 SQL Server로의 라운드트립 횟수를 줄여 응용 프로그램의 성능을 향상시키는 방법을 설명합니다.  
+ `DataSet`의 업데이트를 적용할 때 SQL Server로의 라운드트립 횟수를 줄여 애플리케이션의 성능을 향상시키는 방법을 설명합니다.  
   
 ## <a name="see-also"></a>참고자료
 

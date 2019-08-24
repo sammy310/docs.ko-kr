@@ -1,5 +1,5 @@
 ---
-title: 하나 이상의 REF CURSOR를 사용하여 데이터 집합 필터링
+title: 하나 이상의 REF CURSOR를 사용하여 데이터 세트 필터링
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -11,7 +11,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61879374"
 ---
-# <a name="filling-a-dataset-using-one-or-more-ref-cursors"></a>하나 이상의 REF CURSOR를 사용하여 데이터 집합 필터링
+# <a name="filling-a-dataset-using-one-or-more-ref-cursors"></a>하나 이상의 REF CURSOR를 사용하여 데이터 세트 필터링
 이 Microsoft Visual Basic 예제에서는 두 개의 REF CURSOR 매개 변수를 반환하는 PL/SQL 저장 프로시저를 실행하고 반환되는 행으로 <xref:System.Data.DataSet>을 채웁니다.  
   
 ```vb  

@@ -13,12 +13,12 @@ ms.lasthandoff: 04/28/2019
 ms.locfileid: "64635652"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>연습: 사용자 지정 클라이언트 및 서비스 자격 증명 만들기
-이 항목에서는 사용자 지정 클라이언트와 서비스 자격 증명을 구현하는 방법 및 응용 프로그램 코드로부터 사용자 지정 자격 증명을 사용하는 방법을 보여 줍니다.  
+이 항목에서는 사용자 지정 클라이언트와 서비스 자격 증명을 구현하는 방법 및 애플리케이션 코드로부터 사용자 지정 자격 증명을 사용하는 방법을 보여 줍니다.  
   
 ## <a name="credentials-extensibility-classes"></a>자격 증명 확장성 클래스  
- 합니다 <xref:System.ServiceModel.Description.ClientCredentials> 고 <xref:System.ServiceModel.Description.ServiceCredentials> 클래스는 Windows Communication Foundation (WCF) 보안 확장성 주 진입점입니다. 이러한 자격 증명 클래스는 API를 제공합니다. 이 API를 통해 응용 프로그램 코드에서는 자격 증명 정보를 설정하고, 자격 증명 형식을 보안 토큰으로 변환할 수 있습니다. (*보안 토큰* 폼 SOAP 메시지 내부에서 자격 증명 정보를 전송 하는 데 사용 됩니다.) 이러한 자격 증명 클래스의 책임은 다음과 같은 두 가지 영역으로 나눠 볼 수 있습니다.  
+ 합니다 <xref:System.ServiceModel.Description.ClientCredentials> 고 <xref:System.ServiceModel.Description.ServiceCredentials> 클래스는 Windows Communication Foundation (WCF) 보안 확장성 주 진입점입니다. 이러한 자격 증명 클래스는 API를 제공합니다. 이 API를 통해 애플리케이션 코드에서는 자격 증명 정보를 설정하고, 자격 증명 형식을 보안 토큰으로 변환할 수 있습니다. (*보안 토큰* 폼 SOAP 메시지 내부에서 자격 증명 정보를 전송 하는 데 사용 됩니다.) 이러한 자격 증명 클래스의 책임은 다음과 같은 두 가지 영역으로 나눠 볼 수 있습니다.  
   
-- 응용 프로그램에서 자격 증명 정보를 설정하도록 API 제공  
+- 애플리케이션에서 자격 증명 정보를 설정하도록 API 제공  
   
 - <xref:System.IdentityModel.Selectors.SecurityTokenManager> 구현을 위한 팩터리 역할 수행  
   
@@ -35,7 +35,7 @@ ms.locfileid: "64635652"
   
 - 새 사용자 지정 보안 토큰 형식을 추가해야 합니다.  
   
- 이 항목에서는 사용자 지정 클라이언트와 서비스 자격 증명을 구현하는 방법 및 응용 프로그램 코드로부터 이들을 사용하는 방법에 대해 설명합니다.  
+ 이 항목에서는 사용자 지정 클라이언트와 서비스 자격 증명을 구현하는 방법 및 애플리케이션 코드로부터 이들을 사용하는 방법에 대해 설명합니다.  
   
 ## <a name="first-in-a-series"></a>시리즈의 첫 번째 단계  
  사용자 지정 자격 증명 클래스를 만드는 이므로 첫 번째 단계만에 프로 비전 하는 자격 증명, 보안 토큰 serialization 또는 인증에 대 한 WCF 동작을 변경 하려면 자격 증명을 사용자 지정에 대 한 이유는 합니다. 이 단원의 다른 항목에서는 사용자 지정 serializer 및 인증자를 만드는 방법에 대해 설명합니다. 이와 관련하여 사용자 지정 자격 증명 클래스를 만드는 것이 이 시리즈의 첫 번째 항목입니다. 후속 작업(사용자 지정 serializer 및 인증자 만들기)은 사용자 지정 자격 증명을 만든 이후에야 수행할 수 있습니다. 이 항목을 기초로 한 추가 항목은 다음과 같습니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "64635652"
 3. <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> 메서드를 재정의합니다. 이 메서드는 사용자 지정 클라이언트 자격 증명을 사용 하는 경우 WCF 보안 인프라에서 자동으로 호출 됩니다. 이 메서드는 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 클래스 구현의 인스턴스를 만들고 반환합니다.  
   
     > [!IMPORTANT]
-    >  <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> 메서드를 재정의하여 사용자 지정 보안 토큰 관리자를 만든다는 점이 중요합니다. <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>에서 파생된 보안 토큰 관리자는 <xref:System.IdentityModel.Selectors.SecurityTokenProvider>에서 파생된 사용자 지정 보안 토큰 공급자를 반환하여 실제 보안 토큰을 만들어야 합니다. 보안 토큰을 만들 때 이 방식을 따르지 않으면 <xref:System.ServiceModel.ChannelFactory> 개체를 캐시할 때(WCF 클라이언트 프록시의 기본 동작임) 응용 프로그램의 기능이 제대로 수행되지 않아 권한 상승 공격이 발생할 수 있습니다. 사용자 지정 자격 증명 개체는 <xref:System.ServiceModel.ChannelFactory>의 일부분으로 캐시됩니다. 그러나 사용자 지정 <xref:System.IdentityModel.Selectors.SecurityTokenManager>는 호출할 때마다 만들어지므로 토큰 생성 논리가 <xref:System.IdentityModel.Selectors.SecurityTokenManager>에 있는 한 보안 위협은 완화됩니다.  
+    >  <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> 메서드를 재정의하여 사용자 지정 보안 토큰 관리자를 만든다는 점이 중요합니다. <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>에서 파생된 보안 토큰 관리자는 <xref:System.IdentityModel.Selectors.SecurityTokenProvider>에서 파생된 사용자 지정 보안 토큰 공급자를 반환하여 실제 보안 토큰을 만들어야 합니다. 보안 토큰을 만들 때 이 방식을 따르지 않으면 <xref:System.ServiceModel.ChannelFactory> 개체를 캐시할 때(WCF 클라이언트 프록시의 기본 동작임) 애플리케이션의 기능이 제대로 수행되지 않아 권한 상승 공격이 발생할 수 있습니다. 사용자 지정 자격 증명 개체는 <xref:System.ServiceModel.ChannelFactory>의 일부분으로 캐시됩니다. 그러나 사용자 지정 <xref:System.IdentityModel.Selectors.SecurityTokenManager>는 호출할 때마다 만들어지므로 토큰 생성 논리가 <xref:System.IdentityModel.Selectors.SecurityTokenManager>에 있는 한 보안 위협은 완화됩니다.  
   
 4. <xref:System.ServiceModel.Description.ClientCredentials.CloneCore%2A> 메서드를 재정의합니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "64635652"
      [!code-csharp[c_CustomCredentials#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#2)]
      [!code-vb[c_CustomCredentials#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#2)]  
   
-#### <a name="to-use-a-custom-client-credentials-from-application-code"></a>응용 프로그램 코드로부터 사용자 지정 클라이언트 자격 증명을 사용하려면  
+#### <a name="to-use-a-custom-client-credentials-from-application-code"></a>애플리케이션 코드로부터 사용자 지정 클라이언트 자격 증명을 사용하려면  
   
 1. 서비스 인터페이스를 나타내는 생성된 클라이언트의 인스턴스를 만들거나 사용자가 통신하려고 하는 서비스를 가리키는 <xref:System.ServiceModel.ChannelFactory>의 인스턴스를 만듭니다.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "64635652"
      [!code-csharp[c_CustomCredentials#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#3)]
      [!code-vb[c_CustomCredentials#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#3)]  
   
- 이전 절차는 응용 프로그램 코드에서 클라이언트 자격 증명을 사용하는 방법을 보여 줍니다. 응용 프로그램 구성 파일을 사용 하 여 WCF 자격 증명을 구성할 수도 있습니다. 소스를 수정하고, 다시 컴파일하고, 다시 배포하지 않고도 응용 프로그램 매개 변수를 수정할 수 있기 때문에 종종 응용 프로그램 구성을 사용하는 것이 하드 코딩보다 좋습니다.  
+ 이전 절차는 애플리케이션 코드에서 클라이언트 자격 증명을 사용하는 방법을 보여 줍니다. 응용 프로그램 구성 파일을 사용 하 여 WCF 자격 증명을 구성할 수도 있습니다. 소스를 수정하고, 다시 컴파일하고, 다시 배포하지 않고도 애플리케이션 매개 변수를 수정할 수 있기 때문에 종종 애플리케이션 구성을 사용하는 것이 하드 코딩보다 좋습니다.  
   
  다음 절차에서는 사용자 지정 자격 증명을 구성하기 위해 지원을 제공하는 방법에 대해 설명합니다.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "64635652"
   
 1. <xref:System.ServiceModel.Configuration.ClientCredentialsElement>에서 파생된 새 클래스를 정의합니다.  
   
-2. 선택 사항입니다. 응용 프로그램 구성을 통해 노출하려고 하는 모든 추가 구성 매개 변수에 대한 속성을 추가합니다. 아래 예제에서는 이름이 `CreditCardNumber`인 속성 하나를 추가합니다.  
+2. 선택 사항입니다. 애플리케이션 구성을 통해 노출하려고 하는 모든 추가 구성 매개 변수에 대한 속성을 추가합니다. 아래 예제에서는 이름이 `CreditCardNumber`인 속성 하나를 추가합니다.  
   
 3. 구성 요소를 사용하여 만들어진 사용자 지정 클라이언트 자격 증명 클래스의 형식을 반환하려면 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.BehaviorType%2A> 속성을 재정의합니다.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "64635652"
   
  구성 처리기 클래스를 만든 후에 WCF 구성 프레임 워크를 통합할 수 있습니다. 이를 통해 다음 절차에서처럼 사용자 지정 클라이언트 자격 증명을 클라이언트 엔드포인트 동작 요소에서 사용할 수 있습니다.  
   
-#### <a name="to-register-and-use-a-custom-client-credentials-configuration-handler-in-the-application-configuration"></a>응용 프로그램 구성에서 사용자 지정 클라이언트 자격 증명 구성 처리기를 등록 및 사용하려면  
+#### <a name="to-register-and-use-a-custom-client-credentials-configuration-handler-in-the-application-configuration"></a>애플리케이션 구성에서 사용자 지정 클라이언트 자격 증명 구성 처리기를 등록 및 사용하려면  
   
 1. 추가 된 <`extensions`> 요소 및 <`behaviorExtensions`> 요소를 구성 파일입니다.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "64635652"
      [!code-csharp[c_CustomCredentials#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#5)]
      [!code-vb[c_CustomCredentials#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#5)]  
   
-#### <a name="to-use-custom-service-credentials-from-application-code"></a>응용 프로그램 코드로부터 사용자 지정 서비스 자격 증명을 사용하려면  
+#### <a name="to-use-custom-service-credentials-from-application-code"></a>애플리케이션 코드로부터 사용자 지정 서비스 자격 증명을 사용하려면  
   
 1. <xref:System.ServiceModel.ServiceHost>의 인스턴스를 만듭니다.  
   

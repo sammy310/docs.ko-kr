@@ -20,7 +20,7 @@ ms.locfileid: "67170950"
 > [!NOTE]
 > <xref:System.Xml.Xsl.XslTransform> 클래스는 .NET Framework 2.0에서 사용되지 않습니다. <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 XSLT(Extensible Stylesheet Language for Transformations) 변환을 수행할 수 있습니다. 자세한 내용은 [XslCompiledTransform 클래스 사용](using-the-xslcompiledtransform-class.md) 및 [XslTransform 클래스에서 마이그레이션](migrating-from-the-xsltransform-class.md)을 참조하세요.
 
-XSLT의 목표는 소스 XML 문서의 내용을 형식 또는 구조가 다른 문서로 변환하는 것입니다. 예를 들어, XML을 웹 사이트에서 사용하는 HTML로 변환하거나 응용 프로그램에서 필요한 필드만 포함하는 문서로 변환합니다. 이 변환 프로세스는 W3C(World Wide Web 컨소시엄) [XSLT 버전 1.0 권장 사항](https://www.w3.org/TR/1999/REC-xslt-19991116)으로 지정됩니다. .NET Framework에서는 <xref:System.Xml.Xsl> 네임스페이스에 있는 <xref:System.Xml.Xsl.XslTransform> 클래스가 이 사양의 기능을 구현한 XSLT 프로세서입니다. 여기에는 W3C XSLT 1.0 권장 사항에서 구현되지 않은 몇 가지 기능이 있습니다. 이 기능에 대해서는 [XslTransform 출력](outputs-from-an-xsltransform.md)을 참조하세요. 다음 그림은 .NET Framework의 변형 아키텍처를 보여 줍니다.
+XSLT의 목표는 소스 XML 문서의 내용을 형식 또는 구조가 다른 문서로 변환하는 것입니다. 예를 들어, XML을 웹 사이트에서 사용하는 HTML로 변환하거나 애플리케이션에서 필요한 필드만 포함하는 문서로 변환합니다. 이 변환 프로세스는 W3C(World Wide Web 컨소시엄) [XSLT 버전 1.0 권장 사항](https://www.w3.org/TR/1999/REC-xslt-19991116)으로 지정됩니다. .NET Framework에서는 <xref:System.Xml.Xsl> 네임스페이스에 있는 <xref:System.Xml.Xsl.XslTransform> 클래스가 이 사양의 기능을 구현한 XSLT 프로세서입니다. 여기에는 W3C XSLT 1.0 권장 사항에서 구현되지 않은 몇 가지 기능이 있습니다. 이 기능에 대해서는 [XslTransform 출력](outputs-from-an-xsltransform.md)을 참조하세요. 다음 그림은 .NET Framework의 변형 아키텍처를 보여 줍니다.
 
 ## <a name="overview"></a>개요
 
@@ -35,7 +35,7 @@ XSLT 권장 사항에서는 XML 문서의 일부를 선택하는 데 XPath(XML P
 |<xref:System.Xml.XPath.XPathNavigator>|XPath 쿼리 지원과 함께 저장소에 대한 커서 유형의 탐색 모델을 제공하는 API입니다. 내부 저장소에 대한 편집은 제공하지 않습니다. 편집이 필요하면 <xref:System.Xml.XmlDocument> 클래스를 사용합니다.|
 |<xref:System.Xml.XPath.IXPathNavigable>|저장소에 대한 `CreateNavigator`에 <xref:System.Xml.XPath.XPathNavigator> 메서드를 제공하는 인터페이스입니다.|
 |<xref:System.Xml.XmlDocument>|이 문서를 편집할 수 있습니다. XSLT 변형이 필요한 문서 편집 시나리오를 허용하여 <xref:System.Xml.XPath.IXPathNavigable>을 구현합니다. 자세한 내용은 [XslTransform에 대한 XmlDocument 입력](xmldocument-input-to-xsltransform.md)을 참조하세요.|
-|<xref:System.Xml.XmlDataDocument>|<xref:System.Xml.XmlDocument>에서 파생됩니다. <xref:System.Data.DataSet>에서 지정된 매핑에 따라 XML 문서 내의 구조화된 데이터 저장소를 최적화하는 <xref:System.Data.DataSet>을 사용하여 관계형 데이터와 XML 데이터를 연결합니다. 데이터베이스에서 검색된 관계형 데이터에 대해 XSLT 변형이 수행될 수 있는 시나리오를 허용하여 <xref:System.Xml.XPath.IXPathNavigable>을 구현합니다. 자세한 내용은 [XML과 관계형 데이터 및 ADO.NET의 통합](xml-integration-with-relational-data-and-adonet.md)을 참조하세요.|
+|<xref:System.Xml.XmlDataDocument>|<xref:System.Xml.XmlDocument>에서 파생됩니다. <xref:System.Data.DataSet>에서 지정된 매핑에 따라 XML 문서 내의 구조화된 데이터 스토리지를 최적화하는 <xref:System.Data.DataSet>을 사용하여 관계형 데이터와 XML 데이터를 연결합니다. 데이터베이스에서 검색된 관계형 데이터에 대해 XSLT 변형이 수행될 수 있는 시나리오를 허용하여 <xref:System.Xml.XPath.IXPathNavigable>을 구현합니다. 자세한 내용은 [XML과 관계형 데이터 및 ADO.NET의 통합](xml-integration-with-relational-data-and-adonet.md)을 참조하세요.|
 |<xref:System.Xml.XPath.XPathDocument>|이 클래스는 <xref:System.Xml.Xsl.XslTransform> 처리와 XPath 쿼리를 위해 최적화되었으며 고성능의 읽기 전용 캐시를 제공합니다. <xref:System.Xml.XPath.IXPathNavigable>을 구현하며 XSLT 변형에 사용하는 기본 설정 저장소입니다.|
 |<xref:System.Xml.XPath.XPathNodeIterator>|XPath 노드 집합을 탐색할 수 있게 합니다. <xref:System.Xml.XPath.XPathNavigator>에서 모든 XPath 선택 메서드는 <xref:System.Xml.XPath.XPathNodeIterator>를 반환합니다. 동일한 저장소에 대해 각각 선택된 노드 집합을 나타내는 여러 <xref:System.Xml.XPath.XPathNodeIterator> 개체를 만들 수 있습니다.|
 

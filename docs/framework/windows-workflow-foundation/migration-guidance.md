@@ -14,7 +14,7 @@ ms.locfileid: "68796808"
   
 - WF3은 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서 완전히 지원되는 부분입니다.  
   
-- WF3 응용 프로그램은 수정 없이 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서 실행되며 계속해서 완전히 지원됩니다.  
+- WF3 애플리케이션은 수정 없이 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서 실행되며 계속해서 완전히 지원됩니다.  
   
 - 새 WF3 응용 프로그램을 만들 수 있으며 Visual Studio 2012에서 기존 응용 프로그램을 편집할 수 있으며 완전히 지원 됩니다.  
   

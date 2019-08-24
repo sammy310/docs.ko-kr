@@ -10,13 +10,13 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61747773"
 ---
 # <a name="standard-endpoints"></a>표준 엔드포인트
-엔드포인트는 주소, 바인딩 및 계약을 지정하여 정의됩니다. 이외에도 엔드포인트에 설정할 수 있는 매개 변수에는 동작 구성, 헤더 및 수신 대기 URI가 있습니다.  일부 엔드포인트 유형의 경우 이러한 값이 변경되지 않습니다. 예를 들어 메타데이터 교환 엔드포인트는 항상 <xref:System.ServiceModel.Description.IMetadataExchange> 계약을 사용합니다. <xref:System.ServiceModel.Description.WebHttpEndpoint>와 같은 다른 엔드포인트에는 항상 지정된 엔드포인트 동작이 필요합니다. 일반적으로 사용되는 엔드포인트 속성을 기본값으로 적용하면 엔드포인트의 유용성이 향상될 수 있습니다. 개발자는 표준 엔드포인트를 사용하여 기본값을 갖거나 하나 이상의 엔드포인트 속성이 변경되지 않는 엔드포인트를 정의할 수 있습니다.  이러한 엔드포인트를 사용하면 정적 상태에 대한 정보를 지정하지 않고도 엔드포인트를 사용할 수 있습니다. 표준 엔드포인트는 인프라 및 응용 프로그램 엔드포인트로 사용될 수 있습니다.  
+엔드포인트는 주소, 바인딩 및 계약을 지정하여 정의됩니다. 이외에도 엔드포인트에 설정할 수 있는 매개 변수에는 동작 구성, 헤더 및 수신 대기 URI가 있습니다.  일부 엔드포인트 유형의 경우 이러한 값이 변경되지 않습니다. 예를 들어 메타데이터 교환 엔드포인트는 항상 <xref:System.ServiceModel.Description.IMetadataExchange> 계약을 사용합니다. <xref:System.ServiceModel.Description.WebHttpEndpoint>와 같은 다른 엔드포인트에는 항상 지정된 엔드포인트 동작이 필요합니다. 일반적으로 사용되는 엔드포인트 속성을 기본값으로 적용하면 엔드포인트의 유용성이 향상될 수 있습니다. 개발자는 표준 엔드포인트를 사용하여 기본값을 갖거나 하나 이상의 엔드포인트 속성이 변경되지 않는 엔드포인트를 정의할 수 있습니다.  이러한 엔드포인트를 사용하면 정적 상태에 대한 정보를 지정하지 않고도 엔드포인트를 사용할 수 있습니다. 표준 엔드포인트는 인프라 및 애플리케이션 엔드포인트로 사용될 수 있습니다.  
   
 ## <a name="infrastructure-endpoints"></a>인프라 엔드포인트  
  서비스에서는 서비스 작성자가 명시적으로 구현하지 않은 일부 속성이 있는 엔드포인트를 노출할 수 있습니다. 예를 들어 메타데이터 교환 엔드포인트에서 <xref:System.ServiceModel.Description.IMetadataExchange> 계약을 노출하지만 해당 인프라가 서비스 작성자가 아닌 WCF에 의해 구현됩니다. 이러한 인프라는 하나 이상의 엔드포인트 속성에 대해 기본값을 가지며, 이러한 속성의 일부는 변경할 수 없습니다. 메타데이터 교환 엔드포인트의 <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A> 속성은 <xref:System.ServiceModel.Description.IMetadataExchange>이어야 하는 반면 바인딩과 같은 다른 속성은 개발자가 제공할 수 있습니다. 인프라 엔드포인트는 <xref:System.ServiceModel.Description.ServiceEndpoint.IsSystemEndpoint%2A> 속성을 `true`로 설정하여 식별됩니다.  
   
-## <a name="application-endpoints"></a>응용 프로그램 엔드포인트  
- 응용 프로그램 개발자는 주소, 바인딩 또는 계약에 대해 기본값을 지정하는 고유한 표준 엔드포인트를 정의할 수 있습니다. 표준 엔드포인트는 <xref:System.ServiceModel.Description.ServiceEndpoint>에서 클래스를 파생시킨 후 적절한 엔드포인트 속성을 설정하여 정의합니다. 속성에 변경 가능한 기본값을 제공할 수 있지만 일부 다른 속성은 변경할 수 없는 정적 값을 갖습니다. 다음 예제에서는 표준 엔드포인트를 구현하는 방법을 보여 줍니다.  
+## <a name="application-endpoints"></a>애플리케이션 엔드포인트  
+ 애플리케이션 개발자는 주소, 바인딩 또는 계약에 대해 기본값을 지정하는 고유한 표준 엔드포인트를 정의할 수 있습니다. 표준 엔드포인트는 <xref:System.ServiceModel.Description.ServiceEndpoint>에서 클래스를 파생시킨 후 적절한 엔드포인트 속성을 설정하여 정의합니다. 속성에 변경 가능한 기본값을 제공할 수 있지만 일부 다른 속성은 변경할 수 없는 정적 값을 갖습니다. 다음 예제에서는 표준 엔드포인트를 구현하는 방법을 보여 줍니다.  
   
 ```csharp
 public class CustomEndpoint : ServiceEndpoint

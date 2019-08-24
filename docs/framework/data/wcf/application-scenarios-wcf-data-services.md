@@ -1,5 +1,5 @@
 ---
-title: 응용 프로그램 시나리오(WCF Data Services)
+title: 애플리케이션 시나리오(WCF Data Services)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, learn more
@@ -12,7 +12,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61793559"
 ---
-# <a name="application-scenarios-wcf-data-services"></a>응용 프로그램 시나리오(WCF Data Services)
+# <a name="application-scenarios-wcf-data-services"></a>애플리케이션 시나리오(WCF Data Services)
 
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 핵심 시나리오 집합으로 데이터 제공 및 사용에 대 한 지원 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드 합니다. 이 항목에서는 이 시나리오와 관련된 항목으로 연결됩니다.
 
@@ -30,21 +30,21 @@ ms.locfileid: "61793559"
 
 - [Data Services 공급자](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
 
-.NET Framework 기반 클라이언트 응용 프로그램에서 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드를 사용합니다.
+.NET Framework 기반 클라이언트 애플리케이션에서 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드를 사용합니다.
 - [빠른 시작](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
 
 - [클라이언트 애플리케이션에서 데이터 서비스 사용](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)
 
 - [WCF Data Services 클라이언트 라이브러리](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 
-Silverlight 기반 클라이언트 응용 프로그램에서 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드를 사용합니다.
+Silverlight 기반 클라이언트 애플리케이션에서 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드를 사용합니다.
 - [WCF Data Services(Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))
 
 - [비동기 작업](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)
 
 - [방법: 컨트롤 (Silverlight 클라이언트)에 데이터 서비스 데이터에 바인딩](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee681614(v=vs.103))
 
-AJAX 기반 클라이언트 응용 프로그램에서 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드를 사용합니다.
+AJAX 기반 클라이언트 애플리케이션에서 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드를 사용합니다.
 - [클라이언트 애플리케이션에서 데이터 서비스 사용](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)
 
 - [OData: URI 규칙](https://go.microsoft.com/fwlink/?LinkId=185564)
@@ -58,7 +58,7 @@ AJAX 기반 클라이언트 응용 프로그램에서 [!INCLUDE[ssODataShort](..
 
 - [WCF Data Services 클라이언트 라이브러리](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 
-클라이언트의 대기 시간 문제를 방지하기 위해 비동기적으로 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드를 사용하는 .NET Framework 기반 클라이언트 응용 프로그램을 만듭니다.
+클라이언트의 대기 시간 문제를 방지하기 위해 비동기적으로 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드를 사용하는 .NET Framework 기반 클라이언트 애플리케이션을 만듭니다.
 - [방법: 비동기 데이터 서비스 쿼리 실행](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)
 
 - [비동기 작업](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)

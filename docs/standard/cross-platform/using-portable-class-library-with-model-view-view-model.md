@@ -23,7 +23,7 @@ ms.locfileid: "67504669"
 
 [!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
 
- MVVM은 내부 비즈니스 논리에서 사용자 인터페이스를 분리하는 응용 프로그램 패턴입니다. Visual Studio 2012의 이식 가능한 클래스 라이브러리 프로젝트에서 모델 및 보기 모델 클래스를 구현 하 고 다양 한 플랫폼에 대 한 사용자 지정 된 뷰를 만들 수 있습니다. 이 접근 방식을 사용하면 한 번만 데이터 모델과 비즈니스 논리를 작성하고, 다음 설명에서와 같이 .NET Framework, Silverlight, Windows Phone 및 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램의 해당 코드를 사용할 수 있습니다.
+ MVVM은 내부 비즈니스 논리에서 사용자 인터페이스를 분리하는 애플리케이션 패턴입니다. Visual Studio 2012의 이식 가능한 클래스 라이브러리 프로젝트에서 모델 및 보기 모델 클래스를 구현 하 고 다양 한 플랫폼에 대 한 사용자 지정 된 뷰를 만들 수 있습니다. 이 접근 방식을 사용하면 한 번만 데이터 모델과 비즈니스 논리를 작성하고, 다음 설명에서와 같이 .NET Framework, Silverlight, Windows Phone 및 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램의 해당 코드를 사용할 수 있습니다.
 
  ![플랫폼에서 MVVM 공유 어셈블리를 사용 하 여 이식 가능한 클래스 라이브러리를 보여 줍니다.](./media/using-portable-class-library-with-model-view-view-model/mvvm-share-assemblies-across-platforms.png)
 

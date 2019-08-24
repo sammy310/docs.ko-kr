@@ -12,7 +12,7 @@ ms.locfileid: "64665317"
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>작업 1: 새 Windows Presentation Foundation 애플리케이션 만들기
 이 태스크에서는 빈 Windows Presentation Foundation (WPF) 응용 프로그램을 WPF 응용 프로그램에 대 한 Visual Studio 템플릿을 사용 하 여 만들고 적절 한 참조를 추가 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 워크플로 어셈블리입니다.  
   
-### <a name="to-create-the-wpf-application-project"></a>WPF 응용 프로그램 프로젝트를 만들려면  
+### <a name="to-create-the-wpf-application-project"></a>WPF 애플리케이션 프로젝트를 만들려면  
   
 1. Visual Studio를 열고 고는 **파일** 메뉴에서 **새로 만들기**를 클릭 하 고 **프로젝트**.  
   

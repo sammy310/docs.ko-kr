@@ -57,7 +57,7 @@ ms.locfileid: "64626436"
   
      [!code-vb[DLinqWalk2VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#3)]  
   
-2. F5 키를 눌러 응용 프로그램을 디버깅합니다.  
+2. F5 키를 눌러 애플리케이션을 디버깅합니다.  
   
      두 이름이 메시지 상자에 표시되며 콘솔 창에는 생성된 SQL 코드가 표시됩니다.  
   
@@ -78,13 +78,13 @@ ms.locfileid: "64626436"
   
      [!code-vb[DLinqWalk2VB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#5)]  
   
-3. F5 키를 눌러 응용 프로그램을 디버깅합니다.  
+3. F5 키를 눌러 애플리케이션을 디버깅합니다.  
   
      콘솔 창 출력은 다음과 같습니다.  
   
      `ID=WHITC`  
   
-4. 콘솔 창에서 Enter 키를 눌러 응용 프로그램을 닫습니다.  
+4. 콘솔 창에서 Enter 키를 눌러 애플리케이션을 닫습니다.  
   
 5. 에 **파일** 메뉴에서 클릭 **모두 저장** 이 응용 프로그램을 저장 하려는 경우.  
   

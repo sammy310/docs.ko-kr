@@ -24,7 +24,7 @@ ms.lasthandoff: 07/10/2019
 ms.locfileid: "67739352"
 ---
 # <a name="corpubpublish-coclass"></a>CorpubPublish Coclass
-응용 프로그램 도메인 및 프로세스에 대한 정보를 게시하기 위한 인터페이스를 제공합니다.  
+애플리케이션 도메인 및 프로세스에 대한 정보를 게시하기 위한 인터페이스를 제공합니다.  
   
 ## <a name="syntax"></a>구문  
   

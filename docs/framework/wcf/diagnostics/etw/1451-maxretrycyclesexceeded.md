@@ -17,7 +17,7 @@ ms.locfileid: "61781955"
 |ID|1451|  
 |키워드|할당량|  
 |수준|Error|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
 ## <a name="description"></a>설명  
  이 이벤트는 최대 재시도 주기를 초과할 때 내보내집니다.  

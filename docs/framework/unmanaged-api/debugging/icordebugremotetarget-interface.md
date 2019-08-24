@@ -24,7 +24,7 @@ ms.lasthandoff: 07/10/2019
 ms.locfileid: "67744651"
 ---
 # <a name="icordebugremotetarget-interface"></a>ICorDebugRemoteTarget 인터페이스
-개발자가 CLR(공용 언어 런타임) 환경에서 Silverlight 기반 응용 프로그램을 디버깅하는 데 사용할 수 있는 메서드를 제공합니다.  
+개발자가 CLR(공용 언어 런타임) 환경에서 Silverlight 기반 애플리케이션을 디버깅하는 데 사용할 수 있는 메서드를 제공합니다.  
   
 ## <a name="syntax"></a>구문  
   

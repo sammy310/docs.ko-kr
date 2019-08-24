@@ -16,9 +16,9 @@ ms.locfileid: "65634167"
 
 관계형 데이터베이스에서 기본 키는 항상 고유한 값이 들어 있는 열 또는 열의 조합입니다. 기본 키 값을 알면 해당 값이 있는 행을 찾을 수 있습니다. SQL Server, Oracle 및 Microsoft Access/Jet 등과 같은 관계형 데이터베이스 엔진은 기본 키로 지정할 수 있는 자동 증분 열의 작성을 지원합니다. 이러한 값은 서버에 의해 행으로 생성되어 테이블에 추가됩니다. 이를 위해서는 SQL Server에서는 열의 identity 속성을 설정하고, Oracle에서는 시퀀스를 만들고, Microsoft Access에서는 AutoNumber 열을 만듭니다.
 
-또한 <xref:System.Data.DataColumn>을 사용하고 <xref:System.Data.DataColumn.AutoIncrement%2A> 속성을 true로 설정하면 자동으로 증분하는 값을 생성할 수도 있습니다. 하지만 여러 클라이언트 응용 프로그램이 개별적으로 자동 증분 값을 생성하면 <xref:System.Data.DataTable>의 개별 인스턴스에서 중복되는 값이 생길 수 있습니다. 따라서 서버가 자동 증분 값을 생성하도록 하면 삽입된 각 행에 대해 생성되는 값을 각 사용자가 검색할 수 있도록 할 때 발생할 수 있는 충돌을 방지할 수 있습니다.
+또한 <xref:System.Data.DataColumn>을 사용하고 <xref:System.Data.DataColumn.AutoIncrement%2A> 속성을 true로 설정하면 자동으로 증분하는 값을 생성할 수도 있습니다. 하지만 여러 클라이언트 애플리케이션이 개별적으로 자동 증분 값을 생성하면 <xref:System.Data.DataTable>의 개별 인스턴스에서 중복되는 값이 생길 수 있습니다. 따라서 서버가 자동 증분 값을 생성하도록 하면 삽입된 각 행에 대해 생성되는 값을 각 사용자가 검색할 수 있도록 할 때 발생할 수 있는 충돌을 방지할 수 있습니다.
 
-`Update`의 `DataAdapter` 메서드 호출 도중 데이터베이스는 데이터를 출력 매개 변수로, 또는 INSERT 문과 동일한 배치에서 실행되는 SELECT 문의 결과 집합 중 첫 번째 반환되는 레코드로 ADO.NET 응용 프로그램에 다시 보낼 수 있습니다. ADO.NET에서는 이러한 값을 검색하여 업데이트되는 <xref:System.Data.DataRow>의 해당 열을 업데이트할 수 있습니다.
+`Update`의 `DataAdapter` 메서드 호출 도중 데이터베이스는 데이터를 출력 매개 변수로, 또는 INSERT 문과 동일한 배치에서 실행되는 SELECT 문의 결과 집합 중 첫 번째 반환되는 레코드로 ADO.NET 애플리케이션에 다시 보낼 수 있습니다. ADO.NET에서는 이러한 값을 검색하여 업데이트되는 <xref:System.Data.DataRow>의 해당 열을 업데이트할 수 있습니다.
 
 Microsoft Access Jet 데이터베이스 엔진과 같은 일부 데이터베이스에서는 출력 매개 변수를 지원하지 않으며 하나의 배치에서 여러 문을 처리할 수 없습니다. Jet 데이터베이스 엔진으로 작업하는 경우 `RowUpdated`의 `DataAdapter` 이벤트에 대한 이벤트 처리기에서 별도의 SELECT 명령을 실행하여 삽입된 행에 대해 생성되는 새 AutoNumber 값을 검색할 수 있습니다.
 

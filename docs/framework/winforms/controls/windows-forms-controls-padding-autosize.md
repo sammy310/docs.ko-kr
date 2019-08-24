@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
 ms.openlocfilehash: 997db37369e52a024b53254117291a1e31555487
 ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65211344"
 ---
 # <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>연습: Padding, Margin 및 AutoSize 속성을 사용하여 Windows Forms 컨트롤 레이아웃
 
-폼의 정확한 컨트롤 배치는 많은 응용 프로그램에서 우선 순위가 높습니다. 합니다 **Windows Forms 디자이너** Visual Studio에서 여러 레이아웃 도구를 제공이 작업을 수행 합니다. 가장 중요 한 세 가지는 <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, 및 <xref:System.Windows.Forms.Control.AutoSize%2A> 속성을 모든 Windows Forms 컨트롤에 있는 합니다.
+폼의 정확한 컨트롤 배치는 많은 애플리케이션에서 우선 순위가 높습니다. 합니다 **Windows Forms 디자이너** Visual Studio에서 여러 레이아웃 도구를 제공이 작업을 수행 합니다. 가장 중요 한 세 가지는 <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, 및 <xref:System.Windows.Forms.Control.AutoSize%2A> 속성을 모든 Windows Forms 컨트롤에 있는 합니다.
 
  <xref:System.Windows.Forms.Control.Margin%2A> 속성은 다른 컨트롤을 컨트롤의 테두리에서 지정된 거리에 유지하는 컨트롤 주위의 공간을 정의합니다.
 
@@ -124,7 +124,7 @@ ms.locfileid: "65211344"
 
 4. 다른 끌어 <xref:System.Windows.Forms.Button> 에서 제어 합니다 **도구 상자** 폼입니다.
 
-5. 변경 된 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Text%2A> 속성을 "**이 단추가 텍스트 속성에 대 한 긴 문자열.**"
+5. 변경 된 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Text%2A> 속성을 "**이 단추가 텍스트 속성에 대 한 긴 문자열.** "
 
      변경 내용을 커밋하는 경우는 <xref:System.Windows.Forms.Button> 컨트롤 크기가 조정 되지 않습니다 자체 및 컨트롤의 오른쪽 가장자리에서 텍스트가 잘립니다.
 
@@ -142,7 +142,7 @@ ms.locfileid: "65211344"
 
 10. 설정 된 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Anchor%2A> 속성을 <xref:System.Windows.Forms.AnchorStyles.Right>, <xref:System.Windows.Forms.AnchorStyles.Bottom>합니다.
 
-11. 변경 된 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Text%2A> 속성을 "**이 단추가 텍스트 속성에 대 한 긴 문자열.**"
+11. 변경 된 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Text%2A> 속성을 "**이 단추가 텍스트 속성에 대 한 긴 문자열.** "
 
      변경 내용을 커밋하는 경우는 <xref:System.Windows.Forms.Button> 컨트롤 왼쪽 방향으로 크기를 조정 합니다. 일반적으로 자동 크기 조정 반대 방향으로 컨트롤의 크기가 늘어납니다 해당 <xref:System.Windows.Forms.Control.Anchor%2A> 속성을 설정 합니다.
 
