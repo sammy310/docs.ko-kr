@@ -13,20 +13,20 @@
       href: linq-and-ado-net.md
     - name: .NET Framework 데이터 공급자
       href: data-providers.md
-    - name: ADO.NET 데이터 집합
+    - name: ADO.NET 데이터 세트
       href: ado-net-datasets.md
     - name: ADO.NET에서 Side-by-Side 실행
       href: side-by-side-execution.md
     - name: ADO.NET 코드 예제
       href: ado-net-code-examples.md
-- name: ADO.NET 응용 프로그램 보안
+- name: ADO.NET 애플리케이션 보안
   href: securing-ado-net-applications.md
   items:
     - name: 보안 개요
       href: security-overview.md
     - name: 보안 데이터 액세스
       href: secure-data-access.md
-    - name: 안전한 클라이언트 응용 프로그램
+    - name: 안전한 클라이언트 애플리케이션
       href: secure-client-applications.md
     - name: 코드 액세스 보안 및 ADO.NET
       href: code-access-security.md
@@ -100,7 +100,7 @@
           href: populating-a-dataset-from-a-dataadapter.md
         - name: DataAdapter 매개 변수
           href: dataadapter-parameters.md
-        - name: 데이터 집합에 기존 제약 조건 추가
+        - name: 데이터 세트에 기존 제약 조건 추가
           href: adding-existing-constraints-to-a-dataset.md
         - name: DataAdapter DataTable 및 DataColumn 매핑
           href: dataadapter-datatable-and-datacolumn-mappings.md
@@ -173,7 +173,7 @@
           items:
             - name: LINQ to DataSet 개요
               href: linq-to-dataset-overview.md
-            - name: 데이터를 데이터 집합에 로드
+            - name: 데이터를 데이터 세트에 로드
               href: loading-data-into-a-dataset.md
             - name: 샘플 데이터베이스 다운로드
               href: downloading-sample-databases-linq-to-dataset.md
@@ -324,7 +324,7 @@
           href: ref-cursor-parameters-in-an-oracledatareader.md
         - name: OracleDataReader를 사용하여 여러 Multiple REF CURSOR에서 데이터 검색
           href: retrieving-data-from-multiple-ref-cursors.md
-        - name: 하나 이상의 REF CURSOR를 사용하여 데이터 집합 필터링
+        - name: 하나 이상의 REF CURSOR를 사용하여 데이터 세트 필터링
           href: filling-a-dataset-using-one-or-more-ref-cursors.md
     - name: OracleType
       href: oracletypes.md

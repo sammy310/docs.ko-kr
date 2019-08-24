@@ -9,10 +9,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61957075"
 ---
-# <a name="serviceappdomain"></a><span data-ttu-id="ecfed-102">ServiceAppDomain</span><span class="sxs-lookup"><span data-stu-id="ecfed-102">ServiceAppDomain</span></span>
-<span data-ttu-id="ecfed-103">서비스를 응용 프로그램 도메인에 매핑합니다.</span><span class="sxs-lookup"><span data-stu-id="ecfed-103">Maps a service to an application domain.</span></span>  
+# <a name="serviceappdomain"></a><span data-ttu-id="4d885-102">ServiceAppDomain</span><span class="sxs-lookup"><span data-stu-id="4d885-102">ServiceAppDomain</span></span>
+<span data-ttu-id="4d885-103">서비스를 애플리케이션 도메인에 매핑합니다.</span><span class="sxs-lookup"><span data-stu-id="4d885-103">Maps a service to an application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ecfed-104">구문</span><span class="sxs-lookup"><span data-stu-id="ecfed-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4d885-104">구문</span><span class="sxs-lookup"><span data-stu-id="4d885-104">Syntax</span></span>  
   
 ```csharp
 class ServiceAppDomain  
@@ -22,30 +22,30 @@ class ServiceAppDomain
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="ecfed-105">메서드</span><span class="sxs-lookup"><span data-stu-id="ecfed-105">Methods</span></span>  
- <span data-ttu-id="ecfed-106">ServiceAppDomain 클래스는 메서드를 정의하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ecfed-106">The ServiceAppDomain class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="4d885-105">메서드</span><span class="sxs-lookup"><span data-stu-id="4d885-105">Methods</span></span>  
+ <span data-ttu-id="4d885-106">ServiceAppDomain 클래스는 메서드를 정의하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4d885-106">The ServiceAppDomain class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="ecfed-107">속성</span><span class="sxs-lookup"><span data-stu-id="ecfed-107">Properties</span></span>  
- <span data-ttu-id="ecfed-108">ServiceAppDomain 클래스에는 다음 속성이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ecfed-108">The ServiceAppDomain class has the following properties:</span></span>  
+## <a name="properties"></a><span data-ttu-id="4d885-107">속성</span><span class="sxs-lookup"><span data-stu-id="4d885-107">Properties</span></span>  
+ <span data-ttu-id="4d885-108">ServiceAppDomain 클래스에는 다음 속성이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4d885-108">The ServiceAppDomain class has the following properties:</span></span>  
   
-### <a name="ref"></a><span data-ttu-id="ecfed-109">ref</span><span class="sxs-lookup"><span data-stu-id="ecfed-109">ref</span></span>  
- <span data-ttu-id="ecfed-110">데이터 형식: 서비스</span><span class="sxs-lookup"><span data-stu-id="ecfed-110">Data type: Service</span></span>  
-<span data-ttu-id="ecfed-111">한정자: Key</span><span class="sxs-lookup"><span data-stu-id="ecfed-111">Qualifiers: Key</span></span>  
+### <a name="ref"></a><span data-ttu-id="4d885-109">ref</span><span class="sxs-lookup"><span data-stu-id="4d885-109">ref</span></span>  
+ <span data-ttu-id="4d885-110">데이터 형식: 서비스</span><span class="sxs-lookup"><span data-stu-id="4d885-110">Data type: Service</span></span>  
+<span data-ttu-id="4d885-111">한정자: Key</span><span class="sxs-lookup"><span data-stu-id="4d885-111">Qualifiers: Key</span></span>  
   
- <span data-ttu-id="ecfed-112">액세스 형식: 읽기 전용</span><span class="sxs-lookup"><span data-stu-id="ecfed-112">Access type: Read-only</span></span>  
+ <span data-ttu-id="4d885-112">액세스 형식: 읽기 전용</span><span class="sxs-lookup"><span data-stu-id="4d885-112">Access type: Read-only</span></span>  
   
- <span data-ttu-id="ecfed-113">이 응용 프로그램 도메인의 서비스입니다.</span><span class="sxs-lookup"><span data-stu-id="ecfed-113">The service of this application domain.</span></span>  
+ <span data-ttu-id="4d885-113">이 애플리케이션 도메인의 서비스입니다.</span><span class="sxs-lookup"><span data-stu-id="4d885-113">The service of this application domain.</span></span>  
   
-### <a name="ref"></a><span data-ttu-id="ecfed-114">ref</span><span class="sxs-lookup"><span data-stu-id="ecfed-114">ref</span></span>  
- <span data-ttu-id="ecfed-115">데이터 형식: AppDomainInfo</span><span class="sxs-lookup"><span data-stu-id="ecfed-115">Data type: AppDomainInfo</span></span>  
-<span data-ttu-id="ecfed-116">한정자: Key</span><span class="sxs-lookup"><span data-stu-id="ecfed-116">Qualifiers: Key</span></span>  
+### <a name="ref"></a><span data-ttu-id="4d885-114">ref</span><span class="sxs-lookup"><span data-stu-id="4d885-114">ref</span></span>  
+ <span data-ttu-id="4d885-115">데이터 형식: AppDomainInfo</span><span class="sxs-lookup"><span data-stu-id="4d885-115">Data type: AppDomainInfo</span></span>  
+<span data-ttu-id="4d885-116">한정자: Key</span><span class="sxs-lookup"><span data-stu-id="4d885-116">Qualifiers: Key</span></span>  
   
- <span data-ttu-id="ecfed-117">액세스 형식: 읽기 전용</span><span class="sxs-lookup"><span data-stu-id="ecfed-117">Access type: Read-only</span></span>  
+ <span data-ttu-id="4d885-117">액세스 형식: 읽기 전용</span><span class="sxs-lookup"><span data-stu-id="4d885-117">Access type: Read-only</span></span>  
   
- <span data-ttu-id="ecfed-118">응용 프로그램 도메인의 속성을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="ecfed-118">Contains properties of the application domain.</span></span>  
+ <span data-ttu-id="4d885-118">애플리케이션 도메인의 속성을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="4d885-118">Contains properties of the application domain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ecfed-119">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ecfed-119">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4d885-119">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4d885-119">Requirements</span></span>  
   
-|<span data-ttu-id="ecfed-120">MOF</span><span class="sxs-lookup"><span data-stu-id="ecfed-120">MOF</span></span>|<span data-ttu-id="ecfed-121">Servicemodel.mof에 선언되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ecfed-121">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="4d885-120">MOF</span><span class="sxs-lookup"><span data-stu-id="4d885-120">MOF</span></span>|<span data-ttu-id="4d885-121">Servicemodel.mof에 선언되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4d885-121">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="ecfed-122">네임스페이스</span><span class="sxs-lookup"><span data-stu-id="ecfed-122">Namespace</span></span>|<span data-ttu-id="ecfed-123">root\ServiceModel에 정의되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ecfed-123">Defined in root\ServiceModel</span></span>|
+|<span data-ttu-id="4d885-122">네임스페이스</span><span class="sxs-lookup"><span data-stu-id="4d885-122">Namespace</span></span>|<span data-ttu-id="4d885-123">root\ServiceModel에 정의되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4d885-123">Defined in root\ServiceModel</span></span>|

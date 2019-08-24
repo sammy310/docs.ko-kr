@@ -280,7 +280,7 @@
           href: application-settings-attributes.md
         - name: 사용자 지정 컨트롤에 대한 애플리케이션 설정
           href: application-settings-for-custom-controls.md
-        - name: 응용 프로그램 설정 및 사용자 설정 사용
+        - name: 애플리케이션 설정 및 사용자 설정 사용
           href: using-application-settings-and-user-settings.md
           items:
             - name: '방법: 디자인 타임에 새 설정 만들기'
@@ -329,7 +329,7 @@
           href: how-to-add-data-to-the-clipboard.md
         - name: '방법: 클립보드에서 데이터 검색'
           href: how-to-retrieve-data-from-the-clipboard.md
-    - name: Windows Forms 응용 프로그램의 네트워킹
+    - name: Windows Forms 애플리케이션의 네트워킹
       href: networking-in-windows-forms-applications.md
     - name: Windows Forms 전역화
       href: globalizing-windows-forms.md
@@ -342,7 +342,7 @@
           href: bi-directional-support-for-windows-forms-applications.md
         - name: ImeMode 속성을 사용하여 전자 단어 표시
           href: display-of-asian-characters-with-the-imemode-property.md
-    - name: Windows Forms 및 관리되지 않는 응용 프로그램
+    - name: Windows Forms 및 관리되지 않는 애플리케이션
       href: windows-forms-and-unmanaged-applications.md
       items:
         - name: Windows Forms 및 관리되지 않는 애플리케이션 개요
@@ -355,7 +355,7 @@
       href: system-information-and-windows-forms.md
     - name: Windows Forms의 전원 관리
       href: power-management-in-windows-forms.md
-    - name: Windows Forms 응용 프로그램의 도움말 시스템
+    - name: Windows Forms 애플리케이션의 도움말 시스템
       href: help-systems-in-windows-forms-applications.md
     - name: Windows Forms 시각적 상속
       href: windows-forms-visual-inheritance.md

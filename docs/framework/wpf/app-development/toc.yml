@@ -91,7 +91,7 @@
           href: wpf-xaml-browser-applications-overview.md
         - name: WPF 호스트(PresentationHost.exe)
           href: wpf-host-presentationhost-exe.md
-        - name: .NET 응용 프로그램 배포를 지원하기 위한 Firefox 추가 기능
+        - name: .NET 애플리케이션 배포를 지원하기 위한 Firefox 추가 기능
           href: firefox-add-ons-to-support-net-application-deployment.md
         - name: 네이티브 WPF 브라우저 호스팅 지원 API
           href: native-wpf-browser-hosting-support-apis.md

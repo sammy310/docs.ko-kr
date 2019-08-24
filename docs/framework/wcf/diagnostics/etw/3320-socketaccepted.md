@@ -9,20 +9,20 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61595800"
 ---
-# <a name="3320---socketaccepted"></a><span data-ttu-id="b60bc-102">3320 - SocketAccepted</span><span class="sxs-lookup"><span data-stu-id="b60bc-102">3320 - SocketAccepted</span></span>
-## <a name="properties"></a><span data-ttu-id="b60bc-103">속성</span><span class="sxs-lookup"><span data-stu-id="b60bc-103">Properties</span></span>  
+# <a name="3320---socketaccepted"></a><span data-ttu-id="4511d-102">3320 - SocketAccepted</span><span class="sxs-lookup"><span data-stu-id="4511d-102">3320 - SocketAccepted</span></span>
+## <a name="properties"></a><span data-ttu-id="4511d-103">속성</span><span class="sxs-lookup"><span data-stu-id="4511d-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="b60bc-104">ID</span><span class="sxs-lookup"><span data-stu-id="b60bc-104">ID</span></span>|<span data-ttu-id="b60bc-105">3320</span><span class="sxs-lookup"><span data-stu-id="b60bc-105">3320</span></span>|  
-|<span data-ttu-id="b60bc-106">키워드</span><span class="sxs-lookup"><span data-stu-id="b60bc-106">Keywords</span></span>|<span data-ttu-id="b60bc-107">TCP</span><span class="sxs-lookup"><span data-stu-id="b60bc-107">TCP</span></span>|  
-|<span data-ttu-id="b60bc-108">수준</span><span class="sxs-lookup"><span data-stu-id="b60bc-108">Level</span></span>|<span data-ttu-id="b60bc-109">자세히</span><span class="sxs-lookup"><span data-stu-id="b60bc-109">Verbose</span></span>|  
-|<span data-ttu-id="b60bc-110">채널</span><span class="sxs-lookup"><span data-stu-id="b60bc-110">Channel</span></span>|<span data-ttu-id="b60bc-111">Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그</span><span class="sxs-lookup"><span data-stu-id="b60bc-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="4511d-104">ID</span><span class="sxs-lookup"><span data-stu-id="4511d-104">ID</span></span>|<span data-ttu-id="4511d-105">3320</span><span class="sxs-lookup"><span data-stu-id="4511d-105">3320</span></span>|  
+|<span data-ttu-id="4511d-106">키워드</span><span class="sxs-lookup"><span data-stu-id="4511d-106">Keywords</span></span>|<span data-ttu-id="4511d-107">TCP</span><span class="sxs-lookup"><span data-stu-id="4511d-107">TCP</span></span>|  
+|<span data-ttu-id="4511d-108">수준</span><span class="sxs-lookup"><span data-stu-id="4511d-108">Level</span></span>|<span data-ttu-id="4511d-109">자세히</span><span class="sxs-lookup"><span data-stu-id="4511d-109">Verbose</span></span>|  
+|<span data-ttu-id="4511d-110">채널</span><span class="sxs-lookup"><span data-stu-id="4511d-110">Channel</span></span>|<span data-ttu-id="4511d-111">Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그</span><span class="sxs-lookup"><span data-stu-id="4511d-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="b60bc-112">설명</span><span class="sxs-lookup"><span data-stu-id="b60bc-112">Description</span></span>  
- <span data-ttu-id="b60bc-113">이 이벤트는 소켓이 수락될 때 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="b60bc-113">This event is emitted when the socket is accepted.</span></span>  
+## <a name="description"></a><span data-ttu-id="4511d-112">설명</span><span class="sxs-lookup"><span data-stu-id="4511d-112">Description</span></span>  
+ <span data-ttu-id="4511d-113">이 이벤트는 소켓이 수락될 때 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="4511d-113">This event is emitted when the socket is accepted.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="b60bc-114">메시지</span><span class="sxs-lookup"><span data-stu-id="b60bc-114">Message</span></span>  
- <span data-ttu-id="b60bc-115">ListenerId:%1에서 SocketId:%2이(가) 수락되었습니다.</span><span class="sxs-lookup"><span data-stu-id="b60bc-115">ListenerId:%1 accepted SocketId:%2.</span></span>  
+## <a name="message"></a><span data-ttu-id="4511d-114">메시지</span><span class="sxs-lookup"><span data-stu-id="4511d-114">Message</span></span>  
+ <span data-ttu-id="4511d-115">ListenerId:%1에서 SocketId:%2이(가) 수락되었습니다.</span><span class="sxs-lookup"><span data-stu-id="4511d-115">ListenerId:%1 accepted SocketId:%2.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="b60bc-116">설명</span><span class="sxs-lookup"><span data-stu-id="b60bc-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="4511d-116">설명</span><span class="sxs-lookup"><span data-stu-id="4511d-116">Details</span></span>

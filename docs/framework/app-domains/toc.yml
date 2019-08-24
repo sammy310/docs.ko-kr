@@ -20,7 +20,7 @@
           href: assembly-placement.md
         - name: 어셈블리 및 Side-by-Side 실행
           href: assemblies-and-side-by-side-execution.md
-    - name: 응용 프로그램 도메인
+    - name: 애플리케이션 도메인
       href: application-domains.md
     - name: 애플리케이션 도메인 및 어셈블리 방법 항목
       href: application-domains-and-assemblies-how-to-topics.md

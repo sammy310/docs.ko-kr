@@ -9,20 +9,20 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 06/28/2019
 ms.locfileid: "67422128"
 ---
-# <a name="3312---messagereadbyencoder"></a><span data-ttu-id="44d8d-102">3312 - MessageReadByEncoder</span><span class="sxs-lookup"><span data-stu-id="44d8d-102">3312 - MessageReadByEncoder</span></span>
-## <a name="properties"></a><span data-ttu-id="44d8d-103">속성</span><span class="sxs-lookup"><span data-stu-id="44d8d-103">Properties</span></span>  
+# <a name="3312---messagereadbyencoder"></a><span data-ttu-id="19e38-102">3312 - MessageReadByEncoder</span><span class="sxs-lookup"><span data-stu-id="19e38-102">3312 - MessageReadByEncoder</span></span>
+## <a name="properties"></a><span data-ttu-id="19e38-103">속성</span><span class="sxs-lookup"><span data-stu-id="19e38-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="44d8d-104">ID</span><span class="sxs-lookup"><span data-stu-id="44d8d-104">ID</span></span>|<span data-ttu-id="44d8d-105">3312</span><span class="sxs-lookup"><span data-stu-id="44d8d-105">3312</span></span>|  
-|<span data-ttu-id="44d8d-106">키워드</span><span class="sxs-lookup"><span data-stu-id="44d8d-106">Keywords</span></span>|<span data-ttu-id="44d8d-107">채널</span><span class="sxs-lookup"><span data-stu-id="44d8d-107">Channel</span></span>|  
-|<span data-ttu-id="44d8d-108">수준</span><span class="sxs-lookup"><span data-stu-id="44d8d-108">Level</span></span>|<span data-ttu-id="44d8d-109">정보</span><span class="sxs-lookup"><span data-stu-id="44d8d-109">Information</span></span>|  
-|<span data-ttu-id="44d8d-110">채널</span><span class="sxs-lookup"><span data-stu-id="44d8d-110">Channel</span></span>|<span data-ttu-id="44d8d-111">Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그</span><span class="sxs-lookup"><span data-stu-id="44d8d-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="19e38-104">ID</span><span class="sxs-lookup"><span data-stu-id="19e38-104">ID</span></span>|<span data-ttu-id="19e38-105">3312</span><span class="sxs-lookup"><span data-stu-id="19e38-105">3312</span></span>|  
+|<span data-ttu-id="19e38-106">키워드</span><span class="sxs-lookup"><span data-stu-id="19e38-106">Keywords</span></span>|<span data-ttu-id="19e38-107">채널</span><span class="sxs-lookup"><span data-stu-id="19e38-107">Channel</span></span>|  
+|<span data-ttu-id="19e38-108">수준</span><span class="sxs-lookup"><span data-stu-id="19e38-108">Level</span></span>|<span data-ttu-id="19e38-109">정보</span><span class="sxs-lookup"><span data-stu-id="19e38-109">Information</span></span>|  
+|<span data-ttu-id="19e38-110">채널</span><span class="sxs-lookup"><span data-stu-id="19e38-110">Channel</span></span>|<span data-ttu-id="19e38-111">Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그</span><span class="sxs-lookup"><span data-stu-id="19e38-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="44d8d-112">설명</span><span class="sxs-lookup"><span data-stu-id="44d8d-112">Description</span></span>  
- <span data-ttu-id="44d8d-113">이 이벤트는 인코더가 메시지를 읽을 때 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="44d8d-113">This event is emitted when the message was read by the encoder.</span></span>  
+## <a name="description"></a><span data-ttu-id="19e38-112">설명</span><span class="sxs-lookup"><span data-stu-id="19e38-112">Description</span></span>  
+ <span data-ttu-id="19e38-113">이 이벤트는 인코더가 메시지를 읽을 때 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="19e38-113">This event is emitted when the message was read by the encoder.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="44d8d-114">메시지</span><span class="sxs-lookup"><span data-stu-id="44d8d-114">Message</span></span>  
- <span data-ttu-id="44d8d-115">인코더가 크기가 '%1'바이트인 메시지를 읽었습니다.</span><span class="sxs-lookup"><span data-stu-id="44d8d-115">A message with size '%1' bytes was read by the encoder.</span></span>  
+## <a name="message"></a><span data-ttu-id="19e38-114">메시지</span><span class="sxs-lookup"><span data-stu-id="19e38-114">Message</span></span>  
+ <span data-ttu-id="19e38-115">인코더가 크기가 '%1'바이트인 메시지를 읽었습니다.</span><span class="sxs-lookup"><span data-stu-id="19e38-115">A message with size '%1' bytes was read by the encoder.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="44d8d-116">설명</span><span class="sxs-lookup"><span data-stu-id="44d8d-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="19e38-116">설명</span><span class="sxs-lookup"><span data-stu-id="19e38-116">Details</span></span>

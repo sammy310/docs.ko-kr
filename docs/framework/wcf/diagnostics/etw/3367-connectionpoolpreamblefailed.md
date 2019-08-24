@@ -9,20 +9,20 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61951582"
 ---
-# <a name="3367---connectionpoolpreamblefailed"></a><span data-ttu-id="6a210-102">3367 - ConnectionPoolPreambleFailed</span><span class="sxs-lookup"><span data-stu-id="6a210-102">3367 - ConnectionPoolPreambleFailed</span></span>
-## <a name="properties"></a><span data-ttu-id="6a210-103">속성</span><span class="sxs-lookup"><span data-stu-id="6a210-103">Properties</span></span>  
+# <a name="3367---connectionpoolpreamblefailed"></a><span data-ttu-id="a1d27-102">3367 - ConnectionPoolPreambleFailed</span><span class="sxs-lookup"><span data-stu-id="a1d27-102">3367 - ConnectionPoolPreambleFailed</span></span>
+## <a name="properties"></a><span data-ttu-id="a1d27-103">속성</span><span class="sxs-lookup"><span data-stu-id="a1d27-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="6a210-104">ID</span><span class="sxs-lookup"><span data-stu-id="6a210-104">ID</span></span>|<span data-ttu-id="6a210-105">3367</span><span class="sxs-lookup"><span data-stu-id="6a210-105">3367</span></span>|  
-|<span data-ttu-id="6a210-106">키워드</span><span class="sxs-lookup"><span data-stu-id="6a210-106">Keywords</span></span>|<span data-ttu-id="6a210-107">채널</span><span class="sxs-lookup"><span data-stu-id="6a210-107">Channel</span></span>|  
-|<span data-ttu-id="6a210-108">수준</span><span class="sxs-lookup"><span data-stu-id="6a210-108">Level</span></span>|<span data-ttu-id="6a210-109">Error</span><span class="sxs-lookup"><span data-stu-id="6a210-109">Error</span></span>|  
-|<span data-ttu-id="6a210-110">채널</span><span class="sxs-lookup"><span data-stu-id="6a210-110">Channel</span></span>|<span data-ttu-id="6a210-111">Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석</span><span class="sxs-lookup"><span data-stu-id="6a210-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="a1d27-104">ID</span><span class="sxs-lookup"><span data-stu-id="a1d27-104">ID</span></span>|<span data-ttu-id="a1d27-105">3367</span><span class="sxs-lookup"><span data-stu-id="a1d27-105">3367</span></span>|  
+|<span data-ttu-id="a1d27-106">키워드</span><span class="sxs-lookup"><span data-stu-id="a1d27-106">Keywords</span></span>|<span data-ttu-id="a1d27-107">채널</span><span class="sxs-lookup"><span data-stu-id="a1d27-107">Channel</span></span>|  
+|<span data-ttu-id="a1d27-108">수준</span><span class="sxs-lookup"><span data-stu-id="a1d27-108">Level</span></span>|<span data-ttu-id="a1d27-109">Error</span><span class="sxs-lookup"><span data-stu-id="a1d27-109">Error</span></span>|  
+|<span data-ttu-id="a1d27-110">채널</span><span class="sxs-lookup"><span data-stu-id="a1d27-110">Channel</span></span>|<span data-ttu-id="a1d27-111">Microsoft-Windows-애플리케이션 서버-애플리케이션/분석</span><span class="sxs-lookup"><span data-stu-id="a1d27-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="6a210-112">설명</span><span class="sxs-lookup"><span data-stu-id="6a210-112">Description</span></span>  
- <span data-ttu-id="6a210-113">이 이벤트는 ConnectionPoolPreamble이 실패한 경우에 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="6a210-113">This event is emitted when the ConnectionPoolPreamble has failed.</span></span>  
+## <a name="description"></a><span data-ttu-id="a1d27-112">설명</span><span class="sxs-lookup"><span data-stu-id="a1d27-112">Description</span></span>  
+ <span data-ttu-id="a1d27-113">이 이벤트는 ConnectionPoolPreamble이 실패한 경우에 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="a1d27-113">This event is emitted when the ConnectionPoolPreamble has failed.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="6a210-114">메시지</span><span class="sxs-lookup"><span data-stu-id="6a210-114">Message</span></span>  
- <span data-ttu-id="6a210-115">ConnectionPoolPreambleFailed가 발생했습니다.</span><span class="sxs-lookup"><span data-stu-id="6a210-115">ConnectionPoolPreambleFailed.</span></span>  
+## <a name="message"></a><span data-ttu-id="a1d27-114">메시지</span><span class="sxs-lookup"><span data-stu-id="a1d27-114">Message</span></span>  
+ <span data-ttu-id="a1d27-115">ConnectionPoolPreambleFailed가 발생했습니다.</span><span class="sxs-lookup"><span data-stu-id="a1d27-115">ConnectionPoolPreambleFailed.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="6a210-116">설명</span><span class="sxs-lookup"><span data-stu-id="6a210-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="a1d27-116">설명</span><span class="sxs-lookup"><span data-stu-id="a1d27-116">Details</span></span>

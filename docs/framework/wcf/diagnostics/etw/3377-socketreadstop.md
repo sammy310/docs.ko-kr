@@ -9,20 +9,20 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61943324"
 ---
-# <a name="3377---socketreadstop"></a><span data-ttu-id="7b774-102">3377 - SocketReadStop</span><span class="sxs-lookup"><span data-stu-id="7b774-102">3377 - SocketReadStop</span></span>
-## <a name="properties"></a><span data-ttu-id="7b774-103">속성</span><span class="sxs-lookup"><span data-stu-id="7b774-103">Properties</span></span>  
+# <a name="3377---socketreadstop"></a><span data-ttu-id="bafcb-102">3377 - SocketReadStop</span><span class="sxs-lookup"><span data-stu-id="bafcb-102">3377 - SocketReadStop</span></span>
+## <a name="properties"></a><span data-ttu-id="bafcb-103">속성</span><span class="sxs-lookup"><span data-stu-id="bafcb-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="7b774-104">ID</span><span class="sxs-lookup"><span data-stu-id="7b774-104">ID</span></span>|<span data-ttu-id="7b774-105">3377</span><span class="sxs-lookup"><span data-stu-id="7b774-105">3377</span></span>|  
-|<span data-ttu-id="7b774-106">키워드</span><span class="sxs-lookup"><span data-stu-id="7b774-106">Keywords</span></span>|<span data-ttu-id="7b774-107">TCP</span><span class="sxs-lookup"><span data-stu-id="7b774-107">TCP</span></span>|  
-|<span data-ttu-id="7b774-108">수준</span><span class="sxs-lookup"><span data-stu-id="7b774-108">Level</span></span>|<span data-ttu-id="7b774-109">자세히</span><span class="sxs-lookup"><span data-stu-id="7b774-109">Verbose</span></span>|  
-|<span data-ttu-id="7b774-110">채널</span><span class="sxs-lookup"><span data-stu-id="7b774-110">Channel</span></span>|<span data-ttu-id="7b774-111">Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그</span><span class="sxs-lookup"><span data-stu-id="7b774-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="bafcb-104">ID</span><span class="sxs-lookup"><span data-stu-id="bafcb-104">ID</span></span>|<span data-ttu-id="bafcb-105">3377</span><span class="sxs-lookup"><span data-stu-id="bafcb-105">3377</span></span>|  
+|<span data-ttu-id="bafcb-106">키워드</span><span class="sxs-lookup"><span data-stu-id="bafcb-106">Keywords</span></span>|<span data-ttu-id="bafcb-107">TCP</span><span class="sxs-lookup"><span data-stu-id="bafcb-107">TCP</span></span>|  
+|<span data-ttu-id="bafcb-108">수준</span><span class="sxs-lookup"><span data-stu-id="bafcb-108">Level</span></span>|<span data-ttu-id="bafcb-109">자세히</span><span class="sxs-lookup"><span data-stu-id="bafcb-109">Verbose</span></span>|  
+|<span data-ttu-id="bafcb-110">채널</span><span class="sxs-lookup"><span data-stu-id="bafcb-110">Channel</span></span>|<span data-ttu-id="bafcb-111">Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그</span><span class="sxs-lookup"><span data-stu-id="bafcb-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="7b774-112">설명</span><span class="sxs-lookup"><span data-stu-id="7b774-112">Description</span></span>  
- <span data-ttu-id="7b774-113">이 이벤트는 SocketRead가 중지되면 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="7b774-113">This event is emitted with the SocketRead stop.</span></span>  
+## <a name="description"></a><span data-ttu-id="bafcb-112">설명</span><span class="sxs-lookup"><span data-stu-id="bafcb-112">Description</span></span>  
+ <span data-ttu-id="bafcb-113">이 이벤트는 SocketRead가 중지되면 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="bafcb-113">This event is emitted with the SocketRead stop.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="7b774-114">메시지</span><span class="sxs-lookup"><span data-stu-id="7b774-114">Message</span></span>  
- <span data-ttu-id="7b774-115">SocketId:%1이(가) '%3'에서 '%2'바이트를 읽었습니다.</span><span class="sxs-lookup"><span data-stu-id="7b774-115">SocketId:%1 read '%2' bytes read from '%3'.</span></span>  
+## <a name="message"></a><span data-ttu-id="bafcb-114">메시지</span><span class="sxs-lookup"><span data-stu-id="bafcb-114">Message</span></span>  
+ <span data-ttu-id="bafcb-115">SocketId:%1이(가) '%3'에서 '%2'바이트를 읽었습니다.</span><span class="sxs-lookup"><span data-stu-id="bafcb-115">SocketId:%1 read '%2' bytes read from '%3'.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="7b774-116">설명</span><span class="sxs-lookup"><span data-stu-id="7b774-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="bafcb-116">설명</span><span class="sxs-lookup"><span data-stu-id="bafcb-116">Details</span></span>

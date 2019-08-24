@@ -12,7 +12,7 @@
           href: how-to-generate-interop-assemblies-from-type-libraries.md
         - name: Interop 프로젝트 컴파일
           href: compiling-an-interop-project.md
-        - name: Interop 응용 프로그램 배포
+        - name: Interop 애플리케이션 배포
           href: deploying-an-interop-application.md
         - name: 'COM Interop 샘플: .NET 클라이언트 및 COM 서버'
           href: com-interop-sample-net-client-and-com-server.md

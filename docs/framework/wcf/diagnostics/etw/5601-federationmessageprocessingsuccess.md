@@ -9,20 +9,20 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61767431"
 ---
-# <a name="5601---federationmessageprocessingsuccess"></a><span data-ttu-id="a3ec8-102">5601 - FederationMessageProcessingSuccess</span><span class="sxs-lookup"><span data-stu-id="a3ec8-102">5601 - FederationMessageProcessingSuccess</span></span>
-## <a name="properties"></a><span data-ttu-id="a3ec8-103">속성</span><span class="sxs-lookup"><span data-stu-id="a3ec8-103">Properties</span></span>  
+# <a name="5601---federationmessageprocessingsuccess"></a><span data-ttu-id="8deeb-102">5601 - FederationMessageProcessingSuccess</span><span class="sxs-lookup"><span data-stu-id="8deeb-102">5601 - FederationMessageProcessingSuccess</span></span>
+## <a name="properties"></a><span data-ttu-id="8deeb-103">속성</span><span class="sxs-lookup"><span data-stu-id="8deeb-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="a3ec8-104">ID</span><span class="sxs-lookup"><span data-stu-id="a3ec8-104">ID</span></span>|<span data-ttu-id="a3ec8-105">5601</span><span class="sxs-lookup"><span data-stu-id="a3ec8-105">5601</span></span>|  
-|<span data-ttu-id="a3ec8-106">키워드</span><span class="sxs-lookup"><span data-stu-id="a3ec8-106">Keywords</span></span>|<span data-ttu-id="a3ec8-107">보안</span><span class="sxs-lookup"><span data-stu-id="a3ec8-107">Security</span></span>|  
-|<span data-ttu-id="a3ec8-108">수준</span><span class="sxs-lookup"><span data-stu-id="a3ec8-108">Level</span></span>|<span data-ttu-id="a3ec8-109">자세히</span><span class="sxs-lookup"><span data-stu-id="a3ec8-109">Verbose</span></span>|  
-|<span data-ttu-id="a3ec8-110">채널</span><span class="sxs-lookup"><span data-stu-id="a3ec8-110">Channel</span></span>|<span data-ttu-id="a3ec8-111">Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그</span><span class="sxs-lookup"><span data-stu-id="a3ec8-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="8deeb-104">ID</span><span class="sxs-lookup"><span data-stu-id="8deeb-104">ID</span></span>|<span data-ttu-id="8deeb-105">5601</span><span class="sxs-lookup"><span data-stu-id="8deeb-105">5601</span></span>|  
+|<span data-ttu-id="8deeb-106">키워드</span><span class="sxs-lookup"><span data-stu-id="8deeb-106">Keywords</span></span>|<span data-ttu-id="8deeb-107">보안</span><span class="sxs-lookup"><span data-stu-id="8deeb-107">Security</span></span>|  
+|<span data-ttu-id="8deeb-108">수준</span><span class="sxs-lookup"><span data-stu-id="8deeb-108">Level</span></span>|<span data-ttu-id="8deeb-109">자세히</span><span class="sxs-lookup"><span data-stu-id="8deeb-109">Verbose</span></span>|  
+|<span data-ttu-id="8deeb-110">채널</span><span class="sxs-lookup"><span data-stu-id="8deeb-110">Channel</span></span>|<span data-ttu-id="8deeb-111">Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그</span><span class="sxs-lookup"><span data-stu-id="8deeb-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="a3ec8-112">설명</span><span class="sxs-lookup"><span data-stu-id="a3ec8-112">Description</span></span>  
- <span data-ttu-id="a3ec8-113">이 이벤트는 페더레이션 메시지 처리가 성공한 경우에 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="a3ec8-113">This event is emitted when the federation message processing succeeded.</span></span>  
+## <a name="description"></a><span data-ttu-id="8deeb-112">설명</span><span class="sxs-lookup"><span data-stu-id="8deeb-112">Description</span></span>  
+ <span data-ttu-id="8deeb-113">이 이벤트는 페더레이션 메시지 처리가 성공한 경우에 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="8deeb-113">This event is emitted when the federation message processing succeeded.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="a3ec8-114">메시지</span><span class="sxs-lookup"><span data-stu-id="a3ec8-114">Message</span></span>  
- <span data-ttu-id="a3ec8-115">페더레이션 메시지 처리에 성공했습니다.</span><span class="sxs-lookup"><span data-stu-id="a3ec8-115">Federation message processing succeeded.</span></span>  
+## <a name="message"></a><span data-ttu-id="8deeb-114">메시지</span><span class="sxs-lookup"><span data-stu-id="8deeb-114">Message</span></span>  
+ <span data-ttu-id="8deeb-115">페더레이션 메시지 처리에 성공했습니다.</span><span class="sxs-lookup"><span data-stu-id="8deeb-115">Federation message processing succeeded.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="a3ec8-116">설명</span><span class="sxs-lookup"><span data-stu-id="a3ec8-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="8deeb-116">설명</span><span class="sxs-lookup"><span data-stu-id="8deeb-116">Details</span></span>

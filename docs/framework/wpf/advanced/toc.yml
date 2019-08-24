@@ -260,7 +260,7 @@
                   href: how-to-analyze-ink-with-analysis-hints.md
                 - name: 잉크 회전
                   href: how-to-rotate-ink.md
-                - name: WPF 응용 프로그램에 대해 RealTimeStylus를 사용하지 않도록 설정
+                - name: WPF 애플리케이션에 대해 RealTimeStylus를 사용하지 않도록 설정
                   href: disable-the-realtimestylus-for-wpf-applications.md
     - name: 끌어서 놓기
       href: drag-and-drop.md
@@ -550,7 +550,7 @@
         - name: WPF 애플리케이션 성능 최적화
           href: optimizing-wpf-application-performance.md
           items:
-            - name: 응용 프로그램 성능 계획
+            - name: 애플리케이션 성능 계획
               href: planning-for-application-performance.md
             - name: 하드웨어 활용
               href: optimizing-performance-taking-advantage-of-hardware.md

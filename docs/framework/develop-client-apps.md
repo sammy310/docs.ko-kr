@@ -20,47 +20,47 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/23/2019
 ms.locfileid: "54671293"
 ---
-# <a name="developing-client-applications-with-the-net-framework"></a><span data-ttu-id="8410c-102">.NET Framework로 클라이언트 애플리케이션 개발</span><span class="sxs-lookup"><span data-stu-id="8410c-102">Developing client applications with the .NET Framework</span></span>
+# <a name="developing-client-applications-with-the-net-framework"></a><span data-ttu-id="d8443-102">.NET Framework로 클라이언트 애플리케이션 개발</span><span class="sxs-lookup"><span data-stu-id="d8443-102">Developing client applications with the .NET Framework</span></span>
 
-<span data-ttu-id="8410c-103">.NET Framework를 사용하여 Windows 기반 애플리케이션을 개발하는 데는 몇 가지 방법이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8410c-103">There are several ways to develop Windows-based applications with the .NET Framework.</span></span> <span data-ttu-id="8410c-104">이러한 도구 및 프레임워크 중 하나를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8410c-104">You can use any of these tools and frameworks:</span></span> 
+<span data-ttu-id="d8443-103">.NET Framework를 사용하여 Windows 기반 애플리케이션을 개발하는 데는 몇 가지 방법이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d8443-103">There are several ways to develop Windows-based applications with the .NET Framework.</span></span> <span data-ttu-id="d8443-104">이러한 도구 및 프레임워크 중 하나를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d8443-104">You can use any of these tools and frameworks:</span></span> 
 
-* [<span data-ttu-id="8410c-105">UWP(유니버설 Windows 플랫폼)</span><span class="sxs-lookup"><span data-stu-id="8410c-105">Universal Windows Platform (UWP)</span></span>](https://developer.microsoft.com/windows/apps)
-* [<span data-ttu-id="8410c-106">WPF(Windows Presentation Foundation)</span><span class="sxs-lookup"><span data-stu-id="8410c-106">Windows Presentation Foundation (WPF)</span></span>](../../docs/framework/wpf/index.md)
-* [<span data-ttu-id="8410c-107">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8410c-107">Windows Forms</span></span>](../../docs/framework/winforms/index.md)
+* [<span data-ttu-id="d8443-105">UWP(유니버설 Windows 플랫폼)</span><span class="sxs-lookup"><span data-stu-id="d8443-105">Universal Windows Platform (UWP)</span></span>](https://developer.microsoft.com/windows/apps)
+* [<span data-ttu-id="d8443-106">WPF(Windows Presentation Foundation)</span><span class="sxs-lookup"><span data-stu-id="d8443-106">Windows Presentation Foundation (WPF)</span></span>](../../docs/framework/wpf/index.md)
+* [<span data-ttu-id="d8443-107">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d8443-107">Windows Forms</span></span>](../../docs/framework/winforms/index.md)
 
-<span data-ttu-id="8410c-108">이 섹션에는 Windows Presentation Foundation 또는 Windows Forms를 사용하여 Windows 기반 애플리케이션을 만드는 방법을 설명하는 항목이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8410c-108">This section contains topics that describe how to create Windows-based applications by using Windows Presentation Foundation or by using Windows Forms.</span></span> <span data-ttu-id="8410c-109">그러나 .NET Framework를 사용하여 dnpq 애플리케이션을 만들고 Microsoft 스토어를 통해 사용할 수 있는 컴퓨터 또는 장치용 클라이언트 애플리케이션을 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8410c-109">However, you can also create web applications using the .NET Framework, and client applications for computers or devices that you make available through the Microsoft Store.</span></span>
+<span data-ttu-id="d8443-108">이 섹션에는 Windows Presentation Foundation 또는 Windows Forms를 사용하여 Windows 기반 애플리케이션을 만드는 방법을 설명하는 항목이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d8443-108">This section contains topics that describe how to create Windows-based applications by using Windows Presentation Foundation or by using Windows Forms.</span></span> <span data-ttu-id="d8443-109">그러나 .NET Framework를 사용하여 dnpq 애플리케이션을 만들고 Microsoft 스토어를 통해 사용할 수 있는 컴퓨터 또는 디바이스용 클라이언트 애플리케이션을 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d8443-109">However, you can also create web applications using the .NET Framework, and client applications for computers or devices that you make available through the Microsoft Store.</span></span>
  
-## <a name="in-this-section"></a><span data-ttu-id="8410c-110">단원 내용</span><span class="sxs-lookup"><span data-stu-id="8410c-110">In this section</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="d8443-110">단원 내용</span><span class="sxs-lookup"><span data-stu-id="d8443-110">In this section</span></span>
 
-[<span data-ttu-id="8410c-111">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="8410c-111">Windows Presentation Foundation</span></span>](../../docs/framework/wpf/index.md)  
-<span data-ttu-id="8410c-112">WPF를 사용한 애플리케이션 개발 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="8410c-112">Provides information about developing applications by using WPF.</span></span>
+[<span data-ttu-id="d8443-111">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="d8443-111">Windows Presentation Foundation</span></span>](../../docs/framework/wpf/index.md)  
+<span data-ttu-id="d8443-112">WPF를 사용한 애플리케이션 개발 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d8443-112">Provides information about developing applications by using WPF.</span></span>
 
-[<span data-ttu-id="8410c-113">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8410c-113">Windows Forms</span></span>](../../docs/framework/winforms/index.md)  
-<span data-ttu-id="8410c-114">Windows Forms를 사용한 애플리케이션 개발 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="8410c-114">Provides information about developing applications by using Windows Forms.</span></span>
+[<span data-ttu-id="d8443-113">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d8443-113">Windows Forms</span></span>](../../docs/framework/winforms/index.md)  
+<span data-ttu-id="d8443-114">Windows Forms를 사용한 애플리케이션 개발 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d8443-114">Provides information about developing applications by using Windows Forms.</span></span>
 
-[<span data-ttu-id="8410c-115">일반 클라이언트 기술</span><span class="sxs-lookup"><span data-stu-id="8410c-115">Common Client Technologies</span></span>](../../docs/framework/common-client-technologies/index.md)  
-<span data-ttu-id="8410c-116">클라이언트 애플리케이션을 개발할 때 사용할 수 있는 추가 기술에 대한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="8410c-116">Provides information about additional technologies that can be used when developing client applications.</span></span>
+[<span data-ttu-id="d8443-115">일반 클라이언트 기술</span><span class="sxs-lookup"><span data-stu-id="d8443-115">Common Client Technologies</span></span>](../../docs/framework/common-client-technologies/index.md)  
+<span data-ttu-id="d8443-116">클라이언트 애플리케이션을 개발할 때 사용할 수 있는 추가 기술에 대한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d8443-116">Provides information about additional technologies that can be used when developing client applications.</span></span>
 
-## <a name="related-sections"></a><span data-ttu-id="8410c-117">관련 단원</span><span class="sxs-lookup"><span data-stu-id="8410c-117">Related sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="d8443-117">관련 단원</span><span class="sxs-lookup"><span data-stu-id="d8443-117">Related sections</span></span>
 
-[<span data-ttu-id="8410c-118">유니버설 Windows 플랫폼</span><span class="sxs-lookup"><span data-stu-id="8410c-118">Universal Windows Platform</span></span>](https://developer.microsoft.com/windows/apps)  
-<span data-ttu-id="8410c-119">Windows 스토어를 통해 사용자에게 제공할 수 있는 Windows 10용 애플리케이션을 만드는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="8410c-119">Describes how to create applications for Windows 10 that you can make available to users through the Windows Store.</span></span>
+[<span data-ttu-id="d8443-118">유니버설 Windows 플랫폼</span><span class="sxs-lookup"><span data-stu-id="d8443-118">Universal Windows Platform</span></span>](https://developer.microsoft.com/windows/apps)  
+<span data-ttu-id="d8443-119">Windows 스토어를 통해 사용자에게 제공할 수 있는 Windows 10용 애플리케이션을 만드는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d8443-119">Describes how to create applications for Windows 10 that you can make available to users through the Windows Store.</span></span>
 
-[<span data-ttu-id="8410c-120">UWP 앱용 .NET</span><span class="sxs-lookup"><span data-stu-id="8410c-120">.NET for UWP apps</span></span>](https://msdn.microsoft.com/library/windows/apps/mt185501.aspx)  
-<span data-ttu-id="8410c-121">Windows 컴퓨터와 디바이스에 배포할 수 있는 스토어 앱에 대한 .NET Framework 지원을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="8410c-121">Describes the .NET Framework support for Store apps, which can be deployed to Windows computers and devices.</span></span>
+[<span data-ttu-id="d8443-120">UWP 앱용 .NET</span><span class="sxs-lookup"><span data-stu-id="d8443-120">.NET for UWP apps</span></span>](https://msdn.microsoft.com/library/windows/apps/mt185501.aspx)  
+<span data-ttu-id="d8443-121">Windows 컴퓨터와 디바이스에 배포할 수 있는 스토어 앱에 대한 .NET Framework 지원을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d8443-121">Describes the .NET Framework support for Store apps, which can be deployed to Windows computers and devices.</span></span>
 
-<span data-ttu-id="8410c-122">[Windows Phone Silverlight용 .NET API](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))</span><span class="sxs-lookup"><span data-stu-id="8410c-122">[.NET API for Windows Phone Silverlight](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))</span></span>  
-<span data-ttu-id="8410c-123">Windows Phone Silverlight로 앱을 빌드하는 데 사용할 수 있는 .NET Framework API를 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="8410c-123">Lists the .NET Framework APIs you can use for building apps with Windows Phone Silverlight.</span></span>
+<span data-ttu-id="d8443-122">[Windows Phone Silverlight용 .NET API](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))</span><span class="sxs-lookup"><span data-stu-id="d8443-122">[.NET API for Windows Phone Silverlight](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))</span></span>  
+<span data-ttu-id="d8443-123">Windows Phone Silverlight로 앱을 빌드하는 데 사용할 수 있는 .NET Framework API를 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="d8443-123">Lists the .NET Framework APIs you can use for building apps with Windows Phone Silverlight.</span></span>
   
-[<span data-ttu-id="8410c-124">여러 플랫폼 개발</span><span class="sxs-lookup"><span data-stu-id="8410c-124">Developing for Multiple Platforms</span></span>](../../docs/standard/cross-platform/index.md)  
-<span data-ttu-id="8410c-125">.NET Framework를 사용하여 여러 클라이언트 앱 형식을 대상으로 지정할 수 있는 다양한 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="8410c-125">Describes the different methods you can use the .NET Framework to target multiple client app types.</span></span>
+[<span data-ttu-id="d8443-124">여러 플랫폼 개발</span><span class="sxs-lookup"><span data-stu-id="d8443-124">Developing for Multiple Platforms</span></span>](../../docs/standard/cross-platform/index.md)  
+<span data-ttu-id="d8443-125">.NET Framework를 사용하여 여러 클라이언트 앱 형식을 대상으로 지정할 수 있는 다양한 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d8443-125">Describes the different methods you can use the .NET Framework to target multiple client app types.</span></span>
 
-[<span data-ttu-id="8410c-126">ASP.NET 웹 사이트 시작</span><span class="sxs-lookup"><span data-stu-id="8410c-126">Get Started with ASP.NET Web Sites</span></span>](https://www.asp.net/get-started/websites)  
-<span data-ttu-id="8410c-127">ASP.NET을 사용하여 웹앱을 개발할 수 있는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="8410c-127">Describes the ways you can develop web apps using ASP.NET.</span></span>
+[<span data-ttu-id="d8443-126">ASP.NET 웹 사이트 시작</span><span class="sxs-lookup"><span data-stu-id="d8443-126">Get Started with ASP.NET Web Sites</span></span>](https://www.asp.net/get-started/websites)  
+<span data-ttu-id="d8443-127">ASP.NET을 사용하여 웹앱을 개발할 수 있는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d8443-127">Describes the ways you can develop web apps using ASP.NET.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="8410c-128">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8410c-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d8443-128">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d8443-128">See also</span></span>
 
-- [<span data-ttu-id="8410c-129">.NET Standard</span><span class="sxs-lookup"><span data-stu-id="8410c-129">.NET Standard</span></span>](../../docs/standard/net-standard.md)
-- [<span data-ttu-id="8410c-130">개요</span><span class="sxs-lookup"><span data-stu-id="8410c-130">Overview</span></span>](../../docs/framework/get-started/overview.md)
-- [<span data-ttu-id="8410c-131">개발 가이드</span><span class="sxs-lookup"><span data-stu-id="8410c-131">Development Guide</span></span>](../../docs/framework/development-guide.md)
-- [<span data-ttu-id="8410c-132">Windows 서비스 애플리케이션</span><span class="sxs-lookup"><span data-stu-id="8410c-132">Windows Service Applications</span></span>](../../docs/framework/windows-services/index.md)
+- [<span data-ttu-id="d8443-129">.NET Standard</span><span class="sxs-lookup"><span data-stu-id="d8443-129">.NET Standard</span></span>](../../docs/standard/net-standard.md)
+- [<span data-ttu-id="d8443-130">개요</span><span class="sxs-lookup"><span data-stu-id="d8443-130">Overview</span></span>](../../docs/framework/get-started/overview.md)
+- [<span data-ttu-id="d8443-131">개발 가이드</span><span class="sxs-lookup"><span data-stu-id="d8443-131">Development Guide</span></span>](../../docs/framework/development-guide.md)
+- [<span data-ttu-id="d8443-132">Windows 서비스 애플리케이션</span><span class="sxs-lookup"><span data-stu-id="d8443-132">Windows Service Applications</span></span>](../../docs/framework/windows-services/index.md)

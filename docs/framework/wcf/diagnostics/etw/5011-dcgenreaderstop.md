@@ -9,20 +9,20 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61650650"
 ---
-# <a name="5011---dcgenreaderstop"></a><span data-ttu-id="8efac-102">5011 - DCGenReaderStop</span><span class="sxs-lookup"><span data-stu-id="8efac-102">5011 - DCGenReaderStop</span></span>
-## <a name="properties"></a><span data-ttu-id="8efac-103">속성</span><span class="sxs-lookup"><span data-stu-id="8efac-103">Properties</span></span>  
+# <a name="5011---dcgenreaderstop"></a><span data-ttu-id="19221-102">5011 - DCGenReaderStop</span><span class="sxs-lookup"><span data-stu-id="19221-102">5011 - DCGenReaderStop</span></span>
+## <a name="properties"></a><span data-ttu-id="19221-103">속성</span><span class="sxs-lookup"><span data-stu-id="19221-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="8efac-104">ID</span><span class="sxs-lookup"><span data-stu-id="8efac-104">ID</span></span>|<span data-ttu-id="8efac-105">5011</span><span class="sxs-lookup"><span data-stu-id="8efac-105">5011</span></span>|  
-|<span data-ttu-id="8efac-106">키워드</span><span class="sxs-lookup"><span data-stu-id="8efac-106">Keywords</span></span>|<span data-ttu-id="8efac-107">Serialization</span><span class="sxs-lookup"><span data-stu-id="8efac-107">Serialization</span></span>|  
-|<span data-ttu-id="8efac-108">수준</span><span class="sxs-lookup"><span data-stu-id="8efac-108">Level</span></span>|<span data-ttu-id="8efac-109">자세히</span><span class="sxs-lookup"><span data-stu-id="8efac-109">Verbose</span></span>|  
-|<span data-ttu-id="8efac-110">채널</span><span class="sxs-lookup"><span data-stu-id="8efac-110">Channel</span></span>|<span data-ttu-id="8efac-111">Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그</span><span class="sxs-lookup"><span data-stu-id="8efac-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="19221-104">ID</span><span class="sxs-lookup"><span data-stu-id="19221-104">ID</span></span>|<span data-ttu-id="19221-105">5011</span><span class="sxs-lookup"><span data-stu-id="19221-105">5011</span></span>|  
+|<span data-ttu-id="19221-106">키워드</span><span class="sxs-lookup"><span data-stu-id="19221-106">Keywords</span></span>|<span data-ttu-id="19221-107">Serialization</span><span class="sxs-lookup"><span data-stu-id="19221-107">Serialization</span></span>|  
+|<span data-ttu-id="19221-108">수준</span><span class="sxs-lookup"><span data-stu-id="19221-108">Level</span></span>|<span data-ttu-id="19221-109">자세히</span><span class="sxs-lookup"><span data-stu-id="19221-109">Verbose</span></span>|  
+|<span data-ttu-id="19221-110">채널</span><span class="sxs-lookup"><span data-stu-id="19221-110">Channel</span></span>|<span data-ttu-id="19221-111">Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그</span><span class="sxs-lookup"><span data-stu-id="19221-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="8efac-112">설명</span><span class="sxs-lookup"><span data-stu-id="8efac-112">Description</span></span>  
- <span data-ttu-id="8efac-113">이 이벤트는 DataContract 생성이 중지될 때 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="8efac-113">This event is emitted when the DataContract generation stops.</span></span>  
+## <a name="description"></a><span data-ttu-id="19221-112">설명</span><span class="sxs-lookup"><span data-stu-id="19221-112">Description</span></span>  
+ <span data-ttu-id="19221-113">이 이벤트는 DataContract 생성이 중지될 때 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="19221-113">This event is emitted when the DataContract generation stops.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="8efac-114">메시지</span><span class="sxs-lookup"><span data-stu-id="8efac-114">Message</span></span>  
- <span data-ttu-id="8efac-115">DataContract 생성이 중지됩니다.</span><span class="sxs-lookup"><span data-stu-id="8efac-115">DataContract generation stop.</span></span>  
+## <a name="message"></a><span data-ttu-id="19221-114">메시지</span><span class="sxs-lookup"><span data-stu-id="19221-114">Message</span></span>  
+ <span data-ttu-id="19221-115">DataContract 생성이 중지됩니다.</span><span class="sxs-lookup"><span data-stu-id="19221-115">DataContract generation stop.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="8efac-116">설명</span><span class="sxs-lookup"><span data-stu-id="8efac-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="19221-116">설명</span><span class="sxs-lookup"><span data-stu-id="19221-116">Details</span></span>

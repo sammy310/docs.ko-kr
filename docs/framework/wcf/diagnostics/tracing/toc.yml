@@ -3,7 +3,7 @@
   items:
     - name: 추적 구성
       href: configuring-tracing.md
-    - name: 종단 간 추적
+    - name: 엔드투엔드 추적
       href: end-to-end-tracing.md
       items:
         - name: 활동
@@ -14,12 +14,12 @@
           href: propagation.md
         - name: 추적 형식 요약
           href: trace-type-summary.md
-    - name: 추적을 사용하여 응용 프로그램 문제 해결
+    - name: 추적을 사용하여 애플리케이션 문제 해결
       href: using-tracing-to-troubleshoot-your-application.md
       items:
         - name: Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결
           href: using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md
-        - name: 종단 간 추적 시나리오
+        - name: 엔드투엔드 추적 시나리오
           href: end-to-end-tracing-scenarios.md
           items:
             - name: 동작 목록

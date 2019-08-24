@@ -9,20 +9,20 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61595803"
 ---
-# <a name="3322---dispatchformatterdeserializerequeststart"></a><span data-ttu-id="e9ccc-102">3322 - DispatchFormatterDeserializeRequestStart</span><span class="sxs-lookup"><span data-stu-id="e9ccc-102">3322 - DispatchFormatterDeserializeRequestStart</span></span>
-## <a name="properties"></a><span data-ttu-id="e9ccc-103">속성</span><span class="sxs-lookup"><span data-stu-id="e9ccc-103">Properties</span></span>  
+# <a name="3322---dispatchformatterdeserializerequeststart"></a><span data-ttu-id="aae31-102">3322 - DispatchFormatterDeserializeRequestStart</span><span class="sxs-lookup"><span data-stu-id="aae31-102">3322 - DispatchFormatterDeserializeRequestStart</span></span>
+## <a name="properties"></a><span data-ttu-id="aae31-103">속성</span><span class="sxs-lookup"><span data-stu-id="aae31-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="e9ccc-104">ID</span><span class="sxs-lookup"><span data-stu-id="e9ccc-104">ID</span></span>|<span data-ttu-id="e9ccc-105">3322</span><span class="sxs-lookup"><span data-stu-id="e9ccc-105">3322</span></span>|  
-|<span data-ttu-id="e9ccc-106">키워드</span><span class="sxs-lookup"><span data-stu-id="e9ccc-106">Keywords</span></span>|<span data-ttu-id="e9ccc-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="e9ccc-107">ServiceModel</span></span>|  
-|<span data-ttu-id="e9ccc-108">수준</span><span class="sxs-lookup"><span data-stu-id="e9ccc-108">Level</span></span>|<span data-ttu-id="e9ccc-109">자세히</span><span class="sxs-lookup"><span data-stu-id="e9ccc-109">Verbose</span></span>|  
-|<span data-ttu-id="e9ccc-110">채널</span><span class="sxs-lookup"><span data-stu-id="e9ccc-110">Channel</span></span>|<span data-ttu-id="e9ccc-111">Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그</span><span class="sxs-lookup"><span data-stu-id="e9ccc-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="aae31-104">ID</span><span class="sxs-lookup"><span data-stu-id="aae31-104">ID</span></span>|<span data-ttu-id="aae31-105">3322</span><span class="sxs-lookup"><span data-stu-id="aae31-105">3322</span></span>|  
+|<span data-ttu-id="aae31-106">키워드</span><span class="sxs-lookup"><span data-stu-id="aae31-106">Keywords</span></span>|<span data-ttu-id="aae31-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="aae31-107">ServiceModel</span></span>|  
+|<span data-ttu-id="aae31-108">수준</span><span class="sxs-lookup"><span data-stu-id="aae31-108">Level</span></span>|<span data-ttu-id="aae31-109">자세히</span><span class="sxs-lookup"><span data-stu-id="aae31-109">Verbose</span></span>|  
+|<span data-ttu-id="aae31-110">채널</span><span class="sxs-lookup"><span data-stu-id="aae31-110">Channel</span></span>|<span data-ttu-id="aae31-111">Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그</span><span class="sxs-lookup"><span data-stu-id="aae31-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="e9ccc-112">설명</span><span class="sxs-lookup"><span data-stu-id="e9ccc-112">Description</span></span>  
- <span data-ttu-id="e9ccc-113">이 이벤트는 디스패처가 요청 메시지의 deserialization이 시작될 때 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="e9ccc-113">This event is emitted when the dispatcher started deserialization of the request message.</span></span>  
+## <a name="description"></a><span data-ttu-id="aae31-112">설명</span><span class="sxs-lookup"><span data-stu-id="aae31-112">Description</span></span>  
+ <span data-ttu-id="aae31-113">이 이벤트는 디스패처가 요청 메시지의 deserialization이 시작될 때 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="aae31-113">This event is emitted when the dispatcher started deserialization of the request message.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="e9ccc-114">메시지</span><span class="sxs-lookup"><span data-stu-id="e9ccc-114">Message</span></span>  
- <span data-ttu-id="e9ccc-115">디스패처가 요청 메시지의 deserialization를 시작했습니다.</span><span class="sxs-lookup"><span data-stu-id="e9ccc-115">Dispatcher started deserialization the request message.</span></span>  
+## <a name="message"></a><span data-ttu-id="aae31-114">메시지</span><span class="sxs-lookup"><span data-stu-id="aae31-114">Message</span></span>  
+ <span data-ttu-id="aae31-115">디스패처가 요청 메시지의 deserialization를 시작했습니다.</span><span class="sxs-lookup"><span data-stu-id="aae31-115">Dispatcher started deserialization the request message.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="e9ccc-116">설명</span><span class="sxs-lookup"><span data-stu-id="e9ccc-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="aae31-116">설명</span><span class="sxs-lookup"><span data-stu-id="aae31-116">Details</span></span>

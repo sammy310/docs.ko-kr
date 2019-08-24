@@ -1,4 +1,4 @@
-- name: 서버를 사용하지 않는 앱 전자책
+- name: 서버를 사용하지 않는 앱 eBook
   href: index.md
   items:
     - name: 아키텍처 접근 방식
@@ -18,7 +18,7 @@
       items:
         - name: Azure Functions
           href: azure-functions.md
-        - name: 응용 프로그램 정보
+        - name: 애플리케이션 정보
           href: application-insights.md
         - name: Azure Logic Apps
           href: logic-apps.md
