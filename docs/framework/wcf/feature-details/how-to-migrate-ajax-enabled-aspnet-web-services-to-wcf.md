@@ -24,7 +24,7 @@ ms.locfileid: "64643683"
 
  AJAX 사용 끝점을 통해 WCF 서비스를 노출 하는 방법에 대 한 자세한 내용은 참조는 [방법: 구성을 사용 하 여 ASP.NET AJAX 끝점 추가](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) 항목입니다.
 
-### <a name="to-create-and-test-the-aspnet-web-service-application"></a>ASP.NET 웹 서비스 응용 프로그램을 만들고 테스트하려면
+### <a name="to-create-and-test-the-aspnet-web-service-application"></a>ASP.NET 웹 서비스 애플리케이션을 만들고 테스트하려면
 
 1. Visual Studio 2012를 엽니다.
 
@@ -51,7 +51,7 @@ ms.locfileid: "64643683"
 
      이제 WCF AJAX 서비스를 사용 하도록이 서비스를 변환할 수 있습니다.
 
-### <a name="to-create-an-equivalent-wcf-ajax-service-application"></a>동등한 WCF AJAX 서비스 응용 프로그램을 만들려면
+### <a name="to-create-an-equivalent-wcf-ajax-service-application"></a>동등한 WCF AJAX 서비스 애플리케이션을 만들려면
 
 1. 마우스 오른쪽 단추로 클릭 합니다 **ASPHello** 프로젝트를 마우스 **추가**, 다음 **새 항목**를 차례로 **AJAX 사용 WCF 서비스**합니다.
 

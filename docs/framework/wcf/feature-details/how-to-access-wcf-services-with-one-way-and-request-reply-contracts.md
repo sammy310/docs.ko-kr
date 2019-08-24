@@ -71,7 +71,7 @@ ms.locfileid: "61855116"
     }  
     ```  
   
-3. 콘솔 응용 프로그램에서 서비스를 호스팅합니다. 다음 코드에서는 서비스를 호스팅하는 방법을 보여 줍니다.  
+3. 콘솔 애플리케이션에서 서비스를 호스팅합니다. 다음 코드에서는 서비스를 호스팅하는 방법을 보여 줍니다.  
   
     ```csharp  
     // Host the service within this EXE console application.  

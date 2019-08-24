@@ -122,10 +122,10 @@ Windows 런타임에서 `IMap<K, V>` 하 고 `IMapView<K, V>` 사용 하 여 반
 
 - .NET Framework를 사용 하 여 작성 된 Windows 런타임 구성 요소는 다른 Windows Runtimelibraries와에서 명백한 차이점이 없습니다. 예를 들어 관리 되는 코드를 사용 하 여 네이티브 Windows 런타임 구성 요소를 다시 구현 하는 경우 두 구성 않습니다 외부적으로 구별할 수 있습니다. 코드 그 자체가 관리 코드이더라도 구성 요소가 관리 코드로 작성되었다는 사실은 그것을 사용하는 코드에 표시되지 않습니다. 그러나 내부적으로 구성 요소는 실제 관리 코드이며 CLR(공용 언어 런타임)에서 실행됩니다.
 
-- 구성 요소는 응용 프로그램 논리, [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] UI 컨트롤 또는 둘 모두를 구현하는 형식을 포함할 수 있습니다.
+- 구성 요소는 애플리케이션 논리, [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] UI 컨트롤 또는 둘 모두를 구현하는 형식을 포함할 수 있습니다.
 
   > [!NOTE]
-  > UI 요소를 응용 프로그램 논리에서 분리하는 것이 좋습니다. 또한 JavaScript 및 HTML을 사용하여 Windows용으로 빌드된 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱에서 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] UI 컨트롤을 사용할 수 없습니다.
+  > UI 요소를 애플리케이션 논리에서 분리하는 것이 좋습니다. 또한 JavaScript 및 HTML을 사용하여 Windows용으로 빌드된 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱에서 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] UI 컨트롤을 사용할 수 없습니다.
 
 - 구성 요소는 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱을 위한 Visual Studio 솔루션 내의 프로젝트이거나 여러 솔루션에 추가할 수 있는 재사용 가능한 구성 요소일 수 있습니다.
 
@@ -143,15 +143,15 @@ Windows 런타임에서 `IMap<K, V>` 하 고 `IMapView<K, V>` 사용 하 여 반
 
 다음 섹션에서는 일반적인 시나리오의 예제를 제공합니다.
 
-### <a name="application-logic-for-a-includewin8appnamelongincludeswin8-appname-long-mdmd-app-with-javascript"></a>JavaScript을 사용한 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱에 대한 응용 프로그램 논리
+### <a name="application-logic-for-a-includewin8_appname_longincludeswin8-appname-long-mdmd-app-with-javascript"></a>JavaScript을 사용한 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱에 대한 애플리케이션 논리
 
-JavaScript를 사용하여 Windows용으로 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱을 개발할 때 관리 코드에서 응용 프로그램 논리의 일부가 더 잘 수행되거나 개발하기 더 쉬울 수도 있습니다. JavaScript는 .NET Framework 클래스 라이브러리를 직접 사용할 수 없지만, 이 클래스 라이브러리를 .WinMD 파일로 만들 수 있습니다. 이 시나리오에서는 Windows 런타임 구성 요소 이므로 앱의 핵심 버전 특성을 제공에 적합 하지 않습니다.
+JavaScript를 사용하여 Windows용으로 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱을 개발할 때 관리 코드에서 애플리케이션 논리의 일부가 더 잘 수행되거나 개발하기 더 쉬울 수도 있습니다. JavaScript는 .NET Framework 클래스 라이브러리를 직접 사용할 수 없지만, 이 클래스 라이브러리를 .WinMD 파일로 만들 수 있습니다. 이 시나리오에서는 Windows 런타임 구성 요소 이므로 앱의 핵심 버전 특성을 제공에 적합 하지 않습니다.
 
-### <a name="reusable-includewin8appnamelongincludeswin8-appname-long-mdmd-ui-controls"></a>다시 사용 가능한 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] UI 컨트롤
+### <a name="reusable-includewin8_appname_longincludeswin8-appname-long-mdmd-ui-controls"></a>다시 사용 가능한 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] UI 컨트롤
 
 재사용 가능한 Windows 런타임 구성 요소에서 관련된 UI 컨트롤 집합을 패키징할 수 있습니다. 구성 요소는 직접 시장에 출시하거나 사용자가 만든 앱의 요소로서 사용할 수 있습니다. 이 시나리오에서는 Windows 런타임을 사용 하는 것이 있도록 <xref:Windows.Foundation.Metadata.VersionAttribute> 호환성을 개선 하는 특성입니다.
 
-### <a name="reusable-application-logic-from-existing-net-framework-apps"></a>기존 .NET Framework 앱의 재사용 가능한 응용 프로그램 논리
+### <a name="reusable-application-logic-from-existing-net-framework-apps"></a>기존 .NET Framework 앱의 재사용 가능한 애플리케이션 논리
 
 독립 실행형 Windows 런타임 구성 요소로 기존 데스크톱 앱에서 관리 되는 코드를 패키지할 수 있습니다. 따라서 C++ 또는 JavaScript를 사용하여 빌드한 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱 및 C# 또는 Visual Basic을 사용하여 빌드한 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱 모두에서 구성 요소를 사용할 수 있습니다. 코드를 재사용하는 시나리오가 여러 개일 경우 버전 관리는 옵션입니다.
 

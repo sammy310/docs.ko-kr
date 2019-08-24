@@ -47,7 +47,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
  XSLT 솔루션은 여러 스타일시트 모듈로 구성됩니다. xsltc.exe 도구는 스타일시트에서 어셈블리를 생성합니다. 그런 다음 어셈블리가 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 메서드에 전달될 수 있습니다. 따라서 일부 XSLT 배포 시나리오에서 성능을 유지하는 데 드는 비용을 감소하는 데 도움이 될 수 있습니다.  
   
 > [!NOTE]
->  응용 프로그램에서 컴파일된 어셈블리를 참조로 포함해야 합니다.  
+>  애플리케이션에서 컴파일된 어셈블리를 참조로 포함해야 합니다.  
   
  xsltc.exe 도구에서는 클래스(`/class:`*이름*) 또는 어셈블리(`/out:`*assemblyName*) 이름의 유효성을 검사하지 않습니다. 이름의 유효성을 확인할 수 없으면 공용 언어 런타임에서 오류가 throw됩니다.  
   

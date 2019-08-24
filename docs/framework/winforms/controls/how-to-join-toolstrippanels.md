@@ -16,7 +16,7 @@ ms.lasthandoff: 05/14/2019
 ms.locfileid: "65592388"
 ---
 # <a name="how-to-join-toolstrippanels"></a>방법: ToolStripPanels 조인
-런타임에 <xref:System.Windows.Forms.ToolStrip> 컨트롤을 <xref:System.Windows.Forms.ToolStripPanel>에 연결하여 MDI(다중 문서 인터페이스) 응용 프로그램의 유연성을 제공할 수 있습니다.  
+런타임에 <xref:System.Windows.Forms.ToolStrip> 컨트롤을 <xref:System.Windows.Forms.ToolStripPanel>에 연결하여 MDI(다중 문서 인터페이스) 애플리케이션의 유연성을 제공할 수 있습니다.  
   
 ## <a name="example"></a>예제  
  다음 코드 예제에서는 <xref:System.Windows.Forms.ToolStrip> 컨트롤을 <xref:System.Windows.Forms.ToolStripPanel>에 연결하는 방법을 보여 줍니다.  

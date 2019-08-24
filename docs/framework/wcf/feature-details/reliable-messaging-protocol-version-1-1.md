@@ -194,7 +194,7 @@ WCF에서 주로 사용 합니다 `TerminateSequence/TerminateSequenceResponse` 
 
 - B1303: 수신 하는 경우는 `TerminateSequence` 후 메시지를 `CloseSequence/CloseSequenceResponse` 핸드셰이크를 사용 하 여 응답 신뢰할 수 있는 메시징 대상은 `TerminateSequenceResponse` 메시지입니다. 신뢰할 수 있는 메시징 소스에 `TerminateSequence` 메시지를 보내기 전의 최종 승인이 있으므로 신뢰할 수 있는 메시징 대상은 시퀀스가 종료되고 리소스를 즉시 회수함을 인식하고 있습니다.
 
-- B1304: 수신 하는 경우는 `TerminateSequence` 이전에 메시지를 `CloseSequence/CloseSequenceResponse` 핸드셰이크를 사용 하 여 응답 WCF 신뢰할 수 있는 메시징 대상은 `TerminateSequenceResponse` 메시지. 신뢰할 수 있는 메시징 대상이 시퀀스에서 일치하지 않는 부분이 없음을 확인한 경우에는 클라이언트가 최종 승인을 받을 수 있도록 신뢰할 수 있는 메시징 대상이 응용 프로그램 대상에서 지정한 시간 동안 기다린 다음 리소스를 회수합니다. 그렇지 않은 경우 신뢰할 수 있는 메시징 대상이 리소스를 바로 회수하고 응용 프로그램 대상에 `Faulted` 이벤트를 발생시켜 시퀀스에 오류가 발생하여 종료되었음을 알려 줍니다.
+- B1304: 수신 하는 경우는 `TerminateSequence` 이전에 메시지를 `CloseSequence/CloseSequenceResponse` 핸드셰이크를 사용 하 여 응답 WCF 신뢰할 수 있는 메시징 대상은 `TerminateSequenceResponse` 메시지. 신뢰할 수 있는 메시징 대상이 시퀀스에서 일치하지 않는 부분이 없음을 확인한 경우에는 클라이언트가 최종 승인을 받을 수 있도록 신뢰할 수 있는 메시징 대상이 애플리케이션 대상에서 지정한 시간 동안 기다린 다음 리소스를 회수합니다. 그렇지 않은 경우 신뢰할 수 있는 메시징 대상이 리소스를 바로 회수하고 애플리케이션 대상에 `Faulted` 이벤트를 발생시켜 시퀀스에 오류가 발생하여 종료되었음을 알려 줍니다.
 
 `TerminateSequence` 메시지의 예입니다.
 
@@ -522,7 +522,7 @@ WCF 응답자는 승인, 오류 또는 빈 본문과 HTTP 202 상태 코드가 �
 
 WCF 응답자는 응용 프로그램 회신, 오류 또는 빈 본문과 HTTP 202 상태 코드가 포함 된 응답을 사용 하 여 요청에 회신할 수 있습니다.
 
-단방향 메시지가 있고 응용 프로그램이 회신하는 시간 때문에 요청 시퀀스 메시지의 시퀀스 번호와 응답 메시지의 시퀀스 번호는 상관 관계가 없습니다.
+단방향 메시지가 있고 애플리케이션이 회신하는 시간 때문에 요청 시퀀스 메시지의 시퀀스 번호와 응답 메시지의 시퀀스 번호는 상관 관계가 없습니다.
 
 #### <a name="retrying-replies"></a>회신 다시 시도
 

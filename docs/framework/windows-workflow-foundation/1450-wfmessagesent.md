@@ -17,7 +17,7 @@ ms.locfileid: "61924263"
 |ID|1450|  
 |키워드|WFServices|  
 |수준|정보|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  워크플로에서 보낸 메시지를 나타냅니다.  

@@ -36,7 +36,7 @@ X.509 인증서에 Windows Communication Foundation (WCF)에 액세스할 수 �
   
     2. 인증서가 저장되는 인증서 저장소 위치와 이름을 확인합니다.  
   
-         인증서가 저장되는 인증서 저장소는 응용 프로그램 코드 또는 구성에 지정됩니다. 예를 들어, 다음 예에서는 인증서 위치를 이름이 `CurrentUser`인 `My` 인증서 저장소로 지정합니다.  
+         인증서가 저장되는 인증서 스토리지는 애플리케이션 코드 또는 구성에 지정됩니다. 예를 들어, 다음 예에서는 인증서 위치를 이름이 `CurrentUser`인 `My` 인증서 저장소로 지정합니다.  
   
          [!code-csharp[x509Accessible#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/x509accessible/cs/source.cs#1)]
          [!code-vb[x509Accessible#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/x509accessible/vb/source.vb#1)]  
@@ -57,7 +57,7 @@ X.509 인증서에 Windows Communication Foundation (WCF)에 액세스할 수 �
   
         |시나리오|프로세스 ID|  
         |--------------|----------------------|  
-        |클라이언트(콘솔 또는 WinForms 응용 프로그램).|현재 로그인한 사용자.|  
+        |클라이언트(콘솔 또는 WinForms 애플리케이션).|현재 로그인한 사용자.|  
         |자체 호스팅된 서비스.|현재 로그인한 사용자.|  
         |IIS 6.0([!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]) 또는 IIS 7.0([!INCLUDE[wv](../../../../includes/wv-md.md)])에서 호스팅되는 서비스.|NETWORK SERVICE|  
         |IIS 5.X([!INCLUDE[wxp](../../../../includes/wxp-md.md)])에서 호스팅되는 서비스.|Machine.config 파일의 `<processModel>` 요소로 제어됩니다. 기본 계정은 ASPNET입니다.|  

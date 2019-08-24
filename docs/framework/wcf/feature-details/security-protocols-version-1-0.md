@@ -25,9 +25,9 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 |WSS: SAML 1.1 토큰 프로필 1.1|<https://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf>|
 |WS-Secure Conversation|<http://specs.xmlsoap.org/ws/2005/02/sc/WS-SecureConversation.pdf>|
 |WS-Trust|<http://specs.xmlsoap.org/ws/2005/02/trust/ws-trust.pdf>|
-|응용 프로그램 참고:<br /><br /> WS-Trust for TLS Handshake 사용|게시 예정|  
-|응용 프로그램 참고:<br /><br /> WS-Trust for SPNEGO 사용|게시 예정|  
-|응용 프로그램 참고:<br /><br /> Web Services Addressing 엔드포인트 참조 및 ID|게시 예정|  
+|애플리케이션 참고:<br /><br /> WS-Trust for TLS Handshake 사용|게시 예정|  
+|애플리케이션 참고:<br /><br /> WS-Trust for SPNEGO 사용|게시 예정|  
+|애플리케이션 참고:<br /><br /> Web Services Addressing 엔드포인트 참조 및 ID|게시 예정|  
 |WS-SecurityPolicy 1.1<br /><br /> (2005/07)|<http://specs.xmlsoap.org/ws/2005/07/securitypolicy/ws-securitypolicy.pdf><br /><br /> 에 따라 수정 [정오표](https://lists.oasis-open.org/archives/ws-sx/200512/msg00017.html) OASIS WS-SX Technical Committee에 제출 |  
   
  WCF에서 버전 1에서는 Web services security 구성에 대 한 기준으로 사용할 수 있는 17 가지 인증 모드를 제공 합니다. 각 모드는 다음과 같은 공통 배포 요구 사항에 대해 최적화된 것입니다.  
@@ -611,7 +611,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 ```  
   
 ### <a name="security-header-examples"></a>보안 헤더 예제  
- WS-Trust 이진 협상을 사용하여 SPNEGO 핸드셰이크를 통해 보안 컨텍스트 토큰을 설정한 경우, 응용 프로그램 메시지에 다음과 같은 구조의 보안 헤더가 있습니다.  
+ WS-Trust 이진 협상을 사용하여 SPNEGO 핸드셰이크를 통해 보안 컨텍스트 토큰을 설정한 경우, 애플리케이션 메시지에 다음과 같은 구조의 보안 헤더가 있습니다.  
   
  요청  
   

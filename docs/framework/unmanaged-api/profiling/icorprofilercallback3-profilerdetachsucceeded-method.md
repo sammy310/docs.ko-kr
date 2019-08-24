@@ -39,7 +39,7 @@ HRESULT ProfilerDetachSucceeded();
 ## <a name="remarks"></a>설명  
  `ProfilerDetachSucceeded` 콜백은 모든 스레드가 프로파일러의 코드를 종료한 후에 실행됩니다. 이 메서드가 호출되면 프로파일러는 UI 또는 로깅 구성 요소에 알림과 같은 소멸자에 적합하지 않은 마지막 작업을 모두 수행해야 합니다. 그러나 프로파일러 해야 함수를 호출 하지이 콜백 중 CLR에서 제공 하는 인터페이스에 (같은 합니다 [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) 또는 `IMetaData*` 인터페이스).  
   
- CLR은 Windows 응용 프로그램 이벤트 로그에 항목을 만들어 분리 작업에 성공했음을 나타냅니다.  
+ CLR은 Windows 애플리케이션 이벤트 로그에 항목을 만들어 분리 작업에 성공했음을 나타냅니다.  
   
  프로파일러가 이 콜백에서 반환된 후 CLR은 프로파일러 개체를 해제하고 프로파일러 DLL을 언로드합니다. 따라서 프로파일러는 이 콜백에서 반환된 후 프로파일러 DLL 내에서 실행되는 작업을 수행하면 안 됩니다. 예를 들어 스레드를 만들거나 타이머 콜백을 등록하면 안 됩니다.  
   

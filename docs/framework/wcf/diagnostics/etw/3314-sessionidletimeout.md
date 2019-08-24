@@ -17,7 +17,7 @@ ms.locfileid: "61596546"
 |ID|3314|  
 |키워드|ServiceModel|  
 |수준|Error|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
 ## <a name="description"></a>설명  
  이 이벤트는 유휴 채널에 대한 세션이 중단되었을 때 내보내집니다.  

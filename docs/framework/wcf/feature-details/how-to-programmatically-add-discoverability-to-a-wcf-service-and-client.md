@@ -54,9 +54,9 @@ ms.locfileid: "65586616"
   
      이 코드는 검색 메시지를 표준 UDP 검색 엔드포인트에 보내도록 지정합니다.  
   
-### <a name="to-create-a-client-application-that-uses-discovery-to-call-the-service"></a>검색을 사용하는 클라이언트 응용 프로그램을 만들어 서비스를 호출하려면  
+### <a name="to-create-a-client-application-that-uses-discovery-to-call-the-service"></a>검색을 사용하는 클라이언트 애플리케이션을 만들어 서비스를 호출하려면  
   
-1. `DiscoveryClientApp`라는 솔루션에 새 콘솔 응용 프로그램을 추가합니다.  
+1. `DiscoveryClientApp`라는 솔루션에 새 콘솔 애플리케이션을 추가합니다.  
   
 2. `System.ServiceModel.dll` 및 `System.ServiceModel.Discovery.dll`에 대한 참조를 추가합니다.  
   
