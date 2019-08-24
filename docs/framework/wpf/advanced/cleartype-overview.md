@@ -5,19 +5,19 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 11019d564e7e658b745aec4254ad9a0c582b8416
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dbef816a995d9f4909a887f017da29bab6fc3702
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964924"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015646"
 ---
 # <a name="cleartype-overview"></a>ClearType 개요
 이 항목에서는에서 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]확인할 수 있는 Microsoft ClearType 기술에 대해 간략하게 설명 합니다.  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>기술 개요  
- ClearType은에서 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 개발한 소프트웨어 기술로 랩톱 화면, Pocket PC 화면, 평면 패널 모니터 등 기존 lcd (액체 크리스탈 디스플레이)의 텍스트 가독성을 향상 시킵니다.  ClearType은 LCD 화면의 모든 픽셀에서 개별 세로 색 줄무늬 요소에 액세스 하는 방식으로 작동 합니다. ClearType 이전에는 컴퓨터에 표시 될 수 있는 가장 낮은 수준의 세부 정보는 단일 픽셀 이지만 ClearType을 LCD 모니터에서 실행 하면 이제 텍스트의 기능을 픽셀의 픽셀 분수로 표시할 수 있습니다. 해상도를 더 세밀하게 지원할수록 텍스트의 미세한 부분까지 더 선명하게 표시되므로 오랫동안 더 쉽게 읽을 수 있습니다.  
+ ClearType은 랩톱 화면, Pocket PC 화면, 평면 패널 모니터 등 기존 Lcd (액체 크리스탈 디스플레이)의 텍스트 가독성을 향상 시키는 Microsoft에서 개발한 소프트웨어 기술입니다.  ClearType은 LCD 화면의 모든 픽셀에서 개별 세로 색 줄무늬 요소에 액세스 하는 방식으로 작동 합니다. ClearType 이전에는 컴퓨터에 표시 될 수 있는 가장 낮은 수준의 세부 정보는 단일 픽셀 이지만 ClearType을 LCD 모니터에서 실행 하면 이제 텍스트의 기능을 픽셀의 픽셀 분수로 표시할 수 있습니다. 해상도를 더 세밀하게 지원할수록 텍스트의 미세한 부분까지 더 선명하게 표시되므로 오랫동안 더 쉽게 읽을 수 있습니다.  
   
  에서 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 제공 되는 cleartype은 Microsoft Windows 그래픽 장치 인터페이스 (GDI)에서 제공 하는 버전에 비해 몇 가지 개선 된 cleartype의 최신 세대입니다.  
   

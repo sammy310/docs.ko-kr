@@ -5,22 +5,22 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: ed1d0e423a3cdf77a242ec3214720f1466f65897
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: df87f00e6e03de67c3fb1adc28472c96f4a47ef4
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039500"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015628"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>방법: Windows Form에 단순 바인딩된 컨트롤 만들기
 
 *단순 바인딩을*사용 하면 데이터 집합 테이블의 열 값과 같은 단일 데이터 요소를 컨트롤에 표시할 수 있습니다. 컨트롤의 모든 속성을 데이터 값에 단순 하 게 바인딩할 수 있습니다.
 
-### <a name="to-simple-bind-a-control"></a>컨트롤을 간단 하 게 바인딩하려면
+## <a name="to-simple-bind-a-control"></a>컨트롤을 간단 하 게 바인딩하려면
 
 1. 데이터 소스에 연결합니다. 자세한 내용은 [데이터 원본에 연결](../data/adonet/connecting-to-a-data-source.md)을 참조 하세요.
 
-2. 폼에서 컨트롤을 선택 하 고 **속성** 창을 표시 합니다.
+2. Visual Studio의 폼에서 컨트롤을 선택 하 고 **속성** 창을 표시 합니다.
 
 3. **(데이터 바인딩)** 속성을 확장 합니다.
 

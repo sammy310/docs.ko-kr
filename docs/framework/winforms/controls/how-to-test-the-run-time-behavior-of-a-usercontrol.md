@@ -8,65 +8,67 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-ms.openlocfilehash: 48531ab1ef3b30b6516e3f2e7b5858a8884cbfe8
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 1be79d52be3b5b84938d8548a8f101e965fa9dbb
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211703"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015772"
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>방법: UserControl의 런타임 동작 테스트
 
-개발 하는 경우는 <xref:System.Windows.Forms.UserControl>, 해당 런타임 동작을 테스트 해야 합니다. 별도 Windows 기반 응용 프로그램 프로젝트를 만들고 테스트 폼에서 컨트롤을 배치할 수 있지만이 절차를 편리 하 게 아닙니다. 빠르고 쉽게 방법을 사용 하는 것은 **UserControl 테스트 컨테이너** Visual Studio에서 제공 합니다. 이 테스트 컨테이너는 Windows 컨트롤 라이브러리 프로젝트에서 직접 시작합니다.
+을 <xref:System.Windows.Forms.UserControl>개발할 때 런타임 동작을 테스트 해야 합니다. 별도의 Windows 기반 응용 프로그램 프로젝트를 만들고 테스트 폼에 컨트롤을 저장할 수 있지만이 절차는 불편할 수 있습니다. 빠르고 쉬운 방법은 Visual Studio에서 제공 하는 **UserControl 테스트 컨테이너** 를 사용 하는 것입니다. 이 테스트 컨테이너는 Windows 컨트롤 라이브러리 프로젝트에서 직접 시작 됩니다.
 
 > [!IMPORTANT]
-> 로드 테스트 컨테이너에 대 한 프로그램 <xref:System.Windows.Forms.UserControl>를 컨트롤에는 하나 이상의 공용 생성자가 있어야 합니다.
+> 테스트 컨테이너가를 로드 <xref:System.Windows.Forms.UserControl>하려면 컨트롤에 하나 이상의 public 생성자가 있어야 합니다.
 
 > [!NOTE]
-> 시각적 개체 C++ 컨트롤을 사용 하 여 테스트할 수 없습니다 합니다 **UserControl 테스트 컨테이너**합니다.
+> C++ **UserControl 테스트 컨테이너**를 사용 하 여 시각적 컨트롤을 테스트할 수 없습니다.
 
 ## <a name="test-the-run-time-behavior-of-a-usercontrol"></a>UserControl의 런타임 동작 테스트
 
-1. Visual Studio에서 라는 Windows 컨트롤 라이브러리 프로젝트를 만듭니다 **컨트롤**합니다. 자세한 내용은 참조 하세요 [Windows 컨트롤 라이브러리 템플릿을](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100))합니다.
+1. Visual Studio에서 Windows 컨트롤 라이브러리 프로젝트를 만들고 이름을 **TestContainerExample**로 표시 합니다.
 
-2. 에 **Windows Forms 디자이너**를 끌어를 <xref:System.Windows.Forms.Label> 에서 제어를 **도구 상자** 컨트롤의 디자인 화면으로 합니다.
+2. **Windows Forms 디자이너**에서 **도구 상자** 의 컨트롤 <xref:System.Windows.Forms.Label> 을 컨트롤의 디자인 화면으로 끌어 옵니다.
 
-3. 키를 눌러 **F5** 프로젝트를 빌드 및 실행 하는 **UserControl 테스트 컨테이너**합니다. 테스트 컨테이너에 표시 하 <xref:System.Windows.Forms.UserControl> 에 **미리 보기** 창.
+3. **F5** 키를 눌러 프로젝트를 빌드하고 **UserControl 테스트 컨테이너**를 실행 합니다. 테스트 컨테이너가 <xref:System.Windows.Forms.UserControl> **미리 보기** 창에 표시 됩니다.
 
-4. 선택는 <xref:System.Windows.Forms.Control.BackColor%2A> 에 표시 되는 속성을 <xref:System.Windows.Forms.PropertyGrid> 컨트롤의 오른쪽에는 **미리 보기** 창. 해당 값을 변경할 `ControlDark`합니다. 컨트롤 어두운 색으로 변경 되는지 관찰 합니다. 다른 속성 값을 변경 하 고 컨트롤에 대 한 효과 관찰 합니다.
+4. <xref:System.Windows.Forms.Control.BackColor%2A> **미리 보기** 창의 오른쪽에 있는 <xref:System.Windows.Forms.PropertyGrid> 컨트롤에 표시 되는 속성을 선택 합니다. 해당 값을 **Controldark**값으로 변경 합니다. 컨트롤이 짙은 색으로 변경 되는지 확인 합니다. 다른 속성 값을 변경 하 고 컨트롤에 미치는 영향을 관찰 합니다.
 
-5. 클릭 합니다 **사용자 정의 컨트롤 전체 도킹** 아래 확인란 합니다 **미리 보기** 창입니다. 컨트롤의 창에 맞게 크기가 조정 됩니다 있는지 확인 합니다. 테스트 컨테이너 크기를 조정 하 고 컨트롤의 창 크기 조정 되는 관찰 합니다.
+5. **미리 보기** 창 아래에서 **사용자 정의 컨트롤 채우기** 확인란을 클릭 합니다. 창에 맞게 컨트롤의 크기가 조정 되는지 확인 합니다. 테스트 컨테이너의 크기를 조정 하 고 창을 사용 하 여 컨트롤의 크기가 조정 되는지 확인 합니다.
 
 6. 테스트 컨테이너를 닫습니다.
 
-7. 다른 사용자 정의 컨트롤을 추가 합니다 **컨트롤** 프로젝트입니다. 자세한 내용은 [방법: 프로젝트에 기존 항목 추가](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))합니다.
+7. **TestContainerExample** 프로젝트에 다른 사용자 정의 컨트롤을 추가 합니다.
 
-8. 에 **Windows Forms 디자이너**를 끌어를 <xref:System.Windows.Forms.Button> 에서 제어를 **도구 상자** 컨트롤의 디자인 화면으로 합니다.
+8. **Windows Forms 디자이너**에서 **도구 상자** 의 컨트롤 <xref:System.Windows.Forms.Button> 을 컨트롤의 디자인 화면으로 끌어 옵니다.
 
-9. F5 키를 눌러 프로젝트를 빌드 및 테스트 컨테이너를 실행 합니다.
+9. **F5** 키를 눌러 프로젝트를 빌드하고 테스트 컨테이너를 실행 합니다.
 
-10. 클릭 합니다 **사용자 정의 컨트롤 선택** <xref:System.Windows.Forms.ComboBox> 두 개의 사용자 정의 컨트롤을 전환 하 합니다.
+10. **사용자 컨트롤** <xref:System.Windows.Forms.ComboBox> 선택을 클릭 하 여 두 사용자 정의 컨트롤 사이를 전환 합니다.
 
-## <a name="test-user-controls-from-another-project"></a>다른 프로젝트에서 사용자 컨트롤 테스트
+## <a name="test-user-controls-from-another-project"></a>다른 프로젝트에서 사용자 정의 컨트롤 테스트
 
-현재 프로젝트의 테스트 컨테이너에서 다른 프로젝트에서 사용자 정의 컨트롤을 테스트할 수 있습니다.
+현재 프로젝트의 테스트 컨테이너에 있는 다른 프로젝트에서 사용자 정의 컨트롤을 테스트할 수 있습니다.
 
-1. 라는 Windows 컨트롤 라이브러리 프로젝트를 만듭니다 **TestContainerExample2**합니다. 자세한 내용은 참조 하세요 [Windows 컨트롤 라이브러리 템플릿을](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100))합니다.
+1. Visual Studio에서 Windows 컨트롤 라이브러리 프로젝트를 만들고 이름을 **TestContainerExample2**로 표시 합니다.
 
-2. 에 **Windows Forms 디자이너**를 끌어를 <xref:System.Windows.Forms.RadioButton> 에서 제어를 **도구 상자** 컨트롤의 디자인 화면으로 합니다.
+2. **Windows Forms 디자이너**에서 **도구 상자** 의 컨트롤 <xref:System.Windows.Forms.RadioButton> 을 컨트롤의 디자인 화면으로 끌어 옵니다.
 
-3. F5 키를 눌러 프로젝트를 빌드 및 테스트 컨테이너를 실행 합니다. 테스트 컨테이너에 표시 하 <xref:System.Windows.Forms.UserControl> 에 **미리 보기** 창.
+3. **F5** 키를 눌러 프로젝트를 빌드하고 테스트 컨테이너를 실행 합니다. 테스트 컨테이너가 <xref:System.Windows.Forms.UserControl> **미리 보기** 창에 표시 됩니다.
 
-4. 클릭 합니다 **부하** 단추입니다.
+4. **로드** 단추를 클릭 합니다.
 
-5. 에 **엽니다** 대화 상자에서 **컨트롤**이전 절차에서 만든.dll입니다. 선택 **컨트롤**.dll 및 클릭 합니다 **오픈** 사용자 정의 컨트롤을 로드 하려면 단추를
+5. **열기** 대화 상자에서 이전 절차에서 빌드한 **TestContainerExample**로 이동 합니다. **TestContainerExample**를 선택 하 고 **열기** 단추를 클릭 하 여 사용자 정의 컨트롤을 로드 합니다.
 
-6. 사용 합니다 **사용자 정의 컨트롤을 선택** <xref:System.Windows.Forms.ComboBox> 에서 두 개의 사용자 정의 컨트롤을 전환 하는 **컨트롤** 프로젝트입니다.
+6. **사용자 선택 컨트롤** <xref:System.Windows.Forms.ComboBox> 을 사용 하 여 **TestContainerExample** 프로젝트에서 두 사용자 정의 컨트롤 사이를 전환 합니다.
 
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.Forms.UserControl>
-- [방법: 복합 컨트롤 제작](how-to-author-composite-controls.md)
-- [연습: Visual Basic에서 합성 컨트롤 제작](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [연습: 시각적 개체를 사용 하 여 복합 컨트롤 제작C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [방법: 복합 컨트롤 작성](how-to-author-composite-controls.md)
+- [연습: 복합 컨트롤 작성](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
 - [사용자 정의 컨트롤 디자이너](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/183c3hth(v=vs.100))

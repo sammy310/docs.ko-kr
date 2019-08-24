@@ -6,18 +6,18 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-ms.openlocfilehash: dd5f744a67481b03802887ff2baa0571b30e4b5d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9079dfa03ab81bfa6875e43bfa8a6e5351e0a35d
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965242"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015111"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>클라이언트 쪽 UI 자동화 공급자 구현
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] , [!INCLUDE[TLA#tla_ms](../../../includes/tlasharptla-ms-md.md)] , 및 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]를 포함하여 서로 다른 여러 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]프레임워크가 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]운영 체제 내에서 사용 중입니다. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 이 UI 요소에 대한 정보를 클라이언트에 노출합니다. 그러나 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 자체는 이러한 프레임워크에 있는 여러 형식의 컨트롤과 컨트롤에서 정보를 추출하는 데 필요한 기술은 인식하지 않습니다. 대신, 이 작업은 공급자라고 하는 개체가 담당합니다. 공급자는 특정 컨트롤에서 정보를 추출하고 이 정보를 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 전달한 다음 일관된 방식으로 클라이언트에게 제공합니다.  
+ , [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]및를 비롯 한 다양 한 프레임 워크가 Microsoft 운영 체제 내에서 사용 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]되 고 있습니다. [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 이 UI 요소에 대한 정보를 클라이언트에 노출합니다. 그러나 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 자체는 이러한 프레임워크에 있는 여러 형식의 컨트롤과 컨트롤에서 정보를 추출하는 데 필요한 기술은 인식하지 않습니다. 대신, 이 작업은 공급자라고 하는 개체가 담당합니다. 공급자는 특정 컨트롤에서 정보를 추출하고 이 정보를 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 전달한 다음 일관된 방식으로 클라이언트에게 제공합니다.  
   
  공급자는 서버쪽 또는 클라이언트쪽에 존재할 수 있습니다. 서버쪽 공급자는 컨트롤 자체에서 구현됩니다. [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 으로 작성된 모든 타사 컨트롤에 유의하여 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요소가 공급자를 구현합니다.  
   

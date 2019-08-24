@@ -1,6 +1,8 @@
 ---
 title: '연습: Visual C#에서 복합 컨트롤 제작'
 ms.date: 03/30/2017
+dev_langs:
+- CSharp
 helpviewer_keywords:
 - custom controls [C#]
 - user controls [Windows Forms], creating with Visual C#
@@ -8,43 +10,44 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-ms.openlocfilehash: 1de1ff4147ddb8cb3316795aefd38622de205a73
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: d1af6c0e013f82569eed8d085df0249f4fb991bb
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950058"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015687"
 ---
-# <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>연습: Visual C를 사용 하 여 복합 컨트롤 작성\#
+# <a name="walkthrough-author-a-composite-control-with-c"></a>연습: C를 사용 하 여 복합 컨트롤 작성\#
 
 복합 컨트롤은 사용자 지정 그래픽 인터페이스를 만들고 재사용할 수 있는 방법을 제공합니다. 복합 컨트롤은 기본적으로 시각적 표현이 있는 구성 요소입니다. 따라서 사용자 입력의 유효성을 검사하고 표시 속성을 수정하거나 작성자가 요구하는 다른 작업을 수행하여 기능을 확장할 수 있는 하나 이상의 Windows Forms 컨트롤, 구성 요소 또는 코드 블록으로 구성할 수 있습니다. 복합 컨트롤은 다른 컨트롤과 동일한 방식으로 Windows Forms에 배치할 수 있습니다. 이 연습의 첫 번째 부분에서는 `ctlClock`이라는 간단한 복합 컨트롤을 만듭니다. 두 번째 부분에서는 상속을 통해 `ctlClock`의 기능을 확장합니다.
 
-## <a name="creating-the-project"></a>프로젝트 만들기
+## <a name="create-the-project"></a>프로젝트 만들기
 
 새 프로젝트를 만들 때는 이에 대한 이름을 지정하여 루트 네임스페이스, 어셈블리 이름 및 프로젝트 이름을 설정하고 기본 구성 요소가 올바른 네임스페이스에 있는지 확인합니다.
 
 ### <a name="to-create-the-ctlclocklib-control-library-and-the-ctlclock-control"></a>ctlClockLib 컨트롤 라이브러리 및 ctlClock 컨트롤을 만들려면
 
-1. **파일** 메뉴에서 **새로 만들기**를 가리키고 **프로젝트**를 선택하여 **새 프로젝트** 대화 상자를 엽니다.
-
-2. 시각적 C# 프로젝트 목록에서 **Windows Forms 컨트롤 라이브러리** 프로젝트 템플릿을 선택 하 고 **이름** 상자에를 `ctlClockLib` 입력 한 다음 **확인**을 클릭 합니다.
+1. Visual Studio에서 새 **Windows Forms 컨트롤 라이브러리** 프로젝트를 만들고 이름을 **ctlClockLib**로 표시 합니다.
 
      프로젝트 이름, `ctlClockLib`는 기본적으로 루트 네임스페이스에도 할당됩니다. 루트 네임스페이스는 어셈블리에서 구성 요소의 이름을 정규화하는 데 사용됩니다. 예를 들어 두 어셈블리에서 `ctlClock`이라는 구성 요소를 제공하면 `ctlClockLib.ctlClock.`을 사용하여 `ctlClock` 구성 요소를 지정할 수 있습니다.
 
-3. 솔루션 탐색기에서 **UserControl1.cs**를 마우스 오른쪽 단추로 클릭한 다음 **이름 바꾸기**를 클릭합니다. 파일 이름을 `ctlClock.cs`로 변경합니다. 코드 요소 “UserControl1”에 대한 모든 참조 이름을 변경할지 묻는 메시지가 표시되면 **예** 단추를 클릭합니다.
+2. **솔루션 탐색기**에서 **UserControl1.cs**을 마우스 오른쪽 단추로 클릭 한 다음 **이름 바꾸기**를 클릭 합니다. 파일 이름을 `ctlClock.cs`로 변경합니다. 코드 요소 “UserControl1”에 대한 모든 참조 이름을 변경할지 묻는 메시지가 표시되면 **예** 단추를 클릭합니다.
 
     > [!NOTE]
     > 기본적으로 복합 컨트롤은 시스템에서 제공 하 <xref:System.Windows.Forms.UserControl> 는 클래스에서 상속 됩니다. 클래스 <xref:System.Windows.Forms.UserControl> 는 모든 복합 컨트롤에 필요한 기능을 제공 하 고 표준 메서드 및 속성을 구현 합니다.
 
-4. **파일** 메뉴에서 **모두 저장**을 클릭하여 프로젝트를 저장합니다.
+3. **파일** 메뉴에서 **모두 저장**을 클릭하여 프로젝트를 저장합니다.
 
-## <a name="adding-windows-controls-and-components-to-the-composite-control"></a>복합 컨트롤에 Windows 컨트롤 및 구성 요소 추가
+## <a name="add-windows-controls-and-components-to-the-composite-control"></a>복합 컨트롤에 Windows 컨트롤 및 구성 요소 추가
 
 시각적 인터페이스는 복합 컨트롤의 필수적인 부분입니다. 이 시각적 인터페이스는 하나 이상의 Windows 컨트롤을 디자이너 화면에 추가하여 구현합니다. 다음 데모에서는 Windows 컨트롤을 복합 컨트롤에 통합하고 기능을 구현하는 코드를 작성합니다.
 
 ### <a name="to-add-a-label-and-a-timer-to-your-composite-control"></a>복합 컨트롤에 레이블 및 타이머를 추가하려면
 
-1. 솔루션 탐색기에서 **ctlClock.cs**를 마우스 오른쪽 단추로 클릭한 후 **뷰 디자이너**를 클릭합니다.
+1. **솔루션 탐색기**에서 **ctlClock.cs**을 마우스 오른쪽 단추로 클릭 한 다음 **뷰 디자이너**를 클릭 합니다.
 
 2. **도구 상자**에서 **공용 컨트롤** 노드를 확장한 후 **레이블**을 두 번 클릭합니다.
 
@@ -89,13 +92,13 @@ ms.locfileid: "69950058"
 
 9. **파일** 메뉴에서 **모두 저장**을 클릭하여 프로젝트를 저장합니다.
 
-## <a name="adding-properties-to-the-composite-control"></a>복합 컨트롤에 속성 추가
+## <a name="add-properties-to-the-composite-control"></a>복합 컨트롤에 속성 추가
 
 이제 클록 컨트롤이 <xref:System.Windows.Forms.Label> 컨트롤과 <xref:System.Windows.Forms.Timer> 구성 요소를 캡슐화 하며 각각 고유한 속성 집합이 있습니다. 이러한 컨트롤의 개별 속성은 이후 컨트롤 사용자가 액세스할 수 없지만 적절한 코드 블록을 작성하여 사용자 지정 속성을 만들고 노출할 수 있습니다. 다음 프로시저에서 사용자가 배경 및 텍스트 색을 변경할 수 있도록 컨트롤에 속성을 추가합니다.
 
 ### <a name="to-add-a-property-to-your-composite-control"></a>복합 컨트롤에 속성을 추가하려면
 
-1. 솔루션 탐색기에서 **ctlClock.cs**를 마우스 오른쪽 단추로 클릭한 후 **코드 보기**를 클릭합니다.
+1. **솔루션 탐색기**에서 **ctlClock.cs**을 마우스 오른쪽 단추로 클릭 한 다음 **코드 보기**를 클릭 합니다.
 
      컨트롤에 대한 **코드 편집기**가 열립니다.
 
@@ -108,7 +111,7 @@ ms.locfileid: "69950058"
 
      이러한 문은 작성하려는 속성에 대한 값을 저장하는 데 사용할 private 변수를 만듭니다.
 
-3. 2단계에서 변수 선언 아래에 다음 코드를 입력합니다.
+3. 2 단계에서 변수 선언 아래에 다음 코드를 입력 하거나 붙여 넣습니다.
 
     ```csharp
     // Declares the name and type of the property.
@@ -146,25 +149,25 @@ ms.locfileid: "69950058"
 
 4. **파일** 메뉴에서 **모두 저장**을 클릭하여 프로젝트를 저장합니다.
 
-## <a name="testing-the-control"></a>컨트롤 테스트
+## <a name="test-the-control"></a>컨트롤 테스트
 
 컨트롤은 독립 실행형 애플리케이션이 아니며 컨테이너에서 호스팅해야 합니다. 컨트롤의 런타임 동작을 테스트하고 **UserControl 테스트 컨테이너**로 해당 속성을 실행합니다. 자세한 내용은 [방법: UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)의 런타임 동작을 테스트 합니다.
 
 ### <a name="to-test-your-control"></a>컨트롤을 테스트하려면
 
-1. F5 키를 눌러 프로젝트를 빌드하고 **UserControl 테스트 컨테이너**에서 컨트롤을 실행합니다.
+1. **F5** 키를 눌러 프로젝트를 빌드하고 **UserControl 테스트 컨테이너**에서 컨트롤을 실행 합니다.
 
 2. 테스트 컨테이너의 속성 눈금에서 `ClockBackColor` 속성을 찾은 후 해당 속성을 선택하여 색상표를 표시합니다.
 
 3. 클릭하여 색을 선택합니다.
 
-     컨트롤의 배경색이 선택한 색으로 바뀝니다.
+   컨트롤의 배경색이 선택한 색으로 바뀝니다.
 
 4. 유사한 이벤트 시퀀스를 사용하여 `ClockForeColor` 속성이 예상대로 작동하는지 확인합니다.
 
-     이 섹션과 이전 섹션에서는 구성 요소 및 Windows 컨트롤을 코드와 결합하고 패키징하여 복합 컨트롤 형태로 사용자 지정 기능을 제공하는 방법을 살펴보았습니다. 복합 컨트롤에 속성을 노출하고 완료한 후에는 컨트롤을 테스트하는 방법도 알아보았습니다. 다음 섹션에서는 `ctlClock`을 기본으로 사용하여 상속된 복합 컨트롤을 생성하는 방법에 대해 알아봅니다.
+   이 섹션과 이전 섹션에서는 구성 요소 및 Windows 컨트롤을 코드와 결합하고 패키징하여 복합 컨트롤 형태로 사용자 지정 기능을 제공하는 방법을 살펴보았습니다. 복합 컨트롤에 속성을 노출하고 완료한 후에는 컨트롤을 테스트하는 방법도 알아보았습니다. 다음 섹션에서는 `ctlClock`을 기본으로 사용하여 상속된 복합 컨트롤을 생성하는 방법에 대해 알아봅니다.
 
-## <a name="inheriting-from-a-composite-control"></a>복합 컨트롤에서 상속
+## <a name="inherit-from-a-composite-control"></a>복합 컨트롤에서 상속
 
 이전 섹션에서는 Windows 컨트롤, 구성 요소 및 코드를 재사용 가능한 복합 컨트롤에 결합하는 방법을 알아보았습니다. 이제 복합 컨트롤을 다른 컨트롤을 작성하기 위한 기본으로 활용할 수 있습니다. 기본 클래스에서 클래스를 파생시키는 과정을 *상속*이라고 합니다. 이 섹션에서는 `ctlAlarmClock`이라는 복합 컨트롤을 만듭니다. 이 컨트롤은 부모 컨트롤인 `ctlClock`에서 파생됩니다. 부모 메서드를 재정의하고 새 메서드 및 속성을 추가하여 `ctlClock`의 기능을 확장하는 방법을 알아보겠습니다.
 
@@ -172,7 +175,7 @@ ms.locfileid: "69950058"
 
 ### <a name="to-create-the-inherited-control"></a>상속된 컨트롤을 만들려면
 
-1. 솔루션 탐색기에서 **ctlClockLib**를 마우스 오른쪽 단추로 클릭하고 **추가**를 가리킨 다음 **사용자 컨트롤**을 클릭합니다.
+1. **솔루션 탐색기**에서 **ctlClockLib**을 마우스 오른쪽 단추로 클릭 하 고 **추가**를 가리킨 다음 **사용자 정의 컨트롤**을 클릭 합니다.
 
      **새 항목 추가** 대화 상자가 열립니다.
 
@@ -184,18 +187,18 @@ ms.locfileid: "69950058"
 
 4. **구성 요소 이름** 아래에서 **ctlClock**을 두 번 클릭합니다.
 
-5. 솔루션 탐색기에서 현재 프로젝트를 찾아봅니다.
+5. **솔루션 탐색기**에서 현재 프로젝트를 찾습니다.
 
     > [!NOTE]
     > **ctlAlarmClock.cs**라는 파일이 현재 프로젝트에 추가되었습니다.
 
-### <a name="adding-the-alarm-properties"></a>경보 속성 추가
+### <a name="add-the-alarm-properties"></a>경보 속성 추가
 
 속성은 복합 컨트롤에 추가된 것과 같은 방식으로 상속된 컨트롤에 추가됩니다. 이제 속성 선언 구문을 사용하여 컨트롤에 두 가지 속성, 즉 경보가 꺼지는 날짜와 시간 값을 저장하는 `AlarmTime`과 경보가 설정되는지 여부를 나타내는 `AlarmSet`을 추가합니다.
 
 #### <a name="to-add-properties-to-your-composite-control"></a>복합 컨트롤에 속성을 추가하려면
 
-1. 솔루션 탐색기에서 **ctlAlarmClock**을 마우스 오른쪽 단추로 클릭한 후 **코드 보기**를 클릭합니다.
+1. **솔루션 탐색기**에서 **ctlAlarmClock**을 마우스 오른쪽 단추로 클릭 한 다음 **코드 보기**를 클릭 합니다.
 
 2. `public class` 문을 찾습니다. 컨트롤은 `ctlClockLib.ctlClock`에서 상속됩니다. 여는 중괄호 (`{)` 문 아래에 다음 코드를 입력합니다.
 
@@ -228,13 +231,13 @@ ms.locfileid: "69950058"
     }
     ```
 
-### <a name="adding-to-the-graphical-interface-of-the-control"></a>컨트롤의 그래픽 인터페이스에 추가
+### <a name="add-to-the-graphical-interface-of-the-control"></a>컨트롤의 그래픽 인터페이스에 추가
 
 상속된 컨트롤에는 상속 원본 컨트롤과 동일한 시각적 인터페이스가 있습니다. 부모 컨트롤과 동일한 구성 요소 컨트롤을 소유하지만, 구체적으로 노출되지 않는 한, 구성 요소 컨트롤의 속성을 사용할 수 없습니다. 복합 컨트롤에 추가하는 것과 같은 방법으로 상속된 복합 컨트롤의 그래픽 인터페이스에 추가할 수 있습니다. 알람 시계의 시각적 인터페이스에 계속 추가하려면 경보가 울릴 때 깜박거리는 레이블 컨트롤을 추가합니다.
 
 #### <a name="to-add-the-label-control"></a>레이블 컨트롤을 추가하려면
 
-1. 솔루션 탐색기에서 **ctlAlarmClock**을 마우스 오른쪽 단추로 클릭한 후 **뷰 디자이너**를 클릭합니다.
+1. **솔루션 탐색기**에서 **ctlAlarmClock**을 마우스 오른쪽 단추로 클릭 한 다음 **뷰 디자이너**를 클릭 합니다.
 
      `ctlAlarmClock`에 대한 디자이너가 주 창에 열립니다.
 
@@ -257,7 +260,7 @@ ms.locfileid: "69950058"
     |**TextAlign**|`MiddleCenter`|
     |**Visible**|`false`|
 
-### <a name="adding-the-alarm-functionality"></a>경보 기능 추가
+### <a name="add-the-alarm-functionality"></a>알람 기능 추가
 
 이전 프로시저에서는 복합 컨트롤에서 경보 기능을 설정하는 속성 및 컨트롤을 추가했습니다. 이 프로시저에서는 현재 시간을 경보 시간과 비교하여 같으면 깜박이는 코드를 추가합니다. `ctlClock`의 `timer1_Tick` 메소드를 재정의하고 코드를 더 추가하여 `ctlClock`의 모든 고유 기능을 유지하면서 `ctlAlarmClock`의 기능을 확장합니다.
 
@@ -317,7 +320,7 @@ ms.locfileid: "69950058"
 
 #### <a name="to-implement-the-shutoff-method"></a>shutoff 메서드를 구현하려면
 
-1. 솔루션 탐색기에서 **ctlAlarmClock.cs**를 마우스 오른쪽 단추로 클릭한 후 **뷰 디자이너**를 클릭합니다.
+1. **솔루션 탐색기**에서 **ctlAlarmClock.cs**을 마우스 오른쪽 단추로 클릭 한 다음 **뷰 디자이너**를 클릭 합니다.
 
      디자이너가 열립니다.
 
@@ -346,21 +349,21 @@ ms.locfileid: "69950058"
 
 5. **파일** 메뉴에서 **모두 저장**을 클릭하여 프로젝트를 저장합니다.
 
-### <a name="using-the-inherited-control-on-a-form"></a>폼에서 상속된 컨트롤 사용
+### <a name="use-the-inherited-control-on-a-form"></a>폼에서 상속 된 컨트롤 사용
 
-기본 클래스 컨트롤을 테스트 한 것과 같은 방법으로 상속 된 컨트롤을 `ctlClock`테스트할 수 있습니다. F5 키를 눌러 프로젝트를 빌드하고 **UserControl 테스트 컨테이너**에서 컨트롤을 실행합니다. 자세한 내용은 [방법: UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)의 런타임 동작을 테스트 합니다.
+기본 클래스 컨트롤을 테스트 한 것과 같은 방법으로 상속 된 컨트롤을 `ctlClock`테스트할 수 있습니다. **F5** 키를 눌러 프로젝트를 빌드하고 **UserControl 테스트 컨테이너**에서 컨트롤을 실행 합니다. 자세한 내용은 [방법: UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)의 런타임 동작을 테스트 합니다.
 
 사용할 컨트롤을 배치하려면 폼에서 컨트롤을 호스트해야 합니다. 표준 복합 컨트롤과 마찬가지로 상속된 복합 컨트롤은 독립 실행형으로 사용할 수 없으며 폼 또는 다른 컨테이너에서 호스트해야 합니다. `ctlAlarmClock`은 보다 심도 있는 기능을 포함하므로 테스트하려면 추가 코드가 필요합니다. 이 프로시저에서는 `ctlAlarmClock`의 기능을 테스트하는 간단한 프로그램을 작성합니다. `ctlAlarmClock`의 `AlarmTime` 속성을 설정하고 표시하는 코드를 작성하고 고유한 기능을 테스트합니다.
 
 #### <a name="to-build-and-add-your-control-to-a-test-form"></a>컨트롤을 빌드하고 테스트 폼에 추가하려면
 
-1. 솔루션 탐색기에서 **ctlClockLib**를 마우스 오른쪽 단추로 클릭한 후 **빌드**를 클릭합니다.
+1. **솔루션 탐색기**에서 **ctlClockLib**을 마우스 오른쪽 단추로 클릭 한 다음 **빌드**를 클릭 합니다.
 
-2. 솔루션에 새 **Windows 애플리케이션** 프로젝트를 추가하고 이름을 `Test`로 지정합니다.
+2. 새 **Windows 응용 프로그램** 프로젝트를 솔루션에 추가 하 고 이름을 **Test**로 만듭니다.
 
-3. 솔루션 탐색기에서 테스트 프로젝트에 대한 **참조** 노드를 마우스 오른쪽 단추로 클릭합니다. **참조 추가** 대화 상자를 표시하려면 **참조 추가**를 클릭합니다. **프로젝트**로 레이블이 지정된 탭을 클릭합니다. `ctlClockLib` 프로젝트가 **프로젝트 이름** 아래에 나열됩니다. 프로젝트를 두 번 클릭하여 테스트 프로젝트에 참조를 추가합니다.
+3. **솔루션 탐색기**에서 테스트 프로젝트에 대 한 **참조** 노드를 마우스 오른쪽 단추로 클릭 합니다. **참조 추가** 대화 상자를 표시하려면 **참조 추가**를 클릭합니다. **프로젝트**로 레이블이 지정된 탭을 클릭합니다. `ctlClockLib` 프로젝트가 **프로젝트 이름** 아래에 나열됩니다. 프로젝트를 두 번 클릭하여 테스트 프로젝트에 참조를 추가합니다.
 
-4. 솔루션 탐색기에서 **Test**를 마우스 오른쪽 단추로 클릭한 후 **빌드**를 클릭합니다.
+4. **솔루션 탐색기**에서 **Test**를 마우스 오른쪽 단추로 클릭 한 다음 **빌드**를 클릭 합니다.
 
 5. **도구 상자**에서 **ctlClockLib 구성 요소** 노드를 확장합니다.
 
@@ -395,7 +398,7 @@ ms.locfileid: "69950058"
     }
     ```
 
-12. 솔루션 탐색기에서 **Test**를 마우스 오른쪽 단추로 클릭한 다음 **시작 프로젝트로 설정**을 클릭합니다.
+12. **솔루션 탐색기**에서 **Test**를 마우스 오른쪽 단추로 클릭 한 다음 **시작 프로젝트로 설정**을 클릭 합니다.
 
 13. **디버그** 메뉴에서 **디버깅 시작**을 클릭합니다.
 
@@ -409,7 +412,7 @@ ms.locfileid: "69950058"
 
 16. `btnAlarmOff`을 클릭하여 경보를 해제합니다. 이제 경보를 다시 설정할 수 있습니다.
 
-     이 연습에서 여러 가지 주요 개념을 살펴보았습니다. 컨트롤 및 구성 요소를 복합 컨트롤 컨테이너에 결합하여 복합 컨트롤을 만드는 방법을 배웠습니다. 컨트롤에 속성을 추가하고 사용자 지정 기능을 작성하는 코드를 작성하는 방법도 알아봤습니다. 마지막 섹션에서는 상속성을 통해 지정된 복합 컨트롤의 기능을 확장하고 해당 메서드를 재정의하여 호스트 메서드의 기능을 수정해보았습니다.
+이 문서에서는 몇 가지 주요 개념에 대해 설명 했습니다. 컨트롤 및 구성 요소를 복합 컨트롤 컨테이너에 결합하여 복합 컨트롤을 만드는 방법을 배웠습니다. 컨트롤에 속성을 추가하고 사용자 지정 기능을 작성하는 코드를 작성하는 방법도 알아봤습니다. 마지막 섹션에서는 상속성을 통해 지정된 복합 컨트롤의 기능을 확장하고 해당 메서드를 재정의하여 호스트 메서드의 기능을 수정해보았습니다.
 
 ## <a name="see-also"></a>참고자료
 

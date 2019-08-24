@@ -9,12 +9,12 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: 7d73176a68d8b4b19b6c980ef52e1f47408127fb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3f1f0698afce6e64711e37ac60d0662d65bbee6b
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933683"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016134"
 ---
 # <a name="opentype-font-features"></a>OpenType 글꼴 기능
 
@@ -22,7 +22,7 @@ ms.locfileid: "69933683"
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>OpenType 글꼴 서식  
- OpenType 글꼴 형식은 [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] 글꼴 형식의 확장으로, 포스트 스크립트 글꼴 데이터에 대 한 지원을 추가 합니다. OpenType 글꼴 형식은와 Adobe Corporation에서 공동 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 으로 개발 되었습니다. Opentype 글꼴 및 opentype 글꼴을 지 원하는 운영 체제 서비스는 글꼴에 윤곽선 또는 CFF (PostScript) 개요가 포함 되어 [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] 있든 관계 없이 사용자에 게 글꼴을 설치 하 고 사용 하는 간단한 방법을 제공 합니다.  
+ OpenType 글꼴 형식은 [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] 글꼴 형식의 확장으로, 포스트 스크립트 글꼴 데이터에 대 한 지원을 추가 합니다. OpenType 글꼴 형식은 Microsoft 및 Adobe Corporation에서 공동으로 개발 되었습니다. Opentype 글꼴 및 opentype 글꼴을 지 원하는 운영 체제 서비스는 글꼴에 윤곽선 또는 CFF (PostScript) 개요가 포함 되어 [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] 있든 관계 없이 사용자에 게 글꼴을 설치 하 고 사용 하는 간단한 방법을 제공 합니다.  
   
  OpenType 글꼴 형식은 다음과 같은 개발자 문제를 해결 합니다.  
   

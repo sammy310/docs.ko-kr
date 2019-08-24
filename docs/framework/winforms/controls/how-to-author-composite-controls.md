@@ -7,23 +7,23 @@ helpviewer_keywords:
 - user controls [Windows Forms], inheriting from
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-ms.openlocfilehash: 7b0ee8efa62175e2ced2a810ca6dd76e8adc103b
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 08cb07ceebf08b3096415f9b7370e2d955152cb6
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039891"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015929"
 ---
 # <a name="how-to-author-composite-controls"></a>방법: 복합 컨트롤 작성
 
 여러 가지 방법으로 복합 컨트롤을 사용할 수 있습니다. Windows 데스크톱 애플리케이션 프로젝트의 일부로 작성하고 프로젝트의 양식에서만 사용할 수 있습니다. 또는 Windows 컨트롤 라이브러리 프로젝트에서 작성하고 프로젝트를 어셈블리로 컴파일하고 다른 프로젝트에서 컨트롤을 사용할 수 있습니다. 이를 상속 하거나 시각적 상속을 사용 하 여 특별 한 목적으로 신속 하 게 사용자 지정할 수 있습니다.
 
-> [!NOTE]
-> Web Forms에서 사용할 복합 컨트롤을 작성하려는 경우 [사용자 지정 ASP.NET 서버 컨트롤 개발](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100))을 참조하세요.
-
 ## <a name="to-author-a-composite-control"></a>복합 컨트롤을 작성하려면
 
-1. Visual Studio에서 라는 `DemoControlHost`새 **Windows 응용 프로그램** 프로젝트를 만듭니다.
+1. Visual Studio에서 새 **Windows 응용 프로그램** 프로젝트를 만들고 이름을 **Democontrolhost**로 표시 합니다.
 
 2. **프로젝트** 메뉴에서 **사용자 정의 컨트롤 추가**를 클릭합니다.
 
@@ -79,10 +79,8 @@ ms.locfileid: "69039891"
 
 ## <a name="see-also"></a>참고자료
 
-- [연습: Visual Basic를 사용 하 여 복합 컨트롤 작성](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [연습: 시각적 개체를 사용 하 여 복합 컨트롤 작성C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
-- [연습: Visual Basic를 사용 하 여 Windows Forms 컨트롤에서 상속](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [연습: 시각적 개체를 사용 하 여 Windows Forms 컨트롤에서 상속C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [연습: 복합 컨트롤 작성](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [연습: Windows Forms 컨트롤에서 상속](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
 - [컨트롤 형식 권장 사항](control-type-recommendations.md)
 - [방법: Windows Forms에 대 한 Author 컨트롤](how-to-author-controls-for-windows-forms.md)
 - [사용자 지정 컨트롤의 종류](varieties-of-custom-controls.md)

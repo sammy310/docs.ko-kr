@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 8b33ac800144577ba5f8610afdc50a1ba56eec0f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 948d147a0990961a8706298f1112f85882e30119
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937704"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015612"
 ---
 # <a name="globalization-for-wpf"></a>WPF의 전역화
 이 항목에서는 글로벌 시장을 대상으로 응용 프로그램을 작성할 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 때 알아야 하는 문제를 소개 합니다. 전역화 프로그래밍 요소는의에 [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] `System.Globalization`정의 되어 있습니다.
@@ -143,7 +143,7 @@ ms.locfileid: "69937704"
 
 <a name="mui"></a>
 ### <a name="multilingual-user-interface"></a>다국어 사용자 인터페이스
- Mui (다국어 사용자 인터페이스)는 한 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 언어에서 다른 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] 언어로 전환 하는 데 사용할 수 있는 기능입니다. 응용 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프로그램은 어셈블리 모델을 사용 하 여 MUI를 지원 합니다. 한 애플리케이션에는 언어 중립 어셈블리 외에도 언어별 위성 리소스 어셈블리도 포함됩니다. 진입점은 기본 어셈블리에서 관리되는 .EXE입니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]리소스 로더는 [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]의 리소스 관리자를 활용 하 여 리소스 조회 및 대체를 지원 합니다. 여러 언어 위성 어셈블리는 동일한 기본 어셈블리와 작동합니다. 로드 되는 리소스 어셈블리는 현재 스레드의에 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> 따라 달라 집니다.
+ Mui (다국어 사용자 인터페이스)는 한 언어에서 다른 언어로 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] 전환 하기 위한 Microsoft 지원입니다. 응용 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프로그램은 어셈블리 모델을 사용 하 여 MUI를 지원 합니다. 한 애플리케이션에는 언어 중립 어셈블리 외에도 언어별 위성 리소스 어셈블리도 포함됩니다. 진입점은 기본 어셈블리에서 관리되는 .EXE입니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]리소스 로더는 [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]의 리소스 관리자를 활용 하 여 리소스 조회 및 대체를 지원 합니다. 여러 언어 위성 어셈블리는 동일한 기본 어셈블리와 작동합니다. 로드 되는 리소스 어셈블리는 현재 스레드의에 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> 따라 달라 집니다.
 
 <a name="localizable_ui"></a>
 ### <a name="localizable-user-interface"></a>지역화할 수 있는 사용자 인터페이스

@@ -10,53 +10,53 @@ helpviewer_keywords:
 - custom controls [Windows Forms], exposing properties
 - constituent controls
 ms.assetid: 5c1ec98b-aa48-4823-986e-4712551cfdf1
-ms.openlocfilehash: 44b96218e674c754a1985f2f22a36707cd1776b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f006e42771a5ecc71f6a508fd78d0e2dd8f2d2f2
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941377"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015860"
 ---
 # <a name="how-to-expose-properties-of-constituent-controls"></a>방법: Constituent 컨트롤의 속성 공개
-복합 컨트롤을 구성 하는 컨트롤 이라고 *구성 요소 컨트롤*합니다. 이러한 컨트롤은 일반적으로 전용으로 선언 및 하므로 개발자가 액세스할 수 없습니다. 미래의 사용자에 게 이러한 컨트롤의 속성을 제공 하려는 경우에 사용자에 게 노출 해야 있습니다. 사용자 컨트롤에서 속성을 만들고 사용 하 여 구성 요소 컨트롤의 속성을 노출 합니다 `get` 및 `set` 구성 요소 컨트롤의 개인 속성에 변경 내용을 적용 하려면 해당 속성의 접근자입니다.  
-  
- 구성 요소 라는 단추를 사용 하 여 가상의 사용자 컨트롤을 가정 `MyButton`합니다. 이 예제에서는 사용자가 요청할 때를 `ConstituentButtonBackColor` 속성에 저장 된 값을 <xref:System.Windows.Forms.Control.BackColor%2A> 속성을 `MyButton` 전달 됩니다. 사용자 값이이 속성에 할당 하는 경우 해당 값이 자동으로 전달 합니다 <xref:System.Windows.Forms.Control.BackColor%2A> 속성을 `MyButton` 및 `set` 코드는 실행의 색을 변경 `MyButton`합니다.  
-  
- 다음 예제에서는 노출 하는 방법을 보여 줍니다는 <xref:System.Windows.Forms.Control.BackColor%2A> 속성을 구성 합니다.  
-  
-```vb  
-Public Property ButtonColor() as System.Drawing.Color  
-   Get  
-      Return MyButton.BackColor  
-   End Get  
-   Set(Value as System.Drawing.Color)  
-      MyButton.BackColor = Value  
-   End Set  
-End Property  
-```  
-  
-```csharp  
-public Color ButtonColor  
-{  
-   get  
-   {  
-      return(myButton.BackColor);  
-   }  
-   set  
-   {  
-      myButton.BackColor = value;  
-   }  
-}  
-```  
-  
-### <a name="to-expose-a-property-of-a-constituent-control"></a>구성 요소 컨트롤의 속성을 노출 하려면  
-  
-1. 사용자 정의 컨트롤에 대 한 공용 속성을 만듭니다.  
-  
-2. 에 `get` 섹션의 속성을 노출 하려는 속성의 값을 검색 하는 코드를 작성 합니다.  
-  
-3. 에 `set` 섹션 속성의 구성 요소 컨트롤 노출 된 속성에 속성의 값을 전달 하는 코드를 작성 합니다.  
-  
+복합 컨트롤을 구성 하는 컨트롤을 *구성 요소 컨트롤*이라고 합니다. 이러한 컨트롤은 일반적으로 private으로 선언 되므로 개발자가 액세스할 수 없습니다. 이러한 컨트롤의 속성을 이후 사용자가 사용할 수 있게 하려면 사용자에 게 노출 해야 합니다. 구성 컨트롤의 속성은 사용자 정의 컨트롤에서 속성을 만들고 해당 속성의 `get` 및 `set` 접근자를 사용 하 여 구성 요소 컨트롤의 private 속성에 변경 내용을 적용 하 여 노출 됩니다.
+
+ 이라는 `MyButton`구성 단추가 있는 가상의 사용자 정의 컨트롤을 사용 하는 것이 좋습니다. 이 예제에서 사용자가 `ConstituentButtonBackColor` 속성을 요청 하면의 <xref:System.Windows.Forms.Control.BackColor%2A> `MyButton` 속성에 저장 된 값이 전달 됩니다. 사용자가이 속성에 값을 할당 하면 <xref:System.Windows.Forms.Control.BackColor%2A> 해당 값이의 `MyButton` 속성에 자동으로 전달 되 고 `set` `MyButton`코드가 실행 되어 색이 변경 됩니다.
+
+ 다음 예제에서는 구성 단추의 <xref:System.Windows.Forms.Control.BackColor%2A> 속성을 노출 하는 방법을 보여 줍니다.
+
+```vb
+Public Property ButtonColor() as System.Drawing.Color
+   Get
+      Return MyButton.BackColor
+   End Get
+   Set(Value as System.Drawing.Color)
+      MyButton.BackColor = Value
+   End Set
+End Property
+```
+
+```csharp
+public Color ButtonColor
+{
+   get
+   {
+      return(myButton.BackColor);
+   }
+   set
+   {
+      myButton.BackColor = value;
+   }
+}
+```
+
+### <a name="to-expose-a-property-of-a-constituent-control"></a>구성 컨트롤의 속성을 노출 하려면
+
+1. 사용자 정의 컨트롤에 대 한 공용 속성을 만듭니다.
+
+2. 속성의 `get` 섹션에서 노출 하려는 속성의 값을 검색 하는 코드를 작성 합니다.
+
+3. 속성의 `set` 섹션에서 속성의 값을 구성 요소 컨트롤의 노출 된 속성에 전달 하는 코드를 작성 합니다.
+
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.Forms.UserControl>

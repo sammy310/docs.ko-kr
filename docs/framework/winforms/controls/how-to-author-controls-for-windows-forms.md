@@ -6,19 +6,19 @@ helpviewer_keywords:
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: 0804b9824b84a32bdd79c763031a3de4ffa54099
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 45a6ae68102204ad8506027065c2676e02fdd7a3
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039884"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015912"
 ---
-# <a name="how-to-author-controls-for-windows-forms"></a>방법: Windows Forms 컨트롤 작성
+# <a name="how-to-author-controls-for-windows-forms"></a>방법: Windows Forms에 대 한 Author 컨트롤
 
 컨트롤은 사용자와 프로그램 간의 그래픽 링크를 나타냅니다. 컨트롤은 데이터를 제공하거나 처리하고, 사용자 입력을 허용하고, 사용자 및 애플리케이션을 연결하는 다른 함수의 구성원을 합니다. 컨트롤이 기본적으로 그래픽 인터페이스를 사용하는 구성 요소이기 때문에 사용자 상호 작용을 제공할 뿐만 아니라 구성 요소가 수행하는 모든 함수를 제공할 수 있습니다. 컨트롤은 특정 목적을 수행하기 위해 만들어지며 컨트롤 작성은 다른 프로그래밍 작업입니다. 이 점을 염두하면서 다음 단계는 컨트롤 작성 프로세스의 개요를 나타냅니다. 링크는 각 단계에 대한 추가 정보를 제공합니다.
-
-> [!NOTE]
-> Web Forms에서 사용할 사용자 지정 컨트롤을 작성하려는 경우 [사용자 지정 ASP.NET 서버 컨트롤 개발](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100))을 참조하세요.
 
 ## <a name="to-author-a-control"></a>컨트롤을 작성하려면
 
@@ -42,7 +42,7 @@ ms.locfileid: "69039884"
 
 6. 컨트롤이에서 <xref:System.Windows.Forms.UserControl>상속 하는 경우 컨트롤 프로젝트를 빌드하고 **UserControl 테스트 컨테이너**에서 실행 하 여 런타임 동작을 테스트할 수 있습니다. 자세한 내용은 [방법: UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)의 런타임 동작을 테스트 합니다.
 
-7. 또한 Windows 애플리케이션과 같이 새 프로젝트를 만들고 컨테이너에 배치하여 컨트롤을 테스트하고 디버그할 수 있습니다. 이 프로세스는 [연습의 일부로 보여 줍니다. Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)를 사용 하 여 복합 컨트롤 작성
+7. 또한 Windows 애플리케이션과 같이 새 프로젝트를 만들고 컨테이너에 배치하여 컨트롤을 테스트하고 디버그할 수 있습니다. 이 프로세스는 [연습의 일부로 보여 줍니다. 복합 컨트롤](walkthrough-authoring-a-composite-control-with-visual-csharp.md)작성
 
 8. 각 기능을 추가하면 기능을 테스트 프로젝트에 추가하여 새 기능을 실행합니다.
 
@@ -52,8 +52,6 @@ ms.locfileid: "69039884"
 
 ## <a name="see-also"></a>참고자료
 
-- [연습: Visual Basic를 사용 하 여 복합 컨트롤 작성](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [연습: Visual Basic를 사용 하 여 Windows Forms 컨트롤에서 상속](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
 - [방법: UserControl 클래스에서 상속](how-to-inherit-from-the-usercontrol-class.md)
 - [방법: Control 클래스에서 상속](how-to-inherit-from-the-control-class.md)
 - [방법: 기존 Windows Forms 컨트롤에서 상속](how-to-inherit-from-existing-windows-forms-controls.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 43b0ddc8f683e7069207bbb1c47af73976bc4a5a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bfac0248e6d9dae3ef87f43b2c713e1dc64a9464
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958554"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016110"
 ---
 # <a name="printing-overview"></a>인쇄 개요
 Microsoft .NET 프레임 워크에서 Windows Presentation Foundation (WPF)를 사용 하는 응용 프로그램 개발자는 다양 한 새로운 인쇄 및 인쇄 시스템 관리 Api 집합을 사용할 수 있습니다. [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]에서는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램을 만드는 개발자와 비관리 코드를 사용하는 개발자도 이러한 인쇄 시스템 향상 기능을 일부 사용할 수 있습니다. 이 새로운 기능의 핵심은 새 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 파일 형식과 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 인쇄 경로입니다.  
@@ -64,7 +64,7 @@ Microsoft .NET 프레임 워크에서 Windows Presentation Foundation (WPF)를 �
   
  및 Windows Forms 응용 프로그램에서 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] xpsdrv 기반 프린터를 사용할 수 있도록 하기 위해 xpsdrv (xps 프린터 드라이버)는 GDI를 xps 형식으로 변환할 수 있도록 지원 합니다. 또한 XPSDrv 모델은 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 응용 프로그램에서 문서를 인쇄할 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 수 있도록 XPS를 GDI 형식으로 변환 합니다. 응용 프로그램의 경우 쓰기 작업의 대상 인쇄 큐에 XPSDrv 드라이버가 없는 <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> 경우 <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> 에는 <xref:System.Windows.Xps.XpsDocumentWriter> 클래스의 및 메서드에서 XPS를 GDI 형식으로 변환 하는 작업을 자동으로 수행 합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Windows Forms 응용 프로그램은 문서 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 를 인쇄할 수 없습니다.  
   
- 다음 그림에서는 인쇄 하위 시스템을 보여 주며에서 제공 하는 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]부분과 소프트웨어 및 하드웨어 공급 업체에서 정의 되는 부분을 정의 합니다.  
+ 다음 그림에서는 인쇄 하위 시스템을 보여 주며 Microsoft에서 제공 하는 부분과 소프트웨어 및 하드웨어 공급 업체에서 정의 되는 부분을 정의 합니다.  
   
  ![XPS 인쇄 시스템을 보여 주는 스크린샷](./media/printing-overview/xml-paper-specification-print-system.png)  
   

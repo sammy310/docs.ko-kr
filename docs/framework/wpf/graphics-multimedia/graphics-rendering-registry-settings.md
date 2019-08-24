@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: de523a42f1274784a92243735a8c239a6b5bcff1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f2af32315f8f955495c51f2928c2b8eed5350759
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960239"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016091"
 ---
 # <a name="graphics-rendering-registry-settings"></a>그래픽 렌더링 레지스트리 설정
 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애플리케이션에 영향을 미치는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 그래픽 렌더링 레지스트리 설정에 대해 간략하게 설명합니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "69960239"
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|문자열|  
   
- 2004년 11월에 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]는 새 버전의 드라이버 테스트 지침을 발표했습니다. 이 날짜 이후에 작성된 드라이버는 더 나은 안정성을 제공합니다. 기본적으로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 이러한 드라이버에 대해 하드웨어 가속 파이프라인을 사용하며, 이 날짜 이전에 게시된 XPDM 드라이버용 소프트웨어 렌더링으로 대체됩니다.  
+ 2004 년 11 월에 Microsoft는 새 버전의 드라이버 테스트 지침을 출시 했습니다. 이 날짜 이후에 작성 된 드라이버는 더 나은 안정성을 제공 합니다. 기본적으로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 이러한 드라이버에 대해 하드웨어 가속 파이프라인을 사용하며, 이 날짜 이전에 게시된 XPDM 드라이버용 소프트웨어 렌더링으로 대체됩니다.  
   
  **필수 비디오 드라이버 날짜 설정**을 통해 XPDM 드라이버에 대한 대체 최소 날짜를 지정할 수 있습니다. 비디오 드라이버가 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 지원하기에 충분히 안정적인 경우에만 2004년 11월 이전 날짜를 지정하는 것이 좋습니다.  
   
