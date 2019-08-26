@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 10/05/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 0322d44ca37ab8e7faa3188887069c2e04ec755b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f8c37f47cc8dfb999f2371773a50c2dd91e074a5
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110268"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660484"
 ---
 # <a name="publish-your-net-core-hello-world-application-with-visual-studio-2017"></a>Visual Studio 2017을 사용하여 .NET Core Hello World 애플리케이션 게시
 
@@ -52,4 +52,4 @@ ms.locfileid: "59110268"
 
 게시 프로세스는 프레임워크 종속 배포를 만듭니다. 이 배포는 시스템에 .NET Core가 설치되어 있으면 게시된 애플리케이션이 .NET Core에서 지원하는 모든 플랫폼에서 실행되는 배포 유형입니다. 사용자는 콘솔 창에서 `dotnet HelloWorld.dll` 명령을 실행하여 애플리케이션을 실행할 수 있습니다.
 
-.NET Core 애플리케이션 게시 및 배포에 대한 자세한 내용은 [.NET Core 애플리케이션 배포](../../core/deploying/index.md)를 참조하세요.
+.NET Core 애플리케이션 게시 및 배포에 대한 자세한 내용은 [.NET Core 애플리케이션 배포](../deploying/index.md)를 참조하세요.

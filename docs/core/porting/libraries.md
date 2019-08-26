@@ -4,12 +4,12 @@ description: .NET Framework에서 .NET Core로 라이브러리 프로젝트를 �
 author: cartermp
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8709c4942bcd1b0fc7f0e75ee41e5c9a01df83ee
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: c7a770ba2da8c245ba9140852fc7c2a33a55f7a2
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745562"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660708"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>.NET Core로 .NET Framework 라이브러리 포팅
 
@@ -29,16 +29,16 @@ ms.locfileid: "56745562"
 [.NET 표준](../../standard/net-standard.md)\
 이 항목에서는 모든 .NET 구현에서 사용할 수 있는 .NET API의 공식 사양에 관해 설명합니다.
 
-[패키지, 메타패키지 및 프레임워크](~/docs/core/packages.md)   
+[패키지, 메타패키지 및 프레임워크](../packages.md)   
 이 문서에서는 .NET Core가 패키지를 정의하고 사용하는 방법과 패키지가 여러 .NET 구현에서 실행되는 코드를 지원하는 방법에 관해 설명합니다.
 
-[플랫폼 간 도구로 라이브러리 개발](~/docs/core/tutorials/libraries.md)   
+[플랫폼 간 도구로 라이브러리 개발](../tutorials/libraries.md)   
 이 항목에서는 플랫폼 간 CLI 도구를 사용하여 .NET용 라이브러리를 작성하는 방법에 관해 설명합니다.
 
-[.NET Core용 *csproj* 형식에 대한 추가 사항](~/docs/core/tools/csproj.md)   
+[.NET Core용 *csproj* 형식에 대한 추가 사항](../tools/csproj.md)   
 이 문서에서는 *csproj* 및 MSBuild로 프로젝트 시스템을 전환함에 따라 프로젝트 파일에 추가된 변경 내용을 간략하게 설명합니다.
 
-[.NET Core로 이식 - 타사 종속성 분석](~/docs/core/porting/third-party-deps.md)   
+[.NET Core로 이식 - 타사 종속성 분석](third-party-deps.md)   
 이 항목에서는 타사 종속성의 이식성 및 .NET Core에서 NuGet 패키지 종속성이 실행되지 않는 경우 해야 할 작업에 관해 설명합니다.
 
 ## <a name="retargeting-your-net-framework-code-to-net-framework-472"></a>.NET Framework 4.7.2로 .NET Framework 코드 대상 다시 지정

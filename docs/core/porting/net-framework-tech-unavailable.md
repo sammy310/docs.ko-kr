@@ -4,12 +4,12 @@ description: .NET Core에서 사용할 수 없는 .NET Framework 기술에 대�
 author: cartermp
 ms.author: mairaw
 ms.date: 04/30/2019
-ms.openlocfilehash: bfeea58f4d80b789a7174a77e0784f2326906416
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87c3dd337ad44fd21b255afa7c03b528cd8a42ad
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737094"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660606"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Core에서 사용할 수 없는 .NET Framework 기술
 
@@ -33,13 +33,13 @@ API 또는 기술이 현재 구현되지 않았기 때문에 이들을 고의로
 
 ## <a name="code-access-security-cas"></a>CAS(코드 액세스 보안)
 
-관리형 애플리케이션 또는 라이브러리에서 사용하거나 실행하는 리소스를 제한하기 위해 런타임 또는 프레임워크에 의존하는 샌드박싱은 [.NET Framework에서 지원되지 않으므로](~/docs/framework/misc/code-access-security.md) .NET Core에서도 지원되지 않습니다. .NET Framework 및 런타임에는 CAS를 보안 경계로 계속 처리하기 위해 권한 상승이 발생하는 사례가 너무 많이 있습니다. 또한 CAS는 구현을 더욱 복잡하게 만들고 이를 사용하지 않을 애플리케이션의 정확성-성능에 종종 영향을 미칩니다.
+관리형 애플리케이션 또는 라이브러리에서 사용하거나 실행하는 리소스를 제한하기 위해 런타임 또는 프레임워크에 의존하는 샌드박싱은 [.NET Framework에서 지원되지 않으므로](../../framework/misc/code-access-security.md) .NET Core에서도 지원되지 않습니다. .NET Framework 및 런타임에는 CAS를 보안 경계로 계속 처리하기 위해 권한 상승이 발생하는 사례가 너무 많이 있습니다. 또한 CAS는 구현을 더욱 복잡하게 만들고 이를 사용하지 않을 애플리케이션의 정확성-성능에 종종 영향을 미칩니다.
 
 최소한의 권한으로 프로세스를 실행하기 위해 가상화, 컨테이너 또는 사용자 계정과 같은 운영 체제에서 제공되는 보안 경계를 사용할 수 있습니다.
 
 ## <a name="security-transparency"></a>보안 투명도
 
-CAS와 마찬가지로 보안 투명도는 샌드박스 코드를 보안상 중요한 코드와 선언적인 방식으로 분리할 수 있지만 [더 이상 보안 경계로서 지원되지는 않습니다](~/docs/framework/misc/security-transparent-code.md). 이 기능은 Silverlight에서 많이 사용됩니다. 
+CAS와 마찬가지로 보안 투명도는 샌드박스 코드를 보안상 중요한 코드와 선언적인 방식으로 분리할 수 있지만 [더 이상 보안 경계로서 지원되지는 않습니다](../../framework/misc/security-transparent-code.md). 이 기능은 Silverlight에서 많이 사용됩니다. 
 
 최소한의 권한으로 프로세스를 실행하려면 가상화, 컨테이너 또는 사용자 계정과 같은 운영 체제에서 제공하는 보안 경계를 사용할 수 있습니다.
 
