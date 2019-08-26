@@ -2,19 +2,19 @@
 title: Variant 제네릭 인터페이스 만들기(C#)
 ms.date: 07/20/2015
 ms.assetid: 30330ec4-9df2-4838-a535-6c406d0ed4df
-ms.openlocfilehash: ad82ba27a98d27a18d9cff1e65ab929cd9d711a6
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 4ba72f28cd2ddd800f169387cc2c742159d4cb1b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673758"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595314"
 ---
 # <a name="creating-variant-generic-interfaces-c"></a>Variant 제네릭 인터페이스 만들기(C#)
 
 인터페이스에서 제네릭 형식 매개 변수를 공변(covariant) 또는 반공변(contravariant)으로 선언할 수 있습니다. *공변성(covariance)* 은 인터페이스 메서드가 제네릭 형식 매개 변수에 정의된 것보다 더 많은 수의 파생된 반환 형식을 갖도록 허용합니다. *반공변성(contravariance)* 은 인터페이스 메서드가 제네릭 매개 변수에 지정된 것보다 더 적은 수의 파생된 형식의 인수 형식을 갖도록 허용합니다. 공변(covariant) 또는 반공변(contravariant) 제네릭 형식 매개 변수가 포함된 제네릭 인터페이스를 *variant*라고 합니다.
 
 > [!NOTE]
-> .NET Framework 4에서는 기존의 몇몇 제네릭 인터페이스에 대한 가변성 지원이 추가되었습니다. .NET Framework의 variant 인터페이스 목록은 [제네릭 인터페이스의 가변성(C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)을 참조하세요.
+> .NET Framework 4에서는 기존의 몇몇 제네릭 인터페이스에 대한 가변성 지원이 추가되었습니다. .NET Framework의 variant 인터페이스 목록은 [제네릭 인터페이스의 가변성(C#)](./variance-in-generic-interfaces.md)을 참조하세요.
 
 ## <a name="declaring-variant-generic-interfaces"></a>Variant 제네릭 인터페이스 선언
 
@@ -37,7 +37,7 @@ ms.locfileid: "57673758"
     }
     ```
 
-    그러나 이 규칙에는 한 가지 예외가 있습니다. 반공변(contravariant) 제네릭 대리자가 메서드 매개 변수로 있는 경우 형식을 이 대리자에 대한 제네릭 형식 매개 변수로 사용할 수 있습니다. 다음 예제에서 `R` 형식을 통해 이를 확인할 수 있습니다. 자세한 내용은 [대리자에서 가변성 사용(C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) 및 [Func 및 Action 제네릭 대리자에 가변성 사용(C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)을 참조하세요.
+    그러나 이 규칙에는 한 가지 예외가 있습니다. 반공변(contravariant) 제네릭 대리자가 메서드 매개 변수로 있는 경우 형식을 이 대리자에 대한 제네릭 형식 매개 변수로 사용할 수 있습니다. 다음 예제에서 `R` 형식을 통해 이를 확인할 수 있습니다. 자세한 내용은 [대리자에서 가변성 사용(C#)](./variance-in-delegates.md) 및 [Func 및 Action 제네릭 대리자에 가변성 사용(C#)](./using-variance-for-func-and-action-generic-delegates.md)을 참조하세요.
 
     ```csharp
     interface ICovariant<out R>
@@ -192,5 +192,5 @@ class Program
 
 ## <a name="see-also"></a>참고 항목
 
-- [제네릭 인터페이스의 가변성(C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
-- [Func 및 Action 제네릭 대리자에 가변성 사용(C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [제네릭 인터페이스의 가변성(C#)](./variance-in-generic-interfaces.md)
+- [Func 및 Action 제네릭 대리자에 가변성 사용(C#)](./using-variance-for-func-and-action-generic-delegates.md)

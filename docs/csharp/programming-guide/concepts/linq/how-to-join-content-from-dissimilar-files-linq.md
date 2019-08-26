@@ -2,12 +2,12 @@
 title: '방법: 서로 다른 파일의 콘텐츠 조인(LINQ)(C#)'
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: dd7287abce7fca803dd87d23f1f58151cf4ec2f5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 14f9c9917aedbc0beeeddae789b835613d1badc8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585750"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593163"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>방법: 서로 다른 파일의 콘텐츠 조인(LINQ)(C#)
 
@@ -49,7 +49,7 @@ ms.locfileid: "65585750"
     Tucker,Michael,122  
     ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
 ```csharp
 using System;
@@ -126,5 +126,5 @@ Tucker, 94, 92, 91, 91
 
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ 및 문자열(C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ 및 파일 디렉터리(C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ 및 문자열(C#)](./linq-and-strings.md)
+- [LINQ 및 파일 디렉터리(C#)](./linq-and-file-directories.md)

@@ -2,21 +2,21 @@
 title: '방법: 두 목록 간의 차집합 구하기(LINQ)(C#)'
 ms.date: 07/20/2015
 ms.assetid: 8e8945f0-4aba-439d-8d5d-c8d1eeef4e71
-ms.openlocfilehash: c8f01cb53665d01d4c7861bab758ecc9e0dcc3c8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: decdbe45afd12581a53ed70ec843ee72f54f0409
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585713"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593345"
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>방법: 두 목록 간의 차집합 구하기(LINQ)(C#)
 이 예제에서는 LINQ를 사용하여 두 개의 문자열 목록을 비교하고 names1.txt에 있지만 names2.txt에는 없는 줄만 출력하는 방법을 보여 줍니다.  
   
 ### <a name="to-create-the-data-files"></a>데이터 파일을 만들려면  
   
-1. [방법: 문자열 컬렉션 결합 및 비교(LINQ)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)에 표시된 대로 names1.txt 및 names2.txt를 솔루션 폴더에 복사합니다.  
+1. [방법: 문자열 컬렉션 결합 및 비교(LINQ)(C#)](./how-to-combine-and-compare-string-collections-linq.md)에 표시된 대로 names1.txt 및 names2.txt를 솔루션 폴더에 복사합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```csharp  
 class CompareLists  
@@ -59,4 +59,4 @@ class CompareLists
   
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ 및 문자열(C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ 및 문자열(C#)](./linq-and-strings.md)

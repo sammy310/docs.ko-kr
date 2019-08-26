@@ -2,19 +2,19 @@
 title: 여러 표준 쿼리 연산자 연결(C#)
 ms.date: 07/20/2015
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
-ms.openlocfilehash: e09b918ab6c33c8e3ccae6f99826dd86f4a2d1e6
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 89cf7f526bdc60881e901d7ca8f556e97488b220
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487607"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594833"
 ---
 # <a name="chaining-standard-query-operators-together-c"></a>여러 표준 쿼리 연산자 연결(C#)
-이는 [자습서: 여러 쿼리 연결(C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md) 자습서의 마지막 항목입니다.  
+이는 [자습서: 여러 쿼리 연결(C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md) 자습서의 마지막 항목입니다.  
   
  표준 쿼리 연산자도 연결할 수 있습니다. 예를 들어, <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> 연산자를 삽입할 수 있으며 이 연산자는 지연 방식으로 작동합니다. 이 연산자는 중간 결과를 유형화하지 않습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서 <xref:System.Linq.Enumerable.Where%2A> 메서드는 `ConvertCollectionToUpperCase`를 호출하기 전에 호출됩니다. <xref:System.Linq.Enumerable.Where%2A> 메서드는 이 자습서의 이전 예제에서 사용되는 지연 메서드인 `ConvertCollectionToUpperCase` 및 `AppendString`과 거의 똑같은 방식으로 작동합니다.  
   
  한 가지 차이점은 이 경우에 <xref:System.Linq.Enumerable.Where%2A> 메서드는 소스 컬렉션을 반복하고 첫 번째 항목이 조건자를 통과하지 않는 것을 확인한 다음 조건자를 통과하는 다음 항목을 가져옵니다. 그런 다음 두 번째 항목을 반환합니다.  

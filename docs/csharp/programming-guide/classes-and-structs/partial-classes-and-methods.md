@@ -7,16 +7,16 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 0a0cf7c3b6024f75196abed5fdb7d18a058c58db
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 53c3ac6e4fa6313488c47d851e0897bd512521b7
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398377"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596281"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Partial 클래스 및 메서드(C# 프로그래밍 가이드)
 
-[클래스](../../../csharp/language-reference/keywords/class.md), [구조체](../../../csharp/language-reference/keywords/struct.md), [인터페이스](../../../csharp/language-reference/keywords/interface.md) 또는 메서드의 정의를 둘 이상의 소스 파일에 분할할 수 있습니다. 각 소스 파일에는 형식 또는 메서드 정의 섹션이 있으며 모든 부분은 애플리케이션이 컴파일될 때 결합됩니다.
+[클래스](../../language-reference/keywords/class.md), [구조체](../../language-reference/keywords/struct.md), [인터페이스](../../language-reference/keywords/interface.md) 또는 메서드의 정의를 둘 이상의 소스 파일에 분할할 수 있습니다. 각 소스 파일에는 형식 또는 메서드 정의 섹션이 있으며 모든 부분은 애플리케이션이 컴파일될 때 결합됩니다.
 
 ## <a name="partial-classes"></a>partial 클래스
 
@@ -26,7 +26,7 @@ ms.locfileid: "67398377"
 
 - 자동으로 생성된 소스로 작업하는 경우 소스 파일을 다시 만들지 않고도 클래스에 코드를 추가할 수 있습니다. Visual Studio에서는 Windows Forms, 웹 서비스 래퍼 코드 등에 만들 때 이 방식을 사용합니다. Visual Studio에서 만든 파일을 수정하지 않고도 이러한 클래스를 사용하는 코드를 만들 수 있습니다.
 
-- 클래스 정의를 분할하려면 다음과 같이 [partial](../../../csharp/language-reference/keywords/partial-type.md) 키워드 한정자를 사용합니다.
+- 클래스 정의를 분할하려면 다음과 같이 [partial](../../language-reference/keywords/partial-type.md) 키워드 한정자를 사용합니다.
 
   [!code-csharp[csProgGuideObjects#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#26)]
 
@@ -91,25 +91,25 @@ partial 클래스 정의로 작업할 때 따라야 할 몇 가지 규칙이 있
 
 - 부분 형식(Partial Type) 정의에서 다음 키워드는 선택 사항이지만, 부분 형식(Partial Type) 정의에 있는 경우 동일한 형식의 다른 부분 정의에서 지정된 키워드와 충돌할 수 없습니다.
 
-  - [public](../../../csharp/language-reference/keywords/public.md)
+  - [public](../../language-reference/keywords/public.md)
 
-  - [private](../../../csharp/language-reference/keywords/private.md)
+  - [private](../../language-reference/keywords/private.md)
 
-  - [protected](../../../csharp/language-reference/keywords/protected.md)
+  - [protected](../../language-reference/keywords/protected.md)
 
-  - [internal](../../../csharp/language-reference/keywords/internal.md)
+  - [internal](../../language-reference/keywords/internal.md)
 
-  - [abstract](../../../csharp/language-reference/keywords/abstract.md)
+  - [abstract](../../language-reference/keywords/abstract.md)
 
-  - [sealed](../../../csharp/language-reference/keywords/sealed.md)
+  - [sealed](../../language-reference/keywords/sealed.md)
 
   - 기본 클래스
 
-  - [new](../../../csharp/language-reference/keywords/new-modifier.md) 한정자(중첩된 부분)
+  - [new](../../language-reference/keywords/new-modifier.md) 한정자(중첩된 부분)
 
   - 제네릭 제약 조건
 
-자세한 내용은 [형식 매개 변수에 대한 제약 조건](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)을 참조하세요.
+자세한 내용은 [형식 매개 변수에 대한 제약 조건](../generics/constraints-on-type-parameters.md)을 참조하세요.
 
 ## <a name="example-1"></a>예제 1
 
@@ -152,19 +152,19 @@ partial void onNameChanged()
 }
 ```
 
-- 부분 메서드(Partial Method) 선언은 상황별 키워드 [partial](../../../csharp/language-reference/keywords/partial-type.md)로 시작해야 하고, 메서드에서 [void](../../../csharp/language-reference/keywords/void.md)를 반환해야 합니다.
+- 부분 메서드(Partial Method) 선언은 상황별 키워드 [partial](../../language-reference/keywords/partial-type.md)로 시작해야 하고, 메서드에서 [void](../../language-reference/keywords/void.md)를 반환해야 합니다.
 
-- 부분 메서드(Partial Method)는 [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md) 또는 [ref](../../../csharp/language-reference/keywords/ref.md) 매개 변수를 사용할 수 있지만 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 매개 변수는 사용할 수 없습니다.
+- 부분 메서드(Partial Method)는 [in](../../language-reference/keywords/in-parameter-modifier.md) 또는 [ref](../../language-reference/keywords/ref.md) 매개 변수를 사용할 수 있지만 [out](../../language-reference/keywords/out-parameter-modifier.md) 매개 변수는 사용할 수 없습니다.
 
-- 부분 메서드(Partial Method)는 암시적으로 [private](../../../csharp/language-reference/keywords/private.md)이므로 [가상](../../../csharp/language-reference/keywords/virtual.md)일 수 없습니다.
+- 부분 메서드(Partial Method)는 암시적으로 [private](../../language-reference/keywords/private.md)이므로 [가상](../../language-reference/keywords/virtual.md)일 수 없습니다.
 
-- 부분 메서드(Partial Method)는 본문의 존재 여부에 따라 정의하는지, 구현하는지가 결정되기 때문에 [extern](../../../csharp/language-reference/keywords/extern.md)일 수 없습니다.
+- 부분 메서드(Partial Method)는 본문의 존재 여부에 따라 정의하는지, 구현하는지가 결정되기 때문에 [extern](../../language-reference/keywords/extern.md)일 수 없습니다.
 
-- 부분 메서드(Partial Method)는 [static](../../../csharp/language-reference/keywords/static.md) 및 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 한정자를 사용할 수 없습니다.
+- 부분 메서드(Partial Method)는 [static](../../language-reference/keywords/static.md) 및 [unsafe](../../language-reference/keywords/unsafe.md) 한정자를 사용할 수 없습니다.
 
 - 부분 메서드(Partial Method)는 제네릭일 수 있습니다. 제약 조건은 정의하는 부분 메서드(Partial Method) 선언에 배치되며 필요에 따라 구현하는 선언에서 반복될 수 있습니다. 매개 변수 및 형식 매개 변수 이름이 정의하는 선언과 구현하는 선언에서 동일할 필요는 없습니다.
 
-- 정의 및 구현된 부분 메서드(Partial Method)에 대한 [대리자](../../../csharp/language-reference/keywords/delegate.md)는 만들 수 있지만 정의만 된 부분 메서드(Partial Method)에 대한 대리자는 만들 수 없습니다.
+- 정의 및 구현된 부분 메서드(Partial Method)에 대한 [대리자](../../language-reference/keywords/delegate.md)는 만들 수 있지만 정의만 된 부분 메서드(Partial Method)에 대한 대리자는 만들 수 없습니다.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
@@ -172,8 +172,8 @@ partial void onNameChanged()
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [클래스](../../../csharp/programming-guide/classes-and-structs/classes.md)
-- [구조체](../../../csharp/programming-guide/classes-and-structs/structs.md)
-- [인터페이스](../../../csharp/programming-guide/interfaces/index.md)
-- [partial(형식)](../../../csharp/language-reference/keywords/partial-type.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [클래스](./classes.md)
+- [구조체](./structs.md)
+- [인터페이스](../interfaces/index.md)
+- [partial(형식)](../../language-reference/keywords/partial-type.md)

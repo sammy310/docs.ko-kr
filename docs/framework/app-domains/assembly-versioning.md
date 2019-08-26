@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 920787c00a12a56de2766ec9ea104241a5722852
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1d295f394a9ce7f038e2c64d42193e2d18040a98
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593647"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921659"
 ---
 # <a name="assembly-versioning"></a>어셈블리 버전 관리
 공용 언어 런타임을 사용하는 어셈블리에 대한 모든 버전 관리는 어셈블리 수준에서 수행됩니다. 특정 어셈블리의 버전과 해당 종속 어셈블리 버전은 어셈블리 매니페스트에 기록됩니다. 런타임에서의 버전 정책은, 구성 파일(애플리케이션 구성 파일, 게시자 정책 파일 및 컴퓨터의 관리자 구성 파일)의 명시적인 버전 정책에 의해 재정의된 경우를 제외하고는, 처음 빌드되고 테스트될 때 사용된 버전으로만 애플리케이션이 실행되도록 합니다.  
   
 > [!NOTE]
->  버전 관리는 강력한 이름이 지정된 어셈블리에만 적용됩니다.  
+> 버전 관리는 강력한 이름이 지정된 어셈블리에만 적용됩니다.  
   
  런타임에서는 어셈블리 바인딩 요청을 단계적으로 확인합니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "64593647"
  정보 버전은 추가적인 버전 정보를 제공하는 문자열로서, 정보 제공의 목적으로만 사용되며 런타임에는 사용되지 않습니다. 이 텍스트 기반 정보 버전에는 제품의 마케팅 정보, 패키징, 제품 이름 등이 포함되며, 런타임에는 사용되지 않습니다. 예를 들어, 정보 버전은 "공용 언어 런타임 버전1.0" 또는 "NET Control SP 2"가 될 수 있습니다. Microsoft Windows의 파일 속성 대화 상자에서 버전 탭의 "제품 버전" 항목에 이 정보가 표시됩니다.  
   
 > [!NOTE]
->  임의의 텍스트를 지정할 수 있지만, 문자열이 어셈블리 버전 번호에서 사용하는 형식이 아니거나 이러한 형식이더라도 와일드카드가 포함된 경우 컴파일할 때 경고 메시지가 나타납니다. 이 경고는 무시해도 됩니다.  
+> 임의의 텍스트를 지정할 수 있지만, 문자열이 어셈블리 버전 번호에서 사용하는 형식이 아니거나 이러한 형식이더라도 와일드카드가 포함된 경우 컴파일할 때 경고 메시지가 나타납니다. 이 경고는 무시해도 됩니다.  
   
  정보 버전은 사용자 지정 특성인 <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType>를 사용하여 나타냅니다. 정보 버전 특성에 대한 자세한 내용은 [어셈블리 특성 설정](../../../docs/framework/app-domains/set-assembly-attributes.md)을 참조하세요.  
   

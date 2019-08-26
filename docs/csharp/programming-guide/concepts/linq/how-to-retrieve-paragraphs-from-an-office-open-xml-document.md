@@ -2,24 +2,24 @@
 title: '방법: Office Open XML 문서에서 단락 검색(C#)'
 ms.date: 07/20/2015
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
-ms.openlocfilehash: 5b0919b7c5c40444587a18c0087109af8172ebb1
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 352389467bbe3c2a5e7364b081539bad8efc3f3b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486461"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592615"
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>방법: Office Open XML 문서에서 단락 검색(C#)
 이 항목에서는 Office Open XML 문서를 열고 문서에 있는 모든 단락의 컬렉션을 검색하는 예제를 제공합니다.  
   
  Office Open XML에 대한 자세한 내용은 [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) 및 [www.ericwhite.com](http://ericwhite.com/)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 Office Open XML 패키지를 열고 Open XML 패키지에서의 관계를 사용하여 문서와 스타일 부분을 찾습니다. 그런 다음 문서를 쿼리하여 단락 <xref:System.Xml.Linq.XElement> 노드, 각 단락의 스타일 이름 및 각 단락의 텍스트가 포함된 익명 형식의 컬렉션을 프로젝션합니다.  
   
  이 예제에서는 예제에서도 제공되는 `StringConcatenate`라는 확장 메서드를 사용합니다.  
   
- 이 예제가 작동하는 방식을 설명하는 자세한 자습서는 [XML의 순수 함수 변환(C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)을 참조하세요.  
+ 이 예제가 작동하는 방식을 설명하는 자세한 자습서는 [XML의 순수 함수 변환(C#)](./introduction-to-pure-functional-transformations.md)을 참조하세요.  
   
  이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.  
   
@@ -163,7 +163,7 @@ class Program
 }  
 ```  
   
- [원본 Office Open XML 문서 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)에 설명된 샘플 Open XML 문서로 실행하는 경우 이 예제는 다음과 같은 출력을 생성합니다.  
+ [원본 Office Open XML 문서 만들기(C#)](./creating-the-source-office-open-xml-document.md)에 설명된 샘플 Open XML 문서로 실행하는 경우 이 예제는 다음과 같은 출력을 생성합니다.  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  

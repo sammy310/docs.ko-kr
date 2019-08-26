@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 8af6d7d91efef81569e6f783352ec89d260cdd13
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 8cf0f57caad41da0a29b935029731260154a2dc7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347596"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924031"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>방법: .NET Framework 지침을 따르는 이벤트 게시(C# 프로그래밍 가이드)
 다음 절차에서는 표준 .NET Framework 패턴을 따르는 이벤트를 클래스와 구조체에 추가하는 방법을 보여 줍니다. .NET Framework 클래스 라이브러리의 모든 이벤트는 다음과 같이 정의된 <xref:System.EventHandler> 대리자를 기반으로 합니다.  
@@ -20,7 +20,7 @@ public delegate void EventHandler(object sender, EventArgs e);
 ```  
   
 > [!NOTE]
->  .NET Framework 2.0에서는 이 대리자의 제네릭 버전인 <xref:System.EventHandler%601>가 도입되었습니다. 다음 예제에서는 두 버전을 사용하는 방법을 모두 보여 줍니다.  
+> .NET Framework 2.0에서는 이 대리자의 제네릭 버전인 <xref:System.EventHandler%601>가 도입되었습니다. 다음 예제에서는 두 버전을 사용하는 방법을 모두 보여 줍니다.  
   
  정의하는 클래스의 이벤트는 값을 반환하는 대리자를 포함하여 유효한 모든 대리자 형식을 기반으로 할 수 있지만 다음 예제와 같이 <xref:System.EventHandler>를 사용하여 .NET Framework 패턴에 따라 이벤트를 만드는 것이 좋습니다.  
   
@@ -77,6 +77,6 @@ public delegate void EventHandler(object sender, EventArgs e);
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Delegate>
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [이벤트](../../../csharp/programming-guide/events/index.md)
-- [대리자](../../../csharp/programming-guide/delegates/index.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [이벤트](./index.md)
+- [대리자](../delegates/index.md)

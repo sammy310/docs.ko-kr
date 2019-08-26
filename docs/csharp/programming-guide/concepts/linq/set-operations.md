@@ -2,12 +2,12 @@
 title: 집합 작업(C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589367-ef8f-4161-9050-642c47e6bf63
-ms.openlocfilehash: 9e507bbaa39bf040a8ce1564630fb5fbb8c0dbe4
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: cea0c0ba4dd6c7f874f69e3ec4a179248397b67d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408914"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591123"
 ---
 # <a name="set-operations-c"></a>집합 작업(C#)
 LINQ의 집합 작업은 동일 컬렉션이나 별개 컬렉션(또는 집합)에 동등한 요소가 있는지 여부에 따라 결과 집합을 생성하는 쿼리 작업을 가리킵니다.  
@@ -47,6 +47,6 @@ LINQ의 집합 작업은 동일 컬렉션이나 별개 컬렉션(또는 집합)�
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Linq>
-- [표준 쿼리 연산자 개요(C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [방법: 문자열 컬렉션 결합 및 비교(LINQ)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
-- [방법: 두 목록 간의 차집합 구하기(LINQ)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)
+- [표준 쿼리 연산자 개요(C#)](./standard-query-operators-overview.md)
+- [방법: 문자열 컬렉션 결합 및 비교(LINQ)(C#)](./how-to-combine-and-compare-string-collections-linq.md)
+- [방법: 두 목록 간의 차집합 구하기(LINQ)(C#)](./how-to-find-the-set-difference-between-two-lists-linq.md)

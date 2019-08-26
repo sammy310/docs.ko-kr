@@ -2,12 +2,12 @@
 title: '방법: 그룹을 사용하여 파일을 여러 파일로 분할(LINQ)(C#)'
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: f38cfebae17ea6db9df2445f71852f7f4e6f201f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 171d0aababfe4ff4ba5be4c8d307c917474671fc
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584344"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592374"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>방법: 그룹을 사용하여 파일을 여러 파일로 분할(LINQ)(C#)
 이 예제에서는 두 파일의 내용을 병합한 다음 새로운 방식으로 데이터를 구성하는 새 파일 집합을 만드는 한 가지 방법을 보여 줍니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "65584344"
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```csharp  
 class SplitWithGroups  
@@ -130,5 +130,5 @@ System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통�
   
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ 및 문자열(C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ 및 파일 디렉터리(C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ 및 문자열(C#)](./linq-and-strings.md)
+- [LINQ 및 파일 디렉터리(C#)](./linq-and-file-directories.md)

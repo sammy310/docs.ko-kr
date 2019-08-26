@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46865e398c3868e21b743cf45f42e8b9063a0cbe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5b5cf6f0ae66141957d545134a2f8ff8eb799097
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298917"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946447"
 ---
 # <a name="plinq-data-sample"></a>PLINQ 데이터 샘플
 이 샘플에는 고객, 제품, 주문 및 주문 세부 정보의 메모리 내 컬렉션으로 변환되는 메서드와 함께 .csv 형식의 예제 데이터가 포함되어 있습니다. PLINQ를 사용하여 더 실험해 보기 위해 다른 특정 항목의 코드 예제를 이 항목의 코드에 붙여넣고 `Main` 메서드에서 호출할 수 있습니다. 또한 사용자만의 PLINQ 쿼리에 이 데이터를 사용할 수도 있습니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "59298917"
  데이터는 Northwind 데이터베이스의 하위 집합을 나타냅니다. 50개의 고객 레코드가 포함되지만 모든 필드가 포함되는 것은 아닙니다. 모든 고객에 대한 주문 행의 하위 집합 및 해당하는 Order_Detail 데이터가 포함됩니다. 모든 제품이 포함됩니다.  
   
 > [!NOTE]
->  데이터 집합이 기본 `where` 및 `select` 절만 포함하는 쿼리에 대해 PLINQ가 LINQ to Objects보다 더 빠르다는 것을 증명할 정도로 충분히 크지는 않습니다. 이같이 작은 데이터 집합의 속도 증가를 관찰하려면 데이터 집합의 모든 요소에 대해 계산 비용이 많이 드는 작업을 포함하는 쿼리를 사용하세요.  
+> 데이터 집합이 기본 `where` 및 `select` 절만 포함하는 쿼리에 대해 PLINQ가 LINQ to Objects보다 더 빠르다는 것을 증명할 정도로 충분히 크지는 않습니다. 이같이 작은 데이터 집합의 속도 증가를 관찰하려면 데이터 집합의 모든 요소에 대해 계산 비용이 많이 드는 작업을 포함하는 쿼리를 사용하세요.  
   
 ### <a name="to-set-up-this-sample"></a>이 샘플을 설치하려면  
   

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: a9b7a32cc3eb9d65b7c4a8e241eedca14cbf11bb
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 8ed6e759f682f0db76938661fdcf668bec1eef1c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398150"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588975"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>연습: Office 프로그래밍(C# 및 Visual Basic)
 
 Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 Visual Basic의 기능을 제공합니다. 유용한 C# 기능으로는 명명된 인수 및 선택적 인수, `dynamic` 형식의 반환 값 등이 있습니다. COM 프로그래밍에서 `ref` 키워드를 생략하면 인덱싱된 속성에 액세스할 수 있게 됩니다. Visual Basic의 기능으로는 자동 구현 속성, 람다 식의 문, 컬렉션 이니셜라이저 등이 있습니다.
 
-이 두 언어에서는 PIA(주 Interop 어셈블리)를 사용자 컴퓨터에 배포하지 않아도 COM 구성 요소와 상호 작용하는 어셈블리를 배포할 수 있도록 하는 형식 정보를 포함할 수 있습니다. 자세한 내용은 [연습: 관리되는 어셈블리의 형식 포함](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)을 참조하세요.
+이 두 언어에서는 PIA(주 Interop 어셈블리)를 사용자 컴퓨터에 배포하지 않아도 COM 구성 요소와 상호 작용하는 어셈블리를 배포할 수 있도록 하는 형식 정보를 포함할 수 있습니다. 자세한 내용은 [연습: 관리되는 어셈블리의 형식 포함](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)을 참조하세요.
 
 이 연습에서는 Office 프로그래밍과 관련해서 이러한 기능을 설명하지만 대부분 일반 프로그래밍에서도 유용합니다. 연습에서는 Excel 추가 기능 애플리케이션을 사용하여 Excel 통합 문서를 만듭니다. 그런 다음 통합 문서 링크를 포함하는 Word 문서를 만듭니다. 마지막으로 PIA 종속성을 사용 및 사용하지 않도록 설정하는 방법을 알아봅니다.
 
@@ -94,7 +94,7 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
 
     - [Add](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) 메서드에는 특정 템플릿을 지정하기 위한 *선택적 매개 변수*가 있습니다. C# 4에서 도입된 선택적 매개 변수를 사용하면 매개 변수의 기본값을 사용하려는 경우 해당 매개 변수의 인수를 생략할 수 있습니다. 앞의 예제에서는 인수가 전송되지 않으므로 `Add`는 기본 템플릿을 사용하며 새 통합 문서를 만듭니다. 이전 버전의 C#에서 이와 동일한 문을 사용하려면 자리 표시자 인수인 `excelApp.Workbooks.Add(Type.Missing)`를 사용해야 했습니다.
 
-         자세한 내용은 [명명된 인수 및 선택적 인수](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)를 참조하세요.
+         자세한 내용은 [명명된 인수 및 선택적 인수](../classes-and-structs/named-and-optional-arguments.md)를 참조하세요.
 
     - [범위](<xref:Microsoft.Office.Interop.Excel.Range>) 개체의 `Range` 및 `Offset` 속성은 *인덱싱된 속성* 기능을 사용합니다. 이 기능을 사용하면 다음과 같은 일반적인 C# 구문을 통해 COM 형식에서 이러한 속성을 사용할 수 있습니다. 또한 인덱싱된 속성에서는 `Value` 개체의 `Range` 속성을 사용할 수 있으므로 `Value2` 속성을 사용할 필요가 없습니다. `Value` 속성은 인덱싱된 속성이지만 인덱스는 선택 사항입니다. 다음 예제에서는 선택적 인수와 인덱싱된 속성이 함께 사용됩니다.
 
@@ -106,7 +106,7 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
 
          인덱싱된 속성을 직접 만들 수는 없습니다. 이 기능은 기존 인덱싱된 속성의 사용만을 지원합니다.
 
-         자세한 내용은 [방법: COM Interop 프로그래밍에서 인덱싱된 속성 사용](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)을 참조하세요.
+         자세한 내용은 [방법: COM Interop 프로그래밍에서 인덱싱된 속성 사용](./how-to-use-indexed-properties-in-com-interop-rogramming.md)을 참조하세요.
 
 2. 열 너비를 콘텐츠에 맞게 조정하려면 `DisplayInExcel` 끝에 다음 코드를 추가합니다.
 
@@ -114,13 +114,13 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
 
      [!code-vb[csOfficeWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#7)]
 
-     여기서 추가하는 코드는 C#의 또 다른 기능, 즉 Office 등의 COM 호스트에서 반환되는 `Object` 값을 [dynamic](../../../csharp/language-reference/keywords/dynamic.md) 형식인 것처럼 처리하는 기능을 보여 줍니다. [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 컴파일러 옵션을 통해 어셈블리를 참조할 때 **Interop 형식 포함**을 기본값인 `True` 또는 그와 동일한 값으로 설정하면 이 작업이 자동으로 수행됩니다. `dynamic` 형식을 사용하면 Visual Basic의 기존 기능인 런타임에 바인딩을 사용할 수 있으며, C# 3.0 이하 버전 언어에서 필요했던 명시적 캐스팅을 사용할 필요가 없습니다.
+     여기서 추가하는 코드는 C#의 또 다른 기능, 즉 Office 등의 COM 호스트에서 반환되는 `Object` 값을 [dynamic](../../language-reference/keywords/dynamic.md) 형식인 것처럼 처리하는 기능을 보여 줍니다. [/link](../../language-reference/compiler-options/link-compiler-option.md) 컴파일러 옵션을 통해 어셈블리를 참조할 때 **Interop 형식 포함**을 기본값인 `True` 또는 그와 동일한 값으로 설정하면 이 작업이 자동으로 수행됩니다. `dynamic` 형식을 사용하면 Visual Basic의 기존 기능인 런타임에 바인딩을 사용할 수 있으며, C# 3.0 이하 버전 언어에서 필요했던 명시적 캐스팅을 사용할 필요가 없습니다.
 
      예를 들어 `excelApp.Columns[1]`는 `Object`를 반환하고, `AutoFit`는 Excel [범위](<xref:Microsoft.Office.Interop.Excel.Range>) 메서드입니다. `dynamic`을 사용하지 않는 경우에는 `excelApp.Columns[1]` 메서드를 호출하기 전에 `Range`에서 반환하는 개체를 `AutoFit` 인스턴스로 캐스팅해야 합니다.
 
      [!code-csharp[csOfficeWalkthrough#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#8)]
 
-     Interop 형식 포함에 대한 자세한 내용은 이 항목 뒷부분의 "PIA 참조를 찾으려면" 및 "PIA 종속성을 복원하려면" 절차를 참조하세요. `dynamic`에 대한 자세한 내용은 [dynamic](../../../csharp/language-reference/keywords/dynamic.md) 또는 [dynamic 형식 사용](../../../csharp/programming-guide/types/using-type-dynamic.md)을 참조하세요.
+     Interop 형식 포함에 대한 자세한 내용은 이 항목 뒷부분의 "PIA 참조를 찾으려면" 및 "PIA 종속성을 복원하려면" 절차를 참조하세요. `dynamic`에 대한 자세한 내용은 [dynamic](../../language-reference/keywords/dynamic.md) 또는 [dynamic 형식 사용](../types/using-type-dynamic.md)을 참조하세요.
 
 ### <a name="to-invoke-displayinexcel"></a>DisplayInExcel를 호출하려면
 
@@ -192,20 +192,20 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
 ## <a name="see-also"></a>참고 항목
 
 - [자동으로 구현된 속성(Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
-- [자동으로 구현된 속성(C#)](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)
+- [자동으로 구현된 속성(C#)](../classes-and-structs/auto-implemented-properties.md)
 - [컬렉션 이니셜라이저](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
-- [개체 이니셜라이저 및 컬렉션 이니셜라이저](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [개체 이니셜라이저 및 컬렉션 이니셜라이저](../classes-and-structs/object-and-collection-initializers.md)
 - [선택적 매개 변수](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
 - [위치 및 이름으로 인수 전달](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)
-- [명명된 인수 및 선택적 인수](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
+- [명명된 인수 및 선택적 인수](../classes-and-structs/named-and-optional-arguments.md)
 - [초기 바인딩 및 런타임에 바인딩](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
-- [dynamic 형식 사용](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [dynamic](../../language-reference/keywords/dynamic.md)
+- [dynamic 형식 사용](../types/using-type-dynamic.md)
 - [람다 식(Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [람다 식(C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
-- [방법: COM Interop 프로그래밍에서 인덱싱된 속성 사용](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)
+- [람다 식(C#)](../statements-expressions-operators/lambda-expressions.md)
+- [방법: COM Interop 프로그래밍에서 인덱싱된 속성 사용](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
 - [연습: Visual Studio에서 Microsoft Office 어셈블리의 형식 정보 포함](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
-- [연습: 관리되는 어셈블리의 형식 포함](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
+- [연습: 관리되는 어셈블리의 형식 포함](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
 - [연습: Excel용 첫 VSTO 추가 기능 만들기](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
 - [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)
-- [상호 운용성](../../../csharp/programming-guide/interop/index.md)
+- [상호 운용성](./index.md)

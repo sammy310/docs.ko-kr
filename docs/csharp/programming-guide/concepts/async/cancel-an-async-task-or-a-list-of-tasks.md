@@ -2,18 +2,18 @@
 title: 비동기 작업 또는 작업 목록 취소(C#)
 ms.date: 07/20/2015
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 05ddb2c76a16ed4f79d795510434aa3abb5615d7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 93526f772f79e993767fd8f29087b6caf4e29468
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583365"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595727"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>비동기 작업 또는 작업 목록 취소(C#)
 
 작업이 완료될 때까지 기다리지 않으려면 비동기 애플리케이션을 취소할 때 사용하는 단추를 설정할 수 있습니다. 이 항목의 예제에 따라 한 웹 사이트 또는 웹 사이트 목록의 콘텐츠를 다운로드하는 애플리케이션에 취소 단추를 추가할 수 있습니다.
 
-예제에서는 [비동기 애플리케이션 미세 조정(C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)에서 설명하는 UI를 사용합니다.
+예제에서는 [비동기 애플리케이션 미세 조정(C#)](./fine-tuning-your-async-application.md)에서 설명하는 UI를 사용합니다.
 
 > [!NOTE]
 > 예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.
@@ -521,6 +521,6 @@ namespace CancelAListOfTasks
 
 - <xref:System.Threading.CancellationTokenSource>
 - <xref:System.Threading.CancellationToken>
-- [async 및 await를 사용한 비동기 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-- [Async 애플리케이션 미세 조정(C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [async 및 await를 사용한 비동기 프로그래밍(C#)](./index.md)
+- [Async 애플리케이션 미세 조정(C#)](./fine-tuning-your-async-application.md)
 - [비동기 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

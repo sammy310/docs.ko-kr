@@ -7,16 +7,16 @@ helpviewer_keywords:
 - implicitly-typed arrays [C#]
 - C# language, implicitly typed arrays
 ms.assetid: e05be95c-6732-403d-ae42-b35f057cbbea
-ms.openlocfilehash: 7aa820d87ec36f1963183b7e4e2e46de998a08c9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 36ca18adc392643107b43a947656846f3b94a2eb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487511"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597348"
 ---
 # <a name="implicitly-typed-arrays-c-programming-guide"></a>암시적으로 형식화된 배열(C# 프로그래밍 가이드)
 
-배열 인스턴스의 형식이 배열 이니셜라이저에 지정된 요소에서 유추되는 암시적으로 형식화된 배열을 만들 수 있습니다. 암시적으로 형식화된 변수에 대한 규칙은 암시적으로 형식화된 배열에도 적용됩니다. 자세한 내용은 [암시적으로 형식화된 지역 변수](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)를 참조하세요.
+배열 인스턴스의 형식이 배열 이니셜라이저에 지정된 요소에서 유추되는 암시적으로 형식화된 배열을 만들 수 있습니다. 암시적으로 형식화된 변수에 대한 규칙은 암시적으로 형식화된 배열에도 적용됩니다. 자세한 내용은 [암시적으로 형식화된 지역 변수](../classes-and-structs/implicitly-typed-local-variables.md)를 참조하세요.
 
 암시적으로 형식화된 배열은 일반적으로 무명 형식, 개체 및 컬렉션 이니셜라이저와 함께 쿼리 식에 사용됩니다.
 
@@ -34,10 +34,10 @@ ms.locfileid: "57487511"
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [암시적 형식 지역 변수](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)
-- [배열](../../../csharp/programming-guide/arrays/index.md)
-- [익명 형식](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
-- [개체 이니셜라이저 및 컬렉션 이니셜라이저](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-- [var](../../../csharp/language-reference/keywords/var.md)
-- [LINQ 쿼리 식](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [암시적 형식 지역 변수](../classes-and-structs/implicitly-typed-local-variables.md)
+- [배열](./index.md)
+- [익명 형식](../classes-and-structs/anonymous-types.md)
+- [개체 이니셜라이저 및 컬렉션 이니셜라이저](../classes-and-structs/object-and-collection-initializers.md)
+- [var](../../language-reference/keywords/var.md)
+- [LINQ 쿼리 식](../linq-query-expressions/index.md)

@@ -2,15 +2,15 @@
 title: '방법: 파일이 어셈블리인지 확인(C#)'
 ms.date: 07/20/2015
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
-ms.openlocfilehash: e8026ab5fa44b7601e54b5e76ebf9eb434596a07
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 803159eed25a7785b1a2b4433e6950fa65e0a734
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340141"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595869"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>방법: 파일이 어셈블리인지 확인(C#)
-파일은 관리되고 해당 메타데이터에 어셈블리 항목을 포함하는 경우에만 어셈블리입니다. 어셈블리 및 메타데이터에 대한 자세한 내용은 [어셈블리 매니페스트](../../../../../docs/framework/app-domains/assembly-manifest.md) 항목을 참조하세요.  
+파일은 관리되고 해당 메타데이터에 어셈블리 항목을 포함하는 경우에만 어셈블리입니다. 어셈블리 및 메타데이터에 대한 자세한 내용은 [어셈블리 매니페스트](../../../../framework/app-domains/assembly-manifest.md) 항목을 참조하세요.  
   
 ### <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>파일이 어셈블리인지 수동으로 확인하는 방법  
   
@@ -69,5 +69,5 @@ class TestAssembly
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Reflection.AssemblyName>
-- [C# 프로그래밍 가이드](../../../../csharp/programming-guide/index.md)
+- [C# 프로그래밍 가이드](../../index.md)
 - [.NET 어셈블리](../../../../standard/assembly/index.md)

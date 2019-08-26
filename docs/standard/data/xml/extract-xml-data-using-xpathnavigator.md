@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 095b0987-ee4b-4595-a160-da1c956ad576
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f25fa9706d43dd69da233e474127543dfdf83fb1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f789317defe3f4b44b37e6d94d37b974d003bcae
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595632"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966990"
 ---
 # <a name="extract-xml-data-using-xpathnavigator"></a>XPathNavigator를 사용하여 XML 데이터 추출
 Microsoft .NET Framework에서는 여러 가지 방법으로 XML 문서를 나타낼 수 있습니다. 예를 들어, <xref:System.String>을 사용하거나 <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, <xref:System.Xml.XmlDocument> 또는 <xref:System.Xml.XPath.XPathDocument> 클래스를 사용하여 XML 문서를 나타낼 수 있습니다. 여러 가지 XML 문서 표현 간을 이동할 수 있도록 <xref:System.Xml.XPath.XPathNavigator> 클래스는 XML을 <xref:System.String>, <xref:System.Xml.XmlReader> 개체 또는 <xref:System.Xml.XmlWriter> 개체로 추출하는 많은 메서드와 속성을 제공합니다.  
@@ -22,7 +22,7 @@ Microsoft .NET Framework에서는 여러 가지 방법으로 XML 문서를 나�
  <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> 클래스의 <xref:System.Xml.XPath.XPathNavigator> 속성을 사용하여 전체 XML 문서의 태그를 가져오거나 단일 노드 및 해당 자식 노드의 태그만 가져올 수 있습니다.  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> 속성은 노드의 자식 노드의 태그만 가져옵니다.  
+> <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> 속성은 노드의 자식 노드의 태그만 가져옵니다.  
   
  다음 코드 예제에서는 <xref:System.Xml.XPath.XPathNavigator> 개체에 <xref:System.String>으로 포함된 전체 XML 문서 및 단일 노드와 자식 노드를 저장하는 방법을 보여 줍니다.  
   

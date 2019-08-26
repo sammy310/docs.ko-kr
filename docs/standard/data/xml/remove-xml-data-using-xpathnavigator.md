@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 9f436bca-1b96-494b-a6d2-e102c7551752
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b9a94e0db3598cb5e2d00298144fa4826035a8e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27c19c82270b9d67b6cd308386aa93c6112d59ee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674143"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69909677"
 ---
 # <a name="remove-xml-data-using-xpathnavigator"></a>XPathNavigator를 사용하여 XML 데이터 제거
 <xref:System.Xml.XPath.XPathNavigator> 클래스는 XML 문서에서 노드와 값을 제거하는 메서드 집합을 제공합니다. 이러한 메서드를 사용하려면 <xref:System.Xml.XPath.XPathNavigator> 개체가 편집 가능한 상태여야 합니다. 즉, <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 속성이 `true`여야 합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "54674143"
  노드를 삭제해도 삭제된 노드에 위치한 <xref:System.Xml.XPath.XPathNavigator> 개체의 위치에는 영향을 주지 않습니다. 이러한 <xref:System.Xml.XPath.XPathNavigator> 개체는 삭제된 하위 트리 내에서 이동할 수 있다는 점에서 유효하지만 <xref:System.Xml.XPath.XPathNavigator> 클래스의 일반 노드 집합 탐색 메서드를 사용하여 기본 노드 트리로 이동할 수 없습니다.  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A> 클래스의 <xref:System.Xml.XPath.XPathNavigator> 메서드를 사용하여 이러한 <xref:System.Xml.XPath.XPathNavigator> 개체를 다시 기본 노드 트리로 이동하거나 기본 노드 트리에서 삭제된 하위 트리로 이동할 수 있습니다.  
+> <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A> 클래스의 <xref:System.Xml.XPath.XPathNavigator> 메서드를 사용하여 이러한 <xref:System.Xml.XPath.XPathNavigator> 개체를 다시 기본 노드 트리로 이동하거나 기본 노드 트리에서 삭제된 하위 트리로 이동할 수 있습니다.  
   
  다음 예제에서는 `price` 메서드를 사용하여 `book` 파일의 첫 번째 `contosoBooks.xml` 요소에서 <xref:System.Xml.XPath.XPathNavigator.DeleteSelf%2A> 요소를 삭제합니다. <xref:System.Xml.XPath.XPathNavigator> 요소를 삭제한 후 `price` 개체는 부모 `book` 요소에 배치됩니다.  
   

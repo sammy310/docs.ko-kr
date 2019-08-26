@@ -8,17 +8,17 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: 3163598de5d03bf1691379cddae031841b9865d6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c29d0638e2429119020fee5317d40a95b00e40ef
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595633"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590110"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>방법: 파일 또는 폴더 만들기(C# 프로그래밍 가이드)
 프로그래밍 방식으로 컴퓨터에 폴더를 만들고, 하위 폴더를 만들고, 하위 폴더에 파일을 만들고, 파일에 데이터를 쓸 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-csharp[csFilesandFolders#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#10)]  
   
  폴더가 이미 있으면 <xref:System.IO.Directory.CreateDirectory%2A>는 아무 작업도 수행하지 않으며 예외가 throw되지 않습니다. 그러나 <xref:System.IO.File.Create%2A?displayProperty=nameWithType>는 기존 파일을 새 파일로 바꿉니다. 이 예제에서는 `if`-`else` 문을 사용하여 기존 파일이 바뀌지 않도록 합니다.  
@@ -71,5 +71,5 @@ ms.locfileid: "64595633"
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [파일 시스템 및 레지스트리(C# 프로그래밍 가이드)](../../../csharp/programming-guide/file-system/index.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [파일 시스템 및 레지스트리(C# 프로그래밍 가이드)](./index.md)

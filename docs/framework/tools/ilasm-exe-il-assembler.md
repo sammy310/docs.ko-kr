@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36de7dd2d97eb532717d52bd3903d3e5acd19d2d
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 13b0ab04eba75a322d584bcc20cc6e90a54fb6fc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567060"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933662"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe(IL 어셈블러)
 
-IL 어셈블러는 IL(Intermediate Language)로 PE(이식 가능한 실행) 파일을 생성합니다. IL에 대한 자세한 내용은 [관리되는 실행 프로세스](../../../docs/standard/managed-execution-process.md)를 참조하세요. 이렇게 생성된 실행 파일에는 IL 및 필요한 메타데이터가 들어 있으며, 이 파일을 실행하면 IL이 예상대로 실행되는지 여부를 확인할 수 있습니다.
+IL 어셈블러는 IL(Intermediate Language)로 PE(이식 가능한 실행) 파일을 생성합니다. IL에 대한 자세한 내용은 [관리되는 실행 프로세스](../../standard/managed-execution-process.md)를 참조하세요. 이렇게 생성된 실행 파일에는 IL 및 필요한 메타데이터가 들어 있으며, 이 파일을 실행하면 IL이 예상대로 실행되는지 여부를 확인할 수 있습니다.
 
 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 참조하세요.
 
@@ -231,5 +231,5 @@ public class Hello
 
 - [도구](../../../docs/framework/tools/index.md)
 - [*Ildasm.exe* (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)(Ildasm.exe(IL 디스어셈블러))
-- [관리되는 실행 프로세스](../../../docs/standard/managed-execution-process.md)
+- [관리되는 실행 프로세스](../../standard/managed-execution-process.md)
 - [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

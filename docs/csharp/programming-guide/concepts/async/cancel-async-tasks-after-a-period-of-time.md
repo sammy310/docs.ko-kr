@@ -2,18 +2,18 @@
 title: 일정 기간 이후 비동기 작업 취소(C#)
 ms.date: 07/20/2015
 ms.assetid: 194282c2-399f-46da-a7a6-96674e00b0b3
-ms.openlocfilehash: 64a2a81e5de17594a84782f6474033d04662d8ea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e00ff51e987275c6c84822f7095c82ed03b53176
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318392"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595765"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-c"></a>일정 기간 이후 비동기 작업 취소(C#)
 
 작업이 완료될 때까지 대기하지 않으려는 경우 일정 기간 후에 <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> 메서드를 사용하여 비동기 작업을 취소할 수 있습니다. 이 메서드는 `CancelAfter` 식으로 지정된 일정 기간 내에 완료되지 않은 연결된 작업의 취소를 예약합니다.
 
-이 예제는 [비동기 작업 또는 작업 목록 취소(C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)에서 개발된 코드에 추가되어 웹 사이트 목록을 다운로드하고 각 웹 사이트의 콘텐츠 길이를 표시합니다.
+이 예제는 [비동기 작업 또는 작업 목록 취소(C#)](./cancel-an-async-task-or-a-list-of-tasks.md)에서 개발된 코드에 추가되어 웹 사이트 목록을 다운로드하고 각 웹 사이트의 콘텐츠 길이를 표시합니다.
 
 > [!NOTE]
 > 예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.
@@ -38,7 +38,7 @@ ms.locfileid: "59318392"
 
 ## <a name="build-the-example"></a>예제 빌드
 
-이 항목의 예제는 [비동기 작업 또는 작업 목록 취소(C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)에서 개발된 프로젝트에 추가되어 작업 목록을 취소합니다. **취소** 단추는 명시적으로 사용되지 않지만 예제에서는 같은 UI를 사용합니다.
+이 항목의 예제는 [비동기 작업 또는 작업 목록 취소(C#)](./cancel-an-async-task-or-a-list-of-tasks.md)에서 개발된 프로젝트에 추가되어 작업 목록을 취소합니다. **취소** 단추는 명시적으로 사용되지 않지만 예제에서는 같은 UI를 사용합니다.
 
 직접 예제를 빌드하려면 "예제 다운로드" 섹션의 지침을 단계별로 따르되, **CancelAListOfTasks**를 **시작 프로젝트**로 선택합니다. 이 항목의 변경 내용을 해당 프로젝트에 추가합니다.
 
@@ -217,8 +217,8 @@ namespace CancelAfterTime
 
 ## <a name="see-also"></a>참고 항목
 
-- [async 및 await를 사용한 비동기 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-- [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [비동기 작업 또는 작업 목록 취소(C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)
-- [Async 애플리케이션 미세 조정(C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [async 및 await를 사용한 비동기 프로그래밍(C#)](./index.md)
+- [연습: async 및 await를 사용하여 웹에 액세스(C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [비동기 작업 또는 작업 목록 취소(C#)](./cancel-an-async-task-or-a-list-of-tasks.md)
+- [Async 애플리케이션 미세 조정(C#)](./fine-tuning-your-async-application.md)
 - [비동기 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

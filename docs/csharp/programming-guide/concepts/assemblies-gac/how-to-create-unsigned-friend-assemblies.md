@@ -2,12 +2,12 @@
 title: '방법: 서명되지 않은 Friend 어셈블리 만들기(C#)'
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 6bc2d807b3d1cf6c82a9ba6303139b9758581f35
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5dadd725234048c4b6a4f9a0fa9b38dbf92671aa
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318236"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595914"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a>방법: 서명되지 않은 Friend 어셈블리 만들기(C#)
 이 예제에서는 서명되지 않은 어셈블리와 함께 friend 어셈블리를 사용하는 방법을 보여 줍니다.  
@@ -81,7 +81,7 @@ ms.locfileid: "59318236"
     csc /r:friend_unsigned_A.dll /out:friend_unsigned_B.exe friend_unsigned_B.cs  
     ```  
   
-     컴파일러에서 생성된 어셈블리 이름은 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성에 전달된 friend 어셈블리 이름과 일치해야 합니다. `/out` 컴파일러 옵션을 사용하여 출력 어셈블리(.exe 또는 .dll)의 이름을 명시적으로 지정해야 합니다. 자세한 내용은 [/out(C# 컴파일러 옵션)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md)을 참조하세요.  
+     컴파일러에서 생성된 어셈블리 이름은 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성에 전달된 friend 어셈블리 이름과 일치해야 합니다. `/out` 컴파일러 옵션을 사용하여 출력 어셈블리(.exe 또는 .dll)의 이름을 명시적으로 지정해야 합니다. 자세한 내용은 [/out(C# 컴파일러 옵션)](../../../language-reference/compiler-options/out-compiler-option.md)을 참조하세요.  
   
 6. friend_unsigned_B.exe 파일을 실행합니다.  
   
@@ -95,5 +95,5 @@ ms.locfileid: "59318236"
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [.NET 어셈블리](../../../../standard/assembly/index.md)
 - [Friend 어셈블리](../../../../standard/assembly/friend-assemblies.md)
-- [방법: 서명된 Friend 어셈블리 만들기(C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
-- [C# 프로그래밍 가이드](../../../../csharp/programming-guide/index.md)
+- [방법: 서명된 Friend 어셈블리 만들기(C#)](./how-to-create-signed-friend-assemblies.md)
+- [C# 프로그래밍 가이드](../../index.md)

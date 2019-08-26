@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: acff804d87d67bf8758b97ad04805359bb3f2e32
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 9238e2e312021958ad62eeba89fe8b72c113e0d7
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586070"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596841"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>방법: 쿼리에서 요소 속성의 하위 집합 반환(C# 프로그래밍 가이드)
 이러한 조건이 둘 다 적용되는 경우 쿼리 식에서 무명 형식을 사용합니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "65586070"
 select student.ID;  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 무명 형식을 사용하여 지정된 조건과 일치하는 각 소스 요소의 속성 하위 집합만 반환하는 방법을 보여 줍니다.  
   
  [!code-csharp[csProgGuideLINQ#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#31)]  
@@ -48,6 +48,6 @@ Console.WriteLine(student.First + " " + student.Last);
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [익명 형식](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
-- [LINQ 쿼리 식](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [익명 형식](./anonymous-types.md)
+- [LINQ 쿼리 식](../linq-query-expressions/index.md)

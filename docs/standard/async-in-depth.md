@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 79154713e370029ff31591523525fb05422571d8
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 6f1900eaabafe2931d88959bf79bf4ca1f5bc98b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57844738"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666577"
 ---
 # <a name="async-in-depth"></a>비동기에 대한 자세한 설명
 
@@ -30,7 +30,7 @@ ms.locfileid: "57844738"
 
 `await`를 사용하면 태스크가 완료될 때까지 해당 호출자에게 제어가 양도되므로 태스크가 실행되는 동안 애플리케이션 또는 서비스에서 유용한 작업을 수행할 수 있습니다. 태스크가 완료된 후에는 코드에서 콜백 또는 이벤트를 사용하여 실행을 계속할 필요가 없습니다. 언어 및 태스크 API 통합에서 해당 작업을 자동으로 수행합니다. `Task<T>`를 사용하는 경우 `await` 키워드는 작업이 완료될 때 반환되는 값을 추가로 “래핑 해제”합니다.  작동 방식에 대한 자세한 내용은 아래에서 자세히 설명합니다.
 
-[TAP(작업 기반 비동기 패턴)](~/docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) 항목에서 작업 및 작업을 조작하는 다양한 방법에 대해 자세히 알아볼 수 있습니다.
+[TAP(작업 기반 비동기 패턴)](./asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) 항목에서 작업 및 작업을 조작하는 다양한 방법에 대해 자세히 알아볼 수 있습니다.
 
 ## <a name="deeper-dive-into-tasks-for-an-io-bound-operation"></a>I/O 바인딩된 작업에 대한 태스크 심층 분석
 
@@ -146,7 +146,7 @@ public async Task<int> CalculateResult(InputData data)
 
 ## <a name="see-also"></a>참고 항목
 
-- [C#의 비동기 프로그래밍](~/docs/csharp/async.md)
+- [C#의 비동기 프로그래밍](../csharp/async.md)
 - [async 및 await를 사용한 비동기 프로그래밍(C#)](../csharp/programming-guide/concepts/async/index.md)
-- [F#의 비동기 프로그래밍](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
-- [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
+- [F#의 비동기 프로그래밍](../fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
+- [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](../visual-basic/programming-guide/concepts/async/index.md)

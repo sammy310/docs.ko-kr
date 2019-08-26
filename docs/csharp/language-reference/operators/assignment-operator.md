@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: 1277b35723777760deebb6606ddc90bd21e654ec
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f30b48fc6bd1e896658a7234a58409ea9a0f5e6f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744110"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69601947"
 ---
 # <a name="-operator-c-reference"></a>= 연산자(C# 참조)
 
-대입 연산자 `=`은 오른쪽 피연산자의 값을 왼쪽 피연산자가 제공하는 변수, [속성](../../programming-guide/classes-and-structs/properties.md) 또는 [인덱서](../../../csharp/programming-guide/indexers/index.md) 요소에 할당합니다. 대입식의 결과는 왼쪽 피연산자에 할당된 값입니다. 오른쪽 피연산자의 형식은 왼쪽 피연산자의 형식과 동일하거나 왼쪽 피연산자의 형식으로 암시적으로 변환할 수 있어야 합니다.
+대입 연산자 `=`은 오른쪽 피연산자의 값을 왼쪽 피연산자가 제공하는 변수, [속성](../../programming-guide/classes-and-structs/properties.md) 또는 [인덱서](../../programming-guide/indexers/index.md) 요소에 할당합니다. 대입식의 결과는 왼쪽 피연산자에 할당된 값입니다. 오른쪽 피연산자의 형식은 왼쪽 피연산자의 형식과 동일하거나 왼쪽 피연산자의 형식으로 암시적으로 변환할 수 있어야 합니다.
 
 대입 연산자는 오른쪽 결합성입니다. 즉, 다음 형식의 식을 가정해 보세요.
 

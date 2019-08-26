@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 704af9aae23571abdb82ae851066e3c03dbe7161
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 4d0801cd81e00c84be278b44730058798b0acfa9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433540"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588199"
 ---
 # <a name="pointer-types-c-programming-guide"></a>포인터 형식(C# 프로그래밍 가이드)
 
@@ -52,7 +52,7 @@ int* myVariable;
 
 여기서 `*myVariable` 식은 `int`에 포함된 주소에 있는 `myVariable` 변수를 가리킵니다.
 
-[fixed 문](../../language-reference/keywords/fixed-statement.md) 및 [포인터 변환](../../programming-guide/unsafe-code-pointers/pointer-conversions.md) 항목에 포인터에 대한 몇 가지 예제가 나와 있습니다. 다음 예제는 `unsafe` 키워드 및 `fixed` 문을 사용하고 정수 포인터를 증분하는 방법을 보여줍니다.  이 코드를 실행하려면 콘솔 애플리케이션의 주 함수에 붙여 넣습니다. 이러한 예제는 [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) 컴파일러 옵션 집합으로 컴파일되어야 합니다.
+[fixed 문](../../language-reference/keywords/fixed-statement.md) 및 [포인터 변환](./pointer-conversions.md) 항목에 포인터에 대한 몇 가지 예제가 나와 있습니다. 다음 예제는 `unsafe` 키워드 및 `fixed` 문을 사용하고 정수 포인터를 증분하는 방법을 보여줍니다.  이 코드를 실행하려면 콘솔 애플리케이션의 주 함수에 붙여 넣습니다. 이러한 예제는 [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) 컴파일러 옵션 집합으로 컴파일되어야 합니다.
 
 [!code-csharp[Using pointer types](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#5)]
 

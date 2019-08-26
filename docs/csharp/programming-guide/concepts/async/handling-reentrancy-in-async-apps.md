@@ -2,12 +2,12 @@
 title: 비동기 앱에서 재진입 처리(C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 5774aab9357c5af58cd1ee664066ba5e4ee9b1f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 78d6b786e5d54a75325d8a7a31b3e12eef7184e8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59480874"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595645"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>비동기 앱에서 재진입 처리(C#)
 
@@ -141,7 +141,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
 
 **시작** 버튼을 사용하지 않도록 설정하는 대신 버튼을 활성 상태로 유지하지만 사용자가 버튼을 다시 클릭하는 경우 이미 실행되고 있는 작업을 취소하고 가장 최근에 시작한 작업이 계속되도록 합니다.
 
-취소에 대한 자세한 내용은 [비동기 애플리케이션 미세 조정(C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)을 참조하세요.
+취소에 대한 자세한 내용은 [비동기 애플리케이션 미세 조정(C#)](./fine-tuning-your-async-application.md)을 참조하세요.
 
 이 시나리오를 설정하려면 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)에서 제공하는 기본 코드를 다음과 같이 변경합니다. [Async Samples: .NET 데스크톱 앱의 재진입](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)에서 완성된 앱을 다운로드할 수도 있습니다. 프로젝트의 이름은 CancelAndRestart입니다.
 
@@ -724,5 +724,5 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
 ## <a name="see-also"></a>참고 항목
 
-- [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [async 및 await를 사용한 비동기 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/async/index.md)
+- [연습: async 및 await를 사용하여 웹에 액세스(C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [async 및 await를 사용한 비동기 프로그래밍(C#)](./index.md)

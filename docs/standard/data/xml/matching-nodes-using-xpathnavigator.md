@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: e6848c47-ee5d-401a-89a5-50b5eed40f30
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 525c8332d2884415ccf883dae03866776510f354
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 882e92c6c8cb6e638ca299ed4c43b9da8f4bf235
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680428"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923322"
 ---
 # <a name="matching-nodes-using-xpathnavigator"></a>XPathNavigator를 사용하여 노드 일치시키기
 <xref:System.Xml.XPath.XPathNavigator> 클래스는 노드가 XPath 식과 일치하는지 결정하는 <xref:System.Xml.XPath.XPathNavigator.Matches%2A> 메서드를 제공합니다. <xref:System.Xml.XPath.XPathNavigator.Matches%2A> 메서드는 XPath 식을 입력으로 사용하며 현재 노드가 지정된 XPath 식 또는 지정된 컴파일된 <xref:System.Boolean> 개체와 일치하는지를 나타내는 <xref:System.Xml.XPath.XPathExpression>을 반환합니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "54680428"
  현재 노드가 지정된 XPath 식과 일치하는 경우 <xref:System.Xml.XPath.XPathNavigator.Matches%2A> 메서드는 `true`를 반환합니다. 예를 들어, 다음 코드 예제에서 현재 노드가 <xref:System.Xml.XPath.XPathNavigator.Matches%2A> 요소이고 `true` 요소에 `b` 특성이 있을 경우 `b` 메서드는 `c`를 반환합니다.  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator.Matches%2A> 메서드는 <xref:System.Xml.XPath.XPathNavigator> 상태를 변경하지 않습니다.  
+> <xref:System.Xml.XPath.XPathNavigator.Matches%2A> 메서드는 <xref:System.Xml.XPath.XPathNavigator> 상태를 변경하지 않습니다.  
   
 ```vb  
 Dim document as XPathDocument = New XPathDocument("input.xml")  

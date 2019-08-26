@@ -2,12 +2,12 @@
 title: 함수 변환의 적용 가능 범위(C#)
 ms.date: 07/20/2015
 ms.assetid: c78107bd-b006-4574-a3d4-bbf808388ff3
-ms.openlocfilehash: 2c9fc4a2e98a86d5b69ba98336659ac6d2433d12
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bc2678354bb45f1ed0a4076f278f52d0ee7d350e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598092"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594878"
 ---
 # <a name="applicability-of-functional-transformation-c"></a>함수 변환의 적용 가능 범위(C#)
 순수 함수 변환은 광범위한 상황에서 적용 가능합니다.  
@@ -16,7 +16,7 @@ ms.locfileid: "64598092"
   
  이 방법은 처음에는 적합한 대상으로 보이지 않을 수 있는 많은 문제에 적용 가능합니다. 함수 변환을 LINQ와 함께 사용하거나 별도로 사용하는 경우 다음 영역에 대한 함수 변환을 고려해야 합니다.  
   
-- XML 기반 문서. XML 언어의 제대로 구성된 데이터는 함수 변환을 통해 쉽게 조작할 수 있습니다. 자세한 내용은 [XML의 함수 변환(C#)](../../../../csharp/programming-guide/concepts/linq/functional-transformation-of-xml.md)을 참조하세요.  
+- XML 기반 문서. XML 언어의 제대로 구성된 데이터는 함수 변환을 통해 쉽게 조작할 수 있습니다. 자세한 내용은 [XML의 함수 변환(C#)](./functional-transformation-of-xml.md)을 참조하세요.  
   
 - 다른 구조화된 파일 형식. Windows.ini 파일에서 일반 텍스트 문서에 이르는 대부분의 파일에는 분석과 변환에 적합한 구조가 있습니다.  
   
@@ -26,7 +26,7 @@ ms.locfileid: "64598092"
   
 - 수학, 통계 및 과학 솔루션. 이러한 분야에서는 중요한 문제를 시각화하거나, 예측하거나, 실제로 해결하는 데 도움을 주기 위해 큰 데이터 집합을 조작하는 일이 많습니다.  
   
- [순수 함수로 리팩터링(C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)에서 설명하는 것처럼 순수 함수 사용은 함수형 프로그래밍의 예입니다. 순수 함수를 사용하면 즉각적인 혜택을 얻을 수 있을 뿐만 아니라 함수 변환 관점에서 문제에 대해 생각하는 귀중한 경험을 할 수 있습니다. 이 방법은 프로그램과 클래스 디자인에도 중요한 영향을 미칠 수 있습니다. 이는 문제가 위에서 설명한 데이터 변환 솔루션에 적합한 경우 특히 해당되는 사실입니다.  
+ [순수 함수로 리팩터링(C#)](./refactoring-into-pure-functions.md)에서 설명하는 것처럼 순수 함수 사용은 함수형 프로그래밍의 예입니다. 순수 함수를 사용하면 즉각적인 혜택을 얻을 수 있을 뿐만 아니라 함수 변환 관점에서 문제에 대해 생각하는 귀중한 경험을 할 수 있습니다. 이 방법은 프로그램과 클래스 디자인에도 중요한 영향을 미칠 수 있습니다. 이는 문제가 위에서 설명한 데이터 변환 솔루션에 적합한 경우 특히 해당되는 사실입니다.  
   
  이 자습서의 범위를 벗어나긴 하지만, 함수 변환 관점의 영향을 받는 디자인은 행위자로 개체보다 프로세스에 중점을 두는 경향이 있으며, 생성되는 솔루션은 개별 개체 상태 변경 대신 일련의 대규모 변환으로 구현되기 쉽습니다.  
   
@@ -34,6 +34,6 @@ ms.locfileid: "64598092"
   
 ## <a name="see-also"></a>참고 항목
 
-- [순수 함수 변환 소개(C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [XML의 함수 변환(C#)](../../../../csharp/programming-guide/concepts/linq/functional-transformation-of-xml.md)
-- [순수 함수로 리팩터링(C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [순수 함수 변환 소개(C#)](./introduction-to-pure-functional-transformations.md)
+- [XML의 함수 변환(C#)](./functional-transformation-of-xml.md)
+- [순수 함수로 리팩터링(C#)](./refactoring-into-pure-functions.md)

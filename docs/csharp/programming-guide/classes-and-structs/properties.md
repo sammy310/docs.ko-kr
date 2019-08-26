@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: c7374b77526a31c2c508516d5a3cb7cc3e29339a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dec4d4239fd1a953da6e64a1e1aff9593e2863e2
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583056"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596145"
 ---
 # <a name="properties-c-programming-guide"></a>속성(C# 프로그래밍 가이드)
 
@@ -23,12 +23,12 @@ ms.locfileid: "64583056"
   
 - 속성을 사용하면 클래스가 구현 또는 검증 코드를 숨기는 동시에 값을 가져오고 설정하는 방법을 공개적으로 노출할 수 있습니다.  
   
-- [get](../../../csharp/language-reference/keywords/get.md) 속성 접근자는 속성 값을 반환하는 데 사용되고 [set](../../../csharp/language-reference/keywords/set.md) 속성 접근자는 새 값을 할당하는 데 사용됩니다. 이러한 접근자는 각기 다른 액세스 수준을 가질 수 있습니다. 자세한 내용은 [접근자 액세스 가능성 제한](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)을 참조하세요.  
+- [get](../../language-reference/keywords/get.md) 속성 접근자는 속성 값을 반환하는 데 사용되고 [set](../../language-reference/keywords/set.md) 속성 접근자는 새 값을 할당하는 데 사용됩니다. 이러한 접근자는 각기 다른 액세스 수준을 가질 수 있습니다. 자세한 내용은 [접근자 액세스 가능성 제한](./restricting-accessor-accessibility.md)을 참조하세요.  
   
-- [value](../../../csharp/language-reference/keywords/value.md) 키워드는 `set` 접근자가 할당하는 값을 정의하는 데 사용됩니다.  
+- [value](../../language-reference/keywords/value.md) 키워드는 `set` 접근자가 할당하는 값을 정의하는 데 사용됩니다.  
 - 속성은 *읽기/쓰기*(`get` 및 `set` 접근자 모두 포함), *읽기 전용*(`get` 접근자는 포함하지만 `set` 접근자는 포함 안 함) 또는 *쓰기 전용*(`set` 접근자는 포함하지만 `get` 접근자는 포함 안 함)일 수 있습니다. 쓰기 전용 속성은 거의 없으며 주로 중요한 데이터에 대한 액세스를 제한하는 데 사용됩니다.
 
-- 사용자 지정 접근자 코드가 필요 없는 단순한 속성은 식 본문 정의나 [자동 구현 속성](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)으로 구현할 수 있습니다.
+- 사용자 지정 접근자 코드가 필요 없는 단순한 속성은 식 본문 정의나 [자동 구현 속성](./auto-implemented-properties.md)으로 구현할 수 있습니다.
  
 ## <a name="properties-with-backing-fields"></a>지원 필드가 있는 속성
 
@@ -60,15 +60,15 @@ ms.locfileid: "64583056"
 
 ## <a name="related-sections"></a>관련 단원  
   
-- [속성 사용](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+- [속성 사용](./using-properties.md)  
   
-- [인터페이스 속성](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
+- [인터페이스 속성](./interface-properties.md)  
   
-- [속성 및 인덱서 비교](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [속성 및 인덱서 비교](../indexers/comparison-between-properties-and-indexers.md)  
   
-- [접근자 접근성 제한](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [접근자 접근성 제한](./restricting-accessor-accessibility.md)  
   
-- [자동으로 구현된 속성](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
+- [자동으로 구현된 속성](./auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
 
@@ -76,8 +76,8 @@ ms.locfileid: "64583056"
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [속성 사용](../../../csharp/programming-guide/classes-and-structs/using-properties.md)
-- [인덱서](../../../csharp/programming-guide/indexers/index.md)
-- [get 키워드](../../../csharp/language-reference/keywords/get.md)
-- [set 키워드](../../../csharp/language-reference/keywords/set.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [속성 사용](./using-properties.md)
+- [인덱서](../indexers/index.md)
+- [get 키워드](../../language-reference/keywords/get.md)
+- [set 키워드](../../language-reference/keywords/set.md)

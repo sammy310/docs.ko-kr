@@ -2,12 +2,12 @@
 title: 제네릭 인터페이스의 가변성(C#)
 ms.date: 06/06/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: 9cbbea35003e86e05d618f5e6000ba2788359cb0
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 12a8b58983256be0ca2b56ea6ed09e724e0814c8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539504"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595168"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>제네릭 인터페이스의 가변성(C#)
 
@@ -76,7 +76,7 @@ class Program
 }
 ```
 
-추가 예제는 [제네릭 컬렉션용 인터페이스의 가변성 사용(C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)을 참조하세요.
+추가 예제는 [제네릭 컬렉션용 인터페이스의 가변성 사용(C#)](./using-variance-in-interfaces-for-generic-collections.md)을 참조하세요.
 
 제네릭 인터페이스의 가변성은 참조 형식에 대해서만 지원됩니다. 값 형식은 가변성을 지원하지 않습니다. 정수는 값 형식으로 표시되므로 예를 들어 `IEnumerable<int>`를 `IEnumerable<object>`로 암시적으로 변환할 수 없습니다.
 
@@ -100,7 +100,7 @@ IEnumerable<Object> listObjects = new List<String>();
 
 ## <a name="see-also"></a>참고 항목
 
-- [제네릭 컬렉션용 인터페이스의 가변성 사용(C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)
-- [Variant 제네릭 인터페이스 만들기(C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)
+- [제네릭 컬렉션용 인터페이스의 가변성 사용(C#)](./using-variance-in-interfaces-for-generic-collections.md)
+- [Variant 제네릭 인터페이스 만들기(C#)](./creating-variant-generic-interfaces.md)
 - [제네릭 인터페이스](../../../../standard/generics/interfaces.md)
-- [대리자의 가변성(C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+- [대리자의 가변성(C#)](./variance-in-delegates.md)

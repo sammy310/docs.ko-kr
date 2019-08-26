@@ -8,15 +8,15 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: 9cfbea03a305dd17c07f549901bc91be0e05b792
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 7d97b7b05645b02a31af848c97758c7a1f6423b9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661177"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602078"
 ---
 # <a name="internal-c-reference"></a>internal(C# 참조)
-`internal` 키워드는 형식 및 형식 멤버에 대한 [액세스 한정자](../../../csharp/language-reference/keywords/access-modifiers.md)입니다. 
+`internal` 키워드는 형식 및 형식 멤버에 대한 [액세스 한정자](./access-modifiers.md)입니다. 
   
  > 이 페이지에서는 `internal` 액세스를 설명합니다. `internal` 키워드는 [`protected internal`](./protected-internal.md) 액세스 한정자의 일부이기도 합니다.
   
@@ -30,7 +30,7 @@ public class BaseClass
 }  
 ```  
 
- `internal` 및 다른 액세스 한정자와 비교는 [액세스 가능성 수준](../../../csharp/language-reference/keywords/accessibility-levels.md) 및 [액세스 한정자](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)를 참조하세요.  
+ `internal` 및 다른 액세스 한정자와 비교는 [액세스 가능성 수준](./accessibility-levels.md) 및 [액세스 한정자](../../programming-guide/classes-and-structs/access-modifiers.md)를 참조하세요.  
   
  어셈블리에 대한 자세한 내용은 [.NET 어셈블리](../../../standard/assembly/index.md)를 참조하세요.  
   
@@ -93,12 +93,12 @@ public class TestAccess
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 참조](../../../csharp/language-reference/index.md)
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [C# 키워드](../../../csharp/language-reference/keywords/index.md)
-- [액세스 한정자](../../../csharp/language-reference/keywords/access-modifiers.md)
-- [액세스 수준](../../../csharp/language-reference/keywords/accessibility-levels.md)
-- [한정자](../../../csharp/language-reference/keywords/modifiers.md)
-- [public](../../../csharp/language-reference/keywords/public.md)
-- [private](../../../csharp/language-reference/keywords/private.md)
-- [protected](../../../csharp/language-reference/keywords/protected.md)
+- [C# 참조](../index.md)
+- [C# 프로그래밍 가이드](../../programming-guide/index.md)
+- [C# 키워드](./index.md)
+- [액세스 한정자](./access-modifiers.md)
+- [액세스 수준](./accessibility-levels.md)
+- [한정자](./modifiers.md)
+- [public](./public.md)
+- [private](./private.md)
+- [protected](./protected.md)

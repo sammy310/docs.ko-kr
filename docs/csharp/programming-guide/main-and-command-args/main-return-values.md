@@ -5,12 +5,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: ea6f93e52ade91e61bdfcbc35aeb56de9101e80f
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 1be04f98a4dec1317c485c7e482568cfe48ea9bf
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878923"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588889"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() 반환 값(C# 프로그래밍 가이드)
 
@@ -24,7 +24,7 @@ ms.locfileid: "65878923"
 
 `Main`의 반환 값을 사용하지 않는 경우 `void`를 반환하면 코드가 다소 단순해집니다. 그러나 정수를 반환하면 프로그램이 실행 파일을 호출하는 다른 프로그램 또는 스크립트에 상태 정보를 전달할 수 있습니다. `Main`의 반환 값은 프로세스에 대한 종료 코드로 처리됩니다. `void`가 `Main`에서 반환되는 경우 종료 코드는 암시적으로 `0`이 됩니다. 다음 예제에서는 `Main`의 반환 값을 어떻게 액세스할 수 있는지를 보여 줍니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 이 예제에서는 [.NET Core](../../../core/index.md) 명령줄 도구를 사용합니다. .NET Core 명령줄 도구에 대해 잘 모르는 경우 이 [시작 항목](../../../core/tutorials/using-with-xplat-cli.md)에서 알아볼 수 있습니다.
 
@@ -95,7 +95,7 @@ private static async Task<int> AsyncConsoleWork()
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../../programming-guide/index.md)
+- [C# 프로그래밍 가이드](../index.md)
 - [C# 참조](../index.md)
 - [Main()과 명령줄 인수](index.md)
-- [방법: 명령줄 인수 표시](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [방법: 명령줄 인수 표시](./how-to-display-command-line-arguments.md)

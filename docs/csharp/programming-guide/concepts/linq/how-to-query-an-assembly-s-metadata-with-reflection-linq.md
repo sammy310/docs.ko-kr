@@ -2,12 +2,12 @@
 title: '방법: 리플렉션을 사용하여 어셈블리의 메타데이터 쿼리(LINQ)(C#)'
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: 7c209e2524ea6931e0d8f0084a32ea6921adc26e
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: fb0fb118eaabbd9d66c5c4a445b0393a69dd2355
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025352"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592917"
 ---
 # <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>방법: 리플렉션을 사용하여 어셈블리의 메타데이터 쿼리(LINQ)(C#)
 
@@ -51,8 +51,8 @@ class ReflectionHowTO
 }
 ```  
 
-이 예제에서는 <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> 메서드를 사용하여 지정된 어셈블리의 형식 배열을 반환합니다. public 형식만 반환되도록 [where](../../../../csharp/language-reference/keywords/where-clause.md) 필터가 적용됩니다. 각 public 형식에 대해 <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> 호출에서 반환된 <xref:System.Reflection.MethodInfo> 배열을 사용하여 하위 쿼리가 생성됩니다. 이러한 결과는 해당 반환 형식이 배열이거나 <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 형식인 메서드만 반환하도록 필터링됩니다. 마지막으로, 이러한 결과는 형식 이름을 키로 사용하여 그룹화됩니다.  
+이 예제에서는 <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> 메서드를 사용하여 지정된 어셈블리의 형식 배열을 반환합니다. public 형식만 반환되도록 [where](../../../language-reference/keywords/where-clause.md) 필터가 적용됩니다. 각 public 형식에 대해 <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> 호출에서 반환된 <xref:System.Reflection.MethodInfo> 배열을 사용하여 하위 쿼리가 생성됩니다. 이러한 결과는 해당 반환 형식이 배열이거나 <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 형식인 메서드만 반환하도록 필터링됩니다. 마지막으로, 이러한 결과는 형식 이름을 키로 사용하여 그룹화됩니다.  
   
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ to Objects(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ to Objects(C#)](./linq-to-objects.md)

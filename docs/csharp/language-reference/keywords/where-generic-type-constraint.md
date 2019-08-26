@@ -7,12 +7,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: bccc22f5362b22540dadf08e6b21a07cbc578327
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 1608cd7b888a67af3ccb98b16323e74a9c5ad4a9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433858"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608403"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where(제네릭 형식 제약 조건)(C# 참조)
 
@@ -55,9 +55,9 @@ ms.locfileid: "68433858"
 
 [!code-csharp[where constraints with generic methods](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#8)]
 
-제네릭 대리자에 대한 자세한 내용은 [제네릭 대리자](../../../csharp/programming-guide/generics/generic-delegates.md)를 참조하세요.
+제네릭 대리자에 대한 자세한 내용은 [제네릭 대리자](../../programming-guide/generics/generic-delegates.md)를 참조하세요.
 
-제약 조건의 구문 및 사용에 대한 자세한 내용은 [형식 매개 변수에 대한 제약 조건](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)을 참조하세요.
+제약 조건의 구문 및 사용에 대한 자세한 내용은 [형식 매개 변수에 대한 제약 조건](../../programming-guide/generics/constraints-on-type-parameters.md)을 참조하세요.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
@@ -65,8 +65,8 @@ ms.locfileid: "68433858"
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 참조](../../../csharp/language-reference/index.md)
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [제네릭 소개](../../../csharp/programming-guide/generics/index.md)
-- [new 제약 조건](../../../csharp/language-reference/keywords/new-constraint.md)
-- [형식 매개 변수에 대한 제약 조건](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)
+- [C# 참조](../index.md)
+- [C# 프로그래밍 가이드](../../programming-guide/index.md)
+- [제네릭 소개](../../programming-guide/generics/index.md)
+- [new 제약 조건](./new-constraint.md)
+- [형식 매개 변수에 대한 제약 조건](../../programming-guide/generics/constraints-on-type-parameters.md)

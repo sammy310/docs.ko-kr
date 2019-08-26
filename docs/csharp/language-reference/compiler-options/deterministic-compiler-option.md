@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /deterministic compiler option [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c6d0c7128becb154955664cfdcf96d020de9369
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3950578e9e5d1acb517e7d96c76454b198ba3e1c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59480666"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606930"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -26,7 +26,7 @@ ms.locfileid: "59480666"
 -deterministic
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 기본적으로 컴파일러에서 타임스탬프 및 난수에서 생성된 GUID를 추가하기 때문에 지정된 입력 집합의 컴파일러 출력은 고유합니다. `-deterministic` 옵션을 사용하여 *결정적 어셈블리*를 생성하고, 입력이 동일하게 유지되는 한 해당 이진 콘텐츠가 컴파일 간에 동일합니다.
 
@@ -56,5 +56,5 @@ ms.locfileid: "59480666"
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)
+- [C# 컴파일러 옵션](./index.md)
 - [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)

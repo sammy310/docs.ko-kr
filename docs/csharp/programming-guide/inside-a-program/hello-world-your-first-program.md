@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 62aaf8785b0dfb646ea804dab6918940f1e33346
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9a50de0bb583a1dfccfa609be1cca732868505ba
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635296"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589379"
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- 프로그램 처음 만들기(C# 프로그래밍 가이드)
 
@@ -62,7 +62,7 @@ ms.locfileid: "65635296"
 
 C# 콘솔 애플리케이션에는 시작 및 끝을 제어하는 `Main` 메서드가 포함되어야 합니다. `Main` 메서드에서 개체를 만들고 다른 메서드를 실행합니다.
 
-`Main` 메서드는 클래스나 구조체 내부에 있는 [정적](../../../csharp/language-reference/keywords/static.md) 메서드입니다. 이전 "Hello World!" 예제에서 이 메서드는 `Hello` 클래스에 있습니다. 다음 방법 중 하나로 `Main` 메서드를 선언할 수 있습니다.
+`Main` 메서드는 클래스나 구조체 내부에 있는 [정적](../../language-reference/keywords/static.md) 메서드입니다. 이전 "Hello World!" 예제에서 이 메서드는 `Hello` 클래스에 있습니다. 다음 방법 중 하나로 `Main` 메서드를 선언할 수 있습니다.
 
 - 이 메서드는 `void`를 반환합니다.
 
@@ -82,7 +82,7 @@ C# 콘솔 애플리케이션에는 시작 및 끝을 제어하는 `Main` 메서�
 
 `Main` 메서드의 매개 변수 `args`는 프로그램을 호출하는 데 사용된 명령줄 인수가 포함된 `string` 배열입니다. C++의 경우와는 달리 배열에 실행(exe) 파일의 이름이 포함되지 않습니다.
 
-명령줄 인수를 사용하는 방법에 대한 자세한 내용은 [Main() 및 명령줄 인수](../../../csharp/programming-guide/main-and-command-args/index.md) 및 [방법: 명령줄을 사용하여 어셈블리 만들기 및 사용](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)을 참조하세요.
+명령줄 인수를 사용하는 방법에 대한 자세한 내용은 [Main() 및 명령줄 인수](../main-and-command-args/index.md) 및 [방법: 명령줄을 사용하여 어셈블리 만들기 및 사용](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)을 참조하세요.
 
 `Main` 메서드가 끝날 때 <xref:System.Console.ReadKey%2A>를 호출하면 프로그램을 디버그 모드에서 실행할 경우 F5 키를 눌러 출력을 읽을 수 있게 될 때까지 콘솔 창이 닫히지 않습니다.
 
@@ -116,7 +116,7 @@ C# 콘솔 애플리케이션에는 시작 및 끝을 제어하는 `Main` 메서�
 
     - 표준 명령 프롬프트 창에서 명령줄 빌드를 사용하도록 설정합니다.
 
-         [방법: Visual Studio 명령줄에 필요한 환경 변수 설정](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)을 참조하세요.
+         [방법: Visual Studio 명령줄에 필요한 환경 변수 설정](../../language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)을 참조하세요.
 
 3. 명령 프롬프트 창에서 `Hello.cs` 파일이 포함된 폴더로 이동합니다.
 
@@ -130,14 +130,14 @@ C# 콘솔 애플리케이션에는 시작 및 끝을 제어하는 `Main` 메서�
 
      `Hello`
 
- C# 컴파일러 및 관련 옵션에 대한 자세한 내용은 [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)을 참조하세요.
+ C# 컴파일러 및 관련 옵션에 대한 자세한 내용은 [C# 컴파일러 옵션](../../language-reference/compiler-options/index.md)을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [C# 프로그램 내부](../../../csharp/programming-guide/inside-a-program/index.md)
-- [문자열](../../../csharp/programming-guide/strings/index.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [C# 프로그램 내부](./index.md)
+- [문자열](../strings/index.md)
 - [샘플 및 자습서](../../../samples-and-tutorials/index.md)
-- [C# 참조](../../../csharp/language-reference/index.md)
-- [Main()과 명령줄 인수](../../../csharp/programming-guide/main-and-command-args/index.md)
+- [C# 참조](../../language-reference/index.md)
+- [Main()과 명령줄 인수](../main-and-command-args/index.md)
 - [Visual C# 및 Visual Basic 시작](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

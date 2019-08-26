@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bcf1773cfe839d9a4ac197d701d155b68cdb949
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 23bb88127875e0e608c8e8de54ba669f84aa1da5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109424"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937995"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe(형식 라이브러리 내보내기)
 형식 라이브러리 내보내기를 사용하면 공용 언어 런타임 어셈블리에 정의된 형식을 설명하는 형식 라이브러리를 생성할 수 있습니다.  
@@ -54,13 +54,13 @@ tlbexp assemblyName [options]
 |**/?**|이 도구의 명령 구문 및 옵션을 표시합니다.|  
   
 > [!NOTE]
->  Tlbexp.exe의 명령줄 옵션은 대/소문자를 구분하지 않으며 순서에 관계없이 지정할 수 있습니다. 또한, 고유하게 식별할 수 있을 정도로만 옵션을 지정하면 됩니다. 예를 들어, **/n**은 **/nologo**와 같고, **/o:** *outfile.tlb*는 **/out:** *outfile.tlb*와 같습니다.  
+> Tlbexp.exe의 명령줄 옵션은 대/소문자를 구분하지 않으며 순서에 관계없이 지정할 수 있습니다. 또한, 고유하게 식별할 수 있을 정도로만 옵션을 지정하면 됩니다. 예를 들어, **/n**은 **/nologo**와 같고, **/o:** *outfile.tlb*는 **/out:** *outfile.tlb*와 같습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  Tlbexp.exe를 사용하여 어셈블리에 정의된 형식에 대한 정의가 들어 있는 형식 라이브러리를 생성할 수 있으며, Visual Basic 6.0과 같은 애플리케이션에서는 이렇게 생성된 형식 라이브러리를 사용하여 어셈블리에 정의된 .NET 형식에 바인딩할 수 있습니다.  
   
 > [!IMPORTANT]
->  Tlbexp.exe를 사용하여 Windows 메타데이터(.winmd) 파일을 내보낼 수 없습니다. Windows 런타임 어셈블리 내보내기는 지원되지 않습니다.  
+> Tlbexp.exe를 사용하여 Windows 메타데이터(.winmd) 파일을 내보낼 수 없습니다. Windows 런타임 어셈블리 내보내기는 지원되지 않습니다.  
   
  어셈블리는 전체가 한 번에 변환됩니다. Tlbexp.exe를 사용하여 어셈블리에 정의된 형식의 하위 집합에 대한 형식 정보를 생성할 수는 없습니다.  
   

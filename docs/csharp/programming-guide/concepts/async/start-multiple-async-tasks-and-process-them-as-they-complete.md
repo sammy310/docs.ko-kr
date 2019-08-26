@@ -2,12 +2,12 @@
 title: 완료되면 비동기 작업 처리
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 562da04b48af6f6cbaaca8ea8eccf062b470696e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 35b4e42d7da5b8bc9069083ffc47d990bcb637a8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600277"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595585"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>비동기 작업을 여러 개 시작하고 완료될 때마다 처리(C#)
 
@@ -39,9 +39,9 @@ ms.locfileid: "64600277"
 
 ## <a name="create-the-program-yourself"></a>프로그램 직접 만들기
 
-이 예제에서는 [하나가 완료되면 남은 동기 작업 취소(C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)에서 개발된 코드에 추가하고 동일한 UI를 사용합니다.
+이 예제에서는 [하나가 완료되면 남은 동기 작업 취소(C#)](./cancel-remaining-async-tasks-after-one-is-complete.md)에서 개발된 코드에 추가하고 동일한 UI를 사용합니다.
 
-직접 예제를 빌드하려면 [예제 다운로드](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md#downloading-the-example) 섹션의 지침을 단계별로 따르되, **CancelAfterOneTask**를 시작 프로젝트로 설정합니다. 이 항목의 변경 내용을 해당 프로젝트의 `AccessTheWebAsync` 메서드에 추가합니다. 변경 내용은 별표로 표시됩니다.
+직접 예제를 빌드하려면 [예제 다운로드](./cancel-remaining-async-tasks-after-one-is-complete.md#downloading-the-example) 섹션의 지침을 단계별로 따르되, **CancelAfterOneTask**를 시작 프로젝트로 설정합니다. 이 항목의 변경 내용을 해당 프로젝트의 `AccessTheWebAsync` 메서드에 추가합니다. 변경 내용은 별표로 표시됩니다.
 
 **CancelAfterOneTask** 프로젝트에는 실행 시 작업 컬렉션을 만드는 쿼리가 이미 포함되어 있습니다. 다음 코드에서는 `ProcessURLAsync`를 호출할 때마다 <xref:System.Threading.Tasks.Task%601>가 반환됩니다. 여기서 `TResult`는 정수입니다.
 
@@ -228,6 +228,6 @@ namespace ProcessTasksAsTheyFinish
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- [Async 애플리케이션 미세 조정(C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [async 및 await를 사용한 비동기 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/async/index.md)
+- [Async 애플리케이션 미세 조정(C#)](./fine-tuning-your-async-application.md)
+- [async 및 await를 사용한 비동기 프로그래밍(C#)](./index.md)
 - [비동기 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

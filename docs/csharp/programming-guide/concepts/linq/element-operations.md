@@ -2,12 +2,12 @@
 title: 요소 작업(C#)
 ms.date: 10/03/2018
 ms.assetid: 283206c9-3246-4c48-b01a-d9de409a7231
-ms.openlocfilehash: ecffc140c3730043fa10099599ed64f0a28365ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b32066d13e700d95e4d2eef29e24e8b87690037d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493770"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594580"
 ---
 # <a name="element-operations-c"></a>요소 작업(C#)
 
@@ -31,5 +31,5 @@ ms.locfileid: "54493770"
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Linq>
-- [표준 쿼리 연산자 개요(C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [방법: 디렉터리 트리에서 가장 큰 파일을 하나 이상 쿼리(LINQ)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)
+- [표준 쿼리 연산자 개요(C#)](./standard-query-operators-overview.md)
+- [방법: 디렉터리 트리에서 가장 큰 파일을 하나 이상 쿼리(LINQ)(C#)](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)

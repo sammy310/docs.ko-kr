@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
-ms.openlocfilehash: 9621f6a01ef4e30bf34b97df3d2c3033e9b62a23
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: ff00a60d92ec6abbeb257abec76ed2812867f651
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316026"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588868"
 ---
 # <a name="how-to-use-the-my-namespace-c-programming-guide"></a>방법: My 네임스페이스 사용(C# 프로그래밍 가이드)
 <xref:Microsoft.VisualBasic.MyServices> 네임스페이스(Visual Basic의 `My`)는 .NET Framework 클래스에 대한 쉽고 직관적인 액세스를 제공하여 컴퓨터, 애플리케이션, 설정, 리소스 등을 조작하는 코드를 작성할 수 있게 해줍니다. 원래 Visual Basic에서 사용하도록 설계되었지만 `MyServices` 네임스페이스는 C# 애플리케이션에서 사용할 수 있습니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "59316026"
   
      [!code-csharp[csProgGuideNamespaces#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces3.cs#18)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 `MyServices` 네임스페이스에 포함된 다양한 정적 메서드를 호출합니다. 이 코드를 컴파일하려면 Microsoft.VisualBasic.DLL에 대한 참조를 프로젝트에 추가해야 합니다.  
   
  [!code-csharp[csProgGuideNamespaces#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces3.cs#19)]  
@@ -41,6 +41,6 @@ ms.locfileid: "59316026"
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [네임스페이스](../../../csharp/programming-guide/namespaces/index.md)
-- [네임스페이스 사용](../../../csharp/programming-guide/namespaces/using-namespaces.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [네임스페이스](./index.md)
+- [네임스페이스 사용](./using-namespaces.md)

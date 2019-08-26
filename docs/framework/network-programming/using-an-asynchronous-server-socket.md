@@ -17,12 +17,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
-ms.openlocfilehash: 32a2a99d5f71cb500dca467433f138a893d01e5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 58c9e0846e09774d8c97089016086ecddd2d17ee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119927"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938408"
 ---
 # <a name="using-an-asynchronous-server-socket"></a>비동기 서버 소켓 사용
 비동기 서버 소켓은 .NET Framework 비동기 프로그래밍 모델을 사용하여 네트워크 서비스 요청을 처리합니다. <xref:System.Net.Sockets.Socket> 클래스는 표준 .NET Framework 비동기 명명 패턴을 따릅니다. 예를 들어 동기 <xref:System.Net.Sockets.Socket.Accept%2A> 메서드는 비동기 <xref:System.Net.Sockets.Socket.BeginAccept%2A> 및 <xref:System.Net.Sockets.Socket.EndAccept%2A> 메서드에 해당합니다.  
@@ -272,5 +272,5 @@ public static void ReadCallback(IAsyncResult ar)
 
 - [동기 서버 소켓 사용](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
 - [비동기 서버 소켓 예제](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)
-- [스레딩](../../../docs/standard/threading/index.md)
+- [스레딩](../../standard/threading/index.md)
 - [소켓으로 수신](../../../docs/framework/network-programming/listening-with-sockets.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-ms.openlocfilehash: ed9f4648ae632786ce860ce2c02637977f709c55
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e14bf59f5922a918b627af22c052c8efd9081e84
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302571"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602521"
 ---
 # <a name="-resource-c-compiler-options"></a>-resource(C# 컴파일러 옵션)
 출력 파일에 지정된 리소스를 포함합니다.  
@@ -37,8 +37,8 @@ ms.locfileid: "59302571"
  `accessibility-modifier` (선택 사항)  
  리소스의 접근성으로, public 또는 private입니다. 기본값은 public입니다.  
   
-## <a name="remarks"></a>주의  
- 리소스를 어셈블리에 연결하고 출력 파일에 리소스 파일을 추가하지 않으려면 [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)를 사용합니다.  
+## <a name="remarks"></a>설명  
+ 리소스를 어셈블리에 연결하고 출력 파일에 리소스 파일을 추가하지 않으려면 [-linkresource](./linkresource-compiler-option.md)를 사용합니다.  
   
  기본적으로 리소스는 C# 컴파일러를 사용하여 생성될 때 어셈블리에서 public입니다. 리소스를 private로 만들려면 접근성 한정자로 `private`를 지정합니다. `public` 또는 `private` 이외의 다른 접근성은 허용되지 않습니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "59302571"
   
  이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.FileProperties2.BuildAction%2A>을 참조하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  `in.cs`를 컴파일하고 리소스 파일 `rf.resource`를 첨부합니다.  
   
 ```console  
@@ -69,5 +69,5 @@ csc -resource:rf.resource in.cs
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)
+- [C# 컴파일러 옵션](./index.md)
 - [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)

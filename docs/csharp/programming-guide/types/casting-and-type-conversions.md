@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 2ec18f9afed04882f26b5d2f34f64c25be042ed5
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 19b4ec08cc8790df0e9a99204c0401b1b873eb20
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566871"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588430"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>캐스팅 및 형식 변환(C# 프로그래밍 가이드)
 
@@ -32,17 +32,17 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **명시적 변환(캐스트)** : 명시적 변환에는 캐스트 연산자가 필요합니다. 변환 시 정보가 손실되거나 다른 이유로 변환에 실패할 경우 캐스팅이 필요합니다.  일반적인 예제에는 숫자를 정밀도가 낮거나 범위가 더 작은 형식으로 변환하는 작업과 기본 클래스 인스턴스를 파생 클래스로 변환하는 작업이 포함됩니다.  
   
-- **사용자 정의 변환**: 사용자 정의 변환은 기본 클래스-파생 클래스 관계가 없는 사용자 지정 형식 간의 명시적 및 암시적 변환을 사용하도록 정의할 수 있는 특수 메서드를 통해 수행됩니다. 자세한 내용은 [사용자 정의 변환 연산자](../../../csharp/language-reference/operators/user-defined-conversion-operators.md)를 참조하세요.  
+- **사용자 정의 변환**: 사용자 정의 변환은 기본 클래스-파생 클래스 관계가 없는 사용자 지정 형식 간의 명시적 및 암시적 변환을 사용하도록 정의할 수 있는 특수 메서드를 통해 수행됩니다. 자세한 내용은 [사용자 정의 변환 연산자](../../language-reference/operators/user-defined-conversion-operators.md)를 참조하세요.  
   
-- **도우미 클래스를 사용한 변환**: 정수와 <xref:System.DateTime?displayProperty=nameWithType> 개체, 16진수 문자열과 바이트 배열 등 호환되지 않는 형식 간에 변환하려면 <xref:System.BitConverter?displayProperty=nameWithType> 클래스, <xref:System.Convert?displayProperty=nameWithType> 클래스 및 기본 제공 숫자 형식(예: <xref:System.Int32.Parse%2A?displayProperty=nameWithType>)의 `Parse` 메서드를 사용하면 됩니다. 자세한 내용은 [방법: 바이트 배열을 정수로 변환](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md), [방법: 문자열을 숫자로 변환](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md) 및 [방법: 16진수 문자열과 숫자 형식 간 변환](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)을 참조하세요.  
+- **도우미 클래스를 사용한 변환**: 정수와 <xref:System.DateTime?displayProperty=nameWithType> 개체, 16진수 문자열과 바이트 배열 등 호환되지 않는 형식 간에 변환하려면 <xref:System.BitConverter?displayProperty=nameWithType> 클래스, <xref:System.Convert?displayProperty=nameWithType> 클래스 및 기본 제공 숫자 형식(예: <xref:System.Int32.Parse%2A?displayProperty=nameWithType>)의 `Parse` 메서드를 사용하면 됩니다. 자세한 내용은 [방법: 바이트 배열을 정수로 변환](./how-to-convert-a-byte-array-to-an-int.md), [방법: 문자열을 숫자로 변환](./how-to-convert-a-string-to-a-number.md) 및 [방법: 16진수 문자열과 숫자 형식 간 변환](./how-to-convert-between-hexadecimal-strings-and-numeric-types.md)을 참조하세요.  
   
 ## <a name="implicit-conversions"></a>암시적 변환
 
- 기본 제공 숫자 형식의 경우 저장되는 값이 잘리거나 반올림되지 않고 변수에 맞출 수 있을 때 암시적 변환을 수행할 수 있습니다. 이것은 정수 형식의 경우 소스 형식의 범위가 대상 유형에 대한 범위의 적절한 하위 집합임을 의미합니다. 예를 들어 [long](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) 형식의 변수(64비트 정수)는 [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)(32비트 정수)가 저장할 수 있는 모든 값을 저장할 수 있습니다. 다음 예제에서 컴파일러는 오른쪽의 `num` 값을 `long` 형식으로 암시적으로 변환한 후 `bigNum`에 할당합니다.  
+ 기본 제공 숫자 형식의 경우 저장되는 값이 잘리거나 반올림되지 않고 변수에 맞출 수 있을 때 암시적 변환을 수행할 수 있습니다. 이것은 정수 형식의 경우 소스 형식의 범위가 대상 유형에 대한 범위의 적절한 하위 집합임을 의미합니다. 예를 들어 [long](../../language-reference/builtin-types/integral-numeric-types.md) 형식의 변수(64비트 정수)는 [int](../../language-reference/builtin-types/integral-numeric-types.md)(32비트 정수)가 저장할 수 있는 모든 값을 저장할 수 있습니다. 다음 예제에서 컴파일러는 오른쪽의 `num` 값을 `long` 형식으로 암시적으로 변환한 후 `bigNum`에 할당합니다.  
   
  [!code-csharp[csProgGuideTypes#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#34)]  
   
- 모든 암시적 숫자 변환 규칙의 전체 목록은 [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)를 참조하세요.  
+ 모든 암시적 숫자 변환 규칙의 전체 목록은 [암시적 숫자 변환 표](../../language-reference/keywords/implicit-numeric-conversions-table.md)를 참조하세요.  
   
  참조 형식의 경우 클래스에서 직접 또는 간접 기본 클래스나 인터페이스로의 암시적 변환이 항상 존재합니다. 파생 클래스에 항상 기본 클래스의 모든 멤버가 포함되므로 특수 구문이 필요하지 않습니다.  
   
@@ -53,11 +53,11 @@ Base b = d; // Always OK.
   
 ## <a name="explicit-conversions"></a>명시적 변환
 
- 그러나 변환을 수행할 때 정보 손실의 위험이 있는 경우에는 컴파일러에서 *캐스트*라는 명시적 변환을 수행해야 합니다. 캐스트는 변환을 수행하고자 하고 데이터 손실이 발생할 가능성을 알고 있음을 컴파일러에 명시적으로 알리는 방법입니다. 캐스트를 수행하려면 변환할 값 또는 변수 앞에 캐스트할 형식을 괄호 안에 지정합니다. 다음 프로그램은 [double](../../../csharp/language-reference/builtin-types/floating-point-numeric-types.md)을 [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)로 캐스트합니다. 캐스트가 없으면 프로그램이 컴파일되지 않습니다.  
+ 그러나 변환을 수행할 때 정보 손실의 위험이 있는 경우에는 컴파일러에서 *캐스트*라는 명시적 변환을 수행해야 합니다. 캐스트는 변환을 수행하고자 하고 데이터 손실이 발생할 가능성을 알고 있음을 컴파일러에 명시적으로 알리는 방법입니다. 캐스트를 수행하려면 변환할 값 또는 변수 앞에 캐스트할 형식을 괄호 안에 지정합니다. 다음 프로그램은 [double](../../language-reference/builtin-types/floating-point-numeric-types.md)을 [int](../../language-reference/builtin-types/integral-numeric-types.md)로 캐스트합니다. 캐스트가 없으면 프로그램이 컴파일되지 않습니다.  
   
  [!code-csharp[csProgGuideTypes#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#2)]  
   
- 허용되는 명시적 숫자 변환 목록은 [명시적 숫자 변환 표](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)를 참조하세요.  
+ 허용되는 명시적 숫자 변환 목록은 [명시적 숫자 변환 표](../../language-reference/keywords/explicit-numeric-conversions-table.md)를 참조하세요.  
   
  참조 형식의 경우 기본 형식에서 파생 형식으로 변환해야 할 경우에는 명시적 캐스트가 필요합니다.  
   
@@ -75,7 +75,7 @@ Animal a = g;
 Giraffe g2 = (Giraffe) a;  
 ```  
   
- 참조 형식 간 캐스트 작업은 기본 개체의 런타임 형식을 변경하지 않습니다. 참조로 사용되는 값의 형식을 해당 개체로만 변경합니다. 자세한 내용은 [다형성](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)을 참조하세요.  
+ 참조 형식 간 캐스트 작업은 기본 개체의 런타임 형식을 변경하지 않습니다. 참조로 사용되는 값의 형식을 해당 개체로만 변경합니다. 자세한 내용은 [다형성](../classes-and-structs/polymorphism.md)을 참조하세요.  
   
 ## <a name="type-conversion-exceptions-at-run-time"></a>런타임의 형식 변환 예외
 
@@ -91,9 +91,9 @@ Giraffe g2 = (Giraffe) a;
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [유형](../../../csharp/programming-guide/types/index.md)
-- [() 캐스트 연산자](../../../csharp/language-reference/operators/type-testing-and-cast.md#cast-operator-)
-- [사용자 정의 전환 연산자](../../../csharp/language-reference/operators/user-defined-conversion-operators.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [유형](./index.md)
+- [() 캐스트 연산자](../../language-reference/operators/type-testing-and-cast.md#cast-operator-)
+- [사용자 정의 전환 연산자](../../language-reference/operators/user-defined-conversion-operators.md)
 - [일반화된 형식 변환](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
-- [방법: 문자열을 숫자로 변환](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)
+- [방법: 문자열을 숫자로 변환](./how-to-convert-a-string-to-a-number.md)

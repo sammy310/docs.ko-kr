@@ -2,17 +2,17 @@
 title: '방법: 지정된 단어 집합이 들어 있는 문장 쿼리(LINQ)(C#)'
 ms.date: 07/20/2015
 ms.assetid: 0724b429-4b87-4d26-a7b1-409358f3fc20
-ms.openlocfilehash: 11f065594ed6b6c162ac95e0a1e6c502c1ad8de5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e478364f07c08a334692ba54ae1a95880b95519e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584283"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592775"
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>방법: 지정된 단어 집합이 들어 있는 문장 쿼리(LINQ)(C#)
 이 예제에서는 지정된 각 단어 집합과 일치하는 항목이 포함된 문장을 텍스트 파일에서 찾는 방법을 보여 줍니다. 이 예제에서는 검색어 배열이 하드 코드되어 있지만 런타임에 동적으로 채워질 수도 있습니다. 이 예제에서 쿼리는 "Historically", "data" 및 "integrated" 단어가 포함된 문장을 반환합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```csharp  
 class FindSentences  
@@ -71,4 +71,4 @@ System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통�
 
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ 및 문자열(C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ 및 문자열(C#)](./linq-and-strings.md)

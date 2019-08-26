@@ -5,25 +5,25 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: 1e77c994062c7ac9ee009bc0e12d39e530e8af80
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 6f4044591c2cd8d59970d8d2f6e65c51ce7498ff
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868845"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590566"
 ---
 # <a name="using-delegates-c-programming-guide"></a>대리자 사용(C# 프로그래밍 가이드)
-[대리자](../../../csharp/language-reference/keywords/delegate.md)는 C 및 C++의 함수 포인터처럼 메서드를 안전하게 캡슐화하는 형식입니다. 함수 포인터와는 달리 대리자는 개체 지향적이고 형식이 안전하며 보안이 유지됩니다. 대리자의 형식은 대리자의 이름으로 정의됩니다. 다음 예제에서는 [string](../../../csharp/language-reference/keywords/string.md)을 인수로 사용하고 [void](../../../csharp/language-reference/keywords/void.md)를 반환하는 메서드를 캡슐화할 수 있는 `Del` 대리자를 선언합니다.  
+[대리자](../../language-reference/keywords/delegate.md)는 C 및 C++의 함수 포인터처럼 메서드를 안전하게 캡슐화하는 형식입니다. 함수 포인터와는 달리 대리자는 개체 지향적이고 형식이 안전하며 보안이 유지됩니다. 대리자의 형식은 대리자의 이름으로 정의됩니다. 다음 예제에서는 [string](../../language-reference/keywords/string.md)을 인수로 사용하고 [void](../../language-reference/keywords/void.md)를 반환하는 메서드를 캡슐화할 수 있는 `Del` 대리자를 선언합니다.  
   
  [!code-csharp[csProgGuideDelegates#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#21)]  
   
- 대리자 개체는 일반적으로 대리자가 래핑할 메서드의 이름을 제공하거나 [익명 함수](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)를 사용하여 생성합니다. 대리자를 인스턴스화하고 나면 대리자에 대한 메서드 호출이 대리자에 의해 해당 메서드로 전달됩니다. 호출자가 대리자에게 전달한 매개 변수가 메서드로 전달되며 메서드의 반환 값(있는 경우)이 대리자에 의해 호출자로 반환됩니다. 이 과정을 대리자 호출이라고 합니다. 인스턴스화된 대리자는 래핑된 메서드 자체인 것처럼 호출할 수 있습니다. 예:  
+ 대리자 개체는 일반적으로 대리자가 래핑할 메서드의 이름을 제공하거나 [익명 함수](../statements-expressions-operators/anonymous-functions.md)를 사용하여 생성합니다. 대리자를 인스턴스화하고 나면 대리자에 대한 메서드 호출이 대리자에 의해 해당 메서드로 전달됩니다. 호출자가 대리자에게 전달한 매개 변수가 메서드로 전달되며 메서드의 반환 값(있는 경우)이 대리자에 의해 호출자로 반환됩니다. 이 과정을 대리자 호출이라고 합니다. 인스턴스화된 대리자는 래핑된 메서드 자체인 것처럼 호출할 수 있습니다. 예:  
   
  [!code-csharp[csProgGuideDelegates#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#22)]  
   
  [!code-csharp[csProgGuideDelegates#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#23)]  
   
- 대리자 형식은 .NET Framework의 <xref:System.Delegate> 클래스에서 파생되며, [봉인](../../../csharp/language-reference/keywords/sealed.md)되어 있으므로 <xref:System.Delegate>에서는 파생될 수 없으며 해당 클래스에서 사용자 지정 클래스를 파생할 수도 없습니다. 인스턴스화된 대리자는 개체이므로 매개 변수로 전달하거나 속성에 할당할 수 있습니다. 따라서 메서드가 대리자를 매개 변수로 허용하고 나중에 대리자를 호출할 수 있습니다. 비동기 콜백이라는 이러한 방식은 긴 프로세스 완료 시 호출자에게 알림을 제공하는 일반적인 방법입니다. 이러한 방식으로 대리자를 사용하면 대리자를 사용하는 코드가 사용 중인 메서드의 구현을 확인하지 않아도 됩니다. 이 기능은 캡슐화 인터페이스에서 제공하는 기능과 비슷합니다.  
+ 대리자 형식은 .NET Framework의 <xref:System.Delegate> 클래스에서 파생되며, [봉인](../../language-reference/keywords/sealed.md)되어 있으므로 <xref:System.Delegate>에서는 파생될 수 없으며 해당 클래스에서 사용자 지정 클래스를 파생할 수도 없습니다. 인스턴스화된 대리자는 개체이므로 매개 변수로 전달하거나 속성에 할당할 수 있습니다. 따라서 메서드가 대리자를 매개 변수로 허용하고 나중에 대리자를 호출할 수 있습니다. 비동기 콜백이라는 이러한 방식은 긴 프로세스 완료 시 호출자에게 알림을 제공하는 일반적인 방법입니다. 이러한 방식으로 대리자를 사용하면 대리자를 사용하는 코드가 사용 중인 메서드의 구현을 확인하지 않아도 됩니다. 이 기능은 캡슐화 인터페이스에서 제공하는 기능과 비슷합니다.  
   
  콜백은 사용자 지정 비교 메서드를 정의하고 해당 대리자를 정렬 메서드로 전달할 때도 일반적으로 사용됩니다. 이 경우 호출자의 코드를 정렬 알고리즘의 일부분으로 포함할 수 있습니다. 다음 예제 메서드는 `Del` 형식을 매개 변수로 사용합니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68868845"
   
  호출 목록에 메서드가 둘 이상 포함된 대리자는 <xref:System.MulticastDelegate>의 하위 클래스인 `System.Delegate`에서 파생됩니다. 두 클래스가 모두 `GetInvocationList`를 지원하므로 위의 코드는 두 경우에 모두 사용 가능합니다.  
   
- 멀티캐스트 대리자는 이벤트 처리에서 광범위하게 사용됩니다. 이벤트 소스 개체는 해당 이벤트를 받도록 등록된 받는 사람 개체에 이벤트 알림을 보냅니다. 이벤트를 등록하기 위해 받는 사람은 이벤트를 처리하도록 설계된 메서드를 만든 다음 해당 메서드의 대리자를 만들어 이벤트 소스로 전달합니다. 소스는 이벤트 발생 시 대리자를 호출합니다. 그러면 대리자가 받는 사람에 대해 이벤트 처리 메서드를 호출하여 이벤트 데이터를 전달합니다. 지정된 이벤트의 대리자 형식은 이벤트 소스에 의해 정의됩니다. 자세한 내용은 [이벤트](../../../csharp/programming-guide/events/index.md)를 참조하세요.  
+ 멀티캐스트 대리자는 이벤트 처리에서 광범위하게 사용됩니다. 이벤트 소스 개체는 해당 이벤트를 받도록 등록된 받는 사람 개체에 이벤트 알림을 보냅니다. 이벤트를 등록하기 위해 받는 사람은 이벤트를 처리하도록 설계된 메서드를 만든 다음 해당 메서드의 대리자를 만들어 이벤트 소스로 전달합니다. 소스는 이벤트 발생 시 대리자를 호출합니다. 그러면 대리자가 받는 사람에 대해 이벤트 처리 메서드를 호출하여 이벤트 데이터를 전달합니다. 지정된 이벤트의 대리자 형식은 이벤트 소스에 의해 정의됩니다. 자세한 내용은 [이벤트](../events/index.md)를 참조하세요.  
   
  컴파일 시간에 할당된 서로 다른 형식의 두 대리자를 비교하면 컴파일 오류가 발생합니다. 대리자 인스턴스가 정적 `System.Delegate` 형식이면 비교는 허용되지만 런타임에서 false가 반환됩니다. 예:  
   
@@ -67,9 +67,9 @@ ms.locfileid: "68868845"
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [대리자](../../../csharp/programming-guide/delegates/index.md)
-- [대리자의 가변성 사용](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)
-- [대리자의 가변성](../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
-- [Func 및 Action 제네릭 대리자에 가변성 사용](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
-- [이벤트](../../../csharp/programming-guide/events/index.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [대리자](./index.md)
+- [대리자의 가변성 사용](../concepts/covariance-contravariance/using-variance-in-delegates.md)
+- [대리자의 가변성](../concepts/covariance-contravariance/variance-in-delegates.md)
+- [Func 및 Action 제네릭 대리자에 가변성 사용](../concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [이벤트](../events/index.md)

@@ -2,12 +2,12 @@
 title: 연결된 쿼리의 성능(LINQ to XML)(C#)
 ms.date: 07/20/2015
 ms.assetid: b2f1d715-8946-4dc0-8d56-fb3d1bba54a6
-ms.openlocfilehash: 1ccb7dfec57a4aeea8329456084ca99f5ca3124d
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: dfd7698d0bdd24a75458a581dfd42c3d21325e6f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690000"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591575"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-c"></a>연결된 쿼리의 성능(LINQ to XML)(C#)
 
@@ -53,6 +53,6 @@ foreach (var i in query2)
 
 따라서 `query2`의 반복은 소스로 사용된 첫 번째 쿼리의 항목 수에 정비례합니다. 즉, 선형 시간으로 실행됩니다. 이에 해당하는 Visual Basic 예제도 같은 성능 프로필을 제공합니다.
 
-반복기에 대한 자세한 내용은 [yield](../../../../csharp/language-reference/keywords/yield.md)를 참조하세요.
+반복기에 대한 자세한 내용은 [yield](../../../language-reference/keywords/yield.md)를 참조하세요.
 
-여러 쿼리를 연결하는 방법에 대한 자세한 자습서를 보려면 [자습서: 여러 쿼리 연결(C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)을 참조하세요.
+여러 쿼리를 연결하는 방법에 대한 자세한 자습서를 보려면 [자습서: 여러 쿼리 연결(C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)을 참조하세요.

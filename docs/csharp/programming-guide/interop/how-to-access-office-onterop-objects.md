@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 765a150953075cf9afb2dd3bde7a66cfe3ff6eb5
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 19fff39969933baa2510458400cabf9646e0c48d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398151"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589131"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>방법: Visual C# 기능을 사용하여 Office Interop 개체에 액세스(C# 프로그래밍 가이드)
 
@@ -95,7 +95,7 @@ Visual C#에는 Office API 개체에 간편하게 액세스할 수 있는 기능
 
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]
 
-     C# 4 이상 버전에서는 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 컴파일러 옵션이 어셈블리를 참조한 경우 또는 이와 동등하게 Excel의 **Interop 형식 포함** 속성이 true로 설정되어 있는 경우, 반환된 `Object`를 `dynamic`으로 자동 변환합니다. 이 속성의 기본값은 true입니다.
+     C# 4 이상 버전에서는 [/link](../../language-reference/compiler-options/link-compiler-option.md) 컴파일러 옵션이 어셈블리를 참조한 경우 또는 이와 동등하게 Excel의 **Interop 형식 포함** 속성이 true로 설정되어 있는 경우, 반환된 `Object`를 `dynamic`으로 자동 변환합니다. 이 속성의 기본값은 true입니다.
 
 ## <a name="to-run-the-project"></a>프로젝트를 실행하려면
 
@@ -137,9 +137,9 @@ Visual C#에는 Office API 개체에 간편하게 액세스할 수 있는 기능
 
 ## <a name="to-set-the-embed-interop-types-property"></a>Interop 형식 포함 속성을 설정하려면
 
-1. 런타임에 PIA(주 interop 어셈블리)를 사용하지 않아도 되는 COM 형식을 호출할 때는 코드를 추가로 개선할 수 있습니다. PIA에 대한 종속성을 제거하면 버전을 독립적으로 실행할 수 있으며 보다 쉽게 배포할 수 있습니다. PIA를 사용하지 않는 프로그래밍의 장점에 대한 자세한 내용은 [연습: 관리되는 어셈블리의 형식 포함](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)을 참조하세요.
+1. 런타임에 PIA(주 interop 어셈블리)를 사용하지 않아도 되는 COM 형식을 호출할 때는 코드를 추가로 개선할 수 있습니다. PIA에 대한 종속성을 제거하면 버전을 독립적으로 실행할 수 있으며 보다 쉽게 배포할 수 있습니다. PIA를 사용하지 않는 프로그래밍의 장점에 대한 자세한 내용은 [연습: 관리되는 어셈블리의 형식 포함](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)을 참조하세요.
 
-     또한 COM 메서드에서 사용해야 하며 반환되는 형식은 `dynamic`가 아닌 `Object` 형식을 사용하여 표시할 수 있으므로 프로그램이 더욱 쉬워집니다. `dynamic` 형식이 포함된 변수는 런타임까지 평가되지 않으므로 명시적 캐스팅을 수행할 필요가 없습니다. 자세한 내용은 [dynamic 형식 사용](../../../csharp/programming-guide/types/using-type-dynamic.md)을 참조하세요.
+     또한 COM 메서드에서 사용해야 하며 반환되는 형식은 `dynamic`가 아닌 `Object` 형식을 사용하여 표시할 수 있으므로 프로그램이 더욱 쉬워집니다. `dynamic` 형식이 포함된 변수는 런타임까지 평가되지 않으므로 명시적 캐스팅을 수행할 필요가 없습니다. 자세한 내용은 [dynamic 형식 사용](../types/using-type-dynamic.md)을 참조하세요.
 
      C# 4에서는 PIA를 사용하는 대신 형식 정보를 포함하는 것이 기본 동작입니다. 이러한 기본 동작으로 인해 명시적 캐스팅이 필요하지 않으므로 위의 여러 예제가 간소화됩니다. 예를 들어 `worksheet`의 `DisplayInExcel` 선언은 `Excel._Worksheet workSheet = excelApp.ActiveSheet`가 아닌 `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`로 작성됩니다. 마찬가지로 기본 동작이 없으면 같은 메서드의 `AutoFit`에 대한 호출에서도 명시적 캐스팅을 수행해야 합니다. `ExcelApp.Columns[1]`는 `Object`를 반환하며 `AutoFit`은 Excel 메서드이기 때문입니다. 다음 코드에서는 캐스팅을 보여 줍니다.
 
@@ -149,7 +149,7 @@ Visual C#에는 Office API 개체에 간편하게 액세스할 수 있는 기능
 
 3. **속성** 창이 보이지 않으면 **F4**키를 누릅니다.
 
-4. 속성 목록에서 **Interop 형식 포함**을 찾은 다음 해당 값을 **False**로 변경합니다. 마찬가지로 명령 프롬프트에서 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 대신 [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 컴파일러 옵션을 사용하여 컴파일할 수 있습니다.
+4. 속성 목록에서 **Interop 형식 포함**을 찾은 다음 해당 값을 **False**로 변경합니다. 마찬가지로 명령 프롬프트에서 [/link](../../language-reference/compiler-options/link-compiler-option.md) 대신 [/reference](../../language-reference/compiler-options/reference-compiler-option.md) 컴파일러 옵션을 사용하여 컴파일할 수 있습니다.
 
 ## <a name="to-add-additional-formatting-to-the-table"></a>표에 서식을 더 추가하려면
 
@@ -176,7 +176,7 @@ Visual C#에는 Office API 개체에 간편하게 액세스할 수 있는 기능
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Type.Missing?displayProperty=nameWithType>
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
-- [dynamic 형식 사용](../../../csharp/programming-guide/types/using-type-dynamic.md)
-- [명명된 인수 및 선택적 인수](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
-- [방법: Office 프로그래밍에서 명명된 인수 및 선택적 인수 사용](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [dynamic](../../language-reference/keywords/dynamic.md)
+- [dynamic 형식 사용](../types/using-type-dynamic.md)
+- [명명된 인수 및 선택적 인수](../classes-and-structs/named-and-optional-arguments.md)
+- [방법: Office 프로그래밍에서 명명된 인수 및 선택적 인수 사용](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

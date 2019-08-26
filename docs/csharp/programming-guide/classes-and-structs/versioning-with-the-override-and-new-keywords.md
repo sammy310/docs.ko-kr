@@ -6,21 +6,21 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 6b5097df8ee559f11bc29c12570e938965e6a9a5
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 58023498c499569eebb9a0506bea434d2669de45
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398082"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596003"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Override 및 New 키워드를 사용하여 버전 관리(C# 프로그래밍 가이드)
-C# 언어는 서로 다른 라이브러리의 [기본](../../../csharp/language-reference/keywords/base.md) 및 파생 클래스 간 버전 관리를 개발하고 이전 버전과의 호환성을 유지할 수 있도록 설계되었습니다. 예를 들어 파생 클래스의 멤버와 동일한 이름을 가진 기본 [클래스](../../../csharp/language-reference/keywords/class.md)에 새 멤버가 추가되면 C#이 완전히 지원되고 예기치 않은 동작이 발생하지 않습니다. 따라서 클래스는 메서드가 상속된 메서드를 재정의할지 아니면 메서드가 유사한 이름의 상속된 메서드를 숨기는 새 메서드인지를 명시적으로 지정해야 합니다.  
+C# 언어는 서로 다른 라이브러리의 [기본](../../language-reference/keywords/base.md) 및 파생 클래스 간 버전 관리를 개발하고 이전 버전과의 호환성을 유지할 수 있도록 설계되었습니다. 예를 들어 파생 클래스의 멤버와 동일한 이름을 가진 기본 [클래스](../../language-reference/keywords/class.md)에 새 멤버가 추가되면 C#이 완전히 지원되고 예기치 않은 동작이 발생하지 않습니다. 따라서 클래스는 메서드가 상속된 메서드를 재정의할지 아니면 메서드가 유사한 이름의 상속된 메서드를 숨기는 새 메서드인지를 명시적으로 지정해야 합니다.  
   
  C#에서 파생 클래스는 기본 클래스 메서드와 동일한 이름 가진 메서드를 포함할 수 있습니다.  
   
-- 기본 클래스 메서드를 [virtual](../../../csharp/language-reference/keywords/virtual.md)로 정의해야 합니다.  
+- 기본 클래스 메서드를 [virtual](../../language-reference/keywords/virtual.md)로 정의해야 합니다.  
   
-- 파생 클래스의 메서드 앞에 [new](../../../csharp/language-reference/keywords/new-modifier.md) 또는 [override](../../../csharp/language-reference/keywords/override.md) 키워드가 있으면 컴파일러는 경고를 표시하고 메서드는 `new` 키워드가 있는 것처럼 작동합니다.  
+- 파생 클래스의 메서드 앞에 [new](../../language-reference/keywords/new-modifier.md) 또는 [override](../../language-reference/keywords/override.md) 키워드가 있으면 컴파일러는 경고를 표시하고 메서드는 `new` 키워드가 있는 것처럼 작동합니다.  
   
 - 파생 클래스의 메서드 앞에 `new` 키워드가 있는 경우 이 메서드는 기본 클래스의 메서드와 독립적으로 정의됩니다.  
   
@@ -77,11 +77,11 @@ C# 언어는 서로 다른 라이브러리의 [기본](../../../csharp/language-
   
  [!code-csharp[csProgGuideInheritance#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#34)]  
   
- `new` 및 `override`의 추가 예제는 [Override 및 New 키워드를 사용해야 하는 경우](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)를 참조하세요.  
+ `new` 및 `override`의 추가 예제는 [Override 및 New 키워드를 사용해야 하는 경우](./knowing-when-to-use-override-and-new-keywords.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [클래스 및 구조체](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [메서드](../../../csharp/programming-guide/classes-and-structs/methods.md)
-- [상속](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [클래스 및 구조체](./index.md)
+- [메서드](./methods.md)
+- [상속](./inheritance.md)

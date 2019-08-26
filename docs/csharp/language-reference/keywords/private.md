@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - private keyword [C#]
 ms.assetid: 654c0bb8-e6ac-4086-bf96-7474fa6aa1c8
-ms.openlocfilehash: 67b2621d382651abc27cee2eadad91a6253895c1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a20c0a6fd729c2fc34449167eb92cb774bc3b84e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633335"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602018"
 ---
 # <a name="private-c-reference"></a>private(C# 참조)
 
@@ -49,8 +49,8 @@ class Employee
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 참조](../../../csharp/language-reference/index.md)
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
+- [C# 참조](../index.md)
+- [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 키워드](index.md)
 - [액세스 한정자](access-modifiers.md)
 - [액세스 수준](accessibility-levels.md)

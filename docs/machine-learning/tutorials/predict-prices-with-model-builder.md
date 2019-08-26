@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 07/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: b4a08a9866bbc8816b57c95bdb22766bd1b07fdc
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 4471e4feffb23b7f256ada2116444aaa7899e209
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331704"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611449"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>모델 작성기와 함께 회귀를 사용하여 가격 예측
 
@@ -202,7 +202,6 @@ ML.NET 모델 작성기 빌드를 사용하여 가격을 예측하기 위한 회
 이 자습서에서 언급한 항목에 대한 자세한 내용은 다음 리소스를 참조하세요.
 
 - [모델 작성기 시나리오](../automate-training-with-model-builder.md#scenarios)
-- [모델 작성기 데이터 형식](../automate-training-with-model-builder.md#data-formats)
 - [재발](../resources/glossary.md#regression)
 - [회귀 모델 메트릭](../resources/metrics.md#metrics-for-regression)
 - [NYC TLC 택시 여행 데이터 세트](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)

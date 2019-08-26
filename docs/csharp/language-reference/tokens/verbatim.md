@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2302c2602411455c0f3f0371579fc9be200004d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2290c87f7d4d2ba8da122d4f5ddb9ea423852ec
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660855"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608727"
 ---
 # <a name="-c-reference"></a>@(C# 참조)
 
@@ -40,6 +40,6 @@ ms.locfileid: "54660855"
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 참조](../../../csharp/language-reference/index.md)
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [C# 특수 문자](../../../csharp/language-reference/tokens/index.md)
+- [C# 참조](../index.md)
+- [C# 프로그래밍 가이드](../../programming-guide/index.md)
+- [C# 특수 문자](./index.md)

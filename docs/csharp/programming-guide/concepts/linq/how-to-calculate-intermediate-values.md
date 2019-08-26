@@ -2,12 +2,12 @@
 title: '방법: 중간 값 계산(C#)'
 ms.date: 07/20/2015
 ms.assetid: 7fd3001f-f8f9-4bce-879f-d4c7af8a04fe
-ms.openlocfilehash: 6fb04e1222563e557172edad7953c4646adafefd
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 7b2dfc4e26fc7648cbd93b1e590079e4b105ad43
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710170"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594140"
 ---
 # <a name="how-to-calculate-intermediate-values-c"></a>방법: 중간 값 계산(C#)
 이 예제에서는 정렬, 필터링 및 선택에 사용할 수 있는 중간 값을 계산하는 방법을 보여 줍니다.  
@@ -15,7 +15,7 @@ ms.locfileid: "68710170"
 ## <a name="example"></a>예  
  다음 예제에서는 `Let` 절을 사용합니다.  
   
- 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 숫자 데이터(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 숫자 데이터(LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```csharp  
 XElement root = XElement.Load("Data.xml");  
@@ -42,7 +42,7 @@ foreach (decimal ex in extensions)
 ## <a name="example"></a>예  
  다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다. 자세한 내용은 [네임스페이스 개요(LINQ to XML)(C#)](namespaces-overview-linq-to-xml.md)를 참조하세요.  
   
- 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 네임스페이스의 숫자 데이터](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
+ 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 네임스페이스의 숫자 데이터](./sample-xml-file-numerical-data-in-a-namespace.md).  
   
 ```csharp  
 XElement root = XElement.Load("DataInNamespace.xml");  

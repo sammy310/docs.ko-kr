@@ -6,18 +6,18 @@ ms.author: mairaw
 ms.date: 04/02/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: a7005cfe01d168febd97af5f8b41cfff26b2cfc7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 20b13bb590a63a807c1894bf08051053f90c0fc4
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641465"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666514"
 ---
 # <a name="target-frameworks"></a>대상 프레임워크
 
 앱 또는 라이브러리에서 프레임워크를 대상으로 지정하면 앱 또는 라이브러리에서 사용할 수 있도록 하려는 API 집합을 지정하는 것입니다. TFM(대상 프레임워크 모니터)을 사용하여 프로젝트 파일에서 대상 프레임워크를 지정합니다.
 
-앱 또는 라이브러리는 [.NET Standard](~/docs/standard/net-standard.md) 버전을 대상으로 지정할 수 있습니다. .NET Standard 버전은 모든 .NET 구현체에서 사용할 수 있는 표준화된 API 집합을 나타냅니다. 예를 들어 .NET Standard 1.6을 대상으로 하는 라이브러리는 동일한 코드 기반의 .NET Core 및 .NET Framework에서 동작하는 API에 액세스할 수 있습니다.
+앱 또는 라이브러리는 [.NET Standard](net-standard.md) 버전을 대상으로 지정할 수 있습니다. .NET Standard 버전은 모든 .NET 구현체에서 사용할 수 있는 표준화된 API 집합을 나타냅니다. 예를 들어 .NET Standard 1.6을 대상으로 하는 라이브러리는 동일한 코드 기반의 .NET Core 및 .NET Framework에서 동작하는 API에 액세스할 수 있습니다.
 
 앱 또는 라이브러리는 특정 .NET 구현체을 대상으로 지정하여 구현체 관련 API에 액세스할 수도 있습니다. 예를 들어 Xamarin.iOS(예: `Xamarin.iOS10`)를 대상으로 하는 앱은 Xamarin에서 제공하는 iOS 10용 iOS API 래퍼에 액세스하고, UWP(유니버설 Windows 플랫폼, `uap10.0`)를 대상으로 하는 앱은 Windows 10이 실행되는 디바이스용으로 컴파일하는 API에 액세스할 수 있습니다.
 
@@ -27,7 +27,7 @@ ms.locfileid: "65641465"
 
 ## <a name="latest-target-framework-versions"></a>최신 대상 프레임워크 버전
 
-다음 표에서는 가장 일반적인 대상 프레임워크, 프레임워크가 참조되는 방법 및 프레임워크에서 구현하는 [.NET Standard](~/docs/standard/net-standard.md)의 버전을 정의합니다. 이러한 대상 프레임워크 버전은 안정적인 최신 버전입니다. 시험판 버전은 표시되지 않습니다. TFM(대상 프레임워크 모니커)은 .NET 앱 또는 라이브러리의 대상 프레임워크를 지정하기 위해 표준화된 토큰 형식입니다.
+다음 표에서는 가장 일반적인 대상 프레임워크, 프레임워크가 참조되는 방법 및 프레임워크에서 구현하는 [.NET Standard](net-standard.md)의 버전을 정의합니다. 이러한 대상 프레임워크 버전은 안정적인 최신 버전입니다. 시험판 버전은 표시되지 않습니다. TFM(대상 프레임워크 모니커)은 .NET 앱 또는 라이브러리의 대상 프레임워크를 지정하기 위해 표준화된 토큰 형식입니다.
 
 | 대상 프레임워크      | 최신 <br/> 안정적인 버전 | TFM(대상 프레임워크 모니커) | 구현된 <br/> .NET 표준 버전 |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c2f28490203bcc4853bc6736ce7089f308bc275
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6c68cd98b496143e6b964383f8fa0c3af5d2c87d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338711"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939635"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>스키마 노드 형식 및 구조 유추 규칙
 이 항목에서는 스키마 유추 과정에서 XML 문서의 노드 형식을 XSD(XML 스키마 정의 언어) 구조로 변환하는 방법을 설명합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "59338711"
 8. 자식 요소 선택 시퀀스와 특성을 가진 요소  
   
 > [!NOTE]
->  모든 `complexType` 선언은 익명 형식으로 유추됩니다. 유추되는 요소 중 루트 요소만이 전역 요소이며, 기타 모든 요소는 로컬 요소입니다.  
+> 모든 `complexType` 선언은 익명 형식으로 유추됩니다. 유추되는 요소 중 루트 요소만이 전역 요소이며, 기타 모든 요소는 로컬 요소입니다.  
   
  스키마 유추 과정에 대한 자세한 내용은 [XML 문서에서 스키마 유추](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)를 참조하세요.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "59338711"
  다음 표에서는 <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> 메서드에 대한 XML 입력 및 생성된 XML 스키마를 보여 줍니다. 굵게 표시된 요소는 자식 요소 시퀀스를 가진 요소에 대해 유추된 스키마를 나타냅니다.  
   
 > [!NOTE]
->  요소에 자식 요소가 한 개만 있더라도 여전히 시퀀스로 간주됩니다.  
+> 요소에 자식 요소가 한 개만 있더라도 여전히 시퀀스로 간주됩니다.  
   
  스키마 유추 과정에 대한 자세한 내용은 [XML 문서에서 스키마 유추](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)를 참조하세요.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "59338711"
  다음 표에서는 <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> 메서드에 대한 XML 입력 및 생성된 XML 스키마를 보여 줍니다. 굵게 표시된 요소는 자식 요소 시퀀스 및 특성을 가진 요소에 대해 유추된 스키마를 나타냅니다.  
   
 > [!NOTE]
->  요소에 자식 요소가 한 개만 있더라도 여전히 시퀀스로 간주됩니다.  
+> 요소에 자식 요소가 한 개만 있더라도 여전히 시퀀스로 간주됩니다.  
   
  스키마 유추 과정에 대한 자세한 내용은 [XML 문서에서 스키마 유추](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)를 참조하세요.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "59338711"
  다음 표에서는 <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> 메서드에 대한 XML 입력 및 생성된 XML 스키마를 보여 줍니다. 굵게 표시된 요소는 자식 요소 시퀀스 및 선택 항목을 가진 요소에 대해 유추된 스키마를 나타냅니다.  
   
 > [!NOTE]
->  `maxOccurs` 요소의 `xs:choice` 특성은 유추된 스키마에서 `"unbounded"`로 설정됩니다.  
+> `maxOccurs` 요소의 `xs:choice` 특성은 유추된 스키마에서 `"unbounded"`로 설정됩니다.  
   
  스키마 유추 과정에 대한 자세한 내용은 [XML 문서에서 스키마 유추](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)를 참조하세요.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "59338711"
  다음 표에서는 <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> 메서드에 대한 XML 입력 및 생성된 XML 스키마를 보여 줍니다. 굵게 표시된 요소는 자식 요소 시퀀스 및 선택 항목과 특성을 가진 요소에 대해 유추된 스키마를 나타냅니다.  
   
 > [!NOTE]
->  `maxOccurs` 요소의 `xs:choice` 특성은 유추된 스키마에서 `"unbounded"`로 설정됩니다.  
+> `maxOccurs` 요소의 `xs:choice` 특성은 유추된 스키마에서 `"unbounded"`로 설정됩니다.  
   
  스키마 유추 과정에 대한 자세한 내용은 [XML 문서에서 스키마 유추](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)를 참조하세요.  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3f87fb330fbea1344cc8532519d358fe8580a9fd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f283aad7c6727aff111aaaf78beb1e8da4b45898
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592700"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988365"
 ---
 # <a name="strong-named-assemblies"></a>강력한 이름의 어셈블리
 강력한 이름의 어셈블리는 어셈블리에 대한 고유한 ID를 만들어 어셈블리 충돌을 방지할 수 있습니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "64592700"
  강력한 이름의 어셈블리가 만들어지면 그 어셈블리에는 어셈블리에 대한 간단한 텍스트 이름, 버전 번호, 문화권 정보(제공된 경우), 디지털 서명 및 서명에 사용된 개인 키에 대응하는 공개 키가 포함되어 있습니다.  
   
 > [!WARNING]
->  강력한 이름을 보안용으로 사용하지 마세요. 강력한 이름은 고유한 ID를 제공할 뿐입니다.  
+> 강력한 이름을 보안용으로 사용하지 마세요. 강력한 이름은 고유한 ID를 제공할 뿐입니다.  
   
 ## <a name="why-strong-name-your-assemblies"></a>강력한 이름의 어셈블리를 사용해야 하는 이유는?  
  강력한 이름의 어셈블리를 참조하면 버전 관리나 이름 보호와 같은 이점이 있습니다. 강력한 이름의 어셈블리는 일부 시나리오를 수행하는 데 필요한 전역 어셈블리 캐시에서 설치할 수 있습니다.  

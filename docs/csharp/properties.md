@@ -2,12 +2,12 @@
 title: 속성
 description: 유효성 검사, 계산된 값, 지연 평가, 속성 변경 알림 기능을 포함하는 C# 속성에 대해 알아봅니다.
 ms.date: 04/25/2018
-ms.openlocfilehash: e8b6955da1f36673962339785b0bfb012343acf8
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 6638ae74516d7546882c8a380eed9b03ff3d18e9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878271"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587414"
 ---
 # <a name="properties"></a>속성
 
@@ -104,7 +104,7 @@ public class Measurements
 
 [!code-csharp[A computed property](../../samples/snippets/csharp/properties/Person.cs#10)]
 
-위 예에서는 [문자열 보간](../csharp/language-reference/tokens/interpolated.md) 기능을 사용하여 전체 이름에 대한 서식이 지정된 문자열을 만듭니다.
+위 예에서는 [문자열 보간](./language-reference/tokens/interpolated.md) 기능을 사용하여 전체 이름에 대한 서식이 지정된 문자열을 만듭니다.
 
 계산된 `FullName` 속성을 만드는 보다 간결한 방법을 제공하는 *식 본문 멤버*를 사용할 수도 있습니다.
 

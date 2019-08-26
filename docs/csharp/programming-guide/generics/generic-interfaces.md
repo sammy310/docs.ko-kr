@@ -6,17 +6,17 @@ helpviewer_keywords:
 - C# language, generic interfaces
 - generics [C#], interfaces
 ms.assetid: a8fa49a1-6e78-4a09-87e5-84a0b9f5ffbe
-ms.openlocfilehash: 7fc79874c8e1ff24c38d288d3f6708e2851419e3
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 47eba90eba670d2f735c2f5ca24053e23d34e871
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423478"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659814"
 ---
 # <a name="generic-interfaces-c-programming-guide"></a>제네릭 인터페이스(C# 프로그래밍 가이드)
 제네릭 컬렉션 클래스에 대한 인터페이스 또는 컬렉션의 항목을 나타내는 제네릭 클래스에 대한 인터페이스를 정의하는 것이 대개 유용합니다. 값 형식에 대해 boxing 및 unboxing 연산을 하지 않으려면 제네릭 클래스에서 <xref:System.IComparable> 대신 <xref:System.IComparable%601>과 같은 제네릭 인터페이스를 사용하는 것이 좋습니다. .NET Framework 클래스 라이브러리에는 <xref:System.Collections.Generic> 네임스페이스의 컬렉션 클래스에 사용할 제네릭 인터페이스가 여러 개 정의되어 있습니다.  
   
- 인터페이스를 형식 매개 변수에 대한 제약 조건으로 지정한 경우 이 인터페이스를 구현하는 형식만 사용할 수 있습니다. 다음 코드 예제는 `GenericList<T>` 클래스에서 파생되는 `SortedList<T>` 클래스를 보여 줍니다. 자세한 내용은 [제네릭 소개](../../../csharp/programming-guide/generics/index.md)를 참조하세요. `SortedList<T>`는 `where T : IComparable<T>` 제약 조건을 추가합니다. 이렇게 하면 `SortedList<T>`의 `BubbleSort` 메서드가 목록 요소에서 제네릭 <xref:System.IComparable%601.CompareTo%2A> 메서드를 사용할 수 있게 됩니다. 이 예제에서 목록 요소는 `IComparable<Person>`을 구현하는 단순 클래스인 `Person`입니다.  
+ 인터페이스를 형식 매개 변수에 대한 제약 조건으로 지정한 경우 이 인터페이스를 구현하는 형식만 사용할 수 있습니다. 다음 코드 예제는 `GenericList<T>` 클래스에서 파생되는 `SortedList<T>` 클래스를 보여 줍니다. 자세한 내용은 [제네릭 소개](./index.md)를 참조하세요. `SortedList<T>`는 `where T : IComparable<T>` 제약 조건을 추가합니다. 이렇게 하면 `SortedList<T>`의 `BubbleSort` 메서드가 목록 요소에서 제네릭 <xref:System.IComparable%601.CompareTo%2A> 메서드를 사용할 수 있게 됩니다. 이 예제에서 목록 요소는 `IComparable<Person>`을 구현하는 단순 클래스인 `Person`입니다.  
   
  [!code-csharp[csProgGuideGenerics#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics2.cs#29)]  
   
@@ -42,11 +42,11 @@ ms.locfileid: "66423478"
   
  [!code-csharp[csProgGuideGenerics#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#34)]  
   
- 제네릭 클래스, 제네릭 구조체 또는 제네릭 인터페이스 내의 메서드에는 메서드 오버로드를 제어하는 규칙이 동일하게 적용됩니다. 자세한 내용은 [제네릭 메서드](../../../csharp/programming-guide/generics/generic-methods.md)를 참조하세요.  
+ 제네릭 클래스, 제네릭 구조체 또는 제네릭 인터페이스 내의 메서드에는 메서드 오버로드를 제어하는 규칙이 동일하게 적용됩니다. 자세한 내용은 [제네릭 메서드](./generic-methods.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [제네릭 소개](../../../csharp/programming-guide/generics/index.md)
-- [interface](../../../csharp/language-reference/keywords/interface.md)
-- [제네릭](~/docs/standard/generics/index.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [제네릭 소개](./index.md)
+- [interface](../../language-reference/keywords/interface.md)
+- [제네릭](../../../standard/generics/index.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - delaysign compiler option [C#]
 - /delaysign compiler option [C#]
 ms.assetid: bcb058eb-2933-4e7f-b356-5c941db4de75
-ms.openlocfilehash: 1d49733531507fc80165e034fde1969305cfd2e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae309a8de6c4691f0009e5beb8ac2adc8772805b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681731"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69603033"
 ---
 # <a name="-delaysign-c-compiler-options"></a>-delaysign(C# 컴파일러 옵션)
 
@@ -31,9 +31,9 @@ ms.locfileid: "54681731"
 
 완전히 서명된 어셈블리가 필요하면 **-delaysign-** 를 사용합니다. 어셈블리에 공개 키만 배치하려면 **-delaysign+** 를 사용합니다. 기본값은 **-delaysign-** 입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**-delaysign** 옵션은 [-keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md) 또는 [-keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md)와 함께 사용하지 않으면 효과가 없습니다.
+**-delaysign** 옵션은 [-keyfile](./keyfile-compiler-option.md) 또는 [-keycontainer](./keycontainer-compiler-option.md)와 함께 사용하지 않으면 효과가 없습니다.
 
 **-delaysign** 및 **-publicsign** 옵션은 함께 사용할 수 없습니다.
 

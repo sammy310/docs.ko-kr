@@ -2,12 +2,12 @@
 title: '방법: 서명된 Friend 어셈블리 만들기(C#)'
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: df04f6f5a006c7eea7984004e20578c85e51efe0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7715726a200150b044fb8e97216fa02d0e784838
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582978"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595932"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>방법: 서명된 Friend 어셈블리 만들기(C#)
 이 예제에서는 강력한 이름을 가진 어셈블리와 함께 friend 어셈블리를 사용하는 방법을 보여 줍니다. 두 어셈블리에 모두 강력한 이름을 지정해야 합니다. 이 예제의 두 어셈블리는 모두 동일한 키를 사용하지만 두 어셈블리에 서로 다른 키를 사용할 수 있습니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "64582978"
     csc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll /out:friend_signed_B.exe friend_signed_B.cs  
     ```  
   
-     컴파일러에서 생성된 어셈블리 이름은 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성에 전달된 friend 어셈블리 이름과 일치해야 합니다. `/out` 컴파일러 옵션을 사용하여 출력 어셈블리(.exe 또는 .dll)의 이름을 명시적으로 지정해야 합니다.  자세한 내용은 [/out(C# 컴파일러 옵션)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md)을 참조하세요.  
+     컴파일러에서 생성된 어셈블리 이름은 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성에 전달된 friend 어셈블리 이름과 일치해야 합니다. `/out` 컴파일러 옵션을 사용하여 출력 어셈블리(.exe 또는 .dll)의 이름을 명시적으로 지정해야 합니다.  자세한 내용은 [/out(C# 컴파일러 옵션)](../../../language-reference/compiler-options/out-compiler-option.md)을 참조하세요.  
   
 7. friend_signed_B.exe 파일을 실행합니다.  
   
@@ -93,8 +93,8 @@ ms.locfileid: "64582978"
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [.NET 어셈블리](../../../../standard/assembly/index.md)
 - [Friend 어셈블리](../../../../standard/assembly/friend-assemblies.md)
-- [방법: 서명되지 않은 Friend 어셈블리 만들기(C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
-- [/keyfile](../../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
+- [방법: 서명되지 않은 Friend 어셈블리 만들기(C#)](./how-to-create-unsigned-friend-assemblies.md)
+- [/keyfile](../../../language-reference/compiler-options/keyfile-compiler-option.md)
 - [Sn.exe(강력한 이름 도구)](../../../../framework/tools/sn-exe-strong-name-tool.md)
-- [강력한 이름의 어셈블리 만들기 및 사용](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
-- [C# 프로그래밍 가이드](../../../../csharp/programming-guide/index.md)
+- [강력한 이름의 어셈블리 만들기 및 사용](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [C# 프로그래밍 가이드](../../index.md)

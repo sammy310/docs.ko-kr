@@ -2,18 +2,18 @@
 title: '방법: 개체 그래프 프로젝션(C#)'
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: 759db3800b02ee3f6e263b4d43374a9160703b2f
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: dcfdd8cba95d729a1f9bda3adb4b5fd8690b724a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486570"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592997"
 ---
 # <a name="how-to-project-an-object-graph-c"></a>방법: 개체 그래프 프로젝션(C#)
 이 항목에서는 XML에서 개체 그래프를 프로젝션하거나 채우는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예제  
- 다음 코드에서는 `Address`, `PurchaseOrder` 및 `PurchaseOrderItem` 클래스를 사용하여 [샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML 문서에서 개체 그래프를 채웁니다.  
+## <a name="example"></a>예  
+ 다음 코드에서는 `Address`, `PurchaseOrder` 및 `PurchaseOrderItem` 클래스를 사용하여 [샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML 문서에서 개체 그래프를 채웁니다.  
   
 ```csharp  
 class Address  

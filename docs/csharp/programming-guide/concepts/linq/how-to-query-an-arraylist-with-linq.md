@@ -2,15 +2,15 @@
 title: '방법: LINQ를 사용하여 ArrayList 쿼리(C#)'
 ms.date: 07/20/2015
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
-ms.openlocfilehash: 9276ebe02858d7a7e295430b0125c590b9c2f308
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dca201a23b316cc16bc746ea920303814c8c7c87
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651811"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592926"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-c"></a>방법: LINQ를 사용하여 ArrayList 쿼리(C#)
-LINQ를 사용하여 <xref:System.Collections.ArrayList> 등의 제네릭이 아닌 <xref:System.Collections.IEnumerable> 컬렉션을 쿼리하는 경우 컬렉션에 있는 개체의 특정 형식을 반영하도록 범위 변수의 형식을 명시적으로 선언해야 합니다. 예를 들어 `Student` 개체의 <xref:System.Collections.ArrayList>가 있는 경우 [from 절](../../../../csharp/language-reference/keywords/from-clause.md)은 다음과 같아야 합니다.  
+LINQ를 사용하여 <xref:System.Collections.ArrayList> 등의 제네릭이 아닌 <xref:System.Collections.IEnumerable> 컬렉션을 쿼리하는 경우 컬렉션에 있는 개체의 특정 형식을 반영하도록 범위 변수의 형식을 명시적으로 선언해야 합니다. 예를 들어 `Student` 개체의 <xref:System.Collections.ArrayList>가 있는 경우 [from 절](../../../language-reference/keywords/from-clause.md)은 다음과 같아야 합니다.  
   
 ```  
 var query = from Student s in arrList  
@@ -19,9 +19,9 @@ var query = from Student s in arrList
   
  범위 변수의 형식을 지정하여 <xref:System.Collections.ArrayList>의 각 항목을 `Student`로 캐스팅합니다.  
   
- 명시적 형식 범위 변수를 쿼리 식에 사용하는 것은 <xref:System.Linq.Enumerable.Cast%2A> 메서드 호출과 같습니다. 지정된 캐스트를 수행할 수 없는 경우 <xref:System.Linq.Enumerable.Cast%2A>에서 예외를 throw합니다. <xref:System.Linq.Enumerable.Cast%2A> 및 <xref:System.Linq.Enumerable.OfType%2A>은 제네릭이 아닌 <xref:System.Collections.IEnumerable> 형식에서 작동하는 두 가지 표준 쿼리 연산자 메서드입니다. 자세한 내용은 [LINQ 쿼리 작업의 형식 관계](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)를 참조하세요.  
+ 명시적 형식 범위 변수를 쿼리 식에 사용하는 것은 <xref:System.Linq.Enumerable.Cast%2A> 메서드 호출과 같습니다. 지정된 캐스트를 수행할 수 없는 경우 <xref:System.Linq.Enumerable.Cast%2A>에서 예외를 throw합니다. <xref:System.Linq.Enumerable.Cast%2A> 및 <xref:System.Linq.Enumerable.OfType%2A>은 제네릭이 아닌 <xref:System.Collections.IEnumerable> 형식에서 작동하는 두 가지 표준 쿼리 연산자 메서드입니다. 자세한 내용은 [LINQ 쿼리 작업의 형식 관계](./type-relationships-in-linq-query-operations.md)를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 <xref:System.Collections.ArrayList>에 대한 단순 쿼리를 보여 줍니다. 이 예제에서는 코드가 <xref:System.Collections.ArrayList.Add%2A> 메서드를 호출할 때 개체 이니셜라이저를 사용하지만 요구 사항은 아닙니다.  
   
 ```csharp  
@@ -85,4 +85,4 @@ namespace NonGenericLINQ
   
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ to Objects(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ to Objects(C#)](./linq-to-objects.md)

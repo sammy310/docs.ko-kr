@@ -2,18 +2,18 @@
 title: 컬렉션(C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: a256b2f23bca973d1ed489724bf4d34ab35449f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 712ae4c9b4cf577ab728e4b78582445070e08049
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481108"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595288"
 ---
 # <a name="collections-c"></a>컬렉션(C#)
 
 대부분의 애플리케이션의 경우 관련 개체의 그룹을 만들고 관리하려고 합니다. 개체를 그룹화하는 방법에는 개체 배열을 만들거나 개체 컬렉션을 만드는 두 가지가 있습니다.
 
-배열은 고정된 개수의 강력한 형식 개체를 만들고 작업하는 데 가장 유용합니다. 배열에 대한 자세한 내용은 [배열](../../../csharp/programming-guide/arrays/index.md)을 참조하세요.
+배열은 고정된 개수의 강력한 형식 개체를 만들고 작업하는 데 가장 유용합니다. 배열에 대한 자세한 내용은 [배열](../arrays/index.md)을 참조하세요.
 
 컬렉션은 개체 그룹에 대해 작업하는 보다 유연한 방법을 제공합니다. 배열과 달리, 애플리케이션의 요구가 변경됨에 따라 작업하는 개체 그룹이 동적으로 확장되거나 축소될 수 있습니다. 일부 컬렉션의 경우 키를 사용하여 개체를 신속하게 검색할 수 있도록 컬렉션에 추가하는 모든 개체에 키를 할당할 수 있습니다.
 
@@ -22,7 +22,7 @@ ms.locfileid: "59481108"
 컬렉션에 단일 데이터 형식의 요소만 포함된 경우 <xref:System.Collections.Generic?displayProperty=nameWithType> 네임스페이스의 클래스 중 하나를 사용할 수 있습니다. 제네릭 컬렉션은 다른 데이터 형식을 추가할 수 없도록 형식 안전성을 적용합니다. 제네릭 컬렉션에서 요소를 검색하는 경우 해당 데이터 형식을 결정하거나 변환할 필요가 없습니다.
 
 > [!NOTE]
-> 이 항목의 예제에서는 `System.Collections.Generic` 및 `System.Linq` 네임스페이스에 대한 [using](../../../csharp/language-reference/keywords/using-directive.md) 지시문을 포함합니다.
+> 이 항목의 예제에서는 `System.Collections.Generic` 및 `System.Linq` 네임스페이스에 대한 [using](../../language-reference/keywords/using-directive.md) 지시문을 포함합니다.
 
  **항목 내용**
 
@@ -52,7 +52,7 @@ ms.locfileid: "59481108"
 
 이 섹션의 예제에서는 강력한 형식의 개체 목록을 사용할 수 있게 해주는 제네릭 <xref:System.Collections.Generic.List%601> 클래스를 사용합니다.
 
-다음 예제에서는 문자열 목록을 만든 다음, [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 문을 사용하여 문자열을 반복합니다.
+다음 예제에서는 문자열 목록을 만든 다음, [foreach](../../language-reference/keywords/foreach-in.md) 문을 사용하여 문자열을 반복합니다.
 
 ```csharp
 // Create a list of strings.
@@ -70,7 +70,7 @@ foreach (var salmon in salmons)
 // Output: chinook coho pink sockeye
 ```
 
-컬렉션의 내용을 사전에 알고 있는 경우 *컬렉션 이니셜라이저*를 사용하여 컬렉션을 초기화할 수 있습니다. 자세한 내용은 [개체 및 컬렉션 이니셜라이저](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)를 참조하세요.
+컬렉션의 내용을 사전에 알고 있는 경우 *컬렉션 이니셜라이저*를 사용하여 컬렉션을 초기화할 수 있습니다. 자세한 내용은 [개체 및 컬렉션 이니셜라이저](../classes-and-structs/object-and-collection-initializers.md)를 참조하세요.
 
 다음 예제는 컬렉션 이니셜라이저를 사용하여 컬렉션에 요소를 추가한다는 점을 제외하고 이전 예제와 같습니다.
 
@@ -87,7 +87,7 @@ foreach (var salmon in salmons)
 // Output: chinook coho pink sockeye
 ```
 
-`foreach` 문 대신 [for](../../../csharp/language-reference/keywords/for.md) 문을 사용하여 컬렉션을 반복할 수 있습니다. 인덱스 위치에 따라 컬렉션 요소에 액세스하여 이 작업을 수행합니다. 요소의 인덱스는 0부터 시작하고 요소 개수-1에서 끝납니다.
+`foreach` 문 대신 [for](../../language-reference/keywords/for.md) 문을 사용하여 컬렉션을 반복할 수 있습니다. 인덱스 위치에 따라 컬렉션 요소에 액세스하여 이 작업을 수행합니다. 요소의 인덱스는 0부터 시작하고 요소 개수-1에서 끝납니다.
 
 다음 예제에서는 `foreach` 대신 `for`를 사용하여 컬렉션의 요소를 반복합니다.
 
@@ -122,7 +122,7 @@ foreach (var salmon in salmons)
 // Output: chinook pink sockeye
 ```
 
-다음 예제에서는 제네릭 목록에서 요소를 제거합니다. `foreach` 문 대신 내림차순으로 반복하는 [for](../../../csharp/language-reference/keywords/for.md) 문을 사용합니다. 이는 <xref:System.Collections.Generic.List%601.RemoveAt%2A> 메서드로 인해 제거된 요소 뒤의 요소가 더 낮은 인덱스 값을 갖기 때문입니다.
+다음 예제에서는 제네릭 목록에서 요소를 제거합니다. `foreach` 문 대신 내림차순으로 반복하는 [for](../../language-reference/keywords/for.md) 문을 사용합니다. 이는 <xref:System.Collections.Generic.List%601.RemoveAt%2A> 메서드로 인해 제거된 요소 뒤의 요소가 더 낮은 인덱스 값을 갖기 때문입니다.
 
 ```csharp
 var numbers = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -351,7 +351,7 @@ private static void FindInDictionary2(string symbol)
 
 ## <a name="using-linq-to-access-a-collection"></a>LINQ를 사용하여 컬렉션에 액세스
 
-LINQ(통합 언어 쿼리)를 사용하여 컬렉션에 액세스할 수 있습니다. LINQ 쿼리는 필터링, 정렬 및 그룹화 기능을 제공합니다. 자세한 내용은 [C#에서 LINQ 시작](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)을 참조하세요.
+LINQ(통합 언어 쿼리)를 사용하여 컬렉션에 액세스할 수 있습니다. LINQ 쿼리는 필터링, 정렬 및 그룹화 기능을 제공합니다. 자세한 내용은 [C#에서 LINQ 시작](./linq/getting-started-with-linq.md)을 참조하세요.
 
 다음 예제에서는 제네릭 `List`에 대해 LINQ 쿼리를 실행합니다. LINQ 쿼리는 결과를 포함하는 다른 컬렉션을 반환합니다.
 
@@ -563,13 +563,13 @@ public class Color
 
 ## <a name="iterators"></a>반복기
 
-*반복기*는 컬렉션에 대해 사용자 지정 반복을 수행하는 데 사용됩니다. 반복기는 메서드 또는 `get` 접근자일 수 있습니다. 반복기는 [yield return](../../../csharp/language-reference/keywords/yield.md) 문을 사용하여 한 번에 하나씩 컬렉션의 각 요소를 반환합니다.
+*반복기*는 컬렉션에 대해 사용자 지정 반복을 수행하는 데 사용됩니다. 반복기는 메서드 또는 `get` 접근자일 수 있습니다. 반복기는 [yield return](../../language-reference/keywords/yield.md) 문을 사용하여 한 번에 하나씩 컬렉션의 각 요소를 반환합니다.
 
-[foreach](../../../csharp/language-reference/keywords/foreach-in.md) 문을 사용하여 반복기를 호출합니다. 각각의 `foreach` 루프의 반복이 반복기를 호출합니다. `yield return` 문이 반복기 메서드에 도달하면 식이 반환되고 코드에서 현재 위치는 유지됩니다. 다음에 반복기가 호출되면 해당 위치에서 실행이 다시 시작됩니다.
+[foreach](../../language-reference/keywords/foreach-in.md) 문을 사용하여 반복기를 호출합니다. 각각의 `foreach` 루프의 반복이 반복기를 호출합니다. `yield return` 문이 반복기 메서드에 도달하면 식이 반환되고 코드에서 현재 위치는 유지됩니다. 다음에 반복기가 호출되면 해당 위치에서 실행이 다시 시작됩니다.
 
-자세한 내용은 [반복기(C#)](../../../csharp/programming-guide/concepts/iterators.md)를 참조하세요.
+자세한 내용은 [반복기(C#)](./iterators.md)를 참조하세요.
 
-다음 예제에서는 반복기 메서드를 사용합니다. 반복기 메서드는 [for](../../../csharp/language-reference/keywords/for.md) 루프 내부에 있는 `yield return` 문을 포함합니다. `ListEvenNumbers` 메서드에서 `foreach` 문 본문을 반복할 때마다 다음 `yield return` 문으로 진행하는 반복기 메서드에 대한 호출이 생성됩니다.
+다음 예제에서는 반복기 메서드를 사용합니다. 반복기 메서드는 [for](../../language-reference/keywords/for.md) 루프 내부에 있는 `yield return` 문을 포함합니다. `ListEvenNumbers` 메서드에서 `foreach` 문 본문을 반복할 때마다 다음 `yield return` 문으로 진행하는 반복기 메서드에 대한 호출이 생성됩니다.
 
 ```csharp
 private static void ListEvenNumbers()
@@ -598,10 +598,10 @@ private static IEnumerable<int> EvenSequence(
 
 ## <a name="see-also"></a>참고 항목
 
-- [개체 이니셜라이저 및 컬렉션 이니셜라이저](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-- [프로그래밍 개념(C#)](../../../csharp/programming-guide/concepts/index.md)
+- [개체 이니셜라이저 및 컬렉션 이니셜라이저](../classes-and-structs/object-and-collection-initializers.md)
+- [프로그래밍 개념(C#)](./index.md)
 - [Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [LINQ to Objects(C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ to Objects(C#)](./linq/linq-to-objects.md)
 - [PLINQ(병렬 LINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
 - [컬렉션 및 데이터 구조](../../../standard/collections/index.md)
 - [Collection 클래스 선택](../../../standard/collections/selecting-a-collection-class.md)

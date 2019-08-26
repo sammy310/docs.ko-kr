@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6cf6120af21c6b8fcaf09203fcb3b77e4dcdfac
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4ee939096ef4e24397d03aa8a64405d66c740580
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621007"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946340"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>데이터 및 작업 병렬 처리에서 발생할 수 있는 문제
 대부분의 경우 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>는 일반 순차적 루프에 대해 상당한 성능 향상을 제공할 수 있습니다. 그러나 루프를 병렬화하는 작업은 순차적 코드에서 일반적이지 않거나 전혀 발생하지 않는 문제를 일으킬 수 있는 복잡성을 도입합니다. 이 항목에서는 병렬 루프를 작성할 때 주의해야 할 사항을 나열합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "64621007"
  .NET Framework에서 대부분의 정적 메서드는 스레드로부터 안전하고 여러 스레드에서 동시에 호출될 수 있습니다. 그러나 이러한 경우에도 관련된 동기화로 인해 쿼리 속도가 상당히 느려질 수 있습니다.  
   
 > [!NOTE]
->  쿼리에서 <xref:System.Console.WriteLine%2A>에 일부 호출을 삽입하여 이를 직접 테스트할 수 있습니다. 이 메서드는 설명 목적으로 설명서 예제에서 사용되지만 필요하지 않는 한 병렬 루프에서 사용하지 마세요.  
+> 쿼리에서 <xref:System.Console.WriteLine%2A>에 일부 호출을 삽입하여 이를 직접 테스트할 수 있습니다. 이 메서드는 설명 목적으로 설명서 예제에서 사용되지만 필요하지 않는 한 병렬 루프에서 사용하지 마세요.  
   
 ## <a name="be-aware-of-thread-affinity-issues"></a>스레드 선호도 문제 인식  
  STA(단일 스레드 아파트) 구성 요소에 대한 COM 상호 운용성, Windows Forms 및 WPF(Windows Presentation Foundation)와 같은 일부 기술은 특정 스레드에서 실행하는 코드를 필요로 하는 스레드 선호도 제한 사항이 적용됩니다. 예를 들어 Windows Forms 및 WPF에서 컨트롤은 작성된 스레드에서만 액세스될 수 있습니다. 즉, 예를 들어 스레드 스케줄러를 UI 스레드에서만 작업을 예약하도록 구성하지 않는 한 병렬 루프에서 목록 컨트롤을 업데이트할 수 없습니다. 자세한 내용은 [동기화 컨텍스트 지정](xref:System.Threading.Tasks.TaskScheduler#specifying-a-synchronization-context)을 참조하세요.  

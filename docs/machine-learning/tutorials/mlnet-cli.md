@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 029685be9d44ad947d4291912d7da1d8ce73d52a
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 403b1759164d588cb5af49c6cb05e001b030235f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053639"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963597"
 ---
 # <a name="auto-generate-a-binary-classifier-using-the-cli"></a>CLI를 사용하여 이진 분류자 자동 생성
 
@@ -47,7 +47,7 @@ Visual Studio 또는 `dotnet run`(.NET Core CLI)으로 생성된 C# 코드를 �
 1. [The UCI Sentiment Labeled Sentences dataset zip 파일(다음 참고에서 인용 내용 참조)](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)을 다운로드하고 사용자가 선택한 폴더에 압축을 풉니다.
 
     > [!NOTE]
-    > 이 자습서의 데이터 세트에서는 다음 데이터 세트를 사용합니다. 'From Group to Individual Labels using Deep Features', Kotzias et al,. KDD 2015)에서 제공되고 UCI Machine Learning Repository(Dua, D. 및 Karra Taniskidou, E. (2017))에서 호스트됩니다. UCI Machine Learning Repository[http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science.
+    > 이 자습서의 데이터 세트에서는 다음 데이터 세트를 사용합니다. 'From Group to Individual Labels using Deep Features', Kotzias et al,. KDD 2015)에서 제공되고 UCI Machine Learning Repository(Dua, D. 및 Karra Taniskidou, E. (2017))에서 호스트됩니다. UCI Machine Learning Repository[http://archive.ics.uci.edu/ml ]. Irvine, CA: University of California, School of Information and Computer Science.
 
 2. `yelp_labelled.txt` 파일을 이전에 만든 폴더(예: `/cli-test`)에 복사합니다.
 
@@ -75,7 +75,7 @@ Visual Studio 또는 `dotnet run`(.NET Core CLI)으로 생성된 C# 코드를 �
     이제 ‘감정 분석’ 시나리오에 CLI를 사용할 준비가 되었습니다.
 
     > [!NOTE]
-    > 이 자습서를 마친 후에는 *'이진 분류', '다중 클래스 분류' 및 '회귀'*) 등 ML.NET CLI Preview에서 현재 지원되는 ML 작업에 사용할 준비가 되었다면 자체 데이터 세트로 시도해 볼 수도 있습니다.
+    > 이 자습서를 마친 후에는 *'이진 분류', '다중 클래스 분류' 및 '회귀'* ) 등 ML.NET CLI Preview에서 현재 지원되는 ML 작업에 사용할 준비가 되었다면 자체 데이터 세트로 시도해 볼 수도 있습니다.
 
 ## <a name="run-the-mlnet-auto-train-command"></a>'mlnet auto-train' 명령 실행
 
@@ -88,7 +88,7 @@ Visual Studio 또는 `dotnet run`(.NET Core CLI)으로 생성된 C# 코드를 �
     이 명령은 **`mlnet auto-train` 명령**을 사용합니다.
     - **`binary-classification`** 유형의 **ML 작업**
     - 학습 및 테스트 데이터 세트로 **데이터 세트 파일 `yelp_labelled.txt`** 사용(내부적으로 CLI는 교차 유효성 검증을 사용하거나, 하나는 학습, 그리고 하나는 테스트용으로 두 개의 데이터 세트로 분할함)
-    - 여기서 예측하려는 **목표/대상 열**(일반적으로 **'레이블'**)은 **인덱스 1이 있는 열**(즉, 인덱스가 0 기반이므로 두 번째 열)임
+    - 여기서 예측하려는 **목표/대상 열**(일반적으로 **'레이블'** )은 **인덱스 1이 있는 열**(즉, 인덱스가 0 기반이므로 두 번째 열)임
     - 이 특정 데이터 세트 파일에는 헤더가 없으므로 열 이름으로 **파일 헤더를 사용하지 않음**
     - 실험의 **목표 검색 시간**은 **10초**임
 
@@ -116,7 +116,7 @@ Visual Studio 또는 `dotnet run`(.NET Core CLI)으로 생성된 C# 코드를 �
     다른 모델을 평가하는 데 사용하는 정확도, AUC, AUCPR, F1-점수 등의 **메트릭에 대한 보다 자세한 정보**와 추가 메트릭은 [ML.NET 메트릭 이해](../resources/metrics.md)를 참조하세요.
 
     > [!NOTE]
-    >  이 매우 동일한 데이터 세트를 사용해 보고 `--max-exploration-time`에 몇 분을 지정하여(예를 들어, 3분은 180초) 이 데이터 세트에 대한 다른 학습 파이프라인 구성(매우 작음, 1000개 행)에 더 나은 “최적 모델”을 찾게 됩니다. 
+    > 이 매우 동일한 데이터 세트를 사용해 보고 `--max-exploration-time`에 몇 분을 지정하여(예를 들어, 3분은 180초) 이 데이터 세트에 대한 다른 학습 파이프라인 구성(매우 작음, 1000개 행)에 더 나은 “최적 모델”을 찾게 됩니다. 
         
     더 큰 데이터 세트를 목표로 하는 “프로덕션 준비 모델”인 “최적/좋은 품질”의 모델을 찾기 위해서는 데이터 세트의 크기에 따라 일반적으로 훨씬 더 많은 검색 시간을 지정하는 CLI로 실험해 봐야 합니다. 사실 대부분의 경우, 특히 데이터 세트의 행과 열이 큰 경우에는 몇 시간의 검색 시간이 필요할 수 있습니다. 
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: 030af5df222772b1e5a4d6f6946e59f4f2d1e1a9
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 5675099f66ec99c652ef95a5328f31c360e2dc59
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195808"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602834"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion(C# 컴파일러 옵션)
 
@@ -47,7 +47,7 @@ ms.locfileid: "66195808"
 |ISO-2|컴파일러가 ISO/IEC 23270:2006 C#(2.0)에 포함된 구문만 허용합니다. <sup id="TISO2">[ISO2](#FISO2)</sup>|
 |ISO-1|컴파일러가 ISO/IEC 23270:2003 C#(1.0/1.2)에 포함된 구문만 허용합니다. <sup id="TISO1">[ISO1](#FISO1)</sup>|  
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
  C# 애플리케이션에서 참조된 메타데이터에는 **-langversion** 컴파일러 옵션이 적용되지 않습니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66195808"
 
  또한 C# 버전 업데이트는 일반적으로 주 .NET Framework 릴리스와 일치하는 반면, 새 구문과 기능이 반드시 특정 프레임워크 버전에 연결되지는 않습니다. 새로운 기능에는 C# 버전과 함께 릴리스된 새 컴파일러 업데이트가 분명히 필요하지만, 각 특정 기능에 고유한 최소 .NET API 또는 공용 언어 런타임 요구 사항이 있으므로 NuGet 패키지 또는 다른 라이브러리를 포함하여 하위 수준 프레임워크에서 실행이 허용될 수도 있습니다.
   
- 사용하는 **-langversion** 설정과 관계없이 현재 버전의 공용 언어 런타임을 사용하여 고유한 .exe 또는 .dll을 만듭니다. 한 가지 예외는 friend 어셈블리와 [-moduleassemblyname(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md)으로, **-langversion:ISO-1**에서 작동합니다.  
+ 사용하는 **-langversion** 설정과 관계없이 현재 버전의 공용 언어 런타임을 사용하여 고유한 .exe 또는 .dll을 만듭니다. 한 가지 예외는 friend 어셈블리와 [-moduleassemblyname(C# 컴파일러 옵션)](./moduleassemblyname-compiler-option.md)으로, **-langversion:ISO-1**에서 작동합니다.  
 
  C# 언어 버전을 지정하는 다른 방법은 [C# 언어 버전 선택](../configure-language-version.md) 항목을 참조하세요.
   

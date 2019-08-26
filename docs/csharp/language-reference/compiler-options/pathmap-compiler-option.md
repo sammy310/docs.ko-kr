@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -pathmap compiler option [C#]
 - pathmap compiler option [C#]
 - /pathmap compiler option [C#]
-ms.openlocfilehash: 063cee694e8367a86fead2f1258c3cbda5ab7018
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 48e96d2ec2ccbea83d573c0eb3630b1591c407a9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635834"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606633"
 ---
 # <a name="-pathmap-c-compiler-options"></a>-pathmap(C# 컴파일러 옵션)
 
@@ -32,7 +32,7 @@ ms.locfileid: "54635834"
 
 매핑되는 소스 경로를 여럿 지정하려면 각각을 쉼표로 구분합니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 컴파일러가 출력에 소스 경로를 쓰는 이유는 다음과 같습니다.
 
@@ -42,7 +42,7 @@ ms.locfileid: "54635834"
 
 이 옵션은 컴파일러가 실행되는 컴퓨터의 실제 경로 각각을 출력 파일에 써야 하는 해당 경로에 매핑합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 **C:\\work\\tests** 디렉터리에 `t.cs`를 컴파일하고 출력에서 디렉터리를 **\publish**에 매핑합니다.
 
@@ -52,5 +52,5 @@ csc -pathmap:C:\work\tests=\publish t.cs
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)
+- [C# 컴파일러 옵션](./index.md)
 - [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)

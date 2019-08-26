@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 12415c6d461f3c8040aaa407edf9567633c5b108
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7ad7ce5dd3739b1edcf8a8a03a2f57376ceba138
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591562"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948583"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe(인증서 관리자 도구)
 인증서 관리자 도구(Certmgr.exe)를 사용하면 인증서, CTL(인증서 신뢰 목록) 및 CRL(인증서 해지 목록)을 관리할 수 있습니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "64591562"
  인증서 관리자는 Visual Studio와 함께 자동으로 설치됩니다. 도구를 시작하려면 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 사용합니다.  
   
 > [!NOTE]
->  인증서 관리자 도구(Certmgr.exe)는 명령줄 유틸리티인 반면, 인증서(Certmgr.msc)는 MMC(Microsoft Management Console) 스냅인입니다. Certmgr.msc는 대개 Windows 시스템 디렉터리에서 발견되기 때문에 명령줄에 `certmgr`을 입력하면 Visual Studio용 개발자 명령 프롬프트를 연 경우에도 인증서 MMC 스냅인을 로드할 수 있습니다. 이는 PATH 환경 변수에서 스냅인 경로가 인증서 관리자 도구로의 경로 앞에 오기 때문에 발생합니다. 이 문제가 발생하는 경우 실행 파일에 대한 경로를 지정하여 Certmgr.exe 명령을 실행할 수 있습니다.  
+> 인증서 관리자 도구(Certmgr.exe)는 명령줄 유틸리티인 반면, 인증서(Certmgr.msc)는 MMC(Microsoft Management Console) 스냅인입니다. Certmgr.msc는 대개 Windows 시스템 디렉터리에서 발견되기 때문에 명령줄에 `certmgr`을 입력하면 Visual Studio용 개발자 명령 프롬프트를 연 경우에도 인증서 MMC 스냅인을 로드할 수 있습니다. 이는 PATH 환경 변수에서 스냅인 경로가 인증서 관리자 도구로의 경로 앞에 오기 때문에 발생합니다. 이 문제가 발생하는 경우 실행 파일에 대한 경로를 지정하여 Certmgr.exe 명령을 실행할 수 있습니다.  
   
  이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 참조하세요.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "64591562"
 |**/7**|대상 저장소를 PKCS #7 개체로 저장합니다.|  
 |**/?**|이 도구의 명령 구문 및 옵션을 표시합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  Certmgr.exe를 사용하여 다음과 같은 기본 기능을 수행할 수 있습니다.  
   
 - 인증서, CTL 및 CRL을 콘솔에 표시합니다.  

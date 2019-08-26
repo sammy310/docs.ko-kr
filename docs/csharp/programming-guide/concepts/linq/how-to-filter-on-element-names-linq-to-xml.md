@@ -2,12 +2,12 @@
 title: '방법: 요소 이름 필터링(LINQ to XML)(C#)'
 ms.date: 07/20/2015
 ms.assetid: 1849fb03-f075-421f-863c-e8fb32773cdf
-ms.openlocfilehash: 9c29183a7548a4551aca813b3d297f7e03484b36
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 9febe3b834261326bab3e82d87c476f99d4e6b1f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710108"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593812"
 ---
 # <a name="how-to-filter-on-element-names-linq-to-xml-c"></a>방법: 요소 이름 필터링(LINQ to XML)(C#)
 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement>을 반환하는 메서드 중 하나를 호출하면 요소 이름을 기준으로 필터링할 수 있습니다.  
@@ -15,7 +15,7 @@ ms.locfileid: "68710108"
 ## <a name="example"></a>예  
  이 예제에서는 하위 요소의 컬렉션을 검색합니다. 하위 항목이 필터링되므로 컬렉션에는 지정된 이름을 가진 하위 항목만 포함됩니다.  
   
- 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
+ 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
   
 ```csharp  
 XElement po = XElement.Load("PurchaseOrder.xml");  
@@ -52,7 +52,7 @@ ProductName:Baby Monitor
 ## <a name="example"></a>예  
  다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다. 자세한 내용은 [네임스페이스 개요(LINQ to XML)(C#)](namespaces-overview-linq-to-xml.md)를 참조하세요.  
   
- 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 네임스페이스에서 일반적인 구매 주문](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).  
+ 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 네임스페이스에서 일반적인 구매 주문](./sample-xml-file-typical-purchase-order-in-a-namespace.md).  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -73,4 +73,4 @@ foreach (XElement prdName in items)
   
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ to XML 축(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes-overview.md)
+- [LINQ to XML 축(C#)](./linq-to-xml-axes-overview.md)

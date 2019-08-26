@@ -2,17 +2,17 @@
 title: '방법: 폴더 집합의 전체 바이트 수 쿼리(LINQ)(C#)'
 ms.date: 07/20/2015
 ms.assetid: a01bd1d4-133c-4ca2-aa4e-e93e81d6076c
-ms.openlocfilehash: 04eed82041dc3c0818b0205f5198abe6e9eb228e
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 2db979c10eae9ecc5d4e154ae58248ca95a7cdc3
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585682"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592725"
 ---
 # <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-c"></a>방법: 폴더 집합의 전체 바이트 수 쿼리(LINQ)(C#)
 이 예제에서는 지정된 폴더 및 모든 하위 폴더의 모든 파일에서 사용된 총 바이트 수를 검색하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  <xref:System.Linq.Enumerable.Sum%2A> 메서드는 `select` 절에서 선택된 모든 항목의 값을 더합니다. <xref:System.Linq.Enumerable.Sum%2A> 대신 <xref:System.Linq.Enumerable.Min%2A> 또는 <xref:System.Linq.Enumerable.Max%2A> 메서드를 호출하여 지정된 디렉터리 트리에서 가장 큰 파일이나 가장 작은 파일을 검색하도록 이 쿼리를 쉽게 수정할 수 있습니다.  
   
 ```csharp  
@@ -78,5 +78,5 @@ System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통�
   
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ to Objects(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ 및 파일 디렉터리(C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects(C#)](./linq-to-objects.md)
+- [LINQ 및 파일 디렉터리(C#)](./linq-and-file-directories.md)

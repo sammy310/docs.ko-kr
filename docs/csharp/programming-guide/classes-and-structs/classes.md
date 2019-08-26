@@ -7,17 +7,17 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: ad19099242a3bedbb7283219dfd7733db13231ec
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 193446ff98edce3b7c078c6eeba07cf9acdadaf0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398586"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597182"
 ---
 # <a name="classes-c-programming-guide"></a>클래스(C# 프로그래밍 가이드)
 
 ## <a name="reference-types"></a>참조 형식  
-[클래스](../../../csharp/language-reference/keywords/class.md)로 정의된 형식은 *참조 형식*입니다. 런타임에 참조 형식의 변수를 선언하면 [new](../../../csharp/language-reference/operators/new-operator.md) 연산자를 사용하여 클래스의 인스턴스를 명시적으로 만들거나 다음 예제와 같이 다른 곳에서 만들어진 호환성 있는 형식의 개체를 할당할 때까지 변수에는 [null](../../../csharp/language-reference/keywords/null.md) 값이 포함됩니다.
+[클래스](../../language-reference/keywords/class.md)로 정의된 형식은 *참조 형식*입니다. 런타임에 참조 형식의 변수를 선언하면 [new](../../language-reference/operators/new-operator.md) 연산자를 사용하여 클래스의 인스턴스를 명시적으로 만들거나 다음 예제와 같이 다른 곳에서 만들어진 호환성 있는 형식의 개체를 할당할 때까지 변수에는 [null](../../language-reference/keywords/null.md) 값이 포함됩니다.
 
 ```csharp
 //Declaring an object of type MyClass.
@@ -31,7 +31,7 @@ MyClass mc2 = mc;
   
 ## <a name="declaring-classes"></a>클래스 선언
 
- 클래스는 다음 예제와 같이 [class](../../../csharp/language-reference/keywords/class.md) 키워드 다음에 고유 식별자를 사용하여 선언됩니다.
+ 클래스는 다음 예제와 같이 [class](../../language-reference/keywords/class.md) 키워드 다음에 고유 식별자를 사용하여 선언됩니다.
 
  ```csharp
 //[access modifier] - [class] - [identifier]
@@ -70,7 +70,7 @@ MyClass mc2 = mc;
   
 ## <a name="class-inheritance"></a>클래스 상속  
 
-클래스는 개체 지향 프로그래밍의 기본적인 특성인 ‘상속’을 완전히 지원합니다.  클래스를 만들 때 [sealed](../../../csharp/language-reference/keywords/sealed.md)로 정의되지 않은 기타 인터페이스 또는 클래스에서 상속될 수 있고 기타 클래스는 직접 만든 클래스에서 상속되고 클래스 가상 메서드를 재정의할 수 있습니다.
+클래스는 개체 지향 프로그래밍의 기본적인 특성인 ‘상속’을 완전히 지원합니다.  클래스를 만들 때 [sealed](../../language-reference/keywords/sealed.md)로 정의되지 않은 기타 인터페이스 또는 클래스에서 상속될 수 있고 기타 클래스는 직접 만든 클래스에서 상속되고 클래스 가상 메서드를 재정의할 수 있습니다.
 
 상속은 *파생*을 통해 수행합니다. 즉, 클래스는 데이터와 동작을 상속하는 소스 *기본 클래스*를 사용하여 선언됩니다. 다음과 같이 파생 클래스 이름 뒤에 콜론 및 기본 클래스 이름을 추가하여 기본 클래스를 지정합니다.  
 

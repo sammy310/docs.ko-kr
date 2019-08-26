@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bfa0cd7041f61e9848804f74d59b85a60450ea92
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 66df15f7a33acac85804d6abf2e2878c1132f5d4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593575"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921462"
 ---
 # <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>방법: 글로벌 어셈블리 캐시에서 어셈블리 제거
 GAC(전역 어셈블리 캐시)에서 어셈블리를 제거하는 다음 두 가지 방법이 있습니다.  
@@ -49,7 +49,7 @@ gacutil -u hello
 1. **제어판**의 **프로그램 및 기능** 앱에서 제거할 앱을 선택합니다. 설치 패키지가 GAC에 어셈블리를 배치한 경우 다른 애플리케이션에서 사용되지 않으면 Windows Installer가 해당 어셈블리를 제거합니다.  
   
     > [!NOTE]
-    >  Windows Installer는 GAC에 설치된 어셈블리에 대한 참조 횟수를 유지 관리합니다. 참조 횟수가 0에 도달하여 Windows Installer 패키지를 통해 설치된 애플리케이션에서 사용되지 않음을 나타내는 경우에만 어셈블리가 GAC에서 제거됩니다.  
+    > Windows Installer는 GAC에 설치된 어셈블리에 대한 참조 횟수를 유지 관리합니다. 참조 횟수가 0에 도달하여 Windows Installer 패키지를 통해 설치된 애플리케이션에서 사용되지 않음을 나타내는 경우에만 어셈블리가 GAC에서 제거됩니다.  
   
 ## <a name="see-also"></a>참고 항목
 

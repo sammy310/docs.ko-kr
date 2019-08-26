@@ -2,17 +2,17 @@
 title: '방법: 확장명에 따라 파일 그룹화(LINQ)(C#)'
 ms.date: 07/20/2015
 ms.assetid: 21a98320-a5a1-4981-82d8-6a637e7d9018
-ms.openlocfilehash: 0b8cb30396a93f5f878c091c4aad3cab9db3f2d4
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: aa3e428a4655bfcc0707e111da3ca6206a2b9596
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584303"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593249"
 ---
 # <a name="how-to-group-files-by-extension-linq-c"></a>방법: 확장명에 따라 파일 그룹화(LINQ)(C#)
 이 예제에서는 LINQ를 사용하여 파일 또는 폴더 목록에 대해 고급 그룹화 및 정렬 작업을 수행하는 방법을 보여 줍니다. 또한 <xref:System.Linq.Enumerable.Skip%2A> 및 <xref:System.Linq.Enumerable.Take%2A> 메서드를 사용하여 콘솔 창에서 출력을 페이징하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 쿼리는 지정된 디렉터리 트리의 내용을 파일 이름 확장명으로 그룹화하는 방법을 보여 줍니다.  
   
 ```csharp  
@@ -109,5 +109,5 @@ class GroupByExtension
   
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ to Objects(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ 및 파일 디렉터리(C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects(C#)](./linq-to-objects.md)
+- [LINQ 및 파일 디렉터리(C#)](./linq-and-file-directories.md)

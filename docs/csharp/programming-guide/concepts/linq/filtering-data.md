@@ -2,12 +2,12 @@
 title: 데이터 필터링(C#)
 ms.date: 07/20/2015
 ms.assetid: fbaece0d-0f23-47f7-89c5-f3ea8db692b6
-ms.openlocfilehash: 61d80674fd858063e77749342a33d714e3a57c6e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 17d3a65b6042c9679a263eff0048f5360c4aa546
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826069"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594401"
 ---
 # <a name="filtering-data-c"></a>데이터 필터링(C#)
 필터링은 지정된 조건을 충족하는 요소만 포함하도록 결과 집합을 제한하는 작업을 가리킵니다. 필터링은 선택이라고도 합니다.  
@@ -48,9 +48,9 @@ foreach (string str in query)
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Linq>
-- [표준 쿼리 연산자 개요(C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [where 절](../../../../csharp/language-reference/keywords/where-clause.md)
-- [방법: 런타임에 동적으로 조건자 필터 지정](../../../../csharp/programming-guide/linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)
-- [방법: 리플렉션을 사용하여 어셈블리의 메타데이터 쿼리(LINQ)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
-- [방법: 지정된 특성 또는 이름을 갖는 파일 쿼리(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)
-- [방법: 단어 또는 필드에 따라 텍스트 데이터 정렬 또는 필터링(LINQ)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [표준 쿼리 연산자 개요(C#)](./standard-query-operators-overview.md)
+- [where 절](../../../language-reference/keywords/where-clause.md)
+- [방법: 런타임에 동적으로 조건자 필터 지정](../../linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)
+- [방법: 리플렉션을 사용하여 어셈블리의 메타데이터 쿼리(LINQ)(C#)](./how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
+- [방법: 지정된 특성 또는 이름을 갖는 파일 쿼리(C#)](./how-to-query-for-files-with-a-specified-attribute-or-name.md)
+- [방법: 단어 또는 필드에 따라 텍스트 데이터 정렬 또는 필터링(LINQ)(C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

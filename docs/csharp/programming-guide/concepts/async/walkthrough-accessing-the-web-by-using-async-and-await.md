@@ -2,18 +2,18 @@
 title: '연습: async 및 await를 사용하여 웹에 액세스(C#)'
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: 1057bdf02d20b0f685e6bd319929188ffd07c726
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 986f3985783c6ae941d437fe557998f67557f5af
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052188"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595518"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>연습: async 및 await를 사용하여 웹에 액세스(C#)
 
 async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직관적인 방식으로 작성할 수 있습니다. 동기 코드처럼 보이는 비동기 코드를 작성하고 일반적으로 비동기 코드에 수반되는 어려운 콜백 함수 및 연속 작업을 컴파일러에서 처리하도록 할 수 있습니다.
 
-비동기 기능에 대한 자세한 내용은 [async 및 await를 사용한 비동기 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/async/index.md)을 참조하세요.
+비동기 기능에 대한 자세한 내용은 [async 및 await를 사용한 비동기 프로그래밍(C#)](./index.md)을 참조하세요.
 
 이 연습은 웹 사이트 목록에 있는 바이트 수의 합계를 계산하는 동기 WPF(Windows Presentation Foundation) 애플리케이션에서 시작합니다. 그런 다음 새로운 기능을 사용하여 애플리케이션을 비동기 솔루션으로 변환합니다.
 
@@ -237,7 +237,7 @@ Control returned to startButton_Click.
 
 2. `GetResponseAsync`는 <xref:System.Threading.Tasks.Task%601>를 반환합니다. 이 경우 *작업 반환 변수* `TResult`는 <xref:System.Net.WebResponse> 형식입니다. 작업은 요청한 데이터를 다운로드하고 작업을 실행하여 완료한 후 실제 `WebResponse` 개체를 생성한다는 약속입니다.
 
-     작업에서 `WebResponse` 값을 검색하려면 다음 코드에 표시된 대로 [await](../../../../csharp/language-reference/keywords/await.md) 연산자를 `GetResponseAsync` 호출에 적용합니다.
+     작업에서 `WebResponse` 값을 검색하려면 다음 코드에 표시된 대로 [await](../../../language-reference/keywords/await.md) 연산자를 `GetResponseAsync` 호출에 적용합니다.
 
     ```csharp
     using (WebResponse response = await webReq.GetResponseAsync())
@@ -254,9 +254,9 @@ Control returned to startButton_Click.
 
      `webReq.GetResponseAsync`를 호출하면 `Task(Of WebResponse)` 또는 `Task<WebResponse>`가 반환됩니다. 그러면 await 연산자가 작업에 적용되어 `WebResponse` 값을 검색합니다.
 
-     비동기 메서드가 작업의 완료에 따라 달라지지 않는 작업을 수행해야 하는 경우 메서드는 비동기 메서드를 호출한 후와 `await` 연산자가 적용되기 전의 두 문 사이에서 해당 작업을 계속할 수 있습니다. 예제는 [방법: async 및 await를 사용하여 병렬로 여러 웹 요청 만들기(C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) 및 [방법: Task.WhenAll을 사용하여 비동기 연습 확장(C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)을 참조하세요.
+     비동기 메서드가 작업의 완료에 따라 달라지지 않는 작업을 수행해야 하는 경우 메서드는 비동기 메서드를 호출한 후와 `await` 연산자가 적용되기 전의 두 문 사이에서 해당 작업을 계속할 수 있습니다. 예제는 [방법: async 및 await를 사용하여 병렬로 여러 웹 요청 만들기(C#)](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) 및 [방법: Task.WhenAll을 사용하여 비동기 연습 확장(C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)을 참조하세요.
 
-3. 이전 단계에서 `await` 연산자를 추가했으므로 컴파일러 오류가 발생합니다. 이 연산자는 [async](../../../../csharp/language-reference/keywords/async.md) 한정자로 표시되는 메서드에서만 사용할 수 있습니다. `CopyTo` 호출을 `CopyToAsync` 호출로 바꾸는 변환 단계를 반복하는 동안에는 오류를 무시합니다.
+3. 이전 단계에서 `await` 연산자를 추가했으므로 컴파일러 오류가 발생합니다. 이 연산자는 [async](../../../language-reference/keywords/async.md) 한정자로 표시되는 메서드에서만 사용할 수 있습니다. `CopyTo` 호출을 `CopyToAsync` 호출로 바꾸는 변환 단계를 반복하는 동안에는 오류를 무시합니다.
 
     - 호출되는 메서드의 이름을 <xref:System.IO.Stream.CopyToAsync%2A>로 변경합니다.
 
@@ -277,15 +277,15 @@ Control returned to startButton_Click.
         //await copyTask;
         ```
 
-4. `GetURLContents`에서 수행해야 할 나머지 작업은 메서드 시그니처를 조정하는 것입니다. `await` 연산자는 [async](../../../../csharp/language-reference/keywords/async.md) 한정자로 표시되는 메서드에서만 사용할 수 있습니다. 다음 코드에 표시된 대로 한정자를 추가하여 메서드를 *비동기 메서드*로 표시합니다.
+4. `GetURLContents`에서 수행해야 할 나머지 작업은 메서드 시그니처를 조정하는 것입니다. `await` 연산자는 [async](../../../language-reference/keywords/async.md) 한정자로 표시되는 메서드에서만 사용할 수 있습니다. 다음 코드에 표시된 대로 한정자를 추가하여 메서드를 *비동기 메서드*로 표시합니다.
 
     ```csharp
     private async byte[] GetURLContents(string url)
     ```
 
-5. C#에서 비동기 메서드의 반환 형식은 <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> 또는 `void`만 될 수 있습니다. 일반적으로 `void`의 반환 형식은 비동기 이벤트 처리기에서만 사용되며, 여기서 `void`는 필수입니다. 경우에 따라 완료된 메서드에 T 형식의 값을 반환하는 [return](../../../../csharp/language-reference/keywords/return.md) 문이 있는 경우 `Task(T)`를 사용하고, 완료된 메서드에서 의미 있는 값을 반환하지 않는 경우 `Task`를 사용합니다. `Task` 반환 형식은 "Task(void)" 의미로 간주할 수 있습니다.
+5. C#에서 비동기 메서드의 반환 형식은 <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> 또는 `void`만 될 수 있습니다. 일반적으로 `void`의 반환 형식은 비동기 이벤트 처리기에서만 사용되며, 여기서 `void`는 필수입니다. 경우에 따라 완료된 메서드에 T 형식의 값을 반환하는 [return](../../../language-reference/keywords/return.md) 문이 있는 경우 `Task(T)`를 사용하고, 완료된 메서드에서 의미 있는 값을 반환하지 않는 경우 `Task`를 사용합니다. `Task` 반환 형식은 "Task(void)" 의미로 간주할 수 있습니다.
 
-     자세한 내용은 [비동기 반환 형식(C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)을 참조하세요.
+     자세한 내용은 [비동기 반환 형식(C#)](./async-return-types.md)을 참조하세요.
 
      `GetURLContents` 메서드에는 return 문이 있고 이 문은 바이트 배열을 반환합니다. 따라서 비동기 버전의 반환 형식은 Task(T)이며, 여기서 T는 바이트 배열입니다. 다음과 같이 메서드 시그니처를 변경합니다.
 
@@ -340,7 +340,7 @@ Control returned to startButton_Click.
 
      `SumPageSizes`가 `SumPageSizesAsync`로 변환되었습니다.
 
-## <a name="convert-startbuttonclick-to-an-asynchronous-method"></a>startButton_Click을 비동기 메서드로 변환
+## <a name="convert-startbutton_click-to-an-asynchronous-method"></a>startButton_Click을 비동기 메서드로 변환
 
 1. 이벤트 처리기에서 호출된 메서드의 이름을 `SumPageSizes`에서 `SumPageSizesAsync`로 변경하지 않은 경우 지금 변경합니다.
 
@@ -373,7 +373,7 @@ Control returned to startButton_Click.
     startButton.IsEnabled = true;
     ```
 
-     재입력에 대한 자세한 내용은 [비동기 앱에서 재입력 처리(C#)](../../../../csharp/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md)를 참조하세요.
+     재입력에 대한 자세한 내용은 [비동기 앱에서 재입력 처리(C#)](./handling-reentrancy-in-async-apps.md)를 참조하세요.
 
 4. 마지막으로 `async` 한정자를 선언에 추가하여 이벤트 처리기에서 `SumPagSizesAsync`를 기다릴 수 있도록 합니다.
 
@@ -691,10 +691,10 @@ namespace AsyncExampleWPF
 ## <a name="see-also"></a>참고 항목
 
 - [비동기 샘플: 웹 연습에 액세스(C# 및 Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
-- [async](../../../../csharp/language-reference/keywords/async.md)
-- [await](../../../../csharp/language-reference/keywords/await.md)
-- [async 및 await를 사용한 비동기 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-- [비동기 반환 형식(C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
+- [async](../../../language-reference/keywords/async.md)
+- [await](../../../language-reference/keywords/await.md)
+- [async 및 await를 사용한 비동기 프로그래밍(C#)](./index.md)
+- [비동기 반환 형식(C#)](./async-return-types.md)
 - [TAP(작업 기반 비동기 프로그래밍)](https://www.microsoft.com/download/details.aspx?id=19957)
-- [방법: Task.WhenAll을 사용하여 비동기 연습 확장(C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
-- [방법: async 및 await를 사용하여 병렬로 여러 웹 요청 만들기(C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+- [방법: Task.WhenAll을 사용하여 비동기 연습 확장(C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [방법: async 및 await를 사용하여 병렬로 여러 웹 요청 만들기(C#)](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

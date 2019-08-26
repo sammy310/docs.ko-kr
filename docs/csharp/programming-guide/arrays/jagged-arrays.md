@@ -6,12 +6,12 @@ helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: 9fc05c8bdebf9c1c6b613db0b6a121e06765ac00
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 8d1be351e3aabea44138323d04c922dd1cccb78a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200678"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597335"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>가변 배열(C# 프로그래밍 가이드)
 
@@ -45,7 +45,7 @@ ms.locfileid: "57200678"
   
  [!code-csharp[csProgGuideArrays#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#24)]  
   
- 가변 배열과 다차원 배열을 함께 사용할 수 있습니다. 다음은 서로 다른 크기의 세 가지 2차원 배열 요소를 포함하는 1차원 가변 배열의 선언과 초기화입니다. 2차원 배열에 대한 자세한 내용은 [다차원 배열](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)을 참조하세요.  
+ 가변 배열과 다차원 배열을 함께 사용할 수 있습니다. 다음은 서로 다른 크기의 세 가지 2차원 배열 요소를 포함하는 1차원 가변 배열의 선언과 초기화입니다. 2차원 배열에 대한 자세한 내용은 [다차원 배열](./multidimensional-arrays.md)을 참조하세요.  
   
  [!code-csharp[csProgGuideArrays#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#25)]  
   
@@ -59,7 +59,7 @@ ms.locfileid: "57200678"
   
  이 경우 위 줄은 값 3을 반환합니다.  
   
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
  이 예제에서는 요소 자체가 배열인 배열을 작성합니다. 각 배열 요소의 크기가 서로 다릅니다.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "57200678"
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Array>
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [배열](../../../csharp/programming-guide/arrays/index.md)
-- [1차원 배열](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)
-- [다차원 배열](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [배열](./index.md)
+- [1차원 배열](./single-dimensional-arrays.md)
+- [다차원 배열](./multidimensional-arrays.md)

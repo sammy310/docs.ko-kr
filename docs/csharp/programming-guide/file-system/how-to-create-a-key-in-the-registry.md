@@ -6,17 +6,17 @@ helpviewer_keywords:
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: 0982baea2327daf23726ef269d53388d6011703d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e67a80fa8f9a088f0eefe2dd2eeaa983e0a5a2c3
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596142"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590046"
 ---
 # <a name="how-to-create-a-key-in-the-registry-visual-c"></a>방법: 레지스트리에 키 만들기(Visual C#)
 이 예제에서는 현재 사용자의 레지스트리, "Names" 키 아래에 "Name" 및 "Isabella" 값 쌍을 추가합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```csharp  
 Microsoft.Win32.RegistryKey key;  
@@ -58,6 +58,6 @@ key.Close();
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [파일 시스템 및 레지스트리(C# 프로그래밍 가이드)](../../../csharp/programming-guide/file-system/index.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [파일 시스템 및 레지스트리(C# 프로그래밍 가이드)](./index.md)
 - [C#을 사용하여 레지스트리에서 읽기, 쓰기 및 삭제](https://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)

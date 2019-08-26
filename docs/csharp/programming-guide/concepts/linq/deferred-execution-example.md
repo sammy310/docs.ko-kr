@@ -2,17 +2,17 @@
 title: 지연된 실행 예제(C#)
 ms.date: 07/20/2015
 ms.assetid: 50f4fbac-81fe-4f26-aedf-506e21419b19
-ms.openlocfilehash: c9ac87cf2b2af4114e5a20c211b4a6b3f7fced6b
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a934645d0d7ad807e1524031ca3f023f7b11c5b4
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486102"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594551"
 ---
 # <a name="deferred-execution-example-c"></a>지연된 실행 예제(C#)
 이 항목에서는 지연된 실행과 지연 계산이 LINQ to XML 쿼리의 실행에 미치는 영향을 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 지연된 실행을 사용하는 확장 메서드를 사용하는 경우의 실행 순서를 보여 줍니다. 이 예제에서는 세 문자열의 배열을 선언한 다음 `ConvertCollectionToUpperCase`에서 반환하는 컬렉션을 반복합니다.  
   
 ```csharp  
@@ -61,8 +61,8 @@ Main: str GHI
   
  이 자습서의 다음 항목에서는 쿼리를 연결하는 방법을 보여 줍니다.  
   
-- [연결 쿼리 예제(C#)](../../../../csharp/programming-guide/concepts/linq/chaining-queries-example.md)  
+- [연결 쿼리 예제(C#)](./chaining-queries-example.md)  
   
 ## <a name="see-also"></a>참고 항목
 
-- [자습서: 여러 쿼리 연결(C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [자습서: 여러 쿼리 연결(C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

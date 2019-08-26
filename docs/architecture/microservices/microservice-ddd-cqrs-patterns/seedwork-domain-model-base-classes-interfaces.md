@@ -2,12 +2,12 @@
 title: Seedwork(도메인 모델에 대해 재사용이 가능한 기본 클래스 및 인터페이스)
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | DDD 지향 도메인 모델의 구현을 시작하려면 시드워크 개념을 시작점으로 사용합니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: 298f79383e477df0cfeeaada5c4657a9274b3df3
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a49f9e0b40ea306a846d9fb472bac388eedbfe02
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676310"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660767"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork(도메인 모델에 대해 재사용이 가능한 기본 클래스 및 인터페이스)
 
@@ -23,7 +23,7 @@ ms.locfileid: "68676310"
 
 ## <a name="the-custom-entity-base-class"></a>사용자 지정 엔터티 기본 클래스
 
-다음 코드는 엔터티 ID, [같음 연산자](~/docs/csharp/language-reference/operators/equality-operators.md), 엔터티별 도메인 이벤트 목록 같은 모든 도메인 엔터티가 같은 방법으로 사용할 수 있는 코드를 배치할 수 있는 엔터티 기본 클래스의 예제입니다.
+다음 코드는 엔터티 ID, [같음 연산자](../../../csharp/language-reference/operators/equality-operators.md), 엔터티별 도메인 이벤트 목록 같은 모든 도메인 엔터티가 같은 방법으로 사용할 수 있는 코드를 배치할 수 있는 엔터티 기본 클래스의 예제입니다.
 
 ```csharp
 // COMPATIBLE WITH ENTITY FRAMEWORK CORE (1.1 and later)

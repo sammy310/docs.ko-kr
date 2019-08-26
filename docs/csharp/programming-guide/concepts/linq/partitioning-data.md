@@ -2,12 +2,12 @@
 title: 데이터 분할(C#)
 ms.date: 07/20/2015
 ms.assetid: 2a5c507b-fe22-443c-a768-dec7f9ec568d
-ms.openlocfilehash: b857c8c6e6b56a7263e6725a747e98ccfe4ff4fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d9330e9973b2f25903e1f81a7296362e2a7c756b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832465"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591585"
 ---
 # <a name="partitioning-data-c"></a>데이터 분할(C#)
 LINQ의 분할은 요소를 다시 정렬한 후 섹션 중 하나를 반환하지 않고 입력 시퀀스를 두 개의 섹션으로 나누는 작업을 가리킵니다.  
@@ -30,4 +30,4 @@ LINQ의 분할은 요소를 다시 정렬한 후 섹션 중 하나를 반환하�
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Linq>
-- [표준 쿼리 연산자 개요(C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [표준 쿼리 연산자 개요(C#)](./standard-query-operators-overview.md)

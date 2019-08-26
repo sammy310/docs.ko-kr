@@ -3,12 +3,12 @@ title: 분기 및 루프 - C# 소개 자습서
 description: 분기 및 루프에 관한 이 자습서에서는 C# 코드를 작성하여 문을 반복적으로 실행하기 위한 조건부 분기 및 루프를 지원하는 언어 구문을 살펴봅니다.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 4a116ae5294915770dec742c147cf2ba1bf6e284
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0da446a71f5d7a7183a8323c470087c8726bc02f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427255"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587220"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>분기 및 루프 문이 포함된 조건부 논리 알아보기
 
@@ -100,7 +100,7 @@ else
 }
 ```
 
-`==` 기호는 같음을 테스트합니다. `==`을 사용하면 같음 테스트가 `a = 5`에서 확인한 할당과 구분됩니다.
+`==` 기호는 같음을 테스트합니다.  `==`을 사용하면 같음 테스트가 `a = 5`에서 확인한 할당과 구분됩니다.
 
 `&&`는 “and”를 나타냅니다. true 분기에서 문을 실행하려면 두 조건이 모두 true여야 합니다.  이러한 예제에서는 `{` 및 `}`로 문을 묶으면 각 조건부 분기에 여러 문을 가질 수 있음도 보여 줍니다.
 
@@ -143,6 +143,7 @@ namespace BranchesAndLoops
                 Console.WriteLine("The answer is not greater than 10");
             }
 
+            int c = 4;
             if ((a + b + c > 10) && (a > b))
             {
                 Console.WriteLine("The answer is greater than 10");
@@ -205,7 +206,7 @@ while (counter < 10)
 `while` 루프는 `while` 뒤에 코드를 실행하기 전에 조건을 테스트합니다. `do` ... `while` 루프는 코드를 먼저 실행한 후 조건을 확인합니다. do while 루프는 다음 코드에 나와 있습니다.
 
 ```csharp
-counter = 0;
+int counter = 0;
 do
 {
     Console.WriteLine($"Hello World! The counter is {counter}");
@@ -220,7 +221,7 @@ do
 C#에서는 일반적으로 **for** 루프가 사용됩니다. Main() 메서드에 다음 코드를 사용해 봅니다.
 
 ```csharp
-for(int index = 0; index < 10; index++)
+for (int index = 0; index < 10; index++)
 {
     Console.WriteLine($"Hello World! The index is {index}");
 }

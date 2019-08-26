@@ -2,12 +2,12 @@
 title: async 및 await를 사용한 TAP(작업 비동기 프로그래밍) 모델(C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: dcb5148e7f91d07bc038e5304ab65f5f3c59b216
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: bfe32b2eaefb9ce813ca74bed450a935e33dc9d4
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347684"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595609"
 ---
 # <a name="task-asynchronous-programming-model"></a>작업 비동기 프로그래밍 모델
 
@@ -38,7 +38,7 @@ ms.locfileid: "67347684"
 
 ## <a name="BKMK_HowtoWriteanAsyncMethod"></a> 작성이 간편한 비동기 메서드
 
-C#의 [async](../../../../csharp/language-reference/keywords/async.md) 및 [await](../../../../csharp/language-reference/keywords/await.md) 키워드는 비동기 프로그래밍의 핵심입니다. 이 두 개의 키워드를 사용하면 .NET Framework, .NET Core 또는 Windows 런타임의 리소스를 사용하여 동기 메서드를 만드는 것만큼 쉽게 비동기 메서드를 만들 수 있습니다. `async` 키워드를 사용하여 정의하는 비동기 메서드를 *비동기 메서드*라고 합니다.
+C#의 [async](../../../language-reference/keywords/async.md) 및 [await](../../../language-reference/keywords/await.md) 키워드는 비동기 프로그래밍의 핵심입니다. 이 두 개의 키워드를 사용하면 .NET Framework, .NET Core 또는 Windows 런타임의 리소스를 사용하여 동기 메서드를 만드는 것만큼 쉽게 비동기 메서드를 만들 수 있습니다. `async` 키워드를 사용하여 정의하는 비동기 메서드를 *비동기 메서드*라고 합니다.
 
 다음 예제에서는 비동기 메서드를 보여줍니다. 코드의 거의 모든 내용이 익숙할 것입니다.
 
@@ -136,7 +136,7 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
 8. `AccessTheWebAsync`에 문자열 결과가 있는 경우 메서드가 문자열 길이를 계산할 수 있습니다. 그런 다음 `AccessTheWebAsync` 작업도 완료되고 대기 이벤트 처리기를 다시 시작할 수 있습니다. 이 항목 뒷부분의 전체 예에서는 이벤트 처리기가 길이 결과 값을 검색하고 출력하는지 확인할 수 있습니다.
 비동기 프로그래밍을 처음 접하는 사용자인 경우 동기 동작과 비동기 동작의 차이점을 살펴보세요. 비동기 메서드는 작업이 완료될 때 반환되지만(5단계) 비동기 메서드는 작업이 일시 중단될 때 반환됩니다. 비동기 메서드가 해당 작업을 완료하면 작업이 완료된 것으로 표시되고 결과가 있을 경우 작업에 저장됩니다.
 
-제어 흐름에 대한 자세한 내용은 [비동기 프로그램의 제어 흐름(C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)을 참조하세요.
+제어 흐름에 대한 자세한 내용은 [비동기 프로그램의 제어 흐름(C#)](./control-flow-in-async-programs.md)을 참조하세요.
 
 ## <a name="BKMK_APIAsyncMethods"></a> API 비동기 메서드
 
@@ -154,9 +154,9 @@ Windows 런타임에는 Windows 앱에서 `async` 및 `await`와 함께 사용�
 
 ## <a name="BKMK_AsyncandAwait"></a> async 및 await
 
-[async](../../../../csharp/language-reference/keywords/async.md) 한정자를 사용해서 메서드를 비동기 메서드로 지정하면 다음 두 기능이 활성화됩니다.
+[async](../../../language-reference/keywords/async.md) 한정자를 사용해서 메서드를 비동기 메서드로 지정하면 다음 두 기능이 활성화됩니다.
 
-- 표시된 비동기 메서드는 [Await](../../../../csharp/language-reference/keywords/await.md)를 사용하여 일시 중단 지점을 지정할 수 있습니다. `await` 연산자는 대기된 비동기 프로세스가 완료될 때까지 비동기 메서드가 해당 지점을 지나 계속할 수 없도록 컴파일러에 지시합니다. 한편, 컨트롤이 비동기 메서드의 호출자로 반환됩니다.
+- 표시된 비동기 메서드는 [Await](../../../language-reference/keywords/await.md)를 사용하여 일시 중단 지점을 지정할 수 있습니다. `await` 연산자는 대기된 비동기 프로세스가 완료될 때까지 비동기 메서드가 해당 지점을 지나 계속할 수 없도록 컴파일러에 지시합니다. 한편, 컨트롤이 비동기 메서드의 호출자로 반환됩니다.
 
      `await` 식에서 비동기 메서드를 일시 중단하더라도 메서드가 종료되지는 않으며 `finally` 블록이 실행되지 않습니다.
 
@@ -166,15 +166,15 @@ Windows 런타임에는 Windows 앱에서 `async` 및 `await`와 함께 사용�
 
 `async` 및 `await`은 상황별 키워드입니다. 자세한 내용과 예제는 다음 항목을 참조하세요.
 
-- [async](../../../../csharp/language-reference/keywords/async.md)
+- [async](../../../language-reference/keywords/async.md)
 
-- [await](../../../../csharp/language-reference/keywords/await.md)
+- [await](../../../language-reference/keywords/await.md)
 
 ## <a name="BKMK_ReturnTypesandParameters"></a> 반환 형식 및 매개 변수
 
 비동기 메서드는 일반적으로 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>를 반환합니다. 비동기 메서드 내에서 `await` 연산자는 호출에서 다른 비동기 메서드로 전환되는 작업에 적용됩니다.
 
-메서드에 `TResult` 형식의 피연산자를 지정하는 [`return`](../../../../csharp/language-reference/keywords/return.md) 문이 포함되어 있을 경우 <xref:System.Threading.Tasks.Task%601>를 반환 형식으로 지정합니다.
+메서드에 `TResult` 형식의 피연산자를 지정하는 [`return`](../../../language-reference/keywords/return.md) 문이 포함되어 있을 경우 <xref:System.Threading.Tasks.Task%601>를 반환 형식으로 지정합니다.
 
 메서드에 return 문이 없거나 피연산자를 반환하지 않는 return 문이 있을 경우 반환 형식으로 <xref:System.Threading.Tasks.Task>를 사용합니다.
 
@@ -218,9 +218,9 @@ await GetTaskAsync();
 
 `void` 반환 형식을 가진 비동기 메서드는 대기할 수 없습니다. 또한 void를 반환하는 메서드의 호출자는 메서드가 throw하는 예외를 catch할 수 없습니다.
 
-비동기 메서드는 모든 [in](../../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../../csharp/language-reference/keywords/ref.md) 또는 [out](../../../../csharp/language-reference/keywords/out-parameter-modifier.md) 매개 변수를 선언할 수 없지만, 이러한 매개 변수가 있는 메서드를 호출할 수는 있습니다. 마찬가지로 비동기 메서드는 참조 반환 값을 사용하여 메서드를 호출할 수 있지만 참조를 통해 값을 반환할 수 없습니다.
+비동기 메서드는 모든 [in](../../../language-reference/keywords/in-parameter-modifier.md), [ref](../../../language-reference/keywords/ref.md) 또는 [out](../../../language-reference/keywords/out-parameter-modifier.md) 매개 변수를 선언할 수 없지만, 이러한 매개 변수가 있는 메서드를 호출할 수는 있습니다. 마찬가지로 비동기 메서드는 참조 반환 값을 사용하여 메서드를 호출할 수 있지만 참조를 통해 값을 반환할 수 없습니다.
 
-자세한 내용과 예제는 [비동기 반환 형식(C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)을 참조하세요. 비동기 메서드에서 예외를 처리하는 방법에 대한 자세한 내용은 [try-catch](../../../../csharp/language-reference/keywords/try-catch.md)를 참조하세요.
+자세한 내용과 예제는 [비동기 반환 형식(C#)](./async-return-types.md)을 참조하세요. 비동기 메서드에서 예외를 처리하는 방법에 대한 자세한 내용은 [try-catch](../../../language-reference/keywords/try-catch.md)를 참조하세요.
 
 Windows 런타임 프로그래밍의 비동기 API에는 작업과 유사한 다음 반환 형식 중 하나가 있습니다.
 
@@ -242,16 +242,16 @@ Windows 런타임 프로그래밍의 비동기 API에는 작업과 유사한 다
 
 |제목|설명|샘플|
 |-----------|-----------------|------------|
-|[연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)|동기 WPF 솔루션을 비동기 WPF 솔루션으로 변환하는 방법을 보여줍니다. 이 애플리케이션은 일련의 웹 사이트를 다운로드합니다.|[비동기 샘플: 웹 연습에 액세스](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)|
-|[방법: Task.WhenAll을 사용하여 비동기 연습 확장(C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|이전 연습에 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>을 추가합니다. `WhenAll`을 사용하면 모든 다운로드가 동시에 시작됩니다.||
-|[방법: async 및 await를 사용하여 병렬로 여러 웹 요청 만들기(C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|동시에 여러 작업을 시작하는 방법을 보여줍니다.|[비동기 샘플: 병렬로 여러 웹 요청 만들기](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)|
-|[비동기 반환 형식(C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)|비동기 메서드에서 반환할 수 있는 형식을 설명하고 각 형식이 언제 적절한가를 설명합니다.||
-|[비동기 프로그램의 제어 흐름(C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)|비동기 프로그램에서 연속적 await 표현을 통한 컨트롤의 흐름을 자세히 추적합니다.|[비동기 샘플: 비동기 프로그램의 제어 흐름](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)|
-|[Async 애플리케이션 미세 조정(C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)|비동기 솔루션에 다음과 같은 기능을 추가하는 방법을 보여줍니다.<br /><br /> - [비동기 작업 또는 작업 목록 취소(C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)<br />- [일정 기간 이후 비동기 작업 취소(C#)](../../../../csharp/programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md)<br />- [비동기 작업 하나가 완료되면 남은 비동기 작업 취소(C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)<br />- [비동기 작업을 여러 개 시작하고 완료될 때마다 처리(C#)](../../../../csharp/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)|[비동기 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)|
-|[비동기 앱에서 재진입 처리(C#)](../../../../csharp/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md)|비동기 작업이 실행되는 동안 현재 비동기 작업을 다시 시작하는 경우 처리 방법을 보여줍니다.||
+|[연습: async 및 await를 사용하여 웹에 액세스(C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)|동기 WPF 솔루션을 비동기 WPF 솔루션으로 변환하는 방법을 보여줍니다. 이 애플리케이션은 일련의 웹 사이트를 다운로드합니다.|[비동기 샘플: 웹 연습에 액세스](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)|
+|[방법: Task.WhenAll을 사용하여 비동기 연습 확장(C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|이전 연습에 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>을 추가합니다. `WhenAll`을 사용하면 모든 다운로드가 동시에 시작됩니다.||
+|[방법: async 및 await를 사용하여 병렬로 여러 웹 요청 만들기(C#)](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|동시에 여러 작업을 시작하는 방법을 보여줍니다.|[비동기 샘플: 병렬로 여러 웹 요청 만들기](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)|
+|[비동기 반환 형식(C#)](./async-return-types.md)|비동기 메서드에서 반환할 수 있는 형식을 설명하고 각 형식이 언제 적절한가를 설명합니다.||
+|[비동기 프로그램의 제어 흐름(C#)](./control-flow-in-async-programs.md)|비동기 프로그램에서 연속적 await 표현을 통한 컨트롤의 흐름을 자세히 추적합니다.|[비동기 샘플: 비동기 프로그램의 제어 흐름](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)|
+|[Async 애플리케이션 미세 조정(C#)](./fine-tuning-your-async-application.md)|비동기 솔루션에 다음과 같은 기능을 추가하는 방법을 보여줍니다.<br /><br /> - [비동기 작업 또는 작업 목록 취소(C#)](./cancel-an-async-task-or-a-list-of-tasks.md)<br />- [일정 기간 이후 비동기 작업 취소(C#)](./cancel-async-tasks-after-a-period-of-time.md)<br />- [비동기 작업 하나가 완료되면 남은 비동기 작업 취소(C#)](./cancel-remaining-async-tasks-after-one-is-complete.md)<br />- [비동기 작업을 여러 개 시작하고 완료될 때마다 처리(C#)](./start-multiple-async-tasks-and-process-them-as-they-complete.md)|[비동기 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)|
+|[비동기 앱에서 재진입 처리(C#)](./handling-reentrancy-in-async-apps.md)|비동기 작업이 실행되는 동안 현재 비동기 작업을 다시 시작하는 경우 처리 방법을 보여줍니다.||
 |[WhenAny: .NET Framework와 Windows 런타임 간 브리징](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|Windows 런타임 메서드에 <xref:System.Threading.Tasks.Task.WhenAny%2A>를 사용할 수 있도록 .NET Framework의 작업 형식과 Windows 런타임의 IAsyncOperations를 연결하는 방법을 보여 줍니다.|[비동기 샘플: .NET 및 Windows 런타임 간 연결(AsTask 및 WhenAny)](https://code.msdn.microsoft.com/Async-Sample-Bridging-d6a2f739)|
 |비동기 취소: .NET Framework와 Windows 런타임 간 브리징|Windows 런타임 메서드에 <xref:System.Threading.CancellationTokenSource>를 사용할 수 있도록 .NET Framework의 작업 형식과 Windows 런타임의 IAsyncOperations를 연결하는 방법을 보여 줍니다.|[비동기 샘플: .NET 및 Windows 런타임 간 연결(AsTask & 취소)](https://code.msdn.microsoft.com/Async-Sample-Bridging-9479eca3)|
-|[파일 액세스에 Async 사용(C#)](../../../../csharp/programming-guide/concepts/async/using-async-for-file-access.md)|async 및 await를 사용하여 파일에 액세스하는 이점을 나열하고 보여줍니다.||
+|[파일 액세스에 Async 사용(C#)](./using-async-for-file-access.md)|async 및 await를 사용하여 파일에 액세스하는 이점을 나열하고 보여줍니다.||
 |[TAP(작업 기반 비동기 패턴)](../../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)|.NET Framework의 새로운 비동기 패턴에 대해 설명합니다. 패턴은 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 형식을 기반으로 합니다.||
 |[비동기 Channel 9 비디오](https://channel9.msdn.com/search?term=async%20&type=All#pubDate=year&ch9Search&lang-en=en)|비동기 프로그래밍에 대한 다양한 비디오로 연결되는 링크를 제공합니다.||
 
@@ -342,7 +342,7 @@ namespace AsyncFirstExample
 
 ## <a name="see-also"></a>참고 항목
 
-- [async](../../../../csharp/language-reference/keywords/async.md)
-- [await](../../../../csharp/language-reference/keywords/await.md)
-- [비동기 프로그래밍](../../../../csharp/async.md)
+- [async](../../../language-reference/keywords/async.md)
+- [await](../../../language-reference/keywords/await.md)
+- [비동기 프로그래밍](../../../async.md)
 - [비동기 개요](../../../../standard/async.md)

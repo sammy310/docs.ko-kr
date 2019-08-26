@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a941c99e1d22a71dc6d94e73f5402716f41e3a81
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4ff9232272124c8706e64162d096eced8640c806
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647909"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966962"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>XPathNavigator를 사용하여 XML 데이터 삽입
 <xref:System.Xml.XPath.XPathNavigator> 클래스는 XML 문서에 형제, 자식 및 특성 노드를 삽입하는 메서드 집합을 제공합니다. 이러한 메서드를 사용하려면 <xref:System.Xml.XPath.XPathNavigator> 개체가 편집 가능한 상태여야 합니다. 즉, <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 속성이 `true`여야 합니다.  
@@ -236,7 +236,7 @@ navigator.SetTypedValue(DateTime.Now);
 - <xref:System.Xml.XmlReader> 개체의 컨텍스트와 <xref:System.Xml.XPath.XPathNavigator> 개체의 컨텍스트에서 네임스페이스 URI와 접두사가 같을 경우 새로 삽입된 노드에 새 네임스페이스 선언이 추가되지 않습니다.  
   
 > [!NOTE]
->  위 설명은 기본 네임스페이스 선언과 같이 접두사로 빈 `string`이 있는 네임스페이스 선언에도 적용됩니다.  
+> 위 설명은 기본 네임스페이스 선언과 같이 접두사로 빈 `string`이 있는 네임스페이스 선언에도 적용됩니다.  
   
  다음은 발생할 수 있는 `xml:lang` 충돌입니다.  
   

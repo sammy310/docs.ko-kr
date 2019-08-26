@@ -2,20 +2,20 @@
 title: '방법: XML에서 텍스트 파일 생성(C#)'
 ms.date: 07/20/2015
 ms.assetid: 9ad283f7-7cac-42ff-bf32-92aa866e6883
-ms.openlocfilehash: 2890128e4dacbac5279b928d9b9bcc097cbe669a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 51828c11b54f99131b89e0a30979f3f3acdb12ae
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530453"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593349"
 ---
 # <a name="how-to-generate-text-files-from-xml-c"></a>방법: XML에서 텍스트 파일 생성(C#)
 이 예제에서는 XML 파일에서 CSV(쉼표로 구분된 값) 파일을 생성하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예제  
- 이 예제의 C# 버전에서는 메서드 구문과 `Aggregate` 연산자를 사용하여 단일 식으로 XML 문서에서 CSV 파일을 생성합니다. 자세한 내용은 [LINQ의 쿼리 구문 및 메서드 구문](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)을 참조하세요.  
+## <a name="example"></a>예  
+ 이 예제의 C# 버전에서는 메서드 구문과 `Aggregate` 연산자를 사용하여 단일 식으로 XML 문서에서 CSV 파일을 생성합니다. 자세한 내용은 [LINQ의 쿼리 구문 및 메서드 구문](./query-syntax-and-method-syntax-in-linq.md)을 참조하세요.  
   
- 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XElement custOrd = XElement.Load("CustomersOrders.xml");  
@@ -55,4 +55,4 @@ LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,Sa
   
 ## <a name="see-also"></a>참고 항목
 
-- [프로젝션 및 변환(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [프로젝션 및 변환(LINQ to XML)(C#)](./projections-and-transformations-linq-to-xml.md)

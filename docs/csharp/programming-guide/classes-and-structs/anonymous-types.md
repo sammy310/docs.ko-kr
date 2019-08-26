@@ -6,18 +6,18 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 7d8bdc5ceef5d82e4bc7e13ee932985cae6c2c10
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 93f02b8a0f828be89c6a1b7bfcdc6ba2a2a93e81
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398554"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597184"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>익명 형식(C# 프로그래밍 가이드)
 
 익명 형식을 사용하면 먼저 명시적으로 형식을 정의할 필요 없이 읽기 전용 속성 집합을 단일 개체로 편리하게 캡슐화할 수 있습니다. 형식 이름은 컴파일러에 의해 생성되며 소스 코드 수준에서 사용할 수 없습니다. 각 속성의 형식은 컴파일러에서 유추합니다.  
   
- [new](../../../csharp/language-reference/operators/new-operator.md) 연산자를 개체 이니셜라이저와 함께 사용하여 무명 형식을 만듭니다. 개체 이니셜라이저에 대한 자세한 내용은 [개체 및 컬렉션 이니셜라이저](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)를 참조하세요.  
+ [new](../../language-reference/operators/new-operator.md) 연산자를 개체 이니셜라이저와 함께 사용하여 무명 형식을 만듭니다. 개체 이니셜라이저에 대한 자세한 내용은 [개체 및 컬렉션 이니셜라이저](./object-and-collection-initializers.md)를 참조하세요.  
   
  다음 예제에서는 `Amount` 및 `Message`라는 두 속성으로 초기화된 익명 형식을 보여 줍니다.  
   
@@ -29,7 +29,7 @@ var v = new { Amount = 108, Message = "Hello" };
 Console.WriteLine(v.Amount + v.Message);  
 ```  
   
- 일반적으로 무명 형식은 소스 시퀀스에 있는 각 개체의 속성 하위 집합을 반환하기 위해 쿼리 식의 [select](../../../csharp/language-reference/keywords/select-clause.md) 절에 사용됩니다. 쿼리에 대한 자세한 내용은 [LINQ 쿼리 식](../../../csharp/programming-guide/linq-query-expressions/index.md)을 참조하세요.  
+ 일반적으로 무명 형식은 소스 시퀀스에 있는 각 개체의 속성 하위 집합을 반환하기 위해 쿼리 식의 [select](../../language-reference/keywords/select-clause.md) 절에 사용됩니다. 쿼리에 대한 자세한 내용은 [LINQ 쿼리 식](../linq-query-expressions/index.md)을 참조하세요.  
   
  익명 형식은 하나 이상의 public 읽기 전용 속성을 포함합니다. 메서드 또는 이벤트와 같은 다른 종류의 클래스 멤버는 유효하지 않습니다. 속성을 초기화하는 데 사용되는 식은 `null`, 익명 함수 또는 포인터 형식일 수 없습니다.  
   
@@ -39,7 +39,7 @@ Console.WriteLine(v.Amount + v.Message);
   
  [!code-csharp[csRef30Features#81](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csRef30Features/CS/csref30.cs#81)]  
   
- 일반적으로 무명 형식을 사용하여 변수를 초기화할 때는 [var](../../../csharp/language-reference/keywords/var.md)을 사용하여 변수를 암시적 형식 지역 변수로 선언합니다. 컴파일러만 익명 형식의 기본 이름에 액세스할 수 있으므로 변수 선언에는 형식 이름을 지정할 수 없습니다. `var`에 대한 자세한 내용은 [암시적 형식 지역 변수](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)를 참조하세요.  
+ 일반적으로 무명 형식을 사용하여 변수를 초기화할 때는 [var](../../language-reference/keywords/var.md)을 사용하여 변수를 암시적 형식 지역 변수로 선언합니다. 컴파일러만 익명 형식의 기본 이름에 액세스할 수 있으므로 변수 선언에는 형식 이름을 지정할 수 없습니다. `var`에 대한 자세한 내용은 [암시적 형식 지역 변수](./implicitly-typed-local-variables.md)를 참조하세요.  
   
  다음 예제에 표시된 것처럼, 암시적으로 형식화된 지역 변수와 암시적으로 형식화된 배열을 결합하여 익명으로 형식화된 요소의 배열을 만들 수 있습니다.  
   
@@ -48,7 +48,7 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
 ```  
   
 ## <a name="remarks"></a>설명  
- 무명 형식은 [object](../../../csharp/language-reference/keywords/object.md)에서 직접 파생되고 [object](../../../csharp/language-reference/keywords/object.md)를 제외한 어떠한 형식으로도 캐스팅될 수 없는 [class](../../../csharp/language-reference/keywords/class.md) 형식입니다. 컴파일러는 애플리케이션에서 해당 익명 형식에 액세스할 수 없더라도 각 익명 형식의 이름을 제공합니다. 공용 언어 런타임의 관점에서 익명 형식은 다른 참조 형식과 다를 바가 없습니다.  
+ 무명 형식은 [object](../../language-reference/keywords/object.md)에서 직접 파생되고 [object](../../language-reference/keywords/object.md)를 제외한 어떠한 형식으로도 캐스팅될 수 없는 [class](../../language-reference/keywords/class.md) 형식입니다. 컴파일러는 애플리케이션에서 해당 익명 형식에 액세스할 수 없더라도 각 익명 형식의 이름을 제공합니다. 공용 언어 런타임의 관점에서 익명 형식은 다른 참조 형식과 다를 바가 없습니다.  
   
  어셈블리에서 둘 이상의 익명 개체 이니셜라이저가 순서와 이름 및 형식이 동일한 속성의 시퀀스를 지정하는 경우 컴파일러는 개체를 동일한 형식의 인스턴스로 처리합니다. 이러한 개체는 컴파일러에서 생성된 동일한 형식 정보를 공유합니다.  
   
@@ -58,7 +58,7 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [개체 이니셜라이저 및 컬렉션 이니셜라이저](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-- [C#에서 LINQ 시작](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [LINQ 쿼리 식](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [개체 이니셜라이저 및 컬렉션 이니셜라이저](./object-and-collection-initializers.md)
+- [C#에서 LINQ 시작](../concepts/linq/getting-started-with-linq.md)
+- [LINQ 쿼리 식](../linq-query-expressions/index.md)

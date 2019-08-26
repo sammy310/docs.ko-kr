@@ -6,17 +6,17 @@ helpviewer_keywords:
 - reading text files, line by line
 - text files [C#]
 ms.assetid: d62e22c5-a13c-48db-af9b-f10c801b0cb1
-ms.openlocfilehash: 4e6c4cfce1b5e97f70040b318eb68ee78ee4a953
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 75274d93ee29feb5f79dfc29c24109f25fd98a5c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595398"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589956"
 ---
 # <a name="how-to-read-a-text-file-one-line-at-a-time-visual-c"></a>방법: 텍스트 파일을 한 번에 한 줄씩 읽기(Visual C#)
 이 예제에서는 `StreamReader` 클래스의 `ReadLine` 메서드를 사용하여 텍스트 파일 내용을 한 번에 한 줄씩 문자열로 읽어옵니다. 각 텍스트 줄은 `line` 문자열에 저장되고 화면에 표시됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```csharp
 int counter = 0;  
@@ -53,5 +53,5 @@ System.Console.ReadLine();
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [파일 시스템 및 레지스트리(C# 프로그래밍 가이드)](../../../csharp/programming-guide/file-system/index.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [파일 시스템 및 레지스트리(C# 프로그래밍 가이드)](./index.md)

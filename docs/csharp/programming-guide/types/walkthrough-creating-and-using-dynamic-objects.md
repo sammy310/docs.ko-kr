@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: 658fc0ef797e941e33e1d03f0e492b4cf2ef0801
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70f5ee17209c7ed54462fab6e5cc4d75091c9df2
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608026"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588286"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>연습: 동적 개체 만들기 및 사용(C# 및 Visual Basic)
 
@@ -22,7 +22,7 @@ ms.locfileid: "64608026"
   
  동적 개체를 사용하면 IronPython 및 IronRuby와 같은 동적 언어에 편리하게 액세스할 수 있습니다. 동적 개체를 사용하면 런타임에 해석되는 동적 스크립트를 참조할 수 있습니다.  
   
- 런타임에 바인딩을 사용하여 동적 개체를 참조합니다. C#에서는 런타임에 바인딩된 개체의 형식을 `dynamic`으로 지정합니다. Visual Basic에서는 런타임에 바인딩된 개체의 형식을 `Object`으로 지정합니다. 자세한 내용은 [dynamic](../../../csharp/language-reference/keywords/dynamic.md) 및 [초기 바인딩 및 런타임에 바인딩](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)을 참조하세요.  
+ 런타임에 바인딩을 사용하여 동적 개체를 참조합니다. C#에서는 런타임에 바인딩된 개체의 형식을 `dynamic`으로 지정합니다. Visual Basic에서는 런타임에 바인딩된 개체의 형식을 `Object`으로 지정합니다. 자세한 내용은 [dynamic](../../language-reference/keywords/dynamic.md) 및 [초기 바인딩 및 런타임에 바인딩](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)을 참조하세요.  
   
  <xref:System.Dynamic?displayProperty=nameWithType> 네임스페이스의 클래스를 사용하여 사용자 지정 동적 개체를 만들 수 있습니다. 예를 들어 <xref:System.Dynamic.ExpandoObject>를 만들고 해당 개체의 멤버를 런타임에 지정할 수 있습니다. <xref:System.Dynamic.DynamicObject> 클래스를 상속하는 고유한 형식을 만들 수도 있습니다. 그런 다음 런타임 동적 기능을 제공하도록 <xref:System.Dynamic.DynamicObject> 클래스의 멤버를 재정의할 수 있습니다.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "64608026"
 
 - <xref:System.Dynamic?displayProperty=nameWithType>
 - <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>
-- [dynamic 형식 사용](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [dynamic 형식 사용](./using-type-dynamic.md)
 - [초기 바인딩 및 런타임에 바인딩](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
+- [dynamic](../../language-reference/keywords/dynamic.md)
 - [동적 인터페이스 구현(Microsoft TechNet에서 다운로드 가능한 PDF)](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)

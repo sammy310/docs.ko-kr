@@ -2,12 +2,12 @@
 title: '연습: Visual Studio에서 관리형 어셈블리의 형식 포함(C#)'
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-ms.openlocfilehash: ca1acab5dc08bc7790d86b0dda3b9c7f58cab10c
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 5e6494f133128e3982aa07323d2c65b9fa5de47b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57844887"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595801"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>연습: Visual Studio에서 관리형 어셈블리의 형식 포함(C#)
 
@@ -235,7 +235,7 @@ ms.locfileid: "57844887"
 
 ## <a name="see-also"></a>참고 항목
 
-- [/link(C# 컴파일러 옵션)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)
-- [C# 프로그래밍 가이드](../../../../csharp/programming-guide/index.md)
+- [/link(C# 컴파일러 옵션)](../../../language-reference/compiler-options/link-compiler-option.md)
+- [C# 프로그래밍 가이드](../../index.md)
 - [어셈블리를 사용한 프로그래밍](../../../../framework/app-domains/programming-with-assemblies.md)
 - [.NET 어셈블리](../../../../standard/assembly/index.md)

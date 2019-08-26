@@ -7,16 +7,16 @@ helpviewer_keywords:
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: eae57ae1f285e7f0e44c49e3d54fbd81bb4be591
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 00751cd8eac7979fe94d890ddeb7d13edb233f9e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398436"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596477"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Override 및 New 키워드를 사용해야 하는 경우(C# 프로그래밍 가이드)
 
-C#에서는 파생 클래스의 메서드가 기본 클래스의 메서드와 동일한 이름을 사용할 수 있습니다. [new](../../../csharp/language-reference/keywords/new-modifier.md) 및 [override](../../../csharp/language-reference/keywords/override.md) 키워드를 사용하여 메서드가 상호 작용하는 방식을 지정할 수 있습니다. `override` 한정자는 기본 클래스 `virtual` 메서드를 *확장*하고, `new` 한정자는 기본 클래스 메서드를 *숨깁니다*. 이 항목의 예제에서는 차이점을 보여 줍니다.  
+C#에서는 파생 클래스의 메서드가 기본 클래스의 메서드와 동일한 이름을 사용할 수 있습니다. [new](../../language-reference/keywords/new-modifier.md) 및 [override](../../language-reference/keywords/override.md) 키워드를 사용하여 메서드가 상호 작용하는 방식을 지정할 수 있습니다. `override` 한정자는 기본 클래스 `virtual` 메서드를 *확장*하고, `new` 한정자는 기본 클래스 메서드를 *숨깁니다*. 이 항목의 예제에서는 차이점을 보여 줍니다.  
   
  콘솔 애플리케이션에서 `BaseClass` 및 `DerivedClass`라는 두 클래스를 선언합니다. `DerivedClass`는 `BaseClass`에서 상속됩니다.  
   
@@ -115,7 +115,7 @@ public new void Method2()
 }  
 ```  
   
- 프로그램을 다시 실행하여 출력이 변경되지 않았는지 확인합니다. 또한 경고가 더 이상 나타나지 않는지 확인합니다. `new`를 사용하면 수정하는 멤버가 기본 클래스에서 상속된 멤버를 숨김을 인식하고 있다고 어설션하는 것입니다. 상속을 통한 이름 숨기기에 대한 자세한 내용은 [new 한정자](../../../csharp/language-reference/keywords/new-modifier.md)를 참조하세요.  
+ 프로그램을 다시 실행하여 출력이 변경되지 않았는지 확인합니다. 또한 경고가 더 이상 나타나지 않는지 확인합니다. `new`를 사용하면 수정하는 멤버가 기본 클래스에서 상속된 멤버를 숨김을 인식하고 있다고 어설션하는 것입니다. 상속을 통한 이름 숨기기에 대한 자세한 내용은 [new 한정자](../../language-reference/keywords/new-modifier.md)를 참조하세요.  
   
  이 동작을 `override`를 사용할 경우의 효과와 비교하려면 다음 메서드를 `DerivedClass`에 추가합니다. `public` 앞이나 뒤에 `override` 한정자를 추가할 수 있습니다.  
   
@@ -545,8 +545,8 @@ namespace OverrideAndNew2
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [클래스 및 구조체](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Override 및 New 키워드를 사용하여 버전 관리](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)
-- [base](../../../csharp/language-reference/keywords/base.md)
-- [abstract](../../../csharp/language-reference/keywords/abstract.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [클래스 및 구조체](./index.md)
+- [Override 및 New 키워드를 사용하여 버전 관리](./versioning-with-the-override-and-new-keywords.md)
+- [base](../../language-reference/keywords/base.md)
+- [abstract](../../language-reference/keywords/abstract.md)

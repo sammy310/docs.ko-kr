@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: e77db451103919df5809b2558fcb53a3d7fba71c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 26241dab70a3b6a0cf80b374868fa759647cd8d9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479963"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588003"
 ---
 # <a name="include-c-programming-guide"></a>\<include>(C# 프로그래밍 가이드)
 ## <a name="syntax"></a>구문  
@@ -36,12 +36,12 @@ ms.locfileid: "57479963"
  `id`  
  주석 앞에 오는 태그의 ID입니다. ID를 큰따옴표(“ ”)로 묶습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  \<include> 태그를 사용하면 소스 코드의 형식과 멤버를 설명하는 다른 파일의 주석을 참조할 수 있습니다. 소스 코드 파일에 직접 문서 주석을 포함하는 대신 사용되는 대안입니다. 별도 파일에 문서를 배치하면 소스 코드와 별도로 문서에 소스 제어를 적용할 수 있습니다. 한 사람은 소스 코드 파일을 체크 아웃하고 다른 사람은 문서 파일을 체크 아웃할 수 있습니다.  
   
  \<include> 태그는 XML XPath 구문을 사용합니다. \<include> 사용을 사용자 지정하는 방법은 XPath 설명서를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다중 파일 예제입니다. 아래에는 \<include>를 사용하는 첫 번째 파일이 나와 있습니다.  
   
  [!code-csharp[csProgGuideDocComments#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#5)]  
@@ -92,5 +92,5 @@ The summary for this other type.
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [문서 주석에 대한 권장 태그](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [문서 주석에 대한 권장 태그](./recommended-tags-for-documentation-comments.md)

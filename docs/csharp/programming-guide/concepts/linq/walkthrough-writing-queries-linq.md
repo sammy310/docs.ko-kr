@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 083c1e4b6ab8c25956ffcf2288ac32d940f23bc2
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9b6592405d3047c8663b48137aa5b1f0eb14bdb4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483214"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924102"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>연습: C#에서 쿼리 작성(LINQ)
 이 연습에서는 LINQ 쿼리 식을 작성하는 데 사용되는 C # 언어 기능을 보여 줍니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "66483214"
 ## <a name="create-a-c-project"></a>C# 프로젝트 만들기  
   
 > [!NOTE]
->  다음 지침은 Visual Studio용입니다. 다른 개발 환경을 사용하는 경우 System.Core.dll에 대한 참조와 <xref:System.Linq?displayProperty=nameWithType> 네임스페이스에 대한 `using` 지시문을 사용하여 콘솔 프로젝트를 만듭니다.  
+> 다음 지침은 Visual Studio용입니다. 다른 개발 환경을 사용하는 경우 System.Core.dll에 대한 참조와 <xref:System.Linq?displayProperty=nameWithType> 네임스페이스에 대한 `using` 지시문을 사용하여 콘솔 프로젝트를 만듭니다.  
   
 #### <a name="to-create-a-project-in-visual-studio"></a>Visual Studio에서 프로젝트를 만들려면  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66483214"
   
 - 목록 자체는 컬렉션 이니셜라이저로 초기화됩니다.  
   
- 이 전체 데이터 구조는 생성자 또는 명시적 멤버 액세스에 대한 명시적 호출 없이 초기화되고 인스턴스화됩니다. 이러한 새로운 기능에 대한 자세한 내용은 [자동으로 구현된 속성](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md) 및 [개체 및 컬렉션 이니셜라이저](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)를 참조하세요.  
+ 이 전체 데이터 구조는 생성자 또는 명시적 멤버 액세스에 대한 명시적 호출 없이 초기화되고 인스턴스화됩니다. 이러한 새로운 기능에 대한 자세한 내용은 [자동으로 구현된 속성](../../classes-and-structs/auto-implemented-properties.md) 및 [개체 및 컬렉션 이니셜라이저](../../classes-and-structs/object-and-collection-initializers.md)를 참조하세요.  
   
 #### <a name="to-add-the-data-source"></a>데이터 소스를 추가하려면  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66483214"
   
 #### <a name="to-create-a-simple-query"></a>단순 쿼리를 작성하려면  
   
-- 애플리케이션의 `Main` 메서드에서, 실행 시 첫 번째 테스트의 점수가 90보다 큰 모든 학생의 목록을 생성하는 간단한 쿼리를 만듭니다. 전체 `Student` 개체가 선택되므로 쿼리의 형식은 `IEnumerable<Student>`입니다. [var](../../../../csharp/language-reference/keywords/var.md) 키워드를 사용하여 코드에서 암시적 형식을 사용할 수도 있지만, 결과를 명확하게 설명하기 위해 명시적 형식이 사용됩니다. `var`에 대한 자세한 내용은 [암시적으로 형식화된 지역 변수](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)를 참조하세요.  
+- 애플리케이션의 `Main` 메서드에서, 실행 시 첫 번째 테스트의 점수가 90보다 큰 모든 학생의 목록을 생성하는 간단한 쿼리를 만듭니다. 전체 `Student` 개체가 선택되므로 쿼리의 형식은 `IEnumerable<Student>`입니다. [var](../../../language-reference/keywords/var.md) 키워드를 사용하여 코드에서 암시적 형식을 사용할 수도 있지만, 결과를 명확하게 설명하기 위해 명시적 형식이 사용됩니다. `var`에 대한 자세한 내용은 [암시적으로 형식화된 지역 변수](../../classes-and-structs/implicitly-typed-local-variables.md)를 참조하세요.  
   
      또한 쿼리의 범위 변수 `student`는 소스의 각 `Student`에 대한 참조로 사용되며, 각 개체에 대한 멤버 액세스를 제공합니다.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66483214"
     where student.Scores[0] > 90 && student.Scores[3] < 80  
     ```  
   
-     자세한 내용은 [where 절](../../../../csharp/language-reference/keywords/where-clause.md)을 참조하세요.  
+     자세한 내용은 [where 절](../../../language-reference/keywords/where-clause.md)을 참조하세요.  
   
 ## <a name="modify-the-query"></a>쿼리 수정  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66483214"
     Console.WriteLine("{0}, {1} {2}", student.Last, student.First, student.Scores[0]);  
     ```  
   
-     자세한 내용은 [orderby 절](../../../../csharp/language-reference/keywords/orderby-clause.md)을 참조하세요.  
+     자세한 내용은 [orderby 절](../../../language-reference/keywords/orderby-clause.md)을 참조하세요.  
   
 #### <a name="to-group-the-results"></a>결과를 그룹화하려면  
   
@@ -129,7 +129,7 @@ ms.locfileid: "66483214"
   
 3. 애플리케이션을 실행하고 **콘솔** 창에서 결과를 봅니다.  
   
-     자세한 내용은 [group 절](../../../../csharp/language-reference/keywords/group-clause.md)을 참조하세요.  
+     자세한 내용은 [group 절](../../../language-reference/keywords/group-clause.md)을 참조하세요.  
   
 #### <a name="to-make-the-variables-implicitly-typed"></a>변수를 암시적으로 형식화하려면  
   
@@ -137,7 +137,7 @@ ms.locfileid: "66483214"
   
      [!code-csharp[CsLINQGettingStarted#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#16)]  
   
-     [var](../../../../csharp/language-reference/keywords/var.md)에 대한 자세한 내용은 [암시적으로 형식화된 지역 변수](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)를 참조하세요.  
+     [var](../../../language-reference/keywords/var.md)에 대한 자세한 내용은 [암시적으로 형식화된 지역 변수](../../classes-and-structs/implicitly-typed-local-variables.md)를 참조하세요.  
   
 #### <a name="to-order-the-groups-by-their-key-value"></a>키 값을 기준으로 그룹을 정렬하려면  
   
@@ -153,11 +153,11 @@ ms.locfileid: "66483214"
   
      [!code-csharp[csLINQGettingStarted#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#18)]  
   
-     자세한 내용은 [let 절](../../../../csharp/language-reference/keywords/let-clause.md)을 참조하세요.  
+     자세한 내용은 [let 절](../../../language-reference/keywords/let-clause.md)을 참조하세요.  
   
 #### <a name="to-use-method-syntax-in-a-query-expression"></a>쿼리 식에서 메서드 구문을 사용하려면  
   
-1. [LINQ의 쿼리 구문 및 메서드 구문](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)에 설명된 대로 일부 쿼리 작업은 메서드 구문을 사용해야만 표현할 수 있습니다. 다음 코드는 소스 시퀀스의 각 `Student`에 대한 총 점수를 계산한 다음, 해당 쿼리의 결과에 대해 `Average()` 메서드를 호출하여 클래스의 평균 점수를 계산합니다.
+1. [LINQ의 쿼리 구문 및 메서드 구문](./query-syntax-and-method-syntax-in-linq.md)에 설명된 대로 일부 쿼리 작업은 메서드 구문을 사용해야만 표현할 수 있습니다. 다음 코드는 소스 시퀀스의 각 `Student`에 대한 총 점수를 계산한 다음, 해당 쿼리의 결과에 대해 `Average()` 메서드를 호출하여 클래스의 평균 점수를 계산합니다.
   
      [!code-csharp[csLINQGettingStarted#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#19)]  
   
@@ -174,15 +174,15 @@ ms.locfileid: "66483214"
 ## <a name="next-steps"></a>다음 단계  
  C#에서 쿼리 작업의 기본 사항에 익숙해지면 관심이 있는 특정 LINQ 공급자 형식에 대한 설명서와 샘플을 읽을 준비가 된 것입니다.  
   
- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
   
  [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
- [LINQ to XML(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)  
+ [LINQ to XML(C#)](./linq-to-xml-overview.md)  
   
- [LINQ to Objects(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+ [LINQ to Objects(C#)](./linq-to-objects.md)  
   
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ(Language-Integrated Query)(C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
-- [LINQ 쿼리 식](../../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [LINQ(Language-Integrated Query)(C#)](./index.md)
+- [LINQ 쿼리 식](../../linq-query-expressions/index.md)

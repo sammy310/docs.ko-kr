@@ -2,12 +2,12 @@
 title: Visual Studio에서 식 트리 디버그(C#)
 ms.date: 07/20/2015
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-ms.openlocfilehash: 93b1b660181cd81c31055f5d30d43e535171bb55
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 19d00aaa99c7ef08e291337f38bf74a3beac12b0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195981"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595228"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>Visual Studio에서 식 트리 디버그(C#)
 애플리케이션을 디버그할 때 식 트리의 구조 및 내용을 분석할 수 있습니다. 식 트리 구조에 대한 간략한 개요를 보려면 [특수 구문](debugview-syntax.md)을 사용하여 식 트리를 나타내는 `DebugView` 속성을 사용합니다. (`DebugView`는 디버그 모드에서만 사용할 수 있습니다.)  
@@ -40,7 +40,7 @@ ms.locfileid: "66195981"
   
 ## <a name="see-also"></a>참고 항목
 
-- [식 트리(C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [식 트리(C#)](./index.md)
 - [Visual Studio의 디버깅](/visualstudio/debugger/debugging-in-visual-studio)
 - [Create Custom Visualizers of Data](/visualstudio/debugger/create-custom-visualizers-of-data)(데이터의 사용자 지정 시각화 도우미 만들기)
 - [`DebugView` 구문](debugview-syntax.md)

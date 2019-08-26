@@ -2,18 +2,18 @@
 title: '방법: LINQ 쿼리용 사용자 지정 메서드 추가(C#)'
 ms.date: 07/20/2015
 ms.assetid: 1a500f60-2e10-49fb-8b2a-d8d08e4817cb
-ms.openlocfilehash: 5aca346c182d63967f02a7f5444c5fd6d86ae3d1
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: fcf6814c8b3076a18e807a378796094a9ce2cf84
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59610901"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594153"
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-c"></a>방법: LINQ 쿼리용 사용자 지정 메서드 추가(C#)
 
 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스에 확장 메서드를 추가하여 LINQ 쿼리에 사용할 수 있는 메서드 집합을 확장할 수 있습니다. 예를 들어 표준 평균 또는 최대 작업 외에 사용자 지정 집계 메서드를 만들어 값 시퀀스에서 단일 값을 계산할 수 있습니다. 값 시퀀스에 대한 특정 데이터 변환 또는 사용자 지정 필터로 작동하고 새 시퀀스를 반환하는 메서드를 만들 수도 있습니다. 이러한 메서드의 예로는 <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A> 및 <xref:System.Linq.Enumerable.Reverse%2A>가 있습니다.
 
-<xref:System.Collections.Generic.IEnumerable%601> 인터페이스를 확장하면 사용자 지정 메서드를 열거 가능한 컬렉션에 적용할 수 있습니다. 자세한 내용은 [확장 메서드](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)를 참조하세요.
+<xref:System.Collections.Generic.IEnumerable%601> 인터페이스를 확장하면 사용자 지정 메서드를 열거 가능한 컬렉션에 적용할 수 있습니다. 자세한 내용은 [확장 메서드](../../classes-and-structs/extension-methods.md)를 참조하세요.
 
 ## <a name="adding-an-aggregate-method"></a>집계 메서드 추가
 
@@ -217,4 +217,4 @@ foreach (var element in query)
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Collections.Generic.IEnumerable%601>
-- [확장명 메서드](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [확장명 메서드](../../classes-and-structs/extension-methods.md)

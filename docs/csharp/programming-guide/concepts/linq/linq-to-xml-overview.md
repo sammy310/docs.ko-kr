@@ -2,12 +2,12 @@
 title: LINQ to XML 개요(C#)
 ms.date: 10/30/2018
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-ms.openlocfilehash: 6a7d681b52bbc6ce515e2202f3f448ce4ba79ced
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 46a2c0282da01000f3f524614a7a4cf851b7f4e1
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267951"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591900"
 ---
 # <a name="linq-to-xml-overview-c"></a>LINQ to XML 개요(C#)
 
@@ -116,11 +116,11 @@ new XElement("Contacts",
 );
 ```
 
-자세한 내용은 [XML 트리 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees-linq-to-xml-2.md)를 참조하세요.
+자세한 내용은 [XML 트리 만들기(C#)](./creating-xml-trees-linq-to-xml-2.md)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 
-- [참조(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/reference-linq-to-xml.md)
-- [LINQ to XML과 DOM 비교(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)
-- [LINQ to XML과 기타 XML 기술 비교](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)
+- [참조(LINQ to XML)](./reference-linq-to-xml.md)
+- [LINQ to XML과 DOM 비교(C#)](./linq-to-xml-vs-dom.md)
+- [LINQ to XML과 기타 XML 기술 비교](./linq-to-xml-vs-other-xml-technologies.md)
 - <xref:System.Xml.Linq>

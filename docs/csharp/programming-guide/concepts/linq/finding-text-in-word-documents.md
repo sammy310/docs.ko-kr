@@ -2,20 +2,20 @@
 title: Word 문서에서 텍스트 찾기(C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: 9f81795c00c29da34bb5f229afb557eb89af6509
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 99a6bc2bb08af47ab725ef94ae8cd77d54cbad0a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487501"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594347"
 ---
 # <a name="finding-text-in-word-documents-c"></a>Word 문서에서 텍스트 찾기(C#)
 이 항목에서는 이전 쿼리를 확장하여 문서에 있는 문자열을 모두 찾습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 WordprocessingML 문서를 처리하여 문서에 있는 특정 텍스트 부분을 모두 찾습니다. 이렇게 하려면 "Hello" 문자열을 찾는 쿼리를 사용합니다. 이 예제는 이 자습서의 이전 예제를 기반으로 합니다. 새 쿼리는 아래에 있는 코드의 주석에서 호출됩니다.  
   
- 이 예제의 소스 문서 만들기에 대한 지침은 [원본 Office Open XML 문서 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)를 참조하세요.  
+ 이 예제의 소스 문서 만들기에 대한 지침은 [원본 Office Open XML 문서 만들기(C#)](./creating-the-source-office-open-xml-document.md)를 참조하세요.  
   
  이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.  
   
@@ -320,15 +320,15 @@ StyleName:Code ><
   
  물론 여러 가지 방법으로 이 예제를 개선할 수 있습니다. 예를 들어, 정규식을 사용하여 텍스트를 검색할 수 있으며 특정 디렉터리의 모든 Word 파일을 반복할 수도 있습니다.  
   
- 이 예제의 성능은 단일 쿼리로 작성된 경우의 성능과 비슷합니다. 각 쿼리가 지연된 방식으로 구현되기 때문에 각 쿼리는 쿼리가 반복될 때까지 결과를 생성하지 않습니다. 실행 및 지연 계산에 대한 자세한 내용은 [LINQ to XML에서 지연 실행 및 지연 계산(C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)을 참조하세요.  
+ 이 예제의 성능은 단일 쿼리로 작성된 경우의 성능과 비슷합니다. 각 쿼리가 지연된 방식으로 구현되기 때문에 각 쿼리는 쿼리가 반복될 때까지 결과를 생성하지 않습니다. 실행 및 지연 계산에 대한 자세한 내용은 [LINQ to XML에서 지연 실행 및 지연 계산(C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)을 참조하세요.  
   
 ## <a name="next-steps"></a>다음 단계  
  다음 단원에서는 WordprocessingML 문서에 대해 자세히 설명합니다.  
   
-- [Office Open XML WordprocessingML 문서 정보(C#)](../../../../csharp/programming-guide/concepts/linq/wordprocessingml-document-with-styles.md)  
+- [Office Open XML WordprocessingML 문서 정보(C#)](./wordprocessingml-document-with-styles.md)  
   
 ## <a name="see-also"></a>참고 항목
 
-- [자습서: WordprocessingML 문서에서 내용 조작(C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
-- [순수 함수를 사용하여 리팩터링(C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)
-- [LINQ to XML에서 지연 실행 및 지연 계산(C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [자습서: WordprocessingML 문서에서 내용 조작(C#)](./shape-of-wordprocessingml-documents.md)
+- [순수 함수를 사용하여 리팩터링(C#)](./refactoring-using-a-pure-function.md)
+- [LINQ to XML에서 지연 실행 및 지연 계산(C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

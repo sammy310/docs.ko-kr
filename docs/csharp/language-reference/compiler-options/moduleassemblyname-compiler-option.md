@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: 9e4768b598f6046ffb7a0ac014d8594eac40309f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d57279128c0909ba3e62d55d596705cfde6be75c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593049"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606669"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname(C# 컴파일러 옵션)
 .netmodule에서 public이 아닌 형식에 액세스할 수 있는 어셈블리를 지정합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "64593049"
  `assembly_name`  
  .netmodule에서 public이 아닌 형식에 액세스할 수 있는 어셈블리의 이름입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  **-moduleassemblyname**은 .netmodule을 빌드할 때와 다음 조건이 충족되는 경우 사용해야 합니다.  
   
 - .netmodule은 기존 어셈블리의 public이 아닌 형식에 액세스해야 합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "64593049"
   
 - 기존 어셈블리는 friend 어셈블리(friend assembly)에 .netmodule을 빌드할 어셈블리에 대한 액세스를 부여합니다.  
   
- .netmodule 빌드 방법에 대한 자세한 내용은 [-target:module(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)을 참조하세요.  
+ .netmodule 빌드 방법에 대한 자세한 내용은 [-target:module(C# 컴파일러 옵션)](./target-module-compiler-option.md)을 참조하세요.  
   
  friend 어셈블리에 대한 자세한 내용은 [Friend 어셈블리](../../../standard/assembly/friend-assemblies.md)를 참조하세요.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "64593049"
   
  이 컴파일러 옵션은 Visual Studio에서 사용할 수 없으며 프로그래밍 방식으로 변경할 수 없습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 샘플에서는 private 형식을 사용하여 어셈블리를 빌드하므로 friend 어셈블리가 csman_an_assembly라는 어셈블리에 액세스할 수 있습니다.  
   
 ```csharp  
@@ -65,7 +65,7 @@ class An_Internal_Class
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 샘플은 어셈블리 moduleassemblyname_1.dll에 public이 아닌 형식에 액세스하는 .netmodule을 빌드합니다. 이 .netmodule이 csman_an_assembly라는 어셈블리에 빌드될 것임을 알기 때문에 **-moduleassemblyname**을 지정하여 .netmodule이 friend 어셈블리(friend assembly)에 csman_an_assembly에 대한 액세스를 부여한 어셈블리의 public이 아닌 형식에 액세스하도록 할 수 있습니다.  
   
 ```csharp  
@@ -79,7 +79,7 @@ class B {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 코드 샘플에서는 이전에 빌드한 어셈블리와 .netmodule을 참조하여 csman_an_assembly 어셈블리를 빌드합니다.  
   
 ```csharp  
@@ -97,5 +97,5 @@ class A {
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)
+- [C# 컴파일러 옵션](./index.md)
 - [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)

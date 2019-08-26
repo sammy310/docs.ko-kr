@@ -6,12 +6,12 @@ helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: bd49834c45f6e07a99be5a1f4293e938eed2cc77
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: f6977fa6c5a8909d6108a5ccfc140b89a4fdd5a4
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267728"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596568"
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>개체 및 컬렉션 이니셜라이저(C# 프로그래밍 가이드)
 
@@ -58,7 +58,7 @@ public string this[char c, int i] {  set { ... }; }
 
 ## <a name="object-initializers-with-anonymous-types"></a>익명 형식의 개체 이니셜라이저
 
-개체 이니셜라이저는 모든 컨텍스트에서 사용할 수 있지만 특히 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 식에 유용합니다. 쿼리 식은 [무명 형식](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)을 자주 사용합니다. 이 형식은 다음 선언에 표시된 바와 같이 개체 이니셜라이저를 사용하는 경우에만 초기화될 수 있습니다.  
+개체 이니셜라이저는 모든 컨텍스트에서 사용할 수 있지만 특히 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 식에 유용합니다. 쿼리 식은 [무명 형식](./anonymous-types.md)을 자주 사용합니다. 이 형식은 다음 선언에 표시된 바와 같이 개체 이니셜라이저를 사용하는 경우에만 초기화될 수 있습니다.  
 
 ```csharp
 var pet = new { Age = 10, Name = "Fluffy" };  

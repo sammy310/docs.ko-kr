@@ -6,15 +6,15 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: f8924f5a1e93a616b114506f383242fd2fde615c
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 6d1a39008ebb965649104c2e74241780731911bb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433566"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596028"
 ---
 # <a name="static-constructors-c-programming-guide"></a>정적 생성자(C# 프로그래밍 가이드)
-정적 생성자는 [정적](../../../csharp/language-reference/keywords/static.md) 데이터를 초기화하거나 한 번만 수행해야 하는 특정 작업을 수행하는 데 사용됩니다. 첫 번째 인스턴스가 만들어지거나 정적 멤버가 참조되기 전에 자동으로 호출됩니다.  
+정적 생성자는 [정적](../../language-reference/keywords/static.md) 데이터를 초기화하거나 한 번만 수행해야 하는 특정 작업을 수행하는 데 사용됩니다. 첫 번째 인스턴스가 만들어지거나 정적 멤버가 참조되기 전에 자동으로 호출됩니다.  
   
  [!code-csharp[csProgGuideObjects#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#14)]  
  
@@ -31,9 +31,9 @@ ms.locfileid: "68433566"
 
 - 사용자는 프로그램에서 정적 생성자가 실행되는 시기를 제어할 수 없습니다.
   
-- 정적 생성자는 첫 번째 인스턴스가 만들어지거나 정적 멤버가 참조되기 전에 자동으로 호출되어 [클래스](../../../csharp/language-reference/keywords/class.md)를 초기화합니다. 정적 생성자는 인스턴스 생성자보다 먼저 실행됩니다. 유형의 정적 생성자는 이벤트 또는 대리자에 할당된 정적 메서드가 호출될 때 호출되며 할당될 때는 호출되지 않는다는 점에 유의합니다. 정적 필드 변수 이니셜라이저가 정적 생성자의 클래스에 있는 경우 정적 생성자가 실행되기 직전에, 클래스 선언에 나타나는 텍스트 순서대로 실행됩니다.
+- 정적 생성자는 첫 번째 인스턴스가 만들어지거나 정적 멤버가 참조되기 전에 자동으로 호출되어 [클래스](../../language-reference/keywords/class.md)를 초기화합니다. 정적 생성자는 인스턴스 생성자보다 먼저 실행됩니다. 유형의 정적 생성자는 이벤트 또는 대리자에 할당된 정적 메서드가 호출될 때 호출되며 할당될 때는 호출되지 않는다는 점에 유의합니다. 정적 필드 변수 이니셜라이저가 정적 생성자의 클래스에 있는 경우 정적 생성자가 실행되기 직전에, 클래스 선언에 나타나는 텍스트 순서대로 실행됩니다.
 
-- 정적 필드를 초기화하는 정적 생성자를 제공하지 않으면 모든 정적 필드가 [기본값 표](../../../csharp/language-reference/keywords/default-values-table.md)에 나열된 기본값으로 초기화됩니다. 
+- 정적 필드를 초기화하는 정적 생성자를 제공하지 않으면 모든 정적 필드가 [기본값 표](../../language-reference/keywords/default-values-table.md)에 나열된 기본값으로 초기화됩니다. 
   
 - 정적 생성자가 예외를 throw하는 경우 런타임에서 생성자를 다시 호출하지 않으며, 프로그램을 실행 중인 애플리케이션 도메인의 수명 동안 형식이 초기화되지 않은 상태로 유지됩니다. 가장 일반적으로, 정적 생성자가 형식을 인스턴스화할 수 없는 경우 또는 정적 생성자 내에서 발생하는 처리되지 않은 예외에 대해 <xref:System.TypeInitializationException> 예외가 throw됩니다. 소스 코드에서 명시적으로 정의되지 않은 암시적 정적 생성자의 경우 문제 해결을 위해 IL(중간 언어) 코드를 검사해야 할 수 있습니다.
 
@@ -61,10 +61,10 @@ ms.locfileid: "68433566"
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [클래스 및 구조체](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [생성자](../../../csharp/programming-guide/classes-and-structs/constructors.md)
-- [정적 클래스 및 정적 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
-- [종료자](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [클래스 및 구조체](./index.md)
+- [생성자](./constructors.md)
+- [정적 클래스 및 정적 클래스 멤버](./static-classes-and-static-class-members.md)
+- [종료자](./destructors.md)
 - [생성자 디자인 지침](../../../standard/design-guidelines/constructor.md#type-constructor-guidelines)
 - [보안 경고 - CA2121: 정적 생성자는 private이어야 합니다.](https://docs.microsoft.com/visualstudio/code-quality/ca2121-static-constructors-should-be-private)

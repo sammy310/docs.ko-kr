@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - add event accessor [C#]
 ms.assetid: faf30b99-10e8-45cd-ab9a-57585d4d1d8d
-ms.openlocfilehash: 1f699e5729354d13bfbe29810bf2c4baf91d2382
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1cf82e3d048e465d533e87dc639a13071b41544a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147916"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606049"
 ---
 # <a name="add-c-reference"></a>add(C# 참조)
-`add` 상황별 키워드는 클라이언트 코드가 [event](../../../csharp/language-reference/keywords/event.md)를 구독할 때 호출되는 사용자 지정 이벤트 접근자를 정의하는 데 사용됩니다. 사용자 지정 `add` 접근자를 제공하는 경우 [remove](../../../csharp/language-reference/keywords/remove.md) 접근자도 제공해야 합니다.  
+`add` 상황별 키워드는 클라이언트 코드가 [event](./event.md)를 구독할 때 호출되는 사용자 지정 이벤트 접근자를 정의하는 데 사용됩니다. 사용자 지정 `add` 접근자를 제공하는 경우 [remove](./remove.md) 접근자도 제공해야 합니다.  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 사용자 지정 `add` 및 [remove](../../../csharp/language-reference/keywords/remove.md) 접근자가 있는 이벤트를 보여 줍니다. 전체 예제를 보려면 [방법:  인터페이스 이벤트 구현](../../../csharp/programming-guide/events/how-to-implement-interface-events.md)을 참조하세요.  
+## <a name="example"></a>예  
+ 다음 예제에서는 사용자 지정 `add` 및 [remove](./remove.md) 접근자가 있는 이벤트를 보여 줍니다. 전체 예제를 보려면 [방법:  인터페이스 이벤트 구현](../../programming-guide/events/how-to-implement-interface-events.md)을 참조하세요.  
   
 [!code-csharp[csrefKeywordsContextual#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#15)]
   
@@ -26,4 +26,4 @@ ms.locfileid: "59147916"
   
 ## <a name="see-also"></a>참고 항목
 
-- [이벤트](../../../csharp/programming-guide/events/index.md)
+- [이벤트](../../programming-guide/events/index.md)

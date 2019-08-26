@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
-ms.openlocfilehash: f4e3c3edbe1d542f9bf5c984c403e0486a9da61b
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: b4ac4fd3277fb53251e87321500d1b8007458037
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611980"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608529"
 ---
 # <a name="line-c-reference"></a>#line(C# 참조)
 
@@ -49,7 +49,7 @@ MainClass.cs(12,16): warning CS0168: The variable 's' is declared but never used
 MainClass.cs(13,16): warning CS0168: The variable 'd' is declared but never used
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 `#line` 지시문은 빌드 프로세스의 자동화된 중간 단계에서 사용할 수 있습니다. 예를 들어 원래 소스 코드 파일에서 줄이 제거되었지만 여전히 컴파일러에서 파일의 원래 줄 번호 매기기에 따라 출력을 생성하려는 경우, 줄을 제거한 다음 `#line`을 사용하여 원래 줄 번호 매기기를 시뮬레이트할 수 있습니다.
 
@@ -83,6 +83,6 @@ class MainClass
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 참조](../../../csharp/language-reference/index.md)
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [C# 전처리기 지시문](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [C# 참조](../index.md)
+- [C# 프로그래밍 가이드](../../programming-guide/index.md)
+- [C# 전처리기 지시문](./index.md)

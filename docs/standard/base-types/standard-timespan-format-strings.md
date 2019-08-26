@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e67861a32d5863e4c1b4d9b147c507c1bb54c39
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: bc2ca7a94ffb19f62f354bdfc3040490b57e2689
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "66491103"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968545"
 ---
 # <a name="standard-timespan-format-strings"></a>표준 TimeSpan 서식 문자열
 <a name="Top"></a> 표준 <xref:System.TimeSpan> 형식 문자열은 단일 형식 지정자를 사용하여 서식 지정 작업으로 생성되는 <xref:System.TimeSpan> 값의 텍스트 표현을 정의합니다. 공백을 포함하여 문자가 두 개 이상 포함된 형식 문자열은 사용자 지정 <xref:System.TimeSpan> 형식 문자열로 해석됩니다. 자세한 내용은 [사용자 지정 TimeSpan 서식 문자열](../../../docs/standard/base-types/custom-timespan-format-strings.md)을 참조하세요.  
@@ -67,7 +67,7 @@ ms.locfileid: "66491103"
  "g" 및 "G" 형식 지정자와 달리 "c" 형식 지정자는 문화권을 구분하지 않으며, .NET Framework 4 이전의 모든 .NET Framework 버전에 공통적으로 적용되는 고정된 <xref:System.TimeSpan> 값의 문자열 표현을 생성합니다. “c”는 기본 <xref:System.TimeSpan> 형식 문자열입니다. 즉, <xref:System.TimeSpan.ToString?displayProperty=nameWithType> 메서드는 “c” 형식 문자열을 사용하여 시간 간격 값의 서식을 지정합니다.  
   
 > [!NOTE]
->  <xref:System.TimeSpan>은 "c" 표준 형식 문자열과 동작이 동일한 "t" 및 "T" 표준 형식 문자열도 지원합니다.  
+> <xref:System.TimeSpan>은 "c" 표준 형식 문자열과 동작이 동일한 "t" 및 "T" 표준 형식 문자열도 지원합니다.  
   
  다음 예제에서는 두 <xref:System.TimeSpan> 개체를 인스턴스화한 다음 해당 개체를 사용하여 산술 연산을 수행하고 결과를 표시합니다. 각 경우에서는 복합 서식을 사용하여 "c" 형식 지정자를 통해 <xref:System.TimeSpan> 값을 표시합니다.  
   

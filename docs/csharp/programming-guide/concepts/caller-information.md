@@ -2,12 +2,12 @@
 title: 호출자 정보(C#)
 ms.date: 07/20/2015
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
-ms.openlocfilehash: 4a0e4d6ecad1863832a33ba91485d0c12675cd57
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4b2c34945b47db01b0e655f68f92e4dae7445c2c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50185276"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595345"
 ---
 # <a name="caller-information-c"></a>호출자 정보(C#)
 
@@ -81,7 +81,7 @@ public void TraceMessage(string message,
 
 ## <a name="see-also"></a>참고 항목
 
-- [특성(C#)](../../../csharp/programming-guide/concepts/attributes/index.md)
-- [공통 특성(C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)
-- [명명된 인수 및 선택적 인수](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
-- [프로그래밍 개념(C#)](../../../csharp/programming-guide/concepts/index.md)
+- [특성(C#)](./attributes/index.md)
+- [공통 특성(C#)](./attributes/common-attributes.md)
+- [명명된 인수 및 선택적 인수](../classes-and-structs/named-and-optional-arguments.md)
+- [프로그래밍 개념(C#)](./index.md)

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: ef219f2b98e37b8a62d3ee7b88dbc5374d87fca5
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 8b2e6fdc6248ca65213ea83942d792f983bd3b3b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423538"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588387"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>방법: 문자열을 숫자로 변환(C# 프로그래밍 가이드)
 
-다양한 숫자 형식(`int`, `long`, `double` 등)에 있는 `Parse` 또는 `TryParse` 메서드를 호출하거나 <xref:System.Convert?displayProperty=nameWithType> 클래스의 메서드를 사용하여 [문자열](../../../csharp/language-reference/keywords/string.md)을 숫자로 변환할 수 있습니다.  
+다양한 숫자 형식(`int`, `long`, `double` 등)에 있는 `Parse` 또는 `TryParse` 메서드를 호출하거나 <xref:System.Convert?displayProperty=nameWithType> 클래스의 메서드를 사용하여 [문자열](../../language-reference/keywords/string.md)을 숫자로 변환할 수 있습니다.  
   
  문자열이 있는 경우 `TryParse` 메서드(예: [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)) 또는 `Parse` 메서드([`var number = int.Parse("11")`](xref:System.Int32.Parse%2A))를 호출하면 약간 더 효율적이고 간단합니다.  <xref:System.Convert> 메서드 사용은 <xref:System.IConvertible>을 구현하는 일반 개체에 더 유용합니다.  
   
- `Parse` 또는 `TryParse` 메서드는 <xref:System.Int32?displayProperty=nameWithType> 형식과 같이 문자열에 포함되는 숫자 형식에서 사용할 수 있습니다.  <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> 메서드는 <xref:System.Int32.Parse%2A>를 내부적으로 사용합니다.  `Parse` 메서드는 변환된 숫자를 반환합니다. `TryParse` 메서드는 변환에 성공했는지 여부를 나타내는 <xref:System.Boolean> 값을 반환하고 변환된 숫자를 [`out` 매개 변수](../../../csharp/language-reference/keywords/out.md)로 반환합니다. 문자열이 유효한 형식이 아닌 경우 `Parse`는 예외를 throw하는 반면, `TryParse`는 [false](../../../csharp/language-reference/keywords/false-literal.md)를 반환합니다. `Parse` 메서드를 호출할 때는 항상 예외 처리를 사용하여 구문 분석 작업이 실패하는 이벤트에서 <xref:System.FormatException>을 catch해야 합니다.  
+ `Parse` 또는 `TryParse` 메서드는 <xref:System.Int32?displayProperty=nameWithType> 형식과 같이 문자열에 포함되는 숫자 형식에서 사용할 수 있습니다.  <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> 메서드는 <xref:System.Int32.Parse%2A>를 내부적으로 사용합니다.  `Parse` 메서드는 변환된 숫자를 반환합니다. `TryParse` 메서드는 변환에 성공했는지 여부를 나타내는 <xref:System.Boolean> 값을 반환하고 변환된 숫자를 [`out` 매개 변수](../../language-reference/keywords/out.md)로 반환합니다. 문자열이 유효한 형식이 아닌 경우 `Parse`는 예외를 throw하는 반면, `TryParse`는 [false](../../language-reference/keywords/false-literal.md)를 반환합니다. `Parse` 메서드를 호출할 때는 항상 예외 처리를 사용하여 구문 분석 작업이 실패하는 이벤트에서 <xref:System.FormatException>을 catch해야 합니다.  
   
 ## <a name="calling-the-parse-and-tryparse-methods"></a>Parse 및 TryParse 메서드 호출
 
@@ -51,12 +51,12 @@ ms.locfileid: "67423538"
 |`uint`|<xref:System.Convert.ToUInt32%28System.String%29>|  
 |`ulong`|<xref:System.Convert.ToUInt64%28System.String%29>|  
   
- 다음 예제에서는 <xref:System.Convert.ToInt32%28System.String%29?displayProperty=nameWithType> 메서드를 호출하여 입력 문자열을 [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)로 변환합니다. 예제에서는 이 메서드에서 throw할 수 있는 두 가지 가장 일반적인 예외인 <xref:System.FormatException>과 <xref:System.OverflowException>을 catch합니다. <xref:System.Int32.MaxValue?displayProperty=nameWithType>을 초과하지 않고 결과 숫자를 증분할 수 있는 경우 예제에서는 결과에 1을 더하고 출력을 표시합니다.  
+ 다음 예제에서는 <xref:System.Convert.ToInt32%28System.String%29?displayProperty=nameWithType> 메서드를 호출하여 입력 문자열을 [int](../../language-reference/builtin-types/integral-numeric-types.md)로 변환합니다. 예제에서는 이 메서드에서 throw할 수 있는 두 가지 가장 일반적인 예외인 <xref:System.FormatException>과 <xref:System.OverflowException>을 catch합니다. <xref:System.Int32.MaxValue?displayProperty=nameWithType>을 초과하지 않고 결과 숫자를 증분할 수 있는 경우 예제에서는 결과에 1을 더하고 출력을 표시합니다.  
   
 [!code-csharp[Parsing with Convert methods](~/samples/snippets/csharp/programming-guide/string-to-number/convert/program.cs)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [유형](../../../csharp/programming-guide/types/index.md)
-- [방법: 문자열이 숫자 값을 나타내는지 확인](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
+- [유형](./index.md)
+- [방법: 문자열이 숫자 값을 나타내는지 확인](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
 - [.NET Framework 4 서식 유틸리티](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

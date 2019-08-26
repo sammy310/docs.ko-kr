@@ -2,17 +2,17 @@
 title: C#에서 XML 트리 만들기(LINQ to XML)
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: 37970b58519f5ff28165b45ebc729cc0a7f447d3
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a77171ebbc07e54f6988fb97aff197b4c6d31721
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487511"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594627"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>C#에서 XML 트리 만들기(LINQ to XML)
 이 단원에서는 C#에서 XML 트리를 만드는 방법에 대해 설명합니다.  
   
- LINQ 쿼리의 결과를 <xref:System.Xml.Linq.XElement>의 내용으로 사용하는 방법에 대한 자세한 내용은 [함수 생성(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)을 참조하세요.  
+ LINQ 쿼리의 결과를 <xref:System.Xml.Linq.XElement>의 내용으로 사용하는 방법에 대한 자세한 내용은 [함수 생성(LINQ to XML)(C#)](./functional-construction-linq-to-xml.md)을 참조하세요.  
   
 ## <a name="constructing-elements"></a>요소 생성
  <xref:System.Xml.Linq.XElement> 및 <xref:System.Xml.Linq.XAttribute> 생성자의 시그니처를 사용하여 요소나 특성의 내용을 생성자에 인수로 전달할 수 있습니다. 생성자 중 하나의 인수 수가 고정되어 있지 않기 때문에 원하는 수의 자식 요소를 전달할 수 있습니다. 물론 이러한 각 자식 요소에는 자신의 자식 요소가 포함될 수 있습니다. 각 요소에는 원하는 수의 특성을 추가할 수 있습니다.  
@@ -236,4 +236,4 @@ Console.WriteLine("Child2 was {0}",
 
 ## <a name="see-also"></a>참고 항목
 
-- [XML 트리 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [XML 트리 만들기(C#)](./linq-to-xml-overview.md)

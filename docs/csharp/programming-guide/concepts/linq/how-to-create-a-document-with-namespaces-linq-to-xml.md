@@ -2,12 +2,12 @@
 title: '방법: 네임스페이스로 문서 만들기(C#)(LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-ms.openlocfilehash: 9b9e81a131d4e17ce2d87dd3f511ed66e370d884
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 180dc5138f8f21b3e52e4a8b3cee4748cafdd0f5
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710000"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593889"
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>방법: 네임스페이스로 문서 만들기(C#)(LINQ to XML)
 이 항목에서는 네임스페이스를 사용하여 문서를 만드는 방법을 보여 줍니다.  
@@ -123,7 +123,7 @@ Console.WriteLine(root);
   
  이 방법에는 성능과 관련된 문제가 있습니다. 확장된 이름이 포함된 문자열을 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에 전달할 때마다 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 이름을 구문 분석하고 원자화된 네임스페이스를 찾은 다음 원자화된 이름을 찾아야 합니다. 이 과정에는 CPU 시간이 필요합니다. 성능이 중요한 경우에는 <xref:System.Xml.Linq.XNamespace> 개체를 명시적으로 선언하고 사용할 수 있습니다.  
   
- 성능이 중요한 경우 자세한 내용을 보려면 [XName 개체의 사전 원자화(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md)를 참조하세요.  
+ 성능이 중요한 경우 자세한 내용을 보려면 [XName 개체의 사전 원자화(LINQ to XML)(C#)](./pre-atomization-of-xname-objects-linq-to-xml.md)를 참조하세요.  
   
 ```csharp  
 // Create an XML tree in a namespace, with a specified prefix  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c624866a23eb32f57953847e8a229f6fa5e7b4bb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b550f504ecbc05e6790652ee1432da3a26ceacb6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632964"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915584"
 ---
 # <a name="dynamic-language-runtime-overview"></a>동적 언어 런타임 개요
 
@@ -95,7 +95,7 @@ DLR은 호출 사이트에서 바인더를 사용하여 .NET Framework뿐 아니
 
 - <xref:System.Dynamic.ExpandoObject>
 - <xref:System.Dynamic.DynamicObject>
-- [공용 언어 런타임](../../../docs/standard/clr.md)
+- [공용 언어 런타임](../../standard/clr.md)
 - [식 트리(C#)](../../csharp/programming-guide/concepts/expression-trees/index.md)
 - [식 트리(Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [연습: 동적 개체 만들기 및 사용](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+- [연습: 동적 개체 만들기 및 사용](../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

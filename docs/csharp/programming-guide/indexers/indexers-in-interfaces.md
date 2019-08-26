@@ -6,15 +6,15 @@ helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: f277758a10b045a6365adfe931ce95d64eb8e445
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cea8d157e89597ddf4633cf7f7d3df7044db9ec7
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608571"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589448"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>인터페이스의 인덱서(C# 프로그래밍 가이드)
-[interface](../../../csharp/language-reference/keywords/interface.md)에 인덱서를 선언할 수 있습니다. 인터페이스 인덱서 접근자와 [class](../../../csharp/language-reference/keywords/class.md) 인덱서 접근자 간에는 다음과 같은 차이점이 있습니다.  
+[interface](../../language-reference/keywords/interface.md)에 인덱서를 선언할 수 있습니다. 인터페이스 인덱서 접근자와 [class](../../language-reference/keywords/class.md) 인덱서 접근자 간에는 다음과 같은 차이점이 있습니다.  
   
 - 인터페이스 접근자는 한정자를 사용하지 않습니다.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "64608571"
   
  인덱서의 시그니처는 동일한 인터페이스에 선언된 다른 모든 인덱서의 시그니처와 달라야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 인터페이스 인덱서를 구현하는 방법을 보여 줍니다.  
   
  [!code-csharp[csProgGuideIndexers#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#4)]  
@@ -61,7 +61,7 @@ string ICitizen.this[int index]
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [인덱서](../../../csharp/programming-guide/indexers/index.md)
-- [속성](../../../csharp/programming-guide/classes-and-structs/properties.md)
-- [인터페이스](../../../csharp/programming-guide/interfaces/index.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [인덱서](./index.md)
+- [속성](../classes-and-structs/properties.md)
+- [인터페이스](../interfaces/index.md)

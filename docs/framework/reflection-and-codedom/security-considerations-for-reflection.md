@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26a581cc17859f7f4e0215017bfc405eae3cc15e
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 791c6c8b0396ec958ff0c8378038051b23d486d1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660881"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956704"
 ---
 # <a name="security-considerations-for-reflection"></a>리플렉션의 보안 고려 사항
 
@@ -96,9 +96,9 @@ ms.locfileid: "67660881"
 
 - mscorlib.dll은 완전히 신뢰할 수 있어 어셈블리 A에 부여되지 않은 권한이 있으므로 어셈블리 A가 리플렉션을 사용하여 mscorlib.dll과 같은 .NET Framework 어셈블리의 private 멤버에 액세스할 수 없습니다. 런타임에 코드 액세스 보안이 스택을 이동하는 경우 <xref:System.MemberAccessException>이 발생합니다.
 
-## <a name="serialization"></a>직렬화
+## <a name="serialization"></a>Serialization
 
-직렬화를 위해 <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.SecurityPermission>은 접근성에 관계없이 직렬화 가능 형식의 멤버를 가져오고 설정하는 기능을 제공합니다. 이 권한을 통해 코드에서 인스턴스의 private 상태를 검색하고 변경할 수 있습니다. 적절한 권한이 부여되는 것 외에도 메타데이터에서 형식이 직렬화 가능으로 [표시](../../../docs/standard/attributes/applying-attributes.md)되어야 합니다.
+직렬화를 위해 <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.SecurityPermission>은 접근성에 관계없이 직렬화 가능 형식의 멤버를 가져오고 설정하는 기능을 제공합니다. 이 권한을 통해 코드에서 인스턴스의 private 상태를 검색하고 변경할 수 있습니다. 적절한 권한이 부여되는 것 외에도 메타데이터에서 형식이 직렬화 가능으로 [표시](../../standard/attributes/applying-attributes.md)되어야 합니다.
 
 ## <a name="parameters-of-type-methodinfo"></a>MethodInfo 형식의 매개 변수
 
@@ -121,5 +121,5 @@ ms.locfileid: "67660881"
 - [코드 액세스 보안](../../../docs/framework/misc/code-access-security.md)
 - [리플렉션 내보내기의 보안 문제점](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
 - [형식 정보 보기](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
-- [특성 적용](../../../docs/standard/attributes/applying-attributes.md)
+- [특성 적용](../../standard/attributes/applying-attributes.md)
 - [사용자 지정 특성 액세스](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)

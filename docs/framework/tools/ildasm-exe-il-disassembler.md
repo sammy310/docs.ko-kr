@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e476e92ba4a9366a8a380c53d7dcd0d4dddb16e4
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 38a6b27ea0ba8b9d9e2af883db1fc3350d60494a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567312"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912485"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe(IL 디스어셈블러)
 
@@ -53,7 +53,7 @@ ildasm [options] [PEfilename] [options]
 |**/linenum**|원본 소스 줄에 대한 참조를 포함합니다.|
 |**/nobar**|디스어셈블리 진행률 표시줄 팝업 창을 표시하지 않습니다.|
 |**/noca**|사용자 지정 특성 출력을 생성하지 않습니다.|
-|**/project**|메타데이터를 기본 Windows 런타임에서 표시되는 방식 대신, 관리 코드에 표시되는 방식으로 표시합니다. 만약 `PEfilename`이 Windows 메타데이터( *.winmd*) 파일이 아니라면, 이 옵션은 효과가 없습니다. [Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)을 참조하세요.|
+|**/project**|메타데이터를 기본 Windows 런타임에서 표시되는 방식 대신, 관리 코드에 표시되는 방식으로 표시합니다. 만약 `PEfilename`이 Windows 메타데이터( *.winmd*) 파일이 아니라면, 이 옵션은 효과가 없습니다. [Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)을 참조하세요.|
 |**/pubonly**|공용 형식 및 멤버만 디스어셈블합니다. **/visibility:PUB**와 같습니다.|
 |**/quoteallnames**|모든 이름을 작은따옴표 내에 포함시킵니다.|
 |**/raweh**|예외 처리 절을 원시 형식으로 표시합니다.|
@@ -188,5 +188,5 @@ ildasm /item:"MyClass::MyMethod(class [mscorlib]System.AppDomain(class [mscorlib
 
 - [도구](../../../docs/framework/tools/index.md)
 - [Ilasm.exe(IL 어셈블러)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)
-- [관리되는 실행 프로세스](../../../docs/standard/managed-execution-process.md)
+- [관리되는 실행 프로세스](../../standard/managed-execution-process.md)
 - [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
