@@ -39,3 +39,5 @@
       href: resolve-ambiguous-times.md
     - name: '방법: 사용자에게 모호한 시간 확인 작업 허용'
       href: let-users-resolve-ambiguous-times.md
+    - name: System.Text.Json의 DateTime 및 DateTimeOffset 지원
+      href: system-text-json-support.md

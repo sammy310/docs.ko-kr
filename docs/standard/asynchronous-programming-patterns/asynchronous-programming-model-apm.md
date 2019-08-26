@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16e500a645df2b58fb2d2fd402120556922d1800
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3c03a6dadae98d75b06b96bb3cde67db4747b8c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628952"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950877"
 ---
 # <a name="asynchronous-programming-model-apm"></a>APM(비동기 프로그래밍 모델)
 <xref:System.IAsyncResult> 디자인 패턴을 사용하는 비동기 작업은 각각 비동기 작업 *OperationName*을 시작하고 종료하는 `BeginOperationName` 및 `EndOperationName`이라는 두 개의 메서드로 구현됩니다. 예를 들어 <xref:System.IO.FileStream> 클래스는 파일에서 바이트를 비동기적으로 읽는 <xref:System.IO.FileStream.BeginRead%2A> 및 <xref:System.IO.FileStream.EndRead%2A> 메서드를 제공합니다. 이러한 메서드는 비동기 버전의 <xref:System.IO.FileStream.Read%2A> 메서드를 구현합니다.  
   
 > [!NOTE]
->  .NET Framework 4부터는 작업 병렬 라이브러리에서 비동기 및 병렬 프로그래밍을 위한 새로운 모델을 제공합니다. 자세한 내용은 [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) 및 [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)을 참조하세요.  
+> .NET Framework 4부터는 작업 병렬 라이브러리에서 비동기 및 병렬 프로그래밍을 위한 새로운 모델을 제공합니다. 자세한 내용은 [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) 및 [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)을 참조하세요.  
   
  `BeginOperationName`을 호출한 후에는 비동기 작업이 다른 스레드에서 발생되는 동안 애플리케이션에서 호출 스레드에 대한 명령을 계속 실행할 수 있습니다. `BeginOperationName`에 대한 각 호출에 대해 애플리케이션도 `EndOperationName`을 호출하여 작업 결과를 가져와야 합니다.  
   
@@ -48,10 +48,10 @@ ms.locfileid: "64628952"
  `EndOperationName`이 호출되었을 때 <xref:System.IAsyncResult> 개체에 표시되는 비동기 작업이 완료되지 않은 경우에는 `EndOperationName`에서 비동기 작업이 완료될 때까지 해당 호출 스레드를 차단합니다. 비동기 작업이 throw한 예외는 `EndOperationName` 메서드에서 throw됩니다. 같은 <xref:System.IAsyncResult>로 `EndOperationName` 메서드를 여러 번 호출한 데 따른 효과는 정의되어 있지 않습니다. 마찬가지로 관련된 Begin 메서드에서 반환하지 않은 <xref:System.IAsyncResult>로 `EndOperationName` 메서드를 호출하는 경우도 정의되어 있지 않습니다.  
   
 > [!NOTE]
->  정의되지 않은 두 시나리오 중 하나의 경우 구현자는 <xref:System.InvalidOperationException>을 throw하는 것을 고려해야 합니다.  
+> 정의되지 않은 두 시나리오 중 하나의 경우 구현자는 <xref:System.InvalidOperationException>을 throw하는 것을 고려해야 합니다.  
   
 > [!NOTE]
->  이 디자인 패턴의 구현자는 <xref:System.IAsyncResult.IsCompleted%2A> 를 true로 설정하여 비동기 콜백 메서드(지정된 경우)를 호출하고 <xref:System.IAsyncResult.AsyncWaitHandle%2A>을 신호로 보내서 비동기 작업이 완료되었다는 것을 호출자에게 알려야 합니다.  
+> 이 디자인 패턴의 구현자는 <xref:System.IAsyncResult.IsCompleted%2A> 를 true로 설정하여 비동기 콜백 메서드(지정된 경우)를 호출하고 <xref:System.IAsyncResult.AsyncWaitHandle%2A>을 신호로 보내서 비동기 작업이 완료되었다는 것을 호출자에게 알려야 합니다.  
   
  애플리케이션 개발자는 비동기 작업의 결과에 액세스하기 위해 여러 디자인을 선택할 수 있습니다. 어떤 선택이 올바른 선택인지는 애플리케이션에 작업이 완료되는 동안 실행할 수 있는 지침이 있는지 여부에 따라 달라집니다. 비동기 작업의 결과를 받을 때까지 애플리케이션이 추가 작업을 수행할 수 없는 경우 결과를 사용할 수 있을 때까지 애플리케이션을 차단해야 합니다. 비동기 작업이 완료될 때까지 차단하려면 다음 방법 중 하나를 사용하면 됩니다.  
   

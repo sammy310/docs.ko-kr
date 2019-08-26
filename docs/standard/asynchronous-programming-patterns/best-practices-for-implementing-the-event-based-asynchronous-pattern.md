@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: 26e1fd4231964be5448229a6b3c7d90c0ba64499
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 561d0759af4f7557bae39540cbb00f8038726ddc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882508"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950804"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>최선의 이벤트 기반 비동기 패턴 구현 방법
 이벤트 기반 비동기 패턴은 익숙한 이벤트 및 대리자 의미 체계를 사용하여 클래스에 비동기 동작을 노출하는 효과적인 방법을 제공합니다. 이벤트 기반 비동기 패턴을 구현하려면 몇 가지 구체적인 동작 요구 사항을 따라야 합니다. 다음 섹션에서는 이벤트 기반 비동기 패턴을 따르는 클래스를 구현할 때 고려해야 할 요구 사항 및 지침을 설명합니다.  
@@ -125,7 +125,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
  클라이언트에 진행률, 증분 결과 및 완료를 보고하려면 <xref:System.ComponentModel.AsyncOperation.Post%2A>에 대해 <xref:System.ComponentModel.AsyncOperation.OperationCompleted%2A> 및 <xref:System.ComponentModel.AsyncOperation> 메서드를 호출합니다. <xref:System.ComponentModel.AsyncOperation>은 클라이언트의 이벤트 처리기에 대한 호출을 올바른 스레드 또는 컨텍스트로 마샬링하는 작업을 담당합니다.  
   
 > [!NOTE]
->  명시적으로 애플리케이션 모델의 정책에 반대하되 이벤트 기반 비동기 패턴 사용의 다른 이점을 이용하려는 경우 이러한 규칙을 피해 갈 수 있습니다. 예를 들어, Windows Forms에서 작동하는 클래스가 자유 스레드가 되도록 할 수 있습니다. 개발자가 암시된 제한 사항을 이해하는 한 자유 스레드 클래스를 만들 수 있습니다. 콘솔 애플리케이션은 <xref:System.ComponentModel.AsyncOperation.Post%2A> 호출 실행을 동기화하지 않습니다. 이로 인해 `ProgressChanged` 이벤트가 잘못 발생할 수 있습니다. <xref:System.ComponentModel.AsyncOperation.Post%2A> 호출이 serialize되어 실행되도록 하려면 <xref:System.Threading.SynchronizationContext?displayProperty=nameWithType> 클래스를 구현하여 설치합니다.  
+> 명시적으로 애플리케이션 모델의 정책에 반대하되 이벤트 기반 비동기 패턴 사용의 다른 이점을 이용하려는 경우 이러한 규칙을 피해 갈 수 있습니다. 예를 들어, Windows Forms에서 작동하는 클래스가 자유 스레드가 되도록 할 수 있습니다. 개발자가 암시된 제한 사항을 이해하는 한 자유 스레드 클래스를 만들 수 있습니다. 콘솔 애플리케이션은 <xref:System.ComponentModel.AsyncOperation.Post%2A> 호출 실행을 동기화하지 않습니다. 이로 인해 `ProgressChanged` 이벤트가 잘못 발생할 수 있습니다. <xref:System.ComponentModel.AsyncOperation.Post%2A> 호출이 serialize되어 실행되도록 하려면 <xref:System.Threading.SynchronizationContext?displayProperty=nameWithType> 클래스를 구현하여 설치합니다.  
   
  비동기 작업이 가능하도록 <xref:System.ComponentModel.AsyncOperation> 및 <xref:System.ComponentModel.AsyncOperationManager>를 사용하는 방법에 대한 자세한 내용은 [방법: 이벤트 기반 비동기 패턴을 지 원하는 구성 요소 구현](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)을 참조하세요.  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: a37109ab2712ea824baab95ca0b175cfa82aab3a
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 27001d1697def083580ecdc742b4b8db924545aa
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267909"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589418"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# 코딩 규칙(C# 프로그래밍 가이드)
  코딩 규칙은 다음과 같은 용도로 사용됩니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "67267909"
   
 ## <a name="naming-conventions"></a>명명 규칙  
   
-- [using 지시문](../../../csharp/language-reference/keywords/using-directive.md)이 포함되지 않는 간단한 예제에서 네임스페이스 한정자를 사용합니다. 프로젝트에서 네임스페이스를 기본적으로 가져오는 경우에는 해당 네임스페이스의 이름을 정규화하지 않아도 됩니다. 정규화된 이름은 한 줄에 표시하기가 너무 길면 다음 예제에 나와 있는 것처럼 점(.)으로 분할할 수 있습니다.  
+- [using 지시문](../../language-reference/keywords/using-directive.md)이 포함되지 않는 간단한 예제에서 네임스페이스 한정자를 사용합니다. 프로젝트에서 네임스페이스를 기본적으로 가져오는 경우에는 해당 네임스페이스의 이름을 정규화하지 않아도 됩니다. 정규화된 이름은 한 줄에 표시하기가 너무 길면 다음 예제에 나와 있는 것처럼 점(.)으로 분할할 수 있습니다.  
   
      [!code-csharp[csProgGuideCodingConventions#1](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#1)]  
   
@@ -81,11 +81,11 @@ ms.locfileid: "67267909"
   
 ### <a name="implicitly-typed-local-variables"></a>암시적으로 형식화한 지역 변수  
   
-- 할당 오른쪽에서 변수 형식이 명확하거나 정확한 형식이 중요하지 않으면 지역 변수에 대해 [암시적 형식](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)을 사용합니다.  
+- 할당 오른쪽에서 변수 형식이 명확하거나 정확한 형식이 중요하지 않으면 지역 변수에 대해 [암시적 형식](../classes-and-structs/implicitly-typed-local-variables.md)을 사용합니다.  
   
      [!code-csharp[csProgGuideCodingConventions#8](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#8)]  
   
-- 할당 오른쪽에서 변수 형식이 명확하지 않으면 [var](../../../csharp/language-reference/keywords/var.md)를 사용하지 않습니다.  
+- 할당 오른쪽에서 변수 형식이 명확하지 않으면 [var](../../language-reference/keywords/var.md)를 사용하지 않습니다.  
   
      [!code-csharp[csProgGuideCodingConventions#9](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#9)]  
   
@@ -93,9 +93,9 @@ ms.locfileid: "67267909"
   
      [!code-csharp[csProgGuideCodingConventions#10](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#10)]  
   
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md) 대신 `var`를 사용하지 않습니다.  
+- [dynamic](../../language-reference/keywords/dynamic.md) 대신 `var`를 사용하지 않습니다.  
   
-- [for](../../../csharp/language-reference/keywords/for.md) 및 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 루프의 루프 변수 형식을 결정하려면 암시적 형식을 사용합니다.  
+- [for](../../language-reference/keywords/for.md) 및 [foreach](../../language-reference/keywords/foreach-in.md) 루프의 루프 변수 형식을 결정하려면 암시적 형식을 사용합니다.  
   
      다음 예제에서는 `for` 문에서 암시적 형식을 사용합니다.  
   
@@ -125,11 +125,11 @@ ms.locfileid: "67267909"
   
 ### <a name="try-catch-and-using-statements-in-exception-handling"></a>예외 처리의 try-catch 및 using 문  
   
-- 대부분의 예외 처리에서는 [try-catch](../../../csharp/language-reference/keywords/try-catch.md) 문을 사용합니다.  
+- 대부분의 예외 처리에서는 [try-catch](../../language-reference/keywords/try-catch.md) 문을 사용합니다.  
   
      [!code-csharp[csProgGuideCodingConventions#16](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#16)]  
   
-- C# [using 문](../../../csharp/language-reference/keywords/using-statement.md)을 사용하면 코드를 간소화할 수 있습니다. `finally` 블록의 코드가 <xref:System.IDisposable.Dispose%2A> 메서드 호출뿐인 [try-finally](../../../csharp/language-reference/keywords/try-finally.md) 문이 있는 경우에는 `using` 문을 대신 사용합니다.  
+- C# [using 문](../../language-reference/keywords/using-statement.md)을 사용하면 코드를 간소화할 수 있습니다. `finally` 블록의 코드가 <xref:System.IDisposable.Dispose%2A> 메서드 호출뿐인 [try-finally](../../language-reference/keywords/try-finally.md) 문이 있는 경우에는 `using` 문을 대신 사용합니다.  
   
      [!code-csharp[csProgGuideCodingConventions#17](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#17)]  
   
@@ -163,7 +163,7 @@ ms.locfileid: "67267909"
   
 ### <a name="static-members"></a>정적 멤버  
   
-- *ClassName.StaticMember*와 같이 클래스 이름을 사용하여 [static](../../../csharp/language-reference/keywords/static.md) 멤버를 호출합니다. 이렇게 하면 정적 액세스가 명확하게 표시되므로 코드를 보다 쉽게 읽을 수 있습니다.  파생 클래스 이름을 사용하여 기본 클래스에 정의된 정적 멤버를 정규화해서는 안 됩니다.  이 코드는 컴파일되기는 하지만 가독성이 떨어지며 나중에 파생 클래스와 이름이 같은 정적 멤버를 추가하면 코드가 손상될 수도 있습니다.  
+- *ClassName.StaticMember*와 같이 클래스 이름을 사용하여 [static](../../language-reference/keywords/static.md) 멤버를 호출합니다. 이렇게 하면 정적 액세스가 명확하게 표시되므로 코드를 보다 쉽게 읽을 수 있습니다.  파생 클래스 이름을 사용하여 기본 클래스에 정의된 정적 멤버를 정규화해서는 안 됩니다.  이 코드는 컴파일되기는 하지만 가독성이 떨어지며 나중에 파생 클래스와 이름이 같은 정적 멤버를 추가하면 코드가 손상될 수도 있습니다.  
   
 ### <a name="linq-queries"></a>LINQ 쿼리  
   
@@ -183,13 +183,13 @@ ms.locfileid: "67267909"
   
      [!code-csharp[csProgGuideCodingConventions#25](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#25)]  
   
-- 위의 예제에 나와 있는 것처럼 [from](../../../csharp/language-reference/keywords/from-clause.md) 절 아래의 쿼리 절을 정렬합니다.  
+- 위의 예제에 나와 있는 것처럼 [from](../../language-reference/keywords/from-clause.md) 절 아래의 쿼리 절을 정렬합니다.  
   
-- 뒷부분의 쿼리 절이 필터링을 통해 범위가 좁아진 데이터 집합에 대해 작동하도록 다른 쿼리 절 앞에 [where](../../../csharp/language-reference/keywords/where-clause.md) 절을 사용합니다.  
+- 뒷부분의 쿼리 절이 필터링을 통해 범위가 좁아진 데이터 집합에 대해 작동하도록 다른 쿼리 절 앞에 [where](../../language-reference/keywords/where-clause.md) 절을 사용합니다.  
   
      [!code-csharp[csProgGuideCodingConventions#29](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#29)]  
   
-- 내부 컬렉션에 액세스하려면 [join](../../../csharp/language-reference/keywords/join-clause.md) 절 대신 여러 `from` 절을 사용합니다. 예를 들어 `Student` 개체 컬렉션이 각각 테스트 점수 컬렉션을 포함하는 경우 다음 쿼리를 실행하면 90점보다 높은 각 점수와 해당 점수를 받은 학생의 성이 반환됩니다.  
+- 내부 컬렉션에 액세스하려면 [join](../../language-reference/keywords/join-clause.md) 절 대신 여러 `from` 절을 사용합니다. 예를 들어 `Student` 개체 컬렉션이 각각 테스트 점수 컬렉션을 포함하는 경우 다음 쿼리를 실행하면 90점보다 높은 각 점수와 해당 점수를 받은 학생의 성이 반환됩니다.  
   
      [!code-csharp[csProgGuideCodingConventions#30](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#30)]  
   

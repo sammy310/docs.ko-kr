@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddf4b84d44abb353cb9a5e025291690fb14b9461
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: efa3abdcb7aa9db6dee4f772c1c1564947151c96
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267921"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949597"
 ---
 # <a name="standard-date-and-time-format-strings"></a>표준 날짜 및 시간 형식 문자열
 표준 날짜 및 시간 서식 문자열은 단일 서식 지정자를 사용하여 날짜 및 시간 값의 텍스트 표현을 정의합니다. 공백을 포함하여 문자가 두 개 이상 포함된 날짜 및 시간 서식 문자열은 사용자 지정 날짜 및 시간 서식 문자열로 해석됩니다. 자세한 내용은 [사용자 지정 날짜 및 시간 서식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)을 참조하세요. 표준 또는 사용자 지정 서식 문자열은 다음 두 가지 방법으로 사용할 수 있습니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "67267921"
      [!code-vb[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#3)]  
   
 > [!NOTE]
->  날짜와 시간 값 서식 지정에 사용되는 패턴 또는 문자열에 대한 자세한 내용은 <xref:System.Globalization.NumberFormatInfo> 클래스 항목을 참조하세요.  
+> 날짜와 시간 값 서식 지정에 사용되는 패턴 또는 문자열에 대한 자세한 내용은 <xref:System.Globalization.NumberFormatInfo> 클래스 항목을 참조하세요.  
   
  표준 서식 문자열을 보다 긴 고정 사용자 지정 서식 문자열에 대한 약식 표현으로 사용하는 경우도 있습니다. 네 개의 표준 서식 문자열이 다음 범주에 속합니다. "O" (또는 "o"), "R" (또는 "r"), "s" 및 "u". 이 문자열은 고정 문화권에 정의된 사용자 지정 서식 문자열에 대응되며, 문화권마다 동일하게 인식되는 날짜 및 시간 값에 대한 문자열 표현을 생성합니다. 다음 표에서는 이러한 네 가지 표준 날짜 및 시간 서식 문자열에 대해 설명합니다.  
   
