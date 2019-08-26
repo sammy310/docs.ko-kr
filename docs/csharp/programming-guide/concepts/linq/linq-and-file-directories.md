@@ -2,12 +2,12 @@
 title: LINQ 및 파일 디렉터리(C#)
 ms.date: 07/20/2015
 ms.assetid: b66c55e4-0f72-44e5-b086-519f9962335c
-ms.openlocfilehash: b2153d755b63e1ec14c11b5e94116f7d6b9490f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d2109fe7f4f907317275188057fa6e5e71b2679
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652373"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591981"
 ---
 # <a name="linq-and-file-directories-c"></a>LINQ 및 파일 디렉터리(C#)
 많은 파일 시스템 작업은 기본적으로 쿼리이므로 LINQ 접근 방식에 적합합니다.  
@@ -16,25 +16,25 @@ ms.locfileid: "54652373"
   
  이 단원에는 다음 항목이 포함되어 있습니다.  
   
- [방법: 지정된 특성 또는 이름을 갖는 파일 쿼리(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)  
+ [방법: 지정된 특성 또는 이름을 갖는 파일 쿼리(C#)](./how-to-query-for-files-with-a-specified-attribute-or-name.md)  
  하나 이상의 <xref:System.IO.FileInfo> 개체 속성을 검사하여 파일을 검색하는 방법을 보여 줍니다.  
   
- [방법: 확장명에 따라 파일 그룹화(LINQ)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
+ [방법: 확장명에 따라 파일 그룹화(LINQ)(C#)](./how-to-group-files-by-extension-linq.md)  
  파일 이름 확장명에 따라 <xref:System.IO.FileInfo> 개체의 그룹을 반환하는 방법을 보여 줍니다.  
   
- [방법: 폴더 집합의 전체 바이트 수 쿼리(LINQ)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)  
+ [방법: 폴더 집합의 전체 바이트 수 쿼리(LINQ)(C#)](./how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)  
  지정된 디렉터리 트리에 있는 모든 파일에서 전체 바이트 수를 반환하는 방법을 보여 줍니다.  
   
- [방법: 두 폴더의 내용 비교(LINQ)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)  
+ [방법: 두 폴더의 내용 비교(LINQ)(C#)](./how-to-compare-the-contents-of-two-folders-linq.md)  
  두 개의 지정된 폴더에 있는 모든 파일뿐만 아니라 특정 폴더에만 있는 모든 파일도 반환하는 방법을 보여 줍니다.  
   
- [방법: 디렉터리 트리에서 가장 큰 파일을 하나 이상 쿼리(LINQ)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)  
+ [방법: 디렉터리 트리에서 가장 큰 파일을 하나 이상 쿼리(LINQ)(C#)](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)  
  디렉터리 트리에서 가장 크거나 가장 작은 파일 또는 지정한 파일 수를 반환하는 방법을 보여 줍니다.  
   
- [방법: 디렉터리 트리의 중복 파일 쿼리(LINQ)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)  
+ [방법: 디렉터리 트리의 중복 파일 쿼리(LINQ)(C#)](./how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)  
  지정된 디렉터리 트리에서 둘 이상의 위치에 나타나는 모든 파일 이름을 그룹화하는 방법을 보여 줍니다. 또한 사용자 지정 비교자에 따라 보다 복잡한 비교를 수행하는 방법을 보여 줍니다.  
   
- [방법: 폴더의 파일 내용 쿼리(LINQ)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-the-contents-of-files-in-a-folder-lin.md)  
+ [방법: 폴더의 파일 내용 쿼리(LINQ)(C#)](./how-to-query-the-contents-of-files-in-a-folder-lin.md)  
  트리의 폴더를 반복하고, 각 파일을 열고, 파일의 내용을 쿼리하는 방법을 보여 줍니다.  
   
 ## <a name="comments"></a>설명  
@@ -42,4 +42,4 @@ ms.locfileid: "54652373"
   
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ to Objects(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ to Objects(C#)](./linq-to-objects.md)

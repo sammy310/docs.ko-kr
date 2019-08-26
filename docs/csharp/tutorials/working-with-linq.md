@@ -3,12 +3,12 @@ title: LINQ 작업
 description: 이 자습서에서는 LINQ를 사용하여 시퀀스를 생성하고, LINQ 쿼리에서 사용할 메서드를 작성하고, 즉시 계산 및 지연 계산 간을 구분하는 방법을 알아봅니다.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: e37c013add02f651875db7b908ae2b49711d996d
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 3cbafbb6aeed3abdd6d83ead613b29de738d5604
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609303"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587185"
 ---
 # <a name="working-with-linq"></a>LINQ 작업
 
@@ -142,7 +142,7 @@ public static void Main(string[] args)
 
 하지만 표준 라이브러리에는 이용할 수 있는 순서 섞기 메서드가 없으므로 고유한 메서드를 작성해야 합니다. 만들려는 순서 섞기 메서드는 LINQ 기반 프로그램에서 사용할 여러 기술을 보여 주므로 단계에서 이 프로세스의 각 부분을 설명하겠습니다.
 
-LINQ 쿼리에서 반환되는 <xref:System.Collections.Generic.IEnumerable%601>을 조작하는 방법에 몇 가지 기능을 추가하려면 [확장 메서드](../../csharp/programming-guide/classes-and-structs/extension-methods.md)라는 특수한 종류의 메서드를 작성해야 합니다. 간단히 말해, 확장 메서드는 기능을 추가하려는 원래 형식을 수정하지 않고 기존 형식에 새로운 기능을 추가하는 특별한 용도의 *정적 메서드*입니다.
+LINQ 쿼리에서 반환되는 <xref:System.Collections.Generic.IEnumerable%601>을 조작하는 방법에 몇 가지 기능을 추가하려면 [확장 메서드](../programming-guide/classes-and-structs/extension-methods.md)라는 특수한 종류의 메서드를 작성해야 합니다. 간단히 말해, 확장 메서드는 기능을 추가하려는 원래 형식을 수정하지 않고 기존 형식에 새로운 기능을 추가하는 특별한 용도의 *정적 메서드*입니다.
 
 `Extensions.cs`라는 프로그램에 새 ‘정적’ 클래스 파일을 추가하여 확장 메서드에 새로운 홈을 제공한 다음, 첫 번째 확장 메서드 빌드를 시작합니다. 
 

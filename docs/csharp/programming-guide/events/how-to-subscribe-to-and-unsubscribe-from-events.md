@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 777eb3be5cbefe0a136bf49f826ad67685a8456d
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 523045e990532f1475e1c4816c98d1af76daa92b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401084"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590403"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>방법: 이벤트 구독 및 구독 취소(C# 프로그래밍 가이드)
 해당 이벤트가 발생할 때 호출되는 사용자 지정 코드를 작성하려는 경우 다른 클래스에 의해 게시되는 이벤트를 구독합니다. 예를 들어 사용자가 단추를 클릭할 때 애플리케이션에서 유용한 작업을 수행하도록 하려면 단추의 `click` 이벤트를 구독할 수 있습니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "68401084"
     };  
     ```  
   
-     익명 함수를 사용하여 이벤트를 구독한 경우 쉽게 이벤트 구독을 취소할 수 없습니다. 이 시나리오에서 구독을 취소하려면 이벤트를 구독하고, 대리자 변수에 무명 메서드를 저장한 다음 이벤트에 대리자를 추가하는 코드로 돌아가야 합니다. 일반적으로 코드의 뒷부분에서 이벤트 구독을 취소해야 하는 경우 익명 함수를 사용하여 이벤트를 구독하지 않는 것이 좋습니다. 익명 함수에 대한 자세한 내용은 [익명 함수](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)를 참조하세요.  
+     익명 함수를 사용하여 이벤트를 구독한 경우 쉽게 이벤트 구독을 취소할 수 없습니다. 이 시나리오에서 구독을 취소하려면 이벤트를 구독하고, 대리자 변수에 무명 메서드를 저장한 다음 이벤트에 대리자를 추가하는 코드로 돌아가야 합니다. 일반적으로 코드의 뒷부분에서 이벤트 구독을 취소해야 하는 경우 익명 함수를 사용하여 이벤트를 구독하지 않는 것이 좋습니다. 익명 함수에 대한 자세한 내용은 [익명 함수](../statements-expressions-operators/anonymous-functions.md)를 참조하세요.  
   
 ## <a name="unsubscribing"></a>구독 해제  
  이벤트가 발생할 때 이벤트 처리기가 호출되지 않도록 하려면 이벤트 구독을 취소합니다. 리소스 누수를 방지하려면 구독자 개체를 삭제하기 전에 이벤트 구독을 취소해야 합니다. 이벤트 구독을 취소할 때까지 게시 개체에서 이벤트의 기반이 되는 멀티캐스트 대리자에 구독자의 이벤트 처리기를 캡슐화하는 대리자에 대한 참조가 있습니다. 게시 개체에 해당 참조가 있기만 하면 가비지 수집 시 구독자 개체가 삭제되지 않습니다.  
@@ -100,8 +100,8 @@ ms.locfileid: "68401084"
   
 ## <a name="see-also"></a>참고 항목
 
-- [이벤트](../../../csharp/programming-guide/events/index.md)
-- [event](../../../csharp/language-reference/keywords/event.md)
-- [방법: .NET Framework 지침을 따르는 이벤트 게시](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [이벤트](./index.md)
+- [event](../../language-reference/keywords/event.md)
+- [방법: .NET Framework 지침을 따르는 이벤트 게시](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
 - [- 및 -= 연산자](../../language-reference/operators/subtraction-operator.md)
 - [+ 및 += 연산자](../../language-reference/operators/addition-operator.md)

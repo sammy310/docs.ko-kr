@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: cc2beb78cc6594a3de594b50c1c45d23b30966f6
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 6eb4df4489f4b377c68c5d49d1bf0bb01b835e85
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423493"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589772"
 ---
 # <a name="generic-classes-c-programming-guide"></a>제네릭 클래스(C# 프로그래밍 가이드)
 제네릭 클래스는 특정 데이터 형식과 관련이 없는 작업을 캡슐화합니다. 제네릭 클래스는 연결된 목록, 해시 테이블, 스택, 큐, 트리 등의 컬렉션에 가장 일반적으로 사용됩니다. 컬렉션에서 항목을 추가하고 제거하는 등의 작업은 저장되는 데이터의 형식과 관계없이 기본적으로 동일한 방식으로 수행됩니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "66423493"
   
      일반적으로 매개 변수화할 수 있는 형식이 많을수록 코드의 유용성과 재사용 가능성이 향상됩니다. 그러나 지나친 일반화는 다른 개발자가 읽거나 이해하기 어려운 코드를 만들어낼 소지가 있습니다.  
   
-- 형식 매개 변수에 적용할 제약 조건([형식 매개 변수에 대한 제약 조건](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md) 참조)  
+- 형식 매개 변수에 적용할 제약 조건([형식 매개 변수에 대한 제약 조건](./constraints-on-type-parameters.md) 참조)  
   
      필요한 형식을 처리할 수 있는 범위 내에서 최대한 많은 제약 조건을 적용하는 것이 좋습니다. 예를 들어 제네릭 클래스를 참조 형식으로만 사용하려는 경우에는 클래스 제약 조건을 적용합니다. 이렇게 하면 클래스를 값 형식으로 잘못 사용하는 것을 막을 수 있고, `as` 연산자를 `T`에 적용하여 null 값 여부를 확인할 수 있습니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66423493"
   
      예를 들어 제네릭 기반 컬렉션에 항목을 만드는 데 사용될 클래스를 디자인할 경우 클래스 형식이 `T`인 <xref:System.IComparable%601>와 같은 인터페이스를 구현해야 할 수 있습니다.  
   
- 간단한 제네릭 클래스의 예제를 보려면 [제네릭 소개](../../../csharp/programming-guide/generics/index.md)를 참조하세요.  
+ 간단한 제네릭 클래스의 예제를 보려면 [제네릭 소개](./index.md)를 참조하세요.  
   
  형식 매개 변수와 제약 조건에 대한 규칙은 제네릭 클래스 동작, 특히 상속과 멤버 접근성에 몇 가지 영향을 줍니다. 계속하려면 몇 가지 용어를 이해하고 있어야 합니다. 제네릭 클래스 `Node<T>,`의 경우 클라이언트 코드는 형식 인수를 지정하여 폐쇄형 생성 형식(`Node<int>`)을 만들어 클래스를 참조할 수 있습니다. 또는 제네릭 기본 클래스를 지정하는 경우와 같이 형식 매개 변수를 지정하지 않고 개방형 생성 형식(`Node<T>`)을 만들 수 있습니다. 제네릭 클래스는 구체적인 클래스, 폐쇄형 생성 클래스 또는 개방형 생성 기본 클래스에서 상속할 수 있습니다.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66423493"
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Collections.Generic>
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [제네릭](../../../csharp/programming-guide/generics/index.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [제네릭](./index.md)
 - [열거자의 상태 저장](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/)
 - [상속 퍼즐, 1부](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/)

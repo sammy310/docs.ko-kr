@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], methods
 ms.assetid: 673eeea2-4b48-4faa-9c4e-2e89449221b9
-ms.openlocfilehash: 443d4367cc64eb7f9054b2cd52bef59e589f55b3
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 600bb249d1bc1e9f68026caf6596e0a35bb97c43
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170249"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589704"
 ---
 # <a name="generic-methods-c-programming-guide"></a>제네릭 메서드(C# 프로그래밍 가이드)
 제네릭 메서드는 다음과 같은 형식 매개 변수를 사용하여 선언된 메서드입니다.  
@@ -49,6 +49,6 @@ ms.locfileid: "67170249"
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Collections.Generic>
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [제네릭 소개](../../../csharp/programming-guide/generics/index.md)
-- [메서드](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [제네릭 소개](./index.md)
+- [메서드](../classes-and-structs/methods.md)
