@@ -2,22 +2,22 @@
 title: 대리자의 가변성 사용(C#)
 ms.date: 07/20/2015
 ms.assetid: 1638c95d-dc8b-40c1-972c-c2dcf84be55e
-ms.openlocfilehash: 44a6153a9a1c0aa0aebb18710ea9e770fd4e57fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00e11d4ce755c8c75b73023fec14d95ebc96b4fe
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667277"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595270"
 ---
-# <a name="using-variance-in-delegates-c"></a><span data-ttu-id="bb91f-102">대리자의 가변성 사용(C#)</span><span class="sxs-lookup"><span data-stu-id="bb91f-102">Using Variance in Delegates (C#)</span></span>
-<span data-ttu-id="bb91f-103">메서드를 대리자에 할당하면 *공변성(covariance)* 및 *반공변성(Contravariance)* 은 대리자 형식과 메서드 시그니처의 일치를 확인하는 유연성을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="bb91f-103">When you assign a method to a delegate, *covariance* and *contravariance* provide flexibility for matching a delegate type with a method signature.</span></span> <span data-ttu-id="bb91f-104">공변성(covariance)은 메서드가 대리자에 정의된 것보다 더 많은 수의 파생된 형식을 반환하도록 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="bb91f-104">Covariance permits a method to have return type that is more derived than that defined in the delegate.</span></span> <span data-ttu-id="bb91f-105">반공변성(contravariance)은 메서드가 대리자 형식보다 더 적은 수의 파생된 매개 변수 형식을 갖도록 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="bb91f-105">Contravariance permits a method that has parameter types that are less derived than those in the delegate type.</span></span>  
+# <a name="using-variance-in-delegates-c"></a><span data-ttu-id="8621f-102">대리자의 가변성 사용(C#)</span><span class="sxs-lookup"><span data-stu-id="8621f-102">Using Variance in Delegates (C#)</span></span>
+<span data-ttu-id="8621f-103">메서드를 대리자에 할당하면 *공변성(covariance)* 및 *반공변성(Contravariance)* 은 대리자 형식과 메서드 시그니처의 일치를 확인하는 유연성을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="8621f-103">When you assign a method to a delegate, *covariance* and *contravariance* provide flexibility for matching a delegate type with a method signature.</span></span> <span data-ttu-id="8621f-104">공변성(covariance)은 메서드가 대리자에 정의된 것보다 더 많은 수의 파생된 형식을 반환하도록 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="8621f-104">Covariance permits a method to have return type that is more derived than that defined in the delegate.</span></span> <span data-ttu-id="8621f-105">반공변성(contravariance)은 메서드가 대리자 형식보다 더 적은 수의 파생된 매개 변수 형식을 갖도록 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="8621f-105">Contravariance permits a method that has parameter types that are less derived than those in the delegate type.</span></span>  
   
-## <a name="example-1-covariance"></a><span data-ttu-id="bb91f-106">예제 1: 공변성</span><span class="sxs-lookup"><span data-stu-id="bb91f-106">Example 1: Covariance</span></span>  
+## <a name="example-1-covariance"></a><span data-ttu-id="8621f-106">예제 1: 공변성</span><span class="sxs-lookup"><span data-stu-id="8621f-106">Example 1: Covariance</span></span>  
   
-### <a name="description"></a><span data-ttu-id="bb91f-107">설명</span><span class="sxs-lookup"><span data-stu-id="bb91f-107">Description</span></span>  
- <span data-ttu-id="bb91f-108">이 예제에서는 대리자를 대리자 시그니처의 반환 형식에서 파생된 반환 형식이 있는 메서드와 함께 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="bb91f-108">This example demonstrates how delegates can be used with methods that have return types that are derived from the return type in the delegate signature.</span></span> <span data-ttu-id="bb91f-109">`DogsHandler`에서 반환된 데이터 형식은 `Dogs`이고, 이 형식은 대리자에 정의된 `Mammals` 형식에서 파생됩니다.</span><span class="sxs-lookup"><span data-stu-id="bb91f-109">The data type returned by `DogsHandler` is of type `Dogs`, which derives from the `Mammals` type that is defined in the delegate.</span></span>  
+### <a name="description"></a><span data-ttu-id="8621f-107">설명</span><span class="sxs-lookup"><span data-stu-id="8621f-107">Description</span></span>  
+ <span data-ttu-id="8621f-108">이 예제에서는 대리자를 대리자 시그니처의 반환 형식에서 파생된 반환 형식이 있는 메서드와 함께 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8621f-108">This example demonstrates how delegates can be used with methods that have return types that are derived from the return type in the delegate signature.</span></span> <span data-ttu-id="8621f-109">`DogsHandler`에서 반환된 데이터 형식은 `Dogs`이고, 이 형식은 대리자에 정의된 `Mammals` 형식에서 파생됩니다.</span><span class="sxs-lookup"><span data-stu-id="8621f-109">The data type returned by `DogsHandler` is of type `Dogs`, which derives from the `Mammals` type that is defined in the delegate.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="bb91f-110">코드</span><span class="sxs-lookup"><span data-stu-id="bb91f-110">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="8621f-110">코드</span><span class="sxs-lookup"><span data-stu-id="8621f-110">Code</span></span>  
   
 ```csharp  
 class Mammals {}  
@@ -48,12 +48,12 @@ class Program
 }  
 ```  
   
-## <a name="example-2-contravariance"></a><span data-ttu-id="bb91f-111">예제 2: 반공변성(contravariance)</span><span class="sxs-lookup"><span data-stu-id="bb91f-111">Example 2: Contravariance</span></span>  
+## <a name="example-2-contravariance"></a><span data-ttu-id="8621f-111">예제 2: 반공변성(contravariance)</span><span class="sxs-lookup"><span data-stu-id="8621f-111">Example 2: Contravariance</span></span>  
   
-### <a name="description"></a><span data-ttu-id="bb91f-112">설명</span><span class="sxs-lookup"><span data-stu-id="bb91f-112">Description</span></span>  
- <span data-ttu-id="bb91f-113">이 예제에서는 대리자를 대리자 시그니처 매개 변수 형식의 기본 형식인 형식 매개 변수를 가지고 있는 메서드와 함께 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="bb91f-113">This example demonstrates how delegates can be used with methods that have parameters of a type that are base types of the delegate signature parameter type.</span></span> <span data-ttu-id="bb91f-114">반공변성(contravariance)에서는 별도의 여러 처리기 대신 하나의 이벤트 처리기를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bb91f-114">With contravariance, you can use one event handler instead of separate handlers.</span></span> <span data-ttu-id="bb91f-115">예를 들어 `EventArgs` 입력 매개 변수를 수락하고, 매개 변수로서 `MouseEventArgs` 형식을 전송하는 `Button.MouseClick` 이벤트 및 `KeyEventArgs` 매개 변수를 전송하는 `TextBox.KeyDown` 이벤트와 함께 사용하는 이벤트 처리기를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bb91f-115">For example, you can create an event handler that accepts an `EventArgs` input parameter and use it with a `Button.MouseClick` event that sends a `MouseEventArgs` type as a parameter, and also with a `TextBox.KeyDown` event that sends a `KeyEventArgs` parameter.</span></span>  
+### <a name="description"></a><span data-ttu-id="8621f-112">설명</span><span class="sxs-lookup"><span data-stu-id="8621f-112">Description</span></span>  
+ <span data-ttu-id="8621f-113">이 예제에서는 대리자를 대리자 시그니처 매개 변수 형식의 기본 형식인 형식 매개 변수를 가지고 있는 메서드와 함께 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8621f-113">This example demonstrates how delegates can be used with methods that have parameters of a type that are base types of the delegate signature parameter type.</span></span> <span data-ttu-id="8621f-114">반공변성(contravariance)에서는 별도의 여러 처리기 대신 하나의 이벤트 처리기를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8621f-114">With contravariance, you can use one event handler instead of separate handlers.</span></span> <span data-ttu-id="8621f-115">예를 들어 `EventArgs` 입력 매개 변수를 수락하고, 매개 변수로서 `MouseEventArgs` 형식을 전송하는 `Button.MouseClick` 이벤트 및 `KeyEventArgs` 매개 변수를 전송하는 `TextBox.KeyDown` 이벤트와 함께 사용하는 이벤트 처리기를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8621f-115">For example, you can create an event handler that accepts an `EventArgs` input parameter and use it with a `Button.MouseClick` event that sends a `MouseEventArgs` type as a parameter, and also with a `TextBox.KeyDown` event that sends a `KeyEventArgs` parameter.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="bb91f-116">코드</span><span class="sxs-lookup"><span data-stu-id="bb91f-116">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="8621f-116">코드</span><span class="sxs-lookup"><span data-stu-id="8621f-116">Code</span></span>  
   
 ```csharp  
 // Event handler that accepts a parameter of the EventArgs type.  
@@ -77,7 +77,7 @@ public Form1()
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="bb91f-117">참고 항목</span><span class="sxs-lookup"><span data-stu-id="bb91f-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8621f-117">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8621f-117">See also</span></span>
 
-- [<span data-ttu-id="bb91f-118">대리자의 가변성(C#)</span><span class="sxs-lookup"><span data-stu-id="bb91f-118">Variance in Delegates (C#)</span></span>](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
-- [<span data-ttu-id="bb91f-119">Func 및 Action 제네릭 대리자에 가변성 사용(C#)</span><span class="sxs-lookup"><span data-stu-id="bb91f-119">Using Variance for Func and Action Generic Delegates (C#)</span></span>](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [<span data-ttu-id="8621f-118">대리자의 가변성(C#)</span><span class="sxs-lookup"><span data-stu-id="8621f-118">Variance in Delegates (C#)</span></span>](./variance-in-delegates.md)
+- [<span data-ttu-id="8621f-119">Func 및 Action 제네릭 대리자에 가변성 사용(C#)</span><span class="sxs-lookup"><span data-stu-id="8621f-119">Using Variance for Func and Action Generic Delegates (C#)</span></span>](./using-variance-for-func-and-action-generic-delegates.md)

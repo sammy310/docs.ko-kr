@@ -2,22 +2,22 @@
 title: '방법: 자식 요소 찾기(XPath 및 LINQ to XML)(C#)'
 ms.date: 07/20/2015
 ms.assetid: 4fa6182d-6196-4ed1-9c9e-82949ff89c71
-ms.openlocfilehash: 4a6d18c86416f7c54df554bc2f518994446a2a84
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 315cf782aa886bba484eb1fb06a4c4dbcf3cb4df
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485730"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593715"
 ---
-# <a name="how-to-find-a-child-element-xpath-linq-to-xml-c"></a><span data-ttu-id="40b55-102">방법: 자식 요소 찾기(XPath 및 LINQ to XML)(C#)</span><span class="sxs-lookup"><span data-stu-id="40b55-102">How to: Find a Child Element (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="40b55-103">이 항목에서는 XPath 자식 요소 축과 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> 메서드를 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="40b55-103">This topic compares the XPath child element axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> method.</span></span>  
+# <a name="how-to-find-a-child-element-xpath-linq-to-xml-c"></a><span data-ttu-id="6be5e-102">방법: 자식 요소 찾기(XPath 및 LINQ to XML)(C#)</span><span class="sxs-lookup"><span data-stu-id="6be5e-102">How to: Find a Child Element (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="6be5e-103">이 항목에서는 XPath 자식 요소 축과 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> 메서드를 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="6be5e-103">This topic compares the XPath child element axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> method.</span></span>  
   
- <span data-ttu-id="40b55-104">XPath 식은 `DeliveryNotes`입니다.</span><span class="sxs-lookup"><span data-stu-id="40b55-104">The XPath expression is `DeliveryNotes`.</span></span>  
+ <span data-ttu-id="6be5e-104">XPath 식은 `DeliveryNotes`입니다.</span><span class="sxs-lookup"><span data-stu-id="6be5e-104">The XPath expression is `DeliveryNotes`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="40b55-105">예제</span><span class="sxs-lookup"><span data-stu-id="40b55-105">Example</span></span>  
- <span data-ttu-id="40b55-106">이 예제에서는 자식 요소 `DeliveryNotes`를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="40b55-106">This example finds the child element `DeliveryNotes`.</span></span>  
+## <a name="example"></a><span data-ttu-id="6be5e-105">예</span><span class="sxs-lookup"><span data-stu-id="6be5e-105">Example</span></span>  
+ <span data-ttu-id="6be5e-106">이 예제에서는 자식 요소 `DeliveryNotes`를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="6be5e-106">This example finds the child element `DeliveryNotes`.</span></span>  
   
- <span data-ttu-id="40b55-107">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 여러 구매 주문(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="40b55-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="6be5e-107">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 여러 구매 주문(LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="6be5e-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument cpo = XDocument.Load("PurchaseOrders.xml");  
@@ -38,7 +38,7 @@ else
 Console.WriteLine(el1);  
 ```  
   
- <span data-ttu-id="40b55-108">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="40b55-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="6be5e-108">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="6be5e-108">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
