@@ -2,32 +2,27 @@
   href: index.md
   items:
     - name: Windows Forms에서 컨트롤 정렬
-      href: arranging-controls-on-windows-forms.md
       items:
-        - name: '방법: Windows Forms에서 여러 컨트롤 맞춤'
+        - name: '방법: 여러 컨트롤 맞춤'
           href: how-to-align-multiple-controls-on-windows-forms.md
-        - name: '방법: Windows Forms에서 컨트롤 고정'
+        - name: '방법: 컨트롤 고정'
           href: how-to-anchor-controls-on-windows-forms.md
-        - name: '방법: Windows Forms 간 컨트롤 복사'
-          href: how-to-copy-controls-between-windows-forms.md
-        - name: '방법: Windows Forms에서 컨트롤 도킹'
+        - name: '방법: 컨트롤 도킹'
           href: how-to-dock-controls-on-windows-forms.md
-        - name: '방법: Windows Forms에서 개체 계층화'
+        - name: '방법: 개체 계층화'
           href: how-to-layer-objects-on-windows-forms.md
-        - name: '방법: Windows Forms에서 컨트롤 잠금'
+        - name: '방법: 컨트롤 잠그기'
           href: how-to-lock-controls-to-windows-forms.md
-        - name: '방법: Windows Forms에서 컨트롤 배치'
+        - name: '방법: 컨트롤 배치'
           href: how-to-position-controls-on-windows-forms.md
-        - name: '방법: Windows Forms에서 컨트롤 크기 조정'
+        - name: '방법: 컨트롤 크기 조정'
           href: how-to-resize-controls-on-windows-forms.md
         - name: '방법: 모든 Windows Forms에 대한 모눈 옵션 설정'
           href: how-to-set-grid-options-for-all-windows-forms.md
-        - name: '방법: Windows Forms에서 탭 순서 설정'
+        - name: '방법: 탭 순서 설정'
           href: how-to-set-the-tab-order-on-windows-forms.md
-        - name: '연습: Windows Forms에서 맞춤선을 사용하여 컨트롤 정렬'
+        - name: '연습: 맞춤선을 사용하여 컨트롤 정렬'
           href: walkthrough-arranging-controls-on-windows-forms-using-snaplines.md
-        - name: '방법: Windows Forms에서 맞춤선과 모눈을 사용하여 컨트롤 정렬'
-          href: how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms.md
         - name: '방법: 다른 부모에 기존 컨트롤 다시 할당'
           href: how-to-reassign-existing-controls-to-a-different-parent.md
         - name: '연습: Padding, Margin 및 AutoSize 속성을 사용하여 Windows Forms 컨트롤 레이아웃'
@@ -35,15 +30,15 @@
     - name: Windows Forms에 컨트롤 넣기
       href: putting-controls-on-windows-forms.md
       items:
-        - name: '방법: Windows Forms에 컨트롤 추가'
+        - name: '방법: 컨트롤 추가'
           href: how-to-add-controls-to-windows-forms.md
-        - name: '방법: Windows Forms에 사용자 인터페이스가 없는 컨트롤 추가'
+        - name: '방법: 사용자 인터페이스 없이 컨트롤 추가'
           href: how-to-add-controls-without-a-user-interface-to-windows-forms.md
         - name: '방법: 런타임에 컨트롤 컬렉션에서 컨트롤 추가 또는 제거'
           href: how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md
         - name: '연습: 사용자 지정 구성 요소로 도구 상자 자동 채우기'
           href: walkthrough-automatically-populating-the-toolbox-with-custom-components.md
-        - name: '방법: Windows Forms에 ActiveX 컨트롤 추가'
+        - name: '방법: ActiveX 컨트롤 추가'
           href: how-to-add-activex-controls-to-windows-forms.md
         - name: Windows Form에서 ActiveX 컨트롤을 호스팅할 때의 고려 사항
           href: considerations-when-hosting-an-activex-control-on-a-windows-form.md
@@ -140,7 +135,7 @@
               href: how-to-designate-a-windows-forms-button-as-the-cancel-button.md
             - name: '방법: 디자이너를 사용하여 Windows Forms 단추를 취소 단추로 지정'
               href: designate-a-wf-button-as-the-cancel-button-using-the-designer.md
-            - name: '방법: Windows Forms 단추 클릭에 응답'
+            - name: '방법: 단추 클릭에 응답'
               href: how-to-respond-to-windows-forms-button-clicks.md
             - name: Windows Forms Button 컨트롤 선택 방법
               href: ways-to-select-a-windows-forms-button-control.md
@@ -149,9 +144,9 @@
           items:
             - name: CheckBox 컨트롤 개요
               href: checkbox-control-overview-windows-forms.md
-            - name: '방법: Windows Forms 확인란 클릭에 응답'
+            - name: '방법: CheckBox 클릭에 응답'
               href: how-to-respond-to-windows-forms-checkbox-clicks.md
-            - name: '방법: Windows Forms CheckBox 컨트롤을 사용하여 옵션 설정'
+            - name: '방법: CheckBox 컨트롤을 사용하여 옵션 설정'
               href: how-to-set-options-with-windows-forms-checkbox-controls.md
         - name: CheckedListBox 컨트롤
           href: checkedlistbox-control-windows-forms.md
@@ -330,9 +325,9 @@
                   href: how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md
                 - name: '방법: 데이터 바인딩된 Windows Forms DataGridView 컨트롤에 바인딩되지 않은 열 추가'
                   href: unbound-column-to-a-data-bound-datagridview.md
-                - name: '방법: Windows Forms DataGridView 컨트롤에 개체 바인딩'
+                - name: '방법: DataGridView 컨트롤에 개체 바인딩'
                   href: how-to-bind-objects-to-windows-forms-datagridview-controls.md
-                - name: '방법: Windows Forms DataGridView 행에 바인딩된 개체 액세스'
+                - name: '방법: DataGridView 행에 바인딩된 개체 액세스'
                   href: how-to-access-objects-bound-to-windows-forms-datagridview-rows.md
                 - name: '방법: Windows Forms DataGridViewComboBoxCell 드롭다운 목록에서 개체 액세스'
                   href: access-objects-in-a-wf-datagridviewcomboboxcell-drop-down-list.md
@@ -462,7 +457,7 @@
           items:
             - name: DomainUpDown 컨트롤 개요
               href: domainupdown-control-overview-windows-forms.md
-            - name: '방법: 프로그래밍 방식으로 Windows Forms DomainUpDown 컨트롤에 항목 추가'
+            - name: '방법: 프로그래밍 방식으로 DomainUpDown 컨트롤에 항목 추가'
               href: how-to-add-items-to-windows-forms-domainupdown-controls-programmatically.md
             - name: '방법: Windows Forms DomainUpDown 컨트롤에서 항목 제거'
               href: how-to-remove-items-from-windows-forms-domainupdown-controls.md
