@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /nowarn compiler option [C#]
 - -nowarn compiler option [C#]
 ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
-ms.openlocfilehash: b455a2f719e7350c51cf4a1f095d4669529d0e5e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fa3079bf1431ba1a16b5a2eef0dd5500fe95909c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592807"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606620"
 ---
 # <a name="-nowarn-c-compiler-options"></a>-nowarn(C# 컴파일러 옵션)
 **-nowarn** 옵션을 사용하면 컴파일러에서 하나 이상의 경고를 표시하지 않을 수 있습니다. 여러 경고 번호를 쉼표로 구분합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "64592807"
  `number1`, `number2`  
  컴파일러에서 표시하지 않으려는 경고 번호입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  경고 식별자의 숫자 부분만 지정해야 합니다. 예를 들어 CS0028을 표시하지 않으려면 `-nowarn:28`을 지정할 수 있습니다.  
   
  컴파일러는 이전 릴리스에서 유효했지만 현재 컴파일러에서 제거된, `-nowarn`에 전달된 경고 번호를 자동으로 무시합니다. 예를 들어 CS0679는 Visual Studio.NET 2002의 컴파일러에서 유효했지만 이후에 제거되었습니다.  
@@ -53,6 +53,6 @@ ms.locfileid: "64592807"
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)
+- [C# 컴파일러 옵션](./index.md)
 - [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)
-- [C# 컴파일러 오류](../../../csharp/language-reference/compiler-messages/index.md)
+- [C# 컴파일러 오류](../compiler-messages/index.md)

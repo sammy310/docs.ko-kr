@@ -2,12 +2,12 @@
 title: '방법: 새 형식 프로젝션(LINQ to XML)(C#)'
 ms.date: 07/20/2015
 ms.assetid: 48145cf9-1e0b-4e73-bbfd-28fc04800dc4
-ms.openlocfilehash: 2bb521d1445dcecdad8b9c7b28bed90e1e38c8e8
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
+ms.openlocfilehash: bec4e7c7d87dffb90b49b76aa00a5de093d68436
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012925"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593039"
 ---
 # <a name="how-to-project-a-new-type-linq-to-xml-c"></a>방법: 새 형식 프로젝션(LINQ to XML)(C#)
 
@@ -17,7 +17,7 @@ ms.locfileid: "69012925"
 
 이 예제에서는 `select` 절에서 개체를 인스턴스화하는 방법을 보여 줍니다. 이 코드에서는 먼저 생성자를 사용하여 새 클래스를 정의한 다음 식이 새 클래스의 새 인스턴스이도록 `select` 문을 수정합니다.
 
-이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).
+이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).
 
 ```csharp
 class NameQty 

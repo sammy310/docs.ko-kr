@@ -2,12 +2,12 @@
 title: 같음 연산(C#)
 ms.date: 07/20/2015
 ms.assetid: 9d9a5bf2-f211-4865-bd19-c59ffa004615
-ms.openlocfilehash: 643efacc3b5830d7427d4c5dfb4f7abdc1781f2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: afcc2715f088896fb3c669524f17bb22ef873b01
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692339"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594386"
 ---
 # <a name="equality-operations-c"></a>같음 연산(C#)
 해당 요소가 동일하고 같은 수의 요소를 포함 하는 두 시퀀스는 같은 것으로 간주됩니다.  
@@ -21,5 +21,5 @@ ms.locfileid: "54692339"
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Linq>
-- [표준 쿼리 연산자 개요(C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [방법: 두 폴더의 내용 비교(LINQ)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)
+- [표준 쿼리 연산자 개요(C#)](./standard-query-operators-overview.md)
+- [방법: 두 폴더의 내용 비교(LINQ)(C#)](./how-to-compare-the-contents-of-two-folders-linq.md)

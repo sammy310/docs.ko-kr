@@ -3,12 +3,12 @@ title: 튜플 형식 - C# 가이드
 description: C#의 명명되지 않은 튜플 형식과 명명된 튜플 형식에 대한 자세한 정보
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 4000228507bf7925083147ddd49dd10914ef2449
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: dc02fceb2901fb9cb7bf71869213d8b178520900
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882056"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988405"
 ---
 # <a name="c-tuple-types"></a>C# 튜플 형식
 
@@ -245,7 +245,7 @@ public class Point
 ```
 
 > [!WARNING]
->  선언을 사용하여 기존 선언을 괄호 안에 혼합할 수 없습니다. 예를 들어 다음 `(var x, y) = MyMethod();`는 사용할 수 없습니다. *x*는 괄호 안에서 선언되고 *y*는 이전에 다른 곳에서 선언됐기 때문에 CS8184 오류를 생성합니다.
+> 선언을 사용하여 기존 선언을 괄호 안에 혼합할 수 없습니다. 예를 들어 다음 `(var x, y) = MyMethod();`는 사용할 수 없습니다. *x*는 괄호 안에서 선언되고 *y*는 이전에 다른 곳에서 선언됐기 때문에 CS8184 오류를 생성합니다.
 
 ### <a name="deconstructing-user-defined-types"></a>사용자 정의 형식 분해
 

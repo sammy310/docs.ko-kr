@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 02b27270c93550278308900382ae05091edb2543
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: ac04ba72ed0c25aa576bf10150fc80410890eda0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661540"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608374"
 ---
 # <a name="arithmetic-operators-c-reference"></a>산술 연산자(C# 참조)
 
@@ -45,7 +45,7 @@ ms.locfileid: "67661540"
 
 ## <a name="increment-operator-"></a>증가 연산자 ++
 
-단항 증가 연산자(`++`)는 피연산자를 1씩 증가합니다. 피연산자는 변수, [속성](../../programming-guide/classes-and-structs/properties.md) 액세스 또는 [인덱서](../../../csharp/programming-guide/indexers/index.md) 액세스여야 합니다.
+단항 증가 연산자(`++`)는 피연산자를 1씩 증가합니다. 피연산자는 변수, [속성](../../programming-guide/classes-and-structs/properties.md) 액세스 또는 [인덱서](../../programming-guide/indexers/index.md) 액세스여야 합니다.
 
 증가 연산자는 후위 증가 연산자 `x++` 및 전위 증가 연산자 `++x`라는 두 가지 양식으로 지원됩니다.
 
@@ -63,7 +63,7 @@ ms.locfileid: "67661540"
 
 ## <a name="decrement-operator---"></a>감소 연산자 --
 
-단항 감소 연산자(`--`)는 피연산자를 1씩 감소합니다. 피연산자는 변수, [속성](../../programming-guide/classes-and-structs/properties.md) 액세스 또는 [인덱서](../../../csharp/programming-guide/indexers/index.md) 액세스여야 합니다.
+단항 감소 연산자(`--`)는 피연산자를 1씩 감소합니다. 피연산자는 변수, [속성](../../programming-guide/classes-and-structs/properties.md) 액세스 또는 [인덱서](../../programming-guide/indexers/index.md) 액세스여야 합니다.
 
 감소 연산자는 후위 감소 연산자 `x--` 및 전위 감소 연산자 `--x`라는 두 가지 양식으로 지원됩니다.
 

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8480e2d6817d0367e89542c0e6c89cd26183dd5e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8a0c34eebda789f6561195c89e2660ae77603dc0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774893"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923291"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT 컴파일러(xsltc.exe)
 XSLT 컴파일러(xsltc.exe)에서는 XSLT 스타일시트를 컴파일하여 어셈블리를 생성합니다. 컴파일된 스타일시트는 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 메서드로 직접 전달될 수 있습니다. 서명된 어셈블리는 xsltc.exe를 사용하여 생성할 수 없습니다.  
@@ -47,7 +47,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
  XSLT 솔루션은 여러 스타일시트 모듈로 구성됩니다. xsltc.exe 도구는 스타일시트에서 어셈블리를 생성합니다. 그런 다음 어셈블리가 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 메서드에 전달될 수 있습니다. 따라서 일부 XSLT 배포 시나리오에서 성능을 유지하는 데 드는 비용을 감소하는 데 도움이 될 수 있습니다.  
   
 > [!NOTE]
->  애플리케이션에서 컴파일된 어셈블리를 참조로 포함해야 합니다.  
+> 애플리케이션에서 컴파일된 어셈블리를 참조로 포함해야 합니다.  
   
  xsltc.exe 도구에서는 클래스(`/class:`*이름*) 또는 어셈블리(`/out:`*assemblyName*) 이름의 유효성을 검사하지 않습니다. 이름의 유효성을 확인할 수 없으면 공용 언어 런타임에서 오류가 throw됩니다.  
   

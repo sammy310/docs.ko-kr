@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b7964b2a59c67380d7f19077c01efa0a4a636cff
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 5d9d77ef20090e007e22a0d2f90b29f32ff94b46
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170511"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911109"
 ---
 # <a name="in-process-side-by-side-execution"></a>In-Process Side-by-Side 실행
 .NET Framework 4부터 In-Process Side-By-Side 호스팅을 사용하여 단일 프로세스에서 여러 버전의 CLR(공용 언어 런타임)을 실행할 수 있습니다. 기본적으로 관리되는 COM 구성 요소는 프로세스에 대해 로드된 .NET Framework 버전에 관계없이 빌드 시 사용된 .NET Framework 버전을 사용하여 실행됩니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "67170511"
     |4|예|예|적용할 수 없음|  
   
 > [!NOTE]
->  .NET Framework 버전 3.0 및 3.5는 버전 2.0에서 증분 방식으로 빌드되었으며 병렬 실행할 필요가 없습니다. 이들은 기본적으로 동일한 버전입니다.  
+> .NET Framework 버전 3.0 및 3.5는 버전 2.0에서 증분 방식으로 빌드되었으며 병렬 실행할 필요가 없습니다. 이들은 기본적으로 동일한 버전입니다.  
   
 <a name="scenarios"></a>   
 ## <a name="common-side-by-side-hosting-scenarios"></a>일반적인 병렬 호스팅 시나리오  

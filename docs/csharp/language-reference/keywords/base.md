@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - base keyword [C#]
 ms.assetid: 8b645dbe-1a33-49b8-8716-1c401f9a5ea5
-ms.openlocfilehash: 2ef0d07aed595fa630459171482e0b0849aed877
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: b882a8d1e5979ac184d184be379dd76f7bf3600f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401588"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602264"
 ---
 # <a name="base-c-reference"></a>base(C# 참조)
 
@@ -51,7 +51,7 @@ ms.locfileid: "67401588"
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 참조](../../../csharp/language-reference/index.md)
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [C# 키워드](../../../csharp/language-reference/keywords/index.md)
-- [this](../../../csharp/language-reference/keywords/this.md)
+- [C# 참조](../index.md)
+- [C# 프로그래밍 가이드](../../programming-guide/index.md)
+- [C# 키워드](./index.md)
+- [this](./this.md)

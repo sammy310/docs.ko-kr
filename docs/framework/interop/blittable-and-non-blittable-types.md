@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 519ce34fc1f86220dfd0f3f7e19e3a50fba06087
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: e2cdaa312c037714a34e25e62ad318c9bc745ea7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469453"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953186"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Blittable 형식 및 비 Blittable 형식
 대부분의 데이터 형식은 관리되는 메모리와 관리되지 않는 메모리 둘 다에서 공통된 표현을 사용하며 interop 마샬러의 특별한 처리가 필요하지 않습니다. 이러한 형식은 관리 코드와 비관리 코드 간에 전달될 때 변환이 필요하지 않기 때문에 *blittable 형식*이라고 합니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "65469453"
 |[System.Valuetype](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|고정된 메모리 레이아웃을 사용하는 구조로 변환합니다.|  
 |[System.Szarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|C 스타일 배열 또는 `SAFEARRAY`로 변환합니다.|  
   
- 클래스 및 개체 형식은 COM interop에서만 지원됩니다. Visual Basic, C# 및 C++의 해당 형식은 [클래스 라이브러리 개요](../../../docs/standard/class-library-overview.md)를 참조하세요.  
+ 클래스 및 개체 형식은 COM interop에서만 지원됩니다. Visual Basic, C# 및 C++의 해당 형식은 [클래스 라이브러리 개요](../../standard/class-library-overview.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 

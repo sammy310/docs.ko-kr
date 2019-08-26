@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /** */ delimiters for C# documentation tags
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
-ms.openlocfilehash: d08dd0c68a11ddf73c19a1e09bc8c59937708553
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c8d20284b7ef2e06fb987f94f05cbe1dde1dc431
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634758"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928075"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>문서 태그에 대한 구분 기호(C# 프로그래밍 가이드)
 XML 문서 주석을 사용하려면 문서 주석이 시작되고 끝나는 위치를 컴파일러에 알리는 구분 기호가 필요합니다. XML 문서 태그에 다음과 같은 종류의 구분 기호를 사용할 수 있습니다.  
@@ -21,7 +21,7 @@ XML 문서 주석을 사용하려면 문서 주석이 시작되고 끝나는 위
  한 줄 구분 기호입니다. 문서 예제에 표시되고 Visual C# 프로젝트 템플릿에 사용되는 형식입니다. 구분 기호 뒤에 공백 문자가 있으면 해당 문자는 XML 출력에 포함되지 않습니다.  
   
 > [!NOTE]
->  Visual Studio IDE에는 코드 편집기에서 `///` 구분 기호를 입력한 후 \<summary> 및 \</summary> 태그를 자동으로 삽입하고 이러한 태그 내에서 커서를 이동하는 스마트 주석 편집이라는 기능이 있습니다. 이 기능은 [옵션 대화 상자](/visualstudio/ide/reference/options-text-editor-csharp-advanced)에서 켜거나 끌 수 있습니다.  
+> Visual Studio IDE에는 코드 편집기에서 `///` 구분 기호를 입력한 후 \<summary> 및 \</summary> 태그를 자동으로 삽입하고 이러한 태그 내에서 커서를 이동하는 스마트 주석 편집이라는 기능이 있습니다. 이 기능은 [옵션 대화 상자](/visualstudio/ide/reference/options-text-editor-csharp-advanced)에서 켜거나 끌 수 있습니다.  
   
  `/** */`  
  여러 줄 구분 기호입니다.  
@@ -80,7 +80,7 @@ XML 문서 주석을 사용하려면 문서 주석이 시작되고 끝나는 위
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [XML 문서 주석](../../../csharp/programming-guide/xmldoc/index.md)
-- [/doc(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
-- [XML 문서 주석](../../../csharp/programming-guide/xmldoc/index.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [XML 문서 주석](./index.md)
+- [/doc(C# 컴파일러 옵션)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [XML 문서 주석](./index.md)

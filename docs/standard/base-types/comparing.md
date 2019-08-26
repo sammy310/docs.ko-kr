@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48331c1b62fa536b905f1288ebb1632f8da15615
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: dd5ec18147c074400457581618bacba11d9ee40a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053585"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963414"
 ---
 # <a name="comparing-strings-in-net"></a>.NET에서 문자열 비교
 .NET에서는 문자열의 값을 비교하는 여러 가지 메서드를 제공합니다. 다음 표에서는 값 비교 메서드를 나열하고 설명합니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "66053585"
 |양의 정수<br /><br /> 또는<br /><br /> 1|정렬 순서에서 첫 번째 문자열이 두 번째 문자열 뒤에 옵니다.<br /><br /> 또는<br /><br /> 두 번째 문자열이 `null`입니다.|  
   
 > [!IMPORTANT]
->  <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드는 주로 문자열의 순서를 지정하거나 정렬할 때 사용됩니다. <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드를 통해 같은지 여부를 테스트하면 안 됩니다(즉, 한 문자열이 다른 문자열보다 작거나 큰지에 관계없이 반환 값 0을 명시적으로 찾기 위해 사용하면 안 됨). 대신, 두 문자열이 같은지 여부를 확인하려면 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 메서드를 사용합니다.  
+> <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드는 주로 문자열의 순서를 지정하거나 정렬할 때 사용됩니다. <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드를 통해 같은지 여부를 테스트하면 안 됩니다(즉, 한 문자열이 다른 문자열보다 작거나 큰지에 관계없이 반환 값 0을 명시적으로 찾기 위해 사용하면 안 됨). 대신, 두 문자열이 같은지 여부를 확인하려면 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 메서드를 사용합니다.  
   
  다음 예제에서는 <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드를 사용하여 두 문자열의 상대 값을 확인합니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66053585"
  <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> 메서드는 로컬 문화권을 고려하지 않고 두 문자열 개체를 비교합니다. 이 메서드의 반환 값은 앞의 표에서 **Compare** 메서드가 반환하는 값과 동일합니다.  
   
 > [!IMPORTANT]
->  <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> 메서드는 주로 문자열의 순서를 지정하거나 정렬할 때 사용됩니다. <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> 메서드를 통해 같은지 여부를 테스트하면 안 됩니다(즉, 한 문자열이 다른 문자열보다 작거나 큰지에 관계없이 반환 값 0을 명시적으로 찾기 위해 사용하면 안 됨). 대신, 두 문자열이 같은지 여부를 확인하려면 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 메서드를 사용합니다.  
+> <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> 메서드는 주로 문자열의 순서를 지정하거나 정렬할 때 사용됩니다. <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> 메서드를 통해 같은지 여부를 테스트하면 안 됩니다(즉, 한 문자열이 다른 문자열보다 작거나 큰지에 관계없이 반환 값 0을 명시적으로 찾기 위해 사용하면 안 됨). 대신, 두 문자열이 같은지 여부를 확인하려면 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 메서드를 사용합니다.  
   
  다음 예제에서는 **CompareOrdinal** 메서드를 사용하여 두 문자열의 값을 비교합니다.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "66053585"
  <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드는 현재 문자열 개체가 캡슐화하는 문자열을 다른 문자열 또는 개체와 비교합니다. 이 메서드의 반환 값은 앞의 표에서 <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드가 반환하는 값과 동일합니다.  
   
 > [!IMPORTANT]
->  <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드는 주로 문자열의 순서를 지정하거나 정렬할 때 사용됩니다. <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드를 통해 같은지 여부를 테스트하면 안 됩니다(즉, 한 문자열이 다른 문자열보다 작거나 큰지에 관계없이 반환 값 0을 명시적으로 찾기 위해 사용하면 안 됨). 대신, 두 문자열이 같은지 여부를 확인하려면 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 메서드를 사용합니다.  
+> <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드는 주로 문자열의 순서를 지정하거나 정렬할 때 사용됩니다. <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드를 통해 같은지 여부를 테스트하면 안 됩니다(즉, 한 문자열이 다른 문자열보다 작거나 큰지에 관계없이 반환 값 0을 명시적으로 찾기 위해 사용하면 안 됨). 대신, 두 문자열이 같은지 여부를 확인하려면 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 메서드를 사용합니다.  
   
  다음 예제에서는 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드를 사용하여 `string1` 개체를 `string2` 개체와 비교합니다.  
   

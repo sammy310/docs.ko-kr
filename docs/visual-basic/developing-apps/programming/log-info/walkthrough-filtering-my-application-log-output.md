@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: 00e9eeb3227ceef54f899129847bfb74a370c51c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: af1dc3e1ce22112d76ad566873f40c1c2ac05c9d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591275"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968696"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>연습: My.Application.Log 출력 필터링(Visual Basic)
 이 연습에서는 `My.Application.Log` 개체에 대한 기본 로그 필터링을 변경하여 `Log` 개체에서 수신기로 전달되는 정보 및 수신기가 작성하는 정보를 제어하는 방법을 보여 줍니다. 구성 정보가 애플리케이션의 구성 파일에 저장되므로 애플리케이션을 빌드한 후에도 로깅 동작을 변경할 수 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "65591275"
      애플리케이션의 디버그 출력 창을 보는 방법에 대한 자세한 내용은 [출력 창](/visualstudio/ide/reference/output-window)을 참조하세요. 애플리케이션의 로그 파일 위치에 대한 정보는 [연습: My.Application.Log가 정보를 기록하는 위치 확인](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)을 참조하세요.  
   
     > [!NOTE]
-    >  기본적으로 애플리케이션을 닫으면 애플리케이션이 로그 파일 출력을 플러시합니다.  
+    > 기본적으로 애플리케이션을 닫으면 애플리케이션이 로그 파일 출력을 플러시합니다.  
   
      위의 예제에서 <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> 메서드에 대한 두 번째 호출 및 <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> 메서드에 대한 호출은 로그 출력을 생성하지만, `WriteEntry` 메서드에 대한 첫 번째 및 마지막 호출은 로그 출력을 생성하지 않습니다. `WriteEntry` 및 `WriteException`의 심각도 수준은 "정보" 및 "오류"이므로, 둘 다 `My.Application.Log` 개체의 기본 로그 필터링에서 허용됩니다. 그러나 "시작" 및 "중지" 심각도 수준의 이벤트는 로그 출력 생성이 금지됩니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "65591275"
 |`Off`|모든 메시지를 차단합니다.|  
   
 > [!NOTE]
->  `WriteEntry` 및 `WriteException` 메서드는 각각 심각도 수준을 지정하지 않는 오버로드를 가지고 있습니다. `WriteEntry` 오버로드에 대한 암시적 심각도 수준은 "정보"이며, `WriteException` 오버로드에 대한 암시적 심각도 수준은 "오류"입니다.  
+> `WriteEntry` 및 `WriteException` 메서드는 각각 심각도 수준을 지정하지 않는 오버로드를 가지고 있습니다. `WriteEntry` 오버로드에 대한 암시적 심각도 수준은 "정보"이며, `WriteException` 오버로드에 대한 암시적 심각도 수준은 "오류"입니다.  
   
  다음 표는 이전 예제에 나와 있는 로그 출력을 설명합니다. 기본 `DefaultSwitch` 설정이 "정보"인 경우 `WriteEntry` 메서드에 대한 두 번째 호출 및 `WriteException` 메서드에 대한 호출만이 로그 출력을 생성합니다.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "65591275"
 9. `value` 특성의 값을 다시 "정보"로 변경합니다.  
   
     > [!NOTE]
-    >  `DefaultSwitch` 스위치 설정은 `My.Application.Log`만 제어합니다. .NET Framework <xref:System.Diagnostics.Trace?displayProperty=nameWithType> 및 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 클래스 동작은 변경되지 않습니다.  
+    > `DefaultSwitch` 스위치 설정은 `My.Application.Log`만 제어합니다. .NET Framework <xref:System.Diagnostics.Trace?displayProperty=nameWithType> 및 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 클래스 동작은 변경되지 않습니다.  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>My.Application.Log 수신기에 대한 개별 필터링  
  이전 예제에서는 모든 `My.Application.Log` 출력에 대한 필터링을 변경하는 방법을 보여 줍니다. 이 예제에서는 개별 로그 수신기를 필터링하는 방법을 보여 줍니다. 기본적으로 애플리케이션에는 각각 애플리케이션의 디버그 출력 및 로그 파일에 기록하는 두 개의 수신기가 있습니다.  

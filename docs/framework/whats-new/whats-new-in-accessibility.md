@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da73df97524b9e394fac795daf14a3f0fb1f4e3d
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 410f95b373e079fe959068a6540642a6ad043e95
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661380"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952820"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework에서 내게 필요한 옵션의 새로운 기능
 
@@ -22,9 +22,9 @@ ms.locfileid: "67661380"
 
 ## <a name="accessibility-switches"></a>내게 필요한 옵션 스위치
 
-.NET Framework 4.7 이전 버전을 대상으로 하지만 .NET Framework 4.7.1 이상에서 실행되는 경우 내게 필요한 옵션 기능으로 옵트인하도록 앱을 구성할 수 있습니다. .NET Framework 4.7.1 이상을 대상으로 하는 경우 레거시 기능(및 내게 필요한 옵션 기능을 활용하지 못하도록)을 사용하도록 앱을 구성할 수도 있습니다. 내게 필요한 옵션 기능을 포함하는 .NET Framework의 각 버전에는 애플리케이션의 구성 파일의 [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) 섹션에서 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소에 추가하는 버전별 내게 필요한 옵션 스위치가 있습니다. 다음은 지원되는 스위치입니다.
+.NET Framework 4.7 이전 버전을 대상으로 하지만 .NET Framework 4.7.1 이상에서 실행되는 경우 내게 필요한 옵션 기능으로 옵트인하도록 앱을 구성할 수 있습니다. .NET Framework 4.7.1 이상을 대상으로 하는 경우 레거시 기능(및 내게 필요한 옵션 기능을 활용하지 못하도록)을 사용하도록 앱을 구성할 수도 있습니다. 내게 필요한 옵션 기능을 포함하는 .NET Framework의 각 버전에는 애플리케이션의 구성 파일의 [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 섹션에서 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소에 추가하는 버전별 내게 필요한 옵션 스위치가 있습니다. 다음은 지원되는 스위치입니다.
 
-|버전|Switch|
+|버전|스위치|
 |---|---|
 |.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
 |.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
@@ -32,7 +32,7 @@ ms.locfileid: "67661380"
 
 ### <a name="taking-advantage-of-accessibility-enhancements"></a>내게 필요한 옵션 개선 사항 활용
 
-새로운 내게 필요한 옵션 기능은 .NET Framework 4.7.1 이상을 대상으로 하는 애플리케이션에 대해 기본적으로 활성화되어 있습니다. 또한 이전 버전의 .NET Framework를 대상으로 하지만 .NET Framework 4.7.1 이상에서 실행되는 애플리케이션은 애플리케이션의 구성 파일의 [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) 섹션에서 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소에 스위치를 추가하고 해당 값을 `false`로 설정하여 레거시 내게 필요한 옵션 동작을 옵트아웃할 수 있습니다(따라서 내게 필요한 옵션 개선 사항 활용). 다음은 .NET Framework 4.7.1에 도입된 내게 필요한 옵션 개선 사항으로 옵트인하는 방법을 보여줍니다.
+새로운 내게 필요한 옵션 기능은 .NET Framework 4.7.1 이상을 대상으로 하는 애플리케이션에 대해 기본적으로 활성화되어 있습니다. 또한 이전 버전의 .NET Framework를 대상으로 하지만 .NET Framework 4.7.1 이상에서 실행되는 애플리케이션은 애플리케이션의 구성 파일의 [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 섹션에서 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소에 스위치를 추가하고 해당 값을 `false`로 설정하여 레거시 내게 필요한 옵션 동작을 옵트아웃할 수 있습니다(따라서 내게 필요한 옵션 개선 사항 활용). 다음은 .NET Framework 4.7.1에 도입된 내게 필요한 옵션 개선 사항으로 옵트인하는 방법을 보여줍니다.
 
 ```xml
 <runtime>
@@ -41,7 +41,7 @@ ms.locfileid: "67661380"
 </runtime>
 ```
 
-.NET Framework의 이후 버전에서 내게 필요한 옵션 기능으로 옵트인하도록 선택한 경우 .NET Framework의 이전 버전에서도 기능으로 명시적으로 옵트인해야 합니다. .NET Framework 4.7.1 및 4.7.2 모두에서 내게 필요한 옵션 개선 사항을 활용하도록 앱을 구성하려면 다음 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소가 필요합니다.
+.NET Framework의 이후 버전에서 내게 필요한 옵션 기능으로 옵트인하도록 선택한 경우 .NET Framework의 이전 버전에서도 기능으로 명시적으로 옵트인해야 합니다. .NET Framework 4.7.1 및 4.7.2 모두에서 내게 필요한 옵션 개선 사항을 활용하도록 앱을 구성하려면 다음 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소가 필요합니다.
 
 ```xml
 <runtime>
@@ -50,7 +50,7 @@ ms.locfileid: "67661380"
 </runtime>
 ```
 
-.NET Framework 4.7.1 및 4.7.2 및 4.8에서 내게 필요한 옵션 개선 사항을 활용하도록 앱을 구성하려면 다음 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소가 필요합니다.
+.NET Framework 4.7.1 및 4.7.2 및 4.8에서 내게 필요한 옵션 개선 사항을 활용하도록 앱을 구성하려면 다음 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소가 필요합니다.
 
 ```xml
 <runtime>
@@ -61,7 +61,7 @@ ms.locfileid: "67661380"
 
 ### <a name="restoring-legacy-behavior"></a>레거시 동작 복원
 
-4\.7.1부터 시작하는 .NET Framework의 버전을 대상으로 하는 애플리케이션은 애플리케이션의 구성 파일의 [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) 섹션에서 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소에 스위치를 추가하고 `true`로 해당 값을 설정하여 내게 필요한 옵션 기능을 비활성화할 수 있습니다. 예를 들어 다음 구성은 .NET Framework 4.7.2에 도입된 내게 필요한 옵션 기능을 옵트아웃합니다.
+4\.7.1부터 시작하는 .NET Framework의 버전을 대상으로 하는 애플리케이션은 애플리케이션의 구성 파일의 [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 섹션에서 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소에 스위치를 추가하고 `true`로 해당 값을 설정하여 내게 필요한 옵션 기능을 비활성화할 수 있습니다. 예를 들어 다음 구성은 .NET Framework 4.7.2에 도입된 내게 필요한 옵션 기능을 옵트아웃합니다.
 
 ```xml
 <runtime>
@@ -474,7 +474,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 **고대비**
 
-.NET Framework 4.7.1부터 다양한 WPF 컨트롤에 고대비의 개선 사항이 만들어졌습니다. <xref:System.Windows.SystemParameters.HighContrast%2A> 테마가 설정된 경우 이제 표시됩니다. 내용은 다음과 같습니다.
+.NET Framework 4.7.1부터 다양한 WPF 컨트롤에 고대비의 개선 사항이 만들어졌습니다. <xref:System.Windows.SystemParameters.HighContrast%2A> 테마가 설정된 경우 이제 표시됩니다. 여기에는 다음이 포함됩니다.
 
 - <xref:System.Windows.Controls.Expander> 컨트롤
 

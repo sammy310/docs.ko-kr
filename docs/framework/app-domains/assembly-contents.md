@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd41051bd770d3579137aa158e70cef41aed49f8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d1334f8c8e1b5898e93697461f609429d4aae764
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607837"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921697"
 ---
 # <a name="assembly-contents"></a>어셈블리 콘텐츠
 일반적으로 정적 어셈블리는 네 가지 요소로 구성됩니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "64607837"
  ![다중 파일 어셈블리를 보여주는 다이어그램.](./media/assembly-contents/multifile-assembly-diagram.gif) 
   
 > [!NOTE]
->  파일 시스템은 다중 파일 어셈블리를 구성하는 파일을 실제로 연결하지 않습니다. 이들 파일은 어셈블리 매니페스트를 통해 연결되며, 공용 언어 런타임은 이들 파일을 하나의 단위로 관리합니다.  
+> 파일 시스템은 다중 파일 어셈블리를 구성하는 파일을 실제로 연결하지 않습니다. 이들 파일은 어셈블리 매니페스트를 통해 연결되며, 공용 언어 런타임은 이들 파일을 하나의 단위로 관리합니다.  
   
  이 그림에서는 MyAssembly.dll에 포함된 어셈블리 매니페스트에 설명된 대로, 세 개 파일 모두 어셈블리에 속하지만 파일 시스템에서는 이들 파일을 세 개의 별도 파일로 인식합니다. Util.netmodule 파일은 아무런 어셈블리 정보를 포함하지 않기 때문에 모듈로 컴파일되었습니다. 어셈블리가 만들어질 때 MyAssembly.dll과 Util.netmodule 및 Graphic.bmp와의 관계를 나타내도록 어셈블리 매니페스트가 MyAssembly.dll에 추가되었습니다.  
   

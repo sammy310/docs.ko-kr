@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: c48a7f93-83bb-4a06-aea0-d8e7bd1502ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6851ac334d439f2e5c0f6056f5226e3faa1503d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b47abc2adb7b515e4d1d76da58c150703a8693d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392579"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957435"
 ---
 # <a name="composition-analysis-tool-mefx"></a>컴퍼지션 분석 도구(Mefx)
-컴퍼지션 분석 도구(Mefx)는 MEF(Managed Extensibility Framework) 파트를 포함하는 라이브러리(.dll) 및 응용 프로그램(.exe) 파일을 분석하는 명령줄 응용 프로그램입니다. Mefx는 주로 번거로운 추적 코드를 응용 프로그램 자체에 추가할 필요 없이 MEF 응용 프로그램에서 컴퍼지션 실패를 진단하는 방법을 개발자에게 제공하는 데 사용됩니다. 타사에서 제공된 라이브러리의 파트를 이해할 때 유용할 수 있습니다. 이 항목에서는 Mefx를 사용하는 방법을 설명하고 해당 구문에 대한 참조를 제공합니다.  
+컴퍼지션 분석 도구(Mefx)는 MEF(Managed Extensibility Framework) 파트를 포함하는 라이브러리(.dll) 및 애플리케이션(.exe) 파일을 분석하는 명령줄 애플리케이션입니다. Mefx는 주로 번거로운 추적 코드를 애플리케이션 자체에 추가할 필요 없이 MEF 애플리케이션에서 컴퍼지션 실패를 진단하는 방법을 개발자에게 제공하는 데 사용됩니다. 타사에서 제공된 라이브러리의 파트를 이해할 때 유용할 수 있습니다. 이 항목에서는 Mefx를 사용하는 방법을 설명하고 해당 구문에 대한 참조를 제공합니다.  
   
 <a name="getting_mefx"></a>   
 ## <a name="getting-mefx"></a>Mefx 가져오기  
@@ -37,7 +37,7 @@ mefx /file:MyAddIn.dll /directory:Program\AddIns [action...]
 ```  
   
 > [!NOTE]
->  각 .dll 또는 .exe는 한 번만 로드되어야 합니다. 파일이 여러 번 로드되면 도구가 잘못된 정보를 반환할 수 있습니다.  
+> 각 .dll 또는 .exe는 한 번만 로드되어야 합니다. 파일이 여러 번 로드되면 도구가 잘못된 정보를 반환할 수 있습니다.  
   
  파일 및 디렉터리 목록 다음에 명령 및 해당 명령의 옵션을 지정해야 합니다.  
   
@@ -114,7 +114,7 @@ from: ClassLibrary1.ChainOne from: AssemblyCatalog (Assembly="ClassLibrary1, Ver
  이전 예제에서 `/causes` 작업을 사용하면 채워지지 않은 가져오기가 `ChainOne`거부의 근본 원인인 `AddIn`에 대한 정보만 나열됩니다. `/causes` 작업은 일반 및 `/verbose` 옵션에서 둘 다 사용할 수 있습니다.  
   
 > [!NOTE]
->  대부분 경우에 Mefx는 연속 실패의 근본 원인을 진단할 수 있습니다. 그러나 파트가 컨테이너에 프로그래밍 방식으로 추가된 경우, 계층적 컨테이너가 관련된 경우 또는 사용자 지정 `ExportProvider` 구현이 관련된 경우 Mefx는 원인을 진단할 수 없습니다. 일반적으로 실패를 진단하기 어려우므로 가능하면 앞에서 설명된 경우를 피해야 합니다.  
+> 대부분 경우에 Mefx는 연속 실패의 근본 원인을 진단할 수 있습니다. 그러나 파트가 컨테이너에 프로그래밍 방식으로 추가된 경우, 계층적 컨테이너가 관련된 경우 또는 사용자 지정 `ExportProvider` 구현이 관련된 경우 Mefx는 원인을 진단할 수 없습니다. 일반적으로 실패를 진단하기 어려우므로 가능하면 앞에서 설명된 경우를 피해야 합니다.  
   
 <a name="white_lists"></a>   
 ## <a name="white-lists"></a>허용 목록  

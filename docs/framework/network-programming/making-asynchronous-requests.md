@@ -11,18 +11,18 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-ms.openlocfilehash: bf5c603dfc6668f8378ba7997df543889b733482
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 2bfb33944007f84992d95ebc35c04ab9b97b3a7d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422451"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963976"
 ---
 # <a name="making-asynchronous-requests"></a>비동기 요청 수행
 <xref:System.Net> 클래스에서는 인터넷 리소스에 비동기적으로 액세스하기 위해 .NET Framework의 표준 비동기 프로그래밍 모델을 사용합니다. <xref:System.Net.WebRequest> 클래스의 <xref:System.Net.WebRequest.BeginGetResponse%2A> 및 <xref:System.Net.WebRequest.EndGetResponse%2A> 메서드를 통해 인터넷 리소스의 비동기 요청을 시작하고 완료합니다.  
   
 > [!NOTE]
->  비동기 콜백 메서드에서 동기 호출을 사용하면 심각한 성능 저하가 발생할 수 있습니다. **WebRequest** 및 해당 종속 항목을 사용하는 인터넷 요청에서는 <xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType>을 사용하여 <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> 매서드에서 반환한 스트림을 읽어야 합니다.  
+> 비동기 콜백 메서드에서 동기 호출을 사용하면 심각한 성능 저하가 발생할 수 있습니다. **WebRequest** 및 해당 종속 항목을 사용하는 인터넷 요청에서는 <xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType>을 사용하여 <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> 매서드에서 반환한 스트림을 읽어야 합니다.  
   
  다음 샘플 코드는 **WebRequest** 클래스에서 비동기 호출을 사용하는 방법을 보여 줍니다. 이 샘플은 명령줄에서 URI를 받아 URI에서 리소스를 요청한 다음 인터넷에서 수신하는 동시에 콘솔에 데이터를 인쇄하는 콘솔 프로그램입니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67422451"
 - `ReadCallBack()` 메서드에서는 응답 스트림을 읽는 비동기 콜백 메서드를 구현합니다. 인터넷 리소스에서 받은 데이터를 **RequestState** 인스턴스의 **ResponseData** 속성으로 전송한 다음, 데이터가 더 이상 반환되지 않을 때까지 응답 스트림의 또 다른 비동기 읽기를 시작합니다. 모든 데이터를 읽고 나면 `ReadCallBack()`에서 응답 스트림을 닫고 `allDone.Set()` 메서드를 호출하여 **ResponseData**에 전체 응답이 있음을 표시합니다.  
   
     > [!NOTE]
-    >  모든 네트워크 스트림을 닫는 것이 중요합니다. 각 응답과 스트림을 닫지 않으면 애플리케이션이 서버에 대한 연결을 모두 사용하여 추가 요청을 처리하지 못하게 될 수 있습니다.  
+    > 모든 네트워크 스트림을 닫는 것이 중요합니다. 각 응답과 스트림을 닫지 않으면 애플리케이션이 서버에 대한 연결을 모두 사용하여 추가 요청을 처리하지 못하게 될 수 있습니다.  
   
 ```csharp  
 using System;  

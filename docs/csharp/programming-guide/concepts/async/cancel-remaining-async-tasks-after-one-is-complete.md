@@ -2,12 +2,12 @@
 title: 비동기 작업 하나가 완료되면 남은 비동기 작업 취소(C#)
 ms.date: 07/20/2015
 ms.assetid: d3cebc74-c392-497b-b1e6-62a262eabe05
-ms.openlocfilehash: 9b968ec902d9653caa410e917af40c8a521e55b4
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 81aed54d4854ad505971fbf85cf9a080a7c392d1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859614"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922014"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>비동기 작업 하나가 완료되면 남은 비동기 작업 취소(C#)
 <xref:System.Threading.CancellationToken>과 함께 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 메서드를 사용하면 한 작업이 완료될 때 나머지 작업을 모두 취소할 수 있습니다. `WhenAny` 메서드는 작업의 컬렉션인 인수를 사용합니다. 메서드는 모든 작업을 시작하고 단일 작업을 반환합니다. 컬렉션의 임의 작업이 완료되면 단일 작업이 완료됩니다.  
@@ -15,7 +15,7 @@ ms.locfileid: "67859614"
  이 예제에서는 취소 토큰을 `WhenAny`와 함께 사용하여 작업 컬렉션에서 완료될 첫 번째 작업을 유지하고 나머지 작업을 취소하는 방법을 보여 줍니다. 각 작업은 웹 사이트의 콘텐츠를 다운로드합니다. 예제에서는 완료할 첫 번째 다운로드의 콘텐츠 길이를 표시하고 기타 다운로드를 취소합니다.  
   
 > [!NOTE]
->  예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.  
+> 예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.  
   
 ## <a name="downloading-the-example"></a>예제 다운로드  
  [Async 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후, 다음 단계를 수행합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "67859614"
  프로젝트를 다운로드하지 않으려는 경우 이 항목의 끝에 있는 MainWindow.xaml.cs 파일을 검토할 수 있습니다.  
   
 ## <a name="building-the-example"></a>예제 빌드  
- 이 항목의 예제는 [비동기 작업 또는 작업 목록 취소(C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)에서 개발된 프로젝트에 추가되어 작업 목록을 취소합니다. **취소** 단추는 명시적으로 사용되지 않지만 예제에서는 같은 UI를 사용합니다.  
+ 이 항목의 예제는 [비동기 작업 또는 작업 목록 취소(C#)](./cancel-an-async-task-or-a-list-of-tasks.md)에서 개발된 프로젝트에 추가되어 작업 목록을 취소합니다. **취소** 단추는 명시적으로 사용되지 않지만 예제에서는 같은 UI를 사용합니다.  
   
  직접 예제를 빌드하려면 "예제 다운로드" 섹션의 지침을 단계별로 따르되, **CancelAListOfTasks**를 **시작 프로젝트**로 선택합니다. 이 항목의 변경 내용을 해당 프로젝트에 추가합니다.  
   
@@ -260,6 +260,6 @@ namespace CancelAfterOneTask
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- [Async 애플리케이션 미세 조정(C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [async 및 await를 사용한 비동기 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/async/index.md)
+- [Async 애플리케이션 미세 조정(C#)](./fine-tuning-your-async-application.md)
+- [async 및 await를 사용한 비동기 프로그래밍(C#)](./index.md)
 - [비동기 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

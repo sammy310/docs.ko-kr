@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20b482ee94446ffa863697d8c25276658a4bb122
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7484e67202c430df6ec2d4bea9cff5a850720ff5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593608"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921558"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>방법: 강력한 이름 건너뛰기 기능 비활성화
 .NET Framework 버전 3.5 SP1(서비스 팩 1)부터는 어셈블리가 완전 신뢰 <xref:System.AppDomain> 개체(예: `MyComputer` 영역의 기본 <xref:System.AppDomain>)에 로드될 때 강력한 이름 시그니처의 유효성을 검사하지 않습니다. 이를 강력한 이름 건너뛰기 기능이라고 합니다. 완전 신뢰 환경에서는 <xref:System.Security.Permissions.StrongNameIdentityPermission>에 대한 요청이 해당 시그니처와 관계없이 서명된 완전 신뢰 어셈블리에 대해 항상 성공합니다. 유일한 제한 사항은 어셈블리 영역이 완전히 신뢰되므로 어셈블리도 완전히 신뢰할 수 있어야 한다는 것입니다. 강력한 이름은 이러한 조건에서 결정적인 요소가 아니므로 유효성을 검사할 이유가 없습니다. 강력한 이름 시그니처의 유효성 검사를 건너뛰면 상당한 성능 개선 효과가 있습니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "64593608"
  건너뛰기 기능을 재정의하면 정확성에 대해서만 강력한 이름의 유효성이 검사되고 <xref:System.Security.Permissions.StrongNameIdentityPermission>에 대해서는 검사되지 않습니다. 특정 강력한 이름을 확인하려면 해당 확인을 별도로 수행해야 합니다.  
   
 > [!IMPORTANT]
->  강력한 이름 유효성 검사를 강제 적용하는 기능은 다음 절차에 설명된 대로 레지스트리 키에 따라 달라집니다. 애플리케이션이 해당 레지스트리 키에 액세스할 수 있는 ACL(액세스 제어 목록) 권한이 없는 계정으로 실행되는 경우에는 설정이 적용되지 않습니다. 모든 어셈블리에서 읽을 수 있도록 이 키에 대해 ACL 권한이 구성되어 있는지 확인해야 합니다.  
+> 강력한 이름 유효성 검사를 강제 적용하는 기능은 다음 절차에 설명된 대로 레지스트리 키에 따라 달라집니다. 애플리케이션이 해당 레지스트리 키에 액세스할 수 있는 ACL(액세스 제어 목록) 권한이 없는 계정으로 실행되는 경우에는 설정이 적용되지 않습니다. 모든 어셈블리에서 읽을 수 있도록 이 키에 대해 ACL 권한이 구성되어 있는지 확인해야 합니다.  
   
 ### <a name="to-disable-the-strong-name-bypass-feature-for-all-applications"></a>모든 애플리케이션에 대해 강력한 이름 건너뛰기 기능을 사용하지 않도록 설정하려면  
   
@@ -51,7 +51,7 @@ ms.locfileid: "64593608"
  구성 파일 설정을 제거하거나 특성을 "true"로 설정하여 애플리케이션에 대한 건너뛰기 기능을 복원할 수 있습니다.  
   
 > [!NOTE]
->  컴퓨터에서 건너뛰기 기능이 사용되는 경우에만 애플리케이션에 대해 강력한 이름 유효성 검사를 켜고 끌 수 있습니다. 컴퓨터에서 건너뛰기 기능이 해제된 경우 모든 애플리케이션에 대해 강력한 이름 유효성이 검사되며, 단일 애플리케이션에 대해 유효성 검사를 건너뛸 수 없습니다.  
+> 컴퓨터에서 건너뛰기 기능이 사용되는 경우에만 애플리케이션에 대해 강력한 이름 유효성 검사를 켜고 끌 수 있습니다. 컴퓨터에서 건너뛰기 기능이 해제된 경우 모든 애플리케이션에 대해 강력한 이름 유효성이 검사되며, 단일 애플리케이션에 대해 유효성 검사를 건너뛸 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목
 

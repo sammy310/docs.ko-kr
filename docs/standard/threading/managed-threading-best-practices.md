@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d8319424c82327fd9743c573846663bdd76ed1b9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bb262f5a02343aeb91c28eb21c939edef8a70f61
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644622"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666291"
 ---
 # <a name="managed-threading-best-practices"></a>관리 스레딩을 구현하는 최선의 방법
 다중 스레딩에는 신중한 프로그래밍이 필요합니다. 대부분의 작업의 경우 스레드 풀 스레드로 실행에 대한 요청을 큐에 대기시켜 복잡성을 줄일 수 있습니다. 이 항목에서는 다중 스레드의 작업 조정 또는 차단되는 스레드 처리 등의 더욱 어려운 상황을 다룹니다.  
@@ -96,7 +96,7 @@ else {
   
 - 인스턴스를 잠글 때 주의합니다(예: C#에서 `lock(this)` 또는 Visual Basic에서 `SyncLock(Me)`). 형식 외부의 애플리케이션에 있는 다른 코드가 개체에서 잠금을 사용하는 경우 교착 상태가 발생할 수 있습니다.  
   
-- 모니터링을 시작한 스레드가 모니터링 중에 있는 동안 예외가 발생한 경우에도 항상 해당 모니터링을 유지하는지 확인합니다. C# [lock](~/docs/csharp/language-reference/keywords/lock-statement.md) 문 및 Visual Basic [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md) 문은 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>이 호출되었는지 확인하는 **finally** 블록을 사용하여 이 동작을 자동으로 제공합니다. **Exit**이 호출될지 확인할 수 없는 경우 **뮤텍스**를 사용하도록 설계를 변경하는 것이 좋습니다. 뮤텍스는 현재 소유하고 있는 스레드가 종료되면 자동으로 해제됩니다.  
+- 모니터링을 시작한 스레드가 모니터링 중에 있는 동안 예외가 발생한 경우에도 항상 해당 모니터링을 유지하는지 확인합니다. C# [lock](../../csharp/language-reference/keywords/lock-statement.md) 문 및 Visual Basic [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) 문은 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>이 호출되었는지 확인하는 **finally** 블록을 사용하여 이 동작을 자동으로 제공합니다. **Exit**이 호출될지 확인할 수 없는 경우 **뮤텍스**를 사용하도록 설계를 변경하는 것이 좋습니다. 뮤텍스는 현재 소유하고 있는 스레드가 종료되면 자동으로 해제됩니다.  
   
 - 다른 리소스를 필요로 하는 작업에 대해 다중 스레드를 사용하고 단일 리소스에 다중 스레드를 할당하지 마세요. 예를 들어 해당 스레드는 I/O 작업 중에 차단되어 다른 스레드의 실행을 허용하므로 I/O와 관련된 모든 작업은 자체 스레드를 소유함으로써 이익을 얻습니다. 사용자 입력은 전용 스레드를 활용하는 다른 리소스입니다. 단일 프로세서 컴퓨터에서 집중적 계산을 포함하는 작업은 사용자 입력 및 I/O와 관련된 작업과 공존하지만 여러 계산 집약적인 작업은 서로 경쟁합니다.  
   

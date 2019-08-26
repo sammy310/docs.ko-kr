@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c21fb997-9f0e-40a5-8741-f73bba376bd8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 135decebcd071c611cf6e72835fee33d49088070
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5c1658f27b66d9447d191d23801eba2d659ce9c2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493913"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933894"
 ---
 # <a name="building-console-applications-in-the-net-framework"></a>.NET Framework에서 콘솔 애플리케이션 만들기
 .NET Framework의 애플리케이션에서는 <xref:System.Console?displayProperty=nameWithType> 클래스를 사용하여 콘솔로부터 문자를 읽거나 콘솔에 문자를 쓸 수 있습니다. 콘솔의 데이터는 표준 입력 스트림에서 읽혀지고 표준 출력 스트림으로 쓰여지며, 콘솔의 오류 데이터는 표준 오류 출력 스트림으로 쓰여집니다. 이러한 스트림은 애플리케이션이 시작될 때 콘솔과 자동으로 연결되며 <xref:System.Console.In%2A>, <xref:System.Console.Out%2A> 및 <xref:System.Console.Error%2A> 속성으로 나타납니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "54493913"
  <xref:System.Console.In%2A?displayProperty=nameWithType> 속성의 값은 <xref:System.IO.TextReader?displayProperty=nameWithType> 개체인 반면 <xref:System.Console.Out%2A?displayProperty=nameWithType> 및 <xref:System.Console.Error%2A?displayProperty=nameWithType> 속성의 값은 <xref:System.IO.TextWriter?displayProperty=nameWithType> 개체입니다. 콘솔을 나타내지 않는 스트림과 이들 속성을 연결하여 스트림이 서로 다른 입력 또는 출력 위치를 향하도록 할 수 있습니다. 예를 들어 <xref:System.Console.Out%2A?displayProperty=nameWithType> 속성을 <xref:System.IO.StreamWriter?displayProperty=nameWithType>로 설정하여 출력을 파일로 리디렉션할 수 있습니다. 이 속성 값은 <xref:System.IO.FileStream?displayProperty=nameWithType>을 <xref:System.Console.SetOut%2A?displayProperty=nameWithType> 메서드로 캡슐화합니다. <xref:System.Console.In%2A?displayProperty=nameWithType> 및 <xref:System.Console.Out%2A?displayProperty=nameWithType> 속성은 동일한 스트림을 참조할 필요가 없습니다.  
   
 > [!NOTE]
->  C#, Visual Basic 및 C++의 예제를 비롯하여 콘솔 애플리케이션을 빌드하는 방법에 대한 자세한 내용은 <xref:System.Console> 클래스 설명서를 참조하세요.  
+> C#, Visual Basic 및 C++의 예제를 비롯하여 콘솔 애플리케이션을 빌드하는 방법에 대한 자세한 내용은 <xref:System.Console> 클래스 설명서를 참조하세요.  
   
  Windows 기반 애플리케이션 내에 콘솔이 존재하지 않을 경우 정보를 쓸 콘솔이 없으므로 표준 출력 스트림에 쓰여지는 출력은 보이지 않습니다. 액세스할 수 없는 콘솔에 정보를 쓸 경우 예외가 발생하지 않습니다.  
   

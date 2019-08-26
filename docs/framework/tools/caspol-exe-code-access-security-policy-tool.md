@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccb1d78f939d2faf90013392fc60d5597bc3922e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: f70682150905c411be5618ab368a87e71d0e8e13
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489683"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959063"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe(코드 액세스 보안 정책 도구)
 CAS(코드 액세스 보안 정책 도구)(Caspol.exe)를 사용하면 사용자나 관리자가 컴퓨터 정책 수준, 사용자 정책 수준 및 엔터프라이즈 정책 수준의 보안 정책을 수정할 수 있습니다.  
   
 > [!IMPORTANT]
->  .NET Framework 4부터는 Caspol.exe가 CAS 정책에 영향을 주려면 [\<legacyCasPolicy> 요소](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)를 `true`로 설정해야 합니다. CasPol.exe에 의해 표시 또는 수정되는 모든 설정은 CAS 정책을 사용하도록 선택하는 애플리케이션에만 영향을 줍니다. 자세한 내용은 [보안 변경 내용](../../../docs/framework/security/security-changes.md)을 참조하세요.  
+> .NET Framework 4부터는 Caspol.exe가 CAS 정책에 영향을 주려면 [\<legacyCasPolicy> 요소](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)를 `true`로 설정해야 합니다. CasPol.exe에 의해 표시 또는 수정되는 모든 설정은 CAS 정책을 사용하도록 선택하는 애플리케이션에만 영향을 줍니다. 자세한 내용은 [보안 변경 내용](../../../docs/framework/security/security-changes.md)을 참조하세요.  
   
 > [!NOTE]
->  64비트 컴퓨터에 64비트 및 32비트 버전의 보안 정책이 포함됩니다. 정책 변경 내용을 32비트와 64비트 애플리케이션에 적용하도록 하려면, Caspol.exe의 32비트와 64비트 버전을 모두 실행해야 합니다.  
+> 64비트 컴퓨터에 64비트 및 32비트 버전의 보안 정책이 포함됩니다. 정책 변경 내용을 32비트와 64비트 애플리케이션에 적용하도록 하려면, Caspol.exe의 32비트와 64비트 버전을 모두 실행해야 합니다.  
   
  코드 액세스 보안 정책 도구는 .NET Framework와 Visual Studio와 함께 자동으로 설치됩니다. Caspol.exe는 32비트 시스템의 경우 %windir%\Microsoft.NET\Framework\\*version*에서, 64비트 시스템의 경우 %windir%\Microsoft.NET\Framework64\\*version*에서 찾을 수 있습니다. (예를 들어 위치는 64비트 시스템의 .NET Framework 4인 경우 %windir%\Microsoft.NET\Framework64\v4.030319\caspol.exe입니다.) 컴퓨터에 여러 .NET Framework 버전이 함께 실행 중인 경우 도구의 여러 버전을 설치할 수 있습니다. 설치 디렉터리에서 도구를 실행할 수 있습니다. 하지만 설치 폴더로 이동할 필요가 없는 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 사용하는 것이 좋습니다.  
   
@@ -102,7 +102,7 @@ caspol [options]
 |**-levelfinal** {**on**&#124;**off**}|**on**으로 설정하면 추가 또는 수정된 코드 그룹이 발생하는 정책 수준의 하위 수준은 고려되지 않음을 나타냅니다. 일반적으로 이 옵션은 컴퓨터 정책 수준에서 사용됩니다. 예를 들어, 컴퓨터 수준의 코드 그룹에 이 플래그를 설정하고 일부 코드가 이 코드 그룹의 멤버 자격 조건과 일치하면 이 코드에 대해 사용자 수준 정책이 계산되거나 적용되지 않습니다.|  
 |**-name** "*name*"|**–addgroup** 옵션과 함께 사용하는 경우 추가할 코드 그룹의 스크립팅 이름을 지정합니다. **-chggroup** 옵션과 함께 사용하는 경우 편집할 코드 그룹의 스크립팅 이름을 지정합니다. *name* 인수는 큰따옴표로 묶어야 합니다. 또한 *name* 인수는 숫자로 시작할 수 없으며, A-Z, 0-9 및 밑줄 문자만 사용할 수 있습니다. 코드 그룹은 숫자 레이블 대신 이 *name*으로 참조될 수 있습니다. *name*은 스크립팅 용도로도 매우 유용합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  보안 정책은 컴퓨터 정책, 사용자 정책 및 엔터프라이즈 정책의 세 가지 정책 수준으로 표현됩니다. 어셈블리에서 받아들이는 권한 집합은 이러한 세 가지 정책 수준에서 허용하는 권한 집합의 교집합 부분에 의해 결정됩니다. 각 정책 수준은 코드 그룹의 계층 구조로 표시됩니다. 모든 코드 그룹에는 해당 그룹의 멤버가 되는 코드를 결정하는 멤버 자격 조건이 있습니다. 또한 명명된 권한 집합이 각 코드 그룹에 연결됩니다. 이 권한 집합에서는 런타임에서 해당 멤버 자격 조건을 충족하는 코드에 허용할 권한을 지정합니다. 코드 그룹 계층 구조에서는 해당 코드 그룹에 연결된 명명된 권한 집합과 함께 보안 정책의 각 수준을 정의하고 유지합니다. **–user**, **-customuser**, **–machine** 및 **-enterprise** 옵션을 사용하여 보안 정책의 수준을 설정할 수 있습니다.  
   
  보안 정책 및 런타임에서 코드에 부여할 권한을 결정하는 방법에 대한 자세한 내용은 [보안 정책 관리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))를 참조하세요.  

@@ -2,12 +2,12 @@
 title: 공통 특성(C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-ms.openlocfilehash: bb06fc72fc336df257c6b674d3eaa4fa47801da0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7988dad410c6e51869ec9d7e40d94e874443a5f8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603332"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595465"
 ---
 # <a name="common-attributes-c"></a>공통 특성(C#)
 이 항목에서는 C# 프로그램에서 가장 일반적으로 사용되는 특성을 설명합니다.  
@@ -225,15 +225,15 @@ class SampleClass
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|호출자를 포함한 소스 파일의 전체 경로입니다. 컴파일 시간의 경로입니다.|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|메서드가 호출되는 소스 파일의 줄 번호입니다.|`Integer`|  
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|호출자의 메서드 이름 또는 속성 이름입니다. 자세한 내용은 [호출자 정보(C#)](../../../../csharp/programming-guide/concepts/caller-information.md)를 참조하세요.|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|호출자의 메서드 이름 또는 속성 이름입니다. 자세한 내용은 [호출자 정보(C#)](../caller-information.md)를 참조하세요.|`String`|  
   
- 호출자 정보 특성에 대한 자세한 내용은 [호출자 정보(C#)](../../../../csharp/programming-guide/concepts/caller-information.md)를 참조하세요.  
+ 호출자 정보 특성에 대한 자세한 내용은 [호출자 정보(C#)](../caller-information.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [C# 프로그래밍 가이드](../../../../csharp/programming-guide/index.md)
-- [특성](../../../../../docs/standard/attributes/index.md)
-- [리플렉션(C#)](../../../../csharp/programming-guide/concepts/reflection.md)
-- [리플렉션을 사용하여 특성 액세스(C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [C# 프로그래밍 가이드](../../index.md)
+- [특성](../../../../standard/attributes/index.md)
+- [리플렉션(C#)](../reflection.md)
+- [리플렉션을 사용하여 특성 액세스(C#)](./accessing-attributes-by-using-reflection.md)

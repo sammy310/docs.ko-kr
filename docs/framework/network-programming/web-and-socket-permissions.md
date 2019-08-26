@@ -15,12 +15,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - positions [.NET Framework], granting
 ms.assetid: d51ad8cb-03ae-4a51-bfcd-cfcf6b98afa9
-ms.openlocfilehash: 78ad06107155408b2aca854a8251c21a24c6577a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fbb4e5d7171c50c06f55706df90240ffa205ee73
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166857"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967615"
 ---
 # <a name="web-and-socket-permissions"></a>웹 및 소켓 사용 권한
 <xref:System.Net> 네임스페이스를 사용하는 애플리케이션에 대한 인터넷 보안은 <xref:System.Net.WebPermission> 및 <xref:System.Net.SocketPermission> 클래스에서 제공됩니다. **WebPermission** 클래스는 URI의 데이터를 요청하거나 인터넷에 URI를 제공하는 애플리케이션의 권한을 제어합니다. **SocketPermission** 클래스는 <xref:System.Net.Sockets.Socket>을 사용하여 로컬 포트에서 데이터를 허용하거나 호스트, 포트 번호 및 전송 프로토콜에 따라 다른 주소에서 전송 프로토콜을 사용하여 원격 디바이스에 연결하는 애플리케이션의 권한을 제어합니다.  
@@ -35,5 +35,5 @@ ms.locfileid: "59166857"
   
 ## <a name="see-also"></a>참고 항목
 
-- [보안](../../../docs/standard/security/index.md)
+- [보안](../../standard/security/index.md)
 - [네트워크 프로그래밍의 보안](../../../docs/framework/network-programming/security-in-network-programming.md)

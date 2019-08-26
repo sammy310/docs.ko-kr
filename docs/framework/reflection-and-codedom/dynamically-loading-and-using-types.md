@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 085b89de8180a216288e8f547af5b73eaf004457
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 0246f429b396a2606bbb827b7ae2a9034af00f11
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469674"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915470"
 ---
 # <a name="dynamically-loading-and-using-types"></a>동적으로 형식 로드 및 사용
 리플렉션은 언어 컴파일러에서 암시적 런타임에 바인딩을 구현하는 데 사용되는 인프라를 제공합니다. 바인딩은 고유하게 지정된 형식에 해당하는 선언(즉, 구현)을 찾는 프로세스입니다. 이 프로세스가 컴파일 시간이 아닌 런타임에 수행되는 경우 이를 런타임에 바인딩이라고 합니다. Visual Basic을 통해 코드에서 암시적 런타임에 바인딩을 사용할 수 있고, Visual Basic 컴파일러는 리플렉션을 사용하여 개체 형식을 가져오는 도우미 메서드를 호출합니다. 인수가 도우미 메서드에 전달되면 런타임에 적절한 메서드가 호출됩니다. 이러한 인수는 메서드를 호출하는 인스턴스(개체), 호출된 메서드의 이름(문자열) 및 호출된 메서드에 전달된 인수(개체 배열)입니다.  
@@ -44,7 +44,7 @@ End Module
 ## <a name="custom-binding"></a>사용자 지정 바인딩  
  리플렉션은 런타임에 바인딩을 위해 컴파일러에서 암시적으로 사용될 뿐만 아니라 코드에서 런타임에 바인딩을 수행하기 위해 명시적으로 사용될 수 있습니다.  
   
- [공용 언어 런타임](../../../docs/standard/clr.md)은 여러 가지 프로그래밍 언어를 지원하고 이러한 언어의 바인딩 규칙은 서로 다릅니다. 초기 바인딩된 경우 코드 생성기는 이 바인딩을 완전히 제어할 수 있습니다. 그러나 리플렉션을 통한 런타임에 바인딩에서는 사용자 지정된 바인딩을 통해 바인딩을 제어해야 합니다. <xref:System.Reflection.Binder> 클래스는 멤버 선택 및 호출의 사용자 지정 컨트롤을 제공합니다.  
+ [공용 언어 런타임](../../standard/clr.md)은 여러 가지 프로그래밍 언어를 지원하고 이러한 언어의 바인딩 규칙은 서로 다릅니다. 초기 바인딩된 경우 코드 생성기는 이 바인딩을 완전히 제어할 수 있습니다. 그러나 리플렉션을 통한 런타임에 바인딩에서는 사용자 지정된 바인딩을 통해 바인딩을 제어해야 합니다. <xref:System.Reflection.Binder> 클래스는 멤버 선택 및 호출의 사용자 지정 컨트롤을 제공합니다.  
   
  사용자 지정 바인딩을 사용하면 런타임에 어셈블리를 로드하고, 해당 어셈블리에서 형식 정보를 가져오고, 원하는 형식을 지정하고 나서, 해당 형식에 대한 메서드를 호출하거나 필드 또는 속성에 액세스할 수 있습니다. 개체 형식에 사용자 입력이 사용되는 경우와 같이 컴파일 시간에 개체 형식을 알 수 없는 경우 이 기술이 유용합니다.  
   
@@ -79,7 +79,7 @@ End Module
   
  코드 예제의 사례 3에서 값이 5.5인 **String** 형식의 실제 인수가 **Double** 형식의 형식 인수와 함께 메서드에 전달됩니다. 호출이 성공하려면 문자열 값 "5.5"가 double 값으로 변환되어야 합니다. **ChangeType**이 이 변환을 수행합니다.  
   
- **ChangeType**은 다음 표에 나와 있는 대로 무손실 또는 [확대 강제 변환](../../../docs/standard/base-types/type-conversion.md)을 수행합니다.  
+ **ChangeType**은 다음 표에 나와 있는 대로 무손실 또는 [확대 강제 변환](../../standard/base-types/type-conversion.md)을 수행합니다.  
   
 |소스 형식|대상 형식|  
 |-----------------|-----------------|  
@@ -104,4 +104,4 @@ End Module
 - <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - [형식 정보 보기](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
-- [.NET Framework의 형식 변환](../../../docs/standard/base-types/type-conversion.md)
+- [.NET Framework의 형식 변환](../../standard/base-types/type-conversion.md)

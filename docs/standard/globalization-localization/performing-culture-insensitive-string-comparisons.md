@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7726164e998ea917c8f539b5768aa7e3f1ae12c
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 7b68d079413168b042412a67e8732e8afed66ffa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053205"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915874"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>문화권을 구분하지 않는 문자열 비교 수행
 기본적으로 <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드는 문화권 구분 및 대/소문자 구분 비교 작업을 수행합니다. 이 메서드에는 사용할 문화권을 지정할 수 있는 `culture` 매개 변수와 사용할 비교 규칙을 지정할 수 있는 `comparisonType` 매개 변수를 제공하는 몇 가지 오버로드도 포함되어 있습니다. 기본 오버로드 대신 이러한 메서드를 호출하면 특정 메서드 호출에서 사용되는 규칙에 대한 모든 모호성이 제거되고 특정 비교가 문화권을 구분하는지 여부가 명확히 나타납니다.  
   
 > [!NOTE]
->  <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드의 두 오버로드는 문화권 구분 비교와 대/소문자 구분 비교를 수행합니다. 이 메서드를 사용하여 문화권을 구분하지 않는 비교를 수행할 수 없습니다. 코드의 명확성을 위해 <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드를 대신 사용하는 것이 좋습니다.  
+> <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드의 두 오버로드는 문화권 구분 비교와 대/소문자 구분 비교를 수행합니다. 이 메서드를 사용하여 문화권을 구분하지 않는 비교를 수행할 수 없습니다. 코드의 명확성을 위해 <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드를 대신 사용하는 것이 좋습니다.  
   
  문화권 구분 작업의 경우 <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType> 또는 <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> 열거형 값을 `comparisonType` 매개 변수로 지정합니다. 현재 문화권이 아닌 지정된 문화권을 사용하여 문화권 구분 비교를 수행하려면 해당 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체를 `culture` 매개 변수로 지정합니다.  
   

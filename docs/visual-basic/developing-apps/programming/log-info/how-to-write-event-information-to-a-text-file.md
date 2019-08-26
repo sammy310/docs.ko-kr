@@ -6,12 +6,12 @@ helpviewer_keywords:
 - text files [Visual Basic], writing event information to a text file
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
-ms.openlocfilehash: f9abf99a06437f08c65eca69e54760e44a217023
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4a34b57eb0a22dcf206456775cdd5817431292e8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665761"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956832"
 ---
 # <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>방법: 텍스트 파일에 이벤트 정보 쓰기(Visual Basic)
 `My.Application.Log` 및 `My.Log` 개체를 사용하여 애플리케이션에서 발생하는 이벤트에 대한 정보를 기록할 수 있습니다. 이 예제에서는 `My.Application.Log.WriteEntry` 메서드를 사용하여 추적 정보를 로그 파일에 기록하는 방법을 보여 줍니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "64665761"
      `customlocation` 특성의 값을 로그 디렉터리로 변경합니다.  
   
     > [!NOTE]
-    >  수신기 속성의 값을 설정하려면 속성과 이름이 같고 이름에 있는 모든 문자가 소문자인 특성을 사용 합니다. 예를 들어 `location` 및 `customlocation` 특성은 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> 및 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> 속성의 값을 설정합니다.  
+    > 수신기 속성의 값을 설정하려면 속성과 이름이 같고 이름에 있는 모든 문자가 소문자인 특성을 사용 합니다. 예를 들어 `location` 및 `customlocation` 특성은 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> 및 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> 속성의 값을 설정합니다.  
   
 ### <a name="to-write-event-information-to-the-file-log"></a>이벤트 정보를 파일 로그에 쓰려면  
   

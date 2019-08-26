@@ -6,18 +6,18 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 032958c24e03025fc3fc3eee2aae40bdd4491e7b
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: efbb99027004221bff1985bba8372c4415c02d4f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052727"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950297"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 개발 가이드
 이 섹션에서는 .NET Framework 앱을 생성, 구성, 디버그, 배포하고 보안을 적용하는 방법을 설명합니다. 이 섹션에서는 또한 동적 프로그래밍, 상호 운용성, 확장성, 메모리 관리 및 스레딩과 같은 기술 영역에 대한 정보를 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [애플리케이션 주요 사항](../../docs/standard/application-essentials.md)  
+ [애플리케이션 주요 사항](../standard/application-essentials.md)  
  앱 도메인 및 어셈블리 프로그래밍, 특성, 컬렉션, 파일 및 데이터 스트림, 제네릭의 사용, 기본 형식의 구문 분석 및 지정, 이벤트와 예외의 처리 등 기본적인 앱 개발 작업에 대한 정보를 제공합니다.  
   
  [데이터 및 모델링](../../docs/framework/data/index.md)  
@@ -38,7 +38,7 @@ ms.locfileid: "66052727"
  [Windows 서비스 애플리케이션](../../docs/framework/windows-services/index.md)  
  Visual Studio 및 .NET Framework를 사용하여 서비스로서 설치되는 앱을 만들고 서비스 동작을 시작, 중지 및 다른 방식으로 제어하는 방법에 대해 설명합니다.  
   
- [.NET의 병렬 처리, 동시성 및 비동기 프로그래밍](../../docs/standard/parallel-processing-and-concurrency.md)  
+ [.NET의 병렬 처리, 동시성 및 비동기 프로그래밍](../standard/parallel-processing-and-concurrency.md)  
  관리되는 스레딩, 병렬 프로그래밍 및 비동기 프로그래밍 디자인 패턴에 대한 정보를 제공합니다.  
   
  [.NET Framework의 네트워크 프로그래밍](../../docs/framework/network-programming/index.md)  
@@ -50,13 +50,13 @@ ms.locfileid: "66052727"
  [.NET Native로 앱 컴파일](../../docs/framework/net-native/index.md)  
  .NET 네이티브 미리 컴파일 기술을 사용하여 Windows 스토어 앱을 빌드 및 배포하는 방법을 설명합니다. .NET 네이티브에서는 관리 코드(C#)로 작성되며 .NET Framework을 대상으로 지정하는 앱을 네이티브 코드로 컴파일합니다.  
   
- [보안](../../docs/standard/security/index.md)  
+ [보안](../standard/security/index.md)  
  안전한 앱 개발을 용이하게 하는 .NET Framework의 클래스 및 서비스에 대한 정보를 제공합니다.  
   
  [디버깅, 추적 및 프로파일링](../../docs/framework/debug-trace-profile/index.md)  
  .NET Framework 앱 및 앱 환경을 테스트하고 최적화하며 프로파일링하는 방법에 대해 설명합니다. 이 단원은 관리자와 개발자 모두가 참조할 수 있습니다.  
   
- [여러 플랫폼을 대상으로 개발](../../docs/standard/cross-platform/index.md)  
+ [여러 플랫폼을 대상으로 개발](../standard/cross-platform/index.md)  
  .NET Framework 를 사용하여 여러 플랫폼과 휴대폰, 데스크톱 및 웹 등 여러 디바이스 간에 공유할 수 있는 어셈블리를 빌드하는 방법에 대한 정보를 제공합니다.  
   
  [배포](../../docs/framework/deployment/index.md)  

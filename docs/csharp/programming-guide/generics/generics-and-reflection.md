@@ -6,15 +6,15 @@ helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-ms.openlocfilehash: 84583f96ab8493ff05a4e80dcc843eff1cc7a5ef
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: be4b72414af8e5a18145330f5c44ae9a79a567cb
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347581"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659882"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>제네릭 및 리플렉션(C# 프로그래밍 가이드)
-CLR(공용 언어 런타임)은 런타임에 제네릭 형식 정보에 액세스할 수 있으므로 제네릭이 아닌 형식에 대한 방법과 동일한 방법으로 리플렉션을 사용하여 제네릭 형식에 대한 정보를 가져올 수 있습니다. 자세한 내용은 [런타임의 제네릭](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)을 참조하세요.  
+CLR(공용 언어 런타임)은 런타임에 제네릭 형식 정보에 액세스할 수 있으므로 제네릭이 아닌 형식에 대한 방법과 동일한 방법으로 리플렉션을 사용하여 제네릭 형식에 대한 정보를 가져올 수 있습니다. 자세한 내용은 [런타임의 제네릭](./generics-in-the-run-time.md)을 참조하세요.  
   
  .NET Framework 2.0에서는 제네릭 형식에 대한 런타임 정보를 사용할 수 있도록 <xref:System.Type> 클래스에 여러 개의 새 멤버가 추가되었습니다. 이러한 메서드 및 속성을 사용하는 방법에 대한 자세한 내용은 이러한 클래스에 대한 설명서를 참조하세요. <xref:System.Reflection.Emit> 네임스페이스에도 제네릭을 지원하는 새 멤버가 포함되어 있습니다. [방법: 리플렉션 내보내기를 사용하여 제네릭 형식 정의](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)를 참조하세요.  
   
@@ -47,7 +47,7 @@ CLR(공용 언어 런타임)은 런타임에 제네릭 형식 정보에 액세�
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [제네릭](../../../csharp/programming-guide/generics/index.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [제네릭](./index.md)
 - [리플렉션 및 제네릭 형식](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)
-- [제네릭](~/docs/standard/generics/index.md)
+- [제네릭](../../../standard/generics/index.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04ef2ea6bf9d10baabea39133b2e0a9a72a6ce4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da32d514b19424487cebc1d113388cfa9a2dbdf0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674848"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913237"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Windows에서 관리되는 스레딩 및 관리되지 않는 스레딩
 
@@ -27,7 +27,7 @@ ms.locfileid: "54674848"
  관리되는 스레딩에서 <xref:System.Threading.Thread.GetHashCode%2A?displayProperty=nameWithType> 는 안정적인 관리되는 스레드 ID입니다. 이는 이 값을 가져온 애플리케이션 도메인과 관계없이 스레드 수명 동안 다른 모든 스레드의 값과 충돌하지 않습니다.  
   
 > [!NOTE]
->  관리되지 않는 호스트가 관리되는 스레드와 관리되지 않는 스레드 간의 관계를 제어할 수 있으므로 운영 체제 **ThreadId** 는 관리되는 스레드에 대한 고정 관계를 포함하지 않습니다. 특히, 정교한 호스트는 파이버 API를 사용하여 동일한 운영 체제 스레드에 대해 관리되는 여러 스레드를 예약하거나 다양한 운영 체제 스레드 간에 관리되는 스레드를 이동할 수 있습니다.  
+> 관리되지 않는 호스트가 관리되는 스레드와 관리되지 않는 스레드 간의 관계를 제어할 수 있으므로 운영 체제 **ThreadId** 는 관리되는 스레드에 대한 고정 관계를 포함하지 않습니다. 특히, 정교한 호스트는 파이버 API를 사용하여 동일한 운영 체제 스레드에 대해 관리되는 여러 스레드를 예약하거나 다양한 운영 체제 스레드 간에 관리되는 스레드를 이동할 수 있습니다.  
   
 ## <a name="mapping-from-win32-threading-to-managed-threading"></a>Win32 스레딩에서 관리되는 스레딩으로 매핑
 
@@ -40,7 +40,7 @@ ms.locfileid: "54674848"
 |**SuspendThread**|<xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType>|  
 |**ResumeThread**|<xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType>|  
 |**Sleep**|<xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>|  
-|스레드 핸들의**WaitForSingleObject** |<xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>|  
+|스레드 핸들의**WaitForSingleObject**|<xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>|  
 |**ExitThread**|동일한 요소 없음|  
 |**GetCurrentThread**|<xref:System.Threading.Thread.CurrentThread%2A?displayProperty=nameWithType>|  
 |**SetThreadPriority**|<xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType>|  
@@ -57,7 +57,7 @@ ms.locfileid: "54674848"
  스레드가 시작되기 전에 아파트 상태가 설정되지 않은 경우 스레드가 MTA(다중 스레드 아파트)로 초기화됩니다. 종료자 스레드 및 <xref:System.Threading.ThreadPool> 에 의해 제어되는 모든 스레드는 MTA입니다.  
   
 > [!IMPORTANT]
->  애플리케이션 시작 코드의 경우 아파트 상태를 제어하는 유일한 방법은 <xref:System.MTAThreadAttribute> 또는 <xref:System.STAThreadAttribute> 를 진입점 프로시저에 적용하는 것입니다. .NET Framework 1.0 및 1.1에서는 <xref:System.Threading.Thread.ApartmentState%2A> 속성을 코드의 첫 번째 줄로 설정할 수 있습니다. .NET Framework 2.0에서는 이러한 설정이 허용되지 않습니다.  
+> 애플리케이션 시작 코드의 경우 아파트 상태를 제어하는 유일한 방법은 <xref:System.MTAThreadAttribute> 또는 <xref:System.STAThreadAttribute> 를 진입점 프로시저에 적용하는 것입니다. .NET Framework 1.0 및 1.1에서는 <xref:System.Threading.Thread.ApartmentState%2A> 속성을 코드의 첫 번째 줄로 설정할 수 있습니다. .NET Framework 2.0에서는 이러한 설정이 허용되지 않습니다.  
   
  COM에 노출된 관리되는 개체는 자유 스레드된 마샬러를 집계한 것처럼 동작합니다. 즉, 모든 COM 아파트에서 자유 스레드 방식으로 이러한 개체를 호출할 수 있습니다. 이 자유 스레드 동작을 노출하지 않는 관리되는 개체만이 <xref:System.EnterpriseServices.ServicedComponent> 또는 <xref:System.Runtime.InteropServices.StandardOleMarshalObject>에서 파생되는 개체입니다.  
   

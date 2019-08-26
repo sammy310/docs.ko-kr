@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb7758a3e59806b246a98c343d78500263433efc
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 20e5f166aad8bc2504ed27b93ec6730bcd26387d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971469"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911593"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe(네이티브 이미지 생성기)
 
@@ -640,6 +640,6 @@ ngen executeQueuedItems
 ## <a name="see-also"></a>참고 항목
 
 - [도구](../../../docs/framework/tools/index.md)
-- [관리되는 실행 프로세스](../../../docs/standard/managed-execution-process.md)
+- [관리되는 실행 프로세스](../../standard/managed-execution-process.md)
 - [런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

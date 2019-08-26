@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80a07e389f84c56f6fa3f718b8ba7e0504201ba7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8a04c56391b70ddc887b0ff2f7bcd6a169887d2f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591522"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933671"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe(어셈블리 바인딩 로그 뷰어)
 어셈블리 바인딩 로그 뷰어는 어셈블리 바인딩에 대한 자세한 내용을 표시합니다. 이 정보를 검토하면 .NET Framework에서 런타임에 어셈블리를 찾지 못하는 이유를 진단할 수 있습니다. 이러한 오류는 일반적으로 어셈블리가 잘못된 위치에 배포되었거나 네이티브 이미지가 더 이상 유효하지 않거나 버전 번호 또는 문화권이 일치하지 않기 때문에 일어납니다. 공용 언어 런타임의 어셈블리 찾기 오류는 일반적으로 애플리케이션에서 <xref:System.TypeLoadException>으로 나타납니다.  
   
 > [!IMPORTANT]
->  Fuslogvw.exe는 관리자 권한으로 실행해야 합니다.  
+> Fuslogvw.exe는 관리자 권한으로 실행해야 합니다.  
   
  이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 관리자 자격 증명과 함께 사용합니다. 자세한 내용은 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 참조하세요.  
   
@@ -41,7 +41,7 @@ fuslogvw
 2. **사용자 지정** 옵션 단추를 선택하여 사용자 지정 디렉터리의 바인딩 오류를 봅니다. 유효한 디렉터리 이름을 위해 **로그 설정** 대화 상자에서 사용자 지정 로그 위치를 설정하여 런타임에 로그를 저장할 사용자 지정 위치를 지정해야 합니다. 이 디렉터리는 런타임에 생성되는 파일만 포함해야 합니다. 실패하여 로그를 남길 수 있는 실행 파일이 들어 있으면 도구에서 실행 파일과 같은 이름으로 디렉터리를 만들려고 시도하므로 실패한 경우 로그를 남길 수 없습니다. 또한 로그 위치에서 실행 파일을 실행할 수 없습니다.  
   
     > [!NOTE]
-    >  사용자 지정 바인딩 위치보다 기본 바인딩 위치를 사용하는 것이 좋습니다. 런타임은 기본 바인딩 위치를 wininet 캐시에 저장하기 때문에 자동으로 이 위치를 비웁니다. 그러나 사용자 지정 바인딩 위치를 지정하는 경우에는 사용자가 직접 비워야 합니다.  
+    > 사용자 지정 바인딩 위치보다 기본 바인딩 위치를 사용하는 것이 좋습니다. 런타임은 기본 바인딩 위치를 wininet 캐시에 저장하기 때문에 자동으로 이 위치를 비웁니다. 그러나 사용자 지정 바인딩 위치를 지정하는 경우에는 사용자가 직접 비워야 합니다.  
   
 ### <a name="to-view-details-about-a-specific-failure"></a>특정 오류에 대한 자세한 내용을 보려면  
   
@@ -206,7 +206,7 @@ Discarding native image.
      도메인 중립적으로 로드되는 어셈블리에 대한 중요 사항을 참조하세요.  
   
 > [!IMPORTANT]
->  예를 들어 <xref:System.AppDomainSetup.LoaderOptimization%2A> 속성을 <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> 또는 <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType>로 설정하여 어셈블리가 도메인 중립적으로 로드되는 경우 로깅을 설정하면 경우에 따라 메모리가 누수될 수 있습니다. 도메인 중립 모듈이 애플리케이션 도메인에 로드되었을 때 로그 엔트리가 만들어지고 나중에 애플리케이션 도메인이 언로드되면 이러한 누수가 발생할 수 있습니다. 프로세스가 끝날 때까지는 로그 엔트리가 해제되지 않을 수도 있습니다. 로깅이 자동으로 설정되는 디버거도 있습니다.  
+> 예를 들어 <xref:System.AppDomainSetup.LoaderOptimization%2A> 속성을 <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> 또는 <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType>로 설정하여 어셈블리가 도메인 중립적으로 로드되는 경우 로깅을 설정하면 경우에 따라 메모리가 누수될 수 있습니다. 도메인 중립 모듈이 애플리케이션 도메인에 로드되었을 때 로그 엔트리가 만들어지고 나중에 애플리케이션 도메인이 언로드되면 이러한 누수가 발생할 수 있습니다. 프로세스가 끝날 때까지는 로그 엔트리가 해제되지 않을 수도 있습니다. 로깅이 자동으로 설정되는 디버거도 있습니다.  
   
 #### <a name="to-enable-a-custom-log-path"></a>사용자 지정 로그 경로를 사용하려면  
   
@@ -215,7 +215,7 @@ Discarding native image.
 2. **사용자 지정 로그 경로** 텍스트 상자에 경로를 입력합니다.  
   
 > [!NOTE]
->  [어셈블리 바인딩 로그 뷰어(Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)에서는 IE(Internet Explorer) 캐시를 사용하여 바인딩 로그를 저장합니다. 가끔 나타나는 IE 캐시 손상으로 인해 [어셈블리 바인딩 로그 뷰어(Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)에서는 보기 창에 새 바인딩 로그를 표시하지 않을 수도 있습니다. 이 손상으로 인해 .NET 바인딩 인프라(fusion)는 바인딩 로그에 쓰거나 바인딩 로그에서 읽을 수 없습니다. 사용자 지정 로그 경로를 사용하는 경우에는 이 문제가 발생하지 않습니다.  손상을 해결하고 fusion이 바인딩 로그를 다시 표시하도록 하려면 IE 옵션 대화 상자 내에서 임시 인터넷 파일을 삭제하여 IE 캐시를 지웁니다.  
+> [어셈블리 바인딩 로그 뷰어(Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)에서는 IE(Internet Explorer) 캐시를 사용하여 바인딩 로그를 저장합니다. 가끔 나타나는 IE 캐시 손상으로 인해 [어셈블리 바인딩 로그 뷰어(Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)에서는 보기 창에 새 바인딩 로그를 표시하지 않을 수도 있습니다. 이 손상으로 인해 .NET 바인딩 인프라(fusion)는 바인딩 로그에 쓰거나 바인딩 로그에서 읽을 수 없습니다. 사용자 지정 로그 경로를 사용하는 경우에는 이 문제가 발생하지 않습니다.  손상을 해결하고 fusion이 바인딩 로그를 다시 표시하도록 하려면 IE 옵션 대화 상자 내에서 임시 인터넷 파일을 삭제하여 IE 캐시를 지웁니다.  
 >   
 >  관리되지 않는 애플리케이션에서 `IHostAssemblyManager` 및 `IHostAssemblyStore` 인터페이스를 구현하여 공용 언어 런타임을 호스팅하는 경우 로그 엔트리를 wininet 캐시에 저장할 수 없습니다.  이러한 인터페이스를 구현하는 사용자 지정 호스트에 대한 로그 엔트리를 보려면 대체 로그 경로를 지정해야 합니다.  
   
@@ -226,7 +226,7 @@ Discarding native image.
 2. **로깅 몰입 활성화** 확인란을 선택합니다.  
   
     > [!NOTE]
-    >  Windows 8 이상에서만 상자가 활성화됩니다.  
+    > Windows 8 이상에서만 상자가 활성화됩니다.  
   
 ## <a name="see-also"></a>참고 항목
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 1e7b19999ab8536e9a1b05c1ad5d548c8da2cbd6
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 37eedc6d41867a6d5e6a49b8df5040c657bb2689
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58037706"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602755"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>C# 컴파일러 옵션 사전순 목록
 
@@ -77,7 +77,7 @@ ms.locfileid: "58037706"
 |-ruleset:\<file>|특정 진단을 사용하지 않는 규칙 집합 파일을 지정합니다.|
 |[-subsystemversion](subsystemversion-compiler-option.md)|실행 파일이 사용할 수 있는 하위 시스템의 최소 버전을 지정합니다.|
 |[-target](target-compiler-option.md)|네 가지 옵션([-target:appcontainerexe](target-appcontainerexe-compiler-option.md), [-target:exe](target-exe-compiler-option.md), [-target:library](target-library-compiler-option.md), [-target:module](target-module-compiler-option.md), [-target:winexe](target-winexe-compiler-option.md),  [-target:winmdobj](target-winmdobj-compiler-option.md)) 중 하나를 사용하여 출력 파일의 형식을 지정합니다.|
-|[/unsafe](unsafe-compiler-option.md)|[안전하지 않은](../../../csharp/language-reference/keywords/unsafe.md) 코드를 허용합니다.|
+|[/unsafe](unsafe-compiler-option.md)|[안전하지 않은](../keywords/unsafe.md) 코드를 허용합니다.|
 |[-utf8output](utf8output-compiler-option.md)|컴파일러 메시지를 UTF-8 인코딩으로 출력합니다.|
 |-version|컴파일러 버전 번호를 표시하고 종료합니다.|
 |[/warn](warn-compiler-option.md)|경고 수준(0-4)을 설정합니다.|

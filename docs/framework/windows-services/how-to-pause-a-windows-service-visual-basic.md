@@ -10,17 +10,17 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: eddb9409-942b-46b6-a2ce-fbd4c65f2790
 author: ghogen
-ms.openlocfilehash: 8a75c6a03f130e0a141107c81c946fc6a33b9f6c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 20bc177ccf2646f79994553803568531233ea5c4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592533"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935479"
 ---
 # <a name="how-to-pause-a-windows-service-visual-basic"></a>방법: Windows 서비스 일시 중지(Visual Basic)
 이 예제에서는 <xref:System.ServiceProcess.ServiceController> 구성 요소를 사용하여 로컬 컴퓨터에서 IIS 관리 서비스를 일시 중지합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-vb[VbRadconService#11](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#11)]  
 [!code-vb[VbRadconService#12](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#12)]  
   
@@ -31,7 +31,7 @@ ms.locfileid: "64592533"
   
 - System.serviceprocess.dll에 대한 프로젝트 참조.  
   
-- <xref:System.ServiceProcess> 네임스페이스의 멤버에 대한 액세스 권한. 코드에서 멤버 이름을 정규화하지 않는 경우 `Imports` 문을 추가합니다. 자세한 내용은 [Imports 문(.NET 네임스페이스 및 형식)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)을 참조하세요.  
+- <xref:System.ServiceProcess> 네임스페이스의 멤버에 대한 액세스 권한. 코드에서 멤버 이름을 정규화하지 않는 경우 `Imports` 문을 추가합니다. 자세한 내용은 [Imports 문(.NET 네임스페이스 및 형식)](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)을 참조하세요.  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
  <xref:System.ServiceProcess.ServiceController> 클래스의 <xref:System.ServiceProcess.ServiceController.MachineName%2A> 속성은 기본적으로 로컬 컴퓨터입니다. 다른 컴퓨터에서 Windows 서비스를 참조하려면 <xref:System.ServiceProcess.ServiceController.MachineName%2A> 속성을 해당 컴퓨터의 이름으로 변경합니다.  

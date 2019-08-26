@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5c06a20e3d6cf3030da1cc63435423e087408aa6
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 4b079809fa76097cd575d96c70d17d1c6c85e3a1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301499"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968534"
 ---
 # <a name="substitutions-in-regular-expressions"></a>정규식의 대체
 <a name="Top"></a> 대체는 바꾸기 패턴에서만 인식되는 언어 요소입니다. 정규식 패턴을 사용하여 입력 문자열에서 일치하는 텍스트를 바꿀 텍스트의 전부 또는 일부를 정의합니다. 바꾸기 패턴은 리터럴 문자와 하나 이상의 대체로 구성될 수 있습니다. <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 매개 변수가 포함된 `replacement` 메서드의 오버로드와 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 메서드에 대해 바꾸기 패턴이 제공됩니다. 해당 메서드는 일치하는 패턴을 `replacement` 매개 변수에 정의된 패턴으로 바꿉니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "66301499"
  컨텍스트마다 다른 의미를 가지지만 정규식 패턴이나 대체에 나타나는 유일한 문자는 `$` 문자입니다. 정규식 패턴에서 `$` 는 문자열의 끝 부분을 찾는 앵커입니다. 바꾸기 패턴에서 `$` 는 대체 시작을 나타냅니다.  
   
 > [!NOTE]
->  정규식의 바꾸기 패턴과 유사한 기능으로, 역참조를 사용합니다. 역참조에 대한 자세한 내용은 [역참조 구문](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)을 참조하십시오.  
+> 정규식의 바꾸기 패턴과 유사한 기능으로, 역참조를 사용합니다. 역참조에 대한 자세한 내용은 [역참조 구문](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)을 참조하십시오.  
   
 <a name="Numbered"></a>   
 ## <a name="substituting-a-numbered-group"></a>번호 매겨진 그룹 대체  

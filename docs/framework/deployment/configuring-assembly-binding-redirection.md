@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5df468b87c62f454f6a42fa7a80d92e5ec199fd1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d3424e7a412a79266d3bd9f20061ff4a0cd89115
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151543"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965753"
 ---
 # <a name="configuring-assembly-binding-redirection"></a>어셈블리 바인딩 리디렉션 구성
 기본적으로 애플리케이션에서는 애플리케이션을 컴파일하는 데 사용된 런타임 버전과 함께 제공된 .NET Framework 어셈블리 집합을 사용합니다. 애플리케이션 구성 파일에서 [\<assemblyBinding&gt;](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) 요소에 대해 **appliesTo** 특성을 사용하여 어셈블리 바인딩 참조를 .NET Framework 어셈블리의 특정 버전으로 리디렉션할 수 있습니다. 이 선택적 특성은 .NET Framework 버전을 사용하여 특성이 적용되는 버전을 지정합니다. **appliesTo** 특성이 지정되지 않으면 **\<assemblyBinding>** 요소는 .NET Framework의 모든 버전에 적용됩니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "59151543"
  **appliesTo** 특성은 .NET Framework 버전 1.1에서 도입되었고 .NET Framework 버전 1.0에서는 무시됩니다. 즉, .NET Framework 버전 1.0을 사용할 때는 **appliesTo** 특성을 지정해도 모든 **\<assemblyBinding>** 요소가 적용됩니다.  
   
 > [!NOTE]
->  **appliesTo** 특성을 사용하여 특정 런타임 버전으로 리디렉션되는 어셈블리 바인딩을 제한합니다.  
+> **appliesTo** 특성을 사용하여 특정 런타임 버전으로 리디렉션되는 어셈블리 바인딩을 제한합니다.  
   
  예를 들어 .NET Framework 버전 1.0 어셈블리에 대한 어셈블리 바인딩을 리디렉션하려면 애플리케이션 구성 파일에 다음 XML 코드를 포함합니다.  
   

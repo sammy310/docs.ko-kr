@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69cc2459f1944c8101be9c58b1462217ee7ac78f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cd3d7ea4d9639c5c68ecf977b4e95e816d99a4f6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629575"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915429"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows Forms ActiveX 컨트롤 가져오기)
 ActiveX 컨트롤 가져오기를 사용하면 ActiveX 컨트롤에 대한 COM 형식 라이브러리의 형식 정의를 Windows Forms 컨트롤로 변환할 수 있습니다.  
@@ -49,7 +49,7 @@ aximp [options]{file.dll | file.ocx}
 |`/nologo`|Microsoft 시작 배너를 표시하지 않습니다.|  
 |`/out:` *filename*|만들 어셈블리의 이름을 지정합니다.|  
 |`/publickey:` *filename*|*filename*에서 지정한 파일에 있는 공개 키를 사용하여 강력한 이름으로 결과 컨트롤에 서명합니다.|  
-|`/rcw:` *filename*|새로 생성하는 대신 지정된 런타임 호출 가능 래퍼를 사용합니다. 여러 인스턴스를 지정할 수 있습니다. 현재 디렉터리는 상대 경로에서 사용합니다. 자세한 내용은 [런타임 호출 가능 래퍼](../../../docs/standard/native-interop/runtime-callable-wrapper.md)를 참조하세요.|  
+|`/rcw:` *filename*|새로 생성하는 대신 지정된 런타임 호출 가능 래퍼를 사용합니다. 여러 인스턴스를 지정할 수 있습니다. 현재 디렉터리는 상대 경로에서 사용합니다. 자세한 내용은 [런타임 호출 가능 래퍼](../../standard/native-interop/runtime-callable-wrapper.md)를 참조하세요.|  
 |`/silent`|성공 메시지를 표시하지 않습니다.|  
 |`/source`|Windows Forms 래퍼에 대한 C# 소스 코드를 생성합니다.|  
 |`/verbose`|세부 정보 표시 모드를 지정합니다. 즉, 추가 진행 정보를 표시합니다.|  
@@ -62,7 +62,7 @@ aximp [options]{file.dll | file.ocx}
  ActiveX 컨트롤을 위한 Windows Forms 프록시(여기서 Ax는 ActiveX를 의미함): Ax*progid*.dll  
   
 > [!NOTE]
->  ActiveX 컨트롤의 멤버 이름이 .NET Framework에 정의된 이름과 일치하는 경우 Aximp.exe에서 AxHost 파생 클래스를 만들 때 해당 멤버 이름 앞에 "Ctl"이 붙습니다. 예를 들어, ActiveX 컨트롤에 이름이 "Layout"인 멤버가 있을 경우 .NET Framework에 Layout이라는 이벤트가 이미 정의되어 있으므로 AxHost 파생 클래스에서 이 멤버의 이름이 "CtlLayout"으로 변경됩니다.  
+> ActiveX 컨트롤의 멤버 이름이 .NET Framework에 정의된 이름과 일치하는 경우 Aximp.exe에서 AxHost 파생 클래스를 만들 때 해당 멤버 이름 앞에 "Ctl"이 붙습니다. 예를 들어, ActiveX 컨트롤에 이름이 "Layout"인 멤버가 있을 경우 .NET Framework에 Layout이라는 이벤트가 이미 정의되어 있으므로 AxHost 파생 클래스에서 이 멤버의 이름이 "CtlLayout"으로 변경됩니다.  
   
  생성된 파일은 [Ildasm.exe(IL 디스어셈블러)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)와 같은 도구를 사용하여 검사할 수 있습니다.  
   

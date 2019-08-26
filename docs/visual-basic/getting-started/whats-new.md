@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 49c39e12aa67b1f36fc46c21f5d2b23223b3264d
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 20d403e4a6410257068cc3414fcb8dc1e45709e9
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238643"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666871"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic의 새로운 기능
 
@@ -51,7 +51,7 @@ Visual Basic / Visual Studio .NET 2002 Visual Basic .NET의 첫 번째 릴리스
 
 **최적화된 부동 소수점-정수 변환**
 
-이전 버전의 Visual Basic에서 [Double](../language-reference/data-types/double-data-type.md) 및 [Single](../language-reference/data-types/single-data-type.md) 값을 정수로 변환하면 성능이 상대적으로 떨어졌습니다. Visual Basic 15.8은 다음 메서드 중 하나에 의해 반환된 값을 [내장 Visual Basic 정수 변환 함수](../language-reference/functions/type-conversion-functions.md)(CByte, CShort, CInt, CLng, CSByte, CUShort, CUInt, CULng) 중 하나에 전달하거나, [Option Strict](~/docs/visual-basic/language-reference/statements/option-strict-statement.md)가 `Off`로 설정된 경우 다음 메서드 중 하나로 반환되는 값이 암시적으로 정수 형식으로 캐스팅될 때 정수에 대한 부동 소수점 변환의 성능을 크게 향상시킵니다.
+이전 버전의 Visual Basic에서 [Double](../language-reference/data-types/double-data-type.md) 및 [Single](../language-reference/data-types/single-data-type.md) 값을 정수로 변환하면 성능이 상대적으로 떨어졌습니다. Visual Basic 15.8은 다음 메서드 중 하나에 의해 반환된 값을 [내장 Visual Basic 정수 변환 함수](../language-reference/functions/type-conversion-functions.md)(CByte, CShort, CInt, CLng, CSByte, CUShort, CUInt, CULng) 중 하나에 전달하거나, [Option Strict](../language-reference/statements/option-strict-statement.md)가 `Off`로 설정된 경우 다음 메서드 중 하나로 반환되는 값이 암시적으로 정수 형식으로 캐스팅될 때 정수에 대한 부동 소수점 변환의 성능을 크게 향상시킵니다.
 
 - <xref:Microsoft.VisualBasic.Conversion.Fix(System.Double)?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Conversion.Fix(System.Object)?displayProperty=nameWithType>

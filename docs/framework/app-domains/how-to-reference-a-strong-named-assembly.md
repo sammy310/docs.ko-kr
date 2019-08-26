@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 281cfa6507d293658e436a95a5ded0174154a13c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 080d05a27b9e0b6ad4ff52d67ef8d9209dc1c697
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301024"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927952"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>방법: 강력한 이름의 어셈블리 참조
 강력한 이름의 어셈블리에서 형식이나 리소스를 참조하는 프로세스는 일반적으로 투명합니다. 컴파일 시간(초기 바인딩) 또는 런타임에 참조를 만들 수 있습니다.  
@@ -26,13 +26,13 @@ ms.locfileid: "59301024"
  컴파일 시간 참조는 어셈블리에서 다른 어셈블리를 명시적으로 참조함을 컴파일러에 지정할 때 발생합니다. 컴파일 시간 참조를 사용하는 경우 컴파일러가 대상으로 지정된 강력한 이름의 어셈블리의 공개 키를 자동으로 가져오고 컴파일되는 어셈블리의 어셈블리 참조에 배치합니다.  
   
 > [!NOTE]
->  강력한 이름의 어셈블리는 다른 강력한 이름의 어셈블리에서 형식만 사용할 수 있습니다. 그러지 않으면 강력한 이름의 어셈블리 보안이 손상됩니다.  
+> 강력한 이름의 어셈블리는 다른 강력한 이름의 어셈블리에서 형식만 사용할 수 있습니다. 그러지 않으면 강력한 이름의 어셈블리 보안이 손상됩니다.  
   
 ### <a name="to-make-a-compile-time-reference-to-a-strong-named-assembly"></a>강력한 이름의 어셈블리에 대한 컴파일 시간 참조를 만들려면  
   
 1. 명령 프롬프트에 다음 명령을 입력합니다.  
   
-     \<*compiler command*> **/reference:**\<*assembly name*>  
+     \<*compiler command*>  **/reference:** \<*assembly name*>  
   
      이 명령에서 *compiler command*는 사용되는 언어의 컴파일러 명령이고, *assembly name*은 참조되는 어셈블리의 강력한 이름입니다. 라이브러리 어셈블리를 만들기 위해 **/t:library** 옵션과 같은 다른 컴파일러 옵션을 사용할 수도 있습니다.  
   
@@ -46,7 +46,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
 1. 강력한 이름의 어셈블리에 대한 런타임 참조를 만드는 경우(예: <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 또는 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> 메서드 사용), 참조되는 강력한 이름의 어셈블리의 표시 이름을 사용해야 합니다. 표시 이름의 구문은 다음과 같습니다.  
   
-     \<*assembly name*>**,** \<*version number*>**,** \<*culture*>**,** \<*public key token*>  
+     \<*assembly name*> **,** \<*version number*> **,** \<*culture*> **,** \<*public key token*>  
   
      예:  
   
@@ -68,7 +68,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
  공개 키 파일이 있는 경우 다음 명령을 대신 사용할 수 있습니다(명령줄 옵션의 대/소문자 차이 확인).  
   
- **sn -tp \<** ‘공개 키 파일’ **>**  
+ **sn -tp \<** ‘공개 키 파일’ **>**   
   
 ## <a name="see-also"></a>참고 항목
 

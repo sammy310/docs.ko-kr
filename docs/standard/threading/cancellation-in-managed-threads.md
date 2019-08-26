@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdf8d41a99328a8c8fd31eca974e52082abb7e79
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 3e39ee597f5142f2b3ccbd4ded49e59d6700ec8a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490780"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960139"
 ---
 # <a name="cancellation-in-managed-threads"></a>관리되는 스레드의 취소
 .NET Framework 4부터 .NET Framework에서는 비동기 또는 장기 실행 비동기 작업의 협조적 취소를 위한 통합 모델을 사용합니다. 이 모델은 취소 토큰이라는 경량 개체에 기반을 둡니다. 취소할 수 있는 작업 하나 이상을 호출하는 개체가 새 스레드나 작업 등을 만드는 방식으로 토큰을 각 작업에 전달합니다. 개별 작업이 토큰 복사본을 다시 다른 작업에 전달할 수 있습니다. 나중에 토큰을 만든 개체가 해당 토큰을 사용하여 관련 작업이 수행 중인 작업을 중지하도록 요청할 수 있습니다. 요청 개체만 취소 요청을 실행할 수 있고 각 수신기는 적절한 시간에 적절한 방식으로 요청을 알리고 요청에 응답해야 합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "66490780"
 - <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 메서드를 호출하여 취소 알림을 제공합니다.  
   
 > [!IMPORTANT]
->  <xref:System.Threading.CancellationTokenSource> 클래스는 <xref:System.IDisposable> 인터페이스를 구현합니다. 취소 토큰 소스 사용을 마치면 <xref:System.Threading.CancellationTokenSource.Dispose%2A?displayProperty=nameWithType> 메서드를 호출하여 토큰에 포함된 관리되지 않는 리소스를 해제해야 합니다.  
+> <xref:System.Threading.CancellationTokenSource> 클래스는 <xref:System.IDisposable> 인터페이스를 구현합니다. 취소 토큰 소스 사용을 마치면 <xref:System.Threading.CancellationTokenSource.Dispose%2A?displayProperty=nameWithType> 메서드를 호출하여 토큰에 포함된 관리되지 않는 리소스를 해제해야 합니다.  
   
  다음 그림에서는 토큰 소스와 모든 토큰 복사본의 관계를 보여 줍니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66490780"
  다음 예제에서는 요청 개체가 <xref:System.Threading.CancellationTokenSource> 개체를 만들고 <xref:System.Threading.CancellationTokenSource.Token%2A> 속성을 취소 가능한 작업에 전달합니다. 요청을 수신하는 작업에서는 폴링을 통해 토큰의 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 속성 값을 모니터링합니다. 값이 `true`가 되면 수신기가 적절한 방식이더라도 종료될 수 있습니다. 이 예제에서는 대부분 경우에 모두 필요한 메서드가 종료됩니다.  
   
 > [!NOTE]
->  예제에서는 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> 메서드를 사용하여 새 취소 프레임워크가 기존 API와 호환된다는 것을 보여 줍니다. 새로운 권장 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 형식을 사용하는 예에 대해서는 [방법: 작업 및 해당 자식 취소](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)를 참조하세요.  
+> 예제에서는 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> 메서드를 사용하여 새 취소 프레임워크가 기존 API와 호환된다는 것을 보여 줍니다. 새로운 권장 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 형식을 사용하는 예에 대해서는 [방법: 작업 및 해당 자식 취소](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)를 참조하세요.  
   
  [!code-csharp[Cancellation#1](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex1.cs#1)]
  [!code-vb[Cancellation#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex1.vb#1)]  

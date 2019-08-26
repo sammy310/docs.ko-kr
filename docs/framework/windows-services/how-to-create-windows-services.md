@@ -6,18 +6,18 @@ helpviewer_keywords:
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
-ms.openlocfilehash: 124e8a0dff18f02c178b56167cd12faa1fc97992
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 960d30f4e484238e9e7c23741578650a8c3005c8
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649408"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987149"
 ---
 # <a name="how-to-create-windows-services"></a>방법: Windows 서비스 만들기
 서비스를 만들 때는 **Windows 서비스**라는 Visual Studio 프로젝트 템플릿을 사용할 수 있습니다. 이 템플릿은 적절한 클래스 및 네임스페이스를 참조하고, 서비스의 기본 클래스에서 상속을 설정하고, 개발자가 재정의할 가능성이 높은 여러 메서드를 재정의하여 대부분의 작업을 자동으로 수행합니다.  
   
 > [!WARNING]
->  Visual Studio Express 버전에서는 Windows 서비스 프로젝트 템플릿을 사용할 수 없습니다.  
+> Visual Studio Express 버전에서는 Windows 서비스 프로젝트 템플릿을 사용할 수 없습니다.  
   
  작동하는 서비스를 만들려면 최소한 다음 작업을 수행해야 합니다.  
   
@@ -32,14 +32,14 @@ ms.locfileid: "64649408"
 1. **Windows 서비스** 프로젝트를 만듭니다.  
   
     > [!NOTE]
-    >  템플릿을 사용하지 않고 서비스를 작성하는 지침은 [방법: 프로그래밍 방식으로 서비스 작성](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)을 참조하세요.  
+    > 템플릿을 사용하지 않고 서비스를 작성하는 지침은 [방법: 프로그래밍 방식으로 서비스 작성](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)을 참조하세요.  
   
 2. **속성** 창에서 서비스의 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 속성을 설정합니다.  
   
      ![ServiceName 속성을 설정합니다.](../../../docs/framework/windows-services/media/windowsservice-servicename.PNG "WindowsService_ServiceName")  
   
     > [!NOTE]
-    >  <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 속성의 값은 항상 설치 관리자 클래스에 기록된 이름과 일치해야 합니다. 이 속성을 변경하는 경우에는 설치 관리자 클래스의 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 속성도 업데이트해야 합니다.  
+    > <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 속성의 값은 항상 설치 관리자 클래스에 기록된 이름과 일치해야 합니다. 이 속성을 변경하는 경우에는 설치 관리자 클래스의 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 속성도 업데이트해야 합니다.  
   
 3. 다음 속성을 설정하여 서비스 작동 방식을 결정합니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "64649408"
     |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|서비스에서 작업을 수행할 때 애플리케이션 이벤트 로그에 정보 항목을 기록하려면 `True`로 설정하고 이 기능을 사용하지 않도록 설정하려면 `false`로 설정합니다. 자세한 내용은 [방법: 서비스에 대한 정보 로깅](../../../docs/framework/windows-services/how-to-log-information-about-services.md)을 참조하세요. **참고:**  기본적으로 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A>는 `true`로 설정됩니다.|  
   
     > [!NOTE]
-    >  <xref:System.ServiceProcess.ServiceBase.CanStop%2A> 또는 <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>가 `false`로 설정되면 **서비스 제어 관리자**가 서비스를 중지, 일시 중지 또는 계속하도록 하는 해당 메뉴 옵션을 사용하지 않도록 설정합니다.  
+    > <xref:System.ServiceProcess.ServiceBase.CanStop%2A> 또는 <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>가 `false`로 설정되면 **서비스 제어 관리자**가 서비스를 중지, 일시 중지 또는 계속하도록 하는 해당 메뉴 옵션을 사용하지 않도록 설정합니다.  
   
 4. 코드 편집기에 액세스하여 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 및 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 프로시저에 대해 원하는 처리를 입력합니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "64649408"
 7. **빌드** 메뉴에서 **솔루션 빌드**를 선택하여 프로젝트를 빌드합니다.  
   
     > [!NOTE]
-    >  F5 키를 눌러 프로젝트를 실행하지 마세요. 서비스 프로젝트는 이러한 방식으로 실행할 수 없습니다.  
+    > F5 키를 눌러 프로젝트를 실행하지 마세요. 서비스 프로젝트는 이러한 방식으로 실행할 수 없습니다.  
   
 8. 서비스를 설치합니다. 자세한 내용은 [방법: 서비스 설치 및 제거](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)를 참조하세요.  
   

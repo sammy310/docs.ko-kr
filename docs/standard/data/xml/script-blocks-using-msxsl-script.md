@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 32c76ae4556467759dad111b47e3ad8f6cf6df92
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1488fb6b7671acd86286bcac6fbfce8bee9429ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589973"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939584"
 ---
 # <a name="script-blocks-using-msxslscript"></a>msxsl:script를 사용하는 스크립트 블록
 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스는 `msxsl:script` 요소를 사용하여 포함 스크립트를 지원합니다. 스타일시트가 로드될 때 정의된 모든 함수는 CodeDOM(코드 문서 개체 모델)에 의해 MSIL(Microsoft Intermediate Language)로 컴파일되며 런타임 동안 실행됩니다. 포함된 스크립트 블록에서 생성된 어셈블리는 스타일시트에 대해 생성된 어셈블리와는 다릅니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "64589973"
  포함된 스크립트 지원은 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스에서 선택적 XSLT 설정입니다. 스크립트 지원은 기본적으로 사용되지 않습니다. 스크립트 지원을 사용하려면 <xref:System.Xml.Xsl.XsltSettings> 속성을 <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A>로 설정하여 `true` 개체를 만들고 이 개체를 <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 메서드에 전달합니다.  
   
 > [!NOTE]
->  XSLT 스크립트는 스크립트 지원이 필요하거나 완전히 신뢰할 수 있는 환경에서 작업하는 경우에만 활성화해야 합니다.  
+> XSLT 스크립트는 스크립트 지원이 필요하거나 완전히 신뢰할 수 있는 환경에서 작업하는 경우에만 활성화해야 합니다.  
   
 ## <a name="msxslscript-element-definition"></a>msxsl:script 요소 정의  
  `msxsl:script` 요소는 XSLT 1.0 권장 사항에 대한 Microsoft 확장으로, 다음 정의를 가집니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "64589973"
  `implements-prefix` 특성은 필수 항목입니다. 이 특성은 네임스페이스를 선언하고 스크립트 블록에 연결하는 데 사용됩니다. 이 특성 값은 네임스페이스를 나타내는 접두사입니다. 이 접두사는 스타일시트에서 정의할 수 있습니다.  
   
 > [!NOTE]
->  `msxsl:script` 요소를 사용하는 경우에는 언어에 관계없이 스크립트를 CDATA 섹션에 배치하는 것이 좋습니다. 스크립트에는 지정된 언어에 대한 연산자, 식별자 또는 구분자가 포함될 수 있으므로 스크립트를 CDATA 섹션에 포함하지 않으면 XML로 잘못 해석될 수 있습니다. 다음 XML에서는 코드를 배치할 수 있는 CDATA 섹션 템플릿을 보여 줍니다.  
+> `msxsl:script` 요소를 사용하는 경우에는 언어에 관계없이 스크립트를 CDATA 섹션에 배치하는 것이 좋습니다. 스크립트에는 지정된 언어에 대한 연산자, 식별자 또는 구분자가 포함될 수 있으므로 스크립트를 CDATA 섹션에 포함하지 않으면 XML로 잘못 해석될 수 있습니다. 다음 XML에서는 코드를 배치할 수 있는 CDATA 섹션 템플릿을 보여 줍니다.  
   
 ```xml  
 <msxsl:script implements-prefix='your-prefix' language='CSharp'>  
@@ -121,7 +121,7 @@ ms.locfileid: "64589973"
 </msxsl:script>  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 포함 스크립트를 사용하여 주어진 반지름으로 원의 원주를 계산합니다.  
   
  [!code-csharp[XSLT_Script#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_Script/CS/xslt_script.cs#1)]

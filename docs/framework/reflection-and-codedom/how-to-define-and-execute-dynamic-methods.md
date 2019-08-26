@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19f1cc3708d2d552da3d94bc6b490ebaa2ece657
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: b5c6de2bde111ae459dbcfa1c0a7363d406f5f80
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586161"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928252"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>방법: 동적 메서드 정의 및 실행
 다음 절차에서는 간단한 동적 메서드 및 클래스 인스턴스에 바인딩된 동적 메서드를 정의하고 실행하는 방법을 보여 줍니다. 동적 메서드에 대한 자세한 내용은 <xref:System.Reflection.Emit.DynamicMethod> 클래스 및 [리플렉션 내보내기 동적 메서드 시나리오](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100))를 참조하세요.  
@@ -38,7 +38,7 @@ ms.locfileid: "65586161"
 3. <xref:System.Reflection.Emit.DynamicMethod>를 만듭니다. 이 예제에서 메서드 이름은 `SquareIt`입니다.  
   
     > [!NOTE]
-    >  동적 메서드에는 이름을 지정할 필요가 없으며, 이름으로 호출할 수 없습니다. 여러 동적 메서드가 동일한 이름을 가질 수 있습니다. 그러나 이름은 호출 스택에 표시되며 디버그하는 데 유용할 수 있습니다.  
+    > 동적 메서드에는 이름을 지정할 필요가 없으며, 이름으로 호출할 수 없습니다. 여러 동적 메서드가 동일한 이름을 가질 수 있습니다. 그러나 이름은 호출 스택에 표시되며 디버그하는 데 유용할 수 있습니다.  
   
      반환 값의 형식은 `long`으로 지정됩니다. 메서드는 예제 코드가 들어 있는 `Example` 클래스를 포함하는 모듈에 연결되어 있습니다. 로드된 모든 모듈을 지정할 수 있습니다. 동적 메서드는 모듈 수준 `static` 메서드(Visual Basic에서는 `Shared`)처럼 동작합니다.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "65586161"
 5. <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%28System.Type%2CSystem.Object%29> 메서드 오버로드를 호출하여 동적 메서드를 나타내는 대리자 인스턴스(1단계에서 선언됨)를 만듭니다. 대리자를 만들면 메서드가 완성되고, MSIL 추가 등 메서드를 변경하려는 이후의 모든 시도는 무시됩니다.  
   
     > [!NOTE]
-    >  <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> 메서드를 여러 번 호출하여 대상 형식의 다른 인스턴스에 바인딩된 대리자를 만들 수 있습니다.  
+    > <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> 메서드를 여러 번 호출하여 대상 형식의 다른 인스턴스에 바인딩된 대리자를 만들 수 있습니다.  
   
      다음 코드는 private 테스트 필드가 42로 설정된 `Example` 클래스의 새 인스턴스에 메서드를 바인딩합니다. 즉, 대리자를 호출할 때마다 `Example` 인스턴스가 메서드의 첫 번째 매개 변수에 전달됩니다.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "65586161"
      [!code-csharp[DynamicMethodHowTo#16](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#16)]
      [!code-vb[DynamicMethodHowTo#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#16)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 간단한 동적 메서드 및 클래스 인스턴스에 바인딩된 동적 메서드를 보여 줍니다.  
   
  간단한 동적 메서드는 32비트 정수인 인수 하나를 사용하고 해당 정수의 64비트 거듭제곱을 반환합니다. 제네릭 대리자는 메서드를 호출하는 데 사용됩니다.  

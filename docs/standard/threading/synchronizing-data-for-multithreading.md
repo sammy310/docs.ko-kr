@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c83e7abbd9f9425fab70325f7a77abb0f672bd15
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: dc8381f8059e37c6c520c2402289124a506188e8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638757"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968422"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>다중 스레딩을 위한 데이터 동기화
 
@@ -51,17 +51,17 @@ ms.locfileid: "65638757"
  Visual Basic 및 C#은 특정 언어 키워드를 사용하여 코드 블록의 표시를 지원합니다(C#에서 `lock` 문 또는 Visual Basic에서 `SyncLock` 문). 스레드에 의해 코드가 실행되면 잠금을 얻으려는 시도가 이루어집니다. 다른 스레드가 잠금을 이미 획득한 경우 잠금을 사용할 수 있게 될 때까지 해당 스레드는 차단됩니다. 스레드가 동기화된 코드 블록을 종료하면 스레드가 블록을 종료하는 방법에 관계 없이 잠금이 해제됩니다.  
   
 > [!NOTE]
->  동기화된 영역 내에서 <xref:System.Threading.Monitor>의 다른 메서드와 함께 사용할 수 있도록 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>을 사용하여 `lock` 및 `SyncLock` 문이 구현됩니다.  
+> 동기화된 영역 내에서 <xref:System.Threading.Monitor>의 다른 메서드와 함께 사용할 수 있도록 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>을 사용하여 `lock` 및 `SyncLock` 문이 구현됩니다.  
   
  <xref:System.Threading.Monitor> 또는 컴파일러 키워드 중 하나를 사용하여 전체 메서드의 본문을 잠그는 것과 동일한 효과를 가지는 <xref:System.Runtime.CompilerServices.MethodImplOptions.Synchronized?displayProperty=nameWithType>의 값이 있는 <xref:System.Runtime.CompilerServices.MethodImplAttribute>를 사용하여 메서드를 데코레이팅할 수도 있습니다.  
   
  <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>를 사용하여 동기화된 코드 영역에 대한 액세스를 기다리는 것과 같은 차단 작업에서 스레드를 중단시킬 수 있습니다. <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>과 같은 작업에서 스레드를 중단시키는 데도 **Thread.Interrupt**가 사용됩니다.  
   
 > [!IMPORTANT]
->  `static` 메서드(Visual Basic에서 `Shared` 메서드)를 보호하기 위해 형식(C#에서 `typeof(MyType)`, Visual Basic에서 `GetType(MyType)` 또는 C++에서 `MyType::typeid`)을 잠그지 마세요. 전용 정적 개체를 대신 사용합니다. 마찬가지로 인스턴스 메서드를 잠그는 데 C#에서 `this`(Visual Basic에서 `Me`)를 사용하지 마세요. 전용 개체를 대신 사용합니다. 잠재적으로 교착 상태 또는 성능 문제를 발생시키는 사용자 고유의 것 이외의 코드에서 클래스 또는 인스턴스를 잠글 수 있습니다.  
+> `static` 메서드(Visual Basic에서 `Shared` 메서드)를 보호하기 위해 형식(C#에서 `typeof(MyType)`, Visual Basic에서 `GetType(MyType)` 또는 C++에서 `MyType::typeid`)을 잠그지 마세요. 전용 정적 개체를 대신 사용합니다. 마찬가지로 인스턴스 메서드를 잠그는 데 C#에서 `this`(Visual Basic에서 `Me`)를 사용하지 마세요. 전용 개체를 대신 사용합니다. 잠재적으로 교착 상태 또는 성능 문제를 발생시키는 사용자 고유의 것 이외의 코드에서 클래스 또는 인스턴스를 잠글 수 있습니다.  
   
 ### <a name="compiler-support"></a>컴파일러 지원  
- Visual Basic 및 C#은 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>를 사용하여 개체를 잠그는 언어 키워드를 지원합니다. Visual Basic은 [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md) 문을 지원하고 C#은 [lock](~/docs/csharp/language-reference/keywords/lock-statement.md) 문을 지원합니다.  
+ Visual Basic 및 C#은 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>를 사용하여 개체를 잠그는 언어 키워드를 지원합니다. Visual Basic은 [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) 문을 지원하고 C#은 [lock](../../csharp/language-reference/keywords/lock-statement.md) 문을 지원합니다.  
   
  두 경우 모두 코드 블록에서 예외가 throw되는 경우 **lock** 또는 **SyncLock**으로 획득된 잠금이 자동으로 해제됩니다. C# 및 Visual Basic 컴파일러는 시도의 초반에 **Monitor.Enter**로 **try**/**finally** 블록을 내보내고 **finally** 블록에서 **Monitor.Exit**을 내보냅니다. **lock** 또는 **SyncLock** 블록 내에서 예외가 throw되는 경우 **finally** 처리기가 정리 작업을 수행할 수 있도록 실행됩니다.  
   
@@ -74,5 +74,5 @@ ms.locfileid: "65638757"
 - <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
 - [스레드 및 스레딩](../../../docs/standard/threading/threads-and-threading.md)
 - [동기화 기본 형식 개요](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
-- [SyncLock 문](~/docs/visual-basic/language-reference/statements/synclock-statement.md)
-- [lock 문](~/docs/csharp/language-reference/keywords/lock-statement.md)
+- [SyncLock 문](../../visual-basic/language-reference/statements/synclock-statement.md)
+- [lock 문](../../csharp/language-reference/keywords/lock-statement.md)

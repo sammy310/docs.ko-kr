@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42aa63c20e1643bc3f5377fa0ad66b63c1d4433a
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: e8d51149c01b4c8018609ca9313cc4eea2afbb5a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422601"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946564"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>관리 코드에서 프로토타입 만들기
 이 항목에서는 관리되지 않는 함수에 액세스하는 방법을 설명하고 관리 코드에서 메서드 정의에 주석을 다는 여러 특성 필드를 소개합니다. 플랫폼 호출에서 사용되는 .NET 기반 선언을 생성하는 방법을 보여 주는 예제는 [플랫폼 호출을 사용하여 데이터 마샬링](marshaling-data-with-platform-invoke.md)을 참조하세요.  
@@ -32,7 +32,7 @@ ms.locfileid: "67422601"
  관리 코드에서 관리되지 않는 DLL 함수에 액세스하기 전에 함수 이름과 함수를 내보내는 DLL 이름을 알아야 합니다. 이 정보를 사용하여 DLL에서 구현되는 관리되지 않는 함수에 대한 관리되는 정의를 쓰기 시작할 수 있습니다. 또한 플랫폼 호출이 함수를 만들고 데이터를 함수로 또는 반대로 마샬링하는 방법을 조정할 수 있습니다.  
   
 > [!NOTE]
->  문자열을 할당하는 Windows API 함수를 통해 `LocalFree`와 같은 메서드를 사용하여 문자열을 해제할 수 있습니다. 플랫폼 호출은 매개 변수를 다르게 처리합니다. 플랫폼 호출의 경우 매개 변수를 `String` 형식 대신 `IntPtr` 형식으로 설정합니다. <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> 클래스에서 제공된 메서드를 사용하여 형식을 문자열로 수동으로 변환하고 해제합니다.  
+> 문자열을 할당하는 Windows API 함수를 통해 `LocalFree`와 같은 메서드를 사용하여 문자열을 해제할 수 있습니다. 플랫폼 호출은 매개 변수를 다르게 처리합니다. 플랫폼 호출의 경우 매개 변수를 `String` 형식 대신 `IntPtr` 형식으로 설정합니다. <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> 클래스에서 제공된 메서드를 사용하여 형식을 문자열로 수동으로 변환하고 해제합니다.  
   
 ## <a name="declaration-basics"></a>선언 기본 사항  
  관리되지 않는 함수에 대한 관리되는 정의는 다음 예제와 같이 언어 종속적입니다. 전체 코드 예제를 보려면 [플랫폼 호출 예제](platform-invoke-examples.md)를 참조하세요.  

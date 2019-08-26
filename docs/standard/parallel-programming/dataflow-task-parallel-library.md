@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7058e7857c03a2fc82a3d978ef7c8066a9e272bc
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8fc88b06ee1e206208e6d6950f640966f53df3a1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589659"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924913"
 ---
 # <a name="dataflow-task-parallel-library"></a>데이터 흐름(작업 병렬 라이브러리)
 <a name="top"></a>TPL(작업 병렬 라이브러리)은 동시성 사용 애플리케이션의 견고성을 높이는 데 도움이 되는 데이터 흐름 구성 요소를 제공합니다. 이러한 데이터 흐름 구성 요소를 통칭하여 *TPL 데이터 흐름 라이브러리*라고 합니다. 이 데이터 흐름 모델은 정교하지 않은 데이터 흐름 및 파이프라인 작업을 위해 in-process 메시지 전달을 제공하여 행위자 기반 프로그래밍을 촉진합니다. 데이터 흐름 구성 요소는 TPL의 형식 및 예약 인프라를 바탕으로 빌드되며 비동기 프로그래밍에 대한 C#, Visual Basic 및 F# 언어 지원과 통합됩니다. 이러한 데이터 흐름 구성 요소는 비동기적으로 서로 통신해야 하는 여러 작업이 있는 경우나 데이터를 사용할 수 있게 될 때 해당 데이터를 처리하려는 경우에 유용합니다. 예를 들어 웹 카메라에서 이미지 데이터를 처리하는 애플리케이션의 경우, 데이터 흐름 모델을 사용함으로써 애플리케이션은 이미지 프레임을 사용할 수 있게 될 때 해당 이미지 프레임을 처리할 수 있습니다. 애플리케이션이 명도를 보정하거나 적목 현상을 줄이는 등의 작업을 수행하여 이미지 프레임을 개선하는 경우 데이터 흐름 구성 요소의 *파이프라인*을 만들 수 있습니다. 파이프라인의 각 단계에서는 TPL이 제공하는 기능과 같은 좀더 정교하지 않은 병렬 처리 기능을 사용하여 이미지를 변환할 수도 있습니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "65589659"
  <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A?displayProperty=nameWithType> 메서드를 호출하여 소스를 대상에 연결하는 경우 대상 블록이 메시지의 값에 따라 해당 메시지를 수락할지 아니면 거부할지를 결정하는 대리자를 제공할 수 있습니다. 이 필터링 메커니즘은 데이터 흐름 블록이 특정 값만 받도록 보장하는 유용한 방법입니다. 대부분의 미리 정의된 데이터 흐름 블록 형식의 경우 소스 블록이 여러 대상 블록에 연결되어 있으면 대상 블록이 메시지를 거부할 때 소스는 그 다음 대상에 해당 메시지를 제공합니다. 소스가 대상에 메시지를 제공하는 순서는 소스에 의해 정의되며 소스의 형식에 따라 달라질 수 있습니다. 대부분의 소스 블록 형식은 한 대상이 메시지를 수락할 후 해당 메시지의 제공을 중지합니다. 이 규칙의 한 가지 예외는 일부 대상이 메시지를 거부하는 경우에도 모든 대상에 각 메시지를 제공하는 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 클래스입니다. 필터링을 사용하여 특정 메시지만 처리하는 예제는 [연습: Windows Forms 애플리케이션에서 데이터 흐름 사용](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)을 참조하세요.  
   
 > [!IMPORTANT]
->  미리 정의된 각 소스 데이터 흐름 블록 형식은 메시지가 수신된 순서대로 전파되도록 보장하기 때문에 각 메시지를 소스 블록에서 읽어온 후에야 소스 블록이 다음 메시지를 처리할 수 있습니다. 따라서 필터링을 사용하여 여러 대상을 소스에 연결하는 경우 적어도 하나의 대상 블록이 각 메시지를 받는지 확인해야 합니다. 이렇게 하지 않으면 애플리케이션에서 교착 상태가 발생할 수도 있습니다.  
+> 미리 정의된 각 소스 데이터 흐름 블록 형식은 메시지가 수신된 순서대로 전파되도록 보장하기 때문에 각 메시지를 소스 블록에서 읽어온 후에야 소스 블록이 다음 메시지를 처리할 수 있습니다. 따라서 필터링을 사용하여 여러 대상을 소스에 연결하는 경우 적어도 하나의 대상 블록이 각 메시지를 받는지 확인해야 합니다. 이렇게 하지 않으면 애플리케이션에서 교착 상태가 발생할 수도 있습니다.  
   
 ### <a name="message-passing"></a>메시지 전달  
  데이터 흐름 프로그래밍 모델은 프로그램의 개별 구성 요소가 메시지를 전달하여 서로 통신하는 *메시지 전달* 개념과 관련됩니다. 애플리케이션 구성 요소 간에 메시지를 전파하는 한 가지 방법은 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> 및 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A?displayProperty=nameWithType> 메서드를 호출하여 대상 데이터 흐름 블록 게시에 메시지를 보내고(<xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A>는 비동기적으로 동작함, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A>는 비동기적으로 동작함), <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> 및 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A> 메서드를 호출하여 소스 블록에서 메시지를 받는 것입니다. 입력 데이터를 헤드 노드(대상 블록)에 보내고 출력 데이터를 파이프라인의 터미널 노드나 네트워크의 터미널 노드(하나 이상의 소스 블록)에서 받는 방법으로 이러한 메서드를 데이터 흐름 파이프라인 또는 네트워크와 결합할 수 있습니다. 또한 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Choose%2A> 메서드를 사용하여 제공된 소스 중에서 사용 가능한 데이터가 있는 첫 번째 소스에서 읽고 해당 데이터에 대한 작업을 수행할 수도 있습니다.  
@@ -111,7 +111,7 @@ ms.locfileid: "65589659"
  <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601>을 사용하여 여러 대상 블록에 메시지를 브로드캐스트하는 방법을 보여 주는 예제는 [방법: 데이터 흐름 블록에서 작업 스케줄러 지정](../../../docs/standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md)을 참조하세요.  
   
 #### <a name="writeonceblockt"></a>WriteOnceBlock(T)  
- <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 클래스는 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 개체에 한 번만 쓸 수 있는 점을 제외하고 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 클래스와 유사합니다. <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 개체가 생성 시가 아니라 값을 받은 후에 변경할 수 없게 되는 점을 제외하면 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601>을 C# [readonly](~/docs/csharp/language-reference/keywords/readonly.md)(Visual Basic에서는 [ReadOnly](~/docs/visual-basic/language-reference/modifiers/readonly.md)) 키워드와 유사한 것으로 간주할 수 있습니다. <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 클래스처럼 대상이 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 개체에서 메시지를 수신할 때 해당 메시지는 해당 개체에서 제거되지 않습니다. 따라서 여러 대상이 하나의 메시지 복사본을 수신합니다. <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 클래스는 여러 메시지 중 첫 메시지만 전파하려는 경우에 유용합니다.  
+ <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 클래스는 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 개체에 한 번만 쓸 수 있는 점을 제외하고 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 클래스와 유사합니다. <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 개체가 생성 시가 아니라 값을 받은 후에 변경할 수 없게 되는 점을 제외하면 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601>을 C# [readonly](../../csharp/language-reference/keywords/readonly.md)(Visual Basic에서는 [ReadOnly](../../visual-basic/language-reference/modifiers/readonly.md)) 키워드와 유사한 것으로 간주할 수 있습니다. <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 클래스처럼 대상이 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 개체에서 메시지를 수신할 때 해당 메시지는 해당 개체에서 제거되지 않습니다. 따라서 여러 대상이 하나의 메시지 복사본을 수신합니다. <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 클래스는 여러 메시지 중 첫 메시지만 전파하려는 경우에 유용합니다.  
   
  다음 기본 예제에서는 여러 <xref:System.String> 값을 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 개체에 게시한 다음 이 개체에서 해당 값을 다시 읽습니다. <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 개체에 한 번만 쓸 수 있기 때문에 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 개체는 메시지를 받은 후 이후 메시지를 삭제합니다.  
   
@@ -235,7 +235,7 @@ ms.locfileid: "65589659"
  <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A>의 기본값은 1이며, 이 경우 데이터 흐름 블록이 한 번에 하나의 메시지를 처리하도록 보장됩니다. 이 속성을 1보다 큰 값으로 설정하면 데이터 흐름 블록이 여러 메시지를 동시에 처리할 수 있습니다. 이 속성을 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.Unbounded?displayProperty=nameWithType>로 설정하면 내부 작업 스케줄러가 최대 동시성 수준을 관리할 수 있습니다.  
   
 > [!IMPORTANT]
->  최대 병렬 처리 수준을 1보다 크게 지정하는 경우 여러 메시지가 동시에 처리되므로 메시지가 수신된 순서대로 처리되지 않을 수 있습니다. 그러나 메시지가 블록에서 출력되는 순서는 메시지가 수신되는 순서와 동일합니다.  
+> 최대 병렬 처리 수준을 1보다 크게 지정하는 경우 여러 메시지가 동시에 처리되므로 메시지가 수신된 순서대로 처리되지 않을 수 있습니다. 그러나 메시지가 블록에서 출력되는 순서는 메시지가 수신되는 순서와 동일합니다.  
   
  <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A> 속성이 최대 병렬 처리 수준을 나타내기 때문에 데이터 흐름 블록은 지정한 것보다 낮은 병렬 처리 수준으로 실행될 수 있습니다. 데이터 흐름 블록은 기능적 요구 사항을 충족하기 위해서나 사용 가능한 시스템 리소스가 부족하기 때문에 보다 낮은 병렬 처리 수준을 사용할 수도 있습니다. 데이터 흐름 블록은 지정한 것보다 많은 병렬 처리를 선택하지 않습니다.  
   

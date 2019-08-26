@@ -18,12 +18,12 @@ helpviewer_keywords:
 - output, network tracing
 - method invocations
 ms.assetid: e993b7c3-087f-45d8-9c02-9dded936d804
-ms.openlocfilehash: 45ec7b83824777c594b966a38d2b7fcd4f63b596
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3d556bc3b8746fe2d05a8e225b91ecf59bd404fd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221191"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963936"
 ---
 # <a name="network-tracing-in-the-net-framework"></a>.NET Framework의 네트워크 추적
 .NET Framework의 네트워크 추적은 메서드 호출에 대한 정보와 관리되는 애플리케이션에서 생성된 네트워크 트래픽 정보에 대한 액세스를 제공합니다. 이 기능은 개발 도중 애플리케이션을 디버깅하고 배포된 애플리케이션을 분석할 때 유용합니다. 네트워크 추적에서 제공된 출력은 개발 단계 및 프로덕션 환경에서 여러 가지 사용 시나리오를 지원하도록 사용자 지정할 수 있습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "59221191"
  추적 기능이 사용될 때, **System.Net** 클래스에 의해 출력되는 추적 정보를 캡처할 수 있습니다. 추적 정보를 생성하는 네트워킹 클래스 멤버에는 해당 .NET Framework 클래스 라이브러리 설명서의 설명 섹션에 다음 내용이 포함되어 있습니다.  
   
 > [!NOTE]
->  애플리케이션에 네트워크 추적을 사용하도록 설정하면 이 멤버에서 추적 정보를 출력합니다. 자세한 내용은 네트워크 추적을 참조하십시오.  
+> 애플리케이션에 네트워크 추적을 사용하도록 설정하면 이 멤버에서 추적 정보를 출력합니다. 자세한 내용은 네트워크 추적을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목
 

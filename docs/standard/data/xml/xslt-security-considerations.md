@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69ee0743f7b0c64efbfd8a75e8dc463d79323d4c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 683cf4a38ed08e0c569df62778c2ff80323ef261
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615297"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910485"
 ---
 # <a name="xslt-security-considerations"></a>XSLT 보안 고려 사항
 XSLT 언어에는 강력하며 유연성 있는 풍부한 기능이 있습니다. 이러한 기능은 유용하지만 외부 소스에서 악용할 수도 있습니다. XSLT를 안전하게 사용하려면 XSLT를 사용할 때 발생하는 보안 문제 유형을 이해하고 이러한 위험 요소를 완화하기 위한 기본적인 전략을 알아야 합니다.  
@@ -39,7 +39,7 @@ XSLT 언어에는 강력하며 유연성 있는 풍부한 기능이 있습니다
 - 변환을 실행할 때 <xref:System.Xml.XmlResolver>를 사용하여 `document()` 함수를 확인하는 경우  
   
     > [!NOTE]
-    >  `document()` 클래스에서 <xref:System.Xml.Xsl.XslCompiledTransform> 함수는 기본적으로 비활성화되어 있습니다. 이 기능을 활성화하려면 <xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=nameWithType> 속성을 `true`로 설정하고 <xref:System.Xml.Xsl.XsltSettings> 개체를 <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 메서드에 전달합니다.  
+    > `document()` 클래스에서 <xref:System.Xml.Xsl.XslCompiledTransform> 함수는 기본적으로 비활성화되어 있습니다. 이 기능을 활성화하려면 <xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=nameWithType> 속성을 `true`로 설정하고 <xref:System.Xml.Xsl.XsltSettings> 개체를 <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 메서드에 전달합니다.  
   
  <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 및 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 메서드는 각각 인수의 하나로 <xref:System.Xml.XmlResolver>를 사용하는 오버로드를 포함합니다. <xref:System.Xml.XmlResolver>가 지정되지 않을 경우 기본 <xref:System.Xml.XmlUrlResolver>가 자격 증명 없이 사용됩니다.  
   

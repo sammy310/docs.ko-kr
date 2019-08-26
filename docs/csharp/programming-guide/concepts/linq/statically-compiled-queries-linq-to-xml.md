@@ -2,12 +2,12 @@
 title: 정적으로 컴파일된 쿼리(LINQ to XML)(C#)
 ms.date: 07/20/2015
 ms.assetid: 3bf558fe-0705-479d-86d4-00188f5fcf9c
-ms.openlocfilehash: ee5d5fbc9bf2aa90635e75c5c8cbf52b16e3f349
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9f10d93e0e5add02dbfb8c8867031ce68e58c0f4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483467"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924154"
 ---
 # <a name="statically-compiled-queries-linq-to-xml-c"></a>정적으로 컴파일된 쿼리(LINQ to XML)(C#)
 <xref:System.Xml.XmlDocument>와는 달리 LINQ to XML의 가장 큰 성능 이점 중 하나는 LINQ to XML의 쿼리가 정적으로 컴파일된다는 점입니다. 반면 XPath 쿼리는 런타임에 해석되어야 합니다. 이 기능은 LINQ to XML에 기본 제공되므로 이를 활용하기 위해 별도의 단계를 수행할 필요는 없습니다. 그러나 이 두 가지 기술 중 하나를 선택해야 하는 경우를 위해 그 차이를 알고 있는 것이 좋습니다. 이 항목에서는 그 차이에 대해 설명합니다.  
@@ -47,7 +47,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <xref:System.Linq.Enumerable.Where%2A> 메서드는 확장 메서드입니다. 자세한 내용은 [확장 메서드](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)를 참조하세요. <xref:System.Linq.Enumerable.Where%2A>은 확장 메서드입니다. 위 쿼리는 다음과 같이 작성된 것처럼 컴파일됩니다.  
+ <xref:System.Linq.Enumerable.Where%2A> 메서드는 확장 메서드입니다. 자세한 내용은 [확장 메서드](../../classes-and-structs/extension-methods.md)를 참조하세요. <xref:System.Linq.Enumerable.Where%2A>은 확장 메서드입니다. 위 쿼리는 다음과 같이 작성된 것처럼 컴파일됩니다.  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -61,10 +61,10 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- 이 예제의 결과는 위의 두 예제의 결과와 정확히 동일합니다. 이를 통해 쿼리가 정적으로 연결된 메서드 호출로 효과적으로 컴파일되었음을 알 수 있습니다. 이 예제에서는 반복기의 지연된 실행 의미 체계를 결합하여 성능을 향상합니다. 반복기의 지연된 실행 의미 체계에 대한 자세한 내용은 [LINQ to XML에서 지연 실행 및 지연 계산(C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)을 참조하세요.  
+ 이 예제의 결과는 위의 두 예제의 결과와 정확히 동일합니다. 이를 통해 쿼리가 정적으로 연결된 메서드 호출로 효과적으로 컴파일되었음을 알 수 있습니다. 이 예제에서는 반복기의 지연된 실행 의미 체계를 결합하여 성능을 향상합니다. 반복기의 지연된 실행 의미 체계에 대한 자세한 내용은 [LINQ to XML에서 지연 실행 및 지연 계산(C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)을 참조하세요.  
   
 > [!NOTE]
->  이러한 예제는 컴파일러에서 작성할 수 있는 대표적인 코드 예제입니다. 실제 구현은 이러한 예제와 약간 다를 수 있으나 성능은 이러한 예제와 같거나 매우 유사할 것입니다.  
+> 이러한 예제는 컴파일러에서 작성할 수 있는 대표적인 코드 예제입니다. 실제 구현은 이러한 예제와 약간 다를 수 있으나 성능은 이러한 예제와 같거나 매우 유사할 것입니다.  
   
 ## <a name="executing-xpath-expressions-with-xmldocument"></a>XmlDocument를 사용하여 XPath 식 실행  
  다음 예제에서는 <xref:System.Xml.XmlDocument>를 사용하여 위의 예제와 같은 결과를 제공합니다.  

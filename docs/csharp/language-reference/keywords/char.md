@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: b58730d945582ded7b76fcd5c4c65bc1dd9324da
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 754c04bfc3b4090906420d55d55e51606b72f187
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661464"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605956"
 ---
 # <a name="char-c-reference"></a>char(C# 참조)
 
@@ -44,12 +44,12 @@ ms.locfileid: "67661464"
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Char>
-- [C# 참조](../../../csharp/language-reference/index.md)
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [C# 키워드](../../../csharp/language-reference/keywords/index.md)
-- [정수 형식](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
-- [기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)
-- [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
-- [명시적 숫자 변환 표](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
-- [Nullable 형식](../../../csharp/programming-guide/nullable-types/index.md)
-- [문자열](../../../csharp/programming-guide/strings/index.md)
+- [C# 참조](../index.md)
+- [C# 프로그래밍 가이드](../../programming-guide/index.md)
+- [C# 키워드](./index.md)
+- [정수 형식](../builtin-types/integral-numeric-types.md)
+- [기본 제공 형식 표](./built-in-types-table.md)
+- [암시적 숫자 변환 표](./implicit-numeric-conversions-table.md)
+- [명시적 숫자 변환 표](./explicit-numeric-conversions-table.md)
+- [Nullable 형식](../../programming-guide/nullable-types/index.md)
+- [문자열](../../programming-guide/strings/index.md)

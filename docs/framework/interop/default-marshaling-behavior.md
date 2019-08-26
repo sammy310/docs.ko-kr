@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13f1b2c3e3e651cb6c25b966d778cb436967509e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c6de6091b8970fde4a958148acf32dcefe1a6726
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629423"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946552"
 ---
 # <a name="default-marshaling-behavior"></a>기본 마샬링 동작
 Interop 마샬링은 메서드 매개 변수와 연결된 데이터가 관리되는 메모리와 관리되지 않는 메모리 간에 전달될 때 동작하는 방식을 제어하는 규칙에 따라 작동합니다. 이러한 기본 제공 규칙은 데이터 형식 변형, 호출 수신자가 전달된 데이터를 변경하고 해당 변경 내용을 호출자에게 반환할 수 있는지 여부 및 마샬러가 성능 최적화를 제공하는 상황과 같은 마샬링 작업을 제어합니다.  
@@ -24,7 +24,7 @@ Interop 마샬링은 메서드 매개 변수와 연결된 데이터가 관리되
  이 섹션에서는 interop 마샬링 서비스의 기본 동작 특성을 식별합니다. 배열, 부울 형식, char 형식, 대리자, 클래스, 개체, 문자열 및 구조체 마샬링에 대한 자세한 정보를 표시됩니다.  
   
 > [!NOTE]
->  제네릭 형식의 마샬링은 지원되지 않습니다. 자세한 내용은 [제네릭 형식을 통한 상호 운용](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))을 참조하세요.  
+> 제네릭 형식의 마샬링은 지원되지 않습니다. 자세한 내용은 [제네릭 형식을 통한 상호 운용](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))을 참조하세요.  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>Interop 마샬러를 사용한 메모리 관리  
  Interop 마샬러는 항상 비관리 코드에 의해 할당된 메모리를 해제하려고 합니다. 이 동작은 COM 메모리 관리 규칙을 준수하지만 네이티브 C++를 제어하는 규칙과는 다릅니다.  
@@ -117,7 +117,7 @@ interface DelegateTest : IDispatch {
 이 예제에서 두 개의 대리자가 <xref:System.Runtime.InteropServices.UnmanagedType.FunctionPtr?displayProperty=nameWithType>으로 마샬링되면 결과는 `int` 및 `int`에 대한 포인터입니다. 대리자 형식이 마샬링되기 때문에 여기에서 `int`는 void(`void*`)에 대한 포인터를 나타냅니다. 이 항목은 메모리에서 대리자의 주소입니다. 즉, 여기서 `int`가 함수 포인터의 크기를 나타내므로 이 결과는 32비트 Windows 시스템에 해당됩니다.
 
 > [!NOTE]
->  비관리 코드에서 보유한 관리되는 대리자에 대한 함수 포인터 참조는 공용 언어 런타임이 관리되는 개체에서 가비지 컬렉션을 수행할 수 없도록 차단하지 않습니다.  
+> 비관리 코드에서 보유한 관리되는 대리자에 대한 함수 포인터 참조는 공용 언어 런타임이 관리되는 개체에서 가비지 컬렉션을 수행할 수 없도록 차단하지 않습니다.  
   
  예를 들어 다음 코드는 `SetChangeHandler` 메서드에 전달된 `cb` 개체 참조가 `Test` 메서드의 수명을 초과하여 `cb` 연결을 유지하지 않으므로 잘못된 것입니다. `cb` 개체가 가비지 수집되고 나면 `SetChangeHandler`에 전달된 함수 포인터가 더이상 유효하지 않습니다.  
   
@@ -246,12 +246,12 @@ internal static class NativeMethods
  관리되지 않는 API는 `RECT`에 대한 포인터가 함수에 전달될 것으로 예상하기 때문에 `Rect` 값 형식은 참조로 전달되어야 합니다. 관리되지 않는 API는 `POINT`가 스택에서 전달될 것으로 예상하기 때문에 `Point` 값 형식은 값으로 전달되어야 합니다. 이러한 미묘한 차이가 매우 중요합니다. 참조는 비관리 코드에 포인터로 전달됩니다. 값은 스택에서 비관리 코드에 전달됩니다.  
   
 > [!NOTE]
->  형식이 지정된 형식이 구조체로 마샬링된 경우 형식 내의 필드에만 액세스할 수 있습니다. 형식에 메서드, 속성 또는 이벤트가 있는 경우 비관리 코드에서 액세스할 수 없습니다.  
+> 형식이 지정된 형식이 구조체로 마샬링된 경우 형식 내의 필드에만 액세스할 수 있습니다. 형식에 메서드, 속성 또는 이벤트가 있는 경우 비관리 코드에서 액세스할 수 없습니다.  
   
  고정된 멤버 레이아웃이 있는 경우 클래스를 비관리 코드에 C 스타일 구조체로 마샬링할 수도 있습니다. 클래스에 대한 멤버 레이아웃 정보도 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 특성을 통해 제공됩니다. 고정 레이아웃의 값 형식과 고정 레이아웃의 클래스 간에 주요 차이점은 비관리 코드로 마샬링되는 방법입니다. 값 형식은 스택에서 값으로 전달되므로 호출 수신자가 형식의 멤버를 변경해도 변경 내용이 호출자에게 표시되지 않습니다. 참조 형식은 참조로 전달되므로(스택에서 형식에 대한 참조가 전달됨) 호출 수신자가 형식의 blittable 형식 멤버를 변경할 경우 모든 변경 내용이 호출자에게 표시됩니다.  
   
 > [!NOTE]
->  참조 형식에 non-blittable 형식 멤버가 있을 경우 변환이 두 번 필요합니다. 첫 번째는 인수가 관리되지 않는 쪽에 전달될 때이고 두 번째는 호출에서 반환될 때입니다. 이러한 추가 오버헤드로 인해 호출자가 호출 수신자에 의한 변경 내용을 보려는 경우 In/Out 매개 변수를 인수에 명시적으로 적용해야 합니다.  
+> 참조 형식에 non-blittable 형식 멤버가 있을 경우 변환이 두 번 필요합니다. 첫 번째는 인수가 관리되지 않는 쪽에 전달될 때이고 두 번째는 호출에서 반환될 때입니다. 이러한 추가 오버헤드로 인해 호출자가 호출 수신자에 의한 변경 내용을 보려는 경우 In/Out 매개 변수를 인수에 명시적으로 적용해야 합니다.  
   
  다음 예제에서 `SystemTime` 클래스는 순차적 멤버 레이아웃을 사용하며 Windows API **GetSystemTime** 함수에 전달될 수 있습니다.  
   
@@ -351,7 +351,7 @@ interface _Graphics {
  값과 참조를 플랫폼 호출로 마샬링하는 데 사용되는 것과 동일한 규칙이 COM 인터페이스를 통해 마샬링할 때도 사용됩니다. 예를 들어 `Point` 값 형식의 인스턴스가 .NET Framework에서 COM으로 전달되는 경우 `Point`가 값으로 전달됩니다. `Point` 값 형식이 참조로 전달되는 경우에는 `Point`에 대한 포인터가 스택에서 전달됩니다. interop 마샬러는 두 방향에서 모두 더 높은 수준의 간접 참조(**Point** \*\*)를 지원하지 않습니다.  
   
 > [!NOTE]
->  내보낸 형식 라이브러리에서 명시적 레이아웃을 표현할 수 없기 때문에 <xref:System.Runtime.InteropServices.LayoutKind> 열거형 값이 **Explicit**로 설정된 구조체는 COM interop에서 사용할 수 없습니다.  
+> 내보낸 형식 라이브러리에서 명시적 레이아웃을 표현할 수 없기 때문에 <xref:System.Runtime.InteropServices.LayoutKind> 열거형 값이 **Explicit**로 설정된 구조체는 COM interop에서 사용할 수 없습니다.  
   
 ### <a name="system-value-types"></a>시스템 값 형식  
  <xref:System> 네임스페이스에는 런타임 기본 형식의 boxed 형식을 나타내는 여러 개의 값 형식이 있습니다. 예를 들어 값 형식 <xref:System.Int32?displayProperty=nameWithType> 구조체는 **ELEMENT_TYPE_I4**의 boxed 형식을 나타냅니다. 다른 형식이 지정된 형식처럼 이러한 형식을 구조체로 마샬링하는 대신 boxing하는 기본 형식과 동일한 방식으로 마샬링합니다. 따라서 **System.Int32**는 **long** 형식의 단일 멤버를 포함하는 구조체가 아니라 **ELEMENT_TYPE_I4**로 마샬링됩니다. 다음 표에는 기본 형식의 boxed 표현인 **System** 네임스페이스의 값 형식 목록이 포함되어 있습니다.  

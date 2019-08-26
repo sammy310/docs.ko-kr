@@ -6,12 +6,12 @@ helpviewer_keywords:
 - persistence [Visual Basic], persisting user settings [Visual Basic]
 - user settings [Visual Basic], persisting
 ms.assetid: 0e5e6415-b6e2-4602-9be0-a65fa167d007
-ms.openlocfilehash: 35997db52a59aeaff5a2c404ea83b15639ea23a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0683a5c359da1c4d082f7312c1ed8f43e1c151f3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825183"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968384"
 ---
 # <a name="how-to-persist-user-settings-in-visual-basic"></a>방법: Visual Basic에서 사용자 설정 유지
 `My.Settings.Save` 메서드를 사용하여 사용자 설정에 대한 변경 내용을 유지할 수 있습니다.  
@@ -21,9 +21,9 @@ ms.locfileid: "58825183"
  자세한 내용은 [My.Settings 개체](../../../../visual-basic/language-reference/objects/my-settings-object.md)를 참조하세요.  
   
 > [!NOTE]
->  런타임에 사용자 범위의 값을 변경하고 저장할 수 있지만 애플리케이션 범위 설정은 읽기 전용이고 프로그래밍 방식으로 변경할 수 없습니다. **프로젝트 디자이너**를 통해 또는 애플리케이션의 구성 파일을 편집하여 애플리케이션을 만들 때 애플리케이션 범위 설정을 변경할 수 있습니다. 자세한 내용은 [애플리케이션 설정 관리(.NET)](/visualstudio/ide/managing-application-settings-dotnet)를 참조하세요.  
+> 런타임에 사용자 범위의 값을 변경하고 저장할 수 있지만 애플리케이션 범위 설정은 읽기 전용이고 프로그래밍 방식으로 변경할 수 없습니다. **프로젝트 디자이너**를 통해 또는 애플리케이션의 구성 파일을 편집하여 애플리케이션을 만들 때 애플리케이션 범위 설정을 변경할 수 있습니다. 자세한 내용은 [애플리케이션 설정 관리(.NET)](/visualstudio/ide/managing-application-settings-dotnet)를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 `LastChanged` 사용자 설정의 값을 변경하고 `My.Settings.Save` 메서드를 호출하여 해당 변경 내용을 저장합니다.  
   
  [!code-vb[VbVbalrMyResources#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#5)]  

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 119c4c13c90aeca8c14d2725d927c38be32212a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3d0d67c82e753b044f759b4d1139c5f6b4837b31
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308720"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948480"
 ---
 # <a name="editing-xml-schemas"></a>XML 스키마 편집
 XML 스키마 편집 기능은 SOM(스키마 개체 모델)의 중요한 기능 중 하나입니다. SOM의 모든 pre-schema-compilation 속성을 사용하여 XML 스키마에서 기존 값을 변경할 수 있습니다. 그런 다음 XML 스키마를 다시 컴파일하여 변경 내용을 적용할 수 있습니다.  
@@ -93,7 +93,7 @@ XML 스키마 편집 기능은 SOM(스키마 개체 모델)의 중요한 기능 
 8. 스키마 사전 컴파일 <xref:System.Xml.Schema.XmlSchemaObject> 컬렉션의 각 <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType>를 반복합니다.  
   
 > [!NOTE]
->  `FirstName` 요소는 스키마에서 전역 요소가 아니므로 <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> 또는 <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> 컬렉션에서 사용할 수 없습니다. 이 코드 예제에서는 먼저 `FirstName` 요소를 찾아서 `Customer` 요소를 찾습니다.  
+> `FirstName` 요소는 스키마에서 전역 요소가 아니므로 <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> 또는 <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> 컬렉션에서 사용할 수 없습니다. 이 코드 예제에서는 먼저 `FirstName` 요소를 찾아서 `Customer` 요소를 찾습니다.  
 >   
 >  첫 번째 코드 예제에서는 post-schema-compilation <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> 컬렉션을 사용하여 스키마를 통과했습니다. 이 샘플에서는 pre-schema-compilation <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> 컬렉션을 사용하여 스키마를 통과합니다. 두 컬렉션은 모두 스키마에서 전역 요소에 대한 액세스를 제공하지만 <xref:System.Xml.Schema.XmlSchema.Items%2A> 컬렉션을 반복하면 스키마에서 모든 전역 요소를 반복해야 하므로 시간이 더 많이 걸리며 PSCI 속성이 없습니다. <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.Attributes%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A?displayProperty=nameWithType> 등의 PSCI 컬렉션에서는 전역 요소, 특성 및 형식과 해당 PSCI 속성에 직접 액세스할 수 있습니다.  
   

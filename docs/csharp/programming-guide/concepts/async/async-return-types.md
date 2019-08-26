@@ -2,12 +2,12 @@
 title: 비동기 반환 형식(C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: ca429db9b3ad81555df3c7e02d8827136734e26c
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: f40592038ce16173e6dced5e8bcb914cfeb1b1f5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347746"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922034"
 ---
 # <a name="async-return-types-c"></a>비동기 반환 형식(C#)
 비동기 메서드의 반환 형식은 다음과 같을 수 있습니다.
@@ -20,23 +20,23 @@ ms.locfileid: "67347746"
 
 - C# 7.0부터 액세스 가능한 `GetAwaiter` 메서드가 있는 모든 형식. `GetAwaiter` 메서드에서 반환된 개체는 <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType> 인터페이스를 구현해야 합니다.
   
-비동기 메서드에 대한 자세한 내용은 [async 및 await를 사용한 비동기 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/async/index.md)을 참조하세요.  
+비동기 메서드에 대한 자세한 내용은 [async 및 await를 사용한 비동기 프로그래밍(C#)](./index.md)을 참조하세요.  
   
 다음 섹션 중 하나에서 각 반환 형식을 살펴보고 세 가지 형식 모두를 사용하는 전체 예제는 이 항목의 끝에 나와 있습니다.  
   
 ## <a name="BKMK_TaskTReturnType"></a> 작업\<TResult\> 반환 형식  
-<xref:System.Threading.Tasks.Task%601> 반환 형식은 피연산자의 형식이 `TResult`인 [Return](../../../../csharp/language-reference/keywords/return.md)(C#) 문이 포함된 비동기 메서드에 사용합니다.  
+<xref:System.Threading.Tasks.Task%601> 반환 형식은 피연산자의 형식이 `TResult`인 [Return](../../../language-reference/keywords/return.md)(C#) 문이 포함된 비동기 메서드에 사용합니다.  
   
 다음 예제에서 `GetLeisureHours` 비동기 메서드는 정수를 반환하는 `return` 문을 포함합니다. 따라서 메서드 선언은 `Task<int>`의 반환 형식을 지정해야 합니다.  <xref:System.Threading.Tasks.Task.FromResult%2A> 비동기 메서드는 문자열을 반환하는 작업에 대한 자리 표시자입니다.
   
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1.cs)]
 
-`ShowTodaysInfo` 메서드의 await 식 내에서 `GetLeisureHours`를 호출하면 await 식이 `GetLeisureHours`에서 반환된 작업에 저장된 정수 값(`leisureHours` 값)을 검색합니다. await 식에 대한 자세한 내용은 [await](../../../../csharp/language-reference/keywords/await.md)를 참조하세요.  
+`ShowTodaysInfo` 메서드의 await 식 내에서 `GetLeisureHours`를 호출하면 await 식이 `GetLeisureHours`에서 반환된 작업에 저장된 정수 값(`leisureHours` 값)을 검색합니다. await 식에 대한 자세한 내용은 [await](../../../language-reference/keywords/await.md)를 참조하세요.  
   
 다음 코드와 같이 `GetLeisureHours` 호출을 `await`의 적용과 구분하면 이 과정을 더욱 잘 이해할 수 있습니다. 곧바로 대기 상태가 되지 않는 `GetLeisureHours` 메서드를 호출하면 메서드 선언에서 예상한 대로 `Task<int>`를 반환합니다. 예제에서 작업이 `integerTask` 변수에 할당됩니다. `integerTask`가 <xref:System.Threading.Tasks.Task%601>이기 때문에 `TResult` 형식의 <xref:System.Threading.Tasks.Task%601.Result> 속성을 포함합니다. 이 경우 `TResult`는 정수 형식을 나타냅니다. `await`가 `integerTask`에 적용되는 경우 await 식은 `integerTask`의 <xref:System.Threading.Tasks.Task%601.Result%2A> 속성 내용으로 평가됩니다. 값은 `ret` 변수에 할당됩니다.  
   
 > [!IMPORTANT]
->  <xref:System.Threading.Tasks.Task%601.Result%2A> 속성은 차단 속성입니다. 해당 작업이 완료되기 전에 액세스하려고 하면, 작업이 완료되고 값을 사용할 수 있을 때까지 현재 활성화된 스레드가 차단됩니다. 대부분의 경우 속성에 직접 액세스하지 않고 `await`를 사용하여 값에 액세스해야 합니다. <br/> 앞의 예제에서는 `ShowTodaysInfo` 메서드가 애플리케이션 종료 전에 실행을 완료할 수 있도록 <xref:System.Threading.Tasks.Task%601.Result%2A> 속성의 값을 검색하여 주 스레드를 차단했습니다.  
+> <xref:System.Threading.Tasks.Task%601.Result%2A> 속성은 차단 속성입니다. 해당 작업이 완료되기 전에 액세스하려고 하면, 작업이 완료되고 값을 사용할 수 있을 때까지 현재 활성화된 스레드가 차단됩니다. 대부분의 경우 속성에 직접 액세스하지 않고 `await`를 사용하여 값에 액세스해야 합니다. <br/> 앞의 예제에서는 `ShowTodaysInfo` 메서드가 애플리케이션 종료 전에 실행을 완료할 수 있도록 <xref:System.Threading.Tasks.Task%601.Result%2A> 속성의 값을 검색하여 주 스레드를 차단했습니다.  
 
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1a.cs#1)]
   
@@ -80,7 +80,7 @@ C# 7.0부터 비동기 메서드는 액세스 가능한 `GetAwaiter` 메서드�
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
-- [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [비동기 프로그램의 제어 흐름(C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)
-- [async](../../../../csharp/language-reference/keywords/async.md)
-- [await](../../../../csharp/language-reference/keywords/await.md)
+- [연습: async 및 await를 사용하여 웹에 액세스(C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [비동기 프로그램의 제어 흐름(C#)](./control-flow-in-async-programs.md)
+- [async](../../../language-reference/keywords/async.md)
+- [await](../../../language-reference/keywords/await.md)

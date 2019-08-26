@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: b12aeaeb5414d911abea4dfda654183ffa02b3e6
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: a2cf05dc6b288ffdaf1a20cf594231f48046a724
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398464"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596751"
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>방법: ToString 메서드 재정의(C# 프로그래밍 가이드)
 
@@ -47,10 +47,10 @@ C#의 모든 클래스 또는 구조체는 <xref:System.Object> 클래스를 암
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.IFormattable>
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [클래스 및 구조체](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [문자열](../../../csharp/programming-guide/strings/index.md)
-- [string](../../../csharp/language-reference/keywords/string.md)
-- [override](../../../csharp/language-reference/keywords/override.md)
-- [virtual](../../../csharp/language-reference/keywords/virtual.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [클래스 및 구조체](./index.md)
+- [문자열](../strings/index.md)
+- [string](../../language-reference/keywords/string.md)
+- [override](../../language-reference/keywords/override.md)
+- [virtual](../../language-reference/keywords/virtual.md)
 - [형식 서식 지정](../../../standard/base-types/formatting-types.md)

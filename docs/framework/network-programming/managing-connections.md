@@ -17,12 +17,12 @@ helpviewer_keywords:
 - downloading Internet resources, connections
 - ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
-ms.openlocfilehash: 9c434ce0f5934509489a7deeced9e9e579d9cf7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2b7b54ab569a3f03363b2f30bf595c2087b9fe70
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152908"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963949"
 ---
 # <a name="managing-connections"></a>연결 관리
 HTTP를 사용하여 데이터 리소스에 연결하는 애플리케이션은 .NET Framework의 <xref:System.Net.ServicePoint> 및 <xref:System.Net.ServicePointManager> 클래스를 사용하여 인터넷에 대한 연결을 관리하고 최적의 규모 및 성능을 달성하도록 지원합니다.  
@@ -36,7 +36,7 @@ HTTP를 사용하여 데이터 리소스에 연결하는 애플리케이션은 .
  클라이언트와 서버 사이의 연결 수는 애플리케이션 처리량에 상당한 영향을 미칠 수 있습니다. 기본적으로 <xref:System.Net.HttpWebRequest> 클래스를 사용하는 애플리케이션에서는 지정된 서버에 대한 영구적 연결을 최대 2개 사용하지만 애플리케이션별로 최대 연결 수를 설정할 수 있습니다.  
   
 > [!NOTE]
->  HTTP/1.1 사양에 따르면 애플리케이션으로부터의 연결은 서버당 두 개의 연결로 제한됩니다.  
+> HTTP/1.1 사양에 따르면 애플리케이션으로부터의 연결은 서버당 두 개의 연결로 제한됩니다.  
   
  최적의 연결 수는 애플리케이션이 실행되는 실제 조건에 따라 달라집니다. 애플리케이션에 사용 가능한 연결 수를 늘려도 애플리케이션 성능에 영향을 미치지 않을 수 있습니다. 연결이 추가되는 경우 미치는 영향을 판별하려면 연결 수를 변경하면서 성능 테스트를 실행합니다. 다음 코드 샘플에 표시된 대로 애플리케이션 초기화 시 **ServicePointManager** 클래스의 정적 <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> 속성을 변경하여 해당 애플리케이션에서 사용하는 연결 수를 변경할 수 있습니다.  
   

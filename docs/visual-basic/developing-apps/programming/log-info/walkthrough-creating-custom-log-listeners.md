@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 50eb1bc1588602bf562efc31b0f4dd01bc29cad0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 90135074a4d34ea73743faffb2531305fcb326fb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593323"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965270"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>연습: 사용자 지정 로그 수신기 만들기(Visual Basic)
 이 연습에서는 사용자 지정 로그 수신기를 만들고 `My.Application.Log` 개체의 출력을 수신 대기하도록 구성하는 방법을 보여 줍니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "64593323"
      <xref:System.Diagnostics.TraceListener.Write%2A> 및 <xref:System.Diagnostics.TraceListener.WriteLine%2A> 메서드의 특정이 기본 클래스 메서드와 일치하도록 이 두 메서드에 <xref:System.Security.Permissions.HostProtectionAttribute> 특성이 적용됩니다. <xref:System.Security.Permissions.HostProtectionAttribute> 특성을 사용하면 코드를 실행하는 호스트에서는 코드가 호스트 보호 동기화를 노출하는지를 확인할 수 있습니다.  
   
     > [!NOTE]
-    >  <xref:System.Security.Permissions.HostProtectionAttribute> 특성은 공용 언어 런타임을 호스트하고 SQL Server와 같은 호스트 보호를 구현하는 관리되지 않는 애플리케이션에서만 적용됩니다.  
+    > <xref:System.Security.Permissions.HostProtectionAttribute> 특성은 공용 언어 런타임을 호스트하고 SQL Server와 같은 호스트 보호를 구현하는 관리되지 않는 애플리케이션에서만 적용됩니다.  
   
  `My.Application.Log`가 로그 수신기를 사용하도록 하려면 로그 수신기를 포함하는 어셈블리에 강력한 이름을 지정해야 합니다.  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe56c0ec3b8a5a150a999e7de98f283436a0ba9d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 571b049300a7c7de963bd762e0266f66060479fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607915"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927988"
 ---
 # <a name="application-domains"></a>애플리케이션 도메인
 
@@ -46,7 +46,7 @@ ms.locfileid: "64607915"
 - 전체 프로세스를 중지하지 않고 개별 애플리케이션만 중지할 수 있습니다. 애플리케이션 도메인을 사용하면 단일 애플리케이션에서 실행 중인 코드를 언로드할 수 있습니다.  
   
     > [!NOTE]
-    >  개별 어셈블리 또는 형식은 언로드할 수 없습니다. 전체 도메인만 언로드할 수 있습니다.  
+    > 개별 어셈블리 또는 형식은 언로드할 수 없습니다. 전체 도메인만 언로드할 수 있습니다.  
   
 - 한 애플리케이션에서 실행 중인 코드가 다른 애플리케이션의 코드 또는 리소스에 직접 액세스할 수 없습니다. 공용 언어 런타임은 다른 애플리케이션 도메인의 개체를 서로 직접 호출할 수 없도록 하여 이러한 격리를 적용합니다. 도메인 사이를 통과하는 개체는 복사되거나 프록시에 의해 액세스됩니다. 개체가 복사되는 경우 해당 개체에 대한 호출은 로컬입니다. 즉, 참조되는 개체와 호출자 둘 다 같은 애플리케이션 도메인에 있습니다. 프록시를 통해 개체가 액세스되는 경우 해당 개체에 대한 호출은 원격입니다. 이 경우 참조되는 개체와 호출자는 서로 다른 애플리케이션 도메인에 있습니다. 크로스 도메인 호출은 두 프로세스 또는 두 컴퓨터 사이의 호출과 동일한 원격 호출 인프라를 사용합니다. 따라서 메서드 호출을 올바르게 JIT로 컴파일할 수 있도록 하기 위해 참조되는 개체의 메타데이터를 두 애플리케이션 도메인에서 모두 사용할 수 있어야 합니다. 호출하는 도메인이 호출되는 개체의 메타데이터에 액세스할 수 없는 경우 <xref:System.IO.FileNotFoundException> 형식의 예외가 발생하여 컴파일할 수 없습니다. 자세한 내용은 [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))을 참조하세요. 도메인 사이에서 개체에 액세스할 수 있는 방법을 결정하는 메커니즘은 개체에 의해 결정됩니다. 자세한 내용은 <xref:System.MarshalByRefObject?displayProperty=nameWithType>을 참조하세요.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "64607915"
 |<xref:System.AppDomain.Unload%2A>|도메인을 완전 종료합니다. 애플리케이션 도메인은 도메인에서 실행 중인 모든 스레드가 중지되거나 더 이상 도메인에 없을 때까지 언로드되지 않습니다.|  
   
 > [!NOTE]
->  공용 언어 런타임에서는 전역 메서드의 serialization을 지원하지 않으므로 다른 애플리케이션 도메인에서 대리자를 사용하여 전역 메서드를 실행할 수 없습니다.  
+> 공용 언어 런타임에서는 전역 메서드의 serialization을 지원하지 않으므로 다른 애플리케이션 도메인에서 대리자를 사용하여 전역 메서드를 실행할 수 없습니다.  
   
  또한 공용 언어 런타임 호스팅 인터페이스 사양에 설명되어 있는 관리되지 않는 인터페이스를 사용하여 애플리케이션 도메인에 액세스할 수도 있습니다. 런타임 호스트는 비관리 코드에서 인터페이스를 사용하여 프로세스 내에서 애플리케이션 도메인을 만들고 액세스할 수 있습니다.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "64607915"
 COMPLUS_LoaderOptimization = 1  
 ```  
   
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
  일반적인 애플리케이션은 포함된 코드를 실행하기 전에 애플리케이션 도메인에 여러 어셈블리를 로드합니다.  
   

@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 742f031961a24475d67718c595431e36bfca8c22
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f0e05b09d5ce788b9a3da262d5890a0694b49375
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615369"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969024"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>스키마 컴파일을 위한 XmlSchemaSet
 XSD(XML 스키마 정의 언어) 스키마를 저장하고 유효성을 검사할 수 있는 캐시인 <xref:System.Xml.Schema.XmlSchemaSet>에 대해 설명합니다.  
@@ -31,7 +31,7 @@ XSD(XML 스키마 정의 언어) 스키마를 저장하고 유효성을 검사�
 |-------------------------|------------------|  
 |Microsoft XDR 및 W3C XML 스키마를 지원합니다.|W3C XML 스키마만 지원합니다.|  
 |<xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> 메서드를 호출하면 스키마가 컴파일됩니다.|<xref:System.Xml.Schema.XmlSchemaSet.Add%2A> 메서드를 호출해도 스키마가 컴파일되지 않습니다. 스키마 라이브러리를 만드는 동안의 성능이 향상됩니다.|  
-|각 스키마는 컴파일된 개별 버전을 생성하며 이는 &amp;quot;스키마 고립 영역&amp;quot;이 될 수 있습니다. 결과적으로 모든 포함 및 가져오기 작업의 범위는 해당 스키마 내로 지정됩니다.|컴파일된 스키마는 스키마 &amp;quot;집합&amp;quot;인 단일 논리 스키마를 생성합니다. 이 집합에 추가한 스키마 내에 가져온 스키마는 이 집합 자체에 직접 추가됩니다. 그러므로 모든 스키마에 모든 형식을 사용할 수 있습니다.|  
+|각 스키마는 컴파일된 개별 버전을 생성하며 이는 &quot;스키마 고립 영역&quot;이 될 수 있습니다. 결과적으로 모든 포함 및 가져오기 작업의 범위는 해당 스키마 내로 지정됩니다.|컴파일된 스키마는 스키마 &quot;집합&quot;인 단일 논리 스키마를 생성합니다. 이 집합에 추가한 스키마 내에 가져온 스키마는 이 집합 자체에 직접 추가됩니다. 그러므로 모든 스키마에 모든 형식을 사용할 수 있습니다.|  
 |컬렉션 내에는 특정 대상 네임스페이스에 대한 스키마가 한 개만 존재할 수 있습니다.|형식 충돌이 없으면 같은 대상 네임스페이스에 대한 여러 스키마를 추가할 수 있습니다.|  
   
 ## <a name="migrating-to-the-xmlschemaset"></a>XmlSchemaSet으로 마이그레이션  
@@ -133,12 +133,12 @@ foreach (XmlSchema schema in schemaSet.Schemas("http://www.contoso.com/books"))
  <xref:System.Xml.Schema.XmlSchemaSet>의 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 메서드를 사용하면 <xref:System.Xml.Schema.XmlSchemaSet>에 있는 스키마가 논리 스키마 한 개로 컴파일됩니다.  
   
 > [!NOTE]
->  사용되지 않는 <xref:System.Xml.Schema.XmlSchemaCollection> 클래스와 달리 <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> 메서드를 호출할 때 스키마가 컴파일되지 않습니다.  
+> 사용되지 않는 <xref:System.Xml.Schema.XmlSchemaCollection> 클래스와 달리 <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> 메서드를 호출할 때 스키마가 컴파일되지 않습니다.  
   
  <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 메서드를 성공적으로 실행한 경우 <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A>의 <xref:System.Xml.Schema.XmlSchemaSet> 속성은 `true`로 설정됩니다.  
   
 > [!NOTE]
->  <xref:System.Xml.Schema.XmlSchemaSet>에 있는 동안 스키마를 편집해도 <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> 속성에는 영향을 주지 않습니다. <xref:System.Xml.Schema.XmlSchemaSet>에서 개별 스키마를 업데이트한 내용은 추적되지 않습니다. 결과적으로 <xref:System.Xml.Schema.XmlSchemaSet>에 포함된 스키마 중 하나를 변경해도 <xref:System.Xml.Schema.XmlSchemaSet>에서 스키마를 추가하거나 제거하지 않으면 <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> 속성은 `true`일 수 있습니다.  
+> <xref:System.Xml.Schema.XmlSchemaSet>에 있는 동안 스키마를 편집해도 <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> 속성에는 영향을 주지 않습니다. <xref:System.Xml.Schema.XmlSchemaSet>에서 개별 스키마를 업데이트한 내용은 추적되지 않습니다. 결과적으로 <xref:System.Xml.Schema.XmlSchemaSet>에 포함된 스키마 중 하나를 변경해도 <xref:System.Xml.Schema.XmlSchemaSet>에서 스키마를 추가하거나 제거하지 않으면 <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> 속성은 `true`일 수 있습니다.  
   
  다음 예제에서는 `books.xsd` 파일을 <xref:System.Xml.Schema.XmlSchemaSet>에 추가하고 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 메서드를 호출합니다.  
   

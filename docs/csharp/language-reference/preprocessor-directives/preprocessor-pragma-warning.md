@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
-ms.openlocfilehash: 0145df533572ff9d5004a653bb232a7ff60af5f1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: dc221235e78a187f921815ed6e6c7750778014d8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57495106"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922271"
 ---
 # <a name="pragma-warning-c-reference"></a>#pragma warning(C# 참조)
 `#pragma warning`은 특정 경고를 사용하거나 사용하지 않도록 설정합니다.  
@@ -31,9 +31,9 @@ ms.locfileid: "57495106"
  경고 번호를 지정하지 않은 경우 `disable`은 모든 경고를 사용하지 않도록 설정하고 `restore`는 모든 경고를 사용하도록 설정합니다.  
   
 > [!NOTE]
->  Visual Studio에서 경고 번호를 찾으려면 프로젝트를 빌드하고 **출력** 창에서 경고 번호를 찾습니다.  
+> Visual Studio에서 경고 번호를 찾으려면 프로젝트를 빌드하고 **출력** 창에서 경고 번호를 찾습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```csharp
 // pragma_warning.cs  
@@ -61,7 +61,7 @@ public class D
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 참조](../../../csharp/language-reference/index.md)
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [C# 전처리기 지시문](../../../csharp/language-reference/preprocessor-directives/index.md)
-- [C# 컴파일러 오류](../../../csharp/language-reference/compiler-messages/index.md)
+- [C# 참조](../index.md)
+- [C# 프로그래밍 가이드](../../programming-guide/index.md)
+- [C# 전처리기 지시문](./index.md)
+- [C# 컴파일러 오류](../compiler-messages/index.md)

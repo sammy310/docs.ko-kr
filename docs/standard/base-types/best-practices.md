@@ -13,12 +13,12 @@ ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
 ms.custom: serodec18
-ms.openlocfilehash: c782ab0ce5886a95c8c914930d80d66b4839b9b8
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 8d887bb32d1bdd398353d00aba16c2cc8adfcacb
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "64634712"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988829"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET의 정규식에 대한 모범 사례
 <a name="top"></a>.NET의 정규식 엔진은 리터럴 텍스트에 대한 비교 및 검색 대신 패턴 일치를 기반으로 텍스트를 처리하는 완벽한 기능을 갖춘 강력한 도구입니다. 대부분의 경우 신속하고 효율적인 방식으로 패턴 일치가 수행됩니다. 하지만 일부 경우에는 정규식 엔진의 실행 속도가 매우 느리게 보일 수 있습니다. 심한 경우에는 입력 크기가 비교적 적은데도 처리하는 데 시간이 몇 시간 또는 며칠씩 걸려서 응답이 멎은 것처럼 보일 수도 있습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "64634712"
  마지막 텍스트 형식은 특히 제한된 입력을 처리하도록 작성된 정규식에서 문제가 될 수 있습니다. 또한 이러한 정규식에 [역추적](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)이 광범위하게 사용되는 경우에는 정규식 엔진이 겉보기에는 문제가 없는 텍스트를 처리하느라 비정상적으로 많은 시간(몇 시간 또는 며칠이 걸리는 경우도 있음)을 소비할 수 있습니다.  
   
 > [!WARNING]
->  다음 예제에서는 과도한 역추적을 발생시키고 유효한 전자 메일 주소를 거부할 가능성이 있는 정규식을 사용합니다. 전자 메일 유효성 검사 루틴에서 해당 정규식을 사용해서는 안 됩니다. 이메일 주소의 유효성을 검사하는 정규식은 [방법: 문자열이 올바른 이메일 형식인지 확인](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)을 참조하세요.  
+> 다음 예제에서는 과도한 역추적을 발생시키고 유효한 전자 메일 주소를 거부할 가능성이 있는 정규식을 사용합니다. 전자 메일 유효성 검사 루틴에서 해당 정규식을 사용해서는 안 됩니다. 이메일 주소의 유효성을 검사하는 정규식은 [방법: 문자열이 올바른 이메일 형식인지 확인](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)을 참조하세요.  
   
  예를 들어 전자 메일 주소 별칭의 유효성을 검증하기 위해 매우 자주 사용되지만 심각한 문제를 일으킬 수 있는 정규식을 하나 보여드리겠습니다. 정규식 `^[0-9A-Z]([-.\w]*[0-9A-Z])*$`는 한 개의 영숫자로 시작하고 이어지는 영숫자, 마침표 또는 하이픈이 0개 이상으로 구성된 텍스트를 유효한 메일 주소로 처리하도록 작성되었습니다. 정규식은 영숫자로 끝나야 합니다. 하지만 다음 예제에서와 같이 이 정규식은 유효한 입력을 쉽게 처리할 수 있지만 거의 유효한 입력을 처리할 때는 성능이 매우 비효율적입니다.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "64634712"
  .NET의 정규식 개체 모델의 핵심은 정규식 엔진을 나타내는 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 클래스입니다. 정규식 성능에 영향을 주는 가장 중요한 단일 요소는 종종 <xref:System.Text.RegularExpressions.Regex> 엔진의 사용 방식입니다. 정규식을 정의할 때는 정규식 엔진과 정규식 패턴을 긴밀히 연결하는 작업이 포함됩니다. 해당 생성자에 정규식 패턴을 전달하여 <xref:System.Text.RegularExpressions.Regex> 개체를 인스턴스화하거나 분석할 문자열과 함께 정규식 패턴을 전달하여 정적 메서드를 호출하든 간에 이러한 연결 프로세스는 필수적으로 비용이 클 수 밖에 없습니다.  
   
 > [!NOTE]
->  해석된 정규식과 컴파일된 정규식을 사용할 때 성능에 미치는 영향을 자세히 알아보려면 BCL 팀 블로그의 [Optimizing Regular Expression Performance, Part II: Taking Charge of Backtracking(정규식 성능 최적화, II부:  효율적인 역추적 사용](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/)을 참조하세요.  
+> 해석된 정규식과 컴파일된 정규식을 사용할 때 성능에 미치는 영향을 자세히 알아보려면 BCL 팀 블로그의 [Optimizing Regular Expression Performance, Part II: Taking Charge of Backtracking(정규식 성능 최적화, II부:  효율적인 역추적 사용](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/)을 참조하세요.  
   
  정규식 엔진을 특정 정규식 패턴과 연결하고 엔진을 사용하여 여러 가지 방법으로 일치하는 텍스트를 검색할 수 있습니다.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "64634712"
  정규식 일치 메서드를 호출하는 특정 방법마다 애플리케이션에 중대한 영향을 줄 수 있습니다. 다음 단원에서는 애플리케이션의 성능 향상을 위해 정적 메서드 호출, 해석된 정규식 및 컴파일된 정규식을 사용해야 하는 경우에 대해 설명합니다.  
   
 > [!IMPORTANT]
->  동일한 정규식을 메서드 호출에 반복해서 사용하거나 애플리케이션에 정규식 개체가 광범위하게 사용될 경우 메서드 호출의 형태(정적, 해석, 컴파일)는 성능에 영향을 줍니다.  
+> 동일한 정규식을 메서드 호출에 반복해서 사용하거나 애플리케이션에 정규식 개체가 광범위하게 사용될 경우 메서드 호출의 형태(정적, 해석, 컴파일)는 성능에 영향을 줍니다.  
   
 ### <a name="static-regular-expressions"></a>정적 정규식  
  정적 정규식 메서드는 동일한 정규식으로 정규식 개체를 반복해서 인스턴스화하기 위한 대안으로 권장됩니다. 정규식 개체에 사용되는 정규식 패턴과 달리 인스턴스 메서드 호출에 사용된 패턴으로부터 컴파일된 MSIL(Microsoft Intermediate Language)이나 작업 코드는 정규식 엔진에서 내부적으로 캐시됩니다.  
@@ -177,7 +177,7 @@ ms.locfileid: "64634712"
  일반적으로 정규식 엔진은 선형 진행을 통해 입력 문자열 내를 이동하면서 입력 문자열을 정규식 패턴과 비교합니다. 하지만 정규식 패턴에 `*`, `+` 및 `?`와 같은 정해지지 않은 수량자가 사용될 경우 정규식 엔진은 일부 성공한 부분 일치를 포기하고 이전에 저장된 상태로 돌아와서 전체 패턴에 대해 일치하는 항목을 찾을 수 있습니다. 이 프로세스를 역추적이라고 합니다.  
   
 > [!NOTE]
->  역추적에 대한 자세한 내용은 [정규식 동작 정보](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) 및 [역추적](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)을 참조하세요. 역추적에 대해 자세히 알아보려면 BCL 팀 블로그의 [Optimizing Regular Expression Performance, Part II: Taking Charge of Backtracking(정규식 성능 최적화, II부: 효율적인 역추적 사용](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/)을 참조하세요.  
+> 역추적에 대한 자세한 내용은 [정규식 동작 정보](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) 및 [역추적](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)을 참조하세요. 역추적에 대해 자세히 알아보려면 BCL 팀 블로그의 [Optimizing Regular Expression Performance, Part II: Taking Charge of Backtracking(정규식 성능 최적화, II부: 효율적인 역추적 사용](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/)을 참조하세요.  
   
  역추적을 지원할 경우 정규식에 성능과 유연성이 제공됩니다. 또한 정규식 개발자에게 정규식 엔진의 작동에 대한 제어 책임을 맡길 수 있습니다. 개발자가 이러한 책임을 인식하지 못하는 경우가 많기 때문에 역추적을 오용하거나 과도하게 사용하여 정규식 성능이 저하되는 경우가 자주 발생합니다. 최악의 시나리오에서는 실행 시간이 입력 문자열에 있는 추가 문자마다 두 배씩 늘어날 수 있습니다. 실제로 역추적을 과도하게 사용할 경우에는 입력이 정규식 패턴과 거의 일치할 경우 프로그래밍 면에서 무한 루프를 만드는 것과 동일한 결과를 가져올 수 있으며 정규식 엔진이 비교적 간단한 입력 문자열이라도 처리하는 데 몇 시간 또는 심지어 며칠이 걸릴 수도 있습니다.  
   
@@ -200,7 +200,7 @@ ms.locfileid: "64634712"
  많은 경우에 정규식 패턴을 입력 텍스트에 일치시키기 위해서는 역추적이 필요합니다. 그러나 과도한 역추적은 심각한 성능 저하를 가져오고 애플리케이션이 응답을 멈춘 것과 같은 인상을 줄 수 있습니다. 특히 수량자가 중첩되어 있고 외부 하위 식과 일치하는 텍스트가 내부 하위 식과 일치하는 텍스트의 하위 집합인 경우 문제가 더 심각해질 수 있습니다.  
   
 > [!WARNING]
->  과도한 역추적을 방지하는 것 외에도 과도한 역추적이 정규식 성능을 심각하게 저하시키지 않도록 시간 제한 기능을 사용해야 합니다. 자세한 내용은 [시간 제한 값 사용](#Timeouts) 섹션을 참조하세요.  
+> 과도한 역추적을 방지하는 것 외에도 과도한 역추적이 정규식 성능을 심각하게 저하시키지 않도록 시간 제한 기능을 사용해야 합니다. 자세한 내용은 [시간 제한 값 사용](#Timeouts) 섹션을 참조하세요.  
   
  예를 들어 정규식 패턴 `^[0-9A-Z]([-.\w]*[0-9A-Z])*\$$`는 영숫자 문자가 한 개 이상 포함된 부품 번호를 확인하기 위한 패턴입니다. 마지막 문자는 영숫자여야 하지만 영숫자 문자, 하이픈, 밑줄 또는 마침표가 추가될 수 있습니다. 달러 기호는 부품 번호의 종료 문자입니다. 수량자가 중첩되어 있고 하위 식 `[0-9A-Z]`가 하위 식 `[-.\w]*`의 하위 집합이기 때문에 일부 경우에는 이 정규식 패턴으로 인해 성능이 극히 저하될 수 있습니다.  
   

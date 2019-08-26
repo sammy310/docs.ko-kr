@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b996b60a08a55b1d8e86878974be4887ea2684f8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: ac1f2283ad30499748511e6fed6d5ce98da7fd14
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490824"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960103"
 ---
 # <a name="countdownevent"></a>CountdownEvent
 <xref:System.Threading.CountdownEvent?displayProperty=nameWithType>는 특정 횟수만큼 신호를 받은 후 대기 스레드를 차단 해제하는 동기화 기본 형식입니다. <xref:System.Threading.CountdownEvent>는 <xref:System.Threading.ManualResetEvent> 또는 <xref:System.Threading.ManualResetEventSlim>을 사용하여 이벤트에 신호를 보내기 전에 변수를 수동으로 감소시켜야 하는 시나리오를 위해 설계되었습니다. 예를 들어, 포크/조인 시나리오에서 신호 수가 5인 <xref:System.Threading.CountdownEvent>을 생성한 다음, 스레드 풀에서 5개의 작업 항목을 시작하고 완료될 때 각 작업 항목이 <xref:System.Threading.CountdownEvent.Signal%2A>을 호출하도록 할 수 있습니다. <xref:System.Threading.CountdownEvent.Signal%2A>을 호출할 때마다 신호 수가 1씩 감소됩니다. 주 스레드에서 <xref:System.Threading.CountdownEvent.Wait%2A>에 대한 호출은 신호 수가 0일 때까지 차단됩니다.  
   
 > [!NOTE]
->  레거시 .NET Framework 동기화 API와 상호 작용할 필요가 없는 코드의 경우, 포크-조인 병렬 처리를 더 쉽게 표현할 수 있도록 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 개체 또는 <xref:System.Threading.Tasks.Parallel.Invoke%2A> 메서드를 사용하는 것이 좋습니다.  
+> 레거시 .NET Framework 동기화 API와 상호 작용할 필요가 없는 코드의 경우, 포크-조인 병렬 처리를 더 쉽게 표현할 수 있도록 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 개체 또는 <xref:System.Threading.Tasks.Parallel.Invoke%2A> 메서드를 사용하는 것이 좋습니다.  
   
  <xref:System.Threading.CountdownEvent>에는 다음과 같은 추가 기능이 있습니다.  
   

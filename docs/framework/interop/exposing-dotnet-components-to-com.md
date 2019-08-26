@@ -8,22 +8,22 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1879f5b5aa2fbe6b0e51f9b38fca3af1f4c0cedf
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 48d550a526336cf3e9de9cb53a16ddcf86f3af5d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971764"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946524"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>.NET Framework 구성 요소를 COM에 노출
 
 .NET 형식을 작성하고 비관리 코드에서 해당 형식을 사용하는 것은 개발자들에게 독특한 활동입니다. 이 섹션에서는 COM 클라이언트와 통합되는 관리 코드를 작성하기 위한 몇 가지 팁을 설명합니다.
 
-- [상호 운용할 .NET 형식을 정규화합니다](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md).
+- [상호 운용할 .NET 형식을 정규화합니다](../../standard/native-interop/qualify-net-types-for-interoperation.md).
 
      COM에 노출할 모든 관리되는 형식, 메서드, 속성, 필드 및 이벤트는 공용이어야 합니다. 형식에는 COM을 통해 호출될 수 있는 유일한 생성자인 공용 매개 변수가 없는 생성자가 있어야 합니다.
 
-- [Interop 특성을 적용합니다](../../../docs/standard/native-interop/apply-interop-attributes.md).
+- [Interop 특성을 적용합니다](../../standard/native-interop/apply-interop-attributes.md).
 
      관리 코드 내의 사용자 지정 특성은 구성 요소의 상호 운용성을 개선할 수 있습니다.
 

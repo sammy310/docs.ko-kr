@@ -5,18 +5,18 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-ms.openlocfilehash: 675369936b9f90620b03365104255a622855fa9f
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: f62255be9c74a221836b23058bd48a835f38f629
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401794"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608622"
 ---
 # <a name="new-modifier-c-reference"></a>new 한정자(C# 참조)
 
 선언 한정자로 사용되는 `new` 키워드는 기본 클래스에서 상속된 멤버를 명시적으로 숨깁니다. 상속된 멤버를 숨기면 파생 버전의 멤버로 기본 클래스 버전의 멤버를 대신하게 됩니다. `new` 한정자를 사용하지 않고 멤버를 숨길 수도 있지만 컴파일러 경고가 발생합니다. `new`를 사용하여 멤버를 명시적으로 숨기면 이 경고가 발생하지 않습니다.
 
-`new` 키워드를 사용하여 [형식의 인스턴스를 만들](../operators/new-operator.md)거나 [제네릭 형식 제약 조건](../keywords/new-constraint.md)으로 만들 수도 있습니다.
+`new` 키워드를 사용하여 [형식의 인스턴스를 만들](../operators/new-operator.md)거나 [제네릭 형식 제약 조건](./new-constraint.md)으로 만들 수도 있습니다.
 
 상속된 멤버를 숨기려면 동일한 멤버 이름을 사용하여 파생된 클래스에 해당 멤버를 선언한 다음 `new` 키워드를 사용하여 이를 한정합니다. 예:
 

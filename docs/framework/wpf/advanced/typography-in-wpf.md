@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 7c83cfa22770695861b07e3bff29a38fcd125dd2
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: b4ae0d03c0207413d826e62de1d157f938b4d775
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545242"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016124"
 ---
 # <a name="typography-in-wpf"></a>WPF의 입력 체계
 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 주요 입력 체계 기능을 소개합니다. 이러한 기능에는 텍스트 렌더링의 향상 된 품질 및 성능, OpenType 입력 체계 지원, 향상 된 국가별 텍스트, 향상 된 글꼴 지원 및 새로운 텍스트 Api (응용 프로그래밍 인터페이스)가 포함 됩니다.  
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>텍스트의 향상된 품질 및 성능  
- 의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 텍스트는 텍스트의 명확성 및 가독성을 향상 시키는 Microsoft ClearType을 사용 하 여 렌더링 됩니다. ClearType은에서 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 개발한 소프트웨어 기술로 랩톱 화면, Pocket PC 화면, 평면 패널 모니터 등 기존 lcd (액체 크리스탈 디스플레이)의 텍스트 가독성을 향상 시킵니다. ClearType은 픽셀의 소수 부분에 문자를 정렬 하 여 텍스트를 진정한 모양으로 더 크게 표시할 수 있는 하위 픽셀 렌더링을 사용 합니다. 해상도를 더 세밀하게 지원할수록 텍스트의 미세한 부분까지 더 선명하게 표시되므로 오랫동안 더 쉽게 읽을 수 있습니다. 에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ClearType의 또 다른 향상 된 기능은 y 방향 앤티앨리어싱을 가지 며 텍스트 문자에서 단순 곡선의 위쪽 및 아래쪽을 곡선으로 만들고 있습니다. ClearType 기능에 대 한 자세한 내용은 [Cleartype 개요](cleartype-overview.md)를 참조 하세요.  
+ 의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 텍스트는 텍스트의 명확성 및 가독성을 향상 시키는 Microsoft ClearType을 사용 하 여 렌더링 됩니다. ClearType은 랩톱 화면, Pocket PC 화면, 평면 패널 모니터 등 기존 Lcd (액체 크리스탈 디스플레이)의 텍스트 가독성을 향상 시키는 Microsoft에서 개발한 소프트웨어 기술입니다. ClearType은 픽셀의 소수 부분에 문자를 정렬 하 여 텍스트를 진정한 모양으로 더 크게 표시할 수 있는 하위 픽셀 렌더링을 사용 합니다. 해상도를 더 세밀하게 지원할수록 텍스트의 미세한 부분까지 더 선명하게 표시되므로 오랫동안 더 쉽게 읽을 수 있습니다. 에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ClearType의 또 다른 향상 된 기능은 y 방향 앤티앨리어싱을 가지 며 텍스트 문자에서 단순 곡선의 위쪽 및 아래쪽을 곡선으로 만들고 있습니다. ClearType 기능에 대 한 자세한 내용은 [Cleartype 개요](cleartype-overview.md)를 참조 하세요.  
   
  ![ClearType y 방향 앤티 앨리어싱을 사용한 텍스트](./media/typography-in-wpf/text-y-direction-antialiasing.gif)  
 ClearType y 방향 앤티앨리어싱으로 표시된 텍스트  
@@ -29,7 +29,7 @@ ClearType y 방향 앤티앨리어싱으로 표시된 텍스트
   
 <a name="Rich_Typography"></a>   
 ## <a name="rich-typography"></a>풍부한 입력 체계  
- OpenType 글꼴 형식은 [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] 글꼴 형식의 확장명입니다. OpenType 글꼴 형식은와 Adobe에서 공동으로 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 개발 되었으며 다양 한 고급 인쇄 기능 기능을 제공 합니다. 개체 <xref:System.Windows.Documents.Typography> 는 스타일 대체 및 선단 장식 같은 OpenType 글꼴의 여러 고급 기능을 제공 합니다. Windows SDK는 Pericles 및 Pescadero 글꼴과 같은 다양 한 기능을 사용 하 여 디자인 된 샘플 OpenType 글꼴 집합을 제공 합니다. 자세한 내용은 [샘플 OpenType 글꼴 팩](sample-opentype-font-pack.md)을 참조하세요.  
+ OpenType 글꼴 형식은 [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] 글꼴 형식의 확장명입니다. OpenType 글꼴 형식은 Microsoft 및 Adobe에서 공동으로 개발 되었으며 다양 한 고급 인쇄 기능 기능을 제공 합니다. 개체 <xref:System.Windows.Documents.Typography> 는 스타일 대체 및 선단 장식 같은 OpenType 글꼴의 여러 고급 기능을 제공 합니다. Windows SDK는 Pericles 및 Pescadero 글꼴과 같은 다양 한 기능을 사용 하 여 디자인 된 샘플 OpenType 글꼴 집합을 제공 합니다. 자세한 내용은 [샘플 OpenType 글꼴 팩](sample-opentype-font-pack.md)을 참조하세요.  
   
  Pericles OpenType 글꼴 스타일 대체 문자 모양의 표준 집합을 제공 하는 추가 문자 모양이 포함 되어 있습니다. 다음 텍스트는 스타일 대체 문자 모양을 표시합니다.  
   

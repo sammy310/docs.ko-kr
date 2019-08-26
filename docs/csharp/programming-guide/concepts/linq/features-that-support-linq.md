@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: bf9af90c9695ad9428a887a901a95282672a4f75
-ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
+ms.openlocfilehash: 1029d34ae8823fe91c7e4bc92e168fcc1061c707
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66722546"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594408"
 ---
 # <a name="c-features-that-support-linq"></a>LINQ를 지원하는 C# 기능
 
@@ -26,11 +26,11 @@ var query = from str in stringArray
             select stringGroup;
 ```
 
-자세한 내용은 [LINQ 쿼리 식](../../../../csharp/programming-guide/linq-query-expressions/index.md)을 참조하세요.
+자세한 내용은 [LINQ 쿼리 식](../../linq-query-expressions/index.md)을 참조하세요.
 
 ## <a name="implicitly-typed-variables-var"></a>암시적으로 형식화된 변수(var)
 
-변수를 선언하고 초기화할 때 명시적으로 형식을 지정하는 대신 다음과 같이 [var](../../../../csharp/language-reference/keywords/var.md) 한정자를 사용하여 형식을 유추하고 할당하도록 컴파일러에 지시할 수 있습니다.
+변수를 선언하고 초기화할 때 명시적으로 형식을 지정하는 대신 다음과 같이 [var](../../../language-reference/keywords/var.md) 한정자를 사용하여 형식을 유추하고 할당하도록 컴파일러에 지시할 수 있습니다.
 
 ```csharp
 var number = 5;
@@ -42,7 +42,7 @@ var query = from str in stringArray
 
 `var`로 선언된 변수는 형식을 명시적으로 지정한 변수만큼 강력한 형식입니다. `var`을 사용하면 무명 형식을 만들 수 있지만 지역 변수에만 사용할 수 있습니다. 배열은 암시적 형식 지정을 사용하여 선언할 수도 있습니다.
 
-자세한 내용은 [암시적으로 형식화된 지역 변수](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)를 참조하세요.
+자세한 내용은 [암시적으로 형식화된 지역 변수](../../classes-and-structs/implicitly-typed-local-variables.md)를 참조하세요.
 
 ## <a name="object-and-collection-initializers"></a>개체 및 컬렉션 이니셜라이저
 
@@ -68,9 +68,9 @@ var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y
 
 자세한 내용은 다음을 참조하세요.
 
-- [개체 이니셜라이저 및 컬렉션 이니셜라이저](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [개체 이니셜라이저 및 컬렉션 이니셜라이저](../../classes-and-structs/object-and-collection-initializers.md)
 
-- [표준 쿼리 연산자의 쿼리 식 구문](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+- [표준 쿼리 연산자의 쿼리 식 구문](./query-expression-syntax-for-standard-query-operators.md)
 
 ## <a name="anonymous-types"></a>익명 형식
 
@@ -80,13 +80,13 @@ var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y
 select new {name = cust.Name, phone = cust.Phone};
 ```
 
-자세한 내용은 [무명 형식](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)을 참조하세요.
+자세한 내용은 [무명 형식](../../classes-and-structs/anonymous-types.md)을 참조하세요.
 
 ## <a name="extension-methods"></a>확장명 메서드
 
 확장 메서드는 형식과 연결하여 형식에 대한 인스턴스 메서드인 것처럼 호출할 수 있는 정적 메서드입니다. 이 기능을 사용하면 실제로 수정하지 않고도 기존 형식에 새 메서드를 "추가"할 수 있습니다. 표준 쿼리 연산자는 <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 모든 형식에 대해 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 기능을 제공하는 확장 메서드 집합입니다.
 
-자세한 내용은 [확장 메서드](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)를 참조하세요.
+자세한 내용은 [확장 메서드](../../classes-and-structs/extension-methods.md)를 참조하세요.
 
 ## <a name="lambda-expressions"></a>람다 식
 
@@ -94,12 +94,12 @@ select new {name = cust.Name, phone = cust.Phone};
 
 자세한 내용은 다음을 참조하세요.
 
-- [익명 함수](../../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
+- [익명 함수](../../statements-expressions-operators/anonymous-functions.md)
 
-- [람다 식](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [람다 식](../../statements-expressions-operators/lambda-expressions.md)
 
-- [식 트리(C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [식 트리(C#)](../expression-trees/index.md)
 
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ(Language-Integrated Query)(C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+- [LINQ(Language-Integrated Query)(C#)](./index.md)

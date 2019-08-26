@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a75534bdfb1eef5902d3cd5071b4f5b4bfba8caa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fb6e3677d79f3131432c3daebeee4d166b5450b2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647949"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916668"
 ---
 # <a name="compiled-xpath-expressions"></a>컴파일된 XPath 식
 <xref:System.Xml.XPath.XPathExpression> 개체는 <xref:System.Xml.XPath.XPathExpression.Compile%2A> 클래스의 정적 <xref:System.Xml.XPath.XPathExpression> 메서드 또는 <xref:System.Xml.XPath.XPathNavigator.Compile%2A> 클래스의 <xref:System.Xml.XPath.XPathNavigator> 메서드 중 하나에서 반환된 컴파일된 XPath 쿼리를 나타냅니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "64647949"
 |`String`|<xref:System.String>|UCS 문자 시퀀스입니다.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator.Matches%2A> 메서드에는 XPath 식을 매개 변수로 사용할 수 있습니다. <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> 메서드는 W3C XPath 반환 형식이 아닌 <xref:System.Xml.XPath.XPathNavigator> 개체를 반환합니다.  
+> <xref:System.Xml.XPath.XPathNavigator.Matches%2A> 메서드에는 XPath 식을 매개 변수로 사용할 수 있습니다. <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> 메서드는 W3C XPath 반환 형식이 아닌 <xref:System.Xml.XPath.XPathNavigator> 개체를 반환합니다.  
   
 ### <a name="the-returntype-property"></a>ReturnType 속성  
  XPath 쿼리를 <xref:System.Xml.XPath.XPathExpression> 개체로 컴파일한 후 <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> 개체의 <xref:System.Xml.XPath.XPathExpression> 속성을 사용하여 XPath 쿼리가 반환하는 대상을 결정합니다.  

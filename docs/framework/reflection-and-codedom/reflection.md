@@ -23,17 +23,17 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cd9fb96f69da977efd2eee6f740cc93ad58e6ea
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c8d34c5386d0ede578fec097279e9de135f4b6cc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591479"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940026"
 ---
 # <a name="reflection-in-the-net-framework"></a>.NET Framework의 리플렉션
 <xref:System.Reflection> 네임스페이스의 클래스와 <xref:System.Type?displayProperty=nameWithType>을 함께 사용하여 로드된 [어셈블리](../app-domains/assemblies-in-the-common-language-runtime.md) 및 어셈블리 내에 정의된 형식(예: [클래스](../../standard/base-types/common-type-system.md#classes), [인터페이스](../../standard/base-types/common-type-system.md#interfaces), [값 형식](../../csharp/language-reference/keywords/value-types.md))에 대한 정보를 가져올 수 있습니다. 리플렉션을 사용하여 런타임에 형식 인스턴스를 만들고 이 인스턴스를 호출 및 액세스할 수도 있습니다. 리플렉션의 특정 측면에 대한 항목은 이 개요의 끝부분에서 [관련 항목](#related_topics)을 참조하세요.
   
- [공용 언어 런타임](../../../docs/standard/clr.md) 로더는 같은 애플리케이션 범위가 포함된 개체 주위의 경계를 구성하는 [애플리케이션 도메인](../../../docs/framework/app-domains/application-domains.md)을 관리합니다. 이 관리에는 각 어셈블리를 적절한 애플리케이션 도메인으로 로드하는 작업과 각 어셈블리 내에서 형식 계층 구조의 메모리 레이아웃을 제어하는 작업이 포함됩니다.  
+ [공용 언어 런타임](../../standard/clr.md) 로더는 같은 애플리케이션 범위가 포함된 개체 주위의 경계를 구성하는 [애플리케이션 도메인](../../../docs/framework/app-domains/application-domains.md)을 관리합니다. 이 관리에는 각 어셈블리를 적절한 애플리케이션 도메인으로 로드하는 작업과 각 어셈블리 내에서 형식 계층 구조의 메모리 레이아웃을 제어하는 작업이 포함됩니다.  
   
  [어셈블리](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)에는 모듈이 포함되고, 모듈에는 형식이 포함되고, 형식에는 멤버가 포함됩니다. 리플렉션은 어셈블리, 모듈 및 형식을 캡슐화하는 개체를 제공합니다. 리플렉션을 사용하여 동적으로 형식 인스턴스를 만들거나, 형식을 기존 개체에 바인딩하거나, 기존 개체에서 형식을 가져올 수 있습니다. 그리고 나서 해당 형식의 메서드를 호출하거나 필드 및 속성에 액세스할 수 있습니다. 리플렉션의 일반적인 용도는 다음과 같습니다.  
   

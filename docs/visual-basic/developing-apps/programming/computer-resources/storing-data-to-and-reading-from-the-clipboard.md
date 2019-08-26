@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data [Visual Basic], Clipboard
 - reading data, from Clipboard
 ms.assetid: f690119a-4378-4f7d-b20e-d9377ef49496
-ms.openlocfilehash: 19d0fcafb76c40a00939de59968dfaf2e6bd683c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d7693f6b5dc74e17686cd7d2667f32adbde9df80
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816886"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916513"
 ---
 # <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>데이터를 클립보드에 저장하고 클립보드에서 읽기(Visual Basic)
 클립보드를 사용하여 텍스트 및 이미지와 같은 데이터를 저장할 수 있습니다. 클립보드는 모든 활성 프로세스에서 공유되기 때문에 프로세스 간에 데이터를 전송하는 데 사용할 수 있습니다. `My.Computer.Clipboard` 개체를 사용하면 클립보드에 쉽게 액세스하고 읽고 쓸 수 있습니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "58816886"
  [!code-vb[VbResourceTasks#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#5)]  
   
 > [!IMPORTANT]
->  다른 사용자가 클립보드에 액세스할 수 있기 때문에 클립보드를 사용하여 암호 또는 기밀 데이터와 같은 중요한 정보를 저장하지 마세요.  
+> 다른 사용자가 클립보드에 액세스할 수 있기 때문에 클립보드를 사용하여 암호 또는 기밀 데이터와 같은 중요한 정보를 저장하지 마세요.  
   
 ## <a name="see-also"></a>참고 항목
 

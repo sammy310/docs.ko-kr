@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e55ae32fc83d7879de9d1ecb743d17598bc175d
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 9f05d91dd53d9dee534e5dd429bf6399fd677258
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268222"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963411"
 ---
 # <a name="custom-numeric-format-strings"></a>사용자 지정 숫자 형식 문자열
 
@@ -175,7 +175,7 @@ ms.locfileid: "67268222"
  결과 문자열에 백슬래시를 포함하려면`\\`처럼 두 개의 백슬래시를 연속해서 입력해야 합니다.  
   
 > [!NOTE]
->  C++ 및 C# 컴파일러 같은 일부 컴파일러에서는 하나의 백슬래시 문자가 이스케이프 문자로 해석될 수도 있습니다. 형식을 지정할 때 문자열이 올바로 해석되도록 하려면 해당 문자열 앞에 축자 문자열 리터럴 문자(@ 문자)를 사용하거나(C#의 경우) 각 백슬래시 앞에 또 다른 백슬래시를 추가하면 됩니다(C# 및 C++의 경우). 다음 C# 예제에서는 이 두 가지 방법을 모두 보여 줍니다.  
+> C++ 및 C# 컴파일러 같은 일부 컴파일러에서는 하나의 백슬래시 문자가 이스케이프 문자로 해석될 수도 있습니다. 형식을 지정할 때 문자열이 올바로 해석되도록 하려면 해당 문자열 앞에 축자 문자열 리터럴 문자(@ 문자)를 사용하거나(C#의 경우) 각 백슬래시 앞에 또 다른 백슬래시를 추가하면 됩니다(C# 및 C++의 경우). 다음 C# 예제에서는 이 두 가지 방법을 모두 보여 줍니다.  
   
  다음 예제에서는 이스케이프 문자를 사용하여 서식 지정 작업에서 “#”, “0” 및 “\\” 문자가 이스케이프 문자나 형식 지정자로 해석되지 않도록 합니다. 이 C# 예제에서는 추가 백슬래시를 사용하여 백슬래시가 리터럴 문자로 해석되도록 합니다.  
   

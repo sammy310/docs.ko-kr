@@ -2,18 +2,18 @@
 title: LINQ to ADO.NET(포털 페이지)
 ms.date: 07/20/2015
 ms.assetid: 6bd269b4-3509-4688-b672-836008704182
-ms.openlocfilehash: 8c39582ee95619bfddc7b89380e0a86305eeac27
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 3bea3dffb98f0745947e4a672f70df5010bc2824
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539513"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924258"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET(포털 페이지)
 LINQ to ADO.NET을 사용하면 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 프로그래밍 모델을 통해 ADO.NET의 열거 가능한 개체를 쿼리할 수 있습니다.  
   
 > [!NOTE]
->  LINQ to ADO.NET 설명서는 .NET Framework SDK의 ADO.NET 섹션에 있습니다. [LINQ 및 ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md).  
+> LINQ to ADO.NET 설명서는 .NET Framework SDK의 ADO.NET 섹션에 있습니다. [LINQ 및 ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md).  
   
  ADO.NET에는 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 기술: LINQ to DataSet, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 및 LINQ to Entities의 세 가지 독립적인 기술이 있습니다. LINQ to DataSet은 다양한 기능을 사용하여 <xref:System.Data.DataSet>에 대해 최적화된 쿼리를 제공하고, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]는 SQL Server 데이터베이스 스키마를 직접 쿼리하는 데 사용되며, LINQ to Entities는 엔터티 데이터 모델을 쿼리하는 데 사용됩니다.  
   
@@ -29,7 +29,7 @@ LINQ to ADO.NET을 사용하면 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-
   
  [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]에는 데이터베이스의 저장 프로시저 및 사용자 정의 함수와 개체 모델의 상속을 지원합니다.  
   
- 자세한 내용은 [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)을 참조하세요.  
+ 자세한 내용은 [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)을 참조하세요.  
   
 ## <a name="linq-to-entities"></a>LINQ to Entities  
  엔터티 데이터 모델을 통해 관계형 데이터는 .NET 환경에서 개체로 공개됩니다. 이를 통해 개체 계층은 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 지원을 위한 이상적인 대상이 되므로 개발자는 비즈니스 논리를 개발할 때 사용한 언어로 데이터베이스에 대한 쿼리를 작성할 수 있습니다. 이 기능은 LINQ to Entities로 알려져 있습니다. 자세한 내용은 [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)를 참조하세요.  
@@ -37,4 +37,4 @@ LINQ to ADO.NET을 사용하면 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-
 ## <a name="see-also"></a>참고 항목
 
 - [LINQ 및 ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)
-- [LINQ(Language-Integrated Query)(C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+- [LINQ(Language-Integrated Query)(C#)](./index.md)

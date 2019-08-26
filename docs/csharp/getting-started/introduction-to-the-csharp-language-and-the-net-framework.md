@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 361a6669d5d638bbb39bc646607cce212bbb3bfa
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 995362667ed0a203112744f03a036eabbcb784c8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504026"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608305"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 언어 및 .NET Framework 소개
 
@@ -44,9 +44,9 @@ ms.locfileid: "67504026"
   
  다음은 추가적인 C# 리소스입니다.  
   
-- 언어에 대한 일반적이면서 유용한 소개 정보는 [C# 언어 사양](../../csharp/language-reference/language-specification/index.md), 1장을 참조하세요.  
+- 언어에 대한 일반적이면서 유용한 소개 정보는 [C# 언어 사양](../language-reference/language-specification/index.md), 1장을 참조하세요.  
   
-- C# 언어의 특정 측면에 대한 자세한 내용은 [C# 참조](../../csharp/language-reference/index.md)를 참조하세요.  
+- C# 언어의 특정 측면에 대한 자세한 내용은 [C# 참조](../language-reference/index.md)를 참조하세요.  
   
 - [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]에 대한 자세한 내용은 [LINQ(언어 통합 쿼리)](../programming-guide/concepts/linq/index.md)를 참조하세요.  
 
@@ -68,5 +68,5 @@ ms.locfileid: "67504026"
   
 ## <a name="see-also"></a>참고 항목
 
-- [C#](../../csharp/index.md)
+- [C#](../index.md)
 - [Visual C# 및 Visual Basic 시작](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

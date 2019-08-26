@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24a8c7ce090b286db9d86e0fc6c54ae33e7e2d5e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 35e89584f3916d748809960d33a31eb4e8fb9c6a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191889"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938014"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe(강력한 이름 도구)
 강력한 이름 도구(Sn.exe)를 사용하면 [강력한 이름](../../../docs/framework/app-domains/strong-named-assemblies.md)으로 어셈블리에 서명할 수 있습니다. Sn.exe를 실행하면 키 관리, 서명 생성 및 서명 확인을 위한 옵션이 제공됩니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "59191889"
  강력한 이름 도구는 Visual Studio와 함께 자동으로 설치됩니다. 이 도구를 시작하려면 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 참조하세요.  
 
 > [!NOTE]
->  64비트 컴퓨터에서는 Visual Studio용 개발자 명령 프롬프트를 사용하여 32비트 Sn.exe 버전을 실행하고 Visual Studio x64 Win64 명령 프롬프트를 사용하여 64비트 버전을 실행합니다. 
+> 64비트 컴퓨터에서는 Visual Studio용 개발자 명령 프롬프트를 사용하여 32비트 Sn.exe 버전을 실행하고 Visual Studio x64 Win64 명령 프롬프트를 사용하여 64비트 버전을 실행합니다. 
   
  명령 프롬프트에 다음을 입력합니다.  
   
@@ -77,13 +77,13 @@ sn [-quiet][option [parameter(s)]]
 |**-?**|이 도구의 명령 구문 및 옵션을 표시합니다.|  
   
 > [!NOTE]
->  Sn.exe의 모든 옵션은 대/소문자가 구분되므로 표시된 대로 정확히 입력해야만 도구에서 제대로 인식합니다.  
+> Sn.exe의 모든 옵션은 대/소문자가 구분되므로 표시된 대로 정확히 입력해야만 도구에서 제대로 인식합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  **-R** 및 **–Rc** 옵션은 서명이 연기된 어셈블리에 유용합니다. 이 시나리오에서는 컴파일 타임에 공개 키만 설정되고, 나중에 개인 키가 알려질 때 서명이 수행됩니다.  
   
 > [!NOTE]
->  레지스트리와 같은 보호되는 리소스에 쓰는 매개 변수(예: –**Vr**)는 SN.exe를 관리자로 실행합니다.  
+> 레지스트리와 같은 보호되는 리소스에 쓰는 매개 변수(예: –**Vr**)는 SN.exe를 관리자로 실행합니다.  
   
 강력한 이름 도구는 공개/개인 키 쌍이 `AT_SIGNATURE` 알고리즘 식별자를 사용하여 생성된다고 가정합니다. `AT_KEYEXCHANGE` 알고리즘을 사용하여 생성된 공개/개인 키 쌍이 오류를 생성합니다. 
 

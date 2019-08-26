@@ -1,16 +1,16 @@
 ---
 title: ASP.NET Core Web API에 모델 배포
 description: ASP.NET Core Web API를 사용하여 인터넷을 통해 ML.NET 감정 분석 기계 학습 모델 제공
-ms.date: 05/03/2019
+ms.date: 08/20/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: f8b8f74f752aeb243d4a2987929bd28ddc5f7d5a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e1dcc719738a2beb3e63463245d4721c5298cf85
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641090"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666655"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>ASP.NET Core Web API에 모델 배포
 
@@ -189,7 +189,7 @@ ASP.NET Core Web API를 사용하여 웹에서 미리 학습된 ML.NET 기계 �
 1. PowerShell을 열고 PORT가 애플리케이션이 수신 대기 중인 포트인 경우 다음 코드를 입력합니다.
 
     ```powershell
-    Invoke-RestMethod "https://localhost:<PORT>/api/predict" -Method Post -Body (@{Text="This was a very bad steak"} | ConvertTo-Json) -ContentType "application/json"
+    Invoke-RestMethod "https://localhost:<PORT>/api/predict" -Method Post -Body (@{SentimentText="This was a very bad steak"} | ConvertTo-Json) -ContentType "application/json"
     ```
 
     성공하면 출력이 아래 텍스트와 같이 표시됩니다.

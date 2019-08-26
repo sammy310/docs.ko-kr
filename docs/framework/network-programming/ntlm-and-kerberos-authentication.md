@@ -19,12 +19,12 @@ helpviewer_keywords:
 - classes [.NET Framework], authentication
 - client authentication, NTLM
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
-ms.openlocfilehash: 2efb2d25e1b7566e3405a699be1795b37d549091
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b05cd88fcb492ab27e1d311045b72208167508f1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183367"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963930"
 ---
 # <a name="ntlm-and-kerberos-authentication"></a>NTLM 및 Kerberos 인증
 기본 NTLM 인증 및 Kerberos 인증에서는 호출 애플리케이션과 연결된 Microsoft Windows NT 사용자 자격 증명을 사용하여 서버에 인증을 시도합니다. 기본이 아닌 NTLM 인증을 사용할 때, 다음 예제에 표시된 대로 애플리케이션에서 인증 형식을 NTLM으로 설정하고 <xref:System.Net.NetworkCredential> 개체를 사용하여 호스트에 사용자 이름, 암호 및 도메인을 전달합니다.  
@@ -60,7 +60,7 @@ WReq.Credentials = CredentialCache.DefaultCredentials;
  협상 인증 모듈을 통해 원격 서버에서 NTLM 또는 Kerberos 인증을 사용하는지 판별하고 적절한 응답을 전송합니다.  
   
 > [!NOTE]
->  NTLM 인증은 프록시 서버를 통해 작동하지 않습니다.  
+> NTLM 인증은 프록시 서버를 통해 작동하지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목
 

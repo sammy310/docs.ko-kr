@@ -2,19 +2,19 @@
 title: -subsystemversion(C# 컴파일러 옵션)
 ms.date: 07/20/2015
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
-ms.openlocfilehash: cf1fb74f5d13817448bec2bcdc37510ff82f024d
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: f70389f87bf49ffccded4aef775c27ed0d034e1f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377901"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922454"
 ---
 # <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion(C# 컴파일러 옵션)
 
 생성된 실행 파일을 실행할 수 있는 하위 시스템의 최소 버전을 지정하여 실행 파일을 실행할 수 있는 Windows 버전을 결정합니다. 가장 일반적으로, 이 옵션은 실행 파일이 이전 버전의 Windows에서 사용할 수 없는 특정 보안 기능을 활용할 수 있도록 합니다.
 
 > [!NOTE]
->  하위 시스템 자체를 지정하려면 [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) 컴파일러 옵션을 사용합니다.
+> 하위 시스템 자체를 지정하려면 [-target](./target-compiler-option.md) 컴파일러 옵션을 사용합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -30,7 +30,7 @@ ms.locfileid: "66377901"
 
 `minor` 버전에서 선행 0은 버전을 변경하지 않지만 후행 0은 버전을 변경합니다. 예를 들어 6.1과 6.01은 동일한 버전을 가리키지만 6.10은 다른 버전을 가리킵니다. 혼동을 피하기 위해 부 버전을 두 자리로 표현하는 것이 좋습니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 다음 표에는 Windows의 일반적인 하위 시스템 버전이 나와 있습니다.
 
@@ -50,11 +50,11 @@ ms.locfileid: "66377901"
 
 - 다음 목록의 컴파일러 옵션이 설정된 경우 기본값은 6.02입니다.
 
-  - [/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md)
+  - [/target:appcontainerexe](./target-appcontainerexe-compiler-option.md)
 
-  - [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)
+  - [/target:winmdobj](./target-winmdobj-compiler-option.md)
 
-  - [-platform:arm](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)
+  - [-platform:arm](./platform-compiler-option.md)
 
 - MSBuild를 사용하고 .NET Framework 4.5를 대상으로 하며, 이 목록의 앞에서 지정된 컴파일러 옵션 중 하나를 설정하지 않은 경우 기본값은 6.00입니다.
 
@@ -66,4 +66,4 @@ Visual Studio에서 **-subsystemversion** 컴파일러 옵션을 설정하려면
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)
+- [C# 컴파일러 옵션](./index.md)

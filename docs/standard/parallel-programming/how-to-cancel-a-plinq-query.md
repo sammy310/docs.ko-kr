@@ -11,22 +11,22 @@ helpviewer_keywords:
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80dc5f72bac436d4935c1697347d588b1a302f86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bce6616d576263db7dce6cf7e52582ee3400d80d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305340"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962530"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>방법: PLINQ 쿼리 취소
 다음 예제는 PLINQ 쿼리를 취소하는 두 가지 방법을 보여줍니다. 첫 번째 예제에서는 주로 데이터 트래버스로 구성되는 쿼리를 취소하는 방법을 보여줍니다. 두 번째 예제에서는 계산을 많이 해야 하는 사용자 함수를 포함하는 쿼리를 취소하는 방법을 보여줍니다.  
   
 > [!NOTE]
->  “내 코드만”이 사용하도록 설정된 경우 Visual Studio가 예외를 throw하는 줄에서 중단하고 “예외가 사용자 코드에서 처리되지 않았다”는 오류 메시지를 표시합니다. 이 오류는 심각하지는 않습니다. F5 키를 눌러 계속하고 아래 예제에 설명된 예외 처리 동작을 확인할 수 있습니다. 첫 번째 오류 지점에서 Visual Studio가 실행을 중단하지 않도록 하려면 **도구, 옵션, 디버깅, 일반**을 차례로 선택하고 “내 코드만” 확인란의 선택을 취소하기만 하면 됩니다.  
+> “내 코드만”이 사용하도록 설정된 경우 Visual Studio가 예외를 throw하는 줄에서 중단하고 “예외가 사용자 코드에서 처리되지 않았다”는 오류 메시지를 표시합니다. 이 오류는 심각하지는 않습니다. F5 키를 눌러 계속하고 아래 예제에 설명된 예외 처리 동작을 확인할 수 있습니다. 첫 번째 오류 지점에서 Visual Studio가 실행을 중단하지 않도록 하려면 **도구, 옵션, 디버깅, 일반**을 차례로 선택하고 “내 코드만” 확인란의 선택을 취소하기만 하면 됩니다.  
 >   
 >  이 예제는 사용법을 보여 주기 위한 것이며, 동일한 순차 LINQ to Objects 쿼리보다 빠르게 실행되지 않을 수도 있습니다. 속도 향상에 대한 자세한 내용은 [PLINQ의 속도 향상 이해](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-csharp[PLINQ#16](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#16)]
  [!code-vb[PLINQ#16](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#16)]  
   
@@ -38,7 +38,7 @@ ms.locfileid: "59305340"
   
 2. 취소가 발생하고 다른 예외가 throw되지 않으면 <xref:System.AggregateException>이 아닌 <xref:System.OperationCanceledException>을 처리해야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제는 사용자 코드에서 계산을 많이 해야 하는 경우 취소를 처리하는 방법을 보여줍니다.  
   
  [!code-csharp[PLINQ#17](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#17)]

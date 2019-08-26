@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
-ms.openlocfilehash: 36e5602f0a0b872a4aa6cdac64b49b1d1c708795
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 4103b6262fc5085c1204f423a36c9c5c2053b497
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877518"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605654"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma checksum(C# 참조)
 ASP.NET 페이지 디버깅을 돕기 위해 소스 파일에 대한 체크섬을 생성합니다.  
@@ -33,7 +33,7 @@ ASP.NET 페이지 디버깅을 돕기 위해 소스 파일에 대한 체크섬�
  `"checksum_bytes"`  
  체크섬의 바이트를 나타내는 16진수 문자열입니다. 짝수의 16진수여야 합니다. 홀수를 사용하면 컴파일 시간 경고가 발생하고 지시문이 무시됩니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  Visual Studio 디버거는 체크섬을 사용하여 항상 올바른 소스를 찾도록 합니다. 컴파일러는 소스 파일에 대한 체크섬을 계산한 다음 출력을 PDB(프로그램 데이터베이스) 파일로 내보냅니다. 그런 다음 디버거는 PDB를 사용하여 소스 파일에 대해 계산하는 체크섬과 비교합니다.  
   
  체크섬이 .aspx 파일이 아니라 생성된 소스 파일에 대해 계산되므로 이 솔루션은 ASP.NET 프로젝트에서 작동하지 않습니다. 이 문제를 해결하기 위해 `#pragma checksum`은 ASP.NET 페이지에 대한 체크섬 지원을 제공합니다.  
@@ -42,7 +42,7 @@ ASP.NET 페이지 디버깅을 돕기 위해 소스 파일에 대한 체크섬�
   
  컴파일러가 파일에서 `#pragma checksum` 지시문을 발견하지 못하면 체크섬을 계산하고 PDB 파일에 값을 씁니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```csharp
 class TestClass  
@@ -56,6 +56,6 @@ class TestClass
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 참조](../../../csharp/language-reference/index.md)
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [C# 전처리기 지시문](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [C# 참조](../index.md)
+- [C# 프로그래밍 가이드](../../programming-guide/index.md)
+- [C# 전처리기 지시문](./index.md)

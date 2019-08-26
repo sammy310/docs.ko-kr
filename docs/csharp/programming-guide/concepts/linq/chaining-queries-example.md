@@ -2,17 +2,17 @@
 title: 연결 쿼리 예제(C#)
 ms.date: 07/20/2015
 ms.assetid: abbca162-d95e-43af-b92c-e46e6aa2540e
-ms.openlocfilehash: 8685db7461a1ce97c7a9c0045ed842fa4ac1a1f6
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 90c2ba1c9125114f9e26f4afeb3ff6373ff01d9c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486198"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594828"
 ---
 # <a name="chaining-queries-example-c"></a>연결 쿼리 예제(C#)
 이 예제에서는 이전 예제를 기반으로 하며 지연된 실행과 지연 계산을 모두 사용하는 두 쿼리를 연결할 때 발생하는 상황을 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에는 지정된 문자열을 소스 컬렉션의 모든 문자열에 추가한 다음 새 문자열을 생성하는 `AppendString` 확장 메서드가 추가로 도입되었습니다.  
   
 ```csharp  
@@ -84,8 +84,8 @@ Main: str >GHI!!!<
   
  이 자습서의 다음 항목에서는 중간 구체화를 보여 줍니다.  
   
-- [중간 구체화(C#)](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
+- [중간 구체화(C#)](./intermediate-materialization.md)  
   
 ## <a name="see-also"></a>참고 항목
 
-- [자습서: 여러 쿼리 연결(C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [자습서: 여러 쿼리 연결(C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

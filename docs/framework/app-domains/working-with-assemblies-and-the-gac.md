@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 363410baea1706211acaa639f1704e91230723a8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 62760cb9fe5832ee018ebdebf6275ea61691c738
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592731"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927795"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>어셈블리 및 전역 어셈블리 캐시 사용
 여러 애플리케이션에서 어셈블리를 공유하려면 어셈블리를 전역 어셈블리 캐시에 설치하면 됩니다. 공용 언어 런타임이 설치된 각 컴퓨터에는 이 컴퓨터 수준의 코드 캐시가 있습니다. 전역 어셈블리 캐시에는 컴퓨터의 여러 애플리케이션에서 공유하도록 특별히 지정된 어셈블리가 저장됩니다. 전역 어셈블리 캐시에 설치하려면 어셈블리에 강력한 이름이 있어야 합니다.  
   
 > [!NOTE]
->  전역 어셈블리 캐시에 배치된 어셈블리에는 같은 어셈블리 이름과 파일 이름(파일 이름 확장명 제외)이 있어야 합니다. 예를 들어 어셈블리 이름이 myAssembly인 어셈블리의 파일 이름은 myAssembly.exe 또는 myAssembly.dll이어야 합니다.  
+> 전역 어셈블리 캐시에 배치된 어셈블리에는 같은 어셈블리 이름과 파일 이름(파일 이름 확장명 제외)이 있어야 합니다. 예를 들어 어셈블리 이름이 myAssembly인 어셈블리의 파일 이름은 myAssembly.exe 또는 myAssembly.dll이어야 합니다.  
   
  필요할 경우에만 어셈블리를 전역 어셈블리 캐시에 설치하여 어셈블리를 공유해야 합니다. 일반적으로 어셈블리 공유가 명시적으로 필요하지 않은 경우에는 어셈블리 종속성은 pirvate으로 유지하고 어셈블리를 애플리케이션 디렉터리에 저장해야 합니다. 또한 어셈블리가 COM interop 또는 비관리 코드에 액세스 가능하게 설정하기 위해 어셈블리를 전역 어셈블리 캐시에 설치할 필요는 없습니다.  
   

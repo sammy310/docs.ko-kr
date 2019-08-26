@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5aa778477abf3b91e32d9cb8ffdf50baaca5f001
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 171f6fd5a8b55d2e96a90a90d011a8166be6759d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68362911"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666407"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Memory\<T> 및 Span\<T> 사용 지침
 
@@ -78,7 +78,7 @@ class Program
 
 [!code-csharp[ownership](~/samples/snippets/standard/buffers/memory-t/owner/owner.cs)]
 
-[`using`](~/docs/csharp/language-reference/keywords/using-statement.md)을 사용하여 이 예제를 작성할 수도 있습니다.
+[`using`](../../csharp/language-reference/keywords/using-statement.md)을 사용하여 이 예제를 작성할 수도 있습니다.
 
 [!code-csharp[ownership-using](~/samples/snippets/standard/buffers/memory-t/owner-using/owner-using.cs)]
 
@@ -138,7 +138,7 @@ void DisplayBufferToConsole(ReadOnlyMemory<char> buffer);
 void DisplayBufferToConsole(ReadOnlySpan<char> buffer);
 ```
 
-이제 `DisplayBufferToConsole` 메서드는 `T[]`, [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md)로 할당된 스토리지 등 거의 모든 버퍼 형식에서 작동합니다. 이 메서드에 <xref:System.String>을 직접 전달할 수도 있습니다.
+이제 `DisplayBufferToConsole` 메서드는 `T[]`, [stackalloc](../../csharp/language-reference/operators/stackalloc.md)로 할당된 스토리지 등 거의 모든 버퍼 형식에서 작동합니다. 이 메서드에 <xref:System.String>을 직접 전달할 수도 있습니다.
 
 **규칙 #3: 메서드가 Memory\<T>를 사용하고 `void`를 반환하는 경우 메서드가 반환된 후에는 Memory\<T> 인스턴스를 사용하면 안 됩니다.**
 
@@ -246,7 +246,7 @@ class Person
 
 **규칙 #9: 동기 P/Invoke 메서드를 래핑하는 경우 API가 Span\<T>를 매개 변수로 사용해야 합니다.**
 
-규칙 #1에 따라 <xref:System.Span%601>은 일반적으로 동기 API에 사용할 올바른 형식입니다. 다음 예제와 같이 [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) 키워드를 통해 <xref:System.Span%601> 인스턴스를 고정할 수 있습니다.
+규칙 #1에 따라 <xref:System.Span%601>은 일반적으로 동기 API에 사용할 올바른 형식입니다. 다음 예제와 같이 [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md) 키워드를 통해 <xref:System.Span%601> 인스턴스를 고정할 수 있습니다.
 
 ```csharp
 using System.Runtime.InteropServices;
@@ -286,7 +286,7 @@ public unsafe int ManagedWrapper(Span<byte> data)
 
 **규칙 #10: 비동기 P/Invoke 메서드를 래핑하는 경우 API가 Memory\<T>를 매개 변수로 사용해야 합니다.**
 
-비동기 작업에서는 [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) 키워드를 사용할 수 없으므로 인스턴스가 나타내는 인접한 메모리 종류와 관계없이 <xref:System.Memory%601.Pin%2A?displayProperty=nameWithType> 메서드를 사용하여 <xref:System.Memory%601> 인스턴스를 고정합니다. 다음 예제에서는 이 API를 사용하여 비동기 P/Invoke 호출을 수행하는 방법을 보여 줍니다.
+비동기 작업에서는 [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md) 키워드를 사용할 수 없으므로 인스턴스가 나타내는 인접한 메모리 종류와 관계없이 <xref:System.Memory%601.Pin%2A?displayProperty=nameWithType> 메서드를 사용하여 <xref:System.Memory%601> 인스턴스를 고정합니다. 다음 예제에서는 이 API를 사용하여 비동기 P/Invoke 호출을 수행하는 방법을 보여 줍니다.
 
 ```csharp
 using System.Runtime.InteropServices;

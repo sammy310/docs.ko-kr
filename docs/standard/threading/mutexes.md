@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dededed9bcd4558296323532c0ecbfb60bf5b311
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b2edf1f06873796bd63fceaca9a4bb99e509589
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567921"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910339"
 ---
 # <a name="mutexes"></a>뮤텍스
 <xref:System.Threading.Mutex> 개체를 사용하여 리소스에 대한 전용 액세스를 제공할 수 있습니다. <xref:System.Threading.Mutex> 클래스는 <xref:System.Threading.Monitor> 클래스보다 많은 시스템 리소스를 사용하지만 애플리케이션 도메인 경계를 넘어 마샬링될 수 있으며 여러 대기와 함께 사용될 수 있고 서로 다른 프로세스에서 스레드를 동기화하는 데 사용될 수 있습니다. 관리되는 동기화 메커니즘의 비교는 [동기화 기본 형식 개요](../../../docs/standard/threading/overview-of-synchronization-primitives.md)를 참조하세요.  
@@ -35,7 +35,7 @@ ms.locfileid: "54567921"
  스레드가 <xref:System.Threading.Mutex>를 해제하지 않고 종료하는 경우 뮤텍스는 중단되도록 명령됩니다. 뮤텍스가 보호하는 리소스가 일관성 없는 상태로 남을 수도 있으므로 이는 종종 심각한 프로그래밍 오류를 나타냅니다. .NET Framework 버전 2.0에서 <xref:System.Threading.AbandonedMutexException>은 뮤텍스를 획득하는 다음 스레드에서 throw됩니다.  
   
 > [!NOTE]
->  .NET Framework 버전 1.0 및 1.1에서 중단된 <xref:System.Threading.Mutex>는 신호 받음 상태로 설정되고 다음 대기 스레드는 소유권을 가져옵니다. 대기 중인 스레드가 없는 경우 <xref:System.Threading.Mutex>는 신호 받음 상태로 유지됩니다. 예외가 throw되지 않습니다.  
+> .NET Framework 버전 1.0 및 1.1에서 중단된 <xref:System.Threading.Mutex>는 신호 받음 상태로 설정되고 다음 대기 스레드는 소유권을 가져옵니다. 대기 중인 스레드가 없는 경우 <xref:System.Threading.Mutex>는 신호 받음 상태로 유지됩니다. 예외가 throw되지 않습니다.  
   
  시스템 차원 뮤텍스의 경우 중단된 뮤텍스는 애플리케이션이 갑자기 종료되었음을 나타낼 수 있습니다(예: Windows 작업 관리자를 사용하여).  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: 8ad61eaa292ec4cce17ba029186caf1536afacdb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3544f7d846ecf68ed5ed01812b9c69b295c63c69
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591454"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952420"
 ---
 # <a name="how-to-start-services"></a>방법: 서비스 시작
 서비스가 설치되면 서비스를 시작해야 합니다. 시작하면 서비스 클래스의 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 메서드가 호출됩니다. 일반적으로 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 메서드는 서비스가 수행할 유용한 정의합니다. 시작된 후 서비스는 수동으로 일시 중지하거나 중지할 때까지 활성 상태로 유지됩니다.  
@@ -19,7 +19,7 @@ ms.locfileid: "64591454"
  자동 또는 수동으로 시작하도록 서비스를 설정할 수 있습니다. 자동으로 시작하는 서비스는 설치된 컴퓨터가 재부팅되거나 처음으로 켜질 때 시작합니다. 수동으로 시작하는 서비스는 사용자가 시작해야 합니다.  
   
 > [!NOTE]
->  기본적으로 Visual Studio에서 만드는 서비스는 수동으로 시작하도록 설정됩니다.  
+> 기본적으로 Visual Studio에서 만드는 서비스는 수동으로 시작하도록 설정됩니다.  
   
  서비스를 수동으로 시작할 수 있는 방법은 **서버 탐색기**나 **서비스 제어 관리자**에서 시작하거나 <xref:System.ServiceProcess.ServiceController>라는 구성 요소를 사용하는 코드에서 시작하는 등 여러 가지가 있습니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "64591454"
     >  서비스가 시작되지 않게 하려면 <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> 속성을 **사용 안 함**으로 설정할 수 있습니다. 서버를 여러 번 재부팅할 경우 이렇게 설정하면 통상 시작되는 서비스가 시작되지 않도록 하여 시간을 절약할 수 있습니다.  
   
     > [!NOTE]
-    >  이러한 속성과 기타 속성을 서비스가 설치된 후 변경할 수 있습니다.  
+    > 이러한 속성과 기타 속성을 서비스가 설치된 후 변경할 수 있습니다.  
   
      <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> 프로세스가 **수동**으로 설정된 서비스를 시작하는 방법은 **서버 탐색기**, **Windows 서비스 제어 관리자**, 코드 등 여러 가지가 있습니다. 이러한 방법 중 일부는 실제로 **서비스 제어 관리자**의 컨텍스트에서 서비스를 시작하지 않습니다. **서버 탐색기** 및 서비스를 시작하는 프로그래밍 방법은 실제로 컨트롤러를 조작합니다.  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11777f21d34da8b529352122bbf185f1938d3eb5
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: df8f82605118f1af0f085aef6e76c1e4bedb2904
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567238"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69988164"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>COM용 .NET Framework 어셈블리 패키징
 
@@ -33,13 +33,13 @@ COM 개발자는 애플리케이션에 통합하려는 관리 형식에 대한 �
 
   일부 관리 형식은 COM에 표시되지 않습니다. 일부는 표시되지만 만들 수 없고, 일부는 표시되지도 않고 작성할 수도 없습니다. 어셈블리는 표시되지 않은 형식, 표시되는 형식, 만들 수 없는 형식 및 만들 수 있는 형식의 조합으로 구성됩니다. 완성도를 위해 COM에 공개하려는 어셈블리에서 형식을 식별합니다. 해당 형식이 .NET Framework에 공개된 형식의 하위 집합인 경우 특히 해당됩니다.
 
-  자세한 내용은 [상호 운용할 .NET 형식의 정규화](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)를 참조하세요.
+  자세한 내용은 [상호 운용할 .NET 형식의 정규화](../../standard/native-interop/qualify-net-types-for-interoperation.md)를 참조하세요.
 
 - 버전 관리 지침
 
   클래스 인터페이스(COM interop 생성 인터페이스)를 구현하는 관리 클래스에는 버전 관리 제한 사항이 적용됩니다.
 
-  클래스 인터페이스를 사용하는 데 대한 지침은 [클래스 인터페이스 소개](../../../docs/standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)를 참조하세요.
+  클래스 인터페이스를 사용하는 데 대한 지침은 [클래스 인터페이스 소개](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)를 참조하세요.
 
 - 배포 지침
 
@@ -94,8 +94,8 @@ COM 개발자는 애플리케이션에 통합하려는 관리 형식에 대한 �
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - <xref:System.Runtime.InteropServices.ITypeLibConverter>
 - [.NET Framework 구성 요소를 COM에 노출](exposing-dotnet-components-to-com.md)
-- [상호 운용할 .NET 형식의 정규화](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)
-- [클래스 인터페이스 소개](../../../docs/standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
+- [상호 운용할 .NET 형식의 정규화](../../standard/native-interop/qualify-net-types-for-interoperation.md)
+- [클래스 인터페이스 소개](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
 - [어셈블리 보안 고려 사항](../app-domains/assembly-security-considerations.md)
 - [Tlbexp.exe(형식 라이브러리 내보내기)](../tools/tlbexp-exe-type-library-exporter.md)
 - [COM에 어셈블리 등록](registering-assemblies-with-com.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: fcfe2dafe588dce57628bff63e3519f70d7a7725
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: a5a32fa0a98cda37d7f599b20ef2b507cadd730c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566260"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69604206"
 ---
 # <a name="built-in-reference-types-c-reference"></a>기본 제공 참조 형식(C# 참조)
 
@@ -172,7 +172,7 @@ obj = obj + 3;
 
 - [C# 참조](../index.md)
 - [C# 키워드](../keywords/index.md)
-- [이벤트](../../../csharp/programming-guide/events/index.md)
+- [이벤트](../../programming-guide/events/index.md)
 - [dynamic 형식 사용](../../programming-guide/types/using-type-dynamic.md)
 - [문자열 사용에 대한 모범 사례](../../../standard/base-types/best-practices-strings.md)
 - [기본적인 문자열 작업](../../../standard/base-types/basic-string-operations.md)

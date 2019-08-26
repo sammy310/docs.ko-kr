@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - checked keyword [C#]
 ms.assetid: 718a1194-988d-48a3-b089-d6ee8bd1608d
-ms.openlocfilehash: 5ce9291fd047dfa9c69048887ccbd878819f2de8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 69bd8cc95012533a6be279b04dc883a56f6f78ea
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533134"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605917"
 ---
 # <a name="checked-c-reference"></a>checked(C# 참조)
 
@@ -29,9 +29,9 @@ ms.locfileid: "54533134"
 
 [!code-csharp[csrefKeywordsChecked#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsChecked/CS/csrefKeywordsChecked.cs#4)]
 
-[unchecked](../../../csharp/language-reference/keywords/unchecked.md) 키워드는 오버플로 검사를 피하는 데 사용될 수 있습니다.
+[unchecked](./unchecked.md) 키워드는 오버플로 검사를 피하는 데 사용될 수 있습니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 이 샘플에서는 `checked`를 사용하여 런타임에 오버플로 검사를 사용하도록 설정하는 방법을 보여 줍니다.
 
@@ -43,8 +43,8 @@ ms.locfileid: "54533134"
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 참조](../../../csharp/language-reference/index.md)
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [C# 키워드](../../../csharp/language-reference/keywords/index.md)
-- [Checked 및 Unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)
-- [unchecked](../../../csharp/language-reference/keywords/unchecked.md)
+- [C# 참조](../index.md)
+- [C# 프로그래밍 가이드](../../programming-guide/index.md)
+- [C# 키워드](./index.md)
+- [Checked 및 Unchecked](./checked-and-unchecked.md)
+- [unchecked](./unchecked.md)

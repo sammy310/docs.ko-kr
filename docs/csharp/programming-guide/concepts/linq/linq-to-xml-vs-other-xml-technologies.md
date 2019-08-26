@@ -2,17 +2,17 @@
 title: LINQ to XML과 비교 기타 XML 기술 비교3
 ms.date: 07/20/2015
 ms.assetid: 01b8e746-12d3-471d-b811-7539e4547784
-ms.openlocfilehash: 345e777b93497f483ca30f5c42fbf5a5c146dea3
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1cafa8b690afb753dfdb0301dc6a19f5f257e9c0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484317"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591877"
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML과 비교 기타 XML 기술 비교
 이 항목에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], <xref:System.Xml.XmlReader>, XSLT, MSXML 및 XmlLite와 같은 XML 기술을 비교합니다. 이 정보는 사용할 기술을 결정할 때 유용할 수 있습니다.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]과 DOM(문서 개체 모델)의 비교는 [LINQ to XML과 DOM 비교(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)를 참조하세요.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]과 DOM(문서 개체 모델)의 비교는 [LINQ to XML과 DOM 비교(C#)](./linq-to-xml-vs-dom.md)를 참조하세요.  
   
 ## <a name="linq-to-xml-vs-xmlreader"></a>LINQ to XML과 비교 XmlReader  
  <xref:System.Xml.XmlReader>는 캐시하지 않으며 정방향으로만 작동하는 빠른 파서입니다.  
@@ -54,4 +54,4 @@ ms.locfileid: "66484317"
   
 ## <a name="see-also"></a>참고 항목
 
-- [시작(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [시작(LINQ to XML)](./linq-to-xml-overview.md)

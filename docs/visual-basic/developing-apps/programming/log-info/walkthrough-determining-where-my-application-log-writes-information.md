@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application event logs, output location
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
-ms.openlocfilehash: 895c49fb1fde56a1c9bf8b3a0ecf9de4f29f9972
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 305c29e33f6cd421f39004e09d27c75b02ba8354
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591221"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912549"
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>연습: My.Application.Log가 정보를 기록하는 위치 확인(Visual Basic)
 
@@ -27,7 +27,7 @@ ms.locfileid: "65591221"
 1. 어셈블리의 구성 파일을 찾습니다. 어셈블리를 개발하는 경우 Visual Studio의 **솔루션 탐색기**에서 app.config에 액세스할 수 있습니다. 그렇지 않은 경우 구성 파일 이름은 어셈블리의 이름에 ".config"가 붙은 형태이며 어셈블리와 같은 디렉터리에 위치합니다.
 
     > [!NOTE]
-    >  구성 파일에 없는 어셈블리도 있습니다.
+    > 구성 파일에 없는 어셈블리도 있습니다.
 
     구성 파일은 XML 파일입니다.
 

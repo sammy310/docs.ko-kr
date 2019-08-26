@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e6086772b807440570b94cfff268aa1d78fa048
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 5ead6db2c3df3662c4d689bd6ac2466c99b02a15
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490008"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968261"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>방법: 설치된 .NET Framework 버전 확인
 
@@ -26,7 +26,7 @@ ms.locfileid: "66490008"
 
 - 앱의 기능을 제공하는 형식 및 리소스 컬렉션에 해당하는 어셈블리 집합. .NET Framework와 어셈블리는 동일한 버전 번호를 공유합니다.
 
-- 앱 코드를 관리하고 실행하는 CLR(공용 언어 런타임). CLR은 고유한 버전 번호로 식별됩니다([버전 및 종속성](~/docs/framework/migration-guide/versions-and-dependencies.md) 참조).
+- 앱 코드를 관리하고 실행하는 CLR(공용 언어 런타임). CLR은 고유한 버전 번호로 식별됩니다([버전 및 종속성](versions-and-dependencies.md) 참조).
 
 > [!NOTE]
 > 새 .NET Framework 버전에서는 각각 이전 버전의 기능을 유지하며 새 기능을 추가합니다. 여러 버전의 .NET Framework를 동시에 단일 컴퓨터에서 로드할 수 있습니다. 즉, 이전 버전을 제거하지 않고도 .NET Framework를 설치할 수 있습니다. 사용 중인 애플리케이션이 특정 버전에 종속적일 수 있고 해당 버전을 제거하면 애플리케이션이 중단될 수 있으므로 컴퓨터에서 .NET Framework의 이전버전은 일반적으로 제거해서는 안 됩니다.

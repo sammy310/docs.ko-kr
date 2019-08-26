@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 74cfc6a425e82014bbcf5093f52f476ff09db130
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: ad3f7949e01a387c3c7de2a0702d11b106ea0040
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796564"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922205"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>명명된 인수와 선택적 인수(C# 프로그래밍 가이드)
 C# 4에서는 명명된 인수와 선택적 인수가 도입되었습니다. *명명된 인수*를 사용하면 인수를 매개 변수 목록 내의 매개 변수 위치가 아니라 매개 변수 이름과 연결하여 특정 매개 변수에 대한 인수를 지정할 수 있습니다. *선택적 인수*를 사용하면 일부 매개 변수에 대한 인수를 생략할 수 있습니다. 두 기법 모두 메서드, 인덱서, 생성자 및 대리자에 사용할 수 있습니다.  
@@ -70,9 +70,9 @@ C# 4에서는 명명된 인수와 선택적 인수가 도입되었습니다. *�
   
 - 상수 식  
   
-- `new ValType()` 형태의 식. 여기서 `ValType`은 [enum](../../../csharp/language-reference/keywords/enum.md) 또는 [struct](../../../csharp/programming-guide/classes-and-structs/structs.md)와 같은 값 형식입니다.  
+- `new ValType()` 형태의 식. 여기서 `ValType`은 [enum](../../language-reference/keywords/enum.md) 또는 [struct](./structs.md)와 같은 값 형식입니다.  
   
-- [default(ValType)](../../../csharp/language-reference/operators/default.md) 형태의 식. 여기서 `ValType`은 값 형식입니다.  
+- [default(ValType)](../../language-reference/operators/default.md) 형태의 식. 여기서 `ValType`은 값 형식입니다.  
   
  선택적 매개 변수는 매개 변수 목록의 끝에서 모든 필수 매개 변수 다음에 정의됩니다. 호출자가 연속된 선택적 매개 변수 중 하나에 대한 인수를 제공하는 경우 이전의 모든 선택적 매개 변수에 대한 인수를 제공해야 합니다. 인수 목록에서 쉼표로 구분된 간격은 지원되지 않습니다. 예를 들어 다음 코드에서 인스턴스 메서드 `ExampleMethod`는 필수 매개 변수 하나와 선택적 매개 변수 두 개로 정의됩니다.  
   
@@ -91,7 +91,7 @@ C# 4에서는 명명된 인수와 선택적 인수가 도입되었습니다. *�
  ![ExampleMethod 메서드에 대한 IntelliSense 요약 정보를 보여주는 스크린샷.](./media/named-and-optional-arguments/optional-examplemethod-parameters.png)  
   
 > [!NOTE]
->  .NET <xref:System.Runtime.InteropServices.OptionalAttribute> 클래스를 사용하여 선택적 매개 변수를 선언할 수도 있습니다. `OptionalAttribute` 매개 변수는 기본값이 필요하지 않습니다.  
+> .NET <xref:System.Runtime.InteropServices.OptionalAttribute> 클래스를 사용하여 선택적 매개 변수를 선언할 수도 있습니다. `OptionalAttribute` 매개 변수는 기본값이 필요하지 않습니다.  
   
 ## <a name="example"></a>예  
  다음 예제에서는 `ExampleClass`에 대한 생성자에 선택 사항인 매개 변수 하나가 있습니다. 인스턴스 메서드 `ExampleMethod`에는 `required`라는 필수 매개 변수 하나와 `optionalstr` 및 `optionalint`라는 선택적 매개 변수 두 개가 있습니다. `Main`의 코드는 생성자와 메서드를 호출할 수 있는 여러 방법을 보여 줍니다.  
@@ -113,7 +113,7 @@ C# 4에서는 명명된 인수와 선택적 인수가 도입되었습니다. *�
   
  [!code-csharp[csProgGuideNamedAndOptional#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#13)]  
   
- 자세한 내용과 예제는 [방법: Office 프로그래밍에 명명된 인수와 선택적 인수 사용](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md) 및 [방법: Visual C# 기능을 사용하여 Office Interop 개체에 액세스](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)를 참조하세요.  
+ 자세한 내용과 예제는 [방법: Office 프로그래밍에 명명된 인수와 선택적 인수 사용](./how-to-use-named-and-optional-arguments-in-office-programming.md) 및 [방법: Visual C# 기능을 사용하여 Office Interop 개체에 액세스](../interop/how-to-access-office-onterop-objects.md)를 참조하세요.  
   
 ## <a name="overload-resolution"></a>Overload Resolution  
  명명된 인수 및 선택적 인수를 사용하면 다음과 같은 방법으로 오버로드 확인에 영향을 줍니다.  
@@ -129,7 +129,7 @@ C# 4에서는 명명된 인수와 선택적 인수가 도입되었습니다. *�
   
 ## <a name="see-also"></a>참고 항목
 
-- [방법: Office 프로그래밍에서 명명된 인수 및 선택적 인수 사용](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
-- [dynamic 형식 사용](../../../csharp/programming-guide/types/using-type-dynamic.md)
-- [생성자 사용](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)
-- [인덱서 사용](../../../csharp/programming-guide/indexers/using-indexers.md)
+- [방법: Office 프로그래밍에서 명명된 인수 및 선택적 인수 사용](./how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [dynamic 형식 사용](../types/using-type-dynamic.md)
+- [생성자 사용](./using-constructors.md)
+- [인덱서 사용](../indexers/using-indexers.md)

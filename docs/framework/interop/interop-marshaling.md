@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d6ddc2978078fd307ad79cffe14d53619d8be9e
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 20766f4f7971d8aa304c7c3eead94f089f059d64
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469712"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946712"
 ---
 # <a name="interop-marshaling"></a>Interop 마샬링
 <a name="top"></a> Interop 마샬링은 호출 중 관리되는 메모리와 관리되지 않는 메모리 간에 메서드 인수와 반환 값을 통해 데이터를 전달하는 방법을 제어합니다. Interop 마샬링은 공용 언어 런타임 마샬링 서비스에서 수행하는 런타임 작업입니다.  
@@ -91,7 +91,7 @@ ms.locfileid: "65469712"
 - 클라이언트 스레드를 STA 또는 MTA로 설정하여 주 스레드를 변경합니다. 예를 들어 C# 클라이언트가 많은 STA COM 구성 요소를 호출하는 경우 주 스레드를 STA로 설정하여 아파트 간 마샬링을 방지할 수 있습니다.  
   
     > [!NOTE]
-    >  C# 클라이언트의 스레드를 STA로 설정한 후 MTA COM 구성 요소를 호출하려면 아파트 간 마샬링이 필요합니다.  
+    > C# 클라이언트의 스레드를 STA로 설정한 후 MTA COM 구성 요소를 호출하려면 아파트 간 마샬링이 필요합니다.  
   
  아파트 모델을 명시적으로 선택하는 방법에 대한 자세한 내용은 [관리되는 스레딩과 관리되지 않는 스레딩](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))을 참조하세요.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "65469712"
 - 관리되는 클라이언트는 원격 호스트에서 이 참조를 가져오는 COM 개체로부터 관리되는 개체에 대한 참조를 가져옵니다. 원격 메커니즘은 DCOM입니다.  
   
     > [!NOTE]
-    >  관리되는 서버의 내보낸 형식 라이브러리를 등록해야 합니다.  
+    > 관리되는 서버의 내보낸 형식 라이브러리를 등록해야 합니다.  
   
  호출자와 호출 수신자 간의 프로세스 경계 수는 관련이 없습니다. in-process 및 out-of-process 호출에 대해 동일한 직접 참조가 발생합니다.  
   

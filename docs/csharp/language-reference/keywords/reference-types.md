@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, reference types
 - types [C#], reference types
 ms.assetid: 801cf030-6e2d-4a0d-9daf-1431b0c31f47
-ms.openlocfilehash: 4b3b1d5b27c3f6a88ce752243ab2d1389b168f0e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 27aed0a1805c1daf4491a3da26371e3312547a6f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634053"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608618"
 ---
 # <a name="reference-types-c-reference"></a>참조 형식(C# 참조)
 
@@ -38,8 +38,8 @@ C# 형식은 참조 형식과 값 형식 두 가지가 있습니다. 참조 형�
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 참조](../../../csharp/language-reference/index.md)
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
+- [C# 참조](../index.md)
+- [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 키워드](index.md)
 - [유형](types.md)
 - [값 형식](value-types.md)

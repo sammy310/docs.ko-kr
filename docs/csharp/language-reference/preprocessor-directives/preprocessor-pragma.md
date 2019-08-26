@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma directive [C#]'
 ms.assetid: 5b7944cd-d402-46a1-ad8f-feffb2d83673
-ms.openlocfilehash: 8b39d6760a5e30986d5d4bbe9bb1281dbf6742a2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 65ca38ff6993117b6ed9f716d4ac93ba2d4a9ddf
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471012"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605663"
 ---
 # <a name="pragma-c-reference"></a>#pragma(C# 참조)
 `#pragma`는 이 코드가 표시되는 파일의 컴파일에 대한 특수 명령을 컴파일러에 제공합니다. 컴파일러에서 명령을 지원해야 합니다. 즉, `#pragma`를 사용하여 사용자 지정 전처리 명령을 만들 수 없습니다. Microsoft C# 컴파일러는 다음 두 가지 `#pragma` 명령을 지원합니다.  
   
- [#pragma warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)  
+ [#pragma warning](./preprocessor-pragma-warning.md)  
   
- [#pragma checksum](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)  
+ [#pragma checksum](./preprocessor-pragma-checksum.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,8 +36,8 @@ ms.locfileid: "57471012"
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 참조](../../../csharp/language-reference/index.md)
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [C# 전처리기 지시문](../../../csharp/language-reference/preprocessor-directives/index.md)
-- [#pragma warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)
-- [#pragma checksum](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)
+- [C# 참조](../index.md)
+- [C# 프로그래밍 가이드](../../programming-guide/index.md)
+- [C# 전처리기 지시문](./index.md)
+- [#pragma warning](./preprocessor-pragma-warning.md)
+- [#pragma checksum](./preprocessor-pragma-checksum.md)

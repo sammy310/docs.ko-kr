@@ -2,15 +2,15 @@
 title: 리플렉션(C#)
 ms.date: 07/20/2015
 ms.assetid: f80a2362-953b-4e8e-9759-cd5f334190d4
-ms.openlocfilehash: 4593aeef13f5d1d0c223b40e266556cb2bcfee5f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b4322d83ad43cd3e49647df49c15bb5c917e1be
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595547"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924099"
 ---
 # <a name="reflection-c"></a>리플렉션(C#)
-리플렉션은 어셈블리, 모듈 및 형식을 설명하는 개체(<xref:System.Type> 형식)를 제공합니다. 리플렉션을 사용하면 동적으로 형식 인스턴스를 만들거나, 형식을 기존 개체에 바인딩하거나, 기존 개체에서 형식을 가져와 해당 메서드를 호출하거나, 필드 및 속성에 액세스할 수 있습니다. 코드에서 특성을 사용하는 경우 리플렉션은 특성에 대한 액세스를 제공합니다. 자세한 내용은 [특성](../../../../docs/standard/attributes/index.md)을 참조하세요.  
+리플렉션은 어셈블리, 모듈 및 형식을 설명하는 개체(<xref:System.Type> 형식)를 제공합니다. 리플렉션을 사용하면 동적으로 형식 인스턴스를 만들거나, 형식을 기존 개체에 바인딩하거나, 기존 개체에서 형식을 가져와 해당 메서드를 호출하거나, 필드 및 속성에 액세스할 수 있습니다. 코드에서 특성을 사용하는 경우 리플렉션은 특성에 대한 액세스를 제공합니다. 자세한 내용은 [특성](../../../standard/attributes/index.md)을 참조하세요.  
   
  다음은 정적 메서드 `GetType`(`Object` 기본 클래스의 모든 형식에 상속됨)을 사용하여 변수 형식을 가져오는 간단한 리플렉션 예제입니다.  
   
@@ -38,7 +38,7 @@ System.Console.WriteLine(info);
  `mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089`  
   
 > [!NOTE]
->  C# 키워드 `protected` 및 `internal`은 IL에서 아무런 의미가 없으며 리플렉션 API에서 사용되지 않습니다. IL의 해당 용어는 *Family* 및 *Assembly*입니다. 리플렉션을 사용하는 `internal` 메서드를 식별하려면 <xref:System.Reflection.MethodBase.IsAssembly%2A> 속성을 사용합니다. `protected internal` 메서드를 식별하려면 <xref:System.Reflection.MethodBase.IsFamilyOrAssembly%2A>를 사용합니다.  
+> C# 키워드 `protected` 및 `internal`은 IL에서 아무런 의미가 없으며 리플렉션 API에서 사용되지 않습니다. IL의 해당 용어는 *Family* 및 *Assembly*입니다. 리플렉션을 사용하는 `internal` 메서드를 식별하려면 <xref:System.Reflection.MethodBase.IsAssembly%2A> 속성을 사용합니다. `protected internal` 메서드를 식별하려면 <xref:System.Reflection.MethodBase.IsFamilyOrAssembly%2A>를 사용합니다.  
   
 ## <a name="reflection-overview"></a>리플렉션 개요  
  리플렉션은 다음과 같은 상황에서 유용합니다.  
@@ -66,5 +66,5 @@ System.Console.WriteLine(info);
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [공용 언어 런타임의 어셈블리](../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [공용 언어 런타임의 어셈블리](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)

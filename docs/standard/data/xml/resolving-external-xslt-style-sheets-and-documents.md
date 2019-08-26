@@ -5,18 +5,18 @@ ms.technology: dotnet-standard
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8e956b96b27898e2cad4bed30996622ab0b86656
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 381b7c1eb091bafbcdc8ea842597c539c6be3a57
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170311"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945626"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>외부 XSLT 스타일시트 및 문서 확인
 다음과 같이 변환 중에 외부 리소스를 확인해야 하는 몇 가지 경우가 있습니다.  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> 클래스는 .NET Framework 2.0에서 사용되지 않습니다. <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 XSLT(Extensible Stylesheet Language for Transformations) 변환을 수행할 수 있습니다.  
+> <xref:System.Xml.Xsl.XslTransform> 클래스는 .NET Framework 2.0에서 사용되지 않습니다. <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 XSLT(Extensible Stylesheet Language for Transformations) 변환을 수행할 수 있습니다.  
   
  다음과 같이 변형 중에 외부 리소스를 확인해야 하는 몇 가지 경우가 있습니다.  
   

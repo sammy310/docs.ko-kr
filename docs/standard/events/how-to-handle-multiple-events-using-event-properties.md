@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c0dea7950f86da3d812783abd00d69e5bc38198
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 758ddc603766462fc48885406c4e4ca1162bbbaf
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796886"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666496"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>방법: 이벤트 속성을 사용하여 여러 이벤트 처리
 이벤트 속성을 사용하려면 이벤트를 발생시키는 클래스에서 이벤트 속성을 정의한 다음 이벤트를 처리하는 클래스에서 이벤트 속성의 대리자를 설정합니다. 클래스에서 여러 이벤트 속성을 구현하려면 클래스가 각 이벤트에 대해 정의된 대리자를 내부적으로 저장 및 유지 관리해야 합니다. 일반적인 방법은 이벤트 키로 인덱싱된 대리자 컬렉션을 구현하는 것입니다.  
@@ -52,4 +52,4 @@ ms.locfileid: "68796886"
 - <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>
 - [이벤트](../../../docs/standard/events/index.md)
 - <xref:System.Web.UI.Control.Events%2A?displayProperty=nameWithType>
-- [방법: 메모리를 절약하는 사용자 지정 이벤트 선언](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+- [방법: 메모리를 절약하는 사용자 지정 이벤트 선언](../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)

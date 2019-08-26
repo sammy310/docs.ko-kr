@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 458b18ad34cfff6ab136408ab8e8b2e7953b35cb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0b109ec82d139e3b3eb321c90d5f41dd1eae216f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593560"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927926"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>방법: 강력한 이름으로 어셈블리 서명
 강력한 이름으로 어셈블리에 서명하는 여러 가지 방법이 있습니다.  
@@ -44,13 +44,13 @@ ms.locfileid: "64593560"
 4. **강력한 이름 키 파일 선택** 상자에서 **\<찾아보기…>** 를 선택한 다음, 키 파일로 이동합니다. 새 키 파일을 만들려면 **\<새로 만들기…>** 를 선택하고 **강력한 이름 키 만들기** 대화 상자에 이름을 입력합니다.  
   
 > [!NOTE]
->  [어셈블리를 지연 서명](../../../docs/framework/app-domains/delay-sign-assembly.md)하기 위해 공개 키 파일을 선택합니다.  
+> [어셈블리를 지연 서명](../../../docs/framework/app-domains/delay-sign-assembly.md)하기 위해 공개 키 파일을 선택합니다.  
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>어셈블리 링커를 사용하여 강력한 이름으로 어셈블리를 만들고 서명하려면  
   
 - [Visual Studio용 개발자 명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)에서 다음 명령을 입력합니다.  
   
-     **al** **/out:**\<*assemblyName*> *\<moduleName>* **/keyfile:**\<*keyfileName*>  
+     **al** **/out:** \<*assemblyName*>  *\<moduleName>* **/keyfile:** \<*keyfileName*>  
   
      다음은 각 문자에 대한 설명입니다.  
   
@@ -78,7 +78,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
 2. 소스 코드 파일을 정상적으로 컴파일합니다.  
   
 > [!NOTE]
->  C# 및 Visual Basic 컴파일러에서는 소스 코드에 <xref:System.Reflection.AssemblyKeyFileAttribute> 또는 <xref:System.Reflection.AssemblyKeyNameAttribute> 특성이 나올 때 컴파일러 경고(각각 CS1699 및 BC41008)를 발생시킵니다. 이런 경고는 무시할 수 있습니다.  
+> C# 및 Visual Basic 컴파일러에서는 소스 코드에 <xref:System.Reflection.AssemblyKeyFileAttribute> 또는 <xref:System.Reflection.AssemblyKeyNameAttribute> 특성이 나올 때 컴파일러 경고(각각 CS1699 및 BC41008)를 발생시킵니다. 이런 경고는 무시할 수 있습니다.  
   
  다음 코드 예제에서는 어셈블리가 컴파일된 디렉터리에 있는 <xref:System.Reflection.AssemblyKeyFileAttribute> 라는 키 파일과 함께 `keyfile.snk`특성을 사용합니다.  
   

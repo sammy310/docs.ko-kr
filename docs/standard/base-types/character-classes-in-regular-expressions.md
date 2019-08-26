@@ -15,12 +15,12 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 0b70545c2252d6e8b82d6f4d57522ac4bb2481d8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 53dcbcfdcc9a8d04840bc91a563b6514153b9577
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490882"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963425"
 ---
 # <a name="character-classes-in-regular-expressions"></a>정규식의 문자 클래스
 
@@ -51,7 +51,7 @@ ms.locfileid: "66490882"
  .NET에서는 한 문자 클래스에서 다른 문자 클래스를 제외한 결과로 문자 집합을 정의하는 데 사용할 수 있는 문자 클래스 빼기 식을 지원합니다. 자세한 내용은 [문자 클래스 빼기](#CharacterClassSubtraction)를 참조하세요.  
   
 > [!NOTE]
->  일치하는 단어 문자를 검색하는 [\w](#WordCharacter) 또는 일치하는 유니코드 범주를 검색하는 [\p{}](#CategoryOrBlock)와 같이 범주별로 일치하는 문자를 검색하는 문자 클래스는 <xref:System.Globalization.CharUnicodeInfo> 클래스를 활용하여 문자 범주에 대한 정보를 제공합니다.  .NET Framework 4.6.2부터, 문자 범주는 [유니코드 표준, 버전 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/)을 기준으로 합니다. .NET Framework 4에서 .NET Framework 4.6.1까지는 [유니코드 표준, 버전 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/)을 기반으로 합니다.  
+> 일치하는 단어 문자를 검색하는 [\w](#WordCharacter) 또는 일치하는 유니코드 범주를 검색하는 [\p{}](#CategoryOrBlock)와 같이 범주별로 일치하는 문자를 검색하는 문자 클래스는 <xref:System.Globalization.CharUnicodeInfo> 클래스를 활용하여 문자 범주에 대한 정보를 제공합니다.  .NET Framework 4.6.2부터, 문자 범주는 [유니코드 표준, 버전 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/)을 기준으로 합니다. .NET Framework 4에서 .NET Framework 4.6.1까지는 [유니코드 표준, 버전 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/)을 기반으로 합니다.  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>긍정 문자 그룹: [ ]  
@@ -141,7 +141,7 @@ ms.locfileid: "66490882"
  부정 문자 그룹에서 맨 앞의 캐럿 문자(`^`)는 필수 문자로서, 해당 문자 그룹이 긍정 문자 그룹이 아니라 부정 문자 그룹임을 나타냅니다.  
   
 > [!IMPORTANT]
->  큰 정규식 패턴에서 부정 문자 그룹은 너비가 0인 어설션이 아닙니다. 즉, 부정 문자 그룹을 평가한 후 정규식 엔진은 입력 문자열에서 한 문자를 이동합니다.  
+> 큰 정규식 패턴에서 부정 문자 그룹은 너비가 0인 어설션이 아닙니다. 즉, 부정 문자 그룹을 평가한 후 정규식 엔진은 입력 문자열에서 한 문자를 이동합니다.  
   
  부정 문자 그룹이 포함된 몇 가지 일반적인 정규식 패턴은 다음과 같습니다.  
   
@@ -177,7 +177,7 @@ ms.locfileid: "66490882"
      [!code-vb[Conceptual.Regex.Language.CharacterClasses#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any2.vb#5)]  
   
 > [!NOTE]
->  `\n`을 제외한 모든 문자와 일치하기 때문에 `.` 문자 클래스가 `\r`(캐리지 리턴 문자, \u000D)과도 일치합니다.  
+> `\n`을 제외한 모든 문자와 일치하기 때문에 `.` 문자 클래스가 `\r`(캐리지 리턴 문자, \u000D)과도 일치합니다.  
   
 - 긍정 또는 부정 문자 그룹의 마침표는 문자 클래스가 아니라 리터럴 마침표 문자로 처리됩니다. 자세한 내용은 이 항목 앞부분의 [긍정 문자 그룹](#PositiveGroup) 및 [부정 문자 그룹](#NegativeGroup)을 참조하세요. 다음 예제는 문자 클래스와 긍정 문자 그룹으로 마침표 문자(`.`)를 포함하는 정규식을 정의하는 그림을 제공합니다. `\b.*[.?!;:](\s|\z)` 정규식은 단어 경계에서 시작하여 마침표를 포함하여 다섯 가지 문장 부호 중 하나와 만날 때까지 임의의 문자를 찾은 다음 공백 문자 또는 문자열 끝을 찾습니다.  
   
@@ -185,7 +185,7 @@ ms.locfileid: "66490882"
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
   
 > [!NOTE]
->  모든 문자와 일치하기 때문에 `.` 언어 요소는 정규식 패턴이 여러 번 임의의 문자와 일치하도록 시도할 경우 종종 lazy 수량자와 함께 사용됩니다. 자세한 내용은 [수량자](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)를 참조하세요.  
+> 모든 문자와 일치하기 때문에 `.` 언어 요소는 정규식 패턴이 여러 번 임의의 문자와 일치하도록 시도할 경우 종종 lazy 수량자와 함께 사용됩니다. 자세한 내용은 [수량자](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)를 참조하세요.  
   
 <a name="CategoryOrBlock"></a>   
 ## <a name="unicode-category-or-unicode-block-p"></a>유니코드 범주 또는 유니코드 블록: \p{}  
@@ -251,7 +251,7 @@ ms.locfileid: "66490882"
  ECMAScript와 호환되는 동작을 지정한 경우 `\w`는 `[a-zA-Z_0-9]`와 같습니다. ECMAScript 정규식에 대한 자세한 내용은 [정규식 옵션](../../../docs/standard/base-types/regular-expression-options.md)에서 "ECMAScript 일치 동작" 섹션을 참조하세요.  
   
 > [!NOTE]
->  모든 단어 문자와 일치하기 때문에 `\w` 언어 요소는 정규식 패턴이 특정 단어 문자가 따라오는 임의의 단어 문자를 여러 번 찾으려 하는 경우 lazy 수량자와 함께 사용되는 경우가 많습니다. 자세한 내용은 [수량자](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)를 참조하세요.  
+> 모든 단어 문자와 일치하기 때문에 `\w` 언어 요소는 정규식 패턴이 특정 단어 문자가 따라오는 임의의 단어 문자를 여러 번 찾으려 하는 경우 lazy 수량자와 함께 사용되는 경우가 많습니다. 자세한 내용은 [수량자](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)를 참조하세요.  
   
  다음 예제에서는 `\w` 언어 요소를 사용하여 단어의 중복 문자를 찾습니다. 예제는 다음과 같이 해석될 수 있는 정규식 패턴 `(\w)\1`을 정의합니다.  
   
@@ -287,7 +287,7 @@ ms.locfileid: "66490882"
  ECMAScript와 호환되는 동작을 지정한 경우 `\W`는 `[^a-zA-Z_0-9]`와 같습니다. ECMAScript 정규식에 대한 자세한 내용은 [정규식 옵션](../../../docs/standard/base-types/regular-expression-options.md)에서 "ECMAScript 일치 동작" 섹션을 참조하세요.  
   
 > [!NOTE]
->  모든 비단어 문자와 일치하기 때문에 `\W` 언어 요소는 정규식 패턴이 특정 비단어 문자가 따라오는 임의의 비단어 문자를 여러 번 찾으려 하는 경우 lazy 수량자와 함께 사용되는 경우가 많습니다. 자세한 내용은 [수량자](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)를 참조하세요.  
+> 모든 비단어 문자와 일치하기 때문에 `\W` 언어 요소는 정규식 패턴이 특정 비단어 문자가 따라오는 임의의 비단어 문자를 여러 번 찾으려 하는 경우 lazy 수량자와 함께 사용되는 경우가 많습니다. 자세한 내용은 [수량자](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)를 참조하세요.  
   
  다음 예제에서는 `\W` 문자 클래스를 보여 줍니다.  공백 또는 문장 부호와 같은 한두 개의 비단어 문자가 따라오는 단어와 일치하는 정규식 패턴 `\b(\w+)(\W){1,2}`를 정의합니다. 정규식은 다음 표와 같이 해석됩니다.  
   
@@ -552,7 +552,7 @@ ms.locfileid: "66490882"
 |FFF0 - FFFF|`IsSpecials`|  
   
 <a name="CharacterClassSubtraction"></a>   
-## <a name="character-class-subtraction-basegroup---excludedgroup"></a>문자 클래스 빼기: [base_group - [excluded_group]]  
+## <a name="character-class-subtraction-base_group---excluded_group"></a>문자 클래스 빼기: [base_group - [excluded_group]]  
  문자 클래스는 문자 집합을 정의합니다. 문자 클래스 빼기는 한 문자 클래스에서 다른 문자 클래스의 문자를 제외한 결과로 문자 집합을 생성합니다.  
   
  문자 클래스 빼기 식의 형식은 다음과 같습니다.  

@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8e2b6ca8ef04ad6ff637a59f03f3b4cf04cb06ad
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e37a6657c9fc6315b6b77ed3cfc07d969317fc5c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615361"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966944"
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>XmlSchemaValidator 푸시 기반 유효성 검사
 <xref:System.Xml.Schema.XmlSchemaValidator> 클래스는 밀어넣기 기반 방식으로 XML 스키마에 대해 XML 데이터의 유효성을 검사할 수 있는 효과적인 고성능 메커니즘을 제공합니다. 예를 들어, <xref:System.Xml.Schema.XmlSchemaValidator> 클래스를 사용하면 XML 문서로 serialize한 다음 유효성 검사 XML 판독기를 사용하여 문서를 다시 구문 분석할 필요 없이 내부에서 직접 XML Infoset의 유효성을 검사할 수 있습니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "64615361"
  다음은 <xref:System.Xml.Schema.XmlSchemaValidator> 클래스를 사용하여 `contosoBooks.xml` 스키마에 대해 `contosoBooks.xsd` 파일의 유효성을 검사하는 예제입니다. 이 예제에서는 <xref:System.Xml.Serialization.XmlSerializer> 클래스를 사용하여 `contosoBooks.xml` 파일을 deserialize하고 노드 값을 <xref:System.Xml.Schema.XmlSchemaValidator> 클래스의 메서드에 전달합니다.  
   
 > [!NOTE]
->  이 예제는 이 항목의 전체 단원에서 사용됩니다.  
+> 이 예제는 이 항목의 전체 단원에서 사용됩니다.  
   
  [!code-csharp[XmlSchemaValidatorExamples#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaValidatorExamples/CS/XmlSchemaValidatorExamples.cs#1)]
  [!code-vb[XmlSchemaValidatorExamples#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaValidatorExamples/VB/XmlSchemaValidatorExamples.vb#1)]  
@@ -137,7 +137,7 @@ validator.ValidateEndElement(null);
  <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> 클래스의 <xref:System.Xml.Schema.XmlSchemaValidator> 메서드를 사용하면 유효성 검사 중에 사용되는 스키마 집합에 XML 스키마를 추가할 수 있습니다. <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> 메서드를 사용하여 유효성을 검사 중인 XML Infoset에서 인라인 XML 스키마가 나타난 결과를 시뮬레이트할 수 있습니다.  
   
 > [!NOTE]
->  <xref:System.Xml.Schema.XmlSchema> 매개 변수의 대상 네임스페이스는 이미 <xref:System.Xml.Schema.XmlSchemaValidator> 개체에 발생한 요소나 특성의 대상 네임스페이스와 달라야 합니다.  
+> <xref:System.Xml.Schema.XmlSchema> 매개 변수의 대상 네임스페이스는 이미 <xref:System.Xml.Schema.XmlSchemaValidator> 개체에 발생한 요소나 특성의 대상 네임스페이스와 달라야 합니다.  
 >   
 >  <xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessInlineSchema?displayProperty=nameWithType> 값을 매개 변수로 <xref:System.Xml.Schema.XmlSchemaValidator.%23ctor%2A> 생성자에 전달하지 않은 경우 <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> 메서드는 아무 작업도 수행하지 않습니다.  
   
@@ -160,7 +160,7 @@ validator.ValidateEndElement(null);
 |<xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|<xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessIdentityConstraints> 유효성 검사 옵션을 설정한 경우 유효성 검사를 종료하고 전체 XML 문서에 대한 identity 제약 조건을 확인합니다.|  
   
 > [!NOTE]
->  <xref:System.Xml.Schema.XmlSchemaValidator> 클래스에는 앞의 표에서 설명한 각 메서드의 호출 시퀀스를 실행하고 호출을 발생시키는 상태 전환이 정의되어 있습니다. <xref:System.Xml.Schema.XmlSchemaValidator> 클래스의 특정 상태 전환에 대한 자세한 내용은 이 항목의 "XmlSchemaValidator 상태 전환" 단원을 참조하세요.  
+> <xref:System.Xml.Schema.XmlSchemaValidator> 클래스에는 앞의 표에서 설명한 각 메서드의 호출 시퀀스를 실행하고 호출을 발생시키는 상태 전환이 정의되어 있습니다. <xref:System.Xml.Schema.XmlSchemaValidator> 클래스의 특정 상태 전환에 대한 자세한 내용은 이 항목의 "XmlSchemaValidator 상태 전환" 단원을 참조하세요.  
   
  XML Infoset에서 요소, 특성 및 내용의 유효성을 검사하는 데 사용되는 메서드의 예는 이전 단원의 예제를 참조하세요. 이러한 메서드에 대한 자세한 내용은 <xref:System.Xml.Schema.XmlSchemaValidator> 클래스 참조 문서를 참조하세요.  
   
@@ -243,7 +243,7 @@ static XmlValueGetter dateTimeGetter(DateTime dateTime)
  내용 모델의 compositor가 `xs:sequence`인 경우 시퀀스에서 다음 파티클만 반환됩니다. 내용 모델의 compositor가 `xs:all` 또는 `xs:choice`인 경우 현재 요소 컨텍스트에서 따를 수 있는 유효한 파티클이 모두 반환됩니다.  
   
 > [!NOTE]
->  <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 메서드를 호출한 직후에 <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> 메서드를 호출할 경우 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 메서드는 모든 전역 요소를 반환합니다.  
+> <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 메서드를 호출한 직후에 <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> 메서드를 호출할 경우 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 메서드는 모든 전역 요소를 반환합니다.  
   
  예를 들어, XSD(XML 스키마 정의 언어) 스키마 및 이 스키마를 따르는 XML 문서에서 `book` 요소의 유효성을 검사한 후에는 `book` 요소가 현재 요소 컨텍스트입니다. <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 메서드는 <xref:System.Xml.Schema.XmlSchemaElement> 요소를 나타내는 단일 `title` 개체가 포함된 배열을 반환합니다. 유효성 검사 컨텍스트가 `title` 요소인 경우 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 메서드는 빈 배열을 반환합니다. <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 요소의 유효성을 검사한 후 `title` 요소의 유효성을 검사하기 전에 `description` 메서드를 호출하면 <xref:System.Xml.Schema.XmlSchemaElement> 요소를 나타내는 단일 `description` 개체가 포함된 배열이 반환됩니다. <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 요소의 유효성을 검사한 후 `description` 메서드를 호출하면 와일드카드를 나타내는 단일 <xref:System.Xml.Schema.XmlSchemaAny> 개체가 포함된 배열이 반환됩니다.  
   
@@ -370,7 +370,7 @@ validator.ValidateEndElement(null);
  `</book>`  
   
 > [!NOTE]
->  <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 클래스의 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>, <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> 및 <xref:System.Xml.Schema.XmlSchemaValidator> 메서드로 인한 결과는 유효성 검사가 실행 중인 현재 컨텍스트에 따라 달라집니다. 자세한 내용은 이 항목의 “유효성 검사 컨텍스트” 단원을 참조하세요.  
+> <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 클래스의 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>, <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> 및 <xref:System.Xml.Schema.XmlSchemaValidator> 메서드로 인한 결과는 유효성 검사가 실행 중인 현재 컨텍스트에 따라 달라집니다. 자세한 내용은 이 항목의 “유효성 검사 컨텍스트” 단원을 참조하세요.  
   
  <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 메서드의 예제는 소개 단원의 예제를 참조하세요. <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 메서드에 대한 자세한 내용은 <xref:System.Xml.Schema.XmlSchemaValidator> 클래스 참조 문서를 참조하세요.  
   
@@ -382,7 +382,7 @@ validator.ValidateEndElement(null);
  <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> 메서드를 호출한 직후에 <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> 메서드를 호출하면 XML 문서에 나타날 수 있는 모든 특성이 반환됩니다. 그러나 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> 메서드를 한 번 이상 호출한 후 <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> 메서드를 호출하면 현재 요소에 대해 아직 유효성을 검사하지 않은 특성이 반환됩니다.  
   
 > [!NOTE]
->  <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 클래스의 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>, <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> 및 <xref:System.Xml.Schema.XmlSchemaValidator> 메서드로 인한 결과는 유효성 검사가 실행 중인 현재 컨텍스트에 따라 달라집니다. 자세한 내용은 이 항목의 “유효성 검사 컨텍스트” 단원을 참조하세요.  
+> <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 클래스의 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>, <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> 및 <xref:System.Xml.Schema.XmlSchemaValidator> 메서드로 인한 결과는 유효성 검사가 실행 중인 현재 컨텍스트에 따라 달라집니다. 자세한 내용은 이 항목의 “유효성 검사 컨텍스트” 단원을 참조하세요.  
   
  <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> 메서드의 예제는 소개 단원의 예제를 참조하세요. <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> 메서드에 대한 자세한 내용은 <xref:System.Xml.Schema.XmlSchemaValidator> 클래스 참조 문서를 참조하세요.  
   
@@ -442,7 +442,7 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 |콘텐츠|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; 요소|  
   
 > [!NOTE]
->  위 표에서 <xref:System.InvalidOperationException> 개체의 현재 상태에 따라 잘못된 시퀀스에서 메서드를 호출하면 각 메서드에 의해 <xref:System.Xml.Schema.XmlSchemaValidator>이 throw됩니다.  
+> 위 표에서 <xref:System.InvalidOperationException> 개체의 현재 상태에 따라 잘못된 시퀀스에서 메서드를 호출하면 각 메서드에 의해 <xref:System.Xml.Schema.XmlSchemaValidator>이 throw됩니다.  
   
  위의 상태 전환 표에서는 문장 부호를 사용하여 <xref:System.Xml.Schema.XmlSchemaValidator> 클래스 상태 전환의 각 상태에 대해 호출할 수 있는 메서드와 기타 상태를 설명합니다. 사용된 문장 부호는 DTD(문서 종류 정의)에 대한 XML 표준 참조의 문장 부호와 같습니다.  
   
@@ -452,7 +452,7 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 |------------|-----------------|  
 |&#124;|세로 막대 앞이나 뒤의 메서드 또는 상태를 호출할 수 있습니다.|  
 |?|물음표 앞의 메서드나 상태는 선택 항목이지만 이 메서드나 상태를 호출할 경우에는 한 번만 호출할 수 있습니다.|  
-|*|* 기호 앞의 메서드나 상태는 선택 항목이며 두 번 이상 호출할 수 있습니다.|  
+|*|\* 기호 앞의 메서드나 상태는 선택 항목이며 두 번 이상 호출할 수 있습니다.|  
   
 ## <a name="validation-context"></a>유효성 검사 컨텍스트  
  XML Infoset에서 요소, 특성 및 내용의 유효성을 검사하는 데 사용하는 <xref:System.Xml.Schema.XmlSchemaValidator> 클래스의 메서드는 <xref:System.Xml.Schema.XmlSchemaValidator> 개체의 유효성 검사 컨텍스트를 변경합니다. 예를 들어, <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> 메서드는 현재 요소 내용의 유효성 검사를 생략하고 <xref:System.Xml.Schema.XmlSchemaValidator> 개체를 준비하여 부모 요소의 컨텍스트에서 내용의 유효성을 검사합니다. 이 동작은 현재 요소의 모든 자식에 대한 유효성 검사를 생략하고 <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> 메서드를 호출하는 것과 같습니다.  
@@ -475,7 +475,7 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 |<xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|빈 배열을 반환합니다.|빈 배열을 반환합니다.|위와 동일합니다.|  
   
 > [!NOTE]
->  <xref:System.Xml.Schema.XmlSchemaValidator> 클래스의 다양한 속성이 반환하는 값은 위 표의 메서드를 호출해도 변경되지 않습니다.  
+> <xref:System.Xml.Schema.XmlSchemaValidator> 클래스의 다양한 속성이 반환하는 값은 위 표의 메서드를 호출해도 변경되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목
 

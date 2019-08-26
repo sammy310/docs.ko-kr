@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9570578e8ae4397f060805b891f86d7d4f273cd4
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 09e9a51fe9c1fd25a6791cf924180329718138c8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487035"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915888"
 ---
 # <a name="generic-interfaces"></a>제네릭 인터페이스
 이 항목에서는 여러 제네릭 형식 패밀리에 대해 공통 기능을 제공하는 제네릭 인터페이스에 대해 간략하게 설명합니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "66487035"
  제네릭 인터페이스는 순서 및 같음 비교와 제네릭 컬렉션 형식에서 공유되는 기능을 위해 제네릭이 아닌 인터페이스에 형식이 안전한 대응 항목을 제공합니다.  
   
 > [!NOTE]
->  .NET Framework 4부터 여러 제네릭 인터페이스의 형식 매개 변수는 공 분산 또는 반공 분산으로 표시되어 이러한 인터페이스를 구현하는 형식을 유연하게 할당 및 사용할 수 있게 해줍니다. [공변성(Covariance) 및 반공변성(Contravariance)](../../../docs/standard/generics/covariance-and-contravariance.md)을 참조하세요.  
+> .NET Framework 4부터 여러 제네릭 인터페이스의 형식 매개 변수는 공 분산 또는 반공 분산으로 표시되어 이러한 인터페이스를 구현하는 형식을 유연하게 할당 및 사용할 수 있게 해줍니다. [공변성(Covariance) 및 반공변성(Contravariance)](../../../docs/standard/generics/covariance-and-contravariance.md)을 참조하세요.  
   
 ### <a name="equality-and-ordering-comparisons"></a>같음 및 순서 비교  
  <xref:System> 네임스페이스에서 <xref:System.IComparable%601?displayProperty=nameWithType> 및 <xref:System.IEquatable%601?displayProperty=nameWithType> 제네릭 인터페이스는 제네릭이 아닌 대응 항목과 마찬가지로 각각 순서 비교와 같음 비교를 위한 메서드를 정의합니다. 형식은 이러한 인터페이스를 구현하여 비교 수행 능력을 제공합니다.  

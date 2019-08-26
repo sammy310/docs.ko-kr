@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fabd95d8fee6f6d8590036001ce2b0c7c23b12da
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2ea3bdea9c65b326953d16d7824114763ff4d017
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589858"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939403"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>DOM에서의 XML 문서 유효성 검사
 기본적으로 <xref:System.Xml.XmlDocument> 클래스는 기본적으로 DOM(문서 개체 모델)에서 XSD(XML 스키마 정의 언어) 스키마 또는 DTD(문서 종류 정의)에 대해 XML의 유효성을 검사하지 않으며 XML이 제대로 구성되었는지만 확인합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "64589858"
   
 5. 마지막으로 XML 문서와 함께 <xref:System.Xml.XmlReaderSettings> 개체를 <xref:System.Xml.XmlReader.Create%2A> 클래스의 <xref:System.Xml.XmlReader> 메서드에 전달하여 스키마의 유효성을 검사하는 <xref:System.Xml.XmlReader>를 만듭니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 예제에서는 스키마의 유효성을 검사하는 <xref:System.Xml.XmlReader>가 DOM에 로드된 XML 데이터의 유효성을 검사합니다. 또한 XML 문서를 잘못 수정하고 이 문서의 유효성을 다시 검사하므로 스키마 유효성 검사 오류가 발생합니다. 마지막으로 오류 중 하나를 수정한 다음 XML 문서의 일부에 대한 유효성을 부분적으로 검사합니다.  
   
  [!code-cpp[XmlDocumentValidation.Load#1](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlDocumentValidation.Load/CPP/XmlDocumentValidationExample.cpp#1)]
@@ -76,7 +76,7 @@ ms.locfileid: "64589858"
  유효성 검사 오류는 <xref:System.Xml.Schema.ValidationEventHandler>에서 처리합니다. <xref:System.Xml.Schema.ValidationEventHandler>를 <xref:System.Xml.XmlReaderSettings> 인스턴스에 지정하거나 <xref:System.Xml.XmlDocument.Validate%2A> 클래스의 <xref:System.Xml.XmlDocument> 메서드에 전달한 경우 <xref:System.Xml.Schema.ValidationEventHandler>는 스키마 유효성 검사 오류를 처리하며 그렇지 않은 경우에는 스키마 유효성 검사 오류가 발생할 때 <xref:System.Xml.Schema.XmlSchemaValidationException>이 일어납니다.  
   
 > [!NOTE]
->  <xref:System.Xml.Schema.ValidationEventHandler>에 의해 예외가 발생하여 프로세스가 중지되지 않은 경우에는 스키마 유효성 검사 오류가 발생해도 XML 데이터가 DOM에 로드됩니다.  
+> <xref:System.Xml.Schema.ValidationEventHandler>에 의해 예외가 발생하여 프로세스가 중지되지 않은 경우에는 스키마 유효성 검사 오류가 발생해도 XML 데이터가 DOM에 로드됩니다.  
 >   
 >  <xref:System.Xml.Schema.XmlSchemaValidationFlags.ReportValidationWarnings> 플래그를 <xref:System.Xml.XmlReaderSettings> 개체에 지정하지 않으면 스키마 유효성 검사 경고가 보고되지 않습니다.  
   

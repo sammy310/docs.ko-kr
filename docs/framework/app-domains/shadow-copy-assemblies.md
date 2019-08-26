@@ -8,25 +8,25 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30e013d39d403bef5fe060fd1c64dc435de5be06
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 531e8f576dcbe0fc272c61a57a689d993fb03445
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347386"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927905"
 ---
 # <a name="shadow-copying-assemblies"></a>어셈블리 섀도 복사
 섀도 복사를 사용하면 애플리케이션 도메인을 언로드하지 않고 애플리케이션 도메인에서 사용되는 어셈블리를 업데이트할 수 있습니다. 특히 이 기능은 ASP.NET 사이트와 같이 지속적으로 제공되어야 하는 애플리케이션에 유용합니다.  
   
 > [!IMPORTANT]
->  섀도 복사는 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 지원되지 않습니다.  
+> 섀도 복사는 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 지원되지 않습니다.  
   
  어셈블리가 로드될 때 공용 언어 런타임은 어셈블리 파일을 잠그므로 어셈블리가 언로드될 때까지 파일을 업데이트할 수 없습니다. 애플리케이션 도메인에서 어셈블리를 언로드하는 유일한 방법은 애플리케이션 도메인을 언로드하는 것이므로 일반적인 환경에서는 어셈블리를 사용 중인 모든 애플리케이션 도메인이 언로드될 때까지 디스크에서 어셈블리를 업데이트할 수 없습니다.  
   
  섀도 복사 파일에 대한 애플리케이션 도메인을 구성하면 애플리케이션 경로의 어셈블리가 다른 위치로 복사되고 해당 위치에서 로드됩니다. 복사본이 잠기지만 원래 어셈블리 파일은 잠금 해제되므로 업데이트할 수 있습니다.  
   
 > [!IMPORTANT]
->  섀도 복사될 수 있는 유일한 어셈블리는 애플리케이션 도메인이 구성될 때 <xref:System.AppDomainSetup.ApplicationBase%2A> 및 <xref:System.AppDomainSetup.PrivateBinPath%2A> 속성으로 지정된 애플리케이션 디렉터리나 하위 디렉터리에 저장된 어셈블리입니다. 전역 어셈블리 캐시에 저장된 어셈블리는 섀도 복사되지 않습니다.  
+> 섀도 복사될 수 있는 유일한 어셈블리는 애플리케이션 도메인이 구성될 때 <xref:System.AppDomainSetup.ApplicationBase%2A> 및 <xref:System.AppDomainSetup.PrivateBinPath%2A> 속성으로 지정된 애플리케이션 디렉터리나 하위 디렉터리에 저장된 어셈블리입니다. 전역 어셈블리 캐시에 저장된 어셈블리는 섀도 복사되지 않습니다.  
   
  이 자료에는 다음과 같은 섹션이 포함되어 있습니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "67347386"
      위치의 기본 경로는 <xref:System.AppDomainSetup.ApplicationName%2A> 속성을 <xref:System.AppDomainSetup.CachePath%2A> 속성에 연결하여 하위 디렉터리로 생성됩니다. 어셈블리는 기본 경로 자체가 아니라 이 경로의 하위 디렉터리로 섀도 복사됩니다.  
   
     > [!NOTE]
-    >  <xref:System.AppDomainSetup.ApplicationName%2A> 속성이 설정되지 않으면 <xref:System.AppDomainSetup.CachePath%2A> 속성이 무시되고 다운로드 캐시가 사용됩니다. 예외가 throw되지 않습니다.  
+    > <xref:System.AppDomainSetup.ApplicationName%2A> 속성이 설정되지 않으면 <xref:System.AppDomainSetup.CachePath%2A> 속성이 무시되고 다운로드 캐시가 사용됩니다. 예외가 throw되지 않습니다.  
   
      사용자 지정 위치를 지정하면 더 이상 필요하지 않은 디렉터리 및 복사된 파일을 정리해야 합니다. 이들 항목은 자동으로 삭제되지 않습니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "67347386"
      애플리케이션 도메인에 대해 섀도 복사를 사용하도록 설정하면 기본적으로 애플리케이션 경로(<xref:System.AppDomainSetup.ApplicationBase%2A> 및 <xref:System.AppDomainSetup.PrivateBinPath%2A> 속성을 통해 지정된 디렉터리)의 모든 어셈블리가 복사됩니다. 섀도 복사할 디렉터리만 포함된 문자열을 만들고 문자열을 <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> 속성에 할당하여 복사를 선택된 디렉터리로 제한할 수 있습니다. 디렉터리는 세미콜론으로 구분합니다. 선택된 디렉터리의 어셈블리만 섀도 복사됩니다.  
   
     > [!NOTE]
-    >  <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> 속성에 문자열을 할당하거나 이 속성을 `null`로 설정하면 <xref:System.AppDomainSetup.ApplicationBase%2A> 및 <xref:System.AppDomainSetup.PrivateBinPath%2A> 속성을 통해 지정된 디렉터리의 모든 어셈블리가 섀도 복사됩니다.  
+    > <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> 속성에 문자열을 할당하거나 이 속성을 `null`로 설정하면 <xref:System.AppDomainSetup.ApplicationBase%2A> 및 <xref:System.AppDomainSetup.PrivateBinPath%2A> 속성을 통해 지정된 디렉터리의 모든 어셈블리가 섀도 복사됩니다.  
   
     > [!IMPORTANT]
     >  세미콜론은 구분 기호 문자이므로 디렉터리 경로에 세미콜론을 포함하면 안 됩니다. 세미콜론에 대한 이스케이프 문자는 없습니다.  

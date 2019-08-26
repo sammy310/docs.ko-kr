@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2b2d5a935c2608b2315633538fc93dd62595558
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9e9308d6bf0eefaa60af17a721cd1c26827469eb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340037"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946840"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>관리되지 않는 DLL 함수 사용
 플랫폼 호출은 Windows API의 함수와 같이 DLL(동적 연결 라이브러리)에서 구현된 관리되지 않는 함수를 관리 코드가 호출할 수 있도록 하는 서비스입니다. 이 서비스는 내보낸 함수를 찾아서 호출하고 필요에 따라 상호 운용 경계를 가로질러 인수(정수, 문자열, 배열, 구조체 등)를 마샬링합니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "59340037"
 3. 메모리에서 함수를 찾고 인수를 스택에 넣어 필요에 따라 데이터를 마샬링합니다.  
   
     > [!NOTE]
-    >  DLL을 찾아서 로드하고 메모리에서 함수의 주소를 찾는 작업은 함수에 대한 첫 번째 호출에서만 수행됩니다.  
+    > DLL을 찾아서 로드하고 메모리에서 함수의 주소를 찾는 작업은 함수에 대한 첫 번째 호출에서만 수행됩니다.  
   
 4. 컨트롤을 관리되지 않는 함수에 전송합니다.  
   

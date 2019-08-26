@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
-ms.openlocfilehash: 633d378b2336b3ee166375a923252e0477e75127
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 88dc9c40a2b8ff0ac9bba26c991ba2a4ac2dcb43
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591663"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952427"
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>방법: 서비스에 대한 보안 컨텍스트 지정
 기본적으로 서비스는 로그인한 사용자와 다른 보안 컨텍스트에서 실행됩니다. 서비스는 기본 시스템 계정 `LocalSystem`의 컨텍스트에서 실행되므로, 시스템 리소스에 대해 사용자와는 다른 액세스 권한을 받습니다. 이 동작을 변경하여 서비스를 실행할 다른 사용자 계정을 지정할 수 있습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "64591663"
 2. 디자이너에서 `ProjectInstaller` 클래스에 액세스하고 작업 중인 서비스에 대한 서비스 프로세스 설치 관리자를 클릭합니다.  
   
     > [!NOTE]
-    >  모든 서비스 애플리케이션의 `ProjectInstaller` 클래스에는 적어도 두 개의 설치 구성 요소가 있는데, 프로젝트의 모든 서비스에 대한 프로세스를 설치하는 구성 요소와 애플리케이션에 포함된 각 서비스에 대한 설치 관리자 1개입니다. 이 인스턴스에서 <xref:System.ServiceProcess.ServiceProcessInstaller>을 선택할 수 있습니다.  
+    > 모든 서비스 애플리케이션의 `ProjectInstaller` 클래스에는 적어도 두 개의 설치 구성 요소가 있는데, 프로젝트의 모든 서비스에 대한 프로세스를 설치하는 구성 요소와 애플리케이션에 포함된 각 서비스에 대한 설치 관리자 1개입니다. 이 인스턴스에서 <xref:System.ServiceProcess.ServiceProcessInstaller>을 선택할 수 있습니다.  
   
 3. **속성** 창에서 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A>를 적절한 값으로 설정합니다.  
   

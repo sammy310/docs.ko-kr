@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f444dd512dc27f1b7cda017e2c2848ac41eb56de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5fd81a7eaf299217a17cd8051d77cd7a3695441e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305041"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939455"
 ---
 # <a name="traversing-xml-schemas"></a>XML 스키마 통과
 SOM(스키마 개체 모델) API를 사용하여 XML 스키마를 통과하면 SOM에 저장된 요소, 특성 및 형식에 액세스할 수 있습니다. SOM에 로드된 XML 스키마를 통과하는 것은 SOM API를 사용하여 XML 스키마를 편집하는 첫 번째 단계이기도 합니다.  
@@ -35,7 +35,7 @@ SOM(스키마 개체 모델) API를 사용하여 XML 스키마를 통과하면 S
 |<xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>|<xref:System.Xml.XmlAttribute>(스키마 네임스페이스에 속하지 않은 특성에 대한 액세스 제공)|  
   
 > [!NOTE]
->  <xref:System.Xml.Schema.XmlSchema.Items%2A> 속성을 제외하고 위의 표에 나열된 모든 속성은 스키마를 컴파일해야 사용할 수 있는 PSCI(Post-Schema-Compilation-Infoset) 속성입니다. <xref:System.Xml.Schema.XmlSchema.Items%2A> 속성은 스키마를 컴파일하기 전에 모든 전역 수준 요소, 특성 및 형식에 액세스하여 이를 편집하는 데 사용할 수 있는 pre-schema-compilation 속성입니다.  
+> <xref:System.Xml.Schema.XmlSchema.Items%2A> 속성을 제외하고 위의 표에 나열된 모든 속성은 스키마를 컴파일해야 사용할 수 있는 PSCI(Post-Schema-Compilation-Infoset) 속성입니다. <xref:System.Xml.Schema.XmlSchema.Items%2A> 속성은 스키마를 컴파일하기 전에 모든 전역 수준 요소, 특성 및 형식에 액세스하여 이를 편집하는 데 사용할 수 있는 pre-schema-compilation 속성입니다.  
 >   
 >  <xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A> 속성은 스키마 네임스페이스에 속하지 않은 모든 특성에 대한 액세스를 제공합니다. 이러한 특성은 스키마 프로세서로 처리되지 않습니다.  
   

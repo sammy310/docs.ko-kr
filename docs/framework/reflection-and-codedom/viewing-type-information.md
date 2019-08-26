@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7e7303a9-4064-4738-b4e7-b75974ed70d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2028bc8d9f160daef8afcdf881e1dfd514b4c94f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e658b2c86eecdbc45a9adde8d28cfb890dd591b9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190404"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956656"
 ---
 # <a name="viewing-type-information"></a>형식 정보 보기
 <xref:System.Type?displayProperty=nameWithType> 클래스는 리플렉션의 핵심입니다. 공용 언어 런타임은 리플렉션이 요청할 때 로드된 형식의 **Type**을 만듭니다. **Type** 개체의 메서드, 필드, 속성 및 중첩 클래스를 사용하여 해당 형식에 대한 모든 것을 찾을 수 있습니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "59190404"
  <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> 또는 <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType>를 사용하여 로드되지 않은 어셈블리에서 **Type** 개체를 가져와 원하는 형식 또는 형식 이름을 전달합니다. <xref:System.Type.GetType%2A?displayProperty=nameWithType>을 사용하여 이미 로드된 어셈블리에서 **Type** 개체를 가져옵니다. <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType> 및 <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType>를 사용하여 모듈 **Type** 개체를 가져옵니다.  
   
 > [!NOTE]
->  제네릭 형식 및 메서드를 검사하고 조작하려면 [리플렉션 및 제네릭 형식](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md) 및 [방법: 리플렉션을 사용하여 제네릭 형식 검사 및 인스턴스화](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)를 참조하세요.  
+> 제네릭 형식 및 메서드를 검사하고 조작하려면 [리플렉션 및 제네릭 형식](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md) 및 [방법: 리플렉션을 사용하여 제네릭 형식 검사 및 인스턴스화](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)를 참조하세요.  
   
  다음 예제에서는 어셈블리에 대한 <xref:System.Reflection.Assembly> 개체 및 모듈을 가져오는 데 필요한 구문을 보여 줍니다.  
   

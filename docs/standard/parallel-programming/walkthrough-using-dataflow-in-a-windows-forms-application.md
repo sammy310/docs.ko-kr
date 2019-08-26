@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4f8e25edb7d61e21406a5f7719f6dc98f686a9e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dbe5b5db580e06bfd3e5723addd404eae7950e6c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755056"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946344"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>연습: Windows Forms 애플리케이션에서 데이터 흐름 사용
 이 문서에서는 Windows Forms 애플리케이션에서 이미지 처리를 수행하는 데이터 흐름 블록의 네트워크를 만드는 방법을 보여 줍니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "67755056"
      [!code-csharp[TPLDataflow_CompositeImages#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#5)]  
   
     > [!NOTE]
-    >  `CreateCompositeBitmap` 메서드의 C# 버전에서는 포인터를 사용하여 <xref:System.Drawing.Bitmap?displayProperty=nameWithType> 개체를 효율적으로 처리할 수 있습니다. 따라서 [unsafe](~/docs/csharp/language-reference/keywords/unsafe.md) 키워드를 사용하려면 프로젝트에서 **안전하지 않은 코드 허용** 옵션을 사용하도록 설정해야 합니다. Visual C# 프로젝트에서 안전하지 않은 코드를 사용하는 방법에 대한 자세한 내용은 [빌드 페이지, 프로젝트 디자이너(C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)를 참조하세요.  
+    > `CreateCompositeBitmap` 메서드의 C# 버전에서는 포인터를 사용하여 <xref:System.Drawing.Bitmap?displayProperty=nameWithType> 개체를 효율적으로 처리할 수 있습니다. 따라서 [unsafe](../../csharp/language-reference/keywords/unsafe.md) 키워드를 사용하려면 프로젝트에서 **안전하지 않은 코드 허용** 옵션을 사용하도록 설정해야 합니다. Visual C# 프로젝트에서 안전하지 않은 코드를 사용하는 방법에 대한 자세한 내용은 [빌드 페이지, 프로젝트 디자이너(C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)를 참조하세요.  
   
  다음 표에서는 네트워크의 멤버를 설명합니다.  
   

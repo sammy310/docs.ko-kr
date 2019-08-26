@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 342c570bff89d4c03780cdc280199c722b53890a
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: c082e5dbb1f7b2bb8c5236d0c480302a6e387ebe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170459"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910999"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 버전 및 종속성
 .NET Framework의 각 버전에는 CLR(공용 언어 런타임), 기본 클래스 라이브러리 및 기타 관리되는 라이브러리가 포함되어 있습니다. 이 항목에서는 버전별 .NET Framework의 주요 기능에 대해 설명하고 기본 CLR 버전 및 관련 개발 환경에 대한 정보를 제공하며 Windows 운영 체제별로 설치된 버전을 확인합니다.  
   
 > [!NOTE]
->  .NET Framework 다운로드 및 설치에 대한 자세한 내용은 [개발자용 .NET Framework 설치](../../../docs/framework/install/guide-for-developers.md)를 참조하세요.  
+> .NET Framework 다운로드 및 설치에 대한 자세한 내용은 [개발자용 .NET Framework 설치](../../../docs/framework/install/guide-for-developers.md)를 참조하세요.  
   
  다음 테이블에는 .NET Framework 버전 기록이 요약되어 있으며 Visual Studio, Windows 및 Windows Server와의 상관 관계가 나와 있습니다. Visual Studio에서는 나열된 .NET Framework 버전으로 사용이 제한되지 않도록 멀티 타기팅 기능을 제공합니다.  
   

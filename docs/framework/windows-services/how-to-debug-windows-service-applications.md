@@ -9,12 +9,12 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 1abb64f7d76b772168ed97024f5f1381670c6882
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 71b2b1d32c06afca4abd89df4f6449dacb32046c
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321447"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988526"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>방법: Windows 서비스 애플리케이션 디버그
 서비스는 Visual Studio 내에서가 아니라 서비스 제어 관리자의 컨텍스트 내에서 실행해야 합니다. 따라서 서비스를 디버그하는 것은 다른 Visual Studio 애플리케이션 형식을 디버그하는 것처럼 단순하지 않습니다. 서비스를 디버그하려면 서비스를 시작한 다음 서비스가 실행되는 프로세스에 디버거를 연결해야 합니다. 그리고 나면 Visual Studio의 모든 표준 디버깅 기능을 사용하여 애플리케이션을 디버그할 수 있습니다.  
@@ -29,10 +29,10 @@ ms.locfileid: "59321447"
  이 문서에서는 로컬 컴퓨터에서 실행되는 서비스를 디버그하는 방법에 대해 다루지만, 원격 컴퓨터에서 실행되는 Windows 서비스도 디버그할 수 있습니다. [원격 디버깅](/visualstudio/debugger/debug-installed-app-package)을 참조하세요.  
   
 > [!NOTE]
->  서비스 제어 관리자는 모든 서비스 시작 시도에 대해 30초의 제한을 적용하므로 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 메서드를 디버그하는 작업은 까다로울 수 있습니다. 자세한 내용은 [문제 해결: Windows 서비스 디버깅](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md)을 참조하세요.  
+> 서비스 제어 관리자는 모든 서비스 시작 시도에 대해 30초의 제한을 적용하므로 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 메서드를 디버그하는 작업은 까다로울 수 있습니다. 자세한 내용은 [문제 해결: Windows 서비스 디버깅](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md)을 참조하세요.  
   
 > [!WARNING]
->  디버깅을 위한 의미 있는 정보를 가져오려면 Visual Studio 디버거가 디버그 중인 이진 파일에 대한 기호 파일을 찾아야 합니다. Visual Studio에서 빌드한 서비스를 디버그하는 경우 기호 파일(.pdb 파일)은 실행 파일이나 라이브러리와 같은 폴더에 있으며 디버거는 이러한 파일을 자동으로 로드합니다. 직접 빌드하지 않은 서비스를 디버그할 때는 먼저 서비스의 기호를 찾아 디버거가 해당 기호를 검색할 수 있는지 확인해야 합니다. [Visual Studio 디버거에서 기호 파일(.pdb) 및 소스 파일 지정](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)을 참조하세요. 시스템 프로세스를 디버그하거나 서비스에 시스템 호출을 위한 기호를 포함하려는 경우에는 Microsoft 기호 서버를 추가해야 합니다. [디버깅 기호](/windows/desktop/DxTechArts/debugging-with-symbols)를 참조하세요.  
+> 디버깅을 위한 의미 있는 정보를 가져오려면 Visual Studio 디버거가 디버그 중인 이진 파일에 대한 기호 파일을 찾아야 합니다. Visual Studio에서 빌드한 서비스를 디버그하는 경우 기호 파일(.pdb 파일)은 실행 파일이나 라이브러리와 같은 폴더에 있으며 디버거는 이러한 파일을 자동으로 로드합니다. 직접 빌드하지 않은 서비스를 디버그할 때는 먼저 서비스의 기호를 찾아 디버거가 해당 기호를 검색할 수 있는지 확인해야 합니다. [Visual Studio 디버거에서 기호 파일(.pdb) 및 소스 파일 지정](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)을 참조하세요. 시스템 프로세스를 디버그하거나 서비스에 시스템 호출을 위한 기호를 포함하려는 경우에는 Microsoft 기호 서버를 추가해야 합니다. [디버깅 기호](/windows/desktop/DxTechArts/debugging-with-symbols)를 참조하세요.  
   
 ### <a name="to-debug-a-service"></a>서비스를 디버깅하려면  
   
@@ -62,7 +62,7 @@ ms.locfileid: "59321447"
 9. 적절한 옵션을 선택하고 **확인** 단추를 선택하여 대화 상자를 닫습니다.  
   
     > [!NOTE]
-    >  이제 디버그 모드가 설정되었습니다.  
+    > 이제 디버그 모드가 설정되었습니다.  
   
 10. 코드에서 사용할 중단점을 설정합니다.  
   

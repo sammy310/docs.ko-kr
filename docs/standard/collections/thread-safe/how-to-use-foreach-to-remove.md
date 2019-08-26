@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 2096103c-22f7-420d-b631-f102bc33a6dd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d13f123953c32cae01df501c0e251ec29b0478b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 10fa77f6948a10959db5f79c37692eba67d47ecd
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367507"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666548"
 ---
 # <a name="how-to-use-foreach-to-remove-items-in-a-blockingcollection"></a>방법: ForEach를 사용하여 BlockingCollection의 항목 제거
 
-<xref:System.Collections.Concurrent.BlockingCollection%601.Take%2A> 및 <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> 메서드를 사용하여 <xref:System.Collections.Concurrent.BlockingCollection%601>에서 항목을 가져오는 것 외에도, 추가가 완료되고 컬렉션이 빈 상태가 될 때까지 Visual Basic에서 [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md)([For Each](~/docs/visual-basic/language-reference/statements/for-each-next-statement.md))를 사용하여 항목을 제거할 수 있습니다. 일반적인 `foreach`(`For Each`) 루프와 달리 이 열거자는 항목을 제거하여 소스 컬렉션을 수정하기 때문에 이 방식을 *열거형 변경* 또는 *열거형 소비*라고 합니다.
+<xref:System.Collections.Concurrent.BlockingCollection%601.Take%2A> 및 <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> 메서드를 사용하여 <xref:System.Collections.Concurrent.BlockingCollection%601>에서 항목을 가져오는 것 외에도, 추가가 완료되고 컬렉션이 빈 상태가 될 때까지 Visual Basic에서 [foreach](../../../csharp/language-reference/keywords/foreach-in.md)([For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md))를 사용하여 항목을 제거할 수 있습니다. 일반적인 `foreach`(`For Each`) 루프와 달리 이 열거자는 항목을 제거하여 소스 컬렉션을 수정하기 때문에 이 방식을 *열거형 변경* 또는 *열거형 소비*라고 합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에서는 `foreach`(`For Each`) 루프를 사용하여 <xref:System.Collections.Concurrent.BlockingCollection%601>의 항목을 모두 제거하는 방법을 보여 줍니다.
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ceae33501330719a27e2d0015c21249dca62d551
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 2ddec748dc400418c21bfa8fab6fd2735d74af6d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566858"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941790"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>런타임에서 어셈블리를 찾는 방법
 .NET Framework 애플리케이션을 성공적으로 배포하려면 공용 언어 런타임이 애플리케이션을 구성하는 어셈블리를 찾아서 바인딩하는 방법을 이해해야 합니다. 기본적으로 런타임은 애플리케이션 빌드 시 사용된 정확한 버전의 어셈블리로 바인딩을 시도합니다. 이 기본 동작은 구성 파일 설정으로 재정의할 수 있습니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "69566858"
  공용 언어 런타임은 어셈블리를 찾아서 어셈블리 참조를 확인하려고 할 때 다양 한 단계를 수행합니다. 각 단계는 다음 섹션에서 설명합니다. 검색이라는 용어는 대개 런타임에서 어셈블리를 찾는 방법을 설명할 때 사용됩니다. 해당 이름 및 문화권에 따라 어셈블리를 찾는 데 사용되는 추론 집합을 가리킵니다.  
   
 > [!NOTE]
->  Windows SDK에 포함된 [어셈블리 바인딩 로그 뷰어(Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)를 사용하여 로그 파일의 바인딩 정보를 볼 수 있습니다.  
+> Windows SDK에 포함된 [어셈블리 바인딩 로그 뷰어(Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)를 사용하여 로그 파일의 바인딩 정보를 볼 수 있습니다.  
   
 ## <a name="initiating-the-bind"></a>바인딩 시작  
  런타임에서 다른 어셈블리에 대한 참조를 확인하려고 시도하면 어셈블리를 찾아서 바인딩하는 프로세스가 시작됩니다. 이 참조는 정적이거나 동적일 수 있습니다. 컴파일러는 빌드 타임에 정적 참조를 어셈블리 매니페스트 메타데이터에 기록합니다. 동적 참조는 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>와 같은 다양한 메서드의 호출 결과로 즉석에서 생성됩니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "69566858"
  <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> 등의 메서드를 사용하여 동적 참조를 만들고 부분 정보만 제공할 수 있습니다. 그런 다음 애플리케이션 구성 파일에서 [\<qualifyAssembly&gt;](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md) 요소를 사용하여 참조를 한정할 수 있습니다. 코드 대신 애플리케이션 구성 파일에서 이 요소를 통해 전체 참조 정보(이름, 버전, 문화권 및 해당하는 경우 공개 키 토큰)를 제공할 수 있습니다. 애플리케이션 디렉터리 외부의 어셈블리에 대한 참조를 정규화하려는 경우 또는 전역 어셈블리 캐시에서 어셈블리를 참조하려고 하지만 코드 대신 구성 파일에서 전체 참조를 편리하게 지정하려는 경우 이 기술을 사용합니다.  
   
 > [!NOTE]
->  이 형식의 부분 참조는 여러 애플리케이션 간에 공유되는 어셈블리와 함께 사용하면 안 됩니다. 어셈블리 단위가 아니라 애플리케이션 단위로 구성 설정이 적용되기 때문에 이 형식의 부분 참조를 사용하는 공유 어셈블리에서는 공유 어셈블리를 사용하는 각 애플리케이션의 구성 파일에 적격한 정보가 있어야 합니다.  
+> 이 형식의 부분 참조는 여러 애플리케이션 간에 공유되는 어셈블리와 함께 사용하면 안 됩니다. 어셈블리 단위가 아니라 애플리케이션 단위로 구성 설정이 적용되기 때문에 이 형식의 부분 참조를 사용하는 공유 어셈블리에서는 공유 어셈블리를 사용하는 각 애플리케이션의 구성 파일에 적격한 정보가 있어야 합니다.  
   
  런타임은 다음 단계를 사용하여 어셈블리 참조를 확인합니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "69566858"
 2. [어셈블리 이름이 이전에 바인딩되었는지 여부를 확인](#step2) 하고, 바인딩된 경우 이전에 로드된 어셈블리를 사용합니다. 이전의 어셈블리 로드 요청이 실패한 경우 어셈블리 로드를 시도하지 않고 요청이 즉시 실패합니다.  
   
     > [!NOTE]
-    >  어셈블리 바인딩 실패 캐싱은 .NET Framework 버전 2.0의 새로운 기능입니다.  
+    > 어셈블리 바인딩 실패 캐싱은 .NET Framework 버전 2.0의 새로운 기능입니다.  
   
 3. [전역 어셈블리 캐시를 확인](#step3)합니다. 어셈블리가 있으면 런타임에서 이 어셈블리를 사용합니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "69566858"
  이러한 파일은 동일한 구문을 따르며 바인딩 리디렉션, 코드 위치 및 특정 어셈블리에 대한 바인딩 모드와 같은 정보를 제공합니다. 각 구성 파일에는 바인딩 프로세스를 리디렉션하는 [\<assemblyBinding> 요소](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)가 포함될 수 있습니다. [\<assemblyBinding> 요소](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)의 자식 요소에는 [\<dependentAssembly> 요소](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)가 포함됩니다. [\<dependentAssembly> 요소](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)의 자식 요소에는 [\<assemblyIdentity> 요소](/visualstudio/deployment/assemblyidentity-element-clickonce-deployment), [\<bindingRedirect> 요소](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md) 및 [\<codeBase> 요소](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)가 포함됩니다.  
   
 > [!NOTE]
->  세 개의 구성 파일에서 구성 정보를 확인할 수 있습니다. 모든 요소가 모든 구성 파일에서 유효한 것은 아닙니다. 예를 들어 바인딩 모드 및 전용 경로 정보는 애플리케이션 구성 파일에만 포함될 수 있습니다. 각 파일에 포함된 정보의 전체 목록은 [구성 파일을 사용하여 앱 구성](../../../docs/framework/configure-apps/index.md)을 참조하세요.  
+> 세 개의 구성 파일에서 구성 정보를 확인할 수 있습니다. 모든 요소가 모든 구성 파일에서 유효한 것은 아닙니다. 예를 들어 바인딩 모드 및 전용 경로 정보는 애플리케이션 구성 파일에만 포함될 수 있습니다. 각 파일에 포함된 정보의 전체 목록은 [구성 파일을 사용하여 앱 구성](../../../docs/framework/configure-apps/index.md)을 참조하세요.  
   
 ### <a name="application-configuration-file"></a>애플리케이션 구성 파일  
  첫째, 공용 언어 런타임은 애플리케이션 구성 파일에서 호출 어셈블리의 매니페스트에 저장된 버전 정보를 재정의하는 정보를 확인합니다. 애플리케이션 구성 파일은 애플리케이션과 함께 배포될 수 있지만 애플리케이션 실행에 필요하지는 않습니다. 일반적으로 이 파일은 즉시 검색되지만 Internet Explorer 웹 기반 시나리오와 같이 애플리케이션 기준 위치가 원격 컴퓨터에 있는 경우 구성 파일을 다운로드해야 합니다.  
@@ -123,7 +123,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  `compatkey.dat` 는 강력한 이름의 키 파일입니다. 이 명령은 전역 어셈블리 캐시에 배치할 수 있는 강력한 이름의 어셈블리를 만듭니다.  
   
 > [!NOTE]
->  게시자 정책은 공유 구성 요소를 사용하는 모든 애플리케이션에 영향을 줍니다.  
+> 게시자 정책은 공유 구성 요소를 사용하는 모든 애플리케이션에 영향을 줍니다.  
   
  게시자 정책 구성 파일은 애플리케이션(즉, 어셈블리 매니페스트 또는 애플리케이션 구성 파일)에서 제공되는 버전 정보를 재정의합니다. 어셈블리 매니페스트에 지정된 버전을 리디렉션하는 문이 애플리케이션 구성 파일에 없는 경우 게시자 정책 파일이 어셈블리 매니페스트에 지정된 버전을 재정의합니다. 그러나 애플리케이션 구성 파일에 리디렉션 문이 있으면 게시자 정책이 매니페스트에 지정된 버전 대신 해당 버전을 재정의합니다.  
   
@@ -144,7 +144,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  이전의 어셈블리 요청이 실패한 경우 어셈블리 로드를 시도하지 않고 어셈블리에 대한 이후 요청이 즉시 실패합니다. .NET Framework 버전 2.0부터 어셈블리 바인딩 실패가 캐시되며 캐시된 정보는 어셈블리 로드를 시도할지 여부를 확인하는 데 사용됩니다.  
   
 > [!NOTE]
->  바인딩 실패를 캐시하지 않은 .NET Framework 버전 1.0 및 1.1의 동작으로 되돌리려면 [\<disableCachingBindingFailures> 요소](../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)를 구성 파일에 포함합니다.  
+> 바인딩 실패를 캐시하지 않은 .NET Framework 버전 1.0 및 1.1의 동작으로 되돌리려면 [\<disableCachingBindingFailures> 요소](../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)를 구성 파일에 포함합니다.  
   
 <a name="step3"></a>   
 ## <a name="step-3-checking-the-global-assembly-cache"></a>3단계: 글로벌 어셈블리 캐시 확인  
@@ -159,7 +159,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 2. 그런 다음 런타임은 이 섹션의 뒷부분에 지정된 규칙을 사용하여 참조된 어셈블리를 검색합니다.  
   
 > [!NOTE]
->  같은 디렉터리에 여러 버전의 어셈블리가 있고 그중에서 특정 버전을 참조하려는 경우 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 요소의 `privatePath` 특성 대신 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 요소를 사용해야 합니다. [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 요소를 사용할 경우 참조되는 단순 어셈블리 이름에 일치하는 어셈블리를 런타임에서 처음 찾았으면 정확하게 일치하는지 여부에 관계없이 검색이 중지됩니다. 정확하게 일치하는 항목이면 해당 어셈블리가 사용됩니다. 정확하게 일치하는 항목이 아니면 검색이 중지되고 바인딩이 실패합니다.  
+> 같은 디렉터리에 여러 버전의 어셈블리가 있고 그중에서 특정 버전을 참조하려는 경우 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 요소의 `privatePath` 특성 대신 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 요소를 사용해야 합니다. [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 요소를 사용할 경우 참조되는 단순 어셈블리 이름에 일치하는 어셈블리를 런타임에서 처음 찾았으면 정확하게 일치하는지 여부에 관계없이 검색이 중지됩니다. 정확하게 일치하는 항목이면 해당 어셈블리가 사용됩니다. 정확하게 일치하는 항목이 아니면 검색이 중지되고 바인딩이 실패합니다.  
   
 ### <a name="locating-the-assembly-through-codebases"></a>코드베이스를 통해 어셈블리 찾기  
  구성 파일의 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 요소를 사용하여 코드베이스 정보를 제공할 수 있습니다. 이 코드베이스는 항상 런타임이 참조된 어셈블리를 검색하기 전에 확인됩니다. 최종 버전 리디렉션이 포함된 게시자 정책 파일에도 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 요소가 포함되어 있으면, [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 요소가 사용됩니다. 예를 들어 애플리케이션 구성 파일에서 [\<codeBase&gt;](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 요소가 지정되고 애플리케이션 정보를 재정의하는 게시자 정책 파일에서도 [\<codeBase&gt;](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 요소가 지정되면 게시자 정책 파일의 [\<codeBase&gt;](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 요소가 사용됩니다.  
@@ -167,7 +167,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 요소에서 지정한 위치에 일치하는 항목이 없을 경우 바인드 요청은 실패하며 더 이상 다음 단계가 수행되지 않습니다. 런타임에서 어셈블리가 호출 어셈블리의 조건과 일치한다고 결정하면 해당 어셈블리가 사용됩니다. 지정한 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 요소에서 지정된 파일이 로드되면 런타임은 해당 이름, 버전, 문화권 및 공개 키가 호출하는 어셈블리의 참조와 일치하는지 확인합니다.  
   
 > [!NOTE]
->  애플리케이션의 루트 디렉터리 외부에 있는 참조된 어셈블리는 강력한 이름이 있어야 하며 전역 어셈블리 캐시에 설치되거나 [\<codeBase&gt;](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 요소를 사용하여 지정되어야 합니다.  
+> 애플리케이션의 루트 디렉터리 외부에 있는 참조된 어셈블리는 강력한 이름이 있어야 하며 전역 어셈블리 캐시에 설치되거나 [\<codeBase&gt;](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 요소를 사용하여 지정되어야 합니다.  
   
 ### <a name="locating-the-assembly-through-probing"></a>검색을 통해 어셈블리 찾기  
  애플리케이션 구성 파일에 [\<codeBase&gt;](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 요소가 없을 경우 런타임에서는 다음 네 가지 기준을 사용하여 어셈블리를 조사합니다.  

@@ -2,12 +2,12 @@
 title: 개체 지향 프로그래밍(C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 8bf02cbfca30d6dfc29c4e5e6c30a5013931e71b
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 50b38833582ebe46836ccfab4e1ebeb98b53a96e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398074"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659873"
 ---
 # <a name="object-oriented-programming-c"></a>개체 지향 프로그래밍(C#)
 
@@ -79,9 +79,9 @@ struct SampleStruct
 
 자세한 내용은 다음을 참조하세요.
 
-- [class](../../../csharp/language-reference/keywords/class.md)
+- [class](../../language-reference/keywords/class.md)
 
-- [struct](../../../csharp/language-reference/keywords/struct.md)
+- [struct](../../language-reference/keywords/struct.md)
 
 ### <a name="Members"></a> 클래스 멤버
 
@@ -133,9 +133,9 @@ class SampleClass
 
 자세한 내용은 다음을 참조하세요.
 
-- [get](../../../csharp/language-reference/keywords/get.md)
+- [get](../../language-reference/keywords/get.md)
 
-- [set](../../../csharp/language-reference/keywords/set.md)
+- [set](../../language-reference/keywords/set.md)
 
 #### <a name="Methods"></a> 메서드
 
@@ -166,9 +166,9 @@ public int sampleMethod(int sampleParam) {}
 
 자세한 내용은 다음을 참조하세요.
 
-- [메서드](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [메서드](../classes-and-structs/methods.md)
 
-- [확장명 메서드](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [확장명 메서드](../classes-and-structs/extension-methods.md)
 
 #### <a name="Constructors"></a> 생성자
 
@@ -188,7 +188,7 @@ public class SampleClass
 
 자세한 내용은 다음을 참조하세요.
 
-[생성자](../../../csharp/programming-guide/classes-and-structs/constructors.md).
+[생성자](../classes-and-structs/constructors.md).
 
 #### <a name="Finalizers"></a> 종료자
 
@@ -200,7 +200,7 @@ public class SampleClass
 
 클래스나 개체에서는 특정 상황이 발생할 때 이벤트를 통해 다른 클래스나 개체에 이를 알려 줄 수 있습니다. 이벤트를 보내거나 발생시키는 클래스를 *게시자*라고 하며 이벤트를 받거나 처리하는 클래스를 *구독자*라고 합니다. 이벤트를 발생시키고 처리하는 방법에 대한 자세한 내용은 [이벤트](../../../standard/events/index.md)를 참조하세요.
 
-- 클래스에서 이벤트를 선언하려면 [event](../../../csharp/language-reference/keywords/event.md) 키워드를 사용합니다.
+- 클래스에서 이벤트를 선언하려면 [event](../../language-reference/keywords/event.md) 키워드를 사용합니다.
 
 - 이벤트를 발생시키려면 이벤트 대리자를 호출합니다.
 
@@ -234,14 +234,14 @@ Container.Nested nestedInstance = new Container.Nested()
 
 |C# 한정자|정의|
 |------------------|----------------|
-|[public](../../../csharp/language-reference/keywords/public.md)|동일한 어셈블리의 다른 코드나 해당 어셈블리를 참조하는 다른 어셈블리의 코드에서 형식이나 멤버에 액세스할 수 있습니다.|
-|[private](../../../csharp/language-reference/keywords/private.md)|동일한 클래스의 코드에서만 형식이나 멤버에 액세스할 수 있습니다.|
-|[protected](../../../csharp/language-reference/keywords/protected.md)|동일한 클래스의 코드나 파생 클래스의 코드에서만 형식이나 멤버에 액세스할 수 있습니다.|
-|[internal](../../../csharp/language-reference/keywords/internal.md)|동일한 어셈블리의 코드에서는 형식이나 멤버에 액세스할 수 있지만 다른 어셈블리의 코드에서는 액세스할 수 없습니다.|
-|[protected internal](../../../csharp/language-reference/keywords/protected-internal.md)|동일한 어셈블리의 코드 또는 다른 어셈블리의 파생 클래스에서 형식이나 멤버에 액세스할 수 있습니다.|
-|[private protected](../../../csharp/language-reference/keywords/private-protected.md)|기본 클래스 어셈블리 내 동일한 클래스 또는 파생 클래스의 코드에서 형식이나 멤버에 액세스할 수 있습니다.|
+|[public](../../language-reference/keywords/public.md)|동일한 어셈블리의 다른 코드나 해당 어셈블리를 참조하는 다른 어셈블리의 코드에서 형식이나 멤버에 액세스할 수 있습니다.|
+|[private](../../language-reference/keywords/private.md)|동일한 클래스의 코드에서만 형식이나 멤버에 액세스할 수 있습니다.|
+|[protected](../../language-reference/keywords/protected.md)|동일한 클래스의 코드나 파생 클래스의 코드에서만 형식이나 멤버에 액세스할 수 있습니다.|
+|[internal](../../language-reference/keywords/internal.md)|동일한 어셈블리의 코드에서는 형식이나 멤버에 액세스할 수 있지만 다른 어셈블리의 코드에서는 액세스할 수 없습니다.|
+|[protected internal](../../language-reference/keywords/protected-internal.md)|동일한 어셈블리의 코드 또는 다른 어셈블리의 파생 클래스에서 형식이나 멤버에 액세스할 수 있습니다.|
+|[private protected](../../language-reference/keywords/private-protected.md)|기본 클래스 어셈블리 내 동일한 클래스 또는 파생 클래스의 코드에서 형식이나 멤버에 액세스할 수 있습니다.|
 
-자세한 내용은 [액세스 한정자](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)를 참조하세요.
+자세한 내용은 [액세스 한정자](../classes-and-structs/access-modifiers.md)를 참조하세요.
 
 ### <a name="InstantiatingClasses"></a> 클래스 인스턴스화
 
@@ -270,9 +270,9 @@ SampleClass sampleObject = new SampleClass
 
 자세한 내용은 다음을 참조하세요.
 
-- [new 연산자](../../../csharp/language-reference/operators/new-operator.md)
+- [new 연산자](../../language-reference/operators/new-operator.md)
 
-- [개체 이니셜라이저 및 컬렉션 이니셜라이저](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [개체 이니셜라이저 및 컬렉션 이니셜라이저](../classes-and-structs/object-and-collection-initializers.md)
 
 ### <a name="Static"></a> 정적 클래스 및 멤버
 
@@ -295,7 +295,7 @@ Console.WriteLine(SampleClass.SampleString);
 
 C#의 정적 클래스는 정적 멤버만 포함하며 인스턴스화할 수 없습니다. 또한 정적 멤버는 비정적 속성, 필드 또는 메서드에 액세스할 수 없습니다.
 
-자세한 내용은 [static](../../../csharp/language-reference/keywords/static.md)을 참조하세요.
+자세한 내용은 [static](../../language-reference/keywords/static.md)을 참조하세요.
 
 ### <a name="AnonymousTypes"></a> 무명 형식
 
@@ -309,7 +309,7 @@ var sampleObject =
     new { FirstProperty = "A", SecondProperty = "B" };
 ```
 
-자세한 내용은 다음을 참조하세요. [익명 형식](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)을 참조하세요.
+자세한 내용은 다음을 참조하세요. [익명 형식](../classes-and-structs/anonymous-types.md)을 참조하세요.
 
 ## <a name="Inheritance"></a> 상속
 
@@ -340,9 +340,9 @@ public abstract class B { }
 
 자세한 내용은 다음을 참조하세요.
 
-- [sealed](../../../csharp/language-reference/keywords/sealed.md)
+- [sealed](../../language-reference/keywords/sealed.md)
 
-- [abstract](../../../csharp/language-reference/keywords/abstract.md)
+- [abstract](../../language-reference/keywords/abstract.md)
 
 ### <a name="Overriding"></a> 멤버 재정의
 
@@ -352,10 +352,10 @@ public abstract class B { }
 
 |C# 한정자|정의|
 |------------------|----------------|
-|[virtual](../../../csharp/language-reference/keywords/virtual.md)|파생 클래스에서 클래스 멤버를 재정의할 수 있도록 합니다.|
-|[override](../../../csharp/language-reference/keywords/override.md)|기본 클래스에 정의된 가상(재정의 가능) 멤버를 재정의합니다.|
-|[abstract](../../../csharp/language-reference/keywords/abstract.md)|파생 클래스에서 클래스 멤버가 재정의되도록 합니다.|
-|[new 한정자](../../../csharp/language-reference/keywords/new-modifier.md)|기본 클래스에서 상속된 멤버를 숨깁니다.|
+|[virtual](../../language-reference/keywords/virtual.md)|파생 클래스에서 클래스 멤버를 재정의할 수 있도록 합니다.|
+|[override](../../language-reference/keywords/override.md)|기본 클래스에 정의된 가상(재정의 가능) 멤버를 재정의합니다.|
+|[abstract](../../language-reference/keywords/abstract.md)|파생 클래스에서 클래스 멤버가 재정의되도록 합니다.|
+|[new 한정자](../../language-reference/keywords/new-modifier.md)|기본 클래스에서 상속된 멤버를 숨깁니다.|
 
 ## <a name="Interfaces"></a> 인터페이스
 
@@ -384,9 +384,9 @@ class SampleClass : ISampleInterface
 
 자세한 내용은 다음을 참조하세요.
 
-[인터페이스](../../../csharp/programming-guide/interfaces/index.md)
+[인터페이스](../interfaces/index.md)
 
-[interface](../../../csharp/language-reference/keywords/interface.md)
+[interface](../../language-reference/keywords/interface.md)
 
 ## <a name="Generics"></a> 제네릭
 
@@ -410,9 +410,9 @@ sampleObject.Field = "Sample string";
 
 자세한 내용은 다음을 참조하세요.
 
-- [제네릭](~/docs/standard/generics/index.md)
+- [제네릭](../../../standard/generics/index.md)
 
-- [제네릭](../../../csharp/programming-guide/generics/index.md)
+- [제네릭](../generics/index.md)
 
 ## <a name="Delegates"></a> 대리자
 
@@ -448,10 +448,10 @@ class SampleClass
 
 자세한 내용은 다음을 참조하세요.
 
-- [대리자](../../../csharp/programming-guide/delegates/index.md)
+- [대리자](../delegates/index.md)
 
-- [delegate](../../../csharp/language-reference/keywords/delegate.md)
+- [delegate](../../language-reference/keywords/delegate.md)
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
+- [C# 프로그래밍 가이드](../index.md)

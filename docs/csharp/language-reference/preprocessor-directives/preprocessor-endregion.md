@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - '#endregion directive [C#]'
 ms.assetid: 16099660-91b2-49e5-9646-77f9ef069526
-ms.openlocfilehash: 4f08672003a15e51cb3a5a990a2e760878689ba5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba99d2df7e5cf1b40cc240da391b9dc8655ab2e2
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727887"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605679"
 ---
 # <a name="endregion-c-reference"></a>#endregion(C# 참조)
-`#endregion`은 [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md) 블록의 끝을 표시합니다. 예:  
+`#endregion`은 [#region](./preprocessor-region.md) 블록의 끝을 표시합니다. 예:  
   
 ```csharp
 #region MyClass definition  
@@ -30,6 +30,6 @@ class MyClass
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 참조](../../../csharp/language-reference/index.md)
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [C# 전처리기 지시문](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [C# 참조](../index.md)
+- [C# 프로그래밍 가이드](../../programming-guide/index.md)
+- [C# 전처리기 지시문](./index.md)

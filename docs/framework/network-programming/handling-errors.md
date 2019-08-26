@@ -31,12 +31,12 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: 26e2a25855485bdd19d30e8497d0f75b7d4432e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 255a4ab3d6d6e3fc133e809ce360b25d6f82c8d7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097163"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940076"
 ---
 # <a name="handling-errors"></a>오류 처리
 <xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse> 클래스는 시스템 예외(예: <xref:System.ArgumentException>) 및 웹 관련 예외(<xref:System.Net.WebRequest.GetResponse%2A> 메서드에서 throw된 <xref:System.Net.WebException>)를 둘 다 throw합니다.  
@@ -169,5 +169,5 @@ End Try
   
 ## <a name="see-also"></a>참고 항목
 
-- [예외 처리 기본 사항](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
+- [예외 처리 기본 사항](../../standard/exceptions/exception-handling-fundamentals.md)
 - [데이터 요청](../../../docs/framework/network-programming/requesting-data.md)

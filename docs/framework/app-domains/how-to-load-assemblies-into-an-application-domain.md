@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4d785ae9b3bce0b5c77414057ef063d6e9d3e14a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f21126361ce69ab14d18e12d2787b2c264116b02
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593586"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921532"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>방법: 애플리케이션 도메인에 어셈블리 로드
 애플리케이션 도메인에 어셈블리를 로드하는 방법에는 여러 가지가 있습니다. <xref:System.Reflection.Assembly?displayProperty=nameWithType> 클래스의 `static`(Visual Basic에서는 `Shared`) <xref:System.Reflection.Assembly.Load%2A> 메서드를 사용하는 것이 좋습니다. 어셈블리를 로드할 수 있는 다른 방법은 다음과 같습니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "64593586"
 - <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> 및 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 메서드는 리플렉션 전용 컨텍스트에 어셈블리를 로드합니다. 이 컨텍스트에 로드된 어셈블리는 검사할 수만 있고 실행할 수 없으므로 다른 플랫폼을 대상으로 하는 어셈블리를 검사할 수 있습니다. [방법: 리플렉션 전용 컨텍스트에 어셈블리 로드](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)를 참조하세요.  
   
 > [!NOTE]
->  리플렉션 전용 컨텍스트는 .NET Framework 버전 2.0의 새로운 기능입니다.  
+> 리플렉션 전용 컨텍스트는 .NET Framework 버전 2.0의 새로운 기능입니다.  
   
 - <xref:System.AppDomain> 클래스의 <xref:System.AppDomain.CreateInstance%2A> 및 <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>과 같은 메서드는 애플리케이션 도메인에 어셈블리를 로드할 수 있습니다.  
   
@@ -35,11 +35,11 @@ ms.locfileid: "64593586"
 - <xref:System.AppDomain?displayProperty=nameWithType> 클래스의 <xref:System.AppDomain.Load%2A> 메서드는 어셈블리를 로드할 수 있지만 COM 상호 운용성을 위해 주로 사용됩니다. 호출 시 사용된 애플리케이션 도메인 이외의 애플리케이션 도메인에 어셈블리를 로드하는 데 사용하면 안 됩니다.  
   
 > [!NOTE]
->  .NET Framework 버전 2.0부터 런타임은 현재 로드된 런타임보다 높은 버전 번호를 가진 .NET Framework 버전으로 컴파일된 어셈블리를 로드하지 않습니다. 이는 버전 번호의 주 버전 및 부 버전 구성 요소 조합에 적용됩니다.  
+> .NET Framework 버전 2.0부터 런타임은 현재 로드된 런타임보다 높은 버전 번호를 가진 .NET Framework 버전으로 컴파일된 어셈블리를 로드하지 않습니다. 이는 버전 번호의 주 버전 및 부 버전 구성 요소 조합에 적용됩니다.  
   
  로드된 어셈블리의 JIT(Just-In-Time) 컴파일된 코드가 애플리케이션 도메인 간에 공유되는 방식을 지정할 수 있습니다. 자세한 내용은 [애플리케이션 도메인 및 어셈블리](application-domains.md#application-domains-and-assemblies)를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드는 "example.exe" 또는 "example.dll"이라는 어셈블리를 로드 현재 애플리케이션 도메인에 로드하고, 어셈블리에서 `Example` 형식을 가져온 다음 해당 형식에 대한 매개 변수가 없는 `MethodA` 메서드를 가져와서 실행합니다. 로드된 어셈블리에서 정보를 가져오는 방법에 대한 자세한 내용은 [형식 동적 로드 및 사용](../../../docs/framework/reflection-and-codedom/dynamically-loading-and-using-types.md)을 참조하세요.  
   
  [!code-cpp[System.AppDomain.Load#2](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.appdomain.load/cpp/source2.cpp#2)]

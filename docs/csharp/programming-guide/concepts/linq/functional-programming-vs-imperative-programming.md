@@ -2,12 +2,12 @@
 title: 함수형 프로그래밍과 명령형 프로그래밍 비교(C#)
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
-ms.openlocfilehash: 2b6a53943ea2363869530ae773c19a52b5578b56
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a163a62912ed2a44d6ea8cad5bc536f03343f15c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596697"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594318"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>함수형 프로그래밍과 명령형 프로그래밍 비교(C#)
 이 항목에서는 함수형 프로그래밍을 더욱 일반적인 명령형(절차적) 프로그래밍과 비교하고 대조합니다.  
@@ -52,6 +52,6 @@ ms.locfileid: "64596697"
   
 ## <a name="see-also"></a>참고 항목
 
-- [순수 함수 변환 소개(C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [순수 함수 변환 소개(C#)](./introduction-to-pure-functional-transformations.md)
 - [XSLT 변환](../../../../standard/data/xml/xslt-transformations.md)
-- [순수 함수로 리팩터링(C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [순수 함수로 리팩터링(C#)](./refactoring-into-pure-functions.md)

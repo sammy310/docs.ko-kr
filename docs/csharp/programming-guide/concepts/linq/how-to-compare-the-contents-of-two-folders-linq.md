@@ -2,12 +2,12 @@
 title: '방법: 두 폴더의 내용 비교(LINQ)(C#)'
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: 5d944025d8d442bb80c492d1898487dff88c5bc1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: df71712ca1b59c706ede66488af8b1580677e299
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585885"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924231"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>방법: 두 폴더의 내용 비교(LINQ)(C#)
 이 예제에서는 두 파일 목록을 비교하는 세 가지 방법을 보여 줍니다.  
@@ -19,7 +19,7 @@ ms.locfileid: "65585885"
 - 두 개 중 한 폴더에만 있는 파일을 검색하기 위해 차집합 쿼리.  
   
     > [!NOTE]
-    >  여기 표시된 방법은 형식에 관계없이 개체의 시퀀스를 비교하도록 조정될 수 있습니다.  
+    > 여기 표시된 방법은 형식에 관계없이 개체의 시퀀스를 비교하도록 조정될 수 있습니다.  
   
  여기 표시된 `FileComparer` 클래스는 표준 쿼리 연산자와 함께 사용자 지정 비교자 클래스를 사용하는 방법을 보여 줍니다. 이 클래스는 실제 시나리오에서 사용되지 않습니다. 단지 각 파일의 이름 및 길이(바이트)를 사용하여 각 폴더의 내용이 똑같은지 여부를 확인합니다. 실제 시나리오에서는 더 엄격한 일치 검사를 수행하도록 이 비교자를 수정해야 합니다.  
   
@@ -130,5 +130,5 @@ namespace QueryCompareTwoDirs
   
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ to Objects(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ 및 파일 디렉터리(C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects(C#)](./linq-to-objects.md)
+- [LINQ 및 파일 디렉터리(C#)](./linq-and-file-directories.md)

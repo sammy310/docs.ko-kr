@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f50a469327a06eabdb6a80821203f2222dcd2921
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 46dd9c0c1f9f5759bc9160aadeb0538b5403fb52
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878024"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917965"
 ---
 # <a name="overview-of-the-net-framework"></a>.NET Framework의 개요
 
@@ -75,7 +75,7 @@ Internet Explorer는 MIME 형식 확장의 형식으로 런타임을 호스트�
 
 개체 지향 클래스 라이브러리에서와 마찬가지로, .NET Framework 형식을 사용하면 문자열 관리, 데이터 수집, 데이터베이스 연결, 파일 액세스 등의 작업을 비롯한 일반적인 범위의 프로그래밍 작업을 수행할 수 있습니다. 이러한 일반적인 작업 외에도 클래스 라이브러리에는 특수화된 다양한 개발 시나리오를 지원하는 형식이 포함되어 있습니다. .NET Framework를 사용하여 다음과 같은 종류의 앱 및 서비스를 개발할 수 있습니다.
 
-- 콘솔 앱. [콘솔 애플리케이션 만들기](../../../docs/standard/building-console-apps.md)를 참조하세요.
+- 콘솔 앱. [콘솔 애플리케이션 만들기](../../standard/building-console-apps.md)를 참조하세요.
 
 - Windows GUI 앱(Windows Forms). [Windows Forms](../../../docs/framework/winforms/index.md)를 참조하세요.
 

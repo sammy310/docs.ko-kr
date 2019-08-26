@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73440f2ed689bdad56bb1f05025f826da9c409e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8903d0443594885b3b0e8cca716eda8177c60cca
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633331"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988803"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>.NET에서 숫자 문자열 구문 분석
 모든 숫자 형식에는 두 개의 정적 구문 분석 메서드인 `Parse` 및 `TryParse`가 있습니다. 이를 사용하여 숫자의 문자열 표현을 숫자 형식으로 변환할 수 있습니다. 이러한 메서드를 사용하면 [표준 숫자 서식 문자열](../../../docs/standard/base-types/standard-numeric-format-strings.md) 및 [사용자 지정 숫자 서식 문자열](../../../docs/standard/base-types/custom-numeric-format-strings.md)에서 설명하는 서식 문자열을 사용하여 생성된 문자열을 구문 분석할 수 있습니다. 기본적으로 `Parse` 및 `TryParse` 메서드는 정수 소수 자릿수를 포함하는 문자열을 정수 값으로 변환할 수 있습니다. 정수 및 소수 10진수 숫자, 그룹 구분 기호 및 소수 구분 기호를 포함하는 문자열을 부동 소수점 값으로 성공적으로 변환할 수 있습니다. 작업에 실패하면 `Parse` 메서드는 예외를 throw하지만 `TryParse` 메서드는 `false`를 반환합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "64633331"
  [!code-vb[Parsing.Numbers#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/parsing.numbers/vb/styles1.vb#2)]  
   
 > [!WARNING]
->  구문 분석 작업은 항상 특정 문화권의 서식 지정 규칙을 사용합니다. <xref:System.Globalization.CultureInfo> 또는 <xref:System.Globalization.NumberFormatInfo> 개체를 전달하여 문화권을 지정하지 않는 경우 현재 스레드와 관련된 문화권이 사용됩니다.  
+> 구문 분석 작업은 항상 특정 문화권의 서식 지정 규칙을 사용합니다. <xref:System.Globalization.CultureInfo> 또는 <xref:System.Globalization.NumberFormatInfo> 개체를 전달하여 문화권을 지정하지 않는 경우 현재 스레드와 관련된 문화권이 사용됩니다.  
   
  다음 표에서는 <xref:System.Globalization.NumberStyles> 열거형의 멤버를 나열하고 구문 분석 작업에 미치는 영향에 대해 설명합니다.  
   

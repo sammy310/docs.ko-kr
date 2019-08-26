@@ -5,19 +5,19 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: 0ebc4fa3029e16c5ee89da7d9af8b89924b2c4dc
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 54306c79bc2856996925756ee4261fbe67692aea
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833354"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606983"
 ---
 # <a name="command-line-build-with-cscexe"></a>csc.exe를 사용한 명령줄 빌드
 명령 프롬프트에서 실행 파일(*csc.exe*)의 이름을 입력하여 C# 컴파일러를 호출할 수 있습니다.
 
 **Visual Studio용 개발자 명령 프롬프트** 창을 사용하는 경우 필요한 환경 변수가 모두 설정됩니다. 이 도구에 액세스하는 방법에 대한 자세한 내용은 [Visual Studio용 개발자 명령 프롬프트](../../../framework/tools/developer-command-prompt-for-vs.md) 항목을 참조하세요. 
 
-표준 명령 프롬프트 창을 사용하는 경우 컴퓨터의 하위 디렉터리에서 *csc.exe*를 호출하려면 먼저 경로를 조정해야 합니다. 또한 *vsvars32.bat*를 실행하여 명령줄 빌드를 지원하도록 적절한 환경 변수를 설정해야 합니다. *vsvars32.bat*를 찾아서 실행하는 방법에 대한 지침을 비롯한 자세한 내용은 [방법: Visual Studio 명령줄에 필요한 환경 변수 설정](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)을 참조하세요.
+표준 명령 프롬프트 창을 사용하는 경우 컴퓨터의 하위 디렉터리에서 *csc.exe*를 호출하려면 먼저 경로를 조정해야 합니다. 또한 *vsvars32.bat*를 실행하여 명령줄 빌드를 지원하도록 적절한 환경 변수를 설정해야 합니다. *vsvars32.bat*를 찾아서 실행하는 방법에 대한 지침을 비롯한 자세한 내용은 [방법: Visual Studio 명령줄에 필요한 환경 변수 설정](./how-to-set-environment-variables-for-the-visual-studio-command-line.md)을 참조하세요.
 
 Windows SDK(소프트웨어 개발 키트)만 있는 컴퓨터에서 작업하는 경우, **Microsoft .NET Framework SDK** 메뉴 옵션을 통해 여는 **SDK 명령 프롬프트**에서 C# 컴파일러를 사용할 수 있습니다.
 
@@ -97,10 +97,10 @@ C# 컴파일러를 호출하면 개체 파일( *.obj*)은 만들어지지 않고
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)
-- [사전순 C# 컴파일러 옵션 목록](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
-- [범주별 C# 컴파일러 옵션 목록](../../../csharp/language-reference/compiler-options/listed-by-category.md)
-- [Main()과 명령줄 인수](../../../csharp/programming-guide/main-and-command-args/index.md)
-- [명령줄 인수](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)
-- [방법: 명령줄 인수 표시](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [Main() 반환 값](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
+- [C# 컴파일러 옵션](./index.md)
+- [사전순 C# 컴파일러 옵션 목록](./listed-alphabetically.md)
+- [범주별 C# 컴파일러 옵션 목록](./listed-by-category.md)
+- [Main()과 명령줄 인수](../../programming-guide/main-and-command-args/index.md)
+- [명령줄 인수](../../programming-guide/main-and-command-args/command-line-arguments.md)
+- [방법: 명령줄 인수 표시](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [Main() 반환 값](../../programming-guide/main-and-command-args/main-return-values.md)

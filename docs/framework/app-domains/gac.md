@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37c6e87ea50f3978bb896c7896a41b2faa9798bc
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: e5b99597a857f4c7926f783a6531f44fdb1fb7bc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566973"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921582"
 ---
 # <a name="global-assembly-cache"></a>전역 어셈블리 캐시
 공용 언어 런타임이 설치된 각 컴퓨터에는 전역 어셈블리 캐시라는 컴퓨터 수준의 코드 캐시가 있습니다. 전역 어셈블리 캐시에는 컴퓨터의 여러 애플리케이션에서 공유하도록 특별히 지정된 어셈블리가 저장됩니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "69566973"
  필요할 경우에만 어셈블리를 전역 어셈블리 캐시에 설치하여 어셈블리를 공유해야 합니다. 일반적으로 어셈블리 공유가 명시적으로 필요하지 않은 경우에는 어셈블리 종속성은 pirvate으로 유지하고 어셈블리를 애플리케이션 디렉터리에 저장해야 합니다. 또한 어셈블리가 COM interop 또는 비관리 코드에 액세스 가능하게 설정하기 위해 어셈블리를 전역 어셈블리 캐시에 설치할 필요는 없습니다.  
   
 > [!NOTE]
->  어셈블리를 전역 어셈블리 캐시에 명시적으로 설치하지 않으려고 하는 시나리오가 있습니다. 애플리케이션을 구성하는 어셈블리 중 하나를 전역 어셈블리 캐시에 배치하면 **xcopy** 명령을 사용하여 애플리케이션 디렉터리를 복사하는 방식으로 애플리케이션을 더 이상 복제하거나 설치할 수 없습니다. 전역 어셈블리 캐시의 어셈블리도 이동해야 합니다.  
+> 어셈블리를 전역 어셈블리 캐시에 명시적으로 설치하지 않으려고 하는 시나리오가 있습니다. 애플리케이션을 구성하는 어셈블리 중 하나를 전역 어셈블리 캐시에 배치하면 **xcopy** 명령을 사용하여 애플리케이션 디렉터리를 복사하는 방식으로 애플리케이션을 더 이상 복제하거나 설치할 수 없습니다. 전역 어셈블리 캐시의 어셈블리도 이동해야 합니다.  
   
  어셈블리를 전역 어셈블리 캐시에 배포하는 다음 두 가지 방법이 있습니다.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "69566973"
 - Windows SDK에서 제공된 [전역 어셈블리 캐시 도구(Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)라는 개발자 도구를 사용합니다.  
   
     > [!NOTE]
-    >  배포 시나리오에서는 전역 어셈블리 캐시에 어셈블리를 설치할 때 Windows Installer를 사용해야 합니다. 전역 어셈블리 캐시 도구는 개발 시나리오에서만 사용합니다. 그 이유는 이 도구가 어셈블리 참조 계산 및 Windows Installer를 사용할 때 제공되는 기타 기능을 제공하지 않기 때문입니다.  
+    > 배포 시나리오에서는 전역 어셈블리 캐시에 어셈블리를 설치할 때 Windows Installer를 사용해야 합니다. 전역 어셈블리 캐시 도구는 개발 시나리오에서만 사용합니다. 그 이유는 이 도구가 어셈블리 참조 계산 및 Windows Installer를 사용할 때 제공되는 기타 기능을 제공하지 않기 때문입니다.  
   
  .NET Framework 4부터 전역 어셈블리 캐시의 기본 위치는 **%windir%\Microsoft.NET\assembly**입니다. .NET Framework의 이전 버전에서 기본 위치는 **%windir%\assembly**입니다.  
   

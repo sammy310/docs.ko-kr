@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed8525cad7dd56fe026070786b0f0cf51c0fec2d
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 3134477198f0cd4c821bea456450e98cc73c6ad2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363966"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957466"
 ---
 # <a name="registration-free-com-interop"></a>등록이 필요 없는 COM Interop
 등록이 필요 없는 COM interop는 Windows 레지스트리를 사용하여 어셈블리 정보를 저장하지 않고 구성 요소를 활성화합니다. 배포 중 컴퓨터에 구성 요소를 등록하는 대신 바인딩 및 활성화 정보를 포함하는 Win32 스타일의 매니페스트 파일을 디자인 타임에 만듭니다. 레지스트리 키 대신 이러한 매니페스트 파일에서 개체 활성화를 지시합니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "68363966"
      Windows XP에 설치된 COM 구성 요소의 경우 등록이 필요 없는 활성화는 선택 사항입니다. Side-by-Side 어셈블리를 애플리케이션에 추가하는 방법에 대한 자세한 내용은 [Using Side-by-side Assemblies](/windows/desktop/SbsCs/using-side-by-side-assemblies)(Side-by-Side 어셈블리 사용)를 참조하세요.  
   
     > [!NOTE]
-    >  Side-by-side 실행은 여러 버전의 런타임 및 특정 런타임 버전을 사용하는 여러 버전의 애플리케이션 및 구성 요소가 동시에 같은 컴퓨터에서 실행될 수 있도록 하는 .NET Framework 기능입니다. Side-by-side 실행 및 Side-by-side 어셈블리는 Side-by-side 기능을 제공하는 서로 다른 메커니즘입니다.  
+    > Side-by-side 실행은 여러 버전의 런타임 및 특정 런타임 버전을 사용하는 여러 버전의 애플리케이션 및 구성 요소가 동시에 같은 컴퓨터에서 실행될 수 있도록 하는 .NET Framework 기능입니다. Side-by-side 실행 및 Side-by-side 어셈블리는 Side-by-side 기능을 제공하는 서로 다른 메커니즘입니다.  
   
 ## <a name="see-also"></a>참고 항목
 

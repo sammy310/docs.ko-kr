@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f13a07be13294cc408cd381bef6eec1f9095365f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5aca9d3eae3f566e02e7bf3dae4ac971b8fae5c0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742467"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956633"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>연습: 부분 신뢰 시나리오에서 코드 내보내기
 리플렉션 내보내기에는 완전 또는 부분 신뢰에서 동일한 API 집합이 사용되지만 일부 기능의 경우 부분적으로 신뢰할 수 있는 코드에 특수 권한이 필요합니다. 또한 리플렉션 내보내기에는 부분 신뢰와 함께 보안 투명 어셈블리에서 사용되도록 디자인된 익명으로 호스트되는 동적 메서드의 기능이 있습니다.  
   
 > [!NOTE]
->  .NET Framework 3.5 이전에는 코드 내보내기에는 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.ReflectionPermission>이 필요했습니다. 이 권한은 기본적으로 `FullTrust` 및 `Intranet` 명명된 권한 집합에 포함되지만 `Internet` 권한 집합에는 포함되지 않습니다. 따라서 <xref:System.Security.SecurityCriticalAttribute> 특성이 있고 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>에 대해 <xref:System.Security.PermissionSet.Assert%2A> 메서드를 실행한 경우에만 부분 신뢰 영역에서 라이브러리를 사용할 수 있었습니다. 코딩 오류가 있을 경우 보안 허점이 발생할 수 있으므로 이러한 라이브러리는 신중한 보안 검토가 필요합니다. .NET Framework 3.5에서는 코드 생성이 기본적으로 권한 있는 작업이 아니기 때문에 보안 요구를 실행하지 않고 부분 신뢰 시나리오에서 코드를 내보낼 수 있습니다. 즉, 생성된 코드에 코드를 내보내는 어셈블리보다 많은 권한이 없습니다. 따라서 코드를 내보내는 라이브러리가 보안상 투명할 수 있으며 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>를 어설션할 필요가 없으므로 보안 라이브러리 작성 시 철저한 보안 검토가 필요하지 않습니다.  
+> .NET Framework 3.5 이전에는 코드 내보내기에는 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.ReflectionPermission>이 필요했습니다. 이 권한은 기본적으로 `FullTrust` 및 `Intranet` 명명된 권한 집합에 포함되지만 `Internet` 권한 집합에는 포함되지 않습니다. 따라서 <xref:System.Security.SecurityCriticalAttribute> 특성이 있고 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>에 대해 <xref:System.Security.PermissionSet.Assert%2A> 메서드를 실행한 경우에만 부분 신뢰 영역에서 라이브러리를 사용할 수 있었습니다. 코딩 오류가 있을 경우 보안 허점이 발생할 수 있으므로 이러한 라이브러리는 신중한 보안 검토가 필요합니다. .NET Framework 3.5에서는 코드 생성이 기본적으로 권한 있는 작업이 아니기 때문에 보안 요구를 실행하지 않고 부분 신뢰 시나리오에서 코드를 내보낼 수 있습니다. 즉, 생성된 코드에 코드를 내보내는 어셈블리보다 많은 권한이 없습니다. 따라서 코드를 내보내는 라이브러리가 보안상 투명할 수 있으며 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>를 어설션할 필요가 없으므로 보안 라이브러리 작성 시 철저한 보안 검토가 필요하지 않습니다.  
   
  이 연습에서는 다음 작업을 수행합니다.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "67742467"
  예를 들어 호스트에서는 인터넷 애플리케이션에 인터넷 권한과 RMA를 부여할 수 있으므로 인터넷 애플리케이션은 자체 어셈블리의 전용 데이터에 액세스하는 코드를 내보낼 수 있습니다. 액세스는 같거나 낮은 신뢰 수준의 어셈블리로 제한되므로 인터넷 애플리케이션은 .NET Framework 어셈블리와 같이 완전히 신뢰할 수 있는 어셈블리의 멤버에 액세스할 수 없습니다.  
   
 > [!NOTE]
->  권한 상승을 방지하기 위해 익명으로 호스트된 동적 메서드가 생성될 때 내보내는 어셈블리에 대한 스택 정보가 포함됩니다. 메서드가 호출되면 스택 정보가 확인됩니다. 따라서 완전히 신뢰할 수 있는 코드에서 호출되는 익명으로 호스트된 동적 메서드는 계속해서 내보내는 어셈블리의 신뢰 수준으로 제한됩니다.  
+> 권한 상승을 방지하기 위해 익명으로 호스트된 동적 메서드가 생성될 때 내보내는 어셈블리에 대한 스택 정보가 포함됩니다. 메서드가 호출되면 스택 정보가 확인됩니다. 따라서 완전히 신뢰할 수 있는 코드에서 호출되는 익명으로 호스트된 동적 메서드는 계속해서 내보내는 어셈블리의 신뢰 수준으로 제한됩니다.  
   
 #### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>부분 신뢰 및 RMA를 사용하여 애플리케이션 도메인을 만들려면  
   
@@ -97,7 +97,7 @@ ms.locfileid: "67742467"
      <xref:System.Security.PermissionSet.AddPermission%2A> 메서드는 권한 집합에 권한을 추가합니다(권한이 포함되지 않은 경우). 권한이 이미 권한 집합에 포함된 경우 지정된 플래그가 기존 권한에 추가됩니다.  
   
     > [!NOTE]
-    >  RMA는 익명으로 호스트된 동적 메서드의 기능입니다. 일반 동적 메서드가 JIT 표시 유형 확인을 건너뛰면 내보낸 코드에 완전 신뢰가 필요합니다.  
+    > RMA는 익명으로 호스트된 동적 메서드의 기능입니다. 일반 동적 메서드가 JIT 표시 유형 확인을 건너뛰면 내보낸 코드에 완전 신뢰가 필요합니다.  
   
 2. 애플리케이션 도메인을 만들어 애플리케이션 도메인 설정 정보 및 권한 집합을 지정합니다.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "67742467"
      <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> 메서드는 대상 애플리케이션 도메인에서 개체를 만들고 개체의 속성과 메서드를 호출하는 데 사용될 수 있는 프록시를 반환합니다.  
   
     > [!NOTE]
-    >  Visual Studio에서 이 코드를 사용하는 경우 네임스페이스를 포함하도록 클래스의 이름을 변경해야 합니다. 기본적으로 네임스페이스는 프로젝트의 이름입니다. 예를 들어 프로젝트가 "PartialTrust"이면 클래스 이름은 "PartialTrust.Worker"입니다.  
+    > Visual Studio에서 이 코드를 사용하는 경우 네임스페이스를 포함하도록 클래스의 이름을 변경해야 합니다. 기본적으로 네임스페이스는 프로젝트의 이름입니다. 예를 들어 프로젝트가 "PartialTrust"이면 클래스 이름은 "PartialTrust.Worker"입니다.  
   
 6. `SimpleEmitDemo` 메서드를 호출하는 코드를 추가합니다. 호출은 애플리케이션 도메인 경계에서 마샬링되고 코드는 샌드박스가 적용된 애플리케이션 도메인에서 실행됩니다.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "67742467"
  익명으로 호스트된 동적 메서드는 시스템에서 제공되는 투명 어셈블리와 연결됩니다. 따라서 메서드에 포함된 코드는 투명합니다. 반면, 일반 동적 메서드는 기존 모듈과 연결되고(직접 지정되거나 연결된 형식에서 유추됨) 해당 모듈의 보안 수준을 사용해야 합니다.  
   
 > [!NOTE]
->  익명 호스팅을 제공하는 어셈블리와 동적 메서드를 연결하는 유일한 방법은 다음 절차에 설명된 생성자를 사용하는 것입니다. 익명 호스팅 어셈블리에서는 모듈을 명시적으로 지정할 수 없습니다.  
+> 익명 호스팅을 제공하는 어셈블리와 동적 메서드를 연결하는 유일한 방법은 다음 절차에 설명된 생성자를 사용하는 것입니다. 익명 호스팅 어셈블리에서는 모듈을 명시적으로 지정할 수 없습니다.  
   
  일반 동적 메서드는 연결된 모듈의 internal 멤버 또는 연결된 형식의 private 멤버에 액세스할 수 있습니다. 익명으로 호스트된 동적 메서드는 다른 코드에서 분리되므로 전용 데이터에 액세스할 수 없습니다. 하지만 JIT 표시 유형 확인을 건너뛰어 전용 데이터에 대한 액세스 권한을 얻는 제한된 기능이 있습니다. 이 기능은 코드를 내보내는 어셈블리의 신뢰 수준과 같거나 낮은 신뢰 수준을 가진 어셈블리로 제한됩니다.  
   
@@ -174,12 +174,12 @@ ms.locfileid: "67742467"
      익명으로 호스트된 동적 메서드는 호스트 애플리케이션에서 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 플래그로 <xref:System.Security.Permissions.ReflectionPermission>을 부여하는 경우에만 JIT 표시 유형 확인을 건너뛰는 이 제한된 기능을 사용할 수 있습니다. 메서드가 호출될 때 이 권한이 필요합니다.  
   
     > [!NOTE]
-    >  동적 메서드가 생성될 때 내보내는 어셈블리의 호출 스택 정보가 포함됩니다. 따라서 메서드를 호출하는 어셈블리가 아닌 내보내는 어셈블리에 대한 권한이 필요합니다. 이렇게 하면 내보낸 코드가 높은 권한으로 실행되지 않습니다.  
+    > 동적 메서드가 생성될 때 내보내는 어셈블리의 호출 스택 정보가 포함됩니다. 따라서 메서드를 호출하는 어셈블리가 아닌 내보내는 어셈블리에 대한 권한이 필요합니다. 이렇게 하면 내보낸 코드가 높은 권한으로 실행되지 않습니다.  
   
      이 연습의 끝부분에 있는 [전체 코드 예제](#Example)는 제한된 멤버 액세스의 사용 및 제한 사항을 보여 줍니다. `Worker` 클래스에는 표시 유형 확인을 건너뛰는 제한된 기능을 사용하거나 사용하지 않고 익명으로 호스트된 동적 메서드를 만들 수 있는 메서드가 포함되며 예제에서는 다양한 신뢰 수준을 가진 애플리케이션 도메인에서 이 메서드를 실행한 결과를 보여 줍니다.  
   
     > [!NOTE]
-    >  표시 유형 확인을 건너뛰는 제한된 기능은 익명으로 호스트된 동적 메서드의 기능입니다. 일반 동적 메서드가 JIT 표시 유형 확인을 건너뛸 경우 완전 신뢰가 부여되어야 합니다.  
+    > 표시 유형 확인을 건너뛰는 제한된 기능은 익명으로 호스트된 동적 메서드의 기능입니다. 일반 동적 메서드가 JIT 표시 유형 확인을 건너뛸 경우 완전 신뢰가 부여되어야 합니다.  
   
 <a name="Example"></a>   
 ## <a name="example"></a>예  

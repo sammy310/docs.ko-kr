@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 4276a1a7308e07b2dfb9cacb5670e97f6e2ca732
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 6188af0ffea699899212e4bcf20b7c19f68858b4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879199"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924342"
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ 쿼리 소개(C#)
 *쿼리*는 데이터 소스에서 데이터를 검색하는 식입니다. 쿼리는 일반적으로 특수화된 쿼리 언어로 표현됩니다. 관계형 데이터베이스에는 SQL이 사용되고 XML에는 XQuery가 사용되는 것처럼 시간에 따라 다양한 형식의 데이터 소스에 대해 서로 다른 언어가 개발되었습니다. 따라서 개발자는 지원해야 하는 데이터 소스의 형식이나 데이터 형식에 따라 새로운 쿼리 언어를 배워야 했습니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]는 다양한 데이터 소스 및 형식에 사용할 수 있는 일관된 모델을 제공함으로써 이러한 상황을 간단하게 합니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리에서는 항상 개체를 사용하고 있습니다. XML 문서, SQL 데이터베이스, ADO.NET 데이터 세트, .NET 컬렉션 및 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 공급자를 사용할 수 있는 다른 모든 형식에서 데이터를 쿼리하고 변환하는 데 동일한 기본 코딩 패턴을 사용합니다.  
@@ -56,15 +56,15 @@ IQueryable<Customer> custQuery =
  특정 형식의 데이터 소스를 만드는 방법에 대한 자세한 내용은 다양한 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 공급자에 대한 설명서를 참조하세요. 그러나 기본 규칙은 아주 간단합니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 데이터 소스는 제네릭 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스 또는 이 인터페이스에서 상속된 인터페이스를 지원하는 모든 개체입니다.  
   
 > [!NOTE]
->  제네릭이 아닌 <xref:System.Collections.IEnumerable> 인터페이스를 지원하는 <xref:System.Collections.ArrayList> 같은 형식은 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 데이터 소스로도 사용됩니다. 자세한 내용은 [방법: LINQ를 사용하여 ArrayList 쿼리(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)를 참조하세요.  
+> 제네릭이 아닌 <xref:System.Collections.IEnumerable> 인터페이스를 지원하는 <xref:System.Collections.ArrayList> 같은 형식은 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 데이터 소스로도 사용됩니다. 자세한 내용은 [방법: LINQ를 사용하여 ArrayList 쿼리(C#)](./how-to-query-an-arraylist-with-linq.md)를 참조하세요.  
   
 ## <a name="query"></a> 쿼리  
  쿼리는 데이터 소스 또는 소스에서 검색할 정보를 지정합니다. 필요한 경우 쿼리는 정보를 반환하기 전에 해당 정보를 정렬, 그룹화 및 구체화하는 방법도 지정합니다. 쿼리는 쿼리 변수에 저장되고 쿼리 식으로 초기화됩니다. 쿼리를 쉽게 작성할 수 있도록 C#에서는 새로운 쿼리 구문이 도입되었습니다.  
   
- 이전 예제의 쿼리는 정수 배열에서 모든 짝수를 반환합니다. 쿼리 식에는 `from`, `where` 및 `select`의 세 가지 절이 포함됩니다. SQL에 익숙한 경우 절의 순서가 SQL의 순서와 반대임을 알고 있을 것입니다. `from` 절은 데이터 소스를 지정하고 `where` 절은 필터를 적용하며 `select` 절은 반환되는 요소의 형식을 지정합니다. 이러한 쿼리 절 및 다른 쿼리 절은 [LINQ 쿼리 식](../../../../csharp/programming-guide/linq-query-expressions/index.md) 섹션에서 자세히 설명합니다. 여기에서 중요한 점은 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]에서 쿼리 변수 자체는 아무 작업도 수행하지 않고 데이터를 반환하지 않는다는 것입니다. 나중에 쿼리가 실행될 때 결과를 생성하는 데 필요한 정보를 저장합니다. 백그라운드에서 쿼리를 생성하는 방법에 대한 자세한 내용은 [표준 쿼리 연산자 개요(C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)를 참조하세요.  
+ 이전 예제의 쿼리는 정수 배열에서 모든 짝수를 반환합니다. 쿼리 식에는 `from`, `where` 및 `select`의 세 가지 절이 포함됩니다. SQL에 익숙한 경우 절의 순서가 SQL의 순서와 반대임을 알고 있을 것입니다. `from` 절은 데이터 소스를 지정하고 `where` 절은 필터를 적용하며 `select` 절은 반환되는 요소의 형식을 지정합니다. 이러한 쿼리 절 및 다른 쿼리 절은 [LINQ 쿼리 식](../../linq-query-expressions/index.md) 섹션에서 자세히 설명합니다. 여기에서 중요한 점은 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]에서 쿼리 변수 자체는 아무 작업도 수행하지 않고 데이터를 반환하지 않는다는 것입니다. 나중에 쿼리가 실행될 때 결과를 생성하는 데 필요한 정보를 저장합니다. 백그라운드에서 쿼리를 생성하는 방법에 대한 자세한 내용은 [표준 쿼리 연산자 개요(C#)](./standard-query-operators-overview.md)를 참조하세요.  
   
 > [!NOTE]
->  쿼리는 메서드 구문을 사용하여 표현할 수도 있습니다. 자세한 내용은 [LINQ의 쿼리 구문 및 메서드 구문](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)을 참조하세요.  
+> 쿼리는 메서드 구문을 사용하여 표현할 수도 있습니다. 자세한 내용은 [LINQ의 쿼리 구문 및 메서드 구문](./query-syntax-and-method-syntax-in-linq.md)을 참조하세요.  
   
 ## <a name="query-execution"></a>쿼리 실행  
   
@@ -90,8 +90,8 @@ IQueryable<Customer> custQuery =
   
 ## <a name="see-also"></a>참고 항목
 
-- [C#에서 LINQ 시작](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [연습: C#에서 쿼리 작성](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
-- [LINQ 쿼리 식](../../../../csharp/programming-guide/linq-query-expressions/index.md)
-- [foreach, in](../../../../csharp/language-reference/keywords/foreach-in.md)
-- [쿼리 키워드(LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)
+- [C#에서 LINQ 시작](./getting-started-with-linq.md)
+- [연습: C#에서 쿼리 작성](./walkthrough-writing-queries-linq.md)
+- [LINQ 쿼리 식](../../linq-query-expressions/index.md)
+- [foreach, in](../../../language-reference/keywords/foreach-in.md)
+- [쿼리 키워드(LINQ)](../../../language-reference/keywords/query-keywords.md)

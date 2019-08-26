@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2752ecd05caec207955b2366ed19b3713f571f91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f37f55f5af70a232952bdb94f0c111a27fcbab1d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613911"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948777"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>배열과 목록을 조작하기 위한 제네릭 대리자
 이 항목에서는 배열 또는 컬렉션의 요소에 대해 수행할 작업, 검색 조건자 및 변환을 위한 제네릭 대리자에 대해 간략하게 설명합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "54613911"
  <xref:System.Collections.Generic.List%601> 제네릭 클래스는 <xref:System.Action%601> 대리자를 사용하는 <xref:System.Collections.Generic.List%601.ForEach%2A> 메서드도 제공합니다. 이 메서드는 제네릭이 아닙니다.  
   
 > [!NOTE]
->  이 경우 제네릭 형식 및 메서드에 대한 흥미로운 사항이 있습니다. <xref:System.Array>가 제네릭 형식이 아니므로 <xref:System.Array.ForEach%2A?displayProperty=nameWithType> 메서드는 정적(Visual Basic에서는 `Shared`)이어야 합니다. <xref:System.Array.ForEach%2A?displayProperty=nameWithType>이 작동할 형식을 지정할 수 있는 유일한 이유는 메서드에 고유한 형식 매개 변수 목록에 있기 때문입니다. 반대로, 제네릭이 아닌 <xref:System.Collections.Generic.List%601.ForEach%2A?displayProperty=nameWithType> 메서드는 제네릭 클래스 <xref:System.Collections.Generic.List%601>에 속해 있으므로 단순히 해당 클래스의 형식 매개 변수를 사용합니다. 클래스가 강력한 형식이므로 메서드는 인스턴스 메서드일 수 있습니다.  
+> 이 경우 제네릭 형식 및 메서드에 대한 흥미로운 사항이 있습니다. <xref:System.Array>가 제네릭 형식이 아니므로 <xref:System.Array.ForEach%2A?displayProperty=nameWithType> 메서드는 정적(Visual Basic에서는 `Shared`)이어야 합니다. <xref:System.Array.ForEach%2A?displayProperty=nameWithType>이 작동할 형식을 지정할 수 있는 유일한 이유는 메서드에 고유한 형식 매개 변수 목록에 있기 때문입니다. 반대로, 제네릭이 아닌 <xref:System.Collections.Generic.List%601.ForEach%2A?displayProperty=nameWithType> 메서드는 제네릭 클래스 <xref:System.Collections.Generic.List%601>에 속해 있으므로 단순히 해당 클래스의 형식 매개 변수를 사용합니다. 클래스가 강력한 형식이므로 메서드는 인스턴스 메서드일 수 있습니다.  
   
  <xref:System.Predicate%601> 제네릭 대리자는 특정 요소가 정의한 조건을 충족하는지 여부를 확인하는 메서드를 나타냅니다. <xref:System.Array>의 정적 제네릭 메서드 <xref:System.Array.Exists%2A>, <xref:System.Array.Find%2A>, <xref:System.Array.FindAll%2A>, <xref:System.Array.FindIndex%2A>, <xref:System.Array.FindLast%2A>, <xref:System.Array.FindLastIndex%2A> 및 <xref:System.Array.TrueForAll%2A>와 함께 사용하여 요소 또는 요소 집합을 검색할 수 있습니다.  
   

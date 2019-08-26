@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a7e4493fca5b73cfd0bdc59ceab9de097de799aa
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 08e6458f0a14b78c6d05f706afa710931d60094a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490751"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948794"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>제네릭의 공 분산과 반공 분산
 <a name="top"></a> 공변성(Covariance)과 반공변성(Contravariance)은 원래 지정된 것보다 더 많이 파생되거나(더 구체적인) 더 적게 파생된 형식(덜 구체적인)을 사용할 수 있는 능력을 지칭하는 용어입니다. 제네릭 형식 매개 변수는 더욱 유연하게 제네릭 형식을 할당하고 사용할 수 있도록 공변성과 반공변성을 지원합니다. 형식 시스템을 참조할 때 공변성, 반공변성 및 불변성의 정의는 다음과 같습니다. 이 예제에서는 `Base` 라는 기본 클래스와 `Derived`라는 파생 클래스가 있는 것으로 가정합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "66490751"
   
      `List<Base>`의 인스턴스(Visual Basic의 `List(Of Base)`)를 `List<Derived>` 형식의 변수에 할당할 수 없고, 그 반대로도 할당할 수 없습니다.  
   
- 다음 코드에 표시된 것처럼, 공변 형식 매개 변수를 사용하여 일반적인 [다형성](~/docs/csharp/programming-guide/classes-and-structs/polymorphism.md)과 매우 비슷한 할당을 수행할 수 있습니다.  
+ 다음 코드에 표시된 것처럼, 공변 형식 매개 변수를 사용하여 일반적인 [다형성](../../csharp/programming-guide/classes-and-structs/polymorphism.md)과 매우 비슷한 할당을 수행할 수 있습니다.  
   
  [!code-csharp[CoContraSimpleIEnum#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontrasimpleienum/cs/example.cs#1)]
  [!code-vb[CoContraSimpleIEnum#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontrasimpleienum/vb/example.vb#1)]  
@@ -110,7 +110,7 @@ ms.locfileid: "66490751"
  .NET Framework 4에서는 <xref:System.Func%602> 같은 `Func` 제네릭 대리자가 공변 반환 형식과 반공변 매개 변수 형식을 사용합니다. `Action` 같은 <xref:System.Action%602>제네릭 대리자는 반공변 매개 변수 형식을 사용합니다. 즉, 더 많이 파생된 매개 변수 형식과 더 적게 파생된 반환 형식( `Func` 제네릭 대리자의 경우)이 있는 변수에 대리자를 할당할 수 있습니다.  
   
 > [!NOTE]
->  `Func` 제네릭 대리자의 마지막 제네릭 형식 매개 변수는 대리자 시그니처에 반환 값의 형식을 지정합니다. 이 제네릭 형식 매개 변수는 공변(`out` 키워드)인 반면 다른 한 제네릭 형식 매개 변수는 반공변(`in` 키워드)입니다.  
+> `Func` 제네릭 대리자의 마지막 제네릭 형식 매개 변수는 대리자 시그니처에 반환 값의 형식을 지정합니다. 이 제네릭 형식 매개 변수는 공변(`out` 키워드)인 반면 다른 한 제네릭 형식 매개 변수는 반공변(`in` 키워드)입니다.  
   
  다음 코드에서는 이를 보여 줍니다. 코드의 첫 부분에서는 `Base`라는 클래스, `Derived` 를 상속하는 `Base`라는 클래스 및 `static` 라는`Shared` 메서드(Visual Basic의 경우 `MyMethod`)가 있는 또 다른 클래스를 정의합니다. 이 메서드는 `Base`의 인스턴스를 사용하고 `Derived`의 인스턴스를 반환합니다. 인수가 `Derived`의 인스턴스이면 `MyMethod`에서 이 인스턴스를 반환하고, 인수가 `Base`의 인스턴스이면 `MyMethod`에서 `Derived`의 새 인스턴스를 반환합니다. 이 예제에서는 `Main()` 내에서 `Func<Base, Derived>`를 나타내고 이를 `Func(Of Base, Derived)` 변수에 저장하는 `MyMethod`(Visual Basic의 경우 `f1`)의 인스턴스를 만듭니다.  
   
@@ -149,12 +149,12 @@ ms.locfileid: "66490751"
  .NET Framework 4부터는 Visual Basic과 C#에서 인터페이스와 대리자의 제네릭 형식 매개 변수를 공변 또는 반공변으로 표시하는 데 사용할 수 있는 키워드를 제공합니다.  
   
 > [!NOTE]
->  .NET Framework 버전 2.0부터는 공용 언어 런타임에서 제네릭 형식 매개 변수에 대한 가변성 주석을 지원합니다. .NET Framework 4 이전에서는 이러한 주석이 있는 제네릭 클래스를 정의하는 유일한 방법이 MSIL(Microsoft Intermediate Language)을 사용하여 [Ilasm.exe (IL 어셈블러)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)로 클래스를 컴파일하거나 동적 어셈블리에 클래스를 내보내는 것입니다.  
+> .NET Framework 버전 2.0부터는 공용 언어 런타임에서 제네릭 형식 매개 변수에 대한 가변성 주석을 지원합니다. .NET Framework 4 이전에서는 이러한 주석이 있는 제네릭 클래스를 정의하는 유일한 방법이 MSIL(Microsoft Intermediate Language)을 사용하여 [Ilasm.exe (IL 어셈블러)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)로 클래스를 컴파일하거나 동적 어셈블리에 클래스를 내보내는 것입니다.  
   
  공변 형식 매개 변수는 `out` 키워드(Visual Basic의 경우`Out` 키워드, `+` MSIL 어셈블러 [의 경우](../../../docs/framework/tools/ilasm-exe-il-assembler.md))로 표시됩니다. 공변 형식 매개 변수는 인터페이스에 속하는 메서드의 반환 값이나 대리자의 반환 형식으로 사용할 수 있지만 인터페이스 메서드에 대한 제네릭 형식 제약 조건으로는 사용할 수 없습니다.  
   
 > [!NOTE]
->  인터페이스의 메서드에 제네릭 대리자 형식인 매개 변수가 있으면 인터페이스 형식의 공변 형식 매개 변수를 사용하여 대리자 형식의 반공변 형식 매개 변수를 지정할 수 있습니다.  
+> 인터페이스의 메서드에 제네릭 대리자 형식인 매개 변수가 있으면 인터페이스 형식의 공변 형식 매개 변수를 사용하여 대리자 형식의 반공변 형식 매개 변수를 지정할 수 있습니다.  
   
  반공변 형식 매개 변수는 `in` 키워드(Visual Basic의 경우`In` 키워드, `-` MSIL 어셈블러 [의 경우](../../../docs/framework/tools/ilasm-exe-il-assembler.md))로 표시됩니다. 반공변 형식 매개 변수는 인터페이스에 속하는 메서드의 매개 변수 형식이나 대리자의 매개 변수 형식으로 사용할 수 있으며 인터페이스 메서드의 제네릭 형식 제약 조건으로도 사용할 수 있습니다.  
   

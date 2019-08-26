@@ -18,12 +18,12 @@ ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 61f1b93d2f54923f0dfc4832a79fe35dc319d0f6
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 560597770d667cf8c7668bf2338ac4bac3eb192f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331747"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968570"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>정규식의 교체 구문
 <a name="top"></a> 교체 구문은 either/or 또는 조건부 일치를 허용하도록 정규식을 수정합니다. .NET에서는 다음 세 가지 교체 구문을 지원합니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "68331747"
  여기서 `(?=`*expression*`)`은 너비가 0인 어설션 구문입니다. 자세한 내용은 [그룹화 구문](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)을 참조하세요. 정규식 엔진이 *expression*을 앵커(너비가 0인 어설션)로 해석하기 때문에 *expression*은 너비가 0인 어설션(자세한 내용은 [앵커](../../../docs/standard/base-types/anchors-in-regular-expressions.md) 참조) 또는 *yes*에도 포함되는 하위 식이어야 합니다. 그렇지 않으면 *yes* 패턴을 찾을 수 없습니다.  
   
 > [!NOTE]
->  *expression*이 이름이나 숫자가 지정된 캡처 그룹인 경우, 교체 구문은 캡처 테스트로 해석됩니다. 자세한 내용은 다음 섹션인 [유효한 캡처 그룹을 기준으로 조건부 일치](#Conditional_Group)를 참조하세요. 즉, 정규식 엔진은 캡처된 하위 문자열을 찾으려고 하지 않지만, 대신 그룹의 존재 여부를 테스트합니다.  
+> *expression*이 이름이나 숫자가 지정된 캡처 그룹인 경우, 교체 구문은 캡처 테스트로 해석됩니다. 자세한 내용은 다음 섹션인 [유효한 캡처 그룹을 기준으로 조건부 일치](#Conditional_Group)를 참조하세요. 즉, 정규식 엔진은 캡처된 하위 문자열을 찾으려고 하지 않지만, 대신 그룹의 존재 여부를 테스트합니다.  
   
  다음 예제는 [&#124;를 사용한 Either/Or 패턴 일치](#Either_Or) 섹션에 나타나는 예제의 변형입니다. 조건부 일치를 사용하여 단어 경계 뒤의 처음 문자 3개가 숫자 2개, 하이픈 순의 문자열인지를 확인합니다. 해당 문자열이면 미국 EIN(고용주 식별 번호)을 찾으려고 합니다. 그러지 않으면 미국 SSN(사회 보장 번호)을 찾으려고 합니다.  
   

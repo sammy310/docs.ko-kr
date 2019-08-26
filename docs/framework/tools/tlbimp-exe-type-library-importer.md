@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f9741944dcf8a5fcc05c169a1c3c3f679902474
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: f9c34b237655eb49b6a44c366586b3cabb5a684f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859676"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937973"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe(형식 라이브러리 가져오기)
 형식 라이브러리 가져오기 도구는 COM 형식 라이브러리에 있는 형식 정의를 공용 언어 런타임 어셈블리의 동등한 정의로 변환합니다. Tlbimp.exe의 출력은 원본 형식 라이브러리에 정의된 형식의 런타임 메타데이터를 포함하는 이진 파일(어셈블리)입니다. [Ildasm.exe](ildasm-exe-il-disassembler.md)와 같은 도구를 사용하여 이 파일을 검토할 수 있습니다.  
@@ -71,7 +71,7 @@ tlbimp tlbFile [options]
 |**/?**|이 도구의 명령 구문 및 옵션을 표시합니다.|  
   
 > [!NOTE]
->  Tlbimp.exe의 명령줄 옵션은 대/소문자를 구분하지 않으며 순서에 관계없이 지정할 수 있습니다. 또한, 고유하게 식별할 수 있을 정도로만 옵션을 지정하면 됩니다. 따라서 **/n**은 **/nologo**와 같고, **/ou:** *outfile.dll*은 **/out:** *outfile.dll*과 같습니다.  
+> Tlbimp.exe의 명령줄 옵션은 대/소문자를 구분하지 않으며 순서에 관계없이 지정할 수 있습니다. 또한, 고유하게 식별할 수 있을 정도로만 옵션을 지정하면 됩니다. 따라서 **/n**은 **/nologo**와 같고, **/ou:** *outfile.dll*은 **/out:** *outfile.dll*과 같습니다.  
   
 ## <a name="remarks"></a>설명  
  Tlbimp.exe는 한 번에 전체 형식 라이브러리 변환을 수행합니다. 이 도구를 사용하여 단일 형식 라이브러리 내에 정의된 형식의 하위 집합에 대한 형식 정보를 생성할 수는 없습니다.  
@@ -84,7 +84,7 @@ tlbimp tlbFile [options]
  
  여러 개의 형식 라이브러리를 포함하는 모듈에서 형식 라이브러리를 가져오는 경우 선택적으로 리소스 ID를 형식 라이브러리 파일에 추가할 수 있습니다. 이 파일이 현재 디렉터리에 있거나 전체 경로를 지정하는 경우에만 Tlbimp.exe를 사용하여 파일을 찾을 수 있습니다. 이 항목의 뒷부분에 있는 예제를 참조하십시오.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 명령을 사용하여 `myTest.tlb`에 있는 형식 라이브러리와 이름이 같고 확장명이 .dll인 어셈블리를 생성합니다.  
   
 ```  

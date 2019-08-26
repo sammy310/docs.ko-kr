@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4ae9710b99c85cfcbe3de2669c7ee85d0d24ef4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7a6af73a5251cdc52589967178218f8675cac869
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629346"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946469"
 ---
 # <a name="how-to-create-com-wrappers"></a>방법: COM 래퍼 만들기
 
 Visual Studio 2005 기능이나 .NET Framework 도구인 Tlbimp.exe 및 Regasm.exe를 사용하여 COM(구성 요소 개체 모델) 래퍼를 만들 수 있습니다. 두 메서드는 모두 COM 래퍼의 두 가지 형식을 생성합니다.
 
-- 관리 코드에서 COM 개체를 실행하기 위한 형식 라이브러리의 [런타임 호출 가능 래퍼](../../../docs/standard/native-interop/runtime-callable-wrapper.md).
+- 관리 코드에서 COM 개체를 실행하기 위한 형식 라이브러리의 [런타임 호출 가능 래퍼](../../standard/native-interop/runtime-callable-wrapper.md).
 
-- 네이티브 애플리케이션에서 관리 개체를 실행하기 위한 필수 레지스트리 설정이 포함된 [COM 호출 가능 래퍼](../../../docs/standard/native-interop/com-callable-wrapper.md).
+- 네이티브 애플리케이션에서 관리 개체를 실행하기 위한 필수 레지스트리 설정이 포함된 [COM 호출 가능 래퍼](../../standard/native-interop/com-callable-wrapper.md).
 
 Visual Studio 2005에서 프로젝트에 COM 래퍼를 참조로 추가할 수 있습니다.
 
@@ -75,5 +75,5 @@ Visual Studio 2005에서 프로젝트에 COM 래퍼를 참조로 추가할 수 �
   
 ## <a name="see-also"></a>참고 항목
 
-- [런타임 호출 가능 래퍼](../../../docs/standard/native-interop/runtime-callable-wrapper.md)
-- [COM 호출 가능 래퍼](../../../docs/standard/native-interop/com-callable-wrapper.md)
+- [런타임 호출 가능 래퍼](../../standard/native-interop/runtime-callable-wrapper.md)
+- [COM 호출 가능 래퍼](../../standard/native-interop/com-callable-wrapper.md)

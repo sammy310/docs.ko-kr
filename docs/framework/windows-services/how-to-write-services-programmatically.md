@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
 author: ghogen
-ms.openlocfilehash: e709db257c839dc7e583412a87af6d25b80de969
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 29e0b95ad91c93f3a23246daf2be128b10d7e2ce
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591430"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952402"
 ---
 # <a name="how-to-write-services-programmatically"></a>방법: 프로그래밍 방식으로 서비스 작성
 Windows 서비스 프로젝트 템플릿을 사용하지 않으려는 경우 상속 및 기타 인프라 요소를 직접 설정하여 고유한 서비스를 작성할 수 있습니다. 서비스를 프로그래밍 방식으로 만드는 경우 템플릿을 사용할 경우 자동으로 처리되는 다음과 같은 여러 단계를 직접 수행해야 합니다.  
@@ -64,7 +64,7 @@ Windows 서비스 프로젝트 템플릿을 사용하지 않으려는 경우 상
 8. **빌드** 메뉴에서 **솔루션 빌드**를 선택하여 프로젝트를 빌드합니다.  
   
     > [!NOTE]
-    >  F5 키를 눌러 프로젝트를 실행하지 마세요. 서비스 프로젝트는 이러한 방식으로 실행할 수 없습니다.  
+    > F5 키를 눌러 프로젝트를 실행하지 마세요. 서비스 프로젝트는 이러한 방식으로 실행할 수 없습니다.  
   
 9. 설치 프로젝트와 서비스를 설치하는 사용자 지정 작업을 만듭니다. 예제를 보려면 [연습: 구성 요소 디자이너에서 Windows 서비스 애플리케이션 만들기](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md).  
   

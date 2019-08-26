@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97ea5c7389cf30f7f58c944c95e095ebe4146192
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 135459f84cee0a3c356882b193ff561befb43145
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590597"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963370"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>방법: 날짜 및 시간 값의 밀리초 표시
 <xref:System.DateTime.ToString?displayProperty=nameWithType>과 같은 기본 날짜 및 시간 서식 지정 메서드에는 시간 값의 시, 분, 초가 포함되지만 밀리초 구성 요소는 제외됩니다. 이 항목에서는 형식이 지정된 날짜 및 시간 문자열에 날짜 및 시간의 밀리초 구성 요소를 포함하는 방법을 보여 줍니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "65590597"
   
 2. 시간 밀리초 구성 요소의 문자열 표현을 추출하려면 날짜 및 시간 값의 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 또는 <xref:System.DateTimeOffset.ToString%2A> 메서드를 호출하고 `fff` 또는 `FFF` 사용자 지정 형식 패턴을 단독으로 또는 다른 사용자 지정 형식 지정자와 함께 `format` 매개 변수로 전달합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 값의 밀리초 구성 요소를 단독으로 그리고 긴 날짜 및 시간 문자열에 포함하여 콘솔에 표시합니다.  
   
  [!code-csharp[Formatting.HowTo.Millisecond#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Millisecond/cs/Millisecond.cs#1)]
@@ -49,7 +49,7 @@ ms.locfileid: "65590597"
  [!code-vb[Formatting.HowTo.Millisecond#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.Millisecond/vb/Millisecond.vb#3)]  
   
 > [!NOTE]
->  1/10000초, 1/100000초 등 1초의 매우 작은 소수 단위를 표시할 수 있습니다. 그러나 이러한 값은 의미가 없을 수 있습니다. 날짜 및 시간 값의 자릿수는 시스템 시계의 정밀도에 따라 달라집니다. Windows NT 3.5 이상 버전과 [!INCLUDE[windowsver](../../../includes/windowsver-md.md)] 운영 체제의 경우 시계의 정밀도는 약 10-15밀리초입니다.  
+> 1/10000초, 1/100000초 등 1초의 매우 작은 소수 단위를 표시할 수 있습니다. 그러나 이러한 값은 의미가 없을 수 있습니다. 날짜 및 시간 값의 자릿수는 시스템 시계의 정밀도에 따라 달라집니다. Windows NT 3.5 이상 버전과 [!INCLUDE[windowsver](../../../includes/windowsver-md.md)] 운영 체제의 경우 시계의 정밀도는 약 10-15밀리초입니다.  
   
 ## <a name="see-also"></a>참고 항목
 

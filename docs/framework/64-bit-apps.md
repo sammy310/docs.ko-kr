@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11295f4b0d1a425fd3859c904b8ebc7830c64d1f
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 4ff02c5856e4ee48c8e5cf375cc68d92c76737c7
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66815951"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988400"
 ---
 # <a name="64-bit-applications"></a>64비트 애플리케이션
 애플리케이션을 컴파일할 때 Windows 64비트 운영 체제에서 네이티브 애플리케이션으로 실행되거나 WOW64(Windows 64비트 기반 Windows 32비트)를 통해 실행되도록 지정할 수 있습니다. WOW64는 32비트 애플리케이션이 64비트 시스템에서 실행되도록 하는 호환성 환경입니다. WOW64는 Windows 운영 체제의 모든 64비트 버전에 포함됩니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "66815951"
  Visual Studio에서는 32비트 버전의 CLR을 x86 컴퓨터에 설치하고 32비트 버전 및 해당하는 64비트 버전의 CLR을 64비트 Windows 컴퓨터에 설치합니다. Visual Studio는 32비트 애플리케이션이므로 64비트 시스템에 설치될 때 WOW64를 통해 실행됩니다.  
   
 > [!NOTE]
->  Itanium 프로세서 제품군용 x86 에뮬레이션 및 WOW64 하위 시스템의 설계 때문에 애플리케이션은 한 프로세서에서 실행되도록 제한됩니다. 이들 요소 때문에 Itanium 기반 시스템에서 실행되는 32비트 .NET Framework 애플리케이션의 성능과 확장성이 감소합니다. 성능과 확장성을 높이려면 Itanium 기반 시스템에 대한 네이티브 64비트 지원이 포함된 .NET Framework 4를 사용하는 것이 좋습니다.  
+> Itanium 프로세서 제품군용 x86 에뮬레이션 및 WOW64 하위 시스템의 설계 때문에 애플리케이션은 한 프로세서에서 실행되도록 제한됩니다. 이들 요소 때문에 Itanium 기반 시스템에서 실행되는 32비트 .NET Framework 애플리케이션의 성능과 확장성이 감소합니다. 성능과 확장성을 높이려면 Itanium 기반 시스템에 대한 네이티브 64비트 지원이 포함된 .NET Framework 4를 사용하는 것이 좋습니다.  
   
  기본적으로 64비트 관리되는 애플리케이션을 64비트 Windows 운영 체제에서 실행할 때 2GB 이하 개체를 만들 수 있습니다. 그러나 .NET Framework 4.5에서는 이 제한을 늘릴 수 있습니다.  자세한 내용은 [\<gcAllowVeryLargeObjects> 요소](../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)를 참조하세요.  
   
@@ -56,8 +56,8 @@ ms.locfileid: "66815951"
   
 |컴파일러|컴파일러 옵션|  
 |--------------|---------------------|  
-|Visual Basic|[/platform (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/platform.md)|  
-|Visual C#|[-platform(C# 컴파일러 옵션)](~/docs/csharp/language-reference/compiler-options/platform-compiler-option.md)|  
+|Visual Basic|[/platform (Visual Basic)](../visual-basic/reference/command-line-compiler/platform.md)|  
+|Visual C#|[-platform(C# 컴파일러 옵션)](../csharp/language-reference/compiler-options/platform-compiler-option.md)|  
 |Visual C++|**/clr:safe**를 사용하여 플랫폼 제약 없는 MSIL(Microsoft intermediate language) 애플리케이션을 만들 수 있습니다. 자세한 내용은 [/clr(공용 언어 런타임 컴파일)](/cpp/build/reference/clr-common-language-runtime-compilation)을 참조하세요.<br /><br /> Visual C++에는 각 64비트 운영 체제에 대한 별도의 컴파일러가 포함됩니다. Visual C++를 사용하여 64비트 Windows 운영 체제에서 실행되는 네이티브 애플리케이션을 만드는 방법에 대한 자세한 내용은 [64비트 프로그래밍](/cpp/build/configuring-programs-for-64-bit-visual-cpp)을 참조하세요.|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>.exe 파일 또는 .dll 파일 상태 확인  

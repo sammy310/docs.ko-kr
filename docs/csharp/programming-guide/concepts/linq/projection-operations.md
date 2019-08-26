@@ -2,12 +2,12 @@
 title: 프로젝션 작업(C#)
 ms.date: 07/20/2015
 ms.assetid: 98df573a-aad9-4b8c-9a71-844be2c4fb41
-ms.openlocfilehash: 74792c1a58aa17c65f3a153216d50c672e0b6cf6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 4b34f3e578e746d75bdad7baaf731d743830713c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411215"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591567"
 ---
 # <a name="projection-operations-c"></a>프로젝션 작업(C#)
 프로젝션은 주로 이후에 사용할 속성으로만 구성된 새 양식으로 개체를 변환하는 작업을 가리킵니다. 프로젝션을 사용하면 각 개체를 기반으로 만들어지는 새 형식을 생성할 수 있습니다. 속성을 프로젝션하고 속성에서 수학 함수를 수행할 수 있습니다. 원래 개체를 변경하지 않고 프로젝션할 수도 있습니다.  
@@ -162,7 +162,7 @@ static void SelectVsSelectMany()
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Linq>
-- [표준 쿼리 연산자 개요(C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [select 절](../../../../csharp/language-reference/keywords/select-clause.md)
-- [방법: 여러 소스로 개체 컬렉션 채우기(LINQ)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
-- [방법: 그룹을 사용하여 파일을 여러 파일로 분할(LINQ)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [표준 쿼리 연산자 개요(C#)](./standard-query-operators-overview.md)
+- [select 절](../../../language-reference/keywords/select-clause.md)
+- [방법: 여러 소스로 개체 컬렉션 채우기(LINQ)(C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [방법: 그룹을 사용하여 파일을 여러 파일로 분할(LINQ)(C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)

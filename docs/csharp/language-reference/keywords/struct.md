@@ -8,12 +8,12 @@ helpviewer_keywords:
 - struct keyword [C#]
 - structs [C#], struct keyword
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 1f1c512e1995df07fc4b9e18e34a85119e270bda
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 95c36cd039436dcddd3e2e2a3e1fae98ee885677
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433777"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924662"
 ---
 # <a name="struct-c-reference"></a>struct(C# 참조)
 
@@ -30,7 +30,7 @@ public struct Book
 
 ## <a name="remarks"></a>설명
 
-구조체는 [생성자](../../programming-guide/classes-and-structs/constructors.md), [상수](../../programming-guide/classes-and-structs/constants.md), [필드](../../programming-guide/classes-and-structs/fields.md), [메서드](../../programming-guide/classes-and-structs/methods.md), [속성](../../programming-guide/classes-and-structs/properties.md), [인덱서](../../programming-guide/indexers/index.md), [연산자](../../programming-guide/statements-expressions-operators/operators.md), [이벤트](../../programming-guide/events/index.md) 및 [중첩 형식](../../programming-guide/classes-and-structs/nested-types.md)도 포함할 수 있습니다. 그러나 이러한 멤버가 여러 개 필요한 경우에는 구조체 대신 클래스 형식을 지정하는 것이 좋습니다.
+구조체는 [생성자](../../programming-guide/classes-and-structs/constructors.md), [상수](../../programming-guide/classes-and-structs/constants.md), [필드](../../programming-guide/classes-and-structs/fields.md), [메서드](../../programming-guide/classes-and-structs/methods.md), [속성](../../programming-guide/classes-and-structs/properties.md), [인덱서](../../programming-guide/indexers/index.md), [연산자](../operators/index.md), [이벤트](../../programming-guide/events/index.md) 및 [중첩 형식](../../programming-guide/classes-and-structs/nested-types.md)도 포함할 수 있습니다. 그러나 이러한 멤버가 여러 개 필요한 경우에는 구조체 대신 클래스 형식을 지정하는 것이 좋습니다.
 
 예제를 보려면 [구조체 사용](../../programming-guide/classes-and-structs/using-structs.md)을 참조하세요.
 

@@ -2,12 +2,12 @@
 title: API 게이트웨이 패턴과 클라이언트-마이크로 서비스 간 직접 통신
 description: API 게이트웨이 패턴과 클라이언트-마이크로 서비스 간 직접 통신의 차이점 및 사용법을 이해합니다.
 ms.date: 01/07/2019
-ms.openlocfilehash: 9ebd544bdc137a68f03d1ab38cf23bf0d02c420c
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: c54287ea3e99ff7fe9faf02898b8c322b756e26f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892228"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914668"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API 게이트웨이 패턴과 클라이언트-마이크로 서비스 간 직접 통신
 
@@ -170,7 +170,7 @@ Azure API Management를 통해 키, 토큰 및 IP 필터링을 사용하여 API�
 
 ## <a name="additional-resources"></a>추가 자료
 
-- **Charles Richardson. 패턴: API 게이트웨이/프런트 엔드의 백 엔드** \
+- **Chris Richardson. 패턴: API 게이트웨이/프런트 엔드의 백 엔드** \
   <https://microservices.io/patterns/apigateway.html>
 
 - **API 게이트웨이 패턴** \

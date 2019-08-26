@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca7f3a8d9ee840fc8c1c8a8efdadf8da033241f1
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 689ee44980a4a41b6d46ed9b68306c1b08c49586
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377460"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960070"
 ---
 # <a name="exceptions-in-managed-threads"></a>관리되는 스레드의 예외
 NET Framework 버전 2.0부터 공용 언어 런타임을 통해 스레드에 있는 대부분의 처리되지 않은 예외가 정상적으로 진행됩니다. 즉, 대부분의 경우에서 처리되지 않은 예외는 애플리케이션을 종료시킵니다.  
   
 > [!NOTE]
->  이 내용은 .NET Framework 버전 1.0 및 1.1과 비교하여 크게 달라진 것으로, 여러 처리되지 않은 예외(예: 스레드 풀 스레드의 처리되지 않은 예외)에 백업을 제공합니다. 이 항목의 뒷부분에 나오는 [이전 버전의 변경 내용](#ChangeFromPreviousVersions)을 참조하세요.  
+> 이 내용은 .NET Framework 버전 1.0 및 1.1과 비교하여 크게 달라진 것으로, 여러 처리되지 않은 예외(예: 스레드 풀 스레드의 처리되지 않은 예외)에 백업을 제공합니다. 이 항목의 뒷부분에 나오는 [이전 버전의 변경 내용](#ChangeFromPreviousVersions)을 참조하세요.  
   
  공용 언어 런타임은 프로그램 흐름을 제어하는 데 사용되는 처리되지 않은 예외에 백업을 제공합니다.  
   
@@ -36,7 +36,7 @@ NET Framework 버전 2.0부터 공용 언어 런타임을 통해 스레드에 �
  이러한 예외가 주 스레드나 비관리 코드에서 런타임으로 들어간 스레드에서 처리되지 않는 경우 해당 예외는 정상적으로 진행되고 애플리케이션이 종료됩니다.  
   
 > [!NOTE]
->  관리 코드가 예외 처리기를 설치하기 전에 런타임은 처리되지 않은 예외를 throw할 수 있습니다. 관리 코드가 이러한 예외를 처리하지 못하더라도 예외는 정상적으로 진행될 수 있습니다.  
+> 관리 코드가 예외 처리기를 설치하기 전에 런타임은 처리되지 않은 예외를 throw할 수 있습니다. 관리 코드가 이러한 예외를 처리하지 못하더라도 예외는 정상적으로 진행될 수 있습니다.  
   
 ## <a name="exposing-threading-problems-during-development"></a>개발하는 동안 스레딩 문제 노출  
  애플리케이션이 종료되지 않고 스레드에 오류가 발생할 수 있는 경우 심각한 프로그래밍 문제를 발견하지 못할 수 있습니다. 이것은 확장된 기간 동안 실행되는 서비스와 기타 애플리케이션에 특정된 문제입니다. 스레드에 오류가 발생하면 프로그램 상태가 서서히 손상됩니다. 애플리케이션 성능이 저하되거나 애플리케이션이 응답하지 않을 수 있습니다.  

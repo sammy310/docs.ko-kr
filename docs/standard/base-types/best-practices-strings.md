@@ -21,12 +21,12 @@ ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 68bcc9321d5a97620d0e8d24befbd24f4f350f94
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 50127f24bfee0c2fe49da8f285e5052d2f753696
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66250811"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934933"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>.NET에서 문자열 사용에 대한 모범 사례
 <a name="top"></a> .NET에서는 지역화된 애플리케이션과 전역화된 애플리케이션을 개발하기 위한 광범위한 지원을 제공하고 문자열 정렬 및 표시와 같은 일반적인 작업을 수행할 때 현재 문화권이나 특정 문화권의 규칙을 쉽게 적용할 수 있습니다. 그러나 문자열 정렬 및 비교가 항상 문화권이 구분되는 작업은 아닙니다. 예를 들어 애플리케이션에서 내부적으로 사용되는 문자열은 대기 모든 문화권에서 동일하게 처리해야 합니다. XML 태그, HTML 태그, 사용자 이름, 파일 경로 및 시스템 개체 이름과 같이 문화권을 구분하지 않는 문자열 데이터가 문화권이 구분되는 것처럼 해석되면 애플리케이션 코드에는 감지하기 어려운 버그, 성능 저하 및 경우에 따라 보안 문제가 발생할 수 있습니다.  
@@ -185,7 +185,7 @@ ms.locfileid: "66250811"
  .NET의 문자열에는 포함된 null 문자가 있을 수 있습니다. 서수 비교와 문화권 구분 비교(고정 문화권을 사용하는 비교 포함) 간 가장 분명한 차이의 하나는 문자열의 포함된 null 문자 처리와 관련됩니다. <xref:System.String.Compare%2A?displayProperty=nameWithType> 및 <xref:System.String.Equals%2A?displayProperty=nameWithType> 메서드를 사용하여 문화권 구분 비교(고정 문화권을 사용하는 비교 포함)를 수행하면 이들 문자가 무시됩니다. 따라서 문화권 구분 비교에서 포함된 null 문자가 들어 있는 문자열은 해당 문자가 들어 있지 않은 문자열과 같은 것으로 간주할 수 있습니다.  
   
 > [!IMPORTANT]
->  문자열 비교 메서드는 포함된 null 문자를 무시하지만 <xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.EndsWith%2A?displayProperty=nameWithType>, <xref:System.String.IndexOf%2A?displayProperty=nameWithType>, <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>및 <xref:System.String.StartsWith%2A?displayProperty=nameWithType> 와 같은 문자열 검색 메서드는 무시하지 않습니다.  
+> 문자열 비교 메서드는 포함된 null 문자를 무시하지만 <xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.EndsWith%2A?displayProperty=nameWithType>, <xref:System.String.IndexOf%2A?displayProperty=nameWithType>, <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>및 <xref:System.String.StartsWith%2A?displayProperty=nameWithType> 와 같은 문자열 검색 메서드는 무시하지 않습니다.  
   
  다음 예제에서는 문자열 "Aa" 및 "A"와 "a" 사이에 여러 포함된 null 문자를 포함하는 비슷한 문자열의 문화권 구분 비교를 수행하고 두 문자열을 어떻게 같은 것으로 간주하는지 보여 줍니다.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "66250811"
  이들 비교는 매우 빠릅니다.  
   
 > [!NOTE]
->  파일 시스템, 레지스트리 키 및 값, 환경 변수의 문자열 동작은 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>로 가장 잘 표현됩니다.  
+> 파일 시스템, 레지스트리 키 및 값, 환경 변수의 문자열 동작은 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>로 가장 잘 표현됩니다.  
   
  <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> 및 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 는 둘 다 직접 이진 값을 사용하고 일치 항목 찾기에 가장 적합합니다. 사용 중인 비교 설정을 확신할 수 없으면 다음 두 값의 하나를 사용하세요. 그러나 이들 값은 바이트 단위 비교를 수행하므로 영어 사전처럼 언어 정렬 순서별로 정렬하는 것이 아니라 이진 정렬 순서별로 정렬합니다. 사용자에게 표시되는 결과가 대부분 컨텍스트에서 이상하게 표시될 수 있습니다.  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22c98e41624abc931bd03e4ddea09ed55d0d3f39
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6df750872e90572b00cdf427461b4a9782c47d63
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648466"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968517"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>완화: 새로운 64비트 JIT 컴파일러
 .NET Framework 4.6부터는 런타임에 Just-In-Time 컴파일을 위한 새로운 64비트 JIT 컴파일러가 포함됩니다. 이 변경 내용은 32비트 JIT 컴파일러를 사용하는 컴파일에는 영향을 주지 않습니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "64648466"
  경우에 따라 새로운 64비트 JIT 컴파일러를 사용하여 컴파일을 수행하면 이전 64비트 JIT 컴파일러로 컴파일한 코드를 실행할 때 확인되지 않던 런타임 예외 또는 동작이 발생합니다. 알려진 차이점은 다음과 같습니다.  
   
 > [!IMPORTANT]
->  .NET Framework 4.6.2와 함께 릴리스된 새로운 64비트 컴파일러에서 이러한 모든 알려진 문제가 해결되었습니다. Windows 업데이트에 포함된 .NET Framework 4.6 및 4.6.1의 서비스 릴리스에서도 대부분의 문제가 해결되었습니다. 사용 중인 Windows 버전이 최신 버전인지 확인하거나 .NET Framework 4.6.2로 업그레이드하여 이러한 문제를 제거할 수 있습니다.  
+> .NET Framework 4.6.2와 함께 릴리스된 새로운 64비트 컴파일러에서 이러한 모든 알려진 문제가 해결되었습니다. Windows 업데이트에 포함된 .NET Framework 4.6 및 4.6.1의 서비스 릴리스에서도 대부분의 문제가 해결되었습니다. 사용 중인 Windows 버전이 최신 버전인지 확인하거나 .NET Framework 4.6.2로 업그레이드하여 이러한 문제를 제거할 수 있습니다.  
   
 - 특정 상황에서 최적화가 설정된 릴리스 빌드에서 Unboxing 작업으로 인해 <xref:System.NullReferenceException>이 throw될 수 있습니다.  
   

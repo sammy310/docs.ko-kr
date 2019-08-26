@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 72771ee494b6be7142ce3f9bec43dcb8aa8a8401
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 2bbbac098096b46c659c4efde2d1c998c8e2d9ae
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363079"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608386"
 ---
 # <a name="value-types-c-reference"></a>값 형식(C# 참조)
 
@@ -32,7 +32,7 @@ ms.locfileid: "68363079"
 
 참조 형식과 달리 값 형식에서는 새 형식을 파생할 수 없습니다. 그러나 참조 형식과 마찬가지로 구조체가 인터페이스를 구현할 수 있습니다.
 
-값 형식 변수는 기본적으로 `null`일 수 없습니다. 그러나 해당 [nullable 형식](../../../csharp/programming-guide/nullable-types/index.md)의 변수는 `null`일 수 있습니다.
+값 형식 변수는 기본적으로 `null`일 수 없습니다. 그러나 해당 [nullable 형식](../../programming-guide/nullable-types/index.md)의 변수는 `null`일 수 있습니다.
 
 각 값 형식에는 해당 형식의 기본값을 초기화하는 암시적 매개 변수 없는 생성자가 있습니다. 값 형식의 기본값에 대한 자세한 내용은 [기본값 표](default-values-table.md)를 참조하세요.
 

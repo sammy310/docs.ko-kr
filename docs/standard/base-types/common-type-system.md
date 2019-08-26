@@ -19,12 +19,12 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: e916d7d335bcdeff64393a25ab697748209d147c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 050b2c2b8b55bc79cf388ce7a8c197b14f3437d7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782627"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934772"
 ---
 # <a name="common-type-system"></a>공용 형식 시스템
 공용 형식 시스템은 공용 언어 런타임에 형식을 선언하고 사용 및 관리하는 방법을 정의할 뿐 아니라 언어 간 통합에 대한 런타임 지원의 중요한 부분을 차지합니다. 공용 형식 시스템은 다음과 같은 기능을 수행합니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "67782627"
 |exported 또는 not exported|클래스를 정의한 어셈블리 밖에서 클래스를 볼 수 있는지의 여부를 지정하며 이 특성은 중첩 클래스에는 적용되지 않고 최상위 클래스에만 적용됩니다.|  
   
 > [!NOTE]
->  클래스는 부모 클래스 또는 구조체 내에 중첩될 수도 있습니다. 중첩된 클래스에도 멤버 특성이 있습니다. 자세한 내용은 [중첩 형식](#NestedTypes)을 참조하세요.  
+> 클래스는 부모 클래스 또는 구조체 내에 중첩될 수도 있습니다. 중첩된 클래스에도 멤버 특성이 있습니다. 자세한 내용은 [중첩 형식](#NestedTypes)을 참조하세요.  
   
  구현이 없는 클래스 멤버는 추상 멤버입니다. 하나 이상의 멤버가 있는 클래스는 그 자체가 추상적이기 때문에 이 클래스의 새 인스턴스를 만들 수 없습니다. 런타임을 대상으로 하는 일부 언어에서는 추상 멤버가 없는 클래스를 추상으로 표시할 수 있습니다. 파생 클래스에서 상속하거나 재정의할 수 있는 기본 기능의 집합을 캡슐화하려는 경우 상황에 따라 추상 클래스를 사용할 수 있습니다. 추상이 아닌 클래스를 구체적인 클래스라고 합니다.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "67782627"
 - 열거형은 제네릭 형식 내에 중첩되어 있으므로 단독 제네릭이 아니면 제네릭이 될 수 없습니다. 즉, 열거형에는 자체의 형식 매개 변수를 사용할 수 없습니다.  
   
     > [!NOTE]
-    >  Visual Basic, C# 및 C++를 사용하여 만들어진 중첩 형식(열거형 포함)은 모든 바깥쪽 제네릭 형식의 형식 매개 변수를 포함하므로 자체의 형식 매개 변수가 없더라도 제네릭입니다. 자세한 내용은 <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> 참조 항목의 "중첩 형식"을 참조하십시오.  
+    > Visual Basic, C# 및 C++를 사용하여 만들어진 중첩 형식(열거형 포함)은 모든 바깥쪽 제네릭 형식의 형식 매개 변수를 포함하므로 자체의 형식 매개 변수가 없더라도 제네릭입니다. 자세한 내용은 <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> 참조 항목의 "중첩 형식"을 참조하십시오.  
   
  <xref:System.FlagsAttribute> 특성은 비트 필드라는 특수한 열거형을 나타냅니다. 런타임 자체에서는 기존의 열거형과 비트 필드를 구분하지 않지만 언어에 따라서는 이를 구분할 수도 있습니다. 이를 구분할 경우 열거형이 아니라 비트 필드에 비트 연산자를 적용하여 명명되지 않은 값을 생성할 수 있습니다. 일반적으로 열거형은 요일, 국가 또는 지역 이름 등과 같은 고유한 요소의 목록에 사용하고, 비트 필드는 `Red And Big And Fast` 같은 조합에서 나타날 수 있는 특성 및 수량 목록에 사용합니다.  
   
@@ -157,14 +157,14 @@ ms.locfileid: "67782627"
  대리자는 <xref:System.MulticastDelegate>에서 상속하기 때문에 대리자에는 호출 목록이 있습니다. 이 목록에는 대리자가 나타내는 메서드와 대리자가 호출될 때 실행되는 메서드가 표시됩니다. 이 목록의 모든 메서드는 대리자가 호출될 때 제공되는 인수를 받습니다.  
   
 > [!NOTE]
->  호출 목록에 하나 이상의 메서드가 있는 대리자에 대해서는 반환 형식을 가지고 있더라도 반환 값이 정의되지 않습니다.  
+> 호출 목록에 하나 이상의 메서드가 있는 대리자에 대해서는 반환 형식을 가지고 있더라도 반환 값이 정의되지 않습니다.  
   
  대부분의 경우 콜백 메서드와 마찬가지로 대리자는 하나의 메서드만 나타내며, 대리자를 만들고 호출하는 것 외에는 필요한 작업이 없습니다.  
   
  .NET에서는 여러 메서드를 나타내는 대리자에 대해 <xref:System.Delegate> 및 <xref:System.MulticastDelegate> 대리자 클래스의 메서드를 제공하여 대리자 호출 목록에 메서드 추가(<xref:System.Delegate.Combine%2A?displayProperty=nameWithType> 메서드), 메서드 제거(<xref:System.Delegate.Remove%2A?displayProperty=nameWithType> 메서드), 호출 목록 가져오기(<xref:System.Delegate.GetInvocationList%2A?displayProperty=nameWithType> 메서드) 등과 같은 작업을 지원합니다.  
   
 > [!NOTE]
->  C#, C++ 및 Visual Basic에서는 이벤트 처리기 대리자에 대해 이러한 메서드를 사용할 필요가 없습니다. 이들 언어에서는 이벤트 처리기를 추가하고 제거하기 위한 구문을 제공합니다.  
+> C#, C++ 및 Visual Basic에서는 이벤트 처리기 대리자에 대해 이러한 메서드를 사용할 필요가 없습니다. 이들 언어에서는 이벤트 처리기를 추가하고 제거하기 위한 구문을 제공합니다.  
 
 <a name="type_definitions"></a>   
 ## <a name="type-definitions"></a>형식 정의  
@@ -307,7 +307,7 @@ ms.locfileid: "67782627"
  각 형식 멤버에는 고유의 시그니처가 있습니다. 메서드 시그니처는 메서드 이름과 매개 변수 목록(메서드 인수의 순서 및 형식)으로 구성됩니다. 형식 내에서 시그니처를 다르게 하여 이름이 같은 여러 개의 메서드를 정의할 수 있습니다. 이름이 같은 둘 이상의 메서드를 정의하면 메서드가 오버로드됩니다. 예를 들어, <xref:System.Char?displayProperty=nameWithType>에서는 <xref:System.Char.IsDigit%2A> 메서드가 오버로드됩니다. 한 메서드는 <xref:System.Char>을 사용하고, 다른 메서드는 <xref:System.String> 및 <xref:System.Int32>를 사용합니다.  
   
 > [!NOTE]
->  반환 형식은 메서드 시그니처의 일부로 간주되지 않습니다. 즉, 메서드는 반환 형식만 다를 경우에는 오버로드될 수 없습니다.  
+> 반환 형식은 메서드 시그니처의 일부로 간주되지 않습니다. 즉, 메서드는 반환 형식만 다를 경우에는 오버로드될 수 없습니다.  
   
 ### <a name="inheriting-overriding-and-hiding-members"></a>멤버 상속, 재정의 및 숨기기  
  파생된 형식에서는 기본 형식의 멤버를 모두 상속합니다. 즉, 파생된 형식에서 이러한 멤버를 정의하고 사용할 수 있습니다. 상속된 멤버의 동작 또는 품질을 다음과 같은 두 가지 방법으로 수정할 수 있습니다.  

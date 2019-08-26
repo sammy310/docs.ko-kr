@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c694a9d0ba0d6c7d41a9ce3b932b88519fcddfeb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9bc165c6f1a7cdc6b8a03db0b7648583d75cd7a0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626328"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946658"
 ---
 # <a name="default-marshaling-for-objects"></a>개체에 대한 마샬링
 <xref:System.Object?displayProperty=nameWithType>로 형식화된 매개 변수와 필드는 비관리 코드에 다음 형식 하나로 표시할 수 있습니다.  
@@ -87,7 +87,7 @@ interface MarshalObject {
 ```  
   
 > [!NOTE]
->  Interop 마샬러는 호출한 후 변형 내부에서 할당된 메모리를 자동으로 해제합니다.  
+> Interop 마샬러는 호출한 후 변형 내부에서 할당된 메모리를 자동으로 해제합니다.  
   
  다음 예제에서는 서식 있는 값 형식을 보여 줍니다.  
   
@@ -115,7 +115,7 @@ struct ObjectHolder {
 ```  
   
 ## <a name="marshaling-object-to-interface"></a>인터페이스에 개체 마샬링  
- 개체가 COM에 인터페이스로 노출되면 해당 인터페이스는 관리되는 형식 <xref:System.Object>에 대한 클래스 인터페이스입니다(**_Object** 인터페이스). 이 인터페이스는 결과 형식 라이브러리에서 **IDispatch**(<xref:System.Runtime.InteropServices.UnmanagedType>) 또는 **IUnknown**(**UnmanagedType.IUnknown**)으로 형식화됩니다. COM 클라이언트는 **_Object** 인터페이스를 통해 관리되는 클래스 또는 파생 클래스에 의해 구현된 모든 멤버를 동적으로 호출할 수 있습니다. 클라이언트는 **QueryInterface**를 호출하여 관리되는 형식에 의해 명시적으로 구현된 다른 인터페이스를 가져올 수도 있습니다.  
+ 개체가 COM에 인터페이스로 노출되면 해당 인터페이스는 관리되는 형식 <xref:System.Object>에 대한 클래스 인터페이스입니다( **_Object** 인터페이스). 이 인터페이스는 결과 형식 라이브러리에서 **IDispatch**(<xref:System.Runtime.InteropServices.UnmanagedType>) 또는 **IUnknown**(**UnmanagedType.IUnknown**)으로 형식화됩니다. COM 클라이언트는 **_Object** 인터페이스를 통해 관리되는 클래스 또는 파생 클래스에 의해 구현된 모든 멤버를 동적으로 호출할 수 있습니다. 클라이언트는 **QueryInterface**를 호출하여 관리되는 형식에 의해 명시적으로 구현된 다른 인터페이스를 가져올 수도 있습니다.  
   
 ## <a name="marshaling-object-to-variant"></a>변형에 개체 마샬링  
  개체가 변형에 마샬링되면 내부 변형 형식은 런타임에 다음 규칙에 따라 결정됩니다.  
@@ -266,7 +266,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |**VT_BSTR**|<xref:System.String?displayProperty=nameWithType>|  
 |**VT_INT**|<xref:System.Int32?displayProperty=nameWithType>|  
 |**VT_UINT**|<xref:System.UInt32?displayProperty=nameWithType>|  
-|**VT_ARRAY** &#124; **VT_**\*|<xref:System.Array?displayProperty=nameWithType>|  
+|**VT_ARRAY** &#124; **VT_** \*|<xref:System.Array?displayProperty=nameWithType>|  
 |**VT_CY**|<xref:System.Decimal?displayProperty=nameWithType>|  
 |**VT_RECORD**|일치하는 boxed 값 형식.|  
 |**VT_VARIANT**|지원되지 않습니다.|  
@@ -310,8 +310,8 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |**개체**  *o*|**변형**  *v*|Never|  
 |**변형**   ***\****  *pv*|**Ref 개체**  *o*|항상|  
 |**Ref 개체**  *o*|**변형**   ***\****  *pv*|항상|  
-|**변형**  *v***(VT_BYREF** *&#124;* **VT_\*)**|**개체**  *o*|Never|  
-|**변형**  *v***(VT_BYREF** *&#124;* **VT_)**|**Ref 개체**  *o*|형식이 변경되지 않은 경우에만.|  
+|**변형**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**개체**  *o*|Never|  
+|**변형**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Ref 개체**  *o*|형식이 변경되지 않은 경우에만.|  
   
 ## <a name="see-also"></a>참고 항목
 

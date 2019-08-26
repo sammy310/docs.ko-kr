@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b07c3eb9d96bb6f675a6a2ca742cc9bdf3c3826
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c3fa2238976df9f570fad9eb6947790565a4b0c5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364059"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935719"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>방법: 리플렉션을 사용하여 대리자 후크
-리플렉션을 사용하여 어셈블리를 로드하고 실행하는 경우 C# `+=` 연산자 또는 Visual Basic [AddHandler 문](~/docs/visual-basic/language-reference/statements/addhandler-statement.md)과 같은 언어 기능을 사용하여 이벤트를 연결할 수 없습니다. 다음 절차에서는 리플렉션을 통해 필요한 모든 형식을 가져와 기존 메서드를 이벤트에 연결하는 방법 및 리플렉션 내보내기를 사용하여 동적 메서드를 만들고 이벤트에 연결하는 방법을 보여 줍니다.  
+리플렉션을 사용하여 어셈블리를 로드하고 실행하는 경우 C# `+=` 연산자 또는 Visual Basic [AddHandler 문](../../visual-basic/language-reference/statements/addhandler-statement.md)과 같은 언어 기능을 사용하여 이벤트를 연결할 수 없습니다. 다음 절차에서는 리플렉션을 통해 필요한 모든 형식을 가져와 기존 메서드를 이벤트에 연결하는 방법 및 리플렉션 내보내기를 사용하여 동적 메서드를 만들고 이벤트에 연결하는 방법을 보여 줍니다.  
   
 > [!NOTE]
->  이벤트 처리 대리자를 연결하는 다른 방법은 <xref:System.Reflection.EventInfo> 클래스의 <xref:System.Reflection.EventInfo.AddEventHandler%2A> 메서드에 대한 코드 예제를 참조하세요.  
+> 이벤트 처리 대리자를 연결하는 다른 방법은 <xref:System.Reflection.EventInfo> 클래스의 <xref:System.Reflection.EventInfo.AddEventHandler%2A> 메서드에 대한 코드 예제를 참조하세요.  
   
 ### <a name="to-hook-up-a-delegate-using-reflection"></a>리플렉션을 사용하여 대리자를 연결하려면  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68364059"
      [!code-csharp[HookUpDelegate#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#7)]
      [!code-vb[HookUpDelegate#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#7)]  
   
-6. `add` 접근자 메서드를 가져온 다음 호출하여 이벤트를 연결합니다. 모든 이벤트에는 상위 수준 언어 구문에서 숨겨지는 `add` 접근자 및 `remove` 접근자가 있습니다. 예를 들어 C#에서는 `+=` 연산자를 사용하여 이벤트를 연결하고, Visual Basic에서는 [AddHandler 문](~/docs/visual-basic/language-reference/statements/addhandler-statement.md)을 사용합니다. 다음 코드는 <xref:System.Windows.Forms.Control.Click> 이벤트의 `add` 접근자를 가져온 다음 대리자 인스턴스를 전달하여 런타임에 바인딩해서 호출합니다. 인수를 배열로 전달해야 합니다.  
+6. `add` 접근자 메서드를 가져온 다음 호출하여 이벤트를 연결합니다. 모든 이벤트에는 상위 수준 언어 구문에서 숨겨지는 `add` 접근자 및 `remove` 접근자가 있습니다. 예를 들어 C#에서는 `+=` 연산자를 사용하여 이벤트를 연결하고, Visual Basic에서는 [AddHandler 문](../../visual-basic/language-reference/statements/addhandler-statement.md)을 사용합니다. 다음 코드는 <xref:System.Windows.Forms.Control.Click> 이벤트의 `add` 접근자를 가져온 다음 대리자 인스턴스를 전달하여 런타임에 바인딩해서 호출합니다. 인수를 배열로 전달해야 합니다.  
   
      [!code-cpp[HookUpDelegate#8](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#8)]
      [!code-csharp[HookUpDelegate#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#8)]
