@@ -440,6 +440,28 @@
           href: core/porting/winforms.md
         - name: WPF 프로젝트 포팅
           href: core/porting/wpf.md
+    - name: 종속성 로딩
+      items:
+        - name: 개요
+          href: core/dependency-loading/overview.md
+        - name: AssemblyLoadContext 이해
+          href: core/dependency-loading/understanding-assemblyloadcontext.md
+        - name: 세부 정보를 로드하는 중
+          items:
+            - name: 기본 종속성 프로브
+              href: core/dependency-loading/default-probing.md
+            - name: 관리형 어셈블리를 로드하는 중
+              href: core/dependency-loading/loading-managed.md
+            - name: 위성 어셈블리를 로드하는 중
+              href: core/dependency-loading/loading-resources.md
+            - name: 비관리형 라이브러리를 로드하는 중
+              href: core/dependency-loading/loading-unmanaged.md
+        - name: 자습서
+          items:
+            - name: 플러그 인을 사용하여 .NET Core 애플리케이션 만들기
+              href: core/tutorials/creating-app-with-plugin-support.md
+            - name: .NET Core에서 어셈블리 언로드 기능을 사용하고 디버그하는 방법
+              href: standard/assembly/unloadability-howto.md
     - name: 소스에서 .NET Core 빌드
       href: core/build/index.md
       items:
