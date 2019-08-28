@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63a3ee099d4256a4bc800f74615fca8eaec2a77f
-ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
+ms.openlocfilehash: 57198cb9fb0042a3a74589e2781b3db1a2b829f1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67135687"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963374"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>정규식의 그룹화 구문
 그룹화 구문은 정규식의 하위 식을 나타내며 입력 문자열의 부분 문자열을 캡처합니다. 그룹화 구문은 다음과 같은 경우에 사용할 수 있습니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "67135687"
  여기서 *subexpression* 은 임의의 유효한 정규식 패턴입니다. 괄호를 사용하는 캡처는 정규식에서 여는 괄호의 순서에 따라 왼쪽에서 오른쪽으로 자동으로 번호(1부터 시작)가 매겨집니다. 번호가 0인 캡처는 전체 정규식 패턴에 의해 일치되는 텍스트입니다.  
   
 > [!NOTE]
->  기본적으로 `(`*subexpression*`)` 언어 요소는 일치하는 하위 식을 캡처합니다. 그러나 정규식 패턴 일치 메서드의 <xref:System.Text.RegularExpressions.RegexOptions> 매개 변수가 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 플래그를 포함하거나, `n` 옵션이 이 하위 식에 적용된 경우(이 항목 뒷부분의 [그룹 옵션](#group_options) 참조) 일치하는 하위 식이 캡처되지 않습니다.  
+> 기본적으로 `(`*subexpression*`)` 언어 요소는 일치하는 하위 식을 캡처합니다. 그러나 정규식 패턴 일치 메서드의 <xref:System.Text.RegularExpressions.RegexOptions> 매개 변수가 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 플래그를 포함하거나, `n` 옵션이 이 하위 식에 적용된 경우(이 항목 뒷부분의 [그룹 옵션](#group_options) 참조) 일치하는 하위 식이 캡처되지 않습니다.  
   
  캡처된 그룹에는 다음과 같은 4가지 방법으로 액세스할 수 있습니다.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "67135687"
  여기서 *name* 은 유효한 그룹 이름이고, *subexpression* 은 임의의 유효한 정규식 패턴입니다. *name* 은 문장 부호 문자를 포함해서는 안 되며 숫자로 시작할 수 없습니다.  
   
 > [!NOTE]
->  정규식 패턴 일치 메서드의 <xref:System.Text.RegularExpressions.RegexOptions> 매개 변수가 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 플래그를 포함하거나, `n` 옵션이 이 하위 식에 적용된 경우(이 항목 뒷부분의 [그룹 옵션](#group_options) 참조) 하위 식을 캡처하는 유일한 방법은 명시적으로 캡처링 그룹의 이름을 지정하는 것입니다.  
+> 정규식 패턴 일치 메서드의 <xref:System.Text.RegularExpressions.RegexOptions> 매개 변수가 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 플래그를 포함하거나, `n` 옵션이 이 하위 식에 적용된 경우(이 항목 뒷부분의 [그룹 옵션](#group_options) 참조) 하위 식을 캡처하는 유일한 방법은 명시적으로 캡처링 그룹의 이름을 지정하는 것입니다.  
   
  명명된 캡처된 그룹에는 다음과 같은 방법으로 액세스할 수 있습니다.  
   
@@ -190,7 +190,7 @@ ms.locfileid: "67135687"
  균형 조정 그룹 정의에서는 *name2* 를 스택으로 사용합니다. 각 중첩된 구문의 시작 문자는 그룹 및 해당 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 컬렉션에 배치됩니다. 닫는 문자가 일치하면 해당 여는 문자가 그룹에서 제거되고 <xref:System.Text.RegularExpressions.Group.Captures%2A> 컬렉션이 하나 감소합니다. 모든 중첩된 구문의 여는 문자와 닫는 문자가 일치하고 나면 *name2*가 비어 있습니다.  
   
 > [!NOTE]
->  다음 예제에서 중첩된 구문의 적절한 여는 문자와 닫는 문자를 사용하도록 정규식을 수정하고 나면 이러한 정규식을 사용하여 가장 많이 중첩된 구문(예: 여러 중첩 메서드 호출을 포함하는 프로그램 코드 줄 또는 수학식)을 처리할 수 있습니다.  
+> 다음 예제에서 중첩된 구문의 적절한 여는 문자와 닫는 문자를 사용하도록 정규식을 수정하고 나면 이러한 정규식을 사용하여 가장 많이 중첩된 구문(예: 여러 중첩 메서드 호출을 포함하는 프로그램 코드 줄 또는 수학식)을 처리할 수 있습니다.  
   
  다음 예제에서는 균형 조정 그룹 정의를 사용하여 입력 문자열에서 왼쪽 및 오른쪽 꺾쇠괄호(<>)를 찾습니다. 이 예제에서는 일치하는 꺾쇠괄호 쌍을 추적하는 데 스택처럼 사용되는 두 개의 명명된 그룹 `Open` 및 `Close`를 정의합니다. 캡처된 각 왼쪽 꺾쇠괄호는 `Open` 그룹의 캡처 컬렉션에 푸시되고, 캡처된 각 오른쪽 꺾쇠괄호는 `Close` 그룹의 캡처 컬렉션에 푸시됩니다. 균형 조정 그룹 정의는 각 왼쪽 꺾쇠괄호에 대해 일치하는 오른쪽 꺾쇠괄호가 있도록 보장합니다. 일치하는 오른쪽 꺾쇠괄호가 없는 경우 최종 하위 패턴 `(?(Open)(?!))`는 `Open` 그룹이 비어 있지 않은 경우(및 따라서 모든 중첩된 구문이 닫히지 않은 경우)에만 평가됩니다. 최종 하위 패턴이 평가되면 찾기가 실패하는데, `(?!)` 하위 패턴이 항상 실패하는 너비가 0인 부정 lookahead 어설션이기 때문입니다.  
   
@@ -211,7 +211,7 @@ ms.locfileid: "67135687"
 |`[^<>]*`|왼쪽 또는 오른쪽 꺾쇠괄호가 아닌 0개 이상의 문자를 찾습니다.|  
 |`(?'Open'<)`|왼쪽 꺾쇠괄호를 찾아 `Open`이라는 그룹에 할당합니다.|  
 |`[^<>]*`|왼쪽 또는 오른쪽 꺾쇠괄호가 아닌 0개 이상의 문자를 찾습니다.|  
-|`((?'Open'<)[^<>]*) +`|하나 이상의 왼쪽 꺾쇠괄호 다음에 왼쪽 또는 오른쪽 꺾쇠괄호가 아닌 0개 이상의 문자가 있는 일치 항목을 찾습니다. 이 그룹은 두 번째 캡처링 그룹입니다.|  
+|`((?'Open'<)[^<>]*)+`|하나 이상의 왼쪽 꺾쇠괄호 다음에 왼쪽 또는 오른쪽 꺾쇠괄호가 아닌 0개 이상의 문자가 있는 일치 항목을 찾습니다. 이 그룹은 두 번째 캡처링 그룹입니다.|  
 |`(?'Close-Open'>)`|오른쪽 꺾쇠괄호를 찾고 `Open` 그룹과 현재 그룹 간의 부분 문자열을 `Close` 그룹에 할당한 다음 `Open` 그룹의 정의를 삭제합니다.|  
 |`[^<>]*`|왼쪽 및 오른쪽 꺾쇠괄호가 아닌 0개 이상의 문자를 찾습니다.|  
 |`((?'Close-Open'>)[^<>]*)+`|하나 이상의 오른쪽 꺾쇠괄호 다음에 왼쪽 및 오른쪽 꺾쇠괄호가 아닌 0개 이상의 문자가 있는 일치 항목을 찾습니다. 오른쪽 꺾쇠괄호를 찾을 때 `Open` 그룹과 현재 그룹 간의 부분 문자열을 `Close` 그룹에 할당하고 `Open` 그룹의 정의를 삭제합니다. 이 그룹은 세 번째 캡처링 그룹입니다.|  
@@ -234,13 +234,13 @@ ms.locfileid: "67135687"
 |7|`[^<>]*`|오른쪽 꺾쇠괄호 뒤에서 꺾쇠괄호가 아닌 문자를 찾습니다. 일치 항목이 없습니다.|  
 |8|`)+`|캡처된 세 번째 그룹의 값은 ">"입니다.<br /><br /> 입력 문자열의 다음 문자가 오른쪽 꺾쇠괄호가 아니므로 정규식 엔진은 `((?'Close-Open'>)[^<>]*)` 하위 패턴으로 루프백하지 않습니다.|  
 |9|`)*`|캡처된 첫 번째 그룹의 값은 “\<abc>”입니다.<br /><br /> 입력 문자열의 다음 문자가 왼쪽 꺾쇠괄호이므로 정규식 엔진은 `(((?'Open'<)` 하위 패턴으로 루프백합니다.|  
-|10|`(((?'Open'<)`|“\<mno>”에서 왼쪽 꺾쇠괄호를 찾아 `Open` 그룹에 할당합니다. 해당 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 컬렉션에는 이제 단일 값 "<"가 있습니다.|  
+|10|`(((?'Open'<)`|“\<mno”에서 왼쪽 꺾쇠괄호를 찾아 `Open` 그룹에 할당합니다. 해당 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 컬렉션에는 이제 단일 값 "<"가 있습니다.|  
 |11|`[^<>]*`|"mno"를 찾습니다.|  
 |12|`)+`|"<mno"는 캡처된 두 번째 그룹의 값입니다.<br /><br /> 입력 문자열의 다음 문자가 왼쪽 꺾쇠괄호이므로 정규식 엔진은 `(?'Open'<)[^<>]*)` 하위 패턴으로 루프백합니다.|  
-|13|`(((?'Open'<)`|“\<xyz>”에서 왼쪽 꺾쇠괄호를 찾아 `Open` 그룹에 할당합니다. 이제 `Open` 그룹의 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 컬렉션에 두 개의 캡처 즉, “\<mno>”의 왼쪽 꺾쇠괄호와 “\<xyz>”의 왼쪽 꺾쇠괄호가 포함되어 있습니다.|  
+|13|`(((?'Open'<)`|“\<xyz>”에서 왼쪽 꺾쇠괄호를 찾아 `Open` 그룹에 할당합니다. 이제 `Open` 그룹의 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 컬렉션에 두 개의 캡처 즉, “\<mno”의 왼쪽 꺾쇠괄호와 “\<xyz>”의 왼쪽 꺾쇠괄호가 포함되어 있습니다.|  
 |14|`[^<>]*`|"xyz"를 찾습니다.|  
 |15|`)+`|"<xyz"는 캡처된 두 번째 그룹의 값입니다.<br /><br /> 입력 문자열의 다음 문자가 왼쪽 꺾쇠괄호가 아니므로 정규식 엔진은 `(?'Open'<)[^<>]*)` 하위 패턴으로 루프백하지 않습니다.|  
-|16|`((?'Close-Open'>)`|“\<xyz>”에서 오른쪽 꺾쇠괄호를 찾습니다. “xyz”는 `Open` 그룹과 오른쪽 꺾쇠괄호 간의 부분 문자열을 `Close` 그룹에 할당하고 `Open` 그룹의 현재 값을 삭제합니다. 이전 캡처의 값(“\<mno>”의 왼쪽 꺾쇠괄호)이 `Open` 그룹의 현재 값이 됩니다. 이제 `Open` 그룹의 <xref:System.Text.RegularExpressions.Group.Captures%2A> 컬렉션에 단일 캡처인 “\<xyz>”의 왼쪽 꺾쇠괄호가 포함되어 있습니다.|  
+|16|`((?'Close-Open'>)`|“\<xyz>”에서 오른쪽 꺾쇠괄호를 찾습니다. “xyz”는 `Open` 그룹과 오른쪽 꺾쇠괄호 간의 부분 문자열을 `Close` 그룹에 할당하고 `Open` 그룹의 현재 값을 삭제합니다. 이전 캡처의 값(“\<mno”의 왼쪽 꺾쇠괄호)이 `Open` 그룹의 현재 값이 됩니다. 이제 `Open` 그룹의 <xref:System.Text.RegularExpressions.Group.Captures%2A> 컬렉션에 단일 캡처인 “\<xyz>”의 왼쪽 꺾쇠괄호가 포함되어 있습니다.|  
 |17|`[^<>]*`|꺾쇠괄호가 아닌 문자를 찾습니다. 일치 항목이 없습니다.|  
 |18|`)+`|캡처된 세 번째 그룹의 값은 ">"입니다.<br /><br /> 입력 문자열의 다음 문자가 오른쪽 꺾쇠괄호이므로 정규식 엔진은 `((?'Close-Open'>)[^<>]*)` 하위 패턴으로 루프백합니다.|  
 |19|`((?'Close-Open'>)`|“xyz>>”에서 최종 오른쪽 꺾쇠괄호를 찾고 `Open` 그룹과 오른쪽 꺾쇠괄호 사이의 부분 문자열인 “mno\<xyz>”를 `Close` 그룹에 할당한 다음, `Open` 그룹의 현재 값을 삭제합니다. 이제 `Open` 그룹이 비어 있습니다.|  
@@ -261,7 +261,7 @@ ms.locfileid: "67135687"
  여기서 *subexpression* 은 임의의 유효한 정규식 패턴입니다. 비 캡처링 그룹 구문은 일반적으로 수량자가 그룹에 적용될 때 사용되지만 그룹에 의해 캡처된 부분 문자열에는 관심을 두지 않습니다.  
   
 > [!NOTE]
->  정규식에 중첩된 그룹화 구문이 포함된 경우 외부 비 캡처링 그룹 구문은 내부 중첩된 그룹 구문에 적용되지 않습니다.  
+> 정규식에 중첩된 그룹화 구문이 포함된 경우 외부 비 캡처링 그룹 구문은 내부 중첩된 그룹 구문에 적용되지 않습니다.  
   
  다음 예제에서는 비 캡처링 그룹을 포함하는 정규식을 보여 줍니다. 출력에는 캡처된 그룹이 포함되지 않습니다.  
   
@@ -287,7 +287,7 @@ ms.locfileid: "67135687"
  여기서 *subexpression* 은 임의의 유효한 정규식 패턴입니다. 예를 들어, `(?i-s:)` 는 대/소문자 구분하지 않음을 설정하고 한 줄 모드를 사용하지 않도록 설정합니다. 지정할 수 있는 인라인 옵션에 대한 자세한 내용은 [정규식 옵션](../../../docs/standard/base-types/regular-expression-options.md)을 참조하세요.  
   
 > [!NOTE]
->  <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 클래스 생성자 또는 정적 메서드를 사용하여 하위 식이 아니라 전체 정규식에 적용되는 옵션을 지정할 수 있습니다. 또한 `(?imnsx-imnsx)` 언어 구문을 사용하여 정규식에서 특정 지점 뒤에 적용되는 인라인 옵션을 지정할 수 있습니다.  
+> <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 클래스 생성자 또는 정적 메서드를 사용하여 하위 식이 아니라 전체 정규식에 적용되는 옵션을 지정할 수 있습니다. 또한 `(?imnsx-imnsx)` 언어 구문을 사용하여 정규식에서 특정 지점 뒤에 적용되는 인라인 옵션을 지정할 수 있습니다.  
   
  그룹 옵션 구문은 캡처링 그룹이 아닙니다. 즉, *subexpression* 에 의해 캡처된 문자열의 일부가 일치 항목에 포함되더라도 캡처된 그룹에 포함되지 않으며 <xref:System.Text.RegularExpressions.GroupCollection> 개체를 채우는 데 사용되지도 않습니다.  
   
@@ -396,7 +396,7 @@ ms.locfileid: "67135687"
   
  여기서 *subexpression* 은 임의의 정규식 패턴입니다. 찾기가 성공하려면 *subexpression* 이 입력 문자열에서 현재 위치의 왼쪽에서 발생해서는 안 됩니다. 그러나 `subexpression` 과 일치하지 않는 모든 부분 문자열은 일치 결과에 포함되지 않습니다.  
   
- 너비가 0인 부정 lookbehind 어설션은 일반적으로 정규식의 시작 부분에 사용됩니다. 이 어설션이 정의하는 패턴은 뒤에 오는 문자열에서 일치가 불가능하도록 합니다. 또한 이 어설션은 캡처된 그룹의 마지막 문자(하나 또는 여러 개)가 해당 그룹의 정규식 패턴과 일치하는 하나 이상의 문자가 아니어야 하는 경우 역추적을 제한하는 데도 사용됩니다. 예를 들어, 그룹이 모든 연속 단어 문자를 캡처하는 경우 너비가 0인 긍정 lookbehind 어설션을 사용하여 마지막 문자가 밑줄(_)이 아니도록 할 수 있습니다.  
+ 너비가 0인 부정 lookbehind 어설션은 일반적으로 정규식의 시작 부분에 사용됩니다. 이 어설션이 정의하는 패턴은 뒤에 오는 문자열에서 일치가 불가능하도록 합니다. 또한 이 어설션은 캡처된 그룹의 마지막 문자(하나 또는 여러 개)가 해당 그룹의 정규식 패턴과 일치하는 하나 이상의 문자가 아니어야 하는 경우 역추적을 제한하는 데도 사용됩니다. 예를 들어, 그룹이 모든 연속 단어 문자를 캡처하는 경우 너비가 0인 긍정 lookbehind 어설션을 사용하여 마지막 문자가 밑줄(\_)이 아니도록 할 수 있습니다.  
   
  다음 예제에서는 주말이 아닌 평일인 날짜를 찾습니다(즉, 토요일 및 일요일이 아님).  
   
@@ -459,16 +459,16 @@ ms.locfileid: "67135687"
  [!code-csharp[RegularExpressions.Language.Grouping#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/objectmodel1.cs#4)]
  [!code-vb[RegularExpressions.Language.Grouping#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/objectmodel1.vb#4)]  
   
- 정규식 패턴 `\b(\w+)\W+)+` 는 문자열에서 개별 단어를 추출합니다. 이 패턴은 다음 표에서와 같이 정의됩니다.  
+ 정규식 패턴 `(\b(\w+)\W+)+` 는 문자열에서 개별 단어를 추출합니다. 이 패턴은 다음 표에서와 같이 정의됩니다.  
   
 |무늬|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계에서 일치 항목 찾기를 시작합니다.|  
 |`(\w+)`|하나 이상의 단어 문자를 찾습니다. 이러한 문자는 함께 하나의 단어를 형성합니다. 이 그룹은 두 번째 캡처링 그룹입니다.|  
 |`\W+`|하나 이상의 단어가 아닌 문자를 찾습니다.|  
-|`(\w+)\W+)+`|하나 이상의 단어 문자 다음에 하나 이상의 단어가 아닌 문자가 한 번 이상 나타나는 패턴을 찾습니다. 이 그룹은 첫 번째 캡처링 그룹입니다.|  
+|`(\b(\w+)\W+)`|하나 이상의 단어 문자 다음에 하나 이상의 단어가 아닌 문자가 한 번 이상 나타나는 패턴을 찾습니다. 이 그룹은 첫 번째 캡처링 그룹입니다.|  
   
- 첫 번째 캡처링 그룹은 문장의 각 단어를 찾습니다. 두 번째 캡처링 그룹은 각 단어와 이러한 단어 뒤에 나오는 문장 부호 및 공백을 함께 찾습니다. 인덱스가 2인 <xref:System.Text.RegularExpressions.Group> 개체는 두 번째 캡처링 그룹과 일치하는 텍스트에 대한 정보를 제공합니다. 캡처링 그룹에 의해 캡처된 단어의 전체 집합은 <xref:System.Text.RegularExpressions.CaptureCollection> 속성에서 반환하는 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 개체에서 제공합니다.  
+ 두 번째 캡처 그룹은 문장의 각 단어를 찾습니다. 첫 번째 캡처 그룹은 각 단어와 이 단어 뒤에 나오는 문장 부호 및 공백을 함께 찾습니다. 인덱스가 2인 <xref:System.Text.RegularExpressions.Group> 개체는 두 번째 캡처링 그룹과 일치하는 텍스트에 대한 정보를 제공합니다. 캡처링 그룹에 의해 캡처된 단어의 전체 집합은 <xref:System.Text.RegularExpressions.CaptureCollection> 속성에서 반환하는 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 개체에서 제공합니다.  
   
 ## <a name="see-also"></a>참고 항목
 

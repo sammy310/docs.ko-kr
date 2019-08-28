@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: 6fd504269ae9afbfd02b58276582a644674e1e0f
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 32df98852b28963ffb748895156f7d9977c74b92
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040316"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046144"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>연습: 시각적 상속 데모
 
@@ -35,19 +35,19 @@ ms.locfileid: "69040316"
 > [!CAUTION]
 > 일부 컨트롤은 기본 폼에서의 시각적 상속을 지원하지 않습니다. 다음 컨트롤은 이 연습에 설명된 시나리오를 지원하지 않습니다.
 >
->  <xref:System.Windows.Forms.WebBrowser>
+> - <xref:System.Windows.Forms.WebBrowser>
 >
->  <xref:System.Windows.Forms.ToolStrip>
+> - <xref:System.Windows.Forms.ToolStrip>
 >
->  <xref:System.Windows.Forms.ToolStripPanel>
+> - <xref:System.Windows.Forms.ToolStripPanel>
 >
->  <xref:System.Windows.Forms.TableLayoutPanel>
+> - <xref:System.Windows.Forms.TableLayoutPanel>
 >
->  <xref:System.Windows.Forms.FlowLayoutPanel>
+> - <xref:System.Windows.Forms.FlowLayoutPanel>
 >
->  <xref:System.Windows.Forms.DataGridView>
+> - <xref:System.Windows.Forms.DataGridView>
 >
->  상속된 폼의 이러한 컨트롤은 사용하는 한정자(`private`, `protected` 또는 `public`)에 관계없이 항상 읽기 전용입니다.
+> 상속된 폼의 이러한 컨트롤은 사용하는 한정자(`private`, `protected` 또는 `public`)에 관계없이 항상 읽기 전용입니다.
 
 ## <a name="create-a-class-library-project-containing-a-base-form"></a>기본 폼을 포함 하는 클래스 라이브러리 프로젝트 만들기
 
@@ -61,7 +61,7 @@ ms.locfileid: "69040316"
 
 5. **파일** 메뉴에서 **모두 저장** 을 선택 하 여 프로젝트 및 파일을 기본 위치에 저장 합니다.
 
- 다음 두 절차에서는 기본 폼에 단추를 추가합니다. 시각적 상속을 보여 주기 위해 단추의 `Modifiers` 속성을 설정하여 단추에 다양한 액세스 수준을 제공합니다.
+다음 두 절차에서는 기본 폼에 단추를 추가합니다. 시각적 상속을 보여 주기 위해 단추의 `Modifiers` 속성을 설정하여 단추에 다양한 액세스 수준을 제공합니다.
 
 ## <a name="add-a-button-that-inheritors-of-the-base-form-can-modify"></a>기본 폼의 상속 자가 수정할 수 있는 단추를 추가 합니다.
 
@@ -135,7 +135,7 @@ ms.locfileid: "69040316"
 
 5. 디자이너에서 상속 된 폼 (**Form2**)을 두 번 클릭 하 여 엽니다 (아직 열려 있지 않은 경우).
 
-     디자이너에서 상속 된 단추에는 기호 (![Visual Basic 상속 기호의 스크린샷](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif))를 위쪽 모퉁이에 표시 합니다.
+    디자이너에서 상속 된 단추에는 기호 (![Visual Basic 상속 기호의 스크린샷](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif))를 위쪽 모퉁이에 표시 합니다.
 
 6. **Hello** 단추를 선택 하 고 크기 조정 핸들을 관찰 합니다. 이 단추는 protected이므로 상속자가 이동하고, 크기를 조정하고, 캡션을 변경하고, 기타 수정 작업을 할 수 있습니다.
 

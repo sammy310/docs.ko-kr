@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: b35db12c8da1f333b481d2bd2e7633026ae30c30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: baeb091f7c1757e62ba049afc7a92ae8e73d3925
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570725"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70014954"
 ---
 # <a name="net-architectural-components"></a>.NET 아키텍처 구성 요소
 
@@ -30,14 +30,14 @@ ms.locfileid: "54570725"
 
 - 하나 이상의 런타임. 예: .NET Framework용 CLR과 .NET Core용 CoreCLR, CoreRT.
 - .NET Standard와 추가 API를 구현할 수 있는 클래스 라이브러리. 예: .NET Framework 기본 클래스 라이브러리, .NET Core 기본 클래스 라이브러리.
-- 필요에 따라 하나 이상의 애플리케이션 프레임워크. 예: .NET Framework에 포함되어 있는 [ASP.NET](https://www.asp.net/)과 [Windows Forms](../framework/winforms/windows-forms-overview.md), [WPF(Windows Presentation Foundation)](../framework/wpf/index.md).
+- 필요에 따라 하나 이상의 애플리케이션 프레임워크. 예: [ASP.NET](https://www.asp.net/), [Windows Forms](../framework/winforms/windows-forms-overview.md) 및 [WPF(Windows Presentation Foundation)](../framework/wpf/index.md)가 .NET Framework 및 .NET Core에 포함됩니다.
 - 필요에 따라 개발 도구. 일부 개발 도구는 여러 구현체에서 공통적으로 사용할 수 있음.
 
 Microsoft에서 적극적으로 개발 및 유지 보수하는 네 가지 기본 .NET 구현체는 .NET Core와 .NET Framework, Mono, UWP입니다.
 
 ### <a name="net-core"></a>.NET Core
 
-.NET Core는 다양한 .NET 플랫폼에서 사용할 수 있는 구현체로, 대규모 서버 및 클라우드 워크로드를 처리하도록 설계되었습니다. Windows와 macOS, Linux에서 실행됩니다. .NET Core는 .NET Standard를 구현하므로 .NET Standard를 대상으로 하는 코드는 .NET Core에서 실행할 수 있습니다. 따라서 ASP.NET Core는 .NET Core에서 실행됩니다. 
+.NET Core는 다양한 .NET 플랫폼에서 사용할 수 있는 구현체로, 대규모 서버 및 클라우드 워크로드를 처리하도록 설계되었습니다. Windows와 macOS, Linux에서 실행됩니다. .NET Core는 .NET Standard를 구현하므로 .NET Standard를 대상으로 하는 코드는 .NET Core에서 실행할 수 있습니다. [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core), [Windows Forms](../framework/winforms/windows-forms-overview.md) 및 [WPF(Windows Presentation Foundation)](../framework/wpf/index.md)는 모두 .NET Core에서 실행됩니다.
 
 .NET Core의 자세한 내용은 [.NET Core 가이드](../core/index.md)와 [서버 앱에 대해 .NET Core와 .NET Framework 중에 선택](choosing-core-framework-server.md)을 참조하세요.
 
@@ -53,7 +53,7 @@ Mono는 작은 런타임이 필요할 때 주로 사용되는 .NET 구현체입�
 
 Mono는 현재 게시된 .NET Standard 버전을 모두 지원합니다.
 
-지금까지 Mono는 .NET Framework의 더 큰 API를 구현하고 Unix에서 가장 인기 있는 기능 중 일부를 에뮬레이트했습니다. 경우에 따라 Unix에서 해당 기능을 사용하는 .NET 애플리케이션을 실행하는 데도 사용됩니다.
+지금까지 Mono는 .NET Framework의 방대한 API를 구현하고 Unix에서 가장 인기 있는 기능의 일부를 따라서 만들었습니다. 경우에 따라 Unix에서 해당 기능을 사용하는 .NET 애플리케이션을 실행하는 데도 사용됩니다.
 
 일반적으로 Mono는 Just-In-Time 컴파일러에서 사용되지만 iOS 같은 플랫폼에 사용되는 전체 정적 컴파일러(Ahead-Of-Time 컴파일) 기능도 제공합니다.
 
@@ -61,7 +61,7 @@ Mono의 자세한 내용은 [Mono 설명서](https://www.mono-project.com/docs/)
 
 ### <a name="universal-windows-platform-uwp"></a>UWP(유니버설 Windows 플랫폼)
 
-UWP는 IoT(사물 인터넷)에 대한 최신 터치 가능 Windows 애플리케이션 및 소프트웨어를 작성하는 데 사용되는 .NET의 구현입니다. PC와 태블릿, 패블릿, 휴대폰, Xbox 등을 포함하여 대상이 될 수 있는 다양한 종류의 디바이스를 통합하기 위해 설계되었습니다. UWP는 중앙 집중식 앱 스토어와 실행 환경(AppContainer), Win32를 대체하는 Windows API(WinRT) 등 많은 서비스를 제공합니다. 앱은 C++과 C#, VB.NET, JavaScript로 작성할 수 있습니다. C#과 VB.NET을 사용할 경우 .NET API는 .NET Core에서 제공됩니다.
+UWP는 IoT(사물 인터넷)에 대한 최신 터치 가능 Windows 애플리케이션 및 소프트웨어를 작성하는 데 사용되는 .NET의 구현입니다. PC와 태블릿, 패블릿, 휴대폰, Xbox 등을 포함하여 대상이 될 수 있는 다양한 종류의 디바이스를 통합하기 위해 설계되었습니다. UWP는 중앙 집중식 앱 스토어, 실행 환경(AppContainer), Win32를 대체할 Windows API(WinRT) 등 많은 서비스를 제공합니다. 앱은 C++과 C#, VB.NET, JavaScript로 작성할 수 있습니다. C#과 VB.NET을 사용할 경우 .NET API는 .NET Core에서 제공됩니다.
 
 UWP의 자세한 내용은 [유니버설 Windows 플랫폼 소개](/windows/uwp/get-started/universal-application-platform-guide)를 참조하세요.
 
@@ -79,7 +79,7 @@ UWP의 자세한 내용은 [유니버설 Windows 플랫폼 소개](/windows/uwp/
 모든 .NET 구현체에서 동작하는 다양한 도구와 인프라 구성 요소를 사용할 수 있습니다. 여기에는 다음 항목들이 포함되며 이 항목들이 전부는 아닙니다.
 
 - .NET 언어 및 해당 컴파일러
-- .NET 프로젝트 시스템(*.csproj*, *.vbproj* 및 *.fsproj* 파일 기반)
+- .NET 프로젝트 시스템( *.csproj*, *.vbproj* 및 *.fsproj* 파일 기반)
 - 프로젝트를 빌드하는 데 사용하는 빌드 엔진 [MSBuild](/visualstudio/msbuild/msbuild)
 - .NET에 대한 Microsoft의 패키지 관리자 [NuGet](/nuget/)
 - [CAKE](https://cakebuild.net/) 및 [FAKE](https://fake.build/) 등의 오픈 소스 빌드 오케스트레이션 도구

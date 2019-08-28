@@ -6,24 +6,25 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 07/25/2019
-ms.openlocfilehash: f1fce2899e9e11b1007d6c270180b27a29eaa167
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.date: 08/21/2019
+ms.openlocfilehash: 5f9d7026b270a010d2ba5d4b1165728a100ab6ed
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039447"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922557"
 ---
-# <a name="whats-new-in-net-core-30-preview-7"></a>.NET Core 3.0(Preview 7)의 새로운 기능
+# <a name="whats-new-in-net-core-30-preview-8"></a>.NET Core 3.0(Preview 8)의 새로운 기능
 
-이 문서는 .NET Core 3.0(Preview 7)의 새로운 기능에 대해 설명합니다. 가장 중요한 개선 사항 중 하나는 Windows 데스크톱 애플리케이션에 대한 지원(Windows만 해당)입니다. .NET Core 3.0 SDK 구성 요소 Windows 데스크톱을 사용하여 Windows Forms 및 Windows Presentation Foundation(WPF) 애플리케이션을 포트할 수 있습니다. 분명히 말하지만, Windows 데스크톱 구성 요소는 Windows에서만 지원되고 포함됩니다. 자세한 내용은 이 문서 후반부의 [Windows 데스크톱](#windows-desktop) 섹션을 참조하세요.
+이 문서는 .NET Core 3.0(Preview 8)의 새로운 기능에 대해 설명합니다. 가장 중요한 개선 사항 중 하나는 Windows 데스크톱 애플리케이션에 대한 지원(Windows만 해당)입니다. .NET Core 3.0 SDK 구성 요소 Windows 데스크톱을 사용하여 Windows Forms 및 Windows Presentation Foundation(WPF) 애플리케이션을 포트할 수 있습니다. 분명히 말하지만, Windows 데스크톱 구성 요소는 Windows에서만 지원되고 포함됩니다. 자세한 내용은 이 문서 후반부의 [Windows 데스크톱](#windows-desktop) 섹션을 참조하세요.
 
 .NET Core 3.0에서는 C# 8.0에 대한 지원이 추가되었습니다. [Visual Studio 미리 보기 최신 릴리스](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview) 또는 OmniSharp 확장이 지원되는 Visual Studio Code를 사용하는 것이 매우 좋습니다.
 
-Windows, Mac 및 Linux에서 지금 바로 [.NET Core 3.0 Preview 7을 다운로드하여 시작](https://aka.ms/netcore3download)하세요.
+Windows, macOS 또는 Linux에서 지금 바로 [.NET Core 3.0 Preview 8을 다운로드하여 시작](https://aka.ms/netcore3download)하세요.
 
 각 미리 보기 릴리스에 대한 자세한 내용은 다음 공지를 참조하세요.
 
+- [.NET Core 3.0 Preview 8 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)
 - [.NET Core 3.0 Preview 7 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
 - [.NET Core 3.0 Preview 6 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/)
 - [.NET Core 3.0 Preview 5 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-5/)
@@ -34,7 +35,9 @@ Windows, Mac 및 Linux에서 지금 바로 [.NET Core 3.0 Preview 7을 다운로
 
 ## <a name="production-supported-preview"></a>프로덕션 지원 미리 보기
 
-.NET Core Preview 7은 Microsoft에서 준비하는 프로덕션으로 간주되며 완벽하게 지원됩니다. Preview 7부터 릴리스는 새 기능을 추가하는 대신 .NET Core 3.0을 개선하는 데 집중합니다. Preview 7에서 변경된 내용에 관한 자세한 내용은 [Preview 7 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)을 참조하세요.
+.NET Core Preview 8은 Microsoft에서 준비하는 프로덕션으로 간주되며 완벽하게 지원됩니다. Preview 7부터 릴리스는 새 기능을 추가하는 대신 .NET Core 3.0을 개선하는 데 집중합니다. Preview 8에서 변경된 내용에 관한 자세한 내용은 [Preview 8 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)을 참조하세요.
+
+이전 미리 보기 릴리스를 사용하는 경우 “Go Live” 지원을 계속하려면 Preview 8로 이동해야 합니다.
 
 ## <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Installer
 
@@ -52,11 +55,11 @@ Windows용 MSI 설치 관리자는 .NET Core 3.0부터 변경되었습니다. �
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
- 
+
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
- 
+
 </Project>
 ```
 
@@ -91,7 +94,7 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 ## <a name="net-platform-dependent-intrinsics"></a>.NET 플랫폼 종속 내장 함수
 
-**SIMD** 또는 **비트 조작 명령어** 세트와 같은 특정 perf-oriented CPU 명령어에 대한 액세스를 허용하는 API가 추가되었습니다. 이러한 명령어를 사용하면 특정 시나리오(효율적인 데이터 병렬 처리)에서 성능을 크게 향상시킬 수 있습니다. 
+**SIMD** 또는 **비트 조작 명령어** 세트와 같은 특정 perf-oriented CPU 명령어에 대한 액세스를 허용하는 API가 추가되었습니다. 이러한 명령어를 사용하면 특정 시나리오(효율적인 데이터 병렬 처리)에서 성능을 크게 향상시킬 수 있습니다.
 
 적절한 경우 .NET 라이브러리는 성능을 개선하기 위해 이러한 명령을 사용하기 시작했습니다.
 
@@ -103,8 +106,8 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 사용 중인 SDK의 환경 및 플랫폼과 일치하는 경우 `dotnet build` 또는 `dotnet publish` 중에 실행 파일이 생성됩니다. 다른 네이티브 실행 파일과 마찬가지로 이러한 실행 파일에서도 다음과 같은 동일한 기능을 예상할 수 있습니다.
 
-* 실행 파일을 두 번 클릭할 수 있습니다.
-* Windows의 `myapp.exe`, Linux 및 macOS의 `./myapp`과 같은 애플리케이션을 명령 프롬프트에서 직접 시작할 수 있습니다.
+- 실행 파일을 두 번 클릭할 수 있습니다.
+- Windows의 `myapp.exe`, Linux 및 macOS의 `./myapp`과 같은 애플리케이션을 명령 프롬프트에서 직접 시작할 수 있습니다.
 
 ## <a name="single-file-executables"></a>단일 실행 파일
 
@@ -297,11 +300,11 @@ NET Core 프로젝트 파일은 `<RuntimeIdentifiers>` 속성에 지원되는 �
 
 <xref:System.Windows.Forms.HighDpiMode?displayProperty=nameWithType> 열거형으로 표현되는 가능한 `highDpiMode` 값은 다음과 같습니다.
 
-* `DpiUnaware`
-* `SystemAware`
-* `PerMonitor`
-* `PerMonitorV2`
-* `DpiUnawareGdiScaled`
+- `DpiUnaware`
+- `SystemAware`
+- `PerMonitor`
+- `PerMonitorV2`
+- `DpiUnawareGdiScaled`
 
 높은 DPI 모드에 대한 자세한 내용은 [Windows에서 높은 DPI 데스크톱 애플리케이션 개발](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows)을 참조하세요.
 
@@ -335,7 +338,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 {
     await foreach (var result in GetResultsAsync())
     {
-        if (result > 20) yield return result; 
+        if (result > 20) yield return result;
     }
 }
 ```
@@ -350,31 +353,31 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 구문 분석 및 서식 지정 개선 사항:
 
-* 모든 길이의 입력을 올바르게 구문 분석하고 반올림합니다.
-* 음수 0을 올바르게 구문 분석하고 형식을 지정합니다.
-* 대/소문자를 구분하지 않는 검사를 수행하여 `Infinity`와 `NaN`을 올바르게 구문 분석하고, 적용 가능한 경우 선행 `+` 옵션을 허용합니다.
+- 모든 길이의 입력을 올바르게 구문 분석하고 반올림합니다.
+- 음수 0을 올바르게 구문 분석하고 형식을 지정합니다.
+- 대/소문자를 구분하지 않는 검사를 수행하여 `Infinity`와 `NaN`을 올바르게 구문 분석하고, 적용 가능한 경우 선행 `+` 옵션을 허용합니다.
 
 새 <xref:System.Math?displayProperty=nameWithType> API의 구성 내용:
 
-* <xref:System.Math.BitIncrement(System.Double)> 및 <xref:System.Math.BitDecrement(System.Double)>\
+- <xref:System.Math.BitIncrement(System.Double)> 및 <xref:System.Math.BitDecrement(System.Double)>\
 `nextUp` 및 `nextDown` IEEE 연산에 해당합니다. 입력보다 크거나 작은 값을 각각 비교하는 최소 부동 소수점 숫자를 반환합니다. 예를 들어 `Math.BitIncrement(0.0)`는 `double.Epsilon`을 반환합니다.
 
-* <xref:System.Math.MaxMagnitude(System.Double,System.Double)> 및 <xref:System.Math.MinMagnitude(System.Double,System.Double)>\
+- <xref:System.Math.MaxMagnitude(System.Double,System.Double)> 및 <xref:System.Math.MinMagnitude(System.Double,System.Double)>\
 `maxNumMag` 및 `minNumMag` IEEE 연산에 해당하며 두 입력의 규모 중 더 크거나 작은 값을 반환합니다. 예를 들어 `Math.MaxMagnitude(2.0, -3.0)`는 `-3.0`을 반환합니다.
 
-* <xref:System.Math.ILogB(System.Double)>\
+- <xref:System.Math.ILogB(System.Double)>\
 `logB` IEEE 연산에 해당하며 정수값을 반환하고, 입력 매개 변수의 정수 이진 로그를 반환합니다. 이 메서드는 `floor(log2(x))`와 사실상 동일하지만 반올림 오류를 최소화하면서 수행됩니다.
 
-* <xref:System.Math.ScaleB(System.Double,System.Int32)>\
+- <xref:System.Math.ScaleB(System.Double,System.Int32)>\
 정수 값을 취하는 `scaleB` IEEE 연산에 해당하며 사실상 `x * pow(2, n)`을 반환하지만 반올림 오류를 최소화하면서 수행됩니다.
 
-* <xref:System.Math.Log2(System.Double)>\
+- <xref:System.Math.Log2(System.Double)>\
 `log2` IEEE 연산에 해당하며, 기본-2 로그를 반환합니다. 반올림 오류를 최소화합니다.
 
-* <xref:System.Math.FusedMultiplyAdd(System.Double,System.Double,System.Double)>\
+- <xref:System.Math.FusedMultiplyAdd(System.Double,System.Double,System.Double)>\
 `fma` IEEE 연산에 해당하며, 단일 곱셈 누산기(fused multiply add) 계산을 수행합니다. 다시 말해, `(x * y) + z`을(를) 단일 연산으로 수행하기 때문에 반올림 오류가 최소화됩니다. 예를 들어 `FusedMultiplyAdd(1e308, 2.0, -1e308)`는 `1e308`을 반환합니다. 일반 `(1e308 * 2.0) - 1e308`은 `double.PositiveInfinity`를 반환합니다.
 
-* <xref:System.Math.CopySign(System.Double,System.Double)>\
+- <xref:System.Math.CopySign(System.Double,System.Double)>\
 `copySign` IEEE 연산에 해당하며, `x`의 값을 반환하지만 `y`의 부호를 반환합니다.
 
 ## <a name="fast-built-in-json-support"></a>빠른 기본 제공 JSON 지원
@@ -453,8 +456,8 @@ Windows는 플랫 C API, COM 및 WinRT의 형태로 다양한 네이티브 API�
 
 이제 .NET Core는 지정된 환경에서 사용 가능한 경우 [OpenSSL 1.1.1의 TLS 1.3 지원](https://www.openssl.org/blog/blog/2018/09/11/release111/)을 이용합니다. TLS 1.3:
 
-* 클라이언트와 서버 간에 필요한 왕복 횟수가 감소하여 연결 시간이 향상됩니다.
-* 더 이상 사용하지 않고 안전하지 않은 암호화 알고리즘을 제거하므로 보안이 향상됩니다.
+- 클라이언트와 서버 간에 필요한 왕복 횟수가 감소하여 연결 시간이 향상됩니다.
+- 더 이상 사용하지 않고 안전하지 않은 암호화 알고리즘을 제거하므로 보안이 향상됩니다.
 
 사용 가능한 경우 .NET Core 3.0은 Linux 시스템에서 **OpenSSL 1.1.1**, **OpenSSL 1.1.0** 또는 **OpenSSL 1.0.2**를 사용합니다. **OpenSSL 1.1.1**이 사용 가능한 경우 <xref:System.Net.Security.SslStream?displayProperty=nameWithType> 및 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 형식은 **TLS 1.3**을 사용합니다(클라이언트와 서버 둘 다 **TLS 1.3**을 지원한다고 가정).
 
@@ -479,20 +482,20 @@ Windows는 플랫 C API, COM 및 WinRT의 형태로 다양한 네이티브 API�
 
 모든 키 형식(*RSA*, *DSA*, *ECDsa* 및 *ECDiffieHellman*)에서 다음 형식을 지원합니다.
 
-* **공개 키**
-  * X.509 SubjectPublicKeyInfo
+- **공개 키**
+  - X.509 SubjectPublicKeyInfo
 
-* **개인 키**
-  * PKCS#8 PrivateKeyInfo
-  * PKCS#8 EncryptedPrivateKeyInfo
+- **개인 키**
+  - PKCS#8 PrivateKeyInfo
+  - PKCS#8 EncryptedPrivateKeyInfo
 
 RSA 키는 다음도 지원합니다.
 
-* **공개 키**
-  * PKCS#1 RSAPublicKey
+- **공개 키**
+  - PKCS#1 RSAPublicKey
 
-* **개인 키**
-  * PKCS#1 RSAPrivateKey
+- **개인 키**
+  - PKCS#1 RSAPrivateKey
 
 내보내기 메서드는 DER로 인코드된 이진 데이터를 생성하고, 가져오기 메서드도 동일한 동작을 예상합니다. 키가 텍스트에 편리한 PEM 형식으로 저장된 경우 호출자는 가져오기 메서드를 호출하기 전에 콘텐츠를 base64로 디코드해야 합니다.
 
@@ -502,17 +505,19 @@ RSA 키는 다음도 지원합니다.
 
 ## <a name="serialport-for-linux"></a>Linux용 SerialPort
 
-.NET Core 3.0은 Linux에서 <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>를 지원합니다.
+.NET Core 3.0은 Linux에서 <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>에 대한 기본 지원을 제공합니다.
 
 이전에는 .NET Core가 Windows에서만 `SerialPort` 사용을 지원했습니다.
+
+Linux의 제한적 직렬 포트 지원에 대한 자세한 내용은 [GitHub 이슈 #33146](https://github.com/dotnet/corefx/issues/33146)을 참조하세요.
 
 ## <a name="docker-and-cgroup-memory-limits"></a>Docker 및 cgroup 메모리 한도
 
 Preview 3부터, Docker를 사용하여 Linux에서 .NET Core 3.0을 실행하면 cgroup 메모리 한도에 훨씬 더 효과적입니다. 메모리 한도가 있는 Docker 컨테이너를 실행하면(`docker run -m` 사용) .NET Core 동작 방식이 바뀝니다.
 
-* 기본 가비지 수집기(GC) 힙 크기: 최대 20mb 또는 컨테이너에서 75%의 메모리 한도
-* 명시적 크기는 절대수 또는 cgroup 한도의 비율로 설정할 수 있습니다.
-* GC 힙당 최소 예약된 세그먼트 크기는 16mb입니다. 이 크기는 머신에서 생성된 힙 수를 줄여 줍니다.
+- 기본 가비지 수집기(GC) 힙 크기: 최대 20mb 또는 컨테이너에서 75%의 메모리 한도
+- 명시적 크기는 절대수 또는 cgroup 한도의 비율로 설정할 수 있습니다.
+- GC 힙당 최소 예약된 세그먼트 크기는 16mb입니다. 이 크기는 머신에서 생성된 힙 수를 줄여 줍니다.
 
 ## <a name="smaller-garbage-collection-heap-sizes"></a>더 작은 가비지 수집 힙 크기
 
@@ -528,8 +533,8 @@ Large Page(또는 Linux Huge Page)는 운영 체제가 이러한 큰 페이지�
 
 GPIO 프로그래밍에 사용할 수 있는 두 개의 패키지가 NuGet에 릴리스되었습니다.
 
-* [System.Device.Gpio](https://www.nuget.org/packages/System.Device.Gpio)
-* [Iot.Device.Bindings](https://www.nuget.org/packages/Iot.Device.Bindings)
+- [System.Device.Gpio](https://www.nuget.org/packages/System.Device.Gpio)
+- [Iot.Device.Bindings](https://www.nuget.org/packages/Iot.Device.Bindings)
 
 GPIO 패키지에는 *GPIO*, *SPI*, *I2C* 및 *PWM*디바이스용 API가 포함됩니다. IoT 바인딩 패키지에 디바이스 바인딩이 포함되어 있습니다. 자세한 내용은 [디바이스 GitHub 리포지토리](https://github.com/dotnet/iot/blob/master/src/devices/)를 참조하세요.
 

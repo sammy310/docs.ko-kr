@@ -17,24 +17,24 @@ ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: ce495ce01c970fb46cc7e7e374994fd34a7730a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68bce927c6426fc32cd2fe26dcc488432199612d
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648974"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987199"
 ---
 # <a name="changing-case-in-net"></a>.NET에서 대/소문자 바꾸기
 사용자 입력을 수락하는 애플리케이션을 작성하는 경우 데이터를 입력할 때 사용하는 대/소문자를 확신할 수 없습니다. 특히 사용자 인터페이스에 표시하는 경우 문자열의 대/소문자를 일관되게 표시하려는 경우가 많습니다. 다음 표에서는 세 가지 대/소문자 변경 메서드를 설명합니다. 처음 두 메서드는 문화권을 수락하는 오버로드를 제공합니다.  
   
-|메서드 이름|사용|  
+|메서드 이름|기능|  
 |-----------------|---------|  
 |<xref:System.String.ToUpper%2A?displayProperty=nameWithType>|문자열의 모든 문자를 대문자로 변환합니다.|  
 |<xref:System.String.ToLower%2A?displayProperty=nameWithType>|문자열의 모든 문자를 소문자로 변환합니다.|  
 |<xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType>|문자열에서 단어의 첫 글자를 대문자로 변환합니다.|  
   
 > [!WARNING]
->  문자열을 비교하거나 같은지 테스트하기 위해 <xref:System.String.ToUpper%2A?displayProperty=nameWithType> 및 <xref:System.String.ToLower%2A?displayProperty=nameWithType> 메서드를 사용하여 문자열을 변환하면 안 됩니다. 자세한 내용은 [대/소문자가 혼합된 문자열 비교](#Comparing) 섹션을 참조하세요.  
+> 문자열을 비교하거나 같은지 테스트하기 위해 <xref:System.String.ToUpper%2A?displayProperty=nameWithType> 및 <xref:System.String.ToLower%2A?displayProperty=nameWithType> 메서드를 사용하여 문자열을 변환하면 안 됩니다. 자세한 내용은 [대/소문자가 혼합된 문자열 비교](#Comparing) 섹션을 참조하세요.  
   
 <a name="Comparing"></a>   
 ## <a name="comparing-strings-of-mixed-case"></a>대/소문자가 혼합된 문자열 비교  

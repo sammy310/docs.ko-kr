@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: 0bde31a004b1952be488569f89cfd3b129c82771
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ef5d459195bea752ec5380f2853d8011cb189aa
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68671228"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666632"
 ---
 # <a name="net-assembly-file-format"></a>.NET 어셈블리 파일 형식
 
@@ -35,4 +35,4 @@ ECMA 335 II.25.1 런타임 파일 형식 구조의 어셈블리 헤더입니다.
 
 ## <a name="processing-the-assemblies"></a>어셈블리 처리
 
-어셈블리를 처리할 도구 또는 API를 작성할 수 있습니다. 어셈블리 정보를 사용하면 런타임에 프로그래밍 방식으로 결정을 내리고, 어셈블리를 다시 작성하고, 편집기에서 API IntelliSense를 제공하고, 설명서를 생성할 수 있습니다. <xref:System.Reflection?displayProperty=nameWithType> 및 [Mono.Cecil](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/)은 이러한 용도에 자주 사용되는 도구의 좋은 예입니다.
+어셈블리를 처리할 도구 또는 API를 작성할 수 있습니다. 어셈블리 정보를 사용하면 런타임에 프로그래밍 방식으로 결정을 내리고, 어셈블리를 다시 작성하고, 편집기에서 API IntelliSense를 제공하고, 설명서를 생성할 수 있습니다. <xref:System.Reflection?displayProperty=nameWithType>, <xref:System.Reflection.MetadataLoadContext?displayProperty=nameWithType> 및 [Mono.Cecil](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/)은 이러한 용도에 자주 사용되는 도구의 좋은 예입니다.

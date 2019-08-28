@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 788229053f5702b44c6ac351b59ad1c464e4e133
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eddf605ab085aa39494bef0818ef51403cb032ef
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633634"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988791"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>정규식의 수량자
 수량자는 찾을 일치 항목의 입력에 있어야 하는 문자, 그룹 또는 문자 클래스의 인스턴스 수를 지정합니다.  다음 테이블에서는 .NET에서 지원하는 수량자를 보여 줍니다.  
@@ -38,13 +38,13 @@ ms.locfileid: "64633634"
  수량 `n` 및 `m`은 정수 상수입니다. 일반적으로 수량자는 탐욕적입니다. 그러면 최대한의 정규식 엔진이 특정 패턴과 일치하게 됩니다. `?` 문자를 수량자에 추가하면 게으른 수량자로 만들 수 있습니다. 그러면 최소한의 정규식 엔진이 일치하게 됩니다. 탐욕적 수량자와 게으른 수량자 간의 차이에 대한 설명은 이 항목의 뒷부분에 나오는 [탐욕적 및 게으른 수량자](#Greedy) 섹션을 참조하세요.  
   
 > [!IMPORTANT]
->  예를 들어, 정규식 패턴 `(a*)*`과 같이 수량자가 중첩되면 정규식 엔진이 입력 문자열에 있는 문자 수의 지 수 함수로 수행해야 하는 비교의 수를 증가시킬 수 있습니다. 이 동작 및 해결 방법에 대한 자세한 내용은 [역추적](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)을 참조하세요.  
+> 예를 들어, 정규식 패턴 `(a*)*`과 같이 수량자가 중첩되면 정규식 엔진이 입력 문자열에 있는 문자 수의 지 수 함수로 수행해야 하는 비교의 수를 증가시킬 수 있습니다. 이 동작 및 해결 방법에 대한 자세한 내용은 [역추적](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)을 참조하세요.  
   
 ## <a name="regular-expression-quantifiers"></a>정규식 수량자  
  다음 섹션에는 .NET의 정규식에서 지원하는 수량자를 보여 줍니다.  
   
 > [!NOTE]
->  *, +, ?, { 및 } 문자가 정규식 패턴에 나타난 경우 [문자 클래스](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)에 포함된 경우가 아니면 정규식 엔진은 이러한 문자를 수량자 또는 수량자 구문의 일부로 해석합니다. 이를 문자 클래스 외부의 리터럴 문자로 해석하려면 앞에 백슬래시를 추가하여 이스케이프해야 합니다. 예를 들어 정규식 패턴의 `\*` 문자열은 리터럴 별표(“\*”) 문자로 해석됩니다.  
+> *, +, ?, { 및 } 문자가 정규식 패턴에 나타난 경우 [문자 클래스](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)에 포함된 경우가 아니면 정규식 엔진은 이러한 문자를 수량자 또는 수량자 구문의 일부로 해석합니다. 이를 문자 클래스 외부의 리터럴 문자로 해석하려면 앞에 백슬래시를 추가하여 이스케이프해야 합니다. 예를 들어 정규식 패턴의 `\*` 문자열은 리터럴 별표(“\*”) 문자로 해석됩니다.  
   
 ### <a name="match-zero-or-more-times-"></a>0번 이상 일치: *  
  `*` 수량자는 이전 요소를 0번 이상 일치시킵니다. 이는 `{0,}` 수량자와 같습니다. `*`는 게으른 수량자가 `*?`인 탐욕적 수량자입니다.  
@@ -185,7 +185,7 @@ ms.locfileid: "64633634"
 |`\(??`|0개 또는 1개의 여는 괄호를 찾습니다.|  
   
 ### <a name="match-exactly-n-times-lazy-match-n"></a>정확히 n번 일치(게으른 일치): {n}?  
- `{`*n*`}?` 수량자는 정확하게 `n`번 이전 요소와 일치하며 여기서 *n*은 정수입니다. 탐욕적 수량자 `{`*n*`}+`의 게으른 수량자입니다.  
+ `{`*n*`}?` 수량자는 정확하게 `n`번 이전 요소와 일치하며 여기서 *n*은 정수입니다. 탐욕적 수량자 `{`*n*`}`의 게으른 수량자입니다.  
   
  다음 예제에서 정규식 `\b(\w{3,}?\.){2}?\w{3,}?\b`은 웹 사이트 주소를 식별하는 데 사용됩니다. "www.microsoft.com" 및 "msdn.microsoft.com"과 일치하지만 "mywebsite" 또는 "mycompany.com"과 일치하지 않습니다.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "64633634"
 ### <a name="match-between-n-and-m-times-lazy-match-nm"></a>n번에서 m번 사이에 일치(게으른 일치): {n,m}?  
  `{`*n*`,`*m*`}?` 수량자는 이전 요소를 `n`번에서 `m`번 사이에 찾지만 가능한 적은 횟수로 찾으며, 여기서 *n* 및 *m*은 정수입니다. 탐욕적 수량자 `{`*n*`,`*m*`}`의 게으른 수량자입니다.  
   
- 다음 예제에서 정규식 `\b[A-Z](\w*\s+){1,10}?[.!?]`은 하나에서 열 개 단어 사이를 포함하는 문장을 찾습니다. 18개의 단어가 포함된 한 문장을 제외하고 입력 문자열에 있는 모든 문장을 찾습니다.  
+ 다음 예제에서 정규식 `\b[A-Z](\w*?\s*?){1,10}[.!?]`은 하나에서 열 개 단어 사이를 포함하는 문장을 찾습니다. 18개의 단어가 포함된 한 문장을 제외하고 입력 문자열에 있는 모든 문장을 찾습니다.  
   
  [!code-csharp[RegularExpressions.Quantifiers#12](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#12)]
  [!code-vb[RegularExpressions.Quantifiers#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#12)]  
@@ -220,8 +220,8 @@ ms.locfileid: "64633634"
 |-------------|-----------------|  
 |`\b`|단어 경계를 시작합니다.|  
 |`[A-Z]`|A-Z의 대문자를 찾습니다.|  
-|`(\w*\s+)`|뒤에 1개 이상의 공백 문자가 있는 0개 이상의 단어 문자를 찾습니다. 이 그룹은 첫 번째 캡처 그룹입니다.|  
-|`{1,10}?`|이전 패턴과 1번에서 10번 사이에 일치하지만 가능한 적은 수로 일치합니다.|  
+|`(\w*?\s*?)`|뒤에 1개 이상의 공백 문자가 있는 0개 이상의 단어 문자를 가능한 한 적게 찾습니다. 첫 번째 캡처 그룹입니다.|  
+|`{1,10}`|이전 패턴을 1~10번 찾습니다.|  
 |`[.!?]`|문장 부호 문자 ".", "!" 또는 "?" 중 하나를 찾습니다.|  
   
 <a name="Greedy"></a>   

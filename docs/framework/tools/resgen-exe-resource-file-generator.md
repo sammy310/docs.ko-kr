@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6b908cadc02e0d1739d8b36b6904bb47c5ea090
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: b018672fbc9e669f6010871a150dd9b060babd88
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378460"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958003"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe(리소스 파일 생성기)
 리소스 파일 생성기(Resgen.exe)를 사용하면 텍스트 파일(.txt 또는 .restext)과 XML 기반 리소스 형식 파일(.resx)을 런타임 이진 실행 파일에 포함하거나 위성 어셈블리에 포함할 수 있는 공용 언어 런타임의 이진 파일(.resources)로 변환할 수 있습니다. [리소스 파일 만들기](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)를 참조하세요.  
@@ -90,7 +90,7 @@ resgen filename.extension [outputDirectory]
  텍스트 파일(.txt 또는 .restext)은 문자열 리소스만 포함할 수 있습니다. 문자열을 여러 가지 언어로 번역해야 하는 애플리케이션을 작성하는 경우에는 문자열 리소스를 사용하는 것이 좋습니다. 예를 들어, 해당 문자열 리소스를 사용하면 메뉴 문자열을 쉽게 지역화할 수 있습니다. Resgen.exe를 사용하여 이름/값 쌍이 들어 있는 텍스트 파일을 읽습니다. 여기에서 이름은 해당 리소스를 설명하는 문자열이고, 값은 리소스 문자열 자체입니다.  
   
 > [!NOTE]
->  .txt 및 .restext 파일 형식에 대한 자세한 내용은 [리소스 파일 만들기](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)에서 "텍스트 파일의 리소스" 섹션을 참조하세요.  
+> .txt 및 .restext 파일 형식에 대한 자세한 내용은 [리소스 파일 만들기](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)에서 "텍스트 파일의 리소스" 섹션을 참조하세요.  
   
  리소스를 포함하고 있는 텍스트 파일은 기본 라틴 범위(U+007F까지)의 문자만 포함하지 않는 경우 UTF-8 또는 유니코드(UTF-16) 인코딩으로 저장해야 합니다. Resgen.exe에서는 ANSI 인코딩으로 저장된 텍스트 파일을 처리할 때 확장된 ANSI 문자를 제거합니다.  
   
@@ -220,7 +220,7 @@ resgen /compile StringResources.txt TableResources.resx ImageResources.resx
  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램을 개발하는 경우, 기존 데스크톱 응용 프로그램의 리소스를 사용하려는 경우가 있습니다. 하지만 두 종류의 애플리케이션은 다른 파일 형식을 지원합니다. 데스크톱 응용 프로그램에서 텍스트(.txt 또는.restext) 또는.resx 파일의 리소스는 이진 .resources 파일로 컴파일됩니다. [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 .resw 파일은 이진 패키지 리소스 인덱스(PRI) 파일로 컴파일됩니다. 실행 가능한 또는 위성 어셈블리에서 리소스를 추출하거나 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램 개발 시 사용할 수 있는 하나 이상의 .resw 파일을 작성하여 이 간격을 연결하는 데 Resgen.exe을 사용할 수 있습니다.  
   
 > [!IMPORTANT]
->  Visual Studio는 휴대용 라이브러리에서 리소스를 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에 통합시키는 데 필요한 모든 변환을 자동으로 처리합니다. 어셈블리에서 리소스를 .resw 파일 형식으로 변환하기 위해 .Resgen.exe를 직접 사용하는 것은 Visual Studio 외부에서 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램을 개발하려고 하는 개발자에게만 필요합니다.  
+> Visual Studio는 휴대용 라이브러리에서 리소스를 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에 통합시키는 데 필요한 모든 변환을 자동으로 처리합니다. 어셈블리에서 리소스를 .resw 파일 형식으로 변환하기 위해 .Resgen.exe를 직접 사용하는 것은 Visual Studio 외부에서 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램을 개발하려고 하는 개발자에게만 필요합니다.  
   
  어셈블리에서 .resw 파일을 생성하는 구문은 다음과 같습니다.  
   
@@ -302,7 +302,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
  *classname*  
  강력한 형식의 리소스 클래스의 이름입니다. 이 값은 .resources 파일의 루트 이름과 일치해야 합니다. 예를 들어, Resgen.exe에서 MyCompany.Libraries.Strings.resources라는 이름의 .resources 파일을 생성하면 강력한 형식의 리소스 클래스의 이름은 Strings입니다. *classname*을 생략할 경우 생성된 클래스는 `outputFilename`의 루트 이름에서 파생됩니다. `outputFilename`을 생략할 경우 생성된 클래스는 `inputFilename`의 루트 이름에서 파생됩니다.  
   
- *classname*은 공백과 같은 유효하지 않은 문자를 포함할 수 없습니다. *classname*이 공백을 포함하거나 *classname*이 *inputFilename*에서 기본적으로 생성되었고 *inputFilename*이 공백을 포함한다면, Resgen.exe는 유효하지 않은 모든 문자를 밑줄(_)로 대체합니다.  
+ *classname*은 공백과 같은 유효하지 않은 문자를 포함할 수 없습니다. *classname*이 공백을 포함하거나 *classname*이 *inputFilename*에서 기본적으로 생성되었고 *inputFilename*이 공백을 포함한다면, Resgen.exe는 유효하지 않은 모든 문자를 밑줄(\_)로 대체합니다.  
   
  *filename*  
  클래스 파일의 이름입니다.  
@@ -311,7 +311,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
  강력한 형식의 리소스 클래스를 `internal`(C#) 또는 `Friend`(Visual Basic)가 아닌 공용으로 설정합니다. 이렇게 하면 리소스가 포함된 어셈블리 외부에서 리소스를 액세스할 수 있습니다.  
   
 > [!IMPORTANT]
->  강력한 형식의 리소스 클래스를 만들 때 .resources 파일의 이름은 생성된 코드의 네임스페이스 및 클래스 이름과 일치해야 합니다. 하지만 Resgen.exe를 사용하면 호환되지 않는 이름을 가진 .resources 파일을 생성하는 옵션을 지정할 수 있습니다. 이 문제를 해결하려면 생성된 후에 출력 파일 이름을 바꿉니다.  
+> 강력한 형식의 리소스 클래스를 만들 때 .resources 파일의 이름은 생성된 코드의 네임스페이스 및 클래스 이름과 일치해야 합니다. 하지만 Resgen.exe를 사용하면 호환되지 않는 이름을 가진 .resources 파일을 생성하는 옵션을 지정할 수 있습니다. 이 문제를 해결하려면 생성된 후에 출력 파일 이름을 바꿉니다.  
   
  강력한 형식의 리소스 클래스에는 다음과 같은 구성원이 있습니다.  
   

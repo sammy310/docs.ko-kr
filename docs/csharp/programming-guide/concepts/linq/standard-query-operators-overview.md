@@ -2,12 +2,12 @@
 title: 표준 쿼리 연산자 개요(C#)
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: 7ce3a13c98bf08eae79906f1806427741568155e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6419fef5c211995aa4d2bd0796a0d0336dc47a9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537961"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590979"
 ---
 # <a name="standard-query-operators-overview-c"></a>표준 쿼리 연산자 개요(C#)
 *표준 쿼리 연산자*는 LINQ 패턴을 형성하는 메서드입니다. 이 메서드 중 대부분은 시퀀스에서 작동합니다. 여기서 시퀀스란 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스 또는 <xref:System.Linq.IQueryable%601> 인터페이스를 구현하는 형식의 개체를 의미합니다. 표준 쿼리 연산자는 필터링, 프로젝션, 집계, 정렬 등을 포함하여 다양한 쿼리 기능을 제공합니다.  
@@ -67,7 +67,7 @@ foreach (var obj in query)
 ```  
   
 ## <a name="query-expression-syntax"></a>쿼리 식 구문  
- 자주 사용되는 표준 쿼리 연산자 중 일부에는 *쿼리* *식*의 일부로 호출할 수 있는 전용 C# 및 Visual Basic 언어 키워드 구문이 있습니다. 전용 키워드와 해당 구문이 있는 표준 쿼리 연산자에 대한 자세한 내용은 [표준 쿼리 연산자에 대한 쿼리 식 구문(C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)을 참조하세요.  
+ 자주 사용되는 표준 쿼리 연산자 중 일부에는 *쿼리* *식*의 일부로 호출할 수 있는 전용 C# 및 Visual Basic 언어 키워드 구문이 있습니다. 전용 키워드와 해당 구문이 있는 표준 쿼리 연산자에 대한 자세한 내용은 [표준 쿼리 연산자에 대한 쿼리 식 구문(C#)](./query-expression-syntax-for-standard-query-operators.md)을 참조하세요.  
   
 ## <a name="extending-the-standard-query-operators"></a>표준 쿼리 연산자 확장  
  대상 도메인 또는 기술에 적합한 도메인 특정 메서드를 만들어 표준 쿼리 연산자 집합을 강화할 수 있습니다. 또한 원격 평가, 쿼리 변환, 최적화 등의 추가 서비스를 제공하는 고유한 구현으로 표준 쿼리 연산자를 바꿀 수도 있습니다. 예제는 <xref:System.Linq.Enumerable.AsEnumerable%2A>을 참조하세요.  
@@ -75,39 +75,39 @@ foreach (var obj in query)
 ## <a name="related-sections"></a>관련 단원  
  다음 링크는 기능에 따라 다양한 표준 쿼리 연산자에 대한 추가 정보를 제공하는 항목으로 이동합니다.  
   
- [데이터 정렬(C#)](../../../../csharp/programming-guide/concepts/linq/sorting-data.md)  
+ [데이터 정렬(C#)](./sorting-data.md)  
   
- [집합 작업(C#)](../../../../csharp/programming-guide/concepts/linq/set-operations.md)  
+ [집합 작업(C#)](./set-operations.md)  
   
- [데이터 필터링(C#)](../../../../csharp/programming-guide/concepts/linq/filtering-data.md)  
+ [데이터 필터링(C#)](./filtering-data.md)  
   
- [수량자 작업(C#)](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md)  
+ [수량자 작업(C#)](./quantifier-operations.md)  
   
- [프로젝션 작업(C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)  
+ [프로젝션 작업(C#)](./projection-operations.md)  
   
- [데이터 분할(C#)](../../../../csharp/programming-guide/concepts/linq/partitioning-data.md)  
+ [데이터 분할(C#)](./partitioning-data.md)  
   
- [조인 작업(C#)](../../../../csharp/programming-guide/concepts/linq/join-operations.md)  
+ [조인 작업(C#)](./join-operations.md)  
   
- [데이터 그룹화(C#)](../../../../csharp/programming-guide/concepts/linq/grouping-data.md)  
+ [데이터 그룹화(C#)](./grouping-data.md)  
   
- [생성 작업(C#)](../../../../csharp/programming-guide/concepts/linq/generation-operations.md)  
+ [생성 작업(C#)](./generation-operations.md)  
   
- [같음 연산(C#)](../../../../csharp/programming-guide/concepts/linq/equality-operations.md)  
+ [같음 연산(C#)](./equality-operations.md)  
   
- [요소 작업(C#)](../../../../csharp/programming-guide/concepts/linq/element-operations.md)  
+ [요소 작업(C#)](./element-operations.md)  
   
- [데이터 형식 변환(C#)](../../../../csharp/programming-guide/concepts/linq/converting-data-types.md)  
+ [데이터 형식 변환(C#)](./converting-data-types.md)  
   
- [연결 작업(C#)](../../../../csharp/programming-guide/concepts/linq/concatenation-operations.md)  
+ [연결 작업(C#)](./concatenation-operations.md)  
   
- [집계 작업(C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)  
+ [집계 작업(C#)](./aggregation-operations.md)  
   
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>
-- [LINQ 쿼리 소개(C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)
-- [표준 쿼리 연산자의 쿼리 식 구문(C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
-- [실행 방식에 따라 표준 쿼리 연산자 분류(C#)](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
-- [확장명 메서드](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [LINQ 쿼리 소개(C#)](./introduction-to-linq-queries.md)
+- [표준 쿼리 연산자의 쿼리 식 구문(C#)](./query-expression-syntax-for-standard-query-operators.md)
+- [실행 방식에 따라 표준 쿼리 연산자 분류(C#)](./classification-of-standard-query-operators-by-manner-of-execution.md)
+- [확장명 메서드](../../classes-and-structs/extension-methods.md)

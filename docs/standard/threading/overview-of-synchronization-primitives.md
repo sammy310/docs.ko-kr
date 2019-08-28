@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24df4140e515483adb94fa542a7063bd2ae2120b
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 31d5df6521b7c420943a7d3d0efcf6e4bee2d3a2
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479787"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666286"
 ---
 # <a name="overview-of-synchronization-primitives"></a>동기화 기본 형식 개요
 
 .NET은 공유 리소스에 대한 액세스를 동기화하거나 스레드 상호 작용을 조정하는 데 사용할 수 있는 다양한 형식을 제공합니다.
 
 > [!IMPORTANT]
-> 동일한 동기화 기본 형식 인스턴스를 사용하여 공유 리소스에 대한 모든 액세스를 보호합니다. 사용자가 다양한 동기화 기본 형식 인스턴스를 사용하여 리소스에 대한 액세스를 보호하거나 일부 코드 파트가 리소스에 직접 액세스하는 경우 여러 스레드가 동시에 리소스에 액세스할 수 있습니다.
+> 동일한 동기화 기본 형식 인스턴스를 사용하여 공유 리소스에 대한 액세스를 보호합니다. 다른 동기화 기본 형식 인스턴스를 사용하여 동일한 리소스를 보호하는 경우 동기화 기본 형식에서 제공하는 보호를 사용할 수 없게 됩니다.
 
 ## <a name="waithandle-class-and-lightweight-synchronization-types"></a>WaitHandle 클래스 및 간단한 동기화 형식
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f20ae0b712a5db5cdfb6d5f6a3786af151820294
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25121ea2b089df49efa77dcf363e2a0e400b3bff
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550489"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968431"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>세마포 및 SemaphoreSlim
 로컬 또는 명명된(시스템 전체) 세마포를 나타내는 <xref:System.Threading.Semaphore?displayProperty=nameWithType> 클래스는 Win32 세마포 개체를 묶는 씬 래퍼입니다. Win32 세마포는 리소스 풀에 대한 액세스를 제어하는 데 사용할 수 있는 가산 세마포입니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "54550489"
  이름을 지정하는 생성자 중 하나를 사용하여 명명된 시스템 세마포를 나타내는 <xref:System.Threading.Semaphore> 개체를 만들 수 있습니다.  
   
 > [!NOTE]
->  명명된 세마포는 시스템 전체 세마포이므로 같은 명명된 세마포를 나타내는 <xref:System.Threading.Semaphore> 개체를 여러 개 사용할 수 있습니다. 생성자 또는 <xref:System.Threading.Semaphore.OpenExisting%2A?displayProperty=nameWithType> 메서드를 호출할 때마다 새 <xref:System.Threading.Semaphore> 개체가 만들어집니다. 같은 이름을 반복적으로 지정하면 같은 명명된 세마포를 나타내는 개체가 여러 개 만들어집니다.  
+> 명명된 세마포는 시스템 전체 세마포이므로 같은 명명된 세마포를 나타내는 <xref:System.Threading.Semaphore> 개체를 여러 개 사용할 수 있습니다. 생성자 또는 <xref:System.Threading.Semaphore.OpenExisting%2A?displayProperty=nameWithType> 메서드를 호출할 때마다 새 <xref:System.Threading.Semaphore> 개체가 만들어집니다. 같은 이름을 반복적으로 지정하면 같은 명명된 세마포를 나타내는 개체가 여러 개 만들어집니다.  
   
  명명된 세마포를 사용할 때는 주의해야 합니다. 이러한 세마포는 시스템 전체 세마포이므로 같은 이름을 사용하는 다른 프로세스가 예기치 않게 세마포를 입력할 수 있습니다. 그러면 동일 컴퓨터에서 실행되는 악성 코드가 이를 악용해 서비스 거부 공격을 수행할 수 있습니다.  
   
