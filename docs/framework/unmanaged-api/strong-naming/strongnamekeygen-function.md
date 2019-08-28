@@ -23,12 +23,12 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/10/2019
 ms.locfileid: "67780991"
 ---
-# <a name="strongnamekeygen-function"></a><span data-ttu-id="30431-102">StrongNameKeyGen 함수</span><span class="sxs-lookup"><span data-stu-id="30431-102">StrongNameKeyGen Function</span></span>
-<span data-ttu-id="30431-103">강력한 이름 사용을 위한 새 공개/개인 키 쌍을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="30431-103">Creates a new public/private key pair for strong name use.</span></span>  
+# <a name="strongnamekeygen-function"></a><span data-ttu-id="4bdf2-102">StrongNameKeyGen 함수</span><span class="sxs-lookup"><span data-stu-id="4bdf2-102">StrongNameKeyGen Function</span></span>
+<span data-ttu-id="4bdf2-103">강력한 이름 사용을 위한 새 퍼블릭/프라이빗 키 쌍을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4bdf2-103">Creates a new public/private key pair for strong name use.</span></span>  
   
- <span data-ttu-id="30431-104">이 함수는 더 이상 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="30431-104">This function has been deprecated.</span></span> <span data-ttu-id="30431-105">사용 된 [iclrstrongname:: Strongnamekeygen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md) 메서드 대신 합니다.</span><span class="sxs-lookup"><span data-stu-id="30431-105">Use the [ICLRStrongName::StrongNameKeyGen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md) method instead.</span></span>  
+ <span data-ttu-id="4bdf2-104">이 함수는 더 이상 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4bdf2-104">This function has been deprecated.</span></span> <span data-ttu-id="4bdf2-105">사용 된 [iclrstrongname:: Strongnamekeygen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md) 메서드 대신 합니다.</span><span class="sxs-lookup"><span data-stu-id="4bdf2-105">Use the [ICLRStrongName::StrongNameKeyGen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="30431-106">구문</span><span class="sxs-lookup"><span data-stu-id="30431-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4bdf2-106">구문</span><span class="sxs-lookup"><span data-stu-id="4bdf2-106">Syntax</span></span>  
   
 ```cpp  
 BOOLEAN StrongNameKeyGen (  
@@ -39,42 +39,42 @@ BOOLEAN StrongNameKeyGen (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="30431-107">매개 변수</span><span class="sxs-lookup"><span data-stu-id="30431-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4bdf2-107">매개 변수</span><span class="sxs-lookup"><span data-stu-id="4bdf2-107">Parameters</span></span>  
  `wszKeyContainer`  
- <span data-ttu-id="30431-108">[in] 요청 된 키 컨테이너 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="30431-108">[in] The requested key container name.</span></span> <span data-ttu-id="30431-109">`wszKeyContainer` 비어 있지 않은 문자열 이어야 하거나 null로 임시 이름을 생성 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="30431-109">`wszKeyContainer` must be a non-empty string, or null to generate a temporary name.</span></span>  
+ <span data-ttu-id="4bdf2-108">[in] 요청 된 키 컨테이너 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="4bdf2-108">[in] The requested key container name.</span></span> <span data-ttu-id="4bdf2-109">`wszKeyContainer` 비어 있지 않은 문자열 이어야 하거나 null로 임시 이름을 생성 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4bdf2-109">`wszKeyContainer` must be a non-empty string, or null to generate a temporary name.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="30431-110">[in] 등록 키를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="30431-110">[in] Specifies whether to leave the key registered.</span></span> <span data-ttu-id="30431-111">다음 값이 지원 됩니다.</span><span class="sxs-lookup"><span data-stu-id="30431-111">The following values are supported:</span></span>  
+ <span data-ttu-id="4bdf2-110">[in] 등록 키를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="4bdf2-110">[in] Specifies whether to leave the key registered.</span></span> <span data-ttu-id="4bdf2-111">다음 값이 지원 됩니다.</span><span class="sxs-lookup"><span data-stu-id="4bdf2-111">The following values are supported:</span></span>  
   
-- <span data-ttu-id="30431-112">때 사용 되는 0x00000000- `wszKeyContainer` 임시 키 컨테이너 이름을 생성 하는 null입니다.</span><span class="sxs-lookup"><span data-stu-id="30431-112">0x00000000 - Used when `wszKeyContainer` is null to generate a temporary key container name.</span></span>  
+- <span data-ttu-id="4bdf2-112">때 사용 되는 0x00000000- `wszKeyContainer` 임시 키 컨테이너 이름을 생성 하는 null입니다.</span><span class="sxs-lookup"><span data-stu-id="4bdf2-112">0x00000000 - Used when `wszKeyContainer` is null to generate a temporary key container name.</span></span>  
   
-- <span data-ttu-id="30431-113">0x00000001 (`SN_LEAVE_KEY`)-키 왼쪽 등록 해야 함을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="30431-113">0x00000001 (`SN_LEAVE_KEY`) - Specifies that the key should be left registered.</span></span>  
+- <span data-ttu-id="4bdf2-113">0x00000001 (`SN_LEAVE_KEY`)-키 왼쪽 등록 해야 함을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="4bdf2-113">0x00000001 (`SN_LEAVE_KEY`) - Specifies that the key should be left registered.</span></span>  
   
  `ppbKeyBlob`  
- <span data-ttu-id="30431-114">[out] 반환 된 공개/개인 키 쌍입니다.</span><span class="sxs-lookup"><span data-stu-id="30431-114">[out] The returned public/private key pair.</span></span>  
+ <span data-ttu-id="4bdf2-114">[out] 반환 된 공개/개인 키 쌍입니다.</span><span class="sxs-lookup"><span data-stu-id="4bdf2-114">[out] The returned public/private key pair.</span></span>  
   
  `pcbKeyBlob`  
- <span data-ttu-id="30431-115">[out] 크기 (바이트)의 `ppbKeyBlob`합니다.</span><span class="sxs-lookup"><span data-stu-id="30431-115">[out] The size, in bytes, of `ppbKeyBlob`.</span></span>  
+ <span data-ttu-id="4bdf2-115">[out] 크기 (바이트)의 `ppbKeyBlob`합니다.</span><span class="sxs-lookup"><span data-stu-id="4bdf2-115">[out] The size, in bytes, of `ppbKeyBlob`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="30431-116">반환 값</span><span class="sxs-lookup"><span data-stu-id="30431-116">Return Value</span></span>  
- <span data-ttu-id="30431-117">`true` 성공적으로 완료 됩니다. 그렇지 않으면 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="30431-117">`true` on successful completion; otherwise, `false`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4bdf2-116">반환 값</span><span class="sxs-lookup"><span data-stu-id="4bdf2-116">Return Value</span></span>  
+ <span data-ttu-id="4bdf2-117">`true` 성공적으로 완료 됩니다. 그렇지 않으면 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="4bdf2-117">`true` on successful completion; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="30431-118">설명</span><span class="sxs-lookup"><span data-stu-id="30431-118">Remarks</span></span>  
- <span data-ttu-id="30431-119">`StrongNameKeyGen` 함수 1024 비트 키를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="30431-119">The `StrongNameKeyGen` function creates a 1024-bit key.</span></span> <span data-ttu-id="30431-120">키 검색 되 면 호출 해야 합니다 [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) 할당 된 메모리를 해제 하는 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="30431-120">After the key is retrieved, you should call the [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) function to release the allocated memory.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4bdf2-118">설명</span><span class="sxs-lookup"><span data-stu-id="4bdf2-118">Remarks</span></span>  
+ <span data-ttu-id="4bdf2-119">`StrongNameKeyGen` 함수 1024 비트 키를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4bdf2-119">The `StrongNameKeyGen` function creates a 1024-bit key.</span></span> <span data-ttu-id="4bdf2-120">키 검색 되 면 호출 해야 합니다 [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) 할당 된 메모리를 해제 하는 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="4bdf2-120">After the key is retrieved, you should call the [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) function to release the allocated memory.</span></span>  
   
- <span data-ttu-id="30431-121">경우는 `StrongNameKeyGen` 함수가 성공적으로 완료으로 호출 되지 않으면 합니다 [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) 마지막 생성 된 오류를 검색 하는 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="30431-121">If the `StrongNameKeyGen` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
+ <span data-ttu-id="4bdf2-121">경우는 `StrongNameKeyGen` 함수가 성공적으로 완료으로 호출 되지 않으면 합니다 [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) 마지막 생성 된 오류를 검색 하는 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="4bdf2-121">If the `StrongNameKeyGen` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="30431-122">요구 사항</span><span class="sxs-lookup"><span data-stu-id="30431-122">Requirements</span></span>  
- <span data-ttu-id="30431-123">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="30431-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4bdf2-122">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4bdf2-122">Requirements</span></span>  
+ <span data-ttu-id="4bdf2-123">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="4bdf2-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="30431-124">**헤더:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="30431-124">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="4bdf2-124">**헤더:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="4bdf2-124">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="30431-125">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="30431-125">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="4bdf2-125">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="4bdf2-125">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="30431-126">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="30431-126">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="4bdf2-126">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4bdf2-126">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="30431-127">참고자료</span><span class="sxs-lookup"><span data-stu-id="30431-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4bdf2-127">참고자료</span><span class="sxs-lookup"><span data-stu-id="4bdf2-127">See also</span></span>
 
-- [<span data-ttu-id="30431-128">StrongNameKeyGen 메서드</span><span class="sxs-lookup"><span data-stu-id="30431-128">StrongNameKeyGen Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)
-- [<span data-ttu-id="30431-129">StrongNameKeyGenEx 메서드</span><span class="sxs-lookup"><span data-stu-id="30431-129">StrongNameKeyGenEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)
-- [<span data-ttu-id="30431-130">ICLRStrongName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="30431-130">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="4bdf2-128">StrongNameKeyGen 메서드</span><span class="sxs-lookup"><span data-stu-id="4bdf2-128">StrongNameKeyGen Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)
+- [<span data-ttu-id="4bdf2-129">StrongNameKeyGenEx 메서드</span><span class="sxs-lookup"><span data-stu-id="4bdf2-129">StrongNameKeyGenEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)
+- [<span data-ttu-id="4bdf2-130">ICLRStrongName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4bdf2-130">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
