@@ -17,68 +17,73 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a3a4e6ccb8a43f9bde5aa7a447e28c30f8d72f1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a1b02bb74a61e64a3ed9875fcf88e018de9f6317
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965132"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041438"
 ---
-# <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a><span data-ttu-id="24121-102">ICLRDebuggingLibraryProvider::ProvideLibrary 메서드</span><span class="sxs-lookup"><span data-stu-id="24121-102">ICLRDebuggingLibraryProvider::ProvideLibrary Method</span></span>
-<span data-ttu-id="24121-103">CLR (공용 언어 런타임) 버전별 디버깅 라이브러리를 요청 시 배치 하 고 로드할 수 있도록 하는 라이브러리 공급자 콜백 인터페이스를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="24121-103">Gets a library provider callback interface that allows common language runtime (CLR) version-specific debugging libraries to be located and loaded on demand.</span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="24121-104">구문</span><span class="sxs-lookup"><span data-stu-id="24121-104">Syntax</span></span>  
-  
-```cpp  
-HRESULT ProvideLibrary(  
-     [in] const WCHAR* pwszFileName,  
-     [in] DWORD dwTimestamp,  
-     [in] DWORD dwSizeOfImage,  
-     [out] HMODULE* hModule);  
-```  
-  
-## <a name="parameters"></a><span data-ttu-id="24121-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="24121-105">Parameters</span></span>  
- `pwszFilename`  
- <span data-ttu-id="24121-106">진행 요청 되는 모듈의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="24121-106">[in] The name of the module being requested.</span></span>  
-  
- `dwTimestamp`  
- <span data-ttu-id="24121-107">진행 PE 파일의 COFF 파일 헤더에 저장 된 날짜 타임 스탬프입니다.</span><span class="sxs-lookup"><span data-stu-id="24121-107">[in] The date time stamp stored in the COFF file header of PE files.</span></span>  
-  
- `pLibraryProvider`  
- <span data-ttu-id="24121-108">진행 PE 파일의 COFF 선택적 파일 헤더에 저장 된 필드입니다.`SizeOfImage`</span><span class="sxs-lookup"><span data-stu-id="24121-108">[in] The `SizeOfImage` field stored in the COFF optional file header of PE files.</span></span>  
-  
- `hModule`  
- <span data-ttu-id="24121-109">제한이 요청 된 모듈에 대 한 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="24121-109">[out] The handle to the requested module.</span></span>  
-  
-## <a name="return-value"></a><span data-ttu-id="24121-110">반환 값</span><span class="sxs-lookup"><span data-stu-id="24121-110">Return Value</span></span>  
- <span data-ttu-id="24121-111">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="24121-111">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
-  
-|<span data-ttu-id="24121-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="24121-112">HRESULT</span></span>|<span data-ttu-id="24121-113">Description</span><span class="sxs-lookup"><span data-stu-id="24121-113">Description</span></span>|  
-|-------------|-----------------|  
-|<span data-ttu-id="24121-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="24121-114">S_OK</span></span>|<span data-ttu-id="24121-115">메서드가 완료되었습니다.</span><span class="sxs-lookup"><span data-stu-id="24121-115">The method completed successfully.</span></span>|  
-  
-## <a name="exceptions"></a><span data-ttu-id="24121-116">예외</span><span class="sxs-lookup"><span data-stu-id="24121-116">Exceptions</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="24121-117">설명</span><span class="sxs-lookup"><span data-stu-id="24121-117">Remarks</span></span>  
- <span data-ttu-id="24121-118">`ProvideLibrary`디버거가 mscordbi.dll 및 mscordacwks와 같은 특정 CLR 파일을 디버깅 하는 데 필요한 모듈을 제공할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="24121-118">`ProvideLibrary` allows the debugger to provide modules that are needed for debugging specific CLR files such as mscordbi.dll and mscordacwks.dll.</span></span> <span data-ttu-id="24121-119">[ICLRDebugging:: CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) 메서드를 호출할 때까지 모듈 핸들은 유효한 상태로 유지 되어야 합니다 .이 경우에는 호출자가 핸들을 해제할 책임이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="24121-119">The module handles have to remain valid until a call to the [ICLRDebugging::CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) method indicates that they may be freed, at which point it is the caller’s responsibility to free the handles.</span></span>  
-  
- <span data-ttu-id="24121-120">디버거는 사용 가능한 모든 방법을 사용 하 여 디버깅 모듈을 찾거나 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="24121-120">The debugger may use any available means to locate or procure the debugging module.</span></span>  
-  
-> [!IMPORTANT]
-> <span data-ttu-id="24121-121">이 기능을 통해 API 호출자는 실행 파일 및 악성 코드가 포함 된 모듈을 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="24121-121">This feature allows the API caller to provide modules that contain executable, and possibly malicious, code.</span></span> <span data-ttu-id="24121-122">보안 예방 조치로 서 호출자는를 사용 `ProvideLibrary` 하 여 자체적으로 실행 하지 않을 코드를 배포 하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="24121-122">As a security precaution, the caller should not use `ProvideLibrary` to distribute any code that it is not willing to execute itself.</span></span>  
->   
->  <span data-ttu-id="24121-123">Mscordbi.dll 또는 mscordacwks와 같은 이미 릴리스된 라이브러리에서 심각한 보안 문제가 발견 되 면 shim을 패치 하 여 잘못 된 버전의 파일을 인식할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="24121-123">If a serious security issue is discovered in an already released library, such as mscordbi.dll or mscordacwks.dll, the shim can be patched to recognize the bad versions of the files.</span></span> <span data-ttu-id="24121-124">그러면 shim은 패치 된 버전의 파일에 대 한 요청을 발급 하 고 요청에 대 한 응답으로 제공 된 경우 잘못 된 버전을 거부할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="24121-124">The shim can then issue requests for the patched versions of the files and reject the bad versions if they are provided in response to any request.</span></span> <span data-ttu-id="24121-125">이는 사용자가 새 버전의 shim에 패치를 적용 한 경우에만 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="24121-125">This can occur only if the user has patched to a new version of the shim.</span></span> <span data-ttu-id="24121-126">패치가 적용 되지 않은 버전은 취약 하 게 유지 됩니다.</span><span class="sxs-lookup"><span data-stu-id="24121-126">Unpatched versions will remain vulnerable.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="24121-127">요구 사항</span><span class="sxs-lookup"><span data-stu-id="24121-127">Requirements</span></span>  
- <span data-ttu-id="24121-128">**플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="24121-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="24121-129">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="24121-129">**Header:** CorDebug.idl, CorDebug.h</span></span>  
-  
- <span data-ttu-id="24121-130">**라이브러리** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="24121-130">**Library:** CorGuids.lib</span></span>  
-  
- <span data-ttu-id="24121-131">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="24121-131">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="24121-132">참고자료</span><span class="sxs-lookup"><span data-stu-id="24121-132">See also</span></span>
+# <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a><span data-ttu-id="f5232-102">ICLRDebuggingLibraryProvider::ProvideLibrary 메서드</span><span class="sxs-lookup"><span data-stu-id="f5232-102">ICLRDebuggingLibraryProvider::ProvideLibrary Method</span></span>
 
-- [<span data-ttu-id="24121-133">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="24121-133">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="24121-134">디버깅</span><span class="sxs-lookup"><span data-stu-id="24121-134">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+<span data-ttu-id="f5232-103">CLR (공용 언어 런타임) 버전별 디버깅 라이브러리를 요청 시 배치 하 고 로드할 수 있도록 하는 라이브러리 공급자 콜백 인터페이스를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="f5232-103">Gets a library provider callback interface that allows common language runtime (CLR) version-specific debugging libraries to be located and loaded on demand.</span></span>
+
+## <a name="syntax"></a><span data-ttu-id="f5232-104">구문</span><span class="sxs-lookup"><span data-stu-id="f5232-104">Syntax</span></span>
+
+```cpp
+HRESULT ProvideLibrary(
+     [in] const WCHAR* pwszFileName,
+     [in] DWORD dwTimestamp,
+     [in] DWORD dwSizeOfImage,
+     [out] HMODULE* hModule);
+```
+
+## <a name="parameters"></a><span data-ttu-id="f5232-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f5232-105">Parameters</span></span>
+
+`pwszFilename` \
+<span data-ttu-id="f5232-106">진행 요청 되는 모듈의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="f5232-106">[in] The name of the module being requested.</span></span>
+
+`dwTimestamp` \
+<span data-ttu-id="f5232-107">진행 PE 파일의 COFF 파일 헤더에 저장 된 날짜 타임 스탬프입니다.</span><span class="sxs-lookup"><span data-stu-id="f5232-107">[in] The date time stamp stored in the COFF file header of PE files.</span></span>
+
+`pLibraryProvider` \
+<span data-ttu-id="f5232-108">진행 PE 파일의 COFF 선택적 파일 헤더에 저장 된 필드입니다.`SizeOfImage`</span><span class="sxs-lookup"><span data-stu-id="f5232-108">[in] The `SizeOfImage` field stored in the COFF optional file header of PE files.</span></span>
+
+`hModule` \
+<span data-ttu-id="f5232-109">제한이 요청 된 모듈에 대 한 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="f5232-109">[out] The handle to the requested module.</span></span>
+
+## <a name="return-value"></a><span data-ttu-id="f5232-110">반환 값</span><span class="sxs-lookup"><span data-stu-id="f5232-110">Return Value</span></span>
+
+<span data-ttu-id="f5232-111">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="f5232-111">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>
+
+|<span data-ttu-id="f5232-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="f5232-112">HRESULT</span></span>|<span data-ttu-id="f5232-113">Description</span><span class="sxs-lookup"><span data-stu-id="f5232-113">Description</span></span>|
+|-------------|-----------------|
+|<span data-ttu-id="f5232-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="f5232-114">S_OK</span></span>|<span data-ttu-id="f5232-115">메서드가 완료되었습니다.</span><span class="sxs-lookup"><span data-stu-id="f5232-115">The method completed successfully.</span></span>|
+
+## <a name="exceptions"></a><span data-ttu-id="f5232-116">예외</span><span class="sxs-lookup"><span data-stu-id="f5232-116">Exceptions</span></span>
+
+## <a name="remarks"></a><span data-ttu-id="f5232-117">설명</span><span class="sxs-lookup"><span data-stu-id="f5232-117">Remarks</span></span>
+
+<span data-ttu-id="f5232-118">`ProvideLibrary`디버거가 mscordbi.dll 및 mscordacwks와 같은 특정 CLR 파일을 디버깅 하는 데 필요한 모듈을 제공할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="f5232-118">`ProvideLibrary` allows the debugger to provide modules that are needed for debugging specific CLR files such as mscordbi.dll and mscordacwks.dll.</span></span> <span data-ttu-id="f5232-119">[ICLRDebugging:: CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) 메서드를 호출할 때까지 모듈 핸들은 유효한 상태로 유지 되어야 합니다 .이 경우에는 호출자가 핸들을 해제할 책임이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f5232-119">The module handles have to remain valid until a call to the [ICLRDebugging::CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) method indicates that they may be freed, at which point it is the caller’s responsibility to free the handles.</span></span>
+
+<span data-ttu-id="f5232-120">디버거는 사용 가능한 모든 방법을 사용 하 여 디버깅 모듈을 찾거나 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f5232-120">The debugger may use any available means to locate or procure the debugging module.</span></span>
+
+> [!IMPORTANT]
+> <span data-ttu-id="f5232-121">이 기능을 통해 API 호출자는 실행 파일 및 악성 코드가 포함 된 모듈을 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f5232-121">This feature allows the API caller to provide modules that contain executable, and possibly malicious, code.</span></span> <span data-ttu-id="f5232-122">보안 예방 조치로 서 호출자는를 사용 `ProvideLibrary` 하 여 자체적으로 실행 하지 않을 코드를 배포 하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f5232-122">As a security precaution, the caller should not use `ProvideLibrary` to distribute any code that it is not willing to execute itself.</span></span>
+>
+> <span data-ttu-id="f5232-123">Mscordbi.dll 또는 mscordacwks와 같은 이미 릴리스된 라이브러리에서 심각한 보안 문제가 발견 되 면 shim을 패치 하 여 잘못 된 버전의 파일을 인식할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f5232-123">If a serious security issue is discovered in an already released library, such as mscordbi.dll or mscordacwks.dll, the shim can be patched to recognize the bad versions of the files.</span></span> <span data-ttu-id="f5232-124">그러면 shim은 패치 된 버전의 파일에 대 한 요청을 발급 하 고 요청에 대 한 응답으로 제공 된 경우 잘못 된 버전을 거부할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f5232-124">The shim can then issue requests for the patched versions of the files and reject the bad versions if they are provided in response to any request.</span></span> <span data-ttu-id="f5232-125">이는 사용자가 새 버전의 shim에 패치를 적용 한 경우에만 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f5232-125">This can occur only if the user has patched to a new version of the shim.</span></span> <span data-ttu-id="f5232-126">패치가 적용 되지 않은 버전은 취약 하 게 유지 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f5232-126">Unpatched versions will remain vulnerable.</span></span>
+
+## <a name="requirements"></a><span data-ttu-id="f5232-127">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f5232-127">Requirements</span></span>
+
+<span data-ttu-id="f5232-128">**플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="f5232-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+
+<span data-ttu-id="f5232-129">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f5232-129">**Header:** CorDebug.idl, CorDebug.h</span></span>
+
+<span data-ttu-id="f5232-130">**라이브러리** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f5232-130">**Library:** CorGuids.lib</span></span>
+
+<span data-ttu-id="f5232-131">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f5232-131">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="f5232-132">참고자료</span><span class="sxs-lookup"><span data-stu-id="f5232-132">See also</span></span>
+
+- [<span data-ttu-id="f5232-133">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f5232-133">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="f5232-134">디버깅</span><span class="sxs-lookup"><span data-stu-id="f5232-134">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

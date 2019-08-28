@@ -8,34 +8,35 @@ helpviewer_keywords:
 - compiling source code [Visual Basic], from command line
 - Visual Basic compiler, sample command lines
 ms.assetid: 5bfbb487-5f47-4267-969a-39dfb917beeb
-ms.openlocfilehash: 0771ed41d6c58ce7cc98435b405f5819e45393db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b7879c23bc64269c793c21b61b84d6f0fd4bdc24
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916762"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046286"
 ---
-# <a name="sample-compilation-command-lines-visual-basic"></a><span data-ttu-id="38f26-102">샘플 컴파일 명령줄 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="38f26-102">Sample compilation command lines (Visual Basic)</span></span>
-<span data-ttu-id="38f26-103">Visual Studio 내에서 Visual Basic 프로그램을 컴파일할 수 또는 실행 파일 (.exe) 또는 동적 연결 라이브러리 (.dll) 파일을 생성 하려면 명령줄에서 컴파일할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="38f26-103">As an alternative to compiling Visual Basic programs from within Visual Studio, you can compile from the command line to produce executable (.exe) files or dynamic-link library (.dll) files.</span></span>  
-  
- <span data-ttu-id="38f26-104">Visual Basic 명령줄 컴파일러에는 입출력 파일, 어셈블리 및 디버그 및 전처리기 옵션을 제어 하는 옵션의 전체 집합을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="38f26-104">The Visual Basic command-line compiler supports a complete set of options that control input and output files, assemblies, and debug and preprocessor options.</span></span> <span data-ttu-id="38f26-105">각 옵션은 서로 바꿔 사용할 수 있는 두 가지 형태로 사용할 수 있습니다: `-option` 고 `/option`입니다.</span><span class="sxs-lookup"><span data-stu-id="38f26-105">Each option is available in two interchangeable forms: `-option` and `/option`.</span></span> <span data-ttu-id="38f26-106">이 설명서 표시는 `-option` 폼입니다.</span><span class="sxs-lookup"><span data-stu-id="38f26-106">This documentation shows only the `-option` form.</span></span>  
-  
- <span data-ttu-id="38f26-107">다음 표에서 몇 가지 샘플 명령줄이 용도 맞게 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="38f26-107">The following table lists some sample command lines you can modify for your own use.</span></span>  
-  
-|<span data-ttu-id="38f26-108">대상</span><span class="sxs-lookup"><span data-stu-id="38f26-108">To</span></span>|<span data-ttu-id="38f26-109">사용</span><span class="sxs-lookup"><span data-stu-id="38f26-109">Use</span></span>|  
-|--------|---------|  
-|<span data-ttu-id="38f26-110">File.exe를 만들어 File.vb 컴파일</span><span class="sxs-lookup"><span data-stu-id="38f26-110">Compile File.vb and create File.exe</span></span>|`vbc -reference:Microsoft.VisualBasic.dll File.vb`|  
-|<span data-ttu-id="38f26-111">File.dll을 만들어 File.vb 컴파일</span><span class="sxs-lookup"><span data-stu-id="38f26-111">Compile File.vb and create File.dll</span></span>|`vbc -target:library File.vb`|  
-|<span data-ttu-id="38f26-112">File.vb 컴파일하고 My.exe를 만듭니다</span><span class="sxs-lookup"><span data-stu-id="38f26-112">Compile File.vb and create My.exe</span></span>|`vbc -out:My.exe File.vb`|  
-|<span data-ttu-id="38f26-113">File.vb 컴파일 및 라이브러리와 File.dll 이라는 참조 어셈블리를 만들려면</span><span class="sxs-lookup"><span data-stu-id="38f26-113">Compile File.vb and create both a library and a reference assembly named File.dll</span></span>|`vbc -target:library -ref:.\debug\bin\ref\file.dll File.vb`|
-|<span data-ttu-id="38f26-114">최적화를 사용 하 여 현재 디렉터리에서 모든 Visual Basic 파일에서 컴파일 및 `DEBUG` File2.exe 생성 정의 기호</span><span class="sxs-lookup"><span data-stu-id="38f26-114">Compile all Visual Basic files in the current directory, with optimizations on and the `DEBUG` symbol defined, producing File2.exe</span></span>|`vbc -define:DEBUG=1 -optimize -out:File2.exe *.vb`|  
-|<span data-ttu-id="38f26-115">로고 또는 경고를 표시 하지 않고 File2.dll의 디버그 버전을 생성 하는 현재 디렉터리에서 모든 Visual Basic 파일을 컴파일합니다</span><span class="sxs-lookup"><span data-stu-id="38f26-115">Compile all Visual Basic files in the current directory, producing a debug version of File2.dll without displaying the logo or warnings</span></span>|`vbc -target:library -out:File2.dll -nowarn -nologo -debug *.vb`|  
-|<span data-ttu-id="38f26-116">현재 디렉터리 Something.dll에 있는 모든 Visual Basic 파일 컴파일</span><span class="sxs-lookup"><span data-stu-id="38f26-116">Compile all Visual Basic files in the current directory to Something.dll</span></span>|`vbc -target:library -out:Something.dll *.vb`|  
-  
-> [!TIP]
->  <span data-ttu-id="38f26-117">Visual Studio IDE를 사용 하 여 프로젝트를 빌드할 때 연결에 대 한 정보를 표시할 수 있습니다 **vbc** 출력 창에 해당 컴파일러 옵션을 사용 하 여 명령입니다.</span><span class="sxs-lookup"><span data-stu-id="38f26-117">When you build a project by using the Visual Studio IDE, you can display information about the associated **vbc** command with its compiler options in the output window.</span></span> <span data-ttu-id="38f26-118">이 정보를 표시 하려면 열을 [옵션 대화 상자, 프로젝트 및 솔루션, 빌드 및 실행](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), 설정한 후 합니다 **MSBuild 프로젝트 빌드 출력의 자세한 정도** 에 **보통** 또는 더 높은 수준의 세부 정보 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="38f26-118">To display this information, open the [Options Dialog Box,  Projects and Solutions, Build and Run](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), and then set the **MSBuild project build output verbosity** to **Normal** or a higher level of verbosity.</span></span>   
-  
-## <a name="see-also"></a><span data-ttu-id="38f26-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="38f26-119">See also</span></span>
+# <a name="sample-compilation-command-lines-visual-basic"></a><span data-ttu-id="c4608-102">샘플 컴파일 명령줄 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c4608-102">Sample compilation command lines (Visual Basic)</span></span>
 
-- [<span data-ttu-id="38f26-120">Visual Basic 명령줄 컴파일러</span><span class="sxs-lookup"><span data-stu-id="38f26-120">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="38f26-121">조건부 컴파일</span><span class="sxs-lookup"><span data-stu-id="38f26-121">Conditional Compilation</span></span>](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+<span data-ttu-id="c4608-103">Visual Studio 내에서 Visual Basic 프로그램을 컴파일하는 대신 명령줄에서 컴파일하여 실행 파일 (.exe) 또는 동적 연결 라이브러리 (.dll) 파일을 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c4608-103">As an alternative to compiling Visual Basic programs from within Visual Studio, you can compile from the command line to produce executable (.exe) files or dynamic-link library (.dll) files.</span></span>
+
+<span data-ttu-id="c4608-104">Visual Basic 명령줄 컴파일러는 입력 및 출력 파일, 어셈블리, 디버그 및 전처리기 옵션을 제어 하는 전체 옵션 집합을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4608-104">The Visual Basic command-line compiler supports a complete set of options that control input and output files, assemblies, and debug and preprocessor options.</span></span> <span data-ttu-id="c4608-105">각 옵션은 두 가지 형식 `-option` 으로 사용할 수 있습니다. 및. `/option`</span><span class="sxs-lookup"><span data-stu-id="c4608-105">Each option is available in two interchangeable forms: `-option` and `/option`.</span></span> <span data-ttu-id="c4608-106">이 설명서에서는 `-option` 양식만 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c4608-106">This documentation shows only the `-option` form.</span></span>
+
+<span data-ttu-id="c4608-107">다음 표에서는 사용자가 직접 사용 하기 위해 수정할 수 있는 몇 가지 샘플 명령줄을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c4608-107">The following table lists some sample command lines you can modify for your own use.</span></span>
+
+|<span data-ttu-id="c4608-108">변경 후</span><span class="sxs-lookup"><span data-stu-id="c4608-108">To</span></span>|<span data-ttu-id="c4608-109">사용</span><span class="sxs-lookup"><span data-stu-id="c4608-109">Use</span></span>|
+|--------|---------|
+|<span data-ttu-id="c4608-110">파일 .vb를 컴파일하고 파일을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="c4608-110">Compile File.vb and create File.exe</span></span>|`vbc -reference:Microsoft.VisualBasic.dll File.vb`|
+|<span data-ttu-id="c4608-111">파일 .vb를 컴파일하고 파일 .dll을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="c4608-111">Compile File.vb and create File.dll</span></span>|`vbc -target:library File.vb`|
+|<span data-ttu-id="c4608-112">파일 .vb를 컴파일하고 .exe를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="c4608-112">Compile File.vb and create My.exe</span></span>|`vbc -out:My.exe File.vb`|
+|<span data-ttu-id="c4608-113">파일 .vb를 컴파일하고 라이브러리와 파일 .dll 이라는 참조 어셈블리를 모두 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="c4608-113">Compile File.vb and create both a library and a reference assembly named File.dll</span></span>|`vbc -target:library -ref:.\debug\bin\ref\file.dll File.vb`|
+|<span data-ttu-id="c4608-114">최적화를 사용 하 고 `DEBUG` 정의 된 기호를 사용 하 여 현재 디렉터리에 있는 모든 Visual Basic 파일을 컴파일합니다. File2를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="c4608-114">Compile all Visual Basic files in the current directory, with optimizations on and the `DEBUG` symbol defined, producing File2.exe</span></span>|`vbc -define:DEBUG=1 -optimize -out:File2.exe *.vb`|
+|<span data-ttu-id="c4608-115">로고 또는 경고를 표시 하지 않고 디버그 버전의 File2를 생성 하는 현재 디렉터리의 모든 Visual Basic 파일을 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="c4608-115">Compile all Visual Basic files in the current directory, producing a debug version of File2.dll without displaying the logo or warnings</span></span>|`vbc -target:library -out:File2.dll -nowarn -nologo -debug *.vb`|
+|<span data-ttu-id="c4608-116">현재 디렉터리에 있는 모든 Visual Basic 파일을 다른 .dll로 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="c4608-116">Compile all Visual Basic files in the current directory to Something.dll</span></span>|`vbc -target:library -out:Something.dll *.vb`|
+
+> [!TIP]
+> <span data-ttu-id="c4608-117">Visual Studio IDE를 사용 하 여 프로젝트를 빌드할 때 출력 창에 컴파일러 옵션을 사용 하 여 연결 된 **vbc** 명령에 대 한 정보를 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c4608-117">When you build a project by using the Visual Studio IDE, you can display information about the associated **vbc** command with its compiler options in the output window.</span></span> <span data-ttu-id="c4608-118">이 정보를 표시 하려면 [옵션 대화 상자, 프로젝트 및 솔루션, 빌드 및 실행](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)을 연 다음 **MSBuild 프로젝트 빌드 출력의 자세한 정도** 를 **보통** 또는 높은 수준의 자세한 표시로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4608-118">To display this information, open the [Options Dialog Box,  Projects and Solutions, Build and Run](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), and then set the **MSBuild project build output verbosity** to **Normal** or a higher level of verbosity.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="c4608-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="c4608-119">See also</span></span>
+
+- [<span data-ttu-id="c4608-120">Visual Basic 명령줄 컴파일러</span><span class="sxs-lookup"><span data-stu-id="c4608-120">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="c4608-121">조건부 컴파일</span><span class="sxs-lookup"><span data-stu-id="c4608-121">Conditional Compilation</span></span>](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

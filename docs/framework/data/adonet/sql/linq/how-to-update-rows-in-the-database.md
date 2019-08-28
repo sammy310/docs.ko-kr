@@ -5,39 +5,41 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a2b5c90f-6cc3-4128-bfab-1db488d5af26
-ms.openlocfilehash: 2819cd5d2533e8e289735c3df2b39df952968e66
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bf4c50bba4b4bc2bf6b7b1c2b79426566c874dd4
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938728"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70043570"
 ---
-# <a name="how-to-update-rows-in-the-database"></a><span data-ttu-id="7c5f2-102">방법: 데이터베이스에서 행 업데이트</span><span class="sxs-lookup"><span data-stu-id="7c5f2-102">How to: Update Rows in the Database</span></span>
-<span data-ttu-id="7c5f2-103">컬렉션과<xref:System.Data.Linq.Table%601> 연결 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 된 개체의 멤버 값을 수정한 다음 변경 내용을 데이터베이스에 전송 하 여 데이터베이스의 행을 업데이트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7c5f2-103">You can update rows in a database by modifying member values of the objects associated with the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> collection and then submitting the changes to the database.</span></span> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="7c5f2-104">변경 내용을 적절 한 SQL `UPDATE` 명령으로 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="7c5f2-104">translates your changes into the appropriate SQL `UPDATE` commands.</span></span>  
-  
-> [!NOTE]
-> <span data-ttu-id="7c5f2-105">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], `Insert` 및 `Update` 데이터베이스 작업에 대한 `Delete` 기본 메서드를 재정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7c5f2-105">You can override [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] default methods for `Insert`, `Update`, and `Delete` database operations.</span></span> <span data-ttu-id="7c5f2-106">자세한 내용은 [삽입, 업데이트 및 삭제 작업 사용자 지정](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="7c5f2-106">For more information, see [Customizing Insert, Update, and Delete Operations](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).</span></span>  
->   
->  <span data-ttu-id="7c5f2-107">Visual Studio를 사용 하는 개발자는 개체 관계형 디자이너을 사용 하 여 동일한 목적으로 저장 프로시저를 개발할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7c5f2-107">Developers using Visual Studio can use the Object Relational Designer to develop stored procedures for the same purpose.</span></span>  
-  
- <span data-ttu-id="7c5f2-108">다음 단계에서는 올바른 <xref:System.Data.Linq.DataContext>를 사용하여 사용자가 Northwind 데이터베이스에 연결되는 것으로 가정합니다.</span><span class="sxs-lookup"><span data-stu-id="7c5f2-108">The following steps assume that a valid <xref:System.Data.Linq.DataContext> connects you to the Northwind database.</span></span> <span data-ttu-id="7c5f2-109">자세한 내용은 [방법: 데이터베이스](../../../../../../docs/framework/data/adonet/sql/linq/how-to-connect-to-a-database.md)에 연결 합니다.</span><span class="sxs-lookup"><span data-stu-id="7c5f2-109">For more information, see [How to: Connect to a Database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-connect-to-a-database.md).</span></span>  
-  
-### <a name="to-update-a-row-in-the-database"></a><span data-ttu-id="7c5f2-110">데이터베이스의 행을 업데이트하려면</span><span class="sxs-lookup"><span data-stu-id="7c5f2-110">To update a row in the database</span></span>  
-  
-1. <span data-ttu-id="7c5f2-111">업데이트할 행에 대한 데이터베이스를 쿼리합니다.</span><span class="sxs-lookup"><span data-stu-id="7c5f2-111">Query the database for the row to be updated.</span></span>  
-  
-2. <span data-ttu-id="7c5f2-112">결과 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개체의 멤버 값에 대해 필요한 사항을 변경을 합니다.</span><span class="sxs-lookup"><span data-stu-id="7c5f2-112">Make desired changes to member values in the resulting [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] object.</span></span>  
-  
-3. <span data-ttu-id="7c5f2-113">데이터베이스에 변경 내용을 전송합니다.</span><span class="sxs-lookup"><span data-stu-id="7c5f2-113">Submit the changes to the database.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="7c5f2-114">예제</span><span class="sxs-lookup"><span data-stu-id="7c5f2-114">Example</span></span>  
- <span data-ttu-id="7c5f2-115">다음 예제에서는 주문 #11000에 대한 데이터베이스를 쿼리한 다음 결과 `ShipName` 개체의 `ShipVia`과 `Order`에 대한 값을 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="7c5f2-115">The following example queries the database for order #11000, and then changes the values of `ShipName` and `ShipVia` in the resulting `Order` object.</span></span> <span data-ttu-id="7c5f2-116">마지막으로 이러한 멤버 값의 변경 내용을 `ShipName`과 `ShipVia` 열의 변경 내용으로 데이터베이스에 전송합니다.</span><span class="sxs-lookup"><span data-stu-id="7c5f2-116">Finally, the changes to these member values are submitted to the database as changes in the `ShipName` and `ShipVia` columns.</span></span>  
-  
- [!code-csharp[System.Data.Linq.Table#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/system.data.linq.table/cs/program.cs#2)]
- [!code-vb[System.Data.Linq.Table#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.table/vb/module1.vb#2)]  
-  
-## <a name="see-also"></a><span data-ttu-id="7c5f2-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="7c5f2-117">See also</span></span>
+# <a name="how-to-update-rows-in-the-database"></a><span data-ttu-id="df151-102">방법: 데이터베이스에서 행 업데이트</span><span class="sxs-lookup"><span data-stu-id="df151-102">How to: Update Rows in the Database</span></span>
 
-- [<span data-ttu-id="7c5f2-118">방법: 변경 내용 충돌 관리</span><span class="sxs-lookup"><span data-stu-id="7c5f2-118">How to: Manage Change Conflicts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
-- [<span data-ttu-id="7c5f2-119">방법: 저장 프로시저를 할당하여 업데이트, 삽입 및 삭제 수행(O/R 디자이너)</span><span class="sxs-lookup"><span data-stu-id="7c5f2-119">How to: Assign stored procedures to perform updates, inserts, and deletes (O/R Designer)</span></span>](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)
-- [<span data-ttu-id="7c5f2-120">데이터 변경 및 변경 내용 전송</span><span class="sxs-lookup"><span data-stu-id="7c5f2-120">Making and Submitting Data Changes</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+<span data-ttu-id="df151-103">컬렉션과<xref:System.Data.Linq.Table%601> 연결 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 된 개체의 멤버 값을 수정한 다음 변경 내용을 데이터베이스에 전송 하 여 데이터베이스의 행을 업데이트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="df151-103">You can update rows in a database by modifying member values of the objects associated with the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> collection and then submitting the changes to the database.</span></span> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="df151-104">변경 내용을 적절 한 SQL `UPDATE` 명령으로 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="df151-104">translates your changes into the appropriate SQL `UPDATE` commands.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="df151-105">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], `Insert` 및 `Update` 데이터베이스 작업에 대한 `Delete` 기본 메서드를 재정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="df151-105">You can override [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] default methods for `Insert`, `Update`, and `Delete` database operations.</span></span> <span data-ttu-id="df151-106">자세한 내용은 [삽입, 업데이트 및 삭제 작업 사용자 지정](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="df151-106">For more information, see [Customizing Insert, Update, and Delete Operations](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).</span></span>
+>
+> <span data-ttu-id="df151-107">Visual Studio를 사용 하는 개발자는 개체 관계형 디자이너을 사용 하 여 동일한 목적으로 저장 프로시저를 개발할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="df151-107">Developers using Visual Studio can use the Object Relational Designer to develop stored procedures for the same purpose.</span></span>
+
+<span data-ttu-id="df151-108">다음 단계에서는 올바른 <xref:System.Data.Linq.DataContext>를 사용하여 사용자가 Northwind 데이터베이스에 연결되는 것으로 가정합니다.</span><span class="sxs-lookup"><span data-stu-id="df151-108">The following steps assume that a valid <xref:System.Data.Linq.DataContext> connects you to the Northwind database.</span></span> <span data-ttu-id="df151-109">자세한 내용은 [방법: 데이터베이스](../../../../../../docs/framework/data/adonet/sql/linq/how-to-connect-to-a-database.md)에 연결 합니다.</span><span class="sxs-lookup"><span data-stu-id="df151-109">For more information, see [How to: Connect to a Database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-connect-to-a-database.md).</span></span>
+
+### <a name="to-update-a-row-in-the-database"></a><span data-ttu-id="df151-110">데이터베이스의 행을 업데이트하려면</span><span class="sxs-lookup"><span data-stu-id="df151-110">To update a row in the database</span></span>
+
+1. <span data-ttu-id="df151-111">업데이트할 행에 대한 데이터베이스를 쿼리합니다.</span><span class="sxs-lookup"><span data-stu-id="df151-111">Query the database for the row to be updated.</span></span>
+
+2. <span data-ttu-id="df151-112">결과 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개체의 멤버 값에 대해 필요한 사항을 변경을 합니다.</span><span class="sxs-lookup"><span data-stu-id="df151-112">Make desired changes to member values in the resulting [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] object.</span></span>
+
+3. <span data-ttu-id="df151-113">데이터베이스에 변경 내용을 전송합니다.</span><span class="sxs-lookup"><span data-stu-id="df151-113">Submit the changes to the database.</span></span>
+
+## <a name="example"></a><span data-ttu-id="df151-114">예제</span><span class="sxs-lookup"><span data-stu-id="df151-114">Example</span></span>
+
+<span data-ttu-id="df151-115">다음 예제에서는 주문 #11000에 대한 데이터베이스를 쿼리한 다음 결과 `ShipName` 개체의 `ShipVia`과 `Order`에 대한 값을 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="df151-115">The following example queries the database for order #11000, and then changes the values of `ShipName` and `ShipVia` in the resulting `Order` object.</span></span> <span data-ttu-id="df151-116">마지막으로 이러한 멤버 값의 변경 내용을 `ShipName`과 `ShipVia` 열의 변경 내용으로 데이터베이스에 전송합니다.</span><span class="sxs-lookup"><span data-stu-id="df151-116">Finally, the changes to these member values are submitted to the database as changes in the `ShipName` and `ShipVia` columns.</span></span>
+
+[!code-csharp[System.Data.Linq.Table#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/system.data.linq.table/cs/program.cs#2)]
+[!code-vb[System.Data.Linq.Table#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.table/vb/module1.vb#2)]
+
+## <a name="see-also"></a><span data-ttu-id="df151-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="df151-117">See also</span></span>
+
+- [<span data-ttu-id="df151-118">방법: 변경 내용 충돌 관리</span><span class="sxs-lookup"><span data-stu-id="df151-118">How to: Manage Change Conflicts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [<span data-ttu-id="df151-119">방법: 저장 프로시저를 할당하여 업데이트, 삽입 및 삭제 수행(O/R 디자이너)</span><span class="sxs-lookup"><span data-stu-id="df151-119">How to: Assign stored procedures to perform updates, inserts, and deletes (O/R Designer)</span></span>](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)
+- [<span data-ttu-id="df151-120">데이터 변경 및 변경 내용 전송</span><span class="sxs-lookup"><span data-stu-id="df151-120">Making and Submitting Data Changes</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
