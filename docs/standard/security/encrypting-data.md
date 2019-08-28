@@ -173,7 +173,7 @@ The connection failed.
 ## <a name="asymmetric-encryption"></a>비대칭 암호화  
  비대칭 알고리즘은 일반적으로 대칭 키 및 IV의 암호화와 같은 적은 양의 데이터를 암호화하는 데 사용됩니다. 일반적으로 비대칭 암호화를 수행하는 개인은 다른 당사자가 생성한 공개 키를 사용합니다. <xref:System.Security.Cryptography.RSACryptoServiceProvider> 클래스는 이 목적을 위해 .NET Framework에서 제공됩니다.  
   
- 다음 예제에서는 공개 키 정보를 사용하여 대칭 키 및 IV를 암호화합니다. 타사의 공개 키를 나타내는 2바이트 배열이 초기화됩니다. <xref:System.Security.Cryptography.RSAParameters> 개체는 이러한 값으로 초기화됩니다. 다음에는 **메서드를 사용하여** RSAParameters **개체(이 개체가 나타내는 공개 키 포함)를** RSACryptoServiceProvider <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> 로 가져옵니다. 끝으로, <xref:System.Security.Cryptography.RijndaelManaged> 클래스에서 만든 개인 키 및 IV가 암호화됩니다. 이 예제에서는 시스템에 128비트 암호화가 설치되어 있어야 합니다.  
+ 다음 예제에서는 공개 키 정보를 사용하여 대칭 키 및 IV를 암호화합니다. 타사의 공개 키를 나타내는 2바이트 배열이 초기화됩니다. <xref:System.Security.Cryptography.RSAParameters> 개체는 이러한 값으로 초기화됩니다. 다음에는 **메서드를 사용하여** RSAParameters **개체(이 개체가 나타내는 공개 키 포함)를** RSACryptoServiceProvider <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> 로 가져옵니다. 끝으로, <xref:System.Security.Cryptography.RijndaelManaged> 클래스에서 만든 프라이빗 키 및 IV가 암호화됩니다. 이 예제에서는 시스템에 128비트 암호화가 설치되어 있어야 합니다.  
   
 ```vb  
 Imports System  

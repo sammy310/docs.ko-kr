@@ -158,9 +158,9 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q77"></a>   
 ## <a name="im-using-an-x509-certificate-with-my-service-and-i-get-a-systemsecuritycryptographycryptographicexception-whats-happening"></a>서비스에 X.509 인증서를 사용하고 있으며 System.Security.Cryptography.CryptographicException이 발생합니다. 이유가 무엇입니까?  
- 이 예외는 보통 IIS 작업자 프로세스를 실행하는 데 사용되는 사용자 계정을 변경한 후에 발생합니다. 예를 들어, [!INCLUDE[wxp](../../../includes/wxp-md.md)]에서 Aspnet_wp.exe를 실행하는 데 사용되는 기본 사용자 계정을 ASPNET에서 사용자 지정 사용자 계정으로 변경하면 이 오류가 발생할 수 있습니다. 개인 키를 사용하는 경우 이 키를 사용하는 프로세스에는 키가 저장된 파일에 액세스할 수 있는 권한이 있어야 합니다.  
+ 이 예외는 보통 IIS 작업자 프로세스를 실행하는 데 사용되는 사용자 계정을 변경한 후에 발생합니다. 예를 들어, [!INCLUDE[wxp](../../../includes/wxp-md.md)]에서 Aspnet_wp.exe를 실행하는 데 사용되는 기본 사용자 계정을 ASPNET에서 사용자 지정 사용자 계정으로 변경하면 이 오류가 발생할 수 있습니다. 프라이빗 키를 사용하는 경우 이 키를 사용하는 프로세스에는 키가 저장된 파일에 액세스할 수 있는 권한이 있어야 합니다.  
   
- 이 경우에는 개인 키가 포함된 파일에 대한 프로세스 계정에 읽기 권한을 부여해야 합니다. 예를 들어, IIS 작업자 프로세스가 밥 계정에서 실행되는 경우 밥에게 개인 키가 포함된 파일에 대한 읽기 권한을 부여해야 합니다.  
+ 이 경우에는 프라이빗 키가 포함된 파일에 대한 프로세스 계정에 읽기 권한을 부여해야 합니다. 예를 들어, IIS 작업자 프로세스가 밥 계정에서 실행되는 경우 밥에게 프라이빗 키가 포함된 파일에 대한 읽기 권한을 부여해야 합니다.  
   
  특정 X.509 인증서의 개인 키를 포함 하는 파일에 올바른 사용자 계정 액세스를 부여 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: X.509 인증서를 WCF에 액세스할 수 있도록](../../../docs/framework/wcf/feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md)입니다.  
   

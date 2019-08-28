@@ -133,8 +133,8 @@ ms.locfileid: "61780863"
 |SignatureNotExpected|이 메시지에 서명이 필요하지 않습니다.|  
 |SigningTokenHasNoKeys|지정된 서명 토큰에 키가 없습니다. 보안 토큰이 암호화 작업을 수행하기 위해 이 토큰을 필요로 하는 컨텍스트에서 사용되지만, 토큰에 암호화 키가 없습니다. 토큰 유형이 암호화 작업을 지원하지 않거나, 특정 토큰 인스턴스에 암호화 키가 없습니다. 구성을 점검하여 암호화 사용이 불가능한 토큰 유형(예: UserNameSecurityToken)이 암호화 작업(예: 지원 토큰 확인)이 필요한 컨텍스트에 지정되어 있지 않은지 확인하십시오.|  
 |SpnegoImpersonationLevelCannotBeSetToNone|보안 지원 공급자 인터페이스가 가장 수준 '없음'을 지원하지 않습니다. 확인, 가장 또는 위임 수준을 지정하십시오.|  
-|SslClientCertMustHavePrivateKey|지정된 인증서에는 개인 키가 있어야 합니다. 프로세스에는 개인 키에 대한 액세스 권한이 있어야 합니다.|  
-|SslServerCertMustDoKeyExchange|지정된 인증서에는 키 교환이 가능한 개인 키가 있어야 합니다. 프로세스에는 개인 키에 대한 액세스 권한이 있어야 합니다.|  
+|SslClientCertMustHavePrivateKey|지정된 인증서에는 프라이빗 키가 있어야 합니다. 프로세스에는 프라이빗 키에 대한 액세스 권한이 있어야 합니다.|  
+|SslServerCertMustDoKeyExchange|지정된 인증서에는 키 교환이 가능한 프라이빗 키가 있어야 합니다. 프로세스에는 프라이빗 키에 대한 액세스 권한이 있어야 합니다.|  
 |StandardsManagerCannotWriteObject|토큰 Serializer가 지정된 개체를 serialize할 수 없습니다.  사용자 지정 유형인 경우에는 사용자 지정 serializer를 제공해야 합니다.|  
 |TimeStampHasCreationAheadOfExpiry|만든 시간이 만료 시간보다 크거나 같으므로 보안 타임스탬프가 잘못되었습니다.|  
 |TimeStampHasCreationTimeInFuture|만든 시간이 미래의 시간이므로 보안 타임스탬프가 잘못되었습니다. 현재 시간과 허용된 클럭 오차가 지정되었습니다.|  

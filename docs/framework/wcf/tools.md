@@ -22,7 +22,7 @@ Microsoft Windows Communication Foundation (WCF) 도구는 쉽게 작성, 배포
 |도구|설명|  
 |----------|-----------------|  
 |[ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)|메타데이터 문서의 서비스 모델 코드 및 서비스 모델 코드의 메타데이터 문서를 생성합니다.|  
-|[개인 키 찾기 도구(FindPrivateKey.exe)](../../../docs/framework/wcf/find-private-key-tool-findprivatekey-exe.md)|지정된 저장소에서 개인 키를 검색합니다.|  
+|[개인 키 찾기 도구(FindPrivateKey.exe)](../../../docs/framework/wcf/find-private-key-tool-findprivatekey-exe.md)|지정된 저장소에서 프라이빗 키를 검색합니다.|  
 |[ServiceModel 등록 도구(ServiceModelReg.exe)](../../../docs/framework/wcf/servicemodelreg-exe.md)|단일 시스템에서 ServiceModel의 등록 및 등록 취소를 관리합니다.|  
 |[COM+ 서비스 모델 구성 도구(ComSvcConfig.exe)](../../../docs/framework/wcf/com-service-model-configuration-tool-comsvcconfig-exe.md)|COM+ 인터페이스가 웹 서비스로 노출되도록 구성합니다.|  
 |[Configuration Editor 도구(SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)|WCF 서비스의 구성 설정을 만들고 수정합니다.|  

@@ -39,7 +39,7 @@ WS-AT 구성 유틸리티(wsatConfig.exe)는 WS-AT 설정을 구성하는 데 �
 
 ## <a name="enabling-ws-at"></a>WS-AT 사용
 
-포트 443과 로컬 컴퓨터 저장소에 설치된 개인 키가 있는 X.509 인증서를 사용하여 MSDTC 내부에서 WS-AT 프로토콜 서비스를 활성화하려면 다음 명령으로 wsatConfig.exe 도구를 사용합니다.
+포트 443과 로컬 컴퓨터 저장소에 설치된 프라이빗 키가 있는 X.509 인증서를 사용하여 MSDTC 내부에서 WS-AT 프로토콜 서비스를 활성화하려면 다음 명령으로 wsatConfig.exe 도구를 사용합니다.
 
 `WsatConfig.exe –network:enable –port:8443 –endpointCert:<machine|"Issuer\SubjectName"> -accountsCerts:<thumbprint|"Issuer\SubjectName"> -restart`
 
@@ -63,7 +63,7 @@ WS-AT 프로토콜 서비스를 사용하려면 관리자가 분산 트랜잭션
 
 1. 컴퓨터 A에서 MMC 인증서 스냅인을 사용하여 기존 인증서(certA)를 LocalMachine\MY(개인 노드) 및 LocalMachine\ROOT 저장소(신뢰할 수 있는 루트 인증 기관 노드)로 가져옵니다. 특정 노드로 인증서를 가져오려면 노드를 마우스 오른쪽 단추로 클릭 하 고 **모든 작업/가져오기**를 선택 합니다.
 
-2. 컴퓨터 B에서 MMC 인증서 스냅인을 사용하여 개인 키가 있는 certB 인증서를 만들거나 얻어 LocalMachine\MY(개인 노드) 및 LocalMachine\ROOT 저장소(신뢰할 수 있는 루트 인증 기관 노드)로 가져옵니다.
+2. 컴퓨터 B에서 MMC 인증서 스냅인을 사용하여 프라이빗 키가 있는 certB 인증서를 만들거나 얻어 LocalMachine\MY(개인 노드) 및 LocalMachine\ROOT 저장소(신뢰할 수 있는 루트 인증 기관 노드)로 가져옵니다.
 
 3. 아직 수행하지 않은 경우 certA의 공개 키를 파일로 내보냅니다.
 

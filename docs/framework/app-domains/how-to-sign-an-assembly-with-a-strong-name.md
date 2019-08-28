@@ -31,7 +31,7 @@ ms.locfileid: "69927926"
   
 - 컴파일러 옵션을 사용하는 방법.  
   
- 강력한 이름으로 어셈블리를 서명하려면 암호화 키 쌍이 있어야 합니다. 키 쌍을 만드는 방법에 대한 자세한 내용은 [방법: 공개/개인 키 쌍 만들기](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)를 참조하세요.  
+ 강력한 이름으로 어셈블리를 서명하려면 암호화 키 쌍이 있어야 합니다. 키 쌍을 만드는 방법에 대한 자세한 내용은 [방법: 퍼블릭/프라이빗 키 쌍 만들기](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)를 참조하세요.  
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-visual-studio"></a>Visual Studio를 사용하여 강력한 이름으로 어셈블리를 만들고 서명하려면  
   
@@ -103,7 +103,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
 ## <a name="see-also"></a>참고 항목
 
 - [강력한 이름의 어셈블리 만들기 및 사용](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
-- [방법: 공개/개인 키 쌍 만들기](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
+- [방법: 퍼블릭/프라이빗 키 쌍 만들기](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
 - [Al.exe(어셈블리 링커)](../../../docs/framework/tools/al-exe-assembly-linker.md)
 - [어셈블리 서명 연기](../../../docs/framework/app-domains/delay-sign-assembly.md)
 - [어셈블리 및 매니페스트 서명 관리](/visualstudio/ide/managing-assembly-and-manifest-signing)

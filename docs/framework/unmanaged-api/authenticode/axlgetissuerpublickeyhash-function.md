@@ -18,7 +18,7 @@ ms.lasthandoff: 08/15/2019
 ms.locfileid: "69038425"
 ---
 # <a name="_axlgetissuerpublickeyhash-function"></a>\_AxlGetIssuerPublicKeyHash 함수
-지정한 인증서에 서명하는 데 사용되는 개인 키에 연결된 공개 키의 SHA-1 해시를 검색합니다.  
+지정한 인증서에 서명하는 데 사용되는 프라이빗 키에 연결된 퍼블릭 키의 SHA-1 해시를 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   

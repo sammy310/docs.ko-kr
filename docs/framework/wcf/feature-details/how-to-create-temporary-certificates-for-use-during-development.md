@@ -23,7 +23,7 @@ ms.locfileid: "65877969"
 
  인증서 만들기 및 사용에 대 한 자세한 내용은 참조 하세요. [Working with Certificates](working-with-certificates.md)합니다. 자격 증명으로 인증서를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [Securing Services and Clients](securing-services-and-clients.md)합니다. Microsoft Authenticode 기술을 사용하는 방법에 대한 자습서는 [Authenticode Overviews and Tutorials](https://go.microsoft.com/fwlink/?LinkId=88919)를 참조하십시오.
 
-## <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>자체 서명된 루트 인증 기관 인증서를 만들고 개인 키를 내보내려면
+## <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>자체 서명된 루트 인증 기관 인증서를 만들고 프라이빗 키를 내보내려면
 
 다음 명령은 "RootCA" Current User Personal 저장소에서 주체 이름으로 자체 서명 된 인증서를 만듭니다.
 

@@ -69,7 +69,7 @@
         - name: 강력한 이름의 어셈블리 만들기 및 사용
           href: create-and-use-strong-named-assemblies.md
           items:
-            - name: '방법: 공개/개인 키 쌍 만들기'
+            - name: '방법: 퍼블릭/프라이빗 키 쌍 만들기'
               href: how-to-create-a-public-private-key-pair.md
             - name: '방법: 강력한 이름으로 어셈블리 서명'
               href: how-to-sign-an-assembly-with-a-strong-name.md

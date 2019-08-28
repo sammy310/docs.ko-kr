@@ -107,7 +107,7 @@
           href: how-to-create-a-custom-client-identity-verifier.md
         - name: '방법: 서명 및 암호화에 별도의 X.509 인증서 사용'
           href: how-to-use-separate-x-509-certificates-for-signing-and-encryption.md
-        - name: '방법: X.509 인증서의 개인 키에 대한 암호화 공급 기업 변경'
+        - name: '방법: X.509 인증서의 프라이빗 키에 대한 암호화 공급 기업 변경'
           href: change-cryptographic-provider-x509-certificate-private-key.md
     - name: 메타데이터 시스템 확장
       href: extending-the-metadata-system.md

@@ -1,5 +1,5 @@
 ---
-title: '방법: 공개/개인 키 쌍 만들기'
+title: '방법: 퍼블릭/프라이빗 키 쌍 만들기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -24,9 +24,9 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297839"
 ---
-# <a name="how-to-create-a-public-private-key-pair"></a>방법: 공개/개인 키 쌍 만들기
+# <a name="how-to-create-a-public-private-key-pair"></a>방법: 퍼블릭/프라이빗 키 쌍 만들기
 
-강력한 이름으로 어셈블리를 서명하려면 공개/개인 키 쌍이 있어야 합니다. 이 공개/개인 암호화 키 쌍은 컴파일 중에 강력한 이름의 어셈블리를 만드는 데 사용됩니다. [Sn.exe(강력한 이름 도구)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)를 사용하여 키 쌍을 만들 수 있습니다. 대개 키 쌍 파일의 확장명은 .snk입니다.
+강력한 이름으로 어셈블리를 서명하려면 퍼블릭/프라이빗 키 쌍이 있어야 합니다. 이 퍼블릭/퍼블릭 암호화 키 쌍은 컴파일 중에 강력한 이름의 어셈블리를 만드는 데 사용됩니다. [Sn.exe(강력한 이름 도구)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)를 사용하여 키 쌍을 만들 수 있습니다. 대개 키 쌍 파일의 확장명은 .snk입니다.
 
 > [!NOTE]
 > Visual Studio의 C# 및 Visual Basic 프로젝트 속성 페이지에는 Sn.exe를 사용하지 않고 기존 키 파일을 선택하거나 새 키 파일을 생성할 수 있는 **서명** 탭이 있습니다. Visual C++에서는 **속성 페이지** 창의 **구성 속성** 섹션의 **링커** 섹션에 있는 **고급** 속성 페이지에서 기존 키 파일의 위치를 지정할 수 있습니다. <xref:System.Reflection.AssemblyKeyFileAttribute> 특성을 사용하여 키 파일 쌍을 식별하는 방법은 Visual Studio 2005부터 더 이상 사용되지 않습니다.

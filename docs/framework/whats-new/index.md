@@ -313,7 +313,7 @@ End Function
 
 **임시 키에 대한 지원**
 
-필요에 따라 PFX 가져오기는 하드 드라이브를 무시하고 메모리에서 직접 개인 키를 로드할 수 있습니다. 새로운 <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.EphemeralKeySet?displayProperty=nameWithType> 플래그가 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 생성자 또는 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.Import%2A?displayProperty=nameWithType> 메서드의 오버로드 중 하나에 지정되는 경우 개인 키는 임시 키로 로드됩니다. 이렇게 하면 키가 디스크에 표시되지 않습니다. 단,
+필요에 따라 PFX 가져오기는 하드 드라이브를 무시하고 메모리에서 직접 프라이빗 키를 로드할 수 있습니다. 새로운 <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.EphemeralKeySet?displayProperty=nameWithType> 플래그가 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 생성자 또는 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.Import%2A?displayProperty=nameWithType> 메서드의 오버로드 중 하나에 지정되는 경우 프라이빗 키는 임시 키로 로드됩니다. 이렇게 하면 키가 디스크에 표시되지 않습니다. 단,
 
 - 키가 디스크에 유지되지 않으므로 이 플래그로 로드된 인증서는 X509Store에 추가하기에 적합하지 않습니다.
 

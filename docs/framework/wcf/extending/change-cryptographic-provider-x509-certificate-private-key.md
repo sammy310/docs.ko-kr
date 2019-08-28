@@ -1,5 +1,5 @@
 ---
-title: '방법: X.509 인증서의 개인 키에 대한 암호화 공급 기업 변경'
+title: '방법: X.509 인증서의 프라이빗 키에 대한 암호화 공급 기업 변경'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,23 +15,23 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61997032"
 ---
-# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificates-private-key"></a>방법: X.509 인증서의 개인 키에 대한 암호화 공급 기업 변경
+# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificates-private-key"></a>방법: X.509 인증서의 프라이빗 키에 대한 암호화 공급 기업 변경
 이 항목에서는 X.509 인증서의 개인 키를 제공 하는 데 암호화 공급자를 변경 하는 방법 및 Windows Communication Foundation (WCF) 보안 프레임 워크에 공급자를 통합 하는 방법을 보여 줍니다. 인증서를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)합니다.  
   
  WCF 보안 프레임 워크에 설명 된 대로 새 보안 토큰 형식을 도입 하는 방법을 제공 [방법: 사용자 지정 토큰 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)합니다. 사용자 지정 토큰을 사용하여 시스템에서 제공되는 기존 형식을 대체할 수도 있습니다.  
   
- 이 항목에서는 시스템에서 제공되는 X.509 보안 토큰을 인증서 개인 키의 다른 구현을 제공하는 사용자 지정 X.509 토큰으로 대체합니다. 기본 Windows 암호화 공급자와 다른 암호화 공급자에서 실제 개인 키를 제공하는 경우에 유용한 시나리오입니다. 대체 암호화 공급자의 한 예로는 개인 키와 관련된 모든 암호화 작업을 수행하면서 개인 키를 메모리에 저장하지는 않는 방식으로 시스템 보안을 향상시키는 하드웨어 보안 모듈이 있습니다.  
+ 이 항목에서는 시스템에서 제공되는 X.509 보안 토큰을 인증서 프라이빗 키의 다른 구현을 제공하는 사용자 지정 X.509 토큰으로 대체합니다. 기본 Windows 암호화 공급자와 다른 암호화 공급자에서 실제 프라이빗 키를 제공하는 경우에 유용한 시나리오입니다. 대체 암호화 공급자의 한 예로는 프라이빗 키와 관련된 모든 암호화 작업을 수행하면서 프라이빗 키를 메모리에 저장하지는 않는 방식으로 시스템 보안을 향상시키는 하드웨어 보안 모듈이 있습니다.  
   
  다음 예는 데모용으로만 제공됩니다. 여기서는 기본 Windows 암호화 공급자를 대체하지 않지만 그런 공급자를 통합하는 위치를 보여 줍니다.  
   
 ## <a name="procedures"></a>절차  
- 보안 키가 연결된 모든 보안 토큰에서는 보안 토큰 인스턴스로부터 키 컬렉션을 반환하는 <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys%2A> 속성을 구현해야 합니다. 토큰이 X.509 보안 토큰인 경우 컬렉션에는 인증서와 연결된 공개 및 개인 키를 모두 나타내는 <xref:System.IdentityModel.Tokens.X509AsymmetricSecurityKey> 클래스의 단일 인스턴스가 포함됩니다. 인증서의 키를 제공하는 데 사용되는 기본 암호화 공급자를 대체하려면 이 클래스의 새 구현을 만듭니다.  
+ 보안 키가 연결된 모든 보안 토큰에서는 보안 토큰 인스턴스로부터 키 컬렉션을 반환하는 <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys%2A> 속성을 구현해야 합니다. 토큰이 X.509 보안 토큰인 경우 컬렉션에는 인증서와 연결된 퍼블릭 및 프라이빗 키를 모두 나타내는 <xref:System.IdentityModel.Tokens.X509AsymmetricSecurityKey> 클래스의 단일 인스턴스가 포함됩니다. 인증서의 키를 제공하는 데 사용되는 기본 암호화 공급자를 대체하려면 이 클래스의 새 구현을 만듭니다.  
   
 #### <a name="to-create-a-custom-x509-asymmetric-key"></a>사용자 지정 X.509 비대칭 키를 만들려면  
   
 1. <xref:System.IdentityModel.Tokens.X509AsymmetricSecurityKey> 클래스에서 파생된 새 클래스를 정의합니다.  
   
-2. <xref:System.IdentityModel.Tokens.SecurityKey.KeySize%2A> 읽기 전용 속성을 재정의합니다. 이 속성에서는 인증서의 공개/개인 키 쌍의 실제 키 크기를 반환합니다.  
+2. <xref:System.IdentityModel.Tokens.SecurityKey.KeySize%2A> 읽기 전용 속성을 재정의합니다. 이 속성에서는 인증서의 퍼블릭/프라이빗 키 쌍의 실제 키 크기를 반환합니다.  
   
 3. <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A> 메서드를 재정의합니다. 이 메서드는 인증서의 개인 키를 사용 하 여 대칭 키의 암호를 해독 하는 WCF 보안 프레임 워크에서 호출 됩니다. 키는 이전에 인증서의 공개 키로 암호화되었습니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "61997032"
   
 5. 선택 사항입니다. <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature%2A> 메서드를 재정의합니다. 다른 <xref:System.Security.Cryptography.HashAlgorithm> 클래스 구현이 필요한 경우 이 메서드를 재정의합니다.  
   
-6. <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetSignatureFormatter%2A> 메서드를 재정의합니다. 이 메서드에서는 인증서의 개인 키와 연결된 <xref:System.Security.Cryptography.AsymmetricSignatureFormatter> 클래스의 인스턴스를 반환합니다.  
+6. <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetSignatureFormatter%2A> 메서드를 재정의합니다. 이 메서드에서는 인증서의 프라이빗 키와 연결된 <xref:System.Security.Cryptography.AsymmetricSignatureFormatter> 클래스의 인스턴스를 반환합니다.  
   
 7. <xref:System.IdentityModel.Tokens.SecurityKey.IsSupportedAlgorithm%2A> 메서드를 재정의합니다. 이 메서드는 보안 키 구현에서 특정 암호화 알고리즘이 지원되는지 여부를 나타내는 데 사용됩니다.  
   

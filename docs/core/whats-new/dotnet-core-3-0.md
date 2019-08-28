@@ -478,14 +478,14 @@ Windows는 플랫 C API, COM 및 WinRT의 형태로 다양한 네이티브 API�
 
 ## <a name="cryptographic-key-importexport"></a>암호화 키 가져오기/내보내기
 
-.NET Core 3.0은 표준 형식에서 비대칭 공개 키와 개인 키를 가져오고 내보낼 수 있도록 지원합니다. X.509 인증서를 사용할 필요가 없습니다.
+.NET Core 3.0은 표준 형식에서 비대칭 퍼블릭 키와 프라이빗 키를 가져오고 내보낼 수 있도록 지원합니다. X.509 인증서를 사용할 필요가 없습니다.
 
 모든 키 형식(*RSA*, *DSA*, *ECDsa* 및 *ECDiffieHellman*)에서 다음 형식을 지원합니다.
 
 - **공개 키**
   - X.509 SubjectPublicKeyInfo
 
-- **개인 키**
+- **프라이빗 키**
   - PKCS#8 PrivateKeyInfo
   - PKCS#8 EncryptedPrivateKeyInfo
 
@@ -494,7 +494,7 @@ RSA 키는 다음도 지원합니다.
 - **공개 키**
   - PKCS#1 RSAPublicKey
 
-- **개인 키**
+- **프라이빗 키**
   - PKCS#1 RSAPrivateKey
 
 내보내기 메서드는 DER로 인코드된 이진 데이터를 생성하고, 가져오기 메서드도 동일한 동작을 예상합니다. 키가 텍스트에 편리한 PEM 형식으로 저장된 경우 호출자는 가져오기 메서드를 호출하기 전에 콘텐츠를 base64로 디코드해야 합니다.

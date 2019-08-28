@@ -77,7 +77,7 @@ ms.locfileid: "64607552"
 |강력한 이름 특성|설명|  
 |----------------------------|-----------------|  
 |<xref:System.Reflection.AssemblyDelaySignAttribute>|서명 연기가 사용되고 있음을 나타내는 부울 값입니다.|  
-|<xref:System.Reflection.AssemblyKeyFileAttribute>|이 특성의 생성자에 매개 변수로 전달되는 공개 키(서명 연기를 사용하는 경우) 또는 공개 키와 개인 키 둘 다의 이름을 포함하는 파일의 이름을 나타내는 문자열 값입니다. 파일 이름은 원본 파일 경로가 아니라 출력 파일 경로(.exe 또는 .dll)를 기준으로 합니다.|  
+|<xref:System.Reflection.AssemblyKeyFileAttribute>|이 특성의 생성자에 매개 변수로 전달되는 퍼블릭 키(서명 연기를 사용하는 경우) 또는 퍼블릭 키와 프라이빗 키 둘 다의 이름을 포함하는 파일의 이름을 나타내는 문자열 값입니다. 파일 이름은 원본 파일 경로가 아니라 출력 파일 경로(.exe 또는 .dll)를 기준으로 합니다.|  
 |<xref:System.Reflection.AssemblyKeyNameAttribute>|이 특성의 생성자에 매개 변수로 전달되는 키 쌍을 포함하는 키 컨테이너를 나타냅니다.|  
   
  다음 코드 예제에서는 `myKey.snk`라는 공개 키 파일과 함께 서명 연기를 사용하여 강력한 이름의 어셈블리를 만들 때 적용할 특성을 보여 줍니다.  

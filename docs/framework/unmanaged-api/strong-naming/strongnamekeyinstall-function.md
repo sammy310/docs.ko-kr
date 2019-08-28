@@ -25,7 +25,7 @@ ms.locfileid: "65636711"
 ---
 # <a name="strongnamekeyinstall-function"></a>StrongNameKeyInstall 함수
 
-공개/개인 키 쌍을 컨테이너로 가져옵니다.
+퍼블릭/프라이빗 키 쌍을 컨테이너로 가져옵니다.
 
 이 함수는 더 이상 사용 되지 않습니다. 사용 된 [iclrstrongname:: Strongnamekeyinstall](../hosting/iclrstrongname-strongnamekeyinstall-method.md) 메서드 대신 합니다.
 

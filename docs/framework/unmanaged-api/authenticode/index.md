@@ -16,7 +16,7 @@ Authenticode XrML 라이센스 만들기 및 확인 모듈을 지원합니다.
   
 ## <a name="in-this-section"></a>섹션 내용  
  [_AxlGetIssuerPublicKeyHash 함수](../../../../docs/framework/unmanaged-api/authenticode/axlgetissuerpublickeyhash-function.md)  
- 지정한 인증서에 서명하는 데 사용되는 개인 키에 연결된 공개 키의 SHA-1 해시를 검색합니다.  
+ 지정한 인증서에 서명하는 데 사용되는 프라이빗 키에 연결된 퍼블릭 키의 SHA-1 해시를 검색합니다.  
   
  [_AxlPublicKeyBlobToPublicKeyToken 함수](../../../../docs/framework/unmanaged-api/authenticode/axlpublickeyblobtopublickeytoken-function.md)  
  CSP PUBLICKEYBLOB 형식에서 강력한 이름 공개 키 토큰을 계산합니다.  

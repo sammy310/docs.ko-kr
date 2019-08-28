@@ -32,7 +32,7 @@ ms.locfileid: "67486661"
 |X509ChainBuildFail|특정 X.509 인증서 체인 작성에 실패했습니다. 사용한 인증서에 확인할 수 없는 신뢰 체인이 포함되어 있습니다. 인증서를 바꾸거나 certificateValidationMode를 변경하십시오.|  
 |XDCannotFindValueInDictionaryString|특정 값 ID를 사전 문자열에서 찾을 수 없습니다.|  
 |TraceCodeImportSecurityChannelBindingEntry|보안 ImportChannelBinding을 시작합니다.|  
-|PrivateKeyExchangeNotSupported|개인 키가 교환 KeySpec을 지원하지 않습니다.|  
+|PrivateKeyExchangeNotSupported|프라이빗 키가 교환 KeySpec을 지원하지 않습니다.|  
 |TokenProviderUnableToGetToken|특정 토큰 공급자가 보안 토큰을 제공할 수 없습니다.|  
 |SAMLEntityCannotBeNullOrEmpty|특정 SamlAssertion 엔터티가 null이거나 비어 있을 수 없습니다.|  
 |SAMLAssertionRequireOneStatement|SamlAssertion에는 최소한 하나 이상의 문이 필요합니다. 만들려는 SamlAssertion에 최소한 하나 이상의 SamlStatement를 추가했는지 확인하십시오.|  
@@ -50,7 +50,7 @@ ms.locfileid: "67486661"
 |SamlTokenMissingSignature|SamlAssertion이 서명되지 않았습니다. SigningCredentials를 설정하여 SamlAssertions에 서명할 수 있습니다.|  
 |ExpectedElementMissing|특정 네임스페이스를 가진 필요한 요소가 없습니다.|  
 |NoKeyIdentifierClauseFound|특정 형식의 절을 SecurityKeyIdentifier에서 찾을 수 없습니다.|  
-|MissingPrivateKey|개인 키가 X.509 인증서에 없습니다.|  
+|MissingPrivateKey|프라이빗 키가 X.509 인증서에 없습니다.|  
 |UnexpectedEOFFromReader|XML 판독기에서의 예기치 않은 파일의 끝입니다.|  
 |UnsupportedKeyDerivationAlgorithm|특정 키 파생 알고리즘이 지원되지 않습니다.|  
 |TokenDoesNotSupportKeyIdentifierClauseCreation|특정 토큰이 특정 키 식별자 절 생성을 지원하지 않습니다.|  
@@ -78,7 +78,7 @@ ms.locfileid: "67486661"
 |TokenRenewalNotSupported|특정 토큰 공급자가 토큰 갱신을 지원하지 않습니다.|  
 |AtLeastOneReferenceRequired|최소한 하나 이상의 참조가 서명에 필요합니다.|  
 |SAMLSignatureAlreadyRead|서명을 이미 SAML 어설션에서 읽었습니다.|  
-|AlgorithmAndPrivateKeyMisMatch|지정된 알고리즘과 개인 키가 일치하지 않습니다.|  
+|AlgorithmAndPrivateKeyMisMatch|지정된 알고리즘과 프라이빗 키가 일치하지 않습니다.|  
 |EmptyTransformChainNotSupported|비어 있는 변형 체인이 지원되지 않습니다.|  
 |SspiWrapperEncryptDecryptAssert1|SSPIWrapper::EncryptDecryptHelper&#124;'offset' 범위를 벗어났습니다.|  
 |SspiWrapperEncryptDecryptAssert2|SSPIWrapper::EncryptDecryptHelper&#124;'크기'가 범위를 벗어났습니다. SecurityTokenManagerCannotCreateAuthenticatorForRequirement=보안 토큰 관리자가 특정 요구 사항에 대한 토큰 인증자를 만들 수 없습니다.|  
@@ -113,7 +113,7 @@ ms.locfileid: "67486661"
 |NoInputIsSetForCanonicalization|정형화된 출력을 쓰기 위한 입력이 설정되지 않았습니다.|  
 |TraceCodeSecurityPendingServerSessionAdded|보류 중인 보안 세션을 서버에 추가합니다.|  
 |AsyncCallbackException|AsyncCallback에 예외가 발생했습니다.|  
-|PrivateKeyNotRSA|개인 키가 RSA 키가 아닙니다.|  
+|PrivateKeyNotRSA|프라이빗 키가 RSA 키가 아닙니다.|  
 |TraceCodeSecurityClientSessionKeyRenewed|클라이언트 보안 세션에서 세션 키를 갱신했습니다.|  
 |SAMLAuthorizationDecisionStatementMissingDecisionAttributeOnRead|읽는 중인 SamlAuthorizationDecisionStatement에 대한 'Decision'이 없거나 길이가 0입니다.|  
 |SAMLAttributeNameAttributeRequired|SamlAttribute에 지정된 'Name'은 null이거나 길이가 0일 수 없습니다.|  
@@ -188,7 +188,7 @@ ms.locfileid: "67486661"
 |SAMLAuthorizationDecisionShouldHaveOneAction|SamlAuthorizationDecisionStatement에 최소한 하나 이상의 SamlAction이 있어야 합니다.|  
 |TraceCodeSecurityTokenAuthenticatorClosed|보안 토큰 인증자가 닫혔습니다.|  
 |TraceCodeSecurityAuditWrittenSuccess|보안 감사 로그가 기록되었습니다.|  
-|PrivateKeyNotDSA|개인 키가 DSA 키가 아닙니다.|  
+|PrivateKeyNotDSA|프라이빗 키가 DSA 키가 아닙니다.|  
 |MessageNumberRollover|이 시퀀스에 대한 최대 시퀀스 번호를 초과했습니다.|  
 |AESPaddingModeNotSupported|지정된 패딩 모드가 지원되지 않습니다. PKCS7 및 ISO10126만 지원됩니다.|  
 |SAMLSubjectRequiresNameIdentifierOrConfirmationMethodOnRead|읽는 중인 SamlSubject에 대한 필수 'NameIdentifier' 및 'ConfrimationMethod' 요소를 찾을 수 없습니다.|  
@@ -238,7 +238,7 @@ ms.locfileid: "67486661"
 |SAMLAttributeShouldHaveOneValue|특성 값을 찾을 수 없습니다. SamlAttribute 특성에는 최소한 하나 이상의 특성 값이 있어야 합니다.|  
 |TraceCodeSecurityBindingVerifyIncomingMessageFailure|보안 프로토콜에서 들어오는 메시지를 확인할 수 없습니다.|  
 |SamlSigningTokenMissing|SamlSecurityTokenAuthenticator에 전달된 SamlAssertion에 서명 토큰이 없습니다.|  
-|NoPrivateKeyAvailable|개인 키를 사용할 수 없습니다.|  
+|NoPrivateKeyAvailable|프라이빗 키를 사용할 수 없습니다.|  
 |ValueMustBeOne|이 인수의 값은 1이어야 합니다.|  
 |TraceCodeSecurityPendingServerSessionRemoved|서버가 보류 중인 보안 세션을 활성화했습니다.|  
 |TraceCodeImportSecurityChannelBindingExit|보안 ImportChannelBinding을 완료했습니다.|  

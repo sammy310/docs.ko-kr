@@ -59,7 +59,7 @@ ms.locfileid: "69966156"
  지정된 메모리 주소에 있는 어셈블리 이미지의 이진 표현을 가져옵니다. .NET Framework 4부터 사용되지 않습니다.  
   
  [StrongNameGetPublicKey 함수](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)  
- 개인/공개 키 쌍에서 공개 키를 가져옵니다. .NET Framework 4부터 사용되지 않습니다.  
+ 퍼블릭/퍼블릭 키 쌍에서 퍼블릭 키를 가져옵니다. .NET Framework 4부터 사용되지 않습니다.  
   
  [StrongNameHashSize 함수](../../../../docs/framework/unmanaged-api/strong-naming/strongnamehashsize-function.md)  
  지정된 해시 알고리즘을 사용하여 해시에 필요한 버퍼 크기를 가져옵니다.  .NET Framework 4부터 사용되지 않습니다.  
@@ -68,13 +68,13 @@ ms.locfileid: "69966156"
  지정된 키 컨테이너를 삭제합니다. .NET Framework 4부터 사용되지 않습니다.  
   
  [StrongNameKeyGen 함수](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeygen-function.md)  
- 강력한 이름 사용을 위한 새 공개/개인 키 쌍을 만듭니다.  .NET Framework 4부터 사용되지 않습니다.  
+ 강력한 이름 사용을 위한 새 퍼블릭/프라이빗 키 쌍을 만듭니다.  .NET Framework 4부터 사용되지 않습니다.  
   
  [StrongNameKeyGenEx 함수](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeygenex-function.md)  
- 강력한 이름 사용을 위해 지정된 키 크기로 새 공개/개인 키 쌍을 생성합니다. .NET Framework 4부터 사용되지 않습니다.  
+ 강력한 이름 사용을 위해 지정된 키 크기로 새 퍼블릭/프라이빗 키 쌍을 생성합니다. .NET Framework 4부터 사용되지 않습니다.  
   
  [StrongNameKeyInstall 함수](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeyinstall-function.md)  
- 공개/개인 키 쌍을 컨테이너로 가져옵니다.  .NET Framework 4부터 사용되지 않습니다.  
+ 퍼블릭/프라이빗 키 쌍을 컨테이너로 가져옵니다.  .NET Framework 4부터 사용되지 않습니다.  
   
  [StrongNameSignatureGeneration 함수](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)  
  지정된 어셈블리에 대한 강력한 이름 서명을 생성합니다.   .NET Framework 4부터 사용되지 않습니다.  
@@ -104,7 +104,7 @@ ms.locfileid: "69966156"
  공개 키를 나타내는 토큰을 가져옵니다. .NET Framework 4부터 사용되지 않습니다.  
   
  [PublicKeyBlob 구조체](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
- 공개/개인 키 쌍의 공개 키를 이진 형식으로 나타냅니다.  
+ 퍼블릭/프라이빗 키 쌍의 퍼블릭 키를 이진 형식으로 나타냅니다.  
   
 ## <a name="see-also"></a>참고 항목
 

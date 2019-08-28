@@ -31,9 +31,9 @@ ms.locfileid: "64645345"
   
  XML 암호화를 사용하여 암호화된 XML 데이터가 포함된 <`EncryptedData`> 요소의 문서나 XML 요소를 대체할 수 있습니다.  <`EncryptedData`> 요소는 암호화 중에 사용된 키와 프로세스에 대한 정보가 들어 있는 하위 요소를 포함할 수도 있습니다.  XML 암호화를 사용하면 문서에 암호화된 여러 요소가 포함될 수 있고 한 요소가 여러 번 암호화될 수 있습니다.  이 절차의 코드 예제에서는 나중에 암호 해독 과정에서 사용할 수 있는 다른 여러 하위 요소와 함께 <`EncryptedData`> 요소를 생성하는 방법을 보여 줍니다.  
   
- 이 예제에서는 두 키를 사용하여 XML 요소를 암호화합니다.  RSA 공개/개인 키 쌍을 생성하고 보안 키 컨테이너에 키 쌍을 저장합니다.  다음 예제에서는 Rijndael 알고리즘이라고도 하는 AES(고급 암호화 표준) 알고리즘을 사용하여 별도 세션 키를 만듭니다.  이 예제에서는 AES 세션 키를 사용하여 XML 문서를 암호화한 다음 RSA 공개 키를 사용하여 AES 세션 키를 암호화합니다.  끝으로, 예제에서는 암호화된 AES 세션 키와 암호화된 XML 데이터를 XML 문서의 새로운 <`EncryptedData`> 요소 내에 저장합니다.  
+ 이 예제에서는 두 키를 사용하여 XML 요소를 암호화합니다.  RSA 퍼블릭/프라이빗 키 쌍을 생성하고 보안 키 컨테이너에 키 쌍을 저장합니다.  다음 예제에서는 Rijndael 알고리즘이라고도 하는 AES(고급 암호화 표준) 알고리즘을 사용하여 별도 세션 키를 만듭니다.  이 예제에서는 AES 세션 키를 사용하여 XML 문서를 암호화한 다음 RSA 공개 키를 사용하여 AES 세션 키를 암호화합니다.  끝으로, 예제에서는 암호화된 AES 세션 키와 암호화된 XML 데이터를 XML 문서의 새로운 <`EncryptedData`> 요소 내에 저장합니다.  
   
- XML 요소를 암호 해독하려면 키 컨테이너에서 RSA 개인 키를 검색하고 세션 키를 암호 해독하는 데 사용한 다음 세션 키를 사용하여 문서를 암호 해독합니다.  이 절차를 사용 하 여 암호화 된 XML 요소 암호 해독 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 비대칭 키를 사용 하 여 XML 요소 암호 해독](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)합니다.  
+ XML 요소를 암호 해독하려면 키 컨테이너에서 RSA 프라이빗 키를 검색하고 세션 키를 암호 해독하는 데 사용한 다음 세션 키를 사용하여 문서를 암호 해독합니다.  이 절차를 사용 하 여 암호화 된 XML 요소 암호 해독 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 비대칭 키를 사용 하 여 XML 요소 암호 해독](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)합니다.  
   
  이 예제는 여러 애플리케이션이 암호화된 데이터를 공유해야 하거나 애플리케이션이 실행되는 시간 사이에 암호화된 데이터를 저장해야 경우에 적합합니다.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "64645345"
 - <xref:System.Xml>, <xref:System.Security.Cryptography> 및 <xref:System.Security.Cryptography.Xml> 네임스페이스를 포함합니다.  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
- 대칭 암호화 키를 일반 텍스트로 저장하거나 컴퓨터 간에 일반 텍스트로 대칭 키를 전송하지 마세요.  또한 비대칭 키 쌍의 개인 키를 일반 텍스트로 저장하거나 전송하지 마세요.  대칭 및 비대칭 암호화 키에 대 한 자세한 내용은 참조 하세요. [암호화 및 암호 해독용 키 생성](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)합니다.  
+ 대칭 암호화 키를 일반 텍스트로 저장하거나 컴퓨터 간에 일반 텍스트로 대칭 키를 전송하지 마세요.  또한 비대칭 키 쌍의 프라이빗 키를 일반 텍스트로 저장하거나 전송하지 마세요.  대칭 및 비대칭 암호화 키에 대 한 자세한 내용은 참조 하세요. [암호화 및 암호 해독용 키 생성](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)합니다.  
   
  소스 코드에 직접 키를 포함하지 마세요.  포함 된 키를 사용 하 여 어셈블리에서 쉽게 읽을 수 있습니다 합니다 [Ildasm.exe (IL 디스어셈블러)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 또는 메모장과 같은 텍스트 편집기에서 어셈블리를 열어.  
   

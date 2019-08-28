@@ -20,7 +20,7 @@ WCF(Windows Communication Foundation) 보안을 프로그래밍하려면 일반�
 
 간단히 말해서 디지털 인증서는 공개 키 암호화 사용을 통해 전자 트랜잭션에 참여하는 각각의 상대방에 대해 유효성을 확인하고 인증하는 디지털 인증서, 인증 기관 및 기타 등록 기관의 시스템인 PKI(*공개 키 인프라*)의 일부입니다. 인증 기관은 인증서를 발급하며 각 인증서에는 *주체*(인증서가 발급되는 엔터티), 유효 날짜(인증서의 유효 기간), 발급자(인증서를 발급한 엔터티), 공개 키 등과 같은 데이터를 포함하는 필드 집합이 있습니다. WCF에서 이러한 각 속성은 <xref:System.IdentityModel.Claims.Claim>으로 처리되며, 각 클레임은 ID와 권한의 두 가지 형식으로 세분화됩니다. X.509 인증서에 대한 자세한 내용은[X.509 공개 키 인증서](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates)를 참조하세요. WCF에서 클레임 및 권한 부여에 대한 자세한 내용은 [ID 모델을 사용하여 클레임 및 권한 부여 관리](managing-claims-and-authorization-with-the-identity-model.md)를 참조하세요. PKI 구현에 대 한 자세한 내용은 [Windows Server 2012 R2 Active Directory 인증서 서비스를 사용 하는 엔터프라이즈 pki](https://blogs.technet.microsoft.com/yungchou/2013/10/21/enterprise-pki-with-windows-server-2012-r2-active-directory-certificate-services-part-1-of-2/)를 참조 하세요.
 
-인증서의 기본 기능은 인증서 소유자의 ID를 다른 엔터티에 인증하는 것입니다. 인증서는 소유자의 *공개 키*를 포함하고, 소유자는 개인 키를 보유합니다. 공개 키를 사용하여 인증서 소유자에게 보내는 메시지를 암호화할 수 있습니다. 소유자만 개인 키에 액세스할 수 있으므로 소유자만이 해당 메시지를 해독할 수 있습니다.
+인증서의 기본 기능은 인증서 소유자의 ID를 다른 엔터티에 인증하는 것입니다. 인증서는 소유자의 *퍼블릭 키*를 포함하고, 소유자는 프라이빗 키를 보유합니다. 공개 키를 사용하여 인증서 소유자에게 보내는 메시지를 암호화할 수 있습니다. 소유자만 프라이빗 키에 액세스할 수 있으므로 소유자만이 해당 메시지를 해독할 수 있습니다.
 
 인증서는 인증 기관에서 발급해야 합니다. 인증 기관이 인증서의 타사 발급자인 경우도 있습니다. Windows 도메인의 경우 도메인에서 컴퓨터에 인증서를 발급하는 데 사용할 수 있는 인증 기관이 포함되어 있습니다.
 
@@ -95,11 +95,11 @@ WCF(Windows Communication Foundation) 보안을 프로그래밍하려면 일반�
 
 ## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>PowerShell New-selfsignedcertificate Cmdlet을 사용 하 여 인증서 체인 빌드
 
-PowerShell New-selfsignedcertificate cmdlet은 x.509 인증서와 개인 키/공개 키 쌍을 만듭니다. 개인 키를 디스크에 저장한 다음 새 인증서를 발급하고 서명하여 체인 인증서의 계층 구조를 시뮬레이션할 수 있습니다. Cmdlet은 서비스를 개발 하는 데 도움을 주기 위한 것 이며 실제 배포에 대 한 인증서를 만드는 데 사용 하면 안 됩니다. WCF 서비스를 개발 하는 경우 다음 단계를 사용 하 여 New-selfsignedcertificate cmdlet을 사용 하 여 신뢰 체인을 만듭니다.
+PowerShell New-selfsignedcertificate cmdlet은 x.509 인증서와 개인 키/공개 키 쌍을 만듭니다. 프라이빗 키를 디스크에 저장한 다음 새 인증서를 발급하고 서명하여 체인 인증서의 계층 구조를 시뮬레이션할 수 있습니다. Cmdlet은 서비스를 개발 하는 데 도움을 주기 위한 것 이며 실제 배포에 대 한 인증서를 만드는 데 사용 하면 안 됩니다. WCF 서비스를 개발 하는 경우 다음 단계를 사용 하 여 New-selfsignedcertificate cmdlet을 사용 하 여 신뢰 체인을 만듭니다.
 
 #### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>New-selfsignedcertificate cmdlet을 사용 하 여 신뢰 체인을 빌드하려면
 
-1. New-selfsignedcertificate cmdlet을 사용 하 여 임시 루트 인증 기관 (자체 서명) 인증서를 만듭니다. 개인 키를 디스크에 저장합니다.
+1. New-selfsignedcertificate cmdlet을 사용 하 여 임시 루트 인증 기관 (자체 서명) 인증서를 만듭니다. 프라이빗 키를 디스크에 저장합니다.
 
 2. 새 인증서를 사용하여 공개 키가 들어 있는 다른 인증서를 발급합니다.
 
@@ -131,7 +131,7 @@ PowerShell New-selfsignedcertificate cmdlet은 x.509 인증서와 개인 키/공
 
 ### <a name="certificate-revocation-list"></a>인증서 해지 목록
 
-인증 기관은 유효 기간 중에 언제든지 인증서를 해지할 수 있습니다. 인증서의 개인 키 손상 등과 같은 다양한 이유로 인증서를 해지할 수 있습니다.
+인증 기관은 유효 기간 중에 언제든지 인증서를 해지할 수 있습니다. 인증서의 프라이빗 키 손상 등과 같은 다양한 이유로 인증서를 해지할 수 있습니다.
 
 인증서를 해지하면 해지된 인증서 아래의 모든 체인도 유효하지 않으므로 인증 절차 중에 신뢰되지 않습니다. 해지되는 인증서를 확인하기 위해 각 발급자는 타임스탬프 및 날짜 스탬프가 기록된 CRL(*인증서 해지 목록*)을 게시합니다. 이 목록은 `RevocationMode`, `DefaultRevocationMode`, <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> 및 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 클래스의 <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication> 또는 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication> 속성을 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 열거형 값 중 하나로 설정하여 온라인 해지 또는 오프라인 해지를 통해 확인할 수 있습니다. 모든 속성의 기본값은 `Online`입니다.
 

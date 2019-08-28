@@ -45,8 +45,8 @@ tlbimp tlbFile [options]
 |**/copyright:** `copyrightinformation`|출력 어셈블리에 저작권 정보를 추가합니다. 이 정보는 어셈블리에 대한 **파일 속성** 대화 상자에서 볼 수 있습니다.|  
 |**T:System.Reflection.AssemblyDelaySignAttribute**|Tlbimp.exe에서 지연 서명을 사용하여 강력한 이름의 결과 어셈블리에 서명하도록 지정합니다. 이 옵션은 **/keycontainer:** , **/keyfile:** 또는 **/publickey:** 옵션과 함께 지정해야 합니다. 지연 서명 프로세스에 대한 자세한 내용은 [어셈블리 서명 연기](../app-domains/delay-sign-assembly.md)를 참조하세요.|  
 |**/help**|이 도구의 명령 구문 및 옵션을 표시합니다.|  
-|**/keycontainer:** *containername*|*containername*에서 지정된 키 컨테이너에 있는 공개/개인 키 쌍을 사용하여 강력한 이름으로 결과 어셈블리를 서명합니다.|  
-|**/keyfile:** *filename*|*filename*에 있는 게시자의 공식 공개/개인 키 쌍을 사용하여 강력한 이름으로 결과 어셈블리를 서명합니다.|  
+|**/keycontainer:** *containername*|*containername*에서 지정된 키 컨테이너에 있는 퍼블릭/프라이빗 키 쌍을 사용하여 강력한 이름으로 결과 어셈블리를 서명합니다.|  
+|**/keyfile:** *filename*|*filename*에 있는 게시자의 공식 퍼블릭/프라이빗 키 쌍을 사용하여 강력한 이름으로 결과 어셈블리를 서명합니다.|  
 |**/machine:** `machinetype`|지정된 컴퓨터 종류(마이크로프로세서)를 대상으로 하는 어셈블리를 만듭니다. 지원되는 컴퓨터 종류: x86, x64, Itanium 및 Agnostic.|  
 |**/namespace:** *namespace*|어셈블리를 만들 네임스페이스를 지정합니다.|  
 |**/noclassmembers**|Tlbimp.exe에서 클래스에 멤버를 추가하지 못하도록 합니다. 이렇게 하면 <xref:System.TypeLoadException>이 발생하지 않습니다.|  
@@ -55,7 +55,7 @@ tlbimp tlbFile [options]
 |**/primary**|지정된 형식 라이브러리에 대한 주 interop 어셈블리를 만듭니다. 어셈블리를 만든 형식 라이브러리의 게시자를 나타내는 정보가 어셈블리에 추가됩니다. 주 interop 어셈블리를 지정하면 게시자의 어셈블리를 Tlbimp.exe를 사용하여 형식 라이브러리에서 만든 다른 어셈블리와 구별할 수 있습니다. Tlbimp.exe를 사용하여 가져오는 형식 라이브러리의 게시자인 경우 **/primary** 옵션만 사용해야 합니다. [강력한 이름](../app-domains/strong-named-assemblies.md)을 사용하여 주 interop 어셈블리를 서명해야 합니다. 자세한 내용은 [주 Interop 어셈블리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100))를 참조하세요.|  
 |**/product:** `productinformation`|출력 어셈블리에 제품 정보를 추가합니다. 이 정보는 어셈블리에 대한 **파일 속성** 대화 상자에서 볼 수 있습니다.|  
 |**/productversion:** `productversioninformation`|출력 어셈블리에 제품 버전 정보를 추가합니다. 형식 제한은 없습니다. 이 정보는 어셈블리에 대한 **파일 속성** 대화 상자에서 볼 수 있습니다.|  
-|**/publickey:** *filename*|결과 어셈블리에 서명하는 데 사용할 공개 키를 포함하는 파일을 지정합니다. **/publickey:** 대신 **/keyfile:** 또는 **/keycontainer:** 옵션을 지정하면 Tlbimp.exe는 **/keyfile:** 또는 **/keycontainer:** 와 함께 제공된 공개/개인 키 쌍에서 공개 키를 생성합니다. **/publickey:** 옵션은 테스트 키 및 서명 연기 시나리오를 지원합니다. 파일은 Sn.exe에 의해 생성된 형식으로 되어 있습니다. 자세한 내용은 [Sn.exe(강력한 이름 도구)](sn-exe-strong-name-tool.md)에서 Sn.exe의 **-p** 옵션을 참조하세요.|  
+|**/publickey:** *filename*|결과 어셈블리에 서명하는 데 사용할 공개 키를 포함하는 파일을 지정합니다. **/publickey:** 대신 **/keyfile:** 또는 **/keycontainer:** 옵션을 지정하면 Tlbimp.exe는 **/keyfile:** 또는 **/keycontainer:** 와 함께 제공된 퍼블릭/프라이빗 키 쌍에서 퍼블릭 키를 생성합니다. **/publickey:** 옵션은 테스트 키 및 서명 연기 시나리오를 지원합니다. 파일은 Sn.exe에 의해 생성된 형식으로 되어 있습니다. 자세한 내용은 [Sn.exe(강력한 이름 도구)](sn-exe-strong-name-tool.md)에서 Sn.exe의 **-p** 옵션을 참조하세요.|  
 |**/reference:** *filename*|현재 형식 라이브러리 외부에 정의된 형식에 대한 참조를 확인하는 데 사용할 어셈블리 파일을 지정합니다. **/reference** 옵션을 지정하지 않으면 Tlbimp.exe는 가져오는 형식 라이브러리에서 참조하는 외부 형식 라이브러리를 재귀적으로 가져옵니다. 이 작업은 자동으로 수행됩니다. **/reference** 옵션을 지정하면 Tlbimp.exe는 다른 형식 라이브러리를 가져오기 전에 참조된 어셈블리에서 외부 형식을 확인하려고 합니다.|  
 |**/silence:** `warningnumber`|지정한 경고를 표시하지 않습니다. 이 옵션은 **/silent**와 함께 사용할 수 없습니다.|  
 |**/silent**|성공 메시지를 표시하지 않습니다. 이 옵션은 **/silence**와 함께 사용할 수 없습니다.|  

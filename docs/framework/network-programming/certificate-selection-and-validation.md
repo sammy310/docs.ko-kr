@@ -18,7 +18,7 @@ ms.locfileid: "59318353"
 ## <a name="client-certificate-selection-and-validation"></a>클라이언트 인증서 선택 및 유효성 검사  
  클라이언트는 특정 SSL 연결에 대해 하나 이상의 인증서를 선택할 수 있습니다. SSL 연결을 사용하여 클라이언트 인증서를 웹 서버 또는 SMTP 메일 서버에 연결할 수 있습니다. 클라이언트는 <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 또는 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 클래스 개체 컬렉션에 인증서를 추가합니다. 전자 메일을 예로 사용할 경우, 인증서 컬렉션은 <xref:System.Net.Mail.SmtpClient> 클래스의 <xref:System.Net.Mail.SmtpClient.ClientCertificates%2A> 속성과 연결된 <xref:System.Security.Cryptography.X509Certificates.X509CertificateCollection> 인스턴스입니다. <xref:System.Net.HttpWebRequest> 클래스에는 비슷한 <xref:System.Net.HttpWebRequest.ClientCertificates%2A> 속성이 있습니다.  
   
- <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 및 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 클래스 간의 주요 차이점은 <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 클래스의 경우 개인 키가 인증서 저장소에 상주해야 한다는 것입니다.  
+ <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 및 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 클래스 간의 주요 차이점은 <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 클래스의 경우 프라이빗 키가 인증서 저장소에 상주해야 한다는 것입니다.  
   
  인증서가 컬렉션에 추가되고 특정 SSL 연결과 관련된 경우에도 서버가 요청하지 않으면 인증서가 서버에 전송되지 않습니다. 여러 클라이언트 인증서가 연결에 설정된 경우 서버에서 제공하는 인증서 발급자 목록과 클라이언트 인증서 발급자 이름 간의 일치를 고려하는 알고리즘에 따라 최상의 인증서가 사용됩니다.  
   

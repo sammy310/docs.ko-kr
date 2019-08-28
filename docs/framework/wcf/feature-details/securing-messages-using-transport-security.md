@@ -73,7 +73,7 @@ ms.locfileid: "69911714"
 #### <a name="sign-and-encrypt-protection-level"></a>서명 및 암호화 보호 수준  
  MSMQ 메시지는 `WindowsDomain` 인증 모드를 사용하는 경우 내부에서 생성된 인증서, `Certificate` 인증 모드를 사용하는 경우 외부에서 생성된 인증서를 사용하여 서명됩니다.  
   
- 메시지 서명 외에 MSMQ 메시지는 인증서의 공개 키를 사용하여 암호화됩니다. 이 인증서는 대상 큐를 호스팅하는 수신 큐 관리자에 속한 Active Directory에서 가져옵니다. 전송 큐 관리자는 MSMQ 메시지가 전송 시 암호화되어 있는지 확인합니다. 수신 큐 관리자는 내부 인증서의 개인 키를 사용하여 MSMQ 메시지를 해독하고, 인증되고 권한이 부여된 경우 일반 텍스트로 메시지를 큐에 저장합니다.  
+ 메시지 서명 외에 MSMQ 메시지는 인증서의 공개 키를 사용하여 암호화됩니다. 이 인증서는 대상 큐를 호스팅하는 수신 큐 관리자에 속한 Active Directory에서 가져옵니다. 전송 큐 관리자는 MSMQ 메시지가 전송 시 암호화되어 있는지 확인합니다. 수신 큐 관리자는 내부 인증서의 프라이빗 키를 사용하여 MSMQ 메시지를 해독하고, 인증되고 권한이 부여된 경우 일반 텍스트로 메시지를 큐에 저장합니다.  
   
 > [!NOTE]
 > 메시지를 암호화하려면 Active Directory 액세스가 필요하며(`UseActiveDirectory`의 <xref:System.ServiceModel.NetMsmqBinding> 속성이 `true`로 설정되어야 함), <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> 및 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>과 함께 사용할 수 있습니다.  

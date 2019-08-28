@@ -22,7 +22,7 @@ ms.lasthandoff: 08/22/2019
 ms.locfileid: "69921614"
 ---
 # <a name="delay-signing-an-assembly"></a>어셈블리 서명 연기
-조직에 개발자가 일상적으로 액세스할 수 없는 엄격하게 보호된 키 쌍이 있을 수 있습니다. 대부분이 경우 공개 키를 사용할 수 있지만 개인 키에 대한 액세스는 몇몇 개인만으로 제한됩니다. 강력한 이름을 사용하여 어셈블리를 개발할 경우 강력한 이름의 대상 어셈블리를 참조하는 각 어셈블리에는 대상 어셈블리에 강력한 이름을 지정하는 데 사용되는 공개 키의 토큰이 포함됩니다. 이를 위해 개발 프로세스 중에 공개 키를 사용할 수 있어야 합니다.  
+조직에 개발자가 일상적으로 액세스할 수 없는 엄격하게 보호된 키 쌍이 있을 수 있습니다. 대부분이 경우 퍼블릭 키를 사용할 수 있지만 프라이빗 키에 대한 액세스는 몇몇 개인만으로 제한됩니다. 강력한 이름을 사용하여 어셈블리를 개발할 경우 강력한 이름의 대상 어셈블리를 참조하는 각 어셈블리에는 대상 어셈블리에 강력한 이름을 지정하는 데 사용되는 공개 키의 토큰이 포함됩니다. 이를 위해 개발 프로세스 중에 공개 키를 사용할 수 있어야 합니다.  
   
  빌드 시간에 지연된 서명이나 부분 서명을 사용하여 PE(이식 가능한 실행 파일) 파일에서 강력한 이름 시그니처에 사용할 공간을 예약하지만, 약간 이후 단계까지(일반적으로 어셈블리를 제공하기 바로 전) 실제 서명을 연기할 수 있습니다.  
   
@@ -75,6 +75,6 @@ ms.locfileid: "69921614"
 ## <a name="see-also"></a>참고 항목
 
 - [어셈블리 만들기](../../../docs/framework/app-domains/create-assemblies.md)
-- [방법: 공개/개인 키 쌍 만들기](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
+- [방법: 퍼블릭/프라이빗 키 쌍 만들기](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
 - [Sn.exe(강력한 이름 도구)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
 - [어셈블리를 사용한 프로그래밍](../../../docs/framework/app-domains/programming-with-assemblies.md)

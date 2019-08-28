@@ -44,8 +44,8 @@ aximp [options]{file.dll | file.ocx}
 |------------|-----------------|  
 |`/delaysign`|Aximp.exe에서 지연 서명을 사용하여 결과 컨트롤에 서명하도록 지정합니다. 이 옵션은 `/keycontainer:`, `/keyfile:` 또는 `/publickey:` 옵션과 함께 지정해야 합니다. 지연 서명 프로세스에 대한 자세한 내용은 [어셈블리 서명 연기](../../../docs/framework/app-domains/delay-sign-assembly.md)를 참조하세요.|  
 |`/help`|이 도구의 명령 구문 및 옵션을 표시합니다.|  
-|`/keycontainer:` *containerName*|*containerName*에서 지정된 키 컨테이너에 있는 공개/개인 키 쌍을 사용하여 강력한 이름으로 결과 컨트롤에 서명합니다.|  
-|`/keyfile:` *filename*|*filename*에 있는 게시자의 공식 공개/개인 키 쌍을 사용하여 강력한 이름으로 결과 컨트롤에 서명합니다.|  
+|`/keycontainer:` *containerName*|*containerName*에서 지정된 키 컨테이너에 있는 퍼블릭/프라이빗 키 쌍을 사용하여 강력한 이름으로 결과 컨트롤에 서명합니다.|  
+|`/keyfile:` *filename*|*filename*에 있는 게시자의 공식 퍼블릭/프라이빗 키 쌍을 사용하여 강력한 이름으로 결과 컨트롤에 서명합니다.|  
 |`/nologo`|Microsoft 시작 배너를 표시하지 않습니다.|  
 |`/out:` *filename*|만들 어셈블리의 이름을 지정합니다.|  
 |`/publickey:` *filename*|*filename*에서 지정한 파일에 있는 공개 키를 사용하여 강력한 이름으로 결과 컨트롤에 서명합니다.|  

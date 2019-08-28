@@ -11,7 +11,7 @@ ms.locfileid: "65637565"
 ---
 # <a name="find-private-key-tool-findprivatekeyexe"></a>개인 키 찾기 도구(FindPrivateKey.exe)
 
-이 명령줄 도구는 인증서 저장소에서 개인 키를 검색하는 데 사용할 수 있습니다. 예를 들어 *FindPrivateKey.exe* 인증서 저장소에서 특정 X.509 인증서와 연결 된 개인 키 파일의 이름과 위치를 찾는 데 사용할 수 있습니다.
+이 명령줄 도구는 인증서 저장소에서 프라이빗 키를 검색하는 데 사용할 수 있습니다. 예를 들어 *FindPrivateKey.exe* 인증서 저장소에서 특정 X.509 인증서와 연결 된 개인 키 파일의 이름과 위치를 찾는 데 사용할 수 있습니다.
 
 > [!IMPORTANT]
 > FindPrivateKey 도구는 WCF 샘플로 제공됩니다. 샘플을 찾을 수 있는 위치 및 작성 방법에 대 한 자세한 내용은 참조 하세요. [FindPrivateKey](./samples/findprivatekey.md)합니다.

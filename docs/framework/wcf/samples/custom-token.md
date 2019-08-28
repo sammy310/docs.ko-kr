@@ -570,7 +570,7 @@ string GetCallerCreditCardNumber()
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
-- IIS에서 호스트되는 서비스에서 인증서 개인 키에 액세스할 수 있게 하려면 IIS에서 호스트되는 프로세스가 실행 중인 사용자 계정에 개인 키에 대한 적절한 사용 권한을 부여해야 합니다. Setup.bat 스크립트에서 마지막 단계를 통해 이 작업을 수행합니다.
+- IIS에서 호스트되는 서비스에서 인증서 프라이빗 키에 액세스할 수 있게 하려면 IIS에서 호스트되는 프로세스가 실행 중인 사용자 계정에 프라이빗 키에 대한 적절한 사용 권한을 부여해야 합니다. Setup.bat 스크립트에서 마지막 단계를 통해 이 작업을 수행합니다.
 
     ```
     echo ************

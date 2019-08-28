@@ -25,7 +25,7 @@ ms.lasthandoff: 07/10/2019
 ms.locfileid: "67775660"
 ---
 # <a name="iclrstrongnamestrongnamekeyinstall-method"></a>ICLRStrongName::StrongNameKeyInstall 메서드
-공개/개인 키 쌍을 컨테이너로 가져옵니다.  
+퍼블릭/프라이빗 키 쌍을 컨테이너로 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   

@@ -33,9 +33,9 @@ Interop 애플리케이션에는 일반적으로 .NET 클라이언트 어셈블�
  포함된 interop 형식을 사용할 경우 배포는 간단하고 직관적입니다. 특별히 수행할 작업이 없습니다. 이 문서의 나머지 부분에서는 애플리케이션에 interop 어셈블리를 배포하기 위한 시나리오를 설명합니다.  
   
 ## <a name="deploying-interop-assemblies"></a>Interop 어셈블리 배포  
- 어셈블리는 강력한 이름을 가질 수 있습니다. 강력한 이름의 어셈블리에는 고유한 ID를 제공하는 게시자의 공개 키가 포함됩니다. [형식 라이브러리 가져오기(Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md)에서 생성되는 어셈블리는 게시자가 **/keyfile** 옵션을 사용하여 서명할 수 있습니다. 서명된 어셈블리를 전역 어셈블리 캐시에 설치할 수 있습니다. 서명되지 않은 어셈블리는 사용자 컴퓨터에 전용 어셈블리로 설치해야 합니다.  
+ 어셈블리는 강력한 이름을 가질 수 있습니다. 강력한 이름의 어셈블리에는 고유한 ID를 제공하는 게시자의 공개 키가 포함됩니다. [형식 라이브러리 가져오기(Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md)에서 생성되는 어셈블리는 게시자가 **/keyfile** 옵션을 사용하여 서명할 수 있습니다. 서명된 어셈블리를 전역 어셈블리 캐시에 설치할 수 있습니다. 서명되지 않은 어셈블리는 사용자 컴퓨터에 프라이빗 어셈블리로 설치해야 합니다.  
   
-### <a name="private-assemblies"></a>전용 어셈블리  
+### <a name="private-assemblies"></a>프라이빗 어셈블리  
  전용으로 사용할 어셈블리를 설치하려면 애플리케이션 실행 파일과 가져온 COM 형식을 포함하는 interop 어셈블리가 둘 다 동일한 디렉터리 구조에 설치되어야 합니다. 다음 그림에서는 개별 애플리케이션 디렉터리에 있는 Client1.exe 및 Client2.exe에서 전용으로 사용할 서명되지 않은 interop 어셈블리를 보여 줍니다. 이 예제에서 LOANLib.dll이라는 interop 어셈블리는 두 번 설치됩니다.  
   
  ![디렉터리 구조 및 Windows 레지스트리](./media/deploying-an-interop-application/com-private-deployment.gif "전용 배포에 대한 디렉터리 구조 및 레지스트리 항목")  

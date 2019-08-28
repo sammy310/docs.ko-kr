@@ -25,7 +25,7 @@ ms.lasthandoff: 07/10/2019
 ms.locfileid: "67747837"
 ---
 # <a name="iclrstrongnamestrongnamekeygen-method"></a>ICLRStrongName::StrongNameKeyGen 메서드
-강력한 이름 사용을 위한 새 공개/개인 키 쌍을 만듭니다.  
+강력한 이름 사용을 위한 새 퍼블릭/프라이빗 키 쌍을 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   

@@ -40,12 +40,12 @@ ms.locfileid: "61771477"
 |[StrongNameFreeBuffer 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)|와 같은 강력한 이름의 메서드에 대 한 이전 호출을 사용 하 여 할당 된 메모리를 해제 [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)하십시오 [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md), 또는 [StrongNameSignatureGeneration ](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md).|  
 |[StrongNameGetBlob 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)|지정된 주소에 있는 실행 파일의 이진 표현으로 지정된 버퍼를 채웁니다.|  
 |[StrongNameGetBlobFromImage 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)|지정된 메모리 주소에 있는 어셈블리 이미지의 이진 표현을 가져옵니다.|  
-|[StrongNameGetPublicKey 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)|개인/공개 키 쌍에서 공개 키를 가져옵니다.|  
+|[StrongNameGetPublicKey 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)|퍼블릭/퍼블릭 키 쌍에서 퍼블릭 키를 가져옵니다.|  
 |[StrongNameHashSize 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamehashsize-method.md)|지정된 해시 알고리즘을 사용하여 해시에 필요한 버퍼 크기를 가져옵니다.|  
 |[StrongNameKeyDelete 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)|지정된 키 컨테이너를 삭제합니다.|  
-|[StrongNameKeyGen 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)|강력한 이름 사용을 위한 새 공개/개인 키 쌍을 만듭니다.|  
-|[StrongNameKeyGenEx 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)|강력한 이름 사용을 위해 지정된 키 크기로 새 공개/개인 키 쌍을 생성합니다.|  
-|[StrongNameKeyInstall 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md)|공개/개인 키 쌍을 컨테이너로 가져옵니다.|  
+|[StrongNameKeyGen 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)|강력한 이름 사용을 위한 새 퍼블릭/프라이빗 키 쌍을 만듭니다.|  
+|[StrongNameKeyGenEx 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)|강력한 이름 사용을 위해 지정된 키 크기로 새 퍼블릭/프라이빗 키 쌍을 생성합니다.|  
+|[StrongNameKeyInstall 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md)|퍼블릭/프라이빗 키 쌍을 컨테이너로 가져옵니다.|  
 |[StrongNameSignatureGeneration 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)|지정된 어셈블리에 대한 강력한 이름 서명을 생성합니다.|  
 |[StrongNameSignatureGenerationEx 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)|지정된 플래그에 따라 지정된 어셈블리에 대한 강력한 이름 서명을 생성합니다.|  
 |[StrongNameSignatureSize 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md)|강력한 이름 서명의 크기를 반환합니다.|  

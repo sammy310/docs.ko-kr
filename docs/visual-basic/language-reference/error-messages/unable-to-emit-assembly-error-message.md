@@ -63,5 +63,5 @@ Visual Basic 컴파일러에서 어셈블리 링커 호출 (*Al.exe*, Alink 라�
 
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
 - [Sn.exe(강력한 이름 도구)](../../../framework/tools/sn-exe-strong-name-tool.md)
-- [방법: 공개/개인 키 쌍 만들기](../../../framework/app-domains/how-to-create-a-public-private-key-pair.md)
+- [방법: 퍼블릭/프라이빗 키 쌍 만들기](../../../framework/app-domains/how-to-create-a-public-private-key-pair.md)
 - [의견 보내기](/visualstudio/ide/talk-to-us)

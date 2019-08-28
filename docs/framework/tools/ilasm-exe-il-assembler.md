@@ -57,8 +57,8 @@ ilasm [options] filename [[options]filename...]
 |/**highentropyva**|높은 엔트로피 주소 공간 레이아웃 불규칙화(ASLR)가 지원되는 출력 실행 파일을 생성합니다. ( **/appcontainer**의 기본값)|
 |**/include:** `includePath`|`#include`에 포함된 파일을 검색할 경로를 설정합니다.|
 |**/itanium**|Intel Itanium을 대상 프로세서로 지정합니다.<br /><br /> 이미지 비트가 지정되지 않은 경우 기본값은 **/pe64**입니다.|
-|**/key:** `keyFile`|`keyFile`에 들어 있는 개인 키를 사용하여 강력한 시그니처가 있는 `filename`을 컴파일합니다.|
-|**/key:**  @`keySource`|`keySource`에 생성된 개인 키를 사용하여 강력한 시그니처가 있는 `filename`을 컴파일합니다.|
+|**/key:** `keyFile`|`keyFile`에 들어 있는 프라이빗 키를 사용하여 강력한 시그니처가 있는 `filename`을 컴파일합니다.|
+|**/key:**  @`keySource`|`keySource`에 생성된 프라이빗 키를 사용하여 강력한 시그니처가 있는 `filename`을 컴파일합니다.|
 |**/listing**|표준 출력 파일에 대한 목록 파일을 생성합니다. 이 옵션을 생략하면 목록 파일이 생성되지 않습니다.<br /><br /> 이 매개 변수는 .NET Framework 2.0 이상에서 지원되지 않습니다.|
 |**/mdv:** `versionString`|메타데이터 버전 문자열을 설정합니다.|
 |**/msv:** `major`.`minor`|`major` 및 `minor` 가 정수인 메타데이터 스트림 버전을 설정합니다.|
