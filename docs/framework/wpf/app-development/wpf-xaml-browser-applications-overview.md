@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: a83b3e68365cccc96cfe7eaa4baaabf8c991c98f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 230a25ad16c91f7812e5d92203ba204ca0abc099
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956045"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70037756"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 브라우저 애플리케이션 개요
 <a name="introduction"></a>
@@ -123,7 +123,7 @@ ms.locfileid: "69956045"
      변경 내용을 적용하려면 Internet Explorer를 다시 시작합니다.  
   
 > [!CAUTION]
->  Internet Explorer에서 액티브 콘텐츠가 실행되도록 하면 컴퓨터가 위험에 처할 수 있습니다. Internet Explorer 보안 설정을 변경 하지 않으려는 경우 서버에서 HTML 페이지를 시작 하 고이 프로세스에 Visual Studio 디버거를 연결할 수 있습니다.  
+> Internet Explorer에서 액티브 콘텐츠가 실행되도록 하면 컴퓨터가 위험에 처할 수 있습니다. Internet Explorer 보안 설정을 변경 하지 않으려는 경우 서버에서 HTML 페이지를 시작 하 고이 프로세스에 Visual Studio 디버거를 연결할 수 있습니다.  
   
 <a name="xbap_security_considerations"></a>   
 ## <a name="xbap-security-considerations"></a>XBAP 보안 고려 사항  

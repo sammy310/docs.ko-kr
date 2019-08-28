@@ -2,12 +2,12 @@
 title: NetDataContractSerializer의 기능을 공급하기 위해 DataContractSerializer 및 DataContractResolver를 사용
 ms.date: 03/30/2017
 ms.assetid: 1376658f-f695-45f7-a7e0-94664e9619ff
-ms.openlocfilehash: 0378f8d6e21f44eb1f39e9ebf51ef0dfaf8d8e8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7102e60c8b5302d4f3bc83b356dbc7de117f57a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990407"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039872"
 ---
 # <a name="using-datacontractserializer-and-datacontractresolver-to-provide-the-functionality-of-netdatacontractserializer"></a>NetDataContractSerializer의 기능을 공급하기 위해 DataContractSerializer 및 DataContractResolver를 사용
 이 샘플에서는 <xref:System.Runtime.Serialization.DataContractSerializer>와 적절한 <xref:System.Runtime.Serialization.DataContractResolver>를 함께 사용하여 <xref:System.Runtime.Serialization.NetDataContractSerializer>와 동일한 기능을 제공하는 방법을 보여 줍니다. 이를 위해 적절한 <xref:System.Runtime.Serialization.DataContractResolver>를 만드는 방법과 이를 <xref:System.Runtime.Serialization.DataContractSerializer>에 추가하는 방법을 보여 줍니다.
@@ -57,27 +57,27 @@ class MyDataContractResolver : DataContractResolver
 
 #### <a name="to-use-this-sample"></a>이 샘플을 사용하려면
 
-1. DCRSample.sln 솔루션 파일을 열고 Visual Studio 2012를 사용 합니다.
+1. Visual Studio 2012을 사용 하 여 DCRSample .sln 솔루션 파일을 엽니다.
 
-2. 솔루션 파일을 마우스 오른쪽 단추로 클릭 하 고 선택 **속성**합니다.
+2. 솔루션 파일을 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.
 
-3. 에 **솔루션 속성 페이지** 대화 상자 아래에 있는 **공용 속성**, **시작 프로젝트**를 선택 **여러 개의 시작 프로젝트:**.
+3. **솔루션 속성 페이지** 대화 상자의 **공용 속성**, **시작 프로젝트**에서 **여러 개의 시작 프로젝트**를 선택 합니다.
 
-4. 옆에 **DCSwithDCR** 프로젝트 선택 **시작** 에서 **작업** 드롭다운 합니다.
+4. **DCSwithDCR** 프로젝트 옆의 **동작** 드롭다운에서 **시작** 을 선택 합니다.
 
-5. 옆에 **NetDCS** 프로젝트 선택 **시작** 에서 **작업** 드롭다운 합니다.
+5. **Netdcs** 프로젝트 옆의 **동작** 드롭다운에서 **시작** 을 선택 합니다.
 
-6. 클릭 **확인** 는 대화 상자를 닫습니다.
+6. **확인** 을 클릭 하 여 대화 상자를 닫습니다.
 
 7. Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.
 
 8. Ctrl+F5를 눌러 솔루션을 실행합니다.
 
 > [!IMPORTANT]
->  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
+> 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\NetDcSasDcSwithDCR`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\NetDcSasDcSwithDCR`  

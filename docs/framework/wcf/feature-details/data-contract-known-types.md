@@ -9,12 +9,12 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: 054beab97a77bd466d2c3d8c734e37f8ded7eb62
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2ab0a41e87a9b14d1beac9fb0c39586f0ea16a4a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945267"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040192"
 ---
 # <a name="data-contract-known-types"></a>데이터 계약 알려진 형식
 <xref:System.Runtime.Serialization.KnownTypeAttribute> 클래스를 사용하면 고려 사항에 포함해야 하는 형식을 deserialization을 수행하는 동안 미리 지정할 수 있습니다. 작업 예제는 [Known Types](../../../../docs/framework/wcf/samples/known-types.md) 예제를 참조하십시오.  
@@ -77,7 +77,7 @@ ms.locfileid: "69945267"
  다음 예제에서 데이터 계약은 숫자와 숫자에 수행할 작업을 저장합니다. `Numbers` 데이터 멤버는 정수, 정수 배열 또는 정수를 포함하는 <xref:System.Collections.Generic.List%601> 일 수 있습니다.  
   
 > [!CAUTION]
->  이는 SVCUTIL.EXE를 사용하여 WCF 프록시를 생성하는 경우 클라이언트 쪽에서만 작동합니다. SVCUTIL.EXE는 서비스에서 알려진 형식을 비롯한 메타데이터를 검색합니다. 이 정보가 없으면 클라이언트가 형식을 deserialize할 수 없게 됩니다.  
+> 이는 SVCUTIL.EXE를 사용하여 WCF 프록시를 생성하는 경우 클라이언트 쪽에서만 작동합니다. SVCUTIL.EXE는 서비스에서 알려진 형식을 비롯한 메타데이터를 검색합니다. 이 정보가 없으면 클라이언트가 형식을 deserialize할 수 없게 됩니다.  
   
  [!code-csharp[C_KnownTypeAttribute#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#6)]
  [!code-vb[C_KnownTypeAttribute#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#6)]  

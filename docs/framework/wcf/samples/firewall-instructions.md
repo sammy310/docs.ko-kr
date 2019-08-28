@@ -2,12 +2,12 @@
 title: 방화벽 지침
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-ms.openlocfilehash: 5e557963c415cf39c4f25b4854c9863652201146
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2c07d17ebb6bbefa78d12bb128e354112311891a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961402"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044947"
 ---
 # <a name="firewall-instructions"></a>방화벽 지침
 WCF (Windows Communication Foundation) 샘플이 작동할 수 있도록 방화벽에서 몇 가지 포트나 프로그램을 사용 하도록 설정 해야 합니다. 대부분의 샘플은 8000-8003 범위의 포트와 포트 9000을 사용하여 통신합니다. 방화벽은 기본적으로 켜져 있어 이러한 포트에 액세스하지 못하도록 합니다. 샘플에 대해 방화벽을 사용하려면 요구 사항 및 보안 환경에 따라 다음 절차 중 하나를 완료합니다.  
@@ -21,7 +21,7 @@ WCF (Windows Communication Foundation) 샘플이 작동할 수 있도록 방화�
  사용하기에 적합한 절차를 잘 모르는 경우 첫 번째 옵션을 선택합니다. 다른 공급업체의 방화벽을 실행 중인 경우에도 이와 유사하게 변경해야 할 수도 있습니다.  
   
 > [!IMPORTANT]
->  방화벽 구성을 변경하면 보안에 영향을 줍니다. 변경한 내용을 기록하고, 샘플 작업을 완료한 후에 변경 내용을 제거하는 것이 좋습니다.  
+> 방화벽 구성을 변경하면 보안에 영향을 줍니다. 변경한 내용을 기록하고, 샘플 작업을 완료한 후에 변경 내용을 제거하는 것이 좋습니다.  
   
 ### <a name="to-enable-samples-programs-in-advance"></a>미리 샘플 프로그램을 활성화하려면  
   
@@ -30,7 +30,7 @@ WCF (Windows Communication Foundation) 샘플이 작동할 수 있도록 방화�
 2. **시작**, **실행**을 차례로 클릭 하 고 `firewall.cpl`을 입력 합니다. 그러면 **Windows 방화벽 제어판** 애플릿이 열립니다.  
   
     > [!NOTE]
-    >  Windows 방화벽을 통해 통신할 수 있어야 하는 샘플을 실행하려면 방화벽 설정을 변경할 수 있는 권한이 있어야 합니다. 일부 방화벽 설정을 사용할 수 없고 컴퓨터가 도메인에 연결되어 있는 경우 시스템 관리자가 그룹 정책을 통해 이러한 설정을 제어할 수 있습니다.  
+    > Windows 방화벽을 통해 통신할 수 있어야 하는 샘플을 실행하려면 방화벽 설정을 변경할 수 있는 권한이 있어야 합니다. 일부 방화벽 설정을 사용할 수 없고 컴퓨터가 도메인에 연결되어 있는 경우 시스템 관리자가 그룹 정책을 통해 이러한 설정을 제어할 수 있습니다.  
   
 3. 다음의 운영 체제별 단계 중 하나를 완료하여 프로그램이 Windows 방화벽을 통과할 수 있도록 합니다.  
   

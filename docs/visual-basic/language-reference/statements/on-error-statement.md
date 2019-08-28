@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: df2bd232a870e17eeb5106cf0b60a9e77641969d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4474b217147aca74f2c6e5376c8f55318a05bf4a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963538"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046509"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error 문(Visual Basic)
 오류 처리 루틴을 사용 하도록 설정 하 고 프로시저 내에서 루틴의 위치를 지정 합니다. 를 사용 하 여 오류 처리 루틴을 사용 하지 않도록 설정할 수도 있습니다. `On Error` 문은 비구조적 오류 처리에 사용 되며 구조적 예외 처리 대신 사용할 수 있습니다. [구조적 예외 처리](../../../standard/exceptions/index.md) 는 .net에 기본 제공 되며, 일반적으로 더 효율적 이므로 응용 프로그램에서 런타임 오류를 처리할 때 권장 됩니다.
@@ -104,7 +104,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  [!code-vb[VbVbalrErrorHandling#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#19)]
 
 > [!CAUTION]
->  Windows Dll (동적 연결 라이브러리)을 호출 하는 동안 발생 하는 시스템 오류는 예외를 발생 시 키 지 않으며 Visual Basic 오류 트래핑으로 트랩할 수 없습니다. DLL 함수를 호출 하는 경우 각 반환 값에 성공 또는 실패 (API 사양에 따라)를 확인 하 고, 실패 시 `Err` 개체의 `LastDLLError` 속성에서 값을 확인 해야 합니다.
+> Windows Dll (동적 연결 라이브러리)을 호출 하는 동안 발생 하는 시스템 오류는 예외를 발생 시 키 지 않으며 Visual Basic 오류 트래핑으로 트랩할 수 없습니다. DLL 함수를 호출 하는 경우 각 반환 값에 성공 또는 실패 (API 사양에 따라)를 확인 하 고, 실패 시 `Err` 개체의 `LastDLLError` 속성에서 값을 확인 해야 합니다.
 
 ## <a name="example"></a>예제
  이 예에서는 먼저 `On Error GoTo` 문을 사용 하 여 프로시저 내에서 오류 처리 루틴의 위치를 지정 합니다. 이 예에서는 0으로 나누려고 시도 하면 오류 번호 6이 생성 됩니다. 오류는 오류 처리 루틴에서 처리 되 고 컨트롤은 오류를 발생 시킨 문으로 반환 됩니다. `On Error GoTo 0` 문은 오류 트래핑을 해제 합니다. 그런 다음 `On Error Resume Next` 문을 사용 하 여 다음 문에 의해 생성 된 오류에 대 한 컨텍스트를 특정에 대해 알 수 있도록 오류 트래핑을 지연 시킵니다. 는 오류를 처리 한 후 `Err` 개체의 속성을 지우는 데 사용 됩니다.`Err.Clear`

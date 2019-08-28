@@ -2,12 +2,12 @@
 title: 가상 디렉터리 설치 지침
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: f755fadf6bef2bdd58fd31f3460a143b8f52eddf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6dccc5174e3fb9ab67023310d8c060d598a707c9
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966737"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038642"
 ---
 # <a name="virtual-directory-setup-instructions"></a>가상 디렉터리 설치 지침
 WCF (Windows Communication Foundation) 샘플은%SystemDrive%\inetpub\wwwroot\servicemodelsamples 폴더에 매핑되는 servicemodelsamples 라는 공용 가상 디렉터리를 공유 하기 위한 것입니다.  
@@ -36,10 +36,10 @@ WCF (Windows Communication Foundation) 샘플은%SystemDrive%\inetpub\wwwroot\se
 7. **확인**을 클릭합니다. WCF 샘플에 웹 애플리케이션이 만들어집니다.  
   
     > [!NOTE]
-    >  모든 WCF 샘플은 동일한 servicemodelsamples 웹 응용 프로그램을 사용 하므로이 작업은 한 번만 수행 해야 합니다.  
+    > 모든 WCF 샘플은 동일한 servicemodelsamples 웹 응용 프로그램을 사용 하므로이 작업은 한 번만 수행 해야 합니다.  
   
     > [!NOTE]
-    >  이 문서에서는 `virtual directory`라는 용어는 `Web application`과 동의어입니다.  
+    > 이 문서에서는 `virtual directory`라는 용어는 `Web application`과 동의어입니다.  
   
      가상 디렉터리를 만드는 것 외에도 해당 속성을 설정 하 여 WCF 서비스를 실행할 수 있도록 해야 합니다. 자세한 내용은 아래를 참조하세요.  
   
@@ -66,7 +66,7 @@ WCF (Windows Communication Foundation) 샘플은%SystemDrive%\inetpub\wwwroot\se
 8. **다음**을 클릭 한 다음 **마침** 을 클릭 하 여 마법사를 완료 합니다.  
   
     > [!NOTE]
-    >  모든 WCF 샘플에서 동일한 servicemodelsamples 가상 디렉터리를 사용 하므로이 작업은 한 번만 수행 해야 합니다.  
+    > 모든 WCF 샘플에서 동일한 servicemodelsamples 가상 디렉터리를 사용 하므로이 작업은 한 번만 수행 해야 합니다.  
   
 #### <a name="to-set-additional-virtual-directory-properties-in-iis-70-or-75"></a>IIS 7.0 또는 7.5에서 추가 가상 디렉터리 속성을 설정 하려면  
   

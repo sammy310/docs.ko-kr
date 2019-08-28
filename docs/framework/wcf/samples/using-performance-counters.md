@@ -2,12 +2,12 @@
 title: 성능 카운터 사용
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 2d714af8802bd290b54d0bf3667220b25b24c3fc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 724580c1725cf6513e1d85f03b0abfdefb4d040a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966761"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044538"
 ---
 # <a name="using-performance-counters"></a>성능 카운터 사용
 이 샘플에서는 WCF (Windows Communication Foundation) 성능 카운터에 액세스 하는 방법과 사용자 정의 성능 카운터를 만드는 방법을 보여 줍니다. 이 샘플은 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)을 기반으로 합니다.  
@@ -44,14 +44,14 @@ ms.locfileid: "69966761"
 1. **시작**, **실행** `perfmon` 을 차례로 클릭 하 고 **확인을** 클릭 하거나 제어판에서 **관리 도구** 를 선택 하 고 **성능**을 두 번 클릭 하 여 성능 모니터 도구를 시작 합니다.  
   
     > [!NOTE]
-    >  샘플 코드가 실행될 때까지는 카운터를 추가할 수 없습니다.  
+    > 샘플 코드가 실행될 때까지는 카운터를 추가할 수 없습니다.  
   
 2. 나열된 성능 카운터를 선택한 다음 Delete 키를 누르면 성능 카운터를 제거할 수 있습니다.  
   
 3. 그래프 창을 마우스 오른쪽 단추로 클릭 하 고 **카운터 추가**를 선택 하 여 WCF 카운터를 추가 합니다. **카운터 추가** 대화 상자의 성능 개체 드롭다운 목록 상자에서 **ServiceModelOperation 3.0.0.0, ServiceModelEndpoint 3.0.0.0 또는 ServiceModelService 3.0.0.0** 를 선택 합니다. 목록에서 보려는 카운터를 선택합니다.  
   
     > [!NOTE]
-    >  컴퓨터에서 실행 중인 WCF 서비스가 없는 경우에는 서비스에 대 한 WCF 성능 카운터가 없습니다.  
+    > 컴퓨터에서 실행 중인 WCF 서비스가 없는 경우에는 서비스에 대 한 WCF 성능 카운터가 없습니다.  
   
 ### <a name="to-use-the-configuration-editor-to-enable-counters"></a>Configuration Editor를 사용하여 카운터를 사용하려면  
   
@@ -68,13 +68,13 @@ ms.locfileid: "69966761"
 6. 구성 파일을 저장하고 편집기를 끝냅니다.  
   
 > [!IMPORTANT]
->  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
+> 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
   
 ## <a name="see-also"></a>참고자료
 

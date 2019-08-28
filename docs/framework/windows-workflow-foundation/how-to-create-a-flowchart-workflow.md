@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: 6d67629503d5acfeff7e14e1889a047444a8d399
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3afac76fc977f992e780d2ebe302c1ed94568835
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962386"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044409"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>방법: 순서도 워크플로 만들기
 기본 제공 활동뿐 아니라 사용자 지정 활동에서도 워크플로를 구성할 수 있습니다. 이 항목에서는 <xref:System.Activities.Statements.Flowchart> 활동과 같은 기본 제공 활동 및 이전 [방법의 사용자 지정 활동을 모두 사용 하는 워크플로를 만드는 과정을 단계별로 설명 합니다. 작업](how-to-create-an-activity.md) 항목을 만듭니다. 이 워크플로는 숫자 추측 게임을 모델링합니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "69962386"
 9. **변수 만들기**를 클릭 합니다.  
   
     > [!TIP]
-    >  **변수 만들기** 상자가 표시 되지 않으면 workflow designer 화면에서 <xref:System.Activities.Statements.Flowchart> 활동을 클릭 하 여 선택 합니다.  
+    > **변수 만들기** 상자가 표시 되지 않으면 workflow designer 화면에서 <xref:System.Activities.Statements.Flowchart> 활동을 클릭 하 여 선택 합니다.  
   
 10. 이름 `Guess` 상자에 를 입력 하 고 **변수 형식** 드롭다운 목록에서 **Int32** 를 선택한 다음 enter 키를 눌러 변수를 저장 합니다.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "69962386"
     ```  
   
     > [!TIP]
-    >  **도구 상자** 창이 표시 되지 않으면 **보기** 메뉴에서 **도구 상자** 를 선택 합니다.  
+    > **도구 상자** 창이 표시 되지 않으면 **보기** 메뉴에서 **도구 상자** 를 선택 합니다.  
   
 3. **도구 상자**의 **NumberGuessWorkflowActivities** 섹션에서 **prompt** 활동을 끌어 이전 단계의 **assign** 활동 아래에 놓고 **prompt** 활동을 **assign** 활동에 연결 합니다. 두 활동을 연결하는 방법에는 세 가지가 있습니다. 첫 번째 방법은 워크플로에 **프롬프트** 활동을 놓을 때 연결 하는 것입니다. **프롬프트** 활동을 워크플로로 끌어 오면 **assign** 활동 위로 마우스를 가져간 다음 **assign** 활동을 통해 **프롬프트** 활동이 있을 때 표시 되는 네 개의 삼각형 중 하나에 놓습니다. 두 번째 방법은 **프롬프트** 활동을 원하는 위치에 워크플로로 놓는 것입니다. 그런 다음 **Assign** 활동 위로 마우스를 이동 하 고 표시 되는 사각형 중 하나를 **Prompt** 활동으로 끕니다. **Assign** 활동의 연결 선이 **Prompt** 활동의 사각형 중 하나에 연결 되도록 마우스를 끌고 마우스 단추를 놓습니다. 세 번째 방법은 첫 번째 방법과 매우 유사 합니다. 단, **도구 상자**에서 **프롬프트** 활동을 끄는 대신 워크플로 디자인 화면의 해당 위치에서 끌어서 **Assign** 활동 위로 마우스를 가져간 다음 중 하나에 놓습니다. 표시 되는 삼각형입니다.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "69962386"
     ```  
   
     > [!TIP]
-    >  **속성 창이** 표시 되지 않으면 **보기** 메뉴에서 **속성 창** 을 선택 합니다.  
+    > **속성 창이** 표시 되지 않으면 **보기** 메뉴에서 **속성 창** 을 선택 합니다.  
   
 5. **도구 상자** 의 **기본 형식** 섹션에서 **Assign** 활동을 끌어 **Prompt** 활동 아래에 오도록 이전 단계에서 설명한 방법 중 하나를 사용 하 여 연결 합니다.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "69962386"
 8. **도구 상자** 에서 다른 **flowdecision 결정** 활동을 끌어 첫 번째 활동 아래에 놓습니다. 위쪽 **Flowdecision 결정** 활동에서 **False** 로 레이블이 지정 된 사각형에서 두 번째 **flowdecision 결정** 활동의 맨 위에 있는 사각형으로 끌어 두 활동을 연결 합니다.  
   
     > [!TIP]
-    >  **Flowdecision 결정**에 **True** 및 **False** 레이블이 표시 되지 않으면 **flowdecision 결정**위로 마우스를 가져갑니다.  
+    > **Flowdecision 결정**에 **True** 및 **False** 레이블이 표시 되지 않으면 **flowdecision 결정**위로 마우스를 가져갑니다.  
   
 9. 두 번째 **Flowdecision 결정** 활동을 클릭 하 여 선택 합니다. **속성 창의** **Condition** 속성 값 상자에 다음 식을 입력 합니다.  
   

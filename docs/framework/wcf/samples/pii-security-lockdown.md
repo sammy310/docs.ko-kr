@@ -2,12 +2,12 @@
 title: PII 보안 잠금
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 16e7c564373eaf241b500c0e3de40ee8fb38f05a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f82d3f19a3bf6fc6a5ac038034880dafc03fcce1
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964602"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044794"
 ---
 # <a name="pii-security-lockdown"></a>PII 보안 잠금
 이 샘플에서는 다음을 수행 하 여 WCF (Windows Communication Foundation) 서비스의 몇 가지 보안 관련 기능을 제어 하는 방법을 보여 줍니다.  
@@ -19,13 +19,13 @@ ms.locfileid: "69964602"
 - 추적 및 메시지 로그에서 PII(개인적으로 식별할 수 있는 정보)의 로깅 제어  
   
 > [!IMPORTANT]
->  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
+> 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
 ## <a name="discussion"></a>토론  
  이러한 각 기능을 별개로 사용하거나 함께 사용하여 서비스 보안의 여러 측면을 제어할 수 있습니다. 이는 WCF 서비스를 보호 하기 위한 명확한 가이드가 아닙니다.  
@@ -120,7 +120,7 @@ ms.locfileid: "69964602"
 > System.Diagnostics는 구성 파일에 나열된 첫 번째 소스를 제외한 모든 소스의 모든 특성을 무시합니다. 구성 파일의 두 번째 소스에 `logKnownPii` 특성을 추가해도 아무 효과가 없습니다.  
   
 > [!IMPORTANT]
->  이 샘플을 실행하려면 Machine.config를 수동으로 수정해야 합니다. 값이나 구문이 잘못되면 모든 .NET Framework 응용 프로그램이 실행되지 않을 수도 있으므로 Machine.config를 수정할 때 주의해야 합니다.  
+> 이 샘플을 실행하려면 Machine.config를 수동으로 수정해야 합니다. 값이나 구문이 잘못되면 모든 .NET Framework 응용 프로그램이 실행되지 않을 수도 있으므로 Machine.config를 수정할 때 주의해야 합니다.  
   
  또한 DPAPI 및 RSA를 사용하여 구성 파일 요소를 암호화할 수 있습니다. 자세한 내용은 다음 링크를 참조하세요.  
   

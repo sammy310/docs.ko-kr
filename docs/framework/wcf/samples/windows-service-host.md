@@ -5,12 +5,12 @@ helpviewer_keywords:
 - NT Service
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
-ms.openlocfilehash: 6339666d80de6c40b390683c1dabe6925053d30d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2f2024a984111a826adab31ca15f1a46f9733de5
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942292"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045400"
 ---
 # <a name="windows-service-host"></a>Windows Service 호스트
 이 샘플에서는 관리 되는 Windows 서비스에서 호스팅되는 WCF (Windows Communication Foundation) 서비스를 보여 줍니다. Windows 서비스는 **제어판** 의 서비스 애플릿을 사용 하 여 제어 되며 시스템을 다시 부팅 한 후 자동으로 시작 되도록 구성할 수 있습니다. 이 샘플은 클라이언트 프로그램과 Windows 서비스 프로그램으로 구성됩니다. 서비스는 .exe 프로그램으로 구현되고 자체 호스팅 코드가 포함됩니다. WAS(Windows Process Activation Services) 또는 IIS(인터넷 정보 서비스) 등의 다른 호스팅 환경에서는 직접 호스팅 코드를 작성할 필요가 없습니다.
@@ -19,13 +19,13 @@ ms.locfileid: "69942292"
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.
 
 > [!IMPORTANT]
->  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
+> 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WindowsService`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WindowsService`  
   
  이 서비스를 빌드한 후에는 다른 Windows 서비스와 마찬가지로 Installutil.exe 유틸리티로 설치해야 합니다. 서비스를 변경하려는 경우에는 먼저 `installutil /u`를 사용하여 제거해야 합니다. 이 샘플에 포함된 Setup.bat 및 Cleanup.bat 파일은 Windows 서비스를 설치 및 시작하기 위한 명령과 Windows 서비스를 종료 및 제거하기 위한 명령입니다. WCF 서비스는 Windows 서비스가 실행 중인 경우에만 클라이언트에 응답할 수 있습니다. **제어판** 에서 서비스 애플릿을 사용 하 여 Windows 서비스를 중지 하 고 클라이언트 <xref:System.ServiceModel.EndpointNotFoundException> 를 실행 하는 경우 클라이언트가 서비스에 액세스 하려고 하면 예외가 발생 합니다. Windows 서비스를 다시 시작하고 클라이언트를 다시 실행하면 통신이 성공합니다.  
   

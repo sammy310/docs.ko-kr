@@ -2,15 +2,15 @@
 title: 사용자 지정 복합 디자이너 - 워크플로 항목 프리젠터
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: 0eb2ce0ca7e5d2ffd7ddd9a3d582783b4610427a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 239f7ccd81d5bb60eed32298220df215b09e3e47
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622620"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038368"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>사용자 지정 복합 디자이너 - 워크플로 항목 프리젠터
-<xref:System.Activities.Presentation.WorkflowItemPresenter> 임의의 활동을 배치할 수 있는 "끌어 놓기 영역"을 만들 수 있도록 하는 WF 디자이너 프로그래밍 모델의 키 형식입니다. 이 샘플에서는 표시 이러한 "드롭 영역". "를 사용 하는 활동 디자이너를 빌드하는 방법을 보여 줍니다.
+는 <xref:System.Activities.Presentation.WorkflowItemPresenter> 임의의 작업을 배치할 수 있는 "끌어 놓기 영역"을 만들 수 있도록 하는 WF 디자이너 프로그래밍 모델의 키 형식입니다. 이 샘플에서는 "끌어 놓기 영역"을 표시 하는 활동 디자이너를 빌드하는 방법을 보여 줍니다.
 
  이 샘플에서는 다음 작업을 수행하는 방법을 보여 줍니다.
 
@@ -63,7 +63,7 @@ ms.locfileid: "64622620"
 </sap:ActivityDesigner>
 ```
 
- WPF 데이터 바인딩을 사용하여 `ModelItem.Body`에 바인딩합니다. `ModelItem` 속성 켜져 <xref:System.Activities.Presentation.ActivityDesigner> 은 디자이너가 사용 될,이 경우 기본 개체를 나타내는 **SimpleNativeActivity**합니다.
+ WPF 데이터 바인딩을 사용하여 `ModelItem.Body`에 바인딩합니다. `ModelItem`는 디자이너가 사용 되 <xref:System.Activities.Presentation.ActivityDesigner> 는 원본 개체 (이 경우 **SimpleNativeActivity**)를 참조 하는의 속성입니다.
 
 #### <a name="to-setup-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면
 
@@ -72,13 +72,13 @@ ms.locfileid: "64622620"
 2. F5 키를 눌러 애플리케이션을 컴파일하고 실행합니다.
 
 > [!IMPORTANT]
->  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
+> 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`  
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`  
   
 ## <a name="see-also"></a>참고자료
 

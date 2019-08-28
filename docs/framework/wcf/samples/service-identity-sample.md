@@ -2,12 +2,12 @@
 title: Service Identity 샘플
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: 999e05918eb7ac852336136a1e7512a2e9d7b9db
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0d5fce313200cdfdb8007ceffe9ff97b033d9f82
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964533"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045516"
 ---
 # <a name="service-identity-sample"></a>Service Identity 샘플
 이 Service Identity 샘플에서는 서비스의 ID를 설정하는 방법을 보여 줍니다. 클라이언트는 디자인 타임에 서비스의 메타데이터를 사용하여 ID를 검색한 다음 런타임에 서비스의 ID를 인증할 수 있습니다. 서비스 ID의 개념을 사용하면 클라이언트가 작업을 호출하기 전에 서비스를 인증함으로써 인증되지 않은 호출로부터 클라이언트를 보호할 수 있습니다. 보안 연결에서는 또한 서비스가 클라이언트의 액세스를 허용하기 전에 클라이언트의 자격 증명을 인증하는데, 이 부분은 샘플에서 다루지 않습니다. 서버 인증을 표시 하는 [클라이언트](../../../../docs/framework/wcf/samples/client.md) 의 샘플을 참조 하세요.
@@ -24,7 +24,7 @@ ms.locfileid: "69964533"
 - 클라이언트에서 사용자 지정 ID를 설정하는 방법. 사용자 지정 ID는 일반적으로 기존 ID 형식을 사용자 지정한 것으로서, 이를 통해 클라이언트가 서비스의 자격 증명에 제공된 다른 클레임 정보를 검사하여 서비스 호출에 앞서 권한 부여 결정을 내릴 수 있습니다.
 
     > [!NOTE]
-    >  이 샘플에서는 identity.com이라는 특정 인증서의 ID와 이 인증서 내부에 포함된 RSA 키를 검사합니다. 클라이언트의 구성에서 인증서 및 RSA ID 형식을 사용할 경우 이 값이 serialize되는 서비스에서 WSDL을 검사하면 이 값을 손쉽게 얻을 수 있습니다.
+    > 이 샘플에서는 identity.com이라는 특정 인증서의 ID와 이 인증서 내부에 포함된 RSA 키를 검사합니다. 클라이언트의 구성에서 인증서 및 RSA ID 형식을 사용할 경우 이 값이 serialize되는 서비스에서 WSDL을 검사하면 이 값을 손쉽게 얻을 수 있습니다.
 
  다음 샘플 코드에서는 WSHttpBinding을 사용하여 인증서의 DNS(도메인 이름 서버)로 서비스 엔드포인트의 ID를 구성하는 방법을 보여 줍니다.
 
@@ -120,7 +120,7 @@ class CustomIdentityVerifier : IdentityVerifier
 2. 에서 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]관리자 권한으로 Visual Studio 2012 명령 프롬프트 내의 샘플 설치 폴더에서 setup.exe를 실행 합니다. 이 작업은 샘플 실행에 필요한 모든 인증서를 설치합니다.
 
     > [!NOTE]
-    >  설치 .bat 배치 파일은 Visual Studio 2012 명령 프롬프트에서 실행 되도록 디자인 되었습니다. Visual Studio 2012 명령 프롬프트 내에서 설정 된 PATH 환경 변수는 Setup. .bat 스크립트에 필요한 실행 파일을 포함 하는 디렉터리를 가리킵니다. 샘플 사용을 마쳤으면 Cleanup.bat를 실행하여 인증서를 제거해야 합니다. 다른 보안 샘플에도 동일한 인증서가 사용됩니다.  
+    > 설치 .bat 배치 파일은 Visual Studio 2012 명령 프롬프트에서 실행 되도록 디자인 되었습니다. Visual Studio 2012 명령 프롬프트 내에서 설정 된 PATH 환경 변수는 Setup. .bat 스크립트에 필요한 실행 파일을 포함 하는 디렉터리를 가리킵니다. 샘플 사용을 마쳤으면 Cleanup.bat를 실행하여 인증서를 제거해야 합니다. 다른 보안 샘플에도 동일한 인증서가 사용됩니다.  
   
 3. \service\bin 디렉터리에서 Service.exe를 시작합니다. 서비스가 준비 되었음을 나타내고 > enter 키를 눌러 \<서비스를 종료 하 라는 메시지가 표시 되는지 확인 합니다.  
   
@@ -157,4 +157,4 @@ class CustomIdentityVerifier : IdentityVerifier
 - 샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.bat를 실행합니다.  
   
     > [!NOTE]
-    >  다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 클라이언트의 서비스 인증서를 제거할 수 없습니다. 컴퓨터에서 인증서를 사용 하는 WCF (Windows Communication Foundation) 샘플을 실행 한 경우에는 CurrentUser-비트 사용자 저장소에 설치 된 서비스 인증서를 지워야 합니다. 이렇게 하려면 다음 명령을 사용 합니다. `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`예를 들면 `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`와 같습니다.
+    > 다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 클라이언트의 서비스 인증서를 제거할 수 없습니다. 컴퓨터에서 인증서를 사용 하는 WCF (Windows Communication Foundation) 샘플을 실행 한 경우에는 CurrentUser-비트 사용자 저장소에 설치 된 서비스 인증서를 지워야 합니다. 이렇게 하려면 다음 명령을 사용 합니다. `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`예를 들면 `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`와 같습니다.

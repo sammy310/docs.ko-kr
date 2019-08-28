@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: 3bb41fa476f15c5fc16a942cc0c82fd8e0aba7bb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b56fc09b33a846fe94a52e19dc4b9c806d79c121
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911675"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044100"
 ---
 # <a name="ui-automation-events-for-clients"></a>클라이언트에 대한 UI 자동화 이벤트
 > [!NOTE]
@@ -44,11 +44,11 @@ ms.locfileid: "69911675"
 > 창이 닫힌 이벤트를 처리하려면 <xref:System.Windows.Automation.WindowClosedEventArgs>로 이벤트 처리기에 전달되는 인수 형식을 캐스팅합니다. 창의 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 요소가 더 이상 유효하지 않기 때문에 `sender` 매개 변수를 사용하여 검색을 검색할 수 없습니다. 대신 <xref:System.Windows.Automation.WindowClosedEventArgs.GetRuntimeId%2A>를 사용해야 합니다.  
   
 > [!CAUTION]
->  애플리케이션이 자체 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]에서 이벤트를 검색하려는 경우에는 애플리케이션의 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 스레드를 사용하여 이벤트를 구독하거나 구독을 취소하지 않아야 합니다. 이렇게 하면 예기치 않은 동작이 발생할 수 있습니다. 자세한 내용은 [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)을 참조하세요.  
+> 애플리케이션이 자체 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]에서 이벤트를 검색하려는 경우에는 애플리케이션의 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 스레드를 사용하여 이벤트를 구독하거나 구독을 취소하지 않아야 합니다. 이렇게 하면 예기치 않은 동작이 발생할 수 있습니다. 자세한 내용은 [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)을 참조하세요.  
   
  종료되거나 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트가 더 이상 애플리케이션에 필요하지 않는 경우에는 UI 자동화 클라이언트가 다음 메서드 중 하나를 호출해야 합니다.  
   
-|메서드|설명|  
+|메서드|Description|  
 |------------|-----------------|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationEventHandler%2A>|<xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>를 사용하여 등록된 이벤트 처리기의 등록을 취소합니다.|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationFocusChangedEventHandler%2A>|<xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A>를 사용하여 등록된 이벤트 처리기의 등록을 취소합니다.|  

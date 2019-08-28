@@ -2,18 +2,18 @@
 title: 사용자 지정 추적
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: fff88c50dd2004d4491e050258ef760c033f6de5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b53b22b485a7ac340821073d2f2914b13a7b7011
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622559"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044296"
 ---
 # <a name="custom-tracking"></a>사용자 지정 추적
 이 샘플에서는 사용자 지정 추적 참가자를 만들고 추적 데이터의 내용을 콘솔에 쓰는 방법을 보여 줍니다. 또한 사용자 정의 데이터로 채워진 <xref:System.Activities.Tracking.CustomTrackingRecord> 개체를 내보내는 방법도 보여 줍니다. 콘솔 기반 추적 참가자는 코드로 만든 추적 프로필 개체를 사용하여 워크플로에서 내보낸 <xref:System.Activities.Tracking.TrackingRecord> 개체를 필터링합니다.
 
 ## <a name="sample-details"></a>샘플 세부 정보
- Windows WF (Workflow Foundation) 워크플로 인스턴스의 실행을 추적 하기 위한 추적 인프라를 제공 합니다. 추적 런타임은 워크플로 인스턴스를 구현하여 워크플로 수명 주기와 관련된 이벤트, 워크플로 활동의 이벤트 및 사용자 지정 추적 이벤트를 내보냅니다. 다음 표에서는 추적 인프라의 기본 구성 요소에 대해 자세히 설명합니다
+ WF (Windows Workflow Foundation)는 워크플로 인스턴스 실행을 추적 하기 위한 추적 인프라를 제공 합니다. 추적 런타임은 워크플로 인스턴스를 구현하여 워크플로 수명 주기와 관련된 이벤트, 워크플로 활동의 이벤트 및 사용자 지정 추적 이벤트를 내보냅니다. 다음 표에서는 추적 인프라의 기본 구성 요소에 대해 자세히 설명합니다
 
 |구성 요소|설명|
 |---------------|-----------------|
@@ -23,7 +23,7 @@ ms.locfileid: "64622559"
 
  다음 표에서는 워크플로 런타임에서 내보내는 추적 레코드에 대해 자세히 설명합니다.
 
-|추적 레코드|설명|
+|추적 레코드|Description|
 |---------------------|-----------------|
 |워크플로 인스턴스 추적 레코드|워크플로 인스턴스의 수명 주기에 대해 설명합니다. 예를 들어 워크플로가 시작되거나 완료되면 인스턴스 레코드를 내보냅니다.|
 |활동 상태 추적 레코드|활동 실행에 대해 자세히 설명합니다. 이러한 레코드는 활동이 예약된 시점, 활동이 완료된 시점, 오류가 throw된 시점 등과 같은 워크플로 활동 상태를 나타냅니다.|
@@ -112,7 +112,7 @@ invoker.Extensions.Add(customTrackingParticipant);
 
 - <xref:System.Activities.Tracking.CustomTrackingRecord> 개체가 만들어지고, 레코드와 함께 내보낼 사용자 정의 데이터로 채워집니다.
 
-- 합니다 <xref:System.Activities.Tracking.CustomTrackingRecord> 의 추적 메서드를 호출 하 여 내보내집니다는 <xref:System.Activities.ActivityContext>합니다.
+- 는의 track 메서드를 호출 하 여 내보내집니다. <xref:System.Activities.ActivityContext> <xref:System.Activities.Tracking.CustomTrackingRecord>
 
  다음 예제에서는 사용자 지정 활동에서 <xref:System.Activities.Tracking.CustomTrackingRecord> 개체를 내보내는 방법을 보여 줍니다.
 
@@ -133,20 +133,20 @@ context.Track(customRecord);
 
 #### <a name="to-use-this-sample"></a>이 샘플을 사용하려면
 
-1. Visual Studio 2010을 사용 하 여 CustomTrackingSample.sln 솔루션 파일을 엽니다.
+1. Visual Studio 2010을 사용 하 여 CustomTrackingSample .sln 솔루션 파일을 엽니다.
 
 2. Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.
 
 3. Ctrl+F5를 눌러 솔루션을 실행합니다.
 
 > [!IMPORTANT]
->  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
+> 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
   
 ## <a name="see-also"></a>참고자료
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, getting control patterns
 - getting, control patterns
 ms.assetid: 006c54c9-50bf-48d9-a855-9d62eb95603a
-ms.openlocfilehash: 8987526a572d3c9a239885407c19bd1ad3674f0e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7b194d9430f27fb85723a91f5786ed11a60bfa85
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968984"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040989"
 ---
 # <a name="get-supported-ui-automation-control-patterns"></a>지원되는 UI 자동화 컨트롤 패턴 가져오기
 > [!NOTE]
@@ -29,7 +29,7 @@ ms.locfileid: "69968984"
 2. 요소에서 모든 컨트롤 패턴을 가져오려면 <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>를 호출합니다.  
   
 > [!CAUTION]
->  클라이언트가 <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>를 사용하지 않는 것이 좋습니다. 이 메서드는 기존의 각 컨트롤 패턴에 대해 내부적으로 <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>을 호출하기 때문에 성능에 심각한 영향을 줄 수 있습니다. 가능하면 클라이언트는 사용할 키 패턴에 대해 <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>을 호출해야 합니다.  
+> 클라이언트가 <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>를 사용하지 않는 것이 좋습니다. 이 메서드는 기존의 각 컨트롤 패턴에 대해 내부적으로 <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>을 호출하기 때문에 성능에 심각한 영향을 줄 수 있습니다. 가능하면 클라이언트는 사용할 키 패턴에 대해 <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>을 호출해야 합니다.  
   
 ### <a name="obtain-a-specific-control-pattern"></a>특정 컨트롤 패턴 가져오기  
   

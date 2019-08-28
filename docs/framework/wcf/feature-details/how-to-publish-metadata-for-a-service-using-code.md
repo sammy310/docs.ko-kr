@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51407e6d-4d87-42d5-be7c-9887b8652006
-ms.openlocfilehash: 5f60bcdb02f61d39711115b07ba989229e39c28c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1faed5717c65c4973c3f1965df649df6f2e24722
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929137"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045896"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-code"></a>방법: 코드를 사용하여 서비스에 대한 메타데이터 게시
 이 항목은 WCF (Windows Communication Foundation) 서비스에 대 한 메타 데이터 게시를 설명 하는 두 가지 방법 항목 중 하나입니다. 서비스에서 메타데이터를 게시하는 방법을 지정하는 두 가지 방법은 구성 파일을 사용하는 방법과 코드를 사용하는 방법입니다. 이 항목에서는 코드를 사용하여 서비스에 대해 메타데이터를 게시하는 방법에 대해 설명합니다.  
   
 > [!CAUTION]
->  이 항목에서는 보호되지 않은 방식으로 메타데이터를 게시하는 방법을 보여 줍니다. 즉, 모든 클라이언트가 서비스에서 메타데이터를 검색할 수 있습니다. 서비스에서 보호되는 방식으로 메타데이터를 게시해야 하는 경우에는 [사용자 지정 보안 메타 데이터 끝점](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)을 참조 하세요.  
+> 이 항목에서는 보호되지 않은 방식으로 메타데이터를 게시하는 방법을 보여 줍니다. 즉, 모든 클라이언트가 서비스에서 메타데이터를 검색할 수 있습니다. 서비스에서 보호되는 방식으로 메타데이터를 게시해야 하는 경우에는 [사용자 지정 보안 메타 데이터 끝점](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)을 참조 하세요.  
   
  구성 파일 [에 메타 데이터를 게시 하는 방법에 대 한 자세한 내용은 방법: 구성 파일](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)을 사용 하 여 서비스에 대 한 메타 데이터를 게시 합니다. 메타데이터를 게시하면 클라이언트에서 WS-Transfer GET 요청을 사용하는 메타데이터 또는 `?wsdl` 쿼리 문자열을 사용하는 HTTP/GET 요청을 검색할 수 있습니다. 코드가 작동 중인지 확인하려면 기본 WCF 서비스를 만들어야 합니다. 다음 코드로 된 기본 자체 호스팅 서비스가 제공됩니다.  
   

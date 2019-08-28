@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 0a8d10b9d6ae80bb4fa38445e0335151661c41eb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7581031b022c9c53568a616de66584be9ef7229c
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918136"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041188"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server 연결 풀링(ADO.NET)
 데이터베이스 서버에 연결하는 과정은 일반적으로 시간이 많이 걸리는 여러 단계로 이루어져 있습니다. 즉, 소켓이나 명명된 파이프 같은 실제 채널을 설정하고 서버와의 초기 핸드셰이크를 발생시키며 연결 문자열 정보를 구문 분석할 뿐 아니라 서버에 연결을 인증하고 현재 트랜잭션에 인리스트먼트하기 위해 검사를 실행해야 하는 등의 단계를 거쳐야 합니다.  
@@ -67,7 +67,7 @@ using (SqlConnection connection = new SqlConnection(
  연결 풀러는 연결이 다시 풀로 회수될 때 연결을 다시 할당하여 연결 요청을 처리합니다. 최대 풀 크기에 도달했는데 사용 가능한 연결이 없으면 요청이 대기됩니다. 그러면 풀러는 시간 제한(기본값 15초)에 도달할 때까지 연결을 회수합니다. 연결 제한 시간을 초과하기 전에 풀러가 요청을 처리하지 못하면 예외가 throw됩니다.  
   
 > [!CAUTION]
->  사용이 끝난 연결은 풀로 반환되도록 항상 닫는 것이 좋습니다. `Close` C# `Using` `using` 개체의 `Dispose` 또는 메서드 중 하나를 사용 하거나의 문 내에서 모든 연결을 열거나 Visual Basic의 문을 사용 하 여이 작업을 수행할 수 있습니다. `Connection` 명시적으로 닫히지 않은 연결은 풀에 추가되거나 반환되지 않을 수 있습니다. 자세한 내용은 [using 문](../../../csharp/language-reference/keywords/using-statement.md) 또는 [방법: Visual Basic에 대 한 시스템](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) 리소스를 삭제 합니다.  
+> 사용이 끝난 연결은 풀로 반환되도록 항상 닫는 것이 좋습니다. `Close` C# `Using` `using` 개체의 `Dispose` 또는 메서드 중 하나를 사용 하거나의 문 내에서 모든 연결을 열거나 Visual Basic의 문을 사용 하 여이 작업을 수행할 수 있습니다. `Connection` 명시적으로 닫히지 않은 연결은 풀에 추가되거나 반환되지 않을 수 있습니다. 자세한 내용은 [using 문](../../../csharp/language-reference/keywords/using-statement.md) 또는 [방법: Visual Basic에 대 한 시스템](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) 리소스를 삭제 합니다.  
   
 > [!NOTE]
 > 클래스의 `Close` 메서드에 있는 `Dispose`, `Connection` 또는 다른 관리 개체에 `DataReader` 또는 `Finalize`를 호출해서는 안 됩니다. 종료자에서는 클래스에 직접 속한 관리되지 않는 리소스만 해제합니다. 클래스에 관리되지 않는 리소스가 없는 경우 클래스 정의에 `Finalize` 메서드를 포함하지 마세요. 자세한 내용은 [가비지 수집](../../../standard/garbage-collection/index.md)합니다.  

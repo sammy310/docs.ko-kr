@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: 3badda7afeb25b44b0de574f97452d05efe75bfc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 07f0e5dc232411633626add460ffc29cc7a79d81
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962283"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044348"
 ---
 # <a name="how-to-run-a-workflow"></a>방법: 워크플로 실행
 이 항목에서는 초보자를 위한 자습서를 Windows Workflow Foundation 하 고, 워크플로 호스트를 만들고 이전 [방법: 워크플로](how-to-create-a-workflow.md) 항목을 만듭니다.
@@ -28,7 +28,7 @@ ms.locfileid: "69962283"
 2. **솔루션 탐색기** 에서 **WF45GettingStartedTutorial** 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가**, **새 프로젝트**를 차례로 선택합니다.  
   
     > [!TIP]
-    >  **솔루션 탐색기** 창이 표시되어 있지 않으면 **보기** 메뉴에서 **솔루션 탐색기** 를 선택합니다.
+    > **솔루션 탐색기** 창이 표시되어 있지 않으면 **보기** 메뉴에서 **솔루션 탐색기** 를 선택합니다.
 
 3. **설치됨** 노드에서 **Visual C#** , **워크플로** (또는 **Visual Basic**, **워크플로**)를 차례로 선택합니다.
 
@@ -46,7 +46,7 @@ ms.locfileid: "69962283"
 1. **솔루션 탐색기** 에서 **Program.cs** 또는 **Module1.vb** 를 두 번 클릭하여 코드를 표시합니다.
 
     > [!TIP]
-    >  **솔루션 탐색기** 창이 표시되어 있지 않으면 **보기** 메뉴에서 **솔루션 탐색기** 를 선택합니다.
+    > **솔루션 탐색기** 창이 표시되어 있지 않으면 **보기** 메뉴에서 **솔루션 탐색기** 를 선택합니다.
 
      이 프로젝트는 **워크플로 콘솔 애플리케이션** 템플릿을 사용하여 만들었기 때문에 **Program.cs** 또는 **Module1.vb** 에 다음과 같은 기본 워크플로 호스팅 코드가 포함되어 있습니다.
 

@@ -2,12 +2,12 @@
 title: Federation 샘플
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 10087c4c18a4bc24dd36d814619fc265f9987c8c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d3a326f08e78edb79908485361f161c1b6da6625
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961435"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044973"
 ---
 # <a name="federation-sample"></a>Federation 샘플
 이 샘플에서는 연결된 보안을 보여 줍니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "69961435"
 1. SDK 명령 창을 엽니다. 샘플 경로에서 Setup.bat를 실행합니다. 그러면 샘플에 필요한 가상 디렉터리가 만들어지고 적절한 권한과 함께 필요한 인증서가 설치됩니다.  
   
     > [!NOTE]
-    >  Setup.bat 배치 파일은 Windows SDK 명령 프롬프트에서 실행되도록 디자인되었습니다. MSSDK 환경 변수는 SDK가 설치되는 디렉터리를 가리켜야 합니다. 이 환경 변수는 Windows SDK 명령 프롬프트 내에서 자동으로 설정됩니다. 설치에서 IIS 관리자 스크립트를 사용하므로 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 IIS 6.0 관리 호환성이 설치되었는지 확인해야 합니다. [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 설치 스크립트를 실행하려면 관리자 권한이 필요합니다.  
+    > Setup.bat 배치 파일은 Windows SDK 명령 프롬프트에서 실행되도록 디자인되었습니다. MSSDK 환경 변수는 SDK가 설치되는 디렉터리를 가리켜야 합니다. 이 환경 변수는 Windows SDK 명령 프롬프트 내에서 자동으로 설정됩니다. 설치에서 IIS 관리자 스크립트를 사용하므로 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 IIS 6.0 관리 호환성이 설치되었는지 확인해야 합니다. [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 설치 스크립트를 실행하려면 관리자 권한이 필요합니다.  
   
 2. Visual Studio에서 FederationSample을 열고 **빌드** 메뉴에서 **솔루션 빌드** 를 선택 합니다. 그러면 일반 프로젝트 파일, Bookstore 서비스, Bookstore STS 및 HomeRealm STS를 빌드하고 IIS에 배포합니다. 또한 Bookstore 클라이언트 애플리케이션도 빌드하며, BookStoreClient.exe 실행 파일을 FederationSample\BookStoreClient\bin\Debug 폴더에 배치합니다.  
   
@@ -102,17 +102,17 @@ ms.locfileid: "69961435"
      이 샘플은 사용자가 가격이 $15 이하인 책을 구입할 수 있도록 구성되었습니다. $15보다 비싼 책을 구입하려고 하면 클라이언트는 Book Store 서비스로부터 액세스 거부 메시지를 받습니다.  
   
     > [!NOTE]
-    >  이 샘플은 구입 후 사용자의 신용 한도를 업데이트하지 않습니다. 사용자의 (고정)신용 한도 내에서 책을 반복하여 구입할 수 있습니다.  
+    > 이 샘플은 구입 후 사용자의 신용 한도를 업데이트하지 않습니다. 사용자의 (고정)신용 한도 내에서 책을 반복하여 구입할 수 있습니다.  
   
 #### <a name="to-clean-up"></a>정리하려면  
   
 1. Cleanup.bat를 실행합니다. 그러면 설치 과정에 만들어졌던 가상 디렉터리를 삭제하며 설치되었던 인증서도 제거합니다.  
   
 > [!IMPORTANT]
->  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
+> 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  

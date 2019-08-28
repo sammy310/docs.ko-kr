@@ -2,12 +2,12 @@
 title: .NET Remoting에서 WCF로 마이그레이션
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: 71e26ddd93605b02031aecba280e382528378ba6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c42255a14a23cb50f3fe8be434efab4af7361daa
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943030"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045863"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>.NET Remoting에서 WCF로 마이그레이션
 이 문서에서는 WCF(Windows Communication Foundation)를 사용하기 위해 .NET Remoting을 사용하는 애플리케이션을 마이그레이션하는 방법을 설명합니다. 이러한 제품 간의 비슷한 개념을 비교한 다음 WCF의 몇 가지 일반적인 Remoting 시나리오를 수행하는 방법을 설명합니다.  
@@ -466,7 +466,7 @@ public class RemotingServer : MarshalByRefObject
    ```  
   
     > [!TIP]
-    >  세션 개체는 [ServiceContract]로 표시되어 일반 WCF 서비스 인터페이스가 됩니다. SessionMode 속성을 설정하면 세션 서비스가 됩니다. WCF에서 세션은 두 엔드포인트 간에 전송된 여러 메시지를 서로 관련시키는 방법입니다. 즉, 클라이언트가 이 서비스에 대한 연결을 확보하고 나면 클라이언트와 서버 간에 세션이 설정됩니다. 클라이언트는 이 단일 세션 내에서 수행되는 모든 상호 작용을 수행하는 데 하나의 고유한 서버 쪽 개체 인스턴스를 사용합니다.  
+    > 세션 개체는 [ServiceContract]로 표시되어 일반 WCF 서비스 인터페이스가 됩니다. SessionMode 속성을 설정하면 세션 서비스가 됩니다. WCF에서 세션은 두 엔드포인트 간에 전송된 여러 메시지를 서로 관련시키는 방법입니다. 즉, 클라이언트가 이 서비스에 대한 연결을 확보하고 나면 클라이언트와 서버 간에 세션이 설정됩니다. 클라이언트는 이 단일 세션 내에서 수행되는 모든 상호 작용을 수행하는 데 하나의 고유한 서버 쪽 개체 인스턴스를 사용합니다.  
   
 2. 다음으로 이 서비스 인터페이스의 구현을 제공해야 합니다. [ServiceBehavior]로 표시하고 InstanceContextMode를 설정하여 WCF에 각 세션에서 이 형식의 고유한 인스턴스를 사용하려 함을 표시합니다.  
   

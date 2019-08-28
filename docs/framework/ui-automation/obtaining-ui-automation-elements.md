@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: 8c222cb2cf70502024a5934c4c527334c9f24165
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9adf8078f52653940fe9ba5caa4a256a08cc489c
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966379"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044143"
 ---
 # <a name="obtaining-ui-automation-elements"></a>UI 자동화 요소 가져오기
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "69966379"
  이 항목에서는 <xref:System.Windows.Automation.AutomationElement> 요소에 대한 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 개체를 가져오는 다양한 방법을 설명합니다.  
   
 > [!CAUTION]
->  클라이언트 애플리케이션이 자체 사용자 인터페이스에서 요소를 찾으려고 시도하는 경우 별도 스레드에서 모든 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 을 호출해야 합니다. 자세한 내용은 [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)을 참조하세요.  
+> 클라이언트 애플리케이션이 자체 사용자 인터페이스에서 요소를 찾으려고 시도하는 경우 별도 스레드에서 모든 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 을 호출해야 합니다. 자세한 내용은 [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)을 참조하세요.  
   
 <a name="The_Root_Element"></a>   
 ## <a name="root-element"></a>루트 요소  
@@ -28,7 +28,7 @@ ms.locfileid: "69966379"
  모든 요소가 하위 항목인 데스크톱의 루트 요소는 정적 <xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType> 속성에서 가져옵니다.  
   
 > [!CAUTION]
->  일반적으로 <xref:System.Windows.Automation.AutomationElement.RootElement%2A>의 직계 자식 항목만 가져와야 합니다. 하위 항목 검색은 수 많은 요소에서 반복될 수 있기 때문에 스택 오버플로가 발생할 수 있습니다. 낮은 수준의 특정 요소를 가져오려고 시도하는 경우, 낮은 수준의 컨테이너 또는 애플리케이션 창에서 검색을 시작해야 합니다.  
+> 일반적으로 <xref:System.Windows.Automation.AutomationElement.RootElement%2A>의 직계 자식 항목만 가져와야 합니다. 하위 항목 검색은 수 많은 요소에서 반복될 수 있기 때문에 스택 오버플로가 발생할 수 있습니다. 낮은 수준의 특정 요소를 가져오려고 시도하는 경우, 낮은 수준의 컨테이너 또는 애플리케이션 창에서 검색을 시작해야 합니다.  
   
 <a name="Using_Conditions"></a>   
 ## <a name="conditions"></a>조건  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b5a13b362f565cfae9247908bcf3cf35c899ae4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e2a86fbcd78c6768a91cc0d12e45053f8da6cdec
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910727"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041163"
 ---
 # <a name="using-the-assert-method"></a>Assert 메서드 사용
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -31,7 +31,7 @@ ms.locfileid: "69910727"
  <xref:System.Security.CodeAccessPermission.Assert%2A>는 코드 액세스 권한 클래스 및 <xref:System.Security.PermissionSet> 클래스에서 호출할 수 있는 메서드입니다. **Assert** 를 사용 하 여 코드 (및 다운스트림 호출자)가 코드에 수행할 수 있는 권한이 있지만 호출자가 수행할 수 있는 권한이 없는 작업을 수행할 수 있도록 설정할 수 있습니다. 보안 어설션은 보안 검사 중 런타임이 수행하는 일반적인 프로세스를 변경합니다. 사용 권한을 어설션하는 경우 어설션된 권한에 대해 코드의 호출자를 검사하지 않도록 보안 시스템에 지시합니다.  
   
 > [!CAUTION]
->  어설션은 보안 허점을 열고 보안 제한을 적용하는 런타임 메커니즘을 저해할 수 있으므로 신중하게 사용해야 합니다.  
+> 어설션은 보안 허점을 열고 보안 제한을 적용하는 런타임 메커니즘을 저해할 수 있으므로 신중하게 사용해야 합니다.  
   
  어설션은 라이브러리가 비관리 코드를 호출하거나 라이브러리의 의도한 용도와 명확한 관련이 없는 권한이 필요한 호출을 수행하는 경우에 유용합니다. 예를 들어 비관리 코드를 호출 하는 모든 관리 코드에는 **UnmanagedCode** 플래그가 지정 된 **SecurityPermission** 이 있어야 합니다. 로컬 인트라넷에서 다운로드된 코드와 같은, 로컬 컴퓨터에서 시작되지 않은 코드에는 기본적으로 이 사용 권한이 부여되지 않습니다. 따라서 로컬 인트라넷에서 다운로드된 코드가 비관리 코드를 사용하는 라이브러리를 호출할 수 있으려면 라이브러리에서 어설션된 사용 권한이 있어야 합니다. 또한 일부 라이브러리는 호출자에게 표시되지 않으며 특별한 사용 권한이 필요한 호출을 수행할 수 있습니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "69910727"
  예를 들어 신뢰할 수 있는 라이브러리 클래스에 파일을 삭제하는 메서드가 있다고 가정합니다. 관리되지 않은 Win32 함수를 호출하여 파일에 액세스합니다. 호출자는 코드의 **Delete** 메서드를 호출 하 고 삭제할 파일의 이름을 전달 하 여 c:\test.txt **Delete** 메서드 내에서 코드는 <xref:System.Security.Permissions.FileIOPermission> c:\test.txt에 대 한 쓰기 권한을 나타내는 개체를 만듭니다. 파일을 삭제하려면 쓰기 권한이 필요합니다. 그런 다음 코드는 **FileIOPermission** 개체의 **Demand** 메서드를 호출 하 여 명령적 보안 검사를 호출 합니다. 호출 스택의 호출자 중 하나에 이 권한이 없는 경우 <xref:System.Security.SecurityException>이 발생합니다. 예외가 발생하지 않으면 모든 호출자에게 C:\Test.txt에 액세스할 수 있는 권한이 있음을 알고 있습니다. 대부분의 호출자에 게 비관리 코드에 액세스할 수 있는 권한이 없는 것으로 판단 되기 때문에 코드는 비관리 <xref:System.Security.Permissions.SecurityPermission> 코드를 호출할 수 있는 권한을 나타내는 개체를 만들고 개체의 **Assert** 메서드를 호출 합니다. 끝으로, 관리되지 않는 Win32 함수를 호출하여 C:\Text.txt를 삭제하고 호출자에게 컨트롤을 반환합니다.  
   
 > [!CAUTION]
->  다른 코드가 사용자 코드를 사용하여 어설션하는 권한으로 보호된 리소스를 액세스할 수 있는 상황에서는 코드에서 어설션을 사용하지 않도록 해야 합니다. 예를 들어 이름이 호출자가 매개 변수로 지정 된 파일에 쓰는 코드에서 코드는 타사에서 오용 하기 위해 열려 있기 때문에 파일에 쓰도록 **FileIOPermission** 을 어설션 하지 않습니다.  
+> 다른 코드가 사용자 코드를 사용하여 어설션하는 권한으로 보호된 리소스를 액세스할 수 있는 상황에서는 코드에서 어설션을 사용하지 않도록 해야 합니다. 예를 들어 이름이 호출자가 매개 변수로 지정 된 파일에 쓰는 코드에서 코드는 타사에서 오용 하기 위해 열려 있기 때문에 파일에 쓰도록 **FileIOPermission** 을 어설션 하지 않습니다.  
   
  명령적 보안 구문을 사용 하는 경우 동일한 메서드에서 여러 사용 권한에 대해 **Assert** 메서드를 호출 하면 보안 예외가 throw 됩니다. 대신 **PermissionSet** 개체를 만들고 호출할 개별 사용 권한을 전달한 다음 **PermissionSet** 개체에 대해 **Assert** 메서드를 호출 해야 합니다. 선언적 보안 구문을 사용 하는 경우 **Assert** 메서드를 두 번 이상 호출할 수 있습니다.  
   

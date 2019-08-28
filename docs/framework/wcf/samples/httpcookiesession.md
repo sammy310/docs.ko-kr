@@ -2,17 +2,17 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: 815f6917413afebc71f0ec6e1c81eb1de14547a4
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: f0c6cee2eb7ed9552452f95b71db7e942e84bcb0
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876798"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044920"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
-이 샘플에서는 세션 관리에 HTTP 쿠키를 사용하기 위해 사용자 지정 프로토콜 채널을 빌드하는 방법을 보여 줍니다. 이 채널을 통해 Windows Communication Foundation (WCF) 서비스와 ASMX 클라이언트 또는 WCF 클라이언트와 ASMX 서비스 간에 통신이 있습니다.  
+이 샘플에서는 세션 관리에 HTTP 쿠키를 사용하기 위해 사용자 지정 프로토콜 채널을 빌드하는 방법을 보여 줍니다. 이 채널을 통해 Windows Communication Foundation (WCF) 서비스와 ASMX 클라이언트 간 또는 WCF 클라이언트와 ASMX 서비스 간에 통신할 수 있습니다.  
   
- 세션 기반 ASMX 웹 서비스에서 웹 메서드를 호출 하는 클라이언트, ASP.NET 엔진은 다음에서 수행 합니다.  
+ 클라이언트에서 세션 기반 ASMX 웹 서비스의 웹 메서드를 호출 하는 경우 ASP.NET 엔진은 다음을 수행 합니다.  
   
 - 고유 ID(세션 ID)를 생성합니다.  
   
@@ -25,13 +25,13 @@ ms.locfileid: "65876798"
  클라이언트는 이후에 서버로 보내는 요청에 이 세션 ID를 포함합니다. 서버는 클라이언트가 보낸 세션 ID를 사용하여 현재 HTTP 컨텍스트에 적절한 세션 개체를 로드합니다.  
   
 > [!IMPORTANT]
->  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
+> 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpCookieSession`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpCookieSession`  
   
 ## <a name="httpcookiesession-channel-message-exchange-pattern"></a>HttpCookieSession 채널 메시지 교환 패턴  
  이 샘플에서는 ASMX와 같은 시나리오에 대해 세션을 사용하도록 설정합니다. 채널 스택의 맨 아래에는 <xref:System.ServiceModel.Channels.IRequestChannel> 및 <xref:System.ServiceModel.Channels.IReplyChannel>을 지원하는 HTTP 전송이 있습니다. 채널은 채널 스택의 상위 수준에 세션을 제공합니다. 이 샘플에서는 세션을 지원하는 두 개의 채널(<xref:System.ServiceModel.Channels.IRequestSessionChannel> 및 <xref:System.ServiceModel.Channels.IReplySessionChannel>)을 구현합니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "65876798"
 InputQueue<RequestContext> requestQueue;  
 ```  
   
- 누군가가 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> 메서드를 호출했지만 메시지 큐에 메시지가 없는 경우 채널은 지정된 시간 동안 대기한 후에 종료됩니다. 이 WCF 이외의 클라이언트에 대 한 생성 된 세션 채널이 정리 합니다.  
+ 누군가가 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> 메서드를 호출했지만 메시지 큐에 메시지가 없는 경우 채널은 지정된 시간 동안 대기한 후에 종료됩니다. 이렇게 하면 WCF가 아닌 클라이언트에 대해 만들어진 세션 채널이 정리 됩니다.  
   
  `channelMapping`을 사용하여 `ReplySessionChannels`를 추적하며, 받은 채널이 모두 닫힐 때까지 기본 `innerChannel`을 닫지 않습니다. 이렇게 하면 `HttpCookieReplySessionChannel`이 `HttpCookieReplySessionChannelListener`의 수명보다 오래 유지될 수 있습니다. 받은 채널은 `OnClosed` 콜백을 통해 수신기에 대한 참조를 유지하므로 수신기에서 수행되는 가비지 수집에 대해 걱정할 필요가 없습니다.  
   
@@ -83,7 +83,7 @@ InputQueue<RequestContext> requestQueue;
  해당 클라이언트 채널은 `HttpCookieSessionChannelFactory` 클래스에 있습니다. 채널을 만드는 동안 채널 팩터리는 내부 요청 채널을 `HttpCookieRequestSessionChannel`로 래핑합니다. `HttpCookieRequestSessionChannel` 클래스는 호출을 기본 요청 채널로 전달합니다. 클라이언트가 프록시를 닫으면 `HttpCookieRequestSessionChannel`은 채널이 닫히는 것을 알리는 메시지를 서비스로 보냅니다. 따라서 서비스 채널 스택은 사용 중인 세션 채널을 정상적으로 종료할 수 있습니다.  
   
 ## <a name="binding-and-binding-element"></a>바인딩 및 바인딩 요소  
- 서비스 및 클라이언트 채널을 만든 후 다음 단계를 WCF 런타임에 통합 하는 합니다. 채널은 바인딩 및 바인딩 요소를 통해 WCF에 노출 됩니다. 이 바인딩은 하나 또는 여러 개의 바인딩 요소로 구성됩니다. WCF는 여러 시스템 정의 바인딩을; 제공 예를 들어 BasicHttpBinding 또는 WSHttpBinding입니다. `HttpCookieSessionBindingElement` 클래스에는 바인딩 요소의 구현이 포함되어 있습니다. 이 클래스는 채널 수신기 및 채널 팩터리 만들기 메서드를 재정의하여 필요한 채널 수신기 또는 채널 팩터리 인스턴스화를 수행합니다.  
+ 서비스 및 클라이언트 채널을 만든 후 다음 단계는 WCF 런타임에 통합 하는 것입니다. 채널은 바인딩 및 바인딩 요소를 통해 WCF에 노출 됩니다. 이 바인딩은 하나 또는 여러 개의 바인딩 요소로 구성됩니다. WCF는 여러 시스템 정의 바인딩을 제공 합니다. 예: BasicHttpBinding 또는 WSHttpBinding. `HttpCookieSessionBindingElement` 클래스에는 바인딩 요소의 구현이 포함되어 있습니다. 이 클래스는 채널 수신기 및 채널 팩터리 만들기 메서드를 재정의하여 필요한 채널 수신기 또는 채널 팩터리 인스턴스화를 수행합니다.  
   
  이 샘플에서는 서비스 설명에 정책 어설션을 사용합니다. 따라서 이 샘플을 사용하면 서비스를 사용할 수 있는 다른 클라이언트에 채널 요구 사항을 게시할 수 있습니다. 예를 들어 이 바인딩 요소는 정책 어설션을 게시하여 세션을 지원함을 잠재적 클라이언트에게 알립니다. 이 샘플에서는 바인딩 요소 구성에서 `ExchangeTerminateMessage` 속성을 사용하도록 설정하므로 서비스가 세션 대화를 종료하기 위한 추가 메시지 교환 작업을 지원하는 것을 보여 주기 위해 필요한 어설션을 추가합니다. 그런 다음 클라이언트는 이 작업을 사용할 수 있습니다. 다음 WSDL 코드는 `HttpCookieSessionBindingElement`에서 만든 정책 어설션을 보여 줍니다.  
   
@@ -133,7 +133,7 @@ InputQueue<RequestContext> requestQueue;
 ```  
   
 ## <a name="test-code"></a>테스트 코드  
- 이 샘플 전송을 사용하기 위한 테스트 코드는 Client 및 Service 디렉터리에 있습니다. 두 개의 테스트로 구성 됩니다-하나의 테스트 된 바인딩을 사용 `allowCookies` 로 `true` 클라이언트에서. 두 번째 테스트에서는 종료 메시지 교환을 사용하여 바인딩에서 명시적인 종료를 사용하도록 설정합니다.  
+ 이 샘플 전송을 사용하기 위한 테스트 코드는 Client 및 Service 디렉터리에 있습니다. 이는 두 가지 테스트로 구성 됩니다. 즉, 한 `allowCookies` 테스트는 `true` 클라이언트에서가로 설정 된 바인딩을 사용 합니다. 두 번째 테스트에서는 종료 메시지 교환을 사용하여 바인딩에서 명시적인 종료를 사용하도록 설정합니다.  
   
  샘플을 실행하면 다음 출력이 표시됩니다.  
   
@@ -164,8 +164,8 @@ Press <ENTER> to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. 수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
+2. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.  
   
-3. 지침에 따라 솔루션을 빌드하려면 [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.  
+3. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따르세요.  
   
-4. 단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
+4. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.  

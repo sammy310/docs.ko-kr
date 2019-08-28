@@ -2,12 +2,12 @@
 title: Membership and Role Provider
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 894fcef0cbb25f85043aa6f5c55c45bae5161546
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 139d85a1ec36509690f35f24c7ddf04716a7e909
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948542"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039445"
 ---
 # <a name="membership-and-role-provider"></a>Membership and Role Provider
 멤버 자격 및 역할 공급자 샘플에서는 서비스에서 ASP.NET 멤버 자격 및 역할 공급자를 사용 하 여 클라이언트를 인증 하 고 권한을 부여 하는 방법을 보여 줍니다.  
@@ -123,10 +123,10 @@ ms.locfileid: "69948542"
 2. [ASP.NET 애플리케이션 서비스 데이터베이스](https://go.microsoft.com/fwlink/?LinkId=94997)를 구성 했는지 확인 합니다.  
   
     > [!NOTE]
-    >  SQL Server Express Edition을 실행하는 경우 서버 이름은 .\SQLEXPRESS입니다. ASP.NET 애플리케이션 서비스 데이터베이스를 구성 하는 경우와 web.config 연결 문자열에이 서버를 사용 해야 합니다.  
+    > SQL Server Express Edition을 실행하는 경우 서버 이름은 .\SQLEXPRESS입니다. ASP.NET 애플리케이션 서비스 데이터베이스를 구성 하는 경우와 web.config 연결 문자열에이 서버를 사용 해야 합니다.  
   
     > [!NOTE]
-    >  ASP.NET worker 프로세스 계정에는이 단계에서 만든 데이터베이스에 대 한 권한이 있어야 합니다. 이 작업에는 sqlcmd 유틸리티 또는 SQL Server Management Studio를 사용합니다.  
+    > ASP.NET worker 프로세스 계정에는이 단계에서 만든 데이터베이스에 대 한 권한이 있어야 합니다. 이 작업에는 sqlcmd 유틸리티 또는 SQL Server Management Studio를 사용합니다.  
   
 3. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행하려면 다음 지침을 사용합니다.  
   

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-ms.openlocfilehash: ddaa49e65a164c7bf074a541c9a4df8f3dace1d4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a764b18cc3016610b8a149631b4de89923a7a5b4
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965610"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040626"
 ---
 # <a name="designing-service-contracts"></a>서비스 계약 디자인
 이 항목에서는 서비스 계약의 정의, 서비스 계약을 정의하는 방법, 사용 가능한 작업(및 기본 메시지 교환에 미치는 영향), 사용되는 데이터 형식 및 시나리오 요구 사항을 만족하는 작업을 디자인하는 데 도움이 되는 기타 문제에 대해 설명합니다.  
@@ -146,7 +146,7 @@ Sub Hello (ByVal greeting As String)
  서비스 및 해당 서비스 [에 액세스 하는 클라이언트를 만드는 방법에 대 한 예제는 방법: 이중 계약](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md) [을 만들고 방법: 이중 계약](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)을 사용 하 여 서비스에 액세스 합니다. 작업 샘플은 [이중](../../../docs/framework/wcf/samples/duplex.md)을 참조 하세요. 이중 계약을 사용 하는 문제에 대 한 자세한 내용은 [이중 서비스](../../../docs/framework/wcf/feature-details/duplex-services.md)를 참조 하세요.  
   
 > [!CAUTION]
->  서비스가 이중 메시지를 받으면 들어오는 해당 메시지에서 `ReplyTo` 요소를 확인하여 회신을 보낼 위치를 결정합니다. 메시지를 받는 데 사용되는 채널이 보안되지 않으면 신뢰할 수 없는 클라이언트가 대상 컴퓨터의 `ReplyTo`를 사용하여 악의적인 메시지를 보낼 수 있으므로 해당 대상 컴퓨터의 서비스 거부(DOS)가 발생할 수 있습니다.  
+> 서비스가 이중 메시지를 받으면 들어오는 해당 메시지에서 `ReplyTo` 요소를 확인하여 회신을 보낼 위치를 결정합니다. 메시지를 받는 데 사용되는 채널이 보안되지 않으면 신뢰할 수 없는 클라이언트가 대상 컴퓨터의 `ReplyTo`를 사용하여 악의적인 메시지를 보낼 수 있으므로 해당 대상 컴퓨터의 서비스 거부(DOS)가 발생할 수 있습니다.  
   
 ##### <a name="out-and-ref-parameters"></a>Out 및 Ref 매개 변수  
  대부분의 경우 매개 `in` 변수 (`ByVal` Visual Basic) 및 `out` 및 `ref` 매개 변수 (`ByRef` Visual Basic)를 사용할 수 있습니다. `out` 및 `ref` 매개 변수 모두 데이터가 작업에서 반환됨을 나타내기 때문에 다음과 같은 작업 서명은 작업 서명이 `void`를 반환해도 요청/회신 작업이 필요하도록 지정합니다.  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: a6bbc2fe4bf68b50153075a251d23deebda78de5
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 085186eae034314437d5a0c1fe90e6cdf6902c5e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988654"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045846"
 ---
 # <a name="serialization-and-deserialization"></a>Serialization 및 Deserialization
 WCF (Windows Communication Foundation)에는 <xref:System.Runtime.Serialization.DataContractSerializer>새로운 serialization 엔진인가 포함 되어 있습니다. 는 <xref:System.Runtime.Serialization.DataContractSerializer> .NET Framework 개체와 XML을 양방향으로 변환 합니다. 이 항목에서는 serializer가 작동하는 방식에 대해 설명합니다.  
@@ -138,7 +138,7 @@ WCF (Windows Communication Foundation)에는 <xref:System.Runtime.Serialization.
 - 이 기능으로 인해 serialization 및 deserialization 프로세스 실행 속도가 느려질 수 있습니다. 데이터를 복제하지 않아도 되지만 이 모드에서 추가 개체 비교를 수행해야 합니다.  
   
 > [!CAUTION]
->  `preserveObjectReferences` 모드를 사용하는 경우, `maxItemsInObjectGraph` 값을 올바른 할당량으로 설정하는 것이 특히 중요합니다. 이 모드에서 배열이 처리되는 방식 때문에, 공격자가 `maxItemsInObjectGraph` 할당량에 의해서만 제한되는 과다한 메모리 소비를 일으키는 작은 악의적인 메시지를 쉽게 작성할 수 있습니다.  
+> `preserveObjectReferences` 모드를 사용하는 경우, `maxItemsInObjectGraph` 값을 올바른 할당량으로 설정하는 것이 특히 중요합니다. 이 모드에서 배열이 처리되는 방식 때문에, 공격자가 `maxItemsInObjectGraph` 할당량에 의해서만 제한되는 과다한 메모리 소비를 일으키는 작은 악의적인 메시지를 쉽게 작성할 수 있습니다.  
   
 ### <a name="specifying-a-data-contract-surrogate"></a>데이터 계약 서로게이트 지정  
  일부 `DataContractSerializer` 생성자 오버로드에는 `dataContractSurrogate` 로 설정될 수 있는 `null`매개 변수가 있습니다. 그렇지 않으면 이 오버로드를 사용하여 *인터페이스를 구현하는 형식인*데이터 계약 서로게이트 <xref:System.Runtime.Serialization.IDataContractSurrogate> 를 지정할 수 있습니다. 그러면 인터페이스를 사용하여 serialization 및 deserialization 프로세스를 사용자 지정할 수 있습니다. 자세한 내용은 [데이터 계약 서로게이트](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)를 참조 하세요.  

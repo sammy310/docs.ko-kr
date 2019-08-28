@@ -2,12 +2,12 @@
 title: WCF 웹 HTTP 프로그래밍 모델 개요
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: e63a6c4a68da2b7e51dc1fc24353922912262806
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 8c13ad943bf4ef272c28266e12e175a0a21d5d40
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988575"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045239"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF 웹 HTTP 프로그래밍 모델 개요
 WCF (Windows Communication Foundation) 웹 HTTP 프로그래밍 모델은 WCF를 사용 하 여 웹 HTTP 서비스를 빌드하는 데 필요한 기본 요소를 제공 합니다. WCF 웹 HTTP 서비스는 웹 브라우저를 포함 하 여 가능한 광범위 한 클라이언트에서 액세스할 수 있도록 설계 되었으며 다음과 같은 고유한 요구 사항이 있습니다.  
@@ -23,7 +23,7 @@ WCF (Windows Communication Foundation) 웹 HTTP 프로그래밍 모델은 WCF를
  WEB HTTP 서비스에서 반환될 수 있는 데이터 형식에 대한 추가 제한은 없습니다. 모든 직렬화 가능 형식이 WEB HTTP 서비스 작업에서 반환될 수 있습니다. 웹 브라우저가 WEB HTTP 서비스 작업을 호출할 수 있기 때문에 URL에 지정할 수 있는 데이터 형식에 대한 제한이 있습니다. 기본적으로 지원 되는 형식에 대 한 자세한 내용은 아래의 **UriTemplate 쿼리 문자열 매개 변수 및 url** 섹션을 참조 하십시오. URL에 지정된 매개 변수를 실제 매개 변수 형식으로 변환하는 방법을 지정하는 고유한 T:System.ServiceModel.Dispatcher.QueryStringConverter 구현을 제공하여 기본 동작을 변경할 수 있습니다. 자세한 내용은 <xref:System.ServiceModel.Dispatcher.QueryStringConverter>을 참조하세요.  
   
 > [!CAUTION]
->  WCF 웹 HTTP 프로그래밍 모델을 사용 하 여 작성 된 서비스는 SOAP 메시지를 사용 하지 않습니다. SOAP는 사용 되지 않으므로 WCF에서 제공 하는 보안 기능을 사용할 수 없습니다. 그러나 HTTPS를 사용하여 서비스를 호스트하면 전송 기반 보안을 사용할 수 있습니다. WCF 보안에 대 한 자세한 내용은 [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md) 를 참조 하세요.  
+> WCF 웹 HTTP 프로그래밍 모델을 사용 하 여 작성 된 서비스는 SOAP 메시지를 사용 하지 않습니다. SOAP는 사용 되지 않으므로 WCF에서 제공 하는 보안 기능을 사용할 수 없습니다. 그러나 HTTPS를 사용하여 서비스를 호스트하면 전송 기반 보안을 사용할 수 있습니다. WCF 보안에 대 한 자세한 내용은 [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md) 를 참조 하세요.  
   
 > [!WARNING]
 > IIS의 WebDAV 확장을 설치하면 WebDAV 확장에서 모든 PUT 요청을 처리하려고 하므로 WEB HTTP 서비스에서 HTTP 405 오류를 반환할 수 있습니다. 이 문제를 해결하려면 WebDAV 확장을 제거하거나 웹 사이트에 대해 WebDAV 확장을 사용하지 않도록 설정할 수 있습니다. 자세한 내용은 [IIS 및 WebDav](https://learn.iis.net/page.aspx/357/webdav-for-iis-70/) 를 참조 하세요.  

@@ -2,12 +2,12 @@
 title: 분산 트랜잭션
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: f5ed99928534dc31832ac0baf1bb1bfa7e83ded2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 60a455d51d7ae80f5434f9564ca7416c70bef9f5
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956761"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041242"
 ---
 # <a name="distributed-transactions"></a>분산 트랜잭션
 트랜잭션은 하나의 단위로 성공(커밋)하거나 실패(중단)한 관련 작업의 집합입니다. *분산 트랜잭션은* 여러 리소스에 영향을 주는 트랜잭션입니다. 분산 트랜잭션을 커밋하는 경우 모든 참가자는 데이터의 모든 변경 내용이 영구적으로 유지된다는 것을 보증해야 합니다. 시스템 작동이 중단되거나 다른 예측할 수 없는 이벤트가 발생해도 변경 내용이 지속되어야 합니다. 참가자 중 하나라도 이러한 보증을 이행하지 못하면 전체 트랜잭션이 실패하게 되며 트랜잭션 범위 내의 모든 데이터 변경 내용이 롤백됩니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "69956761"
 > 트랜잭션에 연결을 명시적으로 인리스트먼트하면 첫 번째 트랜잭션이 종료될 때까지 인리스트먼트를 취소하거나 다른 트랜잭션에 인리스트먼트할 수 없습니다.  
   
 > [!CAUTION]
->  연결의 `EnlistTransaction` 메서드를 사용하여 연결에서 트랜잭션이 이미 시작된 경우에는 <xref:System.Data.Common.DbConnection.BeginTransaction%2A>이 예외를 throw합니다. 그러나 트랜잭션이 데이터 소스에서 시작된 로컬 트랜잭션(예: <xref:System.Data.SqlClient.SqlCommand>를 사용하여 명시적으로 BEGIN TRANSACTION 문 실행)인 경우에는 `EnlistTransaction`이 로컬 트랜잭션을 롤백하고 요청 시 기존 분산 트랜잭션에 인리스트먼트합니다. 로컬 트랜잭션이 롤백되었다는 알림은 전송되지 않으므로 <xref:System.Data.Common.DbConnection.BeginTransaction%2A>을 사용하여 시작되지 않은 로컬 트랜잭션을 관리해야 합니다. SQL Server에서 .NET Framework Data Provider for SQL Server(`SqlClient`)를 사용하는 경우 등록하려고 시도하면 예외가 throw됩니다. 다른 모든 경우는 탐지되지 않습니다.  
+> 연결의 `EnlistTransaction` 메서드를 사용하여 연결에서 트랜잭션이 이미 시작된 경우에는 <xref:System.Data.Common.DbConnection.BeginTransaction%2A>이 예외를 throw합니다. 그러나 트랜잭션이 데이터 소스에서 시작된 로컬 트랜잭션(예: <xref:System.Data.SqlClient.SqlCommand>를 사용하여 명시적으로 BEGIN TRANSACTION 문 실행)인 경우에는 `EnlistTransaction`이 로컬 트랜잭션을 롤백하고 요청 시 기존 분산 트랜잭션에 인리스트먼트합니다. 로컬 트랜잭션이 롤백되었다는 알림은 전송되지 않으므로 <xref:System.Data.Common.DbConnection.BeginTransaction%2A>을 사용하여 시작되지 않은 로컬 트랜잭션을 관리해야 합니다. SQL Server에서 .NET Framework Data Provider for SQL Server(`SqlClient`)를 사용하는 경우 등록하려고 시도하면 예외가 throw됩니다. 다른 모든 경우는 탐지되지 않습니다.  
   
 ## <a name="promotable-transactions-in-sql-server"></a>SQL Server의 승격 가능한 트랜잭션  
  SQL Server에서는 필요한 경우에만 간단한 로컬 트랜잭션을 분산 트랜잭션으로 자동 승격시킬 수 있는 승격 가능한 트랜잭션을 지원합니다. 승격 가능한 트랜잭션은 추가 오버헤드가 필요한 경우를 제외하고 분산 트랜잭션의 추가 오버헤드를 호출하지 않습니다. 자세한 내용 및 코드 샘플은 [SQL Server와의 시스템 트랜잭션 통합](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)을 참조 하세요.  

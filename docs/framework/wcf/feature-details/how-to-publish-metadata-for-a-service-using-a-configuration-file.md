@@ -2,20 +2,20 @@
 title: '방법: 구성 파일을 사용하여 서비스에 대한 메타데이터 게시'
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: f3fda88f4ec2f2695d6026d6e4df79243124b7b5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 26894a3951b91879a7b3e6f66731891113394082
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643666"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045301"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>방법: 구성 파일을 사용하여 서비스에 대한 메타데이터 게시
-Windows Communication Foundation (WCF) 서비스에 대 한 메타 데이터 게시를 보여 주는 두 방법 항목 중 하나입니다. 서비스에서 메타데이터를 게시하는 방법을 지정하는 두 가지 방법은 구성 파일을 사용하는 방법과 코드를 사용하는 방법입니다. 이 항목에서는 구성 파일을 사용하여 서비스에 대해 메타데이터를 게시하는 방법에 대해 설명합니다.  
+이 항목은 WCF (Windows Communication Foundation) 서비스용 게시 메타 데이터를 보여 주는 두 가지 방법 항목 중 하나입니다. 서비스에서 메타데이터를 게시하는 방법을 지정하는 두 가지 방법은 구성 파일을 사용하는 방법과 코드를 사용하는 방법입니다. 이 항목에서는 구성 파일을 사용하여 서비스에 대해 메타데이터를 게시하는 방법에 대해 설명합니다.  
   
 > [!CAUTION]
->  이 항목에서는 보호되지 않은 방식으로 메타데이터를 게시하는 방법을 보여 줍니다. 즉, 모든 클라이언트가 서비스에서 메타데이터를 검색할 수 있습니다. 서비스를 안전한 방식으로 메타 데이터 게시에 필요한 경우 참조 [사용자 지정 보안 메타 데이터 끝점](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)합니다.  
+> 이 항목에서는 보호되지 않은 방식으로 메타데이터를 게시하는 방법을 보여 줍니다. 즉, 모든 클라이언트가 서비스에서 메타데이터를 검색할 수 있습니다. 서비스에서 메타 데이터를 안전한 방식으로 게시 해야 하는 경우 [사용자 지정 보안 메타 데이터 끝점](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)을 참조 하세요.  
   
- 코드에서 메타 데이터 게시에 대 한 자세한 내용은 참조 하세요. [방법: 코드를 사용 하는 서비스의 메타 데이터 게시](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)합니다. 메타데이터를 게시하면 클라이언트에서 WS-Transfer GET 요청을 사용하는 메타데이터 또는 `?wsdl` 쿼리 문자열을 사용하는 HTTP/GET 요청을 검색할 수 있습니다. 코드 작동 하는지 되도록 기본 WCF 서비스를 만듭니다. 편의상 다음 코드로 된 기본 자체 호스팅 서비스가 제공됩니다.  
+ 코드에 메타 데이터를 게시 [하는 방법에 대 한 자세한 내용은 방법: 코드](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)를 사용 하 여 서비스에 대 한 메타 데이터를 게시 합니다. 메타데이터를 게시하면 클라이언트에서 WS-Transfer GET 요청을 사용하는 메타데이터 또는 `?wsdl` 쿼리 문자열을 사용하는 HTTP/GET 요청을 검색할 수 있습니다. 코드가 작동 하는지 확인할 수 있도록 기본 WCF 서비스를 만듭니다. 편의상 다음 코드로 된 기본 자체 호스팅 서비스가 제공됩니다.  
   
 ```csharp  
 using System;  
@@ -158,7 +158,7 @@ namespace Metadata.Samples
   
 9. 콘솔 애플리케이션을 빌드하고 실행합니다.  
   
-10. Internet Explorer를 사용 하 여 서비스의 기본 주소 (http://localhost:8001/MetadataSample 이 예제의) 및 메타 데이터 게시 기능이 켜져 있는지 확인 합니다. 그렇지 않은 경우에 결과 페이지의 맨 위에 있는 메시지가 표시 됩니다. "이이 서비스에 대 한 메타 데이터 게시는 현재 사용할 수 없습니다."  
+10. Internet Explorer를 사용 하 여 서비스의 기본 주소 (http://localhost:8001/MetadataSample 이 예제에서는)로 이동 하 여 메타 데이터 게시가 설정 되었는지 확인 합니다. 그렇지 않으면 결과 페이지의 맨 위에 메시지가 표시 됩니다. "이 서비스에 대 한 메타 데이터 게시는 현재 사용할 수 없습니다."  
   
 ### <a name="to-use-default-endpoints"></a>기본 엔드포인트를 사용하려면  
   
@@ -182,7 +182,7 @@ namespace Metadata.Samples
      서비스에 포함된 <xref:System.ServiceModel.Description.ServiceMetadataBehavior>의 `httpGetEnabled`가 `true`로 설정되어 있으므로 서비스의 메타데이터 게시 기능은 사용하도록 설정되었으며, 엔드포인트를 명시적으로 추가하지 않았으므로 런타임이 기본 엔드포인트를 추가합니다. 기본 엔드포인트, 바인딩 및 동작에 대한 자세한 내용은 [단순화된 구성](../../../../docs/framework/wcf/simplified-configuration.md) 및 [WCF 서비스를 위한 단순화된 구성](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
- 다음 코드 예제에서는 기본 WCF 서비스 및 서비스에 대 한 메타 데이터를 게시 하는 구성 파일의 구현을 보여 줍니다.  
+ 다음 코드 예제에서는 서비스에 대 한 메타 데이터를 게시 하는 기본 WCF 서비스 및 구성 파일의 구현을 보여 줍니다.  
   
 ```csharp  
 using System;  
@@ -260,4 +260,4 @@ namespace Metadata.Samples
 - [자체 호스팅](../../../../docs/framework/wcf/samples/self-host.md)
 - [메타데이터 아키텍처 개요](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [메타데이터 사용](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [방법: 코드를 사용 하는 서비스의 메타 데이터 게시](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+- [방법: 코드를 사용 하 여 서비스에 대 한 메타 데이터 게시](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)

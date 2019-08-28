@@ -2,12 +2,12 @@
 title: 지속성 데이터베이스 스키마
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: 384a9aceaf0b5619bbc4eca5929b6e6d7855e3d3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 65d8b2f7a6283d65823e1a186239d398ee4a530a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962888"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038331"
 ---
 # <a name="persistence-database-schema"></a>지속성 데이터베이스 스키마
 이 항목에서는 SQL 워크플로 인스턴스 저장소에서 지원하는 공용 뷰에 대해 설명합니다.  
@@ -15,7 +15,7 @@ ms.locfileid: "69962888"
 ## <a name="instances-view"></a>인스턴스 뷰  
  **인스턴스** 뷰에는 데이터베이스의 모든 워크플로 인스턴스에 대 한 일반 정보가 포함 되어 있습니다.  
   
-|열 이름|열 유형|설명|  
+|열 이름|열 유형|Description|  
 |-----------------|-----------------|-----------------|  
 |InstanceId|UniqueIdentifier|워크플로 인스턴스의 ID입니다.|  
 |PendingTimer|DateTime|워크플로가 Delay 활동에서 차단되었으며 타이머가 만료된 후 다시 시작될 것임을 나타냅니다. 워크플로가 차단되지 않고 타이머가 만료될 때까지 기다리는 경우 이 값은 Null일 수 있습니다.|  
@@ -44,12 +44,12 @@ ms.locfileid: "69962888"
 |Revision|BigInt|워크플로 버전의 개정 번호입니다.|  
   
 > [!CAUTION]
->  **Instances** 뷰에는 Delete 트리거도 포함 됩니다. 적절한 사용 권한을 가진 사용자는 데이터베이스에서 워크플로 인스턴스를 강제로 제거하는 삭제 문을 이 뷰에 대해 실행할 수 있습니다. 워크플로 런타임에 인스턴스를 삭제하면 의도하지 않은 결과가 발생할 수 있으므로 뷰에서 직접 삭제하는 방법은 다른 방법이 없는 경우에만 사용하는 것이 좋습니다. 대신 워크플로 인스턴스 관리 엔드포인트를 사용하여 워크플로 런타임에서 인스턴스를 종료하게 하세요. 뷰에서 많은 수의 인스턴스를 삭제하려는 경우에는 이러한 인스턴스에서 작동할 수 있는 활성 런타임이 없는지 확인하세요.  
+> **Instances** 뷰에는 Delete 트리거도 포함 됩니다. 적절한 사용 권한을 가진 사용자는 데이터베이스에서 워크플로 인스턴스를 강제로 제거하는 삭제 문을 이 뷰에 대해 실행할 수 있습니다. 워크플로 런타임에 인스턴스를 삭제하면 의도하지 않은 결과가 발생할 수 있으므로 뷰에서 직접 삭제하는 방법은 다른 방법이 없는 경우에만 사용하는 것이 좋습니다. 대신 워크플로 인스턴스 관리 엔드포인트를 사용하여 워크플로 런타임에서 인스턴스를 종료하게 하세요. 뷰에서 많은 수의 인스턴스를 삭제하려는 경우에는 이러한 인스턴스에서 작동할 수 있는 활성 런타임이 없는지 확인하세요.  
   
 ## <a name="servicedeployments-view"></a>ServiceDeployments 뷰  
  **Servicedeployments** 뷰에는 모든 웹 (IIS/WAS) 호스팅 워크플로 서비스에 대 한 배포 정보가 포함 되어 있습니다. 웹 호스트 되는 각 워크플로 인스턴스에는이 뷰의 행을 참조 하는 **Servicedeploymentid** 가 포함 됩니다.  
   
-|열 이름|열 유형|설명|  
+|열 이름|열 유형|Description|  
 |-----------------|-----------------|-----------------|  
 |ServiceDeploymentId|BigInt|이 뷰의 기본 키입니다.|  
 |SiteName|Nvarchar(max)|워크플로 서비스 (예: **기본 웹 사이트**)를 포함 하는 사이트의 이름을 나타냅니다.|  
@@ -67,7 +67,7 @@ ms.locfileid: "69962888"
 ## <a name="instancepromotedproperties-view"></a>InstancePromotedProperties 뷰  
  **InstancePromotedProperties** 보기에는 사용자가 지정한 모든 승격 된 속성에 대 한 정보가 포함 되어 있습니다. 승격된 속성은 사용자가 인스턴스를 검색할 때 쿼리에 사용할 수 있는 고급 속성 역할을 합니다.  예를 들어 사용자는 항상 **Value1** 열에 주문 비용을 저장 하는 PurchaseOrder 승격을 추가할 수 있습니다. 그러면 사용자는 가격이 특정 값을 초과하는 모든 구매 주문을 쿼리할 수 있습니다.  
   
-|열 유형|열 유형|설명|  
+|열 유형|열 유형|Description|  
 |-|-|-|  
 |InstanceId|UniqueIdentifier|워크플로 인스턴스의 ID입니다.|  
 |EncodingOption|TinyInt|승격된 이진 속성을 serialize하는 데 사용된 인코딩에 대해 설명합니다.<br /><br /> -0 – 인코딩 안 함<br />-1 – GZipStream|  

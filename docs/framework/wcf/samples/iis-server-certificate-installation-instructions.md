@@ -2,12 +2,12 @@
 title: IIS(인터넷 정보 서비스) 서버 인증서 설치 지침
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-ms.openlocfilehash: 50fa7f1094d4b05bcadb229072293da233a18a2b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1bb9c8bb2fedc846f46f665fbfd00178e5c72975
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931862"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044906"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>IIS(인터넷 정보 서비스) 서버 인증서 설치 지침
 IIS(인터넷 정보 서비스)와 안전하게 통신하는 샘플을 실행하려면 서버 인증서를 만들어 설치해야 합니다.  
@@ -47,7 +47,7 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
 3. 다음 코드 줄을 클라이언트 프로그램에 추가합니다.  
   
 > [!IMPORTANT]
->  이 코드는 Makecert.exe로 만든 인증서 같은 테스트 인증서에만 필요합니다. 프로덕션 코드에 사용하지 않는 것이 좋습니다.  
+> 이 코드는 Makecert.exe로 만든 인증서 같은 테스트 인증서에만 필요합니다. 프로덕션 코드에 사용하지 않는 것이 좋습니다.  
   
 ```  
 PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  

@@ -12,146 +12,146 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-ms.openlocfilehash: 591b76ca6b5cd3a9180487c79293d5fc3b7991af
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 9f102b584d2ed0b5a9d2bbb0e7ce3f7871ec40b2
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882340"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046367"
 ---
 # <a name="interfaces-related-to-data-binding"></a>데이터 바인딩과 관련된 인터페이스
 
-ADO.NET을 사용 하 여 응용 프로그램을 사용 하는 데이터 바인딩 요구에 맞게 여러 다른 데이터 구조를 만들 수 있습니다. Windows Forms에서 데이터를 제공하거나 사용하는 고유 클래스를 만들고 싶을 수도 있습니다. 이러한 개체는 기본 데이터 바인딩부터 디자인 타임 지원, 오류 확인, 변경 사항 알림, 심지어 데이터 자체에 적용된 변경 내용의 구조화된 롤백 지원에 이르기까지 다양한 수준의 복합 기능을 제공할 수 있습니다.
+ADO.NET를 사용 하면 응용 프로그램의 바인딩 요구 사항과 작업 중인 데이터에 맞게 다양 한 데이터 구조를 만들 수 있습니다. Windows Forms에서 데이터를 제공하거나 사용하는 고유 클래스를 만들고 싶을 수도 있습니다. 이러한 개체는 기본 데이터 바인딩부터 디자인 타임 지원, 오류 확인, 변경 사항 알림, 심지어 데이터 자체에 적용된 변경 내용의 구조화된 롤백 지원에 이르기까지 다양한 수준의 복합 기능을 제공할 수 있습니다.
 
 ## <a name="consumers-of-data-binding-interfaces"></a>데이터 바인딩 인터페이스의 소비자
 
-다음 섹션에서는 두 그룹의 인터페이스 개체를 설명합니다. 첫 번째 그룹에서는 데이터 소스 작성자에 의해 데이터 소스에 구현된 인터페이스를 나열합니다. 이러한 인터페이스는 데이터 소스 소비자가 사용하며, 이러한 소비자의 대부분은 Windows Forms 컨트롤 또는 구성 요소입니다. 두 번째 그룹에서는 구성 요소 작성자를 위해 설계된 인터페이스를 나열합니다. 구성 요소 작성자는 Windows Forms 데이터 바인딩 엔진에서 사용할 데이터 바인딩을 지원하는 구성 요소를 만들 때 이러한 인터페이스를 사용합니다. 양식과 연결된 클래스 내에 이러한 인터페이스를 구현하여 데이터 바인딩을 사용할 수 있습니다. 각 경우에 데이터와의 상호 작용이 가능한 인터페이스를 구현하는 클래스가 제공됩니다. Visual Studio 신속한 응용 프로그램 RAD (개발) 데이터 디자인 환경 도구는 이미이 기능을 활용을 수행 합니다.
+다음 섹션에서는 두 그룹의 인터페이스 개체를 설명합니다. 첫 번째 그룹에서는 데이터 소스 작성자에 의해 데이터 소스에 구현된 인터페이스를 나열합니다. 이러한 인터페이스는 데이터 소스 소비자가 사용하며, 이러한 소비자의 대부분은 Windows Forms 컨트롤 또는 구성 요소입니다. 두 번째 그룹에서는 구성 요소 작성자를 위해 설계된 인터페이스를 나열합니다. 구성 요소 작성자는 Windows Forms 데이터 바인딩 엔진에서 사용할 데이터 바인딩을 지원하는 구성 요소를 만들 때 이러한 인터페이스를 사용합니다. 양식과 연결된 클래스 내에 이러한 인터페이스를 구현하여 데이터 바인딩을 사용할 수 있습니다. 각 경우에 데이터와의 상호 작용이 가능한 인터페이스를 구현하는 클래스가 제공됩니다. Visual Studio RAD (신속한 응용 프로그램 개발) 데이터 디자인 환경 도구는이 기능을 이미 활용 하 고 있습니다.
 
 ### <a name="interfaces-for-implementation-by-data-source-authors"></a>데이터 소스 작성자가 구현할 수 있는 인터페이스
 
 다음 인터페이스는 Windows Forms 컨트롤에서 사용할 수 있도록 설계되었습니다.
 
-- <xref:System.Collections.IList> 인터페이스
+- <xref:System.Collections.IList>감열재
 
-  구현 하는 클래스를 <xref:System.Collections.IList> 인터페이스 수는 <xref:System.Array>를 <xref:System.Collections.ArrayList>, 또는 <xref:System.Collections.CollectionBase>합니다. 인덱싱된 항목 유형 목록을 이들은 <xref:System.Object>합니다. 인덱스의 첫 번째 항목에 따라 형식이 결정되기 때문에 이러한 목록에는 같은 형식이 포함되어 있어야 합니다. <xref:System.Collections.IList> 런타임에만 바인딩에 사용할 수 있습니다.
-
-  > [!NOTE]
-  >  Windows Forms와 바인딩할 비즈니스 개체 목록을 만들려는 경우 사용을 고려해 야 하는 <xref:System.ComponentModel.BindingList%601>합니다. <xref:System.ComponentModel.BindingList%601> 양방향 Windows Forms 데이터 바인딩에 필요한 기본 인터페이스를 구현 하는 확장 가능한 클래스입니다.
-
-- <xref:System.ComponentModel.IBindingList> 인터페이스
-
-  구현 하는 클래스는 <xref:System.ComponentModel.IBindingList> 인터페이스를 훨씬 더 높은 수준의 데이터 바인딩 기능을 제공 합니다. 이 구현은 목록 자체가 변경된 경우(예: 목록 항목 개수의 증가/감소)뿐 아니라 목록 항목이 변경된 경우(예: 고객 목록의 세 번째 항목에서 주소 필드가 변경됨)에도 기본적인 정렬 기능과 변경 알림을 제공합니다. 변경 알림은 여러 컨트롤을 같은 데이터에 바인딩할 때 한 컨트롤의 데이터 변경을 다른 바인딩된 컨트롤에 전파하려는 경우에 중요합니다.
+  <xref:System.Collections.IList> 인터페이스를 구현 하는 클래스는 <xref:System.Array>, <xref:System.Collections.ArrayList>또는 <xref:System.Collections.CollectionBase>일 수 있습니다. 이러한 항목은 형식의 <xref:System.Object>항목에 대 한 인덱싱된 목록입니다. 인덱스의 첫 번째 항목에 따라 형식이 결정되기 때문에 이러한 목록에는 같은 형식이 포함되어 있어야 합니다. <xref:System.Collections.IList>런타임에만 바인딩에 사용할 수 있습니다.
 
   > [!NOTE]
-  > 에 대 한 변경 알림을 사용 하도록 설정할지를 <xref:System.ComponentModel.IBindingList> 인터페이스를 통해를 <xref:System.ComponentModel.IBindingList.SupportsChangeNotification%2A> 속성은 경우 `true`를 발생 시킵니다를 <xref:System.ComponentModel.IBindingList.ListChanged> 변경 변경 목록 또는 목록의 항목을 나타내는 이벤트를 합니다.
+  > Windows Forms 바인딩할 비즈니스 개체 목록을 만들려는 경우를 사용 하 <xref:System.ComponentModel.BindingList%601>는 것이 좋습니다. 은 양방향 Windows Forms 데이터 바인딩에 필요한 기본 인터페이스를 구현 하는 확장 가능한 클래스 입니다.<xref:System.ComponentModel.BindingList%601>
 
-  변경 형식에 의해 설명 됩니다는 <xref:System.ComponentModel.ListChangedType> 의 속성을 <xref:System.ComponentModel.ListChangedEventArgs> 매개 변수입니다. 그러므로 데이터 모델이 업데이트될 때마다 같은 데이터 소스에 바인딩된 다른 컨트롤과 같은 모든 종속 뷰도 업데이트됩니다. 그러나 목록에 포함 된 개체를 발생 시킬 수 있도록이 변경 될 때 목록에 알리기 위해 사항이 <xref:System.ComponentModel.IBindingList.ListChanged> 이벤트입니다.
+- <xref:System.ComponentModel.IBindingList>감열재
 
-  > [!NOTE]
-  > 합니다 <xref:System.ComponentModel.BindingList%601> 의 제네릭 구현을 제공 합니다 <xref:System.ComponentModel.IBindingList> 인터페이스입니다.
-
-- <xref:System.ComponentModel.IBindingListView> 인터페이스
-
-  구현 하는 클래스를 <xref:System.ComponentModel.IBindingListView> 인터페이스 구현의 모든 기능을 제공 <xref:System.ComponentModel.IBindingList>, 필터링 및 고급 기능을 정렬 합니다. 이 구현은 문자열 기반 필터링 기능과 속성 설명자 방향 쌍을 사용한 여러 열 정렬 기능을 제공합니다.
-
-- <xref:System.ComponentModel.IEditableObject> 인터페이스
-
-  구현 하는 클래스는 <xref:System.ComponentModel.IEditableObject> 인터페이스를 사용 하면 해당 개체의 변경 내용을 영구화할 시기를 제어 하는 개체입니다. 이 구현 된 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.EndEdit%2A>, 및 <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> 개체에 변경 내용을 롤백할 수 있는 메서드. 다음은 작동에 대해 간략히 설명 합니다 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.EndEdit%2A>, 및 <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> 메서드 및 데이터에 대 한 변경 내용을 롤백하기 위해 함께에서 작동 방식:
-
-  - <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> 메서드 개체에 대 한 편집 시작 되었음을 나타냅니다. 이 인터페이스를 구현 하는 개체를 이후의 모든 업데이트를 저장 해야 합니다는 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> 업데이트를 삭제할 수 있습니다 하는 방식으로 메서드 호출 하는 경우는 <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> 메서드가 호출 됩니다. 데이터 바인딩 Windows Forms에서에서 호출할 수 있습니다 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> 여러 번 단일 범위 내에서 편집 트랜잭션 (예를 들어 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>를 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.EndEdit%2A>). 구현의 <xref:System.ComponentModel.IEditableObject> 여부를 추적 해야 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> 에 대 한 후속 호출을 무시 하 고 이미 호출 된 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>합니다. 이 메서드를 여러 번 호출할 수 있습니다, 되므로 이후 호출 하는 비파괴적; 즉, 후속 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> 호출에서 적용 된 또는 저장 된 데이터를 변경 하는 업데이트를 제거할 수 없습니다 첫 번째 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> 호출 합니다.
-
-  - 합니다 <xref:System.ComponentModel.IEditableObject.EndEdit%2A> 메서드는 이후 모든 변경 내용 푸시 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> 개체가 현재 편집 모드의 경우 기본 개체에 호출 되었습니다.
-
-  - <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> 메서드는 개체에 대 한 변경 내용을 취소 합니다.
-
-  방법에 대 한 자세한 내용은 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.EndEdit%2A>, 및 <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> 메서드 작업을 참조 하십시오 [데이터를 데이터베이스에 다시 저장](/visualstudio/data-tools/save-data-back-to-the-database)합니다.
-
-  데이터 기능의 이러한 트랜잭션 개념에서 사용 되는 <xref:System.Windows.Forms.DataGridView> 제어 합니다.
-
-- <xref:System.ComponentModel.ICancelAddNew> 인터페이스
-
-  구현 하는 클래스를 <xref:System.ComponentModel.ICancelAddNew> 일반적으로 인터페이스를 구현 합니다 <xref:System.ComponentModel.IBindingList> 인터페이스를 사용 하 여 데이터 원본에 대 한 추가 롤백할 수 있습니다는 <xref:System.ComponentModel.IBindingList.AddNew%2A> 메서드. 데이터 원본을 구현 하는 경우는 <xref:System.ComponentModel.IBindingList> 인터페이스를 있어야을 구현할 수는 <xref:System.ComponentModel.ICancelAddNew> 인터페이스입니다.
-
-- <xref:System.ComponentModel.IDataErrorInfo> 인터페이스
-
-  구현 하는 클래스는 <xref:System.ComponentModel.IDataErrorInfo> 인터페이스를 바인딩된 컨트롤에 사용자 지정 오류 정보를 제공 하는 개체를 사용 합니다.
-
-  - <xref:System.ComponentModel.IDataErrorInfo.Error%2A> 속성 일반 오류 메시지 텍스트를 반환 합니다 (예를 들어, "오류가 발생 했습니다").
-
-  - <xref:System.ComponentModel.IDataErrorInfo.Item%2A> 열에서 특정 오류 메시지를 사용 하 여 문자열을 반환 하는 속성 (예를 들어, "값은 `State` 열 올바르지 않습니다.").
-
-- <xref:System.Collections.IEnumerable> 인터페이스
-
-  구현 하는 클래스는 <xref:System.Collections.IEnumerable> 인터페이스는 ASP.NET에서 일반적으로 사용 됩니다. 이 인터페이스에 대 한 Windows Forms 지원 까지만 유효 합니다 <xref:System.Windows.Forms.BindingSource> 구성 요소입니다.
+  인터페이스를 <xref:System.ComponentModel.IBindingList> 구현 하는 클래스는 훨씬 높은 수준의 데이터 바인딩 기능을 제공 합니다. 이 구현은 목록 자체가 변경된 경우(예: 목록 항목 개수의 증가/감소)뿐 아니라 목록 항목이 변경된 경우(예: 고객 목록의 세 번째 항목에서 주소 필드가 변경됨)에도 기본적인 정렬 기능과 변경 알림을 제공합니다. 변경 알림은 여러 컨트롤을 같은 데이터에 바인딩할 때 한 컨트롤의 데이터 변경을 다른 바인딩된 컨트롤에 전파하려는 경우에 중요합니다.
 
   > [!NOTE]
-  > 합니다 <xref:System.Windows.Forms.BindingSource> 모든 구성 요소 복사 <xref:System.Collections.IEnumerable> 바인딩할 목적으로 별도 목록 항목입니다.
+  > <xref:System.ComponentModel.IBindingList> 속성을 통해 인터페이스에 대해 변경 알림을 사용 <xref:System.ComponentModel.IBindingList.SupportsChangeNotification%2A> 하도록 설정 합니다. `true`이 속성은 <xref:System.ComponentModel.IBindingList.ListChanged> 가 이벤트를 발생 시켜 목록이 변경 되었거나 목록의 항목이 변경 되었음을 나타냅니다.
 
-- <xref:System.ComponentModel.ITypedList> 인터페이스
-
-  구현 하는 컬렉션 클래스는 <xref:System.ComponentModel.ITypedList> 인터페이스 순서 및 바인딩된 컨트롤에 노출 된 속성 집합을 제어 하는 기능을 제공 합니다.
+  변경 형식은 <xref:System.ComponentModel.ListChangedType> <xref:System.ComponentModel.ListChangedEventArgs> 매개 변수의 속성으로 설명 됩니다. 그러므로 데이터 모델이 업데이트될 때마다 같은 데이터 소스에 바인딩된 다른 컨트롤과 같은 모든 종속 뷰도 업데이트됩니다. 그러나 목록에 포함 된 개체는 목록에서 <xref:System.ComponentModel.IBindingList.ListChanged> 이벤트를 발생 시킬 수 있도록 변경 될 때이를 알려야 합니다.
 
   > [!NOTE]
-  > 구현 하는 경우는 <xref:System.ComponentModel.ITypedList.GetItemProperties%2A> 메서드 및 <xref:System.ComponentModel.PropertyDescriptor> 배열은 null이 아니고, 배열의 마지막 항목이 다른 항목 목록인 목록 속성을 설명 하는 속성 설명자 됩니다.
+  > 는 <xref:System.ComponentModel.BindingList%601> 인터페이스<xref:System.ComponentModel.IBindingList> 의 제네릭 구현을 제공 합니다.
 
-- <xref:System.ComponentModel.ICustomTypeDescriptor> 인터페이스
+- <xref:System.ComponentModel.IBindingListView>감열재
 
-  구현 하는 클래스는 <xref:System.ComponentModel.ICustomTypeDescriptor> 인터페이스 자체에 대 한 동적 정보를 제공 합니다. 이 인터페이스는 비슷합니다 <xref:System.ComponentModel.ITypedList> 하지만 목록이 아닌 개체에 사용 됩니다. 이 인터페이스를 사용해 <xref:System.Data.DataRowView> 기본 행의 스키마를 프로젝트에 있습니다. 간단한 구현을 <xref:System.ComponentModel.ICustomTypeDescriptor> 에서 제공 되는 <xref:System.ComponentModel.CustomTypeDescriptor> 클래스입니다.
+  인터페이스를 <xref:System.ComponentModel.IBindingListView> 구현 하는 클래스는의 <xref:System.ComponentModel.IBindingList>구현에 대 한 모든 기능 뿐만 아니라 필터링 및 고급 정렬 기능도 제공 합니다. 이 구현은 문자열 기반 필터링 기능과 속성 설명자 방향 쌍을 사용한 여러 열 정렬 기능을 제공합니다.
 
-  > [!NOTE]
-  > 디자인 타임 바인딩을 지원 하기 위해 구현 하는 형식을 <xref:System.ComponentModel.ICustomTypeDescriptor>, 형식을 구현 해야 합니다 <xref:System.ComponentModel.IComponent> 양식에 인스턴스로 존재 합니다.
+- <xref:System.ComponentModel.IEditableObject>감열재
 
-- <xref:System.ComponentModel.IListSource> 인터페이스
+  인터페이스를 <xref:System.ComponentModel.IEditableObject> 구현 하는 클래스를 사용 하면 개체에서 해당 개체에 대 한 변경 내용이 영구적으로 적용 되는 시기를 제어할 수 있습니다. 이 구현 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>에서는 개체에 대 한 변경 <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> 내용을 롤백할 수 있는, <xref:System.ComponentModel.IEditableObject.EndEdit%2A>및 메서드를 사용 합니다. 다음은 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.EndEdit%2A>및 <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> 메서드의 기능에 대해 간략하게 설명 하 고 서로 함께 작동 하 여 데이터에 대 한 변경 내용을 롤백할 수 있도록 하는 방법입니다.
 
-  구현 하는 클래스는 <xref:System.ComponentModel.IListSource> 인터페이스 목록이 아닌 개체에서 목록 기반 바인딩을 사용 하도록 설정 합니다. 합니다 <xref:System.ComponentModel.IListSource.GetList%2A> 메서드의 <xref:System.ComponentModel.IListSource> 바인딩 가능한 목록에서 상속 되지 않는 개체에서 반환 하는 데 사용 됩니다 <xref:System.Collections.IList>합니다. <xref:System.ComponentModel.IListSource> 사용 되는 <xref:System.Data.DataSet> 클래스입니다.
+  - 메서드 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> 는 개체에 대 한 편집을 시작 하도록 신호를 보냅니다. 이 인터페이스를 구현 하는 개체는 메서드 호출 후 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> 에 업데이트를 저장 해야 합니다. 이러한 방식으로 <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> 메서드를 호출 하면 업데이트를 삭제할 수 있습니다. 데이터 바인딩 Windows Forms에서 단일 편집 트랜잭션 ( <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>예: <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> <xref:System.ComponentModel.IEditableObject.EndEdit%2A>,,)의 범위 내에서 여러 번 호출할 수 있습니다. 의 <xref:System.ComponentModel.IEditableObject> 구현은가 이미 호출 되었는지 여부 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> 를 추적 하 고에 대 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>한 후속 호출을 무시 해야 합니다. 이 메서드를 여러 번 호출할 수 있기 때문에 후속 호출에서 비파괴를 호출 하는 것이 중요 합니다. 즉, 후속 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> 호출에서 변경 된 업데이트를 제거 하거나 첫 번째 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> 호출에서 저장 된 데이터를 변경할 수 없습니다.
 
-- <xref:System.ComponentModel.IRaiseItemChangedEvents> 인터페이스
+  - 개체가 <xref:System.ComponentModel.IEditableObject.EndEdit%2A> 현재 편집 모드에 있는 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> 경우 메서드는가 원본 개체에 호출 된 이후의 변경 내용을 푸시합니다.
 
-  구현 하는 클래스를 <xref:System.ComponentModel.IRaiseItemChangedEvents> 인터페이스는 바인딩 가능한 목록을 구현 하는 <xref:System.ComponentModel.IBindingList> 인터페이스입니다. 이 인터페이스 형식이 발생 하는 경우를 나타내기 위해 사용 됩니다 <xref:System.ComponentModel.IBindingList.ListChanged> 형식의 이벤트 <xref:System.ComponentModel.ListChangedType.ItemChanged> 를 통해 해당 <xref:System.ComponentModel.IRaiseItemChangedEvents.RaisesItemChangedEvents%2A> 속성입니다.
+  - 메서드 <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> 는 개체에 대 한 변경 내용을 모두 취소 합니다.
 
-  > [!NOTE]
-  > 구현 해야 합니다 <xref:System.ComponentModel.IRaiseItemChangedEvents> 데이터 원본에는 앞에서 설명한 이벤트 변환 나열 하는 속성을 제공 하 고 상호 작용 하는 <xref:System.Windows.Forms.BindingSource> 구성 요소입니다. 이 고, 그렇지는 <xref:System.Windows.Forms.BindingSource> 는 성능이 저하 이벤트 변환 나열 하는 속성을 수행할 수도 있습니다.
+  <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> ,<xref:System.ComponentModel.IEditableObject.EndEdit%2A>및 메서드의<xref:System.ComponentModel.IEditableObject.CancelEdit%2A> 작동 방식에 대 한 자세한 내용은 [데이터베이스에 데이터 다시 저장](/visualstudio/data-tools/save-data-back-to-the-database)을 참조 하세요.
 
-- <xref:System.ComponentModel.ISupportInitialize> 인터페이스
+  데이터 기능의이 트랜잭션 개념은 <xref:System.Windows.Forms.DataGridView> 컨트롤에서 사용 됩니다.
 
-  구현 하는 구성 요소는 <xref:System.ComponentModel.ISupportInitialize> 인터페이스 속성을 설정 하 고 상호 종속적인 속성 초기화에 대 한 일괄 처리 최적화가 활용 합니다. <xref:System.ComponentModel.ISupportInitialize> 두 메서드가 포함 되어 있습니다.
+- <xref:System.ComponentModel.ICancelAddNew>감열재
 
-  - <xref:System.ComponentModel.ISupportInitialize.BeginInit%2A> 개체 초기화가 시작 됨을 알립니다.
+  인터페이스를 <xref:System.ComponentModel.ICancelAddNew> 구현 하는 클래스는 일반적으로 <xref:System.ComponentModel.IBindingList> 인터페이스를 구현 하며, <xref:System.ComponentModel.IBindingList.AddNew%2A> 메서드를 사용 하 여 데이터 소스에 대 한 추가 작업을 롤백할 수 있습니다. 데이터 소스에서 <xref:System.ComponentModel.IBindingList> 인터페이스를 구현 하는 경우 <xref:System.ComponentModel.ICancelAddNew> 인터페이스도 구현 해야 합니다.
 
-  - <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> 해당 개체 초기화가 완료 신호를 보냅니다.
+- <xref:System.ComponentModel.IDataErrorInfo>감열재
 
-- <xref:System.ComponentModel.ISupportInitializeNotification> 인터페이스
+  인터페이스를 <xref:System.ComponentModel.IDataErrorInfo> 구현 하는 클래스를 통해 개체가 바인딩된 컨트롤에 사용자 지정 오류 정보를 제공할 수 있습니다.
 
-  구현 하는 구성 요소를 <xref:System.ComponentModel.ISupportInitializeNotification> 구현도 인터페이스는 <xref:System.ComponentModel.ISupportInitialize> 인터페이스입니다. 이 인터페이스를 사용 하면 다른에 알리기 위해 <xref:System.ComponentModel.ISupportInitialize> 구성 요소는 초기화가 완료 합니다. <xref:System.ComponentModel.ISupportInitializeNotification> 인터페이스에는 두 멤버가 포함 되어 있습니다.:
+  - 속성 <xref:System.ComponentModel.IDataErrorInfo.Error%2A> 은 일반 오류 메시지 텍스트를 반환 합니다 (예: "오류가 발생 했습니다.").
 
-  - <xref:System.ComponentModel.ISupportInitializeNotification.IsInitialized%2A> 반환 된 `boolean` 구성 요소가 초기화 되었는지 여부를 나타내는 값입니다.
+  - 속성 <xref:System.ComponentModel.IDataErrorInfo.Item%2A> 은 열에서 특정 오류 메시지를 포함 하는 문자열을 반환 합니다 (예: " `State` 열의 값이 잘못 되었습니다.").
 
-  - <xref:System.ComponentModel.ISupportInitializeNotification.Initialized> 발생 경우 <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> 라고 합니다.
+- <xref:System.Collections.IEnumerable>감열재
 
-- <xref:System.ComponentModel.INotifyPropertyChanged> 인터페이스
-
-  이 인터페이스를 구현하는 클래스는 해당 속성 값이 변경될 때 이벤트를 발생시키는 형식입니다. 이 인터페이스는 각 컨트롤 속성에서 변경 이벤트를 갖는 패턴을 바꾸는 데 사용됩니다. 에 사용 되는 경우는 <xref:System.ComponentModel.BindingList%601>, 비즈니스 개체를 구현 해야 합니다 <xref:System.ComponentModel.INotifyPropertyChanged> 인터페이스 및 BindingList\`1은 변환 <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> 이벤트를 <xref:System.ComponentModel.BindingList%601.ListChanged> 유형의 이벤트 <xref:System.ComponentModel.ListChangedType.ItemChanged>.
+  인터페이스를 <xref:System.Collections.IEnumerable> 구현 하는 클래스는 일반적으로 ASP.NET에서 사용 됩니다. 이 인터페이스에 대 한 Windows Forms 지원은 <xref:System.Windows.Forms.BindingSource> 구성 요소를 통해서만 사용할 수 있습니다.
 
   > [!NOTE]
-  > 변경에 대 한 알림이 바인딩된 클라이언트와 데이터 간의 바인딩에 발생 하도록 원본에 바인딩된 데이터 소스 형식 중 하나를 구현 해야 합니다 <xref:System.ComponentModel.INotifyPropertyChanged> 인터페이스 (기본 설정) 하거나 제공할 수 있습니다 *propertyName* `Changed` 바인딩된 형식에 대 한 이벤트는 둘 다는 수행 하지 않아야 합니다.
+  > 구성 <xref:System.Windows.Forms.BindingSource> 요소는 바인딩을 <xref:System.Collections.IEnumerable> 위해 모든 항목을 별도의 목록에 복사 합니다.
+
+- <xref:System.ComponentModel.ITypedList>감열재
+
+  인터페이스를 <xref:System.ComponentModel.ITypedList> 구현 하는 컬렉션 클래스는 바인딩된 컨트롤에 노출 되는 속성 집합 및 순서를 제어 하는 기능을 제공 합니다.
+
+  > [!NOTE]
+  > <xref:System.ComponentModel.ITypedList.GetItemProperties%2A> 메서드를 구현 하 <xref:System.ComponentModel.PropertyDescriptor> 고 배열이 null이 아닌 경우 배열의 마지막 항목은 다른 항목 목록에 해당 하는 목록 속성을 설명 하는 속성 설명자가 됩니다.
+
+- <xref:System.ComponentModel.ICustomTypeDescriptor>감열재
+
+  인터페이스를 <xref:System.ComponentModel.ICustomTypeDescriptor> 구현 하는 클래스는 자체에 대 한 동적 정보를 제공 합니다. 이 인터페이스는와 비슷하지만 <xref:System.ComponentModel.ITypedList> 목록 대신 개체에 사용 됩니다. 이 인터페이스는에서 <xref:System.Data.DataRowView> 기본 행의 스키마를 프로젝션 하는 데 사용 됩니다. 의 <xref:System.ComponentModel.ICustomTypeDescriptor> 간단한 구현은 <xref:System.ComponentModel.CustomTypeDescriptor> 클래스에서 제공 합니다.
+
+  > [!NOTE]
+  > 을 구현 <xref:System.ComponentModel.ICustomTypeDescriptor>하는 형식에 대 한 디자인 타임 바인딩을 지원 하려면 형식을 구현 <xref:System.ComponentModel.IComponent> 하 고 폼의 인스턴스로 존재 해야 합니다.
+
+- <xref:System.ComponentModel.IListSource>감열재
+
+  인터페이스를 <xref:System.ComponentModel.IListSource> 구현 하는 클래스는 목록에 없는 개체에 대 한 목록 기반 바인딩을 활성화 합니다. <xref:System.Collections.IList>의 <xref:System.ComponentModel.IListSource.GetList%2A> 메서드를<xref:System.ComponentModel.IListSource> 사용 하 여에서 상속 되지 않는 개체에서 바인딩 가능한 목록을 반환 합니다. <xref:System.ComponentModel.IListSource> 사용 되는 <xref:System.Data.DataSet> 클래스입니다.
+
+- <xref:System.ComponentModel.IRaiseItemChangedEvents>감열재
+
+  인터페이스를 <xref:System.ComponentModel.IRaiseItemChangedEvents> 구현 하는 클래스는 인터페이스를 <xref:System.ComponentModel.IBindingList> 구현 하는 바인딩 가능한 목록입니다. 이 인터페이스는 형식에서 <xref:System.ComponentModel.IBindingList.ListChanged> <xref:System.ComponentModel.IRaiseItemChangedEvents.RaisesItemChangedEvents%2A> 속성을 통해 형식의 <xref:System.ComponentModel.ListChangedType.ItemChanged> 이벤트를 발생 시키는 지 여부를 나타내는 데 사용 됩니다.
+
+  > [!NOTE]
+  > 데이터 소스에서 속성 <xref:System.ComponentModel.IRaiseItemChangedEvents> 을 제공 하 여 이전에 설명 된 이벤트 변환을 나열 하 고 <xref:System.Windows.Forms.BindingSource> 구성 요소와 상호 작용 하는 경우를 구현 해야 합니다. 그렇지 않으면는 <xref:System.Windows.Forms.BindingSource> 이벤트 변환을 나열 하는 속성을 수행 하 여 성능이 저하 됩니다.
+
+- <xref:System.ComponentModel.ISupportInitialize>감열재
+
+  인터페이스를 <xref:System.ComponentModel.ISupportInitialize> 구현 하는 구성 요소는 속성을 설정 하 고 공동 종속 속성을 초기화 하기 위한 일괄 처리 최적화를 활용 합니다. 에 <xref:System.ComponentModel.ISupportInitialize> 는 두 가지 메서드가 있습니다.
+
+  - <xref:System.ComponentModel.ISupportInitialize.BeginInit%2A>개체 초기화가 시작 됨을 신호로 보냅니다.
+
+  - <xref:System.ComponentModel.ISupportInitialize.EndInit%2A>개체 초기화가 완료 됨을 나타냅니다.
+
+- <xref:System.ComponentModel.ISupportInitializeNotification>감열재
+
+  인터페이스를 <xref:System.ComponentModel.ISupportInitializeNotification> 구현 하는 구성 요소는 <xref:System.ComponentModel.ISupportInitialize> 인터페이스도 구현 합니다. 이 인터페이스를 사용 하면 초기화가 <xref:System.ComponentModel.ISupportInitialize> 완료 되었음을 다른 구성 요소에 알릴 수 있습니다. 인터페이스 <xref:System.ComponentModel.ISupportInitializeNotification> 에는 두 개의 멤버가 포함 되어 있습니다.
+
+  - <xref:System.ComponentModel.ISupportInitializeNotification.IsInitialized%2A>구성 요소가 `boolean` 초기화 되었는지 여부를 나타내는 값을 반환 합니다.
+
+  - <xref:System.ComponentModel.ISupportInitializeNotification.Initialized>가 호출 <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> 될 때 발생 합니다.
+
+- <xref:System.ComponentModel.INotifyPropertyChanged>감열재
+
+  이 인터페이스를 구현하는 클래스는 해당 속성 값이 변경될 때 이벤트를 발생시키는 형식입니다. 이 인터페이스는 각 컨트롤 속성에서 변경 이벤트를 갖는 패턴을 바꾸는 데 사용됩니다. <xref:System.ComponentModel.BindingList%601>에서 사용 되는 경우 비즈니스 개체는 인터페이스를 <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> <xref:System.ComponentModel.INotifyPropertyChanged> 구현 해야 하며, BindingList\`1은 이벤트를 형식의 <xref:System.ComponentModel.BindingList%601.ListChanged> <xref:System.ComponentModel.ListChangedType.ItemChanged>이벤트로 변환 합니다.
+
+  > [!NOTE]
+  > 바인딩된 클라이언트와 데이터 소스 간의 바인딩에서 변경 알림이 발생 하도록 하려면 바인딩된 데이터 소스 형식이 인터페이스를 <xref:System.ComponentModel.INotifyPropertyChanged> 구현 하거나 (기본 설정), 바인딩 형식에 대해 *propertyName* `Changed` 이벤트를 제공할 수 있어야 합니다. 그러나 둘 다 수행 하면 안 됩니다.
 
 ### <a name="interfaces-for-implementation-by-component-authors"></a>구성 요소 작성자가 구현할 수 있는 인터페이스
 
 다음 인터페이스는 Windows Forms 데이터 바인딩 엔진에서 사용됩니다.
 
-- <xref:System.Windows.Forms.IBindableComponent> 인터페이스
+- <xref:System.Windows.Forms.IBindableComponent>감열재
 
-  이 인터페이스를 구현하는 클래스는 컨트롤이 아닌 구성 요소이며 데이터 바인딩을 지원합니다. 이 클래스는 데이터 바인딩 및 바인딩 컨텍스트를 통해 구성 요소를 반환 합니다 <xref:System.Windows.Forms.IBindableComponent.DataBindings%2A> 고 <xref:System.Windows.Forms.IBindableComponent.BindingContext%2A> 이 인터페이스의 속성입니다.
-
-  > [!NOTE]
-  > 구성 요소에서 상속 하는 경우 <xref:System.Windows.Forms.Control>를 구현할 필요가 없습니다를 <xref:System.Windows.Forms.IBindableComponent> 인터페이스입니다.
-
-- <xref:System.Windows.Forms.ICurrencyManagerProvider> 인터페이스
-
-  구현 하는 클래스를 <xref:System.Windows.Forms.ICurrencyManagerProvider> 인터페이스는 자체를 제공 하는 구성 <xref:System.Windows.Forms.CurrencyManager> 이 특정 구성 요소와 연결 된 바인딩을 관리 하려면. 사용자 지정에 대 한 액세스 <xref:System.Windows.Forms.CurrencyManager> 에서 제공 되는 <xref:System.Windows.Forms.ICurrencyManagerProvider.CurrencyManager%2A> 속성입니다.
+  이 인터페이스를 구현하는 클래스는 컨트롤이 아닌 구성 요소이며 데이터 바인딩을 지원합니다. 이 클래스는이 인터페이스의 <xref:System.Windows.Forms.IBindableComponent.DataBindings%2A> 및 <xref:System.Windows.Forms.IBindableComponent.BindingContext%2A> 속성을 통해 구성 요소의 데이터 바인딩과 바인딩 컨텍스트를 반환 합니다.
 
   > [!NOTE]
-  > 상속 된 클래스 <xref:System.Windows.Forms.Control> 바인딩을 통해 자동으로 관리 해당 <xref:System.Windows.Forms.Control.BindingContext%2A> 속성을 구현 해야 하므로 사례는 <xref:System.Windows.Forms.ICurrencyManagerProvider> 모두 아주 드문 경우입니다.
+  > 구성 요소가에서 <xref:System.Windows.Forms.Control>상속 하는 <xref:System.Windows.Forms.IBindableComponent> 경우 인터페이스를 구현할 필요가 없습니다.
+
+- <xref:System.Windows.Forms.ICurrencyManagerProvider>감열재
+
+  인터페이스를 <xref:System.Windows.Forms.ICurrencyManagerProvider> 구현 하는 클래스는이 특정 구성 요소와 연결 <xref:System.Windows.Forms.CurrencyManager> 된 바인딩을 관리 하는 자체를 제공 하는 구성 요소입니다. 사용자 지정 <xref:System.Windows.Forms.CurrencyManager> 에 대 한 액세스는 <xref:System.Windows.Forms.ICurrencyManagerProvider.CurrencyManager%2A> 속성에서 제공 합니다.
+
+  > [!NOTE]
+  > 에서 <xref:System.Windows.Forms.Control> 상속 되는 클래스는 해당 <xref:System.Windows.Forms.Control.BindingContext%2A> 속성을 통해 바인딩을 자동으로 관리 하므로를 <xref:System.Windows.Forms.ICurrencyManagerProvider> 구현 해야 하는 경우는 거의 없습니다.
 
 ## <a name="see-also"></a>참고자료
 

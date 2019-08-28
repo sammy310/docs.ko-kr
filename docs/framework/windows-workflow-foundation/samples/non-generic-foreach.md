@@ -2,12 +2,12 @@
 title: 비제네릭 ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: 46db1d455bcbdd28e02d3cddfe0c9248b4abd91c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e467534ba2b233f1f3c279e89badf12846c6b7f7
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620849"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038070"
 ---
 # <a name="non-generic-foreach"></a>비제네릭 ForEach
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]의 도구 상자에는 <xref:System.Activities.Statements.ForEach%601> 컬렉션을 반복할 수 있도록 하는 <xref:System.Collections.Generic.IEnumerable%601>을 비롯한 흐름 제어 활동이 제공됩니다.  
@@ -67,12 +67,12 @@ Activity sampleUsage =
    };  
 ```  
   
-|조건|메시지|심각도|예외 형식|  
+|조건|메시지|Severity|예외 형식|  
 |---------------|-------------|--------------|--------------------|  
 |값은 `null`입니다.|필수 활동 인수 'Values'의 값이 제공되지 않았습니다.|Error|<xref:System.InvalidOperationException>|  
   
 ## <a name="foreach-designer"></a>ForEach 디자이너  
- 샘플의 활동 디자이너는 기본 제공 <xref:System.Activities.Statements.ForEach%601> 활동에 제공되는 디자이너와 모양이 비슷합니다. 디자이너의 도구 상자에 표시 합니다 **샘플**, **비 제네릭 활동** 범주입니다. 디자이너 **ForEachWithBodyFactory** 도구 상자에서 작업을 노출 하기 때문에 <xref:System.Activities.Presentation.IActivityTemplateFactory> 활동을 제대로 구성 된 만드는 도구 상자에서 <xref:System.Activities.ActivityAction>합니다.  
+ 샘플의 활동 디자이너는 기본 제공 <xref:System.Activities.Statements.ForEach%601> 활동에 제공되는 디자이너와 모양이 비슷합니다. 디자이너는 **샘플**, **제네릭이 아닌 작업** 범주의 도구 상자에 나타납니다. 작업은 도구 상자 에서를 노출 <xref:System.Activities.Presentation.IActivityTemplateFactory> 하 고 적절 하 게 구성 <xref:System.Activities.ActivityAction>된를 사용 하 여 작업을 만드는 도구 상자에서 디자이너의 이름이 ForEachWithBodyFactory입니다.  
   
 ```  
 public sealed class ForEachWithBodyFactory : IActivityTemplateFactory  
@@ -97,17 +97,17 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
   
 1. 선택한 프로젝트를 솔루션의 시작 프로젝트로 설정합니다.  
   
-    1. **CodeTestClient** 코드를 사용 하 여 작업을 사용 하는 방법을 보여 줍니다.  
+    1. **CodeTestClient** 는 코드를 사용 하 여 작업을 사용 하는 방법을 보여 줍니다.  
   
-    2. **DesignerTestClient** 디자이너 내에서 작업을 사용 하는 방법을 보여 줍니다.  
+    2. **Designertestclient** 는 디자이너 내에서 활동을 사용 하는 방법을 보여 줍니다.  
   
 2. 프로젝트를 빌드하고 실행합니다.  
   
 > [!IMPORTANT]
->  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
+> 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericForEach`
+> `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericForEach`

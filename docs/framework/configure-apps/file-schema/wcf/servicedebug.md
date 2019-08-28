@@ -2,12 +2,12 @@
 title: <serviceDebug>
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-ms.openlocfilehash: cbeb0d254bf6716296f34020ea8796885e0f368a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5ca1d4e7f9107c798213d760d9780dbeded9eae0
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936262"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041276"
 ---
 # <a name="servicedebug"></a>\<serviceDebug>
 WCF (Windows Communication Foundation) 서비스에 대 한 디버깅 및 도움말 정보 기능을 지정 합니다.  
@@ -62,7 +62,7 @@ WCF (Windows Communication Foundation) 서비스에 대 한 디버깅 및 도움
  로 `includeExceptionDetailInFaults` <xref:System.ServiceModel.FaultContractAttribute>설정 하면 서비스가를 사용 하 여 선언 되지 않은 경우에도 응용 프로그램 코드에 의해 throw 되는 모든 예외가 반환 됩니다. `true` 이 설정은 서버가 예기치 않은 예외를 throw하는 경우를 디버깅할 때 유용합니다. 이 특성을 사용하면 알 수 없는 예외가 serialize된 형태로 반환되어 예외를 보다 자세하게 검토할 수 있습니다.  
   
 > [!CAUTION]
->  관리되는 예외 정보를 클라이언트에 반환하면 예외 정보가 내부 서비스 구현 정보를 노출하여 권한이 없는 클라이언트에서 사용할 수 있으므로 보안상 위험할 수 있습니다. 보안 문제로 인해 제어된 디버깅 시나리오에서만 이 작업을 수행하는 것이 좋습니다. 애플리케이션을 배포할 때는 `includeExceptionDetailInFaults`를 `false`로 설정해야 합니다.  
+> 관리되는 예외 정보를 클라이언트에 반환하면 예외 정보가 내부 서비스 구현 정보를 노출하여 권한이 없는 클라이언트에서 사용할 수 있으므로 보안상 위험할 수 있습니다. 보안 문제로 인해 제어된 디버깅 시나리오에서만 이 작업을 수행하는 것이 좋습니다. 애플리케이션을 배포할 때는 `includeExceptionDetailInFaults`를 `false`로 설정해야 합니다.  
   
  관리 되는 예외와 관련 된 보안 문제에 대 한 자세한 내용은 [계약 및 서비스에서 오류 지정 및 처리](../../../wcf/specifying-and-handling-faults-in-contracts-and-services.md)를 참조 하세요. 코드 샘플은 [서비스 디버그 동작](../../../wcf/samples/service-debug-behavior.md)을 참조 하세요.  
   

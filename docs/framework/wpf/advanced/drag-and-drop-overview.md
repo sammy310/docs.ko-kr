@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: e8e8b294e05579a91a4557b23be6c65f4d619167
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bb5766a3efc38750458ef0d354e8a2e3ab204000
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940870"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046402"
 ---
 # <a name="drag-and-drop-overview"></a>끌어서 놓기 개요
 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 애플리케이션의 끌어서 놓기 지원에 대해 개괄적으로 설명합니다. 끌어서 놓기는 일반적으로 마우스(또는 다른 포인팅 디바이스)를 사용하여 하나 이상의 개체를 선택하고 이러한 개체를 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]에서 원하는 놓기 대상 위로 끌어서 놓는 데이터 전송 방법을 가리킵니다.  
@@ -166,7 +166,7 @@ ms.locfileid: "69940870"
  <xref:System.Windows.DragDrop.QueryContinueDrag> 이벤트는 끌기 소스를 끄는 동안 지속적으로 발생합니다. 이 이벤트를 처리하여 Esc, Shift, Ctrl 및 Alt 키의 상태에 따라 끌어서 놓기 작업을 종료하는 작업 및 마우스 단추의 상태를 확인할 수 있습니다. 이 이벤트에 대한 기본 처리기는 Esc 키를 누를 경우 끌어서 놓기 작업을 취소하고 마우스 단추를 놓을 경우 데이터를 놓습니다.  
   
 > [!CAUTION]
->  이러한 이벤트는 끌어서 놓기 작업 중에 지속적으로 발생합니다. 따라서 리소스를 많이 사용하는 작업은 이벤트 처리기에서 피해야 합니다.  예를 들어 <xref:System.Windows.DragDrop.GiveFeedback> 이벤트가 발생할 때마다 새 커서를 만드는 대신 캐시된 커서를 사용합니다.  
+> 이러한 이벤트는 끌어서 놓기 작업 중에 지속적으로 발생합니다. 따라서 리소스를 많이 사용하는 작업은 이벤트 처리기에서 피해야 합니다.  예를 들어 <xref:System.Windows.DragDrop.GiveFeedback> 이벤트가 발생할 때마다 새 커서를 만드는 대신 캐시된 커서를 사용합니다.  
   
 ### <a name="enabling-an-element-to-be-a-drop-target"></a>요소를 놓기 대상으로 사용할 수 있도록 설정  
  놓기 대상인 개체는 다음 작업을 수행해야 합니다.  

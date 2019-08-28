@@ -2,12 +2,12 @@
 title: Discovery Security 샘플
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 8512dbddc5d27e75d98d281c0bdccf142a113d7f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dfc0dfcd3b4d814a158b328ef202d5438e583a8c
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961733"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039811"
 ---
 # <a name="discovery-security-sample"></a>Discovery Security 샘플
 검색 사양에서는 검색 프로세스에 참여하는 엔드포인트를 보호하도록 요구하지 않습니다. 그러나 검색 메시지의 보안을 강화하면 메시지 변경, 서비스 거부, 재생, 스푸핑 같은 다양한 형식의 공격을 완화할 수 있습니다. 이 샘플에서는 WS-Discovery 사양의 8.2단원에 설명된 압축 서명 형식을 사용하여 메시지 서명을 컴퓨팅 및 확인하는 사용자 지정 채널을 구현합니다. 이 샘플에서는 [2005 검색 사양과](https://go.microsoft.com/fwlink/?LinkId=177912) [1.1 버전](https://go.microsoft.com/fwlink/?LinkId=179677)을 모두 지원 합니다.  
@@ -67,10 +67,10 @@ ms.locfileid: "69961733"
 3. 샘플을 사용하여 작업을 수행한 후 이 샘플에 대해 만들어진 인증서를 제거하는 Cleanup.bat 스크립트를 실행합니다.  
   
 > [!IMPORTANT]
->  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
+> 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  

@@ -20,15 +20,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74548df512f68761b006e064a6db968e82b03813
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 164384f043a1722ace6e5c4098cb31c4327cba1e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779125"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044067"
 ---
 # <a name="coeeshutdowncom-function"></a>CoEEShutDownCOM 함수
-CLR (공용 언어 런타임) 런타임 호출 가능 래퍼 (RCW) 내에서 보유 하는 모든 인터페이스 포인터가 해제 되도록 합니다. 이 효과가 모든 RCW 캐시를 해제 합니다. 이 전역 함수는.NET Framework 4에서 사용 되지 않습니다. 대신, 특정 런타임에 대 한 진입점을 사용 합니다.  
+CLR (공용 언어 런타임)에서 RCW (런타임 호출 가능 래퍼) 내에 포함 된 모든 인터페이스 포인터를 해제 하도록 합니다. 이는 모든 RCW 캐시를 해제 하는 효과가 있습니다. 이 전역 함수는 .NET Framework 4에서 더 이상 사용 되지 않습니다. 대신 특정 런타임에 대 한 진입점을 사용 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,19 +37,19 @@ void CoEEShutDownCOM ();
 ```  
   
 ## <a name="remarks"></a>설명  
- `CoEEShutDownCOM` 함수는 먼저 모든 컨텍스트 및 모든 캐시에 있는 모든 Rcw를 해제 하 고 다음 설치 프로그램에서 기존의 모든 중지 알림을 제거 합니다. DLL 언로드 없습니다 발생합니다.  
+ 함수 `CoEEShutDownCOM` 는 먼저 모든 컨텍스트와 모든 캐시에서 모든 rcw를 해제 한 다음 설치 프로그램에서 기존에 존재 하는 모든 중단 알림을 제거 합니다. DLL 언로드가 발생 하지 않습니다.  
   
 > [!CAUTION]
->  이 함수는 모든 런타임을 프로세스로 로드 되는 영향을 줍니다.  
+> 이 함수는 프로세스에 로드 되는 모든 런타임에 영향을 줍니다.  
   
- .NET Framework 4 부터는이 영향을 주려는 특정 런타임이 함수에 대 한 진입점을 호출 합니다. 진입점을 가져오려면 호출 합니다 [iclrruntimeinfo:: Getprocaddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) 메서드 "CoEEShutDownCOM"를 지정 합니다.  
+ .NET Framework 4부터 영향을 원하는 특정 런타임에이 함수에 대 한 진입점을 호출 합니다. 진입점을 가져오려면 [ICLRRuntimeInfo:: GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) 메서드를 호출 하 고 "CoEEShutDownCOM"를 지정 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
- **헤더:** Cor.h  
+ **헤더:** Cor  
   
- **라이브러리:** MsCorEE.dll에 리소스로 포함  
+ **라이브러리** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

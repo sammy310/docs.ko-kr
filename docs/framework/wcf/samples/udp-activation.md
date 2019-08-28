@@ -2,15 +2,15 @@
 title: UDP 활성화
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 127516b79bcb15406bfade09bc1309e55aac3dcf
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 13444ab1be440c8e1a5f945cd512afa33772ea57
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881001"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044635"
 ---
 # <a name="udp-activation"></a>UDP 활성화
-이 샘플은 기반는 [전송 합니다. UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플입니다. 확장 된 [전송 합니다. UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플 Windows 프로세스 활성화 서비스 (WAS)를 사용한 프로세스 활성화를 지원 하도록 합니다.  
+이 샘플은 전송을 기반으로 [합니다. UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플. 전송을 확장 합니다 [. WAS](../../../../docs/framework/wcf/samples/transport-udp.md) (Windows process activation Service)를 사용한 프로세스 활성화를 지원 하기 위한 UDP 샘플입니다.  
   
  이 샘플은 크게 세 부분으로 구성됩니다.  
   
@@ -21,7 +21,7 @@ ms.locfileid: "65881001"
 - WAS에서 활성화한 작업자 프로세스에서 호스팅되고 UDP 사용자 지정 전송을 통해 메시지를 수신하는 서비스  
   
 ## <a name="udp-protocol-activator"></a>UDP 프로토콜 활성기  
- UDP 프로토콜 활성기는 WCF 클라이언트에서 WCF 서비스와 연결 합니다. 전송 계층에서 UDP 프로토콜을 통한 데이터 통신을 제공합니다. 주요 기능 두 가지는 다음과 같습니다.  
+ UDP 프로토콜 활성기는 WCF 클라이언트와 WCF 서비스 간의 브리지입니다. 전송 계층에서 UDP 프로토콜을 통한 데이터 통신을 제공합니다. 주요 기능 두 가지는 다음과 같습니다.  
   
 - WAS LA(수신기 어댑터) - 들어오는 메시지에 대한 응답으로 WAS와 공동 작업하여 프로세스를 활성화합니다.  
   
@@ -40,13 +40,13 @@ ms.locfileid: "65881001"
   
 - `WebhostCloseAllListenerChannelInstances`  
   
- 처음에 `WebhostRegisterProtocol`을 호출한 후 수신기 어댑터는 %windir%\system32\inetsrv에 있는 applicationHost.config에 등록된 모든 응용 프로그램에 대해 WAS로부터 `ApplicationCreated` 콜백을 수신합니다. 이 샘플에서는 UDP 프로토콜(프로토콜 ID: "net.udp")을 사용하는 응용 프로그램만 처리합니다. 다른 구현에서는 애플리케이션의 동적 구성 변경 사항(예: 사용 안 함에서 사용으로의 애플리케이션 전환)에 응답하는 경우 이를 다르게 처리할 수 있습니다.  
+ 처음에 `WebhostRegisterProtocol`을 호출한 후 수신기 어댑터는 %windir%\system32\inetsrv에 있는 applicationHost.config에 등록된 모든 응용 프로그램에 대해 WAS로부터 `ApplicationCreated` 콜백을 수신합니다. 이 샘플에서는 UDP 프로토콜(프로토콜 ID: &quot;net.udp&quot;)을 사용하는 애플리케이션만 처리합니다. 다른 구현에서는 애플리케이션의 동적 구성 변경 사항(예: 사용 안 함에서 사용으로의 애플리케이션 전환)에 응답하는 경우 이를 다르게 처리할 수 있습니다.  
   
  `ConfigManagerInitializationCompleted` 콜백이 수신되면 이는 WAS가 프로토콜의 초기화에 대한 모든 알림을 완료했음을 나타냅니다. 이때 수신기 어댑터는 활성화 요청을 처리할 준비가 되어 있습니다.  
   
  애플리케이션에 대해 처음으로 새 요청이 들어올 때 수신기 어댑터는 `WebhostOpenListenerChannelInstance`를 WAS로 호출하고 WAS는 작업자 프로세스를 시작합니다(아직 시작되지 않은 경우). 그런 다음 프로토콜 처리기가 로드되고 수신기 어댑터와 가상 애플리케이션 간의 통신이 시작될 수 있습니다.  
   
- 수신기 어댑터에서 %SystemRoot%\System32\inetsrv\ApplicationHost.config에 등록 되는 <`listenerAdapters`> 다음과 같은 섹션:  
+ 수신기 어댑터는 <`listenerAdapters`> 섹션에서 다음과 같이%SystemRoot%\System32\inetsrv\ApplicationHost.config에 등록 됩니다.  
   
 ```xml  
 <add name="net.udp" identity="S-1-5-21-2127521184-1604012920-1887927527-387045" />  
@@ -56,10 +56,10 @@ ms.locfileid: "65881001"
  UDP 프로토콜 수신기는 가상 애플리케이션을 대신하여 UDP 엔드포인트에서 수신 대기하는 프로토콜 활성기 내에 있는 모듈입니다. 이 수신기는 `UdpSocketListener` 클래스에서 구현됩니다. 엔드포인트는 사이트의 프로토콜 바인딩에서 포트 번호가 추출되는 `IPEndpoint`로 표시됩니다.  
   
 ### <a name="control-service"></a>제어 서비스  
- 이 샘플에서는 활성기와 WAS 작업자 프로세스 간의 통신에 WCF 사용 합니다. 활성기에 상주하는 서비스를 제어 서비스라고 합니다.  
+ 이 샘플에서는 WCF를 사용 하 여 활성기와 WAS 작업자 프로세스 간에 통신 합니다. 활성기에 상주하는 서비스를 제어 서비스라고 합니다.  
   
 ## <a name="protocol-handlers"></a>프로토콜 처리기  
- 수신기 어댑터가 `WebhostOpenListenerChannelInstance`를 호출한 후 WAS 프로세스 관리자는 작업자 프로세스를 시작합니다(시작되지 않은 경우). 그런 다음 작업자 프로세스 내부의 애플리케이션 관리자는 해당 `ListenerChannelId`에 대한 요청과 함께 UDP PPH(프로세스 프로토콜 처리기)를 로드합니다. 호출에서 PPH `IAdphManager`합니다.`StartAppDomainProtocolListenerChannel` UDP AppDomain 프로토콜 처리기 (ADPH)를 시작 합니다.  
+ 수신기 어댑터가 `WebhostOpenListenerChannelInstance`를 호출한 후 WAS 프로세스 관리자는 작업자 프로세스를 시작합니다(시작되지 않은 경우). 그런 다음 작업자 프로세스 내부의 애플리케이션 관리자는 해당 `ListenerChannelId`에 대한 요청과 함께 UDP PPH(프로세스 프로토콜 처리기)를 로드합니다. PPH은 호출을 차례로 `IAdphManager`호출 합니다.`StartAppDomainProtocolListenerChannel` UDP AppDomain 프로토콜 처리기 (ADPH)를 시작 합니다.  
   
 ## <a name="hostedudptransportconfiguration"></a>HostedUDPTransportConfiguration  
  이 정보는 다음과 같이 Web.config에 등록됩니다.  
@@ -85,20 +85,20 @@ ms.locfileid: "65881001"
   
     - "Default Web Site" 사이트에 UDP 바인딩을 설치합니다.  
   
-    - 가상 응용 프로그램 "ServiceModelSamples"를 만들어 실제 경로인 "%SystemDrive%\inetpub\wwwroot\servicemodelsamples"를 가리킵니다.  
+    - 가상 애플리케이션 &quot;ServiceModelSamples&quot;를 만들어 실제 경로인 &quot;%SystemDrive%\inetpub\wwwroot\servicemodelsamples&quot;를 가리킵니다.  
   
-    - 또한 이 가상 응용 프로그램에 대해 "net.udp" 프로토콜을 사용하도록 설정합니다.  
+    - 또한 이 가상 애플리케이션에 대해 &quot;net.udp&quot; 프로토콜을 사용하도록 설정합니다.  
   
-3. 사용자 인터페이스 응용 프로그램인 "WasNetActivator.exe"를 시작합니다. 클릭 합니다 **설치** 탭에서 다음 확인란을 확인 하 고 클릭 **설치** 설치:  
+3. 사용자 인터페이스 애플리케이션인 &quot;WasNetActivator.exe&quot;를 시작합니다. **설치** 탭을 클릭 하 고 다음 확인란을 선택한 후 **설치** 를 클릭 하 여 설치 합니다.  
   
     - UDP Listener Adapter  
   
     - UDP Protocol Handlers  
   
-4. 클릭 합니다 **활성화** 사용자 인터페이스 응용 프로그램 "WasNetActivator.exe"의 탭 합니다. 클릭 합니다 **시작** 수신기 어댑터를 시작 하는 단추입니다. 이제 프로그램을 실행할 준비가 되었습니다.  
+4. "Wasnetactivator.exe" 사용자 인터페이스 응용 프로그램의 **활성화** 탭을 클릭 합니다. **시작** 단추를 클릭 하 여 수신기 어댑터를 시작 합니다. 이제 프로그램을 실행할 준비가 되었습니다.  
   
     > [!NOTE]
-    >  이 샘플 사용을 마친 다음에는 Cleanup.bat를 실행하여 "Default Web Site"에서 net.udp 바인딩을 제거해야 합니다.  
+    > 이 샘플 사용을 마친 다음에는 Cleanup.bat를 실행하여 "Default Web Site"에서 net.udp 바인딩을 제거해야 합니다.  
   
 ## <a name="sample-usage"></a>샘플 사용  
  컴파일 후에는 다음과 같이 네 개의 다른 이진 파일이 생성됩니다.  
@@ -119,7 +119,7 @@ ms.locfileid: "65881001"
   
     - 인터넷 정보 서비스 (IIS): W3SVC.  
   
-2. 그런 다음 활성기인 WasNetActivator.exe를 시작합니다. 아래는 **활성화** 탭에서 하나뿐인 프로토콜인 **UDP**, 드롭다운 목록에서에서 선택 된 합니다. 클릭 합니다 **시작** 활성기를 시작 하는 단추입니다.  
+2. 그런 다음 활성기인 WasNetActivator.exe를 시작합니다. **활성화** 탭의 드롭다운 목록에서 유일한 프로토콜인 **UDP**를 선택 합니다. **시작** 단추를 클릭 하 여 활성기를 시작 합니다.  
   
 3. 활성기가 시작되었으면 명령 창에서 Client.exe를 실행하여 클라이언트 코드를 실행할 수 있습니다. 다음은 샘플 출력입니다.  
   
@@ -154,10 +154,10 @@ ms.locfileid: "65881001"
     ```  
   
 > [!IMPORTANT]
->  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
+> 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\UdpActivation`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\UdpActivation`  
