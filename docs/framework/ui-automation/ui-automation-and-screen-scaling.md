@@ -10,18 +10,18 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: 35b46d2030ee887eb98618fbed127097cec1f0c5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e0f7bd553096be0674827aa0498a53df5247940e
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044194"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133774"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI 자동화 및 화면 크기 조정
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]사용자가 dpi (인치당 도트 수) 설정을 변경 하 여 화면에 있는 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 대부분의 요소가 더 크게 나타나도록 합니다. 이 기능은 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]에서 오래 전부터 사용할 수 있었지만, 이전 버전에서는 크기 조정을 애플리케이션에서 구현해야 했습니다. [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]에서 바탕 화면 창 관리자는 자체 크기 조정을 처리하지 않는 모든 응용 프로그램에 기본 크기 조정을 수행합니다. UI 자동화 클라이언트 애플리케이션에서는 이 기능을 고려해야 합니다.  
+Windows Vista부터 사용자는 dpi (인치당 도트 수) 설정을 변경 하 여 화면에 있는 대부분의 UI (사용자 인터페이스) 요소를 더 크게 표시할 수 있습니다. Windows에서는이 기능을 사용할 수 있었지만 이전 버전에서는 응용 프로그램에서 크기 조정을 구현 해야 했습니다. Windows Vista부터 바탕 화면 창 관리자는 자체 크기 조정을 처리 하지 않는 모든 응용 프로그램에 대해 기본 크기 조정을 수행 합니다. UI 자동화 클라이언트 애플리케이션에서는 이 기능을 고려해야 합니다.  
   
 <a name="Scaling_in_Windows_Vista"></a>   
 ## <a name="scaling-in-windows-vista"></a>Windows Vista에서 크기 조정  

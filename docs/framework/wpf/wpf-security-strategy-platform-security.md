@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 65725851cb413e28ceff0d1c9c4b62b76c4fff18
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 44f98a6d7bf8358baf3b123b2d3b1d13009098a6
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817889"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133759"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 보안 전략 - 플랫폼 보안
 WPF (Windows Presentation Foundation)는 다양 한 보안 서비스를 제공 하지만 운영 체제, CLR 및 Internet Explorer를 포함 하는 기본 플랫폼의 보안 기능도 활용 합니다. 이러한 계층이 결합되어 다음 그림과 같이 단일 실패 지점을 방지하는 강력한 심층 방어 보안 모델인 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]를 제공합니다.  
@@ -33,7 +33,7 @@ WPF (Windows Presentation Foundation)는 다양 한 보안 서비스를 제공 �
 
 <a name="Operating_System_Security"></a>   
 ## <a name="operating-system-security"></a>운영 체제 보안  
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]에 필요한 최소 수준의 운영 체제는 [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]입니다. 의 [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] 핵심은로 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]빌드된 응용 프로그램을 포함 하 여 모든 Windows 응용 프로그램에 대 한 보안 기반을 형성 하는 몇 가지 보안 기능을 제공 합니다. [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]은 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]의 보안 기능을 통합하고 더욱 확장합니다. 이 항목에서는 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]에 중요한 다양한 보안 기능 및 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]가 더욱 심층 방어를 제공하기 위해 이러한 기능과 통합되는 방법을 설명합니다.  
+Windows의 핵심은 WPF로 빌드된 응용 프로그램을 포함 하 여 모든 Windows 응용 프로그램에 대 한 보안 기반을 형성 하는 몇 가지 보안 기능을 제공 합니다. 이 항목에서는 wpf에 중요 한 이러한 보안 기능의 범위 뿐만 아니라 WPF를 사용 하 여 심층 방어를 제공 하는 방법을 설명 합니다.  
   
 <a name="Microsoft_Windows_XP_Service_Pack_2__SP2_"></a>   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP SP2(서비스 팩 2)  
@@ -50,32 +50,32 @@ WPF (Windows Presentation Foundation)는 다양 한 보안 서비스를 제공 �
   
  높은 수준에서 /GS 컴파일러 플래그는 로컬 문자열 버퍼가 있는 함수의 반환 주소를 보호하기 위해 특수 보안 쿠키를 삽입하여 잠재적인 버퍼 오버런으로부터 보호합니다. 함수가 반환된 후 보안 쿠키를 이전 값과 비교합니다. 값이 변경된 경우 버퍼 오버런이 발생했을 수 있으며 프로세스가 오류 상태로 중지됩니다. 프로세스를 중지하면 잠재적인 악성 코드의 실행이 방지됩니다. 자세한 내용은 [/gs (버퍼 보안 검사)](/cpp/build/reference/gs-buffer-security-check) 를 참조 하세요.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션에 다른 방어 계층을 추가하기 위해 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]는 /GS 플래그로 컴파일됩니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램에 다른 방어 계층을 추가하기 위해 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]는 /GS 플래그로 컴파일됩니다.  
   
 #### <a name="microsoft-windows-update-enhancements"></a>Microsoft Windows 업데이트 향상 기능  
  [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]에서는 업데이트 다운로드 및 설치 프로세스를 간소화하기 위해 [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)]도 향상되었습니다. 이러한 변경 내용은 특히 보안 업데이트와 관련해서 시스템을 최신 상태로 유지할 수 있게 하여 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 고객의 보안을 훨씬 향상시킵니다.  
   
 <a name="Windows_Vista"></a>   
 ### <a name="windows-vista"></a>Windows Vista  
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]의 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 사용자는 "최소 권한 사용자 액세스", 코드 무결성 검사 및 권한 격리를 비롯한 운영 체제의 향상된 추가 보안 기능을 활용합니다.  
+Windows Vista의 WPF 사용자는 "최소 권한 사용자 액세스", 코드 무결성 검사 및 권한 격리를 비롯 한 운영 체제의 추가 보안 향상 기능을 활용 합니다.  
   
 #### <a name="user-account-control-uac"></a>UAC(사용자 계정 컨트롤)  
  현재 대부분의 응용 프로그램은 설치 또는 실행 중 하나 또는 둘 다에 대해 필요 하기 때문에 Windows 사용자는 관리자 권한으로 실행 하는 경향이 있습니다. 한 가지 예로 기본 애플리케이션 설정을 레지스트리에 쓸 수 있습니다.  
   
  관리자 권한으로 실행은 실제로 관리자 권한이 부여된 프로세스에서 애플리케이션이 실행됨을 의미합니다. 이 경우 보안에 미치는 영향은 관리자 권한으로 실행되는 프로세스를 가로챈 악성 코드가 중요한 시스템 리소스에 대한 액세스를 포함하여 해당 권한을 자동으로 상속하게 된다는 것입니다.  
   
- 이 보안 위협으로부터 보호하는 한 가지 방법은 필요한 최소한의 권한으로 애플리케이션을 실행하는 것입니다. 이를 최소 권한의 원칙이라고 하며 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] 운영 체제의 핵심 기능입니다. 이 기능은 UAC(사용자 계정 컨트롤)라고 하며 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] UAC에서 다음 두 가지 주요 방식으로 사용됩니다.  
+ 이 보안 위협으로부터 보호하는 한 가지 방법은 필요한 최소한의 권한으로 애플리케이션을 실행하는 것입니다. 이를 최소 권한의 원칙 이라고 하며, Windows 운영 체제의 핵심 기능입니다. 이 기능을 UAC (사용자 계정 컨트롤) 라고 하며 Windows UAC에서 다음과 같은 두 가지 주요 방법으로 사용 됩니다.  
   
 - 사용자가 관리자인 경우에도 기본적으로 대부분의 애플리케이션을 UAC 권한으로 실행합니다. 관리자 권한이 필요한 애플리케이션만 관리자 권한으로 실행됩니다. 관리자 권한으로 실행하려면 애플리케이션 매니페스트에서 또는 보안 정책의 항목으로 애플리케이션에 명시적으로 표시해야 합니다.  
   
 - 가상화와 같은 호환성 솔루션을 제공합니다. 예를 들어 많은 애플리케이션이 C:\Program Files와 같은 제한된 위치에 쓰려고 합니다. UAC로 실행되는 애플리케이션의 경우 쓰는 데 관리자 권한이 필요하지 않은 사용자별 대체 위치가 있습니다. UAC로 실행되는 애플리케이션의 경우 해당 위치에 쓰고 있다고 생각하는 애플리케이션이 실제로는 사용자별 대체 위치에 쓰도록 UAC에서 C:\Program Files를 가상화합니다. 이러한 종류의 호환성 작업을 통해 운영 체제가 UAC에서 이전에 실행할 수 없었던 많은 애플리케이션을 실행할 수 있습니다.  
   
 #### <a name="code-integrity-checks"></a>코드 무결성 검사  
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]에서는 로드/실행 시 악성 코드가 시스템 파일이나 커널에 삽입되는 것을 방지하기 위해 더욱 강력한 코드 무결성 검사가 통합되었습니다. 이는 시스템 파일 보호 수준을 벗어납니다.  
+ Windows Vista에서는 로드/실행 시 악성 코드가 시스템 파일이 나 커널에 삽입 되는 것을 방지 하기 위해 보다 심층적인 코드 무결성 검사를 통합 합니다. 이는 시스템 파일 보호 수준을 벗어납니다.  
   
 <a name="Limited_Rights_Process_for_Browser_Hosted_Applications"></a>   
 ### <a name="limited-rights-process-for-browser-hosted-applications"></a>브라우저에서 호스트된 애플리케이션에 대한 제한된 권한 프로세스  
- 브라우저에서 호스트된 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션은 인터넷 영역 샌드박스 내에서 실행됩니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]Microsoft Internet Explorer와의 통합은 추가 지원으로이 보호를 확장 합니다.  
+ 브라우저에서 호스트된 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램은 인터넷 영역 샌드박스 내에서 실행됩니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]Microsoft Internet Explorer와의 통합은 추가 지원으로이 보호를 확장 합니다.  
   
  [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]은 일반적으로 인터넷 영역 권한 집합을 통해 샌드박싱되므로 이러한 권한을 제거해도 호환성 관점에서 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]에 나쁜 영향을 주지 않습니다. 대신, 추가 심층 방어 계층이 만들어집니다. 샌드박스 애플리케이션이 다른 계층을 악용하고 프로세스를 가로챌 수 있는 경우 프로세스에 여전히 제한된 권한만 포함됩니다.  
   
@@ -107,7 +107,7 @@ WPF (Windows Presentation Foundation)는 다양 한 보안 서비스를 제공 �
 ### <a name="code-access-security"></a>코드 액세스 보안  
  클라이언트 컴퓨터는 파일 시스템, 레지스트리, 인쇄 서비스, 사용자 인터페이스, 리플렉션 및 환경 변수를 포함하여 관리되는 애플리케이션이 액세스할 수 있는 다양한 리소스를 노출합니다. 관리 되는 응용 프로그램이 클라이언트 컴퓨터의 리소스에 액세스할 수 있으려면 먼저 .NET Framework 권한이 있어야 합니다. CAS의 권한은의 <xref:System.Security.CodeAccessPermission>서브 클래스입니다. CAS는 관리 되는 응용 프로그램이 액세스할 수 있는 각 리소스에 대해 하나의 하위 클래스를 구현 합니다.  
   
- 관리 되는 응용 프로그램이 실행을 시작할 때 CA에서 부여 하는 사용 권한 집합은 권한 집합 이라고 하며 응용 프로그램에서 제공 하는 증명 정보에 의해 결정 됩니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션의 경우 제공되는 증거는 애플리케이션이 시작되는 위치 또는 영역입니다. CA는 다음과 같은 영역을 식별 합니다.  
+ 관리 되는 응용 프로그램이 실행을 시작할 때 CA에서 부여 하는 사용 권한 집합은 권한 집합 이라고 하며 응용 프로그램에서 제공 하는 증명 정보에 의해 결정 됩니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램의 경우 제공되는 증거는 응용 프로그램이 시작되는 위치 또는 영역입니다. CA는 다음과 같은 영역을 식별 합니다.  
   
 - **내 컴퓨터** 클라이언트 컴퓨터에서 시작된 애플리케이션입니다(완전 신뢰).  
   
@@ -150,9 +150,9 @@ WPF (Windows Presentation Foundation)는 다양 한 보안 서비스를 제공 �
   
  샌드박스 애플리케이션에서 이러한 작업에 직접 액세스할 수 있도록 허용하면 보안상 치명적일 수 있습니다.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]는 샌드박스 애플리케이션 대신 높은 권한으로 이러한 작업을 실행할 수 있도록 허용하여 이 상황에 대응합니다. 모든 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 작업은 XBAP의 응용 프로그램 도메인에 대 한 제한 된 인터넷 영역 보안 권한에 대해 확인 되지만 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] , 다른 시스템 라이브러리와 마찬가지로 모든 가능한 사용 권한을 포함 하는 권한 집합이 부여 됩니다.
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]는 샌드박스 응용 프로그램 대신 높은 권한으로 이러한 작업을 실행할 수 있도록 허용하여 이 상황에 대응합니다. 모든 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 작업은 XBAP의 응용 프로그램 도메인에 대 한 제한 된 인터넷 영역 보안 권한에 대해 확인 되지만 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] , 다른 시스템 라이브러리와 마찬가지로 모든 가능한 사용 권한을 포함 하는 권한 집합이 부여 됩니다.
   
- 이 경우 해당 권한이 호스트 애플리케이션 도메인의 인터넷 영역 권한 집합에 의해 제어되지 않도록 하는 동시에 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]가 높은 권한을 받아야 합니다.  
+ 이 경우 해당 권한이 호스트 응용 프로그램 도메인의 인터넷 영역 권한 집합에 의해 제어되지 않도록 하는 동시에 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]가 높은 권한을 받아야 합니다.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]사용 권한의 **Assert** 메서드를 사용 하 여이를 수행 합니다. 다음 코드에서는 이렇게 되는 방식을 보여 줍니다.  
   
@@ -195,7 +195,7 @@ WPF (Windows Presentation Foundation)는 다양 한 보안 서비스를 제공 �
   
  동일한 사용자 시작 논리가 동일한 사용자 시작 논리를 사용 하 여 **Open**/security 프롬프트에도 적용 됩니다. 이전에 설치 된 컨트롤의 업그레이드를 나타내지 않는 한 ActiveX 설치 대화 상자는 항상 알림 표시줄 아래에 트래핑 됩니다. 이러한 조치가 결합되어 사용자에게 더 안전하고 제어된 사용자 환경을 제공합니다. 사용자가 원하지 않는 소프트웨어나 악성 소프트웨어를 설치하도록 유인하는 사이트로부터 보호되기 때문입니다.  
   
- 또한 이러한 기능은 IE6 s p 2를 사용 하 여 응용 프로그램을 다운로드 하 고 설치할 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 수 있는 웹 사이트를 검색 하는 고객을 보호 합니다. 특히 IE6 s p 2는를 포함 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]하 여 빌드에 사용 된 기술에 관계 없이 사용자가 악의적인 응용 프로그램 또는 유해한 응용 프로그램을 설치할 가능성을 줄이는 향상 된 사용자 환경을 제공 하기 때문입니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]는 ClickOnce를 사용 하 여 인터넷을 통해 응용 프로그램을 쉽게 다운로드할 수 있도록 이러한 보호 기능에 추가 합니다. [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]은 인터넷 영역 보안 샌드박스 내에서 실행되므로 매끄럽게 시작할 수 있습니다. 반면, 독립 실행형 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션을 실행하려면 완전 신뢰가 필요합니다. 이러한 응용 프로그램의 경우 ClickOnce는 시작 프로세스 중에 보안 대화 상자를 표시 하 여 응용 프로그램의 추가 보안 요구 사항을 사용 하도록 알립니다. 그러나 사용자가 시작해야 하고, 사용자가 시작한 논리에 의해 제어되며, 취소할 수 있습니다.  
+ 또한 이러한 기능은 IE6 s p 2를 사용 하 여 응용 프로그램을 다운로드 하 고 설치할 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 수 있는 웹 사이트를 검색 하는 고객을 보호 합니다. 특히 IE6 s p 2는를 포함 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]하 여 빌드에 사용 된 기술에 관계 없이 사용자가 악의적인 응용 프로그램 또는 유해한 응용 프로그램을 설치할 가능성을 줄이는 향상 된 사용자 환경을 제공 하기 때문입니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]는 ClickOnce를 사용 하 여 인터넷을 통해 응용 프로그램을 쉽게 다운로드할 수 있도록 이러한 보호 기능에 추가 합니다. [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]은 인터넷 영역 보안 샌드박스 내에서 실행되므로 매끄럽게 시작할 수 있습니다. 반면, 독립 실행형 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 실행하려면 완전 신뢰가 필요합니다. 이러한 응용 프로그램의 경우 ClickOnce는 시작 프로세스 중에 보안 대화 상자를 표시 하 여 응용 프로그램의 추가 보안 요구 사항을 사용 하도록 알립니다. 그러나 사용자가 시작해야 하고, 사용자가 시작한 논리에 의해 제어되며, 취소할 수 있습니다.  
   
  Internet Explorer 7은 보안에 대 한 지속적인 약정의 일환으로 IE6 s p 2의 보안 기능을 통합 하 고 확장 합니다.  
   

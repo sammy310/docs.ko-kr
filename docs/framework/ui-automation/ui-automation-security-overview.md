@@ -5,17 +5,17 @@ helpviewer_keywords:
 - UI Automation, security model
 - security model, UI Automation
 ms.assetid: 1d853695-973c-48ae-b382-4132ae702805
-ms.openlocfilehash: c74f770f917fc3b2a7d3a18c08270745dac68b12
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 8b798aef528cccdedb1fcaa53c1782632037600d
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422428"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133781"
 ---
 # <a name="ui-automation-security-overview"></a>UI 자동화 보안 개요
 
 > [!NOTE]
-> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 최신 정보에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]를 참조 하세요 [Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746)합니다.
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).
 
 이 개요에서는 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 의 [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)]에 대한 보안 모델을 설명합니다.
 
@@ -41,7 +41,7 @@ UI 자동화 클라이언트는 더 높은 권한 수준에서 실행 중일 수
 
 ## <a name="manifest-files"></a>매니페스트 파일
 
-포함 된 매니페스트 파일을 사용 하 여 구축 해야 응용 프로그램 보호 된 시스템 UI에 액세스 합니다 `uiAccess` 특성을 `requestedExecutionLevel` 태그를 다음과 같이:
+보호 된 시스템 UI에 대 한 액세스 권한을 얻으려면 다음과 같이 `uiAccess` `requestedExecutionLevel` 태그에 특성을 포함 하는 매니페스트 파일을 사용 하 여 응용 프로그램을 빌드해야 합니다.
 
 ```xml
 <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
@@ -57,6 +57,4 @@ UI 자동화 클라이언트는 더 높은 권한 수준에서 실행 중일 수
 
 이 코드에서 `level` 특성의 값은 예제일 뿐입니다.
 
-`uiAccess` 기본적으로 "false" 즉, 특성을 생략 하거나 어셈블리에 대 한 매니페스트가 없을 경우 응용 프로그램은 보호 된 UI에 액세스할 수 없습니다.
-
-에 대 한 자세한 [!INCLUDE[TLA#tla_longhorn2](../../../includes/tlasharptla-longhorn2-md.md)] 보안, 응용 프로그램 서명 및 어셈블리 매니페스트를 만드는 방법에 참조 [Developer Best Practices and Guidelines for Applications는 최소 권한 환경에서](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480150(v=msdn.10))합니다.
+`uiAccess`는 기본적으로 "false"입니다. 즉, 특성을 생략 하거나 어셈블리에 대 한 매니페스트가 없는 경우 응용 프로그램은 보호 된 UI에 대 한 액세스 권한을 얻을 수 없습니다.
