@@ -2,12 +2,12 @@
 title: 매개 변수 및 인수
 description: 매개 변수 F# 를 정의 하 고 함수, 메서드 및 속성에 인수를 전달 하는 언어 지원에 대해 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 561cefb1d437b2f38f6ee4ca37cd955235ca06fa
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 67e82d031c4b22bc30a6f278d9698298ccff2e21
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627306"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106598"
 ---
 # <a name="parameters-and-arguments"></a>매개 변수 및 인수
 
@@ -163,9 +163,9 @@ type C =
 
 참조로 F# 값을 전달 하는 데는 관리 되는 포인터 형식인 [byref 배열과 같은](byrefs.md)이 포함 됩니다. 사용할 형식에 대 한 지침은 다음과 같습니다.
 
-* 포인터 `inref<'T>` 를 읽기만 하면를 사용 합니다.
-* 포인터 `outref<'T>` 에만 써야 하는 경우에는를 사용 합니다.
-* 포인터 `byref<'T>` 에 대 한 읽기 및 쓰기를 모두 수행 해야 하는 경우에는를 사용 합니다.
+- 포인터 `inref<'T>` 를 읽기만 하면를 사용 합니다.
+- 포인터 `outref<'T>` 에만 써야 하는 경우에는를 사용 합니다.
+- 포인터 `byref<'T>` 에 대 한 읽기 및 쓰기를 모두 수행 해야 하는 경우에는를 사용 합니다.
 
 ```fsharp
 let example1 (x: inref<int>) = printfn "It's %d" x

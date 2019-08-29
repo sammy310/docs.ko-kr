@@ -2,12 +2,12 @@
 title: 구별된 공용 구조체
 description: 구별 된 공용 구조체 F# 를 사용 하는 방법을 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 940bc51f49e283c31846dd2047b749769b919838
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: fa4f011a8d5fd6725a44e030b423e79244a18734
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630355"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106762"
 ---
 # <a name="discriminated-unions"></a>구별된 공용 구조체
 
@@ -200,10 +200,10 @@ type Shape =
 
 다음 특성은 일반적으로 구분 된 공용 구조체에서 볼 수 있습니다.
 
-* `[<RequireQualifiedAccess>]`
-* `[<NoEquality>]`
-* `[<NoComparison>]`
-* `[<Struct>]`
+- `[<RequireQualifiedAccess>]`
+- `[<NoEquality>]`
+- `[<NoComparison>]`
+- `[<Struct>]`
 
 ## <a name="see-also"></a>참고자료
 

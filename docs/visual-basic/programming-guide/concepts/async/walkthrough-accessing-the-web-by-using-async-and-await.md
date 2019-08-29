@@ -2,12 +2,12 @@
 title: '연습: Async 및 Wait (Visual Basic)를 사용 하 여 웹에 액세스'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 7240e78614353249c82e84feac66137828a589ed
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 225046992badba7013193163a191dbf068f0da6a
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630991"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106979"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>연습: Async 및 Wait (Visual Basic)를 사용 하 여 웹에 액세스
 
@@ -22,17 +22,17 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
 이 연습에서는 다음 작업을 완료합니다.
 
 > [!div class="checklist"]
-> * [WPF 응용 프로그램 만들기](#create-a-wpf-application)
-> * [간단한 WPF Mainwindow.xaml 디자인](#design-a-simple-wpf-mainwindow)
-> * [참조 추가](#add-a-reference)
-> * [필요한 Imports 문 추가](#add-necessary-imports-statements)
-> * [동기 응용 프로그램 만들기](#create-a-synchronous-application)
-> * [동기 솔루션 테스트](#test-the-synchronous-solution)
-> * [GetURLContents를 비동기 메서드로 변환](#convert-geturlcontents-to-an-asynchronous-method)
-> * [SumPageSizes을 비동기 메서드로 변환](#convert-sumpagesizes-to-an-asynchronous-method)
-> * [StartButton_Click을 비동기 메서드로 변환](#convert-startbutton_click-to-an-asynchronous-method)
-> * [비동기 솔루션 테스트](#test-the-asynchronous-solution)
-> * [GetURLContentsAsync 메서드를 .NET Framework 메서드로 바꿉니다.](#replace-the-geturlcontentsasync-method-with-a-net-framework-method)
+> - [WPF 응용 프로그램 만들기](#create-a-wpf-application)
+> - [간단한 WPF Mainwindow.xaml 디자인](#design-a-simple-wpf-mainwindow)
+> - [참조 추가](#add-a-reference)
+> - [필요한 Imports 문 추가](#add-necessary-imports-statements)
+> - [동기 응용 프로그램 만들기](#create-a-synchronous-application)
+> - [동기 솔루션 테스트](#test-the-synchronous-solution)
+> - [GetURLContents를 비동기 메서드로 변환](#convert-geturlcontents-to-an-asynchronous-method)
+> - [SumPageSizes을 비동기 메서드로 변환](#convert-sumpagesizes-to-an-asynchronous-method)
+> - [StartButton_Click을 비동기 메서드로 변환](#convert-startbutton_click-to-an-asynchronous-method)
+> - [비동기 솔루션 테스트](#test-the-asynchronous-solution)
+> - [GetURLContentsAsync 메서드를 .NET Framework 메서드로 바꿉니다.](#replace-the-geturlcontentsasync-method-with-a-net-framework-method)
 
 전체 비동기 예제는 [예제](#example) 섹션을 참조 하세요.
 

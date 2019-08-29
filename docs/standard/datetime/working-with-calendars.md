@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28e1979b6ceb1b343764900cc7d49a576a7a4030
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e92d5564308d31609b9fb024f3d3368a19b76b1d
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630553"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106709"
 ---
 # <a name="working-with-calendars"></a>달력 작업
 
@@ -30,39 +30,39 @@ ms.locfileid: "68630553"
 
 .Net의 모든 달력은 기본 달력 <xref:System.Globalization.Calendar?displayProperty=nameWithType> 구현을 제공 하는 클래스에서 파생 됩니다. <xref:System.Globalization.Calendar> 클래스로부터 상속되는 클래스 중 하나는 모든 음력 달력의 기본 클래스인 <xref:System.Globalization.EastAsianLunisolarCalendar> 클래스입니다. .NET에는 다음과 같은 달력 구현이 포함 됩니다.
 
-* <xref:System.Globalization.ChineseLunisolarCalendar>는 중국식 음력 달력을 나타냅니다.
+- <xref:System.Globalization.ChineseLunisolarCalendar>는 중국식 음력 달력을 나타냅니다.
 
-* <xref:System.Globalization.GregorianCalendar>는 그레고리오력을 나타냅니다. 이 달력은 다시 <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType> 열거형으로 정의되는 하위 유형으로 세분화됩니다(예: 아랍어 및 중동 프랑스어). <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> 속성은 그레고리오력 달력의 하위 유형을 지정합니다.
+- <xref:System.Globalization.GregorianCalendar>는 그레고리오력을 나타냅니다. 이 달력은 다시 <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType> 열거형으로 정의되는 하위 유형으로 세분화됩니다(예: 아랍어 및 중동 프랑스어). <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> 속성은 그레고리오력 달력의 하위 유형을 지정합니다.
 
-* <xref:System.Globalization.HebrewCalendar>는 히브리어 달력을 나타냅니다.
+- <xref:System.Globalization.HebrewCalendar>는 히브리어 달력을 나타냅니다.
 
-* <xref:System.Globalization.HijriCalendar>는 회교식 달력을 나타냅니다.
+- <xref:System.Globalization.HijriCalendar>는 회교식 달력을 나타냅니다.
 
-* <xref:System.Globalization.JapaneseCalendar>는 일본식 달력을 나타냅니다.
+- <xref:System.Globalization.JapaneseCalendar>는 일본식 달력을 나타냅니다.
 
-* <xref:System.Globalization.JapaneseLunisolarCalendar>는 일본식 음력 달력을 나타냅니다.
+- <xref:System.Globalization.JapaneseLunisolarCalendar>는 일본식 음력 달력을 나타냅니다.
 
-* <xref:System.Globalization.JulianCalendar>는 율리우스력을 나타냅니다.
+- <xref:System.Globalization.JulianCalendar>는 율리우스력을 나타냅니다.
 
-* <xref:System.Globalization.KoreanCalendar>는 한국식 달력을 나타냅니다.
+- <xref:System.Globalization.KoreanCalendar>는 한국식 달력을 나타냅니다.
 
-* <xref:System.Globalization.KoreanLunisolarCalendar>는 한국식 음력 달력을 나타냅니다.
+- <xref:System.Globalization.KoreanLunisolarCalendar>는 한국식 음력 달력을 나타냅니다.
 
-* <xref:System.Globalization.PersianCalendar>는 페르시아력을 나타냅니다.
+- <xref:System.Globalization.PersianCalendar>는 페르시아력을 나타냅니다.
 
-* <xref:System.Globalization.TaiwanCalendar>는 대만식 달력을 나타냅니다.
+- <xref:System.Globalization.TaiwanCalendar>는 대만식 달력을 나타냅니다.
 
-* <xref:System.Globalization.TaiwanLunisolarCalendar>는 대만식 음력 달력을 나타냅니다.
+- <xref:System.Globalization.TaiwanLunisolarCalendar>는 대만식 음력 달력을 나타냅니다.
 
-* <xref:System.Globalization.ThaiBuddhistCalendar>는 태국 불교식 달력을 나타냅니다.
+- <xref:System.Globalization.ThaiBuddhistCalendar>는 태국 불교식 달력을 나타냅니다.
 
-* <xref:System.Globalization.UmAlQuraCalendar>는 사우디아라비아 회교식(Um Al Qura) 달력을 나타냅니다.
+- <xref:System.Globalization.UmAlQuraCalendar>는 사우디아라비아 회교식(Um Al Qura) 달력을 나타냅니다.
 
 달력은 다음 두 가지 방법 중 하나로 사용할 수 있습니다.
 
-* 특정 문화권에서 사용되는 달력. 각 <xref:System.Globalization.CultureInfo> 개체에는 해당 개체가 현재 사용 중인 달력인 현재 달력이 포함됩니다. 모든 날짜 및 시간 값에 대한 문자열 표현에는 자동으로 현재 문화권과 현재 달력이 반영됩니다. 일반적으로 현재 달력은 해당 문화권의 기본 달력입니다. <xref:System.Globalization.CultureInfo>개체에는 문화권에서 사용할 수 있는 추가 달력을 포함 하는 선택적 달력도 있습니다.
+- 특정 문화권에서 사용되는 달력. 각 <xref:System.Globalization.CultureInfo> 개체에는 해당 개체가 현재 사용 중인 달력인 현재 달력이 포함됩니다. 모든 날짜 및 시간 값에 대한 문자열 표현에는 자동으로 현재 문화권과 현재 달력이 반영됩니다. 일반적으로 현재 달력은 해당 문화권의 기본 달력입니다. <xref:System.Globalization.CultureInfo>개체에는 문화권에서 사용할 수 있는 추가 달력을 포함 하는 선택적 달력도 있습니다.
 
-* 특정 문화권과 관계가 없는 독립 실행형 달력. 이 경우에는 달력을 반영한 값으로 날짜를 표시하기 위해 <xref:System.Globalization.Calendar> 메서드가 사용됩니다.
+- 특정 문화권과 관계가 없는 독립 실행형 달력. 이 경우에는 달력을 반영한 값으로 날짜를 표시하기 위해 <xref:System.Globalization.Calendar> 메서드가 사용됩니다.
 
 6개의 달력 클래스 <xref:System.Globalization.ChineseLunisolarCalendar>, <xref:System.Globalization.JapaneseLunisolarCalendar>, <xref:System.Globalization.JulianCalendar>, <xref:System.Globalization.KoreanLunisolarCalendar>, <xref:System.Globalization.PersianCalendar> 및 <xref:System.Globalization.TaiwanLunisolarCalendar>는 독립 실행형 달력으로만 사용할 수 있습니다. 이러한 달력은 어떤 문화권에서도 기본 달력이나 선택적인 달력으로 사용되지 않습니다.
 

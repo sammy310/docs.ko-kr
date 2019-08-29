@@ -21,12 +21,12 @@ helpviewer_keywords:
 - If function [Visual Basic], and If...Then...Else statements
 - Else statement [Visual Basic]
 ms.assetid: 790068a2-1307-4e28-8a72-be5ebda099e9
-ms.openlocfilehash: 97ac8c82df14eb5ddc5e26fdaddf61cc774a0476
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e0b365afaa8cf7dff130cf01d2937be629e5f7a8
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046579"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106525"
 ---
 # <a name="ifthenelse-statement-visual-basic"></a>If...Then...Else 문(Visual Basic)
 
@@ -52,9 +52,9 @@ If condition Then [ statements ] [ Else [ elsestatements ] ]
 
 이 문서에는 `If`다음을 사용 하는 방법을 보여 주는 몇 가지 예가 포함 되어 있습니다. `Then`... `Else` 문:
 
-* [여러 줄 구문 예제](#multi-line)
-* [중첩 구문 예제](#nested)
-* [한 줄 구문 예제](#single-line)
+- [여러 줄 구문 예제](#multi-line)
+- [중첩 구문 예제](#nested)
+- [한 줄 구문 예제](#single-line)
 
 ## <a name="parts"></a>요소
 

@@ -3,16 +3,16 @@ title: F#을 사용하여 Azure Blob 스토리지 시작
 description: Azure Blob storage를 사용 하 여 클라우드에 구조화 되지 않은 데이터를 저장 합니다.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: c8b42339ff1d76f262e956b5e34cc598e0fc855d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c765f38cba7642e813a5966d3b7754c5ce45abbd
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630515"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107118"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>F #을 사용 하 여 Azure Blob storage 시작\#
 
-Azure Blob Storage는 클라우드에서 구조화되지 않은 데이터를 개체/Blob으로 저장하는 서비스입니다. Blob Storage는 문서, 미디어 파일 또는 애플리케이션 설치 프로그램과 같은 모든 종류의 텍스트 또는 이진 데이터를 저장할 수 있습니다. Blob 스토리지를 개체 스토리지라고도 합니다.
+Azure Blob Storage는 클라우드에서 구조화되지 않은 데이터를 개체/Blob으로 저장하는 서비스입니다. Blob Storage는 문서, 미디어 파일, 애플리케이션 설치 관리자 등과 같은 모든 유형의 텍스트 또는 이진 데이터를 저장할 수 있습니다. Blob 스토리지를 개체 스토리지라고도 합니다.
 
 이 문서에서는 Blob storage를 사용 하 여 일반적인 작업을 수행 하는 방법을 보여 줍니다. 샘플은 .NET 용 Azure Storage F# 클라이언트 라이브러리를 사용 하 여 작성 되었습니다. 여기에서 설명 하는 태스크에는 blob을 업로드, 나열, 다운로드 및 삭제 하는 방법이 포함 됩니다.
 
@@ -42,7 +42,7 @@ Blob 저장소에 대 한 개념적 개요는 [blob 저장소에 대 한 .net �
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L11-L11)]
 
-그러나 실제 프로젝트에는이 방법이 **권장 되지 않습니다** . 스토리지 계정 키는 스토리지 계정의 루트 암호와 비슷합니다. 항상 스토리지 계정 키를 보호해야 합니다. 다른 사용자에 게 배포 하거나 하드 코딩 하거나 다른 사용자가 액세스할 수 있는 일반 텍스트 파일로 저장 하지 않도록 합니다. 손상 된 것으로 생각 되는 경우 Azure Portal을 사용 하 여 키를 다시 생성할 수 있습니다.
+그러나 실제 프로젝트에는이 방법이 **권장 되지 않습니다** . 저장소 계정 키는 저장소 계정의 루트 암호와 비슷합니다. 항상 저장소 계정 키를 보호 해야 합니다. 다른 사용자에 게 배포 하거나 하드 코딩 하거나 다른 사용자가 액세스할 수 있는 일반 텍스트 파일로 저장 하지 않도록 합니다. 손상 된 것으로 생각 되는 경우 Azure Portal을 사용 하 여 키를 다시 생성할 수 있습니다.
 
 실제 응용 프로그램의 경우 저장소 연결 문자열을 유지 하는 가장 좋은 방법은 구성 파일에 있습니다. 구성 파일에서 연결 문자열을 가져오려면 다음을 수행할 수 있습니다.
 
@@ -186,15 +186,15 @@ Blob을 삭제 하려면 먼저 blob 참조를 가져온 다음 메서드를 `De
 
 여러 클라이언트나 여러 프로세스 인스턴스에서 blob에 대 한 동시 액세스를 지원 하려면 **etag** 또는 **임대**를 사용할 수 있습니다.
 
-* **Etag** -blob 또는 컨테이너가 다른 프로세스에 의해 수정 되었는지 감지 하는 방법을 제공 합니다.
+- **Etag** -blob 또는 컨테이너가 다른 프로세스에 의해 수정 되었는지 감지 하는 방법을 제공 합니다.
 
-* **임대** -일정 시간 동안 blob에 대 한 배타적, 갱신 가능, 쓰기 또는 삭제 권한을 얻는 방법을 제공 합니다.
+- **임대** -일정 시간 동안 blob에 대 한 배타적, 갱신 가능, 쓰기 또는 삭제 권한을 얻는 방법을 제공 합니다.
 
 자세한 내용은 [Microsoft Azure Storage에서 동시성 관리](https://azure.microsoft.com/blog/managing-concurrency-in-microsoft-azure-storage-2/)를 참조 하세요.
 
 ## <a name="naming-containers"></a>컨테이너 이름 지정
 
-Azure Storage의 모든 Blob은 컨테이너에 있어야 합니다. 컨테이너는 blob 이름의 일부를 형성 합니다. 예를 들어 `mydata` 는 다음 샘플 blob uri에 있는 컨테이너의 이름입니다.
+Azure storage의 모든 blob은 컨테이너에 있어야 합니다. 컨테이너는 blob 이름의 일부를 형성 합니다. 예를 들어 `mydata` 는 다음 샘플 blob uri에 있는 컨테이너의 이름입니다.
 
 - https://storagesample.blob.core.windows.net/mydata/blob1.txt
 - https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg
@@ -210,11 +210,11 @@ Azure Storage의 모든 Blob은 컨테이너에 있어야 합니다. 컨테이�
 
 ## <a name="managing-security-for-blobs"></a>Blob에 대 한 보안 관리
 
-기본적으로 Azure Storage는 계정 액세스 키를 소유 하는 계정 소유자에 대 한 액세스를 제한 하 여 데이터 보안을 유지 합니다. 스토리지 계정의 Blob 데이터를 공유해야 할 경우 계정 액세스 키의 보안을 손상시키지 않고 공유하는 것이 중요합니다. 또한 blob 데이터를 암호화 하 여 네트워크를 통해 안전 하 게 전송 하 고 Azure Storage 수 있습니다.
+기본적으로 Azure Storage는 계정 액세스 키를 소유 하는 계정 소유자에 대 한 액세스를 제한 하 여 데이터 보안을 유지 합니다. 저장소 계정에서 blob 데이터를 공유 해야 하는 경우 계정 액세스 키의 보안을 손상 시 키 지 않고이를 수행 하는 것이 중요 합니다. 또한 blob 데이터를 암호화 하 여 네트워크를 통해 안전 하 게 전송 하 고 Azure Storage 수 있습니다.
 
 ### <a name="controlling-access-to-blob-data"></a>Blob 데이터에 대 한 액세스 제어
 
-기본적으로 스토리지 계정의 Blob 데이터는 스토리지 계정 소유자만 액세스할 수 있습니다. Blob 저장소에 대 한 요청을 인증 하려면 기본적으로 계정 액세스 키가 필요 합니다. 그러나 특정 blob 데이터를 다른 사용자가 사용할 수 있도록 설정할 수 있습니다.
+기본적으로 저장소 계정의 blob 데이터는 저장소 계정 소유자만 액세스할 수 있습니다. Blob 저장소에 대 한 요청을 인증 하려면 기본적으로 계정 액세스 키가 필요 합니다. 그러나 특정 blob 데이터를 다른 사용자가 사용할 수 있도록 설정할 수 있습니다.
 
 ### <a name="encrypting-blob-data"></a>Blob 데이터 암호화
 
@@ -224,7 +224,7 @@ Azure Storage은 클라이언트와 서버 모두에서 blob 데이터를 암호
 
 이제 Blob storage의 기본 사항을 배웠으므로 다음 링크를 따라 자세히 알아보세요.
 
-### <a name="tools"></a>Tools
+### <a name="tools"></a>도구
 
 - [F# AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/)\
 Blob F# , 테이블 및 큐 Azure Storage 자산을 탐색 하 고이에 대 한 CRUD 작업을 쉽게 적용 하는 데 사용할 수 있는 형식 공급자입니다.

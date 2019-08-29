@@ -2,12 +2,12 @@
 title: 키워드 참조
 description: 모든 F# 언어 키워드에 대 한 정보 링크를 찾습니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 680b270a99eff7aa98652579d2fd31b4b05080ca
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 8c2df9d081caae48489e3e316ca158f3b9106efb
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733477"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107033"
 ---
 # <a name="keyword-reference"></a>키워드 참조
 
@@ -92,44 +92,44 @@ ms.locfileid: "68733477"
 
 다음 토큰은 OCaml 언어의 F# 키워드인 때문에에 예약 되어 있습니다.
 
-* `asr`
-* `land`
-* `lor`
-* `lsl`
-* `lsr`
-* `lxor`
-* `mod`
-* `sig`
+- `asr`
+- `land`
+- `lor`
+- `lsl`
+- `lsr`
+- `lxor`
+- `mod`
+- `sig`
 
 `--mlcompatibility` 컴파일러 옵션을 사용 하는 경우 위의 키워드를 식별자로 사용할 수 있습니다.
 
 다음 토큰은 나중에 F# 언어를 확장 하기 위한 키워드로 예약 되어 있습니다.
 
-* `atomic`
-* `break`
-* `checked`
-* `component`
-* `const`
-* `constraint`
-* `constructor`
-* `continue`
-* `eager`
-* `event`
-* `external`
-* `functor`
-* `include`
-* `method`
-* `mixin`
-* `object`
-* `parallel`
-* `process`
-* `protected`
-* `pure`
-* `sealed`
-* `tailcall`
-* `trait`
-* `virtual`
-* `volatile`
+- `atomic`
+- `break`
+- `checked`
+- `component`
+- `const`
+- `constraint`
+- `constructor`
+- `continue`
+- `eager`
+- `event`
+- `external`
+- `functor`
+- `include`
+- `method`
+- `mixin`
+- `object`
+- `parallel`
+- `process`
+- `protected`
+- `pure`
+- `sealed`
+- `tailcall`
+- `trait`
+- `virtual`
+- `volatile`
 
 ## <a name="see-also"></a>참고자료
 

@@ -15,30 +15,30 @@ helpviewer_keywords:
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d2ae7430c10254274eed6fb8a602aa8bc11bffb
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 1c4eb8c174e70b6761784a5defe12dc8a8a1e42b
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988496"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107074"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>DateTime, DateTimeOffset, TimeSpan 및 TimeZoneInfo 중 선택
 
 날짜 및 시간 정보를 사용하는 .NET 애플리케이션은 매우 다양하며 해당 정보를 여러 가지 방법으로 사용할 수 있습니다. 날짜 및 시간 정보를 사용하는 보다 일반적인 방법에는 다음 중 하나 이상이 포함됩니다.
 
-* 시간 정보가 중요하지 않도록 날짜만 반영합니다.
+- 시간 정보가 중요하지 않도록 날짜만 반영합니다.
 
-* 날짜 정보가 중요하지 않도록 시간만 반영합니다.
+- 날짜 정보가 중요하지 않도록 시간만 반영합니다.
 
-* 특정 시간과 장소에 연결되지 않은 추상 날짜와 시간을 반영합니다(예: 국제 체인의 상점은 대부분 평일 오전 9:00에 열림).
+- 특정 시간과 장소에 연결되지 않은 추상 날짜와 시간을 반영합니다(예: 국제 체인의 상점은 대부분 평일 오전 9:00에 열림).
 
-* 일반적으로 날짜 및 시간 정보가 단순 데이터 형식으로 저장 되는 .NET 외부의 소스에서 날짜 및 시간 정보를 검색 합니다.
+- 일반적으로 날짜 및 시간 정보가 단순 데이터 형식으로 저장 되는 .NET 외부의 소스에서 날짜 및 시간 정보를 검색 합니다.
 
-* 단일 시점을 고유하고 명확하게 식별합니다. 호스트 시스템에서만 날짜와 시간이 명확하면 되는 애플리케이션도 있고, 시스템 간에 명확해야 하는 애플리케이션도 있습니다(즉, 한 시스템에서 직렬화된 날짜를 다른 시스템에서 의미 있게 역직렬화하고 사용할 수 있음).
+- 단일 시점을 고유하고 명확하게 식별합니다. 호스트 시스템에서만 날짜와 시간이 명확하면 되는 애플리케이션도 있고, 시스템 간에 명확해야 하는 애플리케이션도 있습니다(즉, 한 시스템에서 직렬화된 날짜를 다른 시스템에서 의미 있게 역직렬화하고 사용할 수 있음).
 
-* 여러 개의 관련 시간(예: 요청자의 현지 시간 및 서버의 웹 요청 수신 시간)을 보존합니다.
+- 여러 개의 관련 시간(예: 요청자의 현지 시간 및 서버의 웹 요청 수신 시간)을 보존합니다.
 
-* 날짜 및 시간 산술 연산을 수행합니다(단일 시점을 고유하고 명확하게 식별하는 결과를 제공할 수 있음).
+- 날짜 및 시간 산술 연산을 수행합니다(단일 시점을 고유하고 명확하게 식별하는 결과를 제공할 수 있음).
 
 .Net에는 <xref:System.DateTime>날짜 및 <xref:System.TimeSpan>시간을 사용 하는 응용 프로그램을 빌드하는 데 사용할 수 있는, <xref:System.DateTimeOffset>, 및 <xref:System.TimeZoneInfo> 형식이 포함 되어 있습니다.
 
@@ -51,19 +51,19 @@ ms.locfileid: "69988496"
 
 <xref:System.DateTime> 구조체는 다음을 수행하는 응용 프로그램에 적합합니다.
 
-* 날짜만 사용합니다.
+- 날짜만 사용합니다.
 
-* 시간만 사용합니다.
+- 시간만 사용합니다.
 
-* 추상 날짜와 시간을 사용합니다.
+- 추상 날짜와 시간을 사용합니다.
 
-* 표준 시간대 정보가 없는 날짜 및 시간을 사용합니다.
+- 표준 시간대 정보가 없는 날짜 및 시간을 사용합니다.
 
-* UTC 날짜 및 시간만 사용합니다.
+- UTC 날짜 및 시간만 사용합니다.
 
-* SQL 데이터베이스와 같은 .NET 외부의 소스에서 날짜 및 시간 정보를 검색 합니다. 일반적으로 이러한 소스는 <xref:System.DateTime> 구조체와 호환되는 간단한 형식으로 날짜 및 시간 정보를 저장합니다.
+- SQL 데이터베이스와 같은 .NET 외부의 소스에서 날짜 및 시간 정보를 검색 합니다. 일반적으로 이러한 소스는 <xref:System.DateTime> 구조체와 호환되는 간단한 형식으로 날짜 및 시간 정보를 저장합니다.
 
-* 날짜 및 시간 산술 연산을 수행하지만 일반적인 결과와 관련이 있습니다. 예를 들어 특정 날짜와 시간에 6개월을 더하는 더하기 연산에서 일광 절약 시간제에 맞게 결과를 조정하는지 여부는 대체로 중요하지 않습니다.
+- 날짜 및 시간 산술 연산을 수행하지만 일반적인 결과와 관련이 있습니다. 예를 들어 특정 날짜와 시간에 6개월을 더하는 더하기 연산에서 일광 절약 시간제에 맞게 결과를 조정하는지 여부는 대체로 중요하지 않습니다.
 
 특정 <xref:System.DateTime> 값이 UTC를 나타내지 않는 경우 해당 날짜 및 시간 값은 대체로 모호하거나 이식성이 제한됩니다. 예를 들어 <xref:System.DateTime> 값이 현지 시간을 나타내는 경우 현지 표준 시간대 내에서 이식할 수 있습니다(즉, 동일한 표준 시간대의 다른 시스템에서 값을 역직렬화하는 경우 해당 값이 여전히 단일 시점을 명확하게 식별함). 현지 표준 시간대 외부에서는 해당 <xref:System.DateTime> 값이 여러 가지로 해석될 수 있습니다. 값의 <xref:System.DateTime.Kind%2A> 속성이 <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>이면 이식성이 훨씬 감소합니다. 이제 동일한 표준 시간대 내에서 모호하며 처음 직렬화된 시스템에서도 모호할 수 있습니다. <xref:System.DateTime> 값이 UTC를 나타내는 경우에만 값이 사용되는 시스템이나 표준 시간대에 관계없이 단일 시점을 명확하게 식별합니다.
 
@@ -76,11 +76,11 @@ ms.locfileid: "69988496"
 
 <xref:System.DateTimeOffset> 형식에는 <xref:System.DateTime> 형식의 모든 기능과 표준 시간대 인식 기능이 포함됩니다. 이렇게 하면 다음을 수행 하는 응용 프로그램에 적합 합니다.
 
-* 단일 시점을 고유하고 명확하게 식별합니다. <xref:System.DateTimeOffset> 형식을 통해 “now"의 의미를 명확하게 정의하고, 트랜잭션 시간을 기록하고, 시스템 또는 응용 프로그램 이벤트의 시간을 기록하고, 파일을 만든 시간과 수정 시간을 기록할 수 있습니다.
+- 단일 시점을 고유하고 명확하게 식별합니다. <xref:System.DateTimeOffset> 형식을 통해 “now"의 의미를 명확하게 정의하고, 트랜잭션 시간을 기록하고, 시스템 또는 응용 프로그램 이벤트의 시간을 기록하고, 파일을 만든 시간과 수정 시간을 기록할 수 있습니다.
 
-* 일반적인 날짜 및 시간 산술 연산을 수행합니다.
+- 일반적인 날짜 및 시간 산술 연산을 수행합니다.
 
-* 시간이 두 개의 개별 값으로 저장되거나 한 구조체의 두 멤버로 저장된 경우 관련된 여러 시간을 보존합니다.
+- 시간이 두 개의 개별 값으로 저장되거나 한 구조체의 두 멤버로 저장된 경우 관련된 여러 시간을 보존합니다.
 
 > [!NOTE]
 > <xref:System.DateTimeOffset> 값의 사용은 <xref:System.DateTime> 값의 사용보다 훨씬 더 일반적입니다. 따라서 <xref:System.DateTimeOffset> 을 애플리케이션 개발의 기본 날짜 및 시간 형식으로 간주해야 합니다.
@@ -96,9 +96,9 @@ ms.locfileid: "69988496"
 
 <xref:System.TimeSpan> 구조체는 시간 간격을 나타냅니다. 일반적으로 다음 두 가지 용도로 사용됩니다.
 
-* 두 개의 날짜 및 시간 값의 시간 간격을 반영합니다. 예를 들어 다른 값에서 <xref:System.DateTime> 값을 빼면 <xref:System.TimeSpan> 값이 반환됩니다.
+- 두 개의 날짜 및 시간 값의 시간 간격을 반영합니다. 예를 들어 다른 값에서 <xref:System.DateTime> 값을 빼면 <xref:System.TimeSpan> 값이 반환됩니다.
 
-* 경과 시간을 측정합니다. 예를 들어 속성 <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType> 은 경과 시간 <xref:System.TimeSpan> 측정을 시작 하는 <xref:System.Diagnostics.Stopwatch> 메서드 중 하나를 호출한 후 경과 된 시간 간격을 반영 하는 값을 반환 합니다.
+- 경과 시간을 측정합니다. 예를 들어 속성 <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType> 은 경과 시간 <xref:System.TimeSpan> 측정을 시작 하는 <xref:System.Diagnostics.Stopwatch> 메서드 중 하나를 호출한 후 경과 된 시간 간격을 반영 하는 값을 반환 합니다.
 
 값 <xref:System.TimeSpan> 은 특정 날짜에 대 한 참조 없이 시간을 <xref:System.DateTime> 반영할 때 값을 대체 하는 데 사용할 수도 있습니다. 이 사용법은 날짜를 참조 <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> 하지 <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType> 않고 시간을 나타내는 값 <xref:System.TimeSpan> 을 반환 하는 및 속성과 비슷합니다. 예를 들어 <xref:System.TimeSpan> 구조체를 사용하여 매일 상점을 여는 시간 또는 닫는 시간을 반영하거나 정기 이벤트가 발생하는 시간을 나타낼 수 있습니다.
 

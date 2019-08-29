@@ -2,12 +2,12 @@
 title: 구조체
 description: 작은 양의 데이터 F# 와 간단한 동작을 포함 하는 형식에 대 한 클래스 보다는 간단한 개체 형식에 대 한 클래스 보다 효율적인 구조에 대해 알아보세요.
 ms.date: 05/16/2016
-ms.openlocfilehash: e638b450fe43e0993c9980cade246c3f26d25e2d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1e9652cc4776e4d1d52eb20e41b6dd87a6c5ba05
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630764"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106822"
 ---
 # <a name="structures"></a>구조체
 
@@ -66,16 +66,16 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 의 F# "`byref`유사" 구조체는 스택 바인딩된 값 형식입니다. 이는 관리 되는 힙에 할당 되지 않습니다. `byref`이와 비슷한 구조체는 수명 및 비 캡처에 대 한 강력한 검사 집합으로 적용 되므로 고성능 프로그래밍에 유용 합니다. 규칙은 다음과 같습니다.
 
-* 함수 매개 변수, 메서드 매개 변수, 지역 변수, 메서드 반환으로 사용할 수 있습니다.
-* 클래스 또는 일반 구조체의 정적 또는 인스턴스 멤버일 수 없습니다.
-* 이러한 메서드는 클로저 구문 (`async` 메서드 또는 람다 식)에서 캡처할 수 없습니다.
-* 제네릭 매개 변수로 사용할 수 없습니다.
+- 함수 매개 변수, 메서드 매개 변수, 지역 변수, 메서드 반환으로 사용할 수 있습니다.
+- 클래스 또는 일반 구조체의 정적 또는 인스턴스 멤버일 수 없습니다.
+- 이러한 메서드는 클로저 구문 (`async` 메서드 또는 람다 식)에서 캡처할 수 없습니다.
+- 제네릭 매개 변수로 사용할 수 없습니다.
 
 이러한 규칙은 사용을 매우 강력 하 게 제한 하지만 안전 하 게 고성능 컴퓨팅의 약속을 달성 하는 데 필요 합니다.
 
 ## <a name="readonly-structs"></a>읽기 전용 구조체
 
-<xref:System.Runtime.CompilerServices.IsReadOnlyAttribute> 특성을 사용 하 여 구조체에 주석을 추가할 수 있습니다. 예:
+<xref:System.Runtime.CompilerServices.IsReadOnlyAttribute> 특성을 사용 하 여 구조체에 주석을 추가할 수 있습니다. 예를 들어:
 
 ```fsharp
 [<IsReadOnly; Struct>]
