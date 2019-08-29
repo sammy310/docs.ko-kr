@@ -29,7 +29,7 @@ ms.locfileid: "69602845"
  강력한 이름 키 컨테이너의 이름입니다.  
   
 ## <a name="remarks"></a>설명  
- **-keycontainer** 옵션을 사용하면 컴파일러는 공유 가능한 구성 요소를 만듭니다. 컴파일러는 지정된 컨테이너의 공개 키를 어셈블리 매니페스트에 삽입하고 개인 키를 사용하여 최종 어셈블리에 서명합니다. 키 파일을 생성하려면 명령줄에 `sn -k file`을 입력합니다. `sn -i`는 컨테이너에 키 쌍을 설치합니다. CoreCLR에서 컴파일러를 실행하면 이 옵션이 지원되지 않습니다. CoreCLR에서 빌드할 때 어셈블리에 서명하려면 [-keyfile](keyfile-compiler-option.md) 옵션을 사용합니다.
+ **-keycontainer** 옵션을 사용하면 컴파일러는 공유 가능한 구성 요소를 만듭니다. 컴파일러는 지정된 컨테이너의 퍼블릭 키를 어셈블리 매니페스트에 삽입하고 프라이빗 키를 사용하여 최종 어셈블리에 서명합니다. 키 파일을 생성하려면 명령줄에 `sn -k file`을 입력합니다. `sn -i`는 컨테이너에 키 쌍을 설치합니다. CoreCLR에서 컴파일러를 실행하면 이 옵션이 지원되지 않습니다. CoreCLR에서 빌드할 때 어셈블리에 서명하려면 [-keyfile](keyfile-compiler-option.md) 옵션을 사용합니다.
   
  [-target:module](./target-module-compiler-option.md)로 컴파일하는 경우 키 파일의 이름이 모듈에 저장되고, [-addmodule](./addmodule-compiler-option.md)을 사용하여 이 모듈을 어셈블리로 컴파일할 때 어셈블리에 통합됩니다.  
   

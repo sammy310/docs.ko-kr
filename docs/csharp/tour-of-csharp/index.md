@@ -3,12 +3,12 @@ title: C# 둘러보기 - C# 가이드
 description: C#을 처음 사용하시나요? 언어의 기본 사항에 대해 알아봅니다.
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: c3a117d660c02702e900b827c2eed9c6b56b5606
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eaaa5a259f0776a2749ed899d0406aee041a8442
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706535"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105657"
 ---
 # <a name="a-tour-of-the-c-language"></a>C# 언어 둘러보기
 
@@ -51,28 +51,28 @@ Hello, World
 
 C#에 대해 자세히 알아볼 수 있는 많은 리소스가 있습니다.  다음 항목에서는 C# 언어의 요소에 대한 개요를 제공합니다. 이러한 개요는 언어의 모든 요소에 대한 기본 정보를 제공하고 C# 언어의 요소를 보다 깊이 있게 이해하는 데 필요한 정보를 제공합니다.
 
-* [프로그램 구조](program-structure.md)
+- [프로그램 구조](program-structure.md)
   - C#의 핵심적인 조직 개념은 ***프로그램***, ***네임스페이스***, ***형식***, ***멤버*** 및 ***어셈블리***입니다.
-* [형식 및 변수](types-and-variables.md)
+- [형식 및 변수](types-and-variables.md)
   - C# 언어의 ***값 형식***, ***참조 형식*** 및 ***변수***에 대해 알아봅니다.
-* [식](expressions.md)
+- [식](expressions.md)
   - ***식***은 ***피연산자*** 및 ***연산자***로 생성됩니다. 식은 값을 생성합니다.
-* [문](statements.md)
+- [문](statements.md)
   - ***문***을 사용하여 프로그램의 동작을 나타낼 수 있습니다.
-* [클래스 및 개체](classes-and-objects.md)
+- [클래스 및 개체](classes-and-objects.md)
   - ***클래스***는 C#의 가장 기본적인 형식입니다. ***개체***는 클래스의 인스턴스입니다. 클래스는 ***멤버***를 사용해서 빌드되며 이 내용은 이 항목에도 나와 있습니다.
-* [구조체](structs.md)
+- [구조체](structs.md)
   - ***구조체***는 클래스와 달리 값 형식에 해당하는 데이터 구조체입니다.
-* [배열](arrays.md)
+- [배열](arrays.md)
   - ***배열***은 계산된 인덱스를 통해 액세스되는 여러 변수를 포함하는 데이터 구조입니다.
-* [인터페이스](interfaces.md)
+- [인터페이스](interfaces.md)
   - ***인터페이스***는 클래스 및 구조체에서 구현될 수 있는 계약을 정의합니다. 인터페이스는 메서드, 속성, 이벤트 및 인덱서를 포함할 수 있습니다. 인터페이스는 정의하는 멤버의 구현을 제공하지 않으며 단순히 인터페이스를 구현하는 클래스 또는 구조체에서 제공해야 하는 멤버를 지정합니다.
-* [열거형](enums.md)
+- [열거형](enums.md)
   - ***열거형 형식***은 명명된 상수 집합을 갖는 고유 값 형식입니다.
-* [대리자](delegates.md)
+- [대리자](delegates.md)
   - ***대리자***는 특정 매개 변수 목록 및 반환 형식이 있는 메서드에 대한 참조를 나타내는 형식입니다. 대리자는 메서드를 변수에 할당되고 매개 변수로 전달될 수 있는 엔터티로 취급할 수 있도록 합니다. 또한 대리자는 다른 언어에 나오는 함수 포인터의 개념과 비슷하지만 함수 포인터와 달리 대리자는 개체 지향적이며 형식 안전 방식입니다.
-* [특성](attributes.md)
-  * ***특성***을 사용하면 프로그램에서 형식, 멤버 및 다른 엔터티에 대한 추가 선언 정보를 지정할 수 있습니다.
+- [특성](attributes.md)
+  - ***특성***을 사용하면 프로그램에서 형식, 멤버 및 다른 엔터티에 대한 추가 선언 정보를 지정할 수 있습니다.
 
 > [!div class="step-by-step"]
 > [다음](program-structure.md)
