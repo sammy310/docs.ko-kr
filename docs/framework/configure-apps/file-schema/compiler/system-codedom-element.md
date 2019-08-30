@@ -9,20 +9,20 @@ helpviewer_keywords:
 - system.codedom element
 - <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
-ms.openlocfilehash: 43bc3c40bfc0b0ce4c0b18683092faf8b67e1c04
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 19f37095bd01b76fda8b1e29423c413dbdb06a65
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927688"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168913"
 ---
-# <a name="systemcodedom-element"></a><span data-ttu-id="95502-102">\<system.object > 요소</span><span class="sxs-lookup"><span data-stu-id="95502-102">\<system.codedom> Element</span></span>
-<span data-ttu-id="95502-103">사용 가능한 언어 공급자에 대한 컴파일러 구성 설정을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="95502-103">Specifies compiler configuration settings for available language providers.</span></span>  
+# <a name="systemcodedom-element"></a><span data-ttu-id="be127-102">\<system.object > 요소</span><span class="sxs-lookup"><span data-stu-id="be127-102">\<system.codedom> Element</span></span>
+<span data-ttu-id="be127-103">사용 가능한 언어 공급자에 대한 컴파일러 구성 설정을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="be127-103">Specifies compiler configuration settings for available language providers.</span></span>  
   
- <span data-ttu-id="95502-104">\<configuration > 요소</span><span class="sxs-lookup"><span data-stu-id="95502-104">\<configuration> Element</span></span>  
-<span data-ttu-id="95502-105">\<system.object > 요소</span><span class="sxs-lookup"><span data-stu-id="95502-105">\<system.codedom> Element</span></span>  
+[<span data-ttu-id="be127-104"> **\<configuration>** </span><span class="sxs-lookup"><span data-stu-id="be127-104">**\<configuration>**</span></span>](../configuration-element.md)  
+<span data-ttu-id="be127-105">&nbsp;&nbsp; **\<시스템 codedom >**</span><span class="sxs-lookup"><span data-stu-id="be127-105">&nbsp;&nbsp;**\<system.codedom>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="95502-106">구문</span><span class="sxs-lookup"><span data-stu-id="95502-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="be127-106">구문</span><span class="sxs-lookup"><span data-stu-id="be127-106">Syntax</span></span>  
   
 ```xml  
 <system.codedom>  
@@ -30,44 +30,44 @@ ms.locfileid: "69927688"
 </system.codedom>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="95502-107">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="95502-107">Attributes and Elements</span></span>  
- <span data-ttu-id="95502-108">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="95502-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="be127-107">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="be127-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="be127-108">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="be127-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="95502-109">특성</span><span class="sxs-lookup"><span data-stu-id="95502-109">Attributes</span></span>  
- <span data-ttu-id="95502-110">없음</span><span class="sxs-lookup"><span data-stu-id="95502-110">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="be127-109">특성</span><span class="sxs-lookup"><span data-stu-id="be127-109">Attributes</span></span>  
+ <span data-ttu-id="be127-110">없음</span><span class="sxs-lookup"><span data-stu-id="be127-110">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="95502-111">자식 요소</span><span class="sxs-lookup"><span data-stu-id="95502-111">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="be127-111">자식 요소</span><span class="sxs-lookup"><span data-stu-id="be127-111">Child Elements</span></span>  
   
-|<span data-ttu-id="95502-112">요소</span><span class="sxs-lookup"><span data-stu-id="95502-112">Element</span></span>|<span data-ttu-id="95502-113">설명</span><span class="sxs-lookup"><span data-stu-id="95502-113">Description</span></span>|  
+|<span data-ttu-id="be127-112">요소</span><span class="sxs-lookup"><span data-stu-id="be127-112">Element</span></span>|<span data-ttu-id="be127-113">설명</span><span class="sxs-lookup"><span data-stu-id="be127-113">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="95502-114">\<compilers></span><span class="sxs-lookup"><span data-stu-id="95502-114">\<compilers></span></span>](compilers-element.md)|<span data-ttu-id="95502-115">컴파일러 구성 요소용 컨테이너입니다. 0개 이상의 [\<compiler>](compiler-element.md) 요소가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="95502-115">Container for compiler configuration elements; contains zero or more [\<compiler>](compiler-element.md) elements.</span></span>|  
+|[<span data-ttu-id="be127-114">\<compilers></span><span class="sxs-lookup"><span data-stu-id="be127-114">\<compilers></span></span>](compilers-element.md)|<span data-ttu-id="be127-115">컴파일러 구성 요소용 컨테이너입니다. 0개 이상의 [\<compiler>](compiler-element.md) 요소가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="be127-115">Container for compiler configuration elements; contains zero or more [\<compiler>](compiler-element.md) elements.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="95502-116">부모 요소</span><span class="sxs-lookup"><span data-stu-id="95502-116">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="be127-116">부모 요소</span><span class="sxs-lookup"><span data-stu-id="be127-116">Parent Elements</span></span>  
   
-|<span data-ttu-id="95502-117">요소</span><span class="sxs-lookup"><span data-stu-id="95502-117">Element</span></span>|<span data-ttu-id="95502-118">설명</span><span class="sxs-lookup"><span data-stu-id="95502-118">Description</span></span>|  
+|<span data-ttu-id="be127-117">요소</span><span class="sxs-lookup"><span data-stu-id="be127-117">Element</span></span>|<span data-ttu-id="be127-118">설명</span><span class="sxs-lookup"><span data-stu-id="be127-118">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="95502-119">\<구성></span><span class="sxs-lookup"><span data-stu-id="95502-119">\<configuration></span></span>](../configuration-element.md)|<span data-ttu-id="95502-120">공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="95502-120">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|[<span data-ttu-id="be127-119">\<구성></span><span class="sxs-lookup"><span data-stu-id="be127-119">\<configuration></span></span>](../configuration-element.md)|<span data-ttu-id="be127-120">공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="be127-120">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="95502-121">설명</span><span class="sxs-lookup"><span data-stu-id="95502-121">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="be127-121">설명</span><span class="sxs-lookup"><span data-stu-id="be127-121">Remarks</span></span>  
   
-## <a name="net-framework-version-20"></a><span data-ttu-id="95502-122">.NET Framework 버전 2.0</span><span class="sxs-lookup"><span data-stu-id="95502-122">.NET Framework Version 2.0</span></span>  
- <span data-ttu-id="95502-123">> 요소에는 <xref:Microsoft.CSharp.CSharpCodeProvider> 및와 같이 .NET Framework와 함께 설치 되는 기본 공급자 외에도 컴퓨터에 설치 된 언어 공급자에 대 한 컴파일러 구성 설정이 포함 되어 있습니다. [ \<](system-codedom-element.md) <xref:Microsoft.VisualBasic.VBCodeProvider>.</span><span class="sxs-lookup"><span data-stu-id="95502-123">The [\<system.codedom>](system-codedom-element.md) element contains compiler configuration settings for language providers installed on a computer in addition to the default providers that are installed with the .NET Framework, such as the <xref:Microsoft.CSharp.CSharpCodeProvider> and the <xref:Microsoft.VisualBasic.VBCodeProvider>.</span></span> <span data-ttu-id="95502-124">컴파일러 [ \<>](compilers-element.md) 요소는 0 개 이상의 [ \<컴파일러 >](compiler-element.md) 요소를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="95502-124">The [\<compilers>](compilers-element.md) element contains zero or more [\<compiler>](compiler-element.md) elements.</span></span> <span data-ttu-id="95502-125">[ 각\<컴파일러 >](compiler-element.md) 요소는 특정 언어 공급자에 대 한 컴파일러 구성 특성을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="95502-125">Each [\<compiler>](compiler-element.md) element specifies the compiler configuration attributes for a specific language provider.</span></span>  
+## <a name="net-framework-version-20"></a><span data-ttu-id="be127-122">.NET Framework 버전 2.0</span><span class="sxs-lookup"><span data-stu-id="be127-122">.NET Framework Version 2.0</span></span>  
+ <span data-ttu-id="be127-123">> 요소에는 <xref:Microsoft.CSharp.CSharpCodeProvider> 및와 같이 .NET Framework와 함께 설치 되는 기본 공급자 외에도 컴퓨터에 설치 된 언어 공급자에 대 한 컴파일러 구성 설정이 포함 되어 있습니다. [ \<](system-codedom-element.md) <xref:Microsoft.VisualBasic.VBCodeProvider>.</span><span class="sxs-lookup"><span data-stu-id="be127-123">The [\<system.codedom>](system-codedom-element.md) element contains compiler configuration settings for language providers installed on a computer in addition to the default providers that are installed with the .NET Framework, such as the <xref:Microsoft.CSharp.CSharpCodeProvider> and the <xref:Microsoft.VisualBasic.VBCodeProvider>.</span></span> <span data-ttu-id="be127-124">컴파일러 [ \<>](compilers-element.md) 요소는 0 개 이상의 [ \<컴파일러 >](compiler-element.md) 요소를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="be127-124">The [\<compilers>](compilers-element.md) element contains zero or more [\<compiler>](compiler-element.md) elements.</span></span> <span data-ttu-id="be127-125">[ 각\<컴파일러 >](compiler-element.md) 요소는 특정 언어 공급자에 대 한 컴파일러 구성 특성을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="be127-125">Each [\<compiler>](compiler-element.md) element specifies the compiler configuration attributes for a specific language provider.</span></span>  
   
- <span data-ttu-id="95502-126">개발자와 컴파일러 공급 업체는 새 <xref:System.CodeDom.Compiler.CodeDomProvider> 구현에 대 한 구성 설정을 컴퓨터 구성 파일 (machine.config)에 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="95502-126">Developers and compiler vendors can add configuration settings to the machine configuration file (Machine.config) for a new <xref:System.CodeDom.Compiler.CodeDomProvider> implementation.</span></span> <span data-ttu-id="95502-127">메서드를 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> 사용 하 여 컴퓨터의 컴파일러 구성 설정으로 식별 되는 기본 언어 공급자와 언어 공급자를 프로그래밍 방식으로 열거 합니다.</span><span class="sxs-lookup"><span data-stu-id="95502-127">Use the <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> method to programmatically enumerate both the default language providers and language providers identified by the compiler configuration settings on a computer.</span></span>  
+ <span data-ttu-id="be127-126">개발자와 컴파일러 공급 업체는 새 <xref:System.CodeDom.Compiler.CodeDomProvider> 구현에 대 한 구성 설정을 컴퓨터 구성 파일 (machine.config)에 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="be127-126">Developers and compiler vendors can add configuration settings to the machine configuration file (Machine.config) for a new <xref:System.CodeDom.Compiler.CodeDomProvider> implementation.</span></span> <span data-ttu-id="be127-127">메서드를 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> 사용 하 여 컴퓨터의 컴파일러 구성 설정으로 식별 되는 기본 언어 공급자와 언어 공급자를 프로그래밍 방식으로 열거 합니다.</span><span class="sxs-lookup"><span data-stu-id="be127-127">Use the <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> method to programmatically enumerate both the default language providers and language providers identified by the compiler configuration settings on a computer.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="95502-128">.NET Framework 버전 1.0 및 1.1에서는 .NET Framework에서 제공 하는 기본 언어 공급자가 [ \<컴파일러 >](compilers-element.md) 요소에서 식별 됩니다.</span><span class="sxs-lookup"><span data-stu-id="95502-128">In the .NET Framework versions 1.0 and 1.1, the default language providers supplied by the .NET Framework are identified in the [\<compilers>](compilers-element.md) element.</span></span> <span data-ttu-id="95502-129">.NET Framework 버전 2.0에서 기본 언어 공급자는 [ \<컴파일러 >](compilers-element.md) 요소에서 식별 되지 않지만 메서드를 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A> 사용 하 여 열거할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="95502-129">In the .NET Framework version 2.0, the default language providers are not identified in the [\<compilers>](compilers-element.md) element, but can be enumerated using the <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A> method.</span></span>  
+> <span data-ttu-id="be127-128">.NET Framework 버전 1.0 및 1.1에서는 .NET Framework에서 제공 하는 기본 언어 공급자가 [ \<컴파일러 >](compilers-element.md) 요소에서 식별 됩니다.</span><span class="sxs-lookup"><span data-stu-id="be127-128">In the .NET Framework versions 1.0 and 1.1, the default language providers supplied by the .NET Framework are identified in the [\<compilers>](compilers-element.md) element.</span></span> <span data-ttu-id="be127-129">.NET Framework 버전 2.0에서 기본 언어 공급자는 [ \<컴파일러 >](compilers-element.md) 요소에서 식별 되지 않지만 메서드를 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A> 사용 하 여 열거할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="be127-129">In the .NET Framework version 2.0, the default language providers are not identified in the [\<compilers>](compilers-element.md) element, but can be enumerated using the <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A> method.</span></span>  
   
-## <a name="net-framework-versions-10-and-11"></a><span data-ttu-id="95502-130">.NET Framework 버전 1.0 및 1.1</span><span class="sxs-lookup"><span data-stu-id="95502-130">.NET Framework Versions 1.0 and 1.1</span></span>  
- <span data-ttu-id="95502-131">시스템 codedom > 요소에는 컴퓨터의 언어 공급자에 대 한 컴파일러 구성 설정이 포함 되어 있습니다. [ \<](system-codedom-element.md)</span><span class="sxs-lookup"><span data-stu-id="95502-131">The [\<system.codedom>](system-codedom-element.md) element contains the compiler configuration settings for language providers on a computer.</span></span> <span data-ttu-id="95502-132">컴파일러 [ \<>](compilers-element.md) 요소는 0 개 이상의 [ \<컴파일러 >](compiler-element.md) 요소를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="95502-132">The [\<compilers>](compilers-element.md) element contains zero or more [\<compiler>](compiler-element.md) elements.</span></span> <span data-ttu-id="95502-133">[ 각\<컴파일러 >](compiler-element.md) 요소는 특정 언어 공급자에 대 한 컴파일러 구성 특성을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="95502-133">Each [\<compiler>](compiler-element.md) element specifies the compiler configuration attributes for a specific language provider.</span></span>  
+## <a name="net-framework-versions-10-and-11"></a><span data-ttu-id="be127-130">.NET Framework 버전 1.0 및 1.1</span><span class="sxs-lookup"><span data-stu-id="be127-130">.NET Framework Versions 1.0 and 1.1</span></span>  
+ <span data-ttu-id="be127-131">시스템 codedom > 요소에는 컴퓨터의 언어 공급자에 대 한 컴파일러 구성 설정이 포함 되어 있습니다. [ \<](system-codedom-element.md)</span><span class="sxs-lookup"><span data-stu-id="be127-131">The [\<system.codedom>](system-codedom-element.md) element contains the compiler configuration settings for language providers on a computer.</span></span> <span data-ttu-id="be127-132">컴파일러 [ \<>](compilers-element.md) 요소는 0 개 이상의 [ \<컴파일러 >](compiler-element.md) 요소를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="be127-132">The [\<compilers>](compilers-element.md) element contains zero or more [\<compiler>](compiler-element.md) elements.</span></span> <span data-ttu-id="be127-133">[ 각\<컴파일러 >](compiler-element.md) 요소는 특정 언어 공급자에 대 한 컴파일러 구성 특성을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="be127-133">Each [\<compiler>](compiler-element.md) element specifies the compiler configuration attributes for a specific language provider.</span></span>  
   
- <span data-ttu-id="95502-134">.NET Framework는 컴퓨터 구성 파일(Machine.config)의 초기 컴파일러 설정을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="95502-134">The .NET Framework defines the initial compiler settings in the machine configuration file (Machine.config).</span></span> <span data-ttu-id="95502-135">개발자 및 컴파일러 공급업체는 새로운 <xref:System.CodeDom.Compiler.CodeDomProvider> 구현에 대한 구성 설정을 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="95502-135">Developers and compiler vendors can add configuration settings for a new <xref:System.CodeDom.Compiler.CodeDomProvider> implementation.</span></span> <span data-ttu-id="95502-136"><xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> 메서드를 사용하여 컴퓨터에서 언어 공급자 및 컴파일러 구성 설정을 프로그래밍 방식으로 열거할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="95502-136">Use the <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> method to programmatically enumerate language provider and compiler configuration settings on a computer.</span></span>  
+ <span data-ttu-id="be127-134">.NET Framework는 컴퓨터 구성 파일(Machine.config)의 초기 컴파일러 설정을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="be127-134">The .NET Framework defines the initial compiler settings in the machine configuration file (Machine.config).</span></span> <span data-ttu-id="be127-135">개발자 및 컴파일러 공급업체는 새로운 <xref:System.CodeDom.Compiler.CodeDomProvider> 구현에 대한 구성 설정을 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="be127-135">Developers and compiler vendors can add configuration settings for a new <xref:System.CodeDom.Compiler.CodeDomProvider> implementation.</span></span> <span data-ttu-id="be127-136"><xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> 메서드를 사용하여 컴퓨터에서 언어 공급자 및 컴파일러 구성 설정을 프로그래밍 방식으로 열거할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="be127-136">Use the <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> method to programmatically enumerate language provider and compiler configuration settings on a computer.</span></span>  
   
-## <a name="configuration-file"></a><span data-ttu-id="95502-137">구성 파일</span><span class="sxs-lookup"><span data-stu-id="95502-137">Configuration File</span></span>  
- <span data-ttu-id="95502-138">이 요소는 컴퓨터 구성 파일 및 응용 프로그램 구성 파일에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="95502-138">This element can be used in the machine configuration file and the application configuration file.</span></span>  
+## <a name="configuration-file"></a><span data-ttu-id="be127-137">구성 파일</span><span class="sxs-lookup"><span data-stu-id="be127-137">Configuration File</span></span>  
+ <span data-ttu-id="be127-138">이 요소는 컴퓨터 구성 파일 및 응용 프로그램 구성 파일에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="be127-138">This element can be used in the machine configuration file and the application configuration file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="95502-139">예제</span><span class="sxs-lookup"><span data-stu-id="95502-139">Example</span></span>  
- <span data-ttu-id="95502-140">다음 예제에서는 일반적인 컴파일러 구성을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="95502-140">The following example illustrates a typical compiler configuration.</span></span>  
+## <a name="example"></a><span data-ttu-id="be127-139">예제</span><span class="sxs-lookup"><span data-stu-id="be127-139">Example</span></span>  
+ <span data-ttu-id="be127-140">다음 예제에서는 일반적인 컴파일러 구성을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="be127-140">The following example illustrates a typical compiler configuration.</span></span>  
   
 ```xml  
 <configuration>  
@@ -87,10 +87,10 @@ ms.locfileid: "69927688"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="95502-141">참고자료</span><span class="sxs-lookup"><span data-stu-id="95502-141">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="be127-141">참고자료</span><span class="sxs-lookup"><span data-stu-id="be127-141">See also</span></span>
 
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
-- [<span data-ttu-id="95502-142">구성 파일 스키마</span><span class="sxs-lookup"><span data-stu-id="95502-142">Configuration File Schema</span></span>](../index.md)
-- [<span data-ttu-id="95502-143">컴파일러 및 언어 공급자 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="95502-143">Compiler and Language Provider Settings Schema</span></span>](index.md)
-- [<span data-ttu-id="95502-144">\<compiler> 요소</span><span class="sxs-lookup"><span data-stu-id="95502-144">\<compiler> Element</span></span>](compiler-element.md)
+- [<span data-ttu-id="be127-142">구성 파일 스키마</span><span class="sxs-lookup"><span data-stu-id="be127-142">Configuration File Schema</span></span>](../index.md)
+- [<span data-ttu-id="be127-143">컴파일러 및 언어 공급자 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="be127-143">Compiler and Language Provider Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="be127-144">\<compiler> 요소</span><span class="sxs-lookup"><span data-stu-id="be127-144">\<compiler> Element</span></span>](compiler-element.md)
