@@ -41,7 +41,7 @@ SOLID에 대해서는 다른 가이드에서 자세히 다룰 것입니다. 따�
 - **Inversion of Control 컨테이너 및 종속성 주입 패턴** \
   <https://martinfowler.com/articles/injection.html>
 
-- **Steve Smith. 새 항목은 붙이기** \입니다.
+- **Steve Smith. 새 항목은 붙이기 입니다** \.
   <https://ardalis.com/new-is-glue>
 
 > [!div class="step-by-step"]
