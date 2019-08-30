@@ -85,6 +85,7 @@
           href: keywords/abstract.md
         - name: async
           href: keywords/async.md
+          displayName: await
         - name: const
           href: keywords/const.md
         - name: 이벤트(event)
@@ -201,10 +202,6 @@
           href: keywords/new-constraint.md
         - name: 형식에 대한 설명
           href: keywords/where-generic-type-constraint.md
-    - name: 연산자 키워드
-      items:
-        - name: await
-          href: keywords/await.md
     - name: 액세스 키워드
       items:
         - name: base
@@ -327,6 +324,9 @@
     - name: ':: 연산자'
       href: operators/namespace-alias-qualifier.md
       displayName: 'namespace alias qualifier, global namespace'
+    - name: await 연산자
+      href: operators/await.md
+      displayName: async
     - name: 기본 연산자
       href: operators/default.md
       displayName: 'default value, default literal, type default'
