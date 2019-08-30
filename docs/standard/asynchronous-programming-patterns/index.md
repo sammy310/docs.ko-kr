@@ -8,18 +8,18 @@ helpviewer_keywords:
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3535e2979d2430fcb434a578f94d8d5b3925631
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 36798fabcd42cf7e04b0a6f288736503eecad88b
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666565"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169121"
 ---
 # <a name="asynchronous-programming-patterns"></a>비동기 프로그래밍 패턴
 
 .NET에서는 비동기 작업을 수행하기 위한 세 가지 패턴을 제공합니다.  
 
-- 단일 메서드를 사용하여 비동기 작업 시작과 완료를 나타내는 **TAP(작업 기반 비동기 패턴)** . TAP는 .NET Framework 4에 도입되었습니다. **.NET에서 비동기 프로그램에 권장되는 방법입니다.** C#의 [async](../../csharp/language-reference/keywords/async.md) 및 [await](../../csharp/language-reference/keywords/await.md) 키워드와 Visual Basic의 [Async](../../visual-basic/language-reference/modifiers/async.md) 및 [Await](../../visual-basic/language-reference/operators/await-operator.md) 연산자는 TAP에 대한 언어 지원을 추가합니다. 자세한 내용은 [TAP(작업 기반 비동기 패턴)](task-based-asynchronous-pattern-tap.md)을 참조하세요.  
+- 단일 메서드를 사용하여 비동기 작업 시작과 완료를 나타내는 **TAP(작업 기반 비동기 패턴)** . TAP는 .NET Framework 4에 도입되었습니다. **.NET에서 비동기 프로그램에 권장되는 방법입니다.** C#의 [async](../../csharp/language-reference/keywords/async.md) 및 [await](../../csharp/language-reference/operators/await.md) 키워드와 Visual Basic의 [Async](../../visual-basic/language-reference/modifiers/async.md) 및 [Await](../../visual-basic/language-reference/operators/await-operator.md) 연산자는 TAP에 대한 언어 지원을 추가합니다. 자세한 내용은 [TAP(작업 기반 비동기 패턴)](task-based-asynchronous-pattern-tap.md)을 참조하세요.  
 
 - 비동기 동작을 제공하기 위한 이벤트 기반 레거시 모델인 **EAP(이벤트 기반 비동기 패턴)** . 이 패턴에서는 `Async` 접미사가 있는 메서드가 필요하며 하나 이상의 이벤트, 이벤트 처리기 대리자 형식 및 `EventArg`에서 파생된 형식도 필요합니다. EAP는 .NET Framework 2.0에 도입되었습니다. 이 패턴 역시 신규 개발에서는 사용하지 않는 것이 좋습니다. 자세한 내용은 [EAP(이벤트 기반 비동기 패턴)](event-based-asynchronous-pattern-eap.md)를 참조하세요.  
 
