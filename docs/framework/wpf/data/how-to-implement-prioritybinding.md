@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-ms.openlocfilehash: ad19db9d686469e3ade1ff188553fceb8d525674
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4be1ce434eb1e169e8a19b56c92ca1efb48773d2
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937440"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169080"
 ---
 # <a name="how-to-implement-prioritybinding"></a>방법: PriorityBinding 구현
 <xref:System.Windows.Data.PriorityBinding>의 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 경우 바인딩 목록을 지정 합니다. 바인딩 목록은 우선 순위가 가장 높은 우선 순위로 정렬 됩니다. 우선 순위가 가장 높은 바인딩이 처리 될 때 값을 성공적으로 반환 하는 경우 목록에서 다른 바인딩을 처리할 필요가 없습니다. 우선 순위가 가장 높은 바인딩이 계산 되는 데 시간이 오래 걸릴 수 있습니다. 값을 반환 하는 다음으로 높은 우선 순위는 더 높은 우선 순위의 바인딩이 성공적으로 값을 반환할 때까지 사용 됩니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "69937440"
  의 `SlowestDP` get 접근자는 `_slowestDP` 데이터 멤버의 값을 반환 하기 전에 5 초 동안 대기 합니다.  
   
 > [!NOTE]
-> 이 예제는 데모용으로만 제공됩니다. [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] 크기가 커져 느린 필드 집합 보다 속성을 정의 하는 것에 대 한 지침을 권장 합니다. 자세한 내용은 [속성 및 메서드 중에서 선택](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229054(v=vs.100))을 참조 하세요.  
+> 이 예제는 데모용으로만 제공됩니다. .NET 지침은 필드 집합 보다 느린 크기의 속성을 정의 하는 것에 대해 권장 됩니다. 자세한 내용은 [속성 및 메서드 중에서 선택](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229054(v=vs.100))을 참조 하세요.  
   
  [!code-csharp[PriorityBinding#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
  [!code-vb[PriorityBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  

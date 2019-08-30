@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: eee10cbf3bbfc6f66ec9e0c3f35b27fdc485764b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4b7a5681840bf70eaebc824ff3d0dbeef3d1d799
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944688"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169103"
 ---
 # <a name="binding-sources-overview"></a>바인딩 소스 개요
 데이터 바인딩에서 바인딩 소스 개체는 데이터를 가져오는 개체를 의미합니다. 이 항목에서는 바인딩 소스로 사용할 수 있는 개체 형식에 대해 설명합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "69944688"
 ### <a name="other-characteristics"></a>기타 특성  
  다음은 고려해야 할 기타 중요 사항의 목록입니다.  
   
-- 에서 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]개체를 만들려는 경우 클래스에는 매개 변수가 없는 생성자가 있어야 합니다. 와 C#같은 [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] 일부 언어에서는 매개 변수가 없는 생성자가 만들어질 수 있습니다.  
+- 에서 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]개체를 만들려는 경우 클래스에는 매개 변수가 없는 생성자가 있어야 합니다. 과 C#같은 일부 .net 언어에서는 매개 변수가 없는 생성자가 만들어질 수 있습니다.  
   
 - 바인딩의 바인딩 소스 속성으로 사용하는 속성은 클래스의 공용 속성이어야 합니다. 명시적으로 정의된 인터페이스 속성은 바인딩 용도로 액세스할 수 없으며, 기본 구현이 없는 보호, 전용, 내부 또는 가상 속성이 될 수 없습니다.  
   

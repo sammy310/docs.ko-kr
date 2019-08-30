@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 3ac7d79660830601ca69951e56763fc923692b0e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09f0a1b34e88be995fb9a386161a930457e4bb56
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958794"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168997"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 구문 정보
 이 항목에서는 XAML 구문의 요소를 설명 하는 데 사용 되는 용어를 정의 합니다. 이러한 용어는이 설명서의 나머지 부분 전체에서 자주 사용 됩니다. WPF 설명서와 XAML을 사용 하는 다른 프레임 워크 또는 system.xaml 수준에서 XAML 언어 지원에 의해 설정 된 기본 XAML 개념에 대해 자주 사용 됩니다. 이 항목에서는 [XAML 개요 (WPF)](xaml-overview-wpf.md)항목에서 소개 하는 기본 용어를 확장 합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "69958794"
   
 - 여는 태그는 오른쪽 꺾쇠 괄호 (>)로 완료 되어야 합니다. 다른 개체 요소, 속성 요소 또는 내부 텍스트는 여는 태그 뒤에 올 수 있습니다. 여기에 포함 될 수 있는 콘텐츠는 일반적으로 요소의 개체 모델에 의해 제한 됩니다. 개체 요소에 해당 하는 닫는 태그도 있어야 하며, 적절 한 중첩 및 다른 여는 태그 쌍과의 균형을 유지 해야 합니다.  
   
- .NET에 의해 구현 되는 XAML에는 개체 요소를 형식, 특성에 속성 또는 이벤트에 매핑하는 규칙 집합, CLR 네임 스페이스와 어셈블리에 XAML 네임 스페이스가 있습니다. WPF 및 .NET Framework의 경우 XAML 개체 요소가 참조 된 어셈블리 [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] 에 정의 된 형식에 매핑되고 특성은 해당 형식의 멤버에 매핑됩니다. XAML에서 CLR 형식을 참조 하는 경우 해당 형식의 상속 된 멤버에도 액세스할 수 있습니다.  
+ .NET에 의해 구현 되는 XAML에는 개체 요소를 형식, 특성에 속성 또는 이벤트에 매핑하는 규칙 집합, CLR 네임 스페이스와 어셈블리에 XAML 네임 스페이스가 있습니다. WPF 및 .NET의 경우 XAML 개체 요소가 참조 된 어셈블리에 정의 된 .NET 형식에 매핑되고 특성은 해당 형식의 멤버에 매핑됩니다. XAML에서 CLR 형식을 참조 하는 경우 해당 형식의 상속 된 멤버에도 액세스할 수 있습니다.  
   
  예를 들어 다음 예제는 <xref:System.Windows.Controls.Button> 클래스의 새 인스턴스를 인스턴스화하는 개체 요소 구문이 며 특성 및 해당 특성에 대 한 값도 <xref:System.Windows.FrameworkElement.Name%2A> 지정 합니다.  
   

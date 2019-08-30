@@ -9,19 +9,19 @@ helpviewer_keywords:
 - <compilers> element
 - compilers element
 ms.assetid: d40fba59-98f9-4783-ae0c-2ebea27ce77b
-ms.openlocfilehash: 53dc67d0046ef2f184535f373c5bf19c484c505a
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 5232c5bd2d4fad8104d156bfa86141ceb7f0dd93
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664324"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167696"
 ---
 # <a name="compilers-element"></a>\<컴파일러 > 요소
 컴파일러 구성 요소용 컨테이너입니다. 0개 이상의 [\<compiler>](compiler-element.md) 요소가 포함되어 있습니다.  
   
- \<configuration>  
-\<system.codedom>  
-\<컴파일러 > 요소  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp;&nbsp;[ **\<시스템 codedom >** ](system-codedom-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<컴파일러 >**  
   
 ## <a name="syntax"></a>구문  
   

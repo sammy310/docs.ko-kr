@@ -9,18 +9,18 @@ helpviewer_keywords:
 - system.codedom element
 - <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
-ms.openlocfilehash: 43bc3c40bfc0b0ce4c0b18683092faf8b67e1c04
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 19f37095bd01b76fda8b1e29423c413dbdb06a65
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927688"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168913"
 ---
 # <a name="systemcodedom-element"></a>\<system.object > 요소
 사용 가능한 언어 공급자에 대한 컴파일러 구성 설정을 지정합니다.  
   
- \<configuration > 요소  
-\<system.object > 요소  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp;&nbsp; **\<시스템 codedom >**  
   
 ## <a name="syntax"></a>구문  
   

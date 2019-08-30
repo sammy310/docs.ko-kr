@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-ms.openlocfilehash: 0b64088f43b69a982fc305fc16ad10edd1faa593
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8c39fe75eea5042657cab533a0a557d966802a1b
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966051"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169014"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverter 및 XAML
 이 항목에서는 문자열에서 형식 변환의 용도를 일반 XAML 언어 기능으로 소개합니다. .NET Framework에서 클래스는 <xref:System.ComponentModel.TypeConverter> XAML 특성 사용에서 속성 값으로 사용할 수 있는 관리 되는 사용자 지정 클래스에 대 한 구현의 일부로 특정 용도를 제공 합니다. 사용자 지정 클래스를 작성 하는 경우 클래스의 인스턴스를 XAML 설정 가능한 특성 값으로 사용할 수 있도록 하려면 클래스 <xref:System.ComponentModel.TypeConverterAttribute> 에를 적용 하거나 사용자 지정 <xref:System.ComponentModel.TypeConverter> 클래스를 작성 하거나 둘 다를 수행 해야 할 수 있습니다.  
@@ -103,9 +103,9 @@ ms.locfileid: "69966051"
   
 <a name="Applying_the_TypeConverterAttribute"></a>   
 ## <a name="applying-the-typeconverterattribute"></a>TypeConverterAttribute 적용  
- 사용자 지정 형식 변환기를 XAML 프로세서에서 사용자 지정 클래스에 대해 작동 하는 형식 변환기로 사용 하려면를 클래스 정의 [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> 에 적용 해야 합니다. 특성을 통해 지정하는 <xref:System.ComponentModel.TypeConverterAttribute.ConverterTypeName%2A> 은 사용자 지정 형식 변환기의 형식 이름이어야 합니다. XAML 프로세서에서 속성 형식이 사용자 지정 클래스 형식을 사용하는 값을 처리할 때 이 특성을 적용하면 문자열을 입력하고 개체 인스턴스를 반환할 수 있습니다.  
+ 사용자 지정 형식 변환기를 XAML 프로세서에서 사용자 지정 클래스에 대해 작동 하는 형식 변환기로 사용 하려면를 클래스 정의 <xref:System.ComponentModel.TypeConverterAttribute> 에 적용 해야 합니다. 특성을 통해 지정하는 <xref:System.ComponentModel.TypeConverterAttribute.ConverterTypeName%2A> 은 사용자 지정 형식 변환기의 형식 이름이어야 합니다. XAML 프로세서에서 속성 형식이 사용자 지정 클래스 형식을 사용하는 값을 처리할 때 이 특성을 적용하면 문자열을 입력하고 개체 인스턴스를 반환할 수 있습니다.  
   
- 또한 속성별로 형식 변환기를 제공할 수 있습니다. 를 [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] `get` / `set` 클래스 정의에 적용 하는 대신 속성 정의 (기본 정의는 포함 되지 않음)에 적용 합니다. <xref:System.ComponentModel.TypeConverterAttribute> 속성의 형식은 사용자 지정 형식 변환기에서 처리되는 형식과 일치해야 합니다. XAML 프로세서에서 해당 속성의 값을 처리할 때 이 특성을 적용하면 입력 문자열을 처리하고 개체 인스턴스를 반환할 수 있습니다. Microsoft .NET Framework의 속성 형식 또는 클래스 정의를 제어할 수 없고 클래스 정의를 적용할 <xref:System.ComponentModel.TypeConverterAttribute> 수 없는 일부 다른 라이브러리에서 속성 형식을 사용 하도록 선택 하는 경우에는 속성 형식 변환기 기술이 특히 유용 합니다.  
+ 또한 속성별로 형식 변환기를 제공할 수 있습니다. 를 <xref:System.ComponentModel.TypeConverterAttribute> 클래스 정의에 적용 하는 대신 속성 정의 (기본 정의는 포함 `get` / `set` 되지 않음)에 적용 합니다. 속성의 형식은 사용자 지정 형식 변환기에서 처리되는 형식과 일치해야 합니다. XAML 프로세서에서 해당 속성의 값을 처리할 때 이 특성을 적용하면 입력 문자열을 처리하고 개체 인스턴스를 반환할 수 있습니다. Microsoft .NET Framework의 속성 형식 또는 클래스 정의를 제어할 수 없고 클래스 정의를 적용할 <xref:System.ComponentModel.TypeConverterAttribute> 수 없는 일부 다른 라이브러리에서 속성 형식을 사용 하도록 선택 하는 경우에는 속성 형식 변환기 기술이 특히 유용 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

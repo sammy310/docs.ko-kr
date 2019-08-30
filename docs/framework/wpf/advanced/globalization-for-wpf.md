@@ -7,15 +7,15 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 948d147a0990961a8706298f1112f85882e30119
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 2f651b68d845e062ad950bb626e30c755d6d9df6
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015612"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169156"
 ---
 # <a name="globalization-for-wpf"></a>WPF의 전역화
-이 항목에서는 글로벌 시장을 대상으로 응용 프로그램을 작성할 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 때 알아야 하는 문제를 소개 합니다. 전역화 프로그래밍 요소는의에 [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] `System.Globalization`정의 되어 있습니다.
+이 항목에서는 글로벌 시장을 대상으로 응용 프로그램을 작성할 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 때 알아야 하는 문제를 소개 합니다. 전역화 프로그래밍 요소는 <xref:System.Globalization> 네임 스페이스의 .net에 정의 되어 있습니다.
 
 <a name="xaml_globalization"></a>
 ## <a name="xaml-globalization"></a>XAML 전역화
