@@ -24,7 +24,7 @@ ms.locfileid: "69968590"
 사용자 지정 특성 검색은 간단한 프로세스입니다. 먼저, 검색하려는 특성의 인스턴스를 선언합니다. 그런 다음, <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> 메서드를 사용하여 검색하려는 특성 값으로 새 특성을 초기화합니다. 새 특성이 초기화되면 해당 속성을 사용하여 값을 가져오기만 하면 됩니다.  
   
 > [!IMPORTANT]
-> 이 항목에서는 실행 컨텍스트에 로드된 코드에 대한 특성을 검색하는 방법을 설명합니다. 리플렉션 전용 컨텍스트에 로드된 코드의 특성을 검색하려면 [방법: 리플렉션 전용 컨텍스트에 어셈블리 로드 ](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)처럼  클래스를 사용해야 합니다.  
+> 이 항목에서는 실행 컨텍스트에 로드된 코드에 대한 특성을 검색하는 방법을 설명합니다. 리플렉션 전용 컨텍스트에 로드 된 코드의 특성을 검색 하려면 다음과 같이 <xref:System.Reflection.CustomAttributeData> 클래스 [를 사용 해야 합니다. 어셈블리를 리플렉션 전용 컨텍스트에](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)로드 합니다.  
   
  이 섹션에서는 특성을 검색하는 다음 방법에 대해 설명합니다.  
   
