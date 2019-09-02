@@ -2,17 +2,17 @@
 title: 요소 텍스트 유추
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
-ms.openlocfilehash: 6ffe8f2fbf01fbe8dfa9d78f3dfb9e39b6e80b16
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d8d64c0cbb0aecf736a54fa6816e286ab7efa191
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879634"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203534"
 ---
-# <a name="inferring-element-text"></a><span data-ttu-id="c915c-102">요소 텍스트 유추</span><span class="sxs-lookup"><span data-stu-id="c915c-102">Inferring Element Text</span></span>
-<span data-ttu-id="c915c-103">요소 텍스트를 포함 하 고 테이블로 유추 될 (특성이 있는 요소) 또는 반복 되는 요소와 같은 이름 가진 새 열을 자식 요소가 없는 경우 **TableName_Text** 요소의 유추 테이블에 추가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c915c-103">If an element contains text and has no child elements to be inferred as tables (such as elements with attributes or repeated elements), a new column with the name **TableName_Text** will be added to the table that is inferred for the element.</span></span> <span data-ttu-id="c915c-104">이 요소에 포함된 텍스트는 테이블의 행에 추가되어 새 열에 저장됩니다.</span><span class="sxs-lookup"><span data-stu-id="c915c-104">The text contained in the element will be added to a row in the table and stored in the new column.</span></span> <span data-ttu-id="c915c-105">합니다 **ColumnMapping** 새 열의 속성에 설정할 **MappingType.SimpleContent**합니다.</span><span class="sxs-lookup"><span data-stu-id="c915c-105">The **ColumnMapping** property of the new column will be set to **MappingType.SimpleContent**.</span></span>  
+# <a name="inferring-element-text"></a><span data-ttu-id="f880d-102">요소 텍스트 유추</span><span class="sxs-lookup"><span data-stu-id="f880d-102">Inferring Element Text</span></span>
+<span data-ttu-id="f880d-103">요소가 텍스트를 포함 하 고 테이블 (특성 또는 반복 요소가 포함 된 요소)로 유추 될 자식 요소가 없는 경우 이름이 **TableName_Text** 인 새 열이 요소에 대해 유추 되는 테이블에 추가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f880d-103">If an element contains text and has no child elements to be inferred as tables (such as elements with attributes or repeated elements), a new column with the name **TableName_Text** will be added to the table that is inferred for the element.</span></span> <span data-ttu-id="f880d-104">이 요소에 포함된 텍스트는 테이블의 행에 추가되어 새 열에 저장됩니다.</span><span class="sxs-lookup"><span data-stu-id="f880d-104">The text contained in the element will be added to a row in the table and stored in the new column.</span></span> <span data-ttu-id="f880d-105">새 열의 **ColumnMapping** 속성은 **mappingtype.attribute**로 설정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f880d-105">The **ColumnMapping** property of the new column will be set to **MappingType.SimpleContent**.</span></span>  
   
- <span data-ttu-id="c915c-106">예를 들어, 다음과 같은 XML을 가정해 봅시다.</span><span class="sxs-lookup"><span data-stu-id="c915c-106">For example, consider the following XML.</span></span>  
+ <span data-ttu-id="f880d-106">예를 들어, 다음과 같은 XML을 가정해 봅시다.</span><span class="sxs-lookup"><span data-stu-id="f880d-106">For example, consider the following XML.</span></span>  
   
 ```xml  
 <DocumentElement>  
@@ -20,17 +20,17 @@ ms.locfileid: "61879634"
 </DocumentElement>  
 ```  
   
- <span data-ttu-id="c915c-107">유추 과정 이라는 테이블이 생성 됩니다 **Element1** 두 개의 열을 사용 하 여: **attr1** 하 고 **Element1_Text**합니다.</span><span class="sxs-lookup"><span data-stu-id="c915c-107">The inference process will produce a table named **Element1** with two columns: **attr1** and **Element1_Text**.</span></span> <span data-ttu-id="c915c-108">합니다 **ColumnMapping** 의 속성을 **attr1** 열으로 설정 됩니다 **MappingType.Attribute**합니다.</span><span class="sxs-lookup"><span data-stu-id="c915c-108">The **ColumnMapping** property of the **attr1** column will be set to **MappingType.Attribute**.</span></span> <span data-ttu-id="c915c-109">합니다 **ColumnMapping** 의 속성을 **Element1_Text** 열으로 설정 됩니다 **MappingType.SimpleContent**합니다.</span><span class="sxs-lookup"><span data-stu-id="c915c-109">The **ColumnMapping** property of the **Element1_Text** column will be set to **MappingType.SimpleContent**.</span></span>  
+ <span data-ttu-id="f880d-107">유추 프로세스는 **attr1** 및 **Element1_Text**라는 두 개의 열이 있는 **Element1** 라는 테이블을 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="f880d-107">The inference process will produce a table named **Element1** with two columns: **attr1** and **Element1_Text**.</span></span> <span data-ttu-id="f880d-108">**Attr1** 열의 **ColumnMapping** 속성은 **mappingtype.attribute**로 설정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f880d-108">The **ColumnMapping** property of the **attr1** column will be set to **MappingType.Attribute**.</span></span> <span data-ttu-id="f880d-109">**Element1_Text** 열의 **ColumnMapping** 속성은 **mappingtype.attribute**로 설정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f880d-109">The **ColumnMapping** property of the **Element1_Text** column will be set to **MappingType.SimpleContent**.</span></span>  
   
- <span data-ttu-id="c915c-110">**DataSet:** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="c915c-110">**DataSet:** DocumentElement</span></span>  
+ <span data-ttu-id="f880d-110">**DataSet:** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="f880d-110">**DataSet:** DocumentElement</span></span>  
   
- <span data-ttu-id="c915c-111">**테이블:** Element1</span><span class="sxs-lookup"><span data-stu-id="c915c-111">**Table:** Element1</span></span>  
+ <span data-ttu-id="f880d-111">**테이블** Element1</span><span class="sxs-lookup"><span data-stu-id="f880d-111">**Table:** Element1</span></span>  
   
-|<span data-ttu-id="c915c-112">attr1</span><span class="sxs-lookup"><span data-stu-id="c915c-112">attr1</span></span>|<span data-ttu-id="c915c-113">Element1_Text</span><span class="sxs-lookup"><span data-stu-id="c915c-113">Element1_Text</span></span>|  
+|<span data-ttu-id="f880d-112">attr1</span><span class="sxs-lookup"><span data-stu-id="f880d-112">attr1</span></span>|<span data-ttu-id="f880d-113">Element1_Text</span><span class="sxs-lookup"><span data-stu-id="f880d-113">Element1_Text</span></span>|  
 |-----------|--------------------|  
-|<span data-ttu-id="c915c-114">value1</span><span class="sxs-lookup"><span data-stu-id="c915c-114">value1</span></span>|<span data-ttu-id="c915c-115">Text1</span><span class="sxs-lookup"><span data-stu-id="c915c-115">Text1</span></span>|  
+|<span data-ttu-id="f880d-114">value1</span><span class="sxs-lookup"><span data-stu-id="f880d-114">value1</span></span>|<span data-ttu-id="f880d-115">Text1</span><span class="sxs-lookup"><span data-stu-id="f880d-115">Text1</span></span>|  
   
- <span data-ttu-id="c915c-116">요소에 텍스트뿐만 아니라 텍스트가 포함된 자식 요소도 있는 경우에는 해당 요소에 포함된 텍스트를 저장할 열이 테이블에 추가되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c915c-116">If an element contains text, but also has child elements that contain text, a column will not be added to the table to store the text contained in the element.</span></span> <span data-ttu-id="c915c-117">따라서 이 요소에 포함된 텍스트는 무시되지만 자식 요소에 있는 텍스트는 해당 테이블의 행에 저장됩니다.</span><span class="sxs-lookup"><span data-stu-id="c915c-117">The text contained in the element will be ignored, while the text in the child elements is included in a row in the table.</span></span> <span data-ttu-id="c915c-118">예를 들어, 다음과 같은 XML을 가정해 봅시다.</span><span class="sxs-lookup"><span data-stu-id="c915c-118">For example, consider the following XML.</span></span>  
+ <span data-ttu-id="f880d-116">요소에 텍스트뿐만 아니라 텍스트가 포함된 자식 요소도 있는 경우에는 해당 요소에 포함된 텍스트를 저장할 열이 테이블에 추가되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f880d-116">If an element contains text, but also has child elements that contain text, a column will not be added to the table to store the text contained in the element.</span></span> <span data-ttu-id="f880d-117">따라서 이 요소에 포함된 텍스트는 무시되지만 자식 요소에 있는 텍스트는 해당 테이블의 행에 저장됩니다.</span><span class="sxs-lookup"><span data-stu-id="f880d-117">The text contained in the element will be ignored, while the text in the child elements is included in a row in the table.</span></span> <span data-ttu-id="f880d-118">예를 들어, 다음과 같은 XML을 가정해 봅시다.</span><span class="sxs-lookup"><span data-stu-id="f880d-118">For example, consider the following XML.</span></span>  
   
 ```xml  
 <Element1>  
@@ -40,21 +40,21 @@ ms.locfileid: "61879634"
 </Element1>  
 ```  
   
- <span data-ttu-id="c915c-119">유추 과정 이라는 테이블이 생성 됩니다 **Element1** 라는 열이 하나인 **ChildElement1**합니다.</span><span class="sxs-lookup"><span data-stu-id="c915c-119">The inference process will produce a table named **Element1** with one column named **ChildElement1**.</span></span> <span data-ttu-id="c915c-120">에 대 한 텍스트를 **ChildElement1** 요소는 테이블의 행에 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c915c-120">The text for the **ChildElement1** element will be included in a row in the table.</span></span> <span data-ttu-id="c915c-121">다른 텍스트는 무시됩니다.</span><span class="sxs-lookup"><span data-stu-id="c915c-121">The other text will be ignored.</span></span> <span data-ttu-id="c915c-122">합니다 **ColumnMapping** 의 속성을 **ChildElement1** 열으로 설정 됩니다 **MappingType.Element**합니다.</span><span class="sxs-lookup"><span data-stu-id="c915c-122">The **ColumnMapping** property of the **ChildElement1** column will be set to **MappingType.Element**.</span></span>  
+ <span data-ttu-id="f880d-119">유추 프로세스는 **ChildElement1**라는 열이 있는 **Element1** 이라는 테이블을 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="f880d-119">The inference process will produce a table named **Element1** with one column named **ChildElement1**.</span></span> <span data-ttu-id="f880d-120">**ChildElement1** 요소의 텍스트는 테이블의 행에 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f880d-120">The text for the **ChildElement1** element will be included in a row in the table.</span></span> <span data-ttu-id="f880d-121">다른 텍스트는 무시됩니다.</span><span class="sxs-lookup"><span data-stu-id="f880d-121">The other text will be ignored.</span></span> <span data-ttu-id="f880d-122">**ChildElement1** 열의 **ColumnMapping** 속성은 **mappingtype.attribute**로 설정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f880d-122">The **ColumnMapping** property of the **ChildElement1** column will be set to **MappingType.Element**.</span></span>  
   
- <span data-ttu-id="c915c-123">**DataSet:** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="c915c-123">**DataSet:** DocumentElement</span></span>  
+ <span data-ttu-id="f880d-123">**DataSet:** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="f880d-123">**DataSet:** DocumentElement</span></span>  
   
- <span data-ttu-id="c915c-124">**테이블:** Element1</span><span class="sxs-lookup"><span data-stu-id="c915c-124">**Table:** Element1</span></span>  
+ <span data-ttu-id="f880d-124">**테이블** Element1</span><span class="sxs-lookup"><span data-stu-id="f880d-124">**Table:** Element1</span></span>  
   
-|<span data-ttu-id="c915c-125">ChildElement1</span><span class="sxs-lookup"><span data-stu-id="c915c-125">ChildElement1</span></span>|  
+|<span data-ttu-id="f880d-125">ChildElement1</span><span class="sxs-lookup"><span data-stu-id="f880d-125">ChildElement1</span></span>|  
 |-------------------|  
-|<span data-ttu-id="c915c-126">Text2</span><span class="sxs-lookup"><span data-stu-id="c915c-126">Text2</span></span>|  
+|<span data-ttu-id="f880d-126">Text2</span><span class="sxs-lookup"><span data-stu-id="f880d-126">Text2</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="c915c-127">참고자료</span><span class="sxs-lookup"><span data-stu-id="c915c-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f880d-127">참고자료</span><span class="sxs-lookup"><span data-stu-id="f880d-127">See also</span></span>
 
-- [<span data-ttu-id="c915c-128">XML에서 데이터 세트 관계형 구조 유추</span><span class="sxs-lookup"><span data-stu-id="c915c-128">Inferring DataSet Relational Structure from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
-- [<span data-ttu-id="c915c-129">XML에서 데이터 세트 로드</span><span class="sxs-lookup"><span data-stu-id="c915c-129">Loading a DataSet from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [<span data-ttu-id="c915c-130">XML에서 데이터 세트 스키마 정보 로드</span><span class="sxs-lookup"><span data-stu-id="c915c-130">Loading DataSet Schema Information from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
-- [<span data-ttu-id="c915c-131">데이터 집합에서 XML 사용</span><span class="sxs-lookup"><span data-stu-id="c915c-131">Using XML in a DataSet</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [<span data-ttu-id="c915c-132">DataSet, DataTable 및 DataView</span><span class="sxs-lookup"><span data-stu-id="c915c-132">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [<span data-ttu-id="c915c-133">ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터</span><span class="sxs-lookup"><span data-stu-id="c915c-133">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="f880d-128">XML에서 데이터 세트 관계형 구조 유추</span><span class="sxs-lookup"><span data-stu-id="f880d-128">Inferring DataSet Relational Structure from XML</span></span>](inferring-dataset-relational-structure-from-xml.md)
+- [<span data-ttu-id="f880d-129">XML에서 데이터 세트 로드</span><span class="sxs-lookup"><span data-stu-id="f880d-129">Loading a DataSet from XML</span></span>](loading-a-dataset-from-xml.md)
+- [<span data-ttu-id="f880d-130">XML에서 데이터 세트 스키마 정보 로드</span><span class="sxs-lookup"><span data-stu-id="f880d-130">Loading DataSet Schema Information from XML</span></span>](loading-dataset-schema-information-from-xml.md)
+- [<span data-ttu-id="f880d-131">데이터 집합에서 XML 사용</span><span class="sxs-lookup"><span data-stu-id="f880d-131">Using XML in a DataSet</span></span>](using-xml-in-a-dataset.md)
+- [<span data-ttu-id="f880d-132">DataSet, DataTable 및 DataView</span><span class="sxs-lookup"><span data-stu-id="f880d-132">DataSets, DataTables, and DataViews</span></span>](index.md)
+- [<span data-ttu-id="f880d-133">ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터</span><span class="sxs-lookup"><span data-stu-id="f880d-133">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
