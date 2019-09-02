@@ -2,12 +2,12 @@
 title: 원본 Office Open XML 문서 만들기(C#)
 ms.date: 07/20/2015
 ms.assetid: 653c8cdb-73be-4dc2-927f-924cfb4ed9ed
-ms.openlocfilehash: 024b6c80cdedf38fd2dcee77562c0105df7bd033
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: d6c4d8866bba58e86735099a62041894a9faa9b1
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690102"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204158"
 ---
 # <a name="creating-the-source-office-open-xml-document-c"></a>원본 Office Open XML 문서 만들기(C#)
 
@@ -25,7 +25,7 @@ ms.locfileid: "66690102"
 
 2. 다음 텍스트를 새 문서에 붙여 넣습니다.
 
-    ```
+    ```text
     Parsing WordprocessingML with LINQ to XML
 
     The following example prints to the console.

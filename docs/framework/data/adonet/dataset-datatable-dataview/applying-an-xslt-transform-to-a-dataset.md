@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: 56f6e13763b5230e046c0838892393b3672a54be
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8bff92fe40ec668dfa634c3b97f2f1df238f159b
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937036"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203956"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>XSLT 변형을 DataSet에 적용
 의<xref:System.Data.DataSet> **WriteXml** 메서드를 사용 하면 **데이터 집합** 의 내용을 XML 데이터로 쓸 수 있습니다. 그런 다음에는 XSLT(XSL transformations)를 사용하여 해당 XML을 다른 형식으로 변환하는 공통적인 작업이 수행됩니다. 그러나 **데이터 집합** 을와 <xref:System.Xml.XmlDataDocument> 동기화 하면 먼저 **WriteXml**을 사용 하 여 데이터 집합의 내용을 XML 데이터로 작성 하지 않고도 **데이터 집합** 의 내용에 XSLT 스타일 시트를 적용할 수 있습니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "69937036"
  다음 코드는 **데이터 집합** 을 채우고 XSLT 스타일 시트를 적용 합니다.  
   
 > [!NOTE]
-> 관계를 포함 하는 **데이터 집합** 에 XSLT 스타일 시트를 적용 하는 경우의 중첩 된 각 관계에 대해의 **nested** <xref:System.Data.DataRelation> 속성을 **true** 로 설정 하면 최상의 성능을 달성할 수 있습니다. 그러면 스타일시트 노드 테스트 식에서 쓰는 이전 형제 및 다음 형제와 같이 높은 성능이 필요한 XPath 위치 축을 사용하여 데이터 계층을 탐색하는 대신, 자연스러운 상-하 처리를 구현하는 XSLT 스타일시트를 사용하여 계층을 탐색하고 데이터를 전송할 수 있습니다. 중첩 관계에 대 한 자세한 내용은 [DataRelations 중첩](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)을 참조 하세요.  
+> 관계를 포함 하는 **데이터 집합** 에 XSLT 스타일 시트를 적용 하는 경우의 중첩 된 각 관계에 대해의 **nested** <xref:System.Data.DataRelation> 속성을 **true** 로 설정 하면 최상의 성능을 달성할 수 있습니다. 그러면 스타일시트 노드 테스트 식에서 쓰는 이전 형제 및 다음 형제와 같이 높은 성능이 필요한 XPath 위치 축을 사용하여 데이터 계층을 탐색하는 대신, 자연스러운 상-하 처리를 구현하는 XSLT 스타일시트를 사용하여 계층을 탐색하고 데이터를 전송할 수 있습니다. 중첩 관계에 대 한 자세한 내용은 [DataRelations 중첩](nesting-datarelations.md)을 참조 하세요.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -125,5 +125,5 @@ writer.Close();
   
 ## <a name="see-also"></a>참고자료
 
-- [데이터 세트 및 XmlDataDocument 동기화](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
+- [데이터 세트 및 XmlDataDocument 동기화](dataset-and-xmldatadocument-synchronization.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

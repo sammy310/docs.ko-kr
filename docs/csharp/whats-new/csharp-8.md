@@ -2,12 +2,12 @@
 title: C# 8.0의 새로운 기능 - C# 가이드
 description: C# 8.0의 새로운 기능을 살펴봅니다. 이 문서는 미리 보기 5가 반영된 최신 내용을 담고 있습니다.
 ms.date: 02/12/2019
-ms.openlocfilehash: bf67baba926effd012ae01d3d802ba921e41ad5a
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 14c86fe4b1ecd1c89ebbbb082c5c9956bc51e03e
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363889"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105506"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0의 새로운 기능
 
@@ -16,10 +16,10 @@ C# 언어에는 직접 사용해 볼 수 있는 여러 개선된 기능이 포�
 - [읽기 전용 멤버](#readonly-members)
 - [기본 인터페이스 멤버](#default-interface-members)
 - [패턴 일치 개선 사항](#more-patterns-in-more-places):
-  * [Switch 식](#switch-expressions)
-  * [속성 패턴](#property-patterns)
-  * [튜플 패턴](#tuple-patterns)
-  * [위치 패턴](#positional-patterns)
+  - [Switch 식](#switch-expressions)
+  - [속성 패턴](#property-patterns)
+  - [튜플 패턴](#tuple-patterns)
+  - [위치 패턴](#positional-patterns)
 - [using 선언](#using-declarations)
 - [정적 로컬 함수](#static-local-functions)
 - [삭제 가능한 ref struct](#disposable-ref-structs)

@@ -2,12 +2,12 @@
 title: '방법: 빈 쿼리 결과 집합 디버그(C#)'
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
-ms.openlocfilehash: 06c878a7751a14a3043b450d9242037ca91ad754
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 12d2132f1f088050fdd109d067069870b82f2661
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710137"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205309"
 ---
 # <a name="how-to-debug-empty-query-results-sets-c"></a>방법: 빈 쿼리 결과 집합 디버그(C#)
 XML 트리를 쿼리할 때 가장 일반적인 문제 중 하나는 XML 트리에 기본 네임스페이스가 있으면 개발자가 경우에 따라 XML이 네임스페이스에 없는 것처럼 쿼리를 작성하는 것입니다.  
@@ -42,7 +42,7 @@ Console.WriteLine("End of result set");
   
  이 예제의 결과는 다음과 같습니다.  
   
-```  
+```output  
 Result set follows:  
 End of result set  
 ```  
@@ -74,7 +74,7 @@ Console.WriteLine("End of result set");
   
  이 예제의 결과는 다음과 같습니다.  
   
-```  
+```output  
 Result set follows:  
 1  
 2  

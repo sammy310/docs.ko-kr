@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 154640499e99767f73a148c6980e6a2a4cfbce2f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 56f0ebccc1bd46a26b5247ac2668e963cbeac828
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623782"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106480"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>.NET Framework의 애플리케이션 호환성
 
@@ -22,15 +22,15 @@ ms.locfileid: "64623782"
 
 각 앱은 .NET Framework의 특정 버전을 대상으로 하며, 다음을 통해 지정됩니다.
 
-* Visual Studio에서 대상 프레임워크 정의
-* 프로젝트 파일에서 대상 프레임워크 지정
-* 소스 코드에 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 적용
+- Visual Studio에서 대상 프레임워크 정의
+- 프로젝트 파일에서 대상 프레임워크 지정
+- 소스 코드에 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 적용
 
 대상으로 지정된 버전보다 더 새로운 버전에서 실행될 경우 .NET Framework는 특수 동작을 사용하여 대상으로 지정된 이전 버전을 모방합니다. 즉, 앱은 Framework의 더 새로운 버전에서 실행되지만 이전 버전에서 실행되는 것처럼 동작합니다. .NET Framework 버전 간의 대부분의 호환성 문제는 이 특수 모델을 통해 완화됩니다. 애플리케이션의 대상이 되는 .NET Framework 버전은 코드가 실행되는 애플리케이션 도메인의 항목 어셈블리의 대상 버전에 따라 결정됩니다. 해당 애플리케이션 도메인에 로드된 모든 추가 어셈블리는 이 .NET Framework 버전을 대상으로 합니다. 예를 들어, 실행 파일의 경우, 실행 파일의 대상 프레임워크는 해당 AppDomain의 모든 어셈블리가 실행되는 호환 모드입니다.
 
 ## <a name="runtime-changes"></a>런타임 변경 내용
 
-런타임 문제는 새 런타임이 컴퓨터에서 발생하고 같은 이진 파일이 실행되지만 다른 동작이 확인될 경우 발생하는 문제입니다. .NET Framework 4.0용으로 컴파일된 이진 파일은 4.5 이상 버전의 .NET Framework 4.0 호환성 모드에서 실행됩니다. 4.5에 영향을 미치는 대부분의 변경 내용은 4.0용으로 컴파일된 이진 파일에 영향을 미치지 않습니다. 이 내용은 AppDomain에만 적용되고 항목 어셈블리의 설정에 따라 달라집니다.
+런타임 문제는 새 런타임이 컴퓨터에서 발생하고 같은 이진 파일이 실행되지만 다른 동작이 확인될 경우 발생하는 문제입니다. .NET Framework 4.0용으로 컴파일된 이진 파일은 4.5 이상 버전의 .NET Framework 4.0 호환성 모드에서 실행됩니다. 4\.5에 영향을 미치는 대부분의 변경 내용은 4.0용으로 컴파일된 이진 파일에 영향을 미치지 않습니다. 이 내용은 AppDomain에만 적용되고 항목 어셈블리의 설정에 따라 달라집니다.
 
 ## <a name="retargeting-changes"></a>대상 다시 지정 변경 내용
 
@@ -71,8 +71,8 @@ ms.locfileid: "64623782"
 ## <a name="usage"></a>사용법
 시작하려면 아래에서 호환성 변경 형식을 선택합니다.
 
-* [대상 다시 지정 변경 내용](./retargeting/index.md)
-* [런타임 변경 내용](./runtime/index.md)
+- [대상 다시 지정 변경 내용](./retargeting/index.md)
+- [런타임 변경 내용](./runtime/index.md)
 
 ## <a name="see-also"></a>참고 항목
 

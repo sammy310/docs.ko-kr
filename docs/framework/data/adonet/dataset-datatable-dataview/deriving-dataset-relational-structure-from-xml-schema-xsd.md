@@ -2,17 +2,17 @@
 title: XML 스키마에서 데이터 세트 관계형 구조 파생(XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: 98c43b6af2913b9737085d2d983b37c6da4c1724
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 29b905c42f15cad4eb8521c4d702b56093982445
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934472"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203784"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>XML 스키마에서 데이터 세트 관계형 구조 파생(XSD)
 이 단원에서는 XSD(XML 스키마 정의 언어) 스키마 문서에서 `DataSet`의 관계형 스키마를 빌드하는 방법을 간략하게 설명합니다. 일반적으로 스키마 요소의 각 `complexType` 자식 요소에 대해 `DataSet`에서 테이블이 생성 됩니다. 테이블 구조는 복합 형식의 정의에 의해 결정됩니다. 스키마의 최상위 요소 `DataSet` 에 대해에서 테이블이 생성 됩니다. 그러나 `complexType` `complexType` 요소가 `complexType` 다른 `DataTable` `DataSet`요소 내에 중첩 된 경우에만 최상위 요소에 대해 테이블이 생성 됩니다 .이 경우 중첩 된 요소가 내에서에 매핑됩니다. `complexType`  
   
- XSD에 대 한 자세한 내용은 World Wide Web 컨소시엄 (W3C) [XML 스키마 파트 0: 입문 권장](https://www.w3.org/TR/xmlschema-0/)사항 [, XML 스키마 파트 1: 구조 권장](https://www.w3.org/TR/xmlschema-1/)사항 [및 XML 스키마 파트 2: 데이터 형식](https://www.w3.org/TR/xmlschema-2/)권장 사항.  
+ XSD에 대 한 자세한 내용은 World Wide Web 컨소시엄 (W3C) [XML 스키마 파트 0: 입문 권장](https://www.w3.org/TR/xmlschema-0/)사항 [, XML 스키마 파트 1: 구조 권장](https://www.w3.org/TR/xmlschema-1/)사항 [및 XML 스키마 파트 2: Datatypes Recommendation](https://www.w3.org/TR/xmlschema-2/)(XML 스키마 2부: Datatypes 권장 사항)을 참조하세요.  
   
  다음 예제에서는 `customers` 가 **데이터 집합** 요소인 `MyDataSet` 요소의 자식 요소인 XML 스키마를 보여 줍니다.  
   
@@ -83,17 +83,17 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
 ```  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [데이터 세트 제약 조건에 XSD(XML 스키마) 제약 조건 매핑](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [데이터 세트 제약 조건에 XSD(XML 스키마) 제약 조건 매핑](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  에서 unique 및 foreign key 제약 조건을 만드는 데 사용 되는 XML 스키마 요소 `DataSet`에 대해 설명 합니다.  
   
- [XSD(XML 스키마)에서 데이터 세트 관계 생성](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [XSD(XML 스키마)에서 데이터 세트 관계 생성](generating-dataset-relations-from-xml-schema-xsd.md)  
  에서 테이블 열 간의 관계를 만드는 데 사용 되는 XML 스키마 요소 `DataSet`에 대해 설명 합니다.  
   
- [XML 스키마 제약 조건 및 관계](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/xml-schema-constraints-and-relationships.md)  
+ [XML 스키마 제약 조건 및 관계](xml-schema-constraints-and-relationships.md)  
  XML 스키마 요소를 사용 하 여에서 `DataSet`제약 조건을 만들 때 관계를 암시적으로 만드는 방법을 설명 합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [데이터 집합에서 XML 사용](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [데이터 집합에서 XML 사용](using-xml-in-a-dataset.md)  
  관계형 구조와 데이터 `DataSet` 를에 XML 데이터로 로드 하 고 유지 하는 방법을 설명 합니다.  
   
 ## <a name="see-also"></a>참고자료

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bbf97b3bc72a12f8920e3a3cace3f7c31ed1e71a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d77683dde24eeec5de7f1e541a6cc86f3b0c6617
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910982"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205623"
 ---
 # <a name="code-access-security-basics"></a>코드 액세스 보안 기본 사항
 
@@ -32,13 +32,13 @@ ms.locfileid: "69910982"
 
 - **보안 클래스 라이브러리**: 보안 클래스 라이브러리는 보안 요구를 사용 하 여 라이브러리의 호출자에 게 라이브러리가 노출 하는 리소스에 액세스할 수 있는 권한이 있는지 확인 합니다. 예를 들어 보안 클래스 라이브러리에 호출자에게 파일을 만들 수 있는 권한이 있도록 요구하는 파일 생성 메서드가 있을 수 있습니다. .NET Framework는 보안 클래스 라이브러리로 구성되어 있습니다. 코드에서 사용하는 라이브러리에 액세스하는 데 필요한 권한을 알고 있어야 합니다. 자세한 내용은이 항목의 뒷부분에 있는 [보안 클래스 라이브러리 사용](#secure_library) 단원을 참조 하십시오.
 
-- **투명 코드**: .NET Framework 4부터 특정 사용 권한을 식별 하는 것 외에도 코드를 보안 투명으로 실행할지 여부도 결정 해야 합니다. 보안 투명 코드는 보안에 중요한 것으로 식별된 형식이나 멤버를 호출할 수 없습니다. 이 규칙은 완전 신뢰 애플리케이션과 부분적으로 신뢰할 수 있는 애플리케이션에 적용됩니다. 자세한 내용은 [보안 투명 코드](../../../docs/framework/misc/security-transparent-code.md)를 참조 하세요.
+- **투명 코드**: .NET Framework 4부터 특정 사용 권한을 식별 하는 것 외에도 코드를 보안 투명으로 실행할지 여부도 결정 해야 합니다. 보안 투명 코드는 보안에 중요한 것으로 식별된 형식이나 멤버를 호출할 수 없습니다. 이 규칙은 완전 신뢰 애플리케이션과 부분적으로 신뢰할 수 있는 애플리케이션에 적용됩니다. 자세한 내용은 [보안 투명 코드](security-transparent-code.md)를 참조 하세요.
 
 <a name="typesafe_code"></a>
 
 ## <a name="writing-verifiably-type-safe-code"></a>형식 안정성이 확인된 코드 작성
 
-JIT(Just-In-Time) 컴파일은 코드를 검사하고 코드의 형식이 안전한지 여부를 확인하려고 하는 검증 프로세스를 수행합니다. 확인 하는 동안 형식이 안전한 것으로 입증 된 코드를 *안정형 형식 안전 코드*라고 합니다. 코드 형식이 안전해도 검증 프로세스나 컴파일러의 제한 사항 때문에 형식 안전성이 아직 확인되지 않았을 수 있습니다. 모든 언어가 형식이 안전한 것은 아니며, Microsoft Visual C++와 같은 일부 언어 컴파일러는 형식 안전성이 확인된 관리 코드를 생성할 수 없습니다. 사용하는 언어 컴파일러가 형식 안전성이 확인된 코드를 생성하는지 여부를 확인하려면 컴파일러의 설명서를 참조하세요. 특정 언어 구문을 사용 하지 않는 경우에만 확인 가능한 형식 안전 코드를 생성 하는 언어 컴파일러를 사용 하는 경우 [PEVerify 도구](../../../docs/framework/tools/peverify-exe-peverify-tool.md) 를 사용 하 여 코드의 형식이 안전한 지 여부를 확인 하는 것이 좋습니다.
+JIT(Just-In-Time) 컴파일은 코드를 검사하고 코드의 형식이 안전한지 여부를 확인하려고 하는 검증 프로세스를 수행합니다. 확인 하는 동안 형식이 안전한 것으로 입증 된 코드를 *안정형 형식 안전 코드*라고 합니다. 코드 형식이 안전해도 검증 프로세스나 컴파일러의 제한 사항 때문에 형식 안전성이 아직 확인되지 않았을 수 있습니다. 모든 언어가 형식이 안전한 것은 아니며, Microsoft Visual C++와 같은 일부 언어 컴파일러는 형식 안전성이 확인된 관리 코드를 생성할 수 없습니다. 사용하는 언어 컴파일러가 형식 안전성이 확인된 코드를 생성하는지 여부를 확인하려면 컴파일러의 설명서를 참조하세요. 특정 언어 구문을 사용 하지 않는 경우에만 확인 가능한 형식 안전 코드를 생성 하는 언어 컴파일러를 사용 하는 경우 [PEVerify 도구](../tools/peverify-exe-peverify-tool.md) 를 사용 하 여 코드의 형식이 안전한 지 여부를 확인 하는 것이 좋습니다.
 
 보안 정책에서 검증을 건너뛸 수 있도록 허용하는 경우 형식 안전성이 확인되지 않은 코드가 실행을 시도할 수 있습니다. 그러나 형식 안전성은 런타임의 어셈블리 격리 메커니즘에서 필수 부분이므로 코드가 형식 안전성 규칙을 위반하는 경우 보안을 안정적으로 적용할 수 없습니다. 기본적으로 형식이 안전하지 않은 코드는 로컬 컴퓨터에서 시작된 경우에만 실행할 수 있습니다. 따라서 모바일 코드는 형식이 안전해야 합니다.
 
@@ -55,7 +55,7 @@ JIT(Just-In-Time) 컴파일은 코드를 검사하고 코드의 형식이 안전
 선언적 보안 구문에서는 [특성](../../standard/attributes/index.md) 을 사용 하 여 보안 정보를 코드의 [메타 데이터로](../../standard/metadata-and-self-describing-components.md) 저장 합니다. 어셈블리, 클래스 또는 멤버 수준에 특성을 배치하여 사용할 요청, 요구 또는 재정의 형식을 나타낼 수 있습니다. 요청은 애플리케이션이 요구하거나 원하지 않는 권한에 대해 런타임 보안 시스템에 알리기 위해 공용 언어 런타임을 대상으로 하는 애플리케이션에서 사용됩니다. 요구와 재정의는 호출자로부터 리소스를 보호하거나 기본 보안 동작을 재정의하기 위해 라이브러리에서 사용됩니다.
 
 > [!NOTE]
-> .NET Framework 4에서는 .NET Framework 보안 모델 및 용어에 대 한 중요 한 변경 내용이 있습니다. 이러한 변경 내용에 대 한 자세한 내용은 [보안 변경 내용](../../../docs/framework/security/security-changes.md)을 참조 하세요.
+> .NET Framework 4에서는 .NET Framework 보안 모델 및 용어에 대 한 중요 한 변경 내용이 있습니다. 이러한 변경 내용에 대 한 자세한 내용은 [보안 변경 내용](../security/security-changes.md)을 참조 하세요.
 
 선언적 보안 호출을 사용하려면 필요한 특정 형식의 권한을 나타내도록 권한 개체의 상태 데이터를 초기화해야 합니다. 모든 기본 제공 권한에는 수행할 보안 작업 형식을 설명하는 <xref:System.Security.Permissions.SecurityAction> 열거형이 전달되는 특성이 있습니다. 그러나 권한은 고유한 전용 매개 변수도 수락합니다.
 
@@ -105,7 +105,7 @@ public class MyClass
 
 보안 호출을 수행하기 전에 필요한 특정 형식의 권한을 나타내도록 권한 개체의 상태 데이터를 초기화해야 합니다. 예를 들어 <xref:System.Security.Permissions.FileIOPermission> 개체를 만들 때 생성자를 사용 하 여 모든 파일에 대 한 무제한 액세스 또는 파일에 대 한 액세스 권한 없음을 나타내도록 **FileIOPermission** 개체를 초기화할 수 있습니다. 또는 다른 **FileIOPermission** 개체를 사용 하 여 개체에서 나타낼 액세스 형식 (즉, 읽기, 추가 또는 쓰기) 및 개체에서 보호할 파일을 나타내는 매개 변수를 전달할 수 있습니다.
 
-명령적 보안 구문을 사용하여 단일 보안 개체를 호출하는 것은 물론 권한 집합에 있는 권한 그룹을 초기화할 수도 있습니다. 예를 들어이 기술은 한 방법으로 여러 권한에 대해 [assert](../../../docs/framework/misc/using-the-assert-method.md) 호출을 안정적으로 수행 하는 유일한 방법입니다. <xref:System.Security.PermissionSet> 및 <xref:System.Security.NamedPermissionSet> 클래스를 사용하여 권한 그룹을 만든 다음 적절한 메서드를 호출하여 원하는 보안 호출을 호출합니다.
+명령적 보안 구문을 사용하여 단일 보안 개체를 호출하는 것은 물론 권한 집합에 있는 권한 그룹을 초기화할 수도 있습니다. 예를 들어이 기술은 한 방법으로 여러 권한에 대해 [assert](using-the-assert-method.md) 호출을 안정적으로 수행 하는 유일한 방법입니다. <xref:System.Security.PermissionSet> 및 <xref:System.Security.NamedPermissionSet> 클래스를 사용하여 권한 그룹을 만든 다음 적절한 메서드를 호출하여 원하는 보안 호출을 호출합니다.
 
 명령적 구문을 사용하여 요구 및 재정의를 수행할 수 있지만 요청은 수행할 수 없습니다. 권한 상태를 초기화하기 위해 필요한 정보가 런타임에만 알려지는 경우 선언적 구문 대신 명령적 구문을 요구 및 재정의에 사용할 수 있습니다. 예를 들어 호출자에게 특정 파일을 읽을 수 있는 권한이 있도록 해야 하지만 런타임까지 해당 파일의 이름을 알 수 없는 경우 명령적 요구를 사용합니다. 런타임에 조건이 유지되는지 및 테스트 결과에 따라 보안 요구를 수행할지 여부를 결정해야 하는 경우 선언적 검사 대신 명령적 검사를 사용하도록 선택할 수도 있습니다.
 
@@ -164,8 +164,8 @@ public class MyClass {
 - <xref:System.Security.Permissions.FileIOPermission>
 - <xref:System.Security.NamedPermissionSet>
 - <xref:System.Security.Permissions.SecurityAction>
-- [Assert](../../../docs/framework/misc/using-the-assert-method.md)
-- [코드 액세스 보안](../../../docs/framework/misc/code-access-security.md)
-- [코드 액세스 보안 기본 사항](../../../docs/framework/misc/code-access-security-basics.md)
+- [Assert](using-the-assert-method.md)
+- [코드 액세스 보안](code-access-security.md)
+- [코드 액세스 보안 기본 사항](code-access-security-basics.md)
 - [특성](../../standard/attributes/index.md)
 - [메타데이터 및 자동 기술 구성 요소](../../standard/metadata-and-self-describing-components.md)

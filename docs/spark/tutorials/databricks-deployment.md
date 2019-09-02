@@ -4,12 +4,12 @@ description: Databricks에 .NET for Apache Spark 애플리케이션을 배포하
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: ca9e93a413622c84325ca9fc8bac17268b990c5a
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 77c2d93ae324b6acbf8fc8dc25cd3e4d1a652f48
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "69576970"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107348"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>Databricks에 .NET for Apache Spark 애플리케이션 배포
 
@@ -18,17 +18,17 @@ ms.locfileid: "69576970"
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 
 > [!div class="checklist"]
-> * Microsoft.Spark.Worker 준비
-> * Spark .NET 앱 게시
-> * Databricks에 앱 배포
-> * 앱 실행
+> - Microsoft.Spark.Worker 준비
+> - Spark .NET 앱 게시
+> - Databricks에 앱 배포
+> - 앱 실행
 
 ## <a name="prerequisites"></a>전제 조건
 
 시작하기 전에 다음을 수행합니다.
 
-* [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html)를 다운로드합니다.
-* [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh)를 로컬 머신에 다운로드합니다. 이 도우미 스크립트는 나중에 .NET for Apache Spark 종속 파일을 Spark 클러스터의 작업자 노드에 복사하는 데 사용합니다.
+- [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html)를 다운로드합니다.
+- [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh)를 로컬 머신에 다운로드합니다. 이 도우미 스크립트는 나중에 .NET for Apache Spark 종속 파일을 Spark 클러스터의 작업자 노드에 복사하는 데 사용합니다.
 
 ## <a name="prepare-worker-dependencies"></a>작업자 종속성 준비
 
@@ -62,9 +62,9 @@ ms.locfileid: "69576970"
 
 4. 클러스터가 액세스할 수 있는 분산 파일 시스템(예: DBFS)에 다음을 업로드합니다.
 
-   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: 이 jar은 [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet 패키지의 일부로 포함되며 앱의 빌드 출력 디렉터리에 공동 배치됩니다.
-   * `<your app>.zip`
-   * 각 실행기의 작업 디렉터리에 배치할 파일(예: 모든 작업자에 액세스할 수 있는 공통 데이터 또는 종속성 파일) 또는 어셈블리(예: 앱에서 사용하는 사용자 정의 함수 또는 라이브러리가 포함된 DLL).
+   - `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: 이 jar은 [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet 패키지의 일부로 포함되며 앱의 빌드 출력 디렉터리에 공동 배치됩니다.
+   - `<your app>.zip`
+   - 각 실행기의 작업 디렉터리에 배치할 파일(예: 모든 작업자에 액세스할 수 있는 공통 데이터 또는 종속성 파일) 또는 어셈블리(예: 앱에서 사용하는 사용자 정의 함수 또는 라이브러리가 포함된 DLL).
 
 ## <a name="deploy-to-databricks"></a>Databricks에 배포
 

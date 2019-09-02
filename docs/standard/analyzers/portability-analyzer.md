@@ -4,12 +4,12 @@ description: .NET 이식성 분석기 도구를 사용하여 .NET Core, .NET Sta
 ms.date: 07/18/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 32b4f980061b0975c413a8cde436074f76cfabc9
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: fdd2e9f288649b35b778b5da505408822e0ea8fe
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433947"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107512"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET 이식성 분석기
 
@@ -17,11 +17,11 @@ ms.locfileid: "68433947"
 
 ## <a name="common-targets"></a>공통 대상
 
-* [.NET Core](../../core/index.md): 모듈형 디자인을 포함하고, Side-by-Side를 이용하며, 플랫폼 간 시나리오를 대상으로 합니다. Side-by-Side를 사용하면 다른 앱을 중단하지 않고 새로운 .NET Core 버전을 채택할 수 있습니다. 플랫폼 간을 지원하는 .NET Core에 앱을 이식하는 것이 목표인 경우에 권장되는 대상입니다. 
-* .[NET Standard](../../standard/net-standard.md): 모든 .NET 구현에서 사용할 수 있는 .NET Standard API를 포함합니다. 모든 .NET 지원 플랫폼에서 라이브러리를 실행하도록 하는 것이 목표인 경우에 권장되는 대상입니다.  
-* [ASP.NET Core](/aspnet/core): 최신 웹 프레임워크는 .NET Core를 기반으로 합니다. 웹앱을 .NET Core에 이식하여 여러 플랫폼을 지원하는 것이 목표인 경우에 권장되는 대상입니다.
-* .NET Core + [플랫폼 확장](../../core/porting/windows-compat-pack.md): 많은 .NET Framework 가용 기술을 제공하는 Windows Compatibility Pack 외에도 .NET Core API가 포함되어 있습니다. 이는 .NET Framework에서 Windows의 .NET Core로 앱을 이식하기 위해 권장되는 대상입니다.
-* .NET Standard + [플랫폼 확장](../../core/porting/windows-compat-pack.md): 많은 .NET Framework 가용 기술을 제공하는 Windows Compatibility Pack 외에도 .NET Standard API가 포함되어 있습니다. 이는 .NET Framework에서 Windows의 .NET Core로 라이브러리를 이식하기 위해 권장되는 대상입니다.
+- [.NET Core](../../core/index.md): 모듈형 디자인을 포함하고, Side-by-Side를 이용하며, 플랫폼 간 시나리오를 대상으로 합니다. Side-by-Side를 사용하면 다른 앱을 중단하지 않고 새로운 .NET Core 버전을 채택할 수 있습니다. 플랫폼 간을 지원하는 .NET Core에 앱을 이식하는 것이 목표인 경우에 권장되는 대상입니다. 
+- .[NET Standard](../../standard/net-standard.md): 모든 .NET 구현에서 사용할 수 있는 .NET Standard API를 포함합니다. 모든 .NET 지원 플랫폼에서 라이브러리를 실행하도록 하는 것이 목표인 경우에 권장되는 대상입니다.  
+- [ASP.NET Core](/aspnet/core): 최신 웹 프레임워크는 .NET Core를 기반으로 합니다. 웹앱을 .NET Core에 이식하여 여러 플랫폼을 지원하는 것이 목표인 경우에 권장되는 대상입니다.
+- .NET Core + [플랫폼 확장](../../core/porting/windows-compat-pack.md): 많은 .NET Framework 가용 기술을 제공하는 Windows Compatibility Pack 외에도 .NET Core API가 포함되어 있습니다. 이는 .NET Framework에서 Windows의 .NET Core로 앱을 이식하기 위해 권장되는 대상입니다.
+- .NET Standard + [플랫폼 확장](../../core/porting/windows-compat-pack.md): 많은 .NET Framework 가용 기술을 제공하는 Windows Compatibility Pack 외에도 .NET Standard API가 포함되어 있습니다. 이는 .NET Framework에서 Windows의 .NET Core로 라이브러리를 이식하기 위해 권장되는 대상입니다.
 
 ## <a name="how-to-use-the-net-portability-analyzer"></a>.NET 이식성 분석기를 사용하는 방법
 
@@ -38,9 +38,9 @@ Visual Studio에서 전체 프로젝트를 분석하려면 **솔루션 탐색기
 
 [ApiPort 콘솔 앱](https://aka.ms/apiportdownload)을 사용할 수도 있습니다. 
 
-* 현재 디렉터리를 분석하려면 다음 명령을 입력합니다. `ApiPort.exe analyze -f .`
-* .dll 파일의 특정 목록을 분석하려면 다음 명령을 입력합니다. `ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
-* 자세한 도움말을 가져오려면 `ApiPort.exe -?`를 실행합니다.
+- 현재 디렉터리를 분석하려면 다음 명령을 입력합니다. `ApiPort.exe analyze -f .`
+- .dll 파일의 특정 목록을 분석하려면 다음 명령을 입력합니다. `ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
+- 자세한 도움말을 가져오려면 `ApiPort.exe -?`를 실행합니다.
 
 소유하고 이식하려는 모든 관련 exe 및 dll 파일을 포함시키고, 앱이 종속되어 있지만 소유하지 않고 이식할 수 없는 파일은 제외하는 것이 좋습니다. 이렇게 하면 가장 관련성이 높은 이식성 보고서가 제공됩니다.  
 

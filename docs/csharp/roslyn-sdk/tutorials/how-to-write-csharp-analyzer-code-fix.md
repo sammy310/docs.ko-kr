@@ -3,12 +3,12 @@ title: '자습서: 첫 번째 분석기 및 코드 수정 작성'
 description: 이 자습서에서는 .NET Complier SDK(Roslyn API)를 사용하여 분석기 및 코드 수정 사항을 빌드하는 단계별 지침을 제공합니다.
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 45529a72e3c64a573bfc043fe44da29caed1a0c4
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
+ms.openlocfilehash: d6645a2a6e83f68c1959c255756393c9251dc1ba
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67870555"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105753"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>자습서: 첫 번째 분석기 및 코드 수정 작성
 
@@ -18,8 +18,8 @@ ms.locfileid: "67870555"
 
 ## <a name="prerequisites"></a>전제 조건
 
-* [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
-* [Visual Studio 2019](https://www.visualstudio.com/downloads)
+- [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
+- [Visual Studio 2019](https://www.visualstudio.com/downloads)
 
 Visual Studio Intaller를 통해 **.NET Compiler Platform SDK**를 설치해야 합니다.
 
@@ -51,9 +51,9 @@ Console.WriteLine(x);
 
 변수를 상수로 설정할 수 있는지 여부를 판별하기 위한 분석이 포함되며, 변수가 작성되지 않는지 확인하려면 구문 분석, 상수 분석, 이니셜라이저 식의 상수 분석 및 데이터 흐름 분석이 필요합니다. .NET Compiler Platform은 이 분석을 보다 쉽게 수행할 수 있는 API를 제공합니다. 첫 번째 단계는 새로운 C# **코드 수정 사항이 포함된 분석기** 프로젝트는 만드는 것입니다.
 
-* Visual Studio에서 **파일 > 새로 만들기 > 프로젝트...** 를 선택하여 [새 프로젝트] 대화 상자를 표시합니다.
-* **Visual C# > 확장성**에서 **코드 수정 사항이 포함된 분석기(.NET Standard)** 를 선택합니다.
-* 프로젝트 이름을 “**MakeConst**”로 지정하고 [확인]을 클릭합니다.
+- Visual Studio에서 **파일 > 새로 만들기 > 프로젝트...** 를 선택하여 [새 프로젝트] 대화 상자를 표시합니다.
+- **Visual C# > 확장성**에서 **코드 수정 사항이 포함된 분석기(.NET Standard)** 를 선택합니다.
+- 프로젝트 이름을 “**MakeConst**”로 지정하고 [확인]을 클릭합니다.
 
 코드 수정 사항 템플릿이 포함된 분석기는 세 개의 프로젝트를 만듭니다. 하나에는 분석기 및 코드 수정 사항이 포함되고, 두 번째는 단위 테스트 프로젝트이고, 세 번째는 VSIX 프로젝트입니다. 기본 시작 프로젝트는 VSIX 프로젝트입니다. **F5** 키를 눌러 VSIX 프로젝트를 시작합니다. 그러면 새 분석기를 로드한 Visual Studio의 두 번째 인스턴스가 시작됩니다.
 
@@ -77,8 +77,8 @@ Console.WriteLine(x);
 
 템플릿은 **MakeConstAnalyzer.cs** 파일에서 초기 `DiagnosticAnalyzer` 클래스를 만듭니다. 이 초기 분석기는 모든 분석기의 두 가지 중요한 속성을 표시합니다.
 
-* 모든 진단 분석기는 사용되는 언어를 설명하는 `[DiagnosticAnalyzer]` 특성을 제공해야 합니다.
-* 모든 진단 분석기는 <xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer> 클래스에서 파생되어야 합니다.
+- 모든 진단 분석기는 사용되는 언어를 설명하는 `[DiagnosticAnalyzer]` 특성을 제공해야 합니다.
+- 모든 진단 분석기는 <xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer> 클래스에서 파생되어야 합니다.
 
 템플릿은 분석기의 일부인 기본 기능도 표시합니다.
 
@@ -89,9 +89,9 @@ Console.WriteLine(x);
 
 첫 번째 단계는 이러한 상수가 “Make Const” 분석기를 나타내도록 등록 상수 및 `Initialize` 메서드를 업데이트하는 것입니다. 대부분의 문자열 상수는 문자열 리소스 파일에 정의됩니다. 더 쉽게 지역화하려면 해당 사례를 따라야 합니다. **MakeConst** 분석기 프로젝트에 대한 **Resources.resx** 파일을 엽니다. 리소스 편집기가 표시됩니다. 다음과 같이 문자열 리소스를 업데이트합니다.
 
-* `AnalyzerTitle`을 “Variable can be made constant”(변수를 상수로 설정할 수 있음)로 변경합니다.
-* `AnalyzerMessageFormat`을 “Can be made constant”(상수로 설정할 수 있음)로 변경합니다.
-* `AnalyzerDescription`을 “Make Constant”(상수 만들기)로 변경합니다.
+- `AnalyzerTitle`을 “Variable can be made constant”(변수를 상수로 설정할 수 있음)로 변경합니다.
+- `AnalyzerMessageFormat`을 “Can be made constant”(상수로 설정할 수 있음)로 변경합니다.
+- `AnalyzerDescription`을 “Make Constant”(상수 만들기)로 변경합니다.
 
 또한 **액세스 한정자** 드롭다운을 `public`으로 변경합니다. 이렇게 하면 단위 테스트에서 이러한 상수를 더 쉽게 사용할 수 있습니다. 작업을 마치면 리소스 편집기가 다음 그림과 같이 표시됩니다.
 
@@ -329,15 +329,15 @@ public void WhenTestCodeIsValidNoDiagnosticIsTriggered(string testCode)
 
 이 테스트도 성공합니다. 다음으로, 아직 처리하지 않은 조건에 대한 상수를 추가합니다.
 
-* 이미 상수이므로 이미 `const`인 선언:
+- 이미 상수이므로 이미 `const`인 선언:
 
    [!code-csharp[already const declaration](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#AlreadyConst "a declaration that is already const should not raise the diagnostic")]
 
-* 사용할 값이 없으므로 이니셜라이저가 없는 선언:
+- 사용할 값이 없으므로 이니셜라이저가 없는 선언:
 
    [!code-csharp[declarations that have no initializer](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#NoInitializer "a declaration that has no initializer should not raise the diagnostic")]
 
-* 컴파일 시간 상수일 수 없으므로 이니셜라이저가 상수가 아닌 선언:
+- 컴파일 시간 상수일 수 없으므로 이니셜라이저가 상수가 아닌 선언:
 
    [!code-csharp[declarations where the initializer isn't const](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#InitializerNotConstant "a declaration where the initializer is not a compile-time constant should not raise the diagnostic")]
 
@@ -364,9 +364,9 @@ public void WhenTestCodeIsValidNoDiagnosticIsTriggered(string testCode)
 
 이러한 조건과 일치하는 코드를 필터링하려면 분석기의 `AnalyzeNode` 메서드에 대한 몇 가지 개선 사항이 필요합니다. 개선 사항은 모두 관련된 조건이므로 유사한 변경 내용이 이러한 모든 조건을 수정합니다. `AnalyzeNode`에 다음 변경 내용을 적용합니다.
 
-* 의미 체계 분석이 단일 변수 선언을 검사했습니다. 이 코드는 동일한 문에 선언된 모든 변수를 검사하는 `foreach` 루프에 있어야 합니다.
-* 선언된 각 변수에는 이니셜라이저가 있어야 합니다.
-* 선언된 각 변수의 이니셜라이저는 컴파일 시간 상수여야 합니다.
+- 의미 체계 분석이 단일 변수 선언을 검사했습니다. 이 코드는 동일한 문에 선언된 모든 변수를 검사하는 `foreach` 루프에 있어야 합니다.
+- 선언된 각 변수에는 이니셜라이저가 있어야 합니다.
+- 선언된 각 변수의 이니셜라이저는 컴파일 시간 상수여야 합니다.
 
 `AnalyzeNode` 메서드에서 다음 원래 의미 체계 분석을
 
@@ -445,7 +445,7 @@ foreach (var variable in localDeclaration.Declaration.Variables)
 
 다행히도 위의 버그는 모두 방금 알아본 동일한 기술을 사용하여 해결할 수 있습니다.
 
-첫 번째 버그를 수정하려면 먼저 **DiagnosticAnalyzer.cs**를 열고 상수 값과 함께 할당되었는지 확인하기 위해 각 로컬 선언의 이니셜라이저가 검사되는 foreach 루프를 찾습니다. 첫 번째 foreach 루프 바로 ‘앞’에서 `context.SemanticModel.GetTypeInfo()`를 호출하여 로컬 선언의 선언된 형식에 대한 자세한 정보를 검색합니다.
+첫 번째 버그를 수정하려면 먼저 **DiagnosticAnalyzer.cs**를 열고 상수 값과 함께 할당되었는지 확인하기 위해 각 로컬 선언의 이니셜라이저가 검사되는 foreach 루프를 찾습니다. 첫 번째 foreach 루프 바로 ‘앞’에서 `context.SemanticModel.GetTypeInfo()`를 호출하여 로컬 선언의 선언된 형식에 대한 자세한 정보를 검색합니다. 
 
 ```csharp
 var variableTypeName = localDeclaration.Declaration.Type;
@@ -487,11 +487,11 @@ else if (variableType.IsReferenceType && constantValue.Value != null)
 
 var' 키워드를 올바른 형식 이름으로 바꾸려면 코드 수정 사항 공급자에서 약간의 코드를 추가로 작성해야 합니다. **CodeFixProvider.cs**로 돌아갑니다. 추가할 코드는 다음 단계를 수행합니다.
 
-* 선언이 `var` 선언인지, 그리고 다음과 같은지 검사합니다.
-* 유추 형식에 대한 새 형식을 만듭니다.
-* 형식 선언이 별칭이 아닌지 확인합니다. 별칭이 아니면 `const var`을 선언하는 것이 적합합니다.
-* `var`이 이 프로그램의 형식 이름이 아닌지 확인합니다. 아닌 경우 `const var`이 적합합니다.
-* 전체 형식 이름 단순화
+- 선언이 `var` 선언인지, 그리고 다음과 같은지 검사합니다.
+- 유추 형식에 대한 새 형식을 만듭니다.
+- 형식 선언이 별칭이 아닌지 확인합니다. 별칭이 아니면 `const var`을 선언하는 것이 적합합니다.
+- `var`이 이 프로그램의 형식 이름이 아닌지 확인합니다. 아닌 경우 `const var`이 적합합니다.
+- 전체 형식 이름 단순화
 
 코드가 다소 많아 보이지만 그렇지 않습니다. `newLocal`을 선언 및 초기화하는 줄을 다음 코드로 바꿉니다. 코드는 `newModifiers` 초기화 바로 뒤에 옵니다.
 
@@ -505,10 +505,10 @@ using Microsoft.CodeAnalysis.Simplification;
 
 테스트를 실행하면 모두 성공합니다. 완료된 분석기를 직접 실행할 수 있습니다. Ctrl+F5를 눌러 Roslyn 미리 보기 확장이 로드된 Visual Studio의 두 번째 인스턴스에서 분석기 프로젝트를 실행합니다.
 
-* 두 번째 Visual Studio 인스턴스에서 새 C# 콘솔 애플리케이션 프로젝트를 만들고 `int x = "abc";`을 Main 메서드에 추가합니다. 첫 번째 버그 수정 덕분에 이 지역 변수 선언에 대한 경고가 보고되지 않습니다(컴파일러 오류는 예상대로 발생함).
-* 그런 다음, `object s = "abc";`을 Main 메서드에 추가합니다. 두 번째 버그 수정으로 인해 경고가 보고되지 않습니다.
-* 마지막으로 `var` 키워드를 사용하는 다른 지역 변수를 추가합니다. 경고가 보고되고 제안이 왼쪽 바로 아래에 표시됩니다.
-* 편집기 캐럿을 물결선 위로 이동하고 Ctrl+.를 눌러 제안된 코드 수정 사항을 표시합니다. 코드 수정 사항을 선택하면 var' 키워드가 올바르게 처리됩니다.
+- 두 번째 Visual Studio 인스턴스에서 새 C# 콘솔 애플리케이션 프로젝트를 만들고 `int x = "abc";`을 Main 메서드에 추가합니다. 첫 번째 버그 수정 덕분에 이 지역 변수 선언에 대한 경고가 보고되지 않습니다(컴파일러 오류는 예상대로 발생함).
+- 그런 다음, `object s = "abc";`을 Main 메서드에 추가합니다. 두 번째 버그 수정으로 인해 경고가 보고되지 않습니다.
+- 마지막으로 `var` 키워드를 사용하는 다른 지역 변수를 추가합니다. 경고가 보고되고 제안이 왼쪽 바로 아래에 표시됩니다.
+- 편집기 캐럿을 물결선 위로 이동하고 Ctrl+.를 눌러 제안된 코드 수정 사항을 표시합니다. 코드 수정 사항을 선택하면 var' 키워드가 올바르게 처리됩니다.
 
 마지막으로 다음 코드를 추가합니다.
 

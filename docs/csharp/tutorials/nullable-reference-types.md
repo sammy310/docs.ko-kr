@@ -3,12 +3,12 @@ title: nullable 참조 형식을 사용하여 디자인
 description: 이 고급 자습서에서는 nullable 참조 형식을 소개합니다. 참조 값이 null일 수 있는 경우에 대한 디자인 의도를 표현하고 컴파일러가 null일 수 없는 경우를 적용하게 하는 방법을 알아봅니다.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: cd73a73554514c2b7c70c78ba24038ee8d543266
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 570d071172c4048adfddfd55a5e38556e7fd7c69
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195830"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105848"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>자습서: nullable 참조 형식 및 nullable이 아닌 참조 형식을 사용하여 디자인 의도를 보다 명확하게 표현
 
@@ -17,10 +17,10 @@ C# 8에서는 nullable 값 형식이 값 형식을 보완하는 것과 동일한
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 알아봅니다.
 
 > [!div class="checklist"]
-> * 디자인에 nullable 참조 형식 및 nullable이 아닌 참조 형식 통합
-> * 코드 전체에서 nullable 참조 형식 확인을 사용하도록 설정합니다.
-> * 컴파일러가 이러한 디자인 결정을 적용하는 코드를 작성합니다.
-> * 고유한 디자인에 nullable 참조 기능 사용
+> - 디자인에 nullable 참조 형식 및 nullable이 아닌 참조 형식 통합
+> - 코드 전체에서 nullable 참조 형식 확인을 사용하도록 설정합니다.
+> - 컴파일러가 이러한 디자인 결정을 적용하는 코드를 작성합니다.
+> - 고유한 디자인에 nullable 참조 기능 사용
 
 ## <a name="prerequisites"></a>전제 조건
 

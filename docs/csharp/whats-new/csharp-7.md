@@ -3,35 +3,35 @@ title: C# 7.0의 새로운 기능 - C# 가이드
 description: C# 언어 버전 7.0의 새로운 기능을 살펴봅니다.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 58d43167341b69e7e9ac67024e9993cf51c26c0b
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 148ecdf7a3a99ac73132593272ecff3a5bb4195e
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347453"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105724"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0의 새로운 기능
 
 C# 7.0에서는 C# 언어에 많은 새로운 기능을 추가합니다.
-* [`out` 변수](#out-variables)
+- [`out` 변수](#out-variables)
   - `out` 값을 사용되는 메서드에 대한 인수로 인라인으로 선언할 수 있습니다.
-* [튜플](#tuples)
+- [튜플](#tuples)
   - 여러 public 필드가 포함된 간단한 명명되지 않은 형식을 만들 수 있습니다. 컴파일러 및 IDE 도구는 이러한 형식의 의미 체계를 이해합니다.
-* [삭제](#discards)
+- [삭제](#discards)
   - 삭제는 할당된 값에 신경 쓰지 않을 때 할당에서 사용되는 임시 쓰기 전용 변수입니다. 매개 변수는 `out` 매개 변수를 사용하여 메서드를 호출할 때뿐만 아니라 튜플 및 사용자 정의 형식을 분해할 때 특히 유용합니다.
-* [패턴 일치](#pattern-matching)
+- [패턴 일치](#pattern-matching)
   - 임의 형식 및 해당 형식의 멤버 값에 따라 분기 논리를 만들 수 있습니다.
-* [`ref` local 및 return](#ref-locals-and-returns)
+- [`ref` local 및 return](#ref-locals-and-returns)
   - 메서드 지역 변수와 반환 값은 다른 스토리지에 대한 참조일 수 있습니다.
-* [로컬 함수](#local-functions)
+- [로컬 함수](#local-functions)
   - 함수를 다른 함수 내부에 중첩하여 범위와 표시 여부를 제한할 수 있습니다.
-* [추가 식 본문 멤버](#more-expression-bodied-members)
+- [추가 식 본문 멤버](#more-expression-bodied-members)
   - 식을 사용하여 작성할 수 있는 멤버 목록이 증가했습니다.
-* [`throw` 식](#throw-expressions)
+- [`throw` 식](#throw-expressions)
   - `throw` 문이었기 때문에 이전에 허용되지 않은 코드 구문에서 예외를 throw할 수 있습니다.
-* [일반화된 비동기 반환 형식](#generalized-async-return-types)
+- [일반화된 비동기 반환 형식](#generalized-async-return-types)
   - `async` 한정자를 사용하여 선언된 메서드는 `Task` 및 `Task<T>` 외에 다른 형식을 반환할 수 있습니다.
-* [숫자 리터럴 구문 개선 사항](#numeric-literal-syntax-improvements)
+- [숫자 리터럴 구문 개선 사항](#numeric-literal-syntax-improvements)
   - 새로운 토큰으로 숫자 상수의 가독성이 향상됩니다.
 
 이 문서의 나머지 부분에서는 해당 기능에 대한 개요를 제공합니다. 각 기능의 배경과 원리를 알아봅니다. 구문을 알아봅니다. `dotnet try` 글로벌 도구를 사용하여 환경에서 다음과 같은 기능을 탐색할 수 있습니다.
@@ -51,9 +51,9 @@ C# 7.0에서는 C# 언어에 많은 새로운 기능을 추가합니다.
 
 [!code-csharp[OutVarVariableDeclarations](~/samples/snippets/csharp/new-in-7/program.cs#OutVarVariableDeclarations "Implicitly typed Out variable")]
 
-* 코드를 읽기가 더 쉽습니다.
+- 코드를 읽기가 더 쉽습니다.
   - 위의 다른 줄이 아니라 사용하는 위치에서 out 변수를 선언합니다.
-* 초기 값을 할당할 필요가 없습니다.
+- 초기 값을 할당할 필요가 없습니다.
   - 메서드 호출에서 사용되는 위치에 `out` 변수를 선언하여 변수가 할당되기 전에 실수로 사용할 수 없습니다.
 
 ## <a name="tuples"></a>튜플
@@ -95,10 +95,10 @@ C#에서는 디자인 의도를 설명하는 데 사용되는 클래스 및 구�
 
 다음 시나리오에서는 버림이 지원되지 않습니다.
 
-* 튜플이나 사용자 정의 형식을 분해할 때.
-* [out](../language-reference/keywords/out-parameter-modifier.md) 매개 변수로 메서드를 호출할 때.
-* [is](../language-reference/keywords/is.md) 및 [switch](../language-reference/keywords/switch.md) 문을 사용한 패턴 일치 작업에서.
-* 할당 값을 버림으로 명시적으로 지정할 때 독립 실행형 식별자인 경우.
+- 튜플이나 사용자 정의 형식을 분해할 때.
+- [out](../language-reference/keywords/out-parameter-modifier.md) 매개 변수로 메서드를 호출할 때.
+- [is](../language-reference/keywords/is.md) 및 [switch](../language-reference/keywords/switch.md) 문을 사용한 패턴 일치 작업에서.
+- 할당 값을 버림으로 명시적으로 지정할 때 독립 실행형 식별자인 경우.
 
 다음 예제에서는 서로 다른 2년간의 도시 데이터가 포함된 6 튜플을 반환하는 `QueryCityDataForYears` 메서드를 정의합니다. 예제의 메서드 호출은 메서드에 의해 반환된 두 개의 채우기 값에만 관련되어 있으므로 튜플을 해체할 때 튜플의 나머지 값을 버림으로 처리합니다.
 
@@ -180,15 +180,15 @@ public static int SumPositiveNumbers(IEnumerable<object> sequence)
 
 C# 언어에는 `ref` 로컬 및 반환을 잘못 사용하지 않도록 방지하는 몇 가지 규칙이 있습니다.
 
-* `ref` 키워드를 메서드 서명 및 메서드의 모든 `return` 문에 추가해야 합니다.
+- `ref` 키워드를 메서드 서명 및 메서드의 모든 `return` 문에 추가해야 합니다.
   - 그러면 메서드가 메서드 전체에서 참조별로 반환되도록 합니다.
-* `ref return`은 값 변수 또는 `ref` 변수에 할당될 수 있습니다.
+- `ref return`은 값 변수 또는 `ref` 변수에 할당될 수 있습니다.
   - 호출자는 반환 값을 복사할지 여부를 제어합니다. 반환 값을 할당할 때 `ref` 한정자를 생략하면 호출자가 스토리지에 대한 참조가 아닌 값의 복사본을 요청한다는 것을 나타냅니다.
-* 표준 메서드 반환 값을 `ref` 로컬 변수에 할당할 수 없습니다.
+- 표준 메서드 반환 값을 `ref` 로컬 변수에 할당할 수 없습니다.
   - 이로 인해 `ref int i = sequence.Count();` 같은 문이 허용되지 않습니다.
-* 메서드 실행보다 길게 수명이 연장되지 않는 변수에 `ref`를 반환할 수 없습니다.
+- 메서드 실행보다 길게 수명이 연장되지 않는 변수에 `ref`를 반환할 수 없습니다.
   - 즉, 로컬 변수 또는 비슷한 범위의 변수에 참조를 반환할 수 없습니다.
-* `ref` local 및 return은 비동기 메서드와 함께 사용할 수 없습니다.
+- `ref` local 및 return은 비동기 메서드와 함께 사용할 수 없습니다.
   - 컴파일러는 비동기 메서드가 반환될 때 참조된 변수가 최종 값으로 설정되었는지 여부를 알 수 없습니다.
 
 ref local 및 ref return을 추가하면 값을 복사하거나 역참조 작업을 여러 번 수행하는 경우를 방지하여 더 효율적인 알고리즘이 가능해집니다.

@@ -4,12 +4,12 @@ description: NUnit를 사용하여 샘플 Visual Basic 솔루션을 단계별로
 author: rprouse
 ms.date: 10/04/2018
 ms.custom: seodec18
-ms.openlocfilehash: 84287a94504594c731c0fbccf2e61a957a15a36f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7563fe12d1e3637a737c5472dbf8d64d163a3feb
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626406"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168209"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>dotnet test 및 NUnit을 사용하여 Visual Basic .NET Core 라이브러리 유닛 테스트
 
@@ -30,7 +30,7 @@ dotnet new sln
 
 다음으로 *PrimeService* 디렉터리를 만듭니다. 다음 개요는 지금까지의 파일 구조를 보여 줍니다.
 
-```
+```console
 /unit-testing-vb-nunit
     unit-testing-vb-nunit.sln
     /PrimeService
@@ -66,7 +66,7 @@ dotnet sln add .\PrimeService\PrimeService.vbproj
 
 다음으로 *PrimeService.Tests* 디렉터리를 만듭니다. 다음 개요에는 디렉터리 구조가 나와 있습니다.
 
-```
+```console
 /unit-testing-vb-nunit
     unit-testing-vb-nunit.sln
     /PrimeService
@@ -95,7 +95,7 @@ GitHub의 [샘플 리포지토리](https://github.com/dotnet/samples/blob/master
 
 최종 솔루션 레이아웃은 다음과 같습니다.
 
-```
+```console
 /unit-testing-vb-nunit
     unit-testing-vb-nunit.sln
     /PrimeService

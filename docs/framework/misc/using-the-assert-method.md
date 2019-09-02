@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e2a86fbcd78c6768a91cc0d12e45053f8da6cdec
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: f43ba2963ec447e5193da73452537b2539c51857
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041163"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206045"
 ---
 # <a name="using-the-assert-method"></a>Assert 메서드 사용
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -174,4 +174,4 @@ namespace LogUtil
 - <xref:System.Security.Permissions.FileIOPermission>
 - <xref:System.Security.Permissions.SecurityAction>
 - [특성](../../standard/attributes/index.md)
-- [코드 액세스 보안](../../../docs/framework/misc/code-access-security.md)
+- [코드 액세스 보안](code-access-security.md)

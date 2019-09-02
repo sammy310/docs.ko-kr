@@ -4,12 +4,12 @@ description: 이 문서에서는 PowerShell, Bash 및 zsh용 .NET Core CLI에 �
 author: thraka
 ms.author: adegeo
 ms.date: 12/17/2018
-ms.openlocfilehash: 16574e02aa9f9167602401eef2ad7a73e07ad107
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: c7673d95f3710d78d3a09b26f031396587f9c669
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203339"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202497"
 ---
 # <a name="how-to-enable-tab-completion-for-net-core-cli"></a>.NET Core CLI에 대한 TAB 완성 기능을 사용하는 방법
 
@@ -19,7 +19,7 @@ ms.locfileid: "57203339"
 
 설정되면 .NET Core CLI에 대한 탭 완성 기능이 셸에서 `dotnet` 명령을 입력한 다음, TAB 키를 눌러서 트리거됩니다. 현재 명령줄은 `dotnet complete` 명령으로 전송되고, 결과는 셸에 의해 처리됩니다. `dotnet complete` 명령으로 직접 전송하여 탭 완성 기능을 사용하지 않고 결과를 테스트할 수 있습니다. 예:
 
-```
+```console
 > dotnet complete "dotnet a"
 add
 clean

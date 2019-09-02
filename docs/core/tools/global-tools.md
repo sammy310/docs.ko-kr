@@ -4,12 +4,12 @@ description: .NET Core Global Tool의 개요와 사용 가능한 .NET Core CLI �
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 29499d28629e483d66e25b8ecdbd5817effba439
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9ff7e33a50eb0c5fb649b44dda6d72412a134584
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631731"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202582"
 ---
 # <a name="net-core-global-tools-overview"></a>.NET Core Global Tool 개요
 
@@ -63,7 +63,7 @@ dotnet tool install -g <package-name> --version <version-number>
 
 설치에 성공하면 다음 예와 같이 도구와 설치된 버전을 호출하는 데 사용되는 명령을 보여 주는 메시지가 표시됩니다.
 
-```
+```output
 You can invoke the tool using the following command: dotnetsay
 Tool 'dotnetsay' (version '2.0.0') was successfully installed.
 ```

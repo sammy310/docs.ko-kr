@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: fd804176a7579fe7c5e226bf5b4feb457cb2df14
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 9f8c9c47757379d641b821f312b89666456343d4
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971199"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105460"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC 앱 개발
 
@@ -43,7 +43,7 @@ ASP.NET Core 앱은 본질적으로 들어오는 요청을 나가는 응답에 �
 ASP.NET Core MVC 앱은 기본 경로, 특성 경로 또는 둘 다를 사용할 수 있습니다. 기본 경로는 코드에 정의되며, 아래 예제와 같은 구문을 사용하여 라우팅 _규칙_을 지정합니다.
 
 ```csharp
-app.UseMvc(routes =>;
+app.UseMvc(routes =>
 {
     routes.MapRoute("default","{controller=Home}/{action=Index}/{id?}");
 });
@@ -208,7 +208,7 @@ Areas에 대한 기본 제공 외에도, 고유한 폴더 구조와 규칙(특�
 ASP.NET Core는 기본 제공 규칙을 사용하여 동작을 제어합니다. 이러한 규칙은 수정하거나 바꿀 수 있습니다. 예를 들어 네임스페이스(일반적으로 컨트롤러가 있는 폴더와 상호 관련됨)에 따라 지정된 컨트롤러에 대한 기능 이름을 자동으로 가져오는 규칙을 만들 수 있습니다.
 
 ```csharp
-FeatureConvention : IControllerModelConvention
+public class FeatureConvention : IControllerModelConvention
 {
     public void Apply(ControllerModel controller)
     {
@@ -474,7 +474,7 @@ public class Program
     public static void Main(string[] args)
     {
         StartConnectionAsync();
-        _connection.On("receiveMessage", (arguments) =>;
+        _connection.On("receiveMessage", (arguments) =>
         {
             Console.WriteLine($"{arguments[0]} said: {arguments[1]}");
         });

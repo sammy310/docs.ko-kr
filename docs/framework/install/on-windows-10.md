@@ -5,12 +5,12 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 13ccdafc00f7a43d456126e3ec3afc1ae5897564
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 33805230e0aa6c75443773d60e73f9463ee1fde5
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422661"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106553"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Windows 10 및 Windows Server 2016 이상에 .NET Framework 설치
 
@@ -24,7 +24,7 @@ Windows에서 많은 애플리케이션을 실행하는 데 .NET Framework가 �
 
 .NET Framework 4.8에는 다음이 포함되어 있습니다.
 
-* [Windows 10 2019년 5월 업데이트](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
+- [Windows 10 2019년 5월 업데이트](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
 
 > [!div class="button"]
 > [.NET Framework 4.8 다운로드](https://dotnet.microsoft.com/download/dotnet-framework/net48)
@@ -33,20 +33,20 @@ Windows에서 많은 애플리케이션을 실행하는 데 .NET Framework가 �
 
 다음에 [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)을 설치할 수 있습니다.
 
-* Windows 10 2018년 10월 업데이트(버전 1809)
-* Windows 10 2018년 4월 업데이트(버전 1803)
-* Windows 10 가을 작성자 업데이트(버전 1709)
-* Windows 10 Creators Update(버전 1703)
-* Windows 10 1주년 업데이트(버전 1607)
-* Windows Server 2019
-* Windows Server, 버전 1809
-* Windows Server, 버전 1803
-* Windows Server 2016
+- Windows 10 2018년 10월 업데이트(버전 1809)
+- Windows 10 2018년 4월 업데이트(버전 1803)
+- Windows 10 가을 작성자 업데이트(버전 1709)
+- Windows 10 Creators Update(버전 1703)
+- Windows 10 1주년 업데이트(버전 1607)
+- Windows Server 2019
+- Windows Server, 버전 1809
+- Windows Server, 버전 1803
+- Windows Server 2016
 
 .NET Framework 4.8은 다음에서 지원되지 않습니다.
 
-* Windows 10 1507
-* Windows 10 1511
+- Windows 10 1507
+- Windows 10 1511
 
 Windows 10 1507 또는 1511을 사용 중인 경우 .NET Framework 4.8을 설치하려면 먼저 이후 Windows 10 버전으로 업그레이드해야 합니다.
 

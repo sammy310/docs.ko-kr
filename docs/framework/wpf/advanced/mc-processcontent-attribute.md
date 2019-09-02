@@ -5,12 +5,12 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: 2689b2c8-b4dc-4b71-b9bd-f95e619122d7
-ms.openlocfilehash: bc406659bec3fd8d5da87b597356a3411c7a2605
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 619c3ffbc68c8c72ea9dd6545ab8da536380483b
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567405"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206176"
 ---
 # <a name="mcprocesscontent-attribute"></a>mc:ProcessContent 특성
 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] [Mc: Ignorable 특성](mc-ignorable-attribute.md)을 지정 하 여 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서에서 직계 부모 요소를 무시할 수 있는 경우에도 관련 부모 요소에 의해 처리 되는 콘텐츠를 계속 포함 해야 하는 요소를 지정 합니다. 특성 `mc:ProcessContent` 은 사용자 지정 네임 스페이스 매핑과 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 버전 관리에 대 한 태그 호환성을 모두 지원 합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "69567405"
   
  공백 구분 기호를 사용 하 여 특성에 여러 접두사를 지정할 수 있습니다 (예 `mc:ProcessContent="ignore:Element1 ignore:Element2"`:).  
   
- 네임 [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)] 스페이스는 SDK의이 영역에 문서화 되지 않은 다른 요소 및 특성을 정의 합니다. 자세한 내용은 [XML 태그 호환성 사양](https://go.microsoft.com/fwlink/?LinkId=73824)을 참조 하세요.  
+ 네임 `http://schemas.openxmlformats.org/markup-compatibility/2006` 스페이스는 SDK의이 영역에 문서화 되지 않은 다른 요소 및 특성을 정의 합니다. 자세한 내용은 [XML 태그 호환성 사양](https://go.microsoft.com/fwlink/?LinkId=73824)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고자료
 

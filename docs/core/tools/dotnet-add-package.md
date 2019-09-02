@@ -2,12 +2,12 @@
 title: dotnet add package 명령
 description: ‘dotnet add package’ 명령은 NuGet 패키지 참조를 프로젝트에 추가하는 편리한 옵션을 제공합니다.
 ms.date: 06/26/2019
-ms.openlocfilehash: 50a352be66f2b4bd4498d79f61dc01f56d4b00c5
-ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
+ms.openlocfilehash: 124e42b1d5897802bb1698c8e22b7e76031391a2
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67569507"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105171"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -54,59 +54,59 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 ## <a name="arguments"></a>인수
 
-* **`PROJECT`**
+- **`PROJECT`**
 
   프로젝트 파일을 지정합니다. 지정하지 않으면 이 명령은 현재 디렉터리에서 검색합니다.
 
-* **`PACKAGE_NAME`**
+- **`PACKAGE_NAME`**
 
   추가할 패키지 참조입니다.
 
 ## <a name="options"></a>옵션
 
-* **`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   특정 [프레임워크](../../standard/frameworks.md)를 대상으로 하는 경우에만 패키지 참조를 추가합니다.
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   명령에 대한 간단한 도움말을 출력합니다.
 
-* **`--interactive`**
+- **`--interactive`**
 
   명령이 중지되고 사용자 입력 또는 작업을 대기할 수 있도록 허용합니다(예: 인증 완료). .NET Core 2.1 SDK 버전 2.1.400 이상에서 사용할 수 있습니다.
 
-* **`-n|--no-restore`**
+- **`-n|--no-restore`**
 
   복원 미리 보기 및 호환성 검사를 수행하지 않고 패키지 참조를 추가합니다.
 
-* **`--package-directory <PACKAGE_DIRECTORY>`**
+- **`--package-directory <PACKAGE_DIRECTORY>`**
 
   패키지를 복원할 디렉터리입니다. 기본 패키지 복원 위치는 Windows에서는 `%userprofile%\.nuget\packages`이고, macOS 및 Linux에서는 `~/.nuget/packages`입니다. 자세한 내용은 [NuGet에서 글로벌 패키지, 캐시 및 임시 폴더 관리](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)를 참조하세요.
 
-* **`-s|--source <SOURCE>`**
+- **`-s|--source <SOURCE>`**
 
   복원 작업 중에 사용할 NuGet 패키지 소스입니다.
 
-* **`-v|--version <VERSION>`**
+- **`-v|--version <VERSION>`**
 
   패키지의 버전입니다. [NuGet 패키지 버전 관리](https://docs.microsoft.com/nuget/reference/package-versioning)를 참조하세요.
 
 ## <a name="examples"></a>예제
 
-* `Newtonsoft.Json` NuGet 패키지를 프로젝트에 추가합니다.
+- `Newtonsoft.Json` NuGet 패키지를 프로젝트에 추가합니다.
 
   ```console
   dotnet add package Newtonsoft.Json
   ```
 
-* 특정 버전의 패키지를 프로젝트에 추가합니다.
+- 특정 버전의 패키지를 프로젝트에 추가합니다.
 
   ```console
   dotnet add ToDo.csproj package Microsoft.Azure.DocumentDB.Core -v 1.0.0
   ```
 
-* 특정 NuGet 소스를 사용하여 패키지를 추가합니다.
+- 특정 NuGet 소스를 사용하여 패키지를 추가합니다.
 
   ```console
   dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 210d15187cd539cdae6e38fdcb708b4b9f81c073
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 146854b592dd83efe87c54e1f5f99f110b81c1a5
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988304"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203690"
 ---
 # <a name="handling-datatable-events"></a>DataTable 이벤트 처리
 <xref:System.Data.DataTable> 개체는 애플리케이션에서 처리할 수 있는 일련의 이벤트를 제공합니다. 다음 표에서는 `DataTable` 이벤트에 대해 설명합니다.  
   
-|이벤트|Description|  
+|이벤트|설명|  
 |-----------|-----------------|  
 |<xref:System.Data.DataTable.Initialized>|<xref:System.Data.DataTable.EndInit%2A>의 `DataTable` 메서드가 호출된 후에 발생합니다. 이 이벤트는 기본적으로 디자인 타임 시나리오를 지원하는 데 사용됩니다.|  
 |<xref:System.Data.DataTable.ColumnChanged>|<xref:System.Data.DataColumn>에서 값이 성공적으로 변경된 후에 발생합니다.|  
@@ -81,7 +81,7 @@ ms.locfileid: "69988304"
   
 ## <a name="see-also"></a>참고자료
 
-- [DataTable에서 데이터 조작](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [DataAdapter 이벤트 처리](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
-- [데이터 집합 이벤트 처리](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
+- [DataTable에서 데이터 조작](manipulating-data-in-a-datatable.md)
+- [DataAdapter 이벤트 처리](../handling-dataadapter-events.md)
+- [데이터 집합 이벤트 처리](handling-dataset-events.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

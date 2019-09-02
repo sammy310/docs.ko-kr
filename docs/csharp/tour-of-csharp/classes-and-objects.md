@@ -3,12 +3,12 @@ title: C#의 클래스 및 개체 - C# 언어 둘러보기
 description: C#을 처음 사용하시나요? 클래스, 개체 및 상속 개요 읽어보기
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: ff83a3198c6c9fb4c4a438d2486614a211c913ec
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: be8e760b19b7ca5305918ecfdbf9ad797d7e76b2
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971464"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105624"
 ---
 # <a name="classes-and-objects"></a>클래스 및 개체
 
@@ -24,7 +24,7 @@ ms.locfileid: "68971464"
 
 [!code-csharp[PointExample](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L9-L10)]
 
-개체가 차지하는 메모리는 개체에 더 이상 연결할 수 없을 때 자동으로 회수됩니다. C#에서 개체를 명시적으로 할당 취소할 필요도 없으며 가능하지도 않습니다.
+개체가 차지하는 메모리는 개체에 더 이상 연결할 수 있는 때 자동으로 회수됩니다. C#에서 개체를 명시적으로 할당 취소할 필요도 없으며 가능하지도 않습니다.
 
 ## <a name="members"></a>멤버
 
@@ -32,42 +32,42 @@ ms.locfileid: "68971464"
 
 다음은 클래스에 포함될 수는 멤버 종류를 대략적으로 나타낸 것입니다.
 
-* 상수
+- 상수
   - 클래스와 연결된 상수 값
-* 필드
+- 필드
   - 클래스의 변수
-* 메서드
+- 메서드
   - 클래스가 수행할 수 있는 계산 및 작업
-* 속성
+- 속성
   - 클래스의 명명된 속성에 대한 읽기 및 쓰기와 관련된 작업
-* 인덱서
+- 인덱서
   - 클래스 인스턴스를 배열처럼 인덱싱하는 것과 관련된 작업
-* 이벤트
+- 이벤트
   - 클래스에 의해 생성될 수 있는 알림
-* 연산자
+- 연산자
   - 클래스가 지원하는 변환 및 식 연산자
-* 생성자
+- 생성자
   - 클래스의 인스턴스 또는 클래스 자체를 초기화하는 데 필요한 작업
-* 종료자
+- 종료자
   - 클래스의 인스턴스가 영구적으로 삭제되기 전에 수행 작업
-* 유형
+- 유형
   - 클래스에 의해 선언된 중첩 형식
 
 ## <a name="accessibility"></a>액세스 가능성
 
 클래스의 각 멤버에는 멤버에 액세스할 수 있는 프로그램 텍스트의 영역을 제어하는 액세스 가능성이 연결되어 있습니다. 액세스 가능성은 여섯 가지 형태로 제공됩니다. 이러한 내용은 아래에 간략하게 정리되어 있습니다.
 
-* `public`
+- `public`
   - 액세스가 제한되지 않음
-* `protected`
+- `protected`
   - 이 클래스 또는 이 클래스에서 파생된 클래스로만 액세스가 제한됨
-* `internal`
+- `internal`
   - 현재 어셈블리(.exe, .dll 등)로만 액세스가 제한됨
-* `protected internal`
+- `protected internal`
   - 포함되는 클래스, 포함되는 클래스에서 파생된 클래스 또는 동일한 어셈블리 내의 클래스로만 액세스가 제한됨
-* `private`
+- `private`
   - 이 클래스로만 액세스가 제한됨
-* `private protected`
+- `private protected`
   - 동일한 어셈블리 내의 포함하는 클래스 또는 포함하는 형식에서 파생된 클래스로만 액세스가 제한됨
 
 ## <a name="type-parameters"></a>형식 매개 변수

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: a0252493ffd251b8d760927345c71e2f5ef55aaa
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 61315a04ca8d5a619a3dcaf43b15a309919d3c42
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401516"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167878"
 ---
 # <a name="for-c-reference"></a>for(C# 참조)
 
@@ -53,7 +53,7 @@ for (initializer; condition; iterator)
 
   - [new](../operators/new-operator.md) 연산자를 사용하여 개체 만들기
 
-  - [await](await.md) 식
+  - [await](../operators/await.md) 식
 
 위의 예제에서 *initializer* 섹션은 로컬 루프 변수 `i`를 선언하고 초기화합니다.
 
@@ -85,7 +85,7 @@ i < 5
 
 - [new](../operators/new-operator.md) 연산자를 사용하여 개체 만들기
 
-- [await](await.md) 식
+- [await](../operators/await.md) 식
 
 위 예제의 *iterator* 섹션은 로컬 루프 변수를 증가시킵니다.
 

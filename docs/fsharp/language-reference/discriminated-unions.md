@@ -2,12 +2,12 @@
 title: 구별된 공용 구조체
 description: 구별 된 공용 구조체 F# 를 사용 하는 방법을 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: fa4f011a8d5fd6725a44e030b423e79244a18734
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 3ed05fdb144d7266adc1718cdf015ab64680f3d8
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106762"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206164"
 ---
 # <a name="discriminated-unions"></a>구별된 공용 구조체
 
@@ -87,7 +87,7 @@ let getShapeHeight shape =
 F# 구분 된 공용 구조체는 단일 형식을 래핑하는 도메인 모델링에 자주 사용 됩니다. 패턴 일치를 통해 내부 값을 추출 하는 것도 쉽습니다. 단일 사례에 대해 일치 식을 사용할 필요는 없습니다.
 
 ```fsharp
-let ([UnionCaseName] [values]) = [UnionValue]
+let ([UnionCaseIdentifier] [values]) = [UnionValue]
 ```
 
 다음은 이에 대한 예입니다.

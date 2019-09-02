@@ -2,12 +2,12 @@
 title: '연습: async 및 await를 사용하여 웹에 액세스(C#)'
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: 986f3985783c6ae941d437fe557998f67557f5af
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0c80bb079e66a56d6bbc30ba43269aee7ac4ab5b
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595518"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168375"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>연습: async 및 await를 사용하여 웹에 액세스(C#)
 
@@ -237,7 +237,7 @@ Control returned to startButton_Click.
 
 2. `GetResponseAsync`는 <xref:System.Threading.Tasks.Task%601>를 반환합니다. 이 경우 *작업 반환 변수* `TResult`는 <xref:System.Net.WebResponse> 형식입니다. 작업은 요청한 데이터를 다운로드하고 작업을 실행하여 완료한 후 실제 `WebResponse` 개체를 생성한다는 약속입니다.
 
-     작업에서 `WebResponse` 값을 검색하려면 다음 코드에 표시된 대로 [await](../../../language-reference/keywords/await.md) 연산자를 `GetResponseAsync` 호출에 적용합니다.
+     작업에서 `WebResponse` 값을 검색하려면 다음 코드에 표시된 대로 [await](../../../language-reference/operators/await.md) 연산자를 `GetResponseAsync` 호출에 적용합니다.
 
     ```csharp
     using (WebResponse response = await webReq.GetResponseAsync())
@@ -692,7 +692,7 @@ namespace AsyncExampleWPF
 
 - [비동기 샘플: 웹 연습에 액세스(C# 및 Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
 - [async](../../../language-reference/keywords/async.md)
-- [await](../../../language-reference/keywords/await.md)
+- [await](../../../language-reference/operators/await.md)
 - [async 및 await를 사용한 비동기 프로그래밍(C#)](./index.md)
 - [비동기 반환 형식(C#)](./async-return-types.md)
 - [TAP(작업 기반 비동기 프로그래밍)](https://www.microsoft.com/download/details.aspx?id=19957)

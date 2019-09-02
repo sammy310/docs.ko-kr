@@ -2,12 +2,12 @@
 title: 비동기 앱에서 재진입 처리(C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 78d6b786e5d54a75325d8a7a31b3e12eef7184e8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3b6c5e29559a5350bdce7ad8bcf971281bb79994
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595645"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204304"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>비동기 앱에서 재진입 처리(C#)
 
@@ -36,7 +36,7 @@ ms.locfileid: "69595645"
 
 다음 예제에서는 사용자가 **시작** 버튼를 한 번만 선택하는 경우 예상되는 출력을 보여 줍니다. 다운로드된 웹 사이트 목록이 각 사이트의 크기(바이트)와 함께 나타납니다. 총 바이트 수는 끝에 나타납니다.
 
-```
+```output
 1. msdn.microsoft.com/library/hh191443.aspx                83732
 2. msdn.microsoft.com/library/aa578028.aspx               205273
 3. msdn.microsoft.com/library/jj155761.aspx                29019
@@ -51,7 +51,7 @@ TOTAL bytes returned:  890591
 
 그러나 사용자가 버튼을 두 번 이상 클릭하면 이벤트 처리기가 반복적으로 호출되고 다운로드 프로세스가 매번 다시 실행됩니다. 따라서 여러 개의 비동기 작업이 동시에 실행되면 출력에서 결과를 인터리브하며 총 바이트 수를 파악하기 어렵게 됩니다.
 
-```
+```output
 1. msdn.microsoft.com/library/hh191443.aspx                83732
 2. msdn.microsoft.com/library/aa578028.aspx               205273
 3. msdn.microsoft.com/library/jj155761.aspx                29019
@@ -270,7 +270,7 @@ async Task AccessTheWebAsync(CancellationToken ct)
 
 이 앱이 실행되는 동안 **시작** 버튼을 여러 번 선택하면 다음 출력과 유사한 결과가 생성됩니다.
 
-```
+```output
 1. msdn.microsoft.com/library/hh191443.aspx                83732
 2. msdn.microsoft.com/library/aa578028.aspx               205273
 3. msdn.microsoft.com/library/jj155761.aspx                29019
@@ -308,7 +308,7 @@ TOTAL bytes returned:  890591
 
 다음 출력은 사용자가 **시작** 버튼을 한 번만 선택하는 경우의 결과를 보여 줍니다. 문제 레이블 A는 처음으로 **시작** 버튼을 선택한 경우의 결과임을 나타냅니다. 숫자는 다운로드 대상 목록에서 URL의 순서를 보여 줍니다.
 
-```
+```output
 #Starting group A.
 #Task assigned for group A.
 
@@ -328,7 +328,7 @@ TOTAL bytes returned:  918876
 
 사용자가 **시작** 버튼을 세 번 선택하면 앱이 다음 줄과 유사한 출력을 생성합니다. 파운드 기호(#)로 시작하는 정보 줄은 애플리케이션의 진행률을 추적합니다.
 
-```
+```output
 #Starting group A.
 #Task assigned for group A.
 
@@ -499,7 +499,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
 - 이전 그룹이 출력을 표시하는 동안 그룹이 시작될 수 있지만 이전 그룹의 출력 표시가 중단되지 않습니다.
 
-    ```
+    ```output
     #Starting group A.
     #Task assigned for group A. Download tasks are active.
 
@@ -537,7 +537,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
 - 다음 두 줄은 항상 출력에 함께 나타납니다. 코드는 `StartButton_Click`의 그룹 작업 시작과 `pendingWork`에 그룹에 대한 작업 할당 사이에서 중단되지 않습니다.
 
-    ```
+    ```output
     #Starting group B.
     #Task assigned for group B. Download tasks are active.
     ```

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 44003cbd0f13d2665c5b753454689c10546325b7
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 4e4e472185b3b2ba39393c029bca3966fb5ec4b3
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487852"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206059"
 ---
 # <a name="security-transparent-code"></a>보안 투명 코드
 
@@ -23,11 +23,11 @@ ms.locfileid: "66487852"
 보안에는 샌드박싱, 권한 및 적용이라는 세 가지 조작 부분이 관련됩니다. 샌드박싱은 일부 코드를 완전히 신뢰할 수 있는 코드로 처리하고 다른 코드를 샌드박스에 대한 권한 부여 집합의 권한으로 제한하는 격리된 도메인을 만드는 방법을 나타냅니다. 샌드박스의 권한 부여 집합 내에서 실행되는 애플리케이션 코드는 투명한 것으로 간주합니다. 즉, 보안에 영향을 줄 수 있는 모든 작업을 수행할 수 없습니다. 샌드박스의 권한 부여 집합은 증거(<xref:System.Security.Policy.Evidence> 클래스)에 따라 결정됩니다. 증거는 샌드박스에 필요한 특정 권한 및 만들 수 있는 샌드박스 종류를 식별합니다. 적용은 투명 코드가 권한 부여 집합 내에서만 실행되도록 허용하는 것입니다.
 
 > [!IMPORTANT]
-> 보안 정책은 이전 .NET Framework 버전의 핵심 요소였습니다. 보안 정책에서.NET Framework 4부터 사용 되지 않습니다. 보안 정책 제거는 보안 투명도와 관련이 없습니다. 이 변경의 영향에 대 한 정보를 참조 하세요 [코드 액세스 보안 정책 호환성 및 마이그레이션](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md)합니다.
+> 보안 정책은 이전 .NET Framework 버전의 핵심 요소였습니다. .NET Framework 4부터 보안 정책은 사용 되지 않습니다. 보안 정책 제거는 보안 투명도와 관련이 없습니다. 이러한 변경의 영향에 대 한 자세한 내용은 [코드 액세스 보안 정책 호환성 및 마이그레이션](code-access-security-policy-compatibility-and-migration.md)을 참조 하세요.
 
 이 항목에서는 투명도 모델에 대해 자세히 설명합니다. 여기에는 다음 단원이 포함되어 있습니다.
 
-- [투명도 모델의 목적](#purpose)
+- [투명도 모델의 용도](#purpose)
 
 - [투명도 수준 지정](#level)
 
@@ -59,18 +59,18 @@ ms.locfileid: "66487852"
 
 수준은 다음과 같습니다.
 
-- 수준 2 (<xref:System.Security.SecurityRuleSet.Level2>) –.NET Framework 4 투명도 규칙입니다.
+- 수준 2 (<xref:System.Security.SecurityRuleSet.Level2>) – .NET Framework 4 투명도 규칙입니다.
 
 - 수준 1(<xref:System.Security.SecurityRuleSet.Level1>)-.NET Framework 2.0 투명도 규칙입니다.
 
 두 투명도 수준 간의 주요 차이점은 수준 1은 어셈블리 외부의 호출에 대해 투명도 규칙을 적용하지 않고 호환성 목적으로만 사용된다는 점입니다.
 
 > [!IMPORTANT]
-> 수준 1 투명도는 호환성 목적으로만 지정해야 합니다. 즉, <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 특성을 사용하거나 투명도 모델을 사용하지 않는 .NET Framework 3.5 이하로 개발된 코드에만 수준 1을 지정하세요. 예를 들어 부분적으로 신뢰할 수 있는 호출자(APTCA)의 호출을 허용하는 .NET Framework 2.0 어셈블리에는 수준 1 투명도를 사용합니다. .NET Framework 4에 대 한 개발 된 코드의 경우 항상 수준 2 투명도 사용 합니다.
+> 수준 1 투명도는 호환성 목적으로만 지정해야 합니다. 즉, <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 특성을 사용하거나 투명도 모델을 사용하지 않는 .NET Framework 3.5 이하로 개발된 코드에만 수준 1을 지정하세요. 예를 들어 부분적으로 신뢰할 수 있는 호출자(APTCA)의 호출을 허용하는 .NET Framework 2.0 어셈블리에는 수준 1 투명도를 사용합니다. .NET Framework 4 용으로 개발 된 코드의 경우 항상 수준 2 투명도를 사용 합니다.
 
 ### <a name="level-2-transparency"></a>수준 2 투명도
 
-수준 2 투명도.NET Framework 4에서 도입 되었습니다. 이 모델의 세 가지 개념은 투명 코드, 보안 안전에 중요 코드 및 보안에 중요 코드입니다.
+수준 2 투명도는 .NET Framework 4에서 도입 되었습니다. 이 모델의 세 가지 개념은 투명 코드, 보안 안전에 중요 코드 및 보안에 중요 코드입니다.
 
 - 투명도 코드는 부여된 권한과 관계없이(완전 신뢰 포함) 다른 투명 코드나 보안 안전에 중요 코드만 호출할 수 있습니다. 부분적으로 신뢰할 수 있는 코드는 도메인의 권한 집합에서 허용되는 작업만 수행할 수 있습니다. 투명 코드는 다음을 수행할 수 없습니다.
 
@@ -114,9 +114,9 @@ ms.locfileid: "66487852"
 
 ## <a name="transparency-enforcement"></a>투명도 적용
 
-투명도 규칙은 투명도가 계산될 때까지 적용되지 않습니다. 적용 시 투명도 규칙에 위반되면 <xref:System.InvalidOperationException>이 throw됩니다. 투명도 계산 시간은 여러 요소에 따라 다르고 예측할 수 없습니다. 가능한 한 늦게 계산됩니다. .NET Framework 4 어셈블리 수준 투명도 계산은.NET Framework 2.0에서 하는 것 보다 더 자주 발생 합니다. 투명도 계산은 필요한 시간 이내에 수행됩니다. 이는 메서드가 컴파일되고 해당 메서드에서 오류가 감지되는 시점을 JIT(Just-In-Time ) 컴파일러가 변경하는 방법과 비슷합니다. 코드에 투명도 오류가 없으면 투명도 계산이 표시되지 않습니다.
+투명도 규칙은 투명도가 계산될 때까지 적용되지 않습니다. 적용 시 투명도 규칙에 위반되면 <xref:System.InvalidOperationException>이 throw됩니다. 투명도 계산 시간은 여러 요소에 따라 다르고 예측할 수 없습니다. 가능한 한 늦게 계산됩니다. .NET Framework 4에서 어셈블리 수준 투명도 계산은 .NET Framework 2.0에서 수행 하는 것 보다 더 빨리 발생 합니다. 투명도 계산은 필요한 시간 이내에 수행됩니다. 이는 메서드가 컴파일되고 해당 메서드에서 오류가 감지되는 시점을 JIT(Just-In-Time ) 컴파일러가 변경하는 방법과 비슷합니다. 코드에 투명도 오류가 없으면 투명도 계산이 표시되지 않습니다.
 
 ## <a name="see-also"></a>참고자료
 
-- [보안 투명 코드, 수준 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
-- [보안 투명 코드, 수준 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
+- [보안 투명 코드, 수준 1](security-transparent-code-level-1.md)
+- [보안 투명 코드, 수준 2](security-transparent-code-level-2.md)

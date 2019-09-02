@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: d212ba9beaa0ccc229204045c5a8174381440dfc
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: e12a83d3932d11baa086310ab0be23fb431459fc
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860156"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107188"
 ---
 # <a name="best-practices-for-exceptions"></a>예외에 대한 모범 사례
 
@@ -82,11 +82,11 @@ ms.locfileid: "67860156"
 
 사용자 고유의 예외 클래스를 만들 때 최소한 다음 세 가지 일반 생성자를 사용합니다. 즉, 매개 변수 없는 생성자, 문자열 메시지를 사용하는 생성자, 문자열 메시지와 내부 예외를 사용하는 생성자입니다.
 
-* 기본값을 사용하는 <xref:System.Exception.%23ctor>.
+- 기본값을 사용하는 <xref:System.Exception.%23ctor>.
 
-* 문자열 메시지를 수락하는 <xref:System.Exception.%23ctor%28System.String%29>.
+- 문자열 메시지를 수락하는 <xref:System.Exception.%23ctor%28System.String%29>.
 
-* 문자열 메시지와 내부 예외를 허용하는 <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>.
+- 문자열 메시지와 내부 예외를 허용하는 <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>.
 
 예는 [방법: 사용자 정의 예외 만들기](how-to-create-user-defined-exceptions.md)를 참조하세요.
 

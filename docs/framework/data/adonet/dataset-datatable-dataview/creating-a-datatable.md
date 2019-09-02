@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: eecf9d78-60e3-4fdc-8de0-e56c13a89414
-ms.openlocfilehash: b56d2f8cd46f3184f1001c8bd6a70dbfc4968968
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 64ba7a8e6bd6361e14d1f16576e377575b088bbe
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937026"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205147"
 ---
 # <a name="creating-a-datatable"></a>DataTable 만들기
 <xref:System.Data.DataTable>은 메모리 내 관계형 데이터가 포함된 하나의 테이블을 나타내며, 독립적으로 만들어 사용하거나 다른 .NET Framework 개체에 의해 사용될 수도 있습니다. 이 경우에는 주로 <xref:System.Data.DataSet>의 멤버로 사용됩니다.  
@@ -53,8 +53,8 @@ DataTable customersTable = customers.Tables.Add("CustomersTable");
 
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataTableCollection>
-- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
-- [DataAdapter에서 데이터 집합 채우기](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)
-- [XML에서 데이터 세트 로드](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [XML에서 데이터 세트 스키마 정보 로드](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
+- [DataTable](datatables.md)
+- [DataAdapter에서 데이터 집합 채우기](../populating-a-dataset-from-a-dataadapter.md)
+- [XML에서 데이터 세트 로드](loading-a-dataset-from-xml.md)
+- [XML에서 데이터 세트 스키마 정보 로드](loading-dataset-schema-information-from-xml.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

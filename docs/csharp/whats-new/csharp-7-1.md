@@ -2,12 +2,12 @@
 title: C# 7.1의 새로운 기능
 description: C# 7.1의 새로운 기능에 대한 개요입니다.
 ms.date: 04/09/2019
-ms.openlocfilehash: 18306da709ea30f03f6c42b4a917e9b39695eb16
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: ee68cbf129d02fc58155a603d6a3f63cfb182cd0
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796601"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105547"
 ---
 # <a name="whats-new-in-c-71"></a>C# 7.1의 새로운 기능
 
@@ -17,13 +17,13 @@ C# 7.1은 [언어 버전 선택](../language-reference/configure-language-versio
 
 이 릴리스의 새로운 언어 기능은 다음과 같습니다.
 
-* [`async` `Main`메서드](#async-main)
+- [`async` `Main`메서드](#async-main)
   - 애플리케이션에 대한 진입점은 `async` 한정자를 가질 수 있습니다.
-* [`default` 리터럴 식](#default-literal-expressions)
+- [`default` 리터럴 식](#default-literal-expressions)
   - 대상 형식을 유추할 수 있는 경우 기본 값 식에서 기본 리터럴 식을 사용할 수 있습니다.
-* [유추된 튜플 요소 이름](#inferred-tuple-element-names)
+- [유추된 튜플 요소 이름](#inferred-tuple-element-names)
   - 튜플 요소의 이름은 대부분의 경우에 튜플 초기화에서 유추할 수 있습니다.
-* [제네릭 형식 매개 변수의 패턴 일치](#pattern-matching-on-generic-type-parameters)
+- [제네릭 형식 매개 변수의 패턴 일치](#pattern-matching-on-generic-type-parameters)
   - 형식이 제네릭 형식 매개 변수인 변수에서 패턴 일치 식을 사용할 수 있습니다.
 
 마지막으로 컴파일러에는 [참조 어셈블리 생성](#reference-assembly-generation)을 제어하는 두 가지 옵션 `-refout` 및 `-refonly`가 있습니다.

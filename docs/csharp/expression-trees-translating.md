@@ -3,12 +3,12 @@ title: 식 트리 변환
 description: 식 트리의 각 노드를 방문하고 해당 식 트리의 수정된 복사본을 작성하는 방법을 알아봅니다.
 ms.date: 06/20/2016
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: 4c14837c1d92845991d8ea9990b77eb9052757d8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b3c575876b6d53e9db366f59ad45aac714923c45
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490075"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202942"
 ---
 # <a name="translating-expression-trees"></a>식 트리 변환
 
@@ -124,7 +124,7 @@ private static int Aggregate(Expression exp)
 
 같은 식에서 이 메서드를 실행하면 다음과 같이 출력됩니다.
 
-```
+```output
 10
 Found Addition Expression
 Computing Left node
@@ -161,7 +161,7 @@ Expression<Func<int> sum1 = () => 1 + (2 + (3 + 4));
 
 이 식을 검사한 출력은 다음과 같습니다.
 
-```
+```output
 Found Addition Expression
 Computing Left node
 Found Constant: 1

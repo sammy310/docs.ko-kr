@@ -3,12 +3,12 @@ title: C#의 역사 - C# 가이드
 description: 이 언어의 초창기 버전은 어떤 모습이었으며 이후 어떻게 변했는가?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 8230efcbcdd67cc99f321efc6509df3665d9f2f7
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 9962dcb0192fb27ff21b24e985a6a897703720c7
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363882"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105676"
 ---
 # <a name="the-history-of-c"></a>C\#의 역사
 
@@ -19,11 +19,11 @@ ms.locfileid: "68363882"
 
 C# 빌드 도구는 최신 주요 언어 릴리스가 기본 언어 버전으로 고려합니다. 주요 릴리스 사이에는 이 섹션의 다른 문서에서 상세히 설명한 포인트 릴리스가 있을 수 있습니다. 포인트 릴리스에서 최신 기능을 사용하려면 [컴파일러 언어 버전을 구성](../language-reference/configure-language-version.md)하고 해당 버전을 선택해야 합니다. C# 7.0 이후 세 가지 포인트 릴리스가 있습니다.
 
-* [C# 7.3](csharp-7-3.md):
+- [C# 7.3](csharp-7-3.md):
   - C# 7.3은 [Visual Studio 2017 버전 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 및 [.NET Core 2.1 SDK](../../core/whats-new/dotnet-core-2-1.md)부터 사용할 수 있습니다.
-* [C# 7.2](csharp-7-2.md):
+- [C# 7.2](csharp-7-2.md):
   - C# 7.2는 [Visual Studio 2017 버전 15.5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 및 [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md)부터 사용할 수 있습니다.
-* [C# 7.1](csharp-7-1.md):
+- [C# 7.1](csharp-7-1.md):
   - C# 7.1은 [Visual Studio 2017 버전 15.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 및 [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md)부터 사용할 수 있습니다.
 
 ## <a name="c-version-10"></a>C# 버전 1.0
@@ -124,7 +124,7 @@ C# 버전 5.0은 집중된 버전의 언어였습니다. 해당 버전에 대한
 
 ### <a name="see-also"></a>참고 항목
 
-* [코드 프로젝트: C# 5.0의 호출자 정보 특성](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+- [코드 프로젝트: C# 5.0의 호출자 정보 특성](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 호출자 정보 특성을 사용하면 엄청난 양의 상용구 리플렉션 코드를 사용하지 않고도 실행 중인 컨텍스트에 대한 정보를 쉽게 검색할 수 있습니다. 진단 및 로깅 작업의 용도는 매우 다양합니다.
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: f45019ccc54056371954965e105e309fd41d9ffd
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 3a6dd2cc4565cd4f8716b691d564a782887be1e0
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306210"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205928"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>트랜잭션 범위를 사용하여 암시적 트랜잭션 구현
 <xref:System.Transactions.TransactionScope> 클래스는 트랜잭션 자체와 상호 작용할 필요 없이 코드 블록을 트랜잭션에 참여하는 것으로 표시하는 단순한 방법을 제공합니다. 트랜잭션 범위는 자동으로 앰비언트 트랜잭션을 선택하고 관리할 수 있습니다. 사용하기 쉽고 효율적이므로 트랜잭션 애플리케이션을 개발할 때는 <xref:System.Transactions.TransactionScope> 클래스를 사용하는 것이 좋습니다.  
@@ -23,46 +23,46 @@ ms.locfileid: "67306210"
  [!code-csharp[TransactionScope#1](../../../../samples/snippets/csharp/VS_Snippets_Remoting/TransactionScope/cs/ScopeWithSQL.cs#1)]
  [!code-vb[TransactionScope#1](../../../../samples/snippets/visualbasic/VS_Snippets_Remoting/TransactionScope/vb/ScopeWithSQL.vb#1)]  
   
- 새 만들면 트랜잭션 범위가 시작 됩니다 <xref:System.Transactions.TransactionScope> 개체입니다.  코드 샘플에서 볼 수 있듯이, 것이 좋습니다 범위를 만드는 **를 사용 하 여** 문입니다. **를 사용 하 여** 문을 사용할 수는 둘 다에서 C# 및 Visual Basic의 경우 처럼 작동에는 **try... 마지막** 블록 범위 정상적으로 삭제 됩니다.  
+ 새 <xref:System.Transactions.TransactionScope> 개체를 만들면 트랜잭션 범위가 시작 됩니다.  코드 샘플에 나와 있는 것 처럼 **using 문을 사용** 하 여 범위를 만드는 것이 좋습니다. **Using** 문은 C# 및의 Visual Basic 모두 사용할 수 있으며 **try ...와 같은 방식으로 작동 합니다. finally** 블록을 통해 범위가 제대로 삭제 되었는지 확인 합니다.  
   
- <xref:System.Transactions.TransactionScope>를 시작하면 트랜잭션 관리자는 참가할 트랜잭션을 결정합니다. 일단 결정되면 범위는 항상 해당 트랜잭션에 참여합니다. 두 가지 요소를 기반으로 하는 결정: 앰비언트 트랜잭션이 있는지 여부 및 값을 **transactionscopeoption을** 생성자에 매개 변수입니다. 앰비언트 트랜잭션은 코드가 실행되는 트랜잭션입니다. <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> 클래스의 정적 <xref:System.Transactions.Transaction> 속성을 호출하여 앰비언트 트랜잭션에 대한 참조를 가져올 수 있습니다. 이 매개 변수를 사용 하는 방법에 대 한 자세한 내용은 참조는 [transactionscopeoption을 사용 하 여 트랜잭션 흐름을 관리](#ManageTxFlow) 이 항목의 섹션입니다.  
+ <xref:System.Transactions.TransactionScope>를 시작하면 트랜잭션 관리자는 참가할 트랜잭션을 결정합니다. 일단 결정되면 범위는 항상 해당 트랜잭션에 참여합니다. 이 결정은 앰비언트 트랜잭션이 있는지 여부와 생성자의 **TransactionScopeOption** 매개 변수 값에 따라 결정 됩니다. 앰비언트 트랜잭션은 코드가 실행되는 트랜잭션입니다. <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> 클래스의 정적 <xref:System.Transactions.Transaction> 속성을 호출하여 앰비언트 트랜잭션에 대한 참조를 가져올 수 있습니다. 이 매개 변수를 사용 하는 방법에 대 한 자세한 내용은이 항목의 [TransactionScopeOption를 사용 하 여 트랜잭션 흐름 관리](#ManageTxFlow) 섹션을 참조 하십시오.  
   
 ## <a name="completing-a-transaction-scope"></a>트랜잭션 범위 완료  
- 애플리케이션이 트랜잭션에서 수행할 작업을 모두 완료하면 <xref:System.Transactions.TransactionScope.Complete%2A?displayProperty=nameWIthType> 메서드를 한 번만 호출하여 트랜잭션 커밋이 허용됨을 트랜잭션 관리자에게 알려야 합니다. 호출 하는 매우 것이 좋습니다 <xref:System.Transactions.TransactionScope.Complete%2A> 의 마지막 문으로 합니다 **사용 하 여** 블록입니다.  
+ 애플리케이션이 트랜잭션에서 수행할 작업을 모두 완료하면 <xref:System.Transactions.TransactionScope.Complete%2A?displayProperty=nameWIthType> 메서드를 한 번만 호출하여 트랜잭션 커밋이 허용됨을 트랜잭션 관리자에게 알려야 합니다. 를 <xref:System.Transactions.TransactionScope.Complete%2A> **using** 블록의 마지막 문으로 호출 하는 것이 좋습니다.  
   
- 트랜잭션 관리자에이 시스템 오류나 트랜잭션 범위 내에서 throw 된 예외에 해당으로 해석 하기 때문에 트랜잭션이 중단이 메서드를 호출 하는 데 실패 합니다. 그러나 이 메서드를 호출해도 반드시 트랜잭션이 커밋되지는 않습니다. 이 메서드를 호출하는 것은 트랜잭션 관리자에게 상태를 알리는 수단일 뿐입니다. <xref:System.Transactions.TransactionScope.Complete%2A> 메서드를 호출한 후에는 더 이상 <xref:System.Transactions.Transaction.Current%2A> 속성을 통해 앰비언트 트랜잭션에 액세스할 수 없으며 액세스를 시도하면 예외가 throw됩니다.  
+ 트랜잭션 관리자가이를 시스템 오류로 해석 하거나 트랜잭션 범위 내에서 throw 된 예외와 동일 하 게 해석 되므로이 메서드를 호출 하지 못하면 트랜잭션이 중단 됩니다. 그러나 이 메서드를 호출해도 반드시 트랜잭션이 커밋되지는 않습니다. 이 메서드를 호출하는 것은 트랜잭션 관리자에게 상태를 알리는 수단일 뿐입니다. <xref:System.Transactions.TransactionScope.Complete%2A> 메서드를 호출한 후에는 더 이상 <xref:System.Transactions.Transaction.Current%2A> 속성을 통해 앰비언트 트랜잭션에 액세스할 수 없으며 액세스를 시도하면 예외가 throw됩니다.  
   
- 경우는 <xref:System.Transactions.TransactionScope> 실제 작업을 트랜잭션 관리자가 트랜잭션을 커밋하는 중에 코드의 마지막 줄 이후에 발생으로 트랜잭션을 처음에 만든 개체를 **사용 하 여** 블록입니다. 트랜잭션을 만들지 않은 경우 <xref:System.Transactions.CommittableTransaction.Commit%2A> 개체 소유자가 <xref:System.Transactions.CommittableTransaction>을 호출할 때마다 커밋이 발생합니다. 이때 트랜잭션 관리자 리소스 관리자를 호출 하 고 커밋 또는 롤백 하는지에 따라 알리는 합니다 <xref:System.Transactions.TransactionScope.Complete%2A> 메서드를 호출한는 <xref:System.Transactions.TransactionScope> 개체입니다.  
+ 개체가 처음에 트랜잭션을 만든 경우 트랜잭션 관리자가 트랜잭션을 커밋하는 실제 작업은 using 블록의 마지막 코드 줄 뒤에 발생 합니다. <xref:System.Transactions.TransactionScope> 트랜잭션을 만들지 않은 경우 <xref:System.Transactions.CommittableTransaction.Commit%2A> 개체 소유자가 <xref:System.Transactions.CommittableTransaction>을 호출할 때마다 커밋이 발생합니다. 이 시점에서 트랜잭션 관리자는 리소스 관리자를 호출 하 고 <xref:System.Transactions.TransactionScope.Complete%2A> <xref:System.Transactions.TransactionScope> 개체에 대해 메서드가 호출 되었는지 여부에 따라 커밋 또는 롤백을 알립니다.  
   
- **를 사용 하 여** 문을 사용 하면 합니다 <xref:System.Transactions.TransactionScope.Dispose%2A> 메서드의 <xref:System.Transactions.TransactionScope> 예외가 발생 하는 경우에 개체 라고 합니다. <xref:System.Transactions.TransactionScope.Dispose%2A> 메서드는 트랜잭션 범위의 끝을 표시합니다. 이 메서드를 호출한 후에 발생하는 예외는 트랜잭션에 영향을 주지 않습니다. 또한 이 메서드는 앰비언트 트랜잭션을 이전 상태로 복원합니다.  
+ **Using** 문은 예외가 발생 하더라도 <xref:System.Transactions.TransactionScope.Dispose%2A> <xref:System.Transactions.TransactionScope> 개체의 메서드가 호출 되도록 합니다. <xref:System.Transactions.TransactionScope.Dispose%2A> 메서드는 트랜잭션 범위의 끝을 표시합니다. 이 메서드를 호출한 후에 발생하는 예외는 트랜잭션에 영향을 주지 않습니다. 또한 이 메서드는 앰비언트 트랜잭션을 이전 상태로 복원합니다.  
   
  범위가 트랜잭션을 만들면 <xref:System.Transactions.TransactionAbortedException>이 throw되고 트랜잭션이 중단됩니다. 트랜잭션 관리자가 커밋 결정에 도달할 수 없는 경우 <xref:System.Transactions.TransactionInDoubtException>이 throw됩니다. 트랜잭션이 커밋되면 예외가 throw되지 않습니다.  
   
 ## <a name="rolling-back-a-transaction"></a>트랜잭션 롤백  
  트랜잭션을 롤백하려면 트랜잭션 범위 내에서 <xref:System.Transactions.TransactionScope.Complete%2A> 메서드를 호출하면 안 됩니다. 예를 들어 범위 내에서 예외를 throw할 수 있습니다. 범위가 참여하는 트랜잭션이 롤백됩니다.  
   
-## <a name="ManageTxFlow"></a> Transactionscopeoption을 사용 하 여 트랜잭션 흐름 관리  
+## <a name="ManageTxFlow"></a>TransactionScopeOption를 사용 하 여 트랜잭션 흐름 관리  
  다음 예제의 <xref:System.Transactions.TransactionScope> 메서드와 같이 자체 범위를 사용하는 메서드 내의 `RootMethod`를 사용하는 메서드를 호출하여 트랜잭션 범위를 중첩할 수 있습니다.  
   
 ```csharp  
-void RootMethod()  
-{  
-     using(TransactionScope scope = new TransactionScope())  
-     {  
-          /* Perform transactional work here */  
-          SomeMethod();  
-          scope.Complete();  
-     }  
-}  
-  
-void SomeMethod()  
-{  
-     using(TransactionScope scope = new TransactionScope())  
-     {  
-          /* Perform transactional work here */  
-          scope.Complete();  
-     }  
-}  
+void RootMethod()
+{
+    using(TransactionScope scope = new TransactionScope())
+    {
+        /* Perform transactional work here */
+        SomeMethod();
+        scope.Complete();
+    }
+}
+
+void SomeMethod()
+{
+    using(TransactionScope scope = new TransactionScope())
+    {
+        /* Perform transactional work here */
+        scope.Complete();
+    }
+}
 ```  
   
  맨 위의 트랜잭션 범위를 루트 범위라고 합니다.  
@@ -77,11 +77,11 @@ void SomeMethod()
   
 - 트랜잭션에 참여하지 않습니다. 이렇게 하면 앰비언트 트랜잭션이 없습니다.  
   
- <xref:System.Transactions.TransactionScopeOption.Required>를 사용하여 범위를 인스턴스화하고 앰비언트 트랜잭션이 있는 경우 범위가 해당 트랜잭션에 참여합니다. 반면 앰비언트 트랜잭션이 없으면 범위가 새 트랜잭션을 만들고 루트 범위가 됩니다. 기본값입니다. <xref:System.Transactions.TransactionScopeOption.Required>를 사용하는 경우 루트이든 앰비언트 트랜잭션에 참여하든 관계없이 범위 내부의 코드가 다르게 동작할 필요가 없습니다. 두 경우에서 모두 동일하게 작동해야 합니다.  
+ <xref:System.Transactions.TransactionScopeOption.Required>를 사용하여 범위를 인스턴스화하고 앰비언트 트랜잭션이 있는 경우 범위가 해당 트랜잭션에 참여합니다. 반면 앰비언트 트랜잭션이 없으면 범위가 새 트랜잭션을 만들고 루트 범위가 됩니다. 이것은 기본값입니다. <xref:System.Transactions.TransactionScopeOption.Required>를 사용하는 경우 루트이든 앰비언트 트랜잭션에 참여하든 관계없이 범위 내부의 코드가 다르게 동작할 필요가 없습니다. 두 경우에서 모두 동일하게 작동해야 합니다.  
   
  <xref:System.Transactions.TransactionScopeOption.RequiresNew>를 사용하여 범위를 인스턴스화하는 경우 항상 루트 범위가 됩니다. 새 트랜잭션을 시작하고 해당 트랜잭션이 범위 내부의 새 앰비언트 트랜잭션이 됩니다.  
   
- <xref:System.Transactions.TransactionScopeOption.Suppress>를 사용하여 범위를 인스턴스화하는 경우 앰비언트 트랜잭션이 있는지 여부에 관계없이 트랜잭션에 참여하지 않습니다. 항상이 값으로 인스턴스화된 범위는 있을 **null** 을 앰비언트 트랜잭션으로 합니다.  
+ <xref:System.Transactions.TransactionScopeOption.Suppress>를 사용하여 범위를 인스턴스화하는 경우 앰비언트 트랜잭션이 있는지 여부에 관계없이 트랜잭션에 참여하지 않습니다. 이 값을 사용 하 여 인스턴스화된 범위는 항상 앰비언트 트랜잭션으로 **null** 을 포함 합니다.  
   
  위의 옵션은 다음 표에 요약되어 있습니다.  
   
@@ -99,53 +99,50 @@ void SomeMethod()
  다음 예제에서는 각각 다른 <xref:System.Transactions.TransactionScope> 값으로 인스턴스화된 세 가지 중첩 범위 개체를 만드는 <xref:System.Transactions.TransactionScopeOption> 개체를 보여 줍니다.  
   
 ```csharp  
-using(TransactionScope scope1 = new TransactionScope())   
-//Default is Required   
-{   
-     using(TransactionScope scope2 = new   
-      TransactionScope(TransactionScopeOption.Required))   
-     {  
-     ...  
-     }   
+using(TransactionScope scope1 = new TransactionScope())
+//Default is Required
+{
+    using(TransactionScope scope2 = new TransactionScope(TransactionScopeOption.Required))
+    {
+        //...
+    }
+
+    using(TransactionScope scope3 = new TransactionScope(TransactionScopeOption.RequiresNew))   
+    {
+        //...  
+    }
   
-     using(TransactionScope scope3 = new TransactionScope(TransactionScopeOption.RequiresNew))   
-     {  
-     ...  
-     }   
-  
-     using(TransactionScope scope4 = new   
-        TransactionScope(TransactionScopeOption.Suppress))   
-    {  
-     ...  
-    }   
-}  
+    using(TransactionScope scope4 = new TransactionScope(TransactionScopeOption.Suppress))
+    {
+        //...  
+    }
+}
 ```  
   
  이 예제에서는 `scope1`를 사용하여 새 범위(<xref:System.Transactions.TransactionScopeOption.Required>)를 만드는 앰비언트 트랜잭션이 없는 코드 블록을 보여 줍니다. `scope1` 범위는 새 트랜잭션(Transaction A)을 만들 때 루트 범위이며 Transaction A를 앰비언트 트랜잭션으로 설정합니다. 그런 다음 `Scope1`은 각각 다른 <xref:System.Transactions.TransactionScopeOption> 값을 사용하여 세 개의 개체를 추가로 만듭니다. 예를 들어 `scope2`는 <xref:System.Transactions.TransactionScopeOption.Required>를 사용하여 만들어지고 앰비언트 트랜잭션이 있으므로 `scope1`에서 만든 첫 번째 트랜잭션에 참여합니다. `scope3`은 새 트랜잭션의 루트 범위이고 `scope4`에는 앰비언트 트랜잭션이 없습니다.  
   
  <xref:System.Transactions.TransactionScopeOption>의 기본값이며 가장 일반적으로 사용되는 값은 <xref:System.Transactions.TransactionScopeOption.Required>이고 다른 값은 각각 고유한 용도를 가집니다.  
 
-### <a name="non-transactional-code-inside-a-transaction-scope"></a>트랜잭션 범위 내부에 비트랜잭션 코드
+### <a name="non-transactional-code-inside-a-transaction-scope"></a>트랜잭션 범위 내의 비트랜잭션 코드
 
- <xref:System.Transactions.TransactionScopeOption.Suppress> 코드 섹션에서 수행한 작업을 유지 하 고 작업이 실패 하는 경우 앰비언트 트랜잭션을 중단 하지 않으려는 경우 유용 합니다. 예를 들어 로깅 또는 감사 작업을 수행하려는 경우 또는 앰비언트 트랜잭션이 커밋 또는 중단되든 관계없이 구독자에게 이벤트를 게시하려는 경우에 유용합니다. 이 값을 사용하면 다음 예제와 같이 트랜잭션 범위 내부에 비트랜잭션 코드 섹션이 있을 수 있습니다.  
+ <xref:System.Transactions.TransactionScopeOption.Suppress>는 코드 섹션에서 수행 하는 작업을 유지 하려는 경우와 작업이 실패할 경우 앰비언트 트랜잭션을 중단 하지 않으려는 경우에 유용 합니다. 예를 들어 로깅 또는 감사 작업을 수행하려는 경우 또는 앰비언트 트랜잭션이 커밋 또는 중단되든 관계없이 구독자에게 이벤트를 게시하려는 경우에 유용합니다. 이 값을 사용하면 다음 예제와 같이 트랜잭션 범위 내부에 비트랜잭션 코드 섹션이 있을 수 있습니다.  
   
 ```csharp  
-using(TransactionScope scope1 = new TransactionScope())  
-{  
-     try  
-     {  
-          //Start of non-transactional section   
-          using(TransactionScope scope2 = new  
-             TransactionScope(TransactionScopeOption.Suppress))  
-          {  
-               //Do non-transactional work here  
-          }  
-          //Restores ambient transaction here  
-   }  
-     catch  
-     {}  
-   //Rest of scope1  
-}  
+using(TransactionScope scope1 = new TransactionScope())
+{
+    try
+    {
+        //Start of non-transactional section
+        using(TransactionScope scope2 = new
+            TransactionScope(TransactionScopeOption.Suppress))  
+        {  
+            //Do non-transactional work here  
+        }  
+        //Restores ambient transaction here
+   }
+   catch {}  
+   //Rest of scope1
+}
 ```  
   
 ### <a name="voting-inside-a-nested-scope"></a>중첩된 범위 내부의 응답  
@@ -168,7 +165,7 @@ using(TransactionScope scope1 = new TransactionScope())
  중첩된 <xref:System.Transactions.TransactionScope> 개체를 사용하는 경우 모든 중첩 범위가 앰비언트 트랜잭션에 참여하려면 동일한 격리 수준을 사용하도록 구성해야 합니다. 중첩된 <xref:System.Transactions.TransactionScope> 개체가 앰비언트 트랜잭션에 참여하려고 하지만 다른 격리 수준을 지정하는 경우 <xref:System.ArgumentException>이 throw됩니다.  
   
 ## <a name="interop-with-com"></a>COM+와의 상호 운용성  
- 새 <xref:System.Transactions.TransactionScope> 인스턴스를 만드는 경우 생성자 중 하나에 <xref:System.Transactions.EnterpriseServicesInteropOption> 열거를 사용하여 COM+와 상호 작용하는 방법을 지정할 수 있습니다. 이 대 한 자세한 내용은 참조 하세요. [엔터프라이즈 서비스 및 COM + 트랜잭션과 상호 운용성](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md)합니다.  
+ 새 <xref:System.Transactions.TransactionScope> 인스턴스를 만드는 경우 생성자 중 하나에 <xref:System.Transactions.EnterpriseServicesInteropOption> 열거를 사용하여 COM+와 상호 작용하는 방법을 지정할 수 있습니다. 이에 대 한 자세한 내용은 [엔터프라이즈 서비스 및 COM + 트랜잭션과의 상호 운용성](interoperability-with-enterprise-services-and-com-transactions.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고자료
 

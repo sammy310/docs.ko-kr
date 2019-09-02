@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 6f1900eaabafe2931d88959bf79bf4ca1f5bc98b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 91fd37ce329c03b43b5472e4579be7f5ef961738
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666577"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169116"
 ---
 # <a name="async-in-depth"></a>비동기에 대한 자세한 설명
 
@@ -21,8 +21,8 @@ ms.locfileid: "69666577"
 
 태스크는 [동시성 약속 모델](https://en.wikipedia.org/wiki/Futures_and_promises)을 구현하는 데 사용되는 구문입니다.  간단히 말해서, 나중에 작업이 완료될 것이라는 "약속"을 제공하여 클린 API로 약속을 조정할 수 있게 합니다.
 
-* `Task` - 값을 반환하지 않는 작업 하나를 나타냅니다.
-* `Task<T>` - `T` 형식의 값을 반환하는 작업 하나를 나타냅니다.
+- `Task` - 값을 반환하지 않는 작업 하나를 나타냅니다.
+- `Task<T>` - `T` 형식의 값을 반환하는 작업 하나를 나타냅니다.
 
 스레딩에 대한 추상화가 *아니라* 비동기적으로 수행되는 작업의 추상화로 태스크에 대해 추론하는 것이 중요합니다. 기본적으로 태스크는 현재 스레드에 대해 실행되며 해당하는 경우 운영 체제에 작업을 위임합니다. 필요에 따라 `Task.Run` API를 통해 별도 스레드에서 실행되도록 태스크를 명시적으로 요청할 수 있습니다.
 
@@ -90,9 +90,9 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 
 0-1————————————————————————————————————————————————–2-3
 
-* `0` 지점에서 `1` 지점 사이의 소요 시간은 비동기 메서드가 호출자에 제어를 양도할 때까지 걸리는 시간입니다.
-* `1` 지점에서 `2` 지점 사이의 소요 시간은 CPU 비용 없이 I/O에 걸리는 시간입니다.
-* 마지막으로, `2` 지점에서 `3` 지점 사이의 소요 시간은 제어(및 잠재적으로 값)가 비동기 메서드로 다시 전달되는 시간으로, 이때 메서드가 다시 실행됩니다.
+- `0` 지점에서 `1` 지점 사이의 소요 시간은 비동기 메서드가 호출자에 제어를 양도할 때까지 걸리는 시간입니다.
+- `1` 지점에서 `2` 지점 사이의 소요 시간은 CPU 비용 없이 I/O에 걸리는 시간입니다.
+- 마지막으로, `2` 지점에서 `3` 지점 사이의 소요 시간은 제어(및 잠재적으로 값)가 비동기 메서드로 다시 전달되는 시간으로, 이때 메서드가 다시 실행됩니다.
 
 ### <a name="what-does-this-mean-for-a-server-scenario"></a>서버 시나리오에서는 어떤 의미가 있을까요?
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: 0ec741d085ca52d52999d2e10cf5f687cc885219
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2c50d9e8db2668f2138653858e42b8ed07d3e1e9
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921786"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168959"
 ---
 # <a name="statements-c-programming-guide"></a>문(C# 프로그래밍 가이드)
 프로그램이 수행하는 작업은 문으로 표현됩니다. 일반적인 작업으로 지정된 조건에 따라 변수 선언, 값 할당, 메서드 호출, 컬렉션 반복, 하나 또는 다른 코드 블록으로 분기 등이 있습니다. 프로그램에서 문이 실행되는 순서를 제어 흐름 또는 실행 흐름이라고 합니다. 제어 흐름은 프로그램이 런타임 시 수신하는 입력에 대응하는 방식에 따라 프로그램을 실행할 때마다 달라질 수 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "69921786"
 |점프 문|점프 문은 컨트롤을 다른 코드 섹션으로 전송합니다. 자세한 내용은 다음 항목을 참조하세요.<br /><br /> [break](../../language-reference/keywords/break.md), [continue](../../language-reference/keywords/continue.md), [default](../../language-reference/keywords/switch.md), [goto](../../language-reference/keywords/goto.md), [return](../../language-reference/keywords/return.md), [yield](../../language-reference/keywords/yield.md)|  
 |예외 처리 문|예외 처리 문을 사용하면 런타임 시 발생하는 예외 조건에서 정상적으로 복구할 수 있습니다. 자세한 내용은 다음 항목을 참조하세요.<br /><br /> [throw](../../language-reference/keywords/throw.md), [try-catch](../../language-reference/keywords/try-catch.md), [try-finally](../../language-reference/keywords/try-finally.md), [try-catch-finally](../../language-reference/keywords/try-catch-finally.md)|  
 |[Checked 및 Unchecked](../../language-reference/keywords/checked-and-unchecked.md)|checked 및 unchecked 문을 사용하면 결과가 저장되는 변수가 너무 작아서 결과 값을 수용할 수 없는 경우 수치 연산에서 오버플로가 발생할 수 있는지 여부를 지정할 수 있습니다. 자세한 내용은 [checked](../../language-reference/keywords/checked.md) 및 [unchecked](../../language-reference/keywords/unchecked.md)를 참조하세요.|  
-|`await` 문|메서드에 [async](../../language-reference/keywords/async.md) 한정자를 표시하면 메서드에서 [await](../../language-reference/keywords/await.md) 연산자를 사용할 수 있습니다. 컨트롤이 비동기 메서드의 `await` 식에 도달하면 컨트롤이 호출자로 돌아가고 대기 중인 작업이 완료될 때까지 메서드의 진행이 일시 중단됩니다. 작업이 완료되면 메서드가 실행이 다시 시작될 수 있습니다.<br /><br /> 간단한 예제는 [메서드](../classes-and-structs/methods.md)의 "Async 메서드" 섹션을 참조하세요. 자세한 내용은 [async 및 await를 사용한 비동기 프로그래밍](../concepts/async/index.md)을 참조하세요.|  
+|`await` 문|메서드에 [async](../../language-reference/keywords/async.md) 한정자를 표시하면 메서드에서 [await](../../language-reference/operators/await.md) 연산자를 사용할 수 있습니다. 컨트롤이 비동기 메서드의 `await` 식에 도달하면 컨트롤이 호출자로 돌아가고 대기 중인 작업이 완료될 때까지 메서드의 진행이 일시 중단됩니다. 작업이 완료되면 메서드가 실행이 다시 시작될 수 있습니다.<br /><br /> 간단한 예제는 [메서드](../classes-and-structs/methods.md)의 "Async 메서드" 섹션을 참조하세요. 자세한 내용은 [async 및 await를 사용한 비동기 프로그래밍](../concepts/async/index.md)을 참조하세요.|  
 |`yield return` 문|반복기는 배열 목록과 같은 컬렉션에 대해 사용자 지정 반복을 수행합니다. 반복기는 [yield return](../../language-reference/keywords/yield.md) 문을 사용하여 각 요소를 한 번에 하나씩 반환합니다. `yield return` 문에 도달하면 코드의 현재 위치가 기억됩니다. 다음에 반복기가 호출되면 해당 위치에서 실행이 다시 시작됩니다.<br /><br /> 자세한 내용은 [반복기](../concepts/iterators.md)를 참조하세요.|  
 |`fixed` 문|fixed 문은 가비지 수집기에서 이동 가능한 변수를 재배치할 수 없도록 합니다. 자세한 내용은 [fixed](../../language-reference/keywords/fixed-statement.md)를 참조하세요.|  
 |`lock` 문|lock 문을 사용하면 한 번에 하나의 스레드만 코드 블록에 액세스할 수 있도록 제한할 수 있습니다. 자세한 내용은 [lock](../../language-reference/keywords/lock-statement.md)을 참조하세요.|  

@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 0decc563fdcf068c0b9dc88a55b2bd6f4e3657cd
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: b95818e06d37b0e98bf55428ff97dd476f92fac7
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025101"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168510"
 ---
 # <a name="methods"></a>메서드
 
@@ -257,7 +257,7 @@ Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
 
 비동기 기능을 사용하면 명시적 콜백을 사용하거나 수동으로 여러 메서드 또는 람다 식에 코드를 분할하지 않고도 비동기 메서드를 호출할 수 있습니다.
 
-메서드에 [async](language-reference/keywords/async.md) 한정자를 표시하면 메서드에서 [await](language-reference/keywords/await.md) 연산자를 사용할 수 있습니다. 제어가 비동기 메서드의 `await` 식에 도달하면 대기된 작업이 완료되지 않은 경우 제어가 호출자로 반환되고, 대기된 작업이 완료될 때까지 `await` 키워드가 있는 메서드의 진행이 일시 중단됩니다. 작업이 완료되면 메서드가 실행이 다시 시작될 수 있습니다.
+메서드에 [async](language-reference/keywords/async.md) 한정자를 표시하면 메서드에서 [await](language-reference/operators/await.md) 연산자를 사용할 수 있습니다. 제어가 비동기 메서드의 `await` 식에 도달하면 대기된 작업이 완료되지 않은 경우 제어가 호출자로 반환되고, 대기된 작업이 완료될 때까지 `await` 키워드가 있는 메서드의 진행이 일시 중단됩니다. 작업이 완료되면 메서드가 실행이 다시 시작될 수 있습니다.
 
 > [!NOTE]
 > 비동기 메서드는 아직 완료되지 않은 첫 번째 대기된 개체를 검색할 때나 비동기 메서드의 끝에 도달할 때 중에서 먼저 발생하는 시점에 호출자에게 반환됩니다.

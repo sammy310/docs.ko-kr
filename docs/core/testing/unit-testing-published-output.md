@@ -5,28 +5,28 @@ author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
 ms.custom: seodec18
-ms.openlocfilehash: 660b966c6d02353b855e5728094083042a561558
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9ac03053bc762d0176e087545871ca8a145cd41e
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59126089"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168289"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>dotnet vstest로 게시된 출력 테스트
 
 `dotnet vstest` 명령을 사용하여 이미 게시된 출력에 대해 테스트를 실행할 수 있습니다. 이는 xUnit, MSTest 및 NUnit 테스트에서 작동합니다. 게시된 출력의 일부인 DLL 파일을 찾아 실행하기만 하면 됩니다.
 
-```
+```console
 dotnet vstest <MyPublishedTests>.dll
 ```
 
 여기서 `<MyPublishedTests>`는 게시된 테스트 프로젝트의 이름입니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 아래 명령은 게시된 DLL에서 실행 중인 테스트를 보여 줍니다.
 
-```
+```console
 dotnet new mstest -o MyProject.Tests
 cd MyProject.Tests
 dotnet publish -o out
@@ -38,6 +38,6 @@ dotnet vstest out/MyProject.Tests.dll
 
 ## <a name="see-also"></a>참고 항목
 
-- [dotnet test 및 xUnit을 사용한 유닛 테스트](unit-testing-with-dotnet-test.md)
-- [dotnet test 및 NUnit을 사용한 유닛 테스트](unit-testing-with-nunit.md)
-- [dotnet test 및 MSTest를 사용한 유닛 테스트](unit-testing-with-mstest.md)
+- [dotnet 테스트 및 xUnit을 사용한 단위 테스트](unit-testing-with-dotnet-test.md)
+- [dotnet 테스트 및 NUnit을 사용한 단위 테스트](unit-testing-with-nunit.md)
+- [dotnet 테스트 및 MSTest를 사용한 단위 테스트](unit-testing-with-mstest.md)

@@ -2,12 +2,12 @@
 title: async 및 await를 사용한 TAP(작업 비동기 프로그래밍) 모델(C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: bfe32b2eaefb9ce813ca74bed450a935e33dc9d4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: abe1ab777a17ba8cba15a27b02d389a9ede3caf0
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595609"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167907"
 ---
 # <a name="task-asynchronous-programming-model"></a>작업 비동기 프로그래밍 모델
 
@@ -38,7 +38,7 @@ ms.locfileid: "69595609"
 
 ## <a name="BKMK_HowtoWriteanAsyncMethod"></a> 작성이 간편한 비동기 메서드
 
-C#의 [async](../../../language-reference/keywords/async.md) 및 [await](../../../language-reference/keywords/await.md) 키워드는 비동기 프로그래밍의 핵심입니다. 이 두 개의 키워드를 사용하면 .NET Framework, .NET Core 또는 Windows 런타임의 리소스를 사용하여 동기 메서드를 만드는 것만큼 쉽게 비동기 메서드를 만들 수 있습니다. `async` 키워드를 사용하여 정의하는 비동기 메서드를 *비동기 메서드*라고 합니다.
+C#의 [async](../../../language-reference/keywords/async.md) 및 [await](../../../language-reference/operators/await.md) 키워드는 비동기 프로그래밍의 핵심입니다. 이 두 개의 키워드를 사용하면 .NET Framework, .NET Core 또는 Windows 런타임의 리소스를 사용하여 동기 메서드를 만드는 것만큼 쉽게 비동기 메서드를 만들 수 있습니다. `async` 키워드를 사용하여 정의하는 비동기 메서드를 *비동기 메서드*라고 합니다.
 
 다음 예제에서는 비동기 메서드를 보여줍니다. 코드의 거의 모든 내용이 익숙할 것입니다.
 
@@ -156,7 +156,7 @@ Windows 런타임에는 Windows 앱에서 `async` 및 `await`와 함께 사용�
 
 [async](../../../language-reference/keywords/async.md) 한정자를 사용해서 메서드를 비동기 메서드로 지정하면 다음 두 기능이 활성화됩니다.
 
-- 표시된 비동기 메서드는 [Await](../../../language-reference/keywords/await.md)를 사용하여 일시 중단 지점을 지정할 수 있습니다. `await` 연산자는 대기된 비동기 프로세스가 완료될 때까지 비동기 메서드가 해당 지점을 지나 계속할 수 없도록 컴파일러에 지시합니다. 한편, 컨트롤이 비동기 메서드의 호출자로 반환됩니다.
+- 표시된 비동기 메서드는 [Await](../../../language-reference/operators/await.md)를 사용하여 일시 중단 지점을 지정할 수 있습니다. `await` 연산자는 대기된 비동기 프로세스가 완료될 때까지 비동기 메서드가 해당 지점을 지나 계속할 수 없도록 컴파일러에 지시합니다. 한편, 컨트롤이 비동기 메서드의 호출자로 반환됩니다.
 
      `await` 식에서 비동기 메서드를 일시 중단하더라도 메서드가 종료되지는 않으며 `finally` 블록이 실행되지 않습니다.
 
@@ -168,7 +168,7 @@ Windows 런타임에는 Windows 앱에서 `async` 및 `await`와 함께 사용�
 
 - [async](../../../language-reference/keywords/async.md)
 
-- [await](../../../language-reference/keywords/await.md)
+- [await](../../../language-reference/operators/await.md)
 
 ## <a name="BKMK_ReturnTypesandParameters"></a> 반환 형식 및 매개 변수
 
@@ -343,6 +343,7 @@ namespace AsyncFirstExample
 ## <a name="see-also"></a>참고 항목
 
 - [async](../../../language-reference/keywords/async.md)
-- [await](../../../language-reference/keywords/await.md)
+- [await](../../../language-reference/operators/await.md)
 - [비동기 프로그래밍](../../../async.md)
 - [비동기 개요](../../../../standard/async.md)
+ 

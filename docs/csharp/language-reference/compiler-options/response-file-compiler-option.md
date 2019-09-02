@@ -7,19 +7,19 @@ helpviewer_keywords:
 - response files, specifying for compilation [C#]
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
-ms.openlocfilehash: 1884230f1779f9d425ef6e54cda6967c8e51d985
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: d8e5c0ec148754c3e4cebfa32ad9f44a0bb0119e
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602485"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202904"
 ---
 # <a name="-c-compiler-options"></a>@(C# 컴파일러 옵션)
 @ 옵션을 사용하면 컴파일러 옵션과 컴파일할 소스 코드 파일이 포함된 파일을 지정할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 @response_file  
 ```  
   
@@ -32,7 +32,7 @@ ms.locfileid: "69602485"
   
  컴파일에 지시 파일을 둘 이상 지정하려면 여러 지시 파일 옵션을 지정합니다. 예:  
   
-```  
+```console  
 @file1.rsp @file2.rsp  
 ```  
   

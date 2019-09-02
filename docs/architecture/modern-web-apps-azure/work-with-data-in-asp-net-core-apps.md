@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 9f765acce89bec1fd73e9c43a6e7d75d78be785d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e4303a3046981756cae6951483c100b37425dc80
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672820"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105455"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core 앱에서 데이터 작업
 
@@ -25,11 +25,15 @@ ms.locfileid: "68672820"
 
 EF Core를 SQL Server 데이터베이스와 함께 사용하려면 다음 dotnet CLI 명령을 실행합니다.
 
+```console
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+```
 
 테스트를 목적으로 InMemory 데이터 원본에 대한 지원을 추가하려면:
 
+```console
 dotnet add package Microsoft.EntityFrameworkCore.InMemory
+```
 
 ### <a name="the-dbcontext"></a>DbContext
 

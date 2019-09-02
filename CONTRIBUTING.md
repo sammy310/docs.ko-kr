@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 21266130bd44d45d03f85cdeee9480b7a9944b55
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 303d6790f1e4a42b021de3a214e3e7b44e1a4320
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876940"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104636"
 ---
 # <a name="contributing"></a>참여
 
@@ -15,10 +15,10 @@ ms.locfileid: "65876940"
 
 이 문서에서는 [.NET 문서 사이트](https://docs.microsoft.com/dotnet)에 호스트된 문서 및 코드 샘플에 기여하는 프로세스를 설명합니다. 기여는 오타 수정만큼 간단하거나 새 문서처럼 복잡할 수 있습니다.
 
-* [기여하는 프로세스](#process-for-contributing)
-* [C# 대화형 환경](#the-c-interactive-experience)
-* [권고 및 금지](#dos-and-donts)
-* [기여자 라이선스 계약](#contributor-license-agreement)
+- [기여하는 프로세스](#process-for-contributing)
+- [C# 대화형 환경](#the-c-interactive-experience)
+- [권고 및 금지](#dos-and-donts)
+- [기여자 라이선스 계약](#contributor-license-agreement)
 
 이 리포지토리는 .NET에 대한 개념 설명서를 포함합니다. .NET 문서 사이트는 이 리포지토리 외에도 여러 리포지토리에서 빌드되었습니다.
 
@@ -90,7 +90,7 @@ PR에서 기존 문제를 해결하는 경우 커밋 메시지 또는 PR 설명�
 
 피드백이 적용되고 변경 내용이 승인되면 유지 관리자가 PR을 마스터 분기에 병합합니다.
 
-특정 주기에서는 모든 커밋을 마스터 분기에서 라이브 분기로 푸시한 다음, 기여를 https://docs.microsoft.com/dotnet/에서 라이브로 글을 확인할 수 있습니다.
+특정 주기에서는 모든 커밋을 마스터 분기에서 라이브 분기로 푸시한 다음, 기여를 https://docs.microsoft.com/dotnet/ 에서 라이브로 글을 확인할 수 있습니다.
 
 ### <a name="contributing-to-samples"></a>샘플에 기여
 
@@ -103,7 +103,7 @@ PR에서 기존 문제를 해결하는 경우 커밋 메시지 또는 PR 설명�
 모든 코드는 [dotnet/samples](https://github.com/dotnet/samples) 리포지토리에 있습니다. samples 폴더 구조가 docs 폴더 구조와 일치하는 모델을 만들기 위해 노력하고 있습니다. 따르는 표준은 다음과 같습니다.
 
 - 최상위 *snippets* 폴더에는 작은 집중 샘플에 대한 코드 조각이 들어 있습니다.
-- API 참조 샘플은 다음 패턴을 따르는 폴더에 있습니다. ‘snippets/\<언어>/api/\<네임스페이스>/\<API 이름>’.
+- API 참조 샘플은 다음 패턴을 따르는 폴더에 있습니다. ‘snippets/\<언어>/api/\<네임스페이스>/\<API 이름>’  .
 - 다른 최상위 폴더는 *docs* 리포지토리의 최상위 폴더와 일치합니다. 예를 들어 docs 리포지토리에는 *machine-learning/tutorials* 폴더가 있으며, 기계 학습 자습서의 샘플은 *samples/machine-learning/tutorials* 폴더에 있습니다.
 
 또한 *core* 및 *standard* 폴더 아래의 모든 샘플은 .NET Core에서 지원하는 모든 플랫폼에서 빌드 및 실행되어야 합니다. CI 빌드 시스템에서 이 표준을 준수하는지 확인합니다. 최상위 *framework* 폴더에는 Windows에서만 빌드되고 유효성이 검사되는 샘플이 들어 있습니다.

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e981d75ead5ec2e7f95a854da8c0fa42f476d9da
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1157d93585a564f83bf3809ba2fc3a26949fb711
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910783"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206120"
 ---
 # <a name="securing-method-access"></a>메서드 액세스 보안
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -40,7 +40,7 @@ ms.locfileid: "69910783"
   
 - 지정된 ID 또는 권한을 포함하도록 특정 메서드를 재정의하는 파생 클래스가 필요합니다.  
   
- 다음 예제에서는 특정 강력한 이름을 통해 호출자에 서명하도록 요구하여 제한된 액세스용 공용 클래스를 보호하도록 도와주는 방법을 보여 줍니다. 이 예제에서는 강력한 <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> 이름에 대 한 **요청과** 함께를 사용 합니다. 강력한 이름을 사용 하 여 어셈블리에 서명 하는 방법에 대 한 작업 기반 정보는 [강력한 이름의 어셈블리 만들기 및 사용](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)을 참조 하세요.  
+ 다음 예제에서는 특정 강력한 이름을 통해 호출자에 서명하도록 요구하여 제한된 액세스용 공용 클래스를 보호하도록 도와주는 방법을 보여 줍니다. 이 예제에서는 강력한 <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> 이름에 대 한 **요청과** 함께를 사용 합니다. 강력한 이름을 사용 하 여 어셈블리에 서명 하는 방법에 대 한 작업 기반 정보는 [강력한 이름의 어셈블리 만들기 및 사용](../app-domains/create-and-use-strong-named-assemblies.md)을 참조 하세요.  
   
 ```vb  
 <StrongNameIdentityPermissionAttribute(SecurityAction.Demand, PublicKey := "…hex…", Name := "App1", Version := "0.0.0.0")>  _  
@@ -60,9 +60,9 @@ public class Class1
  이 섹션에 표시된 선언을 사용하여 특정 클래스와 메서드 및 속성과 이벤트가 부분 신뢰 코드에서 사용되지 않도록 방지합니다. 이들 선언을 클래스에 적용하여 모든 메서드, 속성 및 이벤트에 보호를 적용하지만, 필드 액세스는 선언적 보안의 영향을 받지 않습니다. 또한 링크 요청은 직접 실행 호출자 차단에만 도움이 되고 유인 공격의 대상이 될 수 있습니다.  
   
 > [!NOTE]
-> 새 투명도 모델은 .NET Framework 4에서 도입 되었습니다. [보안 투명 코드, 수준 2](../../../docs/framework/misc/security-transparent-code-level-2.md) 모델은 <xref:System.Security.SecurityCriticalAttribute> 특성을 사용 하 여 보안 코드를 식별 합니다. 보안에 중요한 코드에서는 호출자와 상속자를 둘 다 완전히 신뢰할 수 있어야 합니다. 이전 .NET Framework 버전에서 코드 액세스 보안 규칙에 따라 실행 중인 어셈블리는 수준 2 어셈블리를 호출할 수 있습니다. 이 경우 보안에 중요한 특성은 완전 신뢰를 위해 링크 요청으로 처리됩니다.  
+> 새 투명도 모델은 .NET Framework 4에서 도입 되었습니다. [보안 투명 코드, 수준 2](security-transparent-code-level-2.md) 모델은 <xref:System.Security.SecurityCriticalAttribute> 특성을 사용 하 여 보안 코드를 식별 합니다. 보안에 중요한 코드에서는 호출자와 상속자를 둘 다 완전히 신뢰할 수 있어야 합니다. 이전 .NET Framework 버전에서 코드 액세스 보안 규칙에 따라 실행 중인 어셈블리는 수준 2 어셈블리를 호출할 수 있습니다. 이 경우 보안에 중요한 특성은 완전 신뢰를 위해 링크 요청으로 처리됩니다.  
   
- 강력한 이름의 어셈블리에서 [LinkDemand](../../../docs/framework/misc/link-demands.md) 는 완전히 신뢰할 수 있는 호출자에 게 사용을 제한 하기 위해 공개적으로 액세스할 수 있는 모든 메서드, 속성 및 이벤트에 적용 됩니다. 이 기능을 사용하지 않도록 설정하려면 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 특성을 적용해야 합니다. 따라서 신뢰할 수 없는 호출자를 제외하도록 클래스에 명시적으로 표시하는 작업은 서명되지 않은 어셈블리나 이 특성이 포함된 어셈블리에만 필요합니다. 이들 선언을 사용하여 신뢰할 수 없는 호출자로 제공되지 않은 형식 하위 집합을 표시할 수 있습니다.  
+ 강력한 이름의 어셈블리에서 [LinkDemand](link-demands.md) 는 완전히 신뢰할 수 있는 호출자에 게 사용을 제한 하기 위해 공개적으로 액세스할 수 있는 모든 메서드, 속성 및 이벤트에 적용 됩니다. 이 기능을 사용하지 않도록 설정하려면 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 특성을 적용해야 합니다. 따라서 신뢰할 수 없는 호출자를 제외하도록 클래스에 명시적으로 표시하는 작업은 서명되지 않은 어셈블리나 이 특성이 포함된 어셈블리에만 필요합니다. 이들 선언을 사용하여 신뢰할 수 없는 호출자로 제공되지 않은 형식 하위 집합을 표시할 수 있습니다.  
   
  다음 예제에서는 클래스와 멤버가 신뢰할 수 없는 코드에서 사용되지 않도록 방지하는 방법을 보여 줍니다.  
   

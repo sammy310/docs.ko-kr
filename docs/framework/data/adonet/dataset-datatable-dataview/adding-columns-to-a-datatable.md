@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-ms.openlocfilehash: 77bf117b8835623d768f8b8b0ec3e4195174cad7
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 105537a5fccef6de7266407c78cc915f8c5d8678
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043945"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204051"
 ---
 # <a name="adding-columns-to-a-datatable"></a>DataTable에 열 추가
 에 <xref:System.Data.DataTable> 는 테이블의 **Columns** 속성에서 참조 하는 개체의 <xref:System.Data.DataColumn> 컬렉션이 포함 되어 있습니다. 이 열 컬렉션과 모든 제약 조건을 함께 사용하여 테이블의 스키마나 구조를 정의합니다.  
@@ -44,7 +44,7 @@ workTable.Columns.Add("CustFName", typeof(String));
 workTable.Columns.Add("Purchases", typeof(Double));  
 ```  
   
- 이 예에서는 **CustID** 열에 대 한 속성이 **DBNull** 값을 허용 하지 않도록 설정 되 고 값을 고유 하 게 제한 하는 것을 확인 합니다. 그러나 **CustID** 열을 테이블의 기본 키 열로 정의 하면 **allowdbnull** 속성은 자동으로 **False** 로 설정 되 고 **Unique** 속성은 자동으로 **true**로 설정 됩니다. 자세한 내용은 [기본 키 정의](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)합니다.  
+ 이 예에서는 **CustID** 열에 대 한 속성이 **DBNull** 값을 허용 하지 않도록 설정 되 고 값을 고유 하 게 제한 하는 것을 확인 합니다. 그러나 **CustID** 열을 테이블의 기본 키 열로 정의 하면 **allowdbnull** 속성은 자동으로 **False** 로 설정 되 고 **Unique** 속성은 자동으로 **true**로 설정 됩니다. 자세한 내용은 [기본 키 정의](defining-primary-keys.md)합니다.  
   
 > [!CAUTION]
 > 열에 대해 열 이름을 지정 하지 않으면 열에 "Column1"으로 시작 하는 열*N* 의 증분 기본 이름이 지정 됩니다 .이 이름은 **DataColumnCollection**에 추가 됩니다. 열 이름을 제공 하는 경우 "열*N*"의 명명 규칙을 사용 하지 않는 것이 좋습니다 .이 경우 사용자가 제공 하는 이름이 **DataColumnCollection**의 기존 기본 열 이름과 충돌할 수 있습니다. 이미 있는 이름을 입력하면 예외가 throw됩니다.  
@@ -56,6 +56,6 @@ workTable.Columns.Add("Purchases", typeof(Double));
 - <xref:System.Data.DataColumn>
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataTable>
-- [DataTable 스키마 정의](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
-- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [DataTable 스키마 정의](datatable-schema-definition.md)
+- [DataTable](datatables.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -3,12 +3,12 @@ title: ML.NET CLI(명령줄 인터페이스) 도구를 설치하는 방법
 description: ML.NET CLI(명령줄 인터페이스) 도구 개요 및 설치
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 4888acd10570318ef53dc4b1a5a4ff5d8dc0c99b
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 8b6de466a6cf72b44a16c80fc024671bc4e975e8
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832928"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106894"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>ML.NET CLI(명령줄 인터페이스) 도구를 설치하는 방법
 
@@ -106,9 +106,9 @@ ML.NET CLI는 `System.CommandLine`을 기반으로 하므로 탭 완성을 기�
 
 2. 셸 프로필에 적합한 Shim 스크립트를 추가합니다. 셸 프로필 파일을 만들어야 할 수 있습니다. Shim 스크립트는 셸의 완성 요청을 `dotnet-suggest` 도구로 전달하며 적합한 `System.CommandLine` 기반 앱에 위임됩니다.
 
-    * Bash의 경우 [dotnet-suggest-shim.bash](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.bash)의 콘텐츠를 `~/.bash_profile`에 추가합니다.
+    - Bash의 경우 [dotnet-suggest-shim.bash](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.bash)의 콘텐츠를 `~/.bash_profile`에 추가합니다.
 
-    * PowerShell의 경우 [dotnet-suggest-shim.ps1](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1)의 콘텐츠를 PowerShell 프로필에 추가합니다. 콘솔에서 다음 명령을 실행하여 PowerShell 프로필의 예상 경로를 찾을 수 있습니다.
+    - PowerShell의 경우 [dotnet-suggest-shim.ps1](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1)의 콘텐츠를 PowerShell 프로필에 추가합니다. 콘솔에서 다음 명령을 실행하여 PowerShell 프로필의 예상 경로를 찾을 수 있습니다.
 
     ```console
     echo $profile

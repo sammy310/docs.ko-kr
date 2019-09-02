@@ -3,12 +3,12 @@ title: 식 트리 설명
 description: 식 트리에 대해 알아보고 외부 실행을 위한 알고리즘 변환 및 실행 전 코드 검사에 식 트리가 어떻게 유용한지 알아봅니다.
 ms.date: 06/20/2016
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
-ms.openlocfilehash: 3bad826bb58ff361688d3e13497343661e7edbd3
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: c5d4b2ad54fab547567d430f11a31542a11d03f3
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613423"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104801"
 ---
 # <a name="expression-trees-explained"></a>식 트리 설명
 
@@ -33,11 +33,11 @@ var sum = 1 + 2;
 시각적으로 전체 문은 트리입니다. 루트 노드에서 시작하여 트리의 각 노드로 이동하면서 문을 구성하는 코드를 확인할 수 있습니다.
 
 - 할당을 사용하는 변수 선언문(`var sum = 1 + 2;`)
-  * 암시적 변수 형식 선언(`var sum`)
+  - 암시적 변수 형식 선언(`var sum`)
     - 암시적 var 키워드(`var`)
     - 변수 이름 선언(`sum`)
-  * 대입 연산자(`=`)
-  * 이진 더하기 식(`1 + 2`)
+  - 대입 연산자(`=`)
+  - 이진 더하기 식(`1 + 2`)
     - 왼쪽 피연산자(`1`)
     - 더하기 연산자(`+`)
     - 오른쪽 피연산자(`2`)

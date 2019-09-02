@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14207dcefe053e596052c9b94078333c1c714641
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e210f14c74efe214be06a1cb901a144dd92af5e0
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59185577"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168871"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe(서명 도구)
 서명 도구는 파일에 디지털 서명을 하고, 파일의 서명을 확인하고, 파일에 타임스탬프를 기록하는 명령줄 도구입니다.  
@@ -139,7 +139,7 @@ signtool [command] [options] [file_name | ...]
   
  사용 예제는 [SignTool을 사용하여 파일 시그니처 확인](/windows/desktop/SecCrypto/using-signtool-to-verify-a-file-signature)을 참조하세요.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  서명 도구는 종료할 때 다음 종료 코드 중 하나를 반환합니다.  
   
 |종료 코드|설명|  
@@ -170,7 +170,7 @@ signtool sign /f MyCert.pfx /p MyPassword MyFile.exe
  다음 명령은 파일에 디지털 서명을 하고 타임스탬프를 기록합니다. 파일에 서명하는 데 사용할 인증서는 PFX 파일로 저장됩니다.  
   
 ```  
-signtool sign /f MyCert.pfx /t http://timestamp.verisign.com/scripts/timstamp.dll MyFile.exe  
+signtool sign /f MyCert.pfx /t http://timestamp.digicert.com MyFile.exe  
 ```  
   
  다음 명령은 `My`의 주체 이름이 있는 `My Company Certificate` 저장소에 위치한 인증서를 사용하여 파일에 서명합니다.  
@@ -188,7 +188,7 @@ Signtool sign /f MyCert.pfx /d: "MyControl" /du http://www.example.com/MyControl
  다음 명령은 이미 디지털 서명된 파일에 타임스탬프를 기록합니다.  
   
 ```  
-signtool timestamp /t http://timestamp.verisign.com/scripts/timstamp.dll MyFile.exe  
+signtool timestamp /t http://timestamp.digicert.com MyFile.exe  
 ```  
   
  다음 명령은 파일이 서명되었는지를 확인합니다.  

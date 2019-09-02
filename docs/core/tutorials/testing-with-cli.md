@@ -4,12 +4,12 @@ description: 이 자습서에서는 명령줄에서 .NET Core 프로젝트를 �
 author: cartermp
 ms.date: 09/10/2018
 ms.custom: seodec18
-ms.openlocfilehash: ef7263985288445fca273f37389876aeac2f136b
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: a8724c971521b8d65700d61a1ce523c1dfdddf0a
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66051950"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203006"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>.NET Core 명령줄을 사용하여 프로젝트 구성 및 테스트
 
@@ -107,7 +107,7 @@ Meow!
 
 테스트 프로젝트는 현재 `NewTypes`의 형식을 테스트할 수 없으며, `NewTypes` 프로젝트에 대한 프로젝트 참조가 필요합니다. 프로젝트 참조를 추가하려면 [`dotnet add reference`](../tools/dotnet-add-reference.md) 명령을 사용합니다.
 
-```
+```console
 dotnet add reference ../../src/NewTypes/NewTypes.csproj
 ```
 
@@ -188,7 +188,7 @@ public class PetTests
 
 예상대로 테스트에 실패하고, 콘솔에 다음 출력이 표시됩니다.
 
-```
+```output
 Test run for c:\Users\ronpet\repos\samples\core\console-apps\NewTypesMsBuild\test\NewTypesTests\bin\Debug\netcoreapp2.1\NewTypesTests.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
@@ -222,7 +222,7 @@ Test execution time: 1.7000 Seconds
 
 `dotnet test` 명령을 사용하여 테스트를 다시 실행하면 다음 출력이 표시됩니다.
 
-```
+```output
 Test run for c:\Users\ronpet\repos\samples\core\console-apps\NewTypesMsBuild\test\NewTypesTests\bin\Debug\netcoreapp2.1\NewTypesTests.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.

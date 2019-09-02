@@ -2,12 +2,12 @@
 title: dotnet restore 명령
 description: dotnet restore 명령을 사용하여 종속성 및 프로젝트 관련 도구를 복원하는 방법을 알아봅니다.
 ms.date: 05/29/2018
-ms.openlocfilehash: 17bbbe33e7cb7b13d6fb1c0e44bb77dd2bbe7020
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 56d99a4edd69246632560065c415a3f41ac3e1b5
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626345"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202818"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -21,7 +21,7 @@ ms.locfileid: "68626345"
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-```
+```console
 dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--force] [--ignore-failed-sources] [--no-cache]
     [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity] [--interactive]
 dotnet restore [-h|--help]
@@ -29,7 +29,7 @@ dotnet restore [-h|--help]
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-```
+```console
 dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--ignore-failed-sources] [--no-cache]
     [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
 dotnet restore [-h|--help]
@@ -55,15 +55,15 @@ dotnet restore [-h|--help]
 
 `dotnet restore`에서 무시하는 3가지 특정 설정은 다음과 같습니다.
 
-* [bindingRedirects](/nuget/schema/nuget-config-file#bindingredirects-section)
+- [bindingRedirects](/nuget/schema/nuget-config-file#bindingredirects-section)
 
   바인딩 리디렉션은 `<PackageReference>` 요소에서 작동하지 않으며 .NET Core에서는 NuGet 패키지의 `<PackageReference>` 요소만 지원합니다.
 
-* [솔루션](/nuget/schema/nuget-config-file#solution-section)
+- [솔루션](/nuget/schema/nuget-config-file#solution-section)
 
   이 설정은 Visual Studio에만 적용되며 .NET Core에는 적용되지 않습니다. .NET Core에서는 `packages.config` 파일을 사용하지 않고, 대신 NuGet 패키지의 `<PackageReference>` 요소를 사용합니다.
 
-* [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
+- [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
 
   신뢰할 수 있는 패키지의 [플랫폼 간 확인은 NuGet에서 지원하지 않기](https://github.com/NuGet/Home/issues/7939) 때문에 이 설정은 적용되지 않습니다.
 

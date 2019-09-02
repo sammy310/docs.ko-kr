@@ -2,12 +2,12 @@
 title: 일정 기간 이후 비동기 작업 취소(C#)
 ms.date: 07/20/2015
 ms.assetid: 194282c2-399f-46da-a7a6-96674e00b0b3
-ms.openlocfilehash: e00ff51e987275c6c84822f7095c82ed03b53176
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 110c4700d0d2afc87f9144bf258cdd4991f107f4
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595765"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204340"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-c"></a>일정 기간 이후 비동기 작업 취소(C#)
 
@@ -76,7 +76,7 @@ private async void startButton_Click(object sender, RoutedEventArgs e)
 
  프로그램을 여러 번 실행하여 모든 웹 사이트 또는 일부 웹 사이트에 대한 출력이 표시되는지, 또는 웹 사이트에 대한 출력이 표시되지 않는지 확인합니다. 다음은 샘플 출력입니다.
 
-```
+```output
 Length of the downloaded string: 35990.
 
 Length of the downloaded string: 407399.

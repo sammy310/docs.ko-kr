@@ -2,12 +2,12 @@
 title: 여러 표준 쿼리 연산자 연결(C#)
 ms.date: 07/20/2015
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
-ms.openlocfilehash: 89cf7f526bdc60881e901d7ca8f556e97488b220
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 37df654b2bfdcc135460e5ded2ceec1eca33b35a
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594833"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204215"
 ---
 # <a name="chaining-standard-query-operators-together-c"></a>여러 표준 쿼리 연산자 연결(C#)
 이는 [자습서: 여러 쿼리 연결(C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md) 자습서의 마지막 항목입니다.  
@@ -75,7 +75,7 @@ class Program
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```output  
 ToUpper: source >abc<  
 ToUpper: source >def<  
 AppendString: source >DEF<  
@@ -85,4 +85,3 @@ ToUpper: source >ghi<
 AppendString: source >GHI<  
 Main: str >GHI!!!<  
 ```  
-  

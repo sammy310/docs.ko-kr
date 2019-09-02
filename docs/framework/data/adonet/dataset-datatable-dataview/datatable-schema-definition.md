@@ -2,12 +2,12 @@
 title: DataTable 스키마 정의
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
-ms.openlocfilehash: 20fee4316ad95c0f8716a0f374410009ea129222
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0d2609801da3bc336c54d32068246027cfd6d3aa
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952355"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204983"
 ---
 # <a name="datatable-schema-definition"></a>DataTable 스키마 정의
 테이블의 스키마나 구조는 열이나 제약 조건에 의해 표시됩니다. <xref:System.Data.DataTable>의 스키마는 <xref:System.Data.DataColumn> 개체를 비롯하여 <xref:System.Data.ForeignKeyConstraint> 및 <xref:System.Data.UniqueConstraint> 개체를 사용하여 정의합니다. 테이블 열은 데이터 소스 열에 매핑될 수 있습니다. 또한 이 열은 식에서 계산된 값을 포함하며 값을 자동으로 증가시키고 기본 키 값을 포함할 수 있습니다.  
@@ -20,22 +20,22 @@ ms.locfileid: "69952355"
 > DataTable <xref:System.Data.DataTable.CaseSensitive%2A> 의 속성은 이 동작에 영향을 주지 않습니다. **CaseSensitive** 속성은 테이블의 데이터에 적용 되며 정렬, 검색, 필터링, 제약 조건 적용 등에 영향을 주지만 열, 관계 및 제약 조건에 대 한 참조에는 영향을 주지 않습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [DataTable에 열 추가](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
+ [DataTable에 열 추가](adding-columns-to-a-datatable.md)  
  **DataColumn** 개체를 사용 하 여 테이블의 열을 정의 하는 방법을 설명 합니다.  
   
- [식 열 만들기](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-expression-columns.md)  
+ [식 열 만들기](creating-expression-columns.md)  
  열의 **식** 속성을 사용 하 여 행의 다른 열 값을 기준으로 값을 계산 하는 방법을 설명 합니다.  
   
- [AutoIncrement 열 만들기](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)  
+ [AutoIncrement 열 만들기](creating-autoincrement-columns.md)  
  숫자 값을 자동으로 증가시켜 행마다 열 값이 고유하도록 열을 설정하는 방법을 설명합니다.  
   
- [기본 키 정의](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)  
+ [기본 키 정의](defining-primary-keys.md)  
  하나 이상의 **DataColumn** 개체에서 테이블의 기본 키를 지정 하는 방법에 대해 설명 합니다.  
   
- [DataTable 제약 조건](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)  
+ [DataTable 제약 조건](datatable-constraints.md)  
  테이블에서 열의 외래 키와 UNIQUE 제약 조건을 정의하는 방법을 설명합니다.  
   
 ## <a name="see-also"></a>참고자료
 
-- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [DataTable](datatables.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

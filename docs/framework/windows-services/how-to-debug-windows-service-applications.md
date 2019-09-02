@@ -9,18 +9,18 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 71b2b1d32c06afca4abd89df4f6449dacb32046c
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 74f834261d464430547ba3e1113db0ea780f593e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988526"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044438"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>방법: Windows 서비스 애플리케이션 디버그
 서비스는 Visual Studio 내에서가 아니라 서비스 제어 관리자의 컨텍스트 내에서 실행해야 합니다. 따라서 서비스를 디버그하는 것은 다른 Visual Studio 애플리케이션 형식을 디버그하는 것처럼 단순하지 않습니다. 서비스를 디버그하려면 서비스를 시작한 다음 서비스가 실행되는 프로세스에 디버거를 연결해야 합니다. 그리고 나면 Visual Studio의 모든 표준 디버깅 기능을 사용하여 애플리케이션을 디버그할 수 있습니다.  
   
 > [!CAUTION]
->  프로세스에 대해 알고 있으며 해당 프로세스에 디버거를 연결하는 경우 프로세스가 종료될 수도 있음을 이해한 상태에서 프로세스에 디버거를 연결해야 합니다. 예를 들어 WinLogon 프로세스에 연결한 후에 디버깅을 중지하면 시스템이 중단됩니다. 시스템은 WinLogon 없이는 작동할 수 없기 때문입니다.  
+> 프로세스에 대해 알고 있으며 해당 프로세스에 디버거를 연결하는 경우 프로세스가 종료될 수도 있음을 이해한 상태에서 프로세스에 디버거를 연결해야 합니다. 예를 들어 WinLogon 프로세스에 연결한 후에 디버깅을 중지하면 시스템이 중단됩니다. 시스템은 WinLogon 없이는 작동할 수 없기 때문입니다.  
   
  실행 중인 서비스에만 디버거를 연결할 수 있습니다. 연결 프로세스에서는 현재 서비스 작동이 중단되지만 서비스 처리가 실제로 중지되거나 일시 중지되지는 않습니다. 즉, 디버깅을 시작할 때 실행 중인 서비스는 디버그할 때도 기술적으로 계속 시작됨 상태이지만 처리는 일시 중단됩니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "69988526"
 8. **사용 가능한 프로세스** 섹션에서 서비스의 프로세스를 선택한 다음, **연결**을 선택합니다.  
   
     > [!TIP]
-    >  프로세스의 이름은 서비스의 실행 파일 이름과 같습니다.  
+    > 프로세스의 이름은 서비스의 실행 파일 이름과 같습니다.  
   
      **프로세스에 연결** 대화 상자가 나타납니다.  
   

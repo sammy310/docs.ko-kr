@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 08/21/2019
-ms.openlocfilehash: 5f9d7026b270a010d2ba5d4b1165728a100ab6ed
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f62afe79ec3ace98a3bd8997e20672bef81b89c4
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922557"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70037844"
 ---
 # <a name="whats-new-in-net-core-30-preview-8"></a>.NET Core 3.0(Preview 8)의 새로운 기능
 
@@ -430,7 +430,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 ### <a name="type-nativelibrary"></a>유형: NativeLibrary
 
-<xref:System.Runtime.InteropServices.NativeLibrary?displayProperty=nameWithType>는 네이티브 라이브러리(.NET Core P/Invoke와 동일한 로드 논리 사용)를 로드하고 `getSymbol`과 같은 관련 있는 도우미 함수를 제공하는 데 캡슐화 기능을 제공합니다. 코드 예제는 [DLLMap 데모](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin)를 참조하세요.
+<xref:System.Runtime.InteropServices.NativeLibrary?displayProperty=nameWithType>는 네이티브 라이브러리(.NET Core P/Invoke와 동일한 로드 논리 사용)를 로드하고 `getSymbol`과 같은 관련 있는 도우미 함수를 제공하는 데 캡슐화 기능을 제공합니다. 코드 예제는 [DLLMap 데모](https://github.com/dotnet/samples/tree/master/core/extensions/DllMapDemo)를 참조하세요.
 
 ### <a name="windows-native-interop"></a>Windows 네이티브 Interop
 

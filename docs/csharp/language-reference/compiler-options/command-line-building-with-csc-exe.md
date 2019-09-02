@@ -5,17 +5,18 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: 54306c79bc2856996925756ee4261fbe67692aea
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 9dcc1837ca9c5c1fae3cd6a2a9d03b7e80423627
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606983"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040376"
 ---
 # <a name="command-line-build-with-cscexe"></a>csc.exe를 사용한 명령줄 빌드
+
 명령 프롬프트에서 실행 파일(*csc.exe*)의 이름을 입력하여 C# 컴파일러를 호출할 수 있습니다.
 
-**Visual Studio용 개발자 명령 프롬프트** 창을 사용하는 경우 필요한 환경 변수가 모두 설정됩니다. 이 도구에 액세스하는 방법에 대한 자세한 내용은 [Visual Studio용 개발자 명령 프롬프트](../../../framework/tools/developer-command-prompt-for-vs.md) 항목을 참조하세요. 
+**Visual Studio용 개발자 명령 프롬프트** 창을 사용하는 경우 필요한 환경 변수가 모두 설정됩니다. 이 도구에 액세스하는 방법에 대한 자세한 내용은 [Visual Studio용 개발자 명령 프롬프트](../../../framework/tools/developer-command-prompt-for-vs.md) 항목을 참조하세요.
 
 표준 명령 프롬프트 창을 사용하는 경우 컴퓨터의 하위 디렉터리에서 *csc.exe*를 호출하려면 먼저 경로를 조정해야 합니다. 또한 *vsvars32.bat*를 실행하여 명령줄 빌드를 지원하도록 적절한 환경 변수를 설정해야 합니다. *vsvars32.bat*를 찾아서 실행하는 방법에 대한 지침을 비롯한 자세한 내용은 [방법: Visual Studio 명령줄에 필요한 환경 변수 설정](./how-to-set-environment-variables-for-the-visual-studio-command-line.md)을 참조하세요.
 
@@ -26,7 +27,7 @@ Windows SDK(소프트웨어 개발 키트)만 있는 컴퓨터에서 작업하�
 *csc.exe* 실행 파일은 대개 *Windows* 디렉터리 아래의 Microsoft.NET\Framework\\ *\<Version>* 폴더에 있습니다. 이 위치는 개별 컴퓨터의 구성에 따라 다를 수 있습니다. 컴퓨터에 .NET Framework 버전이 두 개 이상 설치된 경우 이 파일의 여러 버전을 찾을 수 있습니다. 해당 설치에 대한 자세한 내용은 [방법: 설치된 .NET Framework 버전 확인](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md)을 참조하세요.
 
 > [!TIP]
->  Visual Studio IDE를 사용하여 프로젝트를 빌드할 때 **출력** 창에 **csc** 명령과 관련 컴파일러 옵션을 표시할 수 있습니다. 이 정보를 표시하려면 [방법: 빌드 로그 파일 보기, 저장 및 구성](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log)의 지침에 따라 로그 데이터의 세부 정보 표시 수준을 **보통** 또는 **자세히**로 변경합니다. 프로젝트를 다시 빌드한 후 **출력** 창에서 **csc**를 검색하여 C# 컴파일러 호출을 찾습니다.
+> Visual Studio IDE를 사용하여 프로젝트를 빌드할 때 **출력** 창에 **csc** 명령과 관련 컴파일러 옵션을 표시할 수 있습니다. 이 정보를 표시하려면 [방법: 빌드 로그 파일 보기, 저장 및 구성](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log)의 지침에 따라 로그 데이터의 세부 정보 표시 수준을 **보통** 또는 **자세히**로 변경합니다. 프로젝트를 다시 빌드한 후 **출력** 창에서 **csc**를 검색하여 C# 컴파일러 호출을 찾습니다.
 
  **항목 내용**
 
@@ -59,7 +60,7 @@ C# 컴파일러에서는 운영 체제 명령줄에 지정된 인수를 해석�
 - *File.cs*를 컴파일하여 *File.exe*를 생성합니다.
 
 ```console
-csc File.cs 
+csc File.cs
 ```
 
 - *File.cs*를 컴파일하여 *File.dll*을 생성합니다.

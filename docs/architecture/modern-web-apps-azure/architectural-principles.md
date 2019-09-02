@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케�
 author: ardalis
 ms.author: wiwagn
 ms.date: 02/16/2019
-ms.openlocfilehash: 74ff7196ce17807b98a975687a524041f15a7f5b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 93a0fd5c484e27853ec9a6919aa573f68471ceaa
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675580"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105479"
 ---
 # <a name="architectural-principles"></a>아키텍처 원칙
 
@@ -101,8 +101,8 @@ ms.locfileid: "68675580"
 
 ## <a name="additional-resources"></a>추가 자료
 
-* [JAVA 디자인 패턴: 원칙](https://java-design-patterns.com/principles/)
-* [바인딩된 컨텍스트](https://martinfowler.com/bliki/BoundedContext.html)
+- [JAVA 디자인 패턴: 원칙](https://java-design-patterns.com/principles/)
+- [바인딩된 컨텍스트](https://martinfowler.com/bliki/BoundedContext.html)
 
 >[!div class="step-by-step"]
 >[이전](choose-between-traditional-web-and-single-page-apps.md)

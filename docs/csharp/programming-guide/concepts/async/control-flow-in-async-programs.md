@@ -2,18 +2,18 @@
 title: 비동기 프로그램의 제어 흐름(C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-ms.openlocfilehash: 8adf4bcf193d9fa8d7335996539933ce71282bac
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 99f80a86f14179c5f270064a9f96e35f8611ef13
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595855"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204447"
 ---
 # <a name="control-flow-in-async-programs-c"></a>비동기 프로그램의 제어 흐름(C#)
 
 `async` 및 `await` 키워드를 사용하면 비동기 프로그램을 더 쉽게 쓰고 유지 관리할 수 있습니다. 그러나 프로그램 작동 방식을 이해하지 못한다면 결과에 놀랄 수 있습니다. 이 항목에서는 간단한 비동기 프로그램을 통해 제어 흐름을 추적하여 언제 메서드 간에 제어가 이동되고 매번 어떤 정보가 전달되는지 보여 줍니다.
 
-일반적으로 [async(C#)](../../../language-reference/keywords/async.md) 한정자를 사용하여 비동기 코드가 포함된 메서드를 표시합니다. 비동기 한정자를 사용하여 표시된 메서드에서 [await(C#)](../../../language-reference/keywords/await.md) 연산자를 사용하여 호출된 비동기 프로세스를 완료하기를 기다리려고 메서드가 일시 중지하는 위치를 지정할 수 있습니다. 자세한 내용은 [async 및 await를 사용한 비동기 프로그래밍(C#)](./index.md)을 참조하세요.
+일반적으로 [async(C#)](../../../language-reference/keywords/async.md) 한정자를 사용하여 비동기 코드가 포함된 메서드를 표시합니다. 비동기 한정자를 사용하여 표시된 메서드에서 [await(C#)](../../../language-reference/operators/await.md) 연산자를 사용하여 호출된 비동기 프로세스를 완료하기를 기다리려고 메서드가 일시 중지하는 위치를 지정할 수 있습니다. 자세한 내용은 [async 및 await를 사용한 비동기 프로그래밍(C#)](./index.md)을 참조하세요.
 
 다음 예제에서는 비동기 메서드를 사용하여 지정된 웹 사이트의 콘텐츠를 문자열로 다운로드하고 문자열 길이를 표시합니다. 예제에는 다음 두 가지 메서드가 포함됩니다.
 
@@ -60,7 +60,7 @@ public partial class MainWindow : Window
 
 "ONE"~"SIX"의 레이블이 지정된 각 위치에는 프로그램의 현재 상태에 대한 정보가 표시됩니다. 다음 출력이 생성됩니다.
 
-```text
+```output
 ONE:   Entering startButton_Click.
            Calling AccessTheWebAsync.
 
@@ -240,7 +240,7 @@ Length of the downloaded string: 33946.
 
     다음 출력이 표시됩니다.
 
-    ```text
+    ```output
     ONE:   Entering startButton_Click.
                Calling AccessTheWebAsync.
 
@@ -292,7 +292,7 @@ Task<string> getStringTask = client.GetStringAsync("https://msdn.microsoft.com")
 
  작업은 결국 실제 문자열을 생성하기 위한 `client.GetStringAsync`의 약속으로 간주할 수 있습니다. 그리고 `client.GetStringAsync`의 약속된 문자열을 사용하지 않는 작업이 `AccessTheWebAsync`에 있는 경우 `client.GetStringAsync`가 대기하는 동안 해당 작업이 계속될 수 있습니다. 예제에서 "THREE" 레이블이 지정된 다음 출력 줄은 독립 작업을 수행할 기회를 나타냅니다.
 
-```
+```output
 THREE: Back in AccessTheWebAsync.
            Task getStringTask is started.
            About to await getStringTask & return a Task<int> to startButton_Click.
@@ -327,7 +327,7 @@ Task<int> getLengthTask = AccessTheWebAsync();
 
  `AccessTheWebAsync`에서처럼 `startButton_Click`은 작업이 대기 상태가 될 때까지 비동기 작업(`getLengthTask`)의 결과를 사용하지 않는 작업을 계속할 수 있습니다. 다음 출력 줄은 해당 작업을 나타냅니다.
 
-```
+```output
 FOUR:  Back in startButton_Click.
            Task getLengthTask is started.
            About to await getLengthTask -- no caller to return to.
@@ -347,7 +347,7 @@ int contentLength = await getLengthTask;
 
 `client.GetStringAsync`가 완료되었음을 알리면 `AccessTheWebAsync` 처리는 일시 중단이 해제되고 await 문을 무시하고 계속 진행될 수 있습니다. 다음 출력 줄은 처리 다시 시작을 나타냅니다.
 
-```
+```output
 FIVE:  Back in AccessTheWebAsync.
            Task getStringTask is complete.
            Processing the return statement.
@@ -368,7 +368,7 @@ FIVE:  Back in AccessTheWebAsync.
 
 다음 출력 줄은 `startButton_Async`의 처리 다시 시작을 나타냅니다.
 
-```
+```output
 SIX:   Back in startButton_Click.
            Task getLengthTask is finished.
            Result from AccessTheWebAsync is stored in contentLength.

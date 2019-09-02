@@ -1,12 +1,12 @@
 ---
 title: '연습: C#을 사용하여 개체 유지'
 ms.date: 04/26/2018
-ms.openlocfilehash: 85b58e93d667d39800538bb2c29d4ba69146e7f3
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 88fb589ca2f9a24f861b528bfd601f837e9aac5f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975825"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105931"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>C\#을 사용하여 개체 유지
 
@@ -22,14 +22,14 @@ serialization을 사용하면 인스턴스 간에 개체의 데이터를 유지�
 
 ## <a name="prerequisites"></a>전제 조건
 
-* 빌드하고 실행하려면 [.NET Core SDK](https://www.microsoft.com/net/core)를 설치합니다.
+- 빌드하고 실행하려면 [.NET Core SDK](https://www.microsoft.com/net/core)를 설치합니다.
 
-* 아직 없는 경우 즐겨 찾는 코드 편집기를 설치합니다.
+- 아직 없는 경우 즐겨 찾는 코드 편집기를 설치합니다.
 
 > [!TIP]
 > 코드 편집기를 설치해야 하나요? [Visual Studio](https://visualstudio.com/downloads)를 체험해 보세요.
 
-* 예제는 C# 7.3이 필요합니다. [C# 언어 버전 선택](../../../language-reference/configure-language-version.md)을 참조하세요. 
+- 예제는 C# 7.3이 필요합니다. [C# 언어 버전 선택](../../../language-reference/configure-language-version.md)을 참조하세요. 
 
 [.NET 샘플 GitHub 리포지토리에서](https://github.com/dotnet/samples/tree/master/csharp/serialization) 온라인으로 샘플 코드를 검사할 수 있습니다.
 

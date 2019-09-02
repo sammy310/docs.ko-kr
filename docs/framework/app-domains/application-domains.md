@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 571b049300a7c7de963bd762e0266f66060479fe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c9ab95124264b2b59be77695755ab1d1f1c3b1aa
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927988"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040740"
 ---
 # <a name="application-domains"></a>애플리케이션 도메인
 
@@ -145,7 +145,7 @@ COMPLUS_LoaderOptimization = 1
  COMPLUS_LoaderOptimization 환경 플래그가 1로 설정되면 런타임 호스트가 모든 어셈블리를 SingleDomain이라는 비 도메인 중립 방식으로 로드합니다. SingleDomain은 어셈블리를 도메인 중립적으로 로드하지 않습니다. 단, 항상 도메인 중립적으로 로드되는 Mscorlib는 예외입니다. 이 설정은 일반적으로 호스트가 프로세스에서 단일 애플리케이션을 실행 중인 경우에만 사용되므로 단일 도메인이라고 합니다.  
   
 > [!CAUTION]
->  COMPLUS_LoaderOptimization 환경 플래그는 진단 및 테스트 시나리오에 사용할 수 있도록 설계되었습니다. 플래그가 설정되어 있으면 속도가 심각하게 느려지고 메모리 사용량이 증가할 수 있습니다.  
+> COMPLUS_LoaderOptimization 환경 플래그는 진단 및 테스트 시나리오에 사용할 수 있도록 설계되었습니다. 플래그가 설정되어 있으면 속도가 심각하게 느려지고 메모리 사용량이 증가할 수 있습니다.  
   
 ### <a name="code-example"></a>코드 예제
 

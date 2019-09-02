@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d89f3f4d97fe4cbe3b660b74537f8c8368b492a
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: bed0084fd576ba9b9f9eeb51e9e2466938e43490
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052776"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106506"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework 시스템 요구 사항
 
 이 항목의 표에는 다음 .NET Framework 버전의 하드웨어, 운영 체제 및 소프트웨어 요구 사항이 나와 있습니다.
 
-* .NET Framework 4.5 및 해당 포인트 릴리스(4.5.1 및 4.5.2)
-* .NET Framework 4.6 및 해당 포인트 릴리스(4.6.1 및 4.6.2)
-* .NET Framework 4.7 및 해당 포인트 릴리스(4.7.1 및 4.7.2)
-* .NET Framework 4.8
+- .NET Framework 4.5 및 해당 포인트 릴리스(4.5.1 및 4.5.2)
+- .NET Framework 4.6 및 해당 포인트 릴리스(4.6.1 및 4.6.2)
+- .NET Framework 4.7 및 해당 포인트 릴리스(4.7.1 및 4.7.2)
+- .NET Framework 4.8
 
 .NET Framework 4.5 이전의 .NET Framework 버전에 대한 자세한 내용은 [.NET Framework 버전 및 종속성](../migration-guide/versions-and-dependencies.md)을 참조하세요.
 

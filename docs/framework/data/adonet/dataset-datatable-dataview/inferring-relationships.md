@@ -2,15 +2,15 @@
 title: 관계 유추
 ms.date: 03/30/2017
 ms.assetid: 8fa86a9d-6545-4a9d-b1f5-58d9742179c7
-ms.openlocfilehash: f8a9aba493dfe82466608ea60932ddfec5ef64f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92a4953dc7f5119ffbf171ff2a7bf5b58e896638
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879673"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204763"
 ---
 # <a name="inferring-relationships"></a>관계 유추
-테이블로 유추되는 요소에 역시 테이블로 유추되는 자식 요소가 있으면 두 테이블 사이에 <xref:System.Data.DataRelation>이 만들어집니다. 새 열 이름 가진 **ParentTableName_Id** 부모 요소에 대해 만들어진 테이블과 자식 요소에 대해 생성 된 테이블에 추가 됩니다. 합니다 **ColumnMapping** id 열 속성에 설정할 **MappingType.Hidden**합니다. 열은 부모 테이블에 대 한 자동 증분 기본 키 되며 사용할지 합니다 **DataRelation** 두 테이블 간에 합니다. 추가 id 열의 데이터 형식은 **System.Int32**에 데이터 형식의 다른 모든 유추 된 열과 달리 **System.String**합니다. A <xref:System.Data.ForeignKeyConstraint> 사용 하 여 **DeleteRule** = **Cascade** 부모 테이블과 자식 테이블에 새 열을 사용 하 여도 생성 됩니다.  
+테이블로 유추되는 요소에 역시 테이블로 유추되는 자식 요소가 있으면 두 테이블 사이에 <xref:System.Data.DataRelation>이 만들어집니다. **ParentTableName_Id** 이름이 인 새 열이 부모 요소에 대해 만들어진 테이블과 자식 요소에 대해 만들어진 테이블 모두에 추가 됩니다. 이 id 열의 **ColumnMapping** 속성은 **mappingtype.attribute**로 설정 됩니다. 열은 부모 테이블의 자동 증분 기본 키가 되며 두 테이블 간의 **DataRelation** 에 사용 됩니다. 추가 된 id 열의 데이터 형식은 System.string 이며 다른 모든유추 된 열의 데이터 형식 ( **system.string**)과는 다릅니다. 부모 테이블과 자식 테이블 모두에서 새 열을 사용 하 여 **DeleteRule** = Cascade가 만들어집니다. <xref:System.Data.ForeignKeyConstraint>  
   
  예를 들어, 다음과 같은 XML을 가정해 봅시다.  
   
@@ -23,23 +23,23 @@ ms.locfileid: "61879673"
 </DocumentElement>  
 ```  
   
- 유추 과정에서 두 테이블을 생성 합니다. **Element1** 하 고 **ChildElement1**합니다.  
+ 유추 프로세스는 다음과 같은 두 개의 테이블을 생성 합니다. **Element1** 및 **ChildElement1**.  
   
- 합니다 **Element1** 테이블 두 개의 열이 포함 됩니다. **Element1_Id** 하 고 **ChildElement2**합니다. 합니다 **ColumnMapping** 의 속성을 **Element1_Id** 열으로 설정 됩니다 **MappingType.Hidden**합니다. 합니다 **ColumnMapping** 의 속성을 **ChildElement2** 열으로 설정 됩니다 **MappingType.Element**합니다. **Element1_Id** 의 기본 키로 설정할 열을 **Element1** 테이블.  
+ **Element1** 테이블에는 두 개의 열이 있습니다. **Element1_Id** 및 **childelement2 라는**. **Element1_Id** 열의 **ColumnMapping** 속성은 **mappingtype.attribute**로 설정 됩니다. **Childelement2 라는** 열의 **ColumnMapping** 속성은 **mappingtype.attribute**로 설정 됩니다. **Element1_Id** 열은 **Element1** 테이블의 기본 키로 설정 됩니다.  
   
- **ChildElement1** 테이블 3 개 열이 포함 됩니다. **attr1**, **attr2** 및 **Element1_Id**합니다. **ColumnMapping** 에 대 한 속성을 **attr1** 및 **attr2** 열에 설정할 **MappingType.Attribute**합니다. 합니다 **ColumnMapping** 의 속성을 **Element1_Id** 열으로 설정 됩니다 **MappingType.Hidden**합니다.  
+ **ChildElement1** 테이블에는 **attr1**, **attr2** 및 **Element1_Id**의 3 개 열이 있습니다. **Attr1** 및 **attr2** 열의 **ColumnMapping** 속성은 **mappingtype.attribute**로 설정 됩니다. **Element1_Id** 열의 **ColumnMapping** 속성은 **mappingtype.attribute**로 설정 됩니다.  
   
- A **DataRelation** 및 **ForeignKeyConstraint** 사용 하 여 만들어집니다 합니다 **Element1_Id** 두 테이블의 열입니다.  
+ **DataRelation** 및 **ForeignKeyConstraint** 는 두 테이블의 **Element1_Id** 열을 사용 하 여 생성 됩니다.  
   
  **DataSet:** DocumentElement  
   
- **테이블:** Element1  
+ **테이블** Element1  
   
 |Element1_Id|ChildElement2|  
 |------------------|-------------------|  
 |0|Text2|  
   
- **테이블:** ChildElement1  
+ **테이블** ChildElement1  
   
 |attr1|attr2|Element1_Id|  
 |-----------|-----------|------------------|  
@@ -55,11 +55,11 @@ ms.locfileid: "61879673"
   
  **ChildColumn:** Element1_Id  
   
- **중첩 되어 있습니다.** True  
+ **내포** True  
   
  **ForeignKeyConstraint:** Element1_ChildElement1  
   
- **열:** Element1_Id  
+ **열의** Element1_Id  
   
  **ParentTable:** Element1  
   
@@ -71,10 +71,10 @@ ms.locfileid: "61879673"
   
 ## <a name="see-also"></a>참고자료
 
-- [XML에서 데이터 세트 관계형 구조 유추](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
-- [XML에서 데이터 세트 로드](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [XML에서 데이터 세트 스키마 정보 로드](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
-- [DataRelation 중첩](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)
-- [데이터 집합에서 XML 사용](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [DataSet, DataTable 및 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [XML에서 데이터 세트 관계형 구조 유추](inferring-dataset-relational-structure-from-xml.md)
+- [XML에서 데이터 세트 로드](loading-a-dataset-from-xml.md)
+- [XML에서 데이터 세트 스키마 정보 로드](loading-dataset-schema-information-from-xml.md)
+- [DataRelation 중첩](nesting-datarelations.md)
+- [데이터 집합에서 XML 사용](using-xml-in-a-dataset.md)
+- [DataSet, DataTable 및 DataView](index.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -4,12 +4,12 @@ description: .NET Framework에서 .NET Core로 라이브러리 프로젝트를 �
 author: cartermp
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: c7a770ba2da8c245ba9140852fc7c2a33a55f7a2
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3e3c613f6be50ae5ff2b07052c7c1bced2047855
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660708"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105297"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>.NET Core로 .NET Framework 라이브러리 포팅
 
@@ -113,11 +113,11 @@ Visual Studio에서 이식하려는 각 프로젝트에 대해 다음을 수행�
 코드를 이식한 경우 모든 항목이 제대로 작동하는지 확인하는 가장 좋은 방법은 .NET Core에 이식할 때 코드를 테스트하는 것입니다. 이렇게 하려면 .NET Core에 대한 테스트를 빌드하고 실행하는 테스트 프레임워크를 사용해야 합니다. 현재는 다음과 같은 세 가지 옵션이 있습니다.
 
 - [xUnit](https://xunit.github.io/)
-  * [시작](https://xunit.github.io/docs/getting-started-dotnet-core.html)
-  * [MSTest 프로젝트를 xUnit으로 변환하는 도구](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
+  - [시작](https://xunit.github.io/docs/getting-started-dotnet-core.html)
+  - [MSTest 프로젝트를 xUnit으로 변환하는 도구](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
 - [NUnit](https://nunit.org/)
-  * [시작](https://github.com/nunit/docs/wiki/Installation)
-  * [MSTest에서 NUnit으로 마이그레이션에 대한 블로그 게시물](https://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
+  - [시작](https://github.com/nunit/docs/wiki/Installation)
+  - [MSTest에서 NUnit으로 마이그레이션에 대한 블로그 게시물](https://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
 - [MSTest](https://docs.microsoft.com/visualstudio/test/unit-test-basics)
 
 ## <a name="recommended-approach-to-porting"></a>이식에 권장되는 접근 방식

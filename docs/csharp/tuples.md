@@ -3,12 +3,12 @@ title: 튜플 형식 - C# 가이드
 description: C#의 명명되지 않은 튜플 형식과 명명된 튜플 형식에 대한 자세한 정보
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: dc02fceb2901fb9cb7bf71869213d8b178520900
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 00330af38044b07128551b7dc74c7d831c7a5626
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988405"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105906"
 ---
 # <a name="c-tuple-types"></a>C# 튜플 형식
 
@@ -40,7 +40,7 @@ C# 튜플은 간단한 구문을 사용하여 정의하는 형식입니다. 이 
 `ValueTuple` 구조체에는 `Item1`, `Item2`, `Item3` 등으로 이름이 지정된 필드가 있습니다. 이러한 필드는 기존 `Tuple` 형식에서 정의된 속성과 유사합니다.
 이러한 이름만 *명명되지 않은 튜플*에 사용할 수 있습니다. 튜플에 대체 필드 이름을 지정하지 않는 경우 명명되지 않은 튜플을 만든 것입니다.
 
-[!code-csharp[UnnamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#01_UnNamedTuple "Unnamed tuple")]
+[!code-csharp[UnnamedTuple](../../samples/snippets/csharp/tuples/program.cs#01_UnNamedTuple "Unnamed tuple")]
 
 이전 예제의 튜플은 리터럴 상수를 사용하여 초기화되었고 C# 7.1의 ‘튜플 필드 이름 프로젝션’을 사용하여 만들어진 요소 이름이 없습니다. 
 
@@ -49,13 +49,13 @@ C# 튜플은 간단한 구문을 사용하여 정의하는 형식입니다. 이 
 그러나 명명된 요소에 대한 동의어도 있습니다.
 각 요소에 대한 이름을 지정하여 명명된 튜플을 만듭니다. 한 가지 방법은 튜플 초기화의 일부로 이름을 지정하는 것입니다.
 
-[!code-csharp[NamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#02_NamedTuple "Named tuple")]
+[!code-csharp[NamedTuple](../../samples/snippets/csharp/tuples/program.cs#02_NamedTuple "Named tuple")]
 
 이러한 동의어는 명명된 튜플을 효과적으로 사용할 수 있도록 컴파일러 및 언어에 의해 처리됩니다. IDE 및 편집기는 Roslyn API를 사용하여 이러한 의미 체계 이름을 읽을 수 있습니다. 동일한 어셈블리의 모든 위치에서 해당 의미 체계 이름으로 명명된 튜플의 요소를 참조할 수 있습니다. 컴파일러는 컴파일된 출력을 생성할 때 정의된 이름을 동등한 `Item*` 이름으로 바꿉니다. 컴파일된 MSIL(Microsoft Intermediate Language)에는 이러한 요소에 지정한 이름이 포함되지 않습니다.
 
 C# 7.1부터 튜플에 대한 필드 이름은 튜플을 초기화하는 데 사용되는 변수로부터 제공될 수 있습니다. 이를 **[튜플 프로젝션 이니셜라이저](#tuple-projection-initializers)** 라고 합니다. 다음 코드에서는 `count`(정수) 및 `sum`(double) 요소가 있는 `accumulation`이라는 이름의 튜플을 만듭니다.
 
-[!code-csharp[ProjectedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectedTupleNames "Named tuple")]
+[!code-csharp[ProjectedTuple](../../samples/snippets/csharp/tuples/program.cs#ProjectedTupleNames "Named tuple")]
 
 컴파일러는 public 메서드 또는 속성에서 반환된 튜플에 대해 생성된 이름을 전달해야 합니다. 이러한 경우 컴파일러는 메서드에 <xref:System.Runtime.CompilerServices.TupleElementNamesAttribute> 특성을 추가합니다. 이 특성에는 튜플의 각 요소에 지정된 이름이 포함된 <xref:System.Runtime.CompilerServices.TupleElementNamesAttribute.TransformNames> 목록 속성이 있습니다.
 
@@ -69,11 +69,11 @@ C# 7.1부터 튜플에 대한 필드 이름은 튜플을 초기화하는 데 사
 일반적으로 튜플 프로젝션 이니셜라이저는 튜플 초기화 문의 오른쪽에 있는 변수 또는 필드 이름을 사용하여 작동합니다.
 명시적 이름이 지정되는 경우 해당 이름이 프로젝션된 이름보다 우선됩니다. 예를 들어 다음 이니셜라이저에서 요소는 `localVariableOne` 및 `localVariableTwo`가 아니라 `explicitFieldOne` 및 `explicitFieldTwo`입니다.
 
-[!code-csharp[ExplicitNamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionExample_Explicit "Explicitly named tuple")]
+[!code-csharp[ExplicitNamedTuple](../../samples/snippets/csharp/tuples/program.cs#ProjectionExample_Explicit "Explicitly named tuple")]
 
 명시적 이름이 제공되지 않은 필드의 경우, 적용할 수 있는 암시적 이름이 프로젝션됩니다. 명시적이든 암시적이든 의미 체계 이름을 제공할 필요는 없습니다. 다음 이니셜라이저의 필드 이름은 `Item1` 및 `stringContent`이며 필드의 값은 각각 `42` 및 “모든 것에 대한 답”입니다.
 
-[!code-csharp[MixedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#MixedTuple "mixed tuple")]
+[!code-csharp[MixedTuple](../../samples/snippets/csharp/tuples/program.cs#MixedTuple "mixed tuple")]
 
 후보 필드 이름이 튜플 필드에 프로젝션되지 않는 두 가지 경우가 있습니다.
 
@@ -82,7 +82,7 @@ C# 7.1부터 튜플에 대한 필드 이름은 튜플을 초기화하는 데 사
 
 이러한 경우는 모호성을 방지합니다. 이러한 이름은 튜플의 필드에 대한 필드 이름으로 사용될 경우 모호성을 일으킬 수 있습니다. 두 경우 모두 컴파일 시간 오류가 발생하지 않습니다. 대신, 프로젝션된 이름이 없는 요소에는 프로젝션된 의미 체계 이름이 없습니다.  다음 예제에서는 이러한 경우를 보여 줍니다.
 
-[!code-csharp-interactive[Ambiguity](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionAmbiguities "tuples where projections are not performed")]
+[!code-csharp-interactive[Ambiguity](../../samples/snippets/csharp/tuples/program.cs#ProjectionAmbiguities "tuples where projections are not performed")]
 
 이러한 경우에는 튜플 필드 이름 프로젝션을 사용할 수 없을 때 C# 7.0으로 작성된 코드에 대한 새로운 변경 사항이므로 컴파일러 오류가 발생하지 않습니다.
 
@@ -90,24 +90,24 @@ C# 7.1부터 튜플에 대한 필드 이름은 튜플을 초기화하는 데 사
 
 C# 7.3부터 튜플 형식에서는 `==` 및 `!=` 연산자를 지원합니다. 이러한 연산자는 왼쪽 인수의 각 멤버를 오른쪽 인수의 각 멤버와 차례로 비교하여 작동합니다. 이러한 비교는 단락(short-circuit)됩니다. 한 쌍이 같지 않으면 멤버 계산을 즉시 중지합니다. 다음 코드 예제에서는 `==`을 사용하지만 비교 규칙은 모두 `!=`에 적용됩니다. 다음 코드 예제는 두 쌍의 정수에 대한 같은 비교를 보여줍니다.
 
-[!code-csharp-interactive[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
+[!code-csharp-interactive[TupleEquality](../../samples/snippets/csharp/tuples/program.cs#Equality "Testing tuples for equality")]
 
 튜플 같음 테스트를 더 간편하게 만드는 몇 가지 규칙이 있습니다. 튜플 같음은 다음 코드에서처럼 튜플 중 하나가 Null 가능 튜플인 경우 [해제 변환](~/_csharplang/spec/conversions.md#lifted-conversion-operators)을 수행합니다.
 
-[!code-csharp-interactive[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]
+[!code-csharp-interactive[NullableTupleEquality](../../samples/snippets/csharp/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]
 
 또한 튜플 같음은 두 튜플 모두의 각 멤버에 대한 암시적 변환도 수행합니다. 여기에는 해제 변환, 확대 변환 또는 기타 암시적 변환이 포함됩니다. 다음 예제에서는 정수에서 long으로의 암시적 변환으로 인해 integer 2 튜플이 long 2 튜플에 비교될 수 있음을 보여줍니다.
 
-[!code-csharp-interactive[SnippetMemberConversions](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberConversions "converting tuples for equality tests")]
+[!code-csharp-interactive[SnippetMemberConversions](../../samples/snippets/csharp/tuples/program.cs#SnippetMemberConversions "converting tuples for equality tests")]
 
 튜플 멤버의 이름은 같음에 대한 테스트에 참여하지 않습니다. 그러나 피연산자 중 하나가 명시적 이름을 가진 튜플 리터럴인 경우 컴파일러는 해당 이름이 다른 피연산자의 이름과 일치하지 않으면 CS8383 경고를 생성합니다.
 두 피연산자가 모두 튜플 리터럴인 경우에는 다음 예제에서처럼 경고가 오른쪽 피연산자에 있습니다.
 
-[!code-csharp-interactive[MemberNames](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberNames "Tuple member names do not participate in equality tests")]
+[!code-csharp-interactive[MemberNames](../../samples/snippets/csharp/tuples/program.cs#SnippetMemberNames "Tuple member names do not participate in equality tests")]
 
 마지막으로 튜플에 중첩된 튜플이 포함될 수 있습니다. 튜플 같음은 다음 예제와 같이 중첩된 튜플을 통해 각 피연산자의 “모양”을 비교합니다.
 
-[!code-csharp-interactive[NestedTuples](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
+[!code-csharp-interactive[NestedTuples](../../samples/snippets/csharp/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
 
 모양이 서로 다른 경우 두 튜플이 같은지 비교하는 것은 컴파일 시간 오류입니다. 컴파일러는 두 튜플을 비교하기 위해 중첩된 튜플을 분해하지 않습니다.
 
@@ -118,14 +118,14 @@ C# 7.3부터 튜플 형식에서는 `==` 및 `!=` 연산자를 지원합니다. 
 
 다음 예제에서 사용되는 이러한 변수를 살펴보세요.
 
-[!code-csharp[VariableCreation](../../samples/snippets/csharp/tuples/tuples/program.cs#03_VariableCreation "Variable creation")]
+[!code-csharp[VariableCreation](../../samples/snippets/csharp/tuples/program.cs#03_VariableCreation "Variable creation")]
 
 처음 두 변수인 `unnamed`와 `anonymous`에는 요소에 대해 지정된 의미 체계 이름이 없습니다. 필드 이름은 `Item1` 및 `Item2`입니다.
 마지막 두 변수인 `named` 및 `differentName`에는 요소에 대해 지정된 의미 체계 이름이 있습니다. 이러한 두 튜플의 요소 이름은 서로 다릅니다.
 
 이러한 네 튜플에서 요소 수('카디널리티'라고도 함)는 같으며, 해당 요소의 형식도 동일합니다. 따라서 다음 할당이 모든 작동합니다.
 
-[!code-csharp[VariableAssignment](../../samples/snippets/csharp/tuples/tuples/program.cs#04_VariableAssignment "Variable assignment")]
+[!code-csharp[VariableAssignment](../../samples/snippets/csharp/tuples/program.cs#04_VariableAssignment "Variable assignment")]
 
 튜플 이름은 할당되지 않습니다. 요소 값은 튜플의 요소 순서에 따라 할당됩니다.
 
@@ -142,7 +142,7 @@ named = differentShape;
 
 튜플의 가장 일반적인 사용 중 하나는 메서드 반환 값입니다. 한 가지 예를 살펴보겠습니다. 숫자 시퀀스의 표준 편차를 계산하는 다음 메서드를 살펴보세요.
 
-[!code-csharp[StandardDeviation](../../samples/snippets/csharp/tuples/tuples/statistics.cs#05_StandardDeviation "Compute Standard Deviation")]
+[!code-csharp[StandardDeviation](../../samples/snippets/csharp/tuples/statistics.cs#05_StandardDeviation "Compute Standard Deviation")]
 
 > [!NOTE]
 > 이 예제에서는 수정되지 않은 샘플 표준 편차를 컴퓨팅합니다.
@@ -153,21 +153,21 @@ LINQ 쿼리는 지연 평가되므로 평가와의 차이 계산과 이러한 �
 
 하나의 시퀀스 열거형만 사용하여 표준 편차를 계산하는 다른 수식이 있습니다.  이 계산은 시퀀스를 열거하면서 시퀀스의 모든 항목 합계와 각 값의 거듭제곱 합계인 두 값을 생성합니다.
 
-[!code-csharp[SumOfSquaresFormula](../../samples/snippets/csharp/tuples/tuples/statistics.cs#06_SumOfSquaresFormula "Compute Standard Deviation using the sum of squares")]
+[!code-csharp[SumOfSquaresFormula](../../samples/snippets/csharp/tuples/statistics.cs#06_SumOfSquaresFormula "Compute Standard Deviation using the sum of squares")]
 
 이 버전에서는 시퀀스를 정확히 한 번만 열거합니다. 그러나 다시 사용할 수 있는 코드는 아닙니다. 계속 작업하면 시퀀스의 항목 수, 시퀀스의 합계, 시퀀스의 거듭제곱 합계가 다양한 통계 계산에서 사용되는 것을 발견할 것입니다. 이 메서드를 리팩터링하고 세 개의 값을 모두 생성하는 유틸리티 메서드를 작성하겠습니다. 세 값 모두 튜플로 반환될 수 있습니다.
 
 열거 중에 계산된 세 개의 값이 튜플에 저장되도록 이 메서드를 업데이트하겠습니다. 다음 버전이 생성됩니다.
 
-[!code-csharp[TupleVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#07_TupleVersion "Refactor to use tuples")]
+[!code-csharp[TupleVersion](../../samples/snippets/csharp/tuples/statistics.cs#07_TupleVersion "Refactor to use tuples")]
 
 Visual Studio의 리팩터링 지원을 사용하면 핵심 통계 기능을 private 메서드로 쉽게 추출할 수 있습니다. 그러면 세 개의 값 `Sum`, `SumOfSquares` 및 `Count`가 포함된 튜플 형식을 반환하는 `private static` 메서드가 제공됩니다.
 
-[!code-csharp[TupleMethodVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#08_TupleMethodVersion "After extracting utility method")]
+[!code-csharp[TupleMethodVersion](../../samples/snippets/csharp/tuples/statistics.cs#08_TupleMethodVersion "After extracting utility method")]
  
 이 언어에서는 직접 몇 가지 빠른 편집을 수행하려는 경우 두 가지 옵션을 더 사용할 수 있습니다. 첫째, `var` 선언을 사용하여 `ComputeSumAndSumOfSquares` 메서드 호출에서 튜플 결과를 초기화할 수 있습니다. `ComputeSumAndSumOfSquares` 메서드 내에서 세 개의 개별 변수를 만들 수도 있습니다. 최종 버전은 다음 코드에 나와 있습니다.
 
-[!code-csharp[CleanedTupleVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#09_CleanedTupleVersion "After final cleanup")]
+[!code-csharp[CleanedTupleVersion](../../samples/snippets/csharp/tuples/statistics.cs#09_CleanedTupleVersion "After final cleanup")]
 
 이 최종 버전은 이러한 세 개의 값이나 값의 하위 집합이 필요한 모든 메서드에 사용할 수 있습니다.
 
@@ -203,11 +203,11 @@ private static (double, double, int) ComputeSumAndSumOfSquares(IEnumerable<doubl
 튜플 형식 시퀀스를 반환하는 것은 간단하며, 컴파일 시간에 IDE 도구를 통해 요소 이름 및 형식을 사용할 수 있습니다.
 예를 들어 ToDo 애플리케이션을 살펴보세요. 다음과 유사한 클래스를 정의하여 할 일 목록의 단일 항목을 나타낼 수 있습니다.
 
-[!code-csharp[ToDoItem](../../samples/snippets/csharp/tuples/tuples/projectionsample.cs#14_ToDoItem "To Do Item")]
+[!code-csharp[ToDoItem](../../samples/snippets/csharp/tuples/projectionsample.cs#14_ToDoItem "To Do Item")]
 
 모바일 애플리케이션은 제목만 표시되는 현재 할 일 항목의 간단한 형식을 지원할 수 있습니다. 해당 LINQ 쿼리는 ID와 제목만 포함된 프로젝션을 만듭니다. 튜플 시퀀스를 반환하는 메서드는 해당 디자인도 잘 표현합니다.
 
-[!code-csharp[QueryReturningTuple](../../samples/snippets/csharp/tuples/tuples/projectionsample.cs#15_QueryReturningTuple "Query returning a tuple")]
+[!code-csharp[QueryReturningTuple](../../samples/snippets/csharp/tuples/projectionsample.cs#15_QueryReturningTuple "Query returning a tuple")]
 
 > [!NOTE]
 > C# 7.1에서는 무명 형식으로 속성 이름을 지정하는 것과 유사한 방식으로 튜플 프로젝션을 통해 요소를 사용하여 명명된 튜플을 만들 수 있습니다. 위 코드에서 쿼리 프로젝션의 `select` 문은 `ID` 및 `Title` 요소가 있는 튜플을 만듭니다.
@@ -218,11 +218,11 @@ private static (double, double, int) ComputeSumAndSumOfSquares(IEnumerable<doubl
 
 메서드에서 반환된 튜플을 *분해*하여 튜플의 모든 항목을 패키지 해제할 수 있습니다. 세 가지 방법으로 튜플을 분해할 수 있습니다.  첫째, 각 필드의 형식을 괄호 안에 명시적으로 선언하여 튜플의 각 요소에 대한 개별 변수를 만들 수 있습니다.
 
-[!code-csharp[Deconstruct](../../samples/snippets/csharp/tuples/tuples/statistics.cs#10_Deconstruct "Deconstruct")]
+[!code-csharp[Deconstruct](../../samples/snippets/csharp/tuples/statistics.cs#10_Deconstruct "Deconstruct")]
 
 괄호 밖에 `var` 키워드를 사용하여 튜플의 각 필드에 대해 암시적 형식 변수를 선언할 수도 있습니다.
 
-[!code-csharp[DeconstructToVar](../../samples/snippets/csharp/tuples/tuples/statistics.cs#11_DeconstructToVar "Deconstruct to Var")]
+[!code-csharp[DeconstructToVar](../../samples/snippets/csharp/tuples/statistics.cs#11_DeconstructToVar "Deconstruct to Var")]
 
 괄호 안에 일부 또는 모든 변수 선언과 함께 `var` 키워드를 사용할 수도 있습니다. 
 
@@ -253,21 +253,21 @@ public class Point
 
 형식 작성자는 형식을 구성하는 데이터 요소를 나타내는 임의 개수의 `out` 변수에 값을 할당하는 `Deconstruct` 메서드를 하나 이상 정의할 수 있습니다. 예를 들어 다음 `Person` 형식은 이름과 성을 나타내는 요소로 사용자 개체를 분해하는 `Deconstruct` 메서드를 정의합니다.
 
-[!code-csharp[TypeWithDeconstructMethod](../../samples/snippets/csharp/tuples/tuples/person.cs#12_TypeWithDeconstructMethod "Type with a deconstruct method")]
+[!code-csharp[TypeWithDeconstructMethod](../../samples/snippets/csharp/tuples/person.cs#12_TypeWithDeconstructMethod "Type with a deconstruct method")]
 
 Deconstruct 메서드를 사용하면 `Person`에서 `FirstName` 및 `LastName` 속성을 나타내는 두 문자열에 할당할 수 있습니다.
 
-[!code-csharp[Deconstruct Type](../../samples/snippets/csharp/tuples/tuples/program.cs#12A_DeconstructType "Deconstruct a class type")]
+[!code-csharp[Deconstruct Type](../../samples/snippets/csharp/tuples/program.cs#12A_DeconstructType "Deconstruct a class type")]
 
 직접 작성하지 않은 형식에 대해서도 분해를 사용할 수 있습니다.
 `Deconstruct` 메서드는 개체의 액세스 가능 데이터 멤버를 패키지 해제하는 확장 메서드일 수 있습니다. 아래 예제에서는 `Person` 형식에서 파생된 `Student` 형식과 `FirstName`, `LastName` 및 `GPA`를 나타내는 세 개의 변수로 `Student`를 분해하는 확장 메서드를 보여줍니다.
 
-[!code-csharp[ExtensionDeconstructMethod](../../samples/snippets/csharp/tuples/tuples/person.cs#13_ExtensionDeconstructMethod "Type with a deconstruct extension method")]
+[!code-csharp[ExtensionDeconstructMethod](../../samples/snippets/csharp/tuples/person.cs#13_ExtensionDeconstructMethod "Type with a deconstruct extension method")]
 
 이제 `Student` 개체에 액세스할 수 있는 `Deconstruct` 메서드 두 개(`Student` 형식에 대해 선언된 확장 메서드 및 `Person` 형식의 멤버)가 있습니다. 둘 다 범위에 있으며, `Student`가 두 변수나 세 변수로 분해될 수 있도록 합니다.
 세 개의 변수에 학생을 할당하는 경우 이름, 성 및 GPA가 모두 반환됩니다. 두 개의 변수에 학생을 할당하는 경우 이름과 성만 반환됩니다.
 
-[!code-csharp[Deconstruct extension method](../../samples/snippets/csharp/tuples/tuples/program.cs#13A_DeconstructExtension "Deconstruct a class type using an extension method")]
+[!code-csharp[Deconstruct extension method](../../samples/snippets/csharp/tuples/program.cs#13A_DeconstructExtension "Deconstruct a class type using an extension method")]
 
 클래스 또는 클래스 계층 구조에서 `Deconstruct` 메서드를 여러 개 정의할 때는 주의해야 합니다. `out` 매개 변수 개수가 같은 `Deconstruct` 메서드가 여러 개 있으면 빠르게 모호성이 발생할 수 있습니다. 호출자가 원하는 `Deconstruct` 메서드를 쉽게 호출하지 못할 수 있습니다.
 

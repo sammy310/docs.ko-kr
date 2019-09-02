@@ -2,12 +2,12 @@
 title: 비동기 반환 형식(C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: f40592038ce16173e6dced5e8bcb914cfeb1b1f5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2c0dae6b4357ce89325ecb9b7d70ffd79f4e9417
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922034"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168391"
 ---
 # <a name="async-return-types-c"></a>비동기 반환 형식(C#)
 비동기 메서드의 반환 형식은 다음과 같을 수 있습니다.
@@ -31,7 +31,7 @@ ms.locfileid: "69922034"
   
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1.cs)]
 
-`ShowTodaysInfo` 메서드의 await 식 내에서 `GetLeisureHours`를 호출하면 await 식이 `GetLeisureHours`에서 반환된 작업에 저장된 정수 값(`leisureHours` 값)을 검색합니다. await 식에 대한 자세한 내용은 [await](../../../language-reference/keywords/await.md)를 참조하세요.  
+`ShowTodaysInfo` 메서드의 await 식 내에서 `GetLeisureHours`를 호출하면 await 식이 `GetLeisureHours`에서 반환된 작업에 저장된 정수 값(`leisureHours` 값)을 검색합니다. await 식에 대한 자세한 내용은 [await](../../../language-reference/operators/await.md)를 참조하세요.  
   
 다음 코드와 같이 `GetLeisureHours` 호출을 `await`의 적용과 구분하면 이 과정을 더욱 잘 이해할 수 있습니다. 곧바로 대기 상태가 되지 않는 `GetLeisureHours` 메서드를 호출하면 메서드 선언에서 예상한 대로 `Task<int>`를 반환합니다. 예제에서 작업이 `integerTask` 변수에 할당됩니다. `integerTask`가 <xref:System.Threading.Tasks.Task%601>이기 때문에 `TResult` 형식의 <xref:System.Threading.Tasks.Task%601.Result> 속성을 포함합니다. 이 경우 `TResult`는 정수 형식을 나타냅니다. `await`가 `integerTask`에 적용되는 경우 await 식은 `integerTask`의 <xref:System.Threading.Tasks.Task%601.Result%2A> 속성 내용으로 평가됩니다. 값은 `ret` 변수에 할당됩니다.  
   
@@ -83,4 +83,4 @@ C# 7.0부터 비동기 메서드는 액세스 가능한 `GetAwaiter` 메서드�
 - [연습: async 및 await를 사용하여 웹에 액세스(C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [비동기 프로그램의 제어 흐름(C#)](./control-flow-in-async-programs.md)
 - [async](../../../language-reference/keywords/async.md)
-- [await](../../../language-reference/keywords/await.md)
+- [await](../../../language-reference/operators/await.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e824fd686176d83c26ca2c042348c9423fbcc884
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ee78c1c1f92515472bb3ea3ce77405a5e3447fd9
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910748"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206107"
 ---
 # <a name="securing-wrapper-code"></a>래퍼 코드 보안
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -47,7 +47,7 @@ ms.locfileid: "69910748"
 ## <a name="link-demands-and-wrappers"></a>링크 요구 및 래퍼  
  링크 요구를 포함하는 특수 보호 사례가 보안 인프라에서 강화되었지만 여전히 코드에서 보안 약점이 될 수 있습니다.  
   
- 완전히 신뢰할 수 있는 코드가 [linkdemand](../../../docs/framework/misc/link-demands.md)로 보호 되는 속성, 이벤트 또는 메서드를 호출 하는 경우 호출자의 **linkdemand** 권한 확인이 충족 되 면 호출이 성공 합니다. 또한 완전히 신뢰할 수 있는 코드가 속성의 이름을 사용 하 고 리플렉션을 사용 하 여 해당 **get** 접근자를 호출 하는 클래스를 노출 하는 경우 사용자 코드에이 속성에 액세스할 수 있는 권한이 없더라도 **get** 접근자에 대 한 호출이 성공 합니다. 이는 **LinkDemand** 가 완전히 신뢰할 수 있는 코드 인 직접 실행 호출자만 검사 하기 때문입니다. 기본적으로 완전히 신뢰할 수 있는 코드는 사용자 코드에 해당 호출을 수행할 권한이 있는지 확인하지 않고 사용자 코드 대신 권한 있는 호출을 수행합니다.  
+ 완전히 신뢰할 수 있는 코드가 [linkdemand](link-demands.md)로 보호 되는 속성, 이벤트 또는 메서드를 호출 하는 경우 호출자의 **linkdemand** 권한 확인이 충족 되 면 호출이 성공 합니다. 또한 완전히 신뢰할 수 있는 코드가 속성의 이름을 사용 하 고 리플렉션을 사용 하 여 해당 **get** 접근자를 호출 하는 클래스를 노출 하는 경우 사용자 코드에이 속성에 액세스할 수 있는 권한이 없더라도 **get** 접근자에 대 한 호출이 성공 합니다. 이는 **LinkDemand** 가 완전히 신뢰할 수 있는 코드 인 직접 실행 호출자만 검사 하기 때문입니다. 기본적으로 완전히 신뢰할 수 있는 코드는 사용자 코드에 해당 호출을 수행할 권한이 있는지 확인하지 않고 사용자 코드 대신 권한 있는 호출을 수행합니다.  
   
  이러한 보안 허점을 방지 하기 위해 공용 언어 런타임은 **LinkDemand**로 보호 되는 메서드, 생성자, 속성 또는 이벤트에 대 한 간접 호출에 대 한 전체 스택 탐색 수요에 대 한 검사를 확장 합니다. 이 보호를 사용할 경우 성능이 약간 저하되고 보안 검사의 의미 체계가 변경됩니다. 보다 신속한 단일 수준 검사는 성공했을 경우에도 전체 스택 워크 요구는 실패할 수 있습니다.  
   
@@ -73,10 +73,10 @@ ms.locfileid: "69910748"
   
 - <xref:System.Security.Permissions.SecurityAction.Demand>는 코드 액세스 보안 스택 워크를 지정합니다. 성공하려면 스택의 모든 호출자에게 지정된 권한이나 ID가 있어야 합니다. 스택에 다른 호출자가 포함 될 수 있기 때문에 모든 호출에서 **요구가** 발생 합니다. 메서드를 반복해서 호출하는 경우 이 보안 검사는 매번 발생합니다. **요구** 는 잠복 공격을 방지 하는 좋은 방법입니다. 인증 되지 않은 코드를 가져오려고 시도 하면 검색 됩니다.  
   
-- [LinkDemand](../../../docs/framework/misc/link-demands.md) 는 JIT (just-in-time) 컴파일 시간에 발생 하며 직접 실행 호출자만 검사 합니다. 이 보안 검사는 호출자의 호출자를 검사하지 않습니다. 이 검사가 성공하고 나면 호출자가 호출할 수 있는 횟수에 관계없이 추가 보안 오버헤드가 없습니다. 그러나 유인 공격으로부터 보호되지 않습니다. **LinkDemand**를 사용 하 여 테스트를 통과 하 고 코드를 참조할 수 있는 코드는 악의적인 코드가 권한 있는 코드를 사용 하 여를 호출할 수 있도록 함으로써 보안을 방해할 수 있습니다. 따라서 가능한 모든 약점을 철저 하 게 방지할 수 있는 경우가 아니면 **LinkDemand** 를 사용 하지 마십시오.  
+- [LinkDemand](link-demands.md) 는 JIT (just-in-time) 컴파일 시간에 발생 하며 직접 실행 호출자만 검사 합니다. 이 보안 검사는 호출자의 호출자를 검사하지 않습니다. 이 검사가 성공하고 나면 호출자가 호출할 수 있는 횟수에 관계없이 추가 보안 오버헤드가 없습니다. 그러나 유인 공격으로부터 보호되지 않습니다. **LinkDemand**를 사용 하 여 테스트를 통과 하 고 코드를 참조할 수 있는 코드는 악의적인 코드가 권한 있는 코드를 사용 하 여를 호출할 수 있도록 함으로써 보안을 방해할 수 있습니다. 따라서 가능한 모든 약점을 철저 하 게 방지할 수 있는 경우가 아니면 **LinkDemand** 를 사용 하지 마십시오.  
   
     > [!NOTE]
-    > .NET Framework 4에서는 링크 요구가 어셈블리의 <xref:System.Security.SecurityCriticalAttribute> <xref:System.Security.SecurityRuleSet.Level2> 특성으로 대체 되었습니다. 는 <xref:System.Security.SecurityCriticalAttribute> 완전 신뢰에 대 한 링크 요청과 동일 하지만 상속 규칙에도 영향을 줍니다. 이러한 변경에 대 한 자세한 내용은 [보안 투명 코드, 수준 2](../../../docs/framework/misc/security-transparent-code-level-2.md)를 참조 하세요.  
+    > .NET Framework 4에서는 링크 요구가 어셈블리의 <xref:System.Security.SecurityCriticalAttribute> <xref:System.Security.SecurityRuleSet.Level2> 특성으로 대체 되었습니다. 는 <xref:System.Security.SecurityCriticalAttribute> 완전 신뢰에 대 한 링크 요청과 동일 하지만 상속 규칙에도 영향을 줍니다. 이러한 변경에 대 한 자세한 내용은 [보안 투명 코드, 수준 2](security-transparent-code-level-2.md)를 참조 하세요.  
   
  **LinkDemand** 를 사용할 때 필요한 추가 예방 조치는 개별적으로 프로그래밍 해야 합니다. 보안 시스템에서 적용 하는 데 도움이 될 수 있습니다. 실수는 보안 약점이 됩니다. 사용자 코드를 사용하는 모든 권한 있는 코드는 다음을 수행하여 추가 보안을 구현해야 합니다.  
   

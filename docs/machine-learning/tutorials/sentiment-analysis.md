@@ -4,12 +4,12 @@ description: 이 자습서에서는 웹 사이트 주석에서 감정을 분류�
 ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 2dc4d68eb6a3aa5890e4d091e33c4624d79317e9
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 4daa7734f12c57a177fab3c62fdd96bda22838af
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238366"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107172"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>자습서: ML.NET에서 이진 분류를 사용하여 웹 사이트 주석의 감정 분석
 
@@ -17,21 +17,21 @@ ms.locfileid: "68238366"
 
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 > [!div class="checklist"]
-> * 콘솔 애플리케이션 만들기
-> * 데이터 준비
-> * 데이터 로드
-> * 모델 빌드 및 학습
-> * 모델 평가
-> * 모델로 예측 수행
-> * 결과 보기
+> - 콘솔 애플리케이션 만들기
+> - 데이터 준비
+> - 데이터 로드
+> - 모델 빌드 및 학습
+> - 모델 평가
+> - 모델로 예측 수행
+> - 결과 보기
 
 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) 리포지토리에서 이 자습서의 소스 코드를 찾을 수 있습니다.
 
 ## <a name="prerequisites"></a>전제 조건
 
-* “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2017 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)
+- “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2017 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)
 
-* [UCI Sentiment Labeled Sentences 데이터 세트](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)(zip 파일)
+- [UCI Sentiment Labeled Sentences 데이터 세트](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)(zip 파일)
 
 ## <a name="create-a-console-application"></a>콘솔 애플리케이션 만들기
 
@@ -62,8 +62,8 @@ ms.locfileid: "68238366"
 
 2. 최근에 다운로드한 데이터 세트 파일 경로 및 저장된 모델 파일 경로를 포함할 두 개의 글로벌 필드를 만듭니다.
 
-    * `_dataPath`에는 모델을 학습시키는 데 사용되는 데이터 세트의 경로가 포함됩니다.
-    * `_modelPath`에는 학습된 모델이 저장되는 경로가 포함됩니다.
+    - `_dataPath`에는 모델을 학습시키는 데 사용되는 데이터 세트의 경로가 포함됩니다.
+    - `_modelPath`에는 학습된 모델이 저장되는 경로가 포함됩니다.
 
 3. `Main` 메서드 바로 위의 줄에 다음 코드를 추가하여 해당 경로를 지정합니다.
 
@@ -125,9 +125,9 @@ ML.NET의 데이터는 [IDataView 클래스](xref:Microsoft.ML.IDataView)로 표
 
     `LoadData()` 메서드는 다음 작업을 실행합니다.
 
-    * 데이터를 로드합니다.
-    * 로드된 데이터 세트를 학습 및 테스트 세트로 분할합니다.
-    * 분할된 학습 및 테스트 데이터 세트를 반환합니다.
+    - 데이터를 로드합니다.
+    - 로드된 데이터 세트를 학습 및 테스트 세트로 분할합니다.
+    - 분할된 학습 및 테스트 데이터 세트를 반환합니다.
 
 4. 다음 코드를 `LoadData()` 메서드의 첫 번째 줄로 추가합니다.
 
@@ -157,10 +157,10 @@ ML.NET의 데이터는 [IDataView 클래스](xref:Microsoft.ML.IDataView)로 표
 
     `BuildAndTrainModel()` 메서드는 다음 작업을 실행합니다.
 
-    * 데이터를 추출하고 변환합니다.
-    * 모델을 학습시킵니다.
-    * 테스트 데이터를 기반으로 감정을 예측합니다.
-    * 모델을 반환합니다.
+    - 데이터를 추출하고 변환합니다.
+    - 모델을 학습시킵니다.
+    - 테스트 데이터를 기반으로 감정을 예측합니다.
+    - 모델을 반환합니다.
 
 2. 다음 코드를 사용하여 `Main()` 메서드 바로 뒤에 `BuildAndTrainModel()` 메서드를 만듭니다.
 
@@ -225,10 +225,10 @@ ML.NET의 데이터는 [IDataView 클래스](xref:Microsoft.ML.IDataView)로 표
 
     `Evaluate()` 메서드는 다음 작업을 실행합니다.
 
-    * 테스트 데이터 세트를 로드합니다.
-    * BinaryClassification 평가자를 만듭니다.
-    * 모델을 평가하고 메트릭을 만듭니다.
-    * 메트릭을 표시합니다.
+    - 테스트 데이터 세트를 로드합니다.
+    - BinaryClassification 평가자를 만듭니다.
+    - 모델을 평가하고 메트릭을 만듭니다.
+    - 메트릭을 표시합니다.
 
 2. 다음 코드를 사용하여 `BuildAndTrainModel()` 메서드 호출 바로 아래에 `Main()` 메서드의 새 메서드 호출을 추가합니다.
 
@@ -252,11 +252,11 @@ ML.NET의 데이터는 [IDataView 클래스](xref:Microsoft.ML.IDataView)로 표
 
 [!code-csharp[DisplayMetrics](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#DisplayMetrics "Display selected metrics")]
 
-* `Accuracy` 메트릭은 테스트 세트에서 정확한 예측의 비율인 모델 정확도를 가져옵니다.
+- `Accuracy` 메트릭은 테스트 세트에서 정확한 예측의 비율인 모델 정확도를 가져옵니다.
 
-* `AreaUnderRocCurve` 메트릭은 모델이 긍정 및 부정 클래스 분류의 정확도를 자신하는 정도를 표시합니다. `AreaUnderRocCurve`를 가능한 근접하게 하고자 합니다.
+- `AreaUnderRocCurve` 메트릭은 모델이 긍정 및 부정 클래스 분류의 정확도를 자신하는 정도를 표시합니다. `AreaUnderRocCurve`를 가능한 근접하게 하고자 합니다.
 
-* `F1Score` 메트릭은 모델의 F1 점수를 가져옵니다. [정밀도](../resources/glossary.md#precision)와 [회수](../resources/glossary.md#recall) 사이의 균형을 측정한 값입니다.  `F1Score`를 가능한 근접하게 하고자 합니다.
+- `F1Score` 메트릭은 모델의 F1 점수를 가져옵니다. [정밀도](../resources/glossary.md#precision)와 [회수](../resources/glossary.md#recall) 사이의 균형을 측정한 값입니다.  `F1Score`를 가능한 근접하게 하고자 합니다.
 
 ### <a name="predict-the-test-data-outcome"></a>테스트 데이터 결과 예측
 
@@ -271,10 +271,10 @@ ML.NET의 데이터는 [IDataView 클래스](xref:Microsoft.ML.IDataView)로 표
 
     `UseModelWithSingleItem()` 메서드는 다음 작업을 실행합니다.
 
-    * 테스트 데이터의 단일 댓글을 만듭니다.
-    * 테스트 데이터를 기반으로 감정을 예측합니다.
-    * 보고를 위해 테스트 데이터 및 예측을 결합합니다.
-    * 예측 결과를 표시합니다.
+    - 테스트 데이터의 단일 댓글을 만듭니다.
+    - 테스트 데이터를 기반으로 감정을 예측합니다.
+    - 보고를 위해 테스트 데이터 및 예측을 결합합니다.
+    - 예측 결과를 표시합니다.
 
 2. 다음 코드를 사용하여 `Evaluate()` 메서드 호출 바로 아래에 `Main()` 메서드의 새 메서드 호출을 추가합니다.
 
@@ -315,10 +315,10 @@ ML.NET의 데이터는 [IDataView 클래스](xref:Microsoft.ML.IDataView)로 표
 
     `UseModelWithBatchItems()` 메서드는 다음 작업을 실행합니다.
 
-    * 일괄 처리 테스트 데이터를 만듭니다.
-    * 테스트 데이터를 기반으로 감정을 예측합니다.
-    * 보고를 위해 테스트 데이터 및 예측을 결합합니다.
-    * 예측 결과를 표시합니다.
+    - 일괄 처리 테스트 데이터를 만듭니다.
+    - 테스트 데이터를 기반으로 감정을 예측합니다.
+    - 보고를 위해 테스트 데이터 및 예측을 결합합니다.
+    - 예측 결과를 표시합니다.
 
 2. 다음 코드를 사용하여 `UseModelWithSingleItem()` 메서드 호출 바로 아래에 `Main` 메서드의 새 메서드 호출을 추가합니다.
 
@@ -383,13 +383,13 @@ Press any key to continue . . .
 
 본 자습서에서는 다음 작업에 관한 방법을 학습했습니다.
 > [!div class="checklist"]
-> * 콘솔 애플리케이션 만들기
-> * 데이터 준비
-> * 데이터 로드
-> * 모델 빌드 및 학습
-> * 모델 평가
-> * 모델로 예측 수행
-> * 결과 보기
+> - 콘솔 애플리케이션 만들기
+> - 데이터 준비
+> - 데이터 로드
+> - 모델 빌드 및 학습
+> - 모델 평가
+> - 모델로 예측 수행
+> - 결과 보기
 
 다음 자습서로 이동하여 자세히 알아보기
 > [!div class="nextstepaction"]

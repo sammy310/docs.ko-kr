@@ -2,12 +2,12 @@
 title: '방법: 중간 값 계산(C#)'
 ms.date: 07/20/2015
 ms.assetid: 7fd3001f-f8f9-4bce-879f-d4c7af8a04fe
-ms.openlocfilehash: 7b2dfc4e26fc7648cbd93b1e590079e4b105ad43
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: fe3f992e85b3fb508fced943e1428a4fb6ae2490
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594140"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205374"
 ---
 # <a name="how-to-calculate-intermediate-values-c"></a>방법: 중간 값 계산(C#)
 이 예제에서는 정렬, 필터링 및 선택에 사용할 수 있는 중간 값을 계산하는 방법을 보여 줍니다.  
@@ -31,7 +31,7 @@ foreach (decimal ex in extensions)
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```output  
 55.92  
 73.50  
 89.99  
@@ -59,7 +59,7 @@ foreach (decimal ex in extensions)
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```output  
 55.92  
 73.50  
 89.99  

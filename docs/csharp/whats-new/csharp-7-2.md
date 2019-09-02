@@ -2,12 +2,12 @@
 title: C# 7.2의 새로운 기능
 description: C# 7.2의 새로운 기능에 대한 개요입니다.
 ms.date: 08/16/2017
-ms.openlocfilehash: 79402c9b569cb6848aaf240d83ba71338d525b35
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: a2010b2bda769a625deb545964a2cc127aaf2e06
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347422"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105740"
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2의 새로운 기능
 
@@ -20,15 +20,15 @@ C# 7.2는 [언어 버전 선택](../language-reference/configure-language-versio
 
 이 릴리스의 새로운 언어 기능은 다음과 같습니다.
 
-* [안전하고 효율적인 코드를 작성하는 방법](#safe-efficient-code-enhancements)
+- [안전하고 효율적인 코드를 작성하는 방법](#safe-efficient-code-enhancements)
   - 참조 의미 체계를 사용하는 값 유형으로 작동할 수 있는 구문 개선의 조합입니다.
-* [뒤에 오지 않는 명명된 인수](#non-trailing-named-arguments)
+- [뒤에 오지 않는 명명된 인수](#non-trailing-named-arguments)
   - 명명된 인수 뒤에는 위치 인수가 올 수 있습니다.
-* [숫자 리터럴의 선행 밑줄](#leading-underscores-in-numeric-literals)
+- [숫자 리터럴의 선행 밑줄](#leading-underscores-in-numeric-literals)
   - 숫자 리터럴은 이제 인쇄된 숫자 앞에 선행 밑줄이 있을 수 있습니다.
-* [`private protected` 액세스 한정자](#private-protected-access-modifier)
+- [`private protected` 액세스 한정자](#private-protected-access-modifier)
   - `private protected` 액세스 한정자는 동일한 어셈블리의 파생된 클래스에 대해 액세스를 사용합니다.
-* [조건부 `ref` 식](#conditional-ref-expressions)
+- [조건부 `ref` 식](#conditional-ref-expressions)
   - 이제 조건식(`?:`)의 결과가 참조일 수 있습니다.
 
 이 문서의 나머지 부분에서는 해당 기능에 대한 개요를 제공합니다. 각 기능의 배경과 원리를 알아봅니다. 구문을 알아봅니다. `dotnet try` 글로벌 도구를 사용하여 환경에서 다음과 같은 기능을 탐색할 수 있습니다.
@@ -63,7 +63,7 @@ C# 7.0에서는 자릿수 구분 기호에 대한 지원을 구현해도 `_`이 
 int binaryValue = 0b_0101_0101;
 ```
 
-## <a name="private-protected-access-modifier"></a>_private protected_ 액세스 한정자
+## <a name="_private-protected_-access-modifier"></a>_private protected_ 액세스 한정자
 
 새로운 복합 액세스 한정자인 `private protected`는 동일한 어셈블리에 선언된 클래스 또는 파생 클래스를 포함하여 멤버에 액세스할 수 있음을 나타냅니다. `protected internal`은 동일한 어셈블리에 있는 파생 클래스나 클래스에 의한 액세스를 허용하지만 `private protected`는 동일한 어셈블리에서 선언된 파생 유형에 대한 액세스를 제한합니다.
 

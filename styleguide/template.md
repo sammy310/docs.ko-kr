@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: 0e8548745768bc9137e8fc76f86fc9fc7982b8de
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e6c912f5ff9590f3b8cbb0f7e3f88e08fa9dd556
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "68616353"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106907"
 ---
 # <a name="metadata-and-markdown-template"></a>메타데이터 및 Markdown 템플릿
 
@@ -61,12 +61,12 @@ Markdown은 서식 지정을 위해 \*, \`, \# 등의 특수 문자를 사용합
 
 파일 이름은 다음 규칙을 사용합니다.
 
-* 소문자, 숫자 및 하이픈만 포함할 수 있습니다.
-* 공백 또는 문장 부호 문자는 포함할 수 없습니다. 하이픈을 사용하여 파일 이름의 단어와 숫자를 구분합니다.
-* 개발, 구매, 빌드, 문제 해결 등의 구체적인 작업 동사를 사용합니다. 현재 진행형 단어는 사용하지 않습니다.
-* 한, 및, 그, 내, 또는 등의 군더더기로 간주되는 단어는 가급적 사용하지 않습니다.
-* Markdown 파일 및 .md 파일 확장명을 사용해야 합니다.
-* 파일 이름은 비교적 짧게 유지합니다. 문서의 URL에 파일 이름이 포함되기 때문입니다.
+- 소문자, 숫자 및 하이픈만 포함할 수 있습니다.
+- 공백 또는 문장 부호 문자는 포함할 수 없습니다. 하이픈을 사용하여 파일 이름의 단어와 숫자를 구분합니다.
+- 개발, 구매, 빌드, 문제 해결 등의 구체적인 작업 동사를 사용합니다. 현재 진행형 단어는 사용하지 않습니다.
+- 한, 및, 그, 내, 또는 등의 군더더기로 간주되는 단어는 가급적 사용하지 않습니다.
+- Markdown 파일 및 .md 파일 확장명을 사용해야 합니다.
+- 파일 이름은 비교적 짧게 유지합니다. 문서의 URL에 파일 이름이 포함되기 때문입니다.
 
 ## <a name="headings"></a>제목
 
@@ -244,22 +244,22 @@ UID에 특수 문자 \`, \# 또는 \*가 포함된 경우 UID 값은 각각 `%60
 [!code-<language>[<name>](<pathToFile><queryoption><queryoptionvalue>)]
 ```
 
-* `-<language>`(*선택 사항*이지만 *권장됨*)
-  * 참조되는 코드 조각의 언어입니다. 지원되는 값 목록은 [지원되는 언어](#supported-languages)를 참조하세요.
+- `-<language>`(*선택 사항*이지만 *권장됨*)
+  - 참조되는 코드 조각의 언어입니다. 지원되는 값 목록은 [지원되는 언어](#supported-languages)를 참조하세요.
 
-* `<name>`(*선택 사항*)
-  * 코드 조각의 이름입니다. 출력 HTML에는 영향을 주지 않지만 이를 사용하여 Markdown 소스에 대한 가독성을 높일 수 있습니다.
+- `<name>`(*선택 사항*)
+  - 코드 조각의 이름입니다. 출력 HTML에는 영향을 주지 않지만 이를 사용하여 Markdown 소스에 대한 가독성을 높일 수 있습니다.
 
-* `<pathToFile>`(*필수*)
-  * 참조할 코드 조각 파일을 나타내는 파일 시스템의 상대 경로입니다.
+- `<pathToFile>`(*필수*)
+  - 참조할 코드 조각 파일을 나타내는 파일 시스템의 상대 경로입니다.
 
-* `<queryoption>` 및 `<queryoptionvalue>`(*선택 사항*)
-  * 파일에서 코드를 검색하는 방법을 지정하는 데 함께 사용됩니다.
-    * `#`:  `#L{startlinenumber}-L{endlinenumber}`(줄 범위) *또는* `#{tagname}`(태그 이름).
+- `<queryoption>` 및 `<queryoptionvalue>`(*선택 사항*)
+  - 파일에서 코드를 검색하는 방법을 지정하는 데 함께 사용됩니다.
+    - `#`:  `#L{startlinenumber}-L{endlinenumber}`(줄 범위) *또는* `#{tagname}`(태그 이름).
     하지만 줄 번호는 변경되기 쉬우므로 사용하지 않는 것이 좋습니다. 태그 이름은 코드 조각을 참조하는 기본 방법입니다.
-    * `range`: `?range=1,3-5` 줄의 범위입니다. 이 예에는 줄 1, 3, 4 및 5가 포함됩니다.
-    * `dedent`: `?dedent=8` 공백 수(이 경우 8)만큼 줄 들여쓰기를 취소합니다. 이는 `range` 및 파일 줄의 하위 집합을 선택하는 기타 쿼리 옵션과 결합할 수 있습니다.
-    * `outdent`: `?outdent=8` 공백 수(이 경우 8)만큼 줄 들여쓰기를 뒤바꿉니다. 이는 `range` 및 파일 줄의 하위 집합을 선택하는 기타 쿼리 옵션과 결합할 수 있습니다.
+    - `range`: `?range=1,3-5` 줄의 범위입니다. 이 예에는 줄 1, 3, 4 및 5가 포함됩니다.
+    - `dedent`: `?dedent=8` 공백 수(이 경우 8)만큼 줄 들여쓰기를 취소합니다. 이는 `range` 및 파일 줄의 하위 집합을 선택하는 기타 쿼리 옵션과 결합할 수 있습니다.
+    - `outdent`: `?outdent=8` 공백 수(이 경우 8)만큼 줄 들여쓰기를 뒤바꿉니다. 이는 `range` 및 파일 줄의 하위 집합을 선택하는 기타 쿼리 옵션과 결합할 수 있습니다.
 
 가능하면 태그 이름 옵션을 사용하는 것이 좋습니다. 태그 이름은 소스 코드에 있는 `Snippettagname` 형식의 코드 주석 또는 지역 이름입니다. 다음 예제에서는 태그 이름 `1`을 참조하는 방법을 보여줍니다.
 
@@ -448,11 +448,11 @@ Include를 사용하여 한 파일의 Markdown을 다른 파일에 포함할 수
 목록의 경우 사용자 지정 스타일을 사용할 수 있습니다. 녹색 확인 표시가 있는 목록을 렌더링할 수 있습니다.
 
 > [!div class="checklist"]
-> * .NET Core 앱을 만드는 방법
-> * Microsoft.XmlSerializer.Generator 패키지에 대한 참조를 추가하는 방법
-> * MyApp.csproj를 편집하여 종속성을 추가하는 방법
-> * 클래스 및 XmlSerializer를 추가하는 방법
-> * 애플리케이션을 빌드하고 실행하는 방법
+> - .NET Core 앱을 만드는 방법
+> - Microsoft.XmlSerializer.Generator 패키지에 대한 참조를 추가하는 방법
+> - MyApp.csproj를 편집하여 종속성을 추가하는 방법
+> - 클래스 및 XmlSerializer를 추가하는 방법
+> - 애플리케이션을 빌드하고 실행하는 방법
 
 [.NET Core 문서](https://docs.microsoft.com/dotnet/core/additional-tools/xml-serializer-generator)에서 작동 중인 선택된 목록의 예를 확인할 수 있습니다.
 

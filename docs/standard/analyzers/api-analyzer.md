@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 892fb5cc9fba3434b0884c88b97f784d58093303
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2d97921a3e98d85ac1e58c7686eadef3e979211f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063352"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107377"
 ---
 # <a name="net-api-analyzer"></a>.NET API 분석기
 
@@ -23,7 +23,7 @@ API 분석기는 NuGet 패키지 [Microsoft.DotNet.Analyzers.Compatibility](http
 
 ## <a name="prerequisites"></a>전제 조건
 
-* Visual Studio 2017 이상 버전 또는 Mac용 Visual Studio(모든 버전).
+- Visual Studio 2017 이상 버전 또는 Mac용 Visual Studio(모든 버전).
 
 ## <a name="discovering-deprecated-apis"></a>사용되지 않는 API 검색
 
@@ -50,16 +50,16 @@ ID를 클릭하면 API가 사용되지 않는 이유에 대한 자세한 정보�
 
 강조 표시된 멤버를 마우스 오른쪽 단추로 클릭하고 **\<진단 ID>을(를) 표시하지 않음**을 선택하여 모든 경고를 표시하지 않을 수 있습니다. 경고를 표시하지 않는 두 가지 방법이 있습니다. 
 
-* [로컬로(소스)](#suppressing-warnings-locally)
-* [전역으로(비표시 오류(Suppression) 파일)](#suppressing-warnings-globally) - 권장됨
+- [로컬로(소스)](#suppressing-warnings-locally)
+- [전역으로(비표시 오류(Suppression) 파일)](#suppressing-warnings-globally) - 권장됨
 
 ### <a name="suppressing-warnings-locally"></a>로컬로 경고 표시 안 함
 
-로컬로 경고를 표시하지 않으려면 경고를 표시하지 않을 멤버를 마우스 오른쪽 단추로 클릭한 다음, **빠른 작업 및 리팩터링** > **‘진단 ID’ 표시 안 함\<진단 ID>** > **소스**를 선택합니다. [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 경고 전처리기 지시문이 정의된 범위의 소스 코드에 추가됩니다. !["#pragma warning disable로 묶인 코드의 스크린샷"](media/api-analyzer/suppress-in-source.jpg)
+로컬로 경고를 표시하지 않으려면 경고를 표시하지 않을 멤버를 마우스 오른쪽 단추로 클릭한 다음, **빠른 작업 및 리팩터링** >  **‘진단 ID’ 표시 안 함\<진단 ID>**  > **소스**를 선택합니다.  [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 경고 전처리기 지시문이 정의된 범위의 소스 코드에 추가됩니다. !["#pragma warning disable로 묶인 코드의 스크린샷"](media/api-analyzer/suppress-in-source.jpg)
 
 ### <a name="suppressing-warnings-globally"></a>전역으로 경고 표시 안 함
 
-전역으로 경고를 표시하지 않으려면 경고를 표시하지 않을 멤버를 마우스 오른쪽 단추로 클릭한 다음, **빠른 작업 및 리팩터링** > **‘진단 ID’ 표시 안 함\<진단 ID>** > **비표시 오류(Suppression) 파일**을 선택합니다.
+전역으로 경고를 표시하지 않으려면 경고를 표시하지 않을 멤버를 마우스 오른쪽 단추로 클릭한 다음, **빠른 작업 및 리팩터링** >  **‘진단 ID’ 표시 안 함\<진단 ID>**  > **비표시 오류(Suppression) 파일**을 선택합니다. 
 
 ![“왼쪽에 있는 녹색 물결선과 전구가 있는 WebClient API의 스크린샷”](media/api-analyzer/suppress-in-sup-file.jpg)
 
@@ -95,11 +95,11 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 현재 분석기는 다음과 같은 경우를 처리합니다.
 
-* <xref:System.PlatformNotSupportedException>(PC001)을 throw하는 .NET Standard API 사용.
-* .NET Framework 4.6.1(PC002)에서 사용할 수 없는 .NET Standard API 사용.
-* UWP(PC003)에 존재하지 않는 네이티브 API 사용.
-* Delegate.BeginInvoke 및 EndInvoke API(PC004) 사용.
-* 사용되지 않음(DEXXXX)으로 표시된 API 사용.
+- <xref:System.PlatformNotSupportedException>(PC001)을 throw하는 .NET Standard API 사용.
+- .NET Framework 4.6.1(PC002)에서 사용할 수 없는 .NET Standard API 사용.
+- UWP(PC003)에 존재하지 않는 네이티브 API 사용.
+- Delegate.BeginInvoke 및 EndInvoke API(PC004) 사용.
+- 사용되지 않음(DEXXXX)으로 표시된 API 사용.
 
 ## <a name="ci-machine"></a>CI 컴퓨터
 

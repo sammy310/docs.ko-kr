@@ -2,17 +2,17 @@
 title: 중첩된 요소에 지정된 관계 매핑
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-ms.openlocfilehash: cd0fd66fe70be4b8dea14ac7420e95c4b8bb1158
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 510a5e676df7bac274c6086b94e9a23e7540da20
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64604012"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204642"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>중첩된 요소에 지정된 관계 매핑
-스키마를 포함할 수는 **msdata: relationship** 스키마의 두 요소 간의 매핑을 명시적으로 지정 하는 주석입니다. 에 지정 된 두 요소 **msdata: relationship** 스키마에서 중첩 될 수 있지만 될 필요가 없습니다. 사용 하 여 매핑 프로세스 **msdata: relationship** 두 열 간에 기본 키/외래 키 관계를 생성 하려면 스키마에 있습니다.  
+스키마는 **msdata: Relationship** 주석을 포함 하 여 스키마의 두 요소 간 매핑을 명시적으로 지정할 수 있습니다. **Msdata: Relationship** 에 지정 된 두 요소는 스키마에 중첩 될 수 있지만 반드시 지정할 필요는 없습니다. 매핑 프로세스에서는 스키마의 **msdata: relationship** 을 사용 하 여 두 열 간의 기본 키/외래 키 관계를 생성 합니다.  
   
- 다음 예제는 XML 스키마를 보여 줍니다.는 **OrderDetail** 의 자식 요소입니다 **순서**합니다. **msdata: relationship** 이 부모-자식 관계를 식별 하 고 지정 합니다 **OrderNumber** 결과 열의 **순서** 테이블이 관련 되어를 **OrderNo** 결과 열의 **OrderDetail** 테이블입니다.  
+ 다음 예에서는 **Orderdetail** 요소가 **Order**의 자식 요소인 XML 스키마를 보여 줍니다. **Msdata: Relationship** 은이 부모-자식 관계를 식별 하 고 결과 **Order** 테이블의 **Ordernumber** 열이 결과 **ordernumber** 테이블의 **ordernumber** 열과 관련 되도록 지정 합니다.  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -54,14 +54,14 @@ ms.locfileid: "64604012"
   
  XML 스키마 매핑 프로세스에서는 <xref:System.Data.DataSet>에 다음 항목을 만듭니다.  
   
-- **순서** 와 **OrderDetail** 테이블입니다.  
+- **Order** 및 **orderdetail** 테이블  
   
     ```  
     Order(OrderNumber, EmpNumber)  
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
-- 간의 관계는 **순서** 하 고 **OrderDetail** 테이블입니다. **중첩** 이 관계에 대 한 속성 **True** 때문에 **순서** 하 고 **OrderDetail** 요소가 스키마에서 중첩 .  
+- **Order** 및 **orderdetail** 테이블 간의 관계입니다. **Order** 및 **orderdetail** 요소가 스키마에 중첩 되어 있으므로이 관계의 **Nested** 속성은 **True** 로 설정 됩니다.  
   
     ```  
     ParentTable: Order  
@@ -76,6 +76,6 @@ ms.locfileid: "64604012"
   
 ## <a name="see-also"></a>참고자료
 
-- [XSD(XML 스키마)에서 데이터 세트 관계 생성](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
-- [데이터 세트 제약 조건에 XSD(XML 스키마) 제약 조건 매핑](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [XSD(XML 스키마)에서 데이터 세트 관계 생성](generating-dataset-relations-from-xml-schema-xsd.md)
+- [데이터 세트 제약 조건에 XSD(XML 스키마) 제약 조건 매핑](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

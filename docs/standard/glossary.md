@@ -3,12 +3,12 @@ title: .NET 용어
 description: .NET 설명서에서 사용되는 선택한 용어의 의미를 알아봅니다.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2d19ec0b79abdcce9797767d1280d055a9c77a87
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: caff1ee4c8e3ad133016b774fdb235bd1ef59637
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674512"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106918"
 ---
 # <a name="net-glossary"></a>.NET 용어
 
@@ -38,7 +38,7 @@ Ahead-Of-Time 컴파일러입니다.
 
 ## <a name="assembly"></a>어셈블리
 
-애플리케이션이나 다른 어셈블리에서 호출할 수 있는 API 컬렉션을 포함할 수 있는 *.dll*/*.exe* 파일입니다.
+애플리케이션이나 다른 어셈블리에서 호출할 수 있는 API 컬렉션을 포함할 수 있는 *.dll*/ *.exe* 파일입니다.
 
 어셈블리에는 인터페이스와 클래스, 구조체, 열거형, 대리자와 같은 형식이 포함될 수 있습니다. 프로젝트의 *bin* 폴더에 있는 어셈블리를 *바이너리*라고도 합니다. [라이브러리](#library)를 참조하세요.
 
@@ -85,9 +85,9 @@ CLR/CoreCLR과 달리 CoreRT는 가상 머신이 아닙니다. 즉, [JIT](#jit)�
 일반적으로 특정 기술을 기반으로 하는 애플리케이션의 개발 및 배포를 용이하게 하는 포괄적인 API 컬렉션입니다. 이 일반적인 의미에서 ASP.NET Core 및 Windows Forms는 애플리케이션 프레임워크의 예입니다. [라이브러리](#library)를 참조하세요.
 
 “프레임 워크”라는 단어는 다음과 같은 용어에서 좀 더 구체적인 기술적 의미가 있습니다.
-* [.NET Framework](#net-framework)
-* [대상 프레임워크](#target-framework)
-* [TFM(대상 프레임워크 모니커)](#tfm)
+- [.NET Framework](#net-framework)
+- [대상 프레임워크](#target-framework)
+- [TFM(대상 프레임워크 모니커)](#tfm)
 
 기존 설명서에서 “프레임워크”는 경우에 따라 [.NET의 구현체](#implementation-of-net)를 나타냅니다. 예를 들어 문서에서 .NET Core를 프레임워크라고 할 수 있습니다. 설명서에서 혼동을 주는 이러한 사용 예를 제거할 계획입니다.
 
@@ -148,7 +148,7 @@ Mono는 현재 게시된 .NET Standard 버전을 모두 지원합니다.
 
 일반적으로 Mono는 Just-In-Time 컴파일러에서 사용되지만 iOS 같은 플랫폼에 사용되는 전체 정적 컴파일러(Ahead-Of-Time 컴파일) 기능도 제공합니다.
 
-Mono에 대한 자세한 내용은 [Mono 설명서](https://www.mono-project.com/docs/)를 참조하세요.
+Mono의 자세한 내용은 [Mono 설명서](https://www.mono-project.com/docs/)를 참조하세요.
 
 ## <a name="net"></a>.NET
 
@@ -206,7 +206,7 @@ UWP는 .NET 네이티브에서 지원하는 첫 번째 애플리케이션 프레
 
 ## <a name="package"></a>패키지
 
-NuGet 패키지(또는 줄여서 패키지)는 작성자 이름과 같은 추가 메타데이터와 함께 동일한 이름의 어셈블리가 하나 이상 있는 .zip 파일입니다.
+NuGet 패키지(또는 줄여서 패키지)는 작성자 이름과 같은 추가 메타데이터와 함께 동일한 이름의 어셈블리가 하나 이상 있는 .zip 파일입니다. 
 
 *.zip* 파일은 *.nupkg* 확장명을 사용하며 *.dll* 파일 및 *.xml* 파일과 같이 여러 대상 프레임워크 및 버전에서 사용할 자산을 포함합니다. 앱 또는 라이브러리에 설치된 경우 앱 또는 라이브러리에서 지정한 대상 프레임워크에 따라 적절한 자산이 선택됩니다. 인터페이스를 정의하는 자산은 *ref* 폴더에 있으며 구현을 정의하는 자산은 *lib* 폴더에 있습니다.
 
@@ -268,7 +268,7 @@ OS는 런타임 환경의 일부이지만 .NET 런타임의 일부는 아닙니�
 
 유니버설 Windows 플랫폼입니다.
 
-IoT(사물 인터넷)에 대한 최신의 터치 가능 Windows 애플리케이션 및 소프트웨어를 작성하는 데 사용되는 .NET의 구현체입니다. PC, 태블릿, 패블릿, 휴대폰, Xbox와 같은 대상으로 지정할 수 있는 다양한 종류의 디바이스를 통합하도록 설계되었습니다. UWP는 중앙 집중식 앱 스토어, 실행 환경(AppContainer), Win32를 대체할 Windows API(WinRT) 등 많은 서비스를 제공합니다. 앱은 C++, C#, VB.NET 및 JavaScript로 작성할 수 있습니다. C# 및 VB.NET을 사용할 경우 .NET API는 .NET Core에서 제공됩니다.
+IoT(사물 인터넷)에 대한 최신의 터치 가능 Windows 애플리케이션 및 소프트웨어를 작성하는 데 사용되는 .NET의 구현체입니다. PC, 태블릿, 패블릿, 휴대폰, Xbox와 같은 대상으로 지정할 수 있는 다양한 종류의 디바이스를 통합하도록 설계되었습니다. UWP는 중앙 집중식 앱 스토어, 실행 환경(AppContainer), Win32를 대체할 Windows API(WinRT) 등 많은 서비스를 제공합니다. 앱은 C++과 C#, VB.NET, JavaScript로 작성할 수 있습니다. C#과 VB.NET을 사용할 경우 .NET API는 .NET Core에서 제공됩니다.
 
 ## <a name="see-also"></a>참고 항목
 

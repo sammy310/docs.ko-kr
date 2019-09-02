@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54edefe0-bc38-419b-b486-3d8a0c356f13
-ms.openlocfilehash: 8b93b0564bbd6d760193f11d23d97ccb2cb4c943
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 88f35d90f02b44b88f4bb7c6fac6a94a09afe81a
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928509"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204846"
 ---
 # <a name="handling-dataset-events"></a>데이터 세트 이벤트 처리
 <xref:System.Data.DataSet> 개체는 <xref:System.ComponentModel.MarshalByValueComponent.Disposed>, <xref:System.Data.DataSet.Initialized>및 <xref:System.Data.DataSet.MergeFailed>의 세 가지 이벤트를 제공합니다.  
@@ -53,11 +53,11 @@ private static void DataSetMergeFailed(
 > [!NOTE]
 > 및 `DataSet` <xref:System.Runtime.Serialization.ISerializable> 개체는 에서<xref:System.ComponentModel.MarshalByValueComponent> 상속 되며 원격을 위해 인터페이스를 지원 합니다. `DataTable` 이 두 개체는 원격으로 연결할 수 있는 유일한 ADO.NET 개체입니다. 자세한 내용은 [.Net Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))을 참조 하십시오.  
   
- 로 `DataSet`작업할 때 사용할 수 있는 다른 이벤트에 대 한 자세한 내용은 [DataTable 이벤트 처리](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md) 및 [DataAdapter 이벤트 처리](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md)를 참조 하세요.  
+ 로 `DataSet`작업할 때 사용할 수 있는 다른 이벤트에 대 한 자세한 내용은 [DataTable 이벤트 처리](handling-datatable-events.md) 및 [DataAdapter 이벤트 처리](../handling-dataadapter-events.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고자료
 
-- [DataSet, DataTable 및 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [DataSet, DataTable 및 DataView](index.md)
 - [데이터 유효성 검사](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/t3b36awf(v=vs.120))
-- [ADO.NET에서 데이터 검색 및 수정](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [ADO.NET에서 데이터 검색 및 수정](../retrieving-and-modifying-data.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

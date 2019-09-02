@@ -4,12 +4,12 @@ description: 전역 도구를 만드는 방법을 설명합니다. 전역 도구
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: 3d0a64d0473f51d73892cd40633e2982c1130469
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: f60e26d14e89b6b7c34b32bf9a114fe4ad691981
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612669"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202761"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>.NET Core CLI를 사용하여 .NET Core 전역 도구 만들기
 
@@ -174,7 +174,7 @@ dotnet tool install --global --add-source ./nupkg botsay
 
 설치에 성공하면 다음 예와 같이 도구와 설치된 버전을 호출하는 데 사용되는 명령을 보여 주는 메시지가 표시됩니다.
 
-```
+```output
 You can invoke the tool using the following command: botsay
 Tool 'botsay' (version '1.0.0') was successfully installed.
 ```

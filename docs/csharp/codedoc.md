@@ -3,12 +3,12 @@ title: XML 주석을 사용하여 코드 문서화
 description: XML 문서 주석을 사용하여 코드를 문서화하고 컴파일 시간에 XML 문서 파일을 생성하는 방법을 알아봅니다.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 17a6beabf7e8a917c461dae4d92f1cfbb0d9de71
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b6744921f4703f53a16b6bdadcfbf375c2fb3332
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633732"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104780"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>XML 주석을 사용하여 코드 문서화
 
@@ -212,12 +212,12 @@ Sandcastle 등의 도구는 [`<event>`](https://ewsoftware.github.io/XMLComments
 
 여러 가지 이유로 코드를 문서화하는 것이 좋습니다. 이어서 일부 모범 사례, 일반적인 사용 사례 시나리오 및 C# 코드에서 XML 문서 태그를 사용할 때 알아야 하는 내용을 살펴봅니다.
 
-* 일관성을 보장하기 위해 모든 공개 형식과 해당 멤버를 문서화해야 합니다. 문서화해야 한다면 모두 문서화하세요.
-* Private 멤버는 XML 주석을 사용하여 문서화할 수도 있습니다. 그러나 이렇게 하면 라이브러리의 내부(잠재적으로 기밀) 작업이 표시됩니다.
-* IntelliSense에는 `<summary>` 태그의 내용이 필요하므로 최소한 형식과 해당 멤버에 이 태그가 있어야 합니다.
-* 문서 텍스트는 마침표로 끝나는 전체 문장을 사용하여 기록되어야 합니다.
-* Partial 클래스는 완전히 지원되고 문서 정보는 해당 형식의 단일 항목에 연결됩니다.
-* 컴파일러에서 `<exception>`, `<include>`, `<param>`, `<see>`, `<seealso>` 및 `<typeparam>` 태그의 구문을 확인합니다.
+- 일관성을 보장하기 위해 모든 공개 형식과 해당 멤버를 문서화해야 합니다. 문서화해야 한다면 모두 문서화하세요.
+- Private 멤버는 XML 주석을 사용하여 문서화할 수도 있습니다. 그러나 이렇게 하면 라이브러리의 내부(잠재적으로 기밀) 작업이 표시됩니다.
+- IntelliSense에는 `<summary>` 태그의 내용이 필요하므로 최소한 형식과 해당 멤버에 이 태그가 있어야 합니다.
+- 문서 텍스트는 마침표로 끝나는 전체 문장을 사용하여 기록되어야 합니다.
+- Partial 클래스는 완전히 지원되고 문서 정보는 해당 형식의 단일 항목에 연결됩니다.
+- 컴파일러에서 `<exception>`, `<include>`, `<param>`, `<see>`, `<seealso>` 및 `<typeparam>` 태그의 구문을 확인합니다.
 - 컴파일러는 파일 경로와 코드의 다른 부분에 대한 참조가 포함된 매개 변수의 유효성을 검사합니다.
 
 ## <a name="see-also"></a>참고 항목

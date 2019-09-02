@@ -2,12 +2,12 @@
 title: 단일 단계 커밋 및 승격 가능한 단일 단계 알림을 사용한 최적화
 ms.date: 03/30/2017
 ms.assetid: 57beaf1a-fb4d-441a-ab1d-bc0c14ce7899
-ms.openlocfilehash: 73340f5f65de1d743e046cf669258ab5f6c66298
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f486315b8a8c90e6616ca95fb6be4b2ae3719b7e
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793629"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205903"
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>단일 단계 커밋 및 승격 가능한 단일 단계 알림을 사용한 최적화
 
@@ -32,9 +32,9 @@ ms.locfileid: "61793629"
 <xref:System.Transactions> 트랜잭션을 워크플로 인스턴스해야 하는 경우(예: 여러 RM을 지원하기 위해) <xref:System.Transactions>는 <xref:System.Transactions.ITransactionPromoter.Promote%2A> 인터페이스가 파생되는 <xref:System.Transactions.ITransactionPromoter> 인터페이스에서 <xref:System.Transactions.IPromotableSinglePhaseNotification> 메서드를 호출하여 리소스 관리자에 알립니다. 그런 다음 리소스 관리자는 로깅이 필요하지 않은 로컬 트랜잭션에서 DTC 트랜잭션에 참여할 수 있는 트랜잭션 개체로 트랜잭션을 내부적으로 변환하고 이미 수행된 작업과 연결합니다. 트랜잭션을 커밋하도록 요청된 경우에도 트랜잭션 관리자는 리소스 관리자에게 <xref:System.Transactions.IPromotableSinglePhaseNotification.SinglePhaseCommit%2A> 알림을 보내며, 리소스 관리자가 에스컬레이션 중에 만든 분산 트랜잭션을 커밋합니다.
 
 > [!NOTE]
-> 합니다 **TransactionCommitted** DTC 트랜잭션의 활동 ID를 포함 하는 추적 (에스컬레이션 트랜잭션에서 커밋을 호출할 때 생성 됨).
+> 에스컬레이션 된 트랜잭션에서 커밋이 호출 될 때 생성 되는 **Transactioncommitted** 추적은 DTC 트랜잭션의 작업 ID를 포함 합니다.
 
-관리 에스컬레이션에 대 한 자세한 내용은 참조 하세요. [트랜잭션 관리 에스컬레이션](../../../../docs/framework/data/transactions/transaction-management-escalation.md)합니다.
+관리 에스컬레이션에 대 한 자세한 내용은 [트랜잭션 관리 에스컬레이션](transaction-management-escalation.md)을 참조 하십시오.
 
 ## <a name="transaction-management-escalation-scenario"></a>트랜잭션 관리 에스컬레이션 시나리오
 
@@ -50,7 +50,7 @@ ms.locfileid: "61793629"
 
 4. 이때 CN1은 SQL 2005 및 <xref:System.Data>와 관련된 메커니즘을 사용하여 트랜잭션을 에스컬레이션합니다.
 
-5. <xref:System.Transactions.ITransactionPromoter.Promote%2A> 메서드의 반환 값은 트랜잭션에 대한 전파 토큰을 포함하는 바이트 배열입니다. <xref:System.Transactions> 이 전파 토큰을 사용 하 여 로컬 트랜잭션에 통합할 수 있는 DTC 트랜잭션을 만듭니다.
+5. <xref:System.Transactions.ITransactionPromoter.Promote%2A> 메서드의 반환 값은 트랜잭션에 대한 전파 토큰을 포함하는 바이트 배열입니다. <xref:System.Transactions>는이 전파 토큰을 사용 하 여 로컬 트랜잭션에 통합할 수 있는 DTC 트랜잭션을 만듭니다.
 
 6. 이때 CN2는 <xref:System.Transactions.TransactionInterop>에 의해 메서드 중 하나를 호출하여 받은 데이터를 사용하여 트랜잭션을 SQL로 전달할 수 있습니다.
 
@@ -58,13 +58,13 @@ ms.locfileid: "61793629"
 
 ## <a name="single-phase-commit-optimization"></a>단일 단계 커밋 최적화
 
-단일 단계 커밋 프로토콜은 모든 업데이트가 명시적 코디네이션 없이 수행되므로 런타임에 보다 효율적입니다. 이 최적화를 활용하려면 리소스에 대해 <xref:System.Transactions.ISinglePhaseNotification> 인터페이스를 사용하는 리소스 관리자를 구현하고 <xref:System.Transactions.Transaction.EnlistDurable%2A> 또는 <xref:System.Transactions.Transaction.EnlistVolatile%2A> 메서드를 사용하여 트랜잭션에 참여해야 합니다. 특히 합니다 *EnlistmentOptions* 매개 변수 같아야 <xref:System.Transactions.EnlistmentOptions.None> 단일 단계 커밋이 수행 되는 확인 합니다.
+단일 단계 커밋 프로토콜은 모든 업데이트가 명시적 코디네이션 없이 수행되므로 런타임에 보다 효율적입니다. 이 최적화를 활용하려면 리소스에 대해 <xref:System.Transactions.ISinglePhaseNotification> 인터페이스를 사용하는 리소스 관리자를 구현하고 <xref:System.Transactions.Transaction.EnlistDurable%2A> 또는 <xref:System.Transactions.Transaction.EnlistVolatile%2A> 메서드를 사용하여 트랜잭션에 참여해야 합니다. 특히 *EnlistmentOptions* 매개 변수는 단일 단계 커밋이 <xref:System.Transactions.EnlistmentOptions.None> 수행 되도록와 같아야 합니다.
 
 <xref:System.Transactions.ISinglePhaseNotification> 인터페이스는 <xref:System.Transactions.IEnlistmentNotification> 인터페이스에서 파생되므로 RM이 단일 단계 커밋을 수행할 수 없는 경우에도 2단계 커밋 알림을 받을 수 있습니다. RM은 TM에서 <xref:System.Transactions.ISinglePhaseNotification.SinglePhaseCommit%2A> 알림을 받을 경우 커밋하는 데 필요한 작업을 수행하고 <xref:System.Transactions.SinglePhaseEnlistment.Committed%2A> 매개 변수에서 <xref:System.Transactions.SinglePhaseEnlistment.Aborted%2A>, <xref:System.Transactions.SinglePhaseEnlistment.InDoubt%2A> 또는 <xref:System.Transactions.SinglePhaseEnlistment> 메서드를 호출하여 트랜잭션이 커밋 또는 롤백됨을 트랜잭션 관리자에게 적절하게 알려야 합니다. 이 단계에서 인리스트먼트에 대한 <xref:System.Transactions.Enlistment.Done%2A> 응답은 ReadOnly 의미 체계를 나타냅니다. 따라서 다른 모든 메서드와 마찬가지로 <xref:System.Transactions.Enlistment.Done%2A>을 응답하면 안 됩니다.
 
-하나의 일시적인 인 리스트 먼 트 및 없습니다 지속적인 인 리스트 먼 있으면 일시적인 인 리스트 먼 트 SPC 알림을 받습니다. 모든 일시적인 인 리스트 먼 트와 하나의 지속적인 인 리스트 먼 없으면 일시적인 인 리스트 먼 트가 2PC를 받습니다. 완료되면 지속적인 인리스트먼트가 SPC를 받습니다.
+Volatile 인 리스트 먼 트가 하나 뿐 이며 내구성이 없는 인 리스트 먼 트가 있는 경우에는 volatile 참여가 SPC 알림을 받습니다. 일시적 인 리스트 먼 트와 하나의 지 속성 인 리스트 먼 트만 있으면, volatile 인 리스트 먼 트는 2PC를 수신 합니다. 완료되면 지속적인 인리스트먼트가 SPC를 받습니다.
 
 ## <a name="see-also"></a>참고자료
 
-- [리소스를 트랜잭션에 참가 요소로 등록](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)
-- [단일 단계 및 다단계 트랜잭션 커밋](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)
+- [리소스를 트랜잭션에 참가 요소로 등록](enlisting-resources-as-participants-in-a-transaction.md)
+- [단일 단계 및 다단계 트랜잭션 커밋](committing-a-transaction-in-single-phase-and-multi-phase.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: 0a1d6c4c18e658d71f1baf90763e121314ea35d4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7ee99d1b264f508882418c83da8e82759b0d95fa
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916289"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206129"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Windows Forms에서 사용자 입력 유효성 검사
 사용자가 응용 프로그램에 데이터를 입력 하는 경우 응용 프로그램에서 사용 하기 전에 데이터가 유효한 지 확인 해야 할 수 있습니다. 특정 텍스트 필드의 길이는 0이 아니어야 하 고, 필드는 전화 번호 또는 형식이 올바른 형식의 데이터로 포맷 되거나, 데이터베이스의 보안을 손상 시키는 데 사용할 수 있는 안전 하지 않은 문자를 포함 하지 않을 수 있습니다. Windows Forms는 응용 프로그램에서 입력의 유효성을 검사 하는 여러 가지 방법을 제공 합니다.  
@@ -85,7 +85,7 @@ ms.locfileid: "69916289"
   
 - 메서드를 <xref:System.Windows.Forms.Form.Close%2A> 프로그래밍 방식으로 호출 합니다.  
   
- 그러나 경우에 따라 컨트롤의 값이 유효한 지 여부에 관계 없이 사용자가 폼을 닫을 수 있습니다. 폼의 <xref:System.Windows.Forms.Form.Closing> 이벤트에 대 한 처리기를 만들어 유효성 검사를 재정의 하 고 잘못 된 데이터가 여전히 포함 된 폼을 닫을 수 있습니다. 이벤트에서 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 속성을로 `false`설정 합니다. 이렇게 하면 폼이 강제로 닫힙니다. 자세한 내용과 예제는 <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>를 참조하세요.  
+ 그러나 경우에 따라 컨트롤의 값이 유효한 지 여부에 관계 없이 사용자가 폼을 닫을 수 있습니다. 폼의 <xref:System.Windows.Forms.Form.FormClosing> 이벤트에 대 한 처리기를 만들어 유효성 검사를 재정의 하 고 잘못 된 데이터가 여전히 포함 된 폼을 닫을 수 있습니다. 이벤트에서 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 속성을로 `false`설정 합니다. 이렇게 하면 폼이 강제로 닫힙니다. 자세한 내용과 예제는 <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>를 참조하세요.  
   
 > [!NOTE]
 > 이러한 방식으로 폼을 강제로 닫으려면 폼의 컨트롤에서 아직 저장 되지 않은 데이터는 모두 손실 됩니다. 또한 모달 폼은 컨트롤을 닫을 때 컨트롤 내용의 유효성을 검사 하지 않습니다. 컨트롤 유효성 검사를 사용 하 여 포커스를 컨트롤에 잠글 수 있지만 폼 닫기와 관련 된 동작에 대해 걱정 하지 않아도 됩니다.  
@@ -93,7 +93,7 @@ ms.locfileid: "69916289"
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
-- <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>
-- <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.FormClosingEventArgs?displayProperty=nameWithType>
 - [MaskedTextBox 컨트롤](./controls/maskedtextbox-control-windows-forms.md)
 - [정규식 예제](../../standard/base-types/regular-expression-examples.md)

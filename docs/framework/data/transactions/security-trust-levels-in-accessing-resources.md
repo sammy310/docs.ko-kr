@@ -2,12 +2,12 @@
 title: 리소스 액세스의 보안 신뢰 수준
 ms.date: 03/30/2017
 ms.assetid: fb5be924-317d-4d69-b33a-3d18ecfb9d6e
-ms.openlocfilehash: 4cd229737d7569afe84d945dce0fbb6867f3ef76
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7070d82c430b762059153c544e26478dc2d7ae39
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948714"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205874"
 ---
 # <a name="security-trust-levels-in-accessing-resources"></a>리소스 액세스의 보안 신뢰 수준
 이 항목에서는 <xref:System.Transactions>에서 노출하는 리소스 형식에 따라 액세스가 제한되는 방법에 대해 설명합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "69948714"
   
  복구를 사용하기 위해 이 애플리케이션 종류에는 시스템 리소스를 영구적으로 사용하는 기능이 있습니다. 이는 트랜잭션에 참여하는 모든 지속적인 리소스 관리자에서 결과를 받은 것을 확인할 수 있을 때까지 복구할 수 있는 트랜잭션 관리자가 커밋된 트랜잭션을 저장해야 하기 때문입니다. 따라서 이 애플리케이션 종류에는 완전 신뢰가 필요하며 해당 신뢰 수준이 부여되지 않은 경우 실행하면 안 됩니다.  
   
- 지속적인 인 리스트 먼 트 및 복구에 대 한 자세한 내용은 [트랜잭션에 리소스를 참가자로 참여](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) 및 [복구 수행](../../../../docs/framework/data/transactions/performing-recovery.md) 항목을 참조 하세요.  
+ 지속적인 인 리스트 먼 트 및 복구에 대 한 자세한 내용은 [트랜잭션에 리소스를 참가자로 참여](enlisting-resources-as-participants-in-a-transaction.md) 및 [복구 수행](performing-recovery.md) 항목을 참조 하세요.  
   
  COM+와의 레거시 interop 작업을 수행하는 애플리케이션에도 완전 신뢰가 있어야 합니다.  
   

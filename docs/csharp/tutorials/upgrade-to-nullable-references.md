@@ -3,24 +3,24 @@ title: nullable 참조 형식을 사용하여 디자인
 description: 이 고급 자습서에서는 nullable 참조 형식을 소개합니다. 참조 값이 null일 수 있는 경우에 대한 디자인 의도를 표현하고 컴파일러가 null일 수 없는 경우를 적용하게 하는 방법을 알아봅니다.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 289b864aaa0380a31e93ef223fb5b5780e35892a
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 357ebd13ca4c610f1c65009621ee628a90c70b15
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195842"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105770"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>자습서: nullable 참조 형식이 있는 기존 코드 마이그레이션
 
-C# 8에서는 nullable 값 형식이 값 형식을 보완하는 것과 동일한 방식으로 참조 형식을 보완하는 **nullable 참조 형식**이 도입되었습니다. 형식에 `?`를 추가하여 변수를 **nullable 참조 형식**으로 선언합니다. 예를 들어 `string?`는 nullable `string`을 나타냅니다. 이러한 새 형식을 사용하여 디자인 의도를 보다 명확하게 표현할 수 있습니다. ‘항상 값이 있어야 하는’ 변수도 있고, ‘값이 누락될 수 있는’ 변수도 있습니다. 참조 형식을 갖는 기존 변수는 모두 nullable이 아닌 참조 형식으로 해석됩니다. 
+C# 8에서는 nullable 값 형식이 값 형식을 보완하는 것과 동일한 방식으로 참조 형식을 보완하는 **nullable 참조 형식**이 도입되었습니다. 형식에 `?`를 추가하여 변수를 **nullable 참조 형식**으로 선언합니다. 예를 들어 `string?`는 nullable `string`을 나타냅니다. 이러한 새 형식을 사용하여 디자인 의도를 보다 명확하게 표현할 수 있습니다. ‘항상 값이 있어야 하는’ 변수도 있고, ‘값이 누락될 수 있는’ 변수도 있습니다.   참조 형식을 갖는 기존 변수는 모두 nullable이 아닌 참조 형식으로 해석됩니다. 
 
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 알아봅니다.
 
 > [!div class="checklist"]
-> * 코드를 작업할 때 null 참조 검사를 활성화합니다.
-> * null 값과 각종 경고를 진단하고 수정합니다.
-> * nullable이 활성화된 컨텍스트와 nullable이 비활성화된 컨텍스트 간의 인터페이스를 관리합니다.
-> * nullable 주석 컨텍스트를 제어합니다.
+> - 코드를 작업할 때 null 참조 검사를 활성화합니다.
+> - null 값과 각종 경고를 진단하고 수정합니다.
+> - nullable이 활성화된 컨텍스트와 nullable이 비활성화된 컨텍스트 간의 인터페이스를 관리합니다.
+> - nullable 주석 컨텍스트를 제어합니다.
 
 ## <a name="prerequisites"></a>전제 조건
 
@@ -84,7 +84,7 @@ public class NewsStoryViewModel
 
 [!code-csharp[StarterCreateNewsItem](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#CreateNewsItem)]
 
-위 코드 블록에서는 몇 가지 작업이 진행되고 있습니다. 이 애플리케이션은 [AutoMapper](https://automapper.org/) NuGet 패키지를 사용하여 `ISyndicationItem`으로부터 뉴스 항목을 생성합니다. 이 하나의 문에서 뉴스 기사 항목이 생성되고 속성이 설정된다는 사실을 파악했습니다. 따라서 `NewsStoryViewModel`의 설계 의도는 이러한 속성이 `null` 값을 갖지 않도록 하는 것임을 알 수 있습니다. 이러한 속성은 **nullable이 아닌 참조 형식**이 되어야 합니다. 이렇게 해야 원래 설계 의도가 가장 잘 표현됩니다. 실제로 모든 `NewsStoryViewModel`이 null이 아닌 값으로 올바르게 인스턴스화되었습니다. 그렇다면 다음과 같은 초기화 코드가 유효한 수정이 될 수 있습니다.
+위 코드 블록에서는 몇 가지 작업이 진행되고 있습니다. 이 애플리케이션은 [AutoMapper](https://automapper.org/) NuGet 패키지를 사용하여 `ISyndicationItem`으로부터 뉴스 항목을 생성합니다. 이 하나의 문에서 뉴스 기사 항목이 생성되고 속성이 설정된다는 사실을 파악했습니다. 따라서 `NewsStoryViewModel`의 설계 의도는 이러한 속성이 `null` 값을 갖지 않도록 하는 것임을 알 수 있습니다. 이러한 속성은 **nullable이 아닌 참조 형식**이 되어야 합니다. 이렇게 해야 원래 설계 의도가 가장 잘 표현됩니다. 실제로 모든 `NewsStoryViewModel`이 null이 아닌 값으로 올바르게 인스턴스화되었습니다.  그렇다면 다음과 같은 초기화 코드가 유효한 수정이 될 수 있습니다.
 
 ```csharp
 public class NewsStoryViewModel
@@ -115,7 +115,7 @@ public class NewsStoryViewModel
 
 [!code-csharp[StarterErrorModel](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Pages/Error.cshtml.cs#StartErrorModel)]
 
-클래스 선언 앞에 `#nullable enable` 지시문을 추가하고, 클래스 선언 뒤에 `#nullable restore` 지시문을 추가합니다. `RequestId`가 초기화되지 않았다는 경고가 표시됩니다. 클래스를 살펴보니 `RequestId` 속성은 경우에 따라 null이 되어야 한다는 사실을 알 수 있습니다. `ShowRequestId` 속성이 존재한다는 사실이 누락된 값이 있을 수 있음을 나타냅니다. `null`이 유효하므로 `string` 형식에 `?`을 추가하여 `RequestId` 속성이 ‘nullable 참조 형식’임을 나타냅니다. 다음은 완성된 클래스입니다.
+클래스 선언 앞에 `#nullable enable` 지시문을 추가하고, 클래스 선언 뒤에 `#nullable restore` 지시문을 추가합니다. `RequestId`가 초기화되지 않았다는 경고가 표시됩니다. 클래스를 살펴보니 `RequestId` 속성은 경우에 따라 null이 되어야 한다는 사실을 알 수 있습니다. `ShowRequestId` 속성이 존재한다는 사실이 누락된 값이 있을 수 있음을 나타냅니다. `null`이 유효하므로 `string` 형식에 `?`을 추가하여 `RequestId` 속성이 ‘nullable 참조 형식’임을 나타냅니다.  다음은 완성된 클래스입니다.
 
 [!code-csharp[FinishedErrorModel](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Error.cshtml.cs#ErrorModel)]
 

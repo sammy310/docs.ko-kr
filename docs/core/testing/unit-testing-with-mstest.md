@@ -5,12 +5,12 @@ author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
 ms.custom: seodec18
-ms.openlocfilehash: 8100add17b61424624f27de705728935f3a1160b
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: ae4ddd4df902cf8c3d50e50614b12af8dc0aebed
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038034"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168163"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>MSTest 및 .NET Core를 사용한 C# 유닛 테스트
 
@@ -20,7 +20,7 @@ ms.locfileid: "69038034"
 
 셸 창을 엽니다. 솔루션을 저장할 *unit-testing-using-mstest*라는 디렉터리를 만듭니다. 이 새 디렉터리 내에서 [`dotnet new sln`](../tools/dotnet-new.md)을 실행하여 클래스 라이브러리 및 테스트 프로젝트에 대한 새 솔루션 파일을 만듭니다. 다음으로 *PrimeService* 디렉터리를 만듭니다. 다음 개요에는 지금까지의 디렉터리 및 파일 구조가 나와 있습니다.
 
-```
+```console
 /unit-testing-using-mstest
     unit-testing-using-mstest.sln
     /PrimeService
@@ -49,7 +49,7 @@ namespace Prime.Services
 
 다음으로 *PrimeService.Tests* 디렉터리를 만듭니다. 다음 개요에는 디렉터리 구조가 나와 있습니다.
 
-```
+```console
 /unit-testing-using-mstest
     unit-testing-using-mstest.sln
     /PrimeService
@@ -70,7 +70,7 @@ namespace Prime.Services
 
 테스트 프로제트는 다른 패키지에 단위 테스트를 만들고 실행하도록 요구합니다. 이전 단계의 `dotnet new`는 MSTest SDK, MSTest 테스트 프레임워크 및 MSTest Runner를 추가했습니다. 이제 `PrimeService` 클래스 라이브러리를 프로젝트에 다른 종속성으로 추가합니다. [`dotnet add reference`](../tools/dotnet-add-reference.md) 명령을 사용합니다.
 
-```
+```console
 dotnet add reference ../PrimeService/PrimeService.csproj
 ```
 
@@ -78,7 +78,7 @@ GitHub의 [샘플 리포지토리](https://github.com/dotnet/samples/blob/master
 
 다음 개요에는 최종 솔루션 레이아웃이 나와 있습니다.
 
-```
+```console
 /unit-testing-using-mstest
     unit-testing-using-mstest.sln
     /PrimeService

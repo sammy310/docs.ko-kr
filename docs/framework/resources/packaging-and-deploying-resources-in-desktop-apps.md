@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d636496599d4419518ce53c956c83f6ae175aa8
-ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
+ms.openlocfilehash: 4092d8694bdb896db1332bd73afae3f62bba36cf
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67135653"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105907"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>.NET 앱에서 리소스 패키징 및 배포
 
@@ -141,7 +141,7 @@ ms.locfileid: "67135653"
 .NET Core 리소스 대체 프로세스에는 다음 단계가 포함됩니다.
 
 1. 런타임에서 요청된 문화권에 대한 위성 어셈블리를 로드하려고 시도합니다.
-     * 현재 실행 중인 어셈블리의 디렉터리에서 요청된 문화권과 일치하는 하위 디렉터리를 확인합니다. 하위 디렉터리를 찾으면 해당 하위 디렉터리에서 요청된 문화권에 유효한 위성 어셈블리를 검색하고 로드합니다.
+     - 현재 실행 중인 어셈블리의 디렉터리에서 요청된 문화권과 일치하는 하위 디렉터리를 확인합니다. 하위 디렉터리를 찾으면 해당 하위 디렉터리에서 요청된 문화권에 유효한 위성 어셈블리를 검색하고 로드합니다.
 
        > [!NOTE]
        > 대/소문자 구분 파일 시스템이 있는 운영 체제(즉, Linux 및 macOS)에서는 문화권 이름 하위 디렉터리 검색이 대/소문자를 구분합니다. 하위 디렉터리 이름은 <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType>(예: `es` 또는 `es-MX`)의 대/소문자와 정확히 일치해야 합니다.
@@ -149,8 +149,8 @@ ms.locfileid: "67135653"
        > [!NOTE]
        > 프로그래머가 <xref:System.Runtime.Loader.AssemblyLoadContext>에서 사용자 지정 어셈블리 로드 컨텍스트를 파생한 경우에는 상황이 복잡합니다. 실행 중인 어셈블리가 사용자 지정 컨텍스트에 로드된 경우 런타임에서 위성 어셈블리를 사용자 지정 컨텍스트에 로드합니다. 세부 정보는 이 문서의 범위를 벗어납니다. <xref:System.Runtime.Loader.AssemblyLoadContext>을 참조하세요.
 
-     * 위성 어셈블리를 찾지 못한 경우 <xref:System.Runtime.Loader.AssemblyLoadContext>에서 <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> 이벤트를 실행하여 위성 어셈블리를 찾을 수 없음을 표시합니다. 이벤트를 처리하도록 선택하면 이벤트 처리기가 위성 어셈블리에 대한 참조를 로드하고 반환할 수 있습니다.
-     * 그래도 위성 어셈블리를 찾지 못하면 AssemblyLoadContext에서 AppDomain이 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 이벤트를 트리거하여 위성 어셈블리를 찾을 수 없음을 표시하게 합니다. 이벤트를 처리하도록 선택하면 이벤트 처리기가 위성 어셈블리에 대한 참조를 로드하고 반환할 수 있습니다.
+     - 위성 어셈블리를 찾지 못한 경우 <xref:System.Runtime.Loader.AssemblyLoadContext>에서 <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> 이벤트를 실행하여 위성 어셈블리를 찾을 수 없음을 표시합니다. 이벤트를 처리하도록 선택하면 이벤트 처리기가 위성 어셈블리에 대한 참조를 로드하고 반환할 수 있습니다.
+     - 그래도 위성 어셈블리를 찾지 못하면 AssemblyLoadContext에서 AppDomain이 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 이벤트를 트리거하여 위성 어셈블리를 찾을 수 없음을 표시하게 합니다. 이벤트를 처리하도록 선택하면 이벤트 처리기가 위성 어셈블리에 대한 참조를 로드하고 반환할 수 있습니다.
 
 2. 위성 어셈블리가 발견되면 런타임에서 요청된 리소스를 검색합니다. 어셈블리에서 리소스를 찾으면 해당 리소스가 사용됩니다. 리소스를 찾지 못하면 검색을 계속합니다.
 

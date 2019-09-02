@@ -9,12 +9,12 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: e99ca09d51f3ba6c01b9e400bfba00749faf62b3
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: b68909d94ad8cc5bba75b2c520db82c5ccf1b922
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567442"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206183"
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable 특성
 태그 파일 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 에서 발생 하는 네임 스페이스 접두사를 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서에서 무시할 수 있는 것으로 지정 합니다. 특성 `mc:Ignorable` 은 사용자 지정 네임 스페이스 매핑과 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 버전 관리에 대 한 태그 호환성을 모두 지원 합니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "69567442"
 |*ThisElementCanBeIgnored*|내부 형식을 확인할 수 없는 경우 프로세서 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 구현에서 무시할 수 있는 요소입니다.|  
   
 ## <a name="remarks"></a>설명  
- 네임 스페이스 접두사는 호환성 네임 스페이스 [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)]를 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 매핑할 때 사용 하는 권장 접두사 규칙입니다. `mc` [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]  
+ 네임 스페이스 접두사는 호환성 네임 스페이스 `http://schemas.openxmlformats.org/markup-compatibility/2006`를 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 매핑할 때 사용 하는 권장 접두사 규칙입니다. `mc` [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]  
   
  요소 이름의 접두사 부분이로 `mc:Ignorable` 식별 된 요소 또는 특성은 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서에서 처리할 때 오류를 발생 시 키 지 않습니다. 해당 특성을 기본 형식 또는 프로그래밍 구문으로 확인할 수 없으면 해당 요소는 무시 됩니다. 그러나 무시 된 요소는 해당 요소가 처리 되지 않는 부작용 인 추가 요소 요구 사항에 대 한 추가 구문 분석 오류를 생성할 수 있습니다. 예를 들어, 특정 요소 콘텐츠 모델에는 정확히 하나의 자식 요소가 필요할 수 있지만 지정 된 자식 요소가 `mc:Ignorable` 접두사에 있고 지정 된 자식 요소를 형식으로 확인할 수 없는 경우 프로세서는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 오류가 발생 합니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "69567442"
   
  특성에서 하나 이상의 공백 문자를 구분 기호로 사용 하 여 여러 접두사를 지정할 수 있습니다 (예: `mc:Ignorable="ignore1 ignore2"`).  
 
- 네임 [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)] 스페이스는 SDK의이 영역에 문서화 되지 않은 다른 요소 및 특성을 정의 합니다. 자세한 내용은 [XML 태그 호환성 사양](/office/open-xml/introduction-to-markup-compatibility#markup-compatibility-in-the-open-xml-file-formats-specification)을 참조 하세요.  
+ 네임 `http://schemas.openxmlformats.org/markup-compatibility/2006` 스페이스는 SDK의이 영역에 문서화 되지 않은 다른 요소 및 특성을 정의 합니다. 자세한 내용은 [XML 태그 호환성 사양](/office/open-xml/introduction-to-markup-compatibility#markup-compatibility-in-the-open-xml-file-formats-specification)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고자료
 

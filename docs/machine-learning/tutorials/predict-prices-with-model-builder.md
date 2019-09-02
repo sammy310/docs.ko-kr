@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 07/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4471e4feffb23b7f256ada2116444aaa7899e209
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 1bdbe31e16408da2d7dfe17941c90a022f3d8c32
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611449"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107139"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>모델 작성기와 함께 회귀를 사용하여 가격 예측
 
@@ -21,12 +21,12 @@ ML.NET 모델 작성기 빌드를 사용하여 가격을 예측하기 위한 회
 
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 > [!div class="checklist"]
-> * 데이터 준비 및 이해
-> * 시나리오 선택
-> * 데이터 로드
-> * 모델 학습
-> * 모델 평가
-> * 예측에 모델 사용
+> - 데이터 준비 및 이해
+> - 시나리오 선택
+> - 데이터 로드
+> - 모델 학습
+> - 모델 평가
+> - 예측에 모델 사용
 
 > [!NOTE]
 > 모델 작성기는 현재 미리 보기로 제공됩니다.
@@ -59,13 +59,13 @@ ML.NET 모델 작성기 빌드를 사용하여 가격을 예측하기 위한 회
 
     제공된 데이터 집합에는 다음과 같은 열이 포함되어 있습니다.
 
-    * **vendor_id:** 택시 공급업체의 ID가 기능입니다.
-    * **rate_code:** 택시 이동의 요금 유형이 기능입니다.
-    * **passenger_count:** 이동하는 승객 수가 기능입니다.
-    * **trip_time_in_secs:** 이동에 걸린 시간입니다.
-    * **trip_distance:** 이동 거리가 기능입니다.
-    * **payment_type:** 결제 방법(현금 또는 신용 카드)이 기능입니다.
-    * **fare_amount:** 지급한 총 택시 요금이 레이블입니다.
+    - **vendor_id:** 택시 공급업체의 ID가 기능입니다.
+    - **rate_code:** 택시 이동의 요금 유형이 기능입니다.
+    - **passenger_count:** 이동하는 승객 수가 기능입니다.
+    - **trip_time_in_secs:** 이동에 걸린 시간입니다.
+    - **trip_distance:** 이동 거리가 기능입니다.
+    - **payment_type:** 결제 방법(현금 또는 신용 카드)이 기능입니다.
+    - **fare_amount:** 지급한 총 택시 요금이 레이블입니다.
 
 `label`은 예측할 열입니다. 회귀 작업을 수행할 때 목표는 숫자 값을 예측하는 것입니다. 이 가격 예측 시나리오에서는 택시 승차 비용이 예측됩니다. 따라서 **fare_amount**는 레이블입니다. 식별된 `features`는 `label` 예측을 위해 모델에 제공하는 입력입니다. 이 경우에 나머지 열은 요금 금액을 예측하는 기능 또는 입력으로 사용됩니다.
 
@@ -190,12 +190,12 @@ ML.NET 모델 작성기 빌드를 사용하여 가격을 예측하기 위한 회
 
 본 자습서에서는 다음 작업에 관한 방법을 학습했습니다.
 > [!div class="checklist"]
-> * 데이터 준비 및 이해
-> * 시나리오 선택
-> * 데이터 로드
-> * 모델 학습
-> * 모델 평가
-> * 예측에 모델 사용
+> - 데이터 준비 및 이해
+> - 시나리오 선택
+> - 데이터 로드
+> - 모델 학습
+> - 모델 평가
+> - 예측에 모델 사용
 
 ### <a name="additional-resources"></a>추가 리소스
 

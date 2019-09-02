@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 368d5f7fa2eec8f3526a10b4777a862e8334617c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cdd910f7ef481d7c61f941b5c50bed9585c96d4a
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210232"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106528"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 마이그레이션 문제
 
@@ -20,17 +20,17 @@ ms.locfileid: "59210232"
 
 이 항목에서는 다음 영역의 중요한 변경 내용에 대해 설명합니다.
 
-* [ASP.NET 및 웹](#aspnet-and-web)
+- [ASP.NET 및 웹](#aspnet-and-web)
 
-* [코어](#core)
+- [코어](#core)
 
-* [Data](#data)
+- [Data](#data)
 
-* [WCF(Windows Communication Foundation)](#windows-communication-foundation-wcf)
+- [WCF(Windows Communication Foundation)](#windows-communication-foundation-wcf)
 
-* [WPF(Windows Presentation Foundation)](#windows-presentation-foundation-wpf)
+- [WPF(Windows Presentation Foundation)](#windows-presentation-foundation-wpf)
 
-* [XML](#xml)
+- [XML](#xml)
 
 이 항목의 문제에 대한 좀 더 간략한 개요는 [.NET Framework 4 마이그레이션 가이드](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29)를 참조하세요.
 
@@ -40,7 +40,7 @@ ms.locfileid: "59210232"
 
 네임스페이스: <xref:System.Web>, <xref:System.Web.Mobile>, <xref:System.Web.Security>, <xref:System.Web.UI.WebControls>; 어셈블리: System.Web(System.Web.dll의)
 
-| 기능 | 3.5 SP1과의 차이점 | 권장 변경 내용 |
+| 기능 | 3\.5 SP1과의 차이점 | 권장 변경 내용 |
 | ------- | ------------------------ | ------------------- |
 | **브라우저 정의 파일** | 브라우저 정의 파일은 새롭고 업데이트된 브라우저 및 디바이스에 대한 정보를 포함하도록 업데이트되었습니다. Netscape Navigator와 같은 오래된 브라우저와 디바이스는 제거되었으며 Google Chrome 및 Apple iPhone과 같은 최신 브라우저와 디바이스가 추가되었습니다.<br><br>애플리케이션에 제거된 브라우저 정의 중 하나를 상속하는 사용자 지정 브라우저 정의가 포함되어 있으면 오류가 표시됩니다.<br><br><xref:System.Web.HttpBrowserCapabilities> 개체(페이지의 `Request.Browse` 속성에 의해 노출됨)는 브라우저 정의 파일에 의해 구동됩니다. 따라서 ASP.NET 4에서 이 개체의 속성에 액세스하여 반환되는 정보는 이전 버전의 ASP.NET에서 반환된 정보와 다를 수 있습니다. | 애플리케이션에서 이전 브라우저 정의 파일을 사용하는 경우 다음 폴더에서 해당 파일을 복사할 수 있습니다.<br><br>*Windows\\Microsoft.NET\\Framework\\v2.0.50727\\CONFIG\\Browsers*<br><br>ASP.NET 4의 해당 *\\CONFIG\\Browsers* 폴더에 파일을 복사합니다. 파일을 복사한 후 [Aspnet_regbrowsers.exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms229858(v=vs.90)) 명령줄 도구를 실행합니다. 자세한 내용은 [https://www.asp.net/mobile](/aspnet/mobile/overview) 웹 사이트를 참조하세요. |
 | **혼합된 버전의 ASP.NET에서 실행 중인 자식 애플리케이션** | 이전 버전의 ASP.NET을 실행하는 애플리케이션의 자식으로서 구성된 ASP.NET 4 애플리케이션은 구성 또는 컴파일 오류로 인해 시작하지 못할 수 있습니다. 발생하는 특정 오류는 애플리케이션이 IIS 6.0에서 실행되는지 아니면 IIS 7 또는 IIS 7.5에서 실행되는지에 따라 다릅니다. | 구성 시스템이 ASP.NET 4 애플리케이션을 올바르게 인식할 수 있도록 영향을 받는 애플리케이션의 구성 파일을 변경할 수 있습니다. 반드시 수행해야 할 변경 내용에 대한 자세한 내용은 ASP.NET 웹 사이트에 있는 [ASP.NET 4 Breaking Changes](/aspnet/whitepapers/aspnet4/breaking-changes)(ASP.NET 4 주요 변경 내용) 문서의 “ASP.NET 4 Child Applications Fail to Start When Under ASP.NET 2.0 or ASP.NET 3.5 Applications”(ASP.NET 4 자식 애플리케이션이 ASP.NET 2.0 또는 ASP.NET 3.5 애플리케이션에서 시작되지 않음) 섹션을 참조하세요. |
@@ -69,7 +69,7 @@ ms.locfileid: "59210232"
 
 ### <a name="general-features"></a>일반 기능
 
-| 기능 | 3.5 SP1과의 차이점 | 권장 변경 내용 |
+| 기능 | 3\.5 SP1과의 차이점 | 권장 변경 내용 |
 | ------- | ------------------------ | ------------------- |
 | **CardSpace** | Windows CardSpace는 이제 .NET Framework에 포함되지 않으며 별도로 제공됩니다. | [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkId=199868)에서 Windows CardSpace를 다운로드하세요. |
 | **구성 파일** | .NET Framework가 애플리케이션 구성 파일에 액세스하는 방법이 수정되었습니다. | 애플리케이션 구성 파일의 이름이 *application-name.config*인 경우 이름을 *application-name.exe.config*로 바꾸세요. 예를 들어 *MyApp.config*를 *MyApp.exe.config*로 바꿉니다. |
@@ -81,7 +81,7 @@ ms.locfileid: "59210232"
 
 네임스페이스: <xref:System>; 어셈블리: mscorlib(mscorlib.dll)
 
-| 기능 | 3.5 SP1과의 차이점 | 권장 변경 내용 |
+| 기능 | 3\.5 SP1과의 차이점 | 권장 변경 내용 |
 | ------- | ------------------------ | ------------------- |
 | **일광 절약** | 시스템 시계와의 일관성을 위해, 시간 속성(예: <xref:System.TimeZoneInfo.Local> 및 <xref:System.DateTime.Now>)은 일광 절약 시간제 작업에 대해 다른 .NET Framework 데이터 대신 운영 체제 규칙을 사용합니다. | 없음 |
 | **문자열 서식 지정** | 문화권에 민감한 서식을 지원하기 위해 새로운 `ParseExact` 및 `TryParseExact` 메서드 외에도 `ToString`, `Parse` 및 `TryParse` 메서드의 새로운 오버로드가 <xref:System.TimeSpan> 구조에 포함됩니다. | 없음 |
@@ -92,7 +92,7 @@ ms.locfileid: "59210232"
 
 네임스페이스: <xref:System.Globalization>; 어셈블리: mscorlib(mscorlib.dll)
 
-| 기능 | 3.5 SP1과의 차이점 | 권장 변경 내용 |
+| 기능 | 3\.5 SP1과의 차이점 | 권장 변경 내용 |
 | ------- | ------------------------ | ------------------- |
 | **문화권 이름** | 다음과 같은 이름 변경은 독일, 디베히 및 아프리카 문화권에 영향을 미칩니다.<br><br>* <xref:System.Globalization.CultureAndRegionInfoBuilder.CurrencyEnglishName>: 독일어(스위스)(de-CH) 문화권의 통화 이름이 “sFr.”에서 “Fr.”로 변경되었습니다.<br>* <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern>: 디베히어(몰디브)(dv-MV) 문화권의 긴 날짜 패턴이 “dd/MMMM/yyyy”에서 “dd/MM/yyyy”로 변경되었습니다.<br>* <xref:System.Globalization.DateTimeFormatInfo.PMDesignator>: 아프리카어(남아프리카)(af-ZA) 문화권의 P.M. 지정자가 “nm”에서 “PM”으로 변경되었습니다. | 문화권 이름이 변경됩니다. |
 | **LCID 매개 변수** | 자동화 서버 설정에서 예상되는 동작과의 일관성을 위해, CLR은 더 이상 `LCID` 매개 변수에 대한 현재 문화권을 관리되지 않는 COM 기반 애플리케이션에 전달하지 않습니다. 대신, 문화권에 1033(en-us)을 전달합니다. | 특정 문화권을 요구하는 기본 애플리케이션을 제외하고는 수정이 필요하지 않습니다. |
@@ -104,7 +104,7 @@ ms.locfileid: "59210232"
 
 네임스페이스: <xref:System>, <xref:System.Runtime.ExceptionServices>; 어셈블리: mscorlib(mscorlib.dll)
 
-| 기능 | 3.5 SP1과의 차이점 | 권장 변경 내용 |
+| 기능 | 3\.5 SP1과의 차이점 | 권장 변경 내용 |
 | ------- | ------------------------ | ------------------- |
 | **손상된 프로세스 상태에 대한 예외** | CLR은 더 이상 손상된 프로세스 상태에 대한 예외를 관리 코드의 예외 처리기로 전달하지 않습니다. | 이러한 예외는 프로세스의 상태가 손상되었음을 나타냅니다. 이 상태에서는 애플리케이션을 실행하는 것이 좋지 않습니다.<br><br>자세한 내용은 CLR 자세히 보기 블로그의 <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute> 및 [손상된 상태 예외 처리](https://go.microsoft.com/fwlink/?LinkID=179681) 항목을 참조하세요. |
 | **실행 엔진 예외** | catchable 예외로 인해 불안정한 프로세스가 계속 실행될 수 있으므로 <xref:System.ExecutionEngineException>은 이제는 사용되지 않습니다. 이러한 변경 덕분에 예측 가능성 및 런타임 시 안정성이 향상됩니다. | <xref:System.InvalidOperationException>을 사용하여 조건을 알리세요. |
@@ -113,20 +113,20 @@ ms.locfileid: "59210232"
 
 네임스페이스: <xref:System.Reflection>; 어셈블리: mscorlib(mscorlib.dll)
 
-| 기능 | 3.5 SP1과의 차이점 | 권장 변경 내용 |
+| 기능 | 3\.5 SP1과의 차이점 | 권장 변경 내용 |
 | ------- | ------------------------ | ------------------- |
 | **어셈블리 해시 알고리즘** | 어셈블리가 로드되지 않을 경우 런타임에서 참조된 어셈블리의 해시 알고리즘을 알지 못하기 때문에 <xref:System.Reflection.AssemblyName.HashAlgorithm> 속성은 이제 <xref:System.Configuration.Assemblies.AssemblyHashAlgorithm>을 반환합니다. 이는 <xref:System.Reflection.Assembly.GetReferencedAssemblies%2A> 메서드에 의해 반환된 것과 같이 참조된 어셈블리의 속성을 사용함을 의미합니다. | 없음 |
 | **어셈블리 로딩** | 어셈블리의 중복 로드를 방지하고 가상 주소 공간을 절약하기 위해 이제 CLR은 Win32 `MapViewOfFile` 함수만 사용하여 어셈블리를 로드합니다. 또한 더 이상 `LoadLibrary` 함수를 호출하지 않습니다.<br><br>이러한 변경은 진단 애플리케이션에 다음과 같은 방식으로 영향을 줍니다.<br><br>* <xref:System.Diagnostics.ProcessModuleCollection>에는 `Process.GetCurrentProcess().Modules`에 대한 호출에서 가져온 클래스 라이브러리(.dll 파일)의 모듈이 더 이상 포함되지 않습니다.<br>`EnumProcessModules` 함수를 사용하는 Win32 애플리케이션은 나열된 관리되는 모듈을 모두 볼 수는 없습니다. | 없음 |
 | **선언 형식** | 형식에 선언 형식이 없으면 이제 <xref:System.Type.DeclaringType> 속성이 올바르게 null을 반환합니다. | 없음 |
 | **대리자** | 대리자의 생성자에 null 값이 전달되면 이제 대리자가 <xref:System.NullReferenceException> 대신 <xref:System.ArgumentNullException>을 throw합니다. | 예외 처리가 <xref:System.ArgumentNullException>을 catch하는지 확인하세요. |
-| **전역 어셈블리 캐시 위치 변경** | .NET Framework 4 어셈블리의 경우 전역 어셈블리 캐시가 Windows 디렉터리(%WINDIR%)에서 Microsoft.Net 하위 디렉터리(*%WINDIR%\\Microsoft.Net*)로 이동했습니다. 이전 버전의 어셈블리는 이전 디렉터리에 남아 있습니다.<br><br>관리되지 않는 [ASM_CACHE_FLAGS](../unmanaged-api/fusion/asm-cache-flags-enumeration.md) 열거형에 새 `ASM_CACHE_ROOT_EX` 플래그가 포함됩니다. 이 플래그는 [GetCachePath](../unmanaged-api/fusion/getcachepath-function.md) 함수로 얻을 수 있는 .NET Framework 4 어셈블리의 캐시 위치를 가져옵니다. | 애플리케이션이 어셈블리에 대한 명시적 경로를 사용하지 않는다고 가정할 경우에는 이 방식이 권장되지 않습니다. |
+| **전역 어셈블리 캐시 위치 변경** | .NET Framework 4 어셈블리의 경우 전역 어셈블리 캐시가 Windows 디렉터리(%WINDIR%)에서 Microsoft.Net 하위 디렉터리( *%WINDIR%\\Microsoft.Net*)로 이동했습니다. 이전 버전의 어셈블리는 이전 디렉터리에 남아 있습니다.<br><br>관리되지 않는 [ASM_CACHE_FLAGS](../unmanaged-api/fusion/asm-cache-flags-enumeration.md) 열거형에 새 `ASM_CACHE_ROOT_EX` 플래그가 포함됩니다. 이 플래그는 [GetCachePath](../unmanaged-api/fusion/getcachepath-function.md) 함수로 얻을 수 있는 .NET Framework 4 어셈블리의 캐시 위치를 가져옵니다. | 애플리케이션이 어셈블리에 대한 명시적 경로를 사용하지 않는다고 가정할 경우에는 이 방식이 권장되지 않습니다. |
 | **전역 어셈블리 캐시 도구** | [Gacutil.exe(전역 어셈블리 캐시 도구)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ex0ss12c%28v=vs.100%29)는 더 이상 셸 플러그 인 뷰어를 지원하지 않습니다. | 없음 |
 
 ### <a name="interoperability"></a>상호 운용성
 
 네임스페이스: <xref:System.Runtime.InteropServices>; 어셈블리: mscorlib(mscorlib.dll)
 
-| 기능 | 3.5 SP1과의 차이점 | 권장 변경 내용 |
+| 기능 | 3\.5 SP1과의 차이점 | 권장 변경 내용 |
 | ------- | ------------------------ | ------------------- |
 | **버퍼 길이**(관리되지 않는 API) | 메모리를 절약하기 위해 [ICorProfilerInfo2::GetStringLayout](../unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) 메서드에 대한 `pBufferLengthOffset` 매개 변수의 기능이 `pStringLengthOffset` 매개 변수와 일치하도록 변경되었습니다. 이제 두 매개 변수가 문자열 길이의 오프셋 위치를 가리킵니다. 문자열 클래스의 표시에서 버퍼 길이가 제거되었습니다. | 버퍼 길이에 대한 종속성을 제거하세요. |
 | **JIT 디버깅** | JIT(Just-In-Time) 디버깅에 대한 등록을 단순화하기 위해 .NET Framework 디버거는 이제 네이티브 코드의 JIT 디버깅 동작을 제어하는 AeDebug 레지스트리 키만 사용합니다. 이 변경의 결과는 다음과 같습니다.<br><br>* 더 이상 관리되는 네이티브 코드에 대해 서로 다른 두 가지 디버거를 등록할 수 없습니다.<br>* 비대화형 프로세스에 대해 자동으로 디버거를 시작할 수는 없지만, 사용자에게 대화형 프로세스를 요구할 수 있습니다.<br>* 디버거가 시작되지 않거나 시작해야 하는 등록된 디버거가 없을 때 더 이상 알림이 표시되지 않습니다.<br>* 애플리케이션의 대화형 작업에 의존하는 자동 시작 정책이 더 이상 지원되지 않습니다. | 필요에 따라 디버깅 작업을 조정하세요. |
@@ -143,7 +143,7 @@ ms.locfileid: "59210232"
 
 네임스페이스: <xref:System.Data>, <xref:System.Data.Objects.DataClasses>, <xref:System.Data.SqlClient>; 어셈블리: System.Data(System.Data.dll의), System.Data.Entity(System.Data.Entity.dll의)
 
-| 기능 | 3.5 SP1과의 차이점 |
+| 기능 | 3\.5 SP1과의 차이점 |
 | ------- | ------------------------ |
 | **POCO 시나리오** | <xref:System.Data.Objects.DataClasses.IRelatedEnd> 인터페이스에는 POCO(Plain Old CLR Object) 시나리오의 유용성을 개선하기 위한 새로운 방법이 있습니다. 이 새로운 메서드는 매개 변수로 <xref:System.Data.Objects.DataClasses.IEntityWithRelationships> 엔터티 대신 <xref:System.Object>를 사용합니다. |
 | **행 편집** | <xref:System.Data.DataView> 클래스에 의해 구현된 <xref:System.Collections.IList.IndexOf%2A> 메서드는 이제 -1을 반환하는 대신 편집 중인 행의 값을 올바르게 반환합니다. |
@@ -158,7 +158,7 @@ ms.locfileid: "59210232"
 
 네임스페이스: <xref:System.Data>, <xref:System.Data.Objects>, <xref:System.Data.Objects.DataClasses>; 어셈블리: System.Data.Entity(System.Data.Entity.dll의)
 
-| 기능 | 3.5 SP1과의 차이점 |
+| 기능 | 3\.5 SP1과의 차이점 |
 | ------- | ------------------------ |
 | **엔터티 개체** | 이제 <xref:System.Data.Objects.ObjectContext.Detach%2A> 메서드와 <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> 메서드가 호출될 때 엔터티 개체의 상태 간에 패리티가 있습니다. 이렇게 일관성이 향상되어 예기치 않은 예외가 throw되지 않습니다. |
 | **Entity SQL** | Entity SQL에서 식별자 해결에 대한 규칙이 개선되었습니다.<br><br>Entity SQL 파서에서 다중 파트 식별자 확인에 대한 논리가 개선되었습니다. |
@@ -171,7 +171,7 @@ ms.locfileid: "59210232"
 
 네임스페이스: <xref:System.Data.Linq>; 어셈블리: System.Data.Linq(System.Data.Linq.dll의)
 
-| 기능 | 3.5 SP1과의 차이점 |
+| 기능 | 3\.5 SP1과의 차이점 |
 | ------- | ------------------------ |
 | **이벤트** | 컬렉션이 로드될 때 이벤트를 일으키는 것 외에도, <xref:System.Data.Linq.EntitySet%601>가 언로드될 때 <xref:System.Data.Linq.EntitySet%601> 컬렉션은 이제 추가 및 제거 작업에 대해 <xref:System.Data.Linq.EntitySet%601.ListChanged> 이벤트를 발생시킵니다. |
 | **쿼리** | `Skip(0)`은 LINQ to SQL 쿼리에서 더 이상 무시되지 않습니다. 따라서 이 메서드가 있는 쿼리가 다르게 동작할 수 있습니다. 예를 들면 경우에 따라 `Skip(0)`에 `OrderBy` 절이 필요하며, `OrderBy` 절이 포함되지 않은 경우 이제 쿼리에서 <xref:System.NotSupportedException> 예외를 throw합니다. |
@@ -182,7 +182,7 @@ ms.locfileid: "59210232"
 
 네임스페이스: <xref:System.Data.Services>, <xref:System.Data.Services.Client>, <xref:System.Data.Services.Common>, <xref:System.Data.Services.Providers>; 어셈블리: System.Data.Services(System.Data.Services.dll의), System.Data.Services.Client(System.Data.Services.Client.dll의)
 
-| 기능 | 3.5 SP1과의 차이점 |
+| 기능 | 3\.5 SP1과의 차이점 |
 | ------- | ------------------------ |
 | **일괄 처리된 이진 콘텐츠** | 이제 WCF 데이터 서비스는 요청 및 응답에서 일괄 처리된 이진 콘텐츠를 지원합니다. |
 | **변경 인터셉터** | 이제 삭제 요청에 대해 변경 인터셉터가 실행됩니다.<br><br>변경 인터셉터는 엔터티 집합의 엔터티를 수정하기 위해 서버에서 요청을 수신할 때마다 실행되는 메서드로서, 들어오는 요청이 실행되기 전에 실행됩니다. 또한 변경되고 있는 엔터티 및 여기에서 수행되는 작업에 대한 액세스를 제공합니다. |
@@ -198,7 +198,7 @@ ms.locfileid: "59210232"
 
 다음 표에서는 이전에 제한 사항이었거나 기타 문제가 있던 기능의 개선 내용을 설명합니다.
 
-| 기능 | 3.5 SP1과의 차이점 |
+| 기능 | 3\.5 SP1과의 차이점 |
 | ------- | ------------------------ |
 | **구성 파일** | 구성 파일 계층 구조를 통해 동작을 상속할 수 있도록 WCF는 이제 구성 파일 간 병합을 지원합니다.<br><br>이제 구성 상속 모델이 확장되어 컴퓨터에서 실행 중인 모든 서비스에 적용될 동작을 사용자가 정의할 수 있습니다.<br><br>계층 구조의 서로 다른 수준에 같은 이름의 동작이 있는 경우 동작 변경이 발생할 수 있습니다. |
 | **서비스 호스팅** | 요소 정의에 `allowDefinition="MachineToApplication"` 특성을 추가하여 서비스 수준에서 더 이상 `<serviceHostingEnvironment>` 구성 요소를 지정할 수 없습니다.<br><br>서비스 수준에서 `<serviceHostingEnvironment>` 요소를 지정하는 것은 기술적으로 올바르지 않으며, 이로 인해 일관성 없는 동작이 발생합니다. |
@@ -209,7 +209,7 @@ ms.locfileid: "59210232"
 
 네임스페이스: <xref:System.Windows>, <xref:System.Windows.Controls>; 어셈블리: PresentationFramework(PresentationFramework.dll의)
 
-| 기능 | 3.5 SP1과의 차이점 | 권장 변경 내용 |
+| 기능 | 3\.5 SP1과의 차이점 | 권장 변경 내용 |
 | ------- | ------------------------ | ------------------- |
 | **예외 처리** | 오류를 더 일찍 검색할 수 있도록 WPF는 <xref:System.Reflection.TargetInvocationException>을 throw하고 원래 예외를 catch하는 대신 <xref:System.Exception.InnerException> 속성을 <xref:System.NullReferenceException>, <xref:System.OutOfMemoryException>, <xref:System.StackOverflowException> 및 <xref:System.Security.SecurityException>과 같은 심각한 예외로 설정합니다. | 없음 |
 | **연결된 리소스** | 좀 더 쉬운 연결을 위해, 프로젝트의 폴더 구조가 아닌 다른 위치에 있는 리소스 파일(예: 이미지)은 애플리케이션을 빌드할 때 파일 이름 대신 리소스 파일의 전체 경로를 리소스 ID로 사용합니다. 애플리케이션은 런타임 시 파일을 찾을 수 있습니다. | 없음 |
@@ -223,7 +223,7 @@ ms.locfileid: "59210232"
 
 네임스페이스: <xref:System.Windows>, <xref:System.Windows.Controls>, <xref:System.Windows.Data>, <xref:System.Windows.Input>; 어셈블리: PresentationFramework(PresentationFramework.dll의), PresentationCore(PresentationCore.dll의), WindowsBase(WindowsBase.dll의)
 
-| 기능 | 3.5 SP1과의 차이점 | 권장 변경 내용 |
+| 기능 | 3\.5 SP1과의 차이점 | 권장 변경 내용 |
 | ------- | ------------------------ | ------------------- |
 | **대화 상자** | 안정성을 높이기 위해 <xref:Microsoft.Win32.CommonDialog.ShowDialog%2A> 메서드는 <xref:Microsoft.Win32.FileDialog> 컨트롤을 만든 동일한 스레드에서 호출됩니다. | 반드시 <xref:Microsoft.Win32.FileDialog> 컨트롤을 만들고 동일한 스레드에서 <xref:Microsoft.Win32.CommonDialog.ShowDialog%2A> 메서드를 호출해야 합니다. |
 | **부동 창** | 부동 창을 올바르지 않게 계속해서 다시 활성화하여 모달 대화 상자처럼 표시되게 하는 포커스 복원 논리를 수정하기 위해, 이제 후보가 창의 자식이 아닌 경우 포커스 복원이 방지됩니다. | 없음 |
@@ -239,7 +239,7 @@ ms.locfileid: "59210232"
 
 네임스페이스: <xref:System.Windows>, <xref:System.Windows.Controls>, <xref:System.Windows.Data>, <xref:System.Windows.Input>, <xref:System.Windows.Media.Effects>; 어셈블리: PresentationFramework(PresentationFramework.dll의), PresentationCore(PresentationCore.dll의), WindowsBase(WindowsBase.dll의)
 
-| 기능 | 3.5 SP1과의 차이점 | 권장 변경 내용 |
+| 기능 | 3\.5 SP1과의 차이점 | 권장 변경 내용 |
 | ------- | ------------------------ | ------------------- |
 | **비트맵 효과** | 성능 향상을 위해, <xref:System.Windows.Media.Effects.BitmapEffect> 클래스 및 <xref:System.Windows.Media.Effects.BitmapEffect> 클래스에서 상속한 클래스는 여전히 존재하지만 비활성화되어 있습니다. 다음 조건이 참인 경우 하드웨어 가속 렌더링 파이프라인을 사용하여 효과가 렌더링됩니다.<br><br>* 애플리케이션은 반경 속성이 100DIU 미만인 <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> 또는 <xref:System.Windows.Media.Effects.BlurBitmapEffect>를 사용합니다.<br>* 애플리케이션을 실행하는 컴퓨터의 비디오 카드는 픽셀 셰이더 2.0을 지원합니다.<br><br>이러한 조건이 충족되지 않으면 <xref:System.Windows.Media.Effects.BitmapEffect> 개체는 아무 효과도 없습니다.<br><br>또한 Visual Studio는 <xref:System.Windows.Media.Effects.BitmapEffect> 개체 또는 하위 클래스를 발견하면 컴파일러 경고를 생성합니다.<br><br><xref:System.Windows.Media.DrawingContext.PushEffect%2A> 메서드는 사용되지 않는 것으로 표시됩니다. | 기존의 <xref:System.Windows.Media.Effects.BitmapEffect> 및 파생 클래스 사용을 중단하고 대신 <xref:System.Windows.Media.Effects.Effect>에서 파생된 새 클래스(<xref:System.Windows.Media.Effects.BlurEffect>, <xref:System.Windows.Media.Effects.DropShadowEffect> 및 <xref:System.Windows.Media.Effects.ShaderEffect>)를 사용하세요.<br><br><xref:System.Windows.Media.Effects.ShaderEffect> 클래스로부터 상속받아 자신의 고유한 효과를 만들 수도 있습니다. |
 | **비트맵 프레임** | 복제된 <xref:System.Windows.Media.Imaging.BitmapFrame> 개체는 이제 <xref:System.Windows.Media.Imaging.BitmapSource.DownloadProgress>, <xref:System.Windows.Media.Imaging.BitmapSource.DownloadCompleted> 및 <xref:System.Windows.Media.Imaging.BitmapSource.DownloadFailed> 이벤트를 수신합니다. 이렇게 하면, 웹에서 다운로드되어 <xref:System.Windows.Controls.Image> 컨트롤에 적용된 이미지가 <xref:System.Windows.Style>을 통해 올바르게 작동합니다.<br><br>다음이 모두 참인 경우에만 동작이 변경됩니다.<br><br>* <xref:System.Windows.Media.Imaging.BitmapSource.DownloadProgress>, <xref:System.Windows.Media.Imaging.BitmapSource.DownloadCompleted> 또는 <xref:System.Windows.Media.Imaging.BitmapSource.DownloadFailed> 이벤트를 구독합니다.<br>* <xref:System.Windows.Media.Imaging.BitmapFrame>의 소스가 웹에서 온 것입니다.<br>* 다운로드가 진행되는 동안 <xref:System.Windows.Media.Imaging.BitmapFrame>이 복제됩니다. | 이벤트 처리기에서 전송자를 확인하고 전송자가 원래 <xref:System.Windows.Media.Imaging.BitmapFrame>인 경우에만 조치를 취하세요. |
@@ -249,7 +249,7 @@ ms.locfileid: "59210232"
 
 네임스페이스: <xref:System.Windows>, <xref:System.Windows.Controls>, <xref:System.Windows.Data>, <xref:System.Windows.Input>; 어셈블리: PresentationFramework(PresentationFramework.dll의), PresentationCore(PresentationCore.dll의), WindowsBase(WindowsBase.dll의)
 
-| 기능 | 3.5 SP1과의 차이점 | 권장 변경 내용 |
+| 기능 | 3\.5 SP1과의 차이점 | 권장 변경 내용 |
 | ------- | ------------------------ | ------------------- |
 | **명령 인스턴스 바인딩** | 보기-모델 기반 명령 인스턴스를 보기 기반 입력 제스처에 바인딩하는 메커니즘을 제공하기 위해 <xref:System.Windows.Input.InputBinding> 클래스는 이제 <xref:System.Windows.DependencyObject> 대신 <xref:System.Windows.Freezable>에서 상속받습니다. 이제 다음 속성이 종속성 속성이 됩니다.<br><br>* <xref:System.Windows.Input.InputBinding.Command><br>* <xref:System.Windows.Input.InputBinding.CommandParameter><br>* <xref:System.Windows.Input.InputBinding.CommandTarget><br><br>이 변경의 결과는 다음과 같습니다.<br><br>* 이제 <xref:System.Windows.Input.InputBinding> 개체는 변경 가능한 상태로 유지되는 대신 등록 시 고정됩니다.<br>* <xref:System.Windows.DependencyObject> 클래스의 제한 때문에 다중 스레드에서 인스턴스 수준 <xref:System.Windows.Input.InputBinding> 개체에 액세스할 수 없습니다.<br>* <xref:System.Windows.Freezable> 클래스의 제한 때문에 등록 이후에 클래스 수준 입력 바인딩을 변경할 수 없습니다.<br>* 보기-모델에서 작성된 명령 인스턴스에는 입력 바인딩을 지정할 수 없습니다. | 바인딩이 변경될 수 있는 경우 개별 스레드에 <xref:System.Windows.Input.InputBinding> 클래스의 개별 인스턴스를 작성하거나 아니면 고정하세요. 등록된 후에는 클래스 수준의 정적 <xref:System.Windows.Input.InputBinding>을 변경하지 마세요. |
 | **브라우저 애플리케이션** | WPF 브라우저 애플리케이션(.XBAP)은 이제 개체가 올바른 순서로 라우팅된 키 이벤트를 수신할 수 있도록 독립 실행형 WPF 애플리케이션과 마찬가지로 키 이벤트를 처리합니다. | 없음 |
@@ -260,7 +260,7 @@ ms.locfileid: "59210232"
 
 네임스페이스: <xref:System.Windows>, <xref:System.Windows.Automation.Peers>, <xref:System.Windows.Automation.Provider>, <xref:System.Windows.Controls>, <xref:System.Windows.Data>, <xref:System.Windows.Input>; 어셈블리: PresentationFramework(PresentationFramework.dll의), PresentationCore(PresentationCore.dll의), UIAutomationProvider(UIAutomationProvider.dll의), WindowsBase(WindowsBase.dll의)
 
-| 기능 | 3.5 SP1과의 차이점 | 권장 변경 내용 |
+| 기능 | 3\.5 SP1과의 차이점 | 권장 변경 내용 |
 | ------- | ------------------------ | ------------------- |
 | **보기의 클래스 계층 구조** | <xref:System.Windows.Automation.Peers.TreeViewAutomationPeer> 및 <xref:System.Windows.Automation.Peers.TreeViewItemAutomationPeer> 클래스는 <xref:System.Windows.Automation.Peers.FrameworkElementAutomationPeer> 대신 <xref:System.Windows.Automation.Peers.ItemsControlAutomationPeer>에서 상속합니다. | <xref:System.Windows.Automation.Peers.TreeViewItemAutomationPeer> 클래스에서 상속하고 <xref:System.Windows.Automation.Peers.TreeViewItemAutomationPeer.GetChildrenCore%2A> 메서드를 재정의하는 경우 새 <xref:System.Windows.Automation.Peers.TreeViewDataItemAutomationPeer> 클래스에서 상속하는 개체의 반환을 고려해 보세요. |
 | **화면 밖 컨테이너** | 잘못된 반환 값을 수정하기 위해 <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.IsOffscreenCore%2A> 메서드는 보기에서 벗어나 스크롤된 항목 컨테이너에 대해 이제 `false`를 올바르게 반환합니다. 또한 메서드의 값은 다른 창에 의해 가려지는지 또는 요소가 특정 모니터에 표시되는지 여부에 의해 영향을 받지 않습니다. | 없음 |
@@ -273,7 +273,7 @@ ms.locfileid: "59210232"
 
 네임스페이스: <xref:System.Windows>, <xref:System.Windows.Controls>, <xref:System.Windows.Data>, <xref:System.Windows.Input>, <xref:System.Windows.Markup>; 어셈블리: PresentationFramework(PresentationFramework.dll의), PresentationCore(PresentationCore.dll의), WindowsBase(WindowsBase.dll의)
 
-| 기능 | 3.5 SP1과의 차이점 | 권장 변경 내용 |
+| 기능 | 3\.5 SP1과의 차이점 | 권장 변경 내용 |
 | ------- | ------------------------ | ------------------- |
 | **태그 확장** | WPF는 이제 속성을 설정하거나 컬렉션에 항목을 만들기 위해 태그 확장을 사용할 때 경우에 따라 <xref:System.Windows.Markup.MarkupExtension> 개체를 반환하는 대신 항상 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> 메서드의 값을 올바르게 사용합니다. 경우에 따라 태그 확장은 자체를 반환할 수 있습니다. | 애플리케이션이 이전 버전에서 <xref:System.Windows.Markup.MarkupExtension> 개체를 반환한 리소스에 액세스하는 경우 <xref:System.Windows.Markup.MarkupExtension> 개체 대신 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>에서 반환된 개체를 참조하세요. |
 | **특성 구문 분석** | 이제 XAML의 특성에는 마침표를 하나만 포함할 수 있습니다. 예를 들어, 다음은 유효합니다.<br><br>`<Button Background="Red"/>`(마침표 없음)<br><br>`<Button Button.Background = "Red"/>`(마침표 1개)<br><br>다음은 유효하지 않습니다.<br><br>`<Button Control.Button.Background = "Red"/>`(마침표 2개 이상) | 마침표가 2개 이상인 XAML 특성을 수정하세요. |
@@ -286,7 +286,7 @@ ms.locfileid: "59210232"
 
 네임스페이스: <xref:System.Xml.Linq>, <xref:System.Xml.Schema>, <xref:System.Xml.XPath>; 어셈블리: System.Xml(System.Xml.dll의), System.Xml.Linq(System.Xml.Linq.dll의)
 
-| 기능 | 3.5 SP1과의 차이점 |
+| 기능 | 3\.5 SP1과의 차이점 |
 | ------- | ------------------------ |
 | **카멜레온 스키마** | 데이터 손상을 방지하기 위해 이제 카멜레온 스키마는 여러 스키마에 포함될 때 올바르게 복제됩니다.<br><br>카멜레온 스키마는 대상 네임스페이스가 없는 스키마이며, 다른 XSD에 포함될 때 가져오기 스키마의 대상 네임스페이스를 사용합니다. 카멜레온 스키마는 스키마에 공통 형식을 포함하는 데 종종 사용됩니다. |
 | **ID 함수** | <xref:System.Xml.XmlReader> 개체가 XLST에 전달될 때 이제 XSLT [id 함수](/sql/xquery/functions-on-sequences-id)가 null 대신 올바른 값을 반환합니다.<br><br>사용자가 <xref:System.Xml.Linq.XNode.CreateReader%2A> 메서드를 사용하여 LINQ to XML 클래스에서 <xref:System.Xml.XmlReader> 개체를 만들었고 이 <xref:System.Xml.XmlReader> 개체가 XSLT로 전달된 경우, XSLT의 `id` 함수 인스턴스가 전에는 null을 반환했습니다. 이것은 `id` 함수에 대해 허용된 반환 값이 아닙니다. |
@@ -300,7 +300,7 @@ ms.locfileid: "59210232"
 
 네임스페이스: <xref:System.Xml.Linq>, <xref:System.Xml.Schema>, <xref:System.Xml.XPath>; 어셈블리: System.Xml(System.Xml.dll의), System.Xml.Linq(System.Xml.Linq.dll의)
 
-| 기능 | 3.5 SP1과의 차이점 |
+| 기능 | 3\.5 SP1과의 차이점 |
 | ------- | ------------------------ |
 | **네임스페이스 확인자** | <xref:System.Xml.XmlReader.ReadContentAs%2A> 메서드는 더 이상 전달된 <xref:System.Xml.IXmlNamespaceResolver> 확인자를 무시하지 않습니다.<br><br>이전 버전에서는 지정된 네임스페이스 확인자가 무시되고 대신 <xref:System.Xml.XmlReader>가 사용되었습니다. |
 | **공백** | 판독기를 만들 때 데이터 손실을 방지하기 위해 <xref:System.Xml.XmlReader.Create%2A> 메서드는 더 이상 유효한 공백을 삭제하지 않습니다.<br><br>XML 유효성 검사는 텍스트가 XML 태그와 혼합될 수 있는 혼합 콘텐츠 모드를 인식합니다. 혼합 모드에서는 모든 공백이 유효하므로 보고되어야 합니다. |
@@ -309,7 +309,7 @@ ms.locfileid: "59210232"
 
 네임스페이스: <xref:System.Xml.Linq>, <xref:System.Xml.Schema>, <xref:System.Xml.XPath>; 어셈블리: System.Xml(System.Xml.dll의), System.Xml.Linq(System.Xml.Linq.dll의)
 
-| 기능 | 3.5 SP1과의 차이점 |
+| 기능 | 3\.5 SP1과의 차이점 |
 | ------- | ------------------------ |
 | **엔터티 참조** | 데이터 손상을 방지하기 위해, 엔터티 참조가 더 이상 XML 특성에서 두 번 엔터티화되지 않습니다.<br><br>사용자가 엔터티를 `xmlns` 특성에 쓰려고 하거나 <xref:System.Xml.XmlWriter.WriteEntityRef%2A> 메서드를 사용하여 `xml:lang` 또는 `xml:space` 특성에 쓰려고 하면, 엔터티가 출력에서 두 번 엔터티화되어 데이터가 손상됩니다. |
 | **줄 바꿈 처리** | 데이터 손상을 방지하기 위해 <xref:System.Xml.XmlWriter> 개체가 <xref:System.Xml.NewLineHandling> 옵션을 존중합니다. |

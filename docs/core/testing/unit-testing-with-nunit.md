@@ -4,12 +4,12 @@ description: dotnet test 및 NUnit을 사용하여 샘플 솔루션을 단계별
 author: rprouse
 ms.date: 08/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 927facd271d6590cac2b0ce10790a16c88482020
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 22475fcbd9e971f4c544c020d9198fadee4548b1
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733410"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168133"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>NUnit 및 .NET Core를 사용한 C# 유닛 테스트
 
@@ -30,7 +30,7 @@ dotnet new sln
  
 다음으로 *PrimeService* 디렉터리를 만듭니다. 다음 개요는 지금까지의 디렉터리와 파일 구조를 보여 줍니다.
 
-```
+```console
 /unit-testing-using-nunit
     unit-testing-using-nunit.sln
     /PrimeService
@@ -69,7 +69,7 @@ dotnet sln add PrimeService/PrimeService.csproj
 
 다음으로 *PrimeService.Tests* 디렉터리를 만듭니다. 다음 개요에는 디렉터리 구조가 나와 있습니다.
 
-```
+```console
 /unit-testing-using-nunit
     unit-testing-using-nunit.sln
     /PrimeService
@@ -98,7 +98,7 @@ GitHub의 [샘플 리포지토리](https://github.com/dotnet/samples/blob/master
 
 다음 개요에는 최종 솔루션 레이아웃이 나와 있습니다.
 
-```
+```console
 /unit-testing-using-nunit
     unit-testing-using-nunit.sln
     /PrimeService

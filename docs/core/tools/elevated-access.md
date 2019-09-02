@@ -3,12 +3,12 @@ title: dotnet 명령에 대한 관리자 액세스 권한
 description: 관리자 액세스 권한이 필요한 dotnet 명령에 대한 모범 사례를 알아봅니다.
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: 3d874a76eadbf5330c4e5efe4e86bfeca0a9b504
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: b57e434fbb29a9c85ddf5086888a5291c7767ac9
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410631"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105086"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>dotnet 명령에 대한 관리자 액세스 권한
 
@@ -33,9 +33,9 @@ ms.locfileid: "67410631"
 
 `%ProgramFiles%\dotnet-tools` 폴더가 이미 있는 경우 다음을 수행하여 "사용자" 그룹에 해당 디렉터리를 쓰거나 수정할 수 있는 권한이 있는지 확인합니다.
 
-* `%ProgramFiles%\dotnet-tools` 폴더를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **명령 속성** 대화 상자가 열립니다. 
-* **보안** 탭을 선택합니다. **그룹 또는 사용자 이름**에서 “사용자” 그룹에 디렉터리를 쓰거나 수정할 수 있는 권한이 있는지 확인합니다. 
-* "사용자" 그룹에 디렉터리를 쓰거나 수정할 수 있는 경우 *dotnet-tools*가 아닌 도구를 설치할 때 다른 디렉터리 이름을 사용합니다.
+- `%ProgramFiles%\dotnet-tools` 폴더를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **명령 속성** 대화 상자가 열립니다. 
+- **보안** 탭을 선택합니다. **그룹 또는 사용자 이름**에서 “사용자” 그룹에 디렉터리를 쓰거나 수정할 수 있는 권한이 있는지 확인합니다. 
+- "사용자" 그룹에 디렉터리를 쓰거나 수정할 수 있는 경우 *dotnet-tools*가 아닌 도구를 설치할 때 다른 디렉터리 이름을 사용합니다.
 
 도구를 설치하려면 관리자 권한 프롬프트에서 다음 명령을 실행합니다. 설치 중에 *dotnet-tools* 폴더를 만듭니다.
 
@@ -105,4 +105,4 @@ dotnet tool uninstall PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools"
 
 ## <a name="see-also"></a>참고 항목
 
-* [.NET Core Global Tool 개요](global-tools.md)
+- [.NET Core Global Tool 개요](global-tools.md)

@@ -5,12 +5,12 @@ author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
 ms.custom: seodec18
-ms.openlocfilehash: 7ec22acf33884a5da0062b6e7aaded5dd4a0c665
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: db42ba4916aad739bd2c9d8b547f16022fce44bd
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539299"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104941"
 ---
 # <a name="select-the-net-core-version-to-use"></a>사용할 .NET Core 버전 선택
 
@@ -32,8 +32,8 @@ ms.locfileid: "67539299"
 
 SDK 명령에는 `dotnet new` 및 `dotnet run`이 포함됩니다. .NET Core CLI는 모든 `dotnet` 명령의 SDK 버전을 선택해야 합니다. 다음의 경우에도 기본적으로 머신에 설치된 최신 SDK를 사용합니다.
 
-* 프로젝트가 이전 버전의 .NET Core 런타임을 대상으로 하는 경우
-* 최신 버전의 .NET Core SDK가 미리 보기 버전인 경우
+- 프로젝트가 이전 버전의 .NET Core 런타임을 대상으로 하는 경우
+- 최신 버전의 .NET Core SDK가 미리 보기 버전인 경우
 
 이전의 .NET Core 런타임 버전을 대상으로 하면서 최신 SDK 기능과 향상된 기능을 활용할 수 있습니다. 모든 프로젝트에 대해 동일한 SDK 도구를 사용하여 여러 프로젝트에서 .NET Core의 여러 런타임 버전을 대상으로 지정할 수 있습니다.
 

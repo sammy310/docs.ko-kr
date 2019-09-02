@@ -4,12 +4,12 @@ description: .NET에서 서버 앱을 구축할 때 고려해야 할 .NET 구현
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 6bdcb002c2e37f45c298259c2867a631b38152ca
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 520920566e8a55eef2d506dc4a8085f57ef1c0bb
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630856"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107285"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>서버 앱에 대해 .NET Core와 .NET Framework 중에 선택
 
@@ -17,18 +17,18 @@ ms.locfileid: "68630856"
 
 다음과 같은 경우에는 서버 애플리케이션에 .NET Core를 사용합니다.
 
-* 플랫폼 간 요구 사항이 있습니다.
-* 마이크로 서비스를 대상으로 합니다.
-* Docker 컨테이너를 사용하고 있습니다.
-* 고성능 및 확장 가능한 시스템이 필요합니다.
-* .NET 버전이 애플리케이션별로 함께 필요합니다.
+- 플랫폼 간 요구 사항이 있습니다.
+- 마이크로 서비스를 대상으로 합니다.
+- Docker 컨테이너를 사용하고 있습니다.
+- 고성능 및 확장 가능한 시스템이 필요합니다.
+- .NET 버전이 애플리케이션별로 함께 필요합니다.
 
 다음과 같은 경우에는 서버 애플리케이션에 .NET Framework를 사용합니다.
 
-* 앱이 현재 .NET Framework를 사용합니다(마이그레이션하는 대신 확장 권장).
-* 앱이 .NET Core에 사용할 수 없는 타사 .NET 라이브러리 또는 NuGet 패키지를 사용합니다.
-* 앱이 .NET Core에 사용할 수 없는 .NET 기술을 사용합니다.
-* 앱이 .NET Core를 지원하지 않는 플랫폼을 사용합니다.
+- 앱이 현재 .NET Framework를 사용합니다(마이그레이션하는 대신 확장 권장).
+- 앱이 .NET Core에 사용할 수 없는 타사 .NET 라이브러리 또는 NuGet 패키지를 사용합니다.
+- 앱이 .NET Core에 사용할 수 없는 .NET 기술을 사용합니다.
+- 앱이 .NET Core를 지원하지 않는 플랫폼을 사용합니다.
 
 ## <a name="when-to-choose-net-core"></a>.NET Core를 선택하는 경우
 
@@ -85,15 +85,15 @@ Docker 컨테이너는 고유한 Linux 또는 Windows 인프라나 [Azure Kubern
 
 일부 .NET Framework 기술은 .NET Core에서 사용할 수 없습니다. 그중 일부는 이후 .NET Core 릴리스에서 사용할 수 있습니다. 나머지는 .NET Core에서 대상으로 하는 새 애플리케이션 패턴에 적용되지 않아 사용하지 못할 수 있습니다. 다음 목록은 .NET Core에서 제공되지 않는 가장 일반적인 기술입니다.
 
-* ASP.NET Web Forms 애플리케이션: ASP.NET Web Forms는 .NET Framework에서만 사용할 수 있습니다. ASP.NET Core는 ASP.NET Web Forms에 사용할 수 없습니다. .NET Core에 ASP.NET Web Forms를 적용할 계획은 없습니다.
+- ASP.NET Web Forms 애플리케이션: ASP.NET Web Forms는 .NET Framework에서만 사용할 수 있습니다. ASP.NET Core는 ASP.NET Web Forms에 사용할 수 없습니다. .NET Core에 ASP.NET Web Forms를 적용할 계획은 없습니다.
 
-* ASP.NET 웹 페이지 애플리케이션: ASP.NET 웹 페이지는 ASP.NET Core에 포함되지 않습니다. 
+- ASP.NET 웹 페이지 애플리케이션: ASP.NET 웹 페이지는 ASP.NET Core에 포함되지 않습니다. 
 
-* WCF 서비스 구현. .NET Core에서 WCF 서비스를 사용할 수 있는 [WCF-클라이언트 라이브러리](https://github.com/dotnet/wcf)가 있더라도 WCF 서버 구현은 현재 .NET Framework에서만 사용할 수 있습니다. 이 시나리오는 .NET Core에 대한 현재 계획의 일부가 아니지만 차후에 고려될 예정입니다.
+- WCF 서비스 구현. .NET Core에서 WCF 서비스를 사용할 수 있는 [WCF-클라이언트 라이브러리](https://github.com/dotnet/wcf)가 있더라도 WCF 서버 구현은 현재 .NET Framework에서만 사용할 수 있습니다. 이 시나리오는 .NET Core에 대한 현재 계획의 일부가 아니지만 차후에 고려될 예정입니다.
 
-* 워크플로 관련 서비스: Windows WF(Workflow Foundation), 워크플로 서비스(단일 서비스의 WCF + WF) 및 WCF Data Services(이전의 ADO.NET Data Services)는 .NET Framework에서만 사용할 수 있습니다.  WF/WCF+WF/WCF Data Services를 .NET Core에 적용할 계획은 없습니다.
+- 워크플로 관련 서비스: Windows WF(Workflow Foundation), 워크플로 서비스(단일 서비스의 WCF + WF) 및 WCF Data Services(이전의 ADO.NET Data Services)는 .NET Framework에서만 사용할 수 있습니다.  WF/WCF+WF/WCF Data Services를 .NET Core에 적용할 계획은 없습니다.
 
-* 언어 지원: Visual Basic 및 F#은 현재 .NET Core에서 지원되지만 일부 프로젝트 형식에서는 지원되지 않습니다. 지원되는 프로젝트 템플릿 목록은 [dotnet new에 대한 템플릿 옵션](../core/tools/dotnet-new.md#arguments)을 참조하세요.
+- 언어 지원: Visual Basic 및 F#은 현재 .NET Core에서 지원되지만 일부 프로젝트 형식에서는 지원되지 않습니다. 지원되는 프로젝트 템플릿 목록은 [dotnet new에 대한 템플릿 옵션](../core/tools/dotnet-new.md#arguments)을 참조하세요.
 
 공식 로드맵 외에 다른 프레임워크를 .NET Core로 이식할 수 있습니다. 전체 목록은 [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core)로 표시된 CoreFX 문제를 참조하세요. 이 목록이 해당 구성 요소를 .NET Core에 적용하겠다는 Microsoft의 약속을 나타내지는 않습니다. 단순히 커뮤니티의 바람을 파악한 것입니다. `port-to-core`로 표시된 구성 요소에 관심이 있는 경우 GitHub의 토론에 참여하세요. 누락된 내용이 있다고 생각이 들면 새로운 문제를 [CoreFX 리포지토리](https://github.com/dotnet/corefx/issues/new)에 등록하세요.
 

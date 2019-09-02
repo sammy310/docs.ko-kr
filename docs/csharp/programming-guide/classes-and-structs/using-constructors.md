@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 6825fbc571d8b08808f14a3f69ffc6f8a1ef048c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: dab8466b4d40e318bbb9915c06ce4ac836c0ead0
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596183"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205435"
 ---
 # <a name="using-constructors-c-programming-guide"></a>생성자 사용(C# 프로그래밍 가이드)
 
@@ -39,14 +39,14 @@ Console.WriteLine(i);
   
  그러나 다음 코드는 `new`를 사용하지 않으므로, 그리고 초기화되지 않은 개체를 사용하려고 하므로 컴파일러 오류를 일으킵니다.  
   
-```  
+```csharp  
 int i;  
 Console.WriteLine(i);  
 ```  
   
  또는 `structs` 기반의 개체(모든 기본 제공 숫자 형식 포함)를 초기화하거나 할당한 후 다음 예제와 같이 사용할 수 있습니다.  
   
-```  
+```csharp  
 int a = 44;  // Initialize the value type...  
 int b;  
 b = 33;      // Or assign it before using it.  

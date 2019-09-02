@@ -4,19 +4,19 @@ description: 배포를 위해 .NET Core를 패키지하고 이름과 버전을 �
 author: tmds
 ms.date: 03/02/2018
 ms.custom: seodec18
-ms.openlocfilehash: b961d84053dc41e75e002c8c12419fdef99ded4b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5d23147c8a38fbeea9e88c0a18e1f220e854fec1
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64585260"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105410"
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core 배포 패키징
 
 .NET Core를 점점 더 많은 플랫폼에서 사용할 수 있게 되므로 이를 패키지하고 이름과 버전을 지정하는 방법을 알아보는 것이 도움이 됩니다. 이를 통해 패키지 유지 관리자는 사용자가 .NET을 어디서 실행하든 상관없이 일관된 환경을 보장할 수 있습니다. 이 문서는 다음에 해당하는 사용자에게 유용합니다.
 
-* 원본에서 .NET Core를 빌드하려는 사용자
-* 결과 레이아웃 또는 생성된 패키지에 영향을 미칠 수 있는 .NET Core CLI 변경을 수행하려는 사용자
+- 원본에서 .NET Core를 빌드하려는 사용자
+- 결과 레이아웃 또는 생성된 패키지에 영향을 미칠 수 있는 .NET Core CLI 변경을 수행하려는 사용자
 
 ## <a name="disk-layout"></a>디스크 레이아웃
 
@@ -78,7 +78,7 @@ SDK 버전은 동일한 `[major].[minor]`를 사용하고, SDK의 기능 및 패
 
 다음 표에서는 권장되는 패키지를 보여줍니다.
 
-| name                                    | 예제                | 사용 사례: 설치 ...           | 포함           | 종속성                                   | 버전            |
+| name                                    | 예                | 사용 사례: 설치 ...           | 포함           | 종속성                                   | 버전            |
 |-----------------------------------------|------------------------|---------------------------------|--------------------|------------------------------------------------|--------------------|
 | dotnet-sdk-[major]                      | dotnet-sdk-2           | 주요 런타임의 최신 sdk    |                    | dotnet-sdk-[major].[latestminor]               | \<sdk version>     |
 | dotnet-sdk-[major].[minor]              | dotnet-sdk-2.1         | 특정 런타임의 최신 sdk |                    | dotnet-sdk-[major].[minor].[latest sdk feat]xx | \<sdk version>     |

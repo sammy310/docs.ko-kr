@@ -3,12 +3,12 @@ title: 식 해석
 description: 식 트리의 구조를 검사하는 코드를 작성하는 방법을 알아봅니다.
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 952a1c553e2392ffc717dc344dfe77a11f025cc4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fcc16e7a0cef7b3ac24d99ccbddd93bed100a5bb
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211246"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202978"
 ---
 # <a name="interpreting-expressions"></a>식 해석
 
@@ -34,7 +34,7 @@ Console.WriteLine($"The value of the constant value is {constant.Value}");
 
 다음과 같이 출력됩니다.
 
-```
+```output
 This is an Constant expression type
 The type of the constant value is System.Int32
 The value of the constant value is 24
@@ -80,7 +80,7 @@ Console.WriteLine($"\tParameter Type: {right.Type.ToString()}, Name: {right.Name
 
 이 샘플은 다음과 같이 출력됩니다.
 
-```
+```output
 This expression is a/an Lambda expression type
 The name of the lambda is <null>
 The return type is System.Int32
@@ -218,7 +218,7 @@ public class ConstantVisitor : Visitor
 
 위에 표시된 더하기 식에서 이 방문자를 실행하면 다음과 같이 출력됩니다.
 
-```
+```output
 This expression is a/an Lambda expression type
 The name of the lambda is <null>
 The return type is System.Int32
@@ -271,7 +271,7 @@ Expression<Func<int, int>> sum = (a) => 1 + a + 3 + 4;
 
 이 합계에 대한 방문자를 만들고 방문자를 실행하면 다음 출력이 표시됩니다.
 
-```
+```output
 This expression is a/an Lambda expression type
 The name of the lambda is <null>
 The return type is System.Int32
@@ -309,7 +309,7 @@ Expression<Func<int, int, int>> sum3 = (a, b) => (1 + a) + (3 + b);
 
 방문자의 출력은 다음과 같습니다.
 
-```
+```output
 This expression is a/an Lambda expression type
 The name of the lambda is <null>
 The return type is System.Int32
@@ -451,7 +451,7 @@ public class MethodCallVisitor : Visitor
 
 식 트리에 대한 출력은 다음과 같습니다.
 
-```
+```output
 This expression is a/an Lambda expression type
 The name of the lambda is <null>
 The return type is System.Int32

@@ -11,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ca30448c24efc48be3d68c6b3fa03c949b72d1a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d1c108e75c0e2da3d513669f5b8b02bada43b983
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910713"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206085"
 ---
 # <a name="security-transparent-code-level-1"></a>보안 투명 코드, 수준 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- 투명도를 통해 개발자는 부분적으로 신뢰할 수 있는 코드에 기능을 노출하는 더 안전한 .NET Framework 라이브러리를 작성할 수 있습니다. 수준 1 투명도는 .NET Framework 버전 2.0에서 새로 추가되었고 주로 Microsoft 내에서만 사용됩니다. .NET Framework 4부터 [수준 2 투명도](../../../docs/framework/misc/security-transparent-code-level-2.md)를 사용할 수 있습니다. 그러나 이전 보안 규칙을 사용 하 여 실행 해야 하는 레거시 코드를 식별할 수 있도록 수준 1 투명도는 유지 되었습니다.  
+ 투명도를 통해 개발자는 부분적으로 신뢰할 수 있는 코드에 기능을 노출하는 더 안전한 .NET Framework 라이브러리를 작성할 수 있습니다. 수준 1 투명도는 .NET Framework 버전 2.0에서 새로 추가되었고 주로 Microsoft 내에서만 사용됩니다. .NET Framework 4부터 [수준 2 투명도](security-transparent-code-level-2.md)를 사용할 수 있습니다. 그러나 이전 보안 규칙을 사용 하 여 실행 해야 하는 레거시 코드를 식별할 수 있도록 수준 1 투명도는 유지 되었습니다.  
   
 > [!IMPORTANT]
 > 수준 1 투명도는 호환성 목적으로만 지정해야 합니다. 즉, <xref:System.Security.AllowPartiallyTrustedCallersAttribute>를 사용하거나 투명도 모델을 사용하지 않는 .NET Framework 3.5 이하를 사용하여 개발된 코드에만 수준 1을 지정합니다. 예를 들어 부분적으로 신뢰할 수 있는 호출자(APTCA)의 호출을 허용하는 .NET Framework 2.0 어셈블리에는 수준 1 투명도를 사용합니다. .NET Framework 4 용으로 개발 된 코드의 경우 항상 수준 2 투명도를 사용 합니다.  
@@ -132,5 +132,5 @@ public class B
   
 ## <a name="see-also"></a>참고자료
 
-- [보안 투명 코드, 수준 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
-- [보안 변경 내용](../../../docs/framework/security/security-changes.md)
+- [보안 투명 코드, 수준 2](security-transparent-code-level-2.md)
+- [보안 변경 내용](../security/security-changes.md)

@@ -4,12 +4,12 @@ description: .NET에서 P/Invoke를 통해 네이티브 함수를 호출하는 �
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: c6dcfdb9543abceb688fee2d73c242f1742ab27d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: cda738a173cbe61cf49f79ceef78c533a5a879d9
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582560"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106792"
 ---
 # <a name="platform-invoke-pinvoke"></a>P/Invoke(플랫폼 호출)
 
@@ -21,9 +21,9 @@ P/Invoke는 관리 코드에서 비관리형 라이브러리의 구조체, 콜�
 
 앞의 예제는 간단하지만 관리 코드에서 관리되지 않는 함수를 호출하는 데 필요한 사항을 보여 줍니다. 예제를 단계별로 살펴보겠습니다.
 
-* 줄 #1에서는 필요한 항목이 모두 포함되어 있는 `System.Runtime.InteropServices` 네임스페이스에 대한 using 문을 보여 줍니다.
-* 줄 #7에서는 `DllImport` 특성을 도입합니다. 이 특성은 관리되지 않는 DLL을 로드하도록 런타임에 지정하므로 중요합니다. 전달된 문자열은 대상 함수가 있는 DLL입니다. 또한 문자열을 마샬링하는 데 사용할 [문자 집합](./charset.md)을 지정합니다. 마지막으로 이 함수가 [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror)를 호출하고 사용자가 <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType>을 통해 검색할 수 있게 런타임이 이 오류 코드를 캡처하도록 지정합니다.
-* 줄 #8은 P/Invoke 작업의 핵심입니다. 관리되지 않는 메서드와 **동일한 시그니처**가 있는 관리되는 메서드를 정의합니다. 선언에서 확인할 수 있는 새 키워드 `extern`은 이 메서드가 외부 메서드이며 호출 시 런타임이 `DllImport` 특성에 지정된 DLL에서 찾도록 런타임에 지정합니다.
+- 줄 #1에서는 필요한 항목이 모두 포함되어 있는 `System.Runtime.InteropServices` 네임스페이스에 대한 using 문을 보여 줍니다.
+- 줄 #7에서는 `DllImport` 특성을 도입합니다. 이 특성은 관리되지 않는 DLL을 로드하도록 런타임에 지정하므로 중요합니다. 전달된 문자열은 대상 함수가 있는 DLL입니다. 또한 문자열을 마샬링하는 데 사용할 [문자 집합](./charset.md)을 지정합니다. 마지막으로 이 함수가 [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror)를 호출하고 사용자가 <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType>을 통해 검색할 수 있게 런타임이 이 오류 코드를 캡처하도록 지정합니다.
+- 줄 #8은 P/Invoke 작업의 핵심입니다. 관리되지 않는 메서드와 **동일한 시그니처**가 있는 관리되는 메서드를 정의합니다. 선언에서 확인할 수 있는 새 키워드 `extern`은 이 메서드가 외부 메서드이며 호출 시 런타임이 `DllImport` 특성에 지정된 DLL에서 찾도록 런타임에 지정합니다.
 
 예제의 나머지 부분에서는 단순히 다른 관리되는 메서드와 마찬가지로 메서드를 호출합니다.
 
@@ -49,10 +49,10 @@ Linux에서도 이와 비슷합니다. `getpid(2)`는 표준 [POSIX](https://en.
 
 이제 예제를 살펴보겠습니다.
 
-* 예제의 줄 #9에서는 비관리 코드의 콜백 시그니처와 일치하는 대리자를 정의합니다. 관리 코드에서 `IntPtr`을 사용하여 LPARAM 및 HWND 형식을 나타내는 방법을 확인합니다.
-* 줄 #13 및 #14에서는 user32.dll 라이브러리의 `EnumWindows` 함수를 도입합니다.
-* 줄 #17-20에서는 대리자를 구현합니다. 이 간단한 예제에서는 단순히 핸들을 콘솔에 출력하려고 합니다.
-* 마지막으로, 줄 #24에서는 외부 메서드를 호출하고 대리자에 전달합니다.
+- 예제의 줄 #9에서는 비관리 코드의 콜백 시그니처와 일치하는 대리자를 정의합니다. 관리 코드에서 `IntPtr`을 사용하여 LPARAM 및 HWND 형식을 나타내는 방법을 확인합니다.
+- 줄 #13 및 #14에서는 user32.dll 라이브러리의 `EnumWindows` 함수를 도입합니다.
+- 줄 #17-20에서는 대리자를 구현합니다. 이 간단한 예제에서는 단순히 핸들을 콘솔에 출력하려고 합니다.
+- 마지막으로, 줄 #24에서는 외부 메서드를 호출하고 대리자에 전달합니다.
 
 Linux 및 macOS 예제는 다음과 같습니다. 해당 예제에서는 C 라이브러리 `libc`에 있는 `ftw` 함수를 사용합니다. 이 함수는 디렉터리 계층 구조를 트래버스하는 데 사용되며, 함수에 대한 포인터를 해당 매개 변수 중 하나로 사용합니다. 이 함수에는 다음과 같은 시그니처가 있습니다. `int (*fn) (const char *fpath, const struct stat *sb, int typeflag)`.
 
