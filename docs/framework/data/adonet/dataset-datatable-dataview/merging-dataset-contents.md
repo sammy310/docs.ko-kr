@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-ms.openlocfilehash: 153c96860005046e4cc16d5a965bd569e3519b52
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5a8040a803fbc9b098fc1b56e0f5d837c4cdb94
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607932"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203368"
 ---
 # <a name="merging-dataset-contents"></a>데이터 세트 콘텐츠 병합
 
@@ -35,7 +35,7 @@ ms.locfileid: "61607932"
 
 ## <a name="preservechanges"></a>PreserveChanges
 
-`DataSet`, `DataTable` 또는 `DataRow` 배열을 `Merge` 메서드로 전달할 때는 기존 `DataSet`의 변경 내용을 유지할 것인지 여부와 들어오는 데이터에서 발견되는 새 스키마 요소를 처리하는 방법을 지정하는 선택적 매개 변수를 포함할 수 있습니다. 들어오는 데이터 다음에 나오는 이러한 매개 변수 중 첫 번째는 부울 플래그인 <xref:System.Data.LoadOption.PreserveChanges>이며, 이 플래그는 기존 `DataSet`의 변경 내용을 유지할지 여부를 지정합니다. `PreserveChanges` 플래그가 `true`로 설정되어 있으면 들어오는 값은 기존 행의 `Current` 행 버전에 있는 기존 값을 덮어쓰지 않습니다. `PreserveChanges` 플래그가 `false`로 설정되어 있으면 들어오는 값은 기존 행의 `Current` 행 버전에 있는 기존 값을 덮어씁니다. `PreserveChanges` 플래그를 지정하지 않으면 `false`가 기본값으로 설정됩니다. 행 버전에 대 한 자세한 내용은 참조 하세요. [행 상태 및 행 버전](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)합니다.
+`DataSet`, `DataTable` 또는 `DataRow` 배열을 `Merge` 메서드로 전달할 때는 기존 `DataSet`의 변경 내용을 유지할 것인지 여부와 들어오는 데이터에서 발견되는 새 스키마 요소를 처리하는 방법을 지정하는 선택적 매개 변수를 포함할 수 있습니다. 들어오는 데이터 다음에 나오는 이러한 매개 변수 중 첫 번째는 부울 플래그인 <xref:System.Data.LoadOption.PreserveChanges>이며, 이 플래그는 기존 `DataSet`의 변경 내용을 유지할지 여부를 지정합니다. `PreserveChanges` 플래그가 `true`로 설정되어 있으면 들어오는 값은 기존 행의 `Current` 행 버전에 있는 기존 값을 덮어쓰지 않습니다. `PreserveChanges` 플래그가 `false`로 설정되어 있으면 들어오는 값은 기존 행의 `Current` 행 버전에 있는 기존 값을 덮어씁니다. `PreserveChanges` 플래그를 지정하지 않으면 `false`가 기본값으로 설정됩니다. 행 버전에 대 한 자세한 내용은 참조 하세요. [행 상태 및 행 버전](row-states-and-row-versions.md)합니다.
 
 `PreserveChanges`가 `true`이면 기존 행의 데이터는 기존 행의 <xref:System.Data.DataRowVersion.Current> 행 버전에 유지되지만 기존 행의 <xref:System.Data.DataRowVersion.Original> 행 버전에 있는 데이터는 들어오는 행의 `Original` 행 버전에 있는 데이터로 덮어쓰여집니다. 기존 행의 <xref:System.Data.DataRow.RowState%2A>는 <xref:System.Data.DataRowState.Modified>로 설정됩니다. 다음과 같은 예외가 있습니다.
 
@@ -69,9 +69,9 @@ ms.locfileid: "61607932"
 `DataSet`의 기존 행이 기본 키 값이 1인 `Unchanged` 행인 경우를 살펴보세요. `Modified` 기본 키 값이 2이고 `Original` 기본 키 값이 1인 `Current` 들어오는 행에 대해 병합 작업을 수행할 경우 `Original` 기본 키 값이 다르기 때문에 기존 행과 들어오는 행은 일치하지 않는 것으로 간주됩니다. 그러나 병합을 완료하고 제약 조건을 검사하면 `Current` 기본 키 값이 기본 키 열의 UNIQUE 제약 조건을 위반하므로 예외가 throw됩니다.
 
 > [!NOTE]
-> ID 열과 같은 자동 증분 열이 있는 데이터베이스 테이블에 행이 삽입되는 경우에는 삽입을 통해 반환되는 ID 열 값이 `DataSet`의 값과 일치하지 않을 수 있으므로 반환되는 행이 병합되는 대신 추가됩니다. 자세한 내용은 [Retrieving Identity or Autonumber 값](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)합니다.
+> ID 열과 같은 자동 증분 열이 있는 데이터베이스 테이블에 행이 삽입되는 경우에는 삽입을 통해 반환되는 ID 열 값이 `DataSet`의 값과 일치하지 않을 수 있으므로 반환되는 행이 병합되는 대신 추가됩니다. 자세한 내용은 [id 또는 일련 번호 값 검색](../retrieving-identity-or-autonumber-values.md)을 참조 하세요.
 
-다음 코드 예제에서는 두 개의 병합 `DataSet` 하나에 여러 스키마를 사용 하 여 개체 `DataSet` 들어오는 두의 결합 된 스키마를 사용 하 여 `DataSet` 개체입니다.
+다음 코드 예제에서는 두 개의 `DataSet` 들어오는 `DataSet` 개체의 결합 된 스키마 `DataSet` 를 사용 하 여 스키마가 서로 다른 두 개의 개체를 하나로 병합 합니다.
 
 [!code-csharp[DataWorks DataSet.Merge#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataSet.Merge/CS/source.cs#1)]
 [!code-vb[DataWorks DataSet.Merge#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataSet.Merge/VB/source.vb#1)]
@@ -86,9 +86,9 @@ ms.locfileid: "61607932"
 
 ## <a name="see-also"></a>참고자료
 
-- [DataSet, DataTable 및 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [행 상태 및 행 버전](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
-- [DataAdapter 및 DataReader](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [ADO.NET에서 데이터 검색 및 수정](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ID 또는 일련 번호 값 검색](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)
+- [DataSet, DataTable 및 DataView](index.md)
+- [행 상태 및 행 버전](row-states-and-row-versions.md)
+- [DataAdapter 및 DataReader](../dataadapters-and-datareaders.md)
+- [ADO.NET에서 데이터 검색 및 수정](../retrieving-and-modifying-data.md)
+- [ID 또는 일련 번호 값 검색](../retrieving-identity-or-autonumber-values.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
