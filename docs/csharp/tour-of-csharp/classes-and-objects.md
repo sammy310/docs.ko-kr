@@ -24,7 +24,7 @@ ms.locfileid: "70105624"
 
 [!code-csharp[PointExample](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L9-L10)]
 
-개체가 차지하는 메모리는 개체에 더 이상 연결할 수 있는 때 자동으로 회수됩니다. C#에서 개체를 명시적으로 할당 취소할 필요도 없으며 가능하지도 않습니다.
+개체가 차지하는 메모리는 개체에 더 이상 연결할 수 없을 때 자동으로 회수됩니다. C#에서 개체를 명시적으로 할당 취소할 필요도 없으며 가능하지도 않습니다.
 
 ## <a name="members"></a>멤버
 
