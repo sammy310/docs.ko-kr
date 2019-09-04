@@ -160,8 +160,6 @@
           href: core/tutorials/with-visual-studio.md
         - name: Visual Studio 2017에서 .NET Core를 사용하여 Visual Basic Hello World 앱 빌드
           href: core/tutorials/vb-with-visual-studio.md
-        - name: 플러그 인을 사용하여 .NET Core 애플리케이션 만들기
-          href: core/tutorials/creating-app-with-plugin-support.md
         - name: 'Visual Studio 2017을 사용하여 C# 또는 Visual Basic .NET Core Hello World 애플리케이션 디버그'
           href: core/tutorials/debugging-with-visual-studio.md
         - name: Visual Studio 2017을 사용하여 Hello World 애플리케이션 게시
@@ -219,6 +217,8 @@
           href: core/tutorials/testing-with-cli.md
         - name: 플랫폼 간 도구로 라이브러리 개발
           href: core/tutorials/libraries.md
+        - name: 플러그 인을 사용하여 .NET Core 애플리케이션 만들기
+          href: core/tutorials/creating-app-with-plugin-support.md
         - name: ASP.NET Core 애플리케이션 개발
           href: core/tutorials/aspnet-core.md
         - name: 네이티브 코드에서 .NET Core 호스팅

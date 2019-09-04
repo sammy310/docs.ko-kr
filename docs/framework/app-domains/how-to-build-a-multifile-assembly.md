@@ -19,14 +19,15 @@ helpviewer_keywords:
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bcc451903f7fbf7f82e2ed64834d26e605a0c069
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a964e73cc41cebad33a3edc34b89ef240fbc62c8
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59187800"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040851"
 ---
 # <a name="how-to-build-a-multifile-assembly"></a>방법: 다중 파일 어셈블리 빌드
+
 이 문서는 다중 파일 어셈블리를 만드는 방법을 설명하고 프로시저의 각 단계를 보여 주는 코드를 제공합니다.
 
 > [!NOTE]
@@ -69,23 +70,19 @@ ms.locfileid: "59187800"
     >[!NOTE]
     >C# 및 Visual Basic 컴파일러에서는 다음과 같은 두 구문을 사용하여 다중 파일 어셈블리를 직접 만들 수 있습니다.
     >
-    >- 두 번 컴파일에서 2파일 어셈블리를 만듭니다.
+    >- 두 번 컴파일에서 2파일 어셈블리를 만듭니다. [!code-cpp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#5)]
+    >  [!code-csharp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#5)]
+    >  [!code-vb[Conceptual.Assembly.Multifile#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#5)]
     >
-    >    [!code-cpp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#5)]
-    >    [!code-csharp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#5)]
-    >    [!code-vb[Conceptual.Assembly.Multifile#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#5)]
-    >
-    >- 한 번 컴파일에서 2파일 어셈블리를 만듭니다.
-    >
-    >    [!code-cpp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#6)]
-    >    [!code-csharp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#6)]
-    >    [!code-vb[Conceptual.Assembly.Multifile#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#6)]
+    >- 한 번 컴파일에서 2파일 어셈블리를 만듭니다. [!code-cpp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#6)]
+    >  [!code-csharp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#6)]
+    >  [!code-vb[Conceptual.Assembly.Multifile#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#6)]
 
 03. [어셈블리 링커(Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md)를 사용하면 어셈블리 매니페스트가 포함된 출력 파일을 만들 수 있습니다. 이 파일에는 어셈블리의 일부인 모든 모듈과 리소스의 참조 정보가 들어 있습니다.
 
     명령 프롬프트에 다음 명령을 입력합니다.
 
-    **al** \<*module name*> \<*module name*> … **/main:**\<*method name*> **/out:**\<*file name*> **/target:**\<*assembly file type*>
+    **al** \<*module name*> \<*module name*> … **/main:** \<*method name*>  **/out:** \<*file name*>  **/target:** \<*assembly file type*>
 
     이 명령에서 *module name* 인수는 각 모듈의 이름을 지정하여 어셈블리에 포함합니다. **/main:** 옵션은 메서드 이름을 지정하는데, 이 메서드는 어셈블리의 진입점입니다. **/out:** 옵션은 출력 파일의 이름을 지정하는데, 이 파일에는 어셈블리 메타데이터가 들어 있습니다. **/target:** 옵션은 어셈블리를 콘솔 애플리케이션 실행 파일(.exe), Windows 실행 파일(.win) 또는 라이브러리 파일(.lib)로 지정합니다.
 

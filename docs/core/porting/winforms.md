@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: aebfaa85338e014ca47256b85a1bd6529ad803bb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 7ef36be47648ae338b5fe70b75431006c99be31f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59327167"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105209"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>방법: .NET Core에 Windows Forms 데스크톱 앱 포팅
 
@@ -54,7 +54,7 @@ ms.locfileid: "59327167"
 
 01. [Windows 호환성 팩][compat-pack]이 마이그레이션하는 데 도움이 될 수 있습니다.
 
-    .NET Framework에서 사용할 수 있는 일부 API는 .NET Core 3.0에서 사용할 수 없습니다. [Windows 호환성 팩][ compat-pack]은 이와 같은 다양한 API를 추가하며, Windows Forms 앱이 .NET Core와 호환되도록 도와줍니다.
+    .NET Framework에서 사용할 수 있는 일부 API는 .NET Core 3.0에서 사용할 수 없습니다. [Windows 호환성 팩][compat-pack]은 이와 같은 다양한 API를 추가하며, Windows Forms 앱이 .NET Core와 호환되도록 도와줍니다.
 
 01. 프로젝트에서 사용되는 NuGet 패키지를 업데이트합니다.
 
@@ -300,7 +300,7 @@ Visual Studio 2019가 Windows Forms 디자이너를 지원하면 .NET Core 프�
  
 ## <a name="next-steps"></a>다음 단계
 
-* [Windows 호환성 팩][compat-pack]에 대해 자세히 알아봅니다.
-* .NET Framework Windows Forms 프로젝트를 .NET Core에 [포팅하는 방법에 관한 동영상](https://www.youtube.com/watch?v=upVQEUc_KwU)을 봅니다.
+- [Windows 호환성 팩][compat-pack]에 대해 자세히 알아봅니다.
+- .NET Framework Windows Forms 프로젝트를 .NET Core에 [포팅하는 방법에 관한 동영상](https://www.youtube.com/watch?v=upVQEUc_KwU)을 봅니다.
 
 [compat-pack]: windows-compat-pack.md

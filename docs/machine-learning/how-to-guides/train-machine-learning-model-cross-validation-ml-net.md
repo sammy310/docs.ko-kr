@@ -1,16 +1,16 @@
 ---
 title: 교차 유효성 검사를 사용하여 기계 학습 모델을 학습합니다.
 description: 교차 유효성 검사를 사용하여 ML.NET에서 더 강력한 기계 학습 모델을 구축하는 방법을 알아봅니다. 교차 유효성 검사는 학습 데이터를 여러 파티션으로 분할하고 이 파티션에서 여러 알고리즘을 학습하는 학습 및 모델 평가 기법입니다.
-ms.date: 06/25/2019
+ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to,title-hack-0625
-ms.openlocfilehash: c68c2b61054f59f03b4743ec30a694e94086ebab
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: f29103d0cf59cdec10a641b05ce359bf95c01ccd
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397652"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169054"
 ---
 # <a name="train-a-machine-learning-model-using-cross-validation"></a>교차 유효성 검사를 사용하여 기계 학습 모델을 학습합니다.
 
@@ -30,7 +30,7 @@ Size (Sq. ft.), HistoricalPrice1 ($), HistoricalPrice2 ($), HistoricalPrice3 ($)
 1120.00, 47504.98, 45129.73, 43775.84, 46792.41
 ```
 
-데이터는 `HousingData` 같은 클래스로 모델링할 수 있습니다.
+데이터는 `HousingData` 같은 클래스로 모델링하고 [`IDataView`](xref:Microsoft.ML.IDataView)에 로드할 수 있습니다.
 
 ```csharp
 public class HousingData
@@ -47,8 +47,6 @@ public class HousingData
     public float CurrentPrice { get; set; }
 }
 ```
-
-데이터를 [`IDataView`](xref:Microsoft.ML.IDataView)에 로드합니다.
 
 ## <a name="prepare-the-data"></a>데이터 준비
 

@@ -2,15 +2,15 @@
 title: '자습서: 영화 추천기 빌드 - 행렬 인수분해'
 description: 이 자습서에서는 .NET Core 콘솔 애플리케이션에서 ML.NET으로 영화 추천기를 빌드하는 방법을 보여 줍니다. 이 단계에서는 C#과 Visual Studio 2019를 사용합니다.
 author: briacht
-ms.date: 07/09/2019
+ms.date: 08/26/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 82da512d437ed2c5c28601c34687494b8be4d046
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 97bdef3daa296dcb88cbb158a14668205df6fee3
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666682"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107265"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>자습서: ML.NET에서 행렬 인수분해를 사용하여 영화 추천기 빌드
 
@@ -160,7 +160,7 @@ ML.NET의 데이터는 [IDataView 클래스](xref:Microsoft.ML.IDataView)로 표
 
 [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)은 데이터 스키마를 정의하고 파일에서 읽습니다. 데이터 경로 변수를 가져와서 `IDataView`를 반환합니다. 이 경우, `Test` 및 `Train` 파일의 경로를 제공하고 텍스트 파일 헤더(열 이름을 올바르게 사용할 수 있도록)와 쉼표 문자 데이터 구분 기호(기본 구분 기호는 탭)를 모두 나타냅니다.
 
-`Main()` 메서드에서 다음 두 줄의 코드로 다음 항목을 추가하여 `LoadData()` 메서드를 호출하고 `Train` 및 `Test` 데이터를 반환합니다.
+`Main()` 메서드에서 다음 코드를 추가하여 `LoadData()` 메서드를 호출하고 `Train` 및 `Test` 데이터를 반환합니다.
 
 [!code-csharp[LoadDataMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#LoadDataMain "Add LoadData method to Main")]
 

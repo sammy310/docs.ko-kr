@@ -1,16 +1,16 @@
 ---
 title: 순열 기능 중요도를 사용하여 예측 모델 설명
 description: ML.NET에서 순열 기능 중요도를 사용하여 모델의 기능 중요도 파악
-ms.date: 05/02/2019
+ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 1037a1f1c21ef2c9b9a87a070a7d2003c1e76eb4
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 9617582c79b2278e3a68e7acf84568247b81eca1
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307365"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167652"
 ---
 # <a name="explain-model-predictions-using-permutation-feature-importance"></a>순열 기능 중요도를 사용하여 예측 모델 설명
 
@@ -50,7 +50,7 @@ PFI(순열 기능 중요도)를 사용한 예측에서 기능이 갖는 기여�
 2,98,16,1,0.25,10,5,1,8,689,13,36,12
 ```
 
-이 샘플의 데이터는 `HousingPriceData` 같은 클래스로 모델링할 수 있습니다.
+이 샘플의 데이터는 `HousingPriceData` 같은 클래스로 모델링하고 [`IDataView`](xref:Microsoft.ML.IDataView)에 로드할 수 있습니다.
 
 ```csharp
 class HousingPriceData
@@ -96,8 +96,6 @@ class HousingPriceData
     public float Price { get; set; }
 }
 ```
-
-데이터를 [`IDataView`](xref:Microsoft.ML.IDataView)에 로드합니다.
 
 ## <a name="train-the-model"></a>모델 학습
 

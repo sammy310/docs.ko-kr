@@ -1,6 +1,6 @@
 ---
 title: -langversion(C# 컴파일러 옵션)
-ms.date: 05/14/2018
+ms.date: 08/23/2019
 f1_keywords:
 - /langversion
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: 5675099f66ec99c652ef95a5328f31c360e2dc59
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f34b5d512a8054b0ab0d3fba54525801eb560143
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602834"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040469"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion(C# 컴파일러 옵션)
 
@@ -46,6 +46,8 @@ ms.locfileid: "69602834"
 |3|컴파일러가 C# 3.0 또는 이전 버전에 포함된 구문만 허용합니다. <sup id="TCS3">[CS3](#FCS3)</sup>|
 |ISO-2|컴파일러가 ISO/IEC 23270:2006 C#(2.0)에 포함된 구문만 허용합니다. <sup id="TISO2">[ISO2](#FISO2)</sup>|
 |ISO-1|컴파일러가 ISO/IEC 23270:2003 C#(1.0/1.2)에 포함된 구문만 허용합니다. <sup id="TISO1">[ISO1](#FISO1)</sup>|  
+
+기본 언어 버전은 애플리케이션의 대상 프레임워크 및 SDK 또는 Visual Studio의 버전에 따라 다릅니다. 해당 규칙은 [언어 버전 구성](../configure-language-version.md#defaults)에 대한 문서에 정의되어 있습니다.
 
 ## <a name="remarks"></a>설명
 

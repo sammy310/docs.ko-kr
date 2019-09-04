@@ -3,15 +3,15 @@ title: '자습서: ONNX 및 ML.NET를 통한 딥 러닝을 사용하여 개체 �
 description: 이 자습서에서는 ML.NET에서 미리 학습된 ONNX 딥 러닝 학습 모델을 사용하여 이미지에서 개체를 검색하는 방법을 보여줍니다.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 08/01/2019
+ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e44ea5795beb90bafe3faf0bafb463d49ba1fc41
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: deb7258326428cca01ea8734e0dc010c29177cfa
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868719"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106857"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>자습서: ML.NET에서 ONNX를 사용하여 개체 검색
 
@@ -21,11 +21,11 @@ ML.NET에서 미리 학습된 ONNX 모델을 사용하여 이미지에서 개체
 
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 > [!div class="checklist"]
-> * 문제 이해
-> * ONNX의 개념과 ML.NET에서 작동하는 방식에 대해 알아보기
-> * 모델 이해
-> * 미리 학습된 모델 다시 사용
-> * 로드된 모델을 사용하여 개체 검색
+> - 문제 이해
+> - ONNX의 개념과 ML.NET에서 작동하는 방식에 대해 알아보기
+> - 모델 이해
+> - 미리 학습된 모델 다시 사용
+> - 로드된 모델을 사용하여 개체 검색
 
 ## <a name="pre-requisites"></a>필수 구성 요소
 
@@ -117,7 +117,7 @@ ONNX(Open Neural Network Exchange)는 AI 모델의 오픈 소스 형식입니다
 
 *Program.cs* 파일을 열고 다음 추가 `using` 문을 파일의 맨 위에 추가합니다.
 
-[!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L1-L9)]
+[!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L1-L7)]
 
 다음으로 다양한 자산의 경로를 정의합니다. 
 
@@ -125,7 +125,7 @@ ONNX(Open Neural Network Exchange)는 AI 모델의 오픈 소스 형식입니다
 
     [!code-csharp [GetAbsolutePath](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L66-L74)]
 
-1. 그런 다음 `Main` 메서드 내에서 자산의 위치를 저장하는 필드를 만듭니다.
+1. 그런 다음, `Main` 메서드 내에서 자산의 위치를 저장하는 필드를 만듭니다.
 
     [!code-csharp [AssetDefinition](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L17-L21)]
 
@@ -178,76 +178,6 @@ ONNX(Open Neural Network Exchange)는 AI 모델의 오픈 소스 형식입니다
 
 [!code-csharp [InitMLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L24)]
 
-### <a name="add-helper-methods"></a>도우미 메서드 추가
-
-모델에서 일반적으로 채점이라고 하는 예측을 수행하고 출력을 처리하고 나면 이미지에 경계 상자를 그려야 합니다. 그렇게 하려면 `DrawBoundingBox`라는 메서드를 *Program.cs*의 `GetAbsolutePath` 메서드 아래 추가합니다.
-
-```csharp
-private static void DrawBoundingBox(string inputImageLocation, string outputImageLocation, string imageName, IList<YoloBoundingBox> filteredBoundingBoxes)
-{
-
-}
-```
-
-먼저 이미지를 로드하고 `DrawBoundingBox` 메서드에서 높이 및 너비 차원을 가져옵니다.
-
-[!code-csharp [LoadImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L78-L81)]
-
-그런 다음 모델에서 검색한 각 경계 상자를 반복하는 for-each 루프를 만듭니다.
-
-```csharp
-foreach (var box in filteredBoundingBoxes)
-{
-
-}
-```
-
-for-each 루프 내에서 경계 상자의 크기를 가져옵니다.
-
-[!code-csharp [GetBBoxDimensions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L86-L89)]
-
-경계 상자의 크기는 `416 x 416`의 모델 입력에 해당하므로 경계 상자 크기를 이미지의 실제 크기와 일치하도록 조정합니다.
-
-[!code-csharp [ScaleImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L92-L95)]
-
-그런 다음 각 경계 상자 위에 표시될 텍스트의 템플릿을 정의합니다. 텍스트에는 각 경계 상자 내의 개체 클래스와 신뢰도가 포함됩니다.
-
-[!code-csharp [DefineBBoxText](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L98)]
-
-이미지를 그리려면 [`Graphics`](xref:System.Drawing.Graphics) 개체로 변환하세요.
-
-```csharp
-using (Graphics thumbnailGraphic = Graphics.FromImage(image))
-{
-    
-}
-```
-
-`using` 코드 블록에서 그래픽의 [`Graphics`](xref:System.Drawing.Graphics) 개체 설정을 조정합니다.
-
-[!code-csharp [TuneGraphicSettings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L102-L104)]
-
-그런 다음 텍스트 및 경계 상자의 글꼴 및 색 옵션을 설정합니다.
-
-[!code-csharp [SetColorOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L106-L114)]
-
-[`FillRectangle`](xref:System.Drawing.Graphics.FillRectangle*) 메서드를 사용하여 텍스트를 포함하도록 경계 상자 위에 직사각형을 만들어 채웁니다. 그러면 텍스트가 대비되어 가독성을 높이는 데 도움이 됩니다.
-
-[!code-csharp [DrawTextBackground](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L117)]
-
-그런 다음 [`DrawString`](xref:System.Drawing.Graphics.DrawString*) 및 [`DrawRectangle`](xref:System.Drawing.Graphics.DrawRectangle*) 메서드를 사용하여 이미지에 텍스트와 경계 상자를 그립니다.
-
-[!code-csharp [DrawClassAndBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L118-L121)]
-
-for-each 루프 외부에서 `outputDirectory`에 이미지를 저장하는 코드를 추가합니다.
-
-[!code-csharp [SaveImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L125-L130)]
-
-런타임 시 애플리케이션이 예상대로 예측하는지 추가 피드백을 얻으려면 `LogDetectedObjects`라는 메서드를 *Program.cs* 파일에서 `DrawBoundingBox` 메서드 아래 추가하여 감지된 개체를 콘솔에 출력합니다.
-
-[!code-csharp [LogOuptuts](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L133-L143)]
-
-이러한 메서드는 모두 모델이 출력을 생성하고 처리한 경우에 유용합니다. 먼저 모델 출력을 처리하는 기능을 만듭니다.
 
 ## <a name="create-a-parser-to-post-process-model-outputs"></a>파서를 만들어 모델 출력 후처리
 
@@ -344,7 +274,7 @@ for-each 루프 외부에서 `outputDirectory`에 이미지를 저장하는 코�
     - `CELL_HEIGHT`는 이미지 그리드에 있는 한 셀의 높이입니다.
     - `channelStride`는 그리드에서 현재 셀의 시작 위치입니다.
 
-    모델에서 이미지를 채점하는 경우 `416px x 416px` 입력을 `13 x 13` 크기에 해당하는 셀 그리드로 나눕니다. 포함된 각 셀은 `32px x 32px`입니다. 각 셀에는 각각 5개의 기능(x, y, 너비, 높이, 신뢰도)을 포함하는 5개의 경계 상자가 있습니다. 또한 각 경계 상자에는 각 클래스의 확률이 포함되며, 이 경우에는 20입니다. 따라서 각 셀에는 125개의 정보(5개의 기능 + 20개의 클래스 확률)가 포함됩니다. 
+    모델은 점수라고도 하는 예측을 생성할 때 `416px x 416px` 입력 이미지를 `13 x 13` 크기의 셀 그리드로 나눕니다. 포함된 각 셀은 `32px x 32px`입니다. 각 셀에는 각각 5개의 기능(x, y, 너비, 높이, 신뢰도)을 포함하는 5개의 경계 상자가 있습니다. 또한 각 경계 상자에는 각 클래스의 확률이 포함되며, 이 경우에는 20입니다. 따라서 각 셀에는 125개의 정보(5개의 기능 + 20개의 클래스 확률)가 포함됩니다. 
 
 `channelStride` 아래에 5개의 경계 상자 모두에 대한 고정 목록을 만듭니다.
 
@@ -436,7 +366,7 @@ for (int row = 0; row < ROW_COUNT; row++)
 
 [!code-csharp [ExtractClasses](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L174)]
 
-그런 다음 `GetTopResult` 메서드를 사용하여 현재 상자의 확률이 가장 높은 클래스 값과 색인을 가져오고 해당 점수를 컴퓨팅합니다.
+그런 다음 `GetTopResult` 메서드를 사용하여 현재 상자의 확률이 가장 높은 클래스 값과 색인을 가져오고 해당 점수를 계산합니다.
 
 [!code-csharp [GetTopResult](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L176-L177)]
 
@@ -560,7 +490,7 @@ for (var j = i + 1; j < boxes.Count; j++)
 
     [!code-csharp [LoadModelLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L47-L49)]
 
-    ML.NET 파이프라인에서는 일반적으로 [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*) 메서드를 호출하면 데이터가 작동하는 것으로 간주합니다. 이 경우 학습과 비슷한 프로세스가 사용됩니다. 그러나 실제 학습이 발생하지 않기 때문에 빈 [ `IDataView` ](xref:Microsoft.ML.IDataView)를 사용할 수 있습니다. 빈 목록에서 파이프라인의 새로운 [`IDataView`](xref:Microsoft.ML.IDataView)를 만듭니다.
+    ML.NET 파이프라인은 [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*) 메서드가 호출될 때 작동할 데이터 스키마를 알아야 합니다. 이 경우 학습과 비슷한 프로세스가 사용됩니다. 그러나 실제 학습이 발생하지 않기 때문에 빈 [ `IDataView` ](xref:Microsoft.ML.IDataView)를 사용할 수 있습니다. 빈 목록에서 파이프라인의 새로운 [`IDataView`](xref:Microsoft.ML.IDataView)를 만듭니다.
 
     [!code-csharp [LoadEmptyIDV](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L52)]    
 
@@ -608,7 +538,13 @@ private IEnumerable<float[]> PredictDataUsingModel(IDataView testData, ITransfor
 
 ## <a name="detect-objects"></a>개체 검색
 
-이제 모든 설치가 완료되었으므로 일부 개체를 검색해 보겠습니다. *Program.cs* 클래스의 `Main` 메서드에서 try-catch 문을 추가합니다.
+이제 모든 설치가 완료되었으므로 일부 개체를 검색해 보겠습니다. 먼저 *Program.cs* 클래스에서 채점자 및 파서에 대한 참조를 추가합니다.
+
+[!code-csharp [ReferenceScorerParser](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L8-L9)]
+
+### <a name="score-and-parse-model-outputs"></a>채점 및 구문 분석 모델 출력
+
+*Program.cs* 클래스의 `Main` 메서드에서 try-catch 문을 추가합니다.
 
 ```csharp
 try
@@ -633,7 +569,78 @@ catch (Exception ex)
 
 [!code-csharp [ParsePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L39-L44)]
 
-모델 출력을 처리하고 나면 이미지에 경계 상자를 그릴 차례입니다. 채점된 각 이미지를 반복하는 for 루프를 만듭니다.
+모델 출력을 처리하고 나면 이미지에 경계 상자를 그릴 차례입니다. 
+
+### <a name="visualize-predictions"></a>예측 시각화
+
+모델에서 이미지를 채점하고 출력이 처리되고 나면 이미지에 경계 상자를 그려야 합니다. 그렇게 하려면 `DrawBoundingBox` 메서드를 *Program.cs*의 `GetAbsolutePath` 메서드 아래 추가합니다.
+
+```csharp
+private static void DrawBoundingBox(string inputImageLocation, string outputImageLocation, string imageName, IList<YoloBoundingBox> filteredBoundingBoxes)
+{
+
+}
+```
+
+먼저 이미지를 로드하고 `DrawBoundingBox` 메서드에서 높이 및 너비 차원을 가져옵니다.
+
+[!code-csharp [LoadImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L78-L81)]
+
+그런 다음 모델에서 검색한 각 경계 상자를 반복하는 for-each 루프를 만듭니다.
+
+```csharp
+foreach (var box in filteredBoundingBoxes)
+{
+
+}
+```
+
+for-each 루프 내에서 경계 상자의 크기를 가져옵니다.
+
+[!code-csharp [GetBBoxDimensions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L86-L89)]
+
+경계 상자의 크기는 `416 x 416`의 모델 입력에 해당하므로 경계 상자 크기를 이미지의 실제 크기와 일치하도록 조정합니다.
+
+[!code-csharp [ScaleImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L92-L95)]
+
+그런 다음 각 경계 상자 위에 표시될 텍스트의 템플릿을 정의합니다. 텍스트에는 각 경계 상자 내의 개체 클래스와 신뢰도가 포함됩니다.
+
+[!code-csharp [DefineBBoxText](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L98)]
+
+이미지를 그리려면 [`Graphics`](xref:System.Drawing.Graphics) 개체로 변환하세요.
+
+```csharp
+using (Graphics thumbnailGraphic = Graphics.FromImage(image))
+{
+    
+}
+```
+
+`using` 코드 블록에서 그래픽의 [`Graphics`](xref:System.Drawing.Graphics) 개체 설정을 조정합니다.
+
+[!code-csharp [TuneGraphicSettings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L102-L104)]
+
+그런 다음 텍스트 및 경계 상자의 글꼴 및 색 옵션을 설정합니다.
+
+[!code-csharp [SetColorOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L106-L114)]
+
+[`FillRectangle`](xref:System.Drawing.Graphics.FillRectangle*) 메서드를 사용하여 텍스트를 포함하도록 경계 상자 위에 직사각형을 만들어 채웁니다. 그러면 텍스트가 대비되어 가독성을 높이는 데 도움이 됩니다.
+
+[!code-csharp [DrawTextBackground](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L117)]
+
+그런 다음 [`DrawString`](xref:System.Drawing.Graphics.DrawString*) 및 [`DrawRectangle`](xref:System.Drawing.Graphics.DrawRectangle*) 메서드를 사용하여 이미지에 텍스트와 경계 상자를 그립니다.
+
+[!code-csharp [DrawClassAndBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L118-L121)]
+
+for-each 루프 외부에서 `outputDirectory`에 이미지를 저장하는 코드를 추가합니다.
+
+[!code-csharp [SaveImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L125-L130)]
+
+런타임 시 애플리케이션이 예상대로 예측하는지에 대한 추가 피드백을 위해 `LogDetectedObjects` 메서드를 *Program.cs* 파일의 `DrawBoundingBox` 메서드 아래 추가하여 검색된 개체를 콘솔에 출력합니다.
+
+[!code-csharp [LogOuptuts](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L133-L143)]
+
+이제 예측에서 시각적 피드백을 만드는 도우미 메서드가 있으므로 채점된 각 이미지를 반복하는 for 루프를 추가합니다.
 
 ```csharp
 for (var i = 0; i < images.Count(); i++)
@@ -650,7 +657,7 @@ for 루프 내에서 이미지 파일의 이름과 연결된 경계 상자를 �
 
 [!code-csharp [DrawBBoxes](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L52)]
 
-마지막으로 `LogDetectedObjects` 메서드를 사용하여 일부 로깅 로직을 추가합니다.
+마지막으로 `LogDetectedObjects` 메서드를 사용하여 예측을 콘솔에 출력합니다.
 
 [!code-csharp [LogPredictionsOutput](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L54)]
 
@@ -704,11 +711,11 @@ person and its Confidence score: 0.5551759
 
 본 자습서에서는 다음 작업에 관한 방법을 학습했습니다.
 > [!div class="checklist"]
-> * 문제 이해
-> * ONNX의 개념과 ML.NET에서 작동하는 방식에 대해 알아보기
-> * 모델 이해
-> * 미리 학습된 모델 다시 사용
-> * 로드된 모델을 사용하여 개체 검색
+> - 문제 이해
+> - ONNX의 개념과 ML.NET에서 작동하는 방식에 대해 알아보기
+> - 모델 이해
+> - 미리 학습된 모델 다시 사용
+> - 로드된 모델을 사용하여 개체 검색
 
 기계 학습 샘플 GitHub 리포지토리를 확인하여 확장된 개체 검색 샘플을 살펴보세요.
 > [!div class="nextstepaction"]

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: e0c8f52193639c067252878127ee95a0897b9582
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 71e3781b08bca3441dbd55704bcb0f7de635097e
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922436"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168642"
 ---
 # <a name="async-c-reference"></a>async(C# 참조)
 
@@ -27,7 +27,7 @@ public async Task<int> ExampleMethodAsync()
 }  
 ```  
 
-비동기 프로그래밍이 처음이거나 비동기 메서드가 `await` 키워드를 사용하여 호출자의 스레드를 차단하지 않고 장기 실행 작업을 수행할 수 있는 방법을 잘 모르겠으면 [async 및 await를 사용한 비동기 프로그래밍](../../programming-guide/concepts/async/index.md)의 소개 내용을 참조하세요. 다음 코드는 비동기 메서드 안에 있으며 <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType> 메서드를 호출합니다. 
+비동기 프로그래밍이 처음이거나 비동기 메서드가 [`await` 연산자](../operators/await.md)를 사용하여 호출자의 스레드를 차단하지 않고 장기 실행 작업을 수행할 수 있는 방법을 잘 모르겠으면 [async 및 await를 사용한 비동기 프로그래밍](../../programming-guide/concepts/async/index.md)의 소개 내용을 참조하세요. 다음 코드는 비동기 메서드 안에 있으며 <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType> 메서드를 호출합니다.
   
 ```csharp  
 string contents = await httpClient.GetStringAsync(requestUrl);  
@@ -87,6 +87,6 @@ C# 7.0부터 `GetAwaiter` 메서드가 있는 다른 형식(일반적으로 값 
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>
-- [await](./await.md)
+- [await](../operators/await.md)
 - [연습: Async 및 Await를 사용하여 웹에 액세스](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Async 및 Await를 사용한 비동기 프로그래밍](../../programming-guide/concepts/async/index.md)

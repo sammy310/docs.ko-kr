@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: d9453f931bba9b1d3b5db3b4f80aa365677c0b76
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 8dacd4bf0102ccc2e769d10ce51e481b36004c3a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988424"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252981"
 ---
 # <a name="strings-c-programming-guide"></a>문자열(C# 프로그래밍 가이드)
 문자열은 값이 텍스트인 <xref:System.String> 형식의 개체입니다. 내부적으로 텍스트는 <xref:System.Char> 개체의 순차적 읽기 전용 컬렉션으로 저장됩니다. C# 문자열의 끝에 null 종료 문자가 없으므로 C# 문자열에는 포함된 null 문자('\0')를 여러 개 사용할 수 있습니다. 문자열의 <xref:System.String.Length%2A> 속성은 유니코드 문자 수가 아닌 포함된 `Char` 개체 수를 나타냅니다. 문자열에서 개별 유니코드 코드 포인트에 액세스하려면 <xref:System.Globalization.StringInfo> 개체를 사용합니다.  
@@ -107,7 +107,7 @@ C# 6.0 이상에서 사용 가능한 [‘보간된 문자열’](../../language-
 ## <a name="null-strings-and-empty-strings"></a>null 문자열 및 빈 문자열  
  빈 문자열은 문자가 포함되지 않은 <xref:System.String?displayProperty=nameWithType> 개체의 인스턴스입니다. 빈 문자열은 빈 텍스트 필드를 나타내는 다양한 프로그래밍 시나리오에서 자주 사용됩니다. 빈 문자열은 유효한 <xref:System.String?displayProperty=nameWithType> 개체이므로 빈 문자열에 대해 메서드를 호출할 수 있습니다. 빈 문자열은 다음과 같이 초기화됩니다.  
   
-```  
+```csharp  
 string s = String.Empty;  
 ```  
   

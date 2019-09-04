@@ -1,5 +1,5 @@
 ---
-title: .NET Framework 구성 요소를 COM에 노출
+title: .NET 구성 요소를 COM에 공개
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing .NET Framework components to COM
@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48d550a526336cf3e9de9cb53a16ddcf86f3af5d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 981f5f23bf2aafc41426c858e150ec3664a494f9
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946524"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205807"
 ---
-# <a name="exposing-net-framework-components-to-com"></a>.NET Framework 구성 요소를 COM에 노출
+# <a name="exposing-net-components-to-com"></a>.NET 구성 요소를 COM에 공개
 
 .NET 형식을 작성하고 비관리 코드에서 해당 형식을 사용하는 것은 개발자들에게 독특한 활동입니다. 이 섹션에서는 COM 클라이언트와 통합되는 관리 코드를 작성하기 위한 몇 가지 팁을 설명합니다.
 

@@ -26,12 +26,14 @@
                   href: bindingredirect-element.md
                 - name: <codeBase> 요소
                   href: codebase-element.md
+                - name: <publisherPolicy> 요소
+                  href: publisherpolicy-element.md
             - name: <probing> 요소
               href: probing-element.md
-            - name: <publisherPolicy> 요소
-              href: publisherpolicy-element.md
             - name: <qualifyAssembly> 요소
               href: qualifyassembly-element.md
+            - name: <supportPortability> 요소
+              href: supportportability-element.md
         - name: <bypassTrustedAppStrongNames> 요소
           href: bypasstrustedappstrongnames-element.md
         - name: <CompatSortNLSVersion> 요소
@@ -82,23 +84,6 @@
           href: relativebindforresources-element.md
         - name: <shadowCopyVerifyByTimestamp> 요소
           href: shadowcopyverifybytimestamp-element.md
-        - name: <supportPortability> 요소
-          href: supportportability-element.md
-        - name: <system.runtime.caching> 요소(캐시 설정)
-          href: system-runtime-caching-element-cache-settings.md
-          items:
-            - name: <memoryCache> 요소(캐시 설정)
-              href: memorycache-element-cache-settings.md
-              items:
-                - name: <namedCaches> 요소(캐시 설정)
-                  href: namedcaches-element-cache-settings.md
-                  items:
-                    - name: <namedCaches>에 대한 <add> 요소
-                      href: add-element-for-namedcaches.md
-                    - name: <namedCaches>에 대한 <clear> 요소
-                      href: clear-element-for-namedcaches.md
-                    - name: <namedCaches>에 대한 <remove> 요소
-                      href: remove-element-for-namedcaches.md
         - name: <Thread_UseAllCpuGroups> 요소
           href: thread-useallcpugroups-element.md
         - name: <ThrowUnobservedTaskExceptions> 요소
@@ -111,3 +96,18 @@
           href: userandomizedstringhashalgorithm-element.md
         - name: <UseSmallInternalThreadStacks> 요소
           href: usesmallinternalthreadstacks-element.md
+    - name: <system.runtime.caching> 요소(캐시 설정)
+      href: system-runtime-caching-element-cache-settings.md
+      items:
+        - name: <memoryCache> 요소(캐시 설정)
+          href: memorycache-element-cache-settings.md
+          items:
+            - name: <namedCaches> 요소(캐시 설정)
+              href: namedcaches-element-cache-settings.md
+              items:
+                - name: <namedCaches>에 대한 <add> 요소
+                  href: add-element-for-namedcaches.md
+                - name: <namedCaches>에 대한 <clear> 요소
+                  href: clear-element-for-namedcaches.md
+                - name: <namedCaches>에 대한 <remove> 요소
+                  href: remove-element-for-namedcaches.md

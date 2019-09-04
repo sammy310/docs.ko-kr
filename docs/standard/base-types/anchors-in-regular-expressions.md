@@ -19,12 +19,12 @@ ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 85e971d3464b6f2a073288e7f8b5406563598f79
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5f722977928604e5876e52a7329eef5c933bf2a7
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634746"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046465"
 ---
 # <a name="anchors-in-regular-expressions"></a>정규식의 앵커
 <a name="top"></a> 앵커 또는 원자성 너비가 0인 어설션은 문자열에서 일치 항목이 나타나야 하는 위치를 지정합니다. 검색 식에서 앵커를 사용하면 정규식 엔진은 문자열을 통과하거나 문자를 사용하지 않고, 지정된 위치에서만 일치 항목을 검색합니다. 예를 들어 `^` 기호는 줄이나 문자열의 시작 부분에서 일치 항목 찾기를 시작하도록 지정합니다. 따라서 정규식 `^http:` 은 줄의 시작 부분에 나타날 때만 "http:"을 찾습니다. 다음 표에서는 .NET의 정규식에서 지원하는 앵커를 보여 줍니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "64634746"
 |무늬|설명|  
 |-------------|-----------------|  
 |`^`|입력 문자열의 시작 부분(또는 메서드가 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 옵션과 함께 호출될 경우 줄의 시작 부분)에서 일치 항목 찾기를 시작합니다.|  
-|`((\w+(\s?)){2,}`|단어 문자 하나 이상과 0 또는 공백 하나 순으로 정확히 두 번 나타내는 일치 항목을 찾습니다. 이 그룹은 첫 번째 캡처링 그룹입니다. 이 식은 두 번째 및 세 번째 캡처링 그룹도 정의합니다. 두 번째는 캡처된 단어로 구성되고 세 번째는 캡처된 공백으로 구성됩니다.|  
+|`((\w+(\s?)){2,}`|단어 문자 하나 이상과 0 또는 공백 하나 순으로 두 번 이상 나타내는 일치 항목을 찾습니다. 이 그룹은 첫 번째 캡처링 그룹입니다. 이 식은 두 번째 및 세 번째 캡처링 그룹도 정의합니다. 두 번째는 캡처된 단어로 구성되고 세 번째는 캡처된 공백으로 구성됩니다.|  
 |`,\s`|쉼표, 공백 문자 순의 일치 항목을 찾습니다.|  
 |`(\w+\s\w+)`|단어 문자 하나 이상, 공백, 단어 문자 하나 이상 순의 일치 항목을 찾습니다. 이 그룹은 네 번째 캡처링 그룹입니다.|  
 |`,`|쉼표 하나를 찾습니다.|  

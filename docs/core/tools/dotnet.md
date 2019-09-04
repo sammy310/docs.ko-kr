@@ -2,12 +2,12 @@
 title: dotnet 명령
 description: dotnet 명령(.NET Core CLI 도구에 대한 일반 드라이버) 및 사용법에 대해 알아봅니다.
 ms.date: 06/04/2018
-ms.openlocfilehash: e1571bea1594b492427bdf5b3a7959733459c54e
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 61542a3fff8bba6e2c3e55a4db5a746620d79ca1
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331017"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202515"
 ---
 # <a name="dotnet-command"></a>dotnet 명령
 
@@ -21,23 +21,24 @@ ms.locfileid: "68331017"
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
-```
-dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics] [--fx-version]
-    [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [-v|--verbosity] [--version]
+```console
+dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
+    [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [--runtimeconfig] [-v|--verbosity] [--version]
 ```
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
-```
-dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics]
-    [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx] [-v|--verbosity] [--version]
+```console
+dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
+    [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx]
+    [--runtimeconfig] [-v|--verbosity] [--version]
 ```
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-```
-dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-version]
-    [-h|--help] [--info] [-v|--verbosity] [--version]
+```console
+dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagnostics]
+    [--fx-version] [-h|--help] [--info] [--runtimeconfig] [-v|--verbosity] [--version]
 ```
 
 ---
@@ -59,6 +60,12 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 `--additionalprobingpath <PATH>`
 
 검색 정책 및 검색할 어셈블리를 포함하는 경로입니다.
+
+`--depsfile`
+
+*deps.json* 파일의 경로입니다.
+
+*deps.json* 파일에는 어셈블리 충돌을 해결하는 데 사용되는 종속성, 컴파일 종속성 및 버전 정보 목록이 포함됩니다. 이 파일에 대한 자세한 내용은 GitHub에서 [런타임 구성 파일](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)을 참조하세요.
 
 `-d|--diagnostics`
 
@@ -93,6 +100,12 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
  자세한 내용은 [롤포워드](../whats-new/dotnet-core-2-1.md#roll-forward)를 참조하세요.
 
+`--runtimeconfig`
+
+*runtimeconfig.json* 파일의 경로입니다.
+
+*runtimeconfig.json* 파일은 런타임 구성 설정을 포함하는 구성 파일입니다. 자세한 내용은 GitHub에서 [런타임 구성 파일](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)을 참조하세요.
+
 `-v|--verbosity <LEVEL>`
 
 명령의 세부 정보 표시 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다. 모든 명령에서 지원되지 않습니다. 이 옵션을 사용할 수 있는지 확인하려면 특정 명령 페이지를 참조하세요.
@@ -110,6 +123,12 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 `--additionalprobingpath <PATH>`
 
 검색 정책 및 검색할 어셈블리를 포함하는 경로입니다.
+
+`--depsfile`
+
+*deps.json* 파일의 경로입니다.
+
+*deps.json* 파일에는 어셈블리 충돌을 해결하는 데 사용되는 종속성, 컴파일 종속성 및 버전 정보 목록이 포함됩니다. 이 파일에 대한 자세한 내용은 [GitHub에서 런타임 구성 파일](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)을 참조하세요.
 
 `-d|--diagnostics`
 
@@ -131,6 +150,12 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
  `0`으로 설정된 경우 부 버전 롤포워드를 사용하지 않도록 설정합니다. 자세한 내용은 [롤포워드](../whats-new/dotnet-core-2-1.md#roll-forward)를 참조하세요.
 
+`--runtimeconfig`
+
+*runtimeconfig.json* 파일의 경로입니다.
+
+*runtimeconfig.json* 파일은 런타임 구성 설정을 포함하는 구성 파일입니다. 자세한 내용은 [GitHub에서 런타임 구성 파일](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)을 참조하세요.
+
 `-v|--verbosity <LEVEL>`
 
 명령의 세부 정보 표시 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다. 모든 명령에서 지원되지 않습니다. 이 옵션을 사용할 수 있는지 확인하려면 특정 명령 페이지를 참조하세요.
@@ -144,6 +169,12 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 `--additionalprobingpath <PATH>`
 
 검색 정책 및 검색할 어셈블리를 포함하는 경로입니다.
+
+`--depsfile`
+
+*deps.json* 파일의 경로입니다.
+
+*deps.json* 파일에는 어셈블리 충돌을 해결하는 데 사용되는 종속성, 컴파일 종속성 및 버전 정보 목록이 포함됩니다. 이 파일에 대한 자세한 내용은 [GitHub에서 런타임 구성 파일](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)을 참조하세요.
 
 `-d|--diagnostics`
 
@@ -160,6 +191,12 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 `--info`
 
 .NET Core 설치 및 머신 환경(예: 현재 운영 체제)에 대한 자세한 정보를 인쇄하고 .NET Core 버전의 SHA를 커밋합니다.
+
+`--runtimeconfig`
+
+*runtimeconfig.json* 파일의 경로입니다.
+
+*runtimeconfig.json* 파일은 런타임 구성 설정을 포함하는 구성 파일입니다. 자세한 내용은 [GitHub에서 런타임 구성 파일](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)을 참조하세요.
 
 `-v|--verbosity <LEVEL>`
 
@@ -355,3 +392,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 .NET Core 도구 사용에 대한 데이터를 수집하여 Microsoft에 전송할지 여부를 지정합니다. 원격 분석 기능을 옵트아웃하려면 `true`로 설정합니다(값 `true`, `1` 또는 `yes`가 허용됨). 이외의 경우 원격 분석 기능을 옵트인하려면 `false`로 설정합니다(`false`, `0` 또는 `no`가 허용됨). 설정하지 않으면 기본적으로 `false`이고 원격 분석 기능은 활성화됩니다.
 
 ---
+
+## <a name="see-also"></a>참고 항목
+
+- [런타임 구성 파일](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)

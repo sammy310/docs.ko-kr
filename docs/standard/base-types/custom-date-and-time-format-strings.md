@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4d7cd61a771f1c9658b5bc98ec85259da1c77f9
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 9a8f36016b19583a06118edc906cf60a82be32f8
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268235"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133739"
 ---
 # <a name="custom-date-and-time-format-strings"></a>사용자 지정 날짜 및 시간 서식 문자열
 
 날짜 및 시간 형식 문자열은 형식 지정 작업에서 생성되는 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 값의 텍스트 표현을 정의합니다. 또한 문자열을 날짜 및 시간으로 성공적으로 변환하기 위해 구문 분석 작업에 필요한 날짜 및 시간 값의 표현을 정의할 수 있습니다. 사용자 지정 형식 문자열은 하나 이상의 사용자 지정 날짜 및 시간 형식 지정자로 구성됩니다. [표준 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)이 아닌 문자열은 사용자 지정 날짜 및 시간 형식 문자열로 해석됩니다.
 
 > [!TIP]
-> 서식 문자열을 숫자 또는 날짜 및 시간 값에 적용할 수 있도록 지원하고 결과 문자열을 표시하는 애플리케이션인 [서식 유틸리티](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)를 다운로드할 수 있습니다.
+> 서식 문자열을 숫자 또는 날짜 및 시간 값에 적용할 수 있도록 지원하고 결과 문자열을 표시하는 .NET Core Windows Forms 애플리케이션인 **서식 유틸리티**를 다운로드할 수 있습니다. [C#](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs) 및 [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)의 소스 코드를 사용할 수 있습니다.
 
 사용자 지정 날짜 및 시간 형식 문자열은 <xref:System.DateTime>과 <xref:System.DateTimeOffset> 값 모두에 사용할 수 있습니다.
 
@@ -700,4 +700,5 @@ ms.locfileid: "67268235"
 - <xref:System.IFormatProvider?displayProperty=nameWithType>
 - [형식 서식 지정](../../../docs/standard/base-types/formatting-types.md)
 - [표준 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
-- [샘플: .NET Framework 4 서식 유틸리티](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+- [샘플: .NET Core WinForms 서식 유틸리티(C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)
+- [샘플: .NET Core WinForms 서식 유틸리티(Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)

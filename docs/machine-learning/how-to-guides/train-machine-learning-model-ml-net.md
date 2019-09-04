@@ -1,16 +1,16 @@
 ---
 title: 모델 학습 및 평가
 description: ML.NET을 사용한 기계 학습 모델 빌드, 메트릭 수집 및 성능 측정 방법을 알아봅니다. 기계 학습 모델은 새 데이터를 사용하여 예측을 수행하기 위해 학습 데이터에서 패턴을 식별합니다.
-ms.date: 06/25/2019
+ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 61cdaf693c417d02da95d1d79ab30eb2d30a057b
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 3fb586b218f1769949efc362cacc3957623dd43b
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397637"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169041"
 ---
 # <a name="train-and-evaluate-a-model"></a>모델 학습 및 평가
 
@@ -20,7 +20,7 @@ ML.NET을 사용한 기계 학습 모델 빌드, 메트릭 수집 및 성능 측
 
 기계 학습 모델의 목표는 학습 데이터 안에서 패턴을 식별하는 것입니다. 이러한 패턴은 새 데이터를 사용하여 예측을 수행하는 데 사용됩니다.
 
-다음과 같은 데이터 모델을 가정합니다.
+데이터는 `HousingData` 같은 클래스로 모델링할 수 있습니다.
 
 ```csharp
 public class HousingData
@@ -38,7 +38,7 @@ public class HousingData
 }
 ```
 
-데이터를 [`IDataView`](xref:Microsoft.ML.IDataView)에 로드:
+[`IDataView`](xref:Microsoft.ML.IDataView)로 로드되는 다음 데이터의 경우:
 
 ```csharp
 HousingData[] housingData = new HousingData[]

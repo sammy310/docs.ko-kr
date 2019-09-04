@@ -1,17 +1,17 @@
 ---
 title: ML.NET은 무엇이며 어떻게 작동하나요?
 description: ML.NET은 온라인 또는 오프라인 시나리오에서 .NET 애플리케이션에 기계 학습을 추가할 수 있는 기능을 제공합니다. 이 기능을 사용하면 ML.NET을 사용하기 위해 네트워크에 연결할 필요 없이 애플리케이션에 사용 가능한 데이터를 사용하여 자동 예측할 수 있습니다. 이 문서에서는 ML.NET에서 기계 학습의 기본 사항을 설명합니다.
-ms.date: 07/17/2019
+ms.date: 08/26/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 23e71e86b75854042068b6a68f90cf995749ee58
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: af91819c66a2376f446d0f18537d2f6e718b446e
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331588"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104892"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET은 무엇이며 어떻게 작동하나요?
 
@@ -229,7 +229,7 @@ ML.NET 애플리케이션은 <xref:Microsoft.ML.MLContext> 개체로 시작합�
 
 ML.NET 기계 학습 파이프라인의 핵심에는 [DataView](xref:Microsoft.ML.IDataView) 개체가 있습니다.
 
-파이프라인의 각 변환에는 입력 스키마(변환 시 입력에서 보길 원하는 데이터 이름, 유형 및 크기)와 출력 스키마(변환 후 해당 변환이 생성하는 데이터 이름, 유형 및 크기)가 있습니다. 
+파이프라인의 각 변환에는 입력 스키마(변환 시 입력에서 보길 원하는 데이터 이름, 유형 및 크기)와 출력 스키마(변환 후 해당 변환이 생성하는 데이터 이름, 유형 및 크기)가 있습니다. 다음 문서에서는 [IDataView 인터페이스 및 관련 형식 시스템](https://xadupre.github.io/machinelearningext/mlnetdocs/idataviewtypesystem.html)에 대한 자세한 설명을 제공합니다.
 
 파이프라인에서 하나의 변환으로 인한 출력 스키마가 다음 변환의 입력 스키마와 일치하지 않는 경우 ML.NET은 예외를 throw합니다.
 

@@ -1,8 +1,8 @@
 ---
-title: .NET Framework의 리플렉션
+title: .NET에서의 리플렉션
 ms.date: 03/30/2017
 helpviewer_keywords:
-- assemblies [.NET Framework], reflection
+- assemblies [.NET], reflection
 - EventInfo class, reflection
 - common language runtime, reflection
 - FieldInfo class, reflection
@@ -23,14 +23,14 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8d34c5386d0ede578fec097279e9de135f4b6cc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 56c3b536954118b80db2ae7f2f0d0ffdc74bac68
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940026"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133752"
 ---
-# <a name="reflection-in-the-net-framework"></a>.NET Framework의 리플렉션
+# <a name="reflection-in-net"></a>.NET에서의 리플렉션
 <xref:System.Reflection> 네임스페이스의 클래스와 <xref:System.Type?displayProperty=nameWithType>을 함께 사용하여 로드된 [어셈블리](../app-domains/assemblies-in-the-common-language-runtime.md) 및 어셈블리 내에 정의된 형식(예: [클래스](../../standard/base-types/common-type-system.md#classes), [인터페이스](../../standard/base-types/common-type-system.md#interfaces), [값 형식](../../csharp/language-reference/keywords/value-types.md))에 대한 정보를 가져올 수 있습니다. 리플렉션을 사용하여 런타임에 형식 인스턴스를 만들고 이 인스턴스를 호출 및 액세스할 수도 있습니다. 리플렉션의 특정 측면에 대한 항목은 이 개요의 끝부분에서 [관련 항목](#related_topics)을 참조하세요.
   
  [공용 언어 런타임](../../standard/clr.md) 로더는 같은 애플리케이션 범위가 포함된 개체 주위의 경계를 구성하는 [애플리케이션 도메인](../../../docs/framework/app-domains/application-domains.md)을 관리합니다. 이 관리에는 각 어셈블리를 적절한 애플리케이션 도메인으로 로드하는 작업과 각 어셈블리 내에서 형식 계층 구조의 메모리 레이아웃을 제어하는 작업이 포함됩니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "69940026"
 ## <a name="runtime-types-in-reflection"></a>리플렉션의 런타임 형식  
  리플렉션은 형식, 멤버, 매개 변수, 기타 코드 엔터티를 나타내는 <xref:System.Type> 및 <xref:System.Reflection.MethodInfo>와 같은 클래스를 제공합니다. 하지만 리플렉션을 사용할 때 이들 클래스를 직접 사용하지 않습니다. 이들 클래스는 대부분 추상 클래스입니다(Visual Basic의 `MustInherit`). 대신에 CLR(공용 언어 런타임)에서 제공된 형식을 사용합니다.  
   
- 예를 들어 C# `typeof` 연산자(Visual Basic의 `GetType`)를 사용하여 <xref:System.Type> 개체를 가져오면 개체가 실제로 `RuntimeType`입니다. `RuntimeType`는 <xref:System.Type>에서 파생되고 모든 추상 메서드의 구현을 제공합니다.  
+ 예를 들어 C# `typeof` 연산자(Visual Basic의 `GetType`)를 사용하여 <xref:System.Type> 개체를 가져오면 개체가 실제로 `RuntimeType`입니다. `RuntimeType`은 <xref:System.Type>에서 파생되고 모든 추상 메서드의 구현을 제공합니다.  
   
  이들 런타임 클래스는 `internal`(Visual Basic의 `Friend`)입니다. 이들 클래스의 동작은 기본 클래스 설명서에서 설명되므로 이들 클래스는 기본 클래스와 별도로 설명되지 않습니다.  
   
