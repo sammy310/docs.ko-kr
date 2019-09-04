@@ -2,30 +2,30 @@
 title: 삽입, 업데이트 및 삭제 작업을 사용자 지정
 ms.date: 03/30/2017
 ms.assetid: 07eef055-8f6c-414d-850e-d323ff946cd0
-ms.openlocfilehash: f75f4b4caf6b72076a83bde2f2c659aab4c9707d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ed3de95a8224f0b4d8f3d5d913274417a6879942
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912572"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247607"
 ---
-# <a name="customizing-insert-update-and-delete-operations"></a><span data-ttu-id="cb1ea-102">삽입, 업데이트 및 삭제 작업을 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="cb1ea-102">Customizing Insert, Update, and Delete Operations</span></span>
-<span data-ttu-id="cb1ea-103">기본적으로 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 동적 SQL을 생성하여 삽입, 읽기, 업데이트 및 삭제 작업을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="cb1ea-103">By default, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] generates dynamic SQL to implement insert, read, update, and delete operations.</span></span> <span data-ttu-id="cb1ea-104">그러나 실제로는 대개 비즈니스 요구에 맞게 애플리케이션을 사용자 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="cb1ea-104">In practice, however, you typically customize your application to suit your business needs.</span></span>  
+# <a name="customizing-insert-update-and-delete-operations"></a><span data-ttu-id="8b689-102">삽입, 업데이트 및 삭제 작업을 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="8b689-102">Customizing Insert, Update, and Delete Operations</span></span>
+<span data-ttu-id="8b689-103">기본적으로 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 동적 SQL을 생성하여 삽입, 읽기, 업데이트 및 삭제 작업을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="8b689-103">By default, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] generates dynamic SQL to implement insert, read, update, and delete operations.</span></span> <span data-ttu-id="8b689-104">그러나 실제로는 대개 비즈니스 요구에 맞게 애플리케이션을 사용자 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="8b689-104">In practice, however, you typically customize your application to suit your business needs.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="cb1ea-105">Visual Studio를 사용 하는 경우 개체 관계형 디자이너를 사용 하 여 삽입, 업데이트 및 삭제 작업을 사용자 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb1ea-105">If you are using Visual Studio, you can use the Object Relational Designer to customize insert, update, and delete actions.</span></span>  
+> <span data-ttu-id="8b689-105">Visual Studio를 사용 하는 경우 개체 관계형 디자이너를 사용 하 여 삽입, 업데이트 및 삭제 작업을 사용자 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8b689-105">If you are using Visual Studio, you can use the Object Relational Designer to customize insert, update, and delete actions.</span></span>  
   
- <span data-ttu-id="cb1ea-106">이 항목의 단원에서는 사용자 애플리케이션에서 삽입, 읽기, 업데이트, 삭제 작업을 사용자 지정하도록 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 제공하는 기술을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="cb1ea-106">This section of topics describes the techniques that [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides for customizing insert, read, update, and delete operations in your application.</span></span>  
+ <span data-ttu-id="8b689-106">이 항목의 단원에서는 사용자 애플리케이션에서 삽입, 읽기, 업데이트, 삭제 작업을 사용자 지정하도록 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 제공하는 기술을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="8b689-106">This section of topics describes the techniques that [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides for customizing insert, read, update, and delete operations in your application.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="cb1ea-107">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="cb1ea-107">In This Section</span></span>  
- [<span data-ttu-id="cb1ea-108">작업 사용자 지정: 개요</span><span class="sxs-lookup"><span data-stu-id="cb1ea-108">Customizing Operations: Overview</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-overview.md)  
- <span data-ttu-id="cb1ea-109">삽입, 읽기, 업데이트 및 삭제 작업을 사용자 지정하도록 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 제공하는 다양한 기술을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="cb1ea-109">Describes the various techniques [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides for customizing insert, read, update, and delete operations.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="8b689-107">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="8b689-107">In This Section</span></span>  
+ [<span data-ttu-id="8b689-108">작업 사용자 지정: 개요</span><span class="sxs-lookup"><span data-stu-id="8b689-108">Customizing Operations: Overview</span></span>](customizing-operations-overview.md)  
+ <span data-ttu-id="8b689-109">삽입, 읽기, 업데이트 및 삭제 작업을 사용자 지정하도록 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 제공하는 다양한 기술을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="8b689-109">Describes the various techniques [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides for customizing insert, read, update, and delete operations.</span></span>  
   
- [<span data-ttu-id="cb1ea-110">삽입, 업데이트 및 삭제 작업</span><span class="sxs-lookup"><span data-stu-id="cb1ea-110">Insert, Update, and Delete Operations</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)  
- <span data-ttu-id="cb1ea-111">데이터베이스 데이터 조작을 위한 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 기본 프로세스를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="cb1ea-111">Describes the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] default processes for manipulating database data.</span></span>  
+ [<span data-ttu-id="8b689-110">삽입, 업데이트 및 삭제 작업</span><span class="sxs-lookup"><span data-stu-id="8b689-110">Insert, Update, and Delete Operations</span></span>](insert-update-and-delete-operations.md)  
+ <span data-ttu-id="8b689-111">데이터베이스 데이터 조작을 위한 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 기본 프로세스를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="8b689-111">Describes the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] default processes for manipulating database data.</span></span>  
   
- [<span data-ttu-id="cb1ea-112">기본 동작 재정의에서 개발자의 책임</span><span class="sxs-lookup"><span data-stu-id="cb1ea-112">Responsibilities of the Developer In Overriding Default Behavior</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)  
- <span data-ttu-id="cb1ea-113">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 적용되지 않는 요구 사항 구현에 있어 개발자의 역할을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="cb1ea-113">Describes the role of the developer in implementing requirements not enforced by [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>  
+ [<span data-ttu-id="8b689-112">기본 동작 재정의에서 개발자의 책임</span><span class="sxs-lookup"><span data-stu-id="8b689-112">Responsibilities of the Developer In Overriding Default Behavior</span></span>](responsibilities-of-the-developer-in-overriding-default-behavior.md)  
+ <span data-ttu-id="8b689-113">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 적용되지 않는 요구 사항 구현에 있어 개발자의 역할을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="8b689-113">Describes the role of the developer in implementing requirements not enforced by [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>  
   
- [<span data-ttu-id="cb1ea-114">Partial 메서드를 사용하여 비즈니스 논리 추가</span><span class="sxs-lookup"><span data-stu-id="cb1ea-114">Adding Business Logic By Using Partial Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)  
- <span data-ttu-id="cb1ea-115">부분 메서드(Partial Method)를 사용하여 자동 생성되는 메서드를 재정의하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="cb1ea-115">Describes how to use partial methods to override autogenerated methods.</span></span>
+ [<span data-ttu-id="8b689-114">Partial 메서드를 사용하여 비즈니스 논리 추가</span><span class="sxs-lookup"><span data-stu-id="8b689-114">Adding Business Logic By Using Partial Methods</span></span>](adding-business-logic-by-using-partial-methods.md)  
+ <span data-ttu-id="8b689-115">부분 메서드(Partial Method)를 사용하여 자동 생성되는 메서드를 재정의하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="8b689-115">Describes how to use partial methods to override autogenerated methods.</span></span>
