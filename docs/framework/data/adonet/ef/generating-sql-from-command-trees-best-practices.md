@@ -2,12 +2,12 @@
 title: 명령 트리에서 SQL 생성 - 최선의 방법
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 6ac46b577f071bca6c79e23b8b77f9b267ac879b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 366e27f8c8a04c5d2507ab37459ad6d5abc255ae
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606669"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251569"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>명령 트리에서 SQL 생성 - 최선의 방법
 
@@ -125,7 +125,7 @@ ON b.y = d.z
 
 ## <a name="join-alias-flattening"></a>조인 별칭 평면화
 
-출력 명령 트리의 다른 모든 관계식과 달리 DbJoinExpression은 각각 입력 중 하나에 해당하는 두 열로 구성된 행인 결과 형식을 출력합니다. 조인에서 스칼라 속성에 액세스 하는 DbPropertyExpression 빌드될 때 또 다른 DbPropertyExpression을 통해 것입니다.
+출력 명령 트리의 다른 모든 관계식과 달리 DbJoinExpression은 각각 입력 중 하나에 해당하는 두 열로 구성된 행인 결과 형식을 출력합니다. DbPropertyExpression을 작성 하 여 조인에서 시작 된 스칼라 속성에 액세스 하는 경우에는 다른 DbPropertyExpression을 사용 합니다.
 
 예로 예제 2의 "a.b.y"와 예제 3의 "b.c.y"를 들 수 있습니다. 그러나 해당 SQL 문에서 이들은 "b.y"로 참조됩니다. 이렇게 별칭이 다시 지정되는 것을 조인 별칭 평면화라고 합니다.
 
@@ -137,7 +137,7 @@ ON b.y = d.z
 
 ## <a name="avoid-select-"></a>SELECT * 사용 금지
 
-기본 테이블에서 선택하기 위해 `SELECT *`를 사용하지 마세요. 저장소 모델에는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 응용 프로그램에는 데이터베이스 테이블에 있는 열의 하위 집합만 포함할 수 있습니다. 이 경우 `SELECT *`는 잘못된 결과를 생성할 수 있습니다. 대신, 참여하는 식의 결과 형식에서 열 이름을 사용하여 참여하는 모든 열을 지정해야 합니다.
+기본 테이블에서 선택하기 위해 `SELECT *`를 사용하지 마세요. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 응용 프로그램의 저장소 모델에는 데이터베이스 테이블에 있는 열의 하위 집합만 포함 될 수 있습니다. 이 경우 `SELECT *`는 잘못된 결과를 생성할 수 있습니다. 대신, 참여하는 식의 결과 형식에서 열 이름을 사용하여 참여하는 모든 열을 지정해야 합니다.
 
 ## <a name="reuse-of-expressions"></a>식의 재사용
 
@@ -145,8 +145,8 @@ ON b.y = d.z
 
 ## <a name="mapping-primitive-types"></a>기본 형식 매핑
 
-개념적(EDM) 형식을 공급자 형식에 매핑하는 경우 가능한 모든 값이 들어가도록 가장 넓은 형식(Int32)에 매핑해야 합니다. 또한 BLOB 형식과 같이 많은 작업에 사용할 수 없는 형식에 대 한 매핑 방지 (예를 들어 `ntext` SQL Server에서).
+개념적(EDM) 형식을 공급자 형식에 매핑하는 경우 가능한 모든 값이 들어가도록 가장 넓은 형식(Int32)에 매핑해야 합니다. 또한 BLOB 형식과 같은 많은 작업에 사용할 수 없는 형식 (예: `ntext` SQL Server)에는 매핑되지 않습니다.
 
 ## <a name="see-also"></a>참고자료
 
-- [SQL 생성](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+- [SQL 생성](sql-generation.md)

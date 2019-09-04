@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3a348ac8da855e458b6208c51f9c51b48da3134
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 575d44ad9ecf445ba5d4b7fbe47032127ccb33ae
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927443"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252728"
 ---
 # <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion > 요소
 문자열 비교를 수행할 때 런타임에서 레거시 정렬 순서를 사용하도록 지정합니다.  
   
- \<configuration>  
-\<runtime>  
-\<CompatSortNLSVersion > 요소  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<런타임 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<CompatSortNLSVersion>**  
   
 ## <a name="syntax"></a>구문  
   

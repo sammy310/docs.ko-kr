@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: ae8d5a7e-e7f7-47f7-98d9-455cc243a322
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b535ba67ab05dabd7e0a23e79692bbf69e25b55
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 7ffb297cc38f20917e720b216607e9ccfc966866
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663915"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252836"
 ---
 # <a name="appdomainmanagertype-element"></a>\<appDomainManagerType > 요소
 기본 애플리케이션 도메인용 애플리케이션 도메인 관리자로 사용되는 유형을 지정합니다.  
   
- \<configuration>  
-\<runtime>  
-\<appDomainManagerType>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<런타임 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<appDomainManagerType>**  
   
 ## <a name="syntax"></a>구문  
   

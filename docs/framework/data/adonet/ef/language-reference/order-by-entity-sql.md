@@ -2,12 +2,12 @@
 title: ORDER BY(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
-ms.openlocfilehash: e691816ec3d0a66c9f43f9a13cffa26b755b3c39
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f3310274766ff3619604e30bfb5f5ca437cb1acd
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641772"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249759"
 ---
 # <a name="order-by-entity-sql"></a>ORDER BY(Entity SQL)
 SELECT 문에서 반환되는 개체에 적용하는 정렬 순서를 지정합니다.  
@@ -33,7 +33,7 @@ SELECT 문에서 반환되는 개체에 적용하는 정렬 순서를 지정합�
  `collation_name`에 지정된 데이터 정렬에 따라 ORDER BY 연산을 수행해야 함을 지정합니다. COLLATE는 문자열 식에만 적용됩니다.  
   
  ASC  
- 지정된 속성에서 값이 오름차순으로, 즉 가장 작은 값에서 가장 큰 값으로 정렬되도록 지정합니다. 이 값이 기본값입니다.  
+ 지정된 속성에서 값이 오름차순으로, 즉 가장 작은 값에서 가장 큰 값으로 정렬되도록 지정합니다. 기본값입니다.  
   
  DESC  
  지정된 속성에서 값이 내림차순으로, 즉 가장 큰 값에서 가장 작은 값으로 정렬되도록 지정합니다.  
@@ -95,7 +95,7 @@ ORDER BY ...
   
 - ROW  
   
-- VALUE  
+- 값  
   
 ## <a name="ordering-nested-queries"></a>중첩 쿼리 순서  
  Entity Framework에서 중첩된 식은 쿼리 내 임의의 위치에 올 수 있습니다. 중첩 쿼리의 순서는 유지되지 않습니다.  
@@ -118,7 +118,7 @@ SELECT C2.FirstName, C2.LastName
 ## <a name="example"></a>예제  
  다음 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 쿼리는 ORDER BY 연산자를 사용하여 SELECT 문에서 반환되는 개체에 적용하는 정렬 순서를 지정합니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  
   
-1. 절차에 따라 [방법: StructuralType 결과 반환 하는 쿼리 실행](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)합니다.  
+1. [방법: StructuralType 결과](../how-to-execute-a-query-that-returns-structuraltype-results.md)를 반환 하는 쿼리를 실행 합니다.  
   
 2. 다음 쿼리를 `ExecuteStructuralTypeQuery` 메서드에 인수로 전달합니다.  
   
@@ -126,8 +126,8 @@ SELECT C2.FirstName, C2.LastName
   
 ## <a name="see-also"></a>참고자료
 
-- [쿼리 식](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
-- [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)
-- [LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)
-- [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)
+- [쿼리 식](query-expressions-entity-sql.md)
+- [엔터티 SQL 참조](entity-sql-reference.md)
+- [SKIP](skip-entity-sql.md)
+- [LIMIT](limit-entity-sql.md)
+- [TOP](top-entity-sql.md)

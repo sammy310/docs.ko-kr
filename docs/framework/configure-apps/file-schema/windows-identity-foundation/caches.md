@@ -3,19 +3,20 @@ title: <caches>
 ms.date: 03/30/2017
 ms.assetid: 4651091b-3a20-40d8-b293-4408c0710143
 author: BrucePerlerMS
-ms.openlocfilehash: 5ad75ae18772d6e7c724f2cbf40c1e3083d5c345
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 80f435b52fd7657c5cd44538028d6080beffe0b5
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941973"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252158"
 ---
 # <a name="caches"></a>\<caches>
 세션 토큰 및 토큰 재생 검색에 사용 되는 캐시를 등록 합니다.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<caches>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.identitymodel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<캐시 >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,7 +37,7 @@ ms.locfileid: "69941973"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[\<sessionSecurityTokenCache>](sessionsecuritytokencache.md)|서비스 또는 보안 토큰 처리기 컬렉션을 사용 하 여 세션 토큰에 대 한 캐시를 등록 합니다.|  
 |[\<tokenReplayCache>](tokenreplaycache.md)|서비스 또는 보안 토큰 처리기 컬렉션을 사용 하 여 토큰 재생 캐시를 등록 합니다.|  

@@ -3,19 +3,20 @@ title: <certificateValidation>
 ms.date: 03/30/2017
 ms.assetid: 6c54c704-b55e-4631-88ff-4d4a5621554c
 author: BrucePerlerMS
-ms.openlocfilehash: 8185153eb02c5794b0f6ac02a6837806f2073c07
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c2d1a5d36cb5616ef06eedc093dd70a68a164a81
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941914"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252129"
 ---
 # <a name="certificatevalidation"></a>\<certificateValidation>
 토큰 처리기에서 인증서의 유효성을 검사 하는 데 사용 하는 설정을 제어 합니다. 이러한 설정은 고유한 유효성 검사기를 사용 하 여 특정 처리기를 구성 하는 경우 재정의 됩니다.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<certificateValidation>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.identitymodel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<certificateValidation >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,7 +45,7 @@ ms.locfileid: "69941914"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[\<certificateValidator>](certificatevalidator.md)|인증서 유효성 검사에 대 한 사용자 지정 형식을 지정 합니다. 이 형식은 `certificateValidationMode` [ \<certificatevalidation >](certificatevalidation.md) 요소의 특성이 "Custom"으로 설정 된 경우에만 사용 됩니다.|  
   

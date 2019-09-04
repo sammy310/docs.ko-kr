@@ -1,15 +1,15 @@
 ---
-title: '&amp;&amp; (및) (Entity SQL)'
+title: '&amp;&amp;하거나 (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: e7d24213-471d-4807-b85e-570375df89b5
-ms.openlocfilehash: eab05f7454f8ebc88ed29030503bfa96d0c70756
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 02e404b73e5a9a9c3963e2d2b58ab7592afabc13
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61605751"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251311"
 ---
-# <a name="ampamp-and-entity-sql"></a>&amp;&amp; (및) (Entity SQL)
+# <a name="ampamp-and-entity-sql"></a>&amp;&amp;하거나 (Entity SQL)
 두 식이 `true` 이면 `true`를 반환하고, 그렇지 않으면 `false` 또는 `NULL`을 반환합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -38,7 +38,7 @@ boolean_expression && boolean_expression
 ## <a name="example"></a>예제  
  다음 Entity SQL 쿼리에서는 AND 연산자를 사용하는 방법을 보여 줍니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  
   
-1. 절차에 따라 [방법: StructuralType 결과 반환 하는 쿼리 실행](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)합니다.  
+1. [방법: StructuralType 결과](../how-to-execute-a-query-that-returns-structuraltype-results.md)를 반환 하는 쿼리를 실행 합니다.  
   
 2. 다음 쿼리를 `ExecuteStructuralTypeQuery` 메서드에 인수로 전달합니다.  
   
@@ -46,4 +46,4 @@ boolean_expression && boolean_expression
   
 ## <a name="see-also"></a>참고자료
 
-- [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [엔터티 SQL 참조](entity-sql-reference.md)

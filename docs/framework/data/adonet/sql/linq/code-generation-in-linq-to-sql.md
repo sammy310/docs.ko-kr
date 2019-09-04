@@ -2,12 +2,12 @@
 title: LINQ to SQL에서 코드 생성
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 12470a8c14e0a41eb6e06fc5d4ba63c12924330b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 551322637e6e04b9be7d558c51e063fead7f84f4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939172"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247967"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>LINQ to SQL에서 코드 생성
 개체 관계형 디자이너 또는 SQLMetal 명령줄 도구를 사용 하 여 데이터베이스를 나타내는 코드를 생성할 수 있습니다. 두 경우 모두 다음과 같은 세 단계로 코드가 생성됩니다.  
@@ -18,7 +18,7 @@ ms.locfileid: "69939172"
   
 3. 유효성 검사 오류가 없으면 파일이 코드 생성기에 전달됩니다.  
   
- 자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요. Visual Studio를 사용 하는 개발자는 개체 관계형 디자이너을 사용 하 여 코드를 생성할 수도 있습니다. [Visual Studio의 LINQ to SQL 도구를](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)참조 하세요.  
+ 자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요. Visual Studio를 사용 하는 개발자는 개체 관계형 디자이너을 사용 하 여 코드를 생성할 수도 있습니다. [Visual Studio의 LINQ to SQL 도구를](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)참조 하세요.  
   
 ## <a name="dbml-extractor"></a>DBML 추출기  
  DBML 추출기는 데이터베이스 메타데이터를 입력으로 사용하여 DMBL 파일을 출력하는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 구성 요소입니다.  
@@ -29,10 +29,10 @@ ms.locfileid: "69939172"
 ## <a name="xml-schema-definition-file"></a>XML 스키마 정의 파일  
  DBML 파일은 다음 XSD 스키마 정의 파일에 대해 유효해야 합니다.  
   
- 이 스키마 정의 파일은 외부 매핑 파일의 유효성을 검사하는 데 사용하는 스키마 정의 파일과 다릅니다. 자세한 내용은 [외부 매핑](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)을 참조 하세요.  
+ 이 스키마 정의 파일은 외부 매핑 파일의 유효성을 검사하는 데 사용하는 스키마 정의 파일과 다릅니다. 자세한 내용은 [외부 매핑](external-mapping.md)을 참조 하세요.  
   
 > [!NOTE]
-> 또한 Visual Studio 사용자는 XML 스키마 대화 상자에서이 XSD 파일을 "DbmlSchema .xsd"로 찾습니다. DBML 파일 [의 유효성을 검사 하는 데 XSD 파일을 제대로 사용 하려면 방법: DBML 및 외부 매핑 파일](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)의 유효성을 검사 합니다.  
+> 또한 Visual Studio 사용자는 XML 스키마 대화 상자에서이 XSD 파일을 "DbmlSchema .xsd"로 찾습니다. DBML 파일 [의 유효성을 검사 하는 데 XSD 파일을 제대로 사용 하려면 방법: DBML 및 외부 매핑 파일](how-to-validate-dbml-and-external-mapping-files.md)의 유효성을 검사 합니다.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -243,7 +243,7 @@ elementFormDefault="qualified" >
 ```  
   
 ## <a name="sample-dbml-file"></a>샘플 DBML 파일  
- 다음 코드에서는 Northwind 샘플 데이터베이스에서 만든 DBML 파일의 일부를 보여 줍니다. **/Xml** 옵션과 함께 SQLMetal을 사용 하 여 전체 파일을 생성할 수 있습니다. 자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요.  
+ 다음 코드에서는 Northwind 샘플 데이터베이스에서 만든 DBML 파일의 일부를 보여 줍니다. **/Xml** 옵션과 함께 SQLMetal을 사용 하 여 전체 파일을 생성할 수 있습니다. 자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -271,8 +271,8 @@ elementFormDefault="qualified" >
   
 ## <a name="see-also"></a>참고자료
 
-- [배경 정보](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [외부 매핑](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [방법: 개체 모델을 외부 파일로 생성](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
-- [샘플 데이터베이스 다운로드](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [참조](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [배경 정보](background-information.md)
+- [외부 매핑](external-mapping.md)
+- [방법: 개체 모델을 외부 파일로 생성](how-to-generate-the-object-model-as-an-external-file.md)
+- [샘플 데이터베이스 다운로드](downloading-sample-databases.md)
+- [참조](reference.md)

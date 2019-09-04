@@ -3,20 +3,21 @@ title: <certificateReference>
 ms.date: 03/30/2017
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
 author: BrucePerlerMS
-ms.openlocfilehash: da8ea128466457409334cd0b4ee3246a923f969a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 782ca3344774b8412a18e3cf13bff5f969751ea3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941925"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252150"
 ---
 # <a name="certificatereference"></a>\<certificateReference>
 인증서 저장소에서 x.509 인증서를 찾고 유효성을 검사 하는 데 사용 되는 설정을 지정 합니다.  
   
- \<system.identityModel.services>  
-\<federationConfiguration>  
-\<serviceCertificate>  
-\<certificateReference>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.identitymodel >** ](system-identitymodel-services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<federationConfiguration >** ](federationconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceCertificate >** ](servicecertificate.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<certificateReference >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,7 +42,7 @@ ms.locfileid: "69941925"
   
 ### <a name="attributes"></a>특성  
   
-|특성|Description|  
+|특성|설명|  
 |---------------|-----------------|  
 |storeName|X.509 인증서 저장소의 이름입니다. 기본값은 "My"입니다. 선택 사항입니다.|  
 |storeLocation|X.509 인증서 저장소의 위치를 지정 하는 값입니다.<xref:System.Security.Cryptography.X509Certificates.StoreLocation> 기본값은 "LocalMachine"입니다. 선택 사항입니다.|  

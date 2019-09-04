@@ -9,21 +9,21 @@ helpviewer_keywords:
 - container tags, <assemblyIdentity> element
 - assemblyIdentity element
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
-ms.openlocfilehash: 815e1c26a328d986f91992a1e67e438a563ffea6
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 7cce12f6fb4b957d740cd590bd84851fa16a117d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663895"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252793"
 ---
 # <a name="assemblyidentity-element-for-runtime"></a>\<런타임 >에 대 \<한 assemblyIdentity > 요소
 어셈블리에 대 한 식별 정보를 포함 합니다.  
   
- \<configuration>  
-\<runtime>  
-\<assemblyBinding>  
-\<dependentAssembly>  
-\<assemblyIdentity>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<런타임 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dependentAssembly >** ](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<assemblyIdentity>**  
   
 ## <a name="syntax"></a>구문  
   

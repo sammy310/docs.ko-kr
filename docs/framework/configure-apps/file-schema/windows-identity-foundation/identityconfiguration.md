@@ -3,19 +3,20 @@ title: <identityConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 1db76253-07da-447b-9e7a-3705c7228cf4
 author: BrucePerlerMS
-ms.openlocfilehash: 9f5e0c5ded3d750a1102492c7a506e6d5643b2d4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0fa8c574fd5663606cf081f1000a24884306edfe
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942745"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251991"
 ---
 # <a name="identityconfiguration"></a>\<identityConfiguration>
 
 서비스 수준 id 설정을 지정 합니다.
 
- \<system.identityModel>\
-\<identityConfiguration>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.identitymodel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<identityConfiguration >**  
 
 ## <a name="syntax"></a>구문
 
@@ -35,7 +36,7 @@ ms.locfileid: "69942745"
 
 ### <a name="attributes"></a>특성
 
-|특성|설명|
+|특성|Description|
 |---------------|-----------------|
 |name|Id 구성 섹션의 이름입니다. 이 이름을 사용 하 여 특정 구성 섹션을 참조할 수 있습니다. 특성을 `name` 지정 하지 않으면 섹션에서 기본 구성을 정의 합니다. 기본 구성은 항상 수동 페더레이션 시나리오에 사용 됩니다. 자세한 내용은 [ \<federationConfiguration >](federationconfiguration.md) 요소를 참조 하세요.|
 |saveBootstrapContext|부트스트랩 토큰이 세션 토큰에 포함 되어야 하는지 여부를 지정 합니다. `saveBootstrapContext` [SecurityTokenHandlerConfiguration > 요소에 대 한 특성을 설정 하 여 토큰 처리기 컬렉션에서 값을 설정할 수도 있습니다. \<](securitytokenhandlerconfiguration.md) 토큰 처리기 컬렉션에 설정 된 값은 서비스에 설정 된 값을 재정의 합니다.|

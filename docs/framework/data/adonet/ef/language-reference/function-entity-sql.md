@@ -2,12 +2,12 @@
 title: 함수(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 0bb88992-37ed-4991-ace5-55be612a2c4d
-ms.openlocfilehash: efab5f1abbc5e0c22e404c37dc80dd5aafa09ce1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae8da3985f11a2e9f52852876a21f50a412e3b27
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879608"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250933"
 ---
 # <a name="function-entity-sql"></a>함수(Entity SQL)
 Entity SQL 쿼리 명령의 범위에서 함수를 정의합니다.  
@@ -44,14 +44,14 @@ FUNCTION function-name
  컬렉션 (< type_definition`>` )  
  지원되는 형식, 행 또는 참조 컬렉션을 반환하는 식입니다.  
   
- REF **(**`data_type`**)**  
+ REF **(** `data_type` **)**  
  엔터티 형식에 대한 참조를 반환하는 식입니다.  
   
- ROW **(**`row_expression`**)**  
- 하나 이상의 값에서 구조적으로 형식화된 익명 레코드를 반환하는 식입니다. 자세한 내용은 [ROW](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md)을 참조하십시오.  
+ ROW **(** `row_expression` **)**  
+ 하나 이상의 값에서 구조적으로 형식화된 익명 레코드를 반환하는 식입니다. 자세한 내용은 [ROW](row-entity-sql.md)을 참조하십시오.  
   
 ## <a name="remarks"></a>설명  
- 함수 시그니처가 다르면 이름이 같은 여러 함수를 인라인으로 선언할 수 있습니다. 자세한 내용은 [Function Overload Resolution](../../../../../../docs/framework/data/adonet/ef/language-reference/function-overload-resolution-entity-sql.md)을 참조하세요.  
+ 함수 시그니처가 다르면 이름이 같은 여러 함수를 인라인으로 선언할 수 있습니다. 자세한 내용은 [Function Overload Resolution](function-overload-resolution-entity-sql.md)을 참조하세요.  
   
  인라인 함수는 Entity SQL 명령에서 정의된 이후에야 해당 명령에서 호출될 수 있습니다. 그러나 인라인 함수는 호출된 함수가 정의되기 이전 또는 이후에 다른 인라인 함수 내에서 호출될 수 있습니다. 다음 예제에서는 함수 B가 정의되기 전에 함수 A에서 함수 B를 호출합니다.  
   
@@ -61,9 +61,9 @@ FUNCTION function-name
   
  `A()`  
   
- 자세한 내용은 [방법: 사용자 정의 함수 호출](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))합니다.  
+ 자세한 내용은 [방법: 사용자 정의 함수](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))를 호출 합니다.  
   
- 함수는 모델 자체에서도 선언할 수 있습니다. 모델에서 선언된 함수는 명령에서 인라인으로 선언된 함수와 동일한 방식으로 실행됩니다. 자세한 내용은 [사용자 정의 함수](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)합니다.  
+ 함수는 모델 자체에서도 선언할 수 있습니다. 모델에서 선언된 함수는 명령에서 인라인으로 선언된 함수와 동일한 방식으로 실행됩니다. 자세한 내용은 [사용자 정의 함수](user-defined-functions-entity-sql.md)를 참조 하세요.  
   
 ## <a name="example"></a>예제  
  다음 Entity SQL 명령에서는 정수 값을 사용하여 반환된 제품을 필터링하는 `Products` 함수를 정의합니다.  
@@ -77,5 +77,5 @@ FUNCTION function-name
   
 ## <a name="see-also"></a>참고자료
 
-- [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Entity SQL 언어](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+- [엔터티 SQL 참조](entity-sql-reference.md)
+- [Entity SQL 언어](entity-sql-language.md)

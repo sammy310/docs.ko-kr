@@ -2,12 +2,12 @@
 title: Boolean 데이터 형식
 ms.date: 03/30/2017
 ms.assetid: 57f7376b-4b11-4b35-98a9-780382053ceb
-ms.openlocfilehash: f200445d2ba7846f9dc467c7f06bce4225c88865
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9fa3327315593bd54fc51f67bf9964da8d683c5d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964075"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248049"
 ---
 # <a name="boolean-data-types"></a>Boolean 데이터 형식
 부울 연산자는 단락(short-circuiting) 동작이 변환되지 않는 것을 제외하고 CLR(공용 언어 런타임)에서 예상대로 동작합니다. 예를 들어 Visual Basic `AndAlso` 연산자는 `And` 연산자와 같이 동작합니다. C# `&&` 연산자는 `&` 연산자와 같이 동작합니다.  
@@ -25,4 +25,4 @@ ms.locfileid: "69964075"
   
 ## <a name="see-also"></a>참고자료
 
-- [데이터 형식 및 함수](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [데이터 형식 및 함수](data-types-and-functions.md)

@@ -6,20 +6,20 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - <namedCaches> element
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
-ms.openlocfilehash: 9cedd462aa539745ddab844dff158912914cb024
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 4587234ad91fa3b1abbb376bd7ae517d5abea6c3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663577"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252456"
 ---
 # <a name="namedcaches-element-cache-settings"></a>\<namedCaches > 요소 (캐시 설정)
 명명 <xref:System.Runtime.Caching.MemoryCache> 된 인스턴스에 대 한 구성 설정의 컬렉션을 지정 합니다. 합니다 <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A> 하나 이상의 구성 설정의 컬렉션을 참조 하는 속성 `namedCaches` 구성 파일의 요소입니다.  
   
- \<configuration>  
-\< system.runtime.caching>  
-\<memoryCache>  
-\<namedCaches>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<>의 런타임 캐싱**](system-runtime-caching-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<memoryCache >** ](memorycache-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<namedCaches >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,7 +37,7 @@ ms.locfileid: "69663577"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
 |`cacheMemoryLimitMegabytes`|인스턴스를 확장할 <xref:System.Runtime.Caching.MemoryCache> 수 있는 최대 허용 크기 (mb)를 지정 하는 정수 값입니다. 기본값은 0입니다. 즉, <xref:System.Runtime.Caching.MemoryCache> 클래스의 자동 크기 조정 추론은 기본적으로 사용 됩니다.|  
 |`name`|캐시의 이름입니다.|  
@@ -56,7 +56,9 @@ ms.locfileid: "69663577"
   
 |요소|설명|  
 |-------------|-----------------|  
+|[\<구성>](../configuration-element.md)|공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용 하는 모든 구성 파일의 루트 요소를 지정 합니다.|  
 |[\<memoryCache>](memorycache-element-cache-settings.md)|<xref:System.Runtime.Caching.MemoryCache> 클래스를 기반으로 하는 캐시 구성에 사용되는 요소를 정의합니다.|  
+|[\<system.runtime.caching>](system-runtime-caching-element-cache-settings.md)|.NET Framework에 기본 제공 되는 응용 프로그램에서 출력 캐싱을 구현할 수 있는 형식을 포함 합니다.|  
   
 ## <a name="remarks"></a>설명  
  Web.config 파일의 메모리 캐시 구성 섹션 `add`에는 `namedCaches` 컬렉션에 대 한, `remove`및 `clear` 특성을 포함할 수 있습니다. 각 `namedCaches` 항목은 특성에 `name` 의해 고유 하 게 식별 됩니다.  

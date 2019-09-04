@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 643e28217d41e825f0b3a3f4a4f062c30835cae8
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3f638a880aaa21bc41d2575f3609dabae158c1a0
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040659"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252579"
 ---
 # <a name="gcallowverylargeobjects-element"></a>\<Gcallowverylargeobjects> > 요소
 64비트 플랫폼에서 총 크기가 2GB보다 큰 배열을 사용하도록 설정합니다.  
   
- \<configuration > 요소  
-\<런타임 > 요소  
-\<Gcallowverylargeobjects> > 요소  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<런타임 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<gcAllowVeryLargeObjects>**  
   
 ## <a name="syntax"></a>구문  
   

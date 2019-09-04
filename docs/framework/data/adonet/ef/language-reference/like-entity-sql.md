@@ -2,12 +2,12 @@
 title: LIKE(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 58828b812ce374a664e4d232b707f22d5ca438c1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fbe27f6e25c9d69f092a060fa2c3fbf0abc93318
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912280"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250507"
 ---
 # <a name="like-entity-sql"></a>LIKE(Entity SQL)
 특정 문자 `String`이 지정된 패턴과 일치하는지 여부를 결정합니다.  
@@ -39,7 +39,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
   
  다음 표에서는 패턴 `string`의 구문을 설명합니다.  
   
-|와일드카드 문자|설명|예제|  
+|와일드카드 문자|Description|예제|  
 |------------------------|-----------------|-------------|  
 |%|문자 0개 이상으로 이루어진 임의의 `string`입니다.|`title like '%computer%'`제목의 임의의 위치에 단어가 `"computer"` 있는 모든 제목을 찾습니다.|  
 |_(밑줄)|임의의 단일 문자입니다.|`firstname like '_ean'`은 Dean이나 Sean처럼 `"ean`"으로 끝나면서 4문자로 이루어진 이름을 찾습니다.|  
@@ -68,7 +68,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
 ## <a name="example"></a>예제  
  다음 두 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 쿼리에서는 LIKE 및 ESCAPE 연산자를 사용하여 특정 문자열이 지정된 패턴과 일치하는지 여부를 결정합니다. 첫 번째 쿼리는 `Name`이라는 문자로 시작되는 `Down_`을 검색합니다. 이 쿼리에서는 밑줄(`_`)이 와일드카드 문자이므로 ESCAPE 옵션이 사용되었습니다. 이스케이프 옵션을 지정 하지 않으면 쿼리는 단어 `Name` `Down` 다음에 밑줄 문자 이외의 단일 문자로 시작 하는 값을 검색 합니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  
   
-1. [방법: PrimitiveType 결과](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)를 반환 하는 쿼리를 실행 합니다.  
+1. [방법: PrimitiveType 결과](../how-to-execute-a-query-that-returns-primitivetype-results.md)를 반환 하는 쿼리를 실행 합니다.  
   
 2. 다음 쿼리를 `ExecutePrimitiveTypeQuery` 메서드에 인수로 전달합니다.  
   
@@ -76,4 +76,4 @@ match [NOT] LIKE pattern [ESCAPE escape]
   
 ## <a name="see-also"></a>참고자료
 
-- [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [엔터티 SQL 참조](entity-sql-reference.md)

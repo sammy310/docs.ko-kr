@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-ms.openlocfilehash: b47a46f9fd9ef3ef1935fa7a88c2e60fe80db09d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0bebc8d890325ec4ab090470952e11b90d0e37ef
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964134"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248113"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET 및 LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]는 ADO.NET 기술 제품군의 일부입니다. ADO.NET 공급자 모델에서 제공 하는 서비스를 기반으로 합니다. 따라서 기존 ADO.NET 응용 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 프로그램과 코드를 혼합 하 고 현재 ADO.NET 솔루션을로 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]마이그레이션할 수 있습니다. 다음 그림에서는 이 관계를 간략하게 보여 줍니다.  
   
- ![LINQ to SQL 및 ADO.NET](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinq-3.png "DLinq_3")  
+ ![LINQ to SQL 및 ADO.NET](./media/dlinq-3.png "DLinq_3")  
   
 ## <a name="connections"></a>Connections  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 를<xref:System.Data.Linq.DataContext>만들 때 기존 ADO.NET 연결을 제공할 수 있습니다. 쿼리를 포함한 <xref:System.Data.Linq.DataContext>에 대한 모든 작업은 제공된 이 연결을 사용합니다. 연결이 이미 열려 있는 경우 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 사용자의 작업이 끝났을 때 연결을 그대로 둡니다.  
@@ -59,5 +59,5 @@ ms.locfileid: "69964134"
   
 ## <a name="see-also"></a>참고자료
 
-- [배경 정보](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [방법: ADO.NET 명령과 DataContext 사이에 연결 다시 사용](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)
+- [배경 정보](background-information.md)
+- [방법: ADO.NET 명령과 DataContext 사이에 연결 다시 사용](how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)

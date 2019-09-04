@@ -2,21 +2,21 @@
 title: 식별자(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
-ms.openlocfilehash: e514a25dc754b788316cb18b53191e8f838587dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4a8f98a9ea9601e1bf5f178e404f99e4a9160078
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631588"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250713"
 ---
 # <a name="identifiers-entity-sql"></a>식별자(Entity SQL)
-식별자는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서 쿼리 식 별칭, 변수 참조, 개체 속성, 함수 등을 나타내는 데 사용됩니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 두 종류의 식별자를 제공 합니다: 단순 식별자와 따옴표 붙은 식별자입니다.  
+식별자는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서 쿼리 식 별칭, 변수 참조, 개체 속성, 함수 등을 나타내는 데 사용됩니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 간단한 식별자와 따옴표 붙은 식별자의 두 가지 식별자를 제공 합니다.  
   
 ## <a name="simple-identifiers"></a>단순 식별자  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)]의 단순 식별자는 영숫자와 밑줄 문자의 시퀀스입니다. 식별자의 첫 문자는 영문자(a-z 또는 A-Z)여야 합니다.  
   
 ## <a name="quoted-identifiers"></a>따옴표 붙은 식별자  
- 따옴표 붙은 식별자는 대괄호( [] )로 묶인 임의의 문자 시퀀스입니다. 따옴표 붙은 식별자를 사용하면 식별자에 유효하지 않은 문자를 사용하여 식별자를 지정할 수 있습니다. 대괄호 사이 모든 문자를 사용 하면 모든 공백을 포함 하는 식별자의 일부가 됩니다.  
+ 따옴표 붙은 식별자는 대괄호( [] )로 묶인 임의의 문자 시퀀스입니다. 따옴표 붙은 식별자를 사용하면 식별자에 유효하지 않은 문자를 사용하여 식별자를 지정할 수 있습니다. 대괄호 사이의 모든 문자는 모든 공백을 포함 하 여 식별자의 일부가 됩니다.  
   
  따옴표 붙은 식별자는 다음 문자를 포함할 수 없습니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "64631588"
   
  `SELECT t from ts as t WHERE t.[abc]]] == 2`  
   
- 따옴표 붙은 식별자 비교 의미 체계를 참조 하세요 [입력 문자 집합](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)합니다.  
+ 따옴표 붙은 식별자 비교 의미 체계는 [입력 문자 집합](input-character-set-entity-sql.md)을 참조 하세요.  
   
 ## <a name="aliasing-rules"></a>별칭 지정 규칙  
  다음 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 구문을 비롯하여 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 쿼리에서 필요 시 항상 별칭을 지정하는 것이 좋습니다.  
@@ -114,7 +114,7 @@ SELECT 1 AS X, 2 AS X …
 - SELECT 식 내 절의 평가 순서에 따라 이름이 범위에 제공되는 순서가 결정됩니다. FROM 절이 가장 먼저 평가되며 그 다음에는 WHERE 절, GROUP BY 절, HAVING 절, SELECT 절 그리고 마지막으로 ORDER BY 절의 순서입니다.  
   
 ### <a name="aggregate-handling"></a>집계 처리  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 두 가지 형태의 집계가 지원: 컬렉션 기반 집계와 그룹 기반 집계 합니다. 컬렉션 기반 집계는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서 선호하는 구문이며, 그룹 기반 집계는 SQL 호환성을 위해 지원됩니다.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]는 컬렉션 기반 집계와 그룹 기반 집계의 두 가지 집계 형태를 지원 합니다. 컬렉션 기반 집계는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서 선호하는 구문이며, 그룹 기반 집계는 SQL 호환성을 위해 지원됩니다.  
   
  집계를 확인할 때 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 먼저 집계를 컬렉션 기반 집계로 처리하려고 시도합니다. 이 처리에 실패하면 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 다음 예제에서 보여 주는 것처럼 집계 입력을 중첩 집계 참조로 변환하고 새 식을 확인합니다.  
   
@@ -122,6 +122,6 @@ SELECT 1 AS X, 2 AS X …
   
 ## <a name="see-also"></a>참고자료
 
-- [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Entity SQL 개요](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
-- [입력 문자 집합](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)
+- [엔터티 SQL 참조](entity-sql-reference.md)
+- [Entity SQL 개요](entity-sql-overview.md)
+- [입력 문자 집합](input-character-set-entity-sql.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 2104cb4e853888efffe6b289ac1400530be25473
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 5113de6d8d333983e6e26579ff9803a9f5a62816
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015605"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254169"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType 레지스트리 설정
 이 항목에서는 WPF 응용 프로그램에서 사용 되는 Microsoft ClearType 레지스트리 설정에 대 한 개요를 제공 합니다.  
@@ -19,7 +19,7 @@ ms.locfileid: "70015605"
 ## <a name="technology-overview"></a>기술 개요  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]디스플레이 장치에 텍스트를 렌더링 하는 응용 프로그램은 ClearType 기능을 사용 하 여 향상 된 읽기 환경을 제공 합니다. ClearType은 랩톱 화면, Pocket PC 화면, 평면 패널 모니터 등 기존 Lcd (액체 크리스탈 디스플레이)의 텍스트 가독성을 향상 시키는 Microsoft에서 개발한 소프트웨어 기술입니다. ClearType은 LCD 화면의 모든 픽셀에서 개별 세로 색 줄무늬 요소에 액세스 하는 방식으로 작동 합니다. ClearType에 대 한 자세한 내용은 [Cleartype 개요](cleartype-overview.md)를 참조 하세요.  
   
- ClearType으로 렌더링 되는 텍스트는 다양 한 디스플레이 장치에서 볼 때 현저 하 게 다를 수 있습니다. 예를 들어 적은 수의 모니터가 색 스트라이프 요소를 보다 일반적인 빨강, 녹색, 파랑 ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) 순서 보다는 파란색, 녹색, 빨간색 순서로 구현 합니다.  
+ ClearType으로 렌더링 되는 텍스트는 다양 한 디스플레이 장치에서 볼 때 현저 하 게 다를 수 있습니다. 예를 들어 적은 수의 모니터가 색 스트라이프 요소를 보다 일반적인 빨강, 녹색, 파랑 (RGB) 순서 대신 파란색, 녹색, 빨간색 순서로 구현 합니다.  
   
  ClearType으로 렌더링 되는 텍스트는 다양 한 수준의 색 민감도를 사용 하 여 개인이 볼 때 크게 다르게 보일 수도 있습니다. 어떤 사람은 다른 사람보다 미묘한 색의 차이를 더 잘 감지할 수 있습니다.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "70015605"
 ## <a name="registry-settings"></a>레지스트리 설정  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ClearType 기능을 제어 하기 위한 네 가지 레지스트리 설정을 지정 합니다.  
   
-|설정|설명|  
+|설정|Description|  
 |-------------|-----------------|  
 |ClearType 수준|ClearType 색의 명확성 수준을 설명 합니다.|  
 |감마 수준|디스플레이 디바이스의 픽셀 색 구성 요소 수준을 설명합니다.|  

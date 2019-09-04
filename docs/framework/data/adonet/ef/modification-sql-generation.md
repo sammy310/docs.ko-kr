@@ -2,18 +2,18 @@
 title: 수정 SQL 생성
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 13ed7186981e82d47f00b6a38a4328ed75f527f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab0c18473e73b2d6fe9eb45c43e9b47947a55d99
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034138"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248570"
 ---
 # <a name="modification-sql-generation"></a>수정 SQL 생성
 
 이 단원에서는 SQL:1999 규격 데이터베이스 공급자에 대한 수정 SQL 생성 모듈을 개발하는 방법에 대해 설명합니다. 이 모듈은 수정 명령 트리를 적절한 SQL INSERT, UPDATE 또는 DELETE 문으로 변환하는 작업을 담당합니다.
 
-Select 문의 SQL 생성에 대 한 정보를 참조 하세요 [SQL 생성](../../../../../docs/framework/data/adonet/ef/sql-generation.md)합니다.
+Select 문의 SQL 생성에 대 한 자세한 내용은 [Sql 생성](sql-generation.md)을 참조 하십시오.
 
 ## <a name="overview-of-modification-command-trees"></a>수정 명령 트리 개요
 
@@ -27,11 +27,11 @@ DbModificationCommandTree는 DbCommandTree에서 상속하는 수정 DML 작업(
 
 - DbDeleteCommandTree
 
-DbModificationCommandTree 및에서 생성 되는 구현 된 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 항상 단일 행 작업을 나타냅니다. 이 단원에서는 .NET Framework 버전 3.5에서 이러한 형식과 관련 제약 조건에 대해 설명합니다.
+에서 생성 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 하는 DbModificationCommandTree 및 해당 구현은 항상 단일 행 작업을 나타냅니다. 이 단원에서는 .NET Framework 버전 3.5에서 이러한 형식과 관련 제약 조건에 대해 설명합니다.
 
-![Diagram](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
+![Diagram](./media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
 
-DbModificationCommandTree에는 수정 작업의 대상 집합을 나타내는 Target 속성이 있습니다. Target의 Expression 속성은 입력 집합을 정의하며 항상 DbScanExpression입니다.  DbScanExpression 테이블 또는 뷰를 나타낼 수 있습니다 또는 데이터 집합이 정의 된 쿼리를 사용 하 여 메타 데이터 속성 "정의 쿼리"는 대상의 경우 null입니다.
+DbModificationCommandTree에는 수정 작업의 대상 집합을 나타내는 Target 속성이 있습니다. Target의 Expression 속성은 입력 집합을 정의하며 항상 DbScanExpression입니다.  DbScanExpression은 대상의 메타 데이터 속성 "정의 쿼리"가 null이 아닌 경우 테이블이 나 뷰 또는 쿼리를 사용 하 여 정의 된 데이터 집합을 나타낼 수 있습니다.
 
 쿼리를 나타내는 DbScanExpression은 모델에서 정의 쿼리를 사용하여 집합이 정의되었지만 해당 수정 작업에 대한 함수가 제공되지 않은 경우 수정 대상으로만 공급자에 연결할 수 있습니다. 공급자가 이러한 시나리오를 지원하지 못할 수도 있습니다. 예를 들어, SqlClient는 이러한 시나리오를 지원하지 않습니다.
 
@@ -74,11 +74,11 @@ Value는 속성을 업데이트할 새 값을 지정합니다. Value는 DbConsta
 
 Predicate는 대상 컬렉션에서 업데이트하거나 삭제할 멤버를 결정하는 데 사용되는 조건자를 지정합니다. Predicate는 DbExpression의 다음 하위 집합으로 작성된 식 트리입니다.
 
-- 유형의 dbcomparisonexpression 오른쪽 자식은 아래 제한 된 대로 dbpropertyexpression와 왼쪽된 자식은 DbConstantExpression과 같습니다.
+- 오른쪽 자식은 DbPropertyExpression이 아래에 제한 되는 것으로, 왼쪽 자식은 DbConstantExpression로 DbComparisonExpression 종류가 같습니다.
 
 - DbConstantExpression
 
-- DbPropertyExpression 제한 된 대로 아래을 통한 DbIsNullExpression
+- 아래 제한 된 DbPropertyExpression을 DbIsNullExpression.
 
 - 해당 DbModificationCommandTree의 Target에 대한 참조를 나타내는 DbVariableReferenceExpression을 통한 DbPropertyExpression
 
@@ -90,7 +90,7 @@ Predicate는 대상 컬렉션에서 업데이트하거나 삭제할 멤버를 �
 
 ## <a name="modification-sql-generation-in-the-sample-provider"></a>샘플 공급자의 수정 SQL 생성
 
-합니다 [Entity Framework Sample Provider](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) 지 원하는 ADO.NET 데이터 공급자의 구성 요소를 보여 줍니다는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]합니다. 샘플 공급자는 SQL Server 2005 데이터베이스를 대상으로 하며 System.Data.SqlClient ADO.NET 2.0 데이터 공급자 위에 래퍼로 구현됩니다.
+[Entity Framework 샘플 공급자](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) 는를 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]지 원하는 ADO.NET 데이터 공급자의 구성 요소를 보여 줍니다. 샘플 공급자는 SQL Server 2005 데이터베이스를 대상으로 하며 System.Data.SqlClient ADO.NET 2.0 데이터 공급자 위에 래퍼로 구현됩니다.
 
 샘플 공급자의 수정 SQL 생성 모듈(SQL Generation\DmlSqlGenerator.cs 파일에 있음)은 DbModificationCommandTree를 입력으로 사용하고 단일 수정 SQL 문을 생성합니다. 이 문 뒤에는 DbModificationCommandTree에서 지정된 경우 판독기를 반환하기 위해 SELECT 문이 올 수 있습니다. 생성된 명령의 모양은 대상 SQL Server 데이터베이스의 영향을 받습니다.
 
@@ -116,7 +116,7 @@ DbPropertyExpression의 인스턴스가 항상 입력 테이블을 나타내는 
 
 샘플 공급자에서 지정된 DbInsertCommandTree의 경우 생성된 INSERT 명령은 아래의 두 삽입 템플릿 중 하나를 따릅니다.
 
-첫 번째 템플릿에는 SetClauses 목록의 값에 따라 삽입을 수행하는 명령과 Returning 속성이 null이 아닌 경우 삽입된 행의 Returning 속성에 지정된 속성을 반환하는 SELECT 문이 있습니다. 조건자 요소 "\@ @ROWCOUNT > 0"은 행이 삽입 되 면 true입니다. 조건자 요소 "keyMemberI = keyValueI &#124; scope_identity ()"는 "keyMemberI = scope_identity ()" keyMemberI 이므로 저장소 생성 키를 scope_identity ()에는 identity (삽입 된 마지막 id 값을 반환 하는 경우에 저장소 생성) 열입니다.
+첫 번째 템플릿에는 SetClauses 목록의 값에 따라 삽입을 수행하는 명령과 Returning 속성이 null이 아닌 경우 삽입된 행의 Returning 속성에 지정된 속성을 반환하는 SELECT 문이 있습니다. 조건자 요소 "\@ @ROWCOUNT > 0"은 행이 삽입 된 경우 true입니다. Scope_identity ()는 id에 삽입 된 마지막 &#124; id 값을 반환 하기 때문에 조건자 요소 "Keymemberi = keyValueI scope_identity ()"는 keymemberi가 저장소 생성 키인 경우에만 "keymemberi = scope_identity ()" 셰이프를 사용 합니다. 저장소 생성) 열
 
 ```sql
 -- first insert Template
@@ -212,7 +212,7 @@ WHERE <predicate>
  WHERE @@ROWCOUNT > 0 AND keyMember0 = keyValue0 AND .. keyMemberI =  keyValueI | scope_identity()  .. AND  keyMemberN = keyValueN]
 ```
 
-Set 절에 모조 set 절 ("@i = 0") 없는 set 절에 지정 된 경우에 합니다. 이는 모든 저장소 계산 열이 다시 계산되도록 하기 위한 것입니다.
+Set 절이 지정 되지 않은 경우에만 set@i 절에 가짜 set 절 ("= 0")이 있습니다. 이는 모든 저장소 계산 열이 다시 계산되도록 하기 위한 것입니다.
 
 Returning 속성이 null이 아닌 경우에만 Returning 속성에 지정된 속성을 반환하기 위해 SELECT 문이 생성됩니다.
 
@@ -302,4 +302,4 @@ where ([CategoryID] = @p0)
 
 ## <a name="see-also"></a>참고자료
 
-- [Entity Framework 데이터 공급자 작성](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+- [Entity Framework 데이터 공급자 작성](writing-an-ef-data-provider.md)

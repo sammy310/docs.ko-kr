@@ -2,12 +2,12 @@
 title: KEY(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cbaa97a8-c89c-4460-8c74-00474695789f
-ms.openlocfilehash: 9cd3276583741f2b0261cb8a0e55f4185d20100e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 44ab5352c3b2a94cb210c3de775d2347d2df7fe7
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780265"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250479"
 ---
 # <a name="key-entity-sql"></a>KEY(Entity SQL)
 참조 또는 엔터티 식의 키를 추출합니다.  
@@ -31,7 +31,7 @@ from LOB.Orders as o
 ## <a name="example"></a>예제  
  다음 Entity SQL 쿼리에서는 KEY 연산자를 사용하여 형식 참조가 있는 식의 키 부분을 추출합니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  
   
-1. 절차에 따라 [방법: StructuralType 결과 반환 하는 쿼리 실행](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)합니다.  
+1. [방법: StructuralType 결과](../how-to-execute-a-query-that-returns-structuraltype-results.md)를 반환 하는 쿼리를 실행 합니다.  
   
 2. 다음 쿼리를 `ExecuteStructuralTypeQuery` 메서드에 인수로 전달합니다.  
   
@@ -39,7 +39,7 @@ from LOB.Orders as o
   
 ## <a name="see-also"></a>참고자료
 
-- [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)
-- [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)
-- [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)
+- [엔터티 SQL 참조](entity-sql-reference.md)
+- [CREATEREF](createref-entity-sql.md)
+- [REF](ref-entity-sql.md)
+- [DEREF](deref-entity-sql.md)

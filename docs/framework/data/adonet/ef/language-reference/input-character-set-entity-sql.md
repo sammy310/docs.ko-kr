@@ -2,12 +2,12 @@
 title: 입력 문자 집합(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 13d291d3-e6bc-4719-b953-758b61a590b6
-ms.openlocfilehash: 3795660cf6086aa67596f31e49c4d950aa653d86
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1c6475704ec384800af0b678edd943246bf8044
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780421"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250634"
 ---
 # <a name="input-character-set-entity-sql"></a>입력 문자 집합(Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 UTF-16으로 인코딩된 UNICODE 문자를 사용합니다.  
@@ -24,10 +24,10 @@ ms.locfileid: "61780421"
   
  키워드, 식 및 문장 부호는 라틴어로 표준화된 UTF-16 문자일 수 있습니다. 예를 들어, 일본어 코드 페이지에서 SELECT는 유효한 키워드입니다.  
   
- 키워드, 식 및 문장 부호는 라틴 문자일 수만 있습니다. 일본어 코드 페이지에서 `SELECT`는 키워드가 아닙니다. +,-, \*, /, =, (,), ', [,] 및 여기에서 언급 되지 않은 기타 언어 구문은 라틴 문자만 가능 합니다.  
+ 키워드, 식 및 문장 부호는 라틴 문자일 수만 있습니다. 일본어 코드 페이지에서 `SELECT`는 키워드가 아닙니다. +,-, \*,/, =, (,), ', [,] 및 여기에서 따옴표로 묶지 않은 다른 모든 언어 구문은 라틴어 문자만 가능 합니다.  
   
- 단일 식별자는 라틴 문자만 가능합니다. 이렇게 하면 원래 값만 비교되므로 비교하는 동안 모호성을 피할 수 있습니다. 예를 들어, ABC는 일본어와 라틴어에서에서 다른 것입니다.  
+ 단일 식별자는 라틴 문자만 가능합니다. 이렇게 하면 원래 값만 비교되므로 비교하는 동안 모호성을 피할 수 있습니다. 예를 들어, ABC는 일본어와 라틴어에서 서로 다를 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
 
-- [Entity SQL 개요](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Entity SQL 개요](entity-sql-overview.md)

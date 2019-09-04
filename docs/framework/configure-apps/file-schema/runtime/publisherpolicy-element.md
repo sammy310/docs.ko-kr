@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c8f8744d3ef1ca30eb05a4c8c3290d8a514714b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: cc206e584440778858e61fc0bab51fc8ffa2009a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663508"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252375"
 ---
 # <a name="publisherpolicy-element"></a>\<Y apply > 요소
 런타임이 게시자 정책을 적용할지를 지정합니다.  
   
- \<configuration>  
-\<runtime>  
-\<assemblyBinding>  
-\<dependentAssembly>  
-\<publisherPolicy>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<런타임 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dependentAssembly >** ](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Y apply >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -51,13 +51,16 @@ ms.locfileid: "69663508"
 |`no`|게시자 정책을 적용 하지 않습니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음  
+
+없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
 |-------------|-----------------|  
+|`assemblyBinding`|어셈블리 버전 리디렉션 및 어셈블리 위치에 대한 정보를 포함합니다.|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
+|`dependentAssembly`|각 어셈블리에 대한 바인딩 정책 및 어셈블리 위치를 캡슐화합니다. 각 어셈블리 `<dependentAssembly>` 에 대해 하나의 요소를 사용 합니다.|  
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|  
   
 ## <a name="remarks"></a>설명  

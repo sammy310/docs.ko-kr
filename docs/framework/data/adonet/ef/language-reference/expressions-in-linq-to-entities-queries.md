@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d70b502f-6a15-4120-b4fe-500b173ad9cc
-ms.openlocfilehash: 383339241194c56d0c3178f538f2ac08b2f1b437
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5262d2bca07525aba6db5303e730c8b358641d52
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950398"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250982"
 ---
 # <a name="expressions-in-linq-to-entities-queries"></a>LINQ to Entities 쿼리의 식
 식은 단일 값, 개체, 메서드, 네임스페이스 등으로 계산될 수 있는 코드의 일부입니다. 식에는 리터럴 값, 메서드 호출, 연산자와 해당 피연산자, 단순한 이름 등이 포함될 수 있습니다. 단순한 이름이란 변수, 형식 멤버, 메서드 매개 변수, 네임스페이스 또는 형식의 이름일 수 있습니다. 식은 다른 식을 매개 변수로 사용하는 연산자를 사용할 수 있으며 다른 메서드 호출을 매개 변수로 가지는 메서드 호출을 사용할 수도 있습니다. 따라서 식은 단순한 형태에서 매우 복잡한 형태까지 다양합니다.  
@@ -26,16 +26,16 @@ ms.locfileid: "69950398"
 > C# 과`unchecked`같은 특정 언어 구문은 LINQ to Entities 의미가 없습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [상수 식](../../../../../../docs/framework/data/adonet/ef/language-reference/constant-expressions.md)  
+ [상수 식](constant-expressions.md)  
   
- [식 비교](../../../../../../docs/framework/data/adonet/ef/language-reference/comparison-expressions.md)  
+ [식 비교](comparison-expressions.md)  
   
- [null 비교](../../../../../../docs/framework/data/adonet/ef/language-reference/null-comparisons.md)  
+ [null 비교](null-comparisons.md)  
   
- [초기화 식](../../../../../../docs/framework/data/adonet/ef/language-reference/initialization-expressions.md)  
+ [초기화 식](initialization-expressions.md)  
   
  [관계, 탐색 속성 및 외래 키](/ef/ef6/fundamentals/relationships)  
   
 ## <a name="see-also"></a>참고자료
 
-- [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)
+- [ADO.NET Entity Framework](../index.md)

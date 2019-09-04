@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 3559d46a-7640-4c72-9a11-7e980768929e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3071b25392048161ebb40c39842f5da0dce3475
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2fa32d64f3ce440981c5f26d731051a118ed9254
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920827"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252664"
 ---
 # <a name="disablecommitthreadstack-element"></a>\<disableCommitThreadStack > 요소
 스레드가 시작될 때 전체 스레드 스택을 커밋할지 여부를 지정합니다.  
   
- \<configuration>  
-\<runtime>  
-\<disableCommitThreadStack>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<런타임 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<disableCommitThreadStack>**  
   
 ## <a name="syntax"></a>구문  
   

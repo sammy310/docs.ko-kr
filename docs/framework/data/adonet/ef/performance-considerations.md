@@ -2,12 +2,12 @@
 title: 성능 고려 사항(Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: 4836125205f3d4cbbe852c92f2a88aca331ded70
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 99969d7991f613bd8049aac81669583372e0f2c6
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962244"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248526"
 ---
 # <a name="performance-considerations-entity-framework"></a>성능 고려 사항(Entity Framework)
 이 항목에서는 ADO.NET Entity Framework의 성능 특징에 대해 설명하고, Entity Framework 애플리케이션의 성능 개선을 위해 고려해야 할 몇 가지 사항을 알려 줍니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "69962244"
 |메타데이터 로드|보통|애플리케이션 도메인당 한 번|Entity Framework에서 사용되는 모델 및 매핑 메타데이터가 <xref:System.Data.Metadata.Edm.MetadataWorkspace>로 로드됩니다. 이 메타데이터는 전역으로 캐시되고 동일한 애플리케이션 도메인의 다른 <xref:System.Data.Objects.ObjectContext> 인스턴스에서 사용할 수 있습니다.|  
 |데이터베이스 연결 열기|보통<sup>1</sup>|필요한 만큼|데이터베이스에 대 한 열린 연결은 중요 한 리소스를 사용 하기 때문 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 에는 필요한 경우에만 데이터베이스 연결을 열고 닫습니다. 또한 연결을 명시적으로 열 수 있습니다. 자세한 내용은 [트랜잭션과 연결 관리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))합니다.|  
 |뷰 생성|높음|애플리케이션 도메인당 한 번 미리 생성할 수 있습니다.|Entity Framework에서 개념적 모델에 대해 쿼리를 실행하거나 데이터 소스에 변경 내용을 저장하려면 먼저 로컬 쿼리 뷰 집합을 생성하여 데이터베이스에 액세스해야 합니다. 이러한 뷰를 생성하는 데 비용이 많이 들기 때문에 디자인 타임에 뷰를 미리 생성한 후 프로젝트에 추가할 수 있습니다. 자세한 내용은 [방법: 뷰를 미리 생성 하 여 쿼리 성능을](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))향상 시킵니다.|  
-|쿼리 준비|보통<sup>2</sup>|고유 쿼리당 한 번|쿼리 명령을 작성하고, 모델 및 매핑 메타데이터를 기반으로 명령 트리를 생성하고, 반환된 데이터의 셰이프를 정의하는 비용을 포함합니다. Entity SQL 쿼리 명령과 LINQ 쿼리가 모두 캐시되므로 동일한 쿼리를 나중에 실행하는 경우 시간이 더 적게 걸립니다. 그러나, 여전히 컴파일된 LINQ 쿼리를 사용하여 나중에 실행할 때 이러한 비용을 줄일 수 있으며 컴파일된 쿼리는 자동으로 캐시되는 LINQ 쿼리에서보다 효율적으로 작동합니다. 자세한 내용은 [컴파일된 쿼리 (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)를 참조 하세요. LINQ 쿼리 실행에 대 한 일반적인 내용은 [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)를 참조 하세요. **참고:**  메모리 내 컬렉션에 `Enumerable.Contains` 연산자를 적용하는 LINQ to Entities 쿼리는 자동으로 캐시되지 않습니다. 또한 메모리 내 컬렉션은 컴파일된 LINQ 쿼리에서 매개 변수화할 수 없습니다.|  
+|쿼리 준비|보통<sup>2</sup>|고유 쿼리당 한 번|쿼리 명령을 작성하고, 모델 및 매핑 메타데이터를 기반으로 명령 트리를 생성하고, 반환된 데이터의 셰이프를 정의하는 비용을 포함합니다. Entity SQL 쿼리 명령과 LINQ 쿼리가 모두 캐시되므로 동일한 쿼리를 나중에 실행하는 경우 시간이 더 적게 걸립니다. 그러나, 여전히 컴파일된 LINQ 쿼리를 사용하여 나중에 실행할 때 이러한 비용을 줄일 수 있으며 컴파일된 쿼리는 자동으로 캐시되는 LINQ 쿼리에서보다 효율적으로 작동합니다. 자세한 내용은 [컴파일된 쿼리 (LINQ to Entities)](./language-reference/compiled-queries-linq-to-entities.md)를 참조 하세요. LINQ 쿼리 실행에 대 한 일반적인 내용은 [LINQ to Entities](./language-reference/linq-to-entities.md)를 참조 하세요. **참고:**  메모리 내 컬렉션에 `Enumerable.Contains` 연산자를 적용하는 LINQ to Entities 쿼리는 자동으로 캐시되지 않습니다. 또한 메모리 내 컬렉션은 컴파일된 LINQ 쿼리에서 매개 변수화할 수 없습니다.|  
 |쿼리 실행|낮음<sup>2</sup>|쿼리당 한 번|ADO.NET 데이터 공급자를 사용하여 데이터 소스에 대해 명령을 실행하는 비용입니다. 대부분의 데이터 소스에서 쿼리 계획을 캐시하므로 동일한 쿼리를 나중에 실행하는 경우 시간이 더 적게 걸릴 수 있습니다.|  
 |형식 로드 및 유효성 검사|낮음<sup>3</sup>|<xref:System.Data.Objects.ObjectContext> 인스턴스당 한 번|형식은 개념적 모델에서 정의하는 형식에 대해 로드되고 유효성이 검사됩니다.|  
 |추적|낮음<sup>3</sup>|쿼리에서 반환하는 개체당 한 번 <sup>4</sup>|쿼리에서 <xref:System.Data.Objects.MergeOption.NoTracking> 병합 옵션을 사용하는 경우 이 단계는 성능에 영향을 주지 않습니다.<br /><br /> 쿼리에서 <xref:System.Data.Objects.MergeOption.AppendOnly>, <xref:System.Data.Objects.MergeOption.PreserveChanges> 또는 <xref:System.Data.Objects.MergeOption.OverwriteChanges> 병합 옵션을 사용하는 경우 <xref:System.Data.Objects.ObjectStateManager>에서 쿼리 결과를 추적합니다. 쿼리가 반환한 각 추적된 개체에 대해 <xref:System.Data.EntityKey>가 생성되고 이는 <xref:System.Data.Objects.ObjectStateEntry>에서 <xref:System.Data.Objects.ObjectStateManager>를 만드는 데 사용됩니다. <xref:System.Data.Objects.ObjectStateEntry>에 대한 기존 <xref:System.Data.EntityKey>를 찾을 수 있는 경우 기존 개체가 반환됩니다. <xref:System.Data.Objects.MergeOption.PreserveChanges> 또는 <xref:System.Data.Objects.MergeOption.OverwriteChanges> 옵션이 사용되는 경우 개체를 반환하기 전에 업데이트합니다.<br /><br /> 자세한 내용은 [Id 확인, 상태 관리 및 변경 내용 추적](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896269(v=vs.100))합니다.|  
@@ -32,7 +32,7 @@ ms.locfileid: "69962244"
   
  <sup>3</sup> 쿼리에서 반환 되는 개체 수에 비례하여 총 비용이 늘어납니다.  
   
- <sup>4</sup> entityclient 쿼리가 개체 대신를 <xref:System.Data.EntityClient.EntityDataReader> 반환 하므로 entityclient 쿼리에는이 오버 헤드가 필요 하지 않습니다. 자세한 내용은 [Entity Framework에 대 한 EntityClient 공급자](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)를 참조 하세요.  
+ <sup>4</sup> entityclient 쿼리가 개체 대신를 <xref:System.Data.EntityClient.EntityDataReader> 반환 하므로 entityclient 쿼리에는이 오버 헤드가 필요 하지 않습니다. 자세한 내용은 [Entity Framework에 대 한 EntityClient 공급자](entityclient-provider-for-the-entity-framework.md)를 참조 하세요.  
   
 ## <a name="additional-considerations"></a>기타 고려 사항  
  다음은 Entity Framework 애플리케이션의 성능에 영향을 줄 수 있는 기타 고려 사항입니다.  
@@ -41,10 +41,10 @@ ms.locfileid: "69962244"
  쿼리는 리소스를 많이 사용할 수 있으므로 코드의 어느 시점에, 어느 컴퓨터에서 쿼리를 실행하는지 살펴보세요.  
   
 #### <a name="deferred-versus-immediate-execution"></a>지연된 실행과 즉시 실행 비교  
- <xref:System.Data.Objects.ObjectQuery%601> 또는 LINQ 쿼리를 만들 때 쿼리가 즉시 실행되지 않을 수 있습니다. 쿼리 실행은 `foreach`(C#)나 `For Each`(Visual Basic) 열거 시 또는 <xref:System.Collections.Generic.List%601> 컬렉션을 채우도록 지정된 경우와 같이 결과가 필요할 때까지 지연됩니다. 쿼리 실행은 사용자가 <xref:System.Data.Objects.ObjectQuery%601.Execute%2A>에서 <xref:System.Data.Objects.ObjectQuery%601> 메서드를 호출하거나 <xref:System.Linq.Enumerable.First%2A> 또는 <xref:System.Linq.Enumerable.Any%2A>와 같은 단일 쿼리를 반환하는 LINQ 메서드를 호출할 때 즉시 시작됩니다. 자세한 내용은 [개체 쿼리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100)) 및 [쿼리 실행 (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md)을 참조 하세요.  
+ <xref:System.Data.Objects.ObjectQuery%601> 또는 LINQ 쿼리를 만들 때 쿼리가 즉시 실행되지 않을 수 있습니다. 쿼리 실행은 `foreach`(C#)나 `For Each`(Visual Basic) 열거 시 또는 <xref:System.Collections.Generic.List%601> 컬렉션을 채우도록 지정된 경우와 같이 결과가 필요할 때까지 지연됩니다. 쿼리 실행은 사용자가 <xref:System.Data.Objects.ObjectQuery%601.Execute%2A>에서 <xref:System.Data.Objects.ObjectQuery%601> 메서드를 호출하거나 <xref:System.Linq.Enumerable.First%2A> 또는 <xref:System.Linq.Enumerable.Any%2A>와 같은 단일 쿼리를 반환하는 LINQ 메서드를 호출할 때 즉시 시작됩니다. 자세한 내용은 [개체 쿼리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100)) 및 [쿼리 실행 (LINQ to Entities)](./language-reference/query-execution.md)을 참조 하세요.  
   
 #### <a name="client-side-execution-of-linq-queries"></a>LINQ 쿼리의 클라이언트 쪽 실행  
- LINQ 쿼리 실행은 데이터 소스를 호스트하는 컴퓨터에서 이루어지지만 일부 LINQ 쿼리는 클라이언트 컴퓨터에서 확인됩니다. 자세한 내용은 쿼리 실행의 저장소 실행 섹션 [(LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md)을 참조 하세요.  
+ LINQ 쿼리 실행은 데이터 소스를 호스트하는 컴퓨터에서 이루어지지만 일부 LINQ 쿼리는 클라이언트 컴퓨터에서 확인됩니다. 자세한 내용은 쿼리 실행의 저장소 실행 섹션 [(LINQ to Entities)](./language-reference/query-execution.md)을 참조 하세요.  
   
 ### <a name="query-and-mapping-complexity"></a>쿼리 및 매핑 복잡성  
  엔터티 모델의 매핑 및 개별 쿼리의 복잡성은 쿼리 성능에 상당한 영향을 줍니다.  
@@ -155,4 +155,4 @@ ms.locfileid: "69962244"
   
 ## <a name="see-also"></a>참고자료
 
-- [개발 및 배포 고려 사항](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)
+- [개발 및 배포 고려 사항](development-and-deployment-considerations.md)

@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46cf37ee800c05eb7fe12e8491ad3b2130c3a04d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f132ce0a114a6fc904d86ca3ce893c447366523f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920817"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252624"
 ---
 # <a name="enableampmparseadjustment-element"></a>\<EnableAmPmParseAdjustment > 요소
 날짜 및 시간 구문 분석 메서드가 조정 된 규칙 집합을 사용 하 여 일, 월, 시간 및 AM/PM 지정자를 포함 하는 날짜 문자열을 구문 분석 하는지 여부를 결정 합니다.  
   
- \<configuration>  
- \<runtime>  
-\<EnableAmPmParseAdjustment>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<런타임 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<EnableAmPmParseAdjustment>**  
   
 ## <a name="syntax"></a>구문  
   

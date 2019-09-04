@@ -2,12 +2,12 @@
 title: 기본 데이터 형식
 ms.date: 03/30/2017
 ms.assetid: eca2c472-9548-4800-bd31-5d8d9f11752b
-ms.openlocfilehash: b01a49afa99fc7ecdb7a113a5056e37d901527a1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e85adb928925bf161e6e2d6ef935a20606f8eb32
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964074"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248033"
 ---
 # <a name="basic-data-types"></a>기본 데이터 형식
 LINQ to SQL 쿼리는 Microsoft SQL Server에서 실행되기 전에 Transact-SQL로 변환됩니다. 따라서 LINQ to SQL에서는 SQL Server에서 기본 데이터 형식에 대해 지원하는 기본 제공 함수 대부분을 지원합니다.  
@@ -24,5 +24,5 @@ LINQ to SQL 쿼리는 Microsoft SQL Server에서 실행되기 전에 Transact-SQ
   
 ## <a name="see-also"></a>참고자료
 
-- [SQL-CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [데이터 형식 및 함수](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [SQL-CLR 형식 매핑](sql-clr-type-mapping.md)
+- [데이터 형식 및 함수](data-types-and-functions.md)

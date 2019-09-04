@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF]. reference
 ms.assetid: e44540cf-44a1-4efc-b965-7fbfd2131d73
-ms.openlocfilehash: 0f8b4c15f2afefbc62b98dca66dcf3ccc31b1dc0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae792a0b55b0559b13c2394bd27d85f224d1aea0
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753038"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70243966"
 ---
 # <a name="analytic-trace-event-reference"></a>분석 추적 이벤트 참조
-다음 표에서 이벤트 수준, 식별자 및 WCF 분석 추적와 관련 된 메시지를 정의 합니다.  
+다음 표에서는 WCF 분석 추적과 관련 된 이벤트 수준, 식별자 및 메시지를 정의 합니다.  
   
 ## <a name="event-reference"></a>이벤트 참조  
   
@@ -109,7 +109,6 @@ ms.locfileid: "61753038"
 |[1431 - ConcurrentCallsRatio](../../../../../docs/framework/wcf/diagnostics/etw/1431-concurrentcallsratio.md)|자세히|동시 세션 비율: %1/%2|할당량|  
 |[1432 - ConcurrentSessionsRatio](../../../../../docs/framework/wcf/diagnostics/etw/1432-concurrentsessionsratio.md)|자세히|동시 세션 비율: %1/%2|할당량|  
 |[1433 - OutboundConnectionsPerEndpointRatio](../../../../../docs/framework/wcf/diagnostics/etw/1433-outboundconnectionsperendpointratio.md)|자세히|엔드포인트당 아웃바운드 연결 비율: %1/%2|할당량|  
-|[1433 - OutboundConnectionsPerEndpointRatio](../../../../../docs/framework/wcf/diagnostics/etw/1433-outboundconnectionsperendpointratio.md)|자세히|엔드포인트당 아웃바운드 연결 비율: %1/%2|할당량|  
 |[1436 - PendingMessagesPerChannelRatio](../../../../../docs/framework/wcf/diagnostics/etw/1436-pendingmessagesperchannelratio.md)|자세히|채널당 보류 중인 메시지 비율: %1/%2|할당량|  
 |[1438 - ConcurrentInstancesRatio](../../../../../docs/framework/wcf/diagnostics/etw/1438-concurrentinstancesratio.md)|자세히|동시 인스턴스 비율: %1/%2|할당량|  
 |[1439 - PendingAcceptsAtZero](../../../../../docs/framework/wcf/diagnostics/etw/1439-pendingacceptsatzero.md)|정보|보류 중인 수락 항목 없음|할당량|  
@@ -126,7 +125,7 @@ ms.locfileid: "61753038"
 |[3305 - ClientBaseCachedChannelFactoryCount](../../../../../docs/framework/wcf/diagnostics/etw/3305-clientbasecachedchannelfactorycount.md)|정보|캐시된 채널 팩터리 수는 '%1'입니다.  최대 '%2'개 채널 팩터리를 캐시할 수 있습니다.|ServiceModel|  
 |[3306 - ClientBaseChannelFactoryAgedOutofCache](../../../../../docs/framework/wcf/diagnostics/etw/3306-clientbasechannelfactoryagedoutofcache.md)|정보|캐시가 해당 한도 '%1'에 도달했기 때문에 채널 팩터리가 캐시에서 만료되었습니다.|ServiceModel|  
 |[3307 - ClientBaseChannelFactoryCacheHit](../../../../../docs/framework/wcf/diagnostics/etw/3307-clientbasechannelfactorycachehit.md)|정보|캐시에서 사용된 일치하는 채널 팩터리가 발견되었습니다.|ServiceModel|  
-|[3308 - ClientBaseUsingLocalChannelFactory](../../../../../docs/framework/wcf/diagnostics/etw/3308-clientbaseusinglocalchannelfactory.md)|정보|캐시에서 채널 팩터리를 사용 하지, 즉 캐싱을 사용 하지 않도록 예를 들어 있습니다.|ServiceModel|  
+|[3308 - ClientBaseUsingLocalChannelFactory](../../../../../docs/framework/wcf/diagnostics/etw/3308-clientbaseusinglocalchannelfactory.md)|정보|캐시에서 채널 팩터리를 사용 하지 않습니다 (예: 캐싱에 사용 하지 않도록 설정 됨).|ServiceModel|  
 |[3309 - QueryCompositionExecuted](../../../../../docs/framework/wcf/diagnostics/etw/3309-querycompositionexecuted.md)|정보|'%1'을(를) 사용한 쿼리 작성이 요청 Uri: '%2'에서 실행되었습니다.|ServiceModel|  
 |[3310 - DispatchFailed](../../../../../docs/framework/wcf/diagnostics/etw/3310-dispatchfailed.md)|Error|'%1' 작업이 디스패치되었지만 오류가 발생했습니다.|ServiceModel|  
 |[3311 - DispatchSuccessful](../../../../../docs/framework/wcf/diagnostics/etw/3311-dispatchsuccessful.md)|정보|'%1' 작업이 성공적으로 디스패치되었습니다.|ServiceModel|  
@@ -161,7 +160,7 @@ ms.locfileid: "61753038"
 |[3345 - SessionPreambleUnderstood](../../../../../docs/framework/wcf/diagnostics/etw/3345-sessionpreambleunderstood.md)|자세히|'%1'에 대한 세션 프리앰블이 확인되었습니다.|채널|  
 |[3346 - ConnectionReaderSendFault](../../../../../docs/framework/wcf/diagnostics/etw/3346-connectionreadersendfault.md)|Error|연결 판독기가 오류 '%1'을(를) 전송하고 있습니다.|채널|  
 |[3347 - SocketAcceptClosed](../../../../../docs/framework/wcf/diagnostics/etw/3347-socketacceptclosed.md)|자세히|소켓 수락이 종료되었습니다.|TCP|  
-|[3348 - ServiceHostFaulted](../../../../../docs/framework/wcf/diagnostics/etw/3348-servicehostfaulted.md)|중요|서비스 호스트에 오류가 발생했습니다.|TCP|  
+|[3348 - ServiceHostFaulted](../../../../../docs/framework/wcf/diagnostics/etw/3348-servicehostfaulted.md)|심각|서비스 호스트에 오류가 발생했습니다.|TCP|  
 |[3349 - ListenerOpenStart](../../../../../docs/framework/wcf/diagnostics/etw/3349-listeneropenstart.md)|자세히|'%1'에 대한 리스너가 열려 있습니다.|채널|  
 |[3350 - ListenerOpenStop](../../../../../docs/framework/wcf/diagnostics/etw/3350-listeneropenstop.md)|자세히|리스너 열기가 완료되었습니다.|채널|  
 |[3351 - ServerMaxPooledConnectionsQuotaReached](../../../../../docs/framework/wcf/diagnostics/etw/3351-servermaxpooledconnectionsquotareached.md)|자세히|서버 최대 풀 연결 할당량에 도달했습니다.|할당량|  
@@ -187,7 +186,7 @@ ms.locfileid: "61753038"
 |[3371 - MtomMessageEncodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3371-mtommessageencodingstart.md)|자세히|MtomMessageEncoder에서 메시지 인코딩이 시작되었습니다.|채널|  
 |[3372 - TextMessageEncodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3372-textmessageencodingstart.md)|자세히|TextMessageEncoder에서 메시지 인코딩이 시작되었습니다.|채널|  
 |[3373 - BinaryMessageDecodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3373-binarymessagedecodingstart.md)|자세히|BinaryMessageEncoder에서 메시지 디코딩이 시작되었습니다.|채널|  
-|[3374 - MtomMessageDecodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3374-mtommessagedecodingstart.md)|자세히|Mtommessageencoder가 메시지 디코딩을 합니다.|채널|  
+|[3374 - MtomMessageDecodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3374-mtommessagedecodingstart.md)|자세히|Mtommessageencoder에서에서 메시지를 디코딩하는 작업을 시작 했습니다.|채널|  
 |[3375 - TextMessageDecodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3375-textmessagedecodingstart.md)|자세히|TextMessageEncoder에서 메시지 디코딩이 시작되었습니다.|채널|  
 |[3376 - HttpResponseReceiveStart](../../../../../docs/framework/wcf/diagnostics/etw/3376-httpresponsereceivestart.md)|정보|Http 전송에서 메시지 수신이 시작되었습니다.|HTTP|  
 |[3377 - SocketReadStop](../../../../../docs/framework/wcf/diagnostics/etw/3377-socketreadstop.md)|자세히|SocketId:%1이(가) '%3'에서 '%2'바이트를 읽었습니다.|TCP|  
@@ -278,7 +277,7 @@ ms.locfileid: "61753038"
 |[3831 - RoutingServiceHandledException](../../../../../docs/framework/wcf/diagnostics/etw/3831-routingservicehandledexception.md)|자세히|라우팅 서비스가 예외를 처리했습니다.|RoutingServices|  
 |[3832 - RoutingServiceTransmitSucceeded](../../../../../docs/framework/wcf/diagnostics/etw/3832-routingservicetransmitsucceeded.md)|정보|라우팅 서비스가 ID '%1인 메시지[작업 %2]를 '%3'(으)로 전송했습니다.|RoutingServices|  
 |[4001 - TransportListenerSessionsReceived](../../../../../docs/framework/wcf/diagnostics/etw/4001-transportlistenersessionsreceived.md)|자세히|'%1'을(를) 통해 전송 리스너 세션이 수신되었습니다.|ActivationServices|  
-|[4002 - FailFastException](../../../../../docs/framework/wcf/diagnostics/etw/4002-failfastexception.md)|중요|FailFastException이 발생했습니다.|ActivationServices|  
+|[4002 - FailFastException](../../../../../docs/framework/wcf/diagnostics/etw/4002-failfastexception.md)|심각|FailFastException이 발생했습니다.|ActivationServices|  
 |[4003 - ServiceStartPipeError](../../../../../docs/framework/wcf/diagnostics/etw/4003-servicestartpipeerror.md)|Error|서비스 시작 파이프 오류가 발생했습니다.|ActivationServices|  
 |[4008 - DispatchSessionStart](../../../../../docs/framework/wcf/diagnostics/etw/4008-dispatchsessionstart.md)|자세히|세션 디스패치가 시작되었습니다.|ActivationServices|  
 |[4008 - DispatchSessionStart](../../../../../docs/framework/wcf/diagnostics/etw/4008-dispatchsessionstart.md)|경고|보류 중인 항목이 '%2'개로 보류 중인 세션 큐가 꽉 차서 '%1'에 대한 세션을 디스패치하지 못했습니다.|ActivationServices|  
@@ -301,7 +300,7 @@ ms.locfileid: "61753038"
 |[4029 - PipeTransportListenerListeningStop](../../../../../docs/framework/wcf/diagnostics/etw/4029-pipetransportlistenerlisteningstop.md)|자세히|파이프 전송 리스너 수신이 중지됩니다.|ActivationServices|  
 |[4030 - DispatchSessionSuccess](../../../../../docs/framework/wcf/diagnostics/etw/4030-dispatchsessionsuccess.md)|정보|세션을 디스패치했습니다.|ActivationServices|  
 |[4031 - DispatchSessionFailed](../../../../../docs/framework/wcf/diagnostics/etw/4031-dispatchsessionfailed.md)|Error|세션을 디스패치하지 못했습니다.|ActivationServices|  
-|[4032 - WasConnectionTimedout](../../../../../docs/framework/wcf/diagnostics/etw/4032-wasconnectiontimedout.md)|중요|WAS 연결 시간이 초과되었습니다.|ActivationServices|  
+|[4032 - WasConnectionTimedout](../../../../../docs/framework/wcf/diagnostics/etw/4032-wasconnectiontimedout.md)|심각|WAS 연결 시간이 초과되었습니다.|ActivationServices|  
 |[4033 - RoutingTableLookupStart](../../../../../docs/framework/wcf/diagnostics/etw/4033-routingtablelookupstart.md)|자세히|라우팅 테이블 조회가 시작되었습니다.|ActivationServices|  
 |[4034 - RoutingTableLookupStop](../../../../../docs/framework/wcf/diagnostics/etw/4034-routingtablelookupstop.md)|자세히|라우팅 테이블 조회가 완료되었습니다.|ActivationServices|  
 |[4035 - PendingSessionQueueRatio](../../../../../docs/framework/wcf/diagnostics/etw/4035-pendingsessionqueueratio.md)|자세히|보류 중인 세션 큐 비율: %1/%2|할당량|  
@@ -363,8 +362,8 @@ ms.locfileid: "61753038"
 |[57394 - HandledException](../../../../../docs/framework/wcf/diagnostics/etw/57394-handledexception.md)|정보|예외를 처리하는 중입니다.|인프라|  
 |[57395 - ShipAssertExceptionMessage](../../../../../docs/framework/wcf/diagnostics/etw/57395-shipassertexceptionmessage.md)|Error|예기치 않은 오류가 발생했습니다. 이 오류는 애플리케이션에서 처리할 수 없습니다. 오류와 관련된 다음 메시지가 진단용으로 제공됩니다. %1.|인프라|  
 |[57396 - ThrowingException](../../../../../docs/framework/wcf/diagnostics/etw/57396-throwingexception.md)|경고|예외를 throw하고 있습니다. 원본: %1.|인프라|  
-|[57397 - UnhandledException](../../../../../docs/framework/wcf/diagnostics/etw/57397-unhandledexception.md)|중요|처리되지 않은 예외가 발생했습니다.|인프라|  
-|[57399 - TraceCodeEventLogCritical](../../../../../docs/framework/wcf/diagnostics/etw/57399-tracecodeeventlogcritical.md)|중요|EventLog에 기록합니다.|인프라|  
+|[57397 - UnhandledException](../../../../../docs/framework/wcf/diagnostics/etw/57397-unhandledexception.md)|심각|처리되지 않은 예외가 발생했습니다.|인프라|  
+|[57399 - TraceCodeEventLogCritical](../../../../../docs/framework/wcf/diagnostics/etw/57399-tracecodeeventlogcritical.md)|심각|EventLog에 기록합니다.|인프라|  
 |[57400 - TraceCodeEventLogError](../../../../../docs/framework/wcf/diagnostics/etw/57400-tracecodeeventlogerror.md)|Error|EventLog에 기록합니다.|인프라|  
 |[57401 - TraceCodeEventLogInfo](../../../../../docs/framework/wcf/diagnostics/etw/57401-tracecodeeventloginfo.md)|정보|EventLog에 기록합니다.|인프라|  
 |[57402 - TraceCodeEventLogVerbose](../../../../../docs/framework/wcf/diagnostics/etw/57402-tracecodeeventlogverbose.md)|자세히|EventLog에 기록합니다.|인프라|  

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 079926c5-e6b5-4fb9-b4cf-9c63886dd626
-ms.openlocfilehash: 9c10c334ae2a10df1f75384ce042781b6f1bd43a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 52681a4035ef55133c6191e7eac2cab7ed36c8fb
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614416"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249341"
 ---
 # <a name="query-expression-syntax-examples-projection"></a>쿼리 식 구문 예제: 프로젝션
-이 항목의 예제에 사용 하는 방법을 보여 줍니다는 `Select` 메서드 및 `From … From …` 쿼리 키워드는 [AdventureWorks Sales 모델](https://archive.codeplex.com/?p=msftdbprodsamples) 쿼리 식 구문을 사용 합니다. `From … From …`은 `SelectMany` 메서드에 해당하는 쿼리 기반 키워드입니다. 이 예제에서 사용하는 AdventureWorks Sales 모델에서는 AdventureWorks 샘플 데이터베이스의 Contact, Address, Product, SalesOrderHeader 및 SalesOrderDetail 테이블을 사용합니다.  
+이 항목의 예제에서는 쿼리 식 구문을 사용 하 `Select` 여 [AdventureWorks Sales 모델](https://archive.codeplex.com/?p=msftdbprodsamples) 을 쿼리 하기 위해 메서드 `From … From …` 및 키워드를 사용 하는 방법을 보여 줍니다. `From … From …`은 `SelectMany` 메서드에 해당하는 쿼리 기반 키워드입니다. 이 예제에서 사용하는 AdventureWorks Sales 모델에서는 AdventureWorks 샘플 데이터베이스의 Contact, Address, Product, SalesOrderHeader 및 SalesOrderDetail 테이블을 사용합니다.  
   
- 이 항목의 예제에서는 다음을 사용 `using` / `Imports` 문:  
+ 이 항목의 예제에서는 다음 `using` / `Imports` 문을 사용 합니다.  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
@@ -40,7 +40,7 @@ ms.locfileid: "61614416"
  [!code-csharp[DP L2E Examples#SelectAnonymousTypes](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#selectanonymoustypes)]
  [!code-vb[DP L2E Examples#SelectAnonymousTypes](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#selectanonymoustypes)]  
   
-## <a name="from--from--selectmany"></a>보낸 사람... 보낸 사람... (SelectMany)  
+## <a name="from--from--selectmany"></a>보낸 사람... 보낸 사람... SelectMany  
   
 ### <a name="example"></a>예제  
  다음 예제에서는 `From … From …`(<xref:System.Linq.Enumerable.SelectMany%2A> 메서드와 같음)을 사용하여 `TotalDue`가 500.00보다 작은 모든 주문을 선택합니다.  
@@ -62,4 +62,4 @@ ms.locfileid: "61614416"
   
 ## <a name="see-also"></a>참고자료
 
-- [LINQ to Entities에서 쿼리](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [LINQ to Entities에서 쿼리](queries-in-linq-to-entities.md)

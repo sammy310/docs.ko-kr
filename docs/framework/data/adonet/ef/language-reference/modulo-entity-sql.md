@@ -2,12 +2,12 @@
 title: '% (모듈로)(Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 243ddc4f-3c4e-41e1-a3ef-4ed39e36248b
-ms.openlocfilehash: e2d2c4cd6fd62cf5785d6b69aa399a74f8d04d30
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a30306539d45c3718d2e948e9717997bbe2104fa
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760482"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250079"
 ---
 # <a name="modulo-entity-sql"></a>% (모듈로)(Entity SQL)
 한 식을 다른 식으로 나눈 나머지를 반환합니다.  
@@ -31,7 +31,7 @@ dividend % divisor
 ## <a name="example"></a>예제  
  다음 Entity SQL 쿼리에서는 % 산술 연산자를 사용하여 한 식을 다른 식으로 나눈 나머지를 반환합니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  
   
-1. 절차에 따라 [방법: StructuralType 결과 반환 하는 쿼리 실행](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)합니다.  
+1. [방법: StructuralType 결과](../how-to-execute-a-query-that-returns-structuraltype-results.md)를 반환 하는 쿼리를 실행 합니다.  
   
 2. 다음 쿼리를 `ExecuteStructuralTypeQuery` 메서드에 인수로 전달합니다.  
   
@@ -39,4 +39,4 @@ dividend % divisor
   
 ## <a name="see-also"></a>참고자료
 
-- [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [엔터티 SQL 참조](entity-sql-reference.md)

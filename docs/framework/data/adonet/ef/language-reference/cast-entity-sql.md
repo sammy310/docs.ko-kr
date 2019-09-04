@@ -2,12 +2,12 @@
 title: CAST(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: 253dcf092deadd1049d0556af4ea0630602110d0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 385f9a8057ea6aa3637f7fae6fec79154ac625ba
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935823"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251241"
 ---
 # <a name="cast-entity-sql"></a>CAST(Entity SQL)
 데이터 형식의 식을 다른 형식의 식으로 변환합니다.  
@@ -23,7 +23,7 @@ CAST ( expression AS data_type )
  `data_type`으로 변환 가능한 유효한 식입니다.  
   
  `data_type`  
- 대상 시스템 제공 데이터 형식입니다. 기본(스칼라) 형식이어야 합니다. 사용되는 `data_type` 은 쿼리 공간에 따라 달라집니다. 쿼리가 <xref:System.Data.EntityClient.EntityCommand>로 실행되는 경우 데이터 형식은 개념적 모델에 정의된 형식입니다. 자세한 내용은 [CSDL Specification](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)을 참조하십시오. 쿼리가 <xref:System.Data.Objects.ObjectQuery%601>로 실행되는 경우 데이터 형식은 CLR(공용 언어 런타임) 형식입니다.  
+ 대상 시스템 제공 데이터 형식입니다. 기본(스칼라) 형식이어야 합니다. 사용되는 `data_type` 은 쿼리 공간에 따라 달라집니다. 쿼리가 <xref:System.Data.EntityClient.EntityCommand>로 실행되는 경우 데이터 형식은 개념적 모델에 정의된 형식입니다. 자세한 내용은 [CSDL Specification](csdl-specification.md)을 참조하십시오. 쿼리가 <xref:System.Data.Objects.ObjectQuery%601>로 실행되는 경우 데이터 형식은 CLR(공용 언어 런타임) 형식입니다.  
   
 ## <a name="return-value"></a>반환 값  
  `data_type`와 동일한 값을 반환합니다.  
@@ -53,7 +53,7 @@ CAST( e as T )
 ## <a name="example"></a>예제  
  다음 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 쿼리에서는 CAST 연산자를 사용하여 한 데이터 형식의 식을 다른 데이터 형식의 식으로 캐스팅합니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  
   
-1. [방법: PrimitiveType 결과](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)를 반환 하는 쿼리를 실행 합니다.  
+1. [방법: PrimitiveType 결과](../how-to-execute-a-query-that-returns-primitivetype-results.md)를 반환 하는 쿼리를 실행 합니다.  
   
 2. 다음 쿼리를 `ExecutePrimitiveTypeQuery` 메서드에 인수로 전달합니다.  
   
@@ -61,4 +61,4 @@ CAST( e as T )
   
 ## <a name="see-also"></a>참고자료
 
-- [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [엔터티 SQL 참조](entity-sql-reference.md)

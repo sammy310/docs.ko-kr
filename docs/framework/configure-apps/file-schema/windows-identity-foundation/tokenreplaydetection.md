@@ -3,19 +3,20 @@ title: <tokenReplayDetection>
 ms.date: 03/30/2017
 ms.assetid: ac3f588e-5f75-4275-b969-2d492ecc3b47
 author: BrucePerlerMS
-ms.openlocfilehash: 2e2159a73ca79fc362a8138eea95dbd173dafb11
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a4454042e1d97fb3cc2d6f2735104dadda6e7b5a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944292"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251767"
 ---
 # <a name="tokenreplaydetection"></a>\<tokenReplayDetection>
 토큰 재생 검색을 사용 하도록 설정 하 고 토큰의 만료 시간을 지정 합니다.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<tokenReplayDetection>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.identitymodel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<tokenReplayDetection >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,7 +39,7 @@ ms.locfileid: "69944292"
   
 |특성|설명|  
 |---------------|-----------------|  
-|사용|토큰 재생 검색이 사용 되는지 여부를 지정 하는 값입니다. 토큰 재생 검색을 사용 하도록 설정 하려면 "true"로 설정 합니다.|  
+|enabled|토큰 재생 검색이 사용 되는지 여부를 지정 하는 값입니다. 토큰 재생 검색을 사용 하도록 설정 하려면 "true"로 설정 합니다.|  
 |expirationPeriod|항목이 만료 된 것으로 간주 되 고 캐시에서 제거 되기 전 까지의 최대 시간을 지정 하는입니다.<xref:System.TimeSpan>  값을 지정 <xref:System.TimeSpan> 하는 방법에 대 한 자세한 내용은 [Timespan 값](../windows-workflow-foundation/index.md)을 참조 하세요.|  
   
 ### <a name="child-elements"></a>자식 요소  

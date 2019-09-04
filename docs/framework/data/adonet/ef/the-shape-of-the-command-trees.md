@@ -2,12 +2,12 @@
 title: 명령 트리의 모양
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: 08a67c8d181188cbc14c6f60876a7e26cd6de25a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3568f3deeaeeb31b69b41ac7c767001b792a8eb
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763986"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248217"
 ---
 # <a name="the-shape-of-the-command-trees"></a>명령 트리의 모양
 
@@ -75,9 +75,9 @@ DbExpression 개체는 특정 계산을 나타냅니다. 몇 가지 종류의 �
 
 - 사용자 정의 함수
 
-정식 함수 (참조 [정식 함수](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md) 자세한 내용은)의 일부로 지정 된는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], 공급자는 이러한 사양을 기반으로 하는 정식 함수에 대 한 구현을 제공 해야 합니다. 저장소 함수는 해당 공급자 매니페스트에 지정된 사항을 기반으로 합니다. 사용자 정의 함수는 SSDL에서 지정된 사항을 기반으로 합니다.
+정식 함수 (자세한 내용은 [정식 함수](./language-reference/canonical-functions.md) 참조)는의 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]일부로 지정 되며, 공급자는 해당 사양에 따라 정식 함수에 대 한 구현을 제공 해야 합니다. 저장소 함수는 해당 공급자 매니페스트에 지정된 사항을 기반으로 합니다. 사용자 정의 함수는 SSDL에서 지정된 사항을 기반으로 합니다.
 
-또한 NiladicFunction 특성이 있는 함수에는 인수가 없으며 끝에 괄호 없이 변환되어야 합니다.  즉,  *\<functionName >* 대신  *\<functionName > ()* 합니다.
+또한 NiladicFunction 특성이 있는 함수에는 인수가 없으며 끝에 괄호 없이 변환되어야 합니다.  즉  *\<* *, \<functionName > ()* 대신 functionName > 합니다.
 
 #### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression
 
@@ -87,7 +87,7 @@ DbNewInstanceExpression은 다음 두 경우에만 발생할 수 있습니다.
 
   - 결과 형식이 행 형식이어야 합니다.
 
-  - 각 인수가 기본 형식을 사용하여 결과를 생성하는 식입니다. 일반적으로 각 인수는 DbVariableReferenceExpression을 통한 PropertyExpression과 같은 스칼라 식, 함수 호출 또는 DbVariableReferenceExpression을 통한 DbPropertyExpression 또는 함수 호출의 산술 계산입니다. 그러나 스칼라 하위 쿼리를 나타내는 식은 DbNewInstanceExpression의 인수 목록에서도 발생할 수 있습니다. 스칼라 하위 쿼리를 나타내는 식입니다는 정확히 하나의 행 DbElementExpression 개체 루트를 사용 하 여 기본 형식의 한 열을 반환 하는 하위 쿼리를 나타내는 식 트리
+  - 각 인수가 기본 형식을 사용하여 결과를 생성하는 식입니다. 일반적으로 각 인수는 DbVariableReferenceExpression을 통한 PropertyExpression과 같은 스칼라 식, 함수 호출 또는 DbVariableReferenceExpression을 통한 DbPropertyExpression 또는 함수 호출의 산술 계산입니다. 그러나 스칼라 하위 쿼리를 나타내는 식은 DbNewInstanceExpression의 인수 목록에서도 발생할 수 있습니다. 스칼라 하위 쿼리를 나타내는 식은 DbElementExpression 개체 root를 사용 하 여 정확히 한 개의 행과 기본 형식의 열 하나를 반환 하는 하위 쿼리를 나타내는 식 트리입니다.
 
 - 컬렉션 반환 형식과 함께. 이 경우 DbNewInstanceExpression은 인수로 제공된 식의 새 컬렉션을 정의합니다.
 
@@ -105,11 +105,11 @@ Limit 속성은 DbConstantExpression 또는 DbParameterReferenceExpression일 �
 
 #### <a name="dbscanexpression"></a>DbScanExpression
 
-출력 명령 트리를 사용 하는 경우 DbScanExpression 테이블, 뷰 또는 EntitySetBase::Target 나타내는 저장소 쿼리를 통해 검색을 효과적으로 나타냅니다.
+출력 명령 트리에서 사용 되는 경우 DbScanExpression은 EntitySetBase:: Target으로 표시 되는 테이블, 뷰 또는 저장소 쿼리에 대 한 검색을 효과적으로 나타냅니다.
 
-이면 메타 데이터 속성 "정의 쿼리"는 대상의 null이 아닌 쿼리 나타냅니다는 쿼리 텍스트를 저장소 스키마 정의에 지정 된 공급자의 특정 언어 (또는 언어)에서 해당 메타 데이터 속성에 제공 됩니다.
+대상의 메타 데이터 속성 "정의 쿼리"가 null이 아닌 경우 쿼리를 나타내고,에 대 한 쿼리 텍스트는 저장소 스키마 정의에 지정 된 공급자의 특정 언어 (또는 언어)에서 해당 메타 데이터 속성에 제공 됩니다.
 
-대상의 메타데이터 속성 “정의 쿼리”가 null이면 대상은 테이블 또는 뷰를 나타냅니다. 해당 스키마 접두사는 "스키마" 메타 데이터 속성에서이 없는 경우 null이 고, 그렇지 엔터티 컨테이너 이름입니다.  테이블 또는 뷰 이름은 중 하나는 "Table" 메타 데이터 속성을 null이 아니면,이 고 그렇지 엔터티의 Name 속성을 기본 설정입니다.
+대상의 메타데이터 속성 “정의 쿼리”가 null이면 대상은 테이블 또는 뷰를 나타냅니다. 해당 스키마 접두사는 "Schema" 메타 데이터 속성에서 null이 아닌 경우이 고, 그렇지 않으면 엔터티 컨테이너 이름입니다.  테이블이 나 뷰 이름은 "Table" 메타 데이터 속성 (null이 아닌 경우)이 고, 그렇지 않으면 엔터티 집합 기본의 Name 속성입니다.
 
 이러한 모든 속성은 저장소 스키마 정의 파일(SSDL)에 있는 해당 EntitySet의 정의에서 제공됩니다.
 
@@ -119,4 +119,4 @@ Limit 속성은 DbConstantExpression 또는 DbParameterReferenceExpression일 �
 
 ## <a name="see-also"></a>참고자료
 
-- [SQL 생성](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+- [SQL 생성](sql-generation.md)

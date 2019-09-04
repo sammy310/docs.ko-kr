@@ -2,12 +2,12 @@
 title: TOP(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4a4a0954-82e2-4eae-bcaf-7c4552f3532d
-ms.openlocfilehash: e7c6cf6b67dc3af29f7ca8fb22af419235a9b833
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b55519b7f95deb6463af4c0a6a2a53975e5b5a2
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879764"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248979"
 ---
 # <a name="top-entity-sql"></a>TOP(Entity SQL)
 
@@ -21,7 +21,7 @@ SELECT 절에는 선택적인 TOP 하위 절과 선택적인 ALL/DISTINCT 한정
 
 ## <a name="arguments"></a>인수
 
-`n` 반환할 행의 수를 지정 하는 숫자 식입니다. `n` 은 단일 숫자 리터럴 또는 단일 매개 변수일 수 있습니다.
+`n`반환할 행 수를 지정 하는 숫자 식입니다. `n` 은 단일 숫자 리터럴 또는 단일 매개 변수일 수 있습니다.
 
 ## <a name="remarks"></a>설명
 
@@ -39,13 +39,13 @@ select distinct top(10) c.a1, c.a2 from T as a
 select distinct top(@topParam) c.a1, c.a2 from T as a
 ```
 
-쿼리가 정렬되지 않는 한 TOP은 결정적이지 않습니다. 결정적인 결과가 필요한 경우에는 [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md) 절의 [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) 및 [LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) 하위 절을 사용합니다. TOP과 SKIP/LIMIT는 함께 사용할 수 없습니다.
+쿼리가 정렬되지 않는 한 TOP은 결정적이지 않습니다. 결정적인 결과가 필요한 경우에는 [ORDER BY](skip-entity-sql.md) 절의 [SKIP](limit-entity-sql.md) 및 [LIMIT](order-by-entity-sql.md) 하위 절을 사용합니다. TOP과 SKIP/LIMIT는 함께 사용할 수 없습니다.
 
 ## <a name="example"></a>예제
 
 다음 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 쿼리에서는 TOP을 사용하여 쿼리 결과에서 반환할 상위 행 하나를 지정합니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.
 
-1. 절차에 따라 [방법: StructuralType 결과 반환 하는 쿼리 실행](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)합니다.
+1. [방법: StructuralType 결과](../how-to-execute-a-query-that-returns-structuraltype-results.md)를 반환 하는 쿼리를 실행 합니다.
 
 2. 다음 쿼리를 `ExecuteStructuralTypeQuery` 메서드에 인수로 전달합니다.
 
@@ -53,8 +53,8 @@ select distinct top(@topParam) c.a1, c.a2 from T as a
 
 ## <a name="see-also"></a>참고자료
 
-- [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)
-- [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)
-- [LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)
-- [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)
-- [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [SELECT](select-entity-sql.md)
+- [SKIP](skip-entity-sql.md)
+- [LIMIT](limit-entity-sql.md)
+- [ORDER BY](order-by-entity-sql.md)
+- [엔터티 SQL 참조](entity-sql-reference.md)

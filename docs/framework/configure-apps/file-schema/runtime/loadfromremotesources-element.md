@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2268d07fb643621c944ef9bf561156b5332aaafc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 83980d315c83aa5cc23944dbd271c29e0ed83206
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920714"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252475"
 ---
 # <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources > 요소
 원격 소스에서 로드 된 어셈블리에 .NET Framework 4 이상에서 완전 신뢰를 부여 해야 하는지 여부를 지정 합니다.
@@ -20,9 +20,9 @@ ms.locfileid: "69920714"
 > [!NOTE]
 > Visual Studio 프로젝트 오류 목록 또는 빌드 오류의 [오류 메시지 때문에이 문서를 전달 하는 경우 방법: Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100))에서 웹의 어셈블리를 사용 합니다.  
   
- \<configuration>  
-\<runtime>  
-\<loadFromRemoteSources>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<런타임 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<loadFromRemoteSources >**  
   
 ## <a name="syntax"></a>구문  
   

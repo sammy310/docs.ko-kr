@@ -3,22 +3,23 @@ title: <trustedIssuers>
 ms.date: 03/30/2017
 ms.assetid: d818c917-07b4-40db-9801-8676561859fd
 author: BrucePerlerMS
-ms.openlocfilehash: 32aad3529ded6d0234b1bcb388ecbbc3b0a11c87
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 50fc7194823fb0c5c426fb54ffd50b17c3714ed9
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944268"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251752"
 ---
 # <a name="trustedissuers"></a>\<trustedIssuers>
 구성 기반 발급자 이름 레지스트리 (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>)에서 사용 하는 신뢰할 수 있는 발급자 인증서 목록을 구성 합니다.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<securityTokenHandlers>  
-\<securityTokenHandlerConfiguration>  
-\<issuerNameRegistry>  
-\<trustedIssuers>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.identitymodel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlers >** ](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlerConfiguration >** ](securitytokenhandlerconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<issuerNameRegistry >** ](issuernameregistry.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<s >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,7 +49,7 @@ ms.locfileid: "69944268"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |`<add thumbprint=xs:string name=xs:string>`|신뢰할 수 있는 발급자 컬렉션에 인증서를 추가 합니다. 인증서는 `thumbprint` 특성을 사용 하 여 지정 됩니다. 이 특성은 필수 이며, asn.1.1로 인코딩된 인증서 지문 형식을 포함 해야 합니다. 특성 `name` 은 선택 사항이 며 인증서의 이름을 지정 하는 데 사용할 수 있습니다.|  
 |`<clear>`|신뢰할 수 있는 발급자 컬렉션에서 모든 인증서를 지웁니다.|  
@@ -56,7 +57,7 @@ ms.locfileid: "69944268"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[\<issuerNameRegistry>](issuernameregistry.md)|발급자 이름 레지스트리를 구성 합니다. **중요:**  요소의 `type` 특성 `<issuerNameRegistry>` 은 `<trustedIssuers>` 요소에 대 한 클래스 <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> 를 참조 해야 유효 합니다.|  
   

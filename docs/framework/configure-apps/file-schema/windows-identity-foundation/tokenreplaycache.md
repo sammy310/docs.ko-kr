@@ -3,20 +3,21 @@ title: <tokenReplayCache>
 ms.date: 03/30/2017
 ms.assetid: 1572ab23-6933-41b5-bfb4-0c4548145500
 author: BrucePerlerMS
-ms.openlocfilehash: 5747a4cfa93118dd41292904b168bbef02fec415
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9f3a95fd0a39f199eaf13c7509aff22caa0e3b66
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944071"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251780"
 ---
 # <a name="tokenreplaycache"></a>\<tokenReplayCache>
 서비스 또는 보안 토큰 처리기 컬렉션을 사용 하 여 토큰 재생 캐시를 등록 합니다.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<caches>  
-\<tokenReplayCache>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.identitymodel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<캐시 >** ](caches.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<tokenReplayCache >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,7 +37,7 @@ ms.locfileid: "69944071"
   
 ### <a name="attributes"></a>특성  
   
-|특성|Description|  
+|특성|설명|  
 |---------------|-----------------|  
 |type|<xref:System.IdentityModel.Tokens.TokenReplayCache> 클래스에서 파생 되는 형식입니다. 사용자 지정 `type`을 지정 하는 방법에 대 한 자세한 내용은 [사용자 지정 형식 참조]를 참조 하세요.
   

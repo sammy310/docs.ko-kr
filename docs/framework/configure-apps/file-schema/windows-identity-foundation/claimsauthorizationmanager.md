@@ -3,19 +3,20 @@ title: <claimsAuthorizationManager>
 ms.date: 03/30/2017
 ms.assetid: 9354eee3-f692-4ad6-8427-3169686b8bcc
 author: BrucePerlerMS
-ms.openlocfilehash: 74ca031f7017d51adaa7a71593f537b64abbeae6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ddbe8a862940272e4192a3f4c0abdc1f9e8b5d48
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942885"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252081"
 ---
 # <a name="claimsauthorizationmanager"></a>\<claimsAuthorizationManager>
 들어오는 클레임에 대 한 클레임 권한 부여 관리자를 등록 합니다.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<claimsAuthorizationManager>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.identitymodel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<claimsAuthorizationManager >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,7 +35,7 @@ ms.locfileid: "69942885"
   
 ### <a name="attributes"></a>특성  
   
-|특성|Description|  
+|특성|설명|  
 |---------------|-----------------|  
 |type|<xref:System.Security.Claims.ClaimsAuthorizationManager> 클래스에서 파생 되는 사용자 지정 형식입니다. `type` 특성을 지정 하는 방법에 대 한 자세한 내용은 [사용자 지정 형식 참조](../windows-workflow-foundation/index.md)를 참조 하세요.|  
   

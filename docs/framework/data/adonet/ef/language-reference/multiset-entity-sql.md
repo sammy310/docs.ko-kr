@@ -2,12 +2,12 @@
 title: MULTISET (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: eb90a377-e47a-43a5-b308-e993b6d611e6
-ms.openlocfilehash: eb676feeb168e1fb184f3869a18e138bff34211b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8e02d2d3171c9f08333ecef7ee22e65100bdf822
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929351"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250089"
 ---
 # <a name="multiset-entity-sql"></a>MULTISET (Entity SQL)
 값 목록에서 multiset 인스턴스를 만듭니다. MULTISET 생성자의 모든 값은 호환되는 `T`형식이어야 합니다. 빈 multiset 생성자는 사용할 수 없습니다.  
@@ -28,7 +28,7 @@ or
  MULTISET\<T > 유형의 컬렉션입니다.  
   
 ## <a name="remarks"></a>설명  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 에서는 행 생성자, 개체 생성자, multiset 또는 컬렉션 생성자라는 세 가지 종류의 생성자를 제공합니다. 자세한 내용은 [형식 구성](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)을 참조 하세요.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 에서는 행 생성자, 개체 생성자, multiset 또는 컬렉션 생성자라는 세 가지 종류의 생성자를 제공합니다. 자세한 내용은 [형식 구성](constructing-types-entity-sql.md)을 참조 하세요.  
   
  multiset 생성자는 값 목록에서 multiset 인스턴스를 만듭니다. 생성자의 모든 값은 호환되는 형식이어야 합니다.  
   
@@ -44,7 +44,7 @@ or
 ## <a name="example"></a>예제  
  다음 Entity SQL 쿼리에서는 MULTISET 연산자를 사용하여 값 목록에서 multiset 인스턴스를 만듭니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  
   
-1. [방법: StructuralType 결과](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)를 반환 하는 쿼리를 실행 합니다.  
+1. [방법: StructuralType 결과](../how-to-execute-a-query-that-returns-structuraltype-results.md)를 반환 하는 쿼리를 실행 합니다.  
   
 2. 다음 쿼리를 `ExecuteStructuralTypeQuery` 메서드에 인수로 전달합니다.  
   
@@ -52,5 +52,5 @@ or
   
 ## <a name="see-also"></a>참고자료
 
-- [형식 생성](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)
-- [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [형식 생성](constructing-types-entity-sql.md)
+- [엔터티 SQL 참조](entity-sql-reference.md)

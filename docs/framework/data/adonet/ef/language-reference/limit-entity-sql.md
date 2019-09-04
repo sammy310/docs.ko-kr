@@ -2,12 +2,12 @@
 title: LIMIT(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c22ffede-0a52-44d1-99b9-4a91e651e1b9
-ms.openlocfilehash: e637218bb3db69d4b09fd734b939fd30f50ed806
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 432dfe2c8b2b87daf885be6de4da9bbeaaa37638
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961883"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250438"
 ---
 # <a name="limit-entity-sql"></a>LIMIT(Entity SQL)
 ORDER BY 절에서 LIIMIT 하위 절을 사용하여 물리적 페이징을 수행할 수 있습니다. LIMIT 절은 ORDER BY 절과 별도로 사용할 수 없습니다.  
@@ -30,7 +30,7 @@ ORDER BY 절에서 LIIMIT 하위 절을 사용하여 물리적 페이징을 수�
 ## <a name="example"></a>예제  
  다음 Entity SQL 쿼리는 LIMIT와 함께 ORDER BY 연산자를 사용하여 SELECT 문에서 반환되는 개체에 적용하는 정렬 순서를 지정합니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  
   
-1. [방법: StructuralType 결과](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)를 반환 하는 쿼리를 실행 합니다.  
+1. [방법: StructuralType 결과](../how-to-execute-a-query-that-returns-structuraltype-results.md)를 반환 하는 쿼리를 실행 합니다.  
   
 2. 다음 쿼리를 `ExecuteStructuralTypeQuery` 메서드에 인수로 전달합니다.  
   
@@ -38,7 +38,7 @@ ORDER BY 절에서 LIIMIT 하위 절을 사용하여 물리적 페이징을 수�
   
 ## <a name="see-also"></a>참고자료
 
-- [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)
+- [ORDER BY](order-by-entity-sql.md)
 - [방법: 쿼리 결과를 통한 페이지](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
-- [페이징](../../../../../../docs/framework/data/adonet/ef/language-reference/paging-entity-sql.md)
-- [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)
+- [페이징](paging-entity-sql.md)
+- [TOP](top-entity-sql.md)

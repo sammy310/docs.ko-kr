@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cbec8b02-a1e8-4ae8-a83b-bb5190413ac5
-ms.openlocfilehash: 66964497159c5c03a9070090ee60b43fa7d31abf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 79a14e787b4fe1aa1b16ad661b11a43b12bdd718
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032887"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247375"
 ---
 # <a name="data-binding"></a>데이터 바인딩
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 에서는 표 컨트롤과 같은 공용 컨트롤에 바인딩할 수 있습니다. 특히 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 데이터 표에 바인딩과 마스터-세부 사항 바인딩 처리를 위한 기본 패턴을 표시 및 업데이트 측면 모두에서 정의합니다.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]grid 컨트롤과 같은 공용 컨트롤에 대 한 바인딩을 지원 합니다. 특히 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 데이터 표에 바인딩과 마스터-세부 사항 바인딩 처리를 위한 기본 패턴을 표시 및 업데이트 측면 모두에서 정의합니다.
 
 ## <a name="underlying-principle"></a>기본 원칙
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 쿼리를 데이터베이스에서 실행하기 위해 SQL로 변환합니다. 그 결과 강력한 형식의 `IEnumerable`이 생성됩니다. 이러한 개체는 일반 공용 언어 런타임 (CLR) 개체 이므로 일반 개체 데이터 바인딩 결과 표시 하려면 사용할 수 있습니다. 반면 변경 작업(삽입, 업데이트 및 삭제)에는 추가 단계가 필요합니다.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 쿼리를 데이터베이스에서 실행하기 위해 SQL로 변환합니다. 그 결과 강력한 형식의 `IEnumerable`이 생성됩니다. 이러한 개체는 일반 CLR (공용 언어 런타임) 개체 이므로 일반적인 개체 데이터 바인딩을 사용 하 여 결과를 표시할 수 있습니다. 반면 변경 작업(삽입, 업데이트 및 삭제)에는 추가 단계가 필요합니다.
 
 ## <a name="operation"></a>작업
 
-Windows Forms 컨트롤에 명시적으로 바인딩하려면 <xref:System.ComponentModel.IListSource>를 구현합니다. 데이터 소스 제네릭 <xref:System.Data.Linq.Table%601> (`Table<T>` 에서 C# 또는 `Table(Of T)` Visual basic에서) 및 제네릭 `DataQuery` 구현 하도록 업데이트 되었습니다 <xref:System.ComponentModel.IListSource>. UI(사용자 인터페이스) 데이터 바인딩 엔진(Windows Forms 및 Windows Presentation Foundation)에서는 모두 해당 데이터 소스에서 <xref:System.ComponentModel.IListSource>를 구현하는지 여부를 테스트합니다. 따라서 다음 예제와 같이 쿼리의 직접 영향을 컨트롤의 데이터 소스에 쓰면 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 컬렉션 생성이 암시적으로 호출됩니다.
+Windows Forms 컨트롤에 명시적으로 바인딩하려면 <xref:System.ComponentModel.IListSource>를 구현합니다. 데이터 소스 제네릭 <xref:System.Data.Linq.Table%601> (`Table<T>` `DataQuery` <xref:System.ComponentModel.IListSource>또는 VisualBasic`Table(Of T)` ) 및 제네릭는를 구현 C# 하도록 업데이트 되었습니다. UI(사용자 인터페이스) 데이터 바인딩 엔진(Windows Forms 및 Windows Presentation Foundation)에서는 모두 해당 데이터 소스에서 <xref:System.ComponentModel.IListSource>를 구현하는지 여부를 테스트합니다. 따라서 다음 예제와 같이 쿼리의 직접 영향을 컨트롤의 데이터 소스에 쓰면 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 컬렉션 생성이 암시적으로 호출됩니다.
 
 [!code-csharp[DLinqDataBinding#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDataBinding/cs/Program.cs#1)]
 [!code-vb[DLinqDataBinding#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDataBinding/vb/Module1.vb#1)]
@@ -44,7 +44,7 @@ Windows Presentation Foundation에서도 동일한 동작이 발생합니다.
 
   - [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]가 <xref:System.Data.Linq.Table%601>에서 기본 <xref:System.Linq.IQueryable%601>을 찾는 경우 소스를 편집할 수 있으며 첫 번째 글머리 기호의 경우와 상황이 같아집니다.
 
-  - 하는 경우 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 내부를 찾을 수 없습니다 <xref:System.Data.Linq.Table%601>, 소스 버전에 대 한 허용 하지 않습니다 (예를 들어 `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 제네릭에 맞게 쿼리를 찾습니다 `SortableBindingList`에 간단한 <xref:System.ComponentModel.BindingList%601> 지정된 된 속성의 T 엔터티에 대 한 정렬 기능을 구현 하는 합니다.
+  - 에서 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 기본 <xref:System.Data.Linq.Table%601>을 찾을 수 없는 경우 소스에서 `groupby`버전을 허용 하지 않습니다 (예:). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]지정 된 속성의 T 엔터티에 대 `SortableBindingList`한 정렬 기능을 구현 <xref:System.ComponentModel.BindingList%601> 하는 단순 인 제네릭를 채우도록 쿼리를 탐색 합니다.
 
 ## <a name="specialized-collections"></a>특수 컬렉션
 
@@ -52,7 +52,7 @@ Windows Presentation Foundation에서도 동일한 동작이 발생합니다.
 
 ### <a name="generic-sortablebindinglist"></a>제네릭 SortableBindingList
 
-이 클래스는 <xref:System.ComponentModel.BindingList%601>에서 상속되며 <xref:System.ComponentModel.BindingList%601>의 정렬 가능한 버전입니다. 정렬은 메모리 내 솔루션이며 데이터베이스 자체와는 연결하지 않습니다. <xref:System.ComponentModel.BindingList%601>는 <xref:System.ComponentModel.IBindingList>를 구현하지만 기본적으로 정렬을 지원하지 않습니다. 그러나 <xref:System.ComponentModel.BindingList%601> 구현 <xref:System.ComponentModel.IBindingList> 가상 *core* 메서드. 이러한 메서드는 쉽게 재정의할 수 있습니다. 제네릭 `SortableBindingList`는 <xref:System.ComponentModel.BindingList%601.SupportsSortingCore%2A>, <xref:System.ComponentModel.BindingList%601.SortPropertyCore%2A>, <xref:System.ComponentModel.BindingList%601.SortDirectionCore%2A> 및 <xref:System.ComponentModel.BindingList%601.ApplySortCore%2A>를 재정의합니다. `ApplySortCore`는 <xref:System.ComponentModel.IBindingList.ApplySort%2A>에서 호출되며 지정한 속성의 T 항목 목록을 정렬합니다.
+이 클래스는 <xref:System.ComponentModel.BindingList%601>에서 상속되며 <xref:System.ComponentModel.BindingList%601>의 정렬 가능한 버전입니다. 정렬은 메모리 내 솔루션이며 데이터베이스 자체와는 연결하지 않습니다. <xref:System.ComponentModel.BindingList%601>는 <xref:System.ComponentModel.IBindingList>를 구현하지만 기본적으로 정렬을 지원하지 않습니다. 그러나는 <xref:System.ComponentModel.BindingList%601> 가상 <xref:System.ComponentModel.IBindingList> *핵심* 메서드를 사용 하 여를 구현 합니다. 이러한 메서드는 쉽게 재정의할 수 있습니다. 제네릭 `SortableBindingList`는 <xref:System.ComponentModel.BindingList%601.SupportsSortingCore%2A>, <xref:System.ComponentModel.BindingList%601.SortPropertyCore%2A>, <xref:System.ComponentModel.BindingList%601.SortDirectionCore%2A> 및 <xref:System.ComponentModel.BindingList%601.ApplySortCore%2A>를 재정의합니다. `ApplySortCore`는 <xref:System.ComponentModel.IBindingList.ApplySort%2A>에서 호출되며 지정한 속성의 T 항목 목록을 정렬합니다.
 
 속성이 T에 속하지 않으면 예외가 발생합니다.
 
@@ -80,9 +80,9 @@ Windows Presentation Foundation에서도 동일한 동작이 발생합니다.
 
 - <xref:System.ComponentModel.IBindingList.SortDirection%2A> 및 <xref:System.ComponentModel.IBindingList.SortProperty%2A> 속성은 로컬 멤버에 저장된 현재 정렬 정의를 노출합니다.
 
-System.Windows.Forms.BindingSource를 사용 하 고 EntitySet을 바인딩할\<TEntity > System.Windows.Forms.BindingSource.DataSource EntitySet를 호출 해야\<TEntity >. GetNewBindingList를 업데이트 해야 합니다.
+System.object를 사용 하 여 > entityset\<를 사용 하는 경우에는 entityset를 사용 하는 경우 > entityset\<를 호출 해야 합니다. GetNewBindingList를 업데이트 합니다.
 
-System.Windows.Forms.BindingSource를 사용 하 고 BindingSource.DataMember 속성을 설정를 노출 하는 BindingSource.DataMember에 명명 된 속성이 있는 클래스를 BindingSource.DataSource 설정\<TEntity >, 있습니다 EntitySet을 호출 하지 않아도\<TEntity >. GetNewBindingList 있지만 BindingSource.List를 업데이트 하는 정렬 기능을 잃게 됩니다.
+System.object를 사용 하 고 bindingsource. datamember 속성을 설정 하 고 bindingsource. DataSource를이 속성을 사용 하는 클래스에 설정 하는 경우에는 EntitySet\<를 > 합니다. EntitySet\<>를 호출할 필요가 없습니다. GetNewBindingList를 업데이트 하면 정렬 기능이 손실 됩니다.
 
 ## <a name="caching"></a>캐싱
 
@@ -108,11 +108,11 @@ System.Windows.Forms.BindingSource를 사용 하 고 BindingSource.DataMember �
 
 ## <a name="troubleshooting"></a>문제 해결
 
-이 단원에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 데이터 바인딩 애플리케이션의 문제를 해결하는 데 도움이 되는 몇 가지 항목을 설명합니다.
+이 단원에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 데이터 바인딩 응용 프로그램의 문제를 해결하는 데 도움이 되는 몇 가지 항목을 설명합니다.
 
 - 속성을 사용해야 합니다. 필드만 사용하는 것으로는 충분하지 않습니다. Windows Forms에는 이러한 사용법이 필요합니다.
 
-- 기본적으로 `image`하십시오 `varbinary`, 및 `timestamp` 데이터베이스 형식은 바이트 배열에 매핑됩니다. `ToString()`은 이 시나리오에서 지원되지 않으므로 이러한 개체를 표시할 수 없습니다.
+- 기본적 `image` `timestamp` 으로, 및 데이터베이스 형식은 바이트 배열에 매핑됩니다. `varbinary` `ToString()`은 이 시나리오에서 지원되지 않으므로 이러한 개체를 표시할 수 없습니다.
 
 - 기본 키에 매핑된 클래스 멤버에는 setter가 있지만 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 개체 ID 변경이 지원되지 않습니다. 따라서 매핑에서 사용된 기본/고유 키는 데이터베이스에서 업데이트할 수 없습니다. 표를 변경하면 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>를 호출할 때 예외가 발생합니다.
 
@@ -120,4 +120,4 @@ System.Windows.Forms.BindingSource를 사용 하 고 BindingSource.DataMember �
 
 ## <a name="see-also"></a>참고자료
 
-- [배경 정보](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [배경 정보](background-information.md)

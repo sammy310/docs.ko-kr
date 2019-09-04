@@ -2,15 +2,15 @@
 title: 마이그레이션 고려 사항(Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: 8370156d2bd0f3858d7fa0936fa967a658e6e910
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3554f530acf0e3ca3e66dddf74f63e7ede03708e
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929302"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248565"
 ---
 # <a name="migration-considerations-entity-framework"></a>마이그레이션 고려 사항(Entity Framework)
-ADO.NET Entity Framework는 기존 응용 프로그램에 몇 가지 이점을 제공 합니다. 가장 중요한 이점 중 하나는 개념적 모델을 사용하여 응용 프로그램에서 사용되는 데이터 구조를 데이터 소스의 스키마와 구분할 수 있다는 것입니다. 이렇게 하면 응용 프로그램을 적절하게 변경하지 않아도 나중에 저장소 모델이나 데이터 소스 자체를 쉽게 변경할 수 있습니다. 사용 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]의 이점에 대 한 자세한 내용은 [Entity Framework 개요](../../../../../docs/framework/data/adonet/ef/overview.md) 및 [엔터티 데이터 모델](../../../../../docs/framework/data/adonet/entity-data-model.md)를 참조 하세요.  
+ADO.NET Entity Framework는 기존 응용 프로그램에 몇 가지 이점을 제공 합니다. 가장 중요한 이점 중 하나는 개념적 모델을 사용하여 응용 프로그램에서 사용되는 데이터 구조를 데이터 소스의 스키마와 구분할 수 있다는 것입니다. 이렇게 하면 응용 프로그램을 적절하게 변경하지 않아도 나중에 저장소 모델이나 데이터 소스 자체를 쉽게 변경할 수 있습니다. 사용 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]의 이점에 대 한 자세한 내용은 [Entity Framework 개요](overview.md) 및 [엔터티 데이터 모델](../entity-data-model.md)를 참조 하세요.  
   
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]의 이점을 최대한 활용하기 위해 기존 응용 프로그램을 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]로 마이그레이션할 수 있습니다. 일부 작업은 마이그레이션되는 모든 응용 프로그램에 공통됩니다. 이러한 일반적인 작업에는 버전 3.5 SP1 (서비스 팩 1)부터 .NET Framework 사용 하도록 응용 프로그램을 업그레이드 하 고, 모델 및 매핑을 정의 하 고, Entity Framework를 구성 하는 작업이 포함 됩니다. 응용 프로그램을 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]로 마이그레이션하는 경우 추가로 고려할 사항이 있습니다. 이러한 고려 사항은 마이그레이션되는 응용 프로그램의 종류와 응용 프로그램의 특정 기능에 따라 달라집니다. 이 항목에서는 기존 응용 프로그램을 업그레이드할 때 사용할 최상의 방법을 선택하는 데 유용한 정보를 제공합니다.  
   
@@ -23,7 +23,7 @@ ADO.NET Entity Framework는 기존 응용 프로그램에 몇 가지 이점을 �
   
 - 크거나 복잡한 응용 프로그램의 경우 한 번에 전체 응용 프로그램을 Entity Framework로 마이그레이션할 필요는 없습니다. 그러나 데이터 소스가 변경될 경우 Entity Framework를 사용하지 않는 응용 프로그램의 모든 부분을 변경해야 합니다.  
   
-- 에서 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ADO.NET 데이터 공급자를 사용 하 여 데이터 원본에 액세스 하므로 Entity Framework에서 사용 하는 데이터 공급자 연결을 응용 프로그램의 다른 부분과 공유할 수 있습니다. 예를 들어, Entity Framework는 SqlClient 공급자를 사용하여 SQL Server 데이터베이스에 액세스합니다. 자세한 내용은 [Entity Framework에 대 한 EntityClient 공급자](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)를 참조 하세요.  
+- 에서 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ADO.NET 데이터 공급자를 사용 하 여 데이터 원본에 액세스 하므로 Entity Framework에서 사용 하는 데이터 공급자 연결을 응용 프로그램의 다른 부분과 공유할 수 있습니다. 예를 들어, Entity Framework는 SqlClient 공급자를 사용하여 SQL Server 데이터베이스에 액세스합니다. 자세한 내용은 [Entity Framework에 대 한 EntityClient 공급자](entityclient-provider-for-the-entity-framework.md)를 참조 하세요.  
   
 ## <a name="common-migration-tasks"></a>일반적인 마이그레이션 작업  
  기존 응용 프로그램을 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]로 마이그레이션하는 경로는 응용 프로그램 종류와 기존 데이터 액세스 전략에 따라 달라집니다. 그러나 기존 응용 프로그램을 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]로 마이그레이션하는 경우 항상 다음 작업을 수행해야 합니다.  
@@ -46,7 +46,7 @@ ADO.NET Entity Framework는 기존 응용 프로그램에 몇 가지 이점을 �
   
 3. 연결 문자열을 정의합니다.  
   
-     [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]는 개념적 모델에 대해 쿼리를 실행할 때 특별한 형식의 연결 문자열을 사용합니다. 이 연결 문자열은 모델과 매핑 파일 및 데이터 소스에 대한 연결 정보를 캡슐화합니다. 자세한 내용은 [방법: 연결 문자열](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)을 정의 합니다.  
+     [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]는 개념적 모델에 대해 쿼리를 실행할 때 특별한 형식의 연결 문자열을 사용합니다. 이 연결 문자열은 모델과 매핑 파일 및 데이터 소스에 대한 연결 정보를 캡슐화합니다. 자세한 내용은 [방법: 연결 문자열](how-to-define-the-connection-string.md)을 정의 합니다.  
   
 4. Visual Studio 프로젝트를 구성 합니다.  
   
@@ -60,13 +60,13 @@ ADO.NET Entity Framework는 기존 응용 프로그램에 몇 가지 이점을 �
   
 - 데이터 판독기를 사용하여 표 형식 데이터 표시  
 
-  EntityClient 공급자를 사용 하 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 여 쿼리를 실행 하 고 반환 <xref:System.Data.EntityClient.EntityDataReader> 된 개체를 열거 하는 것을 고려할 수 있습니다. 응용 프로그램이 데이터 판독기를 사용하여 표 형식 데이터를 표시하며 데이터를 개체로 구체화, 변경 내용 추적 및 업데이트를 위해 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에서 제공하는 기능이 필요하지 않은 경우에만 이 작업을 수행합니다. 데이터 소스를 업데이트하는 기존 데이터 액세스 코드를 계속 사용할 수 있지만 <xref:System.Data.EntityClient.EntityConnection.StoreConnection%2A>의 <xref:System.Data.EntityClient.EntityConnection> 속성에서 액세스된 기존 연결을 사용할 수도 있습니다. 자세한 내용은 [Entity Framework에 대 한 EntityClient 공급자](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)를 참조 하세요.  
+  EntityClient 공급자를 사용 하 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 여 쿼리를 실행 하 고 반환 <xref:System.Data.EntityClient.EntityDataReader> 된 개체를 열거 하는 것을 고려할 수 있습니다. 응용 프로그램이 데이터 판독기를 사용하여 표 형식 데이터를 표시하며 데이터를 개체로 구체화, 변경 내용 추적 및 업데이트를 위해 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에서 제공하는 기능이 필요하지 않은 경우에만 이 작업을 수행합니다. 데이터 소스를 업데이트하는 기존 데이터 액세스 코드를 계속 사용할 수 있지만 <xref:System.Data.EntityClient.EntityConnection.StoreConnection%2A>의 <xref:System.Data.EntityClient.EntityConnection> 속성에서 액세스된 기존 연결을 사용할 수도 있습니다. 자세한 내용은 [Entity Framework에 대 한 EntityClient 공급자](entityclient-provider-for-the-entity-framework.md)를 참조 하세요.  
   
 - DataSets 사용  
 
-  는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 메모리 내 지 속성, 변경 내용 추적, 데이터 바인딩 및 XML 데이터로 개체 serialize를 비롯 하 여 데이터 집합에서 제공 하는 것과 동일한 많은 기능을 제공 합니다. 자세한 내용은 [개체 작업](../../../../../docs/framework/data/adonet/ef/working-with-objects.md)을 참조 하세요.  
+  는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 메모리 내 지 속성, 변경 내용 추적, 데이터 바인딩 및 XML 데이터로 개체 serialize를 비롯 하 여 데이터 집합에서 제공 하는 것과 동일한 많은 기능을 제공 합니다. 자세한 내용은 [개체 작업](working-with-objects.md)을 참조 하세요.  
   
-  에서 응용 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 프로그램에 필요한 데이터 집합의 기능을 제공 하지 않는 경우에도 LINQ to DataSet를 사용 하 여 LINQ 쿼리의 이점을 활용할 수 있습니다. 자세한 내용은 [LINQ to DataSet](../../../../../docs/framework/data/adonet/linq-to-dataset.md)을 참조하세요.  
+  에서 응용 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 프로그램에 필요한 데이터 집합의 기능을 제공 하지 않는 경우에도 LINQ to DataSet를 사용 하 여 LINQ 쿼리의 이점을 활용할 수 있습니다. 자세한 내용은 [LINQ to DataSet](../linq-to-dataset.md)을 참조하세요.  
   
 ## <a name="considerations-for-applications-that-bind-data-to-controls"></a>데이터를 컨트롤에 바인딩하는 응용 프로그램에 대한 고려 사항  
  .NET Framework를 사용 하면 데이터 집합 또는 ASP.NET 데이터 소스 컨트롤과 같은 데이터 원본의 데이터를 캡슐화 한 다음 사용자 인터페이스 요소를 해당 데이터 컨트롤에 바인딩할 수 있습니다. 다음 목록에서는 컨트롤을 Entity Framework 데이터에 바인딩할 때 고려할 사항에 대해 설명합니다.  
@@ -92,7 +92,7 @@ ADO.NET Entity Framework는 기존 응용 프로그램에 몇 가지 이점을 �
   
 - XML 데이터를 사용하는 응용 프로그램  
 
-  개체 serialization을 사용하여 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 데이터 서비스를 만들 수 있습니다. 이러한 서비스는 AJAX 기반 인터넷 응용 프로그램과 같이 XML 데이터를 사용하는 응용 프로그램에 데이터를 제공합니다. 이런 경우 [!INCLUDE[ssAstoria](../../../../../includes/ssastoria-md.md)]를 사용하는 것이 좋습니다. 이러한 데이터 서비스는 엔터티 데이터 모델을 기반으로 하며 GET, PUT, POST와 같은 표준 REST (Representational State Transfer) HTTP 동작을 사용 하 여 엔터티 데이터에 대 한 동적 액세스를 제공 합니다. 자세한 내용은 [WCF Data Services 4.5](../../../../../docs/framework/data/wcf/index.md)를 참조하세요.  
+  개체 serialization을 사용하여 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 데이터 서비스를 만들 수 있습니다. 이러한 서비스는 AJAX 기반 인터넷 응용 프로그램과 같이 XML 데이터를 사용하는 응용 프로그램에 데이터를 제공합니다. 이런 경우 [!INCLUDE[ssAstoria](../../../../../includes/ssastoria-md.md)]를 사용하는 것이 좋습니다. 이러한 데이터 서비스는 엔터티 데이터 모델을 기반으로 하며 GET, PUT, POST와 같은 표준 REST (Representational State Transfer) HTTP 동작을 사용 하 여 엔터티 데이터에 대 한 동적 액세스를 제공 합니다. 자세한 내용은 [WCF Data Services 4.5](../../wcf/index.md)를 참조하세요.  
   
   [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에서는 기본 XML 데이터 형식을 지원하지 않습니다. 즉, XML 열이 있는 테이블에 엔터티를 매핑할 때 XML 열에 해당하는 엔터티 속성은 문자열입니다. 개체의 연결을 끊고 XML로 serialize할 수 있습니다. 자세한 내용은 [개체 직렬화](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100))합니다.  
   
@@ -104,5 +104,5 @@ ADO.NET Entity Framework는 기존 응용 프로그램에 몇 가지 이점을 �
   
 ## <a name="see-also"></a>참고자료
 
-- [배포 고려 사항](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
-- [Entity Framework 용어](../../../../../docs/framework/data/adonet/ef/terminology.md)
+- [배포 고려 사항](deployment-considerations.md)
+- [Entity Framework 용어](terminology.md)

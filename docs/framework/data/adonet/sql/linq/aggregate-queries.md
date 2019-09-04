@@ -2,12 +2,12 @@
 title: 집계 쿼리
 ms.date: 03/30/2017
 ms.assetid: 13ec5580-05ce-4a1f-9d3d-8660be7891a2
-ms.openlocfilehash: b7b38306903313825056c02fc3c3fb8c98e07e17
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e61b16d6337c9b40f9e94052869a4c5592291d71
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964116"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248111"
 ---
 # <a name="aggregate-queries"></a>집계 쿼리
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 `Average`, `Count`, `Max`, `Min` 및 `Sum` 집계 연산자가 지원됩니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 집계 연산자의 다음과 같은 특징에 유의하세요.  
@@ -22,29 +22,29 @@ ms.locfileid: "69964116"
   
 - 익명 형식에 대해서 집계를 호출할 수 없습니다.  
   
- 다음 항목의 예제에서는 Northwind 샘플 데이터베이스를 사용합니다. 자세한 내용은 [샘플 데이터베이스 다운로드](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)를 참조 하세요.  
+ 다음 항목의 예제에서는 Northwind 샘플 데이터베이스를 사용합니다. 자세한 내용은 [샘플 데이터베이스 다운로드](downloading-sample-databases.md)를 참조 하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [숫자 시퀀스에서 평균 값 반환](../../../../../../docs/framework/data/adonet/sql/linq/return-the-average-value-from-a-numeric-sequence.md)  
+ [숫자 시퀀스에서 평균 값 반환](return-the-average-value-from-a-numeric-sequence.md)  
  <xref:System.Linq.Enumerable.Average%2A> 연산자를 사용하는 방법을 보여 줍니다.  
   
- [시퀀스의 요소 수 계산](../../../../../../docs/framework/data/adonet/sql/linq/count-the-number-of-elements-in-a-sequence.md)  
+ [시퀀스의 요소 수 계산](count-the-number-of-elements-in-a-sequence.md)  
  <xref:System.Linq.Enumerable.Count%2A> 연산자를 사용하는 방법을 보여 줍니다.  
   
- [숫자 시퀀스에서 최대값 찾기](../../../../../../docs/framework/data/adonet/sql/linq/find-the-maximum-value-in-a-numeric-sequence.md)  
+ [숫자 시퀀스에서 최대값 찾기](find-the-maximum-value-in-a-numeric-sequence.md)  
  <xref:System.Linq.Enumerable.Max%2A> 연산자를 사용하는 방법을 보여 줍니다.  
   
- [숫자 시퀀스에서 최소값 찾기](../../../../../../docs/framework/data/adonet/sql/linq/find-the-minimum-value-in-a-numeric-sequence.md)  
+ [숫자 시퀀스에서 최소값 찾기](find-the-minimum-value-in-a-numeric-sequence.md)  
  <xref:System.Linq.Enumerable.Min%2A> 연산자를 사용하는 방법을 보여 줍니다.  
   
- [숫자 시퀀스에서 값의 합계 계산](../../../../../../docs/framework/data/adonet/sql/linq/compute-the-sum-of-values-in-a-numeric-sequence.md)  
+ [숫자 시퀀스에서 값의 합계 계산](compute-the-sum-of-values-in-a-numeric-sequence.md)  
  <xref:System.Linq.Enumerable.Sum%2A> 연산자를 사용하는 방법을 보여 줍니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [쿼리 예제](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
+ [쿼리 예제](query-examples.md)  
  Visual Basic 및 C#의 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 쿼리에 대한 링크를 제공합니다.  
   
- [쿼리 개념](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
+ [쿼리 개념](query-concepts.md)  
  [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]의 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 쿼리 설계 개념을 설명하는 항목에 대한 링크를 제공합니다.  
   
  [LINQ 쿼리 소개(C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  

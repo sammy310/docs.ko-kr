@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 9fac4e1a98f67c6d5d946ade1b7f2115ce0d5f8e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 92a72bdc99471e14f607e674104e7faa3e796975
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964873"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254142"
 ---
 # <a name="documents-in-wpf"></a>WPF의 문서
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 이전 세대의 Windows에서 보다 쉽게 액세스 하 고 읽을 수 있도록 설계 된 고화질 콘텐츠를 만들 수 있는 다양 한 문서 기능을 제공 합니다. 고급 기능 및 품질 외에도 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 문서 표시, 패키징 및 보안을 위한 통합 서비스도 제공합니다. 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 문서 형식 및 문서 패키징을 소개합니다.  
@@ -63,13 +63,13 @@ ms.locfileid: "69964873"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 패키지 아키텍처는 다음과 같은 여러 주요 기술의 기반 역할을 합니다.  
   
-- [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]를 준수하는 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 문서.  
+- Xps 문서는 XPS (XML Paper Specification)를 준수 합니다.  
   
 - Microsoft Office “12” Open XML 형식 문서(.docx).  
   
 - 고유 애플리케이션 디자인에 맞는 사용자 지정 저장소 형식.  
   
- 패키징 api에 따라는 <xref:System.Windows.Xps.Packaging.XpsDocument> 고정 콘텐츠 문서를 저장 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 하기 위해 특별히 설계 되었습니다. 는 뷰어에서 열거나, <xref:System.Windows.Controls.DocumentViewer> 컨트롤에 표시 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]하거나, 인쇄 스풀로 라우팅하거나, 호환 프린터로 직접 출력할 수 있는 자체 포함 문서입니다. <xref:System.Windows.Xps.Packaging.XpsDocument>  
+ 패키징 api에 따라는 <xref:System.Windows.Xps.Packaging.XpsDocument> 고정 콘텐츠 문서를 저장 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 하기 위해 특별히 설계 되었습니다. 는 뷰어에서 열거나, <xref:System.Windows.Controls.DocumentViewer> 컨트롤에 표시 하거나, 인쇄 스풀로 라우팅하거나, XPS 호환 프린터로 직접 출력할 수 있는 자체 포함 문서입니다. <xref:System.Windows.Xps.Packaging.XpsDocument>  
   
  다음 섹션에서는와 함께 <xref:System.IO.Packaging.Package> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]제공 되는 <xref:System.Windows.Xps.Packaging.XpsDocument> api에 대 한 추가 정보를 제공 합니다.  
   
@@ -125,15 +125,15 @@ ms.locfileid: "69964873"
   
 <a name="XPS_Documents"></a>   
 ## <a name="xps-documents"></a>XPS 문서  
- [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 문서는 렌더링에 필요한 모든 리소스 및 정보와 함께 하나 이상의 고정 문서를 포함하는 패키지입니다.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]도 기본 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 인쇄 스풀 파일 형식입니다.  는 <xref:System.Windows.Xps.Packaging.XpsDocument> 표준 ZIP 데이터 집합에 저장 되 고 XML 및 이진 구성 요소의 조합 (예: 이미지 및 글꼴 파일)을 포함할 수 있습니다. [PackageRelationships](#PackageRelationships)는 문서를 완전하게 렌더링하는 데 필요한 리소스와 콘텐츠 사이의 종속성을 정의하는 데 사용합니다.  디자인 <xref:System.Windows.Xps.Packaging.XpsDocument> 은 여러 사용을 지 원하는 고품질의 단일 문서 솔루션을 제공 합니다.  
+ XPS (XML Paper Specification) 문서는 렌더링에 필요한 모든 리소스 및 정보와 함께 하나 이상의 수정 된 문서를 포함 하는 패키지입니다.  XPS는 네이티브 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 인쇄 스풀 파일 형식 이기도 합니다.  는 <xref:System.Windows.Xps.Packaging.XpsDocument> 표준 ZIP 데이터 집합에 저장 되 고 XML 및 이진 구성 요소의 조합 (예: 이미지 및 글꼴 파일)을 포함할 수 있습니다. [PackageRelationships](#PackageRelationships)는 문서를 완전하게 렌더링하는 데 필요한 리소스와 콘텐츠 사이의 종속성을 정의하는 데 사용합니다.  디자인 <xref:System.Windows.Xps.Packaging.XpsDocument> 은 여러 사용을 지 원하는 고품질의 단일 문서 솔루션을 제공 합니다.  
   
 - 고정 문서 콘텐츠와 리소스를 읽고 쓰며, 이식 가능하고 배포하기 쉬운 단일 파일로 저장.  
   
-- [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 뷰어 응용 프로그램으로 문서 표시.  
+- XPS 뷰어 응용 프로그램을 사용 하 여 문서 표시  
   
 - [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]의 기본 인쇄 스풀 출력 형식으로 문서 출력.  
   
-- [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 호환 가능 프린터에 직접 문서 라우팅.  
+- 문서를 XPS 호환 프린터로 직접 라우팅합니다.  
   
 ## <a name="see-also"></a>참고자료
 

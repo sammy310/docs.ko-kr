@@ -2,12 +2,12 @@
 title: Null 리터럴 및 형식 유추(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: edd56afb-af1b-4e7d-b210-cb8998143426
-ms.openlocfilehash: 3fea03146549f3d42bf08bbd5e7ce355d25bd4eb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bb2d9184e17ee2a9916a731eb20eefa105a73753
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641819"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249818"
 ---
 # <a name="null-literals-and-type-inference-entity-sql"></a>Null 리터럴 및 형식 유추(Entity SQL)
 null 리터럴은 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 형식 시스템의 모든 형식과 호환됩니다. 하지만 null 리터럴의 형식을 올바르게 유추할 수 있도록 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 null 리터럴을 사용할 수 있는 위치에 대한 특정 제약 조건을 설정합니다.  
@@ -42,4 +42,4 @@ null 리터럴은 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 형식
   
 ## <a name="see-also"></a>참고자료
 
-- [Entity SQL 개요](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Entity SQL 개요](entity-sql-overview.md)

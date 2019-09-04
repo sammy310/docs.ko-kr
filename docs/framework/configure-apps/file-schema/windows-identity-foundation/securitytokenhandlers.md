@@ -3,19 +3,20 @@ title: <securityTokenHandlers>
 ms.date: 03/30/2017
 ms.assetid: f11a631d-4094-4e11-bb03-4ede74b30281
 author: BrucePerlerMS
-ms.openlocfilehash: 678e5c705181c55257b1ddb853690ada60ecd17a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 017309436660991c69da569e9cc4219e842ecaa3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942468"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251869"
 ---
 # <a name="securitytokenhandlers"></a>\<securityTokenHandlers>
 끝점에 등록 된 보안 토큰 처리기의 컬렉션을 지정 합니다.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<securityTokenHandlers>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.identitymodel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<securityTokenHandlers >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -33,7 +34,7 @@ ms.locfileid: "69942468"
   
 ### <a name="attributes"></a>특성  
   
-|특성|Description|  
+|특성|설명|  
 |---------------|-----------------|  
 |name|토큰 처리기 컬렉션의 이름을 지정 합니다. 프레임 워크에서 인식 되는 값은 "ActAs" 및 "OnBehalfOf" 뿐입니다. 이러한 이름 중 하나를 사용 하 여 토큰 처리기 컬렉션을 지정 하면 ActAs 또는 OnBehalfOf 토큰을 각각 처리할 때 컬렉션이 사용 됩니다.|  
   

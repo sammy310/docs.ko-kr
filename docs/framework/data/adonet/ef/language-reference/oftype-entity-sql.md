@@ -2,12 +2,12 @@
 title: OFTYPE(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 6d259ca7-bbf0-40f8-a154-181d25c0d67e
-ms.openlocfilehash: bbc3ffd4902fe8c1c41aebe88317d0e3c32f7771
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36701a5e75e804ea541d242aaff243de0b24cec3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760365"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249791"
 ---
 # <a name="oftype-entity-sql"></a>OFTYPE(Entity SQL)
 쿼리 식에서 특정 형식을 가진 개체 컬렉션을 반환합니다.  
@@ -56,8 +56,8 @@ OfType(executives, NamespaceName.Manager)
 |무늬|동작|  
 |-------------|--------------|  
 |OFTYPE(Collection(EntityType), EntityType)|Collection(EntityType)|  
-|OFTYPE(Collection(ComplexType), ComplexType)|Throw|  
-|OFTYPE(Collection(RowType), RowType)|Throw|  
+|OFTYPE(Collection(ComplexType), ComplexType)|되거나|  
+|OFTYPE(Collection(RowType), RowType)|되거나|  
   
 ## <a name="example"></a>예제  
  다음 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 쿼리에서는 OFTYPE 연산자를 사용하여 Course 개체 컬렉션에서 OnsiteCourse 개체 컬렉션을 반환합니다. 쿼리는 [School 모델](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100))을 기반으로 합니다.  
@@ -66,4 +66,4 @@ OfType(executives, NamespaceName.Manager)
   
 ## <a name="see-also"></a>참고자료
 
-- [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [엔터티 SQL 참조](entity-sql-reference.md)

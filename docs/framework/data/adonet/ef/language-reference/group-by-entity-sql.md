@@ -2,15 +2,15 @@
 title: GROUP BY(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cf4f4972-4724-4945-ba44-943a08549139
-ms.openlocfilehash: d9074b1c2ea4f8f9206c8de1e658c1aac762a74f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 641231825ca00c6accd19039ba1ec403208a077e
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936086"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250902"
 ---
 # <a name="group-by-entity-sql"></a>GROUP BY(Entity SQL)
-쿼리 식([SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md))을 통해 반환되는 개체가 배치될 그룹을 지정합니다.  
+쿼리 식([SELECT](select-entity-sql.md))을 통해 반환되는 개체가 배치될 그룹을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -57,12 +57,12 @@ GROUP BY Q   -- BAD
 GROUP BY 1   -- BAD, a constant is not allowed  
 ```  
   
- GROUP BY 사용 예제는 [HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md)항목을 참조하세요.  
+ GROUP BY 사용 예제는 [HAVING](having-entity-sql.md)항목을 참조하세요.  
   
 ## <a name="example"></a>예제  
  다음 Entity SQL 쿼리에서는 GROUP BY 연산자를 사용하여 쿼리를 통해 반환되는 개체가 배치될 그룹을 지정합니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  
   
-1. [방법: PrimitiveType 결과](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)를 반환 하는 쿼리를 실행 합니다.  
+1. [방법: PrimitiveType 결과](../how-to-execute-a-query-that-returns-primitivetype-results.md)를 반환 하는 쿼리를 실행 합니다.  
   
 2. 다음 쿼리를 `ExecutePrimitiveTypeQuery` 메서드에 인수로 전달합니다.  
   
@@ -70,5 +70,5 @@ GROUP BY 1   -- BAD, a constant is not allowed
   
 ## <a name="see-also"></a>참고자료
 
-- [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [쿼리 식](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
+- [엔터티 SQL 참조](entity-sql-reference.md)
+- [쿼리 식](query-expressions-entity-sql.md)

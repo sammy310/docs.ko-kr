@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 79038efa-15bf-464a-83e2-35fe145252ce
-ms.openlocfilehash: dd440be3f73eb2f02a269a8cad29f0fe30920836
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c9cb8d32227447d3808dc250a39fef0867257a77
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936033"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250775"
 ---
 # <a name="how-to-call-database-functions"></a>방법: 데이터베이스 함수 호출
 <xref:System.Data.Objects.SqlClient.SqlFunctions> 클래스에는 LINQ to Entities 쿼리에 사용할 SQL Server 함수를 노출하는 메서드가 포함되어 있습니다. LINQ to Entities 쿼리에서 <xref:System.Data.Objects.SqlClient.SqlFunctions> 메서드를 사용할 때 해당되는 데이터베이스 함수가 데이터베이스에서 실행됩니다.  
@@ -35,5 +35,5 @@ ms.locfileid: "69936033"
   
 ## <a name="see-also"></a>참고자료
 
-- [LINQ to Entities 쿼리에서 함수 호출](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)
-- [LINQ to Entities에서 쿼리](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [LINQ to Entities 쿼리에서 함수 호출](calling-functions-in-linq-to-entities-queries.md)
+- [LINQ to Entities에서 쿼리](queries-in-linq-to-entities.md)

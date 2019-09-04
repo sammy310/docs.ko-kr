@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a0bfa4b1-99e5-4dd1-9912-4b825a9dc25c
-ms.openlocfilehash: 56ae913da3ca06a08b5bacc5ce225597980467a6
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: c749a7bb1575ee52418f0953ff8216bf4221b674
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539453"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250142"
 ---
 # <a name="method-based-query-syntax-examples-navigating-relationships"></a>메서드 기반 쿼리 구문 예제: 관계 탐색
-[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]의 탐색 속성은 연결의 End에서 엔터티를 찾는 데 사용되는 바로 가기 속성입니다. 탐색 속성을 사용하면 엔터티 간에 탐색하거나 연결 집합을 통해 관련 엔터티 간에 탐색할 수 있습니다. 이 항목에서는 linq에서 to Entities 쿼리에서 탐색 속성을 통해 관계를 탐색 하는 방법의 메서드 기반 쿼리 구문에서 예제를 제공 합니다.  
+[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]의 탐색 속성은 연결의 End에서 엔터티를 찾는 데 사용되는 바로 가기 속성입니다. 탐색 속성을 사용하면 엔터티 간에 탐색하거나 연결 집합을 통해 관련 엔터티 간에 탐색할 수 있습니다. 이 항목에서는 LINQ to Entities 쿼리의 탐색 속성을 통해 관계를 탐색 하는 방법에 대 한 메서드 기반 쿼리 구문 예제를 제공 합니다.  
   
  이 예제에서 사용하는 AdventureWorks Sales 모델에서는 AdventureWorks 샘플 데이터베이스의 Contact, Address, Product, SalesOrderHeader 및 SalesOrderDetail 테이블을 사용합니다.  
   
- 이 항목의 예제에서는 다음을 사용 `using` / `Imports` 문:  
+ 이 항목의 예제에서는 다음 `using` / `Imports` 문을 사용 합니다.  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
@@ -55,4 +55,4 @@ ms.locfileid: "67539453"
 ## <a name="see-also"></a>참고자료
 
 - [관계, 탐색 속성 및 외래 키](/ef/ef6/fundamentals/relationships)
-- [LINQ to Entities에서 쿼리](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [LINQ to Entities에서 쿼리](queries-in-linq-to-entities.md)

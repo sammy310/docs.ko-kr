@@ -3,20 +3,21 @@ title: <clear>
 ms.date: 03/30/2017
 ms.assetid: 54dcd1d1-038f-4fc8-a3a4-56ba7a1ca0fd
 author: BrucePerlerMS
-ms.openlocfilehash: f5e5dbae87480929fca89dad48618450f0eb1442
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e96349c72fc4a952e3dc7efeea5f69ebaa1fd0ad
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942817"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252040"
 ---
 # <a name="clear"></a>\<clear>
 현재 토큰 처리기 컬렉션에서 모든 보안 토큰 처리기를 지웁니다.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<securityTokenHandlers>  
-\<clear>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.identitymodel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlers >** ](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> 지우기**  
   
 ## <a name="syntax"></a>구문  
   
