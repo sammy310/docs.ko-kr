@@ -11,49 +11,50 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b00a5349e22feb3cce404ff504edd798ff9e304
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 05634cb319ac69bd76e16e592ba59490b30c9c9d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663532"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252393"
 ---
-# <a name="probing-element"></a><span data-ttu-id="3914f-102">\<검색 > 요소</span><span class="sxs-lookup"><span data-stu-id="3914f-102">\<probing> Element</span></span>
-<span data-ttu-id="3914f-103">어셈블리를 로드할 때 검색할 공용 언어 런타임에 대 한 응용 프로그램 기본 하위 디렉터리를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="3914f-103">Specifies application base subdirectories for the common language runtime to search when loading assemblies.</span></span>  
+# <a name="probing-element"></a><span data-ttu-id="0d3ea-102">\<검색 > 요소</span><span class="sxs-lookup"><span data-stu-id="0d3ea-102">\<probing> Element</span></span>
+<span data-ttu-id="0d3ea-103">어셈블리를 로드할 때 검색할 공용 언어 런타임에 대 한 응용 프로그램 기본 하위 디렉터리를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="0d3ea-103">Specifies application base subdirectories for the common language runtime to search when loading assemblies.</span></span>  
   
- <span data-ttu-id="3914f-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="3914f-104">\<configuration></span></span>  
-<span data-ttu-id="3914f-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="3914f-105">\<runtime></span></span>  
-<span data-ttu-id="3914f-106">\<assemblyBinding></span><span class="sxs-lookup"><span data-stu-id="3914f-106">\<assemblyBinding></span></span>  
-<span data-ttu-id="3914f-107">\<probing></span><span class="sxs-lookup"><span data-stu-id="3914f-107">\<probing></span></span>  
+<span data-ttu-id="0d3ea-104">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="0d3ea-104">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="0d3ea-105">&nbsp;&nbsp;[ **\<런타임 >** ](runtime-element.md)</span><span class="sxs-lookup"><span data-stu-id="0d3ea-105">&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)</span></span>\
+<span data-ttu-id="0d3ea-106">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)</span><span class="sxs-lookup"><span data-stu-id="0d3ea-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)</span></span>\
+<span data-ttu-id="0d3ea-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<probing>**</span><span class="sxs-lookup"><span data-stu-id="0d3ea-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<probing>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3914f-108">구문</span><span class="sxs-lookup"><span data-stu-id="3914f-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0d3ea-108">구문</span><span class="sxs-lookup"><span data-stu-id="0d3ea-108">Syntax</span></span>  
   
 ```xml  
 <probing privatePath="paths"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="3914f-109">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="3914f-109">Attributes and Elements</span></span>  
- <span data-ttu-id="3914f-110">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="3914f-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="0d3ea-109">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="0d3ea-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="0d3ea-110">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="0d3ea-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="3914f-111">특성</span><span class="sxs-lookup"><span data-stu-id="3914f-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="0d3ea-111">특성</span><span class="sxs-lookup"><span data-stu-id="0d3ea-111">Attributes</span></span>  
   
-|<span data-ttu-id="3914f-112">특성</span><span class="sxs-lookup"><span data-stu-id="3914f-112">Attribute</span></span>|<span data-ttu-id="3914f-113">설명</span><span class="sxs-lookup"><span data-stu-id="3914f-113">Description</span></span>|  
+|<span data-ttu-id="0d3ea-112">특성</span><span class="sxs-lookup"><span data-stu-id="0d3ea-112">Attribute</span></span>|<span data-ttu-id="0d3ea-113">설명</span><span class="sxs-lookup"><span data-stu-id="0d3ea-113">Description</span></span>|  
 |---------------|-----------------|  
-|`privatePath`|<span data-ttu-id="3914f-114">필수 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="3914f-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="3914f-115">어셈블리를 포함할 수 있는 응용 프로그램 기본 디렉터리의 하위 디렉터리를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="3914f-115">Specifies subdirectories of the application's base directory that might contain assemblies.</span></span> <span data-ttu-id="3914f-116">각 하위 디렉터리를 세미콜론으로 구분 합니다.</span><span class="sxs-lookup"><span data-stu-id="3914f-116">Delimit each subdirectory with a semicolon.</span></span>|  
+|`privatePath`|<span data-ttu-id="0d3ea-114">필수 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="0d3ea-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="0d3ea-115">어셈블리를 포함할 수 있는 응용 프로그램 기본 디렉터리의 하위 디렉터리를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="0d3ea-115">Specifies subdirectories of the application's base directory that might contain assemblies.</span></span> <span data-ttu-id="0d3ea-116">각 하위 디렉터리를 세미콜론으로 구분 합니다.</span><span class="sxs-lookup"><span data-stu-id="0d3ea-116">Delimit each subdirectory with a semicolon.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="3914f-117">자식 요소</span><span class="sxs-lookup"><span data-stu-id="3914f-117">Child Elements</span></span>  
- <span data-ttu-id="3914f-118">없음</span><span class="sxs-lookup"><span data-stu-id="3914f-118">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="0d3ea-117">자식 요소</span><span class="sxs-lookup"><span data-stu-id="0d3ea-117">Child Elements</span></span>  
+
+<span data-ttu-id="0d3ea-118">없음</span><span class="sxs-lookup"><span data-stu-id="0d3ea-118">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="3914f-119">부모 요소</span><span class="sxs-lookup"><span data-stu-id="3914f-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="0d3ea-119">부모 요소</span><span class="sxs-lookup"><span data-stu-id="0d3ea-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="3914f-120">요소</span><span class="sxs-lookup"><span data-stu-id="3914f-120">Element</span></span>|<span data-ttu-id="3914f-121">설명</span><span class="sxs-lookup"><span data-stu-id="3914f-121">Description</span></span>|  
+|<span data-ttu-id="0d3ea-120">요소</span><span class="sxs-lookup"><span data-stu-id="0d3ea-120">Element</span></span>|<span data-ttu-id="0d3ea-121">설명</span><span class="sxs-lookup"><span data-stu-id="0d3ea-121">Description</span></span>|  
 |-------------|-----------------|  
-|`assemblyBinding`|<span data-ttu-id="3914f-122">어셈블리 버전 리디렉션 및 어셈블리 위치에 대한 정보를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="3914f-122">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
-|`configuration`|<span data-ttu-id="3914f-123">공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="3914f-123">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="3914f-124">어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="3914f-124">Contains information about assembly binding and garbage collection.</span></span>|  
+|`assemblyBinding`|<span data-ttu-id="0d3ea-122">어셈블리 버전 리디렉션 및 어셈블리 위치에 대한 정보를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="0d3ea-122">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
+|`configuration`|<span data-ttu-id="0d3ea-123">공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="0d3ea-123">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="0d3ea-124">어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="0d3ea-124">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="3914f-125">예제</span><span class="sxs-lookup"><span data-stu-id="3914f-125">Example</span></span>  
- <span data-ttu-id="3914f-126">다음 예제에서는 런타임에서 어셈블리를 검색 해야 하는 응용 프로그램 기본 하위 디렉터리를 지정 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3914f-126">The following example shows how to specify application base subdirectories the runtime should search for assemblies.</span></span>  
+## <a name="example"></a><span data-ttu-id="0d3ea-125">예제</span><span class="sxs-lookup"><span data-stu-id="0d3ea-125">Example</span></span>  
+ <span data-ttu-id="0d3ea-126">다음 예제에서는 런타임에서 어셈블리를 검색 해야 하는 응용 프로그램 기본 하위 디렉터리를 지정 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0d3ea-126">The following example shows how to specify application base subdirectories the runtime should search for assemblies.</span></span>  
   
 ```xml  
 <configuration>  
@@ -65,9 +66,9 @@ ms.locfileid: "69663532"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="3914f-127">참고자료</span><span class="sxs-lookup"><span data-stu-id="3914f-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0d3ea-127">참고자료</span><span class="sxs-lookup"><span data-stu-id="0d3ea-127">See also</span></span>
 
-- [<span data-ttu-id="3914f-128">런타임 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="3914f-128">Runtime Settings Schema</span></span>](index.md)
-- [<span data-ttu-id="3914f-129">구성 파일 스키마</span><span class="sxs-lookup"><span data-stu-id="3914f-129">Configuration File Schema</span></span>](../index.md)
-- [<span data-ttu-id="3914f-130">어셈블리 위치 지정</span><span class="sxs-lookup"><span data-stu-id="3914f-130">Specifying an Assembly's Location</span></span>](../../specify-assembly-location.md)
-- [<span data-ttu-id="3914f-131">런타임에서 어셈블리를 찾는 방법</span><span class="sxs-lookup"><span data-stu-id="3914f-131">How the Runtime Locates Assemblies</span></span>](../../../deployment/how-the-runtime-locates-assemblies.md)
+- [<span data-ttu-id="0d3ea-128">런타임 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="0d3ea-128">Runtime Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="0d3ea-129">구성 파일 스키마</span><span class="sxs-lookup"><span data-stu-id="0d3ea-129">Configuration File Schema</span></span>](../index.md)
+- [<span data-ttu-id="0d3ea-130">어셈블리 위치 지정</span><span class="sxs-lookup"><span data-stu-id="0d3ea-130">Specifying an Assembly's Location</span></span>](../../specify-assembly-location.md)
+- [<span data-ttu-id="0d3ea-131">런타임에서 어셈블리를 찾는 방법</span><span class="sxs-lookup"><span data-stu-id="0d3ea-131">How the Runtime Locates Assemblies</span></span>](../../../deployment/how-the-runtime-locates-assemblies.md)
