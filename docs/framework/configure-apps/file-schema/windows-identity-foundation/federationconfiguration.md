@@ -3,18 +3,19 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: c4dbb31bb7961f0d33df9d1faee8fe36ecb520a3
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 148b2f3e12fbfbf85b800f0ca7f5dc7dc1845d24
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988333"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252009"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 Ws-federation 프로토콜 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 을 통해 페더레이션된 인증을 사용 하 <xref:System.IdentityModel.Services.SessionAuthenticationModule> 는 경우 (wsfam) 및 (SAM)을 구성 합니다. <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> <xref:System.Security.Claims.ClaimsAuthorizationManager> 또는<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> 클래스를 사용 하 여 클레임 기반 액세스 제어를 제공 하는 경우를 구성 합니다.  
   
- \<system.identityModel.services>  
-\<federationConfiguration>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.identitymodel >** ](system-identitymodel-services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<federationConfiguration >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,7 +38,7 @@ Ws-federation 프로토콜 <xref:System.IdentityModel.Services.WSFederationAuthe
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<cookieHandler>](cookiehandler.md)|SAM에서 사용 하는 쿠키 처리기를 구성 합니다. 선택 사항입니다.|  
 |[\<serviceCertificate>](servicecertificate.md)|토큰을 암호화 하 고 해독 하는 데 사용 되는 인증서를 구성 합니다. 선택 사항입니다.|  
@@ -45,7 +46,7 @@ Ws-federation 프로토콜 <xref:System.IdentityModel.Services.WSFederationAuthe
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<system.identityModel.services>](system-identitymodel-services.md)|WS-FEDERATION 프로토콜을 사용 하는 인증에 대 한 구성 섹션입니다.|  
   
