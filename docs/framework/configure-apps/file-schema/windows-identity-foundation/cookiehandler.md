@@ -3,19 +3,20 @@ title: <cookieHandler>
 ms.date: 03/30/2017
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
 author: BrucePerlerMS
-ms.openlocfilehash: 1c044f7346fabc77d7744f42c5bfd3d86d72402e
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 853dc9817d080e59ac7a792576eda862bd0b1f1d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988337"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252034"
 ---
 # <a name="cookiehandler"></a>\<cookieHandler>
 (SAM <xref:System.IdentityModel.Services.CookieHandler> )에서 <xref:System.IdentityModel.Services.SessionAuthenticationModule> 쿠키를 읽고 쓰는 데 사용 하는를 구성 합니다.  
   
- \<system.identityModel.services>  
-\<federationConfiguration>  
-\<cookieHandler>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.identitymodel >** ](system-identitymodel-services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<federationConfiguration >** ](federationconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<cookieHandler >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -53,7 +54,7 @@ ms.locfileid: "69988337"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[\<chunkedCookieHandler>](chunkedcookiehandler.md)|를 <xref:System.IdentityModel.Services.ChunkedCookieHandler>구성 합니다. `mode` 요소의 특성이`<cookieHandler>` "Default" 또는 "청크 분할" 인 경우에만이 요소가 있을 수 있습니다.|  
 |[\<customCookieHandler>](customcookiehandler.md)|사용자 지정 쿠키 처리기 형식을 설정 합니다. `mode` 요소의 특성이`<cookieHandler>` "Custom" 이면이 요소가 있어야 합니다. `mode` 특성의 다른 값에 대해서는 사용할 수 없습니다. 사용자 지정 형식은 <xref:System.IdentityModel.Services.CookieHandler> 클래스에서 파생 되어야 합니다.|  

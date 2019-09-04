@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b00a5349e22feb3cce404ff504edd798ff9e304
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 05634cb319ac69bd76e16e592ba59490b30c9c9d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663532"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252393"
 ---
 # <a name="probing-element"></a>\<검색 > 요소
 어셈블리를 로드할 때 검색할 공용 언어 런타임에 대 한 응용 프로그램 기본 하위 디렉터리를 지정 합니다.  
   
- \<configuration>  
-\<runtime>  
-\<assemblyBinding>  
-\<probing>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<런타임 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<probing>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,7 +42,8 @@ ms.locfileid: "69663532"
 |`privatePath`|필수 특성입니다.<br /><br /> 어셈블리를 포함할 수 있는 응용 프로그램 기본 디렉터리의 하위 디렉터리를 지정 합니다. 각 하위 디렉터리를 세미콜론으로 구분 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음  
+
+없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   

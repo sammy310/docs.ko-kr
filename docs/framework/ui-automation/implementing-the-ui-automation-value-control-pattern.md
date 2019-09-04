@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-ms.openlocfilehash: 55290e8f14f81c50239097905e5407dbcf547c4c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4af35b3ad1277723d4102b3aeac48748588ef8bf
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968216"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70244016"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>UI 자동화 Value 컨트롤 패턴 구현
 > [!NOTE]
@@ -34,9 +34,9 @@ ms.locfileid: "69968216"
   
 - 여러 줄 편집 컨트롤의 텍스트 내용을 검색하려면 컨트롤이 <xref:System.Windows.Automation.Provider.ITextProvider>를 구현해야 합니다. 하지만 <xref:System.Windows.Automation.Provider.ITextProvider> 는 컨트롤의 값 설정을 지원하지 않습니다.  
   
-- <xref:System.Windows.Automation.Provider.IValueProvider> 는 서식 정보 및 하위 문자열 값 검색을 지원하지 않습니다. 이러한 시나리오에서는 <xref:System.Windows.Automation.Provider.ITextProvider> 를 구현합니다.  
+- <xref:System.Windows.Automation.Provider.IValueProvider> 는 서식 정보 및 하위 문자열 값 검색을 지원하지 않습니다. 이러한 시나리오에서는 <xref:System.Windows.Automation.Provider.ITextProvider>를 구현합니다.  
   
-- <xref:System.Windows.Automation.Provider.IValueProvider> 는 색 값(예: "노란색") 및 해당되는 내부 **구조 간의 문자열 매핑을 지원하는** 의 [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] 색 선택 [!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)] 선택 항목 컨트롤과 같은(아래 그림 참조) 컨트롤이 구현해야 합니다.  
+- <xref:System.Windows.Automation.Provider.IValueProvider>는 색 값 (예: "노란색") 및 해당 하 [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] 는 내부 RGB 구조 간의 문자열 매핑을 지 원하는의 **색 선택** 선택 컨트롤 (아래 그림 참조)과 같은 컨트롤에 의해 구현 되어야 합니다.  
   
  ![노란색 강조 표시 된 색 선택기입니다.](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 색 견본 문자열 매핑의 예  

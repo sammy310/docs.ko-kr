@@ -7,20 +7,20 @@ helpviewer_keywords:
 - Crst_DisableSpinWait element
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a52dd671f1fbf6fda5bdc92c0935784181eb4b03
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 8a91e21120ecebbe7af2fb93798bc68d274fa92c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663836"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252721"
 ---
 # <a name="crst_disablespinwait-element"></a>\<Crst_DisableSpinWait > 요소
 
 경합이 있을 때 임계 영역에 대해 대기를 사용 하지 않도록 설정할지 여부를 지정 합니다.  
   
- \<configuration>  
-\<runtime>  
-\<Crst_DisableSpinWait>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<런타임 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<Crst_DisableSpinWait >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,16 +34,16 @@ ms.locfileid: "69663836"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
 |**enabled**|경합이 있을 때 임계 영역에 대 한 회전 대기를 사용 하지 않도록 설정할지 여부를 지정 합니다.|  
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |1|임계 영역을 가져올 수 없을 때 스핀 대기를 사용 하지 않도록 설정 합니다.|  
-|0|임계 영역을 가져올 수 없을 때 스핀 대기를 사용 하지 않도록 설정 합니다. 이것은 기본값입니다.|  
+|0|임계 영역을 가져올 수 없을 때 스핀 대기를 사용 하지 않도록 설정 합니다. 기본값입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  

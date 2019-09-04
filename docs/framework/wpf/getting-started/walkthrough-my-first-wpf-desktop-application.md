@@ -11,12 +11,12 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: 9d5b5b8a479efd3918dc23616aa331cc07a901ac
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 4919424339df1f8d2c68465bd9f9af42f344fe37
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972188"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254068"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>연습: 내 첫 WPF 데스크톱 애플리케이션
 
@@ -43,7 +43,7 @@ ms.locfileid: "68972188"
 >
 > 이 문서의 오른쪽 위에 있는 C# **\< 드롭다운을 사용 하 />** 여 및 Visual Basic 사이에 샘플 코드의 코드 언어를 전환할 수 있습니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 - Visual Studio 2017 이상 (이 문서에서는 Visual Studio 2019 사용)
 
@@ -73,7 +73,7 @@ ms.locfileid: "68972188"
 
       Visual Studio에서 프로젝트를 만들고 **mainwindow.xaml**이라는 기본 응용 프로그램 창에 대 한 디자이너를 엽니다.
 
-2. *응용 프로그램 .xaml* (Visual Basic) 또는 app.xaml (C#)을 엽니다.
+2. *응용 프로그램 .xaml* (Visual Basic *) 또는 app.xaml* (C#)을 엽니다.
 
     이 XAML 파일은 WPF 응용 프로그램 및 모든 응용 프로그램 리소스를 정의 합니다. 또한이 파일을 사용 하 여 UI를 지정 합니다 .이 경우에는 응용 프로그램이 시작 될 때 자동으로 표시 되는 UI (이 경우 *mainwindow.xaml*)를 지정 합니다.
 
@@ -143,7 +143,7 @@ ms.locfileid: "68972188"
 
 1. <xref:System.Windows.Controls.Page.Title%2A> 을"`ExpenseIt - Home`"로 설정 합니다.
 
-1. `DesignHeight` 및`DesignWidth` 요소 값을 300 픽셀로 설정 합니다.
+1. 를 350 픽셀로 설정 하 `DesignWidth` 고을 500 픽셀로 설정 합니다. `DesignHeight`
 
     이제 XAML이 Visual Basic에 대해 다음과 같이 표시 됩니다.
 
@@ -184,7 +184,7 @@ ms.locfileid: "68972188"
 
 1. <xref:System.Windows.Controls.Page.Title%2A> 을"`ExpenseIt - View Expense`"로 설정 합니다.
 
-1. `DesignHeight` 및`DesignWidth` 요소 값을 300 픽셀로 설정 합니다.
+1. 를 350 픽셀로 설정 하 `DesignWidth` 고을 500 픽셀로 설정 합니다. `DesignHeight` 
 
     *Expensereportpage.xaml* 는 Visual Basic에서 다음과 같이 표시 됩니다.
 
@@ -216,7 +216,7 @@ ms.locfileid: "68972188"
 
     2. **기존 항목 추가** 대화 상자에서 파일 필터를 **모든 파일** 또는 **이미지 파일**로 설정 하 고 사용 하려는 이미지 파일을 찾은 다음 **추가**를 선택 합니다.
 
-## <a name="build-and-run-the-application"></a>애플리케이션 빌드 및 실행
+## <a name="build-and-run-the-application"></a>응용 프로그램 빌드 및 실행
 
 1. 응용 프로그램을 빌드하고 실행 하려면 **F5** 키를 누르거나 **디버그** 메뉴에서 **디버깅 시작** 을 선택 합니다.
 
@@ -363,7 +363,7 @@ ms.locfileid: "68972188"
 
 UI에서 같은 형식의 모든 요소에 대해 다양 한 요소의 모양이 동일 하 게 표시 되는 경우가 많습니다. UI는 [스타일](../controls/styling-and-templating.md) 을 사용 하 여 여러 요소에서 모양을 다시 사용할 수 있도록 합니다. 스타일의 재사용은 XAML 생성 및 관리를 간소화 하는 데 도움이 됩니다. 이 섹션에서는 이전 단계에서 정의된 요소별 특성을 스타일로 바꿉니다.
 
-1. *응용 프로그램 .xaml* 또는 app.xaml을 엽니다.
+1. *응용 프로그램 .xaml* *또는 app.xaml을 엽니다*.
 
 2. <xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType> 태그 사이에 다음 XAML을 추가 합니다.
 

@@ -2,12 +2,12 @@
 title: 집계 정식 함수
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
-ms.openlocfilehash: 2738d649190b088c34272de5b3e8732d87811a59
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 3f4bb84c45e503fc0018e7869f3b41ddab4581a6
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489516"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251349"
 ---
 # <a name="aggregate-canonical-functions"></a>집계 정식 함수
 
@@ -15,7 +15,7 @@ ms.locfileid: "66489516"
 
 ## <a name="aggregate-entity-sql-canonical-functions"></a>집계 Entity SQL 정식 함수
 
-집계 Entity SQL 정식 함수는 다음과 같습니다.
+다음은 집계 Entity SQL 정식 함수입니다.
 
 ### <a name="avgexpression"></a>Avg(expression)
 
@@ -27,7 +27,7 @@ null이 아닌 값의 평균을 반환합니다.
 
 **반환 값**
 
-유형의 `expression`, 또는 `null` 모든 입력된 값이 `null` 값입니다.
+의 `expression`형식 이거나 `null` , 모든 입력 값이 `null` 값인 경우입니다.
 
 **예제**
 
@@ -78,7 +78,7 @@ null이 아닌 값의 최대값을 반환합니다.
 
 **반환 값**
 
-유형의 `expression`, 또는 `null` 모든 입력된 값이 `null` 값입니다.
+의 `expression`형식 이거나 `null` , 모든 입력 값이 `null` 값인 경우입니다.
 
 **예제**
 
@@ -95,7 +95,7 @@ null이 아닌 값의 최소값을 반환합니다.
 
 **반환 값**
 
-유형의 `expression`, 또는 `null` 모든 입력된 값이 `null` 값입니다.
+의 `expression`형식 이거나 `null` , 모든 입력 값이 `null` 값인 경우입니다.
 
 **예제**
 
@@ -129,7 +129,7 @@ null이 아닌 값의 표준 편차를 반환합니다.
 
 **반환 값**
 
-A `Double`, 또는 `null` 모든 입력된 값이 `null` 값입니다.
+`null` 이거나 `Double` ,`null` 모든 입력 값이 값 이면입니다.
 
 **예제**
 
@@ -146,7 +146,7 @@ null이 아닌 값의 합계를 반환합니다.
 
 **반환 값**
 
-A `Double`, 또는 `null` 모든 입력된 값이 `null` 값입니다.
+`null` 이거나 `Double` ,`null` 모든 입력 값이 값 이면입니다.
 
 **예제**
 
@@ -163,7 +163,7 @@ null이 아닌 모든 값의 분산을 반환합니다.
 
 **반환 값**
 
-A `Double`, 또는 `null` 모든 입력된 값이 `null` 값입니다.
+`null` 이거나 `Double` ,`null` 모든 입력 값이 값 이면입니다.
 
 **예제**
 
@@ -180,18 +180,18 @@ null이 아닌 모든 값의 모집단에 대한 분산을 반환합니다.
 
 **반환 값**
 
-A `Double`, 또는 `null` 모든 입력된 값이 `null` 값입니다.
+`null` 이거나 `Double` ,`null` 모든 입력 값이 값 이면입니다.
 
 **예제**
 
 [!code-csharp[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_varp)]
 [!code-sql[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)]
 
-동일한 기능을 Microsoft SQL 클라이언트 관리 공급자에서 사용할 수 있습니다. 자세한 내용은 [Entity Framework 함수에 대 한 SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)합니다.
+동일한 기능을 Microsoft SQL 클라이언트 관리 공급자에서 사용할 수 있습니다. 자세한 내용은 [Entity Framework 함수에 대 한 SqlClient](../sqlclient-for-ef-functions.md)를 참조 하세요.
 
 ## <a name="collection-based-aggregates"></a>컬렉션 기반 집계
 
-컬렉션 기반 집계(컬렉션 함수)는 컬렉션에 대해 작업을 수행하고 값을 반환합니다. 예를 들어 주문 모든 주문의 컬렉션인 경우 다음 식 사용 하 여 가장 빠른 운송 날짜를 계산할 수 있습니다.
+컬렉션 기반 집계(컬렉션 함수)는 컬렉션에 대해 작업을 수행하고 값을 반환합니다. 예를 들어 ORDERS가 모든 주문의 컬렉션인 경우 다음 식을 사용 하 여 가장 빠른 운송 날짜를 계산할 수 있습니다.
 
 ```sql
 min(select value o.ShipDate from LOB.Orders as o)
@@ -210,7 +210,7 @@ select p, avg(ol.Quantity) from LOB.OrderLines as ol
   group by ol.Product as p
 ```
 
-SELECT 식에서 명시적 group by 절이 없는 그룹 기반 집계를 가질 수는 것입니다. 이 경우 모든 요소가 단일 그룹으로 처리 됩니다. 이 상수를 기준으로 그룹화를 지정 하는 것과 같습니다. 예를 들어, 다음 식을 살펴보겠습니다.
+SELECT 식에서 group by 절을 명시적으로 사용 하지 않고 그룹 기반 집계가 있을 수 있습니다. 이 경우 모든 요소는 단일 그룹으로 처리 됩니다. 이는 상수를 기준으로 그룹화를 지정 하는 것과 같습니다. 예를 들어, 다음 식을 살펴보겠습니다.
 
 ```sql
 select avg(ol.Quantity) from LOB.OrderLines as ol
@@ -224,8 +224,8 @@ select avg(ol.Quantity) from LOB.OrderLines as ol group by 1
 
 그룹 기반 집계 내의 식은 WHERE 절 식에 표시되는 이름 확인 범위 내에서 계산됩니다.
 
-TRANSACT-SQL에서와 같이 그룹 기반 집계를 지정할 수도 ALL 한정자 나 DISTINCT 한정자입니다. DISTINCT 한정자를 지정하면 집계가 계산되기 전에 집계 입력 컬렉션에서 중복 항목이 제거됩니다. ALL 한정자를 지정하거나 어떠한 한정자도 지정하지 않으면 중복 항목이 제거되지 않습니다.
+Transact-sql에서와 마찬가지로 그룹 기반 집계도 ALL 또는 DISTINCT 한정자를 지정할 수 있습니다. DISTINCT 한정자를 지정하면 집계가 계산되기 전에 집계 입력 컬렉션에서 중복 항목이 제거됩니다. ALL 한정자를 지정하거나 어떠한 한정자도 지정하지 않으면 중복 항목이 제거되지 않습니다.
 
 ## <a name="see-also"></a>참고자료
 
-- [정식 함수](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+- [정식 함수](canonical-functions.md)

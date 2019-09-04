@@ -2,16 +2,16 @@
 title: 수학 정식 함수
 ms.date: 03/30/2017
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
-ms.openlocfilehash: f575785bb198251ef50ba3563e736946253c9526
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9417ff9836912017c9d88bb24a18849aaac2836a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760638"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250303"
 ---
 # <a name="math-canonical-functions"></a>수학 정식 함수
 
-Entity SQL 수학 정식 함수를 포함 합니다.
+Entity SQL는 다음과 같은 수학 정식 함수를 포함 합니다.
   
 ## <a name="absvalue"></a>Abs(value)
 
@@ -19,7 +19,7 @@ Entity SQL 수학 정식 함수를 포함 합니다.
 
 **인수**
 
-`Int16`, `Int32`를 `Int64`, `Byte`를 `Single`를 `Double`, 및 `Decimal`합니다.
+`Int16` ,`Int32`, ,`Double`,, 및`Decimal`입니다. `Byte` `Int64` `Single`
 
 **반환 값**
 
@@ -35,7 +35,7 @@ Entity SQL 수학 정식 함수를 포함 합니다.
 
 **인수**
 
-A `Single`, `Double`, 및 `Decimal`합니다.
+`Single` ,`Double`및 입니다`Decimal`.
 
 **반환 값**
 
@@ -52,7 +52,7 @@ A `Single`, `Double`, 및 `Decimal`합니다.
 
 **인수**
 
-A `Single`, `Double`, 및 `Decimal`합니다.
+`Single` ,`Double`및 입니다`Decimal`.
 
 **반환 값**
 
@@ -72,7 +72,7 @@ A `Single`, `Double`, 및 `Decimal`합니다.
 |  |  |
 |--|--|
 |`value` | `Int32, Int64, Double`, 또는 `Decimal`합니다. |
-|`exponent` | `Int64`하십시오 `Double`, 또는 `Decimal`합니다. |
+|`exponent` | `Int64` ,`Double`또는 입니다`Decimal`. |
 
 **반환 값**
 
@@ -88,7 +88,7 @@ A `Single`, `Double`, 및 `Decimal`합니다.
 
 **인수**
 
-A `Single`, `Double`, 및 `Decimal`합니다.
+`Single` ,`Double`및 입니다`Decimal`.
 
 **반환 값**
 
@@ -138,8 +138,8 @@ A `Single`, `Double`, 및 `Decimal`합니다.
   
  이러한 함수는 `null`이 입력되면 `null`을 반환합니다.  
   
- 동일한 기능을 Microsoft SQL 클라이언트 관리 공급자에서 사용할 수 있습니다. 자세한 내용은 [Entity Framework 함수에 대 한 SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)합니다.  
+ 동일한 기능을 Microsoft SQL 클라이언트 관리 공급자에서 사용할 수 있습니다. 자세한 내용은 [Entity Framework 함수에 대 한 SqlClient](../sqlclient-for-ef-functions.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고자료
 
-- [정식 함수](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+- [정식 함수](canonical-functions.md)

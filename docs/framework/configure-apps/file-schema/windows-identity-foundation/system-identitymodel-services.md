@@ -3,17 +3,18 @@ title: <system.identityModel.services>
 ms.date: 03/30/2017
 ms.assetid: fa1624dd-2d74-4ae3-942e-498cee261ac5
 author: BrucePerlerMS
-ms.openlocfilehash: bef061c5c982fb0e740f889336a3b334bc19225e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e9488c0681e1a5f0fe94112a36b65ec73bf9fd09
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943652"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251802"
 ---
 # <a name="systemidentitymodelservices"></a>\<system.identityModel.services>
 WS-FEDERATION 프로토콜을 사용 하는 인증에 대 한 구성 섹션입니다.  
   
- \<system.identityModel.services>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp; **\<System.identitymodel >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -32,7 +33,7 @@ WS-FEDERATION 프로토콜을 사용 하는 인증에 대 한 구성 섹션입�
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[\<federationConfiguration>](federationconfiguration.md)|<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (Wsfam) <xref:System.IdentityModel.Services.SessionAuthenticationModule> 및 (SAM) HTTP 모듈을 구성 하는 설정을 포함 합니다.|  
   

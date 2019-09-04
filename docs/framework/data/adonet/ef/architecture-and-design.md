@@ -2,24 +2,24 @@
 title: 아키텍처 및 디자인
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: c15bbeb22918b20010fddf373d1e80b7ff27f97c
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 50fc643fecf4b188123c556d754b3cbfa529e5e9
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422781"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251712"
 ---
 # <a name="architecture-and-design"></a>아키텍처 및 디자인
 
-SQL 생성 모듈은 [Sample Provider](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) 명령 트리를 나타내는 식 트리의 방문자로 구현 됩니다. 생성은 식 트리에 대한 단일 패스로 수행됩니다.
+[샘플 공급자](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) 의 SQL 생성 모듈은 명령 트리를 나타내는 식 트리에서 방문자로 구현 됩니다. 생성은 식 트리에 대한 단일 패스로 수행됩니다.
 
-트리의 노드는 아래쪽에서 위쪽으로 처리됩니다. 먼저 중간 구조 생성 됩니다. SqlSelectStatement 또는 SqlBuilder를 둘 다 ISqlFragment 구현 합니다. 그런 다음 이 구조에서 SQL 문 문자열이 생성됩니다. 중간 구조를 사용하는 이유는 두 가지입니다.
+트리의 노드는 아래쪽에서 위쪽으로 처리됩니다. 먼저 중간 구조가 생성 됩니다. ISqlFragment을 구현 하는 SqlSelectStatement 또는 SqlBuilder 그런 다음 이 구조에서 SQL 문 문자열이 생성됩니다. 중간 구조를 사용하는 이유는 두 가지입니다.
 
 - 논리적으로 SQL SELECT 문은 순서에 관계없이 채워집니다. FROM 절에 참여하는 노드는 WHERE, GROUP BY 및 ORDER BY 절에 참여하는 노드 전에 방문됩니다.
 
 - 별칭의 이름을 바꾸려면 이름을 바꾸는 동안 충돌을 방지하기 위해 사용되는 모든 별칭을 식별해야 합니다. SqlBuilder에서 이름 바꾸기 선택을 지연하려면 Symbol 개체를 사용하여 이름을 바꿀 후보인 열을 나타냅니다.
 
-![Diagram](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")
+![Diagram](./media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")
 
 첫 번째 단계에서는 식 트리를 방문하는 동안 식이 SqlSelectStatement로 그룹화되고 조인이 평면화되며 조인 별칭이 평면화됩니다. 이 단계 중에 Symbol 개체는 이름을 바꿀 수 있는 열 또는 입력 별칭을 나타냅니다.
 
@@ -27,7 +27,7 @@ SQL 생성 모듈은 [Sample Provider](https://code.msdn.microsoft.com/windowsde
 
 ## <a name="data-structures"></a>데이터 구조
 
-이 섹션에 사용 되는 형식을 설명 합니다 [샘플 공급자](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) 사용 하 여 SQL 문을 작성 합니다.
+이 섹션에서는 SQL 문을 작성 하는 데 사용 하는 [샘플 공급자](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) 에 사용 되는 형식에 대해 설명 합니다.
 
 ### <a name="isqlfragment"></a>ISqlFragment
 
@@ -57,7 +57,7 @@ internal sealed class SqlBuilder : ISqlFragment {
 
 #### <a name="sqlselectstatement"></a>SqlSelectStatement
 
-SqlSelectStatement "SELECT... 모양의 정식 SQL SELECT 문을 나타냅니다. FROM  .. WHERE... 그룹화 기준... ORDER BY "입니다.
+SqlSelectStatement는 "SELECT ..." 모양의 정식 SQL SELECT 문을 나타냅니다. 보낸 사람.. 위치 ... 그룹화 방법 ... ORDER BY ".
 
 각 SQL 절은 StringBuilder에 의해 표현됩니다. 또한 Distinct가 지정되었는지 여부와 문이 맨 위에 있는지 여부를 추적합니다. 문이 맨 위에 없는 경우 문에 TOP 절이 없으면 ORDER BY 절이 생략됩니다.
 
@@ -86,7 +86,7 @@ internal sealed class SqlSelectStatement : ISqlFragment {
 
 #### <a name="topclause"></a>TopClause
 
-TopClause는 SqlSelectStatement에서 TOP 식을 나타냅니다. TopCount 속성은 선택할 TOP 행의 수를 나타냅니다.  WithTies이 true 이면 TopClause는 DbLimitExpression에서 구축 되었습니다.
+TopClause는 SqlSelectStatement에서 TOP 식을 나타냅니다. TopCount 속성은 선택할 TOP 행의 수를 나타냅니다.  WithTies이 true 이면 TopClause은 Dbsets 식에서 작성 됩니다.
 
 ```csharp
 class TopClause : ISqlFragment {
@@ -227,15 +227,15 @@ IsParentAJoin 속성은 지정된 조인을 평면화할 수 있는지 여부를
 
 입력 별칭 리디렉션은 기호 테이블을 사용하여 수행됩니다.
 
-입력된 별칭 리디렉션을 설명, 참조의 첫 번째 예제 [명령 트리-모범 사례에서에서 sql 문을 생성](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md)합니다.  이 예제에서 "a"는 프로젝션에서 "b"로 리디렉션되어야 합니다.
+입력 별칭 리디렉션에 대해 설명 하려면 [명령 트리에서 SQL 생성-모범 사례](generating-sql-from-command-trees-best-practices.md)를 참조 하세요.  이 예제에서 "a"는 프로젝션에서 "b"로 리디렉션되어야 합니다.
 
-SqlSelectStatement 개체가 만들어지면 노드의 입력인 익스텐트가 SqlSelectStatement의 From 속성에 삽입됩니다. 기호 (\<symbol_b >)는 "AS" 고 익스텐트를 나타내기 위해 입력된 바인딩 이름 ("b")에 따라 만들어집니다 + \<symbol_b > From 절에 추가 됩니다.  이 기호는 FromExtents 속성에도 추가됩니다.
+SqlSelectStatement 개체가 만들어지면 노드의 입력인 익스텐트가 SqlSelectStatement의 From 속성에 삽입됩니다. 입력 바인딩 이름\<("b")을 기반으로 하는 기호 (symbol_b >)를 만들어 해당 범위를 나타내고 "AS" + \<symbol_b > from 절에 추가 됩니다.  이 기호는 FromExtents 속성에도 추가됩니다.
 
-기호를 기호 테이블 입력된 바인딩 이름을 연결할에 추가 됩니다 ("b", \<symbol_b >).
+기호는 입력 바인딩 이름을 여기에 연결 하기 위해 기호 테이블에도 추가 됩니다 ("b", \<symbol_b >).
 
-이후의 노드는 이 SqlSelectStatement를 다시 사용하는 경우 입력 바인딩 이름을 해당 기호에 연결하기 위해 기호 테이블에 항목을 추가합니다. 이 예에서 입력된 바인딩 이름이 "a" 인 DbProjectExpression은 SqlSelectStatement를 다시 사용 하 고 추가 ("a", \< symbol_b >) 테이블에 있습니다.
+이후의 노드는 이 SqlSelectStatement를 다시 사용하는 경우 입력 바인딩 이름을 해당 기호에 연결하기 위해 기호 테이블에 항목을 추가합니다. 이 예제에서 입력 바인딩 이름이 "a" 인 dbprojectexpression은 sqlselectstatement를 다시 사용 하 고 ("a", \< symbol_b >)를 테이블에 추가 합니다.
 
-식에서 SqlSelectStatement를 다시 사용하는 노드의 입력 바인딩 이름을 참조하는 경우 이 참조는 기호 테이블을 사용하여 올바른 리디렉션된 기호로 확인됩니다. "A"에서 "a.x" 문제가 해결 되 면 기호 확인은 "a"를 나타내는 DbVariableReferenceExpression을 방문 하는 동안 \<symbol_b >.
+식에서 SqlSelectStatement를 다시 사용하는 노드의 입력 바인딩 이름을 참조하는 경우 이 참조는 기호 테이블을 사용하여 올바른 리디렉션된 기호로 확인됩니다. "A"를 나타내는 DbVariableReferenceExpression을 방문 하는 동안 "a.x"의 "a"가 확인 되 면 symbol_b > 기호로 \<확인 됩니다.
 
 ### <a name="join-alias-flattening"></a>조인 별칭 평면화
 
@@ -243,7 +243,7 @@ SqlSelectStatement 개체가 만들어지면 노드의 입력인 익스텐트가
 
 ### <a name="column-name-and-extent-alias-renaming"></a>열 이름 및 익스텐트 별칭 이름 바꾸기
 
-SQL 생성의 두 번째 단계 섹션에 설명 된 생성의 두 번째 단계에서 별칭 으로만 대체 하는 기호 사용 하 여 열 이름 및 익스텐트 별칭 이름 바꾸기의 문제를 해결 합니다. 문자열 명령을 생성 합니다.
+열 이름 및 익스텐트 별칭 이름 바꾸기의 문제는 SQL 생성의 두 번째 단계 섹션에서 설명 하는 생성의 두 번째 단계에서 별칭 으로만 대체 되는 기호를 사용 하 여 해결 됩니다. 문자열 명령을 생성 하 고 있습니다.
 
 ## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>SQL 생성의 첫 번째 단계: 식 트리 방문
 
@@ -345,7 +345,7 @@ ORDER BY sk1, sk2, ...
 <leftSqlSelectStatement> <setOp> <rightSqlSelectStatement>
 ```
 
-여기서 \<leftSqlSelectStatement > 및 \<rightSqlSelectStatement >는 각 입력을 방문 하 여 가져온 sqlselectstatement이 고 및 \<setOp >는 해당 연산 (UNION ALL 예를 들어).
+여기서 \<왼쪽 sqlselectstatement > 및 \<rightsqlselectstatement >는 각 입력을 방문 하 여 얻은 sqlselectstatement이 고 \<setop >는 해당 연산 (예: UNION ALL)입니다.
 
 ### <a name="dbscanexpression"></a>DbScanExpression
 
@@ -401,7 +401,7 @@ UNION ALL SELECT <visit-result-argN> as X
 
 특수 처리와 적절한 처리기가 필요한 함수를 추적하기 위해 사전이 사용됩니다.
 
-사용자 정의 함수는 NamespaceName.FunctionName (arg1, arg2,..., argn)으로 변환 됩니다.
+사용자 정의 함수는 NamespaceName. FunctionName (arg1, arg2, ..., argn)로 변환 됩니다.
 
 ### <a name="dbelementexpression"></a>DbElementExpression
 
@@ -443,8 +443,8 @@ IsEmpty(input) = Not Exists(input)
 
 열 이름 바꾸기는 Symbol 개체를 문자열에 쓰는 동안 발생합니다. 첫 번째 단계의 AddDefaultColumns는 특정 열 기호의 이름을 바꿔야 하는지 여부를 확인합니다. 두 번째 단계에서는 생성된 이름이 AllColumnNames에서 사용되는 모든 이름과 충돌하지 않도록 하기 위해서만 이름 바꾸기가 발생합니다.
 
-익스텐트 별칭 및 열에 대 한 고유한 이름을 생성을 사용 하 여 \<existing_name > _n 여기서 n은 아직 사용 하지 않은 가장 작은 별칭입니다. 모든 별칭의 전역 목록을 사용하면 연속된 이름 바꾸기의 필요성이 증가합니다.
+익스텐트 별칭과 열에 대해 고유한 이름을 생성 하려면 existing_name > _n를 \<사용 합니다. 여기서 n은 아직 사용 되지 않은 가장 작은 별칭입니다. 모든 별칭의 전역 목록을 사용하면 연속된 이름 바꾸기의 필요성이 증가합니다.
 
 ## <a name="see-also"></a>참고자료
 
-- [샘플 공급자의 SQL 생성](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+- [샘플 공급자의 SQL 생성](sql-generation-in-the-sample-provider.md)
