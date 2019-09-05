@@ -68,13 +68,13 @@ ms.locfileid: "68675060"
 - **Azure Monitor 서비스에 Windows 컴퓨터 연결** \
   <https://docs.microsoft.com/azure/azure-monitor/platform/agent-windows>
 
-- **Logging What You Mean: Using the Semantic Logging Application Block** \(의도한 내용 로깅: 의미 체계 로깅 애플리케이션 블록 사용)
+- **의도한 내용 로깅: 의미 체계 로깅 애플리케이션 블록 사용** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn440729(v=pandp.60)>
 
 - **Splunk** 공식 사이트 \
   <https://www.splunk.com/>
 
-- Windows용 이벤트 추적(ETW)의 **EventSource 클래스** API
+- Windows용 이벤트 추적(ETW)의 **EventSource 클래스** API\
   [https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource](xref:System.Diagnostics.Tracing.EventSource)
 
 >[!div class="step-by-step"]
