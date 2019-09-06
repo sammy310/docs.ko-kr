@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c15b2c27e51557494f10c2445d75a4bd56c47f91
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: bbf7c1203a1f6089eefce3ed2876c9ade91cc697
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987248"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374444"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework의 새로운 기능
 
@@ -174,7 +174,7 @@ HTML에서 `https://contoso:81/Service1?health` 같은 쿼리 문자열을 지�
 
 **높은 DPI 기능 향상**
 
-.NET Framework 4.8에서 WPF는 모니터별 V2 DPI 인식 및 혼합 모드 DPI 크기 조정에 대한 지원을 추가합니다. 높은 DPI 개발에 대한 자세한 내용은 [Windows에서 높은 DPI 데스크톱 애플리케이션 개발](/desktop/hidpi/high-dpi-desktop-application-development-on-windows)을 참조하세요.
+.NET Framework 4.8에서 WPF는 모니터별 V2 DPI 인식 및 혼합 모드 DPI 크기 조정에 대한 지원을 추가합니다. 높은 DPI 개발에 대한 자세한 내용은 [Windows에서 높은 DPI 데스크톱 애플리케이션 개발](/windows/win32/hidpi/high-dpi-desktop-application-development-on-windows)을 참조하세요.
 
 .NET Framework 4.8은 혼합 모드 DPI 크기 조정(Windows 10 2018년 4월 업데이트부터)을 지원하는 플랫폼의 높은 DPI WPF 애플리케이션에서 호스트되는 HWND 및 Windows Forms 상호 운용 지원을 향상합니다. 호스트된 HWND 또는 Windows Forms 컨트롤이 [SetThreadDpiHostingBehavior](/windows/desktop/api/winuser/nf-winuser-setthreaddpihostingbehavior) 및 [SetThreadDpiAwarenessContext](/windows/desktop/api/winuser/nf-winuser-setthreaddpiawarenesscontext)를 호출하여 혼합 모드 DPI 크기 조정 창으로 만들어지면 이 컨트롤은 모니터별 V2 WPF 애플리케이션에서 호스트될 수 있고 적절하게 크기가 지정되거나 조정됩니다. 해당 호스트된 콘텐츠는 네이티브 DPI로 렌더링되지 않습니다. 대신 운영 체제가 호스트된 콘텐츠를 적절한 크기로 조정합니다. 모니터별 v2 DPI 인식 모드에 대한 지원도 높은 DPI 애플리케이션의 네이티브 창에 WPF 컨트롤을 호스트(부모 지정)할 수 있습니다.
 

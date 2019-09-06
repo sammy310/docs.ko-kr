@@ -2,12 +2,12 @@
 title: 모니터링 및 원격 분석을 사용하여 앱을 최신화
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 모니터링 및 원격 분석을 사용하여 앱을 최신화
 ms.date: 04/30/2018
-ms.openlocfilehash: 5bffb336234f63dca150acc9ef31f9efa2e3937b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 65c464e27e326f6a60b4879ec787253dea019d92
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578176"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373960"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>모니터링 및 원격 분석을 사용하여 앱을 최신화
 
@@ -21,7 +21,7 @@ Application Insights는 여러 플랫폼에서 작업 하는 웹 개발자를 �
 
 ![Application Insights 모니터링 대시보드](./media/image10.png)
 
-> **그림 4-10.** Application Insights 모니터링 대시보드
+**그림 4-10.** Application Insights 모니터링 대시보드
 
 ## <a name="monitor-your-docker-infrastructure-with-log-analytics-and-its-container-monitoring-solution"></a>Log Analytics 및 해당 컨테이너 모니터링 솔루션을 사용 하 여 Docker 인프라 모니터링
 
@@ -45,7 +45,7 @@ Log Analytics의 [컨테이너 모니터링 솔루션](https://docs.microsoft.co
 
 ![Log Analytics 컨테이너 모니터링 솔루션](./media/image11.png)
 
-> **그림 4-11.** Log Analytics 컨테이너 모니터링 솔루션
+**그림 4-11.** Log Analytics 컨테이너 모니터링 솔루션
 
 Log Analytics 컨테이너 모니터링 솔루션을 사용 하 여 다음을 수행할 수 있습니다.
 

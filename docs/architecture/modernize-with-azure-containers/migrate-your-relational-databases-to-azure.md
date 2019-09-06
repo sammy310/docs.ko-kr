@@ -2,12 +2,12 @@
 title: 관계형 데이터베이스를 azure로 마이그레이션
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 관계형 데이터베이스를 azure로 마이그레이션
 ms.date: 04/28/2018
-ms.openlocfilehash: 982050d99aaa66cde1168a2f2fa64ed5f3e9163b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: b2153e65a12706b97fae11c5f23846c83bcd6642
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660726"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374105"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>관계형 데이터베이스를 azure로 마이그레이션
 
@@ -17,7 +17,7 @@ Azure에서 IaaS VM(순수한 리프트 앤 시프트)에 직접 데이터베이
 
 ![Azure의 데이터베이스 마이그레이션 경로](./media/image3-1.png)
 
-> **그림 3-1.** Azure의 데이터베이스 마이그레이션 경로
+**그림 3-1.** Azure의 데이터베이스 마이그레이션 경로
 
 ## <a name="when-to-migrate-to-azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance로 마이그레이션해야 하는 경우
 

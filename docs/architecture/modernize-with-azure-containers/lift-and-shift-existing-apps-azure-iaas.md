@@ -2,12 +2,12 @@
 title: 기존.NET 앱을 Azure IaaS(클라우드 인프라 지원)로 리프트 앤 시프트하기
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존.NET 응용 프로그램을 최신으로 변경합니다.
 ms.date: 04/28/2018
-ms.openlocfilehash: e25ddbf9b6e62c264f3f4d4580d7df3553d262ea
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ae181784e7de5f66b34d2dc38c6e9ec2e004a0c3
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660747"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373979"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>기존.NET 앱을 Azure IaaS(클라우드 인프라 지원)로 리프트 앤 시프트하기
 
@@ -21,7 +21,7 @@ ms.locfileid: "69660747"
 
 ![클라우드 인프라 지원 응용 프로그램의 위치](./media/image2-1.png)
 
-> **그림 2-1.** 클라우드 인프라 지원 응용 프로그램의 위치
+**그림 2-1.** 클라우드 인프라 지원 응용 프로그램의 위치
 
 ## <a name="why-migrate-existing-net-web-applications-to-azure-iaas"></a>기존.NET 웹 응용 프로그램을 Azure IaaS로 마이그레이션하는 이유
 
@@ -65,7 +65,7 @@ Azure Migrate를 통해 비즈니스에 미치는 영향을 최소화 하면서 
 
 ![클라우드 인프라 지원 응용 프로그램의 위치](./media/image2-2.png)
 
-> **그림 2-2.** 클라우드 인프라 지원 응용 프로그램의 위치
+**그림 2-2.** 클라우드 인프라 지원 응용 프로그램의 위치
 
 ## <a name="use-azure-site-recovery-to-migrate-your-existing-vms-to-azure-vms"></a>Azure Site Recovery를 사용 하 여 기존 Vm을 Azure Vm으로 마이그레이션
 
@@ -77,7 +77,7 @@ Site Recovery은 부분적으로 온-프레미스이 고 일부는 Azure에 있�
 
 ![클라우드 인프라 지원 응용 프로그램의 위치](./media/image2-3.png)
 
-> **그림 2-3.** 클라우드 인프라 지원 응용 프로그램의 위치
+**그림 2-3.** 클라우드 인프라 지원 응용 프로그램의 위치
 
 ### <a name="additional-resources"></a>추가 자료
 

@@ -2,12 +2,12 @@
 title: 하이브리드 클라우드로 마이그레이션 시나리오
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 하이브리드 클라우드 시나리오로 마이그레이션
 ms.date: 04/30/2018
-ms.openlocfilehash: 04c618681c61f5584e641e0a4735e1261ab34fa3
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 313608c41427b3833bbc873398595ceb37bd7c7d
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578216"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373943"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>하이브리드 클라우드로 마이그레이션 시나리오
 
@@ -15,7 +15,7 @@ ms.locfileid: "69578216"
 
 Microsoft에서는 Azure 하이브리드 클라우드에서 일관성을 유지하면서  온-프레미스와 공용 클라우드의 기존 자산을 최적화할 수 있는 최상의 하이브리드 클라우드 솔루션을 제공합니다. Azure Stack(온-프레미스)과 Azure(공용 클라우드) 덕분에, 클라우드나 온-프레미스에서 동작하는 응용 프로그램을 만들 수 있는, 기존 기술을 극대화하고 유연하고 통일된 접근 방식을 사용할 수 있습니다.
 
-보안과 관련 하 여 하이브리드 클라우드를 통해 관리 및 보안을 중앙 집중화할 수 있습니다. 온-프레미스 및 클라우드 앱에 single sign-on을 제공 하 여 데이터 센터에서 클라우드로 모든 자산에 대 한 제어를 얻을 수 있습니다. 하이브리드 클라우드로 Active Directory를 확장 하 고 id 관리를 사용 하 여이를 수행 합니다.
+보안과 관련 하 여 하이브리드 클라우드를 통해 관리 및 보안을 중앙 집중화할 수 있습니다. 온-프레미스 및 클라우드 앱에 대 한 Single Sign-On 제공 하 여 데이터 센터에서 클라우드로 모든 자산에 대 한 제어를 얻을 수 있습니다. 하이브리드 클라우드로 Active Directory를 확장 하 고 id 관리를 사용 하 여이를 수행 합니다.
 
 마지막으로, 데이터를 원활 하 게 배포 및 분석 하 고, 클라우드 및 온-프레미스 자산에 대해 동일한 쿼리 언어를 사용 하 고, Azure에서 분석 및 심층 학습을 적용 하 여 원본에 관계 없이 데이터를 보강 할 수 있습니다.
 
@@ -27,7 +27,7 @@ Azure Stack는 조직의 데이터 센터에서 Azure 서비스를 제공할 수
 
 ![Azure Stack 및 Azure를 사용 하는 Microsoft 하이브리드 클라우드 플랫폼](./media/image13.jpg)
 
-> **그림 4-13.** Azure Stack 및 Azure를 사용 하는 Microsoft 하이브리드 클라우드 플랫폼
+**그림 4-13.** Azure Stack 및 Azure를 사용 하는 Microsoft 하이브리드 클라우드 플랫폼
 
 Azure Stack는 요구 사항을 충족 하기 위해 두 가지 배포 옵션으로 제공 됩니다.
 
