@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: eb60bc474ae0dd8cec85ca36f68b12764d46044d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e59d578407ece9f22925abff57737cca8bf78eac
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040215"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374468"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>연습: 사용자 지정 클라이언트 및 서비스 자격 증명 만들기
 
@@ -23,8 +23,6 @@ ms.locfileid: "70040215"
 - 애플리케이션에서 자격 증명 정보를 설정하도록 API 제공
 
 - <xref:System.IdentityModel.Selectors.SecurityTokenManager> 구현을 위한 팩터리 역할 수행
-
-<xref:System.ServiceModel.Description.ClientCredentials> 및 <xref:System.ServiceModel.Description.ServiceCredentials> 클래스는 모두 <xref:System.ServiceModel.Security.SecurityCredentialsManager> 반환에 대한 계약을 정의하는 추상 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 클래스로부터 상속됩니다.
 
 WCF에서 제공 하는 기본 구현에서는 시스템이 제공 하는 자격 증명 형식을 지원 하 고 이러한 자격 증명 형식을 처리할 수 있는 보안 토큰 관리자를 만듭니다.
 

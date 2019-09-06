@@ -11,12 +11,12 @@ ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 0571bd6b169b94b1626bffb0d0793bbb22a93ba0
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: fcf95e08296f5a8ec5a386ac614482c034e72c8b
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015861"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373246"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>방법: 기존 Windows Forms 컨트롤에서 상속
 
@@ -26,22 +26,22 @@ ms.locfileid: "70015861"
 
 1. Visual Studio에서 새 **Windows Forms 응용 프로그램** 프로젝트를 만듭니다.
 
-2. **프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.
+1. **프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.
 
-     **새 항목 추가** 대화 상자가 나타납니다.
+    **새 항목 추가** 대화 상자가 나타납니다.
 
-3. **새 항목 추가** 대화 상자에서 **사용자 지정 컨트롤**을 두 번 클릭합니다.
+1. **새 항목 추가** 대화 상자에서 **사용자 지정 컨트롤**을 두 번 클릭합니다.
 
-     새 사용자 지정 컨트롤을 프로젝트에 추가합니다.
+    새 사용자 지정 컨트롤을 프로젝트에 추가합니다.
 
-4. 다음을 사용 하는 경우:
+1. 다음을 사용 하는 경우:
 
-   - Visual Basic **솔루션 탐색기**맨 위에서 **모든 파일 표시**를 클릭 합니다. CustomControl1.vb를 확장한 다음 코드 편집기에서 CustomControl1.Designer.vb를 엽니다.
-   - C#코드 편집기에서 CustomControl1.cs를 엽니다.
+    - Visual Basic **솔루션 탐색기**맨 위에서 **모든 파일 표시**를 클릭 합니다. CustomControl1.vb를 확장한 다음 코드 편집기에서 CustomControl1.Designer.vb를 엽니다.
+    - C#코드 편집기에서 CustomControl1.cs를 엽니다.
 
-6. 에서 <xref:System.Windows.Forms.Control>상속 되는 클래스 선언을 찾습니다.
+1. 에서 <xref:System.Windows.Forms.Control>상속 되는 클래스 선언을 찾습니다.
 
-7. 기본 클래스를 상속하려는 컨트롤로 변경합니다.
+1. 기본 클래스를 상속하려는 컨트롤로 변경합니다.
 
      예를 들어에서 <xref:System.Windows.Forms.Button>상속 하려는 경우 클래스 선언을 다음과 같이 변경 합니다.
 
@@ -54,11 +54,11 @@ ms.locfileid: "70015861"
     public partial class CustomControl1 : System.Windows.Forms.Button
     ```
 
-8. Visual Basic을 사용하는 경우 저장하고 CustomControl1.Designer.vb를 닫습니다. 코드 편집기에서 CustomControl1.vb를 엽니다.
+1. Visual Basic을 사용하는 경우 저장하고 CustomControl1.Designer.vb를 닫습니다. 코드 편집기에서 CustomControl1.vb를 엽니다.
 
-9. 컨트롤이 통합하는 사용자 지정 메서드 또는 속성을 구현합니다.
+1. 컨트롤이 통합하는 사용자 지정 메서드 또는 속성을 구현합니다.
 
-10. 컨트롤의 그래픽 모양을 수정 하려면 <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드를 재정의 합니다.
+1. 컨트롤의 그래픽 모양을 수정 하려면 <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드를 재정의 합니다.
 
     > [!NOTE]
     > 재정의 <xref:System.Windows.Forms.Control.OnPaint%2A> 하면 모든 컨트롤의 모양을 수정할 수 없습니다. Windows에서 수행 하는 모든 그리기 작업 (예: <xref:System.Windows.Forms.TextBox>)이 있는 컨트롤은 <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드를 호출 하지 않으므로 사용자 지정 코드를 사용 하지 않습니다. <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드를 사용할 수 있는지 확인 하려면 수정 하려는 특정 컨트롤에 대 한 도움말 문서를 참조 하세요. 모든 Windows Form 컨트롤의 목록은 [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)을 참조하세요. 컨트롤이 멤버 메서드로 <xref:System.Windows.Forms.Control.OnPaint%2A> 나열 되지 않은 경우이 메서드를 재정의 하 여 모양을 변경할 수 없습니다. 사용자 지정 그리기에 대한 자세한 내용은 [사용자 지정 컨트롤 그리기 및 렌더링](custom-control-painting-and-rendering.md)을 참조하세요.
@@ -83,7 +83,7 @@ ms.locfileid: "70015861"
     }
     ```
 
-11. 컨트롤을 저장하고 테스트합니다.
+1. 컨트롤을 저장하고 테스트합니다.
 
 ## <a name="see-also"></a>참고자료
 

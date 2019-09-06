@@ -14,12 +14,12 @@ ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 2fbb0715d148b443b1eca8f400e4ad43eb51fa43
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 4fd1f1dc0c2c0ad9ae2009ed592e48b8eeaa2783
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015729"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373681"
 ---
 # <a name="walkthrough-serialize-collections-of-standard-types"></a>연습: 표준 형식의 컬렉션 Serialize
 
@@ -90,12 +90,12 @@ ms.locfileid: "70015729"
 
 5. **문자열 컬렉션 편집기**에 여러 문자열을 입력 합니다. 각 문자열의 끝에서 **enter** 키를 눌러 구분 합니다. 문자열 입력을 마치면 **확인을** 클릭 합니다.
 
-> [!NOTE]
-> 입력 한 문자열이의에 표시 <xref:System.Windows.Forms.TextBox> `SerializationDemoControl`됩니다.
+    > [!NOTE]
+    > 입력 한 문자열이의에 표시 <xref:System.Windows.Forms.TextBox> `SerializationDemoControl`됩니다.
 
 6. **솔루션 탐색기**에서 **모든 파일 표시** 단추를 클릭합니다.
 
-7. **Form1** 노드를 엽니다. 아래에는 **Form1.Designer.cs 또는** 라는 파일이있습니다. 이 파일은 **Windows Forms 디자이너** 폼과 해당 자식 컨트롤의 디자인 타임 상태를 나타내는 코드를 내보내는 파일입니다. **코드 편집기**에서 이 파일을 엽니다.
+7. **Form1** 노드를 엽니다. 아래에는 **Form1.Designer.cs 또는** 라는 파일이 **있습니다.** 이 파일은 **Windows Forms 디자이너** 폼과 해당 자식 컨트롤의 디자인 타임 상태를 나타내는 코드를 내보내는 파일입니다. **코드 편집기**에서 이 파일을 엽니다.
 
 8. **Windows Form 디자이너에서 생성 한 코드** 라는 영역을 열고 **serializationDemoControl1**레이블이 지정 된 섹션을 찾습니다. 이 레이블 아래에는 컨트롤의 serialize 된 상태를 나타내는 코드가 있습니다. 5 단계에서 입력 한 문자열은 `Strings` 속성에 대 한 할당에 표시 됩니다. 및 Visual Basic의 C# 다음 코드 예제에서는 "red", "주황색" 및 "노란색" 문자열을 입력 했을 때 표시 되는 것과 유사한 코드를 보여 줍니다.
 

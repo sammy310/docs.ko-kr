@@ -1,5 +1,5 @@
 ---
-title: System.object의 DateTime 및 DateTimeOffset 지원
+title: System.Text.Json의 DateTime 및 DateTimeOffset 지원
 description: DateTime 및 DateTimeOffset 형식이 System.object 라이브러리에서 지원 되는 방법에 대 한 개요입니다.
 ms.technology: dotnet-standard
 author: layomia
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 182694a3d2df02d5e2c709e33a02bd9fa7d20383
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5bff01b10b2bdea4fdcfee86e348c47f44d50103
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69973217"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374472"
 ---
-# <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>System.object의 DateTime 및 DateTimeOffset 지원
+# <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>System.Text.Json의 DateTime 및 DateTimeOffset 지원
 
 System.string 라이브러리는 ISO 8601:-2019 확장 프로필에 따라 및 <xref:System.DateTime> <xref:System.DateTimeOffset> 값을 구문 분석 하 고 기록 합니다.
 [변환기](https://docs.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1?view=netcore-3.0) 는로 serialize 및 deserialize 할 수 있는 <xref:System.Text.Json.JsonSerializer>사용자 지정 지원을 제공 합니다.
@@ -104,7 +104,7 @@ Serialize를 위해 변환기 쓰기 논리에서 `DateTime(Offset).ToString` �
 
 에 <xref:System.Text.Json> 구현 된 확장 ISO 8601-1:2019 프로필은 날짜 및 시간 표현에 대해 다음과 같은 구성 요소를 정의 합니다. 이러한 구성 요소는 구문 분석 및 형식 지정 <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 표현을 할 때 지원 되는 다양 한 수준의 세분성을 정의 하는 데 사용 됩니다.
 
-| 구성 요소       | 형식                      | Description                                                                     |
+| 구성 요소       | 형식                      | 설명                                                                     |
 |-----------------|-----------------------------|---------------------------------------------------------------------------------|
 | Year            | "yyyy"                      | 0001-9999                                                                       |
 | Month           | "MM"                        | 01-12                                                                           |

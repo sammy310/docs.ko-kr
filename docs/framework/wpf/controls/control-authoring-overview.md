@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 3ea5519259ba2ee31bfd6bc25f6bedf1f1250799
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 61cd7b61a586afa2addd55acff7cac6d16d92a1f
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401551"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374534"
 ---
 # <a name="control-authoring-overview"></a>컨트롤 제작 개요
 
@@ -197,7 +197,7 @@ ms.locfileid: "68401551"
 
 다음 지침을 사용하여 사용자 지정 컨트롤에서 연결된 속성을 구현해야 합니다.
 
-- 메서드를 `public` `static` `readonly` <xref:System.Windows.DependencyProperty> 사용 하 여  만든 형식PropertyName`Property`의가있습니다. <xref:System.Windows.DependencyProperty.RegisterAttached%2A> 에 <xref:System.Windows.DependencyProperty.RegisterAttached%2A> 전달 되는 속성 이름은 *PropertyName*과 일치 해야 합니다.
+- 메서드를 `public` `static` `readonly` <xref:System.Windows.DependencyProperty> 사용 하 여 만든 형식PropertyName`Property`의가있습니다. <xref:System.Windows.DependencyProperty.RegisterAttached%2A> 에 <xref:System.Windows.DependencyProperty.RegisterAttached%2A> 전달 되는 속성 이름은 *PropertyName*과 일치 해야 합니다.
 
 - `Set`*PropertyName* 및 `Get`*PropertyName*이라는 `public` `static` CLR 메서드 쌍을 구현합니다. 두 메서드는에서 <xref:System.Windows.DependencyProperty> 파생 된 클래스를 첫 번째 인수로 수락 해야 합니다. `Set`*PropertyName* 메서드는 그 형식이 속성의 등록된 데이터 형식과 일치하는 인수도 수락합니다. `Get`*PropertyName* 메서드는 동일한 형식의 값을 반환해야 합니다. `Set`*PropertyName* 메서드가 누락된 경우 속성이 읽기 전용으로 표시됩니다.
 
@@ -264,7 +264,7 @@ ms.locfileid: "68401551"
 
 모든 테마에 대해 리소스를 정의할 필요는 없습니다. 특정 테마에 대해 리소스가 정의되지 않은 경우 컨트롤이 리소스에 대해 `Classic.xaml`을 확인합니다. 현재 테마에 해당하는 파일 또는 `Classic.xaml`에 리소스가 정의되지 않은 경우 컨트롤이 `generic.xaml`이라는 리소스 사전 파일에 있는 제네릭 리소스를 사용합니다.  `generic.xaml` 파일은 테마별 리소스 사전 파일과 같은 폴더에 있습니다. `generic.xaml`은 특정 Windows 테마에 해당하지 않지만 여전히 테마 수준의 사전입니다.
 
-[테마 및 UI 자동화 지원이 있는 NumericUpDown 사용자 지정 컨트롤 샘플](https://go.microsoft.com/fwlink/?LinkID=160025)에는 `NumericUpDown` 컨트롤에 대한 두 개의 리소스 사전이 있습니다. 하나는 generic.xaml에 있고 다른 하나는 Luna.NormalColor.xaml에 있습니다.  애플리케이션을 실행하고 Windows XP의 은색 테마와 다른 테마 사이를 전환하여 두 컨트롤 템플릿의 차이점을 확인할 수 있습니다. (Windows Vista를 실행하는 경우 Luna.NormalColor.xaml의 이름을 Aero.NormalColor.xaml로 바꾸고 Windows 고전 및 Windows Vista의 기본 테마와 같은 두 테마 사이에서 전환할 수 있습니다.)
+테마 [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp) 및 UI 자동화 지원 샘플을 포함 하는 또는 [Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic) NumericUpDown 사용자 지정 컨트롤에는 `NumericUpDown` 컨트롤에 대 한 두 개의 리소스 사전이 포함 되어 있습니다. 하나는 Luna입니다. 
 
 을 <xref:System.Windows.Controls.ControlTemplate> 테마별 리소스 사전 파일에 배치 하는 경우 컨트롤에 대 한 정적 생성자를 만들고 다음 예제와 같이에서 메서드 <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>를 <xref:System.Windows.DependencyProperty.OverrideMetadata%28System.Type%2CSystem.Windows.PropertyMetadata%29> 호출 해야 합니다.
 
