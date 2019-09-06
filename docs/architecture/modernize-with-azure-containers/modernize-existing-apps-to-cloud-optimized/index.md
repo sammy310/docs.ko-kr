@@ -2,12 +2,12 @@
 title: 기존 .NET 앱을 클라우드 최적화 애플리케이션으로 현대화
 description: Azure 클라우드 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화
 ms.date: 04/28/2018
-ms.openlocfilehash: 00385ac1e2f41d2005606fa7f943618ec253ffc2
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 92dc0cde11bb35797fe3c4e8442a2a6514a27e08
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/05/2019
-ms.locfileid: "70294960"
+ms.locfileid: "70374058"
 ---
 # <a name="modernize-existing-net-apps-to-cloud-optimized-applications"></a>기존 .NET 앱을 클라우드 최적화 애플리케이션으로 현대화
 
@@ -19,7 +19,7 @@ ms.locfileid: "70294960"
 
 ![클라우드 최적화 애플리케이션 위치 지정](./media/image1.png)
 
-> **그림 4-1.** 클라우드 최적화 애플리케이션 위치 지정
+**그림 4-1.** 클라우드 최적화 애플리케이션 위치 지정
 
 >[!div class="step-by-step"]
 >[이전](../migrate-your-relational-databases-to-azure.md)
