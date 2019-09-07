@@ -2,21 +2,22 @@
 title: <wsHttpBinding>의 <security>
 ms.date: 03/30/2017
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
-ms.openlocfilehash: e627a63221d0013c89495d7ff81e02047a03df89
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f7a4ef98637a7c966665fdd02ad26929bd4ba6ac
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936502"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399720"
 ---
 # <a name="security-of-wshttpbinding"></a>\<wsHttpBinding >의 \<보안 >
 [ \<WsHttpBinding >](wshttpbinding.md)의 보안 기능을 나타냅니다.  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<wsHttpBinding>  
-\<binding>  
-\<security>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<바인딩 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsHttpBinding >** ](wshttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<바인딩 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<보안 >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,7 +63,7 @@ ms.locfileid: "69936502"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[\<wsHttpBinding>](wshttpbinding.md)|HTTP 전송 애플리케이션에 대한 보안 바인딩입니다.|  
   

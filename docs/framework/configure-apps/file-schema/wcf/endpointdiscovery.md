@@ -2,21 +2,22 @@
 title: <endpointDiscovery>
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
-ms.openlocfilehash: 5cb64c54067ba695f67d86c0026db77ebbe7d5ee
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 98b1655f42b7b43604ed4ab9d66870ec204a9590
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919046"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398014"
 ---
 # <a name="endpointdiscovery"></a>\<endpointDiscovery>
 검색 기능, 범위 및 해당 메타데이터에 대한 사용자 지정 확장 등 엔드포인트에 대한 다양한 검색 설정을 지정합니다.  
   
-\<system.ServiceModel>  
-\<behaviors>  
-\<endpointBehaviors>  
-\<behavior>  
-\<endpointDiscovery>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<endpointDiscovery >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,11 +43,11 @@ ms.locfileid: "69919046"
   
 |특성|설명|  
 |---------------|-----------------|  
-|사용|이 끝점에서 검색 기능이 사용 되는지 여부를 지정 하는 부울 값입니다. 기본값은 `false`입니다.|  
+|enabled|이 끝점에서 검색 기능이 사용 되는지 여부를 지정 하는 부울 값입니다. 기본값은 `false`입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[\<scopes>](scopes.md)|엔드포인트에 대한 범위 URI의 컬렉션입니다. 단일 엔드포인트에 둘 이상의 범위 URI를 연결할 수 있습니다.|  
 |확장 > [ endpointdiscovery>]\< [ \<](extensions.md)|엔드포인트에 대해 게시되는 사용자 지정 메타데이터를 지정할 수 있는 XML 요소의 컬렉션입니다.|  

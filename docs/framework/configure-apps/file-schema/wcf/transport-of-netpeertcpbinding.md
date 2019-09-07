@@ -2,22 +2,23 @@
 title: <netPeerTcpBinding>의 <transport>
 ms.date: 03/30/2017
 ms.assetid: c44d86d2-1160-44d7-9c7a-297b12eccc7f
-ms.openlocfilehash: 837d01540fa63579877ab4085bd8034c78f2fbe0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 08be5d752f8422ebe6442b295195f21b16a274c0
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915568"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399303"
 ---
 # <a name="transport-of-netpeertcpbinding"></a>\<netpeertcpbinding의 \<전송 > >
 [ \<Netpeertcpbinding >](netpeertcpbinding.md)를 사용할 때 전송 수준 보안에 대 한 설정을 지정 합니다.  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<netPeerTcpBinding>  
-\<binding>  
-\<security>  
-\<transport>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<바인딩 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netPeerTcpBinding >** ](netpeertcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<바인딩 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<보안 >** ](security-of-netpeerbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<전송 >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,7 +43,7 @@ ms.locfileid: "69915568"
   
 ## <a name="credentialtype-attribute"></a>credentialType 특성  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |Certificate|피어 채널 전송을 인증하려면 X509 인증서가 필요합니다.|  
 |암호|피어 채널 전송을 인증하려면 올바른 암호가 필요합니다.|  

@@ -2,22 +2,23 @@
 title: <basicHttpBinding>의 <message>
 ms.date: 03/30/2017
 ms.assetid: 51cdd329-6461-471a-8747-56c2299b61e5
-ms.openlocfilehash: 320aca16bde9fc27aa35cad27286d402745e4710
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bce80d96b1bcec0d580f2de3fe88d5fd6ad0a3b5
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931566"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400272"
 ---
 # <a name="message-of-basichttpbinding"></a>\<basicHttpBinding >의 \<메시지 >
 [ \<BasicHttpBinding >](basichttpbinding.md)의 메시지 수준 보안 설정을 정의 합니다.  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<basicHttpBinding>  
-\<binding>  
-\<security>  
-\<message>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<바인딩 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<basicHttpBinding >** ](basichttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<바인딩 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<보안 >** ](security-of-basichttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<메시지 >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,7 +39,7 @@ ms.locfileid: "69931566"
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 특성  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |UserName|-사용자 이름 자격 증명을 사용 하 여 서버에 대해 클라이언트를 인증 해야 합니다. 이 자격 증명은 [ \<clientCredentials >](clientcredentials.md)를 사용 하 여 지정 해야 합니다.<br />-WCF는 암호 다이제스트를 보내거나 암호를 사용 하 여 키를 파생 하 고 메시지 보안에 이러한 키를 사용 하는 것을 지원 하지 않습니다. 따라서 WCF는 사용자 이름 자격 증명을 사용할 때 전송에 보안을 적용 합니다. `basicHttpBinding`의 경우 SSL 채널을 설정해야 합니다.|  
 |Certificate|클라이언트가 인증서를 사용하여 서버의 인증을 받도록 요구합니다. 이 경우 [ \<clientCredentials](clientcredentials.md) [ >및clientCertificate>를사용하여클라이언트자격증명을지정해야합니다.\<](clientcertificate-of-servicecredentials.md) 또한 메시지 보안 모드를 사용하는 경우 서비스 인증서를 사용하여 클라이언트를 구축해야 합니다. 이 경우 클래스 또는 <xref:System.ServiceModel.Description.ClientCredentials> `ClientCredentials` 동작 요소를 사용 하 여 서비스 자격 증명을 지정 하 고 [ \<serviceCertificate >](servicecertificate-of-servicecredentials.md)를 사용 하 여 서비스 인증서를 지정 해야 합니다.|  

@@ -2,12 +2,12 @@
 title: <issuerChannelBehaviors>의 <add>
 ms.date: 03/30/2017
 ms.assetid: 50710506-e28f-45dd-ab7e-bff6f44173db
-ms.openlocfilehash: 325d6b8111115384b18547bd11ccec8a4a8af711
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cf7ac2691ad1c641352a8047373ced538b19e983
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920120"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398328"
 ---
 # <a name="add-of-issuerchannelbehaviors"></a>\<\<issuerChannelBehaviors > > 추가
 
@@ -16,13 +16,15 @@ STS와 통신할 때 사용할 엔드포인트 동작을 추가합니다.
 > [!NOTE]
 > Endpoint behavior에 [ \<clientCredentials >](clientcredentials.md) 요소가 포함 되어 있으면 예외가 throw 됩니다.
 
-\<system.ServiceModel>\
-\<behaviors>\
-endpointbehaviors 섹션 \<동작 > \
-\<clientCredentials>\
-\<issuedToken>\
-\<issuerChannelBehaviors > 요소 \
-\<add>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<issuedToken >** ](issuedtoken.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<issuerChannelBehaviors >** ](issuerchannelbehaviors-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> 추가**  
 
 ## <a name="syntax"></a>구문
 
@@ -37,7 +39,7 @@ endpointbehaviors 섹션 \<동작 > \
 
 ### <a name="attributes"></a>특성
 
-|특성|설명|
+|특성|Description|
 |---------------|-----------------|
 |issuerAddress|통신할 보안 토큰 발급자의 URI입니다.|
 |behaviorConfiguration|동일한 구성 파일에 정의된 엔드포인트 동작 이름입니다.|
@@ -48,7 +50,7 @@ endpointbehaviors 섹션 \<동작 > \
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|설명|
+|요소|Description|
 |-------------|-----------------|
 |[\<issuerChannelBehaviors>](issuerchannelbehaviors-element.md)|지정 된 서비스 토큰 서비스와 통신할 때 사용할 WCF (Windows Communication Foundation) 클라이언트 끝점 동작의 컬렉션을 포함 합니다.|
 

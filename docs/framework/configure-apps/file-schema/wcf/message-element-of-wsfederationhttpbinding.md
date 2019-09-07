@@ -2,22 +2,23 @@
 title: <message>의 요소<wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-ms.openlocfilehash: 4730d7e573eefdfcd5704621d0a7ccaa15f76d3a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e26e1f94fb38e0654fd0bc9f06c6096a488bccfe
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931587"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400274"
 ---
 # <a name="message-element-of-wsfederationhttpbinding"></a>\<wsFederationHttpBinding >의 \<메시지 > 요소
 WsFederationHttpBinding >에 대 한 [ \<](wsfederationhttpbinding.md)메시지 수준 보안 설정을 정의 합니다.  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<wsFederatedBinding>  
-\<binding>  
-\<security>  
-\<message>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<바인딩 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsFederationHttpBinding >** ](wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<바인딩 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<보안 >** ](security-of-wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<메시지 >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -84,7 +85,7 @@ WsFederationHttpBinding >에 대 한 [ \<](wsfederationhttpbinding.md)메시지 
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
 |algorithmSuite|메시지 암호화 및 키 래핑 알고리즘을 설정합니다. 이 특성의 유효한 값은 "algorithmSuite 특성" 표를 참조하세요. 기본값은 `Basic256`입니다.<br /><br /> 이 특성은 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 형식입니다. 이러한 알고리즘은 보안 정책 언어(WS-SecurityPolicy) 사양에 지정된 알고리즘에 매핑됩니다.|  
 |issuedKeyType|발급할 키 유형을 지정합니다. 유효한 값은 다음과 같습니다.<br /><br /> -   SymmetricKey<br />-   PublicKey<br /><br /> 기본값은 `SymmetricKey`입니다. 이 특성은 <xref:System.IdentityModel.Tokens.SecurityKeyType> 형식입니다.|  
@@ -114,7 +115,7 @@ WsFederationHttpBinding >에 대 한 [ \<](wsfederationhttpbinding.md)메시지 
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[\<claimTypeRequirements>](claimtyperequirements-element.md)|이 바인딩에 대한 클레임 형식 컬렉션을 지정합니다. 각 요소는 <xref:System.ServiceModel.Configuration.ClaimTypeElement> 형식입니다.|  
 |issuer|보안 토큰을 발급하는 엔드포인트를 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement> 형식입니다.|  

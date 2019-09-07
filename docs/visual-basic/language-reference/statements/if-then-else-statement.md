@@ -21,12 +21,12 @@ helpviewer_keywords:
 - If function [Visual Basic], and If...Then...Else statements
 - Else statement [Visual Basic]
 ms.assetid: 790068a2-1307-4e28-8a72-be5ebda099e9
-ms.openlocfilehash: e0b365afaa8cf7dff130cf01d2937be629e5f7a8
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: db81a1c41809b563d5f9d0777c3feb064c5e540b
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106525"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400708"
 ---
 # <a name="ifthenelse-statement-visual-basic"></a>If...Then...Else 문(Visual Basic)
 
@@ -34,7 +34,7 @@ ms.locfileid: "70106525"
 
 ## <a name="syntax"></a>구문
 
-```
+```vb
 ' Multiline syntax:
 If condition [ Then ]
     [ statements ]
@@ -61,7 +61,7 @@ If condition Then [ statements ] [ Else [ elsestatements ] ]
 `condition` \
 필수 요소. 식. 는 `True` `Boolean`또는 `False`로 계산 하거나 암시적으로로 변환할 수 있는 데이터 형식으로 계산 되어야 합니다.
 
-식이 [Nothing](../../../visual-basic/language-reference/nothing.md)으로 계산 되 [는 null을 허용](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` 하는 변수인 경우 해당 조건은 식이이 `False` 고 `Else` 블록이 실행 되는 것 처럼 처리 됩니다.
+식이 [Nothing](../../../visual-basic/language-reference/nothing.md)으로 계산 되 `False`는 null을 [허용](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` 하는 변수인 경우 조건은 식이 인 것 처럼 처리 되 고 `ElseIf` 블록이 있는 경우에는 블록을 평가 하 고 `Else` 블록은 다음과 같이 처리 됩니다. 존재 하는 경우 실행 됩니다.
 
 `Then` \
 한 줄 구문에 필요 합니다. 여러 줄 구문에서 선택 사항입니다.

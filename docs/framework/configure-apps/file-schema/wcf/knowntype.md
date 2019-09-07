@@ -2,21 +2,22 @@
 title: <knownType>
 ms.date: 03/30/2017
 ms.assetid: ee2b7be3-7148-4a3a-b861-48e7330615e5
-ms.openlocfilehash: a0794314cfcb87df00d66b6832356fb130787eba
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 61f51b2ecd572ba254317a01e0f514503c7cc9e4
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928862"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397881"
 ---
 # <a name="knowntype"></a>\<knownType>
 deserialization을 수행하는 동안 <xref:System.Runtime.Serialization.DataContractSerializer>에서 사용하는 형식을 지정합니다. 요소는 "선언된 형식"의 필드 또는 속성에서 반환하는 "알려진 형식"을 지정합니다. 자세한 내용은 [데이터 계약 알려진 형식을](../../../wcf/feature-details/data-contract-known-types.md)합니다.  
   
- \<system.runtime.serialization>  
-\<dataContractSerializer>  
-\<declaredTypes > 요소  
-\<\<declaredTypes > > 추가  
-\<knownType > 요소  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<>를 직렬화 합니다.** ](system-runtime-serialization.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dataContractSerializer >** ](datacontractserializer.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<declaredTypes >** ](declaredtypes.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> 추가**](add-of-declaredtypes-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<knownType >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,7 +42,7 @@ deserialization을 수행하는 동안 <xref:System.Runtime.Serialization.DataCo
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<parameter>](parameter.md)|선언된 형식이 제네릭 형식이면 매개 변수 인덱스를 지정합니다.|  
   

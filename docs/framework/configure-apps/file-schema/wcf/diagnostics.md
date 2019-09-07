@@ -2,18 +2,19 @@
 title: <diagnostics>
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: 170cae5b328c86073c1d8e7710bb19e98ab5688c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2749bc6c66d491a8a160d98b508fb43aa027b806
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925869"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398047"
 ---
 # <a name="diagnostics"></a>\<diagnostics>
 `diagnostics` 요소는 관리자가 런타임 검사 및 제어에 사용할 수 있는 설정을 정의합니다.  
   
- \<system.ServiceModel>  
-\<diagnostics>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<진단 >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,7 +45,7 @@ ms.locfileid: "69925869"
   
 ### <a name="attributes"></a>특성  
   
-|특성|Description|  
+|특성|설명|  
 |---------------|-----------------|  
 |etwProviderId|ETW 세션에 이벤트를 기록하는 이벤트 추적 공급자에 대한 식별자를 지정하는 문자열입니다.|  
 |performanceCounters|어셈블리에 대해 성능 카운터를 사용할 수 있는지 여부를 지정합니다. 유효한 값은 다음과 같습니다.<br /><br /> 해제 성능 카운터를 사용하지 않습니다.<br />ServiceOnly 이 서비스와 관련된 성능 카운터만 사용합니다.<br />모두가 성능 카운터를 런타임에 볼 수 있습니다.<br />기본 단일 성능 카운터 인스턴스 _WCF_Admin이 만들어집니다. 이 인스턴스는 인프라에서 사용되는 SQM 데이터 컬렉션을 설정하는 데 사용됩니다. 이 인스턴스의 어떤 카운터 값도 업데이트되지 않으므로 0으로 남게 됩니다. 이것은 WCF에 대한 구성이 없을 경우 기본값입니다.|  

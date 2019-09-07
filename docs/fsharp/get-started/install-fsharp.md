@@ -1,13 +1,13 @@
 ---
 title: F# 설치
 description: 환경에 따라 F#을 설치하는 방법을 알아봅니다.
-ms.date: 08/28/2018
-ms.openlocfilehash: 792c61c0522cd4d0c68a64572f2892ce33f71ea6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.date: 09/05/2019
+ms.openlocfilehash: 18b660ff640904119d63f57405752a14f7673e0c
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017022"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400726"
 ---
 # <a name="install-f"></a>F# 설치
 
@@ -60,8 +60,14 @@ sudo apt-get install mono-complete fsharp
 
 ---
 
-해야 [Visual Studio Code](https://code.visualstudio.com) 설치 합니다.
+그런 다음 [Visual Studio Code](https://code.visualstudio.com) 설치 해야 합니다.
 
 그런 다음 확장 아이콘을 클릭하고 "Ionide"를 검색합니다.
 
 Visual Studio Code에서 F#을 지원하기 위해 필요한 유일한 플러그인은 [Ionide fsharp](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)입니다. 하지만 [FAKE](https://fsharp.github.io/FAKE/) 지원을 위해 [Ionide FAKE](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE)를 설치하고 [Paket](https://fsprojects.github.io/Paket/) 지원을 위해 [Ionide Paket](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket)을 설치할 수 있습니다. FAKE와 Paket은 각각 프로젝트를 빌드하고 종속성을 관리하기 위한 부가적인  F# 커뮤니티 도구입니다.
+
+## <a name="install-f-on-a-build-server"></a>빌드 F# 서버에 설치
+
+.Net Core 또는 .net SDK를 통해 .NET Framework를 사용 하는 경우 빌드 서버에 .NET SDK를 설치 하기만 하면 됩니다. 필요한 모든 항목이 있습니다.
+
+.NET Framework를 사용 하 고 있고 .NET SDK를 사용 **하지** 않는 경우 [Visual Studio Build Tools SKU](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16) 를 Windows Server에 설치 해야 합니다. 설치 관리자에서 **.net 데스크톱 빌드 도구** 를 선택 하 고 설치 관리자 메뉴의 오른쪽에 있는  **F# 컴파일러** 구성 요소를 선택 합니다.

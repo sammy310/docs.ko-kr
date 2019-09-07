@@ -2,21 +2,22 @@
 title: <basicHttpBinding>의 <security>
 ms.date: 03/30/2017
 ms.assetid: 6432708d-5465-4bd9-bfc2-466742db99cb
-ms.openlocfilehash: f84f6c0f9988dd2d07377bf694286922db9d8364
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 00a933892376c2dc9771752beaf76d4994554968
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936797"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399889"
 ---
 # <a name="security-of-basichttpbinding"></a>\<basicHttpBinding >의 \<보안 >
 [ \<BasicHttpBinding >](basichttpbinding.md)의 보안 기능을 정의 합니다.  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<basicHttpBinding>  
-\<binding>  
-\<security>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<바인딩 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<basicHttpBinding >** ](basichttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<바인딩 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<보안 >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -51,7 +52,7 @@ ms.locfileid: "69936797"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<transport>](transport-of-basichttpbinding.md)|기본 HTTP 서비스에 대한 전송 보안 설정을 정의합니다. 이 요소는 <xref:System.ServiceModel.HttpTransportSecurity>에 해당합니다.|  
 |[\<message>](message-of-basichttpbinding.md)|기본 HTTP 서비스에 대한 메시지 보안 설정을 정의합니다. 이 요소는 <xref:System.ServiceModel.BasicHttpMessageSecurity>에 해당합니다.|  

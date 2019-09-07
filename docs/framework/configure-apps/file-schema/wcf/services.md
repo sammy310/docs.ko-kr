@@ -2,18 +2,19 @@
 title: <services>
 ms.date: 03/30/2017
 ms.assetid: 80d76ba9-2058-48ad-9b91-5e4be7e5c113
-ms.openlocfilehash: c00d5fe3e8b2ba05843e09aca6aaa79386541bad
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1f9cb6c95fa14a5b8a55cc561699e2a07e1dc80c
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937197"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399592"
 ---
 # <a name="services"></a>\<services>
 서비스는 구성 파일의 `services` 섹션에 정의됩니다. 서비스별로 해당 `service` 구성 섹션이 있습니다.  
   
- \<system.ServiceModel>  
-  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<서비스 >**  
 ## <a name="syntax"></a>구문  
   
 ```xml  

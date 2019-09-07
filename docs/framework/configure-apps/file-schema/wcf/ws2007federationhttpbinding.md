@@ -2,23 +2,22 @@
 title: <ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9af4ec79-cdef-457e-9dca-09d5eb821594
-ms.openlocfilehash: fe952dfe9ce51e23d1ba46975026799dfe8b5b39
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4efd01a61a10603b82a6ae2d7e9a2a225d2f8860
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915266"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399076"
 ---
 # <a name="ws2007federationhttpbinding"></a>\<ws2007FederationHttpBinding>
 
 [ \<WsFederationHttpBinding >](wsfederationhttpbinding.md) 에서 파생 되 고 페더레이션된 보안을 지 원하는 안전 하 고 상호 운용 가능한 바인딩입니다.
 
-```xml
-<system.ServiceModel>
-  <bindings>
-    <ws2007FederationHttpBinding>
-```
-
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<바인딩 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<ws2007FederationHttpBinding >**  
+  
 ## <a name="syntax"></a>구문
 
 ```xml

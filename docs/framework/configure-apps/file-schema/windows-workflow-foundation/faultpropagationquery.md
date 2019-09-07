@@ -3,12 +3,12 @@ title: <faultPropagationQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 4fb5c2b1-3dad-4eca-9c7f-3efb51899813
-ms.openlocfilehash: f77a613f4eb0456a0085096aa478d37c78122217
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6b43a570b4d4534adce1ef5ab394849651e3ac0e
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946311"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398724"
 ---
 # <a name="faultpropagationquery"></a>\<faultPropagationQuery>
 
@@ -16,12 +16,13 @@ ms.locfileid: "69946311"
 
  추적 프로필 쿼리에 대 한 자세한 내용은 [추적 프로필](../../../windows-workflow-foundation/tracking-profiles.md)을 참조 하세요.
 
-\<system.serviceModel>\
-\<tracking>\
-\<trackingProfile>\
-\<workflow>\
-\<faultPropagationQueries>\
-\<faultPropagationQuery>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<컴퓨터. ServiceModel >** ](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<추적 >** ](tracking.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Tracking&gt >** ](trackingprofile.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<워크플로 >** ](workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<faultPropagationQueries >** ](faultpropagationqueries.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<y >**
 
 ## <a name="syntax"></a>구문
 
@@ -44,7 +45,7 @@ ms.locfileid: "69946311"
 
 ### <a name="attributes"></a>특성
 
-|특성|Description|
+|특성|설명|
 |---------------|-----------------|
 |activityName|오류를 전파 한 오류 처리기 작업의 이름을 지정 하는 문자열입니다. 기본값은 *이며, 이는 모든 활동에 대해 오류 전파 레코드가 반환된다는 것을 나타냅니다.|
 |faultHandlerActivityName|오류의 출처인 활동의 이름을 지정하는 문자열입니다.|

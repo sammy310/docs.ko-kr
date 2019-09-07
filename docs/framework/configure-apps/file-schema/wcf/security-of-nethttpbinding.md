@@ -2,22 +2,23 @@
 title: <netHttpBinding>의 <security>
 ms.date: 03/30/2017
 ms.assetid: dc41f6f7-cabc-4a64-9fa0-ceabf861b348
-ms.openlocfilehash: f2750036aa4d3fbe41062ad041e50ff3a4be32b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 890cee3271c410a921b3a88f78d0705ba8718252
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670574"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399853"
 ---
-# <a name="security-of-nethttpbinding"></a>\<보안 >의 \<netHttpBinding >
+# <a name="security-of-nethttpbinding"></a>\<netHttpBinding >의 \<보안 >
 
-보안 기능을 정의 합니다 [ \<basicHttpBinding >](basichttpbinding.md)합니다.
+[ \<NetHttpBinding >](nethttpbinding.md)의 보안 기능을 정의 합니다.
 
-\<system.ServiceModel>\
-\<bindings>\
-\<netHttpBinding>\
-\<binding>\
-\<security>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<바인딩 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netHttpBinding >** ](nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<바인딩 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<보안 >**  
 
 ## <a name="syntax"></a>구문
 
@@ -45,24 +46,24 @@ ms.locfileid: "61670574"
 
 |값|설명|
 |-----------|-----------------|
-|없음|-메시지 전송 하는 동안 보안이 유지 되지 됩니다.|
+|없음|-전송 중에는 메시지의 보안이 유지 되지 않습니다.|
 |전송|HTTPS 전송을 사용하여 보안이 제공됩니다. SOAP 메시지는 HTTPS를 사용하여 보호됩니다. 이 서비스는 서비스의 X.509 인증서를 사용하여 클라이언트에 인증됩니다. 클라이언트는 제공된 ClientCredentialType을 사용하여 인증됩니다.|
 |메시지|SOAP 메시지 보안을 사용하여 보안이 제공됩니다. 기본적으로 본문에는 암호화 및 서명이 수행됩니다. 이 바인딩에서는 클라이언트에 out of band 방식으로 서버 인증서가 제공되어야 합니다. 이 바인딩의 유효한 `ClientCredentialType`은 `Certificate`뿐입니다.|
 |TransportWithMessageCredential|전송 보안에 의해 무결성, 기밀성 및 서버 인증이 제공됩니다. 클라이언트 인증은 SOAP 메시지 보안에 의해 제공됩니다. 이 모드는 사용자가 사용자 이름/암호를 사용하여 인증되며 메시지 전송 보호를 위한 기존의 HTTP 배포가 있는 경우에 적합합니다.|
-|TransportCredentialOnly|이 모드는 메시지 무결성 및 기밀성을 제공하지 않으나 http 기반 클라이언트 인증을 제공합니다. 이 모드는 주의해서 사용해야 합니다. 전송 보안 (예: IPSec) 다른 방법으로 제공 되 고 WCF 인프라에서 클라이언트 인증만 제공 하는 환경에서는 사용 해야 합니다.|
+|TransportCredentialOnly|이 모드는 메시지 무결성 및 기밀성을 제공하지 않으나 http 기반 클라이언트 인증을 제공합니다. 이 모드는 주의해서 사용해야 합니다. 다른 방법 (예: IPSec)에서 전송 보안을 제공 하는 환경에서 사용 해야 하며, WCF 인프라에서 클라이언트 인증만 제공 합니다.|
 
 ### <a name="child-elements"></a>자식 요소
 
-|요소|설명|
+|요소|Description|
 |-------------|-----------------|
 |[\<transport>](transport-of-nethttpbinding.md)|기본 HTTP 서비스에 대한 전송 보안 설정을 정의합니다. 이 요소는 <xref:System.ServiceModel.HttpTransportSecurity>에 해당합니다.|
 |[\<message>](message-of-nethttpbinding.md)|기본 HTTP 서비스에 대한 메시지 보안 설정을 정의합니다. 이 요소는 <xref:System.ServiceModel.BasicHttpMessageSecurity>에 해당합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|설명|
+|요소|Description|
 |-------------|-----------------|
-|바인딩|바인딩 요소를 [ \<basicHttpBinding >](basichttpbinding.md)합니다.|
+|바인딩(binding)|[ \<BasicHttpBinding >](basichttpbinding.md)의 바인딩 요소입니다.|
 
 ## <a name="remarks"></a>설명
 

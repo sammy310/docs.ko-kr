@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: c873961982cd1642d8b354e5d77b06105c0b7a1e
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: d6b2975b8e0338b121d00f5ec7f4ffb69d32ab6a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364312"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400731"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>XAML 노드 스트림 구조 및 개념 이해
 
@@ -85,9 +85,6 @@ while (xxr.Read()) {
 ### <a name="accessing-xaml-beyond-the-node-loop-concept"></a>노드 루프 개념을 벗어난 XAML 액세스
 
 XAML 노드 루프가 아닌 다른 방법으로 XAML 표현을 사용할 수 있습니다. 예를 들어 인덱싱된 노드를 읽을 수 있거나 특히 `x:Name`, `x:Uid`또는 다른 식별자를 통해 노드에 직접 액세스하는 XAML 판독기가 있을 수 있습니다. .NET framework XAML 서비스는 전체 구현을 제공하지 않고 서비스 및 지원 형식을 통해 제안 패턴을 제공합니다. 자세한 내용은 <xref:System.Xaml.IXamlIndexingReader> 및 <xref:System.Xaml.XamlNodeList>를 참조하세요.
-
-> [!TIP]
-> Microsoft는 Microsoft XAML Toolkit이라는 번외 릴리스도 생성합니다. 이 번외 릴리스는 아직 시험판 단계입니다. 그러나 시험판 구성 요소를 사용하려는 경우 Microsoft XAML Toolkit에서 XAML 도구 및 XAML 정적 분석을 위한 몇 가지 흥미로운 리소스를 제공합니다. Microsoft XAML Toolkit에는 XAML DOM API, FxCop 분석 지원 및 Silverlight용 XAML 스키마 컨텍스트가 포함됩니다. 자세한 내용은 [Microsoft XAML Toolkit](https://code.msdn.microsoft.com/XAML)을 참조하세요.
 
 <a name="working_with_the_current_node"></a>
 

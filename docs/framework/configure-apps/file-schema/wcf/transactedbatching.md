@@ -2,22 +2,23 @@
 title: <transactedBatching>
 ms.date: 03/30/2017
 ms.assetid: 2f790a0d-8f03-4b86-81b5-ce1bc1a6c575
-ms.openlocfilehash: 12369f1053638583a3864fab396869d0e7045732
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6167a4ad56a9481a9f695b770605991a0a88d2d9
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918673"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399408"
 ---
 # <a name="transactedbatching"></a>\<transactedBatching>
 
 받기 작업에 트랜잭션 일괄 처리가 지원되는지 여부를 지정합니다.
 
-\<system.ServiceModel>\
-\<behaviors>\
-\<endpointBehaviors>\
-\<behavior>\
-\<transactedBatching>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<transactedBatching >**  
 
 ## <a name="syntax"></a>구문
 

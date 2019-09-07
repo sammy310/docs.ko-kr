@@ -2,21 +2,22 @@
 title: <ws2007HttpBinding>의 <security>
 ms.date: 03/30/2017
 ms.assetid: fdda0ff7-b462-4e26-af52-e87ddab71945
-ms.openlocfilehash: a895df027bee7430e51e76c480136a49b6b2a0be
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ab5969da6a2d7cb59c057fd5bb909add6b6398a4
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936569"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399781"
 ---
 # <a name="security-of-ws2007httpbinding"></a>\<ws2007HttpBinding >의 \<보안 >
 Ws2007HttpBinding > 요소에 사용 되 [ \<](ws2007httpbinding.md) 는 보안 설정을 나타냅니다.  
   
- \<system.serviceModel>  
-\<bindings>  
-\<ws2007HttpBinding>  
-\<binding>  
-\<security>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<바인딩 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ws2007HttpBinding >** ](ws2007httpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<바인딩 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<보안 >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -57,14 +58,14 @@ Ws2007HttpBinding > 요소에 사용 되 [ \<](ws2007httpbinding.md) 는 보안 
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<transport>](transport-of-ws2007httpbinding.md)|전송 보안 설정을 정의합니다. 이 요소는 <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement> 형식에 해당합니다. 이 설정은 모드를 Transport로 설정한 경우에만 적용됩니다.|  
 |[\<message>](message-of-ws2007httpbinding.md)|메시지에 대한 보안 설정을 정의합니다. 이 요소는 <xref:System.ServiceModel.Configuration.MessageSecurityOverHttpElement> 형식에 해당합니다. 이 설정은 모드를 Transport로 설정한 경우에 적용되지 않습니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[\<ws2007HttpBinding>](ws2007httpbinding.md)|HTTP 전송 애플리케이션에 대한 보안 바인딩입니다.|  
   

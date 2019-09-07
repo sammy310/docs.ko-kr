@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0e306067-5720-4782-9719-2286570a7e47
-ms.openlocfilehash: d9007e4d650c79a636f908a638bb382457f6b29b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 17d3a5e221fc5f917e9e266b3af4fb844c6fd85e
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250272"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397497"
 ---
 # <a name="method-based-query-syntax-examples-aggregate-operators"></a>메서드 기반 쿼리 구문 예제: 집계 연산자
-이 <xref:System.Linq.Enumerable.Aggregate%2A>항목의 예제에서는 <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Average%2A> <xref:System.Linq.Enumerable.LongCount%2A>,,,, 및<xref:System.Linq.Enumerable.Sum%2A> 메서드를 사용 하 여 [AdventureWorks Sales 모델](https://archive.codeplex.com/?p=msftdbprodsamples) 을 쿼리 하는 방법을 보여 줍니다. <xref:System.Linq.Enumerable.Max%2A> <xref:System.Linq.Enumerable.Min%2A> 메서드 기반 쿼리 구문입니다. 이 예제에서 사용하는 AdventureWorks Sales 모델에서는 AdventureWorks 샘플 데이터베이스의 Contact, Address, Product, SalesOrderHeader 및 SalesOrderDetail 테이블을 사용합니다.  
+이 <xref:System.Linq.Enumerable.Aggregate%2A>항목의 예제에서는 <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Average%2A> <xref:System.Linq.Enumerable.LongCount%2A>,,,, 및<xref:System.Linq.Enumerable.Sum%2A> 메서드를 사용 하 여 [AdventureWorks Sales 모델](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) 을 쿼리 하는 방법을 보여 줍니다. <xref:System.Linq.Enumerable.Max%2A> <xref:System.Linq.Enumerable.Min%2A> 메서드 기반 쿼리 구문입니다. 이 예제에서 사용하는 AdventureWorks Sales 모델에서는 AdventureWorks 샘플 데이터베이스의 Contact, Address, Product, SalesOrderHeader 및 SalesOrderDetail 테이블을 사용합니다.  
   
  이 항목의 예제에서는 다음 `using` / `Imports` 문을 사용 합니다.  
   

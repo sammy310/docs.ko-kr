@@ -2,19 +2,20 @@
 title: <mexHttpsBinding>
 ms.date: 03/30/2017
 ms.assetid: f2ed3774-78b9-4a15-b79b-655f1ad68b86
-ms.openlocfilehash: 30d1aa27ce29b6aa4091c3e7be05746ad462102a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d32db2180e06cba6662ed853ab1a259805680ea1
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931263"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397819"
 ---
 # <a name="mexhttpsbinding"></a>\<mexHttpsBinding>
 HTTPS를 통한 WS-MEX(WS-MetadataExchange) 메시지 교환에 사용되는 바인딩의 설정을 지정합니다.  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<mexHttpsBinding>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<바인딩 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<mexHttpsBinding >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -52,7 +53,7 @@ HTTPS를 통한 WS-MEX(WS-MetadataExchange) 메시지 교환에 사용되는 바
 |[\<bindings>](bindings.md)|이 요소는 표준 및 사용자 지정 바인딩의 컬렉션을 보유합니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 바인딩은 기본적으로 인증서를 사용하여 전송 수준에서 보안을 지원할 수 있는 `WSHttpBinding` 바인딩입니다. 이러한 메타 데이터 끝점을 [구성 하 고 사용 하는 방법에 대 한 자세한 내용은 방법: 사용자 지정 WS 메타 데이터 교환 바인딩](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)구성, [방법: MEX가 아닌 바인딩을](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)통해 메타 데이터를 검색 하 고 샘플 [사용자 지정 보안 메타 데이터 끝점](../../../wcf/samples/custom-secure-metadata-endpoint.md)을 검색 합니다.  
+ 이 바인딩은 기본적으로 인증서를 사용하여 전송 수준에서 보안을 지원할 수 있는 `WSHttpBinding` 바인딩입니다. 이러한 메타 데이터 끝점을 [구성 하 고 사용 하는 방법에 대 한 자세한 내용은 방법: 사용자 지정 WS-Metadata Exchange 바인딩](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)구성, [방법: MEX가 아닌 바인딩을](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)통해 메타 데이터를 검색 하 고 샘플 [사용자 지정 보안 메타 데이터 끝점](../../../wcf/samples/custom-secure-metadata-endpoint.md)을 검색 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

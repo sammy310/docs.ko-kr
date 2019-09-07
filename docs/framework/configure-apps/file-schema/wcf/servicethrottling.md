@@ -2,21 +2,22 @@
 title: <serviceThrottling>
 ms.date: 03/30/2017
 ms.assetid: a337d064-1e64-4209-b4a9-db7fdb7e3eaf
-ms.openlocfilehash: 77ed5e91f09d9e658deeb7996baaca445b4e0c90
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ad87a5876381a7224341babdb076c85edcd1dd87
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937104"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399569"
 ---
 # <a name="servicethrottling"></a>\<serviceThrottling>
 WCF(Windows Communication Foundation) 서비스의 스로틀 메커니즘을 지정합니다.  
   
- \<system.ServiceModel>  
-\<behaviors>  
-\<serviceBehaviors>  
-\<behavior>  
-\<serviceThrottling>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<serviceThrottling >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -31,7 +32,7 @@ WCF(Windows Communication Foundation) 서비스의 스로틀 메커니즘을 지
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
 |maxConcurrentCalls|<xref:System.ServiceModel.ServiceHost>에서 현재 처리되는 메시지 수를 제한하는 양의 정수입니다. 한도를 초과하는 호출은 대기됩니다. 이 값을 0으로 설정하는 것은 Int32.MaxValue로 설정하는 것과 같습니다. 기본값은 16 * 프로세서 수입니다.|  
 |maxConcurrentInstances|<xref:System.ServiceModel.InstanceContext>에서 한 번에 실행하는 <xref:System.ServiceModel.ServiceHost> 개체 수를 제한하는 양의 정수입니다. 추가 인스턴스 생성 요청은 큐에 대기했다가 인스턴스 수가 한도 아래로 내려가면 완료됩니다. 기본값은 maxConcurrentSessions와 MaxConcurrentCalls의 합계입니다.|  

@@ -2,22 +2,23 @@
 title: <soapProcessing>
 ms.date: 03/30/2017
 ms.assetid: e8707027-e6b8-4539-893d-3cd7c13fbc18
-ms.openlocfilehash: 678b1f71ac15d3ad30df28cec5abbe403fb08c95
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0728e22205d4ac2c7674f7690e142aed51d42440
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937054"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399535"
 ---
 # <a name="soapprocessing"></a>\<soapProcessing>
 
 서로 다른 바인딩 형식과 메시지 버전 간에 메시지 마샬링을 위해 사용되는 클라이언트 엔드포인트 동작을 정의합니다.
 
-**\<system.ServiceModel>**    
-&nbsp;&nbsp; **\<behaviors>**    
-&nbsp;&nbsp;&nbsp;&nbsp; **\<endpointBehaviors>**    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<behavior>**    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<soapProcessing>**
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<soapProcessing >**
   
 ## <a name="syntax"></a>구문  
   
@@ -31,7 +32,7 @@ ms.locfileid: "69937054"
   
 ### <a name="attributes"></a>특성  
   
-|                   | 설명 |
+|                   | Description |
 | ----------------- | ----------- |
 | `processMessages` | SOAP 메시지 버전 간에 메시지가 마샬링되어야 하는지 여부를 지정하는 부울 값입니다. |
 
@@ -41,7 +42,7 @@ ms.locfileid: "69937054"
 
 ### <a name="parent-elements"></a>부모 요소
 
-|     | 설명 |
+|     | Description |
 | --- | ----------- |
 | [ **\<behavior>** ](behavior-of-endpointbehaviors.md) | 엔드포인트 동작을 지정합니다. |
 

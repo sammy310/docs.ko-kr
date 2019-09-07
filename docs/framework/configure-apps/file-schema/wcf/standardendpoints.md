@@ -2,17 +2,19 @@
 title: <standardEndpoints>
 ms.date: 03/30/2017
 ms.assetid: d62153d7-a6e6-462a-a784-cca61e9c2ba1
-ms.openlocfilehash: f40353d36464c2e759bf2058b244cb854b19806c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 76a5303650c4e2b2887d29f511d3088c78b58fe2
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69930784"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399507"
 ---
 # <a name="standardendpoints"></a>\<standardEndpoints>
 이 구성 섹션에서는 다시 사용할 수 있는 미리 구성된 엔드포인트인 표준 엔드포인트의 컬렉션을 정의할 수 있습니다. 표준 엔드포인트에는 고정 값으로 설정된 하나 이상의 주소, 바인딩 및 계약 특성이 있습니다. 예를 들어 검색 엔드포인트에서는 계약이 고정됩니다. 표준 엔드포인트를 사용자 지정 바인딩 정의와 유사한 새 속성과 함께 사용하여 서비스 엔드포인트를 확장할 수도 있습니다.  
   
- \<system.ServiceModel>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<standardEndpoints >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -31,7 +33,7 @@ ms.locfileid: "69930784"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[\<announcementEndpoint>](announcementendpoint.md)|고정 알림 계약이 있는 표준 엔드포인트를 정의합니다. 서비스에서는 선택적으로 서비스가 열리거나 닫힐 때 각각 온라인 및 오프라인 알림 메시지를 보내 가용성을 알릴 수 있습니다. WCF (Windows Communication Foundation) 서비스는 [ \<servicediscovery >](servicediscovery.md) 요소에서 알림 끝점을 지정 하 고 AnnouncementClient를 사용 하 여 공지를 수행 합니다. 다른 서비스에서 알림을 수신 대기 하려는 클라이언트는 실제로 WCF 서비스 역할을 합니다. 따라서 [ \<서비스 >](services.md) 섹션에서 해당 클라이언트에 대 한 알림 끝점을 구성 해야 합니다.|  
 |[\<discoveryEndpoint>](discoveryendpoint.md)|고정 검색 계약이 있는 표준 엔드포인트를 정의합니다. 서비스 구성에 추가되면 검색 메시지를 수신하는 위치를 지정합니다. 클라이언트 구성에 추가되면 검색 쿼리를 보내는 위치를 지정합니다.|  
@@ -45,7 +47,7 @@ ms.locfileid: "69930784"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |\<system.ServiceModel>|모든 WCF 구성 요소의 루트 요소입니다.|  
   

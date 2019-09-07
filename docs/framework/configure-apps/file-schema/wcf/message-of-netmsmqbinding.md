@@ -2,25 +2,24 @@
 title: <netMsmqBinding>의 <message>
 ms.date: 03/30/2017
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
-ms.openlocfilehash: b163dcb08e9656e3bde9c7fbb71fa1c92c9957ca
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09d9d4a5d1967afaf9a6ed5756c309e78fee0923
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931513"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400251"
 ---
 # <a name="message-of-netmsmqbinding"></a>\<netMsmqBinding의 \<메시지 > >
 
 이 `netMsmqBinding` 바인딩에 대한 SOAP 메시지 보안 설정을 정의합니다.
 
-```xml
-<system.ServiceModel>
-  <bindings>
-    <netMsmqBinding>
-      <binding>
-        <security>
-          <message>
-```
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<바인딩 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netMsmqBinding >** ](netmsmqbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<바인딩 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<보안 >** ](security-of-netmsmqbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<메시지 >**  
 
 ## <a name="syntax"></a>구문
 

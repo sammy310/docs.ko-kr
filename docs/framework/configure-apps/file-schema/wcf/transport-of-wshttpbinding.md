@@ -2,23 +2,24 @@
 title: <wsHttpBinding>의 <transport>
 ms.date: 03/30/2017
 ms.assetid: 21e38acf-450a-4bda-82b6-de305e1f7cd8
-ms.openlocfilehash: 384267e3d018d714f95356461eb303bc9ec0cb3e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 95cfa076f62f767af431ff5a0bcc2ca31b824e30
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934634"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399238"
 ---
 # <a name="transport-of-wshttpbinding"></a>\<wsHttpBinding >의 \<전송 >
 
 HTTP 전송의 인증 설정을 정의합니다.
 
-\<system.serviceModel>\
-\<bindings>\
-\<wsHttpBinding>\
-\<binding>\
-\<security>\
-\<transport>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<바인딩 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsHttpBinding >** ](wshttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<바인딩 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<보안 >** ](security-of-wshttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<전송 >**  
 
 ## <a name="syntax"></a>구문
 
@@ -50,7 +51,7 @@ HTTP 전송의 인증 설정을 정의합니다.
 
 ### <a name="attributes"></a>특성
 
-|특성|설명|
+|특성|Description|
 |---------------|-----------------|
 |`clientCredentialType`|클라이언트를 서비스에 인증할 때 사용되는 자격 증명을 지정합니다. 이 특성은 <xref:System.ServiceModel.HttpClientCredentialType> 형식입니다.|
 |`proxyCredentialType`|클라이언트를 도메인 프록시에 인증할 때 사용되는 자격 증명을 지정합니다. 이 특성은 <xref:System.ServiceModel.HttpProxyCredentialType> 형식입니다.|
@@ -59,7 +60,7 @@ HTTP 전송의 인증 설정을 정의합니다.
 
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 특성
 
-|값|설명|
+|값|Description|
 |-----------|-----------------|
 |`None`|보안이 해제되어 있습니다.|
 |`Basic`|기본 인증을 사용합니다.|

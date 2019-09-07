@@ -3,15 +3,18 @@ title: 워크플로의 >를 < 합니다.
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-ms.openlocfilehash: faa8154c4d7ac5c6aa2f9f1707cf8f0d39eefad5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 757a7a132a6e765e257097d251a110297c6a40bf
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947357"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398609"
 ---
 # <a name="systemservicemodel-of-workflow"></a>\<워크플로의 System.servicemodel >
 이 구성 섹션에는 모든 워크플로 구성 요소가 포함됩니다.  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp; **\<컴퓨터. ServiceModel >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -99,7 +102,7 @@ ms.locfileid: "69947357"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<behaviors>](behaviors-of-workflow.md)|이 섹션은 **Servicebehaviors** 컬렉션을 정의 합니다.  컬렉션의 각 요소는 서비스에서 사용하는 동작 요소를 정의합니다. 각 동작 요소는 고유한 **이름** 특성으로 식별 됩니다.|  
 |[\<tracking>](tracking.md)|워크플로 서비스에 대한 추적 설정을 정의하기 위한 구성 섹션을 나타냅니다.<br /><br /> 워크플로 추적 및 해당 구성에 대 한 자세한 내용은 워크플로 [추적 및](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) 추적 및 [워크플로에 대 한 추적 구성](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md)을 참조 하세요.|  
@@ -108,4 +111,4 @@ ms.locfileid: "69947357"
   
 |요소|설명|  
 |-------------|-----------------|  
-|\<configuration>|.NET 구성 파일에 있는 모든 구성 요소의 루트 요소입니다.|
+|[\<구성>](../configuration-element.md)|.NET 구성 파일에 있는 모든 구성 요소의 루트 요소입니다.|

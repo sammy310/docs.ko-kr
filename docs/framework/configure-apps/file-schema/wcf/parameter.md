@@ -2,22 +2,23 @@
 title: <parameter>
 ms.date: 03/30/2017
 ms.assetid: 0fb41e2d-64f7-44ab-993e-05892eac6d82
-ms.openlocfilehash: c3f2179835ad1232e115cad0decdd3d41bbdc160
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 07fa410109a7bd2fa315132c4737301698bb3a93
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932843"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400105"
 ---
 # <a name="parameter"></a>\<parameter>
 선언된 형식이 제네릭 형식이면 제네릭 매개 변수를 지정합니다.  
   
- \<system.runtime.serialization>  
-\<dataContractSerializer>  
-\<declaredTypes > 요소  
-\<declaredTypes >에 대 \<한 > 요소 추가  
-\<knownType > 요소  
-\<매개 변수 > 요소  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<>를 직렬화 합니다.** ](system-runtime-serialization.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dataContractSerializer >** ](datacontractserializer.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<declaredTypes >** ](declaredtypes.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> 추가**](add-of-declaredtypes-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<knownType >** ](knowntype.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<매개 변수 >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,7 +39,7 @@ ms.locfileid: "69932843"
   
 ## <a name="index-attribute"></a>index 특성  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |"0"|제네릭 형식의 첫 번째 매개 변수입니다. 예를 들어, <xref:System.Collections.Generic.List%601>에는 하나의 매개 변수만 있습니다. 이 형식이 선언된 형식으로 사용되면 index가 "0"으로 설정됩니다.|  
 |"1"|제네릭 형식의 두 번째 매개 변수입니다. 예를 들어, <xref:System.Collections.Generic.Dictionary%602>에는 두 개의 매개 변수가 있습니다. 이 알려진 형식이 두 번째 매개 변수에서 반환되면 index 특성을 "1"로 설정합니다.|  
@@ -48,7 +49,7 @@ ms.locfileid: "69932843"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<knownType>](knowntype.md)|선언된 형식의 필드 또는 속성에서 반환될 수 있는 알려진 형식을 지정합니다.|  
   

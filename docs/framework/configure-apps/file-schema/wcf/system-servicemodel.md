@@ -8,15 +8,18 @@ helpviewer_keywords:
 - <system.serviceModel> element
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
-ms.openlocfilehash: 4fa6916437bb569029efe270ba8296703d89c539
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2125ce00b0e23f2e93ff251549f9c1276892b16b
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938913"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399450"
 ---
 # <a name="systemservicemodel"></a>\<system.serviceModel>
 이 구성 섹션에는 WCF (Windows Communication Foundation) ServiceModel 구성 요소가 모두 포함 되어 있습니다.  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp; **\<System.servicemodel >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -59,7 +62,7 @@ ms.locfileid: "69938913"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<behaviors>](behaviors.md)|이 섹션은 두 자식 컬렉션 `endpointBehaviors` 및 `serviceBehaviors`를 정의합니다.  각 컬렉션은 엔드포인트 및 서비스가 사용하는 동작 요소를 각각 정의합니다. 각 동작 요소는 고유한 `name` 특성으로 식별됩니다.|  
 |[\<bindings>](bindings.md)|이 섹션에는 표준 및 사용자 지정 바인딩 컬렉션이 포함됩니다. 각 항목은 고유한 `name`으로 식별됩니다. 서비스에서는 `name`을 통해 바인딩을 연결하여 바인딩을 사용합니다.|  
@@ -77,7 +80,7 @@ ms.locfileid: "69938913"
 
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |\<configuration>|.NET 구성 파일에 있는 모든 구성 요소의 루트 요소입니다.|  
   
