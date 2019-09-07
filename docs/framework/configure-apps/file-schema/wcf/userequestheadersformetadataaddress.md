@@ -2,23 +2,24 @@
 title: <useRequestHeadersForMetadataAddress>
 ms.date: 03/30/2017
 ms.assetid: 679f0eae-f353-44d1-b42d-a9e247509774
-ms.openlocfilehash: 84310d4ae5e04e76e4484f4fc606c9896239c776
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e0b46953924a3825420b719085e1210981da643a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940546"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399196"
 ---
-# <a name="userequestheadersformetadataaddress"></a><span data-ttu-id="2559a-101">\<useRequestHeadersForMetadataAddress></span><span class="sxs-lookup"><span data-stu-id="2559a-101">\<useRequestHeadersForMetadataAddress></span></span>
-<span data-ttu-id="2559a-102">요청 메시지 헤더에서 메타데이터 주소 정보를 검색할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="2559a-102">Enables the retrieval of metadata address information from the request message headers.</span></span>  
+# <a name="userequestheadersformetadataaddress"></a><span data-ttu-id="18c33-101">\<useRequestHeadersForMetadataAddress></span><span class="sxs-lookup"><span data-stu-id="18c33-101">\<useRequestHeadersForMetadataAddress></span></span>
+<span data-ttu-id="18c33-102">요청 메시지 헤더에서 메타데이터 주소 정보를 검색할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="18c33-102">Enables the retrieval of metadata address information from the request message headers.</span></span>  
   
-<span data-ttu-id="2559a-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="2559a-103">\<system.ServiceModel></span></span>  
-<span data-ttu-id="2559a-104">\<behaviors></span><span class="sxs-lookup"><span data-stu-id="2559a-104">\<behaviors></span></span>  
-<span data-ttu-id="2559a-105">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="2559a-105">\<serviceBehaviors></span></span>  
-<span data-ttu-id="2559a-106">\<behavior></span><span class="sxs-lookup"><span data-stu-id="2559a-106">\<behavior></span></span>  
-<span data-ttu-id="2559a-107">\<useRequestHeadersForMetadataAddress></span><span class="sxs-lookup"><span data-stu-id="2559a-107">\<useRequestHeadersForMetadataAddress></span></span>  
+<span data-ttu-id="18c33-103">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="18c33-103">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="18c33-104">&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)</span><span class="sxs-lookup"><span data-stu-id="18c33-104">&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)</span></span>\
+<span data-ttu-id="18c33-105">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behaviors.md)</span><span class="sxs-lookup"><span data-stu-id="18c33-105">&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)</span></span>\
+<span data-ttu-id="18c33-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)</span><span class="sxs-lookup"><span data-stu-id="18c33-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceBehaviors>**](servicebehaviors.md)</span></span>\
+<span data-ttu-id="18c33-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behavior-of-servicebehaviors.md)</span><span class="sxs-lookup"><span data-stu-id="18c33-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors.md)</span></span>\
+<span data-ttu-id="18c33-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<useRequestHeadersForMetadataAddress >**</span><span class="sxs-lookup"><span data-stu-id="18c33-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<useRequestHeadersForMetadataAddress>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2559a-108">구문</span><span class="sxs-lookup"><span data-stu-id="2559a-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="18c33-109">구문</span><span class="sxs-lookup"><span data-stu-id="18c33-109">Syntax</span></span>  
   
 ```xml  
 <useRequestHeadersForMetadataAddress>
@@ -29,24 +30,24 @@ ms.locfileid: "69940546"
 </useRequestHeadersForMetadataAddress>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="2559a-109">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="2559a-109">Attributes and Elements</span></span>  
- <span data-ttu-id="2559a-110">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="2559a-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="18c33-110">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="18c33-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="18c33-111">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="18c33-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="2559a-111">특성</span><span class="sxs-lookup"><span data-stu-id="2559a-111">Attributes</span></span>  
- <span data-ttu-id="2559a-112">없음</span><span class="sxs-lookup"><span data-stu-id="2559a-112">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="18c33-112">특성</span><span class="sxs-lookup"><span data-stu-id="18c33-112">Attributes</span></span>  
+ <span data-ttu-id="18c33-113">없음</span><span class="sxs-lookup"><span data-stu-id="18c33-113">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="2559a-113">자식 요소</span><span class="sxs-lookup"><span data-stu-id="2559a-113">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="18c33-114">자식 요소</span><span class="sxs-lookup"><span data-stu-id="18c33-114">Child Elements</span></span>  
   
-|<span data-ttu-id="2559a-114">요소</span><span class="sxs-lookup"><span data-stu-id="2559a-114">Element</span></span>|<span data-ttu-id="2559a-115">Description</span><span class="sxs-lookup"><span data-stu-id="2559a-115">Description</span></span>|  
+|<span data-ttu-id="18c33-115">요소</span><span class="sxs-lookup"><span data-stu-id="18c33-115">Element</span></span>|<span data-ttu-id="18c33-116">설명</span><span class="sxs-lookup"><span data-stu-id="18c33-116">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="2559a-116">\<defaultPorts></span><span class="sxs-lookup"><span data-stu-id="2559a-116">\<defaultPorts></span></span>](defaultports.md)|<span data-ttu-id="2559a-117">클라이언트 애플리케이션에서 수신하는 기본 통신 엔드포인트를 나열하는 기본 포트의 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="2559a-117">A collection of default ports listing the default communications endpoints that the client application listens to.</span></span>|  
+|[<span data-ttu-id="18c33-117">\<defaultPorts></span><span class="sxs-lookup"><span data-stu-id="18c33-117">\<defaultPorts></span></span>](defaultports.md)|<span data-ttu-id="18c33-118">클라이언트 애플리케이션에서 수신하는 기본 통신 엔드포인트를 나열하는 기본 포트의 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="18c33-118">A collection of default ports listing the default communications endpoints that the client application listens to.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="2559a-118">부모 요소</span><span class="sxs-lookup"><span data-stu-id="2559a-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="18c33-119">부모 요소</span><span class="sxs-lookup"><span data-stu-id="18c33-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="2559a-119">요소</span><span class="sxs-lookup"><span data-stu-id="2559a-119">Element</span></span>|<span data-ttu-id="2559a-120">설명</span><span class="sxs-lookup"><span data-stu-id="2559a-120">Description</span></span>|  
+|<span data-ttu-id="18c33-120">요소</span><span class="sxs-lookup"><span data-stu-id="18c33-120">Element</span></span>|<span data-ttu-id="18c33-121">설명</span><span class="sxs-lookup"><span data-stu-id="18c33-121">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="2559a-121">\<behavior></span><span class="sxs-lookup"><span data-stu-id="2559a-121">\<behavior></span></span>](behavior-of-endpointbehaviors.md)|<span data-ttu-id="2559a-122">동작 요소를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="2559a-122">Specifies a behavior element.</span></span>|  
+|[<span data-ttu-id="18c33-122">\<behavior></span><span class="sxs-lookup"><span data-stu-id="18c33-122">\<behavior></span></span>](behavior-of-endpointbehaviors.md)|<span data-ttu-id="18c33-123">동작 요소를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="18c33-123">Specifies a behavior element.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="2559a-123">참고자료</span><span class="sxs-lookup"><span data-stu-id="2559a-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="18c33-124">참고자료</span><span class="sxs-lookup"><span data-stu-id="18c33-124">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.UseRequestHeadersForMetadataAddressElement>
