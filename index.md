@@ -6,12 +6,12 @@ title: .NET 설명서
 description: C#, Visual Basic 및 F#을 사용하는 모든 플랫폼에서 .NET을 사용하여 다양한 애플리케이션을 만드는 방법을 알아보세요. API 참조, 샘플 코드, 자습서 등을 찾아보세요.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: a6f6bc91a3055ffd0efe9f6b89ba0499921ed1d4
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: c2a70c2d297b1ec2ef797e9d6084339f32c59c48
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972380"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799295"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -111,12 +111,12 @@ ms.locfileid: "68972380"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/core">.NET Core 가이드</a></h3>
+                                                <h3><a href="/dotnet/core/">.NET Core 가이드</a></h3>
                                                 <p><a href="/dotnet/core/get-started">시작</a></p>
-                                                <p><a href="/dotnet/core/tutorials">자습서</a></p>
-                                                <p><a href="/dotnet/core/porting">.NET Framework에서 이식</a></p>
-                                                <p><a href="/aspnet/core/getting-started">ASP.NET Core</a></p>
-                                                <p><a href="/ef/core/index">EF Core</a></p>
+                                                <p><a href="/dotnet/core/tutorials/">자습서</a></p>
+                                                <p><a href="/dotnet/core/porting/">.NET Framework에서 이식</a></p>
+                                                <p><a href="/aspnet/core/getting-started/">ASP.NET Core</a></p>
+                                                <p><a href="/ef/core/">EF Core</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -152,11 +152,11 @@ ms.locfileid: "68972380"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/xamarin">Xamarin</a></h3>
-                                                <p><a href="/xamarin/cross-platform">플랫폼 간 개발</a></p>
-                                                <p><a href="/xamarin/ios">Xamarin.iOS 가이드</a></p>
-                                                <p><a href="/xamarin/android">Xamarin.Android 가이드</a></p>
-                                                <p><a href="/xamarin/xamarin-forms">Xamarin.Forms 가이드</a></p>
+                                                <h3><a href="/xamarin/">Xamarin</a></h3>
+                                                <p><a href="/xamarin/cross-platform/">플랫폼 간 개발</a></p>
+                                                <p><a href="/xamarin/ios/">Xamarin.iOS 가이드</a></p>
+                                                <p><a href="/xamarin/android/">Xamarin.Android 가이드</a></p>
+                                                <p><a href="/xamarin/xamarin-forms/">Xamarin.Forms 가이드</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -172,11 +172,11 @@ ms.locfileid: "68972380"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/csharp">C# 가이드</a></h3>
-                                                <p><a href="/dotnet/csharp/getting-started">시작</a></p>
-                                                <p><a href="/dotnet/csharp/tour-of-csharp">C# 둘러보기</a></p>
-                                                <p><a href="/dotnet/csharp/whats-new">C#의 새로운 기능</a></p>
-                                                <p><a href="/dotnet/csharp/language-reference">C# 언어 참조</a></p>
+                                                <h3><a href="/dotnet/csharp/">C# 가이드</a></h3>
+                                                <p><a href="/dotnet/csharp/getting-started/">시작</a></p>
+                                                <p><a href="/dotnet/csharp/tour-of-csharp/">C# 둘러보기</a></p>
+                                                <p><a href="/dotnet/csharp/whats-new/">C#의 새로운 기능</a></p>
+                                                <p><a href="/dotnet/csharp/language-reference/">C# 언어 참조</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -192,10 +192,10 @@ ms.locfileid: "68972380"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/fsharp">F# 가이드</a></h3>
-                                                <p><a href="/dotnet/fsharp/tutorials/getting-started">시작</a></p>
+                                                <h3><a href="/dotnet/fsharp/">F# 가이드</a></h3>
+                                                <p><a href="/dotnet/fsharp/get-started/">시작</a></p>
                                                 <p><a href="/dotnet/fsharp/tour">F# 둘러보기</a></p>
-                                                <p><a href="/dotnet/fsharp/language-reference">F# 언어 참조</a></p>
+                                                <p><a href="/dotnet/fsharp/language-reference/">F# 언어 참조</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -211,10 +211,10 @@ ms.locfileid: "68972380"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/visual-basic">Visual Basic 가이드</a></h3>
-                                                <p><a href="/dotnet/visual-basic/getting-started">시작</a></p>
-                                                <p><a href="/dotnet/visual-basic/walkthroughs">Visual Basic 둘러보기</a></p>
-                                                <p><a href="/dotnet/visual-basic/language-reference">Visual Basic 언어 참조</a></p>
+                                                <h3><a href="/dotnet/visual-basic/">Visual Basic 가이드</a></h3>
+                                                <p><a href="/dotnet/visual-basic/getting-started/">시작</a></p>
+                                                <p><a href="/dotnet/visual-basic/walkthroughs">연습</a></p>
+                                                <p><a href="/dotnet/visual-basic/language-reference/">Visual Basic 언어 참조</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -230,11 +230,11 @@ ms.locfileid: "68972380"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/machine-learning">ML.NET 가이드</a></h3>
-                                                <p><a href="/dotnet/machine-learning/tutorials">자습서</a></p>
-                                                <p><a href="/dotnet/machine-learning/resources">리소스</a></p>
+                                                <h3><a href="/dotnet/machine-learning/">ML.NET 가이드</a></h3>
+                                                <p><a href="/dotnet/machine-learning/tutorials/">자습서</a></p>
+                                                <p><a href="/dotnet/machine-learning/resources/">리소스</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources/glossary">용어</a></p>
-                                                <p><a href="/dotnet/api?view=ml-dotnet">ML.NET API 참조</a></p>
+                                                <p><a href="/dotnet/api/?view=ml-dotnet">ML.NET API 참조</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -250,9 +250,9 @@ ms.locfileid: "68972380"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/spark">Apache Spark 가이드용 .NET</a></h3>
-                                                <p><a href="/dotnet/spark/tutorials">자습서</a></p>
-                                                <p><a href="/dotnet/spark/resources">리소스</a></p>
+                                                <h3><a href="/dotnet/spark/">Apache Spark 가이드용 .NET</a></h3>
+                                                <p><a href="/dotnet/spark/tutorials/">자습서</a></p>
+                                                <p><a href="/dotnet/spark/resources/">리소스</a></p>
                                                 <p><a href="/dotnet/api/?view=spark-dotnet">Apache Spark API 참조용 .NET</a></p>
                                             </div>
                                         </div>
@@ -262,7 +262,6 @@ ms.locfileid: "68972380"
                             <li class="fullSpan">
                                 <div class="container footer">
                                     <p><a href="https://github.com/dotnet/Docs/blob/master/CONTRIBUTING.md">.NET 문서 및 샘플에 참여</a></p>
-                                    <p><a href="/dotnet/project-json">Visual Studio 2015/project.json 버전 설명서 찾기</a></p>
                                 </div>
                             </li>
                         </ul>
@@ -271,7 +270,7 @@ ms.locfileid: "68972380"
                         <a href="#web">웹</a>
                         <ul id="web" class="cardsC">
                             <li>
-                                <a href="https://www.asp.net/get-started">
+                                <a href="https://dotnet.microsoft.com/learn/aspnet/hello-world-tutorial/intro">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -366,25 +365,6 @@ ms.locfileid: "68972380"
                                     </div>
                                 </a>
                             </li>
-                            <li>
-                                <a href="/aspnet/core/tutorials/xplat">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img src="/dotnet/images/hub/net-docs-web-6.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>플랫폼 간 ASP.NET Core 자습서</h3>
-                                                    <p>ASP.NET Core를 사용하여 웹앱 또는 Web API를 빌드하는 방법을 알아봅니다.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
                         </ul>
                     </li>
                     <li>
@@ -431,7 +411,7 @@ ms.locfileid: "68972380"
                                 </a>
                             </li>
                             <li>
-                                <a href="/dotnet/fsharp/using-fsharp-on-azure">
+                                <a href="/dotnet/fsharp/using-fsharp-on-azure/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -456,7 +436,7 @@ ms.locfileid: "68972380"
                         <a href="#mobile">모바일</a>
                         <ul id="mobile" class="cardsC">
                             <li>
-                                <a href="/xamarin/ios">
+                                <a href="/xamarin/ios/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -475,7 +455,7 @@ ms.locfileid: "68972380"
                                 </a>
                             </li>
                             <li>
-                                <a href="/xamarin/android">
+                                <a href="/xamarin/android/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -494,7 +474,7 @@ ms.locfileid: "68972380"
                                 </a>
                             </li>
                             <li>
-                                <a href="/xamarin/xamarin-forms">
+                                <a href="/xamarin/xamarin-forms/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -518,7 +498,7 @@ ms.locfileid: "68972380"
                         <a href="#desktop">데스크톱</a>
                         <ul id="desktop" class="cardsC">
                             <li>
-                                <a href="/uwp">
+                                <a href="/uwp/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -538,7 +518,7 @@ ms.locfileid: "68972380"
                                 </a>
                             </li>
                             <li>
-                                <a href="/dotnet/framework/wpf/index">
+                                <a href="/dotnet/framework/wpf/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -558,7 +538,7 @@ ms.locfileid: "68972380"
                                 </a>
                             </li>
                             <li>
-                                <a href="/dotnet/framework/winforms/index">
+                                <a href="/dotnet/framework/winforms/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -577,7 +557,7 @@ ms.locfileid: "68972380"
                                 </a>
                             </li>
                             <li>
-                                <a href="/xamarin/mac">
+                                <a href="/xamarin/mac/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -685,7 +665,7 @@ ms.locfileid: "68972380"
                         <a href="#ml-ai">기계 학습 및 AI</a>
                         <ul id="ml-ai" class="cardsC">
                             <li>
-                                <a href="/dotnet/machine-learning">
+                                <a href="/dotnet/machine-learning/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -704,7 +684,7 @@ ms.locfileid: "68972380"
                                 </a>
                             </li>
                             <li>
-                                <a href="/azure/cognitive-services">
+                                <a href="/azure/cognitive-services/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -723,7 +703,7 @@ ms.locfileid: "68972380"
                                 </a>
                             </li>
                             <li>
-                                <a href="/azure/machine-learning">
+                                <a href="/azure/machine-learning/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
