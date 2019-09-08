@@ -2,22 +2,22 @@
 title: OLE DB 스키마 컬렉션
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-ms.openlocfilehash: 6c3441e86d4c5267418cf8002ba17d539c464d5c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2d5718c12100ebea49a6b6fab29a3790918c6ad3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645892"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783455"
 ---
 # <a name="ole-db-schema-collections"></a>OLE DB 스키마 컬렉션
 이 단원에서는 Microsoft SQL Server, Oracle 및 Microsoft Jet용 OLE DB 공급자에서 지원하는 스키마 컬렉션에 대해 설명합니다.  
   
 ## <a name="microsoft-sql-server-ole-db-provider"></a>Microsoft SQL Server OLE DB 공급자  
- Microsoft SQL Server OLE DB Driver에서는 공통 스키마 컬렉션 외에도 다음과 같은 특정 스키마 컬렉션을 지원합니다.  
+ Microsoft SQL Server OLE DB 드라이버는 공통 스키마 컬렉션 외에도 다음과 같은 특정 스키마 컬렉션을 지원 합니다.  
   
-- Tables  
+- 테이블  
   
-- Columns  
+- 열  
   
 - 절차  
   
@@ -27,33 +27,33 @@ ms.locfileid: "64645892"
   
 - 인덱스  
   
-### <a name="tables"></a>Tables  
+### <a name="tables"></a>테이블  
   
-|열 이름|데이터 형식|  
+|ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE_CATALOG|문자열|  
+|TABLE_CATALOG|String|  
 |TABLE_SCHEMA|문자열|  
-|TABLE_NAME|문자열|  
-|TABLE_TYPE|문자열|  
+|TABLE_NAME|String|  
+|TABLE_TYPE|String|  
 |TABLE_GUID|Guid|  
-|설명|문자열|  
+|DESCRIPTION|String|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
-### <a name="columns"></a>Columns  
+### <a name="columns"></a>열  
   
-|열 이름|데이터 형식|  
+|ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE_CATALOG|문자열|  
-|TABLE_SCHEMA|문자열|  
+|TABLE_CATALOG|String|  
+|TABLE_SCHEMA|String|  
 |TABLE_NAME|문자열|  
-|COLUMN_NAME|문자열|  
+|COLUMN_NAME|String|  
 |COLUMN_GUID|Guid|  
 |COLUMN_PROPID|Int64|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_HASDEFAULT|Boolean|  
-|COLUMN_DEFAULT|문자열|  
+|COLUMN_DEFAULT|String|  
 |COLUMN_FLAGS|Int64|  
 |IS_NULLABLE|Boolean|  
 |DATA_TYPE|Int32|  
@@ -64,15 +64,15 @@ ms.locfileid: "64645892"
 |NUMERIC_SCALE|Int16|  
 |DATETIME_PRECISION|Int64|  
 |CHARACTER_SET_CATALOG|문자열|  
-|CHARACTER_SET_SCHEMA|문자열|  
-|CHARACTER_SET_NAME|문자열|  
-|COLLATION_CATALOG|문자열|  
-|COLLATION_SCHEMA|문자열|  
+|CHARACTER_SET_SCHEMA|String|  
+|CHARACTER_SET_NAME|String|  
+|COLLATION_CATALOG|String|  
+|COLLATION_SCHEMA|String|  
 |COLLATION_NAME|문자열|  
-|DOMAIN_CATALOG|문자열|  
+|DOMAIN_CATALOG|String|  
 |DOMAIN_SCHEMA|문자열|  
-|DOMAIN_NAME|문자열|  
-|설명|문자열|  
+|DOMAIN_NAME|String|  
+|DESCRIPTION|String|  
 |COLUMN_LCID|Int32|  
 |COLUMN_COMPFLAGS|Int32|  
 |COLUMN_SORTID|Int32|  
@@ -81,25 +81,25 @@ ms.locfileid: "64645892"
   
 ### <a name="procedures"></a>절차  
   
-|열 이름|데이터 형식|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |PROCEDURE_CATALOG|문자열|  
 |PROCEDURE_SCHEMA|문자열|  
-|PROCEDURE_NAME|문자열|  
+|PROCEDURE_NAME|String|  
 |PROCEDURE_TYPE|Int16|  
-|PROCEDURE_DEFINITION|문자열|  
-|설명|문자열|  
+|PROCEDURE_DEFINITION|String|  
+|DESCRIPTION|String|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
 ### <a name="procedureparameters"></a>ProcedureParameters  
   
-|열 이름|데이터 형식|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |PROCEDURE_CATALOG|문자열|  
 |PROCEDURE_SCHEMA|문자열|  
 |PROCEDURE_NAME|문자열|  
-|PARAMETER_NAME|문자열|  
+|PARAMETER_NAME|String|  
 |ORDINAL_POSITION|Int32|  
 |PARAMETER_TYPE|Int32|  
 |PARAMETER_HASDEFAULT|Boolean|  
@@ -110,27 +110,27 @@ ms.locfileid: "64645892"
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
 |NUMERIC_SCALE|Int16|  
-|설명|문자열|  
+|DESCRIPTION|문자열|  
 |TYPE_NAME|문자열|  
 |LOCAL_TYPE_NAME|문자열|  
   
 ### <a name="catalog"></a>Catalog  
   
-|열 이름|데이터 형식|  
+|ColumnName|DataType|  
 |----------------|--------------|  
-|CATALOG_NAME|문자열|  
-|설명|문자열|  
+|CATALOG_NAME|String|  
+|DESCRIPTION|String|  
   
 ### <a name="indexes"></a>인덱스  
   
-|열 이름|데이터 형식|  
+|ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE_CATALOG|문자열|  
-|TABLE_SCHEMA|문자열|  
+|TABLE_CATALOG|String|  
+|TABLE_SCHEMA|String|  
 |TABLE_NAME|문자열|  
-|INDEX_CATALOG|문자열|  
-|INDEX_SCHEMA|문자열|  
-|INDEX_NAME|문자열|  
+|INDEX_CATALOG|String|  
+|INDEX_SCHEMA|String|  
+|INDEX_NAME|String|  
 |PRIMARY_KEY|Boolean|  
 |UNIQUE|Boolean|  
 |CLUSTERED|Boolean|  
@@ -142,21 +142,21 @@ ms.locfileid: "64645892"
 |AUTO_UPDATE|Boolean|  
 |NULL_COLLATION|Int32|  
 |ORDINAL_POSITION|Int64|  
-|COLUMN_NAME|문자열|  
+|COLUMN_NAME|String|  
 |COLUMN_GUID|Guid|  
 |COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
 |CARDINALITY|Decimal|  
 |PAGES|Int32|  
-|FILTER_CONDITION|문자열|  
+|FILTER_CONDITION|String|  
 |INTEGRATED|Boolean|  
   
-## <a name="microsoft-oracle-ole-db-provider"></a>Microsoft Oracle OLE DB      
+## <a name="microsoft-oracle-ole-db-provider"></a>Microsoft Oracle OLE DB  
  Microsoft Oracle OLE DB Driver                                             .  
   
-- Tables  
+- 테이블  
   
-- Columns  
+- 열  
   
 - 절차  
   
@@ -164,37 +164,37 @@ ms.locfileid: "64645892"
   
 - ProcedureParameters  
   
-- 보기  
+- 뷰  
   
 - 인덱스  
   
-### <a name="tables"></a>Tables  
+### <a name="tables"></a>테이블  
   
-|열 이름|데이터 형식|  
+|ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE_CATALOG|문자열|  
+|TABLE_CATALOG|String|  
 |TABLE_SCHEMA|문자열|  
 |TABLE_NAME|문자열|  
-|TABLE_TYPE|문자열|  
+|TABLE_TYPE|String|  
 |TABLE_GUID|Guid|  
-|설명|문자열|  
+|DESCRIPTION|String|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
-### <a name="columns"></a>Columns  
+### <a name="columns"></a>열  
   
-|열 이름|데이터 형식|  
+|ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE_CATALOG|문자열|  
-|TABLE_SCHEMA|문자열|  
+|TABLE_CATALOG|String|  
+|TABLE_SCHEMA|String|  
 |TABLE_NAME|문자열|  
 |COLUMN_NAME|문자열|  
 |COLUMN_GUID|Guid|  
 |COLUMN_PROPID|Int64|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_HASDEFAULT|Boolean|  
-|COLUMN_DEFAULT|문자열|  
+|COLUMN_DEFAULT|String|  
 |COLUMN_FLAGS|Int64|  
 |IS_NULLABLE|Boolean|  
 |DATA_TYPE|Int32|  
@@ -204,38 +204,38 @@ ms.locfileid: "64645892"
 |NUMERIC_PRECISION|Int32|  
 |NUMERIC_SCALE|Int16|  
 |DATETIME_PRECISION|Int64|  
-|CHARACTER_SET_CATALOG|문자열|  
+|CHARACTER_SET_CATALOG|String|  
 |CHARACTER_SET_SCHEMA|문자열|  
-|CHARACTER_SET_NAME|문자열|  
+|CHARACTER_SET_NAME|String|  
 |COLLATION_CATALOG|문자열|  
-|COLLATION_SCHEMA|문자열|  
-|COLLATION_NAME|문자열|  
-|DOMAIN_CATALOG|문자열|  
+|COLLATION_SCHEMA|String|  
+|COLLATION_NAME|String|  
+|DOMAIN_CATALOG|String|  
 |DOMAIN_SCHEMA|문자열|  
-|DOMAIN_NAME|문자열|  
-|설명|문자열|  
+|DOMAIN_NAME|String|  
+|DESCRIPTION|문자열|  
   
 ### <a name="procedures"></a>절차  
   
-|열 이름|데이터 형식|  
+|ColumnName|DataType|  
 |----------------|--------------|  
-|PROCEDURE_CATALOG|문자열|  
+|PROCEDURE_CATALOG|String|  
 |PROCEDURE_SCHEMA|문자열|  
 |PROCEDURE_NAME|문자열|  
 |PROCEDURE_TYPE|Int16|  
-|PROCEDURE_DEFINITION|문자열|  
-|설명|문자열|  
+|PROCEDURE_DEFINITION|String|  
+|DESCRIPTION|문자열|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
 ### <a name="procedurecolumns"></a>ProcedureColumns  
   
-|열 이름|데이터 형식|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |PROCEDURE_CATALOG|문자열|  
-|PROCEDURE_SCHEMA|문자열|  
-|PROCEDURE_NAME|문자열|  
-|COLUMN_NAME|문자열|  
+|PROCEDURE_SCHEMA|String|  
+|PROCEDURE_NAME|String|  
+|COLUMN_NAME|String|  
 |COLUMN_GUID|Guid|  
 |COLUMN_PROPID|Int64|  
 |ROWSET_NUMBER|Int64|  
@@ -247,32 +247,32 @@ ms.locfileid: "64645892"
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
 |NUMERIC_SCALE|Int16|  
-|설명|문자열|  
+|DESCRIPTION|String|  
 |OVERLOAD|Int16|  
   
-### <a name="views"></a>보기  
+### <a name="views"></a>뷰  
   
-|열 이름|데이터 형식|  
+|ColumnName|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|문자열|  
-|TABLE_SCHEMA|문자열|  
-|TABLE_NAME|문자열|  
-|VIEW_DEFINITION|문자열|  
+|TABLE_SCHEMA|String|  
+|TABLE_NAME|String|  
+|VIEW_DEFINITION|String|  
 |CHECK_OPTION|Boolean|  
 |IS_UPDATABLE|Boolean|  
-|설명|문자열|  
+|DESCRIPTION|문자열|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
 ### <a name="indexes"></a>인덱스  
   
-|열 이름|데이터 형식|  
+|ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE_CATALOG|문자열|  
-|TABLE_SCHEMA|문자열|  
-|TABLE_NAME|문자열|  
+|TABLE_CATALOG|String|  
+|TABLE_SCHEMA|String|  
+|TABLE_NAME|String|  
 |INDEX_CATALOG|문자열|  
-|INDEX_SCHEMA|문자열|  
+|INDEX_SCHEMA|String|  
 |INDEX_NAME|문자열|  
 |PRIMARY_KEY|Boolean|  
 |UNIQUE|Boolean|  
@@ -285,7 +285,7 @@ ms.locfileid: "64645892"
 |AUTO_UPDATE|Boolean|  
 |NULL_COLLATION|Int32|  
 |ORDINAL_POSITION|Int64|  
-|COLUMN_NAME|문자열|  
+|COLUMN_NAME|String|  
 |COLUMN_GUID|Guid|  
 |COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
@@ -294,46 +294,46 @@ ms.locfileid: "64645892"
 |FILTER_CONDITION|문자열|  
 |INTEGRATED|Boolean|  
   
-## <a name="microsoft-jet-ole-db-provider"></a>Microsoft Jet OLE DB      
+## <a name="microsoft-jet-ole-db-provider"></a>Microsoft Jet OLE DB  
  Microsoft Jet OLE DB Driver                                             .  
   
-- Tables  
+- 테이블  
   
-- Columns  
+- 열  
   
 - 절차  
   
-- 보기  
+- 뷰  
   
 - 인덱스  
   
-### <a name="tables"></a>Tables  
+### <a name="tables"></a>테이블  
   
-|열 이름|데이터 형식|  
+|ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE_CATALOG|문자열|  
-|TABLE_SCHEMA|문자열|  
-|TABLE_NAME|문자열|  
-|TABLE_TYPE|문자열|  
+|TABLE_CATALOG|String|  
+|TABLE_SCHEMA|String|  
+|TABLE_NAME|String|  
+|TABLE_TYPE|String|  
 |TABLE_GUID|Guid|  
-|설명|문자열|  
+|DESCRIPTION|String|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
-### <a name="columns"></a>Columns  
+### <a name="columns"></a>열  
   
-|열 이름|데이터 형식|  
+|ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE_CATALOG|문자열|  
+|TABLE_CATALOG|String|  
 |TABLE_SCHEMA|문자열|  
 |TABLE_NAME|문자열|  
-|COLUMN_NAME|문자열|  
+|COLUMN_NAME|String|  
 |COLUMN_GUID|Guid|  
 |COLUMN_PROPID|Int64|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_HASDEFAULT|Boolean|  
-|COLUMN_DEFAULT|문자열|  
+|COLUMN_DEFAULT|String|  
 |COLUMN_FLAGS|Int64|  
 |IS_NULLABLE|Boolean|  
 |DATA_TYPE|Int32|  
@@ -343,51 +343,51 @@ ms.locfileid: "64645892"
 |NUMERIC_PRECISION|Int32|  
 |NUMERIC_SCALE|Int16|  
 |DATETIME_PRECISION|Int64|  
-|CHARACTER_SET_CATALOG|문자열|  
-|CHARACTER_SET_SCHEMA|문자열|  
+|CHARACTER_SET_CATALOG|String|  
+|CHARACTER_SET_SCHEMA|String|  
 |CHARACTER_SET_NAME|문자열|  
-|COLLATION_CATALOG|문자열|  
-|COLLATION_SCHEMA|문자열|  
+|COLLATION_CATALOG|String|  
+|COLLATION_SCHEMA|String|  
 |COLLATION_NAME|문자열|  
-|DOMAIN_CATALOG|문자열|  
-|DOMAIN_SCHEMA|문자열|  
+|DOMAIN_CATALOG|String|  
+|DOMAIN_SCHEMA|String|  
 |DOMAIN_NAME|문자열|  
-|설명|문자열|  
+|DESCRIPTION|String|  
   
 ### <a name="procedures"></a>절차  
   
-|열 이름|데이터 형식|  
+|ColumnName|DataType|  
 |----------------|--------------|  
-|PROCEDURE_CATALOG|문자열|  
-|PROCEDURE_SCHEMA|문자열|  
+|PROCEDURE_CATALOG|String|  
+|PROCEDURE_SCHEMA|String|  
 |PROCEDURE_NAME|문자열|  
 |PROCEDURE_TYPE|Int16|  
 |PROCEDURE_DEFINITION|문자열|  
-|설명|문자열|  
+|DESCRIPTION|문자열|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
-### <a name="views"></a>보기  
+### <a name="views"></a>뷰  
   
-|열 이름|데이터 형식|  
+|ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE_CATALOG|문자열|  
-|TABLE_SCHEMA|문자열|  
-|TABLE_NAME|문자열|  
+|TABLE_CATALOG|String|  
+|TABLE_SCHEMA|String|  
+|TABLE_NAME|String|  
 |VIEW_DEFINITION|문자열|  
 |CHECK_OPTION|Boolean|  
 |IS_UPDATABLE|Boolean|  
-|설명|문자열|  
+|DESCRIPTION|문자열|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
 ### <a name="indexes"></a>인덱스  
   
-|열 이름|데이터 형식|  
+|ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE_CATALOG|문자열|  
-|TABLE_SCHEMA|문자열|  
-|TABLE_NAME|문자열|  
+|TABLE_CATALOG|String|  
+|TABLE_SCHEMA|String|  
+|TABLE_NAME|String|  
 |INDEX_CATALOG|문자열|  
 |INDEX_SCHEMA|문자열|  
 |INDEX_NAME|문자열|  
@@ -413,4 +413,4 @@ ms.locfileid: "64645892"
   
 ## <a name="see-also"></a>참고자료
 
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 개요](ado-net-overview.md)

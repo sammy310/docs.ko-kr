@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 5dd2bfa0884eac6864630bf393e232cf45bd1c99
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1f8cb573d051970414f3962057f6329683eea5bd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938192"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782400"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>MARS(Multiple Active Result Sets) 사용
 MARS(Multiple Active Result Sets)는 단일 연결에서 여러 배치를 실행할 수 있도록 하는 SQL Server의 기능입니다. SQL Server에 MARS가 활성화되어 있으면 명령 개체를 사용할 때마다 연결에 세션이 추가됩니다.  
@@ -68,7 +68,7 @@ string connectionString = "Data Source=MSSQL1;" +
  MARS 작업은 스레드로부터 안전하지 않습니다.  
   
 ### <a name="connection-pooling"></a>연결 풀링  
- MARS 사용 연결도 다른 모든 연결과 마찬가지로 풀링됩니다. 애플리케이션에서 두 개의 연결, 즉 MARS가 활성화되어 있는 연결과 MARS가 비활성화되어 있는 연결을 여는 경우 이 두 연결은 개별 풀에 위치합니다. 자세한 내용은 [SQL Server 연결 풀링(ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)을 참조하세요.  
+ MARS 사용 연결도 다른 모든 연결과 마찬가지로 풀링됩니다. 애플리케이션에서 두 개의 연결, 즉 MARS가 활성화되어 있는 연결과 MARS가 비활성화되어 있는 연결을 여는 경우 이 두 연결은 개별 풀에 위치합니다. 자세한 내용은 [SQL Server 연결 풀링(ADO.NET)](../sql-server-connection-pooling.md)을 참조하세요.  
   
 ### <a name="sql-server-batch-execution-environment"></a>SQL Server 배치 실행 환경  
  연결이 열리면 기본 환경이 정의됩니다. 그런 다음 이 환경은 논리 MARS 세션에 복사됩니다.  
@@ -113,5 +113,5 @@ string connectionString = "Data Source=MSSQL1;" +
   
 ## <a name="see-also"></a>참고자료
 
-- [MARS(Multiple Active Result Sets)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [MARS(Multiple Active Result Sets)](multiple-active-result-sets-mars.md)
+- [ADO.NET 개요](../ado-net-overview.md)

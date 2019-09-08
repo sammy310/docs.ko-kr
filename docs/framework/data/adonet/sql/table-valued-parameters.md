@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 59c6732dacf225097e22957ebe6536308a2798d4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 316ccb19ca9e384be97a83e992af46934702aa0c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938443"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780681"
 ---
 # <a name="table-valued-parameters"></a>테이블 반환 매개 변수
 테이블 반환 매개 변수를 사용하면 클라이언트 애플리케이션에서 여러 행 데이터를 반복적인 라운드트립이나 데이터 처리를 위한 특수한 서버측 논리를 사용하지 않고도 SQL Server로 쉽게 마샬링할 수 있습니다. 또한 테이블 반환 매개 변수를 사용하면 클라이언트 애플리케이션에서 데이터 행을 캡슐화하여 매개 변수화된 단일 명령을 통해 데이터를 서버에 보낼 수 있습니다. 들어오는 데이터 행은 테이블 변수에 저장되며, 이러한 테이블 변수에 대해서는 Transact-SQL을 사용하여 작업할 수 있습니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "69938443"
   
  테이블 반환 매개 변수에 대한 자세한 내용은 다음 리소스를 참조하세요.  
   
-|리소스|Description|  
+|리소스|설명|  
 |--------------|-----------------|  
 |SQL Server 온라인 설명서의 [테이블 반환 매개 변수 (데이터베이스 엔진)](https://go.microsoft.com/fwlink/?LinkId=98363)|테이블 반환 매개 변수를 만들고 사용하는 방법에 대해 설명합니다.|  
 |SQL Server 온라인 설명서의 [사용자 정의 테이블 형식](https://go.microsoft.com/fwlink/?LinkId=98364)|테이블 반환 매개 변수를 선언하는 데 사용되는 사용자 정의 테이블 형식에 대해 설명합니다.|  
@@ -274,8 +274,8 @@ insertCommand.ExecuteNonQuery()
   
 ## <a name="see-also"></a>참고자료
 
-- [매개 변수 및 매개 변수 데이터 형식 구성](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [명령 및 매개 변수](../../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [DataAdapter 매개 변수](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
-- [ADO.NET에서 SQL Server 데이터 작업](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [매개 변수 및 매개 변수 데이터 형식 구성](../configuring-parameters-and-parameter-data-types.md)
+- [명령 및 매개 변수](../commands-and-parameters.md)
+- [DataAdapter 매개 변수](../dataadapter-parameters.md)
+- [ADO.NET에서 SQL Server 데이터 작업](sql-server-data-operations.md)
+- [ADO.NET 개요](../ado-net-overview.md)

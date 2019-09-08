@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fcf714cb0c1c1dd59ae2ec56279870c0bb3e1c4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bd138d0418bb9667a86419d719bf0b95a4bb1b12
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741725"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777123"
 ---
 # <a name="importfileex-method"></a>ImportFileEx 메서드
-가져오기는 어셈블리 또는 바인딩되지 않은 모듈을 표시 합니다.  
+표시 된 어셈블리 또는 바인딩되지 않은 모듈을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,28 +48,28 @@ HRESULT ImportFileEx(
  대상 파일의 선택적 이름입니다.  
   
  `fSmartImport`  
- TRUE 이면 ImportTypes 되, 그렇지 않으면 가져오기는 수동으로 수행 해야 합니다.  
+ TRUE 이면 ImportTypes를 사용 합니다. 그렇지 않으면 가져오기는 수동으로 수행 해야 합니다.  
   
  `dwOpenFlags`  
- 에 전달 하는 플래그 [OpenScope 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)합니다.  
+ [Openscope 메서드에](../metadata/imetadatadispenser-openscope-method.md)따라 전달할 플래그입니다.  
   
  `pImportToken`  
  가져올 파일의 ID를 받습니다.  
   
  `ppAssemblyScope`  
- 어셈블리 가져오기 범위를 받는 [IMetaDataAssemblyImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) 인터페이스입니다. 파일 어셈블리가 아닌 경우 NULL로 설정 됩니다.  
+ 어셈블리 가져오기 범위 [IMetaDataAssemblyImport interface](../metadata/imetadataassemblyimport-interface.md) 인터페이스를 수신 합니다. 파일이 어셈블리가 아닌 경우 NULL로 설정 됩니다.  
   
  `pdwCountOfScopes`  
- 가져온된 파일 및/또는 범위에 대 한 개수를 받습니다.  
+ 가져온 파일 및/또는 범위의 수를 수신 합니다.  
   
 ## <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK를 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Alink.h가 필요합니다.  
+ Alink가 필요 합니다.  
   
 ## <a name="see-also"></a>참고자료
 
-- [IALink2 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2 인터페이스](ialink2-interface.md)
+- [IALink 인터페이스](ialink-interface.md)
+- [ALink API](index.md)

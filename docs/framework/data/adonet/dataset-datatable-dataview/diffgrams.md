@@ -2,12 +2,12 @@
 title: DiffGram
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: b9e6fb4ce1c2c7ee7d081a1cb2106d30960853c7
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: dd70c8d238ba47744eec6ab4a4c6bc1e80a3d0b3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204885"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784660"
 ---
 # <a name="diffgrams"></a>DiffGram
 DiffGram은 현재 및 원래의 데이터 요소 버전을 식별하는 XML 형식입니다. <xref:System.Data.DataSet>은 DiffGram 형식을 사용하여 자신의 내용을 로드하고 유지시키며 네트워크 연결을 통한 전송을 위해 이 내용을 serialize합니다. 이 diffgram으로 작성 되 면 diffgram은 스키마가 <xref:System.Data.DataSet>아니라 **원래** 및의 열 값을 포함 하 여 콘텐츠를 정확 하 게 다시 만드는 데 필요한 모든 정보로 채워집니다. <xref:System.Data.DataSet>  **현재** 행 버전, 행 오류 정보 및 행 순서입니다.  
@@ -137,4 +137,4 @@ DiffGram은 현재 및 원래의 데이터 요소 버전을 식별하는 XML 형
 - [XML에서 데이터 세트 로드](loading-a-dataset-from-xml.md)
 - [데이터 세트 콘텐츠를 XML 데이터로 작성](writing-dataset-contents-as-xml-data.md)
 - [DataSet, DataTable 및 DataView](index.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 개요](../ado-net-overview.md)

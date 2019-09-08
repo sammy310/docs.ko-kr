@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af5a200578c34464b5f8d86e568d08d814b46a29
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5f6140e5f85a7ee21773c96a5abdccadaddab92e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742152"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777453"
 ---
 # <a name="embedresource-method"></a>EmbedResource 메서드
-포함된 된 리소스를 선언합니다. 이 메서드는 리소스를 실제로 포함 되지 않습니다.  
+포함 리소스를 선언 합니다. 이 메서드는 실제로 리소스를 포함 하지 않습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,7 +44,7 @@ HRESULT EmbedResource(
  어셈블리의 ID입니다.  
   
  `FileToken`  
- 파일 리소스를 포함 하는 파일의 토큰 또는 어셈블리 ID입니다.  
+ 리소스를 포함 하는 파일의 파일 토큰 또는 어셈블리 ID입니다.  
   
  `pszResourceName`  
  리소스의 이름입니다.  
@@ -53,16 +53,16 @@ HRESULT EmbedResource(
  RVA에서 리소스의 오프셋입니다.  
   
  `dwFlags`  
- 내게 필요한 옵션 플래그와 같은 `mrPublic` 고 `mrPrivate`입니다. 이러한 플래그에 전달 될 수 있습니다 [DefineExportedType 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)합니다.  
+ `mrPublic` 및`mrPrivate`와 같은 내게 필요한 옵션 플래그입니다. 이러한 플래그는 [DefineExportedType 메서드에](../metadata/imetadataassemblyemit-defineexportedtype-method.md)전달 될 수 있습니다.  
   
 ## <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK를 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Alink.h가 필요합니다.  
+ Alink가 필요 합니다.  
   
 ## <a name="see-also"></a>참고자료
 
-- [IALink 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink 인터페이스](ialink-interface.md)
+- [IALink2 인터페이스](ialink2-interface.md)
+- [ALink API](index.md)

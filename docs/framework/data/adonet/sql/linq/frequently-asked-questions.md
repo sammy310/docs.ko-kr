@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 714ec7bda4f6c79b789d6c3029b68a04cef1342b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ed9149eb5b88d648c02863e0fb0101e5503e1c73
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041235"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782148"
 ---
 # <a name="frequently-asked-questions"></a>질문과 대답
 
 다음 단원에서는 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]를 구현할 때 발생할 수 있는 일반적인 문제에 대한 해결 방법을 제시합니다.
 
-[문제 해결](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)에서는 추가 문제를 해결 합니다.
+[문제 해결](troubleshooting.md)에서는 추가 문제를 해결 합니다.
 
 ## <a name="cannot-connect"></a>연결할 수 없음
 
 질문. 데이터베이스에 연결할 수 없습니다.
 
-1\. 연결 문자열이 올바르고 SQL Server 인스턴스가 실행 되 고 있는지 확인 합니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]을 사용하려면 명명된 파이프 프로토콜도 사용하도록 설정해야 합니다. 자세한 내용은 [연습 별 학습](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)을 참조 하세요.
+1\. 연결 문자열이 올바르고 SQL Server 인스턴스가 실행 되 고 있는지 확인 합니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]을 사용하려면 명명된 파이프 프로토콜도 사용하도록 설정해야 합니다. 자세한 내용은 [연습 별 학습](learning-by-walkthroughs.md)을 참조 하세요.
 
 ## <a name="changes-to-database-lost"></a>데이터베이스 변경 내용 손실
 
@@ -40,7 +40,7 @@ ms.locfileid: "70041235"
 
 - 연결 개체를 사용하여 <xref:System.Data.Linq.DataContext>를 만든 경우의 연결 상태
 
-- 연결 문자열 설정(예: MARS(Multiple Active Result Sets) 사용). 자세한 내용은 [MARS(여러 활성 결과 집합)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)를 참조하세요.
+- 연결 문자열 설정(예: MARS(Multiple Active Result Sets) 사용). 자세한 내용은 [MARS(여러 활성 결과 집합)](../multiple-active-result-sets-mars.md)를 참조하세요.
 
 ## <a name="updating-without-querying"></a>쿼리하지 않고 업데이트
 
@@ -56,7 +56,7 @@ ms.locfileid: "70041235"
 
 질문. 쿼리가 예기치 않은 결과를 반환합니다. 무슨 문제가 있는지 어떻게 확인합니까?
 
-1\. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에는 생성된 SQL 코드를 검사할 수 있는 도구가 여러 가지 있습니다. 그 중에서도 <xref:System.Data.Linq.DataContext.Log%2A>가 가장 중요합니다. 자세한 내용은 [디버깅 지원](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)을 참조 하세요.
+1\. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에는 생성된 SQL 코드를 검사할 수 있는 도구가 여러 가지 있습니다. 그 중에서도 <xref:System.Data.Linq.DataContext.Log%2A>가 가장 중요합니다. 자세한 내용은 [디버깅 지원](debugging-support.md)을 참조 하세요.
 
 ## <a name="unexpected-stored-procedure-results"></a>예기치 않은 저장 프로시저 결과
 
@@ -110,13 +110,13 @@ select nax(i) AS MaxResult from t where name like 'hello'
 end
 ```
 
-자세한 내용은 [저장 프로시저를 사용 하 여 작업 사용자 지정](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md)을 참조 하세요.
+자세한 내용은 [저장 프로시저를 사용 하 여 작업 사용자 지정](customizing-operations-by-using-stored-procedures.md)을 참조 하세요.
 
 ## <a name="serialization-errors"></a>Serialization 오류
 
 질문. Serialize 하려고 하면 다음과 같은 오류가 발생 합니다. "Type ' ChangeTracker + StandardChangeTracker ' ... serializable로 표시 되어 있지 않습니다. "
 
-1\. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 코드 생성은 <xref:System.Runtime.Serialization.DataContractSerializer> serialization을 지원하지만 <xref:System.Xml.Serialization.XmlSerializer> 또는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>는 지원하지 않습니다. 자세한 내용은 [Serialization](../../../../../../docs/framework/data/adonet/sql/linq/serialization.md)을 참조하세요.
+1\. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 코드 생성은 <xref:System.Runtime.Serialization.DataContractSerializer> serialization을 지원하지만 <xref:System.Xml.Serialization.XmlSerializer> 또는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>는 지원하지 않습니다. 자세한 내용은 [Serialization](serialization.md)을 참조하세요.
 
 ## <a name="multiple-dbml-files"></a>여러 DBML 파일
 
@@ -210,13 +210,13 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 
 1\. <xref:System.Data.Linq.DataContext>의 인스턴스는 다시 사용하지 마세요. 각 <xref:System.Data.Linq.DataContext>는 하나의 특정 편집/쿼리 세션에 대한 상태(ID 캐시 포함)를 유지합니다. 데이터베이스의 현재 상태를 기반으로 새 인스턴스를 사용하려면 새 <xref:System.Data.Linq.DataContext>를 사용하세요.
 
-여전히 기본 ADO.NET 연결 풀링을 사용할 수 있습니다. 자세한 내용은 [SQL Server 연결 풀링(ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)을 참조하세요.
+여전히 기본 ADO.NET 연결 풀링을 사용할 수 있습니다. 자세한 내용은 [SQL Server 연결 풀링(ADO.NET)](../../sql-server-connection-pooling.md)을 참조하세요.
 
 ## <a name="second-datacontext-is-not-updated"></a>두 번째 DataContext가 업데이트되지 않음
 
 질문. <xref:System.Data.Linq.DataContext>의 인스턴스 하나를 사용하여 데이터베이스에 값을 저장했습니다. 그런데 동일한 데이터베이스에 대한 두 번째 <xref:System.Data.Linq.DataContext>에 업데이트된 값이 반영되지 않습니다. 두 번째 <xref:System.Data.Linq.DataContext> 인스턴스가 캐시된 값을 반환하는 것 같습니다.
 
-1\. 이 동작은 설계 시 의도된 것입니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 첫 번째 인스턴스와 동일한 인스턴스/값을 계속해서 반환합니다. 데이터를 업데이트할 경우에는 낙관적 동시성을 사용합니다. 이 경우 현재 데이터베이스 상태를 원래 데이터와 비교하여 데이터가 변경되지 않았는지 확인합니다. 데이터가 변경된 경우 충돌이 발생하고 애플리케이션에서는 이 문제를 해결해야 합니다. 애플리케이션에서는 한 가지 옵션으로 원래 상태를 현재 데이터베이스 상태로 다시 설정한 후 업데이트를 다시 시도합니다. 자세한 내용은 [방법: 변경 충돌](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)을 관리 합니다.
+1\. 이 동작은 설계 시 의도된 것입니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 첫 번째 인스턴스와 동일한 인스턴스/값을 계속해서 반환합니다. 데이터를 업데이트할 경우에는 낙관적 동시성을 사용합니다. 이 경우 현재 데이터베이스 상태를 원래 데이터와 비교하여 데이터가 변경되지 않았는지 확인합니다. 데이터가 변경된 경우 충돌이 발생하고 애플리케이션에서는 이 문제를 해결해야 합니다. 애플리케이션에서는 한 가지 옵션으로 원래 상태를 현재 데이터베이스 상태로 다시 설정한 후 업데이트를 다시 시도합니다. 자세한 내용은 [방법: 변경 충돌](how-to-manage-change-conflicts.md)을 관리 합니다.
 
 <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>를 false로 설정하여 캐싱 및 변경 추적을 해제할 수도 있습니다. 이렇게 하면 쿼리할 때마다 최신 값을 검색할 수 있습니다.
 
@@ -228,6 +228,6 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 
 ## <a name="see-also"></a>참고자료
 
-- [참조](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [문제 해결](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)
-- [LINQ to SQL의 보안](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)
+- [참조](reference.md)
+- [문제 해결](troubleshooting.md)
+- [LINQ to SQL의 보안](security-in-linq-to-sql.md)

@@ -2,12 +2,12 @@
 title: '낙관적 동시성: 개요'
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
-ms.openlocfilehash: a61d4c5b35f3797539fe845045b8a959b0351350
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fa7d423c0abc07e0d97f7d0d4d557aa11d675ee4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938624"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792932"
 ---
 # <a name="optimistic-concurrency-overview"></a>낙관적 동시성: 개요
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 낙관적 동시성 제어를 지원합니다. 다음 표에서는 설명서에서 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 낙관적 동시성에 적용 되는 용어에 대해 설명 합니다.  
@@ -44,26 +44,26 @@ ms.locfileid: "69938624"
 |User1|Alfred||마케팅|  
 |User2||Mary|서비스|  
   
- 여러 다른 방법으로 이와 같은 충돌을 해결할 수 있습니다. 자세한 내용은 [방법: 변경 충돌](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)을 관리 합니다.  
+ 여러 다른 방법으로 이와 같은 충돌을 해결할 수 있습니다. 자세한 내용은 [방법: 변경 충돌](how-to-manage-change-conflicts.md)을 관리 합니다.  
   
 ## <a name="conflict-detection-and-resolution-checklist"></a>충돌 감지 및 해결 검사 목록  
  모든 상세 수준에서 충돌을 감지하고 해결할 수 있습니다. 한편으로는 추가 고려 사항 없이 세 가지 방법(<xref:System.Data.Linq.RefreshMode> 참조) 중 하나로 모든 충돌을 해결할 수도 있고 다른 한편으로는 충돌하는 모든 멤버에서 각 충돌 유형에 대한 특정 작업을 지정할 수도 있습니다.  
   
 - 개체 모델에서 <xref:System.Data.Linq.Mapping.UpdateCheck> 옵션을 지정하거나 수정합니다.  
   
-     자세한 내용은 [방법: 동시성 충돌](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)에 대해 테스트할 멤버를 지정 합니다.  
+     자세한 내용은 [방법: 동시성 충돌](how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)에 대해 테스트할 멤버를 지정 합니다.  
   
 - <xref:System.Data.Linq.DataContext.SubmitChanges%2A>에 대한 호출의 try/catch 블록에서 예외를 throw하려는 지점을 지정합니다.  
   
-     자세한 내용은 [방법: 동시성 예외가 Throw](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md)되는 시기를 지정 합니다.  
+     자세한 내용은 [방법: 동시성 예외가 Throw](how-to-specify-when-concurrency-exceptions-are-thrown.md)되는 시기를 지정 합니다.  
   
 - 검색하려는 충돌 정보의 양을 결정하고 이에 따라 try/catch 블록에 코드를 포함시킵니다.  
   
-     자세한 내용은 [방법: 엔터티 충돌 정보](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md) 검색 및 [방법: 멤버 충돌 정보](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md)를 검색 합니다.  
+     자세한 내용은 [방법: 엔터티 충돌 정보](how-to-retrieve-entity-conflict-information.md) 검색 및 [방법: 멤버 충돌 정보](how-to-retrieve-member-conflict-information.md)를 검색 합니다.  
   
 - 검색 하는 `try` 다양 한 충돌을 해결 하는 방법을 `catch` 코드에 / 포함 합니다.  
   
-     자세한 내용은 [방법: 데이터베이스 값](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)을 보존 하 여 충돌 [해결, 방법: 데이터베이스 값](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)을 덮어써서 충돌을 해결 하 [고 다음을 수행 합니다. 데이터베이스 값](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md)과 병합 하 여 충돌을 해결 합니다.  
+     자세한 내용은 [방법: 데이터베이스 값](how-to-resolve-conflicts-by-retaining-database-values.md)을 보존 하 여 충돌 [해결, 방법: 데이터베이스 값](how-to-resolve-conflicts-by-overwriting-database-values.md)을 덮어써서 충돌을 해결 하 [고 다음을 수행 합니다. 데이터베이스 값](how-to-resolve-conflicts-by-merging-with-database-values.md)과 병합 하 여 충돌을 해결 합니다.  
   
 ## <a name="linq-to-sql-types-that-support-conflict-discovery-and-resolution"></a>충돌 검색 및 해결을 지원하는 LINQ to SQL 형식  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 낙관적 동시성의 충돌 해결을 지원하기 위한 클래스와 기능은 다음과 같습니다.  
@@ -90,4 +90,4 @@ ms.locfileid: "69938624"
   
 ## <a name="see-also"></a>참고자료
 
-- [방법: 변경 내용 충돌 관리](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [방법: 변경 내용 충돌 관리](how-to-manage-change-conflicts.md)

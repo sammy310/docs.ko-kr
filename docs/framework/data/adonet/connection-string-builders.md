@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: a29efbc1b4d886afe4329df011b522e4d589e2ee
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: afafe5d1eaddaef3b9f0069908b365e40ea4ed29
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949500"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785688"
 ---
 # <a name="connection-string-builders"></a>연결 문자열 작성기
 이전 버전의 ADO.NET에서는 연결 된 문자열 값이 있는 연결 문자열의 컴파일 타임 검사가 수행 되지 않으므로 런타임에 잘못 된 키워드에서을 (를) 생성 <xref:System.ArgumentException>했습니다. 각 .NET Framework 데이터 공급자는 연결 문자열 키워드에 대해 서로 다른 구문을 지원 합니다 .이 키워드는 수동으로 수행 하는 경우 유효한 연결 문자열을 구성 하기가 어렵습니다. 이 문제를 해결 하기 위해 ADO.NET 2.0에는 각 .NET Framework 데이터 공급자에 대 한 새로운 연결 문자열 작성기가 도입 되었습니다. 각 데이터 공급자에는 <xref:System.Data.Common.DbConnectionStringBuilder>에서 상속되는 강력한 형식의 연결 문자열 작성기 클래스가 있습니다. 다음 표에서는 .NET Framework 데이터 공급자와 연결 된 연결 문자열 작성기 클래스를 보여 줍니다.  
@@ -59,7 +59,7 @@ initial catalog="AdventureWorks;NewValue=Bad"
  연결 문자열 작성기의 오버로드된 생성자 중 하나는 <xref:System.String>을 인수로 사용하므로 작성기를 사용하면 부분 연결 문자열을 제공하여 이러한 사용자 입력을 통해 연결 문자열을 완성하는 것이 가능합니다. 이 부분 연결 문자열을 구성 파일에 저장한 후 런타임에 검색할 수 있습니다.  
   
 > [!NOTE]
-> <xref:System.Configuration> 네임스페이스를 사용하면 <xref:System.Web.Configuration.WebConfigurationManager>(웹 애플리케이션의 경우) 및 <xref:System.Configuration.ConfigurationManager>(Windows 애플리케이션의 경우)를 통해 구성 파일에 프로그래밍 방식으로 액세스할 수 있습니다. 연결 문자열 및 구성 파일을 사용 하는 방법에 대 한 자세한 내용은 [연결 문자열 및 구성 파일](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)을 참조 하세요.  
+> <xref:System.Configuration> 네임스페이스를 사용하면 <xref:System.Web.Configuration.WebConfigurationManager>(웹 애플리케이션의 경우) 및 <xref:System.Configuration.ConfigurationManager>(Windows 애플리케이션의 경우)를 통해 구성 파일에 프로그래밍 방식으로 액세스할 수 있습니다. 연결 문자열 및 구성 파일을 사용 하는 방법에 대 한 자세한 내용은 [연결 문자열 및 구성 파일](connection-strings-and-configuration-files.md)을 참조 하세요.  
   
 ### <a name="example"></a>예제  
  이 예제에서는 구성 파일에서 부분 연결 문자열을 검색한 후 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A>의 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserID%2A>, <xref:System.Data.SqlClient.SqlConnectionStringBuilder.Password%2A> 및 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 속성을 설정하여 완성하는 방법을 보여 줍니다. 구성 파일은 다음과 같이 정의됩니다.  
@@ -81,6 +81,6 @@ initial catalog="AdventureWorks;NewValue=Bad"
   
 ## <a name="see-also"></a>참고자료
 
-- [연결 문자열](../../../../docs/framework/data/adonet/connection-strings.md)
-- [개인 정보 및 데이터 보안](../../../../docs/framework/data/adonet/privacy-and-data-security.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [연결 문자열](connection-strings.md)
+- [개인 정보 및 데이터 보안](privacy-and-data-security.md)
+- [ADO.NET 개요](ado-net-overview.md)

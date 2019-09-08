@@ -2,12 +2,12 @@
 title: 고가용성 및 재해 복구에 대한 SqlClient 지원
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 104fdd78ce3f4b9c18f09fc41fddebe46815d217
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b51c3cb1eb3c8726b7de007a1c1519eae0733392
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938467"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791618"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>고가용성 및 재해 복구에 대한 SqlClient 지원
 이 항목에서는 고가용성, 재해 복구에 대 한 SqlClient 지원 (.NET Framework 4.5에 추가 됨)에 대해 설명 합니다 (AlwaysOn 가용성 그룹.  AlwaysOn 가용성 그룹 기능이 SQL Server 2012에 추가 되었습니다. AlwaysOn 가용성 그룹에 대 한 자세한 내용은 SQL Server 온라인 설명서을 참조 하세요.  
@@ -98,5 +98,5 @@ ms.locfileid: "69938467"
   
 ## <a name="see-also"></a>참고자료
 
-- [SQL Server 기능 및 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server 기능 및 ADO.NET](sql-server-features-and-adonet.md)
+- [ADO.NET 개요](../ado-net-overview.md)

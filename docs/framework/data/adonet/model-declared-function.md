@@ -2,12 +2,12 @@
 title: 모델 선언 함수
 ms.date: 03/30/2017
 ms.assetid: aba87f13-5685-4f6b-ad14-918e8a7d5c2a
-ms.openlocfilehash: 73e716f1c42dfbbb91dc6456212de2a331d7c4ef
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cb2fca52604bd57f25469f5621c292a27638c76f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943917"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794800"
 ---
 # <a name="model-declared-function"></a>모델 선언 함수
 *모델 선언 함수* 는 개념적 모델에 선언 된 함수 이지만 해당 개념적 모델에는 정의 되어 있지 않습니다. 호스팅 또는 스토리지 환경에서 함수를 정의할 수도 있습니다. 예를 들어, 모델 선언 함수를 데이터베이스에 정의된 함수에 매핑하여 개념적 모델에 서버 쪽 기능을 노출할 수 있습니다.  
@@ -30,5 +30,5 @@ ms.locfileid: "69943917"
   
 ## <a name="see-also"></a>참고자료
 
-- [엔터티 데이터 모델의 주요 개념](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [엔터티 데이터 모델](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [엔터티 데이터 모델의 주요 개념](entity-data-model-key-concepts.md)
+- [엔터티 데이터 모델](entity-data-model.md)

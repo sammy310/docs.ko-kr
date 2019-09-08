@@ -2,12 +2,12 @@
 title: XSD(XML 스키마)에서 데이터 세트 관계 생성
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
-ms.openlocfilehash: fd32d024acca393dcc8241f047a305e763682866
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d00f07ee3338941b7de1bb890f71cd3c2d120246
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204864"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784649"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>XSD(XML 스키마)에서 데이터 세트 관계 생성
 <xref:System.Data.DataSet>에서는 부모-자식 관계를 만들어 둘 이상의 열을 연결시킵니다. XSD (XML 스키마 정의 언어) 스키마 내에서는 세 가지 방법으로 **데이터 집합** 관계를 나타낼 수 있습니다.  
@@ -78,7 +78,7 @@ msdata:childkey="" />
   </xs:annotation>  
 ```  
   
- 매핑 프로세스에서는 **Relationship** 요소를 사용 하 여 **Order** 테이블의 **Ordernumber** 열과 **데이터 집합**에 있는 **ordernumber** 테이블의 ordernumber 열 간에 부모-자식 관계를 만듭니다. 매핑 프로세스에서는 관계만 지정합니다. 즉, 관계형 데이터베이스의 기본 키/외래 키 제약 조건처럼 이러한 열의 값에 대해 제약 조건을 자동으로 지정하지는 않습니다.  
+ 매핑 프로세스에서는 **Relationship** 요소를 사용 하 여 **Order** 테이블의 **Ordernumber** 열과 **데이터 집합**에 있는 **ordernumber** 테이블의 **ordernumber** 열 간에 부모-자식 관계를 만듭니다. 매핑 프로세스에서는 관계만 지정합니다. 즉, 관계형 데이터베이스의 기본 키/외래 키 제약 조건처럼 이러한 열의 값에 대해 제약 조건을 자동으로 지정하지는 않습니다.  
   
 ### <a name="in-this-section"></a>섹션 내용  
  [중첩된 스키마 요소 사이에 암시적 관계 매핑](map-implicit-relations-between-nested-schema-elements.md)  
@@ -99,4 +99,4 @@ msdata:childkey="" />
   
 ## <a name="see-also"></a>참고자료
 
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 개요](../ado-net-overview.md)

@@ -2,12 +2,12 @@
 title: '연습: 관계 간 쿼리(C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: a9e0583b14c07df2b1de23ba37fa88552a4c5c7c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ebf96bc575ef68e1190c5b9be7111902c0f69fef
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946952"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780995"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>연습: 관계 간 쿼리(C#)
 이 연습에서는 *연결* 을 사용 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 하 여 데이터베이스에서 외래 키 관계를 나타내는 방법을 보여 줍니다.  
@@ -17,7 +17,7 @@ ms.locfileid: "69946952"
  이 연습은 Visual C# 개발 설정을 사용하여 작성했습니다.  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
- 연습을 완료 [해야 합니다. 간단한 개체 모델 및 쿼리 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md) 이 연습은 c:\linqtest5에 있는 northwnd.mdf 파일을 비롯하여 해당 개체 모델 및 쿼리를 기반으로 합니다.  
+ 연습을 완료 [해야 합니다. 간단한 개체 모델 및 쿼리 (C#)](walkthrough-simple-object-model-and-query-csharp.md) 이 연습은 c:\linqtest5에 있는 northwnd.mdf 파일을 비롯하여 해당 개체 모델 및 쿼리를 기반으로 합니다.  
   
 ## <a name="overview"></a>개요  
  이 연습은 다음과 같은 세 가지 주요 작업으로 구성됩니다.  
@@ -86,8 +86,8 @@ ms.locfileid: "69946952"
 4. 콘솔 창에서 Enter 키를 눌러 디버깅을 중지합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 다음 연습 ([연습: Data 조작 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md))은 데이터를 조작 하는 방법을 보여 줍니다. 다음 연습에서는 이미 완료한 이 시리즈의 연습 두 개를 저장할 필요가 없습니다.  
+ 다음 연습 ([연습: Data 조작 (C#)](walkthrough-manipulating-data-csharp.md))은 데이터를 조작 하는 방법을 보여 줍니다. 다음 연습에서는 이미 완료한 이 시리즈의 연습 두 개를 저장할 필요가 없습니다.  
   
 ## <a name="see-also"></a>참고자료
 
-- [연습으로 학습](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [연습으로 학습](learning-by-walkthroughs.md)

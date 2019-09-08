@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c2b84dfe-7fec-489a-92de-45215cec4518
-ms.openlocfilehash: 22614be8e53d975c4efdf7004f41906c58639c61
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d32faf026789923ca4343271c9fd1b6bbdb068df
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938700"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793099"
 ---
 # <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>방법: 여러 결과 도형에 매핑된 저장 프로시저 사용
 저장 프로시저에서 여러 결과 도형을 반환할 수 있는 경우 반환 형식은 단일 프로젝션 도형에 대해 강력하게 형식화될 수 없습니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 모든 가능한 프로젝션 형식을 생성할 수 있더라도 해당 형식들이 반환되는 순서는 알 수는 없습니다.  
   
- 이 시나리오와 달리 순차적으로 여러 결과 도형을 생성하는 저장 프로시저에 대한 자세한 내용은 [방법: 순차 결과 도형](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)에 매핑된 저장 프로시저를 사용 합니다.  
+ 이 시나리오와 달리 순차적으로 여러 결과 도형을 생성하는 저장 프로시저에 대한 자세한 내용은 [방법: 순차 결과 도형](how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)에 매핑된 저장 프로시저를 사용 합니다.  
   
  <xref:System.Data.Linq.Mapping.ResultTypeAttribute> 특성을 여러 결과 형식을 반환하는 저장 프로시저에 적용하여 프로시저에서 반환할 수 있는 형식 집합을 지정합니다.  
   
@@ -45,4 +45,4 @@ else if(@shape = 2)
   
 ## <a name="see-also"></a>참고자료
 
-- [저장 프로시저](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+- [저장 프로시저](stored-procedures.md)

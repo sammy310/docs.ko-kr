@@ -2,15 +2,15 @@
 title: '방법: 외부 파일로 개체 모델 생성'
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
-ms.openlocfilehash: 7451dfbaf85c1cbd4635ae0cce1219853a2b01a3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3fd84d878ab07411bba41a13ff3eef91b2425e8a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911934"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793593"
 ---
 # <a name="how-to-generate-the-object-model-as-an-external-file"></a>방법: 외부 파일로 개체 모델 생성
-특성 기반 매핑을 사용하는 대신 SQLMetal 명령줄 도구를 사용하여 개체 모델을 외부 XML 파일로 생성할 수 있습니다. 자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요. 외부 XML 매핑 파일을 사용하면 코드를 간단하게 표시할 수 있습니다. 또한 애플리케이션의 이진 파일을 다시 컴파일할 필요 없이 외부 파일을 수정하여 동작을 변경할 수 있습니다. 자세한 내용은 [외부 매핑](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)을 참조 하세요.  
+특성 기반 매핑을 사용하는 대신 SQLMetal 명령줄 도구를 사용하여 개체 모델을 외부 XML 파일로 생성할 수 있습니다. 자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요. 외부 XML 매핑 파일을 사용하면 코드를 간단하게 표시할 수 있습니다. 또한 애플리케이션의 이진 파일을 다시 컴파일할 필요 없이 외부 파일을 수정하여 동작을 변경할 수 있습니다. 자세한 내용은 [외부 매핑](external-mapping.md)을 참조 하세요.  
   
 > [!NOTE]
 > 개체 관계형 디자이너는 외부 매핑 파일의 생성을 지원 하지 않습니다.  
@@ -50,6 +50,6 @@ sqlmetal /server:myserver /database:northwind /map:externalfile.xml
   
 ## <a name="see-also"></a>참고자료
 
-- [개체 모델 만들기](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
-- [외부 매핑](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [방법: Visual Basic 또는 C#에서 개체 모델 생성](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [개체 모델 만들기](creating-the-object-model.md)
+- [외부 매핑](external-mapping.md)
+- [방법: Visual Basic 또는 C#에서 개체 모델 생성](how-to-generate-the-object-model-in-visual-basic-or-csharp.md)

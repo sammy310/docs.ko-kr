@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: a63e65289a51a7647270a978cec11ef6bc201e45
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8438a7b54ca19625687ab96386384cf62ae62d11
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962750"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783802"
 ---
 # <a name="handling-dataadapter-events"></a>DataAdapter 이벤트 처리
 ADO.NET <xref:System.Data.Common.DataAdapter>는 데이터 소스의 데이터가 변경되었을 때 응답하는 데 사용할 수 있는 세 가지 이벤트를 제공합니다. 다음 표에서는 `DataAdapter` 이벤트를 보여 줍니다.  
   
-|이벤트|설명|  
+|이벤트|Description|  
 |-----------|-----------------|  
 |`RowUpdating`|`Update` 메서드 중 하나를 호출하여 행에 대해 UPDATE, INSERT 또는 DELETE 작업을 시작하려고 합니다.|  
 |`RowUpdated`|`Update` 메서드 중 하나를 호출하여 행에 대한 UPDATE, INSERT 또는 DELETE 작업을 완료합니다.|  
@@ -188,8 +188,8 @@ protected static void FillError(object sender, FillErrorEventArgs args)
   
 ## <a name="see-also"></a>참고자료
 
-- [DataAdapter 및 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [데이터 집합 이벤트 처리](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
-- [DataTable 이벤트 처리](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
+- [DataAdapter 및 DataReader](dataadapters-and-datareaders.md)
+- [데이터 집합 이벤트 처리](./dataset-datatable-dataview/handling-dataset-events.md)
+- [DataTable 이벤트 처리](./dataset-datatable-dataview/handling-datatable-events.md)
 - [이벤트](../../../standard/events/index.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 개요](ado-net-overview.md)

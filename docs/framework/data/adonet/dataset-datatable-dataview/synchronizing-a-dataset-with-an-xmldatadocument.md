@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
-ms.openlocfilehash: f788e1732f083c01542fcdacdfc042553741350b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 272b76c0448da9e069fba331c3ae99c1de02ed16
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204411"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784271"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>XmlDataDocument로 데이터 세트 동기화
 이 단원에서는 <xref:System.Data.DataSet>와 동기화된 강력한 형식의 <xref:System.Xml.XmlDataDocument>을 사용하여 구매 주문을 처리하는 한 가지 단계를 보여 줍니다. 다음 예에서는 소스 XML 문서의 일부에만 일치 하는 최소화 된 스키마를 사용 하 여 **데이터 집합** 을 만듭니다. 이 예에서는 **XmlDataDocument** 를 사용 하 여 원본 xml 문서의 충실도를 유지 합니다 .이를 통해 **데이터 집합** 을 사용 하 여 xml 문서의 하위 집합을 노출할 수 있습니다.  
@@ -159,9 +159,9 @@ ms.locfileid: "70204411"
   
  원래 XML 문서의 **OrderDetails** 및 **Products** 요소에 있는 정보만 **데이터 집합**에 대 한 스키마에 포함 됩니다. **데이터 집합** 을 **XmlDataDocument** 와 동기화 하면 **데이터 집합** 에 포함 되지 않은 요소가 XML 문서와 함께 유지 됩니다.  
   
- XML 스키마에서 생성 된 강력한 형식의 **데이터 집합** (XmlDataDocument의 네임 스페이스 포함)을 사용 하면 **데이터 집합** 을 로드 된 와 동기화 하 여 원래 xml 문서의 일부를 노출할 수 있습니다. 원본 XML 문서에서 스키마에서 생성 된 **데이터 집합** 에는 구조는 포함 되지만 데이터는 포함 되지 않습니다. **XmlDataDocument**에 XML을 로드 하면 데이터가 채워집니다. 이미 데이터가 포함 된 데이터 **집합과** 동기화 된 **XmlDataDocument** 를 로드 하려고 하면 예외가 throw 됩니다.  
+ XML 스키마에서 생성 된 강력한 형식의 **데이터 집합** (XmlDataDocument **의 네임**스페이스 포함)을 사용 하면 **데이터 집합** 을 로드 된 와 동기화 하 여 원래 xml 문서의 일부를 노출할 수 있습니다. 원본 XML 문서에서 스키마에서 생성 된 **데이터 집합** 에는 구조는 포함 되지만 데이터는 포함 되지 않습니다. **XmlDataDocument**에 XML을 로드 하면 데이터가 채워집니다. 이미 데이터가 포함 된 데이터 **집합과** 동기화 된 **XmlDataDocument** 를 로드 하려고 하면 예외가 throw 됩니다.  
   
- **데이터 집합** (및 **XmlDataDocument**)을 업데이트 한 후에는 아래 와 같이 **데이터 집합** 에서 무시 된 요소가 그대로 남아 있는 수정 된 XML 문서를 작성할 수 있습니다. 구매 주문 시나리오에서 주문 항목을 채웠으면 수정된 XML 문서를 주문 과정의 다음 단계인 회사의 배송 부서로 전달할 수 있습니다.  
+ **데이터 집합** (및 **XmlDataDocument**)을 업데이트 한 **후에는** 아래와 같이 **데이터 집합** 에서 무시 된 요소가 그대로 남아 있는 수정 된 XML 문서를 작성할 수 있습니다. 구매 주문 시나리오에서 주문 항목을 채웠으면 수정된 XML 문서를 주문 과정의 다음 단계인 회사의 배송 부서로 전달할 수 있습니다.  
   
 ```vb  
 Imports System  
@@ -234,4 +234,4 @@ public class Sample
 ## <a name="see-also"></a>참고자료
 
 - [데이터 세트 및 XmlDataDocument 동기화](dataset-and-xmldatadocument-synchronization.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 개요](../ado-net-overview.md)

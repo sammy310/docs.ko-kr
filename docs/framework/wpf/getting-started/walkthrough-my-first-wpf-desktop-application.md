@@ -1,6 +1,6 @@
 ---
-title: Visual Studio에서 WPF 응용 프로그램 만들기
-ms.date: 03/20/2019
+title: '자습서: Visual Studio 2019에서 첫 번째 WPF 응용 프로그램 만들기-.NET Framework'
+ms.date: 09/06/2019
 dev_langs:
 - csharp
 - vb
@@ -8,44 +8,41 @@ helpviewer_keywords:
 - getting started [WPF], WPF
 - WPF [WPF], getting started
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
+ms.topic: tutorial
+ms.custom: vs-dotnet
 author: mairaw
 ms.author: mairaw
-ms.custom: vs-dotnet
-ms.openlocfilehash: 4919424339df1f8d2c68465bd9f9af42f344fe37
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c8b7f6f3bdbf3adc7c355e88cfe1f569cc0cb76f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254068"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799337"
 ---
-# <a name="walkthrough-my-first-wpf-desktop-application"></a>연습: 내 첫 WPF 데스크톱 애플리케이션
+# <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>자습서: Visual Studio 2019에서 첫 WPF 응용 프로그램 만들기
 
 이 문서에서는 대부분의 WPF 응용 프로그램에 공통 된 요소를 포함 하는 Windows Presentation Foundation (WPF) 데스크톱 응용 프로그램을 개발 하는 방법을 보여 줍니다. XAML (Extensible Application Markup Language) 태그, 코드 숨김으로, 응용 프로그램 정의, 컨트롤, 레이아웃, 데이터 바인딩 및 스타일을 정의 합니다. 응용 프로그램을 개발 하려면 Visual Studio를 사용 합니다. 
 
-이 연습에는 다음 단계가 포함 됩니다.
+이 자습서에서는 다음 작업을 수행하는 방법을 알아봅니다.
+> [!div class="checklist"]
+> - WPF 프로젝트를 만듭니다.
+> - XAML을 사용 하 여 응용 프로그램 UI (사용자 인터페이스)의 모양을 디자인 합니다.
+> - 응용 프로그램의 동작을 빌드하는 코드를 작성 합니다.
+> - 응용 프로그램을 관리 하는 응용 프로그램 정의를 만듭니다.
+> - 응용 프로그램 UI를 구성 하는 컨트롤을 추가 하 고 레이아웃을 만듭니다.
+> - 응용 프로그램 UI 전체에 일관 된 모양의 스타일을 만듭니다.
+> - Ui를 데이터에 바인딩하여 데이터에서 UI를 채우고 데이터와 UI를 동기화 된 상태로 유지 합니다.
 
-- XAML을 사용 하 여 응용 프로그램 UI (사용자 인터페이스)의 모양을 디자인 합니다.
-
-- 응용 프로그램의 동작을 빌드하는 코드를 작성 합니다.
-
-- 응용 프로그램을 관리 하는 응용 프로그램 정의를 만듭니다.
-
-- 응용 프로그램 UI를 구성 하는 컨트롤을 추가 하 고 레이아웃을 만듭니다.
-
-- 응용 프로그램 UI 전체에 일관 된 모양의 스타일을 만듭니다.
-
-- Ui를 데이터에 바인딩하여 데이터에서 UI를 채우고 데이터와 UI를 동기화 된 상태로 유지 합니다.
-
-이 연습을 마치면 사용자가 선택한 사용자에 대 한 경비 보고서를 볼 수 있도록 하는 독립 실행형 Windows 응용 프로그램을 작성 하 게 됩니다. 응용 프로그램은 브라우저 스타일 창에서 호스팅되는 여러 WPF 페이지로 구성 됩니다.
+이 자습서의 끝 부분에서는 사용자가 선택한 사용자에 대 한 경비 보고서를 볼 수 있도록 하는 독립 실행형 Windows 응용 프로그램을 빌드 했습니다. 응용 프로그램은 브라우저 스타일 창에서 호스팅되는 여러 WPF 페이지로 구성 됩니다.
 
 > [!TIP]
-> 이 연습을 빌드하는 데 사용 되는 샘플 코드는 Visual Basic 및 C# [연습 WPF 앱 샘플 코드](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/WalkthroughFirstWPFApp)에 대해 사용할 수 있습니다.
+> 이 자습서에서 사용 되는 샘플 코드는 Visual Basic 및 C# [자습서 WPF 앱 샘플 코드](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/WalkthroughFirstWPFApp)에 모두 사용할 수 있습니다.
 >
-> 이 문서의 오른쪽 위에 있는 C# **\< 드롭다운을 사용 하 />** 여 및 Visual Basic 사이에 샘플 코드의 코드 언어를 전환할 수 있습니다.
+> 이 페이지 맨 위에 있는 언어 선택기를 사용 하 여 C# 및 Visual Basic 사이에 샘플 코드의 코드 언어를 전환할 수 있습니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-- Visual Studio 2017 이상 (이 문서에서는 Visual Studio 2019 사용)
+- **.Net 데스크톱 개발** 워크 로드가 설치 된 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) .
 
    최신 버전의 Visual Studio를 설치 하는 방법에 대 한 자세한 내용은 [Visual Studio 설치](/visualstudio/install/install-visual-studio)를 참조 하세요.
 
@@ -210,7 +207,7 @@ ms.locfileid: "70254068"
 
     [!code-vb[ExpenseIt#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseReportPage.xaml.vb#5)]
 
-1. *워터 마크 .png* 라는 이미지를 프로젝트에 추가 합니다. 사용자 고유의 이미지를 만들거나 샘플 코드에서 파일을 복사 하거나 [여기](https://raw.githubusercontent.com/microsoft/WPF-Samples/master/Getting%20Started/WalkthroughFirstWPFApp/csharp/watermark.png)에서 가져올 수 있습니다.
+1. *워터 마크 .png* 라는 이미지를 프로젝트에 추가 합니다. 사용자 고유의 이미지를 만들거나 샘플 코드에서 파일을 복사 하거나 [microsoft/WPF 샘플](https://raw.githubusercontent.com/microsoft/WPF-Samples/master/Getting%20Started/WalkthroughFirstWPFApp/csharp/watermark.png) GitHub 리포지토리에서 가져올 수 있습니다.
 
     1. 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고**기존 항목** **추가** > 를 선택 하거나 **Shift**+**Alt**+**A**를 누릅니다.
 
@@ -475,11 +472,8 @@ UI에서 같은 형식의 모든 요소에 대해 다양 한 요소의 모양이
 > 이 샘플은 WPF의 특정 기능을 보여 주며 보안, 지역화 및 접근성과 같은 항목에 대 한 모든 모범 사례를 따르지 않습니다. WPF 및 .NET 앱 개발 모범 사례에 대 한 포괄적인 적용 범위는 다음 항목을 참조 하세요.
 >
 > - [액세스 가능성](../../ui-automation/accessibility-best-practices.md)
->
 > - [보안](../security-wpf.md)
->
 > - [WPF 전역화 및 지역화](../advanced/wpf-globalization-and-localization-overview.md)
->
 > - [WPF 성능](../advanced/optimizing-wpf-application-performance.md)
 
 ## <a name="next-steps"></a>다음 단계

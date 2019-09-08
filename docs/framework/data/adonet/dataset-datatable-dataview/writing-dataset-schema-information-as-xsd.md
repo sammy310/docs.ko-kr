@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4e530831-695e-49ff-8f0b-e5b0c526b8eb
-ms.openlocfilehash: f9664d8e7bc221da68492140f30419ea8fb0d316
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: f86e9100489ddf35d8ef5f98e386306a7dbfd4ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204371"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784172"
 ---
 # <a name="writing-dataset-schema-information-as-xsd"></a>데이터 세트 스키마 정보를 XSD로 작성
 <xref:System.Data.DataSet>의 스키마를 XSD(XML 스키마 정의 언어) 스키마로 작성하여, 작성한 스키마를 관련된 데이터와 함께 또는 데이터 없이 XML 문서에서 전송할 수 있습니다. XML 스키마는 파일, 스트림 <xref:System.Xml.XmlWriter>또는 문자열에 쓸 수 있습니다. 강력한 형식의 **데이터 집합**을 생성 하는 데 유용 합니다. 강력한 형식의 **데이터 집합** 개체에 대 한 자세한 내용은 [형식화 된 데이터](typed-datasets.md)집합을 참조 하세요.  
@@ -55,4 +55,4 @@ string schemaString = dataSet.GetXmlSchema();
 - [데이터 세트 콘텐츠를 XML 데이터로 작성](writing-dataset-contents-as-xml-data.md)
 - [형식화된 데이터 집합](typed-datasets.md)
 - [DataSet, DataTable 및 DataView](index.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 개요](../ado-net-overview.md)

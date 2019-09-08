@@ -2,12 +2,12 @@
 title: '방법: ServiceContractGenerator에 대한 확장 쓰기'
 ms.date: 03/30/2017
 ms.assetid: 876ca823-bd16-4bdf-9e0f-02092df90e51
-ms.openlocfilehash: c9e10efccf0d51e6b78aace1296d227a78a9f91d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b13b881a221ae0aa757b04c206125716a55f5b8c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767002"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795529"
 ---
 # <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>방법: ServiceContractGenerator에 대한 확장 쓰기
 이 항목에서는 <xref:System.ServiceModel.Description.ServiceContractGenerator>에 대한 확장을 쓰는 방법에 대해 설명합니다. 이 작업을 수행하려면 작업 동작에 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> 인터페이스를 구현하거나 계약 동작에 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> 인터페이스를 구현합니다. 다음 항목에서는 계약 동작에서 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> 인터페이스를 구현하는 방법을 보여 줍니다.  
@@ -100,5 +100,5 @@ ms.locfileid: "61767002"
   
 ## <a name="see-also"></a>참고자료
 
-- [메타데이터](../../../../docs/framework/wcf/feature-details/metadata.md)
-- [방법: 사용자 지정 WSDL 가져오기](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+- [메타데이터](../feature-details/metadata.md)
+- [방법: 사용자 지정 WSDL 가져오기](how-to-import-custom-wsdl.md)

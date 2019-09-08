@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-ms.openlocfilehash: 77f25e1c52f10a1724bf81a3fa533739e15085c4
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 4c8b26651a1f4050145b6d43e03f9d4cc3d68202
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204718"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785284"
 ---
 # <a name="loading-a-dataset-from-xml"></a>XML에서 데이터 세트 로드
 ADO.NET <xref:System.Data.DataSet>의 내용은 XML 스트림이나 문서로부터 만들 수 있습니다. 또한, .NET Framework를 사용하면 XML로부터 로드할 정보와 <xref:System.Data.DataSet>의 스키마나 관계형 구조를 만드는 방법을 매우 융통성 있게 선택할 수 있습니다.  
@@ -19,7 +19,7 @@ ADO.NET <xref:System.Data.DataSet>의 내용은 XML 스트림이나 문서로부
   
  다음 표에서는 **XmlReadMode** 인수에 대 한 옵션을 설명 합니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |**자동**|기본값입니다. XML을 검사하고 다음 순서에 따라 가장 적합한 옵션을 선택합니다.<br /><br /> -XML이 DiffGram 인 경우 **diffgram** 이 사용 됩니다.<br />-에 <xref:System.Data.DataSet> 스키마가 포함 되어 있거나 XML에 인라인 스키마가 포함 되어 있으면 **readschema** 가 사용 됩니다.<br />-에 <xref:System.Data.DataSet> 스키마가 없고 XML에 인라인 스키마가 포함 되어 있지 않으면 **InferSchema** 가 사용 됩니다.<br /><br /> 읽을 XML의 형식을 알고 있는 경우 최상의 성능을 위해 **자동** 기본값을 허용 하는 대신 명시적 **XmlReadMode**를 설정 하는 것이 좋습니다.|  
 |**ReadSchema**|모든 인라인 스키마를 읽은 다음 데이터와 스키마를 로드합니다.<br /><br /> <xref:System.Data.DataSet>에 이미 스키마가 있으면 인라인 스키마의 새 테이블이 <xref:System.Data.DataSet>에 있는 기존 스키마에 추가됩니다. 인라인 스키마의 모든 테이블이 <xref:System.Data.DataSet>에 이미 있으면 예외가 throw됩니다. **XmlReadMode 스키마**를 사용 하 여 기존 테이블의 스키마를 수정할 수 없습니다.<br /><br /> <xref:System.Data.DataSet>에 스키마도 없고 인라인 스키마도 없으면 데이터를 읽지 않습니다.<br /><br /> 인라인 스키마는 XSD(XML 스키마 정의 언어) 스키마를 사용하여 정의할 수 있습니다. 인라인 스키마를 XML 스키마로 작성 하는 방법에 대 한 자세한 내용은 [Xml 스키마에서 데이터 집합 관계형 구조 파생 (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md)을 참조 하세요.|  
@@ -100,7 +100,7 @@ foreach (DataTable dataTable in dataSet.Tables)
 ```  
   
 > [!NOTE]
-> 의 <xref:System.Data.DataSet> XSD 스키마에 **targetNamespace**가 포함 된 경우 데이터를 읽을 수 없으며 **ReadXml** 를 호출 하 여 정규화 된 네임 스페이스가 없는 요소가 포함 된 XML <xref:System.Data.DataSet> 로를 로드 하는 경우 예외가 발생할 수 있습니다. 이 경우 정규화 되지 않은 요소를 읽으려면 XSD 스키마에서 **Elementformdefault** 를 "정규화 된"로 설정 합니다. 예를 들어:  
+> 의 <xref:System.Data.DataSet> XSD 스키마에 **targetNamespace**가 포함 된 경우 데이터를 읽을 수 없으며 **ReadXml** 를 호출 하 여 정규화 된 네임 스페이스가 없는 요소가 포함 된 XML <xref:System.Data.DataSet> 로를 로드 하는 경우 예외가 발생할 수 있습니다. 이 경우 정규화 되지 않은 요소를 읽으려면 XSD 스키마에서 **Elementformdefault** 를 "정규화 된"로 설정 합니다. 예:  
   
 ```xml  
 <xsd:schema id="customDataSet"   
@@ -124,4 +124,4 @@ foreach (DataTable dataTable in dataSet.Tables)
 - [XML에서 데이터 세트 관계형 구조 유추](inferring-dataset-relational-structure-from-xml.md)
 - [XML에서 데이터 세트 스키마 정보 로드](loading-dataset-schema-information-from-xml.md)
 - [DataSet, DataTable 및 DataView](index.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 개요](../ado-net-overview.md)

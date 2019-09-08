@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: 962163b51507647fd975815c214891a6d692e66c
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 5f28179b43cb0af2d75e9e5b13783bc7287c8886
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203955"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784776"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>XML Web Service에서 데이터 세트 사용
-<xref:System.Data.DataSet>은 인터넷에서 데이터 전송을 쉽게 할 수 있도록 비연결 디자인으로 설계되었습니다. 데이터 집합은 xml web services에서 클라이언트로 **데이터 집합** 의 내용을 스트리밍하는 데 필요한 추가 코딩 없이 xml web services의 입력 또는 출력으로 지정 될 수 있다는 것을 "serializable"로 지정 합니다. **데이터 집합** 은 DiffGram 형식을 사용 하 여 암시적으로 xml 스트림으로 변환 된 다음 네트워크를 통해 전송 된 다음 수신 하는 끝의 **데이터 집합** 으로 xml 스트림에서 다시 생성 됩니다. 이렇게 하여 간단하고 융통성 있는 방법으로 XML Web services를 사용하여 관계형 데이터를 전송하고 반환할 수 있습니다. DiffGram 형식에 대 한 자세한 내용은 [diffgram](diffgrams.md)를 참조 하세요.  
+<xref:System.Data.DataSet>은 인터넷에서 데이터 전송을 쉽게 할 수 있도록 비연결 디자인으로 설계되었습니다. 데이터 **집합** 은 xml web services에서 클라이언트로 **데이터 집합** 의 내용을 스트리밍하는 데 필요한 추가 코딩 없이 xml web services의 입력 또는 출력으로 지정 될 수 있다는 것을 "serializable"로 지정 합니다. **데이터 집합** 은 DiffGram 형식을 사용 하 여 암시적으로 xml 스트림으로 변환 된 다음 네트워크를 통해 전송 된 다음 수신 하는 끝의 **데이터 집합** 으로 xml 스트림에서 다시 생성 됩니다. 이렇게 하여 간단하고 융통성 있는 방법으로 XML Web services를 사용하여 관계형 데이터를 전송하고 반환할 수 있습니다. DiffGram 형식에 대 한 자세한 내용은 [diffgram](diffgrams.md)를 참조 하세요.  
   
  다음 예제에서는 **데이터 집합** 을 사용 하 여 관계형 데이터 (수정 된 데이터 포함)를 전송 하 고 원래 데이터 원본에 대 한 업데이트를 다시 확인 하는 XML Web services 및 클라이언트를 만드는 방법을 보여 줍니다.  
   
@@ -268,4 +268,4 @@ ms.locfileid: "70203955"
 - [DataAdapter로 데이터 원본 업데이트](../updating-data-sources-with-dataadapters.md)
 - [DataAdapter 매개 변수](../dataadapter-parameters.md)
 - [웹 서비스 기술 언어 도구 (Wsdl.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 개요](../ado-net-overview.md)

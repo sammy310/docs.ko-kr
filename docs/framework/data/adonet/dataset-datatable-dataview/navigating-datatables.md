@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 202026a1-ec79-435e-b507-12a77f5011b2
-ms.openlocfilehash: b5837d647b72f8dd17c4a6d3664faf8976243d36
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 5008f8397b7d396b14fdfe8e24f1e59785c4319d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204551"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785259"
 ---
 # <a name="navigating-datatables"></a>DataTable 탐색
 <xref:System.Data.DataTableReader>는 하나 이상의 <xref:System.Data.DataTable> 개체 내용을 하나 이상의 앞으로만 이동 가능한 읽기 전용 결과 집합 형태로 가져옵니다.  
@@ -26,4 +26,4 @@ ms.locfileid: "70204551"
 ## <a name="see-also"></a>참고자료
 
 - [DataTableReader](datatablereaders.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 개요](../ado-net-overview.md)

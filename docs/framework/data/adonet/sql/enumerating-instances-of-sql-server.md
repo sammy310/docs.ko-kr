@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-ms.openlocfilehash: 304387197c7c6ca31d76ce429cd1516be27ba7b9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c464762e82a24aab399a23ecb26420b5dce61f55
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938168"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782380"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>SQL Server의 인스턴스 열거(ADO.NET)
 SQL Server를 사용 하면 응용 프로그램이 현재 네트워크 내에서 SQL Server 인스턴스를 찾을 수 있습니다. <xref:System.Data.Sql.SqlDataSourceEnumerator> 클래스에서는 애플리케이션 개발자에게 이 정보를 노출시켜 표시되는 모든 서버에 대한 정보가 포함된 <xref:System.Data.DataTable>을 제공합니다. 이 반환 된 테이블에는 사용자가 새 연결을 만들려고 할 때 제공 된 목록과 일치 하는 네트워크에서 사용할 수 있는 서버 인스턴스 목록이 포함 되어 있으며, 연결 속성에서 사용 가능한 모든 서버를 포함 하는 드롭다운 목록이 확장 됩니다.대화 상자. 표시되는 결과가 항상 완전하지는 않습니다.  
@@ -126,5 +126,5 @@ class Program
   
 ## <a name="see-also"></a>참고자료
 
-- [SQL Server 및 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server 및 ADO.NET](index.md)
+- [ADO.NET 개요](../ado-net-overview.md)

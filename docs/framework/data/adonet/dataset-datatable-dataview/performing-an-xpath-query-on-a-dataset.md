@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: 56d1d11240934036994a14e454cf1a1d8b95226a
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 6082a171d24c55ea52c153bbd920bb7486be78a7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204530"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784366"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>데이터 세트에서 XPath 쿼리 수행
 동기화 <xref:System.Data.DataSet> 된와 <xref:System.Xml.XmlDataDocument> 간의 관계를 사용 하면 XPath (xml Path Language) 쿼리와 같은 xml 서비스를 사용 하 여 **XmlDataDocument** 에 액세스 하 고 특정 기능을 보다 편리 하 게 수행할 수 있습니다. **데이터 집합** 에 직접 액세스 합니다. 예를 들어 <xref:System.Data.DataTable> 의 **Select** 메서드를 사용 하 여 **데이터 집합**의 다른 테이블에 대 한 관계를 탐색 하는 대신, **데이터 집합과**동기화 된 **XmlDataDocument** 에 대해 XPath 쿼리를 수행 하 여을 가져올 수 있습니다. 형식의 XML 요소 <xref:System.Xml.XmlNodeList>목록입니다. **XmlNodeList**의 노드를 <xref:System.Xml.XmlElement> 노드로 캐스팅 하면 **XmlDataDocument**의 <xref:System.Data.DataRow> **GetRowFromElement** 메서드에 전달 되어 동기화 **된의 테이블 행에 대 한 일치 하는 참조를 반환할 수 있습니다. 데이터 집합**.  
@@ -104,4 +104,4 @@ foreach (XmlNode xmlNode in nodeList)
 ## <a name="see-also"></a>참고자료
 
 - [데이터 세트 및 XmlDataDocument 동기화](dataset-and-xmldatadocument-synchronization.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 개요](../ado-net-overview.md)

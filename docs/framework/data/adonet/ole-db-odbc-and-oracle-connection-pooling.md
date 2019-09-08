@@ -2,12 +2,12 @@
 title: OLE DB, ODBC 및 Oracle 연결 풀링
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: 7552f4a95af51774071f0a4017637570d648dd86
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b83b53550964b3149f3bc711eaf119e749d1834b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929251"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794697"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB, ODBC 및 Oracle 연결 풀링
 연결 풀링을 사용하면 응용 프로그램의 성능 및 확장성을 대폭 향상시킬 수 있습니다. 이 단원에서는 OLE DB, ODBC 및 Oracle용 .NET Framework 데이터 공급자에 대한 연결 풀링에 대해 설명합니다.  
@@ -70,6 +70,6 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
 ## <a name="see-also"></a>참고자료
 
-- [연결 풀링](../../../../docs/framework/data/adonet/connection-pooling.md)
-- [성능 카운터](../../../../docs/framework/data/adonet/performance-counters.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [연결 풀링](connection-pooling.md)
+- [성능 카운터](performance-counters.md)
+- [ADO.NET 개요](ado-net-overview.md)

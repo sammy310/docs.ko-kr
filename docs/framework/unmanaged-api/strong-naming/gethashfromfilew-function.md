@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77b164cdec0dd224042e4de3265d14a4991d60ba
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fd96b5acb22f63b6e06c981119186680d6593a79
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771897"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799193"
 ---
 # <a name="gethashfromfilew-function"></a>GetHashFromFileW 함수
 유니코드 문자열로 지정된 파일 내용에 대해 해시를 생성합니다.  
   
- 이 함수는 더 이상 사용 되지 않습니다. 사용 된 [iclrstrongname:: Gethashfromfilew](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md) 메서드 대신 합니다.  
+ 이 함수는 더 이상 사용 되지 않습니다. 대신 [ICLRStrongName:: GetHashFromFileW](../hosting/iclrstrongname-gethashfromfilew-method.md) 메서드를 사용 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,34 +42,34 @@ HRESULT GetHashFromFileW (
   
 ## <a name="parameters"></a>매개 변수  
  `wszFilePath`  
- [in] 유니코드 해시 파일의 이름입니다.  
+ 진행 해시할 파일의 유니코드 이름입니다.  
   
  `piHashAlg`  
- [out에서] 해시를 생성할 때 사용할 알고리즘입니다. 유효한 알고리즘은 Win32 CryptoAPI에 의해 정의 된 것입니다. 경우 `piHashAlg` CALG_SHA-1은 사용 하는 기본 알고리즘 0으로 설정 됩니다.  
+ [in, out] 해시를 생성할 때 사용할 알고리즘입니다. 유효한 알고리즘은 Win32 CryptoAPI에서 정의 되는 알고리즘입니다. 가 `piHashAlg` 0으로 설정 되 면 기본 알고리즘 CALG_SHA-1이 사용 됩니다.  
   
  `pbHash`  
- [out] 생성된 된 해시를 포함 하는 바이트 배열입니다.  
+ 제한이 생성 된 해시를 포함 하는 바이트 배열입니다.  
   
  `cchHash`  
- [in] 가리키는 버퍼의 최대 크기 `pbHash`합니다.  
+ 진행 가 `pbHash`가리키는 버퍼의 최대 크기입니다.  
   
  `pchHash`  
- [out] 크기 (바이트)의 `pbHash`합니다.  
+ 제한이 의 `pbHash`크기 (바이트)입니다.  
   
 ## <a name="remarks"></a>설명  
- 이 함수는 동일 [GetHashFromFile](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfile-function.md)파일 이름 사양이 ANSI 대신 유니코드는 점을 제외 하 고, 합니다.  
+ 이 함수는 [GetHashFromFile](gethashfromfile-function.md)와 동일 합니다. 단, 파일 이름 사양은 ANSI 대신 유니코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** StrongName.h  
   
- **라이브러리:** MsCorEE.dll에 리소스로 포함  
+ **라이브러리** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
 
-- [GetHashFromFileW 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)
-- [GetHashFromFile 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)
-- [ICLRStrongName 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [GetHashFromFileW 메서드](../hosting/iclrstrongname-gethashfromfilew-method.md)
+- [GetHashFromFile 메서드](../hosting/iclrstrongname-gethashfromfile-method.md)
+- [ICLRStrongName 인터페이스](../hosting/iclrstrongname-interface.md)

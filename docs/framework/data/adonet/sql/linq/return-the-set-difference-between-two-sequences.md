@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62efb546-c898-408f-af21-36e7c6fed217
-ms.openlocfilehash: 5bb7d797ad2adc4374f7a10c11d66be69feeb7a1
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 92513ed33e2afb785edbdd462ba7bc14923aa6b0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380043"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781149"
 ---
 # <a name="return-the-set-difference-between-two-sequences"></a>두 시퀀스 간의 차집합 반환
 <xref:System.Linq.Queryable.Except%2A> 연산자를 사용하여 두 시퀀스 간의 차집합을 반환합니다.  
   
 ## <a name="example"></a>예제  
- 이 예제에서는 <xref:System.Linq.Queryable.Except%2A> 는 모든 국가/지역의 시퀀스를 반환 하도록 `Customers` 살지 않는 `Employees` live.  
+ 이 예에서는 <xref:System.Linq.Queryable.Except%2A> 를 사용 하 여 살고 있지만 `Employees` 살고 있는 모든 국가/ `Customers` 지역의 시퀀스를 반환 합니다.  
   
  [!code-csharp[DLinqQueryExamples#41](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#41)]
  [!code-vb[DLinqQueryExamples#41](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#41)]  
@@ -25,5 +25,5 @@ ms.locfileid: "66380043"
   
 ## <a name="see-also"></a>참고자료
 
-- [쿼리 예제](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [표준 쿼리 연산자 변환](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+- [쿼리 예제](query-examples.md)
+- [표준 쿼리 연산자 변환](standard-query-operator-translation.md)

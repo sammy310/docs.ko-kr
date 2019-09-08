@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: 561ebd7ac6948fa42f73ebb4f1eb97c574e6d7e7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f3add49d48a569664d4cbb6b5c26d5f3379b6f18
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963172"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794405"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>DataReader를 사용 하 여 데이터 검색
 **DataReader**를 사용 하 여 데이터를 검색 하려면 **command** 개체의 인스턴스를 만든 다음 **ExecuteReader** 를 호출 하 여 데이터 원본에서 행을 검색 하 여 **DataReader** 를 만듭니다. **DataReader** 는 데이터 원본에서 순차적으로 결과를 효율적으로 처리 하는 절차적 논리를 허용 하는 버퍼링 되지 않은 데이터 스트림을 제공 합니다. **DataReader** 는 데이터가 메모리에 캐시 되지 않기 때문에 대량의 데이터를 검색 하는 경우에 적합 합니다.
@@ -57,7 +57,7 @@ reader = command.ExecuteReader()
 ## <a name="working-with-ole-db-chapters"></a>OLE DB 챕터 사용  
  계층적 행 집합 또는 챕터 (OLE DB 형식 **DBTYPE_HCHAPTER**, ADO 유형 **adchapter**)는를 <xref:System.Data.OleDb.OleDbDataReader>사용 하 여 검색할 수 있습니다. 챕터를 포함 하는 쿼리가 **datareader**로 반환 되는 경우이 장은 **datareader** 에서 열로 반환 되 고 **datareader** 개체로 노출 됩니다.  
   
- ADO.NET **데이터 집합** 을 사용 하 여 테이블 간 부모-자식 관계를 사용 하 여 계층적 행 집합을 나타낼 수도 있습니다. 자세한 내용은 [데이터 집합, datatable 및 DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)를 참조 하세요.  
+ ADO.NET **데이터 집합** 을 사용 하 여 테이블 간 부모-자식 관계를 사용 하 여 계층적 행 집합을 나타낼 수도 있습니다. 자세한 내용은 [데이터 집합, datatable 및 DataViews](./dataset-datatable-dataview/index.md)를 참조 하세요.  
   
  다음 코드 예제에서는 MSDataShape 공급자를 사용하여 고객 목록에 있는 각 고객의 주문에 대해 장 열을 생성합니다.  
   
@@ -255,11 +255,11 @@ adapter.Fill(ds);
 ```
 
 > [!NOTE]
-> **OverflowException**을 방지 하려면에 <xref:System.Data.DataRow>값을 저장 하기 전에 Oracle 숫자 형식에서 유효한 .NET Framework 형식으로의 변환을 처리 하는 것이 좋습니다. 이벤트를 <xref:System.Data.Common.DataAdapter.FillError> 사용 하 여 **OverflowException** 발생 했는지 여부를 확인할 수 있습니다. <xref:System.Data.Common.DataAdapter.FillError> 이벤트에 대 한 자세한 내용은 [DataAdapter 이벤트 처리](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)를 참조 하세요.  
+> **OverflowException**을 방지 하려면에 <xref:System.Data.DataRow>값을 저장 하기 전에 Oracle 숫자 형식에서 유효한 .NET Framework 형식으로의 변환을 처리 하는 것이 좋습니다. 이벤트를 <xref:System.Data.Common.DataAdapter.FillError> 사용 하 여 **OverflowException** 발생 했는지 여부를 확인할 수 있습니다. <xref:System.Data.Common.DataAdapter.FillError> 이벤트에 대 한 자세한 내용은 [DataAdapter 이벤트 처리](handling-dataadapter-events.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고자료
 
-- [DataAdapter 및 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [명령 및 매개 변수](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [데이터베이스 스키마 정보 검색](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataAdapter 및 DataReader](dataadapters-and-datareaders.md)
+- [명령 및 매개 변수](commands-and-parameters.md)
+- [데이터베이스 스키마 정보 검색](retrieving-database-schema-information.md)
+- [ADO.NET 개요](ado-net-overview.md)

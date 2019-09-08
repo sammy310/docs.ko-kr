@@ -2,12 +2,12 @@
 title: ADO.NET 애플리케이션 보안
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: d4c9c21f4d1f4a08ca6d676ee7b4c9e80709ba19
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 725ba568f3cd482991359237f4fc42b7da99bc0a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963117"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795064"
 ---
 # <a name="securing-adonet-applications"></a>ADO.NET 애플리케이션 보안
 보안 ADO.NET 애플리케이션을 작성하려면 사용자 입력의 유효성을 확인하지 않는 것과 같은 일반적인 코딩 문제를 피하는 것 외에도 여러 부분을 고려해야 합니다. 데이터에 액세스하는 애플리케이션에는 공격자가 중요한 데이터를 검색, 조작 또는 제거하는 데 악용할 수 있는 여러 잠재적인 오류 지점이 있습니다. 따라서 애플리케이션 디자인 단계의 위협 모델링 과정에서부터 최종 배포와 진행 중인 유지 관리에 이르기까지 보안의 모든 측면을 이해해야 합니다.  
@@ -17,26 +17,26 @@ ms.locfileid: "69963117"
  보안 코드를 작성하면 데이터베이스와 같은 관리되지 않는 리소스 작업을 할 때 자초한 보안 허점을 막지 못합니다. SQL Server와 같은 대부분의 서버 데이터베이스는 제대로 구현되는 경우 보안을 강화하는 자체 보안 시스템을 가집니다. 그러나 제대로 구성되지 않은 경우 강력한 보안 시스템으로 구성된 데이터 소스라 할지라도 공격에 취약할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [보안 개요](../../../../docs/framework/data/adonet/security-overview.md)  
+ [보안 개요](security-overview.md)  
  보안 ADO.NET 애플리케이션 디자인에 대한 권장 사항을 제공합니다.  
   
- [보안 데이터 액세스](../../../../docs/framework/data/adonet/secure-data-access.md)  
+ [보안 데이터 액세스](secure-data-access.md)  
  안전한 데이터 소스의 데이터로 작업하는 방법에 대해 설명합니다.  
   
- [안전한 클라이언트 애플리케이션](../../../../docs/framework/data/adonet/secure-client-applications.md)  
+ [안전한 클라이언트 애플리케이션](secure-client-applications.md)  
  클라이언트 애플리케이션 보안을 위한 고려 사항에 대해 설명합니다.  
   
- [코드 액세스 보안 및 ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)  
+ [코드 액세스 보안 및 ADO.NET](code-access-security.md)  
  CAS를 사용하여 ADO.NET 코드를 보호하는 방법 및 부분 신뢰를 사용하는 방법에 대해 설명합니다.  
   
- [개인 정보 및 데이터 보안](../../../../docs/framework/data/adonet/privacy-and-data-security.md)  
+ [개인 정보 및 데이터 보안](privacy-and-data-security.md)  
  ADO.NET 애플리케이션의 암호화 옵션에 대해 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [SQL Server 보안](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
+ [SQL Server 보안](./sql/sql-server-security.md)  
  개발자 관점에서 SQL Server 보안 기능에 대해 설명합니다.  
   
- [보안 고려 사항](../../../../docs/framework/data/adonet/ef/security-considerations.md)  
+ [보안 고려 사항](./ef/security-considerations.md)  
  Entity Framework 애플리케이션의 보안에 대해 설명합니다.  
   
  [보안](../../../standard/security/index.md)  
@@ -53,5 +53,5 @@ ms.locfileid: "69963117"
   
 ## <a name="see-also"></a>참고자료
 
-- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET](index.md)
+- [ADO.NET 개요](ado-net-overview.md)

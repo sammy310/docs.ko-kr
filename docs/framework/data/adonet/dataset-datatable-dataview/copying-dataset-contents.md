@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
-ms.openlocfilehash: f60ef817773b6234b19856bfc0727eedb67e113e
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d8a7762c4ec5d650295ca0626180285723549051
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205169"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786521"
 ---
 # <a name="copying-dataset-contents"></a>데이터 세트 콘텐츠 복사
 원본 데이터에 영향을 주지 않고 <xref:System.Data.DataSet> 데이터 작업을 수행 하거나 데이터 **집합**에서 데이터의 하위 집합을 사용 하 여 작업을 수행할 수 있도록의 복사본을 만들 수 있습니다. **데이터 집합**을 복사할 때 다음을 수행할 수 있습니다.  
@@ -99,4 +99,4 @@ foreach (DataRow copyRow in copyRows)
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>
 - [DataSet, DataTable 및 DataView](index.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 개요](../ado-net-overview.md)

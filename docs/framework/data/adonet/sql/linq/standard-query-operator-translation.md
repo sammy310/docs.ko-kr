@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: 1bba36579fce4fe78289ccb986073280b531420a
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 4df1653b7bd6865ad9f5d7d3fb9be6815dcfe018
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661868"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781020"
 ---
 # <a name="standard-query-operator-translation"></a>표준 쿼리 연산자 변환
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 표준 쿼리 연산자를 SQL 명령으로 변환합니다. 데이터베이스의 쿼리 프로세서는 SQL 변환에 대 한 실행 의미 체계를 결정합니다.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 표준 쿼리 연산자를 SQL 명령으로 변환합니다. 데이터베이스의 쿼리 프로세서는 SQL 변환의 실행 의미를 결정 합니다.
 
-표준 쿼리 연산자에 대해 정의 된 *시퀀스*합니다. 순서가 *정렬* 의존 하는 시퀀스의 각 요소에 대 한 참조 id 및. 자세한 내용은 [표준 쿼리 연산자 개요 (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) 하거나 [표준 쿼리 연산자 개요 (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)합니다.
+표준 쿼리 연산자는 *시퀀스*에 대해 정의 됩니다. 시퀀스는 *순서가 지정* 되며 시퀀스의 각 요소에 대 한 참조 id를 사용 합니다. 자세한 내용은 [표준 쿼리 연산자 개요 (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) 또는 [표준 쿼리 연산자 개요 (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)를 참조 하세요.
 
-SQL 다루는 주로 *값 집합이 정렬 되지 않은*합니다. 순서 지정은 일반적으로 명시적으로 지정되는 후처리 작업으로 쿼리의 중간 결과가 아닌 최종 결과에 적용됩니다. ID는 값으로 정의됩니다. 따라서 SQL 쿼리 multiset를 다루는 것으로 이해 됩니다 (*모음이*) 대신 *설정*합니다.
+SQL은 정렬 되지 않은 *값 집합*을 주로 처리 합니다. 순서 지정은 일반적으로 명시적으로 지정되는 후처리 작업으로 쿼리의 중간 결과가 아닌 최종 결과에 적용됩니다. ID는 값으로 정의됩니다. 이러한 이유로 SQL 쿼리는 *집합*대신 다중 집합 (*백*)를 처리 하는 것을 인식 합니다.
 
 다음 단락에서는 표준 쿼리 연산자와 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]의 SQL 서버 공급자에 대한 해당 SQL 변환 사이의 차이점에 대해 설명합니다.
 
@@ -38,10 +38,10 @@ SQL 다루는 주로 *값 집합이 정렬 되지 않은*합니다. 순서 지�
 
 ### <a name="take-skip"></a>Take, Skip
 
-<xref:System.Linq.Enumerable.Take%2A> 및 <xref:System.Linq.Enumerable.Skip%2A> 방법이 대해서만 잘 정의 된 *순서가 지정 된 집합*합니다. 순서 없는 집합이나 다중 집합에 대한 의미 체계는 정의되어 있지 않습니다.
+<xref:System.Linq.Enumerable.Take%2A>및 <xref:System.Linq.Enumerable.Skip%2A> 메서드는 *순서가 지정 된 집합*에 대해서만 잘 정의 됩니다. 순서 없는 집합이나 다중 집합에 대한 의미 체계는 정의되어 있지 않습니다.
 
 > [!NOTE]
-> <xref:System.Linq.Enumerable.Take%2A> 및 <xref:System.Linq.Enumerable.Skip%2A>에는 SQL Server 2000에 대한 쿼리에서 사용할 경우 몇 가지 제한이 따릅니다. 자세한 내용은 "Skip 및 Take 예외 SQL Server 2000의 에서" 항목을 참조 하세요 [문제 해결](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)합니다.
+> <xref:System.Linq.Enumerable.Take%2A> 및 <xref:System.Linq.Enumerable.Skip%2A>에는 SQL Server 2000에 대한 쿼리에서 사용할 경우 몇 가지 제한이 따릅니다. 자세한 내용은 [문제 해결](troubleshooting.md)에서 "SQL Server 2000의 Skip 및 Take 예외" 항목을 참조 하세요.
 
 SQL의 순서 지정에 대한 제한 사항 때문에 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 이러한 메서드의 인수에 대한 순서 지정 작업을 메서드의 결과로 이동하려고 합니다. 예를 들어 다음 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 쿼리를 살펴보세요.
 
@@ -74,7 +74,7 @@ ORDER BY [t0].[CustomerID]
 
 다음 메서드는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 변환되지 않습니다. 가장 일반적인 이유는 순서 없는 다중 집합과 시퀀스 간의 차이 때문입니다.
 
-|연산자|설명|
+|연산자|이유|
 |---------------|---------------|
 |<xref:System.Linq.Enumerable.TakeWhile%2A>, <xref:System.Linq.Enumerable.SkipWhile%2A>|SQL 쿼리는 다중 집합에 대해서는 작동하지만 시퀀스에 대해서는 작동하지 않습니다. `ORDER BY`는 결과에 적용되는 마지막 절이어야 합니다. 따라서 이러한 두 메서드에 대한 일반 용도 변환이 없습니다.|
 |<xref:System.Linq.Enumerable.Reverse%2A>|순서 있는 집합에 대해 이 메서드의 변환이 가능하지만 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 현재 변환되지 않습니다.|
@@ -86,7 +86,7 @@ ORDER BY [t0].[CustomerID]
 
 ### <a name="null-semantics"></a>Null 의미 체계
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 null 비교 의미 체계를 SQL에 적용하지 않습니다. 비교 연산자는 구문상 동등한 SQL 항목으로 변환됩니다. 이러한 이유로 의미 체계는 서버 또는 연결 설정에 의해 정의 된 SQL 의미 체계를 반영 합니다. 예를 들어 두 개의 null 값은 기본 SQL Server 설정에서는 같지 있지만 의미 체계를 변경 하려면 설정을 변경할 수 있습니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 쿼리를 변환할 때 서버 설정을 고려하지 않습니다.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 null 비교 의미 체계를 SQL에 적용하지 않습니다. 비교 연산자는 구문상 동등한 SQL 항목으로 변환됩니다. 이러한 이유로 의미 체계에는 서버 또는 연결 설정에 정의 된 SQL 의미 체계가 반영 됩니다. 예를 들어 두 개의 null 값은 기본 SQL Server 설정에서 동일 하지 않은 것으로 간주 되지만, 설정을 변경 하 여 의미 체계를 변경할 수 있습니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 쿼리를 변환할 때 서버 설정을 고려하지 않습니다.
 
 리터럴 null을 사용한 비교는 해당 SQL 버전(`is null` 또는 `is not null`)으로 변환됩니다.
 
@@ -121,7 +121,7 @@ ORDER BY [t0].[CustomerID]
 
 - <xref:System.Linq.Enumerable.Except%2A>
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 같음 및 비교에 대 한 지원 *플랫* 인수 또는 시퀀스를 포함 하는 인수에 대 한 합니다. 단순 인수는 SQL 행에 매핑될 수 있는 형식입니다. 시퀀스를 포함하지 않는 것으로 정적으로 확인할 수 있는 하나 이상의 엔터티 형식에 대한 프로젝션은 단순 인수인 것으로 간주됩니다.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]는 *플랫* 인수에 대해 같음 및 비교를 지원 하지만 시퀀스를 포함 하거나 포함 하는 인수에 대해서는 지원 하지 않습니다. 단순 인수는 SQL 행에 매핑될 수 있는 형식입니다. 시퀀스를 포함하지 않는 것으로 정적으로 확인할 수 있는 하나 이상의 엔터티 형식에 대한 프로젝션은 단순 인수인 것으로 간주됩니다.
 
 다음은 단순 인수의 예제입니다.
 
@@ -158,7 +158,7 @@ Visual Basic 컴파일러에서 사용하는 다음과 같은 도우미 함수�
 
 ### <a name="inheritance-mapping-restrictions"></a>상속 매핑 제한
 
-자세한 내용은 [방법: 상속 계층 구조 매핑](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md)합니다.
+자세한 내용은 [방법: 상속 계층 구조](how-to-map-inheritance-hierarchies.md)를 매핑합니다.
 
 ### <a name="inheritance-in-queries"></a>쿼리의 상속
 
@@ -184,7 +184,7 @@ C# 캐스트는 프로젝션에서만 지원됩니다. 다른 위치에 사용�
 
 - `Sum`
 
-이러한 SQL Server 날짜 및 시간 형식 매핑에 대 한 자세한 내용은 참조 하세요. [SQL-CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)합니다.
+이러한 SQL Server 날짜 및 시간 형식에 매핑하는 방법에 대 한 자세한 내용은 [SQL-CLR 형식 매핑](sql-clr-type-mapping.md)을 참조 하세요.
 
 ## <a name="sql-server-2005-support"></a>SQL Server 2005 지원
 
@@ -198,33 +198,33 @@ C# 캐스트는 프로젝션에서만 지원됩니다. 다른 위치에 사용�
 
 ## <a name="sql-server-2000-support"></a>SQL Server 2000 지원
 
-다음 SQL Server 2000 제한 사항 (Microsoft SQL Server 2005에 비해)에 영향을 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 지원 합니다.
+다음 SQL Server 2000 제한 (Microsoft SQL Server 2005과 비교)은 지원 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 에 영향을 줍니다.
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Cross Apply 및 Outer Apply 연산자
 
 이러한 연산자는 SQL Server 2000에서 사용할 수 없습니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 일련의 다시 쓰기를 시도하여 해당 연산자를 적절한 조인으로 바꿉니다.
 
-`Cross Apply` 및 `Outer Apply`는 관계 탐색을 위해 생성됩니다. 이러한 다시 쓰기가 가능한 쿼리 집합은 잘 정의되어 있지 않습니다. 이 따라서 SQL Server 2000에 대 한 지원 되는 최소 쿼리 집합은 관계 탐색을 포함 하지 않는 집합입니다.
+`Cross Apply` 및 `Outer Apply`는 관계 탐색을 위해 생성됩니다. 이러한 다시 쓰기가 가능한 쿼리 집합은 잘 정의되어 있지 않습니다. 이러한 이유로 SQL Server 2000에 대해 지원 되는 최소 쿼리 집합은 관계 탐색과 관련이 없는 집합입니다.
 
 ### <a name="text--ntext"></a>text/ntext
 
-데이터 형식 `text`  /  `ntext` 에 대 한 특정 쿼리 작업에 사용할 수 없습니다 `varchar(max)`  /  `nvarchar(max)`, Microsoft SQL Server 2005에서 지원 되는 합니다.
+데이터 형식은 `text` `nvarchar(max)`  /  `varchar(max)`Microsoft SQL Server 2005에서 지원 되는에 대 한 특정 쿼리 작업에서 사용할 수 없습니다.  /  `ntext`
 
 이 제한에 대한 해결 방법은 없습니다. 특히 `Distinct()` 또는 `text` 열에 매핑된 멤버가 들어 있는 결과에서는 `ntext`를 사용할 수 없습니다.
 
 ### <a name="behavior-triggered-by-nested-queries"></a>중첩된 쿼리에 의해 트리거되는 동작
 
-SQL Server 2000 (sp4이 하) 바인더에 중첩 된 쿼리에 의해 트리거되는 몇 가지 고유한 특징이 있습니다. 이러한 작업을 트리거하는 SQL 쿼리 집합 제대로 정의 되지 않습니다. 따라서 SQL Server 예외를 일으킬 수 있는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 쿼리 집합을 정의할 수 없습니다.
+SQL Server 2000 (SP4) 바인더에는 중첩 된 쿼리에 의해 트리거되는 몇 가지 고유한 특징이 있습니다. 이러한 고유한 특징이를 트리거하는 SQL 쿼리 집합은 잘 정의 되어 있지 않습니다. 따라서 SQL Server 예외를 일으킬 수 있는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 쿼리 집합을 정의할 수 없습니다.
 
 ### <a name="skip-and-take-operators"></a>Skip 및 Take 연산자
 
-<xref:System.Linq.Enumerable.Take%2A> 및 <xref:System.Linq.Enumerable.Skip%2A>에는 SQL Server 2000에 대한 쿼리에서 사용할 경우 몇 가지 제한이 따릅니다. 자세한 내용은 "Skip 및 Take 예외 SQL Server 2000의 에서" 항목을 참조 하세요 [문제 해결](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)합니다.
+<xref:System.Linq.Enumerable.Take%2A> 및 <xref:System.Linq.Enumerable.Skip%2A>에는 SQL Server 2000에 대한 쿼리에서 사용할 경우 몇 가지 제한이 따릅니다. 자세한 내용은 [문제 해결](troubleshooting.md)에서 "SQL Server 2000의 Skip 및 Take 예외" 항목을 참조 하세요.
 
 ## <a name="object-materialization"></a>개체 구체화
 
 구체화에서는 하나 이상의 SQL 쿼리에서 반환한 행을 사용하여 CLR 개체를 만듭니다.
 
-- 다음 호출은 *로컬로 실행* 구체화의 일부로:
+- 다음 호출은 구체화의 일부로 *로컬에서 실행* 됩니다.
 
   - 생성자
 
@@ -232,13 +232,13 @@ SQL Server 2000 (sp4이 하) 바인더에 중첩 된 쿼리에 의해 트리거�
 
   - 프로젝션의 형식 캐스트
 
-- 다음 메서드를 <xref:System.Linq.Enumerable.AsEnumerable%2A> 메서드는 *로컬로 실행*합니다. 이 메서드는 즉시 실행되지 않습니다.
+- <xref:System.Linq.Enumerable.AsEnumerable%2A> 메서드 뒤에 오는 메서드는 *로컬로 실행*됩니다. 이 메서드는 즉시 실행되지 않습니다.
 
 - `struct`를 쿼리 결과의 반환 형식이나 결과 형식의 멤버로 사용할 수 있습니다. 엔터티는 클래스여야 합니다. 익명 형식은 클래스 인스턴스로 구체화되지만 명명된 구조체(비엔터티)는 프로젝션에서 사용할 수 있습니다.
 
 - 쿼리 결과에 대한 반환 형식의 멤버는 <xref:System.Linq.IQueryable%601> 형식일 수 있습니다. 이 멤버는 로컬 컬렉션으로 구체화됩니다.
 
-- 다음 메서드를 *즉시 구체화* 메서드에 적용 되는 시퀀스의:
+- 다음 메서드는 메서드가 적용 되는 시퀀스의 *즉시 구체화* 를 발생 시킵니다.
 
   - <xref:System.Linq.Enumerable.ToList%2A>
 
@@ -248,9 +248,9 @@ SQL Server 2000 (sp4이 하) 바인더에 중첩 된 쿼리에 의해 트리거�
 
 ## <a name="see-also"></a>참고자료
 
-- [참조](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [시퀀스에서 요소 반환 또는 건너뛰기](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)
-- [두 시퀀스 연결](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)
-- [두 시퀀스 간의 차집합 반환](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)
-- [두 시퀀스의 교집합 반환](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)
-- [두 시퀀스의 합집합 반환](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)
+- [참조](reference.md)
+- [시퀀스에서 요소 반환 또는 건너뛰기](return-or-skip-elements-in-a-sequence.md)
+- [두 시퀀스 연결](concatenate-two-sequences.md)
+- [두 시퀀스 간의 차집합 반환](return-the-set-difference-between-two-sequences.md)
+- [두 시퀀스의 교집합 반환](return-the-set-intersection-of-two-sequences.md)
+- [두 시퀀스의 합집합 반환](return-the-set-union-of-two-sequences.md)

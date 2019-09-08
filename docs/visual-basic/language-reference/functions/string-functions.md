@@ -4,15 +4,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 4f6203fd6ae69315e7efaaa3c17bb4132bd175d8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 917797700c3e403971ce6f48174a282b1102f127
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69930852"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799326"
 ---
 # <a name="string-functions-visual-basic"></a>문자열 함수(Visual Basic)
-다음 표에서는 문자열을 검색 하 고 조작 하는 Visual Basic 제공 하는 함수를 나열 합니다.  
+
+다음 표에서는 문자열을 검색 하 고 조작 하기 위해 <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType> 클래스에서 제공 Visual Basic는 함수를 나열 합니다. Visual Basic 내장 함수로 간주할 수 있습니다. 즉, 예제에서 보여 주는 것 처럼 클래스의 명시적 멤버로 호출할 필요가 없습니다. <xref:System.String?displayProperty=nameWithType> 클래스에서 추가 메서드 및 경우에 따라 보충 메서드를 사용할 수 있습니다. 
   
 |.NET Framework 메서드|Description|  
 |---------------------------|-----------------|  
@@ -48,33 +49,38 @@ ms.locfileid: "69930852"
   
  [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) 문을 사용 하 여 문자열을 대/소문자를 구분 하지 않는 텍스트 정렬 순서를 사용 하 여 비교할 수 있습니다 ().`Text`시스템의 로캘 () 또는 문자 (`Binary`)의 내부 이진 표현에 따라 결정 됩니다. 기본 텍스트 비교 방법은 `Binary`입니다.  
   
-## <a name="example"></a>예제  
- 이 예제에서는 `UCase` 함수는 문자열의 대문자 버전을 반환 합니다.  
+## <a name="example-ucase"></a>예제: UCase
+
+이 예제에서는 `UCase` 함수는 문자열의 대문자 버전을 반환 합니다.  
+[!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]  
   
- [!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]  
+## <a name="example-ltrim"></a>예제: LTrim
+
+이 예제에서는 합니다 `LTrim` 선행 공백을 제거 하는 함수 및 `RTrim` 문자열 변수에서 함수를 후행 공백입니다. 사용 된 `Trim` 후행 공백 모두 제거 하는 함수입니다.  
   
-## <a name="example"></a>예제  
- 이 예제에서는 합니다 `LTrim` 선행 공백을 제거 하는 함수 및 `RTrim` 문자열 변수에서 함수를 후행 공백입니다. 사용 된 `Trim` 후행 공백 모두 제거 하는 함수입니다.  
+[!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]  
   
- [!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]  
+## <a name="example-mid"></a>예제: 중소기업
+
+이 예에서는 `Mid` 함수를 사용 하 여 문자열에서 지정 된 수의 문자를 반환 합니다.  
+
+[!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]  
+
+## <a name="example-len"></a>예제: Len
+
+이 예제에서는 `Len` 를 문자열의 문자 수를 반환 합니다.  
   
-## <a name="example"></a>예제  
- 이 예에서는 `Mid` 함수를 사용 하 여 문자열에서 지정 된 수의 문자를 반환 합니다.  
+[!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]  
   
- [!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]  
+## <a name="example-instr"></a>예제: InStr
+
+이 예제에서는 `InStr` 함수 내에서 다른 어떤 문자열의 첫 번째 발생 위치를 반환 합니다.  
   
-## <a name="example"></a>예제  
- 이 예제에서는 `Len` 를 문자열의 문자 수를 반환 합니다.  
+[!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]  
   
- [!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]  
-  
-## <a name="example"></a>예제  
- 이 예제에서는 `InStr` 함수 내에서 다른 어떤 문자열의 첫 번째 발생 위치를 반환 합니다.  
-  
- [!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]  
-  
-## <a name="example"></a>예제  
- 다양 한 용도 보여 주는이 예제는 `Format` 둘 다를 사용 하 여 값 형식 함수 `String` 형식 및 사용자 정의 형식입니다. 날짜 구분 기호 (`/`)을 시간 구분 기호 (`:`), 및 AM/PM 표시기 (`t` 및 `tt`), 체제에 의해 표시 된 실제 형식이 지정 된 출력 코드를 사용 하 여 로캘 설정에 따라 달라 집니다. 경우 시간 및 개발 환경에서 표시 되는 날짜, 간단한 시간 형식 및 코드 로캘의 간단한 날짜 서식을 사용 됩니다.  
+## <a name="example-format"></a>예제: 형식
+
+다양 한 용도 보여 주는이 예제는 `Format` 둘 다를 사용 하 여 값 형식 함수 `String` 형식 및 사용자 정의 형식입니다. 날짜 구분 기호 (`/`)을 시간 구분 기호 (`:`), 및 AM/PM 표시기 (`t` 및 `tt`), 체제에 의해 표시 된 실제 형식이 지정 된 출력 코드를 사용 하 여 로캘 설정에 따라 달라 집니다. 경우 시간 및 개발 환경에서 표시 되는 날짜, 간단한 시간 형식 및 코드 로캘의 간단한 날짜 서식을 사용 됩니다.  
   
 > [!NOTE]
 > 24 시간 시계를 AM/PM 표시기를 사용 하는 로캘의 (`t` 고 `tt`) 아무 것도 표시 합니다.  
@@ -86,3 +92,4 @@ ms.locfileid: "69930852"
 - [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic 런타임 라이브러리 멤버](../../../visual-basic/language-reference/runtime-library-members.md)
 - [문자열 조작 요약](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
+- [System.string 클래스 메서드]<xref:System.String#methods?displayProperty=nameWithType>

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 44e99db2d75fcd8e84f91f0afc8da54ff6c3f707
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8128fd3cab0ca20da87a1a98c2657aefab96beaf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931162"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779822"
 ---
 # <a name="query-projections-wcf-data-services"></a>쿼리 프로젝션(WCF Data Services)
 
@@ -102,7 +102,7 @@ URI에서 `$select` 쿼리 옵션을 사용 하거나 LINQ 쿼리에서 [select]
 
 쿼리 프로젝션을 정의할 때 다음 사항을 추가로 고려해야 합니다.
 
-- Atom 형식에 대한 사용자 지정 피드를 정의하는 경우 사용자 지정 매핑이 정의되어 있는 모든 엔터티 속성이 프로젝션에 포함되도록 해야 합니다. 매핑된 엔터티 속성이 프로젝션에 포함되지 않는 경우 데이터가 손실될 수 있습니다. 자세한 내용은 [사용자 지정 피드](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md)합니다.
+- Atom 형식에 대한 사용자 지정 피드를 정의하는 경우 사용자 지정 매핑이 정의되어 있는 모든 엔터티 속성이 프로젝션에 포함되도록 해야 합니다. 매핑된 엔터티 속성이 프로젝션에 포함되지 않는 경우 데이터가 손실될 수 있습니다. 자세한 내용은 [사용자 지정 피드](feed-customization-wcf-data-services.md)합니다.
 
 - 데이터 서비스의 데이터 모델에서 엔터티의 모든 속성을 포함하지 않는 프로젝션된 형식에 삽입이 수행되는 경우 클라이언트에서 프로젝션에 포함되지 않은 속성이 기본값으로 설정됩니다.
 
@@ -112,10 +112,10 @@ URI에서 `$select` 쿼리 옵션을 사용 하거나 LINQ 쿼리에서 [select]
 
 - 프로젝션에 탐색 속성이 포함된 경우 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 메서드를 호출하지 않고도 관련 개체가 암시적으로 로드됩니다. <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 메서드는 프로젝션된 쿼리에서 사용할 수 없습니다.
 
-- 클라이언트의 쿼리 프로젝션 쿼리는 요청 URI에서 `$select` 쿼리 옵션을 사용하도록 변환됩니다. 프로젝션을 사용하는 쿼리가 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 쿼리 옵션을 지원하지 않는 이전 버전의 `$select`에 대해 실행되는 경우 오류가 반환됩니다. 이러한 문제는 데이터 서비스에 대한 <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>의 <xref:System.Data.Services.DataServiceBehavior>이 <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1> 값으로 설정된 경우에도 발생할 수 있습니다. 자세한 내용은 [데이터 서비스 버전 관리](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)합니다.
+- 클라이언트의 쿼리 프로젝션 쿼리는 요청 URI에서 `$select` 쿼리 옵션을 사용하도록 변환됩니다. 프로젝션을 사용하는 쿼리가 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 쿼리 옵션을 지원하지 않는 이전 버전의 `$select`에 대해 실행되는 경우 오류가 반환됩니다. 이러한 문제는 데이터 서비스에 대한 <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>의 <xref:System.Data.Services.DataServiceBehavior>이 <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1> 값으로 설정된 경우에도 발생할 수 있습니다. 자세한 내용은 [데이터 서비스 버전 관리](data-service-versioning-wcf-data-services.md)합니다.
 
-자세한 내용은 [방법: 프로젝트 쿼리 결과](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)
+자세한 내용은 [방법: 프로젝트 쿼리 결과](how-to-project-query-results-wcf-data-services.md)
 
 ## <a name="see-also"></a>참고자료
 
-- [데이터 서비스 쿼리](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+- [데이터 서비스 쿼리](querying-the-data-service-wcf-data-services.md)

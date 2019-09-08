@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 27ad89f1910bc7bb08a23c9fdb0d50828fb8b5e6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e8a22e958740b69ba0e09bf062bf4d86075c3ff1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741441"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777015"
 ---
 # <a name="setnonassemblyflags-method"></a>SetNonAssemblyFlags 메서드
-어셈블리와 관련 되지 않는 플래그를 설정 합니다.  
+어셈블리와 관련 없는 플래그를 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,10 +42,10 @@ HRESULT SetNonAssemblyFlags(
  메서드가 성공 하면 S_OK를 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Alink.h 필요  
+ Alink 필요  
   
 ## <a name="see-also"></a>참고자료
 
-- [IALink 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink 인터페이스](ialink-interface.md)
+- [IALink2 인터페이스](ialink2-interface.md)
+- [ALink API](index.md)

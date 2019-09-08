@@ -2,12 +2,12 @@
 title: XML 스키마 제약 조건 및 관계
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
-ms.openlocfilehash: 1ffb11814be14b3f9601abaad6e95c00f9f7a634
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 76af1c2e9d85d18a68b8c0a947dfba3b3291326c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202984"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784193"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>XML 스키마 제약 조건 및 관계
 XSD (XML 스키마 정의 언어) 스키마에서는 **msdata: Relationship** 주석을 사용 하 여 제약 조건 (unique, key 및 keyref 제약 조건) 및 관계를 지정할 수 있습니다. 이 항목에서는 XML 스키마에 지정된 제약 조건과 관계를 해석하여 <xref:System.Data.DataSet>을 생성하는 방법을 설명합니다.  
@@ -189,4 +189,4 @@ OrderDetail(OrderNumber, ItemNumber, Order_Id)
 ## <a name="see-also"></a>참고자료
 
 - [XML 스키마에서 데이터 세트 관계형 구조 파생(XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 개요](../ado-net-overview.md)

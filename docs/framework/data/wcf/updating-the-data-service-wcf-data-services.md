@@ -8,18 +8,18 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: f65e3775c260eedc1d76f209d5cb76524d61b939
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5cf7a6e563069e35a4ac0fe729a616dc1c56bdb5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953210"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779750"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>데이터 서비스 업데이트(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리를 사용 하 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 여 피드를 사용 하는 경우 라이브러리는 피드의 항목을 클라이언트 데이터 서비스 클래스의 인스턴스로 변환 합니다. 이러한 데이터 서비스 클래스는 <xref:System.Data.Services.Client.DataServiceContext>가 속해 있는 <xref:System.Data.Services.Client.DataServiceQuery%601>를 사용하여 추적됩니다. 클라이언트는 <xref:System.Data.Services.Client.DataServiceContext>의 메서드를 사용하여 보고하는 엔터티의 변경 내용을 추적합니다. 클라이언트는 이러한 메서드를 사용하여 추가된 엔터티와 삭제된 엔터티를 추적하고 속성 값 또는 엔터티 인스턴스 간의 관계에 대한 변경 내용도 추적할 수 있습니다. 이렇게 추적된 변경 내용은 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 메서드를 호출할 때 REST 기반 작업으로 데이터 서비스에 전송됩니다.  
   
 > [!NOTE]
-> <xref:System.Data.Services.Client.DataServiceCollection%601>의 인스턴스를 사용하여 데이터를 컨트롤에 바인딩하는 경우 바인딩된 컨트롤의 데이터에 대한 변경 내용이 <xref:System.Data.Services.Client.DataServiceContext>에 자동으로 보고됩니다. 자세한 내용은 [컨트롤에 데이터 바인딩](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)합니다.  
+> <xref:System.Data.Services.Client.DataServiceCollection%601>의 인스턴스를 사용하여 데이터를 컨트롤에 바인딩하는 경우 바인딩된 컨트롤의 데이터에 대한 변경 내용이 <xref:System.Data.Services.Client.DataServiceContext>에 자동으로 보고됩니다. 자세한 내용은 [컨트롤에 데이터 바인딩](binding-data-to-controls-wcf-data-services.md)합니다.  
   
 ## <a name="adding-modifying-and-changing-entities"></a>엔터티 추가, 수정 및 변경  
  Visual Studio의 **서비스 참조 추가** 대화 상자를 사용 하 여 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드에 대 한 참조를 추가 하는 경우 생성 되는 클라이언트 데이터 서비스 클래스에는 각각의 nullable이 아닌 엔터티 속성에 대해 하나의 매개 변수를 사용 하는 정적 *Create* 메서드가 있습니다. . 다음 예제와 같이 이 메서드를 사용하여 엔터티 형식 클래스 인스턴스를 만들 수 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "69953210"
  [!code-csharp[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#deleteproductspecific)]
  [!code-vb[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#deleteproductspecific)]  
   
- 자세한 내용은 [방법: 엔터티](../../../../docs/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services.md)추가, 수정 및 삭제  
+ 자세한 내용은 [방법: 엔터티](how-to-add-modify-and-delete-entities-wcf-data-services.md)추가, 수정 및 삭제  
   
 ## <a name="attaching-entities"></a>엔터티 연결  
  클라이언트 라이브러리를 사용하면 먼저 쿼리를 실행하여 엔터티를 <xref:System.Data.Services.Client.DataServiceContext>로 로드하지 않고 엔터티 업데이트를 저장할 수 있습니다. <xref:System.Data.Services.Client.DataServiceContext.AttachTo%2A> 메서드를 사용하여 <xref:System.Data.Services.Client.DataServiceContext>의 특정 엔터티 집합에 기존 개체를 연결합니다. 그런 다음 개체를 수정하고 변경 내용을 데이터 서비스에 저장할 수 있습니다. 다음 예제에서는 변경된 고객 개체가 컨텍스트에 연결된 다음 <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A>가 호출되기 전에 <xref:System.Data.Services.Client.EntityStates.Modified>가 호출되어 연결된 개체를 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>로 표시합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "69953210"
   
 - <xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29> 매개 변수를 사용하는 `etag` 메서드 오버로드는 eTag 값과 함께 받은 엔터티 개체를 연결할 때 사용됩니다. 이 eTag 값은 연결된 개체의 변경 내용을 저장할 때 동시성을 확인하는 데 사용됩니다.  
   
- 자세한 내용은 [방법: 기존 엔터티를 DataServiceContext](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md)에 연결 합니다.  
+ 자세한 내용은 [방법: 기존 엔터티를 DataServiceContext](attach-an-existing-entity-to-dc-wcf-data.md)에 연결 합니다.  
   
 ## <a name="creating-and-modifying-relationship-links"></a>관계 링크 만들기 및 수정  
  <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> 메서드 또는 **서비스 참조 추가** 대화 상자에서 생성 하는 <xref:System.Data.Services.Client.DataServiceContext> 클래스의 적절 한 *AddTo* 메서드를 사용 하 여 새 엔터티를 추가 하는 경우 새 엔터티와 관련 엔터티 간의 관계는 자동으로 정의 되지 않습니다.  
@@ -88,16 +88,16 @@ ms.locfileid: "69953210"
  [!code-csharp[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#setnavprops)]
  [!code-vb[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#setnavprops)]  
   
- 자세한 내용은 [방법: 엔터티 관계](../../../../docs/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services.md)를 정의 합니다.  
+ 자세한 내용은 [방법: 엔터티 관계](how-to-define-entity-relationships-wcf-data-services.md)를 정의 합니다.  
   
 ## <a name="saving-changes"></a>변경 내용 저장  
- 변경 내용이 <xref:System.Data.Services.Client.DataServiceContext> 인스턴스에서 추적되기는 하지만 서버로 즉시 전송되지는 않습니다. 지정한 작업에 대해 필요한 변경을 모두 마치면 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>를 호출하여 모든 변경 내용을 데이터 서비스에 전송합니다. 자세한 내용은 [데이터 서비스 컨텍스트 관리](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)를 참조 하세요. <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> 및 <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A> 메서드를 사용하여 변경 내용을 비동기적으로 저장할 수도 있습니다. 자세한 내용은 [비동기 작업](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)합니다.  
+ 변경 내용이 <xref:System.Data.Services.Client.DataServiceContext> 인스턴스에서 추적되기는 하지만 서버로 즉시 전송되지는 않습니다. 지정한 작업에 대해 필요한 변경을 모두 마치면 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>를 호출하여 모든 변경 내용을 데이터 서비스에 전송합니다. 자세한 내용은 [데이터 서비스 컨텍스트 관리](managing-the-data-service-context-wcf-data-services.md)를 참조 하세요. <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> 및 <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A> 메서드를 사용하여 변경 내용을 비동기적으로 저장할 수도 있습니다. 자세한 내용은 [비동기 작업](asynchronous-operations-wcf-data-services.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
 
-- [WCF Data Services 클라이언트 라이브러리](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [데이터 서비스 쿼리](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
-- [비동기 작업](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)
-- [일괄 처리 작업](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)
-- [개체 구체화](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)
-- [데이터 서비스 컨텍스트 관리](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)
+- [WCF Data Services 클라이언트 라이브러리](wcf-data-services-client-library.md)
+- [데이터 서비스 쿼리](querying-the-data-service-wcf-data-services.md)
+- [비동기 작업](asynchronous-operations-wcf-data-services.md)
+- [일괄 처리 작업](batching-operations-wcf-data-services.md)
+- [개체 구체화](object-materialization-wcf-data-services.md)
+- [데이터 서비스 컨텍스트 관리](managing-the-data-service-context-wcf-data-services.md)

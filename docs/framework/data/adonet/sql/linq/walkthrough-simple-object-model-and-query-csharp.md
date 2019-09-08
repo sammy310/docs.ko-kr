@@ -2,12 +2,12 @@
 title: '연습: 간단한 개체 모델 및 쿼리(C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: 4661dffa037504d9157f30af12d4308a4d7644a2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a9b3b57e37331cd13f2cd30b8a7663f2fb39d8c1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946919"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792135"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>연습: 간단한 개체 모델 및 쿼리(C#)
 
@@ -23,7 +23,7 @@ ms.locfileid: "69946919"
 
 - 이 연습에서는 전용 폴더("c:\linqtest5")를 사용하여 파일을 저장합니다. 연습을 시작하기 전에 먼저 이 폴더를 만듭니다.
 
-- 이 연습을 수행하려면 Northwind 샘플 데이터베이스가 있어야 합니다. 이 데이터베이스가 개발 컴퓨터에 없는 경우 Microsoft 다운로드 사이트에서 다운로드할 수 있습니다. 지침은 [샘플 데이터베이스 다운로드](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)를 참조 하세요. 이 데이터베이스를 다운로드한 후 파일을 c:\linqtest5 폴더에 복사합니다.
+- 이 연습을 수행하려면 Northwind 샘플 데이터베이스가 있어야 합니다. 이 데이터베이스가 개발 컴퓨터에 없는 경우 Microsoft 다운로드 사이트에서 다운로드할 수 있습니다. 지침은 [샘플 데이터베이스 다운로드](downloading-sample-databases.md)를 참조 하세요. 이 데이터베이스를 다운로드한 후 파일을 c:\linqtest5 폴더에 복사합니다.
 
 ## <a name="overview"></a>개요
 
@@ -140,7 +140,7 @@ ms.locfileid: "69946919"
 2. F5 키를 눌러 애플리케이션을 디버깅합니다.
 
     > [!NOTE]
-    > 응용 프로그램에서 런타임 오류를 생성 하는 경우 [연습에서 학습](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)의 문제 해결 섹션을 참조 하세요.
+    > 응용 프로그램에서 런타임 오류를 생성 하는 경우 [연습에서 학습](learning-by-walkthroughs.md)의 문제 해결 섹션을 참조 하세요.
 
      콘솔 창의 쿼리 결과는 다음과 같습니다.
 
@@ -160,10 +160,10 @@ ms.locfileid: "69946919"
 
 ## <a name="next-steps"></a>다음 단계
 
-[연습: 관계 간 쿼리 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md) 토픽은이 연습을 종료 하는 위치에서 계속 됩니다. 관계 간 쿼리 연습에서는에서 관계형 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 데이터베이스의 *조인과* 유사 하 게 테이블을 쿼리 하는 방법을 보여 줍니다.
+[연습: 관계 간 쿼리 (C#)](walkthrough-querying-across-relationships-csharp.md) 토픽은이 연습을 종료 하는 위치에서 계속 됩니다. 관계 간 쿼리 연습에서는에서 관계형 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 데이터베이스의 *조인과* 유사 하 게 테이블을 쿼리 하는 방법을 보여 줍니다.
 
 관계 간 쿼리 연습을 수행하려면 방금 완료한 연습의 솔루션을 저장해야 합니다.
 
 ## <a name="see-also"></a>참고자료
 
-- [연습으로 학습](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [연습으로 학습](learning-by-walkthroughs.md)

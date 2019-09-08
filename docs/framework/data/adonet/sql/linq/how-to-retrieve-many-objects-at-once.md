@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 18aff4d8-bde8-461b-9960-ccabb24e9d22
-ms.openlocfilehash: dd53c2fd16a82ce0f69a33e0b7d7ffef7815b91b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 48cdb47bec35b5315e03629d3a01657136bf7ed2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877151"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781678"
 ---
 # <a name="how-to-retrieve-many-objects-at-once"></a>방법: 한 번에 여러 개체 검색
 <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>를 사용하여 한 쿼리에서 여러 개체를 검색할 수 있습니다.  
@@ -23,4 +23,4 @@ ms.locfileid: "61877151"
   
 ## <a name="see-also"></a>참고자료
 
-- [쿼리 개념](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [쿼리 개념](query-concepts.md)

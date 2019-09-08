@@ -2,12 +2,12 @@
 title: 데이터 세트 제약 조건에 XSD(XML 스키마) 제약 조건 매핑
 ms.date: 03/30/2017
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
-ms.openlocfilehash: b0082b534b8df10ac5277cf2f5aa5b2d2e40c11b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: b44c3193e1b9e2e52e086111eab0ab0b0cae5c97
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204625"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786080"
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>데이터 세트 제약 조건에 XSD(XML 스키마) 제약 조건 매핑
 XSD(XML 스키마 정의 언어)를 사용하여 요소와 특성에서 제약 조건을 지정할 수 있습니다. Xml 스키마를의 <xref:System.Data.DataSet>관계형 스키마에 매핑할 때 xml 스키마 제약 조건은 **데이터 집합**내의 테이블 및 열에 대 한 적절 한 관계형 제약 조건에 매핑됩니다.  
@@ -45,4 +45,4 @@ XSD(XML 스키마 정의 언어)를 사용하여 요소와 특성에서 제약 �
   
 ## <a name="see-also"></a>참고자료
 
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 개요](../ado-net-overview.md)

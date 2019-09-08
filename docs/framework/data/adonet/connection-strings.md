@@ -2,12 +2,12 @@
 title: ADO.NET의 연결 문자열
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 02fe8d984f1287673477bb142b3f9626e248898e
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 8f726ca71ba955ef542d15e0e8318c2b310e607e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363754"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784910"
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET의 연결 문자열
 
@@ -57,23 +57,23 @@ Keyword=a=b=c
 
 실수를 입력 하면 오류가 발생할 수 있습니다. 예 `Integrated Security=true` 를 들어는 유효 `IntegratedSecurity=true` 하지만 오류가 발생 합니다.
 
-유효성 검사 사용자 입력에서 런타임에 수동으로 생성 된 연결 문자열은 문자열 삽입 공격에 취약 하 고 데이터 원본의 보안을 위협 합니다. 이러한 문제를 해결 하기 위해 *ADO.NET* 2.0에는 각 *.NET Framework* 데이터 공급자에 대 한 [연결 문자열 빌더가](../../../../docs/framework/data/adonet/connection-string-builders.md) 도입 되었습니다. 이러한 연결 문자열 작성기는 매개 변수를 강력한 형식의 속성으로 노출 하 고, 연결 문자열을 데이터 원본으로 보내기 전에 유효성을 검사할 수 있도록 합니다.
+유효성 검사 사용자 입력에서 런타임에 수동으로 생성 된 연결 문자열은 문자열 삽입 공격에 취약 하 고 데이터 원본의 보안을 위협 합니다. 이러한 문제를 해결 하기 위해 *ADO.NET* 2.0에는 각 *.NET Framework* 데이터 공급자에 대 한 [연결 문자열 빌더가](connection-string-builders.md) 도입 되었습니다. 이러한 연결 문자열 작성기는 매개 변수를 강력한 형식의 속성으로 노출 하 고, 연결 문자열을 데이터 원본으로 보내기 전에 유효성을 검사할 수 있도록 합니다.
 
 ## <a name="in-this-section"></a>섹션 내용
 
-[연결 문자열 작성기](../../../../docs/framework/data/adonet/connection-string-builders.md)\
+[연결 문자열 작성기](connection-string-builders.md)\
 `ConnectionStringBuilder` 클래스를 사용하여 런타임에 유효한 연결 문자열을 구성하는 방법을 보여 줍니다.
 
-[연결 문자열 및 구성 파일](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)\
+[연결 문자열 및 구성 파일](connection-strings-and-configuration-files.md)\
 구성 파일에서 연결 문자열을 저장하고 검색하는 방법을 보여 줍니다.
 
-[연결 문자열 구문](../../../../docs/framework/data/adonet/connection-string-syntax.md)\
+[연결 문자열 구문](connection-string-syntax.md)\
 `SqlClient`, `OracleClient`, `OleDb` 및 `Odbc`에 대한 공급자별 연결 문자열을 구성하는 방법을 설명합니다.
 
-[연결 정보 보호](../../../../docs/framework/data/adonet/protecting-connection-information.md)\
+[연결 정보 보호](protecting-connection-information.md)\
 데이터 소스 연결에 사용되는 정보를 보호하는 기법을 보여 줍니다.
 
 ## <a name="see-also"></a>참고자료
 
 - [데이터 소스에 연결](/cpp/data/odbc/connecting-to-a-data-source)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 개요](ado-net-overview.md)

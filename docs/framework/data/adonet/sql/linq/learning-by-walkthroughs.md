@@ -2,12 +2,12 @@
 title: 연습으로 학습
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: f1061842343d7a700d3af5da5fdc6aec2f79396d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4beb9944a13fd2f76d7305b4d84230fcc33483be
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929220"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781321"
 ---
 # <a name="learning-by-walkthroughs"></a>연습으로 학습
 설명서 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 에서는 몇 가지 연습을 제공 합니다. 이 항목에서는 몇 가지 일반적인 연습 문제와 해결 방법을 살펴보고 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]을 배울 수 있는 여러 초급 수준 연습에 대한 링크를 제공합니다.  
@@ -22,22 +22,22 @@ ms.locfileid: "69929220"
   
 |목표|Visual Basic|C#|  
 |---------------|------------------|---------|  
-|엔터티 클래스를 만들고 단순 쿼리를 실행합니다.|[연습: 단순 개체 모델 및 쿼리 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[연습: 간단한 개체 모델 및 쿼리 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
-|두 번째 클래스를 추가하고 좀 더 복잡한 쿼리를 실행합니다.<br /><br /> 이 연습을 수행하려면 이전 연습을 완료해야 합니다.|[연습: 관계 간 쿼리 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[연습: 관계 간 쿼리 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
-|데이터베이스에서 항목을 추가, 변경 및 삭제합니다.|[연습: 데이터 조작 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)|[연습: 데이터 조작 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)|  
-|저장 프로시저를 사용합니다.|[연습: 저장 프로시저만 사용 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[연습: 저장 프로시저만 사용 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
+|엔터티 클래스를 만들고 단순 쿼리를 실행합니다.|[연습: 단순 개체 모델 및 쿼리 (Visual Basic)](walkthrough-simple-object-model-and-query-visual-basic.md)|[연습: 간단한 개체 모델 및 쿼리 (C#)](walkthrough-simple-object-model-and-query-csharp.md)|  
+|두 번째 클래스를 추가하고 좀 더 복잡한 쿼리를 실행합니다.<br /><br /> 이 연습을 수행하려면 이전 연습을 완료해야 합니다.|[연습: 관계 간 쿼리 (Visual Basic)](walkthrough-querying-across-relationships-visual-basic.md)|[연습: 관계 간 쿼리 (C#)](walkthrough-querying-across-relationships-csharp.md)|  
+|데이터베이스에서 항목을 추가, 변경 및 삭제합니다.|[연습: 데이터 조작 (Visual Basic)](walkthrough-manipulating-data-visual-basic.md)|[연습: 데이터 조작 (C#)](walkthrough-manipulating-data-csharp.md)|  
+|저장 프로시저를 사용합니다.|[연습: 저장 프로시저만 사용 (Visual Basic)](walkthrough-using-only-stored-procedures-visual-basic.md)|[연습: 저장 프로시저만 사용 (C#)](walkthrough-using-only-stored-procedures-csharp.md)|  
   
 ## <a name="general"></a>일반  
  일반적으로 다음과 같은 정보가 이러한 연습과 관련됩니다.  
   
 - 환경: 각 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 연습에서는 Visual Studio를 IDE (통합 개발 환경)로 사용 합니다.  
   
-- SQL 엔진: 이러한 연습은 SQL Server Express를 사용 하 여 구현 되도록 작성 되었습니다. SQL Server Express가 없을 경우 무료로 다운로드할 수 있습니다. 자세한 내용은 [샘플 데이터베이스 다운로드](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)를 참조 하세요.  
+- SQL 엔진: 이러한 연습은 SQL Server Express를 사용 하 여 구현 되도록 작성 되었습니다. SQL Server Express가 없을 경우 무료로 다운로드할 수 있습니다. 자세한 내용은 [샘플 데이터베이스 다운로드](downloading-sample-databases.md)를 참조 하세요.  
   
     > [!NOTE]
-    > [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 연습에서는 파일 이름을 연결 문자열로 사용합니다. 간단하게 파일 이름으로 지정하는 것은 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]이 SQL Server Express 사용자에게 제공하는 편리한 기능으로 항상 보안 문제에 주의해야 합니다. 자세한 내용은 [LINQ to SQL의 보안](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)을 참조 하세요.  
+    > [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 연습에서는 파일 이름을 연결 문자열로 사용합니다. 간단하게 파일 이름으로 지정하는 것은 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]이 SQL Server Express 사용자에게 제공하는 편리한 기능으로 항상 보안 문제에 주의해야 합니다. 자세한 내용은 [LINQ to SQL의 보안](security-in-linq-to-sql.md)을 참조 하세요.  
   
-- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 연습을 수행하려면 일반적으로 Northwind 샘플 데이터베이스가 있어야 합니다. 자세한 내용은 [샘플 데이터베이스 다운로드](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)를 참조 하세요.  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 연습을 수행하려면 일반적으로 Northwind 샘플 데이터베이스가 있어야 합니다. 자세한 내용은 [샘플 데이터베이스 다운로드](downloading-sample-databases.md)를 참조 하세요.  
   
 - 연습에 표시 되는 대화 상자와 메뉴 명령은 활성 설정 또는 Visual Studio 버전에 따라 도움말에 설명 된 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 클릭합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](/visualstudio/ide/personalizing-the-visual-studio-ide)을 참조하세요.  
   
@@ -89,4 +89,4 @@ ms.locfileid: "69929220"
   
 ## <a name="see-also"></a>참고자료
 
-- [시작](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+- [시작](getting-started.md)

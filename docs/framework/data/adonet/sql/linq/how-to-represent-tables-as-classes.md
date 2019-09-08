@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 84dda12b-88a2-4cd2-92b3-8db87b28d14c
-ms.openlocfilehash: ff943fbc7ae137128d6c635fd2366ad14cf70d15
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1169def4e0180b1d14103d4a968ff3ed56f63d0c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620028"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781754"
 ---
 # <a name="how-to-represent-tables-as-classes"></a>방법: 클래스로 테이블 표현
-사용 된 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.TableAttribute> 클래스를 데이터베이스 테이블과 연결 된 엔터티 클래스로 지정 하는 특성입니다.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 특성을사용하여클래스를데이터베이스테이블과연결된<xref:System.Data.Linq.Mapping.TableAttribute> 엔터티 클래스로 지정 합니다.  
   
 ### <a name="to-map-a-class-to-a-database-table"></a>데이터베이스 테이블에 클래스를 매핑하려면  
   
@@ -29,5 +29,5 @@ ms.locfileid: "64620028"
   
 ## <a name="see-also"></a>참고자료
 
-- [LINQ to SQL 개체 모델](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [방법: 코드 편집기를 사용 하 여 엔터티 클래스 사용자 지정](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [LINQ to SQL 개체 모델](the-linq-to-sql-object-model.md)
+- [방법: 코드 편집기를 사용 하 여 엔터티 클래스 사용자 지정](how-to-customize-entity-classes-by-using-the-code-editor.md)

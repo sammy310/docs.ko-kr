@@ -2,12 +2,12 @@
 title: 안전한 클라이언트 응용 프로그램
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-ms.openlocfilehash: 1312ddc079bdf8f08aebe8eb27e4bab9bf914fa8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 15d2b2199344644392be0e9a530c046a77db8523
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963161"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794376"
 ---
 # <a name="secure-client-applications"></a>안전한 클라이언트 응용 프로그램
 일반적으로 응용 프로그램은 데이터 손실을 야기하거나 시스템을 손상시킬 수 있는 취약성으로부터 보호되어야 하는 다양한 부분으로 구성됩니다. 안전한 사용자 인터페이스를 만들면 공격자가 데이터나 시스템 리소스에 액세스하기 전에 이를 차단함으로써 여러 가지 문제를 예방할 수 있습니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "69963161"
  [ASP.NET 웹 페이지에서 사용자 입력 유효성 검사](https://docs.microsoft.com/previous-versions/aspnet/7kh55542(v=vs.100))  
  ASP.NET 유효성 검사 컨트롤을 통한 사용자 입력 유효성 검사에 대해 간략하게 설명합니다.  
   
- [Windows Forms에 사용자 입력](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
+ [Windows Forms에 사용자 입력](../../winforms/user-input-in-windows-forms.md)  
  Windows Forms 응용 프로그램의 마우스 및 키보드 입력에 대한 유효성 검사와 관련된 정보 및 링크를 제공합니다.  
   
  [.NET Framework 정규식](../../../standard/base-types/regular-expressions.md)  
@@ -33,10 +33,10 @@ ms.locfileid: "69963161"
 ## <a name="windows-applications"></a>Windows 애플리케이션  
  예전에는 일반적으로 Windows 응용 프로그램이 모든 권한으로 실행되었습니다. .NET Framework에서는 CAS(코드 액세스 보안)를 사용하여 Windows 응용 프로그램에서의 코드 실행을 제한하는 인프라를 제공합니다. 하지만 CAS만으로는 응용 프로그램을 보호하기에 부족합니다.  
   
- [Windows Forms 보안](../../../../docs/framework/winforms/windows-forms-security.md)  
+ [Windows Forms 보안](../../winforms/windows-forms-security.md)  
  Windows Forms 응용 프로그램의 보안을 유지하는 방법을 설명하며 관련 항목 링크를 제공합니다.  
   
- [Windows Forms 및 관리되지 않는 응용 프로그램](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
+ [Windows Forms 및 관리되지 않는 응용 프로그램](../../winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  Windows Forms 응용 프로그램에서 관리되지 않는 응용 프로그램과 상호 작용하는 방법에 대해 설명합니다.  
   
  [Windows Forms에 대한 ClickOnce 배포](../../winforms/clickonce-deployment-for-windows-forms.md)  
@@ -63,12 +63,12 @@ ms.locfileid: "69963161"
 |--------------|-----------------|  
 |[원격 응용 프로그램 구성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b8tysty8(v=vs.100))|자주 발생하는 문제를 피할 수 있도록 원격 응용 프로그램을 구성하는 방법에 대해 설명합니다.|  
 |[원격 서비스의 보안](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9hwst9th(v=vs.100))|인증 및 암호화에 대해 설명하고 원격 통신과 관련한 추가 보안 항목을 제공합니다.|  
-|[보안 및 원격 기능 고려 사항](../../../../docs/framework/misc/security-and-remoting-considerations.md)|보호되는 개체 및 응용 프로그램 도메인 간의 보안 문제에 대해 설명합니다.|  
+|[보안 및 원격 기능 고려 사항](../../misc/security-and-remoting-considerations.md)|보호되는 개체 및 응용 프로그램 도메인 간의 보안 문제에 대해 설명합니다.|  
   
 ## <a name="see-also"></a>참고자료
 
-- [ADO.NET 응용 프로그램 보안](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [ADO.NET 응용 프로그램 보안](securing-ado-net-applications.md)
 - [데이터 액세스 전략에 대 한 권장 사항](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [응용 프로그램 보안](/visualstudio/ide/securing-applications)
-- [연결 정보 보호](../../../../docs/framework/data/adonet/protecting-connection-information.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [연결 정보 보호](protecting-connection-information.md)
+- [ADO.NET 개요](ado-net-overview.md)

@@ -1,19 +1,19 @@
 ---
-title: 콜백을 사용하는 Windows 애플리케이션
+title: 콜백을 사용하는 Windows 응용 프로그램
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
-ms.openlocfilehash: 1efb30581642faba3e839357ef9d6f8d6c8869e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f4aade2bdcbccf99c0b7259e8e2dc3a750855ba
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780161"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780675"
 ---
-# <a name="windows-applications-using-callbacks"></a>콜백을 사용하는 Windows 애플리케이션
-대부분의 비동기 처리 시나리오에서 사용자는 데이터베이스 작업을 시작하면서 해당 데이터베이스 작업이 완료되기 전에 다른 프로세스를 계속해서 실행하고자 합니다. 그러나 많은 시나리오에서는 일단 데이터베이스 작업이 종료된 후 다른 작업을 수행해야 합니다. 예를 들어, Windows 애플리케이션에서는 장기 실행 작업을 배경 스레드에 위임하면서 사용자 인터페이스 스레드가 응답을 유지하도록 할 수 있습니다. 그러나 데이터베이스 작업이 완료되면 결과를 사용하여 폼을 채웁니다. 이러한 종류의 시나리오는 콜백을 사용할 때 가장 효과적으로 구현됩니다.  
+# <a name="windows-applications-using-callbacks"></a>콜백을 사용하는 Windows 응용 프로그램
+대부분의 비동기 처리 시나리오에서 사용자는 데이터베이스 작업을 시작하면서 해당 데이터베이스 작업이 완료되기 전에 다른 프로세스를 계속해서 실행하고자 합니다. 그러나 많은 시나리오에서는 일단 데이터베이스 작업이 종료된 후 다른 작업을 수행해야 합니다. 예를 들어, Windows 응용 프로그램에서는 장기 실행 작업을 배경 스레드에 위임하면서 사용자 인터페이스 스레드가 응답을 유지하도록 할 수 있습니다. 그러나 데이터베이스 작업이 완료되면 결과를 사용하여 폼을 채웁니다. 이러한 종류의 시나리오는 콜백을 사용할 때 가장 효과적으로 구현됩니다.  
   
  콜백을 정의하려면 <xref:System.AsyncCallback>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> 또는 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> 메서드에 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> 대리자를 지정합니다. 이 대리자는 작업이 완료될 때 호출됩니다. <xref:System.Data.SqlClient.SqlCommand>에 대한 참조를 대리자에게 전달하여 <xref:System.Data.SqlClient.SqlCommand> 개체에 보다 손쉽게 액세스하고 전역 변수를 사용하지 않고도 적절한 `End` 메서드를 호출할 수 있습니다.  
   
@@ -377,5 +377,5 @@ private void Form1_Load(object sender, System.EventArgs e)
   
 ## <a name="see-also"></a>참고자료
 
-- [비동기 작업](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [비동기 작업](asynchronous-operations.md)
+- [ADO.NET 개요](../ado-net-overview.md)

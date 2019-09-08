@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-ms.openlocfilehash: 496d6f6ffef8d15e368979a67a8beed62ab86c38
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 481a56f923c4218cd8689c578ce990785aee0ab3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918185"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782717"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>DataView로 정렬(LINQ to DataSet)
 특정 조건을 기준으로 데이터를 정렬한 다음 UI 컨트롤을 통해 클라이언트에 데이터를 제공하는 기능은 데이터 바인딩의 중요한 기능입니다. <xref:System.Data.DataView>에서는 데이터를 정렬하여 특정 정렬 기준에 따라 정렬된 데이터 행을 반환하는 여러 방법을 제공합니다. 문자열 기반 정렬 기능 외에도를 <xref:System.Data.DataView> 사용 하 여 정렬 조건에 식을 사용할 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 수 있습니다. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]식을 사용 하면 문자열 기반 정렬에 비해 더 복잡 하 고 강력한 정렬 작업을 수행할 수 있습니다. 이 항목에서는 <xref:System.Data.DataView>를 사용하여 정렬하는 두 가지 방법을 모두 설명합니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "69918185"
   
  식 기반 정렬은 간단한 문자열 기반 정렬에 비해 강력하고 복잡한 정렬 기능을 제공합니다. 문자열 기반 정렬 및 식 기반 정렬은 함께 사용할 수 없습니다. 쿼리에서 <xref:System.Data.DataView.Sort%2A>를 만든 후에 문자열 기반 <xref:System.Data.DataView>를 설정하면 쿼리에서 유추된 식 기반 필터가 지워지며, 이 필터는 재설정할 수 없습니다.  
   
- <xref:System.Data.DataView>의 인덱스는 <xref:System.Data.DataView>가 만들어지거나 정렬 또는 필터링 정보가 수정될 때 작성됩니다. 를 만든 LINQ to DataSet 쿼리에서 <xref:System.Data.DataView> 정렬 기준을 제공 하 고 나중에 정렬 정보를 수정 하지 않는 것이 가장 좋은 성능을 얻을 수 있습니다. 자세한 내용은 [DataView 성능](../../../../docs/framework/data/adonet/dataview-performance.md)을 참조 하세요.  
+ <xref:System.Data.DataView>의 인덱스는 <xref:System.Data.DataView>가 만들어지거나 정렬 또는 필터링 정보가 수정될 때 작성됩니다. 를 만든 LINQ to DataSet 쿼리에서 <xref:System.Data.DataView> 정렬 기준을 제공 하 고 나중에 정렬 정보를 수정 하지 않는 것이 가장 좋은 성능을 얻을 수 있습니다. 자세한 내용은 [DataView 성능](dataview-performance.md)을 참조 하세요.  
   
 > [!NOTE]
 > 대부분의 경우 정렬에 사용되는 식은 파생 효과가 없어야 하고 명확해야 합니다. 또한 정렬 작업이 여러 번 실행될 수 있으므로 이러한 식에는 실행 집합 번호에 따라 달라지는 논리가 없어야 합니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "69918185"
   
  문자열 기반 정렬 및 식 기반 정렬 기능은 함께 사용할 수 없습니다. <xref:System.Data.DataView.Sort%2A> 속성을 설정하면 <xref:System.Data.DataView>가 만들어진 쿼리에서 상속된 식 기반 정렬이 지워집니다.  
   
- 문자열 기반 <xref:System.Data.DataView.Sort%2A> 필터링에 대 한 자세한 내용은 [데이터 정렬 및 필터링](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)을 참조 하세요.  
+ 문자열 기반 <xref:System.Data.DataView.Sort%2A> 필터링에 대 한 자세한 내용은 [데이터 정렬 및 필터링](./dataset-datatable-dataview/sorting-and-filtering-data.md)을 참조 하세요.  
   
 ### <a name="example"></a>예제  
  다음 예제에서는 Contact 테이블에서 <xref:System.Data.DataView>를 만든 다음 성을 기준으로 내림차순으로 행을 정렬하고, 이름을 기준으로 오름차순으로 행을 정렬합니다.  
@@ -83,6 +83,6 @@ ms.locfileid: "69918185"
   
 ## <a name="see-also"></a>참고자료
 
-- [데이터 바인딩 및 LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
-- [DataView로 필터링](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)
+- [데이터 바인딩 및 LINQ to DataSet](data-binding-and-linq-to-dataset.md)
+- [DataView로 필터링](filtering-with-dataview-linq-to-dataset.md)
 - [데이터 정렬](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546145(v=vs.120))

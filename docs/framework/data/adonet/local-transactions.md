@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: a0cb72913c10712ece188a782095b93f98cdc0b2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 979d51a97245bc9616349679ec8cf05cae8c595a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955779"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783712"
 ---
 # <a name="local-transactions"></a>로컬 트랜잭션
 ADO.NET의 트랜잭션은 여러 작업을 함께 바인딩하여 단일 작업 단위로 실행 되도록 하려는 경우에 사용 됩니다. 예를 들어 애플리케이션이 두 가지 작업을 수행한다고 가정합니다. 먼저 응용 프로그램에서 주문 정보로 테이블을 업데이트합니다. 그런 다음, 응용 프로그램에서 재고 정보가 포함된 테이블을 업데이트하고 주문이 들어온 품목을 차변에 기입합니다. 작업 중 하나가 실패 하면 두 업데이트가 모두 롤백됩니다.  
@@ -49,7 +49,7 @@ ADO.NET의 트랜잭션은 여러 작업을 함께 바인딩하여 단일 작업
   
 ## <a name="see-also"></a>참고자료
 
-- [트랜잭션 및 동시성](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- [분산 트랜잭션](../../../../docs/framework/data/adonet/distributed-transactions.md)
-- [SQL Server와의 System.Transactions 통합](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [트랜잭션 및 동시성](transactions-and-concurrency.md)
+- [분산 트랜잭션](distributed-transactions.md)
+- [SQL Server와의 System.Transactions 통합](system-transactions-integration-with-sql-server.md)
+- [ADO.NET 개요](ado-net-overview.md)

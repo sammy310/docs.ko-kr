@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1d50c8b4-f550-4775-bbb6-eab6e874cb43
-ms.openlocfilehash: 50887acefdd5d0feaf9d0885e9ee842f44f0ef65
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bc490b579e841a0e9b3724fe0e8789cc9411683d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915048"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782185"
 ---
 # <a name="group-elements-in-a-sequence"></a>시퀀스의 요소 그룹화
 <xref:System.Linq.Enumerable.GroupBy%2A> 연산자는 시퀀스의 요소를 그룹화합니다. 다음 예제에서는 Northwind 데이터베이스를 사용합니다.  
   
 > [!NOTE]
-> <xref:System.Linq.Enumerable.GroupBy%2A> 쿼리의 Null 열 값은 종종 <xref:System.InvalidOperationException>을 throw합니다. 자세한 내용은 [문제 해결](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)의 "GroupBy InvalidOperationException" 섹션을 참조 하세요.  
+> <xref:System.Linq.Enumerable.GroupBy%2A> 쿼리의 Null 열 값은 종종 <xref:System.InvalidOperationException>을 throw합니다. 자세한 내용은 [문제 해결](troubleshooting.md)의 "GroupBy InvalidOperationException" 섹션을 참조 하세요.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 `Products`에 따라 `CategoryID`를 구분합니다.  
@@ -74,5 +74,5 @@ ms.locfileid: "69915048"
   
 ## <a name="see-also"></a>참고자료
 
-- [쿼리 예제](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [샘플 데이터베이스 다운로드](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [쿼리 예제](query-examples.md)
+- [샘플 데이터베이스 다운로드](downloading-sample-databases.md)

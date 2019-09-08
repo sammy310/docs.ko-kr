@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f08008a9-042e-4de9-94f3-4f0e502b1eb5
-ms.openlocfilehash: a970ebda76f5bb6bdea704dabef2ee305436c613
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 689a297eb5368d35c2e7dd034426edbe665e7ed2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205021"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785390"
 ---
 # <a name="datatable-edits"></a>DataTable 편집
 <xref:System.Data.DataRow>에서 열 값을 변경하는 경우, 변경된 값은 현재 상태의 행에 바로 저장됩니다. <xref:System.Data.DataRow.AcceptChanges%2A> <xref:System.Data.DataRow.RejectChanges%2A>그런 다음 가Modified로설정되고,DataRow의또는메서드를사용하여변경내용이허용되거나거부됩니다.<xref:System.Data.DataRowState> 또한 **DataRow** 는 편집 하는 동안 행의 상태를 일시 중단 하는 데 사용할 수 있는 세 가지 메서드를 제공 합니다. 이러한 메서드에는 <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A> 및 <xref:System.Data.DataRow.CancelEdit%2A>이 있습니다.  
@@ -93,4 +93,4 @@ protected static void OnColumnChanged(
 - <xref:System.Data.DataRowVersion>
 - [DataTable에서 데이터 조작](manipulating-data-in-a-datatable.md)
 - [DataTable 이벤트 처리](handling-datatable-events.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 개요](../ado-net-overview.md)

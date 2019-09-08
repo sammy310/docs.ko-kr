@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3b787719-4e77-4e77-96a6-5b15a11b995a
-ms.openlocfilehash: ea56c99d7d122dd20fc217f8ecb2937bcf81bec3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f24c558b1d5303b2417416beb14555539f498ea
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923268"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797264"
 ---
 # <a name="client-channel-level-programming"></a>클라이언트 채널 수준 프로그래밍
-이 항목에서는 사용 하지 않고 Windows Communication Foundation (WCF) 클라이언트 응용 프로그램을 작성 하는 방법을 설명 합니다 <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> 클래스 및 관련된 개체 모델입니다.  
+이 항목에서는 <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> 클래스 및 관련 개체 모델을 사용 하지 않고 WCF (Windows Communication Foundation) 클라이언트 응용 프로그램을 작성 하는 방법에 대해 설명 합니다.  
   
 ## <a name="sending-messages"></a>메시지 보내기  
  메시지를 보낸 다음 회신을 받고 처리할 준비를 하려면 다음 단계가 필요합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "61923268"
 5. 모든 채널 개체를 닫습니다.  
   
 #### <a name="creating-a-binding"></a>바인딩 만들기  
- 수신 하는 경우 비슷한 (참조 [서비스 채널 수준 프로그래밍](../../../../docs/framework/wcf/extending/service-channel-level-programming.md)), 메시지 보내기를 시작 하 여 바인딩을 만드는 방법. 이 예제에서는 새 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>을 만들고 <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType>를 요소 컬렉션에 추가합니다.  
+ 수신 사례와 유사 하 게 ( [서비스 채널 수준 프로그래밍](service-channel-level-programming.md)참조) 바인딩을 만들어 메시지를 보냅니다. 이 예제에서는 새 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>을 만들고 <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType>를 요소 컬렉션에 추가합니다.  
   
 #### <a name="building-a-channelfactory"></a>ChannelFactory 빌드  
  이번에는 <xref:System.ServiceModel.Channels.IChannelListener?displayProperty=nameWithType>를 만드는 대신 형식 매개 변수가 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>인 바인딩에서 <xref:System.ServiceModel.ChannelFactory.CreateFactory%2A?displayProperty=nameWithType>를 호출하여 <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>를 만듭니다. 채널 수신기는 들어오는 메시지를 기다리는 측에서 사용하는 반면에 채널 팩터리는 채널을 만들기 위해 통신을 시작하는 측에서 사용합니다. 채널 수신기에서처럼 채널 팩터리를 사용하기 전에 먼저 열어야 합니다.  

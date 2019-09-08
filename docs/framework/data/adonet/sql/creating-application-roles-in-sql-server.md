@@ -2,12 +2,12 @@
 title: SQL Server에서 애플리케이션 역할 만들기
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: e7060e1b171ee1791b9986250fe6f2050ec77acd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 212bda6f64829792e965dd6714428a05b30c995b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961174"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794281"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>SQL Server에서 애플리케이션 역할 만들기
 애플리케이션 역할을 사용하면 데이터베이스 역할이나 사용자 대신 애플리케이션에 권한을 할당할 수 있습니다. 사용자는 데이터베이스에 연결한 후 애플리케이션 역할을 활성화하여 애플리케이션에 부여된 권한을 사용할 수 있습니다. 애플리케이션 역할에 부여된 권한은 연결되어 있는 동안 유효합니다.  
@@ -47,9 +47,9 @@ ms.locfileid: "69961174"
   
  다음과 같은 대안을 고려해 보세요.  
   
-- NO REVERT 및 WITH COOKIE 절과 함께 EXECUTE AS 문을 사용하여 컨텍스트를 전환합니다. 로그인에 매핑되지 않는 사용자 계정을 데이터베이스에 만든 다음 이 계정에 권한을 할당합니다. 이렇게 로그인에 매핑되지 않은 사용자로 EXECUTE AS를 사용하면 암호가 아니라 권한을 기반으로 하므로 더 안전합니다. 자세한 내용은 [SQL Server에서 가장으로 권한 사용자 지정](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)을 참조 하세요.  
+- NO REVERT 및 WITH COOKIE 절과 함께 EXECUTE AS 문을 사용하여 컨텍스트를 전환합니다. 로그인에 매핑되지 않는 사용자 계정을 데이터베이스에 만든 다음 이 계정에 권한을 할당합니다. 이렇게 로그인에 매핑되지 않은 사용자로 EXECUTE AS를 사용하면 암호가 아니라 권한을 기반으로 하므로 더 안전합니다. 자세한 내용은 [SQL Server에서 가장으로 권한 사용자 지정](customizing-permissions-with-impersonation-in-sql-server.md)을 참조 하세요.  
   
-- 저장 프로시저를 인증서로 서명하여 프로시저 실행에 꼭 필요한 권한만 부여합니다. 자세한 내용은 [SQL Server에서 저장 프로시저에 서명](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)을 참조 하세요.  
+- 저장 프로시저를 인증서로 서명하여 프로시저 실행에 꼭 필요한 권한만 부여합니다. 자세한 내용은 [SQL Server에서 저장 프로시저에 서명](signing-stored-procedures-in-sql-server.md)을 참조 하세요.  
   
 ## <a name="external-resources"></a>외부 리소스  
  자세한 내용은 다음 리소스를 참조하세요.  
@@ -60,7 +60,7 @@ ms.locfileid: "69961174"
   
 ## <a name="see-also"></a>참고자료
 
-- [ADO.NET 응용 프로그램 보안](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server 보안 개요](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [SQL Server의 응용 프로그램 보안 시나리오](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 응용 프로그램 보안](../securing-ado-net-applications.md)
+- [SQL Server 보안 개요](overview-of-sql-server-security.md)
+- [SQL Server의 응용 프로그램 보안 시나리오](application-security-scenarios-in-sql-server.md)
+- [ADO.NET 개요](../ado-net-overview.md)

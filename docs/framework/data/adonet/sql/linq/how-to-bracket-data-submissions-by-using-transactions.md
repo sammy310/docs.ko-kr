@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 94044a31-de90-479b-935a-8159b4ae5c5a
-ms.openlocfilehash: 3e58c6f2849ed9714b3356662dae313ab9d11696
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6a4c5ba7c4938b48fe489e43ff4a3ff806bd8916
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037871"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793811"
 ---
 # <a name="how-to-bracket-data-submissions-by-using-transactions"></a>방법: 트랜잭션을 사용하여 대괄호로 묶은 데이터 전송
-<xref:System.Transactions.TransactionScope>를 사용하여 데이터베이스에 대한 전송을 표시합니다. 자세한 내용은 [트랜잭션 지원을](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)합니다.  
+<xref:System.Transactions.TransactionScope>를 사용하여 데이터베이스에 대한 전송을 표시합니다. 자세한 내용은 [트랜잭션 지원](transaction-support.md)을 참조 하세요.  
   
 ## <a name="example"></a>예제  
  다음 코드에서는 데이터베이스 전송을 <xref:System.Transactions.TransactionScope>로 묶습니다.  
@@ -23,6 +23,6 @@ ms.locfileid: "62037871"
   
 ## <a name="see-also"></a>참고자료
 
-- [샘플 데이터베이스 다운로드](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [데이터 변경 및 변경 내용 전송](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
-- [트랜잭션 지원](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)
+- [샘플 데이터베이스 다운로드](downloading-sample-databases.md)
+- [데이터 변경 및 변경 내용 전송](making-and-submitting-data-changes.md)
+- [트랜잭션 지원](transaction-support.md)

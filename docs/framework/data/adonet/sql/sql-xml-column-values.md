@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d97ce4da-f09c-4d1e-85b7-a0ccedd7246a
-ms.openlocfilehash: 29e9ac5b95b62ef2a4467bf41484c3740d550abd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 03b09d3a53c725bb0e84ba6b5d98944267bc564c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964958"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780791"
 ---
 # <a name="sql-xml-column-values"></a>SQL XML 열 값
 SQL Server는 `xml` 데이터 형식을 지원 하며 개발자는 <xref:System.Data.SqlClient.SqlCommand> 클래스의 표준 동작을 사용 하 여이 형식을 포함 하는 결과 집합을 검색할 수 있습니다. `xml` 열은 다른 열과 마찬가지 방식으로 검색할 수 있지만(예: <xref:System.Data.SqlClient.SqlDataReader>로) 열의 내용을 XML로 작업하려면 <xref:System.Xml.XmlReader>를 사용해야 합니다.  
@@ -27,5 +27,5 @@ SQL Server는 `xml` 데이터 형식을 지원 하며 개발자는 <xref:System.
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Data.SqlTypes.SqlXml>
-- [SQL Server의 XML 데이터](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server의 XML 데이터](xml-data-in-sql-server.md)
+- [ADO.NET 개요](../ado-net-overview.md)

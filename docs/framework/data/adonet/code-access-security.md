@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: b288ffe6346ac8260756115b50c253c42b596f96
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 080432670c68623433a6b4e61adba77cf6fa5ec7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948260"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786864"
 ---
 # <a name="code-access-security-and-adonet"></a>코드 액세스 보안 및 ADO.NET
 .NET Framework는 역할 기반 보안과 CAS(코드 액세스 보안)를 제공합니다. 두 보안 기능 모두 CLR(공용 언어 런타임)이 제공하는 공용 인프라를 사용하여 구현되었습니다. 비관리 코드의 경우 대부분의 애플리케이션은 사용자 또는 보안 주체 권한으로 실행됩니다. 결과적으로 높은 권한을 가진 사용자가 악의적이거나 오류가 많은 소프트웨어를 실행하면 컴퓨터 시스템과 개인 데이터가 손상될 수 있습니다.  
@@ -47,15 +47,15 @@ ms.locfileid: "69948260"
   
  CLR에서는 관리 코드에 제한을 적용하는 메커니즘을 구현하기 위해 권한을 사용합니다. 역할 기반 보안 권한은 사용자(또는 사용자 역할을 하는 에이전트)가 특정 ID를 가지고 있는지 또는 지정된 역할의 멤버인지를 확인하는 메커니즘을 제공합니다. 자세한 내용은 [보안 권한](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5ba4k1c5(v=vs.100))을 참조 하세요.  
   
- 빌드하려는 애플리케이션 종류에 따라 데이터베이스에 역할 기반 권한을 구현하는 것을 고려해야 합니다. SQL Server의 역할 기반 보안에 대 한 자세한 내용은 [SQL Server 보안](../../../../docs/framework/data/adonet/sql/sql-server-security.md)을 참조 하세요.  
+ 빌드하려는 애플리케이션 종류에 따라 데이터베이스에 역할 기반 권한을 구현하는 것을 고려해야 합니다. SQL Server의 역할 기반 보안에 대 한 자세한 내용은 [SQL Server 보안](./sql/sql-server-security.md)을 참조 하세요.  
   
 ## <a name="assemblies"></a>어셈블리  
- 어셈블리는 .NET Framework 애플리케이션에 대한 배포, 버전 제어, 재사용, 활성화 범위 및 보안 권한의 기본 단위를 형성합니다. 어셈블리는 함께 작동하도록 빌드되고 논리적 기능 단위를 형성하는 리소스 및 형식 컬렉션을 제공합니다. CLR의 경우 어셈블리 컨텍스트 외부에는 형식이 존재하지 않습니다. 어셈블리를 만들고 배포 하는 방법에 대 한 자세한 내용은 [어셈블리를 사용한 프로그래밍](../../../../docs/framework/app-domains/programming-with-assemblies.md)을 참조 하세요.  
+ 어셈블리는 .NET Framework 애플리케이션에 대한 배포, 버전 제어, 재사용, 활성화 범위 및 보안 권한의 기본 단위를 형성합니다. 어셈블리는 함께 작동하도록 빌드되고 논리적 기능 단위를 형성하는 리소스 및 형식 컬렉션을 제공합니다. CLR의 경우 어셈블리 컨텍스트 외부에는 형식이 존재하지 않습니다. 어셈블리를 만들고 배포 하는 방법에 대 한 자세한 내용은 [어셈블리를 사용한 프로그래밍](../../app-domains/programming-with-assemblies.md)을 참조 하세요.  
   
 ### <a name="strong-naming-assemblies"></a>어셈블리에 강력한 이름 지정  
  강력한 이름 또는 디지털 서명은 단순한 텍스트 이름, 버전 번호 및 문화권 정보(제공된 경우)를 포함하는 어셈블리의 ID에 공개 키와 디지털 서명이 추가되어 구성됩니다. 디지털 서명은 해당 프라이빗 키를 사용하여 어셈블리 파일에서 생성됩니다. 어셈블리 파일은 어셈블리를 구성하는 모든 파일의 이름과 해시가 들어 있는 어셈블리 매니페스트를 포함합니다.  
   
- 어셈블리에 강력한 이름을 지정하면 다른 소프트웨어에서 애플리케이션이나 구성 요소를 명시적으로 참조하는 데 사용할 수 있는 고유 ID가 애플리케이션이나 구성 요소에 지정됩니다. 강력한 이름을 지정하면 부적절한 코드가 포함되어 있는 어셈블리로 인해 어셈블리가 스푸핑되지 않도록 보호됩니다. 또한 강력한 이름을 지정하면 구성 요소의 다양한 버전 간에 버전 관리 일관성을 유지할 수 있습니다. GAC(전역 어셈블리 캐시)에 배포할 어셈블리에는 강력한 이름을 지정해야 합니다. 자세한 내용은 [강력한 이름의 어셈블리 만들기 및 사용](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)을 참조하세요.  
+ 어셈블리에 강력한 이름을 지정하면 다른 소프트웨어에서 애플리케이션이나 구성 요소를 명시적으로 참조하는 데 사용할 수 있는 고유 ID가 애플리케이션이나 구성 요소에 지정됩니다. 강력한 이름을 지정하면 부적절한 코드가 포함되어 있는 어셈블리로 인해 어셈블리가 스푸핑되지 않도록 보호됩니다. 또한 강력한 이름을 지정하면 구성 요소의 다양한 버전 간에 버전 관리 일관성을 유지할 수 있습니다. GAC(전역 어셈블리 캐시)에 배포할 어셈블리에는 강력한 이름을 지정해야 합니다. 자세한 내용은 [강력한 이름의 어셈블리 만들기 및 사용](../../app-domains/create-and-use-strong-named-assemblies.md)을 참조하세요.  
   
 ## <a name="partial-trust-in-adonet-20"></a>ADO.NET 2.0에서의 부분 신뢰  
  ADO.NET 2.0에서 .NET Framework Data Provider for SQL Server, .NET Framework Data Provider for OLE DB, .NET Framework Data Provider for ODBC 및 .NET Framework Data Provider for Oracle은 현재 모두 부분적으로 신뢰할 수 있는 환경에서 실행됩니다. .NET Framework의 이전 릴리스의 경우, 부분적으로 신뢰할 수 있는 애플리케이션에서는 <xref:System.Data.SqlClient>만 지원되었습니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "69948260"
   
  다음 표에서는 사용 가능한 <xref:System.Data.SqlClient.SqlClientPermissionAttribute> 속성과 해당 설명의 목록을 보여 줍니다.  
   
-|권한 속성|설명|  
+|권한 속성|Description|  
 |-----------------------------------|-----------------|  
 |`Action`|보안 동작을 가져오거나 설정합니다. <xref:System.Security.Permissions.SecurityAttribute>에서 상속됩니다.|  
 |`AllowBlankPassword`|연결 문자열에서 빈 암호 사용을 활성화하거나 비활성화합니다. 빈 암호 사용을 활성화하는 `true`와 빈 암호 사용을 비활성화하는 `false`를 값으로 사용할 수 있습니다. <xref:System.Data.Common.DBDataPermissionAttribute>에서 상속됩니다.|  
@@ -78,7 +78,7 @@ ms.locfileid: "69948260"
 |`Unrestricted`|리소스에 무제한 권한이 선언되었는지 여부를 나타냅니다. <xref:System.Security.Permissions.SecurityAttribute>에서 상속됩니다.|  
   
 #### <a name="connectionstring-syntax"></a>ConnectionString 구문  
- 다음 예제에서는 구성 파일의 `connectionStrings` 요소를 사용하여 특정 연결 문자열만 사용하도록 하는 방법을 보여 줍니다. 구성 파일에서 연결 문자열을 저장 하 고 검색 하는 방법에 대 한 자세한 내용은 [연결 문자열](../../../../docs/framework/data/adonet/connection-strings.md) 을 참조 하세요.  
+ 다음 예제에서는 구성 파일의 `connectionStrings` 요소를 사용하여 특정 연결 문자열만 사용하도록 하는 방법을 보여 줍니다. 구성 파일에서 연결 문자열을 저장 하 고 검색 하는 방법에 대 한 자세한 내용은 [연결 문자열](connection-strings.md) 을 참조 하세요.  
   
 ```xml  
 <connectionStrings>  
@@ -136,7 +136,7 @@ ms.locfileid: "69948260"
 ```  
   
 ### <a name="enabling-partial-trust-with-a-custom-permission-set"></a>사용자 지정 권한 집합을 사용하여 부분 신뢰 활성화  
- 특정 영역에 대해 <xref:System.Data.SqlClient> 권한 사용을 활성화하려면 시스템 관리자는 사용자 지정 권한 집합을 만들고 이를 특정 영역에 대한 권한 집합으로 설정해야 합니다. `LocalIntranet`과 같은 기본 권한 집합은 수정할 수 없습니다. <xref:System.Data.SqlClient> 예를 들어 <xref:System.Security.Policy.Zone> `LocalIntranet` <xref:System.Data.SqlClient> 의 `LocalIntranet`가 있는 코드에 대 한 권한을 포함 하려면 시스템 관리자가에 대 한 권한 집합을 복사 하 고 이름을 "CustomLocalIntranet"로 바꾼 다음 권한을 추가 합니다. 가져오기 [caspol.exe (코드 액세스 보안 정책 도구)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)를 사용 하는 CustomLocalIntranet 권한 집합을 설정 하 고의 `LocalIntranet_Zone` 권한 집합을 CustomLocalIntranet로 설정 합니다.  
+ 특정 영역에 대해 <xref:System.Data.SqlClient> 권한 사용을 활성화하려면 시스템 관리자는 사용자 지정 권한 집합을 만들고 이를 특정 영역에 대한 권한 집합으로 설정해야 합니다. `LocalIntranet`과 같은 기본 권한 집합은 수정할 수 없습니다. <xref:System.Data.SqlClient> 예를 들어 <xref:System.Security.Policy.Zone> `LocalIntranet` <xref:System.Data.SqlClient> 의 `LocalIntranet`가 있는 코드에 대 한 권한을 포함 하려면 시스템 관리자가에 대 한 권한 집합을 복사 하 고 이름을 "CustomLocalIntranet"로 바꾼 다음 권한을 추가 합니다. 가져오기 [caspol.exe (코드 액세스 보안 정책 도구)](../../tools/caspol-exe-code-access-security-policy-tool.md)를 사용 하는 CustomLocalIntranet 권한 집합을 설정 하 고의 `LocalIntranet_Zone` 권한 집합을 CustomLocalIntranet로 설정 합니다.  
   
 ### <a name="sample-permission-set"></a>권한 집합 예제  
  다음은 부분 신뢰 권한일 경우의 .NET Framework Data Provider for SQL Server에 대한 권한 집합 예제입니다. 사용자 지정 권한 집합을 만드는 방법에 대 한 자세한 내용은 [caspol.exe를 사용 하 여 권한 집합 구성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100))을 참조 하세요.  
@@ -190,13 +190,13 @@ Failed, as expected: Request failed.
 ```  
   
 ## <a name="interoperability-with-unmanaged-code"></a>비관리 코드와의 상호 운용성  
- CLR 외부에서 실행되는 코드를 비관리 코드라고 합니다. 따라서 비관리 코드에는 CAS와 같은 보안 메커니즘을 적용할 수 없습니다. 비관리 코드로는 COM 구성 요소, ActiveX 인터페이스, Windows API 함수 등이 있습니다. 비관리 코드를 실행할 때에는 특수한 보안 고려 사항이 적용되므로 전체적인 애플리케이션 보안이 손상되지 않습니다. 자세한 내용은 [비관리 코드 상호 운용](../../../../docs/framework/interop/index.md)을 참조하세요.  
+ CLR 외부에서 실행되는 코드를 비관리 코드라고 합니다. 따라서 비관리 코드에는 CAS와 같은 보안 메커니즘을 적용할 수 없습니다. 비관리 코드로는 COM 구성 요소, ActiveX 인터페이스, Windows API 함수 등이 있습니다. 비관리 코드를 실행할 때에는 특수한 보안 고려 사항이 적용되므로 전체적인 애플리케이션 보안이 손상되지 않습니다. 자세한 내용은 [비관리 코드 상호 운용](../../interop/index.md)을 참조하세요.  
   
  .NET Framework는 COM interop를 통해 액세스를 제공함으로써 기존 COM 구성 요소에 대한 이전 버전과의 호환성도 지원합니다. 즉, 관련 COM 형식을 가져오는 COM interop 도구를 사용하여 COM 구성 요소를 .NET Framework 애플리케이션에 통합할 수 있습니다. COM 형식을 가져온 후에는 즉시 사용할 수 있습니다. COM interop을 사용하면 어셈블리 메타데이터를 형식 라이브러리로 내보내고 관리 구성 요소를 COM 구성 요소로 등록하여 COM 클라이언트에서 관리 코드에 액세스할 수도 있습니다. 자세한 내용은 [고급 COM 상호 운용성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고자료
 
-- [ADO.NET 응용 프로그램 보안](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [ADO.NET 응용 프로그램 보안](securing-ado-net-applications.md)
 - [네이티브 및 .NET Framework 코드의 보안](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 - [역할 기반 보안](../../../standard/security/role-based-security.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 개요](ado-net-overview.md)

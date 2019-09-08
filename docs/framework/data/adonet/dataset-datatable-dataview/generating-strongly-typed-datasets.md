@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: 9bff69e28aa17da87da7e94d4e110c0375f043ae
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: f1c1fd77bed700fae8e5a658da8b267120518ca9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203698"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786298"
 ---
 # <a name="generating-strongly-typed-datasets"></a>강력한 형식의 데이터 세트 생성
 Xsd (xml 스키마 정의 언어) 표준을 준수 하는 xml 스키마를 제공 하는 경우 Windows SDK (소프트웨어 개발 <xref:System.Data.DataSet> 키트)와 함께 제공 되는 xsd.exe 도구를 사용 하 여 강력한 형식의를 생성할 수 있습니다.  
@@ -100,4 +100,4 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
 - <xref:System.Data.DataSet>
 - [형식화된 데이터 집합](typed-datasets.md)
 - [DataSet, DataTable 및 DataView](index.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 개요](../ado-net-overview.md)

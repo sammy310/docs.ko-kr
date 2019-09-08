@@ -2,12 +2,12 @@
 title: 테이블 유추
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
-ms.openlocfilehash: 84cee828f2d3c918a12e449da5b01a3d72d86333
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 52ffd3fe90eb491dd01acf8538276cc828fdb309
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203525"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784487"
 ---
 # <a name="inferring-tables"></a>테이블 유추
 XML 문서로부터 <xref:System.Data.DataSet>의 스키마를 유추할 때 ADO.NET에서는 우선 테이블을 나타내는 XML 요소를 결정합니다. 다음 XML 구조는 **데이터 집합** 스키마에 대 한 테이블을 생성 합니다.  
@@ -125,4 +125,4 @@ XML 문서로부터 <xref:System.Data.DataSet>의 스키마를 유추할 때 ADO
 - [XML에서 데이터 세트 스키마 정보 로드](loading-dataset-schema-information-from-xml.md)
 - [데이터 집합에서 XML 사용](using-xml-in-a-dataset.md)
 - [DataSet, DataTable 및 DataView](index.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 개요](../ado-net-overview.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40953d03904e3268770c8a1b6e212873ec66d2dd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 17e96f56c57d896397489e27bcc072d8e7df05ec
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761841"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796545"
 ---
 # <a name="iassemblynamesetproperty-method"></a>IAssemblyName::SetProperty 메서드
 지정 된 속성 식별자가 참조 하는 속성의 값을 설정 합니다.  
@@ -39,21 +39,21 @@ HRESULT SetProperty (
   
 ## <a name="parameters"></a>매개 변수  
  `PropertyId`  
- [in] 해당 값을 설정할 속성의 고유 식별자입니다.  
+ 진행 값을 설정할 속성의 고유 식별자입니다.  
   
  `pvProperty`  
- [in] 참조 하는 속성을 설정 하는 값 `PropertyId`합니다.  
+ 진행 에서 `PropertyId`참조 하는 속성을 설정 하는 데 사용할 값입니다.  
   
  `cbProperty`  
- [in] 크기 (바이트)의 `pvProperty`합니다.  
+ 진행 의 `pvProperty`크기 (바이트)입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
   
- **헤더:** Fusion.h  
+ **헤더:** Fusion. h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
 
-- [IAssemblyName 인터페이스](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [IAssemblyName 인터페이스](iassemblyname-interface.md)

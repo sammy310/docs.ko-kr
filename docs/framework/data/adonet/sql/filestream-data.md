@@ -2,12 +2,12 @@
 title: FILESTREAM 데이터
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: 4edd03a38f8f5df6cb4fb9c2446f966dfe601564
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 87bed5dd345c240cc00b2c36aa976ec53fe63b93
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490068"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794102"
 ---
 # <a name="filestream-data"></a>FILESTREAM 데이터
 
@@ -20,11 +20,11 @@ varbinary(max) 열에 FILESTREAM 특성을 지정하면 SQL Server에서는 데�
 
 ## <a name="sqlclient-support-for-filestream"></a>FILESTREAM에 대한 SqlClient 지원
 
-.NET Framework Data Provider for SQL Server <xref:System.Data.SqlClient>, 읽기 및 쓰기 사용 하 여 FILESTREAM 데이터를 지원 합니다 <xref:System.Data.SqlTypes.SqlFileStream> 에 정의 된 클래스는 <xref:System.Data.SqlTypes> 네임 스페이스입니다. `SqlFileStream`은 데이터 스트림에 대한 읽기 및 쓰기 메서드를 제공하는 <xref:System.IO.Stream> 클래스에서 상속됩니다. 스트림에서 읽으면 바이트 배열과 같은 데이터가 스트림에서 데이터 구조로 전송되고, 데이터를 쓰면 데이터가 데이터 구조에서 스트림으로 전송됩니다.
+SQL Server <xref:System.Data.SqlClient>에 대 한 .NET Framework Data Provider는 <xref:System.Data.SqlTypes> 네임 스페이스에 정의 된 클래스를 <xref:System.Data.SqlTypes.SqlFileStream> 사용 하 여 FILESTREAM 데이터에 대 한 읽기 및 쓰기를 지원 합니다. `SqlFileStream`은 데이터 스트림에 대한 읽기 및 쓰기 메서드를 제공하는 <xref:System.IO.Stream> 클래스에서 상속됩니다. 스트림에서 읽으면 바이트 배열과 같은 데이터가 스트림에서 데이터 구조로 전송되고, 데이터를 쓰면 데이터가 데이터 구조에서 스트림으로 전송됩니다.
 
 ### <a name="creating-the-sql-server-table"></a>SQL Server 테이블 만들기
 
-다음 Transact-SQL 문은 employees라는 테이블을 만들어 데이터 행을 삽입합니다. FILESTREAM 스토리지를 설정한 후에는 다음에 나오는 코드 예제와 함께 이 테이블을 사용할 수 있습니다. SQL Server 온라인 설명서의 리소스 링크는이 항목의 끝에 나와 있습니다.
+다음 Transact-SQL 문은 employees라는 테이블을 만들어 데이터 행을 삽입합니다. FILESTREAM 스토리지를 설정한 후에는 다음에 나오는 코드 예제와 함께 이 테이블을 사용할 수 있습니다. SQL Server 온라인 설명서의 리소스에 대 한 링크는이 항목의 끝에 있습니다.
 
 ```sql
 CREATE TABLE employees
@@ -40,7 +40,7 @@ Values(1, 0x00, default)
 GO
 ```
 
-### <a name="example-reading-overwriting-and-inserting-filestream-data"></a>예제: FILESTREAM 데이터 삽입 및 읽기, 덮어쓰기
+### <a name="example-reading-overwriting-and-inserting-filestream-data"></a>예제: FILESTREAM 데이터 읽기, 덮어쓰기 및 삽입
 
 다음 샘플에서는 FILESTREAM에서 데이터를 읽는 방법을 보여 줍니다. 이 코드에서는 `FileAccess`를 `Read`로 설정하고 `FileOptions`를 `SequentialScan`으로 설정하여 파일의 논리 경로를 가져옵니다. 그런 다음 코드에서는 SqlFileStream의 바이트를 버퍼로 읽어오고 콘솔 창에 바이트를 씁니다.
 
@@ -171,7 +171,7 @@ namespace FileStreamTest
 }
 ```
 
-다른 샘플을 보려면 [저장할 파일 스트림 열에 이진 데이터를 인출 하는 방법을](https://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str)합니다.
+다른 샘플은 [파일 스트림 열에 이진 데이터를 저장 하 고 가져오는 방법](https://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str)을 참조 하세요.
 
 ## <a name="resources-in-sql-server-books-online"></a>SQL Server 온라인 설명서 리소스
 
@@ -180,13 +180,13 @@ FILESTREAM에 대 한 전체 설명서는 SQL Server 온라인 설명서의 다�
 |항목|설명|
 |-----------|-----------------|
 |[FILESTREAM (SQL Server)](/sql/relational-databases/blob/filestream-sql-server)|FILESTREAM 스토리지를 사용해야 하는 경우 및 FILESTREAM 스토리지가 SQL Server 데이터베이스 엔진을 NTFS 파일 시스템과 통합하는 방법에 대해 설명합니다.|
-|[FILESTREAM 데이터용 클라이언트 응용 프로그램 만들기](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|FILESTREAM 데이터로 작업 하기 위한 Windows API 함수를 설명 합니다.|
+|[FILESTREAM 데이터용 클라이언트 응용 프로그램 만들기](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|FILESTREAM 데이터 작업을 위한 Windows API 함수에 대해 설명 합니다.|
 |[FILESTREAM 및 기타 SQL Server 기능](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|SQL Server의 다른 기능과 함께 FILESTREAM 데이터를 사용할 경우의 고려 사항, 지침 및 제한 사항을 제공합니다.|
 
 ## <a name="see-also"></a>참고자료
 
-- [SQL Server 데이터 형식 및 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [ADO.NET에서 데이터 검색 및 수정](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [코드 액세스 보안 및 ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)
-- [SQL Server 이진 및 큰 값 데이터](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [ADO.NET 개요](../../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [SQL Server 데이터 형식 및 ADO.NET](sql-server-data-types.md)
+- [ADO.NET에서 데이터 검색 및 수정](../retrieving-and-modifying-data.md)
+- [코드 액세스 보안 및 ADO.NET](../code-access-security.md)
+- [SQL Server 이진 및 큰 값 데이터](sql-server-binary-and-large-value-data.md)
+- [ADO.NET 개요](../ado-net-overview.md)

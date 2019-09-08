@@ -10,17 +10,17 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: 474ac625-8770-43ba-8320-d3315ea9530f
-ms.openlocfilehash: b53da9c1ecfcc5061fe551c4e180774319beaf5d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 758bb01764fcfe195d4f940705316e7579be95ff
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952230"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780014"
 ---
 # <a name="how-to-project-query-results-wcf-data-services"></a>방법: 프로젝트 쿼리 결과 (WCF Data Services)
-프로젝션은 엔터티의 특정 속성만 응답에서 반환되도록 지정하여 쿼리에서 반환되는 데이터의 양을 줄이는 메커니즘을 제공합니다. 쿼리 옵션을 `$select` 사용 하거나 LINQ 쿼리에서 [select](../../../csharp/language-reference/keywords/select-clause.md) 절 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] (Visual Basic에서[선택](../../../visual-basic/language-reference/queries/select-clause.md) )을 사용 하 여 쿼리 결과에 대해 프로젝션을 수행할 수 있습니다. 자세한 내용은 [데이터 서비스 쿼리](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)를 참조 하세요.  
+프로젝션은 엔터티의 특정 속성만 응답에서 반환되도록 지정하여 쿼리에서 반환되는 데이터의 양을 줄이는 메커니즘을 제공합니다. 쿼리 옵션을 `$select` 사용 하거나 LINQ 쿼리에서 [select](../../../csharp/language-reference/keywords/select-clause.md) 절 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] (Visual Basic에서[선택](../../../visual-basic/language-reference/queries/select-clause.md) )을 사용 하 여 쿼리 결과에 대해 프로젝션을 수행할 수 있습니다. 자세한 내용은 [데이터 서비스 쿼리](querying-the-data-service-wcf-data-services.md)를 참조 하세요.  
   
- 이 항목의 예제에서는 Northwind 샘플 데이터 서비스 및 자동 생성된 클라이언트 데이터 서비스 클래스를 사용합니다. 이 서비스 및 클라이언트 데이터 클래스는 [WCF Data Services 빠른](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)시작을 완료 하면 생성 됩니다.  
+ 이 항목의 예제에서는 Northwind 샘플 데이터 서비스 및 자동 생성된 클라이언트 데이터 서비스 클래스를 사용합니다. 이 서비스 및 클라이언트 데이터 클래스는 [WCF Data Services 빠른](quickstart-wcf-data-services.md)시작을 완료 하면 생성 됩니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 Customers 엔터티를 새로운 CustomerAddress 형식으로 프로젝션하는 LINQ 쿼리를 보여 줍니다. 이 형식에는 주소 관련 속성과 ID 속성만 포함됩니다. 이 `CustomerAddress` 클래스는 클라이언트에서 정의되며 클라이언트 라이브러리가 엔터티 형식으로 인식할 수 있도록 특성이 지정됩니다.  
