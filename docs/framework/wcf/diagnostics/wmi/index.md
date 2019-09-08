@@ -2,12 +2,12 @@
 title: 진단에 Windows Management Instrumentation 사용
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: e1f5ccb8849d5f8f6bd9156cd428d395a86b1301
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 90aae0e22feec5d26fa7ee4c690904ed893489b4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046012"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795921"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>진단에 Windows Management Instrumentation 사용
 WCF (Windows Communication Foundation)는 WCF WMI(Windows Management Instrumentation) (WMI) 공급자를 통해 런타임에 서비스의 검사 데이터를 노출 합니다.  
@@ -17,7 +17,7 @@ WCF (Windows Communication Foundation)는 WCF WMI(Windows Management Instrumenta
   
  WMI 공급자는 WBEM 호환 인터페이스를 통해 런타임으로 계측을 노출하는 구성 요소이며, 특성/값 쌍을 가진 WMI 개체 집합으로 구성됩니다. 쌍은 다양한 단순 형식일 수 있습니다. 관리 도구는 런타임에 인터페이스를 통해 서비스에 연결될 수 있습니다. WCF는 주소, 바인딩, 동작 및 수신기와 같은 서비스 특성을 노출 합니다.  
   
- 애플리케이션의 구성 파일에서 기본 제공 WMI 공급자를 활성화할 수 있습니다. 이 작업은 다음 샘플 `wmiProviderEnabled` 구성에 표시 된 것 처럼 [ \<system.servicemodel >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) 섹션에서 [ \<진단 >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) 의 특성을 통해 수행 됩니다.  
+ 애플리케이션의 구성 파일에서 기본 제공 WMI 공급자를 활성화할 수 있습니다. 이 작업은 다음 샘플 `wmiProviderEnabled` 구성에 표시 된 것 처럼 [ \<system.servicemodel >](../../../configure-apps/file-schema/wcf/system-servicemodel.md) 섹션에서 [ \<진단 >](../../../configure-apps/file-schema/wcf/diagnostics.md) 의 특성을 통해 수행 됩니다.  
   
 ```xml  
 <system.serviceModel>  
@@ -35,9 +35,9 @@ WCF (Windows Communication Foundation)는 WCF WMI(Windows Management Instrumenta
 > [!CAUTION]
 > .NET Framework에서 제공한 메서드를 사용하여 WMI 데이터를 프로그래밍 방식으로 액세스하는 경우 그와 같은 메서드는 연결이 설정될 때 예외를 throw할 수 있습니다. 연결은 <xref:System.Management.ManagementObject> 인스턴스를 구성하는 동안에는 설정되지 않고, 실제 데이터 교환을 포함하는 첫 번째 요청에서 설정됩니다. 따라서 `try..catch` 블록을 사용하여 가능한 예외를 catch해야 합니다.  
   
- WMI에서 `System.ServiceModel` 추적 소스에 대한 메시지 로깅 옵션과 추적 및 메시지 로깅 수준을 변경할 수 있습니다. 이러한 작업은 부울 속성인 `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel` `LogMalformedMessages`, 및 `TraceLevel`를 노출 하는 [AppDomainInfo](../../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) 인스턴스에 액세스 하 여 수행할 수 있습니다. 따라서 메시지 로깅을 위한 추적 수신기를 구성하지만 이러한 옵션을 구성에서 `false`로 설정해도, 이후에 애플리케이션 실행 시 `true`로 변경할 수 있습니다. 이를 통해 메시지 로깅을 런타임에 효과적으로 활성화할 수 있습니다. 마찬가지로 구성 파일에 메시지 로깅을 활성화하더라도, WMI를 사용하여 런타임에 메시지 로깅을 비활성화할 수 있습니다.  
+ WMI에서 `System.ServiceModel` 추적 소스에 대한 메시지 로깅 옵션과 추적 및 메시지 로깅 수준을 변경할 수 있습니다. 이러한 작업은 부울 속성인 `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel` `LogMalformedMessages`, 및 `TraceLevel`를 노출 하는 [AppDomainInfo](appdomaininfo.md) 인스턴스에 액세스 하 여 수행할 수 있습니다. 따라서 메시지 로깅을 위한 추적 수신기를 구성하지만 이러한 옵션을 구성에서 `false`로 설정해도, 이후에 애플리케이션 실행 시 `true`로 변경할 수 있습니다. 이를 통해 메시지 로깅을 런타임에 효과적으로 활성화할 수 있습니다. 마찬가지로 구성 파일에 메시지 로깅을 활성화하더라도, WMI를 사용하여 런타임에 메시지 로깅을 비활성화할 수 있습니다.  
   
- 구성 파일에서 메시지 로깅에 대한 메시지 로깅 추적 수신기 또는 추적을 위한 `System.ServiceModel` 추적 수신기를 지정하지 않으면, WMI에서 변경이 승인되더라도 변경 내용이 적용되지 않습니다. 각 수신기를 올바르게 설정 하는 방법에 대 한 자세한 내용은 [메시지 로깅 구성](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) 및 [추적 구성](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)을 참조 하세요. 구성에 지정된 다른 모든 추적 소스의 추적 수준은 애플리케이션이 시작되면 적용되며 변경할 수 없습니다.  
+ 구성 파일에서 메시지 로깅에 대한 메시지 로깅 추적 수신기 또는 추적을 위한 `System.ServiceModel` 추적 수신기를 지정하지 않으면, WMI에서 변경이 승인되더라도 변경 내용이 적용되지 않습니다. 각 수신기를 올바르게 설정 하는 방법에 대 한 자세한 내용은 [메시지 로깅 구성](../configuring-message-logging.md) 및 [추적 구성](../tracing/configuring-tracing.md)을 참조 하세요. 구성에 지정된 다른 모든 추적 소스의 추적 수준은 애플리케이션이 시작되면 적용되며 변경할 수 없습니다.  
   
  WCF는 스크립팅에 `GetOperationCounterInstanceName` 대 한 메서드를 노출 합니다. 이 메서드는 작업 이름과 함께 제공된 경우 성능 카운터 인스턴스 이름을 반환합니다. 사용자 입력을 검증하지는 않습니다. 따라서 잘못된 작업 이름을 제공하면 잘못된 카운터 이름이 반환됩니다.  
   

@@ -2,12 +2,12 @@
 title: 데이터 세트 스키마 유추 프로세스 요약
 ms.date: 03/30/2017
 ms.assetid: fd0891c8-d068-4e30-a76f-7c375f078bf7
-ms.openlocfilehash: 5266d08212e5259bd5b242a70d61e29ad9008006
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: b0dd22412ddda86aa2883a26353abb1516a94e17
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203250"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785947"
 ---
 # <a name="summary-of-the-dataset-schema-inference-process"></a>데이터 세트 스키마 유추 프로세스 요약
 유추 과정에서는 우선 XML 문서에서 테이블로 유추될 요소를 결정합니다. 그런 다음 남아 있는 XML에서 해당 테이블의 열을 결정합니다. 중첩된 테이블인 경우에는 유추 과정에서 중첩된 <xref:System.Data.DataRelation> 및 <xref:System.Data.ForeignKeyConstraint> 개체를 생성합니다.  
@@ -37,4 +37,4 @@ ms.locfileid: "70203250"
 - [XML에서 데이터 세트 스키마 정보 로드](loading-dataset-schema-information-from-xml.md)
 - [데이터 집합에서 XML 사용](using-xml-in-a-dataset.md)
 - [DataSet, DataTable 및 DataView](index.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 개요](../ado-net-overview.md)

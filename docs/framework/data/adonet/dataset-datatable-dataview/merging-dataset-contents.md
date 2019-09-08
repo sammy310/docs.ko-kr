@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-ms.openlocfilehash: e5a8040a803fbc9b098fc1b56e0f5d837c4cdb94
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: abc9183666602a7ef369e690e3ae499f8c7b8b11
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203368"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784404"
 ---
 # <a name="merging-dataset-contents"></a>데이터 세트 콘텐츠 병합
 
@@ -91,4 +91,4 @@ ms.locfileid: "70203368"
 - [DataAdapter 및 DataReader](../dataadapters-and-datareaders.md)
 - [ADO.NET에서 데이터 검색 및 수정](../retrieving-and-modifying-data.md)
 - [ID 또는 일련 번호 값 검색](../retrieving-identity-or-autonumber-values.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 개요](../ado-net-overview.md)

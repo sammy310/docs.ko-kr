@@ -9,18 +9,18 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: e118c9ec29b8d4e46fe799f24bb8a96929bf2ed8
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: e464aff46f311ede1cd629fb459ade9a6e627d59
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663252"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796952"
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>방법: 서명 및 암호화에 별도의 X.509 인증서 사용
 
-이 항목에서는 Windows Communication Foundation (WCF) 메시지 서명 및 암호화는 클라이언트와 서비스에 대 한 다른 인증서를 사용 하도록 구성 하는 방법을 보여 줍니다.
+이 항목에서는 클라이언트와 서비스 모두에서 메시지 서명 및 암호화에 서로 다른 인증서를 사용 하도록 WCF (Windows Communication Foundation)를 구성 하는 방법을 보여 줍니다.
 
-서명 및 암호화에 사용할 별도 인증서를 사용 하려면 사용자 지정 클라이언트 또는 서비스 자격 증명 (또는 둘 다) 만들어야 WCF 클라이언트 또는 서비스에 대 한 여러 인증서를 설정 하기 위한 API를 제공 하지 않으므로 합니다. 또한 여러 개의 인증서 정보를 활용하고 지정된 키 사용과 메시지 방향에 적합한 보안 토큰 공급자를 만들기 위해 보안 토큰 관리자도 제공되어야 합니다.
+서명 및 암호화에 별도의 인증서를 사용 하려면 WCF에서 여러 클라이언트 또는 서비스 인증서를 설정 하는 API를 제공 하지 않기 때문에 사용자 지정 클라이언트 또는 서비스 자격 증명 (또는 둘 다)을 만들어야 합니다. 또한 여러 개의 인증서 정보를 활용하고 지정된 키 사용과 메시지 방향에 적합한 보안 토큰 공급자를 만들기 위해 보안 토큰 관리자도 제공되어야 합니다.
 
 다음 다이어그램에서는 사용되는 주 클래스, 상속하는 클래스(위쪽 화살표로 표시), 특정 메서드 및 속성의 반환 형식을 보여 줍니다.
 
@@ -34,17 +34,17 @@ ms.locfileid: "67663252"
 
   - 메서드 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A>는 <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider>인스턴스를 반환합니다.
 
-![클라이언트 자격 증명을 사용 하는 방법을 보여 주는 차트](../../../../docs/framework/wcf/extending/media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")
+![클라이언트 자격 증명을 사용 하는 방법을 보여 주는 차트](./media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")
 
-사용자 지정 자격 증명에 대 한 자세한 내용은 참조 하세요. [연습: 사용자 지정 클라이언트 및 서비스 자격 증명 만들기](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)합니다.
+사용자 지정 자격 증명 [에 대 한 자세한 내용은 연습: 사용자 지정 클라이언트 및 서비스 자격](walkthrough-creating-custom-client-and-service-credentials.md)증명을 만드는 중입니다.
 
 또한 사용자 지정 ID 검증 도구를 만들고 사용자 지정 바인딩의 보안 바인딩 요소에 연결해야 합니다. 그리고 기본 자격 증명 대신 사용자 지정 자격 증명을 사용해야 합니다.
 
 다음 다이어그램에서는 사용자 지정 바인딩에 관련된 클래스 및 사용자 지정 ID 검증 도구를 연결하는 방법을 보여 줍니다. 여러 바인딩 요소가 관련되어 있으며 이들 요소는 모두 <xref:System.ServiceModel.Channels.BindingElement>에서 상속합니다. <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>에는 <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> 속성이 있습니다. 이 속성은 <xref:System.ServiceModel.Security.IdentityVerifier>가 사용자 지정되는 `MyIdentityVerifier`인스턴스를 반환합니다.
 
-![사용자 지정 바인딩 요소를 보여 주는 차트](../../../../docs/framework/wcf/extending/media/dddea4a2-0bb4-4921-9bf4-20d4d82c3da5.gif "dddea4a2-0bb4-4921-9bf4-20d4d82c3da5")
+![사용자 지정 바인딩 요소를 보여 주는 차트](./media/dddea4a2-0bb4-4921-9bf4-20d4d82c3da5.gif "dddea4a2-0bb4-4921-9bf4-20d4d82c3da5")
 
-사용자 지정 id 검증 도구를 만드는 방법에 대 한 자세한 내용은 참조 하는 방법. [방법: 사용자 지정 클라이언트 Id 검증 도구 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)합니다.
+사용자 지정 id 검증 도구를 만드는 방법에 대 한 자세한 내용은 방법: [방법: 사용자 지정 클라이언트 Id 검증 도구](how-to-create-a-custom-client-identity-verifier.md)를 만듭니다.
 
 ### <a name="to-use-separate-certificates-for-signing-and-encryption"></a>서명 및 암호화에 별도의 인증서를 사용하려면
 
@@ -97,4 +97,4 @@ ms.locfileid: "67663252"
 - <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>
 - <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>
 - <xref:System.ServiceModel.Security.IdentityVerifier>
-- [연습: 사용자 지정 클라이언트 및 서비스 자격 증명 만들기](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+- [연습: 사용자 지정 클라이언트 및 서비스 자격 증명 만들기](walkthrough-creating-custom-client-and-service-credentials.md)

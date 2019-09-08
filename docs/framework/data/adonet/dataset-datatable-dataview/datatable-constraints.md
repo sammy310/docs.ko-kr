@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
-ms.openlocfilehash: 68b99e834428261d59c5fb27277b24eb0f6e77e4
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3f3055b11f0e682ae5a9578289e30dc2716343fe
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205060"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785394"
 ---
 # <a name="datatable-constraints"></a>DataTable 제약 조건
 제약 조건을 사용하여 <xref:System.Data.DataTable>의 데이터를 제한함으로써 데이터 무결성을 유지할 수 있습니다. 제약 조건은 자동 규칙이기 때문에 행 값이 조금이라도 변경되면 열 또는 관련 열에 적용되어 작업 과정을 결정합니다. 의 속성이true`System.Data.DataSet.EnforceConstraints` 이면 제약 조건이 적용 됩니다. <xref:System.Data.DataSet> `EnforceConstraints` 속성을 설정하는 방법을 보여 주는 코드 예제는 <xref:System.Data.DataSet.EnforceConstraints%2A> 참조 항목을 참조하세요.  
@@ -22,7 +22,7 @@ ms.locfileid: "70205060"
   
  ForeignKeyConstraint <xref:System.Data.ForeignKeyConstraint.DeleteRule%2A> 의 <xref:System.Data.ForeignKeyConstraint.UpdateRule%2A> 및 속성은 사용자가 관련 테이블의 행을 삭제 하거나 업데이트 하려고 할 때 수행할 동작을 정의 합니다. 다음 표에서는 **ForeignKeyConstraint**의 **DeleteRule** 및 **UpdateRule** 속성에 사용할 수 있는 다양 한 설정을 설명 합니다.  
   
-|규칙 설정|Description|  
+|규칙 설정|설명|  
 |------------------|-----------------|  
 |**Cascade**|관련 행을 삭제하거나 업데이트합니다.|  
 |**SetNull**|관련 행의 값을 **DBNull**로 설정 합니다.|  
@@ -58,7 +58,7 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
   
  다음 표에서는 **AcceptRejectRule**에 사용할 수 있는 설정을 보여 줍니다.  
   
-|규칙 설정|설명|  
+|규칙 설정|Description|  
 |------------------|-----------------|  
 |**Cascade**|자식 행의 변경을 승인하거나 거부합니다.|  
 |**없음**|자식 행에 대해 아무 동작도 수행하지 않습니다. 기본값입니다.|  
@@ -100,4 +100,4 @@ custDS.Tables["Customers"].Constraints.Add(custUnique);
 - <xref:System.Data.UniqueConstraint>
 - [DataTable 스키마 정의](datatable-schema-definition.md)
 - [DataSet, DataTable 및 DataView](index.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 개요](../ado-net-overview.md)

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: 17ae74a430df4d4a4670c2390ce7b2ee25b67c7a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4f2636d3bb248adbb6b912887012b0b9c246c590
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938709"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793069"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>방법: 매개 변수를 사용하는 저장 프로시저 사용
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 출력 매개 변수를 참조 매개 변수에 매핑하고 값 형식에 대해 매개 변수를 nullable로 선언합니다.  
   
- 행 집합 [을 반환 하는 쿼리에서 입력 매개 변수를 사용 하는 방법에 대 한 예는 방법: 행 집합](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)을 반환 합니다.  
+ 행 집합 [을 반환 하는 쿼리에서 입력 매개 변수를 사용 하는 방법에 대 한 예는 방법: 행 집합](how-to-return-rowsets.md)을 반환 합니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 단일 입력 매개 변수(고객 ID)를 사용하여 출력 매개 변수(해당 고객의 총 판매액)를 반환합니다.  
@@ -41,7 +41,7 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
   
 ## <a name="see-also"></a>참고자료
 
-- [저장 프로시저](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
-- [샘플 데이터베이스 다운로드](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [저장 프로시저](stored-procedures.md)
+- [샘플 데이터베이스 다운로드](downloading-sample-databases.md)
 - [Nullable 형식 사용](../../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
 - [Nullable 값 형식](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

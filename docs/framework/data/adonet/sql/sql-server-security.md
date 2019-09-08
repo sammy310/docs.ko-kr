@@ -2,12 +2,12 @@
 title: SQL Server 보안
 ms.date: 03/30/2017
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
-ms.openlocfilehash: 4aa4feadb6305f8a0ea6f99c2add780d6fca95cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5fd9cc82a3b1e4ffa217d65c542376fe067db06
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61927603"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791625"
 ---
 # <a name="sql-server-security"></a>SQL Server 보안
 SQL Server에는 안전한 데이터베이스 애플리케이션 만들기를 지원하는 많은 기능이 있습니다.  
@@ -23,23 +23,23 @@ SQL Server에는 안전한 데이터베이스 애플리케이션 만들기를 �
  이 단원의 항목에서는 개발자와 관련이 있는 SQL Server의 보안 기능에 대해 간략히 설명하며, 이러한 항목에 대해 자세히 다루고 있는 SQL Server 온라인 설명서와 기타 리소스의 관련 항목으로 연결되는 링크를 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [SQL Server 보안 개요](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
+ [SQL Server 보안 개요](overview-of-sql-server-security.md)  
  SQL Server의 아키텍처와 보안 기능에 대해 설명합니다.  
   
- [SQL Server의 응용 프로그램 보안 시나리오](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [SQL Server의 응용 프로그램 보안 시나리오](application-security-scenarios-in-sql-server.md)  
  ADO.NET 및 SQL Server 애플리케이션에 대한 다양한 애플리케이션 보안 시나리오를 설명하는 항목을 제공합니다.  
   
- [SQL Server Express 보안](../../../../../docs/framework/data/adonet/sql/sql-server-express-security.md)  
- SQL Server Express에 대 한 보안 고려 사항을 설명합니다.  
+ [SQL Server Express 보안](sql-server-express-security.md)  
+ SQL Server Express에 대 한 보안 고려 사항을 설명 합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
 [SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)  
-SQL Server 및 Azure SQL Database에 대 한 보안 고려 사항을 설명합니다.
+SQL Server 및 Azure SQL Database에 대 한 보안 고려 사항을 설명 합니다.
 
 [SQL Server 설치에 대한 보안 고려 사항](/sql/sql-server/install/security-considerations-for-a-sql-server-installation)  
-SQL Server를 설치 하기 전에 고려해 야 할 보안 문제를 설명 합니다.
+SQL Server를 설치 하기 전에 고려해 야 하는 보안 문제에 대해 설명 합니다.
 
 ## <a name="see-also"></a>참고자료
 
-- [ADO.NET 응용 프로그램 보안](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server 및 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [ADO.NET 응용 프로그램 보안](../securing-ado-net-applications.md)
+- [SQL Server 및 ADO.NET](index.md)

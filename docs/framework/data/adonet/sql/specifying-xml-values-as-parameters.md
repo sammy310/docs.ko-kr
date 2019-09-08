@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: 40cdf3efe1ad3ec2db433f68599b87bfeb7908cf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8e57bfe23a80bf3913cd7fb8b96527870259e77a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964731"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780878"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>XML 값을 매개 변수로 지정
 쿼리에 값이 XML 문자열인 매개 변수가 필요한 경우에는 개발자가 **SqlXml** 데이터 형식의 인스턴스를 사용 하 여 해당 값을 제공할 수 있습니다. 정말 트릭은 없습니다. SQL Server의 XML 열은 다른 데이터 형식과 똑같은 방법으로 매개 변수 값을 허용 합니다.  
@@ -162,5 +162,5 @@ class Class1
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Data.SqlTypes.SqlXml>
-- [SQL Server의 XML 데이터](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server의 XML 데이터](xml-data-in-sql-server.md)
+- [ADO.NET 개요](../ado-net-overview.md)

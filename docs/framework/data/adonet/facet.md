@@ -1,21 +1,21 @@
 ---
-title: 패싯
+title: 패싯(facet)
 ms.date: 03/30/2017
 ms.assetid: 91c4e6aa-3e54-4b6c-a38a-abf27808cc85
-ms.openlocfilehash: 9353b143a328e0fb183b7870332462a0a2c91b10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1ac46c882b266fbb73d5c709c9fdf297e2b55b1b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879062"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783974"
 ---
-# <a name="facet"></a>패싯
-A *패싯* 세부 정보는 기본 형식 속성 정의를 추가 하는 데 사용 됩니다. A [속성](../../../../docs/framework/data/adonet/property.md) 정의 속성 형식에 대 한 정보가 있지만 보다 자세한 정보가 필요한 경우가 많습니다. 예를 들어, 개념적 모델의 엔터티 형식에는 값을 null로 설정할 수 없는 `String` 형식의 속성이 있을 수 있습니다. 패싯을 사용하면 이 수준의 세부 정보를 지정할 수 있습니다.  
+# <a name="facet"></a>패싯(facet)
+*패싯은* 기본 형식 속성 정의에 세부 정보를 추가 하는 데 사용 됩니다. 속성 [정의에](property.md) 는 속성 형식에 대 한 정보가 포함 되어 있지만 종종 더 자세한 정보가 필요 합니다. 예를 들어, 개념적 모델의 엔터티 형식에는 값을 null로 설정할 수 없는 `String` 형식의 속성이 있을 수 있습니다. 패싯을 사용하면 이 수준의 세부 정보를 지정할 수 있습니다.  
   
  다음 표에서는 EDM에서 지원되는 패싯에 대해 설명합니다.  
   
 > [!NOTE]
->  패싯의 정확한 값과 동작은 EDM 구현을 사용하는 런타임 환경에서 결정됩니다.  
+> 패싯의 정확한 값과 동작은 EDM 구현을 사용하는 런타임 환경에서 결정됩니다.  
   
 |패싯|설명|적용 대상|  
 |-----------|-----------------|----------------|  
@@ -30,11 +30,11 @@ A *패싯* 세부 정보는 기본 형식 속성 정의를 추가 하는 데 사
 |`Unicode`|속성 값을 유니코드로 저장할지 여부를 나타냅니다.|`String`|  
   
 ## <a name="example"></a>예제  
- 합니다 [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) 개념 스키마 정의 언어를 호출 하는 도메인 특정 언어 (DSL)를 사용 하 여 ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 개념적 모델을 정의 합니다. 다음 CSDL에서는 `Book` 엔터티 형식을 정의합니다. 패싯은 XML 특성으로 구현됩니다. 패싯 값은 속성을 null로 설정할 수 없으며 `Scale` 속성의 `Precision` 및 `Revision`이 각각 29로 설정됨을 나타냅니다.  
+ [ADO.NET Entity Framework](./ef/index.md) 에서는[CSDL](./ef/language-reference/csdl-specification.md)(개념 스키마 정의 언어) 이라는 DSL (도메인별 언어)을 사용 하 여 개념적 모델을 정의 합니다. 다음 CSDL에서는 `Book` 엔터티 형식을 정의합니다. 패싯은 XML 특성으로 구현됩니다. 패싯 값은 속성을 null로 설정할 수 없으며 `Scale` 속성의 `Precision` 및 `Revision`이 각각 29로 설정됨을 나타냅니다.  
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
 ## <a name="see-also"></a>참고자료
 
-- [엔터티 데이터 모델의 주요 개념](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [엔터티 데이터 모델](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [엔터티 데이터 모델의 주요 개념](entity-data-model-key-concepts.md)
+- [엔터티 데이터 모델](entity-data-model.md)

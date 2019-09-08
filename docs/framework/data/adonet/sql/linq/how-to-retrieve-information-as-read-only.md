@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fb09e298-0b53-47e5-97fb-ab318bcd4fad
-ms.openlocfilehash: b98c5e6ea49695015eb566ca2176b23c5260017a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 399bf44ef5536a9adebf1cad590439741df998f0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928708"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793320"
 ---
 # <a name="how-to-retrieve-information-as-read-only"></a>방법: 읽기 전용 정보 검색
 데이터를 변경하지 않으려면 읽기 전용 결과를 검색하여 쿼리의 성능을 향상시킬 수 있습니다.  
@@ -28,6 +28,6 @@ ms.locfileid: "69928708"
   
 ## <a name="see-also"></a>참고자료
 
-- [쿼리 개념](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [데이터베이스 쿼리](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
-- [지연된 로드 및 즉시 로드 비교](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)
+- [쿼리 개념](query-concepts.md)
+- [데이터베이스 쿼리](querying-the-database.md)
+- [지연된 로드 및 즉시 로드 비교](deferred-versus-immediate-loading.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 7581031b022c9c53568a616de66584be9ef7229c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 2c73bec644a9a76ba05d3299183e8f1643c8e870
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041188"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794322"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server 연결 풀링(ADO.NET)
 데이터베이스 서버에 연결하는 과정은 일반적으로 시간이 많이 걸리는 여러 단계로 이루어져 있습니다. 즉, 소켓이나 명명된 파이프 같은 실제 채널을 설정하고 서버와의 초기 핸드셰이크를 발생시키며 연결 문자열 정보를 구문 분석할 뿐 아니라 서버에 연결을 인증하고 현재 트랜잭션에 인리스트먼트하기 위해 검사를 실행해야 하는 등의 단계를 거쳐야 합니다.  
@@ -127,11 +127,11 @@ using (SqlConnection connection = new SqlConnection(
  `sp_setapprole` 시스템 저장 프로시저를 호출하여 SQL Server 응용 프로그램 역할을 활성화한 후에는 해당 연결의 보안 컨텍스트를 다시 설정할 수 없습니다. 그러나 풀링이 활성화된 경우 연결이 풀로 반환되고 풀링된 연결이 다시 사용될 때 오류가 발생합니다. 자세한 내용은 기술 자료 문서 "[OLE DB 리소스 풀링을 사용 하는 SQL 응용 프로그램 역할 오류](https://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)"를 참조 하십시오.  
   
 ### <a name="application-role-alternatives"></a>응용 프로그램 역할의 대안  
- 응용 프로그램 역할 대신 사용할 수 있는 보안 메커니즘을 사용하는 것이 좋습니다. 자세한 내용은 [SQL Server에서 응용 프로그램 역할 만들기](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)를 참조 하세요.  
+ 응용 프로그램 역할 대신 사용할 수 있는 보안 메커니즘을 사용하는 것이 좋습니다. 자세한 내용은 [SQL Server에서 응용 프로그램 역할 만들기](./sql/creating-application-roles-in-sql-server.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고자료
 
-- [연결 풀링](../../../../docs/framework/data/adonet/connection-pooling.md)
-- [SQL Server 및 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
-- [성능 카운터](../../../../docs/framework/data/adonet/performance-counters.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [연결 풀링](connection-pooling.md)
+- [SQL Server 및 ADO.NET](./sql/index.md)
+- [성능 카운터](performance-counters.md)
+- [ADO.NET 개요](ado-net-overview.md)

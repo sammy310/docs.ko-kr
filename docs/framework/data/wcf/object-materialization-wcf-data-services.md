@@ -5,16 +5,16 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-ms.openlocfilehash: d45d472a2996c0b501af70a0a2a6d2d669dedb4d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 89357b1d05526438c939a73663c5b7b6273df4ac
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043537"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790396"
 ---
 # <a name="object-materialization-wcf-data-services"></a>개체 구체화(WCF Data Services)
 
-**서비스 참조 추가** 대화 상자를 사용 하 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 여 .NET Framework 기반 클라이언트 응용 프로그램에서 피드를 사용 하는 경우 피드에서 노출 하는 데이터 모델의 각 엔터티 형식에 대해 해당 하는 데이터 클래스가 생성 됩니다. 자세한 내용은 [데이터 서비스 클라이언트 라이브러리 생성](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)을 참조 하십시오. 쿼리에서 반환되는 엔터티 데이터는 이러한 생성된 클라이언트 데이터 서비스 클래스 중 하나의 인스턴스로 구체화됩니다. 추적 되는 개체에 대 한 병합 옵션 및 id 확인에 대 한 자세한 내용은 [데이터 서비스 컨텍스트 관리](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)를 참조 하세요.
+**서비스 참조 추가** 대화 상자를 사용 하 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 여 .NET Framework 기반 클라이언트 응용 프로그램에서 피드를 사용 하는 경우 피드에서 노출 하는 데이터 모델의 각 엔터티 형식에 대해 해당 하는 데이터 클래스가 생성 됩니다. 자세한 내용은 [데이터 서비스 클라이언트 라이브러리 생성](generating-the-data-service-client-library-wcf-data-services.md)을 참조 하십시오. 쿼리에서 반환되는 엔터티 데이터는 이러한 생성된 클라이언트 데이터 서비스 클래스 중 하나의 인스턴스로 구체화됩니다. 추적 되는 개체에 대 한 병합 옵션 및 id 확인에 대 한 자세한 내용은 [데이터 서비스 컨텍스트 관리](managing-the-data-service-context-wcf-data-services.md)를 참조 하세요.
 
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하면 도구에서 생성된 데이터 클래스를 사용하지 않고 고유한 클라이언트 데이터 서비스 클래스를 정의할 수도 있습니다. 이에 따라 POCO(Plain Old CLR Object) 데이터 클래스라고도 하는 고유 데이터 클래스를 사용할 수 있습니다. 이러한 유형의 사용자 지정 데이터 클래스를 사용 하는 경우 또는 <xref:System.Data.Services.Common.DataServiceKeyAttribute> <xref:System.Data.Services.Common.DataServiceEntityAttribute> 중 하나를 사용 하 여 데이터 클래스의 특성을 지정 하 고 클라이언트의 형식 이름이 데이터 서비스의 데이터 모델에 있는 형식 이름과 일치 하는지 확인 해야 합니다.
 
@@ -38,10 +38,10 @@ ms.locfileid: "70043537"
 
     - 복합 속성은 응답에 있는 복합 형식의 속성을 사용하여 설정된 새로운 복합 형식 인스턴스로 설정됩니다.
 
-    - 관련 엔터티의 컬렉션을 반환하는 탐색 속성은 <xref:System.Collections.Generic.ICollection%601>의 새 인스턴스나 기존 인스턴스로 설정됩니다. 여기서 `T`는 관련 엔터티의 형식입니다. 이 컬렉션은 관련 개체가 <xref:System.Data.Services.Client.DataServiceContext>로 로드되지 않은 경우 비어 있습니다. 자세한 내용은 [지연 된 콘텐츠 로드](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)를 참조 하세요.
+    - 관련 엔터티의 컬렉션을 반환하는 탐색 속성은 <xref:System.Collections.Generic.ICollection%601>의 새 인스턴스나 기존 인스턴스로 설정됩니다. 여기서 `T`는 관련 엔터티의 형식입니다. 이 컬렉션은 관련 개체가 <xref:System.Data.Services.Client.DataServiceContext>로 로드되지 않은 경우 비어 있습니다. 자세한 내용은 [지연 된 콘텐츠 로드](loading-deferred-content-wcf-data-services.md)를 참조 하세요.
 
       > [!NOTE]
-      > 생성된 클라이언트 데이터 클래스가 데이터 바인딩을 지원하는 경우 탐색 속성은 <xref:System.Data.Services.Client.DataServiceCollection%601> 클래스의 인스턴스를 대신 반환합니다. 자세한 내용은 [컨트롤에 데이터 바인딩](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)합니다.
+      > 생성된 클라이언트 데이터 클래스가 데이터 바인딩을 지원하는 경우 탐색 속성은 <xref:System.Data.Services.Client.DataServiceCollection%601> 클래스의 인스턴스를 대신 반환합니다. 자세한 내용은 [컨트롤에 데이터 바인딩](binding-data-to-controls-wcf-data-services.md)합니다.
 
 4. <xref:System.Data.Services.Client.DataServiceContext.ReadingEntity> 이벤트가 발생합니다.
 
@@ -49,5 +49,5 @@ ms.locfileid: "70043537"
 
 ## <a name="see-also"></a>참고자료
 
-- [데이터 서비스 쿼리](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
-- [프로젝트 쿼리](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)
+- [데이터 서비스 쿼리](querying-the-data-service-wcf-data-services.md)
+- [프로젝트 쿼리](query-projections-wcf-data-services.md)

@@ -2,12 +2,12 @@
 title: 예외 및 오류 처리
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: 6c56f1e4709953a78ffc5616444b5a40db9eb0f2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 676ebe999c72ed678b7432ec154b1ec104b4d6cd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963902"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795691"
 ---
 # <a name="handling-exceptions-and-faults"></a>예외 및 오류 처리
 예외는 서비스 또는 클라이언트 구현 내에서 로컬 오류 통신에 사용됩니다. 이와 반대로 오류는 서버에서 클라이언트로 또는 그 반대로 가는 경우와 같이 서비스 경계 너머로 이루어지는 오류 통신에도 사용되는 말입니다. 오류 외에, 전송 채널에서 전송별 메커니즘을 사용하여 전송 수준의 오류 통신을 수행하는 경우도 많습니다. 예를 들어 HTTP 전송에서는 404 등의 상태 코드를 사용하여 엔드포인트 URL이 없는 경우(오류를 다시 보낼 엔드포인트가 없음)를 나타냅니다. 이 문서는 사용자 지정 채널 작성자를 위한 안내 자료를 제공하는 세 개의 단원으로 구성되어 있습니다. 첫 단원에서는 예외를 정의하고 throw하는 방법에 대한 안내 자료를 제공합니다. 둘째 단원에서는 오류 생성 및 소비에 대한 안내 자료를 제공합니다. 셋째 단원에서는 추적 정보를 제공하여 사용자 지정 채널 사용자의 애플리케이션 실행 문제 해결을 돕는 방법에 대해 설명합니다.  
@@ -22,8 +22,8 @@ ms.locfileid: "69963902"
 |--------------------|-------------|-----------------------------|-----------------------|  
 |<xref:System.ServiceModel.AddressAlreadyInUseException>|수신용으로 지정된 엔드포인트 주소가 이미 사용 중입니다.|있는 경우 이 예외를 일으킨 전송 오류에 대한 세부 정보를 더 제공합니다. 예를 들어 <xref:System.IO.PipeException>, <xref:System.Net.HttpListenerException> 또는 <xref:System.Net.Sockets.SocketException>.|다른 주소를 지정하십시오.|  
 |<xref:System.ServiceModel.AddressAccessDeniedException>|프로세스에 수신용으로 지정된 엔드포인트 주소에 대한 액세스가 허용되지 않습니다.|있는 경우 이 예외를 일으킨 전송 오류에 대한 세부 정보를 더 제공합니다. 예를 들면 <xref:System.IO.PipeException> 또는 <xref:System.Net.HttpListenerException>과 같습니다.|다른 자격 증명으로 시도해 보십시오.|  
-|<xref:System.ServiceModel.CommunicationObjectFaultedException>|사용 중인이 (가) 오류 상태에 있습니다. 자세한 내용은 [상태 변경 내용 이해](../../../../docs/framework/wcf/extending/understanding-state-changes.md)를 참조 하세요. <xref:System.ServiceModel.ICommunicationObject> 개체에서 보류 중인 호출이 여러 개인 경우에는 한 호출에서만 실패와 관련된 예외가 throw되며, 나머지 호출에서는 <xref:System.ServiceModel.CommunicationObjectFaultedException>이 throw됩니다. 이 예외는 보통 애플리케이션에서 예외를 간과하고 이미 실패한 개체를 사용하려는 경우에 throw되며, 원래 예외를 catch한 것과 다른 스레드에서 일어나는 경우가 많습니다.|있는 경우 내부 예외에 대한 세부 정보를 제공합니다.|새 개체를 만듭니다. 처음에 <xref:System.ServiceModel.ICommunicationObject>의 오류를 일으킨 것이 무엇인지에 따라 다른 복구 작업이 필요할 수도 있습니다.|  
-|<xref:System.ServiceModel.CommunicationObjectAbortedException>|사용 중인이 (가) 중단 되었습니다. 자세한 내용은 [상태 변경 내용 이해](../../../../docs/framework/wcf/extending/understanding-state-changes.md)를 참조 하세요. <xref:System.ServiceModel.ICommunicationObject> <xref:System.ServiceModel.CommunicationObjectFaultedException>과 마찬가지로, 이 예외는 애플리케이션에서 개체에 대해 <xref:System.ServiceModel.ICommunicationObject.Abort%2A>를 호출했으며 따라서 개체를 더 이상 사용할 수 없는 경우를 나타냅니다. 이러한 호출은 다른 스레드에서 이루어지는 경우도 많습니다.|있는 경우 내부 예외에 대한 세부 정보를 제공합니다.|새 개체를 만듭니다. 처음에 <xref:System.ServiceModel.ICommunicationObject>의 중단을 일으킨 것이 무엇인지에 따라 다른 복구 작업이 필요할 수도 있습니다.|  
+|<xref:System.ServiceModel.CommunicationObjectFaultedException>|사용 중인이 (가) 오류 상태에 있습니다. 자세한 내용은 [상태 변경 내용 이해](understanding-state-changes.md)를 참조 하세요. <xref:System.ServiceModel.ICommunicationObject> 개체에서 보류 중인 호출이 여러 개인 경우에는 한 호출에서만 실패와 관련된 예외가 throw되며, 나머지 호출에서는 <xref:System.ServiceModel.CommunicationObjectFaultedException>이 throw됩니다. 이 예외는 보통 애플리케이션에서 예외를 간과하고 이미 실패한 개체를 사용하려는 경우에 throw되며, 원래 예외를 catch한 것과 다른 스레드에서 일어나는 경우가 많습니다.|있는 경우 내부 예외에 대한 세부 정보를 제공합니다.|새 개체를 만듭니다. 처음에 <xref:System.ServiceModel.ICommunicationObject>의 오류를 일으킨 것이 무엇인지에 따라 다른 복구 작업이 필요할 수도 있습니다.|  
+|<xref:System.ServiceModel.CommunicationObjectAbortedException>|사용 중인이 (가) 중단 되었습니다. 자세한 내용은 [상태 변경 내용 이해](understanding-state-changes.md)를 참조 하세요. <xref:System.ServiceModel.ICommunicationObject> <xref:System.ServiceModel.CommunicationObjectFaultedException>과 마찬가지로, 이 예외는 애플리케이션에서 개체에 대해 <xref:System.ServiceModel.ICommunicationObject.Abort%2A>를 호출했으며 따라서 개체를 더 이상 사용할 수 없는 경우를 나타냅니다. 이러한 호출은 다른 스레드에서 이루어지는 경우도 많습니다.|있는 경우 내부 예외에 대한 세부 정보를 제공합니다.|새 개체를 만듭니다. 처음에 <xref:System.ServiceModel.ICommunicationObject>의 중단을 일으킨 것이 무엇인지에 따라 다른 복구 작업이 필요할 수도 있습니다.|  
 |<xref:System.ServiceModel.EndpointNotFoundException>|대상 원격 엔드포인트가 수신 대기 상태가 아닙니다. 이는 엔드포인트 주소에 잘못된 부분이 있거나, 주소를 확인할 수 없거나, 엔드포인트가 다운된 경우에 발생할 수 있습니다. 예로는 DNS 오류, 큐 관리자를 사용할 수 없는 경우, 그리고 서비스가 실행되지 않는 경우가 포함됩니다.|내부 예외는 세부 정보(일반적으로 기본 전송에 대한 정보)를 제공합니다.|다른 주소를 지정하십시오. 또는 서비스가 다운된 경우 발신자가 잠시 기다렸다가 다시 시도할 수도 있습니다.|  
 |<xref:System.ServiceModel.ProtocolException>|엔드포인트의 정책에 설명된 통신 프로토콜이 엔드포인트 사이에서 일치하지 않습니다. 예를 들어, 프레이밍 콘텐츠 형식이 일치하지 않거나 최대 메시지 크기가 초과된 경우일 수 있습니다.|있는 경우 특정 프로토콜 오류에 대한 세부 정보를 더 제공합니다. 예를 들어 <xref:System.ServiceModel.QuotaExceededException>은 오류의 원인이 MaxReceivedMessageSize 초과인 경우의 내부 예외입니다.|회복 보낸 사람 및 수신 프로토콜 설정이 일치 하는지 확인 합니다. 여기 사용되는 방법 중 하나는 서비스 엔드포인트의 메타데이터(정책)를 다시 가져온 다음 생성된 바인딩을 사용하여 채널을 다시 만드는 것입니다.|  
 |<xref:System.ServiceModel.ServerTooBusyException>|원격 엔드포인트가 수신 대기 상태이지만 메시지를 처리할 준비가 되지 않았습니다.|있는 경우 내부 예외는 SOAP 오류 또는 전송 수준 오류의 세부 정보를 제공합니다.|회복 기다렸다가 나중에 작업을 다시 시도하십시오.|  
@@ -43,7 +43,7 @@ ms.locfileid: "69963902"
 ## <a name="communicating-faults"></a>오류 통신  
  SOAP 1.1과 SOAP 1.2는 모두 오류의 특정 구조를 정의합니다. 두 사양 사이에 약간의 차이는 있지만 일반적으로 Message 및 MessageFault 형식을 사용하여 오류를 만들고 소비합니다.  
   
- ![예외 및 오류 처리](../../../../docs/framework/wcf/extending/media/wcfc-soap1-1andsoap1-2faultcomparisonc.gif "wcfc_SOAP1-1AndSOAP1-2FaultComparisonc")  
+ ![예외 및 오류 처리](./media/wcfc-soap1-1andsoap1-2faultcomparisonc.gif "wcfc_SOAP1-1AndSOAP1-2FaultComparisonc")  
 SOAP 1.2 오류(왼쪽)와 SOAP 1.1 오류(오른쪽). SOAP 1.1에서는 오류 요소의 네임스페이스만 정규화됩니다.  
   
  SOAP에서는 오류 메시지를 오류 요소(이름이 `<env:Fault>`인 요소)를 `<env:Body>`의 자식으로 포함하는 메시지로만 정의합니다. 그림 1에 표시된 것과 같이 오류 요소의 콘텐츠는 SOAP 1.1과 SOAP 1.2 사이에서 약간 다릅니다. 하지만 <xref:System.ServiceModel.Channels.MessageFault?displayProperty=nameWithType> 클래스에서는 이런 차이를 한 개체 모델로 정규화합니다.  
@@ -311,9 +311,9 @@ public class MessageFault
   
 - <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>는 쓰려는 추적 정보의 소스이고 <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>는 <xref:System.Diagnostics.TraceSource>로부터 추적할 정보를 받아 수신기별 대상으로 출력하는 구체적인 수신기의 추상 기본 클래스입니다. 예를 들어 <xref:System.Diagnostics.XmlWriterTraceListener>에서는 추적 정보를 XML 파일로 출력합니다. 마지막으로 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>은 애플리케이션 사용자가 추적의 자세한 정도를 추적할 수 있게 해 주며 일반적으로 구성에 지정됩니다.  
   
-- 핵심 구성 요소 외에도 [Service Trace Viewer 도구 (svctraceviewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) 를 사용 하 여 WCF 추적을 보고 검색할 수 있습니다. 이 도구는 WCF에 의해 생성 되 고을 사용 하 여 <xref:System.Diagnostics.XmlWriterTraceListener>작성 된 추적 파일용으로 특별히 설계 되었습니다. 다음 그림에서는 추적에 관련된 다양한 구성 요소를 소개합니다.  
+- 핵심 구성 요소 외에도 [Service Trace Viewer 도구 (svctraceviewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) 를 사용 하 여 WCF 추적을 보고 검색할 수 있습니다. 이 도구는 WCF에 의해 생성 되 고을 사용 하 여 <xref:System.Diagnostics.XmlWriterTraceListener>작성 된 추적 파일용으로 특별히 설계 되었습니다. 다음 그림에서는 추적에 관련된 다양한 구성 요소를 소개합니다.  
   
- ![예외 및 오류 처리](../../../../docs/framework/wcf/extending/media/wcfc-tracinginchannelsc.gif "wcfc_TracingInChannelsc")  
+ ![예외 및 오류 처리](./media/wcfc-tracinginchannelsc.gif "wcfc_TracingInChannelsc")  
   
 ### <a name="tracing-from-a-custom-channel"></a>사용자 지정 채널에서 추적  
  사용자 지정 채널에서는 디버거를 실행 중인 애플리케이션에 첨부할 수 없는 경우 문제의 진단을 돕기 위한 추적 메시지를 작성해야 합니다. 여기에는 다음과 같은 두 가지 개략적인 작업이 포함 됩니다. 을 <xref:System.Diagnostics.TraceSource> 인스턴스화하고 해당 메서드를 호출 하 여 추적을 작성 합니다.  
@@ -334,7 +334,7 @@ udpsource.TraceInformation("UdpInputChannel received a message");
 > 추적 출력을 읽는 사람이 출력이 온 위치를 파악할 수 있도록 추적 소스 이름을 지정하는 것이 좋습니다.  
   
 #### <a name="integrating-with-the-trace-viewer"></a>Trace Viewer와 통합  
- 채널에서 생성 된 추적은 추적 수신기로를 사용 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> 하 여 [서비스 추적 뷰어 도구 (svctraceviewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) 에서 읽을 수 있는 형식으로 출력 될 수 있습니다. 채널 개발자에게는 이 기능이 필요 없습니다. 애플리케이션의 구성 파일에 이 추적 수신기를 구성할 필요가 있는 것은 애플리케이션 사용자(또는 애플리케이션 문제를 해결하는 사람)입니다. 예를 들어 다음 구성에서는 <xref:System.ServiceModel?displayProperty=nameWithType> 및 `Microsoft.Samples.Udp` 모두의 추적 정보를 `TraceEventsFile.e2e`라는 파일로 출력합니다.  
+ 채널에서 생성 된 추적은 추적 수신기로를 사용 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> 하 여 [서비스 추적 뷰어 도구 (svctraceviewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) 에서 읽을 수 있는 형식으로 출력 될 수 있습니다. 채널 개발자에게는 이 기능이 필요 없습니다. 애플리케이션의 구성 파일에 이 추적 수신기를 구성할 필요가 있는 것은 애플리케이션 사용자(또는 애플리케이션 문제를 해결하는 사람)입니다. 예를 들어 다음 구성에서는 <xref:System.ServiceModel?displayProperty=nameWithType> 및 `Microsoft.Samples.Udp` 모두의 추적 정보를 `TraceEventsFile.e2e`라는 파일로 출력합니다.  
   
 ```xml  
 <configuration>  

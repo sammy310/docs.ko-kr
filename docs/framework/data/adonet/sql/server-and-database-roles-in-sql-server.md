@@ -2,12 +2,12 @@
 title: SQL Server의 서버 및 데이터베이스 역할
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: 97ad04b1d081e5635104bdadb2d1a54402ffcca2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f3e31aa67bfbaa541d8d1eb5b8b61dfd28182c72
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961091"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791782"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>SQL Server의 서버 및 데이터베이스 역할
 모든 버전의 SQL Server에서는 역할 기반 보안을 사용하므로 개별 사용자 대신 역할이나 사용자 그룹에 권한을 할당할 수 있습니다. 고정 서버 역할과 고정 데이터베이스 역할에는 고정 권한 집합이 할당되어 있습니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "69961091"
   
  SQL Server의 미리 정의된 역할에 대한 자세한 내용은 다음 리소스를 참조하세요.  
   
-|리소스|설명|  
+|리소스|Description|  
 |--------------|-----------------|  
 |[서버 수준 역할](/sql/relational-databases/security/authentication-access/server-level-roles)|SQL Server에서 고정 서버 역할 및 이와 관련 된 사용 권한을 설명 합니다.|  
 |[데이터베이스 수준 역할](/sql/relational-databases/security/authentication-access/database-level-roles)|고정 데이터베이스 역할 및 역할에 연결된 권한에 대해 설명합니다.|  
@@ -42,7 +42,7 @@ ms.locfileid: "69961091"
  `dbo` 또는 데이터베이스 소유자는 데이터베이스에서 모든 작업을 수행할 수 있는 권한을 암시적으로 가지고 있는 사용자 계정입니다. `sysadmin` 고정 서버 역할의 멤버는 자동으로 `dbo`에 매핑됩니다.  
   
 > [!NOTE]
-> `dbo`는 [SQL Server의 소유권 및 사용자 스키마 분리](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)에 설명 된 스키마의 이름 이기도 합니다.  
+> `dbo`는 [SQL Server의 소유권 및 사용자 스키마 분리](ownership-and-user-schema-separation-in-sql-server.md)에 설명 된 스키마의 이름 이기도 합니다.  
   
  `dbo` 사용자 계정을 `db_owner` 고정 데이터베이스 역할과 혼동하는 경우가 많습니다. `db_owner`의 범위는 데이터베이스이고 `sysadmin`의 범위는 전체 서버입니다. `db_owner` 역할의 멤버 자격은 `dbo` 사용자 권한을 부여하지 않습니다.  
   
@@ -56,16 +56,16 @@ ms.locfileid: "69961091"
   
  SQL Server 로그인, 사용자 및 역할에 대한 자세한 내용은 다음 리소스를 참조하세요.  
   
-|리소스|설명|  
+|리소스|Description|  
 |--------------|-----------------|  
 |[데이터베이스 엔진 권한 시작](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|보안 주체, 역할, 자격 증명, 보안 개체 및 권한에 대해 설명하는 항목의 링크를 제공합니다.|  
 |[주체로](/sql/relational-databases/security/authentication-access/principals-database-engine)|보안 주체에 대해 설명하며 서버 및 데이터베이스 역할에 대해 설명하는 항목의 링크를 제공합니다.|  
   
 ## <a name="see-also"></a>참고자료
 
-- [ADO.NET 응용 프로그램 보안](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server의 응용 프로그램 보안 시나리오](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [SQL Server에서 인증](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
-- [SQL Server에서 소유권 및 사용자 스키마 분리](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
-- [SQL Server에서 권한 부여 및 권한](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 응용 프로그램 보안](../securing-ado-net-applications.md)
+- [SQL Server의 응용 프로그램 보안 시나리오](application-security-scenarios-in-sql-server.md)
+- [SQL Server에서 인증](authentication-in-sql-server.md)
+- [SQL Server에서 소유권 및 사용자 스키마 분리](ownership-and-user-schema-separation-in-sql-server.md)
+- [SQL Server에서 권한 부여 및 권한](authorization-and-permissions-in-sql-server.md)
+- [ADO.NET 개요](../ado-net-overview.md)

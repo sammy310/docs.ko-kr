@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-ms.openlocfilehash: eb6841dd24c4c7587cc2424cc1e606194da34585
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 357812aa95ea731fe86fbe49b2cb1b2806e3915a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944057"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784870"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>DataAdapter DataTable 및 DataColumn 매핑
 **DataAdapter** 의 TableMappings 속성에는 0 개 이상의 <xref:System.Data.Common.DataTableMapping> 개체 컬렉션이 포함 되어 있습니다. **DataTableMapping** 는 데이터 원본에 대 한 쿼리에서 반환 되는 데이터와에 <xref:System.Data.DataTable>대 한 마스터 매핑을 제공 합니다. **DataTableMapping** 이름은 **DataTable** 이름 대신 **DataAdapter**의 **Fill** 메서드에 전달할 수 있습니다. 다음 예에서는 **Authors** 테이블에 대해 **AuthorsMapping** 라는 **DataTableMapping** 를 만듭니다.  
@@ -99,6 +99,6 @@ adapter.Fill(customersDataSet, "Customers")
   
 ## <a name="see-also"></a>참고자료
 
-- [DataAdapter 및 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [ADO.NET에서 데이터 검색 및 수정](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataAdapter 및 DataReader](dataadapters-and-datareaders.md)
+- [ADO.NET에서 데이터 검색 및 수정](retrieving-and-modifying-data.md)
+- [ADO.NET 개요](ado-net-overview.md)

@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92366190c769344b41923cbb25ed4b04afceaae9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b1c28f32a4b24393483241bd2d7d6f550b8b65ba
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778662"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796900"
 ---
 # <a name="getcachepath-function"></a>GetCachePath 함수
-지정된 된 플래그를 사용 하 여 캐시 된 어셈블리에 경로 가져옵니다.  
+지정 된 플래그를 사용 하 여 캐시 된 어셈블리에 대 한 경로를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,22 +40,22 @@ HRESULT GetCachePath (
   
 ## <a name="parameters"></a>매개 변수  
  `dwCacheFlags`  
- [in] [ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md) 캐시 된 어셈블리의 소스를 나타내는 값입니다.  
+ 진행 캐시 된 어셈블리의 소스를 나타내는 [ASM_CACHE_FLAGS](asm-cache-flags-enumeration.md) 값입니다.  
   
  `pwzCachePath`  
- [out] 경로에 반환 된 포인터입니다.  
+ 제한이 경로에 대 한 반환 포인터입니다.  
   
  `pcchPath`  
- [out에서] 요청한 최대 길이인 `pwzCachePath`, 및의 실제 길이가 반환 될 때 `pwzCachePath`합니다.  
+ [in, out] 요청 된 최대 길이 `pwzCachePath`이며 반환 될 때의 `pwzCachePath`실제 길이입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
   
- **헤더:** Fusion.h  
+ **헤더:** Fusion. h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
 
-- [ASM_CACHE_FLAGS 열거형](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md)
-- [Fusion 전역 정적 함수](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [ASM_CACHE_FLAGS 열거형](asm-cache-flags-enumeration.md)
+- [Fusion 전역 정적 함수](fusion-global-static-functions.md)

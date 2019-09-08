@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ee30d4f32e05fab27ae70052b28d3d152594cf90
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2710d14d6e73879fd17a6b58659463ea205f2384
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778420"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795371"
 ---
 # <a name="createhistoryreader-function"></a>CreateHistoryReader 함수
-지정된 된 파일에 대 한 기록 판독기를 만듭니다.  
+지정 된 파일에 대 한 기록 판독기를 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,26 +37,26 @@ HRESULT CreateHistoryReader (
   
 ## <a name="parameters"></a>매개 변수  
  `wzFilePath`  
- [in] 파일 경로입니다.  
+ 진행 파일 경로입니다.  
   
  `ppHistoryReader`  
- [out] 성공적으로 완료 되 면 기록 판독기에 대 한 포인터를 포함합니다.  
+ 제한이 성공적으로 완료 되 면 기록 판독기에 대 한 포인터를 포함 합니다.  
   
 ## <a name="return-value"></a>반환 값  
- 이 메서드는 다음 표에 설명 된 값 외에도 WinError.h에 정의 된 대로 표준 COM 오류 코드를 반환 합니다.  
+ 이 메서드는 Winerror.h에 정의 된 대로 표준 COM 오류 코드와 함께 다음 표에 설명 된 값을 반환 합니다.  
   
-|반환 코드|설명|  
+|반환 코드|Description|  
 |-----------------|-----------------|  
 |S_OK|메서드가 성공적으로 완료 되었음을 나타냅니다.|  
-|E_INVALIDARG|함을 `wzFilePath` 또는 `ppHistoryReader` null 참조로 설정 됩니다.|  
+|E_INVALIDARG|`wzFilePath` 또는`ppHistoryReader` 가 null 참조로 설정 됨을 나타냅니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
   
- **라이브러리:** Fusion.dll  
+ **라이브러리** Fusion.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
 
-- [Fusion 전역 정적 함수](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Fusion 전역 정적 함수](fusion-global-static-functions.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
-ms.openlocfilehash: b8a8656bb68832a09490e656903fd68788bdeb1d
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: bf73adff89ca5cad3a71239421ac826105a387cd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203106"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785223"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>데이터 세트 콘텐츠를 XML 데이터로 작성
 ADO.NET에서는 해당 스키마의 사용 여부와 관계없이 <xref:System.Data.DataSet>을 XML 표현으로 작성할 수 있습니다. 스키마 정보가 XML과 함께 인라인에 포함된 경우에는 XSD(XML 스키마 정의 언어)를 사용하여 작성됩니다. 이 스키마에는 <xref:System.Data.DataSet>의 테이블 정의와 관계 및 제약 조건 정의가 포함됩니다.  
@@ -33,7 +33,7 @@ string xmlDS = custDS.GetXml();
   
  다음 표에서는 **XmlWriteMode**에 대 한 옵션을 보여 줍니다.  
   
-|XmlWriteMode 옵션|설명|  
+|XmlWriteMode 옵션|Description|  
 |-------------------------|-----------------|  
 |**IgnoreSchema**|<xref:System.Data.DataSet>의 현재 내용을 XML 스키마 없이 XML 데이터로 작성합니다. 기본값입니다.|  
 |**WriteSchema**|<xref:System.Data.DataSet>의 현재 내용을 인라인 XML 스키마와 동일한 관계형 구조를 가진 XML 데이터로 작성합니다.|  
@@ -70,7 +70,7 @@ xmlSW.Close();
 |-----------------------|-----------------|  
 |**요소**|기본값입니다. 열이 XML 요소로 작성되며, 이 때 ColumnName이 요소의 이름이 되고 열의 내용은 요소의 텍스트로 작성됩니다. 예를 들어:<br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
 |**특성**|열이 현재 행에 대한 XML 요소의 XML 특성으로 작성되며, 이 때 특성의 이름은 ColumnName이며 열의 내용은 특성의 값으로 작성됩니다. 예를 들어:<br /><br /> `<RowElement ColumnName="Column Contents" />`|  
-|**SimpleContent**|열의 내용이 현재 행에 대한 XML 요소의 텍스트로 작성됩니다. 예:<br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> **요소** 열 또는 중첩 관계가 있는 테이블의 열에는 **SimpleContent** 를 설정할 수 없습니다.|  
+|**SimpleContent**|열의 내용이 현재 행에 대한 XML 요소의 텍스트로 작성됩니다. 예를 들어:<br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> **요소** 열 또는 중첩 관계가 있는 테이블의 열에는 **SimpleContent** 를 설정할 수 없습니다.|  
 |**숨김**|열이 XML 출력으로 작성되지 않습니다.|  
   
 ## <a name="see-also"></a>참고자료
@@ -80,4 +80,4 @@ xmlSW.Close();
 - [DataRelation 중첩](nesting-datarelations.md)
 - [데이터 세트 스키마 정보를 XSD로 작성](writing-dataset-schema-information-as-xsd.md)
 - [DataSet, DataTable 및 DataView](index.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 개요](../ado-net-overview.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 9f9dfd4f1f299817aa424716aac4408a0b77a240
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2f17e9828f46e6355cdbbddb1b8a83f1188b1a01
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958006"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791749"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>SQL Server의 스냅샷 격리
 스냅샷 격리를 통해 OLTP 애플리케이션의 동시성이 향상됩니다.  
@@ -143,6 +143,6 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
 ## <a name="see-also"></a>참고자료
 
-- [SQL Server 및 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server 및 ADO.NET](index.md)
+- [ADO.NET 개요](../ado-net-overview.md)
 - [트랜잭션 잠금 및 행 버전 관리 가이드](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

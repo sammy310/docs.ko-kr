@@ -2,12 +2,12 @@
 title: System.TimeSpan 메서드
 ms.date: 03/30/2017
 ms.assetid: 9333fee8-1454-4374-855b-8c14c002f48f
-ms.openlocfilehash: ec27f8f17a6709efef1a8230b521778095ae1257
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9a7eb3c979219003d497ec752b36ec54ef081b43
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947086"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781049"
 ---
 # <a name="systemtimespan-methods"></a>System.TimeSpan 메서드
 <xref:System.TimeSpan?displayProperty=nameWithType>에 대한 멤버 지원은 사용 중인 .NET Framework 및 Microsoft SQL Server의 버전에 따라 크게 다릅니다.  
@@ -34,11 +34,11 @@ ms.locfileid: "69947086"
 > LINQ to SQL을 사용하여 <xref:System.TimeSpan?displayProperty=nameWithType>을 SQL `TIME` 열에 매핑하려면 .NET Framework 3.5 SP1 이상이 필요합니다. SQL `TIME` 데이터 형식은 Microsoft SQL Server 2008 이상에서만 사용할 수 있습니다.  
   
 ### <a name="addition-and-subtraction"></a>더하기 및 빼기  
- CLR <xref:System.TimeSpan?displayProperty=nameWithType> 형식은 더하기와 빼기를 지원하지만 SQL `TIME` 형식은 그렇지 않습니다. 이 때문에 LINQ to SQL 쿼리에서 SQL `TIME` 형식에 매핑할 때 더하기와 빼기를 시도할 경우 오류가 발생합니다. Sql의 날짜 및 시간 형식에 대 한 작업에 대 한 기타 고려 사항은 [SQL CLR 형식 매핑에서](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)확인할 수 있습니다.  
+ CLR <xref:System.TimeSpan?displayProperty=nameWithType> 형식은 더하기와 빼기를 지원하지만 SQL `TIME` 형식은 그렇지 않습니다. 이 때문에 LINQ to SQL 쿼리에서 SQL `TIME` 형식에 매핑할 때 더하기와 빼기를 시도할 경우 오류가 발생합니다. Sql의 날짜 및 시간 형식에 대 한 작업에 대 한 기타 고려 사항은 [SQL CLR 형식 매핑에서](sql-clr-type-mapping.md)확인할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
 
-- [쿼리 개념](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [개체 모델 만들기](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
-- [SQL-CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [데이터 형식 및 함수](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [쿼리 개념](query-concepts.md)
+- [개체 모델 만들기](creating-the-object-model.md)
+- [SQL-CLR 형식 매핑](sql-clr-type-mapping.md)
+- [데이터 형식 및 함수](data-types-and-functions.md)

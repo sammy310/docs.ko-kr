@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 25b443d8234909a4d8525c2ce2b4e70c3baa337b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 075eea42c65a822fc46ca14f820599567c35d231
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965227"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791370"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>SQL Server와의 System.Transactions 통합
 .NET Framework 버전 2.0에는 <xref:System.Transactions> 네임 스페이스를 통해 액세스할 수 있는 트랜잭션 프레임 워크가 도입 되었습니다. 이 프레임 워크는 ADO.NET을 포함 하 여 .NET Framework에 완전히 통합 된 방식으로 트랜잭션을 노출 합니다.  
@@ -230,5 +230,5 @@ End Function
   
 ## <a name="see-also"></a>참고자료
 
-- [트랜잭션 및 동시성](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [트랜잭션 및 동시성](transactions-and-concurrency.md)
+- [ADO.NET 개요](ado-net-overview.md)

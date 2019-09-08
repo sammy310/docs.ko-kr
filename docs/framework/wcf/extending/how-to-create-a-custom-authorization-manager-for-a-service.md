@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: ffdfe41db05eb5f2dd55a233f8ed646401777d0f
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9c28cb81b78f80505cfcf5f7e4dfdba083bd0793
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040294"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797117"
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>방법: 서비스에 대한 사용자 지정 권한 부여 관리자 만들기
 
@@ -58,17 +58,17 @@ WCF (Windows Communication Foundation)의 Id 모델 인프라는 확장 가능�
 
 1. 서비스에 대한 구성 파일을 엽니다.
 
-2. [> 동작\<](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)에 [ \<serviceauthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) 를 추가 합니다.
+2. [> 동작\<](../../configure-apps/file-schema/wcf/behaviors.md)에 [ \<serviceauthorization >](../../configure-apps/file-schema/wcf/serviceauthorization-element.md) 를 추가 합니다.
 
-    Serviceauthorization `serviceAuthorizationManagerType` >에 특성을 추가 하 고 해당 값을 사용자 지정 권한 부여 관리자를 나타내는 형식으로 설정 합니다. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)
+    Serviceauthorization `serviceAuthorizationManagerType` >에 특성을 추가 하 고 해당 값을 사용자 지정 권한 부여 관리자를 나타내는 형식으로 설정 합니다. [ \<](../../configure-apps/file-schema/wcf/serviceauthorization-element.md)
 
 3. 클라이언트와 서비스 간의 통신을 보안하는 바인딩을 추가합니다.
 
-    이 통신에 대해 선택된 바인딩에 따라 <xref:System.IdentityModel.Policy.AuthorizationContext>에 추가되는 클레임이 결정되고, 사용자 지정 권한 부여 관리자는 이 클레임을 사용하여 권한 부여 결정을 내립니다. 시스템에서 제공 하는 바인딩에 대 한 자세한 내용은 [시스템 제공 바인딩](../../../../docs/framework/wcf/system-provided-bindings.md)을 참조 하십시오.
+    이 통신에 대해 선택된 바인딩에 따라 <xref:System.IdentityModel.Policy.AuthorizationContext>에 추가되는 클레임이 결정되고, 사용자 지정 권한 부여 관리자는 이 클레임을 사용하여 권한 부여 결정을 내립니다. 시스템에서 제공 하는 바인딩에 대 한 자세한 내용은 [시스템 제공 바인딩](../system-provided-bindings.md)을 참조 하십시오.
 
-4. [ \<서비스 >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) 요소를 추가 하 고 `behaviorConfiguration` 특성 값을 [ \<behavior >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) 요소의 name 특성 값으로 설정 하 여 동작을 서비스 끝점에 연결 합니다.
+4. [ \<서비스 >](../../configure-apps/file-schema/wcf/service.md) 요소를 추가 하 고 `behaviorConfiguration` 특성 값을 [ \<behavior >](../../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) 요소의 name 특성 값으로 설정 하 여 동작을 서비스 끝점에 연결 합니다.
 
-    서비스 끝점 [을 구성 하는 방법에 대 한 자세한 내용은 방법: 구성](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)에서 서비스 끝점을 만듭니다.
+    서비스 끝점 [을 구성 하는 방법에 대 한 자세한 내용은 방법: 구성](../feature-details/how-to-create-a-service-endpoint-in-configuration.md)에서 서비스 끝점을 만듭니다.
 
     다음 코드 예제에서는 `Samples.MyServiceAuthorizationManager` 사용자 지정 권한 부여 관리자를 등록합니다.
 
@@ -114,7 +114,7 @@ WCF (Windows Communication Foundation)의 Id 모델 인프라는 확장 가능�
 
 ## <a name="example"></a>예제
 
-다음 코드 예제에서는 <xref:System.ServiceModel.ServiceAuthorizationManager> 메서드 재정의를 포함하는 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 클래스의 기본 구현을 보여 줍니다. 예제 코드에서는 <xref:System.IdentityModel.Policy.AuthorizationContext>에서 사용자 지정 클레임을 검사하고 해당 사용자 지정 클레임의 리소스가 `true`의 동작 값과 일치하면 <xref:System.ServiceModel.OperationContext>를 반환합니다. <xref:System.ServiceModel.ServiceAuthorizationManager> 클래스의 전체 구현에 대 한 자세한 내용은 [권한 부여 정책](../../../../docs/framework/wcf/samples/authorization-policy.md)을 참조 하세요.
+다음 코드 예제에서는 <xref:System.ServiceModel.ServiceAuthorizationManager> 메서드 재정의를 포함하는 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 클래스의 기본 구현을 보여 줍니다. 예제 코드에서는 <xref:System.IdentityModel.Policy.AuthorizationContext>에서 사용자 지정 클레임을 검사하고 해당 사용자 지정 클레임의 리소스가 `true`의 동작 값과 일치하면 <xref:System.ServiceModel.OperationContext>를 반환합니다. <xref:System.ServiceModel.ServiceAuthorizationManager> 클래스의 전체 구현에 대 한 자세한 내용은 [권한 부여 정책](../samples/authorization-policy.md)을 참조 하세요.
 
 [!code-csharp[c_CustomAuthMgr#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#2)]
 [!code-vb[c_CustomAuthMgr#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#2)]
@@ -122,4 +122,4 @@ WCF (Windows Communication Foundation)의 Id 모델 인프라는 확장 가능�
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
-- [권한 부여 정책](../../../../docs/framework/wcf/samples/authorization-policy.md)
+- [권한 부여 정책](../samples/authorization-policy.md)

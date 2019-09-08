@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
-ms.openlocfilehash: f6f112a63dd976a1d6ae91f2fafd6678a9f40846
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 21fa2f9e1dc2f255fe94f2420ba90a809ab5b05e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945085"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792669"
 ---
 # <a name="sort-elements-in-a-sequence"></a>시퀀스의 요소 정렬
 <xref:System.Linq.Enumerable.OrderBy%2A> 연산자를 사용하여 하나 이상의 키에 따른 시퀀스를 정렬합니다.  
@@ -90,5 +90,5 @@ ms.locfileid: "69945085"
   
 ## <a name="see-also"></a>참고자료
 
-- [쿼리 예제](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [샘플 데이터베이스 다운로드](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [쿼리 예제](query-examples.md)
+- [샘플 데이터베이스 다운로드](downloading-sample-databases.md)

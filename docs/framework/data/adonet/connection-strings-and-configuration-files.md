@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 3a1b0b947b97eac52e06626d2ed6d47bb9700147
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a98239886d6745bbb6e13e71a12764008460cdd7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949455"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785666"
 ---
 # <a name="connection-strings-and-configuration-files"></a>연결 문자열 및 구성 파일
-응용 프로그램 코드에 연결 문자열을 포함하면 보안상 취약한 부분이 생기고 유지 관리상의 문제가 발생할 수 있습니다. [Ildasm.exe(IL 디스어셈블러)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 도구를 사용하면 응용 프로그램의 소스 코드로 컴파일된 암호화되지 않은 연결 문자열을 볼 수 있습니다. 뿐만 아니라 연결 문자열이 계속해서 변경되는 경우에는 응용 프로그램을 다시 컴파일해야 합니다. 이와 같은 여러 가지 이유로 연결 문자열은 응용 프로그램 구성 파일에 저장하는 것이 좋습니다.  
+응용 프로그램 코드에 연결 문자열을 포함하면 보안상 취약한 부분이 생기고 유지 관리상의 문제가 발생할 수 있습니다. [Ildasm.exe(IL 디스어셈블러)](../../tools/ildasm-exe-il-disassembler.md) 도구를 사용하면 응용 프로그램의 소스 코드로 컴파일된 암호화되지 않은 연결 문자열을 볼 수 있습니다. 뿐만 아니라 연결 문자열이 계속해서 변경되는 경우에는 응용 프로그램을 다시 컴파일해야 합니다. 이와 같은 여러 가지 이유로 연결 문자열은 응용 프로그램 구성 파일에 저장하는 것이 좋습니다.  
   
 ## <a name="working-with-application-configuration-files"></a>응용 프로그램 구성 파일 사용  
  응용 프로그램 구성 파일에는 특정 응용 프로그램과 관련된 설정이 들어 있습니다. 예를 들어, ASP.NET 애플리케이션에는 하나 이상의 **web.config** 파일이 있을 수 있고, Windows 애플리케이션에는 **app.config**라는 선택적 파일이 하나 있을 수 있습니다. 구성 파일의 이름과 위치는 응용 프로그램 호스트에 따라 다르지만 모든 구성 파일은 다음과 같은 공통 요소를 공유합니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "69949455"
 ```  
   
 > [!NOTE]
-> 연결 문자열 일부를 구성 파일에 저장한 후 <xref:System.Data.Common.DbConnectionStringBuilder> 클래스를 사용하여 런타임에 연결 문자열을 완성할 수 있습니다. 이 기능은 사전에 연결 문자열 요소를 정확히 알고 있지 않거나 중요한 정보를 구성 파일에 저장하지 않으려는 경우에 유용합니다. 자세한 내용은 [연결 문자열 작성기](../../../../docs/framework/data/adonet/connection-string-builders.md)를 참조하세요.  
+> 연결 문자열 일부를 구성 파일에 저장한 후 <xref:System.Data.Common.DbConnectionStringBuilder> 클래스를 사용하여 런타임에 연결 문자열을 완성할 수 있습니다. 이 기능은 사전에 연결 문자열 요소를 정확히 알고 있지 않거나 중요한 정보를 구성 파일에 저장하지 않으려는 경우에 유용합니다. 자세한 내용은 [연결 문자열 작성기](connection-string-builders.md)를 참조하세요.  
   
 ### <a name="using-external-configuration-files"></a>외부 구성 파일 사용  
  외부 구성 파일은 단일 섹션으로 구성되며 구성 파일의 한 조각이 포함된 별도의 파일입니다. 외부 구성 파일은 기본 구성 파일에서 참조합니다. **connectionStrings** 섹션을 물리적으로 분리된 파일에 저장하면 응용 프로그램 배포 후 연결 문자열이 편집될 수 있는 경우에 유용합니다. 예를 들어, 표준 ASP.NET 동작에서는 구성 파일이 수정되면 응용 프로그램 도메인을 다시 시작합니다. 따라서 상태 정보가 손실될 수 있습니다. 하지만 외부 구성 파일은 수정해도 응용 프로그램이 다시 시작되지 않습니다. 외부 구성 파일은 ASP.NET뿐만 아니라 Windows 응용 프로그램에도 사용될 수 있습니다. 파일 액세스 보안 및 권한을 사용하여 외부 구성 파일에 대한 액세스를 제한할 수도 있습니다. 런타임에 외부 구성 파일을 사용하는 것은 투명하게 수행되므로 특별한 코딩이 필요하지 않습니다.  
@@ -171,9 +171,9 @@ ms.locfileid: "69949455"
   
 ## <a name="see-also"></a>참고자료
 
-- [연결 문자열 작성기](../../../../docs/framework/data/adonet/connection-string-builders.md)
-- [연결 정보 보호](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [연결 문자열 작성기](connection-string-builders.md)
+- [연결 정보 보호](protecting-connection-information.md)
 - [구성 클래스 사용](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
-- [응용 프로그램 구성](../../../../docs/framework/configure-apps/index.md)
+- [응용 프로그램 구성](../../configure-apps/index.md)
 - [ASP.NET 웹 사이트 관리](https://docs.microsoft.com/previous-versions/aspnet/6hy1xzbw(v=vs.100))
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 개요](ado-net-overview.md)

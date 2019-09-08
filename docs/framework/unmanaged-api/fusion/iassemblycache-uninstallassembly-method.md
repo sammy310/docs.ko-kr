@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 531f9167a931d6b972e47e120950197bed11c07e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63c1cb3c417e8e521c6ac8417d260ccb937863f8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778708"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796749"
 ---
 # <a name="iassemblycacheuninstallassembly-method"></a>IAssemblyCache::UninstallAssembly 메서드
-전역 어셈블리 캐시에서 지정된 된 어셈블리를 제거합니다.  
+전역 어셈블리 캐시에서 지정 된 어셈블리를 제거 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,16 +40,16 @@ HRESULT UninstallAssembly (
   
 ## <a name="parameters"></a>매개 변수  
  `dwFlags`  
- [in] 같은 값이 지원에 정의 된 플래그입니다.  
+ 진행 Fusion에 정의 된 플래그입니다.  
   
  `pszAssemblyName`  
- [in] 제거할 어셈블리의 이름입니다.  
+ 진행 제거할 어셈블리의 이름입니다.  
   
  `pRefData`  
- [in] A [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) 어셈블리에 대해 설치 데이터가 포함 된 구조입니다.  
+ 진행 어셈블리의 설치 데이터를 포함 하는 [FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md) 구조체입니다.  
   
  `pulDisposition`  
- [out, optional] 같은 값이 지원에 정의 된 처리 값 중 하나입니다. 가능한 값은 다음과 같습니다.  
+ [out, 선택 사항] Fusion에 정의 된 처리 값 중 하나입니다. 가능한 값은 다음과 같습니다.  
   
 - IASSEMBLYCACHE_UNINSTALL_DISPOSITION_UNINSTALLED (1)  
   
@@ -64,12 +64,12 @@ HRESULT UninstallAssembly (
 - IASSEMBLYCACHE_UNINSTALL_DISPOSITION_REFERENCE_NOT_FOUND (6)  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
   
- **헤더:** Fusion.h  
+ **헤더:** Fusion. h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
 
-- [IAssemblyCache 인터페이스](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [IAssemblyCache 인터페이스](iassemblycache-interface.md)

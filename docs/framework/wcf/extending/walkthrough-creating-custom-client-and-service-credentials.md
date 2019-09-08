@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: e59d578407ece9f22925abff57737cca8bf78eac
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: d49df909521b3b5e5cf509c1367821856e91e30b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374468"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795477"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>연습: 사용자 지정 클라이언트 및 서비스 자격 증명 만들기
 
@@ -42,11 +42,11 @@ WCF에서 제공 하는 기본 구현에서는 시스템이 제공 하는 자격
 
 자격 증명을 사용자 지정 하는 이유는 자격 증명 프로 비전, 보안 토큰 serialization 또는 인증과 관련 된 WCF 동작을 변경 하기 때문에 사용자 지정 자격 증명 클래스를 만드는 것은 첫 번째 단계입니다. 이 단원의 다른 항목에서는 사용자 지정 serializer 및 인증자를 만드는 방법에 대해 설명합니다. 이와 관련하여 사용자 지정 자격 증명 클래스를 만드는 것이 이 시리즈의 첫 번째 항목입니다. 후속 작업(사용자 지정 serializer 및 인증자 만들기)은 사용자 지정 자격 증명을 만든 이후에야 수행할 수 있습니다. 이 항목을 기초로 한 추가 항목은 다음과 같습니다.
 
-- [방법: 사용자 지정 보안 토큰 공급자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [방법: 사용자 지정 보안 토큰 공급자 만들기](how-to-create-a-custom-security-token-provider.md)
 
-- [방법: 사용자 지정 보안 토큰 인증자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [방법: 사용자 지정 보안 토큰 인증자 만들기](how-to-create-a-custom-security-token-authenticator.md)
 
-- [방법: 사용자 지정 토큰](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)을 만듭니다.
+- [방법: 사용자 지정 토큰](how-to-create-a-custom-token.md)을 만듭니다.
 
 ## <a name="procedures"></a>절차
 
@@ -70,11 +70,11 @@ WCF에서 제공 하는 기본 구현에서는 시스템이 제공 하는 자격
 
 1. <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>에서 파생된 새 클래스를 정의합니다.
 
-2. 선택 사항입니다. 사용자 지정 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 구현을 만들어야 하는 경우 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 메서드를 재정의합니다. 사용자 지정 보안 토큰 공급자 [에 대 한 자세한 내용은 방법: 사용자 지정 보안 토큰 공급자](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)를 만듭니다.
+2. 선택 사항입니다. 사용자 지정 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 구현을 만들어야 하는 경우 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 메서드를 재정의합니다. 사용자 지정 보안 토큰 공급자 [에 대 한 자세한 내용은 방법: 사용자 지정 보안 토큰 공급자](how-to-create-a-custom-security-token-provider.md)를 만듭니다.
 
-3. 선택 사항입니다. 사용자 지정 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> 구현을 만들어야 하는 경우 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 메서드를 재정의합니다. 사용자 지정 보안 토큰 인증자 [에 대 한 자세한 내용은 방법: 사용자 지정 보안 토큰 인증자](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)를 만듭니다.
+3. 선택 사항입니다. 사용자 지정 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> 구현을 만들어야 하는 경우 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 메서드를 재정의합니다. 사용자 지정 보안 토큰 인증자 [에 대 한 자세한 내용은 방법: 사용자 지정 보안 토큰 인증자](how-to-create-a-custom-security-token-authenticator.md)를 만듭니다.
 
-4. 선택 사항입니다. 사용자 지정 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A>를 만들어야 하는 경우 <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> 메서드를 재정의합니다. 사용자 지정 보안 토큰 및 사용자 지정 보안 토큰 serializer [에 대 한 자세한 내용은 방법: 사용자 지정 토큰](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)을 만듭니다.
+4. 선택 사항입니다. 사용자 지정 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A>를 만들어야 하는 경우 <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> 메서드를 재정의합니다. 사용자 지정 보안 토큰 및 사용자 지정 보안 토큰 serializer [에 대 한 자세한 내용은 방법: 사용자 지정 토큰](how-to-create-a-custom-token.md)을 만듭니다.
 
     [!code-csharp[c_CustomCredentials#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#2)]
     [!code-vb[c_CustomCredentials#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#2)]
@@ -158,11 +158,11 @@ WCF에서 제공 하는 기본 구현에서는 시스템이 제공 하는 자격
 
 1. <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> 클래스에서 파생된 새 클래스를 정의합니다.
 
-2. 선택 사항입니다. 사용자 지정 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> 구현을 만들어야 하는 경우 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 메서드를 재정의합니다. 사용자 지정 보안 토큰 공급자 [에 대 한 자세한 내용은 방법: 사용자 지정 보안 토큰 공급자](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)를 만듭니다.
+2. 선택 사항입니다. 사용자 지정 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> 구현을 만들어야 하는 경우 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 메서드를 재정의합니다. 사용자 지정 보안 토큰 공급자 [에 대 한 자세한 내용은 방법: 사용자 지정 보안 토큰 공급자](how-to-create-a-custom-security-token-provider.md)를 만듭니다.
 
-3. 선택 사항입니다. 사용자 지정 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> 구현을 만들어야 하는 경우 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 메서드를 재정의합니다. 사용자 지정 보안 토큰 인증자 [에 대 한 자세한 내용은 방법: 사용자 지정 보안 토큰 인증자](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md) 항목을 만듭니다.
+3. 선택 사항입니다. 사용자 지정 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> 구현을 만들어야 하는 경우 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 메서드를 재정의합니다. 사용자 지정 보안 토큰 인증자 [에 대 한 자세한 내용은 방법: 사용자 지정 보안 토큰 인증자](how-to-create-a-custom-security-token-authenticator.md) 항목을 만듭니다.
 
-4. 선택 사항입니다. 사용자 지정 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29>를 만들어야 하는 경우 <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> 메서드를 재정의합니다. 사용자 지정 보안 토큰 및 사용자 지정 보안 토큰 serializer [에 대 한 자세한 내용은 방법: 사용자 지정 토큰](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)을 만듭니다.
+4. 선택 사항입니다. 사용자 지정 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29>를 만들어야 하는 경우 <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> 메서드를 재정의합니다. 사용자 지정 보안 토큰 및 사용자 지정 보안 토큰 serializer [에 대 한 자세한 내용은 방법: 사용자 지정 토큰](how-to-create-a-custom-token.md)을 만듭니다.
 
     [!code-csharp[c_CustomCredentials#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#5)]
     [!code-vb[c_CustomCredentials#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#5)]
@@ -188,6 +188,6 @@ WCF에서 제공 하는 기본 구현에서는 시스템이 제공 하는 자격
 - <xref:System.IdentityModel.Selectors.SecurityTokenManager>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement>
-- [방법: 사용자 지정 보안 토큰 공급자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
-- [방법: 사용자 지정 보안 토큰 인증자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [방법: 사용자 지정 토큰 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)
+- [방법: 사용자 지정 보안 토큰 공급자 만들기](how-to-create-a-custom-security-token-provider.md)
+- [방법: 사용자 지정 보안 토큰 인증자 만들기](how-to-create-a-custom-security-token-authenticator.md)
+- [방법: 사용자 지정 토큰 만들기](how-to-create-a-custom-token.md)

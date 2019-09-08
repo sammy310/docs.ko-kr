@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
-ms.openlocfilehash: 92db9bdb209a542cc4fa269b35bfa98f8f20d2b7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4cadf20cdadb39483f26a29619cae058eac47e50
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940082"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793651"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>방법: 동적으로 데이터베이스 만들기
 LINQ to SQL에서 개체 모델은 관계형 데이터베이스에 매핑됩니다. 매핑은 특성 기반 매핑 또는 외부 매핑 파일을 사용하여 설정되며 이러한 매핑을 통해 관계형 데이터베이스의 구조를 설명할 수 있습니다. 두 경우 모두 관계형 데이터베이스에 대한 정보가 충분하므로 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 메서드를 사용하여 데이터베이스의 새 인스턴스를 만들 수 있습니다.  
@@ -50,8 +50,8 @@ LINQ to SQL에서 개체 모델은 관계형 데이터베이스에 매핑됩니�
   
 ## <a name="see-also"></a>참고자료
 
-- [특성 기반 매핑](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
-- [외부 매핑](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [SQL-CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [배경 정보](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [데이터 변경 및 변경 내용 전송](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [특성 기반 매핑](attribute-based-mapping.md)
+- [외부 매핑](external-mapping.md)
+- [SQL-CLR 형식 매핑](sql-clr-type-mapping.md)
+- [배경 정보](background-information.md)
+- [데이터 변경 및 변경 내용 전송](making-and-submitting-data-changes.md)

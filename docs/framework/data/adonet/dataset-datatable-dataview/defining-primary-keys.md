@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2ea85959-e763-4669-8bd9-46a9dab894bd
-ms.openlocfilehash: dbfd8a8b207c0da9403ac1f8ab36557c4abe383b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 0f87b1b730eecf0edad75bd87ca8b491b96e1d2b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204914"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784715"
 ---
 # <a name="defining-primary-keys"></a>기본 키 정의
 일반적으로 데이터베이스 테이블에는 테이블의 각 행을 고유하게 식별하는 열 또는 열 그룹이 있습니다. 이 식별 열 또는 열 그룹을 기본 키라고 합니다.  
@@ -70,4 +70,4 @@ workTable.PrimaryKey = keyColumn;
 - <xref:System.Data.DataTable>
 - [DataTable 스키마 정의](datatable-schema-definition.md)
 - [DataTable](datatables.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 개요](../ado-net-overview.md)

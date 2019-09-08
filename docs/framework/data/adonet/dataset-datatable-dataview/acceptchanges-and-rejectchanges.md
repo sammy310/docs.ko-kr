@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e2d1a6fe-31f9-4b83-9728-06c406a3394e
-ms.openlocfilehash: a8589b157bc2579a03d856b73802abc9a4b42855
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: c537fa808fc6ba4c740e71bfd70fe9cd1f3bd31a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204081"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785566"
 ---
 # <a name="acceptchanges-and-rejectchanges"></a>AcceptChanges 및 RejectChanges
 <xref:System.Data.DataTable>의 데이터 변경 내용에 대 한 정확성을 확인 한 후에는, <xref:System.Data.DataSet>또는의 <xref:System.Data.DataTable> <xref:System.Data.DataRow.AcceptChanges%2A> <xref:System.Data.DataRow>메서드를 사용 하 여 변경 내용을 적용할 수 있습니다. 그러면 **현재** 행 값 **이로 설정 됩니다. 원래** 값이 고 **RowState** 속성을 **변경 되지 않은 상태로**설정 합니다. 변경 내용 수락 또는 거부는 모든 **RowError** 정보를 지우고 **haserrors** 속성을 **false**로 설정 합니다. 또한, 변경 사항을 승인하거나 거부하면 데이터 소스에서 데이터를 업데이트하는 데도 영향을 줄 수 있습니다. 자세한 내용은 [Dataadapter 사용 하 여 데이터 원본 업데이트](../updating-data-sources-with-dataadapters.md)합니다.  
@@ -62,4 +62,4 @@ workTable.AcceptChanges();
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>
 - [DataTable에서 데이터 조작](manipulating-data-in-a-datatable.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 개요](../ado-net-overview.md)

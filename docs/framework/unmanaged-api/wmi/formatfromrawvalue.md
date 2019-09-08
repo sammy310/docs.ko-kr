@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 681d7ce42b2b8d16353e4f5b3523f1a953a49d95
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 65a6d9eab9708f762d14e5361697b85ffb73f54a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69037896"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798635"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue 함수
 형식 변환이 시간 기반인 경우 하나의 원시 성능 데이터 값을 지정된 형식으로 변화하거나 두 개의 원시 성능 데이터 값으로 변환합니다. 
@@ -49,7 +49,7 @@ int FormatFromRawValue (
 `dwFormat`\
 진행 원시 성능 데이터를 변환할 대상 형식입니다. 다음 값 중 하나일 수 있습니다.
 
-|상수  |값  |설명 |
+|상수  |값  |Description |
 |---------|---------|---------|
 | `PDH_FMT_DOUBLE` |0x00000200 | 계산 된 값을 배정밀도 부동 소수점 값으로 반환 합니다. | 
 | `PDH_FMT_LARGE` | 0x00000400 | 계산 된 값을 64 비트 정수로 반환 합니다. |
@@ -89,7 +89,7 @@ int FormatFromRawValue (
 
 ## <a name="requirements"></a>요구 사항
 
- **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.
+ **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.
 
  **라이브러리** PerfCounter.dll
 

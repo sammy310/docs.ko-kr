@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-ms.openlocfilehash: 4a1174dd1cd6ea785c118c61428ba73d1347316c
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: a4b3abfe9be25c9080a362eb4a6e4c7b070528f1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663874"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797230"
 ---
 # <a name="custom-bindings"></a>사용자 지정 바인딩
 
-시스템에서 제공하는 바인딩 중 하나가 사용자의 서비스 요구 사항을 충족하지 않을 때 <xref:System.ServiceModel.Channels.CustomBinding> 클래스를 사용할 수 있습니다. 모든 바인딩은 정렬된 바인딩 요소 집합으로부터 생성됩니다. 사용자 지정 바인딩은 시스템 제공 바인딩 요소로부터 만들거나 사용자 정의 사용자 지정 바인딩 요소를 포함할 수 있습니다. 예를 들어 사용자 지정 바인딩 요소를 사용하여 서비스 엔드포인트에서 새 전송 또는 새 인코더를 사용하도록 설정할 수 있습니다. 작업 예제를 보려면 [사용자 지정 바인딩 샘플](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90))합니다. 자세한 내용은 [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)합니다.
+시스템에서 제공하는 바인딩 중 하나가 사용자의 서비스 요구 사항을 충족하지 않을 때 <xref:System.ServiceModel.Channels.CustomBinding> 클래스를 사용할 수 있습니다. 모든 바인딩은 정렬된 바인딩 요소 집합으로부터 생성됩니다. 사용자 지정 바인딩은 시스템 제공 바인딩 요소로부터 만들거나 사용자 정의 사용자 지정 바인딩 요소를 포함할 수 있습니다. 예를 들어 사용자 지정 바인딩 요소를 사용하여 서비스 엔드포인트에서 새 전송 또는 새 인코더를 사용하도록 설정할 수 있습니다. 작업 예제는 [사용자 지정 바인딩 샘플](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90))을 참조 하세요. 자세한 내용은 [ \<customBinding >](../../configure-apps/file-schema/wcf/custombinding.md)를 참조 하세요.
 
 ## <a name="construction-of-a-custom-binding"></a>사용자 지정 바인딩 생성
 
@@ -44,7 +44,7 @@ ms.locfileid: "67663874"
 
   - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
 
-맨 아래에는 필수 전송 요소가 있습니다. 고유의 전송을 또는 Windows Communication Foundation (WCF) 제공 전송 바인딩 요소 중 하나를 사용할 수 있습니다.
+맨 아래에는 필수 전송 요소가 있습니다. 사용자 고유의 전송 또는 WCF (전송 바인딩 요소 Windows Communication Foundation) 중 하나를 사용할 수 있습니다.
 
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
 
@@ -66,7 +66,7 @@ ms.locfileid: "67663874"
 
 |계층|옵션|필수|
 |-----------|-------------|--------------|
-|트랜잭션|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|아니요|
+|의|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|아니요|
 |안정성|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|아니요|
 |보안|<xref:System.ServiceModel.Channels.SecurityBindingElement>|아니요|
 |인코딩|텍스트, 이진, MTOM(Message Transmission Optimization Mechanism), 사용자 지정|예|
@@ -76,9 +76,9 @@ ms.locfileid: "67663874"
 
 ## <a name="see-also"></a>참고자료
 
-- [엔드포인트 만들기 개요](../../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [시스템 제공 바인딩](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [방법: 시스템 제공 바인딩 사용자 지정](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)
-- [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [사용자 지정 바인딩](../../../../docs/framework/wcf/samples/custom-binding.md)
+- [엔드포인트 만들기 개요](../endpoint-creation-overview.md)
+- [바인딩을 사용하여 서비스 및 클라이언트 구성](../using-bindings-to-configure-services-and-clients.md)
+- [시스템 제공 바인딩](../system-provided-bindings.md)
+- [방법: 시스템 제공 바인딩 사용자 지정](how-to-customize-a-system-provided-binding.md)
+- [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md)
+- [사용자 지정 바인딩](../samples/custom-binding.md)

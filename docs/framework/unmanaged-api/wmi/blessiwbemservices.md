@@ -1,6 +1,6 @@
 ---
 title: BlessIWbemServices 함수 (관리 되지 않는 API 참조)
-description: BlessIWbemServices 함수는 사용자 자격 증명 IWbemServices 클래스에 대 한 액세스를 허용 하는지 여부를 나타냅니다.
+description: BlessIWbemServices 함수는 사용자 자격 증명이 IWbemServices 클래스에 대 한 액세스를 허용 하는지 여부를 나타냅니다.
 ms.date: 11/06/2017
 api_name:
 - BlessIWbemServices
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb83bc3c0c7724dbcd3133465d4e7ad3a9eea3a9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 57ab5eb418b5f0a9175074c87837c7cac8936346
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636499"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799050"
 ---
 # <a name="blessiwbemservices-function"></a>BlessIWbemServices 함수
-사용자 자격 증명을 지정 된 액세스를 허용 하는지 여부를 나타냅니다 [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) 클래스입니다.   
+사용자 자격 증명이 지정 된 [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) 클래스에 대 한 액세스를 허용 하는지 여부를 나타냅니다.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -44,38 +44,38 @@ HRESULT BlessIWbemServices (
 ## <a name="parameters"></a>매개 변수
 
 `pIWbemServices`\
-[in] 에 대 한 포인터를 [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) 개체는 권한이 필요 합니다.
+진행 사용 권한이 필요한 [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) 개체에 대 한 포인터입니다.
 
 `strUser`\
-[in] 사용자 이름입니다.
+진행 사용자 이름입니다.
 
 `strPassword`\
-[in] 연결 된 암호 `strUser`합니다.
+진행 와 `strUser`연결 된 암호입니다.
 
 `strAuthority`\
-[in] 사용자의 도메인 이름입니다. 참조 된 [ConnectServerWmi](connectserverwmi.md) 자세한 함수입니다.
+진행 사용자의 도메인 이름입니다. 자세한 내용은 [Connectserverwmi](connectserverwmi.md) 함수를 참조 하세요.
 
 `impLevel`\
-[in] 가장 수준입니다.
+진행 가장 수준입니다.
 
 `authnLevel`\
-[in] 권한 부여 수준입니다.
+진행 권한 수준입니다.
 
 ## <a name="return-value"></a>반환 값
 
-이 함수에 의해 반환 되는 다음 값에 정의 된 합니다 *WinError.h* 헤더 파일에서 정의할 수 상수로 코드:
+이 함수에서 반환 되는 다음 값은 *winerror.h* 헤더 파일에 정의 되어 있거나 코드에서 상수로 정의할 수 있습니다.
 
 |상수  |값  |설명  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0x80070057 | 하나 이상의 인수가 잘못 되었습니다. |
 | `E_POINTER` | 0x80004003 | `pIWbemServices`가 `null`인 경우 | 
 | `E_FAIL` | 0x80000008 | 지정 되지 않은 오류가 발생 했습니다. |
-| `E_OUTOFMEMORY` | 0x80000002 | 메모리가 부족 하 여 작업을 수행할 수 있는 경우 | 
-| `S_OK` | 0 | 함수 호출이 성공 했습니다. | 
+| `E_OUTOFMEMORY` | 0x80000002 | 작업을 수행 하는 데 사용할 수 있는 메모리가 부족 합니다. | 
+| `S_OK` | 0 | 함수 호출에 성공 했습니다. | 
 
 ## <a name="requirements"></a>요구 사항  
 
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** WMINet_Utils.idl  
   

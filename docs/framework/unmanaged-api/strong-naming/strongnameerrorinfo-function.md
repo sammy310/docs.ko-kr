@@ -20,12 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6f495500b087b9e24936acd414f1aff463d7f64
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 021fa1668247bc59a4412d2b5f4bac3f5ee8cc6b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781071"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799120"
 ---
 # <a name="strongnameerrorinfo-function"></a>StrongNameErrorInfo 함수
 강력한 이름 함수 중 하나에 의해 발생하는 마지막 오류 코드를 가져옵니다.  
@@ -39,16 +39,16 @@ HRESULT StrongNameErrorInfo ();
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 강력한 이름의 함수 중 하나에서 설정한 마지막 COM 오류 코드입니다.  
+ 강력한 이름 함수 중 하나로 설정 된 마지막 COM 오류 코드입니다.  
   
 ## <a name="remarks"></a>설명  
- 강력한 이름 메서드 중 대부분은 간단한 반환 `true` 또는 `false` 완료 여부 표시 합니다. 사용 된 `StrongNameErrorInfo` 강력한 이름의 함수에 의해 생성 된 마지막 오류를 지정 하는 HRESULT를 검색 하는 함수입니다.  
+ 대부분의 강력한 이름 메서드는 간단 `true` 하거나 `false` 성공적으로 완료 되었음을 나타내는 표시를 반환 합니다. 함수를 `StrongNameErrorInfo` 사용 하 여 강력한 이름 함수에 의해 생성 된 마지막 오류를 지정 하는 HRESULT를 검색 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** StrongName.h  
   
- **라이브러리:** MsCorEE.dll에 리소스로 포함  
+ **라이브러리** Mscoree.dll에 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  

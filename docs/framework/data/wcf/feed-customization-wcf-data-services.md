@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: baa97bb32f8af4e034a78b44f9776be42c204b80
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b4ea05b0112af4c1dcb6308a08ab3b31c586fbe8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918743"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790859"
 ---
 # <a name="feed-customization-wcf-data-services"></a>피드 사용자 지정(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 를 사용 하 여 데이터를 피드로 노출 합니다. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]는 데이터 피드에 대해 Atom 및 JavaScript Object Notation (JSON) 형식을 모두 지원 합니다. Atom 피드를 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 사용 하는 경우는 엔터티 및 관계와 같은 데이터를 HTTP 메시지의 본문에 포함할 수 있는 XML 형식으로 serialize 하는 표준 메서드를 제공 합니다. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]엔터티와 Atom 요소에 포함 된 데이터 간의 기본 엔터티 속성 매핑을 정의 합니다. 자세한 내용은 [OData: Atom 형식](https://go.microsoft.com/fwlink/?LinkID=185794)입니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "69918743"
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하면 수동으로 데이터 모델의 엔터티 형식에 특성을 적용하여 Atom 페이로드에 대한 대체 엔터티 속성 매핑을 정의할 수 있습니다. 데이터 서비스의 데이터 소스 공급자가 이러한 특성의 적용 방법을 결정합니다.  
   
 > [!IMPORTANT]
-> 사용자 지정 피드를 정의하는 경우 사용자 지정 매핑이 정의되어 있는 모든 엔터티 속성이 프로젝션에 포함되도록 해야 합니다. 매핑된 엔터티 속성이 프로젝션에 포함되지 않는 경우 데이터가 손실될 수 있습니다. 자세한 내용은 [쿼리 프로젝션](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)을 참조 하세요.  
+> 사용자 지정 피드를 정의하는 경우 사용자 지정 매핑이 정의되어 있는 모든 엔터티 속성이 프로젝션에 포함되도록 해야 합니다. 매핑된 엔터티 속성이 프로젝션에 포함되지 않는 경우 데이터가 손실될 수 있습니다. 자세한 내용은 [쿼리 프로젝션](query-projections-wcf-data-services.md)을 참조 하세요.  
   
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>Entity Framework 공급자를 사용하여 피드 사용자 지정  
  [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 공급자와 함께 사용된 데이터 모델은 .edmx 파일에 XML로 표현됩니다. 이 경우 사용자 지정 피드를 정의하는 특성은 데이터 모델의 엔터티 형식과 속성을 나타내는 `EntityType` 및 `Property` 요소에 추가됩니다. 이러한 피드 사용자 지정 특성은 MC- [CSDL\]에서 \[정의 되지 않습니다. 공급자가 데이터 모델을](https://go.microsoft.com/fwlink/?LinkId=159072)정의 하는 데 사용 하는 형식인 개념 스키마 정의 파일 형식입니다. [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 따라서 `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`에 정의된 특정 스키마 네임스페이스에 피드 사용자 지정 특성을 선언해야 합니다. 다음 XML 조각은 `Property`, `Products` 및 `ProductName` 속성을 정의하는 `ReorderLevel` 엔터티 형식의 `UnitsInStock` 요소에 적용되는 피드 사용자 지정 특성을 보여 줍니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "69918743"
   
  [!code-xml[Astoria Custom Feeds#EdmFeedResultProduct](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/edmfeedresult.xml#edmfeedresultproduct)]  
   
- 자세한 내용은 [방법: Entity Framework 공급자](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md)를 사용 하 여 피드를 사용자 지정 합니다.  
+ 자세한 내용은 [방법: Entity Framework 공급자](how-to-customize-feeds-with-ef-provider-wcf-data-services.md)를 사용 하 여 피드를 사용자 지정 합니다.  
   
 > [!NOTE]
 > Entity Designer에서 데이터 모델 확장을 지원하지 않으므로 데이터 모델이 포함된 XML 파일을 수동으로 수정해야 합니다. 엔터티 데이터 모델 도구에 의해 생성 되는 .edmx 파일에 대 한 자세한 내용은 [.Edmx 파일 개요 (Entity Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))를 참조 하세요.  
@@ -63,7 +63,7 @@ ms.locfileid: "69918743"
  리플렉션 공급자를 사용하여 구현된 데이터 모델의 피드를 사용자 지정하려면 데이터 모델의 엔터티 형식을 나타내는 클래스에 <xref:System.Data.Services.Common.EntityPropertyMappingAttribute> 특성 인스턴스를 하나 이상 추가합니다. <xref:System.Data.Services.Common.EntityPropertyMappingAttribute> 클래스의 속성은 위 단원에 설명된 피드 사용자 지정 특성에 해당합니다. 다음은 두 속성에 모두 사용자 지정 피드 매핑을 정의하는 `Order` 형식의 선언 예제입니다.  
   
 > [!NOTE]
-> 이 예제의 [데이터 모델은 방법: 리플렉션 공급자](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)를 사용 하 여 데이터 서비스를 만듭니다.  
+> 이 예제의 [데이터 모델은 방법: 리플렉션 공급자](create-a-data-service-using-rp-wcf-data-services.md)를 사용 하 여 데이터 서비스를 만듭니다.  
   
  [!code-csharp[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_custom_feeds/cs/orderitems.svc.cs#customorderfeed)]
  [!code-vb[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_custom_feeds/vb/orderitems.svc.vb#customorderfeed)]  
@@ -72,13 +72,13 @@ ms.locfileid: "69918743"
   
  [!code-xml[Astoria Custom Feeds#IQueryableFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/iqueryablefeedresult.xml#iqueryablefeedresult)]  
   
- 자세한 내용은 [방법: 리플렉션 공급자](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-the-reflection-provider-wcf-data-services.md)를 사용 하 여 피드를 사용자 지정 합니다.  
+ 자세한 내용은 [방법: 리플렉션 공급자](how-to-customize-feeds-with-the-reflection-provider-wcf-data-services.md)를 사용 하 여 피드를 사용자 지정 합니다.  
   
 ## <a name="customizing-feeds-with-a-custom-data-service-provider"></a>사용자 지정 데이터 서비스 공급자를 사용하여 피드 사용자 지정  
- 사용자 지정 데이터 서비스 공급자를 사용하여 정의된 데이터 모델의 피드 사용자 지정은 데이터 모델의 엔터티 형식을 나타내는 <xref:System.Data.Services.Providers.ResourceType.AddEntityPropertyMappingAttribute%2A>의 <xref:System.Data.Services.Providers.ResourceType>를 호출하여 리소스 형식에 대해 정의됩니다. 자세한 내용은 [사용자 지정 데이터 서비스 공급자](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)를 참조 하세요.  
+ 사용자 지정 데이터 서비스 공급자를 사용하여 정의된 데이터 모델의 피드 사용자 지정은 데이터 모델의 엔터티 형식을 나타내는 <xref:System.Data.Services.Providers.ResourceType.AddEntityPropertyMappingAttribute%2A>의 <xref:System.Data.Services.Providers.ResourceType>를 호출하여 리소스 형식에 대해 정의됩니다. 자세한 내용은 [사용자 지정 데이터 서비스 공급자](custom-data-service-providers-wcf-data-services.md)를 참조 하세요.  
   
 ## <a name="consuming-custom-feeds"></a>사용자 지정 피드 사용  
- 응용 프로그램에서 직접 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드를 사용 하는 경우 반환 된 피드의 사용자 지정 된 요소와 특성을 처리할 수 있어야 합니다. 데이터 서비스 공급자에 관계없이 데이터 모델에 사용자 지정 피드를 구현한 경우 `$metadata` 엔드포인트는 사용자 지정 피드 정보를 데이터 서비스에서 반환된 CSDL에 사용자 지정 피드 특성으로 반환합니다. **서비스 참조 추가** 대화 상자 또는 [datasvcutil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) 도구를 사용 하 여 클라이언트 데이터 서비스 클래스를 생성 하는 경우 사용자 지정 된 피드 특성은 데이터 서비스에 대 한 요청 및 응답이 올바르게 처리 되도록 보장 하는 데 사용 됩니다.  
+ 응용 프로그램에서 직접 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드를 사용 하는 경우 반환 된 피드의 사용자 지정 된 요소와 특성을 처리할 수 있어야 합니다. 데이터 서비스 공급자에 관계없이 데이터 모델에 사용자 지정 피드를 구현한 경우 `$metadata` 엔드포인트는 사용자 지정 피드 정보를 데이터 서비스에서 반환된 CSDL에 사용자 지정 피드 특성으로 반환합니다. **서비스 참조 추가** 대화 상자 또는 [datasvcutil.exe](wcf-data-service-client-utility-datasvcutil-exe.md) 도구를 사용 하 여 클라이언트 데이터 서비스 클래스를 생성 하는 경우 사용자 지정 된 피드 특성은 데이터 서비스에 대 한 요청 및 응답이 올바르게 처리 되도록 보장 하는 데 사용 됩니다.  
   
 ## <a name="feed-customization-considerations"></a>피드 사용자 지정 고려 사항  
  사용자 지정 피드 매핑을 정의할 때는 다음을 고려해야 합니다.  
@@ -90,9 +90,9 @@ ms.locfileid: "69918743"
   
 - 피드를 사용자 지정하는 경우 클라이언트와 데이터 서비스가 모두 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 프로토콜 버전 2.0 이상을 지원해야 합니다.  
   
- 자세한 내용은 [데이터 서비스 버전 관리](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)합니다.  
+ 자세한 내용은 [데이터 서비스 버전 관리](data-service-versioning-wcf-data-services.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
 
-- [리플렉션 공급자](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
-- [Entity Framework 공급자](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)
+- [리플렉션 공급자](reflection-provider-wcf-data-services.md)
+- [Entity Framework 공급자](entity-framework-provider-wcf-data-services.md)

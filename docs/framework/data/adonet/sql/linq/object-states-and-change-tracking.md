@@ -2,12 +2,12 @@
 title: 개체 상태 및 변경 내용 추적
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-ms.openlocfilehash: a60afab5158d0d5f66d12d6913ee890abc8ca730
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a9df200f4d2e5f64bf5883c7bc513ba7129dcaad
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043515"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781280"
 ---
 # <a name="object-states-and-change-tracking"></a>개체 상태 및 변경 내용 추적
 
@@ -17,11 +17,11 @@ ms.locfileid: "70043515"
 
 다음 표에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개체의 가능한 상태를 보여 줍니다.
 
-|State|설명|
+|State|Description|
 |-----------|-----------------|
 |`Untracked`|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에 의해 추적되지 않는 개체입니다. 여기에는 다음과 같은 예가 포함됩니다.<br /><br /> -새로 만든 개체와 같이 현재 <xref:System.Data.Linq.DataContext> 을 통해 쿼리하지 않는 개체입니다.<br />-Deserialization을 통해 만든 개체<br />-다른 <xref:System.Data.Linq.DataContext>를 통해 쿼리 되는 개체입니다.|
 |`Unchanged`|현재 <xref:System.Data.Linq.DataContext>를 사용하여 검색되었으며 만들어진 이후 수정된 것으로 알려지지 않은 개체입니다.|
-|`PossiblyModified`|에 *연결* <xref:System.Data.Linq.DataContext>된 개체입니다. 자세한 내용은 [데이터 검색 및 CUD 작업에서 N 계층 애플리케이션 (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md)합니다.|
+|`PossiblyModified`|에 *연결* <xref:System.Data.Linq.DataContext>된 개체입니다. 자세한 내용은 [데이터 검색 및 CUD 작업에서 N 계층 애플리케이션 (LINQ to SQL)](data-retrieval-and-cud-operations-in-n-tier-applications.md)합니다.|
 |`ToBeInserted`|현재 <xref:System.Data.Linq.DataContext>를 사용하여 검색되지 않은 개체입니다. 이로 인해 `INSERT` 동안 데이터베이스에 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>가 발생합니다.|
 |`ToBeUpdated`|검색된 이후로 수정되었다는 것이 알려진 개체입니다. 이로 인해 `UPDATE` 동안 데이터베이스에 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>가 발생합니다.|
 |`ToBeDeleted`|삭제되도록 표시된 개체이며 이로 인해 `DELETE` 동안 데이터베이스에 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>가 발생합니다.|
@@ -31,7 +31,7 @@ ms.locfileid: "70043515"
 
 `Inserts`을 사용하여 <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>를 명시적으로 요청할 수 있습니다. 또는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 업데이트해야 하는 알려진 개체 중 하나에 연결된 개체를 찾아 `Inserts`를 유추할 수 있습니다. 예를 들어 `Untracked` 개체를 <xref:System.Data.Linq.EntitySet%601>에 추가하거나 <xref:System.Data.Linq.EntityRef%601>을 `Untracked` 개체로 설정할 경우 그래프에서 추적된 개체를 통해 `Untracked` 개체에 연결할 수 있습니다. <xref:System.Data.Linq.DataContext.SubmitChanges%2A>를 처리하는 동안 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 추적된 개체를 순회하면서 추적되지 않는 도달 가능한 모든 영구 개체를 검색합니다. 이러한 개체는 데이터베이스에 삽입할 후보입니다.
 
-상속 계층 구조에 있는 클래스의 <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>경우`o`()도 개체 `o`형식과 일치 하도록 *판별자* 로 지정 된 멤버의 값을 설정 합니다. 기본 판별자 값과 일치하는 형식의 경우 이 작업이 수행되면 판별자 값을 기본값이 덮어씁니다. 자세한 내용은 [상속 지원](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)을 참조 하세요.
+상속 계층 구조에 있는 클래스의 <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>경우`o`()도 개체 `o`형식과 일치 하도록 *판별자* 로 지정 된 멤버의 값을 설정 합니다. 기본 판별자 값과 일치하는 형식의 경우 이 작업이 수행되면 판별자 값을 기본값이 덮어씁니다. 자세한 내용은 [상속 지원](inheritance-support.md)을 참조 하세요.
 
 > [!IMPORTANT]
 > `Table`에 추가된 개체는 ID 캐시에 없습니다. ID 캐시는 데이터베이스에서 검색된 개체만 반영합니다. <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> 호출 이후 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>가 완료될 때까지 추가된 엔터티는 데이터베이스에 대한 쿼리에 표시되지 않습니다.
@@ -69,5 +69,5 @@ ms.locfileid: "70043515"
 
 ## <a name="see-also"></a>참고자료
 
-- [배경 정보](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [삽입, 업데이트 및 삭제 작업](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)
+- [배경 정보](background-information.md)
+- [삽입, 업데이트 및 삭제 작업](insert-update-and-delete-operations.md)

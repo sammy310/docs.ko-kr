@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
-ms.openlocfilehash: 2b7d6ac6022da793b90b5447062ceac82cc7290c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 96a57e14d27788786cd4cf10c0000e8c2a125faa
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965197"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791277"
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>DataAdapters로 데이터 원본 업데이트
 `Update`의 <xref:System.Data.Common.DataAdapter> 메서드를 호출하면 <xref:System.Data.DataSet>의 변경 내용이 데이터 소스에 다시 적용됩니다. `Update` 메서드는 `Fill` 메서드와 마찬가지로 `DataSet`의 인스턴스, 선택적 <xref:System.Data.DataTable> 개체 또는 `DataTable` 이름을 인수로 사용합니다. `DataSet` 인스턴스는 변경 내용을 포함하는 `DataSet`이며 `DataTable`은 변경 내용을 검색할 테이블을 식별합니다. `DataTable`을 지정하지 않으면 `DataTable`의 첫 번째 `DataSet`이 사용됩니다.  
@@ -20,12 +20,12 @@ ms.locfileid: "69965197"
 > [!NOTE]
 > SQL Server 저장 프로시저를 통해 `DataAdapter`로 데이터를 편집하거나 삭제하는 경우에는 저장 프로시저 정의에 SET NOCOUNT ON을 사용하면 안 됩니다. SET NOCOUNT ON을 사용하는 경우 반환되는 행 개수가 0이 되어 `DataAdapter`가 이를 동시성 충돌로 인식합니다. 그 결과 <xref:System.Data.DBConcurrencyException>이 throw됩니다.  
   
- 명령 매개 변수를 사용하여 `DataSet`의 수정된 각 행에 대해 SQL 문이나 저장 프로시저의 입력 및 출력 값을 지정할 수 있습니다. 자세한 내용은 [DataAdapter 매개 변수](../../../../docs/framework/data/adonet/dataadapter-parameters.md)합니다.  
+ 명령 매개 변수를 사용하여 `DataSet`의 수정된 각 행에 대해 SQL 문이나 저장 프로시저의 입력 및 출력 값을 지정할 수 있습니다. 자세한 내용은 [DataAdapter 매개 변수](dataadapter-parameters.md)합니다.  
   
 > [!NOTE]
 > <xref:System.Data.DataTable>에서의 행 삭제 및 제거의 차이점을 이해하는 것이 중요합니다. `Remove` 또는 `RemoveAt` 메서드를 호출하면 행이 즉시 제거됩니다. 그런 다음 `DataTable`에 `DataSet` 또는 `DataAdapter`을 전달하고 `Update`를 호출하면 백 엔드 데이터 소스에 있는 해당 행은 아무런 영향을 받지 않습니다. `Delete` 메서드를 사용하면 행이 `DataTable`에 그대로 남아 있고 삭제 표시됩니다. 그런 다음 `DataTable`에 `DataSet` 또는 `DataAdapter`을 전달하고 `Update`를 호출하면 백 엔드 데이터 소스의 해당 행이 삭제됩니다.  
   
- `DataTable`이 단일 데이터베이스 테이블에 매핑되거나 단일 데이터베이스 테이블에서 생성된 경우에는 <xref:System.Data.Common.DbCommandBuilder> 개체를 사용하여 `DeleteCommand`의 `InsertCommand`, `UpdateCommand` 및 `DataAdapter` 개체를 자동으로 생성할 수 있습니다. 자세한 내용은 [commandbuilder를 사용 하를 사용 하 여 명령 생성](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md)합니다.  
+ `DataTable`이 단일 데이터베이스 테이블에 매핑되거나 단일 데이터베이스 테이블에서 생성된 경우에는 <xref:System.Data.Common.DbCommandBuilder> 개체를 사용하여 `DeleteCommand`의 `InsertCommand`, `UpdateCommand` 및 `DataAdapter` 개체를 자동으로 생성할 수 있습니다. 자세한 내용은 [commandbuilder를 사용 하를 사용 하 여 명령 생성](generating-commands-with-commandbuilders.md)합니다.  
   
 ## <a name="using-updatedrowsource-to-map-values-to-a-dataset"></a>UpdatedRowSource를 사용하여 DataSet에 값 매핑  
  `DataTable` 개체의 `DataAdapter` 속성을 사용하면 <xref:System.Data.Common.DbCommand.UpdatedRowSource%2A>의 Update 메서드를 호출한 이후 데이터 소스에서 반환된 값이 <xref:System.Data.Common.DbCommand>에 다시 매핑되는 방법을 제어할 수 있습니다. `UpdatedRowSource` 속성을 <xref:System.Data.UpdateRowSource> 열거형 값 중 하나로 설정하면 `DataAdapter` 명령에서 반환하는 출력 매개 변수를 무시할지 아니면 `DataSet`의 변경된 행에 적용할지 제어할 수 있습니다. 반환되는 첫 번째 행이 있는 경우 이를 `DataTable`의 변경된 행에 적용할지 여부도 지정할 수 있습니다.  
@@ -42,11 +42,11 @@ ms.locfileid: "69965197"
  `Update` 메서드는 변경 내용을 데이터 소스에 다시 적용하지만 사용자가 `DataSet`을 마지막으로 채운 이후에 다른 클라이언트에서 데이터 소스의 데이터를 수정했을 수도 있습니다. 현재 데이터로 `DataSet`을 새로 고치려면 `DataAdapter` 및 `Fill` 메서드를 사용합니다. 그러면 새 행이 테이블에 추가되고 업데이트된 정보가 기존 행에 통합됩니다. `Fill` 메서드는 `DataSet`에 있는 행과 `SelectCommand`에서 반환된 행의 기본 키 값을 검사하여 새 행을 추가할지 또는 기존 행을 업데이트할지 결정합니다. `Fill`가 반환한 결과 행의 기본 키 값과 일치하는 `DataSet` 행의 기본 키 값이 발견되면 `SelectCommand` 메서드는 기존 행을 `SelectCommand`가 반환한 행의 정보로 업데이트하고 기존 행의 <xref:System.Data.DataRow.RowState%2A>를 `Unchanged`로 설정합니다 `SelectCommand`가 반환한 행의 기본 키 값이 `DataSet` 행의 기본 키 값과 일치하지 않으면 `Fill` 메서드는 `RowState`가 `Unchanged`인 새 행을 추가합니다.  
   
 > [!NOTE]
-> `SelectCommand`가 OUTER JOIN의 결과를 반환하면 `DataAdapter`는 결과 `PrimaryKey`에 대해 `DataTable` 값을 설정하지 않습니다. 행 중복 문제를 해결하려면 `PrimaryKey`를 직접 정의해야 합니다. 자세한 내용은 [기본 키 정의](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)합니다.  
+> `SelectCommand`가 OUTER JOIN의 결과를 반환하면 `DataAdapter`는 결과 `PrimaryKey`에 대해 `DataTable` 값을 설정하지 않습니다. 행 중복 문제를 해결하려면 `PrimaryKey`를 직접 정의해야 합니다. 자세한 내용은 [기본 키 정의](./dataset-datatable-dataview/defining-primary-keys.md)합니다.  
   
- `Update` 메서드를 호출할 때 발생할 수 있는 예외를 처리 하려면 `RowUpdated` 이벤트를 사용 하 여 발생 하는 행 업데이트 오류에 대응 하거나 ( [DataAdapter 이벤트 처리](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)참조) 또는을 이전으로 `DataAdapter.ContinueUpdateOnError` `true` 설정할 수 있습니다. 을 `Update`호출 하 고 업데이트가 완료 되 면 특정 행의 `RowError` 속성에 저장 된 오류 정보에 응답 합니다 ( [행 오류 정보](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)참조).  
+ `Update` 메서드를 호출할 때 발생할 수 있는 예외를 처리 하려면 `RowUpdated` 이벤트를 사용 하 여 발생 하는 행 업데이트 오류에 대응 하거나 ( [DataAdapter 이벤트 처리](handling-dataadapter-events.md)참조) 또는을 이전으로 `DataAdapter.ContinueUpdateOnError` `true` 설정할 수 있습니다. 을 `Update`호출 하 고 업데이트가 완료 되 면 특정 행의 `RowError` 속성에 저장 된 오류 정보에 응답 합니다 ( [행 오류 정보](./dataset-datatable-dataview/row-error-information.md)참조).  
   
- **참고** `AcceptChanges` ,`DataTable`또는 에서를`Original` 호출 하면의 모든 값`DataRow`이에 대 한 `DataRow`값으로 덮어쓰여집니다. `Current` `DataSet` `DataRow` 행을 고유하게 식별하는 필드 값을 수정한 경우 `AcceptChanges`를 호출하면 `Original` 값이 데이터 소스의 값과 더 이상 일치하지 않습니다. `AcceptChanges`는 `DataAdapter`의 Update 메서드를 호출하는 동안 각 행에 대해 자동으로 호출됩니다. 먼저 `AcceptChangesDuringUpdate`의 `DataAdapter` 속성을 false로 설정하거나 `RowUpdated` 이벤트에 대한 이벤트 처리기를 만들고 <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A>를 <xref:System.Data.UpdateStatus.SkipCurrentRow>로 설정하면 Update 메서드를 호출할 때 원래 값을 보존할 수 있습니다. 자세한 내용은 [데이터 집합 콘텐츠 병합](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md) 및 [DataAdapter 이벤트 처리](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)를 참조 하세요.  
+ **참고** `AcceptChanges` ,`DataTable`또는 에서를`Original` 호출 하면의 모든 값`DataRow`이에 대 한 `DataRow`값으로 덮어쓰여집니다. `Current` `DataSet` `DataRow` 행을 고유하게 식별하는 필드 값을 수정한 경우 `AcceptChanges`를 호출하면 `Original` 값이 데이터 소스의 값과 더 이상 일치하지 않습니다. `AcceptChanges`는 `DataAdapter`의 Update 메서드를 호출하는 동안 각 행에 대해 자동으로 호출됩니다. 먼저 `AcceptChangesDuringUpdate`의 `DataAdapter` 속성을 false로 설정하거나 `RowUpdated` 이벤트에 대한 이벤트 처리기를 만들고 <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A>를 <xref:System.Data.UpdateStatus.SkipCurrentRow>로 설정하면 Update 메서드를 호출할 때 원래 값을 보존할 수 있습니다. 자세한 내용은 [데이터 집합 콘텐츠 병합](./dataset-datatable-dataview/merging-dataset-contents.md) 및 [DataAdapter 이벤트 처리](handling-dataadapter-events.md)를 참조 하세요.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 `UpdateCommand` `DataAdapter` 의를 명시적으로 설정 하 고 해당 `Update` 메서드를 호출 하 여 수정 된 행에 대 한 업데이트를 수행 하는 방법을 보여 줍니다. UPDATE 문의 WHERE 절에 지정된 매개 변수는 `Original`의 `SourceColumn` 값을 사용하도록 설정되어 있습니다. `Current` 값이 수정되어 데이터 소스에 있는 값과 일치하지 않을 수 있기 때문에 이 설정은 매우 중요합니다. `Original` 값은 데이터 소스에서 `DataTable`을 채우는 데 사용한 값입니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "69965197"
  [!code-vb[DataWorks SqlClient.DataAdapterUpdate#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.DataAdapterUpdate/VB/source.vb#1)]  
   
 ## <a name="autoincrement-columns"></a>AutoIncrement 열  
- 데이터 소스의 테이블에 자동 증분 열이 있으면 저장 프로시저의 출력 매개 변수로 자동 증분 값을 반환하여 테이블의 열에 매핑하거나, 저장 프로시저 또는 SQL 문에서 반환된 결과 집합의 첫 번째 행에 있는 자동 증분 값을 반환하거나, `DataSet`의 `RowUpdated` 이벤트를 통해 추가적인 SELECT 문을 실행하여 `DataAdapter`의 열을 채울 수 있습니다. 자세한 내용 및 예제를 참조 하세요 [Retrieving Identity or Autonumber 값](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)합니다.  
+ 데이터 소스의 테이블에 자동 증분 열이 있으면 저장 프로시저의 출력 매개 변수로 자동 증분 값을 반환하여 테이블의 열에 매핑하거나, 저장 프로시저 또는 SQL 문에서 반환된 결과 집합의 첫 번째 행에 있는 자동 증분 값을 반환하거나, `DataSet`의 `RowUpdated` 이벤트를 통해 추가적인 SELECT 문을 실행하여 `DataAdapter`의 열을 채울 수 있습니다. 자세한 내용 및 예제를 참조 하세요 [Retrieving Identity or Autonumber 값](retrieving-identity-or-autonumber-values.md)합니다.  
   
 ## <a name="ordering-of-inserts-updates-and-deletes"></a>삽입, 업데이트 및 삭제 순서  
  대부분의 경우에는 `DataSet`을 통해 변경된 내용이 데이터 소스에 전송되는 순서가 매우 중요합니다. 예를 들어 기존 행의 기본 키 값을 업데이트하고 새 기본 키 값이 외래 키로 지정된 새 행을 추가하는 경우에는 삽입하기 전에 업데이트를 처리해야 합니다.  
@@ -370,9 +370,9 @@ class Program {
   
 ## <a name="see-also"></a>참고자료
 
-- [DataAdapter 및 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [행 상태 및 행 버전](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
-- [AcceptChanges 및 RejectChanges](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
-- [데이터 집합 콘텐츠 병합](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)
-- [ID 또는 일련 번호 값 검색](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataAdapter 및 DataReader](dataadapters-and-datareaders.md)
+- [행 상태 및 행 버전](./dataset-datatable-dataview/row-states-and-row-versions.md)
+- [AcceptChanges 및 RejectChanges](./dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
+- [데이터 집합 콘텐츠 병합](./dataset-datatable-dataview/merging-dataset-contents.md)
+- [ID 또는 일련 번호 값 검색](retrieving-identity-or-autonumber-values.md)
+- [ADO.NET 개요](ado-net-overview.md)

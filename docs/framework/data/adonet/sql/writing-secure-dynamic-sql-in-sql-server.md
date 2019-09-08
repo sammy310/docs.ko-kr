@@ -2,12 +2,12 @@
 title: SQL Server에서 동적 보안 SQL 작성
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-ms.openlocfilehash: 9b0c903c04c82c9a0f61197642645c5ba93ba099
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c02455ba8798df1de1d52f6b4db3426d41b95daf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645907"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791414"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>SQL Server에서 동적 보안 SQL 작성
 SQL 삽입은 악의적 사용자가 유효한 입력 대신 Transact-SQL 문을 입력하는 데 사용하는 프로세스입니다. 이러한 공격으로 인해 입력이 유효성 검사를 거치지 않고 서버로 직접 전달되고 애플리케이션이 삽입된 코드를 실행하면 데이터가 손상되거나 제거될 수 있습니다.  
@@ -35,7 +35,7 @@ SQL 삽입은 악의적 사용자가 유효한 입력 대신 Transact-SQL 문을
   
 - 다중 계층 환경에서는 신뢰할 수 있는 영역으로 들어가는 모든 데이터의 유효성을 검사해야 합니다.  
   
-- 파일 이름을 생성 하는 데 사용 될 수도 있는 필드에 다음 문자열을 허용 하지 않습니다. AUX, CLOCK$, COM1부터 COM8, CON, CONFIG$, LPT1부터 LPT8, NUL, PRN과 합니다.  
+- 파일 이름을 생성 하는 데 사용할 수 있는 필드에는 다음 문자열을 허용 하지 않습니다. AUX, CLOCK $, COM1 ~ COM8, CON, CONFIG $, LPT1 ~ LPT8, NUL, PRN.  
   
 - <xref:System.Data.SqlClient.SqlParameter> 개체를 저장 프로시저 및 명령과 함께 사용하여 형식 검사와 길이 유효성 검사를 제공합니다.  
   
@@ -46,9 +46,9 @@ SQL 삽입은 악의적 사용자가 유효한 입력 대신 Transact-SQL 문을
   
  SQL Server에서는 동적 SQL을 실행하는 사용자 정의 함수 및 저장 프로시저를 사용하여 사용자에게 데이터에 대한 액세스 권한을 부여하는 방법이 도입되었습니다.  
   
-- [SQL Server에서 가장으로 권한 사용자 지정](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)에 설명된 대로 Transact-SQL EXECUTE AS 절과 함께 가장을 사용합니다.  
+- [SQL Server에서 가장으로 권한 사용자 지정](customizing-permissions-with-impersonation-in-sql-server.md)에 설명된 대로 Transact-SQL EXECUTE AS 절과 함께 가장을 사용합니다.  
   
-- [SQL Server에서 저장 프로시저에 서명](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)에 설명된 대로 인증서로 저장 프로시저를 서명합니다.  
+- [SQL Server에서 저장 프로시저에 서명](signing-stored-procedures-in-sql-server.md)에 설명된 대로 인증서로 저장 프로시저를 서명합니다.  
   
 ### <a name="execute-as"></a>EXECUTE AS  
  EXECUTE AS 절은 호출자의 권한을 EXECUTE AS 절에 지정된 사용자의 권한으로 바꿉니다. 중첩된 저장 프로시저 또는 트리거는 프록시 사용자의 보안 컨텍스트에서 실행됩니다. 이로 인해 행 수준 보안을 사용하거나 감사가 필요한 애플리케이션이 중단될 수 있습니다. 사용자의 ID를 반환하는 일부 함수는 원래 호출자가 아니라 EXECUTE AS 절에 지정된 사용자를 반환합니다. 실행 컨텍스트는 프로시저 실행 후 또는 REVERT 문이 실행될 때만 원래 호출자로 되돌아갑니다.  
@@ -62,16 +62,16 @@ SQL 삽입은 악의적 사용자가 유효한 입력 대신 Transact-SQL 문을
 ## <a name="external-resources"></a>외부 리소스  
  자세한 내용은 다음 리소스를 참조하세요.  
   
-|리소스|설명|  
+|리소스|Description|  
 |--------------|-----------------|  
 |[저장 프로시저](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) 및 [SQL 삽입](/sql/relational-databases/security/sql-injection)(SQL Server 온라인 설명서)|저장 프로시저를 만드는 방법과 SQL 삽입이 작동하는 방식을 설명하는 항목입니다.|  
   
 ## <a name="see-also"></a>참고자료
 
-- [ADO.NET 응용 프로그램 보안](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server 보안 개요](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [SQL Server의 응용 프로그램 보안 시나리오](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [SQL Server에서 저장 프로시저를 사용하여 권한 관리](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
-- [SQL Server에서 저장 프로시저에 서명](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
-- [SQL Server에서 가장으로 권한 사용자 지정](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 응용 프로그램 보안](../securing-ado-net-applications.md)
+- [SQL Server 보안 개요](overview-of-sql-server-security.md)
+- [SQL Server의 응용 프로그램 보안 시나리오](application-security-scenarios-in-sql-server.md)
+- [SQL Server에서 저장 프로시저를 사용하여 권한 관리](managing-permissions-with-stored-procedures-in-sql-server.md)
+- [SQL Server에서 저장 프로시저에 서명](signing-stored-procedures-in-sql-server.md)
+- [SQL Server에서 가장으로 권한 사용자 지정](customizing-permissions-with-impersonation-in-sql-server.md)
+- [ADO.NET 개요](../ado-net-overview.md)

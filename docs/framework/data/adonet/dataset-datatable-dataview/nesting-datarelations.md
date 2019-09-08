@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
-ms.openlocfilehash: 08149de9222c34928078c0ca9d88096f7a4a88d1
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 971a1bddc40521dc7381ecb2e39709c0fed282ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203262"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785988"
 ---
 # <a name="nesting-datarelations"></a>DataRelation 중첩
 데이터의 관계형 표현에서 각 테이블에는 열이나 열 집합을 사용하여 서로 연결시키는 행이 포함되어 있습니다. ADO.NET <xref:System.Data.DataSet>에서 각 테이블 사이의 관계는 <xref:System.Data.DataRelation>을 사용하여 구현됩니다. **DataRelation**을 만들 때 열의 부모-자식 관계는 관계를 통해서만 관리 됩니다. 테이블과 열은 별개의 엔터티입니다. XML에서 제공하는 데이터의 계층적 표현에서 부모-자식 관계는 중첩된 자식 요소를 포함하는 부모 요소에 의해 표현됩니다.  
@@ -59,7 +59,7 @@ DataRelation customerOrders = dataSet.Relations.Add(
   dataSet.Tables["Orders"].Columns["CustomerID"]);  
 ```  
   
- **DataRelation** 개체의 **Nested** 속성이이 데이터 집합에 대해 **true** 로 설정 되어 있지않기 때문에이 데이터 **집합이** XML 데이터로 표현 될 때 자식 개체는 부모 요소 내에 중첩 되지 않습니다. 관련 데이터 **집합**을 포함 하는 데이터 **집합** 의 XML 표현을 중첩 되지 않은 데이터 관계로 변환 하면 성능이 저하 될 수 있습니다. 데이터 관계를 중첩하는 것이 좋습니다. 이렇게 하려면 **Nested** 속성을 **true**로 설정 합니다. 그런 다음 XSLT 스타일시트에서 하향 계층 구조적인 XPath 쿼리 식을 사용하여 데이터를 찾고 변환하는 코드를 작성합니다.  
+ **DataRelation** 개체의 **Nested** **속성이이 데이터 집합에**대해 **true** 로 설정 되어 있지 않기 때문에이 데이터 **집합이** XML 데이터로 표현 될 때 자식 개체는 부모 요소 내에 중첩 되지 않습니다. 관련 데이터 **집합**을 포함 하는 데이터 **집합** 의 XML 표현을 중첩 되지 않은 데이터 관계로 변환 하면 성능이 저하 될 수 있습니다. 데이터 관계를 중첩하는 것이 좋습니다. 이렇게 하려면 **Nested** 속성을 **true**로 설정 합니다. 그런 다음 XSLT 스타일시트에서 하향 계층 구조적인 XPath 쿼리 식을 사용하여 데이터를 찾고 변환하는 코드를 작성합니다.  
   
  다음 코드 예제에서는 **데이터 집합**에 대해 **WriteXml** 를 호출한 결과를 보여 줍니다.  
   
@@ -136,4 +136,4 @@ customerOrders.Nested = true;
 - [데이터 집합에서 XML 사용](using-xml-in-a-dataset.md)
 - [DataRelation 추가](adding-datarelations.md)
 - [DataSet, DataTable 및 DataView](index.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 개요](../ado-net-overview.md)

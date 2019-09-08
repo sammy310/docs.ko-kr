@@ -2,12 +2,12 @@
 title: 메시지 흐름 개요
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: cee579f272700ca37228bacecdf387d03637610a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0bfbd1523f1d5db4a94cf3af03a03779af14655d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963050"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795971"
 ---
 # <a name="message-flow-overview"></a>메시지 흐름 개요
 상호 연결된 서비스가 포함된 분산 시스템에서는 서비스 간의 인과 관계를 확인해야 합니다. 상태 모니터링, 문제 해결 및 근본 원인 분석과 같은 중요한 시나리오를 지원하기 위해 요청 흐름의 일부인 다양한 구성 요소를 이해하는 것이 중요합니다. 다양한 서비스 간 추적을 상호 연결할 수 있도록 하기 위해 .NET Framework 4에서는 다음 기능을 통한 지원이 추가되었습니다.
@@ -18,7 +18,7 @@ ms.locfileid: "69963050"
 
 - WF 용 ETW 추적: 이 기능은 WF 서비스에서 생성 된 추적 레코드를 사용 하 여 워크플로의 현재 상태와 진행률에 대 한 가시성을 제공 합니다.
 
- 추적이나 추적 레코드에 기록되는 오류를 사용하여 코드 결함이나 잘못된 형식의 메시지를 찾을 수 있습니다. 이벤트의 메시지 헤더에 있는 Correlation 노드의 ActivityId 속성을 사용하여 오류가 발생하는 활동을 확인할 수 있습니다. 활동 ID로 메시지 흐름 추적을 사용 하도록 설정 하려면 [메시지 흐름 추적 구성](../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md)을 참조 하세요. 이 항목에서는 초보자를 위한 자습서에서 만든 프로젝트에서 메시지 흐름 추적을 사용하도록 설정하는 방법을 보여 줍니다.
+ 추적이나 추적 레코드에 기록되는 오류를 사용하여 코드 결함이나 잘못된 형식의 메시지를 찾을 수 있습니다. 이벤트의 메시지 헤더에 있는 Correlation 노드의 ActivityId 속성을 사용하여 오류가 발생하는 활동을 확인할 수 있습니다. 활동 ID로 메시지 흐름 추적을 사용 하도록 설정 하려면 [메시지 흐름 추적 구성](./etw/configuring-message-flow-tracing.md)을 참조 하세요. 이 항목에서는 초보자를 위한 자습서에서 만든 프로젝트에서 메시지 흐름 추적을 사용하도록 설정하는 방법을 보여 줍니다.
 
 ### <a name="to-enable-message-flow-tracing-in-the-getting-started-tutorial"></a>초보자를 위한 자습서에서 메시지 흐름 추적을 사용하도록 설정하려면
 
@@ -26,7 +26,7 @@ ms.locfileid: "69963050"
 
 2. 분석 추적을 사용 하도록 설정 하지 않은 경우 **응용 프로그램 및 서비스 로그**, **Microsoft**, **Windows**, **응용 프로그램 서버-** 응용 프로그램을 확장 합니다. **보기**, **분석 및 디버그 로그 표시**를 선택 합니다. **분석** 을 마우스 오른쪽 단추로 클릭 하 고 **로그 사용**을 선택 합니다. 추적 내용을 볼 수 있도록 이벤트 뷰어를 열어 둡니다.
 
-3. Visual Studio 2012의 [시작 자습서](../../../../docs/framework/wcf/getting-started-tutorial.md) 에서 만든 샘플을 엽니다. 서비스를 만들 수 있도록 관리자 권한으로 Visual Studio 2012을 실행 해야 합니다. WCF 샘플을 설치한 경우 자습서에서 만든 완료 된 프로젝트를 포함 하는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)을 열 수 있습니다.
+3. Visual Studio 2012의 [시작 자습서](../getting-started-tutorial.md) 에서 만든 샘플을 엽니다. 서비스를 만들 수 있도록 관리자 권한으로 Visual Studio 2012을 실행 해야 합니다. WCF 샘플을 설치한 경우 자습서에서 만든 완료 된 프로젝트를 포함 하는 [시작](../samples/getting-started-sample.md)을 열 수 있습니다.
 
 4. **서비스** 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가**, **새 항목**을 차례로 선택 합니다. **응용 프로그램 구성 파일** 을 선택 하 고 **확인**을 클릭 합니다.
 

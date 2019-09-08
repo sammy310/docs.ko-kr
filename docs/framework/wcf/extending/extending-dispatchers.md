@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-ms.openlocfilehash: 4eb96eaf409fd34e9b10a469ed31fbbe18ebac5e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9250ca09fb5e28655e39f8d91d991fdb3bffcdbd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046006"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795753"
 ---
 # <a name="extending-dispatchers"></a>디스패처 확장
 디스패처는 기본 채널에서 들어오는 메시지를 끌어와서 응용 프로그램 코드에서 이를 메서드 호출로 변환하여 결과를 다시 호출자에게 보내는 역할을 합니다. 디스패처 확장을 사용하여 이 처리를 수정할 수 있습니다.  메시지의 내용 또는 매개 변수를 검사하거나 수정하는 메시지 또는 매개 변수 검사자를 구현할 수 있습니다.  메시지가 작업으로 라우트되는 방식을 변경하거나 일부 다른 기능을 제공할 수 있습니다.
 
-이 항목에서는 WCF (Windows Communication Foundation) <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 서비스 <xref:System.ServiceModel.Dispatcher.DispatchOperation> 응용 프로그램에서 및 클래스를 사용 하 여 디스패처 기본 실행 동작을 수정 하거나 메시지, 매개 변수 또는 반환을 가로채 거 나 수정 하는 방법에 대해 설명 합니다. 채널 계층에서 보내거나 검색 하기 이전 또는 이후의 값입니다. 해당 하는 클라이언트 런타임 메시지 처리에 대 한 자세한 내용은 [클라이언트 확장](../../../../docs/framework/wcf/extending/extending-clients.md)을 참조 하세요. 다양 한 런타임 사용자 지정 <xref:System.ServiceModel.IExtensibleObject%601> 개체 간의 공유 상태 액세스에서 형식이 재생 되는 역할을 이해 하려면 [확장 가능한 개체](../../../../docs/framework/wcf/extending/extensible-objects.md)를 참조 하세요.
+이 항목에서는 WCF (Windows Communication Foundation) <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 서비스 <xref:System.ServiceModel.Dispatcher.DispatchOperation> 응용 프로그램에서 및 클래스를 사용 하 여 디스패처 기본 실행 동작을 수정 하거나 메시지, 매개 변수 또는 반환을 가로채 거 나 수정 하는 방법에 대해 설명 합니다. 채널 계층에서 보내거나 검색 하기 이전 또는 이후의 값입니다. 해당 하는 클라이언트 런타임 메시지 처리에 대 한 자세한 내용은 [클라이언트 확장](extending-clients.md)을 참조 하세요. 다양 한 런타임 사용자 지정 <xref:System.ServiceModel.IExtensibleObject%601> 개체 간의 공유 상태 액세스에서 형식이 재생 되는 역할을 이해 하려면 [확장 가능한 개체](extensible-objects.md)를 참조 하세요.
 
 ## <a name="dispatchers"></a>디스패처
 
@@ -22,11 +22,11 @@ ms.locfileid: "70046006"
 
 채널 디스패처(및 도우미 <xref:System.ServiceModel.Channels.IChannelListener>)는 기본 채널에서 메시지를 가져와 각 끝점 디스패처에 메시지를 전달합니다. 각 끝점 디스패처에는 작업을 구현하는 메서드를 호출하는 <xref:System.ServiceModel.Dispatcher.DispatchRuntime>에 메시지를 라우트하는 <xref:System.ServiceModel.Dispatcher.DispatchOperation>이 있습니다. 방식에 따라 다양한 선택적 확장 클래스와 필수 확장 클래스가 호출됩니다. 이 항목에서는 이러한 항목들이 연결되는 방법 및 속성을 수정하고 자체 코드를 연결하여 기본 기능을 확장하는 방법에 대해 설명합니다.
 
-디스패처 속성 및 수정된 사용자 지정 개체는 서비스, 끝점, 계약 또는 작업 동작 개체를 사용하여 삽입합니다. 이 항목에서는 동작 사용 방법에 대해서는 설명하지 않습니다. 디스패처 수정을 삽입 하는 데 사용 되는 형식에 대 한 자세한 내용은 [동작을 사용 하 여 런타임 구성 및 확장](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)을 참조 하세요.
+디스패처 속성 및 수정된 사용자 지정 개체는 서비스, 끝점, 계약 또는 작업 동작 개체를 사용하여 삽입합니다. 이 항목에서는 동작 사용 방법에 대해서는 설명하지 않습니다. 디스패처 수정을 삽입 하는 데 사용 되는 형식에 대 한 자세한 내용은 [동작을 사용 하 여 런타임 구성 및 확장](configuring-and-extending-the-runtime-with-behaviors.md)을 참조 하세요.
 
 다음 그래픽에서는 서비스의 아키텍처 항목에 대해 간략하게 보여 줍니다.
 
-![디스패치 런타임 아키텍처](../../../../docs/framework/wcf/extending/media/wcfc-dispatchruntimearchc.gif "wcfc_DispatchRuntimeArchc")
+![디스패치 런타임 아키텍처](./media/wcfc-dispatchruntimearchc.gif "wcfc_DispatchRuntimeArchc")
 
 ### <a name="channel-dispatchers"></a>채널 디스패처
 
@@ -44,30 +44,30 @@ ms.locfileid: "70046006"
 
 디스패처를 확장하는 데에는 다음과 같은 여러 가지 이유가 있습니다.
 
-- 사용자 지정 메시지 유효성 확인. 메시지가 특정 스키마에 유효하도록 지정할 수 있습니다. 이 작업은 메시지 인터셉터 인터페이스를 구현하여 수행할 수 있습니다. 예제는 [메시지 검사기](../../../../docs/framework/wcf/samples/message-inspectors.md)를 참조 하세요.
+- 사용자 지정 메시지 유효성 확인. 메시지가 특정 스키마에 유효하도록 지정할 수 있습니다. 이 작업은 메시지 인터셉터 인터페이스를 구현하여 수행할 수 있습니다. 예제는 [메시지 검사기](../samples/message-inspectors.md)를 참조 하세요.
 
 - 사용자 지정 메시지 로깅. 끝점을 통해 이동하는 응용 프로그램 메시지의 일부를 검사하고 기록할 수 있습니다. 이 작업도 메시지 인터셉터 인터페이스를 통해 수행할 수 있습니다.
 
 - 사용자 지정 메시지 변환. 런타임에 메시지에 특정 변환을 적용할 수 있습니다(예: 버전 관리). 이 작업도 메시지 인터셉터 인터페이스를 통해 수행할 수 있습니다.
 
-- 사용자 지정 데이터 모델. 사용자는 기본적으로 WCF에서 지원 되는 데이터 serialization 모델 (즉 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>,, 및 원시 메시지)을 가질 수 없습니다. 이 작업은 메시지 포맷터 인터페이스를 구현하여 수행할 수 있습니다. 예제는 [작업 포맷터 및 작업 선택기](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)를 참조 하세요.
+- 사용자 지정 데이터 모델. 사용자는 기본적으로 WCF에서 지원 되는 데이터 serialization 모델 (즉 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>,, 및 원시 메시지)을 가질 수 없습니다. 이 작업은 메시지 포맷터 인터페이스를 구현하여 수행할 수 있습니다. 예제는 [작업 포맷터 및 작업 선택기](../samples/operation-formatter-and-operation-selector.md)를 참조 하세요.
 
 - 사용자 지정 매개 변수 유효성 검사. XML 형식이 아닌 다른 형식의 매개 변수가 유효하도록 지정할 수 있습니다. 이 작업은 매개 변수 검사자 인터페이스를 사용하여 수행할 수 있습니다.
 
-- 사용자 지정 작업 디스패치. 동작 이외의 다른 요소, 예를 들면 본문 요소나 사용자 지정 메시지 속성에 대한 디스패치를 구현할 수 있습니다. 이 작업은 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 인터페이스를 사용하여 수행할 수 있습니다. 예제는 [작업 포맷터 및 작업 선택기](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)를 참조 하세요.
+- 사용자 지정 작업 디스패치. 동작 이외의 다른 요소, 예를 들면 본문 요소나 사용자 지정 메시지 속성에 대한 디스패치를 구현할 수 있습니다. 이 작업은 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 인터페이스를 사용하여 수행할 수 있습니다. 예제는 [작업 포맷터 및 작업 선택기](../samples/operation-formatter-and-operation-selector.md)를 참조 하세요.
 
-- 개체 풀링. 모든 호출에 새 인스턴스를 할당하는 대신 인스턴스를 풀링할 수 있습니다. 이 작업은 인스턴스 공급자 인터페이스를 사용하여 구현할 수 있습니다. 예제는 [풀링](../../../../docs/framework/wcf/samples/pooling.md)을 참조 하세요.
+- 개체 풀링. 모든 호출에 새 인스턴스를 할당하는 대신 인스턴스를 풀링할 수 있습니다. 이 작업은 인스턴스 공급자 인터페이스를 사용하여 구현할 수 있습니다. 예제는 [풀링](../samples/pooling.md)을 참조 하세요.
 
 - 인스턴스 대여. .NET Framework Remoting의 대여 패턴과 유사한, 인스턴스 수명에 대한 대여 패턴을 구현할 수 있습니다. 이 작업은 인스턴스 컨텍스트 수명 인터페이스를 사용하여 수행할 수 있습니다.
 
 - 사용자 지정 오류 처리. 로컬 오류를 처리하는 방법 및 오류에 대해 클라이언트에 다시 통신하는 방법을 제어할 수 있습니다. 이 작업은 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 인터페이스를 사용하여 구현할 수 있습니다.
 
-- 사용자 지정 권한 부여 동작. 계약 또는 작업 런타임 부분을 확장하고 메시지에 있는 토큰에 따라 보안 검사를 추가하여 사용자 지정 액세스 제어를 구현할 수 있습니다. 이 작업은 메시지 인터셉터 또는 매개 변수 인터셉터 인터페이스를 사용하여 수행할 수 있습니다. 예제는 [보안 확장성](../../../../docs/framework/wcf/samples/security-extensibility.md)을 참조 하세요.
+- 사용자 지정 권한 부여 동작. 계약 또는 작업 런타임 부분을 확장하고 메시지에 있는 토큰에 따라 보안 검사를 추가하여 사용자 지정 액세스 제어를 구현할 수 있습니다. 이 작업은 메시지 인터셉터 또는 매개 변수 인터셉터 인터페이스를 사용하여 수행할 수 있습니다. 예제는 [보안 확장성](../samples/security-extensibility.md)을 참조 하세요.
 
   > [!CAUTION]
   > 보안 속성을 변경 하면 WCF 응용 프로그램의 보안을 손상 시킬 수 있기 때문에 보안 관련 수정 사항을 신중 하 게 수행 하 고 배포 하기 전에 철저히 테스트 하는 것이 좋습니다.
 
-- 사용자 지정 WCF 런타임 유효성 검사기. WCF 응용 프로그램과 관련 하 여 엔터프라이즈 수준 정책을 적용 하기 위해 서비스, 계약 및 바인딩을 검사 하는 사용자 지정 유효성 검사기를 설치할 수 있습니다. (예를 들어 다음 [을 참조 하세요. 엔터프라이즈](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)에서 끝점을 잠급니다.)
+- 사용자 지정 WCF 런타임 유효성 검사기. WCF 응용 프로그램과 관련 하 여 엔터프라이즈 수준 정책을 적용 하기 위해 서비스, 계약 및 바인딩을 검사 하는 사용자 지정 유효성 검사기를 설치할 수 있습니다. (예를 들어 다음 [을 참조 하세요. 엔터프라이즈](how-to-lock-down-endpoints-in-the-enterprise.md)에서 끝점을 잠급니다.)
 
 ### <a name="using-the-dispatchruntime-class"></a>DispatchRuntime 클래스 사용
 
@@ -137,6 +137,6 @@ ms.locfileid: "70046006"
 
 - <xref:System.ServiceModel.Dispatcher.DispatchRuntime>
 - <xref:System.ServiceModel.Dispatcher.DispatchOperation>
-- [방법: 서비스에서 메시지 검사 및 수정](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)
-- [방법: 매개 변수 검사 또는 수정](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
-- [방법: 엔터프라이즈에서 끝점 잠그기](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)
+- [방법: 서비스에서 메시지 검사 및 수정](how-to-inspect-and-modify-messages-on-the-service.md)
+- [방법: 매개 변수 검사 또는 수정](how-to-inspect-or-modify-parameters.md)
+- [방법: 엔터프라이즈에서 끝점 잠그기](how-to-lock-down-endpoints-in-the-enterprise.md)

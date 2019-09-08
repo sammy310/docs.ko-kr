@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
-ms.openlocfilehash: 4eb211ed13b5f2fe066cd7570c97ae324b187b34
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: db0df68aa89cdd5c8bf94ad95a2b8bc9b36d5685
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203502"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786212"
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>XML에서 데이터 세트 스키마 정보 로드
 의 스키마 <xref:System.Data.DataSet> (테이블, 열, 관계 및 제약 조건)는 프로그래밍 방식으로 정의 하거나,의 <xref:System.Data.Common.DataAdapter> **Fill** 또는 **FillSchema** 메서드에 의해 만들어지거나, XML 문서에서 로드 될 수 있습니다. XML 문서에서 **데이터 집합** 스키마 정보를 로드 하기 위해 **데이터 집합**의 **readxmlschema** 또는 **InferXmlSchema** 메서드를 사용할 수 있습니다. **Readxmlschema** 를 사용 하면 XSD (xml 스키마 정의 언어) 스키마가 포함 된 문서나 인라인 xml 스키마를 사용 하는 xml 문서에서 **데이터 집합** 스키마 정보를 로드 하거나 유추할 수 있습니다. **InferXmlSchema** 를 사용 하면 지정한 특정 xml 네임 스페이스를 무시 하 고 xml 문서에서 스키마를 유추할 수 있습니다.  
@@ -73,7 +73,7 @@ xmlStream.Close();
 </NewDataSet>  
 ```  
   
- 이전 XML 문서의 요소에 대해 지정 된 특성으로 인해 **Readxmlschema** 메서드와 **XmlReadMode** of **InferSchema** 를 사용 하는 **ReadXml** 메서드는 모두의 모든 요소에 대해 테이블을 만듭니다. 문서나 **범주**, **CategoryID**,범주, **설명**, **제품**, **ProductID**, **ReorderLevel**및 **단종**. 자세한 내용은 [XML에서 데이터 집합 관계형 구조 유추](inferring-dataset-relational-structure-from-xml.md)를 참조 하세요. 그러나 더 적절 한 구조는 **범주** 및 **Products** 테이블만 만든 다음, **categories** 테이블 **에 CategoryID, 범주 및 설명 열을 만드는 것입니다.**  **Products** 테이블의 ProductID, **ReorderLevel**및 **단종** 된 열입니다. 유추 된 스키마가 XML 요소에 지정 된 특성을 무시 하도록 하려면 다음 예제와 같이 **InferXmlSchema** 메서드를 사용 하 고 삭제할 **데이터** 의 XML 네임 스페이스를 지정 합니다.  
+ 이전 XML 문서의 요소에 대해 지정 된 특성으로 인해 **Readxmlschema** 메서드와 **XmlReadMode** of **InferSchema** 를 사용 하는 **ReadXml** 메서드는 모두의 모든 요소에 대해 테이블을 만듭니다. 문서나 **범주**, **CategoryID**, **범주**, **설명**, **제품**, **ProductID**, **ReorderLevel**및 **단종**. 자세한 내용은 [XML에서 데이터 집합 관계형 구조 유추](inferring-dataset-relational-structure-from-xml.md)를 참조 하세요. 그러나 더 적절 한 구조는 **범주** 및 **Products** 테이블만 만든 **다음,** **Categories** 테이블 **에 CategoryID, 범주 및 설명 열을 만드는 것입니다.**  **Products** 테이블의 ProductID, **ReorderLevel**및 **단종** 된 열입니다. 유추 된 스키마가 XML 요소에 지정 된 특성을 무시 하도록 하려면 다음 예제와 같이 **InferXmlSchema** 메서드를 사용 하 고 삭제할 **데이터** 의 XML 네임 스페이스를 지정 합니다.  
   
 ```vb  
 Dim dataSet As DataSet = New DataSet  
@@ -92,4 +92,4 @@ dataSet.InferXmlSchema("input_od.xml", new string[] "urn:schemas-microsoft-com:o
 - [XML에서 데이터 세트 관계형 구조 유추](inferring-dataset-relational-structure-from-xml.md)
 - [XML에서 데이터 세트 로드](loading-a-dataset-from-xml.md)
 - [DataSet, DataTable 및 DataView](index.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 개요](../ado-net-overview.md)

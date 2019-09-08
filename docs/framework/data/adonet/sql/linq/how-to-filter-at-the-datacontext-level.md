@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 15505cd7-0df2-427a-9f86-e0f96f60ee2e
-ms.openlocfilehash: 343cffa9b1c034068e5abcc652e936f89ee6a992
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ef5ba8e975cb1c59720c96b214ae2696cc6356e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903008"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781935"
 ---
 # <a name="how-to-filter-at-the-datacontext-level"></a>방법: DataContext 수준 필터링
 `EntitySets` 수준에서 `DataContext`를 필터링할 수 있습니다. 이러한 필터는 <xref:System.Data.Linq.DataContext> 인스턴스로 수행되는 모든 쿼리에 적용됩니다.  
@@ -23,4 +23,4 @@ ms.locfileid: "61903008"
   
 ## <a name="see-also"></a>참고자료
 
-- [쿼리 개념](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [쿼리 개념](query-concepts.md)

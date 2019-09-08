@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8daf76e50b4c584115a55936aa9336c95a3669ec
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 88f594117fffedb6acafef26a9e834dd951ea5bb
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742071"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787533"
 ---
 # <a name="endmerge-method"></a>EndMerge 메서드
-내보내기 범위에 모든 사용자 지정 특성 집합이 병합 된 나타냅니다.  
+모든 사용자 지정 특성이 내보내기 범위에 병합 되었음을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,10 +43,10 @@ HRESULT EndMerge(
  메서드가 성공 하면 S_OK를 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Alink.h 필요  
+ Alink 필요  
   
 ## <a name="see-also"></a>참고자료
 
-- [IALink 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink 인터페이스](ialink-interface.md)
+- [IALink2 인터페이스](ialink2-interface.md)
+- [ALink API](index.md)

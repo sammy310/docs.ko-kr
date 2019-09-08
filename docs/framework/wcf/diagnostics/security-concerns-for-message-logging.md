@@ -2,12 +2,12 @@
 title: 메시지 로깅에 대한 보안 고려 사항
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: b635591b7a3b07385ed48c6b1ea556139c6d77c5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c5efd2990a00045e920c005f6658d5fdfb858481
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044263"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795938"
 ---
 # <a name="security-concerns-for-message-logging"></a>메시지 로깅에 대한 보안 고려 사항
 이 항목에서는 메시지 로깅에 의해 생성된 이벤트뿐 아니라 중요한 데이터가 메시지 로그에서 노출되지 않도록 보호하는 방법에 대해 설명합니다.  
@@ -107,9 +107,9 @@ ms.locfileid: "70044263"
   
 - 알려진 PII 로그를 사용할 수 없음: 이 이벤트는 알려진 PII의 로깅이 허용 되지 않을 때 내보내집니다. 이는 app.config 또는 `logKnownPii` web.config 파일에 `source` 있는 요소의 특성이로 `true` `enableLoggingKnownPii` 설정 되었지만 machine.config 파일의 `machineSettings` 요소에 있는 특성이로 설정 `false`된경우에발생합니다. 예외가 throw되지 않습니다.  
   
- 이러한 이벤트는 Windows에 포함된 이벤트 뷰어 도구에서 볼 수 있습니다. 이에 대 한 자세한 내용은 [이벤트 로깅](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)을 참조 하세요.  
+ 이러한 이벤트는 Windows에 포함된 이벤트 뷰어 도구에서 볼 수 있습니다. 이에 대 한 자세한 내용은 [이벤트 로깅](./event-logging/index.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고자료
 
-- [메시지 로깅](../../../../docs/framework/wcf/diagnostics/message-logging.md)
-- [보안 고려 사항 및 추적에 대한 유용한 정보](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)
+- [메시지 로깅](message-logging.md)
+- [보안 고려 사항 및 추적에 대한 유용한 정보](./tracing/security-concerns-and-useful-tips-for-tracing.md)

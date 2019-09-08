@@ -2,19 +2,19 @@
 title: '방법: MEX가 아닌 바인딩을 통해 메타데이터 검색'
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: 4a127e3e2283050018705c85606bd7c03c36de8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6cd6e0ce5dc287c826179c152b989b5f7842bb6e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766781"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795578"
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>방법: MEX가 아닌 바인딩을 통해 메타데이터 검색
-이 항목에서는 MEX가 아닌 바인딩을 통해 MEX 엔드포인트로부터 메타데이터를 검색하는 방법에 대해 설명합니다. 이 샘플의 코드를 기반으로 합니다 [사용자 지정 보안 메타 데이터 끝점](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) 샘플입니다.  
+이 항목에서는 MEX가 아닌 바인딩을 통해 MEX 엔드포인트로부터 메타데이터를 검색하는 방법에 대해 설명합니다. 이 샘플의 코드는 [사용자 지정 보안 메타 데이터 끝점](../samples/custom-secure-metadata-endpoint.md) 샘플을 기반으로 합니다.  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>MEX가 아닌 바인딩을 통해 메타데이터를 검색하려면  
   
-1. MEX 엔드포인트에서 사용하는 바인딩을 결정합니다. Windows Communication Foundation (WCF) 서비스에 대 한 서비스의 구성 파일에 액세스 함으로써 MEX 바인딩을 결정할 수 있습니다. 이 경우에는 MEX 바인딩이 다음 서비스 구성에서 정의됩니다.  
+1. MEX 엔드포인트에서 사용하는 바인딩을 결정합니다. WCF (Windows Communication Foundation) 서비스의 경우 서비스의 구성 파일에 액세스 하 여 MEX 바인딩을 결정할 수 있습니다. 이 경우에는 MEX 바인딩이 다음 서비스 구성에서 정의됩니다.  
   
     ```xml  
     <services>  
@@ -121,8 +121,8 @@ ms.locfileid: "61766781"
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5. 이제 서비스 엔드포인트의 컬렉션을 가지게 됩니다. 메타 데이터를 가져오는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 서비스 끝점으로 메타 데이터를 가져오기](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)합니다.  
+5. 이제 서비스 엔드포인트의 컬렉션을 가지게 됩니다. 메타 데이터를 [가져오는 방법에 대 한 자세한 내용은 방법: 서비스 끝점](../feature-details/how-to-import-metadata-into-service-endpoints.md)으로 메타 데이터를 가져옵니다.  
   
 ## <a name="see-also"></a>참고자료
 
-- [메타데이터](../../../../docs/framework/wcf/feature-details/metadata.md)
+- [메타데이터](../feature-details/metadata.md)

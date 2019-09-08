@@ -2,12 +2,12 @@
 title: XML에서 데이터 세트 관계형 구조 유추
 ms.date: 03/30/2017
 ms.assetid: cd2f41c6-6785-420e-aa43-3ceb0bdccdce
-ms.openlocfilehash: 9b1932807058777a532457c99efc49f3ddfdf4ae
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 1c8325d7ed52fea7397a7b5aa8744bdfa90b2c6e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204813"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785323"
 ---
 # <a name="inferring-dataset-relational-structure-from-xml"></a>XML에서 데이터 세트 관계형 구조 유추
 <xref:System.Data.DataSet>의 관계형 구조 또는 스키마는 테이블, 열, 제약 조건 및 관계로 구성됩니다. XML에서 <xref:System.Data.DataSet>을 로드할 때 로드되는 XML에서 스키마를 명시적으로 또는 유추를 통해 미리 정의하거나 만들 수 있습니다. Xml <xref:System.Data.DataSet> 에서 스키마 및 콘텐츠를 로드 하는 방법에 대 한 자세한 내용은 xml [에서 데이터 집합 로드](loading-a-dataset-from-xml.md) 및 [xml에서 데이터 집합 스키마 정보 로드](loading-dataset-schema-information-from-xml.md)를 참조 하세요.  
@@ -49,4 +49,4 @@ ms.locfileid: "70204813"
   
 ## <a name="see-also"></a>참고자료
 
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 개요](../ado-net-overview.md)

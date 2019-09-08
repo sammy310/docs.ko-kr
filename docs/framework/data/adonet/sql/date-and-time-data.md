@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 016e2efae68c02c8c5a10ab74419599bc41be3a8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 90a70eaa2b5aeb8ef1f1659d7912b9ae5abc4eca
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959384"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794243"
 ---
 # <a name="date-and-time-data"></a>날짜 및 시간 데이터
 SQL Server 2008에서는 날짜 및 시간 정보를 처리하기 위한 새로운 데이터 형식을 지원합니다. 새로운 데이터 형식에는 개별 날짜 형식과 시간 형식을 비롯하여 보다 큰 범위의 확장된 데이터 형식, 정밀도 및 표준 시간대 인식 기능이 포함됩니다. .NET Framework 버전 3.5 SP(서비스 팩) 1부터는 .NET Framework Data Provider for SQL Server(<xref:System.Data.SqlClient>)에 SQL Server 2008 데이터베이스 엔진의 새로운 모든 기능이 완벽하게 지원됩니다. SqlClient에서 이러한 새 기능을 사용하려면 .NET Framework 3.5 SP1 이상을 설치해야 합니다.  
@@ -26,7 +26,7 @@ SQL Server 2008에서는 날짜 및 시간 정보를 처리하기 위한 새로�
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>SQL Server 2008에 도입된 날짜/시간 데이터 형식  
  다음 표에서는 새로운 날짜 및 시간 데이터 형식에 대해 설명합니다.  
   
-|SQL Server 데이터 형식|설명|  
+|SQL Server 데이터 형식|Description|  
 |--------------------------|-----------------|  
 |`date`|`date` 데이터 형식은 하루 단위이며 범위는 01년 1월 1일부터 9999년 12월 31일까지입니다. 기본값은 1900년 1월 1일입니다. 이 데이터 형식의 스토리지 크기는 3바이트입니다.|  
 |`time`|`time` 데이터 형식은 24시간제를 기준으로 시간 값만 저장합니다. `time` 데이터 형식은 100나노초 단위이며 범위는 00:00:00.0000000부터 23:59:59.9999999까지입니다. 기본값은 00:00:00.0000000(자정)입니다. `time` 데이터 형식은 초에 대해 소수로 표현되는 사용자 정의 정밀도를 지원하며 지정된 정밀도에 따라 스토리지 크기는 3바이트에서 6바이트까지의 범위 내에서 달라집니다.|  
@@ -88,7 +88,7 @@ SQL Server 2008에서는 날짜 및 시간 정보를 처리하기 위한 새로�
   
 |속성|Description|  
 |--------------|-----------------|  
-|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|값이 nullable인지 여부를 가져오거나 설정합니다. 서버에 null 매개 변수 값을 보낼 때는 <xref:System.DBNull>(Visual Basic에서는 `null`)이 아니라 `Nothing`을 지정해야 합니다. 데이터베이스 null에 대한 자세한 내용은 [Handling Null Values](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)를 참조하세요.|  
+|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|값이 nullable인지 여부를 가져오거나 설정합니다. 서버에 null 매개 변수 값을 보낼 때는 <xref:System.DBNull>(Visual Basic에서는 `null`)이 아니라 `Nothing`을 지정해야 합니다. 데이터베이스 null에 대한 자세한 내용은 [Handling Null Values](handling-null-values.md)를 참조하세요.|  
 |<xref:System.Data.SqlClient.SqlParameter.Precision%2A>|값을 나타내는 데 사용되는 최대 자릿수를 가져오거나 설정합니다. 날짜 및 시간 데이터 형식에서는 이 설정이 무시됩니다.|  
 |<xref:System.Data.SqlClient.SqlParameter.Scale%2A>|, `Time` `DateTime2`및 에대해값의시간부분을확인하는소수자릿수를가져오거나설정합니다.`DateTimeOffset` 기본값은 0이며 이는 값에서 실제 자릿수가 유추되어 서버에 전송됨을 의미합니다.|  
 |<xref:System.Data.SqlClient.SqlParameter.Size%2A>|날짜 및 시간 데이터 형식에서 무시됩니다.|  
@@ -101,7 +101,7 @@ SQL Server 2008에서는 날짜 및 시간 정보를 처리하기 위한 새로�
 ### <a name="creating-parameters"></a>매개 변수 만들기  
  <xref:System.Data.SqlClient.SqlParameter> 개체는 해당 생성자를 사용하거나, <xref:System.Data.SqlClient.SqlCommand>의 <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> 메서드를 호출하여 `Add`<xref:System.Data.SqlClient.SqlParameterCollection> 컬렉션에 추가하는 방법으로 만들 수 있습니다. `Add` 메서드는 생성자 인수 또는 기존 매개 변수 개체를 입력으로 사용합니다.  
   
- 이 항목의 다음 섹션에서는 날짜 및 시간 매개 변수를 지정하는 방법에 대한 예제를 제공합니다. 매개 변수 사용에 대 한 추가 예제는 [매개 변수 및 매개 변수 데이터 형식](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md) 및 [DataAdapter 매개 변수](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)구성을 참조 하세요.  
+ 이 항목의 다음 섹션에서는 날짜 및 시간 매개 변수를 지정하는 방법에 대한 예제를 제공합니다. 매개 변수 사용에 대 한 추가 예제는 [매개 변수 및 매개 변수 데이터 형식](../configuring-parameters-and-parameter-data-types.md) 및 [DataAdapter 매개 변수](../dataadapter-parameters.md)구성을 참조 하세요.  
   
 ### <a name="date-example"></a>Date 예제  
  다음 코드 조각에서는 `date` 매개 변수를 지정하는 방법을 보여 줍니다.  
@@ -241,7 +241,7 @@ command.Parameters.AddWithValue( _
   
 ## <a name="see-also"></a>참고자료
 
-- [SQL Server 데이터 형식 매핑](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [매개 변수 및 매개 변수 데이터 형식 구성](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [SQL Server 데이터 형식 및 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server 데이터 형식 매핑](../sql-server-data-type-mappings.md)
+- [매개 변수 및 매개 변수 데이터 형식 구성](../configuring-parameters-and-parameter-data-types.md)
+- [SQL Server 데이터 형식 및 ADO.NET](sql-server-data-types.md)
+- [ADO.NET 개요](../ado-net-overview.md)

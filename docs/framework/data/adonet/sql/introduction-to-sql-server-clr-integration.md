@@ -2,12 +2,12 @@
 title: SQL Server CLR 통합 소개
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-ms.openlocfilehash: 380666ae9a3ebc18ef470e5ab719360f40510f41
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fb812a8e524148c507d26ea32e0b4263a4998153
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650604"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782268"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>SQL Server CLR 통합 소개
 CLR(공용 언어 런타임)은 Microsoft .NET Framework의 핵심으로, 모든 .NET Framework 코드에 실행 환경을 제공합니다. CLR 내에서 실행되는 코드를 관리 코드라고 합니다. CLR에서는 JIT(Just-In-Time) 컴파일, 메모리 할당 및 관리, 형식 안전성 적용, 예외 처리, 스레드 관리 및 보안 같은 프로그램 실행을 위한 다양한 기능과 서비스를 제공합니다.  
@@ -20,9 +20,9 @@ CLR(공용 언어 런타임)은 Microsoft .NET Framework의 핵심으로, 모든
   
  **SQL Server 온라인 설명서**  
   
-- [공용 언어 런타임 (CLR) 통합 개요](https://go.microsoft.com/fwlink/?LinkId=115242)  
+- [CLR (공용 언어 런타임) 통합 개요](https://go.microsoft.com/fwlink/?LinkId=115242)  
   
-## <a name="enabling-clr-integration"></a>CLR 통합 활성화  
+## <a name="enabling-clr-integration"></a>CLR 통합 사용  
  Microsoft SQL Server에서 CLR(공용 언어 런타임) 통합 기능은 기본적으로 사용하지 않도록 설정되어 있으며 CLR 통합을 사용하여 구현되는 개체를 사용하려면 이를 활성화해야 합니다. Transact-SQL을 사용하여 CLR 통합을 활성화하려면 다음과 같이 `clr enabled` 저장 프로시저의 `sp_configure` 옵션을 사용합니다.  
   
 ```  
@@ -67,5 +67,5 @@ GO
   
 ## <a name="see-also"></a>참고자료
 
-- [코드 액세스 보안 및 ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [코드 액세스 보안 및 ADO.NET](../code-access-security.md)
+- [ADO.NET 개요](../ado-net-overview.md)

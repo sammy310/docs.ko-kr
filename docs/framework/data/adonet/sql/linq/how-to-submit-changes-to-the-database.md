@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c7cba174-9d40-491d-b32c-f2d73b7e9eab
-ms.openlocfilehash: 222ce575d9e977cc8b68862385b4a1b147c6394a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c279d4ed32aed4788ee5866a24572663a1e2f580
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902696"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793114"
 ---
 # <a name="how-to-submit-changes-to-the-database"></a>방법: 데이터베이스에 변경 내용 전송
 개체의 변경 내용 수에 관계없이 메모리 내의 복제본에만 변경 내용이 적용됩니다. 데이터베이스의 실제 데이터는 변경하지 않습니다. <xref:System.Data.Linq.DataContext.SubmitChanges%2A>의 <xref:System.Data.Linq.DataContext>를 명시적으로 호출한 후에 변경 내용이 서버에 전송됩니다.  
   
- 이러한 호출을 수행할 때 <xref:System.Data.Linq.DataContext>는 변경 내용을 해당 SQL 명령으로 변환하려고 합니다. 사용자 고유의 사용자 지정 논리를 사용 하 여 이러한 동작을 재정의할 수 있지만 전송 순서를 서비스에 의해 오케스트레이션 됩니다는 <xref:System.Data.Linq.DataContext> 라고 합니다 *변경 프로세서*합니다. 작업이 진행되는 순서는 다음과 같습니다.  
+ 이러한 호출을 수행할 때 <xref:System.Data.Linq.DataContext>는 변경 내용을 해당 SQL 명령으로 변환하려고 합니다. 사용자 고유의 사용자 지정 논리를 사용 하 여 이러한 작업을 재정의할 수 있지만 전송 순서는 <xref:System.Data.Linq.DataContext> *변경 프로세서*라는의 서비스에 의해 오케스트레이션 됩니다. 작업이 진행되는 순서는 다음과 같습니다.  
   
 1. <xref:System.Data.Linq.DataContext.SubmitChanges%2A>를 호출하는 경우 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 알려진 개체 집합을 사용하여 새 인스턴스와의 연결 여부를 확인합니다. 새 인스턴스와 연결되어 있는 경우 새 인스턴스는 추적된 개체 집합에 추가됩니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "61902696"
   
 ## <a name="see-also"></a>참고자료
 
-- [방법: 충돌 하는 전송 검색 및 해결](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)
-- [방법: 변경 내용 충돌 관리](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
-- [샘플 데이터베이스 다운로드](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [데이터 변경 및 변경 내용 전송](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [방법: 충돌 하는 전송 검색 및 해결](how-to-detect-and-resolve-conflicting-submissions.md)
+- [방법: 변경 내용 충돌 관리](how-to-manage-change-conflicts.md)
+- [샘플 데이터베이스 다운로드](downloading-sample-databases.md)
+- [데이터 변경 및 변경 내용 전송](making-and-submitting-data-changes.md)

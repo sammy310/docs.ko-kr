@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-ms.openlocfilehash: 0852622811b5efb362937b3af37f2b9d81b2d1ea
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3164656bb183e7773b098cab79d8fe5e0dc5de34
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626436"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792152"
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>연습: 관계 간 쿼리(Visual Basic)
-이 연습에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *연결* 데이터베이스에서 외래 키 관계를 나타내는입니다.  
+이 연습에서는 *연결* 을 사용 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 하 여 데이터베이스에서 외래 키 관계를 나타내는 방법을 보여 줍니다.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
  이 연습은 Visual Basic 개발 설정을 사용하여 작성했습니다.  
   
 ## <a name="prerequisites"></a>전제 조건  
- 완료 해야 [연습: 간단한 개체 모델 및 쿼리 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)합니다. 이 연습은 c:\linqtest에 있는 northwnd.mdf 파일을 비롯하여 해당 연습의 단순 개체 모델 및 쿼리를 기반으로 합니다.  
+ 연습을 완료 [해야 합니다. 간단한 개체 모델 및 쿼리 (Visual Basic)](walkthrough-simple-object-model-and-query-visual-basic.md). 이 연습은 c:\linqtest에 있는 northwnd.mdf 파일을 비롯하여 해당 연습의 단순 개체 모델 및 쿼리를 기반으로 합니다.  
   
 ## <a name="overview"></a>개요  
  이 연습은 다음과 같은 세 가지 주요 작업으로 구성됩니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "64626436"
      [!code-vb[DLinqWalk2VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#2)]  
   
 ## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>Customer 및 Order 관계에서 쿼리 만들기 및 실행  
- 이제 `Order` 개체에서 `Customer` 개체를 직접 액세스하거나 그 반대 방향으로 액세스할 수 있습니다. 명시적인 않아도 *조인* customers와 orders 간의 합니다.  
+ 이제 `Order` 개체에서 `Customer` 개체를 직접 액세스하거나 그 반대 방향으로 액세스할 수 있습니다. 고객과 주문 간에 명시적 *조인이* 필요 하지 않습니다.  
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>Customer 개체를 사용하여 Order 개체에 액세스하려면  
   
@@ -86,11 +86,11 @@ ms.locfileid: "64626436"
   
 4. 콘솔 창에서 Enter 키를 눌러 애플리케이션을 닫습니다.  
   
-5. 에 **파일** 메뉴에서 클릭 **모두 저장** 이 응용 프로그램을 저장 하려는 경우.  
+5. 이 응용 프로그램을 저장 하려면 **파일** 메뉴에서 **모두 저장** 을 클릭 합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 다음 연습 ([연습: 데이터 조작 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) 데이터를 조작 하는 방법을 보여 줍니다. 다음 연습에서는 이미 완료한 이 시리즈의 연습 두 개를 저장할 필요가 없습니다.  
+ 다음 연습 ([연습: 데이터 조작 (Visual Basic)](walkthrough-manipulating-data-visual-basic.md)은 데이터를 조작 하는 방법을 보여 줍니다. 다음 연습에서는 이미 완료한 이 시리즈의 연습 두 개를 저장할 필요가 없습니다.  
   
 ## <a name="see-also"></a>참고자료
 
-- [연습으로 학습](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [연습으로 학습](learning-by-walkthroughs.md)

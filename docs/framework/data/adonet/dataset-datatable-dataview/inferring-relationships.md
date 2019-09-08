@@ -2,15 +2,15 @@
 title: 관계 유추
 ms.date: 03/30/2017
 ms.assetid: 8fa86a9d-6545-4a9d-b1f5-58d9742179c7
-ms.openlocfilehash: 92a4953dc7f5119ffbf171ff2a7bf5b58e896638
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 4c9c13453e4a830fcda337e8163649ba6491a995
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204763"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785370"
 ---
 # <a name="inferring-relationships"></a>관계 유추
-테이블로 유추되는 요소에 역시 테이블로 유추되는 자식 요소가 있으면 두 테이블 사이에 <xref:System.Data.DataRelation>이 만들어집니다. **ParentTableName_Id** 이름이 인 새 열이 부모 요소에 대해 만들어진 테이블과 자식 요소에 대해 만들어진 테이블 모두에 추가 됩니다. 이 id 열의 **ColumnMapping** 속성은 **mappingtype.attribute**로 설정 됩니다. 열은 부모 테이블의 자동 증분 기본 키가 되며 두 테이블 간의 **DataRelation** 에 사용 됩니다. 추가 된 id 열의 데이터 형식은 System.string 이며 다른 모든유추 된 열의 데이터 형식 ( **system.string**)과는 다릅니다. 부모 테이블과 자식 테이블 모두에서 새 열을 사용 하 여 **DeleteRule** = Cascade가 만들어집니다. <xref:System.Data.ForeignKeyConstraint>  
+테이블로 유추되는 요소에 역시 테이블로 유추되는 자식 요소가 있으면 두 테이블 사이에 <xref:System.Data.DataRelation>이 만들어집니다. **ParentTableName_Id** 이름이 인 새 열이 부모 요소에 대해 만들어진 테이블과 자식 요소에 대해 만들어진 테이블 모두에 추가 됩니다. 이 id 열의 **ColumnMapping** 속성은 **mappingtype.attribute**로 설정 됩니다. 열은 부모 테이블의 자동 증분 기본 키가 되며 두 테이블 간의 **DataRelation** 에 사용 됩니다. 추가 된 id 열의 데이터 형식은 System.string 이며 다른 모든 유추 된 열의 데이터 형식 ( **system.string**)과는 **다릅니다.** 부모 테이블과 자식 테이블 모두에서 새 열을 사용 하 여 **DeleteRule** = Cascade가 만들어집니다. <xref:System.Data.ForeignKeyConstraint>  
   
  예를 들어, 다음과 같은 XML을 가정해 봅시다.  
   
@@ -77,4 +77,4 @@ ms.locfileid: "70204763"
 - [DataRelation 중첩](nesting-datarelations.md)
 - [데이터 집합에서 XML 사용](using-xml-in-a-dataset.md)
 - [DataSet, DataTable 및 DataView](index.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 개요](../ado-net-overview.md)

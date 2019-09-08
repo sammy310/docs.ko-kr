@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
-ms.openlocfilehash: afa760d890cf2857737372af5a9d3ba7c2749e6c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 054898a3520cbc2b607fc26b94b72b9896ad9c71
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949413"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786689"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>DataView 개체 만들기(LINQ to DataSet)
 LINQ to DataSet 컨텍스트에서를 만드는 방법에는 <xref:System.Data.DataView> 두 가지가 있습니다. 에 <xref:System.Data.DataTable> <xref:System.Data.DataView> 대한LINQtoDataSet쿼리에서를만들거나형식화되거나형식화되지않은에서만들수있습니다.<xref:System.Data.DataTable> 두 경우 모두 <xref:System.Data.DataTableExtensions.AsDataView%2A> 확장 메서드 중 하나 <xref:System.Data.DataView> 를 사용 하 여를 만듭니다. <xref:System.Data.DataView> 는 LINQ to DataSet 컨텍스트에서 직접 생성 가능 되지 않습니다.  
@@ -19,7 +19,7 @@ LINQ to DataSet 컨텍스트에서를 만드는 방법에는 <xref:System.Data.D
   
  <xref:System.Data.DataView>에서 만든 인덱스는 필터링 및 정렬과 같이 인덱스를 사용할 수 있는 작업의 성능을 크게 높여 줍니다. <xref:System.Data.DataView>의 인덱스는 <xref:System.Data.DataView>가 만들어지거나 정렬 또는 필터링 정보가 수정될 때 작성됩니다. <xref:System.Data.DataView>를 만든 다음 정렬 또는 필터링 정보를 설정하면 <xref:System.Data.DataView>가 만들어질 때와 정렬 또는 필터 속성이 수정될 때 각각 한 번씩 인덱스가 작성되므로 적어도 두 개의 인덱스가 작성됩니다.  
   
- 을 사용 <xref:System.Data.DataView>하 여 필터링 하 고 정렬 하는 방법에 대 한 자세한 내용은 [dataview를 사용 하 여 필터링](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md) 및 [dataview로 정렬](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)  
+ 을 사용 <xref:System.Data.DataView>하 여 필터링 하 고 정렬 하는 방법에 대 한 자세한 내용은 [dataview를 사용 하 여 필터링](filtering-with-dataview-linq-to-dataset.md) 및 [dataview로 정렬](sorting-with-dataview-linq-to-dataset.md)  
   
 ## <a name="creating-dataview-from-a-linq-to-dataset-query"></a>LINQ to DataSet 쿼리에서 DataView 만들기  
  LINQ to DataSet 쿼리의 결과에서 <xref:System.Data.DataRow> 개체를만들수있습니다.여기서결과는개체의프로젝션입니다.<xref:System.Data.DataView> 새로 만들어진 <xref:System.Data.DataView>는 자신을 만든 쿼리의 필터링 및 정렬 정보를 상속합니다.  
@@ -72,6 +72,6 @@ LINQ to DataSet 컨텍스트에서를 만드는 방법에는 <xref:System.Data.D
   
 ## <a name="see-also"></a>참고자료
 
-- [데이터 바인딩 및 LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
-- [DataView로 필터링](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)
-- [DataView로 정렬](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)
+- [데이터 바인딩 및 LINQ to DataSet](data-binding-and-linq-to-dataset.md)
+- [DataView로 필터링](filtering-with-dataview-linq-to-dataset.md)
+- [DataView로 정렬](sorting-with-dataview-linq-to-dataset.md)

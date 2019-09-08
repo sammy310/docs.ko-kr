@@ -2,12 +2,12 @@
 title: SQL Server에서 인증
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 1723552a48ebfa41e8d6a0f963154fc3b864119d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 49835ebf8ebe4d5bd200ed771477edc8af580b7d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957484"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794287"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server에서 인증
 SQL Server에서는 Windows 인증 모드와 혼합 모드의 두 가지 인증 모드를 지원합니다.  
@@ -69,7 +69,7 @@ SQL Server에서는 Windows 인증 모드와 혼합 모드의 두 가지 인증 
  SQL Server는 이상 버전에서 [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] 실행 될 때 SQL Server 로그인에 대 한 Windows 암호 정책 메커니즘을 제공 합니다. 암호 복잡성 정책은 가능한 암호의 수를 늘려 무차별 암호 대입 공격(brute force attack)을 방지하도록 설계되었습니다. SQL Server는에서 사용 되는 것과 동일한 복잡성 및 [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] 만료 정책을 SQL Server 내에서 사용 되는 암호에 적용할 수 있습니다.  
   
 > [!IMPORTANT]
-> 사용자 입력의 연결 문자열 연결로 인해 문자열 삽입 공격에 노출될 수 있습니다. <xref:System.Data.SqlClient.SqlConnectionStringBuilder>를 사용하면 런타임에 구문상 유효한 연결 문자열을 만들 수 있습니다. 자세한 내용은 [연결 문자열 작성기](../../../../../docs/framework/data/adonet/connection-string-builders.md)를 참조하세요.  
+> 사용자 입력의 연결 문자열 연결로 인해 문자열 삽입 공격에 노출될 수 있습니다. <xref:System.Data.SqlClient.SqlConnectionStringBuilder>를 사용하면 런타임에 구문상 유효한 연결 문자열을 만들 수 있습니다. 자세한 내용은 [연결 문자열 작성기](../connection-string-builders.md)를 참조하세요.  
   
 ## <a name="external-resources"></a>외부 리소스  
  자세한 내용은 다음 리소스를 참조하세요.  
@@ -80,8 +80,8 @@ SQL Server에서는 Windows 인증 모드와 혼합 모드의 두 가지 인증 
   
 ## <a name="see-also"></a>참고자료
 
-- [ADO.NET 응용 프로그램 보안](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server의 응용 프로그램 보안 시나리오](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [데이터 소스에 연결](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [연결 문자열](../../../../../docs/framework/data/adonet/connection-strings.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 응용 프로그램 보안](../securing-ado-net-applications.md)
+- [SQL Server의 응용 프로그램 보안 시나리오](application-security-scenarios-in-sql-server.md)
+- [데이터 소스에 연결](../connecting-to-a-data-source.md)
+- [연결 문자열](../connection-strings.md)
+- [ADO.NET 개요](../ado-net-overview.md)

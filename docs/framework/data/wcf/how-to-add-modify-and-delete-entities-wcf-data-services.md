@@ -1,5 +1,5 @@
 ---
-title: '방법: 추가, 수정 및 엔터티 (WCF Data Services)를 삭제 합니다.'
+title: '방법: 엔터티 추가, 수정 및 삭제 (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: a00f8933-b232-4445-95ba-adc634f055d8
-ms.openlocfilehash: 66f115bf3bf51b4b5612240c4e34eaf9e08bec0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 13c59bee9fc58dbe8c5b8c768fe9ff8b31d72e76
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765559"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780250"
 ---
-# <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>방법: 추가, 수정 및 엔터티 (WCF Data Services)를 삭제 합니다.
-사용 하 여 합니다 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리를 만들기, 업데이트 하 수의 개체에 해당 하는 동작을 수행 하 여 데이터 서비스에서 엔터티 데이터 삭제를 <xref:System.Data.Services.Client.DataServiceContext>입니다. 자세한 내용은 [데이터 서비스 업데이트](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)합니다.  
+# <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>방법: 엔터티 추가, 수정 및 삭제 (WCF Data Services)
+클라이언트 라이브러리를 사용 하면의 개체 <xref:System.Data.Services.Client.DataServiceContext>에 대해 동일한 작업을 수행 하 여 데이터 서비스의 엔터티 데이터를 만들고, 업데이트 하 고, 삭제할 수 있습니다. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 자세한 내용은 [데이터 서비스 업데이트](updating-the-data-service-wcf-data-services.md)를 참조 하세요.  
   
- 이 항목의 예제에서는 Northwind 샘플 데이터 서비스 및 자동 생성된 클라이언트 데이터 서비스 클래스를 사용합니다. 이 서비스 및 클라이언트 데이터 클래스를 수행할 때 생성 됩니다는 [WCF Data Services 퀵 스타트](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)합니다.  
+ 이 항목의 예제에서는 Northwind 샘플 데이터 서비스 및 자동 생성된 클라이언트 데이터 서비스 클래스를 사용합니다. 이 서비스 및 클라이언트 데이터 클래스는 [WCF Data Services 빠른](quickstart-wcf-data-services.md)시작을 완료 하면 생성 됩니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 새 개체 인스턴스를 만든 다음 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>의 <xref:System.Data.Services.Client.DataServiceContext> 메서드를 호출하여 컨텍스트의 항목을 만듭니다. <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 메서드를 호출하면 HTTP POST 메시지가 데이터 서비스로 전송됩니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "61765559"
   
 ## <a name="see-also"></a>참고자료
 
-- [WCF Data Services 클라이언트 라이브러리](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [방법: 기존 엔터티를 DataServiceContext에 연결](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md)
-- [방법: 엔터티 관계 정의](../../../../docs/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services.md)
-- [일괄 처리 작업](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)
+- [WCF Data Services 클라이언트 라이브러리](wcf-data-services-client-library.md)
+- [방법: 기존 엔터티를 DataServiceContext에 연결](attach-an-existing-entity-to-dc-wcf-data.md)
+- [방법: 엔터티 관계 정의](how-to-define-entity-relationships-wcf-data-services.md)
+- [일괄 처리 작업](batching-operations-wcf-data-services.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: 37641056f2f3110685c24266d2612845ffbf0b3d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a8cca707f8fa82e97e988fcbe015b55e35b93499
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929235"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794687"
 ---
 # <a name="optimistic-concurrency"></a>낙관적 동시성
 다중 사용자 환경에서는 낙관적 동시성 및 비관적 동시성의 두 가지 모델을 사용하여 데이터베이스의 데이터를 업데이트할 수 있습니다. <xref:System.Data.DataSet> 개체는 데이터를 원격으로 사용하거나 데이터와 상호 작용하는 등의 장기 실행 작업에 대해 낙관적 동시성을 사용하기에 적합하도록 만들어졌습니다.  
@@ -96,9 +96,9 @@ UPDATE Table1 Set Col1 = @NewVal1
  낙관적 동시성 모델을 사용할 때는 덜 제한적인 조건을 적용할 수도 있습니다. 예를 들어, WHERE 절에 기본 키 열만 사용하면 마지막 쿼리 이후에 다른 열이 업데이트되었는지 여부와 상관없이 데이터를 덮어씁니다. 또한 특정 열에 대해서만 WHERE 절을 사용할 수도 있는데, 이 경우 마지막으로 쿼리된 이후에 특정 필드가 업데이트되지 않았으면 데이터를 덮어씁니다.  
   
 ### <a name="the-dataadapterrowupdated-event"></a>DataAdapter.RowUpdated 이벤트  
- <xref:System.Data.Common.DataAdapter> 개체의 **RowUpdated** 이벤트는 이전에 설명한 기술과 함께 사용 하 여 낙관적 동시성 위반을 응용 프로그램에 알릴 수 있습니다. **RowUpdated** 는 각 **데이터 집합**에서 **수정** 된 행을 업데이트 하려고 시도한 후에 발생 합니다. 이로써 예외 발생 시의 처리와 사용자 지정 오류 정보 및 다시 시도 논리 등의 추가를 포함하여 특별한 처리 코드를 추가할 수 있습니다. 개체 <xref:System.Data.Common.RowUpdatedEventArgs> 는 테이블의 수정 된 행에 대해 특정 update 명령의 영향을 받는 행 수를 포함 하는 **RecordsAffected** 속성을 반환 합니다. 업데이트 명령을 낙관적 동시성을 테스트 하도록 설정 하 여 **RecordsAffected** 속성은 업데이트 된 레코드가 없어 낙관적 동시성 위반이 발생 했을 때 값 0을 반환 합니다. 또한 이 경우 예외가 throw됩니다. **RowUpdated** 이벤트를 사용 하면이 발생을 처리 하 고 **UpdateStatus**와 같은 적절 한 **RowUpdatedEventArgs** 값을 설정 하 여 예외를 방지할 수 있습니다. **RowUpdated** 이벤트에 대 한 자세한 내용은 [DataAdapter 이벤트 처리](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)를 참조 하세요.  
+ <xref:System.Data.Common.DataAdapter> 개체의 **RowUpdated** 이벤트는 이전에 설명한 기술과 함께 사용 하 여 낙관적 동시성 위반을 응용 프로그램에 알릴 수 있습니다. **RowUpdated** 는 각 **데이터 집합**에서 **수정** 된 행을 업데이트 하려고 시도한 후에 발생 합니다. 이로써 예외 발생 시의 처리와 사용자 지정 오류 정보 및 다시 시도 논리 등의 추가를 포함하여 특별한 처리 코드를 추가할 수 있습니다. 개체 <xref:System.Data.Common.RowUpdatedEventArgs> 는 테이블의 수정 된 행에 대해 특정 update 명령의 영향을 받는 행 수를 포함 하는 **RecordsAffected** 속성을 반환 합니다. 업데이트 명령을 낙관적 동시성을 테스트 하도록 설정 하 여 **RecordsAffected** 속성은 업데이트 된 레코드가 없어 낙관적 동시성 위반이 발생 했을 때 값 0을 반환 합니다. 또한 이 경우 예외가 throw됩니다. **RowUpdated** 이벤트를 사용 하면이 발생을 처리 하 고 **UpdateStatus**와 같은 적절 한 **RowUpdatedEventArgs** 값을 설정 하 여 예외를 방지할 수 있습니다. **RowUpdated** 이벤트에 대 한 자세한 내용은 [DataAdapter 이벤트 처리](handling-dataadapter-events.md)를 참조 하세요.  
   
- 필요에 따라 **update**를 호출 하기 전에 **ContinueUpdateOnError** 를 **True**로 설정 하 고 **업데이트가** 완료 되 면 특정 행의 **RowError** 속성에 저장 된 오류 정보에 응답할 수 있습니다. 자세한 내용은 [행 오류 정보](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)를 참조 하세요.  
+ 필요에 따라 **update**를 호출 하기 전에 **ContinueUpdateOnError** 를 **True**로 설정 하 고 **업데이트가** 완료 되 면 특정 행의 **RowError** 속성에 저장 된 오류 정보에 응답할 수 있습니다. 자세한 내용은 [행 오류 정보](./dataset-datatable-dataview/row-error-information.md)를 참조 하세요.  
   
 ## <a name="optimistic-concurrency-example"></a>낙관적 동시성 예제  
  다음은 낙관적 동시성을 테스트할 **DataAdapter** 의 **UpdateCommand** 를 설정 하 고 **RowUpdated** 이벤트를 사용 하 여 낙관적 동시성 위반을 테스트 하는 간단한 예제입니다. 낙관적 동시성 위반이 발생 하면 응용 프로그램은 낙관적 동시성 위반을 반영 하기 위해 업데이트가 실행 된 행의 **RowError** 를 설정 합니다.  
@@ -208,8 +208,8 @@ protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
   
 ## <a name="see-also"></a>참고자료
 
-- [ADO.NET에서 데이터 검색 및 수정](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [DataAdapter로 데이터 원본 업데이트](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [행 오류 정보](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)
-- [트랜잭션 및 동시성](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET에서 데이터 검색 및 수정](retrieving-and-modifying-data.md)
+- [DataAdapter로 데이터 원본 업데이트](updating-data-sources-with-dataadapters.md)
+- [행 오류 정보](./dataset-datatable-dataview/row-error-information.md)
+- [트랜잭션 및 동시성](transactions-and-concurrency.md)
+- [ADO.NET 개요](ado-net-overview.md)

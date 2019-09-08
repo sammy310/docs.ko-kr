@@ -2,12 +2,12 @@
 title: 보안 데이터 액세스
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 7aa68842ab3733943f84e9d6d9157f7a3d65cac7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 122bdaf8467994f8f56ce3f6c92457be6b8b3155
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963149"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782767"
 ---
 # <a name="secure-data-access"></a>보안 데이터 액세스
 보안 ADO.NET 코드를 쓰려면 내부 데이터 저장소 또는 데이터베이스에서 사용할 수 있는 보안 메커니즘을 알아야 합니다. 또한, 애플리케이션에 포함된 다른 기능이나 구성 요소의 보안 문제도 고려해야 합니다.  
@@ -23,21 +23,21 @@ ms.locfileid: "69963149"
   
 |리소스|Description|  
 |--------------|-----------------|  
-|[연결 정보 보호](../../../../docs/framework/data/adonet/protecting-connection-information.md)|보호되는 구성을 사용하여 연결 문자열을 암호화하는 것과 같이 연결 정보를 보호하는 기술과 최상의 보안 방법에 대해 설명합니다.|  
+|[연결 정보 보호](protecting-connection-information.md)|보호되는 구성을 사용하여 연결 문자열을 암호화하는 것과 같이 연결 정보를 보호하는 기술과 최상의 보안 방법에 대해 설명합니다.|  
 |[데이터 액세스 전략에 대 한 권장 사항](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|데이터 액세스 및 데이터베이스 작업 수행에 대한 권장 방법을 제공합니다.|  
-|[연결 문자열 작성기](../../../../docs/framework/data/adonet/connection-string-builders.md)|런타임에 사용자 입력을 기반으로 연결 문자열을 만드는 방법에 대해 설명합니다.|  
-|[SQL Server 보안 개요](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|SQL Server 보안 아키텍처에 대해 설명합니다.|  
+|[연결 문자열 작성기](connection-string-builders.md)|런타임에 사용자 입력을 기반으로 연결 문자열을 만드는 방법에 대해 설명합니다.|  
+|[SQL Server 보안 개요](./sql/overview-of-sql-server-security.md)|SQL Server 보안 아키텍처에 대해 설명합니다.|  
   
 ## <a name="parameterized-commands-and-sql-injection"></a>매개 변수화된 명령 및 SQL 삽입  
  매개 변수화된 명령을 사용하면 공격자가 SQL 문에 명령을 삽입하여 서버의 보안을 손상시키는 SQL 삽입 공격을 막을 수 있습니다. 매개 변수화된 명령에서는 외부 소스에서 가져온 값이 Transact-SQL 문의 일부가 아닌 값으로만 전달되도록 하여 SQL 삽입 공격으로부터 보호합니다. 따라서 값에 삽입된 Transact-SQL 명령이 데이터 소스에서 실행되지 않으며 매개 변수 값으로만 평가됩니다. 매개 변수화된 명령은 이러한 보안상의 장점뿐만 아니라 Transact-SQL 문과 함께 전달되거나 저장 프로시저에 전달되는 값을 구성할 수 있는 편리한 방법을 제공합니다.  
   
  매개 변수화된 명령 사용에 대한 자세한 내용은 다음 리소스를 참조하세요.  
   
-|리소스|Description|  
+|리소스|설명|  
 |--------------|-----------------|  
-|[DataAdapter 매개 변수](../../../../docs/framework/data/adonet/dataadapter-parameters.md)|`DataAdapter`와 함께 매개 변수를 사용하는 방법에 대해 설명합니다.|  
-|[저장 프로시저로 데이터 수정](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)|매개 변수를 지정하고 반환 값을 가져오는 방법에 대해 설명합니다.|  
-|[SQL Server에서 저장 프로시저를 사용하여 권한 관리](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|SQL Server 저장 프로시저를 사용하여 데이터 액세스를 캡슐화하는 방법에 대해 설명합니다.|  
+|[DataAdapter 매개 변수](dataadapter-parameters.md)|`DataAdapter`와 함께 매개 변수를 사용하는 방법에 대해 설명합니다.|  
+|[저장 프로시저로 데이터 수정](modifying-data-with-stored-procedures.md)|매개 변수를 지정하고 반환 값을 가져오는 방법에 대해 설명합니다.|  
+|[SQL Server에서 저장 프로시저를 사용하여 권한 관리](./sql/managing-permissions-with-stored-procedures-in-sql-server.md)|SQL Server 저장 프로시저를 사용하여 데이터 액세스를 캡슐화하는 방법에 대해 설명합니다.|  
   
 ## <a name="script-exploits"></a>스크립트 악용  
  스크립트 악용은 웹 페이지에 삽입된 악의적 문자를 사용하는 또 다른 형태의 삽입 공격입니다. 브라우저에서는 삽입된 문자의 유효성을 검사하지 않고 문자를 페이지의 일부로 처리합니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "69963149"
   
  Access 및 Excel 데이터 보호에 대한 자세한 내용은 다음 리소스를 참조하세요.  
   
-|리소스|Description|  
+|리소스|설명|  
 |--------------|-----------------|  
 |[보안 고려 사항 및 액세스 2007에 대 한 지침](https://go.microsoft.com/fwlink/?LinkId=98354)|파일 암호화, 암호 관리, 새로운 ACCDB 및 ACCDE 형식으로 데이터베이스 변환, 기타 보안 옵션 사용 등 Access 2007의 보안 기술에 대해 설명합니다.|  
 |[액세스 보안에서 작업 그룹 정보 파일의 역할 이해](https://support.microsoft.com/kb/305542)|Access 2003 보안에서 작업 그룹 정보 파일의 역할 및 관계에 대해 설명합니다.|  
@@ -84,14 +84,14 @@ ms.locfileid: "69963149"
   
 |리소스|Description|  
 |--------------|-----------------|  
-|[비관리 코드와의 상호 운용](../../../../docs/framework/interop/index.md)|COM 구성 요소를 .NET Framework에 노출하는 방법과 .NET Framework 구성 요소를 COM에 노출하는 방법에 대해 설명하는 항목을 제공합니다.|
+|[비관리 코드와의 상호 운용](../../interop/index.md)|COM 구성 요소를 .NET Framework에 노출하는 방법과 .NET Framework 구성 요소를 COM에 노출하는 방법에 대해 설명하는 항목을 제공합니다.|
 |[고급 COM 상호 운용성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|주 interop 어셈블리, 스레딩 및 사용자 지정 마샬링 등에 대해 설명하는 고급 항목을 제공합니다.|
 
 ## <a name="see-also"></a>참고자료
 
-- [ADO.NET 응용 프로그램 보안](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server 보안](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [ADO.NET 응용 프로그램 보안](securing-ado-net-applications.md)
+- [SQL Server 보안](./sql/sql-server-security.md)
 - [데이터 액세스 전략에 대 한 권장 사항](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
-- [연결 정보 보호](../../../../docs/framework/data/adonet/protecting-connection-information.md)
-- [연결 문자열 작성기](../../../../docs/framework/data/adonet/connection-string-builders.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [연결 정보 보호](protecting-connection-information.md)
+- [연결 문자열 작성기](connection-string-builders.md)
+- [ADO.NET 개요](ado-net-overview.md)

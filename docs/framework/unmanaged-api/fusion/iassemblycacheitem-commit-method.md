@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d1f5988266fcbfc18ee937b6e7fdb1829646fa9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 380181d8e309ba4b51d49aae9159f0bbf7e0250f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778680"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796727"
 ---
 # <a name="iassemblycacheitemcommit-method"></a>IAssemblyCacheItem::Commit 메서드
-메모리에 캐시 된 어셈블리 참조를 커밋합니다.  
+캐시 된 어셈블리 참조를 메모리에 커밋합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,18 +38,18 @@ HRESULT Commit (
   
 ## <a name="parameters"></a>매개 변수  
  `dwFlags`  
- [in] 같은 값이 지원에 정의 된 플래그입니다.  
+ 진행 Fusion에 정의 된 플래그입니다.  
   
  `pulDisposition`  
- [out, optional] 작업의 결과 나타내는 값입니다.  
+ [out, 선택 사항] 작업의 결과를 나타내는 값입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
   
- **헤더:** Fusion.h  
+ **헤더:** Fusion. h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
 
-- [IAssemblyCacheItem 인터페이스](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+- [IAssemblyCacheItem 인터페이스](iassemblycacheitem-interface.md)

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 51681e258e6a21b3a7ae604d1c0ef65d320bfb4f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3582ba3c434bb763889faebcc27407f67af7b1e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991226"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795658"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>방법: 사용자 지정 WS-Metadata Exchange 바인딩 구성
-이 항목에서는 사용자 지정 WS-Metadata 교환 바인딩을 구성하는 방법에 대해 설명합니다. Windows Communication Foundation (WCF) 시스템 정의 메타 데이터 바인딩이 포함 되어 있지만 원하는 모든 바인딩을 사용 하 여 메타 데이터를 게시할 수 있습니다. 이 항목에서는 `wsHttpBinding`을 사용하여 메타데이터를 게시하는 방법을 보여 줍니다. 이 바인딩은 메타데이터를 보안 방법으로 노출하는 옵션을 제공합니다. 이 문서의 코드를 기반으로 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)합니다.  
+이 항목에서는 사용자 지정 WS-Metadata 교환 바인딩을 구성하는 방법에 대해 설명합니다. WCF (Windows Communication Foundation)에는 네 개의 시스템 정의 메타 데이터 바인딩이 포함 되어 있지만 원하는 바인딩을 사용 하 여 메타 데이터를 게시할 수 있습니다. 이 항목에서는 `wsHttpBinding`을 사용하여 메타데이터를 게시하는 방법을 보여 줍니다. 이 바인딩은 메타데이터를 보안 방법으로 노출하는 옵션을 제공합니다. 이 문서의 코드는 [시작](../samples/getting-started-sample.md)을 기반으로 합니다.  
   
 ### <a name="using-a-configuration-file"></a>구성 파일 사용  
   
@@ -115,8 +115,8 @@ ms.locfileid: "61991226"
   
 ## <a name="see-also"></a>참고자료
 
-- [메타데이터 게시 동작](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)
-- [메타데이터 검색](../../../../docs/framework/wcf/samples/retrieve-metadata.md)
-- [메타데이터](../../../../docs/framework/wcf/feature-details/metadata.md)
-- [메타데이터 게시](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)
-- [메타데이터 엔드포인트 게시](../../../../docs/framework/wcf/publishing-metadata-endpoints.md)
+- [메타데이터 게시 동작](../samples/metadata-publishing-behavior.md)
+- [메타데이터 검색](../samples/retrieve-metadata.md)
+- [메타데이터](../feature-details/metadata.md)
+- [메타데이터 게시](../feature-details/publishing-metadata.md)
+- [메타데이터 엔드포인트 게시](../publishing-metadata-endpoints.md)

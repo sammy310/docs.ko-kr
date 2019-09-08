@@ -2,12 +2,12 @@
 title: '방법: DBML 및 외부 매핑 파일 유효성 검사'
 ms.date: 03/30/2017
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-ms.openlocfilehash: 212d65dfe998b825dd40e564756083ed685dff6f
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b5901705ac7c0692025ff1f4a4b78f976d62176d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041138"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793044"
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>방법: DBML 및 외부 매핑 파일 유효성 검사
 
@@ -31,9 +31,9 @@ ms.locfileid: "70041138"
 
 5. 원하는 목적에 맞는 적절한 스키마 정의를 확인합니다.
 
-    - DbmlSchema.xsd는 .dbml 파일의 유효성 검사를 위한 스키마 정의입니다. 자세한 내용은 [LINQ to SQL에서 코드 생성](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)을 참조 하세요.
+    - DbmlSchema.xsd는 .dbml 파일의 유효성 검사를 위한 스키마 정의입니다. 자세한 내용은 [LINQ to SQL에서 코드 생성](code-generation-in-linq-to-sql.md)을 참조 하세요.
 
-    - LinqToSqlMapping.xsd는 외부 XML 매핑 파일의 유효성 검사를 위한 스키마 정의입니다. 자세한 내용은 [외부 매핑](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)을 참조 하세요.
+    - LinqToSqlMapping.xsd는 외부 XML 매핑 파일의 유효성 검사를 위한 스키마 정의입니다. 자세한 내용은 [외부 매핑](external-mapping.md)을 참조 하세요.
 
 6. 원하는 스키마 정의 행의 **사용** 열에서 드롭다운 상자를 클릭 하 여 연 다음 **이 스키마 사용**을 클릭 합니다.
 
@@ -53,9 +53,9 @@ ms.locfileid: "70041138"
 
 1. 이 항목의 앞부분에서 설명한 대로 스키마 정의가 포함된 도움말 항목을 찾습니다.
 
-    - .Dbml 파일은 [LINQ to SQL에서 코드 생성](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)을 참조 하세요.
+    - .Dbml 파일은 [LINQ to SQL에서 코드 생성](code-generation-in-linq-to-sql.md)을 참조 하세요.
 
-    - 외부 매핑 파일은 [외부 매핑](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)을 참조 하세요.
+    - 외부 매핑 파일은 [외부 매핑](external-mapping.md)을 참조 하세요.
 
 2. 코드 **복사** 를 클릭 하 여 코드 파일을 클립보드에 복사 합니다.
 
@@ -74,4 +74,4 @@ ms.locfileid: "70041138"
 
 ## <a name="see-also"></a>참고자료
 
-- [참조](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [참조](reference.md)
