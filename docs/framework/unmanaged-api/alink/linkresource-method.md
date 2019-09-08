@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 335d80255f7a3f5a22e8a69aa91c9e5b0843ea1e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 763b7a776007c2ce8dac42c6a5f7f00f6eb58a10
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741596"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70776949"
 ---
-# <a name="linkresource-method"></a><span data-ttu-id="90814-102">LinkResource 메서드</span><span class="sxs-lookup"><span data-stu-id="90814-102">LinkResource Method</span></span>
-<span data-ttu-id="90814-103">리소스의 링크를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="90814-103">Links in a resource.</span></span>  
+# <a name="linkresource-method"></a><span data-ttu-id="298d5-102">LinkResource 메서드</span><span class="sxs-lookup"><span data-stu-id="298d5-102">LinkResource Method</span></span>
+<span data-ttu-id="298d5-103">리소스의 링크입니다.</span><span class="sxs-lookup"><span data-stu-id="298d5-103">Links in a resource.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="90814-104">구문</span><span class="sxs-lookup"><span data-stu-id="90814-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="298d5-104">구문</span><span class="sxs-lookup"><span data-stu-id="298d5-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT LinkResource(  
@@ -38,30 +38,30 @@ HRESULT LinkResource(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="90814-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="90814-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="298d5-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="298d5-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="90814-106">어셈블리의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="90814-106">ID of the assembly.</span></span>  
+ <span data-ttu-id="298d5-106">어셈블리의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="298d5-106">ID of the assembly.</span></span>  
   
  `pszFileName`  
- <span data-ttu-id="90814-107">파일의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="90814-107">Name of the file.</span></span>  
+ <span data-ttu-id="298d5-107">파일의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="298d5-107">Name of the file.</span></span>  
   
  `pszNewLocation`  
- <span data-ttu-id="90814-108">(옵션) 새 파일 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="90814-108">Optional new file name.</span></span> <span data-ttu-id="90814-109">Null이 아닌 `pszFileName` pszNewLocation에 복사 됩니다.</span><span class="sxs-lookup"><span data-stu-id="90814-109">If non-NULL, `pszFileName` will be copied to pszNewLocation.</span></span>  
+ <span data-ttu-id="298d5-108">선택적 새 파일 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="298d5-108">Optional new file name.</span></span> <span data-ttu-id="298d5-109">NULL `pszFileName` 이 아닌 경우 pszNewLocation에 복사 됩니다.</span><span class="sxs-lookup"><span data-stu-id="298d5-109">If non-NULL, `pszFileName` will be copied to pszNewLocation.</span></span>  
   
  `pszResourceName`  
- <span data-ttu-id="90814-110">리소스의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="90814-110">Name of the resource.</span></span>  
+ <span data-ttu-id="298d5-110">리소스의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="298d5-110">Name of the resource.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="90814-111">내게 필요한 옵션 플래그와 같은 `mrPublic` 고 `mrPrivate`입니다.</span><span class="sxs-lookup"><span data-stu-id="90814-111">Accessibility flags such as `mrPublic` and `mrPrivate`.</span></span> <span data-ttu-id="90814-112">이 매개 변수를 전달할 수 있습니다 [DefineManifestResource 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="90814-112">This parameter may be passed to [DefineManifestResource Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md).</span></span>  
+ <span data-ttu-id="298d5-111">`mrPublic` 및`mrPrivate`와 같은 내게 필요한 옵션 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="298d5-111">Accessibility flags such as `mrPublic` and `mrPrivate`.</span></span> <span data-ttu-id="298d5-112">이 매개 변수는 [DefineManifestResource 메서드에](../metadata/imetadataassemblyemit-definemanifestresource-method.md)전달 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="298d5-112">This parameter may be passed to [DefineManifestResource Method](../metadata/imetadataassemblyemit-definemanifestresource-method.md).</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="90814-113">반환 값</span><span class="sxs-lookup"><span data-stu-id="90814-113">Return Value</span></span>  
- <span data-ttu-id="90814-114">메서드가 성공 하면 S_OK를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="90814-114">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="298d5-113">반환 값</span><span class="sxs-lookup"><span data-stu-id="298d5-113">Return Value</span></span>  
+ <span data-ttu-id="298d5-114">메서드가 성공 하면 S_OK를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="298d5-114">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="90814-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="90814-115">Requirements</span></span>  
- <span data-ttu-id="90814-116">Alink.h가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="90814-116">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="298d5-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="298d5-115">Requirements</span></span>  
+ <span data-ttu-id="298d5-116">Alink가 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="298d5-116">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="90814-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="90814-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="298d5-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="298d5-117">See also</span></span>
 
-- [<span data-ttu-id="90814-118">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="90814-118">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="90814-119">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="90814-119">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="90814-120">ALink API</span><span class="sxs-lookup"><span data-stu-id="90814-120">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="298d5-118">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="298d5-118">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="298d5-119">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="298d5-119">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="298d5-120">ALink API</span><span class="sxs-lookup"><span data-stu-id="298d5-120">ALink API</span></span>](index.md)
