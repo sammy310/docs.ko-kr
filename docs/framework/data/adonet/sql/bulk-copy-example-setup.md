@@ -2,12 +2,12 @@
 title: 대량 복사 예제 설정
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
-ms.openlocfilehash: 2a7c0ddef42ff56306a42288c6960987ce7f714a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ac09ed85315aee7c6b29952916088ebe6e301eb9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918085"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794425"
 ---
 # <a name="bulk-copy-example-setup"></a>대량 복사 예제 설정
 <xref:System.Data.SqlClient.SqlBulkCopy> 클래스를 사용하면 SQL Server 테이블에만 데이터를 쓸 수 있습니다. 이 항목에 표시 된 코드 샘플은 SQL Server 예제 데이터베이스 **AdventureWorks**를 사용 합니다. 코드 샘플에서는 기존 테이블을 변경하지 않도록 사용자가 먼저 만드는 테이블에 데이터를 씁니다.  
@@ -83,5 +83,5 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
   
 ## <a name="see-also"></a>참고자료
 
-- [SQL Server에서 대량 복사 작업](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server에서 대량 복사 작업](bulk-copy-operations-in-sql-server.md)
+- [ADO.NET 개요](../ado-net-overview.md)

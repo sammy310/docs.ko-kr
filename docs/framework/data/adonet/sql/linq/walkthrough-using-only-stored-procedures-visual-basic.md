@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 159b65b4b58b9142a168401ea2a881af2714df5f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a1994d100c4d18d5fa3642e27d0dcb8823800549
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946635"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780963"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>연습: 저장 프로시저만 사용(Visual Basic)
 이 연습에서는 저장 프로시저만 사용하여 데이터에 액세스하기 위한 기본 종단 간 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 시나리오를 제공합니다. 일반적으로 데이터베이스 관리자는 데이터 저장소에 액세스하는 방법을 제한하기 위해 이 방법을 사용합니다.  
   
 > [!NOTE]
-> 또한 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 응용 프로그램에서 저장 프로시저를 사용하여 특히 `Create`, `Update` 및 `Delete` 프로세스의 경우에 기본 동작을 재정의할 수 있습니다. 자세한 내용은 [삽입, 업데이트 및 삭제 작업 사용자 지정](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)을 참조 하세요.  
+> 또한 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 응용 프로그램에서 저장 프로시저를 사용하여 특히 `Create`, `Update` 및 `Delete` 프로세스의 경우에 기본 동작을 재정의할 수 있습니다. 자세한 내용은 [삽입, 업데이트 및 삭제 작업 사용자 지정](customizing-insert-update-and-delete-operations.md)을 참조 하세요.  
   
  이 연습에서는 Northwind 샘플 데이터베이스의 저장 프로시저에 매핑되는 두 개의 메서드를 사용 합니다. CustOrdersDetail 및 CustOrderHist. 이 매핑은 SqlMetal 명령줄 도구를 실행 하 여 Visual Basic 파일을 생성할 때 발생 합니다. 자세한 내용은 이 연습 뒷부분의 사전 요구 사항 단원을 참조하세요.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "69946635"
   
 - Northwind 샘플 데이터베이스  
   
-     이 데이터베이스가 개발 컴퓨터에 없는 경우 Microsoft 다운로드 사이트에서 다운로드할 수 있습니다. 지침은 [샘플 데이터베이스 다운로드](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)를 참조 하세요. 이 데이터베이스를 다운로드한 후 northwnd.mdf 파일을 c:\linqtest3 폴더에 복사합니다.  
+     이 데이터베이스가 개발 컴퓨터에 없는 경우 Microsoft 다운로드 사이트에서 다운로드할 수 있습니다. 지침은 [샘플 데이터베이스 다운로드](downloading-sample-databases.md)를 참조 하세요. 이 데이터베이스를 다운로드한 후 northwnd.mdf 파일을 c:\linqtest3 폴더에 복사합니다.  
   
 - Northwind 데이터베이스에서 생성된 Visual Basic 코드 파일  
   
@@ -40,7 +40,7 @@ ms.locfileid: "69946635"
   
      **sqlmetal /code:"c:\linqtest3\northwind.vb" /language:vb "c:\linqtest3\northwnd.mdf" /sprocs /functions /pluralize**  
   
-     자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요.  
+     자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요.  
   
 ## <a name="overview"></a>개요  
  이 연습은 다음과 같은 여섯 가지 주요 작업으로 구성됩니다.  
@@ -193,5 +193,5 @@ ms.locfileid: "69946635"
   
 ## <a name="see-also"></a>참고자료
 
-- [연습으로 학습](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
-- [저장 프로시저](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+- [연습으로 학습](learning-by-walkthroughs.md)
+- [저장 프로시저](stored-procedures.md)

@@ -2,12 +2,12 @@
 title: System.Convert 메서드
 ms.date: 03/30/2017
 ms.assetid: 3ca6c5b6-ea5d-4ab0-b675-f082135b342c
-ms.openlocfilehash: 9836820f2c084a80fcc0a4856f20597716344dfd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0aa0b11223e23b874471962d727d8e16e152ceb
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877034"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781053"
 ---
 # <a name="systemconvert-methods"></a>System.Convert 메서드
 
@@ -31,7 +31,7 @@ ms.locfileid: "61877034"
 
     여기서 `Type1` 및 `Type2`은(는) 각각 `sbyte`, `uint`, `ulong` 또는 `ushort` 중 하나입니다.
 
-  - C#: 
+  - C#:
 
     `int To<int type>(string value, int fromBase),`
 
@@ -51,4 +51,4 @@ ms.locfileid: "61877034"
 
 ## <a name="see-also"></a>참고자료
 
-- [데이터 형식 및 함수](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [데이터 형식 및 함수](data-types-and-functions.md)

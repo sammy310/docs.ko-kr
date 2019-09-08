@@ -1,6 +1,6 @@
 ---
 title: Initialize 함수 (관리 되지 않는 API 참조)
-description: Initialize 함수 WMI 초기화를 수행합니다.
+description: Initialize 함수는 WMI 초기화를 수행 합니다.
 ms.date: 11/06/2017
 api_name:
 - Initialize
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c71b2b6d6f102d19d30d480ee9bafcac3c204be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1bc3688b30180bdcde0a87027955a789de749f90
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049299"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798433"
 ---
 # <a name="initialize-function"></a>Initialize 함수
 
@@ -41,15 +41,15 @@ HRESULT Initialize(
 
 `bAllowIManagementObjectQI`
 
-[in] `true` WMI 개체에서 QueryInterface 호출할 수 있도록; 나타내려면 `false` 그렇지 않은 경우.
+진행 `true` WMI 개체에 대 한 QueryInterface 호출이 허용 되는지 여부를 나타내려면입니다. `false` 그렇지 않으면입니다.
 
 ## <a name="return-value"></a>반환 값
 
-항상 반환 `S_OK` (0).
+함수는 항상 ( `S_OK` 0)을 반환 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.
+**플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.
 
 **헤더:** WMINet_Utils.def
 

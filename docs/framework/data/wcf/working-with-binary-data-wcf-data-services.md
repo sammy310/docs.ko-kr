@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 21501ec9d0af4c785dd86946fa34c1041bb34b9d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 35e7cc666307d589f21c128734df10430a1a8588
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043894"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779628"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>이진 데이터 작업(WCF Data Services)
 
@@ -23,7 +23,7 @@ ms.locfileid: "70043894"
 
 - 별도의 이진 리소스 스트림으로. 이 방법은 사진, 비디오 또는 다른 형식의 이진 인코딩 데이터를 나타낼 수 있는 BLOB(Binary Large Object) 데이터에 액세스하고 변경하는 경우 권장됩니다.
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에 정의 된 대로 HTTP를 사용 하 여 이진 데이터의 스트리밍을 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]구현 합니다. 이 메커니즘에서 이진 데이터는와 별개 이지만 미디어 링크 항목 이라고 하는 엔터티와 관련 된 미디어 리소스로 처리 됩니다. 자세한 내용은 [스트리밍 공급자](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)합니다.
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에 정의 된 대로 HTTP를 사용 하 여 이진 데이터의 스트리밍을 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]구현 합니다. 이 메커니즘에서 이진 데이터는와 별개 이지만 미디어 링크 항목 이라고 하는 엔터티와 관련 된 미디어 리소스로 처리 됩니다. 자세한 내용은 [스트리밍 공급자](streaming-provider-wcf-data-services.md)합니다.
 
 > [!TIP]
 > 사진을 저장 하는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 서비스에서 이진 이미지 파일을 다운로드 하는 Windows Presentation Foundation (WPF) 클라이언트 응용 프로그램을 만드는 방법에 대 한 단계별 예제는 스트리밍 공급자 시리즈-파트 Data Services 게시물 [을 참조 하세요. 2: 클라이언트](https://go.microsoft.com/fwlink/?LinkId=201637)에서 미디어 리소스 스트림에 액세스 합니다. 블로그 게시물에 제공 되는 stream photo data service에 대 한 샘플 코드를 다운로드 하려면 MSDN 코드 갤러리의 [스트리밍 사진 데이터 서비스 샘플](https://go.microsoft.com/fwlink/?LinkId=198988) 을 참조 하세요.
@@ -74,5 +74,5 @@ ms.locfileid: "70043894"
 
 ## <a name="see-also"></a>참고자료
 
-- [WCF Data Services 클라이언트 라이브러리](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [컨트롤에 데이터 바인딩](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)
+- [WCF Data Services 클라이언트 라이브러리](wcf-data-services-client-library.md)
+- [컨트롤에 데이터 바인딩](binding-data-to-controls-wcf-data-services.md)

@@ -1,5 +1,5 @@
 ---
-title: '방법: 서비스 작업 (WCF Data Services)를 정의 합니다.'
+title: '방법: 서비스 작업 정의 (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - Service Operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: dfcd3cb1-2f07-4d0b-b16a-6b056c4f45fa
-ms.openlocfilehash: dbd14ba9ed24fb3f18946e817f61f8cbf2e9b1b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3154fadeda400440f68a184b430b7ff15a02203d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936554"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780081"
 ---
-# <a name="how-to-define-a-service-operation-wcf-data-services"></a>방법: 서비스 작업 (WCF Data Services)를 정의 합니다.
+# <a name="how-to-define-a-service-operation-wcf-data-services"></a>방법: 서비스 작업 정의 (WCF Data Services)
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 서버에서 서비스 작업으로 정의된 메서드를 노출합니다. 서비스 작업 URI 서버의 정의 된 메서드를 통해 액세스를 제공 하는 데이터 서비스를 허용 합니다. 서비스 작업을 정의 하려면 적용 된 [`WebGet]` 또는 `[WebInvoke]` 특성을 메서드에 있습니다. 쿼리 연산자를 지원 하려면 서비스 작업 반환 해야 합니다는 <xref:System.Linq.IQueryable%601> 인스턴스. 서비스 작업은 <xref:System.Data.Services.DataService%601.CurrentDataSource%2A>의 <xref:System.Data.Services.DataService%601> 속성을 통해 기본 데이터 소스에 액세스할 수 있습니다. 자세한 내용은 [서비스 작업](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)합니다.
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 서버에서 서비스 작업으로 정의된 메서드를 노출합니다. 서비스 작업을 통해 데이터 서비스는 URI를 통해 서버에 정의 된 메서드에 대 한 액세스를 제공할 수 있습니다. 서비스 작업을 정의 하려면 [`WebGet]` 또는 `[WebInvoke]` 특성을 메서드에 적용 하십시오. 쿼리 연산자를 지원 하려면 서비스 작업에서 <xref:System.Linq.IQueryable%601> 인스턴스를 반환 해야 합니다. 서비스 작업은 <xref:System.Data.Services.DataService%601.CurrentDataSource%2A>의 <xref:System.Data.Services.DataService%601> 속성을 통해 기본 데이터 소스에 액세스할 수 있습니다. 자세한 내용은 [서비스 작업](service-operations-wcf-data-services.md)을 참조 하세요.
 
-이 항목의 예제에서는 `GetOrdersByCity`의 필터링된 <xref:System.Linq.IQueryable%601> 인스턴스 및 관련 `Orders` 개체를 반환하는 `Order_Details`라는 서비스 작업을 정의합니다. 이 예제에서는 Northwind 샘플 데이터 서비스의 데이터 소스인 <xref:System.Data.Objects.ObjectContext> 인스턴스에 액세스합니다. 이 서비스를 완료할 때 만든 합니다 [WCF Data Services 퀵 스타트](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)합니다.
+이 항목의 예제에서는 `GetOrdersByCity`의 필터링된 <xref:System.Linq.IQueryable%601> 인스턴스 및 관련 `Orders` 개체를 반환하는 `Order_Details`라는 서비스 작업을 정의합니다. 이 예제에서는 Northwind 샘플 데이터 서비스의 데이터 소스인 <xref:System.Data.Objects.ObjectContext> 인스턴스에 액세스합니다. 이 서비스는 [WCF Data Services 빠른](quickstart-wcf-data-services.md)시작을 완료 하면 생성 됩니다.
 
 ### <a name="to-define-a-service-operation-in-the-northwind-data-service"></a>Northwind 데이터 서비스에 서비스 작업을 정의하려면
 
@@ -57,4 +57,4 @@ ms.locfileid: "61936554"
 
 ## <a name="see-also"></a>참고자료
 
-- [WCF Data Services 정의](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [WCF Data Services 정의](defining-wcf-data-services.md)

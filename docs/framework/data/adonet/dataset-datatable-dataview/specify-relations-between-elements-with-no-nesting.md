@@ -2,12 +2,12 @@
 title: 중첩 없이 요소 사이에 관계 지정
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
-ms.openlocfilehash: 83dce7173c016a7d7d2d626bb7a3606de29d54ae
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d6cd6f04a9fdeafe7c419b40023af6c71d553ac7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204469"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784286"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>중첩 없이 요소 사이에 관계 지정
 요소가 중첩되지 않은 경우에는 암시적 관계가 만들어지지 않습니다. 그러나 **msdata: Relationship** 주석을 사용 하 여 중첩 되지 않은 요소 간의 관계를 명시적으로 지정할 수 있습니다.  
@@ -68,4 +68,4 @@ Nested: False
 
 - [XSD(XML 스키마)에서 데이터 세트 관계 생성](generating-dataset-relations-from-xml-schema-xsd.md)
 - [데이터 세트 제약 조건에 XSD(XML 스키마) 제약 조건 매핑](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 개요](../ado-net-overview.md)

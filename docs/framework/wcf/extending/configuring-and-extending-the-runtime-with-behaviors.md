@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-ms.openlocfilehash: 481e0983a40bb551d08894ea32f76f332b8fe5a3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3a1e369fe52a2a529fb3511d9a65067b4a56ec1e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943136"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797259"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>동작을 사용하여 런타임 구성 및 확장
-동작을 사용 하면 기본 동작을 수정 하 고 서비스 구성을 검사 하 고 유효성을 검사 하는 사용자 지정 확장을 추가 하거나 WCF (Windows Communication Foundation) 클라이언트 및 서비스 응용 프로그램에서 런타임 동작을 수정할 수 있습니다. 이 항목에서는 동작 인터페이스에 대해 설명하고 이를 구현하는 방법 및 프로그래밍 방식이나 구성 파일을 통해 서비스 애플리케이션의 서비스 설명 또는 클라이언트 애플리케이션의 엔드포인트에 추가하는 방법에 대해 설명합니다. 시스템에서 제공 하는 동작을 사용 하는 방법에 대 한 자세한 내용은 [서비스 런타임 동작 지정](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) 및 [클라이언트 런타임 동작 지정](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)을 참조 하세요.  
+동작을 사용 하면 기본 동작을 수정 하 고 서비스 구성을 검사 하 고 유효성을 검사 하는 사용자 지정 확장을 추가 하거나 WCF (Windows Communication Foundation) 클라이언트 및 서비스 응용 프로그램에서 런타임 동작을 수정할 수 있습니다. 이 항목에서는 동작 인터페이스에 대해 설명하고 이를 구현하는 방법 및 프로그래밍 방식이나 구성 파일을 통해 서비스 애플리케이션의 서비스 설명 또는 클라이언트 애플리케이션의 엔드포인트에 추가하는 방법에 대해 설명합니다. 시스템에서 제공 하는 동작을 사용 하는 방법에 대 한 자세한 내용은 [서비스 런타임 동작 지정](../specifying-service-run-time-behavior.md) 및 [클라이언트 런타임 동작 지정](../specifying-client-run-time-behavior.md)을 참조 하세요.  
   
 ## <a name="behaviors"></a>동작  
  동작 형식은 wcf (Windows Communication Foundation)에서 wcf 서비스 또는 WCF 클라이언트를 실행 하는 런타임을 만들기 위해 이러한 개체를 사용 하기 전에 서비스 또는 서비스 끝점 설명 개체 (각각 서비스 또는 클라이언트)에 추가 됩니다. 런타임 생성이 처리되는 동안 이러한 동작이 호출되면 동작은 계약, 바인딩 및 주소에 의해 생성된 런타임을 수정하는 메서드 및 런타임 속성에 액세스할 수 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "69943136"
  서비스 및 클라이언트 런타임 클래스를 통해, 수정할 수 있는 속성과 구현할 수 있는 사용자 지정 인터페이스에 액세스합니다. 서비스 유형은 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 및  <xref:System.ServiceModel.Dispatcher.DispatchOperation> 클래스이며, 클라이언트 형식은 <xref:System.ServiceModel.Dispatcher.ClientRuntime> 및 <xref:System.ServiceModel.Dispatcher.ClientOperation> 클래스입니다. <xref:System.ServiceModel.Dispatcher.ClientRuntime>과 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 클래스는 클라이언트 전체 및 서비스 전체의 런타임 속성과 확장 컬렉션에 각각 액세스할 수 있는 확장성 진입점입니다. 마찬가지로 <xref:System.ServiceModel.Dispatcher.ClientOperation>과 <xref:System.ServiceModel.Dispatcher.DispatchOperation> 클래스는 클라이언트 작업 및 서비스 작업의 런타임 속성과 확장명 컬렉션을 각각 노출합니다. 하지만 작업 런타임 개체에서 더 넓은 범위의 런타임 개체에 액세스하거나 필요에 따라 그 반대로 액세스할 수도 있습니다.  
   
 > [!NOTE]
-> 클라이언트의 실행 동작을 수정 하는 데 사용할 수 있는 런타임 속성 및 확장 형식에 대 한 설명은 [클라이언트 확장](../../../../docs/framework/wcf/extending/extending-clients.md)을 참조 하세요. 서비스 디스패처에 대 한 실행 동작을 수정 하는 데 사용할 수 있는 런타임 속성 및 확장 형식에 대 한 설명은 [디스패처 확장](../../../../docs/framework/wcf/extending/extending-dispatchers.md)을 참조 하세요.  
+> 클라이언트의 실행 동작을 수정 하는 데 사용할 수 있는 런타임 속성 및 확장 형식에 대 한 설명은 [클라이언트 확장](extending-clients.md)을 참조 하세요. 서비스 디스패처에 대 한 실행 동작을 수정 하는 데 사용할 수 있는 런타임 속성 및 확장 형식에 대 한 설명은 [디스패처 확장](extending-dispatchers.md)을 참조 하세요.  
   
  대부분의 WCF 사용자는 런타임과 직접 상호 작용 하지 않습니다. 대신, 구성 파일의 클래스 또는 동작에 대 한 끝점, 계약, 바인딩, 주소 및 동작 특성과 같은 핵심 프로그래밍 모델 구문을 사용 합니다. 이러한 구문은 설명 트리에 설명 된 서비스 또는 클라이언트를 지원 하기 위해 런타임을 구성 하는 전체 사양의 *설명 트리*를 구성 합니다.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "69943136"
  서비스와 엔드포인트 및 계약 동작은 코드나 특성을 사용하여 지정하도록 디자인할 수 있지만, 서비스와 엔드포인트 동작은 애플리케이션이나 웹 구성 파일을 통해서만 구성할 수 있습니다. 개발자는 특성을 사용하여 동작을 노출함으로써, 런타임에는 추가, 제거 또는 수정할 수 없는 동작을 컴파일 시간에 지정할 수 있습니다. 따라서 올바른 서비스 동작을 위해 항상 필요한 동작에 적합합니다(예: <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> 특성에 대한 트랜잭션 관련 매개 변수). 또한 개발자는 구성을 사용하여 동작을 노출함으로써, 해당 동작의 구성과 사양을 서비스 배포자에게 맡길 수 있습니다. 따라서 서비스에 메타데이터가 노출되는지 또는 특정 권한 부여 구성이 노출되는지 등의 선택적 구성 요소 또는 기타 다른 배포 관련 구성 동작에 적합합니다.  
   
 > [!NOTE]
-> 또한 회사 애플리케이션 정책이 적용되도록 구성을 지원하는 동작은 machine.config 구성 파일에 삽입하고 해당 항목을 잠금으로써 사용할 수 있습니다. 설명 및 예제를 보려면 [방법: 엔터프라이즈](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)에서 끝점을 잠급니다.  
+> 또한 회사 애플리케이션 정책이 적용되도록 구성을 지원하는 동작은 machine.config 구성 파일에 삽입하고 해당 항목을 잠금으로써 사용할 수 있습니다. 설명 및 예제를 보려면 [방법: 엔터프라이즈](how-to-lock-down-endpoints-in-the-enterprise.md)에서 끝점을 잠급니다.  
   
  개발자의 경우 구성을 사용하여 동작을 노출하려면 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>의 파생 클래스를 만든 후 해당 확장을 구성에 등록해야 합니다.  
   

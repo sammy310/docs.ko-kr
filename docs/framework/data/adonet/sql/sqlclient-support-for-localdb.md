@@ -2,18 +2,18 @@
 title: LocalDB에 대한 SqlClient 지원
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 23fe0d19ad31c0b09e1a12b5ea25e45a973a14f4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 200db3b1014278e711062bcbdff81be8d27c3351
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645838"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780785"
 ---
 # <a name="sqlclient-support-for-localdb"></a>LocalDB에 대한 SqlClient 지원
-SQL Server 코드 이름 Denali 부터는 LocalDB 라고 부르는 SQL Server의 경량 버전을 사용할 수 있습니다. 이 항목에서는 LocalDB 데이터베이스에 연결하는 방법을 설명합니다.  
+SQL Server 코드 이름 Denali 부터는 LocalDB 라고 하는 경량 버전의 SQL Server를 사용할 수 있습니다. 이 항목에서는 LocalDB 데이터베이스에 연결하는 방법을 설명합니다.  
   
 ## <a name="remarks"></a>설명  
- LocalDB 설치 및 LocalDB 인스턴스를 구성 하는 방법을 비롯 한 LocalDB에 대 한 자세한 내용은 SQL Server 온라인 설명서를 참조 합니다.  
+ Localdb 설치 및 localdb 인스턴스 구성 방법을 비롯 한 LocalDB에 대 한 자세한 내용은 SQL Server 온라인 설명서를 참조 하세요.  
   
  LocalDB로 할 수 있는 작업:  
   
@@ -31,7 +31,7 @@ SQL Server 코드 이름 Denali 부터는 LocalDB 라고 부르는 SQL Server의
   
  `User Instance=True` 는 LocalDB 데이터베이스에 연결할 때는 사용할 수 없습니다.  
   
- [Microsoft SQL Server 2012 기능 팩](https://www.microsoft.com/download/en/details.aspx?id=29065)에서 LocalDB를 다운로드할 수 있습니다. Sqlcmd.exe를 사용 하 여 LocalDB 인스턴스에서 데이터를 수정 하는, SQL Server 2012 기능 팩 에서도 가져올 수 있습니다 SQL Server 2012의 sqlcmd를 해야 합니다.  
+ [Microsoft SQL Server 2012 기능 팩](https://www.microsoft.com/download/en/details.aspx?id=29065)에서 LocalDB를 다운로드할 수 있습니다. Sc.exe를 사용 하 여 LocalDB 인스턴스의 데이터를 수정 하는 경우 SQL Server 2012의 sqlcmd가 필요 합니다 .이는 SQL Server 2012 기능 팩 에서도 가져올 수 있습니다.  
   
 ## <a name="programmatically-create-a-named-instance"></a>프로그래밍 방식으로 명명된 인스턴스 만들기  
  애플리케이션에서는 명명된 인스턴스를 만들고 다음과 같이 데이터베이스를 지정할 수 있습니다.  
@@ -60,5 +60,5 @@ SQL Server 코드 이름 Denali 부터는 LocalDB 라고 부르는 SQL Server의
   
 ## <a name="see-also"></a>참고자료
 
-- [SQL Server 기능 및 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server 기능 및 ADO.NET](sql-server-features-and-adonet.md)
+- [ADO.NET 개요](../ado-net-overview.md)

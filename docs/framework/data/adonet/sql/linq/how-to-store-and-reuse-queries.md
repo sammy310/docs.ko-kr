@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a012bd79-1809-45e3-adea-0229532396cc
-ms.openlocfilehash: f8400b214bc9ba3a28eeec05f6171953b42bc6f5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c023f7610576c017c91fdb919322acdf9003767a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938740"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781644"
 ---
 # <a name="how-to-store-and-reuse-queries"></a>방법: 쿼리 저장 및 다시 사용
 구조적으로 유사한 쿼리를 여러 번 실행하는 애플리케이션이 있는 경우 일반적으로 쿼리를 한 번 컴파일하고 다른 매개 변수와 함께 여러 번 실행하여 성능을 향상시킬 수 있습니다. 예를 들어, 애플리케이션에서 특정 도시의 모든 고객을 검색해야 하며 사용자가 런타임에 양식에서 도시를 지정하는 경우를 생각해 봅니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 *컴파일된 쿼리* 를이 용도로 사용할 수 있습니다.  
@@ -36,5 +36,5 @@ ms.locfileid: "69938740"
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Data.Linq.CompiledQuery>
-- [쿼리 개념](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [데이터베이스 쿼리](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+- [쿼리 개념](query-concepts.md)
+- [데이터베이스 쿼리](querying-the-database.md)

@@ -2,12 +2,12 @@
 title: 연결 문자열 구문
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: 9b43dc780b8570bd671f6b5d9db14a0c98e822d8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 00b8dc4c7592daa200f1a2a6c3c7fa9a3c587087
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949469"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784922"
 ---
 # <a name="connection-string-syntax"></a>연결 문자열 구문
 각 .NET Framework 데이터 공급자에는 `Connection`뿐 아니라 공급자별 <xref:System.Data.Common.DbConnection> 속성에서 상속되는 <xref:System.Data.Common.DbConnection.ConnectionString%2A> 개체가 있습니다. 각 공급자의 특정 연결 문자열 구문은 해당 `ConnectionString` 속성에 설명되어 있습니다. 다음 표에서는 .NET Framework에 포함되어 있는 네 개의 데이터 공급자를 보여 줍니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "69949469"
   
 - <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
   
- 연결 문자열 작성기를 사용하면 구문이 올바른 연결 문자열을 런타임에 작성할 수 있기 때문에 코드에 연결 문자열 값을 직접 연결하지 않아도 됩니다. 자세한 내용은 [연결 문자열 작성기](../../../../docs/framework/data/adonet/connection-string-builders.md)를 참조하세요.  
+ 연결 문자열 작성기를 사용하면 구문이 올바른 연결 문자열을 런타임에 작성할 수 있기 때문에 코드에 연결 문자열 값을 직접 연결하지 않아도 됩니다. 자세한 내용은 [연결 문자열 작성기](connection-string-builders.md)를 참조하세요.  
 
 ## <a name="windows-authentication"></a>Windows 인증  
  Windows 인증 ( *통합 보안*이 라고도 함)을 사용 하 여이를 지 원하는 데이터 원본에 연결 하는 것이 좋습니다. 연결 문자열에 사용되는 구문은 공급자별로 다릅니다. 다음 표에서는 .NET Framework 데이터 공급자에서 사용되는 Windows 인증 구문을 보여 줍니다.  
@@ -90,7 +90,7 @@ Data Source=MySqlServer\MSSQL1;"
 ## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>SQL Server Express 사용자 인스턴스에 연결 및 추가  
  사용자 인스턴스는 SQL Server Express의 한 기능입니다. 최소 권한의 로컬 Windows 계정에서 실행 중인 사용자가 관리자 권한 없이 SQL Server 데이터베이스에 연결하여 SQL Server 데이터베이스를 실행할 수 있습니다. 사용자 인스턴스는 서비스가 아닌 사용자의 Windows 자격 증명을 사용하여 실행됩니다.  
   
- 사용자 인스턴스 사용에 대 한 자세한 내용은 [SQL Server Express 사용자 인스턴스](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)를 참조 하세요.  
+ 사용자 인스턴스 사용에 대 한 자세한 내용은 [SQL Server Express 사용자 인스턴스](./sql/sql-server-express-user-instances.md)를 참조 하세요.  
   
 ## <a name="using-trustservercertificate"></a>TrustServerCertificate 사용  
  키워드 `TrustServerCertificate` 는 유효한 인증서를 사용 하 여 SQL Server 인스턴스에 연결 하는 경우에만 유효 합니다. `TrustServerCertificate`이 `true`로 설정된 경우 전송 계층에서는 SSL을 사용하여 채널을 암호화하고 인증서 체인을 무시하여 신뢰의 유효성을 확인합니다.  
@@ -196,6 +196,6 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
   
 ## <a name="see-also"></a>참고자료
 
-- [연결 문자열](../../../../docs/framework/data/adonet/connection-strings.md)
-- [데이터 소스에 연결](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [연결 문자열](connection-strings.md)
+- [데이터 소스에 연결](connecting-to-a-data-source.md)
+- [ADO.NET 개요](ado-net-overview.md)

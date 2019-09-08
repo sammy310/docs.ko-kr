@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0c0abc63610f3f1ed6e8a556c44ee15edc1ea20b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f08c4a97b8cbc61a735bb9c1e6a31a698e7eefc1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741834"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787353"
 ---
 # <a name="getscope2-method"></a>GetScope2 메서드
 가져오기 범위를 가져옵니다.  
@@ -45,19 +45,19 @@ HRESULT GetScope2(
  가져올 파일의 ID입니다.  
   
  `dwScope`  
- 가져오려는 0부터 시작 범위입니다.  
+ 가져올 범위 (0부터 시작)입니다.  
   
  `ppImportScope`  
- 에 대 한 포인터를 받는 [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md) 표시 된 범위에 대 한 인터페이스입니다.  
+ 표시 된 범위에 대 한 [IMetaDataImport2 interface](../metadata/imetadataimport2-interface.md) 인터페이스에 대 한 포인터를 받습니다.  
   
 ## <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK를 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Alink.h가 필요합니다.  
+ Alink가 필요 합니다.  
   
 ## <a name="see-also"></a>참고자료
 
-- [IALink2 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2 인터페이스](ialink2-interface.md)
+- [IALink 인터페이스](ialink-interface.md)
+- [ALink API](index.md)
