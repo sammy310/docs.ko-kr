@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 18e0b7b3547bb246588f6b255483d4c317e0df88
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b7828c86018724bb934de99cab4617f9885fdca6
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742234"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787613"
 ---
-# <a name="closeassembly-method"></a><span data-ttu-id="29a25-102">CloseAssembly 메서드</span><span class="sxs-lookup"><span data-stu-id="29a25-102">CloseAssembly Method</span></span>
-<span data-ttu-id="29a25-103">어셈블리 작업을 완료 합니다.</span><span class="sxs-lookup"><span data-stu-id="29a25-103">Finalizes assembly operations.</span></span> <span data-ttu-id="29a25-104">새 어셈블리 또는 바인딩되지 않은 모듈을 시작 하기 전에이 메서드를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="29a25-104">Call this method before beginning a new assembly or unbound module.</span></span>  
+# <a name="closeassembly-method"></a><span data-ttu-id="bf8c6-102">CloseAssembly 메서드</span><span class="sxs-lookup"><span data-stu-id="bf8c6-102">CloseAssembly Method</span></span>
+<span data-ttu-id="bf8c6-103">어셈블리 작업을 종료 합니다.</span><span class="sxs-lookup"><span data-stu-id="bf8c6-103">Finalizes assembly operations.</span></span> <span data-ttu-id="bf8c6-104">새 어셈블리 또는 바인딩되지 않은 모듈을 시작 하기 전에이 메서드를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="bf8c6-104">Call this method before beginning a new assembly or unbound module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="29a25-105">구문</span><span class="sxs-lookup"><span data-stu-id="29a25-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bf8c6-105">구문</span><span class="sxs-lookup"><span data-stu-id="bf8c6-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT CloseAssembly(  
@@ -35,18 +35,18 @@ HRESULT CloseAssembly(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="29a25-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="29a25-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bf8c6-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="bf8c6-106">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="29a25-107">어셈블리의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="29a25-107">ID of the assembly.</span></span>  
+ <span data-ttu-id="bf8c6-107">어셈블리의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="bf8c6-107">ID of the assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="29a25-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="29a25-108">Return Value</span></span>  
- <span data-ttu-id="29a25-109">메서드가 성공 하면 S_OK를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="29a25-109">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="bf8c6-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="bf8c6-108">Return Value</span></span>  
+ <span data-ttu-id="bf8c6-109">메서드가 성공 하면 S_OK를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="bf8c6-109">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="29a25-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="29a25-110">Requirements</span></span>  
- <span data-ttu-id="29a25-111">Alink.h가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="29a25-111">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bf8c6-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="bf8c6-110">Requirements</span></span>  
+ <span data-ttu-id="bf8c6-111">Alink가 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="bf8c6-111">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="29a25-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="29a25-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bf8c6-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="bf8c6-112">See also</span></span>
 
-- [<span data-ttu-id="29a25-113">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="29a25-113">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="29a25-114">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="29a25-114">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="29a25-115">ALink API</span><span class="sxs-lookup"><span data-stu-id="29a25-115">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="bf8c6-113">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="bf8c6-113">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="bf8c6-114">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="bf8c6-114">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="bf8c6-115">ALink API</span><span class="sxs-lookup"><span data-stu-id="bf8c6-115">ALink API</span></span>](index.md)

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 801dff0f-2508-45aa-9416-f45d6887740c
-ms.openlocfilehash: 0c949f0d1ed43b66f72afc4059014c92293f3d75
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3622e21978377aed42958e2dc96ef9aa5a872d00
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651664"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782920"
 ---
-# <a name="ref-cursor-parameters-in-an-oracledatareader"></a><span data-ttu-id="d900b-102">OracleDataReader의 REF CURSOR 매개 변수</span><span class="sxs-lookup"><span data-stu-id="d900b-102">REF CURSOR Parameters in an OracleDataReader</span></span>
-<span data-ttu-id="d900b-103">이 Microsoft Visual Basic 예제에서는 REF CURSOR 매개 변수를 반환하는 PL/SQL 저장 프로시저를 실행하고 값을 <xref:System.Data.OracleClient.OracleDataReader>로 읽습니다.</span><span class="sxs-lookup"><span data-stu-id="d900b-103">This Microsoft Visual Basic example executes a PL/SQL stored procedure that returns a REF CURSOR parameter, and reads the value as an <xref:System.Data.OracleClient.OracleDataReader>.</span></span>  
+# <a name="ref-cursor-parameters-in-an-oracledatareader"></a><span data-ttu-id="50d9b-102">OracleDataReader의 REF CURSOR 매개 변수</span><span class="sxs-lookup"><span data-stu-id="50d9b-102">REF CURSOR Parameters in an OracleDataReader</span></span>
+<span data-ttu-id="50d9b-103">이 Microsoft Visual Basic 예제에서는 REF CURSOR 매개 변수를 반환하는 PL/SQL 저장 프로시저를 실행하고 값을 <xref:System.Data.OracleClient.OracleDataReader>로 읽습니다.</span><span class="sxs-lookup"><span data-stu-id="50d9b-103">This Microsoft Visual Basic example executes a PL/SQL stored procedure that returns a REF CURSOR parameter, and reads the value as an <xref:System.Data.OracleClient.OracleDataReader>.</span></span>  
   
 ```vb  
 Private Sub Button1_Click(ByVal sender As Object, _  
@@ -43,7 +43,7 @@ Private Sub Button1_Click(ByVal sender As Object, _
 End Sub  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d900b-104">참고자료</span><span class="sxs-lookup"><span data-stu-id="d900b-104">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="50d9b-104">참고자료</span><span class="sxs-lookup"><span data-stu-id="50d9b-104">See also</span></span>
 
-- [<span data-ttu-id="d900b-105">Oracle REF CURSOR</span><span class="sxs-lookup"><span data-stu-id="d900b-105">Oracle REF CURSORs</span></span>](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)
-- [<span data-ttu-id="d900b-106">ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터</span><span class="sxs-lookup"><span data-stu-id="d900b-106">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="50d9b-105">Oracle REF CURSOR</span><span class="sxs-lookup"><span data-stu-id="50d9b-105">Oracle REF CURSORs</span></span>](oracle-ref-cursors.md)
+- [<span data-ttu-id="50d9b-106">ADO.NET 개요</span><span class="sxs-lookup"><span data-stu-id="50d9b-106">ADO.NET Overview</span></span>](ado-net-overview.md)

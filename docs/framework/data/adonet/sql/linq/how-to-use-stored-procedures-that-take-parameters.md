@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: 17ae74a430df4d4a4670c2390ce7b2ee25b67c7a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4f2636d3bb248adbb6b912887012b0b9c246c590
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938709"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793069"
 ---
-# <a name="how-to-use-stored-procedures-that-take-parameters"></a><span data-ttu-id="0a7ca-102">방법: 매개 변수를 사용하는 저장 프로시저 사용</span><span class="sxs-lookup"><span data-stu-id="0a7ca-102">How to: Use Stored Procedures that Take Parameters</span></span>
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="0a7ca-103">에서는 출력 매개 변수를 참조 매개 변수에 매핑하고 값 형식에 대해 매개 변수를 nullable로 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="0a7ca-103">maps output parameters to reference parameters, and for value types declares the parameter as nullable.</span></span>  
+# <a name="how-to-use-stored-procedures-that-take-parameters"></a><span data-ttu-id="14028-102">방법: 매개 변수를 사용하는 저장 프로시저 사용</span><span class="sxs-lookup"><span data-stu-id="14028-102">How to: Use Stored Procedures that Take Parameters</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="14028-103">에서는 출력 매개 변수를 참조 매개 변수에 매핑하고 값 형식에 대해 매개 변수를 nullable로 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="14028-103">maps output parameters to reference parameters, and for value types declares the parameter as nullable.</span></span>  
   
- <span data-ttu-id="0a7ca-104">행 집합 [을 반환 하는 쿼리에서 입력 매개 변수를 사용 하는 방법에 대 한 예는 방법: 행 집합](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a7ca-104">For an example of how to use an input parameter in a query that returns a rowset, see [How to: Return Rowsets](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md).</span></span>  
+ <span data-ttu-id="14028-104">행 집합 [을 반환 하는 쿼리에서 입력 매개 변수를 사용 하는 방법에 대 한 예는 방법: 행 집합](how-to-return-rowsets.md)을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="14028-104">For an example of how to use an input parameter in a query that returns a rowset, see [How to: Return Rowsets](how-to-return-rowsets.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0a7ca-105">예제</span><span class="sxs-lookup"><span data-stu-id="0a7ca-105">Example</span></span>  
- <span data-ttu-id="0a7ca-106">다음 예제에서는 단일 입력 매개 변수(고객 ID)를 사용하여 출력 매개 변수(해당 고객의 총 판매액)를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="0a7ca-106">The following example takes a single input parameter (the customer ID) and returns an out parameter (the total sales for that customer).</span></span>  
+## <a name="example"></a><span data-ttu-id="14028-105">예제</span><span class="sxs-lookup"><span data-stu-id="14028-105">Example</span></span>  
+ <span data-ttu-id="14028-106">다음 예제에서는 단일 입력 매개 변수(고객 ID)를 사용하여 출력 매개 변수(해당 고객의 총 판매액)를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="14028-106">The following example takes a single input parameter (the customer ID) and returns an out parameter (the total sales for that customer).</span></span>  
   
 ```  
 CREATE PROCEDURE [dbo].[CustOrderTotal]   
@@ -33,15 +33,15 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
  [!code-csharp[DLinqSprox#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/northwind-sprox.cs#2)]
  [!code-vb[DLinqSprox#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/northwind-sprox.vb#2)]  
   
-## <a name="example"></a><span data-ttu-id="0a7ca-107">예제</span><span class="sxs-lookup"><span data-stu-id="0a7ca-107">Example</span></span>  
- <span data-ttu-id="0a7ca-108">이 저장 프로시저는 다음과 같이 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0a7ca-108">You would call this stored procedure as follows:</span></span>  
+## <a name="example"></a><span data-ttu-id="14028-107">예제</span><span class="sxs-lookup"><span data-stu-id="14028-107">Example</span></span>  
+ <span data-ttu-id="14028-108">이 저장 프로시저는 다음과 같이 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="14028-108">You would call this stored procedure as follows:</span></span>  
   
  [!code-csharp[DLinqSprox#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/Program.cs#3)]
  [!code-vb[DLinqSprox#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/Module1.vb#3)]  
   
-## <a name="see-also"></a><span data-ttu-id="0a7ca-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="0a7ca-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="14028-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="14028-109">See also</span></span>
 
-- [<span data-ttu-id="0a7ca-110">저장 프로시저</span><span class="sxs-lookup"><span data-stu-id="0a7ca-110">Stored Procedures</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
-- [<span data-ttu-id="0a7ca-111">샘플 데이터베이스 다운로드</span><span class="sxs-lookup"><span data-stu-id="0a7ca-111">Downloading Sample Databases</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [<span data-ttu-id="0a7ca-112">Nullable 형식 사용</span><span class="sxs-lookup"><span data-stu-id="0a7ca-112">Using Nullable Types</span></span>](../../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
-- [<span data-ttu-id="0a7ca-113">Nullable 값 형식</span><span class="sxs-lookup"><span data-stu-id="0a7ca-113">Nullable Value Types</span></span>](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [<span data-ttu-id="14028-110">저장 프로시저</span><span class="sxs-lookup"><span data-stu-id="14028-110">Stored Procedures</span></span>](stored-procedures.md)
+- [<span data-ttu-id="14028-111">샘플 데이터베이스 다운로드</span><span class="sxs-lookup"><span data-stu-id="14028-111">Downloading Sample Databases</span></span>](downloading-sample-databases.md)
+- [<span data-ttu-id="14028-112">Nullable 형식 사용</span><span class="sxs-lookup"><span data-stu-id="14028-112">Using Nullable Types</span></span>](../../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
+- [<span data-ttu-id="14028-113">Nullable 값 형식</span><span class="sxs-lookup"><span data-stu-id="14028-113">Nullable Value Types</span></span>](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

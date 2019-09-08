@@ -2,28 +2,28 @@
 title: Oracle LOB
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-ms.openlocfilehash: 3f4550344ee09620ae17de5bfcba36b3075a0f47
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a52203ad62e8761897f7b2bef90f1915db9433f8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771945"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783336"
 ---
-# <a name="oracle-lobs"></a><span data-ttu-id="3a2e0-102">Oracle LOB</span><span class="sxs-lookup"><span data-stu-id="3a2e0-102">Oracle LOBs</span></span>
-<span data-ttu-id="3a2e0-103">.NET Framework Data Provider for Oracle 포함 합니다 <xref:System.Data.OracleClient.OracleLob> Oracle을 사용 하 여 작업에 사용 되는 클래스 **LOB** 데이터 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="3a2e0-103">The .NET Framework Data Provider for Oracle includes the <xref:System.Data.OracleClient.OracleLob> class, which is used to work with Oracle **LOB** data types.</span></span>  
+# <a name="oracle-lobs"></a><span data-ttu-id="1ba29-102">Oracle LOB</span><span class="sxs-lookup"><span data-stu-id="1ba29-102">Oracle LOBs</span></span>
+<span data-ttu-id="1ba29-103">Oracle의 .NET Framework Data Provider에는 oracle <xref:System.Data.OracleClient.OracleLob> **LOB** 데이터 형식 작업에 사용 되는 클래스가 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1ba29-103">The .NET Framework Data Provider for Oracle includes the <xref:System.Data.OracleClient.OracleLob> class, which is used to work with Oracle **LOB** data types.</span></span>  
   
- <span data-ttu-id="3a2e0-104">**OracleLob** 이러한 중 하나일 수 있습니다 <xref:System.Data.OracleClient.OracleType> 데이터 형식:</span><span class="sxs-lookup"><span data-stu-id="3a2e0-104">An **OracleLob** may be one of these <xref:System.Data.OracleClient.OracleType> data types:</span></span>  
+ <span data-ttu-id="1ba29-104">**OracleLob** 는 다음 <xref:System.Data.OracleClient.OracleType> 데이터 형식 중 하나일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1ba29-104">An **OracleLob** may be one of these <xref:System.Data.OracleClient.OracleType> data types:</span></span>  
   
-|<span data-ttu-id="3a2e0-105">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="3a2e0-105">Data type</span></span>|<span data-ttu-id="3a2e0-106">설명</span><span class="sxs-lookup"><span data-stu-id="3a2e0-106">Description</span></span>|  
+|<span data-ttu-id="1ba29-105">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="1ba29-105">Data type</span></span>|<span data-ttu-id="1ba29-106">Description</span><span class="sxs-lookup"><span data-stu-id="1ba29-106">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="3a2e0-107">**Blob**</span><span class="sxs-lookup"><span data-stu-id="3a2e0-107">**Blob**</span></span>|<span data-ttu-id="3a2e0-108">Oracle **BLOB** 4gb의 최대 크기를 사용 하 여 이진 데이터를 포함 하는 데이터 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="3a2e0-108">An Oracle **BLOB** data type that contains binary data with a maximum size of 4 gigabytes.</span></span> <span data-ttu-id="3a2e0-109">매핑되는 **배열** 형식의 **바이트**합니다.</span><span class="sxs-lookup"><span data-stu-id="3a2e0-109">This maps to an **Array** of type **Byte**.</span></span>|  
-|<span data-ttu-id="3a2e0-110">**Clob**</span><span class="sxs-lookup"><span data-stu-id="3a2e0-110">**Clob**</span></span>|<span data-ttu-id="3a2e0-111">Oracle **CLOB** 4gb의 최대 크기를 사용 하 여 서버의 기본 문자를 기준으로 문자 데이터를 포함 하는 데이터 형식을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="3a2e0-111">An Oracle **CLOB** data type that contains character data, based on the default character set on the server, with a maximum size of 4 gigabytes.</span></span> <span data-ttu-id="3a2e0-112">에 매핑됩니다 **문자열**합니다.</span><span class="sxs-lookup"><span data-stu-id="3a2e0-112">This maps to **String**.</span></span>|  
-|<span data-ttu-id="3a2e0-113">**NClob**</span><span class="sxs-lookup"><span data-stu-id="3a2e0-113">**NClob**</span></span>|<span data-ttu-id="3a2e0-114">Oracle **NCLOB** 국가별 문자 4gb의 최대 크기를 사용 하 여 서버의 집합을 기반으로 문자 데이터를 포함 하는 데이터 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="3a2e0-114">An Oracle **NCLOB** data type that contains character data, based on the national character set on the server with a maximum size of 4 gigabytes.</span></span> <span data-ttu-id="3a2e0-115">에 매핑됩니다 **문자열**합니다.</span><span class="sxs-lookup"><span data-stu-id="3a2e0-115">This maps to **String**.</span></span>|  
+|<span data-ttu-id="1ba29-107">**Blob**</span><span class="sxs-lookup"><span data-stu-id="1ba29-107">**Blob**</span></span>|<span data-ttu-id="1ba29-108">최대 4gb 크기의 이진 데이터를 포함 하는 Oracle **BLOB** 데이터 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="1ba29-108">An Oracle **BLOB** data type that contains binary data with a maximum size of 4 gigabytes.</span></span> <span data-ttu-id="1ba29-109">이는 **Byte**형식의 **배열** 에 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="1ba29-109">This maps to an **Array** of type **Byte**.</span></span>|  
+|<span data-ttu-id="1ba29-110">**Clob**</span><span class="sxs-lookup"><span data-stu-id="1ba29-110">**Clob**</span></span>|<span data-ttu-id="1ba29-111">서버의 기본 문자 집합을 기반으로 하는 문자 데이터를 포함 하는 Oracle **CLOB** 데이터 형식으로, 최대 크기는 4gb입니다.</span><span class="sxs-lookup"><span data-stu-id="1ba29-111">An Oracle **CLOB** data type that contains character data, based on the default character set on the server, with a maximum size of 4 gigabytes.</span></span> <span data-ttu-id="1ba29-112">이는 **문자열**에 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="1ba29-112">This maps to **String**.</span></span>|  
+|<span data-ttu-id="1ba29-113">**NClob**</span><span class="sxs-lookup"><span data-stu-id="1ba29-113">**NClob**</span></span>|<span data-ttu-id="1ba29-114">서버의 국가별 문자 집합을 기반으로 최대 4gb의 문자 데이터를 포함 하는 Oracle **NCLOB** 데이터 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="1ba29-114">An Oracle **NCLOB** data type that contains character data, based on the national character set on the server with a maximum size of 4 gigabytes.</span></span> <span data-ttu-id="1ba29-115">이는 **문자열**에 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="1ba29-115">This maps to **String**.</span></span>|  
   
- <span data-ttu-id="3a2e0-116">**OracleLob** 에서 다른는 <xref:System.Data.OracleClient.OracleBFile> 는 데이터는 운영 체제의 물리적 파일 대신 서버에 저장 됩니다.</span><span class="sxs-lookup"><span data-stu-id="3a2e0-116">An **OracleLob** differs from an <xref:System.Data.OracleClient.OracleBFile> in that the data is stored on the server instead of in a physical file in the operating system.</span></span> <span data-ttu-id="3a2e0-117">달리 읽기 / 쓰기 개체 일 수도 있습니다는 **OracleBFile**에 항상 읽기 전용입니다.</span><span class="sxs-lookup"><span data-stu-id="3a2e0-117">It can also be a read-write object, unlike an **OracleBFile**, which is always read-only.</span></span>  
+ <span data-ttu-id="1ba29-116">**OracleLob** 는 운영 체제의 <xref:System.Data.OracleClient.OracleBFile> 물리적 파일이 아니라 서버에 데이터가 저장 된다는 점에서와는 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="1ba29-116">An **OracleLob** differs from an <xref:System.Data.OracleClient.OracleBFile> in that the data is stored on the server instead of in a physical file in the operating system.</span></span> <span data-ttu-id="1ba29-117">항상 읽기 전용인 **OracleBFile**와 달리 읽기/쓰기 개체 일 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1ba29-117">It can also be a read-write object, unlike an **OracleBFile**, which is always read-only.</span></span>  
   
-## <a name="creating-retrieving-and-writing-to-a-lob"></a><span data-ttu-id="3a2e0-118">LOB 만들기, 검색 및 쓰기</span><span class="sxs-lookup"><span data-stu-id="3a2e0-118">Creating, Retrieving, and Writing to a LOB</span></span>  
- <span data-ttu-id="3a2e0-119">다음 C# 예제에서는 Oracle 테이블에 Lob 만들기 및 다음 검색 하는 방법의 형태로 쓸 **OracleLob** 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="3a2e0-119">The following C# example demonstrates how you can create LOBs in an Oracle table, and then retrieve and write to them in the form of **OracleLob** objects.</span></span> <span data-ttu-id="3a2e0-120">예제를 사용 하 여는 <xref:System.Data.OracleClient.OracleDataReader> 개체 및 **OracleLob** **읽기** 하 고 **작성** 메서드.</span><span class="sxs-lookup"><span data-stu-id="3a2e0-120">The example demonstrates using the <xref:System.Data.OracleClient.OracleDataReader> object and the **OracleLob** **Read** and **Write** methods.</span></span> <span data-ttu-id="3a2e0-121">예제에서는 Oracle **BLOB**를 **CLOB**, 및 **NCLOB** 데이터 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="3a2e0-121">The example uses Oracle **BLOB**, **CLOB**, and **NCLOB** data types.</span></span>  
+## <a name="creating-retrieving-and-writing-to-a-lob"></a><span data-ttu-id="1ba29-118">LOB 만들기, 검색 및 쓰기</span><span class="sxs-lookup"><span data-stu-id="1ba29-118">Creating, Retrieving, and Writing to a LOB</span></span>  
+ <span data-ttu-id="1ba29-119">다음 C# 예에서는 Oracle 테이블에 lob을 만든 다음 **OracleLob** 개체의 형태로 검색 하 여이를 쓰는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="1ba29-119">The following C# example demonstrates how you can create LOBs in an Oracle table, and then retrieve and write to them in the form of **OracleLob** objects.</span></span> <span data-ttu-id="1ba29-120">이 예제에서는 개체와 <xref:System.Data.OracleClient.OracleDataReader> **OracleLob** **Read** 및 **Write** 메서드를 사용 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="1ba29-120">The example demonstrates using the <xref:System.Data.OracleClient.OracleDataReader> object and the **OracleLob** **Read** and **Write** methods.</span></span> <span data-ttu-id="1ba29-121">이 예에서는 Oracle **BLOB**, **CLOB**및 **NCLOB** 데이터 형식을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="1ba29-121">The example uses Oracle **BLOB**, **CLOB**, and **NCLOB** data types.</span></span>  
   
 ```csharp  
 using System;  
@@ -215,8 +215,8 @@ public class LobExample
 }  
 ```  
   
-## <a name="creating-a-temporary-lob"></a><span data-ttu-id="3a2e0-122">임시 LOB 만들기</span><span class="sxs-lookup"><span data-stu-id="3a2e0-122">Creating a Temporary LOB</span></span>  
- <span data-ttu-id="3a2e0-123">다음 C# 예제에서는 임시 LOB를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3a2e0-123">The following C# example demonstrates how to create a temporary LOB.</span></span>  
+## <a name="creating-a-temporary-lob"></a><span data-ttu-id="1ba29-122">임시 LOB 만들기</span><span class="sxs-lookup"><span data-stu-id="1ba29-122">Creating a Temporary LOB</span></span>  
+ <span data-ttu-id="1ba29-123">다음 C# 예제에서는 임시 LOB를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="1ba29-123">The following C# example demonstrates how to create a temporary LOB.</span></span>  
   
 ```csharp  
 OracleConnection conn = new OracleConnection(  
@@ -247,7 +247,7 @@ cmd.ExecuteNonQuery();
 tx.Commit();  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="3a2e0-124">참고자료</span><span class="sxs-lookup"><span data-stu-id="3a2e0-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1ba29-124">참고자료</span><span class="sxs-lookup"><span data-stu-id="1ba29-124">See also</span></span>
 
-- [<span data-ttu-id="3a2e0-125">Oracle 및 ADO.NET</span><span class="sxs-lookup"><span data-stu-id="3a2e0-125">Oracle and ADO.NET</span></span>](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [<span data-ttu-id="3a2e0-126">ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터</span><span class="sxs-lookup"><span data-stu-id="3a2e0-126">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="1ba29-125">Oracle 및 ADO.NET</span><span class="sxs-lookup"><span data-stu-id="1ba29-125">Oracle and ADO.NET</span></span>](oracle-and-adonet.md)
+- [<span data-ttu-id="1ba29-126">ADO.NET 개요</span><span class="sxs-lookup"><span data-stu-id="1ba29-126">ADO.NET Overview</span></span>](ado-net-overview.md)

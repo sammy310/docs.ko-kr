@@ -1,6 +1,6 @@
 ---
 title: ResetSecurity 함수 (관리 되지 않는 API 참조)
-description: ResetSecurity 함수는 현재 스레드에서 가장 토큰을 지정합니다.
+description: ResetSecurity 함수는 현재 스레드에 가장 토큰을 할당 합니다.
 ms.date: 11/06/2017
 api_name:
 - ResetSecurity
@@ -16,19 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3d87fa10dafba326147bcaa39836b631291ef1c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1636d7de8273389e785131dbc1145affd5d3b45f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783122"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798262"
 ---
-# <a name="resetsecurity-function"></a><span data-ttu-id="38ec4-103">ResetSecurity 함수</span><span class="sxs-lookup"><span data-stu-id="38ec4-103">ResetSecurity function</span></span>
-<span data-ttu-id="38ec4-104">제공된 가장 토큰을 현재 스레드에 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="38ec4-104">Assigns the supplied impersonation token to the current thread.</span></span>   
+# <a name="resetsecurity-function"></a><span data-ttu-id="2d0b6-103">ResetSecurity 함수</span><span class="sxs-lookup"><span data-stu-id="2d0b6-103">ResetSecurity function</span></span>
+<span data-ttu-id="2d0b6-104">제공된 가장 토큰을 현재 스레드에 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="2d0b6-104">Assigns the supplied impersonation token to the current thread.</span></span>   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="38ec4-105">구문</span><span class="sxs-lookup"><span data-stu-id="38ec4-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2d0b6-105">구문</span><span class="sxs-lookup"><span data-stu-id="2d0b6-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT ResetSecurity (
@@ -36,24 +36,24 @@ HRESULT ResetSecurity (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="38ec4-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="38ec4-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="2d0b6-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="2d0b6-106">Parameters</span></span>
 
 `token`  
-<span data-ttu-id="38ec4-107">[in] 현재 스레드와 연결할 가장 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="38ec4-107">[in] The impersonation token to associate with the current thread.</span></span> <span data-ttu-id="38ec4-108">이 값은 `null`일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="38ec4-108">Its value can be `null`.</span></span> 
+<span data-ttu-id="2d0b6-107">진행 현재 스레드와 연결할 가장 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="2d0b6-107">[in] The impersonation token to associate with the current thread.</span></span> <span data-ttu-id="2d0b6-108">이 값은 `null`일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2d0b6-108">Its value can be `null`.</span></span> 
 
-## <a name="return-value"></a><span data-ttu-id="38ec4-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="38ec4-109">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="2d0b6-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="2d0b6-109">Return value</span></span>
 
-<span data-ttu-id="38ec4-110">함수가 성공할 경우 반환 값은 `S_OK` (0).</span><span class="sxs-lookup"><span data-stu-id="38ec4-110">If the function succeeds, the return value is `S_OK` (0).</span></span>
+<span data-ttu-id="2d0b6-110">함수가 성공 하면 반환 값 `S_OK` 은 (0)입니다.</span><span class="sxs-lookup"><span data-stu-id="2d0b6-110">If the function succeeds, the return value is `S_OK` (0).</span></span>
 
-<span data-ttu-id="38ec4-111">함수가 실패 한 경우 반환 값은 0이 아닌 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="38ec4-111">If the function fails, the return value is a non-zero error code.</span></span> <span data-ttu-id="38ec4-112">오류 정보를 호출 합니다 [GetErrorInfo](geterrorinfo.md) 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="38ec4-112">To get extended error information, call the [GetErrorInfo](geterrorinfo.md) function.</span></span>
+<span data-ttu-id="2d0b6-111">함수가 실패 하면 반환 값은 0이 아닌 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="2d0b6-111">If the function fails, the return value is a non-zero error code.</span></span> <span data-ttu-id="2d0b6-112">확장 오류 정보를 가져오려면 [Geterrorinfo](geterrorinfo.md) 함수를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="2d0b6-112">To get extended error information, call the [GetErrorInfo](geterrorinfo.md) function.</span></span>
   
-## <a name="requirements"></a><span data-ttu-id="38ec4-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="38ec4-113">Requirements</span></span>  
- <span data-ttu-id="38ec4-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="38ec4-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2d0b6-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="2d0b6-113">Requirements</span></span>  
+ <span data-ttu-id="2d0b6-114">**플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="2d0b6-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="38ec4-115">**헤더:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="38ec4-115">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="2d0b6-115">**헤더:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="2d0b6-115">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="38ec4-116">**.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="38ec4-116">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="2d0b6-116">**.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="2d0b6-116">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="38ec4-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="38ec4-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2d0b6-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="2d0b6-117">See also</span></span>
 
-- [<span data-ttu-id="38ec4-118">WMI 및 성능 카운터 (관리 되지 않는 API 참조)</span><span class="sxs-lookup"><span data-stu-id="38ec4-118">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="2d0b6-118">WMI 및 성능 카운터 (관리 되지 않는 API 참조)</span><span class="sxs-lookup"><span data-stu-id="2d0b6-118">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

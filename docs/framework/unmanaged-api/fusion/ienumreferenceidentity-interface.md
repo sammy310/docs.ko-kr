@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 766b17bae0c58d9872ff9c118f330ebc3220257e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4c5d4bc1fa82f7623168050f4ee36f0ea3cd171e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697253"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796435"
 ---
-# <a name="ienumreferenceidentity-interface"></a><span data-ttu-id="246de-102">IEnumReferenceIdentity 인터페이스</span><span class="sxs-lookup"><span data-stu-id="246de-102">IEnumReferenceIdentity Interface</span></span>
-<span data-ttu-id="246de-103">컬렉션의 열거자 역할을 `IReferenceIdentity` 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="246de-103">Serves as an enumerator for a collection of `IReferenceIdentity` objects.</span></span>  
+# <a name="ienumreferenceidentity-interface"></a><span data-ttu-id="dfbd8-102">IEnumReferenceIdentity 인터페이스</span><span class="sxs-lookup"><span data-stu-id="dfbd8-102">IEnumReferenceIdentity Interface</span></span>
+<span data-ttu-id="dfbd8-103">개체의 `IReferenceIdentity` 컬렉션에 대 한 열거자 역할을 합니다.</span><span class="sxs-lookup"><span data-stu-id="dfbd8-103">Serves as an enumerator for a collection of `IReferenceIdentity` objects.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="246de-104">메서드</span><span class="sxs-lookup"><span data-stu-id="246de-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="dfbd8-104">메서드</span><span class="sxs-lookup"><span data-stu-id="dfbd8-104">Methods</span></span>  
   
-|<span data-ttu-id="246de-105">메서드</span><span class="sxs-lookup"><span data-stu-id="246de-105">Method</span></span>|<span data-ttu-id="246de-106">설명</span><span class="sxs-lookup"><span data-stu-id="246de-106">Description</span></span>|  
+|<span data-ttu-id="dfbd8-105">메서드</span><span class="sxs-lookup"><span data-stu-id="dfbd8-105">Method</span></span>|<span data-ttu-id="dfbd8-106">설명</span><span class="sxs-lookup"><span data-stu-id="dfbd8-106">Description</span></span>|  
 |------------|-----------------|  
-|`IEnumReferenceIdentity::Clone`|<span data-ttu-id="246de-107">새 인터페이스 포인터를 가져옵니다 `IEnumReferenceIdentity` 이 동일한 멤버를 포함 하는 `IEnumReferenceIdentity`합니다.</span><span class="sxs-lookup"><span data-stu-id="246de-107">Gets an interface pointer to a new `IEnumReferenceIdentity` that contains the same members as this `IEnumReferenceIdentity`.</span></span>|  
-|`IEnumReferenceIdentity::Next`|<span data-ttu-id="246de-108">지정 된 수를 가져옵니다 `IReferenceIdentity` 개체를 현재 위치에서 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="246de-108">Gets the specified number of `IReferenceIdentity` objects, starting at the current position.</span></span>|  
-|`IEnumReferenceIdentity::Reset`|<span data-ttu-id="246de-109">이 부분에 명령 포인터를 이동 `IEnumReferenceIdentity`합니다.</span><span class="sxs-lookup"><span data-stu-id="246de-109">Moves the instruction pointer to the beginning of this `IEnumReferenceIdentity`.</span></span>|  
-|`IEnumReferenceIdentity::Skip`|<span data-ttu-id="246de-110">요소를 현재 위치부터 지정한 수 만큼 앞으로 명령 포인터를 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="246de-110">Moves the instruction pointer forward by the specified number of elements, starting at the current position.</span></span>|  
+|`IEnumReferenceIdentity::Clone`|<span data-ttu-id="dfbd8-107">`IEnumReferenceIdentity` 이`IEnumReferenceIdentity`와 동일한 멤버를 포함 하는 새에 대 한 인터페이스 포인터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="dfbd8-107">Gets an interface pointer to a new `IEnumReferenceIdentity` that contains the same members as this `IEnumReferenceIdentity`.</span></span>|  
+|`IEnumReferenceIdentity::Next`|<span data-ttu-id="dfbd8-108">현재 위치에서 시작 하 `IReferenceIdentity` 여 지정 된 수의 개체를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="dfbd8-108">Gets the specified number of `IReferenceIdentity` objects, starting at the current position.</span></span>|  
+|`IEnumReferenceIdentity::Reset`|<span data-ttu-id="dfbd8-109">명령 포인터를이 `IEnumReferenceIdentity`의 시작 부분으로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="dfbd8-109">Moves the instruction pointer to the beginning of this `IEnumReferenceIdentity`.</span></span>|  
+|`IEnumReferenceIdentity::Skip`|<span data-ttu-id="dfbd8-110">명령 포인터를 현재 위치에서 시작 하 여 지정 된 요소 수 만큼 앞으로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="dfbd8-110">Moves the instruction pointer forward by the specified number of elements, starting at the current position.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="246de-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="246de-111">Requirements</span></span>  
- <span data-ttu-id="246de-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="246de-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dfbd8-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="dfbd8-111">Requirements</span></span>  
+ <span data-ttu-id="dfbd8-112">**플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="dfbd8-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="246de-113">**헤더:** Isolation.h</span><span class="sxs-lookup"><span data-stu-id="246de-113">**Header:** Isolation.h</span></span>  
+ <span data-ttu-id="dfbd8-113">**헤더:** 격리. h</span><span class="sxs-lookup"><span data-stu-id="dfbd8-113">**Header:** Isolation.h</span></span>  
   
- <span data-ttu-id="246de-114">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="246de-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="dfbd8-114">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dfbd8-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="246de-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="246de-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dfbd8-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="dfbd8-115">See also</span></span>
 
-- [<span data-ttu-id="246de-116">Fusion 인터페이스</span><span class="sxs-lookup"><span data-stu-id="246de-116">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [<span data-ttu-id="246de-117">IReferenceIdentity 인터페이스</span><span class="sxs-lookup"><span data-stu-id="246de-117">IReferenceIdentity Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
+- [<span data-ttu-id="dfbd8-116">Fusion 인터페이스</span><span class="sxs-lookup"><span data-stu-id="dfbd8-116">Fusion Interfaces</span></span>](fusion-interfaces.md)
+- [<span data-ttu-id="dfbd8-117">IReferenceIdentity 인터페이스</span><span class="sxs-lookup"><span data-stu-id="dfbd8-117">IReferenceIdentity Interface</span></span>](ireferenceidentity-interface.md)

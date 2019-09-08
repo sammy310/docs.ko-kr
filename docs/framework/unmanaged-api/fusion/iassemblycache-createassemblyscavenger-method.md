@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99b7142a60f979210c44497ce33af3ed1ca5c105
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 851abcae9c3edea5c971bd2bc4523c3cec757cc9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770973"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796807"
 ---
-# <a name="iassemblycachecreateassemblyscavenger-method"></a><span data-ttu-id="3731d-102">IAssemblyCache::CreateAssemblyScavenger 메서드</span><span class="sxs-lookup"><span data-stu-id="3731d-102">IAssemblyCache::CreateAssemblyScavenger Method</span></span>
-<span data-ttu-id="3731d-103">Fusion 기술에서 내부 용도로 예약 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3731d-103">Reserved for internal use by the fusion technology.</span></span>  
+# <a name="iassemblycachecreateassemblyscavenger-method"></a><span data-ttu-id="85162-102">IAssemblyCache::CreateAssemblyScavenger 메서드</span><span class="sxs-lookup"><span data-stu-id="85162-102">IAssemblyCache::CreateAssemblyScavenger Method</span></span>
+<span data-ttu-id="85162-103">Fusion 기술에서 내부용으로 사용 하도록 예약 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="85162-103">Reserved for internal use by the fusion technology.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3731d-104">구문</span><span class="sxs-lookup"><span data-stu-id="3731d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="85162-104">구문</span><span class="sxs-lookup"><span data-stu-id="85162-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateAssemblyScavenger (  
@@ -35,17 +35,17 @@ HRESULT CreateAssemblyScavenger (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3731d-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="3731d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="85162-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="85162-105">Parameters</span></span>  
  `ppUnkReserved`  
- <span data-ttu-id="3731d-106">[out] 반환 된 `IUnknown` 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="3731d-106">[out] The returned `IUnknown` pointer.</span></span>  
+ <span data-ttu-id="85162-106">제한이 반환 `IUnknown` 된 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="85162-106">[out] The returned `IUnknown` pointer.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3731d-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="3731d-107">Requirements</span></span>  
- <span data-ttu-id="3731d-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="3731d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="85162-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="85162-107">Requirements</span></span>  
+ <span data-ttu-id="85162-108">**플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="85162-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3731d-109">**헤더:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="3731d-109">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="85162-109">**헤더:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="85162-109">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="3731d-110">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3731d-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="85162-110">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="85162-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3731d-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="3731d-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="85162-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="85162-111">See also</span></span>
 
-- [<span data-ttu-id="3731d-112">IAssemblyCache 인터페이스</span><span class="sxs-lookup"><span data-stu-id="3731d-112">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [<span data-ttu-id="85162-112">IAssemblyCache 인터페이스</span><span class="sxs-lookup"><span data-stu-id="85162-112">IAssemblyCache Interface</span></span>](iassemblycache-interface.md)
