@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8b8bd3cb-86d4-4a3b-9906-61f68726dd1f
-ms.openlocfilehash: 9ade12c42ac6a307c341bc5be26430fb56e51ee5
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 1b981d3002cf4a23897ce98927aebe96086f8a4a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380036"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781225"
 ---
-# <a name="return-the-set-union-of-two-sequences"></a><span data-ttu-id="c8a33-102">두 시퀀스의 합집합 반환</span><span class="sxs-lookup"><span data-stu-id="c8a33-102">Return the Set Union of Two Sequences</span></span>
-<span data-ttu-id="c8a33-103"><xref:System.Linq.Queryable.Union%2A> 연산자를 사용하여 두 시퀀스의 합집합을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="c8a33-103">Use the <xref:System.Linq.Queryable.Union%2A> operator to return the set union of two sequences.</span></span>  
+# <a name="return-the-set-union-of-two-sequences"></a><span data-ttu-id="a599d-102">두 시퀀스의 합집합 반환</span><span class="sxs-lookup"><span data-stu-id="a599d-102">Return the Set Union of Two Sequences</span></span>
+<span data-ttu-id="a599d-103"><xref:System.Linq.Queryable.Union%2A> 연산자를 사용하여 두 시퀀스의 합집합을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="a599d-103">Use the <xref:System.Linq.Queryable.Union%2A> operator to return the set union of two sequences.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c8a33-104">예제</span><span class="sxs-lookup"><span data-stu-id="c8a33-104">Example</span></span>  
- <span data-ttu-id="c8a33-105">이 예제에서는 <xref:System.Linq.Queryable.Union%2A> 는 모든 국가/지역 중가 시퀀스를 반환 하도록 `Customers` 또는 `Employees`합니다.</span><span class="sxs-lookup"><span data-stu-id="c8a33-105">This example uses <xref:System.Linq.Queryable.Union%2A> to return a sequence of all countries/regions in which there are either `Customers` or `Employees`.</span></span>  
+## <a name="example"></a><span data-ttu-id="a599d-104">예제</span><span class="sxs-lookup"><span data-stu-id="a599d-104">Example</span></span>  
+ <span data-ttu-id="a599d-105">이 예에서는 <xref:System.Linq.Queryable.Union%2A> 를 사용 하 여 `Customers` 또는 `Employees`가 있는 모든 국가/지역의 시퀀스를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="a599d-105">This example uses <xref:System.Linq.Queryable.Union%2A> to return a sequence of all countries/regions in which there are either `Customers` or `Employees`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#43](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#43)]
  [!code-vb[DLinqQueryExamples#43](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#43)]  
   
- <span data-ttu-id="c8a33-106">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]는 <xref:System.Linq.Queryable.Union%2A> 다중 집합의 순서가 지정 되지 않은 연결으로 다중 집합에 대해 연산자가 정의 (효율적인 결과 합니다 [ `UNION ALL` ](https://docs.microsoft.com/sql/t-sql/language-elements/set-operators-union-transact-sql?view=sql-server-2017) SQL 절).</span><span class="sxs-lookup"><span data-stu-id="c8a33-106">In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], the <xref:System.Linq.Queryable.Union%2A> operator is defined for multisets as the unordered concatenation of the multisets (effectively the result of the [`UNION ALL`](https://docs.microsoft.com/sql/t-sql/language-elements/set-operators-union-transact-sql?view=sql-server-2017) clause in SQL).</span></span>
+ <span data-ttu-id="a599d-106">에서 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]연산자는 <xref:System.Linq.Queryable.Union%2A> 다중 집합에 대해 순서가 지정 되지 않은 다중 집합의 연결 (SQL의 [`UNION ALL`](https://docs.microsoft.com/sql/t-sql/language-elements/set-operators-union-transact-sql?view=sql-server-2017) 절 결과 효과적)으로 정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a599d-106">In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], the <xref:System.Linq.Queryable.Union%2A> operator is defined for multisets as the unordered concatenation of the multisets (effectively the result of the [`UNION ALL`](https://docs.microsoft.com/sql/t-sql/language-elements/set-operators-union-transact-sql?view=sql-server-2017) clause in SQL).</span></span>
 
-<span data-ttu-id="c8a33-107">자세한 정보 및 예제를 참조 하세요. <xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>합니다.</span><span class="sxs-lookup"><span data-stu-id="c8a33-107">For more info and examples, see <xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>.</span></span>
+<span data-ttu-id="a599d-107">자세한 내용과 예제는를 참조 <xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>하세요.</span><span class="sxs-lookup"><span data-stu-id="a599d-107">For more info and examples, see <xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="c8a33-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="c8a33-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a599d-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="a599d-108">See also</span></span>
 
-- [<span data-ttu-id="c8a33-109">쿼리 예제</span><span class="sxs-lookup"><span data-stu-id="c8a33-109">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [<span data-ttu-id="c8a33-110">표준 쿼리 연산자 변환</span><span class="sxs-lookup"><span data-stu-id="c8a33-110">Standard Query Operator Translation</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+- [<span data-ttu-id="a599d-109">쿼리 예제</span><span class="sxs-lookup"><span data-stu-id="a599d-109">Query Examples</span></span>](query-examples.md)
+- [<span data-ttu-id="a599d-110">표준 쿼리 연산자 변환</span><span class="sxs-lookup"><span data-stu-id="a599d-110">Standard Query Operator Translation</span></span>](standard-query-operator-translation.md)

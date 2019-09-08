@@ -5,44 +5,44 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ee3b8673-a2e7-4b2d-9b5c-4972ff9e665d
-ms.openlocfilehash: 56fe777a3bca1e2b54b61d1586f78a2df4fb475f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8d6f5f76787c1110e91b245a3dd2425450b4db7e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963819"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781397"
 ---
-# <a name="return-the-average-value-from-a-numeric-sequence"></a><span data-ttu-id="a1017-102">숫자 시퀀스에서 평균 값 반환</span><span class="sxs-lookup"><span data-stu-id="a1017-102">Return the Average Value From a Numeric Sequence</span></span>
-<span data-ttu-id="a1017-103"><xref:System.Linq.Enumerable.Average%2A> 연산자는 숫자 값 시퀀스의 평균을 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="a1017-103">The <xref:System.Linq.Enumerable.Average%2A> operator computes the average of a sequence of numeric values.</span></span>  
+# <a name="return-the-average-value-from-a-numeric-sequence"></a><span data-ttu-id="7eb5b-102">숫자 시퀀스에서 평균 값 반환</span><span class="sxs-lookup"><span data-stu-id="7eb5b-102">Return the Average Value From a Numeric Sequence</span></span>
+<span data-ttu-id="7eb5b-103"><xref:System.Linq.Enumerable.Average%2A> 연산자는 숫자 값 시퀀스의 평균을 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="7eb5b-103">The <xref:System.Linq.Enumerable.Average%2A> operator computes the average of a sequence of numeric values.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="a1017-104">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 정수 값의 `Average`를 변환하면 두 자리가 아닌 정수로 계산됩니다.</span><span class="sxs-lookup"><span data-stu-id="a1017-104">The [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] translation of `Average` of integer values is computed as an integer, not as a double.</span></span>  
+> <span data-ttu-id="7eb5b-104">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 정수 값의 `Average`를 변환하면 두 자리가 아닌 정수로 계산됩니다.</span><span class="sxs-lookup"><span data-stu-id="7eb5b-104">The [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] translation of `Average` of integer values is computed as an integer, not as a double.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a1017-105">예제</span><span class="sxs-lookup"><span data-stu-id="a1017-105">Example</span></span>  
- <span data-ttu-id="a1017-106">다음 예제에서는 `Freight` 테이블에서 `Orders` 값의 평균을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="a1017-106">The following example returns the average of `Freight` values in the `Orders` table.</span></span>  
+## <a name="example"></a><span data-ttu-id="7eb5b-105">예제</span><span class="sxs-lookup"><span data-stu-id="7eb5b-105">Example</span></span>  
+ <span data-ttu-id="7eb5b-106">다음 예제에서는 `Freight` 테이블에서 `Orders` 값의 평균을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="7eb5b-106">The following example returns the average of `Freight` values in the `Orders` table.</span></span>  
   
- <span data-ttu-id="a1017-107">샘플 Northwind 데이터베이스의 결과는 `78.2442`입니다.</span><span class="sxs-lookup"><span data-stu-id="a1017-107">Results from the sample Northwind database would be `78.2442`.</span></span>  
+ <span data-ttu-id="7eb5b-107">샘플 Northwind 데이터베이스의 결과는 `78.2442`입니다.</span><span class="sxs-lookup"><span data-stu-id="7eb5b-107">Results from the sample Northwind database would be `78.2442`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#1)]
  [!code-vb[DLinqQueryExamples#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#1)]  
   
-## <a name="example"></a><span data-ttu-id="a1017-108">예제</span><span class="sxs-lookup"><span data-stu-id="a1017-108">Example</span></span>  
- <span data-ttu-id="a1017-109">다음 예제에서는 `Products` 테이블에 있는 모든 `Products` 단가의 평균을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="a1017-109">The following example returns the average of the unit price of all `Products` in the `Products` table.</span></span>  
+## <a name="example"></a><span data-ttu-id="7eb5b-108">예제</span><span class="sxs-lookup"><span data-stu-id="7eb5b-108">Example</span></span>  
+ <span data-ttu-id="7eb5b-109">다음 예제에서는 `Products` 테이블에 있는 모든 `Products` 단가의 평균을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="7eb5b-109">The following example returns the average of the unit price of all `Products` in the `Products` table.</span></span>  
   
- <span data-ttu-id="a1017-110">샘플 Northwind 데이터베이스의 결과는 `28.8663`입니다.</span><span class="sxs-lookup"><span data-stu-id="a1017-110">Results from the sample Northwind database would be `28.8663`.</span></span>  
+ <span data-ttu-id="7eb5b-110">샘플 Northwind 데이터베이스의 결과는 `28.8663`입니다.</span><span class="sxs-lookup"><span data-stu-id="7eb5b-110">Results from the sample Northwind database would be `28.8663`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#2)]
  [!code-vb[DLinqQueryExamples#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#2)]  
   
-## <a name="example"></a><span data-ttu-id="a1017-111">예제</span><span class="sxs-lookup"><span data-stu-id="a1017-111">Example</span></span>  
- <span data-ttu-id="a1017-112">다음 예제에서는 `Average` 연산자를 사용하여 제품의 단가가 제품 범주가 속한 단가의 평균보다 비싼 `Products`를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="a1017-112">The following example uses the `Average` operator to find those `Products` whose unit price is higher than the average unit price of the category it belongs to.</span></span> <span data-ttu-id="a1017-113">그룹으로 결과가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="a1017-113">The example then displays the results in groups.</span></span>  
+## <a name="example"></a><span data-ttu-id="7eb5b-111">예제</span><span class="sxs-lookup"><span data-stu-id="7eb5b-111">Example</span></span>  
+ <span data-ttu-id="7eb5b-112">다음 예제에서는 `Average` 연산자를 사용하여 제품의 단가가 제품 범주가 속한 단가의 평균보다 비싼 `Products`를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="7eb5b-112">The following example uses the `Average` operator to find those `Products` whose unit price is higher than the average unit price of the category it belongs to.</span></span> <span data-ttu-id="7eb5b-113">그룹으로 결과가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="7eb5b-113">The example then displays the results in groups.</span></span>  
   
- <span data-ttu-id="a1017-114">이 예제는 반환 형식이 익명이기에 C#에서는 `var` 키워드를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a1017-114">Note that this example requires the use of the `var` keyword in C#, because the return type is anonymous.</span></span>  
+ <span data-ttu-id="7eb5b-114">이 예제는 반환 형식이 익명이기에 C#에서는 `var` 키워드를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7eb5b-114">Note that this example requires the use of the `var` keyword in C#, because the return type is anonymous.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#3)]
  [!code-vb[DLinqQueryExamples#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#3)]  
   
- <span data-ttu-id="a1017-115">Northwind 샘플 데이터베이스에 대한 이 쿼리를 실행할 경우 결과는 다음과 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="a1017-115">If you run this query against the Northwind sample database, the results should resemble of the following:</span></span>  
+ <span data-ttu-id="7eb5b-115">Northwind 샘플 데이터베이스에 대한 이 쿼리를 실행할 경우 결과는 다음과 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="7eb5b-115">If you run this query against the Northwind sample database, the results should resemble of the following:</span></span>  
   
  `1`  
   
@@ -114,6 +114,6 @@ ms.locfileid: "69963819"
   
  `Gravad lax`  
   
-## <a name="see-also"></a><span data-ttu-id="a1017-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="a1017-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7eb5b-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="7eb5b-116">See also</span></span>
 
-- [<span data-ttu-id="a1017-117">집계 쿼리</span><span class="sxs-lookup"><span data-stu-id="a1017-117">Aggregate Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
+- [<span data-ttu-id="7eb5b-117">집계 쿼리</span><span class="sxs-lookup"><span data-stu-id="7eb5b-117">Aggregate Queries</span></span>](aggregate-queries.md)

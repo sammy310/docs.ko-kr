@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b6c839cc664105149f26b0d21d7ba7fb91b3e29
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8d9529022eb04c81152dced5c63f255c510851a0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742205"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777464"
 ---
-# <a name="closeenum-method"></a><span data-ttu-id="887a4-102">CloseEnum 메서드</span><span class="sxs-lookup"><span data-stu-id="887a4-102">CloseEnum Method</span></span>
-<span data-ttu-id="887a4-103">표시 된 열거형을 닫고 연결 된 리소스를 해제 합니다.</span><span class="sxs-lookup"><span data-stu-id="887a4-103">Closes the indicated enumeration and frees associated resources.</span></span>  
+# <a name="closeenum-method"></a><span data-ttu-id="855e7-102">CloseEnum 메서드</span><span class="sxs-lookup"><span data-stu-id="855e7-102">CloseEnum Method</span></span>
+<span data-ttu-id="855e7-103">표시 된 열거형을 닫고 연결 된 리소스를 해제 합니다.</span><span class="sxs-lookup"><span data-stu-id="855e7-103">Closes the indicated enumeration and frees associated resources.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="887a4-104">구문</span><span class="sxs-lookup"><span data-stu-id="887a4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="855e7-104">구문</span><span class="sxs-lookup"><span data-stu-id="855e7-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CloseEnum(  
@@ -35,18 +35,18 @@ HRESULT CloseEnum(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="887a4-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="887a4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="855e7-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="855e7-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="887a4-106">핸들을 닫아야 하는 열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="887a4-106">Handle of enumeration to be closed.</span></span>  
+ <span data-ttu-id="855e7-106">닫을 열거형의 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="855e7-106">Handle of enumeration to be closed.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="887a4-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="887a4-107">Return Value</span></span>  
- <span data-ttu-id="887a4-108">메서드가 성공 하면 S_OK를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="887a4-108">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="855e7-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="855e7-107">Return Value</span></span>  
+ <span data-ttu-id="855e7-108">메서드가 성공 하면 S_OK를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="855e7-108">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="887a4-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="887a4-109">Requirements</span></span>  
- <span data-ttu-id="887a4-110">Alink.h 필요</span><span class="sxs-lookup"><span data-stu-id="887a4-110">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="855e7-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="855e7-109">Requirements</span></span>  
+ <span data-ttu-id="855e7-110">Alink 필요</span><span class="sxs-lookup"><span data-stu-id="855e7-110">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="887a4-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="887a4-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="855e7-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="855e7-111">See also</span></span>
 
-- [<span data-ttu-id="887a4-112">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="887a4-112">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="887a4-113">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="887a4-113">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="887a4-114">ALink API</span><span class="sxs-lookup"><span data-stu-id="887a4-114">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="855e7-112">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="855e7-112">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="855e7-113">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="855e7-113">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="855e7-114">ALink API</span><span class="sxs-lookup"><span data-stu-id="855e7-114">ALink API</span></span>](index.md)

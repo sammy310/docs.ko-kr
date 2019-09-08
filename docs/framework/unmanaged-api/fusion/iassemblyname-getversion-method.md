@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5b5f7ce6a4ce8f542b3c49fe4749bfde23ecf84
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 58919936bdc62d52437f429146f04c66d49294b2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744494"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796576"
 ---
-# <a name="iassemblynamegetversion-method"></a><span data-ttu-id="4cac8-102">IAssemblyName::GetVersion 메서드</span><span class="sxs-lookup"><span data-stu-id="4cac8-102">IAssemblyName::GetVersion Method</span></span>
-<span data-ttu-id="4cac8-103">이 참조 되는 어셈블리에 대 한 버전 정보를 가져옵니다 [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="4cac8-103">Gets the version information for the assembly referenced by this [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object.</span></span>  
+# <a name="iassemblynamegetversion-method"></a><span data-ttu-id="6e53a-102">IAssemblyName::GetVersion 메서드</span><span class="sxs-lookup"><span data-stu-id="6e53a-102">IAssemblyName::GetVersion Method</span></span>
+<span data-ttu-id="6e53a-103">이 [IAssemblyName](iassemblyname-interface.md) 개체가 참조 하는 어셈블리에 대 한 버전 정보를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="6e53a-103">Gets the version information for the assembly referenced by this [IAssemblyName](iassemblyname-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4cac8-104">구문</span><span class="sxs-lookup"><span data-stu-id="4cac8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6e53a-104">구문</span><span class="sxs-lookup"><span data-stu-id="6e53a-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetVersion (  
@@ -36,20 +36,20 @@ HRESULT GetVersion (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4cac8-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="4cac8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6e53a-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="6e53a-105">Parameters</span></span>  
  `pdwVersionHi`  
- <span data-ttu-id="4cac8-106">[out] 버전의 상위 32 비트입니다.</span><span class="sxs-lookup"><span data-stu-id="4cac8-106">[out] The high 32 bits of the version.</span></span>  
+ <span data-ttu-id="6e53a-106">제한이 버전의 상위 32 비트입니다.</span><span class="sxs-lookup"><span data-stu-id="6e53a-106">[out] The high 32 bits of the version.</span></span>  
   
  `pdwVersionLow`  
- <span data-ttu-id="4cac8-107">[out] 버전의 하위 32 비트입니다.</span><span class="sxs-lookup"><span data-stu-id="4cac8-107">[out] The low 32 bits of the version.</span></span>  
+ <span data-ttu-id="6e53a-107">제한이 버전의 하위 32 비트입니다.</span><span class="sxs-lookup"><span data-stu-id="6e53a-107">[out] The low 32 bits of the version.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4cac8-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4cac8-108">Requirements</span></span>  
- <span data-ttu-id="4cac8-109">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="4cac8-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6e53a-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="6e53a-108">Requirements</span></span>  
+ <span data-ttu-id="6e53a-109">**플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="6e53a-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4cac8-110">**헤더:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="4cac8-110">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="6e53a-110">**헤더:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="6e53a-110">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="4cac8-111">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4cac8-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="6e53a-111">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6e53a-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4cac8-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="4cac8-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6e53a-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="6e53a-112">See also</span></span>
 
-- [<span data-ttu-id="4cac8-113">IAssemblyName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4cac8-113">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [<span data-ttu-id="6e53a-113">IAssemblyName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="6e53a-113">IAssemblyName Interface</span></span>](iassemblyname-interface.md)

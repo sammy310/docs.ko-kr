@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de1646cdbc11369b43a821d8b762879d1df7ed2e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e0bcabb32d50b236d42a555c073b50ba3a234dde
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751541"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796491"
 ---
-# <a name="identityattribute-structure"></a><span data-ttu-id="a1bae-102">IDENTITY_ATTRIBUTE 구조체</span><span class="sxs-lookup"><span data-stu-id="a1bae-102">IDENTITY_ATTRIBUTE Structure</span></span>
-<span data-ttu-id="a1bae-103">에 대 한 메타 데이터 특성 정보를 [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="a1bae-103">Contains metadata attribute information about an [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) instance.</span></span>  
+# <a name="identity_attribute-structure"></a><span data-ttu-id="6f241-102">IDENTITY_ATTRIBUTE 구조체</span><span class="sxs-lookup"><span data-stu-id="6f241-102">IDENTITY_ATTRIBUTE Structure</span></span>
+<span data-ttu-id="6f241-103">[Idefinitionidentity](idefinitionidentity-interface.md) 인스턴스에 대 한 메타 데이터 특성 정보를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="6f241-103">Contains metadata attribute information about an [IDefinitionIdentity](idefinitionidentity-interface.md) instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a1bae-104">구문</span><span class="sxs-lookup"><span data-stu-id="a1bae-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6f241-104">구문</span><span class="sxs-lookup"><span data-stu-id="6f241-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct _IDENTITY_ATTRIBUTE {  
@@ -36,28 +36,28 @@ typedef struct _IDENTITY_ATTRIBUTE {
 } IDENTITY_ATTRIBUTE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="a1bae-105">멤버</span><span class="sxs-lookup"><span data-stu-id="a1bae-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="6f241-105">멤버</span><span class="sxs-lookup"><span data-stu-id="6f241-105">Members</span></span>  
   
-|<span data-ttu-id="a1bae-106">멤버</span><span class="sxs-lookup"><span data-stu-id="a1bae-106">Member</span></span>|<span data-ttu-id="a1bae-107">Description</span><span class="sxs-lookup"><span data-stu-id="a1bae-107">Description</span></span>|  
+|<span data-ttu-id="6f241-106">멤버</span><span class="sxs-lookup"><span data-stu-id="6f241-106">Member</span></span>|<span data-ttu-id="6f241-107">설명</span><span class="sxs-lookup"><span data-stu-id="6f241-107">Description</span></span>|  
 |------------|-----------------|  
-|`pszNamespace`|<span data-ttu-id="a1bae-108">네임 스페이스를 포함 하는 null로 끝나는 문자열에 대 한 포인터에서 특성이입니다.</span><span class="sxs-lookup"><span data-stu-id="a1bae-108">A pointer to a null-terminated character string that contains the namespace the attribute is in.</span></span>|  
-|`pszName`|<span data-ttu-id="a1bae-109">특성의 이름이 포함 된 null로 끝나는 문자열에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="a1bae-109">A pointer to a null-terminated character string that contains the name of the attribute.</span></span>|  
-|`pszValue`|<span data-ttu-id="a1bae-110">특성의 값이 포함 된 null로 끝나는 문자열에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="a1bae-110">A pointer to a null-terminated character string that contains the value of the attribute.</span></span>|  
+|`pszNamespace`|<span data-ttu-id="6f241-108">특성이 있는 네임 스페이스를 포함 하는 null로 끝나는 문자열에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="6f241-108">A pointer to a null-terminated character string that contains the namespace the attribute is in.</span></span>|  
+|`pszName`|<span data-ttu-id="6f241-109">특성의 이름을 포함 하는 null로 끝나는 문자열에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="6f241-109">A pointer to a null-terminated character string that contains the name of the attribute.</span></span>|  
+|`pszValue`|<span data-ttu-id="6f241-110">특성의 값을 포함 하는 null로 끝나는 문자열에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="6f241-110">A pointer to a null-terminated character string that contains the value of the attribute.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a1bae-111">설명</span><span class="sxs-lookup"><span data-stu-id="a1bae-111">Remarks</span></span>  
- <span data-ttu-id="a1bae-112">`IDENTITY_ATTRIBUTE` 구조 null로 끝나는 문자열에 대 한 세 포인터를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="a1bae-112">The `IDENTITY_ATTRIBUTE` structure contains three pointers to null-terminated character strings.</span></span> <span data-ttu-id="a1bae-113">이러한 세 가지 문자열 특성 하나를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="a1bae-113">These three strings describe one attribute.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6f241-111">설명</span><span class="sxs-lookup"><span data-stu-id="6f241-111">Remarks</span></span>  
+ <span data-ttu-id="6f241-112">구조체 `IDENTITY_ATTRIBUTE` 에는 null로 끝나는 문자열에 대 한 세 개의 포인터가 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="6f241-112">The `IDENTITY_ATTRIBUTE` structure contains three pointers to null-terminated character strings.</span></span> <span data-ttu-id="6f241-113">이 세 문자열은 하나의 특성을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="6f241-113">These three strings describe one attribute.</span></span>  
   
- <span data-ttu-id="a1bae-114">인스턴스를 `IDENTITY_ATTRIBUTE` 구조체의 인스턴스를 사용 하 여 연결 된를 [IDENTITY_ATTRIBUTE_BLOB](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md) 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="a1bae-114">An instance of an `IDENTITY_ATTRIBUTE` structure is associated with an instance of an [IDENTITY_ATTRIBUTE_BLOB](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md) structure.</span></span> <span data-ttu-id="a1bae-115">합니다 `IDENTITY_ATTRIBUTE` 실제 문자열 및 해당 구조에 포함 되어 있습니다 `IDENTITY_ATTRIBUTE_BLOB` 구조에 나열 된 세 개의 문자열에 오프셋을 나열 합니다 `IDENTITY_ATTRIBUTE` 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="a1bae-115">The `IDENTITY_ATTRIBUTE` structure contains the actual strings, and the corresponding `IDENTITY_ATTRIBUTE_BLOB` structure lists the offsets to the three strings listed in the `IDENTITY_ATTRIBUTE` structure.</span></span>  
+ <span data-ttu-id="6f241-114">`IDENTITY_ATTRIBUTE` 구조체의 인스턴스는 [IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md) 구조체의 인스턴스와 연결 됩니다.</span><span class="sxs-lookup"><span data-stu-id="6f241-114">An instance of an `IDENTITY_ATTRIBUTE` structure is associated with an instance of an [IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md) structure.</span></span> <span data-ttu-id="6f241-115">구조체에는 실제 문자열이 포함 되 고, 해당 `IDENTITY_ATTRIBUTE_BLOB` 구조에는 `IDENTITY_ATTRIBUTE` 구조에 나열 된 세 개의 문자열로의 오프셋이 나열 됩니다. `IDENTITY_ATTRIBUTE`</span><span class="sxs-lookup"><span data-stu-id="6f241-115">The `IDENTITY_ATTRIBUTE` structure contains the actual strings, and the corresponding `IDENTITY_ATTRIBUTE_BLOB` structure lists the offsets to the three strings listed in the `IDENTITY_ATTRIBUTE` structure.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a1bae-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="a1bae-116">Requirements</span></span>  
- <span data-ttu-id="a1bae-117">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="a1bae-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6f241-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="6f241-116">Requirements</span></span>  
+ <span data-ttu-id="6f241-117">**플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="6f241-117">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a1bae-118">**헤더:** Isolation.h</span><span class="sxs-lookup"><span data-stu-id="a1bae-118">**Header:** Isolation.h</span></span>  
+ <span data-ttu-id="6f241-118">**헤더:** 격리. h</span><span class="sxs-lookup"><span data-stu-id="6f241-118">**Header:** Isolation.h</span></span>  
   
- <span data-ttu-id="a1bae-119">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a1bae-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="6f241-119">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6f241-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a1bae-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="a1bae-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6f241-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="6f241-120">See also</span></span>
 
-- [<span data-ttu-id="a1bae-121">IDefinitionIdentity 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a1bae-121">IDefinitionIdentity Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)
-- [<span data-ttu-id="a1bae-122">IDENTITY_ATTRIBUTE_BLOB 구조체</span><span class="sxs-lookup"><span data-stu-id="a1bae-122">IDENTITY_ATTRIBUTE_BLOB Structure</span></span>](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)
-- [<span data-ttu-id="a1bae-123">Fusion 구조체</span><span class="sxs-lookup"><span data-stu-id="a1bae-123">Fusion Structures</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+- [<span data-ttu-id="6f241-121">IDefinitionIdentity 인터페이스</span><span class="sxs-lookup"><span data-stu-id="6f241-121">IDefinitionIdentity Interface</span></span>](idefinitionidentity-interface.md)
+- [<span data-ttu-id="6f241-122">IDENTITY_ATTRIBUTE_BLOB 구조체</span><span class="sxs-lookup"><span data-stu-id="6f241-122">IDENTITY_ATTRIBUTE_BLOB Structure</span></span>](identity-attribute-blob-structure.md)
+- [<span data-ttu-id="6f241-123">Fusion 구조체</span><span class="sxs-lookup"><span data-stu-id="6f241-123">Fusion Structures</span></span>](fusion-structures.md)
