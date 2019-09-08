@@ -2,12 +2,12 @@
 title: dotnet 명령
 description: dotnet 명령(.NET Core CLI 도구에 대한 일반 드라이버) 및 사용법에 대해 알아봅니다.
 ms.date: 06/04/2018
-ms.openlocfilehash: 61542a3fff8bba6e2c3e55a4db5a746620d79ca1
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 328fd24cd72110bd235c177398f6f147fbb9d144
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202515"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373744"
 ---
 # <a name="dotnet-command"></a>dotnet 명령
 
@@ -94,9 +94,9 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 `--roll-forward-on-no-candidate-fx <N>`
 
 필요한 공유 프레임워크를 사용할 수 없을 때 동작을 정의합니다. `N`는 다음이 될 수 있습니다.
-* `0` - 부 버전 롤포워드도 사용하지 않도록 설정합니다.
-* `1` - 부 버전에서는 롤포워드하지만 주 버전에서는 롤포워드하지 않습니다. 이것은 기본적인 동작입니다.
-* `2` - 부 버전과 주 버전에서 롤포워드합니다.
+- `0` - 부 버전 롤포워드도 사용하지 않도록 설정합니다.
+- `1` - 부 버전에서는 롤포워드하지만 주 버전에서는 롤포워드하지 않습니다. 이것은 기본적인 동작입니다.
+- `2` - 부 버전과 주 버전에서 롤포워드합니다.
 
  자세한 내용은 [롤포워드](../whats-new/dotnet-core-2-1.md#roll-forward)를 참조하세요.
 
