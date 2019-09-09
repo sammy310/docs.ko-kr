@@ -353,10 +353,10 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 - **Jimmy Bogard. 더 나은 도메인 이벤트 패턴** \
   <https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/>
 
-- **Vaughn Vernon. Effective Aggregate Design Part II: Making Aggregates Work Together** \(효과적인 집계 설계 2부: 집합체가 함께 작동하도록 만들기)에서 다음과 같이 언급하고 있습니다.
+- **Vaughn Vernon. 효과적인 집계 설계 2부: 집합체가 함께 작동하도록 만들기)에서 다음과 같이 언급하고 있습니다.**  \
   [https://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
-- **Jimmy Bogard. Strengthening your domain: Domain Events** \(도메인 강화: 도메인 이벤트)
+- **Jimmy Bogard. 도메인 강화: 도메인 이벤트** \
   <https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/>
 
 - **Tony Truong. 도메인 이벤트 패턴 예제** \
