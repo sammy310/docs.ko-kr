@@ -2,18 +2,18 @@
 title: '방법: DataContractSerializer를 사용하여 serialize(C#)'
 ms.date: 07/20/2015
 ms.assetid: 3320ecbf-cdbe-480e-979c-2c14bbef9988
-ms.openlocfilehash: 7175b5051d318e7f214b4c2f7d96d44acf7a0a48
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 2b4800e2c6d210d62ab3093b673898a147c1f92d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484927"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253338"
 ---
-# <a name="how-to-serialize-using-datacontractserializer-c"></a><span data-ttu-id="e1b1c-102">방법: DataContractSerializer를 사용하여 serialize(C#)</span><span class="sxs-lookup"><span data-stu-id="e1b1c-102">How to: Serialize Using DataContractSerializer (C#)</span></span>
-<span data-ttu-id="e1b1c-103">이 항목에서는 <xref:System.Runtime.Serialization.DataContractSerializer>를 사용하여 serialize하고 deserialize하는 예제를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e1b1c-103">This topic shows an example that serializes and deserializes using <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
+# <a name="how-to-serialize-using-datacontractserializer-c"></a><span data-ttu-id="f0ea4-102">방법: DataContractSerializer를 사용하여 serialize(C#)</span><span class="sxs-lookup"><span data-stu-id="f0ea4-102">How to: Serialize Using DataContractSerializer (C#)</span></span>
+<span data-ttu-id="f0ea4-103">이 항목에서는 <xref:System.Runtime.Serialization.DataContractSerializer>를 사용하여 serialize하고 deserialize하는 예제를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f0ea4-103">This topic shows an example that serializes and deserializes using <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e1b1c-104">예제</span><span class="sxs-lookup"><span data-stu-id="e1b1c-104">Example</span></span>  
- <span data-ttu-id="e1b1c-105">다음 예제에서는 <xref:System.Xml.Linq.XElement> 개체가 포함된 많은 개체를 만든 다음</span><span class="sxs-lookup"><span data-stu-id="e1b1c-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="e1b1c-106">텍스트 파일로 개체를 serialize하고 텍스트 파일에서 개체를 deserialize합니다.</span><span class="sxs-lookup"><span data-stu-id="e1b1c-106">It then serializes them to text files, and then deserializes them from the text files.</span></span>  
+## <a name="example"></a><span data-ttu-id="f0ea4-104">예</span><span class="sxs-lookup"><span data-stu-id="f0ea4-104">Example</span></span>  
+ <span data-ttu-id="f0ea4-105">다음 예제에서는 <xref:System.Xml.Linq.XElement> 개체가 포함된 많은 개체를 만든 다음</span><span class="sxs-lookup"><span data-stu-id="f0ea4-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="f0ea4-106">텍스트 파일로 개체를 serialize하고 텍스트 파일에서 개체를 deserialize합니다.</span><span class="sxs-lookup"><span data-stu-id="f0ea4-106">It then serializes them to text files, and then deserializes them from the text files.</span></span>  
   
 ```csharp  
 using System;  
@@ -80,9 +80,9 @@ public class XElementNullContainer
 }  
 ```  
   
- <span data-ttu-id="e1b1c-107">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="e1b1c-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="f0ea4-107">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="f0ea4-107">This example produces the following output:</span></span>  
   
-```  
+```output  
 Testing for type: System.Xml.Linq.XElement  
   Deserialized type: System.Xml.Linq.XElement  
 Testing for type: XElementContainer  
@@ -90,4 +90,3 @@ Testing for type: XElementContainer
 Testing for type: XElementNullContainer  
   Deserialized type: XElementNullContainer  
 ```  
-  
