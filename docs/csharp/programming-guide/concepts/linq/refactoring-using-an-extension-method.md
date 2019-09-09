@@ -2,12 +2,12 @@
 title: 확장 메서드를 사용하여 리팩터링(C#)
 ms.date: 07/20/2015
 ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
-ms.openlocfilehash: 2be848d6454abf0dd37a6974cff915a107336503
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 8546c2cb834107cf2e099af40f9a7df4d5858b4b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591305"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253090"
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>확장 메서드를 사용하여 리팩터링(C#)
 이 예제는 확장 메서드로 구현된 순수 함수를 사용하여 문자열의 연결을 리팩터링하는 방법으로 이전 예제인 [단락의 텍스트 검색(C#)](./retrieving-the-text-of-the-paragraphs.md)을 기반으로 작성되었습니다.  
@@ -80,7 +80,7 @@ Console.WriteLine("{0}", intNumbers.StringConcatenate(i => i.ToString(), ":"));
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```output  
 onetwothree  
 one:two:three:  
 123  
@@ -221,7 +221,7 @@ class Program
   
  [원본 Office Open XML 문서 만들기(C#)](./creating-the-source-office-open-xml-document.md)에서 설명하는 문서에 적용할 경우 이 예제의 결과는 다음과 같습니다.  
   
-```  
+```output  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  

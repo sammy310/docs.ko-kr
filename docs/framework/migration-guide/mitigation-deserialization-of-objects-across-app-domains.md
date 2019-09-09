@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd0cbd4c688815139d83a742bb75c54eebbe55b7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d172503cee4e3880f493c68d5789e17c64a82a12
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648472"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790006"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>완화: 애플리케이션 도메인 간 개체의 deserialization
 경우에 따라 앱이 다양한 애플리케이션을 기반으로 하여 두 개 이상의 애플리케이션 도메인을 사용하면 여러 애플리케이션 도메인 간에 논리 호출 컨텍스트의 개체를 deserialize하려는 시도로 인해 예외가 throw됩니다.  
@@ -50,4 +50,4 @@ ms.locfileid: "64648472"
   
 ## <a name="see-also"></a>참고 항목
 
-- [런타임 변경 내용](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)
+- [런타임 변경 내용](runtime-changes-in-the-net-framework-4-5-1.md)

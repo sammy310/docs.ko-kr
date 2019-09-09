@@ -2,12 +2,12 @@
 title: '방법: 새 형식 프로젝션(LINQ to XML)(C#)'
 ms.date: 07/20/2015
 ms.assetid: 48145cf9-1e0b-4e73-bbfd-28fc04800dc4
-ms.openlocfilehash: bec4e7c7d87dffb90b49b76aa00a5de093d68436
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 32c3de9f4dd967cf0aafa7f4e571d8714ca41e3a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593039"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253501"
 ---
 # <a name="how-to-project-a-new-type-linq-to-xml-c"></a>방법: 새 형식 프로젝션(LINQ to XML)(C#)
 
@@ -53,7 +53,7 @@ class Program {
 
 이 예제는 다음과 같은 출력을 생성합니다.
 
-```console
+```output
 Lawnmower:1
 Baby Monitor:2
 ```

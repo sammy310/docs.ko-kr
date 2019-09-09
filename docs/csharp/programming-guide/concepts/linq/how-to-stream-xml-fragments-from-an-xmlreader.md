@@ -2,12 +2,12 @@
 title: '방법: XmlReader에서 XML 조각 스트리밍(C#)'
 ms.date: 07/20/2015
 ms.assetid: 4a8f0e45-768a-42e2-bc5f-68bdf0e0a726
-ms.openlocfilehash: c27c2165af95b8b781564e14efc0668f596e3057
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e5aeb5111931ff6a35a3b7806abc24e0fbbf9621
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592402"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253287"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>방법: XmlReader에서 XML 조각 스트리밍(C#)
 큰 XML 파일을 처리해야 하는 경우 전체 XML 트리를 메모리에 로드하는 것이 가능하지 않을 수 있습니다. 이 항목에서는 <xref:System.Xml.XmlReader>를 사용하여 조각을 스트림하는 방법을 보여 줍니다.  
@@ -75,7 +75,7 @@ static void Main(string[] args)
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```output  
 bbb  
 ccc  
 ```  

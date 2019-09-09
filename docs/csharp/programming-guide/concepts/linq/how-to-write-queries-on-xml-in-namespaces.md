@@ -2,12 +2,12 @@
 title: '방법: 네임스페이스에서 XML로 쿼리 작성(C#)'
 ms.date: 07/20/2015
 ms.assetid: 7c54df81-15e4-4091-8c81-a87637029130
-ms.openlocfilehash: ef7d970b5e34106bd6f17d4a2caf4ca378dd2258
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 1ded47ced44bebfda92b96f4dc908f1c1b2bbf6b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709886"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253186"
 ---
 # <a name="how-to-write-queries-on-xml-in-namespaces-c"></a>방법: 네임스페이스에서 XML로 쿼리 작성(C#)
 네임스페이스에 있는 XML에 대한 쿼리를 작성하려면 올바른 네임스페이스를 가진 <xref:System.Xml.Linq.XName> 개체를 사용해야 합니다.  
@@ -39,7 +39,7 @@ foreach (XElement el in c1)
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```output  
 1  
 2  
 3  
@@ -70,7 +70,7 @@ foreach (XElement el in c1)
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```output  
 1  
 2  
 3  

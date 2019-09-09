@@ -2,12 +2,12 @@
 title: 중간 구체화(C#)
 ms.date: 07/20/2015
 ms.assetid: 7922d38f-5044-41cf-8e17-7173d6553a5e
-ms.openlocfilehash: 273cd68b9714287f259e763c9b7c534aac1931e6
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: af1eb7df7da02d8e72fc102cda4ee5f329dc7974
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592137"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253156"
 ---
 # <a name="intermediate-materialization-c"></a>중간 구체화(C#)
 주의하지 않으면 특정한 경우에 쿼리에서 컬렉션을 미리 구체화하여 애플리케이션의 메모리와 성능 프로필을 크게 변경할 수 있습니다. 일부 표준 쿼리 연산자는 단일 요소를 생성하기 전에 소스 컬렉션을 구체화합니다. 예를 들어, <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType>는 먼저 전체 소스 컬렉션을 반복한 다음 모든 항목을 정렬하고 마지막으로 첫 번째 항목을 생성합니다. 즉, 정렬된 컬렉션의 첫 번째 항목을 가져오는 것은 비용이 많이 들며 그 다음에 나오는 각 항목에는 비용이 많이 들지 않습니다. 이는 적절한 동작입니다. 해당 쿼리 연산자가 다른 방식으로 작업하는 것은 불가능할 것입니다.  
@@ -66,7 +66,7 @@ class Program
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```output  
 ToUpper: source >abc<  
 ToUpper: source >def<  
 ToUpper: source >ghi<  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ef19c91a-b9df-4bf0-a28e-eb1e99c4bc95
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6ad11d4295be3a5bfd590d9cef1926f6676f2b1
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 0fcb4de714c8a0f1f2c61f3a12815a5a0a3ddc83
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043237"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70789815"
 ---
 # <a name="mitigation-wcf-services-and-certificate-authentication"></a>완화: WCF 서비스 및 인증서 인증
 
@@ -17,7 +17,7 @@ ms.locfileid: "70043237"
 
 ## <a name="impact"></a>영향
 
-TLS 1.2는 MD5 인증서 인증을 지원하지 않습니다. 결과적으로 고객이 해시 알고리즘에 대해 MD5를 사용하는 SSL 인증서를 사용 하는 경우 WCF 클라이언트에서 WCF 서비스에 연결하지 못합니다. 자세한 내용은 [완화: WCF 서비스 및 인증서 인증](../../../docs/framework/migration-guide/mitigation-wcf-services-and-certificate-authentication.md)을 참조하세요.
+TLS 1.2는 MD5 인증서 인증을 지원하지 않습니다. 결과적으로 고객이 해시 알고리즘에 대해 MD5를 사용하는 SSL 인증서를 사용 하는 경우 WCF 클라이언트에서 WCF 서비스에 연결하지 못합니다. 자세한 내용은 [완화: WCF 서비스 및 인증서 인증](mitigation-wcf-services-and-certificate-authentication.md)을 참조하세요.
 
 ## <a name="mitigation"></a>완화
 
@@ -58,4 +58,4 @@ TLS 1.2는 MD5 인증서 인증을 지원하지 않습니다. 결과적으로 �
 
 ## <a name="see-also"></a>참고 항목
 
-- [런타임 변경 내용](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+- [런타임 변경 내용](runtime-changes-in-the-net-framework-4-6.md)

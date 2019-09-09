@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 9cf47c5b-0bb2-45df-9437-61cd7e7c2f4d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b3ac43b574c4382c4aec5070acde0fa77516727d
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 2af81468c5c4c4caf2f09725d6c7c4723084e35c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251141"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779438"
 ---
 # <a name="mitigation-custom-imessagefilterprefiltermessage-implementations"></a>완화: 사용자 지정 IMessageFilter.PreFilterMessage 구현
 
@@ -31,7 +31,7 @@ ms.locfileid: "66251141"
 
 ## <a name="mitigation"></a>완화
 
-이러한 변경을 원치 않는 경우 .NET Framework 4.6.1 이상 버전을 대상으로 하는 앱은 앱 구성 파일의 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 섹션에 다음 구성 설정을 추가하여 이 동작을 사용하지 않을 수 있습니다.
+이러한 변경을 원치 않는 경우 .NET Framework 4.6.1 이상 버전을 대상으로 하는 앱은 앱 구성 파일의 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 섹션에 다음 구성 설정을 추가하여 이 동작을 사용하지 않을 수 있습니다.
 
 ```xml
 <runtime>
@@ -39,7 +39,7 @@ ms.locfileid: "66251141"
 </runtime>
 ```
 
-또한 이전 버전의 .NET Framework를 대상으로 하지만 .NET Framework 4.6.1 이상 버전에서 실행되는 앱은 앱 구성 파일의 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 섹션에 다음 구성 설정을 추가하여 이 동작을 옵트인(opt in)할 수 있습니다.
+또한 이전 버전의 .NET Framework를 대상으로 하지만 .NET Framework 4.6.1 이상 버전에서 실행되는 앱은 앱 구성 파일의 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 섹션에 다음 구성 설정을 추가하여 이 동작을 옵트인(opt in)할 수 있습니다.
 
 ```xml
 <runtime>
@@ -49,4 +49,4 @@ ms.locfileid: "66251141"
 
 ## <a name="see-also"></a>참고 항목
 
-- [대상 다시 지정 변경 내용](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-1.md)
+- [대상 다시 지정 변경 내용](retargeting-changes-in-the-net-framework-4-6-1.md)

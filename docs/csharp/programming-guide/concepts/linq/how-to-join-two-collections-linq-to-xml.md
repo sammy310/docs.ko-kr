@@ -2,12 +2,12 @@
 title: '방법: 두 컬렉션 조인(LINQ to XML)(C#)'
 ms.date: 07/20/2015
 ms.assetid: 7b817ede-911a-4cff-9dd3-639c3fc228c9
-ms.openlocfilehash: aa774e23cfd232709f9824826f5084fe6049ef37
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 82083a24da9a5356a8ff8e8430b61bb5d41f7c72
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593203"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253573"
 ---
 # <a name="how-to-join-two-collections-linq-to-xml-c"></a>방법: 두 컬렉션 조인(LINQ to XML)(C#)
 XML 문서의 요소나 특성은 때때로 다른 요소나 특성을 참조할 수 있습니다. 예를 들어 [샘플 XML 파일: Customers 및 Orders고객(LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) XML 문서에는 고객 목록과 주문 목록이 포함되어 있습니다. 각 `Customer` 요소에는 `CustomerID` 특성이 포함되어 있고, 각 `Order` 요소에는 `CustomerID` 요소가 포함되어 있습니다. 각 주문의 `CustomerID` 요소는 고객의 `CustomerID` 특성을 참조합니다.  
@@ -76,7 +76,7 @@ if (!errors)
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```output  
 Attempting to validate, custOrdDoc validated  
 <Root>  
   <Order>  

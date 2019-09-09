@@ -2,12 +2,12 @@
 title: '방법: 구분된 파일의 필드 다시 정렬(LINQ)(C#)'
 ms.date: 07/20/2015
 ms.assetid: 4e62d82c-61b7-4f18-b9a1-86723746d7d2
-ms.openlocfilehash: 1507d0f743070f15b8e64d5dcfb1b9499470b123
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 31cb7b936f58653e6223501f3b03cd9472b92453
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592694"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253453"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a>방법: 구분된 파일의 필드 다시 정렬(LINQ)(C#)
 쉼표로 구분된 값(CSV) 파일은 스프레드시트 데이터 또는 행과 열로 표현되는 다른 테이블 형식 데이터를 저장하는 데 자주 사용되는 텍스트 파일입니다. <xref:System.String.Split%2A> 메서드를 사용하여 필드를 구분하면 LINQ를 사용하여 쉽게 CSV 파일을 쿼리하고 조작할 수 있습니다. 실제로 동일한 방법을 사용하여 모든 구조적 텍스트 줄의 일부를 다시 정렬할 수 있습니다. CSV 파일로 제한되지 않습니다.  
@@ -18,7 +18,7 @@ ms.locfileid: "69592694"
   
 1. spreadsheet1.csv라는 일반 텍스트 파일에 다음 줄을 복사합니다. 프로젝트 폴더에 파일을 저장합니다.  
   
-    ```  
+    ```csv  
     Adams,Terry,120  
     Fakhouri,Fadi,116  
     Feng,Hanying,117  

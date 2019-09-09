@@ -2,12 +2,12 @@
 title: 단락의 텍스트 검색(C#)
 ms.date: 07/20/2015
 ms.assetid: 127d635e-e559-408f-90c8-2bb621ca50ac
-ms.openlocfilehash: 88a7e82a7d27048ce3f901e6e9d50b8737797adb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 986145fa62722a35d23831a3818b89e63529b85f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591079"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253054"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>단락의 텍스트 검색(C#)
 이 예제는 이전 예제 [단락 및 해당 스타일 검색(C#)](./retrieving-the-paragraphs-and-their-styles.md)을 기반으로 합니다. 이 새 예제에서는 각 단락의 텍스트를 문자열로 검색합니다.  
@@ -119,7 +119,7 @@ foreach (var p in paraWithText)
   
  [원본 Office Open XML 문서 만들기(C#)](./creating-the-source-office-open-xml-document.md)에서 설명하는 문서에 적용할 경우 이 예제의 결과는 다음과 같습니다.  
   
-```  
+```output  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  

@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: 33f97d13-3022-43da-8b18-cdb5c88df9c2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b21dc73454b96d3a192b47eb439bebf588059c24
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e98b447028ef9fa96233a71133aa82184d83cec8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599608"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779161"
 ---
 # <a name="mitigation-tls-protocols"></a>완화: TLS 프로토콜
 .NET Framework 4.6부터 <xref:System.Net.ServicePointManager?displayProperty=nameWithType> 및 <xref:System.Net.Security.SslStream?displayProperty=nameWithType> 클래스에서 다음 세 개의 프로토콜 중 하나를 사용할 수 있습니다. Tls1.0, Tls1.1 또는 Tls 1.2. SSL3.0 프로토콜 및 RC4 암호화는 지원되지 않습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "64599608"
   
      <xref:System.Net.ServicePointManager> 개체는 한 번만 초기화되므로 먼저 애플리케이션에서 이러한 호환성 설정을 정의해야 합니다.  
   
-- 다음 줄을 app.config 파일의 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 섹션에 추가  
+- 다음 줄을 app.config 파일의 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 섹션에 추가  
   
     ```xml  
     <AppContextSwitchOverrides value="Switch.System.Net.DontEnableSchUseStrongCrypto=true"/>  
@@ -44,4 +44,4 @@ ms.locfileid: "64599608"
   
 ## <a name="see-also"></a>참고 항목
 
-- [대상 다시 지정 변경 내용](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+- [대상 다시 지정 변경 내용](retargeting-changes-in-the-net-framework-4-6.md)

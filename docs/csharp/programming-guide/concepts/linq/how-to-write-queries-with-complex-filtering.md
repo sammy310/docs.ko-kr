@@ -2,12 +2,12 @@
 title: '방법: 복합 필터링으로 쿼리 작성(C#)'
 ms.date: 07/20/2015
 ms.assetid: 4065d901-cf89-4e47-8bf9-abb65acfb003
-ms.openlocfilehash: 3fe62b4a3c78c61de28311adf3feec1a613ff167
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 7759a02c1b9ef0ae0c1af4bfb2600543b21cdf0f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592178"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253185"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-c"></a>방법: 복합 필터링으로 쿼리 작성(C#)
 복잡한 필터를 사용하여 LINQ to XML 쿼리를 작성하려는 경우가 있습니다. 예를 들어, 특정 이름과 값을 가진 자식 요소가 있는 모든 요소를 찾으려고 할 수 있습니다. 이 항목에서는 복잡한 필터링을 사용하여 쿼리를 작성하는 예제를 제공합니다.  
@@ -37,7 +37,7 @@ foreach (XElement el in purchaseOrders)
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```output  
 99505  
 ```  
   
@@ -65,7 +65,7 @@ foreach (XElement el in purchaseOrders)
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```output  
 99505  
 ```  
   

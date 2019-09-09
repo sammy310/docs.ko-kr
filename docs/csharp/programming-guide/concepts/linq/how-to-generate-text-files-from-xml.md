@@ -2,12 +2,12 @@
 title: '방법: XML에서 텍스트 파일 생성(C#)'
 ms.date: 07/20/2015
 ms.assetid: 9ad283f7-7cac-42ff-bf32-92aa866e6883
-ms.openlocfilehash: 51828c11b54f99131b89e0a30979f3f3acdb12ae
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 76fcca69236ef97374855ebbb19259aa5e119ea0
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593349"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253589"
 ---
 # <a name="how-to-generate-text-files-from-xml-c"></a>방법: XML에서 텍스트 파일 생성(C#)
 이 예제에서는 XML 파일에서 CSV(쉼표로 구분된 값) 파일을 생성하는 방법을 보여 줍니다.  
@@ -46,7 +46,7 @@ Console.WriteLine(csv);
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```output  
 GREAL,Great Lakes Food Market,Howard Snyder,Marketing Manager,(503) 555-7555,2732 Baker Blvd.,Eugene,OR,97403,USA  
 HUNGC,Hungry Coyote Import Store,Yoshi Latimer,Sales Representative,(503) 555-6874,City Center Plaza 516 Main St.,Elgin,OR,97827,USA  
 LAZYK,Lazy K Kountry Store,John Steel,Marketing Manager,(509) 555-7969,12 Orchestra Terrace,Walla Walla,WA,99362,USA  

@@ -2,12 +2,12 @@
 title: '방법: 특정 요소 이름으로 하위 항목 찾기(C#)'
 ms.date: 07/20/2015
 ms.assetid: f684da20-bee9-47f5-9607-7e3fd7e67470
-ms.openlocfilehash: dbb955697e4d4b0ed5aad9c00c37e73bbd32b7b4
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 8c859c555109a6f68a6b4290c536b10114620f3d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709933"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253693"
 ---
 # <a name="how-to-find-descendants-with-a-specific-element-name-c"></a>방법: 특정 요소 이름으로 하위 항목 찾기(C#)
 특정 이름을 가진 모든 하위 요소를 찾으려는 경우가 있습니다. 모든 하위 요소를 반복하는 코드를 작성할 수 있지만 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축을 사용하는 것이 더 쉽습니다.  
@@ -47,7 +47,7 @@ Console.WriteLine(str);
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```output  
 Some text that is broken up into multiple segments.  
 ```  
   
@@ -87,7 +87,7 @@ Console.WriteLine(str);
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```output  
 Some text that is broken up into multiple segments.  
 ```  
   

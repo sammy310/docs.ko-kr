@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 345840ad45add21c6088abd0fb45e2e591b7df21
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6f071f907fe38b226a5083699e758bc5fb8bffce
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923881"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252987"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>명령줄 인수(C# 프로그래밍 가이드)
 다음 방법 중 하나로 메서드를 정의하여 인수를 `Main` 메서드에 보낼 수 있습니다.  
@@ -28,19 +28,19 @@ ms.locfileid: "69923881"
   
  <xref:System.Convert> 클래스 또는 `Parse` 메서드를 사용하여 문자열 인수를 숫자 형식으로 변환할 수도 있습니다. 예를 들어 다음 문은 <xref:System.Int64.Parse%2A> 메서드를 사용하여 `string`을 `long` 숫자로 변환합니다.  
   
-```  
+```csharp  
 long num = Int64.Parse(args[0]);  
 ```  
   
  `Int64`의 별칭을 지정하는 C# 형식 `long`을 사용할 수도 있습니다.  
   
-```  
+```csharp  
 long num = long.Parse(args[0]);  
 ```  
   
  `Convert` 클래스 메서드 `ToInt64`를 사용하여 같은 작업을 수행할 수도 있습니다.  
   
-```  
+```csharp  
 long num = Convert.ToInt64(s);  
 ```  
   

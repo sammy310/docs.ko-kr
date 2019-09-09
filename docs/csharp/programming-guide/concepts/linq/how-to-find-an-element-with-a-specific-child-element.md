@@ -2,12 +2,12 @@
 title: '방법: 특정 자식 요소로 요소 찾기(C#)'
 ms.date: 07/20/2015
 ms.assetid: 00cf5555-374e-4369-bf93-7bd2e7f21db3
-ms.openlocfilehash: 80539c7ccd21bc38967479d7b724e6f3361d24ac
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f007bddcbecc1cb938d05c7d444d29b6047749e8
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593554"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253749"
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>방법: 특정 자식 요소로 요소 찾기(C#)
 이 항목에서는 지정된 값을 가진 자식 요소가 포함된 특정 요소를 찾는 방법을 보여 줍니다.  
@@ -29,7 +29,7 @@ foreach (XElement el in tests)
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```output  
 0002  
 0006  
 ```  
@@ -52,7 +52,7 @@ foreach (XElement el in tests)
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```output  
 0002  
 0006  
 ```  

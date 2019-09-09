@@ -2,12 +2,12 @@
 title: '방법: 요소 정렬(C#)'
 ms.date: 07/20/2015
 ms.assetid: aee6fbbc-81fd-4b3e-b40f-6ed7b3bd3fee
-ms.openlocfilehash: 074428413fa57d8f0e5ae94970c2aeeeb9e4cc7c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e5f76518437954ac683ec2e3e30ad9007c280f83
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592460"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253306"
 ---
 # <a name="how-to-sort-elements-c"></a>방법: 요소 정렬(C#)
 이 예제에서는 결과를 정렬하는 쿼리를 작성하는 방법을 보여 줍니다.  
@@ -28,7 +28,7 @@ foreach (decimal el in prices)
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```output  
 0.99  
 4.95  
 6.99  
@@ -57,7 +57,7 @@ foreach (decimal el in prices)
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```output  
 0.99  
 4.95  
 6.99  

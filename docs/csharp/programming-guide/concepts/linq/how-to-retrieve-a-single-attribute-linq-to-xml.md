@@ -2,12 +2,12 @@
 title: '방법: 단일 특성 검색(LINQ to XML)(C#)'
 ms.date: 07/20/2015
 ms.assetid: 1b6b07b9-933f-47e9-874e-e790cab49dc5
-ms.openlocfilehash: 4a1be51c7f0e89a8f211ae523eb102282bd9747b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: d8c8d0e3a99f94c4404f0ab23a5edf082be77952
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592658"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253406"
 ---
 # <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>방법: 단일 특성 검색(LINQ to XML)(C#)
 이 항목에서는 특성 이름이 제공되는 경우 요소의 단일 특성을 검색하는 방법에 대해 설명합니다. 이 방법은 특정 특성을 가진 요소를 찾으려는 경우 쿼리 식을 작성하는 데 유용합니다.  
@@ -37,7 +37,7 @@ foreach (XElement el in elList)
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```output  
 home  
 work  
 ```  
@@ -63,7 +63,7 @@ foreach (XElement el in elList)
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```output  
 home  
 work  
 ```  
@@ -92,7 +92,7 @@ foreach (XElement el in elList)
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```output  
 home  
 work  
 ```  

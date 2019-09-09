@@ -2,12 +2,12 @@
 title: C#에서 기본 네임스페이스 범위
 ms.date: 07/20/2015
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-ms.openlocfilehash: 0c5f5cccda6ba6a75a8631ed095921b90b02916b
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 7615351f6e5f8b18bd6466a83d54aa65a6c99b50
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868866"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253044"
 ---
 # <a name="scope-of-default-namespaces-in-c"></a>C\#에서 기본 네임스페이스 범위
 XML 트리에 나타나는 기본 네임스페이스는 쿼리에 범위에 포함되지 않습니다. 기본 네임스페이스에 있는 XML을 사용하는 경우 <xref:System.Xml.Linq.XNamespace> 변수를 선언하고 로컬 이름과 결합하여 쿼리에서 사용할 정규화된 이름을 만들어야 합니다.  
@@ -45,7 +45,7 @@ Console.WriteLine("End of result set");
 ### <a name="comments"></a>설명  
  이 예제의 결과는 다음과 같습니다.  
   
-```  
+```output  
 Result set follows:  
 End of result set  
 ```  
@@ -80,7 +80,7 @@ Console.WriteLine("End of result set");
 ### <a name="comments"></a>설명  
  이 예제의 결과는 다음과 같습니다.  
   
-```  
+```output  
 Result set follows:  
 1  
 2  

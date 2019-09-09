@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 92d2de20-79be-4df1-b182-144143a8866a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 01bd548bbafda34202705dda3dda148aae941e2b
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 71f1b06e53b3851ca3f65edc1755527779b42a67
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251109"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70789963"
 ---
 # <a name="mitigation-pool-blocking-period"></a>완화: 풀 차단 기간
 Azure SQL 데이터베이스 연결에 대한 연결 풀 차단 기간이 제거되었습니다.  
   
 ## <a name="additional-description"></a>추가 설명  
- .NET Framework 4.6.1 및 이전 버전에서 데이터베이스에 연결할 때 애플리케이션에 일시적인 연결 오류가 발생할 경우, 연결 풀이 오류를 캐시하고 5초에서 1분 동안 다시 throw하기 때문에 연결 시도는 신속하게 다시 시도될 수 없습니다. 자세한 내용은 [SQL Server 연결 풀링(ADO.NET)](../../../docs/framework/data/adonet/sql-server-connection-pooling.md)을 참조하세요. 이 동작은 일반적으로 몇 초 내에 복구되는 일시적인 오류가 자주 발생하는 Azure SQL 데이터베이스에 대한 연결 문제가 있습니다. 연결 풀 차단 기능은 데이터베이스를 사용할 수 있어도 광범위한 기간 동안 응용 프로그램 데이터베이스에 연결할 수 없다는 것을 의미합니다. 이 동작은 Azure SQL 데이터베이스에 연결하고 몇 초 안에 렌더링해야 하는 웹 응용 프로그램에 대해 특히 문제가 됩니다.  
+ .NET Framework 4.6.1 및 이전 버전에서 데이터베이스에 연결할 때 애플리케이션에 일시적인 연결 오류가 발생할 경우, 연결 풀이 오류를 캐시하고 5초에서 1분 동안 다시 throw하기 때문에 연결 시도는 신속하게 다시 시도될 수 없습니다. 자세한 내용은 [SQL Server 연결 풀링(ADO.NET)](../data/adonet/sql-server-connection-pooling.md)을 참조하세요. 이 동작은 일반적으로 몇 초 내에 복구되는 일시적인 오류가 자주 발생하는 Azure SQL 데이터베이스에 대한 연결 문제가 있습니다. 연결 풀 차단 기능은 데이터베이스를 사용할 수 있어도 광범위한 기간 동안 응용 프로그램 데이터베이스에 연결할 수 없다는 것을 의미합니다. 이 동작은 Azure SQL 데이터베이스에 연결하고 몇 초 안에 렌더링해야 하는 웹 응용 프로그램에 대해 특히 문제가 됩니다.  
   
  .NET Framework 4.6.2부터는 알려진 Azure SQL 데이터베이스(*.database.windows.net, \*.database.chinacloudapi.cn, \*.database.usgovcloudapi.net, \*.database.cloudapi.de)에 대한 연결 열기 요청의 경우 연결 열기 오류가 캐시되지 않습니다. 다른 모든 연결 시도의 경우 연결 풀 차단 기간이 계속 적용됩니다.  
   
@@ -35,4 +35,4 @@ Azure SQL 데이터베이스 연결에 대한 연결 풀 차단 기간이 제거
   
 ## <a name="see-also"></a>참고 항목
 
-- [런타임 변경 내용](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6-2.md)
+- [런타임 변경 내용](runtime-changes-in-the-net-framework-4-6-2.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56f0ebccc1bd46a26b5247ac2668e963cbeac828
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: f547180995ec155f9121eeace109e7dfb07c7827
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106480"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790119"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>.NET Framework의 애플리케이션 호환성
 
@@ -76,6 +76,6 @@ ms.locfileid: "70106480"
 
 ## <a name="see-also"></a>참고 항목
 
-- [버전 및 종속성](../../../docs/framework/migration-guide/versions-and-dependencies.md)
-- [새로운 기능](../../../docs/framework/whats-new/index.md)
-- [클래스 라이브러리의 사용되지 않는 기능](../../../docs/framework/whats-new/whats-obsolete.md)
+- [버전 및 종속성](versions-and-dependencies.md)
+- [새로운 기능](../whats-new/index.md)
+- [클래스 라이브러리의 사용되지 않는 기능](../whats-new/whats-obsolete.md)

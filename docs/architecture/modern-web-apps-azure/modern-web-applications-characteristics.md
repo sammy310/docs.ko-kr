@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: f4fe18d7361f7d67c29fb7dab53132237f709280
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d3848f3b0cf993930bfc3801ce40c5eac30f094d
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672910"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374081"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>최신 웹 애플리케이션의 특징
 
@@ -24,9 +24,9 @@ ASP.NET Core는 최신 웹 애플리케이션 및 클라우드 기반 호스팅 
 
 이 지침에는 몇 가지 원칙과 권장 사항을 설명하는 참조 애플리케이션인 _eShopOnWeb_이 포함되어 있습니다. 이 애플리케이션은 셔츠, 커피 머그잔 및 기타 마케팅 항목의 카탈로그 검색을 지원하는 간단한 온라인 상점입니다. 이 참조 애플리케이션은 이해를 돕기 위한 의도로 간단하게 제작되었습니다.
 
-**그림 2-1.** eShopOnWeb
+![eShopOnWeb](./media/image2-1.png)
 
-![](./media/image2-1.png)
+**그림 2-1.** eShopOnWeb
 
 > ### <a name="reference-application"></a>참조 애플리케이션
 >

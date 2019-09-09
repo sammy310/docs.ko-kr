@@ -2,12 +2,12 @@
 title: Docker 컨테이너에 대해 .NET Framework를 선택하는 경우
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | Docker 컨테이너에 대해 .NET Framework를 선택하는 경우
 ms.date: 01/07/2019
-ms.openlocfilehash: 53164654710775320f023df9fb56a78506bd3a1a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0b948017c3bbbcc8c43d5d2d9698d9a1a6f9deed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675740"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784090"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Docker 컨테이너에 대해 .NET Framework를 선택하는 경우
 
@@ -57,7 +57,7 @@ ms.locfileid: "68675740"
 - **.NET Framework에서 .NET Core로 이식**  
     [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
 
-- **Docker 가이드의 .NET Core** [https://docs.microsoft.com/dotnet/core/docker/intro-net-docker](../../../core/docker/intro-net-docker.md)
+- **Docker 가이드의 .NET Core** [https://docs.microsoft.com/dotnet/core/docker/introduction](../../../core/docker/introduction.md)
 
 - **.NET 구성 요소 개요**  
     [https://docs.microsoft.com/dotnet/standard/components](../../../standard/components.md)

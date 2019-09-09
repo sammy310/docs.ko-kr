@@ -2,12 +2,12 @@
 title: '방법: 요소 이름 필터링(LINQ to XML)(C#)'
 ms.date: 07/20/2015
 ms.assetid: 1849fb03-f075-421f-863c-e8fb32773cdf
-ms.openlocfilehash: 9febe3b834261326bab3e82d87c476f99d4e6b1f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2a4eccac3bc24005af0efee0785393de00039228
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593812"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253813"
 ---
 # <a name="how-to-filter-on-element-names-linq-to-xml-c"></a>방법: 요소 이름 필터링(LINQ to XML)(C#)
 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement>을 반환하는 메서드 중 하나를 호출하면 요소 이름을 기준으로 필터링할 수 있습니다.  
@@ -28,7 +28,7 @@ foreach(XElement prdName in items)
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```output  
 ProductName:Lawnmower  
 ProductName:Baby Monitor  
 ```  
@@ -66,7 +66,7 @@ foreach (XElement prdName in items)
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```output  
 {http://www.adventure-works.com}ProductName:Lawnmower  
 {http://www.adventure-works.com}ProductName:Baby Monitor  
 ```  

@@ -2,12 +2,12 @@
 title: '방법: 네임스페이스에서 모든 노드 찾기(C#)'
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: 512ca398831541c30a6c0c1e305c5c6269c13ddb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f8a6f33084417e0dd489002eaa5d2de509e30d39
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593647"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253783"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-c"></a>방법: 네임스페이스에서 모든 노드 찾기(C#)
 해당 특정 네임스페이스에서 모든 노드를 찾기 위해 각 요소나 특성의 네임스페이스를 기준으로 필터링할 수 있습니다.  
@@ -37,7 +37,7 @@ foreach (XElement el in awElements)
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```output  
 Nodes in the http://www.adventure-works.com namespace  
 {http://www.adventure-works.com}Child3  
 {http://www.adventure-works.com}GrandChild2  

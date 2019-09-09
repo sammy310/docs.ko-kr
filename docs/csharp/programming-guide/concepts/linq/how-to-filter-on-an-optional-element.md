@@ -2,12 +2,12 @@
 title: '방법: 선택적 요소로 필터링(C#)'
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-ms.openlocfilehash: 403c331787df7eb538302df2ecc332a663e68d71
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0f8e17d99085ad04ed76b83bce806418ca6d60cd
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593801"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253827"
 ---
 # <a name="how-to-filter-on-an-optional-element-c"></a>방법: 선택적 요소로 필터링(C#)
 요소가 XML 문서에 있는지 확실하지 않은 경우에도 해당 요소를 기준으로 필터링하려는 경우가 있습니다. 특정 요소에 자식 요소가 없는 경우 이 요소를 기준으로 필터링하여 null 참조 예외를 트리거하지 않도록 검색을 수행해야 합니다. 다음 예제에서는 `Child5` 요소에 `Type` 자식 요소가 없지만 쿼리가 여전히 제대로 실행됩니다.  
@@ -47,7 +47,7 @@ foreach(string str in cList)
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```output  
 Child One Text  
 Child Two Text  
 Child Four Text  
@@ -89,7 +89,7 @@ foreach (string str in cList)
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```output  
 Child One Text  
 Child Two Text  
 Child Four Text  

@@ -2,12 +2,12 @@
 title: '방법: 특성 값 검색(LINQ to XML)(C#)'
 ms.date: 07/20/2015
 ms.assetid: 817bbe89-5979-4234-bf0c-46f63692ac8c
-ms.openlocfilehash: 54ea4b532669ed2c615fcde02011fdd1228705a3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 635aee3bd08618b94fb5c091f8eef212c067acef
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592474"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253376"
 ---
 # <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-c"></a>방법: 특성 값 검색(LINQ to XML)(C#)
 이 항목에서는 특성의 값을 가져오는 방법을 보여 줍니다. 두 가지 주요 방법이 있습니다. <xref:System.Xml.Linq.XAttribute>를 원하는 형식으로 캐스팅할 수 있습니다. 그러면 명시적 변환 연산자가 요소나 특성의 내용을 지정된 형식으로 변환합니다. 또는 <xref:System.Xml.Linq.XAttribute.Value%2A> 속성을 사용할 수 있습니다. 그러나 일반적으로 캐스팅이 더 나은 방법입니다. 특성을 nullable 형식으로 캐스팅하면 존재하지 않을 수도 있는 특성의 값을 검색하는 경우 코드를 더 간단하게 작성할 수 있습니다. 이 기법의 예제는 [방법: 요소 값 검색(LINQ to XML)(C#)](./how-to-retrieve-the-value-of-an-element-linq-to-xml.md)을 참조하세요.  
@@ -26,7 +26,7 @@ Console.WriteLine(str);
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```output  
 <Root Attr="abcde" />  
 abcde  
 ```  
@@ -45,7 +45,7 @@ Console.WriteLine(str);
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```output  
 abcde  
 ```  
   

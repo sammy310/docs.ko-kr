@@ -2,12 +2,12 @@
 title: '방법: 컨텍스트에 따라 요소를 찾는 쿼리 작성(C#)'
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
-ms.openlocfilehash: f6fd0a9dc0f2579185f2f72997f1d406a885c636
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: e3ac8fc965132521b85cce6391908634cdb17127
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710035"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253211"
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>방법: 컨텍스트에 따라 요소를 찾는 쿼리 작성(C#)
 컨텍스트에 따라 요소를 선택하는 쿼리를 작성해야 하는 경우가 있습니다. 이전 또는 다음 형제 요소를 기준으로 필터링하거나, 자식 또는 상위 요소를 기준으로 필터링하려고 할 수 있습니다.  
@@ -49,7 +49,7 @@ foreach (XElement e in items)
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```output  
 id = 1  
 id = 3  
 id = 6  
@@ -92,7 +92,7 @@ foreach (XElement e in items)
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```output  
 id = 1  
 id = 3  
 id = 6  

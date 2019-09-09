@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b1c704113c8e05e493cdb3ef24f6376ab54b1cb
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: bc5ea69d80a225adfc2f409e8303ee1c241398db
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251120"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779340"
 ---
 # <a name="mitigation-path-normalization"></a>완화: 경로 정규화
 .NET Framework 4.6.2를 대상으로 하는 앱부터 .NET Framework의 경로 정규화가 변경되었습니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "66251120"
 .NET Framework 4.6.1 이하 버전을 대상으로 하지만 .NET Framework 4.6.2 이상에서 실행되는 앱은 이러한 변경에 의해 영향을 받지 않습니다.  
   
 ## <a name="mitigation"></a>완화  
- .NET Framework 4.6.2 이상을 대상으로 하는 앱은 애플리케이션 구성 파일의 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 섹션에 다음을 추가하여 이 변경을 옵트아웃하고 레거시 정규화를 사용할 수 있습니다.  
+ .NET Framework 4.6.2 이상을 대상으로 하는 앱은 애플리케이션 구성 파일의 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 섹션에 다음을 추가하여 이 변경을 옵트아웃하고 레거시 정규화를 사용할 수 있습니다.  
   
 ```xml  
 <runtime>  
@@ -53,7 +53,7 @@ ms.locfileid: "66251120"
 </runtime>  
 ```  
   
-.NET Framework 4.6.1 이하를 대상으로 하지만 .NET Framework 4.6.2 이상에서 실행되는 앱은 애플리케이션 구성 파일의 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 섹션에 다음 줄을 추가하여 경로 정규화에 변경을 사용할 수 있습니다.  
+.NET Framework 4.6.1 이하를 대상으로 하지만 .NET Framework 4.6.2 이상에서 실행되는 앱은 애플리케이션 구성 파일의 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 섹션에 다음 줄을 추가하여 경로 정규화에 변경을 사용할 수 있습니다.  
   
 ```xml  
 <runtime>  
@@ -63,4 +63,4 @@ ms.locfileid: "66251120"
   
 ## <a name="see-also"></a>참고 항목
 
-- [대상 다시 지정 변경 내용](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
+- [대상 다시 지정 변경 내용](retargeting-changes-in-the-net-framework-4-6-2.md)

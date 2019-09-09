@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 186297c050d81eca130b751c46303083ff025f22
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: cd267de1e632fdc40dc50e8acdeba7d16bf8e61a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636114"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779488"
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-later-versions"></a>방법: .NET Framework 4 이상 버전을 지원하도록 앱 구성
 
@@ -22,7 +22,7 @@ CLR(공용 언어 런타임)을 호스트하는 모든 응용 프로그램에서
 
 - 구성 파일
 
-     애플리케이션 구성 파일에 사용자 컴퓨터에 있는 하나 이상의 .NET Framework 버전 및 이러한 버전 중 하나를 지정하는 [\<supportedRuntime&gt;](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 항목이 포함되어 있는 경우, 애플리케이션은 해당 버전에서 실행됩니다. 구성 파일은 나열된 순서대로 [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 항목을 읽고 사용자의 컴퓨터에 있는 목록의 첫 번째 .NET Framework 버전을 사용합니다. (버전 1.0용 [\<requiredRuntime> 요소](../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) 사용)
+     애플리케이션 구성 파일에 사용자 컴퓨터에 있는 하나 이상의 .NET Framework 버전 및 이러한 버전 중 하나를 지정하는 [\<supportedRuntime&gt;](../configure-apps/file-schema/startup/supportedruntime-element.md) 항목이 포함되어 있는 경우, 애플리케이션은 해당 버전에서 실행됩니다. 구성 파일은 나열된 순서대로 [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 항목을 읽고 사용자의 컴퓨터에 있는 목록의 첫 번째 .NET Framework 버전을 사용합니다. (버전 1.0용 [\<requiredRuntime> 요소](../configure-apps/file-schema/startup/requiredruntime-element.md) 사용)
 
 - 컴파일 버전
 
@@ -30,7 +30,7 @@ CLR(공용 언어 런타임)을 호스트하는 모든 응용 프로그램에서
 
 - 설치된 최신 버전
 
-     응용 프로그램을 빌드한 .NET Framework 버전이 사용자 컴퓨터에 없고 구성 파일이 [\<supportedRuntime> element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)의 버전을 지정하지 않으면 응용 프로그램은 사용자 컴퓨터에 있는 .NET Framework의 최신 버전에서 실행을 시도합니다.
+     응용 프로그램을 빌드한 .NET Framework 버전이 사용자 컴퓨터에 없고 구성 파일이 [\<supportedRuntime> element](../configure-apps/file-schema/startup/supportedruntime-element.md)의 버전을 지정하지 않으면 응용 프로그램은 사용자 컴퓨터에 있는 .NET Framework의 최신 버전에서 실행을 시도합니다.
 
      그러나 .NET Framework 1.0, 1.1, 2.0, 3.0 및 3.5 응용 프로그램은 .NET Framework 4 이상에서 자동으로 실행되지 않으며 경우에 따라 오류가 발생할 수 있고 .NET Framework 3.5를 설치하라는 메시지가 나타날 수 있습니다. 또한 다른 버전의 Windows 시스템에는 다른 버전의 .NET Framework가 포함되어 있으므로, 활성화 동작은 사용자의 운영 체제에 따라서도 달라질 수 있습니다. 응용 프로그램이 .NET Framework 3.5 및 4 이상을 모두 지원하는 경우 .NET Framework 초기화 오류를 방지하도록 구성 파일에 여러 항목을 사용하여 이를 표시하는 것이 좋습니다. 자세한 내용은 [버전 및 종속성](versions-and-dependencies.md)을 참조하세요.
 
@@ -47,7 +47,7 @@ CLR(공용 언어 런타임)을 호스트하는 모든 응용 프로그램에서
 
      Visual Studio 메뉴 모음에 구성 파일을 추가하려면 **프로젝트**, **새 항목 추가**를 차례로 선택합니다. 왼쪽 창에서 **일반**을 선택한 다음 **구성 파일**을 선택합니다. 구성 파일 이름을 *appName*.exe.config로 지정합니다. 해당 플랫폼에서 활성화 정책이 변경될 수 없으므로 이러한 메뉴 선택은 Windows 스토어 앱 또는 Windows Phone 앱 프로젝트에서 사용할 수 없습니다.
 
-2. 다음과 같은 [\<supportedRuntime&gt;](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 요소를 애플리케이션 구성 파일에 추가합니다.
+2. 다음과 같은 [\<supportedRuntime&gt;](../configure-apps/file-schema/startup/supportedruntime-element.md) 요소를 애플리케이션 구성 파일에 추가합니다.
 
     ```xml
     <configuration>
@@ -67,19 +67,19 @@ CLR(공용 언어 런타임)을 호스트하는 모든 응용 프로그램에서
 
     - .NET Framework 4 이상 버전: "v4.0"
 
-     기본 설정 순서대로 나열된 여러 [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 요소를 추가하여 .NET Framework의 여러 버전에 대한 지원을 지정할 수 있습니다.
+     기본 설정 순서대로 나열된 여러 [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 요소를 추가하여 .NET Framework의 여러 버전에 대한 지원을 지정할 수 있습니다.
 
  다음 표에서는 컴퓨터에 설치된 애플리케이션 구성 파일 설정과 .NET Framework 버전으로 .NET Framework 3.5 애플리케이션이 실행 중인 버전을 결정하는 방법을 보여 줍니다. 이 예제는 .NET Framework 3.5 애플리케이션에 국한되지만 이전 .NET Framework 버전으로 빌드된 대상 애플리케이션에 이와 유사한 논리를 사용할 수 있습니다. .NET Framework 2.0 버전 번호(v2.0.50727)는 애플리케이션 구성 파일에서 .NET Framework 3.5를 지정하는 데 사용됩니다.
 
 |App.config 파일 설정|버전 3.5가 설치된 컴퓨터|버전 3.5 및 4 이상이 설치된 컴퓨터|버전 4 이상이 설치된 컴퓨터|
 |-|-|-|-|
-|없음|3.5에서 실행|3.5에서 실행|사용자가 올바른 버전*을 설치하도록 요청하는 오류 메시지 표시|
-|`<supportedRuntime version="v2.0.50727"/>`|3.5에서 실행|3.5에서 실행|사용자가 올바른 버전*을 설치하도록 요청하는 오류 메시지 표시|
-|`<supportedRuntime version="v2.0.50727"/>` <br /> `<supportedRuntime version="v4.0"/>`|3.5에서 실행|3.5에서 실행|버전 4 이상에서 실행|
-|`<supportedRuntime version="v4.0"/>` <br /> `<supportedRuntime version="v2.0.50727"/>`|3.5에서 실행|버전 4 이상에서 실행|버전 4 이상에서 실행|
+|없음|3\.5에서 실행|3\.5에서 실행|사용자가 올바른 버전*을 설치하도록 요청하는 오류 메시지 표시|
+|`<supportedRuntime version="v2.0.50727"/>`|3\.5에서 실행|3\.5에서 실행|사용자가 올바른 버전*을 설치하도록 요청하는 오류 메시지 표시|
+|`<supportedRuntime version="v2.0.50727"/>` <br /> `<supportedRuntime version="v4.0"/>`|3\.5에서 실행|3\.5에서 실행|버전 4 이상에서 실행|
+|`<supportedRuntime version="v4.0"/>` <br /> `<supportedRuntime version="v2.0.50727"/>`|3\.5에서 실행|버전 4 이상에서 실행|버전 4 이상에서 실행|
 |`<supportedRuntime version="v4.0"/>`|사용자가 올바른 버전*을 설치하도록 요청하는 오류 메시지 표시|버전 4 이상에서 실행|버전 4 이상에서 실행|
 
- \* 이 오류 메시지와 이 오류를 방지하는 방법에 대한 자세한 내용은 [.NET Framework 초기화 오류: 사용자 환경 관리](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)를 참조하세요.
+ \* 이 오류 메시지와 이 오류를 방지하는 방법에 대한 자세한 내용은 [.NET Framework 초기화 오류: 사용자 환경 관리](../deployment/initialization-errors-managing-the-user-experience.md)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

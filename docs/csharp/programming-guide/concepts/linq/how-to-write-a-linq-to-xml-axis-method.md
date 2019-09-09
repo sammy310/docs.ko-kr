@@ -2,12 +2,12 @@
 title: '방법: LINQ to XML 축 메서드 작성(C#)'
 ms.date: 07/20/2015
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-ms.openlocfilehash: 71d9d0e9ba1f63d8badb1f10ab7ede1dbb30a19f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 74105ff9d08479a4fc702b02e6929130272b237b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592188"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253229"
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>방법: LINQ to XML 축 메서드 작성(C#)
 XML 트리에서 컬렉션을 검색하는 축 메서드를 작성할 수 있습니다. 축 메서드를 작성하는 가장 좋은 방법 중 하나는 요소나 특성의 컬렉션을 반환하는 확장 메서드를 작성하는 것입니다. 애플리케이션의 요구 사항에 따라 요소나 특성의 특정 하위 집합을 반환하는 확장명 메서드를 작성할 수 있습니다.  
@@ -280,7 +280,7 @@ class Program
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```output  
 /PurchaseOrders/PurchaseOrder[1]/@OrderDate  
 1999-10-20  
 /PurchaseOrders/PurchaseOrder[1]/Items/Item[2]/ShipDate  
@@ -290,4 +290,3 @@ class Program
 /PurchaseOrders/PurchaseOrder[3]/@OrderDate  
 1999-10-22  
 ```  
-  

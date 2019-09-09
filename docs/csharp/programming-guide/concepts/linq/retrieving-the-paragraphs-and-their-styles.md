@@ -2,12 +2,12 @@
 title: 단락 및 해당 스타일 검색(C#)
 ms.date: 07/20/2015
 ms.assetid: c2f767f8-57b1-4b4b-af04-89ffb1f7067d
-ms.openlocfilehash: 4accbf3325ad4db95c028249c7071cb9fedd19cd
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: ec59ef0ac36f8691ca93a4c21c5379118ee0491f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591201"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253069"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a>단락 및 해당 스타일 검색(C#)
 이 예제에서는 WordprocessingML 문서에서 단락 노드를 검색하는 쿼리를 작성합니다. 또한 각 단락의 스타일도 식별합니다.  
@@ -111,7 +111,7 @@ foreach (var p in paragraphs)
   
  [원본 Office Open XML 문서 만들기(C#)](./creating-the-source-office-open-xml-document.md)에서 설명하는 문서에 적용할 경우 이 예제의 결과는 다음과 같습니다.  
   
-```  
+```output  
 StyleName:Heading1  
 StyleName:Normal  
 StyleName:Normal  

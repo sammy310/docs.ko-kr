@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6df750872e90572b00cdf427461b4a9782c47d63
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 07f9ae01fae5e4badbc13670ee56a2f05e303c0c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968517"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779357"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>완화: 새로운 64비트 JIT 컴파일러
 .NET Framework 4.6부터는 런타임에 Just-In-Time 컴파일을 위한 새로운 64비트 JIT 컴파일러가 포함됩니다. 이 변경 내용은 32비트 JIT 컴파일러를 사용하는 컴파일에는 영향을 주지 않습니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "69968517"
 ## <a name="mitigation-of-other-issues"></a>기타 문제 완화  
  이전 64비트 JIT 컴파일러 및 새로운 64비트 JIT 컴파일러를 사용하여 컴파일한 코드 또는 둘 다 새로운 64비트 JIT 컴파일러를 사용하여 컴파일한 앱의 디버그 버전 및 릴리스 버전 간 동작에서 다른 차이가 발생하는 경우 다음을 수행하여 이전 64비트 JIT 컴파일러로 앱을 컴파일할 수 있습니다.  
   
-- 애플리케이션별로 [\<useLegacyJit&gt;](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) 요소를 애플리케이션의 구성 파일에 추가할 수 있습니다. 다음은 새로운 64비트 JIT 컴파일러를 사용하는 컴파일을 사용하지 않도록 설정하고, 대신 레거시 64비트 JIT 컴파일러를 사용합니다.  
+- 애플리케이션별로 [\<useLegacyJit&gt;](../configure-apps/file-schema/runtime/uselegacyjit-element.md) 요소를 애플리케이션의 구성 파일에 추가할 수 있습니다. 다음은 새로운 64비트 JIT 컴파일러를 사용하는 컴파일을 사용하지 않도록 설정하고, 대신 레거시 64비트 JIT 컴파일러를 사용합니다.  
   
     ```xml  
     <?xml version ="1.0"?>  
@@ -71,5 +71,5 @@ ms.locfileid: "69968517"
   
 ## <a name="see-also"></a>참고 항목
 
-- [런타임 변경 내용](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
-- [\<useLegacyJit> 요소](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)
+- [런타임 변경 내용](runtime-changes-in-the-net-framework-4-6.md)
+- [\<useLegacyJit> 요소](../configure-apps/file-schema/runtime/uselegacyjit-element.md)

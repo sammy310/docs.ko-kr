@@ -2,12 +2,12 @@
 title: '방법: 요소 컬렉션 검색(LINQ to XML)(C#)'
 ms.date: 07/20/2015
 ms.assetid: b849668c-7976-4974-b8e1-1cd587d34258
-ms.openlocfilehash: 0ca40b77a78f155292dfbb26471442450bf16b9b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: fef12745bd608622f071f72049f242405d17ed7d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592645"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253414"
 ---
 # <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-c"></a>방법: 요소 컬렉션 검색(LINQ to XML)(C#)
 이 항목에서는 <xref:System.Xml.Linq.XContainer.Elements%2A> 메서드를 보여 줍니다. 이 메서드는 요소의 자식 요소 컬렉션을 검색합니다.  
@@ -28,7 +28,7 @@ foreach (XElement el in childElements)
   
  이 예제의 결과는 다음과 같습니다.  
   
-```  
+```output  
 Name: Address  
 Name: Address  
 Name: DeliveryNotes  

@@ -1,19 +1,19 @@
 ---
-title: ML.NET CLI를 사용하여 이진 분류자 자동 생성
+title: ML.NET CLI를 사용하여 감정 분석
 description: 샘플 데이터 세트에서 ML 모델 및 관련된 C# 모드를 자동으로 생성
 author: cesardl
 ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: c0e188286821f0e3822fde4af74a1561edfbb868
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 7b740f2c93096c971da009e8abf6865ac1b8e966
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107268"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254156"
 ---
-# <a name="auto-generate-a-binary-classifier-using-the-cli"></a>CLI를 사용하여 이진 분류자 자동 생성
+# <a name="analyze-sentiment-using-the-mlnet-cli"></a>ML.NET CLI를 사용하여 감정 분석
 
 ML.NET CLI를 사용하여 ML.NET 모델 및 기본 C# 코드를 자동으로 생성하는 방법을 알아봅니다. 구현하려는 기계 학습 작업과 데이터 세트를 제공하고 CLI는 AutoML 엔진을 사용하여 이진 모델뿐만 아니라 모델 생성 및 배포 소스 코드를 만듭니다.
 

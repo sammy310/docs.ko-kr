@@ -2,12 +2,12 @@
 title: '방법: XSLT 스타일에서 주석을 사용하여 LINQ to XML 트리 변환(C#)'
 ms.date: 07/20/2015
 ms.assetid: 12a95902-a6b7-4a1e-ad52-04a518db226f
-ms.openlocfilehash: 3aaf141a8ac5d8f3fc75d0a31b460fc84733a62e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: d6975601855e736082662ffb0319b5c6563cedc6
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484806"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253270"
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>방법: XSLT 스타일에서 주석을 사용하여 LINQ to XML 트리 변환(C#)
 주석을 사용하여 XML 트리를 쉽게 변환할 수 있습니다.  
@@ -122,7 +122,7 @@ Console.WriteLine(newData);
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```output  
 Before Transform  
 ----------------  
 <Root>  
@@ -147,7 +147,7 @@ After Transform
   
 - 이 함수의 의사(pseudo) 코드는 매우 간단합니다.  
   
-```  
+```text  
 The function takes an XElement as an argument and returns an XElement.   
 If an element has an XElement annotation, then  
     Return a new XElement  
@@ -393,7 +393,7 @@ class Program
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```output  
 Before Transform  
 ----------------  
 <Root Att1="123">  

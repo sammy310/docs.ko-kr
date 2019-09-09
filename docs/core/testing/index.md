@@ -5,16 +5,18 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: 73667843452bbcab52a8cd4aa7906beecc095677
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c0c74aeaf02bc6380d7627ce39f65603e94952c0
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614871"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373866"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core 및 .NET Standard의 단위 테스트
 
 .NET Core를 통해 쉽게 단위 테스트를 만들 수 있습니다. 이 문서에서는 단위 테스트를 소개하고 이 테스트와 다른 테스트의 차이점을 설명합니다. 페이지 아래쪽에 있는 연결된 리소스는 테스트 프로젝트를 솔루션에 추가하는 방법을 보여줍니다. 테스트 프로젝트를 설정한 후에 명령줄 또는 Visual Studio를 사용하여 단위 테스트를 실행할 수 있습니다.
+
+**ASP.NET Core** 프로젝트를 테스트하는 경우 [ASP.NET Core의 통합 테스트](/aspnet/core/test/integration-tests#test-app-prerequisites)를 참조하세요.
 
 .NET Core 2.0 이상은 [.NET Standard 2.0](../../standard/net-standard.md)을 지원하며 해당 라이브러리를 사용하여 단위 테스트를 보여줍니다.
 

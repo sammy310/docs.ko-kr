@@ -7,17 +7,17 @@ helpviewer_keywords:
 - validating numeric input [C#]
 - strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
-ms.openlocfilehash: 831f0fc83c8a7066b40d64e4765a312b8b4847bc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8fc5051893882a6dbdbb4c9097949794d4430a93
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921776"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252947"
 ---
 # <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>방법: 문자열이 숫자 값을 나타내는지 확인(C# 프로그래밍 가이드)
 문자열이 지정된 숫자 형식의 유효한 표현인지 확인하려면 모든 기본 숫자 형식 및 <xref:System.DateTime>, <xref:System.Net.IPAddress> 등의 형식에 의해서도 구현되는 정적 `TryParse` 메서드를 사용합니다. 다음 예제에서는 "108"이 유효한 [int](../../language-reference/builtin-types/integral-numeric-types.md)인지 확인하는 방법을 보여 줍니다.  
   
-```  
+```csharp  
 int i = 0;   
 string s = "108";  
 bool result = int.TryParse(s, out i); //i now = 108  

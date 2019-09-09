@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: 70f5ee17209c7ed54462fab6e5cc4d75091c9df2
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a4cb85eb94584cff20c9ff26b4aa6bacee4f9883
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588286"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252963"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>연습: 동적 개체 만들기 및 사용(C# 및 Visual Basic)
 
@@ -97,7 +97,7 @@ ms.locfileid: "69588286"
   
 2. TextFile1.txt 파일에 다음 텍스트를 복사합니다.  
   
-    ```  
+    ```text  
     List of customers and suppliers  
   
     Supplier: Lucerne Publishing (https://www.lucernepublishing.com/)  

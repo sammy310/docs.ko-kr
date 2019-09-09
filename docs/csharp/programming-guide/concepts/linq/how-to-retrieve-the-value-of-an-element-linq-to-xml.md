@@ -2,12 +2,12 @@
 title: '방법: 요소 값 검색(LINQ to XML)(C#)'
 ms.date: 07/20/2015
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-ms.openlocfilehash: 821c387bf1e3a2d58686465e5562fde9457127bf
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a7b36ea7bb602c241593da356b87d35baee8163f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592482"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253361"
 ---
 # <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>방법: 요소 값 검색(LINQ to XML)(C#)
 이 항목에서는 요소의 값을 가져오는 방법을 보여 줍니다. 두 가지 주요 방법으로 요소의 값을 가져올 수 있습니다. 한 가지 방법은 <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XAttribute>를 원하는 형식으로 캐스팅하는 것입니다. 명시적 변환 연산자는 요소나 특성의 내용을 지정된 형식으로 변환하고 변수에 할당합니다. 또는 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 속성이나 <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> 속성을 사용할 수 있습니다.  
@@ -25,7 +25,7 @@ Console.WriteLine("Value of e:" + (string)e);
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```output  
 <StringElement>abcde</StringElement>  
 Value of e:abcde  
 ```  
@@ -41,7 +41,7 @@ Console.WriteLine("Value of e:" + (int)e);
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```output  
 <Age>44</Age>  
 Value of e:44  
 ```  
@@ -61,7 +61,7 @@ Console.WriteLine("Value of e:" + e.Value);
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```output  
 <StringElement>abcde</StringElement>  
 Value of e:abcde  
 ```  
@@ -131,7 +131,7 @@ Console.WriteLine("v4:{0}", v4 == null ? "element does not exist" : v4.ToString(
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```output  
 c1:child 1 content  
 c2:2  
 c3:element does not exist  
