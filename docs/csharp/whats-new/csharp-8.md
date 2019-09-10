@@ -1,45 +1,47 @@
 ---
 title: C# 8.0의 새로운 기능 - C# 가이드
 description: C# 8.0의 새로운 기능을 살펴봅니다. 이 문서는 미리 보기 5가 반영된 최신 내용을 담고 있습니다.
-ms.date: 02/12/2019
-ms.openlocfilehash: 14c86fe4b1ecd1c89ebbbb082c5c9956bc51e03e
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.date: 09/04/2019
+ms.openlocfilehash: b281c55a5911d81503a6af80e393469be1124280
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105506"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374005"
 ---
-# <a name="whats-new-in-c-80"></a><span data-ttu-id="2b81b-104">C# 8.0의 새로운 기능</span><span class="sxs-lookup"><span data-stu-id="2b81b-104">What's new in C# 8.0</span></span>
+# <a name="whats-new-in-c-80"></a><span data-ttu-id="370e7-104">C# 8.0의 새로운 기능</span><span class="sxs-lookup"><span data-stu-id="370e7-104">What's new in C# 8.0</span></span>
 
-<span data-ttu-id="2b81b-105">C# 언어에는 직접 사용해 볼 수 있는 여러 개선된 기능이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-105">There are many enhancements to the C# language that you can try out already.</span></span> 
+<span data-ttu-id="370e7-105">C# 언어에는 직접 사용해 볼 수 있는 여러 개선된 기능이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-105">There are many enhancements to the C# language that you can try out already.</span></span>
 
-- [<span data-ttu-id="2b81b-106">읽기 전용 멤버</span><span class="sxs-lookup"><span data-stu-id="2b81b-106">Readonly members</span></span>](#readonly-members)
-- [<span data-ttu-id="2b81b-107">기본 인터페이스 멤버</span><span class="sxs-lookup"><span data-stu-id="2b81b-107">Default interface members</span></span>](#default-interface-members)
-- <span data-ttu-id="2b81b-108">[패턴 일치 개선 사항](#more-patterns-in-more-places):</span><span class="sxs-lookup"><span data-stu-id="2b81b-108">[Pattern matching enhancements](#more-patterns-in-more-places):</span></span>
-  - [<span data-ttu-id="2b81b-109">Switch 식</span><span class="sxs-lookup"><span data-stu-id="2b81b-109">Switch expressions</span></span>](#switch-expressions)
-  - [<span data-ttu-id="2b81b-110">속성 패턴</span><span class="sxs-lookup"><span data-stu-id="2b81b-110">Property patterns</span></span>](#property-patterns)
-  - [<span data-ttu-id="2b81b-111">튜플 패턴</span><span class="sxs-lookup"><span data-stu-id="2b81b-111">Tuple patterns</span></span>](#tuple-patterns)
-  - [<span data-ttu-id="2b81b-112">위치 패턴</span><span class="sxs-lookup"><span data-stu-id="2b81b-112">Positional patterns</span></span>](#positional-patterns)
-- [<span data-ttu-id="2b81b-113">using 선언</span><span class="sxs-lookup"><span data-stu-id="2b81b-113">Using declarations</span></span>](#using-declarations)
-- [<span data-ttu-id="2b81b-114">정적 로컬 함수</span><span class="sxs-lookup"><span data-stu-id="2b81b-114">Static local functions</span></span>](#static-local-functions)
-- [<span data-ttu-id="2b81b-115">삭제 가능한 ref struct</span><span class="sxs-lookup"><span data-stu-id="2b81b-115">Disposable ref structs</span></span>](#disposable-ref-structs)
-- [<span data-ttu-id="2b81b-116">nullable 참조 형식</span><span class="sxs-lookup"><span data-stu-id="2b81b-116">Nullable reference types</span></span>](#nullable-reference-types)
-- [<span data-ttu-id="2b81b-117">비동기 스트림</span><span class="sxs-lookup"><span data-stu-id="2b81b-117">Asynchronous streams</span></span>](#asynchronous-streams)
-- [<span data-ttu-id="2b81b-118">인덱스 및 범위</span><span class="sxs-lookup"><span data-stu-id="2b81b-118">Indices and ranges</span></span>](#indices-and-ranges)
+- [<span data-ttu-id="370e7-106">읽기 전용 멤버</span><span class="sxs-lookup"><span data-stu-id="370e7-106">Readonly members</span></span>](#readonly-members)
+- [<span data-ttu-id="370e7-107">기본 인터페이스 멤버</span><span class="sxs-lookup"><span data-stu-id="370e7-107">Default interface members</span></span>](#default-interface-members)
+- <span data-ttu-id="370e7-108">[패턴 일치 개선 사항](#more-patterns-in-more-places):</span><span class="sxs-lookup"><span data-stu-id="370e7-108">[Pattern matching enhancements](#more-patterns-in-more-places):</span></span>
+  - [<span data-ttu-id="370e7-109">Switch 식</span><span class="sxs-lookup"><span data-stu-id="370e7-109">Switch expressions</span></span>](#switch-expressions)
+  - [<span data-ttu-id="370e7-110">속성 패턴</span><span class="sxs-lookup"><span data-stu-id="370e7-110">Property patterns</span></span>](#property-patterns)
+  - [<span data-ttu-id="370e7-111">튜플 패턴</span><span class="sxs-lookup"><span data-stu-id="370e7-111">Tuple patterns</span></span>](#tuple-patterns)
+  - [<span data-ttu-id="370e7-112">위치 패턴</span><span class="sxs-lookup"><span data-stu-id="370e7-112">Positional patterns</span></span>](#positional-patterns)
+- [<span data-ttu-id="370e7-113">using 선언</span><span class="sxs-lookup"><span data-stu-id="370e7-113">Using declarations</span></span>](#using-declarations)
+- [<span data-ttu-id="370e7-114">정적 로컬 함수</span><span class="sxs-lookup"><span data-stu-id="370e7-114">Static local functions</span></span>](#static-local-functions)
+- [<span data-ttu-id="370e7-115">삭제 가능한 ref struct</span><span class="sxs-lookup"><span data-stu-id="370e7-115">Disposable ref structs</span></span>](#disposable-ref-structs)
+- [<span data-ttu-id="370e7-116">nullable 참조 형식</span><span class="sxs-lookup"><span data-stu-id="370e7-116">Nullable reference types</span></span>](#nullable-reference-types)
+- [<span data-ttu-id="370e7-117">비동기 스트림</span><span class="sxs-lookup"><span data-stu-id="370e7-117">Asynchronous streams</span></span>](#asynchronous-streams)
+- [<span data-ttu-id="370e7-118">인덱스 및 범위</span><span class="sxs-lookup"><span data-stu-id="370e7-118">Indices and ranges</span></span>](#indices-and-ranges)
+- [<span data-ttu-id="370e7-119">관리되지 않는 생성 형식</span><span class="sxs-lookup"><span data-stu-id="370e7-119">Unmanaged constructed types</span></span>](#unmanaged-constructed-types)
+- [<span data-ttu-id="370e7-120">보간된 약어 문자열의 향상된 기능</span><span class="sxs-lookup"><span data-stu-id="370e7-120">Enhancement of interpolated verbatim strings</span></span>](#enhancement-of-interpolated-verbatim-strings)
 
 > [!NOTE]
-> <span data-ttu-id="2b81b-119">이 문서는 C# 8.0 미리 보기 5를 반영하여 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-119">This article was last updated for C# 8.0 preview 5.</span></span>
+> <span data-ttu-id="370e7-121">이 문서는 C# 8.0 미리 보기 5를 반영하여 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-121">This article was last updated for C# 8.0 preview 5.</span></span>
 
-<span data-ttu-id="2b81b-120">이 문서의 나머지 부분에서는 이러한 기능에 대해 간략하게 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-120">The remainder of this article briefly describes these features.</span></span> <span data-ttu-id="2b81b-121">심화 문서가 공개되면 해당 자습서에 대한 링크 및 개요가 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-121">Where in-depth articles are available, links to those tutorials and overviews are provided.</span></span> <span data-ttu-id="2b81b-122">`dotnet try` 글로벌 도구를 사용하여 환경에서 다음과 같은 기능을 탐색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-122">You can explore these features in your environment using the `dotnet try` global tool:</span></span>
+<span data-ttu-id="370e7-122">이 문서의 나머지 부분에서는 이러한 기능에 대해 간략하게 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-122">The remainder of this article briefly describes these features.</span></span> <span data-ttu-id="370e7-123">심화 문서가 공개되면 해당 자습서에 대한 링크 및 개요가 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-123">Where in-depth articles are available, links to those tutorials and overviews are provided.</span></span> <span data-ttu-id="370e7-124">`dotnet try` 글로벌 도구를 사용하여 환경에서 다음과 같은 기능을 탐색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-124">You can explore these features in your environment using the `dotnet try` global tool:</span></span>
 
-1. <span data-ttu-id="2b81b-123">[dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) 글로벌 도구를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-123">Install the [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) global tool.</span></span>
-1. <span data-ttu-id="2b81b-124">[dotnet/try-samples](https://github.com/dotnet/try-samples) 리포지토리를 복제합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-124">Clone the [dotnet/try-samples](https://github.com/dotnet/try-samples) repository.</span></span>
-1. <span data-ttu-id="2b81b-125">현재 디렉터리를 *try-samples* 리포지토리의 *csharp8* 하위 디렉터리로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-125">Set the current directory to the *csharp8* subdirectory for the *try-samples* repository.</span></span>
-1. <span data-ttu-id="2b81b-126">`dotnet try`를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-126">Run `dotnet try`.</span></span>
+1. <span data-ttu-id="370e7-125">[dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) 글로벌 도구를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-125">Install the [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) global tool.</span></span>
+1. <span data-ttu-id="370e7-126">[dotnet/try-samples](https://github.com/dotnet/try-samples) 리포지토리를 복제합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-126">Clone the [dotnet/try-samples](https://github.com/dotnet/try-samples) repository.</span></span>
+1. <span data-ttu-id="370e7-127">현재 디렉터리를 *try-samples* 리포지토리의 *csharp8* 하위 디렉터리로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-127">Set the current directory to the *csharp8* subdirectory for the *try-samples* repository.</span></span>
+1. <span data-ttu-id="370e7-128">`dotnet try`를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-128">Run `dotnet try`.</span></span>
 
-## <a name="readonly-members"></a><span data-ttu-id="2b81b-127">읽기 전용 멤버</span><span class="sxs-lookup"><span data-stu-id="2b81b-127">Readonly members</span></span>
+## <a name="readonly-members"></a><span data-ttu-id="370e7-129">읽기 전용 멤버</span><span class="sxs-lookup"><span data-stu-id="370e7-129">Readonly members</span></span>
 
-<span data-ttu-id="2b81b-128">구조체의 멤버에 `readonly` 한정자를 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-128">You can apply the `readonly` modifier to any member of a struct.</span></span> <span data-ttu-id="2b81b-129">이것은 멤버가 상태를 수정하지 않음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-129">It indicates that the member does not modify state.</span></span> <span data-ttu-id="2b81b-130">이것이 `readonly` 한정자를 `struct` 선언에 적용하는 것보다 더 세부적입니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-130">It's more granular than applying the `readonly` modifier to a `struct` declaration.</span></span>  <span data-ttu-id="2b81b-131">다음과 같이 변경 가능한 구조체를 고려합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-131">Consider the following mutable struct:</span></span>
+<span data-ttu-id="370e7-130">구조체의 멤버에 `readonly` 한정자를 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-130">You can apply the `readonly` modifier to any member of a struct.</span></span> <span data-ttu-id="370e7-131">이것은 멤버가 상태를 수정하지 않음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-131">It indicates that the member does not modify state.</span></span> <span data-ttu-id="370e7-132">이것이 `readonly` 한정자를 `struct` 선언에 적용하는 것보다 더 세부적입니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-132">It's more granular than applying the `readonly` modifier to a `struct` declaration.</span></span>  <span data-ttu-id="370e7-133">다음과 같이 변경 가능한 구조체를 고려합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-133">Consider the following mutable struct:</span></span>
 
 ```csharp
 public struct Point
@@ -53,26 +55,26 @@ public struct Point
 }
 ```
 
-<span data-ttu-id="2b81b-132">대부분의 구조체와 마찬가지로 `ToString()` 메서드는 상태를 수정하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-132">Like most structs, the `ToString()` method does not modify state.</span></span> <span data-ttu-id="2b81b-133">`readonly` 한정자를 `ToString()`의 선언에 추가하여 다음을 나타낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-133">You could indicate that by adding the `readonly` modifier to the declaration of `ToString()`:</span></span>
+<span data-ttu-id="370e7-134">대부분의 구조체와 마찬가지로 `ToString()` 메서드는 상태를 수정하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-134">Like most structs, the `ToString()` method does not modify state.</span></span> <span data-ttu-id="370e7-135">`readonly` 한정자를 `ToString()`의 선언에 추가하여 다음을 나타낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-135">You could indicate that by adding the `readonly` modifier to the declaration of `ToString()`:</span></span>
 
 ```csharp
 public readonly override string ToString() =>
     $"({X}, {Y}) is {Distance} from the origin";
 ```
 
-<span data-ttu-id="2b81b-134">`ToString`은 `readonly`로 표시되지 않은 `Distance` 속성에 액세스하므로 이전 변경은 컴파일러 경고를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-134">The preceding change generates a compiler warning, because `ToString` accesses the `Distance` property, which is not marked `readonly`:</span></span>
+<span data-ttu-id="370e7-136">`ToString`은 `readonly`로 표시되지 않은 `Distance` 속성에 액세스하므로 이전 변경은 컴파일러 경고를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-136">The preceding change generates a compiler warning, because `ToString` accesses the `Distance` property, which is not marked `readonly`:</span></span>
 
 ```console
 warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonly' member results in an implicit copy of 'this'
 ```
 
-<span data-ttu-id="2b81b-135">컴파일러는 방어 복사본을 만들 필요가 있을 때 사용자에게 경고합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-135">The compiler warns you when it needs to create a defensive copy.</span></span>  <span data-ttu-id="2b81b-136">`Distance` 속성은 상태를 변경하지 않으므로 `readonly` 한정자를 선언에 추가하여 이 경고를 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-136">The `Distance` property does not change state, so you can fix this warning by adding the `readonly` modifier to the declaration:</span></span>
+<span data-ttu-id="370e7-137">컴파일러는 방어 복사본을 만들 필요가 있을 때 사용자에게 경고합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-137">The compiler warns you when it needs to create a defensive copy.</span></span>  <span data-ttu-id="370e7-138">`Distance` 속성은 상태를 변경하지 않으므로 `readonly` 한정자를 선언에 추가하여 이 경고를 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-138">The `Distance` property does not change state, so you can fix this warning by adding the `readonly` modifier to the declaration:</span></span>
 
 ```csharp
 public readonly double Distance => Math.Sqrt(X * X + Y * Y);
 ```
 
-<span data-ttu-id="2b81b-137">`readonly` 한정자가 읽기 전용 속성에 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-137">Notice that the `readonly` modifier is necessary on a read only property.</span></span> <span data-ttu-id="2b81b-138">컴파일러는 `get` 접근자가 상태를 수정하지 않는다고 가정하지 않습니다. 명시적으로 `readonly`를 선언해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-138">The compiler doesn't assume `get` accessors do not modify state; you must declare `readonly` explicitly.</span></span> <span data-ttu-id="2b81b-139">컴파일러는 `readonly` 멤버가 상태를 수정하지 않는다는 규칙을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-139">The compiler does enforce the rule that `readonly` members do not modify state.</span></span> <span data-ttu-id="2b81b-140">다음 메서드는 `readonly` 한정자를 제거하지 않는 한 컴파일하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-140">The following method will not compile unless you remove the `readonly` modifier:</span></span>
+<span data-ttu-id="370e7-139">`readonly` 한정자가 읽기 전용 속성에 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-139">Notice that the `readonly` modifier is necessary on a read only property.</span></span> <span data-ttu-id="370e7-140">컴파일러는 `get` 접근자가 상태를 수정하지 않는다고 가정하지 않습니다. 명시적으로 `readonly`를 선언해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-140">The compiler doesn't assume `get` accessors do not modify state; you must declare `readonly` explicitly.</span></span> <span data-ttu-id="370e7-141">컴파일러는 `readonly` 멤버가 상태를 수정하지 않는다는 규칙을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-141">The compiler does enforce the rule that `readonly` members do not modify state.</span></span> <span data-ttu-id="370e7-142">다음 메서드는 `readonly` 한정자를 제거하지 않는 한 컴파일하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-142">The following method will not compile unless you remove the `readonly` modifier:</span></span>
 
 ```csharp
 public readonly void Translate(int xOffset, int yOffset)
@@ -82,25 +84,25 @@ public readonly void Translate(int xOffset, int yOffset)
 }
 ```
 
-<span data-ttu-id="2b81b-141">이 기능을 사용하여 디자인 의도를 지정할 수 있으므로 컴파일러는 이를 적용하고 디자인 의도에 따라 최적화를 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-141">This feature lets you specify your design intent so the compiler can enforce it, and make optimizations based on that intent.</span></span>
+<span data-ttu-id="370e7-143">이 기능을 사용하여 디자인 의도를 지정할 수 있으므로 컴파일러는 이를 적용하고 디자인 의도에 따라 최적화를 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-143">This feature lets you specify your design intent so the compiler can enforce it, and make optimizations based on that intent.</span></span>
 
-## <a name="default-interface-members"></a><span data-ttu-id="2b81b-142">기본 인터페이스 멤버</span><span class="sxs-lookup"><span data-stu-id="2b81b-142">Default interface members</span></span>
+## <a name="default-interface-members"></a><span data-ttu-id="370e7-144">기본 인터페이스 멤버</span><span class="sxs-lookup"><span data-stu-id="370e7-144">Default interface members</span></span>
 
-<span data-ttu-id="2b81b-143">이제 인터페이스에 멤버를 추가하고 해당 멤버에 대 한 구현을 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-143">You can now add members to interfaces and provide an implementation for those members.</span></span> <span data-ttu-id="2b81b-144">이 언어 기능을 사용하여 API 작성자는 소스 또는 이진과 해당 인터페이스의 기존 구현과의 호환성에 영향을 미치지 않고 후속 버전에서 인터페이스에 메서드를 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-144">This language feature enables API authors to add methods to an interface in later versions without breaking source or binary compatibility with existing implementations of that interface.</span></span> <span data-ttu-id="2b81b-145">기존 구현은 기본 구현을 *상속*합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-145">Existing implementations *inherit* the default implementation.</span></span> <span data-ttu-id="2b81b-146">또한 이 기능을 사용하여 C#은 유사한 기능을 지원하는 Android 또는 Swift를 대상으로 하는 API와 상호 운용됩니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-146">This feature also enables C# to interoperate with APIs that target Android or Swift, which support similar features.</span></span> <span data-ttu-id="2b81b-147">또한 기본 인터페이스 멤버는 "특성" 언어 기능과 유사한 시나리오를 사용하도록 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-147">Default interface members also enable scenarios similar to a "traits" language feature.</span></span>
+<span data-ttu-id="370e7-145">이제 인터페이스에 멤버를 추가하고 해당 멤버에 대 한 구현을 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-145">You can now add members to interfaces and provide an implementation for those members.</span></span> <span data-ttu-id="370e7-146">이 언어 기능을 사용하여 API 작성자는 소스 또는 이진과 해당 인터페이스의 기존 구현과의 호환성에 영향을 미치지 않고 후속 버전에서 인터페이스에 메서드를 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-146">This language feature enables API authors to add methods to an interface in later versions without breaking source or binary compatibility with existing implementations of that interface.</span></span> <span data-ttu-id="370e7-147">기존 구현은 기본 구현을 *상속*합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-147">Existing implementations *inherit* the default implementation.</span></span> <span data-ttu-id="370e7-148">또한 이 기능을 사용하여 C#은 유사한 기능을 지원하는 Android 또는 Swift를 대상으로 하는 API와 상호 운용됩니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-148">This feature also enables C# to interoperate with APIs that target Android or Swift, which support similar features.</span></span> <span data-ttu-id="370e7-149">또한 기본 인터페이스 멤버는 "특성" 언어 기능과 유사한 시나리오를 사용하도록 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-149">Default interface members also enable scenarios similar to a "traits" language feature.</span></span>
 
-<span data-ttu-id="2b81b-148">기본 인터페이스 멤버는 많은 시나리오와 언어 요소에 영향을 줍니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-148">Default interface members affects many scenarios and language elements.</span></span> <span data-ttu-id="2b81b-149">첫 번째 자습서에서는 [기본 구현으로 인터페이스 업데이트](../tutorials/default-interface-members-versions.md)에 대해 다룹니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-149">Our first tutorial covers [updating an interface with default implementations](../tutorials/default-interface-members-versions.md).</span></span> <span data-ttu-id="2b81b-150">다른 자습서 및 참조 업데이트는 일반 릴리스 시점에 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-150">Other tutorials and reference updates are coming in time for general release.</span></span>
+<span data-ttu-id="370e7-150">기본 인터페이스 멤버는 많은 시나리오와 언어 요소에 영향을 줍니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-150">Default interface members affects many scenarios and language elements.</span></span> <span data-ttu-id="370e7-151">첫 번째 자습서에서는 [기본 구현으로 인터페이스 업데이트](../tutorials/default-interface-members-versions.md)에 대해 다룹니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-151">Our first tutorial covers [updating an interface with default implementations](../tutorials/default-interface-members-versions.md).</span></span> <span data-ttu-id="370e7-152">다른 자습서 및 참조 업데이트는 일반 릴리스 시점에 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-152">Other tutorials and reference updates are coming in time for general release.</span></span>
 
-## <a name="more-patterns-in-more-places"></a><span data-ttu-id="2b81b-151">더 많은 곳에서 더 많은 패턴 사용</span><span class="sxs-lookup"><span data-stu-id="2b81b-151">More patterns in more places</span></span>
+## <a name="more-patterns-in-more-places"></a><span data-ttu-id="370e7-153">더 많은 곳에서 더 많은 패턴 사용</span><span class="sxs-lookup"><span data-stu-id="370e7-153">More patterns in more places</span></span>
 
-<span data-ttu-id="2b81b-152">**패턴 일치**는 관련이 있으나 유형이 다른 데이터에서 셰이프 종속 기능을 사용할 수 있도록 지원하는 도구를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-152">**Pattern matching** gives tools to provide shape-dependent functionality across related but different kinds of data.</span></span> <span data-ttu-id="2b81b-153">C# 7.0부터 [`is`](../language-reference/keywords/is.md) 식과 [`switch`](../language-reference/keywords/switch.md) 문을 사용하는 형식 패턴 및 상수 패턴을 위한 구문이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-153">C# 7.0 introduced syntax for type patterns and constant patterns by using the [`is`](../language-reference/keywords/is.md) expression and the [`switch`](../language-reference/keywords/switch.md) statement.</span></span> <span data-ttu-id="2b81b-154">이 기능은 데이터와 기능을 각각 별도로 구분하는 프로그래밍 패러다임을 지원하기 위한 조심스러운 첫 번째 단계입니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-154">These features represented the first tentative steps toward supporting programming paradigms where data and functionality live apart.</span></span> <span data-ttu-id="2b81b-155">업계에서 마이크로 서비스와 기타 클라우드 기반 아키텍처를 도입하는 사례가 늘어남에 따라 다른 언어 도구에 대한 요구가 높아졌습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-155">As the industry moves toward more microservices and other cloud-based architectures, other language tools are needed.</span></span>
+<span data-ttu-id="370e7-154">**패턴 일치**는 관련이 있으나 유형이 다른 데이터에서 셰이프 종속 기능을 사용할 수 있도록 지원하는 도구를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-154">**Pattern matching** gives tools to provide shape-dependent functionality across related but different kinds of data.</span></span> <span data-ttu-id="370e7-155">C# 7.0부터 [`is`](../language-reference/keywords/is.md) 식과 [`switch`](../language-reference/keywords/switch.md) 문을 사용하는 형식 패턴 및 상수 패턴을 위한 구문이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-155">C# 7.0 introduced syntax for type patterns and constant patterns by using the [`is`](../language-reference/keywords/is.md) expression and the [`switch`](../language-reference/keywords/switch.md) statement.</span></span> <span data-ttu-id="370e7-156">이 기능은 데이터와 기능을 각각 별도로 구분하는 프로그래밍 패러다임을 지원하기 위한 조심스러운 첫 번째 단계입니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-156">These features represented the first tentative steps toward supporting programming paradigms where data and functionality live apart.</span></span> <span data-ttu-id="370e7-157">업계에서 마이크로 서비스와 기타 클라우드 기반 아키텍처를 도입하는 사례가 늘어남에 따라 다른 언어 도구에 대한 요구가 높아졌습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-157">As the industry moves toward more microservices and other cloud-based architectures, other language tools are needed.</span></span>
 
-<span data-ttu-id="2b81b-156">C# 8.0은 코드의 더 많은 곳에서 더 많은 패턴 식을 사용할 수 있도록 이 용어를 확대합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-156">C# 8.0 expands this vocabulary so you can use more pattern expressions in more places in your code.</span></span> <span data-ttu-id="2b81b-157">데이터와 기능을 각각 별도로 구분하는 경우 이러한 기능을 고려해 보시기 바랍니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-157">Consider these features when your data and functionality are separate.</span></span> <span data-ttu-id="2b81b-158">알고리즘이 개체의 런타임 형식이 아닌 다른 요소에 종속되는 경우 패턴 일치를 고려해 보시기 바랍니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-158">Consider pattern matching when your algorithms depend on a fact other than the runtime type of an object.</span></span> <span data-ttu-id="2b81b-159">이러한 기법은 디자인을 표현할 추가적인 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-159">These techniques provide another way to express designs.</span></span>
+<span data-ttu-id="370e7-158">C# 8.0은 코드의 더 많은 곳에서 더 많은 패턴 식을 사용할 수 있도록 이 용어를 확대합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-158">C# 8.0 expands this vocabulary so you can use more pattern expressions in more places in your code.</span></span> <span data-ttu-id="370e7-159">데이터와 기능을 각각 별도로 구분하는 경우 이러한 기능을 고려해 보시기 바랍니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-159">Consider these features when your data and functionality are separate.</span></span> <span data-ttu-id="370e7-160">알고리즘이 개체의 런타임 형식이 아닌 다른 요소에 종속되는 경우 패턴 일치를 고려해 보시기 바랍니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-160">Consider pattern matching when your algorithms depend on a fact other than the runtime type of an object.</span></span> <span data-ttu-id="370e7-161">이러한 기법은 디자인을 표현할 추가적인 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-161">These techniques provide another way to express designs.</span></span>
 
-<span data-ttu-id="2b81b-160">C# 8.0에는 더 많은 곳에서 패턴을 사용할 수 있도록 지원하는 기능에 더해 **재귀 패턴**도 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-160">In addition to new patterns in new places, C# 8.0 adds **recursive patterns**.</span></span> <span data-ttu-id="2b81b-161">패턴 식의 결과는 식입니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-161">The result of any pattern expression is an expression.</span></span> <span data-ttu-id="2b81b-162">재귀 패턴은 다른 패턴 식의 출력에 적용된 패턴 식입니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-162">A recursive pattern is simply a pattern expression applied to the output of another pattern expression.</span></span>
+<span data-ttu-id="370e7-162">C# 8.0에는 더 많은 곳에서 패턴을 사용할 수 있도록 지원하는 기능에 더해 **재귀 패턴**도 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-162">In addition to new patterns in new places, C# 8.0 adds **recursive patterns**.</span></span> <span data-ttu-id="370e7-163">패턴 식의 결과는 식입니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-163">The result of any pattern expression is an expression.</span></span> <span data-ttu-id="370e7-164">재귀 패턴은 다른 패턴 식의 출력에 적용된 패턴 식입니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-164">A recursive pattern is simply a pattern expression applied to the output of another pattern expression.</span></span>
 
-### <a name="switch-expressions"></a><span data-ttu-id="2b81b-163">Switch 식</span><span class="sxs-lookup"><span data-stu-id="2b81b-163">switch expressions</span></span>
+### <a name="switch-expressions"></a><span data-ttu-id="370e7-165">Switch 식</span><span class="sxs-lookup"><span data-stu-id="370e7-165">switch expressions</span></span>
 
-<span data-ttu-id="2b81b-164">[`switch`](../language-reference/keywords/switch.md) 문의 결과 각각의 `case` 블록에서 값이 생성되는 경우가 종종 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-164">Often, a [`switch`](../language-reference/keywords/switch.md) statement produces a value in each of its `case` blocks.</span></span> <span data-ttu-id="2b81b-165">**Switch 식**을 사용하면 더욱더 간결한 식 구문을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-165">**Switch expressions** enable you to use more concise expression syntax.</span></span> <span data-ttu-id="2b81b-166">`case` 및 `break` 키워드를 반복적으로 사용하고 중괄호를 적용해야 하는 경우가 줄어듭니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-166">There are fewer repetitive `case` and `break` keywords, and fewer curly braces.</span></span>  <span data-ttu-id="2b81b-167">다음과 같이 무지개의 색을 나열하는 enum 예를 살펴보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-167">As an example, consider the following enum that lists the colors of the rainbow:</span></span>
+<span data-ttu-id="370e7-166">[`switch`](../language-reference/keywords/switch.md) 문의 결과 각각의 `case` 블록에서 값이 생성되는 경우가 종종 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-166">Often, a [`switch`](../language-reference/keywords/switch.md) statement produces a value in each of its `case` blocks.</span></span> <span data-ttu-id="370e7-167">**Switch 식**을 사용하면 더욱더 간결한 식 구문을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-167">**Switch expressions** enable you to use more concise expression syntax.</span></span> <span data-ttu-id="370e7-168">`case` 및 `break` 키워드를 반복적으로 사용하고 중괄호를 적용해야 하는 경우가 줄어듭니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-168">There are fewer repetitive `case` and `break` keywords, and fewer curly braces.</span></span>  <span data-ttu-id="370e7-169">다음과 같이 무지개의 색을 나열하는 enum 예를 살펴보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-169">As an example, consider the following enum that lists the colors of the rainbow:</span></span>
 
 ```csharp
 public enum Rainbow
@@ -115,7 +117,7 @@ public enum Rainbow
 }
 ```
 
-<span data-ttu-id="2b81b-168">애플리케이션이 `R`, `G` 및 `B` 구성 요소에서 생성된 `RGBColor` 형식을 정의한 경우 switch 식을 포함하는 다음 메서드를 사용하여 `Rainbow` 값을 RGB 값으로 변환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-168">If your application defined an `RGBColor` type that is constructed from the `R`, `G` and `B` components, you could convert a `Rainbow` value to its RGB values using the following method containing a switch expression:</span></span>
+<span data-ttu-id="370e7-170">애플리케이션이 `R`, `G` 및 `B` 구성 요소에서 생성된 `RGBColor` 형식을 정의한 경우 switch 식을 포함하는 다음 메서드를 사용하여 `Rainbow` 값을 RGB 값으로 변환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-170">If your application defined an `RGBColor` type that is constructed from the `R`, `G` and `B` components, you could convert a `Rainbow` value to its RGB values using the following method containing a switch expression:</span></span>
 
 ```csharp
 public static RGBColor FromRainbow(Rainbow colorBand) =>
@@ -132,14 +134,14 @@ public static RGBColor FromRainbow(Rainbow colorBand) =>
     };
 ```
 
-<span data-ttu-id="2b81b-169">여기에서 몇 가지 구문 개선 사항을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-169">There are several syntax improvements here:</span></span>
+<span data-ttu-id="370e7-171">여기에서 몇 가지 구문 개선 사항을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-171">There are several syntax improvements here:</span></span>
 
-- <span data-ttu-id="2b81b-170">변수가 `switch` 키워드 앞에 옵니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-170">The variable comes before the `switch` keyword.</span></span> <span data-ttu-id="2b81b-171">이처럼 순서가 변경된 결과 switch 식과 switch 문을 눈으로 구분하기가 쉬워졌습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-171">The different order makes it visually easy to distinguish the switch expression from the switch statement.</span></span>
-- <span data-ttu-id="2b81b-172">`case` 및 `:` 요소가 `=>`으로 대체되어</span><span class="sxs-lookup"><span data-stu-id="2b81b-172">The `case` and `:` elements are replaced with `=>`.</span></span> <span data-ttu-id="2b81b-173">간결성과 직관성이 향상되었습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-173">It's more concise and intuitive.</span></span>
-- <span data-ttu-id="2b81b-174">`default` 케이스가 `_` 무시 항목으로 대체되었습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-174">The `default` case is replaced with a `_` discard.</span></span>
-- <span data-ttu-id="2b81b-175">본문이 문이 아닌 식입니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-175">The bodies are expressions, not statements.</span></span>
+- <span data-ttu-id="370e7-172">변수가 `switch` 키워드 앞에 옵니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-172">The variable comes before the `switch` keyword.</span></span> <span data-ttu-id="370e7-173">이처럼 순서가 변경된 결과 switch 식과 switch 문을 눈으로 구분하기가 쉬워졌습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-173">The different order makes it visually easy to distinguish the switch expression from the switch statement.</span></span>
+- <span data-ttu-id="370e7-174">`case` 및 `:` 요소가 `=>`으로 대체되어</span><span class="sxs-lookup"><span data-stu-id="370e7-174">The `case` and `:` elements are replaced with `=>`.</span></span> <span data-ttu-id="370e7-175">간결성과 직관성이 향상되었습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-175">It's more concise and intuitive.</span></span>
+- <span data-ttu-id="370e7-176">`default` 케이스가 `_` 무시 항목으로 대체되었습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-176">The `default` case is replaced with a `_` discard.</span></span>
+- <span data-ttu-id="370e7-177">본문이 문이 아닌 식입니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-177">The bodies are expressions, not statements.</span></span>
 
-<span data-ttu-id="2b81b-176">기존의 `switch` 문을 사용하는 동일한 코드와 비교해 보세요.</span><span class="sxs-lookup"><span data-stu-id="2b81b-176">Contrast that with the equivalent code using the classic `switch` statement:</span></span>
+<span data-ttu-id="370e7-178">기존의 `switch` 문을 사용하는 동일한 코드와 비교해 보세요.</span><span class="sxs-lookup"><span data-stu-id="370e7-178">Contrast that with the equivalent code using the classic `switch` statement:</span></span>
 
 ```csharp
 public static RGBColor FromRainbowClassic(Rainbow colorBand)
@@ -166,9 +168,9 @@ public static RGBColor FromRainbowClassic(Rainbow colorBand)
 }
 ```
 
-### <a name="property-patterns"></a><span data-ttu-id="2b81b-177">속성 패턴</span><span class="sxs-lookup"><span data-stu-id="2b81b-177">Property patterns</span></span>
+### <a name="property-patterns"></a><span data-ttu-id="370e7-179">속성 패턴</span><span class="sxs-lookup"><span data-stu-id="370e7-179">Property patterns</span></span>
 
-<span data-ttu-id="2b81b-178">**속성 패턴**을 사용하면 검사 대상 개체의 속성을 일치시킬 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-178">The **property pattern** enables you to match on properties of the object examined.</span></span> <span data-ttu-id="2b81b-179">구매자의 주소를 기준으로 판매세를 계산하는 전자상거래 사이트를 예로 들어 보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-179">Consider an eCommerce site that must compute sales tax based on the buyer's address.</span></span> <span data-ttu-id="2b81b-180">판매세 계산은 `Address` 클래스의 주요 임무가 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-180">That computation is not a core responsibility of an `Address` class.</span></span> <span data-ttu-id="2b81b-181">판매세는 시간이 흐름에 따라 주소 형식이 변경되는 빈도보다 자주 변경될 가능성이 큽니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-181">It will change over time, likely more often than address format changes.</span></span> <span data-ttu-id="2b81b-182">판매세의 금액은 주소의 `State` 속성에 종속됩니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-182">The amount of sales tax depends on the `State` property of the address.</span></span> <span data-ttu-id="2b81b-183">다음 메서드는 속성 패턴을 사용하여 주소 및 가격으로부터 판매세를 컴퓨팅합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-183">The following method uses the property pattern to compute the sales tax from the address and the price:</span></span>
+<span data-ttu-id="370e7-180">**속성 패턴**을 사용하면 검사 대상 개체의 속성을 일치시킬 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-180">The **property pattern** enables you to match on properties of the object examined.</span></span> <span data-ttu-id="370e7-181">구매자의 주소를 기준으로 판매세를 계산하는 전자상거래 사이트를 예로 들어 보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-181">Consider an eCommerce site that must compute sales tax based on the buyer's address.</span></span> <span data-ttu-id="370e7-182">판매세 계산은 `Address` 클래스의 주요 임무가 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-182">That computation is not a core responsibility of an `Address` class.</span></span> <span data-ttu-id="370e7-183">판매세는 시간이 흐름에 따라 주소 형식이 변경되는 빈도보다 자주 변경될 가능성이 큽니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-183">It will change over time, likely more often than address format changes.</span></span> <span data-ttu-id="370e7-184">판매세의 금액은 주소의 `State` 속성에 종속됩니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-184">The amount of sales tax depends on the `State` property of the address.</span></span> <span data-ttu-id="370e7-185">다음 메서드는 속성 패턴을 사용하여 주소 및 가격으로부터 판매세를 컴퓨팅합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-185">The following method uses the property pattern to compute the sales tax from the address and the price:</span></span>
 
 ```csharp
 public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
@@ -182,11 +184,11 @@ public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
     };
 ```
 
-<span data-ttu-id="2b81b-184">패턴 일치는 이 알고리즘을 표현하기 위한 더 간결한 구문을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-184">Pattern matching creates a concise syntax for expressing this algorithm.</span></span>
+<span data-ttu-id="370e7-186">패턴 일치는 이 알고리즘을 표현하기 위한 더 간결한 구문을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-186">Pattern matching creates a concise syntax for expressing this algorithm.</span></span>
 
-### <a name="tuple-patterns"></a><span data-ttu-id="2b81b-185">튜플 패턴</span><span class="sxs-lookup"><span data-stu-id="2b81b-185">Tuple patterns</span></span>
+### <a name="tuple-patterns"></a><span data-ttu-id="370e7-187">튜플 패턴</span><span class="sxs-lookup"><span data-stu-id="370e7-187">Tuple patterns</span></span>
 
-<span data-ttu-id="2b81b-186">일부 알고리즘은 여러 입력을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-186">Some algorithms depend on multiple inputs.</span></span> <span data-ttu-id="2b81b-187">**튜플 패턴**을 사용하면 [튜플](../tuples.md)로 표현되는 여러 값에 따라 전환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-187">**Tuple patterns** allow you to switch based on multiple values expressed as a [tuple](../tuples.md).</span></span>  <span data-ttu-id="2b81b-188">다음 코드는 게임 ‘가위, 바위, 보’에 대한 전환 식을 보여 줍니다. </span><span class="sxs-lookup"><span data-stu-id="2b81b-188">The following code shows a switch expression for the game *rock, paper, scissors*:</span></span>
+<span data-ttu-id="370e7-188">일부 알고리즘은 여러 입력을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-188">Some algorithms depend on multiple inputs.</span></span> <span data-ttu-id="370e7-189">**튜플 패턴**을 사용하면 [튜플](../tuples.md)로 표현되는 여러 값에 따라 전환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-189">**Tuple patterns** allow you to switch based on multiple values expressed as a [tuple](../tuples.md).</span></span>  <span data-ttu-id="370e7-190">다음 코드는 게임 ‘가위, 바위, 보’에 대한 전환 식을 보여 줍니다. </span><span class="sxs-lookup"><span data-stu-id="370e7-190">The following code shows a switch expression for the game *rock, paper, scissors*:</span></span>
 
 ```csharp
 public static string RockPaperScissors(string first, string second)
@@ -202,11 +204,11 @@ public static string RockPaperScissors(string first, string second)
     };
 ```
 
-<span data-ttu-id="2b81b-189">메시지는 승자를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-189">The messages indicate the winner.</span></span> <span data-ttu-id="2b81b-190">버리기 사례는 동률의 세 가지 조합 또는 기타 텍스트 입력을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-190">The discard case represents the three combinations for ties, or other text inputs.</span></span>
+<span data-ttu-id="370e7-191">메시지는 승자를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-191">The messages indicate the winner.</span></span> <span data-ttu-id="370e7-192">버리기 사례는 동률의 세 가지 조합 또는 기타 텍스트 입력을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-192">The discard case represents the three combinations for ties, or other text inputs.</span></span>
 
-### <a name="positional-patterns"></a><span data-ttu-id="2b81b-191">위치 패턴</span><span class="sxs-lookup"><span data-stu-id="2b81b-191">Positional patterns</span></span>
+### <a name="positional-patterns"></a><span data-ttu-id="370e7-193">위치 패턴</span><span class="sxs-lookup"><span data-stu-id="370e7-193">Positional patterns</span></span>
 
-<span data-ttu-id="2b81b-192">일부 형식에는 해당 속성을 불연속 변수로 분해하는 `Deconstruct` 메서드가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-192">Some types include a `Deconstruct` method that deconstructs its properties into discrete variables.</span></span> <span data-ttu-id="2b81b-193">`Deconstruct` 메서드에 액세스할 수 있는 경우 **위치 패턴**을 사용하여 개체의 속성을 검사하고 패턴에 해당 속성을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-193">When a `Deconstruct` method is accessible, you can use **positional patterns** to inspect properties of the object and use those properties for a pattern.</span></span>  <span data-ttu-id="2b81b-194">`X` 및 `Y`의 불연속 변수를 만들려면 `Deconstruct` 메서드를 포함하는 다음 `Point` 클래스를 사용하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-194">Consider the following `Point` class that includes a `Deconstruct` method to create discrete variables for `X` and `Y`:</span></span>
+<span data-ttu-id="370e7-194">일부 형식에는 해당 속성을 불연속 변수로 분해하는 `Deconstruct` 메서드가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-194">Some types include a `Deconstruct` method that deconstructs its properties into discrete variables.</span></span> <span data-ttu-id="370e7-195">`Deconstruct` 메서드에 액세스할 수 있는 경우 **위치 패턴**을 사용하여 개체의 속성을 검사하고 패턴에 해당 속성을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-195">When a `Deconstruct` method is accessible, you can use **positional patterns** to inspect properties of the object and use those properties for a pattern.</span></span>  <span data-ttu-id="370e7-196">`X` 및 `Y`의 불연속 변수를 만들려면 `Deconstruct` 메서드를 포함하는 다음 `Point` 클래스를 사용하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-196">Consider the following `Point` class that includes a `Deconstruct` method to create discrete variables for `X` and `Y`:</span></span>
 
 ```csharp
 public class Point
@@ -221,7 +223,7 @@ public class Point
 }
 ```
 
-<span data-ttu-id="2b81b-195">또한 사분면의 다양한 위치를 나타내는 다음 열거형을 고려하세요.</span><span class="sxs-lookup"><span data-stu-id="2b81b-195">Additionally, consider the following enum that represents various positions of a quadrant:</span></span>
+<span data-ttu-id="370e7-197">또한 사분면의 다양한 위치를 나타내는 다음 열거형을 고려하세요.</span><span class="sxs-lookup"><span data-stu-id="370e7-197">Additionally, consider the following enum that represents various positions of a quadrant:</span></span>
 
 ```csharp
 public enum Quadrant
@@ -236,7 +238,7 @@ public enum Quadrant
 }
 ```
 
-<span data-ttu-id="2b81b-196">다음 메서드는 **위치 패턴**을 사용하여 `x`와 `y`의 값을 추출합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-196">The following method uses the **positional pattern** to extract the values of `x` and `y`.</span></span> <span data-ttu-id="2b81b-197">그런 다음, `when` 절을 사용하여 점의 `Quadrant`를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-197">Then, it uses a `when` clause to determine the `Quadrant` of the point:</span></span>
+<span data-ttu-id="370e7-198">다음 메서드는 **위치 패턴**을 사용하여 `x`와 `y`의 값을 추출합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-198">The following method uses the **positional pattern** to extract the values of `x` and `y`.</span></span> <span data-ttu-id="370e7-199">그런 다음, `when` 절을 사용하여 점의 `Quadrant`를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-199">Then, it uses a `when` clause to determine the `Quadrant` of the point:</span></span>
 
 ```csharp
 static Quadrant GetQuadrant(Point point) => point switch
@@ -251,13 +253,13 @@ static Quadrant GetQuadrant(Point point) => point switch
 };
 ```
 
-<span data-ttu-id="2b81b-198">이전 switch의 버리기 패턴은 `x` 또는 `y` 중 하나만 0인 경우에 일치합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-198">The discard pattern in the preceding switch matches when either `x` or `y` is 0, but not both.</span></span> <span data-ttu-id="2b81b-199">expression 식은 항상 값을 생성하거나 예외를 throw해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-199">A switch expression must either produce a value or throw an exception.</span></span> <span data-ttu-id="2b81b-200">일치하는 케이스가 없으면 switch 식이 예외를 throw합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-200">If none of the cases match, the switch expression throws an exception.</span></span> <span data-ttu-id="2b81b-201">switch 식이 가능한 모든 케이스를 포함하지 않으면 컴파일러에서 경고가 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-201">The compiler generates a warning for you if you do not cover all possible cases in your switch expression.</span></span>
+<span data-ttu-id="370e7-200">이전 switch의 버리기 패턴은 `x` 또는 `y` 중 하나만 0인 경우에 일치합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-200">The discard pattern in the preceding switch matches when either `x` or `y` is 0, but not both.</span></span> <span data-ttu-id="370e7-201">expression 식은 항상 값을 생성하거나 예외를 throw해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-201">A switch expression must either produce a value or throw an exception.</span></span> <span data-ttu-id="370e7-202">일치하는 케이스가 없으면 switch 식이 예외를 throw합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-202">If none of the cases match, the switch expression throws an exception.</span></span> <span data-ttu-id="370e7-203">switch 식이 가능한 모든 케이스를 포함하지 않으면 컴파일러에서 경고가 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-203">The compiler generates a warning for you if you do not cover all possible cases in your switch expression.</span></span>
 
-<span data-ttu-id="2b81b-202">이 [패턴 일치에 대한 고급 자습서](../tutorials/pattern-matching.md)에서 패턴 일치 기법을 탐색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-202">You can explore pattern matching techniques in this [advanced tutorial on pattern matching](../tutorials/pattern-matching.md).</span></span>
+<span data-ttu-id="370e7-204">이 [패턴 일치에 대한 고급 자습서](../tutorials/pattern-matching.md)에서 패턴 일치 기법을 탐색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-204">You can explore pattern matching techniques in this [advanced tutorial on pattern matching](../tutorials/pattern-matching.md).</span></span>
 
-## <a name="using-declarations"></a><span data-ttu-id="2b81b-203">using 선언</span><span class="sxs-lookup"><span data-stu-id="2b81b-203">using declarations</span></span>
+## <a name="using-declarations"></a><span data-ttu-id="370e7-205">using 선언</span><span class="sxs-lookup"><span data-stu-id="370e7-205">using declarations</span></span>
 
-<span data-ttu-id="2b81b-204">**using 선언**은 `using` 키워드 뒤에 오는 변수 선언입니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-204">A **using declaration** is a variable declaration preceded by the `using` keyword.</span></span> <span data-ttu-id="2b81b-205">using 선언은 선언되는 변수를 바깥쪽 범위의 끝에서 삭제하라고 컴파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-205">It tells the compiler that the variable being declared should be disposed at the end of the enclosing scope.</span></span> <span data-ttu-id="2b81b-206">텍스트 파일을 쓰는 다음 코드를 예로 들어 보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-206">For example, consider the following code that writes a text file:</span></span>
+<span data-ttu-id="370e7-206">**using 선언**은 `using` 키워드 뒤에 오는 변수 선언입니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-206">A **using declaration** is a variable declaration preceded by the `using` keyword.</span></span> <span data-ttu-id="370e7-207">using 선언은 선언되는 변수를 바깥쪽 범위의 끝에서 삭제하라고 컴파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-207">It tells the compiler that the variable being declared should be disposed at the end of the enclosing scope.</span></span> <span data-ttu-id="370e7-208">텍스트 파일을 쓰는 다음 코드를 예로 들어 보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-208">For example, consider the following code that writes a text file:</span></span>
 
 ```csharp
 static void WriteLinesToFile(IEnumerable<string> lines)
@@ -274,7 +276,7 @@ static void WriteLinesToFile(IEnumerable<string> lines)
 }
 ```
 
-<span data-ttu-id="2b81b-207">위 예에서 메서드의 닫는 중괄호에 도달하면 파일이 삭제됩니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-207">In the preceding example, the file is disposed when the closing brace for the method is reached.</span></span> <span data-ttu-id="2b81b-208">이 지점이 바로 `file`이 선언된 범위의 끝입니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-208">That's the end of the scope in which `file` is declared.</span></span> <span data-ttu-id="2b81b-209">위 코드는 기존의 [using 문](../language-reference/keywords/using-statement.md) 문을 사용하는 다음 코드와 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-209">The preceding code is equivalent to the following code that uses the classic [using statement](../language-reference/keywords/using-statement.md):</span></span>
+<span data-ttu-id="370e7-209">위 예에서 메서드의 닫는 중괄호에 도달하면 파일이 삭제됩니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-209">In the preceding example, the file is disposed when the closing brace for the method is reached.</span></span> <span data-ttu-id="370e7-210">이 지점이 바로 `file`이 선언된 범위의 끝입니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-210">That's the end of the scope in which `file` is declared.</span></span> <span data-ttu-id="370e7-211">위 코드는 기존의 [using 문](../language-reference/keywords/using-statement.md) 문을 사용하는 다음 코드와 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-211">The preceding code is equivalent to the following code that uses the classic [using statement](../language-reference/keywords/using-statement.md):</span></span>
 
 ```csharp
 static void WriteLinesToFile(IEnumerable<string> lines)
@@ -292,15 +294,15 @@ static void WriteLinesToFile(IEnumerable<string> lines)
 }
 ```
 
-<span data-ttu-id="2b81b-210">위 예에서 `using` 문의 닫는 중괄호에 도달하면 파일이 삭제됩니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-210">In the preceding example, the file is disposed when the closing brace associated with the `using` statement is reached.</span></span>
+<span data-ttu-id="370e7-212">위 예에서 `using` 문의 닫는 중괄호에 도달하면 파일이 삭제됩니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-212">In the preceding example, the file is disposed when the closing brace associated with the `using` statement is reached.</span></span>
 
-<span data-ttu-id="2b81b-211">두 경우 모두 컴파일러가 `Dispose()`를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-211">In both cases, the compiler generates the call to `Dispose()`.</span></span> <span data-ttu-id="2b81b-212">`using` 문의 식을 삭제할 수 없는 경우 컴파일러에서 오류를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-212">The compiler generates an error if the expression in the `using` statement is not disposable.</span></span>
+<span data-ttu-id="370e7-213">두 경우 모두 컴파일러가 `Dispose()`를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-213">In both cases, the compiler generates the call to `Dispose()`.</span></span> <span data-ttu-id="370e7-214">`using` 문의 식을 삭제할 수 없는 경우 컴파일러에서 오류를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-214">The compiler generates an error if the expression in the `using` statement is not disposable.</span></span>
 
-## <a name="static-local-functions"></a><span data-ttu-id="2b81b-213">정적 로컬 함수</span><span class="sxs-lookup"><span data-stu-id="2b81b-213">Static local functions</span></span>
+## <a name="static-local-functions"></a><span data-ttu-id="370e7-215">정적 로컬 함수</span><span class="sxs-lookup"><span data-stu-id="370e7-215">Static local functions</span></span>
 
-<span data-ttu-id="2b81b-214">이제 로컬 함수가 바깥쪽 범위의 변수를 참조하는 경우가 없도록 로컬 함수에 `static` 한정자를 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-214">You can now add the `static` modifier to local functions to ensure that local function doesn't capture (reference) any variables from the enclosing scope.</span></span> <span data-ttu-id="2b81b-215">이렇게 하면 `CS8421` "정적 로컬 함수는 \<variable>에 대한 참조를 포함할 수 없습니다."를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-215">Doing so generates `CS8421`, "A static local function can't contain a reference to \<variable>."</span></span> 
+<span data-ttu-id="370e7-216">이제 로컬 함수가 바깥쪽 범위의 변수를 참조하는 경우가 없도록 로컬 함수에 `static` 한정자를 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-216">You can now add the `static` modifier to local functions to ensure that local function doesn't capture (reference) any variables from the enclosing scope.</span></span> <span data-ttu-id="370e7-217">이렇게 하면 `CS8421` "정적 로컬 함수는 \<variable>에 대한 참조를 포함할 수 없습니다."를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-217">Doing so generates `CS8421`, "A static local function can't contain a reference to \<variable>."</span></span> 
 
-<span data-ttu-id="2b81b-216">다음과 같은 코드를 생각해 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-216">Consider the following code.</span></span> <span data-ttu-id="2b81b-217">여기서 로컬 함수 `LocalFunction`은 바깥쪽 범위(메서드 `M`)에서 선언된 변수 `y`에 액세스합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-217">The local function `LocalFunction` accesses the variable `y`, declared in the enclosing scope (the method `M`).</span></span> <span data-ttu-id="2b81b-218">따라서 `LocalFunction`을 `static` 한정자와 함께 선언할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-218">Therefore, `LocalFunction` can't be declared with the `static` modifier:</span></span>
+<span data-ttu-id="370e7-218">다음과 같은 코드를 생각해 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-218">Consider the following code.</span></span> <span data-ttu-id="370e7-219">여기서 로컬 함수 `LocalFunction`은 바깥쪽 범위(메서드 `M`)에서 선언된 변수 `y`에 액세스합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-219">The local function `LocalFunction` accesses the variable `y`, declared in the enclosing scope (the method `M`).</span></span> <span data-ttu-id="370e7-220">따라서 `LocalFunction`을 `static` 한정자와 함께 선언할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-220">Therefore, `LocalFunction` can't be declared with the `static` modifier:</span></span>
 
 ```csharp
 int M()
@@ -313,7 +315,7 @@ int M()
 }
 ```
 
-<span data-ttu-id="2b81b-219">다음 코드에는 정적 로컬 함수가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-219">The following code contains a static local function.</span></span> <span data-ttu-id="2b81b-220">여기서 로컬 함수는 바깥쪽 범위의 변수에 액세스하지 않으므로 정적이 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-220">It can be static because it doesn't access any variables in the enclosing scope:</span></span>
+<span data-ttu-id="370e7-221">다음 코드에는 정적 로컬 함수가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-221">The following code contains a static local function.</span></span> <span data-ttu-id="370e7-222">여기서 로컬 함수는 바깥쪽 범위의 변수에 액세스하지 않으므로 정적이 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-222">It can be static because it doesn't access any variables in the enclosing scope:</span></span>
 
 ```csharp
 int M()
@@ -326,29 +328,29 @@ int M()
 }
 ```
 
-## <a name="disposable-ref-structs"></a><span data-ttu-id="2b81b-221">삭제 가능한 ref struct</span><span class="sxs-lookup"><span data-stu-id="2b81b-221">Disposable ref structs</span></span>
+## <a name="disposable-ref-structs"></a><span data-ttu-id="370e7-223">삭제 가능한 ref struct</span><span class="sxs-lookup"><span data-stu-id="370e7-223">Disposable ref structs</span></span>
 
-<span data-ttu-id="2b81b-222">`ref` 한정자와 함께 선언된 `struct`는 인터페이스를 구현할 수 없으므로 <xref:System.IDisposable>을 구현할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-222">A `struct` declared with the `ref` modifier may not implement any interfaces and so cannot implement <xref:System.IDisposable>.</span></span> <span data-ttu-id="2b81b-223">따라서 `ref struct`가 삭제 가능해지려면 액세스 가능한 `void Dispose()` 메서드를 가져야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-223">Therefore, to enable a `ref struct` to be disposed, it must have an accessible `void Dispose()` method.</span></span> <span data-ttu-id="2b81b-224">이것은 `readonly ref struct` 선언에도 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-224">This also applies to `readonly ref struct` declarations.</span></span>
+<span data-ttu-id="370e7-224">`ref` 한정자와 함께 선언된 `struct`는 인터페이스를 구현할 수 없으므로 <xref:System.IDisposable>을 구현할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-224">A `struct` declared with the `ref` modifier may not implement any interfaces and so cannot implement <xref:System.IDisposable>.</span></span> <span data-ttu-id="370e7-225">따라서 `ref struct`가 삭제 가능해지려면 액세스 가능한 `void Dispose()` 메서드를 가져야 합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-225">Therefore, to enable a `ref struct` to be disposed, it must have an accessible `void Dispose()` method.</span></span> <span data-ttu-id="370e7-226">이것은 `readonly ref struct` 선언에도 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-226">This also applies to `readonly ref struct` declarations.</span></span>
 
-## <a name="nullable-reference-types"></a><span data-ttu-id="2b81b-225">nullable 참조 형식</span><span class="sxs-lookup"><span data-stu-id="2b81b-225">Nullable reference types</span></span>
+## <a name="nullable-reference-types"></a><span data-ttu-id="370e7-227">nullable 참조 형식</span><span class="sxs-lookup"><span data-stu-id="370e7-227">Nullable reference types</span></span>
 
-<span data-ttu-id="2b81b-226">nullable 주석 컨텍스트에서 참조 형식의 변수는 모두 **nullable이 아닌 참조 형식**으로 간주됩니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-226">Inside a nullable annotation context, any variable of a reference type is considered to be a **nonnullable reference type**.</span></span> <span data-ttu-id="2b81b-227">변수가 null이 될 수 있음을 나타내려면 형식 이름 뒤에 `?`를 추가하여 해당 변수를 **nullable 참조 형식**으로 선언해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-227">If you want to indicate that a variable may be null, you must append the type name with the `?` to declare the variable as a **nullable reference type**.</span></span>
+<span data-ttu-id="370e7-228">nullable 주석 컨텍스트에서 참조 형식의 변수는 모두 **nullable이 아닌 참조 형식**으로 간주됩니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-228">Inside a nullable annotation context, any variable of a reference type is considered to be a **nonnullable reference type**.</span></span> <span data-ttu-id="370e7-229">변수가 null이 될 수 있음을 나타내려면 형식 이름 뒤에 `?`를 추가하여 해당 변수를 **nullable 참조 형식**으로 선언해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-229">If you want to indicate that a variable may be null, you must append the type name with the `?` to declare the variable as a **nullable reference type**.</span></span>
 
-<span data-ttu-id="2b81b-228">nullable이 아닌 참조 형식의 경우, 로컬 변수가 선언될 때 null이 아닌 값으로 초기화되도록 컴파일러가 흐름 분석을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-228">For nonnullable reference types, the compiler uses flow analysis to ensure that local variables are initialized to a non-null value when declared.</span></span> <span data-ttu-id="2b81b-229">필드는 생성 시점에 초기화되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-229">Fields must be initialized during construction.</span></span> <span data-ttu-id="2b81b-230">생성자(있는 경우)를 호출함으로써 또는 이니셜라이저에 의해 변수가 설정되지 않으면 컴파일러에서 경고를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-230">The compiler generates a warning if the variable is not set by a call to any of the available constructors or by an initializer.</span></span> <span data-ttu-id="2b81b-231">또한, nullable이 아닌 참조 형식은 null이 될 수 있는 값에 할당할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-231">Furthermore, nonnullable reference types can't be assigned a value that could be null.</span></span>
+<span data-ttu-id="370e7-230">nullable이 아닌 참조 형식의 경우, 로컬 변수가 선언될 때 null이 아닌 값으로 초기화되도록 컴파일러가 흐름 분석을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-230">For nonnullable reference types, the compiler uses flow analysis to ensure that local variables are initialized to a non-null value when declared.</span></span> <span data-ttu-id="370e7-231">필드는 생성 시점에 초기화되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-231">Fields must be initialized during construction.</span></span> <span data-ttu-id="370e7-232">생성자(있는 경우)를 호출함으로써 또는 이니셜라이저에 의해 변수가 설정되지 않으면 컴파일러에서 경고를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-232">The compiler generates a warning if the variable is not set by a call to any of the available constructors or by an initializer.</span></span> <span data-ttu-id="370e7-233">또한, nullable이 아닌 참조 형식은 null이 될 수 있는 값에 할당할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-233">Furthermore, nonnullable reference types can't be assigned a value that could be null.</span></span>
 
-<span data-ttu-id="2b81b-232">nullable 참조 형식은 할당되지 않았는지 또는 null로 초기화되었는지 검사되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-232">Nullable reference types aren't checked to ensure they aren't assigned or initialized to null.</span></span> <span data-ttu-id="2b81b-233">단, nullable 참조 형식의 변수가 액세스되거나 nullable이 아닌 참조 형식에 할당되기 전에 null에 대해 검사되도록 컴파일러가 흐름 분석을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-233">However, the compiler uses flow analysis to ensure that any variable of a nullable reference type is checked against null before it's accessed or assigned to a nonnullable reference type.</span></span>
+<span data-ttu-id="370e7-234">nullable 참조 형식은 할당되지 않았는지 또는 null로 초기화되었는지 검사되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-234">Nullable reference types aren't checked to ensure they aren't assigned or initialized to null.</span></span> <span data-ttu-id="370e7-235">단, nullable 참조 형식의 변수가 액세스되거나 nullable이 아닌 참조 형식에 할당되기 전에 null에 대해 검사되도록 컴파일러가 흐름 분석을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-235">However, the compiler uses flow analysis to ensure that any variable of a nullable reference type is checked against null before it's accessed or assigned to a nonnullable reference type.</span></span>
 
-<span data-ttu-id="2b81b-234">[nullable 참조 형식](../nullable-references.md) 개요에서 이 기능에 대해 자세히 알아볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-234">You can learn more about the feature in the overview of [nullable reference types](../nullable-references.md).</span></span> <span data-ttu-id="2b81b-235">[nullable 참조 형식 자습서](../tutorials/nullable-reference-types.md)를 활용하여 새 애플리케이션에서 직접 사용해 보세요.</span><span class="sxs-lookup"><span data-stu-id="2b81b-235">Try it yourself in a new application in this [nullable reference types tutorial](../tutorials/nullable-reference-types.md).</span></span> <span data-ttu-id="2b81b-236">[migrating an application to use nullable reference types tutorial](../tutorials/upgrade-to-nullable-references.md)(nullable 참조 형식을 사용할 수 있도록 애플리케이션 마이그레이션 자습서)에서는 nullable 참조 형식을 사용할 수 있도록 기존 코드베이스를 마이그레이션하는 방법을 알아볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-236">Learn about the steps to migrate an existing codebase to make use of nullable reference types in the [migrating an application to use nullable reference types tutorial](../tutorials/upgrade-to-nullable-references.md).</span></span>
+<span data-ttu-id="370e7-236">[nullable 참조 형식](../nullable-references.md) 개요에서 이 기능에 대해 자세히 알아볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-236">You can learn more about the feature in the overview of [nullable reference types](../nullable-references.md).</span></span> <span data-ttu-id="370e7-237">[nullable 참조 형식 자습서](../tutorials/nullable-reference-types.md)를 활용하여 새 애플리케이션에서 직접 사용해 보세요.</span><span class="sxs-lookup"><span data-stu-id="370e7-237">Try it yourself in a new application in this [nullable reference types tutorial](../tutorials/nullable-reference-types.md).</span></span> <span data-ttu-id="370e7-238">[migrating an application to use nullable reference types tutorial](../tutorials/upgrade-to-nullable-references.md)(nullable 참조 형식을 사용할 수 있도록 애플리케이션 마이그레이션 자습서)에서는 nullable 참조 형식을 사용할 수 있도록 기존 코드베이스를 마이그레이션하는 방법을 알아볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-238">Learn about the steps to migrate an existing codebase to make use of nullable reference types in the [migrating an application to use nullable reference types tutorial](../tutorials/upgrade-to-nullable-references.md).</span></span>
 
-## <a name="asynchronous-streams"></a><span data-ttu-id="2b81b-237">비동기 스트림</span><span class="sxs-lookup"><span data-stu-id="2b81b-237">Asynchronous streams</span></span>
+## <a name="asynchronous-streams"></a><span data-ttu-id="370e7-239">비동기 스트림</span><span class="sxs-lookup"><span data-stu-id="370e7-239">Asynchronous streams</span></span>
 
-<span data-ttu-id="2b81b-238">C# 8.0부터 스트림을 비동기식으로 만들고 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-238">Starting with C# 8.0, you can create and consume streams asynchronously.</span></span> <span data-ttu-id="2b81b-239">비동기 스트림을 반환하는 메서드는 다음과 같은 세 가지 속성을 갖습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-239">A method that returns an asynchronous stream has three properties:</span></span>
+<span data-ttu-id="370e7-240">C# 8.0부터 스트림을 비동기식으로 만들고 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-240">Starting with C# 8.0, you can create and consume streams asynchronously.</span></span> <span data-ttu-id="370e7-241">비동기 스트림을 반환하는 메서드는 다음과 같은 세 가지 속성을 갖습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-241">A method that returns an asynchronous stream has three properties:</span></span>
 
-1. <span data-ttu-id="2b81b-240">`async` 한정자를 사용하여 선언되었습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-240">It's declared with the `async` modifier.</span></span>
-1. <span data-ttu-id="2b81b-241"><xref:System.Collections.Generic.IAsyncEnumerable%601>를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-241">It returns an <xref:System.Collections.Generic.IAsyncEnumerable%601>.</span></span>
-1. <span data-ttu-id="2b81b-242">비동기 스트림의 연속적인 요소를 반환하기 위해 메서드가 `yield return` 문을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-242">The method contains `yield return` statements to return successive elements in the asynchronous stream.</span></span>
+1. <span data-ttu-id="370e7-242">`async` 한정자를 사용하여 선언되었습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-242">It's declared with the `async` modifier.</span></span>
+1. <span data-ttu-id="370e7-243"><xref:System.Collections.Generic.IAsyncEnumerable%601>를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-243">It returns an <xref:System.Collections.Generic.IAsyncEnumerable%601>.</span></span>
+1. <span data-ttu-id="370e7-244">비동기 스트림의 연속적인 요소를 반환하기 위해 메서드가 `yield return` 문을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-244">The method contains `yield return` statements to return successive elements in the asynchronous stream.</span></span>
 
-<span data-ttu-id="2b81b-243">비동기 스트림을 사용하려면 스트림의 요소를 열거할 때 `foreach` 키워드 앞에 `await` 키워드를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-243">Consuming an asynchronous stream requires you to add the `await` keyword before the `foreach` keyword when you enumerate the elements of the stream.</span></span> <span data-ttu-id="2b81b-244">`await` 키워드를 추가하려면 비동기 스트림을 열거하는 메서드가 `async` 한정자와 함께 선언되어야 하며, 이 메서드가 `async` 메서드를 허용하는 형식을 반환해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-244">Adding the `await` keyword requires the method that enumerates the asynchronous stream to be declared with the `async` modifier and to return a type allowed for an `async` method.</span></span> <span data-ttu-id="2b81b-245">일반적으로 이는 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601> 형식을 반환해야 함을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-245">Typically that means returning a <xref:System.Threading.Tasks.Task> or <xref:System.Threading.Tasks.Task%601>.</span></span> <span data-ttu-id="2b81b-246"><xref:System.Threading.Tasks.ValueTask> 또는 <xref:System.Threading.Tasks.ValueTask%601> 형식도 가능합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-246">It can also be a <xref:System.Threading.Tasks.ValueTask> or <xref:System.Threading.Tasks.ValueTask%601>.</span></span> <span data-ttu-id="2b81b-247">메서드는 비동기 스트림을 사용할 수도 있고 생성할 수 있습니다. 비동기 스트림을 생성한다는 것은 메서드가 <xref:System.Collections.Generic.IAsyncEnumerable%601>를 반환한다는 것을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-247">A method can both consume and produce an asynchronous stream, which means it would return an <xref:System.Collections.Generic.IAsyncEnumerable%601>.</span></span> <span data-ttu-id="2b81b-248">다음 코드는 0에서 19까지의 시퀀스를 생성합니다. 숫자가 생성되는 각 시점 사이에는 100ms의 대기 시간이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-248">The following code generates a sequence from 0 to 19, waiting 100 ms between generating each number:</span></span>
+<span data-ttu-id="370e7-245">비동기 스트림을 사용하려면 스트림의 요소를 열거할 때 `foreach` 키워드 앞에 `await` 키워드를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-245">Consuming an asynchronous stream requires you to add the `await` keyword before the `foreach` keyword when you enumerate the elements of the stream.</span></span> <span data-ttu-id="370e7-246">`await` 키워드를 추가하려면 비동기 스트림을 열거하는 메서드가 `async` 한정자와 함께 선언되어야 하며, 이 메서드가 `async` 메서드를 허용하는 형식을 반환해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-246">Adding the `await` keyword requires the method that enumerates the asynchronous stream to be declared with the `async` modifier and to return a type allowed for an `async` method.</span></span> <span data-ttu-id="370e7-247">일반적으로 이는 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601> 형식을 반환해야 함을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-247">Typically that means returning a <xref:System.Threading.Tasks.Task> or <xref:System.Threading.Tasks.Task%601>.</span></span> <span data-ttu-id="370e7-248"><xref:System.Threading.Tasks.ValueTask> 또는 <xref:System.Threading.Tasks.ValueTask%601> 형식도 가능합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-248">It can also be a <xref:System.Threading.Tasks.ValueTask> or <xref:System.Threading.Tasks.ValueTask%601>.</span></span> <span data-ttu-id="370e7-249">메서드는 비동기 스트림을 사용할 수도 있고 생성할 수 있습니다. 비동기 스트림을 생성한다는 것은 메서드가 <xref:System.Collections.Generic.IAsyncEnumerable%601>를 반환한다는 것을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-249">A method can both consume and produce an asynchronous stream, which means it would return an <xref:System.Collections.Generic.IAsyncEnumerable%601>.</span></span> <span data-ttu-id="370e7-250">다음 코드는 0에서 19까지의 시퀀스를 생성합니다. 숫자가 생성되는 각 시점 사이에는 100ms의 대기 시간이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-250">The following code generates a sequence from 0 to 19, waiting 100 ms between generating each number:</span></span>
 
 ```csharp
 public static async System.Collections.Generic.IAsyncEnumerable<int> GenerateSequence()
@@ -361,7 +363,7 @@ public static async System.Collections.Generic.IAsyncEnumerable<int> GenerateSeq
 }
 ```
 
-<span data-ttu-id="2b81b-249">`await foreach` 문을 사용하여 시퀀스를 열거합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-249">You would enumerate the sequence using the `await foreach` statement:</span></span>
+<span data-ttu-id="370e7-251">`await foreach` 문을 사용하여 시퀀스를 열거합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-251">You would enumerate the sequence using the `await foreach` statement:</span></span>
 
 ```csharp
 await foreach (var number in GenerateSequence())
@@ -370,23 +372,24 @@ await foreach (var number in GenerateSequence())
 }
 ```
 
-<span data-ttu-id="2b81b-250">[비동기 스트림 생성 및 사용](../tutorials/generate-consume-asynchronous-stream.md) 자습서에서 직접 비동기 스트림을 사용해 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-250">You can try asynchronous streams yourself in our tutorial on [creating and consuming async streams](../tutorials/generate-consume-asynchronous-stream.md).</span></span>
+<span data-ttu-id="370e7-252">[비동기 스트림 생성 및 사용](../tutorials/generate-consume-asynchronous-stream.md) 자습서에서 직접 비동기 스트림을 사용해 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-252">You can try asynchronous streams yourself in our tutorial on [creating and consuming async streams](../tutorials/generate-consume-asynchronous-stream.md).</span></span>
 
-## <a name="indices-and-ranges"></a><span data-ttu-id="2b81b-251">인덱스 및 범위</span><span class="sxs-lookup"><span data-stu-id="2b81b-251">Indices and ranges</span></span>
+## <a name="indices-and-ranges"></a><span data-ttu-id="370e7-253">인덱스 및 범위</span><span class="sxs-lookup"><span data-stu-id="370e7-253">Indices and ranges</span></span>
 
-<span data-ttu-id="2b81b-252">범위와 인덱스는 배열, <xref:System.Span%601> 또는 <xref:System.ReadOnlySpan%601>에서 하위 범위를 지정하는 간결한 구문을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-252">Ranges and indices provide a succinct syntax for specifying subranges in an array, <xref:System.Span%601>, or <xref:System.ReadOnlySpan%601>.</span></span>
+<span data-ttu-id="370e7-254">범위와 인덱스는 배열, <xref:System.Span%601> 또는 <xref:System.ReadOnlySpan%601>에서 하위 범위를 지정하는 간결한 구문을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-254">Ranges and indices provide a succinct syntax for specifying subranges in an array, <xref:System.Span%601>, or <xref:System.ReadOnlySpan%601>.</span></span>
 
-<span data-ttu-id="2b81b-253">이 언어 지원은 두 가지 새 형식 및 두 가지 새 연산자를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-253">This language support relies on two new types, and two new operators.</span></span>
-- <span data-ttu-id="2b81b-254"><xref:System.Index?displayProperty=nameWithType>는 인덱스를 시퀀스로 표현합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-254"><xref:System.Index?displayProperty=nameWithType> represents an index into a sequence.</span></span>
-- <span data-ttu-id="2b81b-255">인덱스가 시퀀스의 끝을 기준으로 하도록 지정하는 `^` 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-255">The `^` operator, which specifies that an index is relative to the end of the sequence.</span></span>
-- <span data-ttu-id="2b81b-256"><xref:System.Range?displayProperty=nameWithType>는 시퀀스의 하위 범위를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-256"><xref:System.Range?displayProperty=nameWithType> represents a sub range of a sequence.</span></span>
-- <span data-ttu-id="2b81b-257">범위의 시작과 끝을 피연산자로 지정하는 범위 연산자(`..`)입니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-257">The Range operator (`..`), which specifies the start and end of a range as its operands.</span></span>
+<span data-ttu-id="370e7-255">이 언어 지원은 다음과 같은 두 가지 새 형식 및 두 가지 새 연산자를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-255">This language support relies on two new types, and two new operators:</span></span>
 
-<span data-ttu-id="2b81b-258">인덱스에 대한 규칙을 사용하여 시작하겠습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-258">Let's start with the rules for indexes.</span></span> <span data-ttu-id="2b81b-259">`sequence`배열을 고려합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-259">Consider an array `sequence`.</span></span> <span data-ttu-id="2b81b-260">`0` 인덱스는 `sequence[0]`과 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-260">The `0` index is the same as `sequence[0]`.</span></span> <span data-ttu-id="2b81b-261">`^0` 인덱스는 `sequence[sequence.Length]`와 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-261">The `^0` index is the same as `sequence[sequence.Length]`.</span></span> <span data-ttu-id="2b81b-262">`sequence[^0]`은 `sequence[sequence.Length]`처럼 예외를 throw합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-262">Note that `sequence[^0]` does throw an exception, just as `sequence[sequence.Length]` does.</span></span> <span data-ttu-id="2b81b-263">`n`이 어떤 숫자이든, 인덱스 `^n`은 `sequence.Length - n`과 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-263">For any number `n`, the index `^n` is the same as `sequence.Length - n`.</span></span>
+- <span data-ttu-id="370e7-256"><xref:System.Index?displayProperty=nameWithType>는 인덱스를 시퀀스로 표현합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-256"><xref:System.Index?displayProperty=nameWithType> represents an index into a sequence.</span></span>
+- <span data-ttu-id="370e7-257">인덱스가 시퀀스의 끝을 기준으로 하도록 지정하는 `^` 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-257">The `^` operator, which specifies that an index is relative to the end of the sequence.</span></span>
+- <span data-ttu-id="370e7-258"><xref:System.Range?displayProperty=nameWithType>는 시퀀스의 하위 범위를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-258"><xref:System.Range?displayProperty=nameWithType> represents a sub range of a sequence.</span></span>
+- <span data-ttu-id="370e7-259">범위의 시작과 끝을 피연산자로 지정하는 범위 연산자(`..`)입니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-259">The Range operator (`..`), which specifies the start and end of a range as its operands.</span></span>
 
-<span data-ttu-id="2b81b-264">한 범위는 어떤 범위의 *시작* 및 *끝*을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-264">A range specifies the *start* and *end* of a range.</span></span> <span data-ttu-id="2b81b-265">범위의 시작은 포함되지만 범위의 끝은 포함되지 않으므로, ‘시작’은 범위에 포함되고 ‘끝’은 범위에 포함되지 않습니다.  </span><span class="sxs-lookup"><span data-stu-id="2b81b-265">The start of the range is inclusive, but the end of the range is exclusive, meaning the *start* is included in the range but the *end* is not included in the range.</span></span> <span data-ttu-id="2b81b-266">`[0..sequence.Length]`가 전체 범위를 나타내는 것처럼 `[0..^0]` 범위는 전체 범위를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-266">The range `[0..^0]` represents the entire range, just as `[0..sequence.Length]` represents the entire range.</span></span> 
+<span data-ttu-id="370e7-260">인덱스에 대한 규칙을 사용하여 시작하겠습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-260">Let's start with the rules for indexes.</span></span> <span data-ttu-id="370e7-261">`sequence`배열을 고려합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-261">Consider an array `sequence`.</span></span> <span data-ttu-id="370e7-262">`0` 인덱스는 `sequence[0]`과 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-262">The `0` index is the same as `sequence[0]`.</span></span> <span data-ttu-id="370e7-263">`^0` 인덱스는 `sequence[sequence.Length]`와 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-263">The `^0` index is the same as `sequence[sequence.Length]`.</span></span> <span data-ttu-id="370e7-264">`sequence[^0]`은 `sequence[sequence.Length]`처럼 예외를 throw합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-264">Note that `sequence[^0]` does throw an exception, just as `sequence[sequence.Length]` does.</span></span> <span data-ttu-id="370e7-265">`n`이 어떤 숫자이든, 인덱스 `^n`은 `sequence.Length - n`과 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-265">For any number `n`, the index `^n` is the same as `sequence.Length - n`.</span></span>
 
-<span data-ttu-id="2b81b-267">몇 가지 예를 살펴보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-267">Let's look at a few examples.</span></span> <span data-ttu-id="2b81b-268">다음과 같은 배열이 있습니다. 앞에서부터의 인덱스와 뒤에서부터의 인덱스가 주석으로 처리되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-268">Consider the following array, annotated with its index from the start and from the end:</span></span>
+<span data-ttu-id="370e7-266">한 범위는 어떤 범위의 *시작* 및 *끝*을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-266">A range specifies the *start* and *end* of a range.</span></span> <span data-ttu-id="370e7-267">범위의 시작은 포함되지만 범위의 끝은 포함되지 않으므로, ‘시작’은 범위에 포함되고 ‘끝’은 범위에 포함되지 않습니다.  </span><span class="sxs-lookup"><span data-stu-id="370e7-267">The start of the range is inclusive, but the end of the range is exclusive, meaning the *start* is included in the range but the *end* is not included in the range.</span></span> <span data-ttu-id="370e7-268">`[0..sequence.Length]`가 전체 범위를 나타내는 것처럼 `[0..^0]` 범위는 전체 범위를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-268">The range `[0..^0]` represents the entire range, just as `[0..sequence.Length]` represents the entire range.</span></span> 
+
+<span data-ttu-id="370e7-269">몇 가지 예를 살펴보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-269">Let's look at a few examples.</span></span> <span data-ttu-id="370e7-270">다음과 같은 배열이 있습니다. 앞에서부터의 인덱스와 뒤에서부터의 인덱스가 주석으로 처리되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-270">Consider the following array, annotated with its index from the start and from the end:</span></span>
 
 ```csharp
 var words = new string[]
@@ -404,26 +407,26 @@ var words = new string[]
 };              // 9 (or words.Length) ^0
 ```
 
-<span data-ttu-id="2b81b-269">다음과 같이 `^1` 인덱스를 사용하여 마지막 단어를 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-269">You can retrieve the last word with the `^1` index:</span></span>
+<span data-ttu-id="370e7-271">다음과 같이 `^1` 인덱스를 사용하여 마지막 단어를 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-271">You can retrieve the last word with the `^1` index:</span></span>
 
 ```csharp
 Console.WriteLine($"The last word is {words[^1]}");
 // writes "dog"
 ```
 
-<span data-ttu-id="2b81b-270">다음 코드는 “quick”, “brown”, “fox”라는 단어를 포함하는 하위 범위를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-270">The following code creates a subrange with the words "quick", "brown", and "fox".</span></span> <span data-ttu-id="2b81b-271">이 하위 범위에는 `words[1]`부터 `words[3]`까지 포함되며,</span><span class="sxs-lookup"><span data-stu-id="2b81b-271">It includes `words[1]` through `words[3]`.</span></span> <span data-ttu-id="2b81b-272">`words[4]` 요소는 포함되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-272">The element `words[4]` is not in the range.</span></span>
+<span data-ttu-id="370e7-272">다음 코드는 “quick”, “brown”, “fox”라는 단어를 포함하는 하위 범위를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-272">The following code creates a subrange with the words "quick", "brown", and "fox".</span></span> <span data-ttu-id="370e7-273">이 하위 범위에는 `words[1]`부터 `words[3]`까지 포함되며,</span><span class="sxs-lookup"><span data-stu-id="370e7-273">It includes `words[1]` through `words[3]`.</span></span> <span data-ttu-id="370e7-274">`words[4]` 요소는 포함되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-274">The element `words[4]` is not in the range.</span></span>
 
 ```csharp
 var quickBrownFox = words[1..4];
 ```
 
-<span data-ttu-id="2b81b-273">다음 코드는 “lazy”와 “dog”를 포함하는 하위 범위를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-273">The following code creates a subrange with "lazy" and "dog".</span></span> <span data-ttu-id="2b81b-274">이 하위 범위에는 `words[^2]`과 `words[^1]`이 포함되며.</span><span class="sxs-lookup"><span data-stu-id="2b81b-274">It includes `words[^2]` and `words[^1]`.</span></span> <span data-ttu-id="2b81b-275">끝 인덱스 `words[^0]`는 포함되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-275">The end index `words[^0]` is not included:</span></span>
+<span data-ttu-id="370e7-275">다음 코드는 “lazy”와 “dog”를 포함하는 하위 범위를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-275">The following code creates a subrange with "lazy" and "dog".</span></span> <span data-ttu-id="370e7-276">이 하위 범위에는 `words[^2]`과 `words[^1]`이 포함되며.</span><span class="sxs-lookup"><span data-stu-id="370e7-276">It includes `words[^2]` and `words[^1]`.</span></span> <span data-ttu-id="370e7-277">끝 인덱스 `words[^0]`는 포함되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-277">The end index `words[^0]` is not included:</span></span>
 
 ```csharp
 var lazyDog = words[^2..^0];
 ```
 
-<span data-ttu-id="2b81b-276">다음 예제는 시작만, 끝만, 그리고 시작과 끝이 모두 열린 범위를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-276">The following examples create ranges that are open ended for the start, end, or both:</span></span>
+<span data-ttu-id="370e7-278">다음 예제는 시작만, 끝만, 그리고 시작과 끝이 모두 열린 범위를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-278">The following examples create ranges that are open ended for the start, end, or both:</span></span>
 
 ```csharp
 var allWords = words[..]; // contains "The" through "dog".
@@ -431,16 +434,47 @@ var firstPhrase = words[..4]; // contains "The" through "fox"
 var lastPhrase = words[6..]; // contains "the", "lazy" and "dog"
 ```
 
-<span data-ttu-id="2b81b-277">범위를 변수로 선언할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-277">You can also declare ranges as variables:</span></span>
+<span data-ttu-id="370e7-279">범위를 변수로 선언할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-279">You can also declare ranges as variables:</span></span>
 
 ```csharp
 Range phrase = 1..4;
 ```
 
-<span data-ttu-id="2b81b-278">이렇게 변수로 선언된 범위는 `[` 문자와 `]` 문자 사이에 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-278">The range can then be used inside the `[` and `]` characters:</span></span>
+<span data-ttu-id="370e7-280">이렇게 변수로 선언된 범위는 `[` 문자와 `]` 문자 사이에 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-280">The range can then be used inside the `[` and `]` characters:</span></span>
 
 ```csharp
 var text = words[phrase];
 ```
 
-<span data-ttu-id="2b81b-279">인덱스와 범위에 대한 자세한 내용은 [인덱스 및 범위](../tutorials/ranges-indexes.md)에 대한 자습서에서 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b81b-279">You can explore more about indices and ranges in the tutorial on [indices and ranges](../tutorials/ranges-indexes.md).</span></span>
+<span data-ttu-id="370e7-281">인덱스와 범위에 대한 자세한 내용은 [인덱스 및 범위](../tutorials/ranges-indexes.md)에 대한 자습서에서 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-281">You can explore more about indices and ranges in the tutorial on [indices and ranges](../tutorials/ranges-indexes.md).</span></span>
+
+## <a name="unmanaged-constructed-types"></a><span data-ttu-id="370e7-282">관리되지 않는 생성 형식</span><span class="sxs-lookup"><span data-stu-id="370e7-282">Unmanaged constructed types</span></span>
+
+<span data-ttu-id="370e7-283">C# 7.3 이전 버전에서 생성 형식(하나 이상의 형식 인수를 포함하는 형식)은 [관리되지 않는 형식](../language-reference/builtin-types/unmanaged-types.md)일 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-283">In C# 7.3 and earlier, a constructed type (a type that includes at least one type argument) cannot be an [unmanaged type](../language-reference/builtin-types/unmanaged-types.md).</span></span> <span data-ttu-id="370e7-284">C# 8.0부터는 관리되지 않는 형식의 필드만 포함된 경우 생성된 값 형식이 관리되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-284">Starting with C# 8.0, a constructed value type is unmanaged if it contains fields of unmanaged types only.</span></span>
+
+<span data-ttu-id="370e7-285">예를 들어 다음과 같은 제네릭 `Coords<T>` 형식의 정의를 살펴보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-285">For example, given the following definition of the generic `Coords<T>` type:</span></span>
+
+```csharp
+public struct Coords<T>
+{
+    public T X;
+    public T Y;
+}
+```
+
+<span data-ttu-id="370e7-286">`Coords<int>` 형식은 C# 8.0 이상에서 관리되지 않는 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-286">the `Coords<int>` type is an unmanaged type in C# 8.0 and later.</span></span> <span data-ttu-id="370e7-287">관리되지 않는 형식과 마찬가지로 이 형식의 변수에 대한 포인터를 만들거나 이 형식의 인스턴스에 대해 [스택에서 메모리 블록을 할당](../language-reference/operators/stackalloc.md)할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-287">Like for any unmanaged type, you can create a pointer to a variable of this type or [allocate a block of memory on the stack](../language-reference/operators/stackalloc.md) for instances of this type:</span></span>
+
+```csharp
+Span<Coords<int>> coordinates = stackalloc[]
+{
+    new Coords<int> { X = 0, Y = 0 },
+    new Coords<int> { X = 0, Y = 3 },
+    new Coords<int> { X = 4, Y = 0 }
+};
+```
+
+<span data-ttu-id="370e7-288">자세한 내용은 [관리되지 않는 형식](../language-reference/builtin-types/unmanaged-types.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="370e7-288">For more information, see [Unmanaged types](../language-reference/builtin-types/unmanaged-types.md).</span></span>
+
+## <a name="enhancement-of-interpolated-verbatim-strings"></a><span data-ttu-id="370e7-289">보간된 약어 문자열의 향상된 기능</span><span class="sxs-lookup"><span data-stu-id="370e7-289">Enhancement of interpolated verbatim strings</span></span>
+
+<span data-ttu-id="370e7-290">[보간된](../language-reference/tokens/interpolated.md) 약어 문자열에서 `$` 및 `@` 토큰은 순서에 관계없이 사용할 수 있습니다. `$@"..."` 및 `@$"..."` 모두 유효한 보간된 약어 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-290">Order of the `$` and `@` tokens in [interpolated](../language-reference/tokens/interpolated.md) verbatim strings can be any: both `$@"..."` and `@$"..."` are valid interpolated verbatim strings.</span></span> <span data-ttu-id="370e7-291">이전 C# 버전에서는 `$` 토큰이 `@` 토큰 앞에 나타나야 했습니다.</span><span class="sxs-lookup"><span data-stu-id="370e7-291">In earlier C# versions, the `$` token must appear before the `@` token.</span></span>
