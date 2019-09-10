@@ -2,18 +2,20 @@
 title: <comContract>
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: ef980c86efad4fda86cf62148e50688fd22afe49
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b499294af71ba230dcf985d4af1d013b1ca260cf
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926095"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850034"
 ---
 # <a name="comcontract"></a>\<comContract>
 COM+ 통합 서비스 계약을 지정합니다.  
   
- \<system.ServiceModel>  
-\<comContracts>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comContracts >** ](comcontracts.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<comContract >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,7 +49,7 @@ COM+ 통합 서비스 계약을 지정합니다.
   
 ### <a name="attributes"></a>특성  
   
-|특성|Description|  
+|특성|설명|  
 |---------------|-----------------|  
 |계약(contract)|계약 형식을 포함하는 문자열입니다.|  
 |name|계약 이름을 포함하는 문자열입니다.|  
@@ -56,7 +58,7 @@ COM+ 통합 서비스 계약을 지정합니다.
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |persistableTypes|모든 지속 형식입니다.|  
 |userDefinedTypes|서비스 계약에 포함될 UDT(사용자 정의 형식) 컬렉션입니다.|  
@@ -64,7 +66,7 @@ COM+ 통합 서비스 계약을 지정합니다.
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |comContracts|`comContract` 요소의 컬렉션을 포함합니다.|  
   

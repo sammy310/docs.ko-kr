@@ -3,12 +3,12 @@ title: WIF 구성 스키마 규칙
 ms.date: 03/30/2017
 ms.assetid: f7864356-f72f-4cae-995c-18e0431f8a58
 author: BrucePerlerMS
-ms.openlocfilehash: 39ed32bb7e926f275e996b09e746c879c6d3fe9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6e13915121884ecb4a0e54344e02d29650f54c6f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909326"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851484"
 ---
 # <a name="wif-configuration-schema-conventions"></a>WIF 구성 스키마 규칙
 이 항목에서는 WIF(Windows Identity Foundation) 구성 항목 전체에서 사용되는 규칙을 설명하고 [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) 및 [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) 섹션에서 사용되는 몇 가지 일반적인 기능과 특성을 설명합니다.  
@@ -21,9 +21,7 @@ ms.locfileid: "61909326"
 ## <a name="timespan-values"></a>Timespan 값  
  여기서 <xref:System.TimeSpan>은 특성의 형식으로 사용됩니다. 허용되는 형식을 확인하려면 <xref:System.TimeSpan.Parse%28System.String%29> 메서드를 참조하세요. 이 형식은 다음 사양을 따릅니다.  
   
-```  
-[ws][-]{ d | [d.]hh:mm[:ss[.ff]] }[ws]  
-```  
+`[ws][-]{ d | [d.]hh:mm[:ss[.ff]] }[ws]`  
   
  예를 들어 “30”, “30.00:00”, “30.00:00:00”은 모두 30일을 의미하고 “00:05”, “00:05:00”, “0.00:05:00.00”은 모두 5분을 의미합니다.  
   

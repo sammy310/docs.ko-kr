@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dbc38d9cf88f2449bbf689e4cf1b4101f47a0577
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2461d20dc65706fcfdb8b9a2088d634c771fa1fb
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943254"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855595"
 ---
 # <a name="iclrsyncmanagergetrwlockownernext-method"></a>ICLRSyncManager::GetRWLockOwnerNext 메서드
 현재 판독기-작성기 잠금에서 차단 된 다음 [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) 인스턴스를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp
 HRESULT GetRWLockOwnerNext (  
     [in] SIZE_T       Iterator,  
     [out] IHostTask  *ppOwnerHostTask  

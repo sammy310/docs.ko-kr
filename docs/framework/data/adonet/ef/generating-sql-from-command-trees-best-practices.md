@@ -2,12 +2,12 @@
 title: 명령 트리에서 SQL 생성 - 최선의 방법
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 366e27f8c8a04c5d2507ab37459ad6d5abc255ae
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9859c7df941ae6681c991001e0d1e5a50c7ffc60
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251569"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855008"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>명령 트리에서 SQL 생성 - 최선의 방법
 
@@ -137,11 +137,11 @@ ON b.y = d.z
 
 ## <a name="avoid-select-"></a>SELECT * 사용 금지
 
-기본 테이블에서 선택하기 위해 `SELECT *`를 사용하지 마세요. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 응용 프로그램의 저장소 모델에는 데이터베이스 테이블에 있는 열의 하위 집합만 포함 될 수 있습니다. 이 경우 `SELECT *`는 잘못된 결과를 생성할 수 있습니다. 대신, 참여하는 식의 결과 형식에서 열 이름을 사용하여 참여하는 모든 열을 지정해야 합니다.
+기본 테이블에서 선택하기 위해 `SELECT *`를 사용하지 마세요. Entity Framework 응용 프로그램의 저장소 모델에는 데이터베이스 테이블에 있는 열의 하위 집합만 포함 될 수 있습니다. 이 경우 `SELECT *`는 잘못된 결과를 생성할 수 있습니다. 대신, 참여하는 식의 결과 형식에서 열 이름을 사용하여 참여하는 모든 열을 지정해야 합니다.
 
 ## <a name="reuse-of-expressions"></a>식의 재사용
 
-식은 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에서 전달되는 쿼리 명령 트리에서 다시 사용할 수 있습니다. 각 식이 쿼리 명령 트리에서 한 번만 나타난다고 가정하지 마십시오.
+식은 Entity Framework 전달 된 쿼리 명령 트리에서 재사용할 수 있습니다. 각 식이 쿼리 명령 트리에서 한 번만 나타난다고 가정하지 마십시오.
 
 ## <a name="mapping-primitive-types"></a>기본 형식 매핑
 

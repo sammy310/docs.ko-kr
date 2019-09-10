@@ -2,32 +2,32 @@
 title: 공급자 매니페스트 지정
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 6b924f484e6635760d08d0eba9fb9436bdd8bc88
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: cc58bbc82f3930f087b5da0c64afb4f9f03e905b
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248583"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854497"
 ---
 # <a name="provider-manifest-specification"></a>공급자 매니페스트 지정
 이 단원에서는 데이터 저장소 공급자가 데이터 저장소의 형식 및 함수를 지원하는 방법에 대해 설명합니다.  
   
  엔터티 서비스는 특정 데이터 저장소 공급자와 독립적으로 작동하지만 모델, 매핑 및 쿼리가 기본 데이터 저장소와 상호 작용하는 방식을 데이터 공급자가 명시적으로 정의할 수 있도록 합니다. 추상 계층이 없는 경우 엔터티 서비스는 특정 데이터 저장소 또는 데이터 공급자에서만 대상으로 할 수 있습니다.  
   
- 공급자가 지원하는 형식은 기본 데이터베이스에서 직접 또는 간접적으로 지원됩니다. 이러한 형식은 정확한 저장소 형식일 필요는 없으며 공급자가 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]를 지원하기 위해 사용하는 형식입니다. 공급자/저장소 형식은 EDM(엔터티 데이터 모델) 측면에서 설명됩니다.  
+ 공급자가 지원하는 형식은 기본 데이터베이스에서 직접 또는 간접적으로 지원됩니다. 이러한 형식은 반드시 정확한 저장소 형식이 아니라 공급자가 Entity Framework를 지원 하기 위해 사용 하는 형식입니다. 공급자/저장소 형식은 EDM(엔터티 데이터 모델) 측면에서 설명됩니다.  
   
  데이터 저장소에서 지원되는 함수의 매개 변수 및 반환 형식은 EDM 측면에서 지정됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 및 데이터 저장소는 데이터 손실이나 잘림 없이 알려진 형식으로 데이터를 전달하고 받을 수 있어야 합니다.  
+ Entity Framework와 데이터 저장소는 데이터 손실이 나 잘림 없이 알려진 형식으로 데이터를 앞뒤로 전달할 수 있어야 합니다.  
   
  공급자 매니페스트는 데이터 저장소에 대한 연결을 열 필요 없이 디자인 타임에 도구를 통해 로드할 수 있어야 합니다.  
   
- 는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 대/소문자를 구분 하지만 기본 데이터 저장소는 그렇지 않을 수 있습니다. EDM 아티팩트(식별자, 형식 이름 등)가 매니페스트에서 정의되고 사용되는 경우 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 대/소문자 구분을 사용해야 합니다. 대/소문자를 구분할 수 있는 데이터 저장소 요소가 공급자 매니페스트에 나타나는 경우 해당 대/소문자 구분이 공급자 매니페스트에서 유지 관리되어야 합니다.  
+ Entity Framework는 대/소문자를 구분 하지만 기본 데이터 저장소는 그렇지 않을 수 있습니다. 매니페스트에서 EDM 아티팩트 (식별자 및 형식 이름)를 정의 하 고 사용 하는 경우 Entity Framework 대/소문자 구분을 사용 해야 합니다. 대/소문자를 구분할 수 있는 데이터 저장소 요소가 공급자 매니페스트에 나타나는 경우 해당 대/소문자 구분이 공급자 매니페스트에서 유지 관리되어야 합니다.  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에서는 모든 데이터 공급자에 대한 공급자 매니페스트를 요구합니다. 에 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]공급자 매니페스트가 없는 공급자를 사용 하려고 하면 오류가 발생 합니다.  
+ Entity Framework에는 모든 데이터 공급자에 대 한 공급자 매니페스트가 필요 합니다. Entity Framework에 공급자 매니페스트가 없는 공급자를 사용 하려고 하면 오류가 발생 합니다.  
   
- 다음 표에서는 공급자 상호 작용을 통해 예외가 발생하는 경우 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에서 throw되는 예외의 종류에 대해 설명합니다.  
+ 다음 표에서는 공급자 상호 작용을 통해 예외가 발생할 때 Entity Framework에서 throw 되는 예외 종류에 대해 설명 합니다.  
   
 |문제점|예외|  
 |-----------|---------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "70248583"
  공급자는 다음 시나리오를 지원해야 합니다.  
   
 ### <a name="writing-a-provider-with-symmetric-type-mapping"></a>대칭 형식 매핑을 사용하여 공급자 작성  
- 매핑 방향에 관계 없이 각 매장 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 형식이 단일 EDM 형식에 매핑되는에 대 한 공급자를 작성할 수 있습니다. EDM 형식에 해당하는 가장 단순한 매핑이 있는 공급자 형식의 경우 형식 시스템이 단순하거나 EDM 형식과 일치하기 때문에 대칭 솔루션을 사용할 수 있습니다.  
+ 매핑 방향에 관계 없이 각 매장 형식이 단일 EDM 형식에 매핑되는 Entity Framework에 대 한 공급자를 작성할 수 있습니다. EDM 형식에 해당하는 가장 단순한 매핑이 있는 공급자 형식의 경우 형식 시스템이 단순하거나 EDM 형식과 일치하기 때문에 대칭 솔루션을 사용할 수 있습니다.  
   
  해당 도메인의 단순성을 사용하고 정적 선언적 공급자 매니페스트를 생성할 수 있습니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "70248583"
 - 매개 변수와 반환 형식이 EDM 측면에서 표현된, 공급자가 지원하는 함수의 목록  
   
 ### <a name="writing-a-provider-with-asymmetric-type-mapping"></a>비대칭 형식 매핑을 사용하여 공급자 작성  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에 대한 데이터 저장소 공급자를 작성하는 경우 일부 형식에 대한 EDM-공급자 형식 매핑은 공급자-EDM 형식 매핑과 다를 수 있습니다. 예를 들어, 바인딩되지 않은 EDM PrimitiveTypeKind.String은 공급자에서 nvarchar(4000)에 매핑될 수 있지만 nvarchar(4000)은 EDM PrimitiveTypeKind.String(MaxLength=4000)에 매핑됩니다.  
+ Entity Framework에 대 한 데이터 저장소 공급자를 작성할 때 일부 형식에 대 한 EDM 간 형식 매핑은 공급자에서 EDM 형식 매핑과 다를 수 있습니다. 예를 들어, 바인딩되지 않은 EDM PrimitiveTypeKind.String은 공급자에서 nvarchar(4000)에 매핑될 수 있지만 nvarchar(4000)은 EDM PrimitiveTypeKind.String(MaxLength=4000)에 매핑됩니다.  
   
  다음 두 섹션이 있는 XML 파일을 작성합니다.  
   
@@ -248,7 +248,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
  공급자 매니페스트에서 이 형식 정보를 표현하기 위해 각 TypeInformation 선언은 각 형식에 대한 몇 가지 패싯 설명을 정의해야 합니다.  
   
-|특성 이름|데이터 형식|필수|Default Value|Description|  
+|특성 이름|데이터 형식|필수|Default Value|설명|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |이름|String|예|n/a|공급자별 데이터 형식 이름|  
 |PrimitiveTypeKind|PrimitiveTypeKind|예|n/a|EDM 형식 이름|  
@@ -256,9 +256,9 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 ###### <a name="function-node"></a>Function 노드  
  각 Function은 공급자를 통해 사용할 수 있는 단일 함수를 정의합니다.  
   
-|특성 이름|데이터 형식|필수|Default Value|설명|  
+|특성 이름|데이터 형식|필수|Default Value|Description|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|이름|문자열|예|n/a|함수의 식별자/이름입니다.|  
+|이름|String|예|n/a|함수의 식별자/이름입니다.|  
 |ReturnType|String|아니요|Void|함수의 EDM 반환 형식입니다.|  
 |Aggregate|Boolean|아니요|거짓|함수가 집계 함수인 경우 True입니다.|  
 |BuiltIn|Boolean|아니요|True|함수가 데이터 저장소에 기본 제공되는 경우 True입니다.|  
@@ -270,7 +270,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
  각 함수에는 하나 이상의 Parameter 노드로 구성된 컬렉션이 있습니다.  
   
-|특성 이름|데이터 형식|필수|Default Value|Description|  
+|특성 이름|데이터 형식|필수|Default Value|설명|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |이름|String|예|n/a|매개 변수의 식별자/이름입니다.|  
 |형식|String|예|n/a|매개 변수의 EDM 형식입니다.|  

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57ab5eb418b5f0a9175074c87837c7cac8936346
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e00197b72ca7fc8941475ae51159351d53da12d3
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799050"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855963"
 ---
 # <a name="blessiwbemservices-function"></a>BlessIWbemServices 함수
 사용자 자격 증명이 지정 된 [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) 클래스에 대 한 액세스를 허용 하는지 여부를 나타냅니다.   
@@ -30,7 +30,7 @@ ms.locfileid: "70799050"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp
 HRESULT BlessIWbemServices (
    [in] IWbemServices* pIWbemServices,
    [in] BSTR strUser, 
@@ -65,7 +65,7 @@ HRESULT BlessIWbemServices (
 
 이 함수에서 반환 되는 다음 값은 *winerror.h* 헤더 파일에 정의 되어 있거나 코드에서 상수로 정의할 수 있습니다.
 
-|상수  |값  |설명  |
+|상수  |값  |Description  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0x80070057 | 하나 이상의 인수가 잘못 되었습니다. |
 | `E_POINTER` | 0x80004003 | `pIWbemServices`가 `null`인 경우 | 

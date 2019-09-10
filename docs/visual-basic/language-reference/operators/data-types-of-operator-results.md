@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data types [Visual Basic], ranges
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
-ms.openlocfilehash: b0ebdb723df6bdb4f74e1558537c307ddb917f64
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: bc7f29ae0e29a4c2fbfdf2e40d2226e174a06d3a
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "69923269"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856052"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>연산자 결과의 데이터 형식(Visual Basic)
 Visual Basic는 피연산자의 데이터 형식에 따라 작업의 결과 데이터 형식을 결정 합니다. 일부 경우에는 피연산자 중 하나 보다 큰 범위의 데이터 형식일 수 있습니다.  
@@ -98,7 +98,7 @@ Visual Basic는 피연산자의 데이터 형식에 따라 작업의 결과 데�
   
  `Decimal`왼쪽 피연산자가, `Single`, `Double`Visual Basic `String` 또는이면`Long`작업 이전으로 변환 하려고 시도 하 고, 결과 데이터 형식은입니다. `Long` 오른쪽 피연산자 (이동할 비트 위치 수)는 `Integer` 이거나로 `Integer`확대 되는 형식 이어야 합니다.  
   
-### <a name="binary----and-mod-operators"></a>Binary +, –, * 및 Mod 연산자  
+### <a name="binary----and-mod-operators"></a>Binary +, –, \*및 Mod 연산자  
  다음 표에서는 `+` 이진 및 `–` 연산자와 `*` 및 `Mod` 연산자에 대 한 결과 데이터 형식을 보여 줍니다. 이 테이블은 대칭입니다. 피연산자 데이터 형식의 지정 된 조합에 대해 결과 데이터 형식은 피연산자의 순서에 관계 없이 동일 합니다.  
   
 |||||||||||  
@@ -114,7 +114,7 @@ Visual Basic는 피연산자의 데이터 형식에 따라 작업의 결과 데�
 |`Long`|Long|Long|Long|Long|Long|Long|Long|Long|Decimal|  
 |`ULong`|Decimal|Decimal|ULong|Decimal|ULong|Decimal|ULong|Decimal|ULong|  
   
-### <a name="-operator"></a>\ 연산자  
+### <a name="-operator"></a>\\ 연산자  
  다음 표에서는 `\` 연산자의 결과 데이터 형식을 보여 줍니다. 이 테이블은 대칭입니다. 피연산자 데이터 형식의 지정 된 조합에 대해 결과 데이터 형식은 피연산자의 순서에 관계 없이 동일 합니다.  
   
 |||||||||||  

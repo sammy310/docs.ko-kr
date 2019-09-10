@@ -2,19 +2,21 @@
 title: <udpTransportSettings>
 ms.date: 03/30/2017
 ms.assetid: 842d92e9-6199-4ec5-b2d1-58533054e1f0
-ms.openlocfilehash: ed87db92bcbfa0aa9016e36f391d707c5b17bf2b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bb2ec84caa79f33e1e469592d0eca63d8f461dac
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934489"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854869"
 ---
 # <a name="udptransportsettings"></a>\<udpTransportSettings>
 이 구성 요소는 [ \<udpDiscoveryEndpoint >](udpdiscoveryendpoint.md)에 대 한 UDP 전송 설정을 노출 합니다.  
   
-\<system.ServiceModel>  
-\<standardEndpoints>  
-\<udpDiscoveryEndpoint>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<standardEndpoints >** ](standardendpoints.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<udpDiscoveryEndpoint >** ](udpdiscoveryendpoint.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<updTransportSettings >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,7 +62,7 @@ ms.locfileid: "69934489"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<udpDiscoveryEndpoint>](udpdiscoveryendpoint.md)|고정 검색 계약 및 UDP 전송 바인딩이 있는 표준 엔드포인트입니다.|  
   

@@ -2,19 +2,21 @@
 title: <discoveryEndpoint>
 ms.date: 03/30/2017
 ms.assetid: fae2f48b-a635-4e4b-859d-a1432ac37e1c
-ms.openlocfilehash: 6bb5be09ea598296f01e186280c45757dee9405d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 32b14f8fb3235040a51455f2099a403c8312c699
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919140"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855401"
 ---
 # <a name="discoveryendpoint"></a>\<discoveryEndpoint>
 
 이 구성 요소는 고정 검색 계약이 있는 표준 엔드포인트를 정의합니다. 서비스 구성에 추가되면 검색 메시지를 수신하는 위치를 지정합니다. 클라이언트 구성에 추가되면 검색 쿼리를 보내는 위치를 지정합니다.  
   
-\<system.serviceModel>  
-\<standardEndpoints>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<standardEndpoints >** ](standardendpoints.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<discoveryEndpoint >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,7 +39,7 @@ ms.locfileid: "69919140"
   
 ### <a name="attributes"></a>특성
 
-| 특성        | 설명 |  
+| 특성        | Description |  
 | ---------------- | ----------- |  
 | discoveryMode    | 검색 프로토콜의 모드를 지정하는 문자열입니다. 유효한 값은 "임시" 및 "관리"입니다. 관리 모드에서는 프로토콜이 검색 가능한 서비스의 리포지토리로 작동하는 검색 프록시를 사용하고, 애드혹 모드에서는 프로토콜이 UDP 멀티캐스트 메커니즘을 사용하여 사용 가능한 서비스를 찾아야 합니다. 속성에 대 한 자세한 내용은을 참조 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint.DiscoveryMode%2A>하십시오. |  
 | discoveryVersion | WS-Discovery 프로토콜의 두 버전 중 하나를 지정하는 문자열입니다. 유효한 값은 WSDiscovery11 및 WSDiscoveryApril2005입니다. 이 값은 <xref:System.ServiceModel.Discovery.DiscoveryVersion> 형식입니다. |  
@@ -50,7 +52,7 @@ ms.locfileid: "69919140"
   
 ### <a name="parent-elements"></a>부모 요소
 
-| 요소 | Description |  
+| 요소 | 설명 |  
 | ------- | ----------- |  
 | [\<standardEndpoints>](standardendpoints.md) | 하나 이상의 속성(주소, 바인딩, 계약)이 고정된 미리 정의된 엔드포인트인 표준 엔드포인트의 컬렉션입니다. |  
   

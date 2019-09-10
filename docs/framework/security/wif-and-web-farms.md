@@ -3,12 +3,12 @@ title: WIF 및 웹 팜
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: e6806971bd2260785d66bfdb54a3e2938043c746
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09d5f3f745f170439a7fbf160b78439c103623b9
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967185"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851528"
 ---
 # <a name="wif-and-web-farms"></a>WIF 및 웹 팜
 WIF(Windows Identity Foundation)를 사용하여 웹 팜에 배포된 RP(신뢰 당사자) 애플리케이션의 리소스를 보호하는 경우 특정 단계를 수행하여 WIF가 팜의 여러 컴퓨터에서 실행되는 RP 애플리케이션 인스턴스의 토큰을 처리할 수 있도록 해야 합니다. 이 처리에는 세션 토큰 시그니처의 유효성 검사, 세션 토큰 암호화 및 암호 해독, 세션 토큰 캐싱 및 재생된 보안 토큰 검색이 포함됩니다.  
@@ -64,7 +64,7 @@ WIF(Windows Identity Foundation)를 사용하여 웹 팜에 배포된 RP(신뢰 
 ## <a name="the-wcf-caching-service"></a>WCF 캐싱 서비스  
  다음 인터페이스는 WCF 캐싱 서비스와 신뢰 당사자 애플리케이션이 통신에 사용하는 WCF 클라이언트 간의 계약을 정의합니다. 기본적으로 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 클래스의 메서드를 서비스 작업으로 노출합니다.  
   
-```  
+```csharp
 [ServiceContract()]  
 public interface ISessionSecurityTokenCacheService  
 {  
@@ -90,7 +90,7 @@ public interface ISessionSecurityTokenCacheService
   
  다음 코드에서는 WCF 캐싱 서비스의 구현을 보여 줍니다. 이 예제에서는 WIF에 의해 구현되는 메모리 내 기본 세션 토큰 캐시가 사용됩니다. 또는 데이터베이스에서 지원하는 영구 캐시를 구현할 수 있습니다. `ISessionSecurityTokenCacheService`에서는 위에 표시된 인터페이스를 정의합니다. 이 예제에서 인터페이스를 구현하는 데 필요한 일부 메서드는 간단한 설명을 위해 표시되지 않습니다.  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.IdentityModel.Configuration;  
@@ -150,7 +150,7 @@ namespace WcfSessionSecurityTokenCacheService
   
  이 클래스는 `<sessionSecurityTokenCache>` 요소의 사용자 지정 `<cacheServiceAddress>` 자식 요소에서 서비스 엔드포인트를 가져오도록 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A> 메서드를 재정의합니다. 이 엔드포인트를 사용하여 서비스와 통신할 수 있는 `ISessionSecurityTokenCacheService` 채널을 초기화합니다.  이 예제에서 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 클래스를 구현하는 데 필요한 일부 메서드는 간단한 설명을 위해 표시되지 않습니다.  
   
-```  
+```csharp
 using System;  
 using System.Configuration;  
 using System.IdentityModel.Configuration;  

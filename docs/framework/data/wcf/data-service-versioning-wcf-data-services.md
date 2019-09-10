@@ -6,12 +6,12 @@ helpviewer_keywords:
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-ms.openlocfilehash: 03ac1e0a5fec2d7def91466a9dc31853e2007f57
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f2007e5c2fa638d64c5c1e0d6879e12c7bcc901d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791061"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854093"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>데이터 서비스 버전 관리(WCF Data Services)
 를 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 사용 하면 클라이언트가 데이터 모델을 기반으로 하는 uri를 사용 하 여 리소스로 데이터에 액세스할 수 있도록 데이터 서비스를 만들 수 있습니다. OData는 서비스 작업의 정의도 지원 합니다. 이러한 데이터 서비스는 비즈니스 요구 사항의 변경, 정보 기술의 요구 사항 또는 다른 문제 해결 등의 다양한 이유 때문에 최초로 배포된 후, 수명 동안 여러 차례에 걸쳐 변경되어야 할 수 있습니다. 기존 데이터 서비스를 변경한 경우 새 버전의 데이터 서비스를 정의할 것인지 그리고 기존 클라이언트 애플리케이션에 미치는 영향을 최소화할 최선의 방법을 고려해야 합니다. 이 항목에서는 새 버전의 데이터 서비스를 만드는 방법 및 시기에 대한 지침을 제공합니다. 또한 다른 버전의 OData 프로토콜을 지 원하는 클라이언트와 데이터 서비스 간의 교환을 WCF Data Services 처리 하는 방법을 설명 합니다.
@@ -69,7 +69,7 @@ ms.locfileid: "70791061"
 |버전 3|- [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkId=203885)에서 OData 버전 3을 지 원하는 시험판 버전을 다운로드 하 여 설치할 수 있습니다.|
 
 ### <a name="metadata-versions"></a>메타데이터 버전
- 기본적으로 WCF Data Services는 CSDL 버전 1.1을 사용 하 여 데이터 모델을 나타냅니다. 이는 리플렉션 공급자 또는 사용자 지정 데이터 서비스 공급자를 기반으로 하는 데이터 모델의 경우 항상 해당됩니다. 그러나 데이터 모델이 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]를 사용하여 정의된 경우 반환된 CSDL 버전은 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]에서 사용되는 버전과 동일합니다. CSDL 버전은 [Schema 요소 (csdl)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#schema-element-csdl)의 네임 스페이스에 의해 결정 됩니다.
+ 기본적으로 WCF Data Services는 CSDL 버전 1.1을 사용 하 여 데이터 모델을 나타냅니다. 이는 리플렉션 공급자 또는 사용자 지정 데이터 서비스 공급자를 기반으로 하는 데이터 모델의 경우 항상 해당됩니다. 그러나 데이터 모델이 Entity Framework를 사용하여 정의된 경우 반환된 CSDL 버전은 Entity Framework에서 사용되는 버전과 동일합니다. CSDL 버전은 [Schema 요소 (csdl)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#schema-element-csdl)의 네임 스페이스에 의해 결정 됩니다.
 
  반환된 메타데이터의 `DataServices` 요소에는 응답 메시지의 `DataServiceVersion` 헤더와 값이 동일한 `DataServiceVersion` 특성도 포함되어 있습니다. Visual Studio의 **서비스 참조 추가** 대화 상자와 같은 클라이언트 응용 프로그램에서는이 정보를 사용 하 여 데이터 서비스를 호스트 하는 WCF Data Services 버전에서 올바르게 작동 하는 클라이언트 데이터 서비스 클래스를 생성 합니다. 자세한 내용은 [OData: 프로토콜 버전](https://go.microsoft.com/fwlink/?LinkId=186071)관리.
 

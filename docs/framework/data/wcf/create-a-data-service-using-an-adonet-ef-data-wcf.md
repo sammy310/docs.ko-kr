@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: ae4176fd986f870523e44a11eee48850e2dddd7c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1d3c3628a32439d4847505e234b12b084b47ba3d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791083"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854127"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>방법: ADO.NET Entity Framework 데이터 원본을 사용 하 여 데이터 서비스 만들기 (WCF Data Services)
 
-WCF Data Services 엔터티 데이터를 데이터 서비스로 노출 합니다. 이 엔터티 데이터는 데이터 원본이 관계형 데이터베이스인[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 경우 ADO.NET에서 제공 합니다. 이 항목에서는 기존 데이터베이스를 기반으로 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]하는 Visual Studio 웹 응용 프로그램에서 기반 데이터 모델을 만들고이 데이터 모델을 사용 하 여 새 데이터 서비스를 만드는 방법을 보여 줍니다.
+WCF Data Services 엔터티 데이터를 데이터 서비스로 노출 합니다. 이 엔터티 데이터는 데이터 원본이 관계형 데이터베이스인 경우에 ADO. NETEntity Framework에서 제공 됩니다. 이 항목에서는 기존 데이터베이스를 기반으로 하는 Visual Studio 웹 응용 프로그램에서 Entity Framework 기반 데이터 모델을 만들고 이 데이터 모델을 사용하여 새 데이터 서비스를 만드는 방법을 보여 줍니다.
 
-는 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Visual Studio 프로젝트 외부에서 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 모델을 생성할 수 있는 명령줄 도구도 제공 합니다. 자세한 내용은 [방법: Edmgen.exe를 사용 하 여 모델 및 매핑 파일](../adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)을 생성 합니다.
+Entity Framework는 Visual Studio 프로젝트 외부에서 Entity Framework 모델을 생성할 수 있는 명령줄 도구도 제공합니다. 자세한 내용은 [방법: Edmgen.exe를 사용 하 여 모델 및 매핑 파일](../adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)을 생성 합니다.
 
 ## <a name="to-add-an-entity-framework-model-that-is-based-on-an-existing-database-to-an-existing-web-application"></a>기존 웹 애플리케이션에 기존 데이터베이스를 기반으로 하는 Entity Framework 모델을 추가하려면
 
@@ -45,7 +45,7 @@ WCF Data Services 엔터티 데이터를 데이터 서비스로 노출 합니다
 
 9. **마침** 을 클릭 하 여 마법사를 완료 합니다.
 
-     특정 데이터베이스를 기반으로 하는 기본 데이터 모델이 만들어집니다. [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]에서는 데이터 모델을 사용자 지정할 수 있습니다. 자세한 내용은 [엔터티 데이터 모델 도구 작업](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100))을 참조 하세요.
+     특정 데이터베이스를 기반으로 하는 기본 데이터 모델이 만들어집니다. Entity Framework에서 데이터 모델을 사용하도록 설정하여 사용자 지정합니다. 자세한 내용은 [엔터티 데이터 모델 도구 작업](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100))을 참조 하세요.
 
 ## <a name="to-create-the-data-service-by-using-the-new-data-model"></a>새 데이터 모델을 사용하여 데이터 서비스를 만들려면
 

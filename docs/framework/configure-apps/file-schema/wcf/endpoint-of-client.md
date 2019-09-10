@@ -2,19 +2,20 @@
 title: <client>의 <endpoint>
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-ms.openlocfilehash: 2bf59972ff2f75995e94a3c1934e88944d65fcc7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f1ffbc1e8efac70523d7f631c8cf9ba9a1622bfc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919106"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855314"
 ---
 # <a name="endpoint-of-client"></a>\<클라이언트 >의 \<끝점 >
 클라이언트에서 서버의 서비스 엔드포인트와 연결하는 데 사용하는 채널 엔드포인트의 contract, binding 및 address 속성을 지정합니다.  
   
- \<system.ServiceModel>  
-\<client>  
-\<endpoint>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<클라이언트 >** ](client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<끝점 >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,7 +36,7 @@ ms.locfileid: "69919106"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
 |주소|필수 문자열 특성입니다.<br /><br /> 엔드포인트의 주소를 지정합니다. 기본값은 빈 문자열입니다. 주소는 절대 URI이어야 합니다.|  
 |behaviorConfiguration|엔드포인트를 인스턴스화할 때 사용할 동작의 이름을 포함하는 문자열입니다. 동작 이름은 서비스가 정의된 지점의 범위에 속해야 합니다. 기본값은 빈 문자열입니다.|  

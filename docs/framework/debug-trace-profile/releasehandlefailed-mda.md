@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad580ecace07d3d6fdf206ff660dc4bac4bceb09
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f3ea64668272b6625a9e43c9610496a7e7392129
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614300"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854038"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed MDA
 <xref:System.Runtime.InteropServices.SafeHandle> 또는 <xref:System.Runtime.InteropServices.CriticalHandle>에서 파생된 클래스의 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 메서드가 `false`를 반환하면 `releaseHandleFailed` MDA(관리 디버깅 도우미)가 활성화되고 개발자에게 알립니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "64614300"
   
 - <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>을 실행하는 동안 발생하여 리소스 해제를 방해하는 모든 오류는 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 메서드 자체 구현의 버그입니다. 코드가 해당 기능을 수행하기 위해 다른 사용자가 작성한 코드를 호출하는 경우에도 계약이 이행되도록 하는 것은 프로그래머의 책임입니다.  
   
-## <a name="resolution"></a>해결  
+## <a name="resolution"></a>해결 방법  
  MDA 알림을 발생시킨 특정 <xref:System.Runtime.InteropServices.SafeHandle>(또는 <xref:System.Runtime.InteropServices.CriticalHandle>)을 사용하는 코드를 검토하여 원시 핸들 값이 <xref:System.Runtime.InteropServices.SafeHandle>에서 추출되어 다른 곳에 복사되는 위치를 찾아야 합니다. 원시 핸들 값의 사용이 런타임에서 더 이상 추적되지 않으므로 이는 <xref:System.Runtime.InteropServices.SafeHandle> 또는 <xref:System.Runtime.InteropServices.CriticalHandle> 구현 내에서 일반적인 오류 원인입니다. 이후에 원시 핸들 복사를 닫을 경우 현재 유효하지 않은 핸들에 대해 닫기가 시도되기 때문에 이후 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 호출이 실패할 수 있습니다.  
   
  잘못된 핸들 복제가 발생할 수 있는 여러 가지 방식이 있습니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "64614300"
 ## <a name="output"></a>출력  
  <xref:System.Runtime.InteropServices.SafeHandle> 또는 <xref:System.Runtime.InteropServices.CriticalHandle>이 핸들을 제대로 해제하지 못했음을 나타내는 메시지입니다. 예를 들어:  
   
-```  
+```output
 "A SafeHandle or CriticalHandle of type 'MyBrokenSafeHandle'   
 failed to properly release the handle with value 0x0000BEEF. This   
 usually indicates that the handle was released incorrectly via   
@@ -63,7 +63,7 @@ another means (such as extracting the handle using DangerousGetHandle
 and closing it directly or building another SafeHandle around it."  
 ```  
   
-## <a name="configuration"></a>구성  
+## <a name="configuration"></a>Configuration  
   
 ```xml  
 <mdaConfig>  

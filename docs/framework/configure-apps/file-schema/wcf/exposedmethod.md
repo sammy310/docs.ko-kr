@@ -2,20 +2,22 @@
 title: <exposedMethod>
 ms.date: 03/30/2017
 ms.assetid: 61c938cd-4ee9-4b06-ab28-922ef491ab11
-ms.openlocfilehash: 032139b714aa11079c7ee8610c332e404b3981ac
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 46f2872fb289c2793c356ea179deb3ce52e6d65e
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918992"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855302"
 ---
 # <a name="exposedmethod"></a>\<exposedMethod>
 COM+ 구성 요소의 인터페이스가 웹 서비스로 노출될 때 노출되는 COM+ 메서드를 나타냅니다.  
   
- \<system.ServiceModel>  
-\<comContracts>  
-\<comContract>  
-\<methods>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comContracts >** ](comcontracts.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comContract >** ](comcontract.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<exposedMethods >** ](exposedmethods.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<exposedMethod >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,7 +45,7 @@ COM+ 구성 요소의 인터페이스가 웹 서비스로 노출될 때 노출�
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<exposedMethods>](exposedmethods.md)|ExposedMethod > 요소의 컬렉션 [ \<](exposedmethod.md) 입니다.|  
   

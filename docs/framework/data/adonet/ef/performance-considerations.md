@@ -2,12 +2,12 @@
 title: 성능 고려 사항(Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: 99969d7991f613bd8049aac81669583372e0f2c6
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: eb46b183ec1e930dfe5c4a1eea237024033c357d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248526"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854608"
 ---
 # <a name="performance-considerations-entity-framework"></a>성능 고려 사항(Entity Framework)
 이 항목에서는 ADO.NET Entity Framework의 성능 특징에 대해 설명하고, Entity Framework 애플리케이션의 성능 개선을 위해 고려해야 할 몇 가지 사항을 알려 줍니다.  
@@ -18,7 +18,7 @@ ms.locfileid: "70248526"
 |연산|상대 비용|빈도|주석|  
 |---------------|-------------------|---------------|--------------|  
 |메타데이터 로드|보통|애플리케이션 도메인당 한 번|Entity Framework에서 사용되는 모델 및 매핑 메타데이터가 <xref:System.Data.Metadata.Edm.MetadataWorkspace>로 로드됩니다. 이 메타데이터는 전역으로 캐시되고 동일한 애플리케이션 도메인의 다른 <xref:System.Data.Objects.ObjectContext> 인스턴스에서 사용할 수 있습니다.|  
-|데이터베이스 연결 열기|보통<sup>1</sup>|필요한 만큼|데이터베이스에 대 한 열린 연결은 중요 한 리소스를 사용 하기 때문 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 에는 필요한 경우에만 데이터베이스 연결을 열고 닫습니다. 또한 연결을 명시적으로 열 수 있습니다. 자세한 내용은 [트랜잭션과 연결 관리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))합니다.|  
+|데이터베이스 연결 열기|보통<sup>1</sup>|필요한 만큼|데이터베이스에 대 한 열린 연결은 중요 한 리소스를 사용 하기 때문에 Entity Framework는 필요한 경우에만 데이터베이스 연결을 열고 닫습니다. 또한 연결을 명시적으로 열 수 있습니다. 자세한 내용은 [트랜잭션과 연결 관리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))합니다.|  
 |뷰 생성|높음|애플리케이션 도메인당 한 번 미리 생성할 수 있습니다.|Entity Framework에서 개념적 모델에 대해 쿼리를 실행하거나 데이터 소스에 변경 내용을 저장하려면 먼저 로컬 쿼리 뷰 집합을 생성하여 데이터베이스에 액세스해야 합니다. 이러한 뷰를 생성하는 데 비용이 많이 들기 때문에 디자인 타임에 뷰를 미리 생성한 후 프로젝트에 추가할 수 있습니다. 자세한 내용은 [방법: 뷰를 미리 생성 하 여 쿼리 성능을](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))향상 시킵니다.|  
 |쿼리 준비|보통<sup>2</sup>|고유 쿼리당 한 번|쿼리 명령을 작성하고, 모델 및 매핑 메타데이터를 기반으로 명령 트리를 생성하고, 반환된 데이터의 셰이프를 정의하는 비용을 포함합니다. Entity SQL 쿼리 명령과 LINQ 쿼리가 모두 캐시되므로 동일한 쿼리를 나중에 실행하는 경우 시간이 더 적게 걸립니다. 그러나, 여전히 컴파일된 LINQ 쿼리를 사용하여 나중에 실행할 때 이러한 비용을 줄일 수 있으며 컴파일된 쿼리는 자동으로 캐시되는 LINQ 쿼리에서보다 효율적으로 작동합니다. 자세한 내용은 [컴파일된 쿼리 (LINQ to Entities)](./language-reference/compiled-queries-linq-to-entities.md)를 참조 하세요. LINQ 쿼리 실행에 대 한 일반적인 내용은 [LINQ to Entities](./language-reference/linq-to-entities.md)를 참조 하세요. **참고:**  메모리 내 컬렉션에 `Enumerable.Contains` 연산자를 적용하는 LINQ to Entities 쿼리는 자동으로 캐시되지 않습니다. 또한 메모리 내 컬렉션은 컴파일된 LINQ 쿼리에서 매개 변수화할 수 없습니다.|  
 |쿼리 실행|낮음<sup>2</sup>|쿼리당 한 번|ADO.NET 데이터 공급자를 사용하여 데이터 소스에 대해 명령을 실행하는 비용입니다. 대부분의 데이터 소스에서 쿼리 계획을 캐시하므로 동일한 쿼리를 나중에 실행하는 경우 시간이 더 적게 걸릴 수 있습니다.|  
@@ -116,7 +116,7 @@ ms.locfileid: "70248526"
   
 - 항상 명시적 트랜잭션을 DTC로 승격하는 SQL Server 2000 데이터베이스 또는 기타 데이터 소스에 대한 작업을 포함하는 명시적 트랜잭션  
   
-- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에서 연결을 관리하는 경우 SQL Server 2005에 대한 작업을 포함하는 명시적 트랜잭션. 이 트랜잭션은 단일 트랜잭션 내에서 연결이 닫히고 다시 열리는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]의 기본 동작이 수행될 때마다 SQL Server 2005가 DTC로 승격되기 때문에 발생합니다. 이 DTC 승격은 SQL Server 2008 사용 시 발생하지 않습니다. SQL Server 2005를 사용할 때 이러한 승격이 발생하지 않도록 하려면 트랜잭션 내에서 연결을 명시적으로 열고 닫아야 합니다. 자세한 내용은 [트랜잭션과 연결 관리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))합니다.  
+- Entity Framework에서 연결을 관리 하는 경우 SQL Server 2005에 대 한 작업이 포함 된 명시적 트랜잭션입니다. 이는 Entity Framework의 기본 동작인 단일 트랜잭션 내에서 연결이 닫히고 다시 열릴 때마다 SQL Server 2005가 DTC로 승격 되기 때문에 발생 합니다. 이 DTC 승격은 SQL Server 2008 사용 시 발생하지 않습니다. SQL Server 2005를 사용할 때 이러한 승격이 발생하지 않도록 하려면 트랜잭션 내에서 연결을 명시적으로 열고 닫아야 합니다. 자세한 내용은 [트랜잭션과 연결 관리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))합니다.  
   
  <xref:System.Transactions> 트랜잭션 내에서 하나 이상의 작업이 실행될 때 명시적 트랜잭션이 사용됩니다. 자세한 내용은 [트랜잭션과 연결 관리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))합니다.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "70248526"
  대부분의 경우 <xref:System.Data.Objects.ObjectContext> 문(Visual Basic에서는 `using`) 내에서 `Using…End Using` 인스턴스를 만들어야 합니다. 이렇게 하면 코드가 문 블록을 종료할 때 개체 컨텍스트와 연결된 리소스가 자동으로 삭제되도록 하여 성능을 향상시킬 수 있습니다. 그러나 컨트롤이 개체 컨텍스트에서 관리하는 개체로 바인딩된 경우 바인딩이 필요할 때까지 <xref:System.Data.Objects.ObjectContext> 인스턴스가 유지 관리되어야 하고, 그렇지 않은 경우 해당 인스턴스가 수동으로 삭제되어야 합니다. 자세한 내용은 [트랜잭션과 연결 관리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))합니다.  
   
 #### <a name="consider-opening-the-database-connection-manually"></a>수동으로 데이터베이스 연결 열기  
- 응용 프로그램에서 일련의 개체 쿼리를 실행 하거나 자주 호출 <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> 하 여 데이터 소스에 대 한 만들기, 업데이트 및 삭제 작업을 유지 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 하는 경우는 지속적으로 데이터 소스에 대 한 연결을 열고 닫아야 합니다. 이러한 경우 해당 작업 시작 시 연결을 수동으로 열고, 작업 완료 시 연결을 수동으로 닫거나 삭제하세요. 자세한 내용은 [트랜잭션과 연결 관리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))합니다.  
+ 응용 프로그램에서 일련의 개체 쿼리를 실행 하거나 자주 호출 <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> 하 여 데이터 원본에 대 한 만들기, 업데이트 및 삭제 작업을 유지 하는 경우 Entity Framework는 지속적으로 데이터 원본에 대 한 연결을 열고 닫아야 합니다. 이러한 경우 해당 작업 시작 시 연결을 수동으로 열고, 작업 완료 시 연결을 수동으로 닫거나 삭제하세요. 자세한 내용은 [트랜잭션과 연결 관리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))합니다.  
   
 ## <a name="performance-data"></a>성능 데이터  
  Entity Framework에 대 한 일부 성능 데이터는 [ADO.NET 팀 블로그의](https://go.microsoft.com/fwlink/?LinkId=91905)다음 게시물에 게시 됩니다.  

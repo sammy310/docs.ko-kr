@@ -2,29 +2,29 @@
 title: Entity Framework 용어
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: 9d3767e73ffe1d9ee5d363e36a0661cc0fb517d9
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c48361fd51ecb320416e76e599e36da12faf76fb
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248253"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854281"
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework 용어
-이 항목에서는 설명서에서 자주 참조 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 되는 용어를 정의 합니다. 추가 정보를 볼 수 있는 관련 항목에 대한 링크가 제공됩니다.  
+이 항목에서는 Entity Framework 설명서에서 자주 참조 되는 용어를 정의 합니다. 추가 정보를 볼 수 있는 관련 항목에 대한 링크가 제공됩니다.  
   
 |용어|정의|  
 |----------|----------------|  
 |연결(association)|엔터티 형식 간의 관계 정의입니다.<br /><br /> 자세한 내용은 [Association 요소 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#association-element-csdl) 및 [연결 형식](../association-type.md)을 참조 하세요.|  
 |연결 집합(association set)|같은 형식의 연결 인스턴스를 위한 논리 컨테이너입니다.<br /><br /> 자세한 내용은 [AssociationSet 요소 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#associationset-element-csdl) 및 [연결 집합](../association-set.md)을 참조 하세요.|  
 |Code First|Entity Framework 4.1부터는 Code First 개발을 통해 모델을 프로그램 방식으로 만들 수 있습니다. Code First 개발에는 두 가지 다른 시나리오가 있습니다. 두 경우 모두 개발자는 .NET Framewor 클래스 정의를 코딩하여 모델을 정의한 후 데이터 주석 또는 fluent API를 사용하여 추가 매핑 또는 구성을 선택적으로 지정합니다.<br /><br /> Code First 개발은 [Entity Framework 5.0](https://go.microsoft.com/fwlink/?LinkId=234900)의 일부입니다. Entity Framework 5.0은 .NET Framework의 일부가 아니지만 .NET Framework 4.5에 빌드되어 있습니다. Entity Framework 5.0은 [' Entity Framework '](https://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](https://go.microsoft.com/fwlink/?LinkId=232488) 패키지로 사용할 수 있습니다. 자세한 내용은 [Entity Framework 릴리스 및 버전 관리](https://go.microsoft.com/fwlink/?LinkId=234899)를 참조 하세요.|  
-|명령 트리|하나 이상의 식으로 구성 된 모든 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 쿼리의 일반적인 프로그래밍 방식 표현입니다.<br /><br /> 자세한 내용은 [Entity Framework 개요](overview.md)를 참조 하세요.|  
+|명령 트리|하나 이상의 식으로 구성 된 모든 Entity Framework 쿼리의 일반적인 프로그래밍 방식 표현입니다.<br /><br /> 자세한 내용은 [Entity Framework 개요](overview.md)를 참조 하세요.|  
 |복합 형식|개념적 모델에서 정의된 복합 속성을 나타내는 .NET Framework 클래스입니다. 복합 형식을 사용하면 엔터티 내에 스칼라 속성을 구성할 수 있습니다. 복합 개체는 복합 형식의 인스턴스입니다. 자세한 내용은 [ComplexType 요소 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#complextype-element-csdl) 및 [복합 형식](../complex-type.md)을 참조 하세요.|  
 |ComplexType|키 속성이 없는, 엔터티 형식의 스칼라가 아닌 속성을 나타내는 데이터 형식의 지정입니다.<br /><br /> 자세한 내용은 [ComplexType 요소 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#complextype-element-csdl) 및 [복합 형식](../complex-type.md)을 참조 하세요.|  
-|개념 모델(conceptual model)|[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]의 애플리케이션 도메인에 있는 엔터티 형식, 복합 형식, 연결, 엔터티 컨테이너, 엔터티 집합 및 연결 집합의 추상 지정입니다. 개념적 모델은 .csdl 파일에 CSDL로 정의됩니다.<br /><br /> 자세한 내용은 [모델링 및 매핑](modeling-and-mapping.md)을 참조 하세요.|  
+|개념 모델(conceptual model)|Entity Framework의 응용 프로그램 도메인에 있는 엔터티 형식, 복합 형식, 연결, 엔터티 컨테이너, 엔터티 집합 및 연결 집합에 대 한 추상 사양입니다. 개념적 모델은 .csdl 파일에 CSDL로 정의됩니다.<br /><br /> 자세한 내용은 [모델링 및 매핑](modeling-and-mapping.md)을 참조 하세요.|  
 |.csdl 파일|CSDL로 표현된 개념적 모델이 포함된 XML 파일입니다.|  
 |CSDL(개념 스키마 정의 언어)|개념 모델의 엔터티 형식, 연결, 엔터티 컨테이너, 엔터티 집합 및 연결 집합을 정의하는 데 사용되는 XML 기반 언어입니다.<br /><br /> 자세한 내용은 [CSDL Specification](./language-reference/csdl-specification.md)을 참조하십시오.|  
 |컨테이너(container)|엔터티 및 연결 집합의 논리적 그룹입니다.<br /><br /> 자세한 내용은 [EntityContainer 요소 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitycontainer-element-csdl) 및 [엔터티 컨테이너](../entity-container.md)를 참조 하세요.|  
-|동시성|여러 사용자들이 공유 데이터를 동시에 액세스 및 변경할 수 있도록 하는 프로세스입니다. 기본적으로 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에서는 낙관적 동시성 모델을 구현합니다.|  
+|동시성|여러 사용자들이 공유 데이터를 동시에 액세스 및 변경할 수 있도록 하는 프로세스입니다. 기본적으로 Entity Framework는 낙관적 동시성 모델을 구현 합니다.|  
 |방향|일부 연결의 비대칭 특성을 나타냅니다. 방향은 스키마에 있는 `FromRole` 또는 `ToRole` 요소의 `NavigationProperty` 및 `ReferentialConstraint` 특성으로 지정됩니다.<br /><br /> 자세한 내용은 [NavigationProperty 요소 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#navigationproperty-element-csdl) 및 [탐색 속성](../navigation-property.md)을 참조 하세요.|  
 |즉시 로드(eager loading)|쿼리에서 명시적으로 요청된 개체와 함께 특정한 관련 개체 집합을 로드하는 프로세스입니다.|  
 |.edmx 파일|CSDL로 표현된 개념적 모델, SSDL로 표현된 스토리지 모델, MSL로 표현된 두 모델 간의 매핑이 포함된 XML 파일입니다. .Edmx 파일은 엔터티 데이터 모델 도구를 통해 생성 됩니다. 자세한 내용은 [.Edmx 파일 개요](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))를 참조 하세요.|  
@@ -48,7 +48,7 @@ ms.locfileid: "70248253"
 |매핑|개념적 모델에 있는 항목과 스토리지 모델에 있는 항목 간의 대응 지정입니다.<br /><br /> 자세한 내용은 [MSL 사양](./language-reference/msl-specification.md)을 참조 하세요.|  
 |.msl 파일|MSL로 표현된, 개념적 모델과 스토리지 모델 간의 매핑이 포함된 XML 파일입니다.|  
 |MSL(매핑 사양 언어)|개념 모델에서 정의한 항목을 스토리지 모델의 항목에 매핑하는 데 사용되는 XML 기반 언어입니다.<br /><br /> 자세한 내용은 [MSL 사양](./language-reference/msl-specification.md)을 참조 하세요.|  
-|수정 함수|데이터 소스에 있는 데이터를 삽입, 업데이트 및 삭제하는 데 사용되는 저장 프로시저입니다. 이러한 함수는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에서 생성된 명령 대신 사용됩니다. 수정 함수는 스토리지 모델의 `Function` 요소에 의해 정의됩니다. [ModificationFunctionMapping](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716778(v=vs.100)) 요소는 이러한 수정 함수를 개념적 모델에 정의 된 엔터티에 대 한 삽입, 업데이트 및 삭제 작업에 매핑합니다.|  
+|수정 함수|데이터 소스에 있는 데이터를 삽입, 업데이트 및 삭제하는 데 사용되는 저장 프로시저입니다. 이러한 함수는 Entity Framework 생성 된 명령 대신 사용 됩니다. 수정 함수는 스토리지 모델의 `Function` 요소에 의해 정의됩니다. [ModificationFunctionMapping](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716778(v=vs.100)) 요소는 이러한 수정 함수를 개념적 모델에 정의 된 엔터티에 대 한 삽입, 업데이트 및 삭제 작업에 매핑합니다.|  
 |복합성|연결에서 정의된 대로 관계의 양쪽에 존재할 수 있는 엔터티 수입니다. 카디널리티라고도 합니다.<br /><br /> 자세한 내용은 [End 요소 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#end-element-csdl) 및 [연결 끝](../association-end.md)을 참조 하세요.|  
 |형식별 다중 엔터티 집합|둘 이상의 엔터티 집합에서 같은 엔터티 형식을 정의할 수 있는 기능입니다.<br /><br /> 자세한 내용은 [EntitySet 요소 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entityset-element-csdl) 및 [방법: 유형별](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738537(v=vs.100))다중 엔터티 집합을 사용 하 여 모델을 정의 합니다.|  
 |탐색 속성(navigation property)|연결에서 정의된 대로 다른 엔터티 형식에 대한 관계를 나타내는 엔터티 형식의 속성입니다. 탐색 속성은 연결에서 반대쪽 End의 복합성에 따라 관련 개체를 <xref:System.Data.Objects.DataClasses.EntityCollection%601> 또는 <xref:System.Data.Objects.DataClasses.EntityReference%601>로 반환하는 데 사용됩니다.<br /><br /> 자세한 내용은 [NavigationProperty 요소 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#navigationproperty-element-csdl) 및 [탐색 속성](../navigation-property.md)을 참조 하세요.|  
@@ -56,12 +56,12 @@ ms.locfileid: "70248253"
 |개체 컨텍스트|개념적 모델에서 정의된 엔터티 컨테이너를 나타냅니다. 기본 데이터 소스에 대한 연결을 포함하며, 변경 내용 추적 및 ID 확인과 같은 서비스를 제공합니다. 개체 컨텍스트는 <xref:System.Data.Objects.ObjectContext> 또는 `DbContext` 클래스 인스턴스로 표현됩니다.<br /><br /> `DbContext`는 [Entity Framework 5.0](https://go.microsoft.com/fwlink/?LinkId=234900)의 일부입니다. Entity Framework 5.0은 .NET Framework의 일부가 아니지만 .NET Framework 4.5에 빌드되어 있습니다. Entity Framework 5.0은 [' Entity Framework '](https://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](https://go.microsoft.com/fwlink/?LinkId=232488) 패키지로 사용할 수 있습니다. 자세한 내용은 [Entity Framework 릴리스 및 버전 관리](https://go.microsoft.com/fwlink/?LinkId=234899)를 참조 하세요.|  
 |개체 계층|Entity Framework에서 사용되는 엔터티 형식 및 개체 컨텍스트 정의입니다.|  
 |개체 쿼리|개체 컨텍스트 내에서 개념적 모델에 대해 실행되어 데이터를 개체로 반환하는 쿼리입니다.<br /><br /> 자세한 내용은 [개체 쿼리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))합니다.|  
-|개체-관계형 매핑|관계형 데이터베이스의 데이터를 개체 지향 소프트웨어 애플리케이션에서 사용할 수 있는 데이터 형식으로 변형하기 위한 기술입니다.<br /><br /> [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]는 스토리지 모델에 정의된 관계형 데이터를 개념적 모델에 정의된 데이터 형식에 매핑하여 개체-관계형 매핑 서비스를 제공합니다.<br /><br /> 자세한 내용은 [모델링 및 매핑](modeling-and-mapping.md)을 참조 하세요.|  
-|개체 서비스(Object Services)|에서 제공 하는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 서비스로, 응용 프로그램 코드가 .NET Framework 개체와 같은 엔터티에 대해 작동할 수 있도록 합니다.|  
+|개체-관계형 매핑|관계형 데이터베이스의 데이터를 개체 지향 소프트웨어 애플리케이션에서 사용할 수 있는 데이터 형식으로 변형하기 위한 기술입니다.<br /><br /> Entity Framework는 저장소 모델에 정의 된 관계형 데이터를 개념적 모델에 정의 된 데이터 형식에 매핑하여 개체 관계형 매핑 서비스를 제공 합니다.<br /><br /> 자세한 내용은 [모델링 및 매핑](modeling-and-mapping.md)을 참조 하세요.|  
+|개체 서비스(Object Services)|Entity Framework에서 제공 하는 서비스로, 응용 프로그램 코드가 .NET Framework 개체와 같은 엔터티에 대해 작동할 수 있도록 합니다.|  
 |지속성 무시 개체|데이터 스토리지와 관련된 논리가 포함되지 않은 개체입니다. POCO 엔터티라고도 합니다.|  
 |POCO|Plain Old CLR Object입니다. 다른 클래스에서 상속하거나 인터페이스를 구현하지 않는 개체입니다.|  
-|POCO 엔터티|[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 또는 <xref:System.Data.Objects.DataClasses.EntityObject>에서 상속하지 않고 <xref:System.Data.Objects.DataClasses.ComplexObject> 인터페이스를 구현하지 않는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]의 엔터티입니다. POCO 엔터티는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 응용 프로그램에서 사용 하는 기존 도메인 개체입니다. 이러한 엔터티는 지속성 무시를 지원합니다. 자세한 내용은 [POCO 엔터티 작업](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100))을 참조 하세요.|  
-|프록시 개체|POCO 클래스에서 파생되고 변경 내용 추적과 지연 로드를 지원하기 위해 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에서 생성된 개체입니다. 자세한 내용은 [POCO 프록시를 만들기 위한 요구 사항](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd468057(v=vs.100))을 참조 하세요.|  
+|POCO 엔터티|<xref:System.Data.Objects.DataClasses.EntityObject> 또는<xref:System.Data.Objects.DataClasses.ComplexObject> 에서 상속 하지 않고 Entity Framework 인터페이스를 구현 하지 않는 Entity Framework의 엔터티입니다. POCO 엔터티는 Entity Framework 응용 프로그램에서 사용 하는 기존 도메인 개체입니다. 이러한 엔터티는 지속성 무시를 지원합니다. 자세한 내용은 [POCO 엔터티 작업](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100))을 참조 하세요.|  
+|프록시 개체|POCO 클래스에서 파생 되 고 변경 내용 추적과 지연 로드를 지원 하기 위해 Entity Framework에 의해 생성 되는 개체입니다. 자세한 내용은 [POCO 프록시를 만들기 위한 요구 사항](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd468057(v=vs.100))을 참조 하세요.|  
 |참조 제약 조건(referential constraint)|엔터티와 다른 엔터티 간에 종속 관계가 있음을 나타내는, 개념적 모델에서 정의된 제약 조건입니다. 이 제약 조건은 해당하는 주 엔터티 인스턴스가 없을 경우 종속 엔터티 인스턴스가 존재할 수 없음을 의미합니다.<br /><br /> 자세한 내용은 참조 무결성 제약 조건 [요소 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#referentialconstraint-element-csdl) 및 [참조 무결성 제약 조건](../referential-integrity-constraint.md)을 참조 하세요.|  
 |관계(relationship)|엔터티 간의 논리적 연결입니다.|  
 |역할(role)|연결의 각 `End`에 지정되어 관계의 의미 체계를 설명하는 이름입니다.<br /><br /> 자세한 내용은 [End 요소 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#end-element-csdl) 및 [연결 끝](../association-end.md)을 참조 하세요.|  

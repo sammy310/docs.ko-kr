@@ -3,12 +3,12 @@ title: WSFederation 인증 모듈 개요
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 9ade6b0d9e4aadb353ca148f868d548fbaacfbc3
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: eaf53a352238161ccec1b481649074d322954905
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987708"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851508"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 인증 모듈 개요
 WIF(Windows Identity Foundation)에는 WS-FAM( WS-Federated Authentication Module)을 통한 ASP.NET 애플리케이션의 페더레이션된 인증 지원이 포함되어 있습니다. 이 항목은 페더레이션된 인증의 작동 방식과 사용 방법을 이해하는 데 도움이 됩니다.  
@@ -67,7 +67,7 @@ WIF(Windows Identity Foundation)에는 WS-FAM( WS-Federated Authentication Modul
   
 - ASP.NET 인프라가 <xref:System.IdentityModel.Services.HttpModuleBase>에서 파생되는 애플리케이션의 모듈 중 하나에서 <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> 메서드를 처음 호출할 때 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> 이벤트가 발생합니다. 이 메서드는 정적 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> 속성에 액세스하여 Web.config 파일에서 구성이 로드되도록 합니다. 이 이벤트는 이 속성에 처음 액세스할 때만 발생합니다. 구성에서 초기화된 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 개체는 이벤트 처리기의 <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> 속성을 통해 액세스할 수 있습니다. 이 이벤트를 사용하여 모듈에 적용되기 전에 구성을 수정할 수 있습니다. Application_Start 메서드에 이 이벤트에 대한 처리기를 추가할 수 있습니다.  
   
-    ```  
+    ```csharp
     void Application_Start(object sender, EventArgs e)  
     {  
         FederatedAuthentication.FederationConfigurationCreated += new EventHandler<FederationConfigurationCreatedEventArgs>(FederatedAuthentication_FederationConfigurationCreated);  

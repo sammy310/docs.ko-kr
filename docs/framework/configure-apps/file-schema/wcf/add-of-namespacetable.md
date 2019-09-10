@@ -2,20 +2,21 @@
 title: <namespaceTable>의 <add>
 ms.date: 03/30/2017
 ms.assetid: cf7b5b75-63bd-49a6-abac-4bfdab377e36
-ms.openlocfilehash: 7e2a2e26099f2d31116e4a89297fc1ac984c480d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3b3b4a1584b37601269368ee0e4e973626ddf9cf
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920071"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850389"
 ---
 # <a name="add-of-namespacetable"></a>\<\<namespaceTable > > 추가
 매핑을 앞에 붙인 다음 XPath 필터에서 라우팅에 사용할 수 있는 네임스페이스를 포함하는 구성 요소를 나타냅니다.  
   
- \<system.serviceModel>  
-\<라우팅 >  
-\<namespaceTable>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<라우팅 >** ](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<namespaceTable >** ](namespacetable.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> 추가**  
   
 ## <a name="syntax"></a>구문  
   
@@ -33,7 +34,7 @@ ms.locfileid: "69920071"
   
 ### <a name="attributes"></a>특성  
   
-|특성|Description|  
+|특성|설명|  
 |---------------|-----------------|  
 |namespace|네임스페이스를 포함하는 문자열입니다.|  
 |prefix|이 네임스페이스에 대한 접두사를 포함하는 문자열입니다.|  

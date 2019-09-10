@@ -3,12 +3,12 @@ title: '방법: WIF를 사용하여 클레임 인식 ASP.NET Web Forms 애플리
 ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
-ms.openlocfilehash: 82b0649a7324987581cc3c97570a0fc42ffdf6d6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 45ad084013cbcafdf0d7c4ac3e0fd952305232c4
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941292"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851553"
 ---
 # <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>방법: WIF를 사용하여 클레임 인식 ASP.NET Web Forms 애플리케이션 빌드
 ## <a name="applies-to"></a>적용 대상  
@@ -138,8 +138,8 @@ ms.locfileid: "69941292"
   
 1. **TestApp** 프로젝트 아래에서 **Default.aspx** 파일을 열고 기존 태그를 다음 태그로 바꿉니다.  
   
-    ```  
-    %@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
+    ```aspx-csharp
+    <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
   
     <!DOCTYPE html>  
   

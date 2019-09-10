@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 3660194a93a0528c4e5b466fb63801a8b1e12d2f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4d51011fddb856cf1ebd00943e9b79776d9181d0
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779787"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854115"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>스트리밍 공급자(WCF Data Services)
 
@@ -53,7 +53,7 @@ ms.locfileid: "70779787"
 
 또한 데이터 모델을 정의하는 .edmx 또는 .csdl 파일의 루트나 엔터티에 `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` 네임스페이스를 추가해야 합니다.
 
-[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 공급자를 사용 하 고 미디어 리소스를 노출 하는 데이터 서비스에 대 한 예제는 post [Data Services 스트리밍 공급자 시리즈를 참조 하세요. 스트리밍 공급자 구현 (1 부)](https://go.microsoft.com/fwlink/?LinkID=198989)
+Entity Framework 공급자를 사용 하 고 미디어 리소스를 노출 하는 데이터 서비스에 대 한 예제는 post [Data Services Streaming provider 시리즈를 참조 하세요. 스트리밍 공급자 구현 (1 부)](https://go.microsoft.com/fwlink/?LinkID=198989)
 
 **리플렉션 공급자**
 
@@ -67,7 +67,7 @@ ms.locfileid: "70779787"
 
 이진 데이터 스트림을 지원하는 데이터 서비스를 만들려면 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 인터페이스를 구현해야 합니다. 이 구현을 통해 데이터 서비스에서 이진 데이터를 스트림으로 클라이언트에 반환하고 클라이언트에서 전송되는 스트림으로 이진 데이터를 사용할 수 있습니다. 데이터 서비스는 스트림으로 이진 데이터에 액세스해야 할 때마다 이 인터페이스의 인스턴스를 만듭니다. <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 인터페이스는 다음 멤버를 지정합니다.
 
-|멤버 이름|Description|
+|멤버 이름|설명|
 |-----------------|-----------------|
 |<xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>|이 메서드는 미디어 링크 항목이 삭제될 때 해당 미디어 리소스를 삭제하기 위해 데이터 서비스에서 호출됩니다. <xref:System.Data.Services.Providers.IDataServiceStreamProvider>를 구현하는 경우 이 메서드에는 제공된 미디어 링크 항목과 연결된 미디어 리소스를 삭제하는 코드가 포함됩니다.|
 |<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A>|이 메서드는 미디어 리소스를 스트림으로 반환하기 위해 데이터 서비스에서 호출됩니다. <xref:System.Data.Services.Providers.IDataServiceStreamProvider>를 구현하는 경우 이 메서드에는 제공된 미디어 링크 항목과 연결된 미디어 리소스를 반환하기 위해 데이터 서비스에서 사용되는 스트림을 제공하는 코드가 포함됩니다.|

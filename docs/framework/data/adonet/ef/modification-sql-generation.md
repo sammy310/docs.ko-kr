@@ -2,12 +2,12 @@
 title: 수정 SQL 생성
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: ab0c18473e73b2d6fe9eb45c43e9b47947a55d99
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 94b6c3c97e8255db2dc4d72bae6c6c12905d9710
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248570"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854295"
 ---
 # <a name="modification-sql-generation"></a>수정 SQL 생성
 
@@ -27,7 +27,7 @@ DbModificationCommandTree는 DbCommandTree에서 상속하는 수정 DML 작업(
 
 - DbDeleteCommandTree
 
-에서 생성 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 하는 DbModificationCommandTree 및 해당 구현은 항상 단일 행 작업을 나타냅니다. 이 단원에서는 .NET Framework 버전 3.5에서 이러한 형식과 관련 제약 조건에 대해 설명합니다.
+Entity Framework에서 생성 되는 DbModificationCommandTree 및 해당 구현은 항상 단일 행 작업을 나타냅니다. 이 단원에서는 .NET Framework 버전 3.5에서 이러한 형식과 관련 제약 조건에 대해 설명합니다.
 
 ![Diagram](./media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
 
@@ -90,7 +90,7 @@ Predicate는 대상 컬렉션에서 업데이트하거나 삭제할 멤버를 �
 
 ## <a name="modification-sql-generation-in-the-sample-provider"></a>샘플 공급자의 수정 SQL 생성
 
-[Entity Framework 샘플 공급자](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) 는를 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]지 원하는 ADO.NET 데이터 공급자의 구성 요소를 보여 줍니다. 샘플 공급자는 SQL Server 2005 데이터베이스를 대상으로 하며 System.Data.SqlClient ADO.NET 2.0 데이터 공급자 위에 래퍼로 구현됩니다.
+[Entity Framework 샘플 공급자](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) 는 Entity Framework를 지 원하는 ADO.NET 데이터 공급자의 구성 요소를 보여 줍니다. 샘플 공급자는 SQL Server 2005 데이터베이스를 대상으로 하며 System.Data.SqlClient ADO.NET 2.0 데이터 공급자 위에 래퍼로 구현됩니다.
 
 샘플 공급자의 수정 SQL 생성 모듈(SQL Generation\DmlSqlGenerator.cs 파일에 있음)은 DbModificationCommandTree를 입력으로 사용하고 단일 수정 SQL 문을 생성합니다. 이 문 뒤에는 DbModificationCommandTree에서 지정된 경우 판독기를 반환하기 위해 SELECT 문이 올 수 있습니다. 생성된 명령의 모양은 대상 SQL Server 데이터베이스의 영향을 받습니다.
 

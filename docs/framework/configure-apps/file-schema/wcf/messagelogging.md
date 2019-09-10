@@ -2,19 +2,20 @@
 title: <messageLogging>
 ms.date: 03/30/2017
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
-ms.openlocfilehash: f54028489ec5aa34ae38115d7a582b01b9da92f9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9291c38af28c18d20e23e34e8316b4a9fe523123
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931407"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855128"
 ---
 # <a name="messagelogging"></a>\<messageLogging>
 이 요소는 WCF(Windows Communication Foundation)의 메시지 로깅 기능 설정을 정의합니다.  
   
- \<system.ServiceModel>  
-\<diagnostic>  
-\<messageLogging>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<진단 >** ](diagnostics.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<messageLogging >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,7 +41,7 @@ ms.locfileid: "69931407"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
 |`logEntireMessage`|전체 메시지(메시지 헤더 및 본문)를 로깅할지 여부를 지정하는 부울 값입니다. 기본값은 `false`로, 메시지 헤더만 로깅됩니다. 이 설정은 모든 메시지 로깅 수준(서비스, 전송 및 잘못된 형식)에 영향을 줍니다.|  
 |`logMalformedMessages`|잘못된 형식의 메시지를 로깅할지 여부를 지정하는 부울 값입니다. 잘못된 형식의 메시지는 `maxMessagesToLog`에 포함되지 않습니다. 기본값은 `false`입니다.|  

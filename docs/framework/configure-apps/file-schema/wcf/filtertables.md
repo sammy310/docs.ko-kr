@@ -2,19 +2,20 @@
 title: <filterTables>
 ms.date: 03/30/2017
 ms.assetid: 41f1ac35-f559-473a-b2c3-8cc83a6a3831
-ms.openlocfilehash: b0a344aa69085d50087eefc746236bc8ceacadaa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c68479737cefe542a10a404a8b31a4820a430ffb
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918851"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855205"
 ---
 # <a name="filtertables"></a>\<filterTables>
 필터가 일치할 때 메시지를 보내기 위한 라우팅 필터와 대상 엔드포인트 간의 매핑을 포함하는 라우팅 테이블을 정의하기 위한 구성 섹션을 나타냅니다.  
   
- \<system.serviceModel>  
-\<라우팅 >  
-\<routingTables>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<라우팅 >** ](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<filterTables >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,7 +48,7 @@ ms.locfileid: "69918851"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<routing>](routing.md)|라우팅 필터와 라우팅 테이블을 포함하는 구성 섹션입니다.|  
   

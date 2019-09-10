@@ -2,18 +2,22 @@
 title: <certificateReference> 에 대한 <identity>
 ms.date: 03/30/2017
 ms.assetid: ac359c65-c22d-42d2-97de-db53b77cebdb
-ms.openlocfilehash: 49c731b2637c15e0b968d8c2523c51c8e138e7bf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 93a6290d780ff61756f7315cd0c32f0e199ca00f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926179"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849990"
 ---
 # <a name="certificatereference-for-identity"></a>\<\<id > > certificateReference
 X.509 인증서 유효성 검사의 설정을 지정합니다. 이 id를 사용 하 여 끝점에 연결 하는 WCF (secure Windows Communication Foundation) 클라이언트는 서버에서 제공 하는 클레임이이 id를 생성 하는 데 사용 된 id 클레임을 포함 하는지 확인 합니다.  
   
- \<identity>  
-\<certificateReference>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<클라이언트 >** ](client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<끝점 >** ](endpoint-of-client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<id >** ](identity.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<certificateReference >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -31,7 +35,7 @@ X.509 인증서 유효성 검사의 설정을 지정합니다. 이 id를 사용 
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
 |findValue|X.509 인증서 저장소에서 검색할 값을 지정합니다. 이 특성에 포함된 형식은 지정된 `X509FindType` 값의 요구 사항을 충족해야 합니다. 기본값은 빈 문자열입니다.|  
 |isChainIncluded|유효성 검사에서 인증서 체인을 사용하는지 여부를 지정하는 부울 값입니다.|  
@@ -44,7 +48,7 @@ X.509 인증서 유효성 검사의 설정을 지정합니다. 이 id를 사용 
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[\<identity>](identity.md)|한 엔드포인트에서 다른 엔드포인트와 메시지를 교환할 때 상대 엔드포인트를 인증할 수 있도록 하는 설정을 지정합니다.|  
   

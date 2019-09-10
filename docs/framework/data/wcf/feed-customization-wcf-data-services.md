@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: b4ea05b0112af4c1dcb6308a08ab3b31c586fbe8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 17d54210d7abc16fe91fa94f39a8f85eac866088
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790859"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854191"
 ---
 # <a name="feed-customization-wcf-data-services"></a>피드 사용자 지정(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 를 사용 하 여 데이터를 피드로 노출 합니다. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]는 데이터 피드에 대해 Atom 및 JavaScript Object Notation (JSON) 형식을 모두 지원 합니다. Atom 피드를 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 사용 하는 경우는 엔터티 및 관계와 같은 데이터를 HTTP 메시지의 본문에 포함할 수 있는 XML 형식으로 serialize 하는 표준 메서드를 제공 합니다. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]엔터티와 Atom 요소에 포함 된 데이터 간의 기본 엔터티 속성 매핑을 정의 합니다. 자세한 내용은 [OData: Atom 형식](https://go.microsoft.com/fwlink/?LinkID=185794)입니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "70790859"
 > 사용자 지정 피드를 정의하는 경우 사용자 지정 매핑이 정의되어 있는 모든 엔터티 속성이 프로젝션에 포함되도록 해야 합니다. 매핑된 엔터티 속성이 프로젝션에 포함되지 않는 경우 데이터가 손실될 수 있습니다. 자세한 내용은 [쿼리 프로젝션](query-projections-wcf-data-services.md)을 참조 하세요.  
   
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>Entity Framework 공급자를 사용하여 피드 사용자 지정  
- [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 공급자와 함께 사용된 데이터 모델은 .edmx 파일에 XML로 표현됩니다. 이 경우 사용자 지정 피드를 정의하는 특성은 데이터 모델의 엔터티 형식과 속성을 나타내는 `EntityType` 및 `Property` 요소에 추가됩니다. 이러한 피드 사용자 지정 특성은 MC- [CSDL\]에서 \[정의 되지 않습니다. 공급자가 데이터 모델을](https://go.microsoft.com/fwlink/?LinkId=159072)정의 하는 데 사용 하는 형식인 개념 스키마 정의 파일 형식입니다. [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 따라서 `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`에 정의된 특정 스키마 네임스페이스에 피드 사용자 지정 특성을 선언해야 합니다. 다음 XML 조각은 `Property`, `Products` 및 `ProductName` 속성을 정의하는 `ReorderLevel` 엔터티 형식의 `UnitsInStock` 요소에 적용되는 피드 사용자 지정 특성을 보여 줍니다.  
+ Entity Framework 공급자와 함께 사용된 데이터 모델은 .edmx 파일에 XML로 표시됩니다. 이 경우 사용자 지정 피드를 정의하는 특성은 데이터 모델의 엔터티 형식과 속성을 나타내는 `EntityType` 및 `Property` 요소에 추가됩니다. 이러한 피드 사용자 지정 특성은 MC- [CSDL\]에서 \[정의 되지 않습니다. Entity Framework 공급자가 데이터 모델](https://go.microsoft.com/fwlink/?LinkId=159072)을 정의 하는 데 사용 하는 형식인 개념 스키마 정의 파일 형식입니다. 따라서 `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`에 정의된 특정 스키마 네임스페이스에 피드 사용자 지정 특성을 선언해야 합니다. 다음 XML 조각은 `Property`, `Products` 및 `ProductName` 속성을 정의하는 `ReorderLevel` 엔터티 형식의 `UnitsInStock` 요소에 적용되는 피드 사용자 지정 특성을 보여 줍니다.  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/northwind.csdl#edmfeedattributes)]  
   
@@ -47,7 +47,7 @@ ms.locfileid: "70790859"
 ### <a name="custom-feed-attributes"></a>사용자 지정 피드 특성  
  다음 표에서는 데이터 모델을 정의하는 CSDL(개념 스키마 정의 언어)에 추가할 수 있는 피드를 사용자 지정하는 XML 특성을 보여 줍니다. 이러한 특성은 리플렉션 공급자와 함께 사용되는 <xref:System.Data.Services.Common.EntityPropertyMappingAttribute>의 속성과 같습니다.  
   
-|특성 이름|Description|  
+|특성 이름|설명|  
 |--------------------|-----------------|  
 |`FC_ContentKind`|콘텐츠의 형식을 나타냅니다. 다음 키워드는 배포 콘텐츠 형식을 정의합니다.<br /><br /> `text:`속성 값은 피드에 텍스트로 표시 됩니다.<br /><br /> `html:`속성 값은 피드에 HTML로 표시 됩니다.<br /><br /> `xhtml:`속성 값은 피드의 XML 형식 HTML로 표시 됩니다.<br /><br /> 이러한 키워드는 리플렉션 공급자와 함께 사용되는 <xref:System.Data.Services.Common.SyndicationTextContentKind> 열거 값과 같습니다.<br /><br /> `FC_NsPrefix` 및 `FC_NsUri` 특성을 사용하는 경우 이 특성은 지원되지 않습니다.<br /><br /> `xhtml` 특성의 `FC_ContentKind` 값을 지정하는 경우 속성 값에 올바른 형식의 XML이 포함되도록 해야 합니다. 데이터 서비스는 변환을 수행하지 않고 값을 반환합니다. 반환된 XML의 모든 XML 요소 접두사에 매핑된 피드에 정의된 네임스페이스 URI 및 접두사가 있는지도 확인해야 합니다.|  
 |`FC_KeepInContent`|참조된 속성 값이 피드의 콘텐츠 섹션과 매핑 대상 위치에 모두 포함되어야 함을 나타냅니다. 유효한 값은 `true` 및 `false`입니다. 결과 피드가 이전 버전의 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]와 호환 되도록 하려면 값을 `true` 지정 하 여 피드의 콘텐츠 섹션에 값이 포함 되어 있는지 확인 합니다.|  

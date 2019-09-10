@@ -2,12 +2,12 @@
 title: 명령 트리의 모양
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: a3568f3deeaeeb31b69b41ac7c767001b792a8eb
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8368354049a77a56a5aa54ab500619576f41b0dc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248217"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854268"
 ---
 # <a name="the-shape-of-the-command-trees"></a>명령 트리의 모양
 
@@ -17,7 +17,7 @@ SQL 생성 모듈은 지정된 입력 쿼리 명령 트리 식을 기반으로 �
 
 쿼리 명령 트리는 쿼리의 개체 모델 표현입니다. 쿼리 명령 트리는 다음 두 가지 용도로 사용됩니다.
 
-- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에 대해 지정된 입력 쿼리를 표현하기 위해
+- Entity Framework에 대해 지정 된 입력 쿼리를 나타내려면입니다.
 
 - 공급자에 제공되고 백엔드에 대한 쿼리를 설명하는 출력 쿼리를 표현하기 위해
 
@@ -25,7 +25,7 @@ SQL 생성 모듈은 지정된 입력 쿼리 명령 트리 식을 기반으로 �
 
 DBQueryCommandTree.Query 속성은 쿼리 논리를 설명하는 식 트리의 루트입니다. DBQueryCommandTree.Parameters 속성에는 쿼리에서 사용되는 매개 변수의 목록이 포함되어 있습니다. 식 트리는 DbExpression 개체로 구성됩니다.
 
-DbExpression 개체는 특정 계산을 나타냅니다. 몇 가지 종류의 식이 상수, 변수, 함수, 생성자 및 표준 관계형 연산자(필터, 조인 등)를 포함하는 쿼리 식을 작성할 수 있도록 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에서 제공됩니다. 모든 DbExpression 개체에는 해당 식에서 생성 되는 결과의 형식을 나타내는 ResultType 속성이 있습니다. 이 형식은 TypeUsage로 표현됩니다.
+DbExpression 개체는 특정 계산을 나타냅니다. 상수, 변수, 함수, 생성자 및 표준 관계형 연산자 (예: 필터 및 조인)를 비롯 한 쿼리 식을 작성 하기 위해 Entity Framework에서 제공 하는 여러 종류의 식이 제공 됩니다. 모든 DbExpression 개체에는 해당 식에서 생성 되는 결과의 형식을 나타내는 ResultType 속성이 있습니다. 이 형식은 TypeUsage로 표현됩니다.
 
 ## <a name="shapes-of-the-output-query-command-tree"></a>출력 쿼리 명령 트리의 모양
 
@@ -75,7 +75,7 @@ DbExpression 개체는 특정 계산을 나타냅니다. 몇 가지 종류의 �
 
 - 사용자 정의 함수
 
-정식 함수 (자세한 내용은 [정식 함수](./language-reference/canonical-functions.md) 참조)는의 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]일부로 지정 되며, 공급자는 해당 사양에 따라 정식 함수에 대 한 구현을 제공 해야 합니다. 저장소 함수는 해당 공급자 매니페스트에 지정된 사항을 기반으로 합니다. 사용자 정의 함수는 SSDL에서 지정된 사항을 기반으로 합니다.
+정식 함수 (자세한 내용은 [정식 함수](./language-reference/canonical-functions.md) 참조)는 Entity Framework 일부로 지정 되며, 공급자는 해당 사양에 따라 정식 함수에 대 한 구현을 제공 해야 합니다. 저장소 함수는 해당 공급자 매니페스트에 지정된 사항을 기반으로 합니다. 사용자 정의 함수는 SSDL에서 지정된 사항을 기반으로 합니다.
 
 또한 NiladicFunction 특성이 있는 함수에는 인수가 없으며 끝에 괄호 없이 변환되어야 합니다.  즉  *\<* *, \<functionName > ()* 대신 functionName > 합니다.
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d2d48e5fb070ec0334de579d2e28146177a87b1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 805ceb60d2ac122df2382656b95b7bf5e7509bfc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049481"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855949"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>ICorProfilerInfo4::GetReJITIDs 메서드
-모든 JIT 다시 컴파일된 버전의 지정 된 함수가 여전히 할당 되는 식별 하는 Id의 배열을 반환 합니다. 이 이후에 되돌릴 되었지만 아직 서비스 되지 않음 (예를 들어 되돌려 진된 함수를 포함 하는 응용 프로그램 도메인 사용 중인 경우 계속)를 해제 하는 함수의 JIT 다시 컴파일된 버전을 포함 합니다.  
+아직 할당 된 지정 된 함수의 JIT 다시 컴파일된 모든 버전을 식별 하는 Id 배열을 반환 합니다. 여기에는 나중에 되돌린 하지만 아직 해제 되지 않은 함수의 JIT 다시 컴파일된 버전 (예: 되돌린 함수를 포함 하는 응용 프로그램 도메인이 아직 사용 중인 경우)이 포함 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp
 HRESULT GetReJITIDs (  
      [in]  FunctionID          functionId,  
      [in]  ULONG               cReJitIds,  
@@ -39,26 +39,26 @@ HRESULT GetReJITIDs (
   
 ## <a name="parameters"></a>매개 변수  
  `functionId`  
- [in] `FunctionID` 열거할 버전에 대 한 함수 인스턴스.  
+ 진행 버전을 열거할 함수 인스턴스의 입니다.`FunctionID`  
   
  `cReJitIds`  
- [in] JIT 다시 컴파일된 Id에 할당 된 수의 `reJitIds` 배열입니다.  
+ 진행 `reJitIds` 배열에 할당 된 JIT 다시 컴파일된 id의 수입니다.  
   
  `pcReJitIds`  
- [out] JIT 다시 컴파일된 Id의 실제 수입니다.  
+ 제한이 JIT 다시 컴파일된 Id의 실제 수입니다.  
   
  `reJitIds`  
- [out] 지정 된 함수의 JIT 다시 컴파일된 Id를 포함 하는 호출자에 게 할당 된 배열입니다.  
+ 제한이 지정 된 함수의 JIT 다시 컴파일된 Id를 포함 하는 호출자가 할당 한 배열입니다.  
   
 ## <a name="remarks"></a>설명  
- `GetReJITIDs` 지정 된 함수 인스턴스에 대 한 활성 JIT 다시 컴파일된 Id를 열거합니다. 다른 것과 동일한 사용 패턴을 따릅니다 `ICorProfilerInfo` 호출자 할당 버퍼를 허용 하는 함수입니다.  
+ `GetReJITIDs`지정 된 함수 인스턴스에 대 한 활성 JIT 다시 컴파일된 Id를 열거 합니다. 호출자가 할당 한 버퍼를 허용 하 `ICorProfilerInfo` 는 다른 함수와 동일한 사용 패턴을 따릅니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
- **라이브러리:** CorGuids.lib  
+ **라이브러리** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

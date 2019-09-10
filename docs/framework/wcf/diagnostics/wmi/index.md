@@ -2,12 +2,12 @@
 title: 진단에 Windows Management Instrumentation 사용
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 90aae0e22feec5d26fa7ee4c690904ed893489b4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0b67f06b9a99d7e9001c8415d0e94adef8436a3d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795921"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855810"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>진단에 Windows Management Instrumentation 사용
 WCF (Windows Communication Foundation)는 WCF WMI(Windows Management Instrumentation) (WMI) 공급자를 통해 런타임에 서비스의 검사 데이터를 노출 합니다.  
@@ -143,7 +143,7 @@ WCF (Windows Communication Foundation)는 WCF WMI(Windows Management Instrumenta
 ### <a name="granting-access-to-arbitrary-users-or-groups"></a>임의의 사용자 또는 그룹에 권한 부여  
  이 단원의 예제에서는 모든 로컬 사용자에게 WMI 공급자 등록 권한을 부여합니다. 기본적으로 제공되지 않는 사용자 또는 그룹에게 권한을 부여하려면 해당 사용자 또는 그룹의 SID(보안 식별자)를 가져와야 합니다. 임의 사용자의 SID를 가져오는 간단한 방법은 없지만, 원하는 사용자로 로그온한 후에 다음 셸 명령을 실행하는 방법을 사용할 수 있습니다.  
   
-```  
+```console
 Whoami /user  
 ```  
   

@@ -2,18 +2,18 @@
 title: EDM 생성기(EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: 688989fea6037cc989267e14b103210c2a995afa
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 82166782e25cb7a7ea23fe7faf7a30cb0e68d631
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251622"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854727"
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM 생성기(EdmGen.exe)
 
-EdmGen.exe는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 모델 및 매핑 파일 작업에 사용되는 명령줄 도구입니다. EdmGen.exe 도구를 사용하여 다음을 수행할 수 있습니다.
+Edmgen.exe는 Entity Framework 모델 및 매핑 파일을 사용 하는 데 사용 되는 명령줄 도구입니다. EdmGen.exe 도구를 사용하여 다음을 수행할 수 있습니다.
 
-- 데이터 소스 관련 .NET Framework 데이터 공급자를 사용하여 데이터 소스에 연결하고 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에서 사용되는 개념적 모델(.csdl), 스토리지 모델(.ssdl) 및 매핑(.msl) 파일을 생성합니다. 자세한 내용은 [방법: Edmgen.exe를 사용 하 여 모델 및 매핑 파일](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)을 생성 합니다.
+- 데이터 원본 관련 .NET Framework 데이터 공급자를 사용 하 여 데이터 원본에 연결 하 고 Entity Framework에서 사용 하는 개념적 모델 파일 (csdl), 저장소 모델 (ssdl) 및 매핑 (msl) 파일을 생성 합니다. 자세한 내용은 [방법: Edmgen.exe를 사용 하 여 모델 및 매핑 파일](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)을 생성 합니다.
 
 - 기존 모델의 유효성을 검사합니다. 자세한 내용은 [방법: Edmgen.exe를 사용 하 여 모델 및 매핑 파일](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)의 유효성을 검사 합니다.
 
@@ -33,7 +33,7 @@ EdmGen /mode:choice [options]
 
 EdmGen.exe 도구를 사용하는 경우 다음 모드 중 하나를 지정해야 합니다.
 
-|모드|설명|
+|모드|Description|
 |----------|-----------------|
 |`/mode:ValidateArtifacts`|.csdl, .ssdl 및 .msl 파일의 유효성을 검사하고 오류 또는 경고를 표시합니다.<br /><br /> 이 옵션을 사용하려면 `/inssdl` 또는 `/incsdl` 인수 중 하나 이상이 필요합니다. `/inmsl`을 지정하면 `/inssdl` 및 `/incsdl` 인수도 필요합니다.|
 |`/mode:FullGeneration`|`/connectionstring` 옵션에 지정된 데이터베이스 연결 정보를 사용하고 .csdl, .ssdl, .msl, 개체 계층 및 뷰 파일을 생성합니다.<br /><br /> 이 옵션을 사용하려면 `/connectionstring` 인수와 `/project` 인수 또는 `/outssdl`, `/outcsdl`, `/outmsdl`, `/outobjectlayer`, `/outviews`, `/namespace` 및 `/entitycontainer` 인수 중 하나가 필요합니다.|
@@ -43,7 +43,7 @@ EdmGen.exe 도구를 사용하는 경우 다음 모드 중 하나를 지정해�
 
 ## <a name="options"></a>변수
 
-|옵션|설명|
+|옵션|Description|
 |------------|-----------------|
 |`/p[roject]:`\<string>|사용할 프로젝트 이름을 지정합니다. 프로젝트 이름은 네임스페이스 설정, 모델 및 매핑 파일 이름, 개체 소스 파일 이름, 뷰 생성 소스 파일 이름의 기본값으로 사용됩니다. 엔터티 컨테이너 이름은 project > Context로 \<설정 됩니다.|
 |`/prov[ider]:`\<string>|저장소 모델(.ssdl) 파일을 생성하는 데 사용할 .NET Framework 데이터 공급자의 이름입니다. 기본 공급자는 .NET Framework Data Provider for SQL Server(<xref:System.Data.SqlClient?displayProperty=nameWithType>)입니다.|

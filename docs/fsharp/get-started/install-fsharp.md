@@ -2,12 +2,12 @@
 title: F# 설치
 description: 환경에 따라 F#을 설치하는 방법을 알아봅니다.
 ms.date: 09/05/2019
-ms.openlocfilehash: 18b660ff640904119d63f57405752a14f7673e0c
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: dffa30eac0bdb59c85a66dca6cafd62b25daa572
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400726"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855796"
 ---
 # <a name="install-f"></a>F# 설치
 
@@ -39,7 +39,7 @@ F#을 환경에 따라 여러 가지 방법으로 설치할 수 있습니다.
 brew install mono
 ```
 
-그리고, [.NET Core SDK](https://www.microsoft.com/net/download)를 설치합니다.
+그리고, [.NET Core SDK](https://dotnet.microsoft.com/download)를 설치합니다.
 
 ### <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
@@ -50,13 +50,13 @@ sudo apt-get update
 sudo apt-get install mono-complete fsharp
 ```
 
-그리고, [.NET Core SDK](https://www.microsoft.com/net/download)를 설치합니다.
+그리고, [.NET Core SDK](https://dotnet.microsoft.com/download)를 설치합니다.
 
 ### <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
 [F# 지원 Visual Studio를 설치](#install-f-with-visual-studio)합니다. 이 때 F# 코드를 작성하고 컴파일, 실행하는데 필요한 모든 구성 요소가 설치됩니다.
 
-그리고, [.NET Core SDK](https://www.microsoft.com/net/download/)를 설치합니다.
+그리고, [.NET Core SDK](https://dotnet.microsoft.com/download)를 설치합니다.
 
 ---
 

@@ -2,20 +2,20 @@
 title: 명령줄 도구를 사용하여 F# 시작
 description: .NET Core CLI를 사용하여 모든 운영 체제(Windows나 macOs, Linux)에서 간단한 F# 다중 프로젝트 솔루션을 구축하는 방법을 알아봅니다.
 ms.date: 03/26/2018
-ms.openlocfilehash: bc9b223fcf133ffe8b19d5284dcbd3c14a426235
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1376b6b5384f380c06a96cdc568ad108de8a6e5f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938699"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855829"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>.NET Core CLI를 사용하여 F# 시작
 
-이 문서에서는 어떻게 시작할 수 있습니다 사용 하 여 F# .NET Core CLI를 사용 하 여 운영 체제 (Windows, macOS 또는 Linux). 콘솔 응용 프로그램에 의해 호출 되는 클래스 라이브러리를 사용 하 여 다중 프로젝트 솔루션 빌드를 거치게 됩니다.
+이 문서에서는 .NET Core CLI를 사용 하 여 운영 F# 체제 (Windows, Macos 또는 Linux)에서를 시작 하는 방법을 설명 합니다. 콘솔 응용 프로그램에서 호출 하는 클래스 라이브러리를 사용 하 여 다중 프로젝트 솔루션을 빌드하는 과정을 거칩니다.
 
 ## <a name="prerequisites"></a>전제 조건
 
-시작하려면 최신 [.NET Core SDK](https://www.microsoft.com/net/download/)를 설치해야 합니다.
+시작하려면 최신 [.NET Core SDK](https://dotnet.microsoft.com/download)를 설치해야 합니다.
 
 이 문서에서는 명령줄과 원하는 텍스트 편집기의 사용 방법을 알고 있다고 가정합니다. 아직 사용하고 있지 않은 경우라면, [Visual Studio Code](get-started-vscode.md)는 F#용 텍스트 편집기로 선택할 수 있는 훌륭한 옵션입니다.
 
@@ -66,7 +66,7 @@ let getJsonNetJson value =
     sprintf "I used to be %s but now I'm %s thanks to JSON.NET!" value (JsonConvert.SerializeObject(value))
 ```
 
-라이브러리 프로젝트에 Newtonsoft.Json NuGet 패키지를 추가 합니다.
+라이브러리 프로젝트에 Newtonsoft.json NuGet 패키지를 추가 합니다.
 
 ```console
 dotnet add src/Library/Library.fsproj package Newtonsoft.Json
@@ -140,7 +140,7 @@ cd src/App
 dotnet run Hello World
 ```
 
-다음과 같은 결과가 표시 됩니다.
+다음 결과가 표시 됩니다.
 
 ```console
 Nice command-line arguments! Here's what JSON.NET has to say about them:

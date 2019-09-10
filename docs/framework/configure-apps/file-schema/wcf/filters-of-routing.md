@@ -2,20 +2,20 @@
 title: <routing>의 <filters>
 ms.date: 03/30/2017
 ms.assetid: 7993cf90-9afd-4c3c-9608-184d5da1105c
-ms.openlocfilehash: ba60958ad33b46b40285f3f70001273bb3af3a63
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c9bc3a2c379e14d8cf687676a3ec40702d150e1e
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925608"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855242"
 ---
 # <a name="filters-of-routing"></a>\<라우팅 > > \<를 필터링 합니다.
 
 들어오는 메시지를 평가할 때 사용할 WCF (Windows Communication Foundation 형식) <xref:System.ServiceModel.Dispatcher.MessageFilter> 를 결정 하는 라우팅 필터 집합을 정의 하기 위한 구성 섹션을 나타냅니다.
 
-[ **\<system.serviceModel>** ](system-servicemodel.md)   
-&nbsp;&nbsp;[ **\<routing>** ](routing.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<filters>**
+[ **\<system.serviceModel>** ](system-servicemodel.md)\
+&nbsp;&nbsp;[ **\<routing>** ](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<filters>**  
   
 ## <a name="syntax"></a>구문  
   
