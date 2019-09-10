@@ -6,20 +6,18 @@ metadata:
   title: 'ML.NET 설명서 - 자습서, API 참조'
   meta.description: 'Learn how to use ML.NET, an open-source and cross-platform machine learning framework you can use to build custom machine learning solutions and integrate them into .NET applications. Incorporate AI into your apps using the .NET skills you already have and without leaving .NET.'
   ms.topic: landing-page
-  ms.date: 04/18/2019
-  ms.author: cgronlun
-  author: cjgronlund
+  ms.date: 08/15/2019
+  ms.author: nakersha
+  author: natke
 abstract:
   description: '사용자 지정 기계 학습 솔루션을 빌드하고 .NET 애플리케이션에 통합할 수 있도록 하는 무료 오픈 소스 플랫폼 간 기계 학습 프레임워크인 ML.NET 사용 방법을 알아봅니다. 자습서, 코드 예제, API 참조 및 기타 설명서에서 방법을 설명합니다.'
 sections:
-  - title: 시작
-    items:
-      - type: paragraph
-        text: ML.NET으로 기계 학습 애플리케이션을 빌드하는 방법은 <a href="/dotnet/machine-learning/how-does-mldotnet-work">ML.NET이 무엇이며 어떻게 작동하나요?</a>를 참조하세요. 또는 <b>Microsoft.ML</b> NuGet 패키지를 애플리케이션에 추가하여 시작해 보세요.
   - title: 단계별 자습서
     items:
       - type: paragraph
         text: ML.NET을 사용하여 공통 솔루션을 만드는 방법을 알아봅니다.
+      - type: paragraph
+        text: '<b>ML.NET API를 사용하여 개발</b>:'
       - type: list
         style: unordered
         items:
@@ -30,13 +28,40 @@ sections:
           - html: <a href="/dotnet/machine-learning/tutorials/movie-recommendation">행렬 인수분해를 사용하여 영화 추천기 만들기</a>
           - html: <a href="/dotnet/machine-learning/tutorials/image-classification">TensorFlow를 사용하여 사용자 지정 이미지 분류자 빌드</a>
           - html: <a href="/dotnet/machine-learning/tutorials/object-detection-onnx">ONNX를 사용하여 이미지에서 개체 검색</a>
-  - title: 참조 및 리소스
-    items:
       - type: paragraph
-        text: 'ML.NET API에는 릴리스 구성 요소와 미리 보기 구성 요소 등, 두 패키지 집합이 있습니다. 릴리스 API에는 데이터 처리를 위한 구성 요소, 이진 분류를 위한 알고리즘, 다중 분류, 회귀, 변칙 검색, 시계열 및 예측, 순위 지정, 모델 저장 및 로드, ONNX 및 TensorFlow 모델 처리 등을 비롯한 구성 요소가 포함되어 있습니다. Preview API에는 추천 태스크에 대한 알고리즘과 표준 딥 러닝 모델에 대한 지원이 포함되어 있습니다.'
+        text: '그래픽 Visual Studio 확장인 <b>모델 작성기 사용</b>:'
       - type: list
         style: unordered
         items:
-          - html: <a href="/dotnet/api/?view=ml-dotnet">ML.NET API</a>
-          - html: <a href="/dotnet/api/?view=ml-dotnet-preview">ML.NET 미리 보기 API</a>
-          - html: '<a href="https://github.com/dotnet/machinelearning-samples/blob/master/README.md">ML.NET 샘플: C# 및 F#</a>'
+          - html: <a href="/dotnet/machine-learning/tutorials/predict-prices-with-model-builder">모델 작성기를 사용하여 가격 예측</a>
+      - type: paragraph
+        text: '<b>ML.NET CLI 실행</b>:'
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/dotnet/machine-learning/tutorials/mlnet-cli">ML.NET CLI를 사용하여 감정 분석</a>
+  - title: 샘플
+    items:
+      - type: paragraph
+        text: 'C# 및 F#의 애플리케이션의 경우 GitHub에서 <a href="https://github.com/dotnet/machinelearning-samples">샘플 리포지토리</a>를 참조하세요.'
+  - title: 참조
+    items:
+      - type: paragraph
+        text: <b>ML.NET API</b>
+      - type: list
+        style: unordered
+        items:
+          - html: '<a href="/dotnet/api/?view=ml-dotnet">릴리스 ML.NET API</a>에는 데이터 처리를 위한 구성 요소, 이진 분류를 위한 알고리즘, 다중 분류, 회귀, 변칙 검색, 시계열 및 예측, 순위 지정, 모델 저장 및 로드, ONNX 및 TensorFlow 모델 처리 등을 비롯한 구성 요소가 포함되어 있습니다.'
+          - html: <a href="/dotnet/api/?view=ml-dotnet-preview">미리 보기 ML.NET API</a>에는 추천 작업에 대한 알고리즘과 표준 딥 러닝 모델에 대한 지원이 포함되어 있습니다.
+      - type: paragraph
+        text: <b>AutoML API</b>
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/dotnet/api/index?view=automl-dotnet">AutoML API</a>
+      - type: paragraph
+        text: <b>ML.NET CLI 참조</b>
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/dotnet/machine-learning/reference/ml-net-cli-reference">ML.NET CLI 명령 참조</a>

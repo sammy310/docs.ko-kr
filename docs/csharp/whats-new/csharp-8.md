@@ -1,17 +1,17 @@
 ---
 title: C# 8.0의 새로운 기능 - C# 가이드
 description: C# 8.0의 새로운 기능을 살펴봅니다. 이 문서는 미리 보기 5가 반영된 최신 내용을 담고 있습니다.
-ms.date: 02/12/2019
-ms.openlocfilehash: 14c86fe4b1ecd1c89ebbbb082c5c9956bc51e03e
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.date: 09/04/2019
+ms.openlocfilehash: b281c55a5911d81503a6af80e393469be1124280
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105506"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374005"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0의 새로운 기능
 
-C# 언어에는 직접 사용해 볼 수 있는 여러 개선된 기능이 포함되어 있습니다. 
+C# 언어에는 직접 사용해 볼 수 있는 여러 개선된 기능이 포함되어 있습니다.
 
 - [읽기 전용 멤버](#readonly-members)
 - [기본 인터페이스 멤버](#default-interface-members)
@@ -26,6 +26,8 @@ C# 언어에는 직접 사용해 볼 수 있는 여러 개선된 기능이 포�
 - [nullable 참조 형식](#nullable-reference-types)
 - [비동기 스트림](#asynchronous-streams)
 - [인덱스 및 범위](#indices-and-ranges)
+- [관리되지 않는 생성 형식](#unmanaged-constructed-types)
+- [보간된 약어 문자열의 향상된 기능](#enhancement-of-interpolated-verbatim-strings)
 
 > [!NOTE]
 > 이 문서는 C# 8.0 미리 보기 5를 반영하여 업데이트되었습니다.
@@ -376,7 +378,8 @@ await foreach (var number in GenerateSequence())
 
 범위와 인덱스는 배열, <xref:System.Span%601> 또는 <xref:System.ReadOnlySpan%601>에서 하위 범위를 지정하는 간결한 구문을 제공합니다.
 
-이 언어 지원은 두 가지 새 형식 및 두 가지 새 연산자를 사용합니다.
+이 언어 지원은 다음과 같은 두 가지 새 형식 및 두 가지 새 연산자를 사용합니다.
+
 - <xref:System.Index?displayProperty=nameWithType>는 인덱스를 시퀀스로 표현합니다.
 - 인덱스가 시퀀스의 끝을 기준으로 하도록 지정하는 `^` 연산자입니다.
 - <xref:System.Range?displayProperty=nameWithType>는 시퀀스의 하위 범위를 나타냅니다.
@@ -444,3 +447,34 @@ var text = words[phrase];
 ```
 
 인덱스와 범위에 대한 자세한 내용은 [인덱스 및 범위](../tutorials/ranges-indexes.md)에 대한 자습서에서 확인할 수 있습니다.
+
+## <a name="unmanaged-constructed-types"></a>관리되지 않는 생성 형식
+
+C# 7.3 이전 버전에서 생성 형식(하나 이상의 형식 인수를 포함하는 형식)은 [관리되지 않는 형식](../language-reference/builtin-types/unmanaged-types.md)일 수 없습니다. C# 8.0부터는 관리되지 않는 형식의 필드만 포함된 경우 생성된 값 형식이 관리되지 않습니다.
+
+예를 들어 다음과 같은 제네릭 `Coords<T>` 형식의 정의를 살펴보겠습니다.
+
+```csharp
+public struct Coords<T>
+{
+    public T X;
+    public T Y;
+}
+```
+
+`Coords<int>` 형식은 C# 8.0 이상에서 관리되지 않는 형식입니다. 관리되지 않는 형식과 마찬가지로 이 형식의 변수에 대한 포인터를 만들거나 이 형식의 인스턴스에 대해 [스택에서 메모리 블록을 할당](../language-reference/operators/stackalloc.md)할 수 있습니다.
+
+```csharp
+Span<Coords<int>> coordinates = stackalloc[]
+{
+    new Coords<int> { X = 0, Y = 0 },
+    new Coords<int> { X = 0, Y = 3 },
+    new Coords<int> { X = 4, Y = 0 }
+};
+```
+
+자세한 내용은 [관리되지 않는 형식](../language-reference/builtin-types/unmanaged-types.md)을 참조하세요.
+
+## <a name="enhancement-of-interpolated-verbatim-strings"></a>보간된 약어 문자열의 향상된 기능
+
+[보간된](../language-reference/tokens/interpolated.md) 약어 문자열에서 `$` 및 `@` 토큰은 순서에 관계없이 사용할 수 있습니다. `$@"..."` 및 `@$"..."` 모두 유효한 보간된 약어 문자열입니다. 이전 C# 버전에서는 `$` 토큰이 `@` 토큰 앞에 나타나야 했습니다.

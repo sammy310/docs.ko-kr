@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 4dc0618eceda4df7c5aa76aee3ac649deb9f5310
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 3a44b017c6160639ed1be7374b893e103ee5f5d8
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675440"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373902"
 ---
 # <a name="common-client-side-web-technologies"></a>일반 클라이언트측 웹 기술
 
@@ -28,9 +28,9 @@ HTML(HyperText Markup Language)은 웹 페이지 및 웹 애플리케이션을 �
 
 CSS(CSS 스타일시트)는 HTML 요소의 모양과 레이아웃을 제어하는 데 사용됩니다. CSS 스타일은 HTML 요소에 직접 적용되고, 동일한 페이지에서 별도로 정의되거나 개별 파일로 정의되며, 페이지별로 참조될 수 있습니다. 스타일은 주어진 HTML 요소를 선택하는 데 사용되는 방식에 따라 계단식으로 배열됩니다. 예를 들어 스타일은 전체 문서에 적용될 수도 있지만 특정 요소에 적용되는 스타일에 의해 재정의됩니다. 마찬가지로, 요소 관련 스타일은 요소에 적용된 CSS 클래스에 적용되는 스타일에 의해 재정의됩니다. 그 다음으로 해당 요소의 특정 인스턴스를 대상으로 하는 스타일에 의해 재정의됩니다(해당 ID를 통해). 그림 6-1
 
-**그림 6-1.** 순서 대로 CSS 특이성 규칙
+![CSS 특이성 규칙](./media/image6-1.png)
 
-![](./media/image6-1.png)
+**그림 6-1.** 순서 대로 CSS 특이성 규칙
 
 자체 개별 스타일시트의 스타일을 유지하고 선택 영역 기반 계단식 배열을 사용하여 애플리케이션 내에서 스타일의 일관성 및 재사용을 구현하는 것이 가장 좋습니다. HTML 내에 스타일 규칙을 배치하지 말아야 하며, 스타일을 특정 개별 요소(요소의 전체 클래스 또는 특정 CSS 클래스가 적용되어 있는 요소 아님)에 적용하는 것은 규칙이 아닌 예외여야 합니다.
 

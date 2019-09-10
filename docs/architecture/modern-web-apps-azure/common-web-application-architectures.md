@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 22cb673f09faf7b0eabcfa5b3f6700d33242d84b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e257410c51d70af31b565d99a8d28ef82ce681d7
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675380"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373805"
 ---
 # <a name="common-web-application-architectures"></a>일반 웹 애플리케이션 아키텍처
 
@@ -28,7 +28,7 @@ ms.locfileid: "68675380"
 
 새 ASP.NET Core 프로젝트는 Visual Studio에서 만들었든 아니면 명령줄에서 만들었든, 간단한 "올인원" 모놀리스로 시작됩니다. 프레젠테이션, 비즈니스 및 데이터 액세스 논리를 포함하여 애플리케이션의 모든 동작을 포함합니다. 그림 5-1은 단일 프로젝트 앱의 파일 구조를 보여줍니다.
 
-![](./media/image5-1.png)
+![단일 프로젝트 ASP.NET Core 앱](./media/image5-1.png)
 
 **그림 5-1.** 단일 프로젝트 ASP.NET Core 앱.
 
@@ -59,7 +59,7 @@ ms.locfileid: "68675380"
 
 그림 5-2는 애플리케이션 논리를 레이어로 구성하는 가장 일반적인 예입니다.
 
-![](./media/image5-2.png)
+![일반적인 애플리케이션 레이어](./media/image5-2.png)
 
 **그림 5-2.** 일반적인 애플리케이션 레이어.
 
@@ -69,19 +69,19 @@ ms.locfileid: "68675380"
 
 그림 5-3은 애플리케이션을 책임(또는 레이어)에 따라 세 개 프로젝트로 분할하는 예제 솔루션을 보여줍니다.
 
-![](./media/image5-3.png)
+![3개의 프로젝트가 있는 간단한 모놀리식 애플리케이션](./media/image5-3.png)
 
 **그림 5-3.** 세 개 프로젝트가 있는 간단한 모놀리식 애플리케이션입니다.
 
 이 애플리케이션은 구성을 목적으로 여러 프로젝트를 사용하지만 여전히 단일 단위로 배포되고 그 클라이언트는 단일 웹앱과 상호 작용합니다. 따라서 배포 프로세스가 매우 간단합니다. 그림 5-4는 Azure를 사용하여 이러한 앱을 호스팅하는 방법을 보여 줍니다.
 
-![](./media/image5-4.png)
+![Azure 웹앱의 간단한 배포](./media/image5-4.png)
 
 **그림 5-4.** Azure 웹앱의 간단한 배포
 
 애플리케이션 요구 사항이 증가하면 좀 더 복잡하고 강력한 배포 솔루션이 필요할 수 있습니다. 그림 5-5는 추가 기능을 지원하는 좀 더 복잡한 배포 계획의 예를 보여줍니다.
 
-![](./media/image5-5.png)
+![Azure App Service에 웹앱 배포](./media/image5-5.png)
 
 **그림 5-5.** Azure App Service에 웹앱 배포
 
@@ -91,7 +91,7 @@ ms.locfileid: "68675380"
 
 Azure에서 웹 애플리케이션을 확장하는 가장 간단한 방법은 애플리케이션의 App Service 계획에서 수동으로 확장하는 것입니다. 그림 5-6은 앱에 서비스를 제공하는 인스턴스 수를 구성하는 적절한 Azure 대시보드 화면을 보여줍니다.
 
-![](./media/image5-6.png)
+![Azure에서 App Service 계획 크기 조정](./media/image5-6.png)
 
 **그림 5-6.** Azure에서 App Service 계획의 크기를 조정합니다.
 
@@ -104,7 +104,7 @@ Azure에서 웹 애플리케이션을 확장하는 가장 간단한 방법은 �
 
 클린 아키텍처는 비즈니스 논리와 애플리케이션 모델을 애플리케이션의 중심에 놓습니다. 비즈니스 논리가 데이터 액세스 또는 다른 인프라 고려 사항에 따라 달라지는 것이 아니라 이 종속성을 반전하여 인프라 및 구현 세부 사항이 애플리케이션 코어에 따라 달라집니다. 이것은 Application Core에서 추상화 또는 인터페이스를 정의하여 달성된 후 인프라 계층에서 정의된 형식에 따라 구현됩니다. 이 아키텍처를 시각화하는 일반적인 방법은 양파와 비슷한 일련의 동심원을 사용하는 것입니다. 그림 5-7은 이 아키텍처 표현 스타일의 예를 보여 줍니다.
 
-![](./media/image5-7.png)
+![클린 아키텍처; 양파형 보기](./media/image5-7.png)
 
 **그림 5-7.** 클린 아키텍처; 양파형 보기
 
@@ -112,7 +112,7 @@ Azure에서 웹 애플리케이션을 확장하는 가장 간단한 방법은 �
 
 그림 5-8은 UI와 다른 레이어 간에 종속성을 좀 더 잘 반영하는 더 일반적인 수평 방향 레이어 다이어그램입니다.
 
-![](./media/image5-8.png)
+![클린 아키텍처; 수평 방향 레이어 보기](./media/image5-8.png)
 
 **그림 5-8.** 클린 아키텍처; 수평 방향 레이어 보기
 
@@ -120,7 +120,7 @@ Azure에서 웹 애플리케이션을 확장하는 가장 간단한 방법은 �
 
 그림 5-9는 이러한 권장 사항에 따라 빌드할 때의 ASP.NET Core 애플리케이션 아키텍처를 자세히 보여줍니다.
 
-![ASPNET Core 아키텍처](./media/image5-9.png)
+![클린 아키텍처를 따르는 ASP.NET Core 아키텍처 다이어그램](./media/image5-9.png)
 
 **그림 5-9.** 클린 아키텍처를 따르는 ASP.NET Core 아키텍처 다이어그램.
 
@@ -262,7 +262,7 @@ networks:
 
 `docker-compose.yml` 파일은 `Web` 프로젝트에서 `Dockerfile`을 참조합니다. `Dockerfile`은 사용할 기본 컨테이너 및 애플리케이션의 구성 방식을 지정하는 데 사용됩니다. `Web`' `Dockerfile`:
 
-```
+```Dockerfile
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /app
 

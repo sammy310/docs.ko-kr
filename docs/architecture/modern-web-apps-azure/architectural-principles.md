@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케�
 author: ardalis
 ms.author: wiwagn
 ms.date: 02/16/2019
-ms.openlocfilehash: 93a0fd5c484e27853ec9a6919aa573f68471ceaa
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 91bb3be207c9919eb7eb0119e96e76aae94858be
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105479"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373762"
 ---
 # <a name="architectural-principles"></a>아키텍처 원칙
 
@@ -36,13 +36,13 @@ ms.locfileid: "70105479"
 
 애플리케이션 내에서 종속성의 방향은 구현 세부 정보가 아닌 추상화 방향에 있어야 합니다. 대부분의 애플리케이션은 컴파일 시간 종속성이 런타임 실행 방향으로 흐르도록 작성됩니다. 이렇게 하면 직접 종속성 그래프가 생성됩니다. 즉, 모듈 A가 모듈 B의 함수를 호출하고 모듈 B는 모듈 C의 함수를 호출하는 경우 그림 4-1처럼 컴파일 시간에 A는 B에 종속되고 B는 C에 종속됩니다.
 
-![](./media/image4-1.png)
+![직접 종속성 그래프](./media/image4-1.png)
 
 **그림 4-1.** 직접 종속성 그래프.
 
 종속성 반전 원칙을 적용하면 A는 B가 구현하는 추상화에 대한 메서드를 호출할 수 있고, 런타임에 A가 B를 호출할 수 있게 되지만 B는 컴파일 시간에 A에 의해 제어되는 인터페이스에 종속됩니다(따라서 일반적인 컴파일 시간 종속성이 *반전*됨). 런타임에 프로그램 실행 흐름은 그대로 유지되지만, 인터페이스가 도입된다는 것은 이러한 인터페이스의 여러 구현을 손쉽게 연결할 수 있다는 의미입니다.
 
-![](./media/image4-2.png)
+![반전된 종속성 그래프](./media/image4-2.png)
 
 **그림 4-2.** 반전된 종속성 그래프.
 

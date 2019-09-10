@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 46c2e53540c3fd929ad2ad1c5e107b538edd5884
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
+ms.openlocfilehash: 4e4ab71cc542767460e92be1510ccc5c5e0e7ce0
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69038118"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374079"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>ASP.NET Core MVC 앱 테스트
 
@@ -50,9 +50,9 @@ ms.locfileid: "69038118"
 
 Martin Fowler는 피라미드형 테스트에 대해 글을 썼으며. 그 예는 그림 9-1에 나와 있습니다.
 
-![](./media/image9-1.png)
+![피라미드형 테스트](./media/image9-1.png)
 
-그림 9-1 피라미드형 테스트
+**그림 9-1**. 피라미드형 테스트
 
 피라미드의 서로 다른 계층과 상대적인 크기는 여러 종류의 테스트와 애플리케이션에 대해 작성해야 하는 횟수를 나타냅니다. 여기서 볼 수 있듯이, 더 작은 계층의 기능 테스트와 함께 작은 계층의 통합 테스트 계층에서 지원하는 큰 기반의 단위 테스트를 구성하는 것이 좋습니다. 각 계층에는 이상적으로 하위 계층에서 적절하게 수행할 수 없는 테스트만 있어야 합니다. 특정 시나리오에 필요한 테스트 종류를 결정할 때에는 피라미드형 테스트를 명심하세요.
 
@@ -66,15 +66,15 @@ Martin Fowler는 피라미드형 테스트에 대해 글을 썼으며. 그 예�
 
 일반적인 방법은 애플리케이션 프로젝트를 'src' 폴더 아래에 구성하고, 애플리케이션의 테스트 프로젝트를 병렬 'tests' 폴더 아래에 구성하는 것입니다. 이 구성이 유용할 경우 Visual Studio에서 일치하는 솔루션 폴더를 만들 수 있습니다.
 
-![](./media/image9-2.png)
+![솔루션의 테스트 구성](./media/image9-2.png)
 
-그림 9-2 솔루션의 테스트 구성
+**그림9-2** 솔루션의 테스트 구성
 
 원하는 테스트 프레임워크를 사용할 수 있습니다. xUnit 프레임워크는 제대로 작동하며 모든 ASP.NET Core 및 EF Core 테스트가 작성된 것입니다. 그림 9-3에 표시된 템플릿을 사용하여 Visual Studio에서 또는 dotnet new xunit을 사용하여 CLI에서 xUnit 테스트 프로젝트를 추가할 수 있습니다.
 
-![](./media/image9-3.png)
+![Visual Studio에서 xUnit 테스트 프로젝트 추가](./media/image9-3.png)
 
-그림 9-3 Visual Studio에서 xUnit 테스트 프로젝트 추가
+**그림 9-3** Visual Studio에서 xUnit 테스트 프로젝트 추가
 
 ### <a name="test-naming"></a>테스트 이름 지정
 
@@ -98,7 +98,7 @@ Martin Fowler는 피라미드형 테스트에 대해 글을 썼으며. 그 예�
 
 많은 소규모 테스트 클래스를 생성하는 위와 같은 명명 규칙을 따르는 경우 폴더와 네임스페이스를 사용하여 테스트를 자세히 구성하는 것이 좋습니다. 그림 9-4에서는 여러 테스트 프로젝트 내에서 폴더별로 테스트를 구성하는 방법 중 하나를 보여 줍니다.
 
-![](./media/image9-4.png)
+![테스트할 클래스에 따라 폴더별로 테스트 클래스 구성](./media/image9-4.png)
 
 **그림 9-4** 테스트할 클래스에 따라 폴더별로 테스트 클래스 구성
 

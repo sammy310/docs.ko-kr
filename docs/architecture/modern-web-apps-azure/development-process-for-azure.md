@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 286ffdb73425794e5979cde902e21ebd90a26969
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: dcd2616cd5638aa712c11e370d35111b248e88ec
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675150"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374044"
 ---
 # <a name="development-process-for-azure"></a>Azure 개발 프로세스
 
@@ -28,7 +28,7 @@ ms.locfileid: "68675150"
 
 **Visual Studio 2017.** *Visual Studio 2017*을 사용하는 경우 *.NET Core 플랫폼 간 개발* 워크로드가 설치되어 있다면 ASP.NET Core 애플리케이션을 빌드할 수 있습니다. 그림 10-1은 Visual Studio 2017 설정 대화 상자에서 필요한 워크로드를 보여줍니다.
 
-![](./media/image10-1.png)
+![Visual Studio 2017에 .NET Core 워크로드 설치](./media/image10-1.png)
 
 **그림 10-1.** Visual Studio 2017에 .NET Core 워크로드 설치.
 

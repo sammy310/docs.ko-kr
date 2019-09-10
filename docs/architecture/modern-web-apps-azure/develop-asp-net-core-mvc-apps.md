@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 9f8c9c47757379d641b821f312b89666456343d4
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 51feb770e84af170bf31a6ba363a1d9e72616284
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105460"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373771"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC 앱 개발
 
@@ -176,9 +176,9 @@ ASP.NET Core UI 프로젝트는 모든 UI 수준의 문제를 담당하지만 �
 
 ASP.NET Core MVC는 이러한 용도를 위해 Areas를 지원합니다. Areas를 사용하면 각 Area 폴더에 별도의 Controllers 및 Views 폴더 집합(관련된 모델도 포함)을 만들 수 있습니다. 그림 7-1에서는 Areas를 사용하는 폴더 구조의 예를 보여 줍니다.
 
-![](./media/image7-1.png)
+![샘플 영역 구성](./media/image7-1.png)
 
-그림 7-1 샘플 영역 구성
+**그림 7-1**. 샘플 영역 구성
 
 Areas를 사용하는 경우 특성을 사용하여 컨트롤러를 해당 컨트롤러가 속한 영역 이름으로 데코레이팅해야 합니다.
 
@@ -245,7 +245,7 @@ services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 
 ![요청은 권한 부여 필터, 리소스 필터, 모델 바인딩, 작업 필터, 작업 실행 및 작업 결과 변환, 예외 필터, 결과 필터 및 결과 실행을 통해 처리됩니다. 주의할 점은 요청이 응답이 클라이언트에 전송되기 전에 결과 필터 및 리소스 필터에 따라서만 처리된다는 것입니다.](./media/image7-2.png)
 
-그림 7-2 필터 및 요청 파이프라인을 통한 요청 실행
+**그림 7-2**. 필터 및 요청 파이프라인을 통한 요청 실행
 
 필터는 일반적으로 특성으로 구현되므로 컨트롤러 또는 작업을 적용할 수 있습니다(또는 전역적으로). 이 방식으로 추가되면 작업 수준에서 지정된 필터가 컨트롤러 수준에서 지정된 필터에 따라 재정의되거나 빌드됩니다. 이 필터는 자체적으로 전역 필터를 재정의합니다. 예를 들어 \[Route\] 특성을 사용하여 컨트롤러와 작업 사이의 경로를 작성할 수 있습니다. 마찬가지로, 권한 부여는 컨트롤러 수준에서 구성한 다음, 다음 샘플과 같이 개별 작업으로 재정의할 수 있습니다.
 
@@ -334,9 +334,9 @@ ASP.NET Core Identity는 애플리케이션에 대한 로그인 기능을 지원
 
 개별 사용자 계정 옵션이 선택되면 ASP.NET Core Identity가 새 프로젝트 템플릿에 포함됩니다. 이 템플릿에는 등록, 로그인, 외부 로그인, 잊어버린 암호 및 추가 기능에 대한 지원이 포함되어 있습니다.
 
-![](./media/image7-3.png)
+![ID를 미리 구성하기 위한 개별 사용자 계정 선택](./media/image7-3.png)
 
-그림 7-3 Identity를 미리 구성하기 위한 개별 사용자 계정 선택
+**그림 7-3**. ID를 미리 구성하기 위한 개별 사용자 계정을 선택합니다.
 
 Identity 지원은 ConfigureServices 및 Configure 모두의 Startup에 구성됩니다.
 
@@ -563,13 +563,13 @@ ASP.NET Core 애플리케이션은 애플리케이션(또는 서버)이 충돌�
 
 ![인터넷에 대한 Kestrel](./media/image7-5.png)
 
-그림 7-5 역방향 프록시 서버 뒤에서 Kestrel에 호스팅되는 ASP.NET
+**그림 7-5**. 역방향 프록시 서버 뒤에서 Kestrel에 호스팅되는 ASP.NET
 
 역방향 프록시가 도움이 될 수 있는 또 다른 시나리오는 SSL/HTTPS를 사용하여 여러 애플리케이션을 보호하는 것입니다. 이 경우 역방향 프록시에만 SSL을 구성해야 합니다. 그림 7-6과 같이 역방향 프록시 서버와 Kestrel 간의 통신은 HTTP를 통해 수행될 수 있습니다.
 
-![](./media/image7-6.png)
+![HTTPS 보안 역방향 프록시 서버 뒤에서 호스팅되는 ASP.NET](./media/image7-6.png)
 
-그림 7-6 HTTPS 보안 역방향 프록시 서버 뒤에서 호스팅되는 ASP.NET
+**그림 7-6**. HTTPS 보안 역방향 프록시 서버 뒤에서 호스팅되는 ASP.NET
 
 점점 더 인기 있는 방법은 ASP.NET Core 애플리케이션을 Docker 컨테이너에 호스팅하는 것이며, 이 컨테이너는 클라우드 기반 호스팅을 위해 로컬로 호스팅되거나 Azure에 배포될 수 있습니다. Docker 컨테이너는 Kestrel에서 실행되는 애플리케이션 코드를 포함할 수 있으며, 위와 같이 역방향 프록시 서버 뒤에 배포됩니다.
 

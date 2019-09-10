@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e4303a3046981756cae6951483c100b37425dc80
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 3b251003a2da998936a11acff3cc2975c4b78838
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105455"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373992"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core 앱에서 데이터 작업
 
@@ -76,9 +76,9 @@ EF Core를 설치하고, DbContext 자식 형식을 만들고, ConfigureServices
 
 그림 8-1처럼 로거를 구성하고 그 수준을 정보 이상으로 설정하면 EF Core가 실행하는 쿼리를 볼 수 있습니다.
 
-![](./media/image8-1.png)
+![EF Core 쿼리를 콘솔에 로깅](./media/image8-1.png)
 
-그림 8-1 EF Core 쿼리를 콘솔에 로깅
+**그림 8-1**. EF Core 쿼리를 콘솔에 로깅
 
 ### <a name="fetching-and-storing-data"></a>데이터 가져오기 및 저장
 

@@ -13,12 +13,12 @@ ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
 ms.custom: serodec18
-ms.openlocfilehash: 8d887bb32d1bdd398353d00aba16c2cc8adfcacb
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: a945c53f3206f29cf2b07fea86ba3e8e3af11645
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988829"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254219"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET의 정규식에 대한 모범 사례
 <a name="top"></a>.NET의 정규식 엔진은 리터럴 텍스트에 대한 비교 및 검색 대신 패턴 일치를 기반으로 텍스트를 처리하는 완벽한 기능을 갖춘 강력한 도구입니다. 대부분의 경우 신속하고 효율적인 방식으로 패턴 일치가 수행됩니다. 하지만 일부 경우에는 정규식 엔진의 실행 속도가 매우 느리게 보일 수 있습니다. 심한 경우에는 입력 크기가 비교적 적은데도 처리하는 데 시간이 몇 시간 또는 며칠씩 걸려서 응답이 멎은 것처럼 보일 수도 있습니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "69988829"
 > 동일한 정규식을 메서드 호출에 반복해서 사용하거나 애플리케이션에 정규식 개체가 광범위하게 사용될 경우 메서드 호출의 형태(정적, 해석, 컴파일)는 성능에 영향을 줍니다.  
   
 ### <a name="static-regular-expressions"></a>정적 정규식  
- 정적 정규식 메서드는 동일한 정규식으로 정규식 개체를 반복해서 인스턴스화하기 위한 대안으로 권장됩니다. 정규식 개체에 사용되는 정규식 패턴과 달리 인스턴스 메서드 호출에 사용된 패턴으로부터 컴파일된 MSIL(Microsoft Intermediate Language)이나 작업 코드는 정규식 엔진에서 내부적으로 캐시됩니다.  
+ 정적 정규식 메서드는 동일한 정규식으로 정규식 개체를 반복해서 인스턴스화하기 위한 대안으로 권장됩니다. 정규식 개체에 사용되는 정규식 패턴과 달리 정적 메서드 호출에 사용된 패턴으로부터 컴파일된 MSIL(Microsoft Intermediate Language)이나 작업 코드는 정규식 엔진에서 내부적으로 캐시됩니다.  
   
  예를 들어 사용자 입력의 유효성을 검사하기 위해 다른 메서드를 자주 호출하는 이벤트 처리기가 있을 수 있습니다. 다음 코드에서 사용자가 적어도 한 자릿수의 숫자와 함께 통화 기호를 입력했는지 확인하는 <xref:System.Windows.Forms.Button>라는 이름의 메서드를 호출하기 위해 사용되는 <xref:System.Windows.Forms.Control.Click> 컨트롤의 `IsValidCurrency` 이벤트는 이러한 경우를 보여 줍니다.  
   

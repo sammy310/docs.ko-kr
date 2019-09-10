@@ -2,14 +2,14 @@
 title: ML.NET CLI의 원격 분석 수집
 description: 어떤 데이터가 수집되고 수집 기능을 사용하지 않도록 설정하는 방법에 대한 분석을 위해 사용 정보를 수집하는 ML.NET CLI 원격 분석 기능을 살펴봅니다. 또한 Microsoft의 GDPR 규정 준수에 대한 정보와 .NET 라이선스 링크를 확인합니다.
 ms.topic: conceptual
-ms.date: 05/05/2019
+ms.date: 09/03/2019
 ms.custom: ''
-ms.openlocfilehash: b9f6ccf7ff76f0cf4ce806f39909b7607a20b9f6
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: e7b3b3d7789f2368ebc4448e73add817986a5906
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567498"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254005"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>ML.NET CLI의 원격 분석 수집
 
@@ -36,14 +36,14 @@ ms.locfileid: "69567498"
 
 ML.NET CLI 원격 분석 기능은 기본적으로 사용됩니다.
 
-`MLDOTNET_CLI_TELEMETRY_OPTOUT` 환경 변수를 `1` 또는 `true`로 설정하여 원격 분석 기능을 옵트아웃(opt out)합니다. 이 환경 변수는 .NET CLI 도구에 전역적으로 적용됩니다.
+`MLDOTNET_CLI_TELEMETRY_OPTOUT` 환경 변수를 `1` 또는 `true`로 설정하여 원격 분석 기능을 옵트아웃(opt out)합니다. 이 환경 변수는 ML.NET CLI 도구에 전역적으로 적용됩니다.
 
 ## <a name="data-points-collected"></a>데이터 포인트 수집
 
 이 기능은 다음 데이터를 수집합니다.
 
 - `auto-train`과 같이 호출된 명령
-- 사용된 명령중 매개 변수 이름(예: "dataset-name, label-column-name, ml-task, output-path, max-exploration-time, verbosity")
+- 사용된 명령줄 매개 변수 이름(예: "dataset-name, label-column-name, ml-task, output-path, max-exploration-time, verbosity")
 - 해시된 MAC 주소: 컴퓨터에 대한 암호화된(SHA256) 익명 및 고유 ID입니다.
 - 호출의 타임스탬프
 - 지리적 위치 확인에만 사용되는 8진수 IP 주소 3개(전체 IP 주소 아님)

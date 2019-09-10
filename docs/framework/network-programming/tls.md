@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: f3b0fe20ae9f6eb50f26d044f18e02214ce97757
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 87ca9b75d641035b268c6737822f198d1eea87e3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038470"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777504"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework를 사용한 TLS(전송 계층 보안) 모범 사례
 
@@ -66,7 +66,9 @@ Windows Forms 및 기타 애플리케이션의 경우 [방법: 한 버전의 .NE
 
 ### <a name="for-http-networking"></a>HTTP 네트워킹의 경우
 
-.NET Framework 4.7 이상 버전을 사용하는 <xref:System.Net.ServicePointManager>는 가장 적합한 보안 프로토콜 및 버전을 선택하는 OS로 기본 설정됩니다. 기본 OS가 최적의 선택을 하도록 하려면(가능한 경우) <xref:System.Net.ServicePointManager.SecurityProtocol> 속성의 값을 설정하지 마세요. 그렇지 않으면 <xref:System.Net.SecurityProtocolType.SystemDefault>로 설정합니다.
+.NET Framework 4.7 이상 버전을 사용하는 <xref:System.Net.ServicePointManager>는 OS에 구성된 기본 보안 프로토콜을 사용합니다. 기본 OS가 최적의 선택을 하도록 하려면(가능한 경우) <xref:System.Net.ServicePointManager.SecurityProtocol?displayProperty=nameWithType> 속성의 값(기본값은 <xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType>)을 설정하지 마세요.
+
+<xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType> 설정으로 인해 <xref:System.Net.ServicePointManager>가 운영 체제에서 구성한 기본 보안 프로토콜을 사용하므로 애플리케이션이 실행되는 OS에 따라 다르게 실행될 수 있습니다. 예를 들어 Windows 7 SP1은 TLS 1.0을 사용하고 Windows 8 및 Windows 10은 TLS 1.2를 사용합니다.
 
 .NET Framework 4.7 이상 버전의 HTTP 네트워킹을 대상으로 하는 경우에는 이 문서의 나머지 부분은 관련이 없습니다.
 
