@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: deb7258326428cca01ea8734e0dc010c29177cfa
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: a5a11bc49fa834ebd6945e47767deb559244b459
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106857"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374511"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>자습서: ML.NET에서 ONNX를 사용하여 개체 검색
 
@@ -57,25 +57,25 @@ ML.NET에서 미리 학습된 ONNX 모델을 사용하여 이미지에서 개체
 
 ## <a name="select-a-deep-learning-model"></a>딥 러닝 모델 선택
 
-딥 러닝은 기계 학습의 하위 집합입니다. 딥 러닝 모델을 학습시키려면 많은 양의 데이터가 필요합니다. 데이터의 패턴은 일련의 계층으로 표시됩니다. 데이터의 관계는 가중치를 포함하는 계층 간의 연결로 인코딩됩니다. 가중치가 높을수록 관계가 강해집니다. 이러한 일련의 계층 및 연결을 통칭하여 인공신경망이라고 합니다. 네트워크에 있는 계층이 많을수록 “심층 강화”되어, 심층 신경망으로 만듭니다. 
+딥 러닝은 기계 학습의 하위 집합입니다. 딥 러닝 모델을 학습시키려면 많은 양의 데이터가 필요합니다. 데이터의 패턴은 일련의 계층으로 표시됩니다. 데이터의 관계는 가중치를 포함하는 계층 간의 연결로 인코딩됩니다. 가중치가 높을수록 관계가 강해집니다. 이러한 일련의 계층 및 연결을 통칭하여 인공신경망이라고 합니다. 네트워크에 있는 계층이 많을수록 “심층 강화”되어, 심층 신경망으로 만듭니다.
 
-신경망의 유형은 여러 가지가 있습니다. 가장 일반적으로 MLP(Multi-Layered Perceptron), CNN(Convolutional Neural Network) 및 RNN(Recurrent Neural Network)이 있습니다. 가장 기본적인 유형은 일련의 입력을 출력 집합에 매핑하는 MLP입니다. 이 신경망은 데이터에 공간 또는 시간 구성 요소가 없는 경우에 유용합니다. CNN은 나선형 계층을 사용하여 데이터에 포함된 공간 정보를 처리합니다. CNN의 좋은 사용 사례는 이미지의 영역에 기능이 있는지 검색하는 이미지 처리입니다(예: 이미지의 중심에 코가 있나요?). 마지막으로 RNN은 상태 또는 메모리의 지속성을 입력으로 사용할 수 있도록 허용합니다. RNN은 순차 순서와 이벤트 컨텍스트가 중요한 시계열 분석에 사용됩니다. 
+신경망의 유형은 여러 가지가 있습니다. 가장 일반적으로 MLP(Multi-Layered Perceptron), CNN(Convolutional Neural Network) 및 RNN(Recurrent Neural Network)이 있습니다. 가장 기본적인 유형은 일련의 입력을 출력 집합에 매핑하는 MLP입니다. 이 신경망은 데이터에 공간 또는 시간 구성 요소가 없는 경우에 유용합니다. CNN은 나선형 계층을 사용하여 데이터에 포함된 공간 정보를 처리합니다. CNN의 좋은 사용 사례는 이미지의 영역에 기능이 있는지 검색하는 이미지 처리입니다(예: 이미지의 중심에 코가 있나요?). 마지막으로 RNN은 상태 또는 메모리의 지속성을 입력으로 사용할 수 있도록 허용합니다. RNN은 순차 순서와 이벤트 컨텍스트가 중요한 시계열 분석에 사용됩니다.
 
 ### <a name="understand-the-model"></a>모델 이해
 
-개체 검색은 이미지 처리 작업입니다. 따라서 이 문제를 해결하도록 학습된 대부분의 딥 러닝 모델은 CNN입니다. 이 자습서에서 사용되는 모델은 백서에 설명된 YOLOv2 모델의 축소 버전인 Tiny YOLOv2 모델입니다. [“YOLO9000: Better, Faster, Stronger” by Redmon and Fadhari](https://arxiv.org/pdf/1612.08242.pdf). Tiny YOLOv2는 Pascal VOC 데이터 세트에서 학습되며 20개의 서로 다른 개체 클래스를 예측할 수 있는 15개의 계층으로 구성됩니다. Tiny YOLOv2는 소스 YOLOv2 모델의 축소된 버전이며, 속도와 정확도가 서로 절충됩니다. Netron과 같은 도구를 사용하여 모델을 구성하는 다양한 계층을 시각화할 수 있습니다. 모델을 검사하면 신경망을 구성하는 모든 계층 간에 연결 매핑이 일시 중단됩니다. 여기서 각 계층에는 각 입력/출력의 차원과 함께 계층 이름이 포함됩니다. 모델의 입력 및 출력을 설명하는 데 사용하는 데이터 구조를 텐서(tensor)라고 합니다. 텐서는 N 차원에 데이터를 저장하는 컨테이너로 간주할 수 있습니다. Tiny YOLOv2의 경우 입력 계층의 이름은 `image`이고 `3 x 416 x 416` 차원의 텐서가 있어야 합니다. 출력 계층의 이름은 `grid`이고 `125 x 13 x 13` 차원의 출력 텐서를 생성합니다.  
+개체 검색은 이미지 처리 작업입니다. 따라서 이 문제를 해결하도록 학습된 대부분의 딥 러닝 모델은 CNN입니다. 이 자습서에서 사용되는 모델은 백서에 설명된 YOLOv2 모델의 축소 버전인 Tiny YOLOv2 모델입니다. [“YOLO9000: Better, Faster, Stronger” by Redmon and Fadhari](https://arxiv.org/pdf/1612.08242.pdf). Tiny YOLOv2는 Pascal VOC 데이터 세트에서 학습되며 20개의 서로 다른 개체 클래스를 예측할 수 있는 15개의 계층으로 구성됩니다. Tiny YOLOv2는 소스 YOLOv2 모델의 축소된 버전이며, 속도와 정확도가 서로 절충됩니다. Netron과 같은 도구를 사용하여 모델을 구성하는 다양한 계층을 시각화할 수 있습니다. 모델을 검사하면 신경망을 구성하는 모든 계층 간에 연결 매핑이 일시 중단됩니다. 여기서 각 계층에는 각 입력/출력의 차원과 함께 계층 이름이 포함됩니다. 모델의 입력 및 출력을 설명하는 데 사용하는 데이터 구조를 텐서(tensor)라고 합니다. 텐서는 N 차원에 데이터를 저장하는 컨테이너로 간주할 수 있습니다. Tiny YOLOv2의 경우 입력 계층의 이름은 `image`이고 `3 x 416 x 416` 차원의 텐서가 있어야 합니다. 출력 계층의 이름은 `grid`이고 `125 x 13 x 13` 차원의 출력 텐서를 생성합니다.
 
 ![](./media/object-detection-onnx/netron-model-map.png)
 
-YOLO 모델에서는 `3(RGB) x 416px x 416px` 이미지를 사용합니다. 이 모델에서는 출력을 생성하기 위해 이 입력을 받아 다양한 계층에 전달합니다. 출력은 입력 이미지를 `13 x 13` 그리드로 나누며, 그리드의 각 셀은 `125` 값으로 구성됩니다. 
+YOLO 모델에서는 `3(RGB) x 416px x 416px` 이미지를 사용합니다. 이 모델에서는 출력을 생성하기 위해 이 입력을 받아 다양한 계층에 전달합니다. 출력은 입력 이미지를 `13 x 13` 그리드로 나누며, 그리드의 각 셀은 `125` 값으로 구성됩니다.
 
 ### <a name="what-is-an-onnx-model"></a>ONNX 모델의 개념
 
-ONNX(Open Neural Network Exchange)는 AI 모델의 오픈 소스 형식입니다. ONNX에서는 프레임워크 간의 상호 운용성을 지원합니다. 즉, PyTorch와 같이 널리 사용되는 여러 기계 학습 프레임워크 중 하나에서 모델을 학습시키고, ONNX 형식으로 변환하며, ML.NET과 같은 다른 프레임워크에서 ONNX 모델을 사용할 수 있습니다. 자세히 알아보려면 [ONNX 웹 사이트](https://onnx.ai/)를 방문하세요. 
+ONNX(Open Neural Network Exchange)는 AI 모델의 오픈 소스 형식입니다. ONNX에서는 프레임워크 간의 상호 운용성을 지원합니다. 즉, PyTorch와 같이 널리 사용되는 여러 기계 학습 프레임워크 중 하나에서 모델을 학습시키고, ONNX 형식으로 변환하며, ML.NET과 같은 다른 프레임워크에서 ONNX 모델을 사용할 수 있습니다. 자세히 알아보려면 [ONNX 웹 사이트](https://onnx.ai/)를 방문하세요.
 
 ![](./media/object-detection-onnx/onnx-frameworks.png)
 
-미리 학습된 Tiny YOLOv2 모델은 계층과 해당 계층의 학습된 패턴을 직렬화하여 표시하는 ONNX 형식으로 저장됩니다. ML.NET에서 ONNX와의 상호 운용성은 [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) 및 [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) NuGet 패키지를 통해 달성합니다. [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) 패키지에는 이미지를 받아 예측이나 학습 파이프라인의 입력으로 사용할 수 있는 숫자 값으로 인코딩하는 일련의 변환이 포함되어 있습니다. [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) 패키지에서는 ONNX Runtime을 사용하여 ONNX 모델을 로드하고 제공된 입력을 기반으로 예측하는 데 사용합니다. 
+미리 학습된 Tiny YOLOv2 모델은 계층과 해당 계층의 학습된 패턴을 직렬화하여 표시하는 ONNX 형식으로 저장됩니다. ML.NET에서 ONNX와의 상호 운용성은 [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) 및 [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) NuGet 패키지를 통해 달성합니다. [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) 패키지에는 이미지를 받아 예측이나 학습 파이프라인의 입력으로 사용할 수 있는 숫자 값으로 인코딩하는 일련의 변환이 포함되어 있습니다. [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) 패키지에서는 ONNX Runtime을 사용하여 ONNX 모델을 로드하고 제공된 입력을 기반으로 예측하는 데 사용합니다.
 
 ![](./media/object-detection-onnx/onnx-ml-net-integration.png)
 
@@ -89,10 +89,10 @@ ONNX(Open Neural Network Exchange)는 AI 모델의 오픈 소스 형식입니다
 
 1. **Microsoft.ML NuGet 패키지**를 설치합니다.
 
-    - 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. 
-    - 패키지 소스로 “nuget.org”를 선택하고, [찾아보기] 탭을 선택하고, **Microsoft.ML**을 검색합니다. 
-    - **설치** 단추를 선택합니다. 
-    - **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다. 
+    - 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다.
+    - 패키지 소스로 “nuget.org”를 선택하고, [찾아보기] 탭을 선택하고, **Microsoft.ML**을 검색합니다.
+    - **설치** 단추를 선택합니다.
+    - **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다.
     - **Microsoft.ML.ImageAnalytics** 및 **Microsoft.ML.OnnxTransformer**에 대해 이 단계를 반복합니다.
 
 ### <a name="prepare-your-data-and-pre-trained-model"></a>데이터 및 미리 학습된 모델 준비
@@ -106,7 +106,7 @@ ONNX(Open Neural Network Exchange)는 AI 모델의 오픈 소스 형식입니다
     명령 프롬프트를 열고 다음 명령을 입력합니다.
 
     ```shell
-    tar -xvzf tiny_yolov2.tar.gz 
+    tar -xvzf tiny_yolov2.tar.gz
     ```
 
 1. 방금 압축을 푼 디렉터리에서 *ObjectDetection* 프로젝트 `assets\Model` 디렉터리로 추출된 `model.onnx` 파일을 복사하고 이름을 `TinyYolo2_model.onnx`로 변경합니다. 이 디렉터리에는 이 자습서에 필요한 모델이 포함되어 있습니다.
@@ -119,9 +119,9 @@ ONNX(Open Neural Network Exchange)는 AI 모델의 오픈 소스 형식입니다
 
 [!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L1-L7)]
 
-다음으로 다양한 자산의 경로를 정의합니다. 
+다음으로 다양한 자산의 경로를 정의합니다.
 
-1. 먼저 `GetAbsolutePath` 메서드를 `Program` 클래스의 `Main` 메서드 아래 추가합니다. 
+1. 먼저 `GetAbsolutePath` 메서드를 `Program` 클래스의 `Main` 메서드 아래 추가합니다.
 
     [!code-csharp [GetAbsolutePath](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L66-L74)]
 
@@ -137,13 +137,13 @@ ONNX(Open Neural Network Exchange)는 AI 모델의 오픈 소스 형식입니다
 
 1. **솔루션 탐색기**에서 *DataStructures* 디렉터리를 마우스 오른쪽 단추로 클릭한 다음 **추가** > **새 항목**을 선택합니다.
 1. **새 항목 추가** 대화 상자에서 **클래스**를 선택하고 **이름** 필드를 *ImageNetData.cs*로 변경합니다. 그런 다음, **추가** 단추를 선택합니다.
-     
+
     *ImageNetData.cs* 파일이 코드 편집기에서 열립니다. 다음 `using` 문을 *ImageNetData.cs*의 맨 위에 추가합니다.
 
     [!code-csharp [ImageNetDataUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/DataStructures/ImageNetData.cs#L1-L4)]
 
     기존 클래스 정의를 제거하고 `ImageNetData` 클래스에 대한 다음 코드를 *ImageNetData.cs* 파일에 추가합니다.
-    
+
     [!code-csharp [ImageNetDataClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/DataStructures/ImageNetData.cs#L8-L23)]
 
     `ImageNetData`는 입력 이미지 데이터 클래스이며 다음 <xref:System.String> 필드를 포함합니다.
@@ -178,7 +178,6 @@ ONNX(Open Neural Network Exchange)는 AI 모델의 오픈 소스 형식입니다
 
 [!code-csharp [InitMLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L24)]
 
-
 ## <a name="create-a-parser-to-post-process-model-outputs"></a>파서를 만들어 모델 출력 후처리
 
 모델은 이미지를 `13 x 13` 그리드로 나눕니다. 여기서 각 그리드 셀은 `32px x 32px`입니다. 각 그리드 셀에는 5개의 잠재적 개체 경계 상자가 포함되어 있습니다. 경계 상자에는 25개의 요소가 있습니다.
@@ -188,7 +187,7 @@ ONNX(Open Neural Network Exchange)는 AI 모델의 오픈 소스 형식입니다
 - `x` 연결된 그리드 셀을 기준으로 하는 경계 상자 중심의 x 위치입니다.
 - `y` 연결된 그리드 셀을 기준으로 하는 경계 상자 중심의 y 위치입니다.
 - `w` 경계 상자의 너비입니다.
-- `h` 경계 상자의 높이입니다. 
+- `h` 경계 상자의 높이입니다.
 - `o` 경계 상자 내에 개체가 있는 신뢰도 값입니다(개체성 점수라고도 함).
 - `p1-p20` 모델에서 예측하는 20개 클래스 각각의 클래스 확률입니다.
 
@@ -207,7 +206,7 @@ ONNX(Open Neural Network Exchange)는 AI 모델의 오픈 소스 형식입니다
 1. **솔루션 탐색기**에서 *YoloParser* 디렉터리를 마우스 오른쪽 단추로 클릭한 다음 **추가** > **새 항목**을 선택합니다.
 1. **새 항목 추가** 대화 상자에서 **클래스**를 선택하고 **이름** 필드를 *DimensionsBase.cs*로 변경합니다. 그런 다음, **추가** 단추를 선택합니다.
 
-    *DimensionsBase.cs* 파일이 코드 편집기에서 열립니다. 모든 `using` 문과 기존 클래스 정의를 제거합니다. 
+    *DimensionsBase.cs* 파일이 코드 편집기에서 열립니다. 모든 `using` 문과 기존 클래스 정의를 제거합니다.
 
     `DimensionsBase` 클래스의 다음 코드를 *DimensionsBase.cs* 파일에 추가합니다.
 
@@ -236,7 +235,7 @@ ONNX(Open Neural Network Exchange)는 AI 모델의 오픈 소스 형식입니다
     기존 `YoloBoundingBox` 클래스 정의를 제거하고 `YoloBoundingBox` 클래스의 다음 코드를 *YoloBoundingBox.cs* 파일에 추가합니다.
 
     [!code-csharp [YoloBoundingBoxClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloBoundingBox.cs#L7-L21)]
-    
+
     `YoloBoundingBox`에는 다음 필드가 있습니다.
 
     - `Dimensions`에는 경계 상자의 크기가 포함되어 있습니다.
@@ -262,7 +261,7 @@ ONNX(Open Neural Network Exchange)는 AI 모델의 오픈 소스 형식입니다
 
 1. `YoloOutputParser` 클래스 정의 내에 다음 상수와 필드를 추가합니다.
 
-    [!code-csharp [ParserVarDefinitions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L12-L21)]    
+    [!code-csharp [ParserVarDefinitions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L12-L21)]
 
     - `ROW_COUNT`는 그리드에서 이미지가 나뉘는 행의 수입니다.
     - `COL_COUNT`는 그리드에서 이미지가 나뉘는 열의 수입니다.
@@ -274,17 +273,17 @@ ONNX(Open Neural Network Exchange)는 AI 모델의 오픈 소스 형식입니다
     - `CELL_HEIGHT`는 이미지 그리드에 있는 한 셀의 높이입니다.
     - `channelStride`는 그리드에서 현재 셀의 시작 위치입니다.
 
-    모델은 점수라고도 하는 예측을 생성할 때 `416px x 416px` 입력 이미지를 `13 x 13` 크기의 셀 그리드로 나눕니다. 포함된 각 셀은 `32px x 32px`입니다. 각 셀에는 각각 5개의 기능(x, y, 너비, 높이, 신뢰도)을 포함하는 5개의 경계 상자가 있습니다. 또한 각 경계 상자에는 각 클래스의 확률이 포함되며, 이 경우에는 20입니다. 따라서 각 셀에는 125개의 정보(5개의 기능 + 20개의 클래스 확률)가 포함됩니다. 
+    모델은 점수라고도 하는 예측을 생성할 때 `416px x 416px` 입력 이미지를 `13 x 13` 크기의 셀 그리드로 나눕니다. 포함된 각 셀은 `32px x 32px`입니다. 각 셀에는 각각 5개의 기능(x, y, 너비, 높이, 신뢰도)을 포함하는 5개의 경계 상자가 있습니다. 또한 각 경계 상자에는 각 클래스의 확률이 포함되며, 이 경우에는 20입니다. 따라서 각 셀에는 125개의 정보(5개의 기능 + 20개의 클래스 확률)가 포함됩니다.
 
 `channelStride` 아래에 5개의 경계 상자 모두에 대한 고정 목록을 만듭니다.
 
-[!code-csharp [ParserAnchors](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L23-L26)]   
+[!code-csharp [ParserAnchors](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L23-L26)]
 
 앵커는 경계 상자의 미리 정의된 높이 및 너비 비율입니다. 모델에서 검색한 대부분의 개체 또는 클래스는 비율이 서로 비슷합니다. 따라서 경계 상자를 만들 때 유용합니다. 경계 상자를 예측하는 대신 미리 정의된 차원의 오프셋을 계산하므로 경계 상자를 예측하는 데 필요한 계산이 줄어듭니다. 일반적으로 이러한 고정 비율은 사용된 데이터 세트를 기반으로 계산합니다. 이 경우 데이터 세트가 알려져 있고 값이 미리 컴퓨팅되었기 때문에 앵커는 하드 코딩할 수 있습니다.
 
 그런 다음 모델에서 예측할 레이블 또는 클래스를 정의합니다. 이 모델은 원래 YOLOv2 모델에서 예측한 총 클래스 수의 하위 집합인 20개의 클래스를 예측합니다.
 
-`anchors` 아래에 레이블 목록을 추가합니다. 
+`anchors` 아래에 레이블 목록을 추가합니다.
 
 [!code-csharp [ParserLabels](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L28-L34)]
 
@@ -294,7 +293,7 @@ ONNX(Open Neural Network Exchange)는 AI 모델의 오픈 소스 형식입니다
 
 ### <a name="create-helper-functions"></a>도우미 함수 만들기
 
-후처리 단계와 관련된 일련의 단계가 있습니다. 이를 지원하려면 몇 가지 도우미 메서드를 사용할 수 있습니다. 
+후처리 단계와 관련된 일련의 단계가 있습니다. 이를 지원하려면 몇 가지 도우미 메서드를 사용할 수 있습니다.
 
 파서에서 사용하는 도우미 메서드는 다음과 같습니다.
 
@@ -322,7 +321,7 @@ public IList<YoloBoundingBox> ParseOutputs(float[] yoloModelOutputs, float thres
 
 }
 ```
-    
+
 목록을 만들어 경계 상자를 저장하고 `ParseOutputs` 메서드 내에 변수를 정의합니다.
 
 [!code-csharp [BBoxList](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L155)]
@@ -419,7 +418,7 @@ for (int i = 0; i < boxes.Count; i++)
 ```csharp
 if (isActiveBoxes[i])
 {
-    
+
 }
 ```
 
@@ -492,7 +491,7 @@ for (var j = i + 1; j < boxes.Count; j++)
 
     ML.NET 파이프라인은 [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*) 메서드가 호출될 때 작동할 데이터 스키마를 알아야 합니다. 이 경우 학습과 비슷한 프로세스가 사용됩니다. 그러나 실제 학습이 발생하지 않기 때문에 빈 [ `IDataView` ](xref:Microsoft.ML.IDataView)를 사용할 수 있습니다. 빈 목록에서 파이프라인의 새로운 [`IDataView`](xref:Microsoft.ML.IDataView)를 만듭니다.
 
-    [!code-csharp [LoadEmptyIDV](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L52)]    
+    [!code-csharp [LoadEmptyIDV](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L52)]
 
     그런 다음 파이프라인을 정의합니다. 파이프라인은 4개의 변환으로 구성됩니다.
 
@@ -569,7 +568,7 @@ catch (Exception ex)
 
 [!code-csharp [ParsePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L39-L44)]
 
-모델 출력을 처리하고 나면 이미지에 경계 상자를 그릴 차례입니다. 
+모델 출력을 처리하고 나면 이미지에 경계 상자를 그릴 차례입니다.
 
 ### <a name="visualize-predictions"></a>예측 시각화
 
@@ -612,7 +611,7 @@ for-each 루프 내에서 경계 상자의 크기를 가져옵니다.
 ```csharp
 using (Graphics thumbnailGraphic = Graphics.FromImage(image))
 {
-    
+
 }
 ```
 
@@ -638,7 +637,7 @@ for-each 루프 외부에서 `outputDirectory`에 이미지를 저장하는 코�
 
 런타임 시 애플리케이션이 예상대로 예측하는지에 대한 추가 피드백을 위해 `LogDetectedObjects` 메서드를 *Program.cs* 파일의 `DrawBoundingBox` 메서드 아래 추가하여 검색된 개체를 콘솔에 출력합니다.
 
-[!code-csharp [LogOuptuts](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L133-L143)]
+[!code-csharp [LogOutputs](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L133-L143)]
 
 이제 예측에서 시각적 피드백을 만드는 도우미 메서드가 있으므로 채점된 각 이미지를 반복하는 for 루프를 추가합니다.
 
@@ -665,9 +664,9 @@ try-catch 문 다음에 프로세스 실행이 완료되었음을 나타내는 �
 
 [!code-csharp [EndProcessLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L62-L63)]
 
-정말 간단하죠. 
+정말 간단하죠.
 
-## <a name="results"></a>결과 
+## <a name="results"></a>결과
 
 이전 단계를 수행한 후 콘솔 앱을 실행합니다(Ctrl+F5). 다음 출력과 같은 결과가 나타나야 합니다. 경고 또는 처리 메시지가 표시될 수 있지만, 이해하기 쉽도록 이러한 메시지는 다음 결과에서 제거되었습니다.
 
@@ -701,7 +700,7 @@ person and its Confidence score: 0.5551759
 ========= End of Process..Hit any Key ========
 ```
 
-경계 상자가 있는 이미지를 보려면 `assets/images/output/` 디렉터리로 이동합니다. 다음은 처리된 이미지 중 하나의 샘플입니다. 
+경계 상자가 있는 이미지를 보려면 `assets/images/output/` 디렉터리로 이동합니다. 다음은 처리된 이미지 중 하나의 샘플입니다.
 
 ![](./media/object-detection-onnx/image3.jpg)
 

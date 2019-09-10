@@ -4,12 +4,12 @@ description: .NET에서 서버 앱을 구축할 때 고려해야 할 .NET 구현
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 520920566e8a55eef2d506dc4a8085f57ef1c0bb
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: e5df362231b0786a58a4c3c9ae8f5a167930a12e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107285"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799262"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>서버 앱에 대해 .NET Core와 .NET Framework 중에 선택
 
@@ -28,7 +28,7 @@ ms.locfileid: "70107285"
 - 앱이 현재 .NET Framework를 사용합니다(마이그레이션하는 대신 확장 권장).
 - 앱이 .NET Core에 사용할 수 없는 타사 .NET 라이브러리 또는 NuGet 패키지를 사용합니다.
 - 앱이 .NET Core에 사용할 수 없는 .NET 기술을 사용합니다.
-- 앱이 .NET Core를 지원하지 않는 플랫폼을 사용합니다.
+- 앱이 .NET Core를 지원하지 않는 플랫폼을 사용합니다. Windows, macOS 및 Linux는 .NET Core를 지원합니다.
 
 ## <a name="when-to-choose-net-core"></a>.NET Core를 선택하는 경우
 
@@ -108,6 +108,6 @@ Docker 컨테이너는 고유한 Linux 또는 Windows 인프라나 [Azure Kubern
 - [대상 프레임워크](frameworks.md)
 - [.NET Core 가이드](../core/index.md)
 - [.NET Framework에서 .NET Core로 이식](../core/porting/index.md)
-- [.NET 및 Docker 소개](../core/docker/intro-net-docker.md)
+- [.NET 및 Docker 소개](../core/docker/introduction.md)
 - [.NET 구성 요소 개요](components.md)
 - [.NET 마이크로 서비스. 컨테이너화된 .NET 애플리케이션을 위한 아키텍처](../architecture/microservices/index.md)

@@ -6,24 +6,25 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 08/21/2019
-ms.openlocfilehash: f62afe79ec3ace98a3bd8997e20672bef81b89c4
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.date: 09/05/2019
+ms.openlocfilehash: 2d18e7750e0c2e2a44028d1e906a8536e47d979d
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037844"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70394292"
 ---
-# <a name="whats-new-in-net-core-30-preview-8"></a>.NET Core 3.0(Preview 8)의 새로운 기능
+# <a name="whats-new-in-net-core-30-preview-9"></a>.NET Core 3.0(Preview 9)의 새로운 기능
 
-이 문서는 .NET Core 3.0(Preview 8)의 새로운 기능에 대해 설명합니다. 가장 중요한 개선 사항 중 하나는 Windows 데스크톱 애플리케이션에 대한 지원(Windows만 해당)입니다. .NET Core 3.0 SDK 구성 요소 Windows 데스크톱을 사용하여 Windows Forms 및 Windows Presentation Foundation(WPF) 애플리케이션을 포트할 수 있습니다. 분명히 말하지만, Windows 데스크톱 구성 요소는 Windows에서만 지원되고 포함됩니다. 자세한 내용은 이 문서 후반부의 [Windows 데스크톱](#windows-desktop) 섹션을 참조하세요.
+이 문서는 .NET Core 3.0(Preview 9)의 새로운 기능에 대해 설명합니다. 가장 중요한 개선 사항 중 하나는 Windows 데스크톱 애플리케이션에 대한 지원(Windows만 해당)입니다. .NET Core 3.0 SDK 구성 요소 Windows 데스크톱을 사용하여 Windows Forms 및 Windows Presentation Foundation(WPF) 애플리케이션을 포트할 수 있습니다. 분명히 말하지만, Windows 데스크톱 구성 요소는 Windows에서만 지원되고 포함됩니다. 자세한 내용은 이 문서 후반부의 [Windows 데스크톱](#windows-desktop) 섹션을 참조하세요.
 
-.NET Core 3.0에서는 C# 8.0에 대한 지원이 추가되었습니다. [Visual Studio 미리 보기 최신 릴리스](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview) 또는 OmniSharp 확장이 지원되는 Visual Studio Code를 사용하는 것이 매우 좋습니다.
+.NET Core 3.0에서는 C# 8.0에 대한 지원이 추가되었습니다. [Visual Studio 2019 16.3 Preview 3](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview), [Mac용 Visual Studio 8.3](https://docs.microsoft.com/visualstudio/mac/install-preview?view=vsmac-2019) 또는 [Visual Studio Code](https://code.visualstudio.com/)를 **C# 확장명**과 함께 사용하는 것이 좋습니다.
 
-Windows, macOS 또는 Linux에서 지금 바로 [.NET Core 3.0 Preview 8을 다운로드하여 시작](https://aka.ms/netcore3download)하세요.
+Windows, macOS 또는 Linux에서 지금 바로 [.NET Core 3.0 Preview 9를 다운로드하여 시작](https://aka.ms/netcore3download)하세요.
 
 각 미리 보기 릴리스에 대한 자세한 내용은 다음 공지를 참조하세요.
 
+- [.NET Core 3.0 Preview 9 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/)
 - [.NET Core 3.0 Preview 8 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)
 - [.NET Core 3.0 Preview 7 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
 - [.NET Core 3.0 Preview 6 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/)
@@ -35,9 +36,9 @@ Windows, macOS 또는 Linux에서 지금 바로 [.NET Core 3.0 Preview 8을 다�
 
 ## <a name="production-supported-preview"></a>프로덕션 지원 미리 보기
 
-.NET Core Preview 8은 Microsoft에서 준비하는 프로덕션으로 간주되며 완벽하게 지원됩니다. Preview 7부터 릴리스는 새 기능을 추가하는 대신 .NET Core 3.0을 개선하는 데 집중합니다. Preview 8에서 변경된 내용에 관한 자세한 내용은 [Preview 8 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)을 참조하세요.
+.NET Core Preview 9는 Microsoft에서 준비하는 프로덕션으로 간주되며 완벽하게 지원됩니다. Preview 7부터 릴리스는 새 기능을 추가하는 대신 .NET Core 3.0을 개선하는 데 집중합니다. Preview 9에서 변경된 내용에 관한 자세한 내용은 [Preview 9 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/)을 참조하세요.
 
-이전 미리 보기 릴리스를 사용하는 경우 “Go Live” 지원을 계속하려면 Preview 8로 이동해야 합니다.
+이전 미리 보기 릴리스를 사용하는 경우 “Go Live” 지원을 계속하려면 Preview 9로 이동해야 합니다.
 
 ## <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Installer
 

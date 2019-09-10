@@ -7,19 +7,19 @@ author:
 ms.author:
 - MICROSOFT ALIAS OF INTERNAL OWNER
 ms.date:
-- CREATION/UPDATE DATE - mm/dd/yyyy
+- CREATION/UPDATE DATE - MM/dd/yyyy
 ms.topic:
 - TOPIC TYPE
 ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: e6c912f5ff9590f3b8cbb0f7e3f88e08fa9dd556
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: d9a377941f54dbd42ae6eaec6c21a93dd48673a1
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106907"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254011"
 ---
 # <a name="metadata-and-markdown-template"></a>메타데이터 및 Markdown 템플릿
 
@@ -70,10 +70,7 @@ Markdown은 서식 지정을 위해 \*, \`, \# 등의 특수 문자를 사용합
 
 ## <a name="headings"></a>제목
 
-문장 스타일 대/소문자를 사용합니다. 다음 항목은 항상 대문자로 표기합니다.
-
-- 제목의 첫단어
-- 제목에서 콜론 뒤에 오는 단어(예: “방법: 배열 정렬”)입니다.
+문장 스타일 대/소문자를 사용합니다. 항상 제목의 첫 번째 단어를 대문자로 표시하고, 제목에서 콜론 뒤에 오는 단어(예: "방법: 배열 정렬")는 대문자로 표시하지 않습니다.
 
 제목은 atx 스타일로 작성해야 합니다. 즉, 줄 시작 부분에서 HTML 제목 수준 H1~H6에 해당하는 1~6개의 해시 문자(#)를 사용하여 제목을 나타냅니다. 위에서는 수준 1/수준 2 헤더의 예가 사용되었습니다.
 

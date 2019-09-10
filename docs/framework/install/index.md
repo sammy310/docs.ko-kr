@@ -4,12 +4,12 @@ description: Windows에서.NET Framework를 설치하는 방법을 알아봅니�
 author: rlander
 ms.author: mairaw
 ms.date: 08/03/2017
-ms.openlocfilehash: 9606aee5a77d75bdf04cfa91445841db432eeb58
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 284f194248687fbe3838ee7aa578ae612757cc1a
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643870"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853927"
 ---
 # <a name="installation-guide"></a>설치 가이드
 
@@ -29,7 +29,7 @@ ms.locfileid: "61643870"
 
 ## <a name="see-also"></a>참고 항목
 
-- [.NET Framework 다운로드](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)
+- [.NET Framework 다운로드](https://dotnet.microsoft.com/download)
 - [차단된 .NET Framework 설치 및 제거 문제 해결](troubleshoot-blocked-installations-and-uninstallations.md)
 - [개발자용 .NET Framework 설치](guide-for-developers.md)
 - [개발자용 .NET Framework 배포](../deployment/deployment-guide-for-developers.md)

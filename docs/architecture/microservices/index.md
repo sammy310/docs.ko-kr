@@ -2,12 +2,12 @@
 title: .NET 마이크로 서비스. 컨테이너화된 .NET 애플리케이션을 위한 아키텍처
 description: 컨테이너화된 .NET 애플리케이션에 대한 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스는 독립적으로 배포 가능한 모듈 형식 서비스입니다. (Linux 및 Windows용) Docker 컨테이너는서비스 및 해당 종속성을 단일 단위로 묶어서 배포 및 테스트를 간소화합니다. 그러면 격리된 환경에서 실행됩니다.
 ms.date: 01/07/2019
-ms.openlocfilehash: 55520153e0b926a97d0384f0b50b4c929f452f19
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: dcfff8b06dc77b47e6586ea82c82acc30a5cf3df
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70295254"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848871"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 마이크로 서비스: 컨테이너화된 .NET 애플리케이션을 위한 아키텍처
 
@@ -21,7 +21,7 @@ ms.locfileid: "70295254"
 
 ## <a name="action-links"></a>작업 링크
 
-- 다음 중 원하는 형식으로 이 전자책 다운로드: | [PDF](https://aka.ms/microservicesebook) | [MOBI](https://www.microsoft.com/net/download/thank-you/microservices-architecture-ebook-mobi) | [EPUB](https://www.microsoft.com/net/download/thank-you/microservices-architecture-ebook-epub) |
+- 다음 중 원하는 형식으로 이 전자책 다운로드: | [PDF](https://aka.ms/microservicesebook) | [MOBI](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-mobi) | [EPUB](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-epub) |
 
 - 참조 애플리케이션인 [GitHub의 eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) 클론/포크
  

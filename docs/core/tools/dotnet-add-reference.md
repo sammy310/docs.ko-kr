@@ -2,12 +2,12 @@
 title: dotnet-add reference 명령
 description: dotnet add reference 명령은 프로젝트 간 참조를 추가하는 편리한 옵션을 제공합니다.
 ms.date: 06/26/2019
-ms.openlocfilehash: 6e0ca40e701b62dcc18147f9de83cafa6aa2f50f
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 867596058aad8f9c38918e6d6657709d0d0699b3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422000"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784052"
 ---
 # <a name="dotnet-add-reference"></a>dotnet-add reference
 
@@ -27,7 +27,7 @@ ms.locfileid: "67422000"
 
 ## <a name="description"></a>설명
 
-`dotnet add reference` 명령은 프로젝트에 프로젝트 참조를 추가하는 편리한 옵션을 제공합니다. 명령을 실행한 후 [ `<ProjectReference>` ](/visualstudio/msbuild/common-msbuild-project-items) 요소가 프로젝트 파일에 추가됩니다.
+`dotnet add reference` 명령은 프로젝트에 프로젝트 참조를 추가하는 편리한 옵션을 제공합니다. 명령을 실행한 후 `<ProjectReference>` 요소가 프로젝트 파일에 추가됩니다.
 
 ```xml
 <ItemGroup>

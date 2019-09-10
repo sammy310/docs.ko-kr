@@ -5,12 +5,12 @@ author: mairaw
 ms.author: mairaw
 ms.date: 05/06/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 8407bedc6b7b9e5e3263b37747050eba82eea653
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2927b892f8f83366a46cb113b3f0233bbd168974
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "68952246"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855476"
 ---
 # <a name="welcome-to-net"></a>.NET 시작
 
@@ -68,4 +68,4 @@ ms.locfileid: "68952246"
 - [Windows Forms](https://github.com/dotnet/winforms)
 - [WPF](https://github.com/dotnet/wpf)
 
-[.NET 커뮤니티](https://www.microsoft.com/net/community)에서 이미 활동하고 있는 다른 사람들을 만나 새로운 기능을 알아보거나 도움을 요청할 수 있습니다.
+[.NET 커뮤니티](https://dotnet.microsoft.com/platform/community)에서 이미 활동하고 있는 다른 사람들을 만나 새로운 기능을 알아보거나 도움을 요청할 수 있습니다.

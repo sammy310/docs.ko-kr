@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 05/02/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 2db6d713d699a733f5c65d2170620eaccd8f0691
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ffc63146cde0be5359ee03ea53683220f4996b81
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61752440"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855494"
 ---
 # <a name="net-guide"></a>.NET 가이드
 
@@ -19,7 +19,7 @@ ms.locfileid: "61752440"
 
 ## <a name="new-to-net"></a>.NET을 처음 사용하는 경우
 
-.NET에 대한 대략적인 개요는 [.NET이란?](https://www.microsoft.com/net/learn/what-is-dotnet)을 확인하세요.
+.NET에 대한 대략적인 개요는 [.NET이란?](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet)을 확인하세요.
 
 .NET을 처음 사용하는 경우 [시작](get-started.md) 문서를 확인하세요.
 
@@ -37,7 +37,7 @@ ms.locfileid: "61752440"
 
 ## <a name="porting-net-framework-code-to-net-core"></a>.NET Framework 코드를 .NET Core로 이식
 
-애플리케이션이나 서비스 또는 시스템의 일부 구성 요소를 .NET Core로 이식하려는 경우 [.NET Framework에서.NET Core로 이식](../core/porting/index.md)을 확인하세요.
+애플리케이션, 서비스 또는 시스템의 일부 구성 요소를 .NET Core로 이식하려는 경우 [.NET Framework에서.NET Core로 이식](../core/porting/index.md)을 확인하세요.
 
 ## <a name="porting-a-nuget-package-from-net-framework-to-net-standard-or-net-core"></a>.NET Framework에서 .NET Standard 또는 .NET Core로 NuGet 패키지 이식
 

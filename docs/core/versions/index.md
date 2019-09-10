@@ -4,12 +4,12 @@ description: 이 문서에서는 .NET Core SDK 및 런타임의 버전 관리 �
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: dcf74f6fa892446555541f13a33130a93787cf70
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 4674cd8750f5a5e628945c1712ac579d88385b94
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104953"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849289"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core의 버전 관리 방법 개요
 
@@ -82,11 +82,11 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 ### <a name="preview-versions"></a>미리 보기 버전
 
-미리 보기 버전에는 `-preview[number]-([build]|"final")`이 추가됩니다. 예를 들어, `2.0.0-preview1-final`을 입력합니다.
+미리 보기 버전에는 `-preview[number]-([build]|"final")`이 추가됩니다. 예: `2.0.0-preview1-final`.
 
 ### <a name="servicing-versions"></a>서비스 버전
 
-릴리스가 출시된 후에 릴리스 분기는 일반적으로 매일 빌드 만들기를 중지하고 대신 서비스 빌드를 만들기 시작합니다. 서비스 버전에는 `-servicing-[number]`이 추가됩니다. 예를 들어, `2.0.1-servicing-006924`을 입력합니다.
+릴리스가 출시된 후에 릴리스 분기는 일반적으로 매일 빌드 만들기를 중지하고 대신 서비스 빌드를 만들기 시작합니다. 서비스 버전에는 `-servicing-[number]`이 추가됩니다. 예: `2.0.1-servicing-006924`.
 
 ## <a name="relationship-to-net-standard-versions"></a>.NET Standard 버전과의 관계
 
@@ -108,6 +108,6 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 - [대상 프레임워크](../../standard/frameworks.md)
 - [.NET Core 배포 패키징](../build/distribution-packaging.md)
-- [.NET Core Support Lifecycle Fact Sheet](https://www.microsoft.com/net/core/support)(.NET Core 지원 수명 주기 팩트 시트)
+- [.NET Core Support Lifecycle Fact Sheet](https://dotnet.microsoft.com/platform/support/policy)(.NET Core 지원 수명 주기 팩트 시트)
 - [.NET Core 2+ 버전 바인딩](https://github.com/dotnet/designs/issues/3)
 - [.NET Core용 Docker 이미지](https://hub.docker.com/_/microsoft-dotnet-core/)
