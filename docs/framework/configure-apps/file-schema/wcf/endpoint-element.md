@@ -12,11 +12,11 @@ ms.locfileid: "70855386"
 # <a name="endpoint-element"></a>\<끝점 > 요소
 서비스 공개에 사용되는 서비스 엔드포인트에 대한 바인딩, 계약 및 주소 속성을 지정합니다.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<서비스 >** ](services.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<서비스 >** ](service.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<끝점 >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<System.servicemodel >**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<서비스 >**](services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<서비스 >**](service.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<끝점 >**  
   
 ## <a name="syntax"></a>구문  
   

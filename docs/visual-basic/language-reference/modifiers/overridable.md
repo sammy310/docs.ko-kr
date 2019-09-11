@@ -44,7 +44,7 @@ ms.locfileid: "62053901"
   
  재정의 요소는 암시적으로 재정의할 수 있으므로 `Overridable`과 `Overrides`를 결합할 수 없습니다.  
   
-## <a name="usage"></a>사용법  
+## <a name="usage"></a>사용  
  `Overridable` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.  
   
  [Function 문](../../../visual-basic/language-reference/statements/function-statement.md)  

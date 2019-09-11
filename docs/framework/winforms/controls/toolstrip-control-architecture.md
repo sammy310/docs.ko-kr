@@ -172,7 +172,7 @@ ms.locfileid: "68363831"
 
 - 가 부여 되지 않은 경우 <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> 에는 액세스 키가 처리 되지 않습니다.
 
-#### <a name="usage"></a>사용법
+#### <a name="usage"></a>사용
 
 다음 사용 패턴은 레이아웃, 키보드 상호 <xref:System.Windows.Forms.ToolStrip> 작용 및 최종 사용자 동작에 대 한 베어링을 포함 합니다.
 

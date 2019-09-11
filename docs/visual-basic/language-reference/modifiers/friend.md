@@ -42,7 +42,7 @@ ms.locfileid: "69959809"
   
  [!code-vb[VbVbalrAccessModifiers#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalraccessmodifiers/vb/class1.vb#1)]  
   
-## <a name="usage"></a>사용법  
+## <a name="usage"></a>사용  
  한정자는 `Friend` 다음 컨텍스트에서 사용할 수 있습니다.  
   
  [Class 문](../../../visual-basic/language-reference/statements/class-statement.md)  

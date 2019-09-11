@@ -42,7 +42,7 @@ ms.locfileid: "64661256"
   
  로 선언 되기 때문에 `shape`, 변수 `shape1` 하 고 `shape2` 파생된 클래스에서 개체에 제한 됩니다 `circle` 및 `square`합니다. Visual Basic 없도록 이러한 변수를 다른 개체를 할당할 높은 수준의 형식 안전성을 제공 합니다.  
   
-## <a name="usage"></a>사용법  
+## <a name="usage"></a>사용  
  `MustInherit` 한정자는이 컨텍스트에서 사용할 수 있습니다.  
   
  [Class 문](../../../visual-basic/language-reference/statements/class-statement.md)  

@@ -40,7 +40,7 @@ ms.locfileid: "61920655"
   
  지정할 수 없습니다 `NotOverridable` 와 함께 `MustOverride`를 `Overridable`, 또는 `Shared` 같은 선언에 있습니다.  
   
-## <a name="usage"></a>사용법  
+## <a name="usage"></a>사용  
  `NotOverridable` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.  
   
  [Function 문](../../../visual-basic/language-reference/statements/function-statement.md)  

@@ -97,7 +97,7 @@ ms.locfileid: "68364299"
   
  사용자 지정 형식의 XAML 지원과 관련 된 각 XAML 관련 특성의 목록은 [사용자 지정 형식 및 라이브러리에 대 한 Xaml 관련 CLR 특성](xaml-related-clr-attributes-for-custom-types-and-libraries.md)을 참조 하세요.  
   
-## <a name="usage"></a>사용법  
+## <a name="usage"></a>사용  
  사용자 지정 형식을 사용 하려면 태그 작성자가 어셈블리 및 사용자 지정 형식이 포함 된 CLR 네임 스페이스에 대 한 접두사를 매핑해야 합니다. 이 절차는이 항목에서 설명 하지 않습니다.  
   
 ## <a name="access-level"></a>액세스 수준  

@@ -67,7 +67,7 @@ WPF (Windows Presentation Foundation)는 응용 프로그램에 텍스트를 포
   
  다음 표에서는 미리 정의 <xref:System.Windows.Media.TextFormatting.TextRun> 된 개체 중 일부를 보여 줍니다.  
   
-|TextRun 유형|사용법|  
+|TextRun 유형|사용|  
 |------------------|-----------|  
 |<xref:System.Windows.Media.TextFormatting.TextCharacters>|문자 모양의 표현을 텍스트 포맷터로 다시 전달하는 데 사용된 특수 텍스트 실행.|  
 |<xref:System.Windows.Media.TextFormatting.TextEmbeddedObject>|측정, 적중 테스트 및 그리기가 텍스트 내 이미지나 단추에서와 같이 전체적으로 수행되는 컨텐츠를 제공하는 데 사용된 특수 텍스트 실행.|  

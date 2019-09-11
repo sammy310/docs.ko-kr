@@ -14,7 +14,7 @@ ms.locfileid: "61868890"
 # <a name="runtime-changes-in-the-net-framework"></a>.NET Framework의 런타임 변경 내용
 
 [!INCLUDE[introduction](../../../../includes/migration-guide/runtime/introduction.md)]
-## <a name="usage"></a>사용법
+## <a name="usage"></a>사용
 다음과 같이 현재 대상으로 하는 .NET Framework를 선택한 후 마이그레이션할 대상인 .NET Framework를 선택합니다.
 
 [!INCLUDE[versionselector](../../../../includes/migration-guide/runtime/versionselector.md)]

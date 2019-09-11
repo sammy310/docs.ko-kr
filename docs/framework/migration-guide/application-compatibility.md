@@ -68,7 +68,7 @@ ms.locfileid: "70790119"
 
 - 사용 가능한 진단의 ID
 
-## <a name="usage"></a>사용법
+## <a name="usage"></a>사용
 시작하려면 아래에서 호환성 변경 형식을 선택합니다.
 
 - [대상 다시 지정 변경 내용](./retargeting/index.md)

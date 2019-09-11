@@ -78,7 +78,7 @@ public class MyItemType
 }
 ```
 
-**범주:** 사용법
+**범주:** 사용
 
 **심각도:** 경고
 
@@ -88,7 +88,7 @@ public class MyItemType
 
 serialize할 수 없는 형식의 인스턴스 필드가 serialize할 수 있는 형식에 정의되었습니다. 해당 필드를 <xref:System.NonSerializedAttribute>로 명시적으로 표시하여 이 경고를 수정해야 합니다.
 
-**범주:** 사용법
+**범주:** 사용
 
 **심각도:** 경고
 
@@ -98,7 +98,7 @@ serialize할 수 없는 형식의 인스턴스 필드가 serialize할 수 있는
 
 공용 언어 런타임에서 serializable로 인식되도록 하려면 형식이 <xref:System.Runtime.Serialization.ISerializable> 인터페이스를 구현하여 사용자 지정 serialization 루틴을 사용하는 경우에도 <xref:System.SerializableAttribute> 특성을 사용하여 형식을 표시해야 합니다.
 
-**범주:** 사용법
+**범주:** 사용
 
 **심각도:** 경고
 
