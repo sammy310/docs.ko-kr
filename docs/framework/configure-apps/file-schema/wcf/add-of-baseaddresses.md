@@ -2,53 +2,54 @@
 title: <baseAddresses>의 <add>
 ms.date: 03/30/2017
 ms.assetid: 1bd7426f-5f4f-43fc-b8e9-de842219aa32
-ms.openlocfilehash: a94c5144d907c26e6f5eef09b1a17b17eb6c9e0f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d75142209ad8706d0cad5ce188d9d991a5e881bc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920215"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850588"
 ---
-# <a name="add-of-baseaddresses"></a><span data-ttu-id="db075-102">\<baseaddresses의 \<> 추가 ></span><span class="sxs-lookup"><span data-stu-id="db075-102">\<add> of \<baseAddresses></span></span>
-<span data-ttu-id="db075-103">서비스 호스트에서 사용하는 기본 주소를 지정하는 구성 요소를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="db075-103">Represents a configuration element that specifies the base addresses used by the service host.</span></span>  
+# <a name="add-of-baseaddresses"></a><span data-ttu-id="e8a3e-102">\<baseaddresses의 \<> 추가 ></span><span class="sxs-lookup"><span data-stu-id="e8a3e-102">\<add> of \<baseAddresses></span></span>
+<span data-ttu-id="e8a3e-103">서비스 호스트에서 사용하는 기본 주소를 지정하는 구성 요소를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="e8a3e-103">Represents a configuration element that specifies the base addresses used by the service host.</span></span>  
   
- <span data-ttu-id="db075-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="db075-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="db075-105">\<client></span><span class="sxs-lookup"><span data-stu-id="db075-105">\<client></span></span>  
-<span data-ttu-id="db075-106">\<endpoint></span><span class="sxs-lookup"><span data-stu-id="db075-106">\<endpoint></span></span>  
-<span data-ttu-id="db075-107">\<host></span><span class="sxs-lookup"><span data-stu-id="db075-107">\<host></span></span>  
-<span data-ttu-id="db075-108">\<baseAddresses></span><span class="sxs-lookup"><span data-stu-id="db075-108">\<baseAddresses></span></span>  
-<span data-ttu-id="db075-109">\<baseAddress></span><span class="sxs-lookup"><span data-stu-id="db075-109">\<baseAddress></span></span>  
+<span data-ttu-id="e8a3e-104">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="e8a3e-104">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="e8a3e-105">&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)</span><span class="sxs-lookup"><span data-stu-id="e8a3e-105">&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)</span></span>\
+<span data-ttu-id="e8a3e-106">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<서비스 >** ](services.md)</span><span class="sxs-lookup"><span data-stu-id="e8a3e-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<services>**](services.md)</span></span>\
+<span data-ttu-id="e8a3e-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<서비스 >** ](service.md)</span><span class="sxs-lookup"><span data-stu-id="e8a3e-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<service>**](service.md)</span></span>\
+<span data-ttu-id="e8a3e-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<호스트 >** ](host.md)</span><span class="sxs-lookup"><span data-stu-id="e8a3e-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<host>**](host.md)</span></span>\
+<span data-ttu-id="e8a3e-109">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<baseAddresses >** ](baseaddresses.md)</span><span class="sxs-lookup"><span data-stu-id="e8a3e-109">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<baseAddresses>**](baseaddresses.md)</span></span>\
+<span data-ttu-id="e8a3e-110">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> 추가**</span><span class="sxs-lookup"><span data-stu-id="e8a3e-110">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="db075-110">구문</span><span class="sxs-lookup"><span data-stu-id="db075-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e8a3e-111">구문</span><span class="sxs-lookup"><span data-stu-id="e8a3e-111">Syntax</span></span>  
   
 ```xml  
 <add baseAddress="string" />
 ```  
   
-## <a name="type"></a><span data-ttu-id="db075-111">형식</span><span class="sxs-lookup"><span data-stu-id="db075-111">Type</span></span>  
+## <a name="type"></a><span data-ttu-id="e8a3e-112">형식</span><span class="sxs-lookup"><span data-stu-id="e8a3e-112">Type</span></span>  
  `Type`  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="db075-112">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="db075-112">Attributes and Elements</span></span>  
- <span data-ttu-id="db075-113">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="db075-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e8a3e-113">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="e8a3e-113">Attributes and Elements</span></span>  
+ <span data-ttu-id="e8a3e-114">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e8a3e-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="db075-114">특성</span><span class="sxs-lookup"><span data-stu-id="db075-114">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="e8a3e-115">특성</span><span class="sxs-lookup"><span data-stu-id="e8a3e-115">Attributes</span></span>  
   
-|<span data-ttu-id="db075-115">특성</span><span class="sxs-lookup"><span data-stu-id="db075-115">Attribute</span></span>|<span data-ttu-id="db075-116">Description</span><span class="sxs-lookup"><span data-stu-id="db075-116">Description</span></span>|  
+|<span data-ttu-id="e8a3e-116">특성</span><span class="sxs-lookup"><span data-stu-id="e8a3e-116">Attribute</span></span>|<span data-ttu-id="e8a3e-117">Description</span><span class="sxs-lookup"><span data-stu-id="e8a3e-117">Description</span></span>|  
 |---------------|-----------------|  
-|`baseAddress`|<span data-ttu-id="db075-117">서비스 호스트에서 사용하는 기본 주소를 지정하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="db075-117">A string that specifies a base address used by the service host.</span></span>|  
+|`baseAddress`|<span data-ttu-id="e8a3e-118">서비스 호스트에서 사용하는 기본 주소를 지정하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="e8a3e-118">A string that specifies a base address used by the service host.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="db075-118">자식 요소</span><span class="sxs-lookup"><span data-stu-id="db075-118">Child Elements</span></span>  
- <span data-ttu-id="db075-119">없음</span><span class="sxs-lookup"><span data-stu-id="db075-119">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="e8a3e-119">자식 요소</span><span class="sxs-lookup"><span data-stu-id="e8a3e-119">Child Elements</span></span>  
+ <span data-ttu-id="e8a3e-120">없음</span><span class="sxs-lookup"><span data-stu-id="e8a3e-120">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="db075-120">부모 요소</span><span class="sxs-lookup"><span data-stu-id="db075-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="e8a3e-121">부모 요소</span><span class="sxs-lookup"><span data-stu-id="e8a3e-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="db075-121">요소</span><span class="sxs-lookup"><span data-stu-id="db075-121">Element</span></span>|<span data-ttu-id="db075-122">Description</span><span class="sxs-lookup"><span data-stu-id="db075-122">Description</span></span>|  
+|<span data-ttu-id="e8a3e-122">요소</span><span class="sxs-lookup"><span data-stu-id="e8a3e-122">Element</span></span>|<span data-ttu-id="e8a3e-123">Description</span><span class="sxs-lookup"><span data-stu-id="e8a3e-123">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="db075-123">\<baseAddresses></span><span class="sxs-lookup"><span data-stu-id="db075-123">\<baseAddresses></span></span>](baseaddresses.md)|<span data-ttu-id="db075-124">`baseAddress` 요소의 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="db075-124">A collection of `baseAddress` elements.</span></span>|  
+|[<span data-ttu-id="e8a3e-124">\<baseAddresses></span><span class="sxs-lookup"><span data-stu-id="e8a3e-124">\<baseAddresses></span></span>](baseaddresses.md)|<span data-ttu-id="e8a3e-125">`baseAddress` 요소의 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="e8a3e-125">A collection of `baseAddress` elements.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="db075-125">참고자료</span><span class="sxs-lookup"><span data-stu-id="db075-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e8a3e-126">참고자료</span><span class="sxs-lookup"><span data-stu-id="e8a3e-126">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.HostElement>
 - <xref:System.ServiceModel.ServiceHost>
 - <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A>
-- [<span data-ttu-id="db075-126">호스팅</span><span class="sxs-lookup"><span data-stu-id="db075-126">Hosting</span></span>](../../../wcf/feature-details/hosting.md)
+- [<span data-ttu-id="e8a3e-127">호스팅</span><span class="sxs-lookup"><span data-stu-id="e8a3e-127">Hosting</span></span>](../../../wcf/feature-details/hosting.md)

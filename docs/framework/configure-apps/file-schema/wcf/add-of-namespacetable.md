@@ -2,22 +2,23 @@
 title: <namespaceTable>의 <add>
 ms.date: 03/30/2017
 ms.assetid: cf7b5b75-63bd-49a6-abac-4bfdab377e36
-ms.openlocfilehash: 7e2a2e26099f2d31116e4a89297fc1ac984c480d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3b3b4a1584b37601269368ee0e4e973626ddf9cf
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920071"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850389"
 ---
-# <a name="add-of-namespacetable"></a><span data-ttu-id="13809-102">\<\<namespaceTable > > 추가</span><span class="sxs-lookup"><span data-stu-id="13809-102">\<add> of \<namespaceTable></span></span>
-<span data-ttu-id="13809-103">매핑을 앞에 붙인 다음 XPath 필터에서 라우팅에 사용할 수 있는 네임스페이스를 포함하는 구성 요소를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="13809-103">Represents a configuration element that contains a namespace to prefix mapping that can then be used in XPath filters for routing.</span></span>  
+# <a name="add-of-namespacetable"></a><span data-ttu-id="a29e3-102">\<\<namespaceTable > > 추가</span><span class="sxs-lookup"><span data-stu-id="a29e3-102">\<add> of \<namespaceTable></span></span>
+<span data-ttu-id="a29e3-103">매핑을 앞에 붙인 다음 XPath 필터에서 라우팅에 사용할 수 있는 네임스페이스를 포함하는 구성 요소를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="a29e3-103">Represents a configuration element that contains a namespace to prefix mapping that can then be used in XPath filters for routing.</span></span>  
   
- <span data-ttu-id="13809-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="13809-104">\<system.serviceModel></span></span>  
-<span data-ttu-id="13809-105">\<라우팅 ></span><span class="sxs-lookup"><span data-stu-id="13809-105">\<routing></span></span>  
-<span data-ttu-id="13809-106">\<namespaceTable></span><span class="sxs-lookup"><span data-stu-id="13809-106">\<namespaceTable></span></span>  
-<span data-ttu-id="13809-107">\<add></span><span class="sxs-lookup"><span data-stu-id="13809-107">\<add></span></span>  
+<span data-ttu-id="a29e3-104">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="a29e3-104">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="a29e3-105">&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)</span><span class="sxs-lookup"><span data-stu-id="a29e3-105">&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)</span></span>\
+<span data-ttu-id="a29e3-106">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<라우팅 >** ](routing.md)</span><span class="sxs-lookup"><span data-stu-id="a29e3-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<routing>**](routing.md)</span></span>\
+<span data-ttu-id="a29e3-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<namespaceTable >** ](namespacetable.md)</span><span class="sxs-lookup"><span data-stu-id="a29e3-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<namespaceTable>**](namespacetable.md)</span></span>\
+<span data-ttu-id="a29e3-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> 추가**</span><span class="sxs-lookup"><span data-stu-id="a29e3-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="13809-108">구문</span><span class="sxs-lookup"><span data-stu-id="13809-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a29e3-109">구문</span><span class="sxs-lookup"><span data-stu-id="a29e3-109">Syntax</span></span>  
   
 ```xml  
 <routing>
@@ -28,25 +29,25 @@ ms.locfileid: "69920071"
 </routing>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="13809-109">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="13809-109">Attributes and Elements</span></span>  
- <span data-ttu-id="13809-110">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="13809-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="a29e3-110">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="a29e3-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="a29e3-111">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="a29e3-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="13809-111">특성</span><span class="sxs-lookup"><span data-stu-id="13809-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="a29e3-112">특성</span><span class="sxs-lookup"><span data-stu-id="a29e3-112">Attributes</span></span>  
   
-|<span data-ttu-id="13809-112">특성</span><span class="sxs-lookup"><span data-stu-id="13809-112">Attribute</span></span>|<span data-ttu-id="13809-113">Description</span><span class="sxs-lookup"><span data-stu-id="13809-113">Description</span></span>|  
+|<span data-ttu-id="a29e3-113">특성</span><span class="sxs-lookup"><span data-stu-id="a29e3-113">Attribute</span></span>|<span data-ttu-id="a29e3-114">설명</span><span class="sxs-lookup"><span data-stu-id="a29e3-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="13809-114">namespace</span><span class="sxs-lookup"><span data-stu-id="13809-114">namespace</span></span>|<span data-ttu-id="13809-115">네임스페이스를 포함하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="13809-115">A string containing the namespace.</span></span>|  
-|<span data-ttu-id="13809-116">prefix</span><span class="sxs-lookup"><span data-stu-id="13809-116">prefix</span></span>|<span data-ttu-id="13809-117">이 네임스페이스에 대한 접두사를 포함하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="13809-117">A string containing the prefix for this namespace.</span></span>|  
+|<span data-ttu-id="a29e3-115">namespace</span><span class="sxs-lookup"><span data-stu-id="a29e3-115">namespace</span></span>|<span data-ttu-id="a29e3-116">네임스페이스를 포함하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="a29e3-116">A string containing the namespace.</span></span>|  
+|<span data-ttu-id="a29e3-117">prefix</span><span class="sxs-lookup"><span data-stu-id="a29e3-117">prefix</span></span>|<span data-ttu-id="a29e3-118">이 네임스페이스에 대한 접두사를 포함하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="a29e3-118">A string containing the prefix for this namespace.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="13809-118">자식 요소</span><span class="sxs-lookup"><span data-stu-id="13809-118">Child Elements</span></span>  
- <span data-ttu-id="13809-119">없음</span><span class="sxs-lookup"><span data-stu-id="13809-119">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="a29e3-119">자식 요소</span><span class="sxs-lookup"><span data-stu-id="a29e3-119">Child Elements</span></span>  
+ <span data-ttu-id="a29e3-120">없음</span><span class="sxs-lookup"><span data-stu-id="a29e3-120">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="13809-120">부모 요소</span><span class="sxs-lookup"><span data-stu-id="13809-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="a29e3-121">부모 요소</span><span class="sxs-lookup"><span data-stu-id="a29e3-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="13809-121">요소</span><span class="sxs-lookup"><span data-stu-id="13809-121">Element</span></span>|<span data-ttu-id="13809-122">Description</span><span class="sxs-lookup"><span data-stu-id="13809-122">Description</span></span>|  
+|<span data-ttu-id="a29e3-122">요소</span><span class="sxs-lookup"><span data-stu-id="a29e3-122">Element</span></span>|<span data-ttu-id="a29e3-123">Description</span><span class="sxs-lookup"><span data-stu-id="a29e3-123">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="13809-123">\<namespaceTable></span><span class="sxs-lookup"><span data-stu-id="13809-123">\<namespaceTable></span></span>](namespacetable.md)|<span data-ttu-id="13809-124">매핑을 앞에 붙인 다음 XPath 필터에서 라우팅에 사용할 수 있는 네임스페이스를 포함하는 요소 집합을 정의하기 위한 구성 섹션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="13809-124">Represents a configuration section for defining a set of elements that contain namespace to prefix mappings that can then be used in XPath filters for routing.</span></span>|  
+|[<span data-ttu-id="a29e3-124">\<namespaceTable></span><span class="sxs-lookup"><span data-stu-id="a29e3-124">\<namespaceTable></span></span>](namespacetable.md)|<span data-ttu-id="a29e3-125">매핑을 앞에 붙인 다음 XPath 필터에서 라우팅에 사용할 수 있는 네임스페이스를 포함하는 요소 집합을 정의하기 위한 구성 섹션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="a29e3-125">Represents a configuration section for defining a set of elements that contain namespace to prefix mappings that can then be used in XPath filters for routing.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="13809-125">참고자료</span><span class="sxs-lookup"><span data-stu-id="13809-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a29e3-126">참고자료</span><span class="sxs-lookup"><span data-stu-id="a29e3-126">See also</span></span>
 
 - <xref:System.ServiceModel.Routing.Configuration.NamespaceElement?displayProperty=nameWithType>
