@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d14d542a8c1d8adeaf56dc1564e8e10121cd4064
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 11dc050e2fe16a64db4ac95bb1386e2d90535e81
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650728"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895029"
 ---
-# <a name="isymunmanagedwritersetuserentrypoint-method"></a><span data-ttu-id="5fc78-102">ISymUnmanagedWriter::SetUserEntryPoint 메서드</span><span class="sxs-lookup"><span data-stu-id="5fc78-102">ISymUnmanagedWriter::SetUserEntryPoint Method</span></span>
-<span data-ttu-id="5fc78-103">이 모듈에 대 한 진입점을 되는 사용자 정의 메서드를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="5fc78-103">Specifies the user-defined method that is the entry point for this module.</span></span> <span data-ttu-id="5fc78-104">예를 들어이 진입점에는 main 전에 컴파일러에서 생성 된 스텁이 대신 사용자의 기본 메서드 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5fc78-104">For example, this entry point could be the user's main method instead of compiler-generated stubs before main.</span></span>  
+# <a name="isymunmanagedwritersetuserentrypoint-method"></a><span data-ttu-id="b62c3-102">ISymUnmanagedWriter::SetUserEntryPoint 메서드</span><span class="sxs-lookup"><span data-stu-id="b62c3-102">ISymUnmanagedWriter::SetUserEntryPoint Method</span></span>
+<span data-ttu-id="b62c3-103">이 모듈의 진입점인 사용자 정의 메서드를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="b62c3-103">Specifies the user-defined method that is the entry point for this module.</span></span> <span data-ttu-id="b62c3-104">예를 들어이 진입점은 main 이전의 컴파일러 생성 스텁이 아닌 사용자의 main 메서드 일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b62c3-104">For example, this entry point could be the user's main method instead of compiler-generated stubs before main.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5fc78-105">구문</span><span class="sxs-lookup"><span data-stu-id="5fc78-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b62c3-105">구문</span><span class="sxs-lookup"><span data-stu-id="b62c3-105">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT SetUserEntryPoint(  
     [in] mdMethodDef entryMethod);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5fc78-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="5fc78-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b62c3-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="b62c3-106">Parameters</span></span>  
  `entryMethod`  
- <span data-ttu-id="5fc78-107">[in] 사용자 진입점인 메서드의 메타 데이터 토큰을 가리킵니다.</span><span class="sxs-lookup"><span data-stu-id="5fc78-107">[in] The metadata token for the method that is the user entry point.</span></span>  
+ <span data-ttu-id="b62c3-107">진행 사용자 진입점인 메서드의 메타 데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="b62c3-107">[in] The metadata token for the method that is the user entry point.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5fc78-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="5fc78-108">Return Value</span></span>  
- <span data-ttu-id="5fc78-109">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="5fc78-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b62c3-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="b62c3-108">Return Value</span></span>  
+ <span data-ttu-id="b62c3-109">메서드가 성공 하면 S_OK이 고, 그렇지 않으면입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="b62c3-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5fc78-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5fc78-110">Requirements</span></span>  
- <span data-ttu-id="5fc78-111">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="5fc78-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b62c3-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b62c3-110">Requirements</span></span>  
+ <span data-ttu-id="b62c3-111">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="b62c3-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5fc78-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="5fc78-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b62c3-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="b62c3-112">See also</span></span>
 
-- [<span data-ttu-id="5fc78-113">ISymUnmanagedWriter 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5fc78-113">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="b62c3-113">ISymUnmanagedWriter 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b62c3-113">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
