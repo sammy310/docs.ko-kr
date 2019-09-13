@@ -4,12 +4,12 @@ description: 이미지 처리에서 모바일 백 엔드 및 ETL 파이프라인
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: adc4e1f3249cd72c423430ad4cb5dbb8eea8baf9
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cb761524976125c816aae925f0c369eb8c76e7de
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577286"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926477"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>서버리스 비즈니스 시나리오 및 사용 사례
 
@@ -77,7 +77,7 @@ Azure Functions는 긴 URL을 붙여 넣고 짧은 Url을 생성할 수 있도�
 
 ![Power BI 예제](./media/power-bi-example.png)
 
-지침이 있는 전체 링크 단축 리포지토리는 여기에서 사용할 수 있습니다. [서버 리스 URL 단축](https://github.com/jeremylikness/serverless-url-shortener). 다음에서 간소화 된 버전을 읽을 수 있습니다. [몇 분 내에 서버 리스 .net 앱에 대 한 Azure Storage](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/)입니다.
+지침이 있는 전체 링크 단축 리포지토리는 여기에서 사용할 수 있습니다. [서버 리스 URL 단축](https://github.com/jeremylikness/serverless-url-shortener). 다음에서 간소화 된 버전을 읽을 수 있습니다. [몇 분 내에 서버 리스 .net 앱에 대 한 Azure Storage](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)입니다.
 
 ## <a name="verify-device-connectivity-using-a-ping"></a>Ping을 사용 하 여 장치 연결 확인
 
@@ -89,7 +89,7 @@ Azure Functions는 긴 URL을 붙여 넣고 짧은 Url을 생성할 수 있도�
 
 * [Azure Functions photo 모자이크 생성기](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
 * [Azure IoT Hub ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
-* [몇 분 내에 서버 리스 .NET 앱에 대 한 Azure Storage](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/)
+* [몇 분 내에 서버 리스 .NET 앱에 대 한 Azure Storage](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
 * [사용자 고유의 앱 가져오기](https://github.com/JeremyLikness/bring-own-app-connect-17)
 * [CSV 가져오기 랩](https://github.com/JeremyLikness/azure-fn-file-process-hol)
 * [Event grid 붙이기](https://github.com/JeremyLikness/Event-Grid-Glue)

@@ -2,12 +2,12 @@
 title: 기존 .NET 앱을 Windows 컨테이너로 배포
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 기존 .NET 앱을 Windows 컨테이너로 배포
 ms.date: 04/29/2018
-ms.openlocfilehash: 4d58be828418abe4964e26a983f194fd5d30b93d
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: d48acbb2e1c4858bf3146318f70dd7b8a7b62918
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374027"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926483"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>기존 .NET 앱을 Windows 컨테이너로 배포
 
@@ -143,6 +143,7 @@ Hyper-v 격리를 사용 하거나 사용 하지 않고 Windows에서 컨테이�
 **그림 4-7.5** Azure의 컨테이너 에코 시스템
 
 Azure의 컨테이너 에코 시스템에서 인프라를 고려 하는 컨테이너를 지 원하는 다음 제품입니다.
+
 - **Azure Container Instances (ACI)**
 - **Azure Virtual Machines** (컨테이너의 지원)
 - **Azure Virtual Machine Scale Sets** (컨테이너의 지원)

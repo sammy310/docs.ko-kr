@@ -5,12 +5,12 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: c0c74aeaf02bc6380d7627ce39f65603e94952c0
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 835e7c0cffbcd5857c33694586b4d63511ecadb8
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373866"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926293"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core 및 .NET Standard의 단위 테스트
 
@@ -38,11 +38,13 @@ C#, F# 및 Visual Basic에서 개인 프로젝트에 대한 시작점으로 기�
 .NET Core 프로젝트의 단위 테스트에 대한 자세한 내용:
 
 .NET Core 단위 테스트 프로젝트는 다음에 지원됩니다.
+
 * [C#](../../csharp/index.md)
 * [F#](../../fsharp/index.md)
 * [Visual Basic](../../visual-basic/index.md) 
 
 다음 중에서 선택할 수도 있습니다.
+
 * [xUnit](https://xunit.github.io) 
 * [NUnit](https://nunit.org)
 * [MSTest](https://github.com/Microsoft/testfx-docs)

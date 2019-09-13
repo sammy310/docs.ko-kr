@@ -4,12 +4,12 @@ description: 고품질 .NET 라이브러리를 만드는 개발자를 위한 모
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/17/2018
-ms.openlocfilehash: 85d76c8b2bd0f030e3fbc1987e6ff51d6da44e76
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: eff6c822757af6fb85622e88714accd40c32bcf5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644381"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928954"
 ---
 # <a name="open-source-library-guidance"></a>오픈 소스 라이브러리 지침
 
@@ -18,6 +18,7 @@ ms.locfileid: "65644381"
 고품질 오픈 소스 .NET 라이브러리의 측면:
 
 > [!div class="checklist"]
+>
 > * **포괄적** - 우수한 .NET 라이브러리는 여러 플랫폼, 프로그래밍 언어 및 애플리케이션을 지원하기 위해 노력합니다.
 > * **안정적** - 우수한 .NET 라이브러리는 에코시스템에서 공존하며 다양한 라이브러리를 사용하여 빌드된 애플리케이션에서 실행됩니다.
 > * **진화하도록 설계** - .NET 라이브러리는 시간이 지남에 따라 개선되고 진화하는 동시에 기존 사용자를 지원해야 합니다.
