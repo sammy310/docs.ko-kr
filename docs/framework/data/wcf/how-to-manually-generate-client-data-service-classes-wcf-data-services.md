@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, client library
 ms.assetid: b98cb1d6-956a-4e50-add6-67e4f2587346
-ms.openlocfilehash: 106f1cedb33c0c1b333df0b9f2b8c2a70d458a0d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f8d99213a1ef98c48855ba9f561f87a800768c89
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790433"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894302"
 ---
 # <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a>방법: 클라이언트 데이터 서비스 클래스를 수동으로 생성 (WCF Data Services)
 WCF Data Services는 visual Studio와 통합 되어 **서비스 참조 추가** 대화 상자를 사용 하 여 visual studio 프로젝트에서 데이터 서비스에 대 한 참조를 추가할 때 자동으로 클라이언트 데이터 서비스 클래스를 생성할 수 있도록 합니다. 자세한 내용은 [방법: 데이터 서비스 참조](how-to-add-a-data-service-reference-wcf-data-services.md)를 추가 합니다. 코드 생성 도구 `DataSvcUtil.exe`를 사용하여 동일한 클라이언트 데이터 서비스 클래스를 수동으로 생성할 수도 있습니다. WCF Data Services에 포함 된이 도구는 데이터 서비스 정의에서 .NET Framework 클래스를 생성 합니다. 이 도구를 사용하여 개념적 모델 파일(.csdl) 및 Visual Studio 프로젝트의 Entity Framework 모델을 나타내는 .edmx 파일에서 데이터 서비스 클래스를 생성할 수도 있습니다.
@@ -43,7 +43,7 @@ WCF Data Services는 visual Studio와 통합 되어 **서비스 참조 추가** 
 
 - 명령 프롬프트에서 줄 바꿈 없이 다음 명령을 실행합니다.
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /language:CSharp /out:northwind.cs /uri:http://localhost:12345/Northwind.svc
     ```
 
@@ -54,7 +54,7 @@ WCF Data Services는 visual Studio와 통합 되어 **서비스 참조 추가** 
 
 - 명령 프롬프트에서 줄 바꿈 없이 다음 명령을 실행합니다.
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /out:Northwind.vb /uri:http://localhost:12345/Northwind.svc
     ```
 
@@ -65,7 +65,7 @@ WCF Data Services는 visual Studio와 통합 되어 **서비스 참조 추가** 
 
 - 명령 프롬프트에서 줄 바꿈 없이 다음 명령을 실행합니다.
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:CSharp /in:Northwind.csdl /out:Northwind.cs
     ```
 
@@ -73,7 +73,7 @@ WCF Data Services는 visual Studio와 통합 되어 **서비스 참조 추가** 
 
 - 명령 프롬프트에서 줄 바꿈 없이 다음 명령을 실행합니다.
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.csdl /out:Northwind.vb
     ```
 
@@ -81,7 +81,7 @@ WCF Data Services는 visual Studio와 통합 되어 **서비스 참조 추가** 
 
 - 명령 프롬프트에서 줄 바꿈 없이 다음 명령을 실행합니다.
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:CSharp /in:Northwind.edmx /out:c:\northwind.cs
     ```
 
@@ -89,7 +89,7 @@ WCF Data Services는 visual Studio와 통합 되어 **서비스 참조 추가** 
 
 - 명령 프롬프트에서 줄 바꿈 없이 다음 명령을 실행합니다.
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.edmx /out:c:\northwind.vb
     ```
 

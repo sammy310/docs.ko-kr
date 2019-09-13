@@ -2,12 +2,12 @@
 title: Wndows Presentation Foundation 클라이언트에서 데이터 바인딩
 ms.date: 03/30/2017
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-ms.openlocfilehash: 791afee9772a6f06e57fdd09ad8a47db2bd8ca63
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b0f1eb8ca154ab8e37a15b35097f746662511f7c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045106"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928629"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Wndows Presentation Foundation 클라이언트에서 데이터 바인딩
 이 샘플에서는 WPF(Windows Presentation Foundation) 클라이언트에서 데이터 바인딩을 사용하는 방법을 보여 줍니다. 이 샘플에서는 클라이언트에 반환할 앨범 배열을 임의로 생성 하는 WCF (Windows Communication Foundation) 서비스를 사용 합니다. 각 앨범에는 이름, 가격 및 앨범 트랙 목록이 있습니다. 앨범 트랙에는 이름과 기간이 있습니다. 서비스에서 반환 되는 정보는 WPF (Windows Presentation Foundation) 클라이언트에서 제공 하는 UI (사용자 인터페이스)에 자동으로 바인딩됩니다.  
@@ -17,7 +17,7 @@ ms.locfileid: "70045106"
   
  데이터 바인딩을 사용하면 데이터 소스를 UI에 자동으로 바인딩할 수 있습니다. 이렇게 하면 데이터 개체나 데이터 개체 배열의 데이터로 각 UI 요소를 프로그래밍 방식으로 업데이트할 필요가 없으므로 프로그래밍 모델이 단순화됩니다. 단일 UI 요소에 개체를 바인딩하거나 `ListBox`와 같이 여러 입력을 허용하는 컨트롤에 배열을 바인딩할 수 있습니다. 다음 코드에서는 UI 요소의 `DataContext`에 데이터를 바인딩하는 방법을 보여 줍니다.  
   
-```  
+```csharp  
 // Event handler executed when call is complete  
 void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs e)  
 {  

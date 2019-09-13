@@ -8,18 +8,18 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: f905eb90b47cb5ab20fd912b1cbcc62947361992
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4f36081ef1a3eec84f3cc2ced3c629109acd6a38
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779766"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894277"
 ---
 # <a name="service-operations-wcf-data-services"></a>서비스 작업(WCF Data Services)
 
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하면 데이터 서비스에 서버의 메서드를 노출하는 서비스 작업을 정의할 수 있습니다. 다른 데이터 서비스 리소스와 마찬가지로 서비스 작업도 URI로 주소가 지정됩니다. 서비스 작업을 사용하면 유효성 검사 논리 구현, 역할 기반 보안 적용 또는 특수 쿼리 기능 노출 등을 위해 데이터 서비스에 비즈니스 논리를 노출할 수 있습니다. 서비스 작업은 <xref:System.Data.Services.DataService%601>에서 파생되는 데이터 서비스 클래스에 추가된 메서드입니다. 다른 모든 데이터 서비스 리소스와 마찬가지로 서비스 작업 메서드에 매개 변수를 제공할 수 있습니다. 예를 들어 다음 서비스 작업 URI ( [퀵 스타트](quickstart-wcf-data-services.md) 데이터 서비스 기반)는 값 `London` `city` 을 매개 변수에 전달 합니다.
 
-```
+```http
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
 ```
 
@@ -70,7 +70,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
 
 URI의 첫 번째 경로 세그먼트에 메서드 이름을 배치하여 서비스 작업의 주소를 지정할 수 있습니다. 예를 들어 다음 URI는 `GetOrdersByState` 개체의 <xref:System.Linq.IQueryable%601> 컬렉션을 반환하는 `Orders` 작업에 액세스합니다.
 
-```
+```http
 http://localhost:12345/Northwind.svc/GetOrdersByState?state='CA'&includeItems=true
 ```
 
@@ -86,7 +86,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByState?state='CA'&includeItems=tr
 
 서비스 작업의 반환 형식에 따라 추가 경로 세그먼트나 쿼리 옵션이 URI에 추가될 수도 있습니다. 예를 들어 다음 URI는 관련 `GetOrdersByCity` 개체와 함께 <xref:System.Linq.IQueryable%601> 개체의 `Orders` 컬렉션을 `RequiredDate`의 내림차순으로 정렬하여 반환하는 `Order_Details` 작업에 액세스합니다.
 
-```
+```http
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order_Details&$orderby=RequiredDate desc
 ```
 

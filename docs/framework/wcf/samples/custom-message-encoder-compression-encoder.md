@@ -2,12 +2,12 @@
 title: '사용자 지정 메시지 인코더: 압축 인코더'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 84afb060e98a5936b24c5446ff543fd627864102
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 4fc6cd4b28d35971e5e2da2559d258055adf9252
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971993"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928742"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>사용자 지정 메시지 인코더: 압축 인코더
 
@@ -312,7 +312,7 @@ public class GZipMessageEncodingElement : BindingElementExtensionElement
 
 서버를 실행하면 작업 요청 및 응답이 콘솔 창에 표시됩니다. 서버를 종료하려면 창에서 Enter 키를 누릅니다.
 
-```
+```console
 Press Enter key to Exit.
 
         Server Echo(string input) called:
@@ -324,7 +324,7 @@ Press Enter key to Exit.
 
 클라이언트를 실행하면 작업 요청 및 응답이 콘솔 창에 표시됩니다. 클라이언트를 종료하려면 클라이언트 창에서 Enter 키를 누릅니다.
 
-```
+```console
 Calling Echo(string):
 Server responds: Simple hello Simple hello
 
@@ -338,7 +338,7 @@ Press <ENTER> to terminate client.
 
 1. 다음 명령을 사용 하 여 ASP.NET 4.0을 설치 합니다.
 
-    ```
+    ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 

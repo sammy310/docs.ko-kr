@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 234c8a1f57af4030186afd48f727621713531b17
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 916523acf1d270830a2cb1fb5ae50e26d055404c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915533"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927022"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>대형 응답성 .NET Framework 응용 프로그램 작성
 이 문서에서는 규모가 큰 .NET Framework 앱이나 파일 또는 데이터베이스와 같이 많은 양의 데이터를 처리하는 앱의 성능을 향상시키기 위한 팁을 제공합니다. 이러한 팁은 C# 및 Visual Basic 컴파일러를 관리 코드로 다시 작성하면서 수집되었으며, C# 컴파일러의 실제 몇 가지 예를 포함하고 있습니다. 
@@ -280,7 +280,7 @@ LINQ (언어 통합 쿼리)는 람다 식과 함께 생산성 기능의 예입�
   
  **예 5: 람다, List\<t > 및 IEnumerable\<t >**  
   
- 이 예제에서는 이름 문자열이 제공될 경우 [LINQ 및 기능 스타일 코드](https://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx)를 사용하여 컴파일러 모델에서 기호를 찾습니다.  
+ 이 예제에서는 이름 문자열이 제공될 경우 [LINQ 및 기능 스타일 코드](https://blogs.msdn.microsoft.com/charlie/2007/01/27/anders-hejlsberg-on-linq-and-functional-programming/)를 사용하여 컴파일러 모델에서 기호를 찾습니다.  
   
 ```csharp  
 class Symbol {  
@@ -304,7 +304,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- 첫 번째 줄에서 [람다 식은](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` 지역 변수 `name`를 [통해 닫습니다](https://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) . 즉, 이 코드에서는 `predicate`를 유지하는 [대리자](../../csharp/language-reference/keywords/delegate.md)에 대한 개체를 할당할 뿐만 아니라 `name`의 값을 캡처하는 환경을 유지하기 위한 정적 클래스를 할당합니다. 컴파일러는 다음과 같은 코드를 생성합니다.  
+ 첫 번째 줄에서 [람다 식은](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` 지역 변수 `name`를 [통해 닫습니다](https://blogs.msdn.microsoft.com/ericlippert/2003/09/17/what-are-closures/) . 즉, 이 코드에서는 `predicate`를 유지하는 [대리자](../../csharp/language-reference/keywords/delegate.md)에 대한 개체를 할당할 뿐만 아니라 `name`의 값을 캡처하는 환경을 유지하기 위한 정적 클래스를 할당합니다. 컴파일러는 다음과 같은 코드를 생성합니다.  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  

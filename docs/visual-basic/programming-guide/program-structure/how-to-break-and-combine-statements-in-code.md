@@ -21,19 +21,19 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: 745974523bd747dd23f3cfaf7cb70bb6cd4513f0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f17f815ea0f1f91284d3223ff233a87dc7ff71eb
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946208"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892690"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>방법: 코드에서 문 분리 및 결합 (Visual Basic)
 코드를 작성할 때 코드 편집기에서 가로로 스크롤해야 하는 긴 문을 만들 수 있습니다. 이는 코드가 실행 되는 방식에는 영향을 주지 않지만 사용자 또는 다른 사용자가 모니터에 표시 되는 코드를 읽을 수 있도록 하는 것이 어렵습니다. 이 경우 단일 long 문을 여러 줄로 나누는 것이 좋습니다.  
   
 ### <a name="to-break-a-single-statement-into-multiple-lines"></a>단일 문을 여러 줄로 분할 하려면  
   
-- 줄 연속 문자를 사용 합니다 .이 문자는 줄을`_`나눌 지점에서 밑줄 ()입니다. 밑줄 바로 앞에는 공백이 오고 바로 뒤에는 줄 종결자(캐리지 리턴)가 와야 합니다.  
+-   줄 연속 문자를 사용 합니다 .이 문자는 줄을`_`나눌 지점에서 밑줄 ()입니다. 밑줄 바로 앞에는 공백이 오고 바로 뒤에 줄 종결자 (캐리지 리턴)가와 야 합니다 (버전 16.0부터). 주석 뒤에 캐리지 리턴이와 야 합니다. 
   
     > [!NOTE]
     > 경우에 따라 줄 연속 문자를 생략 하는 경우 Visual Basic 컴파일러는 다음 코드 줄에서 문을 암시적으로 계속 합니다. 줄 연속 문자를 생략할 수 있는 구문 요소 목록은 [문의](../../../visual-basic/programming-guide/language-features/statements.md)"암시적 줄 연속"을 참조 하세요.  

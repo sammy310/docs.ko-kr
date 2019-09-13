@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 34d134d0d7ba1d131ded8d8a6eee818b84c86508
-ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
+ms.openlocfilehash: ec83bfd08277c79f15904d50a85e43cc61ecd527
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66003740"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894703"
 ---
 # <a name="clr-etw-providers"></a>CLR ETW 공급자
 CLR(공용 언어 런타임)에는 런타임 공급자 및 런다운 공급자라는 두 개의 공급자가 있습니다.  
   
  런타임 공급자는 사용하도록 설정된 키워드(이벤트 범주)에 따라 이벤트를 발생시킵니다. 예를 들어 `LoaderKeyword` 키워드를 사용하도록 설정하면 로더 이벤트를 수집할 수 있습니다.  
   
- 이벤트 추적에 대 한 Windows (ETW) 이벤트는.etl 확장명을 나중에 처리할 수 있습니다 후 필요에 따라 쉼표로 구분 된 값 (.csv) 파일에 있는 파일에 기록 됩니다. .etl 파일을 .csv 파일로 변환하는 방법에 대한 자세한 내용은 [.NET Framework 로깅 제어](../../../docs/framework/performance/controlling-logging.md)를 참조하세요.  
+ ETW (ETW(Windows용 이벤트 추적)) 이벤트는 확장명이 .etl 인 파일에 기록 되며, 나중에 필요에 따라 쉼표로 구분 된 값 (.csv) 파일에서 나중에 처리 될 수 있습니다. .etl 파일을 .csv 파일로 변환하는 방법에 대한 자세한 내용은 [.NET Framework 로깅 제어](../../../docs/framework/performance/controlling-logging.md)를 참조하세요.  
   
 ## <a name="the-runtime-provider"></a>런타임 공급자  
  런타임 공급자는 기본 CLR ETW 공급자입니다.  
@@ -60,7 +60,7 @@ CLR(공용 언어 런타임)에는 런타임 공급자 및 런다운 공급자�
   
 1. CLR 런타임 공급자를 사용하여 ETW 로깅 켜기:  
   
-    ```  
+    ```console
     xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:0x5 -f clr1.etl      
     ```  
   
@@ -68,7 +68,7 @@ CLR(공용 언어 런타임)에는 런타임 공급자 및 런다운 공급자�
   
 2. 프로세스를 계속 실행하는 동안 프로파일링을 중지하려면 런다운 공급자를 시작하여 `DCEnd` 이벤트를 캡처합니다.  
   
-    ```  
+    ```console
     xperf -start clrRundown -on A669021C-C450-4609-A035-5AF59AF4DF18:0xB8:0x5 -f clr2.etl      
     ```  
   
@@ -76,14 +76,14 @@ CLR(공용 언어 런타임)에는 런타임 공급자 및 런다운 공급자�
   
 3. 모든 ETW 프로파일링 끄기:  
   
-    ```  
+    ```console
     xperf -stop clrRundown   
     xperf -stop clr  
     ```  
   
 4. 프로필을 병합하여 하나의 로그 파일 만들기:  
   
-    ```  
+    ```console
     xperf -merge clr1.etl clr2.etl merged.etl  
     ```  
   

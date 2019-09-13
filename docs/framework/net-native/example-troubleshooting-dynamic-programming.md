@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fef5894f7452bd32cc4e43433aa60166db241a12
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 85d64a5577acdaa15a40ae308eb728d75d6a4c69
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910610"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894495"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>예제: 동적 프로그래밍 문제 해결
 > [!NOTE]
@@ -17,7 +17,7 @@ ms.locfileid: "69910610"
   
  .NET 네이티브 도구 체인을 사용 하 여 개발 된 앱에서 일부 메타 데이터 조회 실패가 발생 하면 예외가 발생 합니다.  앱에서 예기치 않은 방식으로 나타나는 오류도 있습니다.  다음 예제에서는 null 개체를 참조하여 발생하는 액세스 위반을 보여 줍니다.  
   
-```  
+```output
 Access violation - code c0000005 (first chance)  
 App!$3_App::Core::Util::NavigationArgs.Setup  
 App!$3_App::Core::Util::NavigationArgs..ctor  
@@ -38,9 +38,7 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
 ## <a name="what-was-the-app-doing"></a>앱이 수행 중이었던 작업  
  먼저 스택의 기반이 되는 `async` 키워드를 확인합니다.  스택에서 원래 호출 컨텍스트가 손실되었으며 다른 스레드에 대해 `async` 코드가 실행되었기 때문에 `async` 메서드에서 앱이 실제로 수행 중이었던 작업을 확인하기가 어려울 수도 있습니다. 그러나 앱이 첫 페이지를 로드하고 있었다는 것은 추론할 수 있습니다.  `NavigationArgs.Setup` 구현에서는 다음 코드로 인해 액세스 위반이 발생했습니다.  
   
-```  
-AppViewModel.Current.LayoutVM.PageMap  
-```  
+`AppViewModel.Current.LayoutVM.PageMap`  
   
  여기서는 `AppViewModel.Current`의 `LayoutVM` 속성이 **null**이었습니다.  일부 메타데이터가 누락되어 동작이 약간 달라졌으며, 그로 인해 앱이 작동할 수 있도록 속성이 설정되는 대신 초기화되지 않았습니다.  코드에서 `LayoutVM`이 초기화되어야 하는 위치에 중단점을 설정하면 문제 해결에 도움이 될 수 있습니다.  그러나 `LayoutVM`의 형식은 `App.Core.ViewModels.Layout.LayoutApplicationVM`입니다.  그러므로 rd.xml 파일에 지금까지 포함된 메타데이터 지시문은 다음 항목뿐입니다.  
   

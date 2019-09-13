@@ -2,12 +2,12 @@
 title: IIS 및 WAS에서 구성 기반 활성화
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-ms.openlocfilehash: f4de4aff2fbe6b8e82dc3d6523f492d06494c79e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5b06f474d26b80f955b1508f01da83448a8708a3
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69909778"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928778"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>IIS 및 WAS에서 구성 기반 활성화
 
@@ -31,6 +31,7 @@ ms.locfileid: "69909778"
  Web.config 파일에 이 섹션이 있으면 애플리케이션의 App_Code 디렉터리에 서비스 소스 코드를 저장하거나 애플리케이션의 Bin 디렉터리에 컴파일된 어셈블리를 저장할 수 있습니다.
 
 > [!NOTE]
+>
 > - 구성 기반 활성화를 사용하는 경우 .svc 파일의 인라인 코드는 지원되지 않습니다.
 > - 특성 `relativeAddress` 은 "\<하위 디렉터리 >/service.svc" 또는 "~/\<sub-directory/service .svc"와 같은 상대 주소로 설정 해야 합니다.
 > - WCF와 연결된 알려진 확장명이 없는 상대 주소를 등록하면 구성 예외가 throw됩니다.

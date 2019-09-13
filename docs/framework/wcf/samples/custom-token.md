@@ -2,12 +2,12 @@
 title: Custom Token
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: c3c6cfd9d1742f7e839d7b40220792ba455d7673
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b073375325d2989a23624303f2c40b8f61a29d02
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855514"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928659"
 ---
 # <a name="custom-token"></a>Custom Token
 
@@ -557,7 +557,7 @@ string GetCallerCreditCardNumber()
 
      인증서는 `LocalMachine` 저장 위치에 있는 My(개인) 저장소에 저장됩니다. IIS에서 호스트되는 서비스의 경우 인증서는 LocalMachine 저장소에 저장됩니다. 자체 호스팅 서비스의 경우 LocalMachine 문자열을 CurrentUser로 대체하여 CurrentUser 저장소 위치에 클라이언트 인증서를 저장하도록 배치 파일을 수정해야 합니다.
 
-    ```
+    ```bat
     echo ************
     echo Server cert setup starting
     echo %SERVER_NAME%
@@ -571,7 +571,7 @@ string GetCallerCreditCardNumber()
 
      Setup.bat 배치 파일에서 다음 행은 클라이언트의 신뢰할 수 있는 사용자 저장소로 서버 인증서를 복사합니다. 이 단계는 Makecert.exe에서 생성한 인증서를 클라이언트 컴퓨터에서 절대적으로 신뢰하지는 않기 때문에 필요합니다. Microsoft에서 발급한 인증서와 같이 클라이언트가 신뢰할 수 있는 루트 인증서를 기반으로 하는 인증서가 이미 있는 경우 클라이언트 인증서 저장소를 서버 인증서로 채우는 이 단계를 수행할 필요가 없습니다.
 
-    ```
+    ```bat
     echo ************
     echo copying server cert to client's TrustedPeople store
     echo ************
@@ -580,7 +580,7 @@ string GetCallerCreditCardNumber()
 
 - IIS에서 호스트되는 서비스에서 인증서 개인 키에 액세스할 수 있게 하려면 IIS에서 호스트되는 프로세스가 실행 중인 사용자 계정에 개인 키에 대한 적절한 사용 권한을 부여해야 합니다. Setup.bat 스크립트에서 마지막 단계를 통해 이 작업을 수행합니다.
 
-    ```
+    ```bat
     echo ************
     echo setting privileges on server certificates
     echo ************

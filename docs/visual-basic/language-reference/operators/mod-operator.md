@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-ms.openlocfilehash: dc1e866836bb7420ffe17210b5be7a5e1d4048d0
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 08e3eec08ba099e6f5c7796a459c55de09afa917
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374485"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929324"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod 연산자 (Visual Basic)
 
@@ -51,7 +51,7 @@ result = number1 Mod number2
 > [!NOTE]
 > 수학의 *나머지가* 서로 다르며 *음수에 대해* 다른 결과가 있습니다. Visual Basic `Mod` , .NET Framework `op_Modulus` 연산자 및 기본 [rem](<xref:System.Reflection.Emit.OpCodes.Rem>) IL 명령의 연산자는 모두 나머지 작업을 수행 합니다.
 
-`Mod` 작업의 결과는 `number1`피제수의 부호를 유지 하므로 양수 또는 음수일 수 있습니다. 결과는 항상 (-`number2`, `number2`) (제외) 범위 내에 있습니다. 예를 들어:
+`Mod` 작업의 결과는 `number1`피제수의 부호를 유지 하므로 양수 또는 음수일 수 있습니다. 결과는 항상 (-`number2`, `number2`) (제외) 범위 내에 있습니다. 예:
 
 ```vb
 Public Module Example
@@ -84,6 +84,7 @@ End Module
 ## <a name="attempted-division-by-zero"></a>0으로 나누기 시도
 
 가 `number2` 0으로 계산 되는 경우 `Mod` 연산자의 동작은 피연산자의 데이터 형식에 따라 달라 집니다.
+
 - 정수 나누기는 컴파일 시간 <xref:System.DivideByZeroException> 에을 `number2` 확인할 수 없는 경우 예외를 throw 하 고 컴파일 시간에가 0 `BC30542 Division by zero occurred while evaluating this expression` 으로 `number2` 계산 되는 경우 컴파일 시간 오류를 생성 합니다.
 - 부동 소수점 나누기는를 반환 <xref:System.Double.NaN?displayProperty=nameWithType>합니다.
 

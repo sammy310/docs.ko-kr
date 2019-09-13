@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5be728cbeb0c3378bb35765787b299167069f57
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0a54945ece2cbb06df5f778aba242f05d9b80373
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910619"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894510"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>예제: 데이터를 바인딩하는 경우 예외 처리
 > [!NOTE]
@@ -17,14 +17,14 @@ ms.locfileid: "69910619"
   
  다음 예제에서는 .NET 네이티브 도구 체인을 사용 하 여 컴파일한 앱이 데이터 바인딩을 시도 하는 경우 throw 되는 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 예외를 해결 하는 방법을 보여 줍니다. 예외 정보는 다음과 같습니다.  
   
-```  
+```output
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:   
 App.ViewModels.MainPageVM  
 ```  
   
  관련 호출 스택은 다음과 같습니다.  
   
-```  
+```output
 Reflection::Execution::ReflectionDomainSetupImplementation.CreateNonInvokabilityException+0x238  
 Reflection::Core::ReflectionDomain.CreateNonInvokabilityException+0x2e  
 Reflection::Core::Execution::ExecutionEnvironment.+0x316  

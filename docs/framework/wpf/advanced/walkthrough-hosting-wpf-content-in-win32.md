@@ -6,12 +6,12 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 03a35d26fd1917d926f9a26d25ae8a8e32c476f4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3433819761c19b616a7c9c19fe52e250b0f028dc
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917638"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929184"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>연습: Win32에서 WPF 콘텐츠 호스팅
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 응용 프로그램을 만들기 위한 다양한 환경을 제공합니다. 그러나 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 코드에 상당한 투자를 한 경우 원본 코드를 다시 작성하는 대신 응용 프로그램에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기능을 추가하는 것이 더 효과적일 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]창에서 콘텐츠를 호스트 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 하기 위한 간단한 메커니즘을 제공 합니다. [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]  
@@ -64,7 +64,6 @@ ms.locfileid: "69917638"
 ## <a name="implementing-the-host-application"></a>호스트 애플리케이션 구현
  이 섹션에서는 기본 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 응용 프로그램에서 콘텐츠를 호스트 하는 방법을 설명 합니다. 콘텐츠 자체는/Cli에서 C++관리 되는 클래스로 구현 됩니다. 대부분의 경우 간단한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프로그래밍입니다. 콘텐츠 구현의 주요 측면은 [WPF 콘텐츠 구현](#implementing_the_wpf_page)에서 설명 합니다.
 
-<a name="autoNestedSectionsOUTLINE1"></a>
 - [기본 응용 프로그램](#the_basic_application)
 
 - [WPF 콘텐츠 호스트](#hosting_the_wpf_page)
@@ -169,7 +168,6 @@ ms.locfileid: "69917638"
 ## <a name="implementing-the-wpf-page"></a>WPF 페이지 구현
  실제 구현에 대 한 지식 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 없이 콘텐츠를 호스트 하 고 사용할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠가 별도의 DLL에 패키지 된 경우 CLR (공용 언어 런타임) 언어로 빌드된 것일 수 있습니다. 다음은 샘플에서 사용 되는 C++/cli 구현에 대 한 간단한 연습입니다. 이 섹션에는 다음 하위 섹션이 포함되어 있습니다.
 
-<a name="autoNestedSectionsOUTLINE2"></a>
 - [레이아웃](#page_layout)
 
 - [호스트 창에 데이터 반환](#returning_data_to_window)

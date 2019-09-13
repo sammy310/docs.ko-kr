@@ -2,12 +2,12 @@
 title: 웹 브라우저에서 서비스 액세스(WCF Data Services 빠른 시작)
 ms.date: 03/30/2017
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-ms.openlocfilehash: eb7f1c97722b45a93c310fb8bcbdb42beece2553
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d89f84cd3ea4f56bbae34cbefe0c3891df96fa8b
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780535"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894342"
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>웹 브라우저에서 서비스 액세스(WCF Data Services 빠른 시작)
 
@@ -29,7 +29,7 @@ WCF Data Services 빠른 시작의 두 번째 작업입니다. 이 작업에서�
 
 3. 로컬 컴퓨터에서 웹 브라우저를 엽니다. 주소 표시줄에 다음 URI를 입력합니다.
 
-    ```
+    ```http
     http://localhost:12345/northwind.svc
     ```
 
@@ -39,7 +39,7 @@ WCF Data Services 빠른 시작의 두 번째 작업입니다. 이 작업에서�
 
 1. 웹 브라우저의 주소 표시줄에 다음 URI를 입력합니다.
 
-    ```
+    ```http
     http://localhost:12345/northwind.svc/Customers
     ```
 
@@ -47,7 +47,7 @@ WCF Data Services 빠른 시작의 두 번째 작업입니다. 이 작업에서�
 
 2. 웹 브라우저의 주소 표시줄에 다음 URI를 입력합니다.
 
-    ```
+    ```http
     http://localhost:12345/northwind.svc/Customers('ALFKI')
     ```
 
@@ -55,7 +55,7 @@ WCF Data Services 빠른 시작의 두 번째 작업입니다. 이 작업에서�
 
 3. 웹 브라우저의 주소 표시줄에 다음 URI를 입력합니다.
 
-    ```
+    ```http
     http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders
     ```
 
@@ -63,7 +63,7 @@ WCF Data Services 빠른 시작의 두 번째 작업입니다. 이 작업에서�
 
 4. 웹 브라우저의 주소 표시줄에 다음 URI를 입력합니다.
 
-    ```
+    ```http
     http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders?$filter=OrderID eq 10643
     ```
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6bc6c52374ea047d2e76d346ee8bbc3faaa7bb2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a54d3cb1bb9abf740c2c9b5a9a8312a9612ae658
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650702"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894460"
 ---
 # <a name="isymunmanagedwriter2defineglobalvariable2-method"></a>ISymUnmanagedWriter2::DefineGlobalVariable2 메서드
 단일 전역 변수를 정의합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT DefineGlobalVariable2(  
     [in] const WCHAR  *name,  
     [in] ULONG32      attributes,  
@@ -42,28 +42,28 @@ HRESULT DefineGlobalVariable2(
   
 ## <a name="parameters"></a>매개 변수  
  `name`  
- [in] 전역 변수 이름입니다.  
+ 진행 전역 변수 이름입니다.  
   
  `attributes`  
- [in] 전역 변수 특성입니다.  
+ 진행 전역 변수 특성입니다.  
   
  `sigToken`  
- [in] 서명의 메타 데이터 토큰입니다.  
+ 진행 시그니처의 메타 데이터 토큰입니다.  
   
  `addrKind`  
- [in] 주소 유형입니다.  
+ 진행 주소 유형입니다.  
   
  `addr1`  
- [in] 매개 변수 사양에 대 한 첫 번째 주소입니다.  
+ 진행 매개 변수 사양의 첫 번째 주소입니다.  
   
  `addr2`  
- [in] 매개 변수 사양에 대 한 두 번째 주소입니다.  
+ 진행 매개 변수 사양의 두 번째 주소입니다.  
   
  `addr3`  
- [in] 매개 변수 사양의 세 번째 주소입니다.  
+ 진행 매개 변수 사양의 세 번째 주소입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+ 메서드가 성공 하면 S_OK이 고, 그렇지 않으면입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** CorSym.idl  

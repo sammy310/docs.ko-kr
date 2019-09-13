@@ -2,12 +2,12 @@
 title: '연습: Async 및 Wait (Visual Basic)를 사용 하 여 웹에 액세스'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 225046992badba7013193163a191dbf068f0da6a
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 72132c4884f3d9bc94de447a122354b3e0dc2ee5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106979"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928445"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>연습: Async 및 Wait (Visual Basic)를 사용 하 여 웹에 액세스
 
@@ -22,6 +22,7 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
 이 연습에서는 다음 작업을 완료합니다.
 
 > [!div class="checklist"]
+>
 > - [WPF 응용 프로그램 만들기](#create-a-wpf-application)
 > - [간단한 WPF Mainwindow.xaml 디자인](#design-a-simple-wpf-mainwindow)
 > - [참조 추가](#add-a-reference)

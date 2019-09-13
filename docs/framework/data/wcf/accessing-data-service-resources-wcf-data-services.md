@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: eff8d682004bf437a9b5470a4eb91c9bd52bfad5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 048cbb8708aa705fe6b03491ddfa9c107a21cda1
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791329"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894354"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>데이터 서비스 리소스에 액세스(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 uri [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 로 주소를 지정할 수 있는 리소스로 데이터를 피드로 노출 하는를 지원 합니다. 이러한 리소스는 [엔터티 데이터 모델](../adonet/entity-data-model.md)의 엔터티-관계 규칙에 따라 표시 됩니다. 이 모델에서 엔터티는 고객, 주문, 항목 및 제품과 같이 애플리케이션 도메인의 데이터 형식인 데이터 운영 단위를 나타냅니다. REST(Representational State Transfer)의 의미 체계, 특히 GET, PUT, POST, DELETE 등의 표준 HTTP 동사를 사용하여 엔터티 데이터에 액세스하고 변경합니다.  
@@ -21,44 +21,44 @@ ms.locfileid: "70791329"
 ## <a name="addressing-resources"></a>리소스 처리  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]에서는 URI를 사용하여 데이터 모델에서 노출하는 모든 데이터에 주소를 지정합니다. 예를 들어, 다음 URI는 Customer 엔터티 형식의 모든 인스턴스에 대 한 항목을 포함 하는 Customers 엔터티 집합인 피드를 반환 합니다.  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers  
+```http
+https://services.odata.org/Northwind/Northwind.svc/Customers  
 ```  
   
  엔터티에는 엔터티 키라는 특수 속성이 있습니다. 엔터티 키는 엔터티 집합 내에서 단일 엔터티를 고유하게 식별하는 데 사용됩니다. 엔터티 키를 사용하면 엔터티 집합에 속한 특정 엔터티 형식 인스턴스의 주소를 지정할 수 있습니다. 예를 들어, 다음 URI는 키 값이 `ALFKI`인 Customer 엔터티 형식의 특정 인스턴스에 대한 항목을 반환합니다.  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')  
 ```  
   
  엔터티 인스턴스의 기본 및 복합 속성에도 개별적으로 주소를 지정할 수 있습니다. 예를 들어, 다음 URI는 특정 고객의 `ContactName` 속성 값이 포함된 XML 요소를 반환합니다.  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName  
 ```  
   
  이전 URI에 `$value` 엔드포인트를 포함하는 경우 기본 속성의 값만 응답 메시지에 반환됩니다. 다음 예제에서는 XML 요소 없이 "Maria Anders" 문자열만 반환합니다.  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName/$value  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName/$value  
 ```  
   
  엔터티 간의 관계는 데이터 모델에서 연결에 의해 정의됩니다. 이러한 연결을 사용하면 엔터티 인스턴스의 탐색 속성을 사용하여 관련 엔터티의 주소를 지정할 수 있습니다. 탐색 속성은 다대일 관계의 경우 단일 관련 엔터티를 반환하고 일대다 관계의 경우 관련 엔터티의 집합을 반환할 수 있습니다. 예를 들어, 다음 URI는 특정 고객과 관련된 모든 주문의 집합인 피드를 반환합니다.  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders  
 ```  
   
  대개 양방향인 관계는 탐색 속성 쌍으로 표현됩니다. 이전 예제에서 보여 준 관계와 반대로, 다음 URI는 특정 Order 엔터티가 속한 Customer 엔터티에 대한 참조를 반환합니다.  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/Customer  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Orders(10643)/Customer  
 ```  
   
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]를 사용 하면 쿼리 식의 결과를 기반으로 리소스를 처리할 수도 있습니다. 이렇게 하면 계산 된 식을 기반으로 리소스 집합을 필터링 할 수 있습니다. 예를 들어, 다음 URI는 1997년 9월 22일 이후에 운송된 특정 고객의 주문만 반환하도록 리소스를 필터링합니다.  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=ShippedDate gt datetime'1997-09-22T00:00:00'  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=ShippedDate gt datetime'1997-09-22T00:00:00'  
 ```  
   
  자세한 내용은 [OData: URI 규칙](https://go.microsoft.com/fwlink/?LinkId=185564).  
@@ -66,8 +66,8 @@ http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$fil
 ## <a name="system-query-options"></a>시스템 쿼리 옵션  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]필터링, 정렬 및 페이징과 같은 리소스에 대해 기존 쿼리 작업을 수행 하는 데 사용할 수 있는 시스템 쿼리 옵션 집합을 정의 합니다. 예를 들어, 다음 URI는 관련 `Order` `Order_Detail` 된 엔터티와 함께 모든 엔터티 집합을 반환 합니다 .이의 우편 번호는에서 `100`끝나지 않습니다.  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')&$expand=Order_Details&$orderby=ShipCity  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')&$expand=Order_Details&$orderby=ShipCity  
 ```  
   
  또한 반환된 피드의 항목은 주문의 ShipCity 속성 값을 기준으로 정렬됩니다.  
@@ -87,8 +87,8 @@ http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(Sh
 ## <a name="addressing-relationships"></a>관계 주소 지정  
  엔터티 집합과 엔터티 인스턴스의 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 주소를 지정 하는 것 외에도 엔터티 간의 관계를 나타내는 연결의 주소를 지정할 수 있습니다. 이 기능은 Northwind 샘플 데이터베이스의 지정된 주문과 관련된 운송업체와 같이 두 엔터티 인스턴스 간의 관계를 만들거나 변경하는 데 필요합니다. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]는 엔터티 `$link` 간의 연결을 구체적으로 처리 하는 연산자를 지원 합니다. 예를 들어, 다음 URI는 HTTP PUT 요청 메시지에 지정되어 지정한 주문의 운송업체를 새 운송업체로 변경합니다.  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper  
+```http 
+https://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper  
 ```  
   
  자세한 내용은 [OData: 항목](https://go.microsoft.com/fwlink/?LinkId=187351)간의 링크 주소 지정.  

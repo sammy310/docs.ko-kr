@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d1c108e75c0e2da3d513669f5b8b02bada43b983
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: efd3954b63a6683e04bd9143ca3523cdbace506d
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206085"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894532"
 ---
 # <a name="security-transparent-code-level-1"></a>보안 투명 코드, 수준 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -84,27 +84,27 @@ ms.locfileid: "70206085"
 ## <a name="security-transparency-examples"></a>보안 투명도 예제  
  .NET Framework 2.0 투명도 규칙(수준 1 투명도)을 사용하려면 다음 어셈블리 주석을 사용합니다.  
   
-```  
+```csharp
 [assembly: SecurityRules(SecurityRuleSet.Level1)]  
 ```  
   
  어셈블리가 중요 코드를 포함하지 않고 권한을 높이지 않음을 나타내도록 전체 어셈블리를 투명하게 설정하려면 다음 특성을 사용하여 어셈블리에 투명도를 명시적으로 추가하면 됩니다.  
   
-```  
+```csharp  
 [assembly: SecurityTransparent]  
 ```  
   
  같은 어셈블리에서 위험 및 투명 코드를 혼합하려면 먼저 다음과 같이 어셈블리를 <xref:System.Security.SecurityCriticalAttribute> 특성으로 표시하여 어셈블리가 위험 코드를 포함할 수 있음을 나타냅니다.  
   
-```  
+```csharp  
 [assembly: SecurityCritical]  
 ```  
   
  보안에 위험 작업을 수행하려면 다음 코드 예제와 같이 위험 작업을 수행할 코드를 다른 <xref:System.Security.SecurityCriticalAttribute> 특성으로 명시적으로 표시해야 합니다.  
   
-```  
+```csharp  
 [assembly: SecurityCritical]  
-Public class A  
+public class A  
 {  
     [SecurityCritical]  
     private void Critical()  
@@ -119,7 +119,7 @@ Public class A
     }  
 }  
 public class B  
-{      
+{
     internal string SomeOtherProperty  
     {  
         get { /* transparent */ }  

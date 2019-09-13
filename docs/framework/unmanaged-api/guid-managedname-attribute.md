@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 110d6eb0abcf4b4ce73f1ee9d27e27122f360270
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: f14d00f17a61576a50e26d3cbcf734a10ed3c03a
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374433"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895010"
 ---
 # <a name="guid_managedname-attribute"></a>GUID_ManagedName 특성
 COM (구성 요소 개체 모델) 라이브러리의 관리 되는 네임 스페이스 이름을 지정 하는 사용자 지정 인터페이스 특성을 정의 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```idl
 [  
    custom(GUID_ManagedName, value)  
 ]  
@@ -41,7 +41,7 @@ COM (구성 요소 개체 모델) 라이브러리의 관리 되는 네임 스페
 ## <a name="definition"></a>정의  
  `GUID_ManagedName`는 다음과 같이 Cor에 정의 됩니다.  
   
-```  
+```cpp
 // {0F21F359-AB84-41e8-9A78-36D110E6D2F9}  
 EXTERN_GUID(GUID_ManagedName, 0xf21f359, 0xab84, 0x41e8, 0x9a, 0x78, 0x36, 0xd1, 0x10, 0xe6, 0xd2, 0xf9);  
 ```  
@@ -56,7 +56,7 @@ EXTERN_GUID(GUID_ManagedName, 0xf21f359, 0xab84, 0x41e8, 0x9a, 0x78, 0x36, 0xd1,
 ## <a name="example"></a>예제  
  다음 예제에서는 특성을 `GUID_ManagedName` 사용 하는 라이브러리 정의를 보여 줍니다.  
   
-```  
+```idl
 [  
    ...  
    custom(GUID_ManagedName, Microsoft.VisualStudio.CommandBars.dll")  

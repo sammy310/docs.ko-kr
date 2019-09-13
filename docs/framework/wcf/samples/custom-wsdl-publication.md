@@ -2,12 +2,12 @@
 title: 사용자 지정 WSDL 게시
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: 0d5ceecebc5f45d62bac7fd0aaa0f8515a469515
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 8674d852be45119b247ec10bbc639922850d5a90
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045113"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928845"
 ---
 # <a name="custom-wsdl-publication"></a>사용자 지정 WSDL 게시
 이 샘플을 통해 다음을 수행하는 방법을 알 수 있습니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "70045113"
 ## <a name="service"></a>서비스  
  이 샘플의 서비스에는 두 개의 사용자 지정 특성이 표시되어 있습니다. 첫 특성인 `WsdlDocumentationAttribute`에서는 생성자의 문자열을 받으며 적용하면 사용을 설명하는 문자열에 계약 인터페이스 또는 작업을 제공할 수 있습니다. 둘째 특성인 `WsdlParamOrReturnDocumentationAttribute`는 적용하면 작업의 값을 설명하는 값 또는 매개 변수를 반환할 수 있습니다. 다음 예에서는 이 특성을 사용하여 설명한 서비스 계약인 `ICalculator`가 표시됩니다.  
   
-```  
+```csharp  
 // Define a service contract.      
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 // Document it.  
@@ -71,7 +71,7 @@ public interface ICalculator
   
  이 샘플에서는 내보내기 컨텍스트 개체에 <xref:System.ServiceModel.Description.ContractDescription> 또는 <xref:System.ServiceModel.Description.OperationDescription>가 있는지 여부에 따라 텍스트 속성을 사용하여 주석이 추출되고 다음 코드에 표시된 것과 같이 WSDL 주석 요소에 추가됩니다.  
   
-```  
+```csharp  
 public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  
 {  
     if (contractDescription != null)  
@@ -107,7 +107,7 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
   
  작업을 내보내는 경우 샘플에서는 반영을 사용하여 매개 변수 및 반환 값의 `WsdlParamOrReturnDocumentationAttribute` 값을 가져온 다음 다음과 같이 해당 작업에 WSDL 주석 요소를 추가합니다.  
   
-```  
+```csharp  
 // Get returns information  
 ParameterInfo returnValue = operationDescription.SyncMethod.ReturnParameter;  
 object[] returnAttrs = returnValue.GetCustomAttributes(typeof(WsdlParamOrReturnDocumentationAttribute), false);  
@@ -174,7 +174,7 @@ for (int i = 0; i < args.Length; i++)
   
  먼저, <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> 메서드에서 샘플은 WSDL 주석이 계약 수준과 작업 수준 중 어느 쪽에 있는지를 확인하고 가져온 주석 텍스트를 생성자에 전달하며 적절한 범위에서 동작을 추가합니다.  
   
-```  
+```csharp  
 public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)  
 {  
     // Contract Documentation  
@@ -201,7 +201,7 @@ public void ImportContract(WsdlImporter importer, WsdlContractConversionContext 
   
  그런 다음, 코드가 생성되면 시스템에서 적절한 컨텍스트 정보를 전달하여 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> 및 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation%28System.ServiceModel.Description.OperationContractGenerationContext%29> 메서드를 호출합니다. 샘플에서는 사용자 지정 WSDL 주석의 서식을 지정하고 CodeDOM에 주석으로 삽입합니다.  
   
-```  
+```csharp  
 public void GenerateContract(ServiceContractGenerationContext context)  
 {  
     Debug.WriteLine("In generate contract.");  
@@ -233,7 +233,7 @@ public void GenerateOperation(OperationContractGenerationContext context)
   
  사용자 지정 가져오기가 지정 된 후에는 WCF 메타 데이터 시스템에서 사용자 지정 가져오기를 해당 목적 <xref:System.ServiceModel.Description.WsdlImporter> 으로 만든에 로드 합니다. 이 샘플에서는 <xref:System.ServiceModel.Description.MetadataExchangeClient>를 사용하여 메타데이터를 다운로드하고, 올바르게 구성된 <xref:System.ServiceModel.Description.WsdlImporter>를 사용하여 샘플로 만든 사용자 지정 가져오기를 통해 메타데이터를 가져오고, <xref:System.ServiceModel.Description.ServiceContractGenerator>를 사용하여 Visual Studio에서 Intellisense 지원을 위해 사용하거나 XML 문서에 컴파일할 수 있는 Visual Basic 및 C# 클라이언트 코드로 수정된 계약 정보를 컴파일합니다.  
   
-```  
+```csharp  
 /// From WSDL Documentation:  
 ///   
 /// <summary>The ICalculator contract performs basic calculation   

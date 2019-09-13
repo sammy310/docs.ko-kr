@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: 34f0a61329667a42aa42693e93169a5b6fb0aa5e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0f029c81dd6ba5cd5202e6e59f33edd7cf8c0b90
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792045"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894445"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>ADO.NET에서 큰 값(최대값) 데이터 수정
 LOB(Large Object) 데이터 형식은 최대 행 크기 8KB를 초과하는 형식입니다. SQL Server에서는 `max`, `varchar` 및 `nvarchar` 데이터 형식에 사용할 수 있는 `varbinary` 지정자를 제공하여 2^32바이트에 이르는 큰 값도 스토리지할 수 있습니다. 테이블 열 및 Transact-SQL 변수에서는 `varchar(max)`, `nvarchar(max)` 또는 `varbinary(max)` 데이터 형식을 지정할 수 있습니다. ADO.NET에서는 `max`를 사용하여 `DataReader` 데이터 형식을 가져올 수 있을 뿐 아니라 특별한 처리 없이도 입력 및 출력 매개 변수 값을 모두 지정할 수 있습니다. 큰 `varchar` 데이터 형식의 경우에는 데이터를 점진적으로 검색하고 업데이트할 수 있습니다.  
@@ -41,7 +41,7 @@ LOB(Large Object) 데이터 형식은 최대 행 크기 8KB를 초과하는 형�
   
  다음 예제에서는 AdventureWorks 샘플 데이터베이스의 ProductPhoto 테이블에 사진을 삽입합니다. 공급자를 사용 `BULK OPENROWSET` 하는 경우 모든 열에 값을 삽입 하지 않더라도 명명 된 열 목록을 제공 해야 합니다. 이 경우 기본 키는 ID 열로 정의되며 열 목록에서 생략할 수 있습니다. 또한 `OPENROWSET` 문의 끝에 상관 관계 이름을 제공해야 하며, 이 경우 ThumbnailPhoto입니다. 이렇게 하면 파일이 로드되는 `ProductPhoto` 테이블의 열과 연결됩니다.  
   
-```  
+```sql  
 INSERT Production.ProductPhoto (  
     ThumbnailPhoto,   
     ThumbnailPhotoFilePath,   
@@ -78,7 +78,7 @@ FROM OPENROWSET
 ## <a name="example"></a>예제  
  이 Transact-SQL 예제에서는 AdventureWorks 데이터베이스에 있는 Document 테이블의 `nvarchar(max)` 열인 DocumentSummary에서 값의 일부를 업데이트합니다. 'components'라는 단어는 대체 단어, 기존 데이터에서 대체할 단어의 시작 위치(오프셋) 및 대체할 문자 수(길이)를 지정하여 'features'라는 단어로 대체됩니다. 이 예제에는 결과를 비교하기 위해 UPDATE 문 앞뒤에 SELECT 문이 포함되어 있습니다.  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
 --View the existing value.  
@@ -230,7 +230,7 @@ while (reader.Read())
 ## <a name="using-large-value-type-parameters"></a>큰 값 형식 매개 변수 사용  
  <xref:System.Data.SqlClient.SqlParameter> 개체에 큰 값 형식을 사용하는 방식과 <xref:System.Data.SqlClient.SqlParameter> 개체에 작은 값 형식을 사용하는 방식은 같습니다. 다음 예제와 같이 많은 값 형식을 <xref:System.Data.SqlClient.SqlParameter> 값으로 검색할 수 있습니다. 이 코드에서는 AdventureWorks 샘플 데이터베이스에 다음 GetDocumentSummary 저장 프로시저가 있는 것으로 가정합니다. 저장 프로시저는 이라는 @DocumentID 입력 매개 변수를 사용 하 고 @DocumentSummary output 매개 변수에서 documentsummary 열의 내용을 반환 합니다.  
   
-```  
+```sql
 CREATE PROCEDURE GetDocumentSummary   
 (  
     @DocumentID int,  

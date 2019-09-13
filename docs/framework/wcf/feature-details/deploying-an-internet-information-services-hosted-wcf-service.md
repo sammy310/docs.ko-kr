@@ -2,12 +2,12 @@
 title: 인터넷 정보 서비스에서 호스트하는 WCF 서비스 배포
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: b02c69e00aacafd928c59f06e0e7c050a2ca6509
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 95c56f767bbe8dce44ea742de00c65c357bd1378
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856127"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895101"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>인터넷 정보 서비스에서 호스트하는 WCF 서비스 배포
 
@@ -49,9 +49,7 @@ IIS 6.0 이상 버전은 격리 된 개체 지향 프로그래밍 응용 프로�
 
 IIS에서 호스팅되는 WCF 서비스는 IIS 응용 프로그램 내에서 특수 한 콘텐츠 파일 (.svc 파일)로 표시 됩니다. 이 모델은 ASMX 페이지가 IIS 애플리케이션 내에서 .asmx 파일로 표시되는 방식과 비슷합니다. .Svc 파일에는 wcf 호스팅 인프라가 들어오는 메시지에 응답 하 여 호스팅된 서비스를 활성화할 수 있도록 하는 wcf 관련[\@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)(처리 지시문)가 포함 되어 있습니다. .svc 파일의 가장 일반적인 구문은 다음 문에서 볼 수 있습니다.
 
-```svc
-<% @ServiceHost Service="MyNamespace.MyServiceImplementationTypeName" %>
-```
+`<% @ServiceHost Service="MyNamespace.MyServiceImplementationTypeName" %>`
 
 ServiceHost 지시문과 단일 특성로 `Service`구성 [ \@](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) 됩니다. `Service` 특성 값은 서비스 구현의 CLR(공용 언어 런타임) 형식 이름입니다. 이 지시문을 사용하는 것은 기본적으로 다음 코드를 사용하여 서비스 호스트를 만드는 것과 같습니다.
 

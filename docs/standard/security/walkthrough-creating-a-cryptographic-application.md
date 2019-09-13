@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5cdd2f5538be0e39b5dd3a378825ccf81f314c03
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ee6dafa8578c59d23908bf0e184091bb4ceaeb45
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916276"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895293"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>연습: 암호화 애플리케이션 만들기
 이 연습에서는 콘텐츠를 암호화 및 암호 해독하는 방법을 보여 줍니다. 코드 예제는 Windows Forms 응용 프로그램용으로 설계되었습니다. 이 응용 프로그램은 스마트 카드 사용과 같은 실제 시나리오를 보여 주지 않습니다. 대신, 암호화 및 암호 해독의 기초를 보여 줍니다.  
@@ -37,10 +37,10 @@ ms.locfileid: "69916276"
 |----------|-----------------|  
 |Windows Forms 응용 프로그램 만들기|응용 프로그램을 실행하는 데 필요한 컨트롤을 나열합니다.|  
 |전역 개체 선언|<xref:System.Windows.Forms.Form> 클래스의 전역 컨텍스트를 사용하도록 문자열 경로 변수, <xref:System.Security.Cryptography.CspParameters> 및 <xref:System.Security.Cryptography.RSACryptoServiceProvider>를 선언합니다.|  
-|비대칭 키 만들기|비대칭 퍼블릭 및 프라이빗 키 값 쌍을 만들고 키 컨테이너 이름을 할당합니다.|  
+|비대칭 키 만들기|비대칭 공개 및 개인 키 값 쌍을 만들고 키 컨테이너 이름을 할당합니다.|  
 |파일 암호화|암호화를 위해 파일을 선택할 수 있는 대화 상자를 표시하고 파일을 암호화합니다.|  
 |파일 암호 해독|암호 해독을 위해 암호화된 파일을 선택할 수 있는 대화 상자를 표시하고 파일을 암호 해독합니다.|  
-|프라이빗 키 가져오기|키 컨테이너 이름을 사용하여 전체 키 쌍을 가져옵니다.|  
+|개인 키 가져오기|키 컨테이너 이름을 사용하여 전체 키 쌍을 가져옵니다.|  
 |공개 키 내보내기|public 매개 변수만 사용하여 키를 XML 파일에 저장합니다.|  
 |공개 키 가져오기|XML 파일의 키를 키 컨테이너에 로드합니다.|  
 |애플리케이션 테스트|이 응용 프로그램을 테스트하기 위한 절차를 나열합니다.|  
@@ -60,8 +60,8 @@ ms.locfileid: "69916276"
 |<xref:System.Windows.Forms.Button>|`buttonCreateAsmKeys`|키 만들기|  
 |<xref:System.Windows.Forms.Button>|`buttonExportPublicKey`|공개 키 내보내기|  
 |<xref:System.Windows.Forms.Button>|`buttonImportPublicKey`|공개 키 가져오기|  
-|<xref:System.Windows.Forms.Button>|`buttonGetPrivateKey`|프라이빗 키 가져오기|  
-|<xref:System.Windows.Forms.Label>|`label1`||  
+|<xref:System.Windows.Forms.Button>|`buttonGetPrivateKey`|개인 키 가져오기|  
+|<xref:System.Windows.Forms.Label>|`label1`|키가 설정 되지 않음|  
 |<xref:System.Windows.Forms.OpenFileDialog>|`openFileDialog1`||  
 |<xref:System.Windows.Forms.OpenFileDialog>|`openFileDialog2`||  
   
@@ -167,10 +167,10 @@ ms.locfileid: "69916276"
  [!code-csharp[CryptoWalkThru#9](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#9)]
  [!code-vb[CryptoWalkThru#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#9)]  
   
-## <a name="getting-a-private-key"></a>프라이빗 키 가져오기  
+## <a name="getting-a-private-key"></a>개인 키 가져오기  
  이 작업은 키 컨테이너 이름을 `Create Keys` 단추를 사용하여 만든 키의 이름으로 설정합니다. 키 컨테이너는 private 매개 변수가 있는 전체 키 쌍을 포함합니다.  
   
- 이 작업은 Alice가 프라이빗 키를 사용하여 Bob이 암호화한 파일을 암호 해독하는 시나리오를 시뮬레이트합니다.  
+ 이 작업은 Alice가 개인 키를 사용하여 Bob이 암호화한 파일을 암호 해독하는 시나리오를 시뮬레이트합니다.  
   
  `Get Private Key` 단추(`buttonGetPrivateKey_Click`)에 대한 `Click` 이벤트 처리기로 다음 코드를 추가합니다.  
   
@@ -200,11 +200,11 @@ ms.locfileid: "69916276"
   
 2. `Encrypt File` 단추를 클릭하고 파일을 선택합니다.  
   
-3. `Decrypt File` 단추를 클릭하고 방금 암호화한 파일을 선택합니다. 암호 해독하려면 프라이빗 키가 있어야 하므로 이 작업은 실패합니다.  
+3. `Decrypt File` 단추를 클릭하고 방금 암호화한 파일을 선택합니다. 암호 해독하려면 개인 키가 있어야 하므로 이 작업은 실패합니다.  
   
- 이 시나리오에서는 다른 사용자를 위해 파일을 암호화할 공개 키만 있는 경우를 보여 줍니다. 일반적으로 해당 사용자는 퍼블릭 키만 제공하고 암호 해독을 위한 프라이빗 키는 보유합니다.  
+ 이 시나리오에서는 다른 사용자를 위해 파일을 암호화할 공개 키만 있는 경우를 보여 줍니다. 일반적으로 해당 사용자는 공개 키만 제공하고 암호 해독을 위한 개인 키는 보유합니다.  
   
-#### <a name="to-decrypt-using-the-private-key"></a>프라이빗 키를 사용하여 암호 해독하려면  
+#### <a name="to-decrypt-using-the-private-key"></a>개인 키를 사용하여 암호 해독하려면  
   
 1. `Get Private Key` 단추를 클릭합니다. 레이블이 키 이름을 표시하고 전체 키 쌍인지 여부를 보여 줍니다.  
   

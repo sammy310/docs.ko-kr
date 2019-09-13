@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: 58845ab7b9da7377f4fdaa7da13e7c407226d63c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 31096ca510c868cf43ca6ef60126c98a8832d2c5
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912202"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895117"
 ---
 # <a name="how-to-configure-com-service-settings"></a>방법: COM+ 서비스 설정 구성
 COM+ 서비스 구성 도구를 사용하여 애플리케이션 인터페이스를 추가하거나 제거하면 애플리케이션의 구성 파일에서 웹 서비스 구성이 업데이트됩니다. Com + 호스팅 모드에서 app.config 파일은 응용 프로그램 루트 디렉터리에 배치 됩니다 (%programfiles%\complus applications\ 응용 프로그램\\{appid}는 기본값). 웹 호스팅 모드에서는 지정된 vroot 디렉터리에 Web.config 파일이 있습니다.  
@@ -20,7 +20,7 @@ COM+ 서비스 구성 도구를 사용하여 애플리케이션 인터페이스�
 ## <a name="example"></a>예제  
  다음 인터페이스를 구현하는 구성 요소를 고려해 볼 수 있습니다.  
   
-```  
+```csharp
 [Guid("C551FBA9-E3AA-4272-8C2A-84BD8D290AC7")]  
 public interface IFinances  
 {  
@@ -31,7 +31,7 @@ public interface IFinances
   
  구성 요소가 웹 서비스로 노출되는 경우, 노출되어 클라이언트가 준수해야 하는 해당 서비스 계약은 다음과 같습니다.  
   
-```  
+```csharp
 [ServiceContract(Session = true,  
 Namespace = "http://tempuri.org/C551FBA9-E3AA-4272-8C2A-84BD8D290AC7",  
 Name = "IFinances")]  

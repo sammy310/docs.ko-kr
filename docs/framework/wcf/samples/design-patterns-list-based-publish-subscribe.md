@@ -2,12 +2,12 @@
 title: '디자인 패턴: 목록 기반 게시-구독'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 3dbdab152e05487f9dcc9fa00ed0c653d68ab65e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3c05e66affad8e517b0b1b5001f726abeae7b100
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045571"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928834"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>디자인 패턴: 목록 기반 게시-구독
 이 샘플에서는 WCF (Windows Communication Foundation) 프로그램으로 구현 된 목록 기반 게시-구독 패턴을 보여 줍니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "70045571"
   
  서비스에서는 이중 통신을 사용합니다. `ISampleContract` 서비스 계약은 `ISampleClientCallback` 콜백 계약과 쌍을 이룹니다. 서비스는 클라이언트가 구독자 목록에 가입하거나 해제하는 데 사용하는 Subscribe 및 Unsubscribe 서비스 작업을 구현합니다. 또한 서비스는 데이터 소스 프로그램에서 서비스에 새 정보를 제공하기 위해 호출하는 `PublishPriceChange` 서비스 작업을 구현합니다. 클라이언트 프로그램은 서비스에서 모든 구독자에게 가격 변경을 알리기 위해 호출하는 `PriceChange` 서비스 작업을 구현합니다.  
   
-```  
+```csharp  
 // Create a service contract and define the service operations.  
 // NOTE: The service operations must be declared explicitly.  
 [ServiceContract(SessionMode=SessionMode.Required,  
@@ -48,7 +48,7 @@ public interface ISampleClientContract
   
  서비스는 모든 구독자에게 새 정보에 대해 알리는 메커니즘으로 .NET Framework 이벤트를 사용합니다. 클라이언트에서 Subscribe를 호출하여 서비스에 가입하면 이벤트 처리기가 제공됩니다. 클라이언트가 해제되면 이벤트에서 이벤트 처리기가 구독 취소됩니다. 데이터 소스에서 서비스를 호출하여 가격 변경을 보고하면 서비스에서 이벤트가 발생합니다. 그러면 구독한 각 클라이언트에 대해 하나씩 서비스 인스턴스가 각각 호출되고 해당 이벤트 처리기가 실행됩니다. 각 이벤트 처리기에서는 콜백 함수를 통해 해당 클라이언트로 정보를 전달합니다.  
   
-```  
+```csharp  
 public class PriceChangeEventArgs : EventArgs  
     {  
         public string Item;  

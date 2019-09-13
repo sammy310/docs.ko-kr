@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e92d5564308d31609b9fb024f3d3368a19b76b1d
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: dafa7cdaa38180e458a34fd34316f134aa443040
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106709"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929126"
 ---
 # <a name="working-with-calendars"></a>달력 작업
 
@@ -139,6 +139,7 @@ ms.locfileid: "70106709"
 
 > [!IMPORTANT]
 > <xref:System.Globalization.JapaneseCalendar> 및<xref:System.Globalization.JapaneseLunisolarCalendar>의 새 연대 인 Reiwa 연대는 2019 년 5 월 1 일에 시작 됩니다. 이번 변경 내용은 달력을 사용하는 모든 애플리케이션에 영향을 줍니다. 자세한 내용은 다음 문서를 참조 하세요.
+>
 > - [.Net의 일본어 달력에서 새 연대를 처리](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/)하 고 여러 연대를 사용 하 여 달력을 지원 하 고 여러 연대 달력을 처리할 때 사용할 모범 사례를 설명 하는 .net에 추가 된 기능을 설명 합니다.
 > - Windows에서 응용 프로그램을 테스트 하는 방법에 대 한 정보를 제공 하 여 era 변경에 대 한 준비를 하도록 [응용 프로그램을 준비](/windows/uwp/design/globalizing/japanese-era-change)합니다.
 > - 새 일본어 달력 연대와 관련 된 개별 Windows 버전에 대 한 .NET Framework 업데이트를 나열 하는 [.NET Framework에 대 한 새 일본 Era 업데이트 요약](https://support.microsoft.com/help/4477957/new-japanese-era-updates-for-net-framework), multi-factor support에 대 한 새로운 .NET Framework 기능에 대 한 정보 및 다음 항목 포함 응용 프로그램 테스트에서를 찾습니다.

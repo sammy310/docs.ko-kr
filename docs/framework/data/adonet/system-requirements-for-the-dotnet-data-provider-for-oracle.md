@@ -2,12 +2,12 @@
 title: .NET Framework Data Provider for Oracle의 시스템 요구 사항
 ms.date: 03/30/2017
 ms.assetid: 054f76b9-1737-43f0-8160-84a00a387217
-ms.openlocfilehash: 330bad6f58b1ba6b0d2fdb2baa86a04374946e80
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b64a84b8d8246bae9028a6ca710f0a62cc85bf79
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780583"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894373"
 ---
 # <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a>.NET Framework Data Provider for Oracle의 시스템 요구 사항
 .NET Framework Data Provider for Oracle에는 MDAC(Microsoft Data Access Components) 버전 2.6 이상이 필요하며 MDAC 2.8 SP1을 사용하는 것이 좋습니다.  
@@ -22,9 +22,7 @@ ms.locfileid: "70780583"
 ### <a name="setting-the-unicode-value-in-a-connection-string-attribute"></a>연결 문자열 특성에 유니코드 값 설정  
  Oracle을 사용하는 경우 다음과 같은 연결 문자열 특성을 사용하여  
   
-```  
-Unicode=True   
-```  
+`Unicode=True`
   
  UTF-16 모드에서 Oracle 클라이언트 라이브러리를 초기화할 수 있습니다. 이렇게 하면 Oracle 클라이언트 라이브러리에서 멀티바이트 문자열 대신 UCS-2와 매우 유사한 UTF-16을 받아들이게 됩니다. 따라서 Data Provider for Oracle에서 추가 변환 작업 없이도 언제든지 Oracle 코드 페이지를 사용할 수 있습니다. 이 구성은 Oracle 9i 클라이언트를 사용하여 대체 문자 집합 AL16UTF16으로 Oracle 9i 데이터베이스와 통신하는 경우에만 사용할 수 있습니다. Oracle 9i 클라이언트가 Oracle 9i 서버와 통신할 때 유니코드 **CommandText** 값을 Oracle9i 서버에서 사용 하는 적절 한 멀티 바이트 문자 집합으로 변환 하려면 추가 리소스가 필요 합니다. 하지만 연결 문자열에 `Unicode=True`를 추가하여 안전한 구성을 얻게 된다는 사실을 알면 이러한 노력을 피할 수 있습니다.  
   

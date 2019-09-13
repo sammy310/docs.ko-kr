@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 95dbaddc59a80b4f499a629dd00a52be678b4665
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 256d9c9b825081e3bcfafd6e0e09de825d046d20
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910882"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894550"
 ---
 # <a name="securing-exception-handling"></a>예외 처리 보안
 시각적 개체 C++ 와 Visual Basic에서 스택의 추가 필터 식은 **finally** 문 보다 먼저 실행 됩니다. 해당 필터와 연결 된 **catch** 블록은 **finally** 문 다음에 실행 됩니다. 자세한 내용은 [사용자 필터 예외 사용](../../standard/exceptions/using-user-filtered-exception-handlers.md)을 참조 하세요. 이 섹션에서는이 주문의 보안 의미를 검사 합니다. 필터 문과 **finally** 문이 실행 되는 순서를 보여 주는 다음과 같은 의사 코드 예를 고려해 보세요.  
@@ -53,7 +53,7 @@ void Sub()
   
  이 코드는 다음을 출력 합니다.  
   
-```  
+```output
 Throw  
 Filter  
 Finally  

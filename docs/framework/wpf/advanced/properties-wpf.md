@@ -9,17 +9,18 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], properties
 - properties [WPF]
 ms.assetid: d6e0197f-f2c4-48ed-b45b-b9cdb64aab1c
-ms.openlocfilehash: c685a5227f4339a094ae74af4e1314d4c47f7585
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: d3d11950f919c13590a0212b8d03d394d59d3550
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400874"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928428"
 ---
 # <a name="properties-wpf"></a>속성(WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 CLR (공용 언어 런타임) 속성의 기능을 확장 하는 데 사용할 수 있는 서비스 집합을 제공 합니다. 일반적으로 이러한 서비스를 WPF 속성 시스템이라고 통칭합니다. [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 속성 시스템에서 지원하는 속성을 종속성 속성이라고 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
 - [종속성 속성 개요](dependency-properties-overview.md)
 - [연결된 속성 개요](attached-properties-overview.md)
 - [사용자 지정 종속성 속성](custom-dependency-properties.md)

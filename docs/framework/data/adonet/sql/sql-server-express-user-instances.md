@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 7cd02a0a315ffdb155af09ac4e4fabbea1724a4d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: fabd9b94b8c0a3f0e0db220e84d6c2eca3537c50
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780837"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894411"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express 사용자 인스턴스
 Microsoft SQL Server Express Edition(SQL Server Express)은 .NET Framework Data Provider for SQL Server(`SqlClient`)를 사용하는 경우에만 사용 가능한 기능인 사용자 인스턴스를 지원합니다. 사용자 인스턴스는 부모 인스턴스에서 생성된 별도의 SQL Server Express 데이터베이스 엔진 인스턴스입니다. 로컬 컴퓨터에서 관리자가 아닌 사용자는 사용자 인스턴스를 사용하여 SQL Server Express 데이터베이스에 연결할 수 있습니다. 각 인스턴스는 사용자당 하나의 인스턴스를 기준으로 개인 사용자의 보안 컨텍스트 내에서 실행됩니다.  
@@ -26,9 +26,9 @@ Microsoft SQL Server Express Edition(SQL Server Express)은 .NET Framework Data 
 ## <a name="enabling-user-instances"></a>사용자 인스턴스 활성화  
  사용자 인스턴스를 생성하려면 SQL Server Express의 부모 인스턴스가 실행 중이어야 합니다. 사용자 인스턴스는 SQL Server Express 설치 될 때 기본적으로 사용 하도록 설정 되며, 시스템 관리자가 부모 인스턴스에서 **sp_configure** 시스템 저장 프로시저를 실행 하 여 명시적으로 사용 하거나 사용 하지 않도록 설정할 수 있습니다.  
   
-```  
+```sql  
 -- Enable user instances.  
-sp_configure 'user instances enabled','1'   
+sp_configure 'user instances enabled','1'
   
 -- Disable user instances.  
 sp_configure 'user instances enabled','0'  
@@ -51,7 +51,7 @@ sp_configure 'user instances enabled','0'
   
 - 파이프 기호 안에 포함된 `|DataDirectory|` 대체 문자열은 연결을 여는 애플리케이션의 데이터 디렉터리를 참조하며 .mdf 및 .ldf 데이터베이스 및 로그 파일의 위치를 나타내는 상대 경로를 제공합니다. 이러한 파일의 위치를 찾으려면 파일에 대한 전체 경로를 제공해야 합니다.  
   
-```  
+```text
 Data Source=.\\SQLExpress;Integrated Security=true;  
 User Instance=true;AttachDBFilename=|DataDirectory|\InstanceDB.mdf;  
 Initial Catalog=InstanceDB;  
@@ -65,7 +65,7 @@ Initial Catalog=InstanceDB;
   
  `DataDirectory`가 가리키는 실제 위치는 애플리케이션 형식에 따라 다릅니다. 이 예제에서 연결된 Northwind.mdf 파일은 애플리케이션의 \app_data 폴더에 있습니다.  
   
-```  
+```text
 Data Source=.\\SQLExpress;Integrated Security=true;  
 User Instance=true;  
 AttachDBFilename=|DataDirectory|\app_data\Northwind.mdf;  

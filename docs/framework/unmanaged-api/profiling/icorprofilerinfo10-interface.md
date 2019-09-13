@@ -3,12 +3,12 @@ title: ICorProfilerInfo10 인터페이스
 ms.date: 08/06/2019
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 496959ecac5b16f1faa138aec90c5194d15cb105
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 06cce79fbb2b2eb143e77e3c6fda194e47d4f4f3
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68974013"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928795"
 ---
 # <a name="icorprofilerinfo10-interface"></a>ICorProfilerInfo10 인터페이스
 
@@ -29,5 +29,7 @@ ms.locfileid: "68974013"
 **플랫폼** [.Net Core 지원 운영 체제](../../../core/windows-prerequisites.md#net-core-supported-operating-systems)를 참조 하세요.  
 **헤더:** CorProf.idl, CorProf.h  
 **.Net 버전:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)] 
+
 ## <a name="see-also"></a>참고자료
+
 - [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
