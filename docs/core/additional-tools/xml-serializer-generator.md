@@ -5,18 +5,19 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 74d10b0fb27a4acf477fc66451a5cf6fc1f4317c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e10f09d3f7146817770e74aa173f742322aafafc
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631688"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926605"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>.NET Core에서 Microsoft XML Serializer Generator 사용
 
 이 자습서에서는 C# .NET Core 애플리케이션에서 Microsoft XML Serializer Generator를 사용하는 방법을 배웁니다. 이 자습서를 진행하면서 다음을 익히게 됩니다.
 
 > [!div class="checklist"]
+>
 > * .NET Core 앱을 만드는 방법
 > * Microsoft.XmlSerializer.Generator 패키지에 대한 참조를 추가하는 방법
 > * MyApp.csproj를 편집하여 종속성을 추가하는 방법
@@ -29,7 +30,7 @@ ms.locfileid: "65631688"
 
 이 자습서를 완료하려면 다음이 필요합니다.
 
-* [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) 이상
+* [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 이상
 * 선호하는 코드 편집기
 
 > [!TIP]
@@ -120,6 +121,7 @@ dotnet run
 
 지금까지 다음 작업을 수행했습니다.
 > [!div class="checklist"]
+>
 > * .NET Core 앱을 생성했습니다.
 > * Microsoft.XmlSerializer.Generator 패키지에 대한 참조를 추가했습니다.
 > * MyApp.csproj를 편집하여 종속성을 추가했습니다.

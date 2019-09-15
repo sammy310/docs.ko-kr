@@ -2,12 +2,12 @@
 title: dotnet 명령
 description: dotnet 명령(.NET Core CLI 도구에 대한 일반 드라이버) 및 사용법에 대해 알아봅니다.
 ms.date: 06/04/2018
-ms.openlocfilehash: 328fd24cd72110bd235c177398f6f147fbb9d144
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 801320bf7f3527ac70f1d5b9fe3d0ce537e50e93
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373744"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969775"
 ---
 # <a name="dotnet-command"></a>dotnet 명령
 
@@ -18,6 +18,8 @@ ms.locfileid: "70373744"
 `dotnet` - .NET 소스 코드 및 이진 파일을 관리하기 위한 도구입니다.
 
 ## <a name="synopsis"></a>개요
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -94,6 +96,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 `--roll-forward-on-no-candidate-fx <N>`
 
 필요한 공유 프레임워크를 사용할 수 없을 때 동작을 정의합니다. `N`는 다음이 될 수 있습니다.
+
 - `0` - 부 버전 롤포워드도 사용하지 않도록 설정합니다.
 - `1` - 부 버전에서는 롤포워드하지만 주 버전에서는 롤포워드하지 않습니다. 이것은 기본적인 동작입니다.
 - `2` - 부 버전과 주 버전에서 롤포워드합니다.

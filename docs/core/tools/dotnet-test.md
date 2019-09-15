@@ -2,12 +2,12 @@
 title: dotnet test 명령
 description: dotnet test 명령은 지정된 프로젝트에서 단위 테스트를 실행하는 데 사용됩니다.
 ms.date: 05/29/2018
-ms.openlocfilehash: 6b67273f549edd7712237756a5aba13d5cb59a61
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: 49926b35b418e93237a159758903c535ec6c4006
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410362"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988537"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -18,6 +18,8 @@ ms.locfileid: "67410362"
 `dotnet test` - 단위 테스트를 실행하는 데 사용하는 .NET 테스트 드라이버입니다.
 
 ## <a name="synopsis"></a>개요
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -264,7 +266,7 @@ RunSettings에 대한 자세한 내용은 [vstest.console.exe: Passing RunSettin
 
 현재 디렉터리의 프로젝트에서 테스트를 실행하고 trx 형식으로 테스트 결과 파일을 생성합니다.
 
-`dotnet test --logger:trx`
+`dotnet test --logger trx`
 
 ## <a name="filter-option-details"></a>필터 옵션 세부 정보
 

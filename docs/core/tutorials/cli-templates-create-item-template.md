@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: c50aaf413f08c2e4cbe3f8ce8c057e5841067c92
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
+ms.openlocfilehash: 5183781d6a131aa395cf7c1fd8a09e05ed0bd71d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67870612"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926147"
 ---
 # <a name="tutorial-create-an-item-template"></a>자습서: 항목 템플릿 만들기
 
@@ -19,6 +19,7 @@ ms.locfileid: "67870612"
 시리즈의 1부에서는 다음 방법에 대해 알아봅니다.
 
 > [!div class="checklist"]
+>
 > * 항목 템플릿에 대한 클래스 만들기
 > * 템플릿 구성 폴더 및 파일 만들기
 > * 파일 경로에서 템플릿 설치
@@ -27,7 +28,7 @@ ms.locfileid: "67870612"
 
 ## <a name="prerequisites"></a>전제 조건
 
-* [.NET Core 2.2 SDK](https://www.microsoft.com/net/core) 이상 버전
+* [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download) 이상 버전
 * 참조 문서 [dotnet new에 대한 사용자 지정 템플릿](../tools/custom-templates.md)을 읽어보세요.
 
   이 참조 문서에서는 템플릿에 대한 기본 사항과 템플릿을 취합하는 방법을 설명합니다. 이 참조 문서의 정보 일부가 여기에도 나옵니다.

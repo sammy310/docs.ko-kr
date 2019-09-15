@@ -1,15 +1,16 @@
 ---
-ms.openlocfilehash: cb8cc6574caad6da25b3fced70c58175a33ec896
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0bad5c7944a06527cd71606c686762656f33c925
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68616333"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929175"
 ---
 # <a name="voice-and-tone-guidelines"></a>어투 및 어조 지침
 
 IT 전문가 및 개발자를 비롯한 다양한 사용자가 .NET을 학습하고 일반 작업에서 사용하기 위해 문서를 읽습니다.
 사용자의 개발 작업을 지원하는 유용한 설명서를 작성하는 것이 목표입니다. 아래의 지침을 따르면 이러한 설명서를 작성할 수 있습니다. 스타일 가이드에는 다음 권장 사항이 포함되어 있습니다.
+
 - [대화형 어조 사용](#use-a-conversational-tone)
 - [2인칭 시점으로 작성](#write-in-2nd-person)
 - [능동태 사용](#use-active-voice)

@@ -2,12 +2,12 @@
 title: dotnet run 명령
 description: dotnet run 명령은 소스 코드에서 애플리케이션을 실행하는 편리한 옵션을 제공합니다.
 ms.date: 05/29/2018
-ms.openlocfilehash: 0a6c1303bc12c256dd0a8923f9468620835ddabc
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: b21987ef9ee4dd7d8fdb93d0853b7faa93001688
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202800"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969759"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -18,6 +18,8 @@ ms.locfileid: "70202800"
 `dotnet run` - 명시적 컴파일이나 시작 명령을 사용하지 않고 소스 코드를 실행합니다.
 
 ## <a name="synopsis"></a>개요
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 

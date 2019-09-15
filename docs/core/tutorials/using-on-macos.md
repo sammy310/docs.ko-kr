@@ -4,12 +4,12 @@ description: 이 문서에서는 Visual Studio Code를 사용하여 .NET Core �
 author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: f1cb9b45c0ed1b4315361846fc065209088b57f8
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 572174cb09dbde03095fa9444989356038bab9b7
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373782"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849354"
 ---
 # <a name="get-started-with-net-core-on-macos"></a>macOS에서 .NET Core 시작
 
@@ -20,7 +20,7 @@ ms.locfileid: "70373782"
 
 ## <a name="prerequisites"></a>전제 조건
 
-[.NET Core SDK](https://www.microsoft.com/net/core)를 설치합니다. .NET Core SDK에는 최신 버전의 .NET Core 프레임워크 및 런타임이 포함되어 있습니다.
+[.NET Core SDK](https://dotnet.microsoft.com/download)를 설치합니다. .NET Core SDK에는 최신 버전의 .NET Core 프레임워크 및 런타임이 포함되어 있습니다.
 
 [Visual Studio Code](https://code.visualstudio.com)를 설치합니다. 이 문서를 진행하면서 .NET Core 개발자 환경을 개선하는 Visual Studio Code 확장도 설치하게 됩니다.
 

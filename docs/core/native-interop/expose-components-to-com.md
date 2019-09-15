@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 33574eeac5b1f7aa2067b1974f3f2e68fb22e8ff
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 686d1b31478121a8b2c907d99672a5fcc3438a71
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577175"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849039"
 ---
 # <a name="exposing-net-core-components-to-com"></a>.NET Core 구성 요소를 COM에 노출
 
@@ -25,7 +25,7 @@ ms.locfileid: "69577175"
 
 ## <a name="prerequisites"></a>전제 조건
 
-- [.NET Core 3.0 Preview 7 SDK](https://www.microsoft.com/net/core) 이상 버전을 설치합니다.
+- [.NET Core 3.0 Preview 7 SDK](https://dotnet.microsoft.com/download) 이상 버전을 설치합니다.
 
 ## <a name="create-the-library"></a>라이브러리 만들기
 
@@ -35,10 +35,10 @@ ms.locfileid: "69577175"
 2. `Class1.cs`를 엽니다.
 3. `using System.Runtime.InteropServices;`를 파일의 맨 위에 추가합니다.
 4. `IServer` 인터페이스를 만듭니다. 예: [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
-5. 구현 중인 COM 인터페이스의 인터페이스 GUID를 사용하여 `[Guid("<IID>")]` 특성을 인터페이스에 추가합니다. 예를 들어, `[Guid("fe103d6e-e71b-414c-80bf-982f18f6c1c7")]`을 입력합니다. 이 GUID는 이 COM용 인터페이스의 유일한 식별자이므로 고유해야 합니다. Visual Studio에서 [도구] > [GUID 만들기]로 이동하여 GUID 만들기 도구를 열고 GUID를 생성할 수 있습니다.
+5. 구현 중인 COM 인터페이스의 인터페이스 GUID를 사용하여 `[Guid("<IID>")]` 특성을 인터페이스에 추가합니다. 예: `[Guid("fe103d6e-e71b-414c-80bf-982f18f6c1c7")]`. 이 GUID는 이 COM용 인터페이스의 유일한 식별자이므로 고유해야 합니다. Visual Studio에서 [도구] > [GUID 만들기]로 이동하여 GUID 만들기 도구를 열고 GUID를 생성할 수 있습니다.
 6. `[InterfaceType]` 특성을 인터페이스에 추가하고 이 인터페이스에서 구현해야 하는 기본 COM 인터페이스를 지정합니다.
 7. `IServer`를 구현하는 `Server`라는 클래스를 만듭니다.
-8. 구현 중인 COM 클래스의 클래스 식별자 GUID를 사용하여 `[Guid("<CLSID>")]` 특성을 클래스에 추가합니다. 예를 들어, `[Guid("9f35b6f5-2c05-4e7f-93aa-ee087f6e7ab6")]`을 입력합니다. 인터페이스 GUID와 마찬가지로 이 GUID는 이 COM용 인터페이스의 유일한 식별자이므로 고유해야 합니다.
+8. 구현 중인 COM 클래스의 클래스 식별자 GUID를 사용하여 `[Guid("<CLSID>")]` 특성을 클래스에 추가합니다. 예: `[Guid("9f35b6f5-2c05-4e7f-93aa-ee087f6e7ab6")]`. 인터페이스 GUID와 마찬가지로 이 GUID는 이 COM용 인터페이스의 유일한 식별자이므로 고유해야 합니다.
 9. 인터페이스 및 클래스에 모두 `[ComVisible(true)]` 특성을 추가합니다.
 
 > [!IMPORTANT]

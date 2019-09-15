@@ -4,12 +4,12 @@ description: .NET Core에서 볼 수 있는 새로운 기능에 대해 알아봅
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: f48b8e88a716df0f07a5626bdc8f66000cfaeed8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c208f565bebedc06e244de1f6554129f21c77b8c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626369"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849941"
 ---
 # <a name="whats-new-in-net-core-20"></a>.NET Core 2.0의 새로운 기능
 
@@ -154,7 +154,7 @@ Live Unit Testing이 코드를 수정하려면 언제든지 자동으로 백그�
 
 ### <a name="net-application-architecture"></a>.NET 애플리케이션 아키텍처
 
-빌드하는 데 .NET을 사용하는 경우 [.NET 애플리케이션 아키텍처](https://www.microsoft.com/net/learn/architecture)는 지침, 모범 사례 및 애플리케이션 예제를 제공하는 eBook 집합에 액세스 권한을 부여합니다.
+빌드하는 데 .NET을 사용하는 경우 [.NET 애플리케이션 아키텍처](https://dotnet.microsoft.com/learn/dotnet/architecture-guides)는 지침, 모범 사례 및 애플리케이션 예제를 제공하는 eBook 집합에 액세스 권한을 부여합니다.
 
 - [마이크로 서비스 및 Docker 컨테이너](../../architecture/microservices/index.md)
 - [ASP.NET을 사용하여 개발한 웹 애플리케이션](../../architecture/modern-web-apps-azure/index.md)

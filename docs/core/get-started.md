@@ -4,22 +4,22 @@ description: Windows, Linux 및 macOS에서 .NET Core 애플리케이션을 빌�
 author: thraka
 ms.author: adegeo
 ms.date: 06/27/2018
-ms.openlocfilehash: b111d464b83f3bc6a4a0da86678c5364bf4a9537
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 3c530c71d1cfa9d0c4cf09f38519970f6ef8da51
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67802294"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969892"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 시작
 
 이 문서에서는 .NET Core로 시작하는 데 필요한 정보를 제공합니다. Windows, Linux 및 macOS에서 .NET Core를 설치할 수 있습니다. 원하는 텍스트 편집기에서 코딩하고 플랫폼 간 라이브러리 및 애플리케이션을 생성할 수 있습니다. 
 
-.NET Core가 무엇인지 또는 다른 .NET 기술과 어떻게 관련있는지에 대해 잘 모를 경우 [.NET이란](https://www.microsoft.com/net/learn/dotnet/what-is-dotnet) 개요로 시작하세요. 간단히 말해 .NET Core는 오픈 소스의 플랫폼 간 .NET의 구현입니다.
+.NET Core가 무엇인지 또는 다른 .NET 기술과 어떻게 관련있는지에 대해 잘 모를 경우 [.NET이란](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet) 개요로 시작하세요. 간단히 말해 .NET Core는 오픈 소스의 플랫폼 간 .NET의 구현입니다.
 
 ## <a name="create-an-application"></a>애플리케이션 만들기
 
-먼저 사용자의 컴퓨터에 [.NET Core SDK](https://www.microsoft.com/net/download/)를 다운로드하여 설치합니다.
+먼저 사용자의 컴퓨터에 [.NET Core SDK](https://dotnet.microsoft.com/download)를 다운로드하여 설치합니다.
 
 다음으로 **PowerShell**, **명령 프롬프트** 또는 **Bash**와 같은 터미널을 엽니다. 다음 `dotnet` 명령을 입력하여 C# 애플리케이션을 만들고 실행합니다.
 
@@ -39,6 +39,8 @@ Hello World!
 ## <a name="tutorials"></a>자습서
 
 다음 단계별 자습서에 따라 .NET Core 애플리케이션 개발을 시작할 수 있습니다.
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 

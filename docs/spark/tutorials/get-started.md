@@ -4,12 +4,12 @@ description: Windows에서 .NET Core를 사용하여 .NET for Apache Spark 앱�
 ms.date: 06/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7ce7d7aec6c15385d3d797d5a548519eea33b764
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 004256a2fe369b026b15151dfc72ae379da0be8e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "69577010"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928491"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>자습서: .NET for Apache Spark 시작
 
@@ -18,6 +18,7 @@ ms.locfileid: "69577010"
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 
 > [!div class="checklist"]
+>
 > * .NET for Apache Spark를 위한 Windows 환경 준비
 > * **Microsoft.Spark.Worker** 다운로드
 > * 간단한 .NET for Apache Spark 애플리케이션 빌드 및 실행
@@ -44,7 +45,7 @@ ms.locfileid: "69577010"
 
 4. [Apache Maven 3.6.0+](https://maven.apache.org/download.cgi)를 설치합니다.
     * [Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.zip)을 다운로드합니다.
-    * 로컬 디렉터리로 추출합니다. 예를 들어, `c:\bin\apache-maven-3.6.0\`을 입력합니다.
+    * 로컬 디렉터리로 추출합니다. 예: `c:\bin\apache-maven-3.6.0\`.
     * Apache Maven을 [PATH 환경 변수](https://www.java.com/en/download/help/path.xml)에 추가합니다. `c:\bin\apache-maven-3.6.0\`으로 추출한 경우 `c:\bin\apache-maven-3.6.0\bin`을 PATH에 추가합니다.
     * PowerShell 명령 `mvn -version`을 사용하여 설치를 확인합니다.
 
@@ -56,8 +57,8 @@ ms.locfileid: "69577010"
 
 6. [WinUtils](https://github.com/steveloughran/winutils)를 설정합니다.
     * [WinUtils 리포지토리](https://github.com/steveloughran/winutils)에서 **winutils.exe** 이진 파일을 다운로드합니다. Spark 배포의 컴파일에 사용된 Hadoop 버전을 선택합니다. 예를 들어 **Spark 2.3.2**에 **hadoop-2.7.1**을 사용합니다. Hadoop 버전은 Spark 설치 폴더 이름의 끝에 주석으로 처리됩니다.
-    * **winutils.exe** 이진 파일을 선택한 디렉터리에 저장합니다. 예를 들어, `c:\hadoop\bin`을 입력합니다.
-    * `bin` 없이 **winutils.exe**가 있는 디렉터리를 반영하도록 `HADOOP_HOME`을 설정합니다. 예를 들어, `c:\hadoop`을 입력합니다.
+    * **winutils.exe** 이진 파일을 선택한 디렉터리에 저장합니다. 예: `c:\hadoop\bin`.
+    * `bin` 없이 **winutils.exe**가 있는 디렉터리를 반영하도록 `HADOOP_HOME`을 설정합니다. 예: `c:\hadoop`.
     * `%HADOOP_HOME%\bin`을 포함하도록 PATH 환경 변수를 설정합니다.
 
 다음 섹션으로 이동하기 전에 명령줄에서 `dotnet`, `java`, `mvn`, `spark-shell`을 실행할 수 있는지 다시 확인합니다.
@@ -66,7 +67,7 @@ ms.locfileid: "69577010"
 
 1. .NET for Apache Spark GitHub 릴리스 페이지에서 로컬 머신으로 [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) 릴리스를 다운로드합니다. 예를 들어 `c:\bin\Microsoft.Spark.Worker\` 경로에 다운로드할 수 있습니다.
 
-2. `DotnetWorkerPath`라는 [새 환경 변수](https://www.java.com/en/download/help/path.xml)를 만들고 **Microsoft.Spark.Worker**를 다운로드하여 추출한 디렉터리로 설정합니다. 예를 들어, `c:\bin\Microsoft.Spark.Worker`을 입력합니다.
+2. `DotnetWorkerPath`라는 [새 환경 변수](https://www.java.com/en/download/help/path.xml)를 만들고 **Microsoft.Spark.Worker**를 다운로드하여 추출한 디렉터리로 설정합니다. 예: `c:\bin\Microsoft.Spark.Worker`.
 
 ## <a name="clone-the-net-for-apache-spark-github-repo"></a>.NET for Apache Spark GitHub 리포지토리 복제
 
@@ -124,6 +125,7 @@ git clone https://github.com/dotnet/spark.git c:\github\dotnet-spark
 
 본 자습서에서는 다음 작업에 관한 방법을 학습했습니다.
 > [!div class="checklist"]
+>
 > * .NET for Apache Spark를 위한 Windows 환경 준비
 > * **Microsoft.Spark.Worker** 다운로드
 > * 간단한 .NET for Apache Spark 애플리케이션 빌드 및 실행

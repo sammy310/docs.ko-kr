@@ -4,12 +4,12 @@ description: .NET Core 런타임의 작동 방식을 제어해야 하는 고급 
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8eebc04390514bca288b67952ec7748366a45d6e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ec63e1b87c4161dcd0dd3ab37aadbef53d4b3219
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660517"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970854"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>사용자 지정 .NET Core 호스트를 작성하여 네이티브 코드에서 .NET 런타임 제어
 
@@ -23,7 +23,7 @@ ms.locfileid: "69660517"
 
 호스트는 네이티브 애플리케이션이기 때문에 이 자습서에서는 .NET Core를 호스트하는 C++ 애플리케이션을 생성을 다룹니다. [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)에서 제공하는 C++ 개발 환경 같은 C++ 개발 환경이 필요합니다.
 
-또한 호스트를 테스트할 간단한 .NET Core 애플리케이션이 필요하므로 [.NET Core SDK](https://www.microsoft.com/net/core)를 설치하고 [소규모 .NET Core 테스트 앱](with-visual-studio.md)(예: 'Hello World' 앱)을 빌드해야 합니다. 새로운 .NET Core 콘솔 프로젝트 템플릿으로 만든 'Hello World' 앱으로 충분합니다.
+또한 호스트를 테스트할 간단한 .NET Core 애플리케이션이 필요하므로 [.NET Core SDK](https://dotnet.microsoft.com/download)를 설치하고 [소규모 .NET Core 테스트 앱](with-visual-studio.md)(예: 'Hello World' 앱)을 빌드해야 합니다. 새로운 .NET Core 콘솔 프로젝트 템플릿으로 만든 'Hello World' 앱으로 충분합니다.
 
 ## <a name="hosting-apis"></a>호스팅 API
 .NET Core를 호스트하는 데 사용할 수 있는 세 가지 API가 있습니다. 이 문서(및 관련 [샘플](https://github.com/dotnet/samples/tree/master/core/hosting))에서는 모든 옵션에 대해 설명합니다.
@@ -44,6 +44,7 @@ ms.locfileid: "69660517"
 ### <a name="step-1---load-hostfxr-and-get-exported-hosting-functions"></a>1단계 - HostFxr 로드 및 내보낸 호스팅 함수 가져오기
 
 `nethost` 라이브러리는 `hostfxr` 라이브러리를 찾기 위한 `get_hostfxr_path` 함수를 제공합니다. `hostfxr` 라이브러리는 .NET Core 런타임을 호스트하기 위한 함수를 공개합니다. 함수의 전체 목록은 [`hostfxr.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/hostfxr.h) 및 [기본 호스팅 디자인 문서](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/native-hosting.md)에서 확인할 수 있습니다. 샘플 및 이 자습서는 다음을 사용합니다.
+
 * `hostfxr_initialize_for_runtime_config`: 호스트 컨텍스트를 초기화하고, 지정된 런타임 구성을 사용하여 .NET Core 런타임 초기화를 준비합니다.
 * `hostfxr_get_runtime_delegate`: 런타임 기능의 대리자를 가져옵니다.
 * `hostfxr_close`: 호스트 컨텍스트를 닫습니다.
@@ -134,7 +135,7 @@ mscoree.h 호스팅 API(아래에 설명)와 달리 CoreCLRHost.h API는 런타�
 
 ### <a name="step-5---run-managed-code"></a>5단계 - 관리 코드 실행
 
-런타임이 시작되면 호스트가 관리 코드를 호출할 수 있습니다. 이는 두 가지 방법으로 수행할 수 있습니다. 이 자습서에 연결된 샘플 코드는 `coreclr_create_delegate` 함수를 사용하여 정적 관리 메서드에 대한 대리자를 만듭니다. 이 API는 [어셈블리 이름](../../framework/app-domains/assembly-names.md), 네임스페이스로 한정된 형식 이름, 메서드 이름을 입력으로 허용하고, 메서드를 호출하는 데 사용할 수 있는 대리자를 반환합니다.
+런타임이 시작되면 호스트가 관리 코드를 호출할 수 있습니다. 이는 두 가지 방법으로 수행할 수 있습니다. 이 자습서에 연결된 샘플 코드는 `coreclr_create_delegate` 함수를 사용하여 정적 관리 메서드에 대한 대리자를 만듭니다. 이 API는 [어셈블리 이름](../../standard/assembly/names.md), 네임스페이스로 한정된 형식 이름, 메서드 이름을 입력으로 허용하고, 메서드를 호출하는 데 사용할 수 있는 대리자를 반환합니다.
 
 [!code-cpp[CoreClrHost#5](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#5)]
 
@@ -230,7 +231,7 @@ AppDomain이 실행 중이면 호스트에서 이제 관리 코드를 실행할 
 
 [!code-cpp[NetCoreHost#8](~/samples/core/hosting/HostWithMscoree/host.cpp#8)]
 
-`ExecuteAssembly`가 호스트의 요구 사항을 충족하지 않는 경우 `CreateDelegate`를 사용하여 정적 관리 메서드에 대한 함수 포인터를 만듭니다. 이 경우 호스트에서 호출하는 메서드의 시그니처를 알아야 하지만(함수 포인터 형식을 만들기 위해) 호스트는 어셈블리의 진입점이 아닌 코드를 호출할 수 있습니다. 두 번째 매개 변수에 제공된 어셈블리 이름은 로드할 라이브러리의 [전체 관리형 어셈블리 이름](../../framework/app-domains/assembly-names.md) 입니다.
+`ExecuteAssembly`가 호스트의 요구 사항을 충족하지 않는 경우 `CreateDelegate`를 사용하여 정적 관리 메서드에 대한 함수 포인터를 만듭니다. 이 경우 호스트에서 호출하는 메서드의 시그니처를 알아야 하지만(함수 포인터 형식을 만들기 위해) 호스트는 어셈블리의 진입점이 아닌 코드를 호출할 수 있습니다. 두 번째 매개 변수에 제공된 어셈블리 이름은 로드할 라이브러리의 [전체 관리형 어셈블리 이름](../../standard/assembly/names.md) 입니다.
 
 ```C++
 void *pfnDelegate = NULL;

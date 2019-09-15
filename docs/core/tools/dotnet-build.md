@@ -1,13 +1,13 @@
 ---
 title: dotnet build 명령
 description: dotnet build 명령은 프로젝트와 모든 종속성을 빌드합니다.
-ms.date: 04/24/2019
-ms.openlocfilehash: 6e577defb9f5c7795ee40efa18da30daee1b52c0
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.date: 08/08/2019
+ms.openlocfilehash: e92555dad2bc76d8c72eca9a30be1d3a8b5924f7
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168068"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988530"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -25,7 +25,7 @@ ms.locfileid: "70168068"
 
 ```console
 dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--interactive] [--no-dependencies]
-    [--no-incremental] [--nologo] [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+    [--no-incremental] [--no-restore] [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
 dotnet build [-h|--help]
 ```
@@ -94,13 +94,13 @@ dotnet build [-h|--help]
 
   빌드를 증분 빌드에 안전하지 않은 것으로 표시합니다. 이 플래그로 증분 컴파일이 해제되고 프로젝트 종속성 그래프를 강제로 완전히 다시 빌드합니다.
 
-* **`--no-logo`**
-
-  시작 배너 또는 저작권 메시지를 표시하지 않습니다. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
-
 * **`--no-restore`**
 
   빌드하는 동안 암시적 복원을 실행하지 않습니다. .NET Core 2.0 SDK 이후 사용할 수 있습니다.
+
+* **`--nologo`**
+
+  시작 배너 또는 저작권 메시지를 표시하지 않습니다. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 

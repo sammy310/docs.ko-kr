@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: 00edb1c8704aab19d7ff44fe26c514b5ccea64b6
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: d0f4e2997e6e847cfd3c41ddb13096379d75343e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331079"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925717"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1의 새로운 기능
 
@@ -99,6 +99,7 @@ dotnet tool install -g dotnetsay
 > 이 롤포워드 동작은 미리 보기 릴리스에는 적용되지 않습니다. 기본적으로 주요 릴리스에도 적용되지 않지만 아래 설정으로 변경할 수 있습니다.
 
 후보 공유 프레임워크에서 롤포워드 설정을 변경하여 이 동작을 수정할 수 있습니다. 사용 가능한 설정은 다음과 같습니다.
+
 - `0` - 부 버전 롤포워드 동작을 비활성화합니다. 이 설정을 사용하면 .NET Core 2.0.0용으로 빌드된 애플리케이션이 .NET Core 2.0.1 롤포워드되지만 .NET Core 2.2.0 또는 .NET Core 3.0.0에서는 롤포워드되지 않습니다.
 - `1` - 부 버전 롤포워드 동작을 활성화합니다. 이는 설정의 기본값입니다. 이 설정을 사용하면 .NET Core 2.0.0용으로 빌드된 애플리케이션은 설치된 .NET Core 2.0.1 또는 .NET Core 2.2.0에 따라 하나를 롤포워드하지만 .NET Core 3.0.0으로 롤포워드되지 않습니다.
 - `2` - 부 버전 및 주 버전 롤포워드 동작을 활성화합니다. 설정한 경우 다른 주 버전도 고려되므로 .NET Core 2.0.0용으로 빌드된 애플리케이션은 NET Core 3.0.0으로 롤포워드됩니다.
@@ -178,15 +179,17 @@ JIT 컴파일러가 수행하는 중요한 작업 중 하나는 코드 실행을
 
 다음 예제에서는 <xref:System.Span%601> 및 <xref:System.Memory%601> 인스턴스를 사용하여 배열의 10개 요소에 대한 가상 보기를 제공합니다.
 
-[!CODE-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
+[!code-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
 
-[!CODE-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
+[!code-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Brotli 압축
 
 .NET Core 2.1은 Brotli 압축 및 압축 풀기에 대한 지원을 추가합니다. Brotli는 [RFC 7932](https://www.ietf.org/rfc/rfc7932.txt)에 정의되어 있고 대부분의 웹 브라우저와 주요 웹 서버에서 지원되는 범용 무손실 압축 알고리즘입니다. 스트림 기반 <xref:System.IO.Compression.BrotliStream?displayProperty=nameWithType> 클래스 또는 고성능 범위 기반 <xref:System.IO.Compression.BrotliEncoder?displayProperty=nameWithType> 및 <xref:System.IO.Compression.BrotliDecoder?displayProperty=nameWithType> 클래스를 사용할 수 있습니다. 다음 예제는 <xref:System.IO.Compression.BrotliStream> 클래스를 사용한 압축을 보여 줍니다.
 
-[!CODE-csharp[Brotli compression](~/samples/core/whats-new/whats-new-in-21/cs/brotli.cs#1)]
+[!code-csharp[Brotli compression](~/samples/core/whats-new/whats-new-in-21/cs/brotli.cs#1)]
+
+[!code-vb[Brotli compression](~/samples/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
 
 <xref:System.IO.Compression.BrotliStream> 동작은 <xref:System.IO.Compression.DeflateStream> 및 <xref:System.IO.Compression.GZipStream>과 동일하므로, 이러한 API를 호출하는 코드를 <xref:System.IO.Compression.BrotliStream>으로 쉽게 변환할 수 있습니다.
 

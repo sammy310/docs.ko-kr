@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 32593465c1a161aa1293b7b233539fa930c7e1d8
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: d983ee09704ff69fdedfa95a31942161162f73eb
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402203"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970645"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Visual Studio 2017에서 .NET Core를 사용하여 .NET Standard 라이브러리 테스트
 
@@ -23,7 +23,10 @@ ms.locfileid: "67402203"
 
 단위 테스트 프로젝트를 만들려면 다음을 수행합니다.
 
+<!-- markdownlint-disable MD025 -->
+
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 1. **솔루션 탐색기**에서 **ClassLibraryProject** 솔루션 노드의 상황에 맞는 메뉴를 열고 **추가** > **새 프로젝트**를 선택합니다.
 
 1. **새 프로젝트 추가** 대화 상자에서 **Visual C#** 노드를 선택합니다. 그런 다음, **.NET Core** 노드, **MSTest 테스트 프로젝트(.NET Core)** 프로젝트 템플릿을 차례로 선택합니다. **이름** 텍스트 상자에 프로젝트 이름으로 "StringLibraryTest"를 입력합니다. **확인**을 선택하여 단위 테스트 프로젝트를 만듭니다.
@@ -52,7 +55,9 @@ ms.locfileid: "67402203"
 1. **참조 관리자** 대화 상자에서 **프로젝트** 노드를 확장하고 **StringLibrary** 옆에 있는 확인란을 선택합니다. `StringLibrary` 어셈블리에 대한 참조를 추가하면 컴파일러가 **StringLibrary** 메서드를 찾을 수 있습니다. **확인** 단추를 선택합니다. 그러면 클래스 라이브러리 프로젝트 `StringLibrary`에 대한 참조가 추가됩니다.
 
    ![Visual Studio 프로젝트 참조 추가 대화 상자](./media/testing-library-with-visual-studio/project-reference-manager.png)
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
+
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
 1. **솔루션 탐색기**에서 **ClassLibraryProject** 솔루션 노드의 상황에 맞는 메뉴를 열고 **추가** > **새 프로젝트**를 선택합니다.
 
 1. **새 프로젝트 추가** 대화 상자에서 **Visual Basic** 노드를 선택합니다. 그런 다음, **.NET Core** 노드, **MSTest 테스트 프로젝트(.NET Core)** 프로젝트 템플릿을 차례로 선택합니다. **이름** 텍스트 상자에 프로젝트 이름으로 "StringLibraryTest"를 입력합니다. **확인**을 선택하여 단위 테스트 프로젝트를 만듭니다.
@@ -81,6 +86,7 @@ ms.locfileid: "67402203"
 1. **참조 관리자** 대화 상자에서 **프로젝트** 노드를 확장하고 **StringLibrary** 옆에 있는 확인란을 선택합니다. `StringLibrary` 어셈블리에 대한 참조를 추가하면 컴파일러가 **StringLibrary** 메서드를 찾을 수 있습니다. **확인** 단추를 선택합니다. 그러면 클래스 라이브러리 프로젝트 `StringLibrary`에 대한 참조가 추가됩니다.
 
    ![Visual Studio 프로젝트 참조 추가 대화 상자 - Visual Basic](./media/testing-library-with-visual-studio/project-reference-manager.png)
+
 ---
 
 ## <a name="adding-and-running-unit-test-methods"></a>단위 테스트 메서드 추가 및 실행
@@ -106,7 +112,8 @@ Assert 메서드 | 함수
 
 테스트 메서드를 만들려면
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp) 
+# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 1. *UnitTest1.cs* 코드 창의 코드를 다음 코드로 바꿉니다.
 
    [!CODE-csharp[Test#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/testlib1.cs)]
@@ -116,7 +123,9 @@ Assert 메서드 | 함수
 1. 메뉴 모음에서 **파일** > **다른 이름으로 UnitTest1.cs 저장**을 선택합니다. **다른 이름으로 파일 저장** 대화 상자에서 **저장** 단추 옆에 있는 화살표를 선택한 다음 **인코딩하여 저장**을 선택합니다.
 
    ![Visual Studio 다른 이름으로 파일 저장 대화 상자 - C#](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
+
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
 1. *UnitTest1.vb* 코드 창의 코드를 다음 코드로 바꿉니다.
 
     [!CODE-vb[Test#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
@@ -126,6 +135,7 @@ Assert 메서드 | 함수
 1. 메뉴 모음에서 **파일** > **다른 이름으로 UnitTest1.vb 저장**을 선택합니다. **다른 이름으로 파일 저장** 대화 상자에서 **저장** 단추 옆에 있는 화살표를 선택한 다음 **인코딩하여 저장**을 선택합니다.
 
    ![Visual Studio 다른 이름으로 파일 저장 대화 상자 - Visual Basic](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
+
 ---
 
 1. **다른 이름으로 저장 확인** 대화 상자에서 **예** 단추를 선택하여 파일을 저장합니다.

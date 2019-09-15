@@ -3,12 +3,12 @@ title: .NET Core 정보
 description: .NET Core에 대한 자세히 알아봅니다.
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: d81c6ad15c12d7bb1e866aef3bd1e799d5b62cde
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: ea9253bacf2bcee63430cd45f2a9ed412ce629e7
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67421882"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849137"
 ---
 # <a name="about-net-core"></a>.NET Core 정보
 
@@ -20,7 +20,7 @@ ms.locfileid: "67421882"
 - **유연한 배포:** 앱이나 설치된 side-by-side(사용자 또는 시스템 수준 설치)에 포함할 수 있습니다. [Docker 컨테이너](docker/index.md)에서 사용될 수 있습니다.
 - **호환 가능:** .NET Core는 [.NET Standard](../standard/net-standard.md)를 통해 .NET Framework, Xamarin 및 Mono와 호환됩니다.
 - **오픈 소스:** .NET Core 플랫폼은 MIT 및 Apache 2 라이선스를 사용하는 오픈 소스입니다. .NET Core는 [.NET Foundation](https://dotnetfoundation.org/) 프로젝트입니다.
-- **Microsoft에서 지원됨:** .NET Core는 [.NET Core 지원](https://www.microsoft.com/net/core/support/)에 따라 Microsoft에서 지원됩니다.
+- **Microsoft에서 지원됨:** .NET Core는 [.NET Core 지원](https://dotnet.microsoft.com/platform/support/policy)에 따라 Microsoft에서 지원됩니다.
 
 ## <a name="languages"></a>언어
 
@@ -57,9 +57,9 @@ C#, Visual Basic 및 F# 언어를 사용하여 .NET Core에 대한 애플리케�
 
 이러한 구성 요소는 다음과 같은 방법으로 배포됩니다.
 
-- [.NET Core 런타임](https://www.microsoft.com/net/download/dotnet-core/2.1) - .NET Core 런타임 및 프레임워크 라이브러리가 포함되어 있습니다.
-- [ASP.NET Core 런타임](https://www.microsoft.com/net/download/dotnet-core/2.1) - ASP.NET Core 및 .NET Core 런타임 및 프레임워크 라이브러리가 포함되어 있습니다.
-- [.NET Core SDK](https://www.microsoft.com/net/download/dotnet-core/2.1) - .NET CLI 도구, ASP.NET Core 런타임 및 .NET Core 런타임 및 프레임워크가 포함되어 있습니다.
+- [.NET Core 런타임](https://dotnet.microsoft.com/download) - .NET Core 런타임 및 프레임워크 라이브러리가 포함되어 있습니다.
+- [ASP.NET Core 런타임](https://dotnet.microsoft.com/download) - ASP.NET Core 및 .NET Core 런타임 및 프레임워크 라이브러리가 포함되어 있습니다.
+- [.NET Core SDK](https://dotnet.microsoft.com/download) - .NET CLI 도구, ASP.NET Core 런타임 및 .NET Core 런타임 및 프레임워크가 포함되어 있습니다.
 
 ### <a name="open-source"></a>소스 열기
 

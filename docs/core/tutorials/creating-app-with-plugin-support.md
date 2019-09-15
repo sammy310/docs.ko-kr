@@ -4,12 +4,12 @@ description: 플러그 인을 지원하는 .NET Core 애플리케이션을 만�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: 308fd2f853261e87da71892c42e17e36984d1978
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 54a4459619ee69fc74a14da7ff7fe10a472a4433
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68330986"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849438"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>플러그 인을 사용하여 .NET Core 애플리케이션 만들기
 
@@ -22,7 +22,7 @@ ms.locfileid: "68330986"
 
 ## <a name="prerequisites"></a>전제 조건
 
-- [.NET Core 3.0 Preview 2 SDK](https://www.microsoft.com/net/core) 또는 최신 버전을 설치합니다.
+- [.NET Core 3.0 Preview 2 SDK](https://dotnet.microsoft.com/download) 또는 최신 버전을 설치합니다.
 
 ## <a name="create-the-application"></a>애플리케이션 만들기
 

@@ -6,12 +6,12 @@ ms.date: 10/04/2018
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: d654f77eb71b050b636476d67c62da3ea764edf7
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: cf313f8197280bdbb943c12ef0c7a29284ec01a5
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374191"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849768"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>dotnet test 및 NUnit을 사용하여 .NET Core에서 F# 라이브러리 유닛 테스트
 
@@ -21,7 +21,7 @@ ms.locfileid: "70374191"
 
 ## <a name="prerequisites"></a>전제 조건
 
-- [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) 이상 버전.
+- [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 이상 버전.
 - 선택하는 텍스트 편집기 또는 코드 편집기입니다.
 
 ## <a name="creating-the-source-project"></a>소스 프로젝트 만들기

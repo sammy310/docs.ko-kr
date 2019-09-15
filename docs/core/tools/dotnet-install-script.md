@@ -2,12 +2,12 @@
 title: dotnet 설치 스크립트
 description: .NET Core CLI 도구 및 공유 런타임을 설치하는 dotnet-install 스크립트에 대해 알아봅니다.
 ms.date: 01/16/2019
-ms.openlocfilehash: ed1a3341e678b405ae4aca35e3b49ada89eb069a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 867be93b5a4c66258df438ce718dabbd4ef2891c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253907"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849568"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 스크립트 참조
 
@@ -55,7 +55,7 @@ macOS/Linux:
   - 특정 릴리스를 나타내는 X.Y 형식의 두 부분으로 된 버전입니다(예: `2.0` 또는 `1.0`).
   - 분기 이름입니다. 예를 들어 `release/2.0.0`, `release/2.0.0-preview2` 또는 `master`(야간 릴리스의 경우)입니다.
 
-  기본값은 `LTS`입니다. .NET 지원 채널에 대한 자세한 내용은 [.NET 지원 정책](https://www.microsoft.com/net/platform/support-policy#dotnet-core) 페이지를 참조하세요.
+  기본값은 `LTS`입니다. .NET 지원 채널에 대한 자세한 내용은 [.NET 지원 정책](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 페이지를 참조하세요.
 
 - **`-Version <VERSION>`**
 

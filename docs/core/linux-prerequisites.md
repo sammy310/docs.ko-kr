@@ -4,12 +4,12 @@ description: Linux 컴퓨터에서 .NET Core 애플리케이션을 개발, 배�
 author: thraka
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: 0bd3287535ba2c398f6577890d1d39f42a806364
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 5fcf931572f3c7e9b9857d2e91e9d620c7aad0bd
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612227"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969875"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux에서 .NET Core의 필수 구성 요소
 
@@ -23,11 +23,13 @@ ms.locfileid: "59612227"
 
 ## <a name="supported-linux-versions"></a>지원되는 Linux 버전
 
+<!-- markdownlint-disable MD025 -->
+
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 .NET Core 2.x는 단일 운영 체제로 Linux를 처리합니다. 지원되는 Linux 배포에 대한 단일 Linux 빌드(칩 아키텍처마다)가 있습니다. 
 
-다운로드 링크 및 자세한 내용은 [.NET Core 2.2 다운로드](https://www.microsoft.com/net/download/dotnet-core/2.2) 또는 [.NET Core 2.1 다운로드](https://www.microsoft.com/net/download/dotnet-core/2.1)를 참조하세요.
+다운로드 링크 및 자세한 내용은 [.NET Core 2.2 다운로드](https://dotnet.microsoft.com/download/dotnet-core/2.2) 또는 [.NET Core 2.1 다운로드](https://dotnet.microsoft.com/download/dotnet-core/2.1)를 참조하세요.
 
 .NET Core 2.x는 다음 Linux 배포/버전에서 지원됩니다.
 
@@ -46,7 +48,7 @@ ms.locfileid: "59612227"
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-다운로드 링크 및 자세한 내용은 [.NET Core 1.1 다운로드](https://www.microsoft.com/net/download/dotnet-core/1.1) 또는 [.NET Core 1.0 다운로드](https://www.microsoft.com/net/download/dotnet-core/1.0)를 참조하세요.
+다운로드 링크 및 자세한 내용은 [.NET Core 1.1 다운로드](https://dotnet.microsoft.com/download/dotnet-core/1.1) 또는 [.NET Core 1.0 다운로드](https://dotnet.microsoft.com/download/dotnet-core/1.0)를 참조하세요.
 
 .NET Core 1.x는 다음 Linux 64비트(`x86_64` 또는 `amd64`) 배포/버전에서 지원됩니다.
 

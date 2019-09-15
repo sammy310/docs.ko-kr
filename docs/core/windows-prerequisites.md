@@ -3,12 +3,12 @@ title: Windows에서 .NET Core의 필수 구성 요소
 description: Windows 컴퓨터에서 .NET Core 애플리케이션을 개발 및 실행하기 위해 필요한 종속성이 무엇인지 살펴보세요.
 ms.custom: updateeachvsrelease
 ms.date: 04/08/2019
-ms.openlocfilehash: 1921ef565c2d04624009f7684e439ddba1cdf57e
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 7b2bf2b8353c4f02fa11e9e7531e0d936007be0b
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331065"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970290"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows에서 .NET Core의 필수 구성 요소
 
@@ -61,6 +61,8 @@ ms.locfileid: "68331065"
 
 [릴리스 정보](/visualstudio/releasenotes/vs2017-relnotes)에서 Visual Studio 2017의 변경 내용에 대해 자세히 알아볼 수 있습니다.
 
+<!-- markdownlint-disable MD025 -->
+
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 Visual Studio 2017에서 .NET Core 2.2 SDK를 사용하여 .NET Core 앱을 개발하려면
@@ -97,8 +99,9 @@ Visual Studio에서 .NET Core 1.x 앱을 개발하려면 **기타 도구 집합*
 
 > [!IMPORTANT]
 > .NET Core 1.x 개발에 Visual Studio 2015를 사용할 수 있지만 다음 이유로 권장하지 않습니다.
-  > * .NET Core 도구는 지원되지 않는 미리 보기 버전입니다.
-  > * 프로젝트는 더 이상 사용되지 않는 project.json을 기반으로 작성되었습니다.
+>
+> * .NET Core 도구는 지원되지 않는 미리 보기 버전입니다.
+> * 프로젝트는 더 이상 사용되지 않는 project.json을 기반으로 작성되었습니다.
 >
 > 프로젝트 형식 변경에 대한 자세한 내용은 [변경 내용에 대한 대략적인 개요](./tools/cli-msbuild-architecture.md)를 참조하세요.
 

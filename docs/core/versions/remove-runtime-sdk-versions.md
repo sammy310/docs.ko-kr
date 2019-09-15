@@ -5,12 +5,12 @@ ms.date: 07/28/2018
 author: billwagner
 ms.author: wiwagn
 ms.custom: seodec18
-ms.openlocfilehash: 4e336abf62299e0dee2e4757bb83f967ed4aed59
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6d1012b8ddc5fd4a5ee8227902886727dbb10739
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966025"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970299"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>.NET Core 런타임 및 SDK를 제거하는 방법
 
@@ -25,6 +25,8 @@ ms.locfileid: "56966025"
 ## <a name="determine-what-is-installed"></a>설치된 버전 확인
 
 .NET Core 2.1부터 .NET CLI에는 머신에 설치된 SDK 및 런타임 버전을 나열하는 데 사용할 수 있는 옵션이 있습니다.  [`dotnet --list-sdks`](../tools/dotnet.md#options)를 사용하여 머신에 설치된 SDK의 목록을 확인합니다. [`dotnet --list-runtimes`](../tools/dotnet.md#options)을 사용하여 머신에 설치된 런타임의 목록을 확인합니다. 다음 텍스트는 Windows, macOS 또는 Linux의 일반적인 출력을 보여 줍니다.
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
@@ -166,7 +168,7 @@ Linux에서 .NET Core(SDK 또는 런타임)를 제거하는 옵션이 더 있습
 
 SDK가 아닌 런타임만 설치한 머신의 경우, 패키지 이름은 .NET Core 런타임의 경우에는 `dotnet-runtime-<version>`이고 전체 런타임 스택의 경우에는 `aspnetcore-runtime-<version>`입니다.
 
-2.0 이전의 .NET Core 설치는 패키지 관리자를 사용하여 SDK를 제거할 때 호스트 애플리케이션을 제거하지 않았습니다. `apt-get`을 사용하는 명령은 다음과 같습니다.
+2\.0 이전의 .NET Core 설치는 패키지 관리자를 사용하여 SDK를 제거할 때 호스트 애플리케이션을 제거하지 않았습니다. `apt-get`을 사용하는 명령은 다음과 같습니다.
 
 ```bash
 apt-get remove dotnet-host

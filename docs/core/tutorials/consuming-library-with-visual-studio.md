@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 7a7ab9e8f148eaab8250a7cb10c7d38d2f70e4cd
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 31a9183f541afa5365862b1e89704354cf7bd527
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660576"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969305"
 ---
 # <a name="consume-a-net-standard-library-in-visual-studio-2017"></a>Visual Studio 2017에서 .NET Standard 라이브러리 사용
 
@@ -27,7 +27,10 @@ ms.locfileid: "69660576"
 
 클래스 라이브러리와 동일한 솔루션에 단위 테스트를 포함한 것처럼 애플리케이션을 해당 솔루션의 일부로 포함할 수 있습니다. 예를 들어 사용자가 문자열을 입력하도록 요구하고 첫 번째 문자가 대문자인지 여부를 보고하는 콘솔 애플리케이션에서 이 클래스 라이브러리를 사용할 수 있습니다.
 
+<!-- markdownlint-disable MD025 -->
+
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 1. [Visual Studio 2017에서 .NET Core를 사용하여 C# 클래스 라이브러리 빌드](./library-with-visual-studio.md) 항목에서 만든 `ClassLibraryProjects` 솔루션을 엽니다. **솔루션 탐색기**에서 **ClassLibraryProjects** 솔루션을 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **추가** > **새 프로젝트**를 선택합니다.
 
 1. **새 프로젝트 추가** 대화 상자에서 **Visual C#** 노드를 확장하고 **.NET Core** 노드, **콘솔 앱(.NET Core)** 프로젝트 템플릿을 차례로 선택합니다. **이름** 텍스트 상자에 "ShowCase"를 입력하고 **확인** 단추를 선택합니다.
@@ -57,7 +60,9 @@ ms.locfileid: "69660576"
 1. 필요한 경우 도구 모음을 변경하여 컴파일하는 `ShowCase` 프로젝트의 **디버그** 릴리스를 컴파일합니다. **ShowCase** 단추에서 녹색 화살표를 선택하여 프로그램을 컴파일하고 실행합니다.
 
    ![Visual Studio 프로젝트 도구 모음 디버그 단추 표시 - C#](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
+
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
 1. [Visual Studio 2017에서 Visual Basic 및 .NET Core를 사용하여 클래스 라이브러리 빌드](vb-library-with-visual-studio.md) 항목에서 만든 `ClassLibraryProjects` 솔루션을 엽니다. **솔루션 탐색기**에서 **ClassLibraryProjects** 솔루션을 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **추가** > **새 프로젝트**를 선택합니다.
 
 1. **새 프로젝트 추가** 대화 상자에서 **Visual Basic** 노드를 확장하고 **.NET Core** 노드, **콘솔 앱(.NET Core)** 프로젝트 템플릿을 차례로 선택합니다. **이름** 텍스트 상자에 "ShowCase"를 입력하고 **확인** 단추를 선택합니다.
@@ -87,6 +92,7 @@ ms.locfileid: "69660576"
 1. 필요한 경우 도구 모음을 변경하여 컴파일하는 `ShowCase` 프로젝트의 **디버그** 릴리스를 컴파일합니다. **ShowCase** 단추에서 녹색 화살표를 선택하여 프로그램을 컴파일하고 실행합니다.
 
    ![도구 모음에서 디버그 - Visual Basic](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
+
 ---
 
 [Visual Studio 2017을 사용하여 Hello World 애플리케이션 디버그](debugging-with-visual-studio.md) 및 [Visual Studio 2017을 사용하여 Hello World 애플리케이션 게시](publishing-with-visual-studio.md)의 단계에 따라 이 라이브러리를 사용하는 애플리케이션을 디버그하고 게시할 수 있습니다.

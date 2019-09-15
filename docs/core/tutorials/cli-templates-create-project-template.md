@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 31a6189c0126d6dff000bb84978c1527dbe4e2ae
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
+ms.openlocfilehash: 3455720d729f813d9b6f32e433adffa4dc40dce4
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67870622"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926144"
 ---
 # <a name="tutorial-create-a-project-template"></a>자습서: 프로젝트 템플릿 만들기
 
@@ -19,6 +19,7 @@ ms.locfileid: "67870622"
 시리즈의 2부에서는 다음 방법에 대해 알아봅니다.
 
 > [!div class="checklist"]
+>
 > * 프로젝트 템플릿의 리소스 만들기
 > * 템플릿 구성 폴더 및 파일 만들기
 > * 파일 경로에서 템플릿 설치

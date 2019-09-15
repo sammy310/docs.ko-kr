@@ -3,12 +3,12 @@ title: .NET Core에서 dotnet-svcutil.xmlserializer 사용
 description: '`dotnet-svcutil.xmlserializer` NuGet 패키지를 사용하여 .NET Core 프로젝트용 serialization 어셈블리를 미리 생성하는 방법을 알아봅니다.'
 author: huanwu
 ms.date: 11/27/2018
-ms.openlocfilehash: 375a5ad5660658431c0d327e55513024823a6eee
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a98f8d30f2e37b722a3bf1f93be8fe9df540a468
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632192"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848972"
 ---
 # <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a>.NET Core에서 dotnet-svcutil.xmlserializer 사용
 
@@ -16,7 +16,7 @@ ms.locfileid: "65632192"
 
 ## <a name="prerequisites"></a>전제 조건
 
-* [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) 이상
+* [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 이상
 * 선호하는 코드 편집기
 
 `dotnet --info` 명령을 사용하여 이미 설치한 .NET Core SDK 및 런타임 버전을 확인할 수 있습니다.

@@ -4,12 +4,12 @@ description: .NET Framework 프로젝트용 서비스 참조 추가와 유사하
 author: mlacouture
 ms.date: 04/19/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 806f6e90aedc669c3a56ce1cde64311bdd4af32c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 11a18161db0fde522442e2412c4522811c5dd40a
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750499"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926455"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>WCF Web Service Reference Provider 도구 사용
 
@@ -26,9 +26,10 @@ ms.locfileid: "64750499"
 
 > [!NOTE]
 > **WCF Web Service Reference** 옵션은 다음과 같은 프로젝트 템플릿을 사용하여 만든 프로젝트에 적용할 수 있습니다.
-> * **Visual C#** > **.NET Core**
-> * **Visual C#** > **.NET Standard**
-> * **Visual C#** > **Web** > **ASP.NET Core Web Application**
+>
+> * **Visual C#**  >  **.NET Core**
+> * **Visual C#**  >  **.NET Standard**
+> * **Visual C#**  > **Web** > **ASP.NET Core Web Application**
 
 이 문서에서는 **ASP.NET Core 웹 애플리케이션** 프로젝트 템플릿을 예로 사용하여 WCF 서비스 참조를 프로젝트에 추가하는 과정을 안내합니다.
 

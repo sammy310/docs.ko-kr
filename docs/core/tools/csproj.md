@@ -2,12 +2,12 @@
 title: .NET Core용 csproj 형식에 대한 추가 사항
 description: 기존 및 .NET Core csproj 파일 간의 차이점에 대해 알아보기
 ms.date: 04/08/2019
-ms.openlocfilehash: a9b1caf6068a7161258a6825ed16894ac41b3be7
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 13239b5235138cc6994841bbb81f8f12e661e337
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397532"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969838"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core용 csproj 형식에 대한 추가 사항
 
@@ -264,7 +264,7 @@ UI 표시를 위한 패키지에 대한 자세한 설명입니다.
 
 ### <a name="packagelicenseexpression"></a>PackageLicenseExpression
 
-[SPDX 라이선스 식별자](https://spdx.org/licenses/) 또는 식입니다. 예를 들어, `Apache-2.0`을 입력합니다.
+[SPDX 라이선스 식별자](https://spdx.org/licenses/) 또는 식입니다. 예: `Apache-2.0`.
 
 [SPDX 라이선스 식별자](https://spdx.org/licenses/)에서 전체 식별자 목록을 확인할 수 있습니다. 라이선스 형식 식을 사용하는 경우, NuGet.org에서는 OSI 또는 FSF 승인된 라이선스만 허용합니다.
 
@@ -389,7 +389,7 @@ key=value 쌍의 세미콜론으로 구분된 목록입니다.
 
 ## <a name="assemblyinfo-properties"></a>AssemblyInfo 속성
 
-일반적으로 *AssemblyInfo* 파일에 있는 [어셈블리 특성](../../framework/app-domains/set-assembly-attributes.md)은 이제 속성에서 자동으로 생성됩니다.
+일반적으로 *AssemblyInfo* 파일에 있는 [어셈블리 특성](../../standard/assembly/set-attributes.md)은 이제 속성에서 자동으로 생성됩니다.
 
 ### <a name="properties-per-attribute"></a>특성별 속성
 

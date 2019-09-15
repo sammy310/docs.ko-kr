@@ -3,16 +3,16 @@ title: dotnet new에 대한 사용자 지정 템플릿
 description: 모든 형식의 .NET 프로젝트 또는 파일에 대한 사용자 지정 템플릿을 알아봅니다.
 author: thraka
 ms.date: 06/14/2019
-ms.openlocfilehash: d513965a60416392fb8acd15c9f89c8af0ec7876
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: be49e28d3aa09c9b3a3cb169ca39ff817a062b8f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660584"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849849"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new에 대한 사용자 지정 템플릿
 
-[.NET Core SDK](https://www.microsoft.com/net/download/core)에는 이미 설치되어 바로 사용할 수 있는 많은 템플릿이 포함되어 있습니다. [`dotnet new` 명령](dotnet-new.md)은 템플릿을 사용하는 방법일 뿐만 아니라 템플릿을 설치 및 제거하는 방법입니다. .NET Core 2.0부터 앱, 서비스, 도구 또는 클래스 라이브러리와 같은 모든 형식의 프로젝트에 대한 사용자 지정 템플릿을 만들 수 있습니다. 구성 파일과 같이 하나 이상의 종속 파일을 출력하는 템플릿도 만들 수 있습니다.
+[.NET Core SDK](https://dotnet.microsoft.com/download)에는 이미 설치되어 바로 사용할 수 있는 많은 템플릿이 포함되어 있습니다. [`dotnet new` 명령](dotnet-new.md)은 템플릿을 사용하는 방법일 뿐만 아니라 템플릿을 설치 및 제거하는 방법입니다. .NET Core 2.0부터 앱, 서비스, 도구 또는 클래스 라이브러리와 같은 모든 형식의 프로젝트에 대한 사용자 지정 템플릿을 만들 수 있습니다. 구성 파일과 같이 하나 이상의 종속 파일을 출력하는 템플릿도 만들 수 있습니다.
 
 NuGet *.nupkg* 파일을 직접 참조하거나 템플릿이 포함된 파일 시스템 디렉터리를 지정하여 NuGet 피드의 NuGet 패키지에서 사용자 지정 템플릿을 설치할 수 있습니다. 템플릿 엔진은 값을 바꾸고, 파일을 포함 및 제외하고, 템플릿 사용 시 사용자 지정 처리 작업을 실행할 수 있는 기능을 제공합니다.
 
@@ -22,7 +22,7 @@ NuGet *.nupkg* 파일을 직접 참조하거나 템플릿이 포함된 파일 �
 
 ### <a name="net-default-templates"></a>.NET 기본 템플릿
 
-[.NET Core SDK](https://www.microsoft.com/net/download/core)를 설치할 때 콘솔 앱, 클래스 라이브러리, 단위 테스트 프로젝트, ASP.NET Core 앱([Angular](https://angular.io/) 및 [React](https://facebook.github.io/react/) 프로젝트 포함) 및 구성 파일을 비롯한 프로젝트 및 파일을 만들 수 있는 12개 이상의 기본 제공 템플릿이 제공됩니다. 기본 제공 템플릿을 나열하려면 `-l|--list` 옵션과 함께 `dotnet new` 명령을 실행합니다.
+[.NET Core SDK](https://dotnet.microsoft.com/download)를 설치할 때 콘솔 앱, 클래스 라이브러리, 단위 테스트 프로젝트, ASP.NET Core 앱([Angular](https://angular.io/) 및 [React](https://facebook.github.io/react/) 프로젝트 포함) 및 구성 파일을 비롯한 프로젝트 및 파일을 만들 수 있는 12개 이상의 기본 제공 템플릿이 제공됩니다. 기본 제공 템플릿을 나열하려면 `-l|--list` 옵션과 함께 `dotnet new` 명령을 실행합니다.
 
 ```console
 dotnet new --list

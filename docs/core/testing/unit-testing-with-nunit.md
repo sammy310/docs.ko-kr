@@ -4,12 +4,12 @@ description: dotnet test 및 NUnit을 사용하여 샘플 솔루션을 단계별
 author: rprouse
 ms.date: 08/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 19aa97687c41cf4a4aac00bf6ca83bc27504b09d
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 4d378e68143192e2f56fb411ae6ee709af753750
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374123"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849669"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>NUnit 및 .NET Core를 사용한 C# 유닛 테스트
 
@@ -19,7 +19,7 @@ ms.locfileid: "70374123"
 
 ## <a name="prerequisites"></a>전제 조건
 
-- [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) 이상 버전.
+- [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 이상 버전.
 - 선택하는 텍스트 편집기 또는 코드 편집기입니다.
 
 ## <a name="creating-the-source-project"></a>소스 프로젝트 만들기

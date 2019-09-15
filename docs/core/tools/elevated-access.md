@@ -3,12 +3,12 @@ title: dotnet 명령에 대한 관리자 액세스 권한
 description: 관리자 액세스 권한이 필요한 dotnet 명령에 대한 모범 사례를 알아봅니다.
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: b57e434fbb29a9c85ddf5086888a5291c7767ac9
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: b6de87f375a584da25e160d79f51f1bc48f3c302
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105086"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969856"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>dotnet 명령에 대한 관리자 액세스 권한
 
@@ -26,6 +26,8 @@ ms.locfileid: "70105086"
 ## <a name="global-tool-installation"></a>글로벌 도구 설치
 
 다음 지침은 실행할 높은 권한이 필요한 .NET Core 도구를 설치, 실행 및 제거하는 권장 방법을 보여줍니다.
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 

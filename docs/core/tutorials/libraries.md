@@ -4,12 +4,12 @@ description: .NET Core CLI 도구를 사용하여 .NET Core 라이브러리를 �
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: d22f73b33c36357b7f8018d1620b240e18d91676
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 90d960c996acd5a34ffb2215344e123dabad1014
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202666"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849483"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>플랫폼 간 도구로 라이브러리 개발
 
@@ -17,7 +17,7 @@ ms.locfileid: "70202666"
 
 ## <a name="prerequisites"></a>전제 조건
 
-컴퓨터에 [.NET Core SDK 및 CLI](https://www.microsoft.com/net/core)를 설치해야 합니다.
+컴퓨터에 [.NET Core SDK 및 CLI](https://dotnet.microsoft.com/download)를 설치해야 합니다.
 
 .NET Framework 버전을 다루는 이 문서의 섹션에서는 [.NET Framework](https://dotnet.microsoft.com)가 설치된 Windows 컴퓨터가 필요합니다.
 
