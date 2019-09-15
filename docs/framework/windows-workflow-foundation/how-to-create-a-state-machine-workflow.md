@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 451f9581ae997ad86fee968fa978713db2049455
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e93f84f0bacf7ac205294c12c55afcab8d7319b7
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044396"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989818"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>방법: 상태 시스템 워크플로 만들기
 기본 제공 활동뿐 아니라 사용자 지정 활동에서도 워크플로를 구성할 수 있습니다. 이 항목에서는 <xref:System.Activities.Statements.StateMachine> 활동과 같은 기본 제공 활동 및 이전 [방법의 사용자 지정 활동을 모두 사용 하는 워크플로를 만드는 과정을 단계별로 설명 합니다. 작업](how-to-create-an-activity.md) 항목을 만듭니다. 이 워크플로는 숫자 추측 게임을 모델링합니다.  
@@ -157,21 +157,21 @@ ms.locfileid: "70044396"
   
 23. **If** 활동의 **Condition** 속성 값 상자에 다음 식을 입력 합니다.  
   
-    ```
-    Guess < Target  
+    ```text
+    Guess < Target
     ```  
   
 24. **도구 상자** 의 **기본 형식** 섹션에서 두 **WriteLine** **활동을 끌어 해당 활동의** **Then** 섹션에 있고 하나는 **Else** 섹션에 놓습니다.  
   
 25. **Then** 섹션에서 **WriteLine** 활동을 클릭 하 여 선택 하 고 **텍스트** 속성 값 상자에 다음 식을 입력 합니다.  
   
-    ```
+    ```text
     "Your guess is too low."  
     ```  
   
 26. **Else** 섹션에서 **WriteLine** 활동을 클릭 하 여 선택 하 고 **텍스트** 속성 값 상자에 다음 식을 입력 합니다.  
   
-    ```
+    ```text
     "Your guess is too high."  
     ```  
   

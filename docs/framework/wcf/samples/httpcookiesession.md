@@ -2,12 +2,12 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: f0c6cee2eb7ed9552452f95b71db7e942e84bcb0
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 71147d98ada3d9814cdbcc8d3e7e85cad4dee0f2
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044920"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989862"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 이 샘플에서는 세션 관리에 HTTP 쿠키를 사용하기 위해 사용자 지정 프로토콜 채널을 빌드하는 방법을 보여 줍니다. 이 채널을 통해 Windows Communication Foundation (WCF) 서비스와 ASMX 클라이언트 간 또는 WCF 클라이언트와 ASMX 서비스 간에 통신할 수 있습니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "70044920"
   
 - 채널 수신기가 열리면 채널 수신기는 내부 수신기로부터 내부 채널을 받습니다. 내부 수신기는 데이터그램 수신기이고 받은 채널의 수명은 수신기의 수명에서 분리되므로 내부 수신기를 닫고 내부 채널만 유지할 수 있습니다.  
   
-    ```  
+    ```csharp  
                 this.innerChannelListener.Open(timeoutHelper.RemainingTime());  
     this.innerChannel = this.innerChannelListener.AcceptChannel(timeoutHelper.RemainingTime());  
     this.innerChannel.Open(timeoutHelper.RemainingTime());  
@@ -50,7 +50,7 @@ ms.locfileid: "70044920"
   
 - 열기 프로세스가 완료되면 내부 채널에서 메시지를 받도록 메시지 루프를 설정합니다.  
   
-    ```  
+    ```csharp  
     IAsyncResult result = BeginInnerReceiveRequest();  
     if (result != null && result.CompletedSynchronously)  
     {  
@@ -65,13 +65,13 @@ ms.locfileid: "70044920"
   
 - 메시지가 도착하면 서비스 채널은 세션 식별자를 확인하고 적절한 세션 채널로 디멀티플렉싱됩니다. 채널 수신기는 세션 식별자를 세션 채널 인스턴스에 매핑하는 사전을 유지 관리합니다.  
   
-    ```  
+    ```csharp  
     Dictionary<string, IReplySessionChannel> channelMapping;  
     ```  
   
  `HttpCookieReplySessionChannel` 클래스는 <xref:System.ServiceModel.Channels.IReplySessionChannel>을 구현합니다. 채널 스택의 상위 수준에서는 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> 메서드를 호출하여 이 세션에 대한 요청을 읽습니다. 각 세션 채널에는 서비스 채널에서 채우는 개인 메시지 큐가 있습니다.  
   
-```  
+```csharp  
 InputQueue<RequestContext> requestQueue;  
 ```  
   
@@ -137,7 +137,7 @@ InputQueue<RequestContext> requestQueue;
   
  샘플을 실행하면 다음 출력이 표시됩니다.  
   
-```  
+```console  
 Simple binding:  
 AddItem(10000,2): ItemCount=2  
 AddItem(10550,5): ItemCount=7  
@@ -160,7 +160,7 @@ Press <ENTER> to terminate client.
   
 1. 다음 명령을 사용 하 여 ASP.NET 4.0을 설치 합니다.  
   
-    ```  
+    ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   

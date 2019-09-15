@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: 66dd61210e36210f5444eb05355612eeb75c155a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bca07bf776f20443c4ccd2af69fc8c0b4eec5a88
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790232"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991106"
 ---
 # <a name="wcf-data-services-overview"></a>WCF Data Services 개요
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]사용 하 여 웹 또는 인트라넷용 데이터 서비스를 만들고 사용할 수 있습니다. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]Uri로 주소를 지정할 수 있는 리소스로 데이터를 노출할 수 있습니다. 이렇게 하면 REST(Representational State Transfer)의 의미 체계, 특히 GET, PUT, POST, DELETE 등의 표준 HTTP 동사를 사용하여 데이터에 액세스하고 변경할 수 있습니다. 이 항목에서는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]에서 정의된 패턴 및 유용한 정보와 .NET Framework 기반 애플리케이션에서 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 활용하기 위해 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]에서 제공하는 기능에 대해 간략하게 설명합니다.  
@@ -18,9 +18,9 @@ ms.locfileid: "70790232"
 ## <a name="address-data-as-resources"></a>리소스로 데이터 주소 지정  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]는 URI로 주소를 지정할 수 있는 리소스로 데이터를 노출합니다. 리소스 경로는 엔터티 데이터 모델의 엔터티-관계 규칙을 기반으로 생성됩니다. 이 모델에서 엔터티는 고객, 주문, 항목 및 제품과 같이 응용 프로그램 도메인에 있는 데이터의 작업 단위를 나타냅니다. 자세한 내용은 [엔터티 데이터 모델](../adonet/entity-data-model.md)를 참조 하세요.  
   
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]에서는 엔터티 형식 인스턴스가 포함된 엔터티 집합으로 엔터티 리소스의 주소를 지정합니다. 예를 들어, URI `http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders` 는 `CustomerID` 값이 인 고객과 관련 된 `Northwind` 데이터 서비스의 모든 주문을 반환 합니다.`ALFKI.`  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]에서는 엔터티 형식 인스턴스가 포함된 엔터티 집합으로 엔터티 리소스의 주소를 지정합니다. 예를 들어, URI <https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders> 는 `CustomerID` 값이 인 고객과 관련 된 `Northwind` 데이터 서비스의 모든 주문을 반환 합니다.`ALFKI.`  
   
- 쿼리 식을 사용하면 필터링, 정렬 및 페이징과 같은 일반적인 쿼리 작업을 리소스에 대해 수행할 수 있습니다. 예를 들어, URI `http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=Freight gt 50`은 운송료가 $50보다 많은 주문만 반환하도록 리소스를 필터링합니다. 자세한 내용은 [데이터 서비스 리소스에 액세스](accessing-data-service-resources-wcf-data-services.md)를 참조 하세요.  
+ 쿼리 식을 사용하면 필터링, 정렬 및 페이징과 같은 일반적인 쿼리 작업을 리소스에 대해 수행할 수 있습니다. 예를 들어 URI <https://services.odata.org/Northwind/Northwind.svc/Customers( ' ALFKI ')/Orders? $filter = freight gt 50 >는 운송비가 $50 이상인 주문만 반환 하도록 리소스를 필터링 합니다. 자세한 내용은 [데이터 서비스 리소스에 액세스](accessing-data-service-resources-wcf-data-services.md)를 참조 하세요.  
   
 ## <a name="interoperable-data-access"></a>상호 운용 가능한 데이터 액세스  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]는 표준 인터넷 프로토콜을 기반으로 하 여 데이터 서비스를 .NET Framework를 사용 하지 않는 응용 프로그램과 상호 운용할 수 있도록 합니다. 표준 Uri를 사용 하 여 데이터를 처리할 수 있으므로 응용 프로그램은 Representational State Transfer (REST)의 의미 체계, 특히 GET, PUT, POST 및 DELETE의 표준 HTTP 동사를 사용 하 여 데이터에 액세스 하 고 변경할 수 있습니다. 이렇게 하면 표준 HTTP 프로토콜을 통해 전송되는 데이터를 구문 분석하고 액세스할 수 있는 모든 클라이언트에서 해당 서비스에 액세스할 수 있습니다.  

@@ -2,12 +2,12 @@
 title: OperationContext 액세스
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
-ms.openlocfilehash: 8d1c8543180a282a1b196393e5823dc3686aa16e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: dea990e275125dc1cd2255b88e506d363c3ac78e
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038416"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989384"
 ---
 # <a name="accessing-operationcontext"></a>OperationContext 액세스
 이 샘플에서는 메시징 활동 (<xref:System.ServiceModel.Activities.Receive> 및 <xref:System.ServiceModel.Activities.Send>)을 사용자 지정 범위 활동에 사용 하 여 나가는 메시지나 들어오는 <xref:System.ServiceModel.OperationContext.Current%2A> 메시지 내의 사용자 지정 메시지 헤더에 액세스 하 고 연결 하거나 검색 하는 방법을 보여 줍니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "70038416"
   
 1. 이 샘플에서는 HTTP 엔드포인트를 사용하여 워크플로 서비스를 노출합니다. 이 샘플을 실행 하려면 Visual Studio를 관리자 권한으로 실행 하거나 관리자 권한 프롬프트에서 다음 명령을 실행 하 여 적절 한 Acl을 추가 하 여 적절 한 URL Acl을 추가 해야 합니다 (자세한 내용은 [HTTP 및 HTTPS 구성](https://go.microsoft.com/fwlink/?LinkId=70353) 참조). 도메인과 사용자 이름이 대체되었는지 확인합니다.  
   
-    ```  
+    ```console  
     netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%  
     ```  
   

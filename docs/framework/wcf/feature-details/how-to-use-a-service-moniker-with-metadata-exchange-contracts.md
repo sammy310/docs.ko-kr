@@ -2,12 +2,12 @@
 title: '방법: 메타데이터 교환 계약을 통해 서비스 모니커 사용'
 ms.date: 03/30/2017
 ms.assetid: c41a07e5-cb9d-45d6-9ea4-34511e227faf
-ms.openlocfilehash: 00aa1bbde95c0636391f213f830fc67b2dedf459
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e114bc2c046ba7145a91121ce23c82912680a048
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968800"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70968956"
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>방법: 메타데이터 교환 계약을 통해 서비스 모니커 사용
 몇 가지 새로운 WCF 서비스를 개발한 후 스크립트나 Visual Basic 6.0 응용 프로그램에서 이러한 서비스를 호출할 수 있도록 결정할 수 있습니다. 한 가지 방법은 WCF 클라이언트 어셈블리를 생성 하 고, 어셈블리를 COM에 등록 하 고, GAC에 어셈블리를 설치한 다음 Visual Basic 코드에서 COM 형식을 참조 하는 것입니다. 응용 프로그램을 배포 하는 경우 WCF 클라이언트 어셈블리도 함께 배포 해야 합니다. 사용자는 WCF 클라이언트 어셈블리를 COM에 등록하고 GAC에 배치해야 합니다. Wcf COM Interop를 사용 하면 WCF 클라이언트 어셈블리에 의존 하지 않고 동일한 서비스 호출을 수행할 수도 있습니다. WCF 모니커를 사용 하면 서비스 모니커가 형식을 추출 하는 데 사용 하는 Mex (metadata exchange) 끝점 URI를 지정 하 여 COM 호환 언어 (Visual Basic, VBScript, Visual Basic for Applications (VBA) 등)에서 WCF 서비스를 호출할 수 있습니다. 서비스에 대 한 정보입니다. 이 항목에서는 Mex 끝점을 지정 하는 WCF 모니커를 사용 하 여 WCF 시작 샘플을 호출 하는 방법을 설명 합니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "69968800"
   
 2. 다음 코드가 포함된 Visual Basic 스크립트 또는 Visual Basic 애플리케이션을 만듭니다.  
   
-    ```  
+    ```vb
     monString = "service:mexaddress=http://localhost/ServiceModelSamples/Service.svc/MEX"  
     monString = monString + ", address=http://localhost/ServiceModelSamples/Service.svc"  
     monString = monString + ", contract=ICalculator, contractNamespace=http://Microsoft.ServiceModel.Samples"  

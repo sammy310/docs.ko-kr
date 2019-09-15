@@ -2,12 +2,12 @@
 title: IIS(인터넷 정보 서비스) 서버 인증서 설치 지침
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-ms.openlocfilehash: 1bb9c8bb2fedc846f46f665fbfd00178e5c72975
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 300d689925d60998ef475ad63f3878bf6d066850
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044906"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989848"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>IIS(인터넷 정보 서비스) 서버 인증서 설치 지침
 IIS(인터넷 정보 서비스)와 안전하게 통신하는 샘플을 실행하려면 서버 인증서를 만들어 설치해야 합니다.  
@@ -15,7 +15,7 @@ IIS(인터넷 정보 서비스)와 안전하게 통신하는 샘플을 실행하
 ## <a name="step-1-creating-certificates"></a>1단계. 인증서 만들기  
  컴퓨터에 대 한 인증서를 만들려면 관리자 권한으로 Visual Studio에 대 한 개발자 명령 프롬프트를 열고 IIS와의 보안 통신을 사용 하는 각 샘플에 포함 된 Setup.exe를 실행 합니다. 이 일괄 처리 파일을 실행하기 전에 경로에 Makecert.exe가 포함된 폴더가 있는지 확인합니다. Setup.bat에서 인증서를 만드는 데 사용되는 명령은 다음과 같습니다.  
   
-```  
+```console  
 makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exchange -sk ServiceModelSamples-HTTPS-Key  
 ```  
   
@@ -49,7 +49,7 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
 > [!IMPORTANT]
 > 이 코드는 Makecert.exe로 만든 인증서 같은 테스트 인증서에만 필요합니다. 프로덕션 코드에 사용하지 않는 것이 좋습니다.  
   
-```  
+```csharp  
 PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  
 ```  
   
@@ -76,6 +76,6 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
 - 다음 명령을 사용하여 컴퓨터 인증서를 제거합니다.  
   
-    ```  
+    ```console  
     httpcfg delete ssl -i 0.0.0.0:443  
     ```

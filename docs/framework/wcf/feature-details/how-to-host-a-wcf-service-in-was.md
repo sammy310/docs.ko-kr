@@ -2,12 +2,12 @@
 title: '방법: WAS에서 WCF 서비스 호스팅'
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: cdab0876b65c190cd5d46f82218eb9fbb8234298
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: b6d3ace054260de1ca649fbf4bd54156bbea24ce
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988196"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972216"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>방법: WAS에서 WCF 서비스 호스팅
 이 항목에서는 WAS (Windows Process Activation service)에서 호스팅된 WCF (Windows Communication Foundation) 서비스를 만드는 데 필요한 기본 단계에 대해 간략하게 설명 합니다. WAS는 HTTP가 아닌 전송 프로토콜에서 사용하는 IIS(Internet Information Services) 기능의 일반화인 새 프로세스 활성화 서비스입니다. WCF는 수신기 어댑터 인터페이스를 사용 하 여 WCF (예: TCP, 명명 된 파이프 및 메시지 큐)에서 지 원하는 HTTP가 아닌 프로토콜을 통해 수신 되는 활성화 요청을 전달 합니다.  
@@ -66,9 +66,9 @@ ms.locfileid: "69988196"
   
 4. 다음 코드가 포함된 Service.svc 파일을 만듭니다.  
   
-    ```  
-    <%@ServiceHost language=c# Service="CalculatorService" %>   
-    ```  
+   ```
+   <%@ServiceHost language=c# Service="CalculatorService" %>
+   ```
   
 5. Service.svc 파일을 IIS 가상 디렉터리에 저장합니다.  
   
@@ -76,8 +76,8 @@ ms.locfileid: "69988196"
   
 1. 명령줄에서 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 를 사용 하 여 서비스 메타 데이터에서 코드를 생성 합니다.  
   
-    ```  
-    Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>   
+    ```console
+    Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
     ```  
   
 2. 생성된 클라이언트에는 클라이언트 구현에서 충족해야 하는 서비스 계약을 정의하는 `ICalculator` 인터페이스가 포함되어 있습니다.  

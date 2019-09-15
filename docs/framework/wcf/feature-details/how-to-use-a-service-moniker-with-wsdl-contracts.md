@@ -2,12 +2,12 @@
 title: '방법: WSDL 계약을 통해 서비스 모니커 사용'
 ms.date: 03/30/2017
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-ms.openlocfilehash: 80b0d034b92123862d0500106f81d4a566cac467
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7bc628952d4a7198f0b5545014ae931bbf73dab3
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968776"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70968998"
 ---
 # <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>방법: WSDL 계약을 통해 서비스 모니커 사용
 완전히 독립된 COM Interop 클라이언트가 필요한 경우가 있습니다. 호출하려는 서비스에서 MEX 엔드포인트를 노출하지 않을 수도 있고 WCF 클라이언트 DLL이 COM interop에 등록되지 않을 수도 있습니다. 이 경우 서비스를 설명하는 WSDL 파일을 만들어 WCF 서비스 모니커에 전달할 수 있습니다. 이 항목에서는 WCF WSDL 모니커를 사용하여 WCF 시작 샘플을 호출하는 방법에 대해 설명합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "69968776"
   
 6. Visual Basic 6.0을 열고 새 표준 .exe 파일을 만듭니다. 폼에 단추를 추가하고 단추를 두 번 클릭하여 다음 코드를 클릭 처리기에 추가합니다.  
   
-    ```  
+    ```vb
     ' Open the WSDL contract file and read it all into the wsdlContract string.  
     Const ForReading = 1  
     Set objFSO = CreateObject("Scripting.FileSystemObject")  

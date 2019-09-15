@@ -2,12 +2,12 @@
 title: 구성 샘플
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 52f8b5eae56db4b3a506d71c44ff2c49a8085067
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 87afeb0c562254e0f4cf6a85946a765a740c79ec
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040100"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990074"
 ---
 # <a name="configuration-sample"></a>구성 샘플
 이 샘플에서는 구성 파일을 사용하여 서비스를 검색 가능하게 만드는 방법을 보여 줍니다.  
@@ -67,9 +67,7 @@ ms.locfileid: "70040100"
   
  이 구성 파일에서는 추가 동작을 수정하여 이러한 간단한 단계 외의 작업도 수행할 수 있습니다. 특정 엔드포인트를 사용하여 검색 관련 정보를 제어할 수 있습니다. 즉, 사용자가 엔드포인트의 검색 가능 여부를 제어할 수 있으며 해당 엔드포인트를 <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A> 및 사용자 지정 XML 메타데이터로 표시할 수도 있습니다. 이렇게 하려면 애플리케이션 엔드포인트에 `behaviorConfiguration` 속성을 추가해야 합니다. 이 경우 다음 속성이 애플리케이션 엔드포인트에 추가됩니다.  
   
-```  
-behaviorConfiguration="endpointBehaviorConfiguration"  
-```  
+`behaviorConfiguration="endpointBehaviorConfiguration"`  
   
  이제 동작 구성 요소를 통해 검색 관련 특성을 제어할 수 있습니다. 이 경우 두 개의 범위가 애플리케이션 엔드포인트에 추가됩니다.  
   

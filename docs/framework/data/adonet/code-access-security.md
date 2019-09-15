@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 080432670c68623433a6b4e61adba77cf6fa5ec7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6340bc3fb2291601ba2a9812e0a438839f0718bc
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786864"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971816"
 ---
 # <a name="code-access-security-and-adonet"></a>코드 액세스 보안 및 ADO.NET
 .NET Framework는 역할 기반 보안과 CAS(코드 액세스 보안)를 제공합니다. 두 보안 기능 모두 CLR(공용 언어 런타임)이 제공하는 공용 인프라를 사용하여 구현되었습니다. 비관리 코드의 경우 대부분의 애플리케이션은 사용자 또는 보안 주체 권한으로 실행됩니다. 결과적으로 높은 권한을 가진 사용자가 악의적이거나 오류가 많은 소프트웨어를 실행하면 컴퓨터 시스템과 개인 데이터가 손상될 수 있습니다.  
@@ -50,12 +50,12 @@ ms.locfileid: "70786864"
  빌드하려는 애플리케이션 종류에 따라 데이터베이스에 역할 기반 권한을 구현하는 것을 고려해야 합니다. SQL Server의 역할 기반 보안에 대 한 자세한 내용은 [SQL Server 보안](./sql/sql-server-security.md)을 참조 하세요.  
   
 ## <a name="assemblies"></a>어셈블리  
- 어셈블리는 .NET Framework 애플리케이션에 대한 배포, 버전 제어, 재사용, 활성화 범위 및 보안 권한의 기본 단위를 형성합니다. 어셈블리는 함께 작동하도록 빌드되고 논리적 기능 단위를 형성하는 리소스 및 형식 컬렉션을 제공합니다. CLR의 경우 어셈블리 컨텍스트 외부에는 형식이 존재하지 않습니다. 어셈블리를 만들고 배포 하는 방법에 대 한 자세한 내용은 [어셈블리를 사용한 프로그래밍](../../app-domains/programming-with-assemblies.md)을 참조 하세요.  
+ 어셈블리는 .NET Framework 애플리케이션에 대한 배포, 버전 제어, 재사용, 활성화 범위 및 보안 권한의 기본 단위를 형성합니다. 어셈블리는 함께 작동하도록 빌드되고 논리적 기능 단위를 형성하는 리소스 및 형식 컬렉션을 제공합니다. CLR의 경우 어셈블리 컨텍스트 외부에는 형식이 존재하지 않습니다. 어셈블리를 만들고 배포 하는 방법에 대 한 자세한 내용은 [어셈블리를 사용한 프로그래밍](../../../standard/assembly/program.md)을 참조 하세요.  
   
 ### <a name="strong-naming-assemblies"></a>어셈블리에 강력한 이름 지정  
  강력한 이름 또는 디지털 서명은 단순한 텍스트 이름, 버전 번호 및 문화권 정보(제공된 경우)를 포함하는 어셈블리의 ID에 공개 키와 디지털 서명이 추가되어 구성됩니다. 디지털 서명은 해당 프라이빗 키를 사용하여 어셈블리 파일에서 생성됩니다. 어셈블리 파일은 어셈블리를 구성하는 모든 파일의 이름과 해시가 들어 있는 어셈블리 매니페스트를 포함합니다.  
   
- 어셈블리에 강력한 이름을 지정하면 다른 소프트웨어에서 애플리케이션이나 구성 요소를 명시적으로 참조하는 데 사용할 수 있는 고유 ID가 애플리케이션이나 구성 요소에 지정됩니다. 강력한 이름을 지정하면 부적절한 코드가 포함되어 있는 어셈블리로 인해 어셈블리가 스푸핑되지 않도록 보호됩니다. 또한 강력한 이름을 지정하면 구성 요소의 다양한 버전 간에 버전 관리 일관성을 유지할 수 있습니다. GAC(전역 어셈블리 캐시)에 배포할 어셈블리에는 강력한 이름을 지정해야 합니다. 자세한 내용은 [강력한 이름의 어셈블리 만들기 및 사용](../../app-domains/create-and-use-strong-named-assemblies.md)을 참조하세요.  
+ 어셈블리에 강력한 이름을 지정하면 다른 소프트웨어에서 애플리케이션이나 구성 요소를 명시적으로 참조하는 데 사용할 수 있는 고유 ID가 애플리케이션이나 구성 요소에 지정됩니다. 강력한 이름을 지정하면 부적절한 코드가 포함되어 있는 어셈블리로 인해 어셈블리가 스푸핑되지 않도록 보호됩니다. 또한 강력한 이름을 지정하면 구성 요소의 다양한 버전 간에 버전 관리 일관성을 유지할 수 있습니다. GAC(전역 어셈블리 캐시)에 배포할 어셈블리에는 강력한 이름을 지정해야 합니다. 자세한 내용은 [강력한 이름의 어셈블리 만들기 및 사용](../../../standard/assembly/create-use-strong-named.md)을 참조하세요.  
   
 ## <a name="partial-trust-in-adonet-20"></a>ADO.NET 2.0에서의 부분 신뢰  
  ADO.NET 2.0에서 .NET Framework Data Provider for SQL Server, .NET Framework Data Provider for OLE DB, .NET Framework Data Provider for ODBC 및 .NET Framework Data Provider for Oracle은 현재 모두 부분적으로 신뢰할 수 있는 환경에서 실행됩니다. .NET Framework의 이전 릴리스의 경우, 부분적으로 신뢰할 수 있는 애플리케이션에서는 <xref:System.Data.SqlClient>만 지원되었습니다.  

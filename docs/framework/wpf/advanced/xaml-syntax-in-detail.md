@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 09f0a1b34e88be995fb9a386161a930457e4bb56
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: d48398f31c1452821292a6feb2867dbd2971e739
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168997"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991412"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 구문 정보
 이 항목에서는 XAML 구문의 요소를 설명 하는 데 사용 되는 용어를 정의 합니다. 이러한 용어는이 설명서의 나머지 부분 전체에서 자주 사용 됩니다. WPF 설명서와 XAML을 사용 하는 다른 프레임 워크 또는 system.xaml 수준에서 XAML 언어 지원에 의해 설정 된 기본 XAML 개념에 대해 자주 사용 됩니다. 이 항목에서는 [XAML 개요 (WPF)](xaml-overview-wpf.md)항목에서 소개 하는 기본 용어를 확장 합니다.  
@@ -112,7 +112,7 @@ ms.locfileid: "70168997"
   
  플래그 열거형의 경우 동작은 <xref:System.Enum.Parse%2A?displayProperty=nameWithType> 메서드를 기반으로 합니다. 각 값을 쉼표로 구분 하 여 플래그 열거에 대 한 값을 여러 개 지정할 수 있습니다. 그러나 플래그가 아닌 열거형 값은 결합할 수 없습니다. 예를 들어, 쉼표 구문을 사용 하 여 nonflag 열거형의 여러 <xref:System.Windows.Trigger> 조건에 대해 작동 하는을 만들 수 없습니다.  
   
-```  
+```xaml  
 <!--This will not compile, because Visibility is not a flagwise enumeration.-->  
 ...  
 <Trigger Property="Visibility" Value="Collapsed,Hidden">  
@@ -197,7 +197,7 @@ ms.locfileid: "70168997"
 ### <a name="xaml-content-property-values-must-be-contiguous"></a>XAML 콘텐츠 속성 값은 연속적 이어야 합니다.  
  XAML 콘텐츠 속성의 값은 해당 개체 요소에 대 한 다른 속성 요소 보다 먼저 또는 완전히 뒤에 지정 해야 합니다. 이는 XAML 콘텐츠 속성의 값이 문자열 또는 하나 이상의 개체로 지정 되는지 여부에 해당 합니다. 예를 들어 다음 태그는 구문 분석 하지 않습니다.  
   
-```  
+```xaml  
 <Button>I am a   
   <Button.Background>Blue</Button.Background>  
   blue button</Button>  
@@ -205,7 +205,7 @@ ms.locfileid: "70168997"
   
  콘텐츠 속성의 속성 요소 구문을 사용 하 여이 구문을 명시적으로 만든 경우 content 속성을 두 번 설정 했기 때문에이는 기본적으로 유효 하지 않습니다.  
   
-```xml  
+```xaml  
 <Button>  
   <Button.Content>I am a </Button.Content>  
   <Button.Background>Blue</Button.Background>  
@@ -215,7 +215,7 @@ ms.locfileid: "70168997"
   
  이와 유사한 잘못 된 예제는 content 속성이 컬렉션인 경우와 자식 요소가 속성 요소와 함께 사용 되는 경우입니다.  
   
-```xml  
+```xaml  
 <StackPanel>  
   <Button>This example</Button>  
   <StackPanel.Resources>  

@@ -2,12 +2,12 @@
 title: 큰 데이터 및 스트리밍
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: b35fa4a6ca694fc9611869c7fcb03debf911542d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 70e43eaf4dc77e07af8ec65faf9cf0fa9a7a0fe4
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911863"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991515"
 ---
 # <a name="large-data-and-streaming"></a>큰 데이터 및 스트리밍
 WCF (Windows Communication Foundation)는 XML 기반 통신 인프라입니다. XML 데이터는 일반적으로 [xml 1.0 사양](https://go.microsoft.com/fwlink/?LinkId=94838)에 정의 된 표준 텍스트 형식으로 인코딩되어 있으므로 연결 된 시스템 개발자와 설계자는 일반적으로 네트워크를 통해 전송 되는 메시지의 공간 (또는 크기)에 대해 염려 하 고 XML의 텍스트 기반 인코딩을 사용 하면 이진 데이터를 효율적으로 전송할 때 특별 한 과제가 발생 합니다.  
@@ -65,7 +65,7 @@ WCF (Windows Communication Foundation)는 XML 기반 통신 인프라입니다. 
   
  각각의 표준 바인딩에는 미리 구성된 인코더가 포함되며, Net* 접두사가 있는 바인딩에서는 이진 인코더를 사용하고(<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> 클래스를 포함하는 방법으로) <xref:System.ServiceModel.BasicHttpBinding> 및 <xref:System.ServiceModel.WSHttpBinding> 클래스에서는 기본적으로 텍스트 메시지 인코더(<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 클래스 사용)를 사용합니다.  
   
-|인코더 바인딩 요소|설명|  
+|인코더 바인딩 요소|Description|  
 |-----------------------------|-----------------|  
 |<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|텍스트 메시지 인코더는 모든 HTTP 기반 바인딩의 기본 인코더이며 상호 운용성이 중요한 모든 사용자 지정 바인딩에 적절합니다. 이 인코더에서는 이진 데이터를 특수 처리하지 않는 표준 SOAP 1.1/SOAP 1.2 텍스트 메시지를 읽고 씁니다. 메시지의 <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>속성이로 설정 된 경우 SOAP 봉투 래퍼가 출력에서 생략 되 고 메시지 본문 내용만 serialize 됩니다. <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType>|  
 |<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>|MTOM 메시지 인코더는 이진 데이터의 특수 처리를 구현하는 텍스트 인코더이며, 엄격한 경우별 최적화 유틸리티이기 때문에 표준 바인딩에서는 전혀 기본으로 사용되지 않습니다. MTOM 인코딩이 장점을 제공하는 임계값을 초과하는 이진 데이터가 메시지에 포함되어 있으면, 데이터가 메시지 봉투 뒤의 MIME 부분에 구체화됩니다. 이 단원의 뒷부분에 있는 MTOM 활성화를 참조하십시오.|  
@@ -99,7 +99,7 @@ WCF (Windows Communication Foundation)는 XML 기반 통신 인프라입니다. 
 ### <a name="programming-model"></a>프로그래밍 모델  
  애플리케이션에서 세 개의 기본 제공 인코더 중 어느 것을 사용해도, 이진 데이터 전송에 대한 프로그래밍 경험은 동일합니다. 데이터 형식을 기반으로 WCF가 데이터를 처리 하는 방법에 차이가 있습니다.  
   
-```  
+```csharp
 [DataContract]  
 class MyData  
 {  
@@ -190,7 +190,7 @@ class MyData
 ### <a name="programming-model-for-streamed-transfers"></a>스트리밍 전송의 프로그래밍 모델  
  스트리밍의 프로그래밍 모델은 간단합니다. 스트리밍 데이터를 받으려면 단일 <xref:System.IO.Stream> 형식 입력 매개 변수가 있는 작업 계약을 지정합니다. 스트리밍 데이터를 반환하려면 <xref:System.IO.Stream> 참조를 반환합니다.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IStreamedService  
 {  
@@ -209,7 +209,7 @@ public interface IStreamedService
   
  이 규칙은 메시지 계약에도 비슷하게 적용됩니다. 다음 메시지 계약에 표시되어 있는 것과 같이, 스트림에 해당되는 메시지 계약에는 본문 멤버가 하나만 있을 수 있습니다. 스트리밍으로 추가 정보를 전달하려는 경우 이 정보는 메시지 헤더에 포함되어 있어야 합니다. 메시지 본문은 스트림 콘텐츠용으로 단독으로 예약되었습니다.  
   
-```  
+```csharp
 [MessageContract]  
 public class UploadStreamMessage  
 {  

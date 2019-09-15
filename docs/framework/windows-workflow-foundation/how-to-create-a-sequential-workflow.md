@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: d94843e696848010791b1e22d06e4852d35bc68e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 61e3f01b1259536ff15d71526e91aef42069722e
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044416"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989697"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>방법: 순차 워크플로 만들기
 
@@ -40,7 +40,7 @@ ms.locfileid: "70044416"
 
 3. **인수 만들기**를 클릭 합니다.
 
-4. 이름 `MaxNumber` 상자에 를 입력 하 고 **방향** 드롭다운 목록에서 시작을 선택한 다음 **인수 형식** 드롭다운 목록에서 **Int32** 를 선택 하 고 enter 키를 눌러 인수를 저장 합니다.
+4. 이름 `MaxNumber` 상자에 를 입력 하 고 **방향** 드롭다운 목록 **에서 시작을 선택한 다음** **인수 형식** 드롭다운 목록에서 **Int32** 를 선택 하 고 enter 키를 눌러 인수를 저장 합니다.
 
 5. **인수 만들기**를 클릭 합니다.
 
@@ -130,7 +130,7 @@ ms.locfileid: "70044416"
 
 11. 새로 추가 된 **If** 활동의 **Condition** 속성 값 상자에 다음 식을 입력 합니다.
 
-    ```
+    ```text
     Guess < Target
     ```
 

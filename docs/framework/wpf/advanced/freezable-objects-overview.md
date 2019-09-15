@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: 854565e28e646ef57658e2bfdb7326d8453448d2
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 05cd3c27430146f575c23011f53995aa07aaf99e
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856078"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991491"
 ---
 # <a name="freezable-objects-overview"></a>Freezable 개체 개요
 
@@ -100,13 +100,13 @@ Freezable의 <xref:System.Windows.Freezable.Freeze%2A> 메서드를 호출 하�
 
 `Freeze` 특성을 사용 하려면 프레젠테이션 옵션 네임 스페이스 ( `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`)에 매핑해야 합니다. `PresentationOptions`이 네임 스페이스를 매핑하기 위한 권장 접두사는 다음과 같습니다.
 
-```
+```xaml
 xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
 ```
 
 모든 XAML 판독기는이 특성을 인식 하지 않으므로 [mc: ignorable 특성](mc-ignorable-attribute.md) 을 사용 하 여 `Presentation:Freeze` 특성을 무시할 수 있는 것으로 표시 하는 것이 좋습니다.
 
-```
+```xaml
 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 mc:Ignorable="PresentationOptions"
 ```

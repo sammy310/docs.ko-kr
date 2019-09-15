@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC31535
 ms.assetid: 6540c1d0-bb19-4051-a579-2e4f9094585e
-ms.openlocfilehash: 0c1526e32ddc64cb4124c6f8205d58deef911dd6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6eb46c6479adc69eaf65b34c69aa69977b4d62ef
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802481"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972387"
 ---
-# <a name="friend-assembly-reference-reference-is-invalid"></a>Friend 어셈블리 참조 \<참조 > 올바르지 않습니다
-Friend 어셈블리 참조 \<참조 > 올바르지 않습니다. 강력한 이름의 서명된 어셈블리는 InternalsVisibleTo 선언에 공개 키를 지정해야 합니다.  
+# <a name="friend-assembly-reference-reference-is-invalid"></a>Friend 어셈블리 참조 \<참조 > 잘못 되었습니다.
+Friend 어셈블리 참조 \<참조 > 잘못 되었습니다. 강력한 이름의 서명된 어셈블리는 InternalsVisibleTo 선언에 공개 키를 지정해야 합니다.  
   
- 어셈블리 이름을 전달 합니다 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성 생성자에는 강력한 이름의 어셈블리를 식별 하지만 포함 되지 않습니다는 `PublicKey` 특성입니다.  
+ <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성 생성자에 전달 된 어셈블리 이름은 강력한 이름의 어셈블리를 식별 하지만 특성은 `PublicKey` 포함 하지 않습니다.  
   
  **오류 ID:** BC31535  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-1. Friend 강력한 이름의 어셈블리에 대 한 공개 키를 결정 합니다. 어셈블리 이름의 부분에 전달 된 공개 키를 포함 합니다 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성 생성자를 사용 하 여는 `PublicKey` 특성입니다.  
+1. 강력한 이름의 friend 어셈블리에 대 한 공개 키를 확인 합니다. 특성을 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> `PublicKey` 사용 하 여 특성 생성자에 전달 된 어셈블리 이름의 일부로 공개 키를 포함 합니다.  
   
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Reflection.AssemblyName>
-- [Friend 어셈블리](../../../standard/assembly/friend-assemblies.md)
+- [Friend 어셈블리](../../../standard/assembly/friend.md)

@@ -2,12 +2,12 @@
 title: NativeActivity 기본 클래스
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-ms.openlocfilehash: d746bb92dab79e7e68075ad003c420e7e37ed683
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 604535e39937a75c6d268cf1abbc90dbcd506a16
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637508"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989558"
 ---
 # <a name="nativeactivity-base-class"></a>NativeActivity 기본 클래스
 
@@ -36,11 +36,11 @@ ms.locfileid: "65637508"
 
 1. OpenVisual Studio 2010.
 
-2. 선택 **파일**를 **새**를 차례로 **프로젝트**합니다. 선택 **Workflow 4.0** 아래에서 **Visual C#** 에 **프로젝트 형식** 창에서 선택한 합니다 **v2010** 노드. 선택 **활동 라이브러리** 에 **템플릿** 창입니다. 새 프로젝트의 이름을 HelloActivity로 지정합니다.
+2. **파일**, **새로 만들기**, **프로젝트**를 차례로 선택 합니다. **프로젝트 형식** 창에서 **Visual C#**  아래에 있는 **Workflow 4.0** 을 선택 하 고 **v2010** 노드를 선택 합니다. **템플릿** 창에서 **활동 라이브러리** 를 선택 합니다. 새 프로젝트의 이름을 HelloActivity로 지정합니다.
 
-3. HelloActivity 프로젝트에서 Activity1.xaml을 마우스 오른쪽 단추로 누르고 **삭제**합니다.
+3. HelloActivity 프로젝트에서 Activity1를 마우스 오른쪽 단추로 클릭 하 고 **삭제**를 선택 합니다.
 
-4. HelloActivity 프로젝트를 마우스 오른쪽 단추로 누르고 **추가**를 차례로 **클래스**합니다. 새 프로젝트의 이름을 HelloActivity.cs로 지정합니다.
+4. HelloActivity 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가**를 선택한 다음 **클래스**를 선택 합니다. 새 프로젝트의 이름을 HelloActivity.cs로 지정합니다.
 
 5. HelloActivity.cs 파일에서 다음 `using` 지시문을 추가합니다.
 
@@ -68,7 +68,7 @@ ms.locfileid: "65637508"
 
 9. <xref:System.Activities.NativeActivityContext> 개체를 사용하여 책갈피를 예약합니다. 책갈피를 만들고 예약하고 다시 시작하는 방법은 <xref:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks%2A>를 참조하세요.
 
-    ```
+    ```csharp
     protected override void Execute(NativeActivityContext context)
         {
             // Create a Bookmark and wait for it to be resumed.

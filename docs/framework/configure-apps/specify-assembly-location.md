@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: 43cd1d0edbb607f69f27661aae3372e93564b3b7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f13b19dcd0aceac969d9639e6230ad33c6cd8d84
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932329"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971542"
 ---
 # <a name="specifying-an-assemblys-location"></a>어셈블리 위치 지정
 어셈블리 위치를 지정 하는 방법에는 두 가지가 있습니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "69932329"
   
 ## <a name="see-also"></a>참고자료
 
-- [공용 언어 런타임의 어셈블리](../app-domains/assemblies-in-the-common-language-runtime.md)
-- [어셈블리를 사용한 프로그래밍](../app-domains/programming-with-assemblies.md)
+- [.NET 어셈블리](../../standard/assembly/index.md)
+- [어셈블리를 사용한 프로그래밍](../../standard/assembly/program.md)
 - [런타임에서 어셈블리를 찾는 방법](../deployment/how-the-runtime-locates-assemblies.md)
 - [구성 파일을 사용 하 여 앱 구성](index.md)

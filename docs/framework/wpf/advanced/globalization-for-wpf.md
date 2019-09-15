@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 2f651b68d845e062ad950bb626e30c755d6d9df6
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: f1147bf090af23c2f27bac14ab895657ccee60e3
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169156"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991554"
 ---
 # <a name="globalization-for-wpf"></a>WPF의 전역화
 이 항목에서는 글로벌 시장을 대상으로 응용 프로그램을 작성할 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 때 알아야 하는 문제를 소개 합니다. 전역화 프로그래밍 요소는 <xref:System.Globalization> 네임 스페이스의 .net에 정의 되어 있습니다.
@@ -39,7 +39,7 @@ ms.locfileid: "70169156"
 ### <a name="encoding"></a>인코딩
  에서 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 지원 되는 인코딩은 ASCII, [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] utf-16 및 u t f-8입니다. Encoding 문은 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 문서의 시작 부분에 있습니다. 인코딩 특성이 없으며 바이트 순서가 없으면 기본적으로 구문 분석기가 UTF-8로 설정됩니다. UTF-8과 UTF-16이 기본 인코딩입니다. UTF-7은 지원되지 않습니다. 다음 예제에서는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일에 utf-8 인코딩을 지정 하는 방법을 보여 줍니다.
 
-```
+```xaml
 ?xml encoding="UTF-8"?
 ```
 
@@ -51,7 +51,7 @@ ms.locfileid: "70169156"
 
  다음 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 예에서는 `fr-CA` language 특성을 사용 하 여 캐나다 프랑스어를 지정 합니다.
 
-```xml
+```xaml
 <TextBlock xml:lang="fr-CA">Découvrir la France</TextBlock>
 ```
 
@@ -173,7 +173,7 @@ ms.locfileid: "70169156"
 
  이 문제는 중립 언어 대체 특성을 설정하여 해결합니다. 애플리케이션 개발자가 선택적으로 기본 어셈블리에서 리소스를 제거하고 특정 문화권에 해당하는 위성 어셈블리에서 해당 리소스를 찾을 수 있게 지정할 수 있습니다. 이 프로세스를 제어 하려면를 <xref:System.Resources.NeutralResourcesLanguageAttribute>사용 합니다. <xref:System.Resources.NeutralResourcesLanguageAttribute> 클래스의 생성자에는 두 개의 시그니처가 있습니다. 하나는에서 <xref:System.Resources.UltimateResourceFallbackLocation> <xref:System.Resources.ResourceManager> 대체 리소스 (주 어셈블리 또는 위성 어셈블리)를 추출할 위치를 지정 하기 위해 매개 변수를 사용 합니다. 다음 예제에서는 이 특성을 사용하는 방법을 보여 줍니다. 최종 대체 (fallback) 위치에 대 한 코드 <xref:System.Resources.ResourceManager> 는에서 현재 실행 중인 어셈블리의 디렉터리에 있는 "de" 하위 디렉터리에 있는 리소스를 찾도록 합니다.
 
-```
+```csharp
 [assembly: NeutralResourcesLanguageAttribute(
     "de" , UltimateResourceFallbackLocation.Satellite)]
 ```

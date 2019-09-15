@@ -2,12 +2,12 @@
 title: 식-WF
 ms.date: 03/30/2017
 ms.assetid: c42341a9-43a1-462c-bffb-c5de004aa428
-ms.openlocfilehash: 93d437ae6d20f5d31d80ef3a40f409c589ae084e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1c79d4294ce1e7d6f6fc13e8220f88919c8f6021
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962417"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989744"
 ---
 # <a name="expressions"></a>표현식
 WF (Windows Workflow Foundation) 식은 결과를 반환 하는 작업입니다. 모든 식 활동은 활동의 반환 값으로 <xref:System.Activities.Activity%601>라는 <xref:System.Activities.OutArgument> 속성을 포함하는 <xref:System.Activities.Activity%601.Result%2A>에서 간접적으로 파생됩니다. [!INCLUDE[wf1](../../../includes/wf1-md.md)]는 연산자 활동을 통해 단일 워크플로 변수에 대한 액세스를 제공하는 <xref:System.Activities.Expressions.VariableValue%601> 및 <xref:System.Activities.Expressions.VariableReference%601> 등의 단순한 활동부터 결과를 생성하기 위해 전체 Visual Basic 언어에 대한 액세스를 제공하는 <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> 및 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> 등의 복잡한 활동까지 광범위한 식 활동과 함께 제공됩니다. <xref:System.Activities.CodeActivity%601> 또는 <xref:System.Activities.NativeActivity%601>에서 파생시켜서 추가 식 활동을 만들 수 있습니다.  
@@ -41,7 +41,7 @@ WF (Windows Workflow Foundation) 식은 결과를 반환 하는 작업입니다.
   
  코드에서 워크플로를 정의하면 모든 식 활동을 사용할 수 있습니다. 다음 예에서는 연산자 활동의 구성을 사용하여 숫자 세 개를 추가하는 방법을 보여 줍니다.  
   
-```  
+```csharp  
 Variable<int> a = new Variable<int>("a", 1);  
 Variable<int> b = new Variable<int>("b", 2);  
 Variable<int> c = new Variable<int>("c", 3);  
@@ -70,7 +70,7 @@ Sequence w = new Sequence
   
  다음 예와 같이 C# 람다 식을 사용하여 동일한 워크플로를 간략하게 표시할 수 있습니다.  
   
-```  
+```csharp  
 Variable<int> a = new Variable<int>("a", 1);  
 Variable<int> b = new Variable<int>("b", 2);  
 Variable<int> c = new Variable<int>("c", 3);  
@@ -91,7 +91,7 @@ Sequence w = new Sequence
   
  다음 예와 같이 Visual Basic 식 활동을 사용하여 워크플로를 표시할 수도 있습니다.  
   
-```  
+```vb  
 Variable<int> a = new Variable<int>("a", 1);  
 Variable<int> b = new Variable<int>("b", 2);  
 Variable<int> c = new Variable<int>("c", 3);  
@@ -113,7 +113,7 @@ Sequence w = new Sequence
 ## <a name="extending-available-expressions-with-custom-expression-activities"></a>사용자 지정 식 활동을 사용하여 사용 가능한 식 확장  
  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]의 식을 확장하여 추가 식 활동을 만들 수 있습니다. 다음 예에서는 정수 값 세 개의 합을 반환하는 활동을 보여 줍니다.  
   
-```  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -140,7 +140,7 @@ namespace ExpressionsDemo
   
  다음 예와 같이 이 새로운 활동을 사용하여 값 세 개를 추가한 이전 워크플로를 다시 쓸 수 있습니다.  
   
-```  
+```csharp  
 Variable<int> a = new Variable<int>("a", 1);  
 Variable<int> b = new Variable<int>("b", 2);  
 Variable<int> c = new Variable<int>("c", 3);  

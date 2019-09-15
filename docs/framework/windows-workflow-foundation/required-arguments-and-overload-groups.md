@@ -2,12 +2,12 @@
 title: 필수 인수 및 오버로드 그룹
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: 5249cbb127064ffa5023074481a47decad279128
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 84384e90be0036036477d9b4249832f544e17d08
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964909"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989306"
 ---
 # <a name="required-arguments-and-overload-groups"></a>필수 인수 및 오버로드 그룹
 활동을 실행하기 위해 특정 인수를 바인딩하도록 활동을 구성할 수 있습니다. `RequiredArgument` 특성은 활동의 특정 인수가 필수 인수임을 나타내고 `OverloadGroup` 특성은 필수 인수 범주를 그룹화하는 데 사용됩니다. 활동 작성자는 특성을 사용하여 단순 활동 유효성 검사 구성 또는 복합 활동 유효성 검사 구성을 제공할 수 있습니다.  
@@ -108,8 +108,8 @@ class CreateLocation: Activity
   
  [데이터베이스 액세스 활동](./samples/database-access-activities.md) 샘플에서 가져온 다음 예제에서는 두 개의 오버 로드 그룹인 `ConnectionString` 및 `ConfigFileSectionName`가 있습니다. 이 활동이 유효하려면 `ProviderName`과 `ConnectionString` 인수가 바인딩되어 있거나 `ConfigName` 인수가 바인딩되어 있어야 하지만 둘 다가 바인딩되어서는 안 됩니다.  
   
-```  
-Public class DbUpdate: AsyncCodeActivity  
+```csharp  
+public class DbUpdate: AsyncCodeActivity  
 {  
     [RequiredArgument]  
     [OverloadGroup("ConnectionString")]  

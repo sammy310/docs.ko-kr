@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: 052d6937846df39bd94d532e1b63ebe522dbf6c7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dc4c0336c8a67a1b4e70f71ba5f5406da1fbb2ff
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964685"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972385"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 이 모듈이 속할 어셈블리의 이름을 지정합니다.  
@@ -37,14 +37,14 @@ ms.locfileid: "69964685"
   
 - 참조 된 어셈블리에는 모듈이 빌드되는 어셈블리에 대 한 friend 어셈블리 액세스 권한이 부여 됩니다.  
   
- 모듈을 만드는 방법에 대 한 자세한 내용은 [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)을 참조 하세요. Friend 어셈블리에 대 한 자세한 내용은 [Friend 어셈블리](../../../standard/assembly/friend-assemblies.md)를 참조 하세요.  
+ 모듈을 만드는 방법에 대 한 자세한 내용은 [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)을 참조 하세요. Friend 어셈블리에 대 한 자세한 내용은 [Friend 어셈블리](../../../standard/assembly/friend.md)를 참조 하세요.  
   
 > [!NOTE]
 > 이 `-moduleassemblyname` 옵션은 Visual Studio 개발 환경에서 사용할 수 없습니다. 명령 프롬프트에서 컴파일하는 경우에만 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
 
-- [방법: 다중 파일 어셈블리 빌드](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [방법: 다중 파일 어셈블리 빌드](../../../framework/app-domains/build-multifile-assembly.md)
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)
@@ -52,4 +52,4 @@ ms.locfileid: "69964685"
 - [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
 - [.NET 어셈블리](../../../standard/assembly/index.md)
 - [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Friend 어셈블리](../../../standard/assembly/friend-assemblies.md)
+- [Friend 어셈블리](../../../standard/assembly/friend.md)

@@ -2,12 +2,12 @@
 title: 활동 대리자 사용
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-ms.openlocfilehash: 8c9d82f47f709a89455f41691526b6ac9718a01f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 63f550549456404b237067c98afdb18a8758dd7a
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004616"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989091"
 ---
 # <a name="using-activity-delegates"></a>활동 대리자 사용
 작업 대리자를 사용하면 활동 작성자는 활동 사용자가 활동 기반 처리기를 제공할 수 있는 특정 시그니처가 있는 콜백을 노출할 수 있습니다. 두 가지 형식의 작업 대리자를 사용할 수 있습니다. <xref:System.Activities.ActivityAction%601>은 반환 값이 없는 작업 대리자를 정의하는 데 사용되고 <xref:System.Activities.ActivityFunc%601>은 반환 값이 있는 작업 대리자를 정의하는 데 사용됩니다.
@@ -22,7 +22,7 @@ ms.locfileid: "62004616"
 
 actionArgument는 컬렉션의 개별 항목을 WriteLine으로 이동하는 데 사용됩니다. 워크플로가 호출되면 다음 출력이 콘솔에 표시됩니다.
 
-```
+```console
 HelloWorld.
 ```
 
@@ -30,9 +30,9 @@ HelloWorld.
 
 [!code-csharp[CFX_ActivityExample#7](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]
 
-개체 이니셜라이저에 대 한 자세한 내용은 참조 하세요. [방법: 생성자를 호출 하지 않고 개체 초기화 (C# 프로그래밍 가이드)](https://go.microsoft.com/fwlink/?LinkId=161015) 하 고 [방법: 개체 이니셜라이저를 사용 하 여 개체 선언](https://go.microsoft.com/fwlink/?LinkId=161016)합니다.
+개체 이니셜라이저 [에 대 한 자세한 내용은 방법: 생성자를 호출 하지 않고 개체 초기화C# (프로그래밍 가이드](https://go.microsoft.com/fwlink/?LinkId=161015) ) [및 방법: 개체 이니셜라이저](https://go.microsoft.com/fwlink/?LinkId=161016)를 사용 하 여 개체를 선언 합니다.
 
-다음 예제에서는 <xref:System.Activities.Statements.TryCatch> 활동이 워크플로에 사용됩니다. <xref:System.ApplicationException>이 워크플로를 통해 throw되고 <xref:System.Activities.Statements.Catch%601> 활동을 통해 처리됩니다. 에 대 한 처리기를 <xref:System.Activities.Statements.Catch%601> 활동의 활동 동작은 <xref:System.Activities.Statements.WriteLine> 사용 하 여 작업 및 예외 세부 정보 전달 됩니다 합니다 `ex` <xref:System.Activities.DelegateInArgument%601>합니다.
+다음 예제에서는 <xref:System.Activities.Statements.TryCatch> 활동이 워크플로에 사용됩니다. <xref:System.ApplicationException>이 워크플로를 통해 throw되고 <xref:System.Activities.Statements.Catch%601> 활동을 통해 처리됩니다. 활동의 작업 동작 <xref:System.Activities.Statements.Catch%601> <xref:System.Activities.Statements.WriteLine> 에 대 한 처리기는 활동 이며 예외 세부 정보는를 사용 하 여 `ex` <xref:System.Activities.DelegateInArgument%601>전달 됩니다.
 
 [!code-csharp[CFX_WorkflowApplicationExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#33)]
 

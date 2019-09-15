@@ -2,12 +2,12 @@
 title: ETW 추적
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: c484e3438ad3512bd6186297f3edf8068a60795e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: fb1a1dc77ee6a7be25aade18f76f89464bef0387
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044995"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989956"
 ---
 # <a name="etw-tracing"></a>ETW 추적
 이 샘플에서는 ETW(Windows용 이벤트 추적) 및 이 샘플과 함께 제공된 `ETWTraceListener`를 사용하여 E2E(엔드투엔드) 추적을 구현하는 방법을 보여 줍니다. 이 샘플은 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 을 기반으로 하며 ETW 추적을 포함 합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "70044995"
   
  ETW 추적 수신기는 순환 로깅을 지원합니다. 이 기능을 사용 하도록 설정 하려면 **시작**, **실행** 으로 이동 `cmd` 하 고를 입력 하 여 명령 콘솔을 시작 합니다. 다음 명령에서 `<logfilename>` 매개 변수를 로그 파일의 이름으로 바꿉니다.  
   
-```  
+```console  
 logman create trace Wcf -o <logfilename> -p "{411a0819-c24b-428c-83e2-26b41091702e}" -f bincirc -max 1000  
 ```  
   
@@ -64,14 +64,14 @@ logman create trace Wcf -o <logfilename> -p "{411a0819-c24b-428c-83e2-26b4109170
   
  세션을 시작하려면 다음 명령을 입력합니다.  
   
-```  
-Logman start Wcf  
+```console  
+logman start Wcf  
 ```  
   
  로깅을 완료한 후 다음 명령을 사용하여 세션을 중지할 수 있습니다.  
   
-```  
-Logman stop Wcf  
+```console  
+logman stop Wcf  
 ```  
   
  이 프로세스는 [서비스 추적 뷰어 도구 (svctraceviewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) 또는 Tracerpt를 비롯 하 여 선택한 도구를 사용 하 여 처리할 수 있는 이진 순환 로그를 생성 합니다.  

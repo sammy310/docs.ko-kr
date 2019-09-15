@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: bff89f1d81b16c8c66d73901ef951626f6d2cb9e
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: a062095885e6c1fc8816a78847968b1c250eabf8
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400628"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991455"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>연습: Windows Forms에서 WPF 복합 컨트롤 호스팅
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 응용 프로그램을 만들기 위한 다양한 환경을 제공합니다. 그러나 코드에 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 상당한 투자를 한 경우 처음부터 다시 작성 하지 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 않고 기존 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램을 확장 하는 것이 더 효과적일 수 있습니다. 일반적인 시나리오는 Windows Forms 응용 프로그램 내에서로 구현 된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 하나 이상의 컨트롤을 포함 하려는 경우입니다. WPF 컨트롤을 사용자 지정 하는 방법에 대 한 자세한 내용은 [컨트롤 사용자 지정](../controls/control-customization.md)을 참조 하세요.  
@@ -116,7 +116,7 @@ ms.locfileid: "68400628"
 #### <a name="the-basic-structure-of-the-code-behind-file"></a>코드 숨김 파일의 기본 구조  
  코드 숨겨진 파일은 단일 네임 스페이스로 구성 되며, `MyControls`이 네임 스페이스에는 `MyControl1` 및 `MyControlEventArgs`라는 두 개의 클래스가 포함 됩니다.  
   
-```  
+```csharp  
 namespace MyControls  
 {  
   public partial class MyControl1 : Grid  
@@ -305,7 +305,7 @@ namespace MyControls
 ### <a name="handling-onbuttonclick"></a>OnButtonClick 처리  
  이 `OnButtonClick` 이벤트는 사용자가 **확인** 또는 **취소** 단추를 클릭할 때 발생 합니다.  
   
- 이벤트 처리기는 이벤트 인수의 `IsOK` 필드를 확인 하 여 클릭 한 단추를 확인 합니다. `lbl`  데이터<xref:System.Windows.Forms.Label> 변수는 앞에서 설명한 컨트롤에 해당 합니다. 사용자가 **확인** 단추를 클릭 하면 컨트롤의 <xref:System.Windows.Controls.TextBox> 컨트롤에 있는 데이터가 해당 <xref:System.Windows.Forms.Label> 컨트롤에 할당 됩니다. 사용자가 **취소**를 <xref:System.Windows.Forms.Label.Text%2A> 클릭 하면 값이 기본 문자열로 설정 됩니다.  
+ 이벤트 처리기는 이벤트 인수의 `IsOK` 필드를 확인 하 여 클릭 한 단추를 확인 합니다. `lbl` 데이터<xref:System.Windows.Forms.Label> 변수는 앞에서 설명한 컨트롤에 해당 합니다. 사용자가 **확인** 단추를 클릭 하면 컨트롤의 <xref:System.Windows.Controls.TextBox> 컨트롤에 있는 데이터가 해당 <xref:System.Windows.Forms.Label> 컨트롤에 할당 됩니다. 사용자가 **취소**를 <xref:System.Windows.Forms.Label.Text%2A> 클릭 하면 값이 기본 문자열로 설정 됩니다.  
   
  다음 단추 클릭 이벤트 처리기 코드를 `Form1` 클래스에 추가 합니다.  
   

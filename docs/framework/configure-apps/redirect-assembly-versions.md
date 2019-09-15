@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-ms.openlocfilehash: c9670b00ea4a6b552469b7f33e924b8ab128d9d0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c43ba119b92d4dc1a50b03d6359555ad25f37d08
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948020"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971564"
 ---
 # <a name="redirecting-assembly-versions"></a>어셈블리 버전 리디렉션
 
@@ -157,8 +157,8 @@ ms.locfileid: "69948020"
 - [방법: 자동 바인딩 리디렉션 사용 설정 및 해제](how-to-enable-and-disable-automatic-binding-redirection.md)
 - [\<bindingRedirect > 요소](./file-schema/runtime/bindingredirect-element.md)
 - [어셈블리 바인딩 리디렉션 보안 권한](assembly-binding-redirection-security-permission.md)
-- [공용 언어 런타임의 어셈블리](../app-domains/assemblies-in-the-common-language-runtime.md)
-- [어셈블리를 사용한 프로그래밍](../app-domains/programming-with-assemblies.md)
+- [.NET 어셈블리](../../standard/assembly/index.md)
+- [어셈블리를 사용한 프로그래밍](../../standard/assembly/program.md)
 - [런타임에서 어셈블리를 찾는 방법](../deployment/how-the-runtime-locates-assemblies.md)
 - [응용 프로그램 구성](index.md)
 - [런타임 설정 스키마](./file-schema/runtime/index.md)

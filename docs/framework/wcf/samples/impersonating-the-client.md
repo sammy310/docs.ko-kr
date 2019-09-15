@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 61befdcaf1381120dba6f72ba592dade09d0490a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 40bde7d9bd2735dfd6f1a18f9359533db0e11724
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968337"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989832"
 ---
 # <a name="impersonating-the-client"></a>Impersonating the Client
 Impersonation 샘플에서는 서비스가 호출자를 대신하여 시스템 리소스에 액세스할 수 있도록 서비스에서 호출자 애플리케이션을 가장하는 방법을 보여 줍니다.  
@@ -117,7 +117,7 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
   
 4. 서비스가 호출자를 가장하는 것을 보기 위해 서비스가 실행 중인 계정이 아닌 다른 계정으로 클라이언트를 실행합니다. 이렇게 하려면 명령 프롬프트에서 다음을 입력합니다.  
   
-    ```  
+    ```console  
     runas /user:<machine-name>\<user-name> client.exe  
     ```  
   

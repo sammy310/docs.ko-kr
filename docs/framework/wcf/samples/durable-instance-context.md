@@ -2,21 +2,21 @@
 title: 영속 인스턴스 컨텍스트
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 40af70c69438fc5eaa688963db6710fa6fde0a42
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 85a00c6d100001fad429f1e58d716f0d7bedcceb
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425550"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989981"
 ---
 # <a name="durable-instance-context"></a>영속 인스턴스 컨텍스트
 
-이 샘플에는 영 속 인스턴스 컨텍스트를 사용 하도록 설정 하려면 Windows Communication Foundation (WCF) 런타임 사용자 지정 하는 방법을 보여 줍니다. 여기서는 SQL Server 2005를 백업 저장소(이 경우 SQL Server 2005 Express)로 사용합니다. 사용자 지정 스토리지 메커니즘에 액세스하는 방법도 제공합니다.
+이 샘플에서는 영 속 인스턴스 컨텍스트를 사용 하도록 WCF (Windows Communication Foundation) 런타임을 사용자 지정 하는 방법을 보여 줍니다. 여기서는 SQL Server 2005를 백업 저장소(이 경우 SQL Server 2005 Express)로 사용합니다. 사용자 지정 스토리지 메커니즘에 액세스하는 방법도 제공합니다.
 
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.
 
-이 샘플에서는 채널 계층 및 wcf 서비스 모델 계층을 확장 합니다. 따라서 구현 세부 정보를 검토하려면 먼저 기본 개념을 이해해야 합니다.
+이 샘플은 WCF의 채널 계층과 서비스 모델 계층을 모두 확장 하는 과정을 포함 합니다. 따라서 구현 세부 정보를 검토하려면 먼저 기본 개념을 이해해야 합니다.
 
 영속 인스턴스 컨텍스트는 실제 시나리오에서 매우 자주 발견됩니다. 예를 들어, 장바구니 애플리케이션에는 중간에 쇼핑을 일시 중지하고 다른 날 계속 진행할 수 있는 기능이 있습니다. 따라서 다음날 장바구니를 방문하면 원래 컨텍스트가 복원됩니다. 서버의 장바구니 애플리케이션에서는 연결이 끊어진 동안 장바구니 인스턴스를 유지 관리하지 않습니다. 대신 해당 상태를 영속 스토리지 매체에 유지하여 복원된 컨텍스트에 새 인스턴스를 생성할 때 사용합니다. 따라서 동일한 컨텍스트에 대해 제공되는 서비스 인스턴스는 이전 인스턴스와 동일하지 않습니다. 즉, 메모리 주소가 동일하지 않습니다.
 
@@ -122,7 +122,7 @@ if (isFirstMessage)
 }
 ```
 
-이러한 채널 구현을 WCF 채널 런타임에 추가 됩니다는 `DurableInstanceContextBindingElement` 클래스 및 `DurableInstanceContextBindingElementSection` 클래스를 적절 하 게 합니다. 참조 된 [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) 채널 바인딩 요소 및 바인딩 요소 섹션에 대 한 자세한 내용은 샘플 설명서.
+이러한 채널 구현은 클래스 및 `DurableInstanceContextBindingElement` `DurableInstanceContextBindingElementSection` 클래스에 의해 WCF 채널 런타임에 적절히 추가 됩니다. 바인딩 요소 및 바인딩 요소에 대 한 자세한 내용은 [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) channel 샘플 설명서를 참조 하세요.
 
 ## <a name="service-model-layer-extensions"></a>서비스 모델 계층 확장명
 
@@ -232,15 +232,15 @@ else
 
 영구 스토리지에서 인터페이스를 읽고 쓰는 데 필요한 인프라를 구현합니다. 이제 서비스 동작을 변경하는 데 필요한 단계를 수행해야 합니다.
 
-이 프로세스의 첫 번째 단계로 채널 계층을 통해 현재 InstanceContext에 도달한 컨텍스트 ID를 저장해야 합니다. InstanceContext는 런타임 구성 요소로, WCF 발송자 및 서비스 인스턴스 간의 링크 역할입니다. 이 구성 요소를 사용하면 서비스 인스턴스에 추가 상태 및 동작을 제공할 수 있습니다. 세션 통신에서는 첫 번째 메시지에 대해서만 컨텍스트 ID를 전송하기 때문에 이 구성 요소가 매우 중요합니다.
+이 프로세스의 첫 번째 단계로 채널 계층을 통해 현재 InstanceContext에 도달한 컨텍스트 ID를 저장해야 합니다. InstanceContext는 WCF 디스패처와 서비스 인스턴스 간의 링크 역할을 하는 런타임 구성 요소입니다. 이 구성 요소를 사용하면 서비스 인스턴스에 추가 상태 및 동작을 제공할 수 있습니다. 세션 통신에서는 첫 번째 메시지에 대해서만 컨텍스트 ID를 전송하기 때문에 이 구성 요소가 매우 중요합니다.
 
-WCF를 사용 하면 새 상태 및 확장 가능한 개체 패턴을 사용 하는 동작을 추가 하 여 해당 InstanceContext 런타임 구성 요소를 확장 합니다. 새로운 기능을 사용 하 여 기존 런타임 클래스를 확장 하거나 또는 개체에 새 상태 기능을 추가할 확장명 가능한 개체 패턴 WCF에서 사용 됩니다. 세 가지 인터페이스에에서 있는 확장명 가능한 개체 패턴-IExtensibleObject\<T >를 IExtension\<T >를 및 IExtensionCollection\<T >:
+WCF를 사용 하면 확장 가능한 개체 패턴을 사용 하 여 새 상태 및 동작을 추가 하 여 InstanceContext 런타임 구성 요소를 확장할 수 있습니다. 확장 가능한 개체 패턴은 새 기능으로 기존 런타임 클래스를 확장 하거나 개체에 새 상태 기능을 추가 하기 위해 WCF에서 사용 됩니다. 확장 가능한 개체 패턴에는 iextensibleobject<t>\<t >, iextension\<t > 및 iextensioncollection\<t >의 세 가지 인터페이스가 있습니다.
 
-- IExtensibleObject\<T > 인터페이스는 해당 기능을 사용자 지정 하는 확장을 허용 하는 개체에 의해 구현 됩니다.
+- Iextensibleobject<t>\<T > 인터페이스는 해당 기능을 사용자 지정 하는 확장을 허용 하는 개체에 의해 구현 됩니다.
 
-- IExtension\<T > 인터페이스 T. 형식의 클래스 확장인 개체에 의해 구현 됩니다
+- Iextension\<t > 인터페이스는 t 형식의 클래스를 확장 하는 개체에 의해 구현 됩니다.
 
-- IExtensionCollection\<T > 인터페이스는 형식에 따라 IExtensions를 검색할 수 있는 IExtensions의 컬렉션입니다.
+- Iextensioncollection\<T > 인터페이스는 형식으로 iextension을 검색할 수 있도록 하는 iextensions의 컬렉션입니다.
 
 따라서 IExtension 인터페이스를 구현하고 필요한 상태를 정의하는 InstanceContextExtension 클래스를 만들어 컨텍스트 ID를 저장해야 합니다. 이 클래스는 사용할 스토리지 관리자를 보유하는 상태도 제공합니다. 새 상태가 저장된 다음에는 수정할 수 없습니다. 따라서 상태가 생성되어 인스턴스에 제공되고 저장된 다음에는 읽기 전용 속성으로만 액세스할 수 있습니다.
 
@@ -282,7 +282,7 @@ public void Initialize(InstanceContext instanceContext, Message message)
 
 앞에서 설명한 대로 `Properties` 클래스의 `Message` 컬렉션에서 컨텍스트 ID를 읽고 확장 클래스의 생성자에게 전달합니다. 이 샘플에서는 계층 간에 일관된 방식으로 정보를 교환할 수 있는 방법을 보여 줍니다.
 
-다음으로 중요한 단계는 서비스 인스턴스 생성 프로세스를 재정의하는 단계입니다. WCF는 사용자 지정 인스턴스 동작을 구현 하 고 IInstanceProvider 인터페이스를 사용 하 여 런타임에 연결할 수 있습니다. 이 작업을 수행하기 위해 새 `InstanceProvider` 클래스가 구현됩니다. 생성자에는 인스턴스 공급자에 필요한 서비스 유형이 허용되며, 이 서비스 유형은 나중에 새 인스턴스를 만드는 데 사용됩니다. `GetInstance` 구현에서는 지속적인 인스턴스를 찾는 스토리지 관리자 인스턴스를 만듭니다. 이 구현에서 `null`을 반환하면 서비스 유형의 새 인스턴스가 인스턴스화되어 호출자에게 반환됩니다.
+다음으로 중요한 단계는 서비스 인스턴스 생성 프로세스를 재정의하는 단계입니다. WCF를 사용 하면 사용자 지정 인스턴스화 동작을 구현 하 고 IInstanceProvider 인터페이스를 사용 하 여 런타임에 연결할 수 있습니다. 이 작업을 수행하기 위해 새 `InstanceProvider` 클래스가 구현됩니다. 생성자에는 인스턴스 공급자에 필요한 서비스 유형이 허용되며, 이 서비스 유형은 나중에 새 인스턴스를 만드는 데 사용됩니다. `GetInstance` 구현에서는 지속적인 인스턴스를 찾는 스토리지 관리자 인스턴스를 만듭니다. 이 구현에서 `null`을 반환하면 서비스 유형의 새 인스턴스가 인스턴스화되어 호출자에게 반환됩니다.
 
 ```csharp
 public object GetInstance(InstanceContext instanceContext, Message message)
@@ -353,9 +353,9 @@ foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)
 
 지금까지의 내용을 요약하면 이 샘플에서는 사용자 지정 컨텍스트 ID 교환을 위해 사용자 지정 유선 프로토콜을 사용하는 채널을 생성하고 기본 인스턴스 동작을 덮어써서 영구 스토리지에서 인스턴스를 로드했습니다.
 
-이제 서비스 인스턴스를 영구 스토리지에 저장하는 방법만 남아 있습니다. 앞에서 설명한 대로 상태를 저장하는 데 필요한 기능은 `IStorageManager`에 이미 구현되어 있습니다. 이제 해야 통합이 WCF 런타임을 사용 합니다. 서비스 구현 클래스의 메서드에 적용할 수 있는 또 다른 특성이 필요합니다. 이 특성은 서비스 인스턴스의 상태를 변경하는 메서드에 적용됩니다.
+이제 서비스 인스턴스를 영구 스토리지에 저장하는 방법만 남아 있습니다. 앞에서 설명한 대로 상태를 저장하는 데 필요한 기능은 `IStorageManager`에 이미 구현되어 있습니다. 이제이를 WCF 런타임과 통합 해야 합니다. 서비스 구현 클래스의 메서드에 적용할 수 있는 또 다른 특성이 필요합니다. 이 특성은 서비스 인스턴스의 상태를 변경하는 메서드에 적용됩니다.
 
-`SaveStateAttribute` 클래스가 이 기능을 구현합니다. 또한 구현 `IOperationBehavior` 각 작업에 대 한 WCF 런타임을 수정 하는 클래스입니다. WCF 런타임을 호출 하는 메서드는이 특성으로 표시 되 면 합니다 `ApplyBehavior` 해당 하는 동안 메서드 `DispatchOperation` 생성 되는. 이 메서드 구현에는 다음과 같은 코드가 한 줄 있습니다.
+`SaveStateAttribute` 클래스가 이 기능을 구현합니다. 또한 각 작업 `IOperationBehavior` 에 대해 WCF 런타임을 수정 하는 클래스를 구현 합니다. 메서드가이 특성으로 표시 된 경우 WCF 런타임은 적절 한 `ApplyBehavior` `DispatchOperation` 가 생성 되는 동안 메서드를 호출 합니다. 이 메서드 구현에는 다음과 같은 코드가 한 줄 있습니다.
 
 ```csharp
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);
@@ -378,7 +378,7 @@ return result;
 
 ## <a name="using-the-extension"></a>확장 사용
 
-두 채널 계층과 서비스 모델 계층 확장이 완료 되 고 WCF 응용 프로그램에서 이제 사용할 수 있습니다. 서비스는 사용자 지정 바인딩을 사용하여 채널 스택에 채널을 추가한 다음 적절한 특성으로 서비스 구현 클래스를 표시해야 합니다.
+채널 계층과 서비스 모델 계층 확장이 모두 수행 되며 이제 WCF 응용 프로그램에서 사용할 수 있습니다. 서비스는 사용자 지정 바인딩을 사용하여 채널 스택에 채널을 추가한 다음 적절한 특성으로 서비스 구현 클래스를 표시해야 합니다.
 
 ```csharp
 [DurableInstanceContext]
@@ -432,7 +432,7 @@ type="Microsoft.ServiceModel.Samples.DurableInstanceContextBindingElementSection
 
 샘플을 실행하면 다음 출력이 표시됩니다. 클라이언트는 장바구니에 항목 두 개를 추가하고 장바구니의 항목 목록을 서비스에서 가져옵니다. 서비스와 클라이언트를 종료하려면 각 콘솔 창에서 Enter 키를 누릅니다.
 
-```
+```console
 Enter the name of the product: apples
 Enter the name of the product: bananas
 
@@ -447,11 +447,11 @@ Press ENTER to shut down client
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면
 
-1. 수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.
+1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.
 
-2. 지침에 따라 솔루션을 빌드하려면 [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.
+2. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따르세요.
 
-3. 단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.
+3. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.
 
 > [!NOTE]
 > 이 샘플을 실행하려면 SQL Server 2005 또는 SQL Express 2005를 실행하고 있어야 합니다. SQL Server 2005를 실행하고 있는 경우 서비스의 연결 문자열 구성을 수정해야 합니다. 다중 컴퓨터 구성에서 실행하는 경우 SQL Server는 서버 컴퓨터에만 필요합니다.
@@ -461,6 +461,6 @@ Press ENTER to shut down client
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`

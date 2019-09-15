@@ -2,12 +2,12 @@
 title: .NET Remoting에서 WCF로 마이그레이션
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: c42255a14a23cb50f3fe8be434efab4af7361daa
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 926ccee49c7a445c724cecd72015ec5a5307cf58
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045863"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990177"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>.NET Remoting에서 WCF로 마이그레이션
 이 문서에서는 WCF(Windows Communication Foundation)를 사용하기 위해 .NET Remoting을 사용하는 애플리케이션을 마이그레이션하는 방법을 설명합니다. 이러한 제품 간의 비슷한 개념을 비교한 다음 WCF의 몇 가지 일반적인 Remoting 시나리오를 수행하는 방법을 설명합니다.  
@@ -15,7 +15,7 @@ ms.locfileid: "70045863"
  .NET Remoting은 이전 버전과의 호환성을 위해서만 지원되는 레거시 제품입니다. 클라이언트와 서버 간에 개별 신뢰 수준을 유지할 수 없으므로 복합 신뢰 환경에서는 안전하지 않습니다. 예를 들어 .NET Remoting 엔드포인트를 인터넷 또는 신뢰할 수 없는 클라이언트에 노출하지 않아야 합니다. 기존 Remoting 애플리케이션을 더욱 안전한 최신 기술로 마이그레이션하는 것이 좋습니다. 애플리케이션의 디자인에서 HTTP만 사용하고 RESTful인 경우 ASP.NET Web API를 사용하는 것이 좋습니다. 자세한 내용은 ASP.NET Web API를 참조하세요. 애플리케이션이 SOAP을 기반으로 하거나 TCP와 같이 Http가 아닌 프로토콜을 필요로 하는 경우 WCF를 사용하는 것이 좋습니다.  
 
 ## <a name="comparing-net-remoting-to-wcf"></a>.NET Remoting과 WCF 비교  
- 이 섹션에서는 .NET Remoting의 기본 빌딩 블록을 해당 WCF의 빌딩 블록과 비교합니다. 나중에 이러한 빌딩 블록을 사용하여 WCF에서 몇 가지 일반적인 클라이언트-서버 시나리오를 만듭니다. 다음 차트에는 .NET Remoting과 WCF의 주요 공통점과 차이점이 요약되어 있습니다.  
+ 이 섹션에서는 .NET Remoting의 기본 빌딩 블록을 해당 WCF의 빌딩 블록과 비교합니다. 나중에 이러한 구성 요소를 사용 하 여 WCF에서 몇 가지 일반적인 클라이언트-서버 시나리오를 만들 것입니다. 다음 차트에는 .NET Remoting과 WCF의 주요 유사성 및 차이점이 요약 되어 있습니다.  
   
 ||.NET Remoting|WCF|  
 |-|-------------------|---------|  

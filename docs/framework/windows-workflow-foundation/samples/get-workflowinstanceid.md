@@ -2,12 +2,12 @@
 title: WorkflowInstanceId 가져오기
 ms.date: 03/30/2017
 ms.assetid: bd7eea3b-1c28-4b84-9a67-003bc553aa81
-ms.openlocfilehash: 73fee4376b1abe29620bfae05bbd96fccf7b17c4
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: f8bd3205f5b7a4b3bae5203dc90a3c393cedcbdd
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038147"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989379"
 ---
 # <a name="get-workflowinstanceid"></a>WorkflowInstanceId 가져오기
 이 샘플에서는 사용자 지정 활동인 `GetWorkflowInstanceId`를 사용하여 워크플로 인스턴스 ID를 반환하는 방법을 보여 줍니다.  
@@ -20,14 +20,14 @@ ms.locfileid: "70038147"
   
  `GetWorkflowInstanceId`는 <xref:System.Activities.CodeActivity%601>로 구현됩니다. 이는 <xref:System.Guid> 형식의 값을 반환해야 하고 워크플로의 인스턴스 ID를 가져오기 위해 <xref:System.Activities.CodeActivityContext>에 액세스해야 하기 때문입니다. 그 구현은 비교적 기본적입니다.  
   
-```  
+```csharp  
 public sealed class GetWorkflowInstanceId : CodeActivity<Guid>  
 {  
-protected override Guid Execute(CodeActivityContext context)  
-        {  
-            return context.WorkflowInstanceId;  
-        }  
-}  
+    protected override Guid Execute(CodeActivityContext context)  
+    {  
+        return context.WorkflowInstanceId;  
+    }  
+}
 ```  
   
 > [!IMPORTANT]

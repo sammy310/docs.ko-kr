@@ -2,12 +2,12 @@
 title: 메시지 수준의 프로그래밍으로 JSON으로 serialize
 ms.date: 03/30/2017
 ms.assetid: 5f940ba2-57ee-4c49-a779-957c5e7e71fa
-ms.openlocfilehash: f50f6a699dff54e3d0950f5ce0e1049217b9dc45
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7576594f8fa694ce2d34cf38c88d2e28a00f5295
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928737"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991126"
 ---
 # <a name="serializing-in-json-with-message-level-programming"></a>메시지 수준의 프로그래밍으로 JSON으로 serialize
 WCF는 JSON 형식의 데이터 serialize를 지원합니다. 이 항목에서는 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>를 사용하여 WCF가 형식을 serialize하도록 하는 방법에 대해 설명합니다.  
@@ -21,7 +21,7 @@ WCF는 JSON 형식의 데이터 serialize를 지원합니다. 이 항목에서�
 ## <a name="untyped-message-programming"></a>형식화되지 않은 메시지 프로그래밍  
  형식화되지 않은 메시기 개체로 직접 작업할 때는 형식화되지 않은 메시지의 속성을 명시적으로 설정하여 JSON으로 serialize해야 합니다. 다음 코드 조각에서는 이를 수행하는 방법을 보여 줍니다.  
   
-```  
+```csharp
  Message response = Message.CreateMessage(  
                   MessageVersion.None,    // No SOAP message version  
                              "*",                     // SOAP action, ignored since this is JSON  

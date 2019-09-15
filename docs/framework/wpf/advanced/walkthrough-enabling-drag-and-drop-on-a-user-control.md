@@ -8,12 +8,12 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-ms.openlocfilehash: 80fd55be9230729cb8336be91c1d8fb4f7f3f080
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 172e49c2c255db4d24d2180f919b1305326b5e82
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364258"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991803"
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>연습: 사용자 정의 컨트롤에서 끌어서 놓기 사용
 
@@ -80,7 +80,7 @@ ms.locfileid: "68364258"
 
 2. 다음 XAML을 여 <xref:System.Windows.Window> 는 태그에 추가 하 여 현재 응용 프로그램에 대 한 XML 네임 스페이스 참조를 만듭니다.
 
-    ```
+    ```xaml
     xmlns:local="clr-namespace:DragDropExample"
     ```
 
@@ -311,7 +311,7 @@ ms.locfileid: "68364258"
 
     - <xref:System.Windows.UIElement.Drop> 이벤트가 이미 처리 되었는지 여부를 확인 합니다. 예를 들어, <xref:System.Windows.UIElement.Drop> 이벤트를 처리 하는 다른 원에 원을 놓는 경우 원이 포함 된 패널에서 해당 원을 처리 하지 않도록 합니다.
 
-    - 이벤트가 처리 되지 않은 경우 Ctrl 키를 눌렀는지 여부를 확인 합니다.  <xref:System.Windows.UIElement.Drop>
+    - 이벤트가 처리 되지 않은 경우 Ctrl 키를 눌렀는지 여부를 확인 합니다. <xref:System.Windows.UIElement.Drop>
 
     - 이 <xref:System.Windows.UIElement.Drop> 발생할 때 **Ctrl** 키를 누르면에서 Circle 컨트롤의 복사본을 만들어의 <xref:System.Windows.Controls.Panel.Children%2A> <xref:System.Windows.Controls.StackPanel>컬렉션에 추가 합니다.
 

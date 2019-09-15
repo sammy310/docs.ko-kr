@@ -2,12 +2,12 @@
 title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-ms.openlocfilehash: 9f24ccb5ba14e0b43f0e3f911a1672db5821d228
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1fc85838d7491f94b8da1e0ab458d6d021cd2b32
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039553"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989771"
 ---
 # <a name="jsonp"></a>JSONP
 이 샘플에서는 WCF REST 서비스에서 JSONP(JSON with Padding)를 지원하는 방법을 보여 줍니다. JSONP는 스크립트 태그를 현재 문서에서 생성함으로써 도메인의 제한 없이 스크립트를 호출하는 데 사용되는 규칙입니다. 결과는 지정된 콜백 함수를 통해 반환됩니다. JSONP은와 `<script src="http://..." >` 같은 태그가 모든 도메인의 스크립트를 평가할 수 있으며 이러한 태그로 검색 된 스크립트는 다른 기능이 이미 정의 되어 있을 수 있는 범위 내에서 평가 된다는 개념을 기반으로 합니다.
@@ -39,13 +39,13 @@ proxy.GetCustomer(onSuccess, onFail, null);
 
  ScriptManager는 서비스와의 상호 작용을 관리하며 JSONP 액세스를 수동으로 구현하는 복잡한 과정을 단순하게 해 줍니다. 가 `crossDomainScriptAccessEnabled` 로`true` 설정 되 고 작업의 응답 형식이 JSON 인 경우 WCF 인프라는 콜백 쿼리 문자열 매개 변수에 대 한 요청의 URI를 검사 하 고 콜백 쿼리 문자열의 값으로 JSON 응답을 래핑합니다. 변수에. 샘플의 웹 페이지에서는 다음 URI를 사용하여 WCF REST 서비스를 호출합니다.
 
-```
+```http
 http://localhost:33695/CustomerService/GetCustomer?callback=Sys._json0
 ```
 
  콜백 쿼리 문자열 매개 변수에는 `JsonPCallback` 값이 있으므로 WCF 서비스에서는 다음 예제와 같이 JSONP 응답을 반환합니다.
 
-```
+```json
 Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Way","Name":"Bob"});
 ```
 

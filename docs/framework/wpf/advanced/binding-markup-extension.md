@@ -7,19 +7,19 @@ helpviewer_keywords:
 - Binding markup extensions [WPF]
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
-ms.openlocfilehash: 616e405e191cb264a002e903bed60cf04559a675
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6776c89db474668b3aed0e38a3e18359bf93399d
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964894"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991474"
 ---
 # <a name="binding-markup-extension"></a>Binding 태그 확장
 속성 값을 데이터 바인딩된 값으로 지연 하 여 중간 식 개체를 만들고 런타임에 요소 및 바인딩에 적용 되는 데이터 컨텍스트를 해석 합니다.  
   
 ## <a name="binding-expression-usage"></a>바인딩 식 사용  
   
-```  
+```xaml  
 <object property="{Binding}" .../>  
 -or-  
 <object property="{Binding  bindProp1=value1[, bindPropN=valueN]*}" ...  
@@ -70,7 +70,7 @@ ms.locfileid: "69964894"
   
 - <xref:System.Windows.Data.Binding.IsAsync%2A>: 부울은 또는 `true` `false`중 하나일 수 있습니다. 기본값은 `false`입니다.  
   
-- <xref:System.Windows.Data.Binding.Mode%2A>: *값* 은 <xref:System.Windows.Data.BindingMode> 열거형의 상수 이름입니다. `{Binding Mode=OneWay}` )을 입력합니다.  
+- <xref:System.Windows.Data.Binding.Mode%2A>: *값* 은 <xref:System.Windows.Data.BindingMode> 열거형의 상수 이름입니다. 예를 들어, `{Binding Mode=OneWay}`을 입력합니다.  
   
 - <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A>: 부울은 또는 `true` `false`중 하나일 수 있습니다. 기본값은 `false`입니다.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "69964894"
   
 - <xref:System.Windows.Data.BindingBase.TargetNullValue%2A>: 식에서 `bindProp` `value` 문자열로 설정할 = 수 있지만이는 전달 되는 매개 변수의 유형에 따라 달라 집니다. 값에 대 한 참조 형식을 전달 하는 경우에는 중첩 된 [StaticResource 태그 확장과](staticresource-markup-extension.md)같은 개체 참조가 필요 합니다.  
   
-- <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>: *값* 은 <xref:System.Windows.Data.UpdateSourceTrigger> 열거형의 상수 이름입니다. `{Binding UpdateSourceTrigger=LostFocus}` )을 입력합니다. 특정 컨트롤에는이 바인딩 속성에 대 한 기본값이 다를 수 있습니다. [https://docs.microsoft.com/azure/active-directory/develop/scenario-protected-web-api-overview](<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>) 을 참조하세요.  
+- <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>: *값* 은 <xref:System.Windows.Data.UpdateSourceTrigger> 열거형의 상수 이름입니다. 예를 들어, `{Binding UpdateSourceTrigger=LostFocus}`을 입력합니다. 특정 컨트롤에는이 바인딩 속성에 대 한 기본값이 다를 수 있습니다. [https://docs.microsoft.com/azure/active-directory/develop/scenario-protected-web-api-overview](<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>) 을 참조하세요.  
   
 - <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>: 부울은 또는 `true` `false`중 하나일 수 있습니다. 기본값은 `false`입니다. 설명 부분을 참조하세요.  
   

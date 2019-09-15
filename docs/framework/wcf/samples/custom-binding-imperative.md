@@ -2,12 +2,12 @@
 title: 사용자 지정 바인딩 명령
 ms.date: 03/30/2017
 ms.assetid: 6e13bf96-5de0-4476-b646-5f150774418d
-ms.openlocfilehash: c0f72c8216492b48de8c863dc35880d3c0034ef2
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b5f6587567eaf7f719028a7d92f3db8f8259b6e1
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045661"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990030"
 ---
 # <a name="custom-binding-imperative"></a>사용자 지정 바인딩 명령
 이 샘플에서는 구성 파일 또는 WCF (Windows Communication Foundation) 생성 클라이언트를 사용 하지 않고 사용자 지정 바인딩을 정의 하 고 사용 하는 명령적 코드를 작성 하는 방법을 보여 줍니다. 이 샘플에서는 HTTP 전송에서 제공하는 기능과 신뢰할 수 있는 세션 채널을 조합하여 신뢰할 수 있는 HTTP 기반 바인딩을 만듭니다. 이 샘플은 계산기 서비스를 구현 하는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 을 기반으로 합니다.  
@@ -54,7 +54,7 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);
 
  샘플을 실행하면 작업 요청 및 응답이 클라이언트 콘솔 창에 표시됩니다. 클라이언트를 종료하려면 클라이언트 창에서 Enter 키를 누릅니다.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

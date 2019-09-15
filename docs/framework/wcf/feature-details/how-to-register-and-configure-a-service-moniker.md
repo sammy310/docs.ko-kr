@@ -5,12 +5,12 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: d14facf435d575b9db5129b732938658c921f97f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 547e507b4a1115de81532263c34964cd20f15d4e
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934314"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972141"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>방법: 서비스 모니커 등록 및 구성
 형식화 된 계약을 사용 하 여 COM 응용 프로그램 내에서 WCF (Windows Communication Foundation) 서비스 모니커를 사용 하려면 먼저 필요한 특성을 사용 하는 형식을 COM에 등록 하 고 필요한 바인딩을 사용 하 여 COM 응용 프로그램 및 모니커를 구성 해야 합니다. 구성.  
@@ -21,7 +21,7 @@ ms.locfileid: "69934314"
   
 2. 어셈블리의 형식이 `ComVisible`로 표시되는지 확인합니다. 이렇게 하려면 Visual Studio 프로젝트의 AssemblyInfo.cs 파일에 다음 특성을 추가합니다.  
   
-    ```  
+    ```csharp
     [assembly: ComVisible(true)]  
     ```  
   
@@ -40,10 +40,8 @@ ms.locfileid: "69934314"
   
      다음 형식이 등록됩니다.  
   
-    ```  
+    ```csharp  
     using System.ServiceModel;  
-  
-    ...  
   
     [ServiceContract]   
     public interface IMathService   
@@ -57,19 +55,19 @@ ms.locfileid: "69934314"
   
      애플리케이션은 `wsHttpBinding` 바인딩을 사용하여 노출됩니다. 지정된 형식과 애플리케이션 구성에 대해 다음 예제 모니커 문자열이 사용됩니다.  
   
-    ```  
+    ``` 
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1  
     ```  
   
      `or`  
   
-    ```  
+    ``` 
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1, contract={36ADAD5A-A944-4d5c-9B7C-967E4F00A090}  
     ```  
   
      다음 샘플 코드와 같이 `IMathService` 형식을 포함하는 어셈블리에 대한 참조를 추가한 후 Visual Basic 6.0 애플리케이션 내에서 이러한 모니커 문자열 중 하나를 사용할 수 있습니다.  
   
-    ```  
+    ```vb  
     Dim MathProxy As IMathService  
     Dim result As Integer  
   
@@ -91,7 +89,7 @@ ms.locfileid: "69934314"
   
      이 항목에서는 VB 6.0 코드의 서비스 모니커 사용에 중점을 두지만 다른 언어에서 서비스 모니커를 사용할 수 있습니다. C++ 코드에서 모니커를 사용하는 경우 다음 코드와 같이 "no_namespace named_guids raw_interfaces_only"를 사용하여 Svcutil.exe에서 생성된 어셈블리를  가져와야 합니다.  
   
-    ```  
+    ```cpp
     #import "ComTestProxy.tlb" no_namespace named_guids  
     ```  
   

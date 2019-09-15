@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05634cb319ac69bd76e16e592ba59490b30c9c9d
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: ae789e99a1306102c67f2252760e215989132406
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252393"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971623"
 ---
 # <a name="probing-element"></a>\<검색 > 요소
 어셈블리를 로드할 때 검색할 공용 언어 런타임에 대 한 응용 프로그램 기본 하위 디렉터리를 지정 합니다.  
@@ -70,5 +70,5 @@ ms.locfileid: "70252393"
 
 - [런타임 설정 스키마](index.md)
 - [구성 파일 스키마](../index.md)
-- [어셈블리 위치 지정](../../specify-assembly-location.md)
+- [어셈블리 위치 지정](../../../../standard/assembly/location.md)
 - [런타임에서 어셈블리를 찾는 방법](../../../deployment/how-the-runtime-locates-assemblies.md)

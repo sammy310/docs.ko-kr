@@ -2,12 +2,12 @@
 title: <activityStateQuery>WCF의
 ms.date: 03/30/2017
 ms.assetid: d6cdc04b-6f3a-4097-a623-ee4a1be3b5c4
-ms.openlocfilehash: 233bd3a2fa161222977902cc1053f964e8171173
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 49c507424e813067e1dad9b08167d9661acef36f
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850478"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991223"
 ---
 # <a name="activitystatequery-of-wcf"></a>\<WCF의 activityStateQuery >
 
@@ -56,13 +56,13 @@ ms.locfileid: "70850478"
   
 ### <a name="attributes"></a>특성  
   
-|특성|Description|  
+|특성|설명|  
 |---------------|-----------------|  
 |activityName|<xref:System.Activities.Tracking.ActivityStateRecord> 인스턴스를 필터링할 활동의 이름을 지정하는 문자열입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[\<arguments>](../windows-workflow-foundation/arguments.md)|이 활동 쿼리와 연결되는 인수의 컬렉션입니다.|  
 |[\<states>](../windows-workflow-foundation/states.md)|추적 레코드를 내보내야 할 구독된 활동의 상태를 포함하는 구성 요소의 컬렉션입니다.|  
@@ -70,13 +70,13 @@ ms.locfileid: "70850478"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<faultPropagationQuery>](../windows-workflow-foundation/faultpropagationquery.md)|부모 활동에 의한 자식 활동 취소 요청을 추적하는 데 사용되는 구성 요소의 목록을 나타냅니다. 추적 참가자가 취소 요청 레코드 개체를 구독하려면 쿼리가 필요합니다.|  
   
 ## <a name="remarks"></a>설명
 
-ActivityStateQuery의 한 가지 고유한 특징은 워크플로 실행을 추적할 때 데이터를 추출하는 기능입니다. 이 기능은 추적 레코드 사후 실행에 액세스할 때 추가 컨텍스트를 제공합니다. 인수 >, [ \<](../windows-workflow-foundation/arguments.md) [ 상태\<>](../windows-workflow-foundation/states.md) 및 [ 상태>요소를사용하\<](../windows-workflow-foundation/states.md) 여 워크플로의 모든 활동에서 변수 또는 인수를 추출할 수 있습니다. 다음 예제에서는 활동의 `Closed` 추적 레코드를 내보낼 때 변수 및 인수를 추출 하는 활동 상태 쿼리를 보여 줍니다. 변수 및 인수는 ActivityStateRecord만 추출할 수 있으므로 [ \<activitystatequery >](../windows-workflow-foundation/activitystatequery.md)를 사용 하 여 추적 프로필 내에서 구독 합니다.  
+ActivityStateQuery의 한 가지 고유한 특징은 워크플로 실행을 추적할 때 데이터를 추출하는 기능입니다. 이 기능은 추적 레코드 사후 실행에 액세스할 때 추가 컨텍스트를 제공합니다. 인수 >, [ \<](../windows-workflow-foundation/arguments.md) [ 상태\<>](../windows-workflow-foundation/states.md) 및 [ 상태>요소를사용하\<](../windows-workflow-foundation/states.md) 여 워크플로의 모든 활동에서 변수 또는 인수를 추출할 수 있습니다. 다음 예제에서는 활동의 `Closed` 추적 레코드를 내보낼 때 변수와 인수를 추출하는 활동 상태 쿼리를 보여 줍니다. 변수 및 인수는 ActivityStateRecord만 추출할 수 있으므로 [ \<activitystatequery >](../windows-workflow-foundation/activitystatequery.md)를 사용 하 여 추적 프로필 내에서 구독 합니다.  
   
 ```xml  
 <activityStateQuery activityName="SendEmailActivity">

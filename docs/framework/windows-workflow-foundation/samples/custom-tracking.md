@@ -2,12 +2,12 @@
 title: 사용자 지정 추적
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: b53b22b485a7ac340821073d2f2914b13a7b7011
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 32abf1dc4c9607b4a86f836fa2c759af1dbf1b69
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044296"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989408"
 ---
 # <a name="custom-tracking"></a>사용자 지정 추적
 이 샘플에서는 사용자 지정 추적 참가자를 만들고 추적 데이터의 내용을 콘솔에 쓰는 방법을 보여 줍니다. 또한 사용자 정의 데이터로 채워진 <xref:System.Activities.Tracking.CustomTrackingRecord> 개체를 내보내는 방법도 보여 줍니다. 콘솔 기반 추적 참가자는 코드로 만든 추적 프로필 개체를 사용하여 워크플로에서 내보낸 <xref:System.Activities.Tracking.TrackingRecord> 개체를 필터링합니다.
@@ -23,7 +23,7 @@ ms.locfileid: "70044296"
 
  다음 표에서는 워크플로 런타임에서 내보내는 추적 레코드에 대해 자세히 설명합니다.
 
-|추적 레코드|Description|
+|추적 레코드|설명|
 |---------------------|-----------------|
 |워크플로 인스턴스 추적 레코드|워크플로 인스턴스의 수명 주기에 대해 설명합니다. 예를 들어 워크플로가 시작되거나 완료되면 인스턴스 레코드를 내보냅니다.|
 |활동 상태 추적 레코드|활동 실행에 대해 자세히 설명합니다. 이러한 레코드는 활동이 예약된 시점, 활동이 완료된 시점, 오류가 throw된 시점 등과 같은 워크플로 활동 상태를 나타냅니다.|
@@ -47,7 +47,7 @@ public abstract class TrackingParticipant
 }
 ```
 
- 전체 추적 참가자는 ConsoleTrackingParticipant.cs 파일에서 구현되며, 다음 코드 예제는 사용자 지정 추적 참가자를 위한 <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> 메서드입니다.
+ ConsoleTrackingParticipant.cs 파일에서 전체 추적 참가자가 구현 됩니다. 다음 코드 예제 <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> 는 사용자 지정 추적 참가자에 대 한 메서드입니다.
 
 ```csharp
 protected override void Track(TrackingRecord record, TimeSpan timeout)

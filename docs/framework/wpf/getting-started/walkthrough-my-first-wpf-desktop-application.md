@@ -12,12 +12,12 @@ ms.topic: tutorial
 ms.custom: vs-dotnet
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c8b7f6f3bdbf3adc7c355e88cfe1f569cc0cb76f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b2c8e36c1b8185f28a7ec20402e385f3a1ddf5ce
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799337"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991764"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>자습서: Visual Studio 2019에서 첫 WPF 응용 프로그램 만들기
 
@@ -25,6 +25,7 @@ ms.locfileid: "70799337"
 
 이 자습서에서는 다음 작업을 수행하는 방법을 알아봅니다.
 > [!div class="checklist"]
+>
 > - WPF 프로젝트를 만듭니다.
 > - XAML을 사용 하 여 응용 프로그램 UI (사용자 인터페이스)의 모양을 디자인 합니다.
 > - 응용 프로그램의 동작을 빌드하는 코드를 작성 합니다.
@@ -40,7 +41,7 @@ ms.locfileid: "70799337"
 >
 > 이 페이지 맨 위에 있는 언어 선택기를 사용 하 여 C# 및 Visual Basic 사이에 샘플 코드의 코드 언어를 전환할 수 있습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 - **.Net 데스크톱 개발** 워크 로드가 설치 된 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) .
 

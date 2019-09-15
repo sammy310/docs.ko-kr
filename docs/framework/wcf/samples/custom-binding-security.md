@@ -2,12 +2,12 @@
 title: Custom Binding Security
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: a597e1fb7c239b49c03e964b513b4248a9c020c3
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b0b293c58e13f7add6f2cb49ea3c108a86292691
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045610"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990004"
 ---
 # <a name="custom-binding-security"></a>Custom Binding Security
 
@@ -62,7 +62,7 @@ ms.locfileid: "70045610"
 
 샘플을 실행하면 작업 요청 및 응답이 클라이언트 콘솔 창에 표시됩니다. 클라이언트를 종료하려면 클라이언트 창에서 Enter 키를 누릅니다.
 
-```
+```console
 Press <ENTER> to terminate client.
 Result(100)
 Result(50)
@@ -97,7 +97,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
   Setup.bat 파일에서 다음 줄은 클라이언트의 신뢰할 수 있는 사용자 저장소로 서버 인증서를 복사합니다. 이 단계는 Makecert.exe에서 생성한 인증서를 클라이언트 컴퓨터에서 절대적으로 신뢰하지는 않기 때문에 필요합니다. Microsoft에서 발급한 인증서와 같이 클라이언트가 신뢰할 수 있는 루트 인증서를 기반으로 하는 인증서가 이미 있는 경우 클라이언트 인증서 저장소를 서버 인증서로 채우는 이 단계를 수행할 필요가 없습니다.
 
-  ```
+  ```console
   certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
   ```
 
@@ -152,7 +152,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     3. 관리자 권한으로 Visual Studio에 대 한 개발자 명령 프롬프트를 열고 서비스 컴퓨터에서 다음 명령을 실행 하 여 서비스의 인증서를 내보냅니다 (여기서는 `%SERVER_NAME%` 컴퓨터의 정규화 된 이름으로 대체 합니다. 서비스가 실행 되 고 있습니다.):
 
-        ```
+        ```console
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer
         ```
 
@@ -160,7 +160,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     5. 관리자 권한으로 Visual Studio에 대 한 개발자 명령 프롬프트를 열고 클라이언트 컴퓨터에서 다음 명령을 실행 하 여 서비스의 인증서를 가져옵니다 (%% s '을 (를) 사용 하는 컴퓨터의 정규화 된 이름으로 바꿉니다. 서비스가 실행 되 고 있습니다.):
 
-        ```
+        ```console
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople
         ```
 

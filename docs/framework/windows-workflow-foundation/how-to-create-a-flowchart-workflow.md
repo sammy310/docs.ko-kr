@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: 3afac76fc977f992e780d2ebe302c1ed94568835
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 0faf4d77b1ea2881ba8e029d544f2e42cf552349
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044409"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989684"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>방법: 순서도 워크플로 만들기
 기본 제공 활동뿐 아니라 사용자 지정 활동에서도 워크플로를 구성할 수 있습니다. 이 항목에서는 <xref:System.Activities.Statements.Flowchart> 활동과 같은 기본 제공 활동 및 이전 [방법의 사용자 지정 활동을 모두 사용 하는 워크플로를 만드는 과정을 단계별로 설명 합니다. 작업](how-to-create-an-activity.md) 항목을 만듭니다. 이 워크플로는 숫자 추측 게임을 모델링합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "70044409"
   
 3. **인수 만들기**를 클릭 합니다.  
   
-4. 이름 `MaxNumber` 상자에 를 입력 하 고 **방향** 드롭다운 목록에서 시작을 선택한 다음 **인수 형식** 드롭다운 목록에서 **Int32** 를 선택 하 고 enter 키를 눌러 인수를 저장 합니다.  
+4. 이름 `MaxNumber` 상자에 를 입력 하 고 **방향** 드롭다운 목록 **에서 시작을 선택한 다음** **인수 형식** 드롭다운 목록에서 **Int32** 를 선택 하 고 enter 키를 눌러 인수를 저장 합니다.  
   
 5. **인수 만들기**를 클릭 합니다.  
   
@@ -118,15 +118,15 @@ ms.locfileid: "70044409"
   
 9. 두 번째 **Flowdecision 결정** 활동을 클릭 하 여 선택 합니다. **속성 창의** **Condition** 속성 값 상자에 다음 식을 입력 합니다.  
   
-    ```
-    Guess < Target  
+    ```text
+    Guess < Target
     ```  
   
 10. **도구 상자** 의 **기본 형식** 섹션에서 두 **WriteLine** 활동을 끌어 두 **flowdecision 결정** 활동 아래에 나란히 놓습니다. 최하위 **Flowdecision 결정** 활동의 **진정한** 동작을 가장 왼쪽의 **writeline** 활동에 연결 하 고 **False** 동작을 가장 오른쪽의 **writeline** 활동에 연결 합니다.  
   
 11. 가장 왼쪽의 **WriteLine** 활동을 클릭 하 여 선택 하 고 **속성 창의** **텍스트** 속성 값 상자에 다음 식을 입력 합니다.  
   
-    ```
+    ```text
     "Your guess is too low."  
     ```  
   
@@ -134,7 +134,7 @@ ms.locfileid: "70044409"
   
 13. 가장 오른쪽의 **WriteLine** 활동을 클릭 하 여 선택 하 고 **속성 창의** **텍스트** 속성 값 상자에 다음 식을 입력 합니다.  
   
-    ```
+    ```text
     "Your guess is too high."  
     ```  
   

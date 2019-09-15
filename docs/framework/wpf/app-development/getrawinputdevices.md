@@ -4,31 +4,31 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - raw input [WPF]
 ms.assetid: c4d37ecd-065a-4d1c-9e6c-26804ae968ca
-ms.openlocfilehash: 3531ff9f42289a3ad3b029f090f2dd4987e5886c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4fc7a5021f9f8d9e6badcd3e13266fb8f4bfe7a4
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947916"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991755"
 ---
 # <a name="getrawinputdevices"></a>GetRawInputDevices
 PresentationHost.exe가 호스트 애플리케이션과 관련된 원시 입력 디바이스(휴먼 인터페이스 디바이스)를 검색할 수 있게 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetRawInputDevices( [out] IEnumRAWINPUTDEVICE **ppEnum );  
 ```  
   
 ## <a name="parameters"></a>매개 변수  
  `ppEnum`  
   
- [out] 에 대 한 포인터를 [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md) 원시 입력된 장치를 열거 합니다.  
+ 제한이 원시 입력 장치를 열거 하는 [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md) 에 대 한 포인터입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  HRESULT:  
   
- S_OK- [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md) S_OK가 반환 된 경우 PresentationHost.exe에서 사용만 됩니다.  
+ S_OK- [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md) 는 s_ok가 반환 되는 경우에만 presentationhost.exe에서 사용 됩니다.  
   
  E_NOTIMPL  
   

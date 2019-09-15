@@ -2,12 +2,12 @@
 title: '방법: 채널 보안 자격 증명 지정'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: 3d6131a7488d9932118a988095791dd06fd46c49
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e5b2b56da1989b9a7110a1ad3eee814560942c89
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933454"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972438"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>방법: 채널 보안 자격 증명 지정
 WCF (Windows Communication Foundation) 서비스 모니커를 사용 하면 COM 응용 프로그램에서 WCF 서비스를 호출할 수 있습니다. 대부분의 WCF 서비스에서는 클라이언트에서 인증 및 권한 부여에 대 한 자격 증명을 지정 해야 합니다. WCF 클라이언트에서 WCF 서비스를 호출 하는 경우 관리 코드 또는 응용 프로그램 구성 파일에서 이러한 자격 증명을 지정할 수 있습니다. COM 응용 프로그램에서 WCF 서비스를 호출 하는 경우 인터페이스를 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 사용 하 여 자격 증명을 지정할 수 있습니다. 이 항목에서는 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 인터페이스를 사용하여 자격 증명을 지정하는 다양한 방식을 설명합니다.  
@@ -31,7 +31,7 @@ WCF (Windows Communication Foundation) 서비스 모니커를 사용 하면 COM 
   
 6. Visual Basic 6.0을 열고 새 표준 .exe 파일을 만듭니다. 폼에 단추를 추가하고 단추를 두 번 클릭하여 다음 코드를 클릭 처리기에 추가합니다.  
   
-    ```  
+    ```vb  
         monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
         monString = monString + ", address=http://localhost:8000/ServiceModelSamples/Service"  
         monString = monString + ", contract=ICalculator, contractNamespace=http://Microsoft.ServiceModel.Samples"  
@@ -52,7 +52,7 @@ WCF (Windows Communication Foundation) 서비스 모니커를 사용 하면 COM 
   
      Visual Basic 애플리케이션에 메시지 상자가 나타나며 Add(3, 4)를 호출한 결과가 표시됩니다. <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> 또는 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29>을 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> 대신 사용하여 클라이언트 인증서를 설정할 수도 있습니다.  
   
-    ```  
+    ```vb  
     monikerProxy.ChannelCredentials.SetClientCertificateFromFile "C:\MyClientCert.pfx", "password", "DefaultKeySet"  
     ```  
   
@@ -70,7 +70,7 @@ WCF (Windows Communication Foundation) 서비스 모니커를 사용 하면 COM 
 
 3. Visual Basic 6.0을 열고 새 표준 .exe 파일을 만듭니다. 폼에 단추를 추가하고 단추를 두 번 클릭하여 다음 코드를 클릭 처리기에 추가합니다.  
   
-    ```  
+    ```vb
     monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
     monString = monString + ", address=http://localhost:8000/ServiceModelSamples/Service"  
     monString = monString + ", contract=ICalculator, contractNamespace=http://Microsoft.ServiceModel.Samples"  
@@ -95,7 +95,7 @@ WCF (Windows Communication Foundation) 서비스 모니커를 사용 하면 COM 
 
 2. Visual Basic 6.0을 열고 새 표준 .exe 파일을 만듭니다. 폼에 단추를 추가하고 단추를 두 번 클릭하여 다음 코드를 클릭 처리기에 추가합니다.  
   
-    ```  
+    ```vb
     monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
     monString = monString + ", address=http://localhost:8000/ServiceModelSamples/Service"  
     monString = monString + ", contract=ICalculator, contractNamespace=http://Microsoft.ServiceModel.Samples"  
@@ -119,7 +119,7 @@ WCF (Windows Communication Foundation) 서비스 모니커를 사용 하면 COM 
   
      다음 Visual Basic 코드 예제에서는 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29> 메서드를 호출하는 방법을 보여 줍니다.  
   
-    ```  
+    ```vb
         monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
         monString = monString + ", address=http://localhost:8000/SomeService/Service"  
         monString = monString + ", contract=ICalculator, contractNamespace=http://SomeService.Samples"  

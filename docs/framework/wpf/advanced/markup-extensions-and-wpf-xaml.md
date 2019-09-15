@@ -15,12 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: f0eb4a90b09f49ced45fa8453356e1d6fb3b4af1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 562eea34af44a8fb24199e81477a4cb2ddb1046c
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965272"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991826"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>태그 확장명 및 WPF XAML
 이 항목에서는 XAML 태그 확장의 구문 규칙, 용도, 기반이 되는 클래스 개체 모델 등을 비롯한 개념에 대해 소개합니다. 태그 확장은 XAML 언어의 일반적 기능이며 XAML 서비스에 대한 .NET 구현의 일반적 기능입니다. 이 항목에서는 WPF XAML에서 사용할 태그 확장에 대해 자세히 설명합니다.  
@@ -104,7 +104,7 @@ ms.locfileid: "69965272"
 ## <a name="nesting-markup-extensions-in-xaml-usage"></a>XAML에서 중첩 태그 확장 사용법  
  여러 태그 확장을 중첩할 수 있으며 각 태그 확장은 가장 깊은 수준부터 평가됩니다. 예를 들어 다음 사용법을 가정해 봅니다.  
   
-```  
+```xaml  
 <Setter Property="Background"  
   Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" />  
 ```  

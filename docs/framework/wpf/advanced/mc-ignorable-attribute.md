@@ -9,19 +9,19 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: b68909d94ad8cc5bba75b2c520db82c5ccf1b922
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: a72b2886c63a80a4887aa16fc6a952fa837a800f
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206183"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991440"
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable 특성
 태그 파일 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 에서 발생 하는 네임 스페이스 접두사를 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서에서 무시할 수 있는 것으로 지정 합니다. 특성 `mc:Ignorable` 은 사용자 지정 네임 스페이스 매핑과 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 버전 관리에 대 한 태그 호환성을 모두 지원 합니다.  
   
 ## <a name="xaml-attribute-usage-single-prefix"></a>XAML 특성 사용 (단일 접두사)  
   
-```  
+```xaml  
 <object  
   xmlns:ignorablePrefix="ignorableUri"  
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
@@ -32,7 +32,7 @@ ms.locfileid: "70206183"
   
 ## <a name="xaml-attribute-usage-two-prefixes"></a>XAML 특성 사용 (두 개의 접두사)  
   
-```  
+```xaml  
 <object  
   xmlns:ignorablePrefix1="ignorableUri"  
   xmlns:ignorablePrefix2="ignorableUri2"  

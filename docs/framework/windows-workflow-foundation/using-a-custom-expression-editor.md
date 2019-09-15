@@ -2,19 +2,19 @@
 title: 사용자 지정 식 편집기 사용
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 7bbd855595bc67f0e2837afd4876ac3690cac776
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 9e179914a56874ddc9f3f170d35ae04c97dd859e
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169962"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988784"
 ---
 # <a name="using-a-custom-expression-editor"></a>사용자 지정 식 편집기 사용
 사용자 지정 식 편집기를 구현하여 보다 다양하거나 단순한 식 편집 환경을 제공할 수 있습니다. 사용자 지정 식 편집기는 다음과 같은 경우에 사용할 수 있습니다.  
   
-- IntelliSense와 다시 호스트된 Workflow Designer의 다른 다양한 편집 기능을 지원하려는 경우. 이 기능은 재 호스트 된 응용 프로그램에서 기본 Visual Studio 식 편집기를 사용할 수 없기 때문에 제공 되어야 합니다.  
+- IntelliSense와 다시 호스트된 Workflow Designer의 다른 다양한 편집 기능을 지원하려는 경우. 다시 호스팅된 응용 프로그램에서는 기본 Visual Studio 식 편집기를 사용할 수 없으므로이 기능을 제공 해야 합니다.  
   
-- 쉬운 식 편집 환경을 비즈니스 분석가 사용자에 대 한 Visual Basic 학습 또는 Visual Basic 식을 사용 하 여 처리 예를 들어, 필요 하지는 않도록 합니다.  
+- 예를 들어 Visual Basic를 배우고 Visual Basic 식을 처리 하는 데 필요 하지 않은 비즈니스 분석가 사용자를 위한 식 편집 환경을 간소화 합니다.  
   
  사용자 지정 식 편집기를 구현하는 데는 기본적으로 다음과 같은 세 단계가 필요합니다.  
   
@@ -27,7 +27,7 @@ ms.locfileid: "67169962"
 ## <a name="implementing-a-custom-expression-editor-in-a-class-library"></a>클래스 라이브러리의 사용자 지정 식 편집기 구현  
  다음 샘플 코드에서는 MyExpressionEditorService 라이브러리 프로젝트에 포함된 `MyEditorService` 인터페이스를 구현하는 <xref:System.Activities.Presentation.View.IExpressionEditorService> 클래스를 보여 줍니다.  
   
-```  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Activities.Presentation.View;  
@@ -73,7 +73,7 @@ namespace MyExpressionEditorService
   
  다음 `MyExpressionEditorInstance` 인터페이스를 구현하는 <xref:System.Activities.Presentation.View.IExpressionEditorInstance> 클래스의 코드는 MyExpressionEditorService 라이브러리 프로젝트에 있습니다.  
   
-```  
+```csharp  
 using System;  
 using System.Activities.Presentation.View;  
 using System.Windows;  
@@ -222,9 +222,9 @@ namespace MyExpressionEditorService
 ```  
   
 ### <a name="publishing-a-custom-expression-editor-in-a-wpf-project"></a>WPF 프로젝트에서 사용자 지정 식 편집기 게시  
- 다음은 WPF 응용 프로그램에서 디자이너를 다시 호스트 하는 방법 및 만들기 및 게시 하는 방법을 보여 주는 코드는 `MyEditorService` 서비스입니다. 이 코드를 사용하기 전에 avalon2를 포함하는 프로젝트에서 MyExpressionEditorService 라이브러리 프로젝트에 대한 참조를 추가합니다.  
+ WPF 응용 프로그램에서 디자이너를 rehost 하는 방법 및 `MyEditorService` 서비스를 만들고 게시 하는 방법을 보여 주는 코드는 다음과 같습니다. 이 코드를 사용하기 전에 avalon2를 포함하는 프로젝트에서 MyExpressionEditorService 라이브러리 프로젝트에 대한 참조를 추가합니다.  
   
-```  
+```csharp  
 using System.Windows;  
 using System.Windows.Controls;  
 using System.Activities.Presentation;  
@@ -275,8 +275,8 @@ namespace WpfApplication1
 }  
 ```  
   
-### <a name="notes"></a>노트  
- 사용 중인 경우는 **ExpressionTextBox** 컨트롤을 사용자 지정 활동 디자이너에서 필요 없는 만들고 사용 하 여 식 편집기를 제거 하는 <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> 및 <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> 의 메서드는 <xref:System.Activities.Presentation.View.IExpressionEditorService> 인터페이스. <xref:System.Activities.Presentation.View.ExpressionTextBox> 클래스가 이 부분을 자동으로 관리합니다.  
+### <a name="notes"></a>참고  
+ 사용자 지정 활동 디자이너에서 **expressiontextbox** 컨트롤을 사용 하는 경우 <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> <xref:System.Activities.Presentation.View.IExpressionEditorService> 인터페이스의 및 <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> 메서드를 사용 하 여 식 편집기를 만들고 제거할 필요가 없습니다. <xref:System.Activities.Presentation.View.ExpressionTextBox> 클래스가 이 부분을 자동으로 관리합니다.  
   
 ## <a name="see-also"></a>참고자료
 

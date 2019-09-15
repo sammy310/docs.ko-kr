@@ -9,12 +9,12 @@ helpviewer_keywords:
 - container tags, <codeBase> element
 - codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
-ms.openlocfilehash: bd170b817c5ccc337711f8f79968653c29f3eda4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 475b7df55ed509157c1da0aeb8f979de238c72b5
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252739"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971880"
 ---
 # <a name="codebase-element"></a>\<codeBase > 요소
 
@@ -96,5 +96,5 @@ ms.locfileid: "70252739"
 
 - [런타임 설정 스키마](index.md)
 - [구성 파일 스키마](../index.md)
-- [어셈블리 위치 지정](../../specify-assembly-location.md)
+- [어셈블리 위치 지정](../../../../standard/assembly/location.md)
 - [런타임에서 어셈블리를 찾는 방법](../../../deployment/how-the-runtime-locates-assemblies.md)

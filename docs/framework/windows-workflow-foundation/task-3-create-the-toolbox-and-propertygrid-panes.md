@@ -2,25 +2,25 @@
 title: '작업 3: 도구 상자 및 PropertyGrid 창 만들기'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 15e5b4ea08b6bc243484b6963c1c06f448bb985b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6339969c52a5c4eedfb0e89eebdc982ca3fe6686
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641534"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988706"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>작업 3: 도구 상자 및 PropertyGrid 창 만들기
-이 작업을 만듭니다는 **도구 상자** 및 **PropertyGrid** 창에 다시 호스트 된 추가 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)]합니다.  
+이 작업에서는 **도구 상자** 및 **PropertyGrid** 창을 만든 후 다시 호스트 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)]된에 추가 합니다.  
   
- 참조 3 개를 완료 한 후 MainWindow.xaml.cs 파일에 있어야 하는 코드에서 태스크를 [워크플로 디자이너 재 호스트](rehosting-the-workflow-designer.md) 일련의 항목은이 항목의 끝에 제공 됩니다.  
+ 참조를 위해 MainWindow.xaml.cs 파일에 있어야 하는 코드는 [워크플로 디자이너 재호스팅](rehosting-the-workflow-designer.md) 의 3 가지 작업을 완료 한 후이 항목의 끝에 제공 됩니다.  
   
 ### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>도구 상자를 만들어 표에 추가하려면  
   
-1. 에 설명 된 절차에 따라 얻은 HostingApplication 프로젝트를 열고 [작업 2: 워크플로 디자이너 호스트](task-2-host-the-workflow-designer.md)합니다.  
+1. 작업 2에 [설명 된 절차에 따라 얻은 HostingApplication 프로젝트를 엽니다. 워크플로 디자이너](task-2-host-the-workflow-designer.md)를 호스팅합니다.  
   
-2. 에 **솔루션 탐색기** 창 MainWindow.xaml 파일을 마우스 오른쪽 단추로 클릭 하 고 선택 **코드 보기**합니다.  
+2. **솔루션 탐색기** 창에서 mainwindow.xaml 파일을 마우스 오른쪽 단추로 클릭 하 고 **코드 보기**를 선택 합니다.  
   
-3. 추가 `GetToolboxControl` 메서드를를 `MainWindow` 만드는 클래스를 <xref:System.Activities.Presentation.Toolbox.ToolboxControl>를 새로 추가 **도구 상자** 범주를를 **도구 상자**, 할당 및를 <xref:System.Activities.Statements.Assign> 및 <xref:System.Activities.Statements.Sequence> 해당 범주에 작업 형식입니다.  
+3. `MainWindow` <xref:System.Activities.Statements.Sequence>를만들고 **, 도구 상자**에 새 **도구 상자** 범주를 추가 하 고, `GetToolboxControl` 및활동형식을해당범주에할당하는메서드를클래스<xref:System.Activities.Statements.Assign>에추가합니다. <xref:System.Activities.Presentation.Toolbox.ToolboxControl>  
   
     ```csharp  
     private ToolboxControl GetToolboxControl()  
@@ -49,7 +49,7 @@ ms.locfileid: "61641534"
     }  
     ```  
   
-4. 개인 추가 `AddToolbox` 메서드를 `MainWindow` 배치 하는 클래스를 **도구 상자** 그리드에서 왼쪽된 열에서.  
+4. 모눈의 왼쪽 `AddToolbox` 열에 **도구 상자** 를 배치 하는 전용 메서드를 `MainWindow` 클래스에 추가 합니다.  
   
     ```csharp  
     private void AddToolBox()  
@@ -73,13 +73,13 @@ ms.locfileid: "61641534"
     }  
     ```  
   
-6. F5 키를 눌러 솔루션을 빌드하고 실행합니다. 합니다 **도구 상자** 포함 하는 <xref:System.Activities.Statements.Assign> 및 <xref:System.Activities.Statements.Sequence> 활동을 표시 합니다.  
+6. F5 키를 눌러 솔루션을 빌드하고 실행합니다. <xref:System.Activities.Statements.Assign> 및 활동을포함하는도구상자가표시<xref:System.Activities.Statements.Sequence> 됩니다.  
   
 ### <a name="to-create-the-propertygrid"></a>PropertyGrid를 만들려면  
   
-1. 에 **솔루션 탐색기** 창 MainWindow.xaml 파일을 마우스 오른쪽 단추로 클릭 하 고 선택 **코드 보기**합니다.  
+1. **솔루션 탐색기** 창에서 mainwindow.xaml 파일을 마우스 오른쪽 단추로 클릭 하 고 **코드 보기**를 선택 합니다.  
   
-2. 추가 합니다 `AddPropertyInspector` 메서드를를 `MainWindow` 배치 하는 클래스를 **PropertyGrid** 창 그리드에서 맨 오른쪽 열에서입니다.  
+2. 클래스에 메서드를 추가 하 여 PropertyGrid 창을 표의 가장 오른쪽 열에 놓습니다. `AddPropertyInspector` `MainWindow`  
   
     ```csharp  
     private void AddPropertyInspector()  
@@ -103,12 +103,12 @@ ms.locfileid: "61641534"
     }  
     ```  
   
-4. F5 키를 눌러 솔루션을 빌드하고 실행합니다. 합니다 **도구 상자**, 워크플로 디자인 캔버스 및 **PropertyGrid** 창이 모두 표시 되어야 하 고 끌면는 <xref:System.Activities.Statements.Assign> 활동 또는 <xref:System.Activities.Statements.Sequence> 활동을 디자인 캔버스로 속성 그리드는 강조 표시 된 활동에 따라 업데이트 해야 합니다.  
+4. F5 키를 눌러 솔루션을 빌드하고 실행합니다. **도구 상자**, 워크플로 디자인 캔버스 및 **PropertyGrid** 창이 모두 표시 되어야 하며, <xref:System.Activities.Statements.Assign> 활동 또는 <xref:System.Activities.Statements.Sequence> 활동을 디자인 캔버스로 끌 때 속성 표는 강조 표시 된 작업입니다.  
   
 ## <a name="example"></a>예제  
  이제 MainWindow.xaml.cs 파일에 다음 코드가 들어 있어야 합니다.  
   
-```  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  

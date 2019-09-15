@@ -24,12 +24,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 28a06139275f63571d9528d075946d97a19c9f3c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b2da9600e6947a1efcb13fc8b1127665cea63071
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912877"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972197"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>구성 파일을 사용하여 앱 구성
 .NET Framework에서 개발자와 관리자는 구성 파일을 통해 애플리케이션이 실행되는 방식을 유연하게 제어할 수 있습니다. 구성 파일은 필요에 따라 변경할 수 있는 XML 파일입니다. 관리자는 애플리케이션에서 액세스할 수 있는 보호되는 리소스와 애플리케이션에서 사용할 어셈블리 버전 그리고 원격 애플리케이션과 개체의 위치를 제어할 수 있습니다. 개발자는 설정을 구성 파일에 저장할 수 있으므로, 설정이 변경될 때마다 매번 애플리케이션을 다시 컴파일할 필요가 없습니다. 이 단원에서는 애플리케이션 구성과 유용성에 대해 설명합니다.  
@@ -127,4 +127,4 @@ ms.locfileid: "69912877"
 - [ASP.NET 웹 사이트 관리](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
 - [보안 정책 관리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
 - [Caspol.exe(코드 액세스 보안 정책 도구)](../tools/caspol-exe-code-access-security-policy-tool.md)
-- [공용 언어 런타임의 어셈블리](../app-domains/assemblies-in-the-common-language-runtime.md)
+- [.NET 어셈블리](../../standard/assembly/index.md)

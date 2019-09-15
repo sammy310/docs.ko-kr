@@ -2,12 +2,12 @@
 title: 워크플로 실행 속성
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 61bf53d9cab3ddefae3709958bd1e445fb4e69dd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 87775ba6efb9ec26ed2445e1f9d0944c379ba04f
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913604"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988592"
 ---
 # <a name="workflow-execution-properties"></a>워크플로 실행 속성
 CLR은 TLS(스레드 로컬 스토리지)를 통해 각 스레드의 실행 컨텍스트를 유지 관리합니다. 이 실행 컨텍스트는 스레드 ID, 앰비언트 트랜잭션 및 현재 권한 집합과 같은 잘 알려진 스레드 속성은 물론 명명된 슬롯과 같은 사용자 정의 스레드 속성을 제어합니다.  
@@ -147,7 +147,7 @@ WorkflowInvoker.Invoke(wf);
   
  워크플로가 호출되면 다음 출력이 콘솔 창에 기록됩니다.  
   
-```  
+```console  
 Start blue text.  
 Start red text.  
 Start default text.  

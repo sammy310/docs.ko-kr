@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic], referencing assemblies
 - assemblies [Visual Basic], references
 ms.assetid: 38149bd4-0a6f-4b31-b5f8-94a8c33f1600
-ms.openlocfilehash: 99afa42994dd09d0b5faaeaf534fbc4b41816998
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5b810af86f8659ffbe27d23d36aece408516a9bd
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962487"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972053"
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>참조 및 Imports 문(Visual Basic)
 **프로젝트** 메뉴에서 **참조 추가** 명령을 선택 하 여 프로젝트에서 외부 개체를 사용할 수 있도록 설정할 수 있습니다. Visual Basic의 참조는 형식 라이브러리와 같지만 추가 정보를 포함 하는 어셈블리를 가리킬 수 있습니다.  
@@ -52,7 +52,6 @@ ms.locfileid: "69962487"
 
 - <xref:Microsoft.VisualBasic.ControlChars>
 - <xref:Microsoft.VisualBasic>
-- [Visual Basic 네임 스페이스](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [Visual Basic 네임 스페이스](namespaces.md)
 - [.NET 어셈블리](../../../standard/assembly/index.md)
-- [방법: 명령줄을 사용하여 어셈블리 만들기 및 사용](../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)
-- [Imports 문(.NET 네임스페이스 및 형식)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Imports 문(.NET 네임스페이스 및 형식)](../../language-reference/statements/imports-statement-net-namespace-and-type.md)

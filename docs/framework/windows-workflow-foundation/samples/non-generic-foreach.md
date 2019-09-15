@@ -2,12 +2,12 @@
 title: 비제네릭 ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: e467534ba2b233f1f3c279e89badf12846c6b7f7
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: cb040d8bd5fbb34cc00b246f2e51789866fd8e78
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038070"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989031"
 ---
 # <a name="non-generic-foreach"></a>비제네릭 ForEach
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]의 도구 상자에는 <xref:System.Activities.Statements.ForEach%601> 컬렉션을 반복할 수 있도록 하는 <xref:System.Collections.Generic.IEnumerable%601>을 비롯한 흐름 제어 활동이 제공됩니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "70038070"
 ## <a name="class-definition"></a>클래스 정의  
  다음 코드 예제에서는 비제네릭 `ForEach` 활동의 정의를 보여 줍니다.  
   
-```  
+```csharp  
 [ContentProperty("Body")]  
 public class ForEach : NativeActivity  
 {  
@@ -47,7 +47,7 @@ public class ForEach : NativeActivity
 ## <a name="example-of-using-foreach"></a>ForEach 사용 예제  
  다음 코드에서는 애플리케이션에서 ForEach 활동을 사용하는 방법을 보여 줍니다.  
   
-```  
+```csharp  
 string[] names = { "bill", "steve", "ray" };  
   
 DelegateInArgument<object> iterationVariable = new DelegateInArgument<object>() { Name = "iterationVariable" };  
@@ -69,12 +69,12 @@ Activity sampleUsage =
   
 |조건|메시지|Severity|예외 형식|  
 |---------------|-------------|--------------|--------------------|  
-|값은 `null`입니다.|필수 활동 인수 'Values'의 값이 제공되지 않았습니다.|Error|<xref:System.InvalidOperationException>|  
+|값은 `null`입니다.|필수 활동 인수 'Values'의 값이 제공되지 않았습니다.|오류|<xref:System.InvalidOperationException>|  
   
 ## <a name="foreach-designer"></a>ForEach 디자이너  
  샘플의 활동 디자이너는 기본 제공 <xref:System.Activities.Statements.ForEach%601> 활동에 제공되는 디자이너와 모양이 비슷합니다. 디자이너는 **샘플**, **제네릭이 아닌 작업** 범주의 도구 상자에 나타납니다. 작업은 도구 상자 에서를 노출 <xref:System.Activities.Presentation.IActivityTemplateFactory> 하 고 적절 하 게 구성 <xref:System.Activities.ActivityAction>된를 사용 하 여 작업을 만드는 도구 상자에서 디자이너의 이름이 ForEachWithBodyFactory입니다.  
   
-```  
+```csharp  
 public sealed class ForEachWithBodyFactory : IActivityTemplateFactory  
 {  
     public Activity Create(DependencyObject target)  

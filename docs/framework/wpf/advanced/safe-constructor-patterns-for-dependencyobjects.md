@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-ms.openlocfilehash: 9dffe06d340c7256ba8af687e30d90d51746ebe1
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: fce17979fbd43df0496f972cac525fd79dcbfe32
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364241"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991812"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>DependencyObject의 안전한 생성자 패턴
 일반적으로 클래스 생성자는 가상 메서드나 대리자와 같은 콜백을 호출하면 안 됩니다. 이는 생성자는 파생 클래스에 대한 생성자의 기본 초기화로 호출될 수 있기 때문입니다. 특정 개체의 불완전한 초기화 상태에서 가상 항목이 입력될 수 있습니다. 하지만 속성 시스템 자체는 내부적으로 콜백을 종속성 속성 시스템의 일부로 호출하고 표시합니다. 호출을 사용 하 여 <xref:System.Windows.DependencyObject.SetValue%2A> 종속성 속성 값을 설정 하는 간단한 작업으로 결정의 어딘가에 콜백이 포함 될 수 있습니다. 이런 이유로 생성자 본문에서 종속성 속성 값을 설정할 때 주의해야 합니다. 형식이 기본 클래스로 사용될 경우 문제가 발생할 수 있습니다. 종속성 속성 상태와 관련 된 특정 <xref:System.Windows.DependencyObject> 문제를 방지 하는 생성자를 구현 하기 위한 특정 패턴과 여기에 설명 된 고유 콜백이 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "68364241"
   
  다음 예제 코드(및 이후 예제)는 이 규칙을 위반하고 문제를 설명하는 의사 C# 예제입니다.  
   
-```  
+```csharp  
 public class MyClass : DependencyObject  
 {  
     public MyClass() {}  
@@ -71,7 +71,7 @@ public class MyClass : DependencyObject
 #### <a name="parameterless-constructors-calling-base-initialization"></a>기본 초기화를 호출 하는 매개 변수가 없는 생성자  
  기본 기본값을 호출하는 다음 생성자를 구현합니다.  
   
-```  
+```csharp  
 public MyClass : SomeBaseClass {  
     public MyClass() : base() {  
         // ALL class initialization, including initial defaults for   
@@ -83,7 +83,7 @@ public MyClass : SomeBaseClass {
 #### <a name="non-default-convenience-constructors-not-matching-any-base-signatures"></a>기본 시그니처와 일치하지 않는 기본값이 아닌(편의) 생성자  
  이러한 생성자가 매개 변수를 사용 하 여 초기화에서 종속성 속성을 설정 하는 경우 먼저 초기화에 대 한 매개 변수가 없는 클래스 생성자를 호출한 다음 매개 변수를 사용 하 여 종속성 속성을 설정 합니다. 이러한 속성은 클래스에서 정의된 종속성 속성이거나 기본 클래스에서 상속된 종속성 속성일 수 있지만 두 경우 중 하나에는 다음 패턴을 사용합니다.  
   
-```  
+```csharp  
 public MyClass : SomeBaseClass {  
     public MyClass(object toSetProperty1) : this() {  
         // Class initialization NOT done by default.  

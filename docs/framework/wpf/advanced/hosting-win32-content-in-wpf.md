@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
-ms.openlocfilehash: 10bdeae8fe46f78e60d278fdbe93883a1c6bd356
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: b598b55c72096daac2487e4c52584abf9735f257
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629889"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991465"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>WPF에서 Win32 콘텐츠 호스팅
 
@@ -70,14 +70,14 @@ C++ DLL 프로젝트로 컴파일되는 간단한 대화 상자를 사용 하 �
 
 WS_CHILD 및 DS_CONTROL 스타일을 사용 하 여 대화 상자를 자식 HWND로 전환할 수 있습니다. 대화 상자가 정의 된 리소스 파일 (.rc)로 이동 하 여 대화 상자 정의의 시작 부분을 찾습니다.
 
-```
+```text
 IDD_DIALOG1 DIALOGEX 0, 0, 303, 121
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
 ```
 
 두 번째 줄을 다음과 같이 변경 합니다.
 
-```
+```text
 STYLE DS_SETFONT | WS_CHILD | WS_BORDER | DS_CONTROL
 ```
 
