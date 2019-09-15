@@ -2,22 +2,22 @@
 title: WPF 애플리케이션에 대해 RealTimeStylus를 사용하지 않도록 설정
 ms.date: 03/30/2017
 ms.assetid: e0525309-5ede-4782-837d-dbf6e5554859
-ms.openlocfilehash: e44b71ac5af64ab3a6cb008db71e5a8881592e91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: acae177e1c49a6a1161bcf48f8e2e8ac1bfe13b8
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962492"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991847"
 ---
-# <a name="disable-the-realtimestylus-for-wpf-applications"></a><span data-ttu-id="8ff26-102">WPF 애플리케이션에 대해 RealTimeStylus를 사용하지 않도록 설정</span><span class="sxs-lookup"><span data-stu-id="8ff26-102">Disable the RealTimeStylus for WPF Applications</span></span>
-<span data-ttu-id="8ff26-103">Windows Presentation Foundation (WPF)은 Windows 7 터치 입력을 처리 하는 것에 대 한 지원을 구축 했습니다. 지원으로 tablet 플랫폼의 실시간 스타일러스 입력을 통해 제공 됩니다 <xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusUp%2A>, 및 <xref:System.Windows.UIElement.OnStylusMove%2A> 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="8ff26-103">Windows Presentation Foundation (WPF) has built in support for processing Windows 7 touch input.The support comes through the tablet platform’s real-time stylus input as <xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusUp%2A>, and <xref:System.Windows.UIElement.OnStylusMove%2A> events.</span></span> <span data-ttu-id="8ff26-104">또한 Windows 7 WM_TOUCH Win32 창 메시지를 멀티 터치 입력을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="8ff26-104">Windows 7 also provides multi-touch input as Win32 WM_TOUCH window messages.</span></span> <span data-ttu-id="8ff26-105">이러한 두 Api는 동일한 HWND에서 함께 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="8ff26-105">These two APIs are mutually exclusive on the same HWND.</span></span> <span data-ttu-id="8ff26-106">사용 하지 않도록 설정 WM_TOUCH 메시지는 tablet 플랫폼 (WPF 응용 프로그램에 대 한 기본값)을 통해 터치 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ff26-106">Enabling touch input via the tablet platform (the default for WPF applications) disables WM_TOUCH messages.</span></span> <span data-ttu-id="8ff26-107">결과적으로, WM_TOUCH에 WPF 창에서 터치 메시지를 수신 하는 데 사용 하려면 WPF에서 기본 제공 스타일러스 지원을 해제 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ff26-107">As a result, to use WM_TOUCH to receive touch messages from a WPF window, you must disable the built-in stylus support in WPF.</span></span> <span data-ttu-id="8ff26-108">WM_TOUCH를 사용 하는 구성 요소를 호스팅하는 WPF 창 등의 시나리오에 적용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8ff26-108">This is applicable in a scenario such as a WPF window hosting a component that uses WM_TOUCH.</span></span>  
+# <a name="disable-the-realtimestylus-for-wpf-applications"></a><span data-ttu-id="069d5-102">WPF 애플리케이션에 대해 RealTimeStylus를 사용하지 않도록 설정</span><span class="sxs-lookup"><span data-stu-id="069d5-102">Disable the RealTimeStylus for WPF Applications</span></span>
+<span data-ttu-id="069d5-103">WPF (Windows Presentation Foundation)는 Windows 7 touch 입력 처리를 기본적으로 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="069d5-103">Windows Presentation Foundation (WPF) has built in support for processing Windows 7 touch input.</span></span> <span data-ttu-id="069d5-104">지원은 태블릿 플랫폼의 실시간 스타일러스 입력을 <xref:System.Windows.UIElement.OnStylusDown%2A> <xref:System.Windows.UIElement.OnStylusUp%2A>통해, 및 <xref:System.Windows.UIElement.OnStylusMove%2A> 이벤트로 제공 됩니다.</span><span class="sxs-lookup"><span data-stu-id="069d5-104">The support comes through the tablet platform’s real-time stylus input as <xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusUp%2A>, and <xref:System.Windows.UIElement.OnStylusMove%2A> events.</span></span> <span data-ttu-id="069d5-105">또한 Windows 7은 Win32 WM_TOUCH 창 메시지로 다중 터치 입력을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="069d5-105">Windows 7 also provides multi-touch input as Win32 WM_TOUCH window messages.</span></span> <span data-ttu-id="069d5-106">이러한 두 Api는 동일한 HWND에서 함께 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="069d5-106">These two APIs are mutually exclusive on the same HWND.</span></span> <span data-ttu-id="069d5-107">태블릿 플랫폼 (WPF 응용 프로그램의 경우 기본값)을 통해 터치식 입력을 사용 하면 WM_TOUCH 메시지를 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="069d5-107">Enabling touch input via the tablet platform (the default for WPF applications) disables WM_TOUCH messages.</span></span> <span data-ttu-id="069d5-108">따라서 WPF 창에서 WM_TOUCH를 사용 하 여 터치 메시지를 받으려면 WPF에서 기본 제공 스타일러스 지원을 사용 하지 않도록 설정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="069d5-108">As a result, to use WM_TOUCH to receive touch messages from a WPF window, you must disable the built-in stylus support in WPF.</span></span> <span data-ttu-id="069d5-109">이는 WM_TOUCH를 사용 하는 구성 요소를 호스팅하는 WPF 창과 같은 시나리오에서 적용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="069d5-109">This is applicable in a scenario such as a WPF window hosting a component that uses WM_TOUCH.</span></span>  
   
- <span data-ttu-id="8ff26-109">스타일러스 입력에 수신 대기 하는 WPF를 사용 하지 않으려면 WPF 창에 추가 된 태블릿 지원을 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ff26-109">To disable WPF listening to stylus input, remove any tablet support added by the WPF window.</span></span>  
+ <span data-ttu-id="069d5-110">스타일러스 입력을 수신 하는 WPF를 사용 하지 않도록 설정 하려면 WPF 창에 의해 추가 된 태블릿 지원을 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="069d5-110">To disable WPF listening to stylus input, remove any tablet support added by the WPF window.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8ff26-110">예제</span><span class="sxs-lookup"><span data-stu-id="8ff26-110">Example</span></span>  
- <span data-ttu-id="8ff26-111">다음 샘플 코드는 리플렉션을 사용 하 여 기본 tablet 플랫폼 지원 기능을 제거 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8ff26-111">The following sample code shows how to remove the default tablet platform support by using reflection.</span></span>  
+## <a name="example"></a><span data-ttu-id="069d5-111">예제</span><span class="sxs-lookup"><span data-stu-id="069d5-111">Example</span></span>  
+ <span data-ttu-id="069d5-112">다음 샘플 코드에서는 리플렉션을 사용 하 여 기본 태블릿 플랫폼 지원을 제거 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="069d5-112">The following sample code shows how to remove the default tablet platform support by using reflection.</span></span>  
   
-```  
+```csharp  
 public static void DisableWPFTabletSupport()  
 {  
     // Get a collection of the tablet devices for this window.    
@@ -52,6 +52,6 @@ public static void DisableWPFTabletSupport()
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8ff26-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="8ff26-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="069d5-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="069d5-113">See also</span></span>
 
-- [<span data-ttu-id="8ff26-113">스타일러스에서 입력 가로채기</span><span class="sxs-lookup"><span data-stu-id="8ff26-113">Intercepting Input from the Stylus</span></span>](intercepting-input-from-the-stylus.md)
+- [<span data-ttu-id="069d5-114">스타일러스에서 입력 가로채기</span><span class="sxs-lookup"><span data-stu-id="069d5-114">Intercepting Input from the Stylus</span></span>](intercepting-input-from-the-stylus.md)
