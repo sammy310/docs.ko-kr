@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e7da023c5ab9247cde0ccd1126d4d639c6f355e7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8d9448edab101ef11447b54e12c53abcb578646a
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910965"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971597"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>.NET Framework 및 애플리케이션 배포
 
@@ -118,7 +118,7 @@ ms.locfileid: "69910965"
 
 ## <a name="packaging-and-distributing-net-framework-applications"></a>.NET Framework 애플리케이션 패키징 및 배포
 
-.NET Framework에 대한 패키징 및 배포 정보 중 일부는 설명서의 다른 섹션에서 설명합니다. 이러한 섹션에서는 레지스트리 항목이 필요 없는 [어셈블리](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)라는 자체 설명적 단위, 이름 고유성을 유지하고 이름 스푸핑을 방지하는 [강력한 이름의 어셈블리](../../../docs/framework/app-domains/strong-named-assemblies.md) 및 DLL 충돌과 관련된 많은 문제를 해결하는 [어셈블리 버전 관리](../../../docs/framework/app-domains/assembly-versioning.md)에 대한 정보를 제공합니다. 다음 섹션에서는 .NET Framework 애플리케이션 패키징 및 배포에 대한 정보를 제공합니다.
+.NET Framework에 대한 패키징 및 배포 정보 중 일부는 설명서의 다른 섹션에서 설명합니다. 이러한 섹션에서는 레지스트리 항목이 필요 없는 [어셈블리](../../standard/assembly/index.md)라는 자체 설명적 단위, 이름 고유성을 유지하고 이름 스푸핑을 방지하는 [강력한 이름의 어셈블리](../../standard/assembly/strong-named.md) 및 DLL 충돌과 관련된 많은 문제를 해결하는 [어셈블리 버전 관리](../../standard/assembly/versioning.md)에 대한 정보를 제공합니다. 다음 섹션에서는 .NET Framework 애플리케이션 패키징 및 배포에 대한 정보를 제공합니다.
 
 ### <a name="packaging"></a>패키지
 

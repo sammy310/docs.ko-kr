@@ -446,9 +446,6 @@
                   tocHref: /dotnet/csharp/programming-guide/concepts/
                   topicHref: /dotnet/csharp/programming-guide/concepts/index
                   items:
-                    - name: 어셈블리
-                      tocHref: /dotnet/csharp/programming-guide/concepts/assemblies-gac/
-                      topicHref: /dotnet/csharp/programming-guide/concepts/assemblies-gac/index
                     - name: 비동기 프로그래밍
                       tocHref: /dotnet/csharp/programming-guide/concepts/async/
                       topicHref: /dotnet/csharp/programming-guide/concepts/async/index
@@ -542,9 +539,6 @@
               tocHref: /dotnet/visual-basic/programming-guide/concepts/
               topicHref: /dotnet/visual-basic/programming-guide/concepts/index
               items:
-                - name: 어셈블리
-                  tocHref: /dotnet/visual-basic/programming-guide/concepts/assemblies-gac/
-                  topicHref: /dotnet/visual-basic/programming-guide/concepts/assemblies-gac/index
                 - name: 비동기 프로그래밍
                   tocHref: /dotnet/visual-basic/programming-guide/concepts/async/
                   topicHref: /dotnet/visual-basic/programming-guide/concepts/async/index

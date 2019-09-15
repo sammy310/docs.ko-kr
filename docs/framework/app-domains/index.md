@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 96d3b8e3-bef8-4da0-9a81-9841e23a94e9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7124b6b234601e3afc27109ac318f47e3fe40c35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4f0c2ad1290a7f9cf8d0c43c504a3e0a9628b86
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675353"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971921"
 ---
 # <a name="programming-with-application-domains-and-assemblies"></a>애플리케이션 도메인 및 어셈블리를 사용한 프로그래밍
 Microsoft Internet Explorer, ASP.NET 및 Windows 셸과 같은 호스트는 프로세스에 공용 언어 런타임을 로드하고, 해당 프로세스에서 [애플리케이션 도메인](../../../docs/framework/app-domains/application-domains.md)을 만든 다음 .NET Framework 애플리케이션을 실행할 때 해당 애플리케이션 도메인에서 사용자 코드를 로드한 후 실행합니다. 대부분의 경우 런타임 호스트가 알아서 작업을 진행하므로 애플리케이션 도메인 만들기 및 어셈블리 로드에 대해 걱정할 필요가 없습니다.  
@@ -28,14 +28,14 @@ Microsoft Internet Explorer, ASP.NET 및 Windows 셸과 같은 호스트는 프�
  [애플리케이션 도메인 사용](../../../docs/framework/app-domains/use.md)  
  애플리케이션 도메인 만들기, 구성 및 사용에 대한 예제를 제공합니다.  
   
- [어셈블리를 사용한 프로그래밍](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ [어셈블리를 사용한 프로그래밍](../../standard/assembly/program.md)  
  어셈블리를 만들고, 서명하고, 특성을 설정하는 방법에 대해 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
  [동적 메서드 및 어셈블리 내보내기](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
  동적 어셈블리를 만드는 방법에 대해 설명합니다.  
   
- [공용 언어 런타임의 어셈블리](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ [.NET 어셈블리](../../standard/assembly/index.md)  
  어셈블리에 대해 개념적으로 설명합니다.  
   
  [애플리케이션 도메인](../../../docs/framework/app-domains/application-domains.md)  
