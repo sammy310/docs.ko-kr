@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ceee0c228000982be83c79fed2f7af43712b3ae
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f4d7cbd00dbf94900185643490b952ced7887965
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963387"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895225"
 ---
 # <a name="details-of-regular-expression-behavior"></a>정규식 동작 정보
 .NET Framework 정규식 엔진은 Perl, Python, Emacs 및 Tcl에서 사용하는 것과 같은 기존의 NFA(Nondeterministic Finite Automaton) 엔진을 통합하는 역추적 정규식 일치 도구입니다. 이를 통해 해당 awk, egrep 또는 lex와 같은 빠르지만 제한적인 순수 정규식 DFA(Deterministic Finite Automaton) 엔진과 구분합니다. 또한 표준화되지만 느린 POSIX NFA과도 구분합니다. 다음 섹션에서는 세 가지 유형의 정규식 엔진을 설명하고 기존 NFA 엔진을 사용하여 .NET Framework의 정규식을 구현하는 이유를 설명합니다.  
@@ -98,7 +98,7 @@ ms.locfileid: "69963387"
     |`^`|줄의 시작 부분에서 일치 항목 찾기를 시작합니다.|  
     |`(?<Pvt>\<PRIVATE\>\s)?`|0개 또는 1개의 뒤에 공백 문자가 있는 `<PRIVATE>` 문자열을 찾습니다. `Pvt`로 명명된 캡처 그룹에 일치 항목을 할당합니다.|  
     |`(?(Pvt)((\w+\p{P}?\s)+)`|`Pvt` 캡처링 그룹이 있는 경우 뒤에 0개 이상의 문장 구분 기호와 하나의 공백 문자가 오는 하나 이상의 단어 문자를 한 번 이상 찾습니다. 첫 번째 캡처링 그룹에 부분 문자열을 할당합니다.|  
-    |<code>&#124;((\w+\p{P}?\s)+))<code>|`Pvt` 캡처링 그룹이 없는 경우 뒤에 0개 이상의 문장 구분 기호와 하나의 공백 문자가 오는 하나 이상의 단어 문자를 한 번 이상 찾습니다. 세 번째 캡처링 그룹에 부분 문자열을 할당합니다.|  
+    |<code>&#124;((\w+\p{P}?\s)+))</code>|`Pvt` 캡처링 그룹이 없는 경우 뒤에 0개 이상의 문장 구분 기호와 하나의 공백 문자가 오는 하나 이상의 단어 문자를 한 번 이상 찾습니다. 세 번째 캡처링 그룹에 부분 문자열을 할당합니다.|  
     |`\r?$`|줄의 끝 또는 문자열의 끝을 찾습니다.|  
   
      조건부 평가에 대한 자세한 내용은 [교체 구문](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)을 참조하세요.  
