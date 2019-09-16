@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: d9a377941f54dbd42ae6eaec6c21a93dd48673a1
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 37133a90ae5bfa18ae17c279caff40d0d30ea25c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254011"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928922"
 ---
 # <a name="metadata-and-markdown-template"></a>메타데이터 및 Markdown 템플릿
 
@@ -76,7 +76,7 @@ Markdown은 서식 지정을 위해 \*, \`, \# 등의 특수 문자를 사용합
 
 항목에는 수준 1 제목(H1)이 **하나만** 있어야 합니다. 이 제목이 페이지의 제목으로 표시됩니다.
 
-제목이 `#` 문자로 끝나는 경우에는 제목이 올바르게 렌더링되도록 끝에 여분의 `#` 문자를 추가해야 합니다. 예를 들어, `# Async Programming in F# #`을 입력합니다.
+제목이 `#` 문자로 끝나는 경우에는 제목이 올바르게 렌더링되도록 끝에 여분의 `#` 문자를 추가해야 합니다. 예: `# Async Programming in F# #`.
 
 수준 2 제목은 페이지 제목 아래의 "문서 내용" 섹션에 표시되는 페이지 TOC를 생성합니다.
 
@@ -445,6 +445,7 @@ Include를 사용하여 한 파일의 Markdown을 다른 파일에 포함할 수
 목록의 경우 사용자 지정 스타일을 사용할 수 있습니다. 녹색 확인 표시가 있는 목록을 렌더링할 수 있습니다.
 
 > [!div class="checklist"]
+>
 > - .NET Core 앱을 만드는 방법
 > - Microsoft.XmlSerializer.Generator 패키지에 대한 참조를 추가하는 방법
 > - MyApp.csproj를 편집하여 종속성을 추가하는 방법
@@ -463,8 +464,9 @@ Include를 사용하여 한 파일의 Markdown을 다른 파일에 포함할 수
 ### <a name="selectors"></a>선택기
 
 > [!div class="op_single_selector"]
-- [macOS](../docs/core/tutorials/using-on-macos.md)
-- [Windows](../docs/core/tutorials/with-visual-studio.md)
+>
+> - [macOS](../docs/core/tutorials/using-on-macos.md)
+> - [Windows](../docs/core/tutorials/with-visual-studio.md)
 
 [Azure 문서](https://docs.microsoft.com/azure/expressroute/expressroute-howto-circuit-classic)에서 작동 중인 선택기의 예를 확인할 수 있습니다.
 
