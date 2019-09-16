@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b018672fbc9e669f6010871a150dd9b060babd88
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 34cb8b0cebc64bf7244c522066700c94d33986a9
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958003"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894809"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe(리소스 파일 생성기)
 리소스 파일 생성기(Resgen.exe)를 사용하면 텍스트 파일(.txt 또는 .restext)과 XML 기반 리소스 형식 파일(.resx)을 런타임 이진 실행 파일에 포함하거나 위성 어셈블리에 포함할 수 있는 공용 언어 런타임의 이진 파일(.resources)로 변환할 수 있습니다. [리소스 파일 만들기](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)를 참조하세요.  
@@ -43,13 +43,13 @@ ms.locfileid: "69958003"
   
  Resgen.exe의 도움말을 보려면 다음 명령을 명령 구문 및 Resgen.exe에 대한 옵션을 표시하도록 지정하는 옵션 없이 사용할 수 있습니다.  
   
-```  
+```console  
 resgen  
 ```  
   
  또한 `/?` 스위치를 사용할 수도 있습니다.  
   
-```  
+```console  
 resgen /?  
 ```  
   
@@ -61,11 +61,11 @@ resgen /?
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 resgen  [/define:symbol1[,symbol2,...]] [/useSourcePath] filename.extension  | /compile filename.extension... [outputFilename.extension] [/r:assembly] [/str:lang[,namespace[,class[,file]]] [/publicclass]]   
 ```  
   
-```  
+```console  
 resgen filename.extension [outputDirectory]  
 ```  
   
@@ -134,7 +134,7 @@ resgen filename.extension [outputDirectory]
   
  리소스 파일을 컴파일하는 구문은 다음과 같습니다.  
   
-```  
+```console  
 resgen inputFilename [outputFilename]   
 ```  
   
@@ -150,19 +150,19 @@ resgen inputFilename [outputFilename]
   
  다음 명령을 사용하여 Resources.txt에 있는 이름/값 쌍을 읽고 Resources.resources라는 이진 리소스 파일을 작성합니다. 출력 파일 이름은 명시적으로 지정되지 않기 때문에 기본적으로 입력 파일과 같은 이름을 받습니다.  
   
-```  
+```console  
 resgen Resources.txt   
 ```  
   
  다음 명령을 사용하여 Resources.restext에 있는 이름/값 쌍을 읽고 StringResources.resources라는 이진 리소스 파일을 작성합니다.  
   
-```  
+```console  
 resgen Resources.restext StringResources.resources  
 ```  
   
  다음 명령을 사용하여 Resources.resx라는 XML 기반 입력 파일을 읽고 Resources.resources라는 이진 .resources 파일을 작성합니다.  
   
-```  
+```console  
 resgen Resources.resx Resources.resources  
 ```  
   
@@ -184,19 +184,19 @@ resgen Resources.resx Resources.resources
   
  다음 명령을 사용하여 이진 리소스 파일 Resources.resources를 읽고 Resources.resx라는 XML 기반 출력 파일을 작성합니다.  
   
-```  
+```console  
 resgen Resources.resources Resources.resx  
 ```  
   
  다음 명령을 사용하여 StringResources.txt라는 텍스트 기반 리소스 파일을 읽고, LibraryResources.resx라는 XML 기반 입력 파일을 작성합니다. 문자열 리소스를 포함하는 용도 외에 .resx 파일은 문자열 이외의 리소스를 저장하는 데에도 사용할 수 있습니다.  
   
-```  
+```console  
 resgen StringResources.txt LibraryResources.resx  
 ```  
   
  다음 두 명령은 Resources.resx라는 XML 기반 입력 파일을 읽고 Resources.txt 및 Resources.restext라는 텍스트 파일을 작성합니다. .resx 파일에 포함 개체가 있으면 텍스트 파일로 정확하게 변환되지 않습니다.  
   
-```  
+```console  
 resgen Resources.resx Resources.txt  
 resgen Resources.resx Resources.restext  
 ```  
@@ -205,13 +205,13 @@ resgen Resources.resx Resources.restext
 ### <a name="compiling-or-converting-multiple-files"></a>다중 파일 컴파일 또는 변환  
  `/compile` 스위치를 사용하여 단일 연산에서 하나의 포맷으로부터 다른 포맷으로 리소스 파일 목록을 전환할 수 있습니다. 사용되는 구문은 다음과 같습니다.  
   
-```  
+```console  
 resgen /compile filename.extension [filename.extension...]  
 ```  
   
  다음 명령은 세 파일, StringResources.txt, TableResources.resw 및 ImageResources.resw를 StringResources.resources, TableResources.resources 및 ImageResources.resources라는 별도의 resources 파일로 컴파일합니다.  
   
-```  
+```console  
 resgen /compile StringResources.txt TableResources.resx ImageResources.resx  
 ```  
   
@@ -224,7 +224,7 @@ resgen /compile StringResources.txt TableResources.resx ImageResources.resx
   
  어셈블리에서 .resw 파일을 생성하는 구문은 다음과 같습니다.  
   
-```  
+```console  
 resgen filename.extension  [outputDirectory]  
 ```  
   
@@ -238,7 +238,7 @@ resgen filename.extension  [outputDirectory]
   
  다음 명령은 MyApp.exe에 포함된 각 resources 파일에 대한 Win8Resources 디렉터리에 .resw 파일을 만듭니다.  
   
-```  
+```console  
 resgen MyApp.exe Win8Resources  
 ```  
   
@@ -250,7 +250,7 @@ resgen MyApp.exe Win8Resources
   
  예를 들어, 다음의 UIResources.rext라는 파일에는 `AppTitle`, `PRODUCTION` 또는 `CONSULT`이라는 기호가 정의되어 있는지 여부에 따라 3개의 값 중 하나를 사용할 수 있는 `RETAIL`이라는 문자열 리소스가 포함되어 있습니다.  
   
-```  
+```text
 #ifdef PRODUCTION  
 AppTitle=My Software Company Project Manager   
 #endif  
@@ -265,7 +265,7 @@ FileMenuName=File
   
  그런 다음 파일은 다음 명령을 사용하여 이진 .resources 파일로 컴파일됩니다.  
   
-```  
+```console  
 resgen /define:CONSULT UIResources.restext  
 ```  
   
@@ -277,7 +277,7 @@ resgen /define:CONSULT UIResources.restext
   
  강력한 형식의 리소스를 만드는 구문은 다음과 같습니다.  
   
-```  
+```console  
 resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filename]]] [/publicClass]  
 ```  
   
@@ -325,7 +325,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
   
  예를 들어, 다음 명령은 StringResources.txt라는 리소스 파일을 StringResources.resources로 컴파일하고 리소스 관리자에 액세스하는 데 사용할 수 있는 StringResources.vb라는 Visual Basic 소스 코드 파일에서 `StringResources`라는 클래스를 생성합니다.  
   
-```  
+```console  
 resgen StringResources.txt /str:vb,,StringResources   
 ```  
   

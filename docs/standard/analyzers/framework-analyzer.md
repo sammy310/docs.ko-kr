@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: cbd9bcdb12a423f54aa4ff82d88f07c20023c48f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: da5e72b96fec35404e7e9ae7930f3430143487d2
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769465"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929303"
 ---
 # <a name="the-net-framework-analyzer"></a>.NET Framework 분석기
 
@@ -23,6 +23,7 @@ ms.locfileid: "59769465"
 .NET 보안 분석기를 실행하려는 모든 프로젝트에서 NuGet 패키지로 설치해야 합니다. 한 명의 개발자만이 이를 프로젝트에 추가해야 합니다. 분석기 패키지는 프로젝트에 종속된 기능이며 업데이트된 솔루션이 포함되면 모든 개발자의 컴퓨터에서 실행됩니다.
 
 .NET Framework 분석기는 [Microsoft.NetFramework.Analyzers](https://www.nuget.org/packages/Microsoft.NetFramework.Analyzers/) NuGet 패키지에서 제공됩니다. 이 패키지는 보안 분석기를 포함하는 .NET Framework에 특정 분석기만을 제공합니다. 대부분의 경우에 [Microsoft.CodeAnalysis.FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) NuGet 패키지가 필요합니다. FxCopAnalyzers 집계 패키지에는 다음 분석기뿐만 아니라 Framework.Analyzers 패키지에 포함된 모든 프레임워크 분석기가 포함됩니다.
+
 - [Microsoft.CodeQuality.Analyzers](https://www.nuget.org/packages/Microsoft.CodeQuality.Analyzers): .NET 표준 API에 대한 일반 지침 및 지침을 제공합니다.
 - [Microsoft.NetCore.Analyzers](https://www.nuget.org/packages/Microsoft.NetCore.Analyzers): .NET Core API에 특정된 분석기를 제공합니다.
 - [Text.Analyzers](https://www.nuget.org/packages/Text.Analyzers): 주석을 비롯하여 코드로 포함된 텍스트의 지침을 제공합니다.

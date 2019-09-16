@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2d97921a3e98d85ac1e58c7686eadef3e979211f
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 584f9f952148ebf72c5d5aaed64a2a078be00ce5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107377"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929359"
 ---
 # <a name="net-api-analyzer"></a>.NET API 분석기
 
@@ -30,6 +30,7 @@ API 분석기는 NuGet 패키지 [Microsoft.DotNet.Analyzers.Compatibility](http
 ### <a name="what-are-deprecated-apis"></a>사용되지 않는 API란 무엇인가요?
 
 .NET 제품군은 고객의 요구 사항을 더 잘 해결하기 위해 지속적으로 업그레이드되는 대규모 제품 집합입니다. 일부 API를 더 이상 사용하지 않고 새 API를 교체하는 것은 자연스러운 일입니다. 더 나은 대체가 있는 경우 API는 사용되지 않는 것으로 간주합니다. API가 사용되지 않으며 사용되면 안 된다는 것을 알리는 한 가지 방법은 <xref:System.ObsoleteAttribute> 특성을 사용하여 표시하는 것입니다. 이 방법의 단점은 모든 사용되지 않는 API에 대한 진단 ID가 하나만 있다는 것입니다(C#의 경우 [CS0612](../../csharp/misc/cs0612.md)). 이는 다음을 의미합니다.
+
 - 각 사례에 대한 전용 문서를 포함할 수는 없습니다.
 - 특정 경고 범주를 표시하지 않을 수는 없습니다. 모든 경고를 표시하거나 아무것도 표시하지 않을 수는 없습니다.
 - 사용자에게 새로운 사용 중단을 알리려면 참조된 어셈블리 또는 대상 패키지를 업데이트해야 합니다.

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d704702e74b5f7d4a315bd14a467296245f90257
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 32255c988397853c4b38e4ab723c7261a8999899
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046494"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929211"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>연습: BatchBlock 및 BatchedJoinBlock을 사용하여 효율성 향상
 
@@ -53,7 +53,6 @@ TPL 데이터 흐름 라이브러리는 하나 이상의 소스에서 데이터�
 
 ## <a name="creating-the-console-application"></a>콘솔 애플리케이션 만들기
 
-<a name="consoleApp"></a>
 1. Visual Studio에서 Visual C# 또는 Visual Basic **콘솔 애플리케이션** 프로젝트를 만듭니다. 이 문서에서 프로젝트 이름은 `DataflowBatchDatabase`입니다.
 
 2. 프로젝트에서 System.Data.SqlServerCe.dll에 대한 참조와 System.Threading.Tasks.Dataflow.dll에 대한 참조를 추가합니다.

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2411b69dac6ef8945336a4c4e014cbf6687f702a
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 09179ebe123f1287c8b057783bb421153f5e1183
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469724"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894188"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>클래스, 구조체 및 공용 구조체 마샬링
 .NET Framework에서는 클래스와 구조체가 서로 비슷합니다. 둘 다 필드, 속성 및 이벤트를 포함할 수 있습니다. 또한 정적 및 비정적 메서드를 포함할 수 있습니다. 한 가지 주목할 만한 차이점은 구조체는 값 형식이고 클래스는 참조 형식이라는 것입니다.  
@@ -52,25 +52,25 @@ ms.locfileid: "65469724"
   
 - PinvokeLib.dll에서 내보낸 **TestStructInStruct**.  
   
-    ```  
+    ```cpp  
     int TestStructInStruct(MYPERSON2* pPerson2);  
     ```  
   
 - PinvokeLib.dll에서 내보낸 **TestStructInStruct3**.  
   
-    ```  
+    ```cpp  
     void TestStructInStruct3(MYPERSON3 person3);  
     ```  
   
 - PinvokeLib.dll에서 내보낸 **TestArrayInStruct**.  
   
-    ```  
+    ```cpp  
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
     ```  
   
  [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll)은 앞에 나열된 함수와 네 가지 구조에 대한 구현을 포함하는 관리되지 않는 사용자 지정 라이브러리입니다. **MYPERSON**, **MYPERSON2**, **MYPERSON3** 및 **MYARRAYSTRUCT**. 이러한 구조체에는 다음과 같은 요소가 포함됩니다.  
   
-```  
+```cpp  
 typedef struct _MYPERSON  
 {  
    char* first;   
@@ -135,13 +135,13 @@ typedef struct _MYARRAYSTRUCT
   
 - Kernel32.dll에서 내보낸 **FindFirstFile**.  
   
-    ```  
+    ```cpp
     HANDLE FindFirstFile(LPCTSTR lpFileName, LPWIN32_FIND_DATA lpFindFileData);  
     ```  
   
  함수에 전달된 원래 구조체에는 다음과 같은 요소가 포함됩니다.  
   
-```  
+```cpp
 typedef struct _WIN32_FIND_DATA   
 {  
   DWORD    dwFileAttributes;   
@@ -178,13 +178,13 @@ typedef struct _WIN32_FIND_DATA
   
 - PinvokeLib.dll에서 내보낸 **TestUnion**.  
   
-    ```  
+    ```cpp
     void TestUnion(MYUNION u, int type);  
     ```  
   
  [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll)은 앞에 나열된 함수와 두 공용 구조체, **MYUNION** and **MYUNION2**에 대한 구현을 포함하는 관리되지 않는 사용자 지정 라이브러리입니다. 공용 구조체에는 다음과 같은 요소가 포함됩니다.  
   
-```  
+```cpp
 union MYUNION  
 {  
     int number;  
@@ -221,13 +221,13 @@ union MYUNION2
   
 - Kernel32.dll에서 내보낸 **GetSystemTime**.  
   
-    ```  
+    ```cpp
     VOID GetSystemTime(LPSYSTEMTIME lpSystemTime);  
     ```  
   
  함수에 전달된 원래 구조체에는 다음과 같은 요소가 포함됩니다.  
   
-```  
+```cpp
 typedef struct _SYSTEMTIME {   
     WORD wYear;   
     WORD wMonth;   
@@ -256,7 +256,7 @@ typedef struct _SYSTEMTIME {
   
  이 샘플에서는 [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll)에서 정의된 래퍼 함수 및 플랫폼 호출을 사용합니다(소스 파일에도 제공됨). `TestOutArrayOfStructs` 함수 및 `MYSTRSTRUCT2` 구조체를 사용합니다. 이 구조체에는 다음과 같은 요소가 포함됩니다.  
   
-```  
+```cpp
 typedef struct _MYSTRSTRUCT2  
 {  
    char* buffer;  

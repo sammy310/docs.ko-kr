@@ -4,12 +4,12 @@ description: ML.NET 모델 작성기를 사용하여 기계 학습 모델을 자
 author: natke
 ms.date: 08/07/2019
 ms.custom: overview
-ms.openlocfilehash: 715c9f5854d9691fd9fc2cd771d38456405836ec
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 77b5e75fede1a4aa93eadcf7e21591d82f565cab
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104813"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929478"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>모델 작성기란 무엇이며 어떻게 작동하나요?
 
@@ -29,6 +29,7 @@ ML.NET 모델 작성기는 사용자 지정 기계 학습 모델을 빌드, 학�
 애플리케이션에 대한 기계 학습 모델을 생성하기 위해 모델 작성기에 다양한 시나리오를 가져올 수 있습니다.
 
 시나리오는 데이터를 사용하여 수행할 예측 유형에 대한 설명입니다. 예:
+
 - 과거 판매 데이터를 기반으로 향후 제품 판매량 예측
 - 고객 리뷰에 따라 감정을 긍정 또는 부정으로 분류
 - 은행 트랜잭션이 사기인지 여부를 검색
@@ -41,6 +42,7 @@ ML.NET 모델 작성기는 사용자 지정 기계 학습 모델을 빌드, 학�
 숫자를 예측하는 시나리오의 경우 기계 학습 모델 형식을 `regression`이라고 합니다.
 
 범주를 예측하는 시나리오의 경우 모델 형식은 `classification`입니다. 두 가지 형식의 분류가 있습니다.
+
 - 두 개의 범주만 있는 경우: `binary classification`.
 - 세 개 이상의 범주가 있는 경우: `multiclass classification`.
 
@@ -89,10 +91,12 @@ ML.NET 모델 작성기는 사용자 지정 기계 학습 모델을 빌드, 학�
 ### <a name="choose-the-output-to-predict-label"></a>예측할 출력을 선택합니다(레이블).
 
 데이터 세트는 학습 예제의 행과 특성 열을 나열한 표입니다. 각 행에는 다음이 있습니다.
+
 - **레이블**(예측하려는 특성)
 - **기능**(레이블을 예측하기 위한 입력으로 사용되는 특성).
 
 주택 가격 예측 시나리오의 경우 다음과 같은 기능을 사용할 수 있습니다.
+
 - 집의 평방 피트
 - 침실과 욕실의 수
 - 우편 번호

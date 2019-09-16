@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 87ca9b75d641035b268c6737822f198d1eea87e3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ad15c0d4bd69417fffd8bcad0805a3b78321e05b
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777504"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894949"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework를 사용한 TLS(전송 계층 보안) 모범 사례
 
@@ -213,7 +213,7 @@ HTTP 네트워킹(<xref:System.Net.ServicePointManager>) 또는 TCP 소켓 네�
 
 다음 _.REG_ 파일은 레지스트리 키와 해당 변형을 가장 안전한 값으로 설정합니다.
 
-```
+```text
 Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v2.0.50727]

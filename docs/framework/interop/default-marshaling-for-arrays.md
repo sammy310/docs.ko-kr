@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 269d3b9ae5eec4412540b9b659cb287b3d26a482
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 96300808ba3024a138678494200b10ef722c6fd9
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946701"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894240"
 ---
 # <a name="default-marshaling-for-arrays"></a>배열에 대한 기본 마샬링
 전체적으로 관리 코드로 구성된 애플리케이션에서는 공용 언어 런타임이 배열 형식을 In/Out 매개 변수로 전달합니다. 반면 interop 마샬러는 기본적으로 배열을 In 매개 변수로 전달합니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "69946701"
   
  **관리되지 않는 시그니처**  
   
-```  
+```cpp
 HRESULT New1([in] SAFEARRAY( int ) ar);  
 HRESULT New2([in] SAFEARRAY( DATE ) ar);  
 HRESULT New3([in, out] SAFEARRAY( BSTR ) *ar);  
@@ -95,7 +95,7 @@ void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]
   
  **관리되지 않는 시그니처**  
   
-```  
+```cpp
 HRESULT New1(int ar[10]);  
 HRESULT New2(double ar[10][20]);  
 HRESULT New3(LPWStr ar[10]);  
@@ -124,7 +124,7 @@ void New2([MarshalAs(UnmanagedType.LPArray,
   
  **관리되지 않는 시그니처**  
   
-```  
+```cpp
 HRESULT New1(int ar[]);  
 HRESULT New2(int ArSize, [size_is(ArSize)] double ar[]);  
 HRESULT New3(int ElemCnt, [length_is(ElemCnt)] LPStr ar[]);  
@@ -207,8 +207,8 @@ void New(String[] ar );
   
 #### <a name="unmanaged-signature"></a>관리되지 않는 서명  
   
-```  
-HRESULT New([in] SAFEARRAY( long ) ar);   
+```cpp
+HRESULT New([in] SAFEARRAY( long ) ar);
 HRESULT New([in] SAFEARRAY( BSTR ) ar);  
 ```  
   
@@ -240,9 +240,9 @@ void New([MarshalAs(UnmanagedType.LPArray, ArraySubType=
   
 #### <a name="unmanaged-signature"></a>관리되지 않는 서명  
   
-```  
-HRESULT New(long ar[]);   
-HRESULT New(BSTR ar[]);   
+```cpp
+HRESULT New(long ar[]);
+HRESULT New(BSTR ar[]);
 HRESULT New(LPStr ar[]);  
 ```  
   
@@ -265,8 +265,8 @@ void New( String [,] ar );
   
 #### <a name="unmanaged-signature"></a>관리되지 않는 서명  
   
-```  
-HRESULT New([in] SAFEARRAY( long ) ar);   
+```cpp
+HRESULT New([in] SAFEARRAY( long ) ar);
 HRESULT New([in] SAFEARRAY( BSTR ) ar);  
 ```  
   
@@ -294,8 +294,8 @@ void New([MarshalAs(UnmanagedType.LPARRAY,
   
 #### <a name="unmanaged-signature"></a>관리되지 않는 서명  
   
-```  
-HRESULT New(long ar[]);   
+```cpp
+HRESULT New(long ar[]);
 HRESULT New(LPStr ar[]);  
 ```  
   
@@ -328,8 +328,8 @@ void New2( [MarshalAs(UnmanagedType.Safe array)] System.Array ar );
   
 #### <a name="unmanaged-signature"></a>관리되지 않는 서명  
   
-```  
-HRESULT New([in] _Array *ar);   
+```cpp
+HRESULT New([in] _Array *ar);
 HRESULT New([in] SAFEARRAY(VARIANT) ar);  
 ```  
   
@@ -338,7 +338,7 @@ HRESULT New([in] SAFEARRAY(VARIANT) ar);
   
 #### <a name="unmanaged-representation"></a>관리되지 않는 표현  
   
-```  
+```cpp
 struct MyStruct {  
     short s1[128];  
 }  

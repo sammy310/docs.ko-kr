@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd3d7ea4d9639c5c68ecf977b4e95e816d99a4f6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a5f76f60c8474b1503dc4cebeeafe241cd40be96
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915429"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970603"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows Forms ActiveX 컨트롤 가져오기)
 ActiveX 컨트롤 가져오기를 사용하면 ActiveX 컨트롤에 대한 COM 형식 라이브러리의 형식 정의를 Windows Forms 컨트롤로 변환할 수 있습니다.  
@@ -30,7 +30,7 @@ ActiveX 컨트롤 가져오기를 사용하면 ActiveX 컨트롤에 대한 COM �
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 aximp [options]{file.dll | file.ocx}  
 ```  
   
@@ -42,7 +42,7 @@ aximp [options]{file.dll | file.ocx}
   
 |옵션|설명|  
 |------------|-----------------|  
-|`/delaysign`|Aximp.exe에서 지연 서명을 사용하여 결과 컨트롤에 서명하도록 지정합니다. 이 옵션은 `/keycontainer:`, `/keyfile:` 또는 `/publickey:` 옵션과 함께 지정해야 합니다. 지연 서명 프로세스에 대한 자세한 내용은 [어셈블리 서명 연기](../../../docs/framework/app-domains/delay-sign-assembly.md)를 참조하세요.|  
+|`/delaysign`|Aximp.exe에서 지연 서명을 사용하여 결과 컨트롤에 서명하도록 지정합니다. 이 옵션은 `/keycontainer:`, `/keyfile:` 또는 `/publickey:` 옵션과 함께 지정해야 합니다. 지연 서명 프로세스에 대한 자세한 내용은 [어셈블리 서명 연기](../../standard/assembly/delay-sign.md)를 참조하세요.|  
 |`/help`|이 도구의 명령 구문 및 옵션을 표시합니다.|  
 |`/keycontainer:` *containerName*|*containerName*에서 지정된 키 컨테이너에 있는 퍼블릭/프라이빗 키 쌍을 사용하여 강력한 이름으로 결과 컨트롤에 서명합니다.|  
 |`/keyfile:` *filename*|*filename*에 있는 게시자의 공식 퍼블릭/프라이빗 키 쌍을 사용하여 강력한 이름으로 결과 컨트롤에 서명합니다.|  
@@ -75,7 +75,7 @@ aximp [options]{file.dll | file.ocx}
 ## <a name="example"></a>예  
  다음 명령을 사용하여 Media Player 컨트롤 `msdxm.ocx`를 위한 MediaPlayer.dll 및 AxMediaPlayer.dll을 생성합니다.  
   
-```  
+```console 
 aximp c:\systemroot\system32\msdxm.ocx  
 ```  
   

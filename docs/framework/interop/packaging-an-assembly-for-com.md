@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df8f82605118f1af0f085aef6e76c1e4bedb2904
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09c54e58ef25afa28d2681719284c358d90bddc2
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69988164"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969069"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>COM용 .NET Framework 어셈블리 패키징
 
@@ -45,7 +45,7 @@ COM 개발자는 애플리케이션에 통합하려는 관리 형식에 대한 �
 
   게시자가 서명한 강력한 이름의 어셈블리는 전역 어셈블리 캐시에 설치할 수 있습니다. 서명되지 않은 어셈블리는 사용자 컴퓨터에 프라이빗 어셈블리로 설치해야 합니다.
 
-  자세한 내용은 [어셈블리 보안 고려 사항](../app-domains/assembly-security-considerations.md)을 참조하세요.
+  자세한 내용은 [어셈블리 보안 고려 사항](../../standard/assembly/security-considerations.md)을 참조하세요.
 
 - 형식 라이브러리 포함
 
@@ -96,7 +96,7 @@ COM 개발자는 애플리케이션에 통합하려는 관리 형식에 대한 �
 - [.NET Framework 구성 요소를 COM에 노출](exposing-dotnet-components-to-com.md)
 - [상호 운용할 .NET 형식의 정규화](../../standard/native-interop/qualify-net-types-for-interoperation.md)
 - [클래스 인터페이스 소개](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
-- [어셈블리 보안 고려 사항](../app-domains/assembly-security-considerations.md)
+- [어셈블리 보안 고려 사항](../../standard/assembly/security-considerations.md)
 - [Tlbexp.exe(형식 라이브러리 내보내기)](../tools/tlbexp-exe-type-library-exporter.md)
 - [COM에 어셈블리 등록](registering-assemblies-with-com.md)
 - [방법: 애플리케이션에 Win32 리소스로 형식 라이브러리 포함](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

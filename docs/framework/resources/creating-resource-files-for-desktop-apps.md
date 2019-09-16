@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7ff34285220fd1e3c17503a8387104e91ec08b1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 55eda4ce2fd109715076f81d53e93a80d40cbfa3
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313660"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851570"
 ---
 # <a name="create-resource-files-for-net-apps"></a>.NET 앱의 리소스 파일 만들기
 
@@ -74,7 +74,7 @@ HelpMenuName=Help
 
  빈 문자열(즉, <xref:System.String.Empty?displayProperty=nameWithType> 값을 가진 리소스)은 텍스트 파일에 사용할 수 있습니다. 예:
 
-```
+```text
 EmptyString=
 ```
 
@@ -131,7 +131,7 @@ vbc greeting.vb -resource:GreetingResources.resources
 
  C#을 사용하고 있고 소스 코드 파일 이름이 Greeting.cs라면 다음 명령은 포함된 .resources 파일을 포함하는 실행 파일을 만듭니다.
 
- ```console
+```console
 csc greeting.cs -resource:GreetingResources.resources
 ```
 

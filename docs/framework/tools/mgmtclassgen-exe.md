@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60f48422d23fc5db743eeb05e3eddeb732bff102
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: ce281398fe7ea3a280355a7b79cc7144aba256be
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364027"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894654"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe(강력하게 형식화된 관리 클래스 생성기)
 강력하게 형식화된 관리 클래스 생성기 도구를 사용하면 지정된 WMI(Windows Management Instrumentation) 클래스에 대해 초기 바인딩 관리되는 클래스를 신속하게 생성할 수 있습니다. 생성된 클래스는 WMI 클래스의 인스턴스에 액세스할 때 작성해야 하는 코드를 단순화합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 mgmtclassgen   
 WMIClass [options]   
 ```  
@@ -96,7 +96,7 @@ WMIClass [options]
 ## <a name="examples"></a>예제  
  다음 명령은 C# 코드로 **Root\cimv2** 네임스페이스의 **Win32_LogicalDisk** WMI 클래스에 대한 관리되는 클래스를 생성합니다. 도구에서 관리되는 클래스를 **ROOT.CIMV2.Win32** 네임스페이스의 c:\disk.cs에 소스 파일로 작성합니다.  
   
-```  
+```console  
 mgmtclassgen Win32_LogicalDisk /n root\cimv2 /l CS /p c:\disk.cs  
 ```  
   

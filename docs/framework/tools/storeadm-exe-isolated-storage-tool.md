@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b947ea2bfabe1c3fa9afb43cb5ecc41ab92be89
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 12de3cd1663d9dfea66f32fcb7f456d44e31dc60
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929901"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894603"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe(격리된 스토리지 도구)
 격리된 스토리지 도구를 사용하면 현재 사용자의 기존 저장소를 모두 표시하거나 제거할 수 있습니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "69929901"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 storeadm [/list][/machine][/remove][/roaming][/quiet]  
 ```  
   

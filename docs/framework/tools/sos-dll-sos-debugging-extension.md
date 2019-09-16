@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0821b4a680db4822cea1787edb095309e6333cbf
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: c5033b32c1623885b5408f428ce4bc4202d50ce1
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690159"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894621"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll(SOS 디버깅 확장)
 
@@ -21,7 +21,7 @@ SOS 디버깅 확장명(SOS.dll)을 사용하면 내부 CLR(공용 언어 런타
 
 ## <a name="syntax"></a>구문
 
-```shell
+```console
 ![command] [options]
 ```
 
@@ -94,7 +94,7 @@ SOS 디버깅 확장명(SOS.dll)을 사용하면 내부 CLR(공용 언어 런타
 |**VMMap**|가상 주소 공간으로 이동하여 각 영역에 적용된 보호 형식을 표시합니다.|
 |**VMStat**|가상 주소 공간의 요약 뷰를 제공합니다. 이 뷰에서는 해당 메모리에 적용된 각 보호 형식(사용 가능, 예약됨, 커밋됨, 전용, 매핑됨, 이미지)별로 정렬됩니다. TOTAL 열에는 AVERAGE 열에 BLK COUNT 열을 곱한 결과가 표시됩니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 SOS 디버깅 확장을 사용하면 CLR 내에서 실행되는 코드에 대한 정보를 볼 수 있습니다. 예를 들어, SOS 디버깅 확장을 사용하여 관리되는 힙에 대한 정보를 표시하고, 힙 손상을 찾고, 런타임에 사용되는 내부 데이터 형식을 표시하고, 런타임 내에서 실행되는 관리되는 모든 코드에 대한 정보를 볼 수 있습니다.
 
@@ -104,7 +104,7 @@ Visual Studio에서 SOS 디버깅 확장을 사용하려면 [WDK(Windows 드라�
 
 SOS 디버깅 확장을 WinDbg.exe 디버거에 로드하려면 도구에서 다음 명령을 실행합니다.
 
-```
+```console
 .loadby sos clr
 ```
 
@@ -114,7 +114,7 @@ WinDbg.exe 및 Visual Studio에서는 현재 사용 중인 Mscorwks.dll 버전�
 
 특정 버전의 SOS.dll을 로드하려면 Windows 디버거에 다음 명령을 입력합니다.
 
-```
+```console
 .load <full path to sos.dll>
 ```
 
@@ -122,85 +122,85 @@ WinDbg.exe 및 Visual Studio에서는 현재 사용 중인 Mscorwks.dll 버전�
 
 다음 명령은 `00ad28d0` 주소에 있는 배열의 내용을 표시합니다.  두 번째 요소부터 시작하여 다섯 개의 요소까지 계속해서 표시합니다.
 
-```
+```console
 !dumparray -start 2 -length 5 -detail 00ad28d0
 ```
 
 다음 명령은 `1ca248` 주소에 있는 어셈블리의 내용을 표시합니다.
 
-```
+```console
 !dumpassembly 1ca248
 ```
 
 다음 명령은 가비지 수집기 힙에 대한 정보를 표시합니다.
 
-```
+```console
 !dumpheap
 ```
 
 다음 명령은 현재 디렉터리에 있는 StressLog.txt라는 (기본) 파일에 메모리 내 스트레스 로그의 내용을 씁니다.
 
-```
+```console
 !DumpLog
 ```
 
 다음 명령은 `MethodDesc` 주소의 `902f40` 구조체를 표시합니다.
 
-```
+```console
 !dumpmd 902f40
 ```
 
 다음 명령은 `1caa50` 주소의 모듈에 대한 정보를 표시합니다.
 
-```
+```console
 !dumpmodule 1caa50
 ```
 
 다음 명령은 `a79d40` 주소의 개체에 대한 정보를 표시합니다.
 
-```
+```console
 !DumpObj a79d40
 ```
 
 다음 명령은 `00a79d9c` 주소에서 메서드 테이블을 사용하여 `0090320c` 주소의 값 클래스 필드를 표시합니다.
 
-```
+```console
 !DumpVC 0090320c 00a79d9c
 ```
 
 다음 명령은 가비지 수집기에서 사용되는 프로세스 메모리를 표시합니다.
 
-```
+```console
 !eeheap -gc
 ```
 
 다음 명령은 종료하도록 예약된 모든 개체를 표시합니다.
 
-```
+```console
 !finalizequeue
 ```
 
 다음 명령은 `00a79d98` 주소에 있는 개체의 애플리케이션 도메인을 확인합니다.
 
-```
+```console
 !findappdomain 00a79d98
 ```
 
 다음 명령은 현재 프로세스의 모든 가비지 수집기 핸들을 표시합니다.
 
-```
+```console
 !gcinfo 5b68dbb8
 ```
 
 다음 명령은 `MethodTable` 모듈에 있는 `EEClass` 클래스의 `Main` 메서드에 대한 `MainClass` 및 `unittest.exe` 구조체를 표시합니다.
 
-```
+```console
 !name2ee unittest.exe MainClass.Main
 ```
 
 다음 명령은 `02000003` 모듈에 있는 `unittest.exe` 주소의 메타데이터 토큰에 대한 정보를 표시합니다.
 
-```
+```console
 !token2ee unittest.exe 02000003
 ```
 

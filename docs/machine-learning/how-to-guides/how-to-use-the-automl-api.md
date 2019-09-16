@@ -3,12 +3,12 @@ title: ML.NET 자동화 ML API 사용 방법
 description: ML.NET 자동화 ML API는 모델 빌드 프로세스를 자동화하고 배포 준비된 모델을 생성합니다. 자동화된 기계 학습 작업을 구성하기 위해 사용할 수 있는 옵션에 대해 알아보세요.
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: d624b999384dd92d41033e385d01fe556e10a065
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 02e4203b0d9f388c7bd7133f3cd4e97cc60cff14
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960420"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929387"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>ML.NET 자동화 기계 학습 API 사용 방법
 
@@ -26,13 +26,14 @@ ms.locfileid: "65960420"
 ```csharp
 using Microsoft.ML;
 using Microsoft.ML.AutoML;
-    ...
+    // ...
     MLContext mlContext = new MLContext();
     IDataView trainDataView = mlContext.Data.LoadFromTextFile<SentimentIssue>("my-data-file.csv", hasHeader: true);
 ```
 
 ## <a name="select-the-machine-learning-task-type"></a>기계 학습 작업 유형 선택
 실험을 만들기 전에 해결하려는 기계 학습 문제의 유형을 파악합니다. 자동화 기계 학습에서는 다음 ML 작업을 지원합니다.
+
 * 이진 분류
 * 다중 클래스 분류
 * 재발
@@ -104,6 +105,7 @@ using Microsoft.ML.AutoML;
     ```
 
 ML 작업당 지원되는 트레이너 목록은 아래의 해당 링크에서 확인할 수 있습니다.
+
 * [지원되는 이진 분류 알고리즘](xref:Microsoft.ML.AutoML.BinaryClassificationTrainer)
 * [지원되는 다중 클래스 분류 알고리즘](xref:Microsoft.ML.AutoML.MulticlassClassificationTrainer)
 * [지원되는 회귀 알고리즘](xref:Microsoft.ML.AutoML.RegressionTrainer)
@@ -210,6 +212,7 @@ Console.WriteLine($"Root Mean Squared Error: {metrics.RootMeanSquaredError:0.##}
 ```
 
 다음은 ML 작업당 사용 가능한 모든 메트릭입니다.
+
 * [이진 분류 메트릭](xref:Microsoft.ML.AutoML.BinaryClassificationMetric)
 * [다중 클래스 분류 메트릭](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
 * [재발 메트릭](xref:Microsoft.ML.AutoML.RegressionMetric)

@@ -4,16 +4,16 @@ description: .NET 라이브러리에 강력한 이름을 지정하는 모범 사
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/16/2018
-ms.openlocfilehash: 79e44e89a94c1948ff29b9a8161f852c3a7c8cbb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3a623f65d95d776e45af245a1fe241cc5ee25b93
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640790"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70968979"
 ---
 # <a name="strong-naming"></a>강력한 이름 지정
 
-강력한 이름 지정은 키를 사용해서 어셈블리에 서명하여 [강력한 이름의 어셈블리](../../framework/app-domains/strong-named-assemblies.md)를 생성하는 것을 말합니다. 어셈블리에 강력한 이름을 지정하면 이름 및 어셈블리 버전 번호를 기준으로 고유 ID가 생성되어 어셈블리 충돌을 방지하는 데 도움이 됩니다.
+강력한 이름 지정은 키를 사용해서 어셈블리에 서명하여 [강력한 이름의 어셈블리](../assembly/strong-named.md)를 생성하는 것을 말합니다. 어셈블리에 강력한 이름을 지정하면 이름 및 어셈블리 버전 번호를 기준으로 고유 ID가 생성되어 어셈블리 충돌을 방지하는 데 도움이 됩니다.
 
 강력한 이름 지정의 단점은 어셈블리에 강력한 이름이 지정되고 나면 Windows의 .NET Framework에서 어셈블리를 엄격하게 로드한다는 것입니다. 강력한 이름의 어셈블리 참조는 어셈블리에서 참조하는 버전과 정확히 일치해야 하므로 개발자가 어셈블리를 사용할 때 [바인딩 리디렉션을 구성](../../framework/configure-apps/redirect-assembly-versions.md)해야 합니다.
 

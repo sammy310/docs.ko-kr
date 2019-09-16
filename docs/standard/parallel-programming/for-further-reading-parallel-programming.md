@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 98aee307-dde6-4cad-bb58-078497b8064f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 037891abe18d1e119ea1d84a9840ece58b5b3c3f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bbdbc7586396a13cacac216774e8937416be947e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969663"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929288"
 ---
 # <a name="for-further-reading-parallel-programming"></a>추가 정보(병렬 프로그래밍)
 
@@ -22,7 +22,7 @@ ms.locfileid: "56969663"
 
 - [Design Patterns for Decomposition and Coordination on Multicore Architectures](https://docs.microsoft.com/previous-versions/msp-n-p/ff963553(v=pandp.10))(멀티 코어 아키텍처에서 분해 및 조정을 위한 디자인 패턴) 책에서는 .NET Framework 4에 도입된 병렬 프로그래밍 지원을 사용하는 병렬 프로그래밍용 패턴을 설명합니다.
 
-- [Parallel Programming with .NET](https://blogs.msdn.microsoft.com/pfxteam/)(.NET을 사용한 병렬 프로그래밍) 블로그에는 .NET에서의 병렬 프로그래밍에 관해 심층적으로 다루는 여러 문서가 포함되어 있습니다.
+- [Parallel Programming with .NET](https://devblogs.microsoft.com/pfxteam/)(.NET을 사용한 병렬 프로그래밍) 블로그에는 .NET에서의 병렬 프로그래밍에 관해 심층적으로 다루는 여러 문서가 포함되어 있습니다.
 
 - [Samples for Parallel Programming with the .NET Framework](https://code.msdn.microsoft.com/ParExtSamples)(.NET Framework를 사용하는 병렬 프로그래밍 샘플) 페이지에서는 중급 및 고급 수준의 병렬 프로그래밍 기술을 보여주는 여러 가지 샘플을 제공합니다.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5320bc6c5105c95d63b1888e1adbc2ecf1bc5fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b652fae47a321ca41e1f518e9077cd68f24c91c9
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200001"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894864"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe(.NET Framework 명령줄 디버거)
 도구 공급업체와 애플리케이션 개발자는 .NET Framework 명령줄 디버거를 사용하여 .NET Framework 공용 언어 런타임을 대상으로 하는 프로그램에서 버그를 찾고 수정할 수 있습니다. 이 도구에는 디버깅 서비스를 제공하기 위해 런타임 디버깅 API가 사용됩니다. MDbg.exe를 사용하여 관리 코드만 디버깅할 수 있습니다. 관리되지 않는 코드의 디버깅은 지원하지 않습니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "59200001"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 MDbg [ProgramName[arguments]] [options]  
 ```  
   
@@ -61,13 +61,13 @@ MDbg [ProgramName[arguments]] [options]
 |**log** [*eventType*]|기록할 이벤트를 설정 또는 표시합니다.|  
 |**mo**[**de**] [*option on/off*]|다양한 디버거 옵션을 설정합니다. 옵션 없이 `mode`를 사용하여 디버깅 모드와 현재 설정 목록을 가져옵니다.|  
 |**mon**[**itorInfo**] *monitorReference*|개체 모니터 잠금 정보를 표시합니다.|  
-|**newo**[**bj**] *typeName* [*arguments...*]|*typeName* 형식의 새 개체를 만듭니다.|  
+|**newo**[**bj**] *typeName* [*arguments...* ]|*typeName* 형식의 새 개체를 만듭니다.|  
 |**n**[**ext**]|코드를 실행하여 다음 줄에 여러 함수 호출이 포함된 경우에도 다음 줄로 이동합니다.|  
 |**Opendump** *pathToDumpFile*|디버깅에 대해 지정된 덤프 파일을 엽니다.|  
 |**o**[**ut**]|현재 함수의 끝으로 이동합니다.|  
 |**pa**[**th**] [*pathName*]|이진 파일의 위치를 사용할 수 없는 경우 지정한 경로에서 소스 파일을 검색합니다.|  
 |**p**[**rint**] [*var*] &#124; [`-d`]|범위 안에 있는 모든 변수를 인쇄하거나(**print**), 지정한 변수를 인쇄하거나(**print** *var*), 디버거 변수를 인쇄합니다(**print**`-d`).|  
-|**printe**[**xception**] [*-r*]|현재 스레드에 마지막 예외를 출력합니다. `–r`(재귀) 옵션을 사용하여 예외 개체에서 `InnerException` 속성을 트래버스함으로써 전체 예외 체인에 대한 정보를 가져옵니다.|  
+|**printe**[**xception**] [ *-r*]|현재 스레드에 마지막 예외를 출력합니다. `–r`(재귀) 옵션을 사용하여 예외 개체에서 `InnerException` 속성을 트래버스함으로써 전체 예외 체인에 대한 정보를 가져옵니다.|  
 |**pro**[**cessenum**]|활성 프로세스를 표시합니다.|  
 |**q**[**uit**] [*exitcode*]|선택적으로 프로세스 종료 코드를 지정하여 MDbg.exe 셸을 종료합니다.|  
 |**re**[**sume**] [`*` &#124; [`~`]*threadNumber*]|현재 스레드나 *threadNumber* 매개 변수에 의해 지정된 스레드를 다시 시작합니다.<br /><br /> *threadNumber* 매개 변수가 `*`로 지정되거나 스레드 번호가 `~`로 시작하는 경우 *threadNumber*에 의해 지정된 스레드를 제외한 모든 스레드에 명령이 적용됩니다.<br /><br /> 중단되지 않은 스레드를 다시 시작하는 것은 아무 효과가 없습니다.|  
@@ -83,14 +83,14 @@ MDbg [ProgramName[arguments]] [options]
 |**uwgc**[**handle**] [*var*] &#124; [*address*]|핸들에 의해 추적되는 변수를 인쇄합니다. 핸들을 이름이나 주소로 지정할 수 있습니다.|  
 |**when**|현재 활성 `when` 문을 표시합니다.<br /><br /> **when** **delete all** &#124; `num` [`num` [`num` …]] - 번호로 지정된 `when` 문을 삭제하며 `all`이 지정된 경우는 모든 `when` 문을 삭제합니다.<br /><br /> **when** `stopReason` [`specific_condition`] **do**`cmd` [`cmd` [`cmd` …] ] - *stopReason* 매개 변수는 다음 중 하나일 수 있습니다.<br /><br /> `StepComplete`, `ProcessExited`, `ThreadCreated`, `BreakpointHit`, `ModuleLoaded`, `ClassLoaded`, `AssemblyLoaded`, `AssemblyUnloaded`, `ControlCTrapped`, `ExceptionThrown`, `UnhandledExceptionThrown`, `AsyncStop`, `AttachComplete`, `UserBreak`, `EvalComplete`, `EvalException`, `RemapOpportunityReached`, `NativeStop`.<br /><br /> *specific_condition*은 다음 중 하나일 수 있습니다.<br /><br /> -   *number* - `ThreadCreated` 및 `BreakpointHit`의 경우 같은 값을 가진 스레드 ID/중단점 번호에 의해 중단될 때만 작업을 트리거합니다.<br />-   [`!`]*name* - `ModuleLoaded`, `ClassLoaded`, `AssemblyLoaded`, `AssemblyUnloaded`, `ExceptionThrown` 및 `UnhandledExceptionThrown`의 경우 이름이 *stopReason* 이름과 일치할 때만 작업을 트리거합니다.<br /><br /> *specific_condition*은 *stopReason*의 다른 값을 위해 비어 있어야 합니다.|  
 |**w**[**here**] [`-v`] [`-c` *depth*] [*threadID*]|스택 프레임에 대한 디버그 정보를 표시합니다.<br /><br /> -   `-v` 옵션은 표시된 각 스택 프레임에 대한 자세한 정보를 제공합니다.<br />-   `depth`의 수를 지정하면 표시되는 프레임 수가 제한됩니다. 모든 프레임을 표시하려면 **all** 명령을 사용합니다. 기본값은 100입니다.<br />-   *threadID* 매개 변수를 지정하면 스택과 연결할 스레드를 제어할 수 있습니다. 기본값은 현재 스레드만입니다. 모든 스레드를 가져오려면 **all** 명령을 사용합니다.|  
-|**x** [`-c`*numSymbols*] [*module*[`!`*pattern*]]|모듈의 `pattern`이 일치하는 함수를 표시합니다.<br /><br /> *numSymbols*를 지정하면 출력이 지정한 수로 제한됩니다. *pattern*에 대해 `!`(정규식을 나타냄)를 지정하지 않으면 모든 함수가 표시됩니다. *module*을 제공하지 않으면 로드된 모든 모듈이 표시됩니다. 기호(*~#*)를 사용하면 **break** 명령을 통해 중단점을 설정할 수 있습니다.|  
+|**x** [`-c`*numSymbols*] [*module*[`!`*pattern*]]|모듈의 `pattern`이 일치하는 함수를 표시합니다.<br /><br /> *numSymbols*를 지정하면 출력이 지정한 수로 제한됩니다. *pattern*에 대해 `!`(정규식을 나타냄)를 지정하지 않으면 모든 함수가 표시됩니다. *module*을 제공하지 않으면 로드된 모든 모듈이 표시됩니다. 기호( *~#* )를 사용하면 **break** 명령을 통해 중단점을 설정할 수 있습니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  컴파일러가 디버깅 기호를 생성하도록 하는 컴파일러 특정 플래그를 사용하여 디버깅할 애플리케이션을 컴파일합니다. 이러한 플래그에 대한 자세한 내용은 해당 컴파일러의 설명서를 참조하십시오. 최적화된 애플리케이션을 디버깅할 수 있지만 일부 디버깅 정보가 손실됩니다. 예를 들어, 다수의 지역 변수가 표시되지 않으며 소스 줄이 정확하지 않게 됩니다.  
   
  애플리케이션을 컴파일한 후에 명령 프롬프트에 **mdbg**를 입력하여 다음 예제에 표시된 대로 디버깅 세션을 시작합니다.  
   
-```  
+```console  
 C:\Program Files\Microsoft Visual Studio 8\VC>mdbg  
 MDbg (Managed debugger) v2.0.50727.42 (RTM.050727-4200) started.  
 Copyright (C) Microsoft Corporation. All rights reserved.  

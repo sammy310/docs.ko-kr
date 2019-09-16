@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 8ed6e759f682f0db76938661fdcf668bec1eef1c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0f14cc6486e53cad8c3cbadc404d22d7e5458e84
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588975"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991266"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>연습: Office 프로그래밍(C# 및 Visual Basic)
 
 Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 Visual Basic의 기능을 제공합니다. 유용한 C# 기능으로는 명명된 인수 및 선택적 인수, `dynamic` 형식의 반환 값 등이 있습니다. COM 프로그래밍에서 `ref` 키워드를 생략하면 인덱싱된 속성에 액세스할 수 있게 됩니다. Visual Basic의 기능으로는 자동 구현 속성, 람다 식의 문, 컬렉션 이니셜라이저 등이 있습니다.
 
-이 두 언어에서는 PIA(주 Interop 어셈블리)를 사용자 컴퓨터에 배포하지 않아도 COM 구성 요소와 상호 작용하는 어셈블리를 배포할 수 있도록 하는 형식 정보를 포함할 수 있습니다. 자세한 내용은 [연습: 관리되는 어셈블리의 형식 포함](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)을 참조하세요.
+이 두 언어에서는 PIA(주 Interop 어셈블리)를 사용자 컴퓨터에 배포하지 않아도 COM 구성 요소와 상호 작용하는 어셈블리를 배포할 수 있도록 하는 형식 정보를 포함할 수 있습니다. 자세한 내용은 [연습: 관리되는 어셈블리의 형식 포함](../../../standard/assembly/embed-types-visual-studio.md)을 참조하세요.
 
 이 연습에서는 Office 프로그래밍과 관련해서 이러한 기능을 설명하지만 대부분 일반 프로그래밍에서도 유용합니다. 연습에서는 Excel 추가 기능 애플리케이션을 사용하여 Excel 통합 문서를 만듭니다. 그런 다음 통합 문서 링크를 포함하는 Word 문서를 만듭니다. 마지막으로 PIA 종속성을 사용 및 사용하지 않도록 설정하는 방법을 알아봅니다.
 
@@ -160,7 +160,7 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
 
 4. IL DASM 창의 **파일** 메뉴에서 **파일** > **열기**를 선택합니다. **Visual Studio \<version>** 과 **프로젝트**를 차례로 두 번 클릭합니다. 프로젝트 폴더를 열고 *프로젝트 이름*.dll에서 bin/Debug 폴더를 확인한 후 *프로젝트 이름*.dll을 두 번 클릭합니다. 새 창에 프로젝트 특성과 기타 모듈 및 어셈블리에 대한 참조가 표시됩니다. 어셈블리에는 `Microsoft.Office.Interop.Excel` 및 `Microsoft.Office.Interop.Word` 네임스페이스가 포함되어 있습니다. 기본적으로 Visual Studio에서 컴파일러는 필요한 형식을 참조된 PIA에서 어셈블리로 가져옵니다.
 
-     자세한 내용은 [방법: 어셈블리 콘텐츠 보기](../../../framework/app-domains/how-to-view-assembly-contents.md)를 참조하세요.
+     자세한 내용은 [방법: 어셈블리 콘텐츠 보기](../../../standard/assembly/view-contents.md)를 참조하세요.
 
 5. **MANIFEST** 아이콘을 두 번 클릭합니다. 프로젝트가 참조하는 항목이 들어 있는 어셈블리 목록이 포함된 창이 표시됩니다. `Microsoft.Office.Interop.Excel` 및 `Microsoft.Office.Interop.Word`는 목록에 포함되어 있지 않습니다. 프로젝트에 필요한 형식을 어셈블리로 가져왔기 때문에 PIA에 대한 참조는 필요하지 않으므로 배포를 손쉽게 수행할 수 있습니다. PIA는 사용자의 컴퓨터에 없어도 되며 애플리케이션에서 특정 PIA 버전을 배포할 필요가 없으므로 필요한 PIA가 모든 버전에 있다면 여러 Office 버전에서 사용하도록 애플리케이션을 설계할 수 있습니다.
 
@@ -205,7 +205,7 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
 - [람다 식(C#)](../statements-expressions-operators/lambda-expressions.md)
 - [방법: COM Interop 프로그래밍에서 인덱싱된 속성 사용](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
 - [연습: Visual Studio에서 Microsoft Office 어셈블리의 형식 정보 포함](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
-- [연습: 관리되는 어셈블리의 형식 포함](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
+- [연습: 관리되는 어셈블리의 형식 포함](../../../standard/assembly/embed-types-visual-studio.md)
 - [연습: Excel용 첫 VSTO 추가 기능 만들기](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
 - [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)
 - [상호 운용성](./index.md)

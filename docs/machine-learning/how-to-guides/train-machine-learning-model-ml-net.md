@@ -5,12 +5,12 @@ ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 3fb586b218f1769949efc362cacc3957623dd43b
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: fc735f28bad91b9714d7e6bf2a9c7c620acacc4d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169041"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929343"
 ---
 # <a name="train-and-evaluate-a-model"></a>모델 학습 및 평가
 
@@ -175,6 +175,7 @@ double rSquared = trainedModelMetrics.RSquared;
 ```
 
 앞의 코드 샘플에서:  
+
 1. 테스트 데이터 세트는 앞에서 정의한 데이터 준비 변환을 통해 미리 처리됩니다. 
 2. 학습된 기계 학습 모델을 사용하여 테스트 데이터에 대한 예측을 수행합니다.
 3. `Evaluate` 메서드에서 테스트 데이터 세트의 `CurrentPrice` 열 값을 새 출력 예측의 `Score` 열과 비교하여 회귀 모델의 메트릭을 계산하는데, 이 중 하나인 R 제곱이 `rSquared` 변수에 저장됩니다.

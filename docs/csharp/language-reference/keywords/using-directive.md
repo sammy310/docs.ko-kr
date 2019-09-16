@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: 072af9850f792cb6d7322724f2adbc978465dc84
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: d6e3667861c2b1ac9a84ca7b4e2cabb5784d793d
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66421748"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970053"
 ---
 # <a name="using-directive-c-reference"></a>using 지시문(C# 참조)
 
@@ -54,7 +54,7 @@ class Program
 }
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 `using` 지시문의 범위는 지시문이 나타내는 파일로 제한됩니다.
 
@@ -75,8 +75,6 @@ using s.RegularExpressions;
 `using` 지시문을 만들어서 네임스페이스를 지정할 필요 없이 네임스페이스에서 이 형식을 사용합니다. `using` 지시문은 지정한 네임스페이스에 중첩된 모든 네임스페이스에 대한 액세스 권한을 제공하지 않습니다.
 
 네임스페이스는 두 가지 범주인 사용자 정의 및 시스템 정의로 구분됩니다. 사용자 정의 네임스페이스는 코드에서 정의된 네임스페이스입니다. 시스템 정의 네임스페이스 목록은 [.NET API 브라우저](../../../../api/index.md)를 참조하세요.
-
-다른 어셈블리의 메서드를 참조하는 예제는 [명령줄을 사용하여 어셈블리 만들기 및 사용](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)을 참조하세요.
 
 ## <a name="example-1"></a>예제 1
 

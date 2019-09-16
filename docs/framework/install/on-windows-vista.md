@@ -5,12 +5,12 @@ ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: f1024e0bf245bbea23673cfb68de676383b672f2
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: a5668d36e972699218633d8b8630d38a5c7cc9a3
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66051904"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853879"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>Windows Vista 및 Windows Server 2008에 .NET Framework 설치
 
@@ -34,6 +34,6 @@ Windows Vista에는 [.NET Framework 3.5](https://go.microsoft.com/fwlink/?LinkID
 
 ## <a name="see-also"></a>참고 항목
 
-- [.NET Framework 다운로드](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)
+- [.NET Framework 다운로드](https://dotnet.microsoft.com/download)
 - [차단된 .NET Framework 설치 및 제거 문제 해결](troubleshoot-blocked-installations-and-uninstallations.md)
 - [개발자용 .NET Framework 설치](guide-for-developers.md)

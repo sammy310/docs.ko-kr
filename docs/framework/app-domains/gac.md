@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5b99597a857f4c7926f783a6531f44fdb1fb7bc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0e94bb9d006febb4d8760ac481570dbed3a98341
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921582"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972033"
 ---
 # <a name="global-assembly-cache"></a>전역 어셈블리 캐시
 공용 언어 런타임이 설치된 각 컴퓨터에는 전역 어셈블리 캐시라는 컴퓨터 수준의 코드 캐시가 있습니다. 전역 어셈블리 캐시에는 컴퓨터의 여러 애플리케이션에서 공유하도록 특별히 지정된 어셈블리가 저장됩니다.  
@@ -44,6 +44,6 @@ ms.locfileid: "69921582"
   
 ## <a name="see-also"></a>참고 항목
 
-- [공용 언어 런타임의 어셈블리](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [.NET 어셈블리](../../standard/assembly/index.md)
 - [어셈블리 및 전역 어셈블리 캐시 사용](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
-- [강력한 이름의 어셈블리](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [강력한 이름의 어셈블리](../../standard/assembly/strong-named.md)

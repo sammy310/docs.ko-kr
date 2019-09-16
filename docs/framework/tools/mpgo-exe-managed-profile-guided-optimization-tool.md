@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e72e091d9b120042254df5de323169f6f67c61d4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1aa3bbfafb760a3002a218ef52d87957af47c4de
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616067"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894849"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe(관리되는 프로필 기반 최적화 도구)
 
@@ -29,7 +29,7 @@ ms.locfileid: "64616067"
   
 데스크톱 응용 프로그램:  
   
-```  
+```console  
 mpgo –Scenario <command> [-Import <directory>] –AssemblyList <assembly1>  <assembly2> ... -OutDir <directory> [options]  
 ```  
   
@@ -37,7 +37,7 @@ mpgo –Scenario <command> [-Import <directory>] –AssemblyList <assembly1>  <a
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>  
 ```  
   
@@ -51,7 +51,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 |------------------------|-----------------|
 |`-Scenario` \<*command*><br /><br /> 또는<br /><br /> `-Scenario` \<*packageName*><br /><br /> 또는<br /><br /> `-Import` \<*directory*>|데스크톱 앱의 경우 `–Scenario`를 사용하여 명령줄 인수 등의 최적화할 애플리케이션을 실행할 명령을 지정합니다. 공백이 포함된 경로를 지정하는 경우 *command*에 세 개의 큰따옴표를 사용합니다(예: `mpgo.exe -scenario """C:\My App\myapp.exe""" -assemblylist """C:\My App\myapp.exe""" -outdir "C:\optimized files"`). *command*에 공백이 포함되어 있는 경우 큰따옴표를 사용하면 제대로 작동하지 않으므로 큰따옴표를 사용하지 마세요.<br /><br /> 또는<br /><br /> [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱의 경우 `–Scenario`를 사용하여 프로필 정보를 생성할 패키지를 지정합니다. 전체 패키지 이름 대신 패키지의 표시 이름 또는 패키지 제품군 이름을 지정하는 경우, Mpgo.exe는 일치 항목이 하나뿐이면 사용자가 입력한 이름과 일치하는 패키지를 선택합니다. 여러 패키지가 지정된 이름과 일치하는 경우, Mpgo.exe는 패키지를 선택하라는 메시지를 표시합니다.<br /><br /> 또는<br /><br /> `-Import`를 사용하여 이전에 최적화된 어셈블리의 최적화 데이터가 `-AssemblyList`에서 어셈블리를 최적화하는 데 사용해야 함을 지정합니다. *directory*는 이전에 최적화된 파일이 들어있는 디렉터리를 지정합니다. `–AssemblyList` 또는 `–AssemblyListFile`에서 지정된 어셈블리는 가져온 파일의 데이터를 사용하여 최적화할 어셈블리의 새 버전입니다. 이전 어셈블리 버전의 최적화 데이터를 사용하면 시나리오를 다시 실행하지 않고도 새 버전의 어셈블리를 최적화할 수 있습니다.  그러나 가져온 어셈블리와 대상 어셈블리가 현저히 다른 코드를 포함하는 경우, 최적화 데이터의 효율성이 저하됩니다. `–AssemblyList` 또는 `–AssemblyListFile`에 지정된 어셈블리 이름은 `–Import`*directory*로 지정된 디렉터리에 있어야 합니다. 공백이 포함된 경로를 지정하는 경우 *directory*를 세 개의 큰따옴표로 묶습니다.<br /><br /> `–Scenario` 또는 `–Import` 매개 변수를 지정해야 하지만 둘 다 지정할 수는 없습니다.|
 |`-OutDir` \<*directory*>|최적화된 어셈블리를 저장할 디렉터리 출력 디렉터리 폴더에 어셈블리가 이미 있으면, 새 복사본이 생성되고 이름에 인덱스 번호가 추가됩니다(예: *assemblyname*-1.exe). 공백이 포함된 경로를 지정하는 경우 *directory*를 큰따옴표로 묶습니다.|
-|`-AssemblyList` \<*assembly1 assembly2 ...*><br /><br /> 또는<br /><br /> `-AssemblyListFile` \<*file*>|공백으로 분리된 프로필 정보를 수집할 어셈블리(.exe 및 .dll 파일 등)의 목록 `C:\Dir\*.dll` 또는 `*.dll`을 지정하여 지정된 또는 현재 작업 디렉터리에 있는 모든 어셈블리를 선택할 수 있습니다. 자세한 내용은 설명 부분을 참조하세요.<br /><br /> 또는<br /><br /> 줄당 하나의 어셈블리로 나열된 어셈블리에 대한 프로필 정보를 수집한 어셈블리 목록이 포함된 텍스트 파일 어셈블리 이름이 하이픈(-)으로 시작되면 어셈블리 파일 목록을 사용하거나 어셈블리의 이름을 변경합니다.|
+|`-AssemblyList` \<*assembly1 assembly2 ...* ><br /><br /> 또는<br /><br /> `-AssemblyListFile` \<*file*>|공백으로 분리된 프로필 정보를 수집할 어셈블리(.exe 및 .dll 파일 등)의 목록 `C:\Dir\*.dll` 또는 `*.dll`을 지정하여 지정된 또는 현재 작업 디렉터리에 있는 모든 어셈블리를 선택할 수 있습니다. 자세한 내용은 설명 부분을 참조하세요.<br /><br /> 또는<br /><br /> 줄당 하나의 어셈블리로 나열된 어셈블리에 대한 프로필 정보를 수집한 어셈블리 목록이 포함된 텍스트 파일 어셈블리 이름이 하이픈(-)으로 시작되면 어셈블리 파일 목록을 사용하거나 어셈블리의 이름을 변경합니다.|
 |`-AppID` \<*appId*>|지정된 패키지에 있는 애플리케이션의 ID입니다. 와일드카드(\*)를 사용하는 경우, Mpgo.exe는 패키지에서 AppID를 열거하려고 하고, 실패하는 경우 \<*package_family_name*>!App으로 대체합니다. 앞에 느낌표(!)가 있는 문자열을 지정하는 경우, Mpgo.exe는 제공되는 인수를 사용하여 패키지 제품군 이름을 연결합니다.|
 |`-Timeout` \<*seconds*>|응용 프로그램이 종료되기 전에 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램을 실행할 수 있는 시간|
 
@@ -65,7 +65,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 |`-LeaveNativeImages`|시나리오를 실행한 후에 계측된 네이티브 이미지가 삭제되지 않도록 지정합니다. 이 옵션은 실행 중인 시나리오에 지정한 애플리케이션을 가져올 때 주로 사용됩니다. 이렇게 하면 Mpgo.exe의 후속 실행에 대한 네이티브 이미지가 다시 작성되지 않습니다. 애플리케이션의 실행을 종료하면 이 옵션을 지정하는 경우 캐시에 고아가 된 원시 이미지가 있을 수 있습니다. 이 경우 Mpgo.exe를 동일한 시나리오 및 어셈블리 목록을 사용하여 실행하고 `–RemoveNativeImages` 매개 변수를 사용하여 원시 이미지를 제거합니다.|
 |`-RemoveNativeImages`|`–LeaveNativeImages`가 지정된 실행에서 정리합니다. `-RemoveNativeImages`를 지정하는 경우, Mpgo.exe는 `-64bit` 및 `–AssemblyList`를 제외한 모든 인수를 무시하고 계측된 모든 네이티브 이미지를 삭제한 후 종료됩니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
  명령줄에서 `–AssemblyList` 및 `- AssemblyListFile`을 여러 번 사용할 수 있습니다.
 
  어셈블리를 지정할 때 전체 경로 이름을 지정하지 않으면 Mpgo.exe는 현재 디렉터리에서 찾습니다. 잘못된 경로를 지정하는 경우 Mpgo.exe는 오류 메시지를 표시하지만 다른 어셈블리에 대한 데이터는 계속 생성합니다. 교육 시나리오 중 로드되지 않은 어셈블리를 지정하는 경우 해당 어셈블리에 대해 교육 데이터가 생성되지 않습니다.
@@ -110,19 +110,19 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 ## <a name="examples"></a>예제  
  Visual Studio용 개발자 명령 프롬프트의 다음 Mpgo.exe 명령은 세금 애플리케이션을 최적화합니다.  
   
-```  
+```console  
 mpgo –scenario "C:\MyApp\MyTax.exe /params par" –AssemblyList Mytax.dll MyTaxUtil2011.dll –OutDir C:\Optimized –TimeOut 15  
 ```  
   
  다음 Mpgo.exe 명령은 사운드 애플리케이션을 최적화합니다.  
   
-```  
+```console  
 mpgo –scenario "C:\MyApp\wav2wma.exe –input song1.wav –output song1.wma" –AssemblyList transcode.dll –OutDir C:\Optimized –TimeOut 15  
 ```  
   
  다음 Mpgo.exe 명령은 이전에 최적화된 어셈블리의 데이터를 사용하여 새 버전의 어셈블리를 최적화합니다.  
   
-```  
+```console  
 mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyTaxUtil2011.dll" -outdir C:\ReOptimized  
 ```  
   

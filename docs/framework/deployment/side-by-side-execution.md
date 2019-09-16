@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47f211256b4820e3fb25339de2fe4db962171056
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 01fa0cf9811e72333b091858e2f78a80dda1d9ef
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911005"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969097"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>.NET Framework의 Side-by-Side 실행
 Side-by-side 실행은 동일한 컴퓨터에서 여러 버전의 애플리케이션 또는 구성 요소를 실행하는 기능입니다. 동일한 컴퓨터에서 여러 버전의 공용 언어 런타임과, 하나의 런타임 버전을 사용하는 여러 버전의 애플리케이션 및 구성 요소를 동시에 사용할 수 있습니다.  
@@ -35,7 +35,7 @@ Side-by-side 실행은 동일한 컴퓨터에서 여러 버전의 애플리케�
   
 - 강력한 이름의 어셈블리  
   
-     Side-by-Side 실행은 강력한 이름의 어셈블리를 사용하여 형식 정보를 특정 버전의 어셈블리에 바인딩합니다. 이렇게 하면 애플리케이션이나 구성 요소가 잘못된 버전의 어셈블리에 바인딩되지 않도록 할 수 있습니다. 또한, 강력한 이름의 어셈블리를 사용하면 동일한 컴퓨터에 여러 버전의 파일이 함께 있을 수 있으며 애플리케이션에서 이러한 파일을 사용할 수 있습니다. 자세한 내용은 [강력한 이름의 어셈블리](../../../docs/framework/app-domains/strong-named-assemblies.md)를 참조하세요.  
+     Side-by-Side 실행은 강력한 이름의 어셈블리를 사용하여 형식 정보를 특정 버전의 어셈블리에 바인딩합니다. 이렇게 하면 애플리케이션이나 구성 요소가 잘못된 버전의 어셈블리에 바인딩되지 않도록 할 수 있습니다. 또한, 강력한 이름의 어셈블리를 사용하면 동일한 컴퓨터에 여러 버전의 파일이 함께 있을 수 있으며 애플리케이션에서 이러한 파일을 사용할 수 있습니다. 자세한 내용은 [강력한 이름의 어셈블리](../../standard/assembly/strong-named.md)를 참조하세요.  
   
 - 버전 인식 코드 스토리지.  
   
@@ -116,7 +116,7 @@ publicKeyToken=...,
 |[방법: 자동 바인딩 리디렉션 사용 설정 및 해제](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|특정 버전의 어셈블리에 애플리케이션을 바인딩하는 방법에 대해 설명합니다.|  
 |[어셈블리 바인딩 리디렉션 구성](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|.NET Framework 어셈블리의 특정 버전에 대한 어셈블리 바인딩 참조를 리디렉션하는 방법을 설명합니다.|  
 |[In-Process Side-by-Side 실행](../../../docs/framework/deployment/in-process-side-by-side-execution.md)|In-Process Side-by-Side 런타임 호스트 활성화를 사용하여 단일 프로세스에서 여러 버전의 CLR을 실행하는 방법을 설명합니다.|  
-|[공용 언어 런타임의 어셈블리](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)|어셈블리에 대해 개념적으로 설명합니다.|  
+|[.NET 어셈블리](../../standard/assembly/index.md)|어셈블리에 대해 개념적으로 설명합니다.|  
 |[애플리케이션 도메인](../../../docs/framework/app-domains/application-domains.md)|애플리케이션 도메인에 대해 개념적으로 설명합니다.|  
   
 ## <a name="reference"></a>참조  

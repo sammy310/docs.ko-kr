@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 230853abf73a368bfcd8b88375c216fdadfc7d46
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: a5059f629a341bb4689428855807fb3c66b0949b
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567267"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969077"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>.NET Framework에 COM 구성 요소 노출
 이 섹션에서는 프로세스를 기존 COM 구성 요소를 관리 코드에 노출하는 데 필요한 간략하게 설명합니다. .NET Framework와 강력하게 통합되는 COM 서버를 작성하는 방법에 대한 자세한 내용은 [상호 운용을 위한 디자인 고려 사항](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))을 참조하세요.
@@ -36,7 +36,7 @@ ms.locfileid: "69567267"
   
 4. [Interop 애플리케이션을 배포합니다](deploying-an-interop-application.md).  
   
-     Interop 애플리케이션은 전역 어셈블리 캐시에 [강력한 이름의](../app-domains/strong-named-assemblies.md) 서명된 어셈블리로서 가장 잘 배포됩니다.  
+     Interop 애플리케이션은 전역 어셈블리 캐시에 [강력한 이름의](../../standard/assembly/strong-named.md) 서명된 어셈블리로서 가장 잘 배포됩니다.  
   
 ## <a name="see-also"></a>참고 항목
 

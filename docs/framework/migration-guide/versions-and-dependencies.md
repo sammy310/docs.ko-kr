@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e4e3b1768086a1c57979a4c74643036294299a3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c9f7a0bc3a7a41a77db3c90c2f88fb5ddfd7bfa0
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787755"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971084"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 버전 및 종속성
 .NET Framework의 각 버전에는 CLR(공용 언어 런타임), 기본 클래스 라이브러리 및 기타 관리되는 라이브러리가 포함되어 있습니다. 이 항목에서는 버전별 .NET Framework의 주요 기능에 대해 설명하고 기본 CLR 버전 및 관련 개발 환경에 대한 정보를 제공하며 Windows 운영 체제별로 설치된 버전을 확인합니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "70787755"
   
 ## <a name="targeting-and-running-apps-for-older-versions"></a>이전 버전에 대한 대상 지정 및 앱 실행  
 
-.NET Framework 버전 2.0, 3.0 및 3.5는 동일한 버전의 CLR(CLR 2.0)로 빌드됩니다. 이러한 버전은 단일 설치의 후속 레이어를 나타냅니다. 각 버전은 이전 버전 위에 증분 방식으로 빌드됩니다. 컴퓨터에서 버전 2.0, 3.0 및 3.5를 side-by-side 실행할 수는 없습니다. 버전 3.5를 설치하면 2.0 및 3.0 레이어가 자동으로 설치되며 버전 2.0, 3.0 및 3.5용으로 빌드된 앱 모두를 3.5 버전에서 실행할 수 있습니다. 그러나 .NET Framework 4에서는 이 계층적 접근 방법을 종료하고 이후 릴리스(.NET Framework 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 및 4.8)에서도 단일 설치의 후속 레이어를 나타냅니다.  .NET Framework 4부터는 프로세스 내 병렬 호스팅을 사용하여 단일 프로세스에서 여러 버전의 CLR을 실행할 수 있습니다. 자세한 내용은 [어셈블리 및 Side-by-Side 실행](../app-domains/assemblies-and-side-by-side-execution.md)을 참조하십시오.  
+.NET Framework 버전 2.0, 3.0 및 3.5는 동일한 버전의 CLR(CLR 2.0)로 빌드됩니다. 이러한 버전은 단일 설치의 후속 레이어를 나타냅니다. 각 버전은 이전 버전 위에 증분 방식으로 빌드됩니다. 컴퓨터에서 버전 2.0, 3.0 및 3.5를 side-by-side 실행할 수는 없습니다. 버전 3.5를 설치하면 2.0 및 3.0 레이어가 자동으로 설치되며 버전 2.0, 3.0 및 3.5용으로 빌드된 앱 모두를 3.5 버전에서 실행할 수 있습니다. 그러나 .NET Framework 4에서는 이 계층적 접근 방법을 종료하고 이후 릴리스(.NET Framework 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 및 4.8)에서도 단일 설치의 후속 레이어를 나타냅니다.  .NET Framework 4부터는 프로세스 내 병렬 호스팅을 사용하여 단일 프로세스에서 여러 버전의 CLR을 실행할 수 있습니다. 자세한 내용은 [어셈블리 및 Side-by-Side 실행](../../standard/assembly/side-by-side-execution.md)을 참조하십시오.  
   
  또한 앱이 버전 2.0, 3.0 또는 3.5를 대상으로 하는 경우 사용자가 앱을 실행하기 전에 Windows 8, Windows 8.1 또는 Windows 10 컴퓨터에서 .NET Framework 3.5를 사용하도록 설정해야 합니다. 자세한 내용은 [Windows 10, Windows 8.1 및 Windows 8에 .NET Framework 3.5 설치](../install/dotnet-35-windows-10.md)를 참조하세요.  
   

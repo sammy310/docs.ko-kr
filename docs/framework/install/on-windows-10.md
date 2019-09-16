@@ -5,12 +5,12 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 33805230e0aa6c75443773d60e73f9463ee1fde5
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 0de48e14f11d3763ee239b28b40bdb809dbeb433
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106553"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853947"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Windows 10 및 Windows Server 2016 이상에 .NET Framework 설치
 
@@ -72,7 +72,7 @@ Windows 10 1507 또는 1511을 사용 중인 경우 .NET Framework 4.8을 설치
 
 - .NET Framework 4.x 버전은 .NET Framework 4.0~해당 버전용으로 빌드된 애플리케이션을 실행하는 데 사용할 수 있습니다. 예를 들어 .NET Framework 4.7은 .NET Framework 4.0~4.7용으로 빌드된 애플리케이션을 실행하는 데 사용할 수 있습니다. 최신 버전(.NET Framework 4.8)은 4.0으로 시작되는 모든 .NET Framework 버전으로 빌드된 애플리케이션을 실행하는 데 사용할 수 있습니다.
 
-다운로드할 수 있는 모든 .NET Framework 버전 목록은 [.NET 다운로드](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral) 페이지를 참조하세요.
+다운로드할 수 있는 모든 .NET Framework 버전 목록은 [.NET 다운로드](https://dotnet.microsoft.com/download) 페이지를 참조하세요.
 
 ## <a name="help"></a>도움말
 
@@ -80,6 +80,6 @@ Windows 10 1507 또는 1511을 사용 중인 경우 .NET Framework 4.8을 설치
 
 ## <a name="see-also"></a>참고 항목
 
-- [.NET 다운로드](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral)
+- [.NET 다운로드](https://dotnet.microsoft.com/download)
 - [차단된 .NET Framework 설치 및 제거 문제 해결](troubleshoot-blocked-installations-and-uninstallations.md)
 - [개발자용 .NET Framework 설치](guide-for-developers.md)

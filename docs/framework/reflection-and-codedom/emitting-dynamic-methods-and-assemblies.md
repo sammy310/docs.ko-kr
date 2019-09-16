@@ -9,12 +9,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], emitting dynamic assemblies
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 559d6962873540836a49da04bc271857edfa1157
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 767382f27a96e8aacce4cc625de610949b3f02a3
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663483"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971034"
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>동적 메서드 및 어셈블리 생성
 이 섹션에서는 컴파일러 또는 도구가 런타임에 메타데이터 및 MSIL(Microsoft Intermediate Language)을 내보내고 선택적으로 디스크에서 PE(이식 가능한 실행) 파일을 생성할 수 있게 해주는 <xref:System.Reflection.Emit> 네임스페이스의 관리되는 형식 집합을 설명합니다. 스크립트 엔진과 컴파일러는 이 네임스페이스의 주 사용자입니다. 이 섹션에서는 <xref:System.Reflection.Emit> 네임스페이스에서 제공하는 기능을 리플렉션 내보내기라고 합니다.  
@@ -71,5 +71,5 @@ ms.locfileid: "64663483"
  [리플렉션](../../../docs/framework/reflection-and-codedom/reflection.md)  
  메타데이터와 관리 코드를 탐색하는 방법을 설명합니다.  
   
- [공용 언어 런타임의 어셈블리](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ [.NET 어셈블리](../../standard/assembly/index.md)  
  .NET 구현에서 어셈블리에 대해 간략하게 설명합니다.

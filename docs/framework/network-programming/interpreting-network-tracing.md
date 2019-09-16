@@ -9,19 +9,19 @@ helpviewer_keywords:
 - text, network tracing output
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
-ms.openlocfilehash: 00df193671255e7b40f5c4b86ee952a3e20e3a40
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 09f77a60255accc3e4b1c4fa5ea3d7526444e4cb
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177569"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894732"
 ---
 # <a name="interpreting-network-tracing"></a>네트워크 추적 해석
 네트워크 추적이 사용하도록 설정되면 추적 기능을 사용하여 애플리케이션이 다양한 <xref:System.Net> 클래스 멤버에 대해 실행하는 호출을 캡처할 수 있습니다. 이러한 호출의 출력은 다음 예제와 비슷할 수 있습니다.  
   
-```  
+```output
 [588]   (4357)   Entering Socket#33574638::Send()  
-[588]   (4387)   Exiting Socket#33574638::Send()-> 61#61  
+[588]   (4387)   Exiting Socket#33574638::Send()-> 61#61
 ```  
   
  이전 예제에서 [588]은 현재 스레드의 고유 식별자입니다. (4357) 및 (4387)은 애플리케이션이 시작된 이후 경과한 시간(밀리초)을 나타내는 타임스탬프입니다. 타임스탬프 뒤의 데이터는 애플리케이션이 **Socket.Send** 메서드를 시작 및 종료하는 것을 보여 줍니다. **Send** 메서드를 실행하는 개체의 고유 식별자는 33574638입니다. 메서드 종료 추적에는 반환 값이 포함됩니다(이전 예제의 경우 61).  

@@ -3,16 +3,17 @@ title: C# 7.0의 새로운 기능 - C# 가이드
 description: C# 언어 버전 7.0의 새로운 기능을 살펴봅니다.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 148ecdf7a3a99ac73132593272ecff3a5bb4195e
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 0f26a9647503ebb667d961fefaa05a25a71ec6f5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105724"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926568"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0의 새로운 기능
 
 C# 7.0에서는 C# 언어에 많은 새로운 기능을 추가합니다.
+
 - [`out` 변수](#out-variables)
   - `out` 값을 사용되는 메서드에 대한 인수로 인라인으로 선언할 수 있습니다.
 - [튜플](#tuples)

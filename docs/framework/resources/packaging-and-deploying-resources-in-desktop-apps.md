@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4092d8694bdb896db1332bd73afae3f62bba36cf
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 808f0f8ac6caf15be0bf1ba8735521871c9b94d7
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105907"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851602"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>.NET 앱에서 리소스 패키징 및 배포
 
@@ -176,13 +176,13 @@ ms.locfileid: "70105907"
 
 다음 .NET Framework 예제에서는 <xref:System.Resources.NeutralResourcesLanguageAttribute> 특성을 사용하여 프랑스어(`fr`)에 대한 위성 어셈블리에 애플리케이션의 대체 리소스를 저장합니다. 이 예제에는 `Greeting`이라는 단일 문자열 리소스를 정의하는 두 개의 텍스트 기반 리소스 파일이 있습니다. 첫 번째 resources.fr.txt에는 프랑스어 리소스가 들어 있습니다.
 
-```
+```text
 Greeting=Bon jour!
 ```
 
 두 번째 resources,ru.txt에는 러시아어 리소스가 들어 있습니다.
 
-```
+```text
 Greeting=Добрый день
 ```
 
@@ -223,7 +223,7 @@ vbc Example1.vb
 
 러시아어 이외의 언어를 사용하는 시스템에서 예제를 실행할 경우 다음과 같은 출력이 표시됩니다.
 
-```
+```output
 Bon jour!
 ```
 

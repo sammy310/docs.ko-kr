@@ -1,12 +1,12 @@
 ---
 title: '연습: C#을 사용하여 개체 유지'
 ms.date: 04/26/2018
-ms.openlocfilehash: 88fb589ca2f9a24f861b528bfd601f837e9aac5f
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 5e3a327ca0a257c45de361e0b3734e0b127f9869
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105931"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851046"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>C\#을 사용하여 개체 유지
 
@@ -22,7 +22,7 @@ serialization을 사용하면 인스턴스 간에 개체의 데이터를 유지�
 
 ## <a name="prerequisites"></a>전제 조건
 
-- 빌드하고 실행하려면 [.NET Core SDK](https://www.microsoft.com/net/core)를 설치합니다.
+- 빌드하고 실행하려면 [.NET Core SDK](https://dotnet.microsoft.com/download)를 설치합니다.
 
 - 아직 없는 경우 즐겨 찾는 코드 편집기를 설치합니다.
 

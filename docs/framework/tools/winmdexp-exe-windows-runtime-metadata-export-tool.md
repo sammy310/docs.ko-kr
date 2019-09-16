@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e6f9f553af4899d502584cbde5341f7061f169d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0664a68d258380fd9e4824b80f0d7a244cb61e85
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937948"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894783"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe(Windows 런타임 메타데이터 내보내기 도구)
 Windows 런타임 메타데이터 내보내기 도구(Winmdexp.exe)는 .NET Framework 모듈을 Windows 런타임 메타데이터가 포함된 파일로 변환합니다. .NET Framework 어셈블리 및 Windows 런타임 메타데이터 파일이 같은 물리적 형식을 사용하지만 메타데이터 테이블의 내용에 차이가 있습니다. 즉, .NET Framework 어셈블리는 Windows 런타임 구성 요소로 자동으로 사용할 수 있습니다. .NET Framework 모듈을 Windows 런타임 구성 요소로 전환하는 프로세스를 ‘내보내기’라고 합니다.  .NET Framework 4.5 및 .NET Framework 4.5.1에서 결과 Windows 메타데이터(.winmd) 파일은 메타데이터와 구현이 모두 포함됩니다.  
@@ -25,7 +25,7 @@ Windows 런타임 메타데이터 내보내기 도구(Winmdexp.exe)는 .NET Fram
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 winmdexp [options] winmdmodule  
 ```  
   

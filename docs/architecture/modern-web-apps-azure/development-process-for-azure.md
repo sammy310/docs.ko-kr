@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: dcd2616cd5638aa712c11e370d35111b248e88ec
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 830271d76e5a87ed782d81fa9491328c580f0f87
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374044"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849580"
 ---
 # <a name="development-process-for-azure"></a>Azure 개발 프로세스
 
@@ -36,7 +36,7 @@ ms.locfileid: "70374044"
 
 **Visual Studio Code 및 dotnet CLI**(Mac, Linux 및 Windows용 플랫폼 간 도구). 모든 개발 언어를 지원하는 가벼운 플랫폼 간 편집기를 선호하는 경우 Microsoft Visual Studio Code 및 docker CLI를 사용하면 됩니다. 이러한 제품은 간단하지만 강력한 환경을 제공하여 개발자 워크플로를 간소화합니다. 또한 Visual Studio Code는 C\# 확장 및 웹 개발을 지원하며, 편집기 내에서 인텔리전스 및 바로 가기 작업을 제공합니다.
 
-[.NET Core SDK 다운로드](https://www.microsoft.com/net/download/core)
+[.NET Core SDK 다운로드](https://dotnet.microsoft.com/download)
 
 [Visual Studio Code 다운로드](https://code.visualstudio.com/download)
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: caedc586a9d33ecbdc4a8c7202abcfdaafabd98c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 07ac564b5a2b227a62b7073bb837ab8bd1f434fb
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469276"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894763"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe(.NET Security Annotator 도구)
 .NET Security Annotator 도구(SecAnnotate.exe)는 하나 이상의 어셈블리의 `SecurityCritical` 및 `SecuritySafeCritical` 부분을 식별하는 명령줄 애플리케이션입니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "57469276"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 SecAnnotate.exe [parameters] [assemblies]  
 ```  
   
@@ -49,7 +49,7 @@ SecAnnotate.exe [parameters] [assemblies]
 |`/x`<br /><br /> 또는<br /><br /> `/verbose`|주석을 추가하는 동안 자세한 출력을 지정합니다.|  
 |`/y:` *directory*<br /><br /> 또는<br /><br /> `/symbolpath:` *directory*|주석을 추가하는 동안 기호 파일을 검색할 때 지정한 디렉터리를 포함합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  매개 변수 및 어셈블리는 명령줄에 지정되고 (@) 기호에 접두사가 있는 응답 파일에 제공될 수도 있습니다. 응답 파일의 각 줄은 단일 매개 변수 또는 어셈블리 이름을 포함해야 합니다.  
   
  .NET Security Annotator에 대한 자세한 내용은 .NET Security 블로그의 [SecAnnotate를 사용하여 어셈블리의 투명도 위반 분석](https://go.microsoft.com/fwlink/?LinkId=187648) 항목을 참조하세요.  

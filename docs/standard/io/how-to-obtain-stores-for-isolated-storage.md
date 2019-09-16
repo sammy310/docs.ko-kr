@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ef65356d84016462941850ef9b9d6210debc62c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6fbc78c379951e05869a433875d057c49d44594
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622688"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969255"
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>방법: 격리된 스토리지의 저장소 가져오기
 격리된 저장소는 데이터 구획 내에서 가상 파일 시스템을 노출합니다. <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 클래스는 격리된 저장소와 상호 작용하는 데 필요한 여러 가지 메서드를 제공합니다. 저장소를 만들고 검색하기 위해 <xref:System.IO.IsolatedStorage.IsolatedStorageFile>은 세 가지 정적 메서드를 제공합니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "64622688"
   
  코드가 저장소 자체를 가져올 수 있는 액세스 권한이 충분하지 않은 코드에 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 개체를 전달하지 못하도록 하는 메커니즘은 없습니다. 도메인 및 어셈블리 ID 및 격리된 스토리지 권한은 <xref:System.IO.IsolatedStorage.IsolatedStorage> 개체에 대한 참조를 일반적으로 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> 또는 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> 메서드에서 가져온 경우에만 검사됩니다. 따라서 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 개체에 대한 참조를 보호하는 것은 이러한 참조를 사용하는 코드의 책임입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에서는 사용자 및 어셈블리별로 격리된 저장소를 가져오는 클래스의 간단한 예제를 제공합니다. <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Domain?displayProperty=nameWithType> 메서드가 전달하는 인수에 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A>을 추가하면 사용자, 도메인 및 어셈블리별로 격리된 저장소를 검색하도록 코드를 변경할 수 있습니다.  
   
  코드를 실행한 후 명령줄에 **StoreAdm /LIST**를 입력하여 저장소가 생성되었는지 확인할 수 있습니다. 이렇게 하면 [격리된 스토리지 도구(Storeadm.exe)](../../../docs/framework/tools/storeadm-exe-isolated-storage-tool.md)가 실행되어 사용자에 대해 현재 격리된 저장소가 모두 나열됩니다.  
@@ -62,4 +62,4 @@ ms.locfileid: "64622688"
 - <xref:System.IO.IsolatedStorage.IsolatedStorageScope>
 - [격리된 스토리지](../../../docs/standard/io/isolated-storage.md)
 - [격리 유형](../../../docs/standard/io/types-of-isolation.md)
-- [공용 언어 런타임의 어셈블리](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [.NET 어셈블리](../assembly/index.md)

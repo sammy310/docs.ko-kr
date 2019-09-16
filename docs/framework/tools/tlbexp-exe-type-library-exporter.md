@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23bb88127875e0e608c8e8de54ba669f84aa1da5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f990c5194c2e5dc1422aab96c7608c019ae9855b
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937995"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894755"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe(형식 라이브러리 내보내기)
 형식 라이브러리 내보내기를 사용하면 공용 언어 런타임 어셈블리에 정의된 형식을 설명하는 형식 라이브러리를 생성할 수 있습니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "69937995"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 tlbexp assemblyName [options]  
 ```  
   
@@ -74,14 +74,14 @@ tlbexp assemblyName [options]
   
  <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성을 사용하여 <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType> 또는 `VT_UNKOWN`의 `VT_DISPATCH` 값을 지정하면 Tlbexp.exe에서는 이후에 사용하는 <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType> 필드를 모두 무시합니다. 예를 들어, 다음과 같은 서명을 지정할 경우  
   
-```  
+```csharp
 [return:MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VarEnum.VT_UNKNOWN, SafeArrayUserDefinedSubType=typeof(ConsoleKeyInfo))] public Array StructUnkSafe(){return null;}  
 [return:MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VarEnum.VT_DISPATCH, SafeArrayUserDefinedSubType=typeof(ConsoleKeyInfo))] public Array StructDispSafe(){return null;}  
 ```  
   
  다음 형식 라이브러리가 생성됩니다.  
   
-```  
+```cpp 
 [id(0x60020004)]  
 HRESULT StructUnkSafe([out, retval] SAFEARRAY(IUnknown*)* pRetVal);  
 [id(0x60020005)]  
@@ -99,13 +99,13 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
 ## <a name="examples"></a>예제  
  다음 명령을 사용하여 `myTest.dll`에 있는 어셈블리와 동일한 이름의 형식 라이브러리를 생성합니다.  
   
-```  
+```console  
 tlbexp myTest.dll  
 ```  
   
  다음 명령을 사용하여 `clipper.tlb`라는 이름의 형식 라이브러리를 생성합니다.  
   
-```  
+```console  
 tlbexp myTest.dll /out:clipper.tlb  
 ```  
   
@@ -113,19 +113,19 @@ tlbexp myTest.dll /out:clipper.tlb
   
  먼저, Tlbimp.exe를 사용하여 형식 라이브러리 `myLib.tlb`를 가져온 다음 이를 `myLib.dll`로 저장합니다.  
   
-```  
+```console  
 tlbimp myLib.tlb /out:myLib.dll  
 ```  
   
  다음 명령을 사용하여 앞의 예제에서 생성된 `Sample.dll,`을 참조하는 `myLib.dll`을 C# 컴파일러로 컴파일합니다.  
   
-```  
+```console  
 CSC Sample.cs /reference:myLib.dll /out:Sample.dll  
 ```  
   
  다음 명령을 사용하여 `Sample.dll`을 참조하는 `myLib.dll`에 대한 형식 라이브러리를 생성합니다.  
   
-```  
+```console  
 tlbexp Sample.dll  
 ```  
   

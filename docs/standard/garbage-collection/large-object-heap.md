@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebe856b3ed904b13201c6d59752a8a00f4060d5d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70ea0110f22e741908ad857fa501553d93c4b98d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753960"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929148"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows 시스템의 큰 개체 힙
 
@@ -132,7 +132,7 @@ LOH는 2세대 GC 동안에만 수집되므로 LOH 세그먼트는 이러한 GC 
 
 2. 확인한 성능 문제를 설명할 수 있는 항목을 찾지 못한 채 알고 있는 다른 영역을 모두 소진했습니다.
 
-메모리 및 CPU의 기본 사항에 대한 자세한 내용은 [문제를 파악한 후 해결 방법 찾기](https://blogs.msdn.microsoft.com/maoni/2006/09/01/understand-the-problem-before-you-try-to-find-a-solution/) 블로그를 참조하세요.
+메모리 및 CPU의 기본 사항에 대한 자세한 내용은 [문제를 파악한 후 해결 방법 찾기](https://devblogs.microsoft.com/dotnet/understand-the-problem-before-you-try-to-find-a-solution/) 블로그를 참조하세요.
 
 LOH 성능에 대한 데이터를 수집하는 데 사용할 수 있는 도구는 다음과 같습니다.
 
@@ -168,13 +168,13 @@ LOH 성능에 대한 데이터를 수집하는 데 사용할 수 있는 도구�
 
 가비지 수집기는 힙에서 수행하는 작업과 그 이유를 파악하는 데 도움이 되는 다양한 ETW 이벤트 집합을 제공합니다. 다음 블로그 게시물에서는 ETW를 통해 GC 이벤트를 수집하고 파악하는 방법을 보여 줍니다.
 
-- [GC ETW 이벤트 - 1](https://blogs.msdn.microsoft.com/maoni/2014/12/22/gc-etw-events-1/)
+- [GC ETW 이벤트 - 1](https://devblogs.microsoft.com/dotnet/gc-etw-events-1/)
 
-- [GC ETW 이벤트 - 2](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-2/)
+- [GC ETW 이벤트 - 2](https://devblogs.microsoft.com/dotnet/gc-etw-events-2/)
 
-- [GC ETW 이벤트 - 3](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-3/)
+- [GC ETW 이벤트 - 3](https://devblogs.microsoft.com/dotnet/gc-etw-events-3/)
 
-- [GC ETW 이벤트 - 4](https://blogs.msdn.microsoft.com/maoni/2014/12/30/gc-etw-events-4/)
+- [GC ETW 이벤트 - 4](https://devblogs.microsoft.com/dotnet/gc-etw-events-4/)
 
 임시 LOH 할당으로 인해 발생된 과도한 2세대 GC를 확인하려면 GC에 대한 트리거 이유 열을 살펴봅니다. 임시 큰 개체만 할당하는 간단한 테스트의 경우 다음 [PerfView](https://www.microsoft.com/download/details.aspx?id=28567) 명령줄을 사용하여 ETW 이벤트에 대한 정보를 수집할 수 있습니다.
 

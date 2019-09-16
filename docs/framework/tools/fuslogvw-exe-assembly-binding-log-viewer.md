@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 320d059e82bfb58e827432fe5f4ec3eb3857510e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: dd27bebdc71c70226a61ad8d912135e0e1671dd8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041410"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851251"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe(어셈블리 바인딩 로그 뷰어)
 
@@ -29,7 +29,7 @@ ms.locfileid: "70041410"
 
 명령 프롬프트에 다음을 입력합니다.
 
-```
+```console
 fuslogvw
 ```
 
@@ -66,7 +66,7 @@ fuslogvw
 
 다음 샘플 로그 엔트리는 실패한 어셈블리 바인딩에 대한 자세한 정보를 보여 줍니다.
 
-```
+```output
 *** Assembly Binder Log Entry  (3/5/2007 @ 12:54:20 PM) ***
 
 The operation failed.
@@ -130,7 +130,7 @@ LOG: All probing URLs attempted and failed.
 
 다음 로그에서는 애플리케이션에 대한 네이티브 이미지가 생성되었을 때 종속성이 존재하지 않아 발생한 실패를 보여 줍니다. 런타임에서의 종속성과 Ngen.exe가 실행될 때의 종속성이 다른 경우 네이티브 이미지에 대한 바인딩을 사용할 수 없습니다.
 
-```
+```output
 *** Assembly Binder Log Entry  (12/8/2006 @ 5:22:07 PM) ***
 
 The operation failed.
@@ -154,7 +154,7 @@ LOG: Bind to native image assembly did not succeed. Use IL image.
 
 다음 로그에서는 애플리케이션이 실행되었을 때의 컴퓨터 보안 설정이 네이티브 이미지가 생성되었을 때의 보안 설정과 달라 발생하는 네이티브 이미지 바인딩 실패를 보여 줍니다.
 
-```
+```output
 *** Assembly Binder Log Entry  (12/8/2006 @ 5:29:09 PM) ***
 
 The operation failed.

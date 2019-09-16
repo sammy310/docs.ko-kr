@@ -3,12 +3,12 @@ title: 인덱스 및 범위를 사용하여 데이터 범위 탐색
 description: 이 고급 자습서에서는 인덱스 및 범위를 사용하여 순차적 데이터 세트를 검사하는 데이터 탐색을 살펴봅니다.
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: d53f32bcb310d4859cea67a742ac0e2c4be5d942
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 27f4b90f130345dd10517a5de78c759066afdf07
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105783"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926647"
 ---
 # <a name="indices-and-ranges"></a>인덱스 및 범위
 
@@ -17,6 +17,7 @@ ms.locfileid: "70105783"
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 알아봅니다.
 
 > [!div class="checklist"]
+>
 > - 시퀀스에서 범위에 구문을 사용합니다.
 > - 각 시퀀스의 시작 및 끝에 대한 설계 의사 결정을 이해합니다.
 > - <xref:System.Index> 및 <xref:System.Range> 형식에 대한 시나리오를 살펴봅니다.
@@ -24,6 +25,7 @@ ms.locfileid: "70105783"
 ## <a name="language-support-for-indices-and-ranges"></a>인덱스 및 범위에 대한 언어 지원
 
 이 언어 지원은 두 가지 새 형식 및 두 가지 새 연산자를 사용합니다.
+
 - <xref:System.Index?displayProperty=nameWithType>는 인덱스를 시퀀스로 표현합니다.
 - 인덱스가 시퀀스의 끝을 기준으로 하도록 지정하는 `^` 연산자입니다.
 - <xref:System.Range?displayProperty=nameWithType>는 시퀀스의 하위 범위를 나타냅니다.

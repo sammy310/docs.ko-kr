@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: a5a11bc49fa834ebd6945e47767deb559244b459
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 956cbedd7e354b36c447bdc06ea996948c745264
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374511"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929085"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>자습서: ML.NET에서 ONNX를 사용하여 개체 검색
 
@@ -21,6 +21,7 @@ ML.NET에서 미리 학습된 ONNX 모델을 사용하여 이미지에서 개체
 
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 > [!div class="checklist"]
+>
 > - 문제 이해
 > - ONNX의 개념과 ML.NET에서 작동하는 방식에 대해 알아보기
 > - 모델 이해
@@ -710,6 +711,7 @@ person and its Confidence score: 0.5551759
 
 본 자습서에서는 다음 작업에 관한 방법을 학습했습니다.
 > [!div class="checklist"]
+>
 > - 문제 이해
 > - ONNX의 개념과 ML.NET에서 작동하는 방식에 대해 알아보기
 > - 모델 이해

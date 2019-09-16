@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38a6b27ea0ba8b9d9e2af883db1fc3350d60494a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d9e6d9e57528f3eae9b30706013a0529313877c7
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912485"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894876"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe(IL 디스어셈블러)
 
@@ -28,7 +28,7 @@ IL 디스어셈블러는 IL 어셈블러(*Ilasm.exe*)의 자매 도구입니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```console
 ildasm [options] [PEfilename] [options]
 ```
 
@@ -117,14 +117,14 @@ IL 디스어셈블러의 기본 GUI를 사용하면 계층 구조 트리 뷰에�
 public void Test([MarshalAs((short)70)] int test) { }
 ```
 
-```
+```il
 // IL from Ildasm.exe output
 .method public hidebysig instance void Test(int32  marshal({ 46 }) test) cil managed
 ```
 
 .NET Framework 4.5부터 제공되는 *Ildasm.exe*는 *Ildasm.exe* 출력에서 발췌한 다음 예제에서와 같이 인터페이스 구현에 적용되는 특성을 표시합니다.
 
-```
+```il
 .class public auto ansi beforefieldinit MyClass
   extends [mscorlib]System.Object
   implements IMyInterface

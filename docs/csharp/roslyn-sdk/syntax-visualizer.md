@@ -3,16 +3,16 @@ title: Visual Studio에서 Roslyn 구문 시각화 도우미를 사용하여 코
 description: 구문 시각화 도우미는 .NET Compiler Platform SDK에서 코드용으로 생성하는 모델을 탐색할 수 있는 시각적 도구를 제공합니다.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 2d1c6d0b9f65324ee2eadafaa7f98360f37e7bb7
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: fa3b4fdbb8d573805119e13e8aa93f156c4111f9
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307203"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972010"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Visual Studio에서 Roslyn 구문 시각화 도우미를 사용하여 코드 탐색
 
-이 아티클에서는 .NET Compiler Platform("Roslyn") SDK의 일부로 제공되는 구문 시각화 도우미 도구에 대한 개요를 제공합니다. 구문 시각화 도우미는 구문 트리를 검사하고 탐색하는 데 도움이 되는 도구 창입니다. 분석하려는 코드의 모델을 이해하는 데 필수적인 도구입니다. 또한 .NET Compiler Platform("Roslyn") SDK를 사용하여 자체 애플리케이션을 개발할 때 도움이 되는 디버깅 도구이기도 합니다.  첫 번째 분석기를 만들 때 이 도구를 엽니다. 시각화 도우미는 API에서 사용되는 모델을 이해하는 데 도움이 됩니다. [SharpLab](https://sharplab.io) 또는 [LINQPad](https://www.linqpad.net/)와 같은 도구를 사용하여 코드를 검사하고 구문 트리를 이해할 수도 있습니다.
+이 아티클에서는 .NET Compiler Platform("Roslyn") SDK의 일부로 제공되는 구문 시각화 도우미 도구에 대한 개요를 제공합니다. 구문 시각화 도우미는 구문 트리를 검사하고 탐색하는 데 도움이 되는 도구 창입니다. 분석하려는 코드의 모델을 이해하는 데 필수적인 도구입니다. 또한 .NET Compiler Platform("Roslyn") SDK를 사용하여 자체 애플리케이션을 개발할 때 도움이 되는 디버깅 도구이기도 합니다. 첫 번째 분석기를 만들 때 이 도구를 엽니다. 시각화 도우미는 API에서 사용되는 모델을 이해하는 데 도움이 됩니다. [SharpLab](https://sharplab.io) 또는 [LINQPad](https://www.linqpad.net/)와 같은 도구를 사용하여 코드를 검사하고 구문 트리를 이해할 수도 있습니다.
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
@@ -30,6 +30,8 @@ ms.locfileid: "54307203"
 
 **파일** > **새 프로젝트** 명령을 사용하여 새 프로젝트를 만듭니다. VB 또는 C# 프로젝트를 만들 수 있습니다. Visual Studio에서 이 프로젝트의 주 코드 파일을 열면 시각화 도우미는 구문 트리를 표시합니다. Visual Studio 인스턴스에서 기존 C#/VB 파일을 열 수 있으며 시각화 도우미는 해당 파일의 구문 트리를 표시합니다. Visual Studio 내에서 여러 코드 파일을 열면 시각화 도우미는 현재 활성 코드 파일(키보드 포커스가 있는 코드 파일)에 대한 구문 트리를 표시합니다.
 
+<!-- markdownlint-disable MD025 -->
+
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 ![C# 구문 트리 시각화](media/syntax-visualizer/visualize-csharp.png)
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
@@ -44,6 +46,7 @@ ms.locfileid: "54307203"
 트리의 각 항목에는 자체 **범위**도 표시됩니다. **범위**는 텍스트 파일에서 해당 노드의 인덱스(시작 및 끝 위치)입니다.  앞의 C# 예에서 선택한 “UsingKeyword [0..5)” 토큰에는 5자 너비 [0..5)인 **범위**가 있습니다. "[..)" 표기법은 시작 인덱스는 범위의 일부이지만 끝 인덱스는 아님을 의미합니다.
 
 트리를 탐색하는 방법은 두 가지가 있습니다.
+
 * 트리에서 항목을 확장하거나 클릭합니다. 시각화 도우미는 코드 편집기에서 이 항목의 범위에 해당하는 텍스트를 자동으로 선택합니다.
 * 코드 편집기에서 텍스트를 클릭하거나 선택합니다. 앞의 VB 예제에서 코드 편집기에 "모듈 Module1"이 포함된 줄을 선택하면 시각화 도우미가 트리의 해당 ModuleStatement 노드로 자동 이동합니다. 
 

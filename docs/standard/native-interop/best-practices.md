@@ -4,12 +4,12 @@ description: .NET에서 기본 구성 요소와 인터페이스하는 모범 사
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 09b25ed10958142f8eead6761f18bccbe2645448
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 0405fd5aef9d89fc1f47123ed358e6358656d95b
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063091"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70923763"
 ---
 # <a name="native-interoperability-best-practices"></a>기본 상호 운용성 모범 사례
 
@@ -38,7 +38,7 @@ ms.locfileid: "65063091"
 
 ## <a name="string-parameters"></a>문자열 매개 변수
 
-CharSet가 유니코드이거나 인수가 명시적으로 `[MarshalAs(UnmanagedType.LPWSTR)]`로 표시되고 문자열이 값으로 전달되는 경우(`ref` 또는 `out` 아님), 문자열이 고정되며 네이티브 코드에서 직접 사용됩니다(복사되지 않음).
+CharSet가 유니코드이거나 인수가 명시적으로 `[MarshalAs(UnmanagedType.LPWSTR)]`로 표시되고 문자열이 값으로 전달되는 경우(`ref` 또는 `out` 아님), 문자열이 고정되며 네이티브 코드에서 직접 사용됩니다(복사되지 않음). 
 
 문자열을 명시적으로 ANSI 처리하려는 경우가 아니면, `[DllImport]`를 `Charset.Unicode`로 표시해야 합니다.
 
@@ -49,15 +49,15 @@ CharSet가 유니코드이거나 인수가 명시적으로 `[MarshalAs(Unmanaged
 1. 원하는 용량의 SB 생성(관리 용량 할당) **{1}**
 2. 호출
    1. 네이티브 버퍼 할당 **{2}**  
-   2. `[In]`_(`StringBuilder` 매개 변수의 기본값)_ 인 경우 콘텐츠 복사  
-   3. `[Out]` **{3}**_(`StringBuilder`의 기본값)_ 인 경우 새로 할당된 관리형 배열에 네이티브 버퍼 복사  
+   2. `[In]` _(`StringBuilder` 매개 변수의 기본값)_ 인 경우 콘텐츠 복사  
+   3. `[Out]` **{3}** _(`StringBuilder`의 기본값)_ 인 경우 새로 할당된 관리형 배열에 네이티브 버퍼 복사  
 3. `ToString()`이 다른 관리형 배열 **{4}** 할당
 
 네이티브 코드에서 문자열을 가져오는 *{4}* 할당입니다. 이를 제한하는 가장 좋은 방법은 다른 호출에서 `StringBuilder`를 재사용하는 것이지만, 여전히 *1*개 할당만 저장됩니다. `ArrayPool`의 문자 버퍼를 사용하고 캐시하는 것이 훨씬 더 좋습니다. 그러면 후속 호출에서는 `ToString()`의 할당에만 바로 액세스할 수 있습니다.
 
 `StringBuilder`의 다른 문제는 항상 반환 버퍼 백업을 첫 번째 Null에 복사하는 것입니다. 다시 전달된 문자열이 종료되지 않았거나 이중 Null 종료 문자열인 경우 P/Invoke가 올바르지 않습니다.
 
-`StringBuilder`를 사용하는 경우 유의할 마지막 문제는 interop에 대해 항상 고려되는 숨겨진 Null이 용량에 포함되지 **않는**다는 것입니다. 대부분의 API가 Null을 ‘포함’하는 버퍼 크기를 원하기 때문에 이 동작이 잘못 파악되는 경우가 많습니다. 이로 인해 불필요한 할당이 발생할 수 있습니다. 또한 이 문제로 인해 런타임이 복사본 최소화를 위해 `StringBuilder` 마샬링을 최적화할 수 없게 됩니다.
+`StringBuilder`를 사용하는 경우 유의할 마지막 문제는 interop에 대해 항상 고려되는 숨겨진 Null이 용량에 포함되지 **않는**다는 것입니다.  대부분의 API가 Null을 ‘포함’하는 버퍼 크기를 원하기 때문에 이 동작이 잘못 파악되는 경우가 많습니다.  이로 인해 불필요한 할당이 발생할 수 있습니다. 또한 이 문제로 인해 런타임이 복사본 최소화를 위해 `StringBuilder` 마샬링을 최적화할 수 없게 됩니다.
 
 **✔️** `ArrayPool`의 `char[]`을 사용하는 것이 좋습니다.
 
@@ -66,14 +66,15 @@ CharSet가 유니코드이거나 인수가 명시적으로 `[MarshalAs(Unmanaged
 > __Windows 특정__  
 > `[Out]` 문자열에 대해 CLR에서는 기본적으로 `CoTaskMemFree`를 사용하여 문자열을 해제하거나, `UnmanagedType.BSTR`로 표시된 문자열에 `SysStringFree`를 사용합니다.  
 **출력 문자열 버퍼가 있는 대부분의 API의 경우:**  
-> 전달된 문자 수에 Null이 포함되어야 합니다. 반환된 값이 전달된 문자 수보다 작으면 호출이 성공하고 값은 후행 Null이 ‘없는’ 문자 수가 됩니다. 그렇지 않으면 개수는 Null 문자를 ‘포함’하는 필수 버퍼 크기입니다.  
+> 전달된 문자 수에 Null이 포함되어야 합니다. 반환된 값이 전달된 문자 수보다 작으면 호출이 성공하고 값은 후행 Null이 ‘없는’ 문자 수가 됩니다.  그렇지 않으면 개수는 Null 문자를 ‘포함’하는 필수 버퍼 크기입니다.   
+>
 > - 5를 전달하면 4가 반환됩니다. 문자열이 4자이며 하나의 후행 Null로 이루어져 있습니다.
 > - 5를 전달하면 6이 반환됩니다. 문자열이 5자이며 Null을 포함하려면 6자 버퍼가 필요합니다.  
 > [문자열에 대한 Windows 데이터 형식](/windows/desktop/Intl/windows-data-types-for-strings)
 
 ## <a name="boolean-parameters-and-fields"></a>부울 매개 변수 및 필드
 
-부울은 문제가 발생하기 쉽습니다. 기본적으로 .NET `bool`은 4바이트 값인 Windows `BOOL`로 마샬링됩니다. 그러나 C 및 C++의 `_Bool` 및 `bool` 형식은 ‘1’바이트입니다. 이로 인해 반환 값의 절반이 버려지고 ‘잠재적’으로 결과가 변경될 수 있기 때문에 버그를 추적하기 어려울 수 있습니다. .NET `bool` 값을 C 또는 C++ `bool` 형식으로 마샬링하는 방법에 대한 자세한 내용은 [부울 필드 마샬링 사용자 지정](customize-struct-marshaling.md#customizing-boolean-field-marshaling) 문서를 참조하세요.
+부울은 문제가 발생하기 쉽습니다. 기본적으로 .NET `bool`은 4바이트 값인 Windows `BOOL`로 마샬링됩니다. 그러나 C 및 C++의 `_Bool` 및 `bool` 형식은 ‘1’바이트입니다.  이로 인해 반환 값의 절반이 버려지고 ‘잠재적’으로 결과가 변경될 수 있기 때문에 버그를 추적하기 어려울 수 있습니다.  .NET `bool` 값을 C 또는 C++ `bool` 형식으로 마샬링하는 방법에 대한 자세한 내용은 [부울 필드 마샬링 사용자 지정](customize-struct-marshaling.md#customizing-boolean-field-marshaling) 문서를 참조하세요.
 
 ## <a name="guids"></a>GUID
 
@@ -212,7 +213,7 @@ C `void*`인 Windows `PVOID`는 `IntPtr` 또는 `UIntPtr`로 마샬링할 수 �
 
 blittable 구조체는 마샬링 계층에서 직접 사용할 수 있으므로 성능이 훨씬 더 뛰어납니다. 구조체를 blittable로 설정합니다(예: `bool` 사용 안 함). 자세한 내용은 [blittable 형식](#blittable-types) 섹션을 참조하세요.
 
-구조체가 blittable인 경우 성능 향상을 위해 `Marshal.SizeOf<MyStruct>()` 대신 `sizeof()`를 사용합니다. 위에서 언급한 대로, 고정 `GCHandle` 만들기를 시도하여 형식이 blittable인지 확인할 수 있습니다. 형식이 문자열이 아니거나 blittable로 간주되지 않는 경우 `GCHandle.Alloc`에서 `ArgumentException`이 throw됩니다.
+구조체가 blittable인 경우 성능 향상을 위해 `Marshal.SizeOf<MyStruct>()` 대신 `sizeof()`를 사용합니다.  위에서 언급한 대로, 고정 `GCHandle` 만들기를 시도하여 형식이 blittable인지 확인할 수 있습니다. 형식이 문자열이 아니거나 blittable로 간주되지 않는 경우 `GCHandle.Alloc`에서 `ArgumentException`이 throw됩니다.
 
 정의의 구조체 포인터는 `ref`에 의해 전달되거나 `unsafe` 및 `*`를 사용해야 합니다.
 

@@ -6,12 +6,12 @@ ms.date: 04/12/2018
 ms.technology: dotnet-standard
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45e67fe1436863da4050342bb224d67894111cc4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5be4bccf77d39a0b2c336d98a0e1e4d5250bec91
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712489"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972401"
 ---
 # <a name="whats-new-in-the-net-standard"></a>.NET Standard의 새로운 기능
 
@@ -37,7 +37,7 @@ ms.locfileid: "57712489"
 
 ### <a name="a-vastly-expanded-set-of-apis"></a>매우 폭넓은 API 집합
 
-버전 1.6에는 비교적 적은 .NET Standard API가 포함되었습니다. 여기에는 .NET Framework 또는 Xamarin에서 일반적으로 사용된 많은 API가 제외되었습니다. 이로 인해 개발이 복잡해집니다. 개발자들은 여러 .NET 구현체을 대상으로 하는 애플리케이션과 라이브러리를 개발할 때 익숙하게 사용했던 API를 대체하는 적합한 API를 찾아야 하기 때문입니다. .NET Standard 2.0은 이전 Standard 버전인 .NET Standard 1.6에서 제공된 것보다 20,000개 더 많은 API를 추가하여 이 제약 사항을 해결했습니다. .NET Standard 2.0에 추가된 API의 목록은 [.NET Standard 2.0 및 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md)을 참조하세요.
+버전 1.6에는 비교적 적은 .NET Standard API가 포함되었습니다. 여기에는 .NET Framework 또는 Xamarin에서 일반적으로 사용된 많은 API가 제외되었습니다. 이로 인해 개발이 복잡해집니다. 개발자들이 여러 .NET 구현을 대상으로 하는 애플리케이션과 라이브러리를 개발할 때 친숙한 API에 대한 적합한 대체 API를 찾아야 하기 때문입니다. .NET Standard 2.0은 이전 Standard 버전인 .NET Standard 1.6에서 제공된 것보다 20,000개 더 많은 API를 추가하여 이 제약 사항을 해결했습니다. .NET Standard 2.0에 추가된 API의 목록은 [.NET Standard 2.0 및 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md)을 참조하세요.
 
 .NET Standard 2.0에서 <xref:System> 네임스페이스에 대해 추가된 기능의 일부는 다음과 같습니다.
 
@@ -68,6 +68,8 @@ ms.locfileid: "57712489"
 .NET Core 2.0과 .NET Standard 2.0 릴리스에서는 Visual Studio 2017과 [.NET Core CLI(명령줄 인터페이스)](../../core/tools/index.md)에서 NET Standard 라이브러리를 만들기 위한 도구가 모두 지원됩니다.
 
 **.NET Core 플랫폼 간 개발** 워크로드를 통해 Visual Studio를 설치하는 경우 다음 그림과 같이 프로젝트 템플릿을 사용하여 .NET Standard 2.0 라이브러리 프로젝트를 만들 수 있습니다.
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 

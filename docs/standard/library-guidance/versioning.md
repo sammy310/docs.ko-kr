@@ -4,12 +4,12 @@ description: .NET 라이브러리의 버전을 관리하는 모범 사례 권장
 author: jamesnk
 ms.author: mairaw
 ms.date: 12/10/2018
-ms.openlocfilehash: e6f811039f74649564cbfb42ef67e0a406e4cd70
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 9250e48707c0ea72cdf8bef9663f5a3516309b86
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204745"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969016"
 ---
 # <a name="versioning"></a>버전 관리
 
@@ -53,7 +53,7 @@ NuGet 패키지 버전은 개발자가 가장 보기 쉬운 버전이므로 [Sem
 
 Windows .NET Framework CLR에서는 정확히 일치해야 강력한 이름의 어셈블리를 로드할 수 있습니다. 예를 들어 `Libary1, Version=1.0.0.0`은 `Newtonsoft.Json, Version=11.0.0.0`을 참조하여 컴파일되었습니다. .NET Framework는 정확한 버전인 `11.0.0.0`만 로드합니다. 런타임 시 다른 버전을 로드하려면 .NET 애플리케이션의 구성 파일에 바인딩 리디렉션을 추가해야 합니다.
 
-강력한 이름 지정과 어셈블리 버전을 결합하면 [엄격한 어셈블리 버전 로드](../../framework/app-domains/assembly-versioning.md)를 사용할 수 있습니다. 라이브러리에 강력한 이름을 지정하면 여러 가지 혜택이 있지만, 어셈블리를 찾을 수 없는 런타임 예외가 자주 발생하며 `app.config`/`web.config`의 [바인딩 리디렉션](../../framework/configure-apps/redirect-assembly-versions.md)을 수정해야 합니다. .NET Core 어셈블리 로드가 완화되었으며, .NET Core CLR이 런타임에 상위 버전의 어셈블리를 자동으로 로드합니다.
+강력한 이름 지정과 어셈블리 버전을 결합하면 [엄격한 어셈블리 버전 로드](../assembly/versioning.md)를 사용할 수 있습니다. 라이브러리에 강력한 이름을 지정하면 여러 가지 혜택이 있지만, 어셈블리를 찾을 수 없는 런타임 예외가 자주 발생하며 `app.config`/`web.config`의 [바인딩 리디렉션](../../framework/configure-apps/redirect-assembly-versions.md)을 수정해야 합니다. .NET Core 어셈블리 로드가 완화되었으며, .NET Core CLR이 런타임에 상위 버전의 어셈블리를 자동으로 로드합니다.
 
 **✔️** AssemblyVersion에 주 버전만 포함합니다.
 

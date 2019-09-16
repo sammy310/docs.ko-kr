@@ -9,12 +9,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 71e3781b08bca3441dbd55704bcb0f7de635097e
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: ab9c1be484d9cc77324e3105124a1b1f2257251d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168642"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925352"
 ---
 # <a name="async-c-reference"></a>async(C# 참조)
 
@@ -58,6 +58,7 @@ Visual Studio에서 이 코드를 WPF(Windows Presentation Foundation) 앱 또�
 - System.Net.Http에 대한 `using` 지시문을 추가합니다.  
   
 코드를 Windows 스토어 앱으로 실행하려면  
+
 - 이 코드를 MainPage.xaml.cs의 `MainPage` 클래스에 붙여넣습니다.  
 - System.Net.Http 및 System.Threading.Tasks에 대한 using 지시문을 추가합니다.  
   

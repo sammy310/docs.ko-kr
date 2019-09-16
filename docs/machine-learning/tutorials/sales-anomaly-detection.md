@@ -4,12 +4,12 @@ description: 제품 판매 데이터에 대한 변칙 검색 애플리케이션�
 ms.date: 07/17/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 4228a68ad43416c6e32684441593d92dfdbfd808
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: ed75f1ba0b102ba73eb5671667b5731519c12eb0
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733287"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929049"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>자습서: ML.NET을 사용하여 제품 판매의 변칙 검색
 
@@ -17,6 +17,7 @@ ms.locfileid: "68733287"
 
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 > [!div class="checklist"]
+>
 > * 데이터 로드
 > * 급증 변칙 검색에 대한 변환 작성
 > * 변환으로 급증 변칙 검색
@@ -372,6 +373,7 @@ Alert   Score   P-Value Martingale value
 
 본 자습서에서는 다음 작업에 관한 방법을 학습했습니다.
 > [!div class="checklist"]
+>
 > * 데이터 로드
 > * 급증 변칙 검색에 대한 모델 학습
 > * 학습된 모델로 급증 변칙 검색

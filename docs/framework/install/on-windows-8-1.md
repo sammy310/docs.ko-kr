@@ -5,12 +5,12 @@ description: Windows 8.1에 .NET Framework를 설치하는 방법 알아보기
 author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: 752f18eb3cbb87e5b6703fd7e0e81762ba3f0f10
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 3959e6c9f45897b799b3305893580ec881b02f8d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052064"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853896"
 ---
 # <a name="install-the-net-framework-on-windows-81-and-windows-server-2012-r2"></a>Windows 8.1 및 Windows Server 2012 R2에 .NET Framework 설치
 
@@ -39,6 +39,6 @@ Windows에서 많은 애플리케이션을 실행하는 데 .NET Framework가 �
 
 ## <a name="see-also"></a>참고 항목
 
-- [.NET Framework 다운로드](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)
+- [.NET Framework 다운로드](https://dotnet.microsoft.com/download)
 - [차단된 .NET Framework 설치 및 제거 문제 해결](troubleshoot-blocked-installations-and-uninstallations.md)
 - [개발자용 .NET Framework 설치](guide-for-developers.md)

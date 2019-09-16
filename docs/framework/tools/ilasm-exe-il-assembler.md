@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13b0ab04eba75a322d584bcc20cc6e90a54fb6fc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fcc9ba5e379897247f50175603b1002d5688d215
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933662"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894691"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe(IL 어셈블러)
 
@@ -110,7 +110,7 @@ IL 문법에 대한 자세한 내용은 Windows SDK에서 asmparse.grammar 파�
 
 .NET Framework 4.5부터 다음과 같은 코드를 사용하여 사용자 지정 특성을 인터페이스 구현에 연결할 수 있습니다.
 
-```
+```il
 .class interface public abstract auto ansi IMyInterface
 {
   .method public hidebysig newslot abstract virtual
@@ -130,7 +130,7 @@ IL 문법에 대한 자세한 내용은 Windows SDK에서 asmparse.grammar 파�
 
 .NET Framework 4.5부터 다음 코드와 같이 원시 이진 표현을 사용하여 임의의 마샬 BLOB(이진 대형 개체)을 지정할 수 있습니다.
 
-```
+```il
 .method public hidebysig abstract virtual
         instance void
         marshal({ 38 01 02 FF })
@@ -175,7 +175,7 @@ public class Hello
 
 다음 IL 코드 예제는 이전 C# 코드 예제에 해당합니다. IL 어셈블러 도구를 사용하여 이 코드를 어셈블리로 컴파일할 수 있습니다. IL과 C# 코드 예제 모두 콘솔에 "Hello World!"를 표시합니다.
 
-```
+```il
 // Metadata version: v2.0.50215
 .assembly extern mscorlib
 {

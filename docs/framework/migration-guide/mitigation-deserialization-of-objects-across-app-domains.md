@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d172503cee4e3880f493c68d5789e17c64a82a12
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: de2456a1365a1fb48b3e9f126e090b8da77728cc
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790006"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894111"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>완화: 애플리케이션 도메인 간 개체의 deserialization
 경우에 따라 앱이 다양한 애플리케이션을 기반으로 하여 두 개 이상의 애플리케이션 도메인을 사용하면 여러 애플리케이션 도메인 간에 논리 호출 컨텍스트의 개체를 deserialize하려는 시도로 인해 예외가 throw됩니다.  
@@ -44,9 +44,9 @@ ms.locfileid: "70790006"
   
 2. 응용 프로그램에서 개체가 논리 호출 컨텍스트에 추가되지 않은 위치를 찾아 다음 코드를 추가합니다.  
   
-    ```  
+    ```csharp
     System.Configuration.ConfigurationManager.GetSection("system.xml/xmlReader");  
-    ```  
+    ```
   
 ## <a name="see-also"></a>참고 항목
 

@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 3a44b017c6160639ed1be7374b893e103ee5f5d8
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 4dd747293fba4c18c2d10738d36f4d98cfd3f5b9
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373902"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926496"
 ---
 # <a name="common-client-side-web-technologies"></a>일반 클라이언트측 웹 기술
 
@@ -141,6 +141,7 @@ SPA를 지원하기에 어떤 JavaScript 프레임워크가 최선인지를 고�
 JavaScript 프레임워크는 지속적으로 매우 빠르게 발전하고 있습니다. 나중에 종속된 것을 후회하게 될 프레임워크의 선택 위험을 완화하는 데 도움을 받으려면 위에 나열된 고려 사항을 사용하세요. 특히 안전 주의자인 경우 상용 지원을 제공하고 또는 대기업에서 개발되는 프레임워크를 고려하세요.
 
 > ### <a name="references--client-web-technologies"></a>참조 - 클라이언트 웹 기술
+>
 > - **HTML 및 CSS**  
 > <https://www.w3.org/standards/webdesign/htmlcss>
 > - **Sass 대 LESS**  

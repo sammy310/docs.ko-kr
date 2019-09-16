@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35e89584f3916d748809960d33a31eb4e8fb9c6a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ef977206bf0d5b818cfd9779f063fbc2bd50632e
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938014"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971851"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe(강력한 이름 도구)
-강력한 이름 도구(Sn.exe)를 사용하면 [강력한 이름](../../../docs/framework/app-domains/strong-named-assemblies.md)으로 어셈블리에 서명할 수 있습니다. Sn.exe를 실행하면 키 관리, 서명 생성 및 서명 확인을 위한 옵션이 제공됩니다.  
+강력한 이름 도구(Sn.exe)를 사용하면 [강력한 이름](../../standard/assembly/strong-named.md)으로 어셈블리에 서명할 수 있습니다. Sn.exe를 실행하면 키 관리, 서명 생성 및 서명 확인을 위한 옵션이 제공됩니다.  
   
 > [!WARNING]
 > 강력한 이름을 보안용으로 사용하지 마세요. 강력한 이름은 고유한 ID를 제공할 뿐입니다.
 
- 강력한 이름 지정 및 강력한 이름의 어셈블리에 대한 자세한 내용은 [강력한 이름의 어셈블리](../../../docs/framework/app-domains/strong-named-assemblies.md) 및 [방법: 강력한 이름으로 어셈블리 서명](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)을 참조하세요.  
+ 강력한 이름 지정 및 강력한 이름의 어셈블리에 대한 자세한 내용은 [강력한 이름의 어셈블리](../../standard/assembly/strong-named.md) 및 [방법: 강력한 이름으로 어셈블리 서명](../../standard/assembly/sign-strong-name.md)을 참조하세요.  
   
  강력한 이름 도구는 Visual Studio와 함께 자동으로 설치됩니다. 이 도구를 시작하려면 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 참조하세요.  
 
@@ -36,7 +36,7 @@ ms.locfileid: "69938014"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 sn [-quiet][option [parameter(s)]]  
 ```  
   
@@ -90,37 +90,37 @@ sn [-quiet][option [parameter(s)]]
 ## <a name="examples"></a>예제  
  다음 명령을 사용하여 난수 키 쌍을 새로 만들어 `keyPair.snk`에 저장합니다.  
   
-```  
+```console  
 sn -k keyPair.snk  
 ```  
   
  다음 명령을 사용하여 `keyPair.snk`에 있는 키를 강력한 이름 CSP의 `MyContainer` 컨테이너에 저장합니다.  
   
-```  
+```console  
 sn -i keyPair.snk MyContainer  
 ```  
   
  다음 명령은 `keyPair.snk`에서 공개 키를 추출하여 `publicKey.snk`에 저장합니다.  
   
-```  
+```console  
 sn -p keyPair.snk publicKey.snk  
 ```  
   
  다음 명령은 `publicKey.snk`에 들어 있는 공개 키와 공개 키의 토큰을 표시합니다.  
   
-```  
+```console  
 sn -tp publicKey.snk  
 ```  
   
  다음 명령을 사용하여 어셈블리 `MyAsm.dll`을 확인합니다.  
   
-```  
+```console  
 sn -v MyAsm.dll  
 ```  
   
  다음 명령을 사용하여 기본 CSP에서 `MyContainer`를 삭제합니다.  
   
-```  
+```console  
 sn -d MyContainer  
 ```  
   
@@ -128,5 +128,5 @@ sn -d MyContainer
 
 - [도구](../../../docs/framework/tools/index.md)
 - [Al.exe(어셈블리 링커)](../../../docs/framework/tools/al-exe-assembly-linker.md)
-- [강력한 이름의 어셈블리](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [강력한 이름의 어셈블리](../../standard/assembly/strong-named.md)
 - [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

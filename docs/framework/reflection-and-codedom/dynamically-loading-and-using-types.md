@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0246f429b396a2606bbb827b7ae2a9034af00f11
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5dbbf0f71eaefd0ef7fc7f2b5e69e47ce7b8db26
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915470"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894887"
 ---
 # <a name="dynamically-loading-and-using-types"></a>동적으로 형식 로드 및 사용
 리플렉션은 언어 컴파일러에서 암시적 런타임에 바인딩을 구현하는 데 사용되는 인프라를 제공합니다. 바인딩은 고유하게 지정된 형식에 해당하는 선언(즉, 구현)을 찾는 프로세스입니다. 이 프로세스가 컴파일 시간이 아닌 런타임에 수행되는 경우 이를 런타임에 바인딩이라고 합니다. Visual Basic을 통해 코드에서 암시적 런타임에 바인딩을 사용할 수 있고, Visual Basic 컴파일러는 리플렉션을 사용하여 개체 형식을 가져오는 도우미 메서드를 호출합니다. 인수가 도우미 메서드에 전달되면 런타임에 적절한 메서드가 호출됩니다. 이러한 인수는 메서드를 호출하는 인스턴스(개체), 호출된 메서드의 이름(문자열) 및 호출된 메서드에 전달된 인수(개체 배열)입니다.  
   
  다음 예제에서는 Visual Basic 컴파일러가 리플렉션을 암시적으로 사용하여 컴파일 시간에 형식이 알려지지 않은 개체에 대해 메서드를 호출합니다. **HelloWorld** 클래스에는 **PrintHello** 메서드에 전달되는 일부 텍스트와 연결된 "Hello World"를 출력하는 **PrintHello** 메서드가 포함됩니다. 이 예제에서 호출된 **PrintHello** 메서드는 실제로 <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>이고, Visual Basic 코드에서는 개체 형식(helloObj)이 런타임(런타임에 바인딩)이 아닌 컴파일 시간(초기 바인딩)에 알려진 것처럼 **PrintHello** 메서드를 호출할 수 있습니다.  
   
-```  
-Imports System  
+```vb
 Module Hello  
     Sub Main()  
         ' Sets up the variable.  

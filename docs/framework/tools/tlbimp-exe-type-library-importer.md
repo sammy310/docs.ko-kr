@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f9c34b237655eb49b6a44c366586b3cabb5a684f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 048c2cd3d6b90dda951128a29a212928ee67c5a5
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937973"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971751"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe(형식 라이브러리 가져오기)
 형식 라이브러리 가져오기 도구는 COM 형식 라이브러리에 있는 형식 정의를 공용 언어 런타임 어셈블리의 동등한 정의로 변환합니다. Tlbimp.exe의 출력은 원본 형식 라이브러리에 정의된 형식의 런타임 메타데이터를 포함하는 이진 파일(어셈블리)입니다. [Ildasm.exe](ildasm-exe-il-disassembler.md)와 같은 도구를 사용하여 이 파일을 검토할 수 있습니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "69937973"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 tlbimp tlbFile [options]  
 ```  
   
@@ -43,7 +43,7 @@ tlbimp tlbFile [options]
 |**/asmversion:** *versionnumber*|만들 어셈블리의 버전 번호를 지정합니다. *versionnumber*를 *major.minor.build.revision* 형식으로 지정합니다.|  
 |**/company:** `companyinformation`|출력 어셈블리에 회사 정보를 추가합니다.|  
 |**/copyright:** `copyrightinformation`|출력 어셈블리에 저작권 정보를 추가합니다. 이 정보는 어셈블리에 대한 **파일 속성** 대화 상자에서 볼 수 있습니다.|  
-|**T:System.Reflection.AssemblyDelaySignAttribute**|Tlbimp.exe에서 지연 서명을 사용하여 강력한 이름의 결과 어셈블리에 서명하도록 지정합니다. 이 옵션은 **/keycontainer:** , **/keyfile:** 또는 **/publickey:** 옵션과 함께 지정해야 합니다. 지연 서명 프로세스에 대한 자세한 내용은 [어셈블리 서명 연기](../app-domains/delay-sign-assembly.md)를 참조하세요.|  
+|**T:System.Reflection.AssemblyDelaySignAttribute**|Tlbimp.exe에서 지연 서명을 사용하여 강력한 이름의 결과 어셈블리에 서명하도록 지정합니다. 이 옵션은 **/keycontainer:** , **/keyfile:** 또는 **/publickey:** 옵션과 함께 지정해야 합니다. 지연 서명 프로세스에 대한 자세한 내용은 [어셈블리 서명 연기](../../standard/assembly/delay-sign.md)를 참조하세요.|  
 |**/help**|이 도구의 명령 구문 및 옵션을 표시합니다.|  
 |**/keycontainer:** *containername*|*containername*에서 지정된 키 컨테이너에 있는 퍼블릭/프라이빗 키 쌍을 사용하여 강력한 이름으로 결과 어셈블리를 서명합니다.|  
 |**/keyfile:** *filename*|*filename*에 있는 게시자의 공식 퍼블릭/프라이빗 키 쌍을 사용하여 강력한 이름으로 결과 어셈블리를 서명합니다.|  
@@ -52,7 +52,7 @@ tlbimp tlbFile [options]
 |**/noclassmembers**|Tlbimp.exe에서 클래스에 멤버를 추가하지 못하도록 합니다. 이렇게 하면 <xref:System.TypeLoadException>이 발생하지 않습니다.|  
 |**/nologo**|Microsoft 시작 배너를 표시하지 않습니다.|  
 |**/out:** *filename*|메타데이터 정의를 기록할 출력 파일의 이름, 어셈블리 및 네임스페이스를 지정합니다. 형식 라이브러리에서 어셈블리의 네임스페이스를 명시적으로 제어하는 IDL(Interface Definition Language) 사용자 지정 특성을 지정하면 **/out** 옵션은 어셈블리의 네임스페이스에 영향을 주지 않습니다. 이 옵션을 지정하지 않으면 Tlbimp.exe는 입력 파일 내에 정의한 실제 형식 라이브러리와 이름이 같은 파일에 메타데이터를 기록하고 이 파일의 확장명을 .dll로 지정합니다. 출력 파일과 입력 파일의 이름이 같은 경우 형식 라이브러리를 덮어쓰지 않도록 오류가 생성됩니다.|  
-|**/primary**|지정된 형식 라이브러리에 대한 주 interop 어셈블리를 만듭니다. 어셈블리를 만든 형식 라이브러리의 게시자를 나타내는 정보가 어셈블리에 추가됩니다. 주 interop 어셈블리를 지정하면 게시자의 어셈블리를 Tlbimp.exe를 사용하여 형식 라이브러리에서 만든 다른 어셈블리와 구별할 수 있습니다. Tlbimp.exe를 사용하여 가져오는 형식 라이브러리의 게시자인 경우 **/primary** 옵션만 사용해야 합니다. [강력한 이름](../app-domains/strong-named-assemblies.md)을 사용하여 주 interop 어셈블리를 서명해야 합니다. 자세한 내용은 [주 Interop 어셈블리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100))를 참조하세요.|  
+|**/primary**|지정된 형식 라이브러리에 대한 주 interop 어셈블리를 만듭니다. 어셈블리를 만든 형식 라이브러리의 게시자를 나타내는 정보가 어셈블리에 추가됩니다. 주 interop 어셈블리를 지정하면 게시자의 어셈블리를 Tlbimp.exe를 사용하여 형식 라이브러리에서 만든 다른 어셈블리와 구별할 수 있습니다. Tlbimp.exe를 사용하여 가져오는 형식 라이브러리의 게시자인 경우 **/primary** 옵션만 사용해야 합니다. [강력한 이름](../../standard/assembly/strong-named.md)을 사용하여 주 interop 어셈블리를 서명해야 합니다. 자세한 내용은 [주 Interop 어셈블리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100))를 참조하세요.|  
 |**/product:** `productinformation`|출력 어셈블리에 제품 정보를 추가합니다. 이 정보는 어셈블리에 대한 **파일 속성** 대화 상자에서 볼 수 있습니다.|  
 |**/productversion:** `productversioninformation`|출력 어셈블리에 제품 버전 정보를 추가합니다. 형식 제한은 없습니다. 이 정보는 어셈블리에 대한 **파일 속성** 대화 상자에서 볼 수 있습니다.|  
 |**/publickey:** *filename*|결과 어셈블리에 서명하는 데 사용할 공개 키를 포함하는 파일을 지정합니다. **/publickey:** 대신 **/keyfile:** 또는 **/keycontainer:** 옵션을 지정하면 Tlbimp.exe는 **/keyfile:** 또는 **/keycontainer:** 와 함께 제공된 퍼블릭/프라이빗 키 쌍에서 퍼블릭 키를 생성합니다. **/publickey:** 옵션은 테스트 키 및 서명 연기 시나리오를 지원합니다. 파일은 Sn.exe에 의해 생성된 형식으로 되어 있습니다. 자세한 내용은 [Sn.exe(강력한 이름 도구)](sn-exe-strong-name-tool.md)에서 Sn.exe의 **-p** 옵션을 참조하세요.|  
@@ -76,7 +76,7 @@ tlbimp tlbFile [options]
 ## <a name="remarks"></a>설명  
  Tlbimp.exe는 한 번에 전체 형식 라이브러리 변환을 수행합니다. 이 도구를 사용하여 단일 형식 라이브러리 내에 정의된 형식의 하위 집합에 대한 형식 정보를 생성할 수는 없습니다.  
   
- 어셈블리에 [강력한 이름](../app-domains/strong-named-assemblies.md)을 할당하는 것이 종종 유용하거나 필요합니다. 따라서 Tlbimp.exe는 강력한 이름의 어셈블리를 생성하는 데 필요한 정보를 제공하는 옵션을 포함합니다. **/keyfile:** 및 **/keycontainer:** 옵션은 둘 다 강력한 이름으로 어셈블리를 서명합니다. 그러므로 한 번에 한 옵션만 지정하면 됩니다.  
+ 어셈블리에 [강력한 이름](../../standard/assembly/strong-named.md)을 할당하는 것이 종종 유용하거나 필요합니다. 따라서 Tlbimp.exe는 강력한 이름의 어셈블리를 생성하는 데 필요한 정보를 제공하는 옵션을 포함합니다. **/keyfile:** 및 **/keycontainer:** 옵션은 둘 다 강력한 이름으로 어셈블리를 서명합니다. 그러므로 한 번에 한 옵션만 지정하면 됩니다.  
   
  **/reference** 옵션을 여러 번 사용하여 여러 개의 참조 어셈블리를 지정할 수 있습니다.
  
@@ -87,31 +87,31 @@ tlbimp tlbFile [options]
 ## <a name="examples"></a>예제  
  다음 명령을 사용하여 `myTest.tlb`에 있는 형식 라이브러리와 이름이 같고 확장명이 .dll인 어셈블리를 생성합니다.  
   
-```  
+```console  
 tlbimp myTest.tlb   
 ```  
   
  다음 명령을 사용하여 `myTest.dll`이라는 이름의 어셈블리를 생성합니다.  
   
-```  
+```console  
 tlbimp  myTest.tlb  /out:myTest.dll  
 ```  
   
  다음 명령은 `MyModule.dll\1`에 지정된 형식 라이브러리와 동일한 이름과 .dll 확장명을 사용하는 어셈블리를 생성합니다. `MyModule.dll\1`은 현재 디렉터리에 있어야 합니다.  
   
-```  
+```console  
 tlbimp MyModule.dll\1  
 ```  
   
  다음 명령을 사용하여 형식 라이브러리 `myTestLib.dll`에 대해 이름이 `TestLib.dll`인 어셈블리를 생성합니다. **/transform:dispret** 옵션은 형식 라이브러리의 dispinterface에 있는 메서드의 모든 [out, retval] 매개 변수를 관리되는 라이브러리의 반환 값으로 변형합니다.  
   
-```  
+```console  
 tlbimp TestLib.dll /transform:dispret /out:myTestLib.dll  
 ```  
   
  앞의 예제에서 형식 라이브러리 `TestLib.dll`은 void를 반환하고 [out, retval] 매개 변수를 갖는 `SomeMethod`라는 disinterface 메서드를 포함합니다. 다음 코드는 `SomeMethod`에 있는 `TestLib.dll`에 대한 입력 형식 라이브러리 메서드 시그니처입니다.  
   
-```  
+```cpp  
 void SomeMethod([out, retval] VARIANT_BOOL*);  
 ```  
   
@@ -135,6 +135,6 @@ void SomeMethod(out bool x);
 - [형식 라이브러리를 어셈블리로 변환 요약](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [Ildasm.exe(IL 디스어셈블러)](ildasm-exe-il-disassembler.md)
 - [Sn.exe(강력한 이름 도구)](sn-exe-strong-name-tool.md)
-- [강력한 이름의 어셈블리](../app-domains/strong-named-assemblies.md)
+- [강력한 이름의 어셈블리](../../standard/assembly/strong-named.md)
 - [Interop 어셈블리로 형식 라이브러리를 가져오는 특성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y6a7ak23(v=vs.100))
 - [명령 프롬프트](developer-command-prompt-for-vs.md)

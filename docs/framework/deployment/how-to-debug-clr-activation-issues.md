@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5e552f7014c21e2ead61b83ca9909655def6333b
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 7ab80cfbd0ae2130f465216ca77812bda0002c24
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221078"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854008"
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>CLR 활성화 문제를 디버깅하는 방법
 
@@ -35,19 +35,19 @@ CLR 활성화 로그와 [어셈블리 바인딩 로그](../../../docs/framework/
 
 - CLR 활성화 로그를 저장할 기존 디렉터리의 전체 경로를 나타내는 문자열로 `COMPLUS_CLRLoadLogDir` 환경 변수를 설정합니다.
 
-     환경 변수를 설정하는 방법에 따라 해당 범위가 결정됩니다.
+    환경 변수를 설정하는 방법에 따라 해당 범위가 결정됩니다.
 
-    - 시스템 수준에서 설정하는 경우 환경 변수를 제거할 때까지 해당 컴퓨터의 모든 .NET Framework 애플리케이션에 대해 활성화 로깅이 사용됩니다.
+  - 시스템 수준에서 설정하는 경우 환경 변수를 제거할 때까지 해당 컴퓨터의 모든 .NET Framework 애플리케이션에 대해 활성화 로깅이 사용됩니다.
 
-    - 사용자 수준에서 설정하는 경우 현재 사용자 계정에 대해서만 활성화 로깅이 사용됩니다. 환경 변수를 제거할 때까지 로깅이 계속됩니다.
+  - 사용자 수준에서 설정하는 경우 현재 사용자 계정에 대해서만 활성화 로깅이 사용됩니다. 환경 변수를 제거할 때까지 로깅이 계속됩니다.
 
-    - CLR을 로드하기 전에 프로세스 내에서 설정하는 경우 프로세스가 종료될 때까지 활성화 로깅이 사용됩니다.
+  - CLR을 로드하기 전에 프로세스 내에서 설정하는 경우 프로세스가 종료될 때까지 활성화 로깅이 사용됩니다.
 
-    - 애플리케이션을 실행하기 전에 명령 프롬프트에서 설정하는 경우 해당 명령 프롬프트에서 실행되는 모든 애플리케이션에 대해 활성화 로깅이 사용됩니다.
+  - 애플리케이션을 실행하기 전에 명령 프롬프트에서 설정하는 경우 해당 명령 프롬프트에서 실행되는 모든 애플리케이션에 대해 활성화 로깅이 사용됩니다.
 
-     예를 들어 프로세스 수준 범위로 c:\clrloadlogs 디렉터리에 활성화 로그를 저장하려면 애플리케이션을 실행하기 전에 명령 프롬프트 창을 열고 다음을 입력합니다.
+    예를 들어 프로세스 수준 범위로 c:\clrloadlogs 디렉터리에 활성화 로그를 저장하려면 애플리케이션을 실행하기 전에 명령 프롬프트 창을 열고 다음을 입력합니다.
 
-    ```
+    ```console
     set COMPLUS_CLRLoadLogDir=c:\clrloadlogs
     ```
 
@@ -65,56 +65,56 @@ CLR 활성화 로그는 CLR 활성화 및 CLR 호스팅 API 사용에 대한 많
 
 활성화 로그의 다음 예제에서는 가장 유용한 정보가 강조 표시되고 로그 다음에 설명됩니다.
 
-```
-532,205950.367,CLR Loading log for C:\Tests\myapp.exe 
-532,205950.367,Log started at 4:26:12 PM on 10/6/2011 
-532,205950.367,----------------------------------- 
-532,205950.382,FunctionCall: _CorExeMain 
-532,205950.382,FunctionCall: ClrCreateInstance, Clsid: {2EBCD49A-1B47-4A61-B13A-4A03701E594B}, Iid: {E2190695-77B2-492E-8E14-C4B3A7FDD593} 
-532,205950.382,MethodCall: ICLRMetaHostPolicy::GetRequestedRuntime. Version: (null), Metahost Policy Flags: 0x168, Binary: (null), Iid: {BD39D1D2-BA2F-486A-89B0-B4B0CB466891} 
-532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0 
-532,205950.382,Input values for ComputeVersionString follow this line 
-532,205950.382,----------------------------------- 
-532,205950.382,Default Application Name: C:\Tests\myapp.exe 
-532,205950.382,IsLegacyBind is: 0 
-532,205950.382,IsCapped is 0 
-532,205950.382,SkuCheckFlags are 0 
-532,205950.382,ShouldEmulateExeLaunch is 0 
-532,205950.382,LegacyBindRequired is 0 
-532,205950.382,----------------------------------- 
-532,205950.382,Parsing config file: C:\Tests\myapp.exe 
-532,205950.382,UseLegacyV2RuntimeActivationPolicy is set to 0 
-532,205950.382,LegacyFunctionCall: GetFileVersion. Filename: C:\Tests\myapp.exe 
-532,205950.382,LegacyFunctionCall: GetFileVersion. Filename: C:\Tests\myapp.exe 
-532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727 
-532,205950.382,ERROR: Version v2.0.50727 is not present on the machine. 
-532,205950.398,SEM_FAILCRITICALERRORS is set to 0 
-532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3 
-532,205950.398,FunctionCall: RealDllMain. Reason: 0 
+```output
+532,205950.367,CLR Loading log for C:\Tests\myapp.exe
+532,205950.367,Log started at 4:26:12 PM on 10/6/2011
+532,205950.367,-----------------------------------
+532,205950.382,FunctionCall: _CorExeMain
+532,205950.382,FunctionCall: ClrCreateInstance, Clsid: {2EBCD49A-1B47-4A61-B13A-4A03701E594B}, Iid: {E2190695-77B2-492E-8E14-C4B3A7FDD593}
+532,205950.382,MethodCall: ICLRMetaHostPolicy::GetRequestedRuntime. Version: (null), Metahost Policy Flags: 0x168, Binary: (null), Iid: {BD39D1D2-BA2F-486A-89B0-B4B0CB466891}
+532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0
+532,205950.382,Input values for ComputeVersionString follow this line
+532,205950.382,-----------------------------------
+532,205950.382,Default Application Name: C:\Tests\myapp.exe
+532,205950.382,IsLegacyBind is: 0
+532,205950.382,IsCapped is 0
+532,205950.382,SkuCheckFlags are 0
+532,205950.382,ShouldEmulateExeLaunch is 0
+532,205950.382,LegacyBindRequired is 0
+532,205950.382,-----------------------------------
+532,205950.382,Parsing config file: C:\Tests\myapp.exe
+532,205950.382,UseLegacyV2RuntimeActivationPolicy is set to 0
+532,205950.382,LegacyFunctionCall: GetFileVersion. Filename: C:\Tests\myapp.exe
+532,205950.382,LegacyFunctionCall: GetFileVersion. Filename: C:\Tests\myapp.exe
+532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727
+532,205950.382,ERROR: Version v2.0.50727 is not present on the machine.
+532,205950.398,SEM_FAILCRITICALERRORS is set to 0
+532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3
+532,205950.398,FunctionCall: RealDllMain. Reason: 0
 532,205950.398,FunctionCall: OnShimDllMainCalled. Reason: 0
 ```
 
 - **CLR 로드 로그**에서는 관리 코드를 로드하는 프로세스를 시작한 실행 파일의 경로를 제공합니다. 이는 기본 호스트일 수 있습니다.
 
-    ```
+    ```output
     532,205950.367,CLR Loading log for C:\Tests\myapp.exe
     ```
 
 - **설치된 런타임**은 활성화 요청의 후보가 되는, 컴퓨터에 설치된 CLR 버전 집합입니다.
 
-    ```
+    ```output
     532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0
     ```
 
 - **built with version**은 [ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) 등의 메서드에 제공된 이진 파일을 작성하는 데 사용된 CLR 버전입니다.
 
-    ```
+    ```output
     532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727
     ```
 
 - **feature-on-demand installation**은 Windows 8에서 .NET Framework 3.5를 사용하는 경우를 가리킵니다. 이 시나리오에 대한 자세한 내용은 [.NET Framework 초기화 오류: 사용자 환경 관리](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)를 참조하세요.
 
-    ```
+    ```output
     532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3
     ```
 

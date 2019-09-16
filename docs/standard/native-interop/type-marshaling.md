@@ -4,12 +4,12 @@ description: .NET에서 형식을 네이티브 표현으로 마샬링하는 방�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 2cb8898b52b4b4afba1184a886e16c9f7f68f03a
-ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
+ms.openlocfilehash: bc44a2c63dfa3fde3e3c4197e5d1fe79857ea717
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67041791"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929060"
 ---
 # <a name="type-marshaling"></a>형식 마샬링
 
@@ -133,7 +133,7 @@ typedef struct _SYSTEMTIME {
   WORD wMinute;
   WORD wSecond;
   WORD wMilliseconds;
-} SYSTEMTIME, *PSYSTEMTIME*;
+} SYSTEMTIME, *PSYSTEMTIME;
 ```
 
 구조체에 대한 기본 마샬링이 필요한 것이 아닌 경우도 있습니다. [구조 마샬링 사용자 지정](./customize-struct-marshaling.md) 문서에서는 구조체의 마샬링 방식을 사용자 지정하는 방법을 설명합니다.

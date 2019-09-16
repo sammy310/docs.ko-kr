@@ -3,12 +3,12 @@ title: 식 트리 변환
 description: 식 트리의 각 노드를 방문하고 해당 식 트리의 수정된 복사본을 작성하는 방법을 알아봅니다.
 ms.date: 06/20/2016
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: b3c575876b6d53e9db366f59ad45aac714923c45
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: a12c4d7fe9f65d6e9598259de1504b6f9987f38e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202942"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925836"
 ---
 # <a name="translating-expression-trees"></a>식 트리 변환
 
@@ -191,7 +191,7 @@ Computed sum: 10
 
 ## <a name="learning-more"></a>자세한 정보
 
-이 샘플에서는 식 트리로 표시되는 알고리즘을 트래버스하고 해석하기 위해 작성하는 코드의 작은 하위 집합을 보여 줍니다. 식 트리를 다른 언어로 변환하는 일반적인 용도의 라이브러리를 작성하는 데 필요한 모든 작업에 대한 자세한 내용은 Matt Warren의 [이 시리즈](https://blogs.msdn.com/b/mattwar/archive/2008/11/18/linq-links.aspx)를 참조하세요. 이 시리즈는 식 트리에서 찾을 수 있는 코드를 변환하는 방법에 대해 상세히 설명합니다.
+이 샘플에서는 식 트리로 표시되는 알고리즘을 트래버스하고 해석하기 위해 작성하는 코드의 작은 하위 집합을 보여 줍니다. 식 트리를 다른 언어로 변환하는 일반적인 용도의 라이브러리를 작성하는 데 필요한 모든 작업에 대한 자세한 내용은 Matt Warren의 [이 시리즈](https://blogs.msdn.microsoft.com/mattwar/2008/11/18/linq-building-an-iqueryable-provider-series/)를 참조하세요. 이 시리즈는 식 트리에서 찾을 수 있는 코드를 변환하는 방법에 대해 상세히 설명합니다.
 
 식 트리의 진정한 기능을 확인하셨길 바랍니다.
 코드 집합을 검사하고, 해당 코드를 원하는 대로 변경하고, 변경된 버전을 실행할 수 있습니다. 식 트리는 변경할 수 없기 때문에 기존 트리의 구성 요소를 사용하여 새 트리를 만들 수 있습니다. 이렇게 하면 수정된 식 트리를 만드는 데 필요한 메모리 양이 최소화됩니다.

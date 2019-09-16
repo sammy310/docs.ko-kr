@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47d0aba8be60611527d6216227a6c4939479fc38
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 99ffbccca8cd8a719e5571638308e28d494d687a
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613046"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926871"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe(전역 어셈블리 캐시 도구)
 
@@ -36,7 +36,7 @@ ms.locfileid: "59613046"
 
 ## <a name="syntax"></a>구문
 
-```
+```console
 gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 ```
 
@@ -70,7 +70,7 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 |**/ur** *assemblyName*<br /><br /> *scheme*<br /><br /> *ID*<br /><br /> *description*|전역 어셈블리 캐시에서 지정된 어셈블리의 참조를 제거합니다. 어셈블리에 대한 참조를 제거하려면 어셈블리가 설치될 때 **/i** 및 **/r**(또는 **/ir)** 옵션으로 지정된 것과 동일한 *scheme*, *id* 및 *description* 매개 변수를 지정해야 합니다. 이러한 매개 변수에 대해 지정할 수 있는 유효한 값에 대한 설명은 **/r** 옵션을 참조하세요.<br /><br /> 이 옵션을 지정하는 것은 **/u** 및 **/r** 옵션을 함께 지정하는 것과 같습니다.|
 |**/?**|이 도구의 명령 구문 및 옵션을 표시합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 > [!NOTE]
 > Gacutil.exe를 사용하려면 관리자 권한이 있어야 합니다.
@@ -81,7 +81,7 @@ Gacutil.exe는 Windows Installer에서 지원하는 참조 횟수 계산 스키�
 
 ANSI 텍스트 파일에 저장된 어셈블리 목록을 설치 또는 제거하려면 **/il** 또는 **/ul** 옵션을 사용합니다. 텍스트 파일의 내용은 올바른 서식으로 지정되어 있어야 합니다. 텍스트 파일을 사용하여 어셈블리를 설치하려면 각 어셈블리 경로를 해당 파일에서 별도의 줄에 지정하십시오. 다음 예제에서는 설치할 어셈블리를 포함하는 파일의 내용을 보여 줍니다.
 
-```
+```text
 myAssembly1.dll
 myAssembly2.dll
 myAssembly3.dll
@@ -89,7 +89,7 @@ myAssembly3.dll
 
 텍스트 파일을 사용하여 어셈블리를 제거하려면 각 어셈블리의 정규화된 어셈블리 이름을 해당 파일에서 별도의 줄에 지정하십시오. 다음 예제에서는 제거할 어셈블리를 포함하는 파일의 내용을 보여 줍니다.
 
-```
+```text
 myAssembly1,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 myAssembly2,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
@@ -98,11 +98,12 @@ myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 > [!NOTE]
 > 79자와 91자(파일 확장명 제외) 사이보다 긴 파일 이름을 가진 어셈블리를 설치하려고 하면 다음 오류가 발생할 수 있습니다.
 >
-> ```
+> ```output
 > Failure adding assembly to the cache:   The file name is too long.
 > ```
 >
 > 이는 내부적으로 Gacutil.exe가 다음 요소로 구성된 최대 MAX_PATH 문자 수의 경로를 생성하기 때문입니다.
+>
 > - GAC 루트 - 34자(즉, `C:\Windows\Microsoft.NET\assembly\`)
 > - 아키텍처 - 7자 또는 9자(즉, `GAC_32\`, `GAC_64\`, `GAC_MSIL`)
 > - AssemblyName - 다른 요소의 크기에 따라 최대 91자(예: `System.Xml.Linq\`)
@@ -117,13 +118,13 @@ myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 
 다음 명령은 전역 어셈블리 캐시에 `mydll.dll` 어셈블리를 설치합니다.
 
-```
+```console
 gacutil /i mydll.dll
 ```
 
 다음 명령은 해당 어셈블리에 대한 참조 횟수가 없는 경우 전역 어셈블리 캐시에서 어셈블리 `hello`를 제거합니다.
 
-```
+```console
 gacutil /u hello
 ```
 
@@ -131,49 +132,49 @@ gacutil /u hello
 
 둘 이상의 어셈블리가 제거되지 않도록 하려면 다음 예제를 사용합니다. 이 명령을 사용하면 완전히 지정된 버전 번호, culture 및 공개 키와 일치하는 `hello` 어셈블리만 제거됩니다.
 
-```
+```console
 gacutil /u hello, Version=1.0.0.1, Culture="de",PublicKeyToken=45e343aae32233ca
 ```
 
 다음 명령은 파일 `assemblyList.txt`에 지정된 어셈블리를 전역 어셈블리 캐시에 설치합니다.
 
-```
+```console
 gacutil /il assemblyList.txt
 ```
 
 다음 명령은 전역 어셈블리 캐시에서 파일 `assemblyList.txt`에 지정된 어셈블리를 제거합니다.
 
-```
+```console
 gacutil /ul assemblyList.txt
 ```
 
 다음 명령은 전역 어셈블리 캐시에 `myDll.dll`을 설치하고 해당 어셈블리 개수를 계산하는 참조를 추가합니다. 어셈블리 `myDll.dll`은 애플리케이션 `MyApp`에 의해 사용됩니다. `UNINSTALL_KEY MyApp` 매개 변수는 Windows의 프로그램 추가/제거에 `MyApp`을 추가하는 레지스트리 키를 지정합니다. description 매개 변수는 `My Application Description`으로 지정됩니다.
 
-```
+```console
 gacutil /i /r myDll.dll UNINSTALL_KEY MyApp "My Application Description"
 ```
 
 다음 명령은 전역 어셈블리 캐시에 `myDll.dll`을 설치하고 해당 어셈블리 개수를 계산하는 참조를 추가합니다. scheme 매개 변수 `FILEPATH`와 id 매개 변수 `c:\applications\myApp\myApp.exe`는 `myDll.dll.`을 설치 중인 애플리케이션 경로를 지정합니다. description 매개 변수는 `MyApp`으로 지정됩니다.
 
-```
+```console
 gacutil /i /r myDll.dll FILEPATH c:\applications\myApp\myApp.exe MyApp
 ```
 
 다음 명령은 전역 어셈블리 캐시에 `myDll.dll`을 설치하고 해당 어셈블리 개수를 계산하는 참조를 추가합니다. scheme 매개 변수 `OPAQUE`를 사용하면 id 및 description 매개 변수를 사용자 지정할 수 있습니다.
 
-```
+```console
 gacutil /i /r mydll.dll OPAQUE "Insert custom application details here" "Insert Custom description information here"
 ```
 
 다음 명령은 애플리케이션 `myDll.dll`에 의한 `myApp`에 대한 참조를 제거합니다. 이 참조가 어셈블리에 대한 마지막 참조인 경우 전역 어셈블리 캐시에서 해당 어셈블리도 제거됩니다.
 
-```
+```console
 gacutil /u /r myDll.dll FILEPATH c:\applications\myApp\myApp.exe MyApp
 ```
 
 다음 명령은 전역 어셈블리 캐시의 내용을 나열합니다.
 
-```
+```console
 gacutil /l
 ```
 

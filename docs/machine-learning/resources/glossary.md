@@ -4,12 +4,12 @@ description: ML.NET에서 사용자 지정 모델을 빌드할 때 유용한 중
 ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: 1c979d2c4567285146ab87f359116efb506815a1
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 4d4bb80c6582facbcb11664309fde230bcfa4e7b
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710533"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929263"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>중요한 용어가 포함된 기계 학습 용어집
 
@@ -48,6 +48,7 @@ ML.NET에서 카탈로그는 공통 목적에 따라 그룹화된 확장 함수�
 ## <a name="data"></a>데이터
 
 데이터는 모든 기계 애플리케이션의 핵심입니다. ML.NET에서 데이터는 <xref:Microsoft.ML.IDataView> 개체로 표현됩니다. 데이터 뷰 개체:
+
 - 열 및 행으로 구성
 - 지연 평가, 자신에 대한 작업이 호출될 때만 데이터 로드
 - 각 열의 유형, 형식, 길이를 정의하는 스키마 포함

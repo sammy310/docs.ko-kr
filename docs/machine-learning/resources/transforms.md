@@ -4,16 +4,17 @@ description: ML.NET에서 지원되는 기능 엔지니어링 구성 요소를 �
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: cbcdef5b8f5f6334d5545f100976347ade9ee6fd
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 25da3cceb3c9090661b34254ed240207aaf3b9d7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671867"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929251"
 ---
 # <a name="data-transformations"></a>데이터 변환
 
 데이터 변환은 다음 작업에 사용됩니다.
+
 - 모델 학습을 위한 데이터 준비
 - TensorFlow 또는 ONNX 형식으로 가져온 모델 적용
 - 모델을 통해 전달된 후 데이터 사후 처리

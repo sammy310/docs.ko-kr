@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: af91819c66a2376f446d0f18537d2f6e718b446e
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: d49a4bdfec133fe805bc9d534e04edf2f9ca5726
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104892"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929407"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET은 무엇이며 어떻게 작동하나요?
 
@@ -82,6 +82,7 @@ ML.NET을 사용하여 수행할 수 있는 예측 유형은 다음과 같습니
 ## <a name="code-workflow"></a>코드 워크플로
 
 다음 다이어그램은 반복적인 모델 개발 프로세스뿐만 아니라 애플리케이션 코드 구조를 나타냅니다.
+
 - 학습 데이터를 수집하여 **IDataView** 개체로 로드
 - 기능을 추출하고 기계 학습 알고리즘을 적용할 작업 파이프라인 지정
 - 파이프라인에서 **Fit()** 를 호출하여 모델 학습

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: fae526f5dcd452fbc381ee86c892b72e61956f0b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 57fd2ed3a26bf5986f9c8a1a6cae6b041811e84c
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596860"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970894"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>방법: 추상 속성 정의(C# 프로그래밍 가이드)
 다음 예제에서는 [abstract](../../language-reference/keywords/abstract.md) 속성을 정의하는 방법을 보여 줍니다. 추상 속성 선언은 속성 접근자의 구현을 제공하지 않습니다. 클래스가 속성을 지원하도록 선언하지만 접근자 구현은 파생 클래스에서 처리되도록 합니다. 다음 예제에서는 기본 클래스에서 상속된 추상 속성을 구현하는 방법을 보여 줍니다.  
@@ -59,4 +59,3 @@ ms.locfileid: "69596860"
 - [클래스 및 구조체](./index.md)
 - [추상/봉인된 클래스 및 클래스 멤버](./abstract-and-sealed-classes-and-class-members.md)
 - [속성](./properties.md)
-- [방법: 명령줄을 사용하여 어셈블리 만들기 및 사용](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)

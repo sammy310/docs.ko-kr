@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d7608ed964313774b806ba6f1bb4d8f0d322c361
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1996c8b317bbfed6362c759a257cafef8400e919
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592775"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971906"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>완전 신뢰 모드에서 인트라넷 애플리케이션 실행
 .NET Framework 버전 3.5 SP1(서비스 팩 1)부터 애플리케이션 및 해당 라이브러리 어셈블리를 네트워크 공유에서 완전 신뢰 어셈블리로 실행할 수 있습니다. <xref:System.Security.SecurityZone.MyComputer> 영역 증거가 인트라넷의 공유에서 로드된 어셈블리에 자동으로 추가됩니다. 이 증거는 컴퓨터에 있는 어셈블리와 동일한 권한 부여 집합(일반적으로 완전 신뢰)을 해당 어셈블리에 제공합니다. 이 기능은 호스트에서 실행되도록 설계된 애플리케이션 또는 ClickOnce 애플리케이션에는 적용되지 않습니다.  
@@ -36,4 +36,4 @@ ms.locfileid: "64592775"
   
 ## <a name="see-also"></a>참고 항목
 
-- [어셈블리를 사용한 프로그래밍](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [어셈블리를 사용한 프로그래밍](../../standard/assembly/program.md)

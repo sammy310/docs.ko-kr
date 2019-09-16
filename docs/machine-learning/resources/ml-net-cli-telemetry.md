@@ -4,12 +4,12 @@ description: 어떤 데이터가 수집되고 수집 기능을 사용하지 않�
 ms.topic: conceptual
 ms.date: 09/03/2019
 ms.custom: ''
-ms.openlocfilehash: e7b3b3d7789f2368ebc4448e73add817986a5906
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 77a24416a8008d36006c293cb174b5a8c2f516b7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254005"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929276"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>ML.NET CLI의 원격 분석 수집
 
@@ -58,6 +58,7 @@ ML.NET CLI 원격 분석 기능은 기본적으로 사용됩니다.
 
 ### <a name="data-points-not-collected"></a>데이터 포인트 수집 안 함
 원격 분석 기능은 다음을 *수집하지 않습니다*.
+
 - 사용자 이름 등의 개인 데이터
 - 데이터 세트 파일 이름
 - 데이터 세트 파일의 데이터
@@ -73,6 +74,7 @@ ML.NET CLI의 Microsoft 배포는 [Microsoft 소프트웨어 사용 조건: Micr
 `mlnet auto-train` 같은 [ML.NET CLI 명령](../reference/ml-net-cli-reference.md)을 처음 실행하면 ML.NET CLI 도구가 원격 분석에서 옵트아웃하는 방법을 설명하는 공개 텍스트를 표시합니다. 실행 중인 CLI 버전에 따라 텍스트가 약간 달라질 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
+
 - [ML.NET CLI 참조](../reference/ml-net-cli-reference.md)
 - [Microsoft 소프트웨어 사용 조건: Microsoft .NET 라이브러리](https://aka.ms/dotnet-core-eula)
 - [Microsoft 프라이버시](https://www.microsoft.com/trustcenter/privacy/)

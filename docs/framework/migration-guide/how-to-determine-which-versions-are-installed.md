@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ead6db2c3df3662c4d689bd6ac2466c99b02a15
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8d719debd39309415f996d655c68abd8c80ec5e3
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968261"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928417"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>방법: 설치된 .NET Framework 버전 확인
 
@@ -32,6 +32,7 @@ ms.locfileid: "69968261"
 > 새 .NET Framework 버전에서는 각각 이전 버전의 기능을 유지하며 새 기능을 추가합니다. 여러 버전의 .NET Framework를 동시에 단일 컴퓨터에서 로드할 수 있습니다. 즉, 이전 버전을 제거하지 않고도 .NET Framework를 설치할 수 있습니다. 사용 중인 애플리케이션이 특정 버전에 종속적일 수 있고 해당 버전을 제거하면 애플리케이션이 중단될 수 있으므로 컴퓨터에서 .NET Framework의 이전버전은 일반적으로 제거해서는 안 됩니다.
 >
 > .NET Framework 버전과 CLR 버전은 다릅니다.
+>
 > - .NET Framework의 버전은 .NET Framework 클래스 라이브러리를 구성하는 어셈블리 세트를 기반으로 정해집니다. 예를 들어, .NET Framework 버전에는 4.5, 4.6.1, 4.7.2가 있습니다.
 >- CLR의 버전은 .NET Framework 애플리케이션이 실행되는 런타임을 기반으로 정해집니다. 하나의 CLR 버전이 여러 개의.NET Framework 버전을 지원합니다. 예를들어, CLR 버전 4.0.30319.*xxxxx*는 .NET Framework 버전 4~4.5.2를 지원하고, *xxxxx*는 42000보다 작으며, CLR버전 4.0.30319.42000은 .NET Framework 4.6.에서 시작하는 .NET Framework 버전을 지원합니다.
 >

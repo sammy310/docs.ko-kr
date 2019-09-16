@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 62760cb9fe5832ee018ebdebf6275ea61691c738
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9f45f40cd66c63e660b9091c726533dcfe8db086
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927795"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971581"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>어셈블리 및 전역 어셈블리 캐시 사용
 여러 애플리케이션에서 어셈블리를 공유하려면 어셈블리를 전역 어셈블리 캐시에 설치하면 됩니다. 공용 언어 런타임이 설치된 각 컴퓨터에는 이 컴퓨터 수준의 코드 캐시가 있습니다. 전역 어셈블리 캐시에는 컴퓨터의 여러 애플리케이션에서 공유하도록 특별히 지정된 어셈블리가 저장됩니다. 전역 어셈블리 캐시에 설치하려면 어셈블리에 강력한 이름이 있어야 합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "69927795"
  어셈블리를 전역 어셈블리 캐시에 명시적으로 설치하지 않으려고 하는 시나리오가 있습니다. 애플리케이션을 구성하는 어셈블리 중 하나를 전역 어셈블리 캐시에 배치하면 XCOPY를 사용하여 애플리케이션 디렉터리를 복사하는 방식으로 애플리케이션을 더 이상 복제하거나 설치할 수 없습니다. 이 경우 어셈블리를 전역 어셈블리 캐시로 이동해야 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [방법: 글로벌 어셈블리 캐시에 어셈블리 설치](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
+ [방법: 글로벌 어셈블리 캐시에 어셈블리 설치](install-assembly-into-gac.md)  
  어셈블리를 전역 어셈블리 캐시에 설치하는 방법을 설명합니다.  
   
  [방법: 글로벌 어셈블리 캐시의 내용 보기](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
@@ -59,17 +59,17 @@ ms.locfileid: "69927795"
  서비스되는 구성 요소(관리되는 COM+ 구성 요소)를 전역 어셈블리 캐시에 배치하는 이유를 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [어셈블리 만들기](../../../docs/framework/app-domains/create-assemblies.md)  
+ [어셈블리 만들기](../../standard/assembly/create.md)  
  어셈블리 만들기에 대해 간략하게 설명합니다.  
   
  [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)  
  전역 어셈블리 캐시를 설명합니다.  
   
- [방법: 어셈블리 콘텐츠 보기](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+ [방법: 어셈블리 콘텐츠 보기](../../standard/assembly/view-contents.md)  
  [Ildasm.exe(IL 디스어셈블러)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)를 사용하여 어셈블리의 MSIL(Microsoft Intermediate Language) 정보를 보는 방법을 설명합니다.  
   
  [런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  공용 언어 런타임이 애플리케이션을 구성하는 어셈블리를 찾고 로드하는 방법을 설명합니다.  
   
- [어셈블리를 사용한 프로그래밍](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ [어셈블리를 사용한 프로그래밍](../../standard/assembly/program.md)  
  관리되는 애플리케이션의 빌드 블록인 어셈블리를 설명합니다.

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fadccdf35429babce6e101d336c9ea1de150b276
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 358c7f1a339fd473271574a4e97e201f5c15f871
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648604"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894171"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>여러 형식의 배열 마샬링
 배열은 동일한 형식의 요소를 하나 이상 포함하는 관리 코드의 참조 형식입니다. 배열은 참조 형식이지만 관리되지 않는 함수에 In 매개 변수로 전달됩니다. 이 동작은 관리되는 배열이 관리되는 개체에 전달되는 방식(In/Out 매개 변수로)과 일치하지 않습니다. 자세한 내용은 [복사 및 고정](copying-and-pinning.md)을 참조하세요.  
@@ -31,7 +31,7 @@ ms.locfileid: "64648604"
 |정수를 포함하는 구조체.|정수를 포함하는 구조체 배열을 In 매개 변수로 전달합니다.|  
 |문자열을 포함하는 구조체.|문자열만 포함하는 구조체 배열을 In/Out 매개 변수로 전달합니다. 배열의 멤버를 변경할 수 있습니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 샘플에서는 다음 형식의 배열을 전달하는 방법을 보여 줍니다.  
   
 - 값 형식 정수 배열  
@@ -50,45 +50,45 @@ ms.locfileid: "64648604"
   
  Arrays 샘플에서는 원래 함수 선언과 함께 표시되는 다음과 같은 관리되지 않는 함수를 사용합니다.  
   
-- PinvokeLib.dll에서 내보낸**TestArrayOfInts**   
+- PinvokeLib.dll에서 내보낸**TestArrayOfInts**  
   
-    ```  
+    ```cpp
     int TestArrayOfInts(int* pArray, int pSize);  
     ```  
   
-- PinvokeLib.dll에서 내보낸**TestRefArrayOfInts**   
+- PinvokeLib.dll에서 내보낸**TestRefArrayOfInts**  
   
-    ```  
+    ```cpp
     int TestRefArrayOfInts(int** ppArray, int* pSize);  
     ```  
   
-- PinvokeLib.dll에서 내보낸**TestMatrixOfInts**   
+- PinvokeLib.dll에서 내보낸**TestMatrixOfInts**  
   
-    ```  
+    ```cpp
     int TestMatrixOfInts(int pMatrix[][COL_DIM], int row);  
     ```  
   
-- PinvokeLib.dll에서 내보낸**TestArrayOfStrings**   
+- PinvokeLib.dll에서 내보낸**TestArrayOfStrings**  
   
-    ```  
+    ```cpp
     int TestArrayOfStrings(char** ppStrArray, int size);  
     ```  
   
-- PinvokeLib.dll에서 내보낸**TestArrayOfStructs**   
+- PinvokeLib.dll에서 내보낸**TestArrayOfStructs**  
   
-    ```  
+    ```cpp
     int TestArrayOfStructs(MYPOINT* pPointArray, int size);  
     ```  
   
-- PinvokeLib.dll에서 내보낸**TestArrayOfStructs2**   
+- PinvokeLib.dll에서 내보낸**TestArrayOfStructs2**  
   
-    ```  
+    ```cpp
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
  [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) 은 앞에 나열된 함수 및 2개의 구조체 변수 **MYPOINT** 및 **MYPERSON**에 대한 구현을 포함하는 관리되지 않는 사용자 지정 라이브러리입니다. 구조체에는 다음과 같은 요소가 포함됩니다.  
   
-```  
+```cpp
 typedef struct _MYPOINT  
 {  
    int x;   

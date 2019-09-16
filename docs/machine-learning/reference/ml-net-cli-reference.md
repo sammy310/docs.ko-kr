@@ -3,12 +3,12 @@ title: ML.NET CLI 도구의 auto-train 명령
 description: ML.NET CLI 도구의 auto-train 명령에 대한 개요, 샘플 및 참조입니다.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 73bae0165af76226152de322d2951086646a1a1d
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 8363a16ab5e793e715131ac37283106517850439
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397671"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929196"
 ---
 # <a name="the-auto-train-command-in-mlnet-cli"></a>ML.NET CLI의 'auto-train' 명령
 
@@ -217,6 +217,7 @@ auto-train 명령으로 ML.NET CLI 도구를 실행하면 이 도구가 다양�
 
 데이터 세트 파일에 헤더 행이 있는지 지정합니다.
 가능한 값은 다음과 같습니다.
+
 - `true`
 - `false`
 

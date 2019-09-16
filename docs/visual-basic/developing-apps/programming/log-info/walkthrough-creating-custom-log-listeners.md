@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 90135074a4d34ea73743faffb2531305fcb326fb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a4bd64d4c8232f9b6448baf98ee73ee497ccd5ca
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965270"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972101"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>연습: 사용자 지정 로그 수신기 만들기(Visual Basic)
 이 연습에서는 사용자 지정 로그 수신기를 만들고 `My.Application.Log` 개체의 출력을 수신 대기하도록 구성하는 방법을 보여 줍니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "69965270"
   
  `My.Application.Log`가 로그 수신기를 사용하도록 하려면 로그 수신기를 포함하는 어셈블리에 강력한 이름을 지정해야 합니다.  
   
- 다음 절차에서는 강력한 이름의 로그 수신기 어셈블리를 만들기 위한 몇 가지 간단한 단계를 제공합니다. 자세한 내용은 [강력한 이름의 어셈블리 만들기 및 사용](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)을 참조하세요.  
+ 다음 절차에서는 강력한 이름의 로그 수신기 어셈블리를 만들기 위한 몇 가지 간단한 단계를 제공합니다. 자세한 내용은 [강력한 이름의 어셈블리 만들기 및 사용](../../../../standard/assembly/create-use-strong-named.md)을 참조하세요.  
   
 #### <a name="to-strongly-name-the-log-listener-assembly"></a>로그 수신기 어셈블리에 강력한 이름을 지정하려면  
   

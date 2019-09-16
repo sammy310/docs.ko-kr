@@ -3,12 +3,12 @@ title: LINQ 작업
 description: 이 자습서에서는 LINQ를 사용하여 시퀀스를 생성하고, LINQ 쿼리에서 사용할 메서드를 작성하고, 즉시 계산 및 지연 계산 간을 구분하는 방법을 알아봅니다.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: f80567510509ba0c7f205ccbd5e587f9ad31f531
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 72bb7475fc6b18650e0870bf99c4b8ddbac3ec9f
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785873"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926611"
 ---
 # <a name="working-with-linq"></a>LINQ 작업
 
@@ -339,6 +339,7 @@ public static void Main(string[] args)
 ## <a name="conclusion"></a>결론
 
 이 프로젝트에서는 다음 내용을 설명했습니다.
+
 - LINQ 쿼리를 사용하여 데이터를 의미 있는 시퀀스로 집계
 - 고유한 사용자 지정 기능을 LINQ 쿼리에 추가하는 확장 메서드 작성
 - LINQ 쿼리에서 성능 저하와 같은 성능 문제가 발생할 수 있는 코드 영역 찾기
@@ -347,6 +348,7 @@ public static void Main(string[] args)
 LINQ 외에도 마법사가 카드 속임수에 사용하는 기술에 대해 약간 알아보았습니다. 마술사는 데크에서 모든 카드가 이동하는 위치를 제어할 수 있으므로 파로 순서 섞기 기술을 사용합니다. 이제 기술을 알고 있으니, 다른 모든 사용자를 위해 망치지 마세요.
 
 LINQ에 대한 자세한 내용은 다음을 참조하세요.
+
 - [LINQ(Language-Integrated Query)](../programming-guide/concepts/linq/index.md)
   - [LINQ 소개](../programming-guide/concepts/linq/index.md)
   - [기본 LINQ 쿼리 작업(C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)

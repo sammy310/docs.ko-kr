@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a6af73a5251cdc52589967178218f8675cac869
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e1c4423c20a9a485f3c40877ccd489c749dc0e2c
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946469"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971830"
 ---
 # <a name="how-to-create-com-wrappers"></a>방법: COM 래퍼 만들기
 
@@ -55,7 +55,7 @@ Visual Studio 2005에서 프로젝트에 COM 래퍼를 참조로 추가할 수 �
   
 1. 네이티브 코드에서 실행할 관리되는 클래스에 대한 클래스 라이브러리 프로젝트를 만듭니다. 클래스에는 매개 변수가 없는 생성자가 있어야 합니다.  
   
-     AssemblyInfo 파일에 어셈블리에 대한 전체 4개 부분 버전 번호가 있는지 확인합니다. Windows 레지스트리에서 버전을 유지 관리하려면 이 번호가 필요합니다. 버전 번호에 대한 자세한 내용은 [어셈블리 버전 관리](../../../docs/framework/app-domains/assembly-versioning.md)를 참조하세요.  
+     AssemblyInfo 파일에 어셈블리에 대한 전체 4개 부분 버전 번호가 있는지 확인합니다. Windows 레지스트리에서 버전을 유지 관리하려면 이 번호가 필요합니다. 버전 번호에 대한 자세한 내용은 [어셈블리 버전 관리](../../standard/assembly/versioning.md)를 참조하세요.  
   
 2. **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
   

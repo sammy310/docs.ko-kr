@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93820120e91d80a3215673982348fd17f2fdb5d9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ac0b45db0e9aebae830155cbe2469514c392921d
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957965"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894837"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe(PEVerify 도구)
 PEVerify 도구를 사용하면 MSIL(Microsoft Intermediate Language)을 생성하는 개발자(컴파일러 작성자, 스크립트 엔진 개발자 등)는 MSIL 코드 및 관련 메타데이터가 형식 안전성 요구 사항을 충족시키는지 여부를 쉽게 확인할 수 있습니다. 일부 컴파일러에서는 특정 언어 구문을 사용하지 않는 경우에만 확인 가능한 형식 안전 코드가 생성됩니다. 이러한 컴파일러를 사용하는 개발자라면 해당 코드의 형식이 안전한지를 확인하려고 할 것입니다. 이런 경우, 해당 파일에 대해 PEVerify 도구를 실행하면 MSIL 및 메타데이터를 검사할 수 있습니다.  
@@ -28,7 +28,7 @@ PEVerify 도구를 사용하면 MSIL(Microsoft Intermediate Language)을 생성�
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 peverify filename [options]  
 ```  
   
@@ -68,25 +68,25 @@ peverify filename [options]
 ## <a name="examples"></a>예제  
  다음 명령을 사용하여 어셈블리 `myAssembly.exe`에 구현된 메서드에 대해 메타데이터 유효성 검사 및 MSIL 형식 안전성 확인 검사를 수행합니다.  
   
-```  
+```console  
 peverify myAssembly.exe /md /il  
 ```  
   
  위의 요청이 성공적으로 완료되면 Peverify.exe를 사용하여 다음과 같은 메시지를 표시할 수 있습니다.  
   
-```  
+```output
 All classes and methods in myAssembly.exe Verified  
 ```  
   
  다음 명령을 사용하여 어셈블리 `myAssembly.exe`에 구현된 메서드에 대해 메타데이터 유효성 검사 및 MSIL 형식 안전성 확인 검사를 수행합니다. 도구에서는 이러한 확인을 수행하는 데 필요한 시간을 표시합니다.  
   
-```  
+```console  
 peverify myAssembly.exe /md /il /clock  
 ```  
   
  위의 요청이 성공적으로 완료되면 Peverify.exe를 사용하여 다음과 같은 메시지를 표시할 수 있습니다.  
   
-```  
+```output
 All classes and methods in myAssembly.exe Verified  
 Timing: Total run     320 msec  
         MD Val.cycle  40 msec  
@@ -97,25 +97,25 @@ Timing: Total run     320 msec
   
  다음 명령을 사용하여 어셈블리 `myAssembly.exe`에 구현된 메서드에 대해 메타데이터 유효성 검사 및 MSIL 형식 안전성 확인 검사를 수행합니다. 그러나 최대 100의 오류 수에 도달하면 Peverify.exe를 중지합니다. 도구는 지정된 오류 코드를 무시합니다.  
   
-```  
+```console  
 peverify myAssembly.exe /break=100 /ignore=0x12345678,0xABCD1234  
 ```  
   
  다음 명령을 사용하여 앞의 예제와 동일한 결과를 생성하지만, 지시 파일 `ignoreErrors.rsp`에서 무시할 오류 코드를 지정합니다.  
   
-```  
+```console  
 peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp  
 ```  
   
  지시 파일에 다음과 같이 쉼표로 구분된 오류 코드 목록이 있을 수 있습니다.  
   
-```  
+```text
 0x12345678, 0xABCD1234  
 ```  
   
  또한, 다음과 같이 한 줄에 하나의 오류 코드가 오도록 지시 파일의 서식을 설정할 수도 있습니다.  
   
-```  
+```text
 0x12345678  
 0xABCD1234  
 ```  

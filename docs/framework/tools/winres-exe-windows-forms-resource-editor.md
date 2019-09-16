@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 775a8b63a0ba7cd021c9e5072ef98c20f6ab2e81
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0683499241f594b8b37b7dd69b91ed5929670024
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937931"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894577"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe(Windows 리소스 지역화 편집기)
 
@@ -28,7 +28,7 @@ Winres.exe는 Visual Studio와 함께 설치됩니다. 도구를 실행하려면
 
 ## <a name="syntax"></a>구문
 
-```
+```console
 winres resourceFile
 winres /?
 ```
@@ -116,13 +116,13 @@ Winres.exe에는 다음 기능과 특징이 있습니다.
 
      다음 명령은 Winres.exe를 시작하고 `TestApp.resx`와 연결된 폼을 폼 디자이너에 로드합니다.
 
-    ```
+    ```console
     winres TestApp.resx
     ```
 
      다음 명령은 Winres.exe를 시작하고 `TestApp.resources`와 연결된 폼을 폼 디자이너에 로드합니다.
 
-    ```
+    ```console
     winres TestApp.resources
     ```
 

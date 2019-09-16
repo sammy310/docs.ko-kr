@@ -2,12 +2,12 @@
 title: 마이크로 서비스 지향 애플리케이션 디자인
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스 지향 애플리케이션의 장점과 단점을 이해하면 최신 정보에 입각한 결정을 내릴 수 있습니다.
 ms.date: 10/02/2018
-ms.openlocfilehash: dfb1619bab68814bd14224e5b50a75d99525a802
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: ddca4ecf0b0ed1103e4da75ecc759546d6e53800
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675970"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926532"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>마이크로 서비스 지향 애플리케이션 디자인
 
@@ -158,7 +158,7 @@ ms.locfileid: "68675970"
 
 - [기존 N-레이어](https://docs.microsoft.com/previous-versions/msp-n-p/ee658109(v=pandp.10)).
 
-- [도메인 기반 디자인 N-레이어](https://blogs.msdn.microsoft.com/cesardelatorre/2011/07/03/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/).
+- [도메인 기반 디자인 N-레이어](https://devblogs.microsoft.com/cesardelatorre/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/).
 
 - [클린 아키텍처](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html)([eShopOnWeb](https://aka.ms/WebAppArchitecture)에 사용된 것)
 

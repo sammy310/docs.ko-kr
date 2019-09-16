@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f80f1903c4187a8da93d42ec6de363d097bcc37
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 5da70cdca16c83b33e525aea588c02c696702ac7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988169"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929149"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>방법: PLINQ를 사용하여 파일 디렉터리 반복
 이 예제는 파일 디렉터리에서 작업을 병렬 처리하는 두 가지 간단한 방법을 보여줍니다. 첫 번째 쿼리는 <xref:System.IO.Directory.GetFiles%2A> 메서드를 사용하여 디렉터리 및 모든 하위 디렉터리에서 파일 이름 배열을 채웁니다. 이 메서드는 전체 배열이 채워질 때까지 반환되지 않으므로 작업 시작 시 지연이 발생할 수 있습니다. 그러나 배열이 채워진 후 PLINQ는 메서드를 매우 빠르게 병렬 처리할 수 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "69988169"
   
  <xref:System.IO.Directory.GetFiles%2A>를 사용할 경우 트리의 모든 디렉터리에 충분한 권한이 있는지 확인하세요. 그렇지 않으면 예외가 throw되고 결과가 반환되지 않습니다. PLINQ 쿼리에서 <xref:System.IO.Directory.EnumerateDirectories%2A>를 사용할 경우 반복을 계속할 수 있는 정상적인 방법으로 I/O 예외를 처리하는 것이 어렵습니다. 코드에서 I/O 또는 인증되지 않은 액세스 예외를 처리해야 하는 경우에는 [방법: 병렬 클래스를 사용하여 파일 디렉터리 반복](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-the-parallel-class.md)에 설명된 방법을 고려해야 합니다.  
   
- 예를 들어 I/O 지연이 네트워크를 통한 파일 I/O와 관련된 문제인 경우 [TPL 및 일반적인 .NET Framework 비동기 프로그래밍](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md) 및 이 [블로그 게시물](https://blogs.msdn.microsoft.com/pfxteam/2009/08/04/parallel-extensions-and-io/)에 설명된 비동기 I/O 기술 중 하나를 사용하는 것이 좋습니다.  
+ 예를 들어 I/O 지연이 네트워크를 통한 파일 I/O와 관련된 문제인 경우 [TPL 및 일반적인 .NET Framework 비동기 프로그래밍](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md) 및 이 [블로그 게시물](https://devblogs.microsoft.com/pfxteam/parallel-extensions-and-io/)에 설명된 비동기 I/O 기술 중 하나를 사용하는 것이 좋습니다.  
   
 ## <a name="see-also"></a>참고 항목
 

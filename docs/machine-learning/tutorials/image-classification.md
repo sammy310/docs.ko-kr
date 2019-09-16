@@ -4,12 +4,12 @@ description: 전이 학습 및 ML.NET을 사용하여 이미지 분류 TensorFlo
 ms.date: 07/09/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 65f94fa5e725703d79d0dddae761cbfbc3f89e0e
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: eb6e3d3f3a33aa7360802ce1bc6c16532539c828
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67804750"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929233"
 ---
 # <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>자습서: 전이 학습 및 ML.NET을 사용하여 TensorFlow 이미지 분류자 재학습
 
@@ -17,8 +17,9 @@ ms.locfileid: "67804750"
 
 [이미지 분류](https://en.wikipedia.org/wiki/Outline_of_object_recognition) 모델을 처음부터 학습시키려면 수백만 개의 매개 변수, 많은 레이블 지정 학습 데이터 및 많은 양의 컴퓨팅 리소스(수백 시간의 GPU 시간)를 설정해야 합니다. 사용자 지정 모델을 처음부터 학습시키는 것만큼 효과적이지는 않지만, 전이 학습을 사용하면 수천 개 이미지 및 수백만 개 레이블 지정 이미지를 사용하여 이 프로세스를 간소화하고 사용자 지정 모델을 매우 빠르게 빌드할 수 있습니다(GPU가 없는 머신에서는 1시간 안에 가능).
 
-이 자습서에서는 다음 방법에 대해 알아봅니다.
+이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 > [!div class="checklist"]
+>
 > * 문제 이해
 > * 미리 학습된 모델 다시 사용 및 조정
 > * 이미지 분류
@@ -170,7 +171,7 @@ toaster2.png    appliance
 
 입력 데이터 및 예측에 대한 일부 클래스를 만듭니다. 새 클래스를 프로젝트에 추가합니다.
 
-1. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **추가** > **새 항목**을 차례로 선택합니다.
+1. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가** > **새 항목**을 선택합니다.
 
 1. **새 항목 추가** 대화 상자에서 **클래스**를 선택하고 **이름** 필드를 *ImageData.cs*로 변경합니다. 그런 다음, **추가** 단추를 선택합니다.
 
@@ -189,7 +190,7 @@ toaster2.png    appliance
 
 `ImagePrediction`의 새 클래스를 프로젝트에 추가합니다.
 
-1. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **추가** > **새 항목**을 차례로 선택합니다.
+1. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가** > **새 항목**을 선택합니다.
 
 1. **새 항목 추가** 대화 상자에서 **클래스**를 선택하고 **이름** 필드를 *ImagePrediction.cs*로 변경합니다. 그런 다음, **추가** 단추를 선택합니다.
 
@@ -474,12 +475,13 @@ C:\Program Files\dotnet\dotnet.exe (process 4304) exited with code 0.
 Press any key to close this window . . .
 ```
 
-축하합니다! 이제 ML.NET에서 미리 학습된 `TensorFlow` 모델을 다시 사용하여 이미지 분류를 위한 기계 학습 모델을 성공적으로 빌드했습니다.
+지금까지 이제 ML.NET에서 미리 학습된 `TensorFlow` 모델을 다시 사용하여 이미지 분류를 위한 기계 학습 모델을 성공적으로 빌드했습니다.
 
 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TransferLearningTF) 리포지토리에서 이 자습서의 소스 코드를 찾을 수 있습니다.
 
-이 자습서에서는 다음 방법에 대해 알아보았습니다.
+본 자습서에서는 다음 작업에 관한 방법을 학습했습니다.
 > [!div class="checklist"]
+>
 > * 문제 이해
 > * 미리 학습된 모델 다시 사용 및 조정
 > * 로드된 모델을 통해 이미지 분류

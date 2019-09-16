@@ -3,12 +3,12 @@ title: C# 버전 관리 - C# 가이드
 description: C# 및 .NET에서 버전 관리의 작동 방식 이해
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 9ba18f82ad83749d5333628bf4431a0282b0964f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bfad7abe6b2b5c6a19324656963a79212a317110
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965672"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926586"
 ---
 # <a name="versioning-in-c"></a>C\#으로 버전 관리
 
@@ -41,9 +41,9 @@ SemVer에 대한 가장 기본적인 접근법은 3개 구성 요소 형식 `MAJ
 * 가상 메서드: 새 버전에서 가상 메서드를 가상이 아닌 상태로 만들 경우, 해당 메서드를 재정의하는 프로젝트를 업데이트해야 합니다. 여기에는 엄청난 변화가 따르므로 권장하지 않습니다.
 * 메서드 시그니처: 메서드 동작 업데이트 시 시그니처도 변경해야 하는 경우, 해당 메서드에 대한 코드 호출이 계속 작동하도록 오버로드를 대신 만들어야 합니다.
 구현의 일관성이 유지되도록 항상 이전 메서드 시그니처를 조작하여 새 메서드 시그니처를 호출할 수 있습니다.
-* [Obsolete 특성](programming-guide/concepts/attributes/common-attributes.md#Obsolete): 사용되지 않는 클래스 또는 클래스 멤버를 지정하고 이후 버전에서 제거되도록 하려면 코드에 이 특성을 사용할 수 있습니다.
-이렇게 하면 라이브러리를 활용하는 개발자가 큰 변화에 더 잘 대비할 수 있습니다.
+* [Obsolete 특성](programming-guide/concepts/attributes/common-attributes.md#Obsolete): 사용되지 않는 클래스 또는 클래스 멤버를 지정하고 이후 버전에서 제거되도록 하려면 코드에 이 특성을 사용할 수 있습니다. 이렇게 하면 라이브러리를 활용하는 개발자가 큰 변화에 더 잘 대비할 수 있습니다.
 * 선택적 메서드 인수: 전에는 선택 사항이었던 메서드 인수를 필수로 만들거나 기본값을 변경하는 경우, 해당 인수를 제공하지 않는 모든 코드를 업데이트해야 합니다.
+
 > [!NOTE]
 > 필수 인수를 선택 사항으로 만드는 것은 특히 메서드의 동작을 변경하지 않을 경우 거의 영향을 미치지 않습니다.
 
@@ -111,3 +111,4 @@ Derived Method One: Derived Method One
 `override` 한정자는 컴파일 시간에 평가되며, 재정의할 가상 멤버를 찾지 못하면 컴파일러에서 오류가 발생합니다.
 
 라이브러리 버전 간을 더욱 간편하게 전환하려면 여기서 설명한 방법을 익히고 어떤 상황에서 사용해야 할지를 이해해야 합니다.
+ 

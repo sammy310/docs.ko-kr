@@ -3,12 +3,12 @@ title: C#에서 기본 인터페이스 멤버를 사용하여 안전하게 인�
 description: 이 고급 자습서에서는 해당 인터페이스를 구현하는 모든 클래스 및 구성 요소를 훼손하지 않고 기존 인터페이스 정의에 새 기능을 안전하게 추가할 수 있는 방법을 살펴봅니다.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 9e0e4324b2474292064a760db9727d7dec6561d4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 6a723a116d420dd43d2adeef98b824445dd4f0d7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252913"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926712"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>자습서: C# 8.0에서 기본 인터페이스 멤버로 인터페이스 업데이트
 
@@ -17,6 +17,7 @@ ms.locfileid: "70252913"
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 알아봅니다.
 
 > [!div class="checklist"]
+>
 > * 구현으로 메서드를 추가하여 안전하게 인터페이스를 확장합니다.
 > * 매개 변수가 있는 구현을 생성하여 향상된 유연성을 제공합니다.
 > * 구현자가 재정의 형식으로 더 구체적인 구현을 제공하도록 지원합니다.

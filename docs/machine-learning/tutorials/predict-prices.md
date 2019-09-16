@@ -4,12 +4,12 @@ description: 이 자습서에서는 ML.NET을 사용하여 가격(특히, 뉴욕
 ms.date: 05/09/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: fe3afab4cbd3f77ed4498cc5081180910d7d0b9e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: c9bf91ce5188a512524337f981366040ec09f6f6
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666619"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929443"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>자습서: ML.NET와 함께 회귀를 사용하여 가격 예측
 
@@ -17,6 +17,7 @@ ms.locfileid: "69666619"
 
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 > [!div class="checklist"]
+>
 > * 데이터 준비 및 이해
 > * 데이터 로드 및 변환
 > * 학습 알고리즘 선택
@@ -269,6 +270,7 @@ private static void TestSinglePrediction(MLContext mlContext, ITransformer model
 본 자습서에서는 다음 작업에 관한 방법을 학습했습니다.
 
 > [!div class="checklist"]
+>
 > * 데이터 준비 및 이해
 > * 학습 파이프라인 만들기
 > * 데이터 로드 및 변환

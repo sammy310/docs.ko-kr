@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 6f071f907fe38b226a5083699e758bc5fb8bffce
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 6e6fc815ee8c2d174db12f95eed8dc72a6ef5a62
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252987"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971959"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>명령줄 인수(C# 프로그래밍 가이드)
 다음 방법 중 하나로 메서드를 정의하여 인수를 `Main` 메서드에 보낼 수 있습니다.  
@@ -71,8 +71,6 @@ long num = Convert.ToInt64(s);
   
 > [!NOTE]
 > Visual Studio에서 애플리케이션을 실행할 경우 [프로젝트 디자이너, 디버그 페이지](/visualstudio/ide/reference/debug-page-project-designer)에서 명령줄 인수를 지정할 수 있습니다.  
-  
- 명령줄 인수를 사용하는 방법에 대한 예제는 [방법: 명령줄을 사용하여 어셈블리 만들기 및 사용](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ef10ba566842db26ed8c29643535c41aaca9806
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 4228da6efe22091c86de95d846c14f504d51457f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378654"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851294"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe(CorFlags 변환 도구)
 CorFlags 변환 도구를 사용하면 이식할 수 있는 실행 가능 이미지 헤더의 CorFlags 섹션을 구성할 수 있습니다.  
@@ -24,7 +24,7 @@ CorFlags 변환 도구를 사용하면 이식할 수 있는 실행 가능 이미
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 CorFlags.exe assembly [options]  
 ```  
   
@@ -49,7 +49,7 @@ CorFlags.exe assembly [options]
 |**/RevertCLRHeader**|CLR 헤더 버전을 2.0으로 되돌립니다.|  
 |**/UpgradeCLRHeader**|CLR 헤더 버전을 2.5로 업그레이드합니다. **참고:**  기본적으로 어셈블리를 실행하려면 CLR 헤더 버전이 2.5 이상이어야 합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  옵션을 지정하지 않으면 CorFlags 변환 도구에서 지정한 어셈블리에 대한 플래그를 표시합니다.  
   
 ## <a name="see-also"></a>참고 항목

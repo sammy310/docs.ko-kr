@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99e1b2cb67bb434cc3c3770900c6189a4ab22242
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5e80e044fe01172c587ef029186035a64cdf0b42
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492441"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971222"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe(어셈블리 등록 도구)
 
@@ -26,7 +26,7 @@ ms.locfileid: "57492441"
 
 ## <a name="syntax"></a>구문
 
-```
+```console
 regasm assemblyFile [options]
 ```
 
@@ -38,13 +38,13 @@ regasm assemblyFile [options]
 
 |옵션|설명|
 |------------|-----------------|
-|**/codebase**|레지스트리에 있는 코드베이스 엔트리를 만듭니다. 코드베이스 엔트리는 전역 어셈블리 캐시에 설치되지 않은 어셈블리에 대한 파일 경로를 지정합니다. 전역 어셈블리 캐시에 등록 중인 어셈블리를 다음에 설치하려면 이 옵션을 지정해야 합니다. **/codebase** 옵션을 사용하여 지정한 *assemblyFile* 인수는 [강력한 이름의 어셈블리](../../../docs/framework/app-domains/strong-named-assemblies.md)여야 합니다.|
+|**/codebase**|레지스트리에 있는 코드베이스 엔트리를 만듭니다. 코드베이스 엔트리는 전역 어셈블리 캐시에 설치되지 않은 어셈블리에 대한 파일 경로를 지정합니다. 전역 어셈블리 캐시에 등록 중인 어셈블리를 다음에 설치하려면 이 옵션을 지정해야 합니다. **/codebase** 옵션을 사용하여 지정한 *assemblyFile* 인수는 [강력한 이름의 어셈블리](../../standard/assembly/strong-named.md)여야 합니다.|
 |**/registered**|이 도구가 이미 등록된 형식 라이브러리만 참조하도록 지정합니다.|
 |**/asmpath:directory**|어셈블리 참조가 들어 있는 디렉터리를 지정합니다. **/regfile** 옵션과 함께 사용해야 합니다.|
 |**/nologo**|Microsoft 시작 배너를 표시하지 않습니다.|
-|**/regfile** [**:** *regFile*]|어셈블리에 대해 필요한 레지스트리 항목이 들어 있는 지정된 .reg 파일을 생성합니다. 이 옵션을 지정할 경우 레지스트리는 변경되지 않습니다. 이 옵션은 **/u** 또는 **/tlb** 옵션과 함께 사용할 수 없습니다.|
+|**/regfile** [ **:** *regFile*]|어셈블리에 대해 필요한 레지스트리 항목이 들어 있는 지정된 .reg 파일을 생성합니다. 이 옵션을 지정할 경우 레지스트리는 변경되지 않습니다. 이 옵션은 **/u** 또는 **/tlb** 옵션과 함께 사용할 수 없습니다.|
 |**/silent** 또는 **/s**|성공 메시지를 표시하지 않습니다.|
-|**/tlb** [**:** *typeLibFile*]|어셈블리 내에 정의된 액세스 가능 형식에 대한 정의가 들어 있는 지정된 어셈블리에서 형식 라이브러리를 생성합니다.|
+|**/tlb** [ **:** *typeLibFile*]|어셈블리 내에 정의된 액세스 가능 형식에 대한 정의가 들어 있는 지정된 어셈블리에서 형식 라이브러리를 생성합니다.|
 |**/unregister** 또는 **/u**|*assemblyFile*에 있는 생성 가능한 클래스를 등록 취소합니다. 이 옵션을 지정하지 않으면 Regasm.exe를 통해 해당 어셈블리의 생성 가능한 클래스가 등록됩니다.|
 |**/verbose**|세부 정보 표시 모드를 지정합니다. 즉, **/tlb** 옵션과 함께 지정할 경우 형식 라이브러리가 생성되어야 하는 참조된 어셈블리의 목록을 표시합니다.|
 |**/?** 또는 **/help**|이 도구의 명령 구문 및 옵션을 표시합니다.|
@@ -52,7 +52,7 @@ regasm assemblyFile [options]
 > [!NOTE]
 > Regasm.exe의 명령줄 옵션은 대/소문자가 구분되지 않습니다. 따라서 옵션을 고유하게 식별할 수 있을 정도로만 옵션을 지정하면 됩니다. 예를 들어, **/n**은 **/nologo**와 같고, **/t:** *outfile.tlb*는 **/tlb:** *outfile.tlb*와 같습니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 **/regfile** 옵션을 사용하면 레지스트리를 직접 변경하는 대신 레지스트리 항목이 들어 있는 .ref 파일을 생성할 수 있습니다. 레지스트리 편집기 도구(Regedit.exe)를 사용하여 .reg 파일을 가져오면 시스템의 레지스트리를 업데이트할 수도 있습니다. 사용자 정의 등록 함수에서 수행되는 레지스트리 업데이트 내용은 .reg 파일에 포함되지 않습니다.  **/regfile** 옵션은 관리되는 클래스에 대한 레지스트리 항목만 내보냅니다.  이 옵션은 `TypeLibID` 또는 `InterfaceID`에 대한 항목은 내보내지 않습니다.
 
@@ -68,19 +68,19 @@ Regasm.exe를 사용하여 어셈블리를 등록한 다음에는 COM 클라이�
 
 다음 명령을 사용하여 `myTest.dll`에 들어 있는 모든 공용 클래스를 등록합니다.
 
-```
+```console
 regasm myTest.dll
 ```
 
 다음 명령을 사용하여 필요한 모든 레지스트리 항목이 들어 있는 `myTest.reg` 파일을 생성합니다. 그러나 레지스트리는 업데이트되지 않습니다.
 
-```
+```console
 regasm myTest.dll /regfile:myTest.reg
 ```
 
 다음 명령을 사용하여 `myTest.dll`에 들어 있는 모든 공용 클래스를 등록하고, `myTest.tlb`에 정의된 모든 공용 형식에 대한 정의가 들어 있는 형식 라이브러리 `myTest.dll`를 생성 및 등록합니다.
 
-```
+```console
 regasm myTest.dll /tlb:myTest.tlb
 ```
 

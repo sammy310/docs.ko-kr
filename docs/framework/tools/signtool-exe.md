@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e210f14c74efe214be06a1cb901a144dd92af5e0
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 46475cbc8517fc73d8b7fd868c7632e5c85a7726
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168871"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894799"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe(서명 도구)
 서명 도구는 파일에 디지털 서명을 하고, 파일의 서명을 확인하고, 파일에 타임스탬프를 기록하는 명령줄 도구입니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "70168871"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 signtool [command] [options] [file_name | ...]  
 ```  
   
@@ -151,61 +151,61 @@ signtool [command] [options] [file_name | ...]
 ## <a name="examples"></a>예제  
  다음 명령은 카탈로그 파일 MyCatalogFileName.cat를 시스템 구성 요소와 드라이버 데이터베이스에 추가합니다. `/u` 옵션은 `MyCatalogFileName.cat`라는 기존 카탈로그 파일이 바뀌지 않도록 해야 하는 경우 고유 이름을 생성합니다.  
   
-```  
+```console  
 signtool catdb /v /u MyCatalogFileName.cat  
 ```  
   
  다음 명령은 가장 적합한 인증서를 사용하여 파일에 자동으로 서명합니다.  
   
-```  
+```console  
 signtool sign /a MyFile.exe  
 ```  
   
  다음 명령은 암호로 보호된 PFX 파일에 저장된 인증서를 사용하여 파일에 디지털 서명을 합니다.  
   
-```  
+```console  
 signtool sign /f MyCert.pfx /p MyPassword MyFile.exe  
 ```  
   
  다음 명령은 파일에 디지털 서명을 하고 타임스탬프를 기록합니다. 파일에 서명하는 데 사용할 인증서는 PFX 파일로 저장됩니다.  
   
-```  
+```console  
 signtool sign /f MyCert.pfx /t http://timestamp.digicert.com MyFile.exe  
 ```  
   
  다음 명령은 `My`의 주체 이름이 있는 `My Company Certificate` 저장소에 위치한 인증서를 사용하여 파일에 서명합니다.  
   
-```  
+```console  
 signtool sign /n "My Company Certificate" MyFile.exe  
 ```  
   
  다음 명령은 ActiveX 컨트롤에 서명하고 컨트롤을 설치하도록 사용자에게 메시지가 표시될 때 Internet Explorer에 표시되는 정보를 제공합니다.  
   
-```  
+```console  
 Signtool sign /f MyCert.pfx /d: "MyControl" /du http://www.example.com/MyControl/info.html MyControl.exe  
 ```  
   
  다음 명령은 이미 디지털 서명된 파일에 타임스탬프를 기록합니다.  
   
-```  
+```console  
 signtool timestamp /t http://timestamp.digicert.com MyFile.exe  
 ```  
   
  다음 명령은 파일이 서명되었는지를 확인합니다.  
   
-```  
+```console  
 signtool verify MyFile.exe  
 ```  
   
  다음 명령은 카탈로그에서 서명될 수 있는 시스템 파일을 확인합니다.  
   
-```  
+```console  
 signtool verify /a SystemFile.dll  
 ```  
   
  다음 명령은 `MyCatalog.cat`라는 카탈로그에서 서명된 시스템 파일을 확인합니다.  
   
-```  
+```console  
 signtool verify /c MyCatalog.cat SystemFile.dll  
 ```  
   

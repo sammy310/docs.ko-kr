@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e257410c51d70af31b565d99a8d28ef82ce681d7
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: a521be147c462146775caa81b6a31fb37b4103af
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373805"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926678"
 ---
 # <a name="common-web-application-architectures"></a>일반 웹 애플리케이션 아키텍처
 
@@ -292,16 +292,17 @@ ENTRYPOINT ["dotnet", "Web.dll"]
 Visual Studio를 사용하여 애플리케이션에 Docker 지원을 추가하려는 경우 Docker Desktop이 실행되고 있는지 확인합니다. 마법사를 시작할 때 Docker Desktop이 실행되지 않은 경우 마법사가 올바르게 실행되지 않습니다. 또한 마법사는 올바른 Docker 지원을 추가하기 위해 현재 선택한 컨테이너를 검사합니다. Windows 컨테이너에 대한 지원을 추가하려는 경우 구성된 Windows 컨테이너에서 Docker Desktop이 실행되는 동안 마법사를 실행해야 합니다. Linux 컨테이너에 대한 지원을 추가하려는 경우 구성된 Linux 컨테이너를 통해 Docker가 실행되는 동안 마법사를 실행해야 합니다.
 
 ### <a name="references--common-web-architectures"></a>참조 – 공통 웹 아키텍처
-> - **클린 아키텍처**  
->   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
-> - **양파형 아키텍처**  
->   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
-> - **리포지토리 패턴**  
->   <https://deviq.com/repository-pattern/>
-> - **클린 아키텍처 솔루션 샘플**  
->   <https://github.com/ardalis/cleanarchitecture>
-> - **마이크로 서비스 설계 eBook**  
->   <https://aka.ms/MicroservicesEbook>
+
+- **클린 아키텍처**  
+  <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
+- **양파형 아키텍처**  
+  <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
+- **리포지토리 패턴**  
+  <https://deviq.com/repository-pattern/>
+- **클린 아키텍처 솔루션 샘플**  
+  <https://github.com/ardalis/cleanarchitecture>
+- **마이크로 서비스 설계 eBook**  
+  <https://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]
 >[이전](architectural-principles.md)

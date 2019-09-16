@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0a033e6881f9c0c8741fda26211b0f565762de4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 42daa241d0ebbfeb184b57e682fbb50bdaeead65
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331327"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894189"
 ---
 # <a name="how-to-implement-callback-functions"></a>방법: 콜백 함수 구현
 다음 절차 및 예제에서는 관리되는 애플리케이션이 플랫폼 호출을 사용하여 로컬 컴퓨터에서 각 창에 대한 핸들 값을 인쇄하는 방법을 보여 줍니다. 특히 프로시저 및 예제에서는 **EnumWindows** 함수를 사용하여 창 목록을 단계별로 실행하고 관리되는 콜백 함수(CallBack)를 사용하여 창 핸들 값을 인쇄합니다.  
@@ -24,9 +24,9 @@ ms.locfileid: "59331327"
   
 1. 구현을 계속 진행하기 전에 **EnumWindows** 함수에 대한 시그니처를 확인합니다. **EnumWindows**에는 다음 시그니처가 있습니다.  
   
-    ```  
-    BOOL EnumWindows(WNDENUMPROC lpEnumFunc, LPARAM lParam)  
-    ```  
+    ```cpp
+    BOOL EnumWindows(WNDENUMPROC lpEnumFunc, LPARAM lParam)
+    ```
   
      이 함수에 콜백이 필요한 한 가지 단서는 **lpEnumFunc** 인수가 있다는 것입니다. 일반적으로 포인터를 콜백 함수로 이동하는 인수의 이름에서 **Func** 접미사와 결합된 **lp**(long pointer) 접두사를 확인합니다. Win32 함수에 대한 설명서는 Microsoft Platform SDK를 참조하세요.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "59331327"
   
      그러나 호출이 반환된 후에 콜백 함수를 호출할 수 있으면 관리되는 호출자는 단계에 따라 콜백 함수가 완료될 때까지 대리자가 수집되지 않는지 확인해야 합니다. 가비지 수집을 방지하는 방법에 대한 자세한 내용은 플랫폼 호출을 사용한 [Interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```vb  
 Imports System  

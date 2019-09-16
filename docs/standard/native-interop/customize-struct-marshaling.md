@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: 6e3dcaeb71ae32812d3b022fff2bdc4e3e0691bf
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: b174a817e82f9a9f123c79581656cc8e7179b435
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040147"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929032"
 ---
 # <a name="customizing-structure-marshaling"></a>구조체 마샬링 사용자 지정
 
@@ -339,6 +339,7 @@ struct Currency
 ## <a name="marshaling-systemobjects"></a>`System.Object` 마샬링
 
 Windows에서 `object` 형식 필드를 네이티브 코드로 마샬링할 수 있습니다. 이러한 필드는 다음 세 가지 형식 중 하나로 마샬링할 수 있습니다.
+
 - [`VARIANT`](/windows/win32/api/oaidl/ns-oaidl-variant)
 - [`IUnknown*`](/windows/desktop/api/unknwn/nn-unknwn-iunknown)
 - [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch)

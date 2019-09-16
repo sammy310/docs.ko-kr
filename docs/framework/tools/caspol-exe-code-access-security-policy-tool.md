@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f70682150905c411be5618ab368a87e71d0e8e13
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1c3fab258b23999cabce474afe728d1c50e1043f
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959063"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971232"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe(코드 액세스 보안 정책 도구)
 CAS(코드 액세스 보안 정책 도구)(Caspol.exe)를 사용하면 사용자나 관리자가 컴퓨터 정책 수준, 사용자 정책 수준 및 엔터프라이즈 정책 수준의 보안 정책을 수정할 수 있습니다.  
@@ -39,7 +39,7 @@ CAS(코드 액세스 보안 정책 도구)(Caspol.exe)를 사용하면 사용자
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console
 caspol [options]  
 ```  
   
@@ -47,7 +47,7 @@ caspol [options]
   
 |옵션|설명|  
 |------------|-----------------|  
-|**-addfulltrust** *assembly_file*<br /><br /> 또는<br /><br /> **-af** *assembly_file*|사용자 지정 보안 개체(예: 사용자 지정 권한, 사용자 지정 멤버 자격 조건 등)를 구현하는 어셈블리를 특정 정책 수준에서 완전 신뢰 어셈블리 목록에 추가합니다. *assembly_file* 인수는 추가할 어셈블리를 지정합니다. 이 파일은 [강력한 이름](../../../docs/framework/app-domains/strong-named-assemblies.md)으로 서명되어야 합니다. [Sn.exe(강력한 이름 도구)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)를 사용하여 강력한 이름으로 어셈블리에 서명할 수 있습니다.<br /><br /> 사용자 지정 권한이 포함된 권한 집합을 정책에 추가할 때마다 해당 사용자 지정 권한을 구현하는 어셈블리를 해당 정책 수준의 완전 신뢰 목록에 추가해야 합니다. 보안 정책(예: 컴퓨터 정책)에 사용된 사용자 지정 보안 개체(예: 사용자 지정 코드 그룹, 멤버 자격 조건 등)를 구현하는 어셈블리는 항상 완전 신뢰 어셈블리 목록에 추가해야 합니다. **주의:**  사용자 지정 보안 개체를 구현하는 어셈블리가 다른 어셈블리를 참조하는 경우에는 먼저 참조되는 어셈블리를 완전 신뢰 어셈블리 목록에 추가해야 합니다. Visual Basic, C++ 및 JScript를 사용하여 만들어진 사용자 지정 보안 개체는 Microsoft.VisualBasic.dll, Microsoft.VisualC.dll 또는 Microsoft.JScript.dll을 각각 참조합니다. 이러한 어셈블리는 기본적으로 완전 신뢰 어셈블리 목록에 들어 있지 않습니다. 따라서 사용자 지정 보안 개체를 추가하기 전에 적절한 어셈블리를 완전 신뢰 목록에 추가해야 합니다. 이렇게 하지 않으면 보안 시스템이 중단되어 모든 어셈블리를 로드할 수 없게 됩니다. 이 경우 Caspol.exe **-all -reset** 옵션은 보안을 복구하지 않습니다. 보안을 복구하려면 수동으로 보안 파일을 편집하여 사용자 지정 보안 개체를 제거해야 합니다.|  
+|**-addfulltrust** *assembly_file*<br /><br /> 또는<br /><br /> **-af** *assembly_file*|사용자 지정 보안 개체(예: 사용자 지정 권한, 사용자 지정 멤버 자격 조건 등)를 구현하는 어셈블리를 특정 정책 수준에서 완전 신뢰 어셈블리 목록에 추가합니다. *assembly_file* 인수는 추가할 어셈블리를 지정합니다. 이 파일은 [강력한 이름](../../standard/assembly/strong-named.md)으로 서명되어야 합니다. [Sn.exe(강력한 이름 도구)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)를 사용하여 강력한 이름으로 어셈블리에 서명할 수 있습니다.<br /><br /> 사용자 지정 권한이 포함된 권한 집합을 정책에 추가할 때마다 해당 사용자 지정 권한을 구현하는 어셈블리를 해당 정책 수준의 완전 신뢰 목록에 추가해야 합니다. 보안 정책(예: 컴퓨터 정책)에 사용된 사용자 지정 보안 개체(예: 사용자 지정 코드 그룹, 멤버 자격 조건 등)를 구현하는 어셈블리는 항상 완전 신뢰 어셈블리 목록에 추가해야 합니다. **주의:**  사용자 지정 보안 개체를 구현하는 어셈블리가 다른 어셈블리를 참조하는 경우에는 먼저 참조되는 어셈블리를 완전 신뢰 어셈블리 목록에 추가해야 합니다. Visual Basic, C++ 및 JScript를 사용하여 만들어진 사용자 지정 보안 개체는 Microsoft.VisualBasic.dll, Microsoft.VisualC.dll 또는 Microsoft.JScript.dll을 각각 참조합니다. 이러한 어셈블리는 기본적으로 완전 신뢰 어셈블리 목록에 들어 있지 않습니다. 따라서 사용자 지정 보안 개체를 추가하기 전에 적절한 어셈블리를 완전 신뢰 목록에 추가해야 합니다. 이렇게 하지 않으면 보안 시스템이 중단되어 모든 어셈블리를 로드할 수 없게 됩니다. 이 경우 Caspol.exe **-all -reset** 옵션은 보안을 복구하지 않습니다. 보안을 복구하려면 수동으로 보안 파일을 편집하여 사용자 지정 보안 개체를 제거해야 합니다.|  
 |**-addgroup** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]<br /><br /> 또는<br /><br /> **-ag** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]|코드 그룹 계층 구조에 새로운 코드 그룹을 추가합니다. *parent_label* 또는 *parent_name*을 지정할 수 있습니다. *parent_label* 인수는 추가되는 코드 그룹의 부모인 코드 그룹의 레이블(예: 1. 또는 1.1.)을 지정합니다. *parent_name* 인수는 추가되는 코드 그룹의 부모 코드 그룹의 이름을 지정합니다. *parent_label*과 *parent_name*은 서로 교환하여 사용할 수 있으므로 Caspol.exe에서 이 두 인수를 구별할 수 있어야 합니다. 따라서 *parent_name*은 숫자로 시작할 수 없습니다. 또한 *parent_name*에는 A-Z, 0-9 및 밑줄 문자만 사용할 수 있습니다.<br /><br /> *mship* 인수는 새 코드 그룹의 멤버 자격 조건을 지정합니다. 자세한 내용은 이 섹션의 뒷부분에 나오는 *mship* 인수 표를 참조하세요.<br /><br /> *pset_name* 인수는 새 코드 그룹과 연결될 권한 집합의 이름입니다. 새 그룹에 대해 *flags*를 하나 이상 설정할 수도 있습니다. 자세한 내용은 이 섹션의 뒷부분에 나오는 *flags* 인수 표를 참조하세요.|  
 |**-addpset** {*psfile* &#124; *psfile* p*set_name*}<br /><br /> 또는<br /><br /> **-ap** {*named*_*psfile* &#124; *psfile* *pset_name*}|명명된 새 권한 집합을 정책에 추가합니다. 권한 집합은 XML로 작성되어 .xml 파일에 저장되어야 합니다. XML 파일에 권한 집합의 이름이 포함되어 있으면 해당 파일(*psfile*)만 지정됩니다. XML 파일에 권한 집합의 이름이 포함되어 있지 않으면 XML 파일 이름(*psfile*)과 권한 집합 이름(*pset_name*)을 모두 지정해야 합니다.<br /><br /> 권한 집합에 사용되는 모든 권한은 전역 어셈블리 캐시에 포함된 어셈블리에 정의되어 있어야 합니다.|  
 |**-a**[**ll**]|이 옵션 다음의 모든 옵션이 컴퓨터 정책, 사용자 정책 및 엔터프라이즈 정책에 적용됨을 나타냅니다. **-all** 옵션은 항상 현재 로그온한 사용자의 정책을 참조합니다. 현재 사용자 이외의 사용자에 대한 사용자 정책을 참조하려면 **-customall** 옵션을 참조하세요.|  
