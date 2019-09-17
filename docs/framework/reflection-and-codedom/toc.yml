@@ -16,6 +16,8 @@
           href: dynamically-loading-and-using-types.md
         - name: '방법: 리플렉션 전용 컨텍스트에 어셈블리 로드'
           href: how-to-load-assemblies-into-the-reflection-only-context.md
+        - name: '방법: 리플렉션을 사용하여 형식 및 멤버 정보 가져오기'
+          href: get-type-member-information.md
         - name: 사용자 지정 특성 액세스
           href: accessing-custom-attributes.md
         - name: 정규화된 형식 이름 지정
