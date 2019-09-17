@@ -11,12 +11,12 @@ helpviewer_keywords:
 - .NET applications, Windows applications
 ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
-ms.openlocfilehash: 32aa2c1c4cd31e4591c9fa30c05ebe61058f94c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61f969c22ac06bd6ed20ccfa9124db3bb35d0692
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008709"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053550"
 ---
 # <a name="develop-windows-service-apps"></a>Windows 서비스 앱 개발
 
@@ -27,19 +27,19 @@ Visual Studio 또는 .NET Framework SDK를 사용하면 서비스로 설치되�
 
 ## <a name="in-this-section"></a>단원 내용
 
-[Windows 서비스 애플리케이션 소개](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+[Windows 서비스 애플리케이션 소개](introduction-to-windows-service-applications.md)
 
 Windows 서비스 애플리케이션, 서비스 수명 및 서비스 애플리케이션이 다른 일반적인 프로젝트 유형과 다른 점에 대해 간략히 설명합니다.
 
-[연습: 구성 요소 디자이너에서 Windows 서비스 애플리케이션 만들기](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+[연습: 구성 요소 디자이너에서 Windows 서비스 애플리케이션 만들기](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
 
 Visual Basic 및 Visual C#에서 서비스를 만드는 예제를 제공합니다.
 
-[서비스 애플리케이션 프로그래밍 아키텍처](../../../docs/framework/windows-services/service-application-programming-architecture.md)
+[서비스 애플리케이션 프로그래밍 아키텍처](service-application-programming-architecture.md)
 
 서비스 프로그래밍에서 사용되는 언어 요소에 대해 설명합니다.
 
-[방법: Windows 서비스 만들기](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+[방법: Windows 서비스 만들기](how-to-create-windows-services.md)
 
 Windows 서비스 프로젝트 템플릿을 사용하여 Windows 서비스를 만들고 구성하는 프로세스에 대해 설명합니다.
 

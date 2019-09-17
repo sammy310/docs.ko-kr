@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d9448edab101ef11447b54e12c53abcb578646a
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: f1d13c4c3e27b5af5b3c3e84995cae3df94a307d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971597"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052073"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>.NET Framework 및 애플리케이션 배포
 
@@ -38,39 +38,39 @@ ms.locfileid: "70971597"
 
   - 설치 모드:
 
-    - [자동 설치](../../../docs/framework/deployment/deployment-guide-for-developers.md#chaining_custom)
+    - [자동 설치](deployment-guide-for-developers.md#chaining_custom)
 
-    - [UI 표시](../../../docs/framework/deployment/deployment-guide-for-developers.md#chaining_default)
+    - [UI 표시](deployment-guide-for-developers.md#chaining_default)
 
-  - [.NET Framework 4.5를 설치하는 동안 시스템 다시 시작 줄이기](../../../docs/framework/deployment/reducing-system-restarts.md)
+  - [.NET Framework 4.5를 설치하는 동안 시스템 다시 시작 줄이기](reducing-system-restarts.md)
 
   - [차단된 .NET Framework 설치 및 제거 문제 해결](../install/troubleshoot-blocked-installations-and-uninstallations.md)
 
 - 클라이언트 애플리케이션과 함께 .NET Framework 배포(개발자용):
 
-  - 설치 및 배포 프로젝트에 [InstallShield 사용](../../../docs/framework/deployment/deployment-guide-for-developers.md#installshield-deployment)
+  - 설치 및 배포 프로젝트에 [InstallShield 사용](deployment-guide-for-developers.md#installshield-deployment)
 
-  - [Visual Studio ClickOnce 애플리케이션 사용](../../../docs/framework/deployment/deployment-guide-for-developers.md#clickonce-deployment)
+  - [Visual Studio ClickOnce 애플리케이션 사용](deployment-guide-for-developers.md#clickonce-deployment)
 
-  - [WiX 설치 패키지 만들기](../../../docs/framework/deployment/deployment-guide-for-developers.md#wix)
+  - [WiX 설치 패키지 만들기](deployment-guide-for-developers.md#wix)
 
-  - [사용자 지정 설치 관리자 사용](../../../docs/framework/deployment/deployment-guide-for-developers.md#chaining)
+  - [사용자 지정 설치 관리자 사용](deployment-guide-for-developers.md#chaining)
 
-  - 개발자용 [추가 정보](../../../docs/framework/deployment/deployment-guide-for-developers.md)
+  - 개발자용 [추가 정보](deployment-guide-for-developers.md)
 
 - .NET Framework 배포(OEM 및 관리자용):
 
   - [Windows ADK(평가 및 배포 키트)](https://go.microsoft.com/fwlink/p/?LinkId=254976)
 
-  - [관리자 가이드](../../../docs/framework/deployment/guide-for-administrators.md)
+  - [관리자 가이드](guide-for-administrators.md)
 
 **서비스**
 
 - 일반적인 내용은 [.NET Framework 블로그](https://go.microsoft.com/fwlink/p/?LinkId=254977)를 참조하세요.
 
-- [버전 검색](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)
+- [버전 검색](../migration-guide/how-to-determine-which-versions-are-installed.md)
 
-- [서비스 팩과 업데이트 검색](../../../docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)
+- [서비스 팩과 업데이트 검색](../migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)
 
 ## <a name="features-that-simplify-deployment"></a>배포를 간소화하는 기능
 
@@ -154,25 +154,25 @@ ms.locfileid: "70971597"
 
 ### <a name="installation-location"></a>설치 위치
 
-런타임에서 찾을 수 있도록 애플리케이션의 어셈블리를 배포할 위치를 확인하려면 [런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)을 참조하세요.
+런타임에서 찾을 수 있도록 애플리케이션의 어셈블리를 배포할 위치를 확인하려면 [런타임에서 어셈블리를 찾는 방법](how-the-runtime-locates-assemblies.md)을 참조하세요.
 
-보안 고려 사항도 애플리케이션 배포 방법에 영향을 줄 수 있습니다. 코드의 위치에 따라 관리 코드에 보안 권한이 부여됩니다. 인터넷과 같은 거의 신뢰되지 않는 위치에 애플리케이션이나 구성 요소를 배포하면 애플리케이션이나 구성 요소가 수행할 수 있는 기능이 제한됩니다. 배포 및 보안 고려 사항에 대한 자세한 내용은 [코드 액세스 보안 기본 사항](../../../docs/framework/misc/code-access-security-basics.md)을 참조하세요.
+보안 고려 사항도 애플리케이션 배포 방법에 영향을 줄 수 있습니다. 코드의 위치에 따라 관리 코드에 보안 권한이 부여됩니다. 인터넷과 같은 거의 신뢰되지 않는 위치에 애플리케이션이나 구성 요소를 배포하면 애플리케이션이나 구성 요소가 수행할 수 있는 기능이 제한됩니다. 배포 및 보안 고려 사항에 대한 자세한 내용은 [코드 액세스 보안 기본 사항](../misc/code-access-security-basics.md)을 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 
 |제목|설명|
 |-----------|-----------------|
-|[런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|공용 언어 런타임에서 바인딩 요청을 충족하는 데 사용할 어셈블리를 확인하는 방법을 설명합니다.|
-|[최선의 어셈블리 로드 방법](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|<xref:System.InvalidCastException>, <xref:System.MissingMethodException> 및 다른 오류를 발생시킬 수 있는 형식 ID 문제를 방지하는 방법을 설명합니다.|
-|[.NET Framework 4.5를 설치하는 동안 시스템 다시 시작 줄이기](../../../docs/framework/deployment/reducing-system-restarts.md)|최대한 다시 시작을 방지하는 다시 시작 관리자 및 .NET Framework를 설치하는 애플리케이션이 다시 시작 관리자를 활용할 수 있는 방법을 설명합니다.|
-|[관리자를 위한 배포 가이드](../../../docs/framework/deployment/guide-for-administrators.md)|시스템 관리자가 SCCM(System Center Configuration Manager)을 사용하여 .NET Framework 및 해당 시스템 종속성을 네트워크 전체에 배포할 수 있는 방법을 설명합니다.|
-|[개발자를 위한 배포 가이드](../../../docs/framework/deployment/deployment-guide-for-developers.md)|개발자가 애플리케이션과 함께 .NET Framework를 사용자 컴퓨터에 설치할 수 있는 방법을 설명합니다.|
+|[런타임에서 어셈블리를 찾는 방법](how-the-runtime-locates-assemblies.md)|공용 언어 런타임에서 바인딩 요청을 충족하는 데 사용할 어셈블리를 확인하는 방법을 설명합니다.|
+|[최선의 어셈블리 로드 방법](best-practices-for-assembly-loading.md)|<xref:System.InvalidCastException>, <xref:System.MissingMethodException> 및 다른 오류를 발생시킬 수 있는 형식 ID 문제를 방지하는 방법을 설명합니다.|
+|[.NET Framework 4.5를 설치하는 동안 시스템 다시 시작 줄이기](reducing-system-restarts.md)|최대한 다시 시작을 방지하는 다시 시작 관리자 및 .NET Framework를 설치하는 애플리케이션이 다시 시작 관리자를 활용할 수 있는 방법을 설명합니다.|
+|[관리자를 위한 배포 가이드](guide-for-administrators.md)|시스템 관리자가 SCCM(System Center Configuration Manager)을 사용하여 .NET Framework 및 해당 시스템 종속성을 네트워크 전체에 배포할 수 있는 방법을 설명합니다.|
+|[개발자를 위한 배포 가이드](deployment-guide-for-developers.md)|개발자가 애플리케이션과 함께 .NET Framework를 사용자 컴퓨터에 설치할 수 있는 방법을 설명합니다.|
 |[애플리케이션, 서비스 및 구성 요소 배포](/visualstudio/deployment/deploying-applications-services-and-components)|ClickOnce 및 Windows Installer 기술을 사용하여 애플리케이션을 게시하기 위한 지침을 포함하여 Visual Studio의 배포 옵션을 설명합니다.|
 |[ClickOnce 애플리케이션 게시](/visualstudio/deployment/publishing-clickonce-applications)|Windows Forms 애플리케이션을 패키징하고 ClickOnce로 네트워크의 클라이언트 컴퓨터에 배포하는 방법을 설명합니다.|
-|[리소스 패키징 및 배포](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)|.NET Framework에서 리소스를 패키징 및 배포하는 데 사용하는 허브 및 스포크 모델을 설명합니다. 리소스 명명 규칙, 대체(fallback) 프로세스 및 패키징 대안을 설명합니다.|
-|[Interop 애플리케이션 배포](../../../docs/framework/interop/deploying-an-interop-application.md)|일반적으로 .NET Framework 클라이언트 어셈블리, 고유한 COM 형식 라이브러리를 나타내는 하나 이상의 interop 어셈블리 및 하나 이상의 등록된 COM 구성 요소를 포함하는 interop 애플리케이션을 제공하고 설치하는 방법을 설명합니다.|
-|[방법: .NET Framework 4.5 설치 관리자에서 진행률 가져오기](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|설치 진행 상황을 자체적으로 표시하면서 .NET Framework 설치 프로세스를 자동으로 시작하고 추적하는 방법을 설명합니다.|
+|[리소스 패키징 및 배포](../resources/packaging-and-deploying-resources-in-desktop-apps.md)|.NET Framework에서 리소스를 패키징 및 배포하는 데 사용하는 허브 및 스포크 모델을 설명합니다. 리소스 명명 규칙, 대체(fallback) 프로세스 및 패키징 대안을 설명합니다.|
+|[Interop 애플리케이션 배포](../interop/deploying-an-interop-application.md)|일반적으로 .NET Framework 클라이언트 어셈블리, 고유한 COM 형식 라이브러리를 나타내는 하나 이상의 interop 어셈블리 및 하나 이상의 등록된 COM 구성 요소를 포함하는 interop 애플리케이션을 제공하고 설치하는 방법을 설명합니다.|
+|[방법: .NET Framework 4.5 설치 관리자에서 진행률 가져오기](how-to-get-progress-from-the-dotnet-installer.md)|설치 진행 상황을 자체적으로 표시하면서 .NET Framework 설치 프로세스를 자동으로 시작하고 추적하는 방법을 설명합니다.|
 
 ## <a name="see-also"></a>참고 항목
 
-- [개발 가이드](../../../docs/framework/development-guide.md)
+- [개발 가이드](../development-guide.md)
