@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 30c44b9f98bcc61d54b8103b6b40d14fd35715f4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a2cc7cb1b6da860a2c27bc8d2fe74e0ffde5f5e1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589182"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053272"
 ---
 # <a name="interfaces-c-programming-guide"></a>인터페이스(C# 프로그래밍 가이드)
 
@@ -27,7 +27,7 @@ ms.locfileid: "69589182"
 
 <xref:System.IEquatable%601> 인터페이스를 구현하는 모든 클래스나 구조체에는 인터페이스에서 지정한 서명과 일치하는 <xref:System.IEquatable%601.Equals%2A> 메서드에 대한 정의가 포함되어 있어야 합니다. 따라서 `IEquatable<T>`을 구현하는 클래스를 계산하여 클래스의 인스턴스에서 동일한 클래스의 다른 인스턴스와 동일한지 여부를 확인할 수 있는 `Equals` 메서드를 포함할 수 있습니다.  
   
-`IEquatable<T>`의 정의에서는 `Equals`에 대한 구현을 제공하지 않습니다. 인터페이스는 서명만 정의합니다. 이런 방식으로 C#의 인터페이스는 모든 메서드가 추상인 추상 클래스와 유사합니다. 그러나 클래스 또는 구조체는 여러 인터페이스를 구현할 수 있지만 클래스는 추상인지 여부에 관계없이 단일 클래스만 상속할 수 있습니다.
+`IEquatable<T>`의 정의에서는 `Equals`에 대한 구현을 제공하지 않습니다. 클래스 또는 구조체는 여러 인터페이스를 구현할 수 있지만 클래스는 단일 클래스에서만 상속할 수 있습니다.
   
 추상 클래스에 대한 자세한 내용은 [추상 및 봉인 클래스와 클래스 멤버](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md)를 참조하세요.  
   

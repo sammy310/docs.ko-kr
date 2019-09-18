@@ -1,8 +1,12 @@
 - name: Serialization
   href: index.md
   items:
-    - name: Serialization 방법 항목
-      href: serialization-how-to-topics.md
+    - name: JSON serialization
+      items:
+        - name: 개요
+          href: system-text-json-overview.md
+        - name: JSON 직렬화 및 deserialize 방법
+          href: system-text-json-how-to.md
     - name: 이진 Serialization
       href: binary-serialization.md
       items:
@@ -27,6 +31,8 @@
     - name: XML 및 SOAP Serialization
       href: xml-and-soap-serialization.md
       items:
+        - name: Serialization 방법 항목
+          href: serialization-how-to-topics.md
         - name: '방법: 파생 클래스의 Serialization 제어'
           href: how-to-control-serialization-of-derived-classes.md
         - name: XML Serialization 소개
@@ -67,23 +73,23 @@
           href: add-element-for-schemaimporterextensions.md
         - name: <xmlSerializer> 요소
           href: xmlserializer-element.md
-    - name: Serialization 도구
-      href: serialization-tools.md
-      items:
-        - name: XML Serializer 생성기 도구(Sgen.exe)
-          href: xml-serializer-generator-tool-sgen-exe.md
-        - name: XML Schema Definition Tool (Xsd.exe)
-          href: xml-schema-definition-tool-xsd-exe.md
-    - name: Serialization 샘플
-      href: serialization-samples.md
-      items:
-        - name: Basic Serialization 기술 샘플
-          href: basic-serialization-technology-sample.md
-        - name: XmlSerializer를 통한 사용자 지정 Serialization 순서
-          href: custom-serialization-order-with-xmlserializer.md
-        - name: SchemaImporterExtension 기술 샘플
-          href: schemaimporterextension-technology-sample.md
-        - name: Version Tolerant Serialization 기술 샘플
-          href: version-tolerant-serialization-technology-sample.md
-        - name: Web Services Generics Serialization 기술 샘플
-          href: web-services-generics-serialization-technology-sample.md
+        - name: Serialization 도구
+          href: serialization-tools.md
+          items:
+            - name: XML Serializer 생성기 도구(Sgen.exe)
+              href: xml-serializer-generator-tool-sgen-exe.md
+            - name: XML Schema Definition Tool (Xsd.exe)
+              href: xml-schema-definition-tool-xsd-exe.md
+        - name: Serialization 샘플
+          href: serialization-samples.md
+          items:
+            - name: Basic Serialization 기술 샘플
+              href: basic-serialization-technology-sample.md
+            - name: XmlSerializer를 통한 사용자 지정 Serialization 순서
+              href: custom-serialization-order-with-xmlserializer.md
+            - name: SchemaImporterExtension 기술 샘플
+              href: schemaimporterextension-technology-sample.md
+            - name: Version Tolerant Serialization 기술 샘플
+              href: version-tolerant-serialization-technology-sample.md
+            - name: Web Services Generics Serialization 기술 샘플
+              href: web-services-generics-serialization-technology-sample.md
