@@ -8,22 +8,22 @@ helpviewer_keywords:
 - names in XAML [XAML Services]
 - XamlName grammar [XAML Services]
 ms.assetid: 11e4cada-41d2-494d-9531-0d3df4dfcbe3
-ms.openlocfilehash: 642ca16142bdfe78a40ddf4e6a3a79ce6a8a4985
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 837a18ca18d0c634dfa5cc133aa013919cfb9d96
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938751"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053894"
 ---
-# <a name="xamlname-grammar"></a><span data-ttu-id="51e9c-102">XamlName 문법</span><span class="sxs-lookup"><span data-stu-id="51e9c-102">XamlName Grammar</span></span>
-<span data-ttu-id="51e9c-103">XamlName 문법에는 편의 위해 여기에 재현 되어 있는 XAML 언어 사양 [MS-XAML]에 정의 된 특정 문법입니다.</span><span class="sxs-lookup"><span data-stu-id="51e9c-103">XamlName Grammar is a specific grammar that is defined in the XAML language specification [MS-XAML], which is reproduced here for convenience.</span></span>  
+# <a name="xamlname-grammar"></a><span data-ttu-id="196fc-102">XamlName 문법</span><span class="sxs-lookup"><span data-stu-id="196fc-102">XamlName Grammar</span></span>
+<span data-ttu-id="196fc-103">XamlName Grammar은 편의를 위해 여기에서 재현 되는 XAML 언어 사양 [MS XAML]에 정의 된 특정 문법입니다.</span><span class="sxs-lookup"><span data-stu-id="196fc-103">XamlName Grammar is a specific grammar that is defined in the XAML language specification [MS-XAML], which is reproduced here for convenience.</span></span>  
   
-## <a name="from-the-xaml-specification"></a><span data-ttu-id="51e9c-104">XAML 사양에서</span><span class="sxs-lookup"><span data-stu-id="51e9c-104">From the XAML Specification</span></span>  
- <span data-ttu-id="51e9c-105">[MS XAML] 형식 및 속성에 사용 되는 올바른 기호 식별자 집합을 식별 하기 위해 XamlName 문법을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="51e9c-105">The [MS-XAML] specification defines the grammar XamlName to identify the set of legal symbolic identifiers used for types and properties.</span></span>  
+## <a name="from-the-xaml-specification"></a><span data-ttu-id="196fc-104">XAML 사양에서</span><span class="sxs-lookup"><span data-stu-id="196fc-104">From the XAML Specification</span></span>  
+ <span data-ttu-id="196fc-105">[XamlName] 사양은 문법 검사를 정의 하 여 형식 및 속성에 사용 되는 유효한 기호화 된 식별자 집합을 식별 합니다.</span><span class="sxs-lookup"><span data-stu-id="196fc-105">The [MS-XAML] specification defines the grammar XamlName to identify the set of legal symbolic identifiers used for types and properties.</span></span>  
   
- <span data-ttu-id="51e9c-106">XamlName 다음 문법을 준수 해야 하는 형식의 값을 문자열:</span><span class="sxs-lookup"><span data-stu-id="51e9c-106">String values that are of type XamlName must conform to the following grammar:</span></span>  
+ <span data-ttu-id="196fc-106">XamlName 형식의 문자열 값은 다음 문법을 준수 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="196fc-106">String values that are of type XamlName must conform to the following grammar:</span></span>  
   
-```  
+```xaml  
 XamlName ::= NameStartChar ( NameChar )*   
 NameStartChar ::= LetterCharacter | '_'   
 NameChar ::= NameStartChar | DecimalDigit | CombiningCharacter   
@@ -32,36 +32,27 @@ DecimalDigit ::= UnicodeNd
 CombiningCharacter ::= UnicodeMn | UnicodeMc  
 ```  
   
- <span data-ttu-id="51e9c-107">유니코드 문자 데이터베이스에 정의 된 대로 다음과 같은 일반 범주 값을 가정 하는</span><span class="sxs-lookup"><span data-stu-id="51e9c-107">Which assumes the following general category values as defined in the Unicode Character Database</span></span>  
+ <span data-ttu-id="196fc-107">유니코드 문자 데이터베이스에 정의 된 다음과 같은 일반 범주 값을 가정 합니다.</span><span class="sxs-lookup"><span data-stu-id="196fc-107">Which assumes the following general category values as defined in the Unicode Character Database</span></span>  
+
+| <span data-ttu-id="196fc-108">유니코드 범주</span><span class="sxs-lookup"><span data-stu-id="196fc-108">Unicode category</span></span>   | <span data-ttu-id="196fc-109">Description</span><span class="sxs-lookup"><span data-stu-id="196fc-109">Description</span></span>                   |
+|--------------------|-------------------------------|
+| <span data-ttu-id="196fc-110">Lu</span><span class="sxs-lookup"><span data-stu-id="196fc-110">Lu</span></span>                 | <span data-ttu-id="196fc-111">문자, 대문자</span><span class="sxs-lookup"><span data-stu-id="196fc-111">Letter, Uppercase</span></span>             |
+| <span data-ttu-id="196fc-112">Ll</span><span class="sxs-lookup"><span data-stu-id="196fc-112">Ll</span></span>                 | <span data-ttu-id="196fc-113">문자, 소문자</span><span class="sxs-lookup"><span data-stu-id="196fc-113">Letter, Lowercase</span></span>             |
+| <span data-ttu-id="196fc-114">Lt</span><span class="sxs-lookup"><span data-stu-id="196fc-114">Lt</span></span>                 | <span data-ttu-id="196fc-115">문자, 제목 스타일</span><span class="sxs-lookup"><span data-stu-id="196fc-115">Letter, Titlecase</span></span>             |
+| <span data-ttu-id="196fc-116">Lm</span><span class="sxs-lookup"><span data-stu-id="196fc-116">Lm</span></span>                 | <span data-ttu-id="196fc-117">문자, 한정자</span><span class="sxs-lookup"><span data-stu-id="196fc-117">Letter, Modifier</span></span>              |
+| <span data-ttu-id="196fc-118">Lo</span><span class="sxs-lookup"><span data-stu-id="196fc-118">Lo</span></span>                 | <span data-ttu-id="196fc-119">문자, 기타</span><span class="sxs-lookup"><span data-stu-id="196fc-119">Letter, Other</span></span>                 |
+| <span data-ttu-id="196fc-120">Mn</span><span class="sxs-lookup"><span data-stu-id="196fc-120">Mn</span></span>                 | <span data-ttu-id="196fc-121">표시, 공백 없음</span><span class="sxs-lookup"><span data-stu-id="196fc-121">Mark, Non-Spacing</span></span>             |
+| <span data-ttu-id="196fc-122">Mc</span><span class="sxs-lookup"><span data-stu-id="196fc-122">Mc</span></span>                 | <span data-ttu-id="196fc-123">표시, 공백 조합</span><span class="sxs-lookup"><span data-stu-id="196fc-123">Mark, Spacing Combining</span></span>       |
+| <span data-ttu-id="196fc-124">Nd</span><span class="sxs-lookup"><span data-stu-id="196fc-124">Nd</span></span>                 | <span data-ttu-id="196fc-125">숫자, 10 진수</span><span class="sxs-lookup"><span data-stu-id="196fc-125">Number, Decimal</span></span>               |
+| <span data-ttu-id="196fc-126">Nl</span><span class="sxs-lookup"><span data-stu-id="196fc-126">Nl</span></span>                 | <span data-ttu-id="196fc-127">숫자, 문자</span><span class="sxs-lookup"><span data-stu-id="196fc-127">Number, Letter</span></span>                |
+ 
+ <span data-ttu-id="196fc-128">XAML은 속성 및 이벤트 정규화 된 참조와 연결 된 멤버에 사용 되는 두 번째 문법 인 DottedXamlName를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="196fc-128">XAML defines a second grammar, DottedXamlName, that is used for property and event qualified references, and also for attached members.</span></span> <span data-ttu-id="196fc-129">자세한 내용은 및 <xref:System.Windows.DependencyProperty> [XAML 개요 (WPF)](../wpf/advanced/xaml-overview-wpf.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="196fc-129">For more information, see <xref:System.Windows.DependencyProperty> and [XAML Overview (WPF)](../wpf/advanced/xaml-overview-wpf.md).</span></span>  
   
-```  
-Lu  
-Letter, Uppercase  
-Ll  
-Letter, Lowercase  
-Lt  
-Letter, Titlecase  
-Lm  
-Letter, Modifier  
-Lo  
-Letter, Other  
-Mn  
-Mark, Non-Spacing  
-Mc  
-Mark, Spacing Combining  
-Nd  
-Number, Decimal  
-Nl  
-Number, Letter  
-```  
+ <span data-ttu-id="196fc-130">DottedXamlName 형식의 문자열 값은 다음 문법을 준수 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="196fc-130">String values that are of type DottedXamlName must conform to the following grammar:</span></span>  
   
- <span data-ttu-id="51e9c-108">XAML DottedXamlName 속성에 사용 되는 두 번째 문법에 정의 및 이벤트 참조를 정규화도 대 한 멤버를 연결 합니다.</span><span class="sxs-lookup"><span data-stu-id="51e9c-108">XAML defines a second grammar, DottedXamlName, that is used for property and event qualified references, and also for attached members.</span></span> <span data-ttu-id="51e9c-109">자세한 내용은 <xref:System.Windows.DependencyProperty> 하 고 [XAML 개요 (WPF)](../wpf/advanced/xaml-overview-wpf.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="51e9c-109">For more information, see <xref:System.Windows.DependencyProperty> and [XAML Overview (WPF)](../wpf/advanced/xaml-overview-wpf.md).</span></span>  
-  
- <span data-ttu-id="51e9c-110">DottedXamlName 다음 문법을 준수 해야 하는 형식의 값을 문자열:</span><span class="sxs-lookup"><span data-stu-id="51e9c-110">String values that are of type DottedXamlName must conform to the following grammar:</span></span>  
-  
-```  
+```xaml  
 DottedXamlName ::= XamlName '.' XamlName  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="51e9c-111">설명</span><span class="sxs-lookup"><span data-stu-id="51e9c-111">Remarks</span></span>  
- <span data-ttu-id="51e9c-112">완전 한 사양에 대해서 [ \[MS XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)합니다.</span><span class="sxs-lookup"><span data-stu-id="51e9c-112">For the complete specification, see [\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525).</span></span>
+## <a name="remarks"></a><span data-ttu-id="196fc-131">설명</span><span class="sxs-lookup"><span data-stu-id="196fc-131">Remarks</span></span>  
+ <span data-ttu-id="196fc-132">전체 사양은 [ \[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="196fc-132">For the complete specification, see [\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525).</span></span>

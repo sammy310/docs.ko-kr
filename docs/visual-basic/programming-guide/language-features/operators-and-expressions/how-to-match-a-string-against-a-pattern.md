@@ -1,5 +1,5 @@
 ---
-title: '방법: (Visual Basic) 패턴에 대해 문자열 비교'
+title: '방법: 패턴에 대해 문자열 일치 (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - comparison operators [Visual Basic], comparing strings
@@ -13,74 +13,76 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-ms.openlocfilehash: e5eb6bd5b5e7b2f0c3692c0fa2431a0b8f295299
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0bac0869d9e319071abb31dd0576edf0450aa198
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649721"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054159"
 ---
-# <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a><span data-ttu-id="8d357-102">방법: (Visual Basic) 패턴에 대해 문자열 비교</span><span class="sxs-lookup"><span data-stu-id="8d357-102">How to: Match a String against a Pattern (Visual Basic)</span></span>
-<span data-ttu-id="8d357-103">식을 확인 하려는 경우는 [문자열 데이터 형식](../../../../visual-basic/language-reference/data-types/string-data-type.md) 사용 하 여 패턴을 만족 합니다 [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8d357-103">If you want to find out if an expression of the [String Data Type](../../../../visual-basic/language-reference/data-types/string-data-type.md) satisfies a pattern, then you can use the [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md).</span></span>  
-  
- <span data-ttu-id="8d357-104">`Like` 두 피연산자를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d357-104">`Like` takes two operands.</span></span> <span data-ttu-id="8d357-105">왼쪽된 피연산자가는 문자열 식 및 오른쪽 피연산자가 일치 하는 데 사용할 패턴을 포함 하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="8d357-105">The left operand is a string expression, and the right operand is a string containing the pattern to be used for matching.</span></span> <span data-ttu-id="8d357-106">`Like` 반환 된 `Boolean` 문자열 식 패턴을 충족 하는지 여부를 나타내는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="8d357-106">`Like` returns a `Boolean` value indicating whether the string expression satisfies the pattern.</span></span>  
-  
- <span data-ttu-id="8d357-107">특정 문자, 와일드 카드 문자를 문자 목록, 또는 문자 범위에 대해 문자열 식의 각 문자를 일치 시킬 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8d357-107">You can match each character in the string expression against a specific character, a wildcard character, a character list, or a character range.</span></span> <span data-ttu-id="8d357-108">사양 패턴 문자열에 대 한 위치를 일치 시킬 문자를 문자열 식에서의 위치에 해당 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d357-108">The positions of the specifications in the pattern string correspond to the positions of the characters to be matched in the string expression.</span></span>  
-  
-### <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a><span data-ttu-id="8d357-109">특정 문자에서 문자열 식의 문자를 검색 하려면</span><span class="sxs-lookup"><span data-stu-id="8d357-109">To match a character in the string expression against a specific character</span></span>  
-  
-- <span data-ttu-id="8d357-110">특정 문자 패턴 문자열에 직접 배치 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d357-110">Put the specific character directly in the pattern string.</span></span> <span data-ttu-id="8d357-111">특수 문자를 대괄호로 묶어야 합니다 (`[ ]`).</span><span class="sxs-lookup"><span data-stu-id="8d357-111">Certain special characters must be enclosed in brackets (`[ ]`).</span></span> <span data-ttu-id="8d357-112">자세한 내용은 [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8d357-112">For more information, see [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md).</span></span>  
-  
-     <span data-ttu-id="8d357-113">다음 예제에서는 테스트 하는지 여부를 `myString` 단일 문자를 정확히 이루어져 `H`합니다.</span><span class="sxs-lookup"><span data-stu-id="8d357-113">The following example tests whether `myString` consists exactly of the single character `H`.</span></span>  
-  
-     [!code-vb[VbVbalrOperators#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#70)]  
-  
-### <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a><span data-ttu-id="8d357-114">와일드 카드 문자는 문자열 식의 문자를 검색 하려면</span><span class="sxs-lookup"><span data-stu-id="8d357-114">To match a character in the string expression against a wildcard character</span></span>  
-  
-- <span data-ttu-id="8d357-115">물음표 (`?`) 패턴 문자열에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8d357-115">Put a question mark (`?`) in the pattern string.</span></span> <span data-ttu-id="8d357-116">이 위치에서 모든 유효한 문자일 성공한 일치 항목을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="8d357-116">Any valid character in this position makes a successful match.</span></span>  
-  
-     <span data-ttu-id="8d357-117">다음 예제에서는 테스트 하는지 여부를 `myString` 단일 문자로 `W` 뒤에 정확히 두 문자의 값입니다.</span><span class="sxs-lookup"><span data-stu-id="8d357-117">The following example tests whether `myString` consists of the single character `W` followed by exactly two characters of any values.</span></span>  
-  
-     [!code-vb[VbVbalrOperators#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#71)]  
-  
-### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a><span data-ttu-id="8d357-118">문자 목록에서 문자열 식의 문자를 검색 하려면</span><span class="sxs-lookup"><span data-stu-id="8d357-118">To match a character in the string expression against a list of characters</span></span>  
-  
-- <span data-ttu-id="8d357-119">대괄호 (`[ ]`) 패턴 문자열에 문자의 목록을 저장 하는 대괄호 안에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8d357-119">Put brackets (`[ ]`) in the pattern string, and inside the brackets put the list of characters.</span></span> <span data-ttu-id="8d357-120">쉼표 또는 다른 구분 기호를 사용 하 여 문자를 구분 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8d357-120">Do not separate the characters with commas or any other separator.</span></span> <span data-ttu-id="8d357-121">목록에서 단일 문자와 일치 하는 항목 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8d357-121">Any single character in the list makes a successful match.</span></span>  
-  
-     <span data-ttu-id="8d357-122">다음 예제에서는 테스트 하는지 여부를 `myString` 뒤에 문자 중 하나만 모든 유효한 문자일 이루어져 `A`, `C`, 또는 `E`.</span><span class="sxs-lookup"><span data-stu-id="8d357-122">The following example tests whether `myString` consists of any valid character followed by exactly one of the characters `A`, `C`, or `E`.</span></span>  
-  
-     [!code-vb[VbVbalrOperators#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#72)]  
-  
-     <span data-ttu-id="8d357-123">이 일치는 대/소문자 구분 임을 유의 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d357-123">Note that this match is case-sensitive.</span></span>  
-  
-### <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a><span data-ttu-id="8d357-124">문자 범위에서 문자열 식의 문자를 검색 하려면</span><span class="sxs-lookup"><span data-stu-id="8d357-124">To match a character in the string expression against a range of characters</span></span>  
-  
-- <span data-ttu-id="8d357-125">대괄호 (`[ ]`) 하이픈으로 구분 된 패턴 문자열 및 최저 및 최고 문자 범위를 넣을 대괄호 (`–`).</span><span class="sxs-lookup"><span data-stu-id="8d357-125">Put brackets (`[ ]`) in the pattern string, and inside the brackets put the lowest and highest characters in the range, separated by a hyphen (`–`).</span></span> <span data-ttu-id="8d357-126">범위 내 모든 단일 문자를 일치 하는 항목을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="8d357-126">Any single character within the range makes a successful match.</span></span>  
-  
-     <span data-ttu-id="8d357-127">다음 예제에서는 테스트 하는지 여부를 `myString` 문자로 구성 `num` 뒤에 문자 중 하나만 `i`, `j`, `k`, `l`, `m`, 또는 `n`합니다.</span><span class="sxs-lookup"><span data-stu-id="8d357-127">The following example tests whether `myString` consists of the characters `num` followed by exactly one of the characters `i`, `j`, `k`, `l`, `m`, or `n`.</span></span>  
-  
-     [!code-vb[VbVbalrOperators#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#73)]  
-  
-     <span data-ttu-id="8d357-128">이 일치는 대/소문자 구분 임을 유의 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d357-128">Note that this match is case-sensitive.</span></span>  
-  
-## <a name="matching-empty-strings"></a><span data-ttu-id="8d357-129">일치 하는 빈 문자열</span><span class="sxs-lookup"><span data-stu-id="8d357-129">Matching Empty Strings</span></span>  
- <span data-ttu-id="8d357-130">`Like` 시퀀스를 처리 `[]` 길이가 0 인 문자열로 (`""`).</span><span class="sxs-lookup"><span data-stu-id="8d357-130">`Like` treats the sequence `[]` as a zero-length string (`""`).</span></span> <span data-ttu-id="8d357-131">사용할 수 있습니다 `[]` 전체 문자열 식이 비어 있지만 빈 문자열 식의 특정 위치 인지를 테스트 하는 데 사용할 수 없습니다 수 있는지 여부를 테스트 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d357-131">You can use `[]` to test whether the entire string expression is empty, but you cannot use it to test if a particular position in the string expression is empty.</span></span> <span data-ttu-id="8d357-132">사용할 수에 대 한 테스트 해야 하는 빈 위치 옵션 중 하나 이면 `Like` 두 번 이상.</span><span class="sxs-lookup"><span data-stu-id="8d357-132">If an empty position is one of the options you need to test for, you can use `Like` more than once.</span></span>  
-  
-#### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a><span data-ttu-id="8d357-133">문자 또는 문자가 없는 목록에서 문자열 식의 문자를 검색 하려면</span><span class="sxs-lookup"><span data-stu-id="8d357-133">To match a character in the string expression against a list of characters or no character</span></span>  
-  
-1. <span data-ttu-id="8d357-134">호출를 `Like` 연산자에 동일한 두 번 문자열 식, 및 중 하나를 사용 하 여 두 호출을 연결 합니다 [또는 연산자](../../../../visual-basic/language-reference/operators/or-operator.md) 또는 [OrElse 연산자](../../../../visual-basic/language-reference/operators/orelse-operator.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8d357-134">Call the `Like` operator twice on the same string expression, and connect the two calls with either the [Or Operator](../../../../visual-basic/language-reference/operators/or-operator.md) or the [OrElse Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md).</span></span>  
-  
-2. <span data-ttu-id="8d357-135">첫 번째 패턴 문자열에 `Like` 절을 대괄호로 묶은 문자 목록을 포함 (`[ ]`).</span><span class="sxs-lookup"><span data-stu-id="8d357-135">In the pattern string for the first `Like` clause, include the character list, enclosed in brackets (`[ ]`).</span></span>  
-  
-3. <span data-ttu-id="8d357-136">두 번째 패턴 문자열에 `Like` 절에 두지 마십시오 임의의 위치에 해당 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d357-136">In the pattern string for the second `Like` clause, do not put any character at the position in question.</span></span>  
-  
-     <span data-ttu-id="8d357-137">다음 예제에서는 7 자리 전화 번호를 테스트 `phoneNum` 정확히 3 자리 숫자에 대 한 뒤에 공백, 하이픈 (`–`), 마침표 (`.`), 문자가 없는 전혀 뒤에 정확히 4 자리 숫자입니다.</span><span class="sxs-lookup"><span data-stu-id="8d357-137">The following example tests the seven-digit telephone number `phoneNum` for exactly three numeric digits, followed by a space, a hyphen (`–`), a period (`.`), or no character at all, followed by exactly four numeric digits.</span></span>  
-  
-     [!code-vb[VbVbalrOperators#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#74)]  
-  
-## <a name="see-also"></a><span data-ttu-id="8d357-138">참고자료</span><span class="sxs-lookup"><span data-stu-id="8d357-138">See also</span></span>
+# <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a><span data-ttu-id="97c31-102">방법: 패턴에 대해 문자열 일치 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="97c31-102">How to: Match a String against a Pattern (Visual Basic)</span></span>
 
-- [<span data-ttu-id="8d357-139">비교 연산자</span><span class="sxs-lookup"><span data-stu-id="8d357-139">Comparison Operators</span></span>](../../../../visual-basic/language-reference/operators/comparison-operators.md)
-- [<span data-ttu-id="8d357-140">연산자 및 식</span><span class="sxs-lookup"><span data-stu-id="8d357-140">Operators and Expressions</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
-- [<span data-ttu-id="8d357-141">Like 연산자</span><span class="sxs-lookup"><span data-stu-id="8d357-141">Like Operator</span></span>](../../../../visual-basic/language-reference/operators/like-operator.md)
-- [<span data-ttu-id="8d357-142">String 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="8d357-142">String Data Type</span></span>](../../../../visual-basic/language-reference/data-types/string-data-type.md)
+<span data-ttu-id="97c31-103">[문자열 데이터 형식의](../../../../visual-basic/language-reference/data-types/string-data-type.md) 식이 패턴을 충족 하는지 확인 하려는 경우 [Like 연산자](../../../../visual-basic/language-reference/operators/like-operator.md)를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="97c31-103">If you want to find out if an expression of the [String Data Type](../../../../visual-basic/language-reference/data-types/string-data-type.md) satisfies a pattern, then you can use the [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md).</span></span>
+
+<span data-ttu-id="97c31-104">`Like`두 개의 피연산자를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="97c31-104">`Like` takes two operands.</span></span> <span data-ttu-id="97c31-105">왼쪽 피연산자는 문자열 식이고 오른쪽 피연산자는 일치에 사용할 패턴이 포함 된 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="97c31-105">The left operand is a string expression, and the right operand is a string containing the pattern to be used for matching.</span></span> <span data-ttu-id="97c31-106">`Like`문자열 식이 `Boolean` 패턴을 충족 하는지 여부를 나타내는 값을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="97c31-106">`Like` returns a `Boolean` value indicating whether the string expression satisfies the pattern.</span></span>
+
+<span data-ttu-id="97c31-107">문자열 식의 각 문자를 특정 문자, 와일드 카드 문자, 문자 목록 또는 문자 범위에 대해 일치 시킬 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="97c31-107">You can match each character in the string expression against a specific character, a wildcard character, a character list, or a character range.</span></span> <span data-ttu-id="97c31-108">패턴 문자열의 사양 위치는 문자열 식에서 일치 시킬 문자의 위치에 해당 합니다.</span><span class="sxs-lookup"><span data-stu-id="97c31-108">The positions of the specifications in the pattern string correspond to the positions of the characters to be matched in the string expression.</span></span>
+
+## <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a><span data-ttu-id="97c31-109">문자열 식의 문자를 특정 문자와 일치 시키려면</span><span class="sxs-lookup"><span data-stu-id="97c31-109">To match a character in the string expression against a specific character</span></span>
+
+<span data-ttu-id="97c31-110">패턴 문자열에 특정 문자를 직접 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="97c31-110">Put the specific character directly in the pattern string.</span></span> <span data-ttu-id="97c31-111">특정 특수 문자는 대괄호 (`[ ]`)로 묶어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="97c31-111">Certain special characters must be enclosed in brackets (`[ ]`).</span></span> <span data-ttu-id="97c31-112">자세한 내용은 [Like 연산자](../../../../visual-basic/language-reference/operators/like-operator.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="97c31-112">For more information, see [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md).</span></span>
+
+<span data-ttu-id="97c31-113">다음 예제에서는가 단일 `myString` 문자 `H`를 정확 하 게 구성 하는지 테스트 합니다.</span><span class="sxs-lookup"><span data-stu-id="97c31-113">The following example tests whether `myString` consists exactly of the single character `H`.</span></span>
+
+[!code-vb[VbVbalrOperators#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#70)]
+
+## <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a><span data-ttu-id="97c31-114">와일드 카드 문자를 기준으로 문자열 식의 문자를 일치 시키려면</span><span class="sxs-lookup"><span data-stu-id="97c31-114">To match a character in the string expression against a wildcard character</span></span>
+
+<span data-ttu-id="97c31-115">패턴 문자열에 물음표 (`?`)를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="97c31-115">Put a question mark (`?`) in the pattern string.</span></span> <span data-ttu-id="97c31-116">이 위치에 있는 모든 유효한 문자가 성공적으로 일치 하 게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="97c31-116">Any valid character in this position makes a successful match.</span></span>
+
+<span data-ttu-id="97c31-117">다음 예제에서는가 단일 `myString` 문자 `W` 다음에 정확히 두 개의 문자로 구성 되어 있는지 여부를 테스트 합니다.</span><span class="sxs-lookup"><span data-stu-id="97c31-117">The following example tests whether `myString` consists of the single character `W` followed by exactly two characters of any values.</span></span>
+
+[!code-vb[VbVbalrOperators#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#71)]
+
+## <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a><span data-ttu-id="97c31-118">문자열 식의 문자를 문자 목록과 일치 시키려면</span><span class="sxs-lookup"><span data-stu-id="97c31-118">To match a character in the string expression against a list of characters</span></span>
+
+<span data-ttu-id="97c31-119">패턴 문자열에`[ ]`대괄호 ()를 배치 하 고 대괄호 안에 문자 목록을 넣습니다.</span><span class="sxs-lookup"><span data-stu-id="97c31-119">Put brackets (`[ ]`) in the pattern string, and inside the brackets put the list of characters.</span></span> <span data-ttu-id="97c31-120">문자를 쉼표 또는 다른 구분 기호로 구분 하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="97c31-120">Do not separate the characters with commas or any other separator.</span></span> <span data-ttu-id="97c31-121">목록의 모든 단일 문자가 성공적으로 일치 하 게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="97c31-121">Any single character in the list makes a successful match.</span></span>
+
+<span data-ttu-id="97c31-122">다음 예제에서는가 유효한 `myString` 모든 문자로 `A` `C` `E`구성 되어 있는지 여부를 테스트 합니다.</span><span class="sxs-lookup"><span data-stu-id="97c31-122">The following example tests whether `myString` consists of any valid character followed by exactly one of the characters `A`, `C`, or `E`.</span></span>
+
+[!code-vb[VbVbalrOperators#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#72)]
+
+<span data-ttu-id="97c31-123">이 일치 항목은 대/소문자를 구분 합니다.</span><span class="sxs-lookup"><span data-stu-id="97c31-123">Note that this match is case-sensitive.</span></span>
+
+## <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a><span data-ttu-id="97c31-124">문자열 식에서 문자 범위에 대해 문자를 일치 시키려면</span><span class="sxs-lookup"><span data-stu-id="97c31-124">To match a character in the string expression against a range of characters</span></span>
+
+<span data-ttu-id="97c31-125">패턴 문자열에`[ ]`대괄호 ()를 배치 하 고, 대괄호 안에는 범위에서 가장 낮거나 가장 높은 문자를 하이픈 (`–`)으로 구분 하 여 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="97c31-125">Put brackets (`[ ]`) in the pattern string, and inside the brackets put the lowest and highest characters in the range, separated by a hyphen (`–`).</span></span> <span data-ttu-id="97c31-126">범위 내의 모든 단일 문자가 성공적으로 일치 하 게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="97c31-126">Any single character within the range makes a successful match.</span></span>
+
+<span data-ttu-id="97c31-127">다음 예제에서는가 문자로 `myString` `num` 구성 되어 있는지 여부를 테스트 하 고,,, `i`, `j`또는 `k` `m` `n`문자 `l`중 하나만 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="97c31-127">The following example tests whether `myString` consists of the characters `num` followed by exactly one of the characters `i`, `j`, `k`, `l`, `m`, or `n`.</span></span>
+
+[!code-vb[VbVbalrOperators#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#73)]
+
+<span data-ttu-id="97c31-128">이 일치 항목은 대/소문자를 구분 합니다.</span><span class="sxs-lookup"><span data-stu-id="97c31-128">Note that this match is case-sensitive.</span></span>
+
+## <a name="matching-empty-strings"></a><span data-ttu-id="97c31-129">빈 문자열 일치</span><span class="sxs-lookup"><span data-stu-id="97c31-129">Matching Empty Strings</span></span>
+
+<span data-ttu-id="97c31-130">`Like`시퀀스 `[]` 를 길이가 0 인 문자열 (`""`)로 처리 합니다.</span><span class="sxs-lookup"><span data-stu-id="97c31-130">`Like` treats the sequence `[]` as a zero-length string (`""`).</span></span> <span data-ttu-id="97c31-131">를 사용 `[]` 하 여 전체 문자열 식이 비어 있는지 여부를 테스트할 수 있지만 문자열 식의 특정 위치가 비어 있는지 테스트 하는 데 사용할 수는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="97c31-131">You can use `[]` to test whether the entire string expression is empty, but you cannot use it to test if a particular position in the string expression is empty.</span></span> <span data-ttu-id="97c31-132">빈 위치가 테스트 해야 하는 옵션 중 하나인 경우 두 번 이상 사용할 `Like` 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="97c31-132">If an empty position is one of the options you need to test for, you can use `Like` more than once.</span></span>
+
+### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a><span data-ttu-id="97c31-133">문자열 식의 문자를 문자 목록에 대해 일치 하거나 문자를 검색 하지 않으려면</span><span class="sxs-lookup"><span data-stu-id="97c31-133">To match a character in the string expression against a list of characters or no character</span></span>
+
+1. <span data-ttu-id="97c31-134">동일한 문자열 `Like` 식에서 연산자를 두 번 호출 하 고, [or 연산자](../../../../visual-basic/language-reference/operators/or-operator.md) 또는 [OrElse 연산자](../../../../visual-basic/language-reference/operators/orelse-operator.md)중 하나를 사용 하 여 두 호출을 연결 합니다.</span><span class="sxs-lookup"><span data-stu-id="97c31-134">Call the `Like` operator twice on the same string expression, and connect the two calls with either the [Or Operator](../../../../visual-basic/language-reference/operators/or-operator.md) or the [OrElse Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md).</span></span>
+
+2. <span data-ttu-id="97c31-135">첫 번째 `Like` 절에 대 한 패턴 문자열에서 대괄호 (`[ ]`)로 묶인 문자 목록을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="97c31-135">In the pattern string for the first `Like` clause, include the character list, enclosed in brackets (`[ ]`).</span></span>
+
+3. <span data-ttu-id="97c31-136">두 번째 `Like` 절의 패턴 문자열에서 해당 위치에 문자를 넣지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="97c31-136">In the pattern string for the second `Like` clause, do not put any character at the position in question.</span></span>
+
+    <span data-ttu-id="97c31-137">다음 예에서는 정확히 3 자리 숫자에 대해 7 `phoneNum` 자리 전화 번호를 테스트 한 후 공백, 하이픈 (`–`), 마침표 (`.`) 또는 문자 없이 문자를 정확히 4 자리 숫자로 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="97c31-137">The following example tests the seven-digit telephone number `phoneNum` for exactly three numeric digits, followed by a space, a hyphen (`–`), a period (`.`), or no character at all, followed by exactly four numeric digits.</span></span>
+
+    [!code-vb[VbVbalrOperators#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#74)]
+
+## <a name="see-also"></a><span data-ttu-id="97c31-138">참고자료</span><span class="sxs-lookup"><span data-stu-id="97c31-138">See also</span></span>
+
+- [<span data-ttu-id="97c31-139">비교 연산자</span><span class="sxs-lookup"><span data-stu-id="97c31-139">Comparison Operators</span></span>](../../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [<span data-ttu-id="97c31-140">연산자 및 식</span><span class="sxs-lookup"><span data-stu-id="97c31-140">Operators and Expressions</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [<span data-ttu-id="97c31-141">Like 연산자</span><span class="sxs-lookup"><span data-stu-id="97c31-141">Like Operator</span></span>](../../../../visual-basic/language-reference/operators/like-operator.md)
+- [<span data-ttu-id="97c31-142">String 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="97c31-142">String Data Type</span></span>](../../../../visual-basic/language-reference/data-types/string-data-type.md)
