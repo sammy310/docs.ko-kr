@@ -35,12 +35,16 @@
           href: tutorials/sales-anomaly-detection.md
         - name: 이미지에서 개체 검색(개체 검색)
           href: tutorials/object-detection-onnx.md
+        - name: TensorFlow를 사용하여 감정 분류(텍스트 분류)
+          href: tutorials/text-classification-tf.md
     - name: 도구
       items:
         - name: 모델 작성기를 사용하여 가격 예측
           href: tutorials/predict-prices-with-model-builder.md
         - name: ML.NET CLI를 사용하여 감정 분석
           href: tutorials/mlnet-cli.md
+        - name: 모델 작성기 및 Razor Pages를 사용하여 감정 분석
+          href: tutorials/sentiment-analysis-model-builder.md
 - name: 개념
   items:
     - name: ML.NET 작업(모델 형식)
