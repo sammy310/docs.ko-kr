@@ -3,12 +3,12 @@ title: WIF 3.5를 사용하여 빌드된 애플리케이션을 WIF 4.5로 마이
 ms.date: 03/30/2017
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
 author: BrucePerlerMS
-ms.openlocfilehash: ad8ff2b6daaaf48975b86c637435b31fa1869e1d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ba99a061d060ebe7740fe61846c3684b5c3085d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940571"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045480"
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>WIF 3.5를 사용하여 빌드된 애플리케이션을 WIF 4.5로 마이그레이션하는 지침
 
@@ -32,7 +32,7 @@ WIF 3.5에서 모든 WIF 클래스는 `Microsoft.IdentityModel` 어셈블리(mic
 
 WIF 3.5 클래스는 `Microsoft.IdentityModel` 네임스페이스(예: `Microsoft.IdentityModel`, `Microsoft.IdentityModel.Tokens`, `Microsoft.IdentityModel.Web` 등) 중 하나에 모두 포함되었습니다. WIF 4.5에서 WIF 클래스는 이제 [System.IdentityModel](https://go.microsoft.com/fwlink/?LinkId=272004) 네임스페이스, <xref:System.Security.Claims?displayProperty=nameWithType> 네임스페이스 및 <xref:System.ServiceModel.Security?displayProperty=nameWithType> 네임스페이스에 분산되어 있습니다. 이 재구성 이외에 일부 WIF 3.5 클래스는 WIF 4.5에서 삭제되었습니다.
 
-다음 표에서는 일부 더 중요한 WIF 4.5 네임스페이스와 네임스페이스에 포함된 클래스 종류를 보여 줍니다. WIF 3.5와 WIF 4.5 간 네임스페이스 매핑 방법 및 WIF 4.5에서 삭제된 네임스페이스와 클래스에 대한 자세한 내용은 [WIF 3.5와 WIF 4.5 간의 네임스페이스 매핑](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)을 참조하세요.
+다음 표에서는 일부 더 중요한 WIF 4.5 네임스페이스와 네임스페이스에 포함된 클래스 종류를 보여 줍니다. WIF 3.5와 WIF 4.5 간 네임스페이스 매핑 방법 및 WIF 4.5에서 삭제된 네임스페이스와 클래스에 대한 자세한 내용은 [WIF 3.5와 WIF 4.5 간의 네임스페이스 매핑](namespace-mapping-between-wif-3-5-and-wif-4-5.md)을 참조하세요.
 
 |WIF 4.5 네임스페이스|설명|
 |-----------------------|-----------------|
@@ -86,23 +86,23 @@ WIF는 이제 .NET Framework에 통합되어 있습니다. 대부분의 .NET ID 
 
 다음 목록에는 WIF 4.5 구성 파일에 대한 주요 변경 내용이 열거됩니다.
 
-- `<microsoft.identityModel>` 섹션은 이제 [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) 섹션입니다.
+- `<microsoft.identityModel>` 섹션은 이제 [\<system.identityModel>](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) 섹션입니다.
 
-- `<service>` 요소는 이제 [\<identityConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 요소입니다.
+- `<service>` 요소는 이제 [\<identityConfiguration>](../configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 요소입니다.
 
-- 수동(WS-Federation) 시나리오에서 동작을 제어하는 설정을 지정하기 위해 새로운 섹션 [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)가 추가되었습니다.
+- 수동(WS-Federation) 시나리오에서 동작을 제어하는 설정을 지정하기 위해 새로운 섹션 [\<system.identityModel.services>](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)가 추가되었습니다.
 
-- [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) 요소와 해당 자식 요소가 WIF 3.5의 `<service>` 요소에서 새로운 `<system.identityModel.services>` 요소로 이동되었습니다.
+- [\<federationConfiguration>](../configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) 요소와 해당 자식 요소가 WIF 3.5의 `<service>` 요소에서 새로운 `<system.identityModel.services>` 요소로 이동되었습니다.
 
-- WIF 3.5의 `<service>` 요소 바로 아래의 서비스 수준에서 지정될 수 있는 여러 요소는 [\<securityTokenHandlerConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) 요소 아래에 지정되도록 제한되었습니다. 이전 버전과의 호환성을 위해 WIF 4.5에서도 이러한 요소를 [\<identityConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 요소 아래에 지정할 수 있습니다.
+- WIF 3.5의 `<service>` 요소 바로 아래의 서비스 수준에서 지정될 수 있는 여러 요소는 [\<securityTokenHandlerConfiguration>](../configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) 요소 아래에 지정되도록 제한되었습니다. 이전 버전과의 호환성을 위해 WIF 4.5에서도 이러한 요소를 [\<identityConfiguration>](../configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 요소 아래에 지정할 수 있습니다.
 
-WIF 4.5 구성 요소의 전체 목록을 보려면 [WIF 구성 스키마](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)를 참조하세요.
+WIF 4.5 구성 요소의 전체 목록을 보려면 [WIF 구성 스키마](../configure-apps/file-schema/windows-identity-foundation/index.md)를 참조하세요.
 
 ### <a name="visual-studio-tooling-changes"></a>Visual Studio 도구 변경
 
 WIF 3.5 SDK에서는 WIF 사용 가능 애플리케이션의 ID 관리를 STS(보안 토큰 서비스)로 아웃소싱하는 데 사용할 수 있는 독립 실행형 페더레이션 유틸리티, FedUtil.exe(FedUtil)를 제공했습니다. 이 도구는 애플리케이션이 하나 이상의 STS에서 보안 토큰을 가져올 수 있도록 WIF 설정을 애플리케이션 구성 파일에 추가하고 **Add STS Service Reference**(STS 서비스 참조 추가) 단추를 통해 Visual Studio에 표시되었습니다. FedUtil은 WIF 4.5와 함께 제공되지 않습니다. 대신에 WIF 4.5는 ID 관리를 STS로 아웃소싱하는 데 필요한 WIF 설정을 통해 애플리케이션 구성 파일을 수정하는 데 사용할 수 있는 Visual Studio 2012용 ID 및 액세스 도구라는 새로운 Visual Studio 확장을 지원합니다. ID 및 액세스 도구는 WIF 사용 가능 애플리케이션을 테스트하는 데 사용할 수 있는 로컬 STS라는 STS도 구현합니다. 대부분의 경우 이 기능을 사용하면 개발 시에 솔루션을 테스트하기 위해 WIF 3.5에서 종종 필요했던 사용자 지정 STS를 빌드할 필요가 없습니다. 따라서 STS 템플릿은 Visual Studio 2012에서 더는 지원되지 않지만 STS 개발을 지원하는 클래스는 WIF 4.5에서 계속 사용할 수 있습니다.
 
-확장 및 업데이트 관리자에서 Visual Studio에서 Id 및 액세스 도구를 설치할 수 있습니다 하거나 코드 갤러리의 다음 페이지에서 다운로드할 수 있습니다. [Id 및 액세스 도구 코드 갤러리에서 Visual Studio 2012 용](https://go.microsoft.com/fwlink/?LinkID=245849)합니다. Visual Studio 도구 변경 내용은 다음 목록에 요약되어 있습니다.
+Visual Studio의 확장 및 업데이트 관리자에서 Id 및 액세스 도구를 설치 하거나 코드 갤러리의 다음 페이지에서이 도구를 다운로드할 수 있습니다. [코드 갤러리의 Visual Studio 2012에 대 한 id 및 액세스 도구](https://go.microsoft.com/fwlink/?LinkID=245849)입니다. Visual Studio 도구 변경 내용은 다음 목록에 요약되어 있습니다.
 
 - STS 서비스 참조 추가 기능이 제거됩니다. 대신에 ID 및 액세스 도구가 사용됩니다.
 
@@ -110,7 +110,7 @@ WIF 3.5 SDK에서는 WIF 사용 가능 애플리케이션의 ID 관리를 STS(�
 
 - 독립 실행형 페더레이션 유틸리티(FedUtil)를 WIF 4.5에서 사용할 수 없습니다. ID 및 액세스 도구를 통해 구성 파일을 수정하여 ID 관리를 STS로 아웃소싱할 수 있습니다.
 
-ID 및 액세스 도구에 대한 자세한 내용은 [Visual Studio 2012용 ID 및 액세스 도구](../../../docs/framework/security/identity-and-access-tool-for-vs.md)를 참조하세요.
+ID 및 액세스 도구에 대한 자세한 내용은 [Visual Studio 2012용 ID 및 액세스 도구](identity-and-access-tool-for-vs.md)를 참조하세요.
 
 <a name="BKMK_ToolingChanges"></a>
 
@@ -182,7 +182,7 @@ Add-WindowsFeature windows-identity-foundation
 
 ## <a name="see-also"></a>참고자료
 
-- [WIF 구성 스키마](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)
-- [WIF 3.5와 WIF 4.5 간의 네임스페이스 매핑](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
-- [Windows Identity Foundation 4.5의 새로운 기능](../../../docs/framework/security/whats-new-in-wif.md)
-- [Visual Studio 2012용 ID 및 액세스 도구](../../../docs/framework/security/identity-and-access-tool-for-vs.md)
+- [WIF 구성 스키마](../configure-apps/file-schema/windows-identity-foundation/index.md)
+- [WIF 3.5와 WIF 4.5 간의 네임스페이스 매핑](namespace-mapping-between-wif-3-5-and-wif-4-5.md)
+- [Windows Identity Foundation 4.5의 새로운 기능](whats-new-in-wif.md)
+- [Visual Studio 2012용 ID 및 액세스 도구](identity-and-access-tool-for-vs.md)

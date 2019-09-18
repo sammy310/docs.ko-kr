@@ -7,28 +7,28 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec83bfd08277c79f15904d50a85e43cc61ecd527
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 93a0271c521de6e390e323d92e93a5e7bf94444f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894703"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046732"
 ---
 # <a name="clr-etw-providers"></a>CLR ETW 공급자
 CLR(공용 언어 런타임)에는 런타임 공급자 및 런다운 공급자라는 두 개의 공급자가 있습니다.  
   
  런타임 공급자는 사용하도록 설정된 키워드(이벤트 범주)에 따라 이벤트를 발생시킵니다. 예를 들어 `LoaderKeyword` 키워드를 사용하도록 설정하면 로더 이벤트를 수집할 수 있습니다.  
   
- ETW (ETW(Windows용 이벤트 추적)) 이벤트는 확장명이 .etl 인 파일에 기록 되며, 나중에 필요에 따라 쉼표로 구분 된 값 (.csv) 파일에서 나중에 처리 될 수 있습니다. .etl 파일을 .csv 파일로 변환하는 방법에 대한 자세한 내용은 [.NET Framework 로깅 제어](../../../docs/framework/performance/controlling-logging.md)를 참조하세요.  
+ ETW (ETW(Windows용 이벤트 추적)) 이벤트는 확장명이 .etl 인 파일에 기록 되며, 나중에 필요에 따라 쉼표로 구분 된 값 (.csv) 파일에서 나중에 처리 될 수 있습니다. .etl 파일을 .csv 파일로 변환하는 방법에 대한 자세한 내용은 [.NET Framework 로깅 제어](controlling-logging.md)를 참조하세요.  
   
 ## <a name="the-runtime-provider"></a>런타임 공급자  
  런타임 공급자는 기본 CLR ETW 공급자입니다.  
   
  CLR 런타임 공급자 GUID는 e13c0d23-ccbc-4e12-931b-d9cc2eee27e4입니다.  
   
- 일반적으로 사용 가능한 도구를 사용하여 CLR ETW 이벤트를 기록하고 보는 방법의 예제는 [.NET Framework 로깅 제어](../../../docs/framework/performance/controlling-logging.md)를 참조하세요.  
+ 일반적으로 사용 가능한 도구를 사용하여 CLR ETW 이벤트를 기록하고 보는 방법의 예제는 [.NET Framework 로깅 제어](controlling-logging.md)를 참조하세요.  
   
- `LoaderKeyword` 등의 키워드 사용 외에도 너무 자주 발생할 수 있는 이벤트를 기록하기 위해 키워드를 사용하도록 설정해야 할 수도 있습니다. 이러한 이벤트는 `StartEnumerationKeyword` 및 `EndEnumerationKeyword` 키워드에 의해 활성화되며 두 키워드는 [CLR ETW 키워드 및 수준](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)에 요약되어 있습니다.  
+ `LoaderKeyword` 등의 키워드 사용 외에도 너무 자주 발생할 수 있는 이벤트를 기록하기 위해 키워드를 사용하도록 설정해야 할 수도 있습니다. 이러한 이벤트는 `StartEnumerationKeyword` 및 `EndEnumerationKeyword` 키워드에 의해 활성화되며 두 키워드는 [CLR ETW 키워드 및 수준](clr-etw-keywords-and-levels.md)에 요약되어 있습니다.  
   
 ## <a name="the-rundown-provider"></a>런다운 공급자  
  특별한 용도에 사용하려면 런다운 공급자를 켜야 합니다. 그러나 대부분의 사용자는 런타임 공급자로 충분합니다.  
@@ -93,4 +93,4 @@ CLR(공용 언어 런타임)에는 런타임 공급자 및 런다운 공급자�
   
 ## <a name="see-also"></a>참고자료
 
-- [공용 언어 런타임의 ETW 이벤트](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+- [공용 언어 런타임의 ETW 이벤트](etw-events-in-the-common-language-runtime.md)

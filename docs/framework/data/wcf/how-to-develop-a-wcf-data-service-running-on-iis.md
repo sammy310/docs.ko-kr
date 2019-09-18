@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: d03a0ae3bc84106d72803b22050a7c75a037be12
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 89be7aa8339a4edf6d6ab9c0c243e4320d2fdfa8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780102"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052968"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>방법: IIS에서 실행 되는 WCF 데이터 서비스 개발
 
@@ -148,7 +148,7 @@ ms.locfileid: "70780102"
 
 2. **새 항목 추가** 대화 상자에서 **WCF Data Service**를 선택 합니다.
 
-   ![Visual Studio 2015의 WCF 데이터 서비스 항목 템플릿](media/wcf-data-service-item-template.png)
+   ![Visual Studio 2015의 WCF 데이터 서비스 항목 템플릿](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
    > **WCF 데이터 서비스** 템플릿은 visual studio 2015에서 사용할 수 있지만 visual studio 2017에서는 사용할 수 없습니다.

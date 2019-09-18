@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: e1ed1197-3e9e-4e78-8845-92e82787faed
-ms.openlocfilehash: b8df3d07a18efcfbb6c30b46668ab8fec8736af5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 578a6da0f1545012d5a77edc3db04d52f56180bc
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953202"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042508"
 ---
 # <a name="ui-automation-clients-for-managed-code"></a>관리 코드에 대한 UI 자동화 클라이언트
 > [!NOTE]
@@ -21,16 +21,16 @@ ms.locfileid: "69953202"
  이 섹션에는 UI 자동화 클라이언트 개발에 도움이 되는 개요 및 방법이 설명되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [UI 자동화 및 화면 크기 조정](../../../docs/framework/ui-automation/ui-automation-and-screen-scaling.md)  
- [표준 컨트롤에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)  
- [클라이언트용 UI 자동화 이벤트](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
- [UI 자동화 클라이언트의 캐싱](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
- [클라이언트의 UI 자동화 속성](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
- [UI 자동화 클라이언트에 대한 컨트롤 패턴 매핑](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
- [클라이언트용 UI 자동화 컨트롤 패턴](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [UI 자동화 요소 가져오기](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)  
- [UI 자동화 스레딩 문제](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)  
- [방법 항목](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code-how-to-topics.md)  
+ [UI 자동화 및 화면 크기 조정](ui-automation-and-screen-scaling.md)  
+ [표준 컨트롤에 대한 UI 자동화 지원](ui-automation-support-for-standard-controls.md)  
+ [클라이언트용 UI 자동화 이벤트](ui-automation-events-for-clients.md)  
+ [UI 자동화 클라이언트의 캐싱](caching-in-ui-automation-clients.md)  
+ [클라이언트의 UI 자동화 속성](ui-automation-properties-for-clients.md)  
+ [UI 자동화 클라이언트에 대한 컨트롤 패턴 매핑](control-pattern-mapping-for-ui-automation-clients.md)  
+ [클라이언트용 UI 자동화 컨트롤 패턴](ui-automation-control-patterns-for-clients.md)  
+ [UI 자동화 요소 가져오기](obtaining-ui-automation-elements.md)  
+ [UI 자동화 스레딩 문제](ui-automation-threading-issues.md)  
+ [방법 항목](ui-automation-clients-for-managed-code-how-to-topics.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Automation>

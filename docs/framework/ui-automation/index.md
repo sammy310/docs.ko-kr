@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - UI Automation
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
-ms.openlocfilehash: 3c7dc456b9378f1eab09a2300e379d9156722485
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 667f0ded506305f3d7eb1ac5c43d3f65aab2cca9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926971"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043042"
 ---
 # <a name="accessibility"></a>액세스 가능성
 > [!NOTE]
@@ -22,14 +22,14 @@ ms.locfileid: "70926971"
  이 설명서에서는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 관리 코드에 대 한 API에 대해 설명 합니다. C++의 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 프로그래밍에 대한 자세한 내용은 [UI Automation for Win32 Applications](/windows/desktop/winauto/windows-automation-api-portal)(Win32 애플리케이션용 UI 자동화)를 참조하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [접근성 모범 사례](../../../docs/framework/ui-automation/accessibility-best-practices.md)  
- [UI 자동화 기본 사항](../../../docs/framework/ui-automation/index.md)  
- [관리 코드에 대한 UI 자동화 공급자](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code.md)  
- [관리 코드에 대한 UI 자동화 클라이언트](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code.md)  
- [UI 자동화 컨트롤 패턴](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)  
- [UI 자동화 텍스트 패턴](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)  
- [UI 자동화 컨트롤 형식](../../../docs/framework/ui-automation/ui-automation-control-types.md)  
- [UI 자동화 사양 및 커뮤니티 약속](../../../docs/framework/ui-automation/ui-automation-specification-and-community-promise.md)  
+ [접근성 모범 사례](accessibility-best-practices.md)  
+ [UI 자동화 기본 사항](index.md)  
+ [관리 코드에 대한 UI 자동화 공급자](ui-automation-providers-for-managed-code.md)  
+ [관리 코드에 대한 UI 자동화 클라이언트](ui-automation-clients-for-managed-code.md)  
+ [UI 자동화 컨트롤 패턴](ui-automation-control-patterns.md)  
+ [UI 자동화 텍스트 패턴](ui-automation-text-pattern.md)  
+ [UI 자동화 컨트롤 형식](ui-automation-control-types.md)  
+ [UI 자동화 사양 및 커뮤니티 약속](ui-automation-specification-and-community-promise.md)  
   
 ## <a name="related-sections"></a>관련 단원  
 

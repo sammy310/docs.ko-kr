@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: 0ff8a5002c82b274a95f7e1ae83bb23707d6cb39
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ad2f84fbde512bb99b213bf3b97f2190091d8576
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968213"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042984"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>UI 자동화 Window 컨트롤 패턴 구현
 > [!NOTE]
@@ -65,8 +65,8 @@ ms.locfileid: "69968213"
   
 ## <a name="see-also"></a>참고자료
 
-- [UI 자동화 컨트롤 패턴 개요](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [UI 자동화 공급자의 컨트롤 패턴 지원](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [클라이언트용 UI 자동화 컨트롤 패턴](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [UI 자동화의 캐싱 사용](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [UI 자동화 컨트롤 패턴 개요](ui-automation-control-patterns-overview.md)
+- [UI 자동화 공급자의 컨트롤 패턴 지원](support-control-patterns-in-a-ui-automation-provider.md)
+- [클라이언트용 UI 자동화 컨트롤 패턴](ui-automation-control-patterns-for-clients.md)
+- [UI 자동화 트리 개요](ui-automation-tree-overview.md)
+- [UI 자동화의 캐싱 사용](use-caching-in-ui-automation.md)

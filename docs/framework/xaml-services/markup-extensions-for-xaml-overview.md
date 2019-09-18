@@ -5,12 +5,12 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 5c29899846e7210c02b6bcc2b677b05581a5c6b1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: adcd224e30d541f27b1583389ca63b6f8a32fc38
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939706"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053853"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>XAML 태그 확장 개요
 태그 확장은 기본 형식이 나 특정 XAML 형식이 아닌 값을 가져오기 위한 XAML 기술입니다. 특성 사용과 관련하여 태그 확장은 여는 중괄호 `{` 의 알려진 문자 시퀀스를 사용하여 태그 확장 범위를 시작하고 닫는 중괄호 `}` 를 사용하여 종료합니다. .NET Framework XAML 서비스를 사용하는 경우 System.Xaml 어셈블리에서 미리 정의된 몇 가지 XAML 언어 태그 확장을 사용할 수 있습니다. System.Xaml에 정의된 <xref:System.Windows.Markup.MarkupExtension> 클래스에서 서브클래싱하고 고유한 태그 확장을 정의할 수도 있습니다. 또는 해당 프레임워크를 이미 참조하고 있는 경우 특정 프레임워크에 의해 정의된 태그 확장을 사용할 수 있습니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "69939706"
   
  예를 들어 `Collate` 태그 확장이 해당 모드를 나타내고 `CollationMode` 열거형 상수로 지정된 하나의 위치 인수가 있는 모드만 지원하도록 되어 있다고 가정합니다. 이런 경우 다음과 같은 형식의 생성자가 있어야 합니다.  
   
-```  
+```csharp  
 public Collate(CollationMode collationMode) {...}  
 ```  
   
@@ -91,7 +91,7 @@ public Collate(CollationMode collationMode) {...}
   
  사용에서 토큰 발생 순서가 할당된 생성자 매개 변수의 위치 순서에 해당하기 때문에 이러한 인수를 위치 인수라고 합니다. 예를 들어 다음과 같은 생성자 서명을 살펴보겠습니다.  
   
-```  
+```csharp  
 public Collate(CollationMode collationMode, object collateThis) {...}  
 ```  
   

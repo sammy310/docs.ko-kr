@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 937577f86ec854f5a458fe6067836a85a540695a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ec8180da9637ec2b2c4e1b432773b4f9f1ac908b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913798"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049178"
 ---
 # <a name="serialization-and-metadata"></a>Serialization 및 메타데이터
 
@@ -22,7 +22,7 @@ ms.locfileid: "69913798"
 <a name="ThirdParty"></a>
 ## <a name="third-party-serializers"></a>타사 serializer
 
- Newtonsoft.JSON을 비롯한 타사 serializer는 대개 리플렉션을 기반으로 합니다. serialize된 데이터의 BLOB(Binary Large Object)가 지정되면 데이터의 필드는 대상 형식의 필드를 이름으로 조회하여 구체적 형식에 할당됩니다. 이러한 라이브러리를 사용하는 경우 `List<Type>` 컬렉션에서 직렬화 또는 deserialize하려는 각 <xref:System.Type> 개체에 대해 최소한 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 예외가 발생합니다.  
+ Newtonsoft.JSON을 비롯한 타사 serializer는 대개 리플렉션을 기반으로 합니다. serialize된 데이터의 BLOB(Binary Large Object)가 지정되면 데이터의 필드는 대상 형식의 필드를 이름으로 조회하여 구체적 형식에 할당됩니다. 이러한 라이브러리를 사용하는 경우 `List<Type>` 컬렉션에서 직렬화 또는 deserialize하려는 각 <xref:System.Type> 개체에 대해 최소한 [MissingMetadataException](missingmetadataexception-class-net-native.md) 예외가 발생합니다.  
   
  이러한 serializer용 메타데이터 누락으로 인해 발생하는 문제를 해결하는 가장 쉬운 방법은 serialization에 사용할 형식을 `App.Models`와 같은 네임스페이스 하나에 수집하고 해당 네임스페이스에 `Serialize` 메타데이터 지시문을 적용하는 것입니다.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "69913798"
 <Namespace Name="App.Models" Serialize="Required PublicAndInternal" />  
 ```  
   
- 이 예제에 사용된 구문에 대한 자세한 내용은 [\<Namespace> 요소](../../../docs/framework/net-native/namespace-element-net-native.md)를 참조하세요.  
+ 이 예제에 사용된 구문에 대한 자세한 내용은 [\<Namespace> 요소](namespace-element-net-native.md)를 참조하세요.  
   
 <a name="Microsoft"></a>
 ## <a name="microsoft-serializers"></a>Microsoft serializer
@@ -67,11 +67,11 @@ ms.locfileid: "69913798"
 <Type Name="t" Browse="Required Public" />  
 ```  
   
- 이 예제에 사용된 구문에 대한 자세한 내용은 [\<Type> 요소](../../../docs/framework/net-native/type-element-net-native.md)를 참조하세요.  
+ 이 예제에 사용된 구문에 대한 자세한 내용은 [\<Type> 요소](type-element-net-native.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
 
-- [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [런타임 지시문 요소](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [\<형식 > 요소](../../../docs/framework/net-native/type-element-net-native.md)
-- [\<Namespace> 요소](../../../docs/framework/net-native/namespace-element-net-native.md)
+- [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)
+- [런타임 지시문 요소](runtime-directive-elements.md)
+- [\<형식 > 요소](type-element-net-native.md)
+- [\<Namespace> 요소](namespace-element-net-native.md)

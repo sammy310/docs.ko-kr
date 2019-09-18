@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Menu Item control type
 - UI Automation, Menu Item control type
 ms.assetid: 54bce311-3d23-40b9-ba90-1bdbdaf8fbba
-ms.openlocfilehash: 236f4ff5bfd709426975c7a8c1d828eb8b3fe89b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1dba653a308bc4fa865e8ee362893cbd15d68da
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032294"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71041285"
 ---
 # <a name="ui-automation-support-for-the-menuitem-control-type"></a>MenuItem 컨트롤 형식에 대한 UI 자동화 지원
 
 > [!NOTE]
-> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 최신 정보에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]를 참조 하세요 [Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746)합니다.
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).
 
 이 항목에서는 MenuItem 컨트롤 형식에 대한 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 지원 정보를 제공합니다. 컨트롤의 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 트리 구조에 대해 설명하고 MenuItem 컨트롤 형식에 필요한 속성 및 컨트롤 패턴을 제공합니다.
 
@@ -28,13 +28,13 @@ ms.locfileid: "62032294"
 
 ## <a name="required-ui-automation-tree-structure"></a>필요한 UI 자동화 트리 구조
 
-다음 표는 메뉴 항목 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다. 에 대 한 자세한 합니다 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리를 참조 하십시오 [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)합니다.
+다음 표는 메뉴 항목 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 대 한 자세한 내용은 [UI 자동화 트리 개요](ui-automation-tree-overview.md)를 참조 하세요.
 
 |컨트롤 뷰|콘텐츠 뷰|
 |------------------|------------------|
 |MenuItem "도움말"<br /><br /> <ul><li>Menu(도움말 메뉴 항목의 하위 메뉴)<br /><br /> <ul><li>MenuItem "도움말 항목"</li><li>MenuItem "메모장 정보"</li></ul></li></ul>|MenuItem "도움말"<br /><br /> -MenuItem "도움말 항목"<br />-MenuItem "메모장 정보"|
 
-메뉴 항목 컨트롤의 컨트롤 보기에는 위에 표시된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조가 있습니다. 합니다 **도움말** 메뉴 항목을 일반적인 메뉴에서 하위 메뉴 계층 구조 이해를 돕기 위해 포함 됩니다.
+메뉴 항목 컨트롤의 컨트롤 보기에는 위에 표시된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조가 있습니다. **도움말** 메뉴 항목이 포함 되어 일반 메뉴의 하위 메뉴 계층 구조를 보다 잘 보여 줍니다.
 
 콘텐츠 뷰의 경우, 최종 사용자에게 의미 있는 정보를 전달하지 않기 때문에 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 메뉴가 없습니다.
 
@@ -42,7 +42,7 @@ ms.locfileid: "62032294"
 
 ## <a name="required-ui-automation-properties"></a>필요한 UI 자동화 속성
 
-다음 표에서는 값 또는 정의가 메뉴 항목 컨트롤과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여줍니다. 에 대 한 자세한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 참조 하세요 [클라이언트용 UI 자동화 속성](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)합니다.
+다음 표에서는 값 또는 정의가 메뉴 항목 컨트롤과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여줍니다. 속성에 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 대 한 자세한 내용은 [클라이언트에 대 한 UI 자동화 속성](ui-automation-properties-for-clients.md)을 참조 하세요.
 
 |속성|값|설명|
 |--------------|-----------|-----------------|
@@ -61,7 +61,7 @@ ms.locfileid: "62032294"
 
 ## <a name="required-ui-automation-control-patterns"></a>필요한 UI 자동화 컨트롤 패턴
 
-다음 표에서는 메뉴 항목 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴을 나열하여 보여줍니다. 컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)를 참조하세요.
+다음 표에서는 메뉴 항목 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴을 나열하여 보여줍니다. 컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)를 참조하세요.
 
 |컨트롤 패턴 속성|지원|노트|
 |------------------------------|-------------|-----------|
@@ -87,7 +87,7 @@ ms.locfileid: "62032294"
 
 ## <a name="required-ui-automation-events"></a>필요한 UI 자동화 이벤트
 
-다음 표에서는 모든 메뉴 항목 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여줍니다. 이벤트에 대한 자세한 내용은 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)를 참조하세요.
+다음 표에서는 모든 메뉴 항목 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여줍니다. 이벤트에 대한 자세한 내용은 [UI Automation Events Overview](ui-automation-events-overview.md)를 참조하세요.
 
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|지원/값|노트|
 |---------------------------------------------------------------------------------|--------------------|-----------|
@@ -112,6 +112,6 @@ Toggle 패턴은 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.Automation.ControlType.MenuItem>
-- [UI 자동화 컨트롤 패턴 개요](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [UI 자동화 컨트롤 형식 개요](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
-- [UI 자동화 개요](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [UI 자동화 컨트롤 패턴 개요](ui-automation-control-patterns-overview.md)
+- [UI 자동화 컨트롤 형식 개요](ui-automation-control-types-overview.md)
+- [UI 자동화 개요](ui-automation-overview.md)

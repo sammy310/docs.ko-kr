@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, exposing content of tables
 - exposing content of tables using UI Automation
 ms.assetid: ac3c5eaa-49c7-4653-b83e-532e2a2604a2
-ms.openlocfilehash: 5c82041058bfa90079c5d1d0f4de4ff40faae699
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ee565fa07a8b137152bbc0ef6aa4038f2cf6d421
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965181"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043804"
 ---
 # <a name="expose-the-content-of-a-table-using-ui-automation"></a>UI 자동화를 사용하여 표의 콘텐츠 노출
 > [!NOTE]
@@ -43,9 +43,9 @@ ms.locfileid: "69965181"
   
 ## <a name="see-also"></a>참고자료
 
-- [UI 자동화 컨트롤 패턴 개요](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [클라이언트용 UI 자동화 컨트롤 패턴](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [UI 자동화 Table 컨트롤 패턴 구현](../../../docs/framework/ui-automation/implementing-the-ui-automation-table-control-pattern.md)
-- [UI 자동화 TableItem 컨트롤 패턴 구현](../../../docs/framework/ui-automation/implementing-the-ui-automation-tableitem-control-pattern.md)
-- [UI 자동화 Grid 컨트롤 패턴 구현](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md)
-- [UI 자동화 GridItem 컨트롤 패턴 구현](../../../docs/framework/ui-automation/implementing-the-ui-automation-griditem-control-pattern.md)
+- [UI 자동화 컨트롤 패턴 개요](ui-automation-control-patterns-overview.md)
+- [클라이언트용 UI 자동화 컨트롤 패턴](ui-automation-control-patterns-for-clients.md)
+- [UI 자동화 Table 컨트롤 패턴 구현](implementing-the-ui-automation-table-control-pattern.md)
+- [UI 자동화 TableItem 컨트롤 패턴 구현](implementing-the-ui-automation-tableitem-control-pattern.md)
+- [UI 자동화 Grid 컨트롤 패턴 구현](implementing-the-ui-automation-grid-control-pattern.md)
+- [UI 자동화 GridItem 컨트롤 패턴 구현](implementing-the-ui-automation-griditem-control-pattern.md)

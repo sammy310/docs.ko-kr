@@ -2,12 +2,12 @@
 title: 계산 식
 description: 제어 흐름 구문 및 바인딩을 사용 하 여 시퀀싱 하 F# 고 결합할 수 있는 계산을 작성 하기 위한 편리한 구문을 만드는 방법에 대해 알아봅니다.
 ms.date: 03/15/2019
-ms.openlocfilehash: bca328a09ff61fb76d30960221ee3350fcc25fc1
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 9222be5a585914761d3001d6649b196030eec05e
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106578"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083049"
 ---
 # <a name="computation-expressions"></a>계산 식
 
@@ -32,7 +32,7 @@ ms.locfileid: "70106578"
 
 모든 계산 식의 형식은 다음과 같습니다.
 
-```
+```fsharp
 builder-expr { cexper }
 ```
 
@@ -77,7 +77,7 @@ let doThingsAsync url =
     }
 ```
 
-를 사용 `let`하 여 계산 식에 대 한 호출을 바인딩하는 경우 계산 식의 결과를 얻을 수 없습니다. 대신 계산 식에 대 한 계산 되지 않은 호출 값을 바인딩 했습니다. 를 `let!` 사용 하 여 결과에 바인딩합니다.
+를 사용 `let`하 여 계산 식에 대 한 호출을 바인딩하는 경우 계산 식의 결과를 얻을 수 없습니다. 대신 계산 식에 대 한 계산 되지 *않은 호출 값* 을 바인딩 했습니다. 를 `let!` 사용 하 여 결과에 바인딩합니다.
 
 `let!`는 작성기 형식의 `Bind(x, f)` 멤버에 의해 정의 됩니다.
 

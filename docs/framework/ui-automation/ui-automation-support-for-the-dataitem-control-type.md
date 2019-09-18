@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Data Item control type
 - control types, Data Item
 ms.assetid: 181708fd-2595-4c43-9abd-75811627d64c
-ms.openlocfilehash: 7ba338a2eeb222dc8c807bc3a2bb4d1baf7de39d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 63d957eaaff7503aa8ba4dde9d836aea28f419ea
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912005"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71041811"
 ---
 # <a name="ui-automation-support-for-the-dataitem-control-type"></a>DataItem 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]
@@ -24,7 +24,7 @@ ms.locfileid: "69912005"
  다음 섹션에서는 DataItem 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]의 모든 데이터 항목 컨트롤에 적용됩니다.  
   
 ## <a name="required-ui-automation-tree-structure"></a>필요한 UI 자동화 트리 구조  
- 다음 표는 데이터 항목 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 대 한 자세한 내용은 [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)를 참조 하세요.  
+ 다음 표는 데이터 항목 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 대 한 자세한 내용은 [UI 자동화 트리 개요](ui-automation-tree-overview.md)를 참조 하세요.  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 - 컨트롤 뷰|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리-콘텐츠 뷰|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
@@ -33,7 +33,7 @@ ms.locfileid: "69912005"
  데이터 표의 데이터 항목 요소는 데이터 항목의 다른 레이어 또는 특정 표 요소(예: 텍스트, 이미지 또는 편집 컨트롤)를 비롯한 다양한 개체를 호스트할 수 있습니다. 데이터 항목 요소에 특정 개체 역할이 있으면, 이 요소는 특정 컨트롤 형식으로 노출되어야 합니다. 예를 들어, 표에 있는 선택 가능한 데이터 항목의 경우 ListItem 컨트롤 형식으로 노출되어야 합니다.  
   
 ## <a name="required-ui-automation-properties"></a>필요한 UI 자동화 속성  
- 다음 표에서는 값 또는 정의가 데이터 항목 컨트롤과 특별히 관련된 속성을 나열하여 보여 줍니다. 속성에 대 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 한 자세한 내용은 [클라이언트에 대 한 UI 자동화 속성](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)을 참조 하세요.  
+ 다음 표에서는 값 또는 정의가 데이터 항목 컨트롤과 특별히 관련된 속성을 나열하여 보여 줍니다. 속성에 대 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 한 자세한 내용은 [클라이언트에 대 한 UI 자동화 속성](ui-automation-properties-for-clients.md)을 참조 하세요.  
   
 |속성|값|노트|  
 |--------------|-----------|-----------|  
@@ -51,7 +51,7 @@ ms.locfileid: "69912005"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|메모를 참조하세요.|데이터 항목 컨트롤에는 사용자가 항목에 대해 가장 의미 있는 식별자로 연결할 사항과 관련된 기본 텍스트 요소가 항상 포함됩니다.|  
   
 ## <a name="required-ui-automation-control-patterns"></a>필요한 UI 자동화 컨트롤 패턴  
- 다음 표에서는 모든 데이터 항목 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 컨트롤 패턴을 나열하여 보여 줍니다. 컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)를 참조하세요.  
+ 다음 표에서는 모든 데이터 항목 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 컨트롤 패턴을 나열하여 보여 줍니다. 컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)를 참조하세요.  
   
 |컨트롤 패턴|Support(지원)|노트|  
 |---------------------|-------------|-----------|  
@@ -69,7 +69,7 @@ ms.locfileid: "69912005"
  데이터 항목에 대해 `SetFocus` 요소의 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 를 호출하면 [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)] 케이스가 성공적으로 반환되고 데이터 항목 하위 트리 내에서 포커스가 편집으로 설정됩니다.  
   
 ## <a name="required-ui-automation-events"></a>필요한 UI 자동화 이벤트  
- 다음 표에서는 모든 데이터 항목 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여 줍니다. 이벤트에 대한 자세한 내용은 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)를 참조하세요.  
+ 다음 표에서는 모든 데이터 항목 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여 줍니다. 이벤트에 대한 자세한 내용은 [UI Automation Events Overview](ui-automation-events-overview.md)를 참조하세요.  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|Support(지원)|노트|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
@@ -90,7 +90,7 @@ ms.locfileid: "69912005"
 ## <a name="dataitem-control-type-example"></a>DataItem 컨트롤 형식 예제  
  다음 이미지는 열에 대한 다양한 정보를 지원하는 목록 뷰 컨트롤의 DataItem 컨트롤 형식을 보여 줍니다.  
   
- ![두 데이터 항목을 포함 하는 목록 뷰 컨트롤의 그래픽](../../../docs/framework/ui-automation/media/uiauto-data-grid-detailed.GIF "uiauto_data_grid_detailed")  
+ ![두 데이터 항목을 포함 하는 목록 뷰 컨트롤의 그래픽](./media/uiauto-data-grid-detailed.GIF "uiauto_data_grid_detailed")  
   
  다음은 데이터 항목 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 보기입니다. 각 자동화 요소에 대한 컨트롤 패턴은 괄호 안에 표시됩니다. Group "Contoso"는 Data Grid 호스트 컨트롤 표의 일부이기도 합니다.  
   
@@ -103,5 +103,5 @@ ms.locfileid: "69912005"
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.Automation.ControlType.DataItem>
-- [UI 자동화 컨트롤 형식 개요](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
-- [UI 자동화 개요](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [UI 자동화 컨트롤 형식 개요](ui-automation-control-types-overview.md)
+- [UI 자동화 개요](ui-automation-overview.md)

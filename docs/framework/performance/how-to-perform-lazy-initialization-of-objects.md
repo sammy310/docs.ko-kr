@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28463bfd3e54e49461d9ce785d26e5dfca62e438
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6fba47c0ff6425a375715dcd4c08d62e0f7f598c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61722993"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046473"
 ---
 # <a name="how-to-perform-lazy-initialization-of-objects"></a>방법: 개체의 초기화 지연 수행
-<xref:System.Lazy%601?displayProperty=nameWithType> 클래스는 개체의 인스턴스화 및 초기화 지연을 수행하는 작업을 간소화합니다. 지연 방식으로 개체를 초기화하면 개체가 필요하지 않을 경우 개체를 전혀 만들지 않아도 되고, 필요한 경우에도 개체에 처음 액세스할 때까지 초기화를 연기할 수 있습니다. 자세한 내용은 [초기화 지연](../../../docs/framework/performance/lazy-initialization.md)을 참조하세요.  
+<xref:System.Lazy%601?displayProperty=nameWithType> 클래스는 개체의 인스턴스화 및 초기화 지연을 수행하는 작업을 간소화합니다. 지연 방식으로 개체를 초기화하면 개체가 필요하지 않을 경우 개체를 전혀 만들지 않아도 되고, 필요한 경우에도 개체에 처음 액세스할 때까지 초기화를 연기할 수 있습니다. 자세한 내용은 [초기화 지연](lazy-initialization.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 <xref:System.Lazy%601>로 값을 초기화하는 방법을 보여 줍니다. `someCondition` 변수를 true 또는 false로 설정하는 일부 기타 코드에 따라 지연 변수가 필요하지 않을 수 있다고 가정합니다.  
@@ -79,4 +79,4 @@ End Sub
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>
-- [초기화 지연](../../../docs/framework/performance/lazy-initialization.md)
+- [초기화 지연](lazy-initialization.md)

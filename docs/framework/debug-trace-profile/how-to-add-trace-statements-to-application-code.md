@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 626e9823bbf7d379a21ae353a9189485259f3c42
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4517da87603dcdd398d536cd9bf9e441430be375
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948019"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052734"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>방법: 애플리케이션 코드에 추적 문 추가
 추적에 가장 자주 사용 되는 메서드는 출력을 수신기에 쓰기 위한 메서드입니다. **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**및 **Fail**이 있습니다. 이러한 메서드는 두 가지 범주로 나눌 수 있습니다. **WriteIf**, **WriteLineIf**및 **Assert** 는 부울 조건을 테스트 하 고 조건의 값을 기준으로 작성 하거나 쓰지 않고 모든 내보내기 출력을 무조건 **작성**, **WriteLine**및 **실패** 합니다. **WriteIf** 및 **WriteLineIf** 메서드는 조건이 `true`인 경우 출력을 내보내며 **Assert** 메서드는 조건이 `false`인 경우 출력을 내보냅니다.  
@@ -90,7 +90,7 @@ ms.locfileid: "69948019"
 - <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>
-- [응용 프로그램 추적 및 조율](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [방법: 추적 스위치 만들기, 초기화 및 구성](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
-- [추적 스위치](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [추적 수신기](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [응용 프로그램 추적 및 조율](tracing-and-instrumenting-applications.md)
+- [방법: 추적 스위치 만들기, 초기화 및 구성](how-to-create-initialize-and-configure-trace-switches.md)
+- [추적 스위치](trace-switches.md)
+- [추적 수신기](trace-listeners.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: bee1e9b1-50a8-4c89-9cd9-7dd6b2458187
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ca3b28d0d27af0a752de894f5856b76939b01e09
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 07b6c674e2608ac46bf9870ae26afc2fc1ec99ba
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967250"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052345"
 ---
 # <a name="raceonrcwcleanup-mda"></a>raceOnRCWCleanup MDA
 `raceOnRCWCleanup` MDA(관리 디버깅 도우미)는 CLR(공용 언어 런타임)에서 <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType> 메서드와 같은 명령을 사용하여 해제 호출을 수행할 때 RCW( [런타임 호출 가능 래퍼](../../standard/native-interop/runtime-callable-wrapper.md))가 사용 중임을 발견할 경우 활성화됩니다.  
@@ -49,5 +49,5 @@ ms.locfileid: "69967250"
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)
+- [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)
+- [interop 마샬링](../interop/interop-marshaling.md)

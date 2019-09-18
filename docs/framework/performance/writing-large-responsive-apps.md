@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 916523acf1d270830a2cb1fb5ae50e26d055404c
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 4e4b5822306fa8f4e6b4437f4a1bef92b53a86b9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927022"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046140"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>대형 응답성 .NET Framework 응용 프로그램 작성
 이 문서에서는 규모가 큰 .NET Framework 앱이나 파일 또는 데이터베이스와 같이 많은 양의 데이터를 처리하는 앱의 성능을 향상시키기 위한 팁을 제공합니다. 이러한 팁은 C# 및 Visual Basic 컴파일러를 관리 코드로 다시 작성하면서 수집되었으며, C# 컴파일러의 실제 몇 가지 예를 포함하고 있습니다. 
@@ -39,7 +39,7 @@ ms.locfileid: "70927022"
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>팩트 3: 모든 차이점을 지 원하는 좋은 도구  
  좋은 도구를 사용하면 가장 큰 성능 문제(CPU, 메모리 또는 디스크)에 신속하게 파고들어 해당 병목 현상을 일으키는 코드를 찾을 수 있습니다. Microsoft는 [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling) 및 [perfview](https://www.microsoft.com/download/details.aspx?id=28567)와 같은 다양 한 성능 도구를 제공 합니다. 
   
- PerfView는 디스크 I/O, GC 이벤트 및 메모리와 같은 깊이 있는 문제에 집중하는 데 도움을 주는 놀랄 만큼 강력한 도구로서 무료입니다. 성능 관련 ETW([Windows용 이벤트 추적](../../../docs/framework/wcf/samples/etw-tracing.md)) 이벤트를 캡처하여 앱, 프로세스, 스택 및 스레드 단위 정보를 쉽게 볼 수 있습니다. PerfView는 앱에서 할당하는 메모리의 양과 종류뿐만 아니라 함수 또는 호출 스택으로 인해 메모리가 할당되는 양이 어느 정도인지를 보여 줍니다. 자세한 내용은 도구에 포함된 다양한 도움말 항목, 데모 및 비디오(예: Channel 9의 [PerfView 자습서](https://channel9.msdn.com/Series/PerfView-Tutorial))를 참조하세요. 
+ PerfView는 디스크 I/O, GC 이벤트 및 메모리와 같은 깊이 있는 문제에 집중하는 데 도움을 주는 놀랄 만큼 강력한 도구로서 무료입니다. 성능 관련 ETW([Windows용 이벤트 추적](../wcf/samples/etw-tracing.md)) 이벤트를 캡처하여 앱, 프로세스, 스택 및 스레드 단위 정보를 쉽게 볼 수 있습니다. PerfView는 앱에서 할당하는 메모리의 양과 종류뿐만 아니라 함수 또는 호출 스택으로 인해 메모리가 할당되는 양이 어느 정도인지를 보여 줍니다. 자세한 내용은 도구에 포함된 다양한 도움말 항목, 데모 및 비디오(예: Channel 9의 [PerfView 자습서](https://channel9.msdn.com/Series/PerfView-Tutorial))를 참조하세요. 
   
 ### <a name="fact-4-its-all-about-allocations"></a>팩트 4: 할당에 대 한 모든 것입니다.  
  응답성 있는 .NET Framework 앱을 빌드하는 것은 거품 정렬 대신 빠른 정렬을 사용하는 등 알고리즘에 대한 문제라고 생각할 수 있지만 그렇지 않습니다. 응답성 있는 앱을 빌드하는 데 있어서 가장 큰 요인은 메모리를 할당하는 것이며, 특히 앱의 규모가 매우 크거나 앱이 많은 양의 데이터를 처리하는 경우에 그렇습니다. 
@@ -465,7 +465,7 @@ class Compilation { /*...*/
 
 - [이 항목의 프레젠테이션 비디오](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
 - [초보자를 위한 성능 프로파일링 지침](/visualstudio/profiling/beginners-guide-to-performance-profiling)
-- [성능](../../../docs/framework/performance/index.md)
+- [성능](index.md)
 - [.NET 성능 팁](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
 - [Channel 9 PerfView 자습서](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [.NET Compiler Platform SDK](../../csharp/roslyn-sdk/index.md)

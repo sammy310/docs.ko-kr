@@ -3,17 +3,17 @@ title: WIF 및 웹 팜
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: 09d5f3f745f170439a7fbf160b78439c103623b9
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 32d2875ebe0a46b9f9b1856ed70a30114793e492
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851528"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045246"
 ---
 # <a name="wif-and-web-farms"></a>WIF 및 웹 팜
 WIF(Windows Identity Foundation)를 사용하여 웹 팜에 배포된 RP(신뢰 당사자) 애플리케이션의 리소스를 보호하는 경우 특정 단계를 수행하여 WIF가 팜의 여러 컴퓨터에서 실행되는 RP 애플리케이션 인스턴스의 토큰을 처리할 수 있도록 해야 합니다. 이 처리에는 세션 토큰 시그니처의 유효성 검사, 세션 토큰 암호화 및 암호 해독, 세션 토큰 캐싱 및 재생된 보안 토큰 검색이 포함됩니다.  
   
- 일반적인 경우 WIF가 RP 애플리케이션의 리소스를 보호하는 데 사용되는 경우 RP가 단일 컴퓨터 또는 웹 팜에서 실행되는지에 관계없이 STS(보안 토큰 서비스)에서 가져온 보안 토큰에 따라 클라이언트와 세션이 설정됩니다. 이렇게 하면 클라이언트가 WIF를 사용하여 보호되는 모든 애플리케이션 리소스에 대해 STS에서 인증하지 않아도 됩니다. WIF의 세션 처리 방법에 대한 자세한 내용은 [WIF 세션 관리](../../../docs/framework/security/wif-session-management.md)를 참조하세요.  
+ 일반적인 경우 WIF가 RP 애플리케이션의 리소스를 보호하는 데 사용되는 경우 RP가 단일 컴퓨터 또는 웹 팜에서 실행되는지에 관계없이 STS(보안 토큰 서비스)에서 가져온 보안 토큰에 따라 클라이언트와 세션이 설정됩니다. 이렇게 하면 클라이언트가 WIF를 사용하여 보호되는 모든 애플리케이션 리소스에 대해 STS에서 인증하지 않아도 됩니다. WIF의 세션 처리 방법에 대한 자세한 내용은 [WIF 세션 관리](wif-session-management.md)를 참조하세요.  
   
  기본 설정이 사용되는 경우 WIF는 다음을 수행합니다.  
   
@@ -40,7 +40,7 @@ WIF(Windows Identity Foundation)를 사용하여 웹 팜에 배포된 RP(신뢰 
     </securityTokenHandlers>  
     ```  
   
-- <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>에서 파생하고 분산 캐싱, 즉 RP를 실행할 수 있는 팜의 모든 컴퓨터에서 액세스할 수 있는 캐시를 구현합니다. 구성 파일에 [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) 요소를 지정하여 분산 캐시를 사용하도록 RP를 구성합니다. 파생 클래스의 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> 메서드를 재정의하여 필요한 경우 `<sessionSecurityTokenCache>` 요소의 자식 요소를 구현할 수 있습니다.  
+- <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>에서 파생하고 분산 캐싱, 즉 RP를 실행할 수 있는 팜의 모든 컴퓨터에서 액세스할 수 있는 캐시를 구현합니다. 구성 파일에 [\<sessionSecurityTokenCache>](../configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) 요소를 지정하여 분산 캐시를 사용하도록 RP를 구성합니다. 파생 클래스의 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> 메서드를 재정의하여 필요한 경우 `<sessionSecurityTokenCache>` 요소의 자식 요소를 구현할 수 있습니다.  
   
     ```xml  
     <caches>  
@@ -52,7 +52,7 @@ WIF(Windows Identity Foundation)를 사용하여 웹 팜에 배포된 RP(신뢰 
   
      분산 캐싱을 구현하는 한 가지 방법은 사용자 지정 캐시에 대한 WCF 프런트 엔드를 제공하는 것입니다. WCF 캐싱 서비스를 구현하는 방법에 대한 자세한 내용은 [WCF 캐싱 서비스](#BKMK_TheWCFCachingService)를 참조하세요. RP 애플리케이션이 캐싱 서비스 호출에 사용할 수 있는 WCF 클라이언트를 구현하는 방법에 대한 자세한 내용은 [WCF 캐싱 클라이언트](#BKMK_TheWCFClient)를 참조하세요.  
   
-- 응용 프로그램이 재생된 토큰을 검색하는 경우 <xref:System.IdentityModel.Tokens.TokenReplayCache>에서 파생하고 [\<tokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) 구성 요소의 토큰 재생 캐싱 서비스를 가리켜 토큰 재생 캐시에 대한 유사한 분산 캐싱 전략을 따라야 합니다.  
+- 응용 프로그램이 재생된 토큰을 검색하는 경우 <xref:System.IdentityModel.Tokens.TokenReplayCache>에서 파생하고 [\<tokenReplayCache>](../configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) 구성 요소의 토큰 재생 캐싱 서비스를 가리켜 토큰 재생 캐시에 대한 유사한 분산 캐싱 전략을 따라야 합니다.  
   
 > [!IMPORTANT]
 > 이 항목의 모든 예제 XML 및 코드는 [ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408) 샘플에서 가져온 것입니다.  
@@ -137,7 +137,7 @@ namespace WcfSessionSecurityTokenCacheService
   
 <a name="BKMK_TheWCFClient"></a>   
 ## <a name="the-wcf-caching-client"></a>WCF 캐싱 클라이언트  
- 이 섹션에서는 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>에서 파생되는 클래스의 구현과 캐싱 서비스에 대한 대리자 호출을 보여 줍니다. 다음 XML과 같이 [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) 요소를 통해 이 클래스를 사용하도록 RP 응용 프로그램을 구성합니다.  
+ 이 섹션에서는 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>에서 파생되는 클래스의 구현과 캐싱 서비스에 대한 대리자 호출을 보여 줍니다. 다음 XML과 같이 [\<sessionSecurityTokenCache&gt;](../configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) 요소를 통해 이 클래스를 사용하도록 RP 애플리케이션을 구성합니다.  
   
 ```xml  
 <caches>  
@@ -255,4 +255,4 @@ namespace CacheLibrary
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>
 - <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>
-- [WIF 세션 관리](../../../docs/framework/security/wif-session-management.md)
+- [WIF 세션 관리](wif-session-management.md)

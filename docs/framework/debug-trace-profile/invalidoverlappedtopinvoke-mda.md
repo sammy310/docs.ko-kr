@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 28876047-58bd-4fed-9452-c7da346d67c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d5709e4ef883ba2750f1efd0ae2e9a72f1cf43b0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7e9c7e1038591e5e8ea6f62b37ff4d02b2b6a9c5
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967298"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052551"
 ---
 # <a name="invalidoverlappedtopinvoke-mda"></a>invalidOverlappedToPinvoke MDA
 `invalidOverlappedToPinvoke` MDA(관리 디버깅 도우미)는 가비지 수집 힙에서 만들어지지 않은 겹치는 포인터가 특정 Win32 함수에 전달되면 활성화됩니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "69967298"
   
  다음 표에서는 이 MDA가 추적하는 함수를 보여 줍니다.  
   
-|Module|함수|  
+|Module|기능|  
 |------------|--------------|  
 |HttpApi.dll|`HttpReceiveHttpRequest`|  
 |IpHlpApi.dll|`NotifyAddrChange`|  
@@ -75,5 +75,5 @@ ms.locfileid: "69967298"
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)
+- [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)
+- [interop 마샬링](../interop/interop-marshaling.md)

@@ -2,12 +2,12 @@
 title: 배열
 description: F# 프로그래밍 언어로 배열을 만들고 사용 하는 방법에 대해 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 142d2c8d9aa7247e1490867a7bb905e2e7fec41e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: ae8f3cfc84fbba4cac496d4221d140dadec25e10
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630047"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082962"
 ---
 # <a name="arrays"></a>배열
 
@@ -69,7 +69,7 @@ ms.locfileid: "68630047"
 
 출력은 다음과 같습니다.
 
-```
+```console
 0 1 2 3 4 5 6 7 8 9
 ```
 
@@ -81,7 +81,7 @@ ms.locfileid: "68630047"
 
 출력은 다음과 같습니다.
 
-```
+```console
 Length of empty array: 0
 Area of floats set to 5.0: [|5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0|]
 Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
@@ -93,7 +93,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 
 위의 코드의 출력은 다음과 같습니다.
 
-```
+```console
 [|Test1; Test2; |]
 [|; Test2; |]
 ```
@@ -106,7 +106,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 
 출력은 하위 배열을 요소 5에서 시작 하 고 10 개의 요소를 포함 하는 것을 보여 줍니다.
 
-```
+```console
 [|5; 6; 7; 8; 9; 10; 11; 12; 13; 14|]
 ```
 
@@ -118,7 +118,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 
 위의 코드는 다음과 같이 출력 됩니다.
 
-```
+```console
 [|1; 2; 3; 4; 5; 6|]
 ```
 
@@ -128,7 +128,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 
 위의 코드는 다음과 같이 출력 됩니다.
 
-```
+```console
 [|3.0; 15.0; 35.0; 63.0; 99.0|]
 ```
 
@@ -138,7 +138,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 
 위의 코드는 다음과 같이 출력 됩니다.
 
-```
+```console
 [|0; 1; 0; 1; 2; 3; 4; 5; 0; 1; 2; 3; 4; 5; 6; 7; 8; 9; 10|]
 ```
 
@@ -148,7 +148,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 
 위의 코드는 다음과 같이 출력 됩니다.
 
-```
+```console
 [|(1, 1, 1); (1, 2, 2); (1, 3, 3); (2, 1, 2); (2, 2, 4); (2, 3, 6); (3, 1, 3);
 (3, 2, 6); (3, 3, 9)|]
 ```
@@ -159,7 +159,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 
 위의 코드는 다음과 같이 출력 됩니다.
 
-```
+```console
 [|2; 4; 6; 8; 10|]
 ```
 
@@ -169,7 +169,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 
 위의 코드는 다음과 같이 출력 됩니다.
 
-```
+```console
 "Hello world!"
 ```
 
@@ -179,7 +179,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 
 출력은 다음과 같습니다.
 
-```
+```console
 [|100; 36; 16; 4|]
 ```
 
@@ -308,7 +308,7 @@ module test =
 
 위의 코드는 다음과 같이 출력 됩니다.
 
-```
+```console
 true
 false
 false
@@ -321,7 +321,7 @@ true
 
 이러한 예제에 대 한 출력은 다음과 같습니다.
 
-```
+```console
 false
 true
 true
@@ -338,7 +338,7 @@ false
 
 출력은 다음과 같습니다.
 
-```
+```console
 The first element that is both a square and a cube is 64 and its index is 62.
 ```
 
@@ -350,7 +350,7 @@ The first element that is both a square and a cube is 64 and its index is 62.
 
 출력은 다음과 같습니다.
 
-```
+```console
 Found an element: 1
 Found an element: 729
 ```
@@ -363,7 +363,7 @@ Found an element: 729
 
 출력은 다음과 같습니다.
 
-```
+```console
 Found an element 1 with square root 1 and cube root 1.
 Found an element 64 with square root 8 and cube root 4.
 Found an element 729 with square root 27 and cube root 9.
@@ -394,7 +394,7 @@ Found an element 4096 with square root 64 and cube root 16.
 
 출력은 다음과 같습니다.
 
-```
+```console
 [|1; 2; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 23; 24; 25|]
 ```
 

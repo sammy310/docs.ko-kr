@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, properties
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-ms.openlocfilehash: d7069769d381a1806f28d538319a49e0cc9cce60
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 59d65601a37c9aba63708748a82fd5e85261b75b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914507"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042138"
 ---
 # <a name="ui-automation-properties-overview"></a>UI 자동화 속성 개요
 > [!NOTE]
@@ -20,9 +20,9 @@ ms.locfileid: "69914507"
   
  이 섹션에서는 광범위한 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 속성 개요를 제공합니다. 보다 구체적인 정보는 다음 항목에서 제공됩니다.  
   
-- [클라이언트의 UI 자동화 속성](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
+- [클라이언트의 UI 자동화 속성](ui-automation-properties-for-clients.md)  
   
-- [서버 쪽 UI 자동화 공급자 구현](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
+- [서버 쪽 UI 자동화 공급자 구현](server-side-ui-automation-provider-implementation.md)  
   
 <a name="Property_Identifiers"></a>   
 ## <a name="property-identifiers"></a>속성 식별자  
@@ -55,7 +55,7 @@ ms.locfileid: "69914507"
 ## <a name="properties-by-category"></a>범주별 속성  
  다음 표에서는 및 <xref:System.Windows.Automation.AutomationElement> <xref:System.Windows.Automation.AutomationElementIdentifiers>에서 id를 찾을 수 있는 속성을 분류 합니다. 이러한 속성은 모든 컨트롤에 공통됩니다. 일부를 제외한 모든 속성은 공급자 애플리케이션의 수명 동안 정적일 가능성이 높습니다. 대부분의 동적 속성은 컨트롤 패턴과 연결되어 있습니다.  
   
- **속성 액세스** 열에는 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> 및 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>외에도 각 속성에 대한 기타 접근자가 나열됩니다. 클라이언트 애플리케이션에서 속성을 가져오는 방법에 대한 자세한 내용은 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)을 참조하세요.  
+ **속성 액세스** 열에는 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> 및 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>외에도 각 속성에 대한 기타 접근자가 나열됩니다. 클라이언트 애플리케이션에서 속성을 가져오는 방법에 대한 자세한 내용은 [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)을 참조하세요.  
   
 > [!NOTE]
 > 각 속성에 대한 특정 정보를 보려면 **속성 액세스** 열에 있는 링크를 클릭하세요.  
@@ -161,9 +161,9 @@ ms.locfileid: "69914507"
   
 ## <a name="see-also"></a>참고자료
 
-- [UI 자동화 클라이언트의 캐싱](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
-- [클라이언트의 UI 자동화 속성](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
-- [서버 쪽 UI 자동화 공급자 구현](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
-- [속성 조건을 기반으로 UI 자동화 요소 찾기](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
-- [UI 자동화 공급자에서 속성 반환](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
-- [UI 자동화 공급자에서 이벤트 발생](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
+- [UI 자동화 클라이언트의 캐싱](caching-in-ui-automation-clients.md)
+- [클라이언트의 UI 자동화 속성](ui-automation-properties-for-clients.md)
+- [서버 쪽 UI 자동화 공급자 구현](server-side-ui-automation-provider-implementation.md)
+- [속성 조건을 기반으로 UI 자동화 요소 찾기](find-a-ui-automation-element-based-on-a-property-condition.md)
+- [UI 자동화 공급자에서 속성 반환](return-properties-from-a-ui-automation-provider.md)
+- [UI 자동화 공급자에서 이벤트 발생](raise-events-from-a-ui-automation-provider.md)

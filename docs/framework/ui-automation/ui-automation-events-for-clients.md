@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: b56fc09b33a846fe94a52e19dc4b9c806d79c121
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: f4ce2d996d5a1a6ecd149118b7499650882a732f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044100"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042287"
 ---
 # <a name="ui-automation-events-for-clients"></a>클라이언트에 대한 UI 자동화 이벤트
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "70044100"
 > [!NOTE]
 > 가능한 모든 이벤트가 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 공급자에서 발생되지는 않습니다. 예를 들어, 일부 속성의 경우 변경된 사항이 있더라도 표준 프록시 공급자가 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 및 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 컨트롤에 대한 이벤트를 발생시키지 않습니다.  
   
- 광범위 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트 보기는 [UI 자동화 이벤트 개요](../../../docs/framework/ui-automation/ui-automation-events-overview.md)를 참조 하세요.  
+ 광범위 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트 보기는 [UI 자동화 이벤트 개요](ui-automation-events-overview.md)를 참조 하세요.  
   
 <a name="Subscribing_to_Events"></a>   
 ## <a name="subscribing-to-events"></a>이벤트 구독  
@@ -44,7 +44,7 @@ ms.locfileid: "70044100"
 > 창이 닫힌 이벤트를 처리하려면 <xref:System.Windows.Automation.WindowClosedEventArgs>로 이벤트 처리기에 전달되는 인수 형식을 캐스팅합니다. 창의 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 요소가 더 이상 유효하지 않기 때문에 `sender` 매개 변수를 사용하여 검색을 검색할 수 없습니다. 대신 <xref:System.Windows.Automation.WindowClosedEventArgs.GetRuntimeId%2A>를 사용해야 합니다.  
   
 > [!CAUTION]
-> 애플리케이션이 자체 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]에서 이벤트를 검색하려는 경우에는 애플리케이션의 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 스레드를 사용하여 이벤트를 구독하거나 구독을 취소하지 않아야 합니다. 이렇게 하면 예기치 않은 동작이 발생할 수 있습니다. 자세한 내용은 [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)을 참조하세요.  
+> 애플리케이션이 자체 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]에서 이벤트를 검색하려는 경우에는 애플리케이션의 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 스레드를 사용하여 이벤트를 구독하거나 구독을 취소하지 않아야 합니다. 이렇게 하면 예기치 않은 동작이 발생할 수 있습니다. 자세한 내용은 [UI Automation Threading Issues](ui-automation-threading-issues.md)을 참조하세요.  
   
  종료되거나 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트가 더 이상 애플리케이션에 필요하지 않는 경우에는 UI 자동화 클라이언트가 다음 메서드 중 하나를 호출해야 합니다.  
   
@@ -55,11 +55,11 @@ ms.locfileid: "70044100"
 |<xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>|<xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>를 사용하여 등록된 이벤트 처리기의 등록을 취소합니다.|  
 |<xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>|등록된 모든 이벤트 처리기를 등록 취소합니다.|  
   
- 예제 코드는 [UI 자동화 이벤트 구독](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)을 참조 하세요.  
+ 예제 코드는 [UI 자동화 이벤트 구독](subscribe-to-ui-automation-events.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고자료
 
-- [UI 자동화 이벤트 구독](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
-- [UI 자동화 이벤트 개요](../../../docs/framework/ui-automation/ui-automation-events-overview.md)
-- [UI 자동화 속성 개요](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)
+- [UI 자동화 이벤트 구독](subscribe-to-ui-automation-events.md)
+- [UI 자동화 이벤트 개요](ui-automation-events-overview.md)
+- [UI 자동화 속성 개요](ui-automation-properties-overview.md)
 - [가는 주요 샘플 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)

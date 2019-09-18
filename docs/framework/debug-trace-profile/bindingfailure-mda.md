@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e904d452b9f4a1b172d35984b752c0d97228338
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93c426cce792c8f30a3551e2d4626736dd67278f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875084"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052953"
 ---
 # <a name="bindingfailure-mda"></a>bindingFailure MDA
 
@@ -46,7 +46,7 @@ ms.locfileid: "61875084"
 
 - `bindingFailure` MDA에서 제공하는 데이터를 사용하여 원인 확인:
 
-  - [Fuslogvw.exe(어셈블리 바인딩 로그 뷰어)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)를 실행하여 어셈블리 바인더를 통해 생성된 오류 로그를 확인합니다.
+  - [Fuslogvw.exe(어셈블리 바인딩 로그 뷰어)](../tools/fuslogvw-exe-assembly-binding-log-viewer.md)를 실행하여 어셈블리 바인더를 통해 생성된 오류 로그를 확인합니다.
 
   - 어셈블리가 요청된 위치에 있는지 확인합니다. <xref:System.Reflection.Assembly.LoadFrom%2A> 및 <xref:System.Reflection.Assembly.LoadFile%2A> 메서드의 경우 요청된 위치를 쉽게 확인할 수 있습니다. 어셈블리 ID를 사용하여 바인딩하는 <xref:System.Reflection.Assembly.Load%2A> 메서드의 경우 애플리케이션 도메인의 <xref:System.AppDomain.BaseDirectory%2A> 속성 프로브 경로와 전역 어셈블리 캐시에서 해당 ID와 일치하는 어셈블리를 찾아야 합니다.
 
@@ -107,4 +107,4 @@ namespace ConsoleApplication1
 
 ## <a name="see-also"></a>참고자료
 
-- [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)

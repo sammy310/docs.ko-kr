@@ -2,12 +2,12 @@
 title: 예외 invalidArg 함수
 description: "' Invalidarg F# ' 함수에서 인수 예외를 생성 하는 방법에 대해 알아봅니다."
 ms.date: 05/16/2016
-ms.openlocfilehash: 010dbfe313f539093b4ee7a19984ef54500b072d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6b1c5fdb5a541da336977d3a67d471302edb36b6
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630299"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083019"
 ---
 # <a name="exceptions-the-invalidarg-function"></a>예외 invalidArg 함수
 
@@ -29,7 +29,7 @@ invalidArg parameter-name error-message-string
 
 출력은 다음과 같은 스택 추적 (표시 되지 않음)을 따릅니다.
 
-```
+```console
 December
 January
 System.ArgumentException: Month parameter out of range.

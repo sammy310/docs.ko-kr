@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec97861a9d748767199da3e1fb7f53361c3a48ee
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 867157b329218b79c8cc1255b2158bbe83666531
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966118"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045362"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>비관리 코드에 대한 보안 코딩 지침
 일부 라이브러리 코드는 비관리 코드(예: Win32와 같은 네이티브 코드 API)를 호출해야 합니다. 이는 관리 코드에 대한 보안 경계를 벗어나야 함을 의미하므로 주의해야 합니다. 코드가 보안 중립적인 경우 코드와 코드를 호출하는 다른 코드 둘 다에 비관리 코드 권한(<xref:System.Security.Permissions.SecurityPermission> 플래그가 지정된 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> )이 있어야 합니다.  
   
- 그러나 호출자가 이러한 강력한 권한을 갖는 것은 부적절한 경우가 많습니다. 이러한 경우 [래퍼 코드 보안](../../../docs/framework/misc/securing-wrapper-code.md)에 설명된 관리되는 래퍼 또는 라이브러리 코드와 마찬가지로 신뢰할 수 있는 코드가 중개자가 될 수 있습니다. 내부 비관리 코드 기능이 완전히 안전한 경우 직접 노출할 수 있지만, 그러지 않은 경우 먼저 적절한 권한 검사(요구)가 필요합니다.  
+ 그러나 호출자가 이러한 강력한 권한을 갖는 것은 부적절한 경우가 많습니다. 이러한 경우 [래퍼 코드 보안](../misc/securing-wrapper-code.md)에 설명된 관리되는 래퍼 또는 라이브러리 코드와 마찬가지로 신뢰할 수 있는 코드가 중개자가 될 수 있습니다. 내부 비관리 코드 기능이 완전히 안전한 경우 직접 노출할 수 있지만, 그러지 않은 경우 먼저 적절한 권한 검사(요구)가 필요합니다.  
   
  코드에서 비관리 코드를 호출하지만 호출자에게 비관리 코드에 액세스할 수 있는 권한을 요구하지 않으려는 경우 해당 권한을 어설션해야 합니다. 어설션은 프레임에서 스택 워크를 차단합니다. 이 프로세스에서 보안 허점을 만들지 않도록 주의해야 합니다. 일반적으로 이 경우 호출자에게 적절한 권한을 요구한 다음 비관리 코드를 사용하여 해당 권한이 허용하는 작업만 수행하고 다른 작업을 수행하지 않도록 해야 합니다. 경우에 따라(예: 시간 가져오기 함수) 보안 검사 없이 비관리 코드를 호출자에게 직접 노출할 수 있습니다. 어떤 경우든 어설션되는 코드가 보안에 대한 책임을 져야 합니다.  
   

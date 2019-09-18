@@ -2,12 +2,12 @@
 title: 유연한 형식
 description: 매개 변수, 변수 F# 또는 값에 지정 된 형식과 호환 되는 형식이 있음을 나타내는 유연한 형식 주석을 사용 하는 방법에 대해 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 43caa6cd35630df648beda5cc43cffae2ecd6f6a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: bf05f78f163d1f9c73c667df60925b66a5315627
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630268"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083073"
 ---
 # <a name="flexible-types"></a>유연한 형식
 
@@ -57,7 +57,7 @@ val concat: sequences:seq<#seq<'T>> -> seq<'T>
 
 출력은 다음과 같습니다.
 
-```
+```console
 seq [1; 2; 3; 4; ...]
 seq [1; 2; 3; 4; ...]
 seq [1; 2; 3; 4; ...]

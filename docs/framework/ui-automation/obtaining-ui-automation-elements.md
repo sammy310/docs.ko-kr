@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: 9adf8078f52653940fe9ba5caa4a256a08cc489c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 46de1b5de8ef7585919d331e6bf4b1537739ae1d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044143"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042884"
 ---
 # <a name="obtaining-ui-automation-elements"></a>UI 자동화 요소 가져오기
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "70044143"
  이 항목에서는 <xref:System.Windows.Automation.AutomationElement> 요소에 대한 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 개체를 가져오는 다양한 방법을 설명합니다.  
   
 > [!CAUTION]
-> 클라이언트 애플리케이션이 자체 사용자 인터페이스에서 요소를 찾으려고 시도하는 경우 별도 스레드에서 모든 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 을 호출해야 합니다. 자세한 내용은 [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)을 참조하세요.  
+> 클라이언트 애플리케이션이 자체 사용자 인터페이스에서 요소를 찾으려고 시도하는 경우 별도 스레드에서 모든 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 을 호출해야 합니다. 자세한 내용은 [UI Automation Threading Issues](ui-automation-threading-issues.md)을 참조하세요.  
   
 <a name="The_Root_Element"></a>   
 ## <a name="root-element"></a>루트 요소  
@@ -85,7 +85,7 @@ ms.locfileid: "70044143"
 ### <a name="from-an-event"></a>이벤트에서  
  애플리케이션이 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 수신하면, 이벤트 처리기에 전달된 소스 개체는 <xref:System.Windows.Automation.AutomationElement>입니다. 예를 들어, 포커스 변경 이벤트를 구독한 경우 <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> 에 전달된 소스는 포커스를 받은 요소입니다.  
   
- 자세한 내용은 [Subscribe to UI Automation Events](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)을 참조하세요.  
+ 자세한 내용은 [Subscribe to UI Automation Events](subscribe-to-ui-automation-events.md)을 참조하세요.  
   
 ### <a name="from-a-point"></a>지점에서  
  화면 좌표가 있는 경우(예: 커서 위치) 정적 <xref:System.Windows.Automation.AutomationElement> 메서드를 사용하여 <xref:System.Windows.Automation.AutomationElement.FromPoint%2A> 를 검색할 수 있습니다.  
@@ -98,6 +98,6 @@ ms.locfileid: "70044143"
   
 ## <a name="see-also"></a>참고자료
 
-- [속성 조건을 기반으로 UI 자동화 요소 찾기](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
-- [TreeWalker를 사용하여 UI 자동화 요소 간 탐색](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
-- [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [속성 조건을 기반으로 UI 자동화 요소 찾기](find-a-ui-automation-element-based-on-a-property-condition.md)
+- [TreeWalker를 사용하여 UI 자동화 요소 간 탐색](navigate-among-ui-automation-elements-with-treewalker.md)
+- [UI 자동화 트리 개요](ui-automation-tree-overview.md)

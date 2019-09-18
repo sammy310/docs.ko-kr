@@ -3,12 +3,12 @@ title: WIF 코드 샘플 인덱스
 ms.date: 03/30/2017
 ms.assetid: 6711f01a-4743-43ce-95ab-5e2302a363ea
 author: BrucePerlerMS
-ms.openlocfilehash: b1c875f6c49a3097a75f88b1c25555fd7e891b1f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e90c5f8681706aa0d52c74e6caff08edbf283da
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909404"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045165"
 ---
 # <a name="wif-code-sample-index"></a>WIF 코드 샘플 인덱스
 
@@ -24,7 +24,7 @@ Windows Identity Foundation 4.5에 대한 코드 샘플은 다음과 같습니�
 
 - [ClaimsAwareFormsAuthentication](https://go.microsoft.com/fwlink/?LinkID=248409) - 이 간단한 샘플에서는 .NET 4.5에서 사용자 인증 방법에 관계없이 보안 주체에 클레임을 가져오는 방법을 보여 줍니다.
 
-- [ClaimsBasedAuthorization](https://go.microsoft.com/fwlink/?LinkID=248410)-이 샘플에는 고유한 권한 부여 정책을 적용 하기 위한 ClaimsAuthorizationManager 클래스 및 ClaimsAuthorizationModule을 사용 하는 방법을 보여 줍니다.
+- [ClaimsBasedAuthorization](https://go.microsoft.com/fwlink/?LinkID=248410)-이 샘플에서는 ClaimsAuthorizationManager 클래스와 ClaimsAuthorizationModule를 사용 하 여 고유한 권한 부여 정책을 적용 하는 방법을 보여 줍니다.
 
 - [FederationMetadata](https://go.microsoft.com/fwlink/?LinkID=248411) – 이 샘플에서는 메타데이터 문서의 동적 생성(사용자 지정 STS) 및 동적 사용(신뢰 당사자 애플리케이션)을 둘 다 보여 줍니다.
 
@@ -32,4 +32,4 @@ Windows Identity Foundation 4.5에 대한 코드 샘플은 다음과 같습니�
 
 ## <a name="see-also"></a>참고자료
 
-- [Windows Identity Foundation](../../../docs/framework/security/index.md)
+- [Windows Identity Foundation](index.md)

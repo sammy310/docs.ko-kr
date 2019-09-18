@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, LINQ to SQL
 - WCF Data Services, providers
 ms.assetid: 3b01c2fd-8c6e-4bf5-b38f-9e61bdc3c328
-ms.openlocfilehash: 7a1075b680ec3310e1bd8d712579872333c6ebed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6489e451f3790e38ea821104fd2aca5a8c091ba6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791054"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052996"
 ---
 # <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a>방법: LINQ to SQL 데이터 원본을 사용 하 여 데이터 서비스 만들기 (WCF Data Services)
 
@@ -52,7 +52,7 @@ WCF Data Services 엔터티 데이터를 데이터 서비스로 노출 합니다
 
 2. **새 항목 추가** 대화 상자의 **웹** 범주에서 **WCF 데이터 서비스** 템플릿을 선택 합니다.
 
-   ![Visual Studio 2015의 WCF 데이터 서비스 항목 템플릿](media/wcf-data-service-item-template.png)
+   ![Visual Studio 2015의 WCF 데이터 서비스 항목 템플릿](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
    > **WCF 데이터 서비스** 템플릿은 visual studio 2015에서 사용할 수 있지만 visual studio 2017에서는 사용할 수 없습니다.

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1692b93e09ec972e537e4a375774eeeb865bd58c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: d06d1ef8e1508aefa8c9ed9327b89f58ff6976fa
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043425"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052756"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>방법: 추적 및 디버그를 사용하여 조건부 컴파일
 개발 중에 응용 프로그램을 디버그하는 동안 추적 및 디버깅 출력은 둘 다 Visual Studio의 출력 창으로 이동합니다. 그러나 배포된 애플리케이션에 추적 기능을 포함하려면 **TRACE** 컴파일러 지시문을 사용하도록 설정하여 계측된 애플리케이션을 컴파일해야 합니다. 이렇게 하면 추적 코드를 응용 프로그램의 릴리스 버전으로 컴파일할 수 있습니다. **TRACE** 지시문을 사용하지 않으면 모든 추적 코드가 컴파일 중에 무시되고 배포할 실행 코드에 포함되지 않습니다.  
@@ -97,10 +97,10 @@ ms.locfileid: "70043425"
   
 ## <a name="see-also"></a>참고자료
 
-- [응용 프로그램 추적 및 조율](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [방법: 추적 스위치 만들기, 초기화 및 구성](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
-- [추적 스위치](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [추적 수신기](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-- [방법: 응용 프로그램 코드에 Trace 문 추가](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [응용 프로그램 추적 및 조율](tracing-and-instrumenting-applications.md)
+- [방법: 추적 스위치 만들기, 초기화 및 구성](how-to-create-initialize-and-configure-trace-switches.md)
+- [추적 스위치](trace-switches.md)
+- [추적 수신기](trace-listeners.md)
+- [방법: 응용 프로그램 코드에 Trace 문 추가](how-to-add-trace-statements-to-application-code.md)
 - [방법: Visual Studio 명령줄에 필요한 환경 변수 설정](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [방법: 명령줄 컴파일러 호출](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

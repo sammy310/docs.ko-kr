@@ -2,12 +2,12 @@
 title: 정적으로 확인된 형식 매개 변수
 description: F# 정적으로 확인 된 형식 매개 변수를 사용 하는 방법에 대해 설명 합니다 .이 매개 변수는 컴파일 시간에 런타임에 대신 실제 형식으로 바뀝니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 43ed79b6e5f43a499a27b05e26472b021c455e44
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: bc3310192cdaa5ae4862b8aee46b6152f61da38a
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630586"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082920"
 ---
 # <a name="statically-resolved-type-parameters"></a>정적으로 확인된 형식 매개 변수
 
@@ -15,7 +15,7 @@ ms.locfileid: "68630586"
 
 ## <a name="syntax"></a>구문
 
-```
+```fsharp
 ˆtype-parameter
 ```
 
@@ -52,7 +52,7 @@ when (^a or ^b) : (static member ( + ) : ^a * ^b -> ^d) and
 
 출력은 다음과 같습니다.
 
-```
+```console
 2
 1.500000
 ```

@@ -2,12 +2,12 @@
 title: 활성 패턴
 description: 활성 패턴을 사용 하 여 F# 프로그래밍 언어로 입력 데이터를 세분 하는 명명 된 파티션을 정의 하는 방법을 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 12f423abe05e649e0b527ed04124b991feb5d592
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0c1315f2386b3cea2def698f4725e4c1cf030609
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629955"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083074"
 ---
 # <a name="active-patterns"></a>활성 패턴
 
@@ -42,7 +42,7 @@ let (|identifier|_|) [arguments ] valueToMatch = expression
 
 이 프로그램의 출력은 다음과 같습니다.
 
-```
+```console
 7 is odd
 11 is odd
 32 is even
@@ -54,7 +54,7 @@ let (|identifier|_|) [arguments ] valueToMatch = expression
 
 위의 프로그램의 출력은 다음과 같습니다.
 
-```
+```console
 Red
  Red: 255 Green: 0 Blue: 0
  Hue: 360.000000 Saturation: 1.000000 Brightness: 0.500000
@@ -84,7 +84,7 @@ BlanchedAlmond
 
 이전 예제의 출력은 다음과 같습니다.
 
-```
+```console
 1.100000 : Floating point
 0 : Integer
 0.000000 : Floating point
@@ -98,7 +98,7 @@ Something else : Not matched.
 
 출력은 다음과 같습니다.
 
-```
+```console
 1 is a cube and a square
 8 is a cube
 27 is a cube
@@ -119,7 +119,7 @@ Something else : Not matched.
 
 이전 코드의 출력은 다음과 같습니다.
 
-```
+```console
 12/22/2008 12:00:00 AM 1/1/2009 12:00:00 AM 1/15/2008 12:00:00 AM 12/28/1995 12:00:00 AM
 ```
 
@@ -129,7 +129,7 @@ Something else : Not matched.
 
 이전 코드의 출력은 다음과 같습니다.
 
-```
+```console
 Hello, random citizen!
 Hello, George!
 ```

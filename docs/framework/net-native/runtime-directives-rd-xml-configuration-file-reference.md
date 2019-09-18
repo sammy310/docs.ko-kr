@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7545e1d7079664fd8706bdddac2ff3c8ebc27c7f
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: adfc0ae6d9bdae333daacee525c7775acd5a8029
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988297"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049133"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>런타임 지시문(rd.xml) 구성 파일 참조
 
@@ -37,35 +37,35 @@ ms.locfileid: "69988297"
 
 런타임 지시문 파일은 `http://schemas.microsoft.com/netfx/2013/01/metadata` 네임스페이스를 사용합니다.
 
-루트 요소는 [Directives](../../../docs/framework/net-native/directives-element-net-native.md) 요소입니다. 이 요소는 다음 구조에 나와 있는 것처럼 [Library](../../../docs/framework/net-native/library-element-net-native.md) 요소와 [Application](../../../docs/framework/net-native/application-element-net-native.md) 요소를 포함하지 않을 수도 있고 포함할 수도 있습니다. [Application](../../../docs/framework/net-native/application-element-net-native.md) 요소의 특성은 애플리케이션 전체 런타임 리플렉션 정책을 정의할 수도 있고 자식 요소의 컨테이너로 사용될 수도 있습니다. 반면 [Library](../../../docs/framework/net-native/library-element-net-native.md) 요소는 단순한 컨테이너입니다. [Application](../../../docs/framework/net-native/application-element-net-native.md) 및 [Library](../../../docs/framework/net-native/library-element-net-native.md) 요소의 자식은 리플렉션에 사용할 수 있는 형식, 메서드, 필드, 속성 및 이벤트를 정의합니다.
+루트 요소는 [Directives](directives-element-net-native.md) 요소입니다. 이 요소는 다음 구조에 나와 있는 것처럼 [Library](library-element-net-native.md) 요소와 [Application](application-element-net-native.md) 요소를 포함하지 않을 수도 있고 포함할 수도 있습니다. [Application](application-element-net-native.md) 요소의 특성은 애플리케이션 전체 런타임 리플렉션 정책을 정의할 수도 있고 자식 요소의 컨테이너로 사용될 수도 있습니다. 반면 [Library](library-element-net-native.md) 요소는 단순한 컨테이너입니다. [Application](application-element-net-native.md) 및 [Library](library-element-net-native.md) 요소의 자식은 리플렉션에 사용할 수 있는 형식, 메서드, 필드, 속성 및 이벤트를 정의합니다.
 
-참조 정보를 확인하려면 다음 구조체의 요소를 선택하거나 [런타임 지시문 요소](../../../docs/framework/net-native/runtime-directive-elements.md)를 참조하세요. 다음 계층 구조에서 줄임표는 재귀 구조를 표시합니다. 괄호 안의 정보는 해당 요소가 필수 항목인지 선택적 항목인지와 요소가 사용되는 경우 허용되는 인스턴스 수(하나 또는 여러 개)를 나타냅니다.
+참조 정보를 확인하려면 다음 구조체의 요소를 선택하거나 [런타임 지시문 요소](runtime-directive-elements.md)를 참조하세요. 다음 계층 구조에서 줄임표는 재귀 구조를 표시합니다. 괄호 안의 정보는 해당 요소가 필수 항목인지 선택적 항목인지와 요소가 사용되는 경우 허용되는 인스턴스 수(하나 또는 여러 개)를 나타냅니다.
 
-[지시문](../../../docs/framework/net-native/directives-element-net-native.md) [1:1] [응용 프로그램](../../../docs/framework/net-native/application-element-net-native.md) [0:1] [어셈블리](../../../docs/framework/net-native/assembly-element-net-native.md) [0: m] [네임 스페이스](../../../docs/framework/net-native/namespace-element-net-native.md) [0: m]. 을 선택합니다. 을 선택합니다.
-[유형](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
-[Typeinstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
-[네임 스페이스](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M] [네임 스페이스](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
-[유형](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
-[Typeinstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
-[유형](../../../docs/framework/net-native/type-element-net-native.md) [0: M] [하위 유형](../../../docs/framework/net-native/subtypes-element-net-native.md) (포함 형식의 하위 클래스) O:1 [유형](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
-[Typeinstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
-[Attributeimplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (형식이 포함 된 특성) O:1 [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [메서드](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [매개 변수](../../../docs/framework/net-native/parameter-element-net-native.md) [0: M] [Typeparameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0: M] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [Methodinstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (생성 된 제네릭 메서드) [0: M] [속성](../../../docs/framework/net-native/property-element-net-native.md) [0: M] [필드](../../../docs/framework/net-native/field-element-net-native.md) [0: M] [이벤트](../../../docs/framework/net-native/event-element-net-native.md) [0: M] [Typeinstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M] [유형](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
-[Typeinstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
-[메서드](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [매개 변수](../../../docs/framework/net-native/parameter-element-net-native.md) [0: M] [Typeparameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0: M] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [Methodinstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (생성 된 제네릭 메서드) [0: M] [속성](../../../docs/framework/net-native/property-element-net-native.md) [0: M] [필드](../../../docs/framework/net-native/field-element-net-native.md) [0: M] [이벤트](../../../docs/framework/net-native/event-element-net-native.md) [0: M] [라이브러리](../../../docs/framework/net-native/library-element-net-native.md) [0: M] [어셈블리](../../../docs/framework/net-native/assembly-element-net-native.md) [0: M] [네임 스페이스](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
-[유형](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
-[Typeinstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
-[네임 스페이스](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M] [네임 스페이스](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
-[유형](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
-[Typeinstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
-[유형](../../../docs/framework/net-native/type-element-net-native.md) [0: M] [하위 유형](../../../docs/framework/net-native/subtypes-element-net-native.md) (포함 형식의 하위 클래스) O:1 [유형](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
-[Typeinstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
-[Attributeimplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (형식이 포함 된 특성) O:1 [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [메서드](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [Methodinstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (생성 된 제네릭 메서드) [0: M] [속성](../../../docs/framework/net-native/property-element-net-native.md) [0: M] [필드](../../../docs/framework/net-native/field-element-net-native.md) [0: M] [이벤트](../../../docs/framework/net-native/event-element-net-native.md) [0: M] [Typeinstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M] [유형](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
-[Typeinstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
-[메서드](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [Methodinstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (생성 된 제네릭 메서드) [0: M] [속성](../../../docs/framework/net-native/property-element-net-native.md) [0: M] [필드](../../../docs/framework/net-native/field-element-net-native.md) [0: M] [이벤트](../../../docs/framework/net-native/event-element-net-native.md) [0: M]
+[지시문](directives-element-net-native.md) [1:1] [응용 프로그램](application-element-net-native.md) [0:1] [어셈블리](assembly-element-net-native.md) [0: m] [네임 스페이스](namespace-element-net-native.md) [0: m]. 을 선택합니다. 을 선택합니다.
+[유형](type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
+[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
+[네임 스페이스](namespace-element-net-native.md) [0: M] [네임 스페이스](namespace-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
+[유형](type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
+[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
+[유형](type-element-net-native.md) [0: M] [하위 유형](subtypes-element-net-native.md) (포함 형식의 하위 클래스) O:1 [유형](type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
+[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
+[Attributeimplies](attributeimplies-element-net-native.md) (형식이 포함 된 특성) O:1 [GenericParameter](genericparameter-element-net-native.md) [0: M] [메서드](method-element-net-native.md) [0: M] [매개 변수](parameter-element-net-native.md) [0: M] [Typeparameter](typeparameter-element-net-native.md) [0: M] [GenericParameter](genericparameter-element-net-native.md) [0: M] [Methodinstantiation](methodinstantiation-element-net-native.md) (생성 된 제네릭 메서드) [0: M] [속성](property-element-net-native.md) [0: M] [필드](field-element-net-native.md) [0: M] [이벤트](event-element-net-native.md) [0: M] [Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M] [유형](type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
+[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
+[메서드](method-element-net-native.md) [0: M] [매개 변수](parameter-element-net-native.md) [0: M] [Typeparameter](typeparameter-element-net-native.md) [0: M] [GenericParameter](genericparameter-element-net-native.md) [0: M] [Methodinstantiation](methodinstantiation-element-net-native.md) (생성 된 제네릭 메서드) [0: M] [속성](property-element-net-native.md) [0: M] [필드](field-element-net-native.md) [0: M] [이벤트](event-element-net-native.md) [0: M] [라이브러리](library-element-net-native.md) [0: M] [어셈블리](assembly-element-net-native.md) [0: M] [네임 스페이스](namespace-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
+[유형](type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
+[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
+[네임 스페이스](namespace-element-net-native.md) [0: M] [네임 스페이스](namespace-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
+[유형](type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
+[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
+[유형](type-element-net-native.md) [0: M] [하위 유형](subtypes-element-net-native.md) (포함 형식의 하위 클래스) O:1 [유형](type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
+[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
+[Attributeimplies](attributeimplies-element-net-native.md) (형식이 포함 된 특성) O:1 [GenericParameter](genericparameter-element-net-native.md) [0: M] [메서드](method-element-net-native.md) [0: M] [Methodinstantiation](methodinstantiation-element-net-native.md) (생성 된 제네릭 메서드) [0: M] [속성](property-element-net-native.md) [0: M] [필드](field-element-net-native.md) [0: M] [이벤트](event-element-net-native.md) [0: M] [Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M] [유형](type-element-net-native.md) [0: M]. 을 선택합니다. 을 선택합니다.
+[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 을 선택합니다. 을 선택합니다.
+[메서드](method-element-net-native.md) [0: M] [Methodinstantiation](methodinstantiation-element-net-native.md) (생성 된 제네릭 메서드) [0: M] [속성](property-element-net-native.md) [0: M] [필드](field-element-net-native.md) [0: M] [이벤트](event-element-net-native.md) [0: M]
 
-[Application](../../../docs/framework/net-native/application-element-net-native.md) 요소는 특성을 포함할 수 없거나 [런타임 지시문 및 정책 섹션](#Directives)에서 설명하는 정책 특성을 포함할 수 있습니다.
+[Application](application-element-net-native.md) 요소는 특성을 포함할 수 없거나 [런타임 지시문 및 정책 섹션](#Directives)에서 설명하는 정책 특성을 포함할 수 있습니다.
 
-[Library](../../../docs/framework/net-native/library-element-net-native.md) 요소는 파일 이름 확장명을 포함하지 않는 라이브러리나 어셈블리의 이름을 지정하는 단일 특성(`Name`)을 포함합니다. 예를 들어 다음 [Library](../../../docs/framework/net-native/library-element-net-native.md) 요소는 Extensions.dll 어셈블리에 적용되는 요소입니다.
+[Library](library-element-net-native.md) 요소는 파일 이름 확장명을 포함하지 않는 라이브러리나 어셈블리의 이름을 지정하는 단일 특성(`Name`)을 포함합니다. 예를 들어 다음 [Library](library-element-net-native.md) 요소는 Extensions.dll 어셈블리에 적용되는 요소입니다.
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -82,15 +82,15 @@ ms.locfileid: "69988297"
 
 ## <a name="runtime-directives-and-policy"></a>런타임 지시문 및 정책
 
-[Application](../../../docs/framework/net-native/application-element-net-native.md) 요소 자체와 [Library](../../../docs/framework/net-native/library-element-net-native.md) 및 [Application](../../../docs/framework/net-native/application-element-net-native.md) 요소의 자식 요소는 정책을 표현합니다. 즉, 앱이 프로그램 요소에 리플렉션을 적용할 수 있는 방식을 정의합니다. 정책 형식은 요소의 특성에 의해 정의됩니다(예: `Serialize`). 정책 값은 특성의 값으로 정의됩니다(예: `Serialize="Required"`).
+[Application](application-element-net-native.md) 요소 자체와 [Library](library-element-net-native.md) 및 [Application](application-element-net-native.md) 요소의 자식 요소는 정책을 표현합니다. 즉, 앱이 프로그램 요소에 리플렉션을 적용할 수 있는 방식을 정의합니다. 정책 형식은 요소의 특성에 의해 정의됩니다(예: `Serialize`). 정책 값은 특성의 값으로 정의됩니다(예: `Serialize="Required"`).
 
-요소의 특성으로 지정된 정책은 해당 정책에 대해 값을 지정하지 않는 모든 자식 요소에 적용됩니다. 예를 들어 정책이 [Type](../../../docs/framework/net-native/type-element-net-native.md) 요소로 지정된 경우 정책이 명시적으로 지정되지 않은 모든 포함된 형식 및 멤버에 해당 정책이 적용됩니다.
+요소의 특성으로 지정된 정책은 해당 정책에 대해 값을 지정하지 않는 모든 자식 요소에 적용됩니다. 예를 들어 정책이 [Type](type-element-net-native.md) 요소로 지정된 경우 정책이 명시적으로 지정되지 않은 모든 포함된 형식 및 멤버에 해당 정책이 적용됩니다.
 
-[Application](../../../docs/framework/net-native/application-element-net-native.md), [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md), [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) 및 [Type](../../../docs/framework/net-native/type-element-net-native.md) 요소로 표현할 수 있는 정책은 [Method](../../../docs/framework/net-native/method-element-net-native.md), [Property](../../../docs/framework/net-native/property-element-net-native.md), [Field](../../../docs/framework/net-native/field-element-net-native.md) 및 [Event](../../../docs/framework/net-native/event-element-net-native.md) 요소로 개별 멤버에 대해 표현할 수 있는 정책과는 다릅니다.
+[Application](application-element-net-native.md), [Assembly](assembly-element-net-native.md), [AttributeImplies](attributeimplies-element-net-native.md), [Namespace](namespace-element-net-native.md), [Subtypes](subtypes-element-net-native.md) 및 [Type](type-element-net-native.md) 요소로 표현할 수 있는 정책은 [Method](method-element-net-native.md), [Property](property-element-net-native.md), [Field](field-element-net-native.md) 및 [Event](event-element-net-native.md) 요소로 개별 멤버에 대해 표현할 수 있는 정책과는 다릅니다.
 
 ### <a name="specifying-policy-for-assemblies-namespaces-and-types"></a>어셈블리, 네임스페이스 및 형식에 대한 정책 지정
 
-[Application](../../../docs/framework/net-native/application-element-net-native.md), [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md), [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) 및 [Type](../../../docs/framework/net-native/type-element-net-native.md) 요소는 다음 정책 형식을 지원합니다.
+[Application](application-element-net-native.md), [Assembly](assembly-element-net-native.md), [AttributeImplies](attributeimplies-element-net-native.md), [Namespace](namespace-element-net-native.md), [Subtypes](subtypes-element-net-native.md) 및 [Type](type-element-net-native.md) 요소는 다음 정책 형식을 지원합니다.
 
 - `Activate`. 인스턴스를 활성화할 수 있도록 생성자에 대한 런타임 액세스를 제어합니다.
 
@@ -147,7 +147,7 @@ ms.locfileid: "69988297"
 
 ### <a name="specifying-policy-for-members"></a>멤버에 대한 정책 지정
 
-[Property](../../../docs/framework/net-native/property-element-net-native.md) 및 [Field](../../../docs/framework/net-native/field-element-net-native.md) 요소는 다음 정책 형식을 지원합니다.
+[Property](property-element-net-native.md) 및 [Field](field-element-net-native.md) 요소는 다음 정책 형식을 지원합니다.
 
 - `Browse` - 이 멤버에 대한 정보 쿼리는 제어하지만 런타임 액세스를 사용하도록 설정하지는 않습니다.
 
@@ -155,7 +155,7 @@ ms.locfileid: "69988297"
 
 - `Serialize` - Newtonsoft JSON serializer 등의 라이브러리를 통해 형식 인스턴스를 serialize 및 deserialize할 수 있도록 멤버에 대한 런타임 액세스를 제어합니다. 이 정책은 생성자, 필드 및 속성에 적용할 수 있습니다.
 
-[Method](../../../docs/framework/net-native/method-element-net-native.md) 및 [Event](../../../docs/framework/net-native/event-element-net-native.md) 요소는 다음 정책 형식을 지원합니다.
+[Method](method-element-net-native.md) 및 [Event](event-element-net-native.md) 요소는 다음 정책 형식을 지원합니다.
 
 - `Browse` - 이 멤버에 대한 정보 쿼리는 제어하지만 런타임 액세스를 사용하도록 설정하지는 않습니다.
 
@@ -173,9 +173,9 @@ ms.locfileid: "69988297"
 
 ## <a name="runtime-directives-file-semantics"></a>런타임 지시문 파일 의미
 
-상위 및 하위 요소 둘 다에 대해 정책을 동시에 정의할 수 있습니다. 예를 들어 어셈블리 및 해당 어셈블리에 포함된 일부 형식에 대한 정책을 정의할 수 있습니다. 표시되지 않는 특정 하위 요소는 부모의 정책을 상속합니다. 예를 들어 `Assembly` 요소는 있는데 `Type` 요소는 없으면 `Assembly` 요소에 지정된 정책이 어셈블리의 각 형식에 적용됩니다. 또한 여러 요소가 같은 프로그램 요소에 정책을 적용할 수도 있습니다. 예를 들어 개별 [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) 요소가 같은 어셈블리에 대해 같은 정책 요소를 각기 다르게 정의할 수 있습니다. 다음 섹션에서는 이러한 경우 특정 형식에 대한 정책을 확인하는 방법을 설명합니다.
+상위 및 하위 요소 둘 다에 대해 정책을 동시에 정의할 수 있습니다. 예를 들어 어셈블리 및 해당 어셈블리에 포함된 일부 형식에 대한 정책을 정의할 수 있습니다. 표시되지 않는 특정 하위 요소는 부모의 정책을 상속합니다. 예를 들어 `Assembly` 요소는 있는데 `Type` 요소는 없으면 `Assembly` 요소에 지정된 정책이 어셈블리의 각 형식에 적용됩니다. 또한 여러 요소가 같은 프로그램 요소에 정책을 적용할 수도 있습니다. 예를 들어 개별 [Assembly](assembly-element-net-native.md) 요소가 같은 어셈블리에 대해 같은 정책 요소를 각기 다르게 정의할 수 있습니다. 다음 섹션에서는 이러한 경우 특정 형식에 대한 정책을 확인하는 방법을 설명합니다.
 
-제네릭 형식이나 메서드의 [Type](../../../docs/framework/net-native/type-element-net-native.md) 또는 [Method](../../../docs/framework/net-native/method-element-net-native.md) 요소는 자체 정책을 포함하지 않는 모든 인스턴스화에 해당 정책을 적용합니다. 예를 들어 `Type`에 대해 정책을 지정하는 <xref:System.Collections.Generic.List%601> 요소는 해당 제네릭 형식의 생성된 모든 인스턴스에 적용됩니다. 단, `List<Int32>` 요소가 `TypeInstantiation`와 같은 생성된 특정 제네릭 형식에 대해 정책을 재정의하는 경우는 예외입니다. 이러한 경우가 아니면 요소는 명명된 프로그램 요소에 대해 정책을 정의합니다.
+제네릭 형식이나 메서드의 [Type](type-element-net-native.md) 또는 [Method](method-element-net-native.md) 요소는 자체 정책을 포함하지 않는 모든 인스턴스화에 해당 정책을 적용합니다. 예를 들어 `Type`에 대해 정책을 지정하는 <xref:System.Collections.Generic.List%601> 요소는 해당 제네릭 형식의 생성된 모든 인스턴스에 적용됩니다. 단, `List<Int32>` 요소가 `TypeInstantiation`와 같은 생성된 특정 제네릭 형식에 대해 정책을 재정의하는 경우는 예외입니다. 이러한 경우가 아니면 요소는 명명된 프로그램 요소에 대해 정책을 정의합니다.
 
 요소가 모호한 경우 엔진은 일치하는 항목을 찾으며 정확히 일치하는 항목이 발견되면 해당 항목을 사용합니다. 일치하는 항목이 여러 개이면 경고나 오류가 표시됩니다.
 
@@ -411,9 +411,9 @@ ms.locfileid: "69988297"
 
 이러한 정책은 메서드 또는 필드에는 영향을 주지 않습니다.
 
-자세한 내용은 [Windows 스토어 앱을 .NET 네이티브로 마이그레이션](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)에서 “직렬 변환기의 차이점” 섹션을 참조하세요.
+자세한 내용은 [Windows 스토어 앱을 .NET 네이티브로 마이그레이션](migrating-your-windows-store-app-to-net-native.md)에서 “직렬 변환기의 차이점” 섹션을 참조하세요.
 
 ## <a name="see-also"></a>참고자료
 
-- [런타임 지시문 요소](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [리플렉션 및 .NET 네이티브](../../../docs/framework/net-native/reflection-and-net-native.md)
+- [런타임 지시문 요소](runtime-directive-elements.md)
+- [리플렉션 및 .NET 네이티브](reflection-and-net-native.md)

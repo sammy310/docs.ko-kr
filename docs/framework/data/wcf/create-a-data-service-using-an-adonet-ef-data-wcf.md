@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 1d3c3628a32439d4847505e234b12b084b47ba3d
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 8c597738d656b32e7b4c75246027b726f425c6ef
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854127"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053013"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>방법: ADO.NET Entity Framework 데이터 원본을 사용 하 여 데이터 서비스 만들기 (WCF Data Services)
 
@@ -57,7 +57,7 @@ Entity Framework는 Visual Studio 프로젝트 외부에서 Entity Framework 모
 
 4. **새 항목 추가** 대화 상자의 **웹** 범주에서 **WCF 데이터 서비스** 템플릿을 선택 합니다.
 
-   ![Visual Studio 2015의 WCF 데이터 서비스 항목 템플릿](media/wcf-data-service-item-template.png)
+   ![Visual Studio 2015의 WCF 데이터 서비스 항목 템플릿](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
    > **WCF 데이터 서비스** 템플릿은 visual studio 2015에서 사용할 수 있지만 visual studio 2017에서는 사용할 수 없습니다.

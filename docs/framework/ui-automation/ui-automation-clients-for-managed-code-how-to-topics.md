@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: 665b01b5-25f5-47a1-ab11-cffe8ebbf2a7
-ms.openlocfilehash: 8c3107ce2ee20b3369a2ba462775ec7c8a1d3f6c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9a419f8ac8b94d4f33c7e771c68f230c80a24cbf
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935123"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042528"
 ---
 # <a name="ui-automation-clients-for-managed-code-how-to-topics"></a>관리 코드 방법 항목의 UI 자동화 클라이언트
 > [!NOTE]
@@ -21,11 +21,11 @@ ms.locfileid: "69935123"
  이 섹션에서는 클라이언트 응용 프로그램에서의 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 기능 구현에 대 한 자세한 정보를 제공 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [속성 조건을 기반으로 UI 자동화 요소 찾기](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
- [TreeWalker를 사용하여 UI 자동화 요소 간 탐색](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
- [목록 항목의 UI 자동화 요소 찾기](../../../docs/framework/ui-automation/find-a-ui-automation-element-for-a-list-item.md)  
- [UI 자동화 요소 속성 가져오기](../../../docs/framework/ui-automation/get-ui-automation-element-properties.md)  
- [UI 자동화의 캐싱 사용](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
- [UI 자동화 이벤트 구독](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)  
- [클라이언트 쪽 공급자 어셈블리 등록](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)  
- [AutomationID 속성 사용](../../../docs/framework/ui-automation/use-the-automationid-property.md)
+ [속성 조건을 기반으로 UI 자동화 요소 찾기](find-a-ui-automation-element-based-on-a-property-condition.md)  
+ [TreeWalker를 사용하여 UI 자동화 요소 간 탐색](navigate-among-ui-automation-elements-with-treewalker.md)  
+ [목록 항목의 UI 자동화 요소 찾기](find-a-ui-automation-element-for-a-list-item.md)  
+ [UI 자동화 요소 속성 가져오기](get-ui-automation-element-properties.md)  
+ [UI 자동화의 캐싱 사용](use-caching-in-ui-automation.md)  
+ [UI 자동화 이벤트 구독](subscribe-to-ui-automation-events.md)  
+ [클라이언트 쪽 공급자 어셈블리 등록](register-a-client-side-provider-assembly.md)  
+ [AutomationID 속성 사용](use-the-automationid-property.md)

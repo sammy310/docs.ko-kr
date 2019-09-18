@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bf874f9422db0038a421d5f61ce18d8af8ec401e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6177bdff873feb75eb15dba53bcdb5197260fa9d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616307"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046399"
 ---
 # <a name="loader-etw-events"></a>로더 ETW 이벤트
 <a name="top"></a> 이들 이벤트는 응용 프로그램 도메인, 어셈블리 및 모듈 로드 및 언로드와 관련된 정보를 수집합니다.  
   
- 모든 로더 이벤트는 `LoaderKeyword` (0x8) 키워드에서 발생합니다. `DCStart` 및 `DCEnd` 이벤트는 `StartRundown`/`EndRundown`이 사용되는 `LoaderRundownKeyword`(0x8)에서 발생합니다. 자세한 내용은 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)을 참조하세요.  
+ 모든 로더 이벤트는 `LoaderKeyword` (0x8) 키워드에서 발생합니다. `DCStart` 및 `DCEnd` 이벤트는 `StartRundown`/`EndRundown`이 사용되는 `LoaderRundownKeyword`(0x8)에서 발생합니다. 자세한 내용은 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)을 참조하세요.  
   
  로더 이벤트는 다음으로 다시 구분됩니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "64616307"
 |필드 이름|데이터 형식|설명|  
 |----------------|---------------|-----------------|  
 |AppDomainID|win:UInt64|애플리케이션 도메인의 고유 식별자입니다.|  
-|AppDomainFlags|win:UInt32|0x1: 기본 도메인입니다.<br /><br /> 0x2: 실행 파일입니다.<br /><br /> 0x4: 응용 프로그램 도메인, 비트 28-31: 이 도메인의 정책 공유.<br /><br /> 0: 공유 도메인입니다.|  
+|AppDomainFlags|win:UInt32|0x1: 기본 도메인입니다.<br /><br /> 0x2: Executable.<br /><br /> 0x4: 응용 프로그램 도메인, 비트 28-31: 이 도메인의 정책 공유.<br /><br /> 0: 공유 도메인.|  
 |AppDomainName|win:UnicodeString|친숙한 애플리케이션 도메인 이름입니다. 프로세스 수명 중에 변경될 수 있습니다.|  
 |AppDomainIndex|win:UInt32|이 애플리케이션 도메인의 인덱스입니다.|  
 |ClrInstanceID|win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
@@ -88,7 +88,7 @@ ms.locfileid: "64616307"
 |AssemblyID|win:UInt64|어셈블리의 고유 ID입니다.|  
 |AppDomainID|win:UInt64|이 어셈블리의 도메인 ID입니다.|  
 |BindingID|win:UInt64|어셈블리 바인딩을 고유하게 식별하는 ID입니다.|  
-|AssemblyFlags|win:UInt32|0x1: 도메인 중립 어셈블리입니다.<br /><br /> 0x2: 동적 어셈블리입니다.<br /><br /> 0x4: 어셈블리를 네이티브 이미지를 갖습니다.<br /><br /> 0x8: 수집 가능한 어셈블리입니다.|  
+|AssemblyFlags|win:UInt32|0x1: 도메인 중립 어셈블리.<br /><br /> 0x2: 동적 어셈블리입니다.<br /><br /> 0x4: 어셈블리에 네이티브 이미지가 있습니다.<br /><br /> 0x8: 수집 가능한 어셈블리입니다.|  
 |AssemblyName|win:UnicodeString|정규화된 어셈블리 이름입니다.|  
 |ClrInstanceID|win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
   
@@ -120,7 +120,7 @@ ms.locfileid: "64616307"
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt64|모듈의 고유 ID입니다.|  
 |AssemblyID|win:UInt64|이 모듈이 있는 어셈블리의 ID입니다.|  
-|ModuleFlags|win:UInt32|0x1: 도메인 중립 모듈입니다.<br /><br /> 0x2: 모듈에는 네이티브 이미지를 있습니다.<br /><br /> 0x4: 동적 모듈입니다.<br /><br /> 0x8: 매니페스트 모듈입니다.|  
+|ModuleFlags|win:UInt32|0x1: 도메인 중립 모듈.<br /><br /> 0x2: 모듈에 네이티브 이미지가 있습니다.<br /><br /> 0x4: 동적 모듈입니다.<br /><br /> 0x8: 매니페스트 모듈.|  
 |Reserved1|win:UInt32|예약된 필드입니다.|  
 |ModuleILPath|win:UnicodeString|모듈에 대한 MSIL(Microsoft intermediate language) 이미지의 경로 또는 동적 어셈블리인 경우 동적 모듈 이름(null로 종료됨)입니다.|  
 |ModuleNativePath|win:UnicodeString|있는 경우 모듈 네이티브 이미지의 경로입니다(null로 종료됨).|  
@@ -167,7 +167,7 @@ ms.locfileid: "64616307"
 |ModuleID|win:UInt64|이 모듈이 속한 어셈블리를 식별합니다.|  
 |AssemblyID|win:UInt64|이 모듈이 있는 어셈블리의 ID입니다.|  
 |AppDomainID|win:UInt64|이 모듈이 사용되는 애플리케이션 도메인의 ID입니다.|  
-|ModuleFlags|win:UInt32|0x1: 도메인 중립 모듈입니다.<br /><br /> 0x2: 모듈에는 네이티브 이미지를 있습니다.<br /><br /> 0x4: 동적 모듈입니다.<br /><br /> 0x8: 매니페스트 모듈입니다.|  
+|ModuleFlags|win:UInt32|0x1: 도메인 중립 모듈.<br /><br /> 0x2: 모듈에 네이티브 이미지가 있습니다.<br /><br /> 0x4: 동적 모듈입니다.<br /><br /> 0x8: 매니페스트 모듈.|  
 |Reserved1|win:UInt32|예약된 필드입니다.|  
 |ModuleILPath|win:UnicodeString|모듈에 대한 MSIL 이미지의 경로 또는 동적 어셈블리인 경우 동적 모듈 이름(null로 종료됨)입니다.|  
 |ModuleNativePath|win:UnicodeString|있는 경우 모듈 네이티브 이미지의 경로입니다(null로 종료됨).|  
@@ -214,4 +214,4 @@ ms.locfileid: "64616307"
   
 ## <a name="see-also"></a>참고자료
 
-- [CLR ETW 이벤트](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW 이벤트](clr-etw-events.md)

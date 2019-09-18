@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2e24cd05bb1c1ed9425c9be8bc02cb92dc488005
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c8c47091d943aa0d710cec1af83e039bca9ee2d2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935726"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046250"
 ---
 # <a name="reliability-best-practices"></a>최선의 안정성 구현 방법
 
@@ -91,7 +91,7 @@ SQL Server에서 호스팅되는 라이브러리가 공유 상태를 올바르�
 
 <xref:System.Runtime.InteropServices.SafeHandle>은 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>의 대안이 아닙니다.  운영 체제 리소스를 명시적으로 삭제하면 여전히 리소스 경합과 성능 이점을 얻을 수 있습니다.  리소스를 명시적으로 삭제하지 않는 `finally` 블록은 완료될 때까지 실행되지 않을 수 있다는 점에 유의하세요.
 
-<xref:System.Runtime.InteropServices.SafeHandle>을 사용하면 운영 체제 핸들에 상태 전달, 루틴 해제 또는 루프에서 핸들 집합 해제와 같은 핸들 해제 작업을 수행하는 고유 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 메서드를 구현할 수 있습니다.  CLR에서는 이 메서드가 확실히 실행됩니다.  작성자는 모든 상황에서 핸들이 해제되도록 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>을 구현해야 합니다. 그러지 않으면 핸들이 누출되므로, 핸들과 연결된 네이티브 리소스가 누출되는 결과가 자주 초래됩니다. 따라서 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 구현에서 호출 시 사용 가능하지 않은 리소스를 할당할 필요가 없도록 <xref:System.Runtime.InteropServices.SafeHandle> 파생 클래스를 구성하는 것이 중요합니다. 코드에서 이러한 실패를 처리하고 네이티브 핸들을 해제하는 계약을 완료할 수 있는 경우, <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>의 구현에서 실패할 수 있는 메서드를 호출할 수 있습니다. <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>에는 디버깅 용도의 <xref:System.Boolean> 반환 값이 있습니다. 리소스를 해제하지 못하게 하는 치명적인 오류가 발생하는 경우 이 값은 `false`로 설정될 수 있습니다. 그러면 [releaseHandleFailed](../../../docs/framework/debug-trace-profile/releasehandlefailed-mda.md) MDA가 활성화되어(사용된 경우) 문제를 파악하는 데 도움이 됩니다. 다른 방식으로 런타임에 영향을 주지 않습니다. <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>는 동일한 리소스에 대해 다시 호출되지 않으므로 핸들이 누출됩니다.
+<xref:System.Runtime.InteropServices.SafeHandle>을 사용하면 운영 체제 핸들에 상태 전달, 루틴 해제 또는 루프에서 핸들 집합 해제와 같은 핸들 해제 작업을 수행하는 고유 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 메서드를 구현할 수 있습니다.  CLR에서는 이 메서드가 확실히 실행됩니다.  작성자는 모든 상황에서 핸들이 해제되도록 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>을 구현해야 합니다. 그러지 않으면 핸들이 누출되므로, 핸들과 연결된 네이티브 리소스가 누출되는 결과가 자주 초래됩니다. 따라서 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 구현에서 호출 시 사용 가능하지 않은 리소스를 할당할 필요가 없도록 <xref:System.Runtime.InteropServices.SafeHandle> 파생 클래스를 구성하는 것이 중요합니다. 코드에서 이러한 실패를 처리하고 네이티브 핸들을 해제하는 계약을 완료할 수 있는 경우, <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>의 구현에서 실패할 수 있는 메서드를 호출할 수 있습니다. <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>에는 디버깅 용도의 <xref:System.Boolean> 반환 값이 있습니다. 리소스를 해제하지 못하게 하는 치명적인 오류가 발생하는 경우 이 값은 `false`로 설정될 수 있습니다. 그러면 [releaseHandleFailed](../debug-trace-profile/releasehandlefailed-mda.md) MDA가 활성화되어(사용된 경우) 문제를 파악하는 데 도움이 됩니다. 다른 방식으로 런타임에 영향을 주지 않습니다. <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>는 동일한 리소스에 대해 다시 호출되지 않으므로 핸들이 누출됩니다.
 
 <xref:System.Runtime.InteropServices.SafeHandle>은 특정 컨텍스트에서는 적절하지 않습니다.  <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 메서드는 <xref:System.GC> 종료자 스레드에서 실행될 수 있으므로, 특정 스레드에서 해제해야 하는 모든 핸들은 <xref:System.Runtime.InteropServices.SafeHandle>로 래핑하지 않아야 합니다.
 
@@ -316,4 +316,4 @@ CER은 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRe
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Runtime.ConstrainedExecution>
-- [SQL Server 프로그래밍 및 호스트 보호 특성](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)
+- [SQL Server 프로그래밍 및 호스트 보호 특성](sql-server-programming-and-host-protection-attributes.md)

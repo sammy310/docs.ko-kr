@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: 968660f2fa043ee4028cb144f368d9380729ffef
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
+ms.openlocfilehash: 4a88cf077c061746f9bc9f4aa0122d2f09b6fbd7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133797"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042269"
 ---
 # <a name="ui-automation-overview"></a>UI 자동화 개요
 > [!NOTE]
@@ -45,12 +45,12 @@ UI 자동화는 .NET Framework를 실행 하는 지원 되는 Windows 운영 체
   
 |단원|실무|대상 사용자|  
 |-------------|--------------------|--------------|  
-|[UI 자동화 기본 사항](../../../docs/framework/ui-automation/index.md) (이 섹션)|개념에 대한 광범위한 개요입니다.|모두.|  
-|[관리 코드에 대한 UI 자동화 공급자](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code.md)|공급자 API 사용에 도움을 주는 개념 및 방법에 대한 항목입니다.|컨트롤 개발자입니다.|  
-|[관리 코드에 대한 UI 자동화 클라이언트](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code.md)|클라이언트 API 사용에 도움을 주는 개념 및 방법에 대한 항목입니다.|클라이언트 애플리케이션 개발자.|  
-|[UI 자동화 컨트롤 패턴](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)|공급자가 컨트롤 패턴을 구현하는 방법 및 클라이언트에 사용 가능한 기능에 대한 정보입니다.|모두.|  
-|[UI 자동화 텍스트 패턴](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)|공급자가 Text 컨트롤 패턴을 구현하는 방법 및 클라이언트에 사용 가능한 기능에 대한 정보입니다.|모두.|  
-|[UI Automation Control Types](../../../docs/framework/ui-automation/ui-automation-control-types.md)|다른 컨트롤 형식에서 지원하는 속성 및 컨트롤 패턴에 대한 정보입니다.|모두.|  
+|[UI 자동화 기본 사항](index.md) (이 섹션)|개념에 대한 광범위한 개요입니다.|모두.|  
+|[관리 코드에 대한 UI 자동화 공급자](ui-automation-providers-for-managed-code.md)|공급자 API 사용에 도움을 주는 개념 및 방법에 대한 항목입니다.|컨트롤 개발자입니다.|  
+|[관리 코드에 대한 UI 자동화 클라이언트](ui-automation-clients-for-managed-code.md)|클라이언트 API 사용에 도움을 주는 개념 및 방법에 대한 항목입니다.|클라이언트 애플리케이션 개발자.|  
+|[UI 자동화 컨트롤 패턴](ui-automation-control-patterns.md)|공급자가 컨트롤 패턴을 구현하는 방법 및 클라이언트에 사용 가능한 기능에 대한 정보입니다.|모두.|  
+|[UI 자동화 텍스트 패턴](ui-automation-text-pattern.md)|공급자가 Text 컨트롤 패턴을 구현하는 방법 및 클라이언트에 사용 가능한 기능에 대한 정보입니다.|모두.|  
+|[UI Automation Control Types](ui-automation-control-types.md)|다른 컨트롤 형식에서 지원하는 속성 및 컨트롤 패턴에 대한 정보입니다.|모두.|  
   
  다음 표에서는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 네임스페이스, 네임스페이스를 포함하는 DLL, 네임스페이스를 사용하는 대상을 나열하여 보여줍니다.  
   
@@ -70,14 +70,14 @@ UI 자동화는 .NET Framework를 실행 하는 지원 되는 Windows 운영 체
  또한 요소는 해당 컨트롤 형식과 관련된 속성을 제공하는 컨트롤 패턴을 노출합니다. 컨트롤 패턴은 클라이언트가 요소에 대한 추가 정보를 수집하고 입력을 제공할 수 있는 메서드를 노출합니다.  
   
 > [!NOTE]
-> 컨트롤 형식과 컨트롤 패턴 간에 일대일 대응이 없습니다. 단일 컨트롤 패턴은 여러 컨트롤 형식에서 지원될 수 있으며, 단일 컨트롤에는 각각 해당 동작의 다양한 측면을 노출하는 여러 컨트롤 패턴을 지원할 수 있습니다. 예를 들어, 콤보 상자에 둘 이상의 컨트롤 패턴이 있을 수 있으며 그중 하나는 확장 및 축소하는 기능을 나타내며 나머지 하나는 선택 메커니즘을 나타냅니다. 자세한 내용은 [UI Automation Control Types](../../../docs/framework/ui-automation/ui-automation-control-types.md)을 참조하세요.  
+> 컨트롤 형식과 컨트롤 패턴 간에 일대일 대응이 없습니다. 단일 컨트롤 패턴은 여러 컨트롤 형식에서 지원될 수 있으며, 단일 컨트롤에는 각각 해당 동작의 다양한 측면을 노출하는 여러 컨트롤 패턴을 지원할 수 있습니다. 예를 들어, 콤보 상자에 둘 이상의 컨트롤 패턴이 있을 수 있으며 그중 하나는 확장 및 축소하는 기능을 나타내며 나머지 하나는 선택 메커니즘을 나타냅니다. 자세한 내용은 [UI Automation Control Types](ui-automation-control-types.md)을 참조하세요.  
   
  또한[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 은 이벤트를 통해 클라이언트 응용 프로그램에 정보를 제공합니다. [!INCLUDE[TLA2#tla_winevents](../../../includes/tla2sharptla-winevents-md.md)]와는 달리, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트는 브로드캐스트 메커니즘을 기반으로 하지 않습니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클라이언트는 특정 이벤트 알림을 등록하며, 이벤트 처리기에 전달되는 특정 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 및 컨트롤 패턴 정보를 요청할 수 있습니다. 또한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트에는 이 이벤트를 발생시킨 요소에 대한 참조가 들어 있습니다. 공급자는 모든 클라이언트가 수신 대기하고 있는지 여부에 따라 선택적으로 이벤트를 발생시켜 성능을 향상시킬 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
 
-- [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [UI 자동화 컨트롤 패턴 개요](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [UI 자동화 속성 개요](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)
-- [UI 자동화 이벤트 개요](../../../docs/framework/ui-automation/ui-automation-events-overview.md)
-- [UI 자동화 보안 개요](../../../docs/framework/ui-automation/ui-automation-security-overview.md)
+- [UI 자동화 트리 개요](ui-automation-tree-overview.md)
+- [UI 자동화 컨트롤 패턴 개요](ui-automation-control-patterns-overview.md)
+- [UI 자동화 속성 개요](ui-automation-properties-overview.md)
+- [UI 자동화 이벤트 개요](ui-automation-events-overview.md)
+- [UI 자동화 보안 개요](ui-automation-security-overview.md)

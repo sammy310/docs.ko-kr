@@ -2,12 +2,12 @@
 title: 레코드
 description: 레코드가 명명 F# 된 값의 단순 집계를 나타내는 방법, 선택적으로 멤버를 사용 하는 방법에 대해 알아봅니다.
 ms.date: 06/09/2019
-ms.openlocfilehash: d92a1a7517e5b05ee687926df29f33fab123b4dd
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1ba002407b1ccbcbceed32df8636fb860e89e3b6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627290"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053936"
 ---
 # <a name="records"></a>레코드
 
@@ -26,7 +26,7 @@ type [accessibility-modifier] typename =
 
 ## <a name="remarks"></a>설명
 
-위의 구문에서 *typename* 은 레코드 형식의 이름이 고, *label1* 및 *label2* 는 값의 이름이 며, 이름 이라고 하 고, *type1* 및 *type2* 는 이러한 값의 형식입니다. *멤버 목록은* 해당 형식에 대 한 멤버의 선택적 목록입니다.  `[<Struct>]` 특성을 사용 하 여 참조 형식인 레코드가 아닌 구조체 레코드를 만들 수 있습니다.
+위의 구문에서 *typename* 은 레코드 형식의 이름이 고, *label1* 및 *label2* 는 값의 이름이 며, *이름 이라고 하*고, *type1* 및 *type2* 는 이러한 값의 형식입니다. *멤버 목록은* 해당 형식에 대 한 멤버의 선택적 목록입니다.  `[<Struct>]` 특성을 사용 하 여 참조 형식인 레코드가 아닌 구조체 레코드를 만들 수 있습니다.
 
 다음은 몇 가지 예입니다.
 
@@ -108,7 +108,8 @@ type Person =
 and Address =
   { Line1: string
     Line2: string
-    PostCode: string }
+    PostCode: string
+    Occupant: Person }
 ```
 
 `and` 키워드를 사용 하지 않고 이전 예제를 정의 하는 경우에는 컴파일되지 않습니다. 키워드 `and` 는 상호 재귀 정의에 필요 합니다.

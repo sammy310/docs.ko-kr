@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control patterns, Scroll
 - Scroll control pattern
 ms.assetid: 73d64242-6cbb-424c-92dd-dc69530b7899
-ms.openlocfilehash: 22bb78040b023a59fd46f0a2be45659d6d7220b8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b8193ed8c7b5fab934d83eb31f5b562136a290ec
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914519"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043312"
 ---
 # <a name="implementing-the-ui-automation-scroll-control-pattern"></a>UI 자동화 Scroll 컨트롤 패턴 구현
 > [!NOTE]
@@ -21,10 +21,10 @@ ms.locfileid: "69914519"
   
  <xref:System.Windows.Automation.ScrollPattern> 컨트롤 패턴은 자식 개체의 컬렉션에 대해 스크롤할 수 있는 컨테이너 역할을 하는 컨트롤을 지원하는 데 사용됩니다. 이 컨트롤은 스크롤 기능을 지원하기 위해 스크롤 막대를 사용할 필요는 없지만 일반적으로는 스크롤 막대를 사용합니다.  
   
- ![스크롤 막대를 사용 하지 않고 컨트롤을 스크롤합니다.](../../../docs/framework/ui-automation/media/uia-scrollpattern-without-scrollbars.PNG "UIA_ScrollPattern_Without_Scrollbars")  
+ ![스크롤 막대를 사용 하지 않고 컨트롤을 스크롤합니다.](./media/uia-scrollpattern-without-scrollbars.PNG "UIA_ScrollPattern_Without_Scrollbars")  
 스크롤 막대를 사용하지 않는 스크롤 컨트롤의 예제  
   
- 이 컨트롤을 구현하는 컨트롤의 예제를 보려면 [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)을 참조하세요.  
+ 이 컨트롤을 구현하는 컨트롤의 예제를 보려면 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)을 참조하세요.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>구현 지침 및 규칙  
@@ -72,8 +72,8 @@ ms.locfileid: "69914519"
   
 ## <a name="see-also"></a>참고자료
 
-- [UI 자동화 컨트롤 패턴 개요](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [UI 자동화 공급자의 컨트롤 패턴 지원](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [클라이언트용 UI 자동화 컨트롤 패턴](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [UI 자동화의 캐싱 사용](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [UI 자동화 컨트롤 패턴 개요](ui-automation-control-patterns-overview.md)
+- [UI 자동화 공급자의 컨트롤 패턴 지원](support-control-patterns-in-a-ui-automation-provider.md)
+- [클라이언트용 UI 자동화 컨트롤 패턴](ui-automation-control-patterns-for-clients.md)
+- [UI 자동화 트리 개요](ui-automation-tree-overview.md)
+- [UI 자동화의 캐싱 사용](use-caching-in-ui-automation.md)

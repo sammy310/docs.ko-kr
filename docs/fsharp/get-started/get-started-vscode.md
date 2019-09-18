@@ -2,12 +2,12 @@
 title: Visual Studio Code에서 F# 시작
 description: Visual Studio Code와 Ionide 플러그인 도구 모음으로 F#을 사용하는 방법을 알아봅니다.
 ms.date: 12/23/2018
-ms.openlocfilehash: baaa87207122cfe314972aee5dfaf8a41de2c394
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2fa0518488d37b2130aaba96028ac92dac77eb97
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629974"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082994"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Visual Studio Code에서 F# 시작
 
@@ -24,7 +24,7 @@ ms.locfileid: "68629974"
 
 다음으로, 명령 팔레트를 열고(**보기 > 명령 팔레트**) 다음을 입력합니다.
 
-```
+```console
 > F# new project
 ```
 
@@ -158,7 +158,7 @@ open ClassLibraryDemo
 
 그런 다음 fsi.exe 창에서 앞에서 정의한 `PigLatin` 모듈을 사용 하 여 함수를 호출 합니다.
 
-```
+```console
 > PigLatin.toPigLatin "banana";;
 val it : string = "ananabay"
 > PigLatin.toPigLatin "apple";;

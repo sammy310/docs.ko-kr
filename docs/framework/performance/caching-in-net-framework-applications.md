@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: b1d9b12a46d674bf591457cdc90c66fc16818734
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 704efed96c18f23d34d8a583d3121fc08b9e22e1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927040"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046781"
 ---
 # <a name="caching-in-net-framework-applications"></a>.NET Framework 애플리케이션에서 캐싱
 캐싱을 사용하면 빠른 액세스를 위해 데이터를 메모리에 저장할 수 있습니다. 데이터에 다시 액세스할 때 애플리케이션은 원래 소스에서 검색하는 대신 캐시에서 데이터를 가져올 수 있습니다. 이 경우 성능과 확장성이 향상됩니다. 또한 캐싱을 사용하면 데이터 소스를 일시적으로 사용할 수 없는 경우에도 데이터를 사용할 수 있습니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "70927040"
 > [!NOTE]
 > <xref:System.Runtime.Caching.MemoryCache> 클래스는 <xref:System.Web.Caching> 네임스페이스에 정의된 ASP.NET 캐시 개체에서 모델링됩니다. 따라서 내부 캐싱 논리가 이전 버전의 ASP.NET에서 제공된 논리와 유사합니다.  
   
- 을 사용 하 여 WPF 응용 프로그램 [에서 캐시 하는 방법에 대 한 예제는 연습: WPF 응용 프로그램](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)에서 응용 프로그램 데이터 캐싱  
+ 을 사용 하 여 WPF 응용 프로그램 [에서 캐시 하는 방법에 대 한 예제는 연습: WPF 응용 프로그램](../wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)에서 응용 프로그램 데이터 캐싱  
   
 ## <a name="caching-in-aspnet-applications"></a>ASP.NET 애플리케이션의 캐싱  
  <xref:System.Runtime.Caching> 네임스페이스의 캐싱 클래스는 ASP.NET에서 데이터를 캐시하기 위한 기능을 제공합니다.  
@@ -79,5 +79,5 @@ ms.locfileid: "70927040"
 
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching.MemoryCache>
-- [연습: WPF 응용 프로그램에서 응용 프로그램 데이터 캐싱](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [연습: WPF 응용 프로그램에서 응용 프로그램 데이터 캐싱](../wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
 - [연습: ASP.NET에서 응용 프로그램 데이터 캐싱](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))

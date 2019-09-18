@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a70b8c3509b785d70b041b449c759e7994e5984
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3e8769ec972ec76d04d2f22368fdde99de9c6de
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754234"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052540"
 ---
 # <a name="loaderlock-mda"></a>loaderLock MDA
 `loaderLock` MDA(관리 디버깅 도우미)는 Microsoft Windows 운영 체제 로더 잠금을 보유하는 스레드에서 관리 코드를 실행하려는 시도를 감지합니다.  이와 같은 실행은 운영 체제의 로더에서 초기화하기 전에 DLL을 사용하고 교착 상태를 일으킬 수 있으므로 유효하지 않습니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "61754234"
 ## <a name="output"></a>출력  
  이 MDA는 잘못된 관리 실행이 시도되고 있음을 보고합니다.  스레드 스택을 검사하여 로더 잠금이 발생하는 이유와 문제를 정정하는 방법을 판별해야 합니다.  
   
-## <a name="configuration"></a>구성  
+## <a name="configuration"></a>Configuration  
   
 ```xml  
 <mdaConfig>  
@@ -57,4 +57,4 @@ ms.locfileid: "61754234"
   
 ## <a name="see-also"></a>참고자료
 
-- [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)

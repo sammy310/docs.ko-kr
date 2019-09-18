@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: b51206f2-1281-4ad0-9820-ea39d88ae577
-ms.openlocfilehash: 27d5bcee34bcbfa101f381a569428a64a45da0b7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b7985e6cf3eaa810a893b0b5183a1c141a041768
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69954101"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040509"
 ---
 # <a name="ui-automation-text-pattern"></a>UI 자동화 텍스트 패턴
 > [!NOTE]
@@ -22,14 +22,14 @@ ms.locfileid: "69954101"
  이 항목에는의 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]텍스트 요소에 대 한 프로그래밍을 시작 하는 데 도움이 되는 개요 및 방법 항목이 포함 되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [UI 자동화 TextPattern 개요](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
- [TextPattern 및 포함 개체 개요](../../../docs/framework/ui-automation/textpattern-and-embedded-objects-overview.md)  
- [방법 항목](../../../docs/framework/ui-automation/ui-automation-text-pattern-how-to-topics.md)  
+ [UI 자동화 TextPattern 개요](ui-automation-textpattern-overview.md)  
+ [TextPattern 및 포함 개체 개요](textpattern-and-embedded-objects-overview.md)  
+ [방법 항목](ui-automation-text-pattern-how-to-topics.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Automation.Text>  
   
 ## <a name="see-also"></a>참고자료
 
-- [UI 자동화 컨트롤 패턴](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)
-- [클라이언트용 UI 자동화 컨트롤 패턴](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [UI 자동화 컨트롤 패턴](ui-automation-control-patterns.md)
+- [클라이언트용 UI 자동화 컨트롤 패턴](ui-automation-control-patterns-for-clients.md)

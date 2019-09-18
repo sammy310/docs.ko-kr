@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Selection control pattern
 - control patterns, Selection
 ms.assetid: 449c3068-a5d6-4f66-84c6-1bcc7dd4d209
-ms.openlocfilehash: f12ab6cc776daa4d6cca65d682cd299a0733a3a5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8ce37b71846f227c753e8d217e96482f623d3bd1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935766"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043233"
 ---
 # <a name="implementing-the-ui-automation-selection-control-pattern"></a>UI 자동화 Selection 컨트롤 패턴 구현
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "69935766"
   
  이 항목에서는 이벤트 및 속성에 대한 정보를 포함하여 <xref:System.Windows.Automation.Provider.ISelectionProvider>를 구현하기 위한 지침 및 규칙을 제공합니다. 추가 참조에 대한 링크는 항목 끝에 나열되어 있습니다.  
   
- <xref:System.Windows.Automation.SelectionPattern> 컨트롤 패턴은 선택 가능한 자식 항목 컬렉션에 컨테이너 역할을 하는 컨트롤을 지원하는 데 사용됩니다. 이 요소의 자식 항목은 <xref:System.Windows.Automation.Provider.ISelectionItemProvider>를 구현해야 합니다. 이 컨트롤 패턴을 구현하는 컨트롤의 예제를 보려면 [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)을 참조하세요.  
+ <xref:System.Windows.Automation.SelectionPattern> 컨트롤 패턴은 선택 가능한 자식 항목 컬렉션에 컨테이너 역할을 하는 컨트롤을 지원하는 데 사용됩니다. 이 요소의 자식 항목은 <xref:System.Windows.Automation.Provider.ISelectionItemProvider>를 구현해야 합니다. 이 컨트롤 패턴을 구현하는 컨트롤의 예제를 보려면 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)을 참조하세요.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>구현 지침 및 규칙  
@@ -31,7 +31,7 @@ ms.locfileid: "69935766"
   
 - <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>표시 속성 **대화 상자의** 화면 해상도 **슬라이더 또는** 의 **색 선택** 선택 컨트롤(아래 그림 참조) 등과 같이 [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] 를 구현하는 자식 컨트롤을 관리하는 단일 선택 컨트롤은 <xref:System.Windows.Automation.Provider.ISelectionProvider>를 구현해야 하며, 해당 자식 항목은 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> 및 <xref:System.Windows.Automation.Provider.ISelectionItemProvider>둘 다 구현해야 합니다.  
   
- ![노란색 강조 표시 된 색 선택기입니다.](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
+ ![노란색 강조 표시 된 색 선택기입니다.](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 색 견본 문자열 매핑의 예  
   
 - 메뉴는 <xref:System.Windows.Automation.SelectionPattern>을 지원하지 않습니다. Microsoft Outlook의 **보기** 메뉴에 있는 <xref:System.Windows.Automation.Provider.IToggleProvider> **미리 보기 창** 항목과 같이 그래픽과 텍스트가 모두 포함 된 메뉴 항목을 사용 하 여 작업 하는 경우를 구현 해야 합니다.  
@@ -60,9 +60,9 @@ ms.locfileid: "69935766"
   
 ## <a name="see-also"></a>참고자료
 
-- [UI 자동화 컨트롤 패턴 개요](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [UI 자동화 공급자의 컨트롤 패턴 지원](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [클라이언트용 UI 자동화 컨트롤 패턴](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [UI 자동화 SelectionItem 컨트롤 패턴 구현](../../../docs/framework/ui-automation/implementing-the-ui-automation-selectionitem-control-pattern.md)
-- [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [UI 자동화의 캐싱 사용](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [UI 자동화 컨트롤 패턴 개요](ui-automation-control-patterns-overview.md)
+- [UI 자동화 공급자의 컨트롤 패턴 지원](support-control-patterns-in-a-ui-automation-provider.md)
+- [클라이언트용 UI 자동화 컨트롤 패턴](ui-automation-control-patterns-for-clients.md)
+- [UI 자동화 SelectionItem 컨트롤 패턴 구현](implementing-the-ui-automation-selectionitem-control-pattern.md)
+- [UI 자동화 트리 개요](ui-automation-tree-overview.md)
+- [UI 자동화의 캐싱 사용](use-caching-in-ui-automation.md)

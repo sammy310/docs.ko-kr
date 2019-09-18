@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b830444a-5003-49fe-b89b-b8bee22f7b1a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a7fe0b33bbd77143da6d2f4a26b170e4d7afe1fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0883849eee12922601e50c2337bb0048d77cab68
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874109"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052371"
 ---
 # <a name="pinvokelog-mda"></a>pInvokeLog MDA
 `pInvokeLog` MDA(관리 디버깅 도우미)는 실행 중에 사용되는 고유한 각 플랫폼 호출을 위해 활성화됩니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "61874109"
 ## <a name="output"></a>출력  
  실행 중에 사용된 플랫폼 호출 시그니처를 나타내는 메시지.  
   
-## <a name="configuration"></a>구성  
+## <a name="configuration"></a>Configuration  
  일치하는 각 요소는 플랫폼 호출을 수행하는 .dll 파일을 필터링합니다.  
   
 ```xml  
@@ -45,5 +45,5 @@ ms.locfileid: "61874109"
   
 ## <a name="see-also"></a>참고자료
 
-- [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [관리되지 않는 DLL 함수 사용](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
+- [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)
+- [관리되지 않는 DLL 함수 사용](../interop/consuming-unmanaged-dll-functions.md)

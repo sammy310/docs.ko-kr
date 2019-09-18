@@ -10,19 +10,19 @@ helpviewer_keywords:
 - x:ClassModifier attribute [XAML Services]
 - ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
-ms.openlocfilehash: c3c08f61b49a6367663cf02099dda86d1a692284
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.openlocfilehash: 5daff0567c1b1415fe994f6e39b4079cb2ab7346
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484756"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053813"
 ---
 # <a name="xclassmodifier-directive"></a>x:ClassModifier 지시문
 가 제공 되는 경우 `x:Class` XAML 컴파일 동작을 수정 합니다. 특히 `class` `Public` 액세스 수준이 있는 부분 (기본값)을 만드는 대신 `NotPublic` 제공 `x:Class` 된이 액세스 수준으로 만들어집니다. 이 동작은 생성 된 어셈블리의 클래스에 대 한 액세스 수준에 영향을 줍니다.  
   
 ## <a name="xaml-attribute-usage"></a>XAML 특성 사용  
   
-```  
+```xaml  
 <object x:Class="namespace.classname" x:ClassModifier="NotPublic">  
    ...  
 </object>  

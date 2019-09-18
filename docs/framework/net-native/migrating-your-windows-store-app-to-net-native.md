@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac21e8aa67eabcb3e837cb5eca02d1145b765946
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fdff7aa92e4c1c357c83b625a6daadbf0a8d556b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941728"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049510"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Windows 스토어 앱을 .NET 네이티브로 마이그레이션
 
-.NET 네이티브는 Windows 스토어 또는 개발자 컴퓨터에서 앱을 정적으로 컴파일하는 기능을 제공 합니다. 이 기능은 디바이스의 [네이티브 이미지 생성기(Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 또는 JIT(Just-In-Time) 컴파일러가 Windows 스토어 앱에 대해 수행하는 동적 컴파일과는 다릅니다. 차이점에도 불구 하 고 .NET 네이티브는 [Windows 스토어 앱 용 .net과의](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)호환성을 유지 하려고 합니다. 대부분의 경우 Windows 스토어 앱 용 .NET에서 작동 하는 작업은 .NET 네이티브 에서도 작동 합니다.  그러나 동작이 변경되는 경우도 있습니다. 이 문서에서는 다음과 같은 영역에서 Windows 스토어 앱 용 표준 .NET과 .NET 네이티브 간의 이러한 차이점에 대해 설명 합니다.
+.NET 네이티브는 Windows 스토어 또는 개발자 컴퓨터에서 앱을 정적으로 컴파일하는 기능을 제공 합니다. 이 기능은 디바이스의 [네이티브 이미지 생성기(Ngen.exe)](../tools/ngen-exe-native-image-generator.md) 또는 JIT(Just-In-Time) 컴파일러가 Windows 스토어 앱에 대해 수행하는 동적 컴파일과는 다릅니다. 차이점에도 불구 하 고 .NET 네이티브는 [Windows 스토어 앱 용 .net과의](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)호환성을 유지 하려고 합니다. 대부분의 경우 Windows 스토어 앱 용 .NET에서 작동 하는 작업은 .NET 네이티브 에서도 작동 합니다.  그러나 동작이 변경되는 경우도 있습니다. 이 문서에서는 다음과 같은 영역에서 Windows 스토어 앱 용 표준 .NET과 .NET 네이티브 간의 이러한 차이점에 대해 설명 합니다.
 
 - [일반 런타임 차이점](#Runtime)
 
@@ -67,7 +67,7 @@ ms.locfileid: "69941728"
 - 컴파일러는 인스턴스화를 확인할 수 없으므로 런타임 지시문을 사용하여 리플렉션을 수행하려는 제네릭 형식을 지정해야 합니다. 이는 단순히 모든 코드를 포함해야 하기 때문이 아니라, 제네릭 형식에 대해 리플렉션을 수행하면 무한 주기가 생성될 수 있기 때문입니다(예: 제네릭 형식에 대해 제네릭 메서드를 호출하는 경우).
 
 > [!NOTE]
-> 런타임 지시문은 런타임 지시문(.rd.xml) 파일에서 정의합니다. 이 파일의 사용 방법에 대한 일반 정보는 [시작](../../../docs/framework/net-native/getting-started-with-net-native.md)을 참조하세요. 런타임 지시문에 대한 자세한 내용은 [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)를 참조하세요.
+> 런타임 지시문은 런타임 지시문(.rd.xml) 파일에서 정의합니다. 이 파일의 사용 방법에 대한 일반 정보는 [시작](getting-started-with-net-native.md)을 참조하세요. 런타임 지시문에 대한 자세한 내용은 [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md)를 참조하세요.
 
 또한 .NET 네이티브에는 개발자가 기본 집합 외부에서 리플렉션을 지원 해야 하는 형식을 결정 하는 데 도움이 되는 프로 파일링 도구도 포함 되어 있습니다.
 
@@ -665,7 +665,7 @@ Windows 스토어 앱 프로젝트에 대 한 단위 테스트 라이브러리�
 
 ## <a name="see-also"></a>참고자료
 
-- [시작](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [시작](getting-started-with-net-native.md)
+- [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Windows 스토어 앱 용 .NET 개요](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
 - [Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: c3c80fb48635199f45acb1e72bf756bbc65d2e14
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 582f5f2d6d82613736ed795eebe5129284cdac6e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780415"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052991"
 ---
 # <a name="create-the-data-service"></a>데이터 서비스 만들기
 
@@ -68,7 +68,7 @@ ms.locfileid: "70780415"
 
 2. **새 항목 추가** 대화 상자의 **웹** 범주에서 **WCF 데이터 서비스** 항목 템플릿을 선택 합니다.
 
-   ![Visual Studio 2015의 WCF 데이터 서비스 항목 템플릿](media/wcf-data-service-item-template.png)
+   ![Visual Studio 2015의 WCF 데이터 서비스 항목 템플릿](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
    > **WCF 데이터 서비스** 템플릿은 visual studio 2015에서 사용할 수 있지만 visual studio 2017에서는 사용할 수 없습니다.

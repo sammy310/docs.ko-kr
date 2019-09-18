@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [XAML Services], type converter services how-to
 ms.assetid: b4dad00f-03da-4579-a4e9-d8d72d2ccbce
-ms.openlocfilehash: 850e266aed6fc2d69722ba6dac3baa3e115678a8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0d4e274ad7b64820e74347908c08c7726e96bbe8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61953974"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053838"
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>형식 변환기 또는 태그 확장에서 사용할 수 있는 서비스 컨텍스트
 형식 변환기 및 태그 확장 사용을 지원하는 형식의 작성자에는 태그 또는 주변 개체 그래프 구조에서 사용하는 경우에 대한 컨텍스트 정보를 포함해야 할 수 있습니다. 제공된 개체를 올바르게 인스턴스화하거나 개체 그래프의 기존 개체에 대한 개체 참조를 만들 수 있도록 정보가 필요할 수 있습니다. .NET Framework XAML 서비스를 사용할 경우 필요할 수 있는 컨텍스트는 일련의 서비스 인터페이스로 표시됩니다. 형식 변환기 또는 태그 확장 지원 코드에서는 <xref:System.Xaml.XamlObjectWriter> 또는 관련 형식에서 사용 가능하고 통과되는 서비스 공급자 컨텍스트를 사용하여 서비스를 쿼리할 수 있습니다. XAML 스키마 컨텍스트는 이러한 한 서비스를 통해 직접 사용할 수 있습니다. 이 항목에서는 값 변환기 구현에서 서비스 컨텍스트에 액세스하는 방법을 설명하고 일반적으로 사용 가능한 서비스 및 해당 역할을 나열합니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "61953974"
 ## <a name="services-for-a-markup-extension"></a>태그 확장에 대한 서비스  
  <xref:System.Windows.Markup.MarkupExtension> 에는 단 하나의 가상 메서드 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>가 있습니다. 입력 `serviceProvider` 매개 변수는 태그 확장이 XAML 프로세서에서 호출될 때 서비스가 구현에 전달되는 방법입니다. 다음 의사 코드에서는 태그 확장 구현이 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>에서 서비스를 쿼리하는 방법을 보여 줍니다.  
   
-```  
+```csharp  
 public override object ProvideValue(IServiceProvider serviceProvider)  
 {  
 ...  
@@ -46,7 +46,7 @@ public override object ProvideValue(IServiceProvider serviceProvider)
   
  다음 의사 코드에서는 XAML 사용에 대한 형식 변환기 구현이 재정의의 하나에서 서비스를 쿼리할 수 있습니다(이 경우 <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>).  
   
-```  
+```csharp  
 public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,  
   CultureInfo cultureInfo,  
   object source)  
@@ -75,7 +75,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="iserviceprovider"></a>IServiceProvider  
  **참조 설명서**: <xref:System.IServiceProvider>  
   
- **와 관련:** .NET Framework에 있는 서비스 기반 인프라의 기본 작업을 호출할 수 있도록 <xref:System.IServiceProvider.GetService%2A?displayProperty=nameWithType>입니다.  
+ **관련:** 를 호출할 <xref:System.IServiceProvider.GetService%2A?displayProperty=nameWithType>수 있도록 .NET Framework에서 서비스 기반 인프라의 기본 작업입니다.  
   
 ### <a name="itypedescriptorcontext"></a>ITypeDescriptorContext  
  **참조 설명서**: <xref:System.ComponentModel.ITypeDescriptorContext>  
@@ -92,7 +92,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **정의 방법:**  <xref:System.Windows.Markup> 네임스페이스, System.Xaml 어셈블리  
   
- **와 관련:** 로드 경로 시나리오 및 XAML 스키마 컨텍스트와 상호 작용  
+ **관련:** 로드 경로 시나리오 및 XAML 스키마 컨텍스트와의 상호 작용  
   
  **서비스 API:**  <xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A>  
   
@@ -103,7 +103,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **정의 방법:**  <xref:System.Windows.Markup> 네임스페이스, System.Xaml 어셈블리  
   
- **와 관련:** 로드 경로 및 저장 경로 처리 멤버 값을 uri 또는 `x:Uri` 값입니다.  
+ **관련:** Uri 또는 `x:Uri` 값인 멤버 값의 로드 경로 및 저장 경로를 처리 합니다.  
   
  **서비스 API:**  <xref:System.Windows.Markup.IUriContext.BaseUri%2A>  
   
@@ -114,7 +114,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **정의 방법:**  <xref:System.Xaml> 네임스페이스, System.Xaml 어셈블리  
   
- **와 관련:** 로드 경로 처리 및 형식 조회 지연 또는 최적화.  
+ **관련:** 로드 경로 처리 및 형식 조회 지연과 또는 최적화.  
   
  **서비스 APIs:**  <xref:System.Xaml.IAmbientProvider.GetAllAmbientValues%2A>, 기타 3개.  
   
@@ -125,7 +125,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **정의 방법:**  <xref:System.Xaml> 네임스페이스, System.Xaml 어셈블리  
   
- **와 관련:** 경로 및 XAML 형식을 지원 형식 확인 해야 하는 모든 작업을 로드 합니다.  
+ **관련:** 로드 경로 및 XAML 형식을 지원 형식으로 확인 해야 하는 모든 작업입니다.  
   
  **서비스 API:**  <xref:System.Xaml.IXamlSchemaContextProvider.SchemaContext%2A>  
   
@@ -136,7 +136,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **정의 방법:**  <xref:System.Xaml> 네임스페이스, System.Xaml 어셈블리  
   
- **와 관련:** 로드 경로입니다.  
+ **관련:** 로드 경로입니다.  
   
  **서비스 API:**  <xref:System.Xaml.IRootObjectProvider.RootObject%2A>  
   
@@ -147,7 +147,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **정의 방법:**  <xref:System.Xaml> 네임스페이스, System.Xaml 어셈블리  
   
- **와 관련:** 경로, 저장 경로 로드 합니다.  
+ **관련:** 로드 경로, 저장 경로입니다.  
   
  **서비스 API:** <xref:System.Xaml.IXamlNamespaceResolver.GetNamespace%2A> , 저장 경로에 대한 <xref:System.Xaml.IXamlNamespaceResolver.GetNamespacePrefixes%2A> .  
   
@@ -158,7 +158,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **정의 방법:**  <xref:System.Windows.Markup> 네임스페이스, System.Xaml 어셈블리  
   
- **와 관련:** 로드 경로 및 경로 저장 합니다.  
+ **관련:** 경로를 로드 하 고 경로를 저장 합니다.  
   
  **서비스 API:**  <xref:System.Windows.Markup.IProvideValueTarget.TargetObject%2A>, <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A>.  
   
@@ -169,7 +169,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **정의 방법:**  <xref:System.Xaml> 네임스페이스, System.Xaml 어셈블리  
   
- **와 관련:** 로드 경로 개체 그래프 정의 확인으로 식별 된 개체 `x:Name`, `x:Reference`, 또는 프레임 워크 관련 방법.  
+ **관련:** `x:Name` ,`x:Reference`또는 프레임 워크 특정 기술로 식별 되는 개체를 확인 하는 경로 개체 그래프 정의를 로드 합니다.  
   
  **서비스 API:**  <xref:System.Xaml.IXamlNameResolver.Resolve%2A>, 전방 참조 처리와 같은 더 고급 시나리오를 위한 기타 API.  
   
@@ -180,7 +180,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **정의 방법:**  <xref:System.Xaml> 네임스페이스, System.Xaml 어셈블리  
   
- **와 관련:** 경로 확인 간접 CLR 형식 정보의 로드 합니다.  
+ **관련:** 간접 CLR 형식 정보의 로드 경로 확인.  
   
  **서비스 API:** <xref:System.Xaml.IDestinationTypeProvider.GetDestinationType%2A>  
   

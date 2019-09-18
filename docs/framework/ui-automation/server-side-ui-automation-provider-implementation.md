@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 5fd17f9ca9d83ab3b226ce9fc0a4aebca4f9352a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: eb7156e0e2794fb7cb18e7bfce0e8488d0b145c3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044151"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042773"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>서버 쪽 UI 자동화 공급자 구현
 
@@ -34,7 +34,7 @@ WPF (Windows Presentation Foundation) 요소 및[!INCLUDE[TLA2#tla_wpf](../../..
 
 ## <a name="provider-implementation-by-windows-presentation-foundation-elements"></a>Windows Presentation Foundation 요소를 사용한 공급자 구현
 
-이 항목에 대한 자세한 내용은 [WPF 사용자 지정 컨트롤의 UI 자동화](../../../docs/framework/wpf/controls/ui-automation-of-a-wpf-custom-control.md)를 참조하세요.
+이 항목에 대한 자세한 내용은 [WPF 사용자 지정 컨트롤의 UI 자동화](../wpf/controls/ui-automation-of-a-wpf-custom-control.md)를 참조하세요.
 
 <a name="Provider_Implementation_by_non_WPF_Elements"></a>
 
@@ -121,7 +121,7 @@ HWND 기반 컨트롤에 대한 공급자는 일반적으로 다음 속성(필�
 >
 > <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> 는 일반적으로 호스트 공급자가 제공합니다. 예를 들어 사용자 지정 컨트롤이 <xref:System.Windows.Forms.Control>에서 파생된 경우 이름은 컨트롤의 `Text` 속성에서 파생됩니다.
 
-예제 코드를 보려면 [Return Properties from a UI Automation Provider](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)를 참조하세요.
+예제 코드를 보려면 [Return Properties from a UI Automation Provider](return-properties-from-a-ui-automation-provider.md)를 참조하세요.
 
 <a name="Events_in_Non_WPF_Providers"></a>
 
@@ -191,9 +191,9 @@ HWND 기반 컨트롤에 대한 공급자는 일반적으로 다음 속성(필�
 
 ## <a name="see-also"></a>참고자료
 
-- [UI 자동화 공급자 개요](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [서버 쪽 UI 자동화 공급자 노출](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)
-- [UI 자동화 공급자에서 속성 반환](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
-- [UI 자동화 공급자에서 이벤트 발생](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
-- [UI 자동화 조각 공급자에서 탐색 사용](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)
-- [UI 자동화 공급자의 컨트롤 패턴 지원](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [UI 자동화 공급자 개요](ui-automation-providers-overview.md)
+- [서버 쪽 UI 자동화 공급자 노출](expose-a-server-side-ui-automation-provider.md)
+- [UI 자동화 공급자에서 속성 반환](return-properties-from-a-ui-automation-provider.md)
+- [UI 자동화 공급자에서 이벤트 발생](raise-events-from-a-ui-automation-provider.md)
+- [UI 자동화 조각 공급자에서 탐색 사용](enable-navigation-in-a-ui-automation-fragment-provider.md)
+- [UI 자동화 공급자의 컨트롤 패턴 지원](support-control-patterns-in-a-ui-automation-provider.md)

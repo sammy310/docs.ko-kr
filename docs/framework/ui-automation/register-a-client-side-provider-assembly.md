@@ -10,12 +10,12 @@ helpviewer_keywords:
 - UI Automation, registering provider assemblies
 - provider assemblies, registering
 ms.assetid: a03af4d9-2771-43cc-b07b-d468dca23190
-ms.openlocfilehash: ed45b7e5d60e42f03bce8b9dc4abbf8226916304
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 18a63a955fdf782670bb60dfc6845261990cdcd1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966350"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042781"
 ---
 # <a name="register-a-client-side-provider-assembly"></a>클라이언트 쪽 공급자 어셈블리 등록
 > [!NOTE]
@@ -31,4 +31,4 @@ ms.locfileid: "69966350"
   
 ## <a name="see-also"></a>참고자료
 
-- [클라이언트 쪽 UI 자동화 공급자 만들기](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)
+- [클라이언트 쪽 UI 자동화 공급자 만들기](create-a-client-side-ui-automation-provider.md)

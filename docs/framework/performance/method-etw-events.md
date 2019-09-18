@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c7969c0a3f5f828f1a1c0d4f33b82881130c6e15
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58249a0e080e045223bdaf170f2eaedb67fc0dea
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949255"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046383"
 ---
 # <a name="method-etw-events"></a>메서드 ETW 이벤트
 
@@ -36,7 +36,7 @@ CLR 메서드 이벤트는 추가로 다음과 같이 구분됩니다.
 
 ## <a name="clr-method-events"></a>CLR 메서드 이벤트
 
-다음 표에서는 키워드와 수준을 보여 줍니다. 자세한 내용은 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)을 참조하세요.
+다음 표에서는 키워드와 수준을 보여 줍니다. 자세한 내용은 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)을 참조하세요.
 
 |이벤트를 발생시키기 위한 키워드|수준|
 |-----------------------------------|-----------|
@@ -130,7 +130,7 @@ CLR 메서드 이벤트는 추가로 다음과 같이 구분됩니다.
 |MethodStartAddress|win:UInt64|시작 주소입니다.|
 |MethodSize|win:UInt32|메서드 길이입니다.|
 |MethodToken|win:UInt32|동적 메서드 및 JIT 도우미의 경우 0입니다.|
-|MethodFlags|win:UInt32|0x1: 동적 메서드입니다.<br /><br /> 0x2: 제네릭 메서드입니다.<br /><br /> 0x4: JIT 컴파일된 메서드 (이외의 NGen.exe에서 생성 됨된)<br /><br /> 0x8: 도우미 메서드입니다.|
+|MethodFlags|win:UInt32|0x1: 동적 메서드입니다.<br /><br /> 0x2: 제네릭 메서드입니다.<br /><br /> 0x4: JIT 컴파일된 메서드 (그렇지 않은 경우 Ngen.exe에서 생성 됨)<br /><br /> 0x8: 도우미 메서드입니다.|
 |MethodNameSpace|win:UnicodeString|메서드와 연결된 전체 네임스페이스 이름입니다.|
 |MethodName|win:UnicodeString|메서드와 연결된 전체 클래스 이름입니다.|
 |MethodSignature|win:UnicodeString|메서드의 서명입니다(쉼표로 구분된 형식 이름 목록).|
@@ -172,4 +172,4 @@ CLR 메서드 이벤트는 추가로 다음과 같이 구분됩니다.
 
 ## <a name="see-also"></a>참고자료
 
-- [CLR ETW 이벤트](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW 이벤트](clr-etw-events.md)

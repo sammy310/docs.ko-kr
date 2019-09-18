@@ -9,12 +9,12 @@ helpviewer_keywords:
 - accessing embedded objects
 - UI Automation, accessing embedded objects
 ms.assetid: a5b513ec-7fa6-4460-869f-c18ff04f7cf2
-ms.openlocfilehash: 83e54da5fdb75e3da44009ec700102d6bd7ae5e9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 110407079b37bce13bb6037d5755d2ef16a40214
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937961"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043960"
 ---
 # <a name="access-embedded-objects-using-ui-automation"></a>UI 자동화를 사용하여 포함 개체에 액세스
 > [!NOTE]
@@ -27,7 +27,7 @@ ms.locfileid: "69937961"
   
  포함된 개체는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 텍스트 공급자의 자식 항목으로 간주됩니다. 이를 통해 포함된 개체가 기타 모든 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 요소와 동일한 UI 자동화 트리 구조를 통해 노출될 수 있습니다. 따라서 포함된 개체 컨트롤 형식에 일반적으로 필요한 컨트롤 패턴을 통해 기능이 노출됩니다(예: 하이퍼링크는 텍스트를 기반으로 하므로 <xref:System.Windows.Automation.TextPattern>을 지원함).  
   
- ![텍스트 컨테이너에 포함 된 개체입니다.](../../../docs/framework/ui-automation/media/uia-textpattern-embeddedobjects.PNG "UIA_TextPattern_EmbeddedObjects")  
+ ![텍스트 컨테이너에 포함 된 개체입니다.](./media/uia-textpattern-embeddedobjects.PNG "UIA_TextPattern_EmbeddedObjects")  
 텍스트 콘텐츠가 포함 된 샘플 문서 ("알고 계십니까?") ...) 코드 예제에 대 한 대상으로 사용 되는 두 개의 포함 된 개체 (고래 및 텍스트 하이퍼링크 그림)입니다.  
   
 ## <a name="example"></a>예제  
@@ -54,8 +54,8 @@ ms.locfileid: "69937961"
   
 ## <a name="see-also"></a>참고자료
 
-- [UI 자동화 TextPattern 개요](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)
-- [UI 자동화 컨트롤 패턴 개요](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [클라이언트용 UI 자동화 컨트롤 패턴](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [UI 자동화를 사용하여 텍스트 상자에 콘텐츠 추가](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)
-- [UI 자동화를 사용하여 텍스트 찾기 및 강조](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)
+- [UI 자동화 TextPattern 개요](ui-automation-textpattern-overview.md)
+- [UI 자동화 컨트롤 패턴 개요](ui-automation-control-patterns-overview.md)
+- [클라이언트용 UI 자동화 컨트롤 패턴](ui-automation-control-patterns-for-clients.md)
+- [UI 자동화를 사용하여 텍스트 상자에 콘텐츠 추가](add-content-to-a-text-box-using-ui-automation.md)
+- [UI 자동화를 사용하여 텍스트 찾기 및 강조](find-and-highlight-text-using-ui-automation.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: ca6ac045-7b21-4487-9379-59aa20909670
-ms.openlocfilehash: ca46eb01ee8a18e83cecbc26b2e9bf82778c210b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 450a3f3a4969287181aa031ab581b85447bfde56
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69954083"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040433"
 ---
 # <a name="ui-automation-text-pattern-how-to-topics"></a>UI 자동화 텍스트 패턴 방법 항목
 > [!NOTE]
@@ -22,9 +22,9 @@ ms.locfileid: "69954083"
  이 섹션에는 UI 자동화 텍스트 패턴을 사용 하는 방법을 설명 하는 항목이 포함 되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [UI 자동화를 사용하여 텍스트 상자에 콘텐츠 추가](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  
- [UI 자동화를 사용하여 텍스트 찾기 및 강조](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)  
- [UI 자동화를 사용하여 텍스트 특성 가져오기](../../../docs/framework/ui-automation/obtain-text-attributes-using-ui-automation.md)  
- [UI 자동화를 사용하여 혼합 텍스트 특성 정보 가져오기](../../../docs/framework/ui-automation/obtain-mixed-text-attribute-details-using-ui-automation.md)  
- [UI 자동화를 사용하여 텍스트 이동](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
- [UI 자동화를 사용하여 포함 개체에 액세스](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)
+ [UI 자동화를 사용하여 텍스트 상자에 콘텐츠 추가](add-content-to-a-text-box-using-ui-automation.md)  
+ [UI 자동화를 사용하여 텍스트 찾기 및 강조](find-and-highlight-text-using-ui-automation.md)  
+ [UI 자동화를 사용하여 텍스트 특성 가져오기](obtain-text-attributes-using-ui-automation.md)  
+ [UI 자동화를 사용하여 혼합 텍스트 특성 정보 가져오기](obtain-mixed-text-attribute-details-using-ui-automation.md)  
+ [UI 자동화를 사용하여 텍스트 이동](traverse-text-using-ui-automation.md)  
+ [UI 자동화를 사용하여 포함 개체에 액세스](access-embedded-objects-using-ui-automation.md)

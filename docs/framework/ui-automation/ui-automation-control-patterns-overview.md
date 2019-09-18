@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 30e8619e70da46cb510fbe28ab2e8bcf27621e19
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c5dce6895ed9962cf20808417c50569db48de6d9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963307"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042350"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI 자동화 컨트롤 패턴 개요
 > [!NOTE]
@@ -74,8 +74,8 @@ ms.locfileid: "69963307"
   
 ## <a name="see-also"></a>참고자료
 
-- [클라이언트용 UI 자동화 컨트롤 패턴](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [UI 자동화 클라이언트에 대한 컨트롤 패턴 매핑](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
-- [UI 자동화 개요](../../../docs/framework/ui-automation/ui-automation-overview.md)
-- [클라이언트의 UI 자동화 속성](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
-- [클라이언트용 UI 자동화 이벤트](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
+- [클라이언트용 UI 자동화 컨트롤 패턴](ui-automation-control-patterns-for-clients.md)
+- [UI 자동화 클라이언트에 대한 컨트롤 패턴 매핑](control-pattern-mapping-for-ui-automation-clients.md)
+- [UI 자동화 개요](ui-automation-overview.md)
+- [클라이언트의 UI 자동화 속성](ui-automation-properties-for-clients.md)
+- [클라이언트용 UI 자동화 이벤트](ui-automation-events-for-clients.md)

@@ -10,19 +10,19 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: 563802be655e0cb66c9a2735a64da9d7723c2a43
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 6e04085db0fa5a4c4170846dc4ac10d0131032a7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401514"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053811"
 ---
 # <a name="xclass-directive"></a>x:Class 지시문
 태그와 코드 숨김으로 partial 클래스를 조인 하도록 XAML 태그 컴파일을 구성 합니다. 코드 partial 클래스는 CLS (공용 언어 사양) 언어로 된 별도의 코드 파일에 정의 되어 있지만 일반적으로 태그 partial 클래스는 XAML 컴파일 중에 코드 생성에 의해 생성 됩니다.  
   
 ## <a name="xaml-attribute-usage"></a>XAML 특성 사용  
   
-```  
+```xaml  
 <object x:Class="namespace.classname"...>  
   ...  
 </object>  

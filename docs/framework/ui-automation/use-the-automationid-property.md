@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 3d1e514b1ff5f71982a3c0d35cfc190ff9327b4e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1699d39f5f456fe08b043e5b6a687d4c59d28e89
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044089"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040332"
 ---
 # <a name="use-the-automationid-property"></a>AutomationID 속성 사용
 > [!NOTE]
@@ -22,7 +22,7 @@ ms.locfileid: "70044089"
   
  이 항목에는 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 를 사용하여 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 내에서 요소를 찾는 방법과 시기를 보여주는 시나리오와 샘플 코드가 있습니다.  
   
- <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 는 형제 항목에서 UI 자동화 요소를 고유하게 식별합니다. 컨트롤 식별과 관련된 속성 식별자에 대한 자세한 내용은 [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)를 참조하세요.  
+ <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 는 형제 항목에서 UI 자동화 요소를 고유하게 식별합니다. 컨트롤 식별과 관련된 속성 식별자에 대한 자세한 내용은 [UI Automation Properties Overview](ui-automation-properties-overview.md)를 참조하세요.  
   
 > [!NOTE]
 > <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 는 트리 전체에서 고유한 ID를 보장하지 않습니다. 일반적으로 컨테이너 및 범위 정보가 필요합니다. 예를 들어, 애플리케이션에는 여러 개의 최상위 메뉴가 있는 메뉴 컨트롤과 여러 개의 자식 메뉴 항목이 포함될 수 있습니다. 이러한 보조 메뉴 항목은 "Item1", "Item 2" 등과 같이 일반적인 체계로 식별되어 최상위 메뉴 항목에서 자식에 대한 중복 식별자가 허용될 수 있습니다.  
@@ -59,5 +59,5 @@ ms.locfileid: "70044089"
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>
-- [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [속성 조건을 기반으로 UI 자동화 요소 찾기](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
+- [UI 자동화 트리 개요](ui-automation-tree-overview.md)
+- [속성 조건을 기반으로 UI 자동화 요소 찾기](find-a-ui-automation-element-based-on-a-property-condition.md)

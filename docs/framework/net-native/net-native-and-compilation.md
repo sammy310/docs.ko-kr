@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce93ea321c0441208e223efc22cf1f50e98b827c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1a15d30ea4d6e0f4456460248e96428419117d85
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044129"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049434"
 ---
 # <a name="net-native-and-compilation"></a>.NET 네이티브 및 컴파일
 
@@ -82,7 +82,7 @@ ms.locfileid: "70044129"
 
 - COM interop
 
-런타임에 필요한 메타데이터나 구현 코드가 있으면 .NET 네이티브 런타임이 예외를 throw합니다. 런타임에 사용할 수 있어야 하는 메타데이터나 구현 코드가 포함된 프로그램 요소를 지정하고 런타임 정책을 프로그램 요소에 할당하는 XML 파일인 [런타임 지시문 파일](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)을 사용하여 이 예외를 방지하고 .NET 네이티브 도구 체인에 필요한 메타데이터와 구현 코드가 포함되어 있는지 확인할 수 있습니다. .NET 네이티브 도구 체인으로 컴파일된 Windows 스토어 프로젝트에 추가되는 기본 런타임 지시문 파일은 다음과 같습니다.
+런타임에 필요한 메타데이터나 구현 코드가 있으면 .NET 네이티브 런타임이 예외를 throw합니다. 런타임에 사용할 수 있어야 하는 메타데이터나 구현 코드가 포함된 프로그램 요소를 지정하고 런타임 정책을 프로그램 요소에 할당하는 XML 파일인 [런타임 지시문 파일](runtime-directives-rd-xml-configuration-file-reference.md)을 사용하여 이 예외를 방지하고 .NET 네이티브 도구 체인에 필요한 메타데이터와 구현 코드가 포함되어 있는지 확인할 수 있습니다. .NET 네이티브 도구 체인으로 컴파일된 Windows 스토어 프로젝트에 추가되는 기본 런타임 지시문 파일은 다음과 같습니다.
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -96,7 +96,7 @@ ms.locfileid: "70044129"
 
 ## <a name="net-native-and-ngen"></a>.NET 네이티브 및 NGEN
 
-[네이티브 이미지 생성기](../../../docs/framework/tools/ngen-exe-native-image-generator.md)(NGEN)에서는 어셈블리를 네이티브 코드로 컴파일하고 로컬 컴퓨터의 네이티브 이미지 캐시에 어셈블리를 설치합니다. 그러나 .NET 네이티브처럼 NGEN이 네이티브 코드를 생성하더라도 몇 가지 중요한 방식에서 .NET 네이티브와 다릅니다.
+[네이티브 이미지 생성기](../tools/ngen-exe-native-image-generator.md)(NGEN)에서는 어셈블리를 네이티브 코드로 컴파일하고 로컬 컴퓨터의 네이티브 이미지 캐시에 어셈블리를 설치합니다. 그러나 .NET 네이티브처럼 NGEN이 네이티브 코드를 생성하더라도 몇 가지 중요한 방식에서 .NET 네이티브와 다릅니다.
 
 - 특정 메서드에 대한 네이티브 이미지를 사용할 수 없으면 NGEN이 JITing 코드로 대체됩니다. 즉, 네이티브 이미지에서는 계속해서 NGEN이 JIT 컴파일로 대체되어야 하는 이벤트에 메타데이터와 IL을 포함해야 합니다. 반대로 .NET 네이티브는 네이티브 이미지만 생성하고 JIT 컴파일로 대체되지 않습니다. 따라서 일부 리플렉션, 직렬화 및 interop 시나리오에 필요한 메타데이터만 유지되어야 합니다.
 
@@ -108,5 +108,5 @@ ms.locfileid: "70044129"
 
 - [메타데이터 및 자동 기술 구성 요소](../../standard/metadata-and-self-describing-components.md)
 - [내부 .NET 네이티브 (Channel 9 비디오)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
-- [리플렉션 및 .NET 네이티브](../../../docs/framework/net-native/reflection-and-net-native.md)
-- [.NET 네이티브 일반 문제 해결](../../../docs/framework/net-native/net-native-general-troubleshooting.md)
+- [리플렉션 및 .NET 네이티브](reflection-and-net-native.md)
+- [.NET 네이티브 일반 문제 해결](net-native-general-troubleshooting.md)

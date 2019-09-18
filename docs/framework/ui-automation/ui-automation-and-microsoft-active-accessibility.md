@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: 8aadcc213e92fd53490f639f37dc8d8f62762c2c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 63b00f8eb35fa58ea0257d5e996fc2c51a248040
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946477"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042591"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI 자동화 및 Microsoft Active Accessibility
 > [!NOTE]
@@ -110,7 +110,7 @@ ms.locfileid: "69946477"
 |ROLE_SYSTEM_OUTLINEITEM|트리 항목|  
 |ROLE_SYSTEM_WINDOW|창|  
   
- 다른 컨트롤 형식에 대한 자세한 내용은 [UI Automation Control Types](../../../docs/framework/ui-automation/ui-automation-control-types.md)을 참조하세요.  
+ 다른 컨트롤 형식에 대한 자세한 내용은 [UI Automation Control Types](ui-automation-control-types.md)을 참조하세요.  
   
 <a name="States_and_Properties"></a>   
 ## <a name="states-and-properties"></a>상태 및 속성  
@@ -176,7 +176,7 @@ ms.locfileid: "69946477"
 |STATE_SYSTEM_HOTTRACKED|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
 |STATE_SYSTEM_PRESSED|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
   
- 속성 식별자의 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 전체 목록은 [UI 자동화 속성 개요](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)를 참조 하세요.  
+ 속성 식별자의 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 전체 목록은 [UI 자동화 속성 개요](ui-automation-properties-overview.md)를 참조 하세요.  
   
 <a name="uiautomation_events_compare"></a>   
 ## <a name="events"></a>이벤트  
@@ -251,4 +251,4 @@ ms.locfileid: "69946477"
   
 ## <a name="see-also"></a>참고자료
 
-- [UI 자동화 기본 사항](../../../docs/framework/ui-automation/index.md)
+- [UI 자동화 기본 사항](index.md)

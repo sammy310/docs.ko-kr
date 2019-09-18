@@ -3,12 +3,12 @@ title: WSTrustChannelFactory 및 WSTrustChannel
 ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
-ms.openlocfilehash: d129775137759cf7f006ce6501279978f4ab2595
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e00f3ae25a50c2fb3f34f4c04d02cde574b3da17
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633178"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044910"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory 및 WSTrustChannel
 WCF(Windows Communication Foundation)에 알고 있다면 WCF 클라이언트가 이미 페더레이션을 인식한다는 것을 알고 있습니다. <xref:System.ServiceModel.WSFederationHttpBinding> 또는 유사한 사용자 지정 바인딩을 사용하여 WCF 클라이언트를 구성하면 서비스에 페더레이션된 인증을 사용하도록 설정할 수 있습니다.
@@ -25,7 +25,7 @@ WCF(Windows Communication Foundation)에 알고 있다면 WCF 클라이언트가
 
 - WIF를 단독으로 사용하여 STS에서 토큰을 가져온 다음 WCF 클라이언트가 이 토큰으로 인증할 수 있도록 설정 자세한 내용은 [ClaimsAwareWebService](https://go.microsoft.com/fwlink/?LinkID=248406) 샘플을 참조하세요.
 
- 첫 번째 시나리오는 설명이 따로 필요 없습니다. 기존 WCF 클라이언트는 WIF 신뢰 당사자 및 Sts를 사용 하 여 작업을 계속 합니다. 이 항목에서는 나머지 두 시나리오에 대해 설명합니다.
+ 첫 번째 시나리오는 다음과 같이 설명이 필요 하지 않습니다. 기존 WCF 클라이언트는 WIF 신뢰 당사자 및 STSs와 계속 작동 합니다. 이 항목에서는 나머지 두 시나리오에 대해 설명합니다.
 
 ## <a name="enhancing-an-existing-wcf-client-with-actas--onbehalfof"></a>ActAs/OnBehalfOf를 사용하여 기존 WCF 클라이언트 향상
 일반적인 ID 위임 시나리오에서 클라이언트는 중간 계층 서비스를 호출한 다음 백 엔드 서비스를 호출합니다. 중간 계층 서비스는 클라이언트로 작동하거나 클라이언트 대신 작동합니다.
@@ -33,7 +33,7 @@ WCF(Windows Communication Foundation)에 알고 있다면 WCF 클라이언트가
 > [!TIP]
 > ActAs와 OnBehalfOf 간의 차이점은 무엇일까요?
 >
-> Ws-trust 프로토콜 관점:
+> WS-TRUST 프로토콜 관점에서:
 >
 > 1. ActAs RST 요소는 요청자가 두 개의 고유 엔터티인 요청자와 ActAs 요소의 토큰이 나타내는 외부 엔터티에 대한 클레임을 포함하는 토큰을 원함을 나타냅니다.
 > 2. OnBehalfOf RST 요소는 요청자가 OnBehalfOf 요소의 토큰이 나타내는 외부 엔터티 하나에 대한 클레임만 포함하는 토큰을 원함을 나타냅니다.
@@ -81,7 +81,7 @@ SecurityToken token = channel.Issue(rst, out rstr);
 
 <xref:System.ServiceModel.Security.WSTrustChannel.Issue%2A> 메서드의 `out` 매개 변수는 클라이언트 쪽 검사를 위한 RSTR 액세스를 허용합니다.
 
-지금 토큰을 가져오는 방법만 확인 했습니다. <xref:System.ServiceModel.Security.WSTrustChannel> 개체에서 반환되는 토큰은 신뢰 당사자에 인증하는 데 필요한 모든 정보를 포함하는 `GenericXmlSecurityToken`입니다. 다음 코드 예제에서는 이 토큰을 사용하는 방법을 보여 줍니다.
+지금까지 토큰을 가져오는 방법만 살펴보았습니다. <xref:System.ServiceModel.Security.WSTrustChannel> 개체에서 반환되는 토큰은 신뢰 당사자에 인증하는 데 필요한 모든 정보를 포함하는 `GenericXmlSecurityToken`입니다. 다음 코드 예제에서는 이 토큰을 사용하는 방법을 보여 줍니다.
 
 ```csharp
 IHelloService serviceChannel = channelFactory.CreateChannelWithIssuedToken<IHelloService>( token );
@@ -102,4 +102,4 @@ serviceChannel.Hello("Hi!");
 
 ## <a name="see-also"></a>참고자료
 
-- [WIF 기능](../../../docs/framework/security/wif-features.md)
+- [WIF 기능](wif-features.md)

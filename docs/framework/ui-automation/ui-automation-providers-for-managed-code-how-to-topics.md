@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UI Automation, custom user interface (UI) elements
 - providers, UI Automation
 ms.assetid: 88bc4212-3f4e-4bac-bae0-faef31944b71
-ms.openlocfilehash: ac9b20d1fd3356941b75df686b2556b3c3c4f179
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d5f2651c6a74a7f9ac275a55a4e37baebf653305
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914423"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042079"
 ---
 # <a name="ui-automation-providers-for-managed-code-how-to-topics"></a>관리 코드 방법 항목의 UI 자동화 공급자
 > [!NOTE]
@@ -22,10 +22,10 @@ ms.locfileid: "69914423"
  이 섹션에는 요소에 대 한 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 공급자를 작성 하는 작업을 보여 주는 코드 예제가 포함 되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [서버 쪽 UI 자동화 공급자 노출](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)  
- [UI 자동화 공급자에서 속성 반환](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)  
- [UI 자동화 공급자에서 이벤트 발생](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)  
- [UI 자동화 조각 공급자에서 탐색 사용](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)  
- [UI 자동화 공급자의 컨트롤 패턴 지원](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [클라이언트 쪽 UI 자동화 공급자 만들기](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)  
- [클라이언트 응용 프로그램에서 UI 자동화 공급자 구현](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)
+ [서버 쪽 UI 자동화 공급자 노출](expose-a-server-side-ui-automation-provider.md)  
+ [UI 자동화 공급자에서 속성 반환](return-properties-from-a-ui-automation-provider.md)  
+ [UI 자동화 공급자에서 이벤트 발생](raise-events-from-a-ui-automation-provider.md)  
+ [UI 자동화 조각 공급자에서 탐색 사용](enable-navigation-in-a-ui-automation-fragment-provider.md)  
+ [UI 자동화 공급자의 컨트롤 패턴 지원](support-control-patterns-in-a-ui-automation-provider.md)  
+ [클라이언트 쪽 UI 자동화 공급자 만들기](create-a-client-side-ui-automation-provider.md)  
+ [클라이언트 응용 프로그램에서 UI 자동화 공급자 구현](implement-ui-automation-providers-in-a-client-application.md)

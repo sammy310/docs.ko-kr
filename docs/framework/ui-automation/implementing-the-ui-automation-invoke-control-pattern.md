@@ -6,21 +6,21 @@ helpviewer_keywords:
 - control patterns, Invoke
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
-ms.openlocfilehash: 74471ef7eec73c3bdab9299eb5c82af6545e9b6a
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: e9815e4c2c0740f213632681200e48c8e4786657
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662275"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043388"
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>UI 자동화 Invoke 컨트롤 패턴 구현
 
 > [!NOTE]
-> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 최신 정보에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]를 참조 하세요 [Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746)합니다.
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).
 
 이 항목에서는 이벤트 및 속성에 대한 정보를 포함하여 <xref:System.Windows.Automation.Provider.IInvokeProvider>를 구현하기 위한 지침 및 규칙을 제공합니다. 추가 참조에 대한 링크는 항목 끝에 나열되어 있습니다.
 
-<xref:System.Windows.Automation.InvokePattern> 컨트롤 패턴은 활성화되었을 때 상태를 유지하지 않고 명확한 단일 작업을 시작하거나 수행하는 컨트롤을 지원하는 데 사용됩니다. 확인란 및 라디오 단추와 같이 상태를 유지하는 컨트롤은 각각 <xref:System.Windows.Automation.Provider.IToggleProvider> 및 <xref:System.Windows.Automation.Provider.ISelectionItemProvider> 를 구현해야 합니다. Invoke 컨트롤 패턴을 구현하는 컨트롤의 예제를 보려면 [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)을 참조하세요.
+<xref:System.Windows.Automation.InvokePattern> 컨트롤 패턴은 활성화되었을 때 상태를 유지하지 않고 명확한 단일 작업을 시작하거나 수행하는 컨트롤을 지원하는 데 사용됩니다. 확인란 및 라디오 단추와 같이 상태를 유지하는 컨트롤은 각각 <xref:System.Windows.Automation.Provider.IToggleProvider> 및 <xref:System.Windows.Automation.Provider.ISelectionItemProvider> 를 구현해야 합니다. Invoke 컨트롤 패턴을 구현하는 컨트롤의 예제를 보려면 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)을 참조하세요.
 
 <a name="Implementation_Guidelines_and_Conventions"></a>
 
@@ -59,7 +59,7 @@ Invoke 컨트롤 패턴을 구현할 때는 다음 지침 및 규칙에 유의�
 
 <xref:System.Windows.Automation.Provider.IInvokeProvider>를 구현하려면 다음과 같은 속성 및 메서드가 필요합니다.
 
-|필요한 멤버|멤버 형식|노트|
+|필요한 멤버|멤버 형식|참고|
 |----------------------|-----------------|-----------|
 |<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|메서드|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> 는 비동기 호출이며 차단하지 않고 즉시 반환해야 합니다.<br /><br /> 이 동작은 호출될 때 직접 또는 간접적으로 모달 대화 상자를 시작하는 컨트롤에 특히 중요합니다. 이벤트를 발생시킨 모든 UI 자동화 클라이언트는 모달 대화 상자가 닫힐 때까지 차단된 상태로 유지됩니다.|
 
@@ -75,9 +75,9 @@ Invoke 컨트롤 패턴을 구현할 때는 다음 지침 및 규칙에 유의�
 
 ## <a name="see-also"></a>참고자료
 
-- [UI 자동화 컨트롤 패턴 개요](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [UI 자동화 공급자의 컨트롤 패턴 지원](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [클라이언트용 UI 자동화 컨트롤 패턴](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [UI 자동화를 사용하여 컨트롤 호출](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)
-- [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [UI 자동화의 캐싱 사용](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [UI 자동화 컨트롤 패턴 개요](ui-automation-control-patterns-overview.md)
+- [UI 자동화 공급자의 컨트롤 패턴 지원](support-control-patterns-in-a-ui-automation-provider.md)
+- [클라이언트용 UI 자동화 컨트롤 패턴](ui-automation-control-patterns-for-clients.md)
+- [UI 자동화를 사용하여 컨트롤 호출](invoke-a-control-using-ui-automation.md)
+- [UI 자동화 트리 개요](ui-automation-tree-overview.md)
+- [UI 자동화의 캐싱 사용](use-caching-in-ui-automation.md)

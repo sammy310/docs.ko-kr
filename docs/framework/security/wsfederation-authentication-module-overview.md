@@ -3,12 +3,12 @@ title: WSFederation 인증 모듈 개요
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: eaf53a352238161ccec1b481649074d322954905
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 26cd022ded8dddcfcf695c89b3cf4b90d3ceb2ef
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851508"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044943"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 인증 모듈 개요
 WIF(Windows Identity Foundation)에는 WS-FAM( WS-Federated Authentication Module)을 통한 ASP.NET 애플리케이션의 페더레이션된 인증 지원이 포함되어 있습니다. 이 항목은 페더레이션된 인증의 작동 방식과 사용 방법을 이해하는 데 도움이 됩니다.  
@@ -35,7 +35,7 @@ WIF(Windows Identity Foundation)에는 WS-FAM( WS-Federated Authentication Modul
   
  인증되지 않은 요청을 리디렉션할 STS를 지정하려면 WS-FAM을 구성합니다. WIF에서는 다음 두 가지 방법으로 사용자를 인증할 수 있습니다.  
   
-1. 수동 리디렉션: 인증 되지 않은 사용자가 보호 된 리소스에 액세스 하려고 시도 하는 경우 로그인 페이지가 없어도 STS로 리디렉션하는 것이 적절 한 방법입니다. STS는 사용자의 ID를 확인하고 해당 사용자에 대한 적절한 클레임을 포함하는 보안 토큰을 발급합니다. 이 옵션을 사용할 경우 HTTP 모듈 파이프라인에 WS-FAM을 추가해야 합니다. Visual Studio 2012용 ID 및 액세스 도구를 통해 WS-FAM을 사용하고 STS와 페더레이션하도록 애플리케이션의 구성 파일을 수정할 수 있습니다. 자세한 내용은 [Visual Studio 2012용 ID 및 액세스 도구](../../../docs/framework/security/identity-and-access-tool-for-vs.md)를 참조하세요.  
+1. 수동 리디렉션: 인증 되지 않은 사용자가 보호 된 리소스에 액세스 하려고 시도 하는 경우 로그인 페이지가 없어도 STS로 리디렉션하는 것이 적절 한 방법입니다. STS는 사용자의 ID를 확인하고 해당 사용자에 대한 적절한 클레임을 포함하는 보안 토큰을 발급합니다. 이 옵션을 사용할 경우 HTTP 모듈 파이프라인에 WS-FAM을 추가해야 합니다. Visual Studio 2012용 ID 및 액세스 도구를 통해 WS-FAM을 사용하고 STS와 페더레이션하도록 애플리케이션의 구성 파일을 수정할 수 있습니다. 자세한 내용은 [Visual Studio 2012용 ID 및 액세스 도구](identity-and-access-tool-for-vs.md)를 참조하세요.  
   
 2. RP 애플리케이션의 로그인 페이지에 대한 코드 숨김에서 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> 메서드 또는 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> 메서드를 호출할 수 있습니다.  
   
@@ -54,11 +54,11 @@ WIF(Windows Identity Foundation)에는 WS-FAM( WS-Federated Authentication Modul
   
  다음 다이어그램은 사용자가 STS에 인증했으며 해당 보안 토큰이 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>에 의해 처리될 때 발생하는 사항을 자세히 보여 줍니다.  
   
- ![수동 리디렉션을 사용한 토큰 처리 타이밍](../../../docs/framework/security/media/signinusingpassiveredirect-tokenprocessing.gif "SignInUsingPassiveRedirect_TokenProcessing")  
+ ![수동 리디렉션을 사용한 토큰 처리 타이밍](./media/signinusingpassiveredirect-tokenprocessing.gif "SignInUsingPassiveRedirect_TokenProcessing")  
   
  다음 다이어그램은 사용자의 보안 토큰이 쿠키로 직렬화되었으며 <xref:System.IdentityModel.Services.SessionAuthenticationModule>에서 가로챌 때 발생하는 사항을 자세히 보여 줍니다.  
   
- ![컨트롤을 사용한 로그인을 보여 주는 SAM 타이밍 다이어그램](../../../docs/framework/security/media/signinusingconrols-sam.gif "SignInUsingConrols_SAM")  
+ ![컨트롤을 사용한 로그인을 보여 주는 SAM 타이밍 다이어그램](./media/signinusingconrols-sam.gif "SignInUsingConrols_SAM")  
   
 ### <a name="events"></a>이벤트  
  <xref:System.IdentityModel.Services.WSFederationAuthenticationModule><xref:System.IdentityModel.Services.SessionAuthenticationModule> 및 해당 부모 클래스인 <xref:System.IdentityModel.Services.HttpModuleBase>는 HTTP 요청의 여러 처리 단계에서 이벤트를 발생시킵니다. ASP.NET 응용 프로그램의 `global.asax` 파일에서 이러한 이벤트를 처리할 수 있습니다.  
@@ -94,7 +94,7 @@ WIF(Windows Identity Foundation)에는 WS-FAM( WS-Federated Authentication Modul
 > <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 또는 <xref:System.IdentityModel.Services.SessionAuthenticationModule>에서 발생하는 이벤트 중에는 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 속성을 사용하면 안 됩니다. 이는 인증 프로세스 중 이벤트가 발생하는 반면 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType>은 인증 프로세스 후에 설정되기 때문입니다.  
   
 ### <a name="configuration-of-federated-authentication"></a>페더레이션된 인증 구성  
- WS-FAM 및 SAM은 [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) 요소를 통해 구성됩니다. [\<wsFederation>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md) 자식 요소는 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Issuer%2A> 속성 및 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Realm%2A> 속성 같은 WS-FAM 속성의 기본값을 구성합니다. 일부 WS-FAM 이벤트(예: <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider>)에 대한 처리기를 제공하여 요청별로 이러한 값을 변경할 수 있습니다. SAM에서 사용되는 쿠키 처리기는 [\<cookieHandler>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) 자식 요소를 통해 구성됩니다. WIF는 <xref:System.IdentityModel.Services.ChunkedCookieHandler> 클래스에 구현된 기본 쿠키 처리기를 제공하며, [\<chunkedCookieHandler>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md) 요소를 통해 해당 청크 크기를 설정할 수 있습니다. `<federationConfiguration>` 요소는 <xref:System.Security.Claims.ClaimsAuthenticationManager>, <xref:System.Security.Claims.ClaimsAuthorizationManager> 등 응용 프로그램에서 사용되는 다른 WIF 구성 요소에 대한 구성을 제공하는 <xref:System.IdentityModel.Configuration.IdentityConfiguration>을 참조합니다. `<federationConfiguration>` 요소의 `identityConfigurationName` 특성에 명명된 [\<identityConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 요소를 지정하여 ID 구성을 명시적으로 참조할 수 있습니다. ID 구성이 명시적으로 참조되지 않은 경우 기본 ID 구성이 사용됩니다.  
+ WS-FAM 및 SAM은 [\<federationConfiguration>](../configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) 요소를 통해 구성됩니다. [\<wsFederation>](../configure-apps/file-schema/windows-identity-foundation/wsfederation.md) 자식 요소는 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Issuer%2A> 속성 및 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Realm%2A> 속성 같은 WS-FAM 속성의 기본값을 구성합니다. 일부 WS-FAM 이벤트(예: <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider>)에 대한 처리기를 제공하여 요청별로 이러한 값을 변경할 수 있습니다. SAM에서 사용되는 쿠키 처리기는 [\<cookieHandler>](../configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) 자식 요소를 통해 구성됩니다. WIF는 <xref:System.IdentityModel.Services.ChunkedCookieHandler> 클래스에 구현된 기본 쿠키 처리기를 제공하며, [\<chunkedCookieHandler>](../configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md) 요소를 통해 해당 청크 크기를 설정할 수 있습니다. `<federationConfiguration>` 요소는 <xref:System.Security.Claims.ClaimsAuthenticationManager>, <xref:System.Security.Claims.ClaimsAuthorizationManager> 등 응용 프로그램에서 사용되는 다른 WIF 구성 요소에 대한 구성을 제공하는 <xref:System.IdentityModel.Configuration.IdentityConfiguration>을 참조합니다. `<federationConfiguration>` 요소의 `identityConfigurationName` 특성에 명명된 [\<identityConfiguration>](../configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 요소를 지정하여 ID 구성을 명시적으로 참조할 수 있습니다. ID 구성이 명시적으로 참조되지 않은 경우 기본 ID 구성이 사용됩니다.  
   
  다음 XML에서는 ASP.NET RP(신뢰 당사자) 애플리케이션의 구성을 보여 줍니다. <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> 및 <xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> 구성 섹션은 `<configSections>` 요소 아래에 추가됩니다. SAM 및 WS-FAM은 HTTP 모듈의 `<system.webServer>`/`<modules>` 요소 아래에 추가됩니다. 최종적으로, WIF 구성 요소는 `<system.identityModel>`/`<identityConfiguration>` 및 `<system.identityModel.services>`/`<federationConfiguration>` 요소 아래에 구성됩니다. 이 구성은 기본 쿠키 처리기이고 `<cookieHandler>` 요소에 지정된 쿠키 처리기 유형이 없기 때문에 청크 분할된 쿠키 처리기를 지정합니다.  
   
@@ -143,4 +143,4 @@ WIF(Windows Identity Foundation)에는 WS-FAM( WS-Federated Authentication Modul
 
 - <xref:System.IdentityModel.Services.SessionAuthenticationModule>
 - <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
-- [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)
+- [\<federationConfiguration>](../configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)

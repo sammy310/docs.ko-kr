@@ -1,5 +1,5 @@
 ---
-title: ARM(애플리케이션 도메인 리소스 모니터링) ETW 이벤트
+title: ARM(응용 프로그램 도메인 리소스 모니터링) ETW 이벤트
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ETW, application domain monitoring events
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ac396e1a5b83f33068266553024c37ef436c150d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f0e4002ae248022a9e4380c79174109494b5e4ca
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616628"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046777"
 ---
-# <a name="application-domain-resource-monitoring-arm-etw-events"></a>ARM(애플리케이션 도메인 리소스 모니터링) ETW 이벤트
+# <a name="application-domain-resource-monitoring-arm-etw-events"></a>ARM(응용 프로그램 도메인 리소스 모니터링) ETW 이벤트
 <a name="top"></a> 이들 이벤트는 응용 프로그램 도메인 상태에 대한 자세한 진단 정보를 제공합니다. 이들 이벤트를 사용하거나 애플리케이션 도메인 리소스 모니터링(ARM) 기능을 사용하여 같은 정보를 얻을 수 있습니다.  
   
  이 범주는 다음 이벤트로 구성됩니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "64616628"
 ## <a name="threadcreated-event"></a>ThreadCreated 이벤트  
  이 이벤트는 런다운 공급자에서만 `ThreadDC` 로서 발생합니다( `AppDomainResourceManagementRundownKeyword` 키워드에서). 이 이벤트는 이 범주의 런다운 공급자에서 발생하는 유일한 이벤트입니다.  
   
- 다음 표에서는 키워드와 수준을 보여 줍니다. 자세한 내용은 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)을 참조하세요.  
+ 다음 표에서는 키워드와 수준을 보여 줍니다. 자세한 내용은 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)을 참조하세요.  
   
 |이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
@@ -158,4 +158,4 @@ ms.locfileid: "64616628"
   
 ## <a name="see-also"></a>참고자료
 
-- [CLR ETW 이벤트](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW 이벤트](clr-etw-events.md)

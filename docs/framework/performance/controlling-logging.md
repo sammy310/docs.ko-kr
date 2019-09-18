@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1648af8c3dc407581714e8e863fe4972d6ffadbc
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 45df41e10dc81bc6011e5329723bca55925825f9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894942"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046680"
 ---
 # <a name="controlling-net-framework-logging"></a>.NET Framework 로깅 제어
 
@@ -85,7 +85,7 @@ CLR 공급자가 목록에 없는 경우 Windows [Wevtutil](/windows-server/admi
 
 ## <a name="viewing-clr-etw-events"></a>CLR ETW 이벤트 보기
 
-아래의 명령을 사용하여 CLR ETW 이벤트를 볼 수 있습니다. 이벤트에 대한 설명은 [CLR ETW 이벤트](../../../docs/framework/performance/clr-etw-events.md)를 참조하세요.
+아래의 명령을 사용하여 CLR ETW 이벤트를 볼 수 있습니다. 이벤트에 대한 설명은 [CLR ETW 이벤트](clr-etw-events.md)를 참조하세요.
 
 ### <a name="to-view-clr-etw-events-using-tracerpt"></a>Tracerpt를 사용하여 CLR ETW 이벤트를 보려면
 
@@ -114,4 +114,4 @@ CLR 공급자가 목록에 없는 경우 Windows [Wevtutil](/windows-server/admi
 ## <a name="see-also"></a>참고자료
 
 - [Windows 성능 도구 키트](/windows-hardware/test/wpt/)
-- [공용 언어 런타임의 ETW 이벤트](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+- [공용 언어 런타임의 ETW 이벤트](etw-events-in-the-common-language-runtime.md)

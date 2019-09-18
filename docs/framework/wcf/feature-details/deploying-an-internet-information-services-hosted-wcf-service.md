@@ -2,12 +2,12 @@
 title: 인터넷 정보 서비스에서 호스트하는 WCF 서비스 배포
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 95c56f767bbe8dce44ea742de00c65c357bd1378
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e46bcec846fcc8f9455c436bb551564e1cb5b5ea
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895101"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053309"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>인터넷 정보 서비스에서 호스트하는 WCF 서비스 배포
 
@@ -29,7 +29,7 @@ IIS에서 호스팅되는 WCF 서비스를 [만드는 방법에 대 한 자세�
 
 IIS에서 호스팅되는 WCF 서비스가 올바르게 작동 하려면 WCF, IIS 및 ASP.NET가 설치 되어 있어야 합니다. WCF (.NET Framework의 일부로), ASP.NET 및 IIS를 설치 하는 절차는 운영 체제에 따라 달라 집니다. WCF 및 .NET Framework를 설치 하는 방법에 대 한 자세한 내용은 [개발자 용 .NET Framework 설치](../../install/guide-for-developers.md)를 참조 하세요. Windows 10에서 IIS를 설치 하려면 **제어판** 에서 **프로그램 및 기능** 을 연 다음 **windows 기능 사용/사용 안 함**을 선택 합니다. **Windows 기능**에서 **인터넷 정보 서비스** 선택 하 고 **확인**을 선택 합니다.
 
-![IIS가 강조 표시 된 Windows 기능](media/windows-features-iis.png)
+![IIS가 강조 표시 된 Windows 기능](./media/windows-features-iis.png)
 
 다른 운영 체제에 IIS를 설치 하는 방법에 대 한 지침은 [Windows Vista 및 windows 7에 Iis 설치](/iis/install/installing-iis-7/installing-iis-on-windows-vista-and-windows-7) 및 [windows Server 2012 r 2에 iis 8.5 설치](/iis/install/installing-iis-85/installing-iis-85-on-windows-server-2012-r2)에서 찾을 수 있습니다.
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c13445b8b7c72d1c66efe5a9db3aaa027001ecf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 549030b7e5f7544f593e5aa481a6dc85d5a85329
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943814"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046405"
 ---
 # <a name="lazy-initialization"></a>초기화 지연
 개체 *초기화 지연*은 개체를 처음 사용할 때까지 생성이 지연된다는 의미입니다. (이 항목의 경우 *초기화 지연*과 *인스턴스화 지연*은 동의어임). 초기화 지연은 기본적으로 성능을 향상시키는 데 사용하며, 불필요한 계산을 방지하고, 프로그램 메모리 요구 사항을 줄입니다. 다음은 가장 일반적인 시나리오입니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "69943814"
   
  다음 표에는 다양한 시나리오에서 초기화 지연을 사용하도록 .NET Framework 버전 4에서 제공하는 유형이 나열되어 있습니다.  
   
-|형식|설명|  
+|형식|Description|  
 |----------|-----------------|  
 |<xref:System.Lazy%601>|클래스 라이브러리 또는 사용자 정의 형식에 대한 초기화 지연 의미 체계를 제공하는 래퍼 클래스입니다.|  
 |<xref:System.Threading.ThreadLocal%601>|스레드-로컬 기반으로 초기화 지연 의미 체계를 제공한다는 점을 제외하고는 <xref:System.Lazy%601>와 비슷합니다. 모든 스레드는 고유 값에 액세스할 수 있습니다.|  
@@ -62,7 +62,7 @@ ms.locfileid: "69943814"
  기본적으로 <xref:System.Lazy%601> 개체는 스레드로부터 안전합니다. 즉, 생성자가 스레드 보안 유형을 지정하지 않으면 생성된 <xref:System.Lazy%601> 개체는 스레드로부터 안전합니다. 다중 스레드 시나리오에서 스레드로부터 안전한 <xref:System.Lazy%601> 개체의 <xref:System.Lazy%601.Value%2A> 속성에 액세스하는 첫 번째 스레드가 모든 스레드에서의 모든 후속 액세스를 위해 개체를 초기화하고 모든 스레드에서 동일한 데이터를 공유합니다. 따라서 어떤 스레드가 개체를 초기화하는지는 중요하지 않으며 경합 상태는 심각하지 않습니다.  
   
 > [!NOTE]
-> 예외 캐싱을 사용하여 이러한 일관성을 오류 조건까지 확장할 수 있습니다. 자세한 내용은 다음 섹션인 [Lazy 개체의 예외](../../../docs/framework/performance/lazy-initialization.md#ExceptionsInLazyObjects)를 참조하세요.  
+> 예외 캐싱을 사용하여 이러한 일관성을 오류 조건까지 확장할 수 있습니다. 자세한 내용은 다음 섹션인 [Lazy 개체의 예외](lazy-initialization.md#ExceptionsInLazyObjects)를 참조하세요.  
   
  다음 예에서는 동일한 `Lazy<int>` 인스턴스에서는 개별 스레드의 값이 동일함을 보여 줍니다.  
   
@@ -157,4 +157,4 @@ ms.locfileid: "69943814"
 - [관리되는 스레딩 기본 사항](../../standard/threading/managed-threading-basics.md)
 - [스레드 및 스레딩](../../standard/threading/threads-and-threading.md)
 - [TPL(작업 병렬 라이브러리)](../../standard/parallel-programming/task-parallel-library-tpl.md)
-- [방법: 개체의 초기화 지연 수행](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [방법: 개체의 초기화 지연 수행](how-to-perform-lazy-initialization-of-objects.md)

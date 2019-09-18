@@ -8,12 +8,12 @@ helpviewer_keywords:
 - elements, finding by property conditions
 - UI Automation, finding elements by property conditions
 ms.assetid: 3acaee5a-6ce8-4c3e-81c8-67e59eb74477
-ms.openlocfilehash: 24c236e3d577fd4c9844546b04eefeee9eaf1de8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 536a71532f02782f9e84bb2bd086af212a77c0da
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965153"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043659"
 ---
 # <a name="find-a-ui-automation-element-based-on-a-property-condition"></a>속성 조건을 기반으로 UI 자동화 요소 찾기
 > [!NOTE]
@@ -33,5 +33,5 @@ ms.locfileid: "69965153"
 ## <a name="see-also"></a>참고자료
 
 - [InvokePattern 및 ExpandCollapsePattern Menu 항목 샘플](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771636(v=vs.90))
-- [UI 자동화 요소 가져오기](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)
-- [AutomationID 속성 사용](../../../docs/framework/ui-automation/use-the-automationid-property.md)
+- [UI 자동화 요소 가져오기](obtaining-ui-automation-elements.md)
+- [AutomationID 속성 사용](use-the-automationid-property.md)

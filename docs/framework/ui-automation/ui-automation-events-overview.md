@@ -9,12 +9,12 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-ms.openlocfilehash: 3f373c3947b45443ca4031ecdc3d5e40608ec84c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d342e4382cfe227e477ab87c2ca428834010768e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911549"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042157"
 ---
 # <a name="ui-automation-events-overview"></a>UI 자동화 이벤트 개요
 > [!NOTE]
@@ -79,10 +79,10 @@ ms.locfileid: "69911549"
   
  이벤트를 식별하는 데 사용되는 <xref:System.Windows.Automation.AutomationEvent> 개체는 공급자가 <xref:System.Windows.Automation.AutomationElementIdentifiers> 의 필드 및 <xref:System.Windows.Automation.DockPatternIdentifiers>등의 컨트롤 패턴 식별자 클래스에서 가져옵니다. 해당하는 필드는 클라이언트 애플리케이션이 <xref:System.Windows.Automation.AutomationElement> 의 필드 및 <xref:System.Windows.Automation.DockPattern>등의 컨트롤 패턴 클래스에서 가져옵니다.  
   
- 이벤트 식별자 목록은 [UI Automation Events for Clients](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)를 참조하세요.  
+ 이벤트 식별자 목록은 [UI Automation Events for Clients](ui-automation-events-for-clients.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
 
-- [클라이언트용 UI 자동화 이벤트](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
-- [서버 쪽 UI 자동화 공급자 구현](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
-- [UI 자동화 이벤트 구독](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+- [클라이언트용 UI 자동화 이벤트](ui-automation-events-for-clients.md)
+- [서버 쪽 UI 자동화 공급자 구현](server-side-ui-automation-provider-implementation.md)
+- [UI 자동화 이벤트 구독](subscribe-to-ui-automation-events.md)

@@ -2,12 +2,12 @@
 title: 특성
 description: 특성을 F# 사용 하 여 프로그래밍 구문에 메타 데이터를 적용 하는 방법을 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: c9691a13ff1e9e892e93a967136a99849da25f1f
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 08d50f7f57b6c0a81221e8f635f77f67750d0ff9
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567509"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082933"
 ---
 # <a name="attributes"></a>특성
 
@@ -27,8 +27,8 @@ ms.locfileid: "69567509"
 
 *인수* 는 특성 형식의 생성자에 대 한 인수입니다. 특성에 기본 생성자가 있는 경우 인수 목록 및 괄호를 생략할 수 있습니다. 특성은 위치 인수와 명명 된 인수를 모두 지원 합니다. *위치 인수* 는 표시 되는 순서 대로 사용 되는 인수입니다. 특성에 public 속성이 있는 경우 명명 된 인수를 사용할 수 있습니다. 인수 목록에서 다음 구문을 사용 하 여이를 설정할 수 있습니다.
 
-```
-*property-name* = *property-value*
+```fsharp
+property-name = property-value
 ```
 
 이러한 속성 초기화는 순서에 제한이 없지만 위치 인수를 따라야 합니다. 다음은 위치 인수 및 속성 초기화를 사용 하는 특성의 예입니다.

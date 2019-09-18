@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c1a0e2a6c7851b261baa3e02f6431e7a4ff697e4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7bcdb235ff2a73514c5bb3ad7abc3f4c3fc8e441
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660319"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052921"
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock MDA
 
@@ -48,9 +48,9 @@ ms.locfileid: "64660319"
 MDA가 잘못 활성화되었는지 확인하려면 모든 중단점을 사용하지 않도록 설정하고 애플리케이션을 다시 시작한 후 애플리케이션이 중지되지 않고 실행되도록 허용합니다. MDA가 활성화되지 않으면 초기 활성화가 잘못된 것입니다. 이 경우 MDA를 사용하지 않도록 설정하여 디버깅 세션의 방해를 방지합니다.
 
 > [!NOTE]
-> 이 MDA는 기본 Visual Studio에 대 한 집합입니다. Mda를 사용 하지 않도록 설정 하는 방법에 대 한 정보를 참조 하세요 [관리 디버깅 도우미를 사용 하 여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md#enable-and-disable-mdas)합니다.
+> 이 MDA는 Visual Studio에 대 한 기본 설정에 있습니다. Mda를 사용 하지 않는 방법에 대 한 자세한 내용은 [관리 디버깅 도우미를 사용 하 여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md#enable-and-disable-mdas)을 참조 하세요.
 
-## <a name="resolution"></a>해결
+## <a name="resolution"></a>해결 방법
 
 STA 메시지 펌핑 관련 COM 규칙을 따릅니다.
 
@@ -62,7 +62,7 @@ STA 메시지 펌핑 관련 COM 규칙을 따릅니다.
 
 현재 컨텍스트 및 대상 컨텍스트를 설명하는 메시지입니다.
 
-## <a name="configuration"></a>구성
+## <a name="configuration"></a>Configuration
 
 ```xml
 <mdaConfig>
@@ -75,5 +75,5 @@ STA 메시지 펌핑 관련 COM 규칙을 따릅니다.
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)
+- [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)
+- [interop 마샬링](../interop/interop-marshaling.md)

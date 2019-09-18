@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, control patterns for clients
 - control patterns, UI Automation clients
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
-ms.openlocfilehash: f545cbbacac6670f11f28166191112c9fba4f70f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 320833bf147fa16889cd188c7c729cd4dc028843
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953244"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042517"
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>클라이언트용 UI 자동화 컨트롤 패턴
 > [!NOTE]
@@ -20,7 +20,7 @@ ms.locfileid: "69953244"
   
  컨트롤 패턴은 컨트롤 형식 및 컨트롤의 모양에 관계없이 컨트롤의 기능을 분류하고 노출하는 방법을 제공합니다. UI 자동화 클라이언트는 <xref:System.Windows.Automation.AutomationElement> 를 검사하여 지원되는 컨트롤 패턴을 확인하고 컨트롤의 동작을 보장할 수 있습니다.  
   
- 컨트롤 패턴의 전체 목록은 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)를 참조하세요.  
+ 컨트롤 패턴의 전체 목록은 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)를 참조하세요.  
   
 <a name="uiautomation_getting_control_patterns"></a>   
 ## <a name="getting-control-patterns"></a>컨트롤 패턴 가져오기  
@@ -34,7 +34,7 @@ ms.locfileid: "69953244"
   
 <a name="uiautomation_properties_on_control_patterns"></a>   
 ## <a name="retrieving-properties-on-control-patterns"></a>컨트롤 패턴에 대한 속성 검색  
- 클라이언트는 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> 또는 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> 를 호출하고 적절한 형식으로 반환되는 개체를 캐스팅하여 컨트롤 패턴에 대한 속성 값을 검색할 수 있습니다. 속성에 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 대 한 자세한 내용은 [클라이언트에 대 한 UI 자동화 속성](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)을 참조 하세요.  
+ 클라이언트는 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> 또는 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> 를 호출하고 적절한 형식으로 반환되는 개체를 캐스팅하여 컨트롤 패턴에 대한 속성 값을 검색할 수 있습니다. 속성에 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 대 한 자세한 내용은 [클라이언트에 대 한 UI 자동화 속성](ui-automation-properties-for-clients.md)을 참조 하세요.  
   
  `GetPropertyValue` 메서드 외에도 CLR (공용 언어 런타임) 접근자를 통해 속성 값을 검색 하 여 패턴에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성에 액세스할 수 있습니다.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "69953244"
   
 ## <a name="see-also"></a>참고자료
 
-- [UI 자동화 컨트롤 패턴](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)
-- [UI 자동화 텍스트 패턴](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)
-- [UI 자동화를 사용하여 컨트롤 호출](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)
-- [UI 자동화를 사용하여 확인란의 전환 상태 가져오기](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)
-- [UI 자동화 클라이언트에 대한 컨트롤 패턴 매핑](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
+- [UI 자동화 컨트롤 패턴](ui-automation-control-patterns.md)
+- [UI 자동화 텍스트 패턴](ui-automation-text-pattern.md)
+- [UI 자동화를 사용하여 컨트롤 호출](invoke-a-control-using-ui-automation.md)
+- [UI 자동화를 사용하여 확인란의 전환 상태 가져오기](get-the-toggle-state-of-a-check-box-using-ui-automation.md)
+- [UI 자동화 클라이언트에 대한 컨트롤 패턴 매핑](control-pattern-mapping-for-ui-automation-clients.md)
 - [TextPattern Insert 텍스트 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
 - [TextPattern 검색 및 선택 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FindText)
 - [InvokePattern, ExpandCollapsePattern 및 TogglePattern 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InvokePattern)

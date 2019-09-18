@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties, UI Automation clients
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
-ms.openlocfilehash: 6f02a4825206da0dd4949083cc54f555a8ae40b5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9c92ea154a078ff5a059edd82f06b8f3d5bab239
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914452"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042128"
 ---
 # <a name="ui-automation-properties-for-clients"></a>클라이언트의 UI 자동화 속성
 > [!NOTE]
@@ -27,7 +27,7 @@ ms.locfileid: "69914452"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성이 읽기 전용입니다. 컨트롤의 속성을 설정하려면 적절한 컨트롤 패턴의 메서드를 사용해야 합니다. 예를 들어, 스크롤 창의 위치 값을 변경하려면 <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> 를 사용합니다.  
   
- 성능 향상을 위해 <xref:System.Windows.Automation.AutomationElement> 개체가 검색될 때 컨트롤 및 컨트롤 패턴의 속성 값을 캐시할 수 있습니다. 자세한 내용은 [UI 자동화 클라이언트에서 캐싱](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)을 참조 하세요.  
+ 성능 향상을 위해 <xref:System.Windows.Automation.AutomationElement> 개체가 검색될 때 컨트롤 및 컨트롤 패턴의 속성 값을 캐시할 수 있습니다. 자세한 내용은 [UI 자동화 클라이언트에서 캐싱](caching-in-ui-automation-clients.md)을 참조 하세요.  
   
 ## <a name="property-ids"></a>속성 ID  
  Id (속성 식별자)는 개체에서 <xref:System.Windows.Automation.AutomationProperty> 캡슐화 되는 고유한 상수 값입니다. UI 자동화 클라이언트 응용 프로그램은 <xref:System.Windows.Automation.AutomationElement> 클래스 또는와 <xref:System.Windows.Automation.ScrollPattern>같은 적절 한 컨트롤 패턴 클래스에서 이러한 id를 가져옵니다. UI 자동화 공급자는 이러한 ID를 <xref:System.Windows.Automation.AutomationElementIdentifiers> 또는 <xref:System.Windows.Automation.ScrollPatternIdentifiers>와 같은 컨트롤 패턴 식별자 클래스 중 하나에서 가져옵니다.  
@@ -99,6 +99,6 @@ ms.locfileid: "69914452"
   
 ## <a name="see-also"></a>참고자료
 
-- [UI 자동화 클라이언트의 캐싱](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
-- [서버 쪽 UI 자동화 공급자 구현](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
-- [UI 자동화 이벤트 구독](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+- [UI 자동화 클라이언트의 캐싱](caching-in-ui-automation-clients.md)
+- [서버 쪽 UI 자동화 공급자 구현](server-side-ui-automation-provider-implementation.md)
+- [UI 자동화 이벤트 구독](subscribe-to-ui-automation-events.md)
