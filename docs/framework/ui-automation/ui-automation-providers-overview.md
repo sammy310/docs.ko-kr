@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-ms.openlocfilehash: 45e1cd9bdfcbcf592ce6708496282e2e66a4a2e3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c8db2e6cbd1f0c0dd61ecb8e147133b8c608ea8f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914387"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042037"
 ---
 # <a name="ui-automation-providers-overview"></a>UI 자동화 공급자 개요
 > [!NOTE]
@@ -46,7 +46,7 @@ ms.locfileid: "69914387"
 ### <a name="navigation"></a>탐색  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요소는 클라이언트에 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리로 노출됩니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 은 요소를 탐색하여 트리를 생성합니다. 탐색은 부모, 형제, 자식을 나타낼 수 있는 각 요소의 공급자를 통해 사용할 수 있습니다.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 클라이언트 뷰에 대 한 자세한 내용은 [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)를 참조 하세요.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 클라이언트 뷰에 대 한 자세한 내용은 [UI 자동화 트리 개요](ui-automation-tree-overview.md)를 참조 하세요.  
   
 ### <a name="views"></a>보기  
  다음 표에서와 같이 클라이언트에서는 3개의 주요 뷰로 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리가 표시됩니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "69914387"
 |컨트롤 뷰|컨트롤인 요소를 포함합니다.|  
 |콘텐츠 뷰|콘텐츠가 있는 요소를 포함합니다.|  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 클라이언트 뷰에 대 한 자세한 내용은 [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)를 참조 하세요.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 클라이언트 뷰에 대 한 자세한 내용은 [UI 자동화 트리 개요](ui-automation-tree-overview.md)를 참조 하세요.  
   
  콘텐츠 요소 또는 컨트롤 요소로 요소를 정의하는 것은 공급자 구현에서 담당합니다. 컨트롤 요소가 콘텐츠 요소일 수도 있고 그렇지 않을 수도 있지만, 모든 콘텐츠 요소는 컨트롤 요소입니다.  
   
@@ -78,4 +78,4 @@ ms.locfileid: "69914387"
   
 ## <a name="see-also"></a>참고자료
 
-- [서버 쪽 UI 자동화 공급자 구현](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [서버 쪽 UI 자동화 공급자 구현](server-side-ui-automation-provider-implementation.md)

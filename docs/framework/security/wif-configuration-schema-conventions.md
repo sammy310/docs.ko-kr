@@ -3,15 +3,15 @@ title: WIF 구성 스키마 규칙
 ms.date: 03/30/2017
 ms.assetid: f7864356-f72f-4cae-995c-18e0431f8a58
 author: BrucePerlerMS
-ms.openlocfilehash: 6e13915121884ecb4a0e54344e02d29650f54c6f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: c02d467260a5197cdd01a3819f8a323655a8a08f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851484"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045093"
 ---
 # <a name="wif-configuration-schema-conventions"></a>WIF 구성 스키마 규칙
-이 항목에서는 WIF(Windows Identity Foundation) 구성 항목 전체에서 사용되는 규칙을 설명하고 [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) 및 [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) 섹션에서 사용되는 몇 가지 일반적인 기능과 특성을 설명합니다.  
+이 항목에서는 WIF(Windows Identity Foundation) 구성 항목 전체에서 사용되는 규칙을 설명하고 [\<system.identityModel>](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) 및 [\<system.identityModel.services>](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) 섹션에서 사용되는 몇 가지 일반적인 기능과 특성을 설명합니다.  
   
 <a name="BKMK_Modes"></a>   
 ## <a name="modes"></a>모드  
@@ -44,5 +44,5 @@ ms.locfileid: "70851484"
   
 ## <a name="see-also"></a>참고자료
 
-- [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)
-- [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)
+- [\<system.identityModel>](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)
+- [\<system.identityModel.services>](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)

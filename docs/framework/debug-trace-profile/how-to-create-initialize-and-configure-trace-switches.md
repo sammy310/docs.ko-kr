@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b1575d484c58afa3558d9f5b446473b4c89bc51
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 13f89af41520fa023d8841d6dc6d7766e2abe6da
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948006"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052708"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>방법: 추적 스위치 만들기, 초기화 및 구성
 추적 스위치를 사용하여 추적 출력을 활성화, 비활성화 및 필터링할 수 있습니다.  
@@ -127,7 +127,7 @@ ms.locfileid: "69948006"
   
 ## <a name="see-also"></a>참고자료
 
-- [응용 프로그램 추적 및 조율](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [방법: 응용 프로그램 코드에 Trace 문 추가](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [추적 스위치](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [추적 및 디버그 설정 스키마](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [응용 프로그램 추적 및 조율](tracing-and-instrumenting-applications.md)
+- [방법: 응용 프로그램 코드에 Trace 문 추가](how-to-add-trace-statements-to-application-code.md)
+- [추적 스위치](trace-switches.md)
+- [추적 및 디버그 설정 스키마](../configure-apps/file-schema/trace-debug/index.md)

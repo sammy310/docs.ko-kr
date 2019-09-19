@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a54945ece2cbb06df5f778aba242f05d9b80373
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 8f7c40d1a179c29c3b92ca37848db6d1383e5d2d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894510"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049898"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>예제: 데이터를 바인딩하는 경우 예외 처리
 > [!NOTE]
 > 이 항목은 시험판 소프트웨어인 .NET Native Developer Preview를 참조합니다. 이 Preview 버전은 [Microsoft Connect 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=394611)에서 다운로드할 수 있습니다(등록 필요).  
   
- 다음 예제에서는 .NET 네이티브 도구 체인을 사용 하 여 컴파일한 앱이 데이터 바인딩을 시도 하는 경우 throw 되는 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 예외를 해결 하는 방법을 보여 줍니다. 예외 정보는 다음과 같습니다.  
+ 다음 예제에서는 .NET 네이티브 도구 체인을 사용 하 여 컴파일한 앱이 데이터 바인딩을 시도 하는 경우 throw 되는 [MissingMetadataException](missingmetadataexception-class-net-native.md) 예외를 해결 하는 방법을 보여 줍니다. 예외 정보는 다음과 같습니다.  
   
 ```output
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:   
@@ -61,5 +61,5 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
   
 ## <a name="see-also"></a>참고자료
 
-- [시작](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [예제: 동적 프로그래밍 문제 해결](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)
+- [시작](getting-started-with-net-native.md)
+- [예제: 동적 프로그래밍 문제 해결](example-troubleshooting-dynamic-programming.md)

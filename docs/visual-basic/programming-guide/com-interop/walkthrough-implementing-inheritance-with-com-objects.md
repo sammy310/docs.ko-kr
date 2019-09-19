@@ -7,12 +7,12 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-ms.openlocfilehash: f632df919417c04701727be3e99eb2bf3f6ff1f7
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7cbf71d7a2bbd1e94864e785894fdea41d522486
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627041"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053340"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>연습: COM 개체를 사용 하 여 상속 구현 (Visual Basic)
 
@@ -22,7 +22,7 @@ ms.locfileid: "68627041"
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-### <a name="to-build-the-com-object-that-is-used-in-this-walkthrough"></a>이 연습에서 사용 되는 COM 개체를 빌드하려면
+## <a name="to-build-the-com-object-that-is-used-in-this-walkthrough"></a>이 연습에서 사용 되는 COM 개체를 빌드하려면
 
 1. Visual Basic 6.0에서 새 ActiveX DLL 프로젝트를 엽니다. 이라는 `Project1` 프로젝트가 생성 됩니다. 이라는 `Class1`클래스가 있습니다.
 
@@ -76,7 +76,7 @@ ms.locfileid: "68627041"
 
 다음 절차에서는 비관리 코드 (예: COM 개체)와 Visual Studio가 사용 하는 관리 코드 간의 브리지 역할을 하는 interop 어셈블리를 만듭니다. Visual Basic 생성 하는 interop 어셈블리는 com 개체와 상호 작용 하는 것과 같은 COM 개체 작업에 대 한 세부 정보 (예: *interop 마샬링*)를 처리 합니다. Visual Basic 응용 프로그램의 참조는 실제 COM 개체가 아닌 interop 어셈블리를 가리킵니다.
 
-#### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Visual Basic 2005 이상 버전에서 COM 개체를 사용 하려면
+### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Visual Basic 2005 이상 버전에서 COM 개체를 사용 하려면
 
 1. 새 Visual Basic Windows 애플리케이션 프로젝트를 엽니다.
 
@@ -108,7 +108,7 @@ ms.locfileid: "68627041"
 
 새 클래스는 COM 개체의 기본 클래스 속성을 상속 하 고, 메서드를 오버 로드 하 고, 클래스를 확장 하는 새 메서드를 정의 합니다.
 
-#### <a name="to-test-the-inherited-class"></a>상속 된 클래스를 테스트 하려면
+### <a name="to-test-the-inherited-class"></a>상속 된 클래스를 테스트 하려면
 
 1. 시작 폼에 단추를 추가 하 고 두 번 클릭 하 여 해당 코드를 확인 합니다.
 

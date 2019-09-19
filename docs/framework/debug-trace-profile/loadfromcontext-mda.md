@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 632d9119cf32aab66c87e345ec98c6867ed51592
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 89605a119e8251ffd577ff402366dff0fd4af4d7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614378"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052513"
 ---
 # <a name="loadfromcontext-mda"></a>loadFromContext MDA
 `loadFromContext` MDA(관리 디버깅 도우미)는 어셈블리가 `LoadFrom` 컨텍스트에 로드되면 활성화됩니다. 이 상황은 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>을 호출하거나 비슷한 메서드를 호출한 결과 발생할 수 있습니다.  
@@ -74,4 +74,4 @@ namespace ConsoleApplication1
   
 ## <a name="see-also"></a>참고자료
 
-- [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)

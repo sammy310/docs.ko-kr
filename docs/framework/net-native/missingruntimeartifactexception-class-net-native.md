@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: d5b3d13e-689f-4584-8ba6-44f5167a8590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: caa929225701a62c0abb3b335bfd7fb6a129e9e3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: aa882762479995448a99d9cb63fbdea941a253d4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941633"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049486"
 ---
 # <a name="missingruntimeartifactexception-class-net-native"></a>MissingRuntimeArtifactException 클래스(.NET 네이티브)
 **Windows 10 용 Windows 앱 용 .NET, .NET 네이티브만**  
@@ -19,7 +19,7 @@ ms.locfileid: "69941633"
  **네임스페이스:** System.Reflection  
   
 > [!IMPORTANT]
-> 클래스 `MissingRuntimeArtifactException` 는 .NET 네이티브 도구 체인에서 내부용 으로만 사용 됩니다. 이 클래스는 타사 코드에서 사용하면 안 되고 응용 프로그램 코드에서 예외를 처리하면 안 됩니다. 대신, [런타임 지시문 파일](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)에 항목을 추가하여 예외를 제거합니다. 자세한 내용은 설명 섹션을 참조하세요.  
+> 클래스 `MissingRuntimeArtifactException` 는 .NET 네이티브 도구 체인에서 내부용 으로만 사용 됩니다. 이 클래스는 타사 코드에서 사용하면 안 되고 응용 프로그램 코드에서 예외를 처리하면 안 됩니다. 대신, [런타임 지시문 파일](runtime-directives-rd-xml-configuration-file-reference.md)에 항목을 추가하여 예외를 제거합니다. 자세한 내용은 설명 섹션을 참조하세요.  
   
 ## <a name="syntax"></a>구문  
  [!code-csharp[ProjectN#22](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missingruntimeartifactexception_syntax1.cs#22)]  
@@ -70,7 +70,7 @@ ms.locfileid: "69941633"
 ## <a name="usage-details"></a>자세한 용도  
  형식 또는 멤버의 메타데이터는 있는데 해당 구현은 제거된 경우 형식을 인스턴스화하거나 형식 멤버를 호출하려고 하면 `MissingRuntimeArtifactException` 예외가 throw됩니다.  
   
- 런타임에 동적으로 메서드를 실행 하는 메타 데이터와 구현 코드가 런타임 지시문 (XML 구성) 파일 \*(app.config .xml)에 의해 정의 되는지 여부입니다. 앱에서 이 예외가 throw되지 않도록 하려면 형식 또는 형식 멤버에 필요한 메타데이터가 런타임에 제공되도록 \*.rd.xml을 수정해야 합니다. \*.rd.xml 파일의 형식에 대한 자세한 내용은 [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)를 확인하세요.  
+ 런타임에 동적으로 메서드를 실행 하는 메타 데이터와 구현 코드가 런타임 지시문 (XML 구성) 파일 \*(app.config .xml)에 의해 정의 되는지 여부입니다. 앱에서 이 예외가 throw되지 않도록 하려면 형식 또는 형식 멤버에 필요한 메타데이터가 런타임에 제공되도록 \*.rd.xml을 수정해야 합니다. \*.rd.xml 파일의 형식에 대한 자세한 내용은 [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)를 확인하세요.  
   
 > [!IMPORTANT]
 > 이 예외는 애플리케이션에 필요한 구현 코드를 런타임에 사용할 수 없음을 나타내므로 `try`/`catch` 블록에서 이 예외를 처리하면 안 됩니다. 대신 예외의 원인을 진단하고 런타임 지시문 파일을 사용하여 예외를 방지해야 합니다. 일반적으로 런타임 지시문 파일 ( `Activate` \*system.xml 파일)의 program `Dynamic` 요소에 적절 한 또는 정책을 지정 하 여이 예외를 제거 합니다. 예외를 제거하는 런타임 지시문 파일에 추가할 수 있는 항목을 가져오려면 두 문제 해결사 중 하나를 사용할 수 있습니다.  
@@ -82,5 +82,5 @@ ms.locfileid: "69941633"
   
 ## <a name="see-also"></a>참고자료
 
-- [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [런타임 지시문 정책 설정](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)
+- [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)

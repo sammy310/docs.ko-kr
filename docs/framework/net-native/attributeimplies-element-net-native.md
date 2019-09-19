@@ -1,17 +1,17 @@
 ---
-title: <AttributeImplies> 요소 (.NET 네이티브)
+title: <AttributeImplies>요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: 82db7193-a860-418b-84fc-fff2fdf2e025
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d59f1f48be19a21ccc7ee5bb73cebfffc387fec2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d15d572ee70e9c7a8cb29010d6debbd1874e5ae2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868545"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049911"
 ---
-# <a name="attributeimplies-element-net-native"></a>\<AttributeImplies > 요소 (.NET 네이티브)
+# <a name="attributeimplies-element-net-native"></a>\<AttributeImplies 요소 (.NET 네이티브)를 의미 합니다.
 포함 특성이 적용되는 코드 요소에 대한 정책을 정의합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,7 +34,7 @@ ms.locfileid: "61868545"
   
 ### <a name="attributes"></a>특성  
   
-|특성|특성 형식|설명|  
+|특성|특성 유형|Description|  
 |---------------|--------------------|-----------------|  
 |`Activate`|반사|선택적 특성입니다. 인스턴스를 활성화할 수 있도록 생성자에 대한 런타임 액세스를 제어합니다.|  
 |`Browse`|반사|선택적 특성입니다. 프로그램 요소에 대한 정보 쿼리를 제어하지만 런타임 액세스를 사용하도록 설정하지는 않습니다.|  
@@ -49,9 +49,9 @@ ms.locfileid: "61868545"
   
 ## <a name="all-attributes"></a>모든 특성  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
-|*policy_setting*|이 정책 형식에 적용할 설정입니다. 가능한 값은 `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` 및 `Required All`입니다. 자세한 내용은 [런타임 지시문 정책 설정](../../../docs/framework/net-native/runtime-directive-policy-settings.md)을 참조하세요.|  
+|*policy_setting*|이 정책 형식에 적용할 설정입니다. 가능한 값은 `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` 및 `Required All`입니다. 자세한 내용은 [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)을 참조하세요.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -60,7 +60,7 @@ ms.locfileid: "61868545"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
+|[\<Type>](type-element-net-native.md)|형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
   
 ## <a name="remarks"></a>설명  
  `<AttributeImplies>` 요소는 포함 형식이 특성(<xref:System.Attribute?displayProperty=nameWithType>에서 파생되는 클래스)인 경우에 사용됩니다. 특성이 특정 프로그램 요소에 적용되면 `<AttributeImplies>` 요소로 정의된 정책이 해당 프로그램 요소에 적용됩니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "61868545"
   
 ## <a name="see-also"></a>참고자료
 
-- [\<형식 > 요소](../../../docs/framework/net-native/type-element-net-native.md)
-- [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [런타임 지시문 요소](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [런타임 지시문 정책 설정](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [\<형식 > 요소](type-element-net-native.md)
+- [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)
+- [런타임 지시문 요소](runtime-directive-elements.md)
+- [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)

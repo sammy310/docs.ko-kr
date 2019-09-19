@@ -2,12 +2,12 @@
 title: SQL-CLR 형식 매핑
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: b209283f5d4e87d1faab06184bda3f79bf1adaed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6710c58a430c35dae41a1a381335019fd3e75192
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792526"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053036"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR 형식 매핑
 LINQ to SQL에서 관계형 데이터베이스의 데이터 모델은 사용자가 선택한 프로그래밍 언어로 표현되는 개체 모델에 매핑됩니다. 애플리케이션을 실행하면 LINQ to SQL에서는 개체 모델의 통합 언어 쿼리를 SQL로 변환하여 실행을 위해 데이터베이스로 전송합니다. 데이터베이스에서 결과가 반환되면 LINQ to SQL에서는 해당 결과를 사용자의 프로그래밍 언어로 작업할 수 있는 개체로 다시 변환합니다.  
@@ -44,7 +44,7 @@ LINQ to SQL에서 관계형 데이터베이스의 데이터 모델은 사용자�
 ## <a name="type-mapping-run-time-behavior-matrix"></a>형식 매핑 런타임 동작 매트릭스  
  다음 다이어그램에서는 데이터를 데이터베이스에서 검색하거나 데이터베이스에 저장할 때 특정 형식 매핑에 대해 예상되는 런타임 동작을 보여 줍니다. serialization의 경우를 제외하고 LINQ to SQL에서는 이 매트릭스에 지정되어 있는 CLR 또는 SQL Server 데이터 형식 간 매핑만 지원합니다. Serialization 지원에 대 한 자세한 내용은 [이진 serialization](#BinarySerialization)을 참조 하세요.  
  
-![SQL CLR 데이터 형식 매핑 테이블 SQL Server](media/sql-clr-type-mapping.png)
+![SQL CLR 데이터 형식 매핑 테이블 SQL Server](./media/sql-clr-type-mapping.png)
 
 > [!NOTE]
 > 일부 형식 매핑의 경우 데이터베이스 관련 변환 과정에서 오버플로 또는 데이터 손실 예외가 발생할 수 있습니다.  

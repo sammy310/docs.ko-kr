@@ -2,12 +2,12 @@
 title: 목록
 description: 동일한 형식의 F# 변경 되지 않은 순서가 지정 된 일련의 요소 목록에 대해 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: e8c4a464306cfedfd36a4685507684d3a1a97a2e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 72f1779d7d077da0f1f4804df93fa4ac11f9b2e3
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630735"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082905"
 ---
 # <a name="lists"></a>목록
 
@@ -99,14 +99,14 @@ F#의 목록은 변경이 불가능하므로 수정 작업을 수행하면 기�
 
 출력은 다음과 같습니다.
 
-```
+```console
 Primes Up To 100:
 [2; 3; 5; 7; 11; 13; 17; 19; 23; 29; 31; 37; 41; 43; 47; 53; 59; 61; 67; 71; 73; 79; 83; 89; 97]
 ```
 
 ## <a name="module-functions"></a>모듈 함수
 
-[목록 모듈](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788) 은 목록의 요소에 액세스 하는 함수를 제공 합니다. 가장 빠르고 쉽게 액세스할 수 있는 요소는 헤드 요소입니다. 속성 [head](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740) 또는 모듈 함수 [List. head](https://msdn.microsoft.com/library/22514cc5-0511-498b-a2cc-837b688a6da2)를 사용 합니다. Tail [속성 또는](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91) [list. tail](https://msdn.microsoft.com/library/da0a0638-4420-4571-84b6-d09ae601f601) 함수를 사용 하 여 목록의 꼬리 부분에 액세스할 수 있습니다. 인덱스를 기준으로 요소를 찾으려면 [List. n a n](https://msdn.microsoft.com/library/1f717d57-89be-4007-a971-9cf5a28d83b1) 함수를 사용 합니다. `List.nth`는 목록을 트래버스하므로 따라서 O (*n*)입니다. 코드에서 `List.nth`를 자주 사용하는 경우 목록 대신 배열을 사용해볼 수 있습니다. 배열의 요소 액세스는 O(1)입니다.
+[목록 모듈](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788) 은 목록의 요소에 액세스 하는 함수를 제공 합니다. 가장 빠르고 쉽게 액세스할 수 있는 요소는 헤드 요소입니다. 속성 [head](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740) 또는 모듈 함수 [List. head](https://msdn.microsoft.com/library/22514cc5-0511-498b-a2cc-837b688a6da2)를 사용 합니다. [Tail 속성 또는](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91) [list. tail](https://msdn.microsoft.com/library/da0a0638-4420-4571-84b6-d09ae601f601) 함수를 사용 하 여 목록의 꼬리 부분에 액세스할 수 있습니다. 인덱스를 기준으로 요소를 찾으려면 [List. n a n](https://msdn.microsoft.com/library/1f717d57-89be-4007-a971-9cf5a28d83b1) 함수를 사용 합니다. `List.nth`는 목록을 트래버스하므로 따라서 O (*n*)입니다. 코드에서 `List.nth`를 자주 사용하는 경우 목록 대신 배열을 사용해볼 수 있습니다. 배열의 요소 액세스는 O(1)입니다.
 
 ### <a name="boolean-operations-on-lists"></a>목록에 대한 부울 작업
 
@@ -120,7 +120,7 @@ Primes Up To 100:
 
 출력은 다음과 같습니다.
 
-```
+```console
 For list [0; 1; 2; 3], contains zero is true
 ```
 
@@ -130,7 +130,7 @@ For list [0; 1; 2; 3], contains zero is true
 
 출력은 다음과 같습니다.
 
-```
+```console
 Lists [1; 2; 3; 4; 5] and [5; 4; 3; 2; 1] have at least one equal element at the same position.
 ```
 
@@ -140,7 +140,7 @@ Lists [1; 2; 3; 4; 5] and [5; 4; 3; 2; 1] have at least one equal element at the
 
 출력은 다음과 같습니다.
 
-```
+```console
 true
 false
 ```
@@ -151,7 +151,7 @@ false
 
 출력은 다음과 같습니다.
 
-```
+```console
 true
 false
 ```
@@ -168,7 +168,7 @@ false
 
 출력은 다음과 같습니다.
 
-```
+```console
 [-2; 1; 4; 5; 8]
 ```
 
@@ -178,7 +178,7 @@ false
 
 출력은 다음과 같습니다.
 
-```
+```console
 [1; -2; 4; 5; 8]
 ```
 
@@ -188,7 +188,7 @@ false
 
 출력은 다음과 같습니다.
 
-```
+```console
 [{ID = 92;
 Rev = 1;}; {ID = 92;
 Rev = 1;}; {ID = 100;
@@ -213,7 +213,7 @@ Rev = 1;}]
 
 출력은 다음과 같습니다.
 
-```
+```console
 "b"
 ```
 
@@ -223,7 +223,7 @@ Rev = 1;}]
 
 출력은 다음과 같습니다.
 
-```
+```console
 The first even value is 22.
 The first even value is at position 8.
 ```
@@ -252,7 +252,7 @@ The first even value is at position 8.
 
 출력은 다음과 같습니다.
 
-```
+```console
 [(1, -1); (2, -2); (3; -3)]
 ```
 
@@ -262,7 +262,7 @@ The first even value is at position 8.
 
 출력은 다음과 같습니다.
 
-```
+```console
 [(1, -1, 0); (2, -2, 0); (3, -3, 0)]
 ```
 
@@ -274,7 +274,7 @@ The first even value is at position 8.
 
 출력은 다음과 같습니다.
 
-```
+```console
 ([1; 3], [2; 4])
 [1; 3] [2; 4]
 ```
@@ -285,7 +285,7 @@ The first even value is at position 8.
 
 출력은 다음과 같습니다.
 
-```
+```console
 ([1; 4], [2; 5], [3; 6])
 ```
 
@@ -297,7 +297,7 @@ F#에서는 목록 요소에 대한 여러 작업을 지원합니다. 가장 간
 
 출력은 다음과 같습니다.
 
-```
+```console
 List.iter: element is 1
 List.iter: element is 2
 List.iter: element is 3
@@ -312,13 +312,13 @@ List.iteri2: element 1 of list1 is 2; element 1 of list2 is 5
 List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 ```
 
-자주 사용 되는 또 다른 함수는 목록 요소를 변환 하는 [목록입니다. map](https://msdn.microsoft.com/library/c6b49c99-d4f3-4ba3-b1d0-85a312683dc6)을 사용 하면 목록의 각 요소에 함수를 적용 하 고 모든 결과를 새 목록에 넣을 수 있습니다. [Array.map2](https://msdn.microsoft.com/library/5f48cce7-6eaf-4e54-8996-2b04d3c31e57) 및 [list.map3](https://msdn.microsoft.com/library/dd9fb190-6980-4537-be96-5645a64908f8) 는 여러 목록을 사용 하는 변형입니다. Array.mapi2 [및](https://msdn.microsoft.com/library/284b9234-3d26-409b-b328-ac79638d9e14) [list.](https://msdn.microsoft.com/library/680643af-233c-40a3-82f2-43d5af27ec49)를 사용할 수도 있습니다. 요소 외에도 함수는 각 요소의 인덱스를 전달 해야 합니다. `List.mapi2`와 `List.mapi`의 차이점은 `List.mapi2`의 경우 목록 두 개를 사용한다는 것뿐입니다. 다음 예에서는 [map](https://msdn.microsoft.com/library/c6b49c99-d4f3-4ba3-b1d0-85a312683dc6)을 보여 줍니다.
+자주 사용 되는 또 다른 함수는 목록 요소를 변환 하는 [목록입니다. map](https://msdn.microsoft.com/library/c6b49c99-d4f3-4ba3-b1d0-85a312683dc6)을 사용 하면 목록의 각 요소에 함수를 적용 하 고 모든 결과를 새 목록에 넣을 수 있습니다. [Array.map2](https://msdn.microsoft.com/library/5f48cce7-6eaf-4e54-8996-2b04d3c31e57) 및 [list.map3](https://msdn.microsoft.com/library/dd9fb190-6980-4537-be96-5645a64908f8) 는 여러 목록을 사용 하는 변형입니다. [Array.mapi2 및 list.](https://msdn.microsoft.com/library/680643af-233c-40a3-82f2-43d5af27ec49)를 사용할 수도 [있습니다. 요소](https://msdn.microsoft.com/library/284b9234-3d26-409b-b328-ac79638d9e14) 외에도 함수는 각 요소의 인덱스를 전달 해야 합니다. `List.mapi2`와 `List.mapi`의 차이점은 `List.mapi2`의 경우 목록 두 개를 사용한다는 것뿐입니다. 다음 예에서는 [map](https://msdn.microsoft.com/library/c6b49c99-d4f3-4ba3-b1d0-85a312683dc6)을 보여 줍니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet18.fs)]
 
 출력은 다음과 같습니다.
 
-```
+```console
 [2; 3; 4]
 ```
 
@@ -328,7 +328,7 @@ List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 
 출력은 다음과 같습니다.
 
-```
+```console
 [5; 7; 9]
 ```
 
@@ -338,7 +338,7 @@ List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 
 출력은 다음과 같습니다.
 
-```
+```console
 [7; 10; 13]
 ```
 
@@ -348,7 +348,7 @@ List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 
 출력은 다음과 같습니다.
 
-```
+```console
 [1; 3; 5]
 ```
 
@@ -358,17 +358,17 @@ List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 
 출력은 다음과 같습니다.
 
-```
+```console
 [0; 7; 18]
 ```
 
-Lists [는와](https://msdn.microsoft.com/library/cd08bbc7-a3b9-40ab-8c20-4e85ec84664f) 유사 `List.map`합니다. 단, 각 요소는 목록을 생성 하 고 이러한 모든 목록은 최종 목록에 연결 됩니다. 다음 코드에서는 목록의 각 요소가 숫자 3개를 생성합니다. 이러한 숫자는 모두 목록 하나에 수집됩니다.
+Lists `List.map` [는와 유사 합니다. 단](https://msdn.microsoft.com/library/cd08bbc7-a3b9-40ab-8c20-4e85ec84664f) , 각 요소는 목록을 생성 하 고 이러한 모든 목록은 최종 목록에 연결 됩니다. 다음 코드에서는 목록의 각 요소가 숫자 3개를 생성합니다. 이러한 숫자는 모두 목록 하나에 수집됩니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet23.fs)]
 
 출력은 다음과 같습니다.
 
-```
+```console
 [1; 2; 3; 2; 4; 6; 3; 6; 9]
 ```
 
@@ -386,7 +386,7 @@ Lists [는와](https://msdn.microsoft.com/library/cd08bbc7-a3b9-40ab-8c20-4e85ec
 
 출력은 다음과 같습니다.
 
-```
+```console
 ["Rome's"; "Bob's"]
 ```
 

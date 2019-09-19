@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Document control type
 - UI Automation, Document control type
 ms.assetid: a79d594b-1ca0-4543-8dac-afd2c645201d
-ms.openlocfilehash: 5e33a50db9359667efe38fafdb6386a50cb0694a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ebdf3ccc1c3a4966d89ddbe3616acd45c244a080
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911920"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71041716"
 ---
 # <a name="ui-automation-support-for-the-document-control-type"></a>Document 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]
@@ -23,17 +23,15 @@ ms.locfileid: "69911920"
   
  다음 섹션에서는 Document 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]의 모든 문서 컨트롤에 적용됩니다.  
   
-<a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>필요한 UI 자동화 트리 구조  
- 다음 표는 문서 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 대 한 자세한 내용은 [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)를 참조 하세요.  
+ 다음 표는 문서 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 대 한 자세한 내용은 [UI 자동화 트리 개요](ui-automation-tree-overview.md)를 참조 하세요.  
   
 |컨트롤 뷰|콘텐츠 뷰|  
 |------------------|------------------|  
 |문서<br /><br /> -다양|문서<br /><br /> -다양|  
   
-<a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>필요한 UI 자동화 속성  
- 다음 표에서는 값 또는 정의가 문서 컨트롤과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여줍니다. 속성에 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 대 한 자세한 내용은 [클라이언트에 대 한 UI 자동화 속성](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)을 참조 하세요.  
+ 다음 표에서는 값 또는 정의가 문서 컨트롤과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여줍니다. 속성에 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 대 한 자세한 내용은 [클라이언트에 대 한 UI 자동화 속성](ui-automation-properties-for-clients.md)을 참조 하세요.  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성|값|노트|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
@@ -48,9 +46,8 @@ ms.locfileid: "69911920"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"document"|Document 컨트롤 형식에 해당하는 지역화된 문자열입니다.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|메모를 참조하세요.|일반적으로 문서 컨트롤은 문서가 로드된 파일 이름에서 해당 이름을 가져옵니다. 주로 포함되는 창 또는 프레임 제목에 표시됩니다.|  
   
-<a name="Required_UI_Automation_Control_Patterns"></a>   
 ## <a name="required-ui-automation-control-patterns"></a>필요한 UI 자동화 컨트롤 패턴  
- 다음 표에서는 문서 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴을 나열하여 보여줍니다. 컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)를 참조하세요.  
+ 다음 표에서는 문서 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴을 나열하여 보여줍니다. 컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)를 참조하세요.  
   
 |컨트롤 패턴|Support(지원)|노트|  
 |---------------------|-------------|-----------|  
@@ -58,9 +55,8 @@ ms.locfileid: "69911920"
 |<xref:System.Windows.Automation.Provider.ITextProvider>|필수|문서 컨트롤은 뷰포트의 해당 범위보다 크게 확장할 수 있습니다. 콘텐츠를 스크롤할 수 있는 경우 이 컨트롤은 Scroll 컨트롤 패턴을 지원해야 합니다.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|Never|대개 이 컨트롤의 내용은 둘 이상의 페이지에 걸쳐 있기 때문에 문서 컨트롤은 이 컨트롤 패턴을 지원하지 않습니다. UI 자동화 클라이언트는 <xref:System.Windows.Automation.TextPattern> 을 사용하여 문서에 대한 텍스트 정보를 가져와야 합니다.|  
   
-<a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>필요한 UI 자동화 이벤트  
- 다음 표에서는 모든 문서 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여줍니다. 이벤트에 대한 자세한 내용은 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)를 참조하세요.  
+ 다음 표에서는 모든 문서 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여줍니다. 이벤트에 대한 자세한 내용은 [UI Automation Events Overview](ui-automation-events-overview.md)를 참조하세요.  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|Support(지원)|노트|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
@@ -83,5 +79,5 @@ ms.locfileid: "69911920"
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.Automation.ControlType.Document>
-- [UI 자동화 컨트롤 형식 개요](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
-- [UI 자동화 개요](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [UI 자동화 컨트롤 형식 개요](ui-automation-control-types-overview.md)
+- [UI 자동화 개요](ui-automation-overview.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c52c9bf37e67e4d26867d2b3754945e86e2bf609
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 787c6221b651a53dbb932a5a9d0edea123e1d97d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422417"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046430"
 ---
 # <a name="interop-etw-events"></a>Interop ETW 이벤트
 <a name="top"></a> Interop 이벤트는 MSIL(Microsoft Intermediate Language) 스텁 생성 및 캐싱에 대한 정보를 캡처합니다.  
@@ -25,9 +25,9 @@ ms.locfileid: "67422417"
   
 <a name="ilstubgenerated_event"></a>   
 ## <a name="ilstubgenerated-event"></a>ILStubGenerated 이벤트  
- 다음 표에서는 키워드와 수준을 보여 줍니다. 자세한 내용은 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)을 참조하세요.  
+ 다음 표에서는 키워드와 수준을 보여 줍니다. 자세한 내용은 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)을 참조하세요.  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|이벤트를 발생시키기 위한 키워드|Level|  
 |-----------------------------------|-----------|  
 |`InteropKeyword` (0x2000)|정보 제공(4)|  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67422417"
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt16|모듈 식별자입니다.|  
 |StubMethodID|win:UInt64|스텁 메서드 식별자입니다.|  
-|StubFlags|win:UInt64|스텁에 대한 플래그:<br /><br /> 0x1 - 역방향 interop<br /><br /> 0x2 - COM interop<br /><br /> 0x4 - NGen.exe에서 생성한 스텁<br /><br /> 0x8 - 대리자<br /><br /> 0x10-가변 인수입니다.<br /><br /> 0x20 - 비관리 호출 수신자|  
+|StubFlags|win:UInt64|스텁에 대한 플래그:<br /><br /> 0x1 - 역방향 interop<br /><br /> 0x2 - COM interop<br /><br /> 0x4 - NGen.exe에서 생성한 스텁<br /><br /> 0x8 - 대리자<br /><br /> 0x10-변수 인수입니다.<br /><br /> 0x20 - 비관리 호출 수신자|  
 |ManagedInteropMethodToken|win:UInt32|관리되는 interop 메서드의 토큰입니다.|  
 |ManagedInteropMethodNameSpace|win:UnicodeString|관리되는 interop 메서드의 네임스페이스입니다.|  
 |ManagedInteropMethodName|win:UnicodeString|관리되는 interop 메서드의 이름입니다.|  
@@ -59,7 +59,7 @@ ms.locfileid: "67422417"
 ## <a name="ilstubcachehit-event"></a>ILStubCacheHit 이벤트  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|이벤트를 발생시키기 위한 키워드|Level|  
 |-----------------------------------|-----------|  
 |`InteropKeyword` (0x2000)|정보 제공(4)|  
   
@@ -85,4 +85,4 @@ ms.locfileid: "67422417"
   
 ## <a name="see-also"></a>참고자료
 
-- [CLR ETW 이벤트](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW 이벤트](clr-etw-events.md)

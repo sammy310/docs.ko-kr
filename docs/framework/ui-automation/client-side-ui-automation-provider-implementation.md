@@ -6,12 +6,12 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-ms.openlocfilehash: 9079dfa03ab81bfa6875e43bfa8a6e5351e0a35d
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 28179ecd27c98f1de5662908ced3ea0e49cb87ad
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015111"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043954"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>클라이언트 쪽 UI 자동화 공급자 구현
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "70015111"
   
  [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)]표준 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 및 Windows Forms 컨트롤에 대 한 공급자를 제공 합니다. 또한 대체 (fallback) 공급자는 다른 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 서버 쪽 공급자나 프록시가 제공 하지는 않지만 Microsoft Active Accessibility 구현을 포함 하는 모든 컨트롤에 부분적 지원을 제공 합니다. 이러한 공급자는 모두 자동으로 로드되며 클라이언트 애플리케이션에 사용할 수 있습니다.  
   
- 및 Windows Forms 컨트롤에 대 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 한 지원에 대 한 자세한 내용은 [표준 컨트롤에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)을 참조 하세요.  
+ 및 Windows Forms 컨트롤에 대 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 한 지원에 대 한 자세한 내용은 [표준 컨트롤에 대 한 UI 자동화 지원](ui-automation-support-for-standard-controls.md)을 참조 하세요.  
   
  애플리케이션이 다른 클라이언트쪽 공급자를 등록할 수도 있습니다.  
   
@@ -51,5 +51,5 @@ ms.locfileid: "70015111"
   
 ## <a name="see-also"></a>참고자료
 
-- [클라이언트 쪽 UI 자동화 공급자 만들기](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)
-- [클라이언트 응용 프로그램에서 UI 자동화 공급자 구현](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)
+- [클라이언트 쪽 UI 자동화 공급자 만들기](create-a-client-side-ui-automation-provider.md)
+- [클라이언트 응용 프로그램에서 UI 자동화 공급자 구현](implement-ui-automation-providers-in-a-client-application.md)

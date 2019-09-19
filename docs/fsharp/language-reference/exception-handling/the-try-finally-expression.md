@@ -2,12 +2,12 @@
 title: 예외 try...finally 식
 description: F# ' 시도 ... finally ' 식을 사용 하면 코드 블록에서 예외를 throw 하는 경우에도 정리 코드를 실행할 수 있습니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 03fbda1ef5d55560232f0217f603fc04c0af0eb4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0ddb64ac13b307404864ec5b54f26fd8a7a3d7d8
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630279"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083000"
 ---
 # <a name="exceptions-the-tryfinally-expression"></a>예외 try...finally 식
 
@@ -24,7 +24,7 @@ finally
 
 ## <a name="remarks"></a>설명
 
-*Expression1를*실행 하는 동안 예외가 생성 되었는지 여부 에 관계 없이 앞의 구문을 사용 하 여 식에서코드를실행할수있습니다.`try...finally`
+*Expression1를*실행 하는 동안 예외가 생성 되었는지 여부에 관계 없이 앞의 구문을 사용 하 여 식에서코드를실행할수`try...finally` 있습니다.
 
 식 *2* 의 형식은 전체 식의 값에 영향을 주지 않습니다. 예외가 발생 하지 않는 경우 반환 되는 형식은 *expression1*의 마지막 값입니다. 예외가 발생 하면 값이 반환 되지 않고 제어 흐름이 호출 스택에 있는 다음 일치 하는 예외 처리기에 전송 됩니다. 예외 처리기를 찾을 수 없는 경우 프로그램이 종료 됩니다. 일치 하는 처리기의 코드가 실행 되거나 프로그램이 종료 되기 전에 `finally` 분기의 코드가 실행 됩니다.
 
@@ -34,7 +34,7 @@ finally
 
 콘솔에 대 한 출력은 다음과 같습니다.
 
-```
+```console
 Closing stream
 Exception handled.
 ```
