@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb16097ab5a452a554cc7dfe039db1858e46de00
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ce40a54e82e95f41247db525110c510e3d83031e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967198"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045925"
 ---
 # <a name="reflection-and-generic-types"></a>리플렉션 및 제네릭 형식
 <a name="top"></a> 리플렉션의 관점에서 제네릭 형식과 일반 형식 간 차이점은 제네릭 형식이 형식 매개 변수(제네릭 형식 정의인 경우) 또는 형식 인수(생성된 형식인 경우)의 집합과 연결되어 있다는 점입니다. 제네릭 메서드는 동일한 방식으로 일반 메서드와 다릅니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "69967198"
   
  리플렉션은 <xref:System.Type> 및 <xref:System.Reflection.MethodInfo>의 메서드를 제공합니다. 이 메서드를 통해 형식 매개 변수의 배열에 액세스할 수 있으며, <xref:System.Type>의 인스턴스가 형식 매개 변수를 나타내는지 또는 실제 형식을 나타내는지 확인할 수 있습니다.  
   
- 여기에서 설명한 메서드를 보여 주는 코드 예제는 [방법: 리플렉션을 사용하여 제네릭 형식 검사 및 인스턴스화](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)를 참조하세요.  
+ 여기에서 설명한 메서드를 보여 주는 코드 예제는 [방법: 리플렉션을 사용하여 제네릭 형식 검사 및 인스턴스화](how-to-examine-and-instantiate-generic-types-with-reflection.md)를 참조하세요.  
   
  다음 논의에서는 형식 매개 변수 및 인수와 개방형 또는 폐쇄형의 생성된 형식 간 차이점과 같은 제네릭 용어에 익숙하다고 가정합니다. 자세한 내용은 [제네릭](../../standard/generics/index.md)을 참조하세요.  
   
@@ -149,7 +149,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
   
 |제목|설명|  
 |-----------|-----------------|  
-|[방법: 리플렉션을 사용하여 제네릭 형식 검사 및 인스턴스화](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)|<xref:System.Type> 및 <xref:System.Reflection.MethodInfo>의 속성 및 메서드를 사용하여 제네릭 형식을 검사하는 방법을 보여 줍니다.|  
+|[방법: 리플렉션을 사용하여 제네릭 형식 검사 및 인스턴스화](how-to-examine-and-instantiate-generic-types-with-reflection.md)|<xref:System.Type> 및 <xref:System.Reflection.MethodInfo>의 속성 및 메서드를 사용하여 제네릭 형식을 검사하는 방법을 보여 줍니다.|  
 |[제네릭](../../standard/generics/index.md)|제네릭 기능 및 .NET Framework에서 제네릭 기능을 지원하는 방법을 설명합니다.|  
-|[방법: 리플렉션 내보내기를 사용하여 제네릭 형식 정의](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|리플렉션 내보내기를 사용하여 동적 어셈블리에서 제네릭 형식을 생성하는 방법을 보여 줍니다.|  
-|[형식 정보 보기](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|<xref:System.Type> 클래스를 설명하고 <xref:System.Type>과 다양한 리플렉션 클래스를 함께 사용하여 생성자, 메서드, 필드, 속성, 이벤트에 대한 정보를 가져오는 방법을 보여 주는 코드 예제를 제공합니다.|
+|[방법: 리플렉션 내보내기를 사용하여 제네릭 형식 정의](how-to-define-a-generic-type-with-reflection-emit.md)|리플렉션 내보내기를 사용하여 동적 어셈블리에서 제네릭 형식을 생성하는 방법을 보여 줍니다.|  
+|[형식 정보 보기](viewing-type-information.md)|<xref:System.Type> 클래스를 설명하고 <xref:System.Type>과 다양한 리플렉션 클래스를 함께 사용하여 생성자, 메서드, 필드, 속성, 이벤트에 대한 정보를 가져오는 방법을 보여 주는 코드 예제를 제공합니다.|

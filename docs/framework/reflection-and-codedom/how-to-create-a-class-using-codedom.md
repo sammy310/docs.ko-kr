@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b3f7363ec5f8c954dd55a9500dcf8f2e302424f
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
-ms.translationtype: HT
+ms.openlocfilehash: c932587c13532e14c956f3ebd058ae41d30519dc
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894896"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046050"
 ---
 # <a name="how-to-create-a-class-using-codedom"></a>방법: CodeDOM을 사용하여 클래스 만들기
 다음 절차에서는 필드 2개, 속성 3개, 메서드, 생성자 및 진입점을 포함하는 클래스를 생성하는 CodeDOM 그래프를 만들고 컴파일하는 방법을 설명합니다.  
@@ -94,7 +94,7 @@ ms.locfileid: "70894896"
   
 2. 생성하는 클래스를 컴파일 및 실행합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 앞의 단계에서 생성한 코드를 보여 줍니다.  
   
  [!code-csharp[CodeDOM Class Sample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#1)]
@@ -120,5 +120,5 @@ The object:
   
 ## <a name="see-also"></a>참고 항목
 
-- [CodeDOM 사용](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)
-- [CodeDOM 그래프에서 소스 코드 생성 및 컴파일](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)
+- [CodeDOM 사용](using-the-codedom.md)
+- [CodeDOM 그래프에서 소스 코드 생성 및 컴파일](generating-and-compiling-source-code-from-a-codedom-graph.md)

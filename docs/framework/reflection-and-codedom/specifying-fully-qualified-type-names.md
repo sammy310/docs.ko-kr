@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc8395492992c22da3c635f0de010516127f9be4
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
-ms.translationtype: HT
+ms.openlocfilehash: 656b82daffc62824ed663ea7080bd6d20cd0dadc
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "61793005"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045823"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>정규화된 형식 이름 지정
 
@@ -149,7 +149,7 @@ AssemblyNameSpec을 제외한 모든 TypeSpec 구성 요소에서 공백은 관�
 |**PublicKey**|전체 공개 키|16진수 형식인 전체 공개 키의 문자열 값입니다. null 참조(Visual Basic에서는 **Nothing**)를 지정하여 프라이빗 어셈블리를 명시적으로 나타냅니다.|
 |**PublicKeyToken**|공개 키 토큰(전체 공개 키의 8바이트 해시)|16진수 형식인 공개 키 토큰의 문자열 값입니다. null 참조(Visual Basic에서는 **Nothing**)를 지정하여 프라이빗 어셈블리를 명시적으로 나타냅니다.|
 |**문화권**|어셈블리 문화권|RFC-1766 형식의 어셈블리 문화권 또는 언어 독립적인(비위성) 어셈블리의 경우 "중립"입니다.|
-|**사용자 지정**|사용자 지정 BLOB(Binary Large Object)입니다. 현재 [네이티브 이미지 생성기(Ngen)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)에서 생성된 어셈블리에서만 사용됩니다.|설치되는 어셈블리가 네이티브 이미지이므로 네이티브 이미지 캐시에 설치해야 함을 어셈블리 캐시에 알리기 위해 네이티브 이미지 생성기 도구에서 사용하는 사용자 지정 문자열입니다. zap 문자열이라고도 합니다.|
+|**사용자 지정**|사용자 지정 BLOB(Binary Large Object)입니다. 현재 [네이티브 이미지 생성기(Ngen)](../tools/ngen-exe-native-image-generator.md)에서 생성된 어셈블리에서만 사용됩니다.|설치되는 어셈블리가 네이티브 이미지이므로 네이티브 이미지 캐시에 설치해야 함을 어셈블리 캐시에 알리기 위해 네이티브 이미지 생성기 도구에서 사용하는 사용자 지정 문자열입니다. zap 문자열이라고도 합니다.|
 
 다음 예제에서는 기본 문화권을 사용하는 단순한 이름의 어셈블리에 대한 **AssemblyName**을 보여 줍니다.
 
@@ -224,4 +224,4 @@ BNF 문법에서 ReflectionEmitDimension은 <xref:System.Reflection.Emit.ModuleB
 - <xref:System.Type.FullName%2A?displayProperty=nameWithType>
 - <xref:System.Type.GetType%2A?displayProperty=nameWithType>
 - <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>
-- [형식 정보 보기](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [형식 정보 보기](viewing-type-information.md)

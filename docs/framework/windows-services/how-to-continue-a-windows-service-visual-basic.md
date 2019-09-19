@@ -10,17 +10,17 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: e5d13760-4c83-4b0d-abef-39852677cd7a
 author: ghogen
-ms.openlocfilehash: c9a783c0e7df39381ad1d9a8fedd7419605fd241
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: a10e05b0460608a9e67ee4527adf80be3d47438e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935548"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053634"
 ---
 # <a name="how-to-continue-a-windows-service-visual-basic"></a>방법: Windows 서비스 계속(Visual Basic)
 이 예제에서는 <xref:System.ServiceProcess.ServiceController> 구성 요소를 사용하여 로컬 컴퓨터에서 IIS 관리 서비스를 계속합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-vb[VbRadconService#11](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#11)]  
 [!code-vb[VbRadconService#13](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#13)]  
   
@@ -53,4 +53,4 @@ ms.locfileid: "69935548"
 
 - <xref:System.ServiceProcess.ServiceController>
 - <xref:System.ServiceProcess.ServiceControllerStatus>
-- [방법: Windows 서비스 일시 중지(Visual Basic)](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)
+- [방법: Windows 서비스 일시 중지(Visual Basic)](how-to-pause-a-windows-service-visual-basic.md)

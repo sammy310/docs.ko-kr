@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 981f5f23bf2aafc41426c858e150ec3664a494f9
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: db4380e97cf4d556248f42981b350160710f1dd8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205807"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051811"
 ---
 # <a name="exposing-net-components-to-com"></a>.NET 구성 요소를 COM에 공개
 
@@ -27,7 +27,7 @@ ms.locfileid: "70205807"
 
      관리 코드 내의 사용자 지정 특성은 구성 요소의 상호 운용성을 개선할 수 있습니다.
 
-- [COM에 대한 어셈블리를 패키지합니다](../../../docs/framework/interop/packaging-an-assembly-for-com.md).
+- [COM에 대한 어셈블리를 패키지합니다](packaging-an-assembly-for-com.md).
 
      COM 개발자는 어셈블리를 참조 및 배포하는 작업에 관련된 단계를 요약하도록 요구할 수 있습니다.
 
@@ -35,11 +35,11 @@ ms.locfileid: "70205807"
 
 ## <a name="to-consume-a-managed-type-from-com"></a>COM에서 관리되는 형식을 사용하려면
 
-1. [COM에 어셈블리를 등록합니다](../../../docs/framework/interop/registering-assemblies-with-com.md).
+1. [COM에 어셈블리를 등록합니다](registering-assemblies-with-com.md).
 
      어셈블리의 형식(및 형식 라이브러리)은 디자인 타임에 등록되어야 합니다. 설치 관리자가 어셈블리를 등록하지 않으면 COM 개발자에게 Regasm.exe를 사용하도록 지시합니다.
 
-2. [COM에서 .NET 형식을 참조합니다](../../../docs/framework/interop/how-to-reference-net-types-from-com.md).
+2. [COM에서 .NET 형식을 참조합니다](how-to-reference-net-types-from-com.md).
 
      COM 개발자는 현재 사용하는 동일한 도구와 기술을 통해 어셈블리에서 형식을 참조할 수 있습니다.
 
@@ -53,5 +53,5 @@ ms.locfileid: "70205807"
 
 ## <a name="see-also"></a>참고 항목
 
-- [비관리 코드와의 상호 운용](../../../docs/framework/interop/index.md)
-- [COM Interop 샘플: COM 클라이언트 및 .NET 서버](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)
+- [비관리 코드와의 상호 운용](index.md)
+- [COM Interop 샘플: COM 클라이언트 및 .NET 서버](com-interop-sample-com-client-and-net-server.md)

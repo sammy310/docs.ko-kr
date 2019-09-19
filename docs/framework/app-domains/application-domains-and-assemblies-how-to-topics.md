@@ -7,25 +7,25 @@ helpviewer_keywords:
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8104d7cd6aa5a26fa69df7be838ea9b7cb2cc44
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: b5d7f97a4ec67e4932aaee922897a16362f6a78c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971765"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053233"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>애플리케이션 도메인 및 어셈블리 방법 항목
 다음 섹션에는 애플리케이션 도메인 및 어셈블리를 사용한 프로그래밍에 대한 개념 설명서에 나오는 모든 방법 항목에 대한 링크가 있습니다.  
   
  **애플리케이션 도메인**  
   
-- [방법: 애플리케이션 도메인 만들기](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
+- [방법: 애플리케이션 도메인 만들기](how-to-create-an-application-domain.md)  
   
-- [방법: 애플리케이션 도메인 언로드](../../../docs/framework/app-domains/how-to-unload-an-application-domain.md)  
+- [방법: 애플리케이션 도메인 언로드](how-to-unload-an-application-domain.md)  
   
-- [방법: 애플리케이션 도메인 구성](../../../docs/framework/app-domains/how-to-configure-an-application-domain.md)  
+- [방법: 애플리케이션 도메인 구성](how-to-configure-an-application-domain.md)  
   
-- [방법: 애플리케이션 도메인에 어셈블리 로드](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
+- [방법: 애플리케이션 도메인에 어셈블리 로드](how-to-load-assemblies-into-an-application-domain.md)  
   
 - [방법: 어셈블리에서 형식 및 멤버 정보 가져오기](../reflection-and-codedom/get-type-member-information.md)  
   
@@ -47,12 +47,12 @@ ms.locfileid: "70971765"
   
 - [방법: 글로벌 어셈블리 캐시에 어셈블리 설치](install-assembly-into-gac.md)  
   
-- [방법: 글로벌 어셈블리 캐시의 내용 보기](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
+- [방법: 글로벌 어셈블리 캐시의 내용 보기](how-to-view-the-contents-of-the-gac.md)  
   
-- [방법: 글로벌 어셈블리 캐시에서 어셈블리 제거](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
+- [방법: 글로벌 어셈블리 캐시에서 어셈블리 제거](how-to-remove-an-assembly-from-the-gac.md)  
   
 - [방법: 어셈블리 콘텐츠 보기](../../standard/assembly/view-contents.md)  
   
 ## <a name="see-also"></a>참고 항목
 
-- [애플리케이션 도메인 및 어셈블리](../../../docs/framework/app-domains/index.md)
+- [애플리케이션 도메인 및 어셈블리](index.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3134477198f0cd4c821bea456450e98cc73c6ad2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 0ae92232b1d50d1381b6873e21a4c185db6efd25
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957466"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051642"
 ---
 # <a name="registration-free-com-interop"></a>등록이 필요 없는 COM Interop
 등록이 필요 없는 COM interop는 Windows 레지스트리를 사용하여 어셈블리 정보를 저장하지 않고 구성 요소를 활성화합니다. 배포 중 컴퓨터에 구성 요소를 등록하는 대신 바인딩 및 활성화 정보를 포함하는 Win32 스타일의 매니페스트 파일을 디자인 타임에 만듭니다. 레지스트리 키 대신 이러한 매니페스트 파일에서 개체 활성화를 지시합니다.  
@@ -56,4 +56,4 @@ ms.locfileid: "69957466"
   
 ## <a name="see-also"></a>참고 항목
 
-- [방법: 등록이 필요 없는 활성화를 위한 .NET Framework 기반 COM 구성 요소 구성](../../../docs/framework/interop/configure-net-framework-based-com-components-for-reg.md)
+- [방법: 등록이 필요 없는 활성화를 위한 .NET Framework 기반 COM 구성 요소 구성](configure-net-framework-based-com-components-for-reg.md)

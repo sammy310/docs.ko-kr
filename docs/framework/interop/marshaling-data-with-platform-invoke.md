@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3cb310dc6d786c3c7711f4c194c6623324c777dd
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: HT
+ms.openlocfilehash: d3167abd0c263a0a27573778d6f243bc824306a9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412398"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051682"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>플랫폼 호출을 사용하여 데이터 마샬링
 
@@ -25,7 +25,7 @@ ms.locfileid: "58412398"
 
 - 관리되지 않은 데이터 형식 대신 관리되는 데이터 형식을 사용합니다.
 
-관리되지 않는 함수와 함께 제공된 설명서를 사용하여 선택적 필드가 포함된 특성을 적용하고 관리되지 않는 형식 대신 관리되는 데이터 형식을 사용하는 방식으로 해당하는 관리되는 프로토타입을 생성할 수 있습니다. <xref:System.Runtime.InteropServices.DllImportAttribute>를 적용하는 방법에 대한 자세한 내용은 [관리되지 않는 DLL 함수 사용](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)을 참조하세요.
+관리되지 않는 함수와 함께 제공된 설명서를 사용하여 선택적 필드가 포함된 특성을 적용하고 관리되지 않는 형식 대신 관리되는 데이터 형식을 사용하는 방식으로 해당하는 관리되는 프로토타입을 생성할 수 있습니다. <xref:System.Runtime.InteropServices.DllImportAttribute>를 적용하는 방법에 대한 자세한 내용은 [관리되지 않는 DLL 함수 사용](consuming-unmanaged-dll-functions.md)을 참조하세요.
 
 이 섹션에서는 인수를 전달하고 관리되는 라이브러리를 통해 내보낸 함수에서 반환 값을 수신하기 위한 관리되는 함수 프로토타입을 만드는 방법을 보여 주는 샘플을 제공합니다. 샘플에서는 데이터를 명시적으로 마샬링하도록 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성과 <xref:System.Runtime.InteropServices.Marshal> 클래스를 사용하는 시기를 보여 줍니다.
 

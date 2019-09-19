@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fad8a73c41379cac7523db6266951b8abab26e27
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: e2e37de4d3032db6d9578eae7ba0be5c1e39f39d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626291"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051749"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>방법: 관리 코드 DCOM을 WCF로 마이그레이션
 WCF(Windows Communication Foundation)는 분산 환경에서 서버와 클라이언트 간에 관리 코드 호출에 대해 DCOM(Distributed Component Object Model)보다 권장되는 안전한 선택 항목입니다. 이 문서에서는 다음과 같은 시나리오에 대해 코드를 DCOM에서 WCF로 마이그레이션하는 방법을 보여 줍니다.  
@@ -20,9 +20,9 @@ WCF(Windows Communication Foundation)는 분산 환경에서 서버와 클라이
   
 - 보안상 클라이언트에서 값 방식으로 서비스에 개체를 전송하는 기능은 WCF에서 허용되지 않습니다.  
   
- 보안상 클라이언트에서 참조 방식으로 서비스에 개체를 전송하는 기능은 WCF에서 허용되지 않습니다. 클라이언트와 서버 간에 서로 대화하는 데 필요한 시나리오는 WCF에서 이중 서비스를 사용하여 수행할 수 있습니다.  이중 서비스에 대한 자세한 내용은 [이중 서비스](../../../docs/framework/wcf/feature-details/duplex-services.md)를 참조하세요.  
+ 보안상 클라이언트에서 참조 방식으로 서비스에 개체를 전송하는 기능은 WCF에서 허용되지 않습니다. 클라이언트와 서버 간에 서로 대화하는 데 필요한 시나리오는 WCF에서 이중 서비스를 사용하여 수행할 수 있습니다.  이중 서비스에 대한 자세한 내용은 [이중 서비스](../wcf/feature-details/duplex-services.md)를 참조하세요.  
   
- WCF 서비스와 해당 서비스에 대한 클라이언트를 만드는 방법에 대한 자세한 내용은 [기본 WCF 프로그래밍](../../../docs/framework/wcf/basic-wcf-programming.md), [서비스 디자인 및 구현](../../../docs/framework/wcf/designing-and-implementing-services.md) 및 [클라이언트 빌드](../../../docs/framework/wcf/building-clients.md)를 참조하세요.  
+ WCF 서비스와 해당 서비스에 대한 클라이언트를 만드는 방법에 대한 자세한 내용은 [기본 WCF 프로그래밍](../wcf/basic-wcf-programming.md), [서비스 디자인 및 구현](../wcf/designing-and-implementing-services.md) 및 [클라이언트 빌드](../wcf/building-clients.md)를 참조하세요.  
   
 ## <a name="dcom-example-code"></a>DCOM 예제 코드  
  이러한 시나리오에서 WCF를 사용하여 설명한 DCOM 인터페이스의 구조는 다음과 같습니다.  
@@ -82,7 +82,7 @@ public interface ICustomerManager
 ### <a name="step-2-define-the-data-contract"></a>2단계: 데이터 계약 정의  
  다음에는 서비스와 해당 클라이언트 간에 데이터를 교환하는 방법을 설명하는 서비스에 대한 데이터 계약을 만들어야 합니다.  데이터 계약에 설명된 클래스는 [<xref:System.Runtime.Serialization.DataContractAttribute>] 특성으로 표시해야 합니다. 클라이언트와 서버 둘 다에 표시할 개별 속성 또는 필드는 [<xref:System.Runtime.Serialization.DataMemberAttribute>] 특성으로 표시되어야 합니다. 데이터 계약의 클래스에서 파생된 형식을 허용하려면 [<xref:System.Runtime.Serialization.KnownTypeAttribute>] 특성을 사용하여 식별해야 합니다. WCF는 서비스 인터페이스의 형식 및 알려진 형식으로 식별된 형식만 직렬화하거나 역직렬화합니다. 알려진 형식이 아닌 형식을 사용하려고 하면 예외가 발생합니다.  
   
- 데이터 계약에 대한 자세한 내용은 [데이터 계약](../../../docs/framework/wcf/samples/data-contracts.md)을 참조하세요.  
+ 데이터 계약에 대한 자세한 내용은 [데이터 계약](../wcf/samples/data-contracts.md)을 참조하세요.  
   
 ```csharp  
 [DataContract]  
@@ -170,7 +170,7 @@ public class CustomerService: ICustomerManager
 ```  
   
 ### <a name="step-5-run-the-service"></a>5단계: 서비스 실행  
- 끝으로, 서비스 앱에 다음 줄을 추가하고 앱을 시작하여 콘솔 애플리케이션에서 자체 호스트할 수 있습니다. WCF 서비스 애플리케이션을 호스트하는 다른 방법에 대한 자세한 내용은 [호스팅 서비스](../../../docs/framework/wcf/hosting-services.md)를 참조하세요.  
+ 끝으로, 서비스 앱에 다음 줄을 추가하고 앱을 시작하여 콘솔 애플리케이션에서 자체 호스트할 수 있습니다. WCF 서비스 애플리케이션을 호스트하는 다른 방법에 대한 자세한 내용은 [호스팅 서비스](../wcf/hosting-services.md)를 참조하세요.  
   
 ```csharp  
 ServiceHost customerServiceHost = new ServiceHost(typeof(CustomerService));  
@@ -423,7 +423,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
   
 ## <a name="see-also"></a>참고 항목
 
-- [기본 WCF 프로그래밍](../../../docs/framework/wcf/basic-wcf-programming.md)
-- [서비스 디자인 및 구현](../../../docs/framework/wcf/designing-and-implementing-services.md)
-- [클라이언트 빌드](../../../docs/framework/wcf/building-clients.md)
-- [이중 서비스](../../../docs/framework/wcf/feature-details/duplex-services.md)
+- [기본 WCF 프로그래밍](../wcf/basic-wcf-programming.md)
+- [서비스 디자인 및 구현](../wcf/designing-and-implementing-services.md)
+- [클라이언트 빌드](../wcf/building-clients.md)
+- [이중 서비스](../wcf/feature-details/duplex-services.md)

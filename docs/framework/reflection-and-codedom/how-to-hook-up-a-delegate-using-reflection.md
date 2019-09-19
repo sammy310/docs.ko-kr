@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3fa2238976df9f570fad9eb6947790565a4b0c5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 937dca59be8b83526ebf6cd4c369532b1a8b9afe
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935719"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045976"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>방법: 리플렉션을 사용하여 대리자 후크
 리플렉션을 사용하여 어셈블리를 로드하고 실행하는 경우 C# `+=` 연산자 또는 Visual Basic [AddHandler 문](../../visual-basic/language-reference/statements/addhandler-statement.md)과 같은 언어 기능을 사용하여 이벤트를 연결할 수 없습니다. 다음 절차에서는 리플렉션을 통해 필요한 모든 형식을 가져와 기존 메서드를 이벤트에 연결하는 방법 및 리플렉션 내보내기를 사용하여 동적 메서드를 만들고 이벤트에 연결하는 방법을 보여 줍니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "69935719"
      [!code-csharp[HookUpDelegate#9](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#9)]
      [!code-vb[HookUpDelegate#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#9)]  
   
-2. 메서드 본문을 생성합니다. 이 메서드는 문자열을 로드하고, 문자열을 사용하는 <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> 메서드의 오버로드를 호출한 다음 스택에서 반환 값을 팝하고(처리기에 반환 형식이 없으므로) 반환됩니다. 동적 메서드를 내보내는 방법에 대한 자세한 내용은 [방법: 동적 메서드 정의 및 실행](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)을 참조하세요.  
+2. 메서드 본문을 생성합니다. 이 메서드는 문자열을 로드하고, 문자열을 사용하는 <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> 메서드의 오버로드를 호출한 다음 스택에서 반환 값을 팝하고(처리기에 반환 형식이 없으므로) 반환됩니다. 동적 메서드를 내보내는 방법에 대한 자세한 내용은 [방법: 동적 메서드 정의 및 실행](how-to-define-and-execute-dynamic-methods.md)을 참조하세요.  
   
      [!code-cpp[HookUpDelegate#10](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#10)]
      [!code-csharp[HookUpDelegate#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#10)]
@@ -98,7 +98,7 @@ ms.locfileid: "69935719"
      [!code-csharp[HookUpDelegate#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#12)]
      [!code-vb[HookUpDelegate#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#12)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 리플렉션을 사용하여 기존 메서드를 이벤트에 연결하는 방법 및 <xref:System.Reflection.Emit.DynamicMethod> 클래스를 사용하여 런타임에 메서드를 내보내고 이벤트에 연결하는 방법을 보여 줍니다.  
   
  [!code-cpp[HookUpDelegate#1](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#1)]
@@ -111,5 +111,5 @@ ms.locfileid: "69935719"
 - <xref:System.Reflection.Emit.DynamicMethod>
 - <xref:System.Activator.CreateInstance%2A>
 - <xref:System.Delegate.CreateDelegate%2A>
-- [방법: 동적 메서드 정의 및 실행](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)
-- [리플렉션](../../../docs/framework/reflection-and-codedom/reflection.md)
+- [방법: 동적 메서드 정의 및 실행](how-to-define-and-execute-dynamic-methods.md)
+- [리플렉션](reflection.md)

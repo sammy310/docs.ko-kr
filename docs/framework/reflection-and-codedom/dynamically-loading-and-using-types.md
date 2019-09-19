@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5dbbf0f71eaefd0ef7fc7f2b5e69e47ce7b8db26
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
-ms.translationtype: HT
+ms.openlocfilehash: 21d0425de072c91cf7111162e405f826e00e849d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894887"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046100"
 ---
 # <a name="dynamically-loading-and-using-types"></a>동적으로 형식 로드 및 사용
 리플렉션은 언어 컴파일러에서 암시적 런타임에 바인딩을 구현하는 데 사용되는 인프라를 제공합니다. 바인딩은 고유하게 지정된 형식에 해당하는 선언(즉, 구현)을 찾는 프로세스입니다. 이 프로세스가 컴파일 시간이 아닌 런타임에 수행되는 경우 이를 런타임에 바인딩이라고 합니다. Visual Basic을 통해 코드에서 암시적 런타임에 바인딩을 사용할 수 있고, Visual Basic 컴파일러는 리플렉션을 사용하여 개체 형식을 가져오는 도우미 메서드를 호출합니다. 인수가 도우미 메서드에 전달되면 런타임에 적절한 메서드가 호출됩니다. 이러한 인수는 메서드를 호출하는 인스턴스(개체), 호출된 메서드의 이름(문자열) 및 호출된 메서드에 전달된 인수(개체 배열)입니다.  
@@ -102,5 +102,5 @@ End Module
 
 - <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
-- [형식 정보 보기](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [형식 정보 보기](viewing-type-information.md)
 - [.NET Framework의 형식 변환](../../standard/base-types/type-conversion.md)

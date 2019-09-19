@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42daa241d0ebbfeb184b57e682fbb50bdaeead65
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
-ms.translationtype: HT
+ms.openlocfilehash: 6eba8202f0284b7b1054585039f12da9364ca1e9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894189"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051761"
 ---
 # <a name="how-to-implement-callback-functions"></a>방법: 콜백 함수 구현
 다음 절차 및 예제에서는 관리되는 애플리케이션이 플랫폼 호출을 사용하여 로컬 컴퓨터에서 각 창에 대한 핸들 값을 인쇄하는 방법을 보여 줍니다. 특히 프로시저 및 예제에서는 **EnumWindows** 함수를 사용하여 창 목록을 단계별로 실행하고 관리되는 콜백 함수(CallBack)를 사용하여 창 핸들 값을 인쇄합니다.  
@@ -38,9 +38,9 @@ ms.locfileid: "70894189"
   
 4. 콜백 함수가 작업을 완료하기 전에 가비지 수집기가 대리자를 회수하지 않는지 확인합니다. 대리자를 매개 변수로 전달하거나 구조체에 필드로 포함된 대리자를 전달하면 호출 중에 대리자가 수집되지 않습니다. 따라서 다음 열거 예제처럼 콜백 함수는 호출이 반환되기 전에 작업을 완료하고 관리되는 호출자의 추가적인 작업이 필요하지 않습니다.  
   
-     그러나 호출이 반환된 후에 콜백 함수를 호출할 수 있으면 관리되는 호출자는 단계에 따라 콜백 함수가 완료될 때까지 대리자가 수집되지 않는지 확인해야 합니다. 가비지 수집을 방지하는 방법에 대한 자세한 내용은 플랫폼 호출을 사용한 [Interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)을 참조하세요.  
+     그러나 호출이 반환된 후에 콜백 함수를 호출할 수 있으면 관리되는 호출자는 단계에 따라 콜백 함수가 완료될 때까지 대리자가 수집되지 않는지 확인해야 합니다. 가비지 수집을 방지하는 방법에 대한 자세한 내용은 플랫폼 호출을 사용한 [Interop 마샬링](interop-marshaling.md)을 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```vb  
 Imports System  
@@ -131,5 +131,5 @@ int main()
   
 ## <a name="see-also"></a>참고 항목
 
-- [콜백 함수](../../../docs/framework/interop/callback-functions.md)
-- [DLL 함수 호출](../../../docs/framework/interop/calling-a-dll-function.md)
+- [콜백 함수](callback-functions.md)
+- [DLL 함수 호출](calling-a-dll-function.md)

@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13c9aa7275ad792f8ace33519438f0a1dcc6b251
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: 5aa88cbc73415695a1545704a2ad8cab535f011e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971613"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053139"
 ---
 # <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>방법: 글로벌 어셈블리 캐시에서 어셈블리 제거
 
 GAC(전역 어셈블리 캐시)에서 어셈블리를 제거하는 다음 두 가지 방법이 있습니다.
 
-- [전역 어셈블리 캐시 도구(Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) 사용. 개발 및 테스트 중 GAC에 배치한 어셈블리를 제거하려면 이 옵션을 사용할 수 있습니다.
+- [전역 어셈블리 캐시 도구(Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) 사용. 개발 및 테스트 중 GAC에 배치한 어셈블리를 제거하려면 이 옵션을 사용할 수 있습니다.
 
 - [Windows Installer](/windows/desktop/Msi/windows-installer-portal) 사용. 설치 패키지를 테스트할 때 및 프로덕션 시스템에 대해 어셈블리를 제거하려면 이 옵션을 사용해야 합니다.
 
@@ -54,6 +54,6 @@ gacutil -u hello
 
 ## <a name="see-also"></a>참고 항목
 
-- [어셈블리 및 전역 어셈블리 캐시 사용](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
+- [어셈블리 및 전역 어셈블리 캐시 사용](working-with-assemblies-and-the-gac.md)
 - [방법: 글로벌 어셈블리 캐시에 어셈블리 설치](install-assembly-into-gac.md)
-- [Gacutil.exe(전역 어셈블리 캐시 도구)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+- [Gacutil.exe(전역 어셈블리 캐시 도구)](../tools/gacutil-exe-gac-tool.md)

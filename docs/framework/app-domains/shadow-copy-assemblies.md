@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45e38f70ded85e8db36068c19fdd1708511817db
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: df1c86f2d75b0046af851585e943e13d668d8c55
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040730"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053077"
 ---
 # <a name="shadow-copying-assemblies"></a>어셈블리 섀도 복사
 
@@ -76,7 +76,7 @@ ms.locfileid: "70040730"
 
 .NET Framework 4부터 기본 시작 동작은 애플리케이션 디렉터리에 있는 각 어셈블리의 파일 날짜 및 시간을 섀도 복사 디렉터리에 있는 복사본의 파일 날짜 및 시간과 직접 비교하는 것입니다. 어셈블리가 업데이트되었으면 .NET Framework의 이전 버전에서와 같은 절차를 사용하여 복사되고, 그러지 않으면 섀도 복사 디렉터리의 복사본이 로드됩니다.
 
-어셈블리가 자주 변경되지 않고 대개 어셈블리의 작은 하위 집합에서 변경이 발생하는 애플리케이션에 대한 결과 성능 향상이 가장 큽니다. 애플리케이션의 대부분 어셈블리가 자주 변경되면 새로운 기본 동작 때문에 성능이 저하될 수 있습니다. 이 경우 `enabled="false"`로 [\<shadowCopyVerifyByTimestamp> 요소](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)를 구성 파일에 추가하여 이전 버전 .NET Framework의 시작 동작을 되돌릴 수 있습니다.
+어셈블리가 자주 변경되지 않고 대개 어셈블리의 작은 하위 집합에서 변경이 발생하는 애플리케이션에 대한 결과 성능 향상이 가장 큽니다. 애플리케이션의 대부분 어셈블리가 자주 변경되면 새로운 기본 동작 때문에 성능이 저하될 수 있습니다. 이 경우 `enabled="false"`로 [\<shadowCopyVerifyByTimestamp> 요소](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)를 구성 파일에 추가하여 이전 버전 .NET Framework의 시작 동작을 되돌릴 수 있습니다.
 
 <a name="ObsoleteMethods"></a>
 
@@ -90,4 +90,4 @@ ms.locfileid: "70040730"
 - <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=nameWithType>
-- [\<shadowCopyVerifyByTimestamp> 요소](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)
+- [\<shadowCopyVerifyByTimestamp> 요소](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)

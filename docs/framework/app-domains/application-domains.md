@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9ab95124264b2b59be77695755ab1d1f1c3b1aa
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 4a0a6a00fc76a646b4295db726bd8ae67733e321
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040740"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053214"
 ---
 # <a name="application-domains"></a>애플리케이션 도메인
 
@@ -64,7 +64,7 @@ ms.locfileid: "70040740"
   
 - 어셈블리가 도메인 중립적으로 로드되지 않은 경우 해당 어셈블리가 로드된 모든 애플리케이션 도메인에서 어셈블리를 JIT 컴파일해야 합니다. 그러나 어셈블리가 로드된 모든 애플리케이션 도메인을 언로드하여 프로세스에서 어셈블리를 언로드할 수는 있습니다.  
   
- 런타임 호스트는 런타임을 프로세스로 로드하는 경우 도메인 중립적으로 어셈블리를 로드할지 여부를 결정합니다. 관리되는 애플리케이션의 경우 프로세스의 진입점 메서드에 <xref:System.LoaderOptimizationAttribute> 특성을 적용하고 연관된 <xref:System.LoaderOptimization> 열거형의 값을 지정합니다. 공용 언어 런타임을 호스팅하는 관리되지 않는 애플리케이션의 경우 [CorBindToRuntimeEx 함수](../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) 메서드를 호출할 때 적절한 플래그를 지정합니다.  
+ 런타임 호스트는 런타임을 프로세스로 로드하는 경우 도메인 중립적으로 어셈블리를 로드할지 여부를 결정합니다. 관리되는 애플리케이션의 경우 프로세스의 진입점 메서드에 <xref:System.LoaderOptimizationAttribute> 특성을 적용하고 연관된 <xref:System.LoaderOptimization> 열거형의 값을 지정합니다. 공용 언어 런타임을 호스팅하는 관리되지 않는 애플리케이션의 경우 [CorBindToRuntimeEx 함수](../unmanaged-api/hosting/corbindtoruntimeex-function.md) 메서드를 호출할 때 적절한 플래그를 지정합니다.  
   
  도메인 중립 어셈블리를 로드할 수 있는 다음과 같은 세 가지 옵션이 있습니다.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "70040740"
   
  <xref:System.Reflection.Assembly.LoadFrom%2A> 클래스의 <xref:System.Reflection.Assembly> 메서드를 사용하여 로드 컨텍스트로 로드한 어셈블리나 바이트 배열을 지정하는 <xref:System.Reflection.Assembly.Load%2A> 메서드의 오버로드를 사용하여 이미지에서 로드한 어셈블리의 경우 JIT 컴파일된 코드를 공유할 수 없습니다.  
   
- [Ngen.exe(네이티브 이미지 생성기)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)를 사용하여 네이티브 코드로 컴파일된 어셈블리는 프로세스에 처음 로드될 때 도메인 중립적으로 로드되는 경우 애플리케이션 도메인 간에 공유할 수 있습니다.  
+ [Ngen.exe(네이티브 이미지 생성기)](../tools/ngen-exe-native-image-generator.md)를 사용하여 네이티브 코드로 컴파일된 어셈블리는 프로세스에 처음 로드될 때 도메인 중립적으로 로드되는 경우 애플리케이션 도메인 간에 공유할 수 있습니다.  
   
  애플리케이션 진입점이 포함된 어셈블리의 JIT 컴파일된 코드는 모든 종속 어셈블리를 공유할 수 있는 경우에만 공유됩니다.  
   

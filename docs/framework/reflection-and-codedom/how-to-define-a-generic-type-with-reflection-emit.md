@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 544d04236a8f1b824a15c6ee7912020346841076
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: b9781e7ef8edde182a13779a01e042cb44c92881
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912524"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045991"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>방법: 리플렉션 내보내기를 사용하여 제네릭 형식 정의
 이 항목에서는 두 개의 형식 매개 변수가 있는 간단한 제네릭 형식을 만드는 방법, 형식 매개 변수에 클래스 제약 조건, 인터페이스 제약 조건, 특수 제약 조건을 적용하는 방법, 클래스의 형식 매개 변수를 매개 변수 형식 및 반환 형식으로 사용하는 멤버를 만드는 방법을 보여 줍니다.  
   
 > [!IMPORTANT]
-> 제네릭 형식에 속하고 해당 형식의 형식 매개 변수를 사용한다고 해서 제네릭 메서드가 되는 것은 아닙니다. 고유한 형식 매개 변수 목록을 포함하는 경우에만 제네릭 메서드입니다. 제네릭 형식의 메서드는 대부분 이 예제와 같이 제네릭 메서드가 아닙니다. 제네릭 메서드를 내보내는 예제는 [방법: 리플렉션 내보내기를 사용하여 제네릭 메서드 정의](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md)를 참조하세요.  
+> 제네릭 형식에 속하고 해당 형식의 형식 매개 변수를 사용한다고 해서 제네릭 메서드가 되는 것은 아닙니다. 고유한 형식 매개 변수 목록을 포함하는 경우에만 제네릭 메서드입니다. 제네릭 형식의 메서드는 대부분 이 예제와 같이 제네릭 메서드가 아닙니다. 제네릭 메서드를 내보내는 예제는 [방법: 리플렉션 내보내기를 사용하여 제네릭 메서드 정의](how-to-define-a-generic-method-with-reflection-emit.md)를 참조하세요.  
   
 ### <a name="to-define-a-generic-type"></a>제네릭 형식을 정의하려면  
   
@@ -110,7 +110,7 @@ ms.locfileid: "69912524"
      [!code-csharp[EmitGenericType#10](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#10)]
      [!code-vb[EmitGenericType#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#10)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 기본 클래스 및 두 개의 인터페이스와 함께 `Sample`이라는 클래스를 정의합니다. 프로그램은 `Sample`에 대한 두 개의 제네릭 형식 매개 변수를 정의하고 제네릭 형식으로 변환합니다. 형식 매개 변수를 통해서만 제네릭 형식을 만들 수 있습니다. 프로그램은 형식 매개 변수 정의 앞과 뒤에 테스트 메시지를 표시하여 이를 보여 줍니다.  
   
  형식 매개 변수 `TSecond`는 기본 클래스 및 인터페이스를 통해 클래스 및 인터페이스 제약 조건을 보여 주는 데 사용되고, 형식 매개 변수 `TFirst`는 특수 제약 조건을 보여 주는 데 사용됩니다.  
@@ -121,7 +121,7 @@ ms.locfileid: "69912524"
   
  프로그램에는 제네릭 형식에 대한 정보를 나열하는 메서드 및 형식 매개 변수에 대한 특수 제약 조건을 나열하는 메서드가 포함되어 있습니다. 이러한 메서드는 완성된 `Sample` 클래스에 대한 정보를 표시하는 데 사용됩니다.  
   
- 프로그램은 완성된 모듈을 디스크에 `GenericEmitExample1.dll`로 저장하므로 [Ildasm.exe(IL 디스어셈블러)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)를 사용하여 열고 `Sample` 클래스에 대한 MSIL을 검사할 수 있습니다.  
+ 프로그램은 완성된 모듈을 디스크에 `GenericEmitExample1.dll`로 저장하므로 [Ildasm.exe(IL 디스어셈블러)](../tools/ildasm-exe-il-disassembler.md)를 사용하여 열고 `Sample` 클래스에 대한 MSIL을 검사할 수 있습니다.  
   
  [!code-cpp[EmitGenericType#1](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#1)]
  [!code-csharp[EmitGenericType#1](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#1)]

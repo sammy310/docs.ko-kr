@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
-ms.openlocfilehash: c69210c3d8f35ccab4375cfe7e49e2de147f2289
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 8ff1adaa025dc11417c3dcfdaf42ea203828be57
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599880"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053515"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Windows 서비스 애플리케이션 소개
 과거에 NT 서비스라고 불리던 Microsoft Windows 서비스를 사용하면 고유한 Windows 세션에서 장시간 실행되는 애플리케이션을 만들 수 있습니다. 이러한 서비스는 컴퓨터가 부팅될 때 자동으로 시작될 수 있고, 일시 중지 및 다시 시작할 수 있으며, 사용자 인터페이스를 표시하지 않습니다. 이러한 특징 때문에 서버에서 사용하거나 같은 컴퓨터에서 작업하는 다른 사용자를 방해하지 않는 장기 실행 기능이 필요한 경우 유용합니다. 로그온한 사용자나 기본 컴퓨터 계정과 다른 특정 사용자 계정의 보안 컨텍스트에서 서비스를 실행할 수도 있습니다. 서비스 및 Windows 세션에 대한 자세한 내용은 Windows SDK 설명서를 참조하세요.  
@@ -41,9 +41,9 @@ ms.locfileid: "64599880"
 ## <a name="service-applications-vs-other-visual-studio-applications"></a>서비스 애플리케이션 및 기타 Visual Studio 애플리케이션  
  서비스 애플리케이션은 다른 여러 프로젝트 유형과는 다음의 여러 가지 면에서 다르게 작동합니다.  
   
-- 서비스 애플리케이션 프로젝트에서 생성하는 컴파일된 실행 파일을 서버에 설치해야만 프로젝트가 의미 있는 방식으로 작동할 수 있습니다. F5 키 또는 F11 키를 눌러 서비스 애플리케이션을 디버그하거나 실행할 수 없습니다. 즉, 서비스를 즉시 실행하거나 코드를 한 단계씩 실행할 수 없습니다. 대신 서비스를 설치하고 시작한 다음, 서비스의 프로세스에 디버거를 연결해야 합니다. 자세한 내용은 [방법: Windows 서비스 애플리케이션 디버그](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)를 참조하세요.  
+- 서비스 애플리케이션 프로젝트에서 생성하는 컴파일된 실행 파일을 서버에 설치해야만 프로젝트가 의미 있는 방식으로 작동할 수 있습니다. F5 키 또는 F11 키를 눌러 서비스 애플리케이션을 디버그하거나 실행할 수 없습니다. 즉, 서비스를 즉시 실행하거나 코드를 한 단계씩 실행할 수 없습니다. 대신 서비스를 설치하고 시작한 다음, 서비스의 프로세스에 디버거를 연결해야 합니다. 자세한 내용은 [방법: Windows 서비스 애플리케이션 디버그](how-to-debug-windows-service-applications.md)를 참조하세요.  
   
-- 일부 프로젝트 유형과 달리 서비스 애플리케이션의 경우 설치 구성 요소를 만들어야 합니다. 설치 구성 요소는 서버에 서비스를 설치 및 등록하고 Windows **서비스 제어 관리자**를 사용하여 서비스에 대한 항목을 만듭니다. 자세한 내용은 [방법: 서비스 애플리케이션에 설치 관리자 추가](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)를 참조하세요.  
+- 일부 프로젝트 유형과 달리 서비스 애플리케이션의 경우 설치 구성 요소를 만들어야 합니다. 설치 구성 요소는 서버에 서비스를 설치 및 등록하고 Windows **서비스 제어 관리자**를 사용하여 서비스에 대한 항목을 만듭니다. 자세한 내용은 [방법: 서비스 애플리케이션에 설치 관리자 추가](how-to-add-installers-to-your-service-application.md)를 참조하세요.  
   
 - 서비스 애플리케이션의 `Main` 메서드는 프로젝트에 포함된 서비스에 대해 Run 명령을 실행해야 합니다. `Run` 메서드는 해당 서버의 **서비스 제어 관리자**로 서비스를 로드합니다. **Windows 서비스** 프로젝트 템플릿을 사용하는 경우에는 이 메서드가 자동으로 작성됩니다. 서비스 로드는 서비스 시작과 같은 작업이 아닙니다. 자세한 내용은 아래에서 “서비스 수명”을 참조하세요.  
   
@@ -78,15 +78,15 @@ ms.locfileid: "64599880"
   
 - 서비스는 **Windows 서비스** 애플리케이션 프로젝트나 다른 .NET Framework 지원 프로젝트에서 만들어야 합니다. 이러한 프로젝트는 빌드될 때 .exe 파일을 생성하고 <xref:System.ServiceProcess.ServiceBase> 클래스에서 상속됩니다.  
   
-- Windows 서비스를 포함하는 프로젝트에는 프로젝트 및 해당 서비스에 대한 설치 구성 요소가 있어야 합니다. 이 작업은 **속성** 창에서 간단히 수행할 수 있습니다. 자세한 내용은 [방법: 서비스 애플리케이션에 설치 관리자 추가](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)를 참조하세요.  
+- Windows 서비스를 포함하는 프로젝트에는 프로젝트 및 해당 서비스에 대한 설치 구성 요소가 있어야 합니다. 이 작업은 **속성** 창에서 간단히 수행할 수 있습니다. 자세한 내용은 [방법: 서비스 애플리케이션에 설치 관리자 추가](how-to-add-installers-to-your-service-application.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
-- [Windows 서비스 애플리케이션](../../../docs/framework/windows-services/index.md)
-- [서비스 애플리케이션 프로그래밍 아키텍처](../../../docs/framework/windows-services/service-application-programming-architecture.md)
-- [방법: Windows 서비스 만들기](../../../docs/framework/windows-services/how-to-create-windows-services.md)
-- [방법: 서비스 설치 및 제거](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
-- [방법: 서비스 시작](../../../docs/framework/windows-services/how-to-start-services.md)
-- [방법: Windows 서비스 애플리케이션 디버그](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
-- [연습: 구성 요소 디자이너에서 Windows 서비스 애플리케이션 만들기](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
-- [방법: 서비스 애플리케이션에 설치 관리자 추가](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [Windows 서비스 애플리케이션](index.md)
+- [서비스 애플리케이션 프로그래밍 아키텍처](service-application-programming-architecture.md)
+- [방법: Windows 서비스 만들기](how-to-create-windows-services.md)
+- [방법: 서비스 설치 및 제거](how-to-install-and-uninstall-services.md)
+- [방법: 서비스 시작](how-to-start-services.md)
+- [방법: Windows 서비스 애플리케이션 디버그](how-to-debug-windows-service-applications.md)
+- [연습: 구성 요소 디자이너에서 Windows 서비스 애플리케이션 만들기](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+- [방법: 서비스 애플리케이션에 설치 관리자 추가](how-to-add-installers-to-your-service-application.md)

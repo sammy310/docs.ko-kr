@@ -6,12 +6,12 @@ helpviewer_keywords:
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: 5be803e2f4face60318a4c9ed12f1b58edaeace6
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 75fd3aba88bdffbe536ad5dab14996913d0a9d22
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044433"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053565"
 ---
 # <a name="how-to-start-services"></a>방법: 서비스 시작
 
@@ -28,7 +28,7 @@ ms.locfileid: "70044433"
 
 ### <a name="to-specify-how-a-service-should-start"></a>서비스 시작 방식을 지정하려면
 
-1. 서비스를 만든 후 서비스에 필요한 설치 관리자를 추가합니다. 자세한 내용은 [방법: 서비스 애플리케이션에 설치 관리자 추가](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)를 참조하세요.
+1. 서비스를 만든 후 서비스에 필요한 설치 관리자를 추가합니다. 자세한 내용은 [방법: 서비스 애플리케이션에 설치 관리자 추가](how-to-add-installers-to-your-service-application.md)를 참조하세요.
 
 2. 디자이너에서 작업 중인 서비스에 대한 서비스 설치 관리자를 클릭합니다.
 
@@ -80,6 +80,6 @@ ms.locfileid: "70044433"
 
 ## <a name="see-also"></a>참고 항목
 
-- [Windows 서비스 애플리케이션 소개](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [방법: Windows 서비스 만들기](../../../docs/framework/windows-services/how-to-create-windows-services.md)
-- [방법: 서비스 애플리케이션에 설치 관리자 추가](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [Windows 서비스 애플리케이션 소개](introduction-to-windows-service-applications.md)
+- [방법: Windows 서비스 만들기](how-to-create-windows-services.md)
+- [방법: 서비스 애플리케이션에 설치 관리자 추가](how-to-add-installers-to-your-service-application.md)

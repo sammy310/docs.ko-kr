@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 791c6c8b0396ec958ff0c8378038051b23d486d1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 852490c57a2954e9d56799ef8deebbef31d5f665
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956704"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045893"
 ---
 # <a name="security-considerations-for-reflection"></a>리플렉션의 보안 고려 사항
 
@@ -61,7 +61,7 @@ ms.locfileid: "69956704"
 
 명령줄에서 실행 되는 애플리케이션 코드는 완전 신뢰로 실행됩니다. 투명으로 표시되지 않은 한 리플렉션을 사용하여 보안에 중요한 멤버에 액세스할 수 있습니다. 동일한 코드가 부분 신뢰(예: 샌드박스 애플리케이션 도메인에서)로 실행될 때 어셈블리의 신뢰 수준은 보안 중요 코드에 액세스할 수 있는지 여부를 결정합니다. 어셈블리에 강력한 이름이 있고 글로벌 어셈블리 캐시에 설치된 경우, 신뢰할 수 있는 어셈블리이며 보안에 중요한 멤버를 호출할 수 있습니다. 신뢰할 수 없는 경우 투명으로 표시되지 않았어도 투명하게 되며 보안에 중요한 멤버를 액세스할 수 없습니다.
 
-.NET Framework 4의 보안 모델에 대한 자세한 내용은 [보안 변경 내용](../../../docs/framework/security/security-changes.md)을 참조하세요.
+.NET Framework 4의 보안 모델에 대한 자세한 내용은 [보안 변경 내용](../security/security-changes.md)을 참조하세요.
 
 ## <a name="reflection-and-transparency"></a>리플렉션 및 투명도
 
@@ -69,7 +69,7 @@ ms.locfileid: "69956704"
 
 |보안 수준|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|
 |--------------------|------------------------|----------------------------|---------------------------|
-|중요|`true`|`false`|`false`|
+|위험|`true`|`false`|`false`|
 |안전에 중요|`true`|`true`|`false`|
 |투명|`false`|`false`|`true`|
 
@@ -117,9 +117,9 @@ ms.locfileid: "69956704"
 - <xref:System.Security.Permissions.ReflectionPermissionFlag>
 - <xref:System.Security.Permissions.ReflectionPermission>
 - <xref:System.Security.Permissions.SecurityPermission>
-- [보안 변경 내용](../../../docs/framework/security/security-changes.md)
-- [코드 액세스 보안](../../../docs/framework/misc/code-access-security.md)
-- [리플렉션 내보내기의 보안 문제점](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
-- [형식 정보 보기](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [보안 변경 내용](../security/security-changes.md)
+- [코드 액세스 보안](../misc/code-access-security.md)
+- [리플렉션 내보내기의 보안 문제점](security-issues-in-reflection-emit.md)
+- [형식 정보 보기](viewing-type-information.md)
 - [특성 적용](../../standard/attributes/applying-attributes.md)
-- [사용자 지정 특성 액세스](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)
+- [사용자 지정 특성 액세스](accessing-custom-attributes.md)

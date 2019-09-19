@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 808f0f8ac6caf15be0bf1ba8735521871c9b94d7
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
-ms.translationtype: HT
+ms.openlocfilehash: 417550397582641c5a8fa97c061377beadfb0e6f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851602"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045575"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>.NET 앱에서 리소스 패키징 및 배포
 
@@ -58,7 +58,7 @@ ms.locfileid: "70851602"
 애플리케이션의 리소스를 패키지할 때는 공용 언어 런타임에서 적용하는 리소스 명명 규칙을 사용하여 이름을 지정해야 합니다. 런타임에서는 문화권 이름으로 리소스를 식별합니다. 각 문화권에는 일반적으로 언어와 관련된 2자의 소문자 문화권 이름과 필요한 경우 국가 또는 지역과 관련된 2자의 대문자 하위 문화권 이름이 조합된 고유한 이름이 지정됩니다. 하위 문화권 이름이 문화권 이름 다음에 추가되고 대시(-)로 구분됩니다. 예를 들어 일본에서 사용되는 일본어는 ja-JP, 미국에서 사용되는 영어는 en-US, 독일에서 사용되는 독일어는 de-DE, 오스트리아에서 사용되는 독일어는 de-AT입니다. [Windows에서 지원하는 언어/지역 이름 목록](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)의 **언어 태그** 열을 참조하세요. 문화권 이름은 [BCP 47](https://tools.ietf.org/html/bcp47)에 정의된 표준을 따릅니다.
 
 > [!NOTE]
-> 리소스 파일을 만드는 방법에 대한 자세한 내용은 [리소스 파일 만들기](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) 및 [위성 어셈블리 만들기](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)를 참조하세요.
+> 리소스 파일을 만드는 방법에 대한 자세한 내용은 [리소스 파일 만들기](creating-resource-files-for-desktop-apps.md) 및 [위성 어셈블리 만들기](creating-satellite-assemblies-for-desktop-apps.md)를 참조하세요.
 
 <a name="cpconpackagingdeployingresourcesanchor1"></a>
 
@@ -73,9 +73,9 @@ ms.locfileid: "70851602"
 .NET Framework 리소스 대체 프로세스에는 다음 단계가 포함됩니다.
 
 > [!TIP]
-> [ \<relativeBindForResources>](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) 구성 요소를 사용하여 런타임이 리소스 어셈블리를 검색하는 프로세스 및 리소스 대체 프로세스를 최적화할 수도 있습니다. 자세한 내용은 [리소스 대체 프로세스 최적화](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#Optimizing) 섹션을 참조하세요.
+> [ \<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) 구성 요소를 사용하여 런타임이 리소스 어셈블리를 검색하는 프로세스 및 리소스 대체 프로세스를 최적화할 수도 있습니다. 자세한 내용은 [리소스 대체 프로세스 최적화](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing) 섹션을 참조하세요.
 
-1. 런타임은 먼저 [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)에서 애플리케이션에 대해 요청된 문화권과 일치하는 어셈블리를 확인합니다.
+1. 런타임은 먼저 [전역 어셈블리 캐시](../app-domains/gac.md)에서 애플리케이션에 대해 요청된 문화권과 일치하는 어셈블리를 확인합니다.
 
      전역 어셈블리 캐시는 많은 애플리케이션이 공유하는 리소스 어셈블리를 저장할 수 있습니다. 이렇게 하면 만드는 모든 애플리케이션의 디렉터리 구조에 특정 리소스 집합을 포함할 필요가 없습니다. 런타임은 어셈블리에 대한 참조를 발견할 경우 어셈블리에서 요청된 리소스를 검색합니다. 어셈블리에서 항목을 찾으면 요청된 리소스가 사용됩니다. 항목을 찾지 못하면 검색을 계속합니다.
 
@@ -112,13 +112,13 @@ ms.locfileid: "70851602"
 
 다음과 같은 경우 런타임이 위성 어셈블리에서 리소스를 검색하는 프로세스를 최적화할 수 있습니다.
 
-- 위성 어셈블리는 코드 어셈블리와 동일한 위치에 배포됩니다. 코드 어셈블리가 [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)에 설치된 경우 위성 어셈블리도 전역 어셈블리 캐시에 설치됩니다. 코드 어셈블리가 디렉터리에 설치된 경우 위성 어셈블리는 해당 디렉터리의 문화권별 폴더에 설치됩니다.
+- 위성 어셈블리는 코드 어셈블리와 동일한 위치에 배포됩니다. 코드 어셈블리가 [전역 어셈블리 캐시](../app-domains/gac.md)에 설치된 경우 위성 어셈블리도 전역 어셈블리 캐시에 설치됩니다. 코드 어셈블리가 디렉터리에 설치된 경우 위성 어셈블리는 해당 디렉터리의 문화권별 폴더에 설치됩니다.
 
 - 위성 어셈블리는 요청 시 설치되지 않습니다.
 
 - 애플리케이션 코드는 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 이벤트를 처리하지 않습니다.
 
-다음 예제와 같이 애플리케이션 구성 파일에 [\<relativeBindForResources&gt;](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) 요소를 포함하고 해당 `enabled` 특성을 `true`로 설정하여 위성 어셈블리에 대한 프로브를 최적화합니다.
+다음 예제와 같이 애플리케이션 구성 파일에 [\<relativeBindForResources&gt;](../configure-apps/file-schema/runtime/relativebindforresources-element.md) 요소를 포함하고 해당 `enabled` 특성을 `true`로 설정하여 위성 어셈블리에 대한 프로브를 최적화합니다.
 
 ```xml
 <configuration>
@@ -128,7 +128,7 @@ ms.locfileid: "70851602"
 </configuration>
 ```
 
-위성 어셈블리에 대해 최적화된 프로브는 옵트인 기능입니다. 즉, 런타임은 [\<relativeBindForResources&gt;](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) 요소가 애플리케이션의 구성 파일에 있고 해당 `enabled` 특성이 `true`로 설정된 경우가 아니면 [리소스 대체 프로세스](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1)에 문서화된 단계를 따릅니다. 이런 경우에는 위성 어셈블리 검색 프로세스가 다음과 같이 수정됩니다.
+위성 어셈블리에 대해 최적화된 프로브는 옵트인 기능입니다. 즉, 런타임은 [\<relativeBindForResources&gt;](../configure-apps/file-schema/runtime/relativebindforresources-element.md) 요소가 애플리케이션의 구성 파일에 있고 해당 `enabled` 특성이 `true`로 설정된 경우가 아니면 [리소스 대체 프로세스](packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1)에 문서화된 단계를 따릅니다. 이런 경우에는 위성 어셈블리 검색 프로세스가 다음과 같이 수정됩니다.
 
 - 런타임은 부모 코드 어셈블리의 위치를 사용하여 위성 어셈블리를 검색합니다. 부모 어셈블리가 전역 어셈블리 캐시에 설치된 경우 런타임은 캐시에서만 검색하고 애플리케이션 디렉터리에서 검색하지 않습니다. 부모 어셈블리가 애플리케이션 디렉터리에 설치된 경우 런타임은 애플리케이션 디렉터리에서만 검색하고 전역 어셈블리 캐시에서 검색하지 않습니다.
 
@@ -186,7 +186,7 @@ Greeting=Bon jour!
 Greeting=Добрый день
 ```
 
-명령줄에서 [리소스 파일 생성기(Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)를 실행하여 이러한 두 파일을 .resources 파일로 컴파일합니다. 프랑스어 리소스에 대한 명령은 다음과 같습니다.
+명령줄에서 [리소스 파일 생성기(Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)를 실행하여 이러한 두 파일을 .resources 파일로 컴파일합니다. 프랑스어 리소스에 대한 명령은 다음과 같습니다.
 
 **resgen.exe resources.fr.txt**
 
@@ -194,7 +194,7 @@ Greeting=Добрый день
 
 **resgen.exe resources.ru.txt**
 
-프랑스어 리소스에 대한 명령줄에서 다음과 같이 [어셈블리 링커(Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 명령을 실행하여 .resources 파일을 동적 연결 라이브러리에 포함합니다.
+프랑스어 리소스에 대한 명령줄에서 다음과 같이 [어셈블리 링커(Al.exe)](../tools/al-exe-assembly-linker.md) 명령을 실행하여 .resources 파일을 동적 연결 라이브러리에 포함합니다.
 
 **al /t:lib /embed:resources.fr.resources /culture:fr /out:fr\Example1.resources.dll**
 
@@ -233,7 +233,7 @@ Bon jour!
 
 ## <a name="see-also"></a>참고 항목
 
-- [데스크톱 앱의 리소스](../../../docs/framework/resources/index.md)
-- [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)
-- [리소스 파일 만들기](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
-- [위성 어셈블리 만들기](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
+- [데스크톱 앱의 리소스](index.md)
+- [전역 어셈블리 캐시](../app-domains/gac.md)
+- [리소스 파일 만들기](creating-resource-files-for-desktop-apps.md)
+- [위성 어셈블리 만들기](creating-satellite-assemblies-for-desktop-apps.md)

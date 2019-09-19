@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: df2a99b6fe288cfa8b8a5d60bb127849323ed3a9
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
-ms.translationtype: HT
+ms.openlocfilehash: e5ff40d8413acf64e7a8a129a7b268f58780d591
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545315"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053479"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>자습서: Windows 서비스 앱 만들기
 
@@ -28,7 +28,7 @@ ms.locfileid: "69545315"
 
 2. **Windows 서비스(.NET Framework)** 프로젝트 템플릿을 검색하여 선택합니다. 템플릿을 찾으려면 **설치됨**과 **Visual C#** 또는 **Visual Basic**을 차례로 확장한 후 **Windows 데스크톱**을 선택합니다. 또는 오른쪽 상단의 검색 상자에서 *Windows 서비스*를 입력하고 **Enter** 키를 누릅니다.
 
-   ![Visual Studio의 새 프로젝트 대화 상자에 있는 Windows 서비스 템플릿](media/new-project-dialog.png)
+   ![Visual Studio의 새 프로젝트 대화 상자에 있는 Windows 서비스 템플릿](./media/new-project-dialog.png)
 
    > [!NOTE]
    > **Windows 서비스** 템플릿이 표시되지 않는 경우 **.NET 데스크톱 개발** 워크로드를 설치해야 할 수 있습니다.
@@ -51,11 +51,11 @@ ms.locfileid: "69545315"
 
 2. 팝업 창에서 **예**를 선택합니다.
 
-    ![이름 바꾸기 프롬프트](media/windows-service-rename.png "Windows 서비스 이름 바꾸기 프롬프트")
+    ![이름 바꾸기 프롬프트](./media/windows-service-rename.png "Windows 서비스 이름 바꾸기 프롬프트")
 
 3. **디자인** 탭의 바로 가기 메뉴에서 **속성**을 선택합니다. **속성** 창에서 **ServiceName** 값을 *MyNewService*로 변경합니다.
 
-    ![서비스 속성](media/windows-service-properties.png "Windows 서비스 속성")
+    ![서비스 속성](./media/windows-service-properties.png "Windows 서비스 속성")
 
 4. **파일** 메뉴에서 **모두 저장**을 선택합니다.
 
@@ -340,7 +340,7 @@ Windows 서비스를 실행하려면 해당 서비스를 설치해야 합니다.
 
      이 텍스트는 **서비스** 창의 **설명** 열에 표시되어 사용자에게 서비스를 설명합니다.
 
-    ![서비스 창의 서비스 설명입니다.](media/windows-service-description.png "서비스 설명")
+    ![서비스 창의 서비스 설명입니다.](./media/windows-service-description.png "서비스 설명")
 
 6. <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> 속성에 텍스트를 추가합니다. 예를 들어 *MyNewService 표시 이름*을 입력할 수 있습니다.
 
@@ -350,7 +350,7 @@ Windows 서비스를 실행하려면 해당 서비스를 설치해야 합니다.
 
 8. 완료되면 **속성** 창이 다름 그림과 같아야 합니다.
 
-     ![Windows 서비스에 대한 설치 관리자 속성](media/windows-service-installer-properties.png "Windows 서비스 설치 관리자 속성")
+     ![Windows 서비스에 대한 설치 관리자 속성](./media/windows-service-installer-properties.png "Windows 서비스 설치 관리자 속성")
 
 9. **ProjectInstaller**의 **디자인**뷰에서 Visual C# 프로젝트의 경우 **serviceProcessInstaller1**을 선택하고 Visual Basic 프로젝트의 경우 **ServiceProcessInstaller1**을 선택한 다음, 바로 가기 메뉴에서 **속성**을 선택합니다. 드롭 다운 목록에서 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 속성을 <xref:System.ServiceProcess.ServiceAccount.LocalSystem>(으)로 설정합니다.
 
@@ -497,7 +497,7 @@ Windows 서비스에는 명령줄 인수나 시작 매개 변수를 사용할 �
 
      해당 서비스가 설정된 표시 이름의 사전순으로 **서비스**에 표시됩니다.
 
-     ![서비스 창의 MyNewService입니다.](media/windowsservices-serviceswindow.PNG)
+     ![서비스 창의 MyNewService입니다.](./media/windowsservices-serviceswindow.PNG)
 
 2. 서비스를 시작하려면 서비스의 바로 가기 메뉴에서 **시작**을 선택합니다.
 
@@ -516,7 +516,7 @@ Windows 서비스에는 명령줄 인수나 시작 매개 변수를 사용할 �
 
 3. **MyNewLog**(또는 절차에 따라 명령줄 인수를 추가한 경우 **MyLogFile1**)의 목록을 찾아서 확장합니다. 서비스에서 수행한 두 작업(시작 및 중지)의 항목이 표시됩니다.
 
-     ![이벤트 뷰어를 사용하여 이벤트 로그 항목 확인](media/windows-service-event-viewer.png)
+     ![이벤트 뷰어를 사용하여 이벤트 로그 항목 확인](./media/windows-service-event-viewer.png)
 
 ## <a name="clean-up-resources"></a>리소스 정리
 

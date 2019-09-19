@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 336a0fb5bc0fca5dd6ef917a2eeaf0908680d12b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 56b0b76e8dc137cbb9346f97604c2d53435c1fe6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591496"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045737"
 ---
 # <a name="using-the-codedom"></a>CodeDOM 사용
 CodeDOM은 소스 코드 요소의 다양한 일반적인 형식을 나타내는 형식을 제공합니다. 개체 그래프를 어셈블하는 데 CodeDOM 요소를 사용하는 소스 코드 모델을 빌드하는 프로그램을 디자인할 수 있습니다. 이 개체 그래프는 CodeDOM 코드 생성기를 사용하여 지원되는 프로그래밍 언어에 대한 소스 코드로 렌더링할 수 있습니다. CodeDOM은 소스 코드를 이진 어셈블리로 컴파일하는 데도 사용할 수 있습니다.  
@@ -120,7 +120,7 @@ CodeDOM은 소스 코드 요소의 다양한 일반적인 형식을 나타내는
  [!code-csharp[CodeDomExample#19](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#19)]
  [!code-vb[CodeDomExample#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#19)]  
   
- 이제 `compileUnit`라는 <xref:System.CodeDom.CodeCompileUnit>에는 간단한 Hello World 프로그램에 대한 CodeDOM 그래프가 포함됩니다. CodeDOM 그래프에서 코드를 생성 및 컴파일하는 방법에 대한 자세한 내용은 [CodeDOM 그래프에서 소스 코드 생성 및 프로그램 컴파일](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)을 참조하세요.  
+ 이제 `compileUnit`라는 <xref:System.CodeDom.CodeCompileUnit>에는 간단한 Hello World 프로그램에 대한 CodeDOM 그래프가 포함됩니다. CodeDOM 그래프에서 코드를 생성 및 컴파일하는 방법에 대한 자세한 내용은 [CodeDOM 그래프에서 소스 코드 생성 및 프로그램 컴파일](generating-and-compiling-source-code-from-a-codedom-graph.md)을 참조하세요.  
   
 ### <a name="more-information-on-building-a-codedom-graph"></a>CodeDOM 그래프 빌드에 대한 자세한 정보  
  CodeDOM은 공용 언어 런타임을 지원하는 프로그래밍 언어에 있는 코드 요소의 다양한 일반적인 형식을 지원합니다. CodeDOM이 모든 가능한 프로그래밍 언어 기능을 나타내는 요소를 제공하도록 디자인된 것은 아닙니다. CodeDOM 요소로 쉽게 나타낼 수 없는 코드는 <xref:System.CodeDom.CodeSnippetExpression>, <xref:System.CodeDom.CodeSnippetStatement>, <xref:System.CodeDom.CodeSnippetTypeMember> 또는 <xref:System.CodeDom.CodeSnippetCompileUnit>로 캡슐화할 수 있습니다. 하지만 코드 조각은 CodeDOM을 통해 자동으로 다른 언어로 변환할 수 없습니다.  

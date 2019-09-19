@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b550f504ecbc05e6790652ee1432da3a26ceacb6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: e6b6de8f0a178914c46ba5a65dfb56795cf23c71
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915584"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046119"
 ---
 # <a name="dynamic-language-runtime-overview"></a>동적 언어 런타임 개요
 
@@ -76,7 +76,7 @@ DLR을 사용하여 개발된 언어의 예는 다음과 같습니다.
 ## <a name="dlr-architecture"></a>DLR 아키텍처
  다음 그림은 동적 언어 런타임의 아키텍처를 보여 줍니다.
 
- ![동적 언어 런타임 아키텍처 개요](../../../docs/framework/reflection-and-codedom/media/dlr-archoverview.png "DLR_ArchOverview") DLR 아키텍처
+ ![동적 언어 런타임 아키텍처 개요](./media/dlr-archoverview.png "DLR_ArchOverview") DLR 아키텍처
 
  DLR은 동적 언어 지원을 개선하기 위해 서비스 집합을 CLR에 추가합니다. 이러한 서비스에는 다음 항목이 포함됩니다.
 

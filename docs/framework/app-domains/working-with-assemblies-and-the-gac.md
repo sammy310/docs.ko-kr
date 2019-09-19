@@ -10,22 +10,23 @@ helpviewer_keywords:
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f45f40cd66c63e660b9091c726533dcfe8db086
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: 0331e0ad30743d5f0bba125e8e61e636e1c2a5be
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971581"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053020"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>어셈블리 및 전역 어셈블리 캐시 사용
+
 여러 애플리케이션에서 어셈블리를 공유하려면 어셈블리를 전역 어셈블리 캐시에 설치하면 됩니다. 공용 언어 런타임이 설치된 각 컴퓨터에는 이 컴퓨터 수준의 코드 캐시가 있습니다. 전역 어셈블리 캐시에는 컴퓨터의 여러 애플리케이션에서 공유하도록 특별히 지정된 어셈블리가 저장됩니다. 전역 어셈블리 캐시에 설치하려면 어셈블리에 강력한 이름이 있어야 합니다.  
   
 > [!NOTE]
 > 전역 어셈블리 캐시에 배치된 어셈블리에는 같은 어셈블리 이름과 파일 이름(파일 이름 확장명 제외)이 있어야 합니다. 예를 들어 어셈블리 이름이 myAssembly인 어셈블리의 파일 이름은 myAssembly.exe 또는 myAssembly.dll이어야 합니다.  
   
- 필요할 경우에만 어셈블리를 전역 어셈블리 캐시에 설치하여 어셈블리를 공유해야 합니다. 일반적으로 어셈블리 공유가 명시적으로 필요하지 않은 경우에는 어셈블리 종속성은 pirvate으로 유지하고 어셈블리를 애플리케이션 디렉터리에 저장해야 합니다. 또한 어셈블리가 COM interop 또는 비관리 코드에 액세스 가능하게 설정하기 위해 어셈블리를 전역 어셈블리 캐시에 설치할 필요는 없습니다.  
+필요할 경우에만 어셈블리를 전역 어셈블리 캐시에 설치하여 어셈블리를 공유해야 합니다. 일반적으로 어셈블리 공유가 명시적으로 필요하지 않은 경우에는 어셈블리 종속성은 pirvate으로 유지하고 어셈블리를 애플리케이션 디렉터리에 저장해야 합니다. 또한 어셈블리가 COM interop 또는 비관리 코드에 액세스 가능하게 설정하기 위해 어셈블리를 전역 어셈블리 캐시에 설치할 필요는 없습니다.  
   
- 어셈블리를 전역 어셈블리 캐시에 설치해야 하는 몇 가지 이유는 다음과 같습니다.  
+어셈블리를 전역 어셈블리 캐시에 설치해야 하는 몇 가지 이유는 다음과 같습니다.  
   
 - 공유된 위치.  
   
@@ -46,30 +47,31 @@ ms.locfileid: "70971581"
  어셈블리를 전역 어셈블리 캐시에 명시적으로 설치하지 않으려고 하는 시나리오가 있습니다. 애플리케이션을 구성하는 어셈블리 중 하나를 전역 어셈블리 캐시에 배치하면 XCOPY를 사용하여 애플리케이션 디렉터리를 복사하는 방식으로 애플리케이션을 더 이상 복제하거나 설치할 수 없습니다. 이 경우 어셈블리를 전역 어셈블리 캐시로 이동해야 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [방법: 글로벌 어셈블리 캐시에 어셈블리 설치](install-assembly-into-gac.md)  
- 어셈블리를 전역 어셈블리 캐시에 설치하는 방법을 설명합니다.  
+[방법: 글로벌 어셈블리 캐시에 어셈블리 설치](install-assembly-into-gac.md)  
+어셈블리를 전역 어셈블리 캐시에 설치하는 방법을 설명합니다.  
   
- [방법: 글로벌 어셈블리 캐시의 내용 보기](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
- [Gacutil.exe(전역 어셈블리 캐시 도구)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)를 사용하여 전역 어셈블리 캐시의 콘텐츠를 보는 방법을 설명합니다.  
+[방법: 글로벌 어셈블리 캐시의 내용 보기](how-to-view-the-contents-of-the-gac.md)  
+[Gacutil.exe(전역 어셈블리 캐시 도구)](../tools/gacutil-exe-gac-tool.md)를 사용하여 전역 어셈블리 캐시의 콘텐츠를 보는 방법을 설명합니다.  
   
- [방법: 글로벌 어셈블리 캐시에서 어셈블리 제거](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
- [Gacutil.exe(전역 어셈블리 캐시 도구)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)를 사용하여 전역 어셈블리 캐시에서 어셈블리를 제거하는 방법을 설명합니다.  
+[방법: 글로벌 어셈블리 캐시에서 어셈블리 제거](how-to-remove-an-assembly-from-the-gac.md)  
+[Gacutil.exe(전역 어셈블리 캐시 도구)](../tools/gacutil-exe-gac-tool.md)를 사용하여 전역 어셈블리 캐시에서 어셈블리를 제거하는 방법을 설명합니다.  
   
- [전역 어셈블리 캐시에서 서비스되는 구성 요소 사용](../../../docs/framework/app-domains/use-serviced-components-with-the-gac.md)  
- 서비스되는 구성 요소(관리되는 COM+ 구성 요소)를 전역 어셈블리 캐시에 배치하는 이유를 설명합니다.  
+[전역 어셈블리 캐시에서 서비스되는 구성 요소 사용](use-serviced-components-with-the-gac.md)  
+서비스되는 구성 요소(관리되는 COM+ 구성 요소)를 전역 어셈블리 캐시에 배치하는 이유를 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [어셈블리 만들기](../../standard/assembly/create.md)  
- 어셈블리 만들기에 대해 간략하게 설명합니다.  
+
+[어셈블리 만들기](../../standard/assembly/create.md)  
+어셈블리 만들기에 대해 간략하게 설명합니다.  
   
- [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)  
- 전역 어셈블리 캐시를 설명합니다.  
+[전역 어셈블리 캐시](gac.md)  
+전역 어셈블리 캐시를 설명합니다.  
   
- [방법: 어셈블리 콘텐츠 보기](../../standard/assembly/view-contents.md)  
- [Ildasm.exe(IL 디스어셈블러)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)를 사용하여 어셈블리의 MSIL(Microsoft Intermediate Language) 정보를 보는 방법을 설명합니다.  
+[방법: 어셈블리 콘텐츠 보기](../../standard/assembly/view-contents.md)  
+[Ildasm.exe(IL 디스어셈블러)](../tools/ildasm-exe-il-disassembler.md)를 사용하여 어셈블리의 MSIL(Microsoft Intermediate Language) 정보를 보는 방법을 설명합니다.  
   
- [런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- 공용 언어 런타임이 애플리케이션을 구성하는 어셈블리를 찾고 로드하는 방법을 설명합니다.  
+[런타임에서 어셈블리를 찾는 방법](../deployment/how-the-runtime-locates-assemblies.md)  
+공용 언어 런타임이 애플리케이션을 구성하는 어셈블리를 찾고 로드하는 방법을 설명합니다.  
   
- [어셈블리를 사용한 프로그래밍](../../standard/assembly/program.md)  
- 관리되는 애플리케이션의 빌드 블록인 어셈블리를 설명합니다.
+[어셈블리를 사용한 프로그래밍](../../standard/assembly/program.md)  
+관리되는 애플리케이션의 빌드 블록인 어셈블리를 설명합니다.

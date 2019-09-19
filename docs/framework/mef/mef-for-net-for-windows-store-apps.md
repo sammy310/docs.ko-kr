@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b2b62e6fea6da46e6307b35dd1c3372420dced80
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 255892e4dd3938028f488f80d8fba367590976f7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648505"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051624"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>Windows 스토어 앱용 .NET을 위한 MEF
 <xref:System.Composition?displayProperty=nameWithType> 및 자식 네임스페이스에는 MEF(Managed Extensibility Framework)를 사용하여 확장 가능한 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱을 개발하기 위한 형식이 포함되어 있습니다. 이러한 네임스페이스는 [!INCLUDE[win8](../../../includes/win8-md.md)] 운영 체제에 대한 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 하위 집합의 일부입니다.  
@@ -30,4 +30,4 @@ ms.locfileid: "64648505"
 
 - [Windows 스토어 앱용 .NET 개요](https://go.microsoft.com/fwlink/p/?LinkID=238312)
 - [Windows 스토어 앱용 .NET – 지원되는 API](https://go.microsoft.com/fwlink/p/?LinkID=247912)
-- [MEF(Managed Extensibility Framework)](../../../docs/framework/mef/index.md)
+- [MEF(Managed Extensibility Framework)](index.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 74f834261d464430547ba3e1113db0ea780f593e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 860f2ae22eb6510dc1f1a454ae3e51ccb366078b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044438"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053621"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>방법: Windows 서비스 애플리케이션 디버그
 서비스는 Visual Studio 내에서가 아니라 서비스 제어 관리자의 컨텍스트 내에서 실행해야 합니다. 따라서 서비스를 디버그하는 것은 다른 Visual Studio 애플리케이션 형식을 디버그하는 것처럼 단순하지 않습니다. 서비스를 디버그하려면 서비스를 시작한 다음 서비스가 실행되는 프로세스에 디버거를 연결해야 합니다. 그리고 나면 Visual Studio의 모든 표준 디버깅 기능을 사용하여 애플리케이션을 디버그할 수 있습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "70044438"
  이 문서에서는 로컬 컴퓨터에서 실행되는 서비스를 디버그하는 방법에 대해 다루지만, 원격 컴퓨터에서 실행되는 Windows 서비스도 디버그할 수 있습니다. [원격 디버깅](/visualstudio/debugger/debug-installed-app-package)을 참조하세요.  
   
 > [!NOTE]
-> 서비스 제어 관리자는 모든 서비스 시작 시도에 대해 30초의 제한을 적용하므로 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 메서드를 디버그하는 작업은 까다로울 수 있습니다. 자세한 내용은 [문제 해결: Windows 서비스 디버깅](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md)을 참조하세요.  
+> 서비스 제어 관리자는 모든 서비스 시작 시도에 대해 30초의 제한을 적용하므로 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 메서드를 디버그하는 작업은 까다로울 수 있습니다. 자세한 내용은 [문제 해결: Windows 서비스 디버깅](troubleshooting-debugging-windows-services.md)을 참조하세요.  
   
 > [!WARNING]
 > 디버깅을 위한 의미 있는 정보를 가져오려면 Visual Studio 디버거가 디버그 중인 이진 파일에 대한 기호 파일을 찾아야 합니다. Visual Studio에서 빌드한 서비스를 디버그하는 경우 기호 파일(.pdb 파일)은 실행 파일이나 라이브러리와 같은 폴더에 있으며 디버거는 이러한 파일을 자동으로 로드합니다. 직접 빌드하지 않은 서비스를 디버그할 때는 먼저 서비스의 기호를 찾아 디버거가 해당 기호를 검색할 수 있는지 확인해야 합니다. [Visual Studio 디버거에서 기호 파일(.pdb) 및 소스 파일 지정](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)을 참조하세요. 시스템 프로세스를 디버그하거나 서비스에 시스템 호출을 위한 기호를 포함하려는 경우에는 Microsoft 기호 서버를 추가해야 합니다. [디버깅 기호](/windows/desktop/DxTechArts/debugging-with-symbols)를 참조하세요.  
@@ -38,9 +38,9 @@ ms.locfileid: "70044438"
   
 1. 디버그 구성에서 서비스를 빌드합니다.  
   
-2. 서비스를 설치합니다. 자세한 내용은 [방법: 서비스 설치 및 제거](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)를 참조하세요.  
+2. 서비스를 설치합니다. 자세한 내용은 [방법: 서비스 설치 및 제거](how-to-install-and-uninstall-services.md)를 참조하세요.  
   
-3. **서비스 제어 관리자**, **서버 탐색기** 또는 코드에서 서비스를 시작합니다. 자세한 내용은 [방법: 서비스 시작](../../../docs/framework/windows-services/how-to-start-services.md)을 참조하세요.  
+3. **서비스 제어 관리자**, **서버 탐색기** 또는 코드에서 서비스를 시작합니다. 자세한 내용은 [방법: 서비스 시작](how-to-start-services.md)을 참조하세요.  
   
 4. 시스템 프로세스에 연결할 수 있도록 관리 자격 증명을 사용하여 Visual Studio를 시작합니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "70044438"
   
 10. 코드에서 사용할 중단점을 설정합니다.  
   
-11. 서비스 제어 관리자에 액세스하고 서비스를 조작하여 중단점을 적중하는 중지, 일시 중지 및 계속 명령을 보냅니다. 서비스 제어 관리자 실행에 대한 자세한 내용은 [방법: 서비스 시작](../../../docs/framework/windows-services/how-to-start-services.md)을 참조하세요. 또한 [문제 해결: Windows 서비스 디버깅](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md)을 참조하세요.  
+11. 서비스 제어 관리자에 액세스하고 서비스를 조작하여 중단점을 적중하는 중지, 일시 중지 및 계속 명령을 보냅니다. 서비스 제어 관리자 실행에 대한 자세한 내용은 [방법: 서비스 시작](how-to-start-services.md)을 참조하세요. 또한 [문제 해결: Windows 서비스 디버깅](troubleshooting-debugging-windows-services.md)을 참조하세요.  
   
 ## <a name="debugging-tips-for-windows-services"></a>Windows 서비스 디버깅 팁  
  서비스의 프로세스에 연결하면 해당 서비스의 코드를 대부분 디버그할 수 있지만 모든 코드를 디버그할 수 있는 것은 아닙니다. 예를 들어 서비스가 이미 시작되었기 때문에 이러한 방식으로 서비스를 로드하는 데 사용되는 서비스의 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 메서드 내 코드나 `Main` 메서드 내의 코드는 디버그할 수 없습니다. 이 제한을 해결하는 한 가지 방법은 디버그에만 사용되는 두 번째 임시 서비스를 서비스 애플리케이션에 만드는 것입니다. 두 서비스를 모두 설치하고서 이 더미 서비스를 시작하여 서비스 프로세스를 로드할 수는 없습니다. 임시 서비스에서 프로세스를 시작하고 나면 Visual Studio에서 **디버그** 메뉴를 사용하여 서비스 프로세스에 연결할 수 있습니다.  
@@ -115,7 +115,7 @@ ms.locfileid: "70044438"
   
 ## <a name="see-also"></a>참고 항목
 
-- [Windows 서비스 애플리케이션 소개](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [방법: 서비스 설치 및 제거](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
-- [방법: 서비스 시작](../../../docs/framework/windows-services/how-to-start-services.md)
+- [Windows 서비스 애플리케이션 소개](introduction-to-windows-service-applications.md)
+- [방법: 서비스 설치 및 제거](how-to-install-and-uninstall-services.md)
+- [방법: 서비스 시작](how-to-start-services.md)
 - [서비스 디버그](/windows/desktop/Services/debugging-a-service)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4c56712460d772426a2d8d6d328cba9bb03373d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: deae99f5bdc7c187997d4bad4957b2fcdccdc166
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648672"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051722"
 ---
 # <a name="identifying-functions-in-dlls"></a>DLL 함수 식별
 DLL 함수 ID는 다음 요소로 구성됩니다.  
@@ -31,7 +31,7 @@ DLL 함수 ID는 다음 요소로 구성됩니다.
   
  **MessageBoxA**는 **MessageBox** 함수의 ANSI 진입점이고 **MessageBoxW**는 유니코드 버전입니다. 다양한 명령줄 도구를 실행하여 user32.dll과 같은 특정 DLL에 대한 함수 이름을 나열할 수 있습니다. 예를 들어 `dumpbin /exports user32.dll` 또는 `link /dump /exports user32.dll`을 사용하여 함수 이름을 얻을 수 있습니다.  
   
- DLL에서 새 이름을 원래 진입점에 매핑할 경우 코드 내에서 관리되지 않는 함수의 이름을 원하는 대로 바꿀 수 있습니다. 관리 소스 코드에서 관리되지 않는 DLL 함수의 이름을 바꾸는 방법에 대한 자세한 내용은 [진입점 지정](../../../docs/framework/interop/specifying-an-entry-point.md)을 참조하세요.  
+ DLL에서 새 이름을 원래 진입점에 매핑할 경우 코드 내에서 관리되지 않는 함수의 이름을 원하는 대로 바꿀 수 있습니다. 관리 소스 코드에서 관리되지 않는 DLL 함수의 이름을 바꾸는 방법에 대한 자세한 내용은 [진입점 지정](specifying-an-entry-point.md)을 참조하세요.  
   
  플랫폼 호출을 사용하면 Windows API 및 기타 DLL의 함수를 호출하여 운영 체제의 상당한 부분을 제어할 수 있습니다. Windows API 이외에 플랫폼 호출을 통해 사용할 수 있는 수많은 기타 API 및 DLL이 있습니다.  
   
@@ -43,12 +43,12 @@ DLL 함수 ID는 다음 요소로 구성됩니다.
 |Kernel32.dll|메모리 관리 및 리소스 처리를 위한 하위 수준 운영 체제 함수입니다.|  
 |User32.dll|메시지 처리, 타이머, 메뉴 및 통신을 위한 Windows 관리 함수입니다.|  
   
- Windows API에 대한 전체 설명서는 플랫폼 SDK를 참조하세요. 플랫폼 호출에서 사용되는 .NET 기반 선언을 생성하는 방법을 보여 주는 예제는 [플랫폼 호출을 사용하여 데이터 마샬링](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)을 참조하세요.  
+ Windows API에 대한 전체 설명서는 플랫폼 SDK를 참조하세요. 플랫폼 호출에서 사용되는 .NET 기반 선언을 생성하는 방법을 보여 주는 예제는 [플랫폼 호출을 사용하여 데이터 마샬링](marshaling-data-with-platform-invoke.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
-- [관리되지 않는 DLL 함수 사용](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
-- [진입점 지정](../../../docs/framework/interop/specifying-an-entry-point.md)
-- [DLL 함수가 포함된 클래스 만들기](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)
-- [관리 코드에서 프로토타입 만들기](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
-- [DLL 함수 호출](../../../docs/framework/interop/calling-a-dll-function.md)
+- [관리되지 않는 DLL 함수 사용](consuming-unmanaged-dll-functions.md)
+- [진입점 지정](specifying-an-entry-point.md)
+- [DLL 함수가 포함된 클래스 만들기](creating-a-class-to-hold-dll-functions.md)
+- [관리 코드에서 프로토타입 만들기](creating-prototypes-in-managed-code.md)
+- [DLL 함수 호출](calling-a-dll-function.md)

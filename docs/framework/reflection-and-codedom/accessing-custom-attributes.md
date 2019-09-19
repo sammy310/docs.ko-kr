@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6955c24c12936ef37bedea2a1dd290bac45a5a2e
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
-ms.translationtype: HT
+ms.openlocfilehash: 5b8eafa4f3f8a3fd81772c4521f26323019d012c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894904"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046148"
 ---
 # <a name="accessing-custom-attributes"></a>사용자 지정 특성 액세스
 특성이 프로그램 요소와 연결된 후 리플렉션을 사용하여 특성의 존재 및 값을 쿼리할 수 있습니다. .NET Framework 버전 1.0 및 1.1에서 사용자 지정 특성은 실행 컨텍스트에서 검사됩니다. .NET Framework 버전 2.0에서는 실행을 위해 로드할 수 없는 코드를 검사하는 데 사용할 수 있는 새로운 로드 컨텍스트인 리플렉션 전용 컨텍스트를 제공합니다.  
   
 ## <a name="the-reflection-only-context"></a>리플렉션 전용 컨텍스트  
- 리플렉션 전용 컨텍스트로 로드된 코드는 실행할 수 없습니다. 즉, 생성자를 실행할 필요가 없으므로 사용자 지정 특성의 인스턴스를 만들 수 없습니다. 리플렉션 전용 컨텍스트에서 사용자 지정 특성을 로드하고 검사하려면 <xref:System.Reflection.CustomAttributeData> 클래스를 사용합니다. static <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> 메서드의 적절한 오버로드를 사용하여 이 클래스의 인스턴스를 가져올 수 있습니다. [방법: 리플렉션 전용 컨텍스트에 어셈블리 로드](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)를 참조하세요.  
+ 리플렉션 전용 컨텍스트로 로드된 코드는 실행할 수 없습니다. 즉, 생성자를 실행할 필요가 없으므로 사용자 지정 특성의 인스턴스를 만들 수 없습니다. 리플렉션 전용 컨텍스트에서 사용자 지정 특성을 로드하고 검사하려면 <xref:System.Reflection.CustomAttributeData> 클래스를 사용합니다. static <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> 메서드의 적절한 오버로드를 사용하여 이 클래스의 인스턴스를 가져올 수 있습니다. [방법: 리플렉션 전용 컨텍스트에 어셈블리 로드](how-to-load-assemblies-into-the-reflection-only-context.md)를 참조하세요.  
   
 ## <a name="the-execution-context"></a>실행 컨텍스트  
  실행 컨텍스트에서 특성을 쿼리하는 기본 리플렉션 메서드는 <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType> 및 <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>입니다.  
@@ -76,5 +76,5 @@ public class LocalizationExtenderProvider
 
 - <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>
-- [형식 정보 보기](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
-- [리플렉션의 보안 고려 사항](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)
+- [형식 정보 보기](viewing-type-information.md)
+- [리플렉션의 보안 고려 사항](security-considerations-for-reflection.md)

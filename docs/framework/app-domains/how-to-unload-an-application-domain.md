@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f356116d-e415-4f7c-a332-6e6a60227192
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f3011bd0327440cd04d5eccf5f88c036ddd76267
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: f7419725f3822622a8e4210d4f3f5d8e9e59dbdd
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212182"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053127"
 ---
 # <a name="how-to-unload-an-application-domain"></a>방법: 애플리케이션 도메인 언로드
 애플리케이션 도메인 사용을 마쳤으면 <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> 메서드를 사용하여 언로드합니다. **Unload** 메서드는 지정된 애플리케이션 도메인을 정상적으로 종료합니다. 언로드 프로세스 중에는 새 스레드가 애플리케이션 도메인에 액세스할 수 없으며 모든 애플리케이션 도메인 특정 데이터 구조가 비워집니다.  
@@ -34,5 +34,5 @@ ms.locfileid: "59212182"
 ## <a name="see-also"></a>참고 항목
 
 - [애플리케이션 도메인으로 프로그래밍](application-domains.md#programming-with-application-domains)
-- [방법: 애플리케이션 도메인 만들기](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)
-- [애플리케이션 도메인 사용](../../../docs/framework/app-domains/use.md)
+- [방법: 애플리케이션 도메인 만들기](how-to-create-an-application-domain.md)
+- [애플리케이션 도메인 사용](use.md)

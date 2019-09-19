@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e1eff9d1ef9f36c80f71e738fdd4dc56a9b6ec6
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
-ms.translationtype: HT
+ms.openlocfilehash: eef52827bfe36977c9c4c844f4f431e7404adc97
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894145"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051672"
 ---
 # <a name="passing-structures"></a>구조체 전달
 관리되지 않는 여러 함수에서는 함수, 구조체 멤버(Visual Basic의 사용자 정의 형식) 또는 관리 코드에 정의된 클래스 멤버에 매개 변수로 전달해야 합니다. 플랫폼 호출을 사용하여 구조체 또는 클래스를 비관리 코드에 전달할 때 원래 레이아웃과 맞춤을 유지하기 위해 추가 정보를 제공해야 합니다. 이 항목에서는 형식이 지정된 유형을 정의하는 데 사용하는 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 특성을 소개합니다. 관리되는 구조체와 클래스의 경우 **LayoutKind** 열거형에서 제공하는 예측 가능한 여러 레이아웃 동작 중에서 선택할 수 있습니다.  
@@ -177,6 +177,6 @@ public class TestPlatformInvoke
   
 ## <a name="see-also"></a>참고 항목
 
-- [DLL 함수 호출](../../../docs/framework/interop/calling-a-dll-function.md)
+- [DLL 함수 호출](calling-a-dll-function.md)
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
 - <xref:System.Runtime.InteropServices.FieldOffsetAttribute>

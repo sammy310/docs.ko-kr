@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c0aa8533-3b3b-42e8-9f60-84919793098c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65f5e11a8fb40527387c14cdd8dec7f0bfc5c697
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: eb30e7daed938b14bd0d936352c7455db6975e73
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196998"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051902"
 ---
 # <a name="callback-functions"></a>콜백 함수
 콜백 함수는 관리되지 않는 DLL 함수가 작업을 완료하는 데 도움이 되는, 관리되는 애플리케이션 내의 코드입니다. 콜백 함수 호출은 관리되는 애플리케이션에서 간접적으로, DLL 함수를 통해, 그리고 다시 관리되는 구현으로 전달됩니다. 플랫폼 호출을 사용하여 호출되는 많은 DLL 함수 중 일부는 제대로 실행되기 위해 관리 코드에 콜백 함수가 있어야 합니다.  
@@ -25,9 +25,9 @@ ms.locfileid: "59196998"
   
  ![플랫폼 호출 콜백 프로세스를 보여주는 다이어그램.](./media/callback-functions/platform-invoke-callback-process.gif)  
   
- 콜백 함수는 작업이 반복적으로 수행되는 경우 사용하기에 적합합니다. 또한 일반적으로 Windows API에서 **EnumFontFamilies**, **EnumPrinters**, **EnumWindows** 등의 열거형 함수에 사용됩니다. **EnumWindows** 함수는 컴퓨터의 모든 기존 창을 열거하고 콜백 함수를 호출하여 각 창에서 작업을 수행합니다. 자세한 내용과 예제는 [방법: 콜백 함수 구현](../../../docs/framework/interop/how-to-implement-callback-functions.md)을 참조하세요.  
+ 콜백 함수는 작업이 반복적으로 수행되는 경우 사용하기에 적합합니다. 또한 일반적으로 Windows API에서 **EnumFontFamilies**, **EnumPrinters**, **EnumWindows** 등의 열거형 함수에 사용됩니다. **EnumWindows** 함수는 컴퓨터의 모든 기존 창을 열거하고 콜백 함수를 호출하여 각 창에서 작업을 수행합니다. 자세한 내용과 예제는 [방법: 콜백 함수 구현](how-to-implement-callback-functions.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
-- [방법: 콜백 함수 구현](../../../docs/framework/interop/how-to-implement-callback-functions.md)
-- [DLL 함수 호출](../../../docs/framework/interop/calling-a-dll-function.md)
+- [방법: 콜백 함수 구현](how-to-implement-callback-functions.md)
+- [DLL 함수 호출](calling-a-dll-function.md)

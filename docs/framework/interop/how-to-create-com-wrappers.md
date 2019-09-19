@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1c4423c20a9a485f3c40877ccd489c749dc0e2c
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: 56a88a5719fc5630baf2f31ee62fd463980661c2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971830"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051800"
 ---
 # <a name="how-to-create-com-wrappers"></a>방법: COM 래퍼 만들기
 
@@ -45,7 +45,7 @@ Visual Studio 2005에서 프로젝트에 COM 래퍼를 참조로 추가할 수 �
   
 ### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>.NET Framework 도구를 사용하여 런타임 호출 가능 래퍼를 만들려면  
   
-- [Tlbimp.exe(형식 라이브러리 가져오기)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 도구를 실행합니다.  
+- [Tlbimp.exe(형식 라이브러리 가져오기)](../tools/tlbimp-exe-type-library-importer.md) 도구를 실행합니다.  
   
  이 도구는 원본 형식 라이브러리에 정의된 형식의 런타임 메타데이터를 포함하는 어셈블리를 만듭니다.  
   
@@ -67,11 +67,11 @@ Visual Studio 2005에서 프로젝트에 COM 래퍼를 참조로 추가할 수 �
   
 ### <a name="to-create-a-com-callable-wrapper-using-net-framework-tools"></a>.NET Framework 도구를 사용하여 COM 호출 가능 래퍼를 만들려면  
   
-[Regasm.exe(어셈블리 등록 도구)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) 도구를 실행합니다.  
+[Regasm.exe(어셈블리 등록 도구)](../tools/regasm-exe-assembly-registration-tool.md) 도구를 실행합니다.  
   
 이 도구는 어셈블리 메타데이터를 읽고 레지스트리에 필요한 항목을 추가합니다. 따라서 COM 클라이언트는 .NET Framework 클래스를 투명하게 만들 수 있습니다. 네이티브 COM 클래스인 것처럼 어셈블리를 사용할 수 있습니다.  
   
-디렉터리에 있는 어셈블리에서 Regasm.exe를 실행하고 나서 [Gacutil.exe(전역 어셈블리 캐시 도구)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)를 실행하여 어셈블리를 전역 어셈블리 캐시로 이동합니다. 어셈블리가 다른 곳에 있는지 항상 전역 어셈블리 캐시가 검사되므로 어셈블리를 이동해도 위치 레지스트리 항목이 무효화되지 않습니다.  
+디렉터리에 있는 어셈블리에서 Regasm.exe를 실행하고 나서 [Gacutil.exe(전역 어셈블리 캐시 도구)](../tools/gacutil-exe-gac-tool.md)를 실행하여 어셈블리를 전역 어셈블리 캐시로 이동합니다. 어셈블리가 다른 곳에 있는지 항상 전역 어셈블리 캐시가 검사되므로 어셈블리를 이동해도 위치 레지스트리 항목이 무효화되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목
 

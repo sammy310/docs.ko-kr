@@ -2,12 +2,12 @@
 title: 명령줄 도구를 사용하여 F# 시작
 description: .NET Core CLI를 사용하여 모든 운영 체제(Windows나 macOs, Linux)에서 간단한 F# 다중 프로젝트 솔루션을 구축하는 방법을 알아봅니다.
 ms.date: 03/26/2018
-ms.openlocfilehash: 1376b6b5384f380c06a96cdc568ad108de8a6e5f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f9177e653273e5a2191407c4fb22343ded11fece
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855829"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117923"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>.NET Core CLI를 사용하여 F# 시작
 
@@ -23,7 +23,7 @@ ms.locfileid: "70855829"
 
 명령 프롬프트나 터미널을 열고 `FSNetCore`라는 새 솔루션 파일을 만들기 위해 [dotnet new](../../core/tools/dotnet-new.md) 명령을 다음과 같이 사용합니다.
 
-```console
+```dotnetcli
 dotnet new sln -o FSNetCore
 ```
 
@@ -40,7 +40,7 @@ FSNetCore
 
 `dotnet new` 명령어를 사용하여 **src** 폴더에 Library라는 클래스 라이브러리 프로젝트를 만듭니다.
 
-```console
+```dotnetcli
 dotnet new classlib -lang F# -o src/Library
 ```
 
@@ -68,13 +68,13 @@ let getJsonNetJson value =
 
 라이브러리 프로젝트에 Newtonsoft.json NuGet 패키지를 추가 합니다.
 
-```console
+```dotnetcli
 dotnet add src/Library/Library.fsproj package Newtonsoft.Json
 ```
 
 다음과 같이 [dotnet sln add](../../core/tools/dotnet-sln.md)명령을 사용하여 `FSNetCore` 솔루션에 `Library` 프로젝트를 추가합니다.
 
-```console
+```dotnetcli
 dotnet sln add src/Library/Library.fsproj
 ```
 
@@ -84,7 +84,7 @@ dotnet sln add src/Library/Library.fsproj
 
 다음과 같이 `dotnet new` 명령을 사용하여 **src**의 App 폴더에 콘솔 응용 프로그램을 만듭니다.
 
-```console
+```dotnetcli
 dotnet new console -lang F# -o src/App
 ```
 
@@ -121,13 +121,13 @@ let main argv =
 
 다음과 같이 [dotnet add reference](../../core/tools/dotnet-add-reference.md)를 사용하여 `Library`에 참조를 추가합니다.
 
-```console
+```dotnetcli
 dotnet add src/App/App.fsproj reference src/Library/Library.fsproj
 ```
 
 다음과 같이 `dotnet sln add` 명령을 사용하여 `FSNetCore`솔루션에 `App` 프로젝트를 추가합니다.
 
-```console
+```dotnetcli
 dotnet sln add src/App/App.fsproj
 ```
 

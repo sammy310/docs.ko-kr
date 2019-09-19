@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f21126361ce69ab14d18e12d2787b2c264116b02
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 86b66d0a88864188d67aab19de67aaa857a06eaa
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921532"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053164"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>방법: 애플리케이션 도메인에 어셈블리 로드
 애플리케이션 도메인에 어셈블리를 로드하는 방법에는 여러 가지가 있습니다. <xref:System.Reflection.Assembly?displayProperty=nameWithType> 클래스의 `static`(Visual Basic에서는 `Shared`) <xref:System.Reflection.Assembly.Load%2A> 메서드를 사용하는 것이 좋습니다. 어셈블리를 로드할 수 있는 다른 방법은 다음과 같습니다.  
   
 - <xref:System.Reflection.Assembly> 클래스의 <xref:System.Reflection.Assembly.LoadFrom%2A> 메서드는 파일 위치가 지정된 경우 어셈블리를 로드합니다. 이 메서드로 어셈블리를 로드하는 경우 다른 로드 컨텍스트가 사용됩니다.  
   
-- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> 및 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 메서드는 리플렉션 전용 컨텍스트에 어셈블리를 로드합니다. 이 컨텍스트에 로드된 어셈블리는 검사할 수만 있고 실행할 수 없으므로 다른 플랫폼을 대상으로 하는 어셈블리를 검사할 수 있습니다. [방법: 리플렉션 전용 컨텍스트에 어셈블리 로드](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)를 참조하세요.  
+- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> 및 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 메서드는 리플렉션 전용 컨텍스트에 어셈블리를 로드합니다. 이 컨텍스트에 로드된 어셈블리는 검사할 수만 있고 실행할 수 없으므로 다른 플랫폼을 대상으로 하는 어셈블리를 검사할 수 있습니다. [방법: 리플렉션 전용 컨텍스트에 어셈블리 로드](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)를 참조하세요.  
   
 > [!NOTE]
 > 리플렉션 전용 컨텍스트는 .NET Framework 버전 2.0의 새로운 기능입니다.  
@@ -39,8 +39,8 @@ ms.locfileid: "69921532"
   
  로드된 어셈블리의 JIT(Just-In-Time) 컴파일된 코드가 애플리케이션 도메인 간에 공유되는 방식을 지정할 수 있습니다. 자세한 내용은 [애플리케이션 도메인 및 어셈블리](application-domains.md#application-domains-and-assemblies)를 참조하세요.  
   
-## <a name="example"></a>예  
- 다음 코드는 "example.exe" 또는 "example.dll"이라는 어셈블리를 로드 현재 애플리케이션 도메인에 로드하고, 어셈블리에서 `Example` 형식을 가져온 다음 해당 형식에 대한 매개 변수가 없는 `MethodA` 메서드를 가져와서 실행합니다. 로드된 어셈블리에서 정보를 가져오는 방법에 대한 자세한 내용은 [형식 동적 로드 및 사용](../../../docs/framework/reflection-and-codedom/dynamically-loading-and-using-types.md)을 참조하세요.  
+## <a name="example"></a>예제  
+ 다음 코드는 "example.exe" 또는 "example.dll"이라는 어셈블리를 로드 현재 애플리케이션 도메인에 로드하고, 어셈블리에서 `Example` 형식을 가져온 다음 해당 형식에 대한 매개 변수가 없는 `MethodA` 메서드를 가져와서 실행합니다. 로드된 어셈블리에서 정보를 가져오는 방법에 대한 자세한 내용은 [형식 동적 로드 및 사용](../reflection-and-codedom/dynamically-loading-and-using-types.md)을 참조하세요.  
   
  [!code-cpp[System.AppDomain.Load#2](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.appdomain.load/cpp/source2.cpp#2)]
  [!code-csharp[System.AppDomain.Load#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.load/cs/source2.cs#2)]
@@ -50,7 +50,7 @@ ms.locfileid: "69921532"
 
 - <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
 - [애플리케이션 도메인으로 프로그래밍](application-domains.md#programming-with-application-domains)
-- [리플렉션](../../../docs/framework/reflection-and-codedom/reflection.md)
-- [애플리케이션 도메인 사용](../../../docs/framework/app-domains/use.md)
-- [방법: 리플렉션 전용 컨텍스트에 어셈블리 로드](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
+- [리플렉션](../reflection-and-codedom/reflection.md)
+- [애플리케이션 도메인 사용](use.md)
+- [방법: 리플렉션 전용 컨텍스트에 어셈블리 로드](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
 - [애플리케이션 도메인 및 어셈블리](application-domains.md#application-domains-and-assemblies)

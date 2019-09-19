@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: ba1fa43e-49f5-47d9-bd7f-3024af16f4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff85f5737babb73d87f4918ca0f4981263f7dadc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 7f42f85adf3e9b0874df6c0360bea25b07facc0d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166753"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053153"
 ---
 # <a name="how-to-create-an-application-domain"></a>방법: 애플리케이션 도메인 만들기
 공용 언어 런타임 호스트는 필요할 때 자동으로 애플리케이션 도메인을 만듭니다. 그러나 사용자 고유의 애플리케이션 도메인을 만들고 개인적으로 관리하려는 어셈블리를 해당 도메인에 로드할 수 있습니다. 코드를 실행할 애플리케이션 도메인을 만들 수도 있습니다.  
@@ -32,4 +32,4 @@ ms.locfileid: "59166753"
 ## <a name="see-also"></a>참고 항목
 
 - [애플리케이션 도메인으로 프로그래밍](application-domains.md#programming-with-application-domains)
-- [애플리케이션 도메인 사용](../../../docs/framework/app-domains/use.md)
+- [애플리케이션 도메인 사용](use.md)

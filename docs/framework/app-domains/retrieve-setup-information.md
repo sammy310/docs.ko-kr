@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5cdb12ae-1e37-4a62-8ec7-93d6dcc6e8d9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80c9fe6de0fca86497ffe84cd8dadf0eb8cef6c5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 719ea15de135d8bbeb7bb88ea3d5b5874e30b5d6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108955"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053098"
 ---
 # <a name="retrieving-setup-information-from-an-application-domain"></a>애플리케이션 도메인에서 설치 정보 검색
 애플리케이션 도메인의 각 인스턴스는 두 속성과 <xref:System.AppDomainSetup> 정보로 구성됩니다. <xref:System.AppDomain?displayProperty=nameWithType> 클래스를 사용하여 애플리케이션 도메인에서 설치 정보를 검색할 수 있습니다. 이 클래스는 애플리케이션 도메인에 대한 구성 정보를 검색하는 여러 멤버를 제공합니다.  
@@ -39,4 +39,4 @@ ms.locfileid: "59108955"
 ## <a name="see-also"></a>참고 항목
 
 - [애플리케이션 도메인으로 프로그래밍](application-domains.md#programming-with-application-domains)
-- [애플리케이션 도메인 사용](../../../docs/framework/app-domains/use.md)
+- [애플리케이션 도메인 사용](use.md)

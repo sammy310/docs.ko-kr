@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bf244271010a7eb47a6c7b283a84c405108d803
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 002434cf51b221a456c8752b5b1388912f875a28
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041460"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045748"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>연습: 부분 신뢰 시나리오에서 코드 내보내기
 
@@ -35,13 +35,13 @@ ms.locfileid: "70041460"
 - [부분적으로 신뢰할 수 있는 코드를 테스트하기 위한 간단한 샌드박스 설정](#Setting_up).
 
   > [!IMPORTANT]
-  > 부분 신뢰에서 코드를 간단하게 실험하는 방법입니다. 실제로 신뢰할 수 없는 위치에서 나오는 코드를 실행하려면 [방법: 샌드박스에서 부분적으로 신뢰할 수 있는 코드 실행](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)을 참조하세요.
+  > 부분 신뢰에서 코드를 간단하게 실험하는 방법입니다. 실제로 신뢰할 수 없는 위치에서 나오는 코드를 실행하려면 [방법: 샌드박스에서 부분적으로 신뢰할 수 있는 코드 실행](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)을 참조하세요.
 
 - [부분적으로 신뢰할 수 있는 애플리케이션 도메인에서 코드 실행](#Running_code).
 
 - [익명으로 호스트된 동적 메서드를 사용하여 부분 신뢰에서 코드 내보내기 및 실행](#Using_methods).
 
-부분 신뢰 시나리오의 코드 내보내기에 대한 자세한 내용은 [리플렉션 내보내기의 보안 문제점](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)을 참조하세요.
+부분 신뢰 시나리오의 코드 내보내기에 대한 자세한 내용은 [리플렉션 내보내기의 보안 문제점](security-issues-in-reflection-emit.md)을 참조하세요.
 
 이러한 절차에 표시된 코드의 전체 목록을 보려면 이 연습의 끝부분에 있는 [예제 섹션](#Example)을 참조하세요.
 
@@ -71,7 +71,7 @@ ms.locfileid: "70041460"
 2. <xref:System.AppDomainSetup> 개체를 만들어 애플리케이션 경로를 통해 애플리케이션 도메인을 초기화합니다.
 
     > [!IMPORTANT]
-    > 간단히 설명하기 위해 이 코드 예제에서는 현재 폴더를 사용합니다. 실제로 인터넷에서 나오는 코드를 실행하려면 [방법: 샌드박스에서 부분적으로 신뢰할 수 있는 코드 실행](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)의 설명대로 신뢰할 수 없는 코드에 별도의 폴더를 사용합니다.
+    > 간단히 설명하기 위해 이 코드 예제에서는 현재 폴더를 사용합니다. 실제로 인터넷에서 나오는 코드를 실행하려면 [방법: 샌드박스에서 부분적으로 신뢰할 수 있는 코드 실행](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)의 설명대로 신뢰할 수 없는 코드에 별도의 폴더를 사용합니다.
 
     [!code-csharp[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#3)]
     [!code-vb[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#3)]
@@ -192,7 +192,7 @@ ms.locfileid: "70041460"
 
 <a name="Example"></a>
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 ### <a name="description"></a>설명
 
@@ -225,5 +225,5 @@ ms.locfileid: "70041460"
 
 ## <a name="see-also"></a>참고 항목
 
-- [리플렉션 내보내기의 보안 문제점](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
-- [방법: 샌드박스에서 부분적으로 신뢰할 수 있는 코드 실행](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [리플렉션 내보내기의 보안 문제점](security-issues-in-reflection-emit.md)
+- [방법: 샌드박스에서 부분적으로 신뢰할 수 있는 코드 실행](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

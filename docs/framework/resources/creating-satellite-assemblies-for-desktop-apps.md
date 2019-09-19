@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29739625d29db6dc7c3876007f1e733b15f5c026
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: 17465b07172788f18a432784653afadda18467fe
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970985"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045693"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>데스크톱 응용 프로그램용 위성 어셈블리 만들기
 
@@ -54,7 +54,7 @@ ms.locfileid: "70970985"
 
 - 위성 어셈블리의 문화권에 대한 정보는 어셈블리의 메타데이터에 포함되어야 합니다. 문화권 이름을 위성 어셈블리의 메타데이터에 저장하려면 [어셈블리 링커](../tools/al-exe-assembly-linker.md)를 사용하여 리소스를 위성 어셈블리에 포함할 때 `/culture` 옵션을 지정합니다.
 
-다음 그림은 [전역 어셈블리 캐시](../../framework/app-domains/gac.md)에 설치하지 않는 애플리케이션에 대한 샘플 디렉터리 구조 및 위치 요구 사항을 보여 줍니다. .txt 및 .resources 확장명을 가진 항목은 최종 애플리케이션과 함께 제공되지 않습니다. 이러한 중간 리소스 파일은 최종 위성 리소스 어셈블리를 만드는 데 사용됩니다. 이 예제에서는 .resx 파일을 .txt 파일로 대체할 수 있습니다. 자세한 내용은 [리소스 패키지 및 배포](packaging-and-deploying-resources-in-desktop-apps.md)를 참조하세요.
+다음 그림은 [전역 어셈블리 캐시](../app-domains/gac.md)에 설치하지 않는 애플리케이션에 대한 샘플 디렉터리 구조 및 위치 요구 사항을 보여 줍니다. .txt 및 .resources 확장명을 가진 항목은 최종 애플리케이션과 함께 제공되지 않습니다. 이러한 중간 리소스 파일은 최종 위성 리소스 어셈블리를 만드는 데 사용됩니다. 이 예제에서는 .resx 파일을 .txt 파일로 대체할 수 있습니다. 자세한 내용은 [리소스 패키지 및 배포](packaging-and-deploying-resources-in-desktop-apps.md)를 참조하세요.
 
 다음 이미지는 위성 어셈블리 디렉터리를 보여 줍니다.
 
@@ -95,8 +95,8 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
 2. 영어(en)가 애플리케이션의 기본 문화권임을 나타내려면 다음 <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> 특성을 애플리케이션의 AssemblyInfo 파일 또는 애플리케이션의 주 어셈블리로 컴파일할 주 소스 코드 파일에 추가합니다.
   
-     [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
-     [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
+    [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
+    [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
   
 3. 추가 문화권(en-US, fr-FR 및 ru-RU)에 대한 지원을 애플리케이션에 다음과 같이 추가할 수 있습니다.  
   
@@ -150,17 +150,19 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
  그런 다음 예제를 실행할 수 있습니다. 지원되는 문화권 중 하나를 현재 문화권으로 임의로 만들고 지역화된 인사말을 표시합니다.
   
 <a name="SN"></a>   
+
 ## <a name="installing-satellite-assemblies-in-the-global-assembly-cache"></a>전역 어셈블리 캐시에 위성 어셈블리 설치  
- 로컬 애플리케이션 하위 디렉터리에 어셈블리를 설치하는 대신, 전역 어셈블리 캐시에 설치할 수 있습니다. 이는 클래스 라이브러리 및 클래스 라이브러리 리소스 어셈블리가 여러 애플리케이션에서 사용되는 경우 특히 유용합니다.
+로컬 애플리케이션 하위 디렉터리에 어셈블리를 설치하는 대신, 전역 어셈블리 캐시에 설치할 수 있습니다. 이는 클래스 라이브러리 및 클래스 라이브러리 리소스 어셈블리가 여러 애플리케이션에서 사용되는 경우 특히 유용합니다.
   
- 전역 어셈블리 캐시에 어셈블리를 설치하려면 강력한 이름이 필요합니다. 강력한 이름의 어셈블리는 유효한 퍼블릭/프라이빗 키 쌍으로 서명됩니다. 바인딩 요청을 만족시키는 데 사용할 어셈블리를 결정하기 위해 런타임에서 사용하는 버전 정보가 포함됩니다. 강력한 이름과 버전 관리에 대한 자세한 내용은 [어셈블리 버전 관리](../../standard/assembly/versioning.md)를 참조하세요. 강력한 이름에 대한 자세한 내용은 [강력한 이름의 어셈블리](../../standard/assembly/strong-named.md)를 참조하세요.
+전역 어셈블리 캐시에 어셈블리를 설치하려면 강력한 이름이 필요합니다. 강력한 이름의 어셈블리는 유효한 퍼블릭/프라이빗 키 쌍으로 서명됩니다. 바인딩 요청을 만족시키는 데 사용할 어셈블리를 결정하기 위해 런타임에서 사용하는 버전 정보가 포함됩니다. 강력한 이름과 버전 관리에 대한 자세한 내용은 [어셈블리 버전 관리](../../standard/assembly/versioning.md)를 참조하세요. 강력한 이름에 대한 자세한 내용은 [강력한 이름의 어셈블리](../../standard/assembly/strong-named.md)를 참조하세요.
   
- 애플리케이션을 개발 중이면 최종 퍼블릭/프라이빗 키 쌍에 액세스할 권한이 없을 수 있습니다. 위성 어셈블리를 전역 어셈블리 캐시에 설치하고 예상대로 작동하는지 확인하려면 지연된 서명이라는 방법을 사용할 수 있습니다. 어셈블리 서명을 연기하면 빌드할 때 강력한 이름 시그니처에 사용할 파일 공간이 예약됩니다. 나중에 최종 퍼블릭/프라이빗 키 쌍을 사용할 수 있을 때까지 실제 서명이 연기됩니다. 지연된 서명에 대한 자세한 내용은 [어셈블리 서명 연기](../../standard/assembly/delay-sign.md)를 참조하세요.
+애플리케이션을 개발 중이면 최종 퍼블릭/프라이빗 키 쌍에 액세스할 권한이 없을 수 있습니다. 위성 어셈블리를 전역 어셈블리 캐시에 설치하고 예상대로 작동하는지 확인하려면 지연된 서명이라는 방법을 사용할 수 있습니다. 어셈블리 서명을 연기하면 빌드할 때 강력한 이름 시그니처에 사용할 파일 공간이 예약됩니다. 나중에 최종 퍼블릭/프라이빗 키 쌍을 사용할 수 있을 때까지 실제 서명이 연기됩니다. 지연된 서명에 대한 자세한 내용은 [어셈블리 서명 연기](../../standard/assembly/delay-sign.md)를 참조하세요.
   
 ### <a name="obtaining-the-public-key"></a>공개 키 가져오기  
- 어셈블리 서명을 연기하려면 공개 키에 대한 액세스 권한이 있어야 합니다. 최종 서명을 수행하는 회사 내 조직으로부터 실제 공개 키를 얻거나 [강력한 이름 도구(Sn.exe)](../tools/sn-exe-strong-name-tool.md)를 사용하여 공개 키를 만들 수 있습니다.
+
+어셈블리 서명을 연기하려면 공개 키에 대한 액세스 권한이 있어야 합니다. 최종 서명을 수행하는 회사 내 조직으로부터 실제 공개 키를 얻거나 [강력한 이름 도구(Sn.exe)](../tools/sn-exe-strong-name-tool.md)를 사용하여 공개 키를 만들 수 있습니다.
   
- 다음 Sn.exe 명령으로 테스트 퍼블릭/프라이빗 키 쌍을 만듭니다. **–k** 옵션은 Sn.exe가 새 키 쌍을 만들고 TestKeyPair.snk라는 파일에 저장하도록 지정합니다.
+다음 Sn.exe 명령으로 테스트 퍼블릭/프라이빗 키 쌍을 만듭니다. **–k** 옵션은 Sn.exe가 새 키 쌍을 만들고 TestKeyPair.snk라는 파일에 저장하도록 지정합니다.
   
 ```console
 sn –k TestKeyPair.snk
@@ -196,7 +198,7 @@ sn –R StringLibrary.resources.dll RealKeyPair.snk
 
 ### <a name="installing-a-satellite-assembly-in-the-global-assembly-cache"></a>전역 어셈블리 캐시에 위성 어셈블리 설치
 
-런타임이 리소스 대체 프로세스에서 리소스를 검색할 때, 가장 먼저 [전역 어셈블리 캐시](../../framework/app-domains/gac.md)에서 찾습니다. 자세한 내용은 [리소스 패키지 및 배포](packaging-and-deploying-resources-in-desktop-apps.md) 항목의 “리소스 대체 프로세스” 섹션을 참조하세요. 위성 어셈블리를 강력한 이름으로 서명하는 즉시 [전역 어셈블리 캐시 도구(Gacutil.exe)](../tools/gacutil-exe-gac-tool.md)를 사용하여 전역 어셈블리 캐시에 설치할 수 있습니다.
+런타임이 리소스 대체 프로세스에서 리소스를 검색할 때, 가장 먼저 [전역 어셈블리 캐시](../app-domains/gac.md)에서 찾습니다. 자세한 내용은 [리소스 패키지 및 배포](packaging-and-deploying-resources-in-desktop-apps.md) 항목의 “리소스 대체 프로세스” 섹션을 참조하세요. 위성 어셈블리를 강력한 이름으로 서명하는 즉시 [전역 어셈블리 캐시 도구(Gacutil.exe)](../tools/gacutil-exe-gac-tool.md)를 사용하여 전역 어셈블리 캐시에 설치할 수 있습니다.
 
 다음 Gacutil.exe 명령은 StringLibrary.resources.dll을 전역 어셈블리 캐시에 설치합니다.
 

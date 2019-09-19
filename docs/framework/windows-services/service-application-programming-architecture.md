@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: d5dc690cfe460be79251d60850319e5232379f3c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 1c197b487f1cb7596f507f663fe3f1fb83857cbd
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935436"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053495"
 ---
 # <a name="service-application-programming-architecture"></a>서비스 애플리케이션 프로그래밍 아키텍처
 Windows 서비스 애플리케이션은 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 클래스에서 상속되는 클래스를 기반으로 합니다. 이 클래스의 메서드를 재정의하고 이 메서드에서 서비스 동작 방식을 결정하는 기능을 정의합니다.  
@@ -57,7 +57,7 @@ Windows 서비스 애플리케이션은 <xref:System.ServiceProcess.ServiceBase?
      [!code-vb[VbRadconService#6](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#6)]  
   
     > [!NOTE]
-    > 이러한 예제에서는 <xref:System.ServiceProcess.ServiceBase> 형식의 배열을 사용합니다. 이 배열에 애플리케이션에 포함되는 각 서비스를 추가한 다음, 모든 서비스를 함께 실행할 수 있습니다. 하지만 단일 서비스만 만드는 경우에는 배열을 사용하지 않고 <xref:System.ServiceProcess.ServiceBase>에서 상속되는 새 개체를 선언하고 실행하기만 하면 됩니다. 예는 [방법: 프로그래밍 방식으로 서비스 작성](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)을 참조하세요.  
+    > 이러한 예제에서는 <xref:System.ServiceProcess.ServiceBase> 형식의 배열을 사용합니다. 이 배열에 애플리케이션에 포함되는 각 서비스를 추가한 다음, 모든 서비스를 함께 실행할 수 있습니다. 하지만 단일 서비스만 만드는 경우에는 배열을 사용하지 않고 <xref:System.ServiceProcess.ServiceBase>에서 상속되는 새 개체를 선언하고 실행하기만 하면 됩니다. 예는 [방법: 프로그래밍 방식으로 서비스 작성](how-to-write-services-programmatically.md)을 참조하세요.  
   
 - <xref:System.ServiceProcess.ServiceBase> 클래스에 대한 일련의 속성. 이러한 속성은 서비스에서 호출할 수 있는 메서드를 결정합니다. 예를 들어 <xref:System.ServiceProcess.ServiceBase.CanStop%2A> 속성을 `true`로 설정하면 서비스의 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 메서드를 호출할 수 있습니다. <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> 속성을 `true`로 설정하면 <xref:System.ServiceProcess.ServiceBase.OnPause%2A> 및 <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> 메서드를 호출할 수 있습니다. 이러한 속성 중 하나를 `true`로 설정하는 경우 관련 메서드에 대한 처리를 재정의 및 정의해야 합니다.  
   
@@ -68,5 +68,5 @@ Windows 서비스 애플리케이션은 <xref:System.ServiceProcess.ServiceBase?
   
 ## <a name="see-also"></a>참고 항목
 
-- [Windows 서비스 애플리케이션 소개](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [방법: Windows 서비스 만들기](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Windows 서비스 애플리케이션 소개](introduction-to-windows-service-applications.md)
+- [방법: Windows 서비스 만들기](how-to-create-windows-services.md)

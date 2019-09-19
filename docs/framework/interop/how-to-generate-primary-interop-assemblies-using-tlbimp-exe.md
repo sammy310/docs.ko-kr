@@ -8,20 +8,20 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4fff2d3309e5f8872a9333bf3d2f86e52bd67ea5
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: ac60fa96b7c9ce6991f89e8c6a37ff5da4a34a50
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971786"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051774"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>방법: Tlbimp.exe를 사용하여 주 Interop 어셈블리 생성
 
 주 interop 어셈블리를 생성하는 다음 두 가지 방법이 있습니다.
 
-- Windows SDK에서 제공하는 [형식 라이브러리 가져오기(Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 사용.
+- Windows SDK에서 제공하는 [형식 라이브러리 가져오기(Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) 사용.
 
-  주 interop 어셈블리를 생성하는 가장 간단한 방법은 [Tlbimp.exe(형식 라이브러리 가져오기)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)를 사용하는 것입니다. Tlbimp.exe는 다음과 같은 보호 기능을 제공합니다.
+  주 interop 어셈블리를 생성하는 가장 간단한 방법은 [Tlbimp.exe(형식 라이브러리 가져오기)](../tools/tlbimp-exe-type-library-importer.md)를 사용하는 것입니다. Tlbimp.exe는 다음과 같은 보호 기능을 제공합니다.
 
   - 중첩된 형식 라이브러리 참조에 대한 새 interop 어셈블리를 만들기 전에 등록된 다른 주 interop 어셈블리를 확인합니다.
 
@@ -49,7 +49,7 @@ ms.locfileid: "70971786"
 
 여러 버전의 형식 라이브러리를 래핑할 수도 있습니다. 자세한 내용은 [방법: 여러 버전의 형식 라이브러리 래핑](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/1565h6hc(v=vs.100))을 참조하세요.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 COM 형식 라이브러리 `LibUtil.tlb`를 가져오고 키 파일 `CompanyA.snk`를 사용하여 강력한 이름으로 `LibUtil.dll` 어셈블리에 서명합니다. 이 예제에서는 특정 네임스페이스 이름을 생략하여 기본 네임스페이스 `LibUtil`을 생성합니다.
 
@@ -71,4 +71,4 @@ tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /refer
 
 ## <a name="see-also"></a>참고 항목
 
-- [방법: 주 Interop 어셈블리 등록](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)
+- [방법: 주 Interop 어셈블리 등록](how-to-register-primary-interop-assemblies.md)
