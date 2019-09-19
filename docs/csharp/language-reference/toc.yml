@@ -63,7 +63,7 @@
           items:
             - name: 빠른 참조
               href: keywords/access-modifiers.md
-            - name: 내게 필요한 옵션 수준
+            - name: 액세스 가능성 수준
               href: keywords/accessibility-levels.md
             - name: 내게 필요한 옵션 도메인
               href: keywords/accessibility-domain.md
@@ -116,7 +116,7 @@
       items:
         - name: 명령문 범주
           href: keywords/statement-keywords.md
-        - name: 선택 영역 문
+        - name: 선택문
           items:
             - name: if-else
               href: keywords/if-else.md
@@ -224,9 +224,9 @@
           href: keywords/contextual-keywords.md
         - name: add
           href: keywords/add.md
-        - name: get
+        - name: Get
           href: keywords/get.md
-        - name: partial(형식)
+        - name: 부분(형식)
           href: keywords/partial-type.md
         - name: partial(메서드)
           href: keywords/partial-method.md
@@ -293,7 +293,7 @@
       displayName: '>, <, >=, <=, greater, less'
     - name: 멤버 액세스 연산자
       href: operators/member-access-operators.md
-      displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation'
+      displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation, ^, index from end, hat, .., range'
     - name: 형식 테스트 및 캐스트 연산자
       href: operators/type-testing-and-cast.md
       displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), conversion'
