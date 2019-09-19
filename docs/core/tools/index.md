@@ -3,12 +3,12 @@ title: .NET Core CLI(명령줄 인터페이스) 도구
 description: .NET Core CLI(명령줄 인터페이스) 도구 및 기능에 대한 개요입니다.
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: 50d1bbdd87ecd275b97603a1b47c6f13f879365a
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 4ff5cfd6c5a70c92387911ab87ddea5cee80275e
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969889"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117394"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core CLI(명령줄 인터페이스) 도구
 
@@ -105,7 +105,7 @@ CLI 명령 구조는 [드라이버("dotnet")](#driver), [명령](#command), 경�
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-```console
+```dotnetcli
 dotnet new console
 dotnet build --output /build_output
 dotnet /build_output/my_app.dll
@@ -113,7 +113,7 @@ dotnet /build_output/my_app.dll
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-```console
+```dotnetcli
 dotnet new console
 dotnet restore
 dotnet build --output /build_output
@@ -130,8 +130,8 @@ dotnet /build_output/my_app.dll
 
 드라이버에 명령을 제공하면 `dotnet.exe`가 CLI 명령 실행 프로세스를 시작합니다. 예:
 
-```bash
-> dotnet build
+```dotnetcli
+dotnet build
 ```
 
 먼저 드라이버는 사용할 SDK 버전을 확인합니다. ['global.json'](global-json.md)이 없는 경우 사용 가능한 최신 버전의 SDK가 사용됩니다. 이는 머신의 최신 버전에 따라 미리 보기 또는 안정적인 버전일 수 있습니다.  SDK 버전이 확인되면 명령을 실행합니다.
