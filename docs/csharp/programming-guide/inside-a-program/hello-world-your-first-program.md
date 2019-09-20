@@ -1,7 +1,7 @@
 ---
-title: Hello World -- 프로그램 처음 만들기 - C# 프로그래밍 가이드
+title: Hello World -- Windows 또는 Mac에서 Visual Studio를 사용하여 프로그램 처음 만들기 - C# 프로그래밍 가이드
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 09/12/2019
 f1_keywords:
 - cs.program
 - vs.csharp.startpage.firstapplication
@@ -9,135 +9,123 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 9a50de0bb583a1dfccfa609be1cca732868505ba
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0807e46d36a4cf031bc44ae0dc4efab79dd51d03
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589379"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991336"
 ---
-# <a name="hello-world----your-first-program-c-programming-guide"></a><span data-ttu-id="f6043-102">Hello World -- 프로그램 처음 만들기(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="f6043-102">Hello World -- Your first program (C# Programming Guide)</span></span>
+# <a name="hello-world----your-first-program"></a><span data-ttu-id="dbe9b-102">Hello World -- 프로그램 처음 만들기</span><span class="sxs-lookup"><span data-stu-id="dbe9b-102">Hello World -- Your first program</span></span>
 
-<span data-ttu-id="f6043-103">다음 절차에서는 기존 "Hello World!" 프로그램의 C# 버전을</span><span class="sxs-lookup"><span data-stu-id="f6043-103">The following procedure creates a C# version of the traditional "Hello World!"</span></span> <span data-ttu-id="f6043-104">만듭니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-104">program.</span></span> <span data-ttu-id="f6043-105">이 프로그램은 문자열 `Hello World!`를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-105">The program displays the string `Hello World!`</span></span>
-
-<span data-ttu-id="f6043-106">소개 개념에 대한 추가 예제는 [Visual C# 및 Visual Basic 시작](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="f6043-106">For more examples of introductory concepts, see [Getting Started with Visual C# and Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic).</span></span>
+<span data-ttu-id="dbe9b-103">이 문서에서는 Visual Studio를 사용하여 전통적인 "Hello World!" 프로그램을</span><span class="sxs-lookup"><span data-stu-id="dbe9b-103">In this article, you'll use Visual Studio to create the traditional "Hello World!"</span></span> <span data-ttu-id="dbe9b-104">만듭니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-104">program.</span></span> <span data-ttu-id="dbe9b-105">Visual Studio는 .NET 개발용으로 설계된 다양한 기능을 갖춘 전문적인 IDE(통합 개발 환경)입니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-105">Visual Studio is a professional Integrated Development Environment (IDE) with many features designed for .NET development.</span></span> <span data-ttu-id="dbe9b-106">이 프로그램은 Visual Studio의 일부 기능만 사용하여 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-106">You'll use only a few of the features in Visual Studio to create this program.</span></span> <span data-ttu-id="dbe9b-107">Visual Studio에 대해 자세히 알아보려면 [Visual C# 및 Visual Basic 시작](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-107">To learn more about Visual Studio, see [Getting Started with Visual C# and Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic).</span></span>
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-## <a name="to-create-and-run-a-console-application"></a><span data-ttu-id="f6043-107">콘솔 애플리케이션을 만들고 실행하려면</span><span class="sxs-lookup"><span data-stu-id="f6043-107">To create and run a console application</span></span>
+## <a name="create-a-new-application"></a><span data-ttu-id="dbe9b-108">새 애플리케이션 만들기</span><span class="sxs-lookup"><span data-stu-id="dbe9b-108">Create a new application</span></span>
 
-1. <span data-ttu-id="f6043-108">Visual Studio를 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-108">Start Visual Studio.</span></span>
+<!-- markdownlint-disable MD025 -->
 
-2. <span data-ttu-id="f6043-109">메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-109">On the menu bar, choose **File**, **New**, **Project**.</span></span>
+# <a name="windowstabwindows"></a>[<span data-ttu-id="dbe9b-109">Windows</span><span class="sxs-lookup"><span data-stu-id="dbe9b-109">Windows</span></span>](#tab/windows)
 
-     <span data-ttu-id="f6043-110">**새 프로젝트** 대화 상자가 열립니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-110">The **New Project** dialog box opens.</span></span>
+<span data-ttu-id="dbe9b-110">Visual Studio를 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-110">Start Visual Studio.</span></span> <span data-ttu-id="dbe9b-111">Windows에 다음 이미지와 같이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-111">You'll see the following image on Windows:</span></span>
 
-3. <span data-ttu-id="f6043-111">**설치됨**, **템플릿**, **Visual C#** 을 차례로 확장하고 **콘솔 애플리케이션**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-111">Expand **Installed**, expand **Templates**, expand **Visual C#**, and then choose **Console Application**.</span></span>
+![Windows의 Visual Studio 시작 화면](./media/hello-world-your-first-program/visual-studio-windows-start-screen.png)
 
-4. <span data-ttu-id="f6043-112">**이름** 상자에 프로젝트의 이름을 지정하고 **확인** 단추를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-112">In the **Name** box, specify a name for your project, and then choose the **OK** button.</span></span>
+<span data-ttu-id="dbe9b-113">이미지 오른쪽 아래 모서리에서 **새 프로젝트 만들기**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-113">Select **Create a new project** in the lower right corner of the image.</span></span> <span data-ttu-id="dbe9b-114">Visual Studio에 **새 프로젝트** 대화 상자가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-114">Visual Studio displays the **New Project** dialog:</span></span>
 
-     <span data-ttu-id="f6043-113">**솔루션 탐색기**에 새 프로젝트가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-113">The new project appears in **Solution Explorer**.</span></span>
+![Windows의 Visual Studio 새 프로젝트 화면](./media/hello-world-your-first-program/visual-studio-windows-new-project.png)
 
-5. <span data-ttu-id="f6043-114">Program.cs가 **코드 편집기**에 열려 있지 않으면 **솔루션 탐색기**에서 **Program.cs**의 바로 가기 메뉴를 열고 **코드 보기**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-114">If Program.cs isn't open in the **Code Editor**, open the shortcut menu for **Program.cs** in **Solution Explorer**, and then choose **View Code**.</span></span>
+> [!NOTE]
+> <span data-ttu-id="dbe9b-116">Visual Studio를 처음 시작하는 경우 **최근 프로젝트 템플릿** 목록이 비어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-116">If this is the first time you've started Visual Studio, the **Recent project templates** list is empty.</span></span>
 
-6. <span data-ttu-id="f6043-115">Program.cs의 내용을 다음 코드로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-115">Replace the contents of Program.cs with the following code.</span></span>
+<span data-ttu-id="dbe9b-117">새 프로젝트 대화 상자에서 "콘솔 앱(.NET Core)"을 선택한 후 **다음**을 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-117">On the new project dialog, choose "Console App (.NET Core)" and then press **Next**.</span></span> <span data-ttu-id="dbe9b-118">프로젝트에 "HelloWorld"와 같은 이름을 지정한 다음 **만들기**를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-118">Give your project a name, such as "HelloWorld", then press **Create**.</span></span>
 
-     [!code-csharp[csProgGuide#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#21)]
+<span data-ttu-id="dbe9b-119">Visual Studio에서 프로젝트가 열립니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-119">Visual Studio opens your project.</span></span> <span data-ttu-id="dbe9b-120">이미 기본적인 "Hello World!"</span><span class="sxs-lookup"><span data-stu-id="dbe9b-120">It's already a basic "Hello World!"</span></span> <span data-ttu-id="dbe9b-121">예가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-121">example.</span></span> <span data-ttu-id="dbe9b-122">`Ctrl` + `F5`를 눌러 프로젝트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-122">Press `Ctrl` + `F5` to run your project.</span></span> <span data-ttu-id="dbe9b-123">Visual Studio가 프로젝트를 빌드하고 소스 코드를 실행 파일로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-123">Visual Studio builds your project, converting the source code into an executable.</span></span> <span data-ttu-id="dbe9b-124">그런 다음 새 애플리케이션을 실행하는 명령 창이 시작됩니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-124">Then, it launches a command window that runs your new application.</span></span> <span data-ttu-id="dbe9b-125">창에 다음 텍스트가 표시되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-125">You should see the following text in the window:</span></span>
 
-7. <span data-ttu-id="f6043-116">F5 키를 선택하여 프로젝트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-116">Choose the F5 key to run the project.</span></span> <span data-ttu-id="f6043-117">`Hello World!` 줄이 포함된 명령 프롬프트 창이 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-117">A Command Prompt window appears that contains the line `Hello World!`</span></span>
+```console
+Hello World!
 
-<span data-ttu-id="f6043-118">다음으로 이 프로그램의 중요 경로가 검사됩니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-118">Next, the important parts of this program are examined.</span></span>
+C:\Program Files\dotnet\dotnet.exe (process 11964) exited with code 0.
+Press any key to close this window . . .
+```
 
-## <a name="comments"></a><span data-ttu-id="f6043-119">설명</span><span class="sxs-lookup"><span data-stu-id="f6043-119">Comments</span></span>
+<span data-ttu-id="dbe9b-126">아무 키나 눌러 창을 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-126">Press a key to close the window.</span></span>
 
-<span data-ttu-id="f6043-120">첫 번째 줄에는 설명이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-120">The first line contains a comment.</span></span> <span data-ttu-id="f6043-121">`//` 문자는 줄의 나머지 부분을 설명으로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-121">The characters `//` convert the rest of the line to a comment.</span></span>
+# <a name="macostabmacos"></a>[<span data-ttu-id="dbe9b-127">macOS</span><span class="sxs-lookup"><span data-stu-id="dbe9b-127">macOS</span></span>](#tab/macos)
 
- [!code-csharp[csProgGuide#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#32)]
+<span data-ttu-id="dbe9b-128">Mac용 Visual Studio를 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-128">Start Visual Studio for Mac.</span></span> <span data-ttu-id="dbe9b-129">Mac에 다음 이미지와 같이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-129">You'll see the following image on Mac:</span></span>
 
-<span data-ttu-id="f6043-122">텍스트 블록을 `/*` 및 `*/` 문자 사이에 포함하여 주석으로 처리할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-122">You can also comment out a block of text by enclosing it between the `/*` and `*/` characters.</span></span> <span data-ttu-id="f6043-123">다음 예제에서 이를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-123">This is shown in the following example.</span></span>
+![Mac의 Visual Studio 시작 화면](./media/hello-world-your-first-program/visual-studio-mac-start-screen.png)
 
- [!code-csharp[csProgGuide#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#33)]
+> [!NOTE]
+> <span data-ttu-id="dbe9b-131">Mac용 Visual Studio를 처음 시작하는 경우 **최근 프로젝트** 목록이 비어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-131">If this is the first time you've started Visual Studio for Mac, the **Recent projects** list is empty.</span></span>
 
-## <a name="main-method"></a><span data-ttu-id="f6043-124">Main 메서드</span><span class="sxs-lookup"><span data-stu-id="f6043-124">Main method</span></span>
+<span data-ttu-id="dbe9b-132">이미지의 오른쪽 위 모서리에서 **새로 만들기**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-132">Select **New** in the upper right corner of the image.</span></span> <span data-ttu-id="dbe9b-133">Mac용 Visual Studio에 **새 프로젝트** 대화 상자가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-133">Visual Studio for Mac displays the **New Project** dialog:</span></span>
 
-<span data-ttu-id="f6043-125">C# 콘솔 애플리케이션에는 시작 및 끝을 제어하는 `Main` 메서드가 포함되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-125">A C# console application must contain a `Main` method, in which control starts and ends.</span></span> <span data-ttu-id="f6043-126">`Main` 메서드에서 개체를 만들고 다른 메서드를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-126">The `Main` method is where you create objects and execute other methods.</span></span>
+![Mac의 Visual Studio 새 프로젝트 화면](./media/hello-world-your-first-program/visual-studio-mac-new-project.png)
 
-<span data-ttu-id="f6043-127">`Main` 메서드는 클래스나 구조체 내부에 있는 [정적](../../language-reference/keywords/static.md) 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-127">The `Main` method is a [static](../../language-reference/keywords/static.md) method that resides inside a class or a struct.</span></span> <span data-ttu-id="f6043-128">이전 "Hello World!"</span><span class="sxs-lookup"><span data-stu-id="f6043-128">In the previous "Hello World!"</span></span> <span data-ttu-id="f6043-129">예제에서 이 메서드는 `Hello` 클래스에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-129">example, it resides in a class named `Hello`.</span></span> <span data-ttu-id="f6043-130">다음 방법 중 하나로 `Main` 메서드를 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-130">You can declare the `Main` method in one of the following ways:</span></span>
+<span data-ttu-id="dbe9b-135">새 프로젝트 대화 상자에서 ".NET Core"와 “콘솔 앱”을 선택한 후 **다음**을 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-135">On the new project dialog, choose ".NET Core", and "Console App" and then press **Next**.</span></span> <span data-ttu-id="dbe9b-136">대상 프레임워크를 선택해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-136">You'll need to select the target framework.</span></span> <span data-ttu-id="dbe9b-137">기본값을 사용해도 되므로 다음을 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-137">The default is fine, so press next.</span></span> <span data-ttu-id="dbe9b-138">프로젝트에 "HelloWorld"와 같은 이름을 지정한 다음 **만들기**를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-138">Give your project a name, such as "HelloWorld", then press **Create**.</span></span> <span data-ttu-id="dbe9b-139">기본 프로젝트 위치를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-139">You can use the default project location.</span></span> <span data-ttu-id="dbe9b-140">소스 제어에 이 프로젝트를 추가하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-140">Don't add this project to source control.</span></span>
 
-- <span data-ttu-id="f6043-131">이 메서드는 `void`를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-131">It can return `void`.</span></span>
+<span data-ttu-id="dbe9b-141">Mac용 Visual Studio에서 프로젝트가 열립니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-141">Visual Studio for Mac opens your project.</span></span> <span data-ttu-id="dbe9b-142">이미 기본적인 "Hello World!"</span><span class="sxs-lookup"><span data-stu-id="dbe9b-142">It's already a basic "Hello World!"</span></span> <span data-ttu-id="dbe9b-143">예가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-143">example.</span></span> <span data-ttu-id="dbe9b-144">`Ctrl` + `Fn` + `F5`를 눌러 프로젝트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-144">Press `Ctrl` + `Fn` + `F5` to run your project.</span></span> <span data-ttu-id="dbe9b-145">Mac용 Visual Studio가 프로젝트를 빌드하고 소스 코드를 실행 파일로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-145">Visual Studio for Mac builds your project, converting the source code into an executable.</span></span> <span data-ttu-id="dbe9b-146">그런 다음 새 애플리케이션을 실행하는 명령 창이 시작됩니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-146">Then, it launches a command window that runs your new application.</span></span> <span data-ttu-id="dbe9b-147">창에 다음 텍스트가 표시되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-147">You should see the following text in the window:</span></span>
 
-     [!code-csharp[csProgGuideMain#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#12)]
+```console
+Hello World!
 
-- <span data-ttu-id="f6043-132">정수를 반환할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-132">It can also return an integer.</span></span>
+Press any key to close this window . . .
+```
 
-     [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
+<span data-ttu-id="dbe9b-148">세션을 종료하려면 아무 키나 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-148">Press a key to end the session.</span></span>
 
-- <span data-ttu-id="f6043-133">반환 형식은 각각 인수를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-133">With either of the return types, it can take arguments.</span></span>
+---
 
-     [!code-csharp[csProgGuideMain#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#19)]
+## <a name="elements-of-a-c-program"></a><span data-ttu-id="dbe9b-149">C# 프로그램의 요소</span><span class="sxs-lookup"><span data-stu-id="dbe9b-149">Elements of a C# program</span></span>
 
-     <span data-ttu-id="f6043-134">또는</span><span class="sxs-lookup"><span data-stu-id="f6043-134">-or-</span></span>
+<span data-ttu-id="dbe9b-150">이 프로그램의 중요한 부분을 살펴보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-150">Let's examine the important parts of this program.</span></span> <span data-ttu-id="dbe9b-151">첫 번째 줄에는 설명이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-151">The first line contains a comment.</span></span> <span data-ttu-id="dbe9b-152">`//` 문자는 줄의 나머지 부분을 설명으로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-152">The characters `//` convert the rest of the line to a comment.</span></span>
 
-     [!code-csharp[csProgGuideMain#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#18)]
+[!code-csharp[csProgGuide#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#32)]
 
-<span data-ttu-id="f6043-135">`Main` 메서드의 매개 변수 `args`는 프로그램을 호출하는 데 사용된 명령줄 인수가 포함된 `string` 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-135">The parameter of the `Main` method, `args`, is a `string` array that contains the command-line arguments used to invoke the program.</span></span> <span data-ttu-id="f6043-136">C++의 경우와는 달리 배열에 실행(exe) 파일의 이름이 포함되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-136">Unlike in C++, the array does not include the name of the executable (exe) file.</span></span>
+<span data-ttu-id="dbe9b-153">텍스트 블록을 `/*` 및 `*/` 문자 사이에 포함하여 주석으로 처리할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-153">You can also comment out a block of text by enclosing it between the `/*` and `*/` characters.</span></span> <span data-ttu-id="dbe9b-154">다음 예제에서 이를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-154">This is shown in the following example.</span></span>
 
-<span data-ttu-id="f6043-137">명령줄 인수를 사용하는 방법에 대한 자세한 내용은 [Main() 및 명령줄 인수](../main-and-command-args/index.md) 및 [방법: 명령줄을 사용하여 어셈블리 만들기 및 사용](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="f6043-137">For more information about how to use command-line arguments, see the examples in [Main() and Command-Line Arguments](../main-and-command-args/index.md) and [How to: Create and Use Assemblies Using the Command Line](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).</span></span>
+[!code-csharp[csProgGuide#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#33)]
 
-<span data-ttu-id="f6043-138">`Main` 메서드가 끝날 때 <xref:System.Console.ReadKey%2A>를 호출하면 프로그램을 디버그 모드에서 실행할 경우 F5 키를 눌러 출력을 읽을 수 있게 될 때까지 콘솔 창이 닫히지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-138">The call to <xref:System.Console.ReadKey%2A> at the end of the `Main` method prevents the console window from closing before you have a chance to read the output when you run your program in debug mode, by pressing F5.</span></span>
+<span data-ttu-id="dbe9b-155">C# 콘솔 애플리케이션에는 시작 및 끝을 제어하는 `Main` 메서드가 포함되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-155">A C# console application must contain a `Main` method, in which control starts and ends.</span></span> <span data-ttu-id="dbe9b-156">`Main` 메서드에서 개체를 만들고 다른 메서드를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-156">The `Main` method is where you create objects and execute other methods.</span></span>
 
-## <a name="input-and-output"></a><span data-ttu-id="f6043-139">입력 및 출력</span><span class="sxs-lookup"><span data-stu-id="f6043-139">Input and output</span></span>
+<span data-ttu-id="dbe9b-157">`Main` 메서드는 클래스나 구조체 내부에 있는 [정적](../../language-reference/keywords/static.md) 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-157">The `Main` method is a [static](../../language-reference/keywords/static.md) method that resides inside a class or a struct.</span></span> <span data-ttu-id="dbe9b-158">이전 "Hello World!"</span><span class="sxs-lookup"><span data-stu-id="dbe9b-158">In the previous "Hello World!"</span></span> <span data-ttu-id="dbe9b-159">예제에서 이 메서드는 `Hello` 클래스에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-159">example, it resides in a class named `Hello`.</span></span> <span data-ttu-id="dbe9b-160">다음 방법 중 하나로 `Main` 메서드를 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-160">You can declare the `Main` method in one of the following ways:</span></span>
 
-<span data-ttu-id="f6043-140">일반적으로 C# 프로그램에서는 .NET Framework의 런타임 라이브러리에서 제공되는 입출력 서비스를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-140">C# programs generally use the input/output services provided by the run-time library of the .NET Framework.</span></span> <span data-ttu-id="f6043-141">`System.Console.WriteLine("Hello World!");` 문은 <xref:System.Console.WriteLine%2A> 메서드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-141">The statement `System.Console.WriteLine("Hello World!");` uses the <xref:System.Console.WriteLine%2A> method.</span></span> <span data-ttu-id="f6043-142">이 메서드는 런타임 라이브러리에 있는 <xref:System.Console> 클래스의 출력 메서드 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-142">This is one of the output methods of the <xref:System.Console> class in the run-time library.</span></span> <span data-ttu-id="f6043-143">이 메서드는 표준 출력 스트림에 문자열 매개 변수를 표시하고 이어서 새 줄을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-143">It displays its string parameter on the standard output stream followed by a new line.</span></span> <span data-ttu-id="f6043-144">기타 <xref:System.Console> 메서드는 다양한 입력 및 출력 작업에 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-144">Other <xref:System.Console> methods are available for different input and output operations.</span></span> <span data-ttu-id="f6043-145">프로그램 시작 부분에 `using System;` 지시문을 포함하면 <xref:System> 클래스 및 메서드를 정규화하지 않고 바로 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-145">If you include the `using System;` directive at the beginning of the program, you can directly use the <xref:System> classes and methods without fully qualifying them.</span></span> <span data-ttu-id="f6043-146">예를 들어 `System.Console.WriteLine` 대신 `Console.WriteLine`을 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-146">For example, you can call `Console.WriteLine` instead of `System.Console.WriteLine`:</span></span>
+- <span data-ttu-id="dbe9b-161">이 메서드는 `void`를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-161">It can return `void`.</span></span> <span data-ttu-id="dbe9b-162">즉, 프로그램에서 값을 반환하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-162">That means your program doesn't return a value.</span></span>
 
- [!code-csharp[csProgGuide#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/using.cs#1)]
+[!code-csharp[csProgGuideMain#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#12)]
 
- [!code-csharp[csProgGuide#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#23)]
+- <span data-ttu-id="dbe9b-163">정수를 반환할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-163">It can also return an integer.</span></span> <span data-ttu-id="dbe9b-164">이 정수는 애플리케이션의 **종료 코드**입니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-164">The integer is the **exit code** for your application.</span></span>
 
-<span data-ttu-id="f6043-147">입출력 메서드에 대한 자세한 내용은 <xref:System.IO>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="f6043-147">For more information about input/output methods, see <xref:System.IO>.</span></span>
+[!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
 
-## <a name="command-line-compilation-and-execution"></a><span data-ttu-id="f6043-148">명령줄 컴파일 및 실행</span><span class="sxs-lookup"><span data-stu-id="f6043-148">Command-line compilation and execution</span></span>
+- <span data-ttu-id="dbe9b-165">반환 형식은 각각 인수를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-165">With either of the return types, it can take arguments.</span></span>
 
-<span data-ttu-id="f6043-149">"Hello World!"</span><span class="sxs-lookup"><span data-stu-id="f6043-149">You can compile the "Hello World!"</span></span> <span data-ttu-id="f6043-150">프로그램을 컴파일하려면 Visual Studio IDE(통합 개발 환경) 대신 명령줄을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-150">program by using the command line instead of the Visual Studio Integrated Development Environment (IDE).</span></span>
+[!code-csharp[csProgGuideMain#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#19)]
 
-### <a name="to-compile-and-run-from-a-command-prompt"></a><span data-ttu-id="f6043-151">명령 프롬프트에서 컴파일 및 실행하려면</span><span class="sxs-lookup"><span data-stu-id="f6043-151">To compile and run from a command prompt</span></span>
+<span data-ttu-id="dbe9b-166">또는</span><span class="sxs-lookup"><span data-stu-id="dbe9b-166">-or-</span></span>
 
-1. <span data-ttu-id="f6043-152">이전 절차의 코드를 텍스트 편집기에 붙여넣고 파일을 텍스트 파일로 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-152">Paste the code from the preceding procedure into any text editor, and then save the file as a text file.</span></span> <span data-ttu-id="f6043-153">파일 이름을 `Hello.cs`로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-153">Name the file `Hello.cs`.</span></span> <span data-ttu-id="f6043-154">C# 소스 코드 파일에는 `.cs` 확장명이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-154">C# source code files use the extension `.cs`.</span></span>
+[!code-csharp[csProgGuideMain#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#18)]
 
-2. <span data-ttu-id="f6043-155">다음 단계 중 하나를 수행하여 명령 프롬프트 창을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-155">Perform one of the following steps to open a command-prompt window:</span></span>
+<span data-ttu-id="dbe9b-167">`Main` 메서드의 매개 변수 `args`는 프로그램을 호출하는 데 사용된 명령줄 인수가 포함된 `string` 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-167">The parameter of the `Main` method, `args`, is a `string` array that contains the command-line arguments used to invoke the program.</span></span>
 
-    - <span data-ttu-id="f6043-156">Windows 10의 경우 **시작** 메뉴에서 `Developer Command Prompt`를 검색하고 **VS 2017용 개발자 명령 프롬프트**를 탭하거나 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-156">In Windows 10, on the **Start** menu, search for `Developer Command Prompt`, and then tap or choose **Developer Command Prompt for VS 2017**.</span></span>
+<span data-ttu-id="dbe9b-168">명령줄 인수를 사용하는 방법에 대한 자세한 내용은 [Main() 및 명령줄 인수](../main-and-command-args/index.md)의 예를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-168">For more information about how to use command-line arguments, see the examples in [Main() and Command-Line Arguments](../main-and-command-args/index.md).</span></span>
 
-         <span data-ttu-id="f6043-157">개발자 명령 프롬프트 창이 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-157">A Developer Command Prompt window appears.</span></span>
+## <a name="input-and-output"></a><span data-ttu-id="dbe9b-169">입력 및 출력</span><span class="sxs-lookup"><span data-stu-id="dbe9b-169">Input and output</span></span>
 
-    - <span data-ttu-id="f6043-158">Windows 7의 경우 **시작** 메뉴를 열고, Visual Studio 현재 버전의 폴더를 확장하고, **Visual Studio Tools**의 바로 가기 메뉴를 열고 나서, **VS 2017용 개발자 명령 프롬프트**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-158">In Windows 7, open the **Start** menu, expand the folder for the current version of Visual Studio, open the shortcut menu for **Visual Studio Tools**, and then choose **Developer Command Prompt for VS 2017**.</span></span>
+<span data-ttu-id="dbe9b-170">일반적으로 C# 프로그램에서는 .NET Framework의 런타임 라이브러리에서 제공되는 입출력 서비스를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-170">C# programs generally use the input/output services provided by the run-time library of the .NET Framework.</span></span> <span data-ttu-id="dbe9b-171">`System.Console.WriteLine("Hello World!");` 문은 <xref:System.Console.WriteLine%2A> 메서드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-171">The statement `System.Console.WriteLine("Hello World!");` uses the <xref:System.Console.WriteLine%2A> method.</span></span> <span data-ttu-id="dbe9b-172">이 메서드는 런타임 라이브러리에 있는 <xref:System.Console> 클래스의 출력 메서드 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-172">This is one of the output methods of the <xref:System.Console> class in the run-time library.</span></span> <span data-ttu-id="dbe9b-173">이 메서드는 표준 출력 스트림에 문자열 매개 변수를 표시하고 이어서 새 줄을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-173">It displays its string parameter on the standard output stream followed by a new line.</span></span> <span data-ttu-id="dbe9b-174">기타 <xref:System.Console> 메서드는 다양한 입력 및 출력 작업에 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-174">Other <xref:System.Console> methods are available for different input and output operations.</span></span> <span data-ttu-id="dbe9b-175">프로그램 시작 부분에 `using System;` 지시문을 포함하면 <xref:System> 클래스 및 메서드를 정규화하지 않고 바로 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-175">If you include the `using System;` directive at the beginning of the program, you can directly use the <xref:System> classes and methods without fully qualifying them.</span></span> <span data-ttu-id="dbe9b-176">예를 들어 `System.Console.WriteLine` 대신 `Console.WriteLine`을 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-176">For example, you can call `Console.WriteLine` instead of `System.Console.WriteLine`:</span></span>
 
-         <span data-ttu-id="f6043-159">개발자 명령 프롬프트 창이 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-159">A Developer Command Prompt window appears.</span></span>
+[!code-csharp[csProgGuide#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/using.cs#1)]
 
-    - <span data-ttu-id="f6043-160">표준 명령 프롬프트 창에서 명령줄 빌드를 사용하도록 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-160">Enable command-line builds from a standard Command Prompt window.</span></span>
+[!code-csharp[csProgGuide#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#23)]
 
-         <span data-ttu-id="f6043-161">[방법: Visual Studio 명령줄에 필요한 환경 변수 설정](../../language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="f6043-161">See [How to: Set Environment Variables for the Visual Studio Command Line](../../language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).</span></span>
+<span data-ttu-id="dbe9b-177">입출력 메서드에 대한 자세한 내용은 <xref:System.IO>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="dbe9b-177">For more information about input/output methods, see <xref:System.IO>.</span></span>
 
-3. <span data-ttu-id="f6043-162">명령 프롬프트 창에서 `Hello.cs` 파일이 포함된 폴더로 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-162">In the command-prompt window, navigate to the folder that contains your `Hello.cs` file.</span></span>
+## <a name="see-also"></a><span data-ttu-id="dbe9b-178">참고 항목</span><span class="sxs-lookup"><span data-stu-id="dbe9b-178">See also</span></span>
 
-4. <span data-ttu-id="f6043-163">다음 명령을 입력하여 `Hello.cs`를 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-163">Enter the following command to compile `Hello.cs`.</span></span>
-
-     `csc Hello.cs`
-
-     <span data-ttu-id="f6043-164">프로그램에 컴파일 오류가 없으면 `Hello.exe`라는 실행 파일이 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-164">If your program has no compilation errors, an executable file that is named `Hello.exe` is created.</span></span>
-
-5. <span data-ttu-id="f6043-165">명령 프롬프트 창에서 다음 명령을 입력하여 프로그램을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="f6043-165">In the command-prompt window, enter the following command to run the program:</span></span>
-
-     `Hello`
-
- <span data-ttu-id="f6043-166">C# 컴파일러 및 관련 옵션에 대한 자세한 내용은 [C# 컴파일러 옵션](../../language-reference/compiler-options/index.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="f6043-166">For more information about the C# compiler and its options, see [C# Compiler Options](../../language-reference/compiler-options/index.md).</span></span>
-
-## <a name="see-also"></a><span data-ttu-id="f6043-167">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f6043-167">See also</span></span>
-
-- [<span data-ttu-id="f6043-168">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="f6043-168">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="f6043-169">C# 프로그램 내부</span><span class="sxs-lookup"><span data-stu-id="f6043-169">Inside a C# Program</span></span>](./index.md)
-- [<span data-ttu-id="f6043-170">문자열</span><span class="sxs-lookup"><span data-stu-id="f6043-170">Strings</span></span>](../strings/index.md)
-- [<span data-ttu-id="f6043-171">샘플 및 자습서</span><span class="sxs-lookup"><span data-stu-id="f6043-171">Samples and tutorials</span></span>](../../../samples-and-tutorials/index.md)
-- [<span data-ttu-id="f6043-172">C# 참조</span><span class="sxs-lookup"><span data-stu-id="f6043-172">C# Reference</span></span>](../../language-reference/index.md)
-- [<span data-ttu-id="f6043-173">Main()과 명령줄 인수</span><span class="sxs-lookup"><span data-stu-id="f6043-173">Main() and Command-Line Arguments</span></span>](../main-and-command-args/index.md)
-- [<span data-ttu-id="f6043-174">Visual C# 및 Visual Basic 시작</span><span class="sxs-lookup"><span data-stu-id="f6043-174">Getting Started with Visual C# and Visual Basic</span></span>](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [<span data-ttu-id="dbe9b-179">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="dbe9b-179">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="dbe9b-180">샘플 및 자습서</span><span class="sxs-lookup"><span data-stu-id="dbe9b-180">Samples and tutorials</span></span>](../../../samples-and-tutorials/index.md)
+- [<span data-ttu-id="dbe9b-181">Main()과 명령줄 인수</span><span class="sxs-lookup"><span data-stu-id="dbe9b-181">Main() and Command-Line Arguments</span></span>](../main-and-command-args/index.md)
+- [<span data-ttu-id="dbe9b-182">Visual C# 및 Visual Basic 시작</span><span class="sxs-lookup"><span data-stu-id="dbe9b-182">Getting Started with Visual C# and Visual Basic</span></span>](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

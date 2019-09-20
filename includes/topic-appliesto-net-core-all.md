@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 8c3f07a481ec366234c90eea67743bdd27637655
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8d02633b652157afe4d5c6dc2d122781b895587b
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632387"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988548"
 ---
-<span data-ttu-id="f6204-101">**이 항목 적용 대상: ✓** .NET Core 1.x SDK **✓** .NET Core 2.x SDK</span><span class="sxs-lookup"><span data-stu-id="f6204-101">**This topic applies to: ✓** .NET Core 1.x SDK **✓** .NET Core 2.x SDK</span></span>
+<span data-ttu-id="fd90f-101">**이 문서 적용 대상: ✓** .NET Core 1.x SDK **✓** .NET Core 2.x SDK</span><span class="sxs-lookup"><span data-stu-id="fd90f-101">**This article applies to: ✓** .NET Core 1.x SDK **✓** .NET Core 2.x SDK</span></span>
