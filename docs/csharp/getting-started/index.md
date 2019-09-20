@@ -8,12 +8,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: 7927cd65de31ba6e835aabdbbd89e410d10d2822
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: ba68425fe37c5b939da22edad38bb03afd2b9068
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104783"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117326"
 ---
 # <a name="get-started-with-c"></a>C\# 시작
 
@@ -27,7 +27,7 @@ ms.locfileid: "70104783"
 
 - [Visual Studio 2017 RC에서 .NET Core를 사용하여 C# Hello World 애플리케이션 빌드](../../core/tutorials/with-visual-studio.md)
 
-   Visual Studio의 최신 릴리스인 Visual Studio 2017을 사용하면 Windows용 통합 개발 환경에서 애플리케이션을 코딩, 컴파일, 실행, 디버그, 프로파일링 및 게시할 수 있습니다.
+   Visual Studio 2019를 사용하면 Windows용 통합 개발 환경에서 애플리케이션을 코딩, 컴파일, 실행, 디버그, 프로파일링 및 게시할 수 있습니다.
 
    이 항목에서는 간단한 Hello World 애플리케이션을 만들어 실행한 다음, 좀 더 대화형 기능이 강화된 Hello World 애플리케이션을 실행하도록 수정할 수 있습니다. 애플리케이션의 빌드 및 실행이 끝나면 .NET Core에서 지원하는 모든 플랫폼에서 실행할 수 있도록 [디버그](../../core/tutorials/debugging-with-visual-studio.md)하는 방법과 [게시](../../core/tutorials/publishing-with-visual-studio.md)하는 방법을 익힙니다.
 
