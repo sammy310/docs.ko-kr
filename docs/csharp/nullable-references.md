@@ -2,12 +2,12 @@
 title: nullable 참조 형식
 description: 이 문서에서는 C# 8에 추가된 nullable 참조 형식에 대해 간략하게 설명합니다. 이 기능이 신규 및 기존의 프로젝트의 null 참조 예외에 대해 어떻게 안전성을 제공하는지 알아봅니다.
 ms.date: 02/19/2019
-ms.openlocfilehash: ac19cbba0e078af34801231145ee339d6e42a42b
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: e66d74cdde3b3de9ec3f1b435cdbd3e3b24c2663
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195925"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851073"
 ---
 # <a name="nullable-reference-types"></a>nullable 참조 형식
 
@@ -47,29 +47,27 @@ name!.Length;
 
 모든 참조 형식은 경고가 생성되는 경우를 설명하는 4가지 *nullabilities(Null 허용 여부)* 중 하나일 수 있습니다.
 
-- *Nonnullable(Null 허용 안 함)*: 이 형식의 변수에는 null을 할당할 수 없습니다. 이 형식의 변수는 역참조되기 전에 null 검사가 필요하지 않습니다.
-- *Nullable(Null 허용)*: 이 형식의 변수에는 null을 할당할 수 있습니다. `null`에 대한 사전 검사 없이 이 형식의 변수를 역참조하면 경고가 발생합니다.
-- *Oblivious(모호한)*: C# 8 이전 상태입니다. 이 형식의 변수는 경고 없이 역참조되거나 할당될 수 있습니다.
-- *Unknown(알 수 없음)*: 형식이 *nullable* 또는 *nonnullable*이어야 하는지 제약 조건으로 컴파일러에 명시하지 않은 형식 매개 변수에 일반적입니다.
+- *Nonnullable(Null 허용 안 함)* : 이 형식의 변수에는 null을 할당할 수 없습니다. 이 형식의 변수는 역참조되기 전에 null 검사가 필요하지 않습니다.
+- *Nullable(Null 허용)* : 이 형식의 변수에는 null을 할당할 수 있습니다. `null`에 대한 사전 검사 없이 이 형식의 변수를 역참조하면 경고가 발생합니다.
+- *Oblivious(모호한)* : C# 8 이전 상태입니다. 이 형식의 변수는 경고 없이 역참조되거나 할당될 수 있습니다.
+- *Unknown(알 수 없음)* : 형식이 *nullable* 또는 *nonnullable*이어야 하는지 제약 조건으로 컴파일러에 명시하지 않은 형식 매개 변수에 일반적입니다.
 
 변수 선언에서 형식의 null 허용 여부는 변수가 선언된 *nullable 컨텍스트*로 제어됩니다.
 
 ## <a name="nullable-contexts"></a>Nullable 컨텍스트
 
-Nullable 컨텍스트를 통해 컴파일러가 참조 형식 변수를 해석하는 방식을 미세하게 제어할 수 있습니다. 지정된 소스 줄의 **nullable 주석 컨텍스트**는 `enabled` 또는 `disabled`입니다. C# 8 이전 컴파일러는 `disabled` nullable 컨텍스트에서 모든 코드를 컴파일하는 것으로 생각할 수 있습니다. 모든 참조 형식은 null일 수 있습니다. **nullable 경고 컨텍스트**는 `enabled`, `disabled` 또는 `safeonly`로 설정할 수 있습니다. nullable 경고 컨텍스트는 컴파일러가 해당 흐름 분석을 사용하여 생성한 경고를 지정합니다.
+Nullable 컨텍스트를 통해 컴파일러가 참조 형식 변수를 해석하는 방식을 미세하게 제어할 수 있습니다. 지정된 소스 줄의 **nullable 주석 컨텍스트**는 `enabled` 또는 `disabled`입니다. C# 8 이전 컴파일러는 `disabled` nullable 컨텍스트에서 모든 코드를 컴파일하는 것으로 생각할 수 있습니다. 모든 참조 형식은 null일 수 있습니다. **nullable 경고 컨텍스트**는 `enabled` 또는 `disabled`로 설정할 수 있습니다. nullable 경고 컨텍스트는 컴파일러가 해당 흐름 분석을 사용하여 생성한 경고를 지정합니다.
 
 `csproj` 파일에 `Nullable` 요소를 사용하여 프로젝트에 대한 nullable 주석 컨텍스트 및 nullable 경고 컨텍스트를 설정할 수 있습니다. 이 요소는 컴파일러가 형식의 null 허용 여부를 해석하는 방법 및 생성되는 경고를 구성합니다. 유효한 설정은 다음과 같습니다.
 
 - `enable`: nullable 주석 컨텍스트가 **enabled**입니다. nullable 경고 컨텍스트가 **enabled**입니다.
   - 예를 들어 참조 형식 변수 `string`은 null이 아닙니다.  모든 null 허용 여부 경고가 enabled입니다.
-- `disable`: nullable 주석 컨텍스트가 **disabled**입니다. nullable 경고 컨텍스트가 **disabled**입니다.
-  - 참조 형식의 변수는 이전 버전의 C#과 마찬가지로 모호할 수 있습니다. 모든 null 허용 여부 경고가 disabled입니다.
-- `safeonly`: nullable 주석 컨텍스트가 **enabled**입니다. nullable 경고 컨텍스트가 **safeonly**입니다.
-  - 참조 형식의 변수는 null을 허용하지 않습니다. 모든 null 허용 여부 안전성 경고가 enabled입니다.
 - `warnings`: nullable 주석 컨텍스트가 **disabled**입니다. nullable 경고 컨텍스트가 **enabled**입니다.
   - 참조 형식의 변수가 모호합니다. 모든 null 허용 여부 경고가 enabled입니다.
-- `safeonlywarnings`: nullable 주석 컨텍스트가 **disabled**입니다. nullable 경고 컨텍스트가 **safeonly**입니다.
-  - 참조 형식의 변수가 모호합니다. 모든 null 허용 여부 안전성 경고가 enabled입니다.
+- `annotations`: nullable 주석 컨텍스트가 **enabled**입니다. nullable 경고 컨텍스트가 **disabled**입니다.
+  - 참조 형식의 변수가 모호합니다. 모든 null 허용 여부 경고가 enabled입니다.
+- `disable`: nullable 주석 컨텍스트가 **disabled**입니다. nullable 경고 컨텍스트가 **disabled**입니다.
+  - 참조 형식의 변수는 이전 버전의 C#과 마찬가지로 모호할 수 있습니다. 모든 null 허용 여부 경고가 disabled입니다.
 
 > [!IMPORTANT]
 > `Nullable` 요소의 이전 이름은 `NullableContextOptions`였습니다. Visual Studio 2019, 16.2-p1에서는 바뀐 이름이 제공됩니다. .NET Core SDK 3.0.100-preview5-011568에는 이 변경이 적용되지 않습니다. .NET Core CLI를 사용하는 경우 다음 미리 보기를 사용할 수 있을 때까지 `NullableContextOptions`를 사용해야 합니다.
@@ -78,21 +76,12 @@ Nullable 컨텍스트를 통해 컴파일러가 참조 형식 변수를 해석�
 
 - `#nullable enable`: nullable 주석 컨텍스트와 nullable 경고 컨텍스트를 **enabled**로 설정합니다.
 - `#nullable disable`: nullable 주석 컨텍스트와 nullable 경고 컨텍스트를 **disabled**로 설정합니다.
-- `#nullable safeonly`: nullable 주석 컨텍스트를 **enabled**로 설정하고 경고 컨텍스트를 **safeonly**로 설정합니다.
 - `#nullable restore`: nullable 주석 컨텍스트와 nullable 경고 컨텍스트를 프로젝트 설정으로 복원합니다.
 - `#pragma warning disable nullable`: nullable 경고 컨텍스트를 **disabled**로 설정합니다.
 - `#pragma warning enable nullable`: nullable 경고 컨텍스트를 **enabled**로 설정합니다.
 - `#pragma warning restore nullable`: nullable 경고 컨텍스트를 프로젝트 설정으로 복원합니다.
-- `#pragma warning safeonly nullable`: nullable 경고 컨텍스트를 **safeonly**로 설정합니다.
 
 기본 nullable 주석 및 경고 컨텍스트는 `disabled`입니다. 이 결정은 기존 코드가 변경 없이 새로운 경고를 생성하지 않고 컴파일됨을 의미합니다.
-
-`enabled`와 `safeonly` nullable 경고 컨텍스트의 차이점은 nullable이 아닌 참조에 nullable 참조를 할당하는 것에 대한 경고입니다. 다음 할당에서는 `enabled` 경고 컨텍스트에 경고를 생성하고 `safeonly` 경고 컨텍스트에는 생성하지 않습니다. 그러나 두 번째 줄에서 `s`가 역참조되고 `safeonly` 컨텍스트에 경고가 생성됩니다.
-
-```csharp
-string s = null; // warning when nullable warning context is enabled.
-var txt = s.ToString(); // warning when nullable warnings context is safeonly, or enabled.
-```
 
 ### <a name="nullable-annotation-context"></a>nullable 주석 컨텍스트
 
@@ -121,7 +110,7 @@ nullable 경고 컨텍스트는 nullable 주석 컨텍스트와 다릅니다. �
 1. 변수에 확실히 null이 아닌 값이 할당되었습니다.
 1. 변수 또는 식이 역참조되기 전에 null 검사되었습니다.
 
-컴파일러는 nullable 경고 컨텍스트가 `enabled` 또는 `safeonly`인 경우 **null일 수 있는** 상태의 변수 또는 식을 역참조할 때마다 경고를 생성합니다. 또한 nullable 주석 컨텍스트가 `enabled`인 경우 **null일 수 있는** 변수 또는 식에 null을 허용하지 않는 참조 형식이 할당되면 경고가 생성됩니다.
+컴파일러는 nullable 경고 컨텍스트가 `enabled`인 경우 **null일 수 있는** 상태의 변수 또는 식을 역참조할 때마다 경고를 생성합니다. 또한 nullable 주석 컨텍스트가 `enabled`인 경우 **null일 수 있는** 변수 또는 식에 null을 허용하지 않는 참조 형식이 할당되면 경고가 생성됩니다.
 
 ## <a name="learn-more"></a>자세한 정보
 

@@ -1,18 +1,18 @@
 ---
 title: = 연산자 - C# 참조
 ms.custom: seodec18
-ms.date: 06/21/2019
+ms.date: 09/10/2019
 f1_keywords:
 - =_CSharpKeyword
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: f30b48fc6bd1e896658a7234a58409ea9a0f5e6f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a450a55524f33f4f06ed077aba864e8f641a458d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69601947"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70924653"
 ---
 # <a name="-operator-c-reference"></a>= 연산자(C# 참조)
 
@@ -61,6 +61,10 @@ x = x op y
 단, `x`가 한 번만 계산됩니다.
 
 복합 할당은 [산술](arithmetic-operators.md#compound-assignment), [부울 논리](boolean-logical-operators.md#compound-assignment), [비트 논리 및 시프트](bitwise-and-shift-operators.md#compound-assignment) 연산자를 통해 지원됩니다.
+
+## <a name="null-coalescing-assignment"></a>null 병합 할당
+
+C# 8.0부터 null 병합 할당 연산자 `??=`를 사용하여 왼쪽 피연산자가 `null`로 계산되는 경우에만 오른쪽 피연산자의 값을 왼쪽 피연산자에 대입할 수 있습니다. 자세한 내용은 [?? 및 ??= 연산자](null-coalescing-operator.md) 문서를 참조하세요.
 
 ## <a name="operator-overloadability"></a>연산자 오버로드 가능성
 

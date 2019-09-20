@@ -5,18 +5,20 @@ author: mairaw
 ms.author: adegeo
 ms.custom: updateeachvsrelease
 ms.date: 07/13/2019
-ms.openlocfilehash: 5086b185ee2d49c7b569ed0cb62b4c8995f9982c
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: d391c18a371d721419c298f2987894f16ecbd169
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433904"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969918"
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a>macOS에서 .NET Core의 필수 구성 요소
 
 이 문서에서는 macOS 컴퓨터에서.NET Core 애플리케이션을 개발, 배포 및 실행하기 위해 필요한 지원되는 macOS 버전 및 .NET Core 종속성을 보여 줍니다. 다음에 나오는 지원되는 OS 버전 및 종속성은 Mac에서 .NET Core 앱을 개발하기 위한 세 가지 방법, 즉 [즐겨 사용하는 편집기를 통한 명령줄](tutorials/using-with-xplat-cli.md), [Visual Studio Code](https://code.visualstudio.com/) 및 [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)에 적용됩니다.
 
 ## <a name="supported-macos-versions"></a>지원되는 macOS 버전
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
@@ -26,7 +28,7 @@ ms.locfileid: "68433904"
 
 .NET Core 2.1 및 .NET Core 2.2가 지원되는 운영 체제, 배포 및 버전, 지원되지 않는 OS 버전, 수명 주기 정책 링크의 전체 목록은 [.NET Core 2.1이 지원되는 OS 버전](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) 및 [.NET Core 2.2가 지원되는 OS 버전](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)을 참조하세요.
 
-다운로드 링크 및 자세한 내용은 [.NET Core 2.2 다운로드](https://www.microsoft.com/net/download/dotnet-core/2.2) 또는 [.NET Core 2.1 다운로드](https://www.microsoft.com/net/download/dotnet-core/2.1)를 참조하세요.
+다운로드 링크 및 자세한 내용은 [.NET Core 2.2 다운로드](https://dotnet.microsoft.com/download/dotnet-core/2.2) 또는 [.NET Core 2.1 다운로드](https://dotnet.microsoft.com/download/dotnet-core/2.1)를 참조하세요.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -37,7 +39,7 @@ ms.locfileid: "68433904"
 
 .NET Core 1.1 및 .NET Core 1.0이 지원되는 운영 체제, 배포 및 버전, 지원되지 않는 OS 버전, 수명 주기 정책 링크의 전체 목록은 [.NET Core 1.1이 지원되는 OS 버전](https://github.com/dotnet/core/blob/master/release-notes/1.1/1.1.md) 및 [.NET Core 1.0이 지원되는 OS 버전](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)을 참조하세요.
 
-다운로드 링크 및 자세한 내용은 [.NET Core 1.1 다운로드](https://www.microsoft.com/net/download/dotnet-core/1.1) 또는 [.NET Core 1.0 다운로드](https://www.microsoft.com/net/download/dotnet-core/1.0)를 참조하세요.
+다운로드 링크 및 자세한 내용은 [.NET Core 1.1 다운로드](https://dotnet.microsoft.com/download/dotnet-core/1.1) 또는 [.NET Core 1.0 다운로드](https://dotnet.microsoft.com/download/dotnet-core/1.0)를 참조하세요.
 
 # <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
 
@@ -47,7 +49,7 @@ ms.locfileid: "68433904"
 
 지원 OS 버전 중 .NET Core 3.0이 지원되는 운영 체제, 배포 및 버전, 수명 주기 정책 링크의 전체 목록은 [.NET Core 3.0이 지원되는 OS 버전](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)을 참조하세요.
 
-다운로드 링크 및 자세한 내용은 [.NET Core 3.0 다운로드](https://www.microsoft.com/net/download/dotnet-core/3.0)를 참조하세요.
+다운로드 링크 및 자세한 내용은 [.NET Core 3.0 다운로드](https://dotnet.microsoft.com/download/dotnet-core/3.0)를 참조하세요.
 
 ---
 
@@ -55,7 +57,7 @@ ms.locfileid: "68433904"
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-[.NET 다운로드](https://www.microsoft.com/net/download/core)에서 .NET Core SDK를 다운로드하여 설치합니다. macOS에 설치하는 데 문제가 있는 경우 설치된 버전에 해당하는 [알려진 문제](https://github.com/dotnet/core/tree/master/release-notes/2.1) 항목을 참조하세요.
+[.NET 다운로드](https://dotnet.microsoft.com/download) 페이지에서 .NET Core SDK를 다운로드하여 설치합니다. macOS에 설치하는 데 문제가 있는 경우 설치된 버전에 해당하는 [알려진 문제](https://github.com/dotnet/core/tree/master/release-notes/2.1) 항목을 참조하세요.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -69,11 +71,11 @@ ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
 ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
 ```
 
-[.NET 다운로드](https://www.microsoft.com/net/download/core)에서 .NET Core SDK를 다운로드하여 설치합니다. macOS에 설치하는 데 문제가 있는 경우 [1.0.0 알려진 문제](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md) 및 [1.0.1 알려진 문제](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md) 항목을 참조하세요.
+[.NET 다운로드](https://dotnet.microsoft.com/download) 페이지에서 .NET Core SDK를 다운로드하여 설치합니다. macOS에 설치하는 데 문제가 있는 경우 [1.0.0 알려진 문제](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md) 및 [1.0.1 알려진 문제](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md) 항목을 참조하세요.
 
 # <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
 
-[.NET 다운로드](https://www.microsoft.com/net/download/core)에서 .NET Core SDK를 다운로드하여 설치합니다. macOS에 설치하는 데 문제가 있는 경우 설치된 버전에 해당하는 [릴리스 정보](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) 항목을 참조하세요.
+[.NET 다운로드](https://dotnet.microsoft.com/download) 페이지에서 .NET Core SDK를 다운로드하여 설치합니다. macOS에 설치하는 데 문제가 있는 경우 설치된 버전에 해당하는 [릴리스 정보](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) 항목을 참조하세요.
 
 ---
 

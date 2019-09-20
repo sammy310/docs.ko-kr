@@ -3,12 +3,12 @@ title: Infer.NET 및 확률적 프로그래밍을 사용하여 게임 대전 목
 description: Infer.NET과 함께 확률적 프로그래밍을 사용하여 TrueSkill의 간소화된 버전을 기반으로 게임 대전 목록 앱을 만드는 방법을 알아봅니다.
 ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 85cb3753ae19e7ca64002eb7c26b44b6f7d41e4f
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: aa3ad9528238e4f5a5eb187af71f2d2da1ea9cba
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211432"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855792"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Infer.NET 및 확률적 프로그래밍을 사용하여 게임 대전 목록 앱 만들기
 
@@ -22,7 +22,7 @@ ms.locfileid: "65211432"
 
 - 로컬 개발 환경 설정
 
-  이 방법 가이드에서는 개발에 사용할 수 있는 머신이 있다고 예상합니다. .NET [10분 안에 시작](https://www.microsoft.com/net/core) 자습서에는 Mac, PC 또는 Linux의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다.
+  이 방법 가이드에서는 개발에 사용할 수 있는 머신이 있다고 예상합니다. .NET 자습서 [Hello World 10분 완성](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)에는 macOS, Windows 또는 Linux의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다.
 
 ## <a name="create-your-app"></a>앱 만들기
 
@@ -49,7 +49,7 @@ dotnet add package Microsoft.ML.Probabilistic.Compiler
 
 유추된 플레이어 기술을, 기술의 불확실성 측정값인 해당 차이와 함께 나열해야 합니다.
 
-게임 결과 예제 데이터
+게임 결과 예제 데이터 
 
 게임 |승자 | 패자
 ---------|----------|---------

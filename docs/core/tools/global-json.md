@@ -3,12 +3,12 @@ title: global.json 개요
 description: .NET Core CLI 명령을 실행할 때 global.json 파일을 사용하여 .NET Core SDK 버전을 설정하는 방법에 대해 알아보세요.
 ms.date: 12/03/2018
 ms.custom: updateeachrelease, seodec18
-ms.openlocfilehash: a3d90e39401ece8d106d89a7533b7c1e1e4433cd
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3c3793011560cd7428e47bd3340d0a935247760f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632395"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849605"
 ---
 # <a name="globaljson-overview"></a>global.json 개요
 
@@ -51,13 +51,13 @@ ms.locfileid: "65632395"
 
 ## <a name="globaljson-and-the-net-core-cli"></a>global.json 및 .NET Core CLI
 
-*global.json* 파일에서 어떤 버전을 설정할 수 있는지 알고 있으면 도움이 됩니다. [.NET 다운로드](https://www.microsoft.com/net/download/all) 사이트에서 지원되는 사용 가능한 SDK의 전체 목록을 찾을 수 있습니다. .NET Core 2.1 SDK부터 다음 명령을 실행하여 머신에 이미 설치된 SDK 버전을 확인할 수 있습니다.
+*global.json* 파일에서 어떤 버전을 설정할 수 있는지 알고 있으면 도움이 됩니다. [.NET Core 다운로드](https://dotnet.microsoft.com/download/dotnet-core) 페이지에서 지원되는 사용 가능한 SDK의 전체 목록을 찾을 수 있습니다. .NET Core 2.1 SDK부터 다음 명령을 실행하여 머신에 이미 설치된 SDK 버전을 확인할 수 있습니다.
 
 ```console
 dotnet --list-sdks
 ```
 
-머신에 추가 .NET Core SDK 버전을 설치하려면 [.NET 다운로드](https://www.microsoft.com/net/download/all) 사이트를 방문하세요.
+컴퓨터에 추가 .NET Core SDK 버전을 설치하려면 [.NET Core 다운로드](https://dotnet.microsoft.com/download/dotnet-core) 페이지를 방문하세요.
 
 다음 예제와 비슷한 [dotnet new](dotnet-new.md) 명령을 실행하여 현재 디렉터리에서 *global.json* 파일을 새로 만들 수 있습니다.
 

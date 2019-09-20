@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 64ffd57d8c0bce1d9f409adebd169b4fd3e17e06
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 9ba6c46116d809e2881eee37b080e1952e2eb6a0
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796852"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895278"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>가비지 수집 기본 사항
 
 <a name="top"></a> CLR(공용 언어 런타임)에서 가비지 수집은 자동 메모리 관리자 역할을 합니다. 가비지 수집은 다음과 같은 이점을 제공합니다.
 
-- 사용자가 만든 개체의 메모리를 수동으로 해제하지 않고도 애플리케이션을 개발할 수 있습니다.
+- 사용자가 만든 개체의 메모리를 수동으로 해제하지 않고도 응용 프로그램을 개발할 수 있습니다.
 
 - 관리되는 힙에 효율적으로 개체를 할당합니다.
 
@@ -270,7 +270,7 @@ CLR에 의해 가비지 수집기가 초기화되고 나면 가비지 수집기�
 
 ## <a name="background-workstation-garbage-collection"></a>백그라운드 워크스테이션 가비지 수집
 
-백그라운드 가비지 수집에서 임시 세대(0세대 및 1세대)는 2세대 수집이 진행되는 동안 필요에 따라 수집됩니다. 백그라운드 가비지 수집은 동시 가비지 수집에서 자동으로 활성화되며 사용자가 설정할 부분이 없습니다. 백그라운드 가비지 수집은 동시 가비지 수집을 대체합니다. 백그라운드 가비지 수집은 동시 가비지 수집과 마찬가지로 전용 스레드에서 수행되며 2세대 수집에만 적용될 수 있습니다.
+백그라운드 가비지 수집은 .NET Framework 4부터 동시 워크스테이션 가비지 수집을 대체하며, .NET Framework 4.5부터 동시 서버 가비지 수집을 대체합니다.  백그라운드 가비지 수집에서 임시 세대(0세대 및 1세대)는 2세대 수집이 진행되는 동안 필요에 따라 수집됩니다. 이 수집은 전용 스레드에서 수행되며 2세대 수집에만 적용됩니다. 백그라운드 가비지 수집은 기본적으로 자동으로 사용하도록 설정되며, .NET Framework 애플리케이션에서 [\<gcConcurrent >](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) 구성 설정을 사용하여 사용하거나 사용하지 않도록 설정할 수 있습니다. 
 
 > [!NOTE]
 > 백그라운드 가비지 수집은 .NET Framework 4 이상 버전에서만 사용할 수 있습니다. .NET Framework 4에서는 워크스테이션 가비지 수집의 경우에만 지원됩니다. .NET Framework 4.5부터 백그라운드 가비지 수집이 워크스테이션과 서버 가비지 수집 모두에서 가능합니다.

@@ -2,12 +2,12 @@
 title: 높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 description: 실제 프로덕션 애플리케이션은 모든 컨테이너의 상태, 워크로드 및 수명 주기를 처리하는 오케스트레이터를 통해 배포하고 관리해야 합니다.
 ms.date: 02/15/2019
-ms.openlocfilehash: 8c1161127eb6b239384444c369de7f11abd3d424
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 8f2cef774acde47e9a1bb4680342b5e2c66ac154
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373700"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990493"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 
@@ -15,7 +15,7 @@ ms.locfileid: "70373700"
 
 그림 4-6에서는 여러 마이크로서비스(컨테이너)로 구성된 애플리케이션의 클러스터에 배포하는 방법을 보여줍니다.
 
-![클러스터로 구성된 Docker 애플리케이션: 각 서비스 인스턴스에 대해 하나의 컨테이너를 사용합니다. Docker 컨테이너는 "배포 단위"이고 컨테이너는 많은 컨테이너를 처리하는 Docker.A 호스트의 인스턴스입니다.](./media/image6.png)
+![클러스터로 구성된 Docker 애플리케이션: 각 서비스 인스턴스에 대해 하나의 컨테이너를 사용합니다. Docker 컨테이너는 "배포 단위"이고 컨테이너는 Docker의 인스턴스입니다. 호스트는 여러 컨테이너를 처리합니다.](./media/image6.png)
 
 **그림 4-6** 컨테이너의 클러스터
 

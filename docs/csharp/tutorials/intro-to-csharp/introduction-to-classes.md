@@ -3,16 +3,16 @@ title: 클래스 및 개체 - C# 소개 자습서
 description: 첫 번째 C# 프로그램을 만들고 개체 지향 개념을 살펴봅니다.
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 0932ae8a9d3facd4b2a8469664922f163fe4c679
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 092639e86b3e8e683a7d5f6ecf5b732991581b71
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397820"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850729"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>클래스 및 개체를 사용한 개체 지향 프로그래밍 살펴보기
 
-이 자습서에서는 개발에 사용할 수 있는 머신이 있다고 예상합니다. .NET 항목 [Get Started in 10 minutes](https://www.microsoft.com/net/core)(10분 안에 시작)에는 Mac, PC 또는 Linux의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다. 사용할 명령에 대한 간단한 개요는 [개발 도구 익히기](local-environment.md)에 자세한 정보의 링크와 함께 나와 있습니다.
+이 자습서에서는 개발에 사용할 수 있는 머신이 있다고 예상합니다. .NET 자습서 [Hello World 10분 완성](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)에는 Mac, PC 또는 Linux의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다. 사용할 명령에 대한 간단한 개요는 [개발 도구 익히기](local-environment.md)에 자세한 정보의 링크와 함께 나와 있습니다.
 
 ## <a name="create-your-application"></a>애플리케이션 만들기
 

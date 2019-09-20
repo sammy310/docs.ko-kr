@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 991053a2728ec7b8c5d9157dbf6307e0974479c6
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 5c71816b1bd2e9c95e8c7efb44e3e689dce4ab93
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379925"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853968"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>방법: .NET Framework 4.5 설치 관리자에서 진행률 가져오기
 
@@ -22,15 +22,13 @@ ms.locfileid: "66379925"
 
 - **호출**. .NET Framework 4.5 설치 프로그램을 호출하고 MMIO 섹션에서 진행률 정보를 받으려면 설치 프로그램에서 다음을 수행해야 합니다.
 
-    1. .NET Framework 4.5 재배포 가능 프로그램을 호출합니다.
+    1. .NET Framework 4.5 재배포 가능 프로그램 호출:
 
-        ```
-        dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name
-        ```
+        `dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name`
 
         여기서 *section name*은 앱을 식별하는 데 사용할 임의의 이름입니다. .NET Framework 설치 프로그램은 MMIO 섹션을 읽고 비동기적으로 쓰므로 이 시간 동안 이벤트 및 메시지를 사용하는 것이 편리할 수도 있습니다. 예제에서는 MMIO 섹션(`TheSectionName`)을 할당하고 이벤트(`TheEventName`)를 정의하는 생성자가 .NET Framework 설치 프로세스를 만듭니다.
 
-        ```
+        ```cpp
         Server():ChainerSample::MmioChainer(L"TheSectionName", L"TheEventName")
         ```
 

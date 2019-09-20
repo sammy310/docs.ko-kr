@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2c2eecdee3448b59422a8c6c73fc85745b41c52b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2ad74a70fff9916dc66bb4d2eacbdaf40cb241c3
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626101"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853956"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core 및 오픈 소스
 이 항목에서는 .NET Core에 대한 간략한 개요 및 자세한 정보를 찾는 방법을 보여줍니다. .NET Core 주제에 대한 전체 목록은 [.NET Core 가이드](../../core/index.md)를 참조하세요.
@@ -18,7 +18,7 @@ ms.locfileid: "64626101"
 ## <a name="what-is-net-core"></a>.NET Core란?  
  .NET Core는 .NET Standard의 일반적인 용도를 위한 모듈식 플랫폼 간 오픈 소스 구현입니다. .NET Framework와 동일한 많은 API를 포함하고 있으며(.NET Core는 작은 집합) 다양한 운영 체제 및 대상 칩을 지원하는 런타임, 프레임워크, 컴파일러 및 도구 구성 요소를 포함합니다. .NET Core 구현은 주로 ASP.NET Core 작업을 기반으로 하지만 많은 최신 구현에 대한 필요와 욕구에 의해서도 구현됩니다. 디바이스, 클라우드 및 포함/IoT 시나리오에 사용할 수 있습니다.  
   
- .NET Core를 시작하려면 [.NET Core 홈 페이지](https://www.microsoft.com/net/core)를 방문하십시오.  
+ .NET Core를 시작하려면 .NET 자습서 [Hello World 10분 완성](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)를 방문하세요.  
   
  다음은 .NET Core의 주요 특성입니다.  
   
@@ -47,6 +47,6 @@ ms.locfileid: "64626101"
   
 ## <a name="see-also"></a>참고 항목
 
-- [.NET Core 홈 페이지](https://www.microsoft.com/net/core)
+- [.NET 자습서 - Hello World 10분 완성](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)
 - [.NET Core 가이드](../../core/index.md)
 - [ASP.NET Core 설명서](/aspnet/core/)

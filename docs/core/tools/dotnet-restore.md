@@ -2,12 +2,12 @@
 title: dotnet restore 명령
 description: dotnet restore 명령을 사용하여 종속성 및 프로젝트 관련 도구를 복원하는 방법을 알아봅니다.
 ms.date: 05/29/2018
-ms.openlocfilehash: 56d99a4edd69246632560065c415a3f41ac3e1b5
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 1e0e1fbf6ab5f595773a072242440e30865fed16
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202818"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969764"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -18,6 +18,8 @@ ms.locfileid: "70202818"
 `dotnet restore` - 프로젝트의 종속성 및 도구를 복원합니다.
 
 ## <a name="synopsis"></a>개요
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
@@ -177,7 +179,7 @@ dotnet restore [-h|--help]
 
 `-s|--source <SOURCE>`
 
-복원 작업 중 사용할 NuGet 패키지 소스를 지정합니다. 이 소스는 *nuget.config* 파일에 지정된 모든 소스를 재정의합니다. 이 옵션을 여러 번 지정하여 여러 소스를 제공할 수 있습니다.
+복원 작업 중 사용할 NuGet 패키지 소스를 지정합니다. 그러면 *nuget.config* 파일에서 지정된 모든 소스가 재정의되고, 사실상 `<packageSource>` 요소가 없는 것처럼 *nuget.config* 파일을 읽습니다. 이 옵션을 여러 번 지정하여 여러 소스를 제공할 수 있습니다.
 
 `--verbosity <LEVEL>`
 

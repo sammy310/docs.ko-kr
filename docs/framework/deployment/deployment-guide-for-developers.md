@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 179170c0cafc67027012d2306281eb2cd1d967a4
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 8dd7bac8c0cb14421016efad60a7ec0d672e5622
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170650"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854015"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>개발자를 위한 .NET Framework 배포 가이드
 이 항목에서는 앱과 함께 .NET Framework 4.5에서 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 사이의 .NET Framework 버전을 설치하려는 개발자를 위한 정보를 제공합니다.
@@ -200,31 +200,23 @@ WiX(Windows Installer XML) 도구 집합은 XML 소스 코드에서 Windows 설�
 
 .NET Framework 설치 프로세스를 자동으로 연결하고 .NET Framework 설치 관리자에서 UI를 제공하도록 하려면 다음 명령을 설치 프로그램에 추가합니다.
 
-```
-<.NET Framework redistributable> /q /norestart /ChainingPackage <PackageName>
-```
+`<.NET Framework redistributable> /q /norestart /ChainingPackage <PackageName>`
 
 예를 들어 실행 프로그램이 Contoso.exe이고 .NET Framework 4.5 오프라인 재배포 가능 패키지를 자동으로 설치하려는 경우 다음 명령을 사용합니다.
 
-```
-dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
-```
+`dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso`
 
 추가 명령줄 옵션을 사용하여 설치를 사용자 지정할 수 있습니다. 예:
 
 - 사용자가 실행 중인 .NET Framework 응용 프로그램을 닫아 시스템이 다시 시작되는 경우를 최소화하려면 다음과 같이 Passive 모드를 설정하고 `/showrmui` 옵션을 사용합니다.
 
-    ```
-    dotNetFx45_Full_x86_x64.exe /norestart /passive /showrmui /ChainingPackage Contoso
-    ```
+    `dotNetFx45_Full_x86_x64.exe /norestart /passive /showrmui /ChainingPackage Contoso`
 
      이 명령을 사용하면 다시 시작 관리자가 .NET Framework를 설치하기 전에 .NET Framework 앱을 닫을 기회를 사용자에게 제공하는 메시지 상자를 표시할 수 있습니다.
 
 - 웹 설치 관리자를 사용하는 경우 `/LCID` 옵션을 사용하여 언어 팩을 지정할 수 있습니다. 예를 들어 .NET Framework 4.5 웹 설치 관리자를 Contoso 설치 프로그램에 연결하고 일본어 언어 팩을 설치하려면 앱의 설치 프로세스에 다음 명령을 추가합니다.
 
-    ```
-    dotNetFx45_Full_setup.exe /q /norestart /ChainingPackage Contoso /LCID 1041
-    ```
+    `dotNetFx45_Full_setup.exe /q /norestart /ChainingPackage Contoso /LCID 1041`
 
      `/LCID` 옵션을 생략하는 경우 설치 프로그램은 사용자의 MUI 설정과 일치하는 언어 팩을 설치합니다.
 
@@ -294,13 +286,13 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 이름이 `Release`인 DWORD 값의 레지스트리에서 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\\*LCID* 폴더를 확인하여 특정 언어 팩이 설치되어 있는지 여부를 테스트할 수 있습니다. ("NET Framework Setup"은 마침표로 시작되지 않습니다.) *LCID*는 로캘 식별자를 지정합니다. 로캘 식별자 목록은 [지원되는 언어](#supported-languages)를 참조하세요.
 
-예를 들어 전체 일본어 언어 팩(LCID=1041)이 이미 설치되어 있는지 검색하려면 레지스트리에서 다음 값을 확인합니다.
+예를 들어 전체 일본어 언어 팩(LCID=1041)이 설치되어 있는지 검색하려면 레지스트리에서 다음 명명된 값을 검색합니다.
 
-```
-Key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041
-Name: Release
-Type: DWORD
-```
+| | |
+|-|-|
+| 키 | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
+| name | Release |
+| 형식 | DWORD |
 
 4\.5~4.7.2의 특정 버전의 .NET Framework에 대해 최종 릴리스 버전의 언어 팩이 설치되었는지를 확인하려면 이전 섹션인 [.NET Framework 검색](#detect_net)에 설명된 릴리스 키 DWORD의 값을 확인하세요.
 
@@ -337,9 +329,7 @@ Type: DWORD
 
 .NET Framework 오프라인 설치 관리자를 사용하여 언어 팩을 설치하려면 해당 설치 관리자를 응용 프로그램의 설치 프로그램에 연결해야 합니다. 예를 들어 .NET Framework 4.5.1 오프라인 설치 관리자를 일본어 언어 팩과 함께 배포하려면 다음 명령을 사용합니다.
 
-```
-NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductName>
-```
+`NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductName>`
 
 웹 설치 관리자를 사용하는 경우 언어 팩을 연결하지 않아도 됩니다. 즉, 사용자의 MUI 설정에 맞는 언어 팩이 설치됩니다. 다른 언어를 설치하려면 `/LCID` 옵션을 사용하여 언어 팩을 지정합니다.
 

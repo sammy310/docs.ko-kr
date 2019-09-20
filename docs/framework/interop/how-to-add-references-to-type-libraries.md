@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f0f254b7794ce1cd4c765bee70c78e3c60a14aa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: a666c0e079fb30ecdd32aad64f44434d8253acf4
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946489"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971899"
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>방법: 형식 라이브러리에 참조 추가
 Visual Studio에서는 형식 라이브러리에 참조를 추가하면 메타데이터가 포함된 interop 어셈블리를 생성합니다. 주 interop 어셈블리를 사용할 수 있는 경우 Visual Studio는 새 interop 어셈블리를 생성하기 전에 기존 어셈블리를 사용합니다.  
@@ -40,7 +40,7 @@ Visual Studio에서는 형식 라이브러리에 참조를 추가하면 메타�
   
 ### <a name="to-add-a-reference-to-a-type-library-for-command-line-compilation"></a>명령줄 컴파일용으로 형식 라이브러리에 대한 참조를 추가하려면  
   
-1. [방법: 형식 라이브러리에서 interop 어셈블리 생성](how-to-generate-interop-assemblies-from-type-libraries.md)의 설명에 따라 interop 어셈블리를 생성합니다.  
+1. [방법: 형식 라이브러리에서 Interop 어셈블리 생성](how-to-generate-interop-assemblies-from-type-libraries.md)의 설명에 따라 interop 어셈블리를 생성합니다.  
   
 2. interop 어셈블리 이름을 포함한 [/link(C# 컴파일러 옵션)](../../csharp/language-reference/compiler-options/link-compiler-option.md) 또는 [/link(Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) 컴파일러 옵션을 사용하여 COM 형식에 대한 형식 정보를 실행 파일에 포함합니다.  
   
@@ -48,7 +48,6 @@ Visual Studio에서는 형식 라이브러리에 참조를 추가하면 메타�
 
 - [형식 라이브러리를 어셈블리로 가져오기](importing-a-type-library-as-an-assembly.md)
 - [.NET Framework에 COM 구성 요소 노출](exposing-com-components.md)
-- [연습: Visual Studio에서 관리형 어셈블리의 형식 포함(C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md) 
-- [연습: Visual Studio에서 관리형 어셈블리의 형식 포함(Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
+- [연습: Visual Studio에 관리되는 어셈블리의 형식 포함](../../standard/assembly/embed-types-visual-studio.md) 
 - [/link(C# 컴파일러 옵션)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
 - [/link(Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)

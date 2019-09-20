@@ -3,17 +3,17 @@ title: 메트릭을 계산하여 기계 학습 모델 품질 평가
 description: ML.NET에서 기계 학습 모델 품질을 평가하고 확인하기 위해 메트릭을 계산하는 방법 알아보기
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 2c7749205b862a42f42b857972057c441ab84364
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 529003913b166c966e131b006800f944096605b7
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641101"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855569"
 ---
 # <a name="calculate-metrics-to-evaluate-machine-learning-model-quality"></a>메트릭을 계산하여 기계 학습 모델 품질 평가 
 
 > [!NOTE]
-> 이 항목은 현재 미리 보기로 제공되는 ML.NET을 참조하며, 자료는 변경될 수 있습니다. 자세한 내용은 [ML.NET 소개](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)를 참조하세요.
+> 이 항목은 현재 미리 보기로 제공되는 ML.NET을 참조하며, 자료는 변경될 수 있습니다. 자세한 내용은 [ML.NET](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet) 페이지를 참조하세요.
 
 이 방법과 관련 샘플에서는 현재 **ML.NET 버전 0.10**을 사용하고 있습니다. 자세한 내용은 [dotnet/machinelearning GitHub 리포지토리](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)에서 릴리스 정보를 참조하세요.
 

@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: fd12d2d8c210bb85e3f45b8c8246a3d19f1a7095
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a886c77204697268adf4ee7bc4b62184b056112
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698026"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969961"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Visual Studio를 사용하여 .NET Core 앱 배포
 
@@ -89,7 +89,7 @@ Visual Studio를 사용하여 .NET Core 애플리케이션을 개발하는 방�
 
 1. 애플리케이션의 소스 코드를 추가합니다.
 
-   편집기에서 *Program.cs* 또는 파일을 열고 자동 생성된 코드를 다음 코드로 바꿉니다. 텍스트를 입력하라는 메시지가 표시된 다음 사용자가 입력한 개별 단어가 표시됩니다. 정규식 `\w+`를 사용하여 입력 테스트의 단어를 구분합니다.
+   편집기에서 *Program.cs* 또는 *Program.vb* 파일을 열고 자동 생성된 코드를 다음 코드로 바꿉니다. 텍스트를 입력하라는 메시지가 표시된 다음 사용자가 입력한 개별 단어가 표시됩니다. 정규식 `\w+`를 사용하여 입력 테스트의 단어를 구분합니다.
 
    [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
    [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
@@ -109,6 +109,8 @@ Visual Studio를 사용하여 .NET Core 애플리케이션을 개발하는 방�
    세계화 고정 모드를 사용하도록 설정한 경우, 특히 문화권 중요 데이터의 부재가 애플리케이션에 적합한지 여부를 테스트해야 합니다.
 
 디버깅이 완료되면 자체 포함 배포를 게시할 수 있습니다.
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 및 이전 버전](#tab/vs156)
 

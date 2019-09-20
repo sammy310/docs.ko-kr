@@ -3,20 +3,20 @@ title: 모델 구축에 사용할 데이터 준비
 description: ML.NET에서 변형을 사용하여 추가 처리 또는 모델 빌드를 위해 데이터를 조작하고 준비하는 방법을 알아봅니다.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 06/25/2019
+ms.date: 09/11/2019
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 4b7d5a09044e49f1b57b8276b893e0fc962a3be2
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 4452aef351f33df532f3c673307dedbbf71631b8
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397714"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929368"
 ---
 # <a name="prepare-data-for-building-a-model"></a>모델 구축에 사용할 데이터 준비
 
 ML.NET을 사용하여 추가 처리 또는 모델 빌드를 위해 데이터를 준비하는 방법을 알아봅니다.
 
-데이터는 정리되어 있지 않고 흩어져 있는 경우가 많습니다. 또한, ML.NET 기계 학습 알고리즘에서는 단일 숫자 벡터 형식의 입력 또는 기능을 예상합니다. 따라서 데이터를 준비하는 목적 중 하나가 ML.NET 알고리즘에서 예상하는 형식으로 데이터를 가져오는 것입니다. 
+데이터는 정리되어 있지 않고 흩어져 있는 경우가 많습니다. ML.NET 기계 학습 알고리즘에서는 단일 숫자 벡터 형식의 입력 또는 기능을 예상합니다. 마찬가지로 예측할 값(레이블), 특히 범주 데이터의 경우에는 인코딩해야 합니다. 따라서 데이터를 준비하는 목적 중 하나가 ML.NET 알고리즘에서 예상하는 형식으로 데이터를 가져오는 것입니다. 
 
 ## <a name="filter-data"></a>데이터 필터링
 

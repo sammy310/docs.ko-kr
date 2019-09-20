@@ -1,14 +1,16 @@
 ---
 title: 파일 및 기타 소스에서 데이터 로드
 description: 여기에서는 ML.NET에서의 처리 및 학습을 위해 데이터를 로드하는 방법을 보여 줍니다. 데이터는 원래 파일이나 데이터베이스, JSON, XML 또는 메모리 내 컬렉션 등의 다른 데이터 원본에 저장됩니다.
-ms.date: 08/01/2019
+ms.date: 09/11/2019
+author: luisquintanilla
+ms.author: luquinta
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: d5f3aab14a60a8c9860dc67f1cc98f3b1b3188ed
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 4008f38bf4a20113a3f5c865e38222e5b82f2acc
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733356"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991356"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>파일 및 기타 소스에서 데이터 로드
 
@@ -31,7 +33,7 @@ public class HousingData
 {
     [LoadColumn(0)]
     public float Size { get; set; }
- 
+
     [LoadColumn(1, 3)]
     [VectorType(3)]
     public float[] HistoricalPrices { get; set; }
@@ -51,7 +53,8 @@ public class HousingData
 > [!IMPORTANT]
 > [`LoadColumn`](xref:Microsoft.ML.Data.LoadColumnAttribute)은 파일에서 데이터를 로드할 때만 필요합니다.
 
-다음과 같이 열을 로드합니다. 
+다음과 같이 열을 로드합니다.
+
 - `HousingData` 클래스에서 `Size` 및 `CurrentPrices` 같은 개별 열
 - `HousingData` 클래스에서 `HistoricalPrices` 같이 벡터 형식으로 한 번에 여러 열
 
@@ -102,13 +105,65 @@ TextLoader textLoader = mlContext.Data.CreateTextLoader<HousingData>(separatorCh
 IDataView data = textLoader.Load("DataFolder/SubFolder1/1.txt", "DataFolder/SubFolder2/1.txt");
 ```
 
+## <a name="load-data-from-a-relational-database"></a>관계형 데이터베이스에서 데이터 로드
+
+> [!NOTE]
+> DatabaseLoader는 현재 미리 보기로 제공됩니다. DatabaseLoader는 [Microsoft.ML.Experimental](https://www.nuget.org/packages/Microsoft.ML.Experimental/0.16.0-preview) 및 [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.6.1) NuGet 패키지를 참조하여 사용할 수 있습니다.
+
+ML.NET은 SQL Server, Azure Database, Oracle, SQLite, PostgreSQL, Progress, IBM DB2 등 [`System.Data`](xref:System.Data)가 지원하는 다양한 관계형 데이터베이스에서의 데이터 로드를 지원합니다.
+
+`House`라는 테이블과 다음 스키마가 포함된 데이터베이스가 있는 경우:
+
+```SQL
+CREATE TABLE [House] (
+    [HouseId] int NOT NULL IDENTITY,
+    [Size] real NOT NULL,
+    [Price] real NOT NULL
+    CONSTRAINT [PK_House] PRIMARY KEY ([HouseId])
+);
+```
+
+데이터는 `HouseData` 같은 클래스로 모델링할 수 있습니다.
+
+```csharp
+public class HouseData
+{
+    public float Size { get; set; }
+
+    public float Price { get; set; }
+}
+```
+
+그런 다음 애플리케이션 내에서 `DatabaseLoader`를 만듭니다.
+
+```csharp
+MLContext mlContext = new MLContext();
+
+DatabaseLoader loader = mlContext.Data.CreateDatabaseLoader<HouseData>();
+```
+
+연결 문자열과 데이터베이스에서 실행할 SQL 명령을 정의하고 `DatabaseSource` 인스턴스를 만듭니다. 이 샘플에서는 파일 경로가 포함된 LocalDB SQL Server 데이터베이스를 사용합니다. 다만 DatabaseLoader는 온-프레미스 및 클라우드의 데이터베이스에 대한 다른 유효한 연결 문자열은 지원합니다.
+
+```csharp
+string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=<YOUR-DB-FILEPATH>;Database=<YOUR-DB-NAME>;Integrated Security=True;Connect Timeout=30";
+
+string sqlCommand = "SELECT Size,Price FROM House";
+
+DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance,connectionString,sqlCommand);
+```
+
+마지막으로 `Load` 메서드를 사용하여 데이터를 [`IDataView`](xref:Microsoft.ML.IDataView)에 로드합니다.
+
+```csharp
+IDataView data = loader.Load(dbSource);
+```
+
 ## <a name="load-data-from-other-sources"></a>다른 소스에서 데이터 로드
 
 파일에 저장된 데이터를 로드하는 것 외에도, ML.NET은 다음을 포함하지만 이에 국한되지 않는 소스에서 데이터 로드를 지원합니다.
 
 - 메모리 내 컬렉션
 - JSON/XML
-- Databases
 
 스트리밍 원본을 사용할 때는 ML.NET이 메모리 내 컬렉션 형태의 입력을 기대합니다. 따라서 JSON/XML 등의 원본을 사용할 때는 데이터 형식이 메모리 내 컬렉션이 되게 합니다.
 
@@ -141,7 +196,7 @@ HousingData[] inMemoryCollection = new HousingData[]
 [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) 메서드로 메모리 내 컬렉션을 [`IDataView`](xref:Microsoft.ML.IDataView)에 로드합니다.
 
 > [!IMPORTANT]
-> [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*)에서는 로드하는 [`IEnumerable`](xref:System.Collections.IEnumerable)이 스레드로부터 안전하다고 가정합니다. 
+> [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*)에서는 로드하는 [`IEnumerable`](xref:System.Collections.IEnumerable)이 스레드로부터 안전하다고 가정합니다.
 
 ```csharp
 // Create MLContext

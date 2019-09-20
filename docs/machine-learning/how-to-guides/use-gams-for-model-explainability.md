@@ -3,17 +3,17 @@ title: 모델 설명을 위해 일반화된 추가 모델 및 도형 함수 사�
 description: ML.NET에서 모델 설명을 위해 일반화된 추가 모델 및 형상 함수 사용
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: ef56f737a2ad0cba616e32229ac3a395146fb6d2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c58cf823007196c35da093fab7423c1e40ba1158
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662125"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855607"
 ---
 # <a name="use-generalized-additive-models-and-shape-functions-for-model-explainability-in-mlnet"></a>ML.NET에서 모델 설명을 위해 일반화된 추가 모델 및 형상 함수 사용
 
 > [!NOTE]
-> 이 항목은 현재 미리 보기로 제공되는 ML.NET을 참조하며, 자료는 변경될 수 있습니다. 자세한 내용은 [ML.NET 소개](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)를 참조하세요.
+> 이 항목은 현재 미리 보기로 제공되는 ML.NET을 참조하며, 자료는 변경될 수 있습니다. 자세한 내용은 [ML.NET](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet) 페이지를 참조하세요.
 
 이 방법과 관련 샘플에서는 현재 **ML.NET 버전 0.10**을 사용하고 있습니다. 자세한 내용은 [dotnet/machinelearning GitHub 리포지토리](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)에서 릴리스 정보를 참조하세요.
 

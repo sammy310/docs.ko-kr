@@ -9,12 +9,12 @@ helpviewer_keywords:
 - assemblies [C#], compiling
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
-ms.openlocfilehash: 0630639433aed4c8dfddbf0144e9802ed3f4ee73
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 073660fa732c04cdc987af5617b894a277ebcc0f
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606441"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970122"
 ---
 # <a name="-target-c-compiler-options"></a>-target(C# 컴파일러 옵션)
 **-target** 컴파일러 옵션은 다음 네 가지 형태 중 하나로 지정할 수 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "69606441"
  [/target:winmdobj](./target-winmdobj-compiler-option.md)  
  중간 .winmdobj 파일을 만듭니다.  
   
- **-target:module**을 지정하지 않으면 **-target**은 .NET Framework 어셈블리 매니페스트가 출력 파일에 배치되도록 합니다. 자세한 내용은 [공용 언어 런타임의 어셈블리](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md) 및 [공통 특성](../../programming-guide/concepts/attributes/common-attributes.md)을 참조하세요.  
+ **-target:module**을 지정하지 않으면 **-target**은 .NET Framework 어셈블리 매니페스트가 출력 파일에 배치되도록 합니다. 자세한 내용은 [.NET의 어셈블리](../../../standard/assembly/index.md) 및 [공통 특성](../../programming-guide/concepts/attributes/common-attributes.md)을 참조하세요.  
   
  어셈블리 매니페스트는 컴파일의 첫 번째 .exe 출력 파일 또는 .exe 출력 파일이 없는 경우 첫 번째 DLL에 배치됩니다. 예를 들어 다음 명령줄에서 매니페스트는 `1.exe`에 배치됩니다.  
   

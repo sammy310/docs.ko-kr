@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 20d403e4a6410257068cc3414fcb8dc1e45709e9
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3638deeafc052a2da3b438de2c504a9955a15ad3
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666871"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895265"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic의 새로운 기능
 
@@ -21,9 +21,12 @@ ms.locfileid: "69666871"
 
 ## <a name="current-version"></a>현재 버전
 
-Visual Basic 15.8 / Visual Studio 2017 버전 15.8 새 기능에 대해서는 [Visual Basic 15.8](#visual-basic-158) 참조
+Visual Basic 16.0 / Visual Studio 2019 버전 16.0  
+새로운 기능은 [Visual Basic 16.0](#visual-basic-160)을 참조하세요.
 
 ## <a name="previous-versions"></a>이전 버전
+
+Visual Basic 15.8 / Visual Studio 2017 버전 15.8 새 기능에 대해서는 [Visual Basic 15.8](#visual-basic-158) 참조
 
 Visual Basic 15.5 / Visual Studio 2017 버전 15.5 새 기능에 대해서는 [Visual Basic 15.5](#visual-basic-155) 참조
 
@@ -46,6 +49,21 @@ Visual Basic / Visual Studio 2005 `My` 형식 및 도우미 형식(앱, 컴퓨�
 Visual Basic / Visual Studio .NET 2003 비트 시프트 연산자, 루프 변수 선언
 
 Visual Basic / Visual Studio .NET 2002 Visual Basic .NET의 첫 번째 릴리스
+
+## <a name="visual-basic-160"></a>Visual Basic 16.0
+Visual Basic 16.0은 .NET Core에 더 많은 Visual Basic 런타임 기능(microsoft.visualbasic.dll)을 제공하는 데 초점을 맞추며, .NET Core에 초점을 맞춘 Visual Basic의 첫 번째 버전입니다. Visual Basic 런타임의 많은 부분은 WinForms에 종속되며, 이후 버전의 Visual Basic에 추가될 예정입니다. 
+
+**문 내의 더 많은 위치에서 주석 허용** Visual Basic 15.8 및 이전 버전에서는 빈 줄, 문의 끝 또는 암시적 줄 연속이 허용되는 문 내의 특정 위치에서만 주석이 허용됩니다. Visual Basic 16.0부터 명시적 줄 연속 뒤와 공백 다음 밑줄로 시작하는 줄의 문 내에서도 주석이 허용됩니다.
+
+```vb
+Public Sub Main()
+    cmd.CommandText = ' Comment is allowed here without _
+        "SELECT * FROM Titles JOIN Publishers " _ ' This is a comment
+        & "ON Publishers.PubId = Titles.PubID " _
+ _ ' This is a comment on a line without code
+        & "WHERE Publishers.State = 'CA'"
+End Sub
+```
 
 ## <a name="visual-basic-158"></a>Visual Basic 15.8
 

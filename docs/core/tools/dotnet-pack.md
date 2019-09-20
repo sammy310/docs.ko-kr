@@ -1,17 +1,21 @@
 ---
 title: dotnet pack 명령
 description: dotnet pack 명령은 .NET Core 프로젝트에 대한 NuGet 패키지를 만듭니다.
-ms.date: 12/04/2018
-ms.openlocfilehash: c5c00f3bb06e5bc5579c0d3d6bdd39fbdf3db656
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.date: 08/08/2019
+ms.openlocfilehash: ba5a438d58963222c3fa55d2c585ef503dcd49db
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202849"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990416"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
+**이 항목 적용 대상: ✓** .NET Core 1.x SDK 이상 버전
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>name
 
@@ -19,27 +23,21 @@ ms.locfileid: "70202849"
 
 ## <a name="synopsis"></a>개요
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```console
-dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
-    [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
+dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--interactive] 
+    [--no-build] [--no-dependencies] [--no-restore] [--nologo] [-o|--output] [--runtime] [-s|--serviceable] 
+    [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```console
-dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output]
-    [-s|--serviceable] [-v|--verbosity] [--version-suffix]
-dotnet pack [-h|--help]
-```
-
----
 
 ## <a name="description"></a>설명
 
-`dotnet pack` 명령은 프로젝트를 빌드하고 NuGet 패키지를 만듭니다. 이 명령의 결과가 NuGet 패키지입니다. `--include-symbols` 옵션이 있는 경우 디버그 기호를 포함하는 다른 패키지가 생성됩니다.
+`dotnet pack` 명령은 프로젝트를 빌드하고 NuGet 패키지를 만듭니다. 이 명령의 결과가 NuGet 패키지(즉, *.nupkg* 파일)입니다. 
+
+디버그 기호를 포함하는 패키지를 만들려면 다음 두 가지 옵션을 사용할 수 있습니다.
+
+- `--include-symbols` - 기호 패키지를 만듭니다.
+- `--include-source` - 내부에 원본 파일이 포함된 `src` 폴더가 있는 기호 패키지를 만듭니다.
 
 압축된 프로젝트의 NuGet 종속성은 *.nuspec* 파일에 추가되므로 패키지를 설치할 때 적절히 확인됩니다. 프로젝트 간 참조는 프로젝트 내에서 패키지되지 않습니다. 현재 프로젝트 간 종속성이 있는 경우 프로젝트당 패키지가 있어야 합니다.
 
@@ -59,13 +57,11 @@ dotnet pack [-h|--help]
 
 ## <a name="arguments"></a>인수
 
-* **`PROJECT`**
+`PROJECT | SOLUTION`
 
-  압축할 프로젝트입니다. [csproj file](csproj.md) 파일 또는 디렉터리에 대한 경로입니다. 지정하지 않으면 현재 디렉터리로 기본 설정됩니다.
+  압축할 프로젝트 또는 솔루션입니다. [csproj 파일](csproj.md), 솔루션 파일 또는 디렉터리의 경로입니다. 지정하지 않으면 이 명령은 현재 디렉터리에서 프로젝트 또는 솔루션 파일을 검색합니다.
 
 ## <a name="options"></a>옵션
-
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 * **`-c|--configuration {Debug|Release}`**
 
@@ -73,7 +69,7 @@ dotnet pack [-h|--help]
 
 * **`--force`**
 
-  마지막 복원이 성공한 경우에도 모든 종속성을 강제 확인합니다. 이 플래그를 지정하는 것은 *project.assets.json* 파일을 삭제하는 것과 같습니다.
+  마지막 복원이 성공한 경우에도 모든 종속성을 강제 확인합니다. 이 플래그를 지정하는 것은 *project.assets.json* 파일을 삭제하는 것과 같습니다. .NET Core 2.0 SDK 이후 사용할 수 있는 옵션입니다.
 
 * **`-h|--help`**
 
@@ -81,11 +77,15 @@ dotnet pack [-h|--help]
 
 * **`--include-source`**
 
-  NuGet 패키지에 소스 파일을 포함합니다. 소스 파일은 `nupkg`의 `src` 폴더에 있습니다.
+  출력 디렉터리에 일반 NuGet 패키지 외에 디버그 기호 NuGet 패키지를 포함합니다. 원본 파일은 기호 패키지 내 `src` 폴더에 있습니다.
 
 * **`--include-symbols`**
 
-  기호 `nupkg`를 생성합니다.
+  출력 디렉터리에 일반 NuGet 패키지 외에 디버그 기호 NuGet 패키지를 포함합니다.
+
+* **`--interactive`**
+
+  명령이 중지되고 사용자 입력 또는 작업을 대기할 수 있도록 허용합니다(예: 인증 완료). .NET Core 3.0 SDK 이후 사용할 수 있습니다.
 
 * **`--no-build`**
 
@@ -93,11 +93,15 @@ dotnet pack [-h|--help]
 
 * **`--no-dependencies`**
 
-  프로젝트 간 참조를 무시하고 루트 프로젝트만 복원합니다.
+  프로젝트 간 참조를 무시하고 루트 프로젝트만 복원합니다. .NET Core 2.0 SDK 이후 사용할 수 있는 옵션입니다.
 
 * **`--no-restore`**
 
-  명령을 실행할 때 암시적 복원을 실행하지 않습니다.
+  명령을 실행할 때 암시적 복원을 실행하지 않습니다. .NET Core 2.0 SDK 이후 사용할 수 있는 옵션입니다.
+
+* **`--nologo`**
+
+  시작 배너 또는 저작권 메시지를 표시하지 않습니다. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
@@ -105,7 +109,7 @@ dotnet pack [-h|--help]
 
 * **`--runtime <RUNTIME_IDENTIFIER>`**
 
-  패키지를 복원할 대상 런타임을 지정합니다. RID(런타임 식별자) 목록은 [RID 카탈로그](../rid-catalog.md)를 참조하세요.
+  패키지를 복원할 대상 런타임을 지정합니다. RID(런타임 식별자) 목록은 [RID 카탈로그](../rid-catalog.md)를 참조하세요. .NET Core 2.0 SDK 이후 사용할 수 있는 옵션입니다.
 
 * **`-s|--serviceable`**
 
@@ -118,46 +122,6 @@ dotnet pack [-h|--help]
 * **`-v|--verbosity <LEVEL>`**
 
   명령의 세부 정보 표시 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다.
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-* **`-c|--configuration {Debug|Release}`**
-
-  빌드 구성을 정의합니다. 기본값은 `Debug`입니다.
-
-* **`-h|--help`**
-
-  명령에 대한 간단한 도움말을 출력합니다.
-
-* **`--include-source`**
-
-  NuGet 패키지에 소스 파일을 포함합니다. 소스 파일은 `nupkg`의 `src` 폴더에 있습니다.
-
-* **`--include-symbols`**
-
-  기호 `nupkg`를 생성합니다.
-
-* **`--no-build`**
-
-  압축하기 전에 프로젝트를 빌드하지 않습니다.
-
-* **`-o|--output <OUTPUT_DIRECTORY>`**
-
-  지정된 디렉터리에 빌드된 패키지를 배치합니다.
-
-* **`-s|--serviceable`**
-
-  패키지에 서비스 가능 플래그를 설정합니다. 자세한 내용은 [.NET 블로그: .NET 4.5.1에서 .NET NuGet 라이브러리에 대한 Microsoft 보안 업데이트를 지원함](https://aka.ms/nupkgservicing)을 참조하세요.
-
-* **`--version-suffix <VERSION_SUFFIX>`**
-
-  프로젝트에서 `$(VersionSuffix)` MSBuild 속성에 대한 값을 정의합니다.
-
-* **`-v|--verbosity <LEVEL>`**
-
-  명령의 세부 정보 표시 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다.
-
----
 
 ## <a name="examples"></a>예제
 
@@ -212,5 +176,5 @@ dotnet pack [-h|--help]
 * [.nuspec 파일](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec)을 사용하여 프로젝트를 압축합니다.
 
   ```console
-  dotnet pack ~/projects/app1/project.csproj /p:NuspecFile=~/projects/app1/project.nuspec /p:NuspecBasePath=~/projects/app1/nuget
+  dotnet pack ~/projects/app1/project.csproj -p:NuspecFile=~/projects/app1/project.nuspec -p:NuspecBasePath=~/projects/app1/nuget
   ```

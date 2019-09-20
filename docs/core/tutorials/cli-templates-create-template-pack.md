@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: df8c33856195ba7feacd32203e4a885997b50ad2
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
+ms.openlocfilehash: 4bd51f579231b13b0831ef7114c2a648c55cd6a2
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67870632"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926075"
 ---
 # <a name="tutorial-create-a-template-pack"></a>자습서: 템플릿 팩 만들기
 
@@ -19,7 +19,8 @@ ms.locfileid: "67870632"
 시리즈의 3부에서는 다음 방법에 대해 알아봅니다.
 
 > [!div class="checklist"]
-> * _.csproj* 프로젝트를 만들어 템플릿 팩 빌드
+>
+> * \*.csproj 프로젝트를 만들어 템플릿 팩 빌드
 > * 압축을 위해 프로젝트 파일 구성
 > * NuGet 패키지 파일에서 템플릿 설치
 > * 패키지 ID로 템플릿 제거

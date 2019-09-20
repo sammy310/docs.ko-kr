@@ -1,13 +1,13 @@
 ---
 title: C# 8.0의 새로운 기능 - C# 가이드
 description: C# 8.0의 새로운 기능을 살펴봅니다. 이 문서는 미리 보기 5가 반영된 최신 내용을 담고 있습니다.
-ms.date: 09/04/2019
-ms.openlocfilehash: b281c55a5911d81503a6af80e393469be1124280
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.date: 09/10/2019
+ms.openlocfilehash: 141f7a2fa0bc5f6a2a253e196a218938dd4c170e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374005"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926521"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0의 새로운 기능
 
@@ -26,6 +26,7 @@ C# 언어에는 직접 사용해 볼 수 있는 여러 개선된 기능이 포�
 - [nullable 참조 형식](#nullable-reference-types)
 - [비동기 스트림](#asynchronous-streams)
 - [인덱스 및 범위](#indices-and-ranges)
+- [null 병합 할당](#null-coalescing-assignment)
 - [관리되지 않는 생성 형식](#unmanaged-constructed-types)
 - [보간된 약어 문자열의 향상된 기능](#enhancement-of-interpolated-verbatim-strings)
 
@@ -447,6 +448,24 @@ var text = words[phrase];
 ```
 
 인덱스와 범위에 대한 자세한 내용은 [인덱스 및 범위](../tutorials/ranges-indexes.md)에 대한 자습서에서 확인할 수 있습니다.
+
+## <a name="null-coalescing-assignment"></a>null 병합 할당
+
+C# 8.0에서 null 병합 할당 연산자 `??=`가 도입되었습니다. `??=` 연산자를 사용하여 왼쪽 피연산자가 `null`로 계산되는 경우에만 오른쪽 피연산자의 값을 왼쪽 피연산자에 대입할 수 있습니다.
+
+```csharp
+List<int> numbers = null;
+int? i = null;
+
+numbers ??= new List<int>();
+numbers.Add(i ??= 17);
+numbers.Add(i ??= 20);
+
+Console.WriteLine(string.Join(' ', numbers));  // output: 17 17
+Console.WriteLine(i);  // output: 17
+```
+
+자세한 내용은 [?? 및 ??= 연산자](../language-reference/operators/null-coalescing-operator.md) 문서를 참조하세요.
 
 ## <a name="unmanaged-constructed-types"></a>관리되지 않는 생성 형식
 

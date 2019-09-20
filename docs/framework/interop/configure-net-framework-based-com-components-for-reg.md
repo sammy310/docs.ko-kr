@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8f78e926835e86fdc20da5e4e1bc66c4b6ab1a2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: baabff187fb8a22aea37c4fb4c1dc11a680d3bb8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625446"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853846"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>방법: 등록이 필요 없는 활성화를 위한 .NET Framework 기반 COM 구성 요소 구성
 .NET Framework 기반 구성 요소에 대한 등록 없는 활성화는 COM 구성 요소보다 약간 더 복잡합니다. 설치 프로그램에 다음 두 개의 매니페스트가 필요합니다.  
@@ -166,11 +166,9 @@ ms.locfileid: "64625446"
   
 3. 어셈블리의 소스 파일을 다시 컴파일하고 **/win32res** 옵션을 사용하여 리소스 파일을 지정합니다.  
   
-    ```  
-    /win32res:myresource.res  
-    ```  
+    `/win32res:myresource.res`  
   
-     다시, `myresource.res`는 포함 리소스를 있는 리소스 파일의 이름입니다.  
+     이번에도 `myresource.res`는 포함 리소스를 포함하는 리소스 파일의 이름입니다.  
   
 ## <a name="see-also"></a>참고 항목
 

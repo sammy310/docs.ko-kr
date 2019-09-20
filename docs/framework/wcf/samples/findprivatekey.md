@@ -64,7 +64,7 @@ cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto
 
  "\<*value*>"는 입력할 매개 변수 값을 나타냅니다.
 
-## <a name="usage"></a>사용법
+## <a name="usage"></a>사용
 
 ```console
 FindPrivateKey <storeName> <storeLocation> [{ {-n <subjectName>} | {-t <thumbprint>} } [-f | -d | -a]]

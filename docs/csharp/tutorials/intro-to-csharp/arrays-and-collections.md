@@ -3,18 +3,18 @@ title: 컬렉션 작업 - C# 소개 자습서
 description: 이 자습서에서는 목록 컬렉션을 살펴보면서 C#에 대해 학습합니다.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: 160e34ddb529a8515a08d6aab838ba107936c616
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 8db9f0acc69efdb89c276f9bee5e095c7920ffc6
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587262"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850872"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>일반 목록 형식을 사용하여 데이터 컬렉션을 관리하는 방법 알아보기
 
 이 소개 자습서에서는 C# 언어 및 <xref:System.Collections.Generic.List%601> 클래스의 기본 사항을 소개합니다.
 
-이 자습서에서는 개발에 사용할 수 있는 머신이 있다고 예상합니다. .NET 항목 [Get Started in 10 minutes](https://www.microsoft.com/net/core)(10분 안에 시작)에는 Mac, PC 또는 Linux의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다. 사용할 명령에 대한 간단한 개요는 [개발 도구 익히기](local-environment.md)에 자세한 정보의 링크와 함께 나와 있습니다.
+이 자습서에서는 개발에 사용할 수 있는 머신이 있다고 예상합니다. .NET 자습서 [Hello World 10분 완성](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)에는 Mac, PC 또는 Linux의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다. 사용할 명령에 대한 간단한 개요는 [개발 도구 익히기](local-environment.md)에 자세한 정보의 링크와 함께 나와 있습니다.
 
 ## <a name="a-basic-list-example"></a>기본 목록 예제
 

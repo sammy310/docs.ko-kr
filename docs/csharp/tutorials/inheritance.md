@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 644e0bb281525fad12e263b31263bb9caba149f0
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 41377cb47836624160a5b402e0a85270b68eba4f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463815"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850992"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 및 .NET의 상속
 
@@ -18,7 +18,7 @@ ms.locfileid: "58463815"
 
 ## <a name="prerequisites"></a>전제 조건
 
-이 자습서에서는 .NET Core를 설치했다고 가정합니다. 설치 지침은 [.NET Core 설치 가이드](https://www.microsoft.com/net/core)를 참조하세요. 코드 편집기도 필요합니다. 원하는 어떤 코드 편집기도 사용 가능하지만 이 자습서에서는 [Visual Studio Code](https://code.visualstudio.com)를 사용합니다.
+이 자습서에서는 .NET Core SDK를 설치했다고 가정합니다. 다운로드하려면 [.NET Core 다운로드](https://dotnet.microsoft.com/download) 페이지를 방문하세요. 코드 편집기도 필요합니다. 원하는 어떤 코드 편집기도 사용 가능하지만 이 자습서에서는 [Visual Studio Code](https://code.visualstudio.com)를 사용합니다.
 
 ## <a name="running-the-examples"></a>예제 실행
 

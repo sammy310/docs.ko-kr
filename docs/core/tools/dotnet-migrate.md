@@ -1,28 +1,21 @@
 ---
 title: dotnet migrate 명령
 description: dotnet migrate 명령은 프로젝트와 모든 종속성을 마이그레이션합니다.
-ms.date: 06/26/2019
-ms.openlocfilehash: 86f11592e774da12b010886aaa1e30cee063fea6
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.date: 08/08/2019
+ms.openlocfilehash: 790c607070ff348ca7cfe30137268de18dcb0293
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202531"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990424"
 ---
 # <a name="dotnet-migrate"></a>dotnet 마이그레이션
 
-**이 항목 적용 대상: ✓** .NET Core 1.x SDK 이상 버전
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**이 문서 적용 대상: ✓** .NET Core 1.x SDK **✓** .NET Core 2.x SDK
 
 ## <a name="name"></a>name
 
 `dotnet migrate` - Preview 2 .NET Core 프로젝트를 .NET Core SDK 스타일 프로젝트로 마이그레이션합니다.
-
-> [!NOTE]
-> `dotnet migrate`는 다음 미리 보기 릴리스의 .NET Core 3.0 SDK에서 제거됩니다.
 
 ## <a name="synopsis"></a>개요
 
@@ -49,6 +42,8 @@ dotnet migrate [-h|--help]
 기본적으로 마이그레이션 작업은 표준 출력(STDOUT)에 마이그레이션 프로세스의 상태를 출력합니다. `--report-file <REPORT_FILE>` 옵션을 사용하는 경우 출력이 지정된 파일에 저장됩니다.
 
 `dotnet migrate` 명령은 유효한 Preview 2 *project.json* 기반 프로젝트만 지원합니다. 즉, DNX 또는 Preview 1 *project.json* 기반 프로젝트를 MSBuild/csproj 프로젝트에 직접 마이그레이션하는 데는 사용할 수 없습니다. 먼저 수동으로 프로젝트를 Preview 2 *project.json* 기반 프로젝트로 마이그레이션한 다음 `dotnet migrate` 명령을 사용하여 프로젝트를 마이그레이션해야 합니다.
+
+`dotnet migrate` 명령은 .NET Core 3.0 SDK부터 더 이상 사용할 수 없습니다.
 
 ## <a name="arguments"></a>인수
 
