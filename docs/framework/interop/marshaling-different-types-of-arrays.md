@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 358c7f1a339fd473271574a4e97e201f5c15f871
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
-ms.translationtype: HT
+ms.openlocfilehash: 8cbc904b56237d3c875566ee1276c121dae70c4c
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894171"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151750"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>여러 형식의 배열 마샬링
 배열은 동일한 형식의 요소를 하나 이상 포함하는 관리 코드의 참조 형식입니다. 배열은 참조 형식이지만 관리되지 않는 함수에 In 매개 변수로 전달됩니다. 이 동작은 관리되는 배열이 관리되는 개체에 전달되는 방식(In/Out 매개 변수로)과 일치하지 않습니다. 자세한 내용은 [복사 및 고정](copying-and-pinning.md)을 참조하세요.  
@@ -31,7 +31,7 @@ ms.locfileid: "70894171"
 |정수를 포함하는 구조체.|정수를 포함하는 구조체 배열을 In 매개 변수로 전달합니다.|  
 |문자열을 포함하는 구조체.|문자열만 포함하는 구조체 배열을 In/Out 매개 변수로 전달합니다. 배열의 멤버를 변경할 수 있습니다.|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 샘플에서는 다음 형식의 배열을 전달하는 방법을 보여 줍니다.  
   
 - 값 형식 정수 배열  
@@ -104,7 +104,7 @@ typedef struct _MYPERSON
   
  이 샘플에서 `MyPoint` 및 `MyPerson` 구조체에는 포함된 형식이 있습니다. <xref:System.Runtime.InteropServices.StructLayoutAttribute> 특성이 설정되어 멤버가 표시되는 순서대로 순차적으로 메모리에 정렬되게 합니다.  
   
- `LibWrap` 클래스에는 `App` 클래스가 호출하는 메서드 집합이 포함됩니다. 배열을 전달하는 방법에 대한 자세한 내용은 다음 샘플의 설명을 참조하세요. 참조 형식인 배열은 기본적으로 In 매개 변수로 전달됩니다. 호출자가 결과를 받으려면 배열을 포함하는 인수에 **InAttribute** 및 **OutAttribute** 를 명시적으로 적용해야 합니다.  
+ `NativeMethods` 클래스에는 `App` 클래스가 호출하는 메서드 집합이 포함됩니다. 배열을 전달하는 방법에 대한 자세한 내용은 다음 샘플의 설명을 참조하세요. 참조 형식인 배열은 기본적으로 In 매개 변수로 전달됩니다. 호출자가 결과를 받으려면 배열을 포함하는 인수에 **InAttribute** 및 **OutAttribute** 를 명시적으로 적용해야 합니다.  
   
 ### <a name="declaring-prototypes"></a>프로토타입 선언  
  [!code-csharp[Conceptual.Interop.Marshaling#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#31)]

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 5113de6d8d333983e6e26579ff9803a9f5a62816
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: ab6ff2ba6e0f3f1ea9e34de80b67276a990bc83b
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254169"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151840"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType 레지스트리 설정
 이 항목에서는 WPF 응용 프로그램에서 사용 되는 Microsoft ClearType 레지스트리 설정에 대 한 개요를 제공 합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "70254169"
 ## <a name="registry-settings"></a>레지스트리 설정  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ClearType 기능을 제어 하기 위한 네 가지 레지스트리 설정을 지정 합니다.  
   
-|설정|Description|  
+|설정|설명|  
 |-------------|-----------------|  
 |ClearType 수준|ClearType 색의 명확성 수준을 설명 합니다.|  
 |감마 수준|디스플레이 디바이스의 픽셀 색 구성 요소 수준을 설명합니다.|  
@@ -63,7 +63,7 @@ ms.locfileid: "70254169"
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>감마 수준  
- 감마 수준은 픽셀 값과 광도 사이의 비선형 관계를 가리킵니다. 감마 수준 설정은 디스플레이 디바이스의 물리적 특성과 일치해야 합니다. 그렇지 않으면 렌더링된 출력에서 왜곡이 발생할 수 있습니다. 예를 들어 테스트가 너무 넓거나 너무 좁게 나타나거나 문자 모양의 세로 획 가장자리에 색 주름이 나타날 수 있습니다.  
+ 감마 수준은 픽셀 값과 광도 사이의 비선형 관계를 가리킵니다. 감마 수준 설정은 디스플레이 디바이스의 물리적 특성과 일치해야 합니다. 그렇지 않으면 렌더링된 출력에서 왜곡이 발생할 수 있습니다. 예를 들어 텍스트가 너무 크거나 너무 좁게 표시 되거나 문자 모양에 대 한 세로 fringes의 가장자리에 색이 나타날 수 있습니다.  
   
  감마 수준은 1,000에서 2,200까지의 정수 값입니다. 기본 수준은 1,900입니다.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "70254169"
   
  ![레지스트리 편집기의 ClearType 설정](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [ClearType 개요](cleartype-overview.md)
 - [ClearType 앤티 앨리어싱](/windows/desktop/gdi/cleartype-antialiasing)
