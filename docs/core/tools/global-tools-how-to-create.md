@@ -4,12 +4,12 @@ description: 전역 도구를 만드는 방법을 설명합니다. 전역 도구
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: f60e26d14e89b6b7c34b32bf9a114fe4ad691981
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 5c2b1e459f0308f5f96eb041c10f4d7a7ae0ca20
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202761"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117449"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>.NET Core CLI를 사용하여 .NET Core 전역 도구 만들기
 
@@ -23,7 +23,7 @@ ms.locfileid: "70202761"
 
 예제 도구는 ASCII 봇을 생성하고 메시지를 인쇄하는 콘솔 애플리케이션입니다. 먼저 새 .NET Core 콘솔 애플리케이션을 만듭니다.
 
-```console
+```dotnetcli
 dotnet new console -o botsay
 ```
 
@@ -117,7 +117,7 @@ static void ShowBot(string message)
 
 프로젝트를 실행하고 출력을 확인합니다. 다른 결과를 보려면 명령줄에서 다음 변형을 시도해 보세요.
 
-```csharp
+```dotnetcli
 dotnet run
 dotnet run -- "Hello from the bot"
 dotnet run -- hello from the bot
@@ -158,7 +158,7 @@ dotnet run -- hello from the bot
 
 그런 다음, 애플리케이션용 NuGet 패키지를 만듭니다.
 
-```console
+```dotnetcli
 dotnet pack
 ```
 
@@ -166,7 +166,7 @@ dotnet pack
 
 이제 패키지가 있으므로 해당 패키지에서 도구를 설치합니다.
 
-```console
+```dotnetcli
 dotnet tool install --global --add-source ./nupkg botsay
 ```
 
@@ -188,6 +188,6 @@ Tool 'botsay' (version '1.0.0') was successfully installed.
 
 도구를 사용한 실험을 완료하면 다음 명령을 사용하여 도구를 제거할 수 있습니다.
 
-```console
+```dotnetcli
 dotnet tool uninstall -g botsay
 ```

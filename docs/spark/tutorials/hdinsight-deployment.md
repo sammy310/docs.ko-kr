@@ -4,12 +4,12 @@ description: HDInsight에 .NET for Apache Spark 애플리케이션을 배포하�
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 9da0e0fd83d70887109c63a5e95ec0b0b31a2edd
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 2e8da5497035a83fde75bf91a7d21437d510b480
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928476"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117976"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Azure HDInsight에 .NET for Apache Spark 애플리케이션 배포
 
@@ -49,7 +49,7 @@ ms.locfileid: "70928476"
 
    Linux에서 다음 명령을 실행할 수 있습니다.
 
-   ```bash
+   ```dotnetcli
    dotnet publish -c Release -f netcoreapp2.1 -r ubuntu.16.04-x64
    ```
 

@@ -3,12 +3,12 @@ title: dotnet nuget push 명령
 description: dotnet nuget push 명령은 서버에 패키지를 푸시하고 게시합니다.
 author: karann-msft
 ms.date: 06/26/2019
-ms.openlocfilehash: 87557f606dead921961349fec4575394e6d359fd
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3299f79ec62aebdcdbef38f1e8b09a2dc5529ec4
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202554"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117497"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -24,7 +24,7 @@ ms.locfileid: "70202554"
 
 ## <a name="synopsis"></a>개요
 
-```console
+```dotnetcli
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [--interactive] [-k|--api-key] [-n|--no-symbols]
     [--no-service-endpoint] [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
 dotnet nuget push [-h|--help]
@@ -90,37 +90,37 @@ dotnet nuget push [-h|--help]
 
 * 기본 푸시 소스에 *foo.nupkg*를 푸시하여 API 키를 지정합니다.
 
-  ```console
+  ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
   ```
 
 * 사용자 지정 푸시 소스 `https://customsource`에 *foo.nupkg*를 푸시하여 API 키를 지정합니다.
 
-  ```console
+  ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
   ```
 
 * 기본 푸시 소스 *foo.nupkg*를 푸시합니다.
 
-  ```console
+  ```dotnetcli
   dotnet nuget push foo.nupkg
   ```
 
 * 기본 기호 소스에 *foo.symbols.nupkg*를 푸시합니다.
 
-  ```console
+  ```dotnetcli
   dotnet nuget push foo.symbols.nupkg
   ```
 
 * 360초 시간 제한을 지정하여 기본 푸시 소스에 *foo.nupkg*를 푸시합니다.
 
-  ```console
+  ```dotnetcli
   dotnet nuget push foo.nupkg --timeout 360
   ```
 
 * 기본 푸시 소스에 현재 디렉터리에 있는 모든 *.nupkg* 파일을 푸시합니다.
 
-  ```console
+  ```dotnetcli
   dotnet nuget push *.nupkg
   ```
   

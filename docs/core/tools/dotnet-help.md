@@ -2,12 +2,12 @@
 title: dotnet help 명령
 description: dotnet help 명령은 지정된 명령에 대한 자세한 온라인 설명서를 표시합니다.
 ms.date: 08/08/2019
-ms.openlocfilehash: e76f858f2529afc50646473f1aab9d52730cff16
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 533f2c47fa7ec14d31368538092fec2490234820
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990471"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117718"
 ---
 # <a name="dotnet-help-reference"></a>dotnet help reference
 
@@ -45,6 +45,6 @@ ms.locfileid: "70990471"
 
 * [dotnet new](dotnet-new.md) 명령에 대한 설명서 페이지를 엽니다.
 
-  ```console
+  ```dotnetcli
   dotnet help new
   ```

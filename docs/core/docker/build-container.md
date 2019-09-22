@@ -4,12 +4,12 @@ description: 이 자습서에서는 Docker를 사용하여 .NET Core 애플리�
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: f0e0fad9bde4c35fb5c5b0b505b9fa8441e432ba
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 5e05fd2a38770ce348fbbfcfaa88267217b806bf
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926312"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116554"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>자습서: .NET Core 앱 컨테이너화
 
@@ -55,7 +55,7 @@ ms.locfileid: "70926312"
 
 Docker 컨테이너가 실행되는 .NET Core 앱이 필요합니다. 아직 없는 경우, 터미널을 열고 작업 폴더를 만든 후 입력합니다. 작업 폴더에서 다음 명령을 실행하여 app이라는 하위 디렉터리에서 새 프로젝트를 만듭니다.
 
-```console
+```dotnetcli
 dotnet new console -o app -n myapp
 ```
 
@@ -146,7 +146,7 @@ Docker 이미지에 .NET Core 앱을 추가하기 전에 해당 앱을 게시합
 
 작업 폴더에서 예제 소스 코드가 있는 **app** 폴더를 입력하고 다음 명령을 실행합니다.
 
-```console
+```dotnetcli
 dotnet publish -c Release
 ```
 

@@ -5,12 +5,12 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: e10f09d3f7146817770e74aa173f742322aafafc
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 4a9c24455136fe4ccd13379d05c16d6b7cbf85de
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926605"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117018"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>.NET Core에서 Microsoft XML Serializer Generator 사용
 
@@ -44,7 +44,7 @@ ms.locfileid: "70926605"
 
 명령 프롬프트를 열고 *MyApp*이라는 폴더를 만듭니다. 만든 폴더로 이동하고 다음 명령을 입력합니다.
 
-```console
+```dotnetcli
 dotnet new console
 ```
 
@@ -54,7 +54,7 @@ dotnet new console
 
 유형:
 
-```console
+```dotnetcli
 dotnet add package Microsoft.XmlSerializer.Generator -v 1.0.0
 ```
 
@@ -107,7 +107,7 @@ var serializer = new System.Xml.Serialization.XmlSerializer(typeof(MyClass));
 
 콘솔 창에 다음 명령을 입력합니다.
 
-```console
+```dotnetcli
 dotnet run
 ```
 

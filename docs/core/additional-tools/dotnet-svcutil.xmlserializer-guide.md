@@ -3,12 +3,12 @@ title: .NET Core에서 dotnet-svcutil.xmlserializer 사용
 description: '`dotnet-svcutil.xmlserializer` NuGet 패키지를 사용하여 .NET Core 프로젝트용 serialization 어셈블리를 미리 생성하는 방법을 알아봅니다.'
 author: huanwu
 ms.date: 11/27/2018
-ms.openlocfilehash: a98f8d30f2e37b722a3bf1f93be8fe9df540a468
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f1eebeb70206ce883a8e4e4bbd5216ae0ba5507c
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70848972"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117277"
 ---
 # <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a>.NET Core에서 dotnet-svcutil.xmlserializer 사용
 
@@ -39,7 +39,7 @@ ms.locfileid: "70848972"
 
 2. .NET Core 2.1 이상 버전을 대상으로 하는 WCF 클라이언트 애플리케이션으로 .NET Core 콘솔 애플리케이션을 만듭니다. 예를 들어, 다음 명령으로 'MyWCFClient'라는 앱을 만듭니다.
 
-    ```console
+    ```dotnetcli
     dotnet new console --name MyWCFClient
     ```
 
@@ -51,7 +51,7 @@ ms.locfileid: "70848972"
 
 3. 다음 명령을 실행하여 `System.ServiceModel.Http`에 패키지 참조를 추가합니다.
 
-    ```console
+    ```dotnetcli
     dotnet add package System.ServiceModel.Http
     ```
 
@@ -84,7 +84,7 @@ ms.locfileid: "70848972"
 
 5. 다음 명령을 실행하여 `dotnet-svcutil.xmlserializer` 패키지에 참조를 추가합니다.
   
-    ```console
+    ```dotnetcli
     dotnet add package dotnet-svcutil.xmlserializer
     ```
 

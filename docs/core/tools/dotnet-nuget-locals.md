@@ -3,12 +3,12 @@ title: dotnet nuget locals 명령
 description: dotnet nuget locals 명령은 http-request 캐시, 임시 캐시 또는 컴퓨터 전체의 글로벌 패키지 폴더와 같은 로컬 NuGet 리소스를 지우거나 목록에 포함합니다.
 author: karann-msft
 ms.date: 06/26/2019
-ms.openlocfilehash: 0cf025f91a7582fafc401799cd1d8b933b087535
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 482e841d3b402084eb8c7f2456779f1600a5dd19
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202474"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117619"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
@@ -24,7 +24,7 @@ ms.locfileid: "70202474"
 
 ## <a name="synopsis"></a>개요
 
-```console
+```dotnetcli
 dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output]
 dotnet nuget locals [-h|--help]
 ```
@@ -66,31 +66,31 @@ dotnet nuget locals [-h|--help]
 
 * 모든 로컬 캐시 디렉터리(http-cache 디렉터리, 전역 패키지 캐시 디렉터리 및 임시 캐시 디렉터리)의 경로를 표시합니다.
 
-  ```console
+  ```dotnetcli
   dotnet nuget locals –l all
   ```
 
 * 로컬 http-cache 디렉터리의 경로를 표시합니다.
 
-  ```console
+  ```dotnetcli
   dotnet nuget locals --list http-cache
   ```
 
 * 모든 로컬 캐시 디렉터리(http-cache 디렉터리, 전역 패키지 캐시 디렉터리 및 임시 캐시 디렉터리)에서 모든 파일을 지웁니다.
 
-  ```console
+  ```dotnetcli
   dotnet nuget locals --clear all
   ```
 
 * 로컬 글로벌 패키지 캐시 디렉터리에 있는 모든 파일을 지웁니다.
 
-  ```console
+  ```dotnetcli
   dotnet nuget locals -c global-packages
   ```
 
 * 로컬 임시 캐시 디렉터리에 있는 모든 파일을 지웁니다.
 
-  ```console
+  ```dotnetcli
   dotnet nuget locals -c temp
   ```
 

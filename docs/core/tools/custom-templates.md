@@ -3,12 +3,12 @@ title: dotnet new에 대한 사용자 지정 템플릿
 description: 모든 형식의 .NET 프로젝트 또는 파일에 대한 사용자 지정 템플릿을 알아봅니다.
 author: thraka
 ms.date: 06/14/2019
-ms.openlocfilehash: be49e28d3aa09c9b3a3cb169ca39ff817a062b8f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7a599973a1914f0df187557e48718263f16546f3
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849849"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117810"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new에 대한 사용자 지정 템플릿
 
@@ -24,7 +24,7 @@ NuGet *.nupkg* 파일을 직접 참조하거나 템플릿이 포함된 파일 �
 
 [.NET Core SDK](https://dotnet.microsoft.com/download)를 설치할 때 콘솔 앱, 클래스 라이브러리, 단위 테스트 프로젝트, ASP.NET Core 앱([Angular](https://angular.io/) 및 [React](https://facebook.github.io/react/) 프로젝트 포함) 및 구성 파일을 비롯한 프로젝트 및 파일을 만들 수 있는 12개 이상의 기본 제공 템플릿이 제공됩니다. 기본 제공 템플릿을 나열하려면 `-l|--list` 옵션과 함께 `dotnet new` 명령을 실행합니다.
 
-```console
+```dotnetcli
 dotnet new --list
 ```
 
@@ -170,7 +170,7 @@ project_folder
 
 NuGet 패키지 식별자를 사용하여 템플릿 패키지를 설치합니다.
 
-```console
+```dotnetcli
 dotnet new -i <NUGET_PACKAGE_ID>
 ```
 
@@ -178,7 +178,7 @@ dotnet new -i <NUGET_PACKAGE_ID>
 
 *.nupkg* NuGet 패키지 파일의 경로를 제공합니다.
 
-```console
+```dotnetcli
 dotnet new -i <PATH_TO_NUPKG_FILE>
 ```
 
@@ -186,7 +186,7 @@ dotnet new -i <PATH_TO_NUPKG_FILE>
 
 위 예제의 *mytemplate1*과 같은 템플릿 폴더에서 템플릿을 설치할 수 있습니다. *.template.config* 폴더의 폴더 경로를 지정합니다. 템플릿 디렉터리의 경로가 절대 경로여야 하는 것은 아닙니다. 그러나 설치된 템플릿을 폴더에서 제거하려면 절대 경로가 필요합니다.
 
-```console
+```dotnetcli
 dotnet new -i <FILE_SYSTEM_DIRECTORY>
 ```
 
@@ -194,7 +194,7 @@ dotnet new -i <FILE_SYSTEM_DIRECTORY>
 
 다른 매개 변수가 없는 제거 명령은 설치된 템플릿을 모두 나열합니다.
 
-```console
+```dotnetcli
 dotnet new -u
 ```
 
@@ -230,13 +230,13 @@ Currently installed items:
 
 NuGet 피드 또는 *.nupkg* 파일을 통해 직접 패키지를 설치한 경우, 식별자를 제공합니다.
 
-```console
+```dotnetcli
 dotnet new -u <NUGET_PACKAGE_ID>
 ```
 
 *.template.config* 폴더의 경로를 지정하여 패키지를 설치한 경우, **절대** 경로를 사용하여 패키지를 제거합니다. `dotnet new -u` 명령을 통해 제공된 출력에서 템플릿의 절대 경로를 확인할 수 있습니다. 자세한 내용은 위의 [설치된 템플릿 목록 가져오기](#get-a-list-of-installed-templates) 섹션을 참조하세요.
 
-```console
+```dotnetcli
 dotnet new -u <ABSOLUTE_FILE_SYSTEM_DIRECTORY>
 ```
 
@@ -244,7 +244,7 @@ dotnet new -u <ABSOLUTE_FILE_SYSTEM_DIRECTORY>
 
 템플릿이 설치된 후 다른 미리 설치된 템플릿을 사용하는 것처럼 `dotnet new <TEMPLATE>` 명령을 실행하여 템플릿을 사용합니다. 템플릿 설정에서 구성한 템플릿 관련 옵션을 포함하여 `dotnet new` 명령에 대한 [옵션](dotnet-new.md#options)을 지정할 수도 있습니다. 템플릿의 짧은 이름을 직접 명령에 제공합니다.
 
-```console
+```dotnetcli
 dotnet new <TEMPLATE>
 ```
 

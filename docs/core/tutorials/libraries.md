@@ -4,12 +4,12 @@ description: .NET Core CLI 도구를 사용하여 .NET Core 라이브러리를 �
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: 90d960c996acd5a34ffb2215344e123dabad1014
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 536319bc02b45e7948c89ae67988e821a55a842d
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849483"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117414"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>플랫폼 간 도구로 라이브러리 개발
 
@@ -249,7 +249,7 @@ netstandard1.4/
 
 1. 패키지를 복원하고 프로젝트를 빌드합니다.
 
-   ```bash
+   ```dotnetcli
    dotnet restore
    dotnet build
    ```
@@ -321,7 +321,7 @@ dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp.fsproj
 
 프로젝트를 참조하는 가장 좋은 방법은 .NET Core CLI를 사용하여 프로젝트 참조를 추가하는 것입니다. **AwesomeLibrary.CSharp** 및 **AwesomeLibrary.FSharp** 프로젝트 디렉터리에서 다음 명령을 실행할 수 있습니다.
 
-```console
+```dotnetcli
 dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 

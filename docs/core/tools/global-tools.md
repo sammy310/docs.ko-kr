@@ -4,12 +4,12 @@ description: .NET Core Global Tool의 개요와 사용 가능한 .NET Core CLI �
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 9ff7e33a50eb0c5fb649b44dda6d72412a134584
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 01c1463ceddcd64e5bab05b95a5ae4a91b6da838
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202582"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117453"
 ---
 # <a name="net-core-global-tools-overview"></a>.NET Core Global Tool 개요
 
@@ -49,7 +49,7 @@ ms.locfileid: "70202582"
 
 Global Tool을 설치하려면 [dotnet tool install](dotnet-tool-install.md) .NET Core CLI 명령을 사용합니다. 다음 예제에서는 기본 위치에 Global Tool을 설치하는 방법을 보여 줍니다.
 
-```console
+```dotnetcli
 dotnet tool install -g dotnetsay
 ```
 
@@ -57,7 +57,7 @@ dotnet tool install -g dotnetsay
 
 이전 릴리스 버전 또는 특정 버전의 도구를 설치하려는 경우 다음 형식을 사용하여 버전 번호를 지정할 수 있습니다.
 
-```console
+```dotnetcli
 dotnet tool install -g <package-name> --version <version-number>
 ```
 
@@ -94,7 +94,7 @@ dotnetsay
 
 도구 작성자가 도구를 `dotnet` 프롬프트 컨텍스트에 표시하려면 도구를 다음과 같이 `dotnet <command>`로 호출하는 방식으로 작성했을 수 있습니다.
 
-```console
+```dotnetcli
 dotnet doc
 ```
 
@@ -120,7 +120,7 @@ Global Tool은 [프레임워크 종속 애플리케이션](../deploying/index.md
 
 발생할 수 있는 또 다른 문제는 이전 미리 보기에서 만들어진 Global Tool이 현재 설치된 .NET Core 런타임으로 실행되지 않는 경우입니다. 다음 명령을 사용하여 컴퓨터에 설치된 런타임을 확인할 수 있습니다.
 
-```console
+```dotnetcli
 dotnet --list-runtimes
 ```
 
@@ -141,24 +141,24 @@ Global Tool 작성자에게 문의하여 업데이트된 버전 번호로 NuGet�
 
 Global Tool에 사용할 수 있는 명령을 확인하려면:
 
-```console
+```dotnetcli
 dotnet tool --help
 ```
 
 Global Tool을 업데이트하려면 원래 버전을 제거하고 안정적인 최신 버전으로 다시 설치해야 합니다. Global Tool을 업데이트하려면 [dotnet tool update](dotnet-tool-update.md) 명령을 사용합니다.
 
-```console
+```dotnetcli
 dotnet tool update -g <packagename>
 ```
 
 [dotnet tool uninstall](dotnet-tool-uninstall.md)을 사용하여 Global Tool을 제거합니다.
 
-```console
+```dotnetcli
 dotnet tool uninstall -g <packagename>
 ```
 
 현재 컴퓨터에 설치된 모든 Global Tool과 해당 버전 및 명령을 표시하려면 [dotnet tool list](dotnet-tool-list.md) 명령을 사용합니다.
 
-```console
+```dotnetcli
 dotnet tool list -g
 ```

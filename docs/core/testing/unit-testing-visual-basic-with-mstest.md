@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: 0ddeebbf1fce1a4899fb6c0fe5685a55f234b4ef
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 0b9dee45c980ae9288637967af20caf375f03fd1
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373838"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117039"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>dotnet test 및 MSTest를 사용하여 Visual Basic .NET Core 라이브러리 단위 테스트
 
@@ -71,7 +71,7 @@ End Namespace
 
 테스트 프로제트는 다른 패키지에 단위 테스트를 만들고 실행하도록 요구합니다. 이전 단계의 `dotnet new`는 MSTest 및 MSTest runner를 추가했습니다. 이제 `PrimeService` 클래스 라이브러리를 프로젝트에 다른 종속성으로 추가합니다. [`dotnet add reference`](../tools/dotnet-add-reference.md) 명령을 사용합니다.
 
-```console
+```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.vbproj
 ```
 

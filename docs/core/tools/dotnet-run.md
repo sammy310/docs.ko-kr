@@ -2,12 +2,12 @@
 title: dotnet run 명령
 description: dotnet run 명령은 소스 코드에서 애플리케이션을 실행하는 편리한 옵션을 제공합니다.
 ms.date: 05/29/2018
-ms.openlocfilehash: b21987ef9ee4dd7d8fdb93d0853b7faa93001688
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: ec2a24b78f435dd1905ec67b6f3f4a4ec3f7e7fa
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969759"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117479"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -23,7 +23,7 @@ ms.locfileid: "70969759"
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
-```console
+```dotnetcli
 dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
     [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [-v|--verbosity] [[--] [application arguments]]
 dotnet run [-h|--help]
@@ -31,7 +31,7 @@ dotnet run [-h|--help]
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
-```console
+```dotnetcli
 dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
     [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [[--] [application arguments]]
 dotnet run [-h|--help]
@@ -39,7 +39,7 @@ dotnet run [-h|--help]
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-```console
+```dotnetcli
 dotnet run [-c|--configuration] [-f|--framework] [-p|--project] [[--] [application arguments]]
 dotnet run [-h|--help]
 ```
@@ -56,7 +56,7 @@ dotnet run [-h|--help]
 
 `dotnet run` 명령은 빌드된 어셈블리가 아닌 프로젝트의 컨텍스트에서 사용됩니다. 대신 프레임워크 종속 애플리케이션 DLL을 실행하려고 하는 경우 명령 없이 [dotnet](dotnet.md)을 사용해야 합니다. 예를 들어 `myapp.dll`을 실행하려면 다음을 사용합니다.
 
-```console
+```dotnetcli
 dotnet myapp.dll
 ```
 

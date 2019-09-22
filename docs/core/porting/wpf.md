@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/27/2019
 ms.custom: ''
-ms.openlocfilehash: 9885f666e68b795b9b6aba9cf31f9750e30fd170
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 1528e578a978de38998b3f3f4b7beb72ff7422d4
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512277"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117071"
 ---
 # <a name="how-to-port-a-wpf-desktop-app-to-net-core"></a>방법: WPF 데스크톱 앱을 .NET Core로 포트
 
@@ -94,7 +94,7 @@ SolutionFolder
 
 프로젝트 파일을 수동으로 만들지 않으려면 Visual Studio 또는 .NET Core SDK를 사용하여 프로젝트를 생성하면 됩니다. 그러나 프로젝트 파일을 제외하고 프로젝트 템플릿에서 생성된 다른 모든 파일을 삭제해야 합니다. SDK를 사용하려면 **SolutionFolder** 디렉터리에서 다음 명령을 실행합니다.
 
-```cli
+```dotnetcli
 dotnet new wpf -o MyWPFAppCore -n MyWPFCore
 ```
 
@@ -111,7 +111,7 @@ SolutionFolder
 
 **SolutionFolder** 디렉터리에서 Visual Studio 또는 .NET Core CLI를 사용하여 **MyWPFCore.csproj** 프로젝트를 **MyApps.sln**에 추가하려고 합니다.
 
-```cli
+```dotnetcli
 dotnet sln add .\MyWPFAppCore\MyWPFCore.csproj
 ```
 
@@ -187,7 +187,7 @@ dotnet sln add .\MyWPFAppCore\MyWPFCore.csproj
 
 대부분의 경우 .NET Framework WPF 앱에는 프로젝트에서 참조하는 모든 NuGet 패키지의 목록을 포함하는 **packages.config** 파일이 있습니다. 이 목록을 보고 .NET Core 프로젝트에 추가할 NuGet 패키지를 결정할 수 있습니다. 예를 들어, .NET Framework 프로젝트가 `MahApps.Metro` NuGet 패키지를 참조하는 경우 Visual Studio를 사용하여 프로젝트에 추가합니다. **SolutionFolder** 디렉터리에서 .NET Core CLI를 사용하여 패키지 참조를 추가할 수도 있습니다.
 
-```cli
+```dotnetcli
 dotnet add .\MyWPFAppCore\MyWPFCore.csproj package MahApps.Metro -v 2.0.0-alpha0262
 ```
 
@@ -203,7 +203,7 @@ dotnet add .\MyWPFAppCore\MyWPFCore.csproj package MahApps.Metro -v 2.0.0-alpha0
 
 프로젝트를 컴파일하는 데 문제가 있는 경우 .NET Framework에서 사용할 수 있지만 .NET Core에서는 사용할 수 없는 일부 Windows 전용 API를 사용하고 있는 것일 수 있습니다. [Windows 호환성 팩][compat-pack] NuGet 패키지를 프로젝트에 추가해 볼 수 있습니다. 이 패키지는 Windows에서만 실행되고 .NET Core 및 .NET Standard 프로젝트에 20,000개 정도의 Windows API를 추가합니다.
 
-```cli
+```dotnetcli
 dotnet add .\MyWPFAppCore\MyWPFCore.csproj package Microsoft.Windows.Compatibility
 ```
 

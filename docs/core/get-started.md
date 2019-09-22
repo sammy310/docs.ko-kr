@@ -3,13 +3,13 @@ title: .NET Core 시작
 description: Windows, Linux 및 macOS에서 .NET Core 애플리케이션을 빌드하는 방법을 알아볼 수 있는 리소스를 찾아보세요.
 author: thraka
 ms.author: adegeo
-ms.date: 06/27/2018
-ms.openlocfilehash: 3c530c71d1cfa9d0c4cf09f38519970f6ef8da51
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.date: 09/19/2019
+ms.openlocfilehash: 7dc134696e7dacf531fa6c7f4d84b63eb785ef25
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969892"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151511"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 시작
 
@@ -23,7 +23,7 @@ ms.locfileid: "70969892"
 
 다음으로 **PowerShell**, **명령 프롬프트** 또는 **Bash**와 같은 터미널을 엽니다. 다음 `dotnet` 명령을 입력하여 C# 애플리케이션을 만들고 실행합니다.
 
-```console
+```dotnetcli
 dotnet new console --output sample1
 dotnet run --project sample1
 ```

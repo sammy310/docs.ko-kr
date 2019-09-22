@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: d0f4e2997e6e847cfd3c41ddb13096379d75343e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 519c55dbe8b55191b682067da558167f86199b7e
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925717"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116216"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1의 새로운 기능
 
@@ -39,7 +39,7 @@ ms.locfileid: "70925717"
 
 - 여러 개별 `dotnet build` 호출에서 사용되는 프로세스인 장기 실행 SDK 빌드 서버의 사용. `dotnet build`가 실행될 때마다 코드의 큰 블록을 JIT 컴파일할 필요가 없습니다. 다음 명령을 사용하여 빌드 서버 프로세스를 자동으로 종료할 수 있습니다.
 
-   ```console
+   ```dotnetcli
    dotnet buildserver shutdown
    ```
 
@@ -49,7 +49,7 @@ ms.locfileid: "70925717"
 
 - `dotnet watch`는 지정된 명령 집합을 실행하기 전에 파일이 변경될 때까지 대기하는 파일 시스템 감시자를 제공합니다. 예를 들어 다음 명령은 자동으로 현재 프로젝트를 다시 빌드하고 파일이 변경될 때마다 자세한 정보 출력을 생성합니다.
 
-   ```console
+   ```dotnetcli
    dotnet watch -- --verbose build
    ```
 
@@ -71,7 +71,7 @@ ms.locfileid: "70925717"
 
 전역 도구를 설치하려면 [dotnet tool install](../tools/dotnet-tool-install.md) 명령을 사용합니다. 예:
 
-```console
+```dotnetcli
 dotnet tool install -g dotnetsay
 ```
 
@@ -116,7 +116,7 @@ dotnet tool install -g dotnetsay
 
 - [.NET Core CLI 도구](../tools/index.md)를 사용하는 경우 `run`과 같은 .NET Core 명령에 원하는 값을 포함하여 다음 옵션을 추가합니다.
 
-   ```console
+   ```dotnetcli
    dotnet run --rollForwardOnNoCandidateFx=0
    ```
 

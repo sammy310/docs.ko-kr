@@ -4,12 +4,12 @@ description: dotnet test 및 NUnit을 사용하여 샘플 솔루션을 단계별
 author: rprouse
 ms.date: 08/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 4d378e68143192e2f56fb411ae6ee709af753750
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 20f81981458b7e805a917202edce671ced69d89a
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849669"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117311"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>NUnit 및 .NET Core를 사용한 C# 유닛 테스트
 
@@ -26,7 +26,7 @@ ms.locfileid: "70849669"
 
 셸 창을 엽니다. 솔루션을 저장하기 위한 *unit-testing-using-nunit*라는 디렉터리를 만듭니다. 이 새 디렉터리 내에서 다음 명령을 실행하여 클래스 라이브러리 및 테스트 프로젝트에 대한 새 솔루션 파일을 만듭니다.
 
-```console
+```dotnetcli
 dotnet new sln
 ```
  
@@ -40,7 +40,7 @@ dotnet new sln
 
 *PrimeService*를 현재 디렉터리로 만들고 다음 명령을 실행하여 소스 프로젝트를 만듭니다.
 
-```console
+```dotnetcli
 dotnet new classlib
 ```
 
@@ -63,7 +63,7 @@ namespace Prime.Services
 
 디렉터리를 다시 *unit-testing-using-nunit* 디렉터리로 변경합니다. 다음 명령을 실행하여 클래스 라이브러리 프로젝트를 솔루션에 추가합니다.
 
-```console
+```dotnetcli
 dotnet sln add PrimeService/PrimeService.csproj
 ```
 
@@ -82,7 +82,7 @@ dotnet sln add PrimeService/PrimeService.csproj
 
 *PrimeService.Tests* 디렉터리를 현재 디렉터리로 만들고 다음 명령을 사용하여 새 프로젝트를 만듭니다.
 
-```console
+```dotnetcli
 dotnet new nunit
 ```
 
@@ -92,7 +92,7 @@ dotnet new nunit
 
 테스트 프로제트는 다른 패키지에 단위 테스트를 만들고 실행하도록 요구합니다. 이전 단계의 `dotnet new`는 Microsoft 테스트 SDK, NUnit 테스트 프레임워크 및 NUnit 테스트 어댑터를 추가했습니다. 이제 `PrimeService` 클래스 라이브러리를 프로젝트에 다른 종속성으로 추가합니다. [`dotnet add reference`](../tools/dotnet-add-reference.md) 명령을 사용합니다.
 
-```console
+```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.csproj
 ```
 
@@ -113,7 +113,7 @@ GitHub의 [샘플 리포지토리](https://github.com/dotnet/samples/blob/master
 
 *unit-testing-using-nunit* 디렉터리에서 다음 명령을 실행합니다.
 
-```console
+```dotnetcli
 dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 ```
 

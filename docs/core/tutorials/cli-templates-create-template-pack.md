@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 4bd51f579231b13b0831ef7114c2a648c55cd6a2
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 520af5022e061236c0cfe80379679d9c7b5896b2
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926075"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117403"
 ---
 # <a name="tutorial-create-a-template-pack"></a>자습서: 템플릿 팩 만들기
 
@@ -45,7 +45,7 @@ ms.locfileid: "70926075"
 
 터미널에서 _working_ 폴더로 이동합니다. 새 프로젝트를 만들고 이름을 `templatepack`으로 설정하고 출력 폴더를 현재 폴더로 설정합니다.
 
-```console
+```dotnetcli
 dotnet new console -n templatepack -o .
 ```
 
@@ -103,7 +103,7 @@ pack 명령을 실행하여 프로젝트를 컴파일하고 압축할 때 MSBuil
 
 이 파일을 저장한 다음 pack 명령을 실행합니다.
 
-```console
+```dotnetcli
 dotnet pack
 ```
 

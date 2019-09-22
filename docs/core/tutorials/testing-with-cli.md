@@ -4,12 +4,12 @@ description: 이 자습서에서는 명령줄에서 .NET Core 프로젝트를 �
 author: cartermp
 ms.date: 09/10/2018
 ms.custom: seodec18
-ms.openlocfilehash: a8724c971521b8d65700d61a1ce523c1dfdddf0a
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d93ba5f41f1e7b5818790d0853bd219466b317ee
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203006"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117374"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>.NET Core 명령줄을 사용하여 프로젝트 구성 및 테스트
 
@@ -86,7 +86,7 @@ ms.locfileid: "70203006"
 
 다음 명령을 실행합니다.
 
-```console
+```dotnetcli
 dotnet run
 ```
 
@@ -107,7 +107,7 @@ Meow!
 
 테스트 프로젝트는 현재 `NewTypes`의 형식을 테스트할 수 없으며, `NewTypes` 프로젝트에 대한 프로젝트 참조가 필요합니다. 프로젝트 참조를 추가하려면 [`dotnet add reference`](../tools/dotnet-add-reference.md) 명령을 사용합니다.
 
-```console
+```dotnetcli
 dotnet add reference ../../src/NewTypes/NewTypes.csproj
 ```
 

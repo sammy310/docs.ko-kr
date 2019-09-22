@@ -4,12 +4,12 @@ description: 런타임 패키지 저장소를 사용하여 .NET Core에서 사�
 author: bleroy
 ms.date: 08/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 2f37e0de4b6fcb1b2047470b0a9df3753fe87d71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8a8d2d3298f144347c36c640700a1e578dc14715
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697987"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116541"
 ---
 # <a name="runtime-package-store"></a>런타임 패키지 저장소
 
@@ -64,13 +64,13 @@ ms.locfileid: "54697987"
 
 패키지 저장소 매니페스트, 런타임 및 프레임워크에서 `dotnet store`를 실행하여 런타임 패키지 저장소를 프로비전합니다.
 
-```console
+```dotnetcli
 dotnet store --manifest <PATH_TO_MANIFEST_FILE> --runtime <RUNTIME_IDENTIFIER> --framework <FRAMEWORK>
 ```
 
 **예제**
 
-```console
+```dotnetcli
 dotnet store --manifest packages.csproj --runtime win10-x64 --framework netcoreapp2.0 --framework-version 2.0.0
 ```
 
@@ -94,13 +94,13 @@ dotnet store --manifest packages.csproj --runtime win10-x64 --framework netcorea
 
 디스크에 대상 매니페스트 파일이 있는 경우 앱을 게시할 때 [`dotnet publish`](../tools/dotnet-publish.md) 명령을 사용하여 파일 경로를 지정합니다.
 
-```console
+```dotnetcli
 dotnet publish --manifest <PATH_TO_MANIFEST_FILE>
 ```
 
 **예제**
 
-```console
+```dotnetcli
 dotnet publish --manifest manifest.xml
 ```
 

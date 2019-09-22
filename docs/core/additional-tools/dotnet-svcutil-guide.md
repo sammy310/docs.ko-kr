@@ -4,12 +4,12 @@ description: .NET Framework 프로젝트용 WCF svcutil 도구와 유사하게, 
 author: mlacouture
 ms.date: 02/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: 7c3e2f7bcfb337a09a9cc13068c22d496762a90f
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: c6eb17ca6cd4ce920cd358a87d2a4a6759dc3439
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969929"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117209"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>.NET Core용 WCF dotnet-svcutil 도구
 
@@ -64,14 +64,14 @@ Windows, macOS 또는 Linux 명령 창에서 다음 단계를 수행합니다.
 
 2. 다음과 같이 [`dotnet new`](../tools/dotnet-new.md) 명령을 사용하여 이 디렉터리에서 새 C# 웹 프로젝트를 만듭니다.
 
-    ```console
+    ```dotnetcli
     dotnet new web
     ```
 
 3. [`dotnet-svcutil` NuGet 패키지](https://nuget.org/packages/dotnet-svcutil)를 CLI 도구( )로 설치합니다.<!-- markdownlint-disable MD023 -->
     # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
-    ```console
+    ```dotnetcli
     dotnet tool install --global dotnet-svcutil
     ```
 
@@ -86,7 +86,7 @@ Windows, macOS 또는 Linux 명령 창에서 다음 단계를 수행합니다.
 
     그리고 다음과 같이 [`dotnet restore`](../tools/dotnet-restore.md) 명령을 사용하여 _dotnet-svcutil_ 패키지를 복원합니다.
 
-    ```console
+    ```dotnetcli
     dotnet restore
     ```
 
@@ -96,13 +96,13 @@ Windows, macOS 또는 Linux 명령 창에서 다음 단계를 수행합니다.
 
     # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
-    ```console
+    ```dotnetcli
     dotnet-svcutil http://contoso.com/SayHello.svc
     ```
 
     # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
-    ```console
+    ```dotnetcli
     dotnet svcutil http://contoso.com/SayHello.svc
     ```
 
@@ -114,7 +114,7 @@ Windows, macOS 또는 Linux 명령 창에서 다음 단계를 수행합니다.
 
 1. 다음과 같이 [`dotnet restore`](../tools/dotnet-restore.md) 명령을 사용하여 WCF 패키지를 복원합니다.
 
-    ```console
+    ```dotnetcli
     dotnet restore
     ```
 
@@ -148,7 +148,7 @@ Windows, macOS 또는 Linux 명령 창에서 다음 단계를 수행합니다.
 
 5. 다음과 같이 [`dotnet run`](../tools/dotnet-run.md) 명령을 사용하여 애플리케이션을 실행합니다.
 
-    ```console
+    ```dotnetcli
     dotnet run
     ```
 
@@ -159,13 +159,13 @@ Windows, macOS 또는 Linux 명령 창에서 다음 단계를 수행합니다.
 `dotnet-svcutil` 도구 매개 변수에 대한 자세한 설명을 보려면 다음과 같이 help 매개 변수를 전달하는 도구를 호출합니다.
 # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
-```console
+```dotnetcli
 dotnet-svcutil --help
 ```
 
 # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
-```console
+```dotnetcli
 dotnet svcutil --help
 ```
 

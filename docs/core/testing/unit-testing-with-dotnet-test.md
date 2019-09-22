@@ -5,12 +5,12 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
 ms.custom: seodec18
-ms.openlocfilehash: 1a6c8ed515e62bed921290a54e3d9687bb889a4d
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: d85e3e69721d8933565b1c80fb7ed21b2291e60e
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374146"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117291"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>dotnet 테스트 및 xUnit을 사용하여 .NET Core에서 C# 단위 테스트
 
@@ -24,7 +24,7 @@ ms.locfileid: "70374146"
 이 새 디렉터리 내에서 [`dotnet new sln`](../tools/dotnet-new.md)을 실행하여 새 솔루션을 만듭니다. 솔루션이 있으면 클래스 라이브러리와 단위 테스트 프로젝트를 모두 더 쉽게 관리할 수 있습니다.
 솔루션 디렉터리 내에 *PrimeService* 디렉터리를 만듭니다. 지금까지의 디렉터리 및 파일 구조는 다음과 같아야 합니다.
 
-```console
+```
 /unit-testing-using-dotnet-test
     unit-testing-using-dotnet-test.sln
     /PrimeService
@@ -51,7 +51,7 @@ namespace Prime.Services
 
 [dotnet sln](../tools/dotnet-sln.md) 명령을 실행하여 클래스 라이브러리 프로젝트를 솔루션에 추가합니다.
 
-```console
+```dotnetcli
 dotnet sln add ./PrimeService/PrimeService.csproj
 ```
 
@@ -59,7 +59,7 @@ dotnet sln add ./PrimeService/PrimeService.csproj
 
 다음으로 *PrimeService.Tests* 디렉터리를 만듭니다. 다음 개요에는 디렉터리 구조가 나와 있습니다.
 
-```console
+```
 /unit-testing-using-dotnet-test
     unit-testing-using-dotnet-test.sln
     /PrimeService
@@ -80,7 +80,7 @@ dotnet sln add ./PrimeService/PrimeService.csproj
 
 테스트 프로제트는 다른 패키지에 단위 테스트를 만들고 실행하도록 요구합니다. 이전 단계의 `dotnet new`는 xUnit 및 xUnit runner를 추가했습니다. 이제 `PrimeService` 클래스 라이브러리를 프로젝트에 다른 종속성으로 추가합니다. [`dotnet add reference`](../tools/dotnet-add-reference.md) 명령을 사용합니다.
 
-```console
+```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.csproj
 ```
 
@@ -88,7 +88,7 @@ GitHub의 [샘플 리포지토리](https://github.com/dotnet/samples/blob/master
 
 최종 솔루션 레이아웃은 다음과 같습니다.
 
-```console
+```
 /unit-testing-using-dotnet-test
     unit-testing-using-dotnet-test.sln
     /PrimeService
@@ -101,7 +101,7 @@ GitHub의 [샘플 리포지토리](https://github.com/dotnet/samples/blob/master
 
 솔루션에 테스트 프로젝트를 추가하려면 *unit-testing-using-dotnet-test* 디렉터리에서 [dotnet sln](../tools/dotnet-sln.md) 명령을 실행합니다.
 
-```console
+```dotnetcli
 dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 ```
 

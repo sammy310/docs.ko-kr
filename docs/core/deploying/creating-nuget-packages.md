@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: b86b2706968bf302a8421bcc8e12c32a97102e9e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d36a6ee7d524933577928daa9993fba8ce62f6c7
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632102"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116696"
 ---
 # <a name="how-to-create-a-nuget-package-with-net-core-command-line-interface-cli-tools"></a>.NET Core CLI(명령줄 인터페이스) 도구를 사용하여 NuGet 패키지를 만드는 방법
 
@@ -33,7 +33,7 @@ cd src/SuperAwesomeLibrary
 
 그러면 명령줄에서 단일 명령만 표시됩니다.
 
-```console
+```dotnetcli
 dotnet pack
 ```
 
@@ -49,7 +49,7 @@ SuperAwesomeLibrary.1.0.0.symbols.nupkg
 
 그러면 디버그할 수 있는 패키지가 생성됩니다. 릴리스 이진 파일과 함께 NuGet 패키지를 빌드하려는 경우 `--configuration`(또는 `-c`) 스위치를 추가하고 `release`를 인수로 사용하기만 하면 됩니다.
 
-```console
+```dotnetcli
 dotnet pack --configuration release
 ```
 

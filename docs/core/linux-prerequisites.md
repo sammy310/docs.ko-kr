@@ -4,12 +4,12 @@ description: Linux 컴퓨터에서 .NET Core 애플리케이션을 개발, 배�
 author: thraka
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: 5fcf931572f3c7e9b9857d2e91e9d620c7aad0bd
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 31c53b2cc0fe576e56685f4a5561258136fd2541
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969875"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116581"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux에서 .NET Core의 필수 구성 요소
 
@@ -150,7 +150,7 @@ Linux에는 두 가지 패키지 선택 항목이 있습니다.
 
 스크립트는 기본적으로 현재 .NET Core 1.1인 최신 "LTS" 버전을 설치합니다. .NET Core 2.1을 설치하려면 다음 스위치를 사용하여 스크립트를 실행합니다.
 
-```console
+```bash
 ./dotnet-install.sh -c Current
 ```
 

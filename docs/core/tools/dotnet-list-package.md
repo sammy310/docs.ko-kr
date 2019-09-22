@@ -2,12 +2,12 @@
 title: dotnet list package 명령
 description: ‘dotnet list package’ 명령은 프로젝트 또는 솔루션에 대한 패키지 참조를 나열하는 편리한 옵션을 제공합니다.
 ms.date: 06/26/2019
-ms.openlocfilehash: 48eef0ccc6acf2bbd6c1acf748870882d2480ce5
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: fe95f3898c5bd85956f4312eb4d20259227e9ff0
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168029"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117735"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
@@ -19,7 +19,7 @@ ms.locfileid: "70168029"
 
 ## <a name="synopsis"></a>개요
 
-```console
+```dotnetcli
 dotnet list [<PROJECT>|<SOLUTION>] package [--config] [--framework] [--highest-minor] [--highest-patch] 
    [--include-prerelease] [--include-transitive] [--interactive] [--outdated] [--source]
 dotnet list package [-h|--help]
@@ -121,18 +121,18 @@ Project 'HelloPlugin' has the following package references
 
 * 특정 프로젝트의 패키지 참조를 나열합니다.
 
-  ```console
+  ```dotnetcli
   dotnet list SentimentAnalysis.csproj package
   ```
 
 * 사전 릴리스 버전을 포함하여 최신 버전을 사용할 수 있는 패키지 참조를 나열합니다.
 
-  ```console
+  ```dotnetcli
   dotnet list package --outdated --include-prerelease
   ```
 
 * 특정 대상 프레임워크에 대한 패키지 참조를 나열합니다.
 
-  ```console
+  ```dotnetcli
   dotnet list package --framework netcoreapp3.0
   ```
