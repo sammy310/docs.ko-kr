@@ -9,15 +9,15 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
-ms.openlocfilehash: 736deb1a0c360163521b866a788f1ac077f74508
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b284698904b3795c2369a5bca47742175e012553
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172096"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048981"
 ---
-# <a name="asynchronous-client-socket-example"></a><span data-ttu-id="1971f-102">비동기 클라이언트 소켓 예제</span><span class="sxs-lookup"><span data-stu-id="1971f-102">Asynchronous Client Socket Example</span></span>
-<span data-ttu-id="1971f-103">다음 예제 프로그램에서는 서버에 연결하는 클라이언트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="1971f-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="1971f-104">이 클라이언트는 비동기 소켓으로 빌드되므로 서버에서 응답을 반환하는 동안 클라이언트 애플리케이션의 실행이 일시 중단되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="1971f-104">The client is built with an asynchronous socket, so execution of the client application is not suspended while the server returns a response.</span></span> <span data-ttu-id="1971f-105">애플리케이션은 서버에 문자열을 보낸 다음 서버에서 반환된 문자열을 콘솔에 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="1971f-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
+# <a name="asynchronous-client-socket-example"></a><span data-ttu-id="1552d-102">비동기 클라이언트 소켓 예제</span><span class="sxs-lookup"><span data-stu-id="1552d-102">Asynchronous Client Socket Example</span></span>
+<span data-ttu-id="1552d-103">다음 예제 프로그램에서는 서버에 연결하는 클라이언트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="1552d-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="1552d-104">이 클라이언트는 비동기 소켓으로 빌드되므로 서버에서 응답을 반환하는 동안 클라이언트 애플리케이션의 실행이 일시 중단되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="1552d-104">The client is built with an asynchronous socket, so execution of the client application is not suspended while the server returns a response.</span></span> <span data-ttu-id="1552d-105">애플리케이션은 서버에 문자열을 보낸 다음 서버에서 반환된 문자열을 콘솔에 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="1552d-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
   
 ```vb  
 Imports System  
@@ -321,8 +321,8 @@ public class AsynchronousClient {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1971f-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1971f-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1552d-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1552d-106">See also</span></span>
 
-- [<span data-ttu-id="1971f-107">비동기 서버 소켓 예제</span><span class="sxs-lookup"><span data-stu-id="1971f-107">Asynchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)
-- [<span data-ttu-id="1971f-108">동기 서버 소켓 사용</span><span class="sxs-lookup"><span data-stu-id="1971f-108">Using a Synchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
-- [<span data-ttu-id="1971f-109">소켓 코드 예제</span><span class="sxs-lookup"><span data-stu-id="1971f-109">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)
+- [<span data-ttu-id="1552d-107">비동기 서버 소켓 예제</span><span class="sxs-lookup"><span data-stu-id="1552d-107">Asynchronous Server Socket Example</span></span>](asynchronous-server-socket-example.md)
+- [<span data-ttu-id="1552d-108">동기 서버 소켓 사용</span><span class="sxs-lookup"><span data-stu-id="1552d-108">Using a Synchronous Server Socket</span></span>](using-a-synchronous-server-socket.md)
+- [<span data-ttu-id="1552d-109">소켓 코드 예제</span><span class="sxs-lookup"><span data-stu-id="1552d-109">Socket Code Examples</span></span>](socket-code-examples.md)
