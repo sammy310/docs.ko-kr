@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8dd7bac8c0cb14421016efad60a7ec0d672e5622
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 2229dca07a3a723babe5bf202ce5ddc0c77a7374
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854015"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052199"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>개발자를 위한 .NET Framework 배포 가이드
 이 항목에서는 앱과 함께 .NET Framework 4.5에서 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 사이의 .NET Framework 버전을 설치하려는 개발자를 위한 정보를 제공합니다.
@@ -53,15 +53,15 @@ ms.locfileid: "70854015"
 
 - .NET Framework 4.5 및 해당 포인트 릴리스를 설치하려면 관리자 권한이 있어야 합니다.
 
-- [!INCLUDE[win8](../../../includes/win8-md.md)] 및 [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]에는 .NET Framework 4.5가 포함되어 있으므로, 해당 운영 체제에서는 앱과 함께 배포할 필요가 없습니다. 마찬가지로, [!INCLUDE[win81](../../../includes/win81-md.md)] 및 Windows Server 2012 R2에는 .NET Framework 4.5.1이 포함되어 있습니다. .NET Framework 4.5.2는 어떤 운영 체제에도 포함되어 있지 않습니다. .NET Framework 4.6은 Windows 10, .NET Framework 4.6.1은 Windows 10의 11월 업데이트, .NET Framework 4.6.2는 Windows 10의 1주년 업데이트에 각각 포함되어 있습니다.  .NET Framework 4.7은 Windows 10 크리에이터스 업데이트, .NET Framework 4.7.1은 Windows 10 Fall Creators Update, .NET Framework 4.7.2는 Windows 10 2018년 10월 업데이트와 Windows 10 2018년 4월 업데이트에 각각 포함되어 있습니다. .NET Framework 4.8은 Windows 10 2019년 5월 업데이트에 포함되어 있습니다. 하드웨어 및 소프트웨어 요구 사항의 전체 목록은 [시스템 요구 사항](../../../docs/framework/get-started/system-requirements.md)을 참조하세요.
+- [!INCLUDE[win8](../../../includes/win8-md.md)] 및 [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]에는 .NET Framework 4.5가 포함되어 있으므로, 해당 운영 체제에서는 앱과 함께 배포할 필요가 없습니다. 마찬가지로, [!INCLUDE[win81](../../../includes/win81-md.md)] 및 Windows Server 2012 R2에는 .NET Framework 4.5.1이 포함되어 있습니다. .NET Framework 4.5.2는 어떤 운영 체제에도 포함되어 있지 않습니다. .NET Framework 4.6은 Windows 10, .NET Framework 4.6.1은 Windows 10의 11월 업데이트, .NET Framework 4.6.2는 Windows 10의 1주년 업데이트에 각각 포함되어 있습니다.  .NET Framework 4.7은 Windows 10 크리에이터스 업데이트, .NET Framework 4.7.1은 Windows 10 Fall Creators Update, .NET Framework 4.7.2는 Windows 10 2018년 10월 업데이트와 Windows 10 2018년 4월 업데이트에 각각 포함되어 있습니다. .NET Framework 4.8은 Windows 10 2019년 5월 업데이트에 포함되어 있습니다. 하드웨어 및 소프트웨어 요구 사항의 전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md)을 참조하세요.
 
-- .NET Framework 4.5부터, 사용자는 설치하는 동안 실행 중인 .NET Framework 앱 목록을 보고 쉽게 닫을 수 있습니다. 이렇게 하면 .NET Framework 설치로 인해 시스템이 다시 시작되는 것을 방지할 수 있습니다. [시스템 다시 시작 사례 감소](../../../docs/framework/deployment/reducing-system-restarts.md)를 참조하세요.
+- .NET Framework 4.5부터, 사용자는 설치하는 동안 실행 중인 .NET Framework 앱 목록을 보고 쉽게 닫을 수 있습니다. 이렇게 하면 .NET Framework 설치로 인해 시스템이 다시 시작되는 것을 방지할 수 있습니다. [시스템 다시 시작 사례 감소](reducing-system-restarts.md)를 참조하세요.
 
 - .NET Framework 4.5 또는 해당 포인트 릴리스 중 하나를 제거하면 기존의 .NET Framework 4 파일도 제거됩니다. .NET Framework 4로 돌아가려면 해당 프로그램과 모든 업데이트를 다시 설치해야 합니다. ( [.NET Framework 4 설치](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100))참조)
 
 - .NET Framework 4.5 재배포 가능 패키지는 Microsoft에서 생성 및 서명된 파일의 디지털 서명이 중간에 만료되도록 한 디지털 서명의 부적절한 타임스탬프 관련 문제를 해결하기 위해 2012년 10월 9일 업데이트되었습니다. 이전에 2012년 8월 16일자 .NET Framework 4.5 재배포 가능 패키지를 설치한 경우 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/p/?LinkId=245484)에서 최신 재배포 가능 패키지로 업데이트하는 것이 좋습니다. 이 문제에 대한 자세한 내용은 [Microsoft 보안 공지 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655)를 참조하세요.
 
-시스템 관리자가 .NET Framework 및 시스템 종속성을 네트워크에 배포하는 방법에 대한 자세한 내용은 [관리자용 배포 가이드](../../../docs/framework/deployment/guide-for-administrators.md)를 참조하세요.
+시스템 관리자가 .NET Framework 및 시스템 종속성을 네트워크에 배포하는 방법에 대한 자세한 내용은 [관리자용 배포 가이드](guide-for-administrators.md)를 참조하세요.
 
 ## <a name="deployment-options-for-your-app"></a>앱용 배포 옵션
 
@@ -233,7 +233,7 @@ WiX(Windows Installer XML) 도구 집합은 XML 소스 코드에서 Windows 설�
 
 사용자 지정 설치 패키지가 있는 경우 설치 진행 상황을 자체적으로 표시하면서 .NET Framework 설치를 자동으로 시작하고 추적할 수 있습니다. 이 경우 코드가 다음을 충족하도록 해야 합니다.
 
-- [.NET Framework 하드웨어 및 소프트웨어 요구 사항](../../../docs/framework/get-started/system-requirements.md)을 확인합니다.
+- [.NET Framework 하드웨어 및 소프트웨어 요구 사항](../get-started/system-requirements.md)을 확인합니다.
 
 - .NET Framework의 올바른 버전이 사용자 컴퓨터에 이미 설치되어 있는지 여부를[감지](#detect_net) 합니다.
 
@@ -242,7 +242,7 @@ WiX(Windows Installer XML) 도구 집합은 XML 소스 코드에서 Windows 설�
 
 - 언어 팩이 사용자 컴퓨터에 이미 설치되어 있는지 여부를[감지](#detecting-the-language-packs) 합니다.
 
-- 배포를 제어하려면 .NET Framework 설치 프로세스를 자동으로 시작하고 추적합니다([방법: .NET Framework 4.5 설치 관리자에서 진행률 가져오기](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md) 참조).
+- 배포를 제어하려면 .NET Framework 설치 프로세스를 자동으로 시작하고 추적합니다([방법: .NET Framework 4.5 설치 관리자에서 진행률 가져오기](how-to-get-progress-from-the-dotnet-installer.md) 참조).
 
 - 오프라인 설치 관리자를 배포 중인 경우 [언어 팩을 별도로 연결](#chain_langpack)합니다.
 
@@ -431,9 +431,9 @@ WiX(Windows Installer XML) 도구 집합은 XML 소스 코드에서 Windows 설�
 
 ## <a name="see-also"></a>참고 항목
 
-- [관리자를 위한 배포 가이드](../../../docs/framework/deployment/guide-for-administrators.md)
-- [시스템 요구 사항](../../../docs/framework/get-started/system-requirements.md)
-- [개발자용 .NET Framework 설치](../../../docs/framework/install/guide-for-developers.md)
-- [차단된 .NET Framework 설치 및 제거 문제 해결](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
-- [.NET Framework 4.5를 설치하는 동안 시스템 다시 시작 줄이기](../../../docs/framework/deployment/reducing-system-restarts.md)
-- [방법: .NET Framework 4.5 설치 관리자에서 진행률 가져오기](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+- [관리자를 위한 배포 가이드](guide-for-administrators.md)
+- [시스템 요구 사항](../get-started/system-requirements.md)
+- [개발자용 .NET Framework 설치](../install/guide-for-developers.md)
+- [차단된 .NET Framework 설치 및 제거 문제 해결](../install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [.NET Framework 4.5를 설치하는 동안 시스템 다시 시작 줄이기](reducing-system-restarts.md)
+- [방법: .NET Framework 4.5 설치 관리자에서 진행률 가져오기](how-to-get-progress-from-the-dotnet-installer.md)

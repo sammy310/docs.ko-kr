@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20e5f166aad8bc2504ed27b93ec6730bcd26387d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5079f0243faefaab6ada23cc98f5214a616c1d22
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911593"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044371"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe(네이티브 이미지 생성기)
 
@@ -59,7 +59,7 @@ Ngen.exe 및 네이티브 이미지 서비스 사용에 대한 자세한 내용�
 > [!NOTE]
 > .NET Framework 버전 1.0 및 1.1의 Ngen.exe 구문은 [네이티브 이미지 생성기(Ngen.exe) 레거시 구문](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms165073(v=vs.100))에 있습니다.
 
-이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 참조하세요.
+이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.
 
 명령 프롬프트에 다음을 입력합니다.
 
@@ -92,7 +92,7 @@ ngen /? | /help
 
 |인수|설명|
 |--------------|-----------------|
-|`assemblyName`|어셈블리의 전체 표시 이름입니다. 예를 들어, `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`을 입력합니다. **참고:**  `myAssembly` 및 `display` 작업의 경우 `uninstall`와 같은 부분 어셈블리 이름을 제공할 수 있습니다. <br /><br /> Ngen.exe 명령줄 당 어셈블리를 하나만 지정할 수 있습니다.|
+|`assemblyName`|어셈블리의 전체 표시 이름입니다. 예: `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`. **참고:**  `myAssembly` 및 `display` 작업의 경우 `uninstall`와 같은 부분 어셈블리 이름을 제공할 수 있습니다. <br /><br /> Ngen.exe 명령줄 당 어셈블리를 하나만 지정할 수 있습니다.|
 |`assemblyPath`|어셈블리의 명시적 경로입니다. 전체 또는 상대 경로를 지정할 수 있습니다.<br /><br /> 경로 없이 파일 이름을 지정하는 경우 어셈블리가 현재 디렉터리에 있어야 합니다.<br /><br /> Ngen.exe 명령줄 당 어셈블리를 하나만 지정할 수 있습니다.|
 
 <a name="PriorityTable"></a>
@@ -392,7 +392,7 @@ Ngen.exe는 네이티브 이미지를 생성할 때 이 정보를 기록합니�
 
      어셈블리에 이전에 부여되었던 사용 권한을 제한하도록 컴퓨터 보안 정책을 변경하면 이전에 컴파일한 해당 어셈블리의 네이티브 이미지를 사용할 수 없게 됩니다.
 
-     공용 언어 런타임에서 코드 액세스 보안을 관리하는 방법과 권한을 사용하는 방법에 대한 자세한 내용은 [코드 액세스 보안](../../../docs/framework/misc/code-access-security.md)을 참조하세요.
+     공용 언어 런타임에서 코드 액세스 보안을 관리하는 방법과 권한을 사용하는 방법에 대한 자세한 내용은 [코드 액세스 보안](../misc/code-access-security.md)을 참조하세요.
 
 <a name="Troubleshooting"></a>
 
@@ -404,13 +404,13 @@ Ngen.exe는 네이티브 이미지를 생성할 때 이 정보를 기록합니�
 
 ### <a name="assembly-binding-log-viewer"></a>어셈블리 바인딩 로그 뷰어
 
-애플리케이션에서 네이티브 이미지를 사용하고 있는지 확인하려면 [Fuslogvw.exe(어셈블리 바인딩 로그 뷰어)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)를 사용할 수 있습니다. 바인딩 로그 뷰어 창의 **로그 범주** 상자에서 **네이티브 이미지**를 선택합니다. Fuslogvw.exe는 네이티브 이미지를 거부하는 이유에 대한 정보를 제공합니다.
+애플리케이션에서 네이티브 이미지를 사용하고 있는지 확인하려면 [Fuslogvw.exe(어셈블리 바인딩 로그 뷰어)](fuslogvw-exe-assembly-binding-log-viewer.md)를 사용할 수 있습니다. 바인딩 로그 뷰어 창의 **로그 범주** 상자에서 **네이티브 이미지**를 선택합니다. Fuslogvw.exe는 네이티브 이미지를 거부하는 이유에 대한 정보를 제공합니다.
 
 <a name="MDA"></a>
 
 ### <a name="the-jitcompilationstart-managed-debugging-assistant"></a>JITCompilationStart 관리 디버깅 도우미
 
-[jitCompilationStart](../../../docs/framework/debug-trace-profile/jitcompilationstart-mda.md) MDA(관리 디버깅 도우미)를 사용하여 JIT 컴파일러에서 함수 컴파일을 시작하는 시기를 결정할 수 있습니다.
+[jitCompilationStart](../debug-trace-profile/jitcompilationstart-mda.md) MDA(관리 디버깅 도우미)를 사용하여 JIT 컴파일러에서 함수 컴파일을 시작하는 시기를 결정할 수 있습니다.
 
 <a name="OptOut"></a>
 
@@ -428,7 +428,7 @@ Ngen.exe는 네이티브 이미지를 생성할 때 이 정보를 기록합니�
 [!code-csharp[System.Runtime.BypassNGenAttribute#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/cs/Optout1.cs#2)]
 [!code-vb[System.Runtime.BypassNGenAttribute#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/vb/Optout1.vb#2)]
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 다음 명령은 현재 디렉터리에 있는 `ClientApp.exe`에 대한 네이티브 이미지를 생성하고 그 이미지를 네이티브 이미지 캐시에 저장합니다. 어셈블리에 대해 구성 파일이 존재하는 경우 Ngen.exe는 해당 파일을 사용합니다. 또한 `ClientApp.exe`에서 참조하는 모든 .dll 파일에 대한 네이티브 이미지가 생성됩니다.
 
@@ -562,7 +562,7 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
 
 ## <a name="native-image-task"></a>네이티브 이미지 작업
 
-네이티브 이미지 작업은 네이티브 이미지를 생성 및 유지 관리하는 Windows 작업입니다. 네이티브 이미지 작업은 지원되는 시나리오에 대해 자동으로 네이티브 이미지를 생성 및 회수합니다. 또한 설치 관리자가 [Ngen.exe(네이티브 이미지 생성기)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)를 사용하여 지연된 시간에 네이티브 이미지를 만들고 업데이트할 수 있게 합니다.
+네이티브 이미지 작업은 네이티브 이미지를 생성 및 유지 관리하는 Windows 작업입니다. 네이티브 이미지 작업은 지원되는 시나리오에 대해 자동으로 네이티브 이미지를 생성 및 회수합니다. 또한 설치 관리자가 [Ngen.exe(네이티브 이미지 생성기)](ngen-exe-native-image-generator.md)를 사용하여 지연된 시간에 네이티브 이미지를 만들고 업데이트할 수 있게 합니다.
 
 네이티브 이미지 작업은 각 아키텍처를 대상으로 하는 애플리케이션에 대한 컴파일을 허용하기 위해 컴퓨터에서 지원되는 각 CPU 아키텍처에 대해 한 번 등록됩니다.
 
@@ -639,7 +639,7 @@ ngen executeQueuedItems
 
 ## <a name="see-also"></a>참고 항목
 
-- [도구](../../../docs/framework/tools/index.md)
+- [도구](index.md)
 - [관리되는 실행 프로세스](../../standard/managed-execution-process.md)
-- [런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [런타임에서 어셈블리를 찾는 방법](../deployment/how-the-runtime-locates-assemblies.md)
+- [명령 프롬프트](developer-command-prompt-for-vs.md)

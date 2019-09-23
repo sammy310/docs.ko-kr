@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 53ad8f6187b4e9b1754094dae0ebfe6e05a1b78b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 727d1b4ecb17eafb448205aa0c7eea36c5545b98
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614134"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052216"
 ---
 # <a name="best-practices-for-assembly-loading"></a>최선의 어셈블리 로드 방법
 이 문서에서는 <xref:System.InvalidCastException>, <xref:System.MissingMethodException> 및 다른 오류를 발생시킬 수 있는 형식 ID 문제를 방지하는 방법을 설명합니다. 이 문서에서는 다음 권장 사항을 설명합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "64614134"
   
 - 로드 소스 컨텍스트에는 로더를 통해 검색되지 않은 위치에서 로드된 어셈블리가 포함됩니다. 예를 들어 추가 기능은 애플리케이션 경로 아래에 없는 디렉터리에 설치될 수 있습니다. <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType> 및 <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType>는 경로로 로드되는 메서드의 예제입니다.  
   
-- 리플렉션 전용 컨텍스트에는 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> 및 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 메서드를 사용하여 로드되는 어셈블리가 포함됩니다. 이 컨텍스트의 코드는 실행될 수 없으므로 여기서 설명하지 않습니다. 자세한 내용은 [방법: 리플렉션 전용 컨텍스트에 어셈블리 로드](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)를 참조하세요.  
+- 리플렉션 전용 컨텍스트에는 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> 및 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 메서드를 사용하여 로드되는 어셈블리가 포함됩니다. 이 컨텍스트의 코드는 실행될 수 없으므로 여기서 설명하지 않습니다. 자세한 내용은 [방법: 리플렉션 전용 컨텍스트에 어셈블리 로드](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)를 참조하세요.  
   
 - 리플렉션 내보내기를 사용하여 임시 동적 어셈블리를 생성한 경우 이 어셈블리는 컨텍스트에 포함되지 않습니다. 또한 <xref:System.Reflection.Assembly.LoadFile%2A> 메서드를 사용하여 로드된 대부분 어셈블리는 컨텍스트 없이 로드되고, 바이트 배열에서 로드된 어셈블리는 전역 어셈블리 캐시에 포함되도록 해당 ID(정책이 적용된 후)에 설정된 경우가 아니면 컨텍스트 없이 로드됩니다.  
   

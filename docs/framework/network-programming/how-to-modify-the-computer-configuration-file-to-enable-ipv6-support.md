@@ -2,12 +2,12 @@
 title: '방법: IPv6 지원을 사용하도록 컴퓨터 구성 파일 수정'
 ms.date: 03/30/2017
 ms.assetid: 5611b677-b9cc-43b8-a434-60e18d89aada
-ms.openlocfilehash: af6eb8a334108c988967a555024b524e27d40f58
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 362e7af36d214df9f0454479e25a80af9d440b2b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959074"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048280"
 ---
 # <a name="how-to-modify-the-computer-configuration-file-to-enable-ipv6-support"></a>방법: IPv6 지원을 사용하도록 컴퓨터 구성 파일 수정
 다음 코드 예제에서는 컴퓨터 구성 파일 *machine.config*를 수정하여 IPv6 지원을 사용하도록 설정하는 방법을 보여 줍니다. *machine.config* 파일은 Windows가 설치된 디렉터리의 *%Windir%\Microsoft.NET\Framework* 폴더에 저장됩니다. 컴퓨터에 설치된 .NET Framework의 각 버전에 해당하는 *%Windir%\Microsoft.NET\Framework* 아래의 폴더에는 개별 *machine.config* 파일이 있습니다(예: *C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config*).  
@@ -37,6 +37,6 @@ ms.locfileid: "69959074"
   
 ## <a name="see-also"></a>참고 항목
 
-- [IPv6 주소 지정](../../../docs/framework/network-programming/ipv6-addressing.md)
-- [네트워크 설정 스키마](../../../docs/framework/configure-apps/file-schema/network/index.md)
-- [\<ipv6> 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)
+- [IPv6 주소 지정](ipv6-addressing.md)
+- [네트워크 설정 스키마](../configure-apps/file-schema/network/index.md)
+- [\<ipv6> 요소(네트워크 설정)](../configure-apps/file-schema/network/ipv6-element-network-settings.md)

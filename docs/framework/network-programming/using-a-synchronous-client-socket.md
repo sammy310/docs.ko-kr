@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
-ms.openlocfilehash: 339f9c9d8b25f6deef4cc77f60c26b7b5d017ce0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fdecd18dc5975cd469e49de0eb0b55081e738cd8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105783"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047066"
 ---
 # <a name="using-a-synchronous-client-socket"></a>동기 클라이언트 소켓 사용
 동기 클라이언트 소켓은 네트워크 작업이 완료되는 동안 애플리케이션을 일시 중단합니다. 동기 소켓은 네트워크를 작업에 많이 사용하는 애플리케이션에 적합하지 않지만 다른 애플리케이션의 네트워크 서비스에 대한 간단한 액세스를 가능하게 합니다.  
@@ -72,6 +72,6 @@ s.Close();
   
 ## <a name="see-also"></a>참고 항목
 
-- [비동기 클라이언트 소켓 사용](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
-- [소켓으로 수신](../../../docs/framework/network-programming/listening-with-sockets.md)
-- [동기 클라이언트 소켓 예제](../../../docs/framework/network-programming/synchronous-client-socket-example.md)
+- [비동기 클라이언트 소켓 사용](using-an-asynchronous-client-socket.md)
+- [소켓으로 수신](listening-with-sockets.md)
+- [동기 클라이언트 소켓 예제](synchronous-client-socket-example.md)

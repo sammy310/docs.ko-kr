@@ -2,12 +2,12 @@
 title: 버전 3.5의 소켓 성능 향상
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
-ms.openlocfilehash: 28f2543d1f8c81efd32ffbb644265fb5709a9bb3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 577c033fc5639f9d9f50e413fd2cb55a75d48f2c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333290"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047235"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>버전 3.5의 소켓 성능 향상
 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> 클래스는 비동기 네트워크 I/O를 통해 성능을 최적화하는 애플리케이션에서 사용하기 위해 버전 3.5에서 개선되었습니다. 특수화된 고성능 소켓 애플리케이션에서 사용할 수 있는 대체 비동기 패턴을 제공하는 <xref:System.Net.Sockets.Socket> 클래스에 대한 향상된 기능 집합의 일부로 일련의 새로운 클래스가 추가되었습니다. 이러한 개선 사항은 특히 높은 성능이 필요한 네트워크 서버 애플리케이션용으로 설계되었습니다. 애플리케이션은 향상된 비동기 패턴을 단독으로 사용하거나, 애플리케이션의 대상 핫 영역에서만 사용할 수 있습니다(예: 많은 양의 데이터를 수신하는 경우).  
@@ -39,5 +39,5 @@ ms.locfileid: "59333290"
 - <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=nameWithType>
-- [네트워크 프로그래밍 샘플](../../../docs/framework/network-programming/network-programming-samples.md)
+- [네트워크 프로그래밍 샘플](network-programming-samples.md)
 - [소켓 코드 예제](socket-code-examples.md)

@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0683499241f594b8b37b7dd69b91ed5929670024
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: df7ce0795daabdf34f46e20460bef23e7c486467
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894577"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043900"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe(Windows 리소스 지역화 편집기)
 
-Winres.exe(Windows 리소스 지역화 편집기)는 지역화 전문가가 폼에 사용된 Windows Forms UI(사용자 인터페이스)를 쉽게 지역화하는 데 사용할 수 있는 시각적 레이아웃 도구입니다. Winres.exe의 입력으로 사용되는 .resx 또는 .resources 파일은 Microsoft Visual Studio 같은 시각적 디자인 환경을 사용하여 만들 수 있습니다. .NET Framework 애플리케이션의 리소스를 배포하는 데 대한 자세한 내용은 [데스크톱 앱의 리소스](../../../docs/framework/resources/index.md)를 참조하세요.
+Winres.exe(Windows 리소스 지역화 편집기)는 지역화 전문가가 폼에 사용된 Windows Forms UI(사용자 인터페이스)를 쉽게 지역화하는 데 사용할 수 있는 시각적 레이아웃 도구입니다. Winres.exe의 입력으로 사용되는 .resx 또는 .resources 파일은 Microsoft Visual Studio 같은 시각적 디자인 환경을 사용하여 만들 수 있습니다. .NET Framework 애플리케이션의 리소스를 배포하는 데 대한 자세한 내용은 [데스크톱 앱의 리소스](../resources/index.md)를 참조하세요.
 
-Winres.exe는 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트를 사용합니다. 자세한 내용은 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 참조하세요.
+Winres.exe는 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -55,7 +55,7 @@ Windows Forms 프로젝트의 폼에 있는 UI 요소의 상태는 일반적으�
 
 또한 [Hierarchical Organization of Resources for Localization](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/756hydy4(v=vs.110))(지역화를 위한 리소스의 계층적 구성) 또는 [Hierarchical Organization of Resources for Localization](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/756hydy4(v=vs.120))(지역화를 위한 리소스의 계층적 구성)을 참조하세요.
 
-Winres.exe로는 .resx 파일을 상응하는 .resources 파일로 변환할 수 없습니다. 이를 위해서는 Resgen.exe 도구를 대신 사용합니다. Resgen.exe에 대한 자세한 내용은 [Resgen.exe(리소스 파일 생성기)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)를 참조하세요.
+Winres.exe로는 .resx 파일을 상응하는 .resources 파일로 변환할 수 없습니다. 이를 위해서는 Resgen.exe 도구를 대신 사용합니다. Resgen.exe에 대한 자세한 내용은 [Resgen.exe(리소스 파일 생성기)](resgen-exe-resource-file-generator.md)를 참조하세요.
 
 Winres.exe는 소스 코드에 액세스하지 않고 리소스 파일만을 사용하여 Windows Forms 폼의 디자인 타임 버전을 다시 만드는 그래픽 애플리케이션입니다. Winres.exe는 Visual Studio의 **Windows Forms 폼 디자이너** 및 **속성** 창을 호스팅합니다. 이러한 기능을 통해 Windows Forms 폼이 포함된 .resources 또는 .resx 파일을 시각적으로 편집할 수 있습니다. 일반적으로 지역화 담당자는 Winres.exe를 사용하여 컨트롤 레이블을 편집하고 컨트롤의 위치 및 크기를 조정함으로써 레이블을 대상 문화권에 적합하게 만듭니다.
 
@@ -76,7 +76,7 @@ Winres.exe를 사용하여 지역화하려면 먼저 Visual Studio의 **Windows 
 > [!NOTE]
 > Winres.exe에서는 기본 리소스 파일을 편집할 수 없습니다. Winres.exe는 모든 변경된 속성을 지역화된 속성으로 해석하여 대상 문화권 리소스 파일에 저장합니다.
 
-문화권 리소스 파일의 최종 버전은 마지막에 애플리케이션의 지역화된 버전을 만드는 데 사용할 수 있습니다. 자세한 내용은 [데스크톱 앱의 리소스](../../../docs/framework/resources/index.md)를 참조하세요.
+문화권 리소스 파일의 최종 버전은 마지막에 애플리케이션의 지역화된 버전을 만드는 데 사용할 수 있습니다. 자세한 내용은 [데스크톱 앱의 리소스](../resources/index.md)를 참조하세요.
 
 Winres.exe에는 다음 기능과 특징이 있습니다.
 
@@ -102,7 +102,7 @@ Winres.exe에는 다음 기능과 특징이 있습니다.
 > [!NOTE]
 > VSFM에는 Visual Studio와 호환 가능하다는 장점이 있지만, 변경된 값만 리소스 파일에 저장하므로 Winres.exe를 사용하려면 현재 리소스 파일의 부모가 동일한 디렉터리에 있어야 합니다. 예를 들어, 독일어(독일) 리소스 파일인 `TestApp.de-DE.resources`를 편집하는 경우에는 기본 리소스 파일인 `TestApp.resx`가 있어야 하며, 중립 문화권 리소스 파일인 `TestApp.de.resources`도 필요할 수 있습니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 ### <a name="to-localize-a-resx-or-resources-file-associated-with-a-form"></a>폼과 연결된 .resx 또는 .resources 파일을 지역화하려면
 
@@ -127,7 +127,7 @@ Winres.exe에는 다음 기능과 특징이 있습니다.
     ```
 
     > [!NOTE]
-    > 편집할 리소스가 있는 폼이 상속된 폼인 경우에는 상속된 폼을 포함하는 어셈블리와 상속하는(파생된) 폼을 포함하는 어셈블리가 모두 GAC(전역 어셈블리 캐시)에 등록되어 있거나 WinRes.exe와 동일한 디렉터리에 있어야 합니다. .NET Framework 구성 요소를 GAC에 설치하는 자세한 내용은 [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)를 참조하세요.
+    > 편집할 리소스가 있는 폼이 상속된 폼인 경우에는 상속된 폼을 포함하는 어셈블리와 상속하는(파생된) 폼을 포함하는 어셈블리가 모두 GAC(전역 어셈블리 캐시)에 등록되어 있거나 WinRes.exe와 동일한 디렉터리에 있어야 합니다. .NET Framework 구성 요소를 GAC에 설치하는 자세한 내용은 [전역 어셈블리 캐시](../app-domains/gac.md)를 참조하세요.
 
 3. 폼에서 컨트롤을 선택하고 <xref:System.Windows.Forms.Control.Text%2A> 및 기타 속성을 변경하여 지역화된 문화권 및 언어를 반영합니다. 지역화된 텍스트에 맞게 필요한 만큼 컨트롤을 이동하거나 크기를 조정합니다.
 
@@ -135,7 +135,7 @@ Winres.exe에는 다음 기능과 특징이 있습니다.
 
 5. 문화권 및 파일 모드를 적절히 선택한 다음 **확인**을 클릭합니다.
 
-   도구는 지역화된 리소스 파일에 대해 런타임에서 예상하는 명명 규칙을 사용하여 파일을 저장합니다. 예를 들어, `TestApp.resources`를 독일어(독일)로 지역화하는 경우 이 도구는 파일을 `TestApp.de-DE.resources`로 저장하고 `TestApp.resx`를 독일어(독일)로 지역화하는 경우 `TestApp.de-DE.resx`로 저장합니다. 리소스 명명 규칙에 대한 자세한 내용은 [리소스 패키지 및 배포](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)를 참조하세요. 런타임에서 사용하는 미리 정의된 문화권 이름의 목록은 <xref:System.Globalization.CultureInfo> 클래스를 참조하세요.
+   도구는 지역화된 리소스 파일에 대해 런타임에서 예상하는 명명 규칙을 사용하여 파일을 저장합니다. 예를 들어, `TestApp.resources`를 독일어(독일)로 지역화하는 경우 이 도구는 파일을 `TestApp.de-DE.resources`로 저장하고 `TestApp.resx`를 독일어(독일)로 지역화하는 경우 `TestApp.de-DE.resx`로 저장합니다. 리소스 명명 규칙에 대한 자세한 내용은 [리소스 패키지 및 배포](../resources/packaging-and-deploying-resources-in-desktop-apps.md)를 참조하세요. 런타임에서 사용하는 미리 정의된 문화권 이름의 목록은 <xref:System.Globalization.CultureInfo> 클래스를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 
@@ -144,6 +144,6 @@ Winres.exe에는 다음 기능과 특징이 있습니다.
 - <xref:System.Resources.ResourceManager>
 - <xref:System.Resources.ResourceReader>
 - <xref:System.Resources.ResourceWriter>
-- [도구](../../../docs/framework/tools/index.md)
-- [데스크톱 앱의 리소스](../../../docs/framework/resources/index.md)
+- [도구](index.md)
+- [데스크톱 앱의 리소스](../resources/index.md)
 - [전역화 및 지역화](../../standard/globalization-localization/index.md)

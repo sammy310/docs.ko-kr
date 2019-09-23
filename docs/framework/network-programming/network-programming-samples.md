@@ -2,12 +2,12 @@
 title: 네트워크 프로그래밍 샘플
 ms.date: 03/30/2017
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
-ms.openlocfilehash: 6d66a5ce0835a52dd1b8c331d94bc58ce17622c1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1c3dc630f8675084d434431fbe227cf373c54b62
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204551"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047599"
 ---
 # <a name="network-programming-samples"></a>네트워크 프로그래밍 샘플
 이 섹션에는 <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.Security>, <xref:System.Net.Sockets> 및 관련 네임스페이스의 클래스를 사용하는 다운로드 가능한 네트워크 프로그래밍 샘플에 대한 링크와 설명이 포함되어 있습니다. 
@@ -59,5 +59,5 @@ ms.locfileid: "59204551"
   
 ## <a name="see-also"></a>참고 항목
 
-- [.NET Framework의 네트워크 프로그래밍](../../../docs/framework/network-programming/index.md)
-- [네트워크 프로그래밍 방법 항목](../../../docs/framework/network-programming/network-programming-how-to-topics.md)
+- [.NET Framework의 네트워크 프로그래밍](index.md)
+- [네트워크 프로그래밍 방법 항목](network-programming-how-to-topics.md)

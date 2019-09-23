@@ -11,12 +11,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: 328f67c5afe22f336aa6337903b6569fb6ecc359
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1fbfe25b90e810ff96924a2341582ff3f5ee5e5d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623055"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047352"
 ---
 # <a name="proxy-configuration"></a>프록시 구성
 프록시 서버는 리소스에 대한 클라이언트 요청을 처리합니다. 프록시는 해당 캐시에서 요청한 리소스를 반환하거나 리소스가 있는 서버로 요청을 전달할 수 있으며, 원격 서버로 전송되는 요청 수를 줄여 네트워크 성능을 개선할 수 있습니다. 프록시를 사용하여 리소스에 대한 액세스를 제한할 수도 있습니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "64623055"
 ## <a name="adaptive-proxies"></a>적응 프록시  
  .NET Framework에서 프록시는 적응 및 정적의 두 가지 형식으로 제공됩니다. 적응 프록시는 네트워크 구성이 변경되면 설정을 조정합니다. 예를 들어 랩톱 사용자가 전화 접속 네트워크 연결을 시작하면 적응 프록시가 해당 변경을 인식하여 새 구성 스크립트를 검색 및 실행하고 설정을 적절하게 조정합니다.  
   
- 구성 스크립트를 통해 적응 프록시를 구성합니다([자동 프록시 검색](../../../docs/framework/network-programming/automatic-proxy-detection.md) 참조). 스크립트는 애플리케이션 프로토콜 집합과 각 프로토콜용 프록시를 생성합니다.  
+ 구성 스크립트를 통해 적응 프록시를 구성합니다([자동 프록시 검색](automatic-proxy-detection.md) 참조). 스크립트는 애플리케이션 프로토콜 집합과 각 프로토콜용 프록시를 생성합니다.  
   
  네트워크 환경이 변경되는 경우에는 시스템에서 새 프록시 집합을 사용해야 할 수 있습니다. 네트워크 연결이 다운되거나 새 네트워크 연결이 초기화되면 시스템은 새 환경에서 적절한 구성 스크립트 소스를 찾아 새 스크립트를 실행해야 합니다.  
   
@@ -79,4 +79,4 @@ ms.locfileid: "64623055"
 
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.GlobalProxySelection>
-- [자동 프록시 검색](../../../docs/framework/network-programming/automatic-proxy-detection.md)
+- [자동 프록시 검색](automatic-proxy-detection.md)

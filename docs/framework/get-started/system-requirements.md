@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bed0084fd576ba9b9f9eeb51e9e2466938e43490
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 6f867b53f168a394515a1b1eaa6575a72dfb8d91
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106506"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052006"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework 시스템 요구 사항
 
@@ -34,7 +34,7 @@ ms.locfileid: "70106506"
 
 [!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
-다운로드 정보와 링크에 대해서는 [개발자용 .NET Framework 설치](../../../docs/framework/install/guide-for-developers.md)를 참조하세요.
+다운로드 정보와 링크에 대해서는 [개발자용 .NET Framework 설치](../install/guide-for-developers.md)를 참조하세요.
 
 .NET Framework 버전의 지원 기간에 대한 자세한 내용은 [Microsoft 제품 지원 수명 주기](https://support.microsoft.com/lifecycle/search?sort=PN&alpha=Microsoft%20.NET%20Framework&Filter=FilterNO)를 참조하십시오.
 
@@ -112,6 +112,6 @@ ms.locfileid: "70106506"
 
 ## <a name="see-also"></a>참고 항목
 
-- [설치 가이드](../../../docs/framework/install/index.md)
-- [시작](../../../docs/framework/get-started/index.md)
-- [차단된 .NET Framework 설치 및 제거 문제 해결](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [설치 가이드](../install/index.md)
+- [시작](index.md)
+- [차단된 .NET Framework 설치 및 제거 문제 해결](../install/troubleshoot-blocked-installations-and-uninstallations.md)

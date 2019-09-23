@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9e6d9e57528f3eae9b30706013a0529313877c7
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9d08d6164c00d2b5b750c9edda46a7be18153152
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894876"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044651"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe(IL 디스어셈블러)
 
 IL 디스어셈블러는 IL 어셈블러(*Ilasm.exe*)의 자매 도구입니다. *Ildasm.exe*는 IL(intermediate language) 코드가 포함된 PE(이식 가능한 실행) 파일을 가져와서 *Ildasm.exe*에 입력하기에 적합한 텍스트 파일을 만듭니다.
 
-이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 참조하세요.
+이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.
 
 명령 프롬프트에 다음을 입력합니다.
 
@@ -135,7 +135,7 @@ public void Test([MarshalAs((short)70)] int test) { }
       …
 ```
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 다음 명령을 사용하여 PE 파일 `MyHello.exe`에 대한 메타데이터 및 디스어셈블된 코드를 *Ildasm.exe*의 기본 GUI에 표시합니다.
 
@@ -186,7 +186,7 @@ ildasm /item:"MyClass::MyMethod(class [mscorlib]System.AppDomain(class [mscorlib
 
 ## <a name="see-also"></a>참고 항목
 
-- [도구](../../../docs/framework/tools/index.md)
-- [Ilasm.exe(IL 어셈블러)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)
+- [도구](index.md)
+- [Ilasm.exe(IL 어셈블러)](ilasm-exe-il-assembler.md)
 - [관리되는 실행 프로세스](../../standard/managed-execution-process.md)
-- [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [명령 프롬프트](developer-command-prompt-for-vs.md)

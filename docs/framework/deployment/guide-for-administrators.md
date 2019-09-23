@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 793012b21ae6a3a597efaea23a6d3b6d1db58562
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 91099b9b4d230839bc14c5fe4d5eafd05ac95541
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379954"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052153"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>관리자를 위한 .NET Framework 배포 가이드
 
-이 단계별 문서에서는 시스템 관리자가 Microsoft System Center Configuration Manager를 사용하여 .NET Framework 4.5 및 해당 시스템 종속성을 네트워크 전체에 배포할 수 있는 방법에 대해 설명합니다. 이 문서에서는 .NET Framework 4의 최소 요구 사항이 모든 대상 클라이언트 컴퓨터에서 충족되는 것으로 가정합니다. .NET Framework 4.5 설치를 위한 소프트웨어와 하드웨어 요구 사항 목록은 [시스템 요구 사항](../../../docs/framework/get-started/system-requirements.md)을 참조하세요.
+이 단계별 문서에서는 시스템 관리자가 Microsoft System Center Configuration Manager를 사용하여 .NET Framework 4.5 및 해당 시스템 종속성을 네트워크 전체에 배포할 수 있는 방법에 대해 설명합니다. 이 문서에서는 .NET Framework 4의 최소 요구 사항이 모든 대상 클라이언트 컴퓨터에서 충족되는 것으로 가정합니다. .NET Framework 4.5 설치를 위한 소프트웨어와 하드웨어 요구 사항 목록은 [시스템 요구 사항](../get-started/system-requirements.md)을 참조하세요.
 
 > [!NOTE]
 > .NET Framework 4.5, System Center Configuration Manager 및 Active Directory를 비롯하여 이 문서에서 언급된 소프트웨어에는 각각 사용권 계약 내용이 적용됩니다. 이 지침에서는 적절한 소프트웨어 라이선스로 이러한 사용권 계약 내용을 검토하고 이에 동의했다고 가정합니다. 이 지침에서는 이러한 사용권 계약의 어떠한 내용도 배제하지 않습니다.
@@ -200,7 +200,7 @@ System Center 2012 Configuration Manager를 사용하여 .NET Framework 4.5의 �
 
 <a name="resources"></a>
 
-## <a name="resources"></a>자료
+## <a name="resources"></a>리소스
 
 .NET Framework 4.5 재배포 가능 패키지의 배포 테스트를 위한 인프라에 대한 자세한 내용은 다음 리소스를 참조하세요.
 
@@ -280,5 +280,5 @@ System Center 2012 Configuration Manager를 사용하여 .NET Framework 4.5의 �
 
 ## <a name="see-also"></a>참고 항목
 
-- [개발자를 위한 배포 가이드](../../../docs/framework/deployment/deployment-guide-for-developers.md)
-- [시스템 요구 사항](../../../docs/framework/get-started/system-requirements.md)
+- [개발자를 위한 배포 가이드](deployment-guide-for-developers.md)
+- [시스템 요구 사항](../get-started/system-requirements.md)

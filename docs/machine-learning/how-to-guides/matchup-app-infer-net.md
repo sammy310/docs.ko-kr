@@ -3,12 +3,12 @@ title: Infer.NET 및 확률적 프로그래밍을 사용하여 게임 대전 목
 description: Infer.NET과 함께 확률적 프로그래밍을 사용하여 TrueSkill의 간소화된 버전을 기반으로 게임 대전 목록 앱을 만드는 방법을 알아봅니다.
 ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: aa3ad9528238e4f5a5eb187af71f2d2da1ea9cba
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: edb747355f2d41d0400c6a989eea37423bbda2b4
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855792"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117990"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Infer.NET 및 확률적 프로그래밍을 사용하여 게임 대전 목록 앱 만들기
 
@@ -28,7 +28,7 @@ ms.locfileid: "70855792"
 
 1. 새 명령 프롬프트를 열고 다음 명령을 실행합니다.
 
-```console
+```dotnetcli
 dotnet new console -o myApp
 cd myApp
 ```
@@ -39,7 +39,7 @@ cd myApp
 
 Infer.NET을 사용하려면 `Microsoft.ML.Probabilistic.Compiler` 패키지를 설치해야 합니다. 명령 프롬프트에서 다음 명령을 실행합니다.
 
-```console
+```dotnetcli
 dotnet add package Microsoft.ML.Probabilistic.Compiler
 ```
 
@@ -130,7 +130,7 @@ namespace myApp
 
 명령 프롬프트에서 다음 명령을 실행합니다.
 
-```console
+```dotnetcli
 dotnet run
 ```
 

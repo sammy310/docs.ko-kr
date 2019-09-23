@@ -16,14 +16,15 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 8f27afafde0b83dfe886d218f3148d8ff07b30cb
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 40ed31bb2231775bb2b6eb24586e07c8b07a85bb
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972524"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053952"
 ---
 # <a name="how-to-view-assembly-contents"></a>방법: 어셈블리 콘텐츠 보기
+
 [Ildasm.exe(IL 디스어셈블러)](../../framework/tools/ildasm-exe-il-disassembler.md)를 사용하여 파일의 MSIL(Microsoft Intermediate Language) 정보를 볼 수 있습니다. 검사되는 파일이 어셈블리이면 이 정보에 어셈블리의 특성뿐만 아니라 다른 모듈 및 어셈블리에 대한 참조가 포함될 수 있습니다. 이 정보는 파일이 어셈블리 또는 어셈블리의 일부인지 여부 및 파일이 다른 모듈 또는 어셈블리에 대한 참조를 포함하는지 여부를 확인하는 데 유용할 수 있습니다.  
   
 *Ildasm.exe*를 사용하여 어셈블리의 콘텐츠를 표시하려면 명령 프롬프트에서 **ildasm** \<*assembly name*>을 입력합니다. 예를 들어 다음 명령은 *Hello.exe* 어셈블리를 디스어셈블합니다.  
@@ -35,6 +36,7 @@ ildasm Hello.exe
 어셈블리 매니페스트 정보를 보려면 MSIL 디스어셈블러 창에서 **매니페스트** 아이콘을 두 번 클릭합니다.  
   
 ## <a name="example"></a>예  
+
 다음 예제는 기본 "Hello World" 프로그램으로 시작합니다. 프로그램을 컴파일한 후 *Ildasm.exe*를 사용하여 *Hello.exe* 어셈블리를 디스어셈블하고 어셈블리 매니페스트를 봅니다.  
 
 ```cpp

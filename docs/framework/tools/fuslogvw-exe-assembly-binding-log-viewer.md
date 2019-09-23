@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd27bebdc71c70226a61ad8d912135e0e1671dd8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 6077acab533ecb755ae42b7c4359a6c77ff33449
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851251"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044673"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe(어셈블리 바인딩 로그 뷰어)
 
@@ -25,7 +25,7 @@ ms.locfileid: "70851251"
 > [!IMPORTANT]
 > Fuslogvw.exe는 관리자 권한으로 실행해야 합니다.
 
-이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 관리자 자격 증명과 함께 사용합니다. 자세한 내용은 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 참조하세요.
+이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 관리자 자격 증명과 함께 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.
 
 명령 프롬프트에 다음을 입력합니다.
 
@@ -60,7 +60,7 @@ fuslogvw
 
     - 적용된 애플리케이션, 게시자 또는 관리자 버전 정책 설명
 
-    - [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)에 어셈블리가 있는지 여부
+    - [전역 어셈블리 캐시](../app-domains/gac.md)에 어셈블리가 있는지 여부
 
     - 검색하는 모든 URL 목록
 
@@ -122,7 +122,7 @@ LOG: All probing URLs attempted and failed.
 
 ## <a name="binding-logs-for-native-images"></a>네이티브 이미지에 대한 바인딩 로그
 
-기본적으로 Fuslogvw.exe는 일반 어셈블리 바인딩 요청을 기록합니다. 또는 [Ngen.exe(네이티브 이미지 생성기)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)를 사용하여 생성된 네이티브 이미지에 대한 어셈블리 바인딩을 기록할 수 있습니다.
+기본적으로 Fuslogvw.exe는 일반 어셈블리 바인딩 요청을 기록합니다. 또는 [Ngen.exe(네이티브 이미지 생성기)](ngen-exe-native-image-generator.md)를 사용하여 생성된 네이티브 이미지에 대한 어셈블리 바인딩을 기록할 수 있습니다.
 
 #### <a name="to-log-assembly-binds-for-native-images"></a>네이티브 이미지에 대한 어셈블리 바인딩을 기록하려면
 
@@ -218,7 +218,7 @@ Discarding native image.
 2. **사용자 지정 로그 경로** 텍스트 상자에 경로를 입력합니다.
 
 > [!NOTE]
-> [어셈블리 바인딩 로그 뷰어(Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)에서는 IE(Internet Explorer) 캐시를 사용하여 바인딩 로그를 저장합니다. 가끔 나타나는 IE 캐시 손상으로 인해 [어셈블리 바인딩 로그 뷰어(Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)에서는 보기 창에 새 바인딩 로그를 표시하지 않을 수도 있습니다. 이 손상으로 인해 .NET 바인딩 인프라(fusion)는 바인딩 로그에 쓰거나 바인딩 로그에서 읽을 수 없습니다. 사용자 지정 로그 경로를 사용하는 경우에는 이 문제가 발생하지 않습니다.  손상을 해결하고 fusion이 바인딩 로그를 다시 표시하도록 하려면 IE 옵션 대화 상자 내에서 임시 인터넷 파일을 삭제하여 IE 캐시를 지웁니다.
+> [어셈블리 바인딩 로그 뷰어(Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md)에서는 IE(Internet Explorer) 캐시를 사용하여 바인딩 로그를 저장합니다. 가끔 나타나는 IE 캐시 손상으로 인해 [어셈블리 바인딩 로그 뷰어(Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md)에서는 보기 창에 새 바인딩 로그를 표시하지 않을 수도 있습니다. 이 손상으로 인해 .NET 바인딩 인프라(fusion)는 바인딩 로그에 쓰거나 바인딩 로그에서 읽을 수 없습니다. 사용자 지정 로그 경로를 사용하는 경우에는 이 문제가 발생하지 않습니다.  손상을 해결하고 fusion이 바인딩 로그를 다시 표시하도록 하려면 IE 옵션 대화 상자 내에서 임시 인터넷 파일을 삭제하여 IE 캐시를 지웁니다.
 >
 > 관리되지 않는 애플리케이션에서 `IHostAssemblyManager` 및 `IHostAssemblyStore` 인터페이스를 구현하여 공용 언어 런타임을 호스팅하는 경우 로그 엔트리를 wininet 캐시에 저장할 수 없습니다.  이러한 인터페이스를 구현하는 사용자 지정 호스트에 대한 로그 엔트리를 보려면 대체 로그 경로를 지정해야 합니다.
 
@@ -234,7 +234,7 @@ Discarding native image.
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.TypeLoadException>
-- [도구](../../../docs/framework/tools/index.md)
-- [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)
-- [런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [도구](index.md)
+- [전역 어셈블리 캐시](../app-domains/gac.md)
+- [런타임에서 어셈블리를 찾는 방법](../deployment/how-the-runtime-locates-assemblies.md)
+- [명령 프롬프트](developer-command-prompt-for-vs.md)

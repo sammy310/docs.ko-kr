@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c5033b32c1623885b5408f428ce4bc4202d50ce1
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9a8d41228c46de0f18b5a92def0591d6373d3d69
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894621"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044090"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll(SOS 디버깅 확장)
 
@@ -74,7 +74,7 @@ SOS 디버깅 확장명(SOS.dll)을 사용하면 내부 CLR(공용 언어 런타
 |**IP2MD** \<*Code address*>|JIT 컴파일된 코드의 지정된 주소에 있는 `MethodDesc` 구조체를 표시합니다.|
 |`ListNearObj` (`lno`) *\<obj_address>*|지정된 주소 앞에 오거나 뒤에 오는 개체를 표시합니다. 명령은 관리되는 개체(유효한 메서드 테이블을 기준으로 함)와 인수 주소 다음에 있는 개체의 유효한 시작처럼 보이는 가비지 수집 힙에서 주소를 찾습니다.|
 |**MinidumpMode** [**0**] [**1**]|미니덤프를 사용할 때 안전하지 않은 명령이 실행되지 않도록 합니다.<br /><br /> 이 기능을 해제하려면 **0**을 전달하고, 설정하려면 **1**을 전달합니다. 기본적으로 **MinidumpMode** 값은 **0**으로 설정됩니다.<br /><br /> **.dump /m** 명령 또는 **.dump** 명령으로 만들어진 미니덤프에는 제한된 CLR 관련 데이터가 있으며, 이 미니덤프를 사용하면 SOS 명령의 하위 집합만 올바르게 실행할 수 있습니다. 일부 명령은 필요한 메모리 영역이 매핑되지 않거나 부분적으로만 매핑되었기 때문에 예기치 않은 오류와 함께 실패할 수 있습니다. 이 옵션은 미니덤프에 대해 안전하지 않은 명령이 실행되지 않도록 합니다.|
-|**Name2EE** \<*module name*> \<*type or method name*><br /><br /> 또는<br /><br /> **Name2EE** \<*module name*> **!** \<*type or method name*>|지정된 모듈에 있는 지정된 형식 또는 메서드의 `MethodTable` 구조체와 `EEClass` 구조체를 표시합니다.<br /><br /> 지정된 모듈은 프로세스에 로드되어 있어야 합니다.<br /><br /> 올바른 형식 이름을 가져오려면 [Ildasm.exe(IL 디스어셈블러)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)를 사용하여 모듈을 찾아봅니다. `*`를 module name 매개 변수로 전달하여 로드된 모든 관리되는 모듈을 검색할 수도 있습니다. *module name* 매개 변수는 모듈의 디버거 이름(예: `mscorlib` 또는 `image00400000`)일 수도 있습니다.<br /><br /> 이 명령은 <`module`>`!`<`type`>의 Windows 디버거 구문을 지원합니다. 해당 형식은 정규화된 형식이어야 합니다.|
+|**Name2EE** \<*module name*> \<*type or method name*><br /><br /> 또는<br /><br /> **Name2EE** \<*module name*> **!** \<*type or method name*>|지정된 모듈에 있는 지정된 형식 또는 메서드의 `MethodTable` 구조체와 `EEClass` 구조체를 표시합니다.<br /><br /> 지정된 모듈은 프로세스에 로드되어 있어야 합니다.<br /><br /> 올바른 형식 이름을 가져오려면 [Ildasm.exe(IL 디스어셈블러)](ildasm-exe-il-disassembler.md)를 사용하여 모듈을 찾아봅니다. `*`를 module name 매개 변수로 전달하여 로드된 모든 관리되는 모듈을 검색할 수도 있습니다. *module name* 매개 변수는 모듈의 디버거 이름(예: `mscorlib` 또는 `image00400000`)일 수도 있습니다.<br /><br /> 이 명령은 <`module`>`!`<`type`>의 Windows 디버거 구문을 지원합니다. 해당 형식은 정규화된 형식이어야 합니다.|
 |**ObjSize** [\<*Object address*>] &#124; [ **-aggregate**] [ **-stat**]|지정된 개체의 크기를 표시합니다. 매개 변수를 지정하지 않으면 **ObjSize** 명령은 관리되는 스레드에 있는 모든 개체의 크기를 표시하고, 프로세스의 모든 가비지 수집기 핸들 및 이러한 핸들이 가리키는 모든 개체의 총 크기를 표시합니다. **ObjSize** 명령은 부모 개체뿐만 아니라 모든 자식 개체의 크기도 포함합니다.<br /><br /> **-aggregate** 옵션은 **-stat** 인수와 함께 사용하여 여전히 루트인 형식의 자세한 보기를 얻을 수 있습니다. **!dumpheap -stat** 및 **!objsize -aggregate -stat**를 사용하면 더 이상 루트가 아닌 개체를 확인하고 다양한 메모리 문제를 진단할 수 있습니다.|
 |**PrintException** [ **-nested**] [ **-lines**] [\<*Exception object address*>]<br /><br /> 또는<br /><br /> **PE** [ **-nested**] [\<*Exception object address*>]|지정된 주소의 <xref:System.Exception> 클래스에서 파생된 개체 필드를 표시하고 필드의 형식을 지정합니다. 주소를 지정하지 않으면 **PrintException** 명령은 현재 스레드에서 마지막으로 throw된 예외를 표시합니다.<br /><br /> **-nested** 옵션은 중첩된 예외 개체에 대한 자세한 정보를 표시합니다.<br /><br /> **-lines** 옵션은 가능한 경우 소스 정보를 표시합니다.<br /><br /> 이 명령을 사용하여 이진 배열인 `_stackTrace` 필드의 형식을 지정하고 해당 필드를 볼 수 있습니다.|
 |**ProcInfo** [ **-env**] [ **-time**] [ **-mem**]|프로세스의 환경 변수, 커널 CPU 시간 및 메모리 사용 통계를 표시합니다.|
@@ -118,7 +118,7 @@ WinDbg.exe 및 Visual Studio에서는 현재 사용 중인 Mscorwks.dll 버전�
 .load <full path to sos.dll>
 ```
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 다음 명령은 `00ad28d0` 주소에 있는 배열의 내용을 표시합니다.  두 번째 요소부터 시작하여 다섯 개의 요소까지 계속해서 표시합니다.
 
@@ -206,5 +206,5 @@ WinDbg.exe 및 Visual Studio에서는 현재 사용 중인 Mscorwks.dll 버전�
 
 ## <a name="see-also"></a>참고 항목
 
-- [도구](../../../docs/framework/tools/index.md)
-- [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [도구](index.md)
+- [명령 프롬프트](developer-command-prompt-for-vs.md)

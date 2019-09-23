@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Internet, requesting data
 - data requests, creating requests
 ms.assetid: faab683e-3f1e-4eee-b5e9-59f7245033d5
-ms.openlocfilehash: 2a4915796310e4f6899d833f20bc5260e0ee032b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 80e3a6bd199691df9391e88d5a64fab5df2a08a1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59171035"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048615"
 ---
 # <a name="creating-internet-requests"></a>인터넷 요청 만들기
 애플리케이션은 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> 메서드를 통해 <xref:System.Net.WebRequest> 인스턴스를 만듭니다. 이것은 전달된 URI 구성표에 따라 **WebRequest**에서 파생된 클래스를 만드는 정적 메서드입니다.  
@@ -25,9 +25,9 @@ ms.locfileid: "59171035"
   
  또한 .NET Framework는 "file:"을 사용하는 리소스에 대한 요청을 처리하기 위해 <xref:System.Net.FileWebRequest> 및 <xref:System.Net.FileWebResponse> 클래스를 제공합니다. URI 구성표. 마찬가지로 “ftp:” 구성표를 사용하는 리소스에 대한 요청을 처리하기 위해 <xref:System.Net.FtpWebRequest> 및 <xref:System.Net.FtpWebResponse> 클래스가 제공됩니다. 이러한 구성표를 사용하는 리소스에 대한 요청인 경우 **WebRequest.Create** 메서드를 사용하여 요청 생성에 사용할 개체를 가져올 수 있습니다.  
   
- 다른 애플리케이션 수준 프로토콜을 사용하는 요청을 처리하기 위해 **WebRequest** 및 **WebResponse**에서 파생된 프로토콜별 클래스를 구현해야 합니다. 자세한 내용은 [플러그형 프로토콜 프로그래밍](../../../docs/framework/network-programming/programming-pluggable-protocols.md)을 참조하세요.  
+ 다른 애플리케이션 수준 프로토콜을 사용하는 요청을 처리하기 위해 **WebRequest** 및 **WebResponse**에서 파생된 프로토콜별 클래스를 구현해야 합니다. 자세한 내용은 [플러그형 프로토콜 프로그래밍](programming-pluggable-protocols.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
-- [방법: WebRequest 클래스를 사용하여 데이터 요청](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
-- [데이터 요청](../../../docs/framework/network-programming/requesting-data.md)
+- [방법: WebRequest 클래스를 사용하여 데이터 요청](how-to-request-data-using-the-webrequest-class.md)
+- [데이터 요청](requesting-data.md)

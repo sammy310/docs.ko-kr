@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f990c5194c2e5dc1422aab96c7608c019ae9855b
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 84ae47b984d6a1a207e6678e30991073ba02a438
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894755"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044003"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe(형식 라이브러리 내보내기)
 형식 라이브러리 내보내기를 사용하면 공용 언어 런타임 어셈블리에 정의된 형식을 설명하는 형식 라이브러리를 생성할 수 있습니다.  
   
- 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 참조하세요.  
+ 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.  
   
  명령 프롬프트에 다음을 입력합니다.  
   
@@ -64,11 +64,11 @@ tlbexp assemblyName [options]
   
  어셈블리는 전체가 한 번에 변환됩니다. Tlbexp.exe를 사용하여 어셈블리에 정의된 형식의 하위 집합에 대한 형식 정보를 생성할 수는 없습니다.  
   
- 또한 [형식 라이브러리 가져오기(Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)를 사용하여 가져온 어셈블리에서 형식 라이브러리를 생성할 수도 없습니다. 대신 Tlbimp.exe를 사용하여 가져온 원본 형식 라이브러리를 참조해야 합니다. Tlbimp.exe를 사용하여 가져온 어셈블리를 참조하는 어셈블리에서 형식 라이브러리를 내보낼 수 있습니다. 아래의 예제 단원을 참조하십시오.  
+ 또한 [형식 라이브러리 가져오기(Tlbimp.exe)](tlbimp-exe-type-library-importer.md)를 사용하여 가져온 어셈블리에서 형식 라이브러리를 생성할 수도 없습니다. 대신 Tlbimp.exe를 사용하여 가져온 원본 형식 라이브러리를 참조해야 합니다. Tlbimp.exe를 사용하여 가져온 어셈블리를 참조하는 어셈블리에서 형식 라이브러리를 내보낼 수 있습니다. 아래의 예제 단원을 참조하십시오.  
   
  Tlbexp.exe를 사용하면 생성된 형식 라이브러리는 현재 작업 디렉터리 또는 출력 파일에 대해 지정된 디렉터리에 놓이며, 하나의 어셈블리에서 여러 개의 형식 라이브러리가 생성될 수도 있습니다.  
   
- Tlbexp.exe를 사용하면 형식 라이브러리는 생성되지만 등록되지는 않습니다. 즉, 형식 라이브러리의 생성 및 등록을 모두 수행하는 [어셈블리 등록 도구(Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)와는 정반대입니다. 따라서 COM을 사용하여 형식 라이브러리를 생성 및 등록하려면 Regasm.exe를 사용하십시오.  
+ Tlbexp.exe를 사용하면 형식 라이브러리는 생성되지만 등록되지는 않습니다. 즉, 형식 라이브러리의 생성 및 등록을 모두 수행하는 [어셈블리 등록 도구(Regasm.exe)](regasm-exe-assembly-registration-tool.md)와는 정반대입니다. 따라서 COM을 사용하여 형식 라이브러리를 생성 및 등록하려면 Regasm.exe를 사용하십시오.  
   
  `/win32` 또는 `/win64` 옵션을 지정하지 않으면 Tlbexp.exe는 컴파일을 수행할 컴퓨터(32비트 또는 64비트 컴퓨터)의 형식에 해당하는 32비트 또는 64비트 형식 라이브러리를 생성합니다. 크로스 컴파일의 경우 32비트 컴퓨터에서 `/win64` 옵션을 사용하여 64비트 형식 라이브러리를 생성하거나 64비트 컴퓨터에서 `/win32` 옵션을 사용하여 32비트 형식 라이브러리를 생성할 수 있습니다. 32비트 형식 라이브러리에서 <xref:System.Runtime.InteropServices.ComTypes.SYSKIND> 값은 <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN32>로 설정되고 64비트 형식 라이브러리에서 <xref:System.Runtime.InteropServices.ComTypes.SYSKIND> 값은 <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN64>로 설정됩니다. 모든 데이터 형식 변환(예: `IntPtr` 및 `UIntPtr` 같은 포인터 크기의 데이터 형식)이 적절하게 변환됩니다.  
   
@@ -96,7 +96,7 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
   
  형식 라이브러리 내보내기는 Microsoft Windows 2000 이상에서 지원됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 명령을 사용하여 `myTest.dll`에 있는 어셈블리와 동일한 이름의 형식 라이브러리를 생성합니다.  
   
 ```console  
@@ -132,8 +132,8 @@ tlbexp Sample.dll
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Runtime.InteropServices.TypeLibExporterFlags>
-- [도구](../../../docs/framework/tools/index.md)
-- [Regasm.exe(어셈블리 등록 도구)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
+- [도구](index.md)
+- [Regasm.exe(어셈블리 등록 도구)](regasm-exe-assembly-registration-tool.md)
 - [어셈블리와 형식 라이브러리 간 변환 요약](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))
-- [Tlbimp.exe(형식 라이브러리 가져오기)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
-- [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Tlbimp.exe(형식 라이브러리 가져오기)](tlbimp-exe-type-library-importer.md)
+- [명령 프롬프트](developer-command-prompt-for-vs.md)

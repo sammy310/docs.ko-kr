@@ -2,12 +2,12 @@
 title: 상태 모니터링
 description: 상태 모니터링을 구현하는 한 가지 방법을 살펴봅니다.
 ms.date: 01/07/2019
-ms.openlocfilehash: b03506972166eec1864de840c1abda05bc3e5277
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 3b81537ca8e0c5cc7ce15ab64ab3235b699dc7a9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674500"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040050"
 ---
 # <a name="health-monitoring"></a>상태 모니터링
 
@@ -279,7 +279,7 @@ Azure Service Fabric은 단순한 상태 검사보다 더 향상된 고급 기�
 - **Service Fabric 상태 모니터링 소개** \
   [https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction](/azure/service-fabric/service-fabric-health-introduction)
 
-- **Azure Monitor**
+- **Azure Monitor**  
   <https://azure.microsoft.com/services/monitor/>
 
 >[!div class="step-by-step"]

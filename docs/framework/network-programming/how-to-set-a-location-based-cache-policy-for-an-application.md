@@ -11,15 +11,15 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-ms.openlocfilehash: 5b4936a54627e6016cabc41954d1a18ae82cdf90
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 150198c2bda220e4b37981e461e19b8e4e30e483
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422471"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048130"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>방법: 애플리케이션에 대해 위치 기반 캐시 정책 설정
-위치 기반 캐시 정책을 사용하면 애플리케이션이 요청된 리소스의 위치를 기반으로 캐싱 동작을 명시적으로 정의할 수 있습니다. 이 항목에서는 캐시 정책을 프로그래밍 방식으로 설정하는 방법을 보여 줍니다. 구성 파일을 사용하여 애플리케이션에 대한 정책을 설정하는 방법에 대한 자세한 내용은 [\<requestCaching&gt; 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)를 참조하세요.  
+위치 기반 캐시 정책을 사용하면 애플리케이션이 요청된 리소스의 위치를 기반으로 캐싱 동작을 명시적으로 정의할 수 있습니다. 이 항목에서는 캐시 정책을 프로그래밍 방식으로 설정하는 방법을 보여 줍니다. 구성 파일을 사용하여 애플리케이션에 대한 정책을 설정하는 방법에 대한 자세한 내용은 [\<requestCaching&gt; 요소(네트워크 설정)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)를 참조하세요.  
   
 ### <a name="to-set-a-location-based-cache-policy-for-an-application"></a>애플리케이션에 대해 위치 기반 캐시 정책을 설정하려면  
   
@@ -155,8 +155,8 @@ ms.locfileid: "67422471"
   
 ## <a name="see-also"></a>참고 항목
 
-- [네트워크 애플리케이션에 대한 캐시 관리](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [캐시 정책](../../../docs/framework/network-programming/cache-policy.md)
-- [위치 기반 캐시 정책](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [시간 기반 캐시 정책](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [\<requestCaching> 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [네트워크 애플리케이션에 대한 캐시 관리](cache-management-for-network-applications.md)
+- [캐시 정책](cache-policy.md)
+- [위치 기반 캐시 정책](location-based-cache-policies.md)
+- [시간 기반 캐시 정책](time-based-cache-policies.md)
+- [\<requestCaching> 요소(네트워크 설정)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

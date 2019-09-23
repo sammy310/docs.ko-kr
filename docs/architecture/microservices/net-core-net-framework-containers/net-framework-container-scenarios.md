@@ -2,12 +2,12 @@
 title: Docker 컨테이너에 대해 .NET Framework를 선택하는 경우
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | Docker 컨테이너에 대해 .NET Framework를 선택하는 경우
 ms.date: 01/07/2019
-ms.openlocfilehash: 0b948017c3bbbcc8c43d5d2d9698d9a1a6f9deed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 575af1bc1966a25a01acdcfe106870ad1b7c477d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784090"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039651"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Docker 컨테이너에 대해 .NET Framework를 선택하는 경우
 
@@ -45,22 +45,22 @@ ms.locfileid: "70784090"
 
 ## <a name="using-a-platform-or-api-that-does-not-support-net-core"></a>.NET Core를 지원하지 않는 플랫폼 또는 API 사용
 
-일부 Microsoft 또는 타사 플랫폼은 .NET Core를 지원하지 않습니다. 예를 들어 일부 Azure 서비스는 .NET Core에서 아직 사용할 수 없는 SDK를 제공합니다. 모든 Azure 서비스에서 결국에는 .NET Core를 사용할 것이므로 이는 일시적인 현상입니다. 예를 들어 [.NET Core용 Azure DocumentDB SDK](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core/1.2.1)는 2016년 11월 16일에 미리 보기로 릴리스되었지만 이제는 안정적인 GA(일반 공급) 버전으로 사용할 수 있습니다.
+일부 Microsoft 또는 타사 플랫폼은 .NET Core를 지원하지 않습니다. 예를 들어 일부 Azure 서비스는 .NET Core에서 아직 사용할 수 없는 SDK를 제공합니다. 모든 Azure 서비스에서 결국에는 .NET Core를 사용할 것이므로 이는 일시적인 현상입니다. 예를 들어 [.NET Core용 Azure DocumentDB SDK](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)는 2016년 11월 16일에 미리 보기로 릴리스되었지만 이제는 안정적인 GA(일반 공급) 버전으로 사용할 수 있습니다.
 
 그동안 Azure의 플랫폼 또는 서비스에서 여전히 클라이언트 API를 통해 .NET Core를 지원하지 않는 경우에는 Azure 서비스 또는 .NET Framework의 클라이언트 SDK에서 동등한 REST API를 사용할 수 있습니다.
 
 ### <a name="additional-resources"></a>추가 자료
 
 - **.NET Core 가이드**  
-    [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)
+  [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)
 
 - **.NET Framework에서 .NET Core로 이식**  
-    [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
+  [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
 
 - **Docker 가이드의 .NET Core** [https://docs.microsoft.com/dotnet/core/docker/introduction](../../../core/docker/introduction.md)
 
 - **.NET 구성 요소 개요**  
-    [https://docs.microsoft.com/dotnet/standard/components](../../../standard/components.md)
+  [https://docs.microsoft.com/dotnet/standard/components](../../../standard/components.md)
 
 >[!div class="step-by-step"]
 >[이전](net-core-container-scenarios.md)

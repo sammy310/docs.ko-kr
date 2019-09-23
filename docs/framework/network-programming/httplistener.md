@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP
 ms.assetid: 5b89d3fb-3c9a-49e2-af1f-c34c020c68ac
-ms.openlocfilehash: d3fecb9fe78ca54f68d3c5a97dae5d5dd9fbb28d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d5b07617617ac28e4f7f72bc23a96b45a85dff75
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075420"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047986"
 ---
 # <a name="httplistener"></a>HttpListener
 <xref:System.Net.HttpListener> 클래스는 프로그래밍 방식으로 제어되는 HTTP 프로토콜 수신기를 제공합니다. 수신기는 <xref:System.Net.HttpListener> 개체의 수명 동안 활성화되며 애플리케이션 내에서 실행됩니다.  
@@ -26,4 +26,4 @@ ms.locfileid: "59075420"
 - [인터넷 정보의 향상된 보안 기능](https://go.microsoft.com/fwlink/?LinkID=178286)
 - [HttpListener ASPX 호스트 애플리케이션 샘플](https://go.microsoft.com/fwlink/?LinkID=179560)
 - [HttpListener 기술 샘플](https://go.microsoft.com/fwlink/?LinkID=179558)
-- [네트워크 프로그래밍 샘플](../../../docs/framework/network-programming/network-programming-samples.md)
+- [네트워크 프로그래밍 샘플](network-programming-samples.md)

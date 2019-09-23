@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef977206bf0d5b818cfd9779f063fbc2bd50632e
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 262ee168dabafcdc0b284f1ae5528843975a7e9d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971851"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044159"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe(강력한 이름 도구)
 강력한 이름 도구(Sn.exe)를 사용하면 [강력한 이름](../../standard/assembly/strong-named.md)으로 어셈블리에 서명할 수 있습니다. Sn.exe를 실행하면 키 관리, 서명 생성 및 서명 확인을 위한 옵션이 제공됩니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "70971851"
 
  강력한 이름 지정 및 강력한 이름의 어셈블리에 대한 자세한 내용은 [강력한 이름의 어셈블리](../../standard/assembly/strong-named.md) 및 [방법: 강력한 이름으로 어셈블리 서명](../../standard/assembly/sign-strong-name.md)을 참조하세요.  
   
- 강력한 이름 도구는 Visual Studio와 함께 자동으로 설치됩니다. 이 도구를 시작하려면 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 참조하세요.  
+ 강력한 이름 도구는 Visual Studio와 함께 자동으로 설치됩니다. 이 도구를 시작하려면 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.  
 
 > [!NOTE]
 > 64비트 컴퓨터에서는 Visual Studio용 개발자 명령 프롬프트를 사용하여 32비트 Sn.exe 버전을 실행하고 Visual Studio x64 Win64 명령 프롬프트를 사용하여 64비트 버전을 실행합니다. 
@@ -55,7 +55,7 @@ sn [-quiet][option [parameter(s)]]
 |**-k** [*keysize*] *outfile*|지정한 크기의 새 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 키를 생성하여 지정된 파일에 씁니다.  퍼블릭 키와 프라이빗 키 모두 이 파일에 작성됩니다.<br /><br /> 키 크기를 지정하지 않으면 Microsoft 고급 암호화 공급자가 설치된 경우 기본적으로 1,024비트 키가 생성되고 그러지 않은 경우 512비트 키가 생성됩니다.<br /><br /> *keysize* 매개 변수는 Microsoft 고급 암호화 공급자가 설치된 경우 8비트씩 증가시킬 수 있는 384비트에서 16,384비트까지의 키 길이를 지원합니다.  Microsoft Base Cryptographic Provider가 설치되어 있는 경우에는 길이가 384 - 512비트(8비트 단위로 증가)인 키를 지원합니다.|  
 |**-m** [**y** *&#124;* **n**]|키 컨테이너가 컴퓨터 관련 컨테이너인지 아니면 사용자 관련 컨테이너인지를 지정합니다. *y*를 지정하면 키 컨테이너는 컴퓨터 관련 컨테이너입니다. *n*을 지정하면 키 컨테이너는 사용자 관련 컨테이너입니다.<br /><br /> y나 n을 모두 지정하지 않으면 현재 설정이 표시됩니다.|  
 |**-o**  *infile* [*outfile*]|*infile*에서 공개 키를 추출하여 .csv 파일에 저장합니다. 공개 키의 각 바이트는 쉼표로 구분됩니다. 이 형식은 키에 대한 참조를 소스 코드의 초기화된 배열로 하드 코드하는 데 유용합니다. *outfile*을 지정하지 않으면 출력 파일은 클립보드에 넣어집니다. **참고:**  이 옵션은 입력 파일에 공개 키만 있는지는 확인하지 않습니다. `infile`에 프라이빗 키를 포함한 키 쌍이 들어 있으면 프라이빗 키도 추출됩니다.|  
-|**-p** *infile outfile* [*hashalg*]|*infile*의 키 쌍에서 공개 키를 추출하며 *outfile*에 저장하며, 이 경우 *hashalg*에서 지정된 RSA 알고리즘을 선택적으로 사용합니다. 이 공개 키는 [어셈블리 링커(Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md)의 **/delaysign+** 및 **/keyfile** 옵션을 사용하여 어셈블리 서명을 연기하는 데 사용될 수 있습니다. 어셈블리 서명이 연기되면 컴파일 타임에 퍼블릭 키만 설정되고, 나중에 프라이빗 키가 알려질 때 서명을 추가할 공간이 파일에 예약됩니다.|  
+|**-p** *infile outfile* [*hashalg*]|*infile*의 키 쌍에서 공개 키를 추출하며 *outfile*에 저장하며, 이 경우 *hashalg*에서 지정된 RSA 알고리즘을 선택적으로 사용합니다. 이 공개 키는 [어셈블리 링커(Al.exe)](al-exe-assembly-linker.md)의 **/delaysign+** 및 **/keyfile** 옵션을 사용하여 어셈블리 서명을 연기하는 데 사용될 수 있습니다. 어셈블리 서명이 연기되면 컴파일 타임에 퍼블릭 키만 설정되고, 나중에 프라이빗 키가 알려질 때 서명을 추가할 공간이 파일에 예약됩니다.|  
 |**-pc**  *container* *outfile* [*hashalg*]|*container*의 키 쌍에서 공개 키를 추출하여 *outfile*에 저장합니다. *hashalg* 옵션을 사용할 경우 RSA 알고리즘은 공개 키를 추출하는 데 사용됩니다.|  
 |**-Pb** [**y** *&#124;* **n**]|강력한 이름 건너뛰기 정책을 적용할지 여부를 지정합니다. *y*를 지정하면 완전 신뢰 <xref:System.AppDomain>에 완전 신뢰 어셈블리가 로드될 때 강력한 이름의 유효성이 검사되지 않습니다. *n*을 지정하면 강력한 이름이 올바른지 검사되지만 특정 강력한 이름은 검사되지 않습니다. 완전 신뢰 어셈블리에는 <xref:System.Security.Permissions.StrongNameIdentityPermission>이 적용되지 않으므로 강력한 이름이 일치하는지 여부는 직접 검사해야 합니다.<br /><br /> `y`나 `n`을 모두 지정하지 않으면 현재 설정이 표시됩니다. 기본값은 `y`입니다. **참고:**  64비트 컴퓨터에서는 Sn.exe의 32비트 및 64비트 인스턴스 모두에 이 매개 변수를 설정해야 합니다.|  
 |**-q**[**uiet**]|자동 모드를 지정합니다. 즉, 성공 메시지가 표시되지 않도록 합니다.|  
@@ -87,7 +87,7 @@ sn [-quiet][option [parameter(s)]]
   
 강력한 이름 도구는 퍼블릭/프라이빗 키 쌍이 `AT_SIGNATURE` 알고리즘 식별자를 사용하여 생성된다고 가정합니다. `AT_KEYEXCHANGE` 알고리즘을 사용하여 생성된 퍼블릭/프라이빗 키 쌍이 오류를 생성합니다. 
 
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 명령을 사용하여 난수 키 쌍을 새로 만들어 `keyPair.snk`에 저장합니다.  
   
 ```console  
@@ -126,7 +126,7 @@ sn -d MyContainer
   
 ## <a name="see-also"></a>참고 항목
 
-- [도구](../../../docs/framework/tools/index.md)
-- [Al.exe(어셈블리 링커)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [도구](index.md)
+- [Al.exe(어셈블리 링커)](al-exe-assembly-linker.md)
 - [강력한 이름의 어셈블리](../../standard/assembly/strong-named.md)
-- [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [명령 프롬프트](developer-command-prompt-for-vs.md)

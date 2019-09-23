@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de7df6ae2d6463d05d1680c288dd202edc639b09
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8902f9a6f37ab45929e147af5f899ef49c4a42b0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949114"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051949"
 ---
 # <a name="install-the-net-framework-for-developers"></a>개발자용 .NET Framework 설치
 
@@ -28,7 +28,7 @@ ms.locfileid: "69949114"
 
 [!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
-.NET Framework 버전에 대한 자세한 내용 및 컴퓨터에 설치된 버전을 확인하는 방법은 [버전 및 종속성](../migration-guide/versions-and-dependencies.md) 및 [방법: 설치된 .NET Framework 버전 확인](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)을 참조하세요.
+.NET Framework 버전에 대한 자세한 내용 및 컴퓨터에 설치된 버전을 확인하는 방법은 [버전 및 종속성](../migration-guide/versions-and-dependencies.md) 및 [방법: 설치된 .NET Framework 버전 확인](../migration-guide/how-to-determine-which-versions-are-installed.md)을 참조하세요.
 
 > [!NOTE]
 > .NET Framework 3.5에 대한 자세한 내용은 [Windows 10, Windows 8.1 및 Windows 8에 .NET Framework 3.5 설치](dotnet-35-windows-10.md)를 참조하세요.
@@ -227,7 +227,7 @@ Visual Studio에서 애플리케이션을 빌드하거나 명령줄에서 MSBuil
 
 - .NET Framework를 처음 사용하는 경우 [개요](../get-started/overview.md)에서 주요 개념과 구성 요소에 대한 소개를 참조하십시오.
 
-- .NET Framework 4.5 및 모든 이후 버전의 새로운 기능과 향상된 기능은 [새로운 기능](../../../docs/framework/whats-new/index.md)을 참조하세요.
+- .NET Framework 4.5 및 모든 이후 버전의 새로운 기능과 향상된 기능은 [새로운 기능](../whats-new/index.md)을 참조하세요.
 
 - 응용 프로그램과 함께 .NET Framework를 배포하는 방법에 대한 자세한 정보는 [개발자를 위한 배포 가이드](../deployment/deployment-guide-for-developers.md)를 참조하십시오.
 

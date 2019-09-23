@@ -7,12 +7,12 @@ helpviewer_keywords:
 - My.Computer.EventLog element
 - event logs, writing to
 ms.assetid: cadbc8c1-87af-4746-934e-55b79a4f6e2b
-ms.openlocfilehash: c3c7d350132ee6c891633141fc5c4b280989e77f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 385a85d956a0de727e3c061ec447a3d53ad6c159
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366506"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054142"
 ---
 # <a name="how-to-write-to-an-application-event-log-visual-basic"></a>방법: 애플리케이션 이벤트 로그에 쓰기(Visual Basic)
 
@@ -22,7 +22,7 @@ ms.locfileid: "57366506"
 
 이벤트 로그를 보려면 **서버 탐색기** 또는 **Windows 이벤트 뷰어**를 사용합니다. 자세한 내용은 [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md)을 참조하세요.
 
-### <a name="to-add-and-configure-the-event-log-listener"></a>이벤트 로그 수신기를 추가하고 구성하려면
+## <a name="to-add-and-configure-the-event-log-listener"></a>이벤트 로그 수신기를 추가하고 구성하려면
 
 1. **솔루션 탐색기** 에서 app.config를 마우스 오른쪽 단추로 클릭하고 **열기**를 선택합니다.
 
@@ -61,11 +61,11 @@ ms.locfileid: "57366506"
     > [!NOTE]
     > 일반적으로 애플리케이션에서는 이벤트 로그에 오류만 씁니다. 로그 출력 필터링에 대한 자세한 내용은 [연습: My.Application.Log 출력 필터링](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)을 참조하세요.
 
-### <a name="to-write-event-information-to-the-event-log"></a>이벤트 정보를 이벤트 로그에 쓰려면
+## <a name="to-write-event-information-to-the-event-log"></a>이벤트 정보를 이벤트 로그에 쓰려면
 
-- `My.Application.Log.WriteEntry` 또는 `My.Application.Log.WriteException` 메서드를 사용하여 이벤트 로그에 정보를 씁니다. 자세한 내용은 [방법: 로그 메시지 쓰기](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) 및 [방법: 로그 예외](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)를 참조하세요.
+`My.Application.Log.WriteEntry` 또는 `My.Application.Log.WriteException` 메서드를 사용하여 이벤트 로그에 정보를 씁니다. 자세한 내용은 [방법: 로그 메시지 쓰기](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) 및 [방법: 로그 예외](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)를 참조하세요.
 
-    어셈블리에 대한 이벤트 로그 수신기를 구성하면 수신기는 `My.Application.Log` 가 해당 어셈블리에서 쓰는 모든 메시지를 수신합니다.
+어셈블리에 대한 이벤트 로그 수신기를 구성하면 수신기는 `My.Application.Log` 가 해당 어셈블리에서 쓰는 모든 메시지를 수신합니다.
 
 ## <a name="see-also"></a>참고 항목
 

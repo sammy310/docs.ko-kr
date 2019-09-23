@@ -10,22 +10,22 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1aa3bbfafb760a3002a218ef52d87957af47c4de
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e8c9093faa80249a2c5898c1f250e97208764be6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894849"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044405"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe(관리되는 프로필 기반 최적화 도구)
 
-관리되는 프로필 기반 최적화 도구(Mpgo.exe)는 공통 최종 사용자 시나리오를 사용하여 [네이티브 이미지 생성기(Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)로 만들어지는 네이티브 이미지 어셈블리를 최적화하는 명령줄 도구입니다. 이 도구를 사용하면 프로필 데이터를 생성하는 교육 시나리오를 실행할 수 있습니다. [네이티브 이미지 생성기(Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)는 이 데이터를 사용하여 생성된 네이티브 이미지 애플리케이션 어셈블리를 최적화합니다. 교육 시나리오는 애플리케이션의 정상적 용도에 대한 평가 실행입니다. Mpgo.exe는 Visual Studio Ultimate 2012 이상 버전에서 사용할 수 있습니다. Visual Studio 2013부터 Mpgo.exe를 사용하여 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱을 최적화할 수도 있습니다.  
+관리되는 프로필 기반 최적화 도구(Mpgo.exe)는 공통 최종 사용자 시나리오를 사용하여 [네이티브 이미지 생성기(Ngen.exe)](ngen-exe-native-image-generator.md)로 만들어지는 네이티브 이미지 어셈블리를 최적화하는 명령줄 도구입니다. 이 도구를 사용하면 프로필 데이터를 생성하는 교육 시나리오를 실행할 수 있습니다. [네이티브 이미지 생성기(Ngen.exe)](ngen-exe-native-image-generator.md)는 이 데이터를 사용하여 생성된 네이티브 이미지 애플리케이션 어셈블리를 최적화합니다. 교육 시나리오는 애플리케이션의 정상적 용도에 대한 평가 실행입니다. Mpgo.exe는 Visual Studio Ultimate 2012 이상 버전에서 사용할 수 있습니다. Visual Studio 2013부터 Mpgo.exe를 사용하여 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱을 최적화할 수도 있습니다.  
   
 프로필 기반 최적화는 교육 시나리오에서 데이터를 수집하고 네이티브 이미지의 레이아웃을 최적화하는 데 사용하여 애플리케이션 시작 시간, 메모리 사용률(작업 집합 크기), 처리량을 개선합니다.  
   
 중간 언어(IL) 어셈블리에 대한 시작 시간 및 작업 집합에서 성능 문제가 발생하면 먼저 Ngen.exe를 사용하여 JIT(Just-In-Time) 컴파일 비용을 제거하고 코드 공유를 지원하는 것이 좋습니다. 추가 개선이 필요한 경우 Mpgo.exe를 사용하여 애플리케이션을 더 최적화할 수 있습니다. 최적화되지 않은 네이티브 이미지 어셈블리의 성능 데이터를 성능 향상을 평가하는 기준선으로 사용할 수 있습니다. Mpgo.exe를 사용하면 콜드 시작 시간이 단축되고 작업 집합 크기가 작아질 수 있습니다. Mpgo.exe는 Ngen.exe가 정보 최적화 네이티브 이미지 어셈블리를 생성하는 데 사용하는 정보를 IL 어셈블리에 추가합니다. 자세한 내용은 .NET 블로그의 [데스크톱 애플리케이션의 시작 성능 개선](https://go.microsoft.com/fwlink/p/?LinkId=248943) 항목을 참조하세요.  
   
-이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 관리자 자격 증명과 함께 사용하고 다음 명령 프롬프트를 입력합니다. 자세한 내용은 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 참조하세요.  
+이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 관리자 자격 증명과 함께 사용하고 다음 명령 프롬프트를 입력합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.  
   
 데스크톱 응용 프로그램:  
   
@@ -107,7 +107,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 - 기본적으로 Mpgo.exe는 Visual Studio 빌드 경로에 없습니다. Visual Studio에 경로를 추가하거나 또는 Mpgo 명령줄에서 전체 경로를 지정해야 합니다. Visual Studio의 빌드 후 이벤트에서 `–Scenario` 또는 `–Import` 매개 변수를 사용할 수 있습니다. 그러나 일반적인 프로세스는 Visual Studio용 개발자 명령 프롬프트에서 `–Scenario`를 한 번 사용한 후 `–Import`를 사용하여 각 빌드 후 최적화된 어셈블리를 업데이트하는 것입니다(예: `"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`).  
   
 <a name="samples"></a>   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  Visual Studio용 개발자 명령 프롬프트의 다음 Mpgo.exe 명령은 세금 애플리케이션을 최적화합니다.  
   
 ```console  
@@ -128,7 +128,7 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
   
 ## <a name="see-also"></a>참고 항목
 
-- [Ngen.exe(네이티브 이미지 생성기)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)
-- [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Ngen.exe(네이티브 이미지 생성기)](ngen-exe-native-image-generator.md)
+- [명령 프롬프트](developer-command-prompt-for-vs.md)
 - [데스크톱 애플리케이션의 시작 성능 개선](https://go.microsoft.com/fwlink/p/?LinkId=248943)
 - [.NET 4.5의 성능 개선 개요](https://go.microsoft.com/fwlink/p/?LinkId=249131)

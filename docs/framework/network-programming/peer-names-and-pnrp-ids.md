@@ -2,12 +2,12 @@
 title: 피어 이름 및 PNRP ID
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
-ms.openlocfilehash: 8cdd5151d029436d11c78806cf7673861cc0d8a4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 15b74317507f69d2339a2e5e49b54ae72cda1a7b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623116"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047499"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>피어 이름 및 PNRP ID
 피어 이름은 통신의 엔드포인트를 나타내며, 컴퓨터, 사용자, 그룹, 서비스 또는 IPv6 주소로 확인될 수 있는 피어와 연결된 모든 항목이 될 수 있습니다. 피어 이름 확인 프로토콜(PNRP)은 클라우드 멤버를 확인하는 데 사용되는 PNRP ID를 만드는 데 통계적으로 고유한 피어 이름을 사용합니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "64623116"
  보안 피어 이름은 소유자만 등록할 수 있으며 공개 키 암호화를 통해 보호합니다. 보안 피어 이름은 대응하는 프라이빗 키가 있는 피어 엔터티가 소유하는 것으로 간주됩니다. 소유권은 프라이빗 키를 사용하여 서명되는 인증된 피어 주소(CPA)를 통해 입증할 수 있습니다. 악의적인 사용자는 해당 프라이빗 키 없이도 피어 이름의 소유권을 위조할 수 있습니다.  
   
 ## <a name="pnrp-ids"></a>PNRP ID  
- ![PNRP ID](../../../docs/framework/network-programming/media/fdc9e8a0-4a1c-488d-a019-bc3a1973220c.gif "fdc9e8a0-4a1c-488d-a019-bc3a1973220c")  
+ ![PNRP ID](./media/fdc9e8a0-4a1c-488d-a019-bc3a1973220c.gif "fdc9e8a0-4a1c-488d-a019-bc3a1973220c")  
   
  PNRP ID는 다음으로 구성됩니다.  
   

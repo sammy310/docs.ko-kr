@@ -15,12 +15,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 10d22735-bd37-42c1-a2be-c1932f979a7d
-ms.openlocfilehash: 4a1b18f2c31bf8dad8cf32e2e5205cf3008e7b18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cffad6b4677a880bd63f5ae0232c639f7a262c59
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136047"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047250"
 ---
 # <a name="sockets"></a>소켓
 <xref:System.Net.Sockets> 네임스페이스에는 Windows 소켓 인터페이스의 관리되는 구현이 포함됩니다. <xref:System.Net> 네임스페이스에 있는 다른 모든 네트워크 액세스 클래스는 이 소켓 구현 위에 구축됩니다.  
@@ -31,6 +31,6 @@ ms.locfileid: "59136047"
   
 ## <a name="see-also"></a>참고 항목
 
-- [방법: 소켓 만들기](../../../docs/framework/network-programming/how-to-create-a-socket.md)
+- [방법: 소켓 만들기](how-to-create-a-socket.md)
 
-- [애플리케이션 프로토콜 사용](../../../docs/framework/network-programming/using-application-protocols.md)
+- [애플리케이션 프로토콜 사용](using-application-protocols.md)

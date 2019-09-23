@@ -5,23 +5,23 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 3f303583b1cff785ab0020e616fee58ef02a1c58
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 2502d542513ace1173b6c33a2399ce010620b888
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487038"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044464"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (매니페스트 생성 및 편집 도구, 그래픽 클라이언트)
 
-MageUI.exe는 명령줄 도구인 Mage.exe와 동일한 기능을 지원하지만 Windows 기반 UI(사용자 인터페이스)를 사용합니다. 이 도구를 사용하면 배포 및 애플리케이션 매니페스트를 만들고, 편집하고, 서명할 수 있습니다. MageUI.exe로 만든 새 매니페스트는 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]을 대상으로 합니다. 이전 버전의 MageUI.exe는 이전 .NET Framework 버전을 대상으로 사용해야 합니다. 매니페스트에서 어셈블리를 추가하거나 제거 또는 기존 매니페스트를 다시 서명할 때 MageUI.exe는 매니페스트를 대상 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]로 업데이트하지 않습니다. 자세한 내용은 [Mage.exe(매니페스트 생성 및 편집 도구)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)를 참조하세요.
+MageUI.exe는 명령줄 도구인 Mage.exe와 동일한 기능을 지원하지만 Windows 기반 UI(사용자 인터페이스)를 사용합니다. 이 도구를 사용하면 배포 및 애플리케이션 매니페스트를 만들고, 편집하고, 서명할 수 있습니다. MageUI.exe로 만든 새 매니페스트는 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]을 대상으로 합니다. 이전 버전의 MageUI.exe는 이전 .NET Framework 버전을 대상으로 사용해야 합니다. 매니페스트에서 어셈블리를 추가하거나 제거 또는 기존 매니페스트를 다시 서명할 때 MageUI.exe는 매니페스트를 대상 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]로 업데이트하지 않습니다. 자세한 내용은 [Mage.exe(매니페스트 생성 및 편집 도구)](mage-exe-manifest-generation-and-editing-tool.md)를 참조하세요.
 
- 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 참조하세요.
+ 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.
 
  Mage.exe 및 MageUI.exe의 두 버전이 Visual Studio의 구성 요소로 포함되어 있습니다. 버전 정보를 보려면 MageUI.exe를 실행하고 **도움말**을 선택하고 **정보**를 선택합니다. 이 설명서는 Mage.exe 및 MageUI.exe의 버전 4.0.x.x에 대해 설명합니다.
 
 > [!NOTE]
-> MageUI.exe를 사용하는 인증서로 이미 서명된 애플리케이션 매니페스트를 저장할 때 MageUI.exe는 [compatibleFrameworks](/visualstudio/deployment/compatibleframeworks-element-clickonce-deployment) 요소를 지원하지 않습니다. 대신, [Mage.exe](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)를 사용해야 합니다.  
+> MageUI.exe를 사용하는 인증서로 이미 서명된 애플리케이션 매니페스트를 저장할 때 MageUI.exe는 [compatibleFrameworks](/visualstudio/deployment/compatibleframeworks-element-clickonce-deployment) 요소를 지원하지 않습니다. 대신, [Mage.exe](mage-exe-manifest-generation-and-editing-tool.md)를 사용해야 합니다.  
   
 ## <a name="uielement-list"></a>UI 요소 목록  
  다음 표에서는 사용 가능한 메뉴 및 도구 모음 항목을 보여 줍니다.  
@@ -92,7 +92,7 @@ MageUI.exe는 명령줄 도구인 Mage.exe와 동일한 기능을 지원하지�
 |----------------|-----------------|  
 |**이름**|필수 요소. 애플리케이션 매니페스트의 이름입니다. 대개 파일 이름과 같습니다.|  
 |**Version**|필수 요소. *N.N.N.N* 형식으로 된 배포의 버전 번호이며 첫 번째 주요 빌드 번호만 필요합니다. 예를 들어 애플리케이션 버전 1.0에 대한 유효한 값에는 `1`, `1.0`, `1.0.0` 및 `1.0.0.0`이 포함됩니다.|  
-|**프로세서**|선택 사항입니다. 이 배포가 실행될 수 있는 컴퓨터 아키텍처입니다. 기본값은 모든 관리되는 어셈블리의 기본 형식인 `msil`(Microsoft Intermediate Language)입니다. 특정 아키텍처에 대한 애플리케이션에서 어셈블리를 미리 컴파일한 경우 이 필드를 변경하세요. 미리 컴파일에 대한 자세한 내용은 [Ngen.exe(네이티브 이미지 생성기)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)를 참조하세요.|  
+|**프로세서**|선택 사항입니다. 이 배포가 실행될 수 있는 컴퓨터 아키텍처입니다. 기본값은 모든 관리되는 어셈블리의 기본 형식인 `msil`(Microsoft Intermediate Language)입니다. 특정 아키텍처에 대한 애플리케이션에서 어셈블리를 미리 컴파일한 경우 이 필드를 변경하세요. 미리 컴파일에 대한 자세한 내용은 [Ngen.exe(네이티브 이미지 생성기)](ngen-exe-native-image-generator.md)를 참조하세요.|  
 |**문화권**.|선택 사항입니다. 이 애플리케이션이 실행하는 두 부분으로 구성된 ISO 국가 및 지역 코드입니다. 기본값은 `neutral`입니다.|  
 |**공개 키 토큰**|선택적 요소. 이 애플리케이션 매니페스트에 서명하는 데 사용된 공개 키입니다. 새 매니페스트이거나 서명되지 않은 매니페스트이면 이 필드가 `Unsigned`로 표시됩니다.|  
   
@@ -194,4 +194,4 @@ MageUI.exe는 명령줄 도구인 Mage.exe와 동일한 기능을 지원하지�
 
 - [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)
 - [연습: 수동으로 ClickOnce 애플리케이션 배포](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
-- [Mage.exe(매니페스트 생성 및 편집 도구)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
+- [Mage.exe(매니페스트 생성 및 편집 도구)](mage-exe-manifest-generation-and-editing-tool.md)

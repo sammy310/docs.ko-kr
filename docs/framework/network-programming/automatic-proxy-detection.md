@@ -14,12 +14,12 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-ms.openlocfilehash: d7d0dae2ffbec5e334057715cd1d8d44e52cec9d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6a52a38473e339b892673e7c1a2f9e1f58dad359
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910459"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048938"
 ---
 # <a name="automatic-proxy-detection"></a>자동 프록시 검색
 자동 프록시 검색은 웹 프록시 서버가 시스템에 의해 식별되고 클라이언트 대신 요청을 보내는 데 사용되는 프로세스입니다. 이 기능을 WPAD(웹 프록시 자동 검색)라고도 합니다. 자동 프록시 검색을 사용하면 시스템이 요청에 사용할 수 있는 프록시 집합을 반환하는 프록시 구성 스크립트를 찾으려고 시도합니다. 프록시 구성 스크립트가 발견되면 <xref:System.Net.WebProxy> 인스턴스를 사용하는 요청에 대한 프록시 정보, 요청 스트림 또는 응답이 확보될 때 로컬 컴퓨터에서 스크립트가 다운로드, 컴파일 및 실행됩니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "69910459"
   
  프록시는 전화 접속 아이콘별로 구성됩니다. 전화 접속 아이콘은 네트워크 연결 대화 상자에 있는 항목이며, 실제 네트워크 디바이스(모뎀 또는 이더넷 카드) 또는 가상 인터페이스(예: 네트워크 디바이스를 통해 실행되는 VPN 연결)일 수 있습니다. 전화 접속 아이콘이 변경되면(예: 무선 연결이 액세스 지점을 변경하거나 VPN이 사용되는 경우) 프록시 검색 알고리즘이 다시 실행됩니다.  
   
- 기본적으로 Internet Explorer 프록시 설정이 프록시를 검색하는 데 사용됩니다. 애플리케이션이 비대화형 계정으로 실행되는 경우(IE 프록시 설정을 구성하는 편리한 방법 없이) 또는 IE 설정과 다른 프록시 설정을 사용하려는 경우 [\<defaultProxy&gt; 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md) 및 [\<proxy&gt; 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md) 요소가 정의된 구성 파일을 만들어 프록시를 구성할 수 있습니다.  
+ 기본적으로 Internet Explorer 프록시 설정이 프록시를 검색하는 데 사용됩니다. 애플리케이션이 비대화형 계정으로 실행되는 경우(IE 프록시 설정을 구성하는 편리한 방법 없이) 또는 IE 설정과 다른 프록시 설정을 사용하려는 경우 [\<defaultProxy&gt; 요소(네트워크 설정)](../configure-apps/file-schema/network/defaultproxy-element-network-settings.md) 및 [\<proxy&gt; 요소(네트워크 설정)](../configure-apps/file-schema/network/proxy-element-network-settings.md) 요소가 정의된 구성 파일을 만들어 프록시를 구성할 수 있습니다.  
   
  직접 만든 요청의 경우 다음 코드 예제와 같이 요청과 함께 null <xref:System.Net.WebRequest.Proxy%2A>를 사용하여 요청 수준에서 프록시 자동 검색을 사용하지 않도록 설정할 수 있습니다.  
   
@@ -71,4 +71,4 @@ Public Shared Sub DisableForMyRequest(ByVal resource As Uri)
 
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.WebRequest>
-- [\<system.Net> 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
+- [\<system.Net> 요소(네트워크 설정)](../configure-apps/file-schema/network/system-net-element-network-settings.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-ms.openlocfilehash: 4d7020b6bc5049101ec08329d53d966771e38035
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 22e7c670f93293bd37edcb181c8130cdbe9ceb26
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168898"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047057"
 ---
 # <a name="using-an-asynchronous-client-socket"></a>비동기 클라이언트 소켓 사용
 비동기 클라이언트 소켓은 네트워크 작업이 완료될 때까지 기다리는 동안 애플리케이션을 일시 중단하지 않습니다. 대신, 표준 .NET Framework 비동기 프로그래밍 모델을 사용하여 애플리케이션이 원래 스레드에서 계속 실행되는 동안 한 스레드에서 네트워크 연결을 처리합니다. 비동기 소켓은 네트워크를 많이 사용하거나 계속하기 전에 네트워크 작업이 완료될 때까지 기다릴 수 없는 애플리케이션에 적합합니다.  
@@ -53,7 +53,7 @@ public static void Connect(EndPoint remoteEP, Socket client) {
 }  
 ```  
   
- 연결 콜백 메서드 `ConnectCallback`은 <xref:System.AsyncCallback> 대리자를 구현합니다. 원격 장치를 사용할 수 있는 경우 원격 장치에 연결한 다음 **ManualResetEvent**`connectDone`을 설정하여 연결이 완료되었음을 애플리케이션 스레드에 알립니다. 다음 코드에서는 `ConnectCallback` 메서드를 구현합니다.  
+ 연결 콜백 메서드 `ConnectCallback`은 <xref:System.AsyncCallback> 대리자를 구현합니다. 원격 디바이스를 사용할 수 있는 경우 원격 디바이스에 연결한 다음 **ManualResetEvent**`connectDone`을 설정하여 연결이 완료되었음을 애플리케이션 스레드에 알립니다. 다음 코드에서는 `ConnectCallback` 메서드를 구현합니다.  
   
 ```vb  
 Private Shared Sub ConnectCallback(ar As IAsyncResult)  
@@ -287,6 +287,6 @@ private static void ReceiveCallback( IAsyncResult ar ) {
   
 ## <a name="see-also"></a>참고 항목
 
-- [동기 클라이언트 소켓 사용](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
-- [소켓으로 수신](../../../docs/framework/network-programming/listening-with-sockets.md)
-- [비동기 클라이언트 소켓 예제](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)
+- [동기 클라이언트 소켓 사용](using-a-synchronous-client-socket.md)
+- [소켓으로 수신](listening-with-sockets.md)
+- [비동기 클라이언트 소켓 예제](asynchronous-client-socket-example.md)

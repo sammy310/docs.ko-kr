@@ -17,23 +17,23 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c3fab258b23999cabce474afe728d1c50e1043f
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: bc4dd2703f32f2983a207d5990a6e8e646de8c17
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971232"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044856"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe(코드 액세스 보안 정책 도구)
 CAS(코드 액세스 보안 정책 도구)(Caspol.exe)를 사용하면 사용자나 관리자가 컴퓨터 정책 수준, 사용자 정책 수준 및 엔터프라이즈 정책 수준의 보안 정책을 수정할 수 있습니다.  
   
 > [!IMPORTANT]
-> .NET Framework 4부터는 Caspol.exe가 CAS 정책에 영향을 주려면 [\<legacyCasPolicy> 요소](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)를 `true`로 설정해야 합니다. CasPol.exe에 의해 표시 또는 수정되는 모든 설정은 CAS 정책을 사용하도록 선택하는 애플리케이션에만 영향을 줍니다. 자세한 내용은 [보안 변경 내용](../../../docs/framework/security/security-changes.md)을 참조하세요.  
+> .NET Framework 4부터는 Caspol.exe가 CAS 정책에 영향을 주려면 [\<legacyCasPolicy> 요소](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)를 `true`로 설정해야 합니다. CasPol.exe에 의해 표시 또는 수정되는 모든 설정은 CAS 정책을 사용하도록 선택하는 애플리케이션에만 영향을 줍니다. 자세한 내용은 [보안 변경 내용](../security/security-changes.md)을 참조하세요.  
   
 > [!NOTE]
 > 64비트 컴퓨터에 64비트 및 32비트 버전의 보안 정책이 포함됩니다. 정책 변경 내용을 32비트와 64비트 애플리케이션에 적용하도록 하려면, Caspol.exe의 32비트와 64비트 버전을 모두 실행해야 합니다.  
   
- 코드 액세스 보안 정책 도구는 .NET Framework와 Visual Studio와 함께 자동으로 설치됩니다. Caspol.exe는 32비트 시스템의 경우 %windir%\Microsoft.NET\Framework\\*version*에서, 64비트 시스템의 경우 %windir%\Microsoft.NET\Framework64\\*version*에서 찾을 수 있습니다. (예를 들어 위치는 64비트 시스템의 .NET Framework 4인 경우 %windir%\Microsoft.NET\Framework64\v4.030319\caspol.exe입니다.) 컴퓨터에 여러 .NET Framework 버전이 함께 실행 중인 경우 도구의 여러 버전을 설치할 수 있습니다. 설치 디렉터리에서 도구를 실행할 수 있습니다. 하지만 설치 폴더로 이동할 필요가 없는 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 사용하는 것이 좋습니다.  
+ 코드 액세스 보안 정책 도구는 .NET Framework와 Visual Studio와 함께 자동으로 설치됩니다. Caspol.exe는 32비트 시스템의 경우 %windir%\Microsoft.NET\Framework\\*version*에서, 64비트 시스템의 경우 %windir%\Microsoft.NET\Framework64\\*version*에서 찾을 수 있습니다. (예를 들어 위치는 64비트 시스템의 .NET Framework 4인 경우 %windir%\Microsoft.NET\Framework64\v4.030319\caspol.exe입니다.) 컴퓨터에 여러 .NET Framework 버전이 함께 실행 중인 경우 도구의 여러 버전을 설치할 수 있습니다. 설치 디렉터리에서 도구를 실행할 수 있습니다. 하지만 설치 폴더로 이동할 필요가 없는 [명령 프롬프트](developer-command-prompt-for-vs.md)를 사용하는 것이 좋습니다.  
   
  명령 프롬프트에 다음을 입력합니다.  
   
@@ -47,7 +47,7 @@ caspol [options]
   
 |옵션|설명|  
 |------------|-----------------|  
-|**-addfulltrust** *assembly_file*<br /><br /> 또는<br /><br /> **-af** *assembly_file*|사용자 지정 보안 개체(예: 사용자 지정 권한, 사용자 지정 멤버 자격 조건 등)를 구현하는 어셈블리를 특정 정책 수준에서 완전 신뢰 어셈블리 목록에 추가합니다. *assembly_file* 인수는 추가할 어셈블리를 지정합니다. 이 파일은 [강력한 이름](../../standard/assembly/strong-named.md)으로 서명되어야 합니다. [Sn.exe(강력한 이름 도구)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)를 사용하여 강력한 이름으로 어셈블리에 서명할 수 있습니다.<br /><br /> 사용자 지정 권한이 포함된 권한 집합을 정책에 추가할 때마다 해당 사용자 지정 권한을 구현하는 어셈블리를 해당 정책 수준의 완전 신뢰 목록에 추가해야 합니다. 보안 정책(예: 컴퓨터 정책)에 사용된 사용자 지정 보안 개체(예: 사용자 지정 코드 그룹, 멤버 자격 조건 등)를 구현하는 어셈블리는 항상 완전 신뢰 어셈블리 목록에 추가해야 합니다. **주의:**  사용자 지정 보안 개체를 구현하는 어셈블리가 다른 어셈블리를 참조하는 경우에는 먼저 참조되는 어셈블리를 완전 신뢰 어셈블리 목록에 추가해야 합니다. Visual Basic, C++ 및 JScript를 사용하여 만들어진 사용자 지정 보안 개체는 Microsoft.VisualBasic.dll, Microsoft.VisualC.dll 또는 Microsoft.JScript.dll을 각각 참조합니다. 이러한 어셈블리는 기본적으로 완전 신뢰 어셈블리 목록에 들어 있지 않습니다. 따라서 사용자 지정 보안 개체를 추가하기 전에 적절한 어셈블리를 완전 신뢰 목록에 추가해야 합니다. 이렇게 하지 않으면 보안 시스템이 중단되어 모든 어셈블리를 로드할 수 없게 됩니다. 이 경우 Caspol.exe **-all -reset** 옵션은 보안을 복구하지 않습니다. 보안을 복구하려면 수동으로 보안 파일을 편집하여 사용자 지정 보안 개체를 제거해야 합니다.|  
+|**-addfulltrust** *assembly_file*<br /><br /> 또는<br /><br /> **-af** *assembly_file*|사용자 지정 보안 개체(예: 사용자 지정 권한, 사용자 지정 멤버 자격 조건 등)를 구현하는 어셈블리를 특정 정책 수준에서 완전 신뢰 어셈블리 목록에 추가합니다. *assembly_file* 인수는 추가할 어셈블리를 지정합니다. 이 파일은 [강력한 이름](../../standard/assembly/strong-named.md)으로 서명되어야 합니다. [Sn.exe(강력한 이름 도구)](sn-exe-strong-name-tool.md)를 사용하여 강력한 이름으로 어셈블리에 서명할 수 있습니다.<br /><br /> 사용자 지정 권한이 포함된 권한 집합을 정책에 추가할 때마다 해당 사용자 지정 권한을 구현하는 어셈블리를 해당 정책 수준의 완전 신뢰 목록에 추가해야 합니다. 보안 정책(예: 컴퓨터 정책)에 사용된 사용자 지정 보안 개체(예: 사용자 지정 코드 그룹, 멤버 자격 조건 등)를 구현하는 어셈블리는 항상 완전 신뢰 어셈블리 목록에 추가해야 합니다. **주의:**  사용자 지정 보안 개체를 구현하는 어셈블리가 다른 어셈블리를 참조하는 경우에는 먼저 참조되는 어셈블리를 완전 신뢰 어셈블리 목록에 추가해야 합니다. Visual Basic, C++ 및 JScript를 사용하여 만들어진 사용자 지정 보안 개체는 Microsoft.VisualBasic.dll, Microsoft.VisualC.dll 또는 Microsoft.JScript.dll을 각각 참조합니다. 이러한 어셈블리는 기본적으로 완전 신뢰 어셈블리 목록에 들어 있지 않습니다. 따라서 사용자 지정 보안 개체를 추가하기 전에 적절한 어셈블리를 완전 신뢰 목록에 추가해야 합니다. 이렇게 하지 않으면 보안 시스템이 중단되어 모든 어셈블리를 로드할 수 없게 됩니다. 이 경우 Caspol.exe **-all -reset** 옵션은 보안을 복구하지 않습니다. 보안을 복구하려면 수동으로 보안 파일을 편집하여 사용자 지정 보안 개체를 제거해야 합니다.|  
 |**-addgroup** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]<br /><br /> 또는<br /><br /> **-ag** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]|코드 그룹 계층 구조에 새로운 코드 그룹을 추가합니다. *parent_label* 또는 *parent_name*을 지정할 수 있습니다. *parent_label* 인수는 추가되는 코드 그룹의 부모인 코드 그룹의 레이블(예: 1. 또는 1.1.)을 지정합니다. *parent_name* 인수는 추가되는 코드 그룹의 부모 코드 그룹의 이름을 지정합니다. *parent_label*과 *parent_name*은 서로 교환하여 사용할 수 있으므로 Caspol.exe에서 이 두 인수를 구별할 수 있어야 합니다. 따라서 *parent_name*은 숫자로 시작할 수 없습니다. 또한 *parent_name*에는 A-Z, 0-9 및 밑줄 문자만 사용할 수 있습니다.<br /><br /> *mship* 인수는 새 코드 그룹의 멤버 자격 조건을 지정합니다. 자세한 내용은 이 섹션의 뒷부분에 나오는 *mship* 인수 표를 참조하세요.<br /><br /> *pset_name* 인수는 새 코드 그룹과 연결될 권한 집합의 이름입니다. 새 그룹에 대해 *flags*를 하나 이상 설정할 수도 있습니다. 자세한 내용은 이 섹션의 뒷부분에 나오는 *flags* 인수 표를 참조하세요.|  
 |**-addpset** {*psfile* &#124; *psfile* p*set_name*}<br /><br /> 또는<br /><br /> **-ap** {*named*_*psfile* &#124; *psfile* *pset_name*}|명명된 새 권한 집합을 정책에 추가합니다. 권한 집합은 XML로 작성되어 .xml 파일에 저장되어야 합니다. XML 파일에 권한 집합의 이름이 포함되어 있으면 해당 파일(*psfile*)만 지정됩니다. XML 파일에 권한 집합의 이름이 포함되어 있지 않으면 XML 파일 이름(*psfile*)과 권한 집합 이름(*pset_name*)을 모두 지정해야 합니다.<br /><br /> 권한 집합에 사용되는 모든 권한은 전역 어셈블리 캐시에 포함된 어셈블리에 정의되어 있어야 합니다.|  
 |**-a**[**ll**]|이 옵션 다음의 모든 옵션이 컴퓨터 정책, 사용자 정책 및 엔터프라이즈 정책에 적용됨을 나타냅니다. **-all** 옵션은 항상 현재 로그온한 사용자의 정책을 참조합니다. 현재 사용자 이외의 사용자에 대한 사용자 정책을 참조하려면 **-customall** 옵션을 참조하세요.|  
@@ -56,7 +56,7 @@ caspol [options]
 |**-customall**  *path*<br /><br /> 또는<br /><br /> **-ca**  *path*|이 옵션 다음의 모든 옵션이 컴퓨터 정책, 엔터프라이즈 정책 및 지정된 사용자 지정 사용자 정책에 적용됨을 나타냅니다. *path* 인수를 사용하여 사용자 지정 사용자의 보안 구성 파일에 대한 위치를 지정해야 합니다.|  
 |**-cu**[**stomuser**] *path*|현재 Caspol.exe가 실행되고 있는 대상 사용자에 속하지 않는 사용자 지정 사용자 정책의 관리를 허용합니다. *path* 인수를 사용하여 사용자 지정 사용자의 보안 구성 파일에 대한 위치를 지정해야 합니다.|  
 |**-enterprise**<br /><br /> 또는<br /><br /> **-en**|이 옵션 다음의 모든 옵션이 엔터프라이즈 수준 정책에 적용됨을 나타냅니다. 엔터프라이즈 관리자가 아닌 사용자는 엔터프라이즈 정책을 볼 수는 있지만 수정할 수 있는 권한은 없습니다. 비엔터프라이즈 시나리오에서, 이 정책은 기본적으로 컴퓨터 및 사용자 정책과 상충되지 않습니다.|  
-|**-e**[**xecution**] {**on** &#124; **off**}|코드가 실행되기 전에 권한이 실행되도록 하는 메커니즘을 설정하거나 설정 해제합니다. **참고:**  .NET Framework 4 이상 버전에서는 이 스위치가 제거되었습니다. 자세한 내용은 [보안 변경 내용](../../../docs/framework/security/security-changes.md)을 참조하세요.|  
+|**-e**[**xecution**] {**on** &#124; **off**}|코드가 실행되기 전에 권한이 실행되도록 하는 메커니즘을 설정하거나 설정 해제합니다. **참고:**  .NET Framework 4 이상 버전에서는 이 스위치가 제거되었습니다. 자세한 내용은 [보안 변경 내용](../security/security-changes.md)을 참조하세요.|  
 |**-f**[**orce**]|도구의 자동 소멸 테스트 기능을 억제하고 해당 정책을 사용자가 지정한 대로 변경합니다. 일반적으로, Caspol.exe가 올바르게 실행되지 못하도록 하는 정책 변경 내용이 있는지 여부를 확인한 다음, 그러한 정책 변경 내용이 있으면 해당 정책 변경 내용을 저장하지 않고 오류 메시지를 인쇄합니다. 이로 인해 Caspol.exe가 실행되지 않더라도 Caspol.exe에서 강제로 정책을 변경하려면 **–force** 옵션을 사용합니다.|  
 |**-h**[**elp**]|Caspol.exe의 명령 구문 및 옵션을 표시합니다.|  
 |**-l**[**ist**]|지정된 컴퓨터, 사용자, 엔터프라이즈 또는 모든 정책 수준에 대한 코드 그룹 계층 구조와 권한 집합을 표시합니다. Caspol.exe를 사용하여 코드 그룹의 레이블을 먼저 표시한 다음 이름(null이 아닌 경우)을 표시합니다.|  
@@ -75,7 +75,7 @@ caspol [options]
 |**-resetlockdown**<br /><br /> 또는<br /><br /> **-rsld**|기본 상태의 보다 제한적인 버전에 정책을 반환하고 이를 디스크에 유지시킵니다. 이전 컴퓨터 정책의 백업을 만들어 `security.config.bac`라는 이름의 파일에 유지시킵니다.  잠긴 정책은 기본 정책과 유사하지만 `Local Intranet`, `Trusted Sites` 및 `Internet` 영역에서 코드에 권한을 부여하지 않으며 해당 코드 그룹에 자식 노드 그룹이 없다는 점에서 다릅니다.|  
 |**-resolvegroup** *assembly_file*<br /><br /> 또는<br /><br /> **-rsg**  *assembly_file*|특정 어셈블리(*assembly_file*)가 속한 코드 그룹을 표시합니다. 기본적으로 이 옵션은 어셈블리가 속한 컴퓨터, 사용자 및 엔터프라이즈 정책 수준을 표시합니다. 하나의 정책 수준만 보려면 **-machine**, **-user** 또는 **-enterprise** 옵션 중 하나와 함께 이 옵션을 사용합니다.|  
 |**-resolveperm** *assembly_file*<br /><br /> 또는<br /><br /> **-rsp** *assembly_file*|해당 어셈블리의 실행이 가능한 경우, 지정된(또는 기본) 보안 정책 수준이 해당 어셈블리에 부여하는 모든 권한을 표시합니다. *assembly_file* 인수는 해당 어셈블리를 지정합니다. **-all** 옵션을 지정하면 Caspol.exe에서 사용자, 컴퓨터 또는 엔터프라이즈 정책에 따라 해당 어셈블리의 권한을 계산합니다. 그렇지 않으면 기본 동작 규칙이 적용됩니다.|  
-|**-s**[**ecurity**] {**on** &#124; **off**}|코드 액세스 보안을 설정하거나 설정 해제합니다. **-s off** 옵션을 지정하면 역할 기반 보안을 사용하도록 설정할 수 있습니다. **참고:**  .NET Framework 4 이상 버전에서는 이 스위치가 제거되었습니다. 자세한 내용은 [보안 변경 내용](../../../docs/framework/security/security-changes.md)을 참조하세요. **주의:**  코드 액세스 보안을 해제하면 모든 코드 액세스 요청이 성공합니다. 그러나 코드 액세스 보안을 해제하면 시스템이 바이러스나 웜과 같은 악의적 코드를 사용한 공격에 취약해집니다. 보안을 해제하면 성능이 약간 향상되지만 다른 보안 방법을 통해 전반적인 시스템 보안을 유지한 경우에만 보안을 해제해야 합니다. 다른 보안 예방 조치의 예로 공용 네트워크에서 연결을 끊거나 컴퓨터를 물리적으로 보호하는 경우를 들 수 있습니다.|  
+|**-s**[**ecurity**] {**on** &#124; **off**}|코드 액세스 보안을 설정하거나 설정 해제합니다. **-s off** 옵션을 지정하면 역할 기반 보안을 사용하도록 설정할 수 있습니다. **참고:**  .NET Framework 4 이상 버전에서는 이 스위치가 제거되었습니다. 자세한 내용은 [보안 변경 내용](../security/security-changes.md)을 참조하세요. **주의:**  코드 액세스 보안을 해제하면 모든 코드 액세스 요청이 성공합니다. 그러나 코드 액세스 보안을 해제하면 시스템이 바이러스나 웜과 같은 악의적 코드를 사용한 공격에 취약해집니다. 보안을 해제하면 성능이 약간 향상되지만 다른 보안 방법을 통해 전반적인 시스템 보안을 유지한 경우에만 보안을 해제해야 합니다. 다른 보안 예방 조치의 예로 공용 네트워크에서 연결을 끊거나 컴퓨터를 물리적으로 보호하는 경우를 들 수 있습니다.|  
 |**-u**[**ser**]|이 옵션 다음의 모든 옵션이 현재 Caspol.exe가 실행되고 있는 대상 사용자의 사용자 수준 정책에 적용됨을 나타냅니다. 관리자가 아닌 사용자의 경우 **-user**가 기본값입니다.|  
 |**-?**|Caspol.exe의 명령 구문 및 옵션을 표시합니다.|  
   
@@ -127,7 +127,7 @@ caspol [options]
   
  대부분의 경우에는 보안 구성 파일을 직접 편집하지 않는 것이 좋습니다. 그러나 관리자가 특정 사용자에 대해 보안 구성을 편집하려는 경우처럼 이러한 파일들을 꼭 수정해야 하는 경우도 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  **-addfulltrust**  
   
  사용자 지정 권한이 포함된 권한 집합이 컴퓨터 정책에 추가된 것으로 가정합니다. 이 사용자 지정 권한은 `MyPerm.exe`의 `MyPerm.exe` 및 `MyOther.exe` 참조 클래스에서 구현됩니다. 두 어셈블리는 모두 완전 신뢰 어셈블리 목록에 추가되어야 합니다. 다음 명령을 사용하여 `MyPerm.exe` 어셈블리를 컴퓨터 정책에 대해 완전 신뢰 목록에 추가합니다.  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 86058eb288b54a4bc316900f165ec61e4d05eb1f
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 25aa7b7c88047a95af3cd1d8f99d96771f252ef4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457276"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052211"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
 .NET Client Profile은 .NET Framework 4 및 이전 버전에서 제공되었고 클라이언트 애플리케이션을 위해 최적화된 .NET Framework의 하위 집합입니다. .NET Framework는 Windows, Windows Phone 및 Microsoft Azure용 개발 플랫폼으로서, 관리되는 앱 실행 환경과 .NET Framework 클래스 라이브러리를 제공합니다. .NET Framework 4 및 이전 버전에서는 전체 .NET Framework와 Client Profile의 두 가지 배포 옵션을 제공했습니다. Client Profile로 전체 .NET Framework보다 더 빠르게 배포하고 더 작은 응용 프로그램 설치 패키지를 사용할 수 있게 되었습니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "66457276"
   
  그러나 .NET Framework 4 또는 3.5를 대상으로 하면서 Client Profile에 대한 자세한 내용과 사용 시기에 대해 알아보려면 .NET Framework 4 설명서의 [.NET Framework Client Profile](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)(.NET Framework 클라이언트 프로필)을 참조하세요.  
   
- .NET Framework 4.5를 설치한 경우 .NET Framework 4 Client Profile은 .NET Framework의 정식 버전으로 업데이트됩니다. .NET Framework 4.5 설치에 대한 자세한 내용은 [개발자용 .NET Framework 설치](../../../docs/framework/install/guide-for-developers.md)를 참조하세요.  
+ .NET Framework 4.5를 설치한 경우 .NET Framework 4 Client Profile은 .NET Framework의 정식 버전으로 업데이트됩니다. .NET Framework 4.5 설치에 대한 자세한 내용은 [개발자용 .NET Framework 설치](../install/guide-for-developers.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 

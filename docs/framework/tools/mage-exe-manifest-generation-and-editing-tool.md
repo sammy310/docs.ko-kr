@@ -5,20 +5,20 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 549eca835b2161429668a2ee340a71dfae658524
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 13a22cd15da3d4cf7eb26359c692389d27d377c0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422351"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044514"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe(매니페스트 생성 및 편집 도구)
 
 매니페스트 생성 및 편집 도구(*Mage.exe*)는 애플리케이션 매니페스트 및 배포 매니페스트의 생성과 편집을 지원하는 명령줄 도구입니다. *Mage.exe*는 명령줄 도구로서 일괄 처리 스크립트뿐 아니라 ASP.NET 애플리케이션을 비롯한 Windows 기반 애플리케이션에서도 실행할 수 있습니다.
 
-*Mage.exe* 대신 그래픽 애플리케이션인 *MageUI.exe*를 사용할 수도 있습니다. 자세한 내용은 [MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)을 참조하십시오.
+*Mage.exe* 대신 그래픽 애플리케이션인 *MageUI.exe*를 사용할 수도 있습니다. 자세한 내용은 [MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)을 참조하십시오.
 
-이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트를 사용합니다. 자세한 내용은 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 참조하세요.
+이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.
 
 *Mage.exe* 및 *MageUI.exe*의 두 버전은 Visual Studio에 포함되어 있습니다. 버전 정보를 보려면 *MageUI.exe*를 실행하고, **도움말**을 선택하고, **정보**를 선택합니다. 이 설명서는 *Mage.exe* 및 *MageUI.exe*의 버전 4.0.x.x에 대해 설명합니다.
 
@@ -107,7 +107,7 @@ mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 
  애플리케이션 매니페스트에 대한 **-TrustLevel** 옵션에서는 클라이언트 컴퓨터에서 애플리케이션을 실행하는 데 필요한 권한 집합을 지정합니다. 기본적으로 애플리케이션의 신뢰 수준은 애플리케이션의 URL이 속하는 *영역* 을 기반으로 할당됩니다. 인터넷을 통해 배포된 애플리케이션은 인터넷 영역에 배치되는 반면 회사 네트워크를 통해 배포된 애플리케이션은 일반적으로 인트라넷 영역에 배치됩니다. 두 가지 보안 영역 모두 애플리케이션에서 로컬 리소스에 액세스하는 데 제한이 있지만 인트라넷 영역이 인터넷 영역보다 약간 덜 제한적입니다. FullTrust 영역에서는 컴퓨터의 로컬 리소스에 대해 애플리케이션에 완전한 액세스가 부여됩니다. **-TrustLevel** 옵션을 통해 애플리케이션을 이 영역에 배치하면 CLR의 트러스트 관리자 구성 요소가 이러한 높은 신뢰 수준을 부여할지 여부를 사용자에게 묻습니다. 애플리케이션을 회사 네트워크를 통해 배포하는 경우에는 신뢰할 수 있는 애플리케이션 배포를 사용하여 사용자에게 묻지 않고 애플리케이션의 신뢰 수준을 높일 수 있습니다.
 
- 애플리케이션 매니페스트에서는 사용자 지정 신뢰 섹션도 지원합니다. 이 섹션을 사용하면 애플리케이션 실행에 필요한 특정 권한만 요청하도록 매니페스트를 구성할 수 있으므로 애플리케이션에서 최소 권한만 요청하도록 하는 보안 원칙을 따르는 데 도움이 됩니다. *Mage.exe*에서는 사용자 지정 신뢰 섹션을 직접 추가할 수 없습니다. 텍스트 편집기, XML 파서 또는 그래픽 도구인 *MageUI.exe*를 사용하여 이를 추가할 수 있습니다. *MageUI.exe*를 사용하여 사용자 지정 신뢰 섹션을 추가하는 방법에 대한 자세한 내용은 [MageUI.exe](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)(Manifest Generation and Editing Tool, Graphical Client)를 참조하세요.
+ 애플리케이션 매니페스트에서는 사용자 지정 신뢰 섹션도 지원합니다. 이 섹션을 사용하면 애플리케이션 실행에 필요한 특정 권한만 요청하도록 매니페스트를 구성할 수 있으므로 애플리케이션에서 최소 권한만 요청하도록 하는 보안 원칙을 따르는 데 도움이 됩니다. *Mage.exe*에서는 사용자 지정 신뢰 섹션을 직접 추가할 수 없습니다. 텍스트 편집기, XML 파서 또는 그래픽 도구인 *MageUI.exe*를 사용하여 이를 추가할 수 있습니다. *MageUI.exe*를 사용하여 사용자 지정 신뢰 섹션을 추가하는 방법에 대한 자세한 내용은 [MageUI.exe](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)(Manifest Generation and Editing Tool, Graphical Client)를 참조하세요.
 
 Visual Studio 2017에는 *Mage.exe*의 4.6.1 버전이 포함되어 있습니다. 이 버전의 *Mage.exe*으로 만들어진 매니페스트는 .NET Framework 4를 대상으로 합니다. 이전 버전의 .NET Framework를 대상으로 지정하려면 *Mage.exe*의 이전 버전을 사용합니다.
 
@@ -127,7 +127,7 @@ Visual Studio 2017에는 *Mage.exe*의 4.6.1 버전이 포함되어 있습니다
 ||닫기|확인|확인|
 ||저장|확인|확인|
 ||다시 서명|확인|확인|
-||새로 만들기|지원 안 함|확인|
+||단추를 사용하여 새|지원 안 함|확인|
 ||업데이트(아래 참조)|지원 안 함|확인|
 
 |매니페스트 버전|작업 세부 정보 업데이트|Mage v2.0|Mage v4.0|
@@ -147,7 +147,7 @@ Visual Studio 2017에는 *Mage.exe*의 4.6.1 버전이 포함되어 있습니다
 <framework targetVersion="4.0" profile="client" supportedRuntime="4.0.20506" />
 ```
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 다음 예제에서는 Mage(*MageUI.exe*)의 사용자 인터페이스를 엽니다.
 
@@ -222,5 +222,5 @@ mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -Cryp
 - [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)
 - [연습: 수동으로 ClickOnce 애플리케이션 배포](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
 - [신뢰할 수 있는 애플리케이션 배포 개요](/visualstudio/deployment/trusted-application-deployment-overview)
-- [MageUI.exe(매니페스트 생성 및 편집 도구, 그래픽 클라이언트)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
-- [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [MageUI.exe(매니페스트 생성 및 편집 도구, 그래픽 클라이언트)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [명령 프롬프트](developer-command-prompt-for-vs.md)

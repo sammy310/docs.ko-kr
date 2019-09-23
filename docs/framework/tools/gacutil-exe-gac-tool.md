@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99ffbccca8cd8a719e5571638308e28d494d687a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 437d2d1bb026795dfa01a4c01ca12acf2b8f5792
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926871"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044672"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe(전역 어셈블리 캐시 도구)
 
 전역 어셈블리 캐시 도구를 사용하면 전역 어셈블리 캐시와 다운로드 캐시의 내용을 보고 조작할 수 있습니다.
 
-이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 참조하세요.
+이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.
 
 명령 프롬프트에 다음을 입력합니다.
 
@@ -66,7 +66,7 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 |**/u** *assemblyName*|전역 어셈블리 캐시에서 어셈블리를 제거합니다.|
 |**/uf** *assemblyName*|어셈블리에 대한 모든 참조를 제거하여 지정된 어셈블리를 강제로 제거합니다.<br /><br /> 이 옵션을 지정하는 것은 **/u** 및 **/f** 옵션을 함께 지정하는 것과 같습니다. **참고:**  Microsoft Windows Installer를 사용하여 설치한 어셈블리는 이 옵션으로 제거할 수 없습니다. 이 작업을 시도하면 오류 메시지가 표시됩니다.|
 |**/ul** *assemblyListFile*|전역 어셈블리 캐시에서 *assemblyListFile*에 지정된 하나 이상의 어셈블리를 제거합니다.|
-|**/u**[**ngen**] *assemblyName*|전역 어셈블리 캐시에서 지정된 어셈블리의 설치를 제거합니다. 지정된 어셈블리가 기존의 참조 횟수를 갖는 경우 이 도구에서는 해당 참조 횟수를 표시하고 전역 어셈블리 캐시에서 해당 어셈블리를 제거하지 않습니다. **참고:**  .NET Framework 버전 2.0에서 `/ungen`은 지원되지 않습니다. 대신에 [Ngen.exe(네이티브 이미지 생성기)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)의 `uninstall` 명령을 사용합니다. <br /><br /> .NET Framework 버전 1.0 및 1.1에서 **/ungen**을 지정하면 Gacutil.exe가 네이티브 이미지 캐시에서 어셈블리를 제거합니다. 이 캐시는 [Ngen.exe(네이티브 이미지 생성기)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)를 사용하여 만들어진 어셈블리의 네이티브 이미지를 저장합니다.|
+|**/u**[**ngen**] *assemblyName*|전역 어셈블리 캐시에서 지정된 어셈블리의 설치를 제거합니다. 지정된 어셈블리가 기존의 참조 횟수를 갖는 경우 이 도구에서는 해당 참조 횟수를 표시하고 전역 어셈블리 캐시에서 해당 어셈블리를 제거하지 않습니다. **참고:**  .NET Framework 버전 2.0에서 `/ungen`은 지원되지 않습니다. 대신에 [Ngen.exe(네이티브 이미지 생성기)](ngen-exe-native-image-generator.md)의 `uninstall` 명령을 사용합니다. <br /><br /> .NET Framework 버전 1.0 및 1.1에서 **/ungen**을 지정하면 Gacutil.exe가 네이티브 이미지 캐시에서 어셈블리를 제거합니다. 이 캐시는 [Ngen.exe(네이티브 이미지 생성기)](ngen-exe-native-image-generator.md)를 사용하여 만들어진 어셈블리의 네이티브 이미지를 저장합니다.|
 |**/ur** *assemblyName*<br /><br /> *scheme*<br /><br /> *ID*<br /><br /> *description*|전역 어셈블리 캐시에서 지정된 어셈블리의 참조를 제거합니다. 어셈블리에 대한 참조를 제거하려면 어셈블리가 설치될 때 **/i** 및 **/r**(또는 **/ir)** 옵션으로 지정된 것과 동일한 *scheme*, *id* 및 *description* 매개 변수를 지정해야 합니다. 이러한 매개 변수에 대해 지정할 수 있는 유효한 값에 대한 설명은 **/r** 옵션을 참조하세요.<br /><br /> 이 옵션을 지정하는 것은 **/u** 및 **/r** 옵션을 함께 지정하는 것과 같습니다.|
 |**/?**|이 도구의 명령 구문 및 옵션을 표시합니다.|
 
@@ -114,7 +114,7 @@ myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 >   - PublicKey - 17자(예: `31bf3856ad364e35\`)
 > - DllFileName - 최대 91 + 4자(즉, `<AssemblyName>.dll`)
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 다음 명령은 전역 어셈블리 캐시에 `mydll.dll` 어셈블리를 설치합니다.
 
@@ -180,7 +180,7 @@ gacutil /l
 
 ## <a name="see-also"></a>참고 항목
 
-- [도구](../../../docs/framework/tools/index.md)
-- [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)
-- [Regasm.exe(어셈블리 등록 도구)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
-- [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [도구](index.md)
+- [전역 어셈블리 캐시](../app-domains/gac.md)
+- [Regasm.exe(어셈블리 등록 도구)](regasm-exe-assembly-registration-tool.md)
+- [명령 프롬프트](developer-command-prompt-for-vs.md)

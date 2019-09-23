@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e96160b0751e0377b429e63c1be6c6761c406096
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 6409bbecdef2da03a18ed246cb90478b2a1fd7f6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664028"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054062"
 ---
 # <a name="garbage-collection-and-performance"></a>가비지 컬렉션 및 성능
 
@@ -249,7 +249,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
 <a name="GenBreak"></a>
 
-##### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a>가비지 수집의 끝에 중단점을 설정하려면
+#### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a>가비지 수집의 끝에 중단점을 설정하려면
 
 - SOS 디버거 확장이 로드된 WinDbg에서 다음 명령을 입력합니다.
 
@@ -301,7 +301,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
 <a name="IsGC"></a>
 
-##### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>문제가 가비지 컬렉션에 의해 발생한 것인지 여부를 확인하려면
+### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>문제가 가비지 컬렉션에 의해 발생한 것인지 여부를 확인하려면
 
 - 다음 두 개의 메모리 성능 카운터를 검사합니다.
 
@@ -313,7 +313,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
 <a name="OOMIsManaged"></a>
 
-##### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>메모리 부족 예외가 관리되는지 여부를 확인하려면
+### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>메모리 부족 예외가 관리되는지 여부를 확인하려면
 
 1. SOS 디버거 확장이 로드된 WinDbg 또는 Visual Studio 디버거에서 예외 인쇄(**pe**) 명령을 입력합니다.
 
@@ -347,7 +347,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
 <a name="GetVM"></a>
 
-##### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a>예약할 수 있는 가상 메모리 양을 확인하려면
+### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a>예약할 수 있는 가상 메모리 양을 확인하려면
 
 - SOS 디버거 확장이 로드된 WinDbg에서 다음 명령을 입력하여 최대 여유 영역을 가져옵니다.
 
@@ -381,7 +381,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
 <a name="Physical"></a>
 
-##### <a name="to-determine-whether-there-is-enough-physical-memory"></a>실제 메모리가 충분한지 확인하려면
+### <a name="to-determine-whether-there-is-enough-physical-memory"></a>실제 메모리가 충분한지 확인하려면
 
 1. Windows 작업 관리자를 시작합니다.
 
@@ -391,7 +391,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
 <a name="ManagedHeapCommit"></a>
 
-##### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a>관리되는 힙이 커밋 중인 메모리 양을 확인하려면
+### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a>관리되는 힙이 커밋 중인 메모리 양을 확인하려면
 
 - `# Total committed bytes` 메모리 성능 카운터를 사용하여 관리되는 힙에서 커밋 중인 바이트 수를 가져올 수 있습니다. 가비지 수집기는 동시에 모두 커밋하지 않고 필요에 따라 세그먼트의 청크를 커밋합니다.
 
@@ -400,7 +400,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
 <a name="ManagedHeapReserve"></a>
 
-##### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a>관리되는 힙이 예약하는 메모리 양을 확인하려면
+### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a>관리되는 힙이 예약하는 메모리 양을 확인하려면
 
 - `# Total reserved bytes` 메모리 성능 카운터를 사용합니다.
 
@@ -449,7 +449,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
 <a name="ExamineGen2"></a>
 
-##### <a name="to-determine-large-objects-in-generation-2"></a>2세대의 대형 개체를 확인하려면
+### <a name="to-determine-large-objects-in-generation-2"></a>2세대의 대형 개체를 확인하려면
 
 - SOS 디버거 확장이 로드된 WinDbg 또는 Visual Studio 디버거에서 다음 명령을 입력합니다.
 
@@ -489,7 +489,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
 <a name="ObjRef"></a>
 
-##### <a name="to-determine-references-to-objects"></a>개체에 대한 참조를 확인하려면
+### <a name="to-determine-references-to-objects"></a>개체에 대한 참조를 확인하려면
 
 - SOS 디버거 확장이 로드된 WinDbg에서 다음 명령을 입력하여 개체에 대한 참조를 나열합니다.
 
@@ -523,7 +523,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
 <a name="Induce"></a>
 
-##### <a name="to-determine-whether-a-finalizer-has-been-run"></a>종료자가 실행되었는지 여부를 확인하려면
+### <a name="to-determine-whether-a-finalizer-has-been-run"></a>종료자가 실행되었는지 여부를 확인하려면
 
 - 다음 코드가 포함된 테스트 프로그램을 실행합니다.
 
@@ -537,7 +537,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
 <a name="Finalize"></a>
 
-##### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>종료 대기 중인 개체가 있는지 여부를 확인하려면
+### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>종료 대기 중인 개체가 있는지 여부를 확인하려면
 
 1. SOS 디버거 확장이 로드된 WinDbg 또는 Visual Studio 디버거에서 다음 명령을 입력합니다.
 
@@ -562,7 +562,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
 <a name="Fragmented"></a>
 
-##### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a>관리되는 힙의 여유 공간 크기를 확인하려면
+### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a>관리되는 힙의 여유 공간 크기를 확인하려면
 
 - SOS 디버거 확장이 로드된 WinDbg 또는 Visual Studio 디버거에서 다음 명령을 입력합니다.
 
@@ -639,7 +639,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
 <a name="Pinned"></a>
 
-##### <a name="to-determine-the-number-of-pinned-objects"></a>고정된 개체 수를 확인하려면
+### <a name="to-determine-the-number-of-pinned-objects"></a>고정된 개체 수를 확인하려면
 
 - SOS 디버거 확장이 로드된 WinDbg 또는 Visual Studio 디버거에서 다음 명령을 입력합니다.
 
@@ -655,7 +655,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
 <a name="TimeInGC"></a>
 
-##### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a>가비지 수집 기간을 확인하려면
+### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a>가비지 수집 기간을 확인하려면
 
 - `% Time in GC` 메모리 성능 카운터를 검사합니다.
 
@@ -743,7 +743,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
 <a name="Triggered"></a>
 
-##### <a name="to-determine-what-triggered-a-garbage-collection"></a>가비지 수집 트리거를 확인하려면
+### <a name="to-determine-what-triggered-a-garbage-collection"></a>가비지 수집 트리거를 확인하려면
 
 - SOS 디버거 확장이 로드된 WinDbg 또는 Visual Studio 디버거에서 다음 명령을 입력하여 호출 스택과 함께 모든 스레드를 표시합니다.
 
@@ -822,7 +822,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
 <a name="HighCPU"></a>
 
-##### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a>높은 CPU 사용량이 가비지 컬렉션에 의해 발생한 것인지 여부를 확인하려면
+### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a>높은 CPU 사용량이 가비지 컬렉션에 의해 발생한 것인지 여부를 확인하려면
 
 - `% Time in GC` 메모리 성능 카운터 값을 프로세스 시간과 상호 연결합니다.
 

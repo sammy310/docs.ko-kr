@@ -6,20 +6,20 @@ helpviewer_keywords:
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ab80cfbd0ae2130f465216ca77812bda0002c24
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 2bed01a74c5b3338df958a3e178c06602bd69866
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854008"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052112"
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>CLR 활성화 문제를 디버깅하는 방법
 
-애플리케이션이 올바른 버전의 CLR(공용 언어 런타임)로 실행되도록 하는 데 문제가 있는 경우 CLR 활성화 로그를 보고 디버그할 수 있습니다. 이러한 로그는 애플리케이션이 예상과 다른 CLR 버전을 로드하거나 CLR을 로드하지 않을 때 활성화 문제의 근본 원인을 파악하는 데 매우 유용할 수 있습니다. [.NET Framework 초기화 오류: 사용자 경험 관리](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)에서는 애플리케이션에 대한 CLR이 없는 경우의 경험에 대해 설명합니다.
+애플리케이션이 올바른 버전의 CLR(공용 언어 런타임)로 실행되도록 하는 데 문제가 있는 경우 CLR 활성화 로그를 보고 디버그할 수 있습니다. 이러한 로그는 애플리케이션이 예상과 다른 CLR 버전을 로드하거나 CLR을 로드하지 않을 때 활성화 문제의 근본 원인을 파악하는 데 매우 유용할 수 있습니다. [.NET Framework 초기화 오류: 사용자 경험 관리](initialization-errors-managing-the-user-experience.md)에서는 애플리케이션에 대한 CLR이 없는 경우의 경험에 대해 설명합니다.
 
 HKEY_LOCAL_MACHINE 레지스트리 키 또는 시스템 환경 변수를 통해 시스템 전체에서 CLR 활성화 로깅을 사용하도록 설정할 수 있습니다. 레지스트리 항목 또는 환경 변수를 제거할 때까지 로그가 생성됩니다. 또는 사용자 또는 프로세스 로컬 환경 변수를 통해 다양한 범위와 기간으로 로깅을 사용하도록 설정할 수 있습니다.
 
-CLR 활성화 로그와 [어셈블리 바인딩 로그](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)는 완전히 다르므로 혼동하면 안 됩니다.
+CLR 활성화 로그와 [어셈블리 바인딩 로그](../tools/fuslogvw-exe-assembly-binding-log-viewer.md)는 완전히 다르므로 혼동하면 안 됩니다.
 
 ## <a name="to-enable-clr-activation-logging"></a>CLR 활성화 로깅을 사용하도록 설정하려면
 
@@ -106,13 +106,13 @@ CLR 활성화 로그는 CLR 활성화 및 CLR 호스팅 API 사용에 대한 많
     532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0
     ```
 
-- **built with version**은 [ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) 등의 메서드에 제공된 이진 파일을 작성하는 데 사용된 CLR 버전입니다.
+- **built with version**은 [ICLRMetaHostPolicy::GetRequestedRuntime](../unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) 등의 메서드에 제공된 이진 파일을 작성하는 데 사용된 CLR 버전입니다.
 
     ```output
     532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727
     ```
 
-- **feature-on-demand installation**은 Windows 8에서 .NET Framework 3.5를 사용하는 경우를 가리킵니다. 이 시나리오에 대한 자세한 내용은 [.NET Framework 초기화 오류: 사용자 환경 관리](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)를 참조하세요.
+- **feature-on-demand installation**은 Windows 8에서 .NET Framework 3.5를 사용하는 경우를 가리킵니다. 이 시나리오에 대한 자세한 내용은 [.NET Framework 초기화 오류: 사용자 환경 관리](initialization-errors-managing-the-user-experience.md)를 참조하세요.
 
     ```output
     532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3
@@ -120,5 +120,5 @@ CLR 활성화 로그는 CLR 활성화 및 CLR 호스팅 API 사용에 대한 많
 
 ## <a name="see-also"></a>참고 항목
 
-- [배포](../../../docs/framework/deployment/index.md)
-- [방법: .NET Framework 4 이상 버전을 지원하도록 앱 구성](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [배포](index.md)
+- [방법: .NET Framework 4 이상 버전을 지원하도록 앱 구성](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

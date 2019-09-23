@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46dd9c0c1f9f5759bc9160aadeb0538b5403fb52
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c7a3548cb0d7e841f32824eda52565e64279536e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917965"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051995"
 ---
 # <a name="overview-of-the-net-framework"></a>.NET Framework의 개요
 
@@ -33,7 +33,7 @@ ms.locfileid: "69917965"
 - .NET Framework를 기반으로 하는 코드가 다른 모든 코드와 통합되도록 모든 통신을 산업 표준을 토대로 빌드합니다.
 
 > [!NOTE]
-> 사용자와 개발자 모두를 위한 .NET Framework에 대한 일반적인 소개는 [시작](../../../docs/framework/get-started/index.md)을 참조하십시오.
+> 사용자와 개발자 모두를 위한 .NET Framework에 대한 일반적인 소개는 [시작](index.md)을 참조하십시오.
 
 .NET Framework는 CLR(공용 언어 런타임)과 .NET Framework 클래스 라이브러리로 구성되어 있습니다. 공용 언어 런타임은 .NET Framework의 기초입니다. 런타임은 실행 시 코드를 관리하는 에이전트로서, 메모리 관리, 스레드 관리, 원격 서비스 등의 핵심 서비스를 제공하며 동시에 엄격한 형식 안전성 및 다른 형태의 코드 정확성을 유지하므로 보안과 안정성을 강화합니다. 사실, 코드 관리의 개념은 런타임의 기본 원칙입니다. 런타임을 대상으로 하는 코드는 관리 코드라고 하지만, 런타임을 대상으로 하지 않는 코드는 비관리 코드라고 합니다. 클래스 라이브러리는 재사용 가능 형식의 포괄적 개체 지향 컬렉션으로, 기존 명령줄 또는 GUI(그래픽 사용자 인터페이스) 앱에서 ASP.NET이 제공하는 Web Forms 및 XML Web services 같은 최신의 혁신적인 기능을 기반으로 하는 앱에 이르기까지 다양한 앱을 개발하는 데 사용할 수 있습니다.
 
@@ -77,15 +77,15 @@ Internet Explorer는 MIME 형식 확장의 형식으로 런타임을 호스트�
 
 - 콘솔 앱. [콘솔 애플리케이션 만들기](../../standard/building-console-apps.md)를 참조하세요.
 
-- Windows GUI 앱(Windows Forms). [Windows Forms](../../../docs/framework/winforms/index.md)를 참조하세요.
+- Windows GUI 앱(Windows Forms). [Windows Forms](../winforms/index.md)를 참조하세요.
 
-- WPF(Windows Presentation Foundation) 앱. [Windows Presentation Foundation](../../../docs/framework/wpf/index.md)을 참조하세요.
+- WPF(Windows Presentation Foundation) 앱. [Windows Presentation Foundation](../wpf/index.md)을 참조하세요.
 
-- ASP.NET 앱. [ASP.NET을 사용하여 개발한 웹 애플리케이션](../../../docs/framework/develop-web-apps-with-aspnet.md)을 참조하세요.
+- ASP.NET 앱. [ASP.NET을 사용하여 개발한 웹 애플리케이션](../develop-web-apps-with-aspnet.md)을 참조하세요.
 
-- Windows 서비스. [Windows 서비스 애플리케이션 소개](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)를 참조하세요.
+- Windows 서비스. [Windows 서비스 애플리케이션 소개](../windows-services/introduction-to-windows-service-applications.md)를 참조하세요.
 
-- WCF(Windows Communication Foundation )를 사용하는 서비스 기반 앱. [WCF를 사용하여 개발한 서비스 기반 애플리케이션](../../../docs/framework/wcf/index.md)을 참조하세요.
+- WCF(Windows Communication Foundation )를 사용하는 서비스 기반 앱. [WCF를 사용하여 개발한 서비스 기반 애플리케이션](../wcf/index.md)을 참조하세요.
 
 - Windows WF(Workflow Foundation)를 사용하는 워크플로 사용 앱. [Windows Workflow Foundation](../windows-workflow-foundation/index.md)을 참조하세요.
 
@@ -93,9 +93,9 @@ Windows Forms 클래스는 Windows GUI 개발을 매우 단순하게 하는 다�
 
 ## <a name="see-also"></a>참고 항목
 
-- [시스템 요구 사항](../../../docs/framework/get-started/system-requirements.md)
-- [설치 가이드](../../../docs/framework/install/index.md)
-- [개발 가이드](../../../docs/framework/development-guide.md)
-- [도구](../../../docs/framework/tools/index.md)
+- [시스템 요구 사항](system-requirements.md)
+- [설치 가이드](../install/index.md)
+- [개발 가이드](../development-guide.md)
+- [도구](../tools/index.md)
 - [.NET 샘플 및 자습서](../../samples-and-tutorials/index.md)
 - [.NET Framework 클래스 라이브러리](https://go.microsoft.com/fwlink/?LinkID=227195)

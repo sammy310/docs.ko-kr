@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f83c67354e96e1da3a30ab2e30fffe026c4646b
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 7fdb364769be6d8c7c53ca05a7d7cb967678123a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971358"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044899"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe(어셈블리 링커)
 
@@ -23,7 +23,7 @@ ms.locfileid: "70971358"
 > [!NOTE]
 > Visual Studio 2008부터 C# 및 Visual Basic 컴파일러가 모두 Win32 매니페스트를 어셈블리에 자동으로 포함합니다. 자세한 내용은 [/win32manifest(C# 컴파일러 옵션)](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md)을 참조하세요.
 
-이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 참조하세요.
+이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.
 
 명령 프롬프트에 다음을 입력합니다.
 
@@ -37,10 +37,10 @@ al sources options
 
 다음 `sources` 중에서 하나 이상 지정할 수 있습니다.
 
-| 소스 | 설명 |
+| 원본 | 설명 |
 | ------ | ----------- |
 |`file`[,`target`]|`file`(모듈)의 내용을 `target`이 지정하는 파일 이름에 복사합니다. 복사한 후 *Al.exe*가 `target`을 어셈블리로 컴파일합니다.|
-|**/embed[resource]:** `file`[,`name`[,`private`]]|`file`이 지정하는 리소스를 어셈블리 매니페스트가 포함된 이미지에 포함합니다. *Al.exe*는 `file`의 내용을 이식 가능한 실행 파일(PE) 이미지에 복사합니다.<br /><br /> `name` 매개 변수는 리소스의 내부 식별자입니다. 기본적으로 리소스는 어셈블리에서 공용입니다. 즉, 다른 어셈블리가 볼 수 있습니다. `private`를 지정하면 다른 어셈블리에서 리소스를 볼 수 없습니다.<br /><br /> 예를 들어, `file`이 [리소스 파일 생성기(*Resgen.exe*)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)나 개발 환경에서 만들어진 .NET Framework 리소스 파일인 경우에는 <xref:System.Resources>의 멤버를 사용하여 해당 파일에 액세스할 수 있습니다. 자세한 내용은 <xref:System.Resources.ResourceManager>을 참조하세요. 다른 모든 리소스의 경우에는 런타임에 `GetManifestResource`의 <xref:System.Reflection.Assembly>* 메서드를 사용하여 리소스에 액세스합니다.<br /><br /> 리소스 파일만 *Al.exe*에 전달되는 경우에는 출력 파일이 위성 리소스 어셈블리입니다.|
+|**/embed[resource]:** `file`[,`name`[,`private`]]|`file`이 지정하는 리소스를 어셈블리 매니페스트가 포함된 이미지에 포함합니다. *Al.exe*는 `file`의 내용을 이식 가능한 실행 파일(PE) 이미지에 복사합니다.<br /><br /> `name` 매개 변수는 리소스의 내부 식별자입니다. 기본적으로 리소스는 어셈블리에서 공용입니다. 즉, 다른 어셈블리가 볼 수 있습니다. `private`를 지정하면 다른 어셈블리에서 리소스를 볼 수 없습니다.<br /><br /> 예를 들어, `file`이 [리소스 파일 생성기(*Resgen.exe*)](resgen-exe-resource-file-generator.md)나 개발 환경에서 만들어진 .NET Framework 리소스 파일인 경우에는 <xref:System.Resources>의 멤버를 사용하여 해당 파일에 액세스할 수 있습니다. 자세한 내용은 <xref:System.Resources.ResourceManager>을 참조하세요. 다른 모든 리소스의 경우에는 런타임에 `GetManifestResource`의 <xref:System.Reflection.Assembly>* 메서드를 사용하여 리소스에 액세스합니다.<br /><br /> 리소스 파일만 *Al.exe*에 전달되는 경우에는 출력 파일이 위성 리소스 어셈블리입니다.|
 |**/link[resource]:** `file`[,`name`[,`target`[,`private`]]]|리소스 파일을 어셈블리에 링크합니다. `file`이 지정하는 리소스가 어셈블리의 일부가 되고 파일은 복사되지 않습니다. `file` 매개 변수는 어떠한 파일 형식도 될 수 있습니다. 예를 들어, 네이티브 DLL을 `file` 매개 변수로 지정할 수 있습니다. 이렇게 하면 네이티브 DLL이 어셈블리의 일부가 되므로 전역 어셈블리 캐시에 설치하고 어셈블리의 관리 코드에서 액세스할 수 있습니다. 이 작업은 **/linkresource** 컴파일러 옵션을 사용하여 수행할 수도 있습니다. 자세한 내용은 [/linkresource(C# 컴파일러 옵션)](../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)를 참조하세요.<br /><br /> `name` 매개 변수는 리소스의 내부 식별자입니다. `target` 매개 변수는 *Al.exe*에서 `file`*을 복사하는 경로와 파일 이름을 지정합니다.* 복사한 후 *Al.exe*가 `target`을 어셈블리로 컴파일합니다. 기본적으로 리소스는 어셈블리에서 공용입니다. 즉, 다른 어셈블리가 볼 수 있습니다. `private`를 지정하면 다른 어셈블리에서 리소스를 볼 수 없습니다.<br /><br /> 예를 들어, `file`이 리소스 파일 생성기 (*Resgen.exe*)나 개발 환경에서 만들어진 .NET Framework 리소스 파일인 경우에는 <xref:System.Resources> 네임스페이스의 멤버를 사용하여 해당 파일에 액세스할 수 있습니다. 자세한 내용은 <xref:System.Resources.ResourceManager>을 참조하세요. 다른 모든 리소스의 경우에는 런타임에 `GetManifestResource` 클래스의 <xref:System.Reflection.Assembly>* 메서드를 사용하여 리소스에 액세스합니다.<br /><br /> 리소스 파일만 *Al.exe*에 전달되는 경우에는 출력 파일이 위성 리소스 어셈블리입니다.|
 
 다음 `options`를 지정할 수 있으며, **/out**은 반드시 지정해야 합니다.
@@ -54,14 +54,14 @@ al sources options
 |**/config[uration]:** `text`|어셈블리의 Configuration 필드에 대한 문자열을 지정합니다. `text`에 공백이 있으면 문자열을 큰따옴표(" ")로 묶습니다. 이 문자열은 어셈블리의 사용자 지정 속성이며 리플렉션과 함께 볼 수 있습니다.<br /><br /> 텍스트가 빈 문자열이면 Win32 Configuration 리소스가 단일 공백으로 표시됩니다.<br /><br /> MSIL 모듈의 소스 코드에서 이 옵션을 사용자 지정 특성(<xref:System.Reflection.AssemblyConfigurationAttribute>)으로 지정할 수도 있습니다.|
 |**/copy[right]:** `text`|어셈블리의 Copyright 필드에 대한 문자열을 지정합니다. `text`에 공백이 있으면 문자열을 큰따옴표(" ")로 묶습니다. 이 문자열은 어셈블리의 사용자 지정 속성이며 리플렉션과 함께 볼 수 있습니다.<br /><br /> **/win32res**를 지정하지 않으면 파일 탐색기에서 **/copyright**가 Win32 Copyright(저작권) 리소스로 나타납니다.<br /><br /> 텍스트가 빈 문자열이면 Win32 Copyright 리소스가 단일 공백으로 표시됩니다.<br /><br /> **/win32res**를 지정하면 **/copyright**는 Win32 리소스 정보에 영향을 주지 않습니다.<br /><br /> MSIL 모듈의 소스 코드에서 이 옵션을 사용자 지정 특성(<xref:System.Reflection.AssemblyCopyrightAttribute>)으로 지정할 수도 있습니다.|
 |**/c[ulture]:** `text`|어셈블리에 연결할 문화권 문자열을 지정합니다. "Tags for the Identification of Languages"라는 제목의 인터넷 RFC(Requests for Comments) 문서 1766에서 정의하는 값이 문화권의 유효한 값입니다.<br /><br /> `text`에 공백이 있으면 문자열을 큰따옴표(" ")로 묶습니다. 기본 문화권 문자열은 없습니다. 이 문자열을 리플렉션과 함께 볼 수 있습니다.<br /><br /> 유효한 `text` 문자열에 대한 자세한 내용은 <xref:System.Globalization.CultureInfo>를 참조하세요.<br /><br /> MSIL 모듈의 소스 코드에서 이 옵션을 사용자 지정 특성(<xref:System.Reflection.AssemblyCultureAttribute>)으로 지정할 수도 있습니다.|
-|**/delay[sign][+&#124;-]**|어셈블리를 완전히 서명할지, 아니면 부분적으로 서명할지를 지정합니다. 완전히 서명된 어셈블리가 필요하면 **/delaysign-** 를 사용합니다. 어셈블리에 공개 키만 포함하려면 **/delaysign+** 를 사용합니다.<br /><br /> 완전히 서명된 어셈블리를 요청할 경우 *Al.exe*는 매니페스트(어셈블리 메타데이터)가 포함된 파일을 해시하고 공개 키로 해당 해시에 서명합니다. 결과로 생성되는 디지털 서명은 매니페스트가 포함된 파일에 저장됩니다. 어셈블리 서명이 연기된 경우 *Al.exe*는 시그니처를 컴퓨팅하거나 저장하지 않고 나중에 시그니처를 추가할 수 있도록 파일에 공간을 예약합니다.<br /><br /> 기본값은 **/delaysign-** 입니다.<br /><br /> **/delaysign** 옵션은 **/keyfile** 또는 **/keyname**과 함께 사용하지 않으면 효과가 없습니다.<br /><br /> 예를 들어 **/delaysign+** 를 사용하면 테스터를 통해 전역 캐시에 어셈블리를 넣을 수 있습니다. 테스트를 마친 후 어셈블리에 프라이빗 키를 포함하여 어셈블리에 완전히 서명할 수 있습니다.<br /><br /> 참고: [*Gacutil.exe*(전역 어셈블리 캐시 도구)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)를 사용하여 전역 캐시에 서명이 연기된 어셈블리를 넣으려면, 먼저 [*Sn.exe*(강력한 이름 도구)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)를 사용하여 확인을 건너뛰는 어셈블리를 등록합니다. 예: `Sn.exe –Vr delaySignedAssembly`. 개발에서만 이 기능을 사용하세요.<br /><br /> MSIL 모듈의 소스 코드에서 이 옵션을 사용자 지정 특성(<xref:System.Reflection.AssemblyDelaySignAttribute>)으로 지정할 수도 있습니다.|
+|**/delay[sign][+&#124;-]**|어셈블리를 완전히 서명할지, 아니면 부분적으로 서명할지를 지정합니다. 완전히 서명된 어셈블리가 필요하면 **/delaysign-** 를 사용합니다. 어셈블리에 공개 키만 포함하려면 **/delaysign+** 를 사용합니다.<br /><br /> 완전히 서명된 어셈블리를 요청할 경우 *Al.exe*는 매니페스트(어셈블리 메타데이터)가 포함된 파일을 해시하고 공개 키로 해당 해시에 서명합니다. 결과로 생성되는 디지털 서명은 매니페스트가 포함된 파일에 저장됩니다. 어셈블리 서명이 연기된 경우 *Al.exe*는 시그니처를 컴퓨팅하거나 저장하지 않고 나중에 시그니처를 추가할 수 있도록 파일에 공간을 예약합니다.<br /><br /> 기본값은 **/delaysign-** 입니다.<br /><br /> **/delaysign** 옵션은 **/keyfile** 또는 **/keyname**과 함께 사용하지 않으면 효과가 없습니다.<br /><br /> 예를 들어 **/delaysign+** 를 사용하면 테스터를 통해 전역 캐시에 어셈블리를 넣을 수 있습니다. 테스트를 마친 후 어셈블리에 프라이빗 키를 포함하여 어셈블리에 완전히 서명할 수 있습니다.<br /><br /> 참고: [*Gacutil.exe*(전역 어셈블리 캐시 도구)](gacutil-exe-gac-tool.md)를 사용하여 전역 캐시에 서명이 연기된 어셈블리를 넣으려면, 먼저 [*Sn.exe*(강력한 이름 도구)](sn-exe-strong-name-tool.md)를 사용하여 확인을 건너뛰는 어셈블리를 등록합니다. 예: `Sn.exe –Vr delaySignedAssembly`. 개발에서만 이 기능을 사용하세요.<br /><br /> MSIL 모듈의 소스 코드에서 이 옵션을 사용자 지정 특성(<xref:System.Reflection.AssemblyDelaySignAttribute>)으로 지정할 수도 있습니다.|
 |**/descr[iption]:** `text`|어셈블리의 <xref:System.Reflection.AssemblyDescriptionAttribute.Description%2A> 필드에 대한 문자열을 지정합니다. `text`에 공백이 있으면 문자열을 큰따옴표(" ")로 묶습니다. 이 문자열은 어셈블리의 사용자 지정 속성이며 리플렉션과 함께 볼 수 있습니다.<br /><br /> **/win32res**를 지정하지 않으면 파일 탐색기에서 **/description**이 Win32 **Comments**(설명) 리소스로 나타납니다.<br /><br /> 텍스트가 빈 문자열이면 Win32 **Comments** 리소스가 단일 공백으로 나타납니다.<br /><br /> **/win32res**를 지정하면 **/description**은 Win32 리소스 정보에 영향을 주지 않습니다.<br /><br /> MSIL 모듈의 소스 코드에서 이 옵션을 사용자 지정 특성(<xref:System.Reflection.AssemblyDescriptionAttribute.Description%2A>)으로 지정할 수도 있습니다.|
 |**/e[vidence]:** `file`|어셈블리에 `file`을 Security.Evidence라는 리소스 이름으로 포함시킵니다.<br /><br /> 기본 리소스에는 Security.Evidence를 사용할 수 없습니다.|
 |**/fileversion:** `version`|어셈블리의 **File Version**(파일 버전) 필드에 대한 문자열을 지정합니다. 이 문자열은 어셈블리의 사용자 지정 속성이며 리플렉션과 함께 볼 수 있습니다.<br /><br /> **/win32res**를 지정하지 않으면 **/fileversion**이 Win32 **File Version** 리소스로 사용됩니다. **/fileversion**을 지정하지 않으면 Win32 **File Version** 리소스가 Win32 **Assembly Version**(어셈블리 버전) 리소스로 채워집니다.<br /><br /> **/win32res**를 지정하면 **/fileversion**은 Win32 리소스에 영향을 주지 않습니다.<br /><br /> MSIL 모듈의 소스 코드에서 이 옵션을 사용자 지정 특성(AssemblyFileVersionAttribute)으로 지정할 수도 있습니다.|
 |**/flags:** `flags`|어셈블리의 `Flags` 필드에 대한 값을 지정합니다. `flags`에 사용할 수 있는 값은 다음과 같습니다.<br /><br /> 0x0000<br /> 어셈블리가 side-by-side로 호환됩니다.<br /><br /> 0x0010<br /> 어셈블리는 같은 애플리케이션 도메인에서 실행할 경우 다른 버전과 함께 실행할 수 없습니다.<br /><br /> 0x0020<br /> 어셈블리는 같은 프로세스에서 실행할 경우 다른 버전과 함께 실행할 수 없습니다.<br /><br /> 0x0030<br /> 같은 컴퓨터에서 실행되는 경우에는 어셈블리를 다른 버전과 함께 실행할 수 없습니다.<br /><br /> MSIL 모듈의 소스 코드에서 이 옵션을 사용자 지정 특성(<xref:System.Reflection.AssemblyFlagsAttribute>)으로 지정할 수도 있습니다.|
 |**/fullpaths**|오류 메시지에 보고되는 파일에 대해 *Al.exe*가 절대 경로를 사용합니다.|
 |**/help**|이 도구의 명령 구문 및 옵션을 표시합니다.|
-|**/keyf[ile]:** `filename`|어셈블리에 서명하기 위한 키 쌍 또는 공개 키를 포함하는 파일(`filename`)을 지정합니다. 컴파일러는 퍼블릭 키를 어셈블리 매니페스트에 삽입한 다음 프라이빗 키를 사용하여 최종 어셈블리에 서명합니다. 키 파일을 생성하고 키 쌍을 키 컨테이너에 설치하는 방법에 대한 자세한 내용은 [Strong Name Tool (*Sn.exe*)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)(Sn.exe(강력한 이름 도구))을 참조하세요.<br /><br /> 연기된 서명을 사용할 경우 이 파일에는 일반적으로 퍼블릭 키가 있으며 프라이빗 키는 없습니다.<br /><br /> 키 쌍의 공개 키 정보는 어셈블리의 .publickey 필드에 나타납니다.<br /><br /> MSIL 모듈의 소스 코드에서 이 옵션을 사용자 지정 특성(<xref:System.Reflection.AssemblyKeyFileAttribute>)으로 지정할 수도 있습니다.<br /><br /> **/keyfile** 및 **/keyname**이 모두 동일한 컴파일에서 명령줄 옵션이나 사용자 지정 특성으로 지정되면 *Al.exe*에서 먼저 **/keyname**으로 지정된 컨테이너를 찾으려고 합니다. 이 시도에 성공하면 키 컨테이너의 정보를 사용하여 어셈블리가 서명됩니다. *Al.exe*에서 키 컨테이너를 찾지 못하면 **/keyfile**로 지정된 파일을 찾으려고 합니다. 해당 파일을 찾으면 어셈블리가 키 파일의 정보로 서명되고 키 정보가 키 컨테이너에 설치됩니다([*Sn.exe*](../../../docs/framework/tools/sn-exe-strong-name-tool.md)의 -i 옵션과 비슷함). 이에 따라 다음에 컴파일할 때 **/keyname** 옵션이 유효하게 됩니다.|
+|**/keyf[ile]:** `filename`|어셈블리에 서명하기 위한 키 쌍 또는 공개 키를 포함하는 파일(`filename`)을 지정합니다. 컴파일러는 퍼블릭 키를 어셈블리 매니페스트에 삽입한 다음 프라이빗 키를 사용하여 최종 어셈블리에 서명합니다. 키 파일을 생성하고 키 쌍을 키 컨테이너에 설치하는 방법에 대한 자세한 내용은 [Strong Name Tool (*Sn.exe*)](sn-exe-strong-name-tool.md)(Sn.exe(강력한 이름 도구))을 참조하세요.<br /><br /> 연기된 서명을 사용할 경우 이 파일에는 일반적으로 퍼블릭 키가 있으며 프라이빗 키는 없습니다.<br /><br /> 키 쌍의 공개 키 정보는 어셈블리의 .publickey 필드에 나타납니다.<br /><br /> MSIL 모듈의 소스 코드에서 이 옵션을 사용자 지정 특성(<xref:System.Reflection.AssemblyKeyFileAttribute>)으로 지정할 수도 있습니다.<br /><br /> **/keyfile** 및 **/keyname**이 모두 동일한 컴파일에서 명령줄 옵션이나 사용자 지정 특성으로 지정되면 *Al.exe*에서 먼저 **/keyname**으로 지정된 컨테이너를 찾으려고 합니다. 이 시도에 성공하면 키 컨테이너의 정보를 사용하여 어셈블리가 서명됩니다. *Al.exe*에서 키 컨테이너를 찾지 못하면 **/keyfile**로 지정된 파일을 찾으려고 합니다. 해당 파일을 찾으면 어셈블리가 키 파일의 정보로 서명되고 키 정보가 키 컨테이너에 설치됩니다([*Sn.exe*](sn-exe-strong-name-tool.md)의 -i 옵션과 비슷함). 이에 따라 다음에 컴파일할 때 **/keyname** 옵션이 유효하게 됩니다.|
 |**/keyn[ame]:** `text`|키 쌍을 보관하는 컨테이너를 지정합니다. 어셈블리 매니페스트에 공개 키를 삽입하여 어셈블리에 서명(강력한 이름을 부여)합니다. 그런 다음 *Al.exe*가 프라이빗 키를 사용하여 최종 어셈블리에 서명합니다.<br /><br /> *Sn.exe*를 사용하여 키 쌍을 생성합니다.<br /><br /> 어셈블리의 .publickey 필드에 키 정보가 나타납니다.<br /><br /> `text`에 공백이 있으면 큰따옴표(" ")로 묶습니다.<br /><br /> MSIL 모듈의 소스 코드에서 이 옵션을 사용자 지정 특성(<xref:System.Reflection.AssemblyKeyNameAttribute>)으로 지정할 수도 있습니다.|
 |**/main:** `method`|모듈을 실행 파일로 변환할 때 진입점으로 사용할 메서드의 정규화된 이름(`class`.`method`)을 지정합니다.|
 |**/nologo**|*Al.exe*를 호출할 때 명령줄에 표시되는 배너 또는 로고를 표시하지 않습니다.|
@@ -83,7 +83,7 @@ al sources options
 
 모든 Visual Studio 컴파일러는 어셈블리를 만듭니다. 그러나 모듈(매니페스트 없는 메타데이터)이 하나 이상 있으면 *Al.exe*를 사용하여 별도의 파일에 매니페스트가 있는 어셈블리를 만들 수 있습니다.
 
-캐시에서 어셈블리를 설치하거나, 제거하거나, 캐시의 내용을 나열하려면 [Global Assembly Cache Tool (*Gacutil.exe*)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)(Gacutil.exe(전역 어셈블리 캐시 도구))을 사용합니다.
+캐시에서 어셈블리를 설치하거나, 제거하거나, 캐시의 내용을 나열하려면 [Global Assembly Cache Tool (*Gacutil.exe*)](gacutil-exe-gac-tool.md)(Gacutil.exe(전역 어셈블리 캐시 도구))을 사용합니다.
 
 ## <a name="errors-and-warnings"></a>오류 및 경고
 
@@ -116,8 +116,8 @@ al sources options
 |al1023|리소스 'file'을 포함하는 동안 오류 발생 - reason<br /><br /> 운영 체제에서 지정된 이유로 어셈블리에 리소스 파일을 포함할 수 없습니다.|
 |al1025|ComType 레코드 'record'가 잘못 된 파일 레코드 'record'를 가리킵니다.<br /><br /> 입력 모듈의 메타데이터가 잘못되었습니다. 모듈을 생성한 도구를 수정해야 합니다.|
 |al1026|지정된 ‘version’ 버전이 잘못되었습니다.<br /><br /> 유효한 형식은 **/version** 옵션에 대한 정보를 참조하세요.|
-|al1028|file' 키 파일에 서명에 필요한 프라이빗 키가 없습니다.<br /><br /> 공개 키만 포함된 키 파일이 **/keyfile** 옵션에 전달되었습니다. 다음 명령과 같이 [*Sn.exe*(강력한 이름 도구)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)를 사용하여 퍼블릭 키와 프라이빗 키가 둘 다 포함된 파일을 생성합니다.<br /><br /> `sn -k keypair.snk.`|
-|al1029|키 컨테이너 이름 ‘container’가 없습니다.<br /><br /> **/keyname** 옵션에 전달된 값이 유효한 컨테이너가 아닙니다. [*Sn.exe*(강력한 이름 도구)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)를 사용하여 컨테이너를 만듭니다.|
+|al1028|file' 키 파일에 서명에 필요한 프라이빗 키가 없습니다.<br /><br /> 공개 키만 포함된 키 파일이 **/keyfile** 옵션에 전달되었습니다. 다음 명령과 같이 [*Sn.exe*(강력한 이름 도구)](sn-exe-strong-name-tool.md)를 사용하여 퍼블릭 키와 프라이빗 키가 둘 다 포함된 파일을 생성합니다.<br /><br /> `sn -k keypair.snk.`|
+|al1029|키 컨테이너 이름 ‘container’가 없습니다.<br /><br /> **/keyname** 옵션에 전달된 값이 유효한 컨테이너가 아닙니다. [*Sn.exe*(강력한 이름 도구)](sn-exe-strong-name-tool.md)를 사용하여 컨테이너를 만듭니다.|
 |al1030|암호화 서비스가 제대로 설치되지 않았거나 적절한 키 공급자가 없습니다.<br /><br /> 운영 체제를 다시 설치하거나, 키를 만드는 데 사용되는 일부 암호화 유틸리티를 설치해야 할 수 있습니다.|
 |al1031|'file' 아이콘을 읽는 동안 오류 발생 - reason<br /><br /> *Al.exe*에서 지정된 이유로 **/win32icon** 옵션에 전달된 파일을 읽을 수 없습니다.|
 |al1032|'file'에 대한 리소스를 생성하는 동안 오류 발생 - reason<br /><br /> 디스크 공간 부족 또는 일부 다른 오류로 인해 *Al.exe*에서 파일을 만들 수 없습니다. **/win32icon** 옵션(.ico 파일 생성)을 지정하거나 **/win32res** 옵션(리소스 정보가 포함된 파일 생성)을 지정하지 않으면 이 오류가 발생합니다.<br /><br /> 파일 생성 문제를 해결할 수 없는 경우 버전 또는 비트맵(아이콘) 정보를 포함할 수 있는 파일을 지정하는 **/win32res**를 사용합니다.|
@@ -127,7 +127,7 @@ al sources options
 |al1036|실행 가능한 애플리케이션에는 진입점이 필요합니다.<br /><br /> **/target:exe** 또는 **/target:win** 옵션을 사용할 때는 **/main** 옵션도 지정해야 합니다.|
 |al1037|'main' 진입점 메서드를 찾을 수 없습니다.<br /><br /> *Al.exe*가 **/main** 옵션으로 지정된 위치에서 `Main` 메서드를 찾을 수 없습니다.|
 |al1039|전역 어셈블리 캐시 관리자 초기화 실패 - reason<br /><br /> Visual Studio 또는 Windows SDK를 다시 설치합니다.|
-|al1040|캐시에 어셈블리를 설치하지 못했습니다. reason<br /><br /> 서명된 어셈블리만 캐시에 설치할 수 있습니다. 자세한 내용은 [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)를 참조하세요.|
+|al1040|캐시에 어셈블리를 설치하지 못했습니다. reason<br /><br /> 서명된 어셈블리만 캐시에 설치할 수 있습니다. 자세한 내용은 [전역 어셈블리 캐시](../app-domains/gac.md)를 참조하세요.|
 |al1041|'method': 서명 또는 표시 유형이 잘못되었거나 제네릭이기 때문에 진입점이 될 수 없습니다.<br /><br /> 메서드가 **/main** 옵션으로 지정되었지만 해당 메서드가 정적이 아니거나, `int` 또는 `void`를 반환하지 않거나, 제네릭이거나, 잘못된 인수를 포함하고 있습니다.|
 |al1042|'exe': EXE를 모듈로 추가할 수 없습니다.<br /><br /> 어셈블리가 없는 *.exe* 파일이 *Al.exe*에 대한 입력 파일로 지정되었습니다. *Al.exe*는 어셈블리가 없는 *dll* 파일만 입력 파일로 사용할 수 있습니다.|
 |al1043|'name' 매니페스트 파일 이름은 모듈과 같을 수 없습니다.<br /><br /> **/out** 옵션으로 지정된 이름은 *Al.exe*에 대한 입력으로 지정된 파일 이름 중 하나와 같을 수 없습니다.|
@@ -142,7 +142,7 @@ al sources options
 |al1052|‘filename’ 파일은 어셈블리가 아닙니다.<br /><br /> **/template**으로 지정된 파일은 어셈블리 메타데이터를 포함해야 합니다. 이 오류는 **/template**으로 지정된 파일에 어셈블리가 포함되지 않았음을 나타냅니다.|
 |al1053|'옵션'에 대해 지정된 'version' 버전은 일반적인 'major.minor.build.revision' 형식이 아닙니다.<br /><br /> *Al.exe*에서 **/fileversion** 또는 **/productversion** 옵션으로 지정된 형식이 아닌 버전 정보를 발견했습니다.|
 |al1054|'옵션'에 대해 지정된 'version' 버전은 일반적인 'major.minor.build.revision' 형식이 아닙니다.<br /><br /> *Al.exe*에서 <xref:System.Resources.SatelliteContractVersionAttribute>에 잘못된 형식의 버전 정보가 지정된 것을 발견했습니다.|
-|al1055|참조된 ‘filename’ 어셈블리에 강력한 이름이 없습니다.<br /><br /> 이 오류는 강력한 이름의 어셈블리를 빌드하고 강력한 이름이 없는 어셈블리를 참조하는 경우에 발생합니다. 이 오류를 수정하려면 강력한 이름으로 어셈블리를 다시 생성하거나 *sn.exe*를 사용하여 어셈블리에 강력한 이름을 연결해야 합니다([*sn.exe*](../../../docs/framework/tools/sn-exe-strong-name-tool.md)에 대한 설명서 참조).<br /><br /> 일반적으로 이 오류는 Visual Studio IDE를 통해 C# 프로젝트에 COM 모듈 참조를 추가하는 경우와 같이 래퍼 어셈블리를 통해 COM 개체를 사용하는 경우에 발생합니다. 오류를 방지하려면 "래퍼 어셈블리 키 파일/이름" 프로젝트 속성에서 COM 래퍼 어셈블리에 대한 강력한 이름 키 파일을 지정할 수 있습니다.<br /><br /> tlbimp를 통해 래퍼 어셈블리를 만드는 경우 래퍼 어셈블리에 강력한 이름을 할당하는 방법에 대한 자세한 내용은 [tlbimp](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 설명서를 참조하세요.<br /><br /> 어셈블리에 강력한 이름이 있는 경우 전역 어셈블리 캐시에 설치할 수 있습니다. 결과적으로, 참조된 어셈블리도 전역 어셈블리 캐시로 이동됩니다. 강력한 이름을 가진 어셈블리만 전역 어셈블리 캐시로 이동될 수 있습니다.|
+|al1055|참조된 ‘filename’ 어셈블리에 강력한 이름이 없습니다.<br /><br /> 이 오류는 강력한 이름의 어셈블리를 빌드하고 강력한 이름이 없는 어셈블리를 참조하는 경우에 발생합니다. 이 오류를 수정하려면 강력한 이름으로 어셈블리를 다시 생성하거나 *sn.exe*를 사용하여 어셈블리에 강력한 이름을 연결해야 합니다([*sn.exe*](sn-exe-strong-name-tool.md)에 대한 설명서 참조).<br /><br /> 일반적으로 이 오류는 Visual Studio IDE를 통해 C# 프로젝트에 COM 모듈 참조를 추가하는 경우와 같이 래퍼 어셈블리를 통해 COM 개체를 사용하는 경우에 발생합니다. 오류를 방지하려면 "래퍼 어셈블리 키 파일/이름" 프로젝트 속성에서 COM 래퍼 어셈블리에 대한 강력한 이름 키 파일을 지정할 수 있습니다.<br /><br /> tlbimp를 통해 래퍼 어셈블리를 만드는 경우 래퍼 어셈블리에 강력한 이름을 할당하는 방법에 대한 자세한 내용은 [tlbimp](tlbimp-exe-type-library-importer.md) 설명서를 참조하세요.<br /><br /> 어셈블리에 강력한 이름이 있는 경우 전역 어셈블리 캐시에 설치할 수 있습니다. 결과적으로, 참조된 어셈블리도 전역 어셈블리 캐시로 이동됩니다. 강력한 이름을 가진 어셈블리만 전역 어셈블리 캐시로 이동될 수 있습니다.|
 |al1056|참조된 'filename' 어셈블리는 지역화된 위성 어셈블리입니다.<br /><br /> <xref:System.Reflection.AssemblyCultureAttribute> 특성을 사용하여 만든 어셈블리가 현재 어셈블리를 만들 때 참조되었습니다. <xref:System.Reflection.AssemblyCultureAttribute> 특성은 파일이 지역화된 위성 어셈블리이며 위성 어셈블리를 참조하는 데 적합하지 않음을 나타냅니다. 기본 부모 어셈블리를 대신 참조해야 합니다.|
 |al1057|실행 파일을 지역화할 수 없습니다. 문화권은 항상 비어 있어야 합니다.<br /><br /> **/target:exe**를 사용하여 어셈블리를 만들고 있지만 **/culture**를 지정했습니다. *.exe*의 어셈블리는 Culture 필드에 정보를 포함할 수 없습니다.|
 |al1058|'file'은 어셈블리이며 모듈로 추가할 수 없습니다.<br /><br /> C++ 컴파일에서 **/assemblymodule**(링커 옵션)에 어셈블리가 포함된 파일이 전달되었습니다.|
@@ -175,8 +175,8 @@ al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 
 ## <a name="see-also"></a>참고 항목
 
-- [도구](../../../docs/framework/tools/index.md)
-- [*Sn.exe* (Strong Name Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)(Sn.exe(강력한 이름 도구))
-- [*Gacutil.exe* (Global Assembly Cache Tool)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)(Gacutil.exe(전역 어셈블리 캐시 도구))
+- [도구](index.md)
+- [*Sn.exe* (Strong Name Tool)](sn-exe-strong-name-tool.md)(Sn.exe(강력한 이름 도구))
+- [*Gacutil.exe* (Global Assembly Cache Tool)](gacutil-exe-gac-tool.md)(Gacutil.exe(전역 어셈블리 캐시 도구))
 - [어셈블리를 사용한 프로그래밍](../../standard/assembly/program.md)
-- [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [명령 프롬프트](developer-command-prompt-for-vs.md)

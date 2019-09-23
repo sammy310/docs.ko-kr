@@ -10,12 +10,12 @@ helpviewer_keywords:
 - best practices, data requests
 - receiving data, best practices
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
-ms.openlocfilehash: 57d0c3640c65d425ded63f53e32416053c3eb926
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c7324dcbc27c95c7d799592700d46c195e7d952b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624674"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048889"
 ---
 # <a name="best-practices-for-systemnet-classes"></a>System.Net 클래스에 대한 모범 사례
 다음 권장 사항은 <xref:System.Net>에 포함된 클래스를 최대한 활용하는 데 도움이 됩니다.  
@@ -34,4 +34,4 @@ ms.locfileid: "64624674"
   
 ## <a name="see-also"></a>참고 항목
 
-- [.NET Framework의 네트워크 프로그래밍](../../../docs/framework/network-programming/index.md)
+- [.NET Framework의 네트워크 프로그래밍](index.md)

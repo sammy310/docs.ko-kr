@@ -16,12 +16,12 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-ms.openlocfilehash: b99720b9653b8454419acd35085bfe9a7ac4b5af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fe2ad55c3f60347369c0e92bc834d81d98f3870e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59171394"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046953"
 ---
 # <a name="using-client-sockets"></a>클라이언트 소켓 사용
 <xref:System.Net.Sockets.Socket>을 통해 대화를 시작하려면 먼저 애플리케이션과 원격 디바이스 간에 데이터 파이프를 만들어야 합니다. 다른 네트워크 주소 패밀리 및 프로토콜이 있어도 이 예제에서는 원격 서비스에 대한 TCP/IP 연결을 만드는 방법을 보여 줍니다.  
@@ -79,7 +79,7 @@ try {
   
 ## <a name="see-also"></a>참고 항목
 
-- [동기 클라이언트 소켓 사용](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
-- [비동기 클라이언트 소켓 사용](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
-- [방법: 소켓 만들기](../../../docs/framework/network-programming/how-to-create-a-socket.md)
-- [소켓](../../../docs/framework/network-programming/sockets.md)
+- [동기 클라이언트 소켓 사용](using-a-synchronous-client-socket.md)
+- [비동기 클라이언트 소켓 사용](using-an-asynchronous-client-socket.md)
+- [방법: 소켓 만들기](how-to-create-a-socket.md)
+- [소켓](sockets.md)

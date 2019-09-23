@@ -15,12 +15,12 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-ms.openlocfilehash: 8b17f5a7167eb539e04a19db797bc1b0cc6c5eaa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3e0b5cd58270cec758db5d4dad6f3ad48962921a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295460"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047913"
 ---
 # <a name="internet-authentication"></a>인터넷 인증
 <xref:System.Net> 클래스는 표준 인터넷 인증 방법인 기본, 다이제스트, 협상, NTLM 및 Kerberos 인증뿐 아니라 직접 만들 수 있는 사용자 지정 방법을 포함한 다양한 클라이언트 인증 메커니즘을 지원합니다.  
@@ -41,6 +41,6 @@ ms.locfileid: "59295460"
   
 ## <a name="see-also"></a>참고 항목
 
-- [기본 인증 및 다이제스트 인증](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
-- [NTLM 및 Kerberos 인증](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
-- [네트워크 프로그래밍의 보안](../../../docs/framework/network-programming/security-in-network-programming.md)
+- [기본 인증 및 다이제스트 인증](basic-and-digest-authentication.md)
+- [NTLM 및 Kerberos 인증](ntlm-and-kerberos-authentication.md)
+- [네트워크 프로그래밍의 보안](security-in-network-programming.md)

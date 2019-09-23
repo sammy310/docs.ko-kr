@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46475cbc8517fc73d8b7fd868c7632e5c85a7726
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: f99b2fd4716b069d4ec7a21e369c5178990ce16d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894799"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044202"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe(서명 도구)
 서명 도구는 파일에 디지털 서명을 하고, 파일의 서명을 확인하고, 파일에 타임스탬프를 기록하는 명령줄 도구입니다.  
   
- 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 참조하세요.  
+ 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.  
   
  명령 프롬프트에 다음을 입력합니다.  
   
@@ -39,10 +39,10 @@ signtool [command] [options] [file_name | ...]
   
 |명령|설명|  
 |-------------|-----------------|  
-|`catdb`|카탈로그 데이터베이스에서 카탈로그 파일을 추가하거나 제거합니다. 카탈로그 데이터베이스는 카탈로그 파일의 자동 조회에 사용되며 GUID를 통해 식별됩니다. `catdb` 명령에서 지원하는 옵션 목록은 [catdb 명령 옵션](../../../docs/framework/tools/signtool-exe.md#catdb)을 참조하세요.|  
-|`sign`|파일에 디지털 서명을 수행합니다. 디지털 서명은 파일 조작으로부터 보호하고 사용자가 서명 인증서를 기반으로 서명자를 확인할 수 있습니다. `sign` 명령에서 지원하는 옵션 목록은 [sign 명령 옵션](../../../docs/framework/tools/signtool-exe.md#sign)을 참조하세요.|  
-|`Timestamp`|파일에 타임스탬프를 기록합니다. `TimeStamp` 명령에서 지원하는 옵션 목록은 [TimeStamp 명령 옵션](../../../docs/framework/tools/signtool-exe.md#TimeStamp)을 참조하세요.|  
-|`Verify`|파일의 디지털 서명을 검사하여 신뢰할 수 있는 기관에서 발행한 서명 인증서인지, 해당 서명 인증서가 취소되었는지, 아니면 서명 인증서가 특정 정책에 대해 유효한지를 선택적으로 확인합니다. `Verify` 명령에서 지원하는 옵션 목록은 [Verify 명령 옵션](../../../docs/framework/tools/signtool-exe.md#Verify)을 참조하세요.|  
+|`catdb`|카탈로그 데이터베이스에서 카탈로그 파일을 추가하거나 제거합니다. 카탈로그 데이터베이스는 카탈로그 파일의 자동 조회에 사용되며 GUID를 통해 식별됩니다. `catdb` 명령에서 지원하는 옵션 목록은 [catdb 명령 옵션](signtool-exe.md#catdb)을 참조하세요.|  
+|`sign`|파일에 디지털 서명을 수행합니다. 디지털 서명은 파일 조작으로부터 보호하고 사용자가 서명 인증서를 기반으로 서명자를 확인할 수 있습니다. `sign` 명령에서 지원하는 옵션 목록은 [sign 명령 옵션](signtool-exe.md#sign)을 참조하세요.|  
+|`Timestamp`|파일에 타임스탬프를 기록합니다. `TimeStamp` 명령에서 지원하는 옵션 목록은 [TimeStamp 명령 옵션](signtool-exe.md#TimeStamp)을 참조하세요.|  
+|`Verify`|파일의 디지털 서명을 검사하여 신뢰할 수 있는 기관에서 발행한 서명 인증서인지, 해당 서명 인증서가 취소되었는지, 아니면 서명 인증서가 특정 정책에 대해 유효한지를 선택적으로 확인합니다. `Verify` 명령에서 지원하는 옵션 목록은 [Verify 명령 옵션](signtool-exe.md#Verify)을 참조하세요.|  
   
  다음 옵션은 모든 서명 도구 명령에 적용됩니다.  
   
@@ -148,7 +148,7 @@ signtool [command] [options] [file_name | ...]
 |1|실행하지 못했습니다.|  
 |2|실행이 경고와 함께 완료되었습니다.|  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 명령은 카탈로그 파일 MyCatalogFileName.cat를 시스템 구성 요소와 드라이버 데이터베이스에 추가합니다. `/u` 옵션은 `MyCatalogFileName.cat`라는 기존 카탈로그 파일이 바뀌지 않도록 해야 하는 경우 고유 이름을 생성합니다.  
   
 ```console  
@@ -211,5 +211,5 @@ signtool verify /c MyCatalog.cat SystemFile.dll
   
 ## <a name="see-also"></a>참고 항목
 
-- [도구](../../../docs/framework/tools/index.md)
-- [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [도구](index.md)
+- [명령 프롬프트](developer-command-prompt-for-vs.md)

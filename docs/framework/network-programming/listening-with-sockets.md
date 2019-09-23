@@ -15,12 +15,12 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-ms.openlocfilehash: c3d5a7d6040038eb6d768815b1ae9e8ad45c5810
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2eb1174c98cdd88cc519559011659a2a277219b0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109956"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047779"
 ---
 # <a name="listening-with-sockets"></a>소켓으로 수신
 수신기 또는 서버 소켓에서 네트워크의 포트를 열고 클라이언트가 해당 포트에 연결할 때까지 기다립니다. 다른 네트워크 주소 패밀리 및 프로토콜이 있어도 이 예제에서는 TCP/IP 네트워크에 대한 원격 서비스를 만드는 방법을 보여 줍니다.  
@@ -61,8 +61,8 @@ listener.Listen(100);
   
 ## <a name="see-also"></a>참고 항목
 
-- [동기 서버 소켓 사용](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
-- [비동기 서버 소켓 사용](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [클라이언트 소켓 사용](../../../docs/framework/network-programming/using-client-sockets.md)
-- [방법: 소켓 만들기](../../../docs/framework/network-programming/how-to-create-a-socket.md)
-- [소켓](../../../docs/framework/network-programming/sockets.md)
+- [동기 서버 소켓 사용](using-a-synchronous-server-socket.md)
+- [비동기 서버 소켓 사용](using-an-asynchronous-server-socket.md)
+- [클라이언트 소켓 사용](using-client-sockets.md)
+- [방법: 소켓 만들기](how-to-create-a-socket.md)
+- [소켓](sockets.md)

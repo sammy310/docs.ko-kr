@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fcc9ba5e379897247f50175603b1002d5688d215
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: b8d1ad081c8d783cd18054078a6eeb82428faa4d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894691"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044628"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe(IL 어셈블러)
 
 IL 어셈블러는 IL(Intermediate Language)로 PE(이식 가능한 실행) 파일을 생성합니다. IL에 대한 자세한 내용은 [관리되는 실행 프로세스](../../standard/managed-execution-process.md)를 참조하세요. 이렇게 생성된 실행 파일에는 IL 및 필요한 메타데이터가 들어 있으며, 이 파일을 실행하면 IL이 예상대로 실행되는지 여부를 확인할 수 있습니다.
 
-이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 참조하세요.
+이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.
 
 명령 프롬프트에 다음을 입력합니다.
 
@@ -92,7 +92,7 @@ IL 어셈블러를 사용하면 런타임을 대상으로 하는 프로그래밍
 > [!NOTE]
 > .il 소스 파일의 마지막 코드 줄에 후행 공백이나 줄 끝(EOL) 문자가 없으면 컴파일이 실패할 수 있습니다.
 
-*Ilasm.exe*는 자매 도구인 [*Ildasm.exe*](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)와 함께 사용할 수 있습니다. *Ildasm.exe*는 IL 코드가 포함된 PE 파일을 가져와서 *Ildasm.exe*에 입력하기에 적합한 텍스트 파일을 만듭니다. 이렇게 하면 런타임 메타데이터 특성을 모두 지원하지 않는 프로그래밍 언어로 코드를 컴파일할 때 유용합니다. 코드를 컴파일하고 *Ildasm.exe*를 사용하여 출력을 실행한 후에는 결과로 만들어지는 IL 텍스트 파일을 수동으로 편집하여 손실된 특성을 추가할 수 있습니다. 그런 다음에는 *Ilasm.exe*를 통해 이 텍스트 파일을 실행하여 최종 실행 파일을 생성할 수 있습니다.
+*Ilasm.exe*는 자매 도구인 [*Ildasm.exe*](ildasm-exe-il-disassembler.md)와 함께 사용할 수 있습니다. *Ildasm.exe*는 IL 코드가 포함된 PE 파일을 가져와서 *Ildasm.exe*에 입력하기에 적합한 텍스트 파일을 만듭니다. 이렇게 하면 런타임 메타데이터 특성을 모두 지원하지 않는 프로그래밍 언어로 코드를 컴파일할 때 유용합니다. 코드를 컴파일하고 *Ildasm.exe*를 사용하여 출력을 실행한 후에는 결과로 만들어지는 IL 텍스트 파일을 수동으로 편집하여 손실된 특성을 추가할 수 있습니다. 그런 다음에는 *Ilasm.exe*를 통해 이 텍스트 파일을 실행하여 최종 실행 파일을 생성할 수 있습니다.
 
 또한, 이 기술을 사용하면 서로 다른 컴파일러에서 생성된 여러 개의 PE 파일에서 하나의 PE 파일을 생성할 수도 있습니다.
 
@@ -139,7 +139,7 @@ IL 문법에 대한 자세한 내용은 Windows SDK에서 asmparse.grammar 파�
 
 IL 문법에 대한 자세한 내용은 Windows SDK에서 asmparse.grammar 파일을 참조하세요.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 다음 명령은 IL 파일 *myTestFile.il*을 어셈블하고 실행 파일 *myTestFile.exe*를 생성합니다.
 
@@ -159,7 +159,7 @@ ilasm myTestFile /dll
 ilasm myTestFile /dll /output:myNewTestFile.dll
 ```
 
-다음 코드 예제에서는 "Hello World!"를 콘솔에 표시하는 매우 간단한 애플리케이션을 표시합니다. 이 코드를 컴파일한 다음 [*Ildasm.exe*](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 도구를 사용하여 IL 파일을 생성할 수 있습니다.
+다음 코드 예제에서는 "Hello World!"를 콘솔에 표시하는 매우 간단한 애플리케이션을 표시합니다. 이 코드를 컴파일한 다음 [*Ildasm.exe*](ildasm-exe-il-disassembler.md) 도구를 사용하여 IL 파일을 생성할 수 있습니다.
 
 ```csharp
 using System;
@@ -229,7 +229,7 @@ public class Hello
 
 ## <a name="see-also"></a>참고 항목
 
-- [도구](../../../docs/framework/tools/index.md)
-- [*Ildasm.exe* (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)(Ildasm.exe(IL 디스어셈블러))
+- [도구](index.md)
+- [*Ildasm.exe* (IL Disassembler)](ildasm-exe-il-disassembler.md)(Ildasm.exe(IL 디스어셈블러))
 - [관리되는 실행 프로세스](../../standard/managed-execution-process.md)
-- [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [명령 프롬프트](developer-command-prompt-for-vs.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d9d77ef20090e007e22a0d2f90b29f32ff94b46
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2a33d3c4216ed8c5d79aef4017c6b9256fc1ad7c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911109"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052097"
 ---
 # <a name="in-process-side-by-side-execution"></a>In-Process Side-by-Side 실행
 .NET Framework 4부터 In-Process Side-By-Side 호스팅을 사용하여 단일 프로세스에서 여러 버전의 CLR(공용 언어 런타임)을 실행할 수 있습니다. 기본적으로 관리되는 COM 구성 요소는 프로세스에 대해 로드된 .NET Framework 버전에 관계없이 빌드 시 사용된 .NET Framework 버전을 사용하여 실행됩니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "69911109"
   
      설치된 .NET Framework 버전: .NET Framework 및 .NET Framework 4의 이전 버전.  
   
-     할 일: 애플리케이션 디렉터리의 [애플리케이션 구성 파일](../../../docs/framework/configure-apps/index.md)에서 [\<startup> 요소](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) 및 [\<supportedRuntime> 요소](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 집합을 다음과 같이 사용합니다.  
+     할 일: 애플리케이션 디렉터리의 [애플리케이션 구성 파일](../configure-apps/index.md)에서 [\<startup> 요소](../configure-apps/file-schema/startup/startup-element.md) 및 [\<supportedRuntime> 요소](../configure-apps/file-schema/startup/supportedruntime-element.md) 집합을 다음과 같이 사용합니다.  
   
     ```xml  
     <configuration>  
@@ -175,5 +175,5 @@ int _tmain(int argc, _TCHAR* argv[])
   
 ## <a name="see-also"></a>참고 항목
 
-- [\<startup> 요소](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
-- [\<supportedRuntime> 요소](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<startup> 요소](../configure-apps/file-schema/startup/startup-element.md)
+- [\<supportedRuntime> 요소](../configure-apps/file-schema/startup/supportedruntime-element.md)

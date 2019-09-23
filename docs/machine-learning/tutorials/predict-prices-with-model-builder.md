@@ -1,19 +1,19 @@
 ---
-title: 모델 작성기와 함께 회귀를 사용하여 가격 예측
+title: '자습서: 모델 작성기와 함께 회귀를 사용하여 가격 예측'
 description: 이 자습서에서는 ML.NET 모델 작성기를 사용하여 가격(특히, 뉴욕 시 택시 요금)을 예측하기 위한 회귀 모델을 빌드하는 방법에 대해 설명합니다.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 09/12/2019
+ms.date: 09/18/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 675ca58ab071293fe5c04b1b85337fb1e48dfbea
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: bb344a7f01e8ffe0e40578c6fb2f28bebd2eb807
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991343"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117967"
 ---
-# <a name="predict-prices-using-regression-with-model-builder"></a>모델 작성기와 함께 회귀를 사용하여 가격 예측
+# <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>자습서: 모델 작성기와 함께 회귀를 사용하여 가격 예측
 
 ML.NET 모델 작성기 빌드를 사용하여 가격을 예측하기 위한 회귀 모델()을 빌드하는 방법을 알아봅니다.  이 자습서에서 개발하는 .NET 콘솔 앱은 뉴욕의 과거 택시 요금 데이터를 기반으로 택시 요금을 예측합니다.
 
@@ -127,7 +127,7 @@ ML.NET 모델 작성기 빌드를 사용하여 가격을 예측하기 위한 회
     using TaxiFarePredictionML.Model.DataModels;
     ```
 
-1. `Program` 클래스에 `ConsumeModel` 메서드를 추가합니다.
+1. `ConsumeModel` 클래스에 `Program` 메서드를 추가합니다.
 
     ```csharp
     static ModelOutput ConsumeModel(ModelInput input)

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34cb8b0cebc64bf7244c522066700c94d33986a9
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 2db85781b48fd75c3d2ef70834fd8451647f6917
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894809"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044229"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe(리소스 파일 생성기)
-리소스 파일 생성기(Resgen.exe)를 사용하면 텍스트 파일(.txt 또는 .restext)과 XML 기반 리소스 형식 파일(.resx)을 런타임 이진 실행 파일에 포함하거나 위성 어셈블리에 포함할 수 있는 공용 언어 런타임의 이진 파일(.resources)로 변환할 수 있습니다. [리소스 파일 만들기](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)를 참조하세요.  
+리소스 파일 생성기(Resgen.exe)를 사용하면 텍스트 파일(.txt 또는 .restext)과 XML 기반 리소스 형식 파일(.resx)을 런타임 이진 실행 파일에 포함하거나 위성 어셈블리에 포함할 수 있는 공용 언어 런타임의 이진 파일(.resources)로 변환할 수 있습니다. [리소스 파일 만들기](../resources/creating-resource-files-for-desktop-apps.md)를 참조하세요.  
   
  Resgen.exe는 다음 작업을 수행하는 범용 리소스 변환 유틸리티입니다.  
   
@@ -53,9 +53,9 @@ resgen
 resgen /?  
 ```  
   
- Resgen.exe를 사용하여 이진 .resources 파일을 만드는 경우 언어 컴파일러를 사용하여 이진 파일을 실행 가능 어셈블리에 포함하거나 [어셈블리 링커(Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md)를 사용하여 위성 어셈블리에 컴파일할 수 있습니다.  
+ Resgen.exe를 사용하여 이진 .resources 파일을 만드는 경우 언어 컴파일러를 사용하여 이진 파일을 실행 가능 어셈블리에 포함하거나 [어셈블리 링커(Al.exe)](al-exe-assembly-linker.md)를 사용하여 위성 어셈블리에 컴파일할 수 있습니다.  
   
- 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 참조하세요.  
+ 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.  
   
  명령 프롬프트에 다음을 입력합니다.  
   
@@ -77,7 +77,7 @@ resgen filename.extension [outputDirectory]
 |`useSourcePath`|입력 파일의 현재 디렉터리를 사용하여 상대 경로를 확인하도록 지정합니다.|  
 |`/compile`|단일 일괄 작업을 통해 여러 .resources 파일로 변환할 여러 .resx 또는 텍스트 파일을 지정할 수 있습니다. 이 옵션을 지정하지 않으면 입력 파일 인수를 하나만 지정할 수 있습니다. 출력 파일의 이름은 *filename*.resources입니다.<br /><br /> 이 옵션은 `/str:` 옵션과 함께 사용할 수 없습니다.<br /><br /> 이 옵션에 대한 자세한 내용은 이 항목의 뒤에 나오는 [다중 파일 컴파일 또는 변환](#Multiple)을 참조하세요.|  
 |`/r:` `assembly`|지정한 어셈블리에서 메타데이터를 참조합니다. .Resx 파일을 변환할 때 사용하고 Resgen.exe를 통해 개체 리소스를 serialize하거나 deserialize할 수 있습니다. C# 및 Visual Basic 컴파일러에 대한 `/reference:` 또는 `/r:` 옵션과 유사합니다.|  
-|`filename.extension`|변환할 입력 파일의 이름을 지정합니다. 이 테이블 앞에 나타난 첫째, 긴 명령줄 구문을 사용하는 경우 `extension`은 다음 중 하나여야 합니다.<br /><br /> .txt 또는 .restext<br /> .resources 또는 .resx 파일로 변환할 텍스트 파일입니다. 텍스트 파일에는 문자열 리소스만 포함될 수 있습니다. 파일 형식에 대한 자세한 내용은 [리소스 파일 만들기](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)에서 "텍스트 파일의 리소스" 섹션을 참조하세요.<br /><br /> .resx<br /> .resources 또는 텍스트 파일(.txt 또는 .restext)로 변환할 XML 기반 리소스 파일입니다.<br /><br /> .resources<br /> .resx 또는 텍스트(.txt 또는 .restext) 파일로 변환할 이진 리소스 파일입니다.<br /><br /> 이 테이블 앞에 표시되는 두 번째, 짧은 명령줄 구문을 사용하는 경우 `extension`은 다음과 같아야 합니다.<br /><br /> .exe 또는 .dll<br /> [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램을 개발하는 데 사용하는 .resw 파일로 문자열 리소스를 추출할 .NET Framework 어셈블리(실행 파일 또는 라이브러리)입니다.|  
+|`filename.extension`|변환할 입력 파일의 이름을 지정합니다. 이 테이블 앞에 나타난 첫째, 긴 명령줄 구문을 사용하는 경우 `extension`은 다음 중 하나여야 합니다.<br /><br /> .txt 또는 .restext<br /> .resources 또는 .resx 파일로 변환할 텍스트 파일입니다. 텍스트 파일에는 문자열 리소스만 포함될 수 있습니다. 파일 형식에 대한 자세한 내용은 [리소스 파일 만들기](../resources/creating-resource-files-for-desktop-apps.md)에서 "텍스트 파일의 리소스" 섹션을 참조하세요.<br /><br /> .resx<br /> .resources 또는 텍스트 파일(.txt 또는 .restext)로 변환할 XML 기반 리소스 파일입니다.<br /><br /> .resources<br /> .resx 또는 텍스트(.txt 또는 .restext) 파일로 변환할 이진 리소스 파일입니다.<br /><br /> 이 테이블 앞에 표시되는 두 번째, 짧은 명령줄 구문을 사용하는 경우 `extension`은 다음과 같아야 합니다.<br /><br /> .exe 또는 .dll<br /> [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램을 개발하는 데 사용하는 .resw 파일로 문자열 리소스를 추출할 .NET Framework 어셈블리(실행 파일 또는 라이브러리)입니다.|  
 |`outputFilename.extension`|만들 리소스 파일의 이름 및 유형을 지정합니다.<br /><br /> .txt, .restext 또는 .resx 파일을 .resources 파일로 변환하는 경우 이 인수는 선택적 인수입니다. `outputFilename`을 지정하지 않으면 Resgen.exe에서는 입력 `filename`에 .resources 확장명을 추가하고 `filename,extension`이 들어 있는 디렉터리에 해당 파일을 씁니다.<br /><br /> `outputFilename.extension` 인수는 .resources 파일에서 변환할 때 사용되는 필수 항목입니다. .resources 파일을 XML 기반 리소스 파일로 변환할 때에는 .resx 확장명을 갖는 파일 이름을 지정합니다. .resources 파일을 텍스트 파일로 변환할 때는 .txt 또는 .restext 확장명을 갖는 파일 이름을 지정합니다. .resources 파일에 문자열 값만 있는 경우에는 .resources 파일을 .txt 파일로만 변환해야 합니다.|  
 |`outputDirectory`|[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램의 경우 `filename.extension`에 있는 문자열 리소스를 포함하는 .resw 파일은 디렉터리를 지정합니다. `outputDirectory`가 이미 있어야 합니다.|  
 |`/str:` `language[,namespace[,classname[,filename]]]`|`language` 옵션에 지정된 프로그래밍 언어로 강력한 형식의 리소스 클래스 파일을 만듭니다. `language`는 다음과 같은 리터럴 중 하나로 구성할 수 있습니다.<br /><br /> -   C#의 경우: `c#`, `cs` 또는 `csharp`입니다.<br />-   Visual Basic의 경우: `vb` 또는 `visualbasic`입니다.<br />-   VBScript의 경우: `vbs` 또는 `vbscript`입니다.<br />-   C++의 경우: `c++`, `mc` 또는 `cpp`입니다.<br />-   JavaScript의 경우: `js`, `jscript` 또는 `javascript`입니다.<br /><br /> `namespace` 옵션은 프로젝트의 기본 네임스페이스를 지정하고, `classname` 옵션은 생성되는 클래스의 이름을 지정하고, `filename` 옵션은 클래스 파일의 이름을 지정합니다.<br /><br /> `/str:` 옵션에서는 입력 파일을 하나만 지정할 수 있으므로 이 옵션과 `/compile` 옵션을 함께 사용할 수 없습니다.<br /><br /> `namespace`만 지정하고 `classname`은 지정하지 않을 경우 출력 파일 이름에서 마침표를 밑줄로 대체하는 등의 방식으로 클래스 이름이 파생됩니다. 따라서 강력한 형식의 리소스가 제대로 작동하지 않을 수도 있습니다. 이 문제를 방지하려면 클래스 이름과 출력 파일 이름을 모두 지정해야 합니다.<br /><br /> 이 옵션에 대한 자세한 내용은 이 항목의 뒤에 나오는 [강력한 형식의 리소스 클래스 생성](#Strong)을 참조하세요.|  
@@ -90,14 +90,14 @@ resgen filename.extension [outputDirectory]
  텍스트 파일(.txt 또는 .restext)은 문자열 리소스만 포함할 수 있습니다. 문자열을 여러 가지 언어로 번역해야 하는 애플리케이션을 작성하는 경우에는 문자열 리소스를 사용하는 것이 좋습니다. 예를 들어, 해당 문자열 리소스를 사용하면 메뉴 문자열을 쉽게 지역화할 수 있습니다. Resgen.exe를 사용하여 이름/값 쌍이 들어 있는 텍스트 파일을 읽습니다. 여기에서 이름은 해당 리소스를 설명하는 문자열이고, 값은 리소스 문자열 자체입니다.  
   
 > [!NOTE]
-> .txt 및 .restext 파일 형식에 대한 자세한 내용은 [리소스 파일 만들기](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)에서 "텍스트 파일의 리소스" 섹션을 참조하세요.  
+> .txt 및 .restext 파일 형식에 대한 자세한 내용은 [리소스 파일 만들기](../resources/creating-resource-files-for-desktop-apps.md)에서 "텍스트 파일의 리소스" 섹션을 참조하세요.  
   
  리소스를 포함하고 있는 텍스트 파일은 기본 라틴 범위(U+007F까지)의 문자만 포함하지 않는 경우 UTF-8 또는 유니코드(UTF-16) 인코딩으로 저장해야 합니다. Resgen.exe에서는 ANSI 인코딩으로 저장된 텍스트 파일을 처리할 때 확장된 ANSI 문자를 제거합니다.  
   
  Resgen.exe를 사용하여 텍스트 파일에 중복된 리소스 이름이 있는지 확인합니다. 텍스트 파일에 중복된 리소스 이름이 있으면 Resgen.exe에서는 경고를 표시하고 두 번째 값을 무시합니다.  
   
 ### <a name="resx-files"></a>.resx 파일  
- .resx 리소스 파일 형식은 XML 엔트리로 구성되며 텍스트 파일과 유사한 방식으로 이 XML 엔트리 내에 문자열 리소스를 지정할 수 있습니다. 텍스트 파일과 비교했을 때 .resx 파일에는 개체를 포함하거나 지정할 수 있다는 이점이 있습니다. .resx 파일을 볼 때 그림과 같은 포함 개체의 이진 형식이 리소스 매니페스트의 일부인 경우에는 해당 이진 형식을 볼 수 있습니다. 텍스트 파일과 마찬가지로 .resx 파일을 텍스트 편집기(예: 메모장 또는 Microsoft Word)에서 열어 내용을 쓰고 구문 분석 및 조작할 수 있습니다. 이러한 작업을 수행하려면 XML 태그 및 .resx 파일의 구조에 대해 잘 알고 있어야 합니다. .resx 파일 형식에 대한 자세한 내용은 [리소스 파일 만들기](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)에서 ".resx 파일의 리소스" 섹션을 참조하세요.  
+ .resx 리소스 파일 형식은 XML 엔트리로 구성되며 텍스트 파일과 유사한 방식으로 이 XML 엔트리 내에 문자열 리소스를 지정할 수 있습니다. 텍스트 파일과 비교했을 때 .resx 파일에는 개체를 포함하거나 지정할 수 있다는 이점이 있습니다. .resx 파일을 볼 때 그림과 같은 포함 개체의 이진 형식이 리소스 매니페스트의 일부인 경우에는 해당 이진 형식을 볼 수 있습니다. 텍스트 파일과 마찬가지로 .resx 파일을 텍스트 편집기(예: 메모장 또는 Microsoft Word)에서 열어 내용을 쓰고 구문 분석 및 조작할 수 있습니다. 이러한 작업을 수행하려면 XML 태그 및 .resx 파일의 구조에 대해 잘 알고 있어야 합니다. .resx 파일 형식에 대한 자세한 내용은 [리소스 파일 만들기](../resources/creating-resource-files-for-desktop-apps.md)에서 ".resx 파일의 리소스" 섹션을 참조하세요.  
   
  비문자열 포함 개체가 들어 있는 .resources 파일을 만들려면 Resgen.exe를 사용하여 개체가 들어 있는 .resx 파일을 변환하거나, <xref:System.Resources.ResourceWriter> 클래스에서 제공하는 메서드를 호출하여 코드에서 개체 리소스를 해당 파일에 직접 추가해야 합니다.  
   
@@ -116,21 +116,21 @@ resgen filename.extension [outputDirectory]
 ## <a name="performing-specific-resgenexe-tasks"></a>특정 Resgen.exe 작업을 수행합니다.  
  텍스트 기반 또는 XML 기반 리소스 파일을 바이너리 파일로 컴파일, <xref:System.Resources.ResourceManager> 기능 래핑, 리소스로의 액세스를 제공하는 클래스 생성 등 다양한 방법으로 Resgen.exe를 사용할 수 있습니다. 이 단원에서는 각 작업에 대해 자세하게 설명합니다.  
   
-- [이진 파일에 리소스 컴파일](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling)  
+- [이진 파일에 리소스 컴파일](resgen-exe-resource-file-generator.md#Compiling)  
   
-- [리소스 파일 형식 간 변환](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Convert)  
+- [리소스 파일 형식 간 변환](resgen-exe-resource-file-generator.md#Convert)  
   
-- [다중 파일 컴파일 또는 변환](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Multiple)  
+- [다중 파일 컴파일 또는 변환](resgen-exe-resource-file-generator.md#Multiple)  
   
-- [.resw 파일에 리소스 내보내기](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Exporting)  
+- [.resw 파일에 리소스 내보내기](resgen-exe-resource-file-generator.md#Exporting)  
   
-- [리소스 조건부 컴파일](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Conditional)  
+- [리소스 조건부 컴파일](resgen-exe-resource-file-generator.md#Conditional)  
   
-- [강력한 형식의 리소스 클래스 생성](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Strong)  
+- [강력한 형식의 리소스 클래스 생성](resgen-exe-resource-file-generator.md#Strong)  
   
 <a name="Compiling"></a>   
 ### <a name="compiling-resources-into-a-binary-file"></a>이진 파일에 리소스 컴파일  
- resgen.exe는 텍스트 기반 리소스 파일(.txt 또는 .restext) 또는 XML 기반 리소스 파일(.resx 파일)을 이진 .resources 파일로 컴파일하는 데 가장 일반적으로 사용됩니다. 언어 컴파일러를 사용하여 메인 어셈블리에 출력 파일을 포함시키거나, [어셈블리 링커(Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md)를 사용하여 위성 어셈블리에 포함시킬 수 있습니다.  
+ resgen.exe는 텍스트 기반 리소스 파일(.txt 또는 .restext) 또는 XML 기반 리소스 파일(.resx 파일)을 이진 .resources 파일로 컴파일하는 데 가장 일반적으로 사용됩니다. 언어 컴파일러를 사용하여 메인 어셈블리에 출력 파일을 포함시키거나, [어셈블리 링커(Al.exe)](al-exe-assembly-linker.md)를 사용하여 위성 어셈블리에 포함시킬 수 있습니다.  
   
  리소스 파일을 컴파일하는 구문은 다음과 같습니다.  
   
@@ -297,7 +297,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
  강력한 형식의 리소스 클래스에 대한 소스 코드를 생성할 언어입니다. 가능한 값은 `cs`, `C#`, `csharp`(C# 코드), `vb`, `visualbasic`(Visual Basic 코드), `vbs`, `vbscript`(VBScript 코드), `c++`, `mc`, `cpp`(C++ 코드)입니다.  
   
  *namespace*  
- 강력한 형식의 리소스 클래스에 포함된 네임스페이스입니다. .Resources 파일과 리소스 클래스의 네임스페이스는 같아야 합니다. `outputFilename`에서 네임스페이스를 지정하는 방법에 대한 자세한 내용은 [이진 파일에 리소스 컴파일](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling)을 참조하세요. *namespace*를 생략하면 리소스 클래스가 네임스페이스에 포함되지 않습니다.  
+ 강력한 형식의 리소스 클래스에 포함된 네임스페이스입니다. .Resources 파일과 리소스 클래스의 네임스페이스는 같아야 합니다. `outputFilename`에서 네임스페이스를 지정하는 방법에 대한 자세한 내용은 [이진 파일에 리소스 컴파일](resgen-exe-resource-file-generator.md#Compiling)을 참조하세요. *namespace*를 생략하면 리소스 클래스가 네임스페이스에 포함되지 않습니다.  
   
  *classname*  
  강력한 형식의 리소스 클래스의 이름입니다. 이 값은 .resources 파일의 루트 이름과 일치해야 합니다. 예를 들어, Resgen.exe에서 MyCompany.Libraries.Strings.resources라는 이름의 .resources 파일을 생성하면 강력한 형식의 리소스 클래스의 이름은 Strings입니다. *classname*을 생략할 경우 생성된 클래스는 `outputFilename`의 루트 이름에서 파생됩니다. `outputFilename`을 생략할 경우 생성된 클래스는 `inputFilename`의 루트 이름에서 파생됩니다.  
@@ -331,8 +331,8 @@ resgen StringResources.txt /str:vb,,StringResources
   
 ## <a name="see-also"></a>참고 항목
 
-- [도구](../../../docs/framework/tools/index.md)
-- [데스크톱 앱의 리소스](../../../docs/framework/resources/index.md)
-- [리소스 파일 만들기](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
-- [Al.exe(어셈블리 링커)](../../../docs/framework/tools/al-exe-assembly-linker.md)
-- [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [도구](index.md)
+- [데스크톱 앱의 리소스](../resources/index.md)
+- [리소스 파일 만들기](../resources/creating-resource-files-for-desktop-apps.md)
+- [Al.exe(어셈블리 링커)](al-exe-assembly-linker.md)
+- [명령 프롬프트](developer-command-prompt-for-vs.md)

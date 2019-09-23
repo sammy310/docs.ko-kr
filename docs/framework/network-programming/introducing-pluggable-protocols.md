@@ -22,12 +22,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: 41a55df53f8b0dfd4eefc9bc4ecf6b2eef122c8d
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 72b47b8159f9f6f0dc3a19c5cbf94335507d9e7d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70394269"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047868"
 ---
 # <a name="introducing-pluggable-protocols"></a>플러그형 프로토콜 소개
 Microsoft .NET Framework는 더 빠르고 쉽게 애플리케이션에 통합할 수 있는 계층적이고 확장 가능하며 관리되는 인터넷 서비스 구현을 제공합니다. <xref:System.Net> 및 <xref:System.Net.Sockets> 네임스페이스의 인터넷 액세스 클래스를 사용하여 웹 기반 애플리케이션과 인터넷 기반 애플리케이션을 둘 다 구현할 수 있습니다.  
@@ -68,6 +68,6 @@ Microsoft .NET Framework는 더 빠르고 쉽게 애플리케이션에 통합할
   
 ## <a name="see-also"></a>참고 항목
 
-- [플러그형 프로토콜 프로그래밍](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
-- [.NET Framework의 네트워크 프로그래밍](../../../docs/framework/network-programming/index.md)
-- [네트워크 프로그래밍 샘플](../../../docs/framework/network-programming/network-programming-samples.md)
+- [플러그형 프로토콜 프로그래밍](programming-pluggable-protocols.md)
+- [.NET Framework의 네트워크 프로그래밍](index.md)
+- [네트워크 프로그래밍 샘플](network-programming-samples.md)

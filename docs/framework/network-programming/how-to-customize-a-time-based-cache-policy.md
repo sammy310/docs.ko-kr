@@ -9,12 +9,12 @@ helpviewer_keywords:
 - customizing time-based cache policies
 - cache [.NET Framework], time-based policies
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
-ms.openlocfilehash: 5df070bb2cfef42d60247cad39f2a2f76963bae8
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: c28c6daf9b873a19291b1636112eae6546412be2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894736"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048324"
 ---
 # <a name="how-to-customize-a-time-based-cache-policy"></a>방법: 시간 기반 캐시 정책 사용자 지정
 시간 기반 캐시 정책을 만들 경우 최대 기간, 최소 새로 고침, 최대 부실 또는 캐시 동기화 날짜에 대한 값을 지정하여 캐싱 동작을 사용자 지정할 수 있습니다. <xref:System.Net.Cache.HttpRequestCachePolicy> 개체는 이러한 값의 유효한 조합을 지정할 수 있는 여러 가지 생성자를 제공합니다.  
@@ -120,8 +120,8 @@ Level:Default MaxAge:36000 MinFresh:18000
   
 ## <a name="see-also"></a>참고 항목
 
-- [네트워크 애플리케이션에 대한 캐시 관리](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [캐시 정책](../../../docs/framework/network-programming/cache-policy.md)
-- [위치 기반 캐시 정책](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [시간 기반 캐시 정책](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [\<requestCaching> 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [네트워크 애플리케이션에 대한 캐시 관리](cache-management-for-network-applications.md)
+- [캐시 정책](cache-policy.md)
+- [위치 기반 캐시 정책](location-based-cache-policies.md)
+- [시간 기반 캐시 정책](time-based-cache-policies.md)
+- [\<requestCaching> 요소(네트워크 설정)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

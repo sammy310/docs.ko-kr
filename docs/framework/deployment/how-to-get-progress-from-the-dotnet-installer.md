@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c71816b1bd2e9c95e8c7efb44e3e689dce4ab93
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: bdd2832f112706cef6050774ce3f6db5a940424a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853968"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052094"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>방법: .NET Framework 4.5 설치 관리자에서 진행률 가져오기
 
@@ -50,7 +50,7 @@ ms.locfileid: "70853968"
 
 ## <a name="chainer-sample"></a>chainer 샘플
 
-Chainer 샘플은 .NET Framework 4.5 설치 프로그램을 자동으로 시작하고 진행률을 표시하는 동안 설치를 추적합니다. 이 샘플은 .NET Framework 4에 대해 제공된 chainer 샘플과 비슷합니다. 그러나 또한 .NET Framework 4 앱을 닫기 위한 메시지 상자를 처리하여 시스템 다시 시작을 방지할 수 있습니다. 이 메시지 상자에 대한 자세한 내용은 [.NET Framework 4.5를 설치하는 동안 시스템 다시 시작 줄이기](../../../docs/framework/deployment/reducing-system-restarts.md)를 참조하세요. .NET Framework 4 설치 관리자와 함께 이 샘플을 사용할 수 있습니다. 해당 시나리오에서는 메시지가 전송되지 않습니다.
+Chainer 샘플은 .NET Framework 4.5 설치 프로그램을 자동으로 시작하고 진행률을 표시하는 동안 설치를 추적합니다. 이 샘플은 .NET Framework 4에 대해 제공된 chainer 샘플과 비슷합니다. 그러나 또한 .NET Framework 4 앱을 닫기 위한 메시지 상자를 처리하여 시스템 다시 시작을 방지할 수 있습니다. 이 메시지 상자에 대한 자세한 내용은 [.NET Framework 4.5를 설치하는 동안 시스템 다시 시작 줄이기](reducing-system-restarts.md)를 참조하세요. .NET Framework 4 설치 관리자와 함께 이 샘플을 사용할 수 있습니다. 해당 시나리오에서는 메시지가 전송되지 않습니다.
 
 > [!WARNING]
 > 관리자 권한으로 예제를 실행해야 합니다.
@@ -311,5 +311,5 @@ MSDN 샘플 갤러리에서 [.NET Framework 4.5 chainer 샘플](https://go.micro
 
 ## <a name="see-also"></a>참고 항목
 
-- [개발자를 위한 배포 가이드](../../../docs/framework/deployment/deployment-guide-for-developers.md)
-- [배포](../../../docs/framework/deployment/index.md)
+- [개발자를 위한 배포 가이드](deployment-guide-for-developers.md)
+- [배포](index.md)

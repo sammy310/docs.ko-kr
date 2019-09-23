@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
-ms.openlocfilehash: 6bdb21b8aaf8deb39e3abd68a69a9a5a10247e6f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bd06928b08eb085ef13371687fb1e5b92c6c1d86
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59226047"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048576"
 ---
 # <a name="deriving-from-webresponse"></a>WebResponse에서 파생
 <xref:System.Net.WebResponse> 클래스는 .NET Framework 플러그형 프로토콜 모델에 적합한 프로토콜별 응답을 만들기 위한 기본 메서드 및 속성을 제공하는 추상 기본 클래스입니다. <xref:System.Net.WebRequest> 클래스를 사용하여 리소스의 데이터를 요청하는 애플리케이션은 **WebResponse**로 응답을 받습니다. 프로토콜별 **WebResponse** 하위 항목은 **WebResponse** 클래스의 추상 멤버를 구현해야 합니다.  
@@ -43,5 +43,5 @@ ms.locfileid: "59226047"
 - <xref:System.Net.WebResponse>
 - <xref:System.Net.HttpWebResponse>
 - <xref:System.Net.FileWebResponse>
-- [플러그형 프로토콜 프로그래밍](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
-- [WebRequest에서 파생](../../../docs/framework/network-programming/deriving-from-webrequest.md)
+- [플러그형 프로토콜 프로그래밍](programming-pluggable-protocols.md)
+- [WebRequest에서 파생](deriving-from-webrequest.md)

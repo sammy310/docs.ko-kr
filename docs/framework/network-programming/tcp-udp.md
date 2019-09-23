@@ -16,12 +16,12 @@ helpviewer_keywords:
 - requesting data from Internet, TCP/UDP
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
-ms.openlocfilehash: e074a487c39dfaf1c4704f9dadf7ed8e430fb630
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d35278ab7feb42453b5a0adbc86c47b7ac3ff5ca
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172551"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047106"
 ---
 # <a name="tcp-udp"></a>TCP-UDP
 애플리케이션은 <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> 및 <xref:System.Net.Sockets.UdpClient> 클래스와 함께 TCP(Transmission Control Protocol) 및 UDP(User Datagram Protocol) 서비스를 사용할 수 있습니다. 이러한 프로토콜 클래스는 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> 클래스를 기반으로 빌드되며 데이터 전송의 세부 사항을 처리합니다.  
@@ -34,9 +34,9 @@ ms.locfileid: "59172551"
   
 ## <a name="see-also"></a>참고 항목
 
-- [TCP 서비스 사용](../../../docs/framework/network-programming/using-tcp-services.md)
-- [UDP 서비스 사용](../../../docs/framework/network-programming/using-udp-services.md)
-- [네트워크에서 스트림 사용](../../../docs/framework/network-programming/using-streams-on-the-network.md)
-- [비동기 서버 소켓 사용](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [비동기 클라이언트 소켓 사용](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
-- [애플리케이션 프로토콜 사용](../../../docs/framework/network-programming/using-application-protocols.md)
+- [TCP 서비스 사용](using-tcp-services.md)
+- [UDP 서비스 사용](using-udp-services.md)
+- [네트워크에서 스트림 사용](using-streams-on-the-network.md)
+- [비동기 서버 소켓 사용](using-an-asynchronous-server-socket.md)
+- [비동기 클라이언트 소켓 사용](using-an-asynchronous-client-socket.md)
+- [애플리케이션 프로토콜 사용](using-application-protocols.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8d719debd39309415f996d655c68abd8c80ec5e3
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 0df5a5be2997958faa43ee67ae64fc37e1998414
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928417"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051600"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>방법: 설치된 .NET Framework 버전 확인
 
@@ -72,7 +72,7 @@ ms.locfileid: "70928417"
 
 3. **릴리스**라는 DWORD 항목을 확인합니다. 릴리스 DWORD가 있으면 컴퓨터에 .NET Framework 4.5 이상이 설치된 것입니다. 그 값은 특정 버전의 .NET Framework에 대응되는 릴리스 키입니다. 예를 들어, 다음 그림에서 **릴리스**항목은 *378389*로, 이것은 .NET Framework 4.5.의 릴리스 키입니다.
 
-     ![.NET Framework 4.5에 대한 레지스트리 항목](media/clr-installdir.png ".NET Framework 4.5에 대한 레지스트리 항목")
+     ![.NET Framework 4.5에 대한 레지스트리 항목](./media/clr-installdir.png ".NET Framework 4.5에 대한 레지스트리 항목")
 
 다음 표에는 .NET Framework 4.5 이상 버전의 각 운영 체제상의 **릴리스** DWORD가 나와 있습니다.
 
@@ -163,7 +163,7 @@ ms.locfileid: "70928417"
 
     다음 그림은 .NET Framework 3.5의 하위 키와 **Version** 항목을 보여줍니다.
 
-    ![.NET Framework 3.5의 레지스트리 항목.](media/net-4-and-earlier.png ".NET Framework 3.5 및 이전 버전")
+    ![.NET Framework 3.5의 레지스트리 항목.](./media/net-4-and-earlier.png ".NET Framework 3.5 및 이전 버전")
 
 <a name="net_c"></a>
 

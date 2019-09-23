@@ -2,12 +2,12 @@
 title: IPv6 자동 구성
 ms.date: 03/30/2017
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
-ms.openlocfilehash: 2c7f77bbdebe093b5e3bc706653ed203082d9c3f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 95d9dce36c70b8f6c6b9f963c0842305a111d436
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647333"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047814"
 ---
 # <a name="ipv6-auto-configuration"></a>IPv6 자동 구성
 IPv6의 중요한 목표 중 하나는 노드 플러그 앤 플레이를 지원하는 것입니다. 즉, 노드를 IPv6 네트워크에 플러그하여 사용자가 개입하지 않고 자동으로 구성되도록 해야 합니다.  
@@ -26,5 +26,5 @@ IPv6의 중요한 목표 중 하나는 노드 플러그 앤 플레이를 지원�
   
 ## <a name="see-also"></a>참고 항목
 
-- [인터넷 프로토콜 버전 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
-- [소켓](../../../docs/framework/network-programming/sockets.md)
+- [인터넷 프로토콜 버전 6](internet-protocol-version-6.md)
+- [소켓](sockets.md)

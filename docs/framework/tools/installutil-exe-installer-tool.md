@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04074c8120ad2bc4e279ca0c60624bde9d5e42d9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5ad0497bd5303dc4113dbb7b8078c70cb044cc95
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496696"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044535"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe(설치 관리자 도구)
 
 설치 관리자 도구는 특정 어셈블리에서 설치 관리자 구성 요소를 실행하는 방법으로 서버 리소스를 설치하고 제거하는 데 사용할 수 있는 명령줄 유틸리티입니다. 이 도구는 <xref:System.Configuration.Install> 네임스페이스의 클래스와 함께 사용됩니다.
 
-이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 참조하세요.
+이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.
 
 명령 프롬프트에 다음을 입력합니다.
 
@@ -71,7 +71,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 > [!IMPORTANT]
 > 경우에 따라 설치 관리자에 전달되는 매개 변수는 중요하거나 개인적으로 식별할 수 있는 정보를 포함할 수 있으며 기본적으로 일반 텍스트 파일로 작성됩니다. 이 동작을 방지하려면 명령줄에서 Installutil.exe를 실행한 후 `/LogFile=`(*filename* 인수 없음)을 지정하여 로그 파일을 표시하지 않을 수 있습니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 .NET Framework 애플리케이션은 일반적인 프로그램 파일과 애플리케이션 배포 시 만들어야 하는 메시지 큐, 이벤트 로그 및 성능 카운터 등의 관련 리소스로 구성됩니다. 어셈블리의 설치 관리자 구성 요소를 사용하면 애플리케이션 설치 시에는 이러한 리소스를 만들고, 애플리케이션 제거 시에는 이러한 리소스를 제거할 수 있습니다. Installutil.exe를 사용하여 이러한 설치 관리자 구성 요소를 감지하고 실행할 수 있습니다.
 
@@ -93,7 +93,7 @@ Installutil.exe를 사용하면 서명이 연기된 어셈블리를 설치하거
 
 Installutil.exe는 C++ 컴파일러에 의해 생성되는 포함된 네이티브 코드를 인식할 수 없으므로 C++를 사용하여 만든 Windows 서비스를 배포할 수 없습니다. Installutil.exe로 만든 C++ Windows 서비스를 배포하려고 시도하면 <xref:System.BadImageFormatException>과 같은 예외가 throw됩니다. 이 시나리오를 사용하여 작업하려면 C++ 모듈로 서비스 코드를 이동한 후 설치 관리자 개체를 C# 또는 Visual Basic에 씁니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 다음 명령은 InstallUtil.exe에 대한 옵션 및 명령 구문에 대한 설명을 표시합니다.
 
@@ -170,5 +170,5 @@ installutil /LogFile=myLog.InstallLog myAssembly.exe /LogFile=myTestLog.InstallL
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Configuration.Install>
-- [도구](../../../docs/framework/tools/index.md)
-- [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [도구](index.md)
+- [명령 프롬프트](developer-command-prompt-for-vs.md)

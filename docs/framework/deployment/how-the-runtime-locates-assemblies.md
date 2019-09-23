@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f8046852f847cd5493a2ed17b491a39e494ce2b
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 01cef9646ca9c4f49ab8376364648f66b9651e4a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969116"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052124"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>런타임에서 어셈블리를 찾는 방법
 
@@ -144,7 +144,9 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 셋째, 런타임은 컴퓨터 구성 파일을 검사합니다. Machine.config라는 이 파일은 로컬 컴퓨터에서 런타임이 설치된 루트 디렉터리의 Config 하위 디렉터리에 상주합니다. 관리자는 이 파일을 사용하여 해당 컴퓨터에 로컬로 적용되는 어셈블리 바인딩 제한 사항을 지정할 수 있습니다. 컴퓨터 구성 파일의 설정은 다른 모든 구성 설정보다 우선합니다. 그러나 모든 구성 설정을 이 파일에 넣어야 한다는 의미는 아닙니다. 관리자 정책 파일에서 결정된 버전이 최종 버전이며 재정의할 수 없습니다. Machine.config 파일에서 지정된 재정의는 모든 애플리케이션에 영향을 줍니다. 구성 파일에 대한 자세한 내용은 [구성 파일을 사용하여 앱 구성](../configure-apps/index.md)을 참조하세요.
 
 <a name="step2"></a> 
+
 ## <a name="step-2-checking-for-previously-referenced-assemblies"></a>2단계: 이전에 참조된 어셈블리 확인
+
 요청된 어셈블리가 이전 호출에서도 요청된 경우 공용 언어 런타임은 이미 로드된 어셈블리를 사용합니다. 이 경우 애플리케이션을 구성하는 어셈블리의 이름을 바꿀 때 영향을 받을 수 있습니다. 어셈블리 이름 지정에 대한 자세한 내용은 [어셈블리 이름](../../standard/assembly/names.md)을 참조하세요.
 
 이전의 어셈블리 요청이 실패한 경우 어셈블리 로드를 시도하지 않고 어셈블리에 대한 이후 요청이 즉시 실패합니다. .NET Framework 버전 2.0부터 어셈블리 바인딩 실패가 캐시되며 캐시된 정보는 어셈블리 로드를 시도할지 여부를 확인하는 데 사용됩니다.
