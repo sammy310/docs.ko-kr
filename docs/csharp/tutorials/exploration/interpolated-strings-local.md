@@ -4,12 +4,12 @@ description: 이 자습서에서는 C# 문자열 보간 기능을 사용하여 �
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: 3e4e886d898854f5c1d966529e94f49c752220d8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b2bbab5705d78525ccae6a90b4f4f2a91064a06b
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850923"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117830"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>문자열 보간을 사용하여 형식이 지정된 문자열 생성
 
@@ -21,7 +21,7 @@ ms.locfileid: "70850923"
 
 **interpolated**라는 디렉터리를 만듭니다. 현재 디렉터리로 만들고 콘솔 창에서 다음 명령을 실행합니다.
 
-```console
+```dotnetcli
 dotnet new console
 ```
 
