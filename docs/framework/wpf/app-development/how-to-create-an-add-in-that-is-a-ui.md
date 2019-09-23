@@ -12,23 +12,23 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: fa30b7860bd8afdb68b0b54cd8d40f3e1ec86077
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b0e847061a30e93d36997ab603c52715e2730765
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949125"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182644"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>방법: UI인 추가 기능 만들기
 이 예제에서는 WPF 독립 실행형 응용 프로그램에서 호스팅하는 Windows Presentation Foundation (WPF) 인 추가 기능을 만드는 방법을 보여 줍니다.  
   
  추가 기능은 WPF 사용자 정의 컨트롤인 UI입니다. 이 사용자 정의 컨트롤의 콘텐츠는 클릭했을 때 메시지 상자를 표시하는 하나의 단추입니다. WPF 독립 실행형 응용 프로그램은 주 응용 프로그램 창의 콘텐츠로 추가 기능 UI를 호스팅합니다.  
   
- **필수 조건**  
+ **필수 구성 요소**  
   
  이 예제에서는이 시나리오를 사용 하도록 설정 하는 .NET Framework 추가 기능 모델에 대 한 WPF 확장을 강조 표시 하 고 다음을 가정 합니다.  
   
-- 파이프라인, 추가 기능 및 호스트 개발을 포함 하 여 .NET Framework 추가 기능 모델에 대 한 지식. 이러한 개념을 잘 모르는 경우 [추가 기능 및 확장성](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))을 참조 하세요. 파이프라인, 추가 기능 및 호스트 응용 프로그램을 구현 하는 방법을 보여 주는 자습서를 보려면 [연습: 확장 가능한 응용 프로그램](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))만들기  
+- 파이프라인, 추가 기능 및 호스트 개발을 포함 하 여 .NET Framework 추가 기능 모델에 대 한 지식. 이러한 개념을 잘 모르는 경우 [추가 기능 및 확장성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))을 참조 하세요. 파이프라인, 추가 기능 및 호스트 응용 프로그램을 구현 하는 방법을 보여 주는 자습서를 보려면 [연습: 확장 가능한 응용 프로그램](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))만들기  
   
 - .NET Framework 추가 기능 모델에 대 한 WPF 확장 정보 [WPF 추가 기능 개요](wpf-add-ins-overview.md)를 참조 하세요.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "69949125"
   
  이 작업은 호스트 애플리케이션에서 완전히 격리됩니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [추가 기능 및 확장성](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [추가 기능 및 확장성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [WPF 추가 기능 개요](wpf-add-ins-overview.md)

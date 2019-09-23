@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 4fd8fe00fe6974bdcbf7b4af4da25150996de8c3
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: a146f15a1c2755f254e198d471a42ca9ec29b072
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401703"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182537"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 추가 기능 개요
 
@@ -27,7 +27,7 @@ ms.locfileid: "68401703"
 
 ## <a name="prerequisites"></a>전제 조건
 
-.NET Framework 추가 기능 모델에 대해 잘 알고 있어야 합니다. 자세한 내용은 [추가 기능 및 확장성](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))을 참조하세요.
+.NET Framework 추가 기능 모델에 대해 잘 알고 있어야 합니다. 자세한 내용은 [추가 기능 및 확장성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))을 참조하세요.
 
 <a name="AddInsOverview"></a>
 
@@ -66,7 +66,7 @@ ms.locfileid: "68401703"
 근본적으로, 강력한 추가 기능 모델을 개발하는 것은 쉬운 작업이 아닙니다. 이러한 이유로 .NET Framework는 추가 기능 모델을 빌드하기 위한 인프라를 제공 합니다.
 
 > [!NOTE]
-> 추가 기능에 대한 자세한 내용은 [추가 기능 및 확장성](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))을 참조하세요.
+> 추가 기능에 대한 자세한 내용은 [추가 기능 및 확장성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))을 참조하세요.
 
 <a name="NETFrameworkAddInModelOverview"></a>
 
@@ -127,7 +127,7 @@ WPF UI 형식은 원격으로 사용할 수 없습니다. 문제를 해결 하�
 
 UI를 호스트 응용 프로그램에 반환 하는 추가 기능에는 다음이 필요 합니다.
 
-1. .NET Framework [추가 기능 및 확장성](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) 설명서에 설명 된 대로 호스트 응용 프로그램, 추가 기능 및 파이프라인을 만들어야 합니다.
+1. .NET Framework [추가 기능 및 확장성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) 설명서에 설명 된 대로 호스트 응용 프로그램, 추가 기능 및 파이프라인을 만들어야 합니다.
 
 2. 계약은를 구현 <xref:System.AddIn.Contract.IContract> 해야 하며 UI를 반환 하려면 계약에서 형식의 <xref:System.AddIn.Contract.INativeHandleContract>반환 값을 사용 하 여 메서드를 선언 해야 합니다.
 
@@ -147,7 +147,7 @@ UI를 반환 하는 추가 기능을 구현 하는 방법을 보여 주는 예�
 
 추가 기능이 UI 인 경우 다음이 필요 합니다.
 
-1. .NET Framework [추가 기능 및 확장성](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) 설명서에 설명 된 대로 호스트 응용 프로그램, 추가 기능 및 파이프라인을 만들어야 합니다.
+1. .NET Framework [추가 기능 및 확장성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) 설명서에 설명 된 대로 호스트 응용 프로그램, 추가 기능 및 파이프라인을 만들어야 합니다.
 
 2. 추가 기능에 대 한 계약 인터페이스는를 구현 <xref:System.AddIn.Contract.INativeHandleContract>해야 합니다.
 
@@ -205,13 +205,13 @@ UI 인 추가 기능을 구현 하는 방법을 보여 주는 예제는 [Ui 인 
 
 마지막 단계에서는 다운로드할 파이프라인 어셈블리 파일과 추가 기능 어셈블리 파일을 포함하도록 애플리케이션 매니페스트를 구성합니다. 파일은 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 응용 프로그램이 차지 하는 ClickOnce 캐시에 있는 폴더의 루트에 있는 폴더에 있어야 합니다. 구성은 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]에서 다음을 수행하여 구현할 수 있습니다.
 
-1. [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 프로젝트를 마우스 오른쪽 단추로 클릭하고, **속성**, **게시** 순으로 클릭한 다음 **응용 프로그램 파일** 단추를 클릭합니다.
+1. [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 프로젝트를 마우스 오른쪽 단추로 클릭하고, **속성**, **게시** 순으로 클릭한 다음 **애플리케이션 파일** 단추를 클릭합니다.
 
-2. **응용 프로그램 파일** 대화 상자에서 각 파이프라인과 추가 기능 DLL의 **게시 상태**를 **포함(자동)** 으로 설정하고 각 파이프라인과 추가 기능 DLL에 대해 **그룹 다운로드**을 **(필수)** 로 설정합니다.
+2. **애플리케이션 파일** 대화 상자에서 각 파이프라인과 추가 기능 DLL의 **게시 상태**를 **포함(자동)** 으로 설정하고 각 파이프라인과 추가 기능 DLL에 대해 **그룹 다운로드**을 **(필수)** 로 설정합니다.
 
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>애플리케이션 기준 위치에서 파이프라인과 추가 기능 사용
 
-파이프라인 및 추가 기능이 ClickOnce 배포에 대해 구성 된 경우와 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]동일한 clickonce 캐시 폴더에 다운로드 됩니다. [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]의 파이프라인과 추가 기능을 사용하려면 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 코드를 통해 응용 프로그램 기준 위치에서 가져와야 합니다. 파이프라인 및 추가 기능을 사용 하기 위한 .NET Framework 추가 기능 모델의 다양 한 형식 및 멤버는이 시나리오에 대 한 특별 한 지원을 제공 합니다. 먼저 경로는 <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> 열거형 값으로 식별 됩니다. 다음을 포함하는 파이프라인을 사용하기 위해 관련 추가 기능 멤버의 오버로드와 함께 이 값을 사용합니다.
+파이프라인 및 추가 기능이 ClickOnce 배포에 대해 구성 된 경우와 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]동일한 clickonce 캐시 폴더에 다운로드 됩니다. [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]의 파이프라인과 추가 기능을 사용하려면 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 코드를 통해 애플리케이션 기준 위치에서 가져와야 합니다. 파이프라인 및 추가 기능을 사용 하기 위한 .NET Framework 추가 기능 모델의 다양 한 형식 및 멤버는이 시나리오에 대 한 특별 한 지원을 제공 합니다. 먼저 경로는 <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> 열거형 값으로 식별 됩니다. 다음을 포함하는 파이프라인을 사용하기 위해 관련 추가 기능 멤버의 오버로드와 함께 이 값을 사용합니다.
 
 - <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>
 
@@ -308,11 +308,11 @@ WPF가, <xref:System.Windows.Interop.HwndSource> <xref:System.Windows.Interop.Hw
 
 기본적으로 여러 응용 프로그램 도메인을 사용 하는 경우 각 응용 프로그램에 필요한 다양 한 .NET Framework 어셈블리가 모두 해당 응용 프로그램의 도메인에 로드 됩니다. 결과적으로 새 애플리케이션 도메인을 만들고 이 도메인의 애플리케이션을 시작하는 데 필요한 시간이 성능에 영향을 미칠 수 있습니다. 그러나 .NET Framework는 응용 프로그램이 이미 로드 된 경우 응용 프로그램 도메인 간에 어셈블리를 공유 하도록 응용 프로그램에 지시 하 여 시작 시간을 줄일 수 있는 방법을 제공 합니다. 진입점 메서드 (`Main`)에 적용 <xref:System.LoaderOptimizationAttribute> 해야 하는 특성을 사용 하 여이 작업을 수행 합니다. 이 경우, 애플리케이션 정의를 구현하는 코드만 사용해야 합니다([애플리케이션 관리 개요](application-management-overview.md) 참조).
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.LoaderOptimizationAttribute>
-- [추가 기능 및 확장성](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [응용 프로그램 도메인](../../app-domains/application-domains.md)
+- [추가 기능 및 확장성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [애플리케이션 도메인](../../app-domains/application-domains.md)
 - [.NET Framework 원격 기능 개요](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [개체를 원격으로 만들기](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
 - [방법 항목](how-to-topics.md)

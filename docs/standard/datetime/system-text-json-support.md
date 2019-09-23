@@ -13,17 +13,17 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 83b1b3a7db63154dccc07325b1a1948a2db3953a
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 000a6b6dc892e65b50ae413ab3cb95d2a73ef0ef
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151831"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182580"
 ---
 # <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>System.Text.Json의 DateTime 및 DateTimeOffset 지원
 
 System.string 라이브러리는 ISO 8601:-2019 확장 프로필에 따라 및 <xref:System.DateTime> <xref:System.DateTimeOffset> 값을 구문 분석 하 고 기록 합니다.
-[변환기](https://docs.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1?view=netcore-3.0) 는로 serialize 및 deserialize 할 수 있는 <xref:System.Text.Json.JsonSerializer>사용자 지정 지원을 제공 합니다.
+[변환기](xref:System.Text.Json.Serialization.JsonConverter%601) 는로 serialize 및 deserialize 할 수 있는 <xref:System.Text.Json.JsonSerializer>사용자 지정 지원을 제공 합니다.
 및를 <xref:System.Text.Json.Utf8JsonReader> <xref:System.Text.Json.Utf8JsonWriter>사용 하는 경우에도 사용자 지정 지원을 구현할 수 있습니다.
 
 ## <a name="support-for-the-iso-8601-12019-format"></a>ISO 8601-1:2019 형식에 대 한 지원
@@ -67,7 +67,7 @@ System.string 라이브러리는 ISO 8601:-2019 확장 프로필에 따라 및 <
 
 ### <a name="when-using-xrefsystemtextjsonjsonserializer"></a>사용 하는 경우<xref:System.Text.Json.JsonSerializer>
 
-Serializer에서 사용자 지정 구문 분석 또는 서식 지정을 수행 하려는 경우 [사용자 지정 변환기](https://docs.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1?view=netcore-3.0)를 구현할 수 있습니다.
+Serializer에서 사용자 지정 구문 분석 또는 서식 지정을 수행 하려는 경우 [사용자 지정 변환기](xref:System.Text.Json.Serialization.JsonConverter%601)를 구현할 수 있습니다.
 다음은 몇 가지 예입니다.
 
 #### <a name="using-datetimeoffsetparse-and-datetimeoffsettostring"></a>및 `DateTime(Offset).Parse` 사용`DateTime(Offset).ToString`

@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: 3fd07c9f2cdea3987602502cf242893b44aaddba
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 09c2879c0a46efe6258685d8201959a626735a85
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331566"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182656"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Visual Basic 컴파일러 옵션 사전순 목록
 Visual Basic 명령줄 컴파일러는 Visual Studio IDE (통합 개발 환경)에서 프로그램을 컴파일하는 대신 제공 됩니다. 다음은 사전순으로 정렬 된 Visual Basic 명령줄 컴파일러 옵션 목록입니다.  
@@ -80,7 +80,7 @@ Visual Basic 명령줄 컴파일러는 Visual Studio IDE (통합 개발 환경)�
 |[-win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|프로젝트의 PE(포팅 가능한 실행 파일) 파일에 포함할 사용자 정의 Win32 애플리케이션 매니페스트 파일을 식별합니다.|  
 |[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)|출력 파일에 Win32 리소스를 삽입합니다.|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [Visual Basic 컴파일러 옵션 범주별 목록](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)
-- [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties?view=vs-2017)
+- [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)

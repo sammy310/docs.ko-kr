@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: d8a1e36c0932de9bf50c109ea979a1e358795388
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 8f09566585c06531a346b0143a6002c2854a0b01
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331549"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182558"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic 컴파일러 옵션 범주별 목록
 Visual Basic 명령줄 컴파일러는 Visual Studio IDE (통합 개발 환경) 내에서 프로그램을 컴파일하는 대신 제공 됩니다. 다음은 함수 범주별로 정렬 된 Visual Basic 명령줄 컴파일러 옵션 목록입니다.  
@@ -72,7 +72,7 @@ Visual Basic 명령줄 컴파일러는 Visual Studio IDE (통합 개발 환경) 
 |[-warnaserror](../../../visual-basic/reference/command-line-compiler/warnaserror.md)|경고를 오류로 승격합니다.|  
 |`-ruleset:<file>`|특정 진단을 사용하지 않는 규칙 집합 파일을 지정합니다.|  
   
-## <a name="help"></a>Help  
+## <a name="help"></a>도움말  
   
 |옵션|용도|  
 |---|---|  
@@ -126,7 +126,7 @@ Visual Basic 명령줄 컴파일러는 Visual Studio IDE (통합 개발 환경) 
 |`-parallel[+&#124;-]`|동시 빌드(+)를 사용할지 여부를 지정합니다.|  
 |`-checksumalgorithm:<alg>`|PDB에 저장된 소스 파일 체크섬을 계산하기 위한 알고리즘을 지정합니다.  지원되는 값은 다음과 같습니다. SHA1(기본값) 또는 SHA256. <br>S h a 1의 충돌 문제로 인해 s h a 1 이상을 권장 합니다.|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [Visual Basic 컴파일러 옵션 사전순 목록](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
-- [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties?view=vs-2017)
+- [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)

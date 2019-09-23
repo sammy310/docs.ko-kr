@@ -3,12 +3,12 @@ title: F#을 사용하여 Azure Table 스토리지 시작
 description: Azure Table storage 또는 Azure Cosmos DB를 사용 하 여 클라우드에 구조화 된 데이터를 저장 합니다.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: f5fe2fe667b6d529bba4d29729a975c7890b5aba
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 509435d47231040362586fa263fbecb1125f862b
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928999"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182607"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>F를 사용 하 여 Azure Table storage 및 Azure Cosmos DB Table API 시작\#
 
@@ -32,7 +32,7 @@ Azure Table storage 용으로 작성 된 응용 프로그램은 코드를 변경
 
 이 자습서에서는 테이블 만들기 및 F# 삭제, 테이블 데이터 삽입, 업데이트, 삭제 및 쿼리를 비롯 하 여 Azure table storage 또는 Azure Cosmos DB Table API를 사용 하 여 몇 가지 일반적인 작업을 수행 하는 코드를 작성 하는 방법을 보여 줍니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 이 가이드를 사용 하려면 먼저 [Azure storage 계정](/azure/storage/storage-create-storage-account) 또는 [Azure Cosmos DB 계정을](https://azure.microsoft.com/try/cosmosdb/)만들어야 합니다.
 
@@ -84,7 +84,7 @@ Azure Configuration Manager 사용은 선택 사항입니다. .NET Framework의 
 
 이제 데이터를 읽고 테이블 저장소에 데이터를 기록 하는 코드를 작성할 준비가 되었습니다.
 
-### <a name="create-a-table"></a>테이블 만들기
+### <a name="create-a-table"></a>테이블 생성하기
 
 이 예에서는 테이블이 아직 없는 경우 테이블을 만드는 방법을 보여 줍니다.
 
@@ -192,7 +192,7 @@ Azure Configuration Manager 사용은 선택 사항입니다. .NET Framework의 
 이제 테이블 저장소의 기본 사항을 배웠으므로 다음 링크를 따라 좀 더 복잡 한 저장소 작업 및 Azure Cosmos DB Table API에 대해 알아보세요.
 
 - [Azure Cosmos DB Table API 소개](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
-- [.NET 용 저장소 클라이언트 라이브러리 참조](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
+- [.NET 용 저장소 클라이언트 라이브러리 참조](https://docs.microsoft.com/dotnet/api/overview/azure/storage)
 - [Azure Storage 형식 공급자](https://fsprojects.github.io/AzureStorageTypeProvider/)
 - [Azure Storage 팀 블로그](https://blogs.msdn.microsoft.com/windowsazurestorage/)
 - [연결 문자열 구성](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)

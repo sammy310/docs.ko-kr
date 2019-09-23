@@ -13,12 +13,12 @@ ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: b72c449ab68c9bb2ceea6f8ee78abe6771b9a8bd
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 53824336e1ae47870e6acffe20340f145caf9b4d
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70016005"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182585"
 ---
 # <a name="walkthrough-create-a-control-that-takes-advantage-of-design-time-features"></a>연습: 디자인 타임 기능을 활용 하는 컨트롤 만들기
 
@@ -34,9 +34,9 @@ ms.locfileid: "70016005"
 
 ![텍스트 및 시작 및 중지 단추를 표시 하는 앱입니다.](./media/creating-a-wf-control-design-time-features/demo-marquee-control.gif)
 
-전체 코드 목록을 보려면 [방법: 디자인 타임 기능](/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))을 활용 하는 Windows Forms 컨트롤을 만듭니다.
+전체 코드 목록을 보려면 [방법: 디자인 타임 기능](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))을 활용 하는 Windows Forms 컨트롤을 만듭니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 이 연습을 완료 하려면 Visual Studio가 필요 합니다.
 
@@ -608,7 +608,7 @@ Visual Studio에서 새 Windows Forms 응용 프로그램 프로젝트를 만들
 
 - 컨트롤이 serialize 되는 방법 및 컨트롤이 생성 되는 방식을 제어 합니다. 자세한 내용은 [동적 소스 코드 생성 및 컴파일](../../reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)을 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.UserControl>
 - <xref:System.Windows.Forms.Design.ParentControlDesigner>
