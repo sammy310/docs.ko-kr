@@ -5,12 +5,12 @@ ms.date: 08/20/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: e1dcc719738a2beb3e63463245d4721c5298cf85
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 8d21ae5ae3aa4701ddd7d042d5069351c22864bb
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666655"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182557"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>ASP.NET Core Web API에 모델 배포
 
@@ -105,7 +105,7 @@ ASP.NET Core Web API를 사용하여 웹에서 미리 학습된 ML.NET 기계 �
 
 단일 예측에는 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)을 사용합니다. 애플리케이션에 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)을 사용하려면 필요할 때 만들어야 합니다. 이 경우 가장 좋은 방법은 종속성 주입을 고려하는 것입니다.
 
-다음 링크에서는 [ASP.NET Core에서 종속성 주입](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1)에 대한 자세한 정보를 제공합니다.
+다음 링크에서는 [ASP.NET Core에서 종속성 주입](/aspnet/core/fundamentals/dependency-injection)에 대한 자세한 정보를 제공합니다.
 
 1. *Startup.cs* 클래스를 열고 다음 using 문을 파일 맨 위에 추가합니다.
 
@@ -202,4 +202,4 @@ ASP.NET Core Web API를 사용하여 웹에서 미리 학습된 ML.NET 기계 �
 
 ## <a name="next-steps"></a>다음 단계
 
-- [Azure에 배포](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs?view=aspnetcore-2.1#deploy-the-app-to-azure)
+- [Azure에 배포](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs#deploy-the-app-to-azure)

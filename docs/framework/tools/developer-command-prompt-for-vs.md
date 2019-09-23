@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 79cfc607e20d921c7ae942cb9755eee4264336eb
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 59af252967a18eca858035fb0a3465d909734ddf
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877052"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044736"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Visual Studio용 개발자 명령 프롬프트
 
@@ -88,9 +88,9 @@ Visual Studio 개발자 명령 프롬프트 또는 다른 명령 프롬프트를
 
    새 메뉴 항목이 추가되고 **도구** 메뉴에서 명령 프롬프트에 액세스할 수 있습니다.
 
-   ![Visual Studio의 명령 프롬프트 메뉴 항목](media/command-prompt-vs-menu.png)
+   ![Visual Studio의 명령 프롬프트 메뉴 항목](./media/command-prompt-vs-menu.png)
 
 ## <a name="see-also"></a>참고 항목
 
-- [도구](../../../docs/framework/tools/index.md)
+- [도구](index.md)
 - [외부 도구 관리](/visualstudio/ide/managing-external-tools)

@@ -2,12 +2,12 @@
 title: 높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 description: Azure Kubernetes Service를 사용하여 앱을 배포하는 방법을 알아봅니다.
 ms.date: 02/15/2019
-ms.openlocfilehash: 88e76b4b0a3686f4227a6aee1b7fbd2bfe55fdcc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0aa2f83fbf8f9a8815d65730002943cca748643d
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672630"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182363"
 ---
 # <a name="deploy-to-azure-kubernetes-service-aks"></a>AKS(Azure Kubernetes Service)에 배포
 
@@ -19,12 +19,12 @@ AKS를 사용하기 전에 갖추어야 할 필수 구성 요소는 다음과 �
 - Windows 개발 컴퓨터
   - Windows에서 사용하도록 설정된 개발자 모드.
   - Linux용 Windows 하위 시스템
-- [Windows, Mac 또는 Linux](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)에 설치된 Azure CLI
+- [Windows, Mac 또는 Linux](https://docs.microsoft.com/cli/azure/install-azure-cli)에 설치된 Azure CLI
 
 > [!NOTE]
 > 다음 항목에 대한 전체 정보를 찾으려면 다음을 수행합니다.
 >
-> Azure-CLI: <https://docs.microsoft.com/cli/azure/index?view=azure-cli-latest>
+> Azure-CLI: <https://docs.microsoft.com/cli/azure/index>
 >
 > Linux용 Windows 하위 시스템: <https://docs.microsoft.com/windows/wsl/about>
 
