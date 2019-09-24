@@ -1,15 +1,15 @@
 ---
 title: F# Interactive(fsi.exe) 참조
-description: 에 대해 알아봅니다 하는 방법 F# Interactive (fsi.exe) 실행 하는 F# 대화형으로 나 콘솔에서 실행할 코드 F# 스크립트입니다.
+description: 대화형 ( F# fsi.exe)을 사용 하 여 콘솔에서 코드를 F# 대화형으로 실행 하거나 스크립트를 실행 F# 하는 방법에 대해 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 297532315269cf75bf1cbb52a4e01d58cb97c99f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4e6ea1e42be180e88349acc9da7d5ef19a8ddedd
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641594"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214264"
 ---
-# <a name="interactive-programming-with-f"></a>F # 사용한 대화형 프로그래밍\#
+# <a name="interactive-programming-with-f"></a>F #을 사용한 대화형 프로그래밍\#
 
 > [!NOTE]
 > 이 문서에서는 현재 Windows만을 위한 환경에 대해 설명합니다.  다시 작성될 예정입니다.
@@ -19,19 +19,19 @@ ms.locfileid: "65641594"
 
 F# Interactive(fsi.exe)는 콘솔에서 F# 코드를 대화형으로 실행하거나 F# 스크립트를 실행하는 데 사용됩니다. 즉, F# Interactive는 F# 언어에 대해 REPL(읽기, 평가, 인쇄 루프)을 실행합니다.
 
-콘솔에서 F# Interactive를 실행하려면 fsi.exe를 실행합니다.  fsi.exe를 찾을 수 있습니다.
+콘솔에서 F# Interactive를 실행하려면 fsi.exe를 실행합니다.  Fsi.exe는 다음 위치에서 찾을 수 있습니다.
 
 ```console
 C:\Program Files (x86)\Microsoft Visual Studio\2017\<sku>\Common7\IDE\CommonExtensions\Microsoft\FSharp
 ```
 
-여기서 `sku` 중 하나는 `Community`, `Professional`, 또는 `Enterprise`합니다.
+여기서 `sku` 은`Professional`, 또는 입니다`Enterprise`. `Community`
 
 사용 가능한 명령줄 옵션에 대한 정보는 [F# Interactive Options](../../language-reference/fsharp-interactive-options.md)(F# Interactive 옵션)를 참조하세요.
 
 Visual Studio를 통해 F# Interactive를 실행하려면 **F# Interactive**라는 레이블이 있는 적절한 도구 모음 단추를 클릭하거나 **Ctrl+Alt+F** 키를 사용합니다. 이렇게 하면 대화형 창(F# Interactive 세션을 실행하는 도구 창)이 열립니다. 대화형 창에서 실행할 코드를 선택하고 **Alt+Enter** 키 조합을 눌러도 됩니다. 그러면 레이블이 **F# Interactive**인 도구 창에서 F# Interactive가 시작됩니다. 이 키 조합을 사용할 때 편집기 창에 포커스가 있는지 확인합니다.
 
-콘솔을 사용하든 Visual Studio를 사용하든 상관없이 명령 프롬프트가 나타납니다. 해석기를 실행하려면 사용자가 이 명령 프롬프트에 필요한 사항을 입력해야 합니다. 코드 파일에서와 같은 방법으로 코드를 입력할 수 있습니다. 코드를 컴파일하고 실행하려면 세미콜론 두 개(**;;**)를 입력하여 입력 줄 하나 또는 여러 개를 종료합니다.
+콘솔을 사용하든 Visual Studio를 사용하든 상관없이 명령 프롬프트가 나타납니다. 해석기를 실행하려면 사용자가 이 명령 프롬프트에 필요한 사항을 입력해야 합니다. 코드 파일에서와 같은 방법으로 코드를 입력할 수 있습니다. 코드를 컴파일하고 실행하려면 세미콜론 두 개( **;;** )를 입력하여 입력 줄 하나 또는 여러 개를 종료합니다.
 
 F# Interactive가 코드 컴파일을 시도하며, 컴파일이 성공하면 코드를 실행하고 컴파일된 형식과 값의 서명을 인쇄합니다. 오류가 발생하면 해석기에 오류 메시지가 출력됩니다.
 
@@ -86,7 +86,7 @@ printfn "%A" (MyAssembly.myFunction 10 40)
 
 출력은 다음과 같습니다.
 
-```
+```console
 Command line arguments: 
 file1.fsx
 test
@@ -97,5 +97,5 @@ test
 
 |제목|설명|
 |-----|-----------|
-|[F# Interactive 옵션](../../language-reference/fsharp-interactive-options.md)|명령줄 구문에 설명 하 고에 대 한 옵션을 F# Interactive, fsi.exe 합니다.|
+|[F# Interactive 옵션](../../language-reference/fsharp-interactive-options.md)|F# 대화형의 명령줄 구문 및 옵션에 대해 설명 합니다. fsi.exe.|
 |[F# Interactive 라이브러리 참조](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|F# Interactive에서 코드를 실행할 때 사용할 수 있는 라이브러리 기능에 대해 설명합니다.|

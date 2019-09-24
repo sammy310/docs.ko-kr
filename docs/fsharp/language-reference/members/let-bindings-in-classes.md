@@ -2,12 +2,12 @@
 title: 클래스의 let 바인딩
 description: 클래스 정의에서 ' let ' 바인딩을 사용 하 여 F# 클래스의 전용 필드 및 전용 함수를 정의 하는 방법에 대해 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 0086d3a91f85395c2bd0555f978c5d951c363357
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1366ab8f1f4f606fe5947a8fc4df10de49346b3e
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627476"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216523"
 ---
 # <a name="let-bindings-in-classes"></a>클래스의 let 바인딩
 
@@ -39,7 +39,7 @@ Static이 아닌 `let`바인딩은인스턴스 바인딩 이라고 합니다. `l
 
 출력은 다음과 같습니다.
 
-```
+```console
 10 52 1 204
 ```
 
@@ -49,7 +49,7 @@ Static이 아닌 `let`바인딩은인스턴스 바인딩 이라고 합니다. `l
 
 멤버 정의를 사용 하 고 키워드 `private` 를 정의에 추가 하 여 클래스에서 전용 필드를 정의할 수도 있습니다. 이는 코드를 다시 작성 하지 않고 멤버의 액세스 가능성을 변경 해야 하는 경우에 유용할 수 있습니다. 자세한 내용은 [액세스 제어](../access-control.md)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [멤버](index.md)
 - [클래스의 `do` 바인딩](do-bindings-in-classes.md)

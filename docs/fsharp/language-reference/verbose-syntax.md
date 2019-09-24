@@ -1,21 +1,21 @@
 ---
 title: 자세한 구문
-description: 자세한 정보 및 간단한 구문 차이점에 알아봅니다는 F# 프로그래밍 언어입니다.
+description: F# 프로그래밍 언어의 자세한 정보 표시와 간단한 구문 간의 차이점을 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: c95965d7d9d18a0fca11663a474dbbc9375a9494
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d2459da60bba5d88bd23615c8bf09ba64f7c22c4
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641659"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214041"
 ---
 # <a name="verbose-syntax"></a>자세한 구문
 
-많은 구문을 사용할 수 있는 두 가지 형태의 구문 있습니다는 F# 언어: *자세한 구문* 하 고 *간단한 구문을*합니다. 자세한 구문 일반적으로 사용 되지 않지만 되 들여쓰기로 덜 중요 한 장점이 있습니다. 같은 추가 키워드 보다는 간단한 구문은 짧은 및 들여쓰기를 사용 하 여 구문의 시작과 끝을 알리기 위해 `begin`, `end`, `in`등입니다. 기본 구문은 간단한 구문입니다. 이 항목에 대 한 구문을 설명 합니다. F# 간단한 구문을 사용 하지 않는 경우 생성 합니다. 간단한 구문을 사용 하도록 설정한 경우에 사용할 수 있도록 계속 자세한 구문 일부 구문에 대 한 자세한 구문은 항상 활성화 됩니다. 사용 하 여 간단한 구문을 사용 하지 않도록 설정할 수는 `#light "off"` 지시문입니다.
+F# 언어의 여러 구문에 사용할 수 있는 구문에는 *자세한 구문* 및 *간단한*구문 이라는 두 가지 형식이 있습니다. 자세한 구문은 일반적으로 사용 되지 않지만 들여쓰기에 대 한 덜 중요 한 이점이 있습니다. 간단한 구문은 더 짧고 들여쓰기를 사용 하 여 `begin` `in`, `end`, 등의 추가 키워드가 아닌 구문의 시작과 끝을 알립니다. 기본 구문은 간단한 구문입니다. 이 항목에서는 간단한 구문을 사용 F# 하지 않는 경우의 구문에 대해 설명 합니다. Verbose 구문은 항상 사용 하도록 설정 되어 있으므로 간단한 구문을 사용 하는 경우에도 일부 구문에 대해 자세한 구문을 사용할 수 있습니다. 지시문을 `#light "off"` 사용 하 여 간단한 구문을 사용 하지 않도록 설정할 수 있습니다.
 
-## <a name="table-of-constructs"></a>구문 표
+## <a name="table-of-constructs"></a>구문 테이블
 
-다음 표에서 간단 하 고 자세한 구문을 보여 줍니다. F# 언어 구문이 도입 되면서 컨텍스트에서 있는 두 가지 형식 사이 차이가 있습니다. 이 테이블에서 꺾쇠 괄호 (&lt;&gt;) 사용자가 제공한 구문 요소를 묶습니다. 이러한 구문 내에서 사용 된 구문에 대 한 자세한 정보에 대 한 각 언어 구문에 대 한 설명서를 참조 하십시오.
+다음 표에서는 두 형식 간에 차이가 있는 컨텍스트에서 F# 언어 구문의 간단한 구문 및 자세한 구문을 보여 줍니다. 이 표에서 꺾쇠 괄호 (&lt;&gt;)는 사용자가 제공 하는 구문 요소를 둘러쌉니다. 이러한 구문 내에서 사용 되는 구문에 대 한 자세한 내용은 각 언어 구문에 대 한 설명서를 참조 하세요.
 
 <table>
 <tr>
@@ -44,7 +44,7 @@ ms.locfileid: "65641659"
 </tr>
 <tr><td>
 
-중첩 된 `let` 바인딩
+중첩 `let` 바인딩
 
 </td><td>
 
@@ -99,7 +99,7 @@ for counter = start to finish do
 
 </td><td>
 
-```
+```fsharp
 for counter = start to finish do
     ...
 done
@@ -330,7 +330,7 @@ type <type-name>
 
 </td>
 </tr>
-<tr><td>name</td><td>
+<tr><td>모듈(module)</td><td>
 
 ```fsharp
 module <module-name> =
@@ -350,7 +350,7 @@ module <module-name> =
 </tr>
 </table>
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [F# 언어 참조](index.md)
 - [컴파일러 지시문](compiler-directives.md)

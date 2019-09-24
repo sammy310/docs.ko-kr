@@ -2,12 +2,12 @@
 title: '자습서: 형식 공급자 만들기'
 description: 몇 가지 간단한 형식 공급자를 F# 검사 하 여 F# 기본 개념을 보여 주는 3.0에서 고유한 형식 공급자를 만드는 방법에 대해 알아봅니다.
 ms.date: 02/02/2019
-ms.openlocfilehash: 800b5a670b7f25f462e1ce23c3d40fd2eab3b102
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 8d1a1fedf03437ccbacd40616cc7dc3e1da435b2
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991873"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214266"
 ---
 # <a name="tutorial-create-a-type-provider"></a>자습서: 형식 공급자 만들기
 
@@ -152,13 +152,13 @@ let data1 = Samples.HelloWorldTypeProvider.Type1.NestedType.StaticProperty35
 
 Print 문을 사용 하 여이 공급자를 디버깅 하려면 공급자와 관련 된 문제를 노출 하는 스크립트를 만든 후 다음 코드를 사용 합니다.
 
-```
+```console
 fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
 Visual Studio를 사용 하 여이 공급자를 디버깅 하려면 관리자 자격 증명을 사용 하 여 Visual Studio에 대 한 개발자 명령 프롬프트를 열고 다음 명령을 실행 합니다.
 
-```
+```console
 devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
@@ -899,7 +899,7 @@ let function1 () =
 
 Ildasm.exe를 사용 하 여 결과 코드 디컴파일된 이미지는 다음과 같습니다.
 
-```
+```il
 .class public abstract auto ansi sealed Module1
 extends [mscorlib]System.Object
 {
@@ -933,13 +933,11 @@ IL_0017:  ret
 
 **연결 프로토콜에 대 한 공급자** 일반적으로 데이터 및 서비스 연결 프로토콜에 대 한 대부분의 공급자 dll 이름 (예: OData 또는 SQL 연결)은 `TypeProvider` 또는 `TypeProviders`로 끝나야 합니다. 예를 들어 다음 문자열과 유사한 DLL 이름을 사용 합니다.
 
-```
-  Fabrikam.Management.BasicTypeProviders.dll
-```
+`Fabrikam.Management.BasicTypeProviders.dll`
 
 제공 된 형식이 해당 네임 스페이스의 멤버 인지 확인 하 고 구현 된 연결 프로토콜을 표시 합니다.
 
-```
+```fsharp
   Fabrikam.Management.BasicTypeProviders.WmiConnection<…>
   Fabrikam.Management.BasicTypeProviders.DataProtocolConnection<…>
 ```
@@ -1128,13 +1126,13 @@ F# 3.0 릴리스에 포함 된 프로 비전 된 형식-0.2 도우미 코드는 
 
 테스트 스크립트 파일 (예: .fsx)에서 fsc.exe를 사용 하면 형식 공급자를 가장 쉽게 디버그할 수 있습니다. 명령 프롬프트에서 디버거를 시작할 수 있습니다.
 
-```
-  devenv /debugexe fsc.exe script.fsx
+```console
+devenv /debugexe fsc.exe script.fsx
 ```
 
   인쇄 stdout 로깅을 사용할 수 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [형식 공급자](index.md)
 - [형식 공급자 SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK)

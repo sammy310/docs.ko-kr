@@ -2,12 +2,12 @@
 title: 측정 단위
 description: 의 부동 소수점 및 부호 있는 정수 값에 F# 일반적으로 길이, 볼륨 및 질량을 나타내는 데 사용 되는 관련 측정 단위를 사용할 수 있는 방법에 대해 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: f97eac9984f934c55aff8cf9f287afbc3aa098f3
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a81f7760301dc580e333d4659a72e6259d2c916b
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630165"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216681"
 ---
 # <a name="units-of-measure"></a>측정 단위
 
@@ -81,7 +81,7 @@ let convertg2kg (x : float<g>) = x / 1000.0<g/kg>
 
 다음 예제 세션에서는에서의 출력과이 코드에 대 한 입력을 보여 줍니다.
 
-```
+```console
 Enter a temperature in degrees Fahrenheit.
 90
 That temperature in degrees Celsius is    32.22.
@@ -117,6 +117,6 @@ That temperature in degrees Celsius is    32.22.
 
 단위 라이브러리는 `FSharp.Data.UnitSystems.SI` 네임 스페이스에서 사용할 수 있습니다. 하위 네임 스페이스 `m` 의 기호 형식 (예: 미터) `UnitNames` `meter` 과 하위 네임 스페이스의 전체 이름 (예: 미터)에 SI 단위를 포함 합니다. `UnitSymbols`
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [F# 언어 참조](index.md)

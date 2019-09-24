@@ -2,12 +2,12 @@
 title: 패턴 일치
 description: 에서 F# 패턴을 사용 하 여 데이터를 논리적 구조와 비교 하거나 데이터를 구성 부분으로 분해 하거나 데이터에서 정보를 추출 하는 방법에 대해 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 60e0d6cd550724bc8448fddd7b163c2c9f1637be
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 0e14fa00103742bbf5f054f8c04a7669ed767e63
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733473"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216806"
 ---
 # <a name="pattern-matching"></a>패턴 일치
 
@@ -29,7 +29,7 @@ match expression with
 
 다음 표에서는 지원 되는 패턴을 보여 줍니다. 런타임에 입력은 테이블에 나열 된 순서 대로 다음 각 패턴에 대해 테스트 되 고 패턴은 코드에 표시 되는 첫 번째부터 마지막으로, 각 줄의 패턴에 대해 왼쪽에서 오른쪽으로 적용 됩니다.
 
-|이름|Description|예제|
+|name|설명|예제|
 |----|-----------|-------|
 |상수 패턴|모든 숫자, 문자 또는 문자열 리터럴, 열거형 상수 또는 정의 된 리터럴 식별자|`1.0`, `"test"`, `30`, `Color.Red`|
 |식별자 패턴|구분 된 공용 구조체, 예외 레이블 또는 활성 패턴 사례의 case 값|`Some(x)`<br /><br />`Failure(msg)`|
@@ -95,7 +95,7 @@ let matchShape shape =
 
 여러 필드를 지정 하는 경우 세미콜론 (;)을 사용 합니다. 구분 기호로.
 
-```
+```fsharp
 match shape with
 | Rectangle(height = h; width = w) -> printfn "Rectangle with height %f and width %f" h w
 | _ -> ()
@@ -201,7 +201,7 @@ Null 패턴은 null 값을 허용 하는 형식으로 작업할 때 나타날 �
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4817.fs)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [일치 식](match-expressions.md)
 - [활성 패턴](active-patterns.md)

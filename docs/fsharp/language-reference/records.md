@@ -2,12 +2,12 @@
 title: 레코드
 description: 레코드가 명명 F# 된 값의 단순 집계를 나타내는 방법, 선택적으로 멤버를 사용 하는 방법에 대해 알아봅니다.
 ms.date: 06/09/2019
-ms.openlocfilehash: 1ba002407b1ccbcbceed32df8636fb860e89e3b6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 874c5fa30a36f2778f7a43266316deb8c59d1d72
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053936"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216790"
 ---
 # <a name="records"></a>레코드
 
@@ -122,7 +122,7 @@ and Address =
 
 이 코드의 출력은 다음과 같습니다.
 
-```
+```console
 Point is at the origin.
 Point is on the x-axis. Value is 100.000000.
 Point is at (10.000000, 0.000000, -1.000000).
@@ -138,7 +138,7 @@ Union 및 구조체 형식과 마찬가지로 레코드는 구조적 같음 의�
 
 이 코드의 출력은 다음과 같습니다.
 
-```
+```console
 The records are equal.
 ```
 
@@ -146,7 +146,7 @@ The records are equal.
 
 레코드에 대 한 참조 일치가 필요한 경우에는 레코드 `[<ReferenceEquality>]` 위에 특성을 추가 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [F# 형식](fsharp-types.md)
 - [클래스](classes.md)

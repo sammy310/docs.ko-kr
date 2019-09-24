@@ -2,12 +2,12 @@
 title: '명시적 필드: Val 키워드'
 description: 형식을 초기화 하지 F# 않고 클래스 또는 구조체 형식에 값을 저장 하는 위치를 선언 하는 데 사용 되는 ' val ' 키워드에 대해 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 13e0ba2875e8accfd1c0da0e1c6fef4973309f9b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: fe339e33dae27ae226022a68dd8247d1ab1994b3
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627540"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216473"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>명시적 필드: Val 키워드
 
@@ -48,7 +48,7 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 
 출력은 다음과 같습니다.
 
-```
+```console
 11 12 abc
 30 def
 ```
@@ -65,7 +65,7 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 
 출력은 `11 xyz`입니다.
 
-키워드를 사용 하지 않고 `mutable` `mutable` 필드를 사용 하 여 구조체를 초기화 하려는 경우 할당은 할당 후 즉시 삭제 되는 구조체의 복사본에 대해 작동 합니다. 따라서 구조가 변경 되지 않습니다.
+키워드 **를 사용**하지 않고 `mutable` `mutable` 필드를 사용 하 여 구조체를 초기화 하려는 경우 할당은 할당 후 즉시 삭제 되는 구조체의 복사본에 대해 작동 합니다. 따라서 구조가 변경 되지 않습니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6704.fs)]
 
@@ -73,8 +73,8 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 
 `member val` 키워드가 형식 정의에 함께 표시되는 경우 이는 자동으로 구현된 속성의 정의입니다. 자세한 내용은 [속성](properties.md)에 정의된 인터페이스의 private C++ 관련 구현입니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [Properties](properties.md)
+- [속성](properties.md)
 - [멤버](index.md)
 - [클래스의 `let` 바인딩](let-bindings-in-classes.md)

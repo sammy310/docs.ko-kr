@@ -2,12 +2,12 @@
 title: 이벤트
 description: 이벤트를 F# 사용 하 여 함수 호출을 GUI 프로그래밍에서 중요 한 사용자 동작에 연결 하는 방법을 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 7c3f16204b762609323fc2bcdc05f80e85a298e8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e581d9c31c1b8f3c114b86c898011dec3bd52535
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917286"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216465"
 ---
 # <a name="events"></a>이벤트
 
@@ -36,7 +36,7 @@ F#이벤트는 [IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d
 
 출력은 다음과 같습니다.
 
-```
+```console
 Event1 occurred! Object data: Hello World!
 ```
 
@@ -46,7 +46,7 @@ Event1 occurred! Object data: Hello World!
 
 위 코드는 다음과 같이 출력됩니다.
 
-```
+```console
 Event occurred.
 Given a value: Event occurred.
 ```
