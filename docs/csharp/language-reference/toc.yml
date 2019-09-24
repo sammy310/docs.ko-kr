@@ -200,7 +200,7 @@
       items:
         - name: new 제약 조건
           href: keywords/new-constraint.md
-        - name: 형식에 대한 설명
+        - name: where
           href: keywords/where-generic-type-constraint.md
     - name: 액세스 키워드
       items:
