@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5bfa5449ece1b24d4f47fe3e77e36b26bbe430c
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 2cd6f937811ae503dd4de7ff989510c4eb8b8933
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689834"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252442"
 ---
-# <a name="netfx40legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy > 요소
+# <a name="netfx40_legacysecuritypolicy-element"></a>\<Y > 요소
 
 런타임이 레거시 CAS(코드 액세스 보안) 정책을 사용할지를 지정합니다.
 
-\<configuration>\
-\<runtime>\
-\<NetFx40_LegacySecurityPolicy>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<런타임 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<Y >**  
 
 ## <a name="syntax"></a>구문
 
@@ -37,14 +37,14 @@ ms.locfileid: "66689834"
 
 |특성|설명|
 |---------------|-----------------|
-|`enabled`|필수 특성입니다.<br /><br /> 런타임이 레거시 CAS 정책을 사용할지를 지정 합니다.|
+|`enabled`|필수 특성입니다.<br /><br /> 런타임이 레거시 CAS 정책을 사용 하는지 여부를 지정 합니다.|
 
 ## <a name="enabled-attribute"></a>enabled 특성
 
 |값|설명|
 |-----------|-----------------|
-|`false`|런타임이 레거시 CAS 정책을 사용 하지 않습니다. 이 값이 기본값입니다.|
-|`true`|런타임이 레거시 CAS 정책을 사용 합니다.|
+|`false`|런타임은 레거시 CAS 정책을 사용 하지 않습니다. 이 값이 기본값입니다.|
+|`true`|런타임은 레거시 CAS 정책을 사용 합니다.|
 
 ### <a name="child-elements"></a>자식 요소
 
@@ -59,20 +59,20 @@ ms.locfileid: "66689834"
 
 ## <a name="remarks"></a>설명
 
-.NET Framework 버전 3.5 및 이전 버전에서 CAS 정책을 항상 적용에서 됩니다. .NET Framework 4에서는 CAS 정책을 사용 해야 합니다.
+.NET Framework 버전 3.5 및 이전 버전에서는 CAS 정책이 항상 적용 됩니다. .NET Framework 4에서 CAS 정책을 사용 하도록 설정 해야 합니다.
 
-CAS 정책에는 버전 별로 다릅니다. .NET Framework 4에서 이전 버전의.NET Framework에 존재 하는 사용자 지정 CA 정책은 없게 해야 합니다.
+CAS 정책은 버전별 정책입니다. 이전 버전의 .NET Framework에 존재 하는 사용자 지정 CAS 정책은 .NET Framework 4에서 respecified 해야 합니다.
 
-적용 된 `<NetFx40_LegacySecurityPolicy>` 요소는.NET Framework 4 어셈블리에 영향을 주지 않습니다 [보안 투명 코드](../../../../../docs/framework/misc/security-transparent-code.md); 투명도 규칙은 계속 적용 합니다.
+.NET Framework 4 어셈블리에 `<NetFx40_LegacySecurityPolicy>` 요소를 적용해도 [보안 투명코드](../../../misc/security-transparent-code.md)에는 영향을 주지않습니다. 투명성 규칙은 여전히 적용됩니다.
 
 > [!IMPORTANT]
-> 적용 된 `<NetFx40_LegacySecurityPolicy>` 요소에서 만든 네이티브 이미지 어셈블리에 대 한 상당한 성능 저하가 발생할 수 있습니다 합니다 [네이티브 이미지 생성기 (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) 에 설치 되지 않은 [전역 어셈블리 캐시 ](../../../../../docs/framework/app-domains/gac.md). 성능 저하는 특성이 적용 되는 경우 네이티브 이미지 어셈블리를 로드 하는 런타임의 없을 때 발생, 될으로-just-in-time 어셈블리를 로드 합니다.
+> 요소를 `<NetFx40_LegacySecurityPolicy>` 적용 하면 [전역 어셈블리 캐시](../../../app-domains/gac.md)에 설치 되지 않은 [네이티브 이미지 생성기 (ngen.exe)](../../../tools/ngen-exe-native-image-generator.md) 에서 생성 되는 네이티브 이미지 어셈블리에 대해 상당한 성능 저하가 발생할 수 있습니다. 성능이 저하 되는 이유는 특성이 적용 될 때 런타임이 네이티브 이미지로 어셈블리를 로드할 수 없어 just-in-time 어셈블리로 로드 되는 경우에 발생 합니다.
 
 > [!NOTE]
-> Visual Studio 프로젝트에 대 한 프로젝트 설정에서.NET Framework 4 이전 대상.NET Framework 버전을 지정 하면 해당 버전에 대해 지정한 모든 사용자 지정 CA 정책을 비롯 하 여 하 CAS 정책을 사용 됩니다. 그러나 새.NET Framework 4 형식 및 멤버를 사용할 수 없습니다. 이전 버전의.NET Framework를 사용 하 여도 지정할 수 있습니다 합니다 [ \<supportedRuntime > 요소](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 시작 설정 스키마에 프로그램 [응용 프로그램 구성 파일](../../../../../docs/framework/configure-apps/index.md)합니다.
+> Visual Studio 프로젝트에 대 한 프로젝트 설정에서 .NET Framework 4 이전의 대상 .NET Framework 버전을 지정 하는 경우 해당 버전에 대해 지정한 모든 사용자 지정 CAS 정책을 포함 하 여 CAS 정책이 사용 됩니다. 그러나 새 .NET Framework 4 형식 및 멤버를 사용할 수는 없습니다. [응용 프로그램 구성 파일](../../index.md)에서 시작 설정 스키마의 [ \<supportedruntime> > 요소](../startup/supportedruntime-element.md) 를 사용 하 여 .NET Framework의 이전 버전을 지정할 수도 있습니다.
 
 > [!NOTE]
-> 구성 파일의 구문은 대/소문자 구분 합니다. 구문 및 예제 섹션에 제공 된 구문을 사용 해야 합니다.
+> 구성 파일 구문은 대/소문자를 구분 합니다. 구문 및 예제 섹션에서 제공 하는 구문을 사용 해야 합니다.
 
 ## <a name="configuration-file"></a>구성 파일
 
@@ -80,7 +80,7 @@ CAS 정책에는 버전 별로 다릅니다. .NET Framework 4에서 이전 버�
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 응용 프로그램에 대 한 레거시 CAS 정책을 사용 하는 방법을 보여 줍니다.
+다음 예제에서는 응용 프로그램에 대해 레거시 CAS 정책을 사용 하도록 설정 하는 방법을 보여 줍니다.
 
 ```xml
 <configuration>
@@ -92,5 +92,5 @@ CAS 정책에는 버전 별로 다릅니다. .NET Framework 4에서 이전 버�
 
 ## <a name="see-also"></a>참고자료
 
-- [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [런타임 설정 스키마](index.md)
+- [구성 파일 스키마](../index.md)

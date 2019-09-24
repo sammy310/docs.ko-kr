@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 717d2104db8addf40e5187cee4cc8c46e5dc355e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 17d35193f69966e02ac5e483924fcb3ee2e06758
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636733"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799025"
 ---
 # <a name="strongnamekeydelete-function"></a>StrongNameKeyDelete 함수
 
 지정된 키 컨테이너를 삭제합니다.
 
-이 함수는 더 이상 사용 되지 않습니다. 사용 된 [iclrstrongname:: Strongnamekeydelete](../hosting/iclrstrongname-strongnamekeydelete-method.md) 메서드 대신 합니다.
+이 함수는 더 이상 사용 되지 않습니다. 대신 [ICLRStrongName:: StrongNameKeyDelete](../hosting/iclrstrongname-strongnamekeydelete-method.md) 메서드를 사용 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -40,25 +40,25 @@ BOOLEAN StrongNameKeyDelete (
 ## <a name="parameters"></a>매개 변수
 
 `wszKeyContainer`\
-[in] 삭제할 키 컨테이너의 이름입니다.
+진행 삭제할 키 컨테이너의 이름입니다.
 
 ## <a name="return-value"></a>반환 값
 
-`true` 성공적으로 완료 됩니다. 그렇지 않으면 `false`합니다.
+`true`성공적으로 완료 되 면 그렇지 않으면 `false`입니다.
 
 ## <a name="remarks"></a>설명
 
-사용 합니다 [StrongNameKeyInstall](strongnamekeyinstall-function.md) 컨테이너로 공개/개인 키 쌍을 가져오는 함수입니다.
+[StrongNameKeyInstall](strongnamekeyinstall-function.md) 함수를 사용 하 여 공개/개인 키 쌍을 컨테이너로 가져옵니다.
 
-경우는 `StrongNameKeyDelete` 함수가 성공적으로 완료으로 호출 되지 않으면 합니다 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 마지막 생성 된 오류를 검색 하는 함수입니다.
+`StrongNameKeyDelete` 함수가 성공적으로 완료 되지 않으면 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 함수를 호출하여 마지막으로 생성된 오류를 검색합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.
+**플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.
 
 **헤더:** StrongName.h
 
-**라이브러리:** MsCorEE.dll에 리소스로 포함
+**라이브러리** Mscoree.dll에 리소스로 포함 됩니다.
 
 **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 

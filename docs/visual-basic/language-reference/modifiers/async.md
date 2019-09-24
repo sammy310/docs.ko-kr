@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Async [Visual Basic]
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
-ms.openlocfilehash: cf2c62878e8902afa9455c789d41393b73110172
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 6a3d9c8eb8e5929796683bd0bb50159ca0c69f1f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68434048"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959865"
 ---
 # <a name="async-visual-basic"></a>Async(Visual Basic)
 한정자 `Async` 는 수정 하는 메서드 또는 [람다 식이](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) 비동기 임을 나타냅니다. 이러한 메서드를 *비동기 메서드*라고 합니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "68434048"
  비동기 메서드는 호출자의 스레드를 차단하지 않고 오래 실행될 수 있는 작업을 수행하는 편리한 방법을 제공합니다. 비동기 메서드의 호출자는 비동기 메서드가 완료 될 때까지 기다리지 않고 작업을 다시 시작할 수 있습니다.  
   
 > [!NOTE]
->  `Async` 및 `Await` 키워드는 Visual Studio 2012에서 도입되었습니다. 비동기 프로그래밍에 대 한 소개는 [async 및 wait를 사용한 비동기 프로그래밍](../../../visual-basic/programming-guide/concepts/async/index.md)을 참조 하세요.  
+> `Async` 및 `Await` 키워드는 Visual Studio 2012에서 도입되었습니다. 비동기 프로그래밍에 대 한 소개는 [async 및 wait를 사용한 비동기 프로그래밍](../../../visual-basic/programming-guide/concepts/async/index.md)을 참조 하세요.  
   
  다음 예제에서는 비동기 메서드의 구조를 보여줍니다. 규칙에 따라 비동기 메서드는 "Async"로 끝납니다.  
   
@@ -49,7 +49,7 @@ End Function
 ## <a name="return-types"></a>반환 형식  
  비동기 메서드는 [Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) 프로시저 이거나 <xref:System.Threading.Tasks.Task> 반환 형식이 또는 <xref:System.Threading.Tasks.Task%601>인 [함수](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md) 프로시저입니다. 메서드는 [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) 매개 변수를 선언할 수 없습니다.  
   
- 메서드의 return `Task(Of TResult)` 문에 TResult 형식의 피연산자가 있는 경우 비동기 메서드의 반환 [](../../../visual-basic/language-reference/statements/return-statement.md) 형식으로를 지정 합니다. 메서드가 완료되었을 때 의미 있는 값이 반환되지 않을 경우 `Task`를 사용합니다. 즉, 메서드를 호출하면 `Task`가 반환되지만 `Task`가 완료된 경우 `Await`를 대기 중인 모든 `Task` 문이 결과 값을 생성하지 않습니다.  
+ 메서드의 [return](../../../visual-basic/language-reference/statements/return-statement.md) 문에 TResult 형식의 피연산자가 있는 경우 비동기 메서드의 반환 형식으로 `Task(Of TResult)`를 지정합니다. 메서드가 완료되었을 때 의미 있는 값이 반환되지 않을 경우 `Task`를 사용합니다. 즉, 메서드를 호출하면 `Task`가 반환되지만 `Task`가 완료된 경우 `Await`를 대기 중인 모든 `Task` 문이 결과 값을 생성하지 않습니다.  
   
  비동기 서브루틴은 `Sub` 프로시저가 필요한 이벤트 처리기를 정의하는 데 주로 사용됩니다. 비동기 서브 루틴의 호출자는 이를 기다릴 수 없으며, 메서드가 throw하는 예외를 catch할 수 없습니다.  
   

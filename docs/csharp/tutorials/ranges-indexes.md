@@ -3,16 +3,16 @@ title: 인덱스 및 범위를 사용하여 데이터 범위 탐색
 description: 이 고급 자습서에서는 인덱스 및 범위를 사용하여 순차적 데이터 세트를 검사하는 데이터 탐색을 살펴봅니다.
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 27f4b90f130345dd10517a5de78c759066afdf07
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: d0eeadfff9732ced22e045536a88ed49cd98bbaa
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926647"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117833"
 ---
 # <a name="indices-and-ranges"></a>인덱스 및 범위
 
-범위와 인덱스는 배열, <xref:System.Array>, <xref:System.Span%601> 또는 <xref:System.ReadOnlySpan%601>에서 단일 요소 또는 범위에 액세스하기 위한 간결한 구문을 제공합니다. 이러한 기능을 통해 더 간결하고 분명한 구문으로 시퀀스의 단일 요소 또는 요소 범위에 액세스할 수 있습니다.
+범위와 인덱스는 <xref:System.Array>, <xref:System.String>, <xref:System.Span%601> 또는 <xref:System.ReadOnlySpan%601>에서 단일 요소 또는 범위에 액세스하기 위한 간결한 구문을 제공합니다. 이러한 기능을 통해 더 간결하고 분명한 구문으로 시퀀스의 단일 요소 또는 요소 범위에 액세스할 수 있습니다.
 
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 알아봅니다.
 
@@ -24,12 +24,12 @@ ms.locfileid: "70926647"
 
 ## <a name="language-support-for-indices-and-ranges"></a>인덱스 및 범위에 대한 언어 지원
 
-이 언어 지원은 두 가지 새 형식 및 두 가지 새 연산자를 사용합니다.
+이 언어 지원은 다음과 같은 두 가지 새 형식 및 두 가지 새 연산자를 사용합니다.
 
 - <xref:System.Index?displayProperty=nameWithType>는 인덱스를 시퀀스로 표현합니다.
-- 인덱스가 시퀀스의 끝을 기준으로 하도록 지정하는 `^` 연산자입니다.
+- 인덱스가 시퀀스의 끝을 기준으로 하도록 지정하는 끝부터 인덱스 연산자 `^`입니다.
 - <xref:System.Range?displayProperty=nameWithType>는 시퀀스의 하위 범위를 나타냅니다.
-- 범위의 시작과 끝을 피연산자로 지정하는 범위 연산자(`..`)입니다.
+- 범위의 시작과 끝을 피연산자로 지정하는 범위 연산자 `..`입니다.
 
 인덱스에 대한 규칙을 사용하여 시작하겠습니다. `sequence`배열을 고려합니다. `0` 인덱스는 `sequence[0]`과 동일합니다. `^0` 인덱스는 `sequence[sequence.Length]`와 동일합니다. `sequence[^0]`은 `sequence[sequence.Length]`처럼 예외를 throw합니다. `n`이 어떤 숫자이든, 인덱스 `^n`은 `sequence[sequence.Length - n]`과 동일합니다.
 

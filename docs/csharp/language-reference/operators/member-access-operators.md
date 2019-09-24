@@ -1,12 +1,14 @@
 ---
 title: 멤버 액세스 연산자 - C# 참조
 description: 형식 멤버에 액세스하는 데 사용하는 C# 연산자에 대해 알아봅니다.
-ms.date: 05/09/2019
+ms.date: 09/18/2019
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
 - '[]_CSharpKeyword'
 - ()_CSharpKeyword
+- ^_CSharpKeyword
+- .._CSharpKeyword
 helpviewer_keywords:
 - member access operators [C#]
 - member access operator [C#]
@@ -25,12 +27,17 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: 5ff5e68fbce320076e6d18e9e139b418a15bba77
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+- ^ operator [C#]
+- index from end operator [C#]
+- hat operator [C#]
+- .. operator [C#]
+- range operator [C#]
+ms.openlocfilehash: 45af31d10d77f4c63b27b34595b97fdd11ef95a1
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924637"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116133"
 ---
 # <a name="member-access-operators-c-reference"></a>멤버 액세스 연산자(C# 참조)
 
@@ -40,6 +47,8 @@ ms.locfileid: "69924637"
 - [`[]` (배열 요소 또는 인덱서 액세스)](#indexer-operator-): 배열 요소 또는 형식 인덱서 액세스
 - [`?.` 및 `?[]`(null 조건부 연산자)](#null-conditional-operators--and-): 피연산자가 null이 아닌 경우에만 멤버 또는 요소 액세스 작업 수행
 - [`()` (호출)](#invocation-operator-): 액세스된 메서드나 대리자 호출
+- [`^`(끝부터 인덱스)](#index-from-end-operator-): 요소 위치가 시퀀스의 끝에서 시작됨을 표시
+- [`..`(범위)](#range-operator-): 시퀀스 요소의 범위를 가져오는 데 사용할 수 있는 인덱스 범위를 지정
 
 ## <a name="member-access-operator-"></a>멤버 액세스 연산자
 
@@ -149,9 +158,37 @@ if (handler != null)
 
 명시적 형식 변환을 수행하는 [캐스트 식](type-testing-and-cast.md#cast-operator-)도 괄호를 사용합니다.
 
+## <a name="index-from-end-operator-"></a>끝부터 인덱스 연산자 ^
+
+C# 8.0 이상에서 사용할 수 있는 연산자 `^`는 요소 위치가 시퀀스의 끝에서 시작함을 나타냅니다. 시퀀스 길이 `length`의 경우 `^n`은 시퀀스의 시작에서 오프셋 `length - n`인 요소를 가리킵니다. 예를 들어 `^1`은 시퀀스의 마지막 요소를 가리키고, `^length`는 시퀀스의 첫 번째 요소를 가리킵니다.
+
+[!code-csharp[index from end](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#IndexFromEnd)]
+
+위 예제에서와 같이 식 `^e`는 <xref:System.Index?displayProperty=nameWithType> 형식입니다. 식 `^e`에서 `e`의 결과는 암시적으로 `int`으로 변환할 수 있어야 합니다.
+
+또한 `^` 연산자를 [범위 연산자](#range-operator-)와 함께 사용하여 인덱스 범위를 만들 수 있습니다. 자세한 내용은 [인덱스와 범위](../../tutorials/ranges-indexes.md)를 참조하세요.
+
+## <a name="range-operator-"></a>범위 연산자 ..
+
+C# 8.0 이상에서 사용 가능한 연산자 `..`은 인덱스 범위의 시작과 끝을 피연산자로 지정합니다. 왼쪽 피연산자는 범위의 시작(*포함*)입니다. 오른쪽 피연산자는 범위의 끝(*제외*)입니다. 다음 예제에서와 같이 피연산자 중 하나는 시퀀스의 시작부터 또는 끝부터 인덱스가 될 수 있습니다.
+
+[!code-csharp[range examples](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Ranges)]
+
+위 예제에서와 같이 식 `a..b`는 <xref:System.Range?displayProperty=nameWithType> 형식입니다. 식 `a..b`에서 `a` 및 `b`의 결과는 암시적으로 `int` 또는 <xref:System.Index>로 변환할 수 있어야 합니다.
+
+`..` 연산자의 피연산자 중 하나를 생략하여 개방형 범위를 지정할 수 있습니다.
+
+- `a..`는 `a..^0`와 같습니다.
+- `..b`는 `0..b`와 같습니다.
+- `..`는 `0..^0`와 같습니다.
+
+[!code-csharp[ranges with omitted operands](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#RangesOptional)]
+
+자세한 내용은 [인덱스와 범위](../../tutorials/ranges-indexes.md)를 참조하세요.
+
 ## <a name="operator-overloadability"></a>연산자 오버로드 가능성
 
-`.` 및 `()` 연산자는 오버로드할 수 없습니다. `[]` 연산자도 오버로드할 수 없는 연산자로 간주됩니다. [인덱서](../../programming-guide/indexers/index.md)를 사용하여 사용자 정의 형식의 인덱싱을 지원합니다.
+`.`, `()`, `^` 및 `..` 연산자는 오버로드할 수 없습니다. `[]` 연산자도 오버로드할 수 없는 연산자로 간주됩니다. [인덱서](../../programming-guide/indexers/index.md)를 사용하여 사용자 정의 형식의 인덱싱을 지원합니다.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 

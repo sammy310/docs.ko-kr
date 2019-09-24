@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 37eedc6d41867a6d5e6a49b8df5040c657bb2689
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 450463100782f98b6ded0781b1d3c19b0db97534
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602755"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151771"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>C# 컴파일러 옵션 사전순 목록
 
@@ -29,7 +29,7 @@ ms.locfileid: "69602755"
 |[-baseaddress](baseaddress-compiler-option.md)|빌드할 라이브러리의 기준 주소를 지정합니다.|
 |[-bugreport](bugreport-compiler-option.md)|'버그 보고서' 파일을 만듭니다. -errorreport:prompt 또는 -errorreport:send와 함께 사용하면 이 파일이 충돌 정보와 함께 전송됩니다.|
 |[/checked](checked-compiler-option.md)|컴파일러에서 오버플로 검사를 생성하도록 합니다.|
-|-checksumalgorithm:\<alg>|PDB에 저장된 소스 파일 체크섬을 계산하기 위한 알고리즘을 지정합니다.  지원되는 값은 다음과 같습니다. SHA1(기본값) 또는 SHA256.<br>SHA1 관련 충돌 문제로 인해 SHA256을 사용하는 것이 좋습니다. |
+|-checksumalgorithm:\<alg>|PDB에 저장된 소스 파일 체크섬을 계산하기 위한 알고리즘을 지정합니다.  지원되는 값은 다음과 같습니다. SHA256(기본값) 또는 SHA1.<br>SHA1 관련 충돌 문제로 인해 SHA256을 사용하는 것이 좋습니다. |
 |[-codepage](codepage-compiler-option.md)|소스 파일을 열 때 사용할 코드 페이지를 지정합니다.|
 |[-debug](debug-compiler-option.md)|디버깅 정보를 내보냅니다.|
 |[-define](define-compiler-option.md)|조건부 컴파일 기호를 정의합니다.|

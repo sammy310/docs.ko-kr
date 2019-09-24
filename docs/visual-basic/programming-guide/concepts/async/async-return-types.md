@@ -2,23 +2,23 @@
 title: 비동기 반환 형식 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: 227a187f7046d128a7170b272f90f77cfaac61c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f331546026ac6b0799947611b54e9a147a6fe7f1
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022105"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988838"
 ---
 # <a name="async-return-types-visual-basic"></a>비동기 반환 형식 (Visual Basic)
-비동기 메서드에는 세 가지 가능한 반환 형식, 즉 <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> 및 void가 있습니다. Visual Basic에서 void 반환 형식은 [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) 프로시저로 작성합니다. 비동기 메서드에 대 한 자세한 내용은 참조 하세요. [Async 및 Await (Visual Basic)를 사용한 비동기 프로그래밍](../../../../visual-basic/programming-guide/concepts/async/index.md)합니다.  
+비동기 메서드에는 세 가지 가능한 반환 형식, 즉 <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> 및 void가 있습니다. Visual Basic에서 void 반환 형식은 [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) 프로시저로 작성합니다. 비동기 메서드에 대 한 자세한 내용은 [async 및 wait를 사용한 비동기 프로그래밍 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)을 참조 하세요.  
   
  다음 섹션 중 하나에서 각 반환 형식을 살펴보고 세 가지 형식 모두를 사용하는 전체 예제는 이 항목의 끝에 나와 있습니다.  
   
 > [!NOTE]
->  예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.  
+> 예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.  
   
 ## <a name="BKMK_TaskTReturnType"></a> Task(T) 반환 형식  
- <xref:System.Threading.Tasks.Task%601> 형식을 포함 하는 비동기 메서드는 반환을 [반환](../../../../visual-basic/language-reference/statements/return-statement.md) 피연산자의 형식이 문을 `TResult`합니다.  
+ <xref:System.Threading.Tasks.Task%601>반환 형식은 피연산자의 형식이 `TResult`인 [return](../../../../visual-basic/language-reference/statements/return-statement.md) 문이 포함 된 비동기 메서드에 사용됩니다.  
   
  다음 예제에서 `TaskOfT_MethodAsync` 비동기 메서드는 정수를 반환하는 return 문을 포함합니다. 따라서 메서드 선언은 `Task(Of Integer)`의 반환 형식을 지정해야 합니다.  
   
@@ -45,7 +45,7 @@ Async Function TaskOfT_MethodAsync() As Task(Of Integer)
 End Function  
 ```  
   
- `TaskOfT_MethodAsync`를 await 식 내에서 호출하면 await 식이 `TaskOfT_MethodAsync`에서 반환된 작업에 저장된 정수 값(`leisureHours` 값)을 검색합니다. 에 대 한 자세한 내용은 await 식에 참조 [Await 연산자](../../../../visual-basic/language-reference/operators/await-operator.md)합니다.  
+ `TaskOfT_MethodAsync`를 await 식 내에서 호출하면 await 식이 `TaskOfT_MethodAsync`에서 반환된 작업에 저장된 정수 값(`leisureHours` 값)을 검색합니다. Wait 식에 대 한 자세한 내용은 [Wait Operator](../../../../visual-basic/language-reference/operators/await-operator.md)를 참조 하세요.  
   
  다음 코드는 `TaskOfT_MethodAsync` 메서드를 호출하고 기다립니다. 결과는 `result1` 변수에 할당됩니다.  
   
@@ -57,7 +57,7 @@ Dim result1 As Integer = Await TaskOfT_MethodAsync()
  다음 코드와 같이 `TaskOfT_MethodAsync` 호출을 `Await`의 적용과 구분하면 이 과정을 더욱 잘 이해할 수 있습니다. 곧바로 대기 상태가 되지 않는 `TaskOfT_MethodAsync` 메서드를 호출하면 메서드 선언에서 예상한 대로 `Task(Of Integer)`를 반환합니다. 예제에서 작업이 `integerTask` 변수에 할당됩니다. `integerTask`가 <xref:System.Threading.Tasks.Task%601>이기 때문에 `TResult` 형식의 <xref:System.Threading.Tasks.Task%601.Result> 속성을 포함합니다. 이 경우 TResult는 정수 형식을 나타냅니다. `Await`가 `integerTask`에 적용되는 경우 await 식은 `integerTask`의 <xref:System.Threading.Tasks.Task%601.Result%2A> 속성 내용으로 평가됩니다. 값은 `result2` 변수에 할당됩니다.  
   
 > [!WARNING]
->  <xref:System.Threading.Tasks.Task%601.Result%2A> 속성은 차단 속성입니다. 해당 작업이 완료되기 전에 액세스하려고 하면, 작업이 완료되고 값을 사용할 수 있을 때까지 현재 활성화된 스레드가 차단됩니다. 대부분의 경우 속성에 직접 액세스하지 않고 `Await`를 사용하여 값에 액세스해야 합니다.  
+> <xref:System.Threading.Tasks.Task%601.Result%2A> 속성은 차단 속성입니다. 해당 작업이 완료되기 전에 액세스하려고 하면, 작업이 완료되고 값을 사용할 수 있을 때까지 현재 활성화된 스레드가 차단됩니다. 대부분의 경우 속성에 직접 액세스하지 않고 `Await`를 사용하여 값에 액세스해야 합니다.  
   
 ```vb  
 ' Call and await in separate statements.  
@@ -80,7 +80,7 @@ textBox1.Text &= String.Format("Value of resultTask.Result:  {0}" & vbCrLf, inte
 ```  
   
 ## <a name="BKMK_TaskReturnType"></a> Task 반환 형식  
- return 문을 포함하지 않거나 피연산자를 반환하지 않는 return 문을 포함하는 비동기 메서드에는 일반적으로 <xref:System.Threading.Tasks.Task>의 반환 형식이 있습니다. 이러한 메서드는 것 [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) 프로시저 동기적으로 실행 되도록 작성 된 경우. 비동기 메서드에 대해 `Task` 반환 형식을 사용하는 경우 호출된 비동기 메서드가 완료될 때까지 호출 메서드는 `Await` 연산자를 사용하여 호출자의 완료를 일시 중단할 수 있습니다.  
+ return 문을 포함하지 않거나 피연산자를 반환하지 않는 return 문을 포함하는 비동기 메서드에는 일반적으로 <xref:System.Threading.Tasks.Task>의 반환 형식이 있습니다. 이러한 메서드는 동기적으로 실행 되도록 작성 된 경우 [하위](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) 프로시저입니다. 비동기 메서드에 대해 `Task` 반환 형식을 사용하는 경우 호출된 비동기 메서드가 완료될 때까지 호출 메서드는 `Await` 연산자를 사용하여 호출자의 완료를 일시 중단할 수 있습니다.  
   
  다음 예제에서는 `Task_MethodAsync` 비동기 메서드가 return 문을 포함하지 않습니다. 따라서 이 메서드에 대해 `Task_MethodAsync`가 대기할 수 있도록 `Task`의 반환 형식을 지정합니다. `Task` 형식의 정의는 반환 값을 저장하기 위한 `Result` 속성을 포함하지 않습니다.  
   
@@ -98,7 +98,7 @@ Async Function Task_MethodAsync() As Task
 End Function  
 ```  
   
- 동기 `Sub` 또는 void를 반환하는 메서드에 대한 호출 문과 비슷하게 await 식 대신 await 문을 사용하여 `Task_MethodAsync`가 호출되고 대기됩니다. 응용 프로그램을 `Await` 연산자가 예제의 값을 생성 하지.  
+ 동기 `Sub` 또는 void를 반환하는 메서드에 대한 호출 문과 비슷하게 await 식 대신 await 문을 사용하여 `Task_MethodAsync`가 호출되고 대기됩니다. 이 경우 `Await` 연산자의 응용 프로그램은 값을 생성 하지 않습니다.  
   
  다음 코드는 `Task_MethodAsync` 메서드를 호출하고 기다립니다.  
   
@@ -107,7 +107,7 @@ End Function
 Await Task_MethodAsync()  
 ```  
   
- 이전 처럼 <xref:System.Threading.Tasks.Task%601> 예제에 대 한 호출을 구분할 수 있습니다 `Task_MethodAsync` 의 응용 프로그램에서는 `Await` 다음 코드 에서처럼 연산자입니다. 그러나 `Task`에는 `Result` 속성이 없으므로 await 연산자가 `Task`에 적용될 때 값이 생성되지 않습니다.  
+ 이전 <xref:System.Threading.Tasks.Task%601> 예제와 같이 다음 코드와 같이 `Await` 연산자의 응용 프로그램 `Task_MethodAsync` 에서 호출을 분리할 수 있습니다. 그러나 `Task`에는 `Result` 속성이 없으므로 await 연산자가 `Task`에 적용될 때 값이 생성되지 않습니다.  
   
  다음 코드는 `Task_MethodAsync`가 반환하는 작업을 대기하는 것에서 `Task_MethodAsync` 호출을 구분합니다.  
   
@@ -122,7 +122,7 @@ Await simpleTask
 ```  
   
 ## <a name="BKMK_VoidReturnType"></a> Void 반환 형식  
- 주된 용도 `Sub` 프로시저는 이벤트 처리기에서 (다른 언어로 void 반환 형식이 라고도 함) 반환 형식이 없는 경우. void 반환은 또한 "실행 후 제거"로 분류할 수 있는 작업을 수행하는 메서드 또는 viod를 반환하는 메서드를 재정의하는 데 사용할 수 있습니다. 하지만 void를 반환하는 비동기 메서드는 대기할 수가 없기 때문에 가능할 때마다 `Task`를 반환하는 것이 좋습니다. 이러한 메서드의 호출자는 호출된 비동기 메서드가 마치는 것을 기다리지 않고 완료될 때까지 계속 진행할 수 있어야 하므로, 해당 호출자는 비동기 메서드가 생성하는 모든 값 또는 예외와 독립되어 있어야 합니다.  
+ 프로시저의 `Sub` 주요 용도는 이벤트 처리기에 있습니다. 여기에는 반환 형식 (다른 언어에서는 void 반환 형식 이라고 함)이 없습니다. void 반환은 또한 "실행 후 제거"로 분류할 수 있는 작업을 수행하는 메서드 또는 viod를 반환하는 메서드를 재정의하는 데 사용할 수 있습니다. 하지만 void를 반환하는 비동기 메서드는 대기할 수가 없기 때문에 가능할 때마다 `Task`를 반환하는 것이 좋습니다. 이러한 메서드의 호출자는 호출된 비동기 메서드가 마치는 것을 기다리지 않고 완료될 때까지 계속 진행할 수 있어야 하므로, 해당 호출자는 비동기 메서드가 생성하는 모든 값 또는 예외와 독립되어 있어야 합니다.  
   
  void를 반환하는 비동기 메서드의 호출자는 메서드에서 throw되는 예외를 catch할 수 없으므로 이러한 처리되지 않은 예외를 사용하면 애플리케이션이 실패할 수 있습니다. <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>를 반환하는 비동기 메서드에서 예외가 발생하는 경우 이 예외는 반환된 작업에 저장되고 작업이 대기 상태일 때 다시 throw됩니다. 따라서 예외를 생성할 수 있는 모든 비동기 메서드에 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>의 반환 형식이 있고 메서드 호출이 대기 상태인지 확인해야 합니다.  
   
@@ -156,7 +156,7 @@ End Sub
   
      **새 프로젝트** 대화 상자가 열립니다.  
   
-3. 에 **설치 됨**, **템플릿** 범주를 선택 **Visual Basic**를 선택한 후 **Windows**합니다. 프로젝트 형식 목록에서 **WPF 애플리케이션**을 선택합니다.  
+3. **설치 됨**의 **템플릿** 범주에서 **Visual Basic**를 선택 하 고 **Windows**를 선택 합니다. 프로젝트 형식 목록에서 **WPF 애플리케이션**을 선택합니다.  
   
 4. 프로젝트의 이름으로 `AsyncReturnTypes`를 입력한 다음 **확인** 단추를 선택합니다.  
   
@@ -183,7 +183,7 @@ End Sub
   
      텍스트 상자와 단추가 포함된 간단한 창이 MainWindow.xaml의 **디자인** 창에 나타납니다.  
   
-7. **솔루션 탐색기**, MainWindow.xaml.vb에 대 한 바로 가기 메뉴를 열고 선택한 후 **코드 보기**합니다.  
+7. **솔루션 탐색기**에서 mainwindow.xaml의 바로 가기 메뉴를 열고 **코드 보기**를 선택 합니다.  
   
 8. MainWindow.xaml.vb의 코드를 다음 코드로 바꿉니다.  
   
@@ -295,7 +295,7 @@ End Sub
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
-- [연습: 비동기를 사용 하 여 웹 서비스에 액세스 하 고 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [연습: Async 및 Wait (Visual Basic)를 사용 하 여 웹에 액세스](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [비동기 프로그램의 제어 흐름(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
 - [비동기](../../../../visual-basic/language-reference/modifiers/async.md)
 - [Await 연산자](../../../../visual-basic/language-reference/operators/await-operator.md)
