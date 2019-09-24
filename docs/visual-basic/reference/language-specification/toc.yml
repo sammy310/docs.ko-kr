@@ -25,6 +25,8 @@
       href: ../../../../_vblang/spec/expressions.md
     - name: 설명서 주석
       href: ../../../../_vblang/spec/documentation-comments.md
+    - name: 오버로드 해결
+      href: ../../../../_vblang/spec/overload-resolution.md
     - name: 문법
       items:
         - name: vb.html

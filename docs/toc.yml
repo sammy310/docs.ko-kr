@@ -128,7 +128,7 @@
       href: standard/metadata-and-self-describing-components.md
     - name: 콘솔 애플리케이션 빌드
       href: standard/building-console-apps.md
-    - name: 애플리케이션 주요 사항
+    - name: 응용 프로그램 주요 사항
       href: standard/application-essentials.md
     - name: 파일 및 스트림 I/O
       href: standard/io/index.md
@@ -188,7 +188,7 @@
           href: core/whats-new/dotnet-core-2-1.md
         - name: .NET Core 2.0의 새로운 기능
           href: core/whats-new/dotnet-core-2-0.md
-    - name: 애플리케이션 호환성
+    - name: 응용 프로그램 호환성
       href: core/compatibility/
     - name: 자습서
       href: core/tutorials/index.md
@@ -215,7 +215,7 @@
           href: core/tutorials/libraries.md
         - name: 플러그 인을 사용하여 .NET Core 애플리케이션 만들기
           href: core/tutorials/creating-app-with-plugin-support.md
-        - name: ASP.NET Core 애플리케이션 개발
+        - name: ASP.NET Core 응용 프로그램 개발
           href: core/tutorials/aspnet-core.md
         - name: 네이티브 코드에서 .NET Core 호스팅
           href: core/tutorials/netcore-hosting.md
@@ -494,11 +494,11 @@
               href: framework/wpf/
             - name: Windows Forms
               href: framework/winforms/
-        - name: WCF를 사용하는 서비스 기반 애플리케이션
+        - name: WCF를 사용하여 개발한 서비스 기반 응용 프로그램
           href: framework/wcf/
         - name: Windows Workflow Foundation
           href: framework/windows-workflow-foundation/
-        - name: Windows 서비스 애플리케이션
+        - name: Windows 서비스 응용 프로그램
           href: framework/windows-services/
         - name: 64비트 애플리케이션
           href: framework/64-bit-apps.md
@@ -506,7 +506,7 @@
           href: framework/develop-web-apps-with-aspnet.md
         - name: .NET Framework의 네트워크 프로그래밍
           href: framework/network-programming/
-        - name: 앱 구성
+        - name: 응용 프로그램 구성
           href: framework/configure-apps/
         - name: .NET 네이티브로 앱 컴파일
           href: framework/net-native/
@@ -599,7 +599,7 @@
       href: csharp/tour-of-csharp/
     - name: 'C#의 새로운 기능'
       items:
-        - name: 'C# 8.0 - 미리 보기 5'
+        - name: 'C# 8.0'
           href: csharp/whats-new/csharp-8.md
         - name: 'C# 7.3'
           href: csharp/whats-new/csharp-7-3.md
@@ -691,7 +691,7 @@
               href: csharp/expression-trees-execution.md
             - name: 식 해석
               href: csharp/expression-trees-interpreting.md
-            - name: 식 작성
+            - name: 식 빌드
               href: csharp/expression-trees-building.md
             - name: 식 변환
               href: csharp/expression-trees-translating.md
@@ -769,7 +769,7 @@
               href: fsharp/tutorials/type-providers/type-provider-security.md
             - name: 형식 공급자 문제 해결
               href: fsharp/tutorials/type-providers/troubleshooting-type-providers.md
-        - name: 'F# 대화형'
+        - name: 'F# Interactive'
           href: fsharp/tutorials/fsharp-interactive/index.md
     - name: 'F# 언어 참조'
       href: fsharp/language-reference/index.md
@@ -1022,7 +1022,7 @@
           items:
             - name: 컴퓨터 리소스에 액세스
               href: visual-basic/developing-apps/programming/computer-resources/index.md
-            - name: 애플리케이션의 정보 기록
+            - name: 응용 프로그램의 정보 기록
               href: visual-basic/developing-apps/programming/log-info/index.md
             - name: 사용자 데이터 액세스
               href: visual-basic/developing-apps/programming/accessing-user-data.md
@@ -1202,7 +1202,7 @@
           href: visual-basic/programming-guide/language-features/declared-elements/index.md
         - name: 대리자
           href: visual-basic/programming-guide/language-features/delegates/index.md
-        - name: 컴파일 시 바인딩 및 런타임에 바인딩
+        - name: 초기 바인딩 및 런타임에 바인딩
           href: visual-basic/programming-guide/language-features/early-late-binding/index.md
         - name: 오류 형식
           href: visual-basic/programming-guide/language-features/error-types.md
