@@ -19,6 +19,9 @@
             - name: .NET 마이크로 서비스 - 아키텍처 eBook
               tocHref: /dotnet/architecture/microservices/
               topicHref: /dotnet/architecture/microservices/index
+            - name: 클라우드 네이티브
+              tocHref: /dotnet/architecture/cloud-native/
+              topicHref: /dotnet/architecture/cloud-native/index
             - name: .NET 앱 현대화 eBook
               tocHref: /dotnet/architecture/modernize-with-azure-containers/
               topicHref: /dotnet/architecture/modernize-with-azure-containers/index
@@ -28,6 +31,12 @@
             - name: 서버를 사용하지 않는 앱 eBook
               tocHref: /dotnet/architecture/serverless/
               topicHref: /dotnet/architecture/serverless/index
+            - name: ASP.NET Web Forms용 Blazor 개발자 eBook
+              tocHref: /dotnet/architecture/blazor-for-web-forms-developers/
+              topicHref: /dotnet/architecture/blazor-for-web-forms-developers/index
+            - name: WCF 개발자를 위한 ASP.NET Core gRPC
+              tocHref: /dotnet/architecture/grpc-for-wcf-developers/
+              topicHref: /dotnet/architecture/grpc-for-wcf-developers/index
         - name: .NET 가이드
           tocHref: /dotnet/standard/
           topicHref: /dotnet/standard/index
