@@ -6,24 +6,25 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 09/05/2019
-ms.openlocfilehash: 2d18e7750e0c2e2a44028d1e906a8536e47d979d
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.date: 09/17/2019
+ms.openlocfilehash: 08ad77fbad7ad468e45fe629041ded82544792f2
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70394292"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116117"
 ---
-# <a name="whats-new-in-net-core-30-preview-9"></a>.NET Core 3.0(Preview 9)의 새로운 기능
+# <a name="whats-new-in-net-core-30-release-candidate-1"></a>.NET Core 3.0(릴리스 후보 1)의 새로운 기능
 
-이 문서는 .NET Core 3.0(Preview 9)의 새로운 기능에 대해 설명합니다. 가장 중요한 개선 사항 중 하나는 Windows 데스크톱 애플리케이션에 대한 지원(Windows만 해당)입니다. .NET Core 3.0 SDK 구성 요소 Windows 데스크톱을 사용하여 Windows Forms 및 Windows Presentation Foundation(WPF) 애플리케이션을 포트할 수 있습니다. 분명히 말하지만, Windows 데스크톱 구성 요소는 Windows에서만 지원되고 포함됩니다. 자세한 내용은 이 문서 후반부의 [Windows 데스크톱](#windows-desktop) 섹션을 참조하세요.
+이 문서는 .NET Core 3.0 릴리스 후보 1(RC1)의 새로운 기능에 대해 설명합니다. 가장 중요한 개선 사항 중 하나는 Windows 데스크톱 애플리케이션에 대한 지원(Windows만 해당)입니다. .NET Core 3.0 SDK 구성 요소 Windows 데스크톱을 사용하여 Windows Forms 및 Windows Presentation Foundation(WPF) 애플리케이션을 포트할 수 있습니다. 분명히 말하지만, Windows 데스크톱 구성 요소는 Windows에서만 지원되고 포함됩니다. 자세한 내용은 이 문서 후반부의 [Windows 데스크톱](#windows-desktop) 섹션을 참조하세요.
 
-.NET Core 3.0에서는 C# 8.0에 대한 지원이 추가되었습니다. [Visual Studio 2019 16.3 Preview 3](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview), [Mac용 Visual Studio 8.3](https://docs.microsoft.com/visualstudio/mac/install-preview?view=vsmac-2019) 또는 [Visual Studio Code](https://code.visualstudio.com/)를 **C# 확장명**과 함께 사용하는 것이 좋습니다.
+.NET Core 3.0에서는 C# 8.0에 대한 지원이 추가되었습니다. [Visual Studio 2019 16.3 미리 보기 4](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview), [Mac용 Visual Studio 8.3](https://docs.microsoft.com/visualstudio/mac/install-preview?view=vsmac-2019) 또는 [Visual Studio Code](https://code.visualstudio.com/)를 **C# 확장명**과 함께 사용하는 것이 좋습니다.
 
-Windows, macOS 또는 Linux에서 지금 바로 [.NET Core 3.0 Preview 9를 다운로드하여 시작](https://aka.ms/netcore3download)하세요.
+Windows, macOS 또는 Linux에서 지금 바로 [.NET Core 3.0 RC1을 다운로드하여 시작](https://aka.ms/netcore3download)하세요.
 
 각 미리 보기 릴리스에 대한 자세한 내용은 다음 공지를 참조하세요.
 
+- [.NET Core 3.0 RC1 공지](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-release-candidate-1/)
 - [.NET Core 3.0 Preview 9 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/)
 - [.NET Core 3.0 Preview 8 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)
 - [.NET Core 3.0 Preview 7 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
@@ -36,9 +37,9 @@ Windows, macOS 또는 Linux에서 지금 바로 [.NET Core 3.0 Preview 9를 다�
 
 ## <a name="production-supported-preview"></a>프로덕션 지원 미리 보기
 
-.NET Core Preview 9는 Microsoft에서 준비하는 프로덕션으로 간주되며 완벽하게 지원됩니다. Preview 7부터 릴리스는 새 기능을 추가하는 대신 .NET Core 3.0을 개선하는 데 집중합니다. Preview 9에서 변경된 내용에 관한 자세한 내용은 [Preview 9 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/)을 참조하세요.
+.NET Core RC1은 Microsoft에서 프로덕션 준비로 간주되며 완벽하게 지원됩니다. Preview 7부터 릴리스는 새 기능을 추가하는 대신 .NET Core 3.0을 개선하는 데 집중합니다. RC1에서 변경된 사항에 대한 자세한 내용은 [RC1 공지](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-release-candidate-1/)를 참조하세요.
 
-이전 미리 보기 릴리스를 사용하는 경우 “Go Live” 지원을 계속하려면 Preview 9로 이동해야 합니다.
+이전 미리 보기 릴리스를 사용하는 경우 “실시간 전송” 지원을 계속하려면 RC1으로 이동해야 합니다.
 
 ## <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Installer
 
@@ -125,7 +126,7 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 또는
 
-```console
+```dotnetcli
 dotnet publish -r win10-x64 /p:PublishSingleFile=true
 ```
 
@@ -147,7 +148,7 @@ dotnet publish -r win10-x64 /p:PublishSingleFile=true
 </PropertyGroup>
 ```
 
-```console
+```dotnetcli
 dotnet publish -r <rid> -c Release
 ```
 
@@ -197,7 +198,7 @@ R2R 이진 파일은 애플리케이션이 로드될 때 JIT(Just-In-Time) 컴�
 
 01. 자체 포함 앱을 게시합니다. 예를 들어 이 명령은 Windows 64비트 버전용 자체 포함 앱을 만듭니다.
 
-    ```console
+    ```dotnetcli
     dotnet publish -c Release -r win-x64 --self-contained true
     ```
 
@@ -266,7 +267,7 @@ Windows 데스크톱 구성 요소는 Windows .NET Core 3.0 SDK의 일부입니�
 
 다음 `dotnet` 명령을 사용하여 새 WPF 또는 Windows Forms 앱을 만들 수 있습니다.
 
-```console
+```dotnetcli
 dotnet new wpf
 dotnet new winforms
 ```

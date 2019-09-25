@@ -1,19 +1,21 @@
 ---
 title: .NET 이식성 분석기 - .NET
 description: .NET 이식성 분석기 도구를 사용하여 .NET Core, .NET Standard, UWP 및 Xamarin을 비롯한 다양한 .NET 구현에서 코드가 얼마나 이식성이 있는지 평가하는 방법을 알아봅니다.
-ms.date: 07/18/2019
+ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: fdd2e9f288649b35b778b5da505408822e0ea8fe
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 246c1d25a99e61d7e2f69f1b65ae3534d22571ba
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107512"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053996"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET 이식성 분석기
 
-라이브러리가 다중 플랫폼을 지원하도록 만들고 싶으세요? 애플리케이션이 iOS, Android 및 Mac용 .NET Core, .NET Standard, UWP 및 Xamarin을 비롯한 다른 .NET 구현 및 프로필과 호환되도록 하는 데 필요한 작업량을 확인하고 싶으세요? [.NET 이식성 분석기](https://github.com/microsoft/dotnet-apiport)는 어셈블리를 분석하여 프로그램이 .NET 구현에서 얼마나 유연한지에 대한 자세한 보고서를 제공하는 도구입니다. 이식성 분석기는 프로젝트당 어셈블리를 분석하는 [Visual Studio 확장](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) 및 지정된 파일 또는 디렉터리별로 어셈블리를 분석하는 [ApiPort 콘솔 앱](https://aka.ms/apiportdownload)으로 제공됩니다.
+라이브러리가 다중 플랫폼을 지원하도록 만들고 싶으세요? .NET Framework 애플리케이션을 .NET Core에서 실행하는 데 필요한 작업량을 확인하고 싶으세요?  [.Net 이식성 분석기](https://github.com/microsoft/dotnet-apiport)는 어셈블리를 분석하여 지정된 대상 .NET 플랫폼에 이식할 수 있는 애플리케이션 또는 라이브러리에 대해 누락된 .NET API에 대한 자세한 보고서를 제공하는 도구입니다. 이식성 분석기는 프로젝트당 어셈블리를 분석하는 [Visual Studio 확장](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) 및 지정된 파일 또는 디렉터리별로 어셈블리를 분석하는 [ApiPort 콘솔 앱](https://aka.ms/apiportdownload)으로 제공됩니다.
+
+프로젝트를 .NET Core와 같은 대상 플랫폼을 대상으로 하도록 변환하고 나면 Roslyn 기반 [API 분석기 도구]([https://docs.microsoft.com/en-us/dotnet/standard/analyzers/api-analyzer](api-analyzer.md)를 사용하여 PlatformNotSupportedException 및 일부 다른 호환성 문제를 발생시키는 API를 식별할 수 있습니다.
 
 ## <a name="common-targets"></a>공통 대상
 
@@ -58,7 +60,7 @@ Visual Studio에서 전체 프로젝트를 분석하려면 **솔루션 탐색기
 
 ![이식성 세부 정보](./media/portability-analyzer/portabilitydetails.png)
 
-보고서의 세부 정보 섹션에는 대상 플랫폼 중 하나에서 누락된 API가 나열되어 있습니다. 
+보고서의 **세부 정보** 섹션에는 선택된 **대상 플랫폼**에서 누락된 API가 나열되어 있습니다. 
 
 - 대상 유형: 형식에는 대상 플랫폼에서 API가 누락되어 있습니다. 
 - 대상 멤버: 메서드가 대상 플랫폼에서 누락되었습니다. 

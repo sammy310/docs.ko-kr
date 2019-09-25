@@ -2,12 +2,12 @@
 title: 단순 데이터 기반 CRUD 마이크로 서비스 만들기
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스 애플리케이션의 컨텍스트 내에서 단순 CRUD(데이터 기반) 마이크로 서비스의 생성을 이해합니다.
 ms.date: 01/07/2019
-ms.openlocfilehash: 53aba727c8dae35df8b34bc1558c0cc390fe2014
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 74d9022ffa70ade6ae6e7d405403524dfbc2145a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676230"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039908"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>단순 데이터 기반 CRUD 마이크로 서비스 만들기
 
@@ -41,7 +41,7 @@ Docker 컨테이너 안에서 SQL Server 같은 데이터베이스 서버를 실
 
 **그림 6-6** Visual Studio에서 ASP.NET Core Web API 프로젝트 만들기
 
-프로젝트를 만든 후에는 다른 Web API 프로젝트에서와 마찬가지로 Entity Framework API 또는 타 API를 사용하여 MVC 컨트롤러를 구현할 수 있습니다. 새 Web API 프로젝트에서는 마이크로 서비스의 종속성이 ASP.NET Core 자체 밖에 없습니다. 내부적으로 *Microsoft.AspNetCore.All* 종속성 내에서는 그림 6-7에서처럼 Entity Framework 및 기타 여러 .NET Core Nuget 패키지를 참조하고 있습니다.
+프로젝트를 만든 후에는 다른 Web API 프로젝트에서와 마찬가지로 Entity Framework API 또는 타 API를 사용하여 MVC 컨트롤러를 구현할 수 있습니다. 새 Web API 프로젝트에서는 마이크로 서비스의 종속성이 ASP.NET Core 자체 밖에 없습니다. 내부적으로 *Microsoft.AspNetCore.All* 종속성 내에서는 그림 6-7에서처럼 Entity Framework 및 기타 여러 .NET Core NuGet 패키지를 참조하고 있습니다.
 
 ![API 프로젝트에는 모든 필수 패키지에 대한 참조를 포함하는 Microsoft.AspNetCore.App NuGet 패키지에 대한 참조가 포함되어 있습니다. 여기에는 다른 패키지도 포함할 수 있습니다.](./media/image8.png)
 
@@ -87,14 +87,12 @@ public class CatalogItem
 public class CatalogContext : DbContext
 {
     public CatalogContext(DbContextOptions<CatalogContext> options) : base(options)
-    {
-    }
+    { }
     public DbSet<CatalogItem> CatalogItems { get; set; }
     public DbSet<CatalogBrand> CatalogBrands { get; set; }
     public DbSet<CatalogType> CatalogTypes { get; set; }
 
     // Additional code ...
-
 }
 ```
 
@@ -114,15 +112,17 @@ public class CatalogController : ControllerBase
     private readonly CatalogSettings _settings;
     private readonly ICatalogIntegrationEventService _catalogIntegrationEventService;
 
-    public CatalogController(CatalogContext context,
-                             IOptionsSnapshot<CatalogSettings> settings,
-                             ICatalogIntegrationEventService catalogIntegrationEventService)
+    public CatalogController(
+        CatalogContext context,
+        IOptionsSnapshot<CatalogSettings> settings,
+        ICatalogIntegrationEventService catalogIntegrationEventService)
     {
         _catalogContext = context ?? throw new ArgumentNullException(nameof(context));
-        _catalogIntegrationEventService = catalogIntegrationEventService ?? throw new ArgumentNullException(nameof(catalogIntegrationEventService));
+        _catalogIntegrationEventService = catalogIntegrationEventService 
+            ?? throw new ArgumentNullException(nameof(catalogIntegrationEventService));
 
         _settings = settings.Value;
-        ((DbContext)context).ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
+        context.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
     }
 
     // GET api/v1/[controller]/items[?pageSize=3&pageIndex=10]
@@ -182,12 +182,8 @@ public void ConfigureServices(IServiceCollection services)
         options.UseSqlServer(Configuration["ConnectionString"],
         sqlServerOptionsAction: sqlOptions =>
         {
-           sqlOptions.
-               MigrationsAssembly(
-                   typeof(Startup).
-                    GetTypeInfo().
-                     Assembly.
-                      GetName().Name);
+            sqlOptions.MigrationsAssembly(
+                typeof(Startup).GetTypeInfo().Assembly.GetName().Name);
 
            //Configuring Connection Resiliency:
            sqlOptions.
@@ -204,7 +200,6 @@ public void ConfigureServices(IServiceCollection services)
    });
 
   //...
-
 }
 ```
 

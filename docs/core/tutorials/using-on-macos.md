@@ -1,17 +1,16 @@
 ---
-title: macOS에서 .NET Core 시작
+title: '자습서: Visual Studio Code를 사용하여 macOS에서 .NET Core 솔루션 만들기'
 description: 이 문서에서는 Visual Studio Code를 사용하여 .NET Core 솔루션을 만드는 단계와 워크플로를 제공합니다.
-author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: 572174cb09dbde03095fa9444989356038bab9b7
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 5df43ae235b9fd901a65f7f8898bec67e24de682
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849354"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117363"
 ---
-# <a name="get-started-with-net-core-on-macos"></a>macOS에서 .NET Core 시작
+# <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 macOS에서 .NET Core 솔루션 만들기
 
 이 문서에서는 macOS용 .NET Core 솔루션을 만드는 단계와 워크플로를 제공합니다. 프로젝트 및 단위 테스트를 만들고, 디버깅 도구를 사용하고, [NuGet](https://www.nuget.org/)을 통해 타사 라이브러리를 통합하는 방법을 알아봅니다.
 
@@ -32,21 +31,21 @@ Visual Studio Code 팔레트를 열려면 Visual Studio Code를 열고 <kbd>F1</
 
 Visual Studio Code를 시작합니다. <kbd>Ctrl</kbd>+<kbd>\`</kbd> 키(역따옴표 또는 억음 문자)를 누르거나 메뉴에서 **보기 > 통합 터미널**을 선택하여 Visual Studio Code에서 포함된 터미널을 엽니다. Visual Studio Code 외부에서 작업하려는 경우 탐색기 **명령 프롬프트에서 열기** 명령(Mac 또는 Linux에서는 **터미널에서 열기**)을 사용하여 외부 셸을 열 수 있습니다.
 
-하나 이상의 .NET Core 프로젝트에 대한 컨테이너로 사용되는 솔루션 파일을 먼저 만듭니다. 터미널에서 *golden* 폴더를 만들고 폴더를 엽니다. 이 폴더는 솔루션의 루트입니다. [`dotnet new`](../tools/dotnet-new.md) 명령을 실행하여 *golden.sln*이라는 새 솔루션을 만듭니다.
+하나 이상의 .NET Core 프로젝트에 대한 컨테이너로 사용되는 솔루션 파일을 먼저 만듭니다. 터미널에서 [`dotnet new`](../tools/dotnet-new.md) 명령을 실행하여 *golden*이라는 새 폴더에 새 솔루션 *golden.sln*을 만듭니다.
 
-```console
-dotnet new sln
+```dotnetcli
+dotnet new sln -o golden
 ```
 
-*golden* 폴더에서 다음 명령을 실행하여 *library* 폴더에 두 파일 *library.csproj* 및 *Class1.cs*를 생성하는 라이브러리 프로젝트를 만듭니다.
+새 *golden* 폴더로 이동하고 다음 명령을 실행하여 *library* 폴더에 두 파일 *library.csproj* 및 *Class1.cs*를 생성하는 라이브러리 프로젝트를 만듭니다.
 
-```console
+```dotnetcli
 dotnet new classlib -o library
 ```
 
 [`dotnet sln`](../tools/dotnet-sln.md) 명령을 실행하여 새로 만든 *library.csproj* 프로젝트를 솔루션에 추가합니다.
 
-```console
+```dotnetcli
 dotnet sln add library/library.csproj
 ```
 
@@ -64,7 +63,7 @@ dotnet sln add library/library.csproj
 
 라이브러리 메서드는 JSON 형식으로 개체를 직렬화 및 deserialize합니다. JSON serialization 및 deserialization을 지원하려면 `Newtonsoft.Json` NuGet 패키지에 대한 참조를 추가합니다. `dotnet add` 명령은 프로젝트에 새 항목을 추가합니다. NuGet 패키지에 대한 참조를 추가하려면 [`dotnet add package`](../tools/dotnet-add-package.md) 명령을 사용하고 패키지 이름을 지정합니다.
 
-```console
+```dotnetcli
 dotnet add library package Newtonsoft.Json
 ```
 
@@ -78,7 +77,7 @@ dotnet add library package Newtonsoft.Json
 
 종속성을 복원하고 *library* 내에 *obj* 폴더를 만드는 [`dotnet restore`](../tools/dotnet-restore.md)([참고 참조](#dotnet-restore-note))를 실행합니다. 이 폴더 안에는 *project.assets.json* 파일을 비롯한 세 개의 파일이 들어 있습니다.
 
-```console
+```dotnetcli
 dotnet restore
 ```
 
@@ -101,7 +100,7 @@ namespace Library
 
 [`dotnet build`](../tools/dotnet-build.md) 명령을 사용하여 라이브러리를 빌드합니다. 그러면 *golden/library/bin/Debug/netstandard1.4* 아래에 *library.dll* 파일이 생성됩니다.
 
-```console
+```dotnetcli
 dotnet build
 ```
 
@@ -109,19 +108,19 @@ dotnet build
 
 라이브러리에 대한 테스트 프로젝트를 빌드합니다. *golden* 폴더에서 새 테스트 프로젝트를 만듭니다.
 
-```console
+```dotnetcli
 dotnet new xunit -o test-library
 ```
 
 테스트 프로젝트를 솔루션에 추가합니다.
 
-```console
+```dotnetcli
 dotnet sln add test-library/test-library.csproj
 ```
 
 컴파일러가 라이브러리 프로젝트를 찾아서 사용할 수 있도록 이전 섹션에서 만든 라이브러리에 대한 프로젝트 참조를 추가합니다. [`dotnet add reference`](../tools/dotnet-add-reference.md) 명령을 사용합니다.
 
-```console
+```dotnetcli
 dotnet add test-library/test-library.csproj reference library/library.csproj
 ```
 
@@ -155,7 +154,7 @@ namespace TestApp
 
 *golden* 폴더에서 다음 명령을 실행합니다.
 
-```console
+```dotnetcli
 dotnet restore 
 dotnet test test-library/test-library.csproj
 ```
@@ -164,7 +163,7 @@ dotnet test test-library/test-library.csproj
 
 *UnitTest1.cs* 파일을 편집하고 어설션을 `Assert.NotEqual`에서 `Assert.Equal`로 변경합니다. *golden* 폴더에서 다음 명령을 실행하여 테스트를 다시 실행합니다. 이번에는 테스트를 통과합니다.
 
-```console
+```dotnetcli
 dotnet test test-library/test-library.csproj
 ```
 
@@ -174,19 +173,19 @@ dotnet test test-library/test-library.csproj
 
 *golden* 폴더에서 새 콘솔 애플리케이션을 만듭니다.
 
-```console
+```dotnetcli
 dotnet new console -o app
 ```
 
 콘솔 앱 프로젝트를 솔루션에 추가합니다.
 
-```console
+```dotnetcli
 dotnet sln add app/app.csproj
 ```
 
 `dotnet add reference` 명령을 실행하여 라이브러리에 대한 종속성을 만듭니다.
 
-```console
+```dotnetcli
 dotnet add app/app.csproj reference library/library.csproj
 ```
 
@@ -205,7 +204,7 @@ using Library;
 
 다음 `dotnet run` 명령을 실행하여 실행 파일을 실행합니다. 여기서 `dotnet run`에 대한 `-p` 옵션은 주 애플리케이션에 대한 프로젝트를 지정합니다. 앱이 "The answer is 42" 문자열을 생성합니다.
 
-```console
+```dotnetcli
 dotnet run -p app/app.csproj
 ```
 

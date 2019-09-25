@@ -2,12 +2,12 @@
 title: NoSQL 데이터베이스를 지속성 인프라로 사용
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 일반적으로 NoSql 데이터베이스를 사용하고, 특히 Azure Cosmos DB를 지속성을 구현하는 옵션으로 사용하는 것을 이해합니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: 7a8573f8f668a5b75f50acde57a2f4c42ce4d189
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: d96d72fe675dfa830029e4311f2cf165a305c328
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374032"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039954"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>NoSQL 데이터베이스를 지속성 인프라로 사용
 
@@ -280,7 +280,7 @@ services:
 
 ```
 
-`ConnectionString` 환경 변수는 다음 방식으로 해결됩니다. `ESHOP_AZURE_COSMOSDB` 글로벌 변수가 Azure Cosmos DB 연결 문자열로 `.env` 파일에서 정의되는 경우 클라우드에서 Azure Cosmos DB 데이터베이스에 액세스하는 데 사용합니다. 정의되지 않은 경우 mongodb://nosql.data 값을 가지고 개발 mongodb 컨테이너를 사용합니다.
+`ConnectionString` 환경 변수는 다음 방식으로 해결됩니다. `ESHOP_AZURE_COSMOSDB` 글로벌 변수가 Azure Cosmos DB 연결 문자열로 `.env` 파일에서 정의되는 경우 클라우드에서 Azure Cosmos DB 데이터베이스에 액세스하는 데 사용합니다. 정의되지 않은 경우 `mongodb://nosql.data` 값을 취하고 개발 mongodb 컨테이너를 사용합니다.
 
 다음 코드는 eShopOnContainers에서 구현된 것처럼 Azure Cosmos DB 연결 문자열 전역 환경 변수가 있는 `.env` 파일을 보여 줍니다.
 
@@ -324,7 +324,7 @@ services:
   <https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction>
 
 - **Azure Cosmos DB: .NET 및 Azure Portal에서 MongoDB API 웹앱 빌드**  \
-  [https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet](https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet )
+  <https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet>
 
 - **로컬 개발 및 테스트에 Azure Cosmos DB 에뮬레이터 사용**  \
   <https://docs.microsoft.com/azure/cosmos-db/local-emulator>

@@ -1,17 +1,17 @@
 ---
 title: stackalloc 연산자 - C# 참조
 ms.custom: seodec18
-ms.date: 06/10/2019
+ms.date: 09/20/2019
 f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc operator [C#]
-ms.openlocfilehash: f211acaa8c47ab42a1f7f06cff6c35570cd22b75
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 9ef5f98f2b4973c5873417ecc9a71c187e7299b9
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433837"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182423"
 ---
 # <a name="stackalloc-operator-c-reference"></a>stackalloc 연산자(C# 참조)
 
@@ -31,6 +31,10 @@ ms.locfileid: "68433837"
 
   [!code-csharp[stackalloc expression](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AsExpression)]
 
+  C# 8.0부터 다음 예제와 같이 <xref:System.Span%601> 또는 <xref:System.ReadOnlySpan%601> 변수가 허용되는 경우 다른 식 내부에서 `stackalloc` 식을 사용할 수 있습니다.
+
+  [!code-csharp[stackalloc in nested expressions](~/samples/csharp/language-reference/operators/StackallocOperator.cs#Nested)]
+
   > [!NOTE]
   > 스택 할당 메모리로 작업할 때는 가능한 한, <xref:System.Span%601> 또는 <xref:System.ReadOnlySpan%601> 형식을 사용하는 것이 좋습니다.
 
@@ -39,6 +43,8 @@ ms.locfileid: "68433837"
   [!code-csharp[stackalloc pointer](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AssignToPointer)]
 
   포인터 형식으로 작업할 때는 위 예제와 같이 `unsafe` 컨텍스트를 사용해야 합니다.
+
+  포인터 형식의 경우 지역 변수 선언에서만 `stackalloc` 식을 사용하여 변수를 초기화할 수 있습니다.
 
 새로 할당된 메모리의 콘텐츠는 정의되지 않습니다. C# 7.3부터, 배열 이니셜라이저 구문을 사용하여 새로 할당된 메모리의 콘텐츠를 정의할 수 있습니다. 다음 예제에서는 이 작업을 수행하는 다양한 방법을 보여 줍니다.
 

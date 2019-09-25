@@ -2,12 +2,12 @@
 title: 마이크로 서비스 지향 애플리케이션 디자인
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스 지향 애플리케이션의 장점과 단점을 이해하면 최신 정보에 입각한 결정을 내릴 수 있습니다.
 ms.date: 10/02/2018
-ms.openlocfilehash: ddca4ecf0b0ed1103e4da75ecc759546d6e53800
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: dc3c8ccd95505cb828383f499b9bf950e7c12a30
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926532"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039822"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>마이크로 서비스 지향 애플리케이션 디자인
 
@@ -89,8 +89,8 @@ ms.locfileid: "70926532"
 
 ### <a name="additional-resources"></a>추가 자료
 
-- **eShopOnContainers GitHub 리포지토리. 참조 애플리케이션의 소스 코드**\
-    <https://aka.ms/eShopOnContainers/>
+- **eShopOnContainers GitHub 리포지토리. 참조 애플리케이션의 소스 코드** \
+  <https://aka.ms/eShopOnContainers/>
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>마이크로 서비스 기반 솔루션의 이점
 

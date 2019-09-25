@@ -2,12 +2,12 @@
 title: 높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 description: Kubernetes 애플리케이션 수명 주기를 개발하는 동안 높은 확장성과 가용성 및 Azure Dev Spaces의 가능성을 위해 마이크로 서비스 및 다중 컨테이너 애플리케이션을 오케스트레이션하는 옵션을 검색합니다.
 ms.date: 09/20/2018
-ms.openlocfilehash: 9540ea3941e90b0f9ebfb79dff6f84bb368d0fb0
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: aef9dc2206c24d685610616a2a4d7850837b832d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991153"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040118"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 
@@ -35,21 +35,10 @@ ms.locfileid: "70991153"
 
 ## <a name="software-platforms-for-container-clustering-orchestration-and-scheduling"></a>컨테이너 클러스터링, 오케스트레이션 및 예약용 소프트웨어 플랫폼
 
-### <a name="kubernetes"></a>Kubernetes
-
-![Kubernetes 로고](./media/image24.png)
-
-> [*Kubernetes*](https://kubernetes.io/)는 클러스터 인프라와 컨테이너 예약에서 기능 오케스트레이션에 이르기까지 다양한 기능을 제공하는 오픈 소스 제품입니다. 이를 통해 호스트 클러스터 전체에서 애플리케이션 컨테이너의 배포, 확장 및 작업을 자동화할 수 있습니다.
->
-> *Kubernetes*는 쉽게 관리하고 검색할 수 있도록 애플리케이션 컨테이너를 논리 단위로 그룹화하는 컨테이너 중심 인프라를 제공합니다.
->
-> *Kubernetes*의 완성도는 Linux에서 높았지만, Windows에서는 그렇지 못했습니다.
-
-### <a name="azure-kubernetes-service-aks"></a>AKS(Azure Kubernetes Service)
-
-![Azure Kubernetes Service 로고](./media/image41.png)
-
-> [AKS(Azure Kubernetes Service)](https://azure.microsoft.com/services/kubernetes-service/)는 Kubernetes 클러스터의 관리, 배포 및 운영을 간소화하는 Azure에서 관리되는 Kubernetes 컨테이너 오케스트레이션 서비스입니다.
+|     |   |
+|-----|---|
+| **Kubernetes** <br> ![Kubernetes 로고](./media/image24.png) | [*Kubernetes*](https://kubernetes.io/)는 클러스터 인프라와 컨테이너 예약에서 기능 오케스트레이션에 이르기까지 다양한 기능을 제공하는 오픈 소스 제품입니다. 이를 통해 호스트 클러스터 전체에서 애플리케이션 컨테이너의 배포, 확장 및 작업을 자동화할 수 있습니다. <br><br> *Kubernetes*는 쉽게 관리하고 검색할 수 있도록 애플리케이션 컨테이너를 논리 단위로 그룹화하는 컨테이너 중심 인프라를 제공합니다. <br><br> *Kubernetes*의 완성도는 Linux에서 높았지만, Windows에서는 그렇지 못했습니다. |
+| **AKS(Azure Kubernetes Service)** <br> ![Azure Kubernetes Service 로고](./media/image41.png) | [AKS](https://azure.microsoft.com/services/kubernetes-service/)는 관리되는 Kubernetes 컨테이너 오케스트레이션 서비스로 Kubernetes 클러스터의 관리, 배포 및 운영을 간소화합니다. |
 
 ## <a name="using-container-based-orchestrators-in-microsoft-azure"></a>Microsoft Azure에서 컨테이너 기반 오케스트레이션 사용
 

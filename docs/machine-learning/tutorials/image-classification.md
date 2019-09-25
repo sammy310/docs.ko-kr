@@ -4,12 +4,12 @@ description: 전이 학습 및 ML.NET을 사용하여 이미지 분류 TensorFlo
 ms.date: 07/09/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: eb6e3d3f3a33aa7360802ce1bc6c16532539c828
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: e069abe44b77b1dc31b78ecec1971ccc73f2e012
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929233"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054075"
 ---
 # <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>자습서: 전이 학습 및 ML.NET을 사용하여 TensorFlow 이미지 분류자 재학습
 
@@ -355,7 +355,7 @@ ML.NET의 데이터는 [IDataView 클래스](xref:Microsoft.ML.IDataView)로 표
 
 [!code-csharp[EnumerateDataViews](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#EnumerateDataViews)]
 
-`DisplayResults()` 메서드를 호출하여 데이터와 예측을 `ReuseAndTuneInceptionModel()` 메서드의 다음 줄로 표시합니다.
+다음 코드를 추가하여 데이터 및 예측을 `ReuseAndTuneInceptionModel()` 메서드의 다음 줄과 같이 표시합니다.
 
 [!code-csharp[CallDisplayResults1](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallDisplayResults1)]
 
