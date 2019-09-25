@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: 37133a90ae5bfa18ae17c279caff40d0d30ea25c
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 3cd1096a07b1de39d1961fdc8c5add56604804ea
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928922"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151832"
 ---
 # <a name="metadata-and-markdown-template"></a>메타데이터 및 Markdown 템플릿
 
@@ -276,26 +276,45 @@ UID에 특수 문자 \`, \# 또는 \*가 포함된 경우 UID 값은 각각 `%60
 
 |name|Markdown 레이블|
 |-----|-------|
-|C# 사용 ASP.NET|aspx-csharp|
-|VB 사용 ASP.NET|aspx-vb|
+|.NET 콘솔|dotnetcli|
+|ASP.NET(C#)|aspx-csharp|
+|ASP.NET(VB)|aspx-vb|
 |Azure CLI|azurecli|
 |AzCopy|azcopy|
+|Azure PowerShell|azurepowershell|
+|Bash|bash|
 |C++|cpp|
+|C++/CX|cppcx|
+|C++/WinRT|cppwinrt|
 |C#|c샵|
 |브라우저의 C#|csharp-interactive|
 |콘솔|콘솔|
+|CSHTML|cshtml|
+|DAX|dax|
+|Dockerfile|dockerfile|
 |F#|fsharp|
+|이동|이동|
+|HTML|html|
+|HTTP|http|
 |Java|java|
 |JavaScript|javascript|
 |JSON|json :|
+|Kusto 쿼리 언어|kusto|
+|Markdown|md|
 |NodeJS|nodejs|
 |Objective-C|objc|
+|OData|odata|
 |PHP|php|
+|PowerApps(점 소수 구분 기호)|powerapps-dot|
+|PowerApps(쉼표 소수 구분 기호)|powerapps-comma|
 |PowerShell|powershell|
 |Python|python|
+|Q#|qsharp|
+|R|r|
 |Ruby|ruby|
 |SQL|sql|
 |Swift|swift|
+|TypeScript|typescript|
 |VB|vb|
 |XAML|xaml|
 |XML|Xml|

@@ -3,12 +3,12 @@ title: Azure용 클라우드 네이티브 .NET 애플리케이션 설계
 description: Azure의 컨테이너, 마이크로 서비스 및 서버리스 기능을 활용하여 클라우드 네이티브 애플리케이션을 빌드하는 방법을 보여 주는 가이드입니다.
 author: ardalis
 ms.date: 03/07/2019
-ms.openlocfilehash: ce9898366d0327dd619b36cdf1487229d9cda7f5
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 67e235b051702308d2455b2501bfb59a4317635b
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182714"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214171"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Azure용 클라우드 네이티브 .NET 애플리케이션 설계
 
@@ -40,7 +40,7 @@ Docker 고래 로고는 Docker, Inc.의 등록 상표로, 허가하에 사용됩
 
 기타 모든 표시와 로고는 해당 소유자의 자산입니다.
 
-만든 이:
+작성자:
 
 > **Steve "ardalis" Smith** - 소프트웨어 설계자이자 강사 - [Ardalis.com](https://ardalis.com)
 >
