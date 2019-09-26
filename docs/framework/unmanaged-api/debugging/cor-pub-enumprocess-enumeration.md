@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 412e2bb7da7b5b3396342df169d56d2724ddb466
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eab5fc13b74d8af4f0baaa3953c5c73ea255bfe6
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740555"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274017"
 ---
-# <a name="corpubenumprocess-enumeration"></a>COR_PUB_ENUMPROCESS 열거형
+# <a name="cor_pub_enumprocess-enumeration"></a>COR_PUB_ENUMPROCESS 열거형
 열거할 프로세스 형식을 식별합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -41,17 +41,17 @@ typedef enum {
 |`COR_PUB_MANAGEDONLY`|관리 되는 프로세스입니다.|  
   
 ## <a name="remarks"></a>설명  
- 관리 되지 않는 디버깅 API의 현재 버전 관리 프로세스에만 열거 합니다.  
+ 관리 되지 않는 디버깅 API의 현재 버전은 관리 되는 프로세스만 열거 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorPub.idl, CorPub.h  
   
- **라이브러리:** CorGuids.lib  
+ **라이브러리** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [디버깅 열거형](debugging-enumerations.md)

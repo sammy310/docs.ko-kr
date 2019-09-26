@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 2f34ae3e6687027aeb75e7ea169487fc8cbda466
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3f6928832d822422177ebd7def142422953468a0
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741038"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274289"
 ---
-# <a name="clrdatailaddressmap-structure"></a>CLRDATA_IL_ADDRESS_MAP 구조체
+# <a name="clrdata_il_address_map-structure"></a>CLRDATA_IL_ADDRESS_MAP 구조체
 
-IL 주소 매핑을 정의합니다.
+매핑을 처리할 IL을 정의 합니다.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -42,7 +42,7 @@ typedef struct
 
 ## <a name="members"></a>멤버
 
-| 멤버         | Description                                            |
+| 멤버         | 설명                                            |
 | -------------- | ------------------------------------------------------ |
 | `ilOffset`     | 포함 된 주소 범위에 대 한 IL 오프셋              |
 | `startAddress` | 범위의 시작 주소입니다.                        |
@@ -51,17 +51,17 @@ typedef struct
 
 ## <a name="remarks"></a>설명
 
-이 구조는 런타임 내에서 있으며 모든 헤더 또는 라이브러리 파일을 통해 노출 되지 않습니다. 를 사용 하려면 구조를 정의 위에 지정 된 대로 위치 `CLRDATA_ADDRESS` 는 64 비트 부호 없는 정수입니다.
+이 구조체는 런타임 내에 있으며 헤더 또는 라이브러리 파일을 통해 노출 되지 않습니다. 이를 사용 하려면 위에 지정 된 대로 구조를 정의 합니다 `CLRDATA_ADDRESS` . 여기서은 64 비트의 부호 없는 정수입니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+**플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
 **헤더:** 없음  
-**라이브러리:** 없음   
+**라이브러리** 없음   
 **.NET Framework 버전:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [CLRDataSourceType 열거형](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [디버깅 구조체](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [CLRDataSourceType 열거형](clrdatasourcetype-enumeration.md)
+- [디버깅](index.md)
+- [디버깅 구조체](debugging-structures.md)

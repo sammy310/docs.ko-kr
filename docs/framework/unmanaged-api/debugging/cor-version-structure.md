@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1f0a36d186c6d9788d43b075bf9d67c36ed1acb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ffbe571ebc3d14c12e57b1f805d77e56e97d12e1
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740560"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274179"
 ---
-# <a name="corversion-structure"></a>COR_VERSION 구조체
+# <a name="cor_version-structure"></a>COR_VERSION 구조체
 공용 언어 런타임의 4부분으로 구성된 표준 버전 번호를 저장합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -39,7 +39,7 @@ typedef struct _COR_VERSION {
   
 ## <a name="members"></a>멤버  
   
-|멤버|Description|  
+|멤버|설명|  
 |------------|-----------------|  
 |`dwMajor`|주 버전 번호입니다.|  
 |`dwMinor`|부 버전 번호입니다.|  
@@ -47,18 +47,18 @@ typedef struct _COR_VERSION {
 |`dwSubBuild`|하위 빌드 번호입니다.|  
   
 ## <a name="remarks"></a>설명  
- 버전 번호를 1.0.3705.288 인 경우 1 주 버전 번호, 0은 부 버전 번호를, 3705 빌드 번호 이며 288 하위 빌드입니다.  
+ 버전 번호가 1.0.3705.288 인 경우 1은 주 버전 번호이 고, 0은 부 버전 번호이 고, 3705는 빌드 번호 이며, 288은 하위 빌드 번호입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl  
   
- **라이브러리:** CorGuids.lib  
+ **라이브러리** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [디버깅 구조체](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [디버깅 구조체](debugging-structures.md)
+- [디버깅](index.md)

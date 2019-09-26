@@ -14,10 +14,10 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
 ms.openlocfilehash: d80f8e3bc729689b274af520bc37fda8417b0407
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69658576"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>연습: 디자이너를 사용하여 ListView 및 TreeView 컨트롤에서 탐색기 스타일 인터페이스 만들기
@@ -52,7 +52,7 @@ Visual Studio의 이점 중 하나는 짧은 시간 내에 전문적인 Windows 
 
     2. <xref:System.Windows.Forms.ListView.View%2A> 속성을 <xref:System.Windows.Forms.View.Details>으로 설정합니다.
 
-    3. 속성에서![ 줄임표 (Visual Studio 속성 창의 줄임표 단추 (...)를 클릭 하 여 ColumnHeader 컬렉션 편집기를 엽니다.](./media/visual-studio-ellipsis-button.png) <xref:System.Windows.Forms.ListView.Columns%2A> 세 개의 열을 추가 하 <xref:System.Windows.Forms.ColumnHeader.Text%2A> 고 속성 `Name`을 `Type`각각, `Last Modified`및로 설정 합니다. **확인** 을 클릭하여 대화 상자를 닫습니다.
+    3. 속성에서![](./media/visual-studio-ellipsis-button.png)줄임표 (Visual Studio 속성 창의 줄임표 단추 (...)를 클릭 하 여 ColumnHeader 컬렉션 편집기를**엽니다.** <xref:System.Windows.Forms.ListView.Columns%2A> 세 개의 열을 추가 하 <xref:System.Windows.Forms.ColumnHeader.Text%2A> 고 속성 `Name`을 `Type`각각, `Last Modified`및로 설정 합니다. **확인** 을 클릭하여 대화 상자를 닫습니다.
 
     4. <xref:System.Windows.Forms.ListView.SmallImageList%2A> 속성을 `imageList1.`로 설정합니다.
 
@@ -71,7 +71,7 @@ Visual Studio의 이점 중 하나는 짧은 시간 내에 전문적인 Windows 
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#2)]
 
-11. 에 대 한 `treeview1` 이벤트를 처리 하 고 노드를 클릭할 `listview1` 때 노드 내용으로 채울 코드를 구현 합니다. <xref:System.Windows.Forms.TreeView.NodeMouseClick> 이 코드를 `Form1` 클래스에 추가 합니다.
+11. `treeview1` `listview1` 에 대 <xref:System.Windows.Forms.TreeView.NodeMouseClick> 한 이벤트를 처리 하 고 노드를 클릭할 때 노드 내용으로 채울 코드를 구현 합니다. 이 코드를 `Form1` 클래스에 추가 합니다.
 
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#3)]
@@ -100,7 +100,7 @@ Visual Studio의 이점 중 하나는 짧은 시간 내에 전문적인 Windows 
 
 - [방법: TreeView 노드에 바로 가기 메뉴 연결](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.TreeView>

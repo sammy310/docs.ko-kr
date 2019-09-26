@@ -7,10 +7,10 @@ helpviewer_keywords:
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 8b615000-69d9-4c64-acaf-b54fa09b69e3
 ms.openlocfilehash: b63bcd9e5e357db350cc2987e09af84eb58bdcff
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69039407"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms ListView 컨트롤에서 항목 그룹화
@@ -28,7 +28,7 @@ ms.locfileid: "69039407"
 
 ## <a name="to-add-or-remove-groups-in-the-designer"></a>디자이너에서 그룹을 추가 하거나 제거 하려면
 
-1. 속성 창 에서 ![ <xref:System.Windows.Forms.ListView.Groups%2A> 속성 옆에 있는 줄임표 단추 (...)를 클릭 하 여 속성 옆의 Visual Studio](./media/visual-studio-ellipsis-button.png)속성 창에서 줄임표 단추 (...)를 클릭 합니다.
+1. **속성 창에서** <xref:System.Windows.Forms.ListView.Groups%2A> 속성 옆에 있는 **줄임표** 단추![(...)를 클릭 하 여 속성 옆의 Visual Studio](./media/visual-studio-ellipsis-button.png)속성 창에서 줄임표 단추 (...)를 클릭 합니다.
 
      **ListViewGroup 컬렉션 편집기** 가 나타납니다.
 
@@ -36,7 +36,7 @@ ms.locfileid: "69039407"
 
 ## <a name="to-assign-items-to-groups-in-the-designer"></a>디자이너에서 그룹에 항목을 할당 하려면
 
-1. 속성 창 에서 ![ <xref:System.Windows.Forms.ListView.Items%2A> 속성 옆에 있는 줄임표 단추 (...)를 클릭 하 여 속성 옆의 Visual Studio](./media/visual-studio-ellipsis-button.png)속성 창에서 줄임표 단추 (...)를 클릭 합니다.
+1. **속성 창에서** <xref:System.Windows.Forms.ListView.Items%2A> 속성 옆에 있는 **줄임표** 단추![(...)를 클릭 하 여 속성 옆의 Visual Studio](./media/visual-studio-ellipsis-button.png)속성 창에서 줄임표 단추 (...)를 클릭 합니다.
 
      **ListViewItem 컬렉션 편집기** 가 나타납니다.
 
@@ -44,7 +44,7 @@ ms.locfileid: "69039407"
 
 3. <xref:System.Windows.Forms.ListViewItem.Group%2A> 속성을 선택 하 고 드롭다운 목록에서 그룹을 선택 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.Groups%2A>

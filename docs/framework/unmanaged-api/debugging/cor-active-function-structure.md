@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6875ce0e7ae4cefa9b0c8abaded0dd4535bdf838
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 50dd4acece43628b20b6bc50a539ee197e865855
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740830"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274150"
 ---
-# <a name="coractivefunction-structure"></a>COR_ACTIVE_FUNCTION 구조체
-스레드 프레임에서 현재 활성 상태인 함수에 대한 정보를 포함합니다. 이 구조체를 사용 합니다 [ICorDebugThread2::GetActiveFunctions](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md) 메서드.  
+# <a name="cor_active_function-structure"></a>COR_ACTIVE_FUNCTION 구조체
+스레드 프레임에서 현재 활성 상태인 함수에 대한 정보를 포함합니다. 이 구조는 [ICorDebugThread2:: GetActiveFunctions](icordebugthread2-getactivefunctions-method.md) 메서드에서 사용 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,22 +42,22 @@ typedef struct  _COR_ACTIVE_FUNCTION {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`pAppDomain`|응용 프로그램 도메인 소유자에 대 한 포인터를 `ilOffset` 필드입니다.|  
-|`pModule`|모듈 소유자에 대 한 포인터를 `ilOffset` 필드입니다.|  
-|`pFunction`|함수 소유자에 대 한 포인터를 `ilOffset` 필드입니다.|  
-|`ilOffset`|프레임의 Microsoft MSIL (intermediate language) 오프셋입니다.|  
-|`flags`|향후 확장성을 위해 예약 되어 있습니다.|  
+|`pAppDomain`|`ilOffset` 필드의 응용 프로그램 도메인 소유자에 대 한 포인터입니다.|  
+|`pModule`|`ilOffset` 필드의 모듈 소유자에 대 한 포인터입니다.|  
+|`pFunction`|`ilOffset` 필드의 함수 소유자에 대 한 포인터입니다.|  
+|`ilOffset`|프레임의 MSIL (Microsoft 중간 언어) 오프셋입니다.|  
+|`flags`|향후 확장성을 위해 예약 되었습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl  
   
- **라이브러리:** CorGuids.lib  
+ **라이브러리** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [디버깅 구조체](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [디버깅 구조체](debugging-structures.md)
+- [디버깅](index.md)

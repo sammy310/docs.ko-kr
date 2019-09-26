@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e46118e97a4b888a16f12cf6705d2b7e67bbf7ec
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fce803544b393ac2c441779183cbf49d4c39bdae
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740354"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71273987"
 ---
 # <a name="cordebugchainreason-enumeration"></a>CorDebugChainReason 열거형
 호출 체인의 시작 이유를 하나 이상 나타냅니다.  
@@ -48,7 +48,7 @@ typedef enum CorDebugChainReason {
   
 ## <a name="members"></a>멤버  
   
-|멤버|Description|  
+|멤버|설명|  
 |------------|-----------------|  
 |`CHAIN_NONE`|호출 체인이 시작되지 않았습니다.|  
 |`CHAIN_CLASS_INIT`|생성자를 통해 체인이 시작되었습니다.|  
@@ -65,17 +65,17 @@ typedef enum CorDebugChainReason {
 |`CHAIN_FUNC_EVAL`|함수 평가를 통해 체인이 시작되었습니다.|  
   
 ## <a name="remarks"></a>설명  
- 사용 된 [icordebugchain:: Getreason](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md) 호출 체인의 시작에 대 한 이유를 확인 하는 방법입니다.  
+ [ICorDebugChain:: GetReason](icordebugchain-getreason-method.md) 메서드를 사용 하 여 호출 체인을 시작 하는 이유를 확인 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
- **라이브러리:** CorGuids.lib  
+ **라이브러리** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [디버깅 열거형](debugging-enumerations.md)

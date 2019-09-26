@@ -7,14 +7,14 @@ helpviewer_keywords:
 - adorners [WPF]
 ms.assetid: 5d5f656b-8e05-4839-9d53-b0324d902aa9
 ms.openlocfilehash: b422294095425d163665f59f2bfb451da3158c8a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "71263361"
 ---
 # <a name="adorners"></a>표시기(Adorner)
-이 섹션에서는 표시기 (adorner)에 대 한 정보를 제공 하며 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 표시기 프레임 워크입니다.  
+이 단원에서는 표시기와 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 표시기 프레임 워크에 대 한 정보를 제공 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [표시기 개요](adorners-overview.md)  

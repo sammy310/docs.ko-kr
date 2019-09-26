@@ -6,10 +6,10 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding list items
 ms.assetid: 217611ee-fd11-4d39-9a54-a37c3e781be1
 ms.openlocfilehash: 62665746ea9fcd1553717b02b1f1349dc6415ab2
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69040080"
 ---
 # <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms ListView 컨트롤에서 항목 추가 및 제거
@@ -22,7 +22,7 @@ Windows Forms <xref:System.Windows.Forms.ListView> 컨트롤에 항목을 추가
 
 1. <xref:System.Windows.Forms.ListView> 컨트롤을 선택합니다.
 
-2. 속성 창 에서 ![ <xref:System.Windows.Forms.ListView.Items%2A> 속성 옆에 있는 줄임표 단추 (...)를 클릭 하 여 속성 옆의 Visual Studio](./media/visual-studio-ellipsis-button.png)속성 창에서 줄임표 단추 (...)를 클릭 합니다.
+2. **속성 창에서** <xref:System.Windows.Forms.ListView.Items%2A> 속성 옆에 있는 **줄임표** 단추![(...)를 클릭 하 여 속성 옆의 Visual Studio](./media/visual-studio-ellipsis-button.png)속성 창에서 줄임표 단추 (...)를 클릭 합니다.
 
      **ListViewItem 컬렉션 편집기** 가 나타납니다.
 
@@ -30,7 +30,7 @@ Windows Forms <xref:System.Windows.Forms.ListView> 컨트롤에 항목을 추가
 
 4. 항목을 제거 하려면 항목을 선택 하 고 **제거** 단추를 클릭 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [ListView 컨트롤 개요](listview-control-overview-windows-forms.md)
 - [방법: Windows Forms ListView 컨트롤에 열 추가](how-to-add-columns-to-the-windows-forms-listview-control.md)

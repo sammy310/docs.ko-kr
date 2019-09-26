@@ -8,10 +8,10 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: 35bf1750-045e-4ec5-97cb-b47b0dbdaa2c
 ms.openlocfilehash: ef3a963b5621f0b972b02a007681f600fbdb1050
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69040068"
 ---
 # <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms TreeView 컨트롤에서 노드 추가 및 제거
@@ -24,7 +24,7 @@ Windows Forms <xref:System.Windows.Forms.TreeView> 컨트롤은 노드를 계층
 
 1. <xref:System.Windows.Forms.TreeView> 컨트롤을 선택합니다.
 
-2. 속성 창 에서 ![ <xref:System.Windows.Forms.TreeView.Nodes%2A> 속성 옆에 있는 줄임표 단추 (...)를 클릭 하 여 속성 옆의 Visual Studio](./media/visual-studio-ellipsis-button.png)속성 창에서 줄임표 단추 (...)를 클릭 합니다.
+2. **속성 창에서** <xref:System.Windows.Forms.TreeView.Nodes%2A> 속성 옆에 있는 **줄임표** 단추![(...)를 클릭 하 여 속성 옆의 Visual Studio](./media/visual-studio-ellipsis-button.png)속성 창에서 줄임표 단추 (...)를 클릭 합니다.
 
      **TreeNode 편집기** 가 나타납니다.
 
@@ -32,7 +32,7 @@ Windows Forms <xref:System.Windows.Forms.TreeView> 컨트롤은 노드를 계층
 
 4. 노드를 삭제 하려면 삭제할 노드를 선택 하 고 **삭제** 단추를 클릭 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [TreeView 컨트롤](treeview-control-windows-forms.md)
 - [TreeView 컨트롤 개요](treeview-control-overview-windows-forms.md)

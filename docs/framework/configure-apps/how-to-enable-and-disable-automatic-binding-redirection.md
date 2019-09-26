@@ -6,10 +6,10 @@ helpviewer_keywords:
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
 ms.openlocfilehash: 178d5070dd7018bbc0fce474cdd0b31ba3d17f77
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69913042"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>방법: 자동 바인딩 리디렉션 사용 설정 및 해제
@@ -85,7 +85,7 @@ Visual Studio 2017 버전 15.7 이상이 있는 경우 프로젝트의 속성 �
 
 ## <a name="enable-automatic-binding-redirects-in-web-apps"></a>웹 앱에서 자동 바인딩 리디렉션 사용
 
-자동 바인딩 리디렉션은 웹 응용 프로그램마다 다르게 구현됩니다. 웹 앱에 대해 원본구성 (web.config) 파일을 수정 해야 하기 때문에 바인딩 리디렉션은 구성 파일에 자동으로 추가 되지 않습니다. 하지만 Visual Studio는 바인딩 충돌을 경고하고 충돌 해결을 위해 바인딩 리디렉션을 추가할 수 있습니다. 항상 바인딩 리디렉션을 추가 하 라는 메시지가 표시 되므로 웹 앱에 대해이 기능을 명시적으로 사용 하지 않도록 설정할 필요가 없습니다.
+자동 바인딩 리디렉션은 웹 응용 프로그램마다 다르게 구현됩니다. 웹 앱에 대해 원본**구성 (web.config**) 파일을 수정 해야 하기 때문에 바인딩 리디렉션은 구성 파일에 자동으로 추가 되지 않습니다. 하지만 Visual Studio는 바인딩 충돌을 경고하고 충돌 해결을 위해 바인딩 리디렉션을 추가할 수 있습니다. 항상 바인딩 리디렉션을 추가 하 라는 메시지가 표시 되므로 웹 앱에 대해이 기능을 명시적으로 사용 하지 않도록 설정할 필요가 없습니다.
 
 **Web.config** 파일에 바인딩 리디렉션을 추가 하려면:
 
@@ -93,13 +93,13 @@ Visual Studio 2017 버전 15.7 이상이 있는 경우 프로젝트의 속성 �
 
    ![어셈블리 참조 충돌에 대 한 빌드 경고](./media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
 
-2. 어셈블리 바인딩 충돌이 있을 경우 경고가 나타납니다. 경고를 두 번 클릭 하거나 경고를 선택 하 고 enter키를 누릅니다.
+2. 어셈블리 바인딩 충돌이 있을 경우 경고가 나타납니다. 경고를 두 번 클릭 하거나 경고를 선택 하 고 enter **키를**누릅니다.
 
-   필요한 바인딩 리디렉션을 소스 web.config 파일에 자동으로 추가할 수 있는 대화 상자가 나타납니다.
+   필요한 바인딩 **리디렉션을 소스 web.config** 파일에 자동으로 추가할 수 있는 대화 상자가 나타납니다.
 
    ![바인딩 리디렉션 권한 대화 상자](./media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [\<bindingRedirect > 요소](./file-schema/runtime/bindingredirect-element.md)
 - [어셈블리 버전 리디렉션](redirect-assembly-versions.md)

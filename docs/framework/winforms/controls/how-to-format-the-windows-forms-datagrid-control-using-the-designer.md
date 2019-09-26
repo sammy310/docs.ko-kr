@@ -10,10 +10,10 @@ helpviewer_keywords:
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
 ms.openlocfilehash: b3a85f5f9e51dae50a40058b8f07f92976da66f2
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69666168"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGrid 컨트롤 서식 지정
@@ -41,7 +41,7 @@ ms.locfileid: "69666168"
 
 2. **속성** 창에서 다음 속성을 적절 하 게 설정 합니다.
 
-    |속성|Description|
+    |속성|설명|
     |--------------|-----------------|
     |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|속성 `BackColor` 은 표에 있는 짝수 번호 행의 색을 정의 합니다. <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> 속성을 다른 색으로 설정 하면 다른 모든 행이 새 색 (행 1, 3, 5 등)으로 설정 됩니다.|
     |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|표 형태에서 짝수 행의 배경색입니다 (행 0, 2, 4, 6 등).|
@@ -76,7 +76,7 @@ ms.locfileid: "69666168"
 
 1. 폼에서 <xref:System.Windows.Forms.DataGrid> 컨트롤을 선택 합니다.
 
-2. **속성** 창에서 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 속성을 선택 하 고 Visual Studio ![](./media/visual-studio-ellipsis-button.png)의 속성 창에 있는 줄임표 단추 (...) 단추를 클릭 합니다.
+2. **속성** 창에서 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 속성을 선택 하 고 Visual Studio](./media/visual-studio-ellipsis-button.png)의 속성 창에![있는 줄임표 단추 (...) **단추를 클릭** 합니다.
 
 3. **DataGridTableStyle 컬렉션 편집기** 대화 상자에서 **추가** 를 클릭 하 여 컬렉션에 테이블 스타일을 추가 합니다.
 
@@ -95,7 +95,7 @@ ms.locfileid: "69666168"
     > [!NOTE]
     > 문자열 형식을 지정 하는 방법에 대 한 자세한 내용은 [형식 서식 지정](../../../standard/base-types/formatting-types.md)을 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.GridTableStylesCollection>
 - <xref:System.Windows.Forms.GridColumnStylesCollection>

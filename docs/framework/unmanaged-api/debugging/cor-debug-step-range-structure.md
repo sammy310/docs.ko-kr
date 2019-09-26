@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bda8079cff8f5e8fafade03a02c3dfe8798c5ca
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 11d5e2eb5e2743fca4876ed09add79be3eba514f
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740778"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274199"
 ---
-# <a name="cordebugsteprange-structure"></a>COR_DEBUG_STEP_RANGE 구조체
+# <a name="cor_debug_step_range-structure"></a>COR_DEBUG_STEP_RANGE 구조체
 코드 범위에 대한 오프셋 정보를 포함합니다.  
   
- 이 구조체를 사용 합니다 [icordebugstepper:: Steprange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) 메서드.  
+ 이 구조는 [ICorDebugStepper:: StepRange](icordebugstepper-steprange-method.md) 메서드에서 사용 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,19 +42,19 @@ typedef struct {
 |멤버|설명|  
 |------------|-----------------|  
 |`startOffset`|범위의 시작 오프셋입니다.|  
-|`endOffset`|범위의 끝 오프셋입니다.|  
+|`endOffset`|범위 끝의 오프셋입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+ **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl  
   
- **라이브러리:** CorGuids.lib  
+ **라이브러리** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [StepRange 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)
-- [디버깅 구조체](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [StepRange 메서드](icordebugstepper-steprange-method.md)
+- [디버깅 구조체](debugging-structures.md)
+- [디버깅](index.md)
