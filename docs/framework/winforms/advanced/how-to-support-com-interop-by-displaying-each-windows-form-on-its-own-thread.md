@@ -2,8 +2,7 @@
 title: '방법: 각 Windows Form을 별개의 스레드에서 표시하여 COM Interop 지원'
 ms.date: 03/30/2017
 dev_langs:
-- CSharp
-- VB
+- vb
 helpviewer_keywords:
 - COM interop [Windows Forms], Windows Forms
 - COM [Windows Forms]
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: a9e04765-d2de-4389-a494-a9a6d07aa6ee
-ms.openlocfilehash: 90bbd7df45424f8513598e9d7439d8ae6bf6f52c
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 41af4d81995a0a4eac912ecce7dc70cf04f012cd
+ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040304"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71306385"
 ---
 # <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>방법: 각 Windows Form을 자체 스레드에서 표시 하 여 COM interop 지원
 
@@ -48,10 +47,10 @@ Visual Studio에서이 기능에 대해 폭넓게 지원이 됩니다.
 
 `COMForm`, `Form1`및 `FormManager` 형식을 `COMWinform.dll`이라는 어셈블리로 컴파일합니다. [Packaging an Assembly for COM](../../interop/packaging-an-assembly-for-com.md)에 설명된 방법 중 하나를 사용하여 COM interop에 대한 어셈블리를 등록합니다. 이제 관리되지 않는 애플리케이션에서 어셈블리 및 해당 형식 라이브러리(.tlb) 파일을 사용할 수 있습니다. 예를 들어 Visual Basic 6.0 실행 프로젝트에서 형식 라이브러리를 참조로 사용할 수 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [.NET Framework 구성 요소를 COM에 노출](../../interop/exposing-dotnet-components-to-com.md)
 - [COM에서 사용할 어셈블리의 패키징](../../interop/packaging-an-assembly-for-com.md)
 - [COM에 어셈블리 등록](../../interop/registering-assemblies-with-com.md)
 - [방법: ShowDialog 메서드로 Windows Form을 표시 하 여 COM Interop 지원](com-interop-by-displaying-a-windows-form-shadow.md)
-- [Windows Forms 및 관리되지 않는 응용 프로그램 개요](windows-forms-and-unmanaged-applications-overview.md)
+- [Windows Forms 및 관리되지 않는 애플리케이션 개요](windows-forms-and-unmanaged-applications-overview.md)
