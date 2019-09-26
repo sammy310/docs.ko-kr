@@ -8,10 +8,10 @@ helpviewer_keywords:
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
 ms.openlocfilehash: ca984aa724cf3f076d6073aa8b8179abfb91d26c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69951728"
 ---
 # <a name="popup-placement-behavior"></a>Popup 배치 동작
@@ -98,14 +98,14 @@ ms.locfileid: "69951728"
   
 |PlacementMode|대상 개체|대상 영역|대상 원점|Popup 맞춤 지점|  
 |-------------------|-------------------|-----------------|-------------------|---------------------------|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Absolute>|이 오류에는 이 작업을 적용할 수 없습니다. <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 무시 됩니다.|화면 또는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> (설정 된 경우)입니다.  는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 화면을 기준으로 합니다.|대상 영역의 왼쪽 위 모퉁이.|의 왼쪽 위 모퉁이 <xref:System.Windows.Controls.Primitives.Popup>입니다.|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.AbsolutePoint>|이 오류에는 이 작업을 적용할 수 없습니다. <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 무시 됩니다.|화면 또는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> (설정 된 경우)입니다.  는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 화면을 기준으로 합니다.|대상 영역의 왼쪽 위 모퉁이.|의 왼쪽 위 모퉁이 <xref:System.Windows.Controls.Primitives.Popup>입니다.|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Absolute>|해당 사항 없음. <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 무시 됩니다.|화면 또는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> (설정 된 경우)입니다.  는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 화면을 기준으로 합니다.|대상 영역의 왼쪽 위 모퉁이.|의 왼쪽 위 모퉁이 <xref:System.Windows.Controls.Primitives.Popup>입니다.|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.AbsolutePoint>|해당 사항 없음. <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 무시 됩니다.|화면 또는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> (설정 된 경우)입니다.  는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 화면을 기준으로 합니다.|대상 영역의 왼쪽 위 모퉁이.|의 왼쪽 위 모퉁이 <xref:System.Windows.Controls.Primitives.Popup>입니다.|  
 |<xref:System.Windows.Controls.Primitives.PlacementMode.Bottom>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>또는 부모입니다.|대상 개체 이거나 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> , 설정 된 경우입니다.  는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 대상 개체를 기준으로 합니다.|대상 영역의 왼쪽 아래 모퉁이.|의 왼쪽 위 모퉁이 <xref:System.Windows.Controls.Primitives.Popup>입니다.|  
 |<xref:System.Windows.Controls.Primitives.PlacementMode.Center>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>또는 부모입니다.|대상 개체 이거나 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> , 설정 된 경우입니다.  는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 대상 개체를 기준으로 합니다.|대상 영역의 가운데.|의 <xref:System.Windows.Controls.Primitives.Popup>중심입니다.|  
 |<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>또는 부모입니다.|대상 개체 이거나 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> , 설정 된 경우입니다.  는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 대상 개체를 기준으로 합니다.|에 <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>의해 정의 됩니다.|에 <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>의해 정의 됩니다.|  
 |<xref:System.Windows.Controls.Primitives.PlacementMode.Left>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>또는 부모입니다.|대상 개체 이거나 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> , 설정 된 경우입니다.  는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 대상 개체를 기준으로 합니다.|대상 영역의 왼쪽 위 모퉁이.|의 오른쪽 위 모퉁이 <xref:System.Windows.Controls.Primitives.Popup>입니다.|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Mouse>|이 오류에는 이 작업을 적용할 수 없습니다. <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 무시 됩니다.|마우스 포인터의 경계. <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 무시 됩니다.|대상 영역의 왼쪽 아래 모퉁이.|의 왼쪽 위 모퉁이 <xref:System.Windows.Controls.Primitives.Popup>입니다.|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.MousePoint>|이 오류에는 이 작업을 적용할 수 없습니다. <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 무시 됩니다.|마우스 포인터의 경계. <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 무시 됩니다.|대상 영역의 왼쪽 위 모퉁이.|의 왼쪽 위 모퉁이 <xref:System.Windows.Controls.Primitives.Popup>입니다.|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Mouse>|해당 사항 없음. <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 무시 됩니다.|마우스 포인터의 경계. <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 무시 됩니다.|대상 영역의 왼쪽 아래 모퉁이.|의 왼쪽 위 모퉁이 <xref:System.Windows.Controls.Primitives.Popup>입니다.|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.MousePoint>|해당 사항 없음. <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 무시 됩니다.|마우스 포인터의 경계. <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 무시 됩니다.|대상 영역의 왼쪽 위 모퉁이.|의 왼쪽 위 모퉁이 <xref:System.Windows.Controls.Primitives.Popup>입니다.|  
 |<xref:System.Windows.Controls.Primitives.PlacementMode.Relative>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>또는 부모입니다.|대상 개체 이거나 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> , 설정 된 경우입니다.  는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 대상 개체를 기준으로 합니다.|대상 영역의 왼쪽 위 모퉁이.|의 왼쪽 위 모퉁이 <xref:System.Windows.Controls.Primitives.Popup>입니다.|  
 |<xref:System.Windows.Controls.Primitives.PlacementMode.RelativePoint>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>또는 부모입니다.|대상 개체 이거나 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> , 설정 된 경우입니다.  는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 대상 개체를 기준으로 합니다.|대상 영역의 왼쪽 위 모퉁이.|의 왼쪽 위 모퉁이 <xref:System.Windows.Controls.Primitives.Popup>입니다.|  
 |<xref:System.Windows.Controls.Primitives.PlacementMode.Right>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>또는 부모입니다.|대상 개체 이거나 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> , 설정 된 경우입니다.  는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 대상 개체를 기준으로 합니다.|대상 영역의 오른쪽 위 모퉁이.|의 왼쪽 위 모퉁이 <xref:System.Windows.Controls.Primitives.Popup>입니다.|  
@@ -203,6 +203,6 @@ ms.locfileid: "69951728"
 ### <a name="customizing-popup-placement"></a>Popup 배치 사용자 지정  
  <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 속성을로 <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>설정 하 여 대상 원점 및 popup 맞춤 지점을 사용자 지정할 수 있습니다. 그런 다음 <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> <xref:System.Windows.Controls.Primitives.Popup>에 대 한 가능한 배치 지점과 기본 축 (기본 설정 순서 대로) 집합을 반환 하는 대리자를 정의 합니다. 의 가장 큰 부분을 표시 하는 점이 <xref:System.Windows.Controls.Primitives.Popup> 선택 됩니다.  가 화면 가장자리에 <xref:System.Windows.Controls.Primitives.Popup> 의해 숨겨지면의 위치가 자동으로 조정 됩니다. <xref:System.Windows.Controls.Primitives.Popup> 예제를 보려면 [사용자 지정 팝업 위치 지정](how-to-specify-a-custom-popup-position.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [Popup Placement Sample](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS)(Popup 배치 샘플)
