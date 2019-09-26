@@ -7,20 +7,20 @@ helpviewer_keywords:
 - adorners [WPF]
 ms.assetid: 5d5f656b-8e05-4839-9d53-b0324d902aa9
 ms.openlocfilehash: b422294095425d163665f59f2bfb451da3158c8a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "71263361"
 ---
-# <a name="adorners"></a><span data-ttu-id="9c9a5-102">표시기(Adorner)</span><span class="sxs-lookup"><span data-stu-id="9c9a5-102">Adorners</span></span>
-<span data-ttu-id="9c9a5-103">이 섹션에서는 표시기 (adorner)에 대 한 정보를 제공 하며 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 표시기 프레임 워크입니다.</span><span class="sxs-lookup"><span data-stu-id="9c9a5-103">This section provides information about Adorners and the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Adorner framework.</span></span>  
+# <a name="adorners"></a><span data-ttu-id="699f0-102">표시기(Adorner)</span><span class="sxs-lookup"><span data-stu-id="699f0-102">Adorners</span></span>
+<span data-ttu-id="699f0-103">이 단원에서는 표시기와 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 표시기 프레임 워크에 대 한 정보를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="699f0-103">This section provides information about Adorners and the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Adorner framework.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9c9a5-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="9c9a5-104">In This Section</span></span>  
- [<span data-ttu-id="9c9a5-105">표시기 개요</span><span class="sxs-lookup"><span data-stu-id="9c9a5-105">Adorners Overview</span></span>](adorners-overview.md)  
- [<span data-ttu-id="9c9a5-106">방법 항목</span><span class="sxs-lookup"><span data-stu-id="9c9a5-106">How-to Topics</span></span>](adorners-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="699f0-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="699f0-104">In This Section</span></span>  
+ [<span data-ttu-id="699f0-105">표시기 개요</span><span class="sxs-lookup"><span data-stu-id="699f0-105">Adorners Overview</span></span>](adorners-overview.md)  
+ [<span data-ttu-id="699f0-106">방법 항목</span><span class="sxs-lookup"><span data-stu-id="699f0-106">How-to Topics</span></span>](adorners-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="9c9a5-107">참조</span><span class="sxs-lookup"><span data-stu-id="9c9a5-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="699f0-107">참조</span><span class="sxs-lookup"><span data-stu-id="699f0-107">Reference</span></span>  
  <xref:System.Windows.Controls.AdornedElementPlaceholder>  
   
  <xref:System.Windows.Documents.Adorner>  
@@ -31,4 +31,4 @@ ms.locfileid: "57378915"
   
  <xref:System.Windows.Documents.AdornerLayer>  
   
-## <a name="related-sections"></a><span data-ttu-id="9c9a5-108">관련 단원</span><span class="sxs-lookup"><span data-stu-id="9c9a5-108">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="699f0-108">관련 단원</span><span class="sxs-lookup"><span data-stu-id="699f0-108">Related Sections</span></span>
