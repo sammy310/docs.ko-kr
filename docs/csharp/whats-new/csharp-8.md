@@ -1,13 +1,13 @@
 ---
 title: C# 8.0의 새로운 기능 - C# 가이드
 description: C# 8.0의 새로운 기능을 살펴봅니다. 이 문서는 미리 보기 5가 반영된 최신 내용을 담고 있습니다.
-ms.date: 09/10/2019
-ms.openlocfilehash: 1d6d52692a9a3f8b6fa4e333f086a880c54106b4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 09/20/2019
+ms.openlocfilehash: a434d1f7598bc3f6787f7466e48fb161db192761
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117819"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182404"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0의 새로운 기능
 
@@ -28,6 +28,7 @@ C# 언어에는 직접 사용해 볼 수 있는 여러 개선된 기능이 포�
 - [인덱스 및 범위](#indices-and-ranges)
 - [null 병합 할당](#null-coalescing-assignment)
 - [관리되지 않는 생성 형식](#unmanaged-constructed-types)
+- [중첩 식의 stackalloc](#stackalloc-in-nested-expressions)
 - [보간된 약어 문자열의 향상된 기능](#enhancement-of-interpolated-verbatim-strings)
 
 > [!NOTE]
@@ -493,6 +494,16 @@ Span<Coords<int>> coordinates = stackalloc[]
 ```
 
 자세한 내용은 [관리되지 않는 형식](../language-reference/builtin-types/unmanaged-types.md)을 참조하세요.
+
+## <a name="stackalloc-in-nested-expressions"></a>중첩 식의 stackalloc
+
+C# 8.0부터 [stackalloc](../language-reference/operators/stackalloc.md) 식의 결과가 <xref:System.Span%601?displayProperty=nameWithType> 또는 <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> 형식이면 다른 식에서 `stackalloc` 식을 사용할 수 있습니다.
+
+```csharp
+Span<int> numbers = stackalloc[] { 1, 2, 3, 4, 5, 6 };
+var ind = numbers.IndexOfAny(stackalloc[] { 2, 4, 6 ,8 });
+Console.WriteLine(ind);  // output: 1
+```
 
 ## <a name="enhancement-of-interpolated-verbatim-strings"></a>보간된 약어 문자열의 향상된 기능
 

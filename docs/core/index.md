@@ -2,14 +2,14 @@
 title: .NET Core 가이드
 description: .NET Core는 Windows, Linux 및 Mac 앱을 만들기 위한 모듈식 고성능 .NET 구현입니다. 시작하려면 .NET Core에 관해 알아봅니다.
 author: richlander
-ms.date: 08/01/2018
+ms.date: 09/23/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: a6112851a3d9b46f02c26313e6537170786df10b
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 95f18ca09852ce139a4b99ed7aef4802d4883e13
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117077"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216212"
 ---
 # <a name="net-core-guide"></a>.NET Core 가이드
 
@@ -19,15 +19,15 @@ ms.locfileid: "71117077"
 
 .NET Core 애플리케이션을 만드는 방법은 [.NET Core 자습서](tutorials/index.md)를 참조하세요. 첫 번째 앱을 만들고 실행하는 데 몇 분밖에 걸리지 않습니다. 브라우저에서 .NET Core를 사용하려면 [C#의 숫자](../csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml) 온라인 자습서를 확인하세요.
 
-## <a name="download-net-core-22"></a>.NET Core 2.2 다운로드
+## <a name="download-net-core"></a>.NET Core 다운로드
 
-[.NET Core 2.2 SDK](https://dotnet.microsoft.com/download)를 다운로드하여 Windows, macOS 또는 Linux 머신에서 .NET Core를 사용해 보세요. Docker 컨테이너를 사용하려면 [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/)를 방문하세요.
+[.NET Core SDK](https://www.microsoft.com/net/download)를 다운로드하여 Windows, macOS 또는 Linux 머신에서 .NET Core를 사용해 보세요. Docker 컨테이너를 사용하려면 [.NET Core Docker Hub](https://hub.docker.com/_/microsoft-dotnet-core/)를 방문하세요.
 
 다른 .NET Core 버전을 찾는 경우 [.NET Core 다운로드](https://dotnet.microsoft.com/download/dotnet-core)에서 모든 .NET Core 버전을 사용할 수 있습니다.
 
-## <a name="net-core-22"></a>.NET Core 2.2
+## <a name="net-core-30"></a>.NET Core 3.0
 
-최신 버전은 [.NET Core 2.2](whats-new/dotnet-core-2-2.md)입니다. 새 기능으로는 프레임워크 종속 배포, 시작 후크, Azure SQL에서 AAD 인증, Windows ARM32에 대한 지원 등이 있습니다.
+최신 버전은 .NET Core 3.0입니다. 새로운 기능에는 WPF(Windows Presentation Foundation) 및 Windows Forms를 사용한 Windows Desktop 지원, Blazor를 사용한 전체 스택 C# 웹 개발, SignalR 및 Azure SignalR Service의 새로운 기능 향상, C# 8의 새로운 C# 언어 기능 등이 포함됩니다. .NET Core 3.0의 새로운 기능에 대한 전체 목록은 [.NET Core 3.0의 새로운 기능](./whats-new/dotnet-core-3-0.md)을 참조하세요.
 
 ## <a name="create-your-first-application"></a>첫 애플리케이션 만들기
 

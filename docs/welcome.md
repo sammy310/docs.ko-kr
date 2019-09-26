@@ -3,14 +3,14 @@ title: .NET 시작
 description: .NET 기술 제품군을 시작합니다.
 author: mairaw
 ms.author: mairaw
-ms.date: 05/06/2019
+ms.date: 09/23/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 2927b892f8f83366a46cb113b3f0233bbd168974
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 0b4a2380bf2ddb59c181a07d7f8a006d6252d11f
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855476"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216857"
 ---
 # <a name="welcome-to-net"></a>.NET 시작
 
@@ -29,10 +29,10 @@ ms.locfileid: "70855476"
 
 또한 최신 .NET 이벤트를 따르세요.
 
-- [Microsoft Connect()](https://www.microsoft.com/connectevent)
-- [Microsoft Build 2018](https://channel9.msdn.com/Events/Build/2018)
+- [Microsoft Build](https://www.microsoft.com/build)
 - [.NET Conf](https://www.dotnetconf.net/)
-
+- [Microsoft Connect()](https://www.microsoft.com/connectevent)
+- 
 .NET 구현 및 지원되는 언어에 추가된 최신 기능에 대한 자세한 내용은 다음 문서를 참조하세요.
 
 - [.NET Core의 새로운 기능](core/whats-new/index.md)
@@ -52,8 +52,15 @@ ms.locfileid: "70855476"
 - [Visual Basic 가이드](visual-basic/index.md)
 - [ML.NET 가이드](machine-learning/index.yml)
 - [Apache Spark용 .NET](spark/index.yml)
+- [.NET 애플리케이션 아키텍처](architecture/index.yml)
 
 또한 [.NET API 참조](/dotnet/api)를 찾아볼 수 있습니다.
+
+## <a name="videos"></a>비디오
+
+웹, 모바일, 데스크톱, C#, 기계 학습, 컨테이너/Docker, 데이터 액세스 등에 대한 동영상을 살펴보세요.
+
+[.NET 101 동영상 시리즈](https://dotnet.microsoft.com/learn/videos)
 
 ## <a name="open-source"></a>소스 열기
 
