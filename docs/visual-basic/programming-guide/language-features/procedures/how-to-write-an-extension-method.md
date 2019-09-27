@@ -6,14 +6,15 @@ helpviewer_keywords:
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: 7a7a9d16d9f69071e9d1dacb0558f7ca92e1d21e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 31ccb18e0e6d1569764ec2a67201d7f758129425
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631028"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332754"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>방법: 확장 메서드 (Visual Basic)를 작성 합니다.
+
 확장 메서드를 사용 하 여 기존 클래스에 메서드를 추가할 수 있습니다. 확장 메서드는 해당 클래스의 인스턴스인 것 처럼 호출할 수 있습니다.
 
 ### <a name="to-define-an-extension-method"></a>확장 메서드를 정의 하려면
@@ -36,13 +37,14 @@ ms.locfileid: "68631028"
 
     ```vb
     <Extension()>
-    Public Sub SubName (ByVal para1 As ExtendedType, <other parameters>)
+    Public Sub SubName(para1 As ExtendedType, <other parameters>)
          ' < Body of the method >
     End Sub
     ```
 
 ## <a name="example"></a>예제
- 다음 예제에서는 모듈 `StringExtensions`의 확장 메서드를 선언 합니다. 두 번째 모듈인 `Module1`는를 가져오고 `StringExtensions` 메서드를 호출 합니다. 확장 메서드는 호출 될 때 범위 내에 있어야 합니다. 확장 메서드 `PrintAndPunctuate` 는 문자열 <xref:System.String> 인스턴스를 표시 하는 메서드를 사용 하 여 클래스를 확장 하 고,로 전달 된 문장 부호 기호 문자열을 매개 변수로 사용 합니다.
+
+ 다음 예제에서는 모듈 `StringExtensions`에서 확장 메서드를 선언 합니다. 두 번째 모듈 `Module1`은 `StringExtensions`을 가져오고 메서드를 호출 합니다. 확장 메서드는 호출 될 때 범위 내에 있어야 합니다. 확장 메서드 `PrintAndPunctuate`은 문자열 인스턴스를 표시 하는 메서드를 사용 하 여 <xref:System.String> 클래스를 확장 하 고 매개 변수로 전달 되는 문장 부호 기호 문자열을 표시 합니다.
   
 ```vb
 ' Declarations will typically be in a separate module.
@@ -50,8 +52,7 @@ Imports System.Runtime.CompilerServices
 
 Module StringExtensions
     <Extension()>
-    Public Sub PrintAndPunctuate(ByVal aString As String,
-                                 ByVal punc As String)
+    Public Sub PrintAndPunctuate(aString As String, punc As String)
         Console.WriteLine(aString & punc)
     End Sub
 
@@ -75,16 +76,17 @@ Module Module1
 End Module
 ```
   
- 메서드는 두 개의 매개 변수로 정의 되며 하나를 사용 하 여 호출 됩니다. 메서드 정의의 첫 `aString`번째 매개 변수는 메서드를 호출 하 `example`는의 `String` 인스턴스인에 바인딩됩니다. 예제 출력은 다음과 같습니다.
+ 메서드는 두 개의 매개 변수로 정의 되며 하나를 사용 하 여 호출 됩니다. 메서드 정의의 첫 번째 매개 변수 `aString`은 메서드를 호출 하는 `String` 인스턴스인 @no__t 1에 바인딩됩니다. 예제 출력은 다음과 같습니다.
   
- `Hello?`  
+ ```console
+ Hello?
+ Hello!!!!
+ ```
   
- `Hello!!!!`  
-  
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
-- [확장명 메서드](./extension-methods.md)
-- [Module 문](../../../../visual-basic/language-reference/statements/module-statement.md)
-- [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
-- [Visual Basic 범위](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [확장명 메서드](extension-methods.md)
+- [Module 문](../../../language-reference/statements/module-statement.md)
+- [프로시저 매개 변수 및 인수](procedure-parameters-and-arguments.md)
+- [Visual Basic 범위](../declared-elements/scope.md)

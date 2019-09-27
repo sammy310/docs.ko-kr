@@ -2,12 +2,12 @@
 title: F#이란
 description: F# 프로그래밍 언어와 F# 프로그래밍이 어떤 것인지 알아봅니다. 풍부한 데이터 유형과 기능, 이들이 함께 어울리는 방법을 알아봅니다.
 ms.date: 08/03/2018
-ms.openlocfilehash: 0c576fe49fadebd68e4fc9d2b20ea8f0cb991af5
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 3cba509f59a8e81e1a0264de7451e9d80304d768
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630454"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332729"
 ---
 # <a name="what-is-f"></a>F\#이란
 
@@ -100,7 +100,7 @@ F# 함수는 또한 일급 클래스이며, 매개변수로 전달되고 다른 
 F#은 객체를 완벽하게 지원합니다. 객체는 데이터와 기능을 혼합해야 할 때 유용한 데이터 타입입니다.
 
 ```fsharp
-type Set<[<EqualityConditionOn>] 'T when 'T: comparison>(elements: seq<'T>) =
+type Set<'T when 'T: comparison>(elements: seq<'T>) =
     member s.IsEmpty = // Implementation elided
     member s.Contains (value) =// Implementation elided
     member s.Add (value) = // Implementation elided
@@ -110,7 +110,6 @@ type Set<[<EqualityConditionOn>] 'T when 'T: comparison>(elements: seq<'T>) =
     interface IEnumerable<‘T>
     interface IReadOnlyCollection<‘T>
 
-[<RequireQualifiedAccess>]
 module Set =
     let isEmpty (set: Set<'T>) = set.IsEmpty
 

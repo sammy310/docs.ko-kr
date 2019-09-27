@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-ms.openlocfilehash: ebfd05a39c290e379bea2b925e7ea30c40d303fe
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: f56e5defa2328011d222bfca05334b610e805055
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046310"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332783"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next 문(Visual Basic)
 
@@ -35,7 +35,7 @@ ms.locfileid: "70046310"
 
 ## <a name="syntax"></a>구문
 
-```
+```vb
 For Each element [ As datatype ] In group
     [ statements ]
     [ Continue For ]
@@ -130,7 +130,7 @@ Next [ element ]
 
 코드가 특정 순서로 컬렉션을 탐색 하는 데 종속 되는 `For Each`경우 ... `Next` 컬렉션에서 노출 하는 열거자 개체의 특성을 모르는 경우 루프는 최상의 선택이 아닙니다. 순회 순서는 Visual Basic에 의해 결정 되지 않지만 열거자 개체의 <xref:System.Collections.IEnumerator.MoveNext%2A> 메서드에 의해 결정 됩니다. 따라서 컬렉션에서 반환 `element`되는 첫 번째 요소 또는 지정 된 요소 뒤에 반환 되는 다음의 요소를 예측할 수 없습니다. ...과 `For`같은 다른 루프 구조를 사용 하 여 보다 안정적인 결과를 달성할 수 있습니다. `Next` 또는 ...`Do` `Loop`.
 
-런타임은의 `group` 요소를로 `element`변환할 수 있어야 합니다. [`Option Strict`] 문은 확대 변환과 축소 변환이 모두 허용 되는지 (`Option Strict` 즉, off, 기본값) 또는 확대 변환만 허용 되는지 (`Option Strict` on)를 제어 합니다. 자세한 내용은 [축소 변환](#narrowing-conversions)을 참조 하세요.
+런타임은의 `group` 요소를로 `element`변환할 수 있어야 합니다. [@No__t-0] 문은 확대 변환과 축소 변환이 모두 허용 되는지 여부를 제어 합니다 (`Option Strict`은 off, 기본값은 off) 또는 확대 변환만 허용 되는지 여부를 제어 합니다 (`Option Strict`가 on으로 설정 됨). 자세한 내용은 [축소 변환](#narrowing-conversions)을 참조 하세요.
 
 의 `group` 데이터 형식은 열거 가능한 컬렉션 또는 배열을 참조 하는 참조 형식 이어야 합니다. 가장 일반적 `group` 으로는 네임 스페이스의 <xref:System.Collections.IEnumerable> 인터페이스 `System.Collections` 또는 <xref:System.Collections.Generic.IEnumerable%601> `System.Collections.Generic` 네임 스페이스의 인터페이스를 구현 하는 개체를 참조 합니다. `System.Collections.IEnumerable`컬렉션에 대 한 열거자 개체를 반환 하는 메서드를정의합니다.<xref:System.Collections.IEnumerable.GetEnumerator%2A> 열거자 개체는 `System.Collections` 네임 스페이스 `System.Collections.IEnumerator` 의 인터페이스를 구현 하 고 <xref:System.Collections.IEnumerator.Current%2A> 속성과 <xref:System.Collections.IEnumerator.Reset%2A> 및 <xref:System.Collections.IEnumerator.MoveNext%2A> 메서드를 노출 합니다. Visual Basic는이를 사용 하 여 컬렉션을 트래버스 합니다.
 
@@ -155,8 +155,8 @@ Next [ element ]
 **컬렉션 요소 수정** 열거자 개체의 <xref:System.Collections.IEnumerator.Current%2A> 속성은 [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)이며 각 컬렉션 요소의 로컬 복사본을 반환합니다. 즉, `For Each`에서 요소 자체를 수정할 수 없습니다. `Next` 루프. 수정한 내용은의 `Current` 로컬 복사본에만 적용 되 고 기본 컬렉션에는 다시 반영 되지 않습니다. 그러나 요소가 참조 형식이 면 요소가 가리키는 인스턴스의 멤버를 수정할 수 있습니다. 다음 예제에서는 각 `BackColor` `thisControl` 요소의 멤버를 수정 합니다. 그러나 자체를 수정할 `thisControl` 수는 없습니다.
 
 ```vb
-Sub lightBlueBackground(ByVal thisForm As System.Windows.Forms.Form)
-    For Each thisControl As System.Windows.Forms.Control In thisForm.Controls
+Sub LightBlueBackground(thisForm As System.Windows.Forms.Form)
+    For Each thisControl In thisForm.Controls
         thisControl.BackColor = System.Drawing.Color.LightBlue
     Next thisControl
 End Sub
