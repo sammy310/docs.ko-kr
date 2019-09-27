@@ -532,6 +532,8 @@
       href: framework/tools/
     - name: 추가 클래스 라이브러리 및 API
       href: framework/additional-apis/
+- name: .NET 데스크톱 가이드 - WPF
+  href: desktop-wpf/
 - name: 'C# 가이드'
   href: csharp/index.md
   items:
