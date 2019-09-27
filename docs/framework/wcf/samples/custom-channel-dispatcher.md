@@ -23,7 +23,7 @@ ms.locfileid: "70039976"
  디스패처에서는 먼저 채널 수신기를 연 다음 singleton 회신 채널을 수락합니다. 그런 다음 이 채널을 사용하여 무한 루프에 메시지(요청)를 보내기 시작합니다. 또한 각 요청에 대해 회신 메시지를 만들고 이를 다시 클라이언트에 보냅니다.  
   
 ## <a name="creating-a-response-message"></a>응답 메시지 만들기  
- 메시지 처리는 `MyServiceManager` 형식에서 구현됩니다. `HandleRequest` 메서드에서는 메시지의 `Action` 헤더를 먼저 검사하여 요청이 지원되는지 여부를 확인합니다. 미리 정의 된 SOAP 동작 http://tempuri.org/HelloWorld/Hello""가 메시지 필터링을 제공 하도록 정의 되어 있습니다. 이는의 <xref:System.ServiceModel.ServiceHost>WCF 구현에서 서비스 계약 개념과 유사 합니다.  
+ 메시지 처리는 `MyServiceManager` 형식에서 구현됩니다. `HandleRequest` 메서드에서는 메시지의 `Action` 헤더를 먼저 검사하여 요청이 지원되는지 여부를 확인합니다. 미리 정의 된 SOAP 동작"http://tempuri.org/HelloWorld/Hello"가 메시지 필터링을 제공 하도록 정의 되어 있습니다. 이는의 <xref:System.ServiceModel.ServiceHost>WCF 구현에서 서비스 계약 개념과 유사 합니다.  
   
  올바른 SOAP 동작의 경우 샘플에서는 요청된 메시지 데이터를 검색하고 <xref:System.ServiceModel.ServiceHost>의 경우와 비슷하게 요청에 해당하는 응답을 생성합니다.  
   
