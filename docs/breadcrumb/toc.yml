@@ -374,6 +374,19 @@
             - name: XAML 서비스
               tocHref: /dotnet/framework/xaml-services/
               topicHref: /dotnet/framework/xaml-services/index
+        - name: 데스크톱 가이드 - WPF
+          tocHref: /dotnet/desktop-wpf/
+          topicHref: /dotnet/desktop-wpf/index
+          items:
+            - name: 시작
+              tocHref: /visualstudio/get-started/csharp/tutorial-wpf
+              topicHref: /dotnet/desktop-wpf/getting-started/index
+            - name: 마이그레이션
+              tocHref: /dotnet/desktop-wpf/migration
+              topicHref: /dotnet/desktop-wpf/migration/index
+            - name: 데이터 바인딩
+              tocHref: /dotnet/desktop-wpf/data
+              topicHref: /dotnet/desktop-wpf/data/index
         - name: 'C# 가이드'
           tocHref: /dotnet/csharp/
           topicHref: /dotnet/csharp/index
