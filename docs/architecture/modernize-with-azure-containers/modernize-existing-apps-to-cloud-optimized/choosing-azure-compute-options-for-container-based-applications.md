@@ -2,12 +2,12 @@
 title: 컨테이너 기반 응용 프로그램용 Azure 계산 플랫폼 선택
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 컨테이너 기반 응용 프로그램용 Azure 계산 플랫폼 선택
 ms.date: 05/04/2018
-ms.openlocfilehash: 64ae542e006bf7a5d7a0be08fe1cff9770552a77
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 54c5945326fb8a50a39c50552a413580926da2c7
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578346"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71331970"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>컨테이너 기반 응용 프로그램용 Azure 계산 플랫폼 선택
 
@@ -25,9 +25,9 @@ ms.locfileid: "69578346"
 
 응용 프로그램의 요구사항을 심층적으로 분석한 후에 선택한 제품이 다를 수 있습니다. 그러나 출발점으로 특정 우선 순위에 따라 테스트하거나 측청할 수 있는 초기 지침을 갖는 것은 좋습니다.
 
-다음 그림에서는 다양 한 종류의 앱과 이상적인 Azure 호스팅 시나리오에 대 한 분석을 볼 수 있습니다.
+그림 1에서 다양 한 종류의 앱과 이상적인 Azure 호스팅 시나리오에 대 한 분석을 볼 수 있습니다.
 
-![](./media/image8.5.png)
+![그림 1](./media/image8.5.png)
 
 > [!div class="step-by-step"]
 > [이전](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
