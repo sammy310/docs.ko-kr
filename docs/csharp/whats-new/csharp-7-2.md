@@ -2,12 +2,12 @@
 title: C# 7.2의 새로운 기능
 description: C# 7.2의 새로운 기능에 대한 개요입니다.
 ms.date: 08/16/2017
-ms.openlocfilehash: a2010b2bda769a625deb545964a2cc127aaf2e06
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: d559f07c501b2a79472d01e2815b50cd8f0f57a5
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105740"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332315"
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2의 새로운 기능
 
@@ -63,7 +63,7 @@ C# 7.0에서는 자릿수 구분 기호에 대한 지원을 구현해도 `_`이 
 int binaryValue = 0b_0101_0101;
 ```
 
-## <a name="_private-protected_-access-modifier"></a>_private protected_ 액세스 한정자
+## <a name="private-protected-access-modifier"></a>*private protected* 액세스 한정자
 
 새로운 복합 액세스 한정자인 `private protected`는 동일한 어셈블리에 선언된 클래스 또는 파생 클래스를 포함하여 멤버에 액세스할 수 있음을 나타냅니다. `protected internal`은 동일한 어셈블리에 있는 파생 클래스나 클래스에 의한 액세스를 허용하지만 `private protected`는 동일한 어셈블리에서 선언된 파생 유형에 대한 액세스를 제한합니다.
 
