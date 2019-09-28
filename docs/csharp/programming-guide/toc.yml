@@ -31,7 +31,7 @@
       href: generics/
     - name: 네임스페이스
       href: namespaces/
-    - name: nullable 형식
+    - name: Nullable 값 형식
       href: nullable-types/
     - name: 안전하지 않은 코드 및 포인터
       href: unsafe-code-pointers/
