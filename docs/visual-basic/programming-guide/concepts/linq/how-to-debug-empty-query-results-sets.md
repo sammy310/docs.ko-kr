@@ -2,26 +2,26 @@
 title: '방법: 빈 쿼리 결과 집합 디버그 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
-ms.openlocfilehash: cc6a370545b9e4d8c28e0096f5cff73f4d937bd3
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 6fc194432b1d44c1214da32d2c6978a4eeb316dc
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710438"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351782"
 ---
-# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a><span data-ttu-id="dd93a-102">방법: 빈 쿼리 결과 집합 디버그 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dd93a-102">How to: Debug Empty Query Results Sets (Visual Basic)</span></span>
+# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a><span data-ttu-id="90e3b-102">방법: 빈 쿼리 결과 집합 디버그 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="90e3b-102">How to: Debug Empty Query Results Sets (Visual Basic)</span></span>
 
-<span data-ttu-id="dd93a-103">XML 트리를 쿼리할 때 가장 일반적인 문제 중 하나는 XML 트리에 기본 네임스페이스가 있으면 개발자가 경우에 따라 XML이 네임스페이스에 없는 것처럼 쿼리를 작성하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="dd93a-103">One of the most common problems when querying XML trees is that if the XML tree has a default namespace, the developer sometimes writes the query as though the XML were not in a namespace.</span></span>
+<span data-ttu-id="90e3b-103">XML 트리를 쿼리할 때 가장 일반적인 문제 중 하나는 XML 트리에 기본 네임스페이스가 있으면 개발자가 경우에 따라 XML이 네임스페이스에 없는 것처럼 쿼리를 작성하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="90e3b-103">One of the most common problems when querying XML trees is that if the XML tree has a default namespace, the developer sometimes writes the query as though the XML were not in a namespace.</span></span>
 
-<span data-ttu-id="dd93a-104">이 항목의 첫 번째 예제 집합에서는 기본 네임스페이스의 XML이 로드되고 적절하지 않게 쿼리되는 일반적인 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="dd93a-104">The first set of examples in this topic shows a typical way that XML in a default namespace is loaded, and is queried improperly.</span></span>
+<span data-ttu-id="90e3b-104">이 항목의 첫 번째 예제 집합에서는 기본 네임스페이스의 XML이 로드되고 적절하지 않게 쿼리되는 일반적인 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="90e3b-104">The first set of examples in this topic shows a typical way that XML in a default namespace is loaded, and is queried improperly.</span></span>
 
-<span data-ttu-id="dd93a-105">두 번째 예제 집합에서는 네임스페이스의 XML을 쿼리할 수 있도록 필요한 수정을 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="dd93a-105">The second set of examples show the necessary corrections so that you can query XML in a namespace.</span></span>
+<span data-ttu-id="90e3b-105">두 번째 예제 집합에서는 네임스페이스의 XML을 쿼리할 수 있도록 필요한 수정을 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="90e3b-105">The second set of examples show the necessary corrections so that you can query XML in a namespace.</span></span>
 
-<span data-ttu-id="dd93a-106">자세한 내용은 [네임 스페이스 개요 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="dd93a-106">For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).</span></span>
+<span data-ttu-id="90e3b-106">자세한 내용은 [네임 스페이스 개요 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="90e3b-106">For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="dd93a-107">예제</span><span class="sxs-lookup"><span data-stu-id="dd93a-107">Example</span></span>
+## <a name="example"></a><span data-ttu-id="90e3b-107">예제</span><span class="sxs-lookup"><span data-stu-id="90e3b-107">Example</span></span>
 
-<span data-ttu-id="dd93a-108">이 예제에서는 네임스페이스에 XML을 만들고 빈 결과 집합을 반환하는 쿼리를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="dd93a-108">This example shows creation of XML in a namespace, and a query that returns an empty result set.</span></span>
+<span data-ttu-id="90e3b-108">이 예제에서는 네임스페이스에 XML을 만들고 빈 결과 집합을 반환하는 쿼리를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="90e3b-108">This example shows creation of XML in a namespace, and a query that returns an empty result set.</span></span>
 
 ```vb
 Dim root As XElement = _
@@ -43,18 +43,18 @@ Next
 Console.WriteLine("End of result set")
 ```
 
-<span data-ttu-id="dd93a-109">이 예제의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="dd93a-109">This example produces the following result:</span></span>
+<span data-ttu-id="90e3b-109">이 예제의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="90e3b-109">This example produces the following result:</span></span>
 
-```
+```console
 Result set follows:
 End of result set
 ```
 
-## <a name="example"></a><span data-ttu-id="dd93a-110">예제</span><span class="sxs-lookup"><span data-stu-id="dd93a-110">Example</span></span>
+## <a name="example"></a><span data-ttu-id="90e3b-110">예제</span><span class="sxs-lookup"><span data-stu-id="90e3b-110">Example</span></span>
 
-<span data-ttu-id="dd93a-111">이 예제에서는 네임스페이스에 XML을 만들고 제대로 코딩된 쿼리를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="dd93a-111">This example shows creation of XML in a namespace, and a query that is coded properly.</span></span>
+<span data-ttu-id="90e3b-111">이 예제에서는 네임스페이스에 XML을 만들고 제대로 코딩된 쿼리를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="90e3b-111">This example shows creation of XML in a namespace, and a query that is coded properly.</span></span>
 
-<span data-ttu-id="dd93a-112">이 솔루션은 전역 기본 네임 스페이스를 선언 하 고 초기화 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="dd93a-112">The solution is to declare and initialize a global default namespace.</span></span> <span data-ttu-id="dd93a-113">이렇게 하면 기본 네임스페이스에 모든 XML 속성이 배치됩니다.</span><span class="sxs-lookup"><span data-stu-id="dd93a-113">This places all XML properties in the default namespace.</span></span> <span data-ttu-id="dd93a-114">예제가 제대로 작동하도록 하기 위해 다른 수정은 필요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="dd93a-114">No other modifications are required to the example to make it work properly.</span></span>
+<span data-ttu-id="90e3b-112">이 솔루션은 전역 기본 네임 스페이스를 선언 하 고 초기화 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="90e3b-112">The solution is to declare and initialize a global default namespace.</span></span> <span data-ttu-id="90e3b-113">이렇게 하면 기본 네임스페이스에 모든 XML 속성이 배치됩니다.</span><span class="sxs-lookup"><span data-stu-id="90e3b-113">This places all XML properties in the default namespace.</span></span> <span data-ttu-id="90e3b-114">예제가 제대로 작동하도록 하기 위해 다른 수정은 필요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="90e3b-114">No other modifications are required to the example to make it work properly.</span></span>
 
 ```vb
 Imports <xmlns="http://www.adventure-works.com">
@@ -82,9 +82,9 @@ Module Module1
 End Module
 ```
 
-<span data-ttu-id="dd93a-115">이 예제의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="dd93a-115">This example produces the following result:</span></span>
+<span data-ttu-id="90e3b-115">이 예제의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="90e3b-115">This example produces the following result:</span></span>
 
-```
+```console
 Result set follows:
 1
 2
@@ -92,6 +92,6 @@ Result set follows:
 End of result set
 ```
 
-## <a name="see-also"></a><span data-ttu-id="dd93a-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="dd93a-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="90e3b-116">참조</span><span class="sxs-lookup"><span data-stu-id="90e3b-116">See also</span></span>
 
-- [<span data-ttu-id="dd93a-117">기본 쿼리 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dd93a-117">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [<span data-ttu-id="90e3b-117">기본 쿼리 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="90e3b-117">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

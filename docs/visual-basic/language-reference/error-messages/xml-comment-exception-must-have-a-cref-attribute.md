@@ -7,28 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
-ms.openlocfilehash: 91bde92e2184c90b14838a09a89a6d261447f139
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2e57dc63cb7ad8b2e061296a082d6fa79b464f08
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662605"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592034"
 ---
-# <a name="xml-comment-exception-must-have-a-cref-attribute"></a><span data-ttu-id="337a6-102">XML 주석 예외에는 'cref' 특성이 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="337a6-102">XML comment exception must have a 'cref' attribute</span></span>
-<span data-ttu-id="337a6-103">\<예외 > 태그는 메서드에서 throw 될 수 있는 예외를 문서화 하는 방법을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="337a6-103">The \<exception> tag provides a way to document the exceptions that may be thrown by a method.</span></span> <span data-ttu-id="337a6-104">필수 `cref` 특성 설명서 생성기에서 확인 하는 멤버의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="337a6-104">The required `cref` attribute designates the name of a member, which is checked by the documentation generator.</span></span> <span data-ttu-id="337a6-105">멤버가 있는 경우 문서 파일의 정식 요소 이름으로 변환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="337a6-105">If the member exists, it is translated to the canonical element name in the documentation file.</span></span>  
+# <a name="xml-comment-exception-must-have-a-cref-attribute"></a><span data-ttu-id="edf0d-102">XML 주석 예외에는 'cref' 특성이 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="edf0d-102">XML comment exception must have a 'cref' attribute</span></span>
+<span data-ttu-id="edf0d-103">@No__t-0exception > 태그는 메서드에 의해 throw 될 수 있는 예외를 문서화 하는 방법을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="edf0d-103">The \<exception> tag provides a way to document the exceptions that may be thrown by a method.</span></span> <span data-ttu-id="edf0d-104">필수 `cref` 특성은 문서 생성기에 의해 확인 되는 멤버의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="edf0d-104">The required `cref` attribute designates the name of a member, which is checked by the documentation generator.</span></span> <span data-ttu-id="edf0d-105">멤버가 있으면 설명서 파일의 정식 요소 이름으로 변환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="edf0d-105">If the member exists, it is translated to the canonical element name in the documentation file.</span></span>  
   
- <span data-ttu-id="337a6-106">**오류 ID:** BC42319</span><span class="sxs-lookup"><span data-stu-id="337a6-106">**Error ID:** BC42319</span></span>  
+ <span data-ttu-id="edf0d-106">**오류 ID:** BC42319</span><span class="sxs-lookup"><span data-stu-id="edf0d-106">**Error ID:** BC42319</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="337a6-107">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="337a6-107">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="edf0d-107">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="edf0d-107">To correct this error</span></span>  
   
-- <span data-ttu-id="337a6-108">추가 된 `cref` 예외에 특성을 다음과 같이 합니다.</span><span class="sxs-lookup"><span data-stu-id="337a6-108">Add the `cref` attribute to the exception as follows:</span></span>  
+- <span data-ttu-id="edf0d-108">다음과 같이 `cref` 특성을 예외에 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="edf0d-108">Add the `cref` attribute to the exception as follows:</span></span>  
   
+    <span data-ttu-id="edf0d-109">xml</span><span class="sxs-lookup"><span data-stu-id="edf0d-109">xml</span></span>  
+    <span data-ttu-id="edf0d-110">' ' '<exception cref="member">설명</exception></span><span class="sxs-lookup"><span data-stu-id="edf0d-110">'''<exception cref="member">description</exception></span></span>  
     ```  
-    '''<exception cref="member">description</exception>  
-    ```  
   
-## <a name="see-also"></a><span data-ttu-id="337a6-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="337a6-109">See also</span></span>
+## See also
 
-- [<span data-ttu-id="337a6-110">\<exception></span><span class="sxs-lookup"><span data-stu-id="337a6-110">\<exception></span></span>](../../../visual-basic/language-reference/xmldoc/exception.md)
-- [<span data-ttu-id="337a6-111">방법: XML 문서 만들기</span><span class="sxs-lookup"><span data-stu-id="337a6-111">How to: Create XML Documentation</span></span>](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
-- [<span data-ttu-id="337a6-112">XML 주석 태그</span><span class="sxs-lookup"><span data-stu-id="337a6-112">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
+- [\<exception>](../../../visual-basic/language-reference/xmldoc/exception.md)
+- [How to: Create XML Documentation](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/index.md)
