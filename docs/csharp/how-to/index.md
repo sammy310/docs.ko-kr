@@ -2,12 +2,12 @@
 title: 방법 문서(C# 가이드)
 description: 유용한 팁 및 간단하고 집중된 코드 샘플의 컬렉션
 ms.date: 12/20/2017
-ms.openlocfilehash: 92f7e94d8003823c0b166cc617563e63aba78027
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: f764bd0183e3881bfb81ebda7d3c7dd49a4cbdde
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038013"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71591604"
 ---
 # <a name="how-to-c"></a>방법(C#)
 
@@ -66,7 +66,7 @@ C# 가이드의 방법 섹션에서 일반적인 질문에 대한 빠른 답변�
 - [패턴 일치, `as` 및 `is` 연산자를 사용하여 안전하게 다른 형식으로 캐스팅합니다](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).
 - [사용자 지정 형식 변환을 정의합니다](../language-reference/operators/user-defined-conversion-operators.md).
 - [형식이 nullable 값 형식인지 여부를 확인합니다](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md).
-- [nullable과 비 nullable 값 형식 사이를 변환합니다](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-type-to-an-underlying-type).
+- [nullable과 비 nullable 값 형식 사이를 변환합니다](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-value-type-to-an-underlying-type).
 
 ## <a name="equality-and-ordering-comparisons"></a>같음 및 순서 비교
 

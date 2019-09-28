@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: f9ac3a6c1e96a1ba4cd78be46a1fd3ad7ee5e4ed
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 25b686e654c5d6bb44a56b96cbf4045d14e95b62
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850966"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392433"
 ---
 # <a name="c-programming-guide"></a>C# 프로그래밍 가이드
 이 섹션에서는 핵심 C# 언어 기능과 .NET Framework를 통해 C#에서 액세스할 수 있는 기능에 대한 자세한 정보를 제공합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "70850966"
   
  [네임스페이스](./namespaces/index.md)  
   
- [Nullable 형식](./nullable-types/index.md)  
+ [Nullable 값 형식](./nullable-types/index.md)  
   
  [안전하지 않은 코드 및 포인터](./unsafe-code-pointers/index.md)  
   
