@@ -2,12 +2,12 @@
 title: 비동기 작업 또는 작업 목록 취소 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 2b2fa7447c046f70c840791e7fe9bd874ff3795f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 73627455b1f4460edfe165126a388e961e98921f
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630946"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353134"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>비동기 작업 또는 작업 목록 취소 (Visual Basic)
 
@@ -125,16 +125,16 @@ ms.locfileid: "68630946"
     End Function
     ```
 
-5. 프로그램을 취소하지 않으면 다음 출력이 생성됩니다.
+5. 프로그램을 취소 하지 않으면 다음과 같은 출력이 생성 됩니다.
 
-    ```
+    ```console
     Ready to download.
     Length of the downloaded string: 158125.
     ```
 
-    프로그램이 다운로드를 완료하기 전에 **취소** 단추를 선택하면 다음 출력이 생성됩니다.
+    프로그램이 콘텐츠 다운로드를 완료 하기 전에 **취소** 단추를 선택 하면 프로그램에서 다음과 같은 출력을 생성 합니다.
 
-    ```
+    ```console
     Ready to download.
     Download canceled.
     ```
@@ -222,9 +222,9 @@ ms.locfileid: "68630946"
     Await AccessTheWebAsync(cts.Token)
     ```
 
-5. 프로그램을 취소하지 않으면 다음 출력이 생성됩니다.
+5. 프로그램을 취소 하지 않으면 다음과 같은 출력이 생성 됩니다.
 
-    ```
+    ```console
     Length of the downloaded string: 35939.
 
     Length of the downloaded string: 237682.
@@ -244,7 +244,7 @@ ms.locfileid: "68630946"
 
     다운로드가 완료되기 전에 **취소** 단추를 선택하면 취소하기 전에 완료된 다운로드의 길이가 출력에 포함됩니다.
 
-    ```
+    ```console
     Length of the downloaded string: 35939.
 
     Length of the downloaded string: 237682.
@@ -464,10 +464,10 @@ End Class
 ' Downloads canceled.
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Threading.CancellationTokenSource>
 - <xref:System.Threading.CancellationToken>
 - [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Async 응용 프로그램 미세 조정(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [Async 애플리케이션 미세 조정(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
 - [비동기 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

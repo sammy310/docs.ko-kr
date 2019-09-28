@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 601f9a216bc2e11ccb34f1f3b3df267002efb01f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: ebfc8f79303f89b092dd0fb38237dffffe0a93ba
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631467"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353910"
 ---
 # <a name="com-callable-wrapper"></a>CCW
 
@@ -100,7 +100,7 @@ public class Mammal
 
 COM 클라이언트는 `_Mammal`이라는 클래스 인터페이스의 포인터를 가져올 수 있습니다. .NET Framework에서 [형식 라이브러리 내보내기 프로그램(Tlbexp.exe)](../../framework/tools/tlbexp-exe-type-library-exporter.md) 도구를 사용하여 `_Mammal` 인터페이스 정의를 포함하는 유형 라이브러리를 생성합니다. 형식 라이브러리 내보내기 프로그램은 .NET Core에서는 지원되지 않습니다. `Mammal` 클래스가 인터페이스를 하나 이상 구현하면 인터페이스가 coclass 아래에 표시됩니다.
 
-```
+```console
 [odl, uuid(…), hidden, dual, nonextensible, oleautomation]
 interface _Mammal : IDispatch
 {
@@ -194,7 +194,7 @@ public class LoanApp
 <EmbedInteropTypes>True</EmbedInteropTypes>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
 - [COM 래퍼](com-wrappers.md)

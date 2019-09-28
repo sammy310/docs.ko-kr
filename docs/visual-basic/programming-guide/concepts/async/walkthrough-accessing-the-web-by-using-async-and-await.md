@@ -2,12 +2,12 @@
 title: '연습: Async 및 Wait (Visual Basic)를 사용 하 여 웹에 액세스'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 72132c4884f3d9bc94de447a122354b3e0dc2ee5
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 2d9d3ea3d55fcd3a59039f4b8b93f37df35bf86d
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928445"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351912"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>연습: Async 및 Wait (Visual Basic)를 사용 하 여 웹에 액세스
 
@@ -217,7 +217,7 @@ Visual Studio 2012 이상이 컴퓨터에 설치되어 있어야 합니다. 자�
 
     다음 목록과 유사한 출력이 표시되어야 합니다.
 
-    ```
+    ```console
     msdn.microsoft.com/library/windows/apps/br211380.aspx        383832
     msdn.microsoft.com                                            33964
     msdn.microsoft.com/library/hh290136.aspx               225793

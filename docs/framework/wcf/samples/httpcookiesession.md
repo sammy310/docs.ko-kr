@@ -2,12 +2,12 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: 71147d98ada3d9814cdbcc8d3e7e85cad4dee0f2
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: af624305e4ab4678938b7f63c4e4056404de0bc9
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989862"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71393131"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 이 샘플에서는 세션 관리에 HTTP 쿠키를 사용하기 위해 사용자 지정 프로토콜 채널을 빌드하는 방법을 보여 줍니다. 이 채널을 통해 Windows Communication Foundation (WCF) 서비스와 ASMX 클라이언트 간 또는 WCF 클라이언트와 ASMX 서비스 간에 통신할 수 있습니다.  
@@ -55,10 +55,7 @@ ms.locfileid: "70989862"
     if (result != null && result.CompletedSynchronously)  
     {  
        // do not block the user thread  
-       if (this.completeReceiveCallback == null)  
-       {  
-          this.completeReceiveCallback = new WaitCallback(CompleteReceiveCallback);  
-       }  
+       this.completeReceiveCallback ??= new WaitCallback(CompleteReceiveCallback);
        ThreadPool.QueueUserWorkItem(this.completeReceiveCallback, result);  
     }  
     ```  

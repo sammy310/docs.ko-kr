@@ -2,12 +2,12 @@
 title: '방법: 문자열 컬렉션 결합 및 비교 (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: 7b56185b98d89572e6a8e3b9bc8ed54ad6ef7b37
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d521e56f9ae311eea53028ba189416db289839cd
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631046"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352889"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>방법: 문자열 컬렉션 결합 및 비교 (LINQ) (Visual Basic)
 
@@ -17,7 +17,7 @@ ms.locfileid: "68631046"
 
 1. 이러한 이름을 names1.txt 텍스트 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다.
 
-    ```
+    ```text
     Bankov, Peter
     Holm, Michael
     Garcia, Hugo
@@ -32,7 +32,7 @@ ms.locfileid: "68631046"
 
 2. 이러한 이름을 names2.txt 텍스트 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다. 두 파일의 일부 이름에는 공통점이 있습니다.
 
-    ```
+    ```text
     Liu, Jinghao
     Bankov, Peter
     Holm, Michael
@@ -165,9 +165,9 @@ End Class
 
 ## <a name="compiling-the-code"></a>코드 컴파일
 
-VB.NET 네임 스페이스에 대 한 `Imports` 문을 사용 하 여 콘솔 응용 프로그램 프로젝트를 만듭니다.
+VB.NET 콘솔 응용 프로그램 프로젝트를 만듭니다. 여기에는 system.string 네임 스페이스에 대 한 `Imports` 문이 사용 됩니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ 및 파일 디렉터리(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML Schema Definition tool, using to generate classes that conform to specific schema
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
-ms.openlocfilehash: 77bb567d2b7b8fff2b1b8de43b2d5fa36fffb3b3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b2cd67a1c4f30e6fe246124be5b8f7081c539a6
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017984"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392855"
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>방법: XML 스키마 정의 도구를 사용하여 클래스 및 XML 스키마 문서 생성
 XML 스키마 정의 도구(Xsd.exe)를 사용하면 클래스를 설명하는 XML 스키마를 생성하거나 XML 스키마로 정의된 클래스를 생성할 수 있습니다. 다음 절차에서는 이러한 작업을 수행하는 방법을 보여 줍니다.  
@@ -23,11 +23,11 @@ XML 스키마 정의 도구(Xsd.exe)를 사용하면 클래스를 설명하는 X
   
 2. XML 스키마를 XML 스키마 정의 도구에 인수로 전달합니다. 그러면 예를 들어 XML 스키마에 정확하게 일치하는 클래스 집합이 만들어 집니다.  
   
-    ```  
+    ```console  
     xsd mySchema.xsd  
     ```  
   
-     도구는 2001년 3월 16일자 World Wide Web 컨소시엄 XML 사양을 참조하는 스키마만 처리할 수 있습니다. 즉, XML 스키마 네임 스페이스 여야 합니다 "http://www.w3.org/2001/XMLSchema" 다음 예와에서 같이 합니다.  
+     도구는 2001년 3월 16일자 World Wide Web 컨소시엄 XML 사양을 참조하는 스키마만 처리할 수 있습니다. 즉, XML 스키마 네임 스페이스는 다음 예제와 같이 "http://www.w3.org/2001/XMLSchema" 이어야 합니다.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
@@ -46,18 +46,18 @@ XML 스키마 정의 도구(Xsd.exe)를 사용하면 클래스를 설명하는 X
   
 3. DLL을 Xsd.exe에 인수로 전달합니다. 예를 들면 다음과 같습니다.  
   
-    ```  
+    ```console  
     xsd MyFile.dll  
     ```  
   
      스키마가 이름 "schema0.xsd"로 시작하여 기록됩니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Data.DataSet>
 - [XML 스키마 정의 도구 및 XML serialization](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)
 - [XML serialization 소개](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [XML 스키마 정의 도구(Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [방법: 개체 serialize](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [방법: 개체 deserialize](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [방법: 개체 직렬화 @ no__t-0
+- [방법: 개체 Deserialize @ no__t-0

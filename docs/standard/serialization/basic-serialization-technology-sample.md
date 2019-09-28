@@ -2,12 +2,12 @@
 title: Basic Serialization 기술 샘플
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: 73bc600c7b4339c1f53ca6e366ae6030015ecfaf
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: e5dcc9ec7cf6f996c97262b14020552286c530da
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663776"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353145"
 ---
 # <a name="basic-serialization-technology-sample"></a>Basic Serialization 기술 샘플
 
@@ -48,7 +48,7 @@ serialization에 대한 자세한 내용은 build.proj 파일 및 소스 코드�
 
 예를 들면 다음과 같습니다.
 
-```
+```console
 Serialize.exe -sx Test.xml 10
 ```
 
@@ -56,7 +56,7 @@ Serialize.exe -sx Test.xml 10
 
 예를 들면 다음과 같습니다.
 
-```
+```console
 Serialize.exe -dx Test.xml
 ```
 
@@ -64,7 +64,7 @@ Serialize.exe -dx Test.xml
 
 예를 들면 다음과 같습니다.
 
-```
+```console
 Serialize.exe -sb Test.bin 10000 >somefile.txt
 ```
 
@@ -76,7 +76,7 @@ Serialize.exe -sb Test.bin 10000 >somefile.txt
 
   - 연결된 목록을 스트림에 이진 형식으로 serialize하기 위해 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>가 사용됩니다. 이진 포맷터는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 형식에서만 인식할 수 있는 형식을 사용하지만, 데이터가 간결해지는 장점이 있습니다.
 
-  - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 연결된 된 목록을 스트림에 SOAP 형식으로 serialize 하는 데 사용 합니다. SOAP는 표준 형식입니다.
+  - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>은 연결 된 목록을 SOAP 형식의 스트림으로 serialize 하는 데 사용 됩니다. SOAP는 표준 형식입니다.
 
 - 스트림 I/O
 
@@ -86,7 +86,7 @@ Serialize.exe -sb Test.bin 10000 >somefile.txt
 
   - 연결된 목록을 serialize 및 deserialize하기 위해 <xref:System.IO.FileStream>이 사용됩니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.IO>
 - <xref:System.IO.File>

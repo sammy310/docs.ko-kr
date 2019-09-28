@@ -2,19 +2,19 @@
 title: XML Serializer 생성기 도구(Sgen.exe)
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: 0eb937d003da02322c097d0eda0c3f8769f97dc8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 492337973f71b10dc061353b7083f596b402ae29
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640155"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392711"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML Serializer 생성기 도구(Sgen.exe)
 XML Serializer 생성기에서 지정된 어셈블리의 형식에 대해 XML serialization 어셈블리를 만들면 지정된 형식의 개체를 serialize 또는 deserialize할 때 <xref:System.Xml.Serialization.XmlSerializer>의 시작 성능을 높일 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 sgen [options]  
 ```  
   
@@ -38,7 +38,7 @@ sgen [options]
 |**/?**|이 도구의 명령 구문 및 옵션을 표시합니다.|  
   
 ## <a name="remarks"></a>설명  
- XML Serializer 생성기를 사용하지 않을 경우, <xref:System.Xml.Serialization.XmlSerializer>는 애플리케이션이 실행될 때마다 각 형식에 대해 serialization 코드 및 serialization 어셈블리를 생성합니다. XML serialization 시작 성능을 향상 시키려면 Sgen.exe 도구를 사용 하 여 해당 어셈블리를 미리 생성 합니다. 그런 다음 애플리케이션과 함께 이 어셈블리를 배포할 수 있습니다.  
+ XML Serializer 생성기를 사용하지 않을 경우, <xref:System.Xml.Serialization.XmlSerializer>는 애플리케이션이 실행될 때마다 각 형식에 대해 serialization 코드 및 serialization 어셈블리를 생성합니다. XML serialization 시작의 성능을 향상 시키려면 Sgen 도구를 사용 하 여 해당 어셈블리를 미리 생성 합니다. 그런 다음 애플리케이션과 함께 이 어셈블리를 배포할 수 있습니다.  
   
  XML Serializer 생성기는 해당 형식이 맨 처음 로드될 때 serialization 프로세스에서 성능 손실을 유발하지 않으므로, 서버와의 통신에서 XML Web services 프록시를 사용하는 클라이언트의 성능도 높일 수 있습니다.  
   
@@ -46,16 +46,16 @@ sgen [options]
   
  serialize할 형식을 포함하는 어셈블리의 이름이 MyType.dll이라면 연결된 serialization 어셈블리의 이름은 MyType.XmlSerializers.dll이 됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 명령에서는 Data.dll이라는 어셈블리에 포함된 모든 형식을 serialize하기 위해 Data.XmlSerializers.dll이라는 어셈블리를 만듭니다.  
   
-```  
+```console  
 sgen Data.dll   
 ```  
   
  Data.XmlSerializers.dll 어셈블리는 Data.dll의 형식을 serialize/deserialize해야 하는 코드에서 참조할 수 있습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [도구](../../../docs/framework/tools/index.md)
 - [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

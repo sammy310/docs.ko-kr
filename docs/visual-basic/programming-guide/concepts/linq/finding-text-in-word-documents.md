@@ -2,12 +2,12 @@
 title: Word 문서에서 텍스트 찾기 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: eea9819b-a78a-4552-bf13-8837fc0e7a37
-ms.openlocfilehash: f05df74f09373af140766f601cfae26404ada1b8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9eb5eaa8326167501792745da047f904cf001c29
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630916"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352919"
 ---
 # <a name="finding-text-in-word-documents-visual-basic"></a>Word 문서에서 텍스트 찾기 (Visual Basic)
 
@@ -155,7 +155,7 @@ End Module
 
 이 예제는 다음과 같은 출력을 생성합니다.
 
-```
+```console
 StyleName:Code >        Console.WriteLine("Hello World")<
 StyleName:Code >Hello World<
 ```
@@ -296,7 +296,7 @@ End Module
 
 이 예제는 다음과 같은 출력을 생성합니다.
 
-```
+```console
 StyleName:Code ><
 ```
 
@@ -310,8 +310,8 @@ StyleName:Code ><
 
 - [Office Open XML WordprocessingML 문서에 대 한 세부 정보 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [자습서: WordprocessingML 문서에서 내용 조작 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [자습서: WordprocessingML 문서 (Visual Basic)의 콘텐츠 조작 ](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
 - [순수 함수를 사용하여 리팩터링(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)
 - [LINQ to XML (Visual Basic)에서 지연 된 실행 및 지연 계산](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

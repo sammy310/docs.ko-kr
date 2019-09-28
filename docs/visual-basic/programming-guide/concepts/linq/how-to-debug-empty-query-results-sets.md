@@ -2,12 +2,12 @@
 title: '방법: 빈 쿼리 결과 집합 디버그 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
-ms.openlocfilehash: cc6a370545b9e4d8c28e0096f5cff73f4d937bd3
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 6fc194432b1d44c1214da32d2c6978a4eeb316dc
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710438"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351782"
 ---
 # <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>방법: 빈 쿼리 결과 집합 디버그 (Visual Basic)
 
@@ -45,7 +45,7 @@ Console.WriteLine("End of result set")
 
 이 예제의 결과는 다음과 같습니다.
 
-```
+```console
 Result set follows:
 End of result set
 ```
@@ -84,7 +84,7 @@ End Module
 
 이 예제의 결과는 다음과 같습니다.
 
-```
+```console
 Result set follows:
 1
 2
@@ -92,6 +92,6 @@ Result set follows:
 End of result set
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [기본 쿼리 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

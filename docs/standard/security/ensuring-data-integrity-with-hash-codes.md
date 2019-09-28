@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 33660f33-b70f-4dca-8c87-ab35cfc2961a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a0383dc3024352b9fac879532ab2789a60488c96
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 995f54e81a48fb3f809d99981ad135974544eb28
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331642"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353176"
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>해시 코드를 사용하여 데이터 무결성 보장
 해시 값을 데이터를 고유하게 식별하는 고정 길이 숫자 값입니다. 해시 값은 대용량 데이터를 훨씬 더 작은 숫자 값으로 나타내므로 디지털 서명과 함께 사용됩니다. 해시 값에 서명하는 것이 더 큰 값에 서명하는 것보다 더 효율적입니다. 해시 값은 안전하지 않은 채널을 통해 전송된 데이터의 무결성을 확인하는 데도 유용합니다. 수신된 데이터의 해시 값을 전송된 데이터의 해시 값과 비교하여 데이터가 변경되었는지 확인할 수 있습니다.  
@@ -50,16 +50,16 @@ ms.locfileid: "68331642"
   
  두 해시 값이 일치하면 이 코드는 다음 내용을 콘솔에 표시합니다.  
   
-```  
+```console  
 The hash codes match.  
 ```  
   
  일치하지 않으면 코드는 다음을 표시합니다.  
   
-```  
+```console  
 The hash codes do not match.  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

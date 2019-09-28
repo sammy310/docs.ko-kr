@@ -1,15 +1,15 @@
 ---
-title: 지연된 실행 예제 (Visual Basic)
+title: 지연 된 실행 예제 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9a22bea1-c755-4aac-800a-fcd9e5107ace
-ms.openlocfilehash: 29f118b3e6d49840b94277f17858f1339f2fb08c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6d1f66cbe246b609f634989625688965dd4e5c93
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61977629"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351809"
 ---
-# <a name="deferred-execution-example-visual-basic"></a>지연된 실행 예제 (Visual Basic)
+# <a name="deferred-execution-example-visual-basic"></a>지연 된 실행 예제 (Visual Basic)
 이 항목에서는 지연된 실행과 지연 계산이 LINQ to XML 쿼리의 실행에 미치는 영향을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
@@ -46,7 +46,7 @@ End Module
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```console  
 ToUpper: source abc  
 Main: str ABC  
 ToUpper: source def  
@@ -59,6 +59,6 @@ Main: str GHI
   
  반환된 컬렉션의 각 항목이 `foreach`의 `Main` 루프에서 처리되기 전에는 문자열의 전체 배열이 대문자로 변환되지 않는 것을 확인할 수 있습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [자습서: 지연 된 실행 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
+- [자습서: 지연 된 실행 (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)

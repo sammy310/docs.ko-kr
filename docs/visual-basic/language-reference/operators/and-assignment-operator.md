@@ -1,5 +1,5 @@
 ---
-title: '&amp;= 연산자 (Visual Basic)'
+title: '&amp; = 연산자 (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.&=
@@ -10,41 +10,41 @@ helpviewer_keywords:
 - '&= operator [Visual Basic]'
 - compound assignment statements [Visual Basic]
 ms.assetid: 0cf262fc-1a05-419a-a503-60013f111c8a
-ms.openlocfilehash: a79e779d8fcf549daeabc494e0a55deee30b5d22
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82d791e5d66c301442c99d2cc73e3172c3e30f17
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608439"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71591630"
 ---
-# <a name="amp-operator-visual-basic"></a>&amp;= 연산자 (Visual Basic)
-연결을 `String` 식을 `String` 변수 또는 속성 결과 변수 또는 속성에 할당 합니다.  
+# <a name="amp-operator-visual-basic"></a>&amp; = 연산자 (Visual Basic)
+@No__t-0 식을 `String` 변수 또는 속성에 연결 하 고 결과를 변수 또는 속성에 할당 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```vb  
 variableorproperty &= expression  
 ```  
   
 ## <a name="parts"></a>요소  
  `variableorproperty`  
- 필수 요소. 모든 `String` 변수 또는 속성입니다.  
+ 필수. 모든 @no__t 0 변수 또는 속성입니다.  
   
  `expression`  
- 필수 요소. 임의의 `String` 식입니다.  
+ 필수. 임의의 `String` 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 왼쪽된에 있는 요소는 `&=` 연산자는 간단한 스칼라 변수, 속성 또는 배열의 요소 수입니다. 변수 또는 속성 일 수 없습니다 [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)합니다. `&=` 연산자는 연결을 `String` 는 오른쪽에 식이 `String` 변수나 속성 왼쪽에 결과 변수 또는 왼쪽의 속성에 할당 합니다.  
+ @No__t-0 연산자의 좌 변에 있는 요소는 간단한 스칼라 변수, 속성 또는 배열의 요소일 수 있습니다. 변수 또는 속성은 [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)일 수 없습니다. @No__t-0 연산자는 오른쪽의 `String` 식을 왼쪽에 있는 `String` 변수 또는 속성에 연결 하 고 결과를 왼쪽에 있는 변수나 속성에 할당 합니다.  
   
 ## <a name="overloading"></a>오버로딩  
- 합니다 [& 연산자](../../../visual-basic/language-reference/operators/concatenation-operator.md) 될 수 있습니다 *오버 로드 된*, 클래스 또는 구조체 수 할 동작 피연산자에 해당 클래스 또는 구조체 형식의 경우. 오버 로드 된 `&` 연산자의 동작에 영향을 줍니다는 `&=` 연산자입니다. 코드를 사용 하는 경우 `&=` 클래스나 구조체에 오버 로드에서 `&`, 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
+ [& 연산자](../../../visual-basic/language-reference/operators/concatenation-operator.md) 를 *오버 로드할*수 있습니다. 즉, 피연산자가 해당 클래스 또는 구조체의 형식일 때 클래스 또는 구조체에서 해당 동작을 다시 정의할 수 있습니다. @No__t-0 연산자를 오버 로드 하면 `&=` 연산자의 동작에 영향을 줍니다. 코드에서-1 @no__t 오버 로드 하는 클래스 또는 구조체에 `&=`을 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 합니다 `&=` 두 연결 연산자 `String` 변수 및 결과 첫 번째 변수에 할당 합니다.  
+ 다음 예에서는 `&=` 연산자를 사용 하 여 두 개의 `String` 변수를 연결 하 고 결과를 첫 번째 변수에 할당 합니다.  
   
  [!code-vb[VbVbalrOperators#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#3)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [& 연산자](../../../visual-basic/language-reference/operators/concatenation-operator.md)
 - [+= 연산자](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)

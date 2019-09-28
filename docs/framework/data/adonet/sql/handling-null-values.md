@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: 763b048fcb517987931b0bdb4f5b9c5a613a05e8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 26b7e3a287c00f103129632ae8b0db882d468ef3
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794116"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352981"
 ---
 # <a name="handling-null-values"></a>Null 값 처리
 관계형 데이터베이스에서 null 값은 열의 값이 없거나 알 수 없을 때 사용됩니다. null은 빈 문자열(문자 또는 datetime 데이터 형식의 경우)도 아니고 0 값(숫자 데이터 형식의 경우)도 아닙니다. ANSI SQL-92 사양에서는 모든 null이 일관성 있게 처리되도록 모든 데이터 형식에 대해 null이 동일해야 함을 규정하고 있습니다. <xref:System.Data.SqlTypes> 네임스페이스에서는 <xref:System.Data.SqlTypes.INullable> 인터페이스를 구현함으로써 null 의미 체계를 제공합니다. <xref:System.Data.SqlTypes>의 각 데이터 형식마다 해당 데이터 형식의 인스턴스에 할당할 수 있는 고유의 `IsNull` 속성과 `Null` 값이 있습니다.  
   
 > [!NOTE]
-> .NET Framework 버전 2.0에는 null을 허용하는 형식에 대한 지원 기능이 도입되었습니다. 프로그래머는 이 기능을 사용하여 값 형식이 내부 형식의 모든 값을 나타내도록 확장할 수 있습니다. 이러한 CLR null 허용 형식은 <xref:System.Nullable> 구조체의 인스턴스를 나타냅니다. 이 기능은 값 형식이 boxed 및 unboxed일 때 개체 형식과의 향상된 호환성을 제공하므로 특히 유용합니다. ANSI SQL null은 `null` 참조(Visual Basic에서는 `Nothing`)와 동일한 방식으로 동작하지 않기 때문에 CLR null 허용 형식으로 데이터베이스 null을 스토리지할 수는 없습니다. 데이터베이스 ANSI SQL null 값을 처리하려면 <xref:System.Data.SqlTypes> 대신 <xref:System.Nullable> null을 사용해야 합니다. Visual Basic에서 CLR nullable 형식으로 작업 하는 방법에 대 한 자세한 내용은 [Nullable 값 형식](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) C# 및 [nullable 형식 사용](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)을 참조 하세요.  
+> .NET Framework 버전 2.0에는 null을 허용하는 형식에 대한 지원 기능이 도입되었습니다. 프로그래머는 이 기능을 사용하여 값 형식이 내부 형식의 모든 값을 나타내도록 확장할 수 있습니다. 이러한 CLR null 허용 형식은 <xref:System.Nullable> 구조체의 인스턴스를 나타냅니다. 이 기능은 값 형식이 boxed 및 unboxed일 때 개체 형식과의 향상된 호환성을 제공하므로 특히 유용합니다. ANSI SQL null은 `null` 참조(Visual Basic에서는 `Nothing`)와 동일한 방식으로 동작하지 않기 때문에 CLR null 허용 형식으로 데이터베이스 null을 스토리지할 수는 없습니다. 데이터베이스 ANSI SQL null 값을 처리하려면 <xref:System.Data.SqlTypes> 대신 <xref:System.Nullable> null을 사용해야 합니다. Visual Basic에서 CLR nullable 형식을 사용 하는 방법에 대 한 자세한 내용은 [Nullable 값](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)형식 및 C# [nullable 값 형식 사용](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)을 참조 하세요.  
   
 ## <a name="nulls-and-three-valued-logic"></a>Null과 3중값 논리  
  열 정의에서 null 값을 허용하면 애플리케이션에 3중값 논리가 도입됩니다. 비교는 다음 세 가지 조건 중 하나로 평가할 수 있습니다.  
   
 - True  
   
-- 거짓  
+- False  
   
 - 알 수 없음  
   
@@ -35,7 +35,7 @@ ms.locfileid: "70794116"
  ![Truth Table](./media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansi_nulls-option"></a>ANSI_NULLS 옵션 이해  
- <xref:System.Data.SqlTypes>는 SQL Server에서 ANSI_NULLS 옵션이 설정되어 있을 때와 동일한 의미 체계를 제공합니다. 모든 산술 연산자 (+,-, \*,/,%), 비트 연산자 (~, & \|,) 및 대부분의 함수는 속성 `IsNull`을 제외 하 고 피연산자 또는 인수가 null 인 경우 null을 반환 합니다.  
+ <xref:System.Data.SqlTypes>는 SQL Server에서 ANSI_NULLS 옵션이 설정되어 있을 때와 동일한 의미 체계를 제공합니다. 모든 산술 연산자 (+,-, \*,/,%), 비트 연산자 (~, &, \|) 및 대부분의 함수는 null @no__t을 반환 합니다.  
   
  ANSI SQL-92 표준은 WHERE 절에서 *columnName* = NULL을 지원 하지 않습니다. SQL Server에서는 ANSI_NULLS 옵션이 데이터베이스의 기본 null 허용 여부와 null 값에 대한 비교 평가를 모두 제어합니다. ANSI_NULLS를 사용하는 경우(기본값)에는 null 값을 테스트할 때 식에서 IS NULL 연산자를 사용해야 합니다. 예를 들어, 다음 비교는 ANSI_NULLS가 사용될 때 항상 알 수 없음 상태를 반환합니다.  
   
@@ -87,7 +87,7 @@ WHERE TerritoryID IN (1, 2, 3)
   
  또한 다음 규칙은 `DataRow.["columnName"]` null 할당의 인스턴스에도 적용됩니다.  
   
-1. 기본 *기본값* 은 강력한 형식의 `DbNull.Value` null 열을 제외한 모든 값으로, 적절 한 강력한 형식의 null 값입니다.  
+1. 기본 *기본값* 은 강력한 형식의 null 열을 제외한 모든 값에 대해 `DbNull.Value`입니다. 여기에는 적절 한 강력한 형식의 null 값이 있습니다.  
   
 2. Null 값은 "xsi:nil"에서와 같이 XML 파일과의 직렬화 중에는 작성되지 않습니다.  
   
@@ -141,7 +141,7 @@ String.Equals instance method:
   Two empty strings=True   
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [SQL Server 데이터 형식 및 ADO.NET](sql-server-data-types.md)
 - [ADO.NET 개요](../ado-net-overview.md)
