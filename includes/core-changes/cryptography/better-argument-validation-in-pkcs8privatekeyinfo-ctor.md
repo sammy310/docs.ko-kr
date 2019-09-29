@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: f72a9f60d0adcace2df6f1761940f8d8cd33d3af
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a9b6af31b68c25ab58c52757f48ed23cca3f5a35
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71119091"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71263329"
 ---
-### <a name="better-argument-validation-in-the-pkcs8privatekeyinfo-constructor"></a><span data-ttu-id="f57f6-101">Pkcs8PrivateKeyInfo 생성자의 인수 유효성 검사를 개선</span><span class="sxs-lookup"><span data-stu-id="f57f6-101">Better argument validation in the Pkcs8PrivateKeyInfo constructor</span></span>
+### <a name="better-argument-validation-in-the-pkcs8privatekeyinfo-constructor"></a><span data-ttu-id="e23b7-101">Pkcs8PrivateKeyInfo 생성자의 인수 유효성 검사를 개선</span><span class="sxs-lookup"><span data-stu-id="e23b7-101">Better argument validation in the Pkcs8PrivateKeyInfo constructor</span></span>
 
-<span data-ttu-id="f57f6-102">.Net Core 3.0 미리 보기 9부터 `Pkcs8PrivateKeyInfo` 생성자는 `algorithmParameters` 매개 변수의 유효성을 BER 인코딩된 단일 값으로 검사합니다.</span><span class="sxs-lookup"><span data-stu-id="f57f6-102">Starting with .NET Core 3.0 Preview 9, the `Pkcs8PrivateKeyInfo` constructor validates the `algorithmParameters` parameter as a single BER-encoded value.</span></span> 
+<span data-ttu-id="e23b7-102">.Net Core 3.0 미리 보기 9부터 `Pkcs8PrivateKeyInfo` 생성자는 `algorithmParameters` 매개 변수의 유효성을 BER 인코딩된 단일 값으로 검사합니다.</span><span class="sxs-lookup"><span data-stu-id="e23b7-102">Starting with .NET Core 3.0 Preview 9, the `Pkcs8PrivateKeyInfo` constructor validates the `algorithmParameters` parameter as a single BER-encoded value.</span></span>
 
-#### <a name="change-description"></a><span data-ttu-id="f57f6-103">변경 내용 설명</span><span class="sxs-lookup"><span data-stu-id="f57f6-103">Change description</span></span>
+#### <a name="change-description"></a><span data-ttu-id="e23b7-103">변경 내용 설명</span><span class="sxs-lookup"><span data-stu-id="e23b7-103">Change description</span></span>
 
-<span data-ttu-id="f57f6-104">.Net Core 3.0 미리 보기 9 이전에는 [`Pkcs8PrivateKeyInfo` 생성자](xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.%23ctor(System.Security.Cryptography.Oid,System.Nullable%7BSystem.ReadOnlyMemory%7BSystem.Byte%7D%7D,System.ReadOnlyMemory%7BSystem.Byte%7D,System.Boolean))가 `algorithmParameters`인수의 유효성을 검사하지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="f57f6-104">Before .NET Core 3.0 Preview 9, the [`Pkcs8PrivateKeyInfo` constructor](xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.%23ctor(System.Security.Cryptography.Oid,System.Nullable%7BSystem.ReadOnlyMemory%7BSystem.Byte%7D%7D,System.ReadOnlyMemory%7BSystem.Byte%7D,System.Boolean)) did not validate the `algorithmParameters` argument.</span></span>  <span data-ttu-id="f57f6-105">이 인수가 잘못된 값을 나타내는 경우 생성자는 성공하지만 <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encode>, <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.TryEncode%2A>, <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encrypt%2A> 또는 <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.TryEncrypt%2A> 메서드를 호출할 경우 허용되지 않은 인수(`preEncodedValue`)에 대한 <xref:System.ArgumentException> 또는 <xref:System.Security.Cryptography.CryptographicException>이 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="f57f6-105">When this argument represented an invalid value, the constructor would succeed, but a call to any of the <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encode>, <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.TryEncode%2A>, <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encrypt%2A>, or <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.TryEncrypt%2A> methods would throw either an <xref:System.ArgumentException> for an argument they did not accept (`preEncodedValue`) or a <xref:System.Security.Cryptography.CryptographicException>.</span></span>
+<span data-ttu-id="e23b7-104">.Net Core 3.0 미리 보기 9 이전에는 [`Pkcs8PrivateKeyInfo` 생성자](xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.%23ctor(System.Security.Cryptography.Oid,System.Nullable%7BSystem.ReadOnlyMemory%7BSystem.Byte%7D%7D,System.ReadOnlyMemory%7BSystem.Byte%7D,System.Boolean))가 `algorithmParameters`인수의 유효성을 검사하지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="e23b7-104">Before .NET Core 3.0 Preview 9, the [`Pkcs8PrivateKeyInfo` constructor](xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.%23ctor(System.Security.Cryptography.Oid,System.Nullable%7BSystem.ReadOnlyMemory%7BSystem.Byte%7D%7D,System.ReadOnlyMemory%7BSystem.Byte%7D,System.Boolean)) did not validate the `algorithmParameters` argument.</span></span>  <span data-ttu-id="e23b7-105">이 인수가 잘못된 값을 나타내는 경우 생성자는 성공하지만 <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encode>, <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.TryEncode%2A>, <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encrypt%2A> 또는 <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.TryEncrypt%2A> 메서드를 호출할 경우 허용되지 않은 인수(`preEncodedValue`)에 대한 <xref:System.ArgumentException> 또는 <xref:System.Security.Cryptography.CryptographicException>이 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="e23b7-105">When this argument represented an invalid value, the constructor would succeed, but a call to any of the <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encode>, <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.TryEncode%2A>, <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encrypt%2A>, or <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.TryEncrypt%2A> methods would throw either an <xref:System.ArgumentException> for an argument they did not accept (`preEncodedValue`) or a <xref:System.Security.Cryptography.CryptographicException>.</span></span>
 
-<span data-ttu-id="f57f6-106">미리 보기 9 이전의 .NET Core 3.0을 사용하여 실행하는 경우 <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encode> 메서드를 호출하는 경우에만 다음 코드에서 예외를 throw합니다.</span><span class="sxs-lookup"><span data-stu-id="f57f6-106">If run with .NET Core 3.0 before Preview 9, the following code throws an exception only when the <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encode> method is called:</span></span>
+<span data-ttu-id="e23b7-106">미리 보기 9 이전의 .NET Core 3.0을 사용하여 실행하는 경우 <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encode> 메서드를 호출하는 경우에만 다음 코드에서 예외를 throw합니다.</span><span class="sxs-lookup"><span data-stu-id="e23b7-106">If run with .NET Core 3.0 before Preview 9, the following code throws an exception only when the <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encode> method is called:</span></span>
 
 ```csharp
 byte[] algorithmParameters = { 0x05, 0x00, 0x05, 0x00 };
@@ -24,7 +24,7 @@ var info = new Pkcs8PrivateKeyInfo(algorithmId, algorithmParameters, privateKey)
 byte[] encoded = info.Encode();
 ```
 
-<span data-ttu-id="f57f6-107">.NET Core 3.0 미리 보기 9부터 생성자가 인수의 유효성을 검사하여 값이 잘못된 경우 메서드가 <xref:System.Security.Cryptography.CryptographicException>을 throw합니다.</span><span class="sxs-lookup"><span data-stu-id="f57f6-107">Starting with .NET Core 3.0 Preview 9, the argument is validated in the constructor, and an invalid value results in the method throwing a <xref:System.Security.Cryptography.CryptographicException>.</span></span> <span data-ttu-id="f57f6-108">이 변경으로 인해 예외는 데이터 오류 소스에 보다 가까워집니다.</span><span class="sxs-lookup"><span data-stu-id="f57f6-108">This change moves the exception closer to the source of the data error.</span></span> <span data-ttu-id="f57f6-109">예:</span><span class="sxs-lookup"><span data-stu-id="f57f6-109">For example:</span></span>
+<span data-ttu-id="e23b7-107">.NET Core 3.0 미리 보기 9부터 생성자가 인수의 유효성을 검사하여 값이 잘못된 경우 메서드가 <xref:System.Security.Cryptography.CryptographicException>을 throw합니다.</span><span class="sxs-lookup"><span data-stu-id="e23b7-107">Starting with .NET Core 3.0 Preview 9, the argument is validated in the constructor, and an invalid value results in the method throwing a <xref:System.Security.Cryptography.CryptographicException>.</span></span> <span data-ttu-id="e23b7-108">이 변경으로 인해 예외는 데이터 오류 소스에 보다 가까워집니다.</span><span class="sxs-lookup"><span data-stu-id="e23b7-108">This change moves the exception closer to the source of the data error.</span></span> <span data-ttu-id="e23b7-109">예:</span><span class="sxs-lookup"><span data-stu-id="e23b7-109">For example:</span></span>
 
 ```csharp
 byte[] algorithmParameters = { 0x05, 0x00, 0x05, 0x00 };
@@ -33,21 +33,21 @@ byte[] algorithmParameters = { 0x05, 0x00, 0x05, 0x00 };
 var info = new Pkcs8PrivateKeyInfo(algorithmId, algorithmParameters, privateKey);
 ```
 
-#### <a name="version-introduced"></a><span data-ttu-id="f57f6-110">도입된 버전</span><span class="sxs-lookup"><span data-stu-id="f57f6-110">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="e23b7-110">도입된 버전</span><span class="sxs-lookup"><span data-stu-id="e23b7-110">Version introduced</span></span>
 
-<span data-ttu-id="f57f6-111">3.0 미리 보기 9</span><span class="sxs-lookup"><span data-stu-id="f57f6-111">3.0 Preview 9</span></span>
+<span data-ttu-id="e23b7-111">3.0 미리 보기 9</span><span class="sxs-lookup"><span data-stu-id="e23b7-111">3.0 Preview 9</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="f57f6-112">권장 작업</span><span class="sxs-lookup"><span data-stu-id="f57f6-112">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="e23b7-112">권장 작업</span><span class="sxs-lookup"><span data-stu-id="e23b7-112">Recommended action</span></span>
 
-<span data-ttu-id="f57f6-113">유효한 `algorithmParameters` 값만 제공하고 예외 처리가 필요한 경우 <xref:System.ArgumentException> 및 <xref:System.Security.Cryptography.CryptographicException> 모두에 대해 `Pkcs8PrivateKeyInfo` 생성자 테스트가 호출되도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="f57f6-113">Ensure that only valid `algorithmParameters` values are provided, or that calls to the `Pkcs8PrivateKeyInfo` constructor test for both <xref:System.ArgumentException> and <xref:System.Security.Cryptography.CryptographicException> if exception handling is desired.</span></span>
+<span data-ttu-id="e23b7-113">유효한 `algorithmParameters` 값만 제공하고 예외 처리가 필요한 경우 <xref:System.ArgumentException> 및 <xref:System.Security.Cryptography.CryptographicException> 모두에 대해 `Pkcs8PrivateKeyInfo` 생성자 테스트가 호출되도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="e23b7-113">Ensure that only valid `algorithmParameters` values are provided, or that calls to the `Pkcs8PrivateKeyInfo` constructor test for both <xref:System.ArgumentException> and <xref:System.Security.Cryptography.CryptographicException> if exception handling is desired.</span></span>
 
-### <a name="category"></a><span data-ttu-id="f57f6-114">범주</span><span class="sxs-lookup"><span data-stu-id="f57f6-114">Category</span></span>
+### <a name="category"></a><span data-ttu-id="e23b7-114">범주</span><span class="sxs-lookup"><span data-stu-id="e23b7-114">Category</span></span>
 
-<span data-ttu-id="f57f6-115">암호화</span><span class="sxs-lookup"><span data-stu-id="f57f6-115">Cryptography</span></span>
+<span data-ttu-id="e23b7-115">암호화</span><span class="sxs-lookup"><span data-stu-id="e23b7-115">Cryptography</span></span>
 
-### <a name="affected-apis"></a><span data-ttu-id="f57f6-116">영향을 받는 API</span><span class="sxs-lookup"><span data-stu-id="f57f6-116">Affected APIs</span></span>
+### <a name="affected-apis"></a><span data-ttu-id="e23b7-116">영향을 받는 API</span><span class="sxs-lookup"><span data-stu-id="e23b7-116">Affected APIs</span></span>
 
-- <span data-ttu-id="f57f6-117">[Pkcs8PrivateKeyInfo 생성자](xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.%23ctor(System.Security.Cryptography.Oid,System.Nullable%7BSystem.ReadOnlyMemory%7BSystem.Byte%7D%7D,System.ReadOnlyMemory%7BSystem.Byte%7D,System.Boolean))</span><span class="sxs-lookup"><span data-stu-id="f57f6-117">[Pkcs8PrivateKeyInfo constructor](xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.%23ctor(System.Security.Cryptography.Oid,System.Nullable%7BSystem.ReadOnlyMemory%7BSystem.Byte%7D%7D,System.ReadOnlyMemory%7BSystem.Byte%7D,System.Boolean))</span></span>
+- <span data-ttu-id="e23b7-117">[Pkcs8PrivateKeyInfo 생성자](xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.%23ctor(System.Security.Cryptography.Oid,System.Nullable%7BSystem.ReadOnlyMemory%7BSystem.Byte%7D%7D,System.ReadOnlyMemory%7BSystem.Byte%7D,System.Boolean))</span><span class="sxs-lookup"><span data-stu-id="e23b7-117">[Pkcs8PrivateKeyInfo constructor](xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.%23ctor(System.Security.Cryptography.Oid,System.Nullable%7BSystem.ReadOnlyMemory%7BSystem.Byte%7D%7D,System.ReadOnlyMemory%7BSystem.Byte%7D,System.Boolean))</span></span>
 
 <!--
 
