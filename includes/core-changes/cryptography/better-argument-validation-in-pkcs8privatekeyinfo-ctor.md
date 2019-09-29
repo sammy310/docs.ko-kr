@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: f72a9f60d0adcace2df6f1761940f8d8cd33d3af
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a9b6af31b68c25ab58c52757f48ed23cca3f5a35
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71119091"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71263329"
 ---
 ### <a name="better-argument-validation-in-the-pkcs8privatekeyinfo-constructor"></a>Pkcs8PrivateKeyInfo 생성자의 인수 유효성 검사를 개선
 
-.Net Core 3.0 미리 보기 9부터 `Pkcs8PrivateKeyInfo` 생성자는 `algorithmParameters` 매개 변수의 유효성을 BER 인코딩된 단일 값으로 검사합니다. 
+.Net Core 3.0 미리 보기 9부터 `Pkcs8PrivateKeyInfo` 생성자는 `algorithmParameters` 매개 변수의 유효성을 BER 인코딩된 단일 값으로 검사합니다.
 
 #### <a name="change-description"></a>변경 내용 설명
 

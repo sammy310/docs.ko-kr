@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d80eb6923b1cafee248c25748915166bafd64817
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: b49b2f88b130bb952b77964d5bf38374dc606385
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117185"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216342"
 ---
 ### <a name="net-core-30-prefers-openssl-11x-to-openssl-10x"></a>.NET Core 3.0은 OpenSSL 1.0.x보다 OpenSSL 1.1.x를 권장합니다.
 

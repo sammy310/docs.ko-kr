@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 39d1b2dba8077bf9bf998775f8967d455f36b549
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a35439efce25db94e70420fc6aeaf04816525758
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71119085"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71263316"
 ---
 ### <a name="json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception"></a>Json 직렬 변환기 예외 형식을 `JsonException`에서 `NotSupportedException`으로 변경
 
@@ -14,12 +14,12 @@ ms.locfileid: "71119085"
 
 .Net Core 3.0 미리 보기 6~8에서는 지원되지 않는 파생 컬렉션 형식이 발견되면 직렬 변환기가 <xref:System.Text.Json.JsonException>을 throw합니다. *지원되지 않는 파생 컬렉션 형식*은 다음 형식 중 하나에 할당할 수 없는 컬렉션 형식입니다.
 
- - <xref:System.Collections.IList>
- - <xref:System.Collections.Generic.ICollection%601>
- - <xref:System.Collections.Generic.Stack%601>
- - <xref:System.Collections.Generic.Queue%601>`
- - <xref:System.Collections.IDictionary>
- - [IDictionary\<String,T>](xref:System.Collections.Generic.IDictionary%602)
+- <xref:System.Collections.IList>
+- <xref:System.Collections.Generic.ICollection%601>
+- <xref:System.Collections.Generic.Stack%601>
+- <xref:System.Collections.Generic.Queue%601>`
+- <xref:System.Collections.IDictionary>
+- [IDictionary\<String,T>](xref:System.Collections.Generic.IDictionary%602)
 
 .Net Core 3.0 미리 보기 9부터 직렬 변환기는 지원되지 않는 컬렉션 형식이 발생하면 <xref:System.NotSupportedException>을 throw합니다. 새 예외 형식이 역직렬화 작업이 실패하는 이유를 더 잘 반영합니다.
 

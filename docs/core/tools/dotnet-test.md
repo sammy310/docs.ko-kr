@@ -2,12 +2,12 @@
 title: dotnet test 명령
 description: dotnet test 명령은 지정된 프로젝트에서 단위 테스트를 실행하는 데 사용됩니다.
 ms.date: 05/29/2018
-ms.openlocfilehash: 306b6f8d890e567afc419b0408d7e683baaa814d
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: c3115d546efb1f076ae9f9731f83a12183aa4154
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117571"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182506"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -122,7 +122,7 @@ dotnet test [-h|--help]
 
 `-s|--settings <SETTINGS_FILE>`
 
-테스트 실행에 사용할 `.runsettings` 파일입니다. [`.runsettings` 파일을 사용하여 단위 테스트를 구성합니다.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
+테스트 실행에 사용할 `.runsettings` 파일입니다. [`.runsettings` 파일을 사용하여 단위 테스트를 구성합니다.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
 
 `-t|--list-tests`
 
@@ -192,7 +192,7 @@ RunSettings에 대한 자세한 내용은 [vstest.console.exe: Passing RunSettin
 
 `-s|--settings <SETTINGS_FILE>`
 
-테스트 실행에 사용할 `.runsettings` 파일입니다. [`.runsettings` 파일을 사용하여 단위 테스트를 구성합니다.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
+테스트 실행에 사용할 `.runsettings` 파일입니다. [`.runsettings` 파일을 사용하여 단위 테스트를 구성합니다.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
 
 `-t|--list-tests`
 
@@ -242,7 +242,7 @@ RunSettings에 대한 자세한 내용은 [vstest.console.exe: Passing RunSettin
 
 `-s|--settings <SETTINGS_FILE>`
 
-테스트 실행에 사용할 `.runsettings` 파일입니다. [`.runsettings` 파일을 사용하여 단위 테스트를 구성합니다.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
+테스트 실행에 사용할 `.runsettings` 파일입니다. [`.runsettings` 파일을 사용하여 단위 테스트를 구성합니다.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
 
 `-t|--list-tests`
 
@@ -254,7 +254,7 @@ RunSettings에 대한 자세한 내용은 [vstest.console.exe: Passing RunSettin
 
 ---
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 현재 디렉터리에 있는 프로젝트에서 테스트를 실행합니다.
 

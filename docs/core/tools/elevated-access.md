@@ -3,12 +3,12 @@ title: dotnet 명령에 대한 관리자 액세스 권한
 description: 관리자 액세스 권한이 필요한 dotnet 명령에 대한 모범 사례를 알아봅니다.
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: b6de87f375a584da25e160d79f51f1bc48f3c302
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: cf7c93a0adcae7092a61a6fc6046cd45cf00bf58
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969856"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216309"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>dotnet 명령에 대한 관리자 액세스 권한
 
@@ -41,7 +41,7 @@ ms.locfileid: "70969856"
 
 도구를 설치하려면 관리자 권한 프롬프트에서 다음 명령을 실행합니다. 설치 중에 *dotnet-tools* 폴더를 만듭니다.
 
-```cmd
+```dotnetcli
 dotnet tool install PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools".
 ```
 
@@ -69,7 +69,7 @@ TOOLCOMMAND
 
 관리자 권한 프롬프트에 다음 명령을 입력합니다.
 
-```cmd
+```dotnetcli
 dotnet tool uninstall PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools"
 ```
 
