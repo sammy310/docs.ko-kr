@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6409bbecdef2da03a18ed246cb90478b2a1fd7f6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a0d21ab8af3669575a451644deb2b3572fdb7651
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054062"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71354034"
 ---
 # <a name="garbage-collection-and-performance"></a>가비지 컬렉션 및 성능
 
@@ -321,7 +321,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
     예외가 관리되는 경우 다음 예제와 같이 <xref:System.OutOfMemoryException>이 예외 형식으로 표시됩니다.
 
-    ```
+    ```console
     Exception object: 39594518
     Exception type: System.OutOfMemoryException
     Message: <none>
@@ -335,7 +335,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
     예외 호출이 포함된 스택이 있는 스레드는 `RaiseTheException` 인수로 표시됩니다. 이는 관리되는 예외 개체입니다.
 
-    ```
+    ```console
     28adfb44 7923918f 5b61f2b4 00000000 5b61f2b4 mscorwks!RaiseTheException+0xa0
     ```
 
@@ -355,7 +355,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
   다음 출력과 같이 최대 여유 영역이 표시됩니다.
 
-  ```
+  ```console
   Largest free region: Base 54000000 - Size 0003A980
   ```
 
@@ -369,7 +369,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
   다음 출력과 같이 최대 여유 영역은 MAXIMUM 열에서 가장 큰 값입니다.
 
-  ```
+  ```console
   TYPE        MINIMUM   MAXIMUM     AVERAGE   BLK COUNT   TOTAL
   ~~~~        ~~~~~~~   ~~~~~~~     ~~~~~~~   ~~~~~~~~~~  ~~~~
   Free:
@@ -415,7 +415,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
   결과는 다음과 같습니다.
 
-  ```
+  ```console
   Number of GC Heaps: 2
   ------------------------------
   Heap 0 (002db550)
@@ -459,7 +459,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
   가장 많은 공간을 사용하는 개체를 나열하는 출력의 마지막 몇 줄에서 분석을 시작하는 것이 좋습니다. 예:
 
-  ```
+  ```console
   2c6108d4   173712     14591808 DevExpress.XtraGrid.Views.Grid.ViewInfo.GridCellInfo
   00155f80      533     15216804      Free
   7a747c78   791070     15821400 System.Collections.Specialized.ListDictionary+DictionaryNode
@@ -479,7 +479,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
   결과의 예는 다음과 같습니다.
 
-  ```
+  ```console
   Address  MT           Size  Gen
   1875d2c0 790fa3e0      152    2 System.String HighlightNullStyle_Blotter_PendingOrder-11_Blotter_PendingOrder-11
   …
@@ -503,7 +503,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
   스택에서 발견된 루트는 가양성(false positive)일 수 있습니다. 자세한 내용을 보려면 `!help gcroot` 명령을 사용하세요.
 
-  ```
+  ```console
   ebx:Root:19011c5c(System.Windows.Forms.Application+ThreadContext)->
   19010b78(DemoApp.FormDemoApp)->
   19011158(System.Windows.Forms.PropertyStore)->
@@ -551,7 +551,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
     이 명령은 다음과 같은 출력을 제공합니다.
 
-    ```
+    ```console
        OSID     Special thread type
     2    cd0    DbgHelper
     3    c18    Finalizer
@@ -570,7 +570,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
   이 명령은 다음 예제와 같이 관리되는 힙에서 사용 가능한 모든 개체의 전체 크기를 표시합니다.
 
-  ```
+  ```console
   total 230 objects
   Statistics:
         MT    Count    TotalSize Class Name
@@ -584,7 +584,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
   이 명령은 다음과 유사한 출력을 표시합니다. 마지막 줄은 단기 세그먼트를 보여 줍니다.
 
-  ```
+  ```console
   Heap 0 (0015ad08)
   generation 0 starts at 0x49521f8c
   generation 1 starts at 0x494d7f64
@@ -604,7 +604,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
   결과는 다음과 같습니다. 0세대는 약 9MB입니다.
 
-  ```
+  ```console
   Evaluate expression: 9321848 = 008e3d78
   ```
 
@@ -614,7 +614,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
   결과는 다음과 같습니다.
 
-  ```
+  ```console
   ------------------------------
   Heap 0
   total 409 objects
@@ -647,7 +647,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
   다음 예제와 같이 표시된 통계는 고정된 핸들 수를 포함합니다.
 
-  ```
+  ```console
   GC Handle Statistics:
   Strong Handles:      29
   Pinned Handles:      10
@@ -665,7 +665,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
   다음 데이터는 8초 연구를 위해 2초 샘플링 간격 4개를 보여 줍니다. `Gen0`, `Gen1` 및 `Gen2` 열은 해당 세대에 대해 해당 간격 중에 발생한 가비지 수집 횟수를 보여 줍니다.
 
-  ```
+  ```console
   Interval    Gen0    Gen1    Gen2    % Time in GC
           1       9       3       1              10
           2      10       3       1               1
@@ -677,7 +677,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
   이 예제에서는 5개 기간이 있습니다.
 
-  ```
+  ```console
   Interval    Gen0    Gen1    Gen2     % Time in GC
           1       9       3       1                3
           2      10       3       1                1
@@ -692,7 +692,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
   예를 들어 다음 데이터는 비 동시 가비지 컬렉션 중에 발생한 이벤트 시퀀스를 보여 줍니다.
 
-  ```
+  ```console
   Timestamp    Event name
   513052        GCSuspendEEBegin_V1
   513078        GCSuspendEEEnd
@@ -711,7 +711,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
   다음 출력은 백그라운드 가비지 수집에 대한 예제를 제공하며 프로세스, 스레드 및 이벤트 필드를 포함합니다. 일부 데이터만 표시됩니다.
 
-  ```
+  ```console
   timestamp(us)    event name            process    thread    event field
   42504385        GCSuspendEEBegin_V1    Test.exe    4372             1
   42504648        GCSuspendEEEnd         Test.exe    4372
@@ -751,7 +751,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
   이 명령은 다음과 유사한 출력을 표시합니다.
 
-  ```
+  ```console
   0012f3b0 79ff0bf8 mscorwks!WKS::GCHeap::GarbageCollect
   0012f454 30002894 mscorwks!GCInterface::CollectGeneration+0xa4
   0012f490 79fa22bd fragment_ni!request.Main(System.String[])+0x48
@@ -761,7 +761,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
   가비지 수집이 메모리 할당에 의해 발생한 경우 스택이 다음과 같이 나타납니다.
 
-  ```
+  ```console
   0012f230 7a07c551 mscorwks!WKS::GCHeap::GarbageCollectGeneration
   0012f2b8 7a07cba8 mscorwks!WKS::gc_heap::try_allocate_more_space+0x1a1
   0012f2d4 7a07cefb mscorwks!WKS::gc_heap::allocate_more_space+0x18
@@ -781,7 +781,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
   예제 출력(가장 많은 공간을 사용하는 개체를 표시하기 위해 요약됨):
 
-  ```
+  ```console
   79124228    31857      9862328 System.Object[]
   035f0384    25668     11601936 Toolkit.TlkPosition
   00155f80    21248     12256296      Free
@@ -803,7 +803,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
   예제 출력(가장 많은 공간을 사용하는 개체를 표시하기 위해 요약됨):
 
-  ```
+  ```console
   79124228    26648      9314256 System.Object[]
   035f0384    25668     11601936 Toolkit.TlkPosition
   79103b6c   296770     13057880 System.Threading.ReaderWriterLock

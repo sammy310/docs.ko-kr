@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 2dd10c0843b2bea4755d5f4f0aceea6509c7cf46
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 38b935814d713284dae1ca931b90c63bbcac332b
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054263"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216887"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>자습서: ML.NET에서 미리 학습된 TensorFlow 모델을 사용하여 영화 리뷰의 감정 분석
 
@@ -21,6 +21,7 @@ ms.locfileid: "71054263"
 
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 > [!div class="checklist"]
+>
 > * 미리 학습된 TensorFlow 모델 로드
 > * 웹 사이트 댓글 텍스트를 모델에 적합한 기능으로 변환
 > * 모델로 예측 수행
@@ -120,7 +121,7 @@ ms.locfileid: "71054263"
     [!code-csharp[Prediction](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#Prediction "Declare prediction class")]
 
     `MovieReviewSentimentPrediction`은 모델 학습 후 사용되는 예측 클래스입니다. `MovieReviewSentimentPrediction`에는 단일 `float` 배열(`Prediction`)과 `VectorType` 특성이 있습니다.
-    
+
 ### <a name="create-the-mlcontext-lookup-dictionary-and-action-to-resize-features"></a>MLContext, 조회 사전 및 기능 크기 조정 작업 만들기
 
 [MLContext 클래스](xref:Microsoft.ML.MLContext)는 모든 ML.NET 작업의 시작 지점입니다. `mlContext`를 초기화하면 모델 생성 워크플로 개체 간에 공유할 수 있는 새 ML.NET 환경이 생성됩니다. 개념적으로 Entity Framework의 `DBContext`와 유사합니다.
@@ -191,7 +192,7 @@ ms.locfileid: "71054263"
 
 1. 코드를 추가하여 파이프라인에서 모델을 만듭니다.
 
-    [!code-csharp[SnippetCreateModel](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#SnippetCreateModel)]  
+    [!code-csharp[SnippetCreateModel](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#SnippetCreateModel)]
 
     ML.NET 모델은 `Fit` 메서드를 호출하여 파이프라인의 추정기 체인에서 만들어집니다. 이 경우에는 TensorFlow 모델이 이미 학습되었으므로 모델을 만들기 위해 데이터 맞춤을 수행하지 않습니다. `Fit` 메서드의 요구 사항을 충족하기 위해 빈 데이터 보기 개체를 제공합니다.
 
@@ -200,10 +201,10 @@ ms.locfileid: "71054263"
 1. `Main` 메서드 아래에 `PredictSentiment` 메서드를 추가합니다.
 
     ```csharp
-        public static void PredictSentiment(MLContext mlContext, ITransformer model)
-        {
+    public static void PredictSentiment(MLContext mlContext, ITransformer model)
+    {
 
-        }
+    }
     ```
 
 1. `PredictSentiment()` 메서드의 첫째 줄과 같이 다음 코드를 추가하여 `PredictionEngine`을 만듭니다.
@@ -241,8 +242,8 @@ ms.locfileid: "71054263"
 다음과 같은 결과가 나타나야 합니다. 처리 중 메시지가 표시됩니다. 경고 또는 메시지 처리를 확인할 수 있습니다. 이해하기 쉽도록 이러한 메시지는 다음 결과에서 제거되었습니다.
 
 ```console
-   Number of classes: 2
-   Is sentiment/review positive ? Yes
+Number of classes: 2
+Is sentiment/review positive ? Yes
 ```
 
 지금까지 이제 ML.NET에서 미리 학습된 `TensorFlow` 모델을 재사용하여 메시지 감정을 분류하고 예측하기 위한 기계 학습 모델을 성공적으로 빌드했습니다.
@@ -251,6 +252,7 @@ ms.locfileid: "71054263"
 
 본 자습서에서는 다음 작업에 관한 방법을 학습했습니다.
 > [!div class="checklist"]
+>
 > * 미리 학습된 TensorFlow 모델 로드
 > * 웹 사이트 댓글 텍스트를 모델에 적합한 기능으로 변환
 > * 모델로 예측 수행

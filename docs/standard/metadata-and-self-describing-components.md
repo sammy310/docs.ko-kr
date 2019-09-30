@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ccfb0dee0eb6380d48498ba61f763eb777bded1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1a35f4ffa88211d914dbf84c87da49fafa89a929
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754951"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353900"
 ---
 # <a name="metadata-and-self-describing-components"></a>메타데이터 및 자동 기술 구성 요소
 
@@ -84,9 +84,7 @@ ms.locfileid: "64754951"
 
 메타데이터 토큰은 4바이트 숫자입니다. 최상위 바이트는 특정 토큰이 참조하는 메타데이터 테이블(메서드, 형식 등)을 나타내고 나머지 3바이트는 메타데이터 테이블의 행 중에서 현재 나타내고 있는 프로그래밍 요소에 해당하는 행을 지정합니다. C#에서 메서드를 정의하여 PE 파일로 컴파일하면 PE 파일의 MSIL 부분에 다음과 같은 메타데이터 토큰이 존재합니다.
 
-```
-0x06000004
-```
+`0x06000004`
 
 최상위 바이트(`0x06`)는 이 토큰이 **MethodDef** 토큰임을 나타내고, 하위 3바이트(`000004`)는 공용 언어 런타임이 **MethodDef** 테이블의 넷째 행에서 이 메서드 정의를 기술하는 정보를 찾도록 지시합니다.
 
@@ -140,7 +138,7 @@ public class MyApp
 
 다음 예제에서는 이전 코드의 `Main` 함수에서 생성된 MSIL 부분을 보여 줍니다. [MSIL 디스어셈블러(Ildasm.exe)](../../docs/framework/tools/ildasm-exe-il-disassembler.md)를 사용하여 .NET Framework 애플리케이션에서 MSIL 및 메타데이터를 볼 수 있습니다.
 
-```
+```console
 .entrypoint
 .maxstack  3
 .locals ([0] int32 ValueOne,

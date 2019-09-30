@@ -2,12 +2,12 @@
 title: Polly를 통해 지수 백오프를 사용하여 HTTP 호출 다시 시도 구현
 description: Polly와 HttpClientFactory를 사용하여 HTTP 오류를 처리하는 방법을 알아봅니다.
 ms.date: 01/07/2019
-ms.openlocfilehash: aa500b5525eff9f0bbf91bf98de8945f7c84704f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: de1dad44b1ddc7b04438fb380f240d3be33bbb83
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674570"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71331972"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>HttpClientFactory 및 Polly 정책을 통해 지수 백오프를 사용하여 HTTP 호출 다시 시도 구현
 
@@ -50,8 +50,6 @@ static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 ```
 
 Polly를 사용하면 HTTP 예외(예: 오류 로깅)가 발생하는 경우 수행할 다시 시도 횟수, 지수 백오프 구성 및 작업이 포함된 재시도 정책을 정의할 수 있습니다. 이 경우 정책은 2초에서 시작하여 지수 다시 시도를 6회 시도하도록 구성됩니다. 
-
-그러면 메서드에서 다시 시도를 6회 시도하고, 각 다시 시도 사이의 시간(초)은 2초에서 시작하는 지수가 됩니다.
 
 ## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>재시도 정책에 지터 전략 추가
 

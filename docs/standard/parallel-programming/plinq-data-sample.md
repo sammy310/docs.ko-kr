@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b5cf6f0ae66141957d545134a2f8ff8eb799097
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 60693a6570eff6f9d4980d8f29f1385bc7462f08
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946447"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353159"
 ---
 # <a name="plinq-data-sample"></a>PLINQ 데이터 샘플
 이 샘플에는 고객, 제품, 주문 및 주문 세부 정보의 메모리 내 컬렉션으로 변환되는 메서드와 함께 .csv 형식의 예제 데이터가 포함되어 있습니다. PLINQ를 사용하여 더 실험해 보기 위해 다른 특정 항목의 코드 예제를 이 항목의 코드에 붙여넣고 `Main` 메서드에서 호출할 수 있습니다. 또한 사용자만의 PLINQ 쿼리에 이 데이터를 사용할 수도 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "69946447"
   
 4. F5 키를 눌러 프로젝트가 제대로 빌드되어 실행되는지 확인합니다. 콘솔 창에 다음 출력이 표시됩니다.  
   
-    ```  
+    ```console  
     Customer count: 50  
     Product count: 77  
     Order count: 190  
@@ -48,7 +48,7 @@ ms.locfileid: "69946447"
   
 ## <a name="data"></a>데이터  
   
-```  
+```console  
 CUSTOMERS  
 ALFKI,Alfreds Futterkiste,Obere Str. 57,Berlin,12209  
 ANATR,Ana Trujillo Emparedados y helados,Avda. de la Constitución 2222,México D.F.,05021  

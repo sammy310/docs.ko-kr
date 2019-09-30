@@ -2,18 +2,18 @@
 title: 공식 .NET Docker 이미지
 description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크로 서비스 아키텍처 | 공식 .NET Docker 이미지
 ms.date: 01/07/2019
-ms.openlocfilehash: 749485bfe07e0245493da67af915805f644a1897
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 43b2f47912e38e99926d7f06c3cda72f17d0e3fc
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039630"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353878"
 ---
 # <a name="official-net-docker-images"></a>공식 .NET Docker 이미지
 
 공식 .NET Docker 이미지는 Microsoft에서 만들고 최적화된 Docker 이미지입니다. 이러한 이미지는 [Docker 허브](https://hub.docker.com/u/microsoft/)의 Microsoft 리포지토리에서 공개적으로 사용할 수 있습니다. 각 리포지토리는 .NET 버전 및 OS와 버전(Linux Debian, Linux Alpine, Windows Nano Server, Windows Server Core 등)에 따라 여러 이미지를 포함할 수 있습니다.
 
-.NET Core 2.1 이후에는 ASP.NET Core 이미지를 비롯한 모든 .NET Core 이미지를 Docker Hub의 .NET Core 이미지 리포지토리에서 사용할 수 있습니다. <https://hub.docker.com/\_/microsoft-dotnet-core/>
+.NET Core 2.1 이후에는 ASP.NET Core 이미지를 비롯한 모든 .NET Core 이미지를 Docker Hub의 .NET Core 이미지 리포지토리에서 사용할 수 있습니다. <https://hub.docker.com/_/microsoft-dotnet-core/>
 
 이미지 리포지토리 대부분은 특정 프레임워크 버전뿐만 아니라 OS(Linux 배포 또는 Windows 버전)를 선택하는 데 도움이 되는 광범위한 태그 지정을 제공합니다.
 
