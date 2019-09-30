@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 422613a9016efb55c299f24c50cd2eec6c2c1069
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a5ccd0e9e0e3e5bedad06a619be115c362b38e0d
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588406"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392163"
 ---
 # <a name="types-c-programming-guide"></a>형식(C# 프로그래밍 가이드)
 
@@ -70,7 +70,7 @@ C#에서는 정수, 부동 소수점 값, 부울 식, 텍스트 문자, 10진수
 
 [struct](../../language-reference/keywords/struct.md), [class](../../language-reference/keywords/class.md), [interface](../../language-reference/keywords/interface.md) 및 [enum](../../language-reference/keywords/enum.md) 구문을 사용하여 자체 사용자 지정 형식을 만듭니다. .NET 클래스 라이브러리 자체는 자체 애플리케이션에서 사용할 수 있는 Microsoft에서 제공되는 사용자 지정 형식의 컬렉션입니다. 기본적으로 클래스 라이브러리의 가장 자주 사용되는 형식을 모든 C# 프로그램에서 사용할 수 있습니다. 기타 형식은 정의되어 있는 어셈블리에 대한 프로젝트 참조를 명시적으로 추가할 경우에만 사용할 수 있습니다. 컴파일러에 어셈블리에 대한 참조가 포함된 후에는 소스 코드에서 해당 어셈블리에 선언된 형식의 변수(및 상수)를 선언할 수 있습니다. 자세한 내용은 [.NET 클래스 라이브러리](../../../standard/class-library-overview.md)를 참조하세요.
 
-## <a name="the-common-type-system"></a>공용 형식 시스템.
+## <a name="the-common-type-system"></a>CTS(공용 형식 시스템)
 
 .NET의 형식 시스템에 대한 다음과 같은 두 가지 기초 사항을 이해해야 합니다.
 
@@ -168,13 +168,13 @@ stringList.Add(4);
 
 형식 매개 변수를 사용하면 각 요소를 [개체](../../language-reference/keywords/object.md)로 변환할 필요 없이 같은 클래스를 재사용하여 요소 형식을 포함할 수 있습니다. 컴파일러는 컬렉션 요소의 특정 형식을 인식하며, 예를 들어 이전 예제에서 `stringList` 개체에 정수를 추가하려는 경우 컴파일 시간에 오류를 발생시킬 수 있기 때문에 제네릭 컬렉션 클래스를 *강력한 형식의 컬렉션*이라고 합니다. 자세한 내용은 [제네릭](../generics/index.md)을 참조하세요.
 
-## <a name="implicit-types-anonymous-types-and-nullable-types"></a>암시적 형식, 무명 형식 및 Null 허용 형식
+## <a name="implicit-types-anonymous-types-and-nullable-value-types"></a>암시적 형식, 무명 형식 및 nullable 값 형식
 
 앞에서 설명한 대로 [var](../../language-reference/keywords/var.md) 키워드를 사용하여 클래스 멤버가 아닌 로컬 변수를 암시적으로 형식화할 수 있습니다. 이 변수는 컴파일 타임에 형식을 받지만 형식은 컴파일러에서 제공됩니다. 자세한 내용은 [암시적으로 형식화된 지역 변수](../classes-and-structs/implicitly-typed-local-variables.md)를 참조하세요.
 
 경우에 따라 저장하거나 메서드 경계 외부로 전달할 의도가 없는 관련 값의 단순 집합에 대한 명명된 형식을 만드는 것은 불편합니다. 이 목적으로는 *무명 형식*을 만들 수 있습니다. 자세한 내용은 [무명 형식](../classes-and-structs/anonymous-types.md)을 참조하세요.
 
-일반적인 값 형식은 [null](../../language-reference/keywords/null.md) 값을 가질 수 없습니다. 그러나 형식 뒤에 `?`를 추가하면 null 허용 값 형식을 예를 들어 `int?`는 [null](../../language-reference/keywords/null.md) 값을 가질 수도 있는 `int` 형식입니다. CTS에서 Nullable 형식은 제네릭 구조체 형식 <xref:System.Nullable%601?displayProperty=nameWithType>의 인스턴스입니다. Nullable 형식은 특히 숫자 값이 null일 수 있는 데이터베이스에 데이터를 전달하는 경우에 유용합니다. 자세한 내용은 [Null 허용 형식](../nullable-types/index.md)을 참조하세요.
+일반적인 값 형식은 [null](../../language-reference/keywords/null.md) 값을 가질 수 없습니다. 그러나 형식 뒤에 `?`를 추가하면 null 허용 값 형식을 예를 들어 `int?`는 [null](../../language-reference/keywords/null.md) 값을 가질 수도 있는 `int` 형식입니다. nullable 값 형식은 제네릭 구조체 형식 <xref:System.Nullable%601?displayProperty=nameWithType>의 인스턴스입니다. nullable 값 형식은 특히 숫자 값이 null일 수 있는 데이터베이스에 데이터를 전달하는 경우에 유용합니다. 자세한 내용은 [nullable 값 형식](../nullable-types/index.md)을 참조하세요.
 
 ## <a name="related-sections"></a>관련 단원
 

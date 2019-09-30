@@ -11,6 +11,8 @@
       href: how-to-explicitly-throw-exceptions.md
     - name: '방법: 사용자 정의 예외 만들기'
       href: how-to-create-user-defined-exceptions.md
+    - name: '방법: 지역화된 예외 메시지를 사용하여 사용자 정의 예외 만들기'
+      href: how-to-create-localized-exception-messages.md
     - name: 사용자 필터 예외 처리기 사용
       href: using-user-filtered-exception-handlers.md
     - name: '방법: Finally 블록 사용'

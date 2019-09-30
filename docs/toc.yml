@@ -317,13 +317,18 @@
       items:
         - name: 개요
           href: core/tools/index.md
-        - name: 전역 도구
+        - name: 도구
           expanded: true
           items:
-            - name: 개요
-              href: core/tools/global-tools.md
-            - name: Global Tool 만들기
-              href: core/tools/global-tools-how-to-create.md
+            - name: 전역 도구
+              expanded: true
+              items:
+                - name: 개요
+                  href: core/tools/global-tools.md
+                - name: Global Tool 만들기
+                  href: core/tools/global-tools-how-to-create.md
+            - name: 도구 사용 문제 해결
+              href: core/tools/troubleshoot-usage-issues.md
         - name: 상승된 액세스 권한
           href: core/tools/elevated-access.md
         - name: 확장성 모델
