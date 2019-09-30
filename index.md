@@ -6,12 +6,12 @@ title: .NET 설명서
 description: C#, Visual Basic 및 F#을 사용하는 모든 플랫폼에서 .NET을 사용하여 다양한 애플리케이션을 만드는 방법을 알아보세요. API 참조, 샘플 코드, 자습서 등을 찾아보세요.
 ms.custom: updateeachrelease
 ms.date: 09/23/2019
-ms.openlocfilehash: cb567ea473e99c3bbd3d63a2328d45e94ca742ff
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: f58e1c03f529629556f79881aebd69afc9ed9bde
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216692"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351648"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -118,6 +118,7 @@ ms.locfileid: "71216692"
                                                 <p><a href="/dotnet/core/porting/">.NET Framework에서 이식</a></p>
                                                 <p><a href="/aspnet/core/getting-started/">ASP.NET Core</a></p>
                                                 <p><a href="/ef/core/">EF Core</a></p>
+                                                <p><a href="/dotnet/desktop-wpf/">데스크톱 가이드(WPF)</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -381,7 +382,7 @@ ms.locfileid: "71216692"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>ASP.NET Core란?</h3>
+                                                    <h3>ASP.NET Core란? </h3>
                                                     <p>ASP.NET Core 웹 애플리케이션을 빌드하는 방법을 알아봅니다.</p>
                                                 </div>
                                             </div>
@@ -581,17 +582,37 @@ ms.locfileid: "71216692"
                                 </a>
                             </li>
                             <li>
+                                <a href="/dotnet/desktop-wpf/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-desktop-2-core.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Windows Presentation Foundation(.NET Core)</h3>
+                                                    <p>WPF는 Windows에서 데스크톱 애플리케이션을 빌드하기 위한 XAML 기반 모델을 개발자에 게 제공합니다.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
                                 <a href="/dotnet/framework/wpf/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img src="/dotnet/images/hub/net-docs-desktop-2.svg" alt="" />
+                                                        <img src="/dotnet/images/hub/net-docs-desktop-2-framework.svg" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>WPF(Windows Presentation Foundation)</h3>
+                                                    <h3>Windows Presentation Foundation(.NET Framework)</h3>
                                                     <p>WPF는 Windows에서 데스크톱 애플리케이션을 빌드하기 위한 XAML 기반 모델을 개발자에 게 제공합니다.
                                                     </p>
                                                 </div>
