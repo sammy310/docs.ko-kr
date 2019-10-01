@@ -3,14 +3,16 @@ title: Azure용 클라우드 네이티브 .NET 애플리케이션 설계
 description: Azure의 컨테이너, 마이크로 서비스 및 서버리스 기능을 활용하여 클라우드 네이티브 애플리케이션을 빌드하는 방법을 보여 주는 가이드입니다.
 author: ardalis
 ms.date: 03/07/2019
-ms.openlocfilehash: 67e235b051702308d2455b2501bfb59a4317635b
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 7f14a690d0153edc43f0ce7f4e91c9e9cd2c6858
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214171"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696788"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Azure용 클라우드 네이티브 .NET 애플리케이션 설계
+
+[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 ![표지 이미지](./media/cover.png)
 

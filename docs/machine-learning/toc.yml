@@ -45,6 +45,10 @@
           href: tutorials/mlnet-cli.md
         - name: 모델 작성기 및 Razor Pages를 사용하여 감정 분석
           href: tutorials/sentiment-analysis-model-builder.md
+    - name: Infer.NET
+      items:
+        - name: Infer.NET을 사용한 확률 프로그래밍
+          href: how-to-guides/matchup-app-infer-net.md
 - name: 개념
   items:
     - name: ML.NET 작업(모델 형식)
@@ -95,10 +99,6 @@
           href: how-to-guides/install-ml-net-cli.md
         - name: 자동화된 ML API 사용
           href: how-to-guides/how-to-use-the-automl-api.md
-    - name: Infer.NET
-      items:
-        - name: Infer.NET을 사용한 확률 프로그래밍
-          href: how-to-guides/matchup-app-infer-net.md
 - name: 참조
   items:
     - name: API
@@ -113,7 +113,7 @@
           href: reference/ml-net-cli-reference.md
         - name: ML.NET AutoML API 참조
           href: 'https://docs.microsoft.com/dotnet/api/index?view=automl-dotnet'
-- name: 자료
+- name: 리소스
   items:
     - name: 용어
       href: resources/glossary.md
