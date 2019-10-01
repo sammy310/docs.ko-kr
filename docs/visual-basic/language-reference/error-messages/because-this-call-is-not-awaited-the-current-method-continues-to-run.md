@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-ms.openlocfilehash: c4704fb09e9519c14f29365b2cf7f536bbbc5dca
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6ceebc3af01c13474affa6e728c49d6d246eb331
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619557"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701193"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>이 호출이 대기되지 않으므로 호출이 완료되기 전에 현재 메서드가 계속 실행됩니다.
 이 호출이 대기되지 않으므로 호출이 완료되기 전에 현재 메서드가 계속 실행됩니다. 'Await' 연산자는 호출 결과에 적용하는 것이 좋습니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "64619557"
   
      이 예제에서는 Call #1 또는 Call #2를 선택할 경우 해당 호출자(`CalledMethodAsync`)와 호출자의 호출자(`CallingMethodAsync`)가 모두 완료된 후 기다리지 않는 비동기 메서드(`StartButton_Click`)가 끝납니다. 다음 출력의 마지막 줄은 호출된 메서드가 끝나는 시기를 보여줍니다. 전체 예제에서 `CallingMethodAsync` 를 호출하는 이벤트 처리기의 시작과 종료가 출력에 표시되어 있습니다.  
   
-    ```  
+    ```console  
     Entering the Click event handler.  
       Entering calling method.  
         Entering called method, starting and awaiting Task.Delay.  
@@ -203,7 +203,7 @@ ms.locfileid: "64619557"
   
      예상 출력이 코드의 끝에 나타납니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Await 연산자](../../../visual-basic/language-reference/operators/await-operator.md)
 - [Async 및 Await를 사용한 비동기 프로그래밍](../../../visual-basic/programming-guide/concepts/async/index.md)

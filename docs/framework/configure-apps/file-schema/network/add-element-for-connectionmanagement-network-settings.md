@@ -10,20 +10,20 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: 608c591b910252dd60950bf2aa7565d6df04d5fc
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3742a040e8c16c38e495a0fd886c4c1f23780758
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664225"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698381"
 ---
-# <a name="add-element-for-connectionmanagement-network-settings"></a>\<connectionManagement (네트워크 설정)에 대 한 > 요소 추가
+# <a name="add-element-for-connectionmanagement-network-settings"></a>@no__t-connectionManagement (네트워크 설정)에 대 한 > 요소 추가
 연결 관리 목록에 IP 주소 또는 DNS 이름을 추가합니다.  
   
- \<configuration>  
-\<system.net>  
-\<connectionManagement>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4c.net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t[ **\<connectionManagement >** ](connectionmanagement-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> 추가**  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,7 +62,7 @@ ms.locfileid: "69664225"
  이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 서버 `www.contoso.com` 에 대 한 4 개의 연결과 다른 모든 서버에 대 한 두 개의 연결을 사용 하도록 응용 프로그램을 구성 합니다.  
+ 다음 예에서는 서버에 대 한 네 개의 연결을 사용 하도록 응용 프로그램을 구성 하 고 `www.contoso.com`과 다른 모든 서버에 연결 합니다.  
   
 ```xml  
 <configuration>  
@@ -75,7 +75,7 @@ ms.locfileid: "69664225"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>

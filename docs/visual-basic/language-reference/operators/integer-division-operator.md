@@ -17,19 +17,19 @@ helpviewer_keywords:
 - quotients, integer
 - truncation [Visual Basic], integer division
 ms.assetid: 4b0ee347-950c-45c9-8e23-54bc85df208e
-ms.openlocfilehash: 276071fef3632d1a617f177b6fe18026b290103a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d1a46f99c21be007d33361ba095a3f0c52fe906c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917245"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701141"
 ---
 # <a name="-operator-visual-basic"></a>\ 연산자(Visual Basic)
 두 숫자를 나누고 정수 결과를 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```vb  
 expression1 \ expression2  
 ```  
   

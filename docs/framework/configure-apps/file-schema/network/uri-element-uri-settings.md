@@ -1,21 +1,19 @@
 ---
-title: <Uri> 요소(URI 설정)
+title: <uri> 요소(URI 설정)
 ms.date: 03/30/2017
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
-ms.openlocfilehash: 80d71da5ca680872e4948fa8ff135fbbdf08cffe
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: a492baf9951466383ca0277a2927b8554e5bb332
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663973"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697433"
 ---
-# <a name="uri-element-uri-settings"></a>\<Uri > 요소 (Uri 설정)
+# <a name="uri-element-uri-settings"></a>\<uri > 요소 (Uri 설정)
 .NET Framework Uri (uniform resource identifier)를 사용 하 여 표현 된 웹 주소를 처리 하는 방법을 지정 하는 설정을 포함 합니다.  
   
-## <a name="schema-hierarchy"></a>스키마 계층 구조  
- [\<configuration> 요소](../configuration-element.md)  
-  
- [\<uri>](uri-element-uri-settings.md)  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t **\<uri >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,7 +33,7 @@ ms.locfileid: "69663973"
 |**요소**|**설명**|  
 |-----------------|---------------------|  
 |[idn](idn-element-uri-settings.md)|IDN(Internationalized Domain Name) 구문 분석이 도메인 이름에 적용되는지 지정합니다.|  
-|[iriParsing](iriparsing-element-uri-settings.md)|Iri (국가별 리소스 식별자) 구문 분석이에 <xref:System.Uri> 적용 되는지 여부와 iri 구문 분석 규칙을 적용할지 여부를 지정 합니다.|  
+|[iriParsing](iriparsing-element-uri-settings.md)|IRI (국가별 리소스 식별자) 구문 분석이 <xref:System.Uri>에 적용 되는지 여부와 IRI 구문 분석 규칙을 적용할지 여부를 지정 합니다.|  
 |[schemeSettings](schemesettings-element-uri-settings.md)|특정 체계에 대해 <xref:System.Uri>가 구문 분석되는 방법을 지정합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
@@ -45,7 +43,7 @@ ms.locfileid: "69663973"
 |[configuration](../configuration-element.md)|모든 네임 스페이스에 대 한 설정을 포함 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 요소 `uri` 는 <xref:System.Net> 네임 스페이스의 클래스에서 사용 <xref:System.Uri> 하는 클래스의 멤버에 대 한 설정을 포함 합니다. 설정은 IRI 및 IDN에 대 한 지원을 구성 합니다.  
+ @No__t-0 요소는 <xref:System.Net> 네임 스페이스의 클래스에서 사용 하는 @no__t 1 클래스의 멤버에 대 한 설정을 포함 합니다. 설정은 IRI 및 IDN에 대 한 지원을 구성 합니다.  
   
 ## <a name="example"></a>예제  
   
@@ -67,6 +65,6 @@ ms.locfileid: "69663973"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [네트워크 설정 스키마](index.md)

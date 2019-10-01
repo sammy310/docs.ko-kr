@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: d2929167f5a7de96a868cd1ac884d2203d09dfb6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: eec2c4745ad5a0492ccf04c8f23b901275f23c01
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927524"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698440"
 ---
 # <a name="oidmap-element"></a>\<oidMap > 요소
 클래스에 대 한 OID (개체 식별자) 매핑을 포함 합니다.  
   
- \<configuration>  
-\<mscorlib>  
-\<cryptographySettings>  
-\<oidMap>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 **\<oidMap >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -51,7 +51,7 @@ ms.locfileid: "69927524"
 |`mscorlib`|요소를 `cryptographySettings` 포함 합니다.|  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는  **\<oidMap >** 요소를 사용 하 여 해당 해시 알고리즘의 구현에 RIPEMD-160 해시 알고리즘에 대 한 OID 매핑을 포함 하는 방법을 보여 줍니다.  
+ 다음 예제에서는 **\<oidMap >** 요소를 사용 하 여 해당 해시 알고리즘의 구현에 RIPEMD-160 해시 알고리즘에 대 한 OID 매핑을 포함 하는 방법을 보여 줍니다.  
   
 ```xml  
 <configuration>  
@@ -73,7 +73,7 @@ ms.locfileid: "69927524"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [구성 파일 스키마](../index.md)
 - [암호화 설정 스키마](index.md)

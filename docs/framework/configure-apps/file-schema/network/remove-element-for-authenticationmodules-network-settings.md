@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <remove> element, authenticationModules
 - authenticationModules, remove element
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
-ms.openlocfilehash: 7f923ce73760fa42a2c435d346f9d1097a5ed82f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 9b73c0dc1fe161616c08ef0501241d55e9fea9bc
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664047"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697936"
 ---
-# <a name="remove-element-for-authenticationmodules-network-settings"></a>\<authenticationModules의 > 요소 제거 (네트워크 설정)
+# <a name="remove-element-for-authenticationmodules-network-settings"></a>@no__t-authenticationModules의 > 요소 제거 (네트워크 설정)
 응용 프로그램에서 인증 모듈을 제거 합니다.  
   
- \<configuration>  
-\<system.net>  
-\<authenticationModules>  
-\<remove>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4c.net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 **\<remove >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -52,9 +52,9 @@ ms.locfileid: "69664047"
 |[authenticationModules](authenticationmodules-element-network-settings.md)|네트워크 요청을 인증 하는 데 사용 되는 모듈을 지정 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 요소 `remove` 는 구성 파일에서 이전에 정의 되었거나 구성 계층 구조에서 상위 수준에 정의 된 인증 모듈을 제거 합니다.  
+ @No__t-0 요소는 구성 파일에서 이전에 정의 되었거나 구성 계층 구조에서 상위 수준에 정의 된 인증 모듈을 제거 합니다.  
   
- `type` 특성 값은 올바른 클래스 이름 이어야 합니다.  
+ @No__t-0 특성의 값은 올바른 클래스 이름 이어야 합니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
  이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
@@ -72,7 +72,7 @@ ms.locfileid: "69664047"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>

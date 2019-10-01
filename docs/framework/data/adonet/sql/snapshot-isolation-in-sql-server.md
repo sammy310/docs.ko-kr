@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 2f17e9828f46e6355cdbbddb1b8a83f1188b1a01
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6d85cc041850300d1d079b227dcb8ed9201a0502
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791749"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699070"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>SQL Server의 스냅샷 격리
 스냅샷 격리를 통해 OLTP 애플리케이션의 동시성이 향상됩니다.  
   
 ## <a name="understanding-snapshot-isolation-and-row-versioning"></a>스냅샷 격리 및 행 버전 관리 이해  
- 스냅숏 격리가 설정 되 면 각 트랜잭션에 대해 업데이트 된 행 버전이 **tempdb**에서 유지 관리 됩니다. 고유한 트랜잭션 시퀀스 번호가 각 트랜잭션을 식별하며 행 버전에 대해 이러한 고유 번호가 기록됩니다. 트랜잭션은 트랜잭션 시퀀스 번호 이전의 시퀀스 번호를 가진 최근 행 버전에서 작동합니다. 트랜잭션이 시작된 이후에 만들어진 새로운 행 버전은 트랜잭션에서 무시됩니다.  
+ 스냅숏 격리가 설정 되 면 각 트랜잭션에 대해 업데이트 된 행 버전을 유지 관리 해야 합니다.  SQL Server 2019 이전 버전에서는 이러한 버전이 **tempdb**에 저장 되었습니다. SQL Server 2019에는 고유한 행 버전 집합이 필요한 새로운 기능인 ADR (가속화 된 데이터베이스 복구)가 도입 되었습니다.  따라서 SQL Server 2019에서 ADR를 사용 하지 않는 경우 행 버전은 **tempdb** 에 항상 유지 됩니다.  ADR가 사용 하도록 설정 된 경우 snapshot 격리 및 ADR와 관련 된 모든 행 버전은 사용자가 지정 하는 파일 그룹의 사용자 데이터베이스에 있는 ADR의 영구 버전 저장소 (PVS)에 보관 됩니다. 고유한 트랜잭션 시퀀스 번호가 각 트랜잭션을 식별하며 행 버전에 대해 이러한 고유 번호가 기록됩니다. 트랜잭션은 트랜잭션 시퀀스 번호 이전의 시퀀스 번호를 가진 최근 행 버전에서 작동합니다. 트랜잭션이 시작된 이후에 만들어진 새로운 행 버전은 트랜잭션에서 무시됩니다.  
   
  "스냅샷"이라는 용어는 트랜잭션의 모든 쿼리가 트랜잭션이 시작되는 시점에서 데이터베이스 상태에 따라 데이터베이스의 동일한 버전 또는 스냅샷을 표시하는 것을 의미합니다. 스냅샷 트랜잭션의 기본 데이터 행이나 데이터 페이지에서는 잠금이 인식되지 않습니다. 따라서 이전에 완료되지 않은 트랜잭션에 의해 차단되지 않고 다른 트랜잭션을 실행할 수 있습니다. 일반적으로 트랜잭션은 SQL Server의 기본 READ COMMITTED 격리 수준 아래에 있으므로 데이터를 수정하는 트랜잭션이 데이터를 읽는 트랜잭션을 차단하지 않으며 데이터를 읽는 트랜잭션이 데이터를 쓰는 트랜잭션을 차단하지 않습니다. 또한 이러한 비블로킹 동작이 복잡한 트랜잭션의 교착 상태 가능성을 크게 줄여 줍니다.  
   
@@ -76,7 +76,7 @@ SET READ_COMMITTED_SNAPSHOT ON
  스냅샷 트랜잭션은 다른 트랜잭션에서 행이 업데이트되는 것을 방지하는 잠금을 유지하면서 항상 낙관적 동시성 제어를 사용합니다. 스냅샷 트랜잭션에서 트랜잭션이 시작된 후 변경된 행에 대한 업데이트를 커밋하려고 하면 트랜잭션이 롤백되고 오류가 발생합니다.  
   
 ## <a name="working-with-snapshot-isolation-in-adonet"></a>ADO.NET에서 스냅샷 격리 사용  
- 스냅샷 격리는 ADO.NET에서 <xref:System.Data.SqlClient.SqlTransaction> 클래스를 통해 지원됩니다. 데이터베이스가 snapshot 격리를 사용 하도록 설정 되었지만 READ_COMMITTED_SNAPSHOT ON에 대해 구성 되지 않은 경우 메서드를 <xref:System.Data.SqlClient.SqlTransaction> <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> 호출할 때 **IsolationLevel** 열거 값을 사용 하 여를 시작 해야 합니다. 이 코드 조각에서는 연결을 열려 있는 <xref:System.Data.SqlClient.SqlConnection> 개체로 가정합니다.  
+ 스냅샷 격리는 ADO.NET에서 <xref:System.Data.SqlClient.SqlTransaction> 클래스를 통해 지원됩니다. 데이터베이스가 snapshot 격리를 사용 하도록 설정 되었지만 READ_COMMITTED_SNAPSHOT ON에 대해 구성 되지 않은 경우에는 <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> 메서드를 호출할 때 **IsolationLevel** 열거 값을 사용 하 여 <xref:System.Data.SqlClient.SqlTransaction>을 시작 해야 합니다. 이 코드 조각에서는 연결을 열려 있는 <xref:System.Data.SqlClient.SqlConnection> 개체로 가정합니다.  
   
 ```vb  
 Dim sqlTran As SqlTransaction = _  
@@ -141,7 +141,7 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
  애플리케이션에서 충돌이 자주 발생하는 경우 스냅샷 격리는 적합한 방법이 될 수 없습니다. 힌트는 꼭 필요한 경우에만 사용해야 합니다. 작동 시 잠금 힌트를 계속해서 사용하도록 애플리케이션을 디자인해서는 안 됩니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [SQL Server 및 ADO.NET](index.md)
 - [ADO.NET 개요](../ado-net-overview.md)

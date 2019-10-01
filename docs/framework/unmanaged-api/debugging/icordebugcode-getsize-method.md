@@ -17,35 +17,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 52ba9d5bac5e772d721d38e4e8a7ba6757d0ae2e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 89df0e9be0600b51dcc8a68c5aba3f06e86e1b53
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747496"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700807"
 ---
 # <a name="icordebugcodegetsize-method"></a>ICorDebugCode::GetSize 메서드
-이 "ICorDebugCode"으로 표시 되는 이진 코드를 바이트 단위로 크기를 가져옵니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```cpp  
-HRESULT GetSize (  
-    [out] ULONG32    *pcBytes  
-);  
-```  
-  
-## <a name="parameters"></a>매개 변수  
+
+이 "ICorDebugCode"로 표시 되는 이진 코드의 크기 (바이트)를 가져옵니다.
+
+## <a name="syntax"></a>구문
+
+```cpp
+HRESULT GetSize (
+    [out] ULONG32    *pcBytes
+);
+```
+
+## <a name="parameters"></a>매개 변수
+
  `pcBytes`  
- [out] 이 대 한 포인터의 크기 (바이트) 이진 파일의 코드 `ICorDebugCode` 나타내는 개체입니다.  
-  
-## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
-  
- **헤더:** CorDebug.idl, CorDebug.h  
-  
- **라이브러리:** CorGuids.lib  
-  
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
-## <a name="see-also"></a>참고자료
+ 제한이 이 `ICorDebugCode` 개체가 나타내는 이진 코드의 크기 (바이트)에 대 한 포인터입니다.
+
+## <a name="requirements"></a>요구 사항
+
+ **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.
+
+ **헤더:** CorDebug.idl, CorDebug.h
+
+ **라이브러리** CorGuids.lib
+
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ 

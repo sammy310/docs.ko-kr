@@ -8,20 +8,20 @@ helpviewer_keywords:
 - performanceCounters element
 - <performanceCounters> element
 ms.assetid: a71f605b-c7d9-4501-a5c3-abcbb964a43f
-ms.openlocfilehash: 6144bcbda69b2ba799e87c3e7fa2118fbe4d9bf6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f52fdb2d5b0b7911de63f96663e70735d2f2496c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673744"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697150"
 ---
 # <a name="performancecounters-element"></a>\<performanceCounters > 요소
 
 성능 카운터에서 공유하는 전역 메모리의 크기를 지정합니다.
 
- \<configuration>\
-\<system.diagnostics>\
-\<performanceCounters>
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\< >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t **\<performanceCounters >**  
 
 ## <a name="syntax"></a>구문
 
@@ -52,13 +52,13 @@ ms.locfileid: "61673744"
 
 ## <a name="remarks"></a>설명
 
-성능 카운터 메모리 매핑된 파일 또는 공유 메모리를 사용 하 여 성능 데이터를 게시 합니다.  공유 메모리 크기의 인스턴스 개수을 한 번에 사용할 수를 결정 합니다.  공유 메모리의 두 종류가 있습니다: 전역 공유 메모리 및 별도 공유 메모리입니다.  전역 공유 메모리는.NET Framework 버전 1.0 또는 1.1을 사용 하 여 설치 된 모든 성능 카운터 범주에서 사용 됩니다.  자체 메모리가 있는 각 성능 카운터 범주를 사용 하 여 별도 공유 메모리를 사용 하는 성능 카운터 범주는.NET Framework 버전 2.0 사용 하 여 설치 합니다.
+성능 카운터는 메모리 매핑된 파일 또는 공유 메모리를 사용 하 여 성능 데이터를 게시 합니다.  공유 메모리의 크기에 따라 한 번에 사용할 수 있는 인스턴스 수가 결정 됩니다.  공유 메모리에는 전역 공유 메모리와 별도의 공유 메모리의 두 가지 유형이 있습니다.  전역 공유 메모리는 .NET Framework 버전 1.0 또는 1.1과 함께 설치 된 모든 성능 카운터 범주에서 사용 됩니다.  .NET Framework 버전 2.0와 함께 설치 되는 성능 카운터 범주는 별도의 메모리를 포함 하는 각 성능 카운터 범주와 함께 별도의 공유 메모리를 사용 합니다.
 
-구성 파일에만 전역 공유 메모리의 크기를 설정할 수 있습니다.  기본 크기는 524,288 바이트이 하 이기, 최대 크기는 33,554,432 바이트 및 최소 크기는 32,768 바이트입니다.  모든 프로세스 및 범주에서 전역 공유 메모리를 공유 하므로 첫 번째 생성자는 크기를 지정 합니다.  응용 프로그램 구성 파일의 크기를 정의 하는 경우 응용 프로그램 성능 카운터를 실행 시키는 첫 번째 응용 프로그램은 해당 크기만 사용 됩니다.  따라서 올바른 위치를 지정 합니다 `filemappingsize` 값은 Machine.config 파일입니다.  개별 성능 카운터 있으므로 결국 많은 수의 서로 다른 이름 사용 하 여 성능 카운터 인스턴스가 생성 되는 경우 전역 공유 메모리를 모두 사용 하 여 전역 공유 메모리에서 메모리를 해제할 수 없습니다.
+전역 공유 메모리의 크기는 구성 파일을 사용 하는 경우에만 설정할 수 있습니다.  기본 크기는 524288이 고, 최대 크기는 33554432 바이트이 고, 최소 크기는 32768 바이트입니다.  전역 공유 메모리는 모든 프로세스와 범주에서 공유 되기 때문에 첫 번째 작성자는 크기를 지정 합니다.  응용 프로그램 구성 파일에서 크기를 정의 하는 경우 해당 크기는 응용 프로그램이 성능 카운터를 실행 하는 첫 번째 응용 프로그램 인 경우에만 사용 됩니다.  따라서 `filemappingsize` 값을 지정 하는 올바른 위치는 machine.config 파일입니다.  전역 공유 메모리의 메모리는 개별 성능 카운터에 의해 해제 될 수 없으므로 다른 이름을 사용 하는 많은 수의 성능 카운터 인스턴스를 만든 경우에는 결과적으로 전역 공유 메모리가 모두 사용 됩니다.
 
-별도 공유 메모리의 크기를 DWORD FileMappingSize 값을 레지스트리에서 키 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<범주 이름 >* \Performance 참조 먼저 구성 파일에서 전역 공유 메모리에 대 한 지정 된 값 뒤에 있습니다. FileMappingSize 값 존재 하지 않는 경우 별도 공유 메모리 크기가 1 4로 설정 됩니다 (1/4) 구성 파일에서 전역 설정입니다.
+별도의 공유 메모리 크기에 대해 레지스트리 키 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services @ no__t-0 *\<category name >* \PERFORMANCE의 DWORD FileMappingSize 값이 먼저 참조 된 다음 값이 옵니다. 구성 파일의 전역 공유 메모리에 대해 지정 된입니다. FileMappingSize 값이 없는 경우 별도의 공유 메모리 크기가 구성 파일에서 4 개의 4 (1/4) 전역 설정으로 설정 됩니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Diagnostics.PerformanceCounter>
 - <xref:System.Diagnostics.PerformanceCounterCategory>

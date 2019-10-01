@@ -1,5 +1,5 @@
 ---
-title: <remove>의에 <listeners> 대 한 요소<source>
+title: <source>에 대 한 <listeners>에 대 한 <remove> 요소
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/remove
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - remove element for <listeners> for <source>
 - <remove> element for <listeners> for <source>
 ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
-ms.openlocfilehash: edd27dd262004aead7db4d81db8ecab0e831dac1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4a11308278f755ec8271477352d91d8797d105c5
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926989"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699495"
 ---
-# <a name="remove-element-for-listeners-for-source"></a>\<소스 >에 대 \<한 \<수신기 > > 요소를 제거 합니다.
+# <a name="remove-element-for-listeners-for-source"></a>\< \< 수신기 >에 대 한 > 요소 제거 \<source >
 추적 소스의 `Listeners` 컬렉션에서 수신기를 제거합니다.  
   
- \<configuration>  
-\<system.diagnostics>  
-\<sources>  
-\<source>  
-\<listeners>  
-\<remove>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\< >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t[ **\<sources >** ](sources-element.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
+&nbsp; @ no__t @ no__t @ no__t @ @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0 수신기 >** ](listeners-element-for-source.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<remove>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,7 +37,7 @@ ms.locfileid: "69926989"
   
 |특성|설명|  
 |---------------|-----------------|  
-|`name`|필수 특성입니다.<br /><br /> `Listeners` 컬렉션에서 제거할 수신기의 이름입니다.|  
+|`name`|필수 특성입니다.<br /><br /> @No__t-0 컬렉션에서 제거할 수신기의 이름입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -53,14 +53,14 @@ ms.locfileid: "69926989"
 |`listeners`|메시지를 수집, 저장 및 라우팅하는 수신기를 지정 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 요소 `<remove>` 는 추적 소스에 대 한 `Listeners` 컬렉션에서 지정 된 수신기를 제거 합니다.  
+ @No__t-0 요소는 추적 소스에 대 한 `Listeners` 컬렉션에서 지정 된 수신기를 제거 합니다.  
   
- 인스턴스의 속성에서 메서드를 <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> 호출 하 `Listeners` 여 프로그래밍 방식으로 추적 소스에 대 한 컬렉션에서 요소를 제거할 수 있습니다. <xref:System.Diagnostics.TraceSource.Listeners%2A> <xref:System.Diagnostics.TraceSource>  
+ @No__t-3 인스턴스의 <xref:System.Diagnostics.TraceSource.Listeners%2A> 속성에서 <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> 메서드를 호출 하 여 프로그래밍 방식으로 추적 소스에 대 한 `Listeners` 컬렉션에서 요소를 제거할 수 있습니다.  
   
  이 요소는 컴퓨터 구성 파일 (machine.config) 및 응용 프로그램 구성 파일에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 `<add>` 요소를 사용 하 여 `<remove>` 추적 소스 `TraceSourceApp`에 대 한 `Listeners` 컬렉션에 수신기 `console` 를 추가 하기 전에 요소를 사용 하는 방법을 보여 줍니다.  
+ 다음 예제에서는 `<add>` 요소를 사용 하 여 `<remove>` 요소를 사용 하는 방법을 보여 줍니다.-1 요소를 사용 하 여 추적 소스 `TraceSourceApp`의 @no__t 3 컬렉션에 수신기 `console`를 추가 합니다.  
   
 ```xml  
 <configuration>  
@@ -79,7 +79,7 @@ ms.locfileid: "69926989"
 </configuration>   
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Diagnostics.TraceSource.Listeners%2A>
 - <xref:System.Diagnostics.TraceSource>

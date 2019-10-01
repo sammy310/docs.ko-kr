@@ -8,19 +8,19 @@ helpviewer_keywords:
 - webRequestModules element
 - <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
-ms.openlocfilehash: c30a7a0bcce62c99d7c1ec0ff17389b8c2cd2f17
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e119d9ce1f8bb6f07f8050612550db459a2f065c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663942"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697468"
 ---
 # <a name="webrequestmodules-element-network-settings"></a>\<webRequestModules > 요소 (네트워크 설정)
 네트워크 호스트의 정보를 요청 하는 데 사용할 모듈을 지정 합니다.  
   
- \<configuration>  
-\<system.net>  
-\<webRequestModules>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4c.net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ no__t-4webRequestModules >  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,9 +50,9 @@ ms.locfileid: "69663942"
 |[system.net](system-net-element-network-settings.md)|.NET Framework의 네트워크 연결 방법을 지정하는 설정을 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
- `webRequestModules` 요소는 <xref:System.Net.WebRequest> 클래스의 하위 클래스를 등록하여 네트워크 호스트로의 정보 요청을 처리합니다. 웹 요청 모듈은 인터페이스를 <xref:System.Net.IWebRequestCreate> 구현 해야 합니다.  
+ `webRequestModules` 요소는 <xref:System.Net.WebRequest> 클래스의 하위 클래스를 등록하여 네트워크 호스트로의 정보 요청을 처리합니다. 웹 요청 모듈은 <xref:System.Net.IWebRequestCreate> 인터페이스를 구현 해야 합니다.  
   
- .NET Framework에는, `http://` `https://`및 `file://`로 시작 하는 uri에 대 한 웹 요청 모듈이 포함 되어 있습니다. 구성 파일에서 사용자 지정 모듈을 등록 하 여 기본 모듈만 재정의할 수 있습니다.  
+ .NET Framework에는 `http://`, `https://` 및 `file://`로 시작 하는 Uri에 대 한 웹 요청 모듈이 포함 되어 있습니다. 구성 파일에서 사용자 지정 모듈을 등록 하 여 기본 모듈만 재정의할 수 있습니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
  이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "69663942"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.IWebRequestCreate>

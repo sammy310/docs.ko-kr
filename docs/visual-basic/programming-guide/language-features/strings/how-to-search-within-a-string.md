@@ -1,41 +1,41 @@
 ---
-title: '방법: 검색 문자열 (Visual Basic)'
+title: '방법: 문자열 내에서 검색-Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], finding
 - strings [Visual Basic], searching
 - examples [Visual Basic], strings
 ms.assetid: ae4c79e0-08ea-489f-bdb2-5eb6d355f284
-ms.openlocfilehash: 57a3d9650ad78e1c8580fd46839c9a1cbc7794c9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fe9e50dc5458fdf8546094e5f41c2f001f1d2791
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665334"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700070"
 ---
-# <a name="how-to-search-within-a-string-visual-basic"></a>방법: 검색 문자열 (Visual Basic)
-이 예제에서는 호출을 <xref:System.String.IndexOf%2A> 메서드는 <xref:System.String> 부분 문자열의 첫 번째 발생의 인덱스를 보고 하는 개체입니다.  
-  
-## <a name="example"></a>예제  
- [!code-vb[VbVbalrStrings#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#71)]  
-  
-## <a name="compiling-the-code"></a>코드 컴파일  
- 이 예제에는 다음 사항이 필요합니다.  
-  
-- `Imports` 문을 지정 하는 <xref:System> 네임 스페이스입니다. 자세한 내용은 [Imports 문(.NET 네임스페이스 및 형식)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)을 참조하세요.  
-  
-## <a name="robust-programming"></a>강력한 프로그래밍  
- <xref:System.String.IndexOf%2A> 메서드 맨 처음 발견 되는 부분 문자열의 첫 번째 문자의 위치를 보고 합니다. 인덱스는 0 기반, 즉, 문자열의 첫 번째 문자에는 인덱스가 0입니다.  
-  
- 경우 <xref:System.String.IndexOf%2A> 부분 문자열을 찾지 못하면-1을 반환 합니다.  
-  
- <xref:System.String.IndexOf%2A> 메서드는 대/소문자 구분 및 현재 문화권을 사용 합니다.  
-  
- 최적의 오류 컨트롤에 대 한 문자열 검색을 묶습니다 하려는 합니다 `Try` 블록을 [시도 하는 중... Catch 하는 중... Finally 문](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) 생성 합니다.  
-  
-## <a name="see-also"></a>참고자료
+# <a name="how-to-search-within-a-string-visual-basic"></a>방법: 문자열 내에서 검색 (Visual Basic)
+
+이 문서에서는 Visual Basic 문자열 내에서 검색 하는 방법의 예를 보여 줍니다.
+
+## <a name="example"></a>예제
+
+이 예에서는 <xref:System.String> 개체의 <xref:System.String.IndexOf%2A> 메서드를 호출 하 여 첫 번째 부분 문자열의 인덱스를 보고 합니다.
+
+ [!code-vb[VbVbalrStrings#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#71)]
+
+## <a name="robust-programming"></a>강력한 프로그래밍
+
+@No__t-0 메서드는 맨 처음 발견 되는 부분 문자열의 첫 번째 문자 위치를 반환 합니다. 인덱스는 0부터 시작 하며,이는 문자열의 첫 번째 문자에 인덱스가 0 인 것을 의미 합니다.
+
+@No__t-0은 부분 문자열을 찾지 못하면-1을 반환 합니다.
+
+@No__t-0 메서드는 대/소문자를 구분 하며 현재 문화권을 사용 합니다.
+
+최적의 오류 제어를 위해 Try ...의 `Try` 블록에 문자열 검색을 포함 하는 것이 좋습니다. [ Catch ... Finally 문](../../../language-reference/statements/try-catch-finally-statement.md) 생성
+
+## <a name="see-also"></a>참조
 
 - <xref:System.String.IndexOf%2A>
-- [Try...Catch...Finally 문](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
-- [Visual Basic의 문자열 소개](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
-- [문자열](../../../../visual-basic/programming-guide/language-features/strings/index.md)
+- [Try...Catch...Finally 문](../../../language-reference/statements/try-catch-finally-statement.md)
+- [Visual Basic의 문자열 소개](introduction-to-strings.md)
+- [문자열](index.md)

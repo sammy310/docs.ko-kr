@@ -2,12 +2,12 @@
 title: 수학 함수
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-ms.openlocfilehash: 5e5658e28c7d806f7fd38f941bfa7254e7806e11
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 664d1a4f67ecced6713f83bf3dd11931c9b4dc18
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182488"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699997"
 ---
 # <a name="mathematical-functions"></a>수학 함수
 
@@ -107,7 +107,6 @@ ms.locfileid: "71182488"
 
 **예제** 
 
-[!code-csharp[DP EntityServices Concepts#SQLSERVER_CEILING](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_ceiling)]
 [!code-sql[DP EntityServices Concepts#SQLSERVER_CEILING](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_ceiling)]
 
 ## <a name="cosexpression"></a>COS (식)
@@ -186,7 +185,6 @@ ms.locfileid: "71182488"
 
 **예제** 
 
-[!code-csharp[DP EntityServices Concepts#SQLSERVER_FLOOR](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_floor)] 
 [!code-sql[DP EntityServices Concepts#SQLSERVER_FLOOR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_floor)]
 
 ## <a name="logexpression"></a>LOG (expression)
@@ -294,7 +292,7 @@ ms.locfileid: "71182488"
 |--|--|
 |`numeric_expression`| `Int32` ,`Int64`, 또는`Decimal`입니다. `Double` 
 |`length`| `Int32`을 반올림할 전체 자릿수를 나타내는 `numeric_expression`입니다. `length`가 양수일 경우 `numeric_expression`은 `length`에서 지정한 소수 자릿수로 반올림됩니다. `length`가 음수일 경우 `numeric_expression`은 `length`에서 지정한 대로 소수점의 왼쪽에서 반올림됩니다.|
-|`function` | 선택 사항입니다. `Int32` 수행할 작업의 유형을 나타내는입니다. 함수를 생략 하거나 값이 0 (기본값) `numeric_expression` 인 경우는 반올림 됩니다. 0이 아닌 값을 지정 `numeric_expression` 하면이 잘립니다. |
+|`function` | (선택 사항) `Int32` 수행할 작업의 유형을 나타내는입니다. 함수를 생략 하거나 값이 0 (기본값) `numeric_expression` 인 경우는 반올림 됩니다. 0이 아닌 값을 지정 `numeric_expression` 하면이 잘립니다. |
 
 **반환 값** 
 
@@ -380,12 +378,7 @@ ms.locfileid: "71182488"
 
 `SqlServer.TAN(45.0)`
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-SqlClient에서 지원하는 수치 함수에 대한 자세한 내용은 SqlClient 공급자 매니페스트에 지정한 SQL Server 버전의 설명서를 참조하세요.
-
-- **SQL Server 2005:** [수치 연산 함수 (Transact-sql)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))
-- **SQL Server 2008:** [수치 연산 함수 (Transact-sql)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))
-- **SQL Server 2012 이상:** [수치 연산 함수 (Transact-sql)](/sql/t-sql/functions/mathematical-functions-transact-sql)
-
+- [수치 연산 함수 (Transact-sql)](/sql/t-sql/functions/mathematical-functions-transact-sql)
 - [Entity Framework용 SqlClient 기능](sqlclient-for-ef-functions.md)

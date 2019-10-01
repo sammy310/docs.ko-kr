@@ -8,20 +8,20 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: 1dd31884a072d16ed004c0b49be61e8cee399787
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f3b029e8b931e976bee85c98dd926e020c5b8743
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664144"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698271"
 ---
 # <a name="defaulthttpcachepolicy-element-network-settings"></a>\<defaultHttpCachePolicy > 요소 (네트워크 설정)
 HTTP 캐싱이 활성 상태 인지 여부를 설명 하 고 기본 캐싱 정책을 설명 합니다.  
   
- \<configuration>  
-\<system.net>  
-\<requestCaching>  
-\<defaultHttpCachePolicy>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4c.net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t[ **\<requestCaching >** ](requestcaching-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 **\<defaultHttpCachePolicy >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,7 +39,7 @@ HTTP 캐싱이 활성 상태 인지 여부를 설명 하 고 기본 캐싱 정�
   
 ### <a name="attributes"></a>특성  
   
-|특성|Description|  
+|특성|설명|  
 |---------------|-----------------|  
 |`maximumAge`|캐시 된 개체가 만료 된 것으로 표시 되기 전의 최대 시간 간격을 지정 합니다.|  
 |`maximumStale`|캐시 된 개체가 만료 된 것으로 표시 되기 전까지 계산 된 새로 고침 시간 이후의 최대 시간을 지정 합니다.|  
@@ -51,14 +51,14 @@ HTTP 캐싱이 활성 상태 인지 여부를 설명 하 고 기본 캐싱 정�
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[requestCaching](requestcaching-element-network-settings.md)|네트워크 요청에 대 한 캐싱 메커니즘을 제어 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `policyLevel` 특성의 값 `BypassCache` 이 또는 `Default`입니다.  
+ @No__t-0 특성의 값은 `BypassCache` 또는 `Default` 중 하나입니다.  
   
- , 및 요소의 값은 형식이 d 인 명시적 시간 간격입니다. `maximumAge` `maximumStale` `minimumFresh`  *hh*:*mm*:*ss* (일, 시간, 분 및 초) 또는 상수 `minValue` 또는 `maxValue`(해당 하는 경우).  
+ @No__t-0, `maximumStale` 및 `minimumFresh` 요소의 값은 형식이 *d*인 명시적 시간 간격입니다. *hh*:*mm*:*ss* (일, 시간, 분 및 초) 또는 상수 `minValue` 또는 `maxValue`을 적절 하 게 합니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
  이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
@@ -80,7 +80,7 @@ HTTP 캐싱이 활성 상태 인지 여부를 설명 하 고 기본 캐싱 정�
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Net.Cache>
 - <xref:System.Net.WebRequest>

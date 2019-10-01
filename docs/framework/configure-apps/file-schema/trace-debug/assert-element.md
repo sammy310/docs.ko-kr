@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <assert> element
 - assert element
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
-ms.openlocfilehash: 5ba781598542d271f41476b1a1e9d61faeb6ff74
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 30ec24aefcf8c4d1e110238a2c60a958eded5545
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927190"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699394"
 ---
 # <a name="assert-element"></a>\<assert > 요소
 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> 메서드를 호출할 때 메시지 상자를 표시할지 여부를 지정합니다. 또한 메시지를 작성할 파일의 이름도 지정합니다.  
   
- \<configuration>  
-\<system.diagnostics>  
-\<assert>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\< >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t **\<assert >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -56,10 +56,10 @@ ms.locfileid: "69927190"
 |`system.diagnostics`|메시지를 수집하고 저장하고 라우팅하는 추적 수신기를 지정하며, 추적 스위치가 설정되는 수준을 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
- Assert > 요소의 두 특성  **\<** 은 모두 선택 사항입니다. 메시지를 쓸 파일을 지정 하지 않고 메시지 상자를 사용 하지 않도록 설정 하거나 메시지 상자를 활성화 한 상태로 메시지를 쓸 파일을 지정할 수 있습니다.  
+ **@No__t-1assert >** 요소의 두 특성은 모두 선택 사항입니다. 메시지를 쓸 파일을 지정 하지 않고 메시지 상자를 사용 하지 않도록 설정 하거나 메시지 상자를 활성화 한 상태로 메시지를 쓸 파일을 지정할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 Debug를 호출할 때 메시지 상자를 표시 하지 않도록 설정 하는 방법을 보여 줍니다 **. Assert** 및 메시지를에 `c:\log.txt`씁니다.  
+ 다음 예제에서는 Debug를 호출할 때 메시지 상자를 표시 하지 않도록 설정 하는 방법을 보여 줍니다. `c:\log.txt`로 메시지를 **어설션** 및 씁니다.  
   
 ```xml  
 <configuration>  
@@ -69,7 +69,7 @@ ms.locfileid: "69927190"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Diagnostics.Debug>
 - [추적 및 디버그 설정 스키마](index.md)

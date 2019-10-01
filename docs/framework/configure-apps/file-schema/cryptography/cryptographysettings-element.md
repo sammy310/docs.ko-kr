@@ -8,19 +8,19 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-ms.openlocfilehash: 462db50a42e55c0c5a9570317ceeeb0ae69215a0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 96a8c9accc56274b5cc13dc2a871165857b3a2d9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927659"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699817"
 ---
 # <a name="cryptographysettings-element"></a>\<cryptographySettings > 요소
 암호화 설정이 포함되어 있습니다.  
   
- \<configuration>  
-\<mscorlib>  
-\<cryptographySettings>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t **\<cryptographySettings >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,7 +50,7 @@ ms.locfileid: "69927659"
 |`mscorlib`|요소를 `cryptographySettings` 포함 합니다.|  
   
 ## <a name="example"></a>예제  
- 다음 예에서는  **\<cryptographysettings >** 요소를 사용 하 여 암호화 이름 매핑과 OID 매핑을 포함 하는 방법을 보여 줍니다. 이 예제에서는가 <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> 개체를 `MyHashClass` 반환 하 고 `MyCryptoClass` 클래스가 개체 식별자 1.3.36.2.1에 매핑되도록 런타임을 구성 합니다.  
+ 다음 예에서는 **\<cryptographySettings >** 요소를 사용 하 여 암호화 이름 매핑과 OID 매핑을 포함 하는 방법을 보여 줍니다. 이 예제에서는 <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType>이 `MyHashClass` 개체를 반환 하 고 `MyCryptoClass` 클래스가 개체 식별자 1.3.36.2.1에 매핑되도록 런타임을 구성 합니다.  
   
 ```xml  
 <configuration>  
@@ -76,7 +76,7 @@ ms.locfileid: "69927659"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [구성 파일 스키마](../index.md)
 - [암호화 설정 스키마](index.md)

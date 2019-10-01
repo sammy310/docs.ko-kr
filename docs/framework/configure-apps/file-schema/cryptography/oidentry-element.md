@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <oidEntry> element
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-ms.openlocfilehash: cbdf6150010ca2dace3f0610d9caa90c2bf52746
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: eed2a4d06906d2928be62aed20a75484c3eea946
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921053"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699762"
 ---
-# <a name="oidentry-element"></a>\<y > 요소
+# <a name="oidentry-element"></a>\<oidEntry > 요소
 ASN.1 OID(개체 식별자)를 이름에 매핑합니다.  
   
- \<configuration>  
-\<mscorlib>  
-\<cryptographySettings>  
-\<oidMap>  
-\<oidEntry>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5[ **\<oidMap >** ](oidmap-element.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 @ no__t-6 **\<oidEntry >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,7 +38,7 @@ ASN.1 OID(개체 식별자)를 이름에 매핑합니다.
 |특성|설명|  
 |---------------|-----------------|  
 |**OID**|필수 특성입니다.<br /><br /> 클래스에서 구현 하는 알고리즘에 해당 하는 ASN OID를 지정 합니다.|  
-|**name**|필수 특성입니다.<br /><br /> Nameentry > 태그에 **name 특성** 의 값을 지정 합니다. [ \<](nameentry-element.md)|  
+|**name**|필수 특성입니다.<br /><br /> [@No__t-2nameEntry >](nameentry-element.md) 태그에 **name** 특성의 값을 지정 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -56,7 +56,7 @@ ASN.1 OID(개체 식별자)를 이름에 매핑합니다.
  ASN 개체 식별자는 일부 암호화 형식의 알고리즘을 식별 합니다. 식별 하려는 알고리즘의 이름에 개체 식별자를 매핑합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는  **\<y >** 요소를 사용 하 여 RIPEMD-160 해시 알고리즘에 대 한 개체 식별자를 해당 해시 알고리즘의 구현에 매핑하는 방법을 보여 줍니다.  
+ 다음 예제에서는 **\<oidEntry >** 요소를 사용 하 여 160 RIPEMD 해시 알고리즘에 대 한 개체 식별자를 해당 해시 알고리즘의 구현에 매핑하는 방법을 보여 줍니다.  
   
 ```xml  
 <configuration>  
@@ -78,7 +78,7 @@ ASN.1 OID(개체 식별자)를 이름에 매핑합니다.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [구성 파일 스키마](../index.md)
 - [암호화 설정 스키마](index.md)

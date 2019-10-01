@@ -1,5 +1,5 @@
 ---
-title: <filter>의에 <add> 대 한 요소<sharedListeners>
+title: <sharedListeners>에 대 한 <add>에 대 한 <filter> 요소
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - filters, trace listeners
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-ms.openlocfilehash: 571a3add232f3e4f9747040dc104b85e8cc3085e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4e92f80e9f6069b5fa70501e13a55d5a6fe95e7a
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920503"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697318"
 ---
-# <a name="filter-element-for-add-for-sharedlisteners"></a>\<sharedlisteners에 대 \<한 \<> 추가의 필터 > 요소 >
+# <a name="filter-element-for-add-for-sharedlisteners"></a>@no__t에 대 한 \<filter > @no__t 요소 >-2sharedListeners에 대 한 > 추가
 `sharedListeners` 컬렉션에 있는 수신기에 필터를 추가합니다.  
   
- \<configuration>  
-\<system.diagnostics>  
-\<sharedListeners > 요소  
-\<add>  
-\<filter>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\< >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t[ **\<sharedListeners >** ](sharedlisteners-element.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5[ **\<add >** ](add-element-for-sharedlisteners.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<filter >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,7 +40,7 @@ ms.locfileid: "69920503"
   
 |특성|설명|  
 |---------------|-----------------|  
-|**type**|필수 특성입니다.<br /><br /> 필터의 유형을 지정 합니다. 형식의 전체 이름만 사용 하거나 ( <xref:System.Type.FullName%2A?displayProperty=nameWithType> 속성 형식으로) 어셈블리 정보를 포함 하 여 정규화 된 형식 이름을 <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> 속성 형식으로 사용할 수 있습니다. 정규화 된 형식 이름을 만드는 방법에 대 한 자세한 내용은 정규화 된 [형식 이름 지정](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)을 참조 하세요.|  
+|**type**|필수 특성입니다.<br /><br /> 필터의 유형을 지정 합니다. 형식의 전체 이름 (<xref:System.Type.FullName%2A?displayProperty=nameWithType> 속성 형식)만 사용할 수도 있고, 어셈블리 정보 (<xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> 속성의 형식)를 포함 하 여 정규화 된 형식 이름을 사용할 수도 있습니다. 정규화 된 형식 이름을 만드는 방법에 대 한 자세한 내용은 정규화 된 [형식 이름 지정](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)을 참조 하세요.|  
 |**initializeData**|선택적 특성입니다.<br /><br /> 지정 된 클래스의 생성자에 전달 된 문자열입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
@@ -56,12 +56,12 @@ ms.locfileid: "69920503"
 |`add`|**Sharedlisteners** 컬렉션에 수신기를 추가 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `<add>` 수신기가 `<sharedListeners>` 요소의 요소에 정의 된 경우 해당 수신기의 필터는 요소의 자식인 `<filter>` `<add>` 요소에 정의 되어야 합니다.  
+ 수신기가 `<sharedListeners>` 요소의 `<add>` 요소에 정의 된 경우 해당 수신기의 필터는 `<add>` 요소의 자식인 `<filter>` 요소에 정의 되어야 합니다.  
   
  이 요소는 컴퓨터 구성 파일 (machine.config) 및 응용 프로그램 구성 파일에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 `<filter>` 요소를 사용 하 여 `sharedListeners` 컬렉션의 추적 수신기 `console` 에 필터를 추가 하는 방법을 보여 줍니다.  
+ 다음 예제에서는 `<filter>` 요소를 사용 하 여 `sharedListeners` 컬렉션의 추적 @no__t 수신기에 필터를 추가 하는 방법을 보여 줍니다.  
   
 ```xml  
 <configuration>  
@@ -85,7 +85,7 @@ ms.locfileid: "69920503"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Diagnostics.TraceFilter>
 - <xref:System.Diagnostics.TraceListener>

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-ms.openlocfilehash: 7e49762ee017564734bfb2b2f7074d94b7eabe11
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 0945629c1395917bc1cf825f2ba84d20afa99957
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659388"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698203"
 ---
 # <a name="defaultproxy-element-network-settings"></a>\<defaultProxy > 요소 (네트워크 설정)
 HTTP(Hypertext Transfer Protocol) 프록시 서버를 구성합니다.  
   
- \<configuration>  
-\<system.net>  
-\<defaultProxy>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4c.net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t **\<defaultProxy >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -86,7 +86,7 @@ HTTP(Hypertext Transfer Protocol) 프록시 서버를 구성합니다.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [네트워크 설정 스키마](index.md)

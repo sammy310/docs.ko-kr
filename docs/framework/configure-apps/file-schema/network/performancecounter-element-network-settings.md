@@ -8,20 +8,20 @@ helpviewer_keywords:
 - performanceCounter element
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-ms.openlocfilehash: 05aac6c1ed3c04bce263a45cafdb9bec906bd75b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3fe6b19d0055aafad859b55960800d9786d7fa08
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664055"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697995"
 ---
 # <a name="performancecounter-element-network-settings"></a>\<performanceCounter > 요소 (네트워크 설정)
 네트워킹 성능 카운터를 사용 하거나 사용 하지 않도록 설정 합니다.  
   
- \<configuration>  
-\<system.net>  
-\<settings>  
-\<performanceCounters>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4c.net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t[ **\<settings >** ](settings-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 **\<performanceCounters >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,7 +36,7 @@ ms.locfileid: "69664055"
   
 ### <a name="attributes"></a>특성  
   
-|특성|Description|  
+|특성|설명|  
 |---------------|-----------------|  
 |`enabled`|네트워킹 성능 카운터의 사용 여부를 지정 합니다. 기본값은 `false`입니다.|  
   
@@ -56,10 +56,10 @@ ms.locfileid: "69664055"
   
  기본값은 네트워킹 성능 카운터를 사용 하지 않도록 설정 하는 것입니다.  
   
- 속성을 사용 하 여 적용 가능한 구성 파일에서 활성화 된 특성의 현재 값을 가져올 수 있습니다. <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
+ @No__t-0 속성은 적용 가능한 구성 파일에서 **사용 가능한** 특성의 현재 값을 가져오는 데 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 <xref:System.Net> 및 관련 네임 스페이스를 구성 하 여 네트워킹 성능 카운터를 사용 하도록 설정 하는 방법을 보여 줍니다.  
+ 다음 예제에서는 네트워킹 성능 카운터를 사용 하도록 <xref:System.Net> 및 관련 네임 스페이스를 구성 하는 방법을 보여 줍니다.  
   
 ```xml  
 <configuration>  
@@ -73,7 +73,7 @@ ms.locfileid: "69664055"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>

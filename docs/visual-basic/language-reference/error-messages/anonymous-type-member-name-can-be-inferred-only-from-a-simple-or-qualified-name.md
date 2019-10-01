@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36556
 ms.assetid: e3ba1f33-3a71-4f03-9b04-ed5ec17de17c
-ms.openlocfilehash: f657048a8aa9748104e40503e727a5e6d90a87ad
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 38f669fe183ac79ebed6e5a122bc70aedc9bb753
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64646865"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701220"
 ---
 # <a name="anonymous-type-member-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>익명 형식 멤버 이름은 인수가 없는 단순한 이름 또는 정규화된 이름에서만 유추할 수 있습니다.
-복잡 한 식에서 무명 형식 멤버 이름은 유추할 수 없습니다.  
+복합 식에서 무명 형식 멤버 이름을 유추할 수 없습니다.  
   
 ```vb  
 Dim numbers() As Integer = {1, 2, 3, 4, 5}  
@@ -23,19 +23,19 @@ Dim numbers() As Integer = {1, 2, 3, 4, 5}
 ' Dim instanceName1 = New With {numbers(3)}  
 ```  
   
- 익명 형식 및 멤버 이름 및 형식을 유추할 수 없습니다. 원본에 대 한 자세한 내용은 참조 하세요. [방법: 무명 형식 선언에서 속성 이름 및 형식 유추](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)합니다.  
+ 익명 형식이 멤버 이름 및 형식을 유추할 수 있는 소스에 대 한 자세한 내용은 [How to: 익명 형식 선언에서 속성 이름 및 형식을 유추 @ no__t-0.  
   
  **오류 ID:** BC36556  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-- 다음 코드와 같이 식을 멤버 이름으로 할당 합니다.  
+- 다음 코드와 같이 멤버 이름에 식을 할당 합니다.  
   
-    ```  
+    ```vb  
     Dim instanceName2 = New With {.number = numbers(3)}  
     ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [익명 형식](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [방법: 무명 형식 선언에서 속성 이름 및 형식 유추](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+- [방법: 익명 형식 선언에서 속성 이름 및 형식 유추 @ no__t-0

@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - <source> element
 - source element
-ms.openlocfilehash: 55120e292ac2a2c822c5510563d1aa167ca921e4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c4f7e31422ccd8129599db1120f9b0cb327d9319
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920448"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697204"
 ---
 # <a name="source-element"></a>\<source > 요소
 추적 메시지를 시작하는 추적 소스를 지정합니다.  
   
- \<configuration>  
-\<system.diagnostics>  
-\<sources>  
-\<source>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\< >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t[ **\<sources >** ](sources-element.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 **\<source >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,9 +38,9 @@ ms.locfileid: "69920448"
 |특성|설명|  
 |---------------|-----------------|  
 |`name`|선택적 특성입니다.<br /><br /> 추적 원본의 이름을 지정 합니다.|  
-|`switchName`|선택적 특성입니다.<br /><br /> 응용 프로그램에서 추적 스위치 인스턴스의 이름을 지정 합니다. 스위치가 `<switches>` 요소에서 식별 되지 않은 경우이 값은 스위치의 수준을 지정 합니다.|  
+|`switchName`|선택적 특성입니다.<br /><br /> 응용 프로그램에서 추적 스위치 인스턴스의 이름을 지정 합니다. @No__t-0 요소에서 스위치가 식별 되지 않은 경우이 값은 스위치의 수준을 지정 합니다.|  
 |`switchType`|선택적 특성입니다.<br /><br /> 추적 스위치의 유형을 지정 합니다. 있는 경우 형식은 올바른 클래스 이름 이어야 하며 빈 문자열일 수 없습니다.|  
-|`extraAttribute`|선택적 특성입니다.<br /><br /> 해당 추적 소스에 대해 <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> 메서드로 식별 되는 추적 소스 관련 특성의 값을 지정 합니다.|  
+|`extraAttribute`|선택적 특성입니다.<br /><br /> 해당 추적 소스에 대 한 <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> 메서드로 식별 되는 추적 소스 관련 특성의 값을 지정 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
@@ -60,7 +60,7 @@ ms.locfileid: "69920448"
  이 요소는 컴퓨터 구성 파일 (machine.config) 및 응용 프로그램 구성 파일에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 `<source>` 요소를 사용 하 여 추적 소스 `mySource` 를 추가 하 고 라는 `sourceSwitch`소스 스위치의 수준을 설정 하는 방법을 보여 줍니다. 콘솔에 추적 정보를 기록 하는 콘솔 추적 수신기가 추가 됩니다.  
+ 다음 예제에서는 `<source>` 요소를 사용 하 여 추적 소스 `mySource`을 추가 하 고 `sourceSwitch` 라는 원본 스위치의 수준을 설정 하는 방법을 보여 줍니다. 콘솔에 추적 정보를 기록 하는 콘솔 추적 수신기가 추가 됩니다.  
   
 ```xml  
 <configuration>  
@@ -82,7 +82,7 @@ ms.locfileid: "69920448"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [추적 및 디버그 설정 스키마](index.md)
 - [추적 스위치](../../../debug-trace-profile/trace-switches.md)

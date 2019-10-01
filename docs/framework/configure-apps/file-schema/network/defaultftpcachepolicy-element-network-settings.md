@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <defaultFtpCachePolicy> element
 - defaultFtpCachePolicy element
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
-ms.openlocfilehash: 7ff44f0251936d51b4e396c37c53322efa110227
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: fd1649edbf7a2c8546992019df667f27df68e02c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659415"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698324"
 ---
 # <a name="defaultftpcachepolicy-element-network-settings"></a>\<defaultFtpCachePolicy > 요소 (네트워크 설정)
 FTP 캐싱이 활성 상태 인지 여부를 설명 하 고 기본 캐싱 정책을 설명 합니다.  
   
- \<configuration>  
-\<system.net>  
-\<requestCaching>  
-\<defaultFtpCachePolicy>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4c.net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t[ **\<requestCaching >** ](requestcaching-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 **\<defaultFtpCachePolicy >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,7 +36,7 @@ FTP 캐싱이 활성 상태 인지 여부를 설명 하 고 기본 캐싱 정책
   
 ### <a name="attributes"></a>특성  
   
-|특성|Description|  
+|특성|설명|  
 |---------------|-----------------|  
 |`policyLevel`|FTP 캐싱 정책을 지정 합니다. 기본값은 `Default`입니다.|  
   
@@ -65,7 +65,7 @@ FTP 캐싱이 활성 상태 인지 여부를 설명 하 고 기본 캐싱 정책
 ## <a name="remarks"></a>설명  
   
 ## <a name="example"></a>예제  
- 다음 예에서는의 `NoCacheNoStore`FTP 캐싱 정책을 지정 하는 방법을 보여 줍니다.  
+ 다음 예제에서는 `NoCacheNoStore`의 FTP 캐싱 정책을 지정 하는 방법을 보여 줍니다.  
   
 ```xml  
 <configuration>  
@@ -79,7 +79,7 @@ FTP 캐싱이 활성 상태 인지 여부를 설명 하 고 기본 캐싱 정책
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Net.Cache>
 - <xref:System.Net.WebRequest>

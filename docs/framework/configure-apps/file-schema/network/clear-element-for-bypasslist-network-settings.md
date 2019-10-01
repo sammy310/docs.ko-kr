@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: e5305d9aed09b6c4d1ad4201e5e08e007a14c7c0
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 4d078dac14103560423bfccdd4a1717031e7a60f
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664194"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699505"
 ---
-# <a name="clear-element-for-bypasslist-network-settings"></a>\<bypasslist 요소에 대 한 clear > 요소 (네트워크 설정)
+# <a name="clear-element-for-bypasslist-network-settings"></a>bypasslist에 대 한 \<clear > 요소 (네트워크 설정)
 프록시 무시 목록을 지웁니다.  
   
- \<configuration>  
-\<system.net>  
-\<defaultProxy>  
-\<bypasslist>  
-\<clear>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4c.net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<clear >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,7 +48,7 @@ ms.locfileid: "69664194"
 |[bypasslist](bypasslist-element-network-settings.md)|프록시를 사용 하지 않는 주소를 설명 하는 정규식 집합을 제공 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 요소 `clear` 는 바이패스 목록에서 모든 항목을 지웁니다.  
+ @No__t-0 요소는 바이패스 목록에서 모든 항목을 지웁니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
  이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "69664194"
 </configuration>   
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [네트워크 설정 스키마](index.md)

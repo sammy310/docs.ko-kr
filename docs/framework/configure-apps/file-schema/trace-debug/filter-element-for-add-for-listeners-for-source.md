@@ -1,5 +1,5 @@
 ---
-title: <filter>의에 <add> 대 <listeners> 한의 요소<source>
+title: <source>에 대 한 <listeners>에 대 한 <filter> 요소 @no__t
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#filter
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - <filter> element for <add> for <listeners> for <source>
 - filter element for <add> for <listeners> for <source>
 ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
-ms.openlocfilehash: 0d25d0b955a94986147922914068c8a1cf2d96c4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ec288685f47c8a35e2371c31d359b604a4967196
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920528"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697170"
 ---
-# <a name="filter-element-for-add-for-listeners-for-source"></a>\<소스 >에 \< \< 대\<한 수신기 >에 대 한 > 추가의 필터 > 요소
+# <a name="filter-element-for-add-for-listeners-for-source"></a>@no__t >에 대 한 \<listeners에 대 한 \<filter > > @no__t 요소 >-3source에 대 한
 추적 소스의 `Listeners` 컬렉션에 있는 수신기에 필터를 추가합니다.  
   
- \<configuration>  
-\<system.diagnostics>  
-\<sources>  
-\<source>  
-\<listeners>  
-\<add>  
-\<filter>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\< >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t[ **\<sources >** ](sources-element.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
+&nbsp; @ no__t @ no__t @ no__t @ @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0 수신기 >** ](listeners-element-for-source.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9[ **&nbsp;2 추가 >** ](add-element-for-listeners-for-source.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9 @ no__t-10 @ no__t-11 **&nbsp;3filter >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,7 +42,7 @@ ms.locfileid: "69920528"
   
 |특성|설명|  
 |---------------|-----------------|  
-|`type`|필수 특성입니다.<br /><br /> <xref:System.Diagnostics.TraceFilter> 클래스에서 상속 해야 하는 필터의 유형을 지정 합니다. 형식의 네임 스페이스 정규화 된 이름을 사용 하거나, 형식의 <xref:System.Type.FullName%2A> 속성에 해당 하는 형식의 정규화 된 형식 이름을 사용 하거나, <xref:System.Type.AssemblyQualifiedName%2A> 속성에 해당 하는 어셈블리 정보를 포함 하 여 정규화 된 형식 이름을 사용할 수 있습니다. 정규화 된 형식 이름에 대 한 자세한 내용은 정규화 된 [형식 이름 지정](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)을 참조 하세요.|  
+|`type`|필수 특성입니다.<br /><br /> @No__t-0 클래스에서 상속 해야 하는 필터의 유형을 지정 합니다. 형식의 네임 스페이스 정규화 된 이름을 사용할 수 있습니다 .이 이름은 형식의 <xref:System.Type.FullName%2A> 속성에 해당 하며, <xref:System.Type.AssemblyQualifiedName%2A> 속성에 해당 하는 어셈블리 정보를 포함 하 여 정규화 된 형식 이름을 사용할 수 있습니다. 정규화 된 형식 이름에 대 한 자세한 내용은 정규화 된 [형식 이름 지정](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)을 참조 하세요.|  
 |`initializeData`|선택적 특성입니다.<br /><br /> 지정 된 필터 클래스의 생성자에 전달 된 문자열입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
@@ -60,12 +60,12 @@ ms.locfileid: "69920528"
 |`add`|추적 소스의 `Listeners` 컬렉션에 수신기를 추가합니다.|  
   
 ## <a name="remarks"></a>설명  
- 요소 `<filter>` 는 `<add>` [sharedlisteners >에 정의 된 수신기의 이름 뿐만 아니라 수신기의 형식을 지정 하는 추적 소스 수신기의 요소에 \<](sharedlisteners-element.md)포함 되어야 합니다. [ \<> Sharedlisteners](sharedlisteners-element.md)에 정의 되어 있는 경우 해당 수신기의 필터를 해당 요소에 정의 해야 합니다.  
+ @No__t-0 요소는 [@no__t 3sharedListeners >](sharedlisteners-element.md)에 정의 된 수신기의 이름 뿐만 아니라 수신기의 형식을 지정 하는 추적 소스 수신기의 `<add>` 요소에 포함 되어야 합니다. 수신기가 [\<sharedListeners >](sharedlisteners-element.md)에 정의 되어 있는 경우 해당 수신기의 필터를 해당 요소에 정의 해야 합니다.  
   
  이 요소는 컴퓨터 구성 파일 (machine.config) 및 응용 프로그램 구성 파일에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- `<filter>` 다음 예제에서는 요소를 사용 하 여 추적 소스 `myTraceSource`에 대 한 `Listeners` 컬렉션의 수신기 `console` 에 필터를 추가 하 고 필터 이벤트 수준을로 `Error`지정 하는 방법을 보여 줍니다.  
+ 다음 예에서는 `<filter>` 요소를 사용 하 여 추적 소스 `myTraceSource`에 대 한 `Listeners` 컬렉션의 @no__t 수신기에 필터를 추가 하는 방법을 보여 줍니다.-1은 필터 이벤트 수준을 `Error`로 지정 합니다.  
   
 ```xml  
 <configuration>  
@@ -90,7 +90,7 @@ ms.locfileid: "69920528"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>

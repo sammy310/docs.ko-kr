@@ -8,18 +8,18 @@ helpviewer_keywords:
 - <system.diagnostics> element
 - system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
-ms.openlocfilehash: f3b4238a8d7028d47122a420526b38ee4f327332
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dc05c46cb1ba74baceaaeadc2959a6889faf19c9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926941"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699189"
 ---
-# <a name="systemdiagnostics-element"></a>\<시스템 진단 > 요소
+# <a name="systemdiagnostics-element"></a>\<system > 요소
 메시지를 수집하고 저장하고 라우팅하는 추적 수신기를 지정하며, 추적 스위치가 설정되는 수준을 지정합니다.  
   
- \<configuration>  
-\<system.diagnostics>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t **\< >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -52,10 +52,10 @@ ms.locfileid: "69926941"
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 trace 스위치 및 추적 수신기를  **\<시스템 진단 >** 요소 내에 포함 하는 방법을 보여 줍니다. 추적 스위치는 <xref:System.Diagnostics.TraceLevel> 수준으로 설정 됩니다. `General` 추적 수신기 `myListener` 는 라는 `MyListener.log` 파일을 만들고 출력을 파일에 씁니다.  
+ 다음 예제에서는 **\<system >** 요소 내에 추적 스위치 및 추적 수신기를 포함 하는 방법을 보여 줍니다. @No__t-0 추적 스위치는 <xref:System.Diagnostics.TraceLevel> 수준으로 설정 됩니다. 추적 수신기 `myListener` `MyListener.log` 이라는 파일을 만들고 출력을 파일에 씁니다.  
   
 > [!NOTE]
-> .NET Framework 버전 2.0에서는 텍스트를 사용하여 스위치의 값을 지정할 수 있습니다. `true` 예를 들어에 <xref:System.Diagnostics.BooleanSwitch> 대해를 지정 하거나에 대해와 `Error` 같이 열거형 <xref:System.Diagnostics.TraceSwitch>값을 나타내는 텍스트를 사용할 수 있습니다. `<add name="myTraceSwitch" value="Error" />` 줄은 `<add name="myTraceSwitch" value="1" />`과 같습니다.  
+> .NET Framework 버전 2.0에서는 텍스트를 사용하여 스위치의 값을 지정할 수 있습니다. 예를 들어 <xref:System.Diagnostics.BooleanSwitch>에 `true`을 지정 하거나 <xref:System.Diagnostics.TraceSwitch>에 대 한 `Error`와 같은 열거형 값을 나타내는 텍스트를 사용할 수 있습니다. `<add name="myTraceSwitch" value="Error" />` 줄은 `<add name="myTraceSwitch" value="1" />`과 같습니다.  
   
 ```xml  
 <configuration>  
@@ -72,7 +72,7 @@ ms.locfileid: "69926941"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.Debug>

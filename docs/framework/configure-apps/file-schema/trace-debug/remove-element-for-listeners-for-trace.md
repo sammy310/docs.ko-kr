@@ -1,5 +1,5 @@
 ---
-title: <remove>의에 <listeners> 대 한 요소<trace>
+title: <trace>에 대 한 <listeners>에 대 한 <remove> 요소
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/remove
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - remove element
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-ms.openlocfilehash: 0c5c9efb8a22d26ea5d4467f9628af5935d6dbad
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 56d1e56514aed98d5f3b9f7363e461af6ac68a8c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920479"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697214"
 ---
-# <a name="remove-element-for-listeners-for-trace"></a>\<추적 >에 \<대 \<한 수신기 > > 요소를 제거 합니다.
-수신기 컬렉션에서 수신기를 제거 합니다.  
+# <a name="remove-element-for-listeners-for-trace"></a>\< \< 수신기 >에 대 한 > 요소 제거 \<trace >
+**수신기 컬렉션에서** 수신기를 제거 합니다.  
   
- \<configuration>  
-\<system.diagnostics>  
-\<trace>  
-\<listeners>  
-\<remove>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\< >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t[ **\<trace >** ](trace-element.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5[ **\<listeners >** ](listeners-element-for-trace.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<remove >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -53,7 +53,7 @@ ms.locfileid: "69920479"
 ## <a name="remarks"></a>설명  
   
 > [!NOTE]
-> <xref:System.Diagnostics.DefaultTraceListener> <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>컬렉션에서를 제거 하면 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, ,및<xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> 메서드의 동작이 변경 됩니다. <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType> `Listeners` 또는 메서드를 호출 하면 일반적으로 메시지 상자가 표시 되지만 <xref:System.Diagnostics.DefaultTraceListener> 가 `Listeners` 컬렉션에 없으면 메시지 상자가 표시 되지 않습니다. `Fail` `Assert`  
+> @No__t-1 컬렉션에서 <xref:System.Diagnostics.DefaultTraceListener>을 제거 하면 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType> 및 @no__t 방법의 동작이 변경 됩니다. @No__t-0 또는 `Fail` 메서드를 호출 하면 일반적으로 메시지 상자가 표시 되지만 <xref:System.Diagnostics.DefaultTraceListener>가 `Listeners` 컬렉션에 없으면 메시지 상자가 표시 되지 않습니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 추적 **수신기** 컬렉션에서 기본 추적 수신기를 제거 하는 방법을 보여 줍니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "69920479"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>

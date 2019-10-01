@@ -2,20 +2,20 @@
 title: <httpListener> 요소(네트워크 설정)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
-ms.openlocfilehash: cb24dc7296e2f2f6ea292566330d3d6ae4f25f85
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3f75096681ab07dd6d4788fbded5ca5c4a024aef
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664135"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698188"
 ---
 # <a name="httplistener-element-network-settings"></a>\<httpListener > 요소 (네트워크 설정)
-<xref:System.Net.HttpListener> 클래스에서 사용 하는 매개 변수를 사용자 지정 합니다.  
+@No__t-0 클래스에서 사용 하는 매개 변수를 사용자 지정 합니다.  
   
- \<configuration>  
-\<system.net>  
-\<settings>  
-\<httpListener>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4c.net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t[ **\<settings >** ](settings-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 **\<httpListener >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -25,16 +25,16 @@ ms.locfileid: "69664135"
 />  
 ```  
   
-## <a name="type"></a>형식  
+## <a name="type"></a>type  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|특성|Description|  
+|특성|설명|  
 |---------------|-----------------|  
-|unescapeRequestUrl|<xref:System.Net.HttpListener> 인스턴스가 변환 된 uri 대신 이스케이프 되지 않은 원시 uri를 사용 하는지 여부를 나타내는 부울 값입니다.|  
+|unescapeRequestUrl|@No__t-0 인스턴스가 변환 된 URI 대신 이스케이프 되지 않은 원시 URI를 사용 하는지 여부를 나타내는 부울 값입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -46,7 +46,7 @@ ms.locfileid: "69664135"
 |[settings](settings-element-network-settings.md)|<xref:System.Net> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.|  
   
 ## <a name="remarks"></a>설명  
- **UnescapeRequestUrl** 특성은가 백분율 <xref:System.Net.HttpListener> 인코딩 값이 변환 되 고 다른 정규화 단계가 수행 되는 변환 된 uri 대신 이스케이프 되지 않은 원시 uri를 사용 하는지 여부를 나타냅니다.  
+ **UnescapeRequestUrl** 특성은% 인코딩된 값이 변환 되 고 다른 정규화 단계가 수행 되는 경우-1 @no__t 변환 된 uri 대신 이스케이프 되지 않은 원시 uri를 사용 하는지 여부를 나타냅니다.  
   
  경우는 <xref:System.Net.HttpListener> 인스턴스를 통해 요청을 수신 합니다 `http.sys` 제공한 URI 문자열의 인스턴스를 만들고 서비스를 `http.sys`,으로 노출를 <xref:System.Net.HttpListenerRequest.Url%2A?displayProperty=nameWithType> 속성.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "69664135"
   
  `http://www.contoso.com/path/`  
   
- 합니다 `http.sys` 결합 서비스는 <xref:System.Uri.Host%2A?displayProperty=nameWithType> 속성 값과 문자열을 변환된 된 URI를 만드는 요청 줄에 있습니다. 또한 `http.sys` 및 클래스는 <xref:System.Uri?displayProperty=nameWithType> 다음을 수행 합니다.  
+ 합니다 `http.sys` 결합 서비스는 <xref:System.Uri.Host%2A?displayProperty=nameWithType> 속성 값과 문자열을 변환된 된 URI를 만드는 요청 줄에 있습니다. 또한 `http.sys` 및 <xref:System.Uri?displayProperty=nameWithType> 클래스는 다음을 수행 합니다.  
   
 - 이스케이프 해제 인코딩된 모든 백분율 값입니다.  
   
@@ -107,14 +107,14 @@ ms.locfileid: "69664135"
   
  요청을 보낸 사람의 의도 아닙니다.  
   
- **UnescapeRequestUrl** 특성이 **false** <xref:System.Net.HttpListener> 로 설정 된 경우에서 요청을 받으면에서 `http.sys` <xref:System.Net.HttpListenerRequest.Url%2A> 속성에 대 한 입력으로 변환 된 uri 대신 원시 uri를 사용 합니다.  
+ **UnescapeRequestUrl** 특성이 **false**로 설정 된 경우 <xref:System.Net.HttpListener>가 요청을 받으면 <xref:System.Net.HttpListenerRequest.Url%2A> 속성에 대 한 입력으로 `http.sys`의 변환 된 uri 대신 원시 uri를 사용 합니다.  
   
  **UnescapeRequestUrl** 특성의 기본값은 **true**입니다.  
   
- 속성을 사용 하 여 적용 가능한 구성 파일에서 unescapeRequestUrl 특성의 현재 값을 가져올 수 있습니다. <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A>  
+ @No__t-0 속성은 적용 가능한 구성 파일에서 **unescapeRequestUrl** 특성의 현재 값을 가져오는 데 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는에서 <xref:System.Net.HttpListener> `http.sys` <xref:System.Net.HttpListenerRequest.Url%2A> 속성에 대 한 입력으로 변환 된 uri 대신 원시 uri를 사용 하는 요청을 받을 때 클래스를 구성 하는 방법을 보여 줍니다.  
+ 다음 예제에서는 <xref:System.Net.HttpListenerRequest.Url%2A> 속성에 대 한 입력으로 `http.sys`의 변환 된 URI 대신 원시 URI를 사용 하는 요청을 받을 때 <xref:System.Net.HttpListener> 클래스를 구성 하는 방법을 보여 줍니다.  
   
 ```xml  
 <configuration>  
@@ -137,7 +137,7 @@ ms.locfileid: "69664135"
 |유효성 검사 파일||  
 |비워 둘 수 있음||  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Net.Configuration.HttpListenerElement>
 - <xref:System.Net.HttpListener>

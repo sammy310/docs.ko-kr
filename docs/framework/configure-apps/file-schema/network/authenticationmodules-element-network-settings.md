@@ -8,19 +8,19 @@ helpviewer_keywords:
 - authenticationModules element
 - <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
-ms.openlocfilehash: 6488bfcd97e27a184b4a8cd1498d1c60f32babda
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 4fe44deba951e5302518ed855589ad1b0ca75343
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659481"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699527"
 ---
 # <a name="authenticationmodules-element-network-settings"></a>\<authenticationModules > 요소 (네트워크 설정)
 네트워크 요청을 인증 하는 데 사용 되는 모듈을 지정 합니다.  
   
- \<configuration>  
-\<system.net>  
-\<authenticationModules>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4c.net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t **\<authenticationModules >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,7 +50,7 @@ ms.locfileid: "69659481"
 |[system.net](system-net-element-network-settings.md)|.NET Framework의 네트워크 연결 방법을 지정하는 설정을 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
- 요소 `authenticationModule` 는 서버를 사용 하 여 인증 프로세스를 수행 하는 인증 모듈을 지정 합니다. 인증 모듈은 인터페이스를 <xref:System.Net.IAuthenticationModule> 구현 해야 합니다.  
+ @No__t-0 요소는 서버에서 인증 프로세스를 수행 하는 인증 모듈을 지정 합니다. 인증 모듈은 <xref:System.Net.IAuthenticationModule> 인터페이스를 구현 해야 합니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
  이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "69659481"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>

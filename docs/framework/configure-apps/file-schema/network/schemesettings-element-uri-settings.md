@@ -2,19 +2,19 @@
 title: <schemeSettings> 요소(URI 설정)
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
-ms.openlocfilehash: 46012b15d41422fb3357e57438e320136809ef41
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 498aef77a1dfd8cffcac73b704b8d1bb6df5d165
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664003"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697763"
 ---
 # <a name="schemesettings-element-uri-settings"></a>\<schemeSettings > 요소 (Uri 설정)
 특정 체계에 대해 <xref:System.Uri>가 구문 분석되는 방법을 지정합니다.  
   
- \<configuration>  
-\<uri>  
-\<schemeSettings>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\<uri >** ](uri-element-uri-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t **\<schemeSettings >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,7 +62,7 @@ ms.locfileid: "69664003"
  이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 http 체계의 백분율 인코딩된 경로 <xref:System.Uri> 구분 기호를 이스케이프 하지 않도록 지원 하기 위해 클래스에서 사용 하는 구성을 보여 줍니다.  
+ 다음 예제에서는 http 체계의 백분율 인코딩된 경로 구분 기호를 이스케이프 하지 않도록 지원 하기 위해 <xref:System.Uri> 클래스에서 사용 하는 구성을 보여 줍니다.  
   
 ```xml  
 <configuration>  
@@ -83,7 +83,7 @@ ms.locfileid: "69664003"
 |유효성 검사 파일||  
 |비워 둘 수 있음||  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>

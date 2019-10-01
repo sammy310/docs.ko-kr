@@ -7,21 +7,21 @@ helpviewer_keywords:
 - listeners element for <source>
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-ms.openlocfilehash: 853bc94978218fd4d426e6070b3a36e20435cd6d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d7641611e5d8257b49bc6a6abd0a2fadfde66e91
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920488"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697296"
 ---
-# <a name="listeners-element-for-source"></a>\<소스 >에 대 \<한 수신기 > 요소
-의 컬렉션<xref:System.Diagnostics.TraceSource.Listeners%2A> 에서 수신기를 추가 하거나 제거 합니다.<xref:System.Diagnostics.TraceSource> 수신기는 추적 출력을 로그, 창 또는 텍스트 파일과 같은 적절 한 대상으로 보냅니다.  
+# <a name="listeners-element-for-source"></a>\<source >에 대 한 \<listeners > 요소
+@No__t-1에 대 한 <xref:System.Diagnostics.TraceSource.Listeners%2A> 컬렉션에서 수신기를 추가 하거나 제거 합니다. 수신기는 추적 출력을 로그, 창 또는 텍스트 파일과 같은 적절 한 대상으로 보냅니다.  
   
- \<configuration>  
-\<system.diagnostics>  
-\<sources>  
-\<source>  
-\<listeners > 요소  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\< >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t[ **\<sources >** ](sources-element.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\< 수신기 >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,7 +44,7 @@ ms.locfileid: "69920488"
 |요소|설명|  
 |-------------|-----------------|  
 |[\<add>](add-element-for-listeners-for-source.md)|`Listeners` 컬렉션에 수신기를 추가합니다.|  
-|[\<remove>](remove-element-for-listeners-for-source.md)|`Listeners` 컬렉션에서 수신기를 제거 합니다.|  
+|[\<remove>](remove-element-for-listeners-for-source.md)|@No__t-0 컬렉션에서 수신기를 제거 합니다.|  
 |[\<clear>](clear-element-for-listeners-for-source.md)|추적 소스의 `Listeners` 컬렉션을 지웁니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
@@ -87,7 +87,7 @@ ms.locfileid: "69920488"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Diagnostics.TraceListener>
 - [추적 및 디버그 설정 스키마](index.md)

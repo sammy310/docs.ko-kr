@@ -9,19 +9,19 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-ms.openlocfilehash: 73d4eb2741bdbe5a07704ca0f3b2f779706e66dc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0ca35d9be5e1eaf36a2c9cae99efc2736ef3403d
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926951"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699201"
 ---
 # <a name="sources-element"></a>\<sources > 요소
 추적 메시지를 시작 하는 추적 소스를 지정 합니다.  
   
- \<configuration>  
-\<system.diagnostics>  
-\<sources>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\< >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t **\<sources >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -54,7 +54,7 @@ ms.locfileid: "69926951"
  이 요소는 컴퓨터 구성 파일 (machine.config) 및 응용 프로그램 구성 파일에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 `<sources>` 요소를 사용 하 여 추적 소스 `mySource` 를 추가 하 고 라는 `sourceSwitch`소스 스위치의 수준을 설정 하는 방법을 보여 줍니다. 콘솔에 추적 정보를 기록 하는 콘솔 추적 수신기가 추가 됩니다.  
+ 다음 예제에서는 `<sources>` 요소를 사용 하 여 추적 소스 `mySource`을 추가 하 고 `sourceSwitch` 라는 원본 스위치의 수준을 설정 하는 방법을 보여 줍니다. 콘솔에 추적 정보를 기록 하는 콘솔 추적 수신기가 추가 됩니다.  
   
 ```xml  
 <configuration>  
@@ -79,7 +79,7 @@ ms.locfileid: "69926951"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
