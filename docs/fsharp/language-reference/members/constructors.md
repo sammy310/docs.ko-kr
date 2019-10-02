@@ -2,16 +2,16 @@
 title: 생성자
 description: 에서 F# 생성자를 정의 하 고 사용 하 여 클래스 및 구조체 개체를 만들고 초기화 하는 방법에 대해 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: c25fdcb95c2873eb69a94f30c87735e5c04d391b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6769ec7fc6768090d8ae68e21946a58829b6eea0
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627600"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736843"
 ---
 # <a name="constructors"></a>생성자
 
-이 항목에서는 생성자를 정의 하 고 사용 하 여 클래스 및 구조체 개체를 만들고 초기화 하는 방법에 대해 설명 합니다.
+이 문서에서는 생성자를 정의 하 고 사용 하 여 클래스 및 구조체 개체를 만들고 초기화 하는 방법을 설명 합니다.
 
 ## <a name="construction-of-class-objects"></a>클래스 개체 생성
 
@@ -36,7 +36,7 @@ Initialized object that has coordinates (0, 0, 0)
 
 ## <a name="construction-of-structures"></a>구조 생성
 
-구조체는 클래스의 모든 규칙을 따릅니다. 따라서 기본 생성자를 사용 하 고를 사용 `new`하 여 추가 생성자를 제공할 수 있습니다. 그러나 구조체와 클래스 사이에는 중요 한 차이점이 있습니다. 구조체에는 기본 생성자가 정의 되지 않은 경우에도 매개 변수가 없는 생성자 (인수 없이 하나)가 있을 수 있습니다. 매개 변수가 없는 생성자는 모든 필드를 해당 형식에 대 한 기본값 (일반적으로 0 또는 그에 해당 하는 값)으로 초기화 합니다. 구조체에 대해 정의 하는 모든 생성자에는 기본 생성자와 충돌 하지 않도록 하나 이상의 인수가 있어야 합니다.
+구조체는 클래스의 모든 규칙을 따릅니다. 따라서 기본 생성자를 사용 하 고를 사용 `new`하 여 추가 생성자를 제공할 수 있습니다. 그러나 구조체와 클래스 사이에는 중요 한 차이점이 있습니다. 구조체에는 기본 생성자가 정의 되지 않은 경우에도 매개 변수가 없는 생성자 (인수 없이 하나)가 있을 수 있습니다. 매개 변수가 없는 생성자는 모든 필드를 해당 형식에 대 한 기본값 (일반적으로 0 또는 그에 해당 하는 값)으로 초기화 합니다. 구조체에 대해 정의 하는 모든 생성자에는 매개 변수가 없는 생성자와 충돌 하지 않도록 하나 이상의 인수가 있어야 합니다.
 
 또한 구조체는 키워드를 `val` 사용 하 여 만든 필드를 포함 하는 경우가 많습니다. 클래스는 이러한 필드를 포함할 수도 있습니다. 다음 코드에 표시 된 것 처럼 키워드를 `val` 사용 하 여 정의 된 필드가 있는 구조체와 클래스는 레코드 식을 사용 하 여 추가 생성자에서 초기화 될 수도 있습니다.
 
@@ -74,7 +74,7 @@ Created an invalid person object.
 
 ## <a name="assigning-values-to-properties-at-initialization"></a>초기화할 때 속성에 값 할당
 
-생성자의 인수 목록에 폼 `property = value` 의 할당 목록을 추가 하 여 초기화 코드에서 클래스 개체의 속성에 값을 할당할 수 있습니다. 다음 코드 예제에서 이를 확인할 수 있습니다.
+생성자의 인수 목록에 폼 `property = value` 의 할당 목록을 추가 하 여 초기화 코드에서 클래스 개체의 속성에 값을 할당할 수 있습니다. 이는 다음 코드 예제에 나와 있습니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
 
@@ -90,6 +90,6 @@ Created an invalid person object.
 
 개체를 만들기 위한 코드를 지정 하는 것 `let` 외 `do` 에도 형식 수준에서 초기화를 수행 하기 위해 형식을 처음 사용 하기 전에 실행 되는 클래스 형식으로 정적 및 바인딩을 작성할 수 있습니다. 자세한 내용은 클래스의 [ `let` 바인딩](let-bindings-in-classes.md) 및 [ `do` 클래스의 바인딩](do-bindings-in-classes.md)을 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [멤버](index.md)

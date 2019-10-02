@@ -2,12 +2,12 @@
 title: 특성
 description: 특성을 F# 사용 하 여 프로그래밍 구문에 메타 데이터를 적용 하는 방법을 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 08d50f7f57b6c0a81221e8f635f77f67750d0ff9
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 17822891109b8e8eaa10044f82f0b872ce9d30b5
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71082933"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736806"
 ---
 # <a name="attributes"></a>특성
 
@@ -25,7 +25,7 @@ ms.locfileid: "71082933"
 
 *특성 이름* 은 특성 형식 이름에 일반적으로 사용 되는 접미사 `Attribute` 를 사용 하거나 사용 하지 않고 유효한 특성 형식의 이름 (네임 스페이스로 한정 될 수 있음)을 참조 합니다. 예를 들어이 컨텍스트에서 `ObsoleteAttribute` 만 `Obsolete` 형식이 줄어들 수 있습니다.
 
-*인수* 는 특성 형식의 생성자에 대 한 인수입니다. 특성에 기본 생성자가 있는 경우 인수 목록 및 괄호를 생략할 수 있습니다. 특성은 위치 인수와 명명 된 인수를 모두 지원 합니다. *위치 인수* 는 표시 되는 순서 대로 사용 되는 인수입니다. 특성에 public 속성이 있는 경우 명명 된 인수를 사용할 수 있습니다. 인수 목록에서 다음 구문을 사용 하 여이를 설정할 수 있습니다.
+*인수* 는 특성 형식의 생성자에 대 한 인수입니다. 특성에 매개 변수가 없는 생성자가 있는 경우 인수 목록과 괄호를 생략할 수 있습니다. 특성은 위치 인수와 명명 된 인수를 모두 지원 합니다. *위치 인수* 는 표시 되는 순서 대로 사용 되는 인수입니다. 특성에 public 속성이 있는 경우 명명 된 인수를 사용할 수 있습니다. 인수 목록에서 다음 구문을 사용 하 여이를 설정할 수 있습니다.
 
 ```fsharp
 property-name = property-value
@@ -47,7 +47,7 @@ property-name = property-value
 
 .NET 리플렉션을 사용 하 여 런타임에 특성을 쿼리할 수 있습니다.
 
-위의 코드 예제와 같이 여러 특성을 개별적으로 선언 하거나, 세미콜론을 사용 하 여 개별 특성 및 생성자를 분리 하는 경우 한 개의 대괄호 집합에서 여러 특성을 선언할 수 있습니다.
+앞의 코드 예제와 같이 여러 특성을 개별적으로 선언 하거나, 세미콜론을 사용 하 여 개별 특성 및 생성자를 구분 하는 경우 한 개의 대괄호 집합에서 다음과 같이 여러 특성을 선언할 수 있습니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6604.fs)]
 
@@ -55,13 +55,13 @@ property-name = property-value
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6605.fs)]
 
-특성 대상 `assembly` 및 `module`의 경우 어셈블리의 최상위 `do` 바인딩에 특성을 적용 합니다. 다음과 같이 특성 선언에 `assembly` 또는 `module` 단어를 포함할 수 있습니다.
+특성 대상 `assembly` 및 `module`의 경우 어셈블리의 최상위 `do` 바인딩에 특성을 적용 합니다. 다음과 같이 특성 선언에 `assembly` 또는 `module` 이라는 단어를 포함할 수 있습니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6606.fs)]
 
 `do` 바인딩에 적용 된 특성에 대 한 특성 대상을 생략 하면 컴파일러는 F# 해당 특성에 적합 한 특성 대상을 확인 하려고 합니다. 많은 특성 클래스에는 해당 특성에 `System.AttributeUsageAttribute` 대해 지원 되는 가능한 대상에 대 한 정보를 포함 하는 형식의 특성이 있습니다. 이 특성이 함수를 대상으로 지원함을 나타내는경우에는해당특성이프로그램의주진입점에적용됩니다.`System.AttributeUsageAttribute` 이 특성이 어셈블리를 대상으로 지원 함을나타내면컴파일러가어셈블리에적용할특성을사용합니다.`System.AttributeUsageAttribute` 대부분의 특성은 함수 및 어셈블리에 모두 적용 되지 않지만, 이러한 특성을 사용 하는 경우에는 프로그램의 main 함수에 특성을 적용 하는 데 사용 됩니다. 특성 대상이 명시적으로 지정 된 경우 특성이 지정 된 대상에 적용 됩니다.
 
-일반적으로 특성 대상을 명시적으로 지정할 필요는 없지만 특성의 *target* 에 대 한 유효한 값은 다음 표에 나와 있습니다.
+일반적으로 특성 대상을 명시적으로 지정할 필요는 없지만 특성의 *target* 에 대 한 유효한 값을 사용 예제와 함께 사용 하는 방법은 다음과 같습니다.
 
 <table>
   <tr>
@@ -102,6 +102,6 @@ end</code></pre>
   </tr>
 </table>
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [F# 언어 참조](index.md)

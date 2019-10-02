@@ -1,18 +1,18 @@
 ---
-title: DataAdapters로 데이터 원본 업데이트
+title: DataAdapter로 데이터 원본 업데이트
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
-ms.openlocfilehash: 503863dab1780b896be5d80edac88d13eaa49842
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 4a6e22352a309f9d624c6922abc531cb31a5baf1
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854169"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736694"
 ---
-# <a name="updating-data-sources-with-dataadapters"></a>DataAdapters로 데이터 원본 업데이트
+# <a name="updating-data-sources-with-dataadapters"></a>DataAdapter로 데이터 원본 업데이트
 
 `Update`의 <xref:System.Data.Common.DataAdapter> 메서드를 호출하면 <xref:System.Data.DataSet>의 변경 내용이 데이터 소스에 다시 적용됩니다. `Update` 메서드는 `Fill` 메서드와 마찬가지로 `DataSet`의 인스턴스, 선택적 <xref:System.Data.DataTable> 개체 또는 `DataTable` 이름을 인수로 사용합니다. `DataSet` 인스턴스는 변경 내용을 포함하는 `DataSet`이며 `DataTable`은 변경 내용을 검색할 테이블을 식별합니다. `DataTable`을 지정하지 않으면 `DataTable`의 첫 번째 `DataSet`이 사용됩니다.
 
@@ -84,7 +84,7 @@ adapter.Update(table.Select(Nothing, Nothing, _
   DataViewRowState.ModifiedCurrent))
 
 ' Finally, process inserts.
-dataAdapater.Update(table.Select(Nothing, Nothing, _
+adapter.Update(table.Select(Nothing, Nothing, _
   DataViewRowState.Added))
 ```
 
@@ -376,11 +376,11 @@ class Program {
 }
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [DataAdapter 및 DataReader](dataadapters-and-datareaders.md)
 - [행 상태 및 행 버전](./dataset-datatable-dataview/row-states-and-row-versions.md)
 - [AcceptChanges 및 RejectChanges](./dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
-- [데이터 집합 콘텐츠 병합](./dataset-datatable-dataview/merging-dataset-contents.md)
+- [데이터 세트 콘텐츠 병합](./dataset-datatable-dataview/merging-dataset-contents.md)
 - [ID 또는 일련 번호 값 검색](retrieving-identity-or-autonumber-values.md)
 - [ADO.NET 개요](ado-net-overview.md)
