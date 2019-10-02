@@ -1,69 +1,97 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: ML.NET 설명서
+summary: 오픈 소스 ML.NET를 사용하여 기계 학습 솔루션을 빌드하고 애플리케이션에 연결하는 방법을 알아봅니다. 자습서, 코드 예제 등을 통해 방법이 제시됩니다.
 metadata:
-  document_id: na
-  title: 'ML.NET 설명서 - 자습서, API 참조'
-  meta.description: 'Learn how to use ML.NET, an open-source and cross-platform machine learning framework you can use to build custom machine learning solutions and integrate them into .NET applications. Incorporate AI into your apps using the .NET skills you already have and without leaving .NET.'
+  title: ML.NET 설명서 - 자습서, API 참조
+  description: 오픈 소스 ML.NET를 사용하여 기계 학습 솔루션을 빌드하고 애플리케이션에 연결하는 방법을 알아봅니다. 자습서, 코드 예제 등을 통해 방법이 제시됩니다.
+  ms.prod: dotnet-ml
   ms.topic: landing-page
-  ms.date: 09/16/2019
-  ms.author: nakersha
+  ms.collection: collection
   author: natke
-abstract:
-  description: '사용자 지정 기계 학습 솔루션을 빌드하고 .NET 애플리케이션에 통합할 수 있도록 하는 무료 오픈 소스 플랫폼 간 기계 학습 프레임워크인 ML.NET 사용 방법을 알아봅니다. 자습서, 코드 예제, API 참조 및 기타 설명서에서 방법을 설명합니다.'
-sections:
-  - title: 단계별 자습서
-    items:
-      - type: paragraph
-        text: ML.NET을 사용하여 공통 솔루션을 만드는 방법을 알아봅니다.
-      - type: paragraph
-        text: '<b>ML.NET API를 사용하여 개발</b>:'
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/machine-learning/tutorials/sentiment-analysis">이진 분류를 사용하여 감정 분석</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/github-issue-classification">다중 클래스 분류를 사용하여 GitHub 문제 분류</a></li>
-          - html: <a href="/dotnet/machine-learning/tutorials/predict-prices">회귀를 사용하여 가격 예측</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/iris-clustering">클러스터링을 사용하여 특징으로 꽃 분류</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/movie-recommendation">행렬 인수분해를 사용하여 영화 추천기 만들기</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/image-classification">TensorFlow를 사용하여 사용자 지정 이미지 분류자 빌드</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/object-detection-onnx">ONNX를 사용하여 이미지에서 개체 검색</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/text-classification-tf">TensorFlow를 사용하여 영화 리뷰의 감정 분류</a>
-      - type: paragraph
-        text: '그래픽 Visual Studio 확장인 <b>모델 작성기 사용</b>:'
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/machine-learning/tutorials/predict-prices-with-model-builder">모델 작성기를 사용하여 가격 예측</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/sentiment-analysis-model-builder">Razor Pages 웹 애플리케이션을 빌드하여 감정 분석</a>
-      - type: paragraph
-        text: '<b>ML.NET CLI 실행</b>:'
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/machine-learning/tutorials/mlnet-cli">ML.NET CLI를 사용하여 감정 분석</a>
-  - title: 샘플
-    items:
-      - type: paragraph
-        text: 'C# 및 F#의 애플리케이션의 경우 GitHub에서 <a href="https://github.com/dotnet/machinelearning-samples">샘플 리포지토리</a>를 참조하세요.'
-  - title: 참조
-    items:
-      - type: paragraph
-        text: <b>ML.NET API</b>
-      - type: list
-        style: unordered
-        items:
-          - html: '<a href="/dotnet/api/?view=ml-dotnet">릴리스 ML.NET API</a>에는 데이터 처리를 위한 구성 요소, 이진 분류를 위한 알고리즘, 다중 분류, 회귀, 변칙 검색, 시계열 및 예측, 순위 지정, 모델 저장 및 로드, ONNX 및 TensorFlow 모델 처리 등을 비롯한 구성 요소가 포함되어 있습니다.'
-          - html: <a href="/dotnet/api/?view=ml-dotnet-preview">미리 보기 ML.NET API</a>에는 추천 작업에 대한 알고리즘과 표준 딥 러닝 모델에 대한 지원이 포함되어 있습니다.
-      - type: paragraph
-        text: <b>AutoML API</b>
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/api/index?view=automl-dotnet">AutoML API</a>
-      - type: paragraph
-        text: <b>ML.NET CLI 참조</b>
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/machine-learning/reference/ml-net-cli-reference">ML.NET CLI 명령 참조</a>
+  ms.author: nakersha
+  ms.date: 09/23/2019
+  ms.openlocfilehash: f6f4d0c516a1310df5c497a3f4e7331877f3c5a9
+  ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 09/24/2019
+  ms.locfileid: "71216647"
+landingContent:
+- title: ML.NET 정보
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: ML.NET이란?
+      url: how-does-mldotnet-work.md
+  - linkListType: concept
+    links:
+    - text: 기계 학습 모델 유형
+      url: resources/tasks.md
+    - text: 알고리즘을 선택하는 방법
+      url: how-to-choose-an-ml-net-algorithm.md
+    - text: 데이터 변환
+      url: resources/transforms.md
+- title: 모델 작성기 사용
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 모델 작성기란?
+      url: automate-training-with-model-builder.md
+  - linkListType: quickstart
+    links:
+    - text: 모델 작성기 설치
+      url: how-to-guides/install-model-builder.md
+  - linkListType: tutorial
+    links:
+    - text: 가격 예측 - 모델 작성기
+      url: tutorials/predict-prices-with-model-builder.md
+    - text: Razor Pages 웹앱을 빌드하여 감정 분석
+      url: tutorials/sentiment-analysis-model-builder.md
+- title: API 시작
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: 전이 학습을 사용하여 TensorFlow 이미지 분류자 작성
+      url: tutorials/image-classification.md
+    - text: 웹 사이트 의견 감정 분석
+      url: tutorials/sentiment-analysis.md
+    - text: ONNX를 사용하여 이미지에서 개체 검색
+      url: tutorials/object-detection-onnx.md
+  - linkListType: how-to-guide
+    links:
+    - text: 다양한 소스에서 데이터 로드
+      url: how-to-guides/load-data-ml-net.md
+    - text: 모델 구축에 사용할 데이터 준비
+      url: how-to-guides/prepare-data-ml-net.md
+    - text: 모델 학습 및 평가
+      url: how-to-guides/train-machine-learning-model-ml-net.md
+    - text: 학습된 모델로 예측
+      url: how-to-guides/machine-learning-model-predictions-ml-net.md
+    - text: 학습된 모델 저장 및 로드
+      url: how-to-guides/save-load-machine-learning-models-ml-net.md
+- title: ML.NET CLI 사용
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: ML.NET CLI를 통한 모델 학습 자동화
+      url: automate-training-with-cli.md
+  - linkListType: quickstart
+    links:
+    - text: ML.NET CLI 설치
+      url: how-to-guides/install-ml-net-cli.md
+  - linkListType: tutorial
+    links:
+    - text: 감정 분석 - ML.NET CLI 및 AutoML
+      url: tutorials/mlnet-cli.md
+- title: API 참조
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: ML.NET API 참조
+      url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet
+    - text: ML.NET API 참조(미리 보기)
+      url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview
+    - text: ML.NET CLI 참조
+      url: reference/ml-net-cli-reference.md
+    - text: AutoML API 참조
+      url: https://docs.microsoft.com/dotnet/api/?view=automl-dotnet
